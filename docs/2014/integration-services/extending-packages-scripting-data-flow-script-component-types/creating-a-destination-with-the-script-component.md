@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,12 +16,12 @@ ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b20e44acf3decd8ff8daf83ce8b1f9607977e3c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8e785b02ad8121f7d2e292dee7375b3be104aeb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179103"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363936"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>스크립트 구성 요소를 사용하여 대상 만들기
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에서 대상 구성 요소를 사용하여 업스트림 원본 및 변환에서 받은 데이터를 데이터 원본에 저장할 수 있습니다. 일반적으로 대상 구성 요소는 기존 연결 관리자를 통해 데이터 원본에 연결합니다.  
@@ -86,7 +84,7 @@ ms.locfileid: "48179103"
   
  열면 합니다 **프로젝트 탐색기** vsta에서 창에서 읽기 전용으로 스크립트 구성 요소 생성도을 확인할 수 있습니다 `BufferWrapper` 및 `ComponentWrapper` 프로젝트 항목입니다. `ScriptMain` 클래스는 `UserComponent` 프로젝트 항목의 `ComponentWrapper` 클래스에서 상속됩니다.  
   
- 런타임에 데이터 흐름 엔진은 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 부모 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 메서드를 재정의하는 `ProcessInput` 클래스의 `UserComponent` 메서드를 호출합니다. 그러면 `ProcessInput` 메서드는 입력 버퍼의 행을 반복하고 각 행에 대해 `ProcessInputRow` 메서드를 한 번씩 호출합니다.  
+ 런타임에 데이터 흐름 엔진은 `ProcessInput` 부모 클래스의 `UserComponent` 메서드를 재정의하는 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 메서드를 호출합니다. 그러면 `ProcessInput` 메서드는 입력 버퍼의 행을 반복하고 각 행에 대해 `ProcessInputRow` 메서드를 한 번씩 호출합니다.  
   
 ### <a name="writing-your-custom-code"></a>사용자 지정 코드 작성  
  사용자 지정 대상 구성 요소 만들기를 마치기 위해 `ScriptMain` 클래스에서 사용할 수 있는 다음 메서드에서 스크립트를 작성할 수 있습니다.  
@@ -102,7 +100,7 @@ ms.locfileid: "48179103"
 ## <a name="examples"></a>예  
  다음 예에서는 `ScriptMain` 클래스에서 대상 구성 요소를 만드는 데 필요한 코드를 보여 줍니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  이 예제에서는 사용를 **Person.Address** 테이블에 `AdventureWorks` 예제 데이터베이스 및 해당 되는 경우 첫 번째 및 네 번째 열을 전달 합니다 **int * AddressID*** 및 **nvarchar (30) City**데이터 흐름을 통해 열입니다. 이 섹션의 원본, 변환 및 대상 예제에는 동일한 데이터가 사용됩니다. 각 예에 대해 필수 구성 요소 및 가정도 설명되어 있습니다.  
   
 ### <a name="adonet-destination-example"></a>ADO.NET 대상 예  
@@ -351,9 +349,9 @@ public class ScriptMain:
 }  
 ```  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [스크립트 구성 요소를 사용하여 원본 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)   
  [사용자 지정 대상 구성 요소 개발](../extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)  
   

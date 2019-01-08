@@ -19,12 +19,12 @@ ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e1ea6363f2acb76d7c95fb6d2e8f7c0e9dbdbc6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 08840dee8164ae1dd460d1a5d5905ecda937dba6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108933"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351114"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Reporting Services 설치 확인
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버는 기본 모드 또는 SharePoint 모드 중 하나로 설치할 수 있습니다. 설치를 확인하기 위해 수행해야 하는 단계는 보고서 서버 모드에 따라 다릅니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "48108933"
   
 1.  SharePoint 문서 라이브러리에서 텍스트 상자(예: 제목)만 포함된 기본 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 만듭니다. 이 보고서에는 어떠한 데이터 원본 또는 데이터 세트도 포함되지 않습니다. 이 보고서의 목적은 보고서 작성기를 열고 기본 보고서를 미리 볼 수 있는지 확인하기 위한 것입니다.  
   
-2.  보고서를 문서 라이브러리에 저장하고 라이브러리에서 보고서를 실행합니다. 보고서 작성기로 보고서를 만드는 방법은 [보고서 작성기 시작(보고서 작성기)](http://technet.microsoft.com/library/ms159221.aspx)을 참조하세요.  
+2.  보고서를 문서 라이브러리에 저장하고 라이브러리에서 보고서를 실행합니다. 보고서 작성기로 보고서를 만드는 방법은 [보고서 작성기 시작(보고서 작성기)](https://technet.microsoft.com/library/ms159221.aspx)을 참조하세요.  
   
 #### <a name="reporting-services-samples"></a>Reporting Services 예제  
   

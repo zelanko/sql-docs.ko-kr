@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - database snapshots [SQL Server], creating
@@ -13,12 +12,12 @@ ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7bb53467361cec415b95f2fe3477f3b0730f33b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212203"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768335"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>데이터베이스 스냅숏 만들기(Transact-SQL)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 스냅숏은 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용해서만 만들 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 데이터베이스 스냅숏 만들기를 지원하지 않습니다.  
@@ -31,18 +30,18 @@ ms.locfileid: "48212203"
   
      [최선의 구현 방법: 데이터베이스 스냅숏 명명](#Naming)  
   
--   **스냅숏을 사용 하 여 데이터베이스를 만들려면:**[TRANSACT-SQL  ](#TsqlProcedure)  
+-   **스냅숏을 사용 하 여 데이터베이스를 만들려면:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
  복구 모델을 사용할 수 있는 원본 데이터베이스는 다음 사전 요구 사항을 충족해야 합니다.  
   
 -   서버 인스턴스는 데이터베이스 스냅숏을 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 실행해야 합니다. 데이터베이스 스냅숏 지원에 대 한 자세한 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
 -   데이터베이스 미러링 세션의 미러 데이터베이스가 아닌 경우 원본 데이터베이스는 온라인 상태여야 합니다.  
   
--   미러 데이터베이스에서 데이터베이스 스냅숏을 만들려면 데이터베이스가 동기화 된 해야[미러링은 상태](../../database-engine/database-mirroring/mirroring-states-sql-server.md)합니다.  
+-   미러 데이터베이스에서 데이터베이스 스냅숏을 만들려면 데이터베이스가 동기화된[미러링 상태](../../database-engine/database-mirroring/mirroring-states-sql-server.md)여야 합니다.  
   
 -   원본 데이터베이스는 확장 가능한 공유 데이터베이스로 구성할 수 없습니다.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "48212203"
   
 -   [최선의 구현 방법: 데이터베이스 스냅숏 수 제한](#Limiting_Number)  
   
--   [최선의 구현 방법: 데이터베이스 스냅숏에 대한 클라이언트 연결](#Client_Connections)  
+-   [최선의 구현 방법: 데이터베이스 스냅숏에 대 한 클라이언트 연결](#Client_Connections)  
   
 ####  <a name="Naming"></a> 최선의 구현 방법: 데이터베이스 스냅숏 명명  
  스냅숏의 이름은 중요하므로 스냅숏을 만들기 전에 고려해야 합니다. 각 데이터베이스 스냅숏에는 고유한 데이터베이스 이름이 필요합니다. 쉬운 관리를 위해 데이터베이스를 식별하는 다음과 같은 정보를 스냅숏 이름에 첨가할 수 있습니다.  
@@ -173,7 +172,7 @@ AS SNAPSHOT OF Sales;
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [데이터베이스 스냅숏 보기&#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md)  
   

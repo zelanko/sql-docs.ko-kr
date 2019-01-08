@@ -1,91 +1,94 @@
 ---
-title: R(SQL 및 R 심층 분석)을 이용해 SQL Server의 데이터 다뤄보기 | Microsoft Docs
+title: 데이터베이스를 만들고 RevoScaleR 자습서-SQL Server Machine Learning에 대 한 사용 권한
+description: R 자습서에 대 한 SQL Server 데이터베이스를 만드는 방법에 대 한 연습 자습서...
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/27/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a59d467417c3471fa643acf9fc65ab45d5dc7a45
-ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
+ms.openlocfilehash: 15032b604d7ea28ad03acb837f997dac3afa84b8
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44375676"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645272"
 ---
-# <a name="lesson-1-create-a-database-and-permissions"></a>1 단원: 데이터베이스 및 권한 만들기
+# <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>데이터베이스를 만들고 사용 권한 (SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서는 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 SQL Server에서 사용하는 방법을 다룬 [RevoScaleR 자습서](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)의 일부입니다.
+이 단원에서는의 일부인를 [RevoScaleR 자습서](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 사용 하는 방법에 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server를 사용 하 여 합니다.
 
-이 단원에서는 환경을 설정하고, 모델 학습에 필요한 데이터를 추가하고, 데이터를 간단히 다뤄봅니다. 이 과정은 아래 작업을 통해 이루어집니다.
-  
-- 두 개의 R 모델 학습 및 점수 매기기에 사용되는 데이터를 저장할 새 데이터베이스를 만듭니다.
-  
-- 워크스테이션과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터 간에 통신할 때 사용할 계정(Windows 사용자 또는 SQL 로그인)을 만듭니다.
-  
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 및 데이터베이스 개체 작업을 위한 데이터 원본을 R에서 만듭니다.
-  
-- R 데이터 원본을 사용하여 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드합니다.
-  
-- R을 사용하여 변수 목록을 가져오고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블의 메타데이터를 수정합니다.
-  
-- R 코드를 원격으로 실행할 수 있도록 계산 컨텍스트를 만듭니다.
-  
-- (선택 사항) 원격 계산 환경에서 추적을 사용하도록 설정합니다.
-  
-## <a name="create-the-database-and-user"></a>데이터베이스 및 사용자 만들기
+이 자습서를 완료 하는 데 필요한 권한과 SQL Server 데이터베이스를 설정 하는 방법에 대 한 단원 하나 이며 사용 하 여 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 또는 다음 작업을 완료 하려면 다른 쿼리 편집기:
 
-이 연습에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 새 데이터베이스를 생성하고, 데이터를 읽고 쓸 수 있는 권한을 가진 계정으로 SQL에 로그인하고, R 스크립트를 실행합니다.
+> [!div class="checklist"]
+> * 학습 및 두 개의 R 모델 점수 매기기에 대 한 데이터를 저장할 새 데이터베이스 만들기
+> * 데이터베이스 개체 만들기 및 사용에 대 한 권한이 있는 데이터베이스 사용자 로그인 만들기
+  
+## <a name="create-the-database"></a>데이터베이스 만들기
 
-> [!NOTE]
-> 데이터를 쓰지 않고 읽기만 한다면, R 스크립트를 실행하는 계정은 특정 데이터베이스에 대한 SELECT 권한(**db_datareader** 역할)이 필요합니다. 그러나 이 자습서에서는 데이터베이스를 준비하고, 평가 결과를 저장하는 테이블을 만드는 데 필요한 DDL 관리자 권한이 있어야 합니다.
-> 
-> 또한 데이터베이스의 소유자가 아니라면, R 스크립트를 실행하기 위해서 EXECUTE ANY EXTERNAL SCRIPT 권한이 필요합니다.
+이 자습서는 데이터베이스 데이터 및 코드를 저장 하는 데 필요 합니다. 관리자가 아닌 경우 사용자에 대 한 데이터베이스 및 로그인을 만들려면 DBA를 요청 합니다. 데이터를 읽고 쓰는 데 및 R 스크립트를 실행할 권한이 필요 합니다.
 
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 을 사용할 수 있는 인스턴스를 선택하고 **데이터베이스**를 마우스 오른쪽 단추로 클릭한 다음 **새 데이터베이스**를 선택합니다.
+1. SQL Server Management studio에서 R 사용 데이터베이스 인스턴스에 연결 합니다.
+
+2. 마우스 오른쪽 단추로 클릭 **데이터베이스**, 선택한 **새 데이터베이스**합니다.
   
-2. 새 데이터베이스의 이름을 입력합니다. 원하는 이름을 임의로 사용할 수 있지만 이 연습의 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 및 R 스크립트를 적절하게 편집해야 합니다.
+2. 새 데이터베이스의 이름을 입력 합니다. RevoDeepDive 합니다.
   
-    > [!TIP]
-    > 업데이트된 데이터베이스 이름을 보려면 **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **새로 고침** 을 선택합니다.
+
+## <a name="create-a-login"></a>로그인을 만듭니다.
   
-3. **새 쿼리**를 클릭하고 데이터베이스 컨텍스트를 master 데이터베이스로 변경합니다.
+1. **새 쿼리**를 클릭하고 데이터베이스 컨텍스트를 master 데이터베이스로 변경합니다.
   
-4. 새 **쿼리** 창에서 다음 명령을 실행하여 사용자 계정을 만들고 이 자습서에 사용되는 데이터베이스에 할당합니다. 필요한 경우 데이터베이스 이름을 변경해야 합니다.
+2. 새 **쿼리** 창에서 다음 명령을 실행하여 사용자 계정을 만들고 이 자습서에 사용되는 데이터베이스에 할당합니다. 필요한 경우 데이터베이스 이름을 변경해야 합니다.
+
+3. 로그인을 확인 하려면 새 데이터베이스를 선택, 확장 **보안**를 확장 하 고 **사용자**합니다.
   
 **Windows 사용자**
   
-```SQL
+```sql
  -- Create server user based on Windows account
 USE master
 GO
-CREATE LOGIN [<DOMAIN>\<user_name>] FROM WINDOWS WITH DEFAULT_DATABASE=[DeepDive]
+CREATE LOGIN [<DOMAIN>\<user_name>] FROM WINDOWS WITH DEFAULT_DATABASE=[RevoDeepDive]
 
  --Add the new user to tutorial database
-USE [DeepDive]
+USE [RevoDeepDive]
 GO
 CREATE USER [<user_name>] FOR LOGIN [<DOMAIN>\<user_name>] WITH DEFAULT_SCHEMA=[db_datareader]
 ```
 
 **SQL 로그인**
 
-```SQL
+```sql
 -- Create new SQL login
 USE master
 GO
-CREATE LOGIN DDUser01 WITH PASSWORD='<type password here>', CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF;
+CREATE LOGIN [DDUser01] WITH PASSWORD='<type password here>', CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF;
 
 -- Add the new SQL login to tutorial database
-USE [DeepDive]
+USE RevoDeepDive
 GO
 CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
 ```
 
-5. 사용자가 만들어졌는지 확인하려면 새 데이터베이스를 선택하고 **보안**및 **사용자**를 차례로 확장합니다.
+## <a name="assign-permissions"></a>사용 권한 할당
 
-## <a name="troubleshooting"></a>문제 해결
+이 자습서는 R 스크립트 및 응용 프로그램을 만드는 테이블 및 저장된 프로시저를 삭제 하 고 외부 프로세스에서 SQL Server에서 R 스크립트를 실행 등과 같은 DDL 작업을 보여 줍니다. 이 단계에서는 이러한 작업을 허용 하려면 아래를 할당 합니다.
+
+이 예에서는 SQL 로그인 (DDUser01) 가정 하지만 Windows 로그인을 만든 경우 복사본을 대신 사용 합니다.
+
+```sql
+USE RevoDeepDive
+GO
+
+EXEC sp_addrolemember 'db_owner', 'DDUser01'
+GRANT EXECUTE ANY EXTERNAL SCRIPT TO DDUser01
+GO
+```
+
+## <a name="troubleshoot-connections"></a>연결 문제 해결
 
 이 섹션에서는 데이터베이스를 설정하는 과정에서 발생할 수 있는 몇 가지 일반적인 문제를 보여 줍니다.
 
@@ -95,7 +98,7 @@ CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
   
     추가 데이터베이스 관리 도구를 설치하지 않으려는 경우 제어판의 [ODBC 데이터 원본 관리자](https://msdn.microsoft.com/library/ms714024.aspx) 를 사용하여 SQL Server 인스턴스에 대한 테스트 연결을 만들 수 있습니다. 데이터베이스가 올바르게 구성되고 올바른 사용자 이름 및 암호를 입력한 경우 방금 만든 데이터베이스가 표시되며 기본 데이터베이스로 선택할 수 있습니다.
   
-    데이터베이스에 연결할 수 없는 경우 서버에 대해 원격 연결을 사용할 수 있고 명명된 파이프 프로토콜이 사용하도록 설정되었는지 확인합니다. 이 문서에서 추가 문제 해결 팁을 제공 합니다. [SQL Server 데이터베이스 엔진에 연결 문제 해결](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine)합니다.
+    연결 실패에 대 한 일반적인 이유는 원격 서버에 대 한 연결이 활성화 되지 않습니다 및 명명 된 파이프 프로토콜이 활성화 되어 있지. 이 문서에서 자세한 문제 해결 팁을 찾을 수 있습니다. [SQL Server 데이터베이스 엔진 연결 문제 해결](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine)합니다.
   
 - **내 테이블 이름 앞에 datareader가 붙는 것은 무엇 때문인가요?**
   
@@ -111,17 +114,11 @@ CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
   
 - **DDL 권한이 없습니다. 그래도 자습서를 실행할 수 있나요?**
   
-    예, 그러나 다른 사람에게 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 미리 로드하도록 요청하고 새 테이블을 만들기 위해 호출하는 섹션을 건너뛰어야 합니다. DDL 권한이 필요한 함수는 가능한 경우 항상 자습서에서 언급될 것입니다.
+    예, 데이터를 미리 로드에 다른 사람에 게 문의 해야 하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블과 계속 해 서 다음 단원으로 건너뜁니다. DDL 권한이 필요한 함수는 가능한 경우 항상 자습서에서 언급될 것입니다.
 
     또한 EXECUTE ANY EXTERNAL SCRIPT 사용 권한을 부여받으려면 관리자에게 문의하십시오. 원격이나 `sp_execute_external_script`를 통해 R 스크립트를 실행할 때 필요합니다.
 
-## <a name="next-step"></a>다음 단계
+## <a name="next-steps"></a>다음 단계
 
-[RxSqlServerData를 사용하여 SQL Server 데이터 개체 만들기](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
-
-## <a name="overview"></a>개요
-
-[데이터 과학 심층 분석: RevoScaleR 패키지 사용](../../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-
-
-
+> [!div class="nextstepaction"]
+> [RxSqlServerData를 사용하여 SQL Server 데이터 개체 만들기](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)

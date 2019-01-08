@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_query_stats (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/04/2018
+ms.date: 12/18/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,17 +21,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e52c264de3e7e2e9e7de8a96f3ad0cdf8dd04066
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8df3c13b42df1b842d784fedd1720d2e9bfc258
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843571"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626392"
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  캐시 된 쿼리 계획에 대 한 집계 성능 통계를 반환 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이 뷰에는 캐시된 계획 내의 쿼리 문당 하나의 행이 포함되어 있습니다. 행의 유효 기간은 계획 자체와 연결되어 있습니다. 캐시에서 계획이 제거되면 이 뷰에서도 해당 행이 제거됩니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 캐시된 쿼리 계획에 대한 집계 성능 통계를 반환합니다. 이 뷰에는 캐시된 계획 내의 쿼리 문당 하나의 행이 포함되어 있습니다. 행의 유효 기간은 계획 자체와 연결되어 있습니다. 캐시에서 계획이 제거되면 이 뷰에서도 해당 행이 제거됩니다.  
   
 > [!NOTE]
 > 초기 쿼리 **sys.dm_exec_query_stats** 중인 서버에서 현재 실행 중인 작업이 있을 경우 부정확 한 결과 생성할 수 있습니다. 쿼리를 다시 실행하면 보다 정확한 결과를 확인할 수 있습니다.  
@@ -50,15 +50,15 @@ ms.locfileid: "47843571"
 |**last_execution_time**|**datetime**|이 계획이 마지막으로 실행되기 시작한 시간입니다.|  
 |**execution_count**|**bigint**|이 계획이 마지막으로 컴파일된 이후 실행된 횟수입니다.|  
 |**total_worker_time**|**bigint**|이 계획이 컴파일된 이후 실행되는 데 사용된 총 CPU 시간(마이크로초 단위로 보고되지만 밀리초 단위까지만 정확함)입니다.<br /><br /> 고유하게 컴파일된 저장 프로시저의 경우 1초 미만이 소요되는 실행이 많으면 **total_worker_time** 이 정확하지 않을 수 있습니다.|  
-|**last_worker_time**|**bigint**|이 계획이 마지막으로 실행되었을 때 사용된 CPU 시간(마이크로초 단위로 보고되지만 밀리초 단위까지만 정확함)입니다. <sup>1.</sup>|  
-|**min_worker_time**|**bigint**|단일 실행 중에 이 계획이 사용한 최소 CPU 시간(마이크로초 단위로 보고되지만 밀리초 단위까지만 정확함)입니다. <sup>1.</sup>|  
-|**max_worker_time**|**bigint**|단일 실행 중에 이 계획이 사용한 최대 CPU 시간(마이크로초 단위로 보고되지만 밀리초 단위까지만 정확함)입니다. <sup>1.</sup>|  
+|**last_worker_time**|**bigint**|이 계획이 마지막으로 실행되었을 때 사용된 CPU 시간(마이크로초 단위로 보고되지만 밀리초 단위까지만 정확함)입니다. <sup>1</sup>|  
+|**min_worker_time**|**bigint**|단일 실행 중에 이 계획이 사용한 최소 CPU 시간(마이크로초 단위로 보고되지만 밀리초 단위까지만 정확함)입니다. <sup>1</sup>|  
+|**max_worker_time**|**bigint**|단일 실행 중에 이 계획이 사용한 최대 CPU 시간(마이크로초 단위로 보고되지만 밀리초 단위까지만 정확함)입니다. <sup>1</sup>|  
 |**total_physical_reads**|**bigint**|이 계획이 컴파일된 이후 실행될 때 수행된 총 물리적 읽기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
 |**last_physical_reads**|**bigint**|이 계획이 마지막으로 실행되었을 때 수행된 물리적 읽기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
 |**min_physical_reads**|**bigint**|단일 실행 중 이 계획에서 수행한 최소 물리적 읽기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
 |**max_physical_reads**|**bigint**|단일 실행 중 이 계획에서 수행한 최대 물리적 읽기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
 |**total_logical_writes**|**bigint**|이 계획이 컴파일된 이후 실행될 때 수행된 총 논리적 쓰기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
-|**last_logical_writes**|**bigint**|계획이 마지막으로 실행될 때 변경된 버퍼 풀 페이지 수입니다. 페이지가 이미 변경된(수정된) 경우에는 쓰기 수가 계산되지 않습니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
+|**last_logical_writes**|**bigint**|버퍼 풀 페이지 수가 계획의 가장 최근에 완료 된 실행 하는 동안 정리 합니다.<br /><br />페이지를 읽은 후 페이지가 됩니다 더티 처음에만 수정 됩니다. 페이지 변경 되 면이 번호가 증가 합니다. 이미 더티 페이지의 후속 수정이이 숫자는 영향을 주지 않습니다.<br /><br />이 숫자는 메모리 최적화 테이블을 쿼리 하는 경우에 항상 0 됩니다.|  
 |**min_logical_writes**|**bigint**|단일 실행 중 이 계획에서 수행한 최소 논리적 쓰기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
 |**max_logical_writes**|**bigint**|단일 실행 중 이 계획에서 수행한 최대 논리적 쓰기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
 |**total_logical_reads**|**bigint**|이 계획이 컴파일된 이후 실행될 때 수행된 총 논리적 읽기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
@@ -66,7 +66,7 @@ ms.locfileid: "47843571"
 |**min_logical_reads**|**bigint**|단일 실행 중 이 계획에서 수행한 최소 논리적 읽기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
 |**max_logical_reads**|**bigint**|단일 실행 중 이 계획에서 수행한 최대 논리적 읽기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
 |**total_clr_time**|**bigint**|시간 (마이크로초) (밀리초 단위 까지만 정확), 그러나 내에서 보고 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 컴파일된 이후 실행 될 때이 계획의 CLR (공용 언어 런타임) 개체입니다. CLR 개체는 저장 프로시저, 함수, 트리거, 유형 및 집계일 수 있습니다.|  
-|**last_clr_time**|**bigint**|시간 (마이크로초) (되지만 밀리초 단위 까지만 정확) 내에서 실행 하 여 사용 보고 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 이 계획이 마지막으로 실행 하는 동안 CLR 개체입니다. CLR 개체는 저장 프로시저, 함수, 트리거, 유형 및 집계일 수 있습니다.|  
+|**last_clr_time**|**bigint**|이 계획을 마지막으로 실행하는 동안 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR 개체 내에서 실행에 사용한 시간(마이크로초 단위로 보고되지만 밀리초 단위까지만 정확함)입니다. CLR 개체는 저장 프로시저, 함수, 트리거, 유형 및 집계일 수 있습니다.|  
 |**min_clr_time**|**bigint**|단일 실행 중에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR 개체 내에서 이 계획이 사용한 최소 시간(마이크로초 단위로 보고되지만 밀리초 단위까지만 정확함)입니다. CLR 개체는 저장 프로시저, 함수, 트리거, 유형 및 집계일 수 있습니다.|  
 |**max_clr_time**|**bigint**|단일 실행 중에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR 내에서 이 계획이 사용한 최대 시간(마이크로초 단위로 보고되지만 밀리초 단위까지만 정확함)입니다. CLR 개체는 저장 프로시저, 함수, 트리거, 유형 및 집계일 수 있습니다.|  
 |**total_elapsed_time**|**bigint**|이 계획의 실행을 완료하는 데 소요된 총 경과 시간(마이크로초 단위로 보고되지만 밀리초 단위까지만 정확함)입니다.|  

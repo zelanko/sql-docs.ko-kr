@@ -11,12 +11,12 @@ ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4bc835d09f02e170c3b5595495eb6554c1319df5
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
-ms.translationtype: HT
+ms.openlocfilehash: fc2274fc3342c1a6cc11053c0f226232632bc225
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906383"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374145"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>테이블 형식 모델의 DAX 이해(SSAS 테이블 형식)
   DAX(Data Analysis Expressions)는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Microsoft Excel 통합 문서 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 모델 프로젝트에서 사용자 지정 계산을 만드는 데 사용되는 수식 언어입니다. DAX 수식에는 테이블 및 열의 데이터에 대해 고급 계산을 수행하기 위한 함수, 연산자 및 값이 포함됩니다.  
@@ -78,16 +78,16 @@ ms.locfileid: "48906383"
   
  (필터링된) 계산 결과를 즉시 볼 수 없는 이유는 측정값의 결과가 컨텍스트 없이 결정될 수 없기 때문입니다. 측정값을 계산하려면 각 셀과 관련된 데이터를 검색한 다음 각 셀에 대한 식을 계산하는 데 필요한 컨텍스트를 제공할 수 있는 보고 클라이언트 애플리케이션이 있어야 합니다. 클라이언트는 Excel 피벗 테이블 또는 피벗 차트, [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서 또는 MDX 쿼리일 수 있습니다. 보고 클라이언트에 관계없이 별도의 쿼리가 결과의 각 셀에 대해 실행됩니다. 즉, 피벗 테이블에 있는 행 및 열 머리글의 각 조합이나 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서에 있는 슬라이서 및 필터의 각 선택은 측정값이 계산되는 각기 다른 데이터 하위 집합을 생성합니다. 예를 들어 수식 `Total Sales:=SUM([Sales Amount])`가 포함된 측정값에서 사용자가 피벗 테이블의 값 창에 Total Sales 측정값을 배치한 다음 Product 테이블의 Product Category 열을 필터 창에 배치하면 각 제품 범주에 대해 Sales Amount의 합계가 계산되고 표시됩니다.  
   
- 계산 열 및 행 필터와 달리 측정값에 대한 구문에는 수식의 앞에 측정값 이름이 포함됩니다. 위 예에서는 측정값 이름인 **Total Sales:** 가 수식 앞에 나타납니다. 측정값을 만들면 이름과 해당 정의가 보고 클라이언트 애플리케이션 필드 목록에 표시되며 큐브 뷰 및 역할에 따라 모델의 모든 사용자가 측정값을 사용할 수 있습니다.  
+ 계산된 열 및 행 필터와 달리 측정값에 대 한 구문에는 수식 앞에 측정값의 이름이 포함 됩니다. 위 예에서는 측정값 이름인 **Total Sales:** 가 수식 앞에 나타납니다. 측정값을 만들면 이름과 해당 정의가 보고 클라이언트 애플리케이션 필드 목록에 표시되며 큐브 뷰 및 역할에 따라 모델의 모든 사용자가 측정값을 사용할 수 있습니다.  
   
  자세한 내용은 [측정값&#40;SSAS 테이블 형식&#41;](measures-ssas-tabular.md)을 참조하세요.  
   
 ### <a name="row-filters"></a>행 필터  
  행 필터는 특정 역할의 멤버가 볼 수 있는 테이블의 행을 정의합니다. DAX 수식을 사용하여 모델의 각 테이블에 대해 행 필터를 만들 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 역할 관리자를 사용하여 특정 역할에 대해 행 필터를 만듭니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 역할 속성을 사용하여 배포된 모델에 대해 행 필터를 정의할 수도 있습니다.  
   
- 행 필터에서 부울 TRUE/FALSE 조건으로 계산되어야 하는 DAX 수식은 해당 역할의 멤버가 쿼리 결과로 반환할 수 있는 행을 정의합니다. DAX 수식에 포함되지 않은 행은 반환할 수 없습니다. 예를 들어 Sales 역할 멤버의 경우 Customers 테이블에 DAX 수식인 `=Customers[Country] = “USA”`가 있으면 Sales 역할의 멤버는 미국의 고객 데이터만 볼 수 있고 SUM 등의 집계는 미국의 고객에게만 반환됩니다.  
+ 행 필터에서 부울 TRUE/FALSE 조건으로 계산되어야 하는 DAX 수식은 해당 역할의 멤버가 쿼리 결과로 반환할 수 있는 행을 정의합니다. DAX 수식에 포함되지 않은 행은 반환할 수 없습니다. 예를 들어 Sales 역할 멤버의 경우 Customers 테이블에 DAX 수식인 `=Customers[Country] = "USA"`가 있으면 Sales 역할의 멤버는 미국의 고객 데이터만 볼 수 있고 SUM 등의 집계는 미국의 고객에게만 반환됩니다.  
   
- DAX 수식을 사용하여 행 필터를 정의할 때 허용되는 행 집합을 만듭니다. 그렇다고 해서 다른 행에 대한 액세스가 거부되는 것은 아니고 다른 행이 허용되는 행 집합의 일부로 반환되지 않을 뿐입니다. 다른 역할은 DAX 수식에서 제외되는 행에 대한 액세스를 허용할 수 있습니다. 사용자가 다른 역할의 멤버인 경우 해당 역할의 행 필터에서 특정 행 집합에 대한 액세스를 허용하면 사용자가 해당 행에 대한 데이터를 볼 수 있습니다.  
+ DAX 수식을 사용하여 행 필터를 정의할 때 허용되는 행 집합을 만듭니다. 그렇다고 해서 다른 행에 대한 액세스가 거부되는 것은 아니고 다른 행이 허용되는 행 집합의 일부로 반환되지 않을 뿐입니다. 다른 역할은 DAX 수식에서 제외되는 행에 대한 액세스를 허용할 수 있습니다. 사용자가 다른 역할의 멤버를 해당 역할의 행 필터는 특정 행 집합에 대 한 액세스를 허용 하는 경우 사용자는 해당 행에 대 한 데이터를 볼 수 있습니다.  
   
  행 필터는 지정된 행과 관련 행에 적용됩니다. 테이블에 여러 관계가 있는 경우 필터는 활성 관계에 대한 보안을 적용합니다. 행 필터는 관련 테이블에 대해 정의된 다른 행 필터와 교차됩니다.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48906383"
   
  테이블 형식 모델에는 많은 DAX 함수에 입력 또는 출력으로 사용되는 테이블 데이터 형식도 포함되어 있습니다. 예를 들어 FILTER 함수는 테이블을 입력으로 사용하여 필터 조건을 충족하는 행만 포함하는 다른 테이블을 출력합니다. 집계 함수와 테이블 함수를 결합하면 동적으로 정의된 데이터 집합을 대상으로 복잡한 계산을 수행할 수 있습니다.  
   
- 데이터 형식은 대개 자동으로 설정되지만, 데이터 형식과 해당 형식이 DAX 수식에 적용되는 방식을 이해하는 것이 중요합니다. 수식의 오류나 예기치 못한 결과는 인수에 지정된 데이터 형식에 사용할 수 없는 특정 연산자를 사용하여 발생하는 경우가 많습니다. 예를 들어 수식 `= 1 & 2`는 결과로 문자열 12를 반환합니다. 하지만 수식 `= “1” + “2”`는 정수 3을 반환합니다.  
+ 데이터 형식은 대개 자동으로 설정되지만, 데이터 형식과 해당 형식이 DAX 수식에 적용되는 방식을 이해하는 것이 중요합니다. 수식의 오류나 예기치 못한 결과는 인수에 지정된 데이터 형식에 사용할 수 없는 특정 연산자를 사용하여 발생하는 경우가 많습니다. 예를 들어 수식 `= 1 & 2`는 결과로 문자열 12를 반환합니다. 하지만 수식 `= "1" + "2"`는 정수 3을 반환합니다.  
   
  테이블 형식 모델의 데이터 형식 및 DAX의 명시적/암시적 데이터 형식 변환에 대한 자세한 내용은 [지원되는 데이터 형식&#40;SSAS 테이블 형식&#41;](data-types-supported-ssas-tabular.md)을 참조하세요.  
   
@@ -265,7 +265,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  컨텍스트의 유형으로는 *행 컨텍스트*, *쿼리 컨텍스트*및 *필터 컨텍스트*가 있습니다.  
   
 ###  <a name="bkmk_row_context"></a> 행 컨텍스트  
- *행 컨텍스트* 는 "현재 행"으로 생각할 수 있습니다. 계산 열에서 수식을 만드는 경우 해당 수식의 행 컨텍스트에 현재 행에 있는 모든 열의 값이 포함됩니다. 테이블이 다른 테이블과 관련되어 있으면 다른 테이블에서 현재 행과 관련된 모든 값도 내용에 포함됩니다.  
+ *행 컨텍스트* "현재 행"으로 생각할 수 있습니다. 계산 열에서 수식을 만드는 경우 해당 수식의 행 컨텍스트에 현재 행에 있는 모든 열의 값이 포함됩니다. 테이블이 다른 테이블과 관련되어 있으면 다른 테이블에서 현재 행과 관련된 모든 값도 내용에 포함됩니다.  
   
  예를 들어 Freight와 Tax라는 두 열의 값을 더하는 `=[Freight] + [Tax]`계산 열을 만든다고 가정합니다. 이 수식은 자동으로 지정된 열에 있는 현재 행의 값만 가져옵니다.  
   
@@ -387,7 +387,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  *다시 계산* 은 수식 변경 및 기본 데이터의 변경 내용을 반영하도록 수식의 결과를 업데이트하는 프로세스입니다. 다시 계산은 다음과 같은 방식으로 성능에 영향을 줄 수 있습니다.  
   
--   계산 열의 값이 계산된 후 모델에 저장됩니다. 계산 열의 값을 업데이트하려면 세 가지 처리 명령인 전체 처리, 데이터 처리 및 다시 계산 처리 중 하나를 사용하여 모델을 처리해야 합니다. 식을 변경할 때마다 항상 전체 열에 대해 수식의 결과를 다시 계산해야 합니다.  
+-   계산 열의 값이 계산된 후 모델에 저장됩니다. 계산 열의 값을 업데이트 하려면 세 가지 처리 명령을-전체 처리, 데이터 처리 또는 다시 계산 처리 중 하나를 사용 하 여 모델을 처리 해야 합니다. 식을 변경할 때마다 항상 전체 열에 대해 수식의 결과를 다시 계산해야 합니다.  
   
 -   측정값에 의해 계산되는 값은 사용자가 피벗 테이블에 측정값을 추가하거나 보고서를 열 때마다 동적으로 계산됩니다. 사용자가 컨텍스트를 수정하면 측정값에 의해 반환되는 값이 변경됩니다. 측정값 결과는 항상 메모리 내 캐시의 최신값을 반영합니다.  
   
@@ -417,9 +417,9 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 ##  <a name="bkmk_addional_resources"></a> 추가 리소스  
  [테이블 형식 모델링&#40;Adventure Works 자습서&#41;](../tabular-modeling-adventure-works-tutorial.md)에서 계산 열, 측정값 및 행 필터에 많은 계산을 포함하는 테이블 형식 모델을 만드는 방법에 대한 단계별 지침을 제공합니다. 대부분의 수식에 대해 수식의 용도에 대한 설명이 제공됩니다.  
   
- [Analysis Services 및 PowerPivot 팀 블로그](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) 는 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 및 PowerPivot에 대한 정보, 팁, 뉴스 및 알림을 제공합니다.  
+ [Analysis Services 및 PowerPivot 팀 블로그](https://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) 는 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 및 PowerPivot에 대한 정보, 팁, 뉴스 및 알림을 제공합니다.  
   
- [DAX 리소스 센터](http://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) 에는 DAX에 대한 내부 및 외부 정보와 뛰어난 비즈니스 인텔리전스 전문가들이 제공한 다양한 DAX 솔루션이 포함되어 있습니다.  
+ [DAX 리소스 센터](https://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) 에는 DAX에 대한 내부 및 외부 정보와 뛰어난 비즈니스 인텔리전스 전문가들이 제공한 다양한 DAX 솔루션이 포함되어 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Data Analysis Expressions &#40;DAX&#41; 참조](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)   

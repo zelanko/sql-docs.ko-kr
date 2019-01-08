@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b365ad16ce7f96ba3e0dd14f278b1ce4db60a32
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4bed4614f3d38ca7700d40b73347430f27e9d82b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657135"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591707"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,24 +47,24 @@ sp_statistics [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@table_name=** ] **'***table_name***'**  
+ [  **@table_name=** ] **'**_table_name_**'**  
  카탈로그 정보를 반환하는 데 사용되는 테이블을 지정합니다. *table_name* 됩니다 **sysname**, 기본값은 없습니다. 와일드카드 패턴 일치는 지원되지 않습니다.  
   
- [  **@table_owner=** ] **'***소유자***'**  
+ [  **@table_owner=** ] **'**_소유자_**'**  
  카탈로그 정보를 반환하는 데 사용하는 테이블의 소유자 이름입니다. *table_owner* 됩니다 **sysname**, 기본값은 NULL입니다. 와일드카드 패턴 일치는 지원되지 않습니다. 하는 경우 *소유자* 지정 하지 않으면 기본 DBMS의 기본 테이블 표시 규칙이 적용 됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 현재 사용자가 지정된 이름의 테이블을 소유한 경우 해당 테이블의 인덱스가 반환됩니다. 경우 *소유자* 지정 하지 않으면 현재 사용자 지정 된 테이블을 소유 하지 않는 한 *이름*,이 프로시저는 지정 된 테이블 *이름* 소유 하는 데이터베이스 소유자입니다. 테이블이 있을 경우 해당 테이블의 인덱스가 반환됩니다.  
   
- [  **@table_qualifier=** ] **'***한정자***'**  
- 테이블 한정자의 이름입니다. *한정자* 됩니다 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 테이블에 대해 세 부분으로 이루어진 이름 (*한정자 ***.*** 소유자 ***.*** 이름*). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 매개 변수는 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
+ [  **@table_qualifier=** ] **'**_한정자_**'**  
+ 테이블 한정자의 이름입니다. *한정자* 됩니다 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 테이블에 대해 세 부분으로 이루어진 이름 (_한정자_**.** _소유자_**.** _이름을_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 매개 변수는 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
- [  **@index_name=** ] **'***index_name***'**  
+ [  **@index_name=** ] **'**_index_name_**'**  
  인덱스 이름입니다. *index_name* 됩니다 **sysname**, 기본값은 %입니다. 와일드카드 패턴 일치가 지원됩니다.  
   
- [  **@is_unique=** ] **'***is_unique***'**  
+ [  **@is_unique=** ] **'**_is_unique_**'**  
  가 있는지 여부를 고유 인덱스 (하는 경우 **Y**) 반환 되도록 합니다. *is_unique* 됩니다 **char(1)**, 기본값은 **N**합니다.  
   
- [  **@accuracy=** ] **'***정확도***'**  
+ [  **@accuracy=** ] **'**_정확도_**'**  
  통계에 대한 카디널리티 및 페이지 정확도 수준입니다. *정확도* 됩니다 **char(1)**, 기본값은 **Q**합니다. 지정할 **E** 있도록 카디널리티와 페이지가 정확한 통계 업데이트 되었는지 확인 합니다.  
   
  값 **E** (SQL_ENSURE)에 통계를 무조건 검색 하도록 드라이버에 요청 합니다.  
@@ -73,7 +73,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_QUALIFIER**|**sysname**|테이블 한정자 이름입니다. 이 열은 NULL이 될 수 있습니다.|  
 |**TABLE_OWNER**|**sysname**|테이블 소유자 이름입니다. 이 열은 항상 값을 반환합니다.|  

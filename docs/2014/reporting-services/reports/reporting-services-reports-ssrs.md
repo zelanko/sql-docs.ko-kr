@@ -13,12 +13,12 @@ ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 464f5428f9c55ffa7d634e05fc54122882067674
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 7372f5457e047772febf4cf040da3f897ae033a2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077823"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362905"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services 보고서(SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서는 보고서 데이터 및 보고서 레이아웃 요소가 포함된 XML 기반 보고서 정의입니다. 보고서 정의는 .rdl 확장자로 클라이언트 파일 시스템에 저장됩니다. 보고서가 게시된 후에는 보고서 서버 또는 SharePoint 사이트에 저장된 보고서 항목이 됩니다. 보고서는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 제공하는 서버 기반 보고 플랫폼의 일부입니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "48077823"
 ## <a name="create-reports"></a>보고서 만들기  
  보고서를 만들려면  
   
--   **보고서의 용도를 확인합니다.** 보고서를 사용할 대상의 보고서 사용 목적을 확인합니다. 잘 디자인된 보고서는 보고서 구독자에게 이해를 넓히고 동작을 수행할 수 있는 정보를 제공합니다. 이 단계 중에 결정된 디자인 의사는 보고서 매개 변수, 보고서 레이아웃 디자인 및 보고서 보기 환경에 대한 선택에 영향을 줍니다. 자세한 내용은 msdn.microsoft.com의 [보고서 작성기 설명서](http://go.microsoft.com/fwlink/?LinkId=154494)에서 [보고서 계획&#40;보고서 작성기&#41;](../report-design/planning-a-report-report-builder.md) 및 [보고서 디자인 팁&#40;보고서 작성기 및 SSRS&#41;](../report-design/report-design-tips-report-builder-and-ssrs.md)을 참조하세요.  
+-   **보고서의 용도를 확인합니다.** 보고서를 사용할 대상의 보고서 사용 목적을 확인합니다. 잘 디자인된 보고서는 보고서 구독자에게 이해를 넓히고 동작을 수행할 수 있는 정보를 제공합니다. 이 단계 중에 결정된 디자인 의사는 보고서 매개 변수, 보고서 레이아웃 디자인 및 보고서 보기 환경에 대한 선택에 영향을 줍니다. 자세한 내용은 msdn.microsoft.com의 [보고서 작성기 설명서](https://go.microsoft.com/fwlink/?LinkId=154494)에서 [보고서 계획&#40;보고서 작성기&#41;](../report-design/planning-a-report-report-builder.md) 및 [보고서 디자인 팁&#40;보고서 작성기 및 SSRS&#41;](../report-design/report-design-tips-report-builder-and-ssrs.md)을 참조하세요.  
   
 -   **쿼리 유형을 선택합니다.** 일반화된 공유 데이터 세트 쿼리를 사용할지, 아니면 보고서 집합에 특정한 데이터 세트 쿼리를 사용할지 결정합니다. 일반화된 쿼리가 포함된 공유 데이터 세트는 여러 보고서에서 사용하도록 쉽게 유지 관리할 수 있지만 각 보고서 디자이너가 특정 보고서 세트에 필요한 대로 데이터를 필터링해야 합니다. 자세한 내용은 [보고서 데이터&#40;SSRS&#41;](../report-data/report-data-ssrs.md)를 참조하세요.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48077823"
   
         -   [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
-        -   [차트 &#40;보고서 작성기 및 SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+        -   [차트&#40;보고서 작성기 및 SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
         -   [스파크라인 및 데이터 막대&#40;보고서 작성기 및 SSRS&#41;](../report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48077823"
   
     -   **데이터 및 레이아웃을 사용자 지정합니다.** 보고서 레이아웃을 디자인합니다. 보고서 정의에는 보고서 원문, 데이터 원본, 데이터 세트, 데이터 영역, 입력란, 선 및 이미지가 있습니다. 사각형은 레이아웃의 컨테이너 및 시각적 요소로 사용됩니다. 데이터에 대해 필터, 그룹, 정렬, 서식 및 표시를 제어할 식을 작성하여 각 데이터 영역을 사용자 지정합니다. 보고서 이름과 위치를 비롯하여 수십 개 또는 수백 개의 보고서를 관리하는 데 유용한 기타 식별 정보를 추가합니다. 시각적 요소 및 컨테이너를 추가하여 페이지의 레이아웃 요소를 구성합니다. 자세한 내용은 다음 항목을 참조하십시오.  
   
-        -   [필터링, 그룹화 및 데이터 정렬 &#40;보고서 작성기 및 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+        -   [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
         -   [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48077823"
   
         -   [이미지, 입력란, 사각형 및 선&#40;보고서 작성기 및 SSRS&#41;](../report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   
-        -   [페이지 레이아웃 및 렌더링 &#40;보고서 작성기 및 SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+        -   [페이지 레이아웃 및 렌더링&#40;보고서 작성기 및 SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
     -   **대화형 기능을 구성합니다.** 보고서 구독자를 위한 대화형 기능을 추가합니다. 예를 들어 쿼리를 볼 수 있는 정렬 단추나 토글 항목을 추가합니다. 자세한 내용은 [대화형 정렬, 문서 구조 및 링크&#40;보고서 작성기 및 SSRS&#41;](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -117,10 +117,10 @@ ms.locfileid: "48077823"
 -   **다시 사용할 수 있는 구성 요소를 검토합니다.**  데이터 원본 또는 데이터 세트 쿼리를 다시 사용하도록 공유할 수 있는지 확인합니다. 다시 사용할 수 있다면 보고서 서버 또는 SharePoint 사이트에서 공유 데이터 원본 및 공유 데이터 세트를 만듭니다. 데이터 영역이 보고서 파트로 다시 사용하는 데 적절한지 확인합니다. 자세한 내용은 [보고서 디자이너의 보고서 파트&#40;SSRS&#41;](../report-design/report-parts-in-report-designer-ssrs.md)를 참조하세요.  
   
 ## <a name="preview-reports"></a>보고서 미리 보기  
- 각 보고서 제작 도구는 보고서 미리 보기를 지원합니다. 자세한 내용은 msdn.microsoft.com의 [보고서 작성기 설명서](http://go.microsoft.com/fwlink/?LinkId=154494)에서 [미리 보기](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview), [보고서 작성기&#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md) 및 [보고서 작성기에서 보고서 미리 보기](../report-builder/previewing-reports-in-report-builder.md)를 참조하세요.  
+ 각 보고서 제작 도구는 보고서 미리 보기를 지원합니다. 자세한 내용은 msdn.microsoft.com의 [보고서 작성기 설명서](https://go.microsoft.com/fwlink/?LinkId=154494)에서 [미리 보기](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview), [보고서 작성기&#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md) 및 [보고서 작성기에서 보고서 미리 보기](../report-builder/previewing-reports-in-report-builder.md)를 참조하세요.  
   
 ## <a name="save-or-publish-reports"></a>보고서 저장 또는 게시  
- 각 제작 도구는 보고서를 로컬로 저장하거나 보고서 서버 또는 SharePoint 사이트에 보고서를 게시하는 기능을 지원합니다. 자세한 내용은 msdn.microsoft.com의 [보고서 작성기 설명서](http://go.microsoft.com/fwlink/?LinkId=154494)에서 [저장 및 배포](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy), [보고서 작성기&#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md) 및 [보고서 저장&#40;보고서 작성기&#41;](../report-builder/saving-reports-report-builder.md)을 참조하세요.  
+ 각 제작 도구는 보고서를 로컬로 저장하거나 보고서 서버 또는 SharePoint 사이트에 보고서를 게시하는 기능을 지원합니다. 자세한 내용은 msdn.microsoft.com의 [보고서 작성기 설명서](https://go.microsoft.com/fwlink/?LinkId=154494)에서 [저장 및 배포](../tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy), [보고서 작성기&#40;SSRS&#41;](../tools/report-builder-authoring-environment-ssrs.md) 및 [보고서 저장&#40;보고서 작성기&#41;](../report-builder/saving-reports-report-builder.md)을 참조하세요.  
   
 ## <a name="view-reports"></a>보고서 보기  
  로컬로 저장되거나 보고서 서버에 게시된 보고서를 미리 볼 수 있을 뿐만 아니라 보고서 구독자에게 다양한 보기 환경을 제공할 수 있습니다. 보고서를 보는 방법은 다음과 같습니다.  
@@ -133,7 +133,7 @@ ms.locfileid: "48077823"
   
 -   **인쇄.**  보고서 구독자는 보고서가 표시된 방식에 따라 보고서 또는 보고서 페이지를 인쇄할 수 있습니다. 자세한 내용은 [보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md)를 참조하세요.  
   
--   **웹 또는 Windows Form 응용 프로그램.**  Visual Studio를 사용하여 보고서 뷰어 컨트롤을 호스팅하는 ASP.NET AJAX 애플리케이션 또는 Windows Form 애플리케이션을 개발할 수 있습니다. 이 컨트롤은 보고서 서버에 게시된 보고서를 가리킬 수 있습니다. 자세한 내용은 [Microsoft 보고서](http://go.microsoft.com/fwlink/?LinkID=205399)를 참조하세요.  
+-   **웹 또는 Windows Form 응용 프로그램.**  Visual Studio를 사용하여 보고서 뷰어 컨트롤을 호스팅하는 ASP.NET AJAX 애플리케이션 또는 Windows Form 애플리케이션을 개발할 수 있습니다. 이 컨트롤은 보고서 서버에 게시된 보고서를 가리킬 수 있습니다. 자세한 내용은 [Microsoft 보고서](https://go.microsoft.com/fwlink/?LinkID=205399)를 참조하세요.  
   
 ## <a name="manage-reports"></a>보고서 관리  
  게시된 보고서를 관리하는 방법은 다음과 같습니다.  
@@ -157,7 +157,7 @@ ms.locfileid: "48077823"
 ##  <a name="bkmk_SecureReportsSummary"></a> 보고서 보안  
  보고서 보안을 유지하려면  
   
--   보고서 서버 관리자로부터 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설치에 사용된 권한 부여 및 인증 시스템을 확인합니다. 기본적으로 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 게시 된 보고서에 대 한 액세스 제어 하는 데 Windows 인증, 통합된 보안 및 역할 할당을 사용 합니다. 자세한 내용은 [역할 및 권한&#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md) 및 [Reporting Services 보안 및 보호](../security/reporting-services-security-and-protection.md)를 참조하세요.  
+-   보고서 서버 관리자로부터 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설치에 사용된 권한 부여 및 인증 시스템을 확인합니다. 기본적으로 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 에서는 Windows 인증, 통합 보안 및 역할 할당을 사용하여 게시된 보고서에 대한 액세스를 제어하도록 도와줍니다. 자세한 내용은 [역할 및 권한&#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md) 및 [Reporting Services 보안 및 보호](../security/reporting-services-security-and-protection.md)를 참조하세요.  
   
 ## <a name="create-notifications-based-on-report-data"></a>보고서 데이터 기반 알림 만들기  
  SharePoint 사이트에 게시된 보고서에 대한 데이터 경고를 만들 수 있습니다. 데이터 경고는 보고서 내 데이터 영역의 데이터 피드를 기반으로 합니다. 기본적으로 데이터 영역의 이름은 자동으로 지정됩니다. 보고서 작성자는 비즈니스 용도에 따라 데이터 영역의 이름을 지정하여 보고서에 데이터 경고를 보다 쉽게 만들 수 있습니다. 데이터 경고를 만들면 데이터가 지정한 조건을 충족하는 경우 전자 메일 알림이 제공됩니다. 자세한 내용은 [보고서에서 데이터 피드 생성&#40;보고서 작성기 및 SSRS&#41;](../report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md), [데이터 경고 디자이너에서 데이터 경고 만들기](../create-a-data-alert-in-data-alert-designer.md) 및 [Reporting Services 데이터 경고](../reporting-services-data-alerts.md)를 참조하세요.  

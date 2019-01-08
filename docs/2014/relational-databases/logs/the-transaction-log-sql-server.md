@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 01/04/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], about
@@ -14,12 +14,12 @@ ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7f22f0ea25b141cf7ee5a3130153837dcf4a1132
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072893"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807015"
 ---
 # <a name="the-transaction-log-sql-server"></a>트랜잭션 로그(SQL Server)
   각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에는 각 트랜잭션에 의해 적용된 모든 트랜잭션 및 데이터베이스 수정 내용을 기록하는 트랜잭션 로그가 있습니다. 트랜잭션 로그가 채워지지 않도록 트랜잭션 로그를 정기적으로 잘라야 합니다. 그러나 일부 요소로 인해 로그 잘림이 지연될 수 있으므로 로그 크기를 모니터링하는 것이 중요합니다. 일부 작업을 최소로 기록하여 트랜잭션 로그 크기에 주는 영향을 줄일 수 있습니다.  
@@ -29,9 +29,9 @@ ms.locfileid: "48072893"
 > [!NOTE]  
 >  데이터베이스 복구 중 트랜잭션 로그 적용을 시작할 알려진 올바른 지점은 검사점에 의해 만들어집니다. 자세한 내용은 [데이터베이스 검사점&#40;SQL Server&#41;](database-checkpoints-sql-server.md)을 참조하세요.  
   
- **항목 내용:**  
+ **항목 내용**  
   
--   [트랜잭션 로그를 지 원하는 이점: 작업](#Benefits)  
+-   [이점: 트랜잭션 로그를 지 원하는 작업](#Benefits)  
   
 -   [트랜잭션 로그 잘림](#Truncation)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48072893"
   
 -   [관련 작업](#RelatedTasks)  
   
-##  <a name="Benefits"></a> 트랜잭션 로그를 지 원하는 이점: 작업  
+##  <a name="Benefits"></a> 이점: 트랜잭션 로그가 지원하는 작업  
  트랜잭션 로그는 다음 작업을 지원합니다.  
   
 -   개별 트랜잭션 복구  
@@ -88,12 +88,12 @@ ms.locfileid: "48072893"
 |7|DATABASE_SNAPSHOT_CREATION|데이터베이스 스냅숏이 생성되고 있습니다(모든 복구 모델).<br /><br /> 로그 잘림 지연을 유발하는 일반적인 이유입니다.|  
 |8|LOG_SCAN|로그 검색이 수행되고 있습니다(모든 복구 모델).<br /><br /> 로그 잘림 지연을 유발하는 일반적인 이유입니다.|  
 |9|AVAILABILITY_REPLICA|가용성 그룹의 보조 복제본에서 해당하는 보조 데이터베이스에 이 데이터베이스의 트랜잭션 로그 레코드를 적용하고 있습니다(전체 복구 모델).<br /><br /> 자세한 내용은 [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)합니다.|  
-|10|—|내부용으로만 사용할 수 있습니다.|  
-|11|—|내부용으로만 사용할 수 있습니다.|  
-|12|—|내부용으로만 사용할 수 있습니다.|  
+|10|-|내부용으로만 사용할 수 있습니다.|  
+|11|-|내부용으로만 사용할 수 있습니다.|  
+|12|-|내부용으로만 사용할 수 있습니다.|  
 |13|OLDEST_PAGE|데이터베이스가 간접 검사점을 사용하도록 구성된 경우 데이터베이스의 가장 오래된 페이지가 검사점 LSN보다 오래되었을 수 있습니다. 이 경우 가장 오래된 페이지는 로그 잘림이 지연될 수 있습니다(모든 복구 모델).<br /><br /> 간접 검사점에 대한 자세한 내용은 [Database Checkpoints &#40;SQL Server&#41;](database-checkpoints-sql-server.md)을 참조하세요.|  
 |14|OTHER_TRANSIENT|이 값은 현재 사용되지 않습니다.|  
-|16|XTP_CHECKPOINT|자동 될 때까지 트랜잭션 로그가 잘릴 수 없습니다 데이터베이스는 메모리 최적화 파일 그룹에 있는 경우 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 검사점이 트리거될 (발생 하는 모든 512MB 로그 증가에).<br /><br /> 참고: 512mb 미만의 트랜잭션 로그를 자를, 해당 데이터베이스에 대해 수동으로 검사점 명령을 실행 합니다.|  
+|16|XTP_CHECKPOINT|데이터베이스에 메모리 최적화 파일 그룹이 있는 경우 트랜잭션 로그는 자동 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 검사점이 트리거될 때까지(로그가 512MB 증가할 때마다 발생함) 잘릴 수 없습니다.<br /><br /> 참고: 512MB 미만의 트랜잭션 로그를 자르려면 해당 데이터베이스에 대해 수동으로 검사점 명령을 실행합니다.|  
   
 ##  <a name="MinimallyLogged"></a> 최소 로깅 가능한 작업  
  *최소 로깅* 은 지정 시간 복구를 지원하지 않고 트랜잭션을 복구하는 데 필요한 정보만 기록합니다. 이 항목에서는 대량 로그 복구 모델 및 단순 복구 모델(백업이 실행 중인 경우 제외)에서 최소 로깅되는 작업을 식별합니다.  
@@ -135,7 +135,7 @@ ms.locfileid: "48072893"
     -   DROP INDEX 새 힙 다시 작성(해당 사항이 있을 경우)  
   
         > [!NOTE]  
-        >  인덱스 페이지 할당 취소 하는 동안에 [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql) 작업은 항상 모두 기록 합니다.  
+        >  [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql) 작업 중의 인덱스 페이지 할당 취소는 항상 모두 로깅됩니다.  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
  `Managing the transaction log`  

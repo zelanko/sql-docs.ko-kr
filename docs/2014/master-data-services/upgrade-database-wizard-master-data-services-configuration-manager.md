@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8ce9dd246ed810f1b7e04f22b43f9dec34f26ab1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f55a722f54b6697aacf7fea87e436d33a5479afb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050051"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797964"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>데이터베이스 업그레이드 마법사(Master Data Services 구성 관리자)
   **데이터베이스 업그레이드 마법사** 를 사용하여 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 업그레이드합니다.  

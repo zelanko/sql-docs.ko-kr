@@ -13,17 +13,17 @@ ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 387cb0f529858efc858004c9c0d2a382f52cf048
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: da65bc5c3879a20ff178e27747a9bf5b267ff2c9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222643"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372185"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>검색 속성의 속성 집합 GUID 및 속성 정수 ID찾기
   이 항목에서는 검색 속성 목록에 속성을 추가하고 전체 텍스트 검색으로 검색할 수 있도록 설정하기 전에 필요한 값을 가져오는 방법에 대해 설명합니다. 이러한 값에는 문서 속성의 속성 집합 GUID와 속성 정수 식별자가 포함됩니다.  
   
- 문서에서 추출 된 Ifilter를 통해 이진 데이터 – 즉,에 저장 된 데이터에서 속성을 `varbinary`, `varbinary(max)` (등 `FILESTREAM`), 또는 `image` 데이터 형식 열 전체 텍스트 검색에 사용할 수 있습니다. 추출된 속성을 검색할 수 있도록 설정하려면 속성을 검색 속성 목록에 수동으로 추가해야 합니다. 또한 검색 속성 목록은 하나 이상의 전체 텍스트 인덱스와 연결되어야 합니다. 자세한 내용은 [검색 속성 목록을 사용하여 문서 속성 검색](search-document-properties-with-search-property-lists.md)을 참조하세요.  
+ 문서에서 추출 된 Ifilter를 통해 이진 데이터, 즉 저장 된 데이터에서 속성을 `varbinary`, `varbinary(max)` (등 `FILESTREAM`), 또는 `image` 데이터 형식 열-전체 텍스트 검색에 사용할 수 있습니다. 추출된 속성을 검색할 수 있도록 설정하려면 속성을 검색 속성 목록에 수동으로 추가해야 합니다. 또한 검색 속성 목록은 하나 이상의 전체 텍스트 인덱스와 연결되어야 합니다. 자세한 내용은 [검색 속성 목록을 사용하여 문서 속성 검색](search-document-properties-with-search-property-lists.md)을 참조하세요.  
   
  사용 가능한 속성을 속성 목록에 추가하려면 먼저 속성에 대한 다음 두 가지 정보를 찾아야 합니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48222643"
 |형식|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|정식 유형을 기반으로 인식되는 파일 유형입니다.|  
 |Title|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|항목의 제목입니다. 예를 들어 문서의 제목, 메시지의 제목, 사진의 캡션 또는 음악 트랙의 이름이 여기에 해당합니다.|  
   
- 파일 형식 간 일관성을 유지하기 위해 Microsoft에서는 몇 가지 문서 범주에 대해 자주 사용되고 우선 순위가 높은 문서 속성의 하위 집합을 식별했습니다. 여기에는 통신, 연락처, 문서, 음악 파일, 그림 및 동영상이 포함됩니다. 각 범주에서 순위가 높은 속성에 대한 자세한 내용은 Windows Search 설명서에서 [사용자 지정 파일 형식에 대한 시스템 정의 속성](http://go.microsoft.com/fwlink/?LinkId=144336) 을 참조하세요.  
+ 파일 형식 간 일관성을 유지하기 위해 Microsoft에서는 몇 가지 문서 범주에 대해 자주 사용되고 우선 순위가 높은 문서 속성의 하위 집합을 식별했습니다. 여기에는 통신, 연락처, 문서, 음악 파일, 그림 및 동영상이 포함됩니다. 각 범주에서 순위가 높은 속성에 대한 자세한 내용은 Windows Search 설명서에서 [사용자 지정 파일 형식에 대한 시스템 정의 속성](https://go.microsoft.com/fwlink/?LinkId=144336) 을 참조하세요.  
   
  특정 파일 형식은 세 가지 유형의 속성을 구현할 수 있습니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48222643"
   
  명령 프롬프트에서 **filtdump.exe** 를 실행하고 단일 인수를 제공합니다. 이 인수는 IFilter가 설치된 파일 형식을 사용하는 개별 파일의 이름입니다. 이 유틸리티는 문서에서 IFilter를 통해 검색된 모든 속성의 목록을 속성 집합 GUID, 정수 ID 및 추가 정보와 함께 표시합니다.  
   
- 이 소프트웨어 설치에 대한 자세한 내용은 [Windows 7 및 .NET Framework 4용 Microsoft Windows SDK](http://go.microsoft.com/fwlink/?LinkId=212980)를 참조하십시오. SDK를 다운로드하여 설치한 후 다음 폴더에서 filtdump.exe 유틸리티를 찾으십시오.  
+ 이 소프트웨어 설치에 대한 자세한 내용은 [Windows 7 및 .NET Framework 4용 Microsoft Windows SDK](https://go.microsoft.com/fwlink/?LinkId=212980)를 참조하십시오. SDK를 다운로드하여 설치한 후 다음 폴더에서 filtdump.exe 유틸리티를 찾으십시오.  
   
 -   64비트 버전의 경우 `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\x64`을 찾아봅니다.  
   
@@ -75,15 +75,15 @@ ms.locfileid: "48222643"
 .  
 propertyDescription  
 name = System.Author  
-…  
+...  
 formatID = F29F85E0-4FF9-1068-AB91-08002B27B3D9  
 propID = 4  
-…  
+...  
 ```  
   
- 이 속성의 전체 설명은 Windows 검색 설명서에서 [System.Author](http://go.microsoft.com/fwlink/?LinkId=144337) 를 참조하십시오.  
+ 이 속성의 전체 설명은 Windows 검색 설명서에서 [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337) 를 참조하십시오.  
   
- Windows 속성의 전체 목록을 보려면 Windows 검색 설명서에서 [Windows 속성](http://go.microsoft.com/fwlink/?LinkId=215013)을 참조하십시오.  
+ Windows 속성의 전체 목록을 보려면 Windows 검색 설명서에서 [Windows 속성](https://go.microsoft.com/fwlink/?LinkId=215013)을 참조하십시오.  
   
 ##  <a name="examples"></a> 검색 속성 목록에 속성 추가  
  다음 예에서는 속성을 검색 속성 목록에 추가하는 방법을 보여 줍니다. 이 예에서는 [ALTER SEARCH PROPERTY LIST](/sql/t-sql/statements/alter-search-property-list-transact-sql) 문을 사용하여 `System.Author` 속성을 `PropertyList1`이라는 검색 속성 목록에 추가하고 속성에 `Author`라는 이름을 제공합니다.  

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_articlefilter_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 98bafb6441b29bef41f7a2fffefac38a8ce9048a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0869cfb6914766e2ab43e138831e2992aa6977b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633421"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209202"
 ---
 # <a name="sparticlefilter-transact-sql"></a>sp_articlefilter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,16 +44,16 @@ sp_articlefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_게시_**'**  
  아티클을 포함하는 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@article=**] **'***문서***'**  
+ [  **@article=**] **'**_문서_**'**  
  아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@filter_name=**] **'***filter_name***'**  
+ [  **@filter_name=**] **'**_filter_name_**'**  
  만들 필터 저장 프로시저의 이름은 합니다 *filter_name*합니다. *filter_name* 됩니다 **nvarchar(386)**, 기본값은 NULL입니다. 고유한 아티클 필터의 이름을 지정해야 합니다.  
   
- [  **@filter_clause=**] **'***filter_clause***'**  
+ [  **@filter_clause=**] **'**_filter_clause_**'**  
  행 필터를 정의하는 제한(WHERE) 절입니다. 제약 조건 절을 입력할 때는 키워드인 WHERE를 생략합니다. *filter_clause* 됩니다 **ntext**, 기본값은 NULL입니다.  
   
  [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
@@ -71,8 +70,8 @@ sp_articlefilter [ @publication = ] 'publication'
   
  **1** 문서 변경으로 인해 기존 구독이 다시 초기화 되도록 지정 하며 구독을 다시 초기화할 수에 대 한 사용 권한을 부여 합니다.  
   
- [  **@publisher=** ] **'***게시자***'**  
- 이외[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+ [  **@publisher=** ] **'**_게시자_**'**  
+ 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *게시자* 사용 하 여 사용할 수 없습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  

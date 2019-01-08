@@ -15,12 +15,12 @@ ms.assetid: cb2226a0-3037-4fdf-966f-81eabc0da9cf
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 590cb6da26f0857c62b87542b7890732416aa486
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d83edf8ee65b638525c0ddd5ee994a26cfcfbd70
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103993"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545796"
 ---
 # <a name="transfer-error-messages-task-editor-messages-page"></a>오류 메시지 전송 태스크 편집기(메시지 페이지)
   **오류 메시지 전송 태스크 편집기** 대화 상자의 **메시지** 페이지를 사용하여 하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용자 정의 오류 메시지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 한 인스턴스에서 다른 인스턴스로 복사하기 위한 속성을 지정할 수 있습니다. 이 태스크에 대한 자세한 내용은 [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md)를 참조하십시오.  
@@ -57,12 +57,12 @@ ms.locfileid: "48103993"
 > [!NOTE]  
 >  복사할 오류 메시지를 선택하려면 **SourceConnection** 을 지정해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 태스크](control-flow/integration-services-tasks.md)   
- [오류 메시지 전송 태스크 편집기 &#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
+ [오류 메시지 전송 태스크 편집기&#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
  [SMO 연결 관리자](connection-manager/smo-connection-manager.md)   
- [오류 메시지 전송 태스크 편집기 &#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
+ [오류 메시지 전송 태스크 편집기&#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
  [SMO 연결 관리자](connection-manager/smo-connection-manager.md)  
   
   

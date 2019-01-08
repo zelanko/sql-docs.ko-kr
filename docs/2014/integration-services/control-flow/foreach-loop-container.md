@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.f1
@@ -18,27 +17,27 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3d67e256b6dca357db45cd831b2f9eab3ff93dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 664a338dd1d34126717b3953c54b175ffccd63e4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103457"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355709"
 ---
 # <a name="foreach-loop-container"></a>Foreach 루프 컨테이너
   Foreach 루프 컨테이너는 패키지의 반복 제어 흐름을 정의합니다. 루프 구현은 프로그래밍 언어에서의 **Foreach** 루프 구조와 유사합니다. 패키지에서 Foreach 열거자를 사용하면 루프를 사용할 수 있습니다.  Foreach 루프 컨테이너는 지정한 열거자의 각 멤버에 대해 제어 흐름을 반복합니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 다음 열거자 유형을 제공합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 는 다음 열거자 유형을 제공합니다.  
   
 -   Foreach ADO 열거자는 테이블의 행을 열거합니다. 예를 들어 ADO 레코드 집합의 행을 가져올 수 있습니다.  
   
-     레코드 집합 대상은 메모리 형식의 패키지 변수에 저장 된 레코드 집합에 데이터 저장 `Object` 데이터 형식입니다. 일반적으로 Foreach 루프 컨테이너를 Foreach ADO 열거자와 함께 사용하여 레코드 집합의 행을 한 번에 하나씩 처리합니다. Foreach ADO 열거자에 대해 지정된 변수는 개체 데이터 형식이어야 합니다. 레코드 집합 대상에 대한 자세한 내용은 [Use a Recordset Destination](../data-flow/recordset-destination.md)을 참조하십시오.  
+     레코드 집합 대상은 `Object` 데이터 형식의 패키지 변수에 저장된 레코드 집합의 메모리에 데이터를 저장합니다. 일반적으로 Foreach 루프 컨테이너를 Foreach ADO 열거자와 함께 사용하여 레코드 집합의 행을 한 번에 하나씩 처리합니다. Foreach ADO 열거자에 대해 지정된 변수는 개체 데이터 형식이어야 합니다. 레코드 집합 대상에 대한 자세한 내용은 [Use a Recordset Destination](../data-flow/recordset-destination.md)을 참조하십시오.  
   
 -   Foreach ADO.NET 스키마 행 집합 열거자는 데이터 원본에 대한 스키마 정보를 열거합니다. 예를 들어 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스의 테이블 목록을 열거하고 가져올 수 있습니다.  
   
 -   Foreach File 열거자는 폴더의 파일을 열거합니다. 열거자는 하위 폴더를 포함할 수 있습니다. 예를 들어 Windows 폴더 및 하위 폴더에서 파일 이름 확장명이 *.log인 모든 파일을 읽을 수 있습니다.  
   
--   Foreach From Variable 열거자는 지정한 변수에 포함된 열거 가능 개체를 열거합니다. 열거 가능 개체는 배열, ADO.NET 수 `DataTable`, [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 열거자 및 등입니다. 예를 들어 서버 이름을 포함하는 배열 값을 열거할 수 있습니다.  
+-   Foreach From Variable 열거자는 지정한 변수에 포함된 열거 가능 개체를 열거합니다. 열거 가능 개체는 배열, ADO.NET `DataTable`, [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 열거자 등이 될 수 있습니다. 예를 들어 서버 이름을 포함하는 배열 값을 열거할 수 있습니다.  
   
 -   Foreach Item 열거자는 컬렉션 항목을 열거합니다. 예를 들어 프로세스 실행 태스크가 사용하는 실행 파일 이름 및 작업 디렉터리를 열거할 수 있습니다.  
   
@@ -100,9 +99,9 @@ ms.locfileid: "48103457"
 -   <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>  
   
 ## <a name="related-content"></a>관련 내용  
- bidn.com의 블로그 항목 - [각 노드 목록 열거자에 대한 SSIS](http://go.microsoft.com/fwlink/?LinkId=220671)  
+ bidn.com의 블로그 항목 - [각 노드 목록 열거자에 대한 SSIS](https://go.microsoft.com/fwlink/?LinkId=220671)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [제어 흐름](control-flow.md)   
  [Integration Services 컨테이너](integration-services-containers.md)  
   

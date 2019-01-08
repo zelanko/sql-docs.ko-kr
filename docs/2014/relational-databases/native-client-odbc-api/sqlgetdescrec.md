@@ -12,12 +12,12 @@ ms.assetid: f3389ff2-f3be-4035-9fb5-c9ebc2f15025
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51f83f4bc0cfc60a2e8137407a7efc9635dd9f70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 41bd489752dc1b4084d9c012cad97413c6ff98b5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229223"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368595"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
   이 항목에서는 관련 된 SQLGetDescRec 기능 설명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client입니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "48229223"
 |-|---------------|------------------|-----------------|--------------------|----------------|  
 |DATETIME|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
-|날짜|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
+|date|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
 |Time|SQL_SS_TIME2|0|10|0..7|0..7|  
 |Datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  
@@ -59,7 +59,7 @@ ms.locfileid: "48229223"
  `SQLGetDescRec`는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [Large CLR User-Defined 형식 &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLGetDescRec](http://go.microsoft.com/fwlink/?LinkId=80707)   
+ [SQLGetDescRec](https://go.microsoft.com/fwlink/?LinkId=80707)   
  [ODBC API 구현 정보](odbc-api-implementation-details.md)  
   
   

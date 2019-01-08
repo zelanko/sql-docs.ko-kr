@@ -1,5 +1,5 @@
 ---
-title: 테이블 형식 모델 역할 | Microsoft Docs
+title: Analysis Services 테이블 형식 모델 역할 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4afed626100c1c46c9e2d1110c7b23cd599acb8c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 460f5e8605e7a855430231083bf9a0bd0477542b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039051"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071860"
 ---
 # <a name="tabular-model-roles"></a>테이블 형식 모델 역할 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  이 항목과 관련 태스크의 정보는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 배포된 테이블 형식 모델의 역할을 만들고 관리하는 테이블 형식 모델 데이터베이스 관리자를 위한 것입니다. 테이블 형식 모델에서 역할에 대 한 자세한 내용은 [역할](../../analysis-services/tabular-models/roles-ssas-tabular.md)합니다. 만들고에서 역할 관리자를 사용 하 여 테이블 형식 모델 프로젝트에서 역할을 관리 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], 참조 [만들기 및 관리 역할](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)합니다.  
+  이 항목과 관련 태스크의 정보는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 배포된 테이블 형식 모델의 역할을 만들고 관리하는 테이블 형식 모델 데이터베이스 관리자를 위한 것입니다. 테이블 형식 모델에 대 한 자세한 내용은 참조 하세요 [역할](../../analysis-services/tabular-models/roles-ssas-tabular.md)입니다. 만들기 및 테이블 형식 모델 프로젝트의 역할에서 역할 관리자를 사용 하 여 관리 하는 방법에 대 한 자세한 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 참조 하세요 [만들기 및 관리 역할](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)입니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
   

@@ -18,12 +18,12 @@ ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 909fd7c82e91f90b24b643a555ddd8d8d93c639f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6900c60b788c30cadd404cc2d687cf7993aa119c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734101"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202572"
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  [\@module_or_batch =] {N'[ *schema_name*합니다. ] *object_name*' | N'*batch_text*' | NULL }  
  개체의 이름을 지정 *statement_text* 나타나면 또는는 일괄 처리 텍스트 *statement_text* 나타납니다. 일괄 처리 텍스트를 사용 하 여 포함할 수 없습니다*데이터베이스* 문입니다.  
   
- 응용 프로그램에서 전송한 일괄 처리를 일치 하는 계획 지침에 대 한 *batch_tex*t 동일한 형식으로 제공 되어야 합니다-문자를에 전송 된 것과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이 일치 작업을 더 효과적으로 처리하기 위해 내부 변환은 수행되지 않습니다. 자세한 내용은 주의 섹션을 참조하세요.  
+ 응용 프로그램에서 전송한 일괄 처리를 일치 하는 계획 지침에 대 한 *batch_tex*t 동일한 형식으로 제공 되어야 합니다-문자를에 전송 된 것과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이 일치 작업을 더 효과적으로 처리하기 위해 내부 변환은 수행되지 않습니다. 자세한 내용은 설명 섹션을 참조하세요.  
   
  [*schema_name*.] *object_name* 의 이름을 지정 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저, 스칼라 함수, 다중 문 테이블 반환 함수 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 포함 하는 DML 트리거 *statement_text*. 하는 경우 *schema_name* 지정 하지 않으면 *schema_name* 현재 사용자의 스키마를 사용 합니다. NULL을 지정 하는 경우 및 \@유형 = 'SQL', 값 \@module_or_batch의 값으로 설정 되어 \@stmt 합니다. 하는 경우 \@유형 = ' 템플릿을 **'**, \@module_or_batch는 NULL 이어야 합니다.  
   
@@ -86,7 +86,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
 -   *statement_text* sp_executesql 및 값을 사용 하 여 제출 되는 \@params 매개 변수를 지정 하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내부적으로 매개 변수화 한 후 전송 합니다. 데이터베이스 API(ODBC, OLE DB, ADO.NET 등)에서 매개 변수가 있는 쿼리의 전송은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 sp_executesql 또는 API 서버 커서 루틴에 대한 호출로 나타나므로 SQL 또는 TEMPLATE 계획 지침으로 일치시킬 수도 있습니다.  
   
- *\@parameter_name data_type* 에 전송 된 것과 정확히 같은 형식에 제공 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_executesql을 사용 하 여 매개 변수화 한 후 내부에서 전송한 또는 합니다. 자세한 내용은 주의 섹션을 참조하세요. 일괄 처리에 매개 변수가 없는 경우 NULL이 지정되어야 합니다. 크기 \@매개 변수는 서버의 사용 가능한 메모리 크기로 제한 됩니다.  
+ *\@parameter_name data_type* 에 전송 된 것과 정확히 같은 형식에 제공 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_executesql을 사용 하 여 매개 변수화 한 후 내부에서 전송한 또는 합니다. 자세한 내용은 설명 섹션을 참조하세요. 일괄 처리에 매개 변수가 없는 경우 NULL이 지정되어야 합니다. 크기 \@매개 변수는 서버의 사용 가능한 메모리 크기로 제한 됩니다.  
   
  [\@힌트 =] {N'OPTION (*query_hint* [합니다 *...n* ])' | N'*XML_showplan*' | NULL}  
  N'OPTION (*쿼리 힌트* [합니다 *...n* ])  
@@ -109,7 +109,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  활성화 여부에 관계없이 계획 지침에서 참조하는 함수, 저장 프로시저 또는 DML 트리거를 삭제하거나 수정하려고 하면 오류가 발생합니다. 계획 지침에서 참조하는 트리거가 정의되어 있는 테이블을 삭제하려는 경우에도 오류가 발생합니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  계획 지침은 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 일부 버전에서 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요. 계획 지침은 모든 버전에 표시됩니다. 계획 지침이 포함된 데이터베이스를 모든 버전에 추가할 수 있습니다. 업그레이드된 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 데이터베이스를 복원하거나 첨부해도 계획 지침은 그대로 유지됩니다. 서버를 업그레이드한 후에는 각 데이터베이스의 계획 지침을 원활하게 사용할 수 있는지 확인해야 합니다.  
   
 ## <a name="plan-guide-matching-requirements"></a>계획 지침 일치 요구 사항  

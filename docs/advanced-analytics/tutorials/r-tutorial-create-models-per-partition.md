@@ -1,5 +1,5 @@
 ---
-title: 만들기, 학습 및 R (SQL Server Machine Learning Services)에서 파티션 기반 모델을 점수 매기기에 대 한 자습서 | Microsoft Docs
+title: 만들기, 학습 및 R-SQL Server Machine Learning Services의에서 파티션 기반 모델을 점수 매기기에 대 한 자습서
 description: 모델을 학습, SQL Server machine learning의 파티션 기반 모델링 기능을 사용 하 여 때 동적으로 생성 되는 분할 된 데이터를 사용 하는 방법에 알아봅니다.
 ms.custom: sqlseattle
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ddd6fd14d34b53eb14fd8b303b97dfd1b098154c
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 4c60a50f5a0f1c1831a4831d1f93ddf7d81a11d9
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462009"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596464"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>자습서: SQL Server의 R에서 파티션 기반 모델 만들기
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -34,7 +34,7 @@ SQL Server 2019 파티션 기반 모델링에서는 분할 데이터 모델을 �
 > * 각 파티션에 모델을 학습 만들고 데이터베이스에서 개체를 저장 합니다.
 > * 해당 목적을 위해 예약 하는 샘플 데이터를 사용 하 여 각 파티션 모델을 통해 팁 결과의 확률을 예측 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
  
 이 자습서를 완료 하려면 다음이 필요 합니다.
 

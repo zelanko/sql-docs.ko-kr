@@ -11,15 +11,15 @@ ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7099282f8fef9d8d029249ba5637eba6fa6bf1f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 6196466246529521f356c193c3e8cc0ee688c197
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188353"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354700"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>Configure and View SharePoint Log Files  and Diagnostic Logging (PowerPivot for SharePoint)
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 작업, 이벤트 및 메시지가 SharePoint 로그 파일에 기록 됩니다. 로깅 수준을 구성하고 로그 파일 정보를 보려면 이 항목의 정보를 사용합니다. 파일에 기록되는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 이벤트를 제어할 수 있습니다. 또한 기록되는 메시지의 심각도를 제어할 수 있습니다. 자세한 내용은 [에 대 한 사용 현황 데이터 수집 구성 &#40;SharePoint 용 PowerPivot](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)합니다.  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 작업, 이벤트 및 메시지가 SharePoint 로그 파일에 기록됩니다. 로깅 수준을 구성하고 로그 파일 정보를 보려면 이 항목의 정보를 사용합니다. 파일에 기록되는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 이벤트를 제어할 수 있습니다. 또한 기록되는 메시지의 심각도를 제어할 수 있습니다. 자세한 내용은 [에 대 한 사용 현황 데이터 수집 구성 &#40;SharePoint 용 PowerPivot](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)합니다.  
   
  항목 내용  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48188353"
   
 4.  범주를 확장하고 개별 범주를 선택합니다.  
   
-     **응용 프로그램 페이지 요청** 찾을 때 서비스 응용 프로그램에 의해 트리거되는 이벤트를 지정 된 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] PowerPivot 데이터 원본 로딩 및 팜의 다른 서버와의 통신에 대 한 합니다.  
+     **애플리케이션 페이지 요청** 은 PowerPivot 데이터 원본 로딩 및 팜의 다른 서버와의 통신을 위해 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 를 찾을 때 서비스 애플리케이션에 의해 트리거되는 이벤트를 지정합니다.  
   
      **요청 처리** 는 팜의 서버에 로드되어 있는 PowerPivot 데이터베이스에 대한 쿼리 요청에 의해 트리거되는 이벤트를 지정합니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48188353"
   
 -   상관 관계 ID를 제공하는 오류인 경우 ID를 복사한 후 로그 파일에서 검색 단어로 사용합니다.  
   
--   오류 상태 "High" 또는 "Exception"을 검색합니다. "PowerPivot 서비스"를 검색합니다.  
+-   오류 상태 "High" 또는 "Exception"을 검색합니다. "PowerPivot 서비스"를 검색 합니다.  
   
 -   오류가 발생한 시간을 알고 있는 경우 날짜 및 시간 정보를 사용하여 스크롤해야 하는 항목 범위를 좁힙니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48188353"
   
  다음 지침에는 Codeplex에서 다운로드할 수 있는 많이 사용되는 SharePoint ULS Log Viewer에 대한 링크가 포함되어 있습니다.  
   
-1.  Codeplex 사이트의 [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com) 또는 [SharePoint ULS Log Viewer](http://go.microsoft.com/fwlink/?LinkId=150052) 로 이동합니다.  
+1.  Codeplex 사이트의 [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com) 또는 [SharePoint ULS Log Viewer](https://go.microsoft.com/fwlink/?LinkId=150052) 로 이동합니다.  
   
 2.  **Downloads** 탭을 클릭합니다.  
   

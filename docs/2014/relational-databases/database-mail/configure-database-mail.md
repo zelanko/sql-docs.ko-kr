@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - Sql12.swb.sqlimail.newaccount.f1
@@ -40,12 +39,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a1e6aa62858c85da20f13295cfb2dce0ee302ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72f7ee857946267ca1c8732976cb31d30767bfed
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217623"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371185"
 ---
 # <a name="configure-database-mail"></a>데이터베이스 메일 구성
   이 항목에서는 데이터베이스 메일 구성 마법사를 사용하여 데이터베이스 메일을 활성화 및 구성하고, 템플릿을 사용하여 데이터베이스 메일 구성 스크립트를 만드는 방법에 대해 설명합니다.  
@@ -415,7 +414,7 @@ ms.locfileid: "48217623"
  테스트 메일 메시지의 **mailitem_id** 입니다.  
   
  **문제 해결**  
- 온라인 설명서의 [데이터베이스 메일 문제 해결](http://msdn.microsoft.com/library/ms188663.aspx)항목을 열려면 클릭합니다.  
+ 온라인 설명서의 [데이터베이스 메일 문제 해결](https://msdn.microsoft.com/library/ms188663.aspx)항목을 열려면 클릭합니다.  
   
 
   

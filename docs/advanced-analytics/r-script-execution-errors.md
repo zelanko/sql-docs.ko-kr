@@ -1,5 +1,5 @@
 ---
-title: SQL Server Machine Learning 및 R Services에서 R 스크립팅 오류 | Microsoft Docs
+title: R 스크립팅 오류 및 문제 해결-SQL Server Machine Learning 서비스
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
@@ -7,19 +7,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 941a8bbc5e7326d87dcdba8c822fb2c3f2190900
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5e4ac26b10a8a9f7e17345e927ee89ea6c731fb1
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695441"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644892"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>SQL Server에서 R 스크립트 오류
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에서는 SQL Server에서 R 코드를 실행 하는 경우 여러 scriptin gerrors를 설명 합니다. 목록 포괄적인 아닙니다. 많은 패키지 되며 오류는 동일한 패키지의 버전 간에 달라질 수 있습니다. 스크립트 오류를 게시 하는 것이 좋습니다 합니다 [Machine Learning Server 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR), 기계 학습 R Services (In-database), Microsoft R Client 및 Microsoft R Server에 사용 되는 구성 요소를 지 합니다.
 
-**적용 대상:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
+**적용 대상:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning 서비스
 
 
 ## <a name="valid-script-fails-in-t-sql-or-in-stored-procedures"></a>저장된 프로시저 또는 T-SQL에서 유효한 스크립트 실패
@@ -39,7 +39,7 @@ R 런타임을 작동 하는 스크립트 오류를 반환 합니다. 그러나 
 검토 하 고 약간 데이터베이스 엔진과 R 간에 데이터를 이동할 때 발생할 수 있는 데이터 형식 사용 하 여 문제를 해결 하려면 스크립트를 다시 작성 하는 것이 좋습니다. 자세한 내용은 [R 라이브러리 및 데이터 형식](r/r-libraries-and-data-types.md)합니다.
 
 또한 저장된 프로시저를 보다 쉽게 사용 되는 형식에서 R 스크립트 번들로 묶는 sqlrutils 패키지를 사용할 수 있습니다. 참조 항목:
-* [Sqlrutils 패키지를 사용 하 여 R 코드에 대 한 저장된 프로시저 생성](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
+* [sqlrutils 패키지](r/ref-r-sqlrutils.md)
 * [Sqlrutils를 사용 하 여 저장된 프로시저 만들기](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
 ## <a name="script-returns-inconsistent-results"></a>스크립트 일관 되지 않은 결과 반환합니다.
@@ -68,7 +68,7 @@ R 스크립트 여러 가지 이유로 SQL Server 컨텍스트에서 다른 값�
 
 2. 다음 스크립트를 실행합니다. 기본값을 변경한 경우 사용자 그룹 이름 및 컴퓨터 및 인스턴스 이름을 편집 해야 합니다.
 
-    ```SQL
+    ```sql
     USE [master]
     GO
     

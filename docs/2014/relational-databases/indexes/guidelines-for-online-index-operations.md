@@ -17,12 +17,12 @@ ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 704897c5da43f3f48479e155d1679a002b586866
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: e2f7a25a4a6a4bb6b8f153a8b04b47aeb542265c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086578"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356203"
 ---
 # <a name="guidelines-for-online-index-operations"></a>온라인 인덱스 작업에 대한 지침
   온라인 인덱스 작업을 수행할 때 다음 지침이 적용됩니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "48086578"
   
  인덱스 작업의 마지막 단계에 S  잠금 또는 Sch-M  잠금이 보유되므로 BEGIN  TRANSACTION...COMMIT  블록 등의 명시적 사용자 트랜잭션 내에서 온라인 인덱스 작업을 실행할 때는 주의해야 합니다. 이 작업을 실행하면 트랜잭션이 끝날 때까지 잠금이 보유되어 사용자 동시성을 방해할 수 있습니다.  
   
- `MAX DOP > 1` 및 `ALLOW_PAGE_LOCKS = OFF` 옵션과 함께 실행할 수 있도록 허용된 경우 온라인 인덱스를 다시 빌드하면 조각이 늘어날 수 있습니다. 자세한 내용은 [작동 방법: 온라인 인덱스 다시 빌드 - 조각이 늘어날 수 있음](http://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx)을 참조하세요.  
+ `MAX DOP > 1` 및 `ALLOW_PAGE_LOCKS = OFF` 옵션과 함께 실행할 수 있도록 허용된 경우 온라인 인덱스를 다시 빌드하면 조각이 늘어날 수 있습니다. 자세한 내용은 참조 하세요. [작동 방법: 온라인 인덱스 다시 빌드-조각이 늘어날된 하면](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx)합니다.  
   
 ## <a name="transaction-log-considerations"></a>트랜잭션 로그 고려 사항  
  오프라인 상태 또는 온라인 상태에서 수행되는 대규모 인덱스 작업은 트랜잭션 로그를 빨리 채워 대용량 데이터 로드를 생성할 수 있습니다. 인덱스 작업을 확실히 롤백하려면 인덱스 작업이 완료될 때까지 트랜잭션 로그를 자를 수 없지만,  인덱스 작업 중에 이 로그를 백업할 수 있습니다. 따라서 트랜잭션 로그에는 인덱스 작업을 수행하는 동안 인덱스 작업 트랜잭션 및 동시 사용자 트랜잭션을 모두 저장할 수 있는 충분한 공간이 있어야 합니다. 자세한 내용은 [Transaction Log Disk Space for Index Operations](transaction-log-disk-space-for-index-operations.md)을 참조하세요.  

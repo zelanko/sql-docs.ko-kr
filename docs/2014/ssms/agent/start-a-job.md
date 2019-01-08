@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], starting
@@ -14,12 +14,12 @@ ms.assetid: cec9f7f7-d0a7-4239-9dc5-a69c011ebaa0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c056b9a0c70329e350edccebabe63992853b3ee1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c375c8776f7c33b445676e45ce70839353d469f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154133"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376625"
 ---
 # <a name="start-a-job"></a>Start a Job
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 SQL Server 관리 개체를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 실행을 시작하는 방법에 대해 설명합니다.  
@@ -83,6 +83,6 @@ ms.locfileid: "48154133"
 ##  <a name="SMO"></a> SQL Server 관리 개체를 사용 하 여  
  **작업을 시작하려면**  
   
- Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `Start` 클래스의 `Job` 메서드를 호출합니다. 자세한 내용은 [SMO(SQL Server 관리 개체)](http://msdn.microsoft.com/library/ms162169.aspx)를 참조하세요.  
+ Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `Start` 클래스의 `Job` 메서드를 호출합니다. 자세한 내용은 [SMO(SQL Server 관리 개체)](https://msdn.microsoft.com/library/ms162169.aspx)를 참조하세요.  
   
   

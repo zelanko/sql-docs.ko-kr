@@ -20,12 +20,12 @@ ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 534134ddd778c500622af210301826c83863480f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94c9258ff71454134c5ff2023e174a0811d7afe6
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637777"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52159091"
 ---
 # <a name="sysdmhadrdatabasereplicastates-transact-sql"></a>sys.dm_hadr_database_replica_states(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47637777"
 |**group_database_id**|**uniqueidentifier**|가용성 그룹 내 데이터베이스의 식별자입니다. 이 식별자는 이 데이터베이스가 조인되는 모든 복제본에서 동일합니다.|  
 |**is_local**|**bit**|가용성 데이터베이스가 로컬인지 여부를 나타나며 다음 중 하나입니다.<br /><br /> 0 = 데이터베이스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 로컬이 아닙니다.<br /><br /> 1 = 데이터베이스가 서버 인스턴스에 로컬입니다.|  
 |**is_primary_replica**|**bit**|복제본이 기본이면 1을, 보조 복제본이면 0을 반환합니다.<br /><br />**적용 대상:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|  
-|**synchronization_state**|**tinyint**|데이터 이동 상태를 다음 값 중 하나입니다.<br /><br /> 0 = 동기화 되지 않음. 주 데이터베이스의 경우 데이터베이스에서 트랜잭션 로그를 해당 보조 데이터베이스와 동기화할 준비가 되지 않았음을 나타냅니다. 보조 데이터베이스의 경우 데이터베이스에서 연결 문제로 인해 로그 동기화를 시작하지 않았거나 데이터베이스가 일시 중지되었거나, 시작 중에 전환 상태를 진행하고 있거나 역할 전환 중임을 나타냅니다.<br /><br /> 1 = 동기화 합니다. 주 데이터베이스의 경우 해당 데이터베이스가 보조 데이터베이스의 검색 요청을 받을 준비가 되었음을 나타냅니다. 보조 데이터베이스의 경우 데이터베이스에 대한 활성 데이터 이동이 수행되고 있음을 나타냅니다.<br /><br /> 2 = 동기화 합니다. 주 데이터베이스는 동기화 중 대신 동기화됨으로 표시됩니다. 동기 커밋 보조 데이터베이스는 로컬 캐시에 데이터베이스가 장애 조치(failover) 준비되고 동기화 중일 때 동기화됨으로 표시됩니다.<br /><br /> 3 = 되돌리기 합니다. 보조 데이터베이스가 주 데이터베이스에서 페이지 가져오기를 현재 진행 중인 경우의 실행 취소 프로세스의 단계를 나타냅니다.<br />**주의:** 보조 복제본의 데이터베이스가 REVERTING 상태일 때 보조 복제본으로 강제 장애 조치 유지 데이터베이스 상태는 주 데이터베이스로 시작할 수 없습니다. 데이터베이스를 보조 데이터베이스로 다시 연결하거나 로그 백업에서 새 로그 레코드를 적용해야 합니다.<br /><br /> 4 = 초기화 합니다. 보조 데이터베이스에서 실행 취소 LSN을 catch하는 데 필요한 트랜잭션 로그가 보조 복제본에서 제공되고 확정 중인 경우의 실행 취소 단계를 나타냅니다.<br />**주의:** 때 보조 복제본의 데이터베이스가 INITIALIZING 상태인 경우으로 강제 장애 조치 보조 복제본 리프 상태의 데이터베이스는에서 주 데이터베이스로 시작 합니다. 데이터베이스를 보조 데이터베이스로 다시 연결하거나 로그 백업에서 새 로그 레코드를 적용해야 합니다.|  
+|**synchronization_state**|**tinyint**|데이터 이동 상태를 다음 값 중 하나입니다.<br /><br /> 0 = 동기화 되지 않음. 주 데이터베이스의 경우 데이터베이스에서 트랜잭션 로그를 해당 보조 데이터베이스와 동기화할 준비가 되지 않았음을 나타냅니다. 보조 데이터베이스의 경우 데이터베이스에서 연결 문제로 인해 로그 동기화를 시작하지 않았거나 데이터베이스가 일시 중지되었거나, 시작 중에 전환 상태를 진행하고 있거나 역할 전환 중임을 나타냅니다.<br /><br /> 1 = 동기화 합니다. 주 데이터베이스의 경우 해당 데이터베이스가 보조 데이터베이스의 검색 요청을 받을 준비가 되었음을 나타냅니다. 보조 데이터베이스의 경우 데이터베이스에 대한 활성 데이터 이동이 수행되고 있음을 나타냅니다.<br /><br /> 2 = 동기화 합니다. 주 데이터베이스는 동기화 중 대신 동기화됨으로 표시됩니다. 동기 커밋 보조 데이터베이스는 로컬 캐시에 데이터베이스가 장애 조치(failover) 준비되고 동기화 중일 때 동기화됨으로 표시됩니다.<br /><br /> 3 = 되돌리기 합니다. 보조 데이터베이스가 주 데이터베이스에서 페이지 가져오기를 현재 진행 중인 경우의 실행 취소 프로세스의 단계를 나타냅니다.<br />**주의:** 보조 복제본의 데이터베이스가 REVERTING 상태인 경우 보조 복제본으로 강제 장애 조치하면 데이터베이스는 주 데이터베이스로 시작될 수 없는 상태로 남습니다. 데이터베이스를 보조 데이터베이스로 다시 연결하거나 로그 백업에서 새 로그 레코드를 적용해야 합니다.<br /><br /> 4 = 초기화 합니다. 보조 데이터베이스에서 실행 취소 LSN을 catch하는 데 필요한 트랜잭션 로그가 보조 복제본에서 제공되고 확정 중인 경우의 실행 취소 단계를 나타냅니다.<br />**주의:** 보조 복제본의 데이터베이스가 INITIALIZING 상태일 때 보조 복제본으로 강제 장애 조치는 데이터베이스 상태는 주 데이터베이스로 시작할 수 없습니다 상태로 유지 합니다. 데이터베이스를 보조 데이터베이스로 다시 연결하거나 로그 백업에서 새 로그 레코드를 적용해야 합니다.|  
 |**synchronization_state_desc**|**nvarchar(60)**|데이터 이동 상태에 대한 설명이며 다음 중 하나입니다.<br /><br /> NOT SYNCHRONIZING<br /><br /> SYNCHRONIZING<br /><br /> SYNCHRONIZED<br /><br /> REVERTING<br /><br /> INITIALIZING|  
 |**is_commit_participant**|**bit**|0 = 트랜잭션 커밋이 이 데이터베이스에 대해 동기화되어 있지 않습니다.<br /><br /> 1 = 트랜잭션 커밋이 이 데이터베이스에 대해 동기화되어 있습니다.<br /><br /> 비동기 커밋 가용성 복제본의 데이터베이스에 대해서는 이 값이 항상 0입니다.<br /><br /> 동기 커밋 가용성 복제본의 데이터베이스에 대해서는 이 값이 주 데이터베이스에서만 정확합니다.|  
 |**synchronization_health**|**tinyint**|가용성 복제본에서 가용성 그룹에 조인 되어 있는 데이터베이스의 동기화 상태와 가용성 복제본 (동기-커밋 또는 비동기-커밋 모드) 중의 가용성 모드의 교집합을 반영 합니다 다음 값입니다.<br /><br /> 0 = 정상이 아님. 합니다 **synchronization_state** 데이터베이스는 0 (0(NOT SYNCHRONIZING)입니다.<br /><br /> 1 = 부분적으로 정상. 동기-커밋 가용성 복제본에서 데이터베이스를 부분적으로 정상인 상태로 간주 됩니다 하는 경우 **synchronization_state** 1(synchronizing) 됩니다.<br /><br /> 2 = 정상입니다. 동기-커밋 가용성 복제본의 데이터베이스 정상인 상태로 간주 됩니다 하는 경우 **synchronization_state** 2 (동기화 됨) 이며 데이터베이스는 비동기-커밋 가용성 복제본에 정상으로 간주 됩니다 하는 경우 **synchronization_state** 1(synchronizing) 됩니다.|  
@@ -86,7 +86,7 @@ ms.locfileid: "47637777"
 ### <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Always On 가용성 그룹&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [가용성 그룹 모니터링&#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   

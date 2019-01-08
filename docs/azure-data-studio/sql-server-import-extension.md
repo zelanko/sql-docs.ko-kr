@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio SQL Server 가져오기 확장 | Microsoft Docs
-description: Azure Data Studio 용 SQL Server 가져오기 확장 (미리 보기)
-ms.custom: tools|sos
+title: SQL Server 가져오기 확장
+titleSuffix: Azure Data Studio
+description: 설치 하 고 Azure Data Studio 용 SQL Server 가져오기 확장 (미리 보기) 사용
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 0e113e2755a5d50fa7b8c5a06486227b3671347e
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 8248404353674f8139a26cfc75f37363557136b9
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460621"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030747"
 ---
 # <a name="sql-server-import-extension-preview"></a>SQL Server 가져오기 확장 (미리 보기)
 

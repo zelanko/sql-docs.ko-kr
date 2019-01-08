@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - ProtocolDLL Property (ClientNetworkProtocol Class)
@@ -20,15 +18,15 @@ ms.assetid: fe8650d5-7b9d-46f8-bf74-baf1d9d2a06a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 67fdda95d3a447f9390b8366f99a97e269c99ddd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8558fde82245a02e04c34008eb124219354c4352
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115643"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361905"
 ---
 # <a name="protocoldll-property-clientnetworkprotocol-class"></a>ProtocolDLL 속성(ClientNetworkProtocol 클래스)
-  지정한 네트워크 프로토콜에 필요한.dll 파일의 이름을 가져옵니다 합니다 [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)합니다.  
+  지정한 네트워크 프로토콜에 필요한.dll 파일의 이름을 가져옵니다 합니다 [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,7 +45,7 @@ object
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>관련 항목  
- [클라이언트 네트워크 프로토콜 및 네트워크 라이브러리 구성](http://technet.microsoft.com/library/ms181035.aspx)  
+## <a name="see-also"></a>관련 항목:  
+ [클라이언트 네트워크 프로토콜 및 네트워크 라이브러리 구성](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

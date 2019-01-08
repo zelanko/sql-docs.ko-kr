@@ -13,15 +13,15 @@ ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 8da6fab7797154cdb59ee83993499607f515550a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 08dc61c366937c3f1b4f90e009bf8a2460a7e4d5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098863"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365905"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>차트 종류(보고서 작성기 및 SSRS)
-  표현하려는 데이터의 형식에 적합한 차트 종류를 선택하는 것이 중요합니다. 어떤 차트 종류를 선택하는가에 따라 데이터를 차트 폼에 삽입했을 때 그 데이터를 얼마나 잘 해석할 수 있는지가 결정됩니다. 예를 들어 차트의 크기에 비해 많은 양의 데이터 요소가 데이터 세트에 포함되어 있으면 영역형, 꺾은선형 또는 분산형 차트를 사용하여 데이터를 표현하는 것이 더 나을 수 있습니다. 선택한 차트 종류에 따라 데이터를 준비 하는 방법에 대 한 자세한 내용은 참조 하세요. [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)합니다.  
+  표현하려는 데이터의 형식에 적합한 차트 종류를 선택하는 것이 중요합니다. 어떤 차트 종류를 선택하는가에 따라 데이터를 차트 폼에 삽입했을 때 그 데이터를 얼마나 잘 해석할 수 있는지가 결정됩니다. 예를 들어 차트의 크기에 비해 많은 양의 데이터 요소가 데이터 세트에 포함되어 있으면 영역형, 꺾은선형 또는 분산형 차트를 사용하여 데이터를 표현하는 것이 더 나을 수 있습니다. 선택한 차트 종류에 따라 데이터를 준비하는 방법에 대한 자세한 내용은 [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)를 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -31,26 +31,26 @@ ms.locfileid: "48098863"
   
  차트를 만든 후 차트 종류를 변경할 수 있습니다. 자세한 내용은 [차트 종류 변경&#40;보고서 작성기 및 SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)을 참조하세요.  
   
- 이 중 대부분의 차트 종류에 대한 예는 예제 보고서로 제공됩니다. 샘플 보고서를 다운로드하는 방법은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][보고서 작성기 및 보고서 디자이너 샘플 보고서](http://go.microsoft.com/fwlink/?LinkId=198283)를 참조하세요.  
+ 이 중 대부분의 차트 종류에 대한 예는 예제 보고서로 제공됩니다. 샘플 보고서를 다운로드하는 방법은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][보고서 작성기 및 보고서 디자이너 샘플 보고서](https://go.microsoft.com/fwlink/?LinkId=198283)를 참조하세요.  
   
 |차트 종류|비율 데이터 표시|주식 데이터 표시|선형 데이터 표시|다중 값 데이터 표시|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
-|[영역형 차트 &#40;보고서 작성기 및 SSRS&#41;](area-charts-report-builder-and-ssrs.md)|||![사용 가능](../media/greencheck.gif "사용 가능")||  
-|[가로 막대형 차트 &#40;보고서 작성기 및 SSRS&#41;](bar-charts-report-builder-and-ssrs.md)|||![사용 가능](../media/greencheck.gif "사용 가능")||  
+|[영역형 차트&#40;보고서 작성기 및 SSRS&#41;](area-charts-report-builder-and-ssrs.md)|||![사용 가능](../media/greencheck.gif "사용 가능")||  
+|[가로 막대형 차트&#40;보고서 작성기 및 SSRS&#41;](bar-charts-report-builder-and-ssrs.md)|||![사용 가능](../media/greencheck.gif "사용 가능")||  
 |[데이터 막대](sparklines-and-data-bars-report-builder-and-ssrs.md)|||![사용 가능](../media/greencheck.gif "사용 가능")||  
-|[세로 막대형 차트 &#40;보고서 작성기 및 SSRS&#41;](column-charts-report-builder-and-ssrs.md)|||![사용 가능](../media/greencheck.gif "사용 가능")||  
-|[꺾은선형 차트 &#40;보고서 작성기 및 SSRS&#41;](line-charts-report-builder-and-ssrs.md)|||![사용 가능](../media/greencheck.gif "사용 가능")||  
+|[세로 막대형 차트&#40;보고서 작성기 및 SSRS&#41;](column-charts-report-builder-and-ssrs.md)|||![사용 가능](../media/greencheck.gif "사용 가능")||  
+|[꺾은선형 차트&#40;보고서 작성기 및 SSRS&#41;](line-charts-report-builder-and-ssrs.md)|||![사용 가능](../media/greencheck.gif "사용 가능")||  
 |[원형 차트 &#40;보고서 작성기 및 SSRS&#41;](pie-charts-report-builder-and-ssrs.md)|![사용 가능](../media/greencheck.gif "사용 가능")||||  
-|[극좌표 형 차트 &#40;보고서 작성기 및 SSRS&#41;](polar-charts-report-builder-and-ssrs.md)|![사용 가능](../media/greencheck.gif "사용 가능")||||  
-|[범위 형 차트 &#40;보고서 작성기 및 SSRS&#41;](range-charts-report-builder-and-ssrs.md)|||![사용 가능](../media/greencheck.gif "사용 가능")|![사용 가능](../media/greencheck.gif "사용 가능")|  
-|[분산형 차트 &#40;보고서 작성기 및 SSRS&#41;](scatter-charts-report-builder-and-ssrs.md)|![사용 가능](../media/greencheck.gif "사용 가능")||![사용 가능](../media/greencheck.gif "사용 가능")||  
-|[셰이프 차트 &#40;보고서 작성기 및 SSRS&#41;](shape-charts-report-builder-and-ssrs.md)|![사용 가능](../media/greencheck.gif "사용 가능")||||  
-|[스파크 라인](sparklines-and-data-bars-report-builder-and-ssrs.md)|![사용 가능](../media/greencheck.gif "사용 가능")|![사용 가능](../media/greencheck.gif "사용 가능")|![사용 가능](../media/greencheck.gif "사용 가능")|![사용 가능](../media/greencheck.gif "사용 가능")|  
-|[주식형 차트 &#40;보고서 작성기 및 SSRS&#41;](stock-charts-report-builder-and-ssrs.md)||![사용 가능](../media/greencheck.gif "사용 가능")||![사용 가능](../media/greencheck.gif "사용 가능")|  
+|[극좌표형 차트&#40;보고서 작성기 및 SSRS&#41;](polar-charts-report-builder-and-ssrs.md)|![사용 가능](../media/greencheck.gif "사용 가능")||||  
+|[범위형 차트&#40;보고서 작성기 및 SSRS&#41;](range-charts-report-builder-and-ssrs.md)|||![사용 가능](../media/greencheck.gif "사용 가능")|![사용 가능](../media/greencheck.gif "사용 가능")|  
+|[분산형 차트&#40;보고서 작성기 및 SSRS&#41;](scatter-charts-report-builder-and-ssrs.md)|![사용 가능](../media/greencheck.gif "사용 가능")||![사용 가능](../media/greencheck.gif "사용 가능")||  
+|[셰이프 차트&#40;보고서 작성기 및 SSRS&#41;](shape-charts-report-builder-and-ssrs.md)|![사용 가능](../media/greencheck.gif "사용 가능")||||  
+|[스파크라인](sparklines-and-data-bars-report-builder-and-ssrs.md)|![사용 가능](../media/greencheck.gif "사용 가능")|![사용 가능](../media/greencheck.gif "사용 가능")|![사용 가능](../media/greencheck.gif "사용 가능")|![사용 가능](../media/greencheck.gif "사용 가능")|  
+|[주식형 차트&#40;보고서 작성기 및 SSRS&#41;](stock-charts-report-builder-and-ssrs.md)||![사용 가능](../media/greencheck.gif "사용 가능")||![사용 가능](../media/greencheck.gif "사용 가능")|  
   
 ## <a name="see-also"></a>관련 항목  
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [차트의 빈 데이터 요소 및 Null 데이터 요소&#40;보고서 작성기 및 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [보고서에 차트 추가 &#40;보고서 작성기 및 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [보고서에 차트 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
   

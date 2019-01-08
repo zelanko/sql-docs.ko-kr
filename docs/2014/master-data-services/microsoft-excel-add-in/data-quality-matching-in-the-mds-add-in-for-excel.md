@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 647fe2c53dfc02bd53a063f49e3bef4b635137ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 139bda733610f7f4ac54b2d438ba73b29831427c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103495"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784375"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>Excel용 MDS 추가 기능의 데이터 품질 일치
   시간이 지날수록 MDS 저장소에 추가하는 데이터가 늘어나게 됩니다. 데이터를 추가하기 전에 새 데이터와 MDS에서 관리되는 기존 데이터를 비교하면 중복되거나 정확하지 않은 데이터가 추가되는 것을 방지할 수 있습니다.  
   
- MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 DQS(Data Quality Services)를 사용하여 비슷한 데이터를 일치시킵니다. 추가 기능에 포함된 일치 기능을 사용하면 비슷한 레코드가 그룹화되고 결과의 정확성을 보여 주는 점수가 표시됩니다. DQS가 제공하는 일치 기능에 대한 자세한 내용은 [Data Matching](../../data-quality-services/data-matching.md)를 참조하십시오.  
+ MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 DQS(Data Quality Services)를 사용하여 비슷한 데이터를 일치시킵니다. 추가 기능에 포함된 일치 기능을 사용하면 비슷한 레코드가 그룹화되고 결과의 정확성을 보여 주는 점수가 표시됩니다. DQS가 제공하는 일치 기능에 대한 자세한 내용은 [Data Matching](../../data-quality-services/data-matching.md)를 참조하십시오.  
   
 ## <a name="workflow-for-data-quality-matching"></a>데이터 품질 일치 워크플로  
  DQS를 MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]와 함께 사용하는 경우 다음 워크플로를 따르십시오.  
@@ -49,7 +48,7 @@ ms.locfileid: "48103495"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|외부 데이터와 MDS 관리 데이터를 비교하기 전에 결합합니다.|[데이터 결합 &#40;MDS 추가 기능에 Excel 용&#41;](combine-data-mds-add-in-for-excel.md)|  
+|외부 데이터와 MDS 관리 데이터를 비교하기 전에 결합합니다.|[데이터 결합&#40;Excel용 MDS 추가 기능&#41;](combine-data-mds-add-in-for-excel.md)|  
 |DQS 기술 자료를 사용하여 데이터의 유사성을 찾습니다.|[유사한 데이터 일치&#40;Excel용 MDS 추가 기능&#41;](match-similar-data-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>관련 내용  

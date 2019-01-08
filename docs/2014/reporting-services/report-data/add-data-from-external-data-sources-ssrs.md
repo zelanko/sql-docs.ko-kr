@@ -11,12 +11,12 @@ ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2f1dff5b37bdf608478105e684a09dab8cae9280
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 527c089b1fd1dc49330ea3ee3c9b3576f7c969ff
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161953"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369665"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>외부 데이터 원본의 데이터 추가(SSRS)
   외부 데이터 원본에서 데이터를 검색하려면 데이터 연결을 사용합니다. 일반적으로 데이터 연결 정보는 사용 권한을 부여하고 사용할 자격 증명 유형을 지정하는 외부 데이터 원본의 소유자가 제공합니다. 데이터 연결 정보는 보고서 데이터 원본으로 저장됩니다. 데이터 원본 유형에 따라 데이터를 검색하는 데 사용할 데이터 확장 프로그램이 결정됩니다.  
@@ -107,8 +107,8 @@ ms.locfileid: "48161953"
 |[보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](../data-connections-data-sources-and-connection-strings-in-report-builder.md)|데이터 연결 및 데이터 원본에 대한 정보를 제공합니다.|  
 |[보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|포함된 데이터 세트 및 공유 데이터 세트에 대한 정보를 제공합니다.|  
 |[데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)|쿼리에 의해 생성되는 데이터 세트 필드 컬렉션에 대한 정보를 제공합니다.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).|각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서에서 [데이터 처리 확장 프로그램 개요](../extensions/data-processing/data-processing-extensions-overview.md)를 참조하세요.|고급 사용자를 위해 데이터 확장 프로그램에 대한 자세한 정보를 제공합니다.|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).|각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서에서 [데이터 처리 확장 프로그램 개요](../extensions/data-processing/data-processing-extensions-overview.md)를 참조하세요.|고급 사용자를 위해 데이터 확장 프로그램에 대한 자세한 정보를 제공합니다.|  
   
 
   

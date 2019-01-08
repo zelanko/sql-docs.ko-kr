@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 0aad4563-8caf-4971-92af-55992bc5ff2c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5862e1c52b186a034ebce4955f70ddf9baca9342
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: bd9f8c6ca62fdd9f9a856a19f3d27c2144073b52
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188143"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801265"
 ---
 # <a name="showplan-text-unencoded-event-class"></a>Showplan Text (Unencoded) 이벤트 클래스
   Showplan Text (Unencoded) 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 SQL 문을 실행할 때 발생합니다. 이 이벤트 클래스는 Showplan Text 이벤트 클래스와 동일하지만 해당 이벤트 정보의 형식이 이진 데이터가 아닌 문자열입니다.  

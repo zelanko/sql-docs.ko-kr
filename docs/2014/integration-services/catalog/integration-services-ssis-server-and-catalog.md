@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], managing
@@ -14,12 +13,12 @@ ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67a74b8b9958eb52426a4f2bc8f36cd14c005f87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e4059973f0a81e92c680c81b0bc6a60bd0483dae
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075005"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358845"
 ---
 # <a name="integration-services-ssis-server"></a>Integration Services(SSIS) 서버
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 패키지를 디자인하고 테스트한 후에는 이 패키지가 포함된 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다.  
@@ -33,9 +32,9 @@ ms.locfileid: "48075005"
  SSISDB 카탈로그 기능에 대한 개요는 [SSIS 카탈로그](ssis-catalog.md)를 참조하세요.  
   
 ## <a name="high-availability"></a>고가용성  
- 다른 사용자 데이터베이스와 같이 `SSISDB` database 데이터베이스 미러링 및 복제 지원지 않습니다. 미러링 및 복제에 대한 자세한 내용은 [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.  
+ 다른 사용자 데이터베이스와 같이 `SSISDB` 데이터베이스는 데이터베이스 미러링 및 복제를 지원하지 않습니다. 미러링 및 복제에 대한 자세한 내용은 [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.  
   
- 또한 SSIS 및 AlwaysOn 가용성 그룹을 사용하여 SSISDB의 고가용성 및 해당 콘텐츠를 제공할 수도 있습니다. 자세한 내용은 blogs.msdn.com에서 Matt Masson이 게시한 [AlwaysOn을 사용하는 SSIS](http://go.microsoft.com/fwlink/?LinkId=255873)블로그를 참조하십시오.  
+ 또한 SSIS 및 AlwaysOn 가용성 그룹을 사용하여 SSISDB의 고가용성 및 해당 콘텐츠를 제공할 수도 있습니다. 자세한 내용은 blogs.msdn.com에서 Matt Masson이 게시한 [AlwaysOn을 사용하는 SSIS](https://go.microsoft.com/fwlink/?LinkId=255873)블로그를 참조하십시오.  
   
 ##  <a name="ssms"></a> SQL Server Management Studio의 Integration Services 서버  
  `SSISDB` 데이터베이스를 호스팅하는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결하면 개체 탐색기에 다음 개체가 표시됩니다.  
@@ -59,6 +58,6 @@ ms.locfileid: "48075005"
 -   [SQL Server Management Studio를 사용하여 SSIS 서버에서 패키지 실행](../run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
   
 ## <a name="related-content"></a>관련 내용  
- blogs.msdn.com의 블로그 항목, [AlwaysOn을 사용하는 SSIS](http://go.microsoft.com/fwlink/?LinkId=255873)  
+ blogs.msdn.com의 블로그 항목, [AlwaysOn을 사용하는 SSIS](https://go.microsoft.com/fwlink/?LinkId=255873)  
   
   

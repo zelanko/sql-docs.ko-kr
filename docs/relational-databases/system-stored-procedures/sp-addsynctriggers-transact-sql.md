@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addsynctriggers_TSQL
@@ -17,12 +16,12 @@ ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c69681e396065f1881ff9ea81468ef85c8b26da4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89a6a997fd272985bd60d0b5d574fea07463f54d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799723"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588289"
 ---
 # <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,46 +58,46 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@sub_table=**] **'***sub_table***'**  
+ [  **@sub_table=**] **'**_sub_table_**'**  
  구독자 테이블의 이름입니다. *sub_table* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@sub_table_owner=**] **'***sub_table_owner***'**  
+ [  **@sub_table_owner=**] **'**_sub_table_owner_**'**  
  구독자 테이블의 소유자 이름입니다. *sub_table_owner* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_게시자_**'**  
  게시자 서버의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_**'**  
  게시자 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다. NULL인 경우 현재 데이터베이스가 사용됩니다.  
   
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_게시_**'**  
  게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@ins_proc=**] **'***ins_proc***'**  
+ [  **@ins_proc=**] **'**_ins_proc_**'**  
  게시자에서 동기 트랜잭션 삽입을 지원하는 저장 프로시저의 이름입니다. *ins_proc* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@upd_proc=**] **'***upd_proc***'**  
+ [  **@upd_proc=**] **'**_upd_proc_**'**  
  게시자에서 동기 트랜잭션 업데이트를 지원하는 저장 프로시저의 이름입니다. *ins_proc* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@del_proc=**] **'***del_proc***'**  
+ [  **@del_proc=**] **'**_del_proc_**'**  
  게시자에서 동기 트랜잭션 삭제를 지원하는 저장 프로시저의 이름입니다. *ins_proc* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@cftproc =** ] **'***cftproc***'**  
+ [  **@cftproc =** ] **'**_cftproc_**'**  
  지연 업데이트를 허용하는 게시에 의해 사용되는 자동 생성 프로시저의 이름입니다. *cftproc* 됩니다 **sysname**, 기본값은 없습니다. 즉시 업데이트를 허용하는 게시의 경우 이 값은 NULL입니다. 이 매개 변수는 지연 업데이트(지연 업데이트 및 장애 조치로 지연 업데이트를 사용하는 즉시 업데이트)를 허용하는 게시에 적용됩니다.  
   
- [  **@proc_owner =** ] **'***proc_owner***'**  
+ [  **@proc_owner =** ] **'**_proc_owner_**'**  
  게시를 업데이트(지연 및/또는 즉시 업데이트)하기 위해 자동 생성된 모든 저장 프로시저가 만들어진 게시자의 사용자 계정을 지정합니다. *proc_owner* 됩니다 **sysname** 기본값은 없습니다.  
   
- [  **@identity_col=**] **'***identity_col***'**  
+ [  **@identity_col=**] **'**_identity_col_**'**  
  게시자에서 ID 열의 이름입니다. *identity_col* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@ts_col=**] **'***timestamp_col***'**  
+ [  **@ts_col=**] **'**_timestamp_col_**'**  
  이름인 합니다 **타임 스탬프** 게시자의 열입니다. *timestamp_col* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@filter_clause=**] **'***filter_clause***'**  
+ [  **@filter_clause=**] **'**_filter_clause_**'**  
  행 필터를 정의하는 제한(WHERE) 절입니다. 제약 조건 절을 입력할 때는 키워드인 WHERE를 생략합니다. *filter_clause*됩니다 **nvarchar(4000)**, 기본값은 NULL입니다.  
   
- [  **@primary_key_bitmap =**] **'***primary_key_bitmap***'**  
+ [  **@primary_key_bitmap =**] **'**_primary_key_bitmap_**'**  
  테이블에 있는 기본 키 열의 비트맵입니다. *primary_key_bitmap* 됩니다 **varbinary(4000)**, 기본값은 없습니다.  
   
  [  **@identity_support =** ] *identity_support*  
@@ -107,7 +106,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
  [  **@independent_agent =** ] *independent_agent*  
  이 게시에 대해 단일 배포 에이전트가 있는지(독립 에이전트) 또는 게시 데이터베이스 및 구독 데이터베이스 쌍당 하나의 배포 에이전트가 있는지(공유 에이전트) 여부를 나타냅니다. 이 값은 게시자에서 정의된 게시의 independent_agent 속성 값을 반영합니다. *independent_agent* 은 bit 이며 기본값은 **0**합니다. 하는 경우 **0**, 에이전트는 공유 에이전트입니다. 하는 경우 **1**, 에이전트는 독립 에이전트입니다.  
   
- [  **@distributor =** ] **'***배포자***'**  
+ [  **@distributor =** ] **'**_배포자_**'**  
  배포자의 이름입니다. *배포자* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@pubversion**=] *pubversion*  

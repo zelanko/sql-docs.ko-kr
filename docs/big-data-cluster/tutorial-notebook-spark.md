@@ -1,33 +1,35 @@
 ---
-title: SQL Server 2019 빅 데이터 클러스터에는 샘플 notebook을 실행 합니다. | Microsoft Docs
+title: 샘플 노트북을 실행 합니다. | Microsoft Docs
+titleSuffix: SQL Server 2019 big data clusters
 description: 이 자습서에서는 실행을 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 샘플 Spark 노트북을 로드할 수 있습니다 하는 방법을 보여 줍니다.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/17/2018
+ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: 811c94615f0d69886f0f538357529ad3125e2925
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: 55d37969ec3e03a635e948cdafb73eb1922a1795
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644235"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432556"
 ---
-# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-2019-big-data-cluster"></a>자습서: SQL Server 2019 빅 데이터 클러스터에 샘플 notebook 실행
+# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-2019-big-data-cluster"></a>자습서: SQL Server 2019 빅 데이터 클러스터에는 샘플 notebook을 실행 합니다.
 
 이 자습서에는 로드 하 고 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 Azure Data Studio에서 notebook을 실행 하는 방법을 보여 줍니다. 이렇게 하면 데이터 과학자 및 데이터 엔지니어가 클러스터에 대해 Python, R 또는 Scala 코드를 실행할 수 있습니다.
 
 > [!TIP]
 > 원한다 면 다운로드 하 고이 자습서의 명령에 대 한 스크립트를 실행할 수 있습니다. 지침은 합니다 [Spark 샘플](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark) github입니다.
 
-## <a id="prereqs"></a> 사전 요구 사항
+## <a id="prereqs"></a> 필수 구성 요소
 
-* [Kubernetes에서 빅 데이터 클러스터를 배포](deployment-guidance.md)합니다.
-* [Azure Data Studio 및 SQL Server 2019 확장 설치](deploy-big-data-tools.md)합니다.
-* [클러스터에 샘플 데이터 로드](#sampledata)합니다.
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [빅 데이터 도구](deploy-big-data-tools.md)
+   - **Kubectl**
+   - **Azure Data Studio**
+   - **SQL Server 2019 확장**
+- [빅 데이터 클러스터에 샘플 데이터 로드](tutorial-load-sample-data.md)
 
 ## <a name="download-the-sample-notebook-file"></a>샘플 노트북 파일 다운로드
 
@@ -47,7 +49,7 @@ ms.locfileid: "49644235"
 
 다음 단계를 Azure Data Studio에서 notebook 파일을 여는 방법을 보여 줍니다.
 
-1. Azure Data Studio, 빅 데이터 클러스터의 HDFS/Spark 게이트웨이에 연결 합니다. 자세한 내용은 [HDFS/Spark 게이트웨이에 연결할](deploy-big-data-tools.md#hdfs)합니다.
+1. Azure Data Studio, 빅 데이터 클러스터의 HDFS/Spark 게이트웨이에 연결 합니다. 자세한 내용은 [HDFS/Spark 게이트웨이에 연결할](connect-to-big-data-cluster.md#hdfs)합니다.
 
 1. HDFS/Spark 게이트웨이 연결을 두 번 클릭 합니다 **서버** 창입니다. 선택한 **노트북 열기**합니다.
 

@@ -18,12 +18,12 @@ ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e9e1ccaf9e000779485be93e476f9114817529a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 257d193c84420a0c70ea99ef2a8cadfa9e11eec5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137053"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525564"
 ---
 # <a name="browsing-a-decision-trees-model"></a>의사 결정 트리 모델 찾아보기
   사용 하 여 분류 모델을 열면 **찾아보기**을 비슷한 대화형 의사 결정 트리 뷰어에 모델이 표시 됩니다는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 의사 결정 트리 뷰어와 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다. 뷰어에는 데이터 그룹을 구별하는 조건을 강조 표시하는 그래프로 분류 결과가 표시됩니다. 트리의 개별 하위 집합으로 드릴다운하고 기본 데이터를 검색할 수도 있습니다.  
@@ -108,7 +108,7 @@ ms.locfileid: "48137053"
   
 -   데이터를 여러 계열로 나눌 수 있는 경우 모델링할 데이터 집합마다 다른 모델이 작성됩니다.  
   
--   샘플 데이터 모델에서는 예측 가능한 결과가 Bike Buyer로 하나뿐이지만 사용자가 고객의 서비스 계획 구매 여부에 대한 정보를 갖고 있으며 이도 예측하려고 한다고 가정합니다. 이 경우 별도의 열에 해당 정보를 가지고 있으며 모델에 두 개의 예측 가능한 특성을 포함합니다.  
+-   샘플 데이터 모델에서 예측 가능한 결과가 하나만-Bike Buyer-이지만 고객의 서비스 계획 구매 및 예측 하려고 한다고도 있는지 여부에 대 한 정보를 개가 있다고 가정해 보겠습니다. 이 경우 별도의 열에 해당 정보를 가지고 있으며 모델에 두 개의 예측 가능한 특성을 포함합니다.  
   
      클릭 합니다 **히스토그램** 의사 결정 트리 창의 왼쪽된 위 모퉁이에서 최대 트리의 히스토그램에 나타나는 상태 수를 변경 하려면 옵션입니다. 이 옵션은 예측 가능한 특성에 많은 상태가 있는 경우에 유용합니다. 상태는 왼쪽에서 오른쪽으로 히스토그램에 인기도 순서로 나타납니다.  
   
@@ -148,13 +148,13 @@ ms.locfileid: "48137053"
   
     -   **모델 열 드릴스루**합니다. 이 옵션은 선택한 노드에 속하는 사례를 가져와서 Excel의 표로 저장합니다. 모델 작성에 실제로 사용된 데이터 열만 가져옵니다.  
   
-    -   **구조 열 드릴스루**합니다. 이 옵션은 선택한 노드에 속하는 사례를 가져와서 Excel의 표로 저장합니다. 기본 데이터 작성 시 사용할 수 있었던 모든 정보(모델에 사용되지 않은 열의 정보도 포함)를 가져옵니다. 고객 주소와 우편 번호를 분석에 필요 없어서 제외했지만 구조에 남겨둔 경우를 예로 들 수 있습니다.  
+    -   **구조 열 드릴스루**합니다. 이 옵션은 선택한 노드에 속하는 사례를 가져와서 Excel의 표로 저장합니다. 내부에서 사용할 수 있는 모든 정보를 가져오기 작성도 열의 경우 데이터 모델에서 사용 되지 않았습니다. 고객 주소와 우편 번호를 분석에 필요 없어서 제외했지만 구조에 남겨둔 경우를 예로 들 수 있습니다.  
   
      Excel로 돌아가서 데이터를 봅니다. 찾아보기 뷰어에서 쿼리를 실행하고, 데이터를 새 워크시트에 표로 저장하고, 결과의 레이블을 지정합니다.  
   
      ![드릴스루 결과가 Excel에 저장 됩니다](media/dm13-dectree-drillthroughresults.gif "드릴스루 결과가 Excel에 저장 됨")  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Excel에서 모델 찾아보기 &#40;SQL Server 데이터 마이닝 추가 기능&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

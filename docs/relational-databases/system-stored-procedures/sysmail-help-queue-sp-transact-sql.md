@@ -18,12 +18,12 @@ ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 76f51489a449c44dd7d43bab75d504f68e946374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ee5620aecfc4e263c16fb9c710b7a41e1564f6e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796521"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590597"
 ---
 # <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@queue_type** = ] **'***queue_type***'**  
+ [ **@queue_type** =] **'**_queue_type_**'**  
  로 지정 된 유형의 전자 메일을 삭제 하는 선택적 인수를 *queue_type*합니다. *queue_type* 됩니다 **nvarchar(6)** 기본값은 없습니다. 유효한 항목은 **mail** 하 고 **상태**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - Log File Viewer, viewing offline logs
@@ -14,12 +13,12 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 32b0b350d7b23b41573a147f095705546b0d8b04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214743"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818272"
 ---
 # <a name="view-offline-log-files"></a>오프라인 로그 파일 보기
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터는 대상 인스턴스가 오프라인이거나 시작할 수 없는 경우 로컬 또는 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일을 볼 수 있습니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "48214743"
   
 -   [SqlErrorLogFile 클래스](../wmi-provider-configuration-classes/sqlerrorlogfile-class.md) (이 항목에서는 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로그 파일에 대한 정보를 검색하는 방법을 보여 줍니다.)  
   
-##  <a name="BeforeYouBegin"></a> 사용 권한  
+##  <a name="BeforeYouBegin"></a> Permissions  
  오프라인 로그 파일에 연결하려면 로컬 컴퓨터와 원격 컴퓨터 모두에서 다음과 같은 사용 권한이 있어야 합니다.  
   
 -   **Root\Microsoft\SqlServer\ComputerManagement12** WMI 네임스페이스에 대한 읽기 권한. 기본적으로 모든 사용자는 계정 사용 권한으로 읽기 액세스합니다. 자세한 내용은 이 섹션 뒷부분의 "WMI 사용 권한을 확인하려면" 절차를 참조하십시오.  

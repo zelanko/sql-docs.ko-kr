@@ -1,5 +1,5 @@
 ---
-title: R Server 또는 SQL Server 설치 프로그램을 사용 하 여 Machine Learning Server (독립 실행형) 설치 | Microsoft Docs
+title: R Server 또는 SQL Server 설치 프로그램-SQL Server Machine Learning을 사용 하 여 Machine Learning Server (독립 실행형) 설치
 description: RevoScaleR, revoscalepy, MicrosoftML 및 다른 패키지를 사용 하 여 R 및 Python 개발을 위한 독립 실행형 인스턴스 비인식형 machine learning 서버를 설정 합니다.
 ms.prod: sql
 ms.technology: machine-learning
@@ -9,12 +9,12 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 70fa652e876f1011bc2d74df56104671b33775b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a00a91564cff37669f92cdfb4cba04fb3ada26fd
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187493"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732060"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Machine Learning Server (독립 실행형) 또는 SQL Server 설치 프로그램을 사용 하 여 R Server (독립 실행형) 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,14 +40,14 @@ SQL Server 2016 R Server (독립 실행형) 또는 Microsoft R Server와 같은 
 
 일반적으로 좋지만 독립 실행형 서버 및 데이터베이스 엔진 인스턴스 인식형 설치와 상호 배타적 리소스 경합을 방지 하려면 처리를 모두 설치 하는 것에 대 한 대 한 금지 없습니다 방법이 충분 한 리소스에 있는 경우에 동일한 물리적 컴퓨터입니다.
 
-컴퓨터의 한 독립 실행형 서버를 하나만 사용할 수 있습니다: SQL Server 2017의 Machine Learning Server 또는 SQL Server 2016 R Server (독립 실행형). 다른 버전을 설치 하기 전에 하나의 버전을 수동으로 제거 해야 합니다.
+컴퓨터의 한 독립 실행형 서버를 하나만 사용할 수 있습니다: SQL Server 2017의 Machine Learning Server 또는 SQL Server 2016 R Server (독립 실행형). 새 필터를 추가 하기 전에 버전을 제거 해야 합니다.
 
 ::: moniker range="=sql-server-2016"
 <a name="bkmk_ga_instalpatch"></a> 
 
  ###  <a name="install-patch-requirement"></a>패치 설치 요구 사항 
 
-SQL Server 2016에: Microsoft SQL Server에서 필수 구성 요소로 설치 되는 Microsoft VC + + 2013 런타임 이진 파일의 특정 버전을 사용 하 여 문제를 확인 했습니다. VC 런타임 이진 파일에 대한 이 업데이트가 없으면 SQL Server의 특정 시나리오에서 안정성 문제를 발생할 수 있습니다. SQL Server를 설치하기 전에 [SQL Server 릴리스 정보](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) 의 지침에 따라 해당 컴퓨터에 VC 런타임 이진 파일에 대한 패치가 필요한지 확인하세요.  
+SQL Server 2016 용만. Microsoft는 SQL Server에서 필수 조건으로 설치되는 Microsoft VC++ 2013 런타임 이진 파일의 특정 버전과 관련된 문제를 확인했습니다. VC 런타임 이진 파일에 대한 이 업데이트가 없으면 SQL Server의 특정 시나리오에서 안정성 문제를 발생할 수 있습니다. SQL Server를 설치하기 전에 [SQL Server 릴리스 정보](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) 의 지침에 따라 해당 컴퓨터에 VC 런타임 이진 파일에 대한 패치가 필요한지 확인하세요.  
 ::: moniker-end
 
 ## <a name="get-the-installation-media"></a>설치 미디어 다운로드
@@ -73,7 +73,7 @@ SQL Server 2016에: Microsoft SQL Server에서 필수 구성 요소로 설치 �
 
     - R 및 Python은 둘 다 기본적으로 선택 됩니다. 두 언어 중 하나를 선택을 취소할 수 있지만 지원 되는 언어 중 하나 이상이 설치 하는 것이 좋습니다.
 
-     ![Machine Learning Server 독립 실행형 설치](media/2017setup-features-page-mlsvr-rpy.png "Machine Learning Server 독립 실행형 설치를 시작 합니다.")
+     ![R 또는 Python 기능을 선택할](media/2017setup-features-page-mlsvr-rpy.png "Machine Learning Server 독립 실행형 설치를 시작 합니다.")
     
     기타 모든 옵션은 무시해야 합니다. 
     
@@ -128,6 +128,21 @@ SQL Server 2016에: Microsoft SQL Server에서 필수 구성 요소로 설치 �
 설치가 완료 되 면 참조 [SQL Server R Services에 대 한 사용자 지정 보고서](../r/monitor-r-services-using-custom-reports-in-management-studio.md) 오류나 경고를 사용 하 여 도움말을 참조 하세요. [업그레이드 및 설치 FAQ-Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md)합니다.
 ::: moniker-end
 
+## <a name="set-environment-variables"></a>환경 변수 설정
+
+R 기능 통합만로 설정 해야 합니다 **MKL_CBWR** 환경 변수를 [일관 된 출력을 확인](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) Intel 라이브러리 MKL (Math Kernel) 계산에서 합니다.
+
+1. 제어판에서 클릭 **시스템 및 보안** > **System** > **고급 시스템 설정**  >   **환경 변수**합니다.
+
+2. 새 사용자 또는 시스템 변수를 만듭니다. 
+
+  + 변수 이름 설정 `MKL_CBWR`
+  + 변수 값 설정 `AUTO`
+
+3. 서버를 다시 시작합니다.
+
+<a name="install-path"></a>
+
 ### <a name="default-installation-folders"></a>기본 설치 폴더
 
 이 R 및 Python 개발을 위해 여러 버전이 같은 컴퓨터에 일반적입니다. SQL Server 설치 프로그램으로 설치, 기본 배포 설치에 사용 하는 SQL Server 버전에 연결 된 폴더에 설치 됩니다.
@@ -144,11 +159,11 @@ SQL Server 2016에: Microsoft SQL Server에서 필수 구성 요소로 설치 �
 
 <a name="apply-cu"></a>
 
-## <a name="apply-updates"></a>업데이트를 적용 합니다.
+## <a name="apply-updates"></a>업데이트 적용
 
 데이터베이스 엔진 및 기계 학습 구성 요소 모두에 최신 누적 업데이트를 적용 하는 것이 좋습니다. 누적 업데이트는 설치 프로그램을 통해 설치 됩니다. 
 
-인터넷에 연결 된 장치에서 누적 업데이트는 Windows Update를 통해 일반적으로 적용 됩니다 있지만 제어 되는 업데이트에 대 한 아래 단계를 사용할 수도 있습니다. 데이터베이스 엔진에 대 한 업데이트를 적용 하면 설치 프로그램은 독립 실행형 서버에 설치한 모든 R 또는 Python 기능에 대 한 누적 업데이트를 끌어옵니다. 
+인터넷에 연결 된 장치의 자동 압축 풀기 실행 파일을 다운로드할 수 있습니다. R 및 Python에 대 한 기존 기능에 대 한 누적 업데이트를 가져오는 데이터베이스 엔진에 대 한 업데이트를 자동으로 적용 합니다. 
 
 연결이 끊어진된 서버에 추가 단계가 필요 합니다. 데이터베이스 엔진에 대 한 누적 업데이트와 machine learning 기능에 대 한 CAB 파일을 가져와야 합니다. 모든 파일이 격리 된 서버에 전송 하 고 수동으로 적용 해야 합니다.
 
@@ -157,16 +172,20 @@ SQL Server 2016에: Microsoft SQL Server에서 필수 구성 요소로 설치 �
   + SQL Server 2017 초기 버전에서 machine Learning Server (독립 실행형)
   + SQL Server 2016의 초기 릴리스, SQL Server 2016 SP 1 또는 SQL Server 2016 sp2에서 R Server (독립 실행형)
 
-2. 인터넷 연결된 장치에서의 SQL Server 버전에 대 한 누적 업데이트 목록으로 이동 합니다.
+2. 열려 있는 R 또는 Python 세션을 닫고 시스템에서 여전히 실행 중인 모든 프로세스를 중지 합니다.
+
+3. 웹 서비스 배포에 대 한 웹 노드와 계산으로 실행 되도록 운영 화에 사용 하도록 설정한 경우 백업 합니다 **AppSettings.json** 조치로 파일입니다. 원래 버전을 유지 하기 위해 백업 복사본을 사용할 수 있습니다 SQL Server 2017 CU13 또는 이후 revises이 파일을 적용 합니다.
+
+4. 인터넷 연결된 장치에서의 SQL Server 버전에 대 한 누적 업데이트 링크를 클릭 합니다.
 
   + [SQL Server 2017 업데이트](https://sqlserverupdates.com/sql-server-2017-updates/)
   + [SQL Server 2016 업데이트](https://sqlserverupdates.com/sql-server-2016-updates/)
 
-3. 최신 누적 업데이트를 다운로드 합니다. 실행 파일입니다.
+5. 최신 누적 업데이트를 다운로드 합니다. 실행 파일입니다.
 
-4. 인터넷에 연결 된 장치에서 설정 및 단계에서 라이선스 조건에 동의 하 고, 영향을 받는 기능을 검토 하 고, 완료 될 때까지 진행 상황을 모니터링 하려면 마법사를 실행 하는.exe를 두 번 클릭 합니다.
+6. 인터넷에 연결 된 장치에서 설정 및 단계에서 라이선스 조건에 동의 하 고, 영향을 받는 기능을 검토 하 고, 완료 될 때까지 진행 상황을 모니터링 하려면 마법사를 실행 하는.exe를 두 번 클릭 합니다.
 
-5. 인터넷에 연결 되지 않은 서버:
+7. 인터넷에 연결 되지 않은 서버:
 
    + R 및 Python에 대 한 해당 CAB 파일을 가져옵니다. 다운로드 링크를 참조 하세요 [CAB 인스턴스를 SQL Server 데이터베이스 내 분석에 누적 업데이트에 대 한 다운로드](sql-ml-cab-downloads.md)합니다.
 
@@ -174,7 +193,7 @@ SQL Server 2016에: Microsoft SQL Server에서 필수 구성 요소로 설치 �
 
    + 설치 프로그램을 실행 하는.exe를 두 번 클릭 합니다. 인터넷에 연결 되지 않은 서버에 누적 업데이트를 설치, R 및 Python에 대 한.cab 파일의 위치를 선택 하 라는 메시지가 표시 됩니다.
 
-6. 설정한 웹 노드와 계산 노드를 사용 하 여 운영 화 하는 서버에서 설치 후 편집 **appsettings.json**, "MMLNativePath" 바로 아래에 있는 "MMLResourcePath" 항목을 추가 합니다.
+8. 설정한 웹 노드와 계산 노드를 사용 하 여 운영 화 하는 서버에서 설치 후 편집 **AppSettings.json**, "MMLNativePath" 바로 아래에 있는 "MMLResourcePath" 항목을 추가 합니다.
 
     ```json
     "ScorerParameters": {
@@ -183,7 +202,7 @@ SQL Server 2016에: Microsoft SQL Server에서 필수 구성 요소로 설치 �
     }
     ```
 
-7. [관리 CLI 유틸리티를 실행](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch) 웹 다시 계산 노드. 단계와 구문을 참조 하세요 [모니터, 시작 및 중지 웹 및 계산 노드와](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start)합니다.
+9. [관리 CLI 유틸리티를 실행](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch) 웹 다시 계산 노드. 단계와 구문을 참조 하세요 [모니터, 시작 및 중지 웹 및 계산 노드와](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start)합니다.
 
 ## <a name="development-tools"></a>개발 도구
 
@@ -193,14 +212,14 @@ SQL Server 2016에: Microsoft SQL Server에서 필수 구성 요소로 설치 �
 
 R 개발자가 몇 가지 간단한 예제를 사용 하 여 시작할 수 있습니다 및 SQL Server를 사용 하 여 R을 작동 하는 방법의 기본 사항을 알아봅니다. 다음 단계를 다음 링크를 참조 하세요.
 
-+ [자습서: T-SQL에서 R 실행](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [자습서: T-SQL에서 R을 실행 합니다.](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
 + [자습서: R 개발자를 위한 데이터베이스 내 분석](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 Python 개발자는 이러한 자습서를 수행 하 여 SQL Server를 사용 하 여 Python을 사용 하는 방법을 배울 수 있습니다.
 
-+ [자습서: t-sql로 Python 실행](../tutorials/run-python-using-t-sql.md)
-+ [Python 개발자를 위한 자습서: 데이터베이스 내 분석](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [자습서: T-sql로 Python 실행](../tutorials/run-python-using-t-sql.md)
++ [자습서: Python 개발자를 위한 데이터베이스 내 분석](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 ::: moniker-end
 
 실제 시나리오를 기반으로 하는 기계 학습의 예제를 보려면 [기계 학습 자습서](../tutorials/machine-learning-services-tutorials.md)합니다.

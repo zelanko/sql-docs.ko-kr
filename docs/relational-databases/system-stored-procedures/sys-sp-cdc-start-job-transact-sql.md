@@ -20,12 +20,12 @@ ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d6598d507f936af43b7c81734b6d67e7a4c0e7f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 842f7a9f677312501a92a42301017eedaee0f5d4
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725391"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589147"
 ---
 # <a name="sysspcdcstartjob-transact-sql"></a>sys.sp_cdc_start_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [[  **@job_type=** ] **'***job_type***'** ]  
+ [[  **@job_type=** ] **'**_job_type_**'** ]  
  추가할 작업 유형입니다. *job_type* 됩니다 **nvarchar(20)** 이며 기본값은 **캡처**합니다. 유효한 입력은 **캡처** 하 고 **정리**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -78,7 +78,7 @@ GO
 EXEC sys.sp_cdc_start_job @job_type = N'cleanup';  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [dbo.cdc_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sys.sp_cdc_stop_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md)  
   

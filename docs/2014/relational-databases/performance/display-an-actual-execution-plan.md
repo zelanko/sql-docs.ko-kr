@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying execution plans
@@ -16,12 +15,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 26d4aa9576c8ae4f8d9118dc3b82dee493dc7e45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9403e6e2cf1c341780a06bbdff1c5f38685dd34a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220563"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805582"
 ---
 # <a name="display-an-actual-execution-plan"></a>실제 실행 계획 표시
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 실제 그래픽 실행 계획을 생성하는 방법에 대해 설명합니다. 실제 실행 계획을 생성하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 또는 일괄 처리가 실행됩니다. 생성된 실행 계획은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이 쿼리를 실행할 때 사용하는 실제 쿼리 실행 계획을 표시합니다.  

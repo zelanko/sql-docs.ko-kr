@@ -18,12 +18,12 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b0e2e11dd905f48eaed16e0c083f11bde103a80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 525a66fa00981c4360295ee9c704102cd1224220
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704441"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591467"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_OAMethod objecttoken , methodname
  *Methodname*  
  호출할 OLE 개체의 메서드 이름입니다.  
   
- *returnvalue***출력**  
+ _returnvalue_**출력**  
  OLE 개체 메서드의 반환 값입니다. 지정되는 경우 반드시 적절한 데이터 형식의 지역 변수이어야 합니다.  
   
  로컬 변수를 지정 하거나 단일 값을 반환 하는 메서드 *returnvalue*, 메서드를 반환 하는 로컬 변수에 값을 반환 하거나 지정 하지 마세요 *returnvalue*를 반환 하는 메서드는 단일 열 단일 행 결과 집합으로 클라이언트에 값을 반환 합니다.  
@@ -65,17 +65,17 @@ sp_OAMethod objecttoken , methodname
   
 -   메서드가 배열을 출력 매개 변수로서 반환합니다.  
   
- [  *@parametername* * * =**] *매개 변수*[ **출력** ]  
+ [ _@parametername_ **=** ] *매개 변수*[ **출력** ]  
  메서드 매개 변수입니다. 를 지정 하는 경우 *매개 변수* 적절 한 데이터 형식의 값 이어야 합니다.  
   
  출력 매개 변수, 반환 값을 얻을 *매개 변수* 적절 한 데이터 형식의 지역 변수 이어야 합니다 하 고 **출력** 지정 해야 합니다. 상수 매개 변수를 지정 여부나 **출력** 지정 하지 않으면 모든 반환 출력 매개 변수의 값은 무시 됩니다.  
   
- 를 지정 하는 경우 *parametername* 의 이름 이어야 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 명명 된 매개 변수입니다. 사실은  **@** *parametername*아닙니다는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 지역 변수입니다. at 기호 (**@ * *) 제거 되 고 *parametername*매개 변수 이름으로 OLE 개체에 전달 됩니다. 모든 명명된 매개 변수는 반드시 모든 위치 매개 변수가 지정된 후에 지정되어야 합니다.  
+ 를 지정 하는 경우 *parametername* 의 이름 이어야 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 명명 된 매개 변수입니다. 사실은 **@**_parametername_is 하지는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 지역 변수입니다. at 기호 (**@**) 제거 되 고 *parametername*매개 변수 이름으로 OLE 개체에 전달 됩니다. 모든 명명된 매개 변수는 반드시 모든 위치 매개 변수가 지정된 후에 지정되어야 합니다.  
   
  *n*  
  여러 매개 변수를 지정할 수 있음을 나타내는 자리 표시자입니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  *@parametername* 지정 된 메서드의 일부가 고 개체에 전달 됩니다 있기 때문에 명명된 된 매개 변수를 수 있습니다. 이 저장 프로시저의 다른 매개 변수는 이름이 아니라 위치로 지정됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -94,7 +94,7 @@ sp_OAMethod objecttoken , methodname
   
  하나의 열에 있는 모든 데이터 값이 같은 데이터 형식을 공유하는 경우에는 해당 데이터 형식이 전체 열에 대해 사용됩니다. 한 열의 데이터 값들이 여러 다른 데이터 형식을 가질 경우 전체 열의 데이터 형식이 다음 표를 기준으로 선택됩니다.  
   
-||ssNoversion|FLOAT|money|DATETIME|varchar|NVARCHAR|  
+||int|FLOAT|money|DATETIME|varchar|NVARCHAR|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -138,7 +138,7 @@ END;
 PRINT @property;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [OLE Automation 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE 자동화 예제 스크립트](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   

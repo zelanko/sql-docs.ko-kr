@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - articles [SQL Server replication], dropping
@@ -20,12 +19,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 411a97c4e143ea06ee5bd00dc9a357c4c2c7e1ff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d067f6cd8981780efa057f7367cd5282c7e668a0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187263"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203342"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>기존 게시에 대한 아티클 추가 및 삭제
   게시가 생성된 후에는 아티클을 추가 및 삭제할 수 있습니다. 아티클 추가 작업은 언제든지 수행할 수 있지만 아티클 삭제에 필요한 동작은 복제 유형과 아티클 삭제 시기에 따라 다릅니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "48187263"
 ## <a name="adding-articles"></a>아티클 추가  
  아티클을 추가하려면 아티클을 게시에 추가하고, 게시에 대한 새 스냅숏을 만들고, 구독을 동기화하여 새 아티클에 대한 스키마 및 데이터를 적용해야 합니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  병합 게시에 아티클을 추가하고 기존 아티클이 새 아티클에 종속된 경우 **@processing_order** 및 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 의 [@processing_order](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)매개 변수를 사용하여 두 아티클의 처리 순서를 지정해야 합니다. 다음과 같은 시나리오를 고려해 보십시오. 테이블을 게시하지만 테이블이 참조하는 함수는 게시하지 않는 경우가 있습니다. 함수를 게시하지 않을 경우 구독자에서 테이블을 만들 수 없습니다. 게시에 함수를 추가할 경우에는 **sp_addmergearticle** 의 **@processing_order** 의 **sp_changemergearticle**을 지정하고 **sp_changemergearticle** 의 **@processing_order** 의 **@processing_order**를 지정하며 **@article**을 참조하십시오. 이 처리 순서를 사용하면 함수에 종속된 테이블이 생성되기 전에 해당 함수가 구독자에서 생성됩니다. 함수 번호가 테이블 번호보다 낮은 경우 각 아티클에 다른 번호를 사용할 수 있습니다.  
   
 1.  다음 방법 중 하나를 사용하여 하나 이상의 아티클을 추가합니다.  

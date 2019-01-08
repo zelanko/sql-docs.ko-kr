@@ -12,12 +12,12 @@ ms.assetid: 69f0ec68-5857-4aec-9fbf-4bf592d3ab39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5523a9d982093b413e5939a47deec189f9d63cb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3dc2de6d8dc1967986162f2a468d0edf7266730a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144803"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375235"
 ---
 # <a name="sqlfetch"></a>SQLFetch
   SQLFetch 지원 날짜 및 시간 기능 향상.  
@@ -28,7 +28,7 @@ ms.locfileid: "48144803"
  `SQLFetch`는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [Large CLR User-Defined 형식 &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=80703)   
+ [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=80703)   
  [ODBC API 구현 정보](odbc-api-implementation-details.md)  
   
   

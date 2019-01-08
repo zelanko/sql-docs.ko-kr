@@ -11,12 +11,12 @@ ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1028dc0f73c6acb9832ce83bc5fad82e11322a13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 733842d4119c83835feff7c71b63f28d419593ab
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209863"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365825"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>SharePoint용 PowerPivot(SSAS)
   SharePoint용 PowerPivot은 SharePoint 모드에서 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버입니다. SharePoint용 PowerPivot은 SharePoint 팜에서 PowerPivot 데이터의 서버 호스팅을 제공합니다. PowerPivot 데이터는 다음 중 하나를 사용하여 빌드하는 분석 데이터 모델입니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "48209863"
  [예제 라이선스 토폴로지 및 SQL Server 2014 셀프 서비스 비즈니스 인텔리전스에 대 한 비용](../../sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [PowerPivot 계획 및 배포](http://go.microsoft.com/fwlink/?linkID=220972)   
- [SharePoint 용 powerpivot 재해 복구](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
+ [PowerPivot 계획 및 배포](https://go.microsoft.com/fwlink/?linkID=220972)   
+ [SharePoint 용 powerpivot 재해 복구](https://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

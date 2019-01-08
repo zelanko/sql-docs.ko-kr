@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpsubscription_TSQL
@@ -17,12 +16,12 @@ ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 41a23e9885a2d5bd49d074dc72699601eb08a6d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90705da83013de65423aa2984293f8f780194de0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850561"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588937"
 ---
 # <a name="sphelpsubscription-transact-sql"></a>sp_helpsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,26 +43,26 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication =** ] **'***게시***'**  
+ [  **@publication =** ] **'**_게시_**'**  
  연결된 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 **%**,이 서버에 대 한 모든 구독 정보를 반환 하는 합니다.  
   
- [  **@article=** ] **'***문서***'**  
+ [  **@article=** ] **'**_문서_**'**  
  아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 **%** 은 선택한 게시 및 구독자에 대 한 모든 구독 정보를 반환 하는 합니다. 하는 경우 **모든**에 게시에 대 한 전체 구독에 대 한 하나의 항목만 반환 됩니다.  
   
- [  **@subscriber=** ] **'***구독자***'**  
+ [  **@subscriber=** ] **'**_구독자_**'**  
  구독 정보를 가져올 구독자의 이름입니다. *구독자* 됩니다 **sysname**, 기본값은 **%** 은 선택한 게시 및 아티클에 대 한 모든 구독 정보를 반환 하는 합니다.  
   
- [  **@destination_db=** ] **'***destination_db***'**  
+ [  **@destination_db=** ] **'**_destination_db_**'**  
  대상 데이터베이스의 이름입니다. *destination_db* 됩니다 **sysname**, 기본값은 **%** 합니다.  
   
- [  **@found=** ] **'***발견***'** 출력  
+ [  **@found=** ] **'**_발견_**'** 출력  
  행을 반환하는지 여부를 나타내는 플래그입니다. *찾을*은 **int** 및는 출력 매개 변수 이며 기본값은 23456입니다.  
   
  **1** 은 게시를 찾았음을 나타냅니다.  
   
  **0** 게시를 찾지 못했음을 나타냅니다.  
   
- [ **@publisher**=] **'***게시자***'**  
+ [ **@publisher**=] **'**_게시자_**'**  
  게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 현재 서버의 이름입니다.  
   
 > [!NOTE]  
@@ -91,9 +90,9 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**dts_package_location**|**int**|구독에 할당된 경우 DTS 패키지의 위치입니다. 패키지에 값이 없으면 **0** 패키지 위치를 지정 합니다 **배포자**합니다. 값이 **1** 를 지정 합니다 **구독자**합니다.|  
 |**subscriber_security_mode**|**smallint**|구독자의 보안 모드 위치 **1** Windows 인증을 의미 하 고 **0** 의미 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 합니다.|  
 |**subscriber_login**|**sysname**|구독자의 로그인 이름입니다.|  
-|**subscriber_password**||실제 구독자 암호는 반환되지 않습니다. 결과에서 마스킹를 "**\*\*\*\*\*\***" 문자열입니다.|  
+|**subscriber_password**||실제 구독자 암호는 반환되지 않습니다. 결과에서 마스킹를 "**&#42;&#42;&#42;&#42;&#42;&#42;**" 문자열입니다.|  
 |**job_login**|**sysname**|배포 에이전트가 실행되는 Windows 계정의 이름입니다.|  
-|**job_password**||실제 작업 암호는 반환되지 않습니다. 결과에서 마스킹를 "**\*\*\*\*\*\***" 문자열입니다.|  
+|**job_password**||실제 작업 암호는 반환되지 않습니다. 결과에서 마스킹를 "**&#42;&#42;&#42;&#42;&#42;&#42;**" 문자열입니다.|  
 |**distrib_agent_name**|**nvarchar(100)**|구독을 동기화하는 에이전트 작업의 이름입니다.|  
 |**subscriber_type**|**tinyint**|구독자의 유형으로 다음 중 하나일 수 있습니다.<br /><br /> **0** = SQL Server 구독자<br /><br /> **1** = ODBC 데이터 원본 서버<br /><br /> **2** = Microsoft JET 데이터베이스 (사용 되지 않음)<br /><br /> **3** = OLE DB 공급자|  
 |**subscriber_provider**|**sysname**|SQL Server 이외 데이터 원본에 대한 OLE DB 공급자 등록에 사용되는 고유한 PROGID(프로그래밍 식별자)입니다.|  

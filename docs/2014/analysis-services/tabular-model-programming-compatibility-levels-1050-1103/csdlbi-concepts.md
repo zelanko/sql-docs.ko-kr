@@ -12,19 +12,19 @@ ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 52d44a8c5f00f8f5c17f62ba0149738dc13712ae
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 57ab374fb8ba0e5a75fc9a97300dace76452174b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146519"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377005"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI 개념
   CSDLBI(BI 포함 개념 스키마 정의 언어) 주석은 엔터티 데이터 프레임워크를 기반으로 하며, 별도의 데이터 집합을 프로그래밍 방식으로 액세스, 쿼리 또는 내보낼 수 있도록 하여 데이터를 나타내기 위한 추상화입니다. CSDLBI는 풍부한 데이터 기반 보고 및 응용 프로그램을 지원하기 때문에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 사용하여 만든 데이터 모델을 나타내는 데 사용됩니다.  
   
  이 단원에서는 CSDLBI 표현이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 모델(테이블 형식 및 다차원)에 매핑되는 방법을 설명하고 각 모델 유형의 예를 보여 줍니다.  
   
- 이러한 개념을 설명하는 데 사용하는 예는 Codeplex에서 제공하는 AdventureWorks 예제 데이터베이스를 통해 얻을 수 있습니다. 샘플에 대 한 자세한 내용은 참조 하세요. [SQL Server에 대 한 Adventure Works 샘플](http://go.microsoft.com/fwlink/?linkID=220093)합니다.  
+ 이러한 개념을 설명하는 데 사용하는 예는 Codeplex에서 제공하는 AdventureWorks 예제 데이터베이스를 통해 얻을 수 있습니다. 샘플에 대 한 자세한 내용은 참조 하세요. [SQL Server에 대 한 Adventure Works 샘플](https://go.microsoft.com/fwlink/?linkID=220093)합니다.  
   
 ## <a name="structure-of-a-tabular-model-in-csdlbi"></a>CSDLBI의 테이블 형식 모델 구조  
  보고서 모델과 해당 데이터를 설명하는 CSDLBI 문서는 xsd 문으로 시작하여 모델에 대한 정의로 이어집니다.  
@@ -125,29 +125,29 @@ ms.locfileid: "50146519"
 ## <a name="additions-to-support-multidimensional-models"></a>다차원 모델을 지원하기 위한 추가 기능  
  CSDLBI 주석 버전 1.0은 테이블 형식의 모델만 지원했습니다. 버전 1.1에서는 기존 BI 개발 도구를 사용하여 만든 다차원 모델(OLAP 큐브)에 대한 지원이 추가되었습니다. 따라서 다차원 모델에 대한 XML 요청을 실행하여 보고에 사용할 모델의 CSDLBI 정의를 받을 수 있습니다.  
   
- **: 큐브의** SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 데이터베이스에는 모델이 하나만 포함 될 수 있습니다. 반면에 각 다차원 데이터베이스에는 여러 개의 큐브가 포함될 수 있으며 각 데이터베이스는 기본 큐브와 연결됩니다. 따라서 다차원 서버에 대해 XML 요청을 실행할 때는 큐브를 지정해야 하며, 그러지 않으면 기본 큐브에 대한 XML이 반환됩니다.  
+ **큐브.** SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 데이터베이스에는 모델이 하나만 포함될 수 있습니다. 반면에 각 다차원 데이터베이스에는 여러 개의 큐브가 포함될 수 있으며 각 데이터베이스는 기본 큐브와 연결됩니다. 따라서 다차원 서버에 대해 XML 요청을 실행할 때는 큐브를 지정해야 하며, 그러지 않으면 기본 큐브에 대한 XML이 반환됩니다.  
   
  그 점을 제외하면 큐브 표현은 테이블 형식의 모델 데이터베이스와 매우 비슷합니다. 큐브 이름과 큐브는 테이블 형식 데이터베이스와 데이터베이스 ID에 해당합니다.  
   
- **크기:** 차원 열과 속성이 있는 엔터티 (테이블)로 CSDLBI에 표시 됩니다. 큐브 뷰에 포함되지 않았더라도 모델에는 포함되어 있는 차원은 CSDL 출력에 `Hidden`으로 표시되어 나타납니다.  
+ **크기:** 차원은 CSDLBI에서 열과 속성이 있는 엔터티(테이블)로 표시됩니다. 큐브 뷰에 포함되지 않았더라도 모델에는 포함되어 있는 차원은 CSDL 출력에 `Hidden`으로 표시되어 나타납니다.  
   
- **큐브 뷰:** 클라이언트는 개별 큐브 뷰에 대 한 CSDL을 요청할 수 있습니다. 자세한 내용은 [DISCOVER_CSDL_METADATA 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)합니다.  
+ **큐브 뷰:** 클라이언트는 개별 큐브 뷰에 대한 CSDL을 요청할 수 있습니다. 자세한 내용은 [DISCOVER_CSDL_METADATA 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)합니다.  
   
- **계층:** 계층 지원 되며 수준 집합으로 CSDLBI에서 표시 합니다.  
+ **계층:** 계층 구조는 CSDLBI에서 지원되며 수준 집합으로 표시됩니다.  
   
- **멤버:** 지원 기본 멤버를 추가한 있고 기본값은 CSDLBI 출력에 자동으로 추가 됩니다.  
+ **구성원:** 기본 멤버에 대한 지원이 추가 되었으며 기본값은 CSDLBI 출력에 자동으로 추가됩니다.  
   
  **계산된 멤버:** 다차원 모델의 자식에 대 한 계산된 멤버를 지원 **모든** 에서는 단일 실제 멤버가 있는 합니다.  
   
- **차원 특성:** 의 CSDLBI 출력을 차원 특성은 지원 하 고 자동으로 집계할 수 없는 표시 합니다.  
+ **차원 특성:** CSDLBI 출력에서는 차원 특성이 지원되며 집계할 수 없음으로 자동으로 표시됩니다.  
   
- **Kpi:** CSDLBI 버전 1.1에서 Kpi 된 지원 되지만 표현이 변경 되었습니다. 예전에는 KPI가 측정값의 속성이었습니다. 버전 1.1에서는 KPI 요소를 측정값에 추가할 수 있습니다.  
+ **Kpi:** KPI는 CSDLBI 버전 1.1에서 지원되지만 표현이 변경되었습니다. 예전에는 KPI가 측정값의 속성이었습니다. 버전 1.1에서는 KPI 요소를 측정값에 추가할 수 있습니다.  
   
- **새 속성:** DirectQuery 모델을 지 원하는 특성이 추가 되었습니다.  
+ **새 속성:** DirectQuery 모델을 지원하기 위한 특성이 추가되었습니다.  
   
- **제한 사항:** 셀 보안은 지원 되지 않습니다.  
+ **제한 사항:** 셀 보안은 지원되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [비즈니스 인텔리전스에 대한 CSDL 주석&#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
   

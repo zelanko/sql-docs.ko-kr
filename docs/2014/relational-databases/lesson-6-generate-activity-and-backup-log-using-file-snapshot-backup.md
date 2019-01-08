@@ -1,5 +1,5 @@
 ---
-title: '7 단원: Windows Azure Storage에 데이터 파일 이동 | Microsoft Docs'
+title: '7단원: Windows Azure Storage로 데이터 파일 이동 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b49907bb7cb9c2d33d7672570f161cbd98432d45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d88e1fa7853c1207f1a8c95da2f96bb77dd7d49c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170085"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355331"
 ---
-# <a name="lesson-7-move-your-data-files-to-windows-azure-storage"></a>7단원: Windows Azure 저장소에 데이터 파일 이동
+# <a name="lesson-7-move-your-data-files-to-windows-azure-storage"></a>7단원: Microsoft Azure Storage에 데이터 파일 이동
   이 단원에서는 Windows Azure 저장소로 데이터 파일을 이동하는 방법을 배웁니다(SQL Server 인스턴스로는 이동하지 않음). 이 단원을 수행하기 위해 4, 5, 6단원을 완료할 필요는 없습니다.  
   
  Microsoft Azure Storage로 데이터 파일을 이동하려면 데이터 파일의 위치를 변경하는 데 유용한 `ALTER DATABASE` 문을 사용합니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "48170085"
   
     ```  
   
-3.  이 코드를 실행하면 "시스템 카탈로그에서 파일 "TestDB1Alter"이(가) 수정되었습니다. 새 경로는 다음에 데이터베이스가 시작될 때 사용됩니다."라는 메시지가 표시됩니다.  
+3.  이 코드를 실행하면 "파일"Testdb1alter"" 시스템 카탈로그에서 수정 되었습니다 했습니다. 새 경로 사용한 다음에 수정 되었습니다. "  
   
 4.  데이터베이스를 오프라인으로 설정합니다.  
   
@@ -75,9 +75,9 @@ ms.locfileid: "48170085"
   
     ```  
   
-5.  이제 Windows Azure 저장소로 데이터 파일을 복사해야 합니다. 복사하려면 [AzCopy Tool](http://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx), [Storage Client Library Reference](https://msdn.microsoft.com/library/azure/dn261237.aspx)또는 타사 저장소 탐색기 도구  
+5.  이제 Microsoft Azure Storage로 데이터 파일을 복사해야 합니다. 복사하려면 [AzCopy Tool](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx)를 [Storage Client Library Reference](https://msdn.microsoft.com/library/azure/dn261237.aspx), 또는 타사 저장소 탐색기 도구.  
   
-     **중요** : 이 새로운 향상된 기능을 사용할 때는 항상 블록 Blob이 아니라 페이지 Blob을 만들어야 합니다.  
+     **중요:** 이 새로운 향상된 기능을 사용할 때는 항상 블록 Blob이 아니라 페이지 Blob을 만들어야 합니다.  
   
 6.  데이터베이스를 온라인으로 설정합니다.  
   

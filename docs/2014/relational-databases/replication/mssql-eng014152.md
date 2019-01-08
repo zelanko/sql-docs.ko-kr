@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG014152 error
@@ -13,12 +12,12 @@ ms.assetid: 4215e2b1-cd30-441f-9671-9afc742adf6e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c94fbb3af4a1a8b21fbb498a6f0c50614bb688f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e14c0d724ba4832dfc0f67deec25308804b82f84
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174923"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364735"
 ---
 # <a name="mssqleng014152"></a>MSSQL_ENG014152
     
@@ -49,7 +48,7 @@ ms.locfileid: "48174923"
   
  [sp_help_jobstep](/sql/relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql) 을 사용하여, 지정한 복제 에이전트의 **에이전트 실행** 단계에서 다시 시도할 최대 횟수에 대한 현재 설정을 확인합니다. [sp_update_jobstep](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql) 저장 프로시저의 **@retry_attempts** 매개 변수를 사용하여 작업 단계에서 다시 시도하는 횟수를 조정할 수 있습니다.  
   
- 다시 시도 메시지가 자주 표시되는 경우 다시 시도를 발생시키는 메시지를 기준으로 문제를 해결합니다. 다시 시도가 예약된 이유를 나타내는 메시지에 대한 에이전트 기록을 확인합니다. 경우에 따라 복제 에이전트에 대해 더 자세한 로깅을 설정해야 합니다. 복제에 대한 로깅을 구성하는 방법은 Microsoft 기술 자료 문서 [312292](http://support.microsoft.com/kb/312292)를 참조하십시오.  
+ 다시 시도 메시지가 자주 표시되는 경우 다시 시도를 발생시키는 메시지를 기준으로 문제를 해결합니다. 다시 시도가 예약된 이유를 나타내는 메시지에 대한 에이전트 기록을 확인합니다. 경우에 따라 복제 에이전트에 대해 더 자세한 로깅을 설정해야 합니다. 복제에 대한 로깅을 구성하는 방법은 Microsoft 기술 자료 문서 [312292](https://support.microsoft.com/kb/312292)를 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
  [오류 및 이벤트 참조&#40;복제&#41;](errors-and-events-reference-replication.md)  
