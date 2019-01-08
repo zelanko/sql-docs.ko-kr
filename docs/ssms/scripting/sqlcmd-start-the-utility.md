@@ -11,12 +11,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ae88774b4abf9deed2bf2bd454d58ad4b7f4308
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 8c0ca2569d7db824a1757e8dfc6b11d86cd9cf80
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643809"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591727"
 ---
 # <a name="sqlcmd---start-the-utility"></a>sqlcmd - 유틸리티 시작
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51643809"
   
 ### <a name="start-the-sqlcmd-utility-and-connect-to-a-named-instance-of-sql-server"></a>sqlcmd 유틸리티를 시작하고 SQL Server의 명명된 인스턴스에 연결  
   
-1.  명령 프롬프트 창을 열고 **sqlcmd -S***myServer\instanceName*을 입력합니다. *myServer\instanceName* 을 연결하려는 컴퓨터 이름 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 바꿉니다.  
+1.  명령 프롬프트 창을 열고 **sqlcmd -S**_myServer\instanceName_을 입력합니다. *myServer\instanceName* 을 연결하려는 컴퓨터 이름 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 바꿉니다.  
   
 2.  Enter 키를 누릅니다.  
   
