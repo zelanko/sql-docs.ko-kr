@@ -5,19 +5,18 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1c43baffc1014cce5096be8ddede077f9a5fedf5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f484a8a405616d10f14ab223b36efe1ec253d8aa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759111"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794805"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>특성 그룹을 사용자에게 표시되도록 설정(Master Data Services)
 

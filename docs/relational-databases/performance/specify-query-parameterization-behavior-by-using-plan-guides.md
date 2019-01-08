@@ -16,15 +16,15 @@ helpviewer_keywords:
 - plan guides [SQL Server], parameterization
 - parameterized queries [SQL Server]
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: fc0ce3f7a95ef3e71faa3410b23f621f882bd881
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b66adec9b814a08b6174cc454a5f68220ba9656
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730961"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349680"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>계획 지침을 사용하여 쿼리 매개 변수화 동작 지정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
