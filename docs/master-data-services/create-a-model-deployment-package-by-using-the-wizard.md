@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment packages [Master Data Services], creating
@@ -16,12 +15,12 @@ ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 97311d6f74cfde7dc086b20ae6f4aa1e82657e22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8511565ebaa757fb10d9f4b16ea2c973c3c94d4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671391"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754395"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>마법사를 사용하여 모델 배포 패키지 만들기
 
@@ -32,7 +31,7 @@ ms.locfileid: "47671391"
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
--   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에서는 사용자에게 **시스템 관리** 기능 영역에 대한 액세스 권한이 있어야 합니다.  
+-   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션에서는 사용자에게 **시스템 관리** 기능 영역에 대한 액세스 권한이 있어야 합니다.  
   
 -   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
   
