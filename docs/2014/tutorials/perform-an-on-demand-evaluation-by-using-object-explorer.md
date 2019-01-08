@@ -11,12 +11,12 @@ ms.assetid: ee6d3b79-18bc-49d3-8a1d-0c0905b990f0
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: f950b99b7de4b7e81d75ed9decee47f74a785206
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ddb0eeb783f2bdb617ba5c2ac2b18896c23abdcc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098113"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536560"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>개체 탐색기를 사용하여 요청 시 평가 수행
   이 태스크에서는 개체 탐색기를 사용하여 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 단일 인스턴스에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 최선의 구현 방법 정책에 대한 요청 시 평가를 수행합니다.  

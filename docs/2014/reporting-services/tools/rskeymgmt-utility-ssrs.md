@@ -22,12 +22,12 @@ ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 28ce36cbd728787e69fcf00963aa024896d60750
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2bd52ce353ff30a22aa1771c07359554e20f6e8e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116896"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541848"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 유틸리티(SSRS)
   중요한 보고서 서버 데이터를 무단 액세스로부터 보호하는 데 사용할 대칭 키를 추출, 복원, 생성 및 삭제합니다. 이 유틸리티를 사용하여 수평적 스케일 아웃 배포에서 보고서 서버 인스턴스를 결합할 수도 있습니다. *보고서 서버 수평적 스케일 아웃 배포* 란 하나의 보고서 서버 데이터베이스를 공유하는 여러 보고서 서버 인스턴스를 말합니다.  
@@ -37,11 +37,11 @@ ms.locfileid: "48116896"
 ```  
   
       rskeymgmt {-?}  
-{–eextract}  
-{–aapply}  
+{-eextract}  
+{-aapply}  
 {-ddeleteall}  
-{–srecreatekey}  
-{–rremoveinstancekey}  
+{-srecreatekey}  
+{-rremoveinstancekey}  
 {-jjoinfarm}  
 {-iinstance}  
 {-ffile}  
@@ -65,7 +65,7 @@ ms.locfileid: "48116896"
  **-a**  
  기존 대칭 키를 암호로 보호된 백업 파일에 제공한 복사본으로 바꿉니다. 대칭 키의 모든 인스턴스가 업데이트됩니다.  
   
- 이 인수는 값을 가지지 않습니다. 그러나 적용된 키가 포함된 파일을 선택하려면 명령줄에 추가 인수를 포함해야 합니다. 지정할 수 있는 인수를 포함 `-f` 고`-p`입니다.  
+ 이 인수는 값을 가지지 않습니다. 그러나 적용된 키가 포함된 파일을 선택하려면 명령줄에 추가 인수를 포함해야 합니다. 지정할 수 있는 인수에는 `-f` 및 `-p` 인수가 있습니다.  
   
  **-d**  
  모든 대칭 키 인스턴스를 삭제하고 보고서 서버 데이터베이스에서 암호화된 모든 데이터를 삭제합니다. 이 인수는 값을 가지지 않습니다.  
@@ -90,19 +90,19 @@ ms.locfileid: "48116896"
  `-f`의 경우 필수 인수입니다. 대칭 키를 백업하거나 적용하는 데 사용할 암호를 지정합니다. 이 값은 비워 둘 수 없습니다.  
   
  `-i`  
- 로컬 보고서 서버 인스턴스를 지정합니다. 이 인수는 기본 보고서 서버를 설치한 경우에 선택적 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 (기본 값을 `-i` 는 mssqlserver 임). 보고서 서버를 명명 된 인스턴스로 설치한 경우 `-i` 필요 합니다.  
+ 로컬 보고서 서버 인스턴스를 지정합니다. 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 보고서 서버를 설치한 경우 이 인수는 옵션입니다. `-i`의 기본값은 MSSQLSERVER입니다. 보고서 서버를 명명된 인스턴스로 설치한 경우 `-i`이 필요합니다.  
   
  `-m`  
  보고서 서버 수평적 스케일 아웃 배포에 결합하는 보고서 서버 인스턴스를 호스팅하는 원격 컴퓨터의 이름을 지정합니다. 네트워크에서 식별할 수 있는 컴퓨터 이름을 사용합니다.  
   
  `-n`  
- 원격 컴퓨터의 보고서 서버 인스턴스 이름을 지정합니다. 이 인수는 기본 보고서 서버를 설치한 경우에 선택적 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 (기본 값을 `-n` 는 mssqlserver 임). 보고서 서버를 명명 된 인스턴스로 설치한 경우 `-n` 필요 합니다.  
+ 원격 컴퓨터의 보고서 서버 인스턴스 이름을 지정합니다. 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 보고서 서버를 설치한 경우 이 인수는 옵션입니다. `-n`의 기본값은 MSSQLSERVER입니다. 보고서 서버를 명명된 인스턴스로 설치한 경우 `-n`이 필요합니다.  
   
  `-u`  *useraccount*  
  수평적 스케일 아웃 배포에 결합하는 원격 컴퓨터의 관리자 계정을 지정합니다. 계정을 지정하지 않으면 현재 사용자의 자격 증명이 사용됩니다.  
   
  `-v`  *암호*  
- (에 필요한 `-u`) 스케일 아웃 배포에 조인 하려는 원격 컴퓨터에서 관리자 계정의 암호를 지정 합니다.  
+ `-u`의 경우 필수 인수입니다. 수평적 스케일 아웃 배포에 결합할 원격 컴퓨터의 관리자 계정 암호를 지정합니다.  
   
  **-t**  *trace*  
  추적 로그에 오류 메시지를 출력합니다. 이 인수는 값을 가지지 않습니다. 자세한 내용은 [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)을 참조하세요.  
@@ -148,7 +148,7 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  보고서 서버 수평적 스케일 아웃 배포란 여러 보고서 서버 인스턴스가 같은 보고서 서버 데이터베이스를 공유하는 배포 모델을 말합니다. 보고서 서버 데이터베이스에 대칭 키를 저장하는 모든 보고서 서버 인스턴스에서 이 데이터베이스를 사용할 수 있습니다. 예를 들어 보고서 서버 데이터베이스에 3개의 보고서 서버 인스턴스에 대한 키 정보가 포함된 경우 세 인스턴스는 모두 같은 수평적 스케일 아웃 배포의 멤버로 간주됩니다.  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>같은 컴퓨터에서 보고서 서버 인스턴스 조인  
- 같은 컴퓨터에 설치된 여러 보고서 서버 인스턴스에서 스케일 아웃 배포를 만들 수 있습니다. 설정 하지 마십시오는 `-u` 및 `-v` 인수 보고서 서버 인스턴스를 조인 하는 경우 로컬로 설치 됩니다. `-u` 및 `-v` 인수는 원격 컴퓨터에서 인스턴스를 조인하는 경우에만 사용됩니다. 로컬인 경우 이러한 인수를 지정하면 "로컬 연결에 대해 사용자 자격 증명을 사용할 수 없습니다" 오류가 발생합니다.  
+ 같은 컴퓨터에 설치된 여러 보고서 서버 인스턴스에서 스케일 아웃 배포를 만들 수 있습니다. 로컬로 설치된 보고서 서버 인스턴스를 조인하는 경우에는 `-u` 및 `-v` 인수를 설정하지 마십시오. `-u` 및 `-v` 인수는 원격 컴퓨터에서 인스턴스를 조인하는 경우에만 사용됩니다. 로컬인 경우 이러한 인수를 지정하면 "로컬 연결에 대해 사용자 자격 증명을 사용할 수 없습니다" 오류가 발생합니다.  
   
  다음 예에서는 여러 로컬 인스턴스를 사용하여 스케일 아웃 배포를 만드는 구문을 보여 줍니다. 이 예에서 <`initializedinstance`>는 이미 보고서 서버 데이터베이스를 사용하도록 초기화된 인스턴스의 이름이고 <`newinstance`>는 배포에 추가할 인스턴스의 이름입니다.  
   
@@ -159,7 +159,7 @@ rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>
 #### <a name="removing-encryption-keys-for-a-single-report-server-in-a-scale-out-deployment"></a>수평적 확장 배포에서 단일 보고서 서버의 암호화 키 제거  
  이 예에서는 보고서 서버 수평적 스케일 아웃 배포에서 단일 보고서 서버의 암호화 키를 제거하는 방법을 보여 줍니다. 이 키는 보고서 서버 데이터베이스에서 제거됩니다. 보고서 서버 인스턴스의 키가 제거되면 이 보고서 서버 인스턴스에서 데이터베이스의 암호화된 데이터에 더 이상 액세스할 수 없으며 수평적 스케일 아웃 배포에서 효과적으로 제거됩니다.  
   
- 스케일 아웃 배포에서 보고서 서버 인스턴스를 제거하려면 설치 ID를 지정해야 합니다. 설치 ID는 암호화 키를 제거하려는 보고서 서버 인스턴스의 RSReportserver.config 파일에 저장된 GUID입니다. 수평적 스케일 아웃 배포에서 제거할 컴퓨터에서 다음 명령을 실행해야 합니다. 사용 하 여 보고서 서버를 명명 된 인스턴스로 설치 되는 경우는 `-i` 인수 인스턴스를 지정 합니다. 자세한 내용은 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)을 참조하세요.  
+ 스케일 아웃 배포에서 보고서 서버 인스턴스를 제거하려면 설치 ID를 지정해야 합니다. 설치 ID는 암호화 키를 제거하려는 보고서 서버 인스턴스의 RSReportserver.config 파일에 저장된 GUID입니다. 수평적 스케일 아웃 배포에서 제거할 컴퓨터에서 다음 명령을 실행해야 합니다. 보고서 서버를 명명된 인스턴스로 설치한 경우 `-i` 인수를 사용하여 인스턴스를 지정합니다. 자세한 내용은 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)을 참조하세요.  
   
 ```  
 rskeymgmt -r <installationID>  
@@ -178,7 +178,7 @@ rskeymgmt -r <installationID>
 ## <a name="see-also"></a>관련 항목  
  [기본 모드 보고서 서버 스케일 아웃 배포 구성&#40;SSRS Configuration Manager&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
  [Reporting Services 보고서 서버&#40;기본 모드&#41;](../report-server/reporting-services-report-server-native-mode.md)   
- [보고서 서버 명령 프롬프트 유틸리티 &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
- [암호화 키 구성 및 관리 &#40;SSRS 구성 관리자&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [보고서 서버 명령 프롬프트 유틸리티&#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
+ [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

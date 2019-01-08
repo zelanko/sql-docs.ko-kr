@@ -5,8 +5,7 @@ ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addpublication_snapshot_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7a56fad97e7716cce4cc52858b6af2b24a6e09a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5061423f267445c681a00bf059bcc793816faf71
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731061"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205412"
 ---
 # <a name="spaddpublicationsnapshot-transact-sql"></a>sp_addpublication_snapshot(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|둘째|  
+|**2**|Second|  
 |**4** (기본값)|Minute|  
 |**8**|Hour|  
   
@@ -123,7 +122,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  기존 작업이 사용되는 경우 기존 스냅숏 에이전트 작업의 이름입니다. *snapshot_agent_name* 됩니다 **nvarchar(100)** 이며 기본값은 NULL입니다. 이 매개 변수는 내부용이고 새 게시를 만들 때 지정되지 않아야 합니다. 하는 경우 *snapshot_agent_name* 을 지정한 경우 *job_login* 하 고 *job_password* NULL 이어야 합니다.  
   
  [ **@publisher_security_mode**=] *publisher_security_mode*  
- 게시자에 연결할 때 에이전트가 사용하는 보안 모드입니다. *publisher_security_mode* 됩니다 **smallint**, 기본값은 1입니다. **0** 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 하 고 **1** Windows 인증을 지정 합니다. 값이 **0** 를 지정 해야 이외[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+ 게시자에 연결할 때 에이전트가 사용하는 보안 모드입니다. *publisher_security_mode* 됩니다 **smallint**, 기본값은 1입니다. **0** 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 하 고 **1** Windows 인증을 지정 합니다. 값이 **0** 를 지정 해야 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  [ **@publisher_login**=] **'***publisher_login***'**  
  게시자에 연결할 때 사용하는 로그인입니다. *publisher_login* 됩니다 **sysname**, 기본값은 NULL입니다. *publisher_login* 시기를 지정 해야 합니다 *publisher_security_mode* 됩니다 **0**합니다. 하는 경우 *publisher_login* 가 NULL 및 *publisher_security_mode* 됩니다 **1**에 지정 된 계정이 *job_login* 때 사용할 게시자에 연결합니다.  
@@ -137,8 +136,8 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  [ **@job_login**=] **'***job_login***'**  
  에이전트가 실행 되는 계정에 대 한 로그인이입니다. Azure SQL Database Managed Instance, SQL Server 계정을 사용 합니다. *job_login* 됩니다 **nvarchar(257)**, 기본값은 NULL입니다. 이 계정은 배포자에 에이전트 연결에 대해 항상 사용 됩니다. 새 스냅숏 에이전트 작업을 만들 때는 이 매개 변수를 제공해야 합니다.  
   
-> [!NOTE]  
->  에 대 한 비[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자에 지정 된 동일한 로그인 이어야 합니다 [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)합니다.  
+> [!NOTE]
+>  에 대 한 비 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자에 지정 된 동일한 로그인 이어야 합니다 [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)합니다.  
   
  [ **@job_password**=] **'***job_password***'**  
  에이전트 실행에 사용되는 Windows 계정의 암호입니다. *job_password* 됩니다 **sysname**, 기본값은 없습니다. 새 스냅숏 에이전트 작업을 만들 때는 이 매개 변수를 제공해야 합니다.  
@@ -147,7 +146,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 >  스크립트 파일에 인증 정보를 저장하지 않도록 합니다. 보안 향상을 위해 런타임에 로그인 이름과 암호를 제공하는 것이 좋습니다.  
   
  [ **@publisher**=] **'***게시자***'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외의 게시자를 지정합니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+ 지정 된 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *게시자* 해서는 안에서 스냅숏 에이전트를 만들 때는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  

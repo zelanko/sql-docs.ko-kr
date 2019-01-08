@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqlserverregisteredserver.dhelp
@@ -18,12 +18,12 @@ ms.assetid: c2a2513e-fa09-419c-99e7-a12d57c5a0db
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ce5e0fd5a9ebf7e265ddf9296c1e20c0ce72daa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 10cf7256c5190f9ba94dff70118f43f0ad926aa4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207345"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764015"
 ---
 # <a name="register-servers"></a>서버 등록
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에 서버를 등록하면 나중에 연결하기 위한 서버 연결 정보를 저장할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 서버를 등록하는 방법은 3가지가 있습니다.  

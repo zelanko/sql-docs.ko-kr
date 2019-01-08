@@ -1,22 +1,24 @@
 ---
-title: 인스턴스를 마스터 SQL Server 빅 데이터 클러스터 란? | Microsoft Docs
-description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터의 마스터 인스턴스를 설명 합니다.
+title: 마스터 인스턴스란 무엇 인가요?
+titleSuffix: SQL Server 2019 big data clusters
+description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 SQL Server 마스터 인스턴스를 설명 합니다.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 50955f8c781dcf370aa3f48ed72a0ed993854655
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 2ea25aeb5c7c39c5b00e545bc39974073132b1b2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221599"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208172"
 ---
-# <a name="what-is-the-sql-server-big-data-cluster-master-instance"></a>마스터 인스턴스를 클러스터 SQL Server 빅 데이터 란?
+# <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>SQL Server 2019 빅 데이터 클러스터에 마스터 인스턴스란 무엇 인가요?
 
-이 문서에서는의 역할을 설명 합니다 *SQL Server 마스터 인스턴스* SQL Server 2019 큰 ata 클러스터에서. 마스터 인스턴스는 SQL Server 빅 데이터 클러스터에서 실행 되는 SQL Server 인스턴스에 [제어 평면](big-data-cluster-overview.md#controlplane)합니다.
+이 문서에서는의 역할을 설명 합니다 *SQL Server 마스터 인스턴스* SQL Server 2019 빅 데이터 클러스터에. 마스터 인스턴스는 SQL Server 빅 데이터 클러스터에서 실행 되는 SQL Server 인스턴스에 [제어 평면](big-data-cluster-overview.md#controlplane)합니다.
 
 SQL Server 마스터 인스턴스는 다음 기능을 제공합니다.
 
@@ -26,7 +28,7 @@ SQL Server 마스터 인스턴스는 클러스터 외부에서 액세스할 수 
 
 ## <a name="scale-out-query-management"></a>스케일 아웃 쿼리 관리
 
-SQL Server 마스터 인스턴스 노드를 SQL Server 인스턴스 간에 쿼리를 분산 하는 데 사용 되는 스케일 아웃 쿼리 엔진을 포함 합니다 [풀 계산](concept-compute-pool.md)합니다. 또한 스케일 아웃 쿼리 엔진 추가 구성 없이 클러스터의 모든 Hive 테이블에 대 한 transact-sql 액세스를 제공합니다. (Hive 테이블이 지원 되지 않음 CTP 2.1)
+SQL Server 마스터 인스턴스 노드를 SQL Server 인스턴스 간에 쿼리를 분산 하는 데 사용 되는 스케일 아웃 쿼리 엔진을 포함 합니다 [풀 계산](concept-compute-pool.md)합니다. 또한 스케일 아웃 쿼리 엔진 추가 구성 없이 클러스터의 모든 Hive 테이블에 대 한 transact-sql 액세스를 제공합니다. (Hive 테이블이 지원 되지 않음 CTP 2.2)
 
 ## <a name="metadata-and-user-databases"></a>메타 데이터와 사용자 데이터베이스
 
@@ -43,7 +45,7 @@ SQL Server 마스터 인스턴스 노드를 SQL Server 인스턴스 간에 쿼�
 
 SQL Server machine learning 서비스는 데이터베이스 엔진, SQL Server에서 Java, R 및 Python 코드를 실행 하는 데에 추가 기능입니다. 이 기능은 핵심 엔진 프로세스의 외부 프로세스를 격리 하지만 저장된 프로시저, R 또는 Python 문이 포함 된 T-SQL 스크립트 또는 Java R 관계형 데이터와 완벽 하 게 통합 되는 SQL Server 확장성 프레임 워크 기반 또는 T-SQL을 포함 하는 Python 코드입니다.
 
-SQL Server 빅 데이터 클러스터의 일부로, machine learning 서비스는 기본적으로 SQL Serevr 마스터 인스턴스에서 제공 됩니다. 이 마스터 SQL Server 인스턴스에서 외부 스크립트 실행 활성화 되 면 이죠 Java sp_execute_external_script를 사용 하 여 R 및 Python 스크립트를 실행할 수를 의미 합니다.
+SQL Server 빅 데이터 클러스터의 일부로, machine learning 서비스는 기본적으로 SQL Server 마스터 인스턴스에서 제공 됩니다. 이 마스터 SQL Server 인스턴스에서 외부 스크립트 실행 활성화 되 면 이죠 Java sp_execute_external_script를 사용 하 여 R 및 Python 스크립트를 실행할 수를 의미 합니다.
 
 ### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>빅 데이터 클러스터에 machine learning 서비스의 이점
 

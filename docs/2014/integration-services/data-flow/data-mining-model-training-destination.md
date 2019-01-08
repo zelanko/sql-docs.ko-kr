@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingmodeltrainingdest.f1
@@ -18,12 +17,12 @@ ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fdef0e0ed6de3bf527a5b87bc05a12e1bc6ace5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 47c43a668ba9d418ea93b9367edb110980720d1c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068963"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781165"
 ---
 # <a name="data-mining-model-training-destination"></a>데이터 마이닝 모델 학습 대상
   데이터 마이닝 모델 학습 대상은 데이터 마이닝 모델 알고리즘을 통해 대상에서 수신하는 데이터를 전달함으로써 데이터 마이닝 모델을 학습합니다. 동일 데이터 마이닝 구조를 기반으로 모델을 작성한 경우에는 하나의 대상에서 여러 데이터 마이닝 모델의 성향을 습득할 수 있습니다. 자세한 내용은 [Mining Structure Columns](../../analysis-services/data-mining/mining-structure-columns.md) 및 [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md)를 참조하세요.  
@@ -42,13 +41,13 @@ ms.locfileid: "48068963"
   
  **데이터 마이닝 모델 학습 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [데이터 마이닝 모델 학습 편집기 &#40;연결 탭&#41;](../data-mining-model-training-editor-connection-tab.md)  
+-   [데이터 마이닝 모델 학습 편집기&#40;연결 탭&#41;](../data-mining-model-training-editor-connection-tab.md)  
   
--   [데이터 마이닝 모델 학습 편집기 &#40;열 탭&#41;](../data-mining-model-training-editor-columns-tab.md)  
+-   [데이터 마이닝 모델 학습 편집기&#40;열 탭&#41;](../data-mining-model-training-editor-columns-tab.md)  
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](../common-properties.md)  
+-   [공용 속성](../common-properties.md)  
   
 -   [데이터 마이닝 모델 학습 대상 사용자 지정 속성](data-mining-model-training-destination-custom-properties.md)  
   

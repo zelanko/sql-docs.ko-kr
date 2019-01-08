@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7eaad112f18c340f28e85cb68691693d36c1e273
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa8464744681984373fa2e69f7a4fc7dacee1f0b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050223"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771325"
 ---
 # <a name="recordset-destination-custom-properties"></a>레코드 집합 대상 사용자 지정 속성
   레코드 집합 대상에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "48050223"
   
  자세한 내용은 [Recordset Destination](recordset-destination.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [Common Properties](../common-properties.md)  
+## <a name="see-also"></a>관련 항목:  
+ [공용 속성](../common-properties.md)  
   
   

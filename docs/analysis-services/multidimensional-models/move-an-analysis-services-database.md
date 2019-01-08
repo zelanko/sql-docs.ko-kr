@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5088f627aee3b9e570b4b4c43e46a42853165193
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: HT
+ms.openlocfilehash: 3247bf2ca459f013131b21a25278bcc6e5d10b9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148440"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544554"
 ---
 # <a name="move-an-analysis-services-database"></a>Analysis Services 데이터베이스 이동
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "50148440"
   
 1.  SSMS의 왼쪽 또는 오른쪽 창에서 이동할 데이터베이스를 찾습니다.  
   
-2.  데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **분리…** 를 선택합니다.  
+2.  선택한 데이터베이스를 마우스 오른쪽 단추로 클릭 **분리 하는 중...**  
   
 3.  분리되는 데이터베이스에 암호를 할당한 후 **확인** 을 클릭하여 분리 명령을 실행합니다.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "50148440"
   
 5.  SSMS의 왼쪽 또는 오른쪽 창에서 **데이터베이스** 폴더를 찾습니다.  
   
-6.   **데이터베이스** 폴더를 마우스 오른쪽 단추로 클릭하고 **연결...** 을 선택합니다.  
+6.  마우스 오른쪽 단추로 클릭 합니다 **데이터베이스** 선택한 폴더 **연결 하는 중...**  
   
-7.  **폴더** 입력란에 데이터베이스 폴더의 새 위치를 입력합니다. 또는 찾아보기 단추 (**…**)를 사용하여 데이터베이스 폴더를 찾을 수 있습니다.  
+7.  **폴더** 입력란에 데이터베이스 폴더의 새 위치를 입력합니다. 또는 찾아보기 단추를 사용할 수 있습니다 (**...** ) 데이터베이스 폴더를 찾습니다.  
   
 8.  데이터베이스에 대해 **ReadWrite** 모드를 선택합니다.  
   

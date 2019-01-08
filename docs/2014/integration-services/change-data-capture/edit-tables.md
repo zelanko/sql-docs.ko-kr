@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - tabProps
@@ -13,12 +12,12 @@ ms.assetid: fed8fada-2abc-45e2-8228-0656f9c599cb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8f8945827cb4a0170ceac43c313554b9a88db478
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: acb954cd9193d5c6132a8d2d081250a8ecdff562
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215013"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770835"
 ---
 # <a name="edit-tables"></a>테이블 편집
   **테이블** 탭을 사용하여 Oracle 원본 데이터베이스에서 선택한 테이블과 열을 변경할 수 있습니다. 이 탭은 다음과 같은 요소로 구성되어 있습니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "48215013"
   
 -   **Oracle 테이블 이름**: 테이블의 이름(테이블 스키마 포함)입니다.  
   
--   **캡처 인스턴스**: 인스턴스별 변경 데이터 캡처 개체의 이름 지정에 사용되는 캡처 인스턴스의 이름입니다. 캡처 인스턴스는 NULL일 수 없습니다. 지정하지 않으면 이름은 원본 스키마 이름에 원본 테이블 이름을 붙인 `<schema-name>_<table-name>.` 형식으로 파생됩니다. 캡처 인스턴스 이름은 100자를 초과할 수 없으며 데이터베이스 내에서 고유해야 합니다. 이 열에서 셀을 클릭하여 **capture_instance**를 수동으로 편집할 수 있습니다.  
+-   **캡처 인스턴스**: 인스턴스별 변경 데이터 캡처 개체의 이름을 지정하는 데 사용되는 캡처 인스턴스의 이름입니다. 캡처 인스턴스는 NULL일 수 없습니다. 지정하지 않으면 이름은 원본 스키마 이름에 원본 테이블 이름을 붙인 `<schema-name>_<table-name>.` 형식으로 파생됩니다. 캡처 인스턴스 이름은 100자를 초과할 수 없으며 데이터베이스 내에서 고유해야 합니다. 이 열에서 셀을 클릭하여 **capture_instance**를 수동으로 편집할 수 있습니다.  
   
 -   **보안 역할**: 변경 데이터에 대한 액세스 권한을 얻는 데 사용되는 데이터베이스 역할의 이름입니다. 이 열에서 셀을 클릭하여 **security_role**을 수동으로 편집할 수 있습니다.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "48215013"
  목록에서 테이블을 선택하고 **제거** 를 클릭하여 CDC 인스턴스에서 테이블을 제거할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [CDC 인스턴스 속성을 편집 하는 방법](how-to-edit-the-cdc-instance-properties.md)   
+ [CDC 인스턴스 속성을 편집하는 방법](how-to-edit-the-cdc-instance-properties.md)   
  [Oracle 테이블 및 열 선택](select-oracle-tables-and-columns.md)  
   
   

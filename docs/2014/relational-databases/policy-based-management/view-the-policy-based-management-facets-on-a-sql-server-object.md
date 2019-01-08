@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, view facets
@@ -12,12 +12,12 @@ ms.assetid: 5f423b9f-a6c4-41a7-9d8d-8f4926ce1fb4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 648de1ee5d44dcfab7d686a69de20f9dd272db19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 462a4e0b58a9a201f0a26c4bb910f47f14c900d9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214023"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757955"
 ---
 # <a name="view-the-policy-based-management-facets-on-a-sql-server-object"></a>SQL Server 개체의 정책 기반 관리 패싯 보기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 특정 SQL Server 개체에 적용되는 모든 정책 기반 관리 패싯을 보는 방법에 대해 설명합니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "48214023"
   
 1.  개체 탐색기에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스, 인스턴스 개체, 데이터베이스 또는 데이터베이스 개체를 마우스 오른쪽 단추로 클릭한 다음 **패싯**을 클릭합니다.  
   
-2.  **패싯 보기 –***object_name* 대화 상자의 **패싯** 목록에서 해당 속성을 볼 패싯을 선택합니다. 이 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [View Facets Dialog Box](view-facets-dialog-box.md)를 참조하세요.  
+2.  **패싯 보기 –***object_name* 대화 상자의 **패싯** 목록에서 해당 속성을 보려면 패싯을 선택합니다. 이 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [View Facets Dialog Box](view-facets-dialog-box.md)를 참조하세요.  
   
 3.  완료되었으면 **확인**을 클릭합니다.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], creating
@@ -13,12 +12,12 @@ ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4032a624d49cbf7c70d710b6b4df7373353f1d2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c0ef9c1b18c38b38ddefe900018bd0323956c88
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099163"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797675"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>모델 관리자 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], 그룹 또는 사용자 할 경우 모델 관리자를 만듭니다 **업데이트** 하나 이상의 모델에 있는 모든 개체에 대 한 사용 권한.  
@@ -61,10 +60,10 @@ ms.locfileid: "48099163"
  한 가지 예외가: 사용자에 게 **업데이트** 계층에 할당 된 사용 권한을 **루트** 에 **계층 멤버** 탭, 사용자는 여전히 간주 모델 관리자입니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [관리자 &#40;Master Data Services&#41;](administrators-master-data-services.md)   
- [모델 개체 사용 권한 할당 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
- [계층 멤버 권한 할당 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
- [모델 개체 권한 &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
- [계층 멤버 권한 &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)  
+ [관리자&#40;Master Data Services&#41;](administrators-master-data-services.md)   
+ [모델 개체 사용 권한 할당&#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [계층 멤버 권한 할당&#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
+ [모델 개체 권한&#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+ [계층 멤버 권한&#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)  
   
   

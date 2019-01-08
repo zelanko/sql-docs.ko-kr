@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmieventwatchertask.f1
@@ -16,12 +15,12 @@ ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb074ec8723eb0f8f35df5d32aaebe9122e1bfc7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: b76916940175e9a3b3acf7c157ffe05d2b2aebf8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203113"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351772"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI 이벤트 감시자 태스크
   WMI 이벤트 감시자 태스크는 WQL(WMI Query Language) 이벤트 쿼리를 사용하여 특정 이벤트를 지정하기 위해 WMI(Windows Management Instrumentation) 이벤트를 감시합니다. WMI 이벤트 감시자 태스크는 다음 용도로 사용할 수 있습니다.  
@@ -39,7 +38,7 @@ ms.locfileid: "48203113"
 -   [WMI 데이터 판독기 태스크](wmi-data-reader-task.md)  
   
 ## <a name="wql-queries"></a>WQL 쿼리  
- WQL은 WMI 이벤트 알림 및 기타 WMI 관련 기능을 지원하기 위한 확장 기능이 포함된 SQL의 언어입니다. WQL에 대한 자세한 내용은 [MSDN Library](http://go.microsoft.com/fwlink/?linkid=62553)에서 WMI(Windows Management Instrumentation) 설명서를 참조하십시오.  
+ WQL은 WMI 이벤트 알림 및 기타 WMI 관련 기능을 지원하기 위한 확장 기능이 포함된 SQL의 언어입니다. WQL에 대한 자세한 내용은 [MSDN Library](https://go.microsoft.com/fwlink/?linkid=62553)에서 WMI(Windows Management Instrumentation) 설명서를 참조하십시오.  
   
 > [!NOTE]  
 >  WMI 클래스는 Windows 버전마다 다릅니다.  
@@ -92,9 +91,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [WMI 이벤트 감시자 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [WMI 이벤트 감시자 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [WMI 이벤트 감시자 태스크 편집기 &#40;WMI 옵션 페이지&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
+-   [WMI 이벤트 감시자 태스크 편집기&#40;WMI 옵션 페이지&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
   
 -   [식 페이지](../expressions/expressions-page.md)  
   

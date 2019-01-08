@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -15,17 +15,17 @@ ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6547d1e5ce67245ce749c2ad492399631373b908
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9ea811d8fcc598342781111aa559795888a889b2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156293"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777742"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, 데이터베이스 복제본
   **SQLServer: 데이터베이스 복제본** 성능 개체는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 AlwaysOn 가용성 그룹의 보조 데이터베이스에 대한 정보를 보고하는 성능 카운터를 포함합니다. 이 개체는 보조 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서만 유효합니다.  
   
-|카운터 이름|Description|표시 대상|  
+|카운터 이름|Description|표시 대상...|  
 |------------------|-----------------|--------------|  
 |**File Bytes Received/sec**|마지막 1초 동안 보조 데이터베이스에 대해 보조 복제본에서 받은 FILESTREAM 데이터의 양입니다.|보조 복제본|  
 |**Log Bytes Received/sec**|마지막 1초 동안 데이터베이스에 대해 보조 복제본에서 받은 로그 레코드의 양입니다.|보조 복제본|  

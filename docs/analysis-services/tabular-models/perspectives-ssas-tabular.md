@@ -1,5 +1,5 @@
 ---
-title: 큐브 뷰 | Microsoft Docs
+title: Analysis Services 테이블 형식 모델의 큐브 뷰 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3e687116fa1f388da3b59884c29526cb9e7dd629
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: dc6b574702f71a70de842c3a3b51110e8eed9814
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040548"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52983894"
 ---
-# <a name="perspectives"></a>큐브 뷰
+# <a name="perspectives-in-tabular-models"></a>테이블 형식 모델의 큐브 뷰
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   테이블 형식 모델에서 큐브 뷰는 모델의 보기 가능한 하위 집합을 정의하는데, 이를 통해 모델을 집중해서 보거나 비즈니스 또는 애플리케이션의 관점에서 파악할 수 있습니다.  
   
@@ -27,7 +27,7 @@ ms.locfileid: "34040548"
   
  정의된 큐브 뷰가 있는 모델(데이터 원본)에 연결하는 경우 사용자는 사용할 큐브 뷰를 선택할 수 있습니다. 예를 들어 Excel의 모델 데이터 원본에 연결할 경우 인사부의 사용자는 데이터 연결 마법사의 테이블 및 뷰 선택 페이지에서 인적 자원 큐브 뷰를 선택할 수 있습니다. 이 경우 인적 자원 큐브 뷰에 대해 정의된 필드(테이블, 열 및 측정값)만 피벗 테이블 필드 목록에 표시됩니다.  
   
- 큐브 뷰는 보안 수단이 아니라 더 나은 사용자 환경을 제공하기 위한 도구입니다. 특정 큐브 뷰에 대한 모든 보안은 기본 모델에서 상속됩니다. 큐브 뷰에서 사용자에게 액세스 권한이 없는 모델 개체에 대한 액세스 권한을 부여할 수는 없습니다. 큐브 뷰를 통해 모델의 개체에 대한 액세스를 제공하려면 먼저 model 데이터베이스에 대한 보안을 해결해야 합니다. 보안 역할을 사용하여 모델 메타데이터 및 데이터에 보안을 설정할 수 있습니다. 자세한 내용은 참조 [역할](../../analysis-services/tabular-models/roles-ssas-tabular.md)합니다.  
+ 큐브 뷰는 보안 수단이 아니라 더 나은 사용자 환경을 제공하기 위한 도구입니다. 특정 큐브 뷰에 대한 모든 보안은 기본 모델에서 상속됩니다. 큐브 뷰에서 사용자에게 액세스 권한이 없는 모델 개체에 대한 액세스 권한을 부여할 수는 없습니다. 큐브 뷰를 통해 모델의 개체에 대한 액세스를 제공하려면 먼저 model 데이터베이스에 대한 보안을 해결해야 합니다. 보안 역할을 사용하여 모델 메타데이터 및 데이터에 보안을 설정할 수 있습니다. 자세한 내용은 [역할](../../analysis-services/tabular-models/roles-ssas-tabular.md)입니다.  
   
 ##  <a name="bkmk_testpersp"></a> Testing perspectives  
  모델 제작 시 모델 디자이너의 Excel에서 분석 기능을 사용하여 정의한 큐브 뷰의 효율성을 테스트할 수 있습니다. 모델 디자이너의 **모델** 메뉴에서 **Excel에서 분석**을 클릭하면 Excel이 열리기 전에 **자격 증명 및 큐브 뷰 선택** 대화 상자가 나타납니다. 이 대화 상자에서 현재 사용자 이름, 다른 사용자, 역할, 그리고 데이터 원본 및 뷰 데이터로 모델 작업 영역 데이터베이스에 연결하는 데 사용할 큐브 뷰를 지정할 수 있습니다.  

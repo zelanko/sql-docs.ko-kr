@@ -5,8 +5,7 @@ ms.date: 03/08/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_table_validation_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f19ad878499d9739745f29aa8c2f749fe2b3132
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41e5f03dbe8619ca2e00d70b2c569d90f75d2d2f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843381"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211283"
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +97,7 @@ sp_table_validation [ @table = ] 'table'
   
  체크섬을 계산할 때는 두 서버의 테이블 구조가 동일해야 합니다. 즉, 테이블에 같은 열이 같은 순서로 있어야 하며 데이터 형식, 길이가 같아야 하고 NULL 허용 여부가 같아야 합니다. 예를 들어 게시자가 CREATE TABLE 작업을 수행한 다음 열을 추가하기 위해 ALTER TABLE 작업을 수행하였으나 구독자에 적용되는 스크립트가 단순한 CREATE 테이블인 경우에는 구조가 일치하지 않습니다. 없는 경우 두 테이블의 구조와 동일한 지를 살펴봅니다 [syscolumns](../../relational-databases/system-compatibility-views/sys-syscolumns-transact-sql.md) 하 고 각 테이블의 오프셋이 동일한 지 확인 합니다.  
   
- 부동 소수점 값은 문자 모드 경우 서로 다른 체크섬을 생성 하는 일을 할 **bcp** 를 사용 하는 게시가 아닌 경우는[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자입니다. 그 이유는 문자 모드에서, 또는 문자 모드로 변환을 수행할 때 사소하지만 피할 수 없는 전체 자릿수의 차이가 있기 때문입니다.  
+ 부동 소수점 값은 문자 모드 경우 서로 다른 체크섬을 생성 하는 일을 할 **bcp** 를 사용 하는 게시가 아닌 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자입니다. 그 이유는 문자 모드에서, 또는 문자 모드로 변환을 수행할 때 사소하지만 피할 수 없는 전체 자릿수의 차이가 있기 때문입니다.  
   
 ## <a name="permissions"></a>사용 권한  
  실행할 **sp_table_validation**, 유효성 검사 중인 테이블에 대 한 SELECT 권한이 있어야 합니다.  

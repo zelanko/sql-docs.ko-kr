@@ -11,12 +11,12 @@ ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f234f4112cee70e3b62fc5076f9e04c05e9bf56f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 3d708c3ad151cf213f21715f6837c7669aa7baff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154113"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511680"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>재귀 계층 구조 그룹 만들기(보고서 작성기 및 SSRS)
   재귀 계층 구조 그룹은 조직 계층의 관리자와 직원 관계에 대한 보고 구조와 같이 여러 계층 수준을 포함하는 단일 보고서 데이터 세트의 데이터를 구성합니다.  
@@ -57,16 +57,16 @@ ms.locfileid: "48154113"
   
      `=CStr(2 + (Level()*10)) + "pt"`  
   
-     Padding 속성은 모두 *nnyy*형식의 문자열을 요구합니다. 여기서 *nn* 은 숫자이고, *yy* 는 측정 단위입니다. 예제 식을 사용 하는 문자열을 작성 합니다 `Level` 재귀 수준에 따라 안쪽 여백의 크기를 늘리려면 함수입니다. 예를 들어 1 수준의 행은 (2 + (1\*10))=12pt의 패딩으로, 3 수준의 행은 (2 + (3\*10))=32pt의 패딩으로 늘어납니다. 에 대 한 자세한 합니다 `Level` 함수를 참조 하세요 [수준](report-builder-functions-level-function.md)합니다.  
+     Padding 속성은 모두 *nnyy*형식의 문자열을 요구합니다. 여기서 *nn* 은 숫자이고, *yy* 는 측정 단위입니다. 예 식은 `Level` 함수를 사용하여 재귀 수준에 따라 안쪽 여백의 크기를 늘리는 문자열을 만듭니다. 예를 들어 1 수준의 행은 (2 + (1\*10))=12pt의 패딩으로, 3 수준의 행은 (2 + (3\*10))=32pt의 패딩으로 늘어납니다. 에 대 한 자세한 합니다 `Level` 함수를 참조 하세요 [수준](report-builder-functions-level-function.md)합니다.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      보고서를 실행합니다. 보고서에 그룹화된 데이터의 계층 뷰가 표시됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [재귀 계층 구조 그룹 만들기 &#40;보고서 작성기 및 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [재귀 계층 구조 그룹 생성&#40;보고서 작성기 및 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [집계 함수 참조 &#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [테이블&#40;보고서 작성기 및 SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [행렬&#40;보고서 작성기 및 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
  [목록&#40;보고서 작성기 및 SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication], interactive resolvers
@@ -16,12 +15,12 @@ ms.assetid: e298dea0-b5ef-4907-a745-cfad9793653f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 80f3817de3ff8242d24dfc0e1ca507f186e05508
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 710db513395aa5a9c51df55b54bafbdc425ecb5d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205303"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749296"
 ---
 # <a name="specify-interactive-conflict-resolution-for-merge-articles"></a>병합 아티클에 대한 상호 충돌 해결 프로그램 지정
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 병합 아티클에 대한 상호 충돌 추적 및 해결 수준을 지정하는 방법에 대해 설명합니다.  
@@ -64,7 +63,7 @@ ms.locfileid: "48205303"
   
 #### <a name="to-specify-that-a-subscription-should-use-interactive-conflict-resolution"></a>구독이 대화형 충돌 해결 기능을 사용하도록 지정하려면  
   
-1.  **구독 속성 - \<Subscriber>: \<SubscriptionDatabase>** 대화 상자에서 **대화형으로 충돌 해결** 옵션에 **True** 값을 지정합니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) 및 [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md)을 참조하세요.  
+1.  에 **구독 속성- \<구독자 >: \<SubscriptionDatabase >** 대화 상자에서 값을 지정 **True** 에 대 한 합니다 **대화형으로 충돌 해결** 옵션입니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) 및 [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md)을 참조하세요.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -97,7 +96,7 @@ ms.locfileid: "48205303"
   
 1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행합니다. **@publication**에 아티클이 속한 게시 이름, **@article**에 아티클 이름, **@source_object**에 게시할 데이터베이스 개체 및 **@allow_interactive_resolver**에 **true** 값을 지정합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [병합 게시에 대한 데이터 충돌 보기 및 해결&#40;SQL Server Management Studio&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md)   
  [Interactive Conflict Resolution](../merge/advanced-merge-replication-conflict-interactive-resolution.md)  
   

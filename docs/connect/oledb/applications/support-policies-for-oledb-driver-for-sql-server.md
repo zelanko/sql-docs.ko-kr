@@ -11,12 +11,12 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 140bd1e82540ab7f8869ae64173d7d5431ea9233
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 782745fa9957cd611aa875bec2f9b740b489f210
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774741"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202012"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버에 대한 지원 정책
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47774741"
   이 문서에서는 SQL Server에 OLE DB 드라이버를 사용 하 여 다양 한 데이터 액세스 구성 요소를 사용할 수 있습니다.  
 
 ## <a name="server-support"></a>서버 지원  
- OLE DB Driver for SQL Server 연결을 지원 합니다 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]를[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]를 [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)], 및 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]합니다.
+ OLE DB Driver for SQL Server 연결을 지원 합니다 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]를 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]를 [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)], 및 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]합니다.
 
 ## <a name="supported-operating-system-versions"></a>지원되는 운영 체제 버전  
  다음 표에서 SQL Server는 운영 체제 지원은 OLE DB 드라이버를 나열합니다.  
@@ -44,4 +44,4 @@ ms.locfileid: "47774741"
 애플리케이션은 Windows 운영 체제에 포함된 OLE DB 공급자(SQLOLEDB)를 사용할 수 있습니다. 그러나 유지 관리 모드에 하 고 더 이상 업데이트 합니다. 대신 사용 해야 OLE DB 드라이버 SQL Server (MSOLEDBSQL)에 대 한 합니다.
 
 ## <a name="see-also"></a>참고 항목  
- [SQL Server용 OLE DB 드라이버로 응용 프로그램 빌드](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   
+ [SQL Server용 OLE DB 드라이버로 애플리케이션 빌드](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   

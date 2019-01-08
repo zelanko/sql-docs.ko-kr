@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponentdetails.f1
@@ -18,12 +17,12 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8907bc0df08010b49bdfcb2a7f4b77ea646fbcf6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5db2b6e6467dec58f6a8aa6e6bfc9f105073fbfe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084623"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818069"
 ---
 # <a name="script-component"></a>스크립트 구성 요소
   스크립트 구성 요소는 스크립트를 호스팅하고 패키지에서 사용자 지정 스크립트 코드를 포함시키고 실행할 수 있도록 합니다. 패키지의 스크립트 구성 요소는 다음 용도로 사용할 수 있습니다.  
@@ -91,13 +90,13 @@ ms.locfileid: "48084623"
 ### <a name="configuring-the-script-component-in-the-designer"></a>디자이너에서 스크립트 구성 요소 구성  
  **스크립트 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [스크립트 변환 편집기 &#40;입력 열 페이지&#41;](../../script-transformation-editor-input-columns-page.md)  
+-   [스크립트 변환 편집기&#40;입력 열 페이지&#41;](../../script-transformation-editor-input-columns-page.md)  
   
--   [스크립트 변환 편집기 &#40;입력 및 출력 페이지&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
+-   [스크립트 변환 편집기&#40;입/출력 페이지&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
   
--   [스크립트 변환 편집기 &#40;스크립트 페이지&#41;](../../script-transformation-editor-script-page.md)  
+-   [스크립트 변환 편집기&#40;스크립트 페이지&#41;](../../script-transformation-editor-script-page.md)  
   
--   [스크립트 변환 편집기 &#40;연결 관리자 페이지&#41;](../../script-transformation-editor-connection-managers-page.md)  
+-   [스크립트 변환 편집기&#40;연결 관리자 페이지&#41;](../../script-transformation-editor-connection-managers-page.md)  
   
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   

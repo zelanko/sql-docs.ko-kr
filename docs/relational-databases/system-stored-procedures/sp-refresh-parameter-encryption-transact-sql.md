@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58d2d159d0788d3a32c793899b253b66c62a0dbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9a24c843ed45a42fe4072b47c5642d81520a75e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703311"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214142"
 ---
 # <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 저장 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거의 이름입니다. *module_name* 는 CLR (공용 언어 런타임) 저장 프로시저 또는 CLR 함수 일 수 없습니다. *module_name* 스키마 바인딩할 수 없습니다. *module_name* 는 `nvarchar`, 기본값은 없습니다. *module_name* 다중 부분 식별자가 될 수 있지만 현재 데이터베이스의 개체만 참조할 수 있습니다.
 
 [  **@namespace =** ] **'** < 클래스 > **'**   
-지정된 모듈의 클래스입니다. 때 *module_name* 이 DDL 트리거인 경우 `<class>` 필요 합니다. `<class>`은 `nvarchar(20)`입니다. 유효한 입력은 `DATABASE_DDL_TRIGGER` 고 `SERVER_DDL_TRIGGER`입니다.    
+지정된 모듈의 클래스입니다. 때 *module_name* 이 DDL 트리거인 경우 `<class>` 필요 합니다. `<class>`가 `nvarchar(20)`인 경우 유효한 입력은 `DATABASE_DDL_TRIGGER` 고 `SERVER_DDL_TRIGGER`입니다.    
 
 ## <a name="return-code-values"></a>반환 코드 값  
 
@@ -70,7 +70,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 서버 수준 DDL 트리거를 새로 고치려면 아무 데이터베이스 컨텍스트에서 이 저장 프로시저를 실행하세요.
 
->  [!NOTE]   
+> [!NOTE]
 >  실행할 때 개체와 연결 되어 있는 모든 서명이 삭제 됩니다 `sp_refresh_parameter_encryption`합니다.
 
 ## <a name="permissions"></a>사용 권한
@@ -156,7 +156,7 @@ EXEC sp_refresh_parameter_encryption [find_patient];
 GO
 ```
 
-## <a name="see-also"></a>관련 항목 
+## <a name="see-also"></a>관련 항목: 
 
 [상시 암호화](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
 [Always Encrypted 마법사](../../relational-databases/security/encryption/always-encrypted-wizard.md)   

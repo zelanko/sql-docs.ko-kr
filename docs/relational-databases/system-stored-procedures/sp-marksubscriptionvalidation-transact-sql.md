@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_marksubscriptionvalidation
@@ -17,12 +16,12 @@ ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c4d649403a04aa48475705059328656d81ae8597
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22b25d1a6c33d52bac27ba2735cd439732b6e9c0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748911"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213562"
 ---
 # <a name="spmarksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
  대상 데이터베이스의 이름입니다. *destination_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@publisher=** ] **'***게시자***'**  
- 이외[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+ 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *게시자* 에 속하는 게시에 대 한 쓰일 수 없습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  
@@ -63,9 +62,9 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ## <a name="remarks"></a>Remarks  
  **sp_marksubscriptionvalidation** 트랜잭션 복제에 사용 됩니다.  
   
- **sp_marksubscriptionvalidation** 지원 하지 않습니다 이외[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자입니다.  
+ **sp_marksubscriptionvalidation** 지원 하지 않습니다 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자입니다.  
   
- 에 대 한 비[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행할 수 없습니다. 게시자 **sp_marksubscriptionvalidation** 에서 명시적 트랜잭션 내에서. 이는 게시자에 액세스하는 데 사용되는 연결된 서버 연결을 통해서는 명시적 트랜잭션이 지원되지 않기 때문입니다.  
+ 에 대 한 비 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행할 수 없습니다. 게시자 **sp_marksubscriptionvalidation** 에서 명시적 트랜잭션 내에서. 이는 게시자에 액세스하는 데 사용되는 연결된 서버 연결을 통해서는 명시적 트랜잭션이 지원되지 않기 때문입니다.  
   
  **sp_marksubscriptionvalidation** 와 함께 사용 해야 합니다 [sp_article_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)에 값을 지정 하면 **1** 에 대 한  *subscription_level*, 다른 호출과 함께 사용할 수 있습니다 **sp_marksubscriptionvalidation** 다른 구독자에 대 한 현재 열려 있는 트랜잭션을 표시 합니다.  
   

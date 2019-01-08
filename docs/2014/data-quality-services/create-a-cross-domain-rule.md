@@ -13,27 +13,27 @@ ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c450b91f787cc82fc64f35a396ece8133791522f
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: e413c2a6057476fb44d5a7a106c8374621b9937c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033400"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415680"
 ---
 # <a name="create-a-cross-domain-rule"></a>도메인 간 규칙 만들기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에서 복합 도메인의 도메인 간 규칙을 만드는 방법에 대해 설명합니다. 도메인 간 규칙은 복합 도메인에 포함된 단일 도메인에서 값 사이의 관계를 테스트합니다. 도메인 값이 정확하고 비즈니스 요구 사항에 맞는 것으로 간주되려면 도메인 간 규칙이 복합 도메인 전체에서 유효해야 합니다. 도메인 간 규칙은 도메인 값의 유효성 검사, 수정 및 표준화에 사용됩니다.  
   
  도메인 간 규칙의 If 절과 Then 절은 각각 복합 도메인의 단일 도메인 중 하나에 대해 정의됩니다. 각 절은 서로 다른 단일 도메인에 대해 정의되어야 합니다. 도메인 간 규칙은 여러 개의 단일 도메인과 관련되어야 합니다. 복합 도메인에 단순 도메인 규칙(단일 도메인 전용)을 정의할 수는 없습니다. 단일 도메인에 도메인 규칙을 정의하여 이 작업을 수행합니다. If 절과 Then 절은 각각 하나 이상의 조건을 포함할 수 있습니다.  
   
- 결정적 조건이 있는 도메인 간 규칙은 조건 값의 동의어와 값 자체에 규칙 논리를 적용합니다. If 절과 Then 절의 결정적 조건은 값이 다음 값과 같음, 값이 다음 값과 같지 않음, 값이 다음에 속함 또는 값이 다음에 포함되지 않음입니다. 예를 들어 복합 도메인에 대해 다음과 같은 도메인 간 규칙이 있다고 가정합니다. “‘City’ 값이 ‘Los Angeles’이면 ‘State’ 값은 ‘CA’입니다. “‘Los Angeles’와 ‘LA’가 동의어인 경우 이 규칙은 ‘Los Angeles CA’와 ‘LA CA’에 대해 올바른 결과를, ‘Los Angeles WA’ 및 ‘LA WA’에 대해서는 오류를 반환합니다.  
+ 결정적 조건이 있는 도메인 간 규칙은 조건 값의 동의어와 값 자체에 규칙 논리를 적용합니다. If 절과 Then 절의 결정적 조건은 값이 다음 값과 같음, 값이 다음 값과 같지 않음, 값이 다음에 속함 또는 값이 다음에 포함되지 않음입니다. 예를 들어 복합 도메인에 대해 다음과 같은 도메인 간 규칙이 있습니다. "'City' 값이 'Los angeles' 다음 'state' 값은 같음 'CA'입니다. ‘Los Angeles’와 ‘LA’가 동의어인 경우 이 규칙은 ‘Los Angeles CA’와 ‘LA CA’에 대해 올바른 결과를, ‘Los Angeles WA’ 및 ‘LA WA’에 대해서는 오류를 반환합니다.  
   
  도메인 간 규칙 *값이 다음 값과 같음* 에서 결정적 **Then**절은 도메인 간 규칙의 유효성에 대해 알려줄 뿐만 아니라 데이터 정리 작업 시 데이터를 수정합니다. 자세한 내용은 [Data Correction using Definitive Cross-Domain Rules](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) 에서 [Cleanse Data in a Composite Domain](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md)를 참조하세요.  
   
  단일 도메인에만 영향을 주는 모든 단순한 규칙 뒤에서 도메인 간 규칙을 사용하세요. 값이 단일 도메인 규칙(존재할 경우)을 전달할 경우에만 도메인 간 규칙이 적용됩니다. 먼저 규칙이 실행되는 복합 도메인과 단일 도메인을 모두 정의해야 규칙을 실행할 수 있습니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
  도메인 간 규칙을 만들려면 복합 도메인을 만들어 열어 놓아야 합니다.  
   
 ###  <a name="Security"></a> 보안  
@@ -94,7 +94,7 @@ ms.locfileid: "51033400"
   
 2.  도메인 간 규칙을 완성하면 **End the Domain Management Activity** 에서 설명한 대로 [마침](../../2014/data-quality-services/end-the-domain-management-activity.md)을 클릭하여 도메인 관리 작업을 완료합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 도메인 간 규칙을 만든 후  
+##  <a name="FollowUp"></a> 후속편: 도메인 간 규칙을 만든 후  
  도메인 간 규칙을 만든 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../../2014/data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../../2014/data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../../2014/data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
   

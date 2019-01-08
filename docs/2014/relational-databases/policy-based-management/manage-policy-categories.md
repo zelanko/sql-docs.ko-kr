@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.policycategories.f1
@@ -12,12 +12,12 @@ ms.assetid: d188a819-731f-4029-98aa-780d3299a0ce
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cb6b0d2ebf9f8e47a40318a8309e363560921dab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d22ee5c7d66039a8c04daabe411a6ba0554e2849
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050540"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817980"
 ---
 # <a name="manage-policy-categories"></a>정책 범주 관리
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 전체 [!INCLUDE[tsql](../../includes/tsql-md.md)]인스턴스에 한 범주의 사용 가능한 정책을 임의로 또는 모두 적용하는 방법에 대해 설명합니다.  

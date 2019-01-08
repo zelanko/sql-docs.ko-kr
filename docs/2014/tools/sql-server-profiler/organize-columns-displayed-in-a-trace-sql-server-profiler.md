@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - organizing trace columns displayed [SQL Server]
@@ -15,12 +14,12 @@ ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ca60a27f670dbb630692507cf9ec1a8731b2a25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1a884f7c45accefb248029d148feb8b521e6ff4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183422"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763935"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>표시된 열 추적으로 구성(SQL Server Profiler)
   추적 테이블이나 **추적 파일 속성** 대화 상자에서 **열 구성** 을 선택하는 방법으로 또는 추적을 정의할 때 추적에서 데이터 열을 그룹화할 수 있습니다. 데이터 열을 그룹화하면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적 출력을 더 정확히 분석할 수 있습니다. 자세한 내용은 [SQL Server Profiler를 사용하여 추적 보기 및 분석](view-and-analyze-traces-with-sql-server-profiler.md)을 참조하세요.  
@@ -84,7 +83,7 @@ ms.locfileid: "48183422"
 7.  추적 데이터의 일반 보기로 되돌리려면 **보기** 메뉴에서 **집계 보기** 를 클릭하여 선택을 취소합니다. 집계 보기로 되돌리려면 **보기** 메뉴에서 **집계 보기** 를 다시 클릭하여 다시 선택합니다. **보기** 메뉴에서 **그룹화 보기** 를 클릭해도 그룹화된 추적 이벤트를 축소하지 않고 표시할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [추적 만들기 &#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)   
+ [추적 만들기&#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)   
  [추적 테이블 열기&#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md)   
  [추적 파일 열기&#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md)  
   

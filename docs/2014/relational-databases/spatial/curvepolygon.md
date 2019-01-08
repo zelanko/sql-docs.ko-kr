@@ -9,18 +9,18 @@ ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7783517c21317c8d0a162b869f7d57329d89b15c
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 435786ca85904cc2164ae2a3983163265465d9d1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018928"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350572"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   `CurvePolygon`은 외부 경계 링과 0개 이상의 내부 링에서 정의하는 토폴로지 방식으로 닫힌 표면입니다.  
   
 > [!IMPORTANT]  
->  자세한 설명 및 예제에 도입 된 공간 기능에 대 한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]등의 `CurvePolygon` 하위 유형, 백서를 다운로드 [SQL Server 2012의 새로운 공간 기능](http://go.microsoft.com/fwlink/?LinkId=226407)합니다.  
+>  자세한 설명 및 예제에 도입 된 공간 기능에 대 한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]등의 `CurvePolygon` 하위 유형, 백서를 다운로드 [SQL Server 2012의 새로운 공간 기능](https://go.microsoft.com/fwlink/?LinkId=226407)합니다.  
   
  특성을 정의 하는 다음 조건을 `CurvePolygon` 인스턴스:  
   

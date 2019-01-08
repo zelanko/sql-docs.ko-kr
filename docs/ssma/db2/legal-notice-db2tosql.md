@@ -10,12 +10,12 @@ ms.assetid: d2e558b8-7208-44b4-82b3-4b411a34a8c9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8bc8cf096c1859d2829531ac181fb45253b18bda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 4f5e5c052bb779ac6f6227aaf0b4b6a60a94110d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674691"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524559"
 ---
 # <a name="legal-notice-db2tosql"></a>법적 고 지 사항 (DB2toSQL)
 포함된 예제 애플리케이션을 포함하여 이 설명서는 정보 제공의 목적으로만 제공되며 Microsoft 및 그 공급자는 이 설명서에 대해서 어떠한 명시적이거나 묵시적인 보증도 하지 않습니다. URL 및 기타 인터넷 웹 사이트 참조를 포함하여, 이 설명서의 내용은 예고 없이 변경될 수 있습니다. 이 설명서의 사용이나 사용 결과에 따른 책임은 전적으로 사용자에게 있습니다.  
@@ -35,7 +35,7 @@ SAP NetWeaver는 독일 및 기타 여러 국가/지역에서 SAP AG의 등록 �
 다른 모든 상표는 해당 소유자의 자산입니다.  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>SQL Server 지원 및 업그레이드에 대한 설명서 정책  
-SQL Server 설명서의 콘텐츠는 충분한 테스트를 거친 후에만 게시됩니다. 제품 설명서(SQL Server 온라인 설명서, 추가 정보 파일, 알려진 문제점 문서 및 기술 자료 문서)에는 모든 고객의 일반적 용도에 안전하도록 충분히 강력한 SQL Server 기능에 관한 콘텐츠가 포함됩니다. 이 정책은 릴리스 및 서비스 팩에 대한 추가 정보 파일을 포함한 모든 SQL Server 설명서에 적용됩니다. 추가 정보 파일은 온라인 설명서의 확장으로 간주합니다.  
+SQL Server 설명서의 콘텐츠는 충분한 테스트를 거친 후에만 게시됩니다. -SQL Server 온라인 설명서, 추가 정보 파일, 알려진된 문제점 문서 및 기술 자료 문서-제품 설명서에는 모든 고객의 일반적 용도 대해 안전 하도록 충분히 강력한 기능과 SQL Server 기능에 대 한 콘텐츠가 포함 됩니다. 이 정책은 릴리스 및 서비스 팩에 대한 추가 정보 파일을 포함한 모든 SQL Server 설명서에 적용됩니다. 추가 정보 파일은 온라인 설명서의 확장으로 간주합니다.  
   
 경우에 따라 특정 기능은 고객의 직접 사용이 금지되므로 문서화되지 않습니다. Microsoft에서 게시한 SQL Server 설명서에서도 해당 기능을 설명하는 경우 이외에는 타사 서적 또는 웹 사이트의 콘텐츠는 Microsoft 고객 지원에서 지원하지 않으므로 프로덕션 데이터베이스 또는 응용 프로그램에 사용하지 않아야 합니다.  
   

@@ -11,15 +11,15 @@ ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 62a5d85272aae56b7f54b780b863642b5ddac6d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 133f5db597dfd56464678c52273e576e3493f172
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102113"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210872"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
-  구성, 복구 또는 제거는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] PowerPivot 구성 도구를 사용 하 여 합니다.  
+  PowerPivot 구성 도구를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 을 구성, 복구 또는 제거합니다.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사는 SharePoint 2013용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구뿐만 아니라 SharePoint 2010용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 설치합니다. 이 항목에서는 두 가지 도구의 일반적인 용도와 차이점을 설명합니다.  
   
@@ -41,12 +41,12 @@ ms.locfileid: "48102113"
   
 -   Analysis Services 인스턴스의 서버 관리자여야 합니다(SharePoint 2010만 해당).  
   
--   팜 구성 데이터베이스에서 db_owner여야 합니다.  
+-   팜의 구성 데이터베이스에서 db_owner 여야 합니다.  
   
 -   구성 도구를 사용하기 위한 TCP/IP 포트 요구 사항은 없으므로 구성 도구를 수용하도록 방화벽을 구성할 필요가 없습니다. 구성 도구에는 웹 애플리케이션이 필요하며 공유 서비스는 SharePoint 플랫폼의 일부로 사용할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버에 대한 방화벽을 구성해야 할 수 있습니다. 자세한 내용은 [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   
 ##  <a name="bkmk_twoversions"></a> 구성 도구의 두 가지 버전  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사가 SharePoint 2013 용 PowerPivot 구성 도구 뿐만 아니라 SharePoint 2010 용 PowerPivot 구성 도구를 설치 합니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사는 SharePoint 2010용 PowerPivot 구성 도구 뿐만 아니라 SharePoint 2013용 PowerPivot 구성 도구를 설치합니다.  
   
  이 도구는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 또는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]인스턴스에만 사용할 수 있습니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 설치에는 사용하지 마세요.  
   
@@ -82,9 +82,9 @@ ms.locfileid: "48102113"
   
 -   [SharePoint 용 PowerPivot에 대 한 PowerShell 참조](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   
-> [!NOTE]  
+> [!NOTE]
 >  이 도구는 Reporting Services를 구성하지 않습니다. Reporting Services를 SharePoint 환경에 추가하는 경우 Reporting Services를 별도로 설치하고 구성해야 합니다. 자세한 내용은 다음 항목을 참조하세요.  
->   
+> 
 >  -   [Reporting Services SharePoint 2013 용 SharePoint 모드 설치](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)합니다.  
 > -   [SharePoint 2010용 Reporting Services SharePoint 모드 설치](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48102113"
   
      ![두 개의 파워 피벗 구성 도구](../media/as-powerpivot-configtools-bothicons.gif "두 개의 파워 피벗 구성 도구")  
   
-     **참고:** 이 도구는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 이 로컬 서버에 설치된 경우에만 사용할 수 있습니다.  
+     **참고:** 이 도구는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]이 로컬 서버에 설치된 경우에만 사용할 수 있습니다.  
   
 2.  시작 시 구성 도구는 설치 상태를 확인하고 설치에 유효한 태스크를 제공합니다.  
   
@@ -123,9 +123,9 @@ ms.locfileid: "48102113"
  실행을 클릭하면 이 도구는 모든 동작을 일괄 처리 모드로 처리합니다. 각 동작은 태스크 목록에 별도의 항목으로 표시되지만 태스크에 포함된 모든 동작이 함께 처리됩니다. 유효성 검사를 통과하는 동작만 처리됩니다. 유효성 검사를 통과하려면 일부 입력 값을 추가하거나 변경해야 할 수 있습니다.  
   
 ## <a name="related-content"></a>관련 내용  
- [SharePoint 용 PowerPivot 업그레이드](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md) 팜에 이미 있는 기존 설치를 업그레이드 하는 워크플로에 대해 설명 합니다.  
+ [Upgrade PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md) 팜에 이미 있는 기존 설치를 업그레이드하는 워크플로에 대해 설명합니다.  
   
- [SharePoint 용 PowerPivot을 제거할](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md) PowerPivot for SharePoint 서비스, 솔루션 및 응용 프로그램 페이지를 팜에서 제거 하는 워크플로에 대해 설명 합니다.  
+ [Uninstall PowerPivot for SharePoint](../../sql-server/install/uninstall-power-pivot-for-sharepoint.md) SharePoint용 PowerPivot 서비스, 솔루션 및 애플리케이션 페이지를 팜에서 제거하는 워크플로에 대해 설명합니다.  
   
  [Windows PowerShell을 사용하여 PowerPivot 구성](power-pivot-configuration-using-windows-powershell.md)  
   

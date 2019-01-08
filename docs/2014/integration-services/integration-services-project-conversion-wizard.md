@@ -13,12 +13,12 @@ ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c00c15a0f5e1c6bc45dbf1d19c216feb468e41fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 252d8c44921db82cc634e17e1628f72f18a066e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194913"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396367"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Integration Services 프로젝트 변환 마법사
   **Integration Services 프로젝트 변환 마법사** 는 프로젝트를 프로젝트 배포 모델로 변환합니다.  
@@ -220,9 +220,9 @@ ms.locfileid: "48194913"
  **매개 변수 정보 설정** 대화 상자에는 매개 변수 값의 데이터 형식 및 매개 변수의 원본도 나열됩니다.  
   
 ##  <a name="review"></a> 검토 페이지에서 옵션 설정  
- **검토** 페이지에서는 사용자가 프로젝트 변환을 위해 선택한 옵션을 확인할 수 있습니다.  
+ **검토** 페이지를 사용하여 프로젝트 변환을 위해 선택한 옵션을 확인합니다.  
   
- **Previous**  
+ **이전**  
  옵션을 변경하려면 클릭합니다.  
   
  **변환**  
@@ -243,6 +243,6 @@ ms.locfileid: "48194913"
  프로젝트 변환 요약을 .xml 파일로 저장하려면 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Integration Services 서버에 프로젝트 배포](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
+ [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
   
   

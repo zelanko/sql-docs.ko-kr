@@ -13,12 +13,12 @@ ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc75b9a7ab93e3157d6594be15c0b2cc36456415
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e152c3147ab7c316494c6891424c0a7c8173f002
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726161"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516530"
 ---
 # <a name="the-field-object"></a>필드 개체
 각 **필드** 개체는 일반적으로 데이터베이스 테이블의 열에 해당 합니다. 그러나를 **필드** 간에 대 한 포인터를 나타낼 수도 있습니다 **레코드 집합**, 장 이라고 합니다. 이 가이드의 뒷부분에 나오는 장 열과 같은 예외를 설명 합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "47726161"
  일괄 처리를 사용 하 여 업데이트 하는 동안 필드 값에서 불일치를 해결 합니다 **OriginalValue** 하 고 **UnderlyingValue** 속성 공급자가 지 원하는 일괄 처리 업데이트 하는 경우.  
   
 ## <a name="describing-a-field"></a>필드를 설명 하는  
- 다음에 나오는 항목의 속성에 설명 합니다 [필드](../../../ado/reference/ado-api/field-object.md) 설명 하는 정보를 나타내는 개체를 **필드** 개체 자체-필드에 대 한 메타 데이터, 합니다. 이 정보는 스키마에 대해 많은 정보를 사용할 수 있습니다 합니다 **레코드 집합**합니다. 이러한 속성에 포함 **형식**, **DefinedSize** 하 고 **ActualSize**를 **이름**, 및 **NumericScale**하 고 **정밀도**합니다.  
+ 다음에 나오는 항목의 속성에 설명 합니다 [필드](../../../ado/reference/ado-api/field-object.md) 설명 하는 정보를 나타내는 개체를 **필드** 필드에 대 한 메타 데이터 즉, 자체 개체입니다. 이 정보는 스키마에 대해 많은 정보를 사용할 수 있습니다 합니다 **레코드 집합**합니다. 이러한 속성에 포함 **형식**, **DefinedSize** 하 고 **ActualSize**를 **이름**, 및 **NumericScale**하 고 **정밀도**합니다.  
   
 ### <a name="discovering-the-data-type"></a>데이터 형식 검색  
  합니다 **형식** 속성 필드의 데이터 형식을 나타냅니다. ADO에서 지원 되는 열거 상수에 설명 된 데이터 형식을 [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) 에 *ADO 프로그래머 참고 자료*합니다.  

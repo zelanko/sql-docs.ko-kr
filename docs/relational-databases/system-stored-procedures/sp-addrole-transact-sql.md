@@ -18,19 +18,19 @@ ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b0358f6f9781076b043975dc794f2521aac171ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f51d462e46a86a3c824a7e37aeb1f30ba28d987b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841901"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212922"
 ---
 # <a name="spaddrole-transact-sql"></a>sp_addrole(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   현재 데이터베이스에 새 데이터베이스 역할을 만듭니다.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  **sp_addrole** 이전 버전과의 호환성을 위해 포함 되었습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이후 릴리스에서 지원 되지 않을 수 있습니다. 사용 하 여 [CREATE ROLE](../../t-sql/statements/create-role-transact-sql.md) 대신 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

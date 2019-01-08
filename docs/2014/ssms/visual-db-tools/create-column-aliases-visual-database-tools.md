@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - columns [SQL Server], aliases
@@ -13,12 +13,12 @@ ms.assetid: e2e1c166-8ea7-47a2-b6a7-e419bf0fa3bb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a9d0a3c52b22f6834a862435335f8e34aa991d74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a6be65da2da5da5c025520314c069258aeb7bfb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050906"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781575"
 ---
 # <a name="create-column-aliases-visual-database-tools"></a>열 별칭 만들기(Visual Database Tools)
   열 이름에 대한 별칭을 만들면 열 이름, 계산 및 요약 값에 대한 작업을 좀 더 쉽게 수행할 수 있습니다. 예를 들어, 열 별칭을 만들어 다음 작업을 수행할 수 있습니다.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 63e7f96905f6862b24867fb98ecff82a6c92ce30
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca9df655e00b1f2fd1919f30bb1bb166e2556b91
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143463"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208772"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>SQL Server 기본 인스턴스 및 명명된 인스턴스의 파일 위치
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치는 하나 이상의 개별 인스턴스로 구성됩니다. 기본 인스턴스인지 또는 명명된 인스턴스인지에 관계없이 인스턴스에는 컴퓨터의 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 공유되는 공용 파일 집합 외에 고유의 프로그램과 데이터 파일 집합이 있습니다.  
@@ -28,9 +27,9 @@ ms.locfileid: "48143463"
 > [!IMPORTANT]  
 >  프로그램 파일 및 데이터 파일은 이동식 디스크 드라이브, 압축을 사용하는 파일 시스템, 시스템 파일이 있는 디렉터리 및 장애 조치(Failover) 클러스터 인스턴스에 있는 공유 드라이브에 설치할 수 없습니다.  
 >   
->  시스템 데이터베이스(master, model, MSDB 및 tempdb)와 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 사용자 데이터베이스는 SMB(서버 메시지 블록) 파일 서버에 저장소 옵션으로 설치될 수 있습니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 독립 실행형 설치와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FCI(장애 조치(Failover) 클러스터 설치) 모두에 적용됩니다. 자세한 내용은 [Install SQL Server with SMB Fileshare as a Storage Option](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)를 참조하세요.  
+>  시스템 데이터베이스(master, model, MSDB 및 tempdb)와 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 사용자 데이터베이스는 SMB(서버 메시지 블록) 파일 서버에 저장소 옵션으로 설치될 수 있습니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 독립 실행형 설치와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FCI(장애 조치(Failover) 클러스터 설치) 모두에 적용됩니다. 자세한 내용은 [SMB 파일 공유와 함께 저장소로 SQL Server 설치 옵션](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)를 참조하세요.  
 >   
->  Binn, Data, Ftdata, HTML 또는 1033 디렉터리나 포함된 내용을 삭제하지 마세요. 필요한 경우 다른 디렉터리는 삭제할 수 있지만 삭제된 기능이나 데이터를 검색하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 제거했다가 다시 설치해야 합니다. HTML 디렉터리의 .htm 파일을 삭제하거나 수정하지 마십시오. 이 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구가 올바르게 동작하는 데 필요합니다.  
+>  Binn, Data, Ftdata, HTML, 1033 또는 1042 디렉터리나 포함된 내용을 삭제하지 마십시오. 필요한 경우 다른 디렉터리는 삭제할 수 있지만 삭제된 기능이나 데이터를 검색하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 제거했다가 다시 설치해야 합니다. HTML 디렉터리의 .htm 파일을 삭제하거나 수정하지 마십시오. 이 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구가 올바르게 동작하는 데 필요합니다.  
   
 ## <a name="shared-files-for-all-instances-of-includessnoversionincludesssnoversion-mdmd"></a>모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  단일 컴퓨터의 모든 인스턴스에 사용되는 공용 파일은 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)] 폴더에 설치됩니다. 여기서 \<*drive*>는 구성 요소가 설치된 드라이브 문자입니다. 기본값은 일반적으로 C 드라이브입니다.  
@@ -127,7 +126,7 @@ ms.locfileid: "48143463"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사(설치 UI 모드)에서 USESYSDB 업그레이드 기능을 사용하는 경우에는 하위 폴더가 반복 포함된 구조로 제품이 설치될 수 있습니다. 예를 들어 \< *SQLProgramFiles*> \MSSQL12\MSSQL\MSSQL10_50\MSSQL\Data\\합니다. USESYSDB 기능을 사용하려면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 기능 대신 SQL 데이터 파일 기능에 대한 설치 경로를 설정합니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  데이터 파일은 항상 Data라는 하위 디렉터리에 위치합니다. 예를 들어, C:\Program Files 지정할\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< 인스턴스 이름 > \ 데이터 파일이 C:\Program Files 아래에 있는 경우 업그레이드 중에 루트 경로를 시스템 데이터베이스의 데이터 디렉터리로 지정 하려면\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< N a m e > \MSSQL\Data 합니다.  
   
 ## <a name="see-also"></a>관련 항목  

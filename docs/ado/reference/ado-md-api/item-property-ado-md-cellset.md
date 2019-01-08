@@ -17,12 +17,12 @@ ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4583337cf9908f266fe1a85510d4beaae5a5af65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 641a08567e990134d49d32ae7ebecaf7d2b8de5a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714379"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533081"
 ---
 # <a name="item-property-ado-md-cellset"></a>Item 속성(ADO MD Cellset)
 셀을 검색 한 [cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) 좌표를 사용 하 여 합니다.  
@@ -60,7 +60,7 @@ Cellset.Item ( Positions )Cellset ( Positions )
   
  서 수 위치는 하나의 셀 내에서 고유 하 게 식별 하는 번호를 **Cellset**합니다. 이론적으로 셀 번호가 매겨집니다를 **셀 집합** 처럼 합니다 **셀 집합** 된를 *p*-차원 배열에 있는 *p* 는 축의 개수입니다. 셀은 행 중심의 순서로 번호가 매겨집니다. 다음은 셀의 서 수를 계산 하는 것에 대 한 수식:  
   
- 마찬가지로 문자열을 멤버 이름을 전달 하는 경우 **항목**, 멤버는 숫자 축 식별자의 오름차순으로 나열 되어야 합니다. 축에서 멤버 차원 중첩의 오름차순으로 나열 합니다-즉, 가장 바깥쪽 차원 멤버는 먼저 내부 차원의 멤버 뒤에 있습니다. 별도 문자열로로 표시 되도록 각 차원 및 멤버 문자열 목록을 쉼표로 구분 해야 합니다.  
+ 마찬가지로 문자열을 멤버 이름을 전달 하는 경우 **항목**, 멤버는 숫자 축 식별자의 오름차순으로 나열 되어야 합니다. 축에서 멤버는 차원 중첩의 오름차순으로 나열 되어야 합니다-즉, 가장 바깥쪽 차원 멤버는 먼저 내부 차원의 멤버 뒤에 있습니다. 별도 문자열로로 표시 되도록 각 차원 및 멤버 문자열 목록을 쉼표로 구분 해야 합니다.  
   
 > [!NOTE]
 >  셀 멤버 이름으로 검색 데이터 공급자에서 지원 될 수 있습니다. 자세한 내용은 공급자 설명서를 참조 하십시오.  

@@ -13,12 +13,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73bd92ad269d8b5593c1245b30d44a9bb5728708
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 251b1bbad7e6bc7ce077d30239078fdf24b5f73c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685411"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53216072"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>스파스 열이 있는 테이블에 대해 SQLColumns 호출
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47685411"
   
  /EHsc /D, "UNICODE" 및 odbc32.lib를 사용하여 컴파일합니다.  
   
- 두 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은 이 예제에서 만든 테이블을 삭제합니다.  
+ 두 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은이 예제에서 만든 테이블을 삭제 합니다.  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3134ff97059efa61ab2df82a9b7d3c7aa4ee769e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
-ms.translationtype: HT
+ms.openlocfilehash: bc158c0c5ba35da95fe3bf1af688e12a7b162045
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697017"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413090"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Analysis Services에 대 한 데이터베이스 일관성 검사기 (DBCC)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   DBCC는 Analysis Services 인스턴스에서 다차원 및 테이블 형식의 데이터베이스에 대한 주문형 데이터베이스 유효성 검사를 제공합니다. SSMS(SQL Server Management Studio)의 MDX 또는 XMLA 쿼리 창에서 DBCC를 실행하고 SSMS의 SQL Server Profiler 또는 xEvent 세션에서 DBCC 출력을 추적할 수 있습니다.  
-이 명령은 개체 정의를 가져왔다가 빈 결과 집합을 반환하거나 개체가 손상된 경우 자세한 오류 정보를 반환합니다.   이 문서에서는 명령을 실행하고, 결과를 해석하고 발생한 문제를 해결하는 방법에 대해 알아봅니다.  
+이 명령은 개체 정의를 가져왔다가 빈 결과 집합을 반환하거나 개체가 손상된 경우 자세한 오류 정보를 반환합니다.   이 문서에서는 명령을 실행, 결과 해석 하는 방법을 알아봅니다 하 고 발생 하는 문제를 해결 하겠습니다.  
   
  테이블 형식 데이터베이스의 경우 DBCC에 의해 수행되는 일관성 검사는 데이터베이스를 다시 로드하거나, 동기화하거나, 복원할 때마다 자동으로 발생하는 기본 제공 유효성 검사와 동일합니다.  반면에 다차원 데이터베이스에 대한 일관성 검사는 DBCC를 주문형으로 실행할 경우에만 수행됩니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "51697017"
  데이터베이스가 SQL Server 2016 인스턴스에서 실행되는 한 Analysis Services에 대한 DBCC는 호환성 수준과 Analysis Services 데이터베이스 형식에 상관없이 모든 경우에 실행됩니다. 단지 각 데이터베이스 형식에 올바른 명령 구문을 사용하고 있어야 합니다.  
   
 > [!NOTE]  
->  [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)에 대해 잘 알고 있는 경우 Analysis Services에서 DBCC가 훨씬 범위가 좁다는 것을 즉시 확인할 수 있습니다. Analysis Services에서 DBCC는 데이터베이스 또는 개별 개체 전체에서 데이터 손상 시 단독으로 보고하는 단일 명령입니다. 정보를 수집하는 것과 같이 다른 작업을 고려하고 있는 경우에는 AMO PowerShell 또는 XMLA 스크립트를 대신 사용해 보세요.
+>  익숙한 경우 [DBCC &#40;TRANSACT-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md), Analysis Services에서 DBCC가 훨씬 범위가 좁다는 것 신속 하 게 알 수 있습니다. Analysis Services에서 DBCC는 데이터베이스 또는 개별 개체 전체에서 데이터 손상 시 단독으로 보고하는 단일 명령입니다. 정보를 수집하는 것과 같이 다른 작업을 고려하고 있는 경우에는 AMO PowerShell 또는 XMLA 스크립트를 대신 사용해 보세요.
   
 ## <a name="permission-requirements"></a>사용 권한 요구 사항  
  명령을 실행하려면 Analysis Services 데이터베이스 또는 서버 관리자(서버 역할의 멤버)여야 합니다. 자세한 내용은 [데이터베이스 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md) 및 [Analysis Services 인스턴스에 서버 관리 권한 부여](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)를 참조하세요.  
@@ -72,7 +72,7 @@ ms.locfileid: "51697017"
   
 ```  
   
- 개체 체인에서 상위에 있는 개체에 대해 DBCC를 실행하려면 필요없는 하위 수준 개체 ID 요소를 모두 삭제합니다.  
+ 개체 체인 상위 개체에 대해 DBCC를 실행 하려면 필요 하지 않습니다 모든 하위 수준 개체 ID 요소를 삭제 합니다.  
   
 ```  
 <DBCC xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -200,7 +200,7 @@ Execution complete
   
      오류 메시지는 아래 표에 나열되어 있습니다.  
   
-## <a name="reference-consistency-checks-and-errors-for-multidimensional-databases"></a>참조: 다차원 데이터베이스에 대한 일관성 검사 및 오류  
+## <a name="reference-consistency-checks-and-errors-for-multidimensional-databases"></a>참조: 일관성 확인 및 다차원 데이터베이스에 대 한 오류  
  다차원 데이터베이스의 경우 파티션 인덱스만 유효성 검사 대상이 됩니다.  실행 중 DBCC는 파티션별로 임시 인덱스를 빌드하고 디스크의 지속형 인덱스와 비교합니다.  임시 인덱스를 빌드하려면 디스크에 있는 파티션 데이터에서 모든 데이터를 읽고, 비교를 위해 메모리에서 임시 인덱스를 유지해야 합니다. 추가 작업이 지정된 서버는 DBCC를 실행하는 동안 상당한 디스크 IO 및 메모리 사용을 경험할 수 있습니다.  
   
  다차원 인덱스 손상 검색 시 포함되는 검사 항목은 다음과 같습니다. 이 표에 표시되는 오류는 개체 수준에서 실패에 대한 xEvent 또는 Profiler 추적에서 나타납니다.  
@@ -212,7 +212,7 @@ Execution complete
 |파티션 인덱스|메타데이터의 유효성을 검사합니다.<br /><br /> 임시 인덱스에 있는 각 멤버가 디스크의 세그먼트에 대한 인덱스 헤더 파일에 있는지 확인합니다.|파티션 세그먼트가 손상되었습니다.|  
 |파티션 인덱스|세그먼트를 검색하여 물리적 손상을 찾습니다.<br /><br /> 임시 인덱스에 있는 각 멤버에 대해 디스크의 인덱스 파일을 읽고 인덱스 레코드 크기가 일치하는지, 동일한 데이터 페이지에 현재 멤버의 레코드가 있는 것으로 플래그가 지정되었는지 확인합니다.|파티션 세그먼트가 손상되었습니다.|  
   
-## <a name="reference-consistency-checks-and-errors-for-tabular-databases"></a>참조: 테이블 형식 데이터베이스에 대한 일관성 검사 및 오류  
+## <a name="reference-consistency-checks-and-errors-for-tabular-databases"></a>참조: 일관성 확인 및 테이블 형식 데이터베이스에 대 한 오류  
  다음 표는 검사에서 손상으로 나타날 경우 발생하는 오류와 함께 테이블 형식 개체에 수행하는 모든 일관성 검사 목록을 보여 줍니다. 이 표에 표시되는 오류는 개체 수준에서 실패에 대한 xEvent 또는 Profiler 추적에서 나타납니다.  
   
 ||||  

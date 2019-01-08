@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.ObjectExplorerScripting
@@ -13,12 +13,12 @@ ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5dcd423d58bbc344d11a7a3c35e27e7406f90664
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080678"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764405"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>옵션 (SQL Server에서 개체 한 탐색기-스크립팅 페이지)
   이 페이지를 사용하여 **개체 탐색기**의 개체 컨텍스트 메뉴에서 다음 명령에 적용되는 스크립팅 옵션을 설정할 수 있습니다.  
@@ -138,7 +138,7 @@ ms.locfileid: "48080678"
  **ScriptDriIncludeSystemNames**  
  선언적 참조 무결성을 적용하기 위해 시스템 생성 제약 조건 이름을 포함합니다. 기본값은 False입니다. 자세한 내용은 [REFERENTIAL_CONSTRAINTS &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-information-schema-views/referential-constraints-transact-sql)합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [스크립트 생성&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.profilerequests.f1
@@ -15,12 +14,12 @@ ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 712da8b3c08d5bb73913e0585b7d1f87f5ef7396
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1541bc888c40916bf6ca613390685df9f816012
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189181"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815385"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>데이터 프로파일링 태스크 편집기(프로필 요청 페이지)
   **데이터 프로파일링 태스크 편집기** 의 **프로필 요청 페이지** 를 사용하여 계산할 프로필을 선택하고 구성할 수 있습니다. 단일 데이터 프로파일링 태스크에서 여러 테이블 또는 뷰에 있는 여러 열이나 열 조합에 대해 여러 프로필을 계산할 수 있습니다.  
@@ -49,15 +48,15 @@ ms.locfileid: "48189181"
 ### <a name="requests-pane-columns"></a>요청 창 열  
  요청 창에 표시되는 열은 선택한 **뷰** 에 따라 다음과 같이 달라집니다.  
   
--   **모든 요청**을 보려고 선택하면 요청 창에 **프로필 유형** 및 **요청 ID**라는 2개의 열이 표시됩니다.  
+-   보기를 선택 하는 경우 **모든 요청**, 요청 창에 두 개의 열이 있습니다. **프로필 유형** 하 고 **요청 ID**합니다.  
   
--   5개의 열 프로필 중 하나를 보려고 선택하면 요청 창에 **프로필 유형**, **테이블 또는 뷰**, **열**및 **요청 ID**라는 4개의 열이 표시됩니다.  
+-   5개의 열 프로필 중 하나를 보려고 선택하면 요청 창에 **프로필 유형**, **테이블 또는 뷰**합니다 **열**, 및 **요청 ID**합니다.  
   
--   후보 키 프로필을 보려고 선택하면 요청 창에 **프로필 유형**, **테이블 또는 뷰**, **키 열**및 **요청 ID**라는 4개의 열이 표시됩니다.  
+-   후보 키 프로필을 보려고 선택하면 요청 창에 **프로필 유형**, **테이블 또는 뷰**합니다 **KeyColumns**, 및 **요청 ID**합니다.  
   
--   함수 종속성 프로필을 보려고 선택하면 요청 창에 **프로필 유형**, **테이블 또는 뷰**, **결정 열**, **종속 열**및 **요청 ID**라는 5개의 열이 포함됩니다.  
+-   함수 종속성 프로필을 보려고 선택하면 요청 창에 **프로필 유형**, **테이블 또는 뷰**를 **결정 열**를 **종속 열**, 및 **요청 ID**합니다.  
   
--   값 포함 프로필을 보려고 선택하면 요청 창에 요청 창에 **프로필 유형**, **하위 집합측 테이블 또는 뷰**, **상위 집합측 테이블 또는 뷰**, **하위 집합측 열**및 **상위 집합측 열**및 **요청 ID**라는 6개의 열이 포함됩니다.  
+-   값 포함 프로필을 보려고 선택하면 요청 창에 **프로필 유형**, **하위 집합 측 테이블 또는 뷰**를 **상위 집합된 측 테이블 또는 뷰**를 **하위 집합 측 열**, **상위집합된측열**, 및 **요청 ID**합니다.  
   
  다음 섹션에서는 이러한 각 열에 대해 설명합니다.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "48189181"
 |**열 길이 분포 프로필 요청**|열 길이 분포 프로필을 계산합니다.<br /><br /> 열 길이 분포 프로필은 선택한 열에 있는 문자열 값의 모든 고유 길이 및 각 길이가 나타내는 테이블 내 행의 비율을 보고합니다. 이 프로필을 사용하면 잘못된 값과 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 두 개의 문자로 구성된 미국 주 코드 열을 프로파일링하는 중 3자 이상의 값이 검색될 수 있습니다.|  
 |**열 Null 비율 프로필 요청**|열 Null 비율 프로필을 계산합니다.<br /><br /> 열 Null 비율 프로필은 선택한 열 내 Null 값의 비율을 보고합니다. 이 프로필을 사용하면 예기치 않게 높은 열 내 Null 값의 비율과 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 우편 번호 열을 프로파일링하여 허용 불가능한 수준의 누락된 코드 비율을 검색할 수 있습니다.|  
 |**열 패턴 프로필 요청**|열 패턴 프로필을 계산합니다.<br /><br /> 열 패턴 프로필은 문자열 열에서 지정된 값의 비율을 포괄하는 정규식 집합을 보고합니다. 이 프로필을 사용하면 잘못된 문자열과 같은 데이터 문제를 식별할 수 있습니다. 또한 이 프로필은 앞으로 새 값의 유효성 검사에 사용할 수 있는 정규식을 제안해 줍니다. 예를 들어 우편 번호 열의 패턴 프로필은 \d{5}-\d{4}, \d{5} 및 \d{9} 정규식을 생성할 수 있습니다. 다른 정규식이 발견된다면 데이터에 유효하지 않거나 잘못된 형식의 값이 포함되어 있을 가능성이 높습니다.|  
-|**열 통계 프로필 요청**|선택한 테이블 또는 뷰에서 적용 가능한 모든 열의 기본 설정을 사용하여 열 통계 프로필을 계산하려면 이 옵션을 선택합니다.<br /><br /> 열 통계 프로필은 최소값, 최대값, 평균 및 숫자 열에 최소 표준 편차, 최대값과 같은 통계를 보고 `datetime` 열입니다. 이 프로필을 사용하면 잘못된 날짜와 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 기록 날짜 열을 프로파일링하여 미래의 최대 날짜를 검색할 수 있습니다.|  
+|**열 통계 프로필 요청**|선택한 테이블 또는 뷰에서 적용 가능한 모든 열의 기본 설정을 사용하여 열 통계 프로필을 계산하려면 이 옵션을 선택합니다.<br /><br /> 열 통계 프로필은 숫자 열에 대한 최소값, 최대값, 평균값, 표준 편차 및 `datetime` 열에 대한 최소값/최대값과 같은 통계를 보고합니다. 이 프로필을 사용하면 잘못된 날짜와 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 기록 날짜 열을 프로파일링하여 미래의 최대 날짜를 검색할 수 있습니다.|  
 |**열 값 분포 프로필 요청**|열 값 분포 프로필을 계산합니다.<br /><br /> 열 값 분포 프로필은 선택한 열에 있는 모든 고유 값 및 각 값이 나타내는 테이블 내 행의 비율을 보고합니다. 또한 이 프로필은 테이블에서 지정된 비율을 초과하는 값을 보고할 수 있습니다. 이 프로필을 사용하면 열에 포함된 잘못된 고유 값 수와 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 미국의 주가 포함된 열을 프로파일링하는 중 50개를 초과하는 고유 값이 검색될 수 있습니다.|  
 |**함수 종속성 프로필 요청**|함수 종속성 프로필을 계산합니다.<br /><br /> 함수 종속성 프로필은 한 열(종속 열)의 값이 다른 열 또는 열 집합(결정 열)의 값에 종속되는 범위를 보고합니다. 또한 이 프로필을 사용하면 잘못된 값과 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 미국 우편 번호 열과 미국 주 열 간 종속성을 프로파일링하는 중 우편 번호가 같으면 주도 동일해야 하므로 프로필에서 이러한 종속성 위반을 검색할 수 있습니다.|  
 |**값 포함 프로필 요청**|값 포함 프로필을 계산합니다.<br /><br /> 값 포함 프로필은 두 개의 열 또는 열 집합 간에 겹치는 값을 계산합니다. 이 프로필은 열 또는 열 집합이 선택한 테이블 간의 외래 키 역할을 수행하기에 적합한지 여부도 확인합니다. 또한 이 프로필을 사용하면 잘못된 값과 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 Sales 테이블의 ProductID 열을 프로파일링하여 Products 테이블의 ProductID 열에 없는 값이 포함된 열을 검색할 수 있습니다.|  
@@ -131,24 +130,24 @@ ms.locfileid: "48189181"
   
  이러한 옵션은 선택한 프로필에 따라 달라집니다. 개별 프로필 유형 옵션에 대한 자세한 내용은 다음 항목을 참조하세요.  
   
--   [후보 키 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [후보 키 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [열 Null 비율 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [열 Null 비율 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [열 통계 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [열 통계 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [열 값 분포 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [열 값 분포 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [열 길이 분포 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [열 길이 분포 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [열 패턴 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [열 패턴 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [함수 종속성 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [함수 종속성 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [값 포함 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [값 포함 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 프로 파일링 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)   
+## <a name="see-also"></a>관련 항목:  
+ [데이터 프로파일링 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)   
  [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

@@ -12,12 +12,12 @@ ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e85b784b2c8d5a123e5cf16bc014f27c68a390a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9b4e7650f6b36ddbfb8c06ebe6c9f776cfee5ea0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159873"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410040"
 ---
 # <a name="parameter-and-result-metadata"></a>매개 변수 및 결과 메타데이터
   이 항목에서는 날짜 및 시간 데이터 형식에 대해 IPD(구현 매개 변수 설명자) 및 IRD(구현 행 설명자) 필드에서 반환되는 내용에 대해 설명합니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "48159873"
 ## <a name="information-returned-in-ipd-fields"></a>IPD 필드에서 반환되는 정보  
  다음은 IPD 필드에서 반환되는 정보입니다.  
   
-|매개 변수 유형|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
+|매개 변수 유형|date|Time|Smalldatetime|Datetime|Datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CONCISE_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
@@ -71,7 +71,7 @@ ms.locfileid: "48159873"
 ## <a name="information-returned-in-ird-fields"></a>IRD 필드에서 반환되는 정보  
  다음은 IRD 필드에서 반환되는 정보입니다.  
   
-|열 유형|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
+|열 유형|date|Time|Smalldatetime|Datetime|Datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
@@ -81,8 +81,8 @@ ms.locfileid: "48159873"
 |SQL_DESC_DISPLAY_SIZE|10|8,10..16|16|23|19, 21..27|26, 28..34|  
 |SQL_DESC_FIXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_LENGTH|10|8,10..16|16|2|19, 21..27|26, 28..34|  
-|SQL_DESC_LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
-|SQL_DESC_LITERAL_SUFFIX|‘|‘|‘|‘|‘|‘|  
+|SQL_DESC_LITERAL_PREFIX|'|'|'|'|'|'|  
+|SQL_DESC_LITERAL_SUFFIX|'|'|'|'|'|'|  
 |SQL_DESC_LOCAL_TYPE_NAME|`date`|`time`|`smalldatetime`|`datetime`|`datetime2`|datetimeoffset|  
 |SQL_DESC_OCTET_LENGTH|6|12|4|8|16|20|  
 |SQL_DESC_PRECISION|0|0..7|0|3|0..7|0..7|  

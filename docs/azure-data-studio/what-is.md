@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio 란? | Microsoft Docs
-description: Azure Data Studio는 SQL Server, Azure SQL Database 및 Azure SQL Data Warehouse; 관리에 대 한 Windows, macOS 및 Linux에서 실행 되는 무료, 간단한 도구 실행 중인 위치 합니다.
-ms.custom: tools|sos
+title: 개요
+titleSuffix: Azure Data Studio
+description: Azure 데이터 Studio는 SQL Server, Azure SQL Database 및 Azure SQL Data Warehouse 관리에 대 한 Windows, macOS 및 Linux에서 실행 하는 무료, 경량 도구입니다.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: overview
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e30906efb126b0c7fba225ff2aeb3308f0bf050c
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: ca279b9bbc945cbd9aad5be0bce3165820598fe1
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099785"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030777"
 ---
-# <a name="what-is-includename-sosincludesname-sosmd"></a>이란 [!INCLUDE[name-sos](../includes/name-sos.md)]?
+# <a name="what-is-azure-data-studio"></a>Azure Data Studio 란?
 
 Azure 데이터 스튜디오는 플랫폼 간 도구를 온-프레미스 Microsoft 제품군을 사용 하 여 데이터 전문가 위한 데이터베이스 및 클라우드 데이터 플랫폼에서 Windows, MacOS 및 Linux입니다.
 

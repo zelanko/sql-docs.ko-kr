@@ -14,18 +14,18 @@ ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0e936b6b68a67c1616a00d38f6d84776d44ef327
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
-ms.translationtype: HT
+ms.openlocfilehash: 45e0f3be43ce8e2780268b7dfde83253b71da946
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559440"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539701"
 ---
 # <a name="rds-scenario"></a>RDS 시나리오
 > [!IMPORTANT]
 >  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
- 주소록 응용 프로그램은 간단한 데이터 인식 웹 응용 프로그램을 빌드하려면 원격 데이터 서비스 (RDS)을 사용 하는 방법을 보여 주는 시나리오-online 회사 주소록. 이 시나리오는 Microsoft Visual Basic Scripting Edition (VBScript)에 대 한 유용 하 고 하려는 COM 프로그래머가 데이터 인식 ActiveX 컨트롤을 사용 하 여 RDS를 사용 하는 방법에 알아봅니다 하려는 개발자를 경험이 많은 소프트웨어에 대 한 데이터 중심 웹 응용 프로그램을 구축 합니다.  
+ 주소록 응용 프로그램에는 간단 하 고 데이터 인식 웹 응용 프로그램을 빌드하려면-online 회사 주소록 원격 데이터 서비스 (RDS)을 사용 하는 방법을 보여 주는 시나리오입니다. 이 시나리오는 Microsoft Visual Basic Scripting Edition (VBScript)에 대 한 유용 하 고 하려는 COM 프로그래머가 데이터 인식 ActiveX 컨트롤을 사용 하 여 RDS를 사용 하는 방법에 알아봅니다 하려는 개발자를 경험이 많은 소프트웨어에 대 한 데이터 중심 웹 응용 프로그램을 구축 합니다.  
   
  이 시나리오에서는 ActiveX 컨트롤을 사용 하 여 기본 HTML 레이아웃 태그, 사용 하 여 DHTML 데이터 바인딩 기술 및 프로그램을 사용 하는 방법을 알고 있다고 가정 합니다.  
   

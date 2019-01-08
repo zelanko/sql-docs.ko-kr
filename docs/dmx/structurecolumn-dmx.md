@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e1bf58c9477cc06855d332ec3bd69b50a6bf19dc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b6f552f009a93caab2437a5ae6a1533833d6054b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992413"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412820"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -94,28 +94,28 @@ ProductName
 WITH FILTER(EXISTS (Products))  
 ```  
   
-### <a name="sample-query-1-returning-a-column-from-the-mining-structure"></a>마이닝 구조에서 한 열을 반환 하는 예제 쿼리 1:  
+### <a name="sample-query-1-returning-a-column-from-the-mining-structure"></a>예제 쿼리 1: 마이닝 구조에서 열 반환  
  다음 예제 쿼리에서는 마이닝 모델의 일부로 정의되는 `CustomerName` 및 `Age` 열을 반환합니다. 그러나 이 쿼리에서는 구조에만 포함되어 있고 마이닝 모델에는 포함되어 있지 않은 `Age` 열도 반환합니다.  
   
 ```  
-SELECT CustomerName, Age, StructureColumn(‘Occupation’) FROM MyModel.CASES   
+SELECT CustomerName, Age, StructureColumn('Occupation') FROM MyModel.CASES   
 WHERE Age > 30  
 ```  
   
  31세 이상의 고객으로 사례를 제한하는 행 필터링은 모델 수준에서 발생하기 때문에 이 식은 구조 데이터에는 포함되지만 마이닝 모델에서는 사용되지 않는 사례를 반환하지 않을 수 있습니다. 모델을 만드는 데 사용된 필터 조건(`EXISTS (Products)`)이 제품을 구매한 고객으로 사례를 제한하기 때문에 구조에는 이 쿼리에서 반환하지 않는 사례가 있을 수 있습니다.  
   
-### <a name="sample-query-2-applying-a-filter-to-the-structure-column"></a>구조 열에 필터를 적용 하는 예제 쿼리 2:  
+### <a name="sample-query-2-applying-a-filter-to-the-structure-column"></a>예제 쿼리 2: 구조 열에 필터 적용  
  다음 예제 쿼리에서는 `CustomerName` 및 `Age` 열과 `Products`중첩 테이블을 반환할 뿐만 아니라 모델에 포함되어 있지 않은 중첩 테이블의 `Quantity` 열 값도 반환합니다.  
   
 ```  
 SELECT CustomerName, Age,  
-(SELECT ProductName, StructureColumn(‘Quantity’) FROM Products) FROM MA.CASES   
-WHERE StructureColumn(‘Occupation’) = ‘Architect’  
+(SELECT ProductName, StructureColumn('Quantity') FROM Products) FROM MA.CASES   
+WHERE StructureColumn('Occupation') = 'Architect'  
 ```  
   
- 이 예제는 건축가 '' 고객에 게 사례를 제한 하는 구조 열에 필터 적용 됩니다 (`WHERE StructureColumn(‘Occupation’) = ‘Architect’`). 모델을 만들면 모델 필터 조건이 사례에 항상 적용되기 때문에 `Products` 테이블에 한정하는 행이 적어도 하나 이상 있는 사례만 모델 사례에 포함됩니다. 따라서 `Products` 중첩 테이블의 필터와 `(‘Occupation’)` 사례의 필터가 둘 다 적용됩니다.  
+ 이 예에서는 직업이 '건축가'인 고객으로 사례를 제한하는 필터(`WHERE StructureColumn('Occupation') = 'Architect'`)가 구조 열에 적용됩니다. 모델을 만들면 모델 필터 조건이 사례에 항상 적용되기 때문에 `Products` 테이블에 한정하는 행이 적어도 하나 이상 있는 사례만 모델 사례에 포함됩니다. 따라서 `Products` 중첩 테이블의 필터와 `('Occupation')` 사례의 필터가 둘 다 적용됩니다.  
   
-### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>예제 쿼리 3: 중첩된 테이블에서 열 선택  
+### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>예제 쿼리 3: 중첩 테이블의 열 선택  
  다음 예제 쿼리에서는 모델의 학습 사례로 사용된 고객의 이름을 반환할 뿐만 아니라 각 고객의 구매 정보가 포함된 중첩 테이블도 반환합니다. 모델에 포함 되어 있지만 합니다 `ProductName` 열을 모델의 값을 사용 하지 않습니다는 `ProductName` 열입니다. 일반 제품을 구입한 경우 모델만 확인 (`NOT``OnSale`) 가격입니다. 이 쿼리에서는 제품 이름을 반환할 뿐만 아니라 모델에 포함되어 있지 않은 구매 수량도 반환합니다.  
   
 ```  
@@ -126,7 +126,7 @@ FROM MyModel.CASES
   
  마이닝 모델에 드릴스루가 사용되도록 설정되지 않은 경우 `ProductName` 또는 `Quantity` 열을 반환할 수 없습니다.  
   
-### <a name="sample-query-4-filtering-on-and-returning-nested-table-columns"></a>예제 쿼리 4: 필터링 및 중첩된 테이블 열을 반환 합니다.  
+### <a name="sample-query-4-filtering-on-and-returning-nested-table-columns"></a>예제 쿼리 4: 중첩 테이블 열 필터링 및 반환  
  다음 예제 쿼리에서는 마이닝 구조에만 포함되어 있고 마이닝 모델에는 포함되어 있지 않은 사례와 중첩 테이블 열을 반환합니다. 모델에서 `OnSale` 제품이 있는지 여부를 기준으로 필터링이 이미 수행되었지만 이 쿼리는 `Quantity` 마이닝 구조 열에 필터를 추가합니다.  
   
 ```  

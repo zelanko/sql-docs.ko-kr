@@ -20,16 +20,16 @@ ms.assetid: 61e00a8a-9b3b-45b9-b397-7fe818822416
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc2ab4b2e97b9e1a83e0b00404010195b08f0dc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ab7046e036a6f50f8009a481f92345d7ce12aea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654931"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502553"
 ---
 # <a name="sqlrowcount-function"></a>SQLRowCount 함수(SQLRowCount Function)
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLRowCount** 영향을 받는 행 수를 반환 합니다는 **업데이트**합니다 **삽입**, 또는 **삭제** 문;는 SQL_ADD SQL_UPDATE_BY_BOOKMARK, 또는 SQL_ DELETE_BY_BOOKMARK 작업 **SQLBulkOperations**; 또는에서 SQL_UPDATE 또는 SQL_DELETE 연산 **SQLSetPos**합니다.  
@@ -84,6 +84,6 @@ SQLRETURN SQLRowCount(
 |SQL 문을 실행합니다.|[SQLExecDirect 함수](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
 |준비 된 SQL 문을 실행합니다.|[SQLExecute 함수](../../../odbc/reference/syntax/sqlexecute-function.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

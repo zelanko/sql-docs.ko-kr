@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.breakpt.location.file
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint location
 ms.assetid: 5c28e411-0377-4210-a7ce-2a5c13dcdf74
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ffa9cad3ef994f3306a485d5a911f2e03eff0f2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 36833c6eb5fc588edb2d12716ba439140b8a1cbe
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211443"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53327334"
 ---
 # <a name="edit-a-breakpoint-location"></a>중단점 위치 편집
   중단점 위치는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일에서 중단점이 나오는 줄과 문자를 지정합니다. 중단점 위치를 편집하여 중단점을 스크립트의 다른 위치나 다른 스크립트로 이동할 수 있습니다.  
@@ -45,5 +43,3 @@ ms.locfileid: "48211443"
  [중단점 동작 지정](specify-a-breakpoint-action.md)   
  [중단점 조건 지정](specify-a-breakpoint-condition.md)   
  [중단점 필터 지정](specify-a-breakpoint-filter.md)  
-  
-  

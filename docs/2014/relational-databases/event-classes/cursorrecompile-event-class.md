@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: ab351c50-eed4-493a-87ed-89ec10933477
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cd76a8be5622ede61d40802b9b6f3e586d3d7822
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: dbf1d34d801696861a1766d1fdca432037c94b11
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168803"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761315"
 ---
 # <a name="cursorrecompile-event-class"></a>CursorRecompile 이벤트 클래스
   **CursorRecompile** 이벤트 클래스는 API(응용 프로그래밍 인터페이스) 커서에서 발생하는 커서 다시 컴파일 이벤트를 나타냅니다. CursorRecompile 이벤트는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 스키마 변경으로 인해 Transact-SQL 커서를 다시 컴파일할 때 발생합니다.  

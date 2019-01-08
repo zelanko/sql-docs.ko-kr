@@ -22,12 +22,12 @@ ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 269cc4c9c8459154fd422ed7896304cc3da27db3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91cba3e301a98c905b157959094a7075b0e3357d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164523"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512770"
 ---
 # <a name="dimension-relationships"></a>차원 관계
   차원 용도는 큐브 차원과 큐브에 있는 측정값 그룹 간의 관계를 정의합니다. 큐브 차원은 특정 큐브에 사용되는 데이터베이스 차원의 인스턴스입니다. 큐브에는 측정값 그룹에 직접 관련되어 있지 않지만 다른 차원 또는 측정값 그룹을 통해 측정값 그룹에 간접적으로 관련될 수 있는 큐브 차원이 있을 수 있습니다. 큐브에 데이터베이스 차원이 나 측정값 그룹을 추가 하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 검토 하 고 큐브의 데이터 원본 뷰에서 팩트 테이블과 차원 테이블 간의 관계를 검사 하 여 차원 용도 결정 하려고 합니다. 차원 특성 간의 관계입니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 감지할 수 있는 관계에 대해 차원 용도 설정을 자동으로 지정합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48164523"
  차원과 측정값 그룹 간 관계는 관계에 참여하는 차원 및 팩트 테이블과 특정 측정값 그룹에서 차원 세분성을 지정하는 세분성 특성으로 구성됩니다.  
   
 ## <a name="regular-dimension-relationships"></a>일반 차원 관계  
- 큐브 차원과 측정값 그룹 간 일반 차원 관계는 차원의 키 열이 팩트 테이블에 직접 조인되어 있을 때 존재하게 됩니다. 이러한 직접적인 관계는 기본 관계형 데이터베이스의 기본 키 - 외래 키 관계를 기반으로 하지만 데이터 원본 뷰에 정의된 논리적 관계를 기반으로 할 수도 있습니다. 일반 차원 관계는 전형적인 별모양 스키마 디자인에서 차원 테이블과 팩트 테이블 간 관계를 나타냅니다. 일반 관계에 대 한 자세한 내용은 참조 하세요. [일반 관계 및 일반 관계 속성 정의](../multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)합니다.  
+ 큐브 차원과 측정값 그룹 간 일반 차원 관계는 차원의 키 열이 팩트 테이블에 직접 조인되어 있을 때 존재하게 됩니다. 이러한 직접적인 관계는 기본 관계형 데이터베이스의 기본 키-외래 키 관계를 기반으로 하지만 데이터 원본 뷰에 정의 된 논리적 관계를 기반으로 수도 있습니다. 일반 차원 관계는 전형적인 별모양 스키마 디자인에서 차원 테이블과 팩트 테이블 간 관계를 나타냅니다. 일반 관계에 대 한 자세한 내용은 참조 하세요. [일반 관계 및 일반 관계 속성 정의](../multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)합니다.  
   
 ## <a name="reference-dimension-relationships"></a>참조 차원 관계  
  큐브 차원과 측정값 그룹 간 참조 차원 관계는 다음 그림에 표시된 것처럼 차원의 키 열이 다른 차원 테이블의 키를 통해 팩트 테이블에 간접적으로 조인될 때 존재하게 됩니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "48164523"
   
  ![열 테이블은 차원을 지원함 사실](../../../2014/analysis-services/dev-guide/media/as-factdim.gif "열 테이블은 차원을 지원함 사실")  
   
- 테이블에는 대리점에서 발주하는 주문 행뿐만 아니라 주문 자체에 대한 특성 정보도 포함됩니다. 이전 다이어그램에서 원이 표시 된 특성의 정보를 확인 합니다 **FactResellerSales** 차원에서 특성으로 사용할 수 있는 테이블입니다. 이 경우 대리점에서 발주하는 구매 주문 번호와 운송업체 추적 번호의 두 가지 정보가 CustomerPONumber 및 CarrierTrackingNumber 특성 열로 표시됩니다. 이 정보는 사용자가 한 추적 번호로 발송되는 모든 주문에 대한 집계된 정보(예: 총 제품 원가)를 보려는 경우와 같은 때에 유용합니다. 그러나 차원 없이는 이러한 두 가지 특성에 대한 차원 데이터를 구성하고 집계할 수 없습니다.  
+ 테이블에는 대리점에서 발주하는 주문 행뿐만 아니라 주문 자체에 대한 특성 정보도 포함됩니다. 이전 다이어그램에서 원이 표시 된 특성의 정보를 확인 합니다 **FactResellerSales** 차원에서 특성으로 사용할 수 있는 테이블입니다. 이 경우 대리점에서 발주하는 구매 주문 번호와 운송업체 추적 번호의 두 가지 정보가 CustomerPONumber 및 CarrierTrackingNumber 특성 열로 표시됩니다. 이 정보는 흥미로운-예를 들어 사용자가 반드시 이라면 비용, 단일 추적 번호로 발송 되는 모든 주문에 대 한 총 제품 등의 집계 된 정보를 표시 합니다. 그러나 차원 없이는 이러한 두 가지 특성에 대한 차원 데이터를 구성하고 집계할 수 없습니다.  
   
  이론상으로는 FactResellerSales 테이블과 동일한 키 정보를 사용하는 차원 테이블을 만들어 CarrierTrackingNumber와 CustomerPONumber라는 두 가지 다른 특성 열을 이 차원 테이블로 이동할 수 있습니다. 그러나 이렇게 하면 단 두 가지 특성을 별개의 차원으로 표시하기 위해 데이터의 중요 부분이 중복되고 데이터 웨어하우스가 불필요하게 더 복잡해집니다.  
   
@@ -86,6 +86,6 @@ ms.locfileid: "48164523"
  다 대 다 관계에 대 한 자세한 내용은 참조 하세요. [정의 다 대 다 관계 및 다 대 다 관계 속성](../multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [차원 &#40;Analysis Services-다차원 데이터&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [차원&#40;Analysis Services - 다차원 데이터&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

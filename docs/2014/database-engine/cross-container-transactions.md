@@ -10,12 +10,12 @@ ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17461cb9fcde8e37118a275512b332085beb5313
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40420db76ee8ce5b1fcf1d085a78d7b17690105d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112123"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538590"
 ---
 # <a name="cross-container-transactions"></a>크로스 컨테이너 트랜잭션
   크로스 컨테이너 트랜잭션은 메모리 최적화 테이블에서 고유하게 컴파일된 저장 프로시저 또는 작업에 대한 호출을 포함하는 암시적이거나 명시적인 사용자 트랜잭션입니다.  
@@ -37,13 +37,13 @@ set transaction isolation level serializable
 go  
   
 begin transaction  
- ……  
+ ......  
   set transaction isolation level repeatable read  
   
   insert t3 select * from t1 join t2 on t1.id=t2.id  
   
   set transaction isolation level serializable  
- ……  
+ ......  
 commit  
 ```  
   
@@ -54,11 +54,11 @@ set transaction isolation level read committed
 go  
   
 begin transaction  
- ……  
+ ......  
   
   insert t3 select * from t1 (serializable) join t2 (snapshot) on t1.id=t2.id  
   
-  ……  
+  ......  
 commit  
 ```  
   
@@ -80,7 +80,7 @@ commit
  읽기 집합에 대한 트랜잭션 일관성은 행 버전 읽기가 트랜잭션의 정확히 동일한 집합의 업데이트를 포함하도록 보장되는지 여부를 나타냅니다.  
   
  안정성은 시스템이 데이터 읽기에 대해 트랜잭션 T에 제공하는 것을 보장합니다.  
- 안정성은 트랜잭션의 읽기가 반복 가능한지 여부를 나타냅니다. 즉, 읽기가 반복될 때 동일한 행 및 행 버전이 반환되는지 여부를 나타냅니다.  
+ 안정성은 트랜잭션의 읽기가 반복 가능한 여부를 나타냅니다. 즉, 읽기가 반복될 때 동일한 행 및 행 버전이 반환되는지 여부를 나타냅니다.  
   
  특정 보증은 트랜잭션의 논리적 종료 시간을 나타냅니다. 일반적으로 논리적 종료 시간은 트랜잭션이 데이터베이스에 커밋되는 시간입니다. 메모리 최적화 테이블이 트랜잭션에 의해 액세스되는 경우 논리적 종료 시간은 기술적으로 유효성 검사 단계의 시작 시간입니다. (자세한 내용은의 트랜잭션 수명 설명을 참조 하세요 [Transactions in Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)합니다.  
   
@@ -185,7 +185,7 @@ commit
   
  명시적 또는 암시적 크로스 컨테이너 읽기 전용 트랜잭션은 REPEATABLE READ 또는 SERIALIZABLE 격리 상태에서 트랜잭션이 메모리 최적화 테이블에 액세스하는 경우 커밋할 때 유효성 검사를 수행합니다. 충돌 검색, 유효성 검사 섹션을 참조 하는 유효성 검사에 대 한 세부 정보 및 커밋 종속성 확인에 대 한 [Transactions in Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [메모리 최적화 테이블의 트랜잭션 이해](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
  [메모리 최적화 테이블을 사용 하 여 트랜잭션 격리 수준에 대 한 지침](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)   
  [메모리 액세스에 최적화된 테이블의 트랜잭션에 대한 재시도 논리 지침](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  

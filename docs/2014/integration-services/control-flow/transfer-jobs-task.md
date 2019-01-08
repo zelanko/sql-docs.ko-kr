@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferjobstask.f1
@@ -15,12 +14,12 @@ ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9926ce7d8ef85533ec7e67f0cd2800d74ee253e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2d4c308245312fa4fa80c1f320e874f89a3dec7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194653"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790975"
 ---
 # <a name="transfer-jobs-task"></a>작업 전송 태스크
   작업 전송 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 사이에서 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에이전트 작업을 전송합니다.  
@@ -44,7 +43,7 @@ ms.locfileid: "48194653"
  작업 전송 태스크는 전송된 작업 수를 보고하는 정보 이벤트와 작업을 덮어씀을 알리는 경고 이벤트를 생성합니다. 태스크는 작업 전송의 진행률을 보고하지 않으며 0% 및 100%(완료)만 보고합니다.  
   
 ## <a name="execution-value"></a>실행 값  
- 태스크의 `ExecutionValue` 속성에 정의된 실행 값은 전송된 작업 수를 반환합니다. 사용자 정의 변수를 할당 하 여는 `ExecValueVariable` 작업 전송에 대 한 정보를 작업 전송 태스크의 속성 수 다른 개체에 사용할 수 있는 패키지에 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../use-variables-in-packages.md)을 참조하세요.  
+ 태스크의 `ExecutionValue` 속성에 정의된 실행 값은 전송된 작업 수를 반환합니다. 사용자 정의 변수를 작업 전송 태스크의 `ExecValueVariable` 속성에 할당하여 작업 전송에 대한 정보를 패키지에 있는 다른 개체에서 사용할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../use-variables-in-packages.md)을 참조하세요.  
   
 ## <a name="log-entries"></a>로그 항목  
  작업 전송 태스크는 다음과 같은 사용자 지정 로그 항목을 포함합니다.  
@@ -63,9 +62,9 @@ ms.locfileid: "48194653"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [작업 전송 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [작업 전송 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [작업 전송 태스크 편집기 &#40;페이지 작업&#41;](../transfer-jobs-task-editor-jobs-page.md)  
+-   [작업 전송 태스크 편집기&#40;작업 페이지&#41;](../transfer-jobs-task-editor-jobs-page.md)  
   
 -   [식 페이지](../expressions/expressions-page.md)  
   

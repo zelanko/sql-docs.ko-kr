@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c32140e639a0e79b8736036392104f593a305b30
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: a3647ff06d00aebc4b5feb735d5a69b0b8db79e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014440"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524579"
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>구조에 마이닝 모델 추가(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34014440"
  데이터 마이닝 마법사를 사용하여 새 마이닝 모델을 만드는 경우 항상 기본적으로 먼저 마이닝 구조를 만들어야 합니다. 그러면 마법사에서 구조에 초기 모델을 추가할 수 있는 옵션을 제공합니다. 하지만 모델은 바로 만들 필요가 없습니다. 구조만 만들 경우 예측 가능한 특성으로 사용할 열이나 특정 모델에서 데이터를 사용하는 방법을 결정할 필요가 없습니다. 대신 나중에 사용할 일반 데이터 구조만 설정하고 나중에 [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md) 에서 해당 구조를 기반으로 하는 새 마이닝 모델을 추가할 수 있습니다.  
   
 > [!NOTE]  
->  DMX에서 CREATE MINING MODEL 문은 마이닝 모델에서 시작됩니다. 즉, 사용자가 선택한 마이닝 모델을 정의하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 자동으로 기본 구조를 생성합니다. ALTER STRUCTURE...를 사용하여 나중에 해당 구조에 새 마이닝 모델을 계속 추가할 수 있습니다. ADD MODEL 문입니다.  
+>  DMX에서 CREATE MINING MODEL 문은 마이닝 모델에서 시작됩니다. 즉, 사용자가 선택한 마이닝 모델을 정의하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 자동으로 기본 구조를 생성합니다. 나중에 ALTER STRUCTURE를 사용 하 여 해당 구조에 새 마이닝 모델을 추가 할 수 있습니다... ADD MODEL 문입니다.  
   
 ## <a name="choosing-an-algorithm"></a>알고리즘 선택  
  기존 구조에 새 마이닝 모델을 추가하려면 먼저 해당 모델에서 사용할 데이터 마이닝 알고리즘을 선택해야 합니다. 각 알고리즘에서 서로 다른 유형의 분석을 수행하고 요구 사항이 서로 다르기 때문에 알고리즘의 선택이 중요합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "34014440"
 ## <a name="specifying-column-content"></a>열 내용 지정  
  *열 내용*을 지정해야 하는 열도 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝에서는 각 데이터 열의 내용 유형 속성을 통해 알고리즘이 해당 열의 데이터를 처리하는 방식을 알 수 있습니다. 예를 들어 데이터에 Income 열이 있는 경우 내용 유형을 Continuous로 설정하여 열이 연속 숫자를 포함하도록 지정해야 합니다. 그러나 내용 유형을 Discretized로 설정하고 선택적으로 정확한 버킷 수를 지정하여 Income 열의 숫자를 버킷으로 그룹화하도록 지정할 수도 있습니다. 고객을 세 개의 연령 그룹으로 버킷팅하는 모델과 고객을 10개의 연령 그룹으로 버킷팅하는 또 다른 모델을 만들려는 경우와 같이 열을 다르게 처리하는 다른 모델을 만들 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마이닝 구조 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [관계형 마이닝 구조 만들기](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
  [마이닝 모델 속성](../../analysis-services/data-mining/mining-model-properties.md)   

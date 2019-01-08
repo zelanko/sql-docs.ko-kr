@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG014150 error
@@ -13,12 +12,12 @@ ms.assetid: c3dd3109-abf3-4b38-a4e9-ef48d0235656
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 032651d75eb4210005765f82adbb4d504ee2a316
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 15f4c7759404c0c904f17819f0a8eb750588777e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136823"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758915"
 ---
 # <a name="mssqleng014150"></a>MSSQL_ENG014150
     
@@ -51,7 +50,7 @@ ms.locfileid: "48136823"
 ## <a name="user-action"></a>사용자 동작  
  다른 에이전트가 요청 시 또는 예약 시에 실행되는 반면 로그 판독기 에이전트, 큐 판독기 에이전트 및 배포 에이전트는 일반적으로 계속 실행됩니다. 에이전트의 실행을 완료하지 않도록 하려면 에이전트의 상태를 확인하십시오. 자세한 내용은 [Monitor Replication Agents](agents/replication-agents.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 에이전트 관리](agents/replication-agent-administration.md)   
  [오류 및 이벤트 참조&#40;복제&#41;](errors-and-events-reference-replication.md)   
  [복제 배포 에이전트](agents/replication-distribution-agent.md)   

@@ -8,7 +8,6 @@ ms.technology:
 - database-engine
 ms.topic: conceptual
 f1_keywords:
-- vs.wildcards
 - vswildcardsbuilder
 helpviewer_keywords:
 - searches [SQL Server Management Studio], wildcards
@@ -18,12 +17,12 @@ ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f3419d8fb17d11e340eff50331908641929a78d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f86985f75446399803e4cac6ed7d883d1c7e1921
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114963"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328263"
 ---
 # <a name="search-text-with-wildcards"></a>와일드카드로 텍스트 검색
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **찾기 및 바꾸기** 대화 상자의 **찾을 내용** 필드에서 다음 식은 문자나 숫자를 대체할 수 있습니다.  
@@ -47,5 +46,3 @@ ms.locfileid: "48114963"
 ## <a name="see-also"></a>관련 항목  
  [찾기 및 바꾸기](search-and-replace.md)   
  [정규식을 사용한 텍스트 검색](search-text-with-regular-expressions.md)  
-  
-  

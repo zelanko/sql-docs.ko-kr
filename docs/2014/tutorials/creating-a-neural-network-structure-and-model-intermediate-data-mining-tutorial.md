@@ -17,12 +17,12 @@ ms.assetid: 3f16215c-531e-4ecf-a11f-ee7c6a764463
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fa474cfd298b5d482f8b1804159f085fca5f8c6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 144f2f754dc93be29f6be8fc786afa354a96c911
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195563"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395806"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>신경망 구조 및 모델 만들기(중급 데이터 마이닝 자습서)
   데이터 마이닝 모델을 만들려면 먼저 데이터 마이닝 마법사를 사용하여 새 데이터 원본 뷰를 기반으로 새 마이닝 구조를 만들어야 합니다. 이 태스크에서는 마법사를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] 신경망 알고리즘 기반의 마이닝 구조를 만들고 이와 동시에 관련 마이닝 모델을 만듭니다.  
@@ -73,26 +73,26 @@ ms.locfileid: "48195563"
   
     |테이블/열|키/입력/예측|  
     |---------------------|-------------------------|  
-    |AutomaticResponses|Input|  
+    |AutomaticResponses|입력|  
     |AverageTimePerIssue|입력/예측|  
-    |Calls|Input|  
+    |Calls|입력|  
     |DateKey|사용 안 함|  
-    |DayOfWeek|Input|  
+    |DayOfWeek|입력|  
     |FactCallCenterID|Key|  
-    |IssuesRaised|Input|  
+    |IssuesRaised|입력|  
     |LevelOneOperators|입력/예측|  
-    |LevelTwoOperators|Input|  
+    |LevelTwoOperators|입력|  
     |Orders|입력/예측|  
     |ServiceGrade|입력/예측|  
-    |Shift|Input|  
+    |Shift|입력|  
     |TotalOperators|사용 안 함|  
-    |WageType|Input|  
+    |WageType|입력|  
   
-     여러 개의 예측 가능한 열이 선택되었습니다. 신경망 알고리즘의 강점 중 하나는 입력 및 출력 특성의 가능한 모든 조합을 분석할 수 있다는 것입니다. 그러나 대량 데이터 집합에 대해 이 작업을 수행하면 처리 시간이 기하급수적으로 늘어날 수 있습니다.  
+     여러 개의 예측 가능한 열이 선택되었습니다. 신경망 알고리즘의 강점 중 하나는 입력 및 출력 특성의 가능한 모든 조합을 분석할 수 있다는 것입니다. 처리 시간을 기하급수적으로 높일 수 있을 것으로 이렇게 큰 데이터 집합을 한 데 않을...  
   
 12. 에 **지정할 열 내용 및 데이터 형식** 페이지, 모눈 열, 콘텐츠 형식 및 다음 표에 나와 있는 것 처럼 데이터 형식이 포함 되어 있는지 확인 한 다음 클릭 **다음**합니다.  
   
-    |열|내용 유형|데이터 형식|  
+    |열|콘텐츠 형식|데이터 형식|  
     |-------------|------------------|----------------|  
     |AutomaticResponses|연속|Long|  
     |AverageTimePerIssue|연속|Long|  
@@ -122,9 +122,9 @@ ms.locfileid: "48195563"
   
  ![서비스 등급 값 분포](../../2014/tutorials/media/skt-service-grade-valuesc.gif "서비스 등급 값 분포")  
   
- 따라서 모델을 처리할 때 출력이 예상과 다르게 그룹화될 수 있습니다. 예를 들어, 최적 값 그룹을 식별 하려면 클러스터링을 사용 하는 경우 알고리즘은 값을 나눕니다 ServiceGrade에 이와 같은 범위로 나눕니다: 0.0748051948-0.09716216215와 합니다. 이 그룹화가 수학적으로 정확하기는 하지만 비즈니스 사용자에게는 이러한 범위가 의미가 없을 수 있습니다.  
+ 따라서 모델을 처리할 때 출력이 예상과 다르게 그룹화될 수 있습니다. 예를 들어, 최적 값 그룹을 식별 하려면 클러스터링을 사용 하는 경우 알고리즘이 0.09716216215와 같은 범위로 ServiceGrade에 값을 나눕니다. 나눕니다. 이 그룹화가 수학적으로 정확하기는 하지만 비즈니스 사용자에게는 이러한 범위가 의미가 없을 수 있습니다.  
   
- 이 단계에서는 결과를 더 직관적으로 만들기 위해 숫자 데이터 열의 복사본을 만들어 숫자 값을 다르게 그룹화합니다.  
+ 이 단계에서는 더 직관적인 결과 확인 하려면 그룹화 숫자 값을 다르게 숫자 데이터 열의 복사본을 만들기.  
   
 ### <a name="how-discretization-works"></a>분할 작동 방법  
  Analysis Services에서는 숫자 데이터를 범주화하거나 처리하는 다양한 방법을 제공합니다. 다음 표에서는 출력 특성 ServiceGrade를 세 가지 방식으로 처리했을 때 결과의 차이를 보여 줍니다.  
@@ -276,23 +276,23 @@ ms.locfileid: "48195563"
   
      새 임시 열 별칭인 표시할 표가 업데이트 되어 `ServiceGrade`, 열 사용법 옆에 있는 합니다. 마이닝 구조와 두 마이닝 모델이 포함된 표는 다음과 같습니다.  
   
-    |구조|Call Center Default NN|Call Center Binned NN|  
+    |구조체|Call Center Default NN|Call Center Binned NN|  
     |---------------|----------------------------|---------------------------|  
     ||Microsoft 신경망|Microsoft 신경망|  
-    |AutomaticResponses|Input|Input|  
+    |AutomaticResponses|입력|입력|  
     |AverageTimePerIssue|예측|예측|  
-    |Calls|Input|Input|  
-    |DayOfWeek|Input|Input|  
+    |Calls|입력|입력|  
+    |DayOfWeek|입력|입력|  
     |FactCallCenterID|Key|Key|  
-    |IssuesRaised|Input|Input|  
-    |LevelOneOperators|Input|Input|  
-    |LevelTwoOperators|Input|Input|  
-    |Orders|Input|Input|  
+    |IssuesRaised|입력|입력|  
+    |LevelOneOperators|입력|입력|  
+    |LevelTwoOperators|입력|입력|  
+    |Orders|입력|입력|  
     |ServceGrade Binned|무시|예측(ServiceGrade)|  
     |ServiceGrade|예측|무시|  
-    |Shift|Input|Input|  
-    |Total Operators|Input|Input|  
-    |WageType|Input|Input|  
+    |Shift|입력|입력|  
+    |Total Operators|입력|입력|  
+    |WageType|입력|입력|  
   
 ## <a name="process-all-models"></a>모든 모델 처리  
  마지막으로, 위에서 만든 모델을 쉽게 비교할 수 있도록 기본 모델과 범주화된 모델에 대한 초기값 매개 변수를 설정합니다. 초기값을 설정하면 각 모델이 동일한 지점에서 데이터 처리를 시작합니다.  
@@ -321,6 +321,6 @@ ms.locfileid: "48195563"
  [콜 센터 모델 탐색 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [마이닝 구조 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

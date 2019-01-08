@@ -11,12 +11,12 @@ ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b272d35b7d8796cd67f17a045def480cc2ade14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: a0f278f5d0d036bac02e53263acc023dcae7d808
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100093"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538131"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>테이블 형식 모델 데이터베이스에 연결(SSAS)
   테이블 형식 모델을 빌드하여 Analysis Services 테이블 형식 모드 서버로 배포한 후 클라이언트 애플리케이션에서 사용할 수 있도록 권한을 설정해야 합니다. 이 항목에서는 사용 권한을 부여하는 방법과 클라이언트 애플리케이션에서 데이터베이스에 연결하는 방법에 대해 설명합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "48100093"
   
 1.  중앙 관리에서 서비스 계정 구성 페이지를 엽니다.  
   
-2.  Excel 서비스에서 사용하는 서비스 애플리케이션 풀을 선택합니다. **서비스 응용 프로그램 풀 – SharePoint 웹 서비스 시스템** 또는 사용자 지정 응용 프로그램 풀이 여기에 해당합니다. Excel 서비스에서 사용하는 관리되는 계정이 페이지에 나타납니다.  
+2.  Excel 서비스에서 사용하는 서비스 애플리케이션 풀을 선택합니다. 여기에 해당 **서비스 응용 프로그램 풀-SharePoint 웹 서비스 시스템** 또는 사용자 지정 응용 프로그램 풀. Excel 서비스에서 사용하는 관리되는 계정이 페이지에 나타납니다.  
   
      SharePoint 모드의 Reporting Services가 포함된 SharePoint 팜의 경우 Reporting Services 서비스 애플리케이션에 대한 계정 정보도 가져옵니다.  
   
@@ -115,6 +115,6 @@ ms.locfileid: "48100093"
  SharePoint에서 모델 데이터를 사용하는 피벗 테이블에서 데이터 필터링과 같은 데이터 상호 작용을 시도할 때 이 Microsoft Excel 오류가 발생합니다. 이 오류는 사용자가 통합 문서에 대해 충분한 SharePoint 권한을 가지고 있지 않기 때문에 발생합니다. 사용자에게 **읽기** 이상의 권한이 있어야 합니다. **보기 전용** 권한으로는 데이터에 액세스할 수 없습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블 형식 모델 솔루션 배포 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [테이블 형식 모델 솔루션 배포&#40;SSAS 테이블 형식&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

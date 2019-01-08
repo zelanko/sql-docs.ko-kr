@@ -11,12 +11,12 @@ ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 898f21162e7ba546bd134b90a18eba5b7653edee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 11df5fadc7ca525f62ec0109ec1a7f6b199205af
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123493"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349831"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>보고서에 차트 추가(보고서 작성기 및 SSRS)
   시각적 형식으로 데이터를 요약하려면 차트 데이터 영역을 사용합니다. 표현하려는 데이터의 형식에 적합한 차트 종류를 선택하는 것이 중요합니다. 선택한 차트 종류에 따라 데이터를 차트 형태로 만들었을 때 해당 데이터를 얼마나 잘 해석할 수 있는지가 결정됩니다. 자세한 내용은 [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)를 참조하세요.  
@@ -71,9 +71,9 @@ ms.locfileid: "48123493"
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [차트 종류&#40;보고서 작성기 및 SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [차트의 빈 데이터 요소 및 Null 데이터 요소&#40;보고서 작성기 및 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [자습서: 보고서에 가로 막대형 차트 추가(보고서 작성기)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [자습서: 보고서에 가로 막대형 차트 추가(보고서 디자이너)](http://go.microsoft.com/fwlink/?LinkId=198042)   
- [자습서: 보고서에 원형 차트 추가(보고서 작성기)](http://go.microsoft.com/fwlink/?LinkId=198051)   
- [자습서: 보고서에 원형 차트 추가(보고서 디자이너)](http://go.microsoft.com/fwlink/?LinkId=198041)  
+ [자습서: 가로 막대형 차트 (보고서 작성기) 보고서에 추가](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [자습서: 가로 막대형 차트를 보고서에 추가 (보고서 디자이너)](https://go.microsoft.com/fwlink/?LinkId=198042)   
+ [자습서: (보고서 작성기) 보고서에 원형 차트 추가](https://go.microsoft.com/fwlink/?LinkId=198051)   
+ [자습서: 원형 차트 보고서에 추가 (보고서 디자이너)](https://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

@@ -11,19 +11,19 @@ ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 95b59bf6b406a4dcbaabc956147f4216cfdda0e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 8afbe5f3bd711aac8ac1d7a0dd3d3258a6d4305d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095383"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522377"
 ---
 # <a name="glossary-report-builder"></a>용어 설명(보고서 작성기)
   
   
 |용어|정의|  
 |----------|----------------|  
-|.NET Framework|차세대 애플리케이션 및 웹 서비스를 개발, 배포 및 실행할 수 있도록 하는 필수적인 Windows 구성 요소입니다. .NET Framework는 인터넷으로 확장 가능한 애플리케이션의 배포 및 운영 문제를 해결할 수 있는 민첩성과 기존 IT 투자를 차세대 애플리케이션 및 서비스와 통합할 수 있는 생산성이 뛰어난 표준 기반 다국어 환경을 제공합니다. .NET Framework는 세 가지 주요 부분, 즉 공용 언어 런타임, 통합된 클래스 라이브러리의 계층적 집합 및 ASP의 구성 요소 버전인 ASP.NET으로 구성됩니다. ASP.NET, 공용 언어 런타임(common language runtime), .NET Framework 클래스 라이브러리(.NET Framework class library)를 참조하십시오.|  
+|.NET Framework|차세대 애플리케이션 및 웹 서비스를 개발, 배포 및 실행할 수 있도록 하는 필수적인 Windows 구성 요소입니다. .NET Framework는 인터넷으로 확장 가능한 애플리케이션의 배포 및 운영 문제를 해결할 수 있는 민첩성과 기존 IT 투자를 차세대 애플리케이션 및 서비스와 통합할 수 있는 생산성이 뛰어난 표준 기반 다국어 환경을 제공합니다. .NET Framework는 세 가지 주요 부분, 즉 공용 언어 런타임, 통합된 클래스 라이브러리의 계층적 집합 및 ASP의 구성 요소 버전인 ASP.NET으로 구성됩니다. 참고 항목: ASP.NET, 공용 언어 런타임, .NET Framework 클래스 라이브러리|  
 |ActiveX Data Objects|데이터 원본에 대한 액세스를 제공하는 구성 요소 개체 모델 개체입니다. 이 API는 Visual Basic, Visual Basic for Applications, Active Server Pages 및 Microsoft Internet Explorer Visual Basic Scripting 등의 프로그래밍 언어와 OLE DB 사이의 계층을 제공합니다.|  
 |임시 보고서(ad hoc report)|보고서 작성기 1.0으로 만들며 보고서 모델에 액세스하는 .rdl 보고서입니다.|  
 |도구 영역(adornment)|창의 가장자리에 연결되는 도구 모음 또는 눈금자와 같은 제어 또는 상태 영역입니다.|  
@@ -158,7 +158,7 @@ ms.locfileid: "48095383"
 |계기(gauge)|계기는 범위 내의 특정 값을 가리키는 표시기가 있는 범위로 데이터를 나타내는 데이터 영역입니다.|  
 |계기 패널(gauge panel)|계기 패널은 하나 이상의 방사형 및 선형 계기가 포함되는 외부 요소입니다.  계기 패널을 사용하여 계기 패널의 모든 계기에 적용할 속성을 정의할 수 있습니다.|  
 |계기 포인터(gauge pointer)|계기 포인터는 계기의 현재 값을 나타내는 바늘, 표식 또는 막대입니다.  계기 눈금에는 반드시 계기 포인터가 붙어 있습니다.|  
-|계기 범위(gauge range)|계기 범위는 계기 눈금에서 특정 색상으로 칠해져 "주요 영역"을 나타내는 영역으로, 항상 시작 값과 끝 값으로 한정되어 있습니다.|  
+|계기 범위(gauge range)|계기 범위는 계기 눈금에서 특정 색상으로 칠해져 "주요 영역"을 나타내며, 항상 시작 값과 끝 값으로 한정되어 있습니다.|  
 |계기 눈금(gauge scale)|계기 눈금은 계기에 표시되는 값 범위로, 최대값과 최소값으로 한정되어 있습니다.  일반적으로 계기 눈금에는 계기 포인터가 표시하는 값을 정확하게 판독할 수 있도록 계기 레이블과 눈금 표시가 포함됩니다.|  
 |측지 데이터(geodesic data)|곡면에서 점, 선, 면을 지정하는 데이터입니다.|  
 |지리 데이터(geography data)|GPS 위도 및 경도 좌표와 같은 둥근 지구 좌표계에서 데이터를 나타내는 SQL Server 공간 데이터 형식입니다.|  
@@ -185,11 +185,11 @@ ms.locfileid: "48095383"
 |항목 수준 역할 할당(item-level role assignment)|보고서 서버 폴더의 항목에 적용되는 보안 정책입니다.|  
 |항목 수준 역할 정의(item-level role definition)|보고서 서버 폴더 네임스페이스의 항목에 대한 액세스 또는 상호 작용을 제어하는 데 사용되는 역할을 정의하는 보안 템플릿입니다.|  
 |핵심 성과 지표(key performance indicator)|(KPI) 시간 경과에 따라 측정되는 중요 비즈니스 변수(예: 시장 점유율)를 반영하는 정량화 가능한 표준화된 메트릭입니다.|  
-|키워드(keyword)|데이터베이스 개체 정의, 조작 또는 액세스와 같은 특정 기능을 수행하는 SQL Server의 예약어입니다. 예를 들면 SELECT, FROM 및 AND가 있습니다.|  
+|키워드(keyword)|데이터베이스 개체 정의, 조작 또는 액세스와 같은 특정 기능을 수행하는 SQL Server의 예약어입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다. SELECT, FROM 및 AND가 있습니다.|  
 |KPI|다음 용어 참조: 핵심 성과 지표(key performance indicator)|  
 |레이블 필드(label field)|해당 키 필드의 레이블을 나타내는 보고서 데이터 세트 필드입니다. 매개 변수와 데이터 영역은 값 대신 키 필드의 레이블을 표시할 수 있습니다.|  
 |latency|한 서버에서 데이터 변경이 완료된 시점과 다른 서버에서 해당 변경 내용이 반영된 시점 간에 지연된 시간을 말합니다.|  
-|위도(latitude)|World Geodetic System(WGS 84) 데이터의 10진수 각도 값으로 표현되는 위도 좌표입니다. 유효한 범위는 -90.0에서 +90.0 사이입니다.|  
+|위도(latitude)|World Geodetic System(WGS 84) 데이터의 10진수 각도 값으로 표현되는 위도 좌표입니다. 유효 범위는 -90.0에서 +90.0 사이입니다.|  
 |계층(layer)|지도 보고서 항목에서 계층은 단일 공간 데이터 형식의 유형과 표현을 지정합니다. 지도 보고서 항목은 여러 계층의 컨테이너입니다.|  
 |LCID|Windows 기반 로캘을 식별하는 숫자입니다.|  
 |범례(legend)|보고서 차트, 지도 또는 계기 데이터 영역에서 데이터 표현과 기본 데이터 값 사이의 지침을 제공하는 요소입니다.|  
@@ -202,7 +202,7 @@ ms.locfileid: "48095383"
 |로그 파일(log file)|데이터베이스에 대한 수정 내용 레코드를 포함하는 파일 또는 파일 집합입니다.|  
 |논리적 이름(logical name)|SQL Server에서 파일 식별을 위해 사용하는 이름입니다.|  
 |논리 연산자(logical operators)|연산자 AND, OR 및 NOT을 나타내며 WHERE 절에서 검색 조건을 연결하는 데 사용됩니다.|  
-|경도(longitude)|World Geodetic System(WGS 84) 데이터의 10진수 각도 값으로 표현되는 좌표입니다. 유효한 범위는 -180.0에서 +180.0 사이입니다.|  
+|경도(longitude)|World Geodetic System(WGS 84) 데이터의 10진수 각도 값으로 표현되는 좌표입니다. 유효 범위는 -180.0에서 +180.0 사이입니다.|  
 |다 대 다 관계(many-to-many relationship)|각 테이블의 행과 일치하는 행이 관련 테이블에 여러 개 존재하는 두 테이블 간 관계를 말합니다. 예를 들어 각 판매 송장에는 여러 제품이 포함될 수 있고 각 제품은 여러 판매 송장에 표시될 수 있습니다.|  
 |다 대 일 관계(many-to-one relationship)|한 테이블의 한 행이 다른 테이블의 여러 행과 연관될 수 있는 두 테이블 간 관계를 말합니다.|  
 |지도(map)|제목, 다양한 범주 유형 및 지도 계층의 컨테이너에에 해당하는 보고서 항목입니다.|  
@@ -264,7 +264,7 @@ ms.locfileid: "48095383"
 |protocol|컴퓨터에서 정보를 교환할 수 있도록 하는 표준 형식 및 프로시저 집합입니다.|  
 |공급자|1. OLE DB 공급자입니다. 2. 데이터베이스에 액세스할 수 있게 해주는 in-process DLL(동적 연결 라이브러리)입니다.|  
 |쿼리 매개 변수(query parameter)|Transact-SQL 쿼리와 같은 데이터 세트 쿼리에 지정된 매개 변수입니다.|  
-|RDL|다음 용어 참조: Report Definition Language|  
+|RDL|다음 용어 참조: RDL(Report Definition Language)|  
 |레코드(record)|하나의 단위로 취급되는 관련된 정보 필드(열) 그룹입니다. 레코드는 일반적으로 관계형 데이터베이스에서 행으로 지칭됩니다.|  
 |사각형(rectangle)|여러 보고서 항목의 컨테이너 또는 보고서의 그래픽 요소로 사용할 수 있는 보고서 항목입니다.|  
 |재귀 계층(recursive hierarchy)|1. 조직 계층의 관리자와 직원 관계에 대한 보고 구조와 같이 여러 계층 수준을 한 계층 구조에 포함하는 단일 보고서 데이터 집합의 데이터의 계층입니다. 2. Master Data Services에서는 재귀 관계를 포함하는 파생 계층입니다. 재귀 관계는 엔터티에 엔터티 자체를 기반으로 하는 도메인 기반 특성이 있는 경우에 존재합니다.|  
@@ -337,7 +337,7 @@ ms.locfileid: "48095383"
 |정렬 순서(sort order)|비교 연산에서 문자가 평가되는 방식과 문자 정렬 시퀀스를 정의하는 데이터 정렬의 규칙 집합입니다.|  
 |공간 데이터(spatial data)|평면 또는 곡면에서 개체의 위치를 지정하는 데이터입니다. 공간 데이터는 점, 선 또는 다각형이 될 수 있습니다.|  
 |공간 데이터 형식(spatial data types)|기하 도형(평면) 또는 지리(측지) 정보를 나타내는 데이터를 지정합니다.|  
-|SQL|다른 용어 참조: SQL(구조적 쿼리 언어)|  
+|SQL|다음 용어 참조: SQL(구조적 쿼리 언어)(Structured Query Language)|  
 |SQL 쿼리(SQL query)|SELECT, INSERT, UPDATE, DELETE 또는 CREATE TABLE과 같은 SQL 문을 말합니다.|  
 |SQL Server 인증(SQL Server Authentication)|SQL Server 로그인 및 암호를 지정하여 SQL Server 인스턴스에 대한 연결 시도의 유효성을 검사하는 메커니즘입니다.|  
 |SQL Server 로그인(SQL Server login)|SQL Server에 저장된 계정으로, 사용자가 SQL Server에 연결하도록 허용합니다.|  
@@ -371,6 +371,6 @@ ms.locfileid: "48095383"
 |y축(y-axis)|다음 용어 참조: 값(y) 축(value (y) axis)|  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 제작 개념 &#40;보고서 작성기 및 SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [보고서 제작 개념&#40;보고서 작성기 및 SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

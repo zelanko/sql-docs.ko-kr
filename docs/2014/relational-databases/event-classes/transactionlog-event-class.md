@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: bbcf09c6-3128-4775-b3de-e986a70411e0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a901c1eadcd52bd69c2f9efee6c2aed542900c0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: d6b6fa07c2cb2f4880420885fefc30d0fd419c38
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140981"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786675"
 ---
 # <a name="transactionlog-event-class"></a>TransactionLog 이벤트 클래스
   TransactionLog 이벤트 클래스를 사용하여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스의 트랜잭션 로그에 있는 작업을 모니터링할 수 있습니다.  

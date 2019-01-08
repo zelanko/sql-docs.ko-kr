@@ -1,30 +1,32 @@
 ---
-title: SQL Server 2019 배포용 kubeadm를 사용 하 여 Kubernetes 구성 | Microsoft Docs
+title: Kubernetes kubeadm를 사용 하 여 구성
+titleSuffix: SQL Server 2019 big data clusters
 description: 여러 Ubuntu 16.04의 Kubernetes 또는 SQL Server 2019 빅 데이터 클러스터 (미리 보기) 배포에 대 한 18.04 컴퓨터 (물리적 또는 가상)를 구성 하는 방법에 알아봅니다.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 842a23877290aec76f7813f27b68b4bccd7b5c9b
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 7b6c6aeced930bfdd17915e2acc130fc4446f4a5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221779"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210282"
 ---
-# <a name="configure-kubernetes-on-multiple-machines-for-sql-server-2019-deployments"></a>SQL Server 2019 배포에 대 한 여러 컴퓨터에서 Kubernetes 구성
+# <a name="configure-kubernetes-on-multiple-machines-for-sql-server-2019-big-data-cluster-preview-deployments"></a>SQL Server 2019 빅 데이터 클러스터 (미리 보기) 배포에 대 한 여러 컴퓨터에서 Kubernetes 구성
 
 이 문서를 사용 하는 방법의 예가 **kubeadm** SQL Server 2019 빅 데이터 클러스터 (미리 보기) 배포에 대 한 여러 컴퓨터에서 Kubernetes 구성 합니다. 이 예제에서는 여러 Ubuntu 16.04 또는 18.04 LTS 컴퓨터 (물리적 또는 가상)의 대상이 됩니다. 다른 Linux 플랫폼에 배포 하는 경우 시스템에 맞게 명령 중 일부를 변경 해야 합니다.  
 
 > [!TIP] 
 > Kubernetes를 구성 하는 샘플 스크립트를 참조 하세요 [Kubeadm를 사용 하 여 Ubuntu 16.04 LTS 또는 18.04 LTS에서 Kubernetes 클러스터를 만드는](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm)합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 - 여러 Linux 물리적 컴퓨터 또는 클러스터에 대해 사용 하도록 가상 컴퓨터
-- 권장 구성: 8 개의 Cpu, 32GB 메모리 및 최소 100GB의 각 컴퓨터에 대 한 저장소
+- 권장된 구성: Cpu가 8 개, 32GB 메모리 및 최소 100GB의 각 컴퓨터에 대 한 저장소
 - 3 개 이상의 컴퓨터가 클러스터의
 
 ## <a name="prepare-the-machines"></a>컴퓨터 준비
@@ -143,4 +145,4 @@ kubectl get nodes
 
 이 문서의 단계를 여러 Ubuntu 컴퓨터에서 Kubernetes 클러스터를 구성 합니다. 다음 단계는 SQL Server 2019 빅 데이터 클러스터를 배포 하는 것입니다. 자세한 내용은 다음 문서를 참조 합니다.
 
-[SQL Server 2019 CTP 2.1 Kubernetes에 배포](deployment-guidance.md#deploy)
+[SQL Server 2019 CTP 2.2 Kubernetes에 배포](deployment-guidance.md#deploy)

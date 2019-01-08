@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], Excel
@@ -15,12 +14,12 @@ ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 98cdf4263025f202279e4496b67f23eb0780b633
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 959344c0c191f390a6f6ec61f05467af1f88107b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048353"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766665"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 루핑
   이 항목의 절차에서는 적절한 열거자와 함께 Foreach 루프 컨테이너를 사용하여 폴더 내의 Excel 통합 문서 또는 Excel 통합 문서 내의 테이블을 루핑하는 방법에 대해 설명합니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "48048353"
     > [!IMPORTANT]  
     >  이 Excel 연결 관리자 관리자를 사용하는 태스크 및 데이터 흐름 구성 요소를 구성할 때 유효성 검사 오류가 발생하지 않도록 하려면 **Excel 연결 관리자 편집기**에서 기존 Excel 통합 문서를 선택합니다. 다음 단계에서 설명하는 대로 `ConnectionString` 속성에 대한 식을 구성하고 나면 연결 관리자는 런타임에 이 통합 문서를 사용하지 않습니다. 패키지를 만들고 구성한 다음에는 속성 창에서 `ConnectionString` 속성 값을 지울 수 있습니다. 그러나 이 값을 지우면 Foreach 루프가 실행될 때까지는 Excel 연결 관리자의 연결 문자열 속성이 유효하지 않게 됩니다. 따라서 연결 관리자가 사용된 태스크나 패키지에서 `DelayValidation` 속성을 `True`로 설정하여 유효성 검사 오류를 방지해야 합니다.  
     >   
-    >  기본값도 사용 해야 합니다 `False` 에 대 한는 `RetainSameConnection` Excel 연결 관리자의 속성입니다. 이 값을 `True`로 변경하면 루프의 각 반복에서 계속해서 첫 번째 Excel 통합 문서를 엽니다.  
+    >  또한 Excel 연결 관리자의 `False` 속성에 기본값 `RetainSameConnection`를 사용해야 합니다. 이 값을 `True`로 변경하면 루프의 각 반복에서 계속해서 첫 번째 Excel 통합 문서를 엽니다.  
   
 8.  새 Excel 연결 관리자를 선택하고 속성 창에서 **Expressions** 속성을 클릭한 다음 줄임표를 클릭합니다.  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - TOP clause, queries
@@ -20,12 +20,12 @@ ms.assetid: ba7d7c10-9bb3-4d9b-90b0-5fa94ecae59b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8565a5b24f6cd9d1005ea50bee8f2c4deccbc091
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7f9587a5e653d2df8cbe169fe5030542b86d8aaf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130433"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757365"
 ---
 # <a name="specify-the-top-clause-in-queries-visual-database-tools"></a>쿼리에 TOP 절 지정(Visual Database Tools)
   TOP 절은 쿼리에서 처음 *n*개 또는 *n%* 의 행만 반환합니다. TOP 절은 쿼리 결과를 모두 반환하는 데 필요한 리소스를 사용하지 않은 채 쿼리가 의도한 대로 올바르게 작동하는지 확인하기 위해 결과의 일부만 검사하려는 경우에 유용합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "48130433"
 > [!NOTE]  
 >  SQL 창에서 TOP 절을 편집하여 **Top 사양** 의 자식 속성 값을 변경할 수도 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [방법 도움말 항목을 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [쿼리 속성&#40;Visual Database Tools&#41;](query-properties-visual-database-tools.md)  
   

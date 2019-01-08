@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergepushsubscription_agent_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e156b6912633e45ada9f1c26be40b85fd7db23d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1e05be91125586b17dcd9fde84dbf6fa93ae9a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758061"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823335"
 ---
 # <a name="spaddmergepushsubscriptionagent-transact-sql"></a>sp_addmergepushsubscription_agent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +124,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |NULL(기본값)||  
   
 > [!NOTE]  
->  값을 지정 **64** 하면 병합 에이전트가 연속 모드로 실행 합니다. 이 설정에 해당 하는 **-연속** 에이전트에 대 한 매개 변수입니다. 자세한 내용은 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)을(를) 참조하세요.  
+>  값을 지정 **64** 하면 병합 에이전트가 연속 모드로 실행 합니다. 이 설정에 해당 하는 **-연속** 에이전트에 대 한 매개 변수입니다. 자세한 내용은 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)을 참조하세요.  
   
  [  **@frequency_interval =** ] *frequency_interval*  
  병합 에이전트가 실행되는 요일입니다. *frequency_interval* 됩니다 **int**, 이며 다음 값 중 하나일 수 있습니다.  
@@ -150,7 +149,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|첫째|  
-|**2**|둘째|  
+|**2**|Second|  
 |**4**|셋째|  
 |**8**|넷째|  
 |**16**|마지막|  
@@ -165,7 +164,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|둘째|  
+|**2**|Second|  
 |**4**|Minute|  
 |**8**|Hour|  
 |NULL(기본값)||  

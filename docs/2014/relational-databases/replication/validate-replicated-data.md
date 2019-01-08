@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - inline data validation [SQL Server replication]
@@ -20,12 +19,12 @@ ms.assetid: f7500a2b-61cb-41b5-816d-27609a6c58e7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae1484fd98b7cf10f06eb86406b03b9c2991a210
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 84ffe2ad4be91f8a05e4bbbd84b2ad5a67cb09a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098103"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792495"
 ---
 # <a name="validate-replicated-data"></a>복제된 데이터의 유효성 검사
   트랜잭션 및 병합 복제를 사용하면 구독자의 데이터가 게시자의 데이터와 일치하는지 확인할 수 있습니다. 게시에 대한 특정 구독 또는 모든 구독에 대해 유효성 검사를 수행할 수 있습니다. 다음 유효성 검사 유형 중 하나를 지정합니다. 배포 에이전트 또는 병합 에이전트가 다음에 실행될 때 해당 유형에 따라 데이터의 유효성을 검사합니다.  
@@ -45,7 +44,7 @@ ms.locfileid: "48098103"
   
  유효성 검사 실패를 처리하려면 다음 사항을 살펴보십시오.  
   
--   **복제: 구독자가 데이터 유효성 검사에 실패했습니다** 라는 복제 경고를 구성하여 검사 실패에 대한 알림을 받도록 합니다. 자세한 내용은 참조 하세요. [미리 정의 된 복제 경고 구성 &#40;SQL Server Management Studio & #41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md) 합니다.  
+-   **복제: 구독자가 데이터 유효성 검사를 실패 했습니다** 는 실패의 알림이 표시 됩니다. 자세한 내용은 참조 하세요. [미리 정의 된 복제 경고 구성 &#40;SQL Server Management Studio & #41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md) 합니다.  
   
 -   유효성 검사 실패가 애플리케이션에 문제가 됩니까? 유효성 검사 실패가 문제가 되는 경우 수동으로 데이터를 업데이트하여 동기화하거나 구독을 다시 초기화합니다.  
   

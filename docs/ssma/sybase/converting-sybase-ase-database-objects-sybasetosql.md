@@ -12,12 +12,12 @@ ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 068ae849454fefbc6a4bd08d19a530a59d2788e8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3734c2efaaefae44a17381cab46029f2d57666a4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666572"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418164"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>변환 SAP ASE 데이터베이스 개체 (SybaseToSQL)
 에 연결 하려면 SAP 적응형 Server Enterprise (ASE)를 연결한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL 및 프로젝트 설정 및 데이터 매핑 옵션, SAP, 적응형 Server Enterprise (ASE) 데이터베이스 개체를 변환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL database 개체입니다.  

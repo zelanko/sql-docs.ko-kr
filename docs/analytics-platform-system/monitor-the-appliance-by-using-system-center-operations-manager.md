@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: df3e932427665e7225c83043fb48e933cb503028
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 3c43734dbd7ef1a766f3f1258f97565ab82e175d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909723"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417564"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>System Center Operations Manager-Analytics Platform System 사용 하 여 모니터
 Analytics Platform System (APS) 어플라이언스를 모니터링 하려면 System Center Operations Manager (SCOM)를 사용 합니다.
@@ -39,7 +39,7 @@ Analytics Platform System (APS) 어플라이언스를 모니터링 하려면 Sys
    
   
 ## <a name="to-monitor-sql-server-pdw-with-scom"></a>SQL Server PDW SCOM 사용 하 여 모니터링  
-SCOM 관리 팩을 구성한 후 SCOM의 모니터링 창에서 클릭 하 고 드릴 다운 하 **SQL Server 어플라이언스** 차례로 **Microsoft SQL Server 병렬 데이터 웨어하우스**합니다. Microsoft SQL Server 병렬 데이터 웨어하우스를 아래에 있는 네 가지 선택 사항이: 경고, 어플라이언스, 어플라이언스 다이어그램 및 노드.  
+SCOM 관리 팩을 구성한 후 SCOM의 모니터링 창에서 클릭 하 고 드릴 다운 하 **SQL Server 어플라이언스** 차례로 **Microsoft SQL Server 병렬 데이터 웨어하우스**합니다. Microsoft SQL Server 병렬 데이터 웨어하우스를 아래 가지 네 가지 방법이 있습니다. 경고, 어플라이언스, 어플라이언스 다이어그램 및 노드를 선택 합니다.  
   
 ### <a name="alerts"></a>,  
 경고는 관리 하는 현재 경고를 찾을 수 있습니다.  

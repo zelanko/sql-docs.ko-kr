@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - computed columns, define
@@ -13,15 +12,15 @@ ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d206821fe3a54f71c61d383c19a0a0479a8321f0
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 50067da1853795279216b16f7c12119bc03f38c6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072187"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789095"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>테이블에서 계산 열 지정
-  계산 열은 해당 열에 PERSISTED 표시가 없는 한 테이블에 물리적으로 저장되지 않는 가상의 열입니다. 계산 열 식에서는 이 식이 속한 열의 값을 계산하기 위해 다른 열의 데이터를 사용할 수 있습니다. 계산 된 열에 대 한 식을 지정할 수 있습니다 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용 하 여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]합니다.  
+  계산 열은 해당 열에 PERSISTED 표시가 없는 한 테이블에 물리적으로 저장되지 않는 가상의 열입니다. 계산 열 식에서는 이 식이 속한 열의 값을 계산하기 위해 다른 열의 데이터를 사용할 수 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 계산 열의 식을 지정할 수 있습니다.  
   
  **항목 내용**  
   
@@ -37,7 +36,7 @@ ms.locfileid: "49072187"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Limitations"></a> 제한 사항  
   
@@ -56,7 +55,7 @@ ms.locfileid: "49072187"
   
 1.  **개체 탐색기**에서 새 계산 열을 추가할 테이블을 확장합니다. **열** 을 마우스 오른쪽 단추로 클릭하고 **새 열**을 선택합니다.  
   
-2.  열 이름을 입력하고 기본 데이터 형식 `nchar`(10)을 적용합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 수식에 지정된 식에 데이터 형식 우선 순위 규칙을 적용하여 계산 열의 데이터 형식을 결정합니다. 예를 들어 수식에서 `money` 형식 열과 `int` 형식 열을 참조하는 경우 데이터 형식의 우선 순위가 더 높으므로 계산 열은 `money` 형식입니다. 자세한 내용은 [데이터 형식 우선 순위&#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-type-precedence-transact-sql)를 참조하세요.  
+2.  열 이름을 입력하고 기본 데이터 형식 `nchar`(10)을 적용합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 수식에 지정된 식에 데이터 형식 우선 순위 규칙을 적용하여 계산 열의 데이터 형식을 결정합니다. 예를 들어 수식에서 `money` 형식 열과 `int` 형식 열을 참조하는 경우 데이터 형식의 우선 순위가 더 높으므로 계산 열은 `money` 형식입니다. 자세한 내용은 [데이터 형식 우선 순위&#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-type-precedence-transact-sql)를 참조하세요.  
   
 3.  **열 속성** 탭에서 **계산 열 사양** 속성을 확장합니다.  
   

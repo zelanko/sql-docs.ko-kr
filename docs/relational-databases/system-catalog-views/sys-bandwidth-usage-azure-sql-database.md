@@ -22,17 +22,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 5f671e8450255e9c03005c71d6f887c63559d3a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90ad88cfaae5c82b79d9da1fa7de5baa60fe46f3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603851"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403719"
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **참고:이만 적용 됩니다 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11.**  
+  **참고: 이만 적용 됩니다 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11.**  
   
  각 데이터베이스에 사용 되는 네트워크 대역폭에 대 한 정보를 반환 합니다는  **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11 논리 서버**합니다. 지정된 데이터베이스에 대해 반환된 각 행에는 1시간 동안 이루어진 단일 방향 및 클래스 사용이 요약되어 있습니다.  
   
@@ -44,8 +44,8 @@ ms.locfileid: "47603851"
 |-----------------|-----------------|  
 |**time**|대역폭을 소비하는 시간입니다. 이 뷰의 행은 시간당 기준입니다. 예를 들어 2009-09-19 02:00:00.000은 2009년 9월 19일 오전 2시부터 오전 3시까지 소비한 대역폭을 의미합니다.|  
 |**database_name**|대역폭을 사용한 데이터베이스의 이름입니다.|  
-|**방향**|사용된 대역폭의 유형은 다음 중 하나입니다.<br /><br /> 수신: 데이터 이동에는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.<br /><br /> 송신: 나가는 데이터는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.|  
-|**class**|사용된 대역폭의 클래스는 다음 중 하나입니다.<br />내부: 데이터는 Azure 플랫폼 내에서 이동입니다.<br />외부: 데이터는 Azure 플랫폼에서 나가는입니다.<br /><br /> 이 클래스는 데이터베이스가 지역 간의 연속 복사 관계에 참여 하는 경우에 반환 됩니다 ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). 지정된 데이터베이스가 연속 복사 관계에 참여하지 않는 경우에는 “Interlink” 행이 반환되지 않습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "주의" 섹션을 참조하세요.|  
+|**direction**|사용된 대역폭의 유형은 다음 중 하나입니다.<br /><br /> 수신: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]로 들어오는 데이터입니다.<br /><br /> 송신: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 나가는 데이터입니다.|  
+|**class**|사용된 대역폭의 클래스는 다음 중 하나입니다.<br />내부: Azure 플랫폼 내에서 이동하는 데이터입니다.<br />외부: Azure 플랫폼에서 나가는 데이터입니다.<br /><br /> 이 클래스는 데이터베이스가 지역 간의 연속 복사 관계([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)])에 참여하는 경우에만 반환됩니다. 지정된 된 데이터베이스가 연속 복사 관계에 참여 하지 않습니다, 경우에 "Interlink" 행 반환 되지 않습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "주의" 섹션을 참조하세요.|  
 |**time_period**|사용이 발생 하는 기간에는 최대 또는 OffPeak입니다. 피크 시간은 서버 제조 지역을 기준으로 합니다. 예를 들어, 'US_Northwest' 지역에서 만든 서버인 경우 피크 시간은 태평양 표준시로 오전 10시에서 오후 6시 사이로 정의됩니다.|  
 |**quantity**|사용된 대역폭 양입니다(KB).|  
   
@@ -60,8 +60,8 @@ ms.locfileid: "47603851"
 |Time|database_name|direction|class|time_period|quantity|  
 |----------|--------------------|---------------|-----------|------------------|--------------|  
 |2012-04-21 17:00:00|Db1|Ingress|External|Peak|66|  
-|2012-04-21 17:00:00|Db1|Egress|External|Peak|741|  
-|2012-04-21 17:00:00|Db1|Ingress|Internal|Peak|1052|  
+|2012-04-21 17:00:00|Db1|송신|External|Peak|741|  
+|2012-04-21 17:00:00|Db1|수신|Internal|Peak|1052|  
 |2012-04-21 17:00:00|Db1|Egress|내부|Peak|3525|  
   
 ### <a name="interpreting-data-direction-for-includessgeodrincludesssgeodr-mdmd"></a>[!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]에 대한 데이터 방향 해석  

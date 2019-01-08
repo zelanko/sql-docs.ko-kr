@@ -20,16 +20,16 @@ ms.assetid: 33879db3-5ef9-4585-9be5-69376157e017
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a6aabd945e25211f969ceac17c4d56baff98edd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f1c5bbfd2e2fbf91fd9e91acafe0bc72d006d3f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692841"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209322"
 ---
 # <a name="sqlgettranslator-function"></a>SQLGetTranslator 함수
 **규칙**  
- ODBC 2.0 버전에 도입 되었습니다.  
+ 도입 된 버전: ODBC 2.0  
   
  **요약**  
  **SQLGetTranslator** 사용자 변환기를 선택할 수 있는 대화 상자를 표시 합니다.  

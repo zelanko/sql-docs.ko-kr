@@ -1,5 +1,5 @@
 ---
-title: 테이블의 데이터를 필터링 합니다. | Microsoft Docs
+title: Analysis Services 테이블 형식 모델 테이블의 데이터 필터링 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 65b3e9bfc1b4e3c8a246d2732484d835065e82bb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9b1fcdda5bd49f8056a6035ec10da8fb52f1c5d1
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039247"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072130"
 ---
 # <a name="filter-data-in-a-table"></a>테이블의 데이터 필터링 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

@@ -14,12 +14,12 @@ ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: be6edd514530acca7ac79cebf959a09d20562ac5
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: e75b79934022743ba806722427dd37ab733bc2f2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350647"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535547"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 개요
 프로그래머는 ADO 또는 RDS 이상적인 환경에 게 모든 데이터 소스를 OLE DB 인터페이스를 노출 한 ADO 데이터 원본으로 직접 호출할 수 있도록 합니다. 점점 더 많은 데이터베이스 공급 업체는 OLE DB 인터페이스를 구현 하지만 일부 데이터 소스는이 이렇게를 아직 노출 되지 않습니다. 그러나 현재 사용 중인 대부분의 DBMS 시스템은 ODBC를 통해 액세스할 수 있습니다.
@@ -93,7 +93,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-connection-properties"></a>공급자별 연결 속성
  여러 속성을 추가 하는 ODBC 용 OLE DB 공급자는 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 의 컬렉션을 **연결** 개체입니다. 다음 표에서 해당 OLE DB 속성 이름 괄호로 사용 하 여 이러한 속성을 보여 줍니다.
 
-|속성 이름|설명|
+|속성 이름|Description|
 |-------------------|-----------------|
 |액세스할 수 있는 절차 (KAGPROP_ACCESSIBLEPROCEDURES)|저장된 프로시저에 대 한 액세스 권한이 있는지 여부를 나타냅니다.|
 |액세스 가능한 테이블이 (KAGPROP_ACCESSIBLETABLES)|사용자는 데이터베이스 테이블에 대해 SELECT 문을 실행할 수 있는 권한이 있는지 여부를 나타냅니다.|
@@ -107,20 +107,20 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Order By (KAGPROP_MAXCOLUMNSINORDERBY)의 최대 열|SELECT 문의 ORDER BY 절에 나열 될 수 있는 열의 최대 수를 나타냅니다.|
 |최대 열 선택 (KAGPROP_MAXCOLUMNSINSELECT)|SELECT 문의 SELECT 부분에 나열 될 수 있는 열의 최대 수를 나타냅니다.|
 |테이블 (KAGPROP_MAXCOLUMNSINTABLE)의 최대 열|테이블에 허용 되는 열의 최대 수를 나타냅니다.|
-|숫자 함수 (KAGPROP_NUMERICFUNCTIONS)|ODBC 드라이버에서 지원 되는 숫자 함수를 나타냅니다. 함수 이름 및이 비트 마스크에 사용 된 연결 된 값의 나열을 참조 하세요 [부록 e: 스칼라 함수](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), ODBC 설명서에서.|
+|숫자 함수 (KAGPROP_NUMERICFUNCTIONS)|ODBC 드라이버에서 지원 되는 숫자 함수를 나타냅니다. 함수 이름 및이 비트 마스크에 사용 된 연결 된 값의 나열을 참조 하세요. [부록 e: 스칼라 함수](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), ODBC 설명서에서.|
 |외부 조인 기능 (KAGPROP_OJCAPABILITY)|공급자가 지 원하는 외부 조인 형식을 나타냅니다.|
 |외부 조인 (KAGPROP_OUTERJOINS)|공급자 외부 연결을 지원 하는지 여부를 나타냅니다.|
 |특수 문자 (KAGPROP_SPECIALCHARACTERS)|ODBC 드라이버에 대 한 특별 한 의미를 가지는 문자를 나타냅니다.|
 |저장된 프로시저 (KAGPROP_PROCEDURES)|저장된 프로시저가 ODBC 드라이버를 사용 하 여 사용할 수 있는지 여부를 나타냅니다.|
-|문자열 함수 (KAGPROP_STRINGFUNCTIONS)|ODBC 드라이버에서 지원 되는 문자열 함수를 나타냅니다. 함수 이름 및이 비트 마스크에 사용 된 연결 된 값의 나열을 참조 하세요 [부록 e: 스칼라 함수](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), ODBC 설명서에서.|
-|시스템 함수 (KAGPROP_SYSTEMFUNCTIONS)|ODBC 드라이버에서 지원 되는 시스템 함수를 나타냅니다. 함수 이름 및이 비트 마스크에 사용 된 연결 된 값의 나열을 참조 하세요 [부록 e: 스칼라 함수](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), ODBC 설명서에서.|
-|날짜/시간 함수 (KAGPROP_TIMEDATEFUNCTIONS)|ODBC 드라이버에서 지원 되는 날짜 및 시간 함수를 나타냅니다. 함수 이름 및이 비트 마스크에 사용 된 연결 된 값의 나열을 참조 하세요 [부록 e: 스칼라 함수](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), ODBC 설명서에서.|
+|문자열 함수 (KAGPROP_STRINGFUNCTIONS)|ODBC 드라이버에서 지원 되는 문자열 함수를 나타냅니다. 함수 이름 및이 비트 마스크에 사용 된 연결 된 값의 나열을 참조 하세요. [부록 e: 스칼라 함수](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), ODBC 설명서에서.|
+|시스템 함수 (KAGPROP_SYSTEMFUNCTIONS)|ODBC 드라이버에서 지원 되는 시스템 함수를 나타냅니다. 함수 이름 및이 비트 마스크에 사용 된 연결 된 값의 나열을 참조 하세요. [부록 e: 스칼라 함수](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), ODBC 설명서에서.|
+|날짜/시간 함수 (KAGPROP_TIMEDATEFUNCTIONS)|ODBC 드라이버에서 지원 되는 날짜 및 시간 함수를 나타냅니다. 함수 이름 및이 비트 마스크에 사용 된 연결 된 값의 나열을 참조 하세요. [부록 e: 스칼라 함수](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), ODBC 설명서에서.|
 |SQL 문법 지원 (KAGPROP_ODBCSQLCONFORMANCE)|ODBC 드라이버에서 지 원하는 SQL 문법을 나타냅니다.|
 
 ## <a name="provider-specific-recordset-and-command-properties"></a>공급자 관련 레코드 집합 및 명령 속성
  여러 속성을 추가 하는 ODBC 용 OLE DB 공급자는 **속성** 의 컬렉션을 **레코드 집합** 및 **명령** 개체입니다. 다음 표에서 해당 OLE DB 속성 이름 괄호로 사용 하 여 이러한 속성을 보여 줍니다.
 
-|속성 이름|설명|
+|속성 이름|Description|
 |-------------------|-----------------|
 |쿼리 기반 업데이트/삭제/삽입 (KAGPROP_QUERYBASEDUPDATES)|업데이트, 삭제 및 삽입 SQL 쿼리를 사용 하 여 수행할 수 있는지 여부를 나타냅니다.|
 |ODBC 동시성 유형을 (KAGPROP_CONCURRENCY)|데이터 원본에서 동시에 동일한 데이터에 액세스 하려고 하는 두 사용자로 인 한 잠재적인 문제를 줄이는 데 사용할 메서드를 나타냅니다.|
@@ -137,7 +137,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
  ODBC 저장된 프로시저를 호출 하는 것에 대 한 특정 구문을 제공 합니다. 에 대 한는 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 의 속성을 **명령** 개체를 *CommandText* 인수를를 **Execute** 메서드를를 [ 연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 또는 *원본* 인수를 합니다 **열기** 메서드를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를이 구문 사용 하 여 문자열로 전달:
 
 ```
-"{ [ ? = ] call procedure [ ( ? [, ? [ , … ]] ) ] }"
+"{ [ ? = ] call procedure [ ( ? [, ? [ , ... ]] ) ] }"
 ```
 
  각 **?** 개체를 참조 합니다 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 컬렉션입니다. 첫 번째 **?** 참조 **매개 변수**(0), 다음 **?** 참조 **매개 변수**(1), 등입니다.
@@ -201,26 +201,26 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
 |메서드|ForwardOnly|Dynamic|Keyset|정적|
 |------------|-----------------|-------------|------------|------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|예|예|예|예|
-|[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|예|예|예|예|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|예|예|예|예|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|예|예|예|예|
-|[복제](../../../ado/reference/ado-api/clone-method-ado.md)|아니요|아니요|예|예|
-|[닫기](../../../ado/reference/ado-api/close-method-ado.md)|예|예|예|예|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|예|예|예|예|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|예|예|예|예|
-|[이동](../../../ado/reference/ado-api/move-method-ado.md)|예|예|예|예|
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|예|예|예|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|아니요|예|예|예|
-|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|예|예|예|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|아니요|예|예|예|
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|예|예|예|예|
-|[파일](../../../ado/reference/ado-api/open-method-ado-recordset.md)|예|예|예|예|
-|[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|예|예|예|예|
-|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|아니요|아니요|예|예|
-|[지원](../../../ado/reference/ado-api/supports-method.md)|예|예|예|예|
-|[Update](../../../ado/reference/ado-api/update-method.md)|예|예|예|예|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|예|예|예|예|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[복제](../../../ado/reference/ado-api/clone-method-ado.md)|아니요|아니요|예|사용자 계정 컨트롤|
+|[닫기](../../../ado/reference/ado-api/close-method-ado.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[이동](../../../ado/reference/ado-api/move-method-ado.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|아니요|예|예|사용자 계정 컨트롤|
+|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|아니요|예|예|사용자 계정 컨트롤|
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[파일](../../../ado/reference/ado-api/open-method-ado-recordset.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|아니요|아니요|예|사용자 계정 컨트롤|
+|[지원](../../../ado/reference/ado-api/supports-method.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[Update](../../../ado/reference/ado-api/update-method.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
 
  * Microsoft Access 데이터베이스에 대 한 지원 되지 않습니다.
 
@@ -248,11 +248,11 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |데이터 소스 개체 스레딩 모델|DBPROP_DSOTHREADMODEL|
 |DBMS 이름|DBPROP_DBMSNAME|
 |DBMS 버전|DBPROP_DBMSVER|
-|Extended Properties|DBPROP_INIT_PROVIDERSTRING|
+|확장 속성|DBPROP_INIT_PROVIDERSTRING|
 |GROUP BY 지원|DBPROP_GROUPBY와 같습니다|
 |유형이 다른 테이블 지원|DBPROP_HETEROGENEOUSTABLES와 같습니다|
 |식별자 대/소문자 구분|DBPROP_IDENTIFIERCASE|
-|초기 카탈로그|DBPROP_INIT_CATALOG|
+|Initial Catalog|DBPROP_INIT_CATALOG|
 |격리 수준|DBPROP_SUPPORTEDTXNISOLEVELS|
 |격리 보존|DBPROP_SUPPORTEDTXNISORETAIN|
 |로캘 ID|DBPROP_INIT_LCID|
@@ -276,7 +276,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |출력 매개 변수 가용성|DBPROP_OUTPUTPARAMETERAVAILABILITY|
 |암호|DBPROP_AUTH_PASSWORD|
 |Ref 접근자로 전달|DBPROP_BYREFACCESSORS|
-|보안 정보 유지|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
+|Persist Security Info|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
 |영구 ID 형식|DBPROP_PERSISTENTIDTYPE|
 |중단 동작 준비|DBPROP_PREPAREABORTBEHAVIOR와 같습니다|
 |커밋 동작 준비|DBPROP_PREPARECOMMITBEHAVIOR와 같습니다|
@@ -294,7 +294,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |하위 쿼리 지원|DBPROP_SUBQUERIES|
 |테이블 용어|DBPROP_TABLETERM|
 |트랜잭션 DDL|DBPROP_SUPPORTEDTXNDDL|
-|사용자 ID|DBPROP_AUTH_USERID|
+|User ID|DBPROP_AUTH_USERID|
 |사용자 이름|DBPROP_USERNAME|
 |창 핸들|DBPROP_INIT_HWND|
 

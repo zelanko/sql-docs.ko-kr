@@ -5,8 +5,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.custom: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addsubscription
@@ -17,12 +16,12 @@ ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30dbaa3bc31135931fdceecb34ab454a4a46e495
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663531"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206392"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |값|Description|  
 |-----------|-----------------|  
-|none|게시된 테이블에 대한 스키마 및 초기 데이터가 구독자에 이미 있습니다.<br /><br /> 참고:이 옵션에 사용 되지 않습니다. 대신 replication support only를 사용하십시오.|  
+|none|게시된 테이블에 대한 스키마 및 초기 데이터가 구독자에 이미 있습니다.<br /><br /> 참고: 이 옵션은 더 이상 사용되지 않습니다. 대신 replication support only를 사용하십시오.|  
 |automatic(기본값)|게시된 테이블의 스키마 및 초기 데이터가 구독자에게 먼저 전송됩니다.|  
 |replication support only|필요한 경우 구독자에서 업데이트 구독을 지원하는 아티클 사용자 지정 저장 프로시저 및 트리거의 자동 생성을 제공합니다. 이 옵션은 게시된 테이블에 대한 스키마 및 초기 데이터가 구독자에 이미 있다고 가정합니다. 피어 투 피어 트랜잭션 복제 토폴로지를 구성하는 경우 토폴로지의 모든 노드에 있는 데이터가 동일해야 합니다. 자세한 내용은 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)을 참조하세요.<br /><br /> *SQL Server 이외 게시에 구독에 대 한 지원 되지 않습니다.*|  
 |initialize with backup|게시된 테이블의 스키마 및 초기 데이터는 게시 데이터베이스의 백업에서 가져옵니다. 구독자에 게시 데이터베이스 백업에 대한 액세스 권한이 있다고 가정합니다. 에 지정 된 백업에 대 한 백업 및 미디어 형식의 위치 *backupdevicename* 하 고 *backupdevicetype*합니다. 이 옵션을 사용하는 경우 구성 중에 피어 투 피어 트랜잭션 복제 토폴로지를 정지할 필요가 없습니다.<br /><br /> *SQL Server 이외 게시에 구독에 대 한 지원 되지 않습니다.*|  
@@ -162,7 +161,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |1|첫째|  
-|2|둘째|  
+|2|Second|  
 |4|셋째|  
 |8|넷째|  
 |16|마지막|  
@@ -177,7 +176,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |1|한 번|  
-|2|둘째|  
+|2|Second|  
 |4|Minute|  
 |8|Hour|  
 |NULL||  
@@ -231,7 +230,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @publisher= ] '*publisher*'  
- 이외[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+ 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *게시자* 에 대해 지정할 수 없습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  
@@ -269,7 +268,7 @@ sp_addsubscription [ @publication = ] 'publication'
  구독에서 피어 투 피어 트랜잭션 복제 토폴로지에 노드 변경 내용을 배달하기 시작할 LSN(로그 시퀀스 번호)을 지정합니다. 사용 된 @sync_type initialize from lsn 모든 관련 트랜잭션이 새 노드에 복제 되도록의 값입니다. 자세한 내용은 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)을 참조하세요.  
   
  [ @subscriptionstreams=] *subscriptionstreams*  
- 단일 스레드를 사용할 때 나타나는 여러 가지 트랜잭션 특징을 유지하면서 변경 내용의 일괄 처리를 구독자에 대해 병렬로 적용하기 위해 배포 에이전트당 허용된 연결 수입니다. *subscriptionstreams* 됩니다 **tinyint**, 기본값은 NULL입니다. 1에서 64 사이의 값 범위가 지원됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자, Oracle 게시자 또는 피어 투 피어 구독의 경우 이 매개 변수가 지원되지 않습니다. 구독 스트림을 사용할 때마다 agent_id가 NULL로 설정된 상태로 추가 행이 msreplication_subscriptions 테이블(스트림당 1개)에 추가됩니다.  
+ 단일 스레드를 사용할 때 나타나는 여러 가지 트랜잭션 특징을 유지하면서 변경 내용의 일괄 처리를 구독자에 대해 병렬로 적용하기 위해 배포 에이전트당 허용된 연결 수입니다. *subscriptionstreams* 됩니다 **tinyint**, 기본값은 NULL입니다. 1에서 64 사이의 값 범위가 지원됩니다. 이 매개 변수가 지원 되지 않습니다 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자, Oracle 게시자 또는 피어 투 피어 구독 합니다. 구독 스트림을 사용할 때마다 agent_id가 NULL로 설정된 상태로 추가 행이 msreplication_subscriptions 테이블(스트림당 1개)에 추가됩니다.  
   
 > [!NOTE]  
 >  Subscriptionstreams는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 제공하도록 구성된 아티클에 대해서는 작동하지 않습니다. subscriptionstreams를 사용하려면 대신 저장 프로시저 호출을 제공하도록 아티클을 구성하십시오.  
@@ -317,7 +316,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/sp-addsubscription-trans_1.sql)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [SQL Server 이외 구독자에 대한 구독 만들기](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   

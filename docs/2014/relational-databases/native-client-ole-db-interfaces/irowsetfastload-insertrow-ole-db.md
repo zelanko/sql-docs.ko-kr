@@ -16,12 +16,12 @@ ms.assetid: 594d3461-34d2-41e7-8ad4-bd2753601ab6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 53d6a76c8689ef4e8fc4e98ab44d7ec28862ecf5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 9c4cd4aff0a8868b8870374fcffb8c7b7169fe2e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221273"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349201"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow(OLE DB)
   대량 복사 행 집합에 행을 추가합니다. 샘플 [대량 복사 데이터를 사용 하 여 IRowsetFastLoad &#40;OLE DB&#41; ](../native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) 및 [보낼 BLOB 데이터를 SQL SERVER IROWSETFASTLOAD를 사용 하 여 및 ISEQUENTIALSTREAM &#40;OLE DB&#41;](../native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md).  
@@ -45,7 +45,7 @@ pData
  대량 복사에 대한 행 데이터를 정의하는 접근자의 핸들입니다. 참조되는 접근자는 행 접근자로, 데이터 값이 포함된 소비자가 소유한 메모리를 바인딩합니다.  
   
  *pData*[in]  
- 데이터 값이 포함된 소비자가 소유한 메모리에 대한 포인터입니다. 자세한 내용은 [DBBINDING 구조](http://go.microsoft.com/fwlink/?LinkId=65955)를 참조하세요.  
+ 데이터 값이 포함된 소비자가 소유한 메모리에 대한 포인터입니다. 자세한 내용은 [DBBINDING 구조](https://go.microsoft.com/fwlink/?LinkId=65955)를 참조하세요.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  S_OK  

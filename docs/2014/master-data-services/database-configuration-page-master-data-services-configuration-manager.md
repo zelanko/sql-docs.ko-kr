@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.dbpg.f1
@@ -13,12 +12,12 @@ ms.assetid: dd72220e-a599-465d-8b84-9bb6a7433216
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 32afe6cdb46187f48943ab8b6439bcb2533dbf82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: b28eb8d2455584bae77d8a7b62707b8888da27cf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128113"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788475"
 ---
 # <a name="database-configuration-page-master-data-services-configuration-manager"></a>데이터베이스 구성 페이지(Master Data Services 구성 관리자)
   **데이터베이스 구성** 페이지를 사용하여 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 시스템 설정을 편집할 수 있습니다. 시스템 설정은 선택한 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스와 연결된 모든 웹 애플리케이션 및 웹 서비스에 영향을 줍니다. 시스템 설정을 활성화하고 구성에 사용하려면 먼저 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 선택하거나 만들어야 합니다.  
@@ -43,6 +42,6 @@ ms.locfileid: "48128113"
   
 ## <a name="see-also"></a>관련 항목  
  [Master Data Services에 대 한 데이터베이스 및 웹 사이트 설정](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
- [데이터베이스 요구 사항 &#40;Master Data Services&#41;](install-windows/database-requirements-master-data-services.md)  
+ [데이터베이스 요구 사항&#40;Master Data Services&#41;](install-windows/database-requirements-master-data-services.md)  
   
   

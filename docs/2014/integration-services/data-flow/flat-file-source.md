@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesource.f1
@@ -18,12 +17,12 @@ ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8a06ae3b308c90b2dc789c97f5f262530826229
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0a0b353cfb1aef011d6fc63a3bea252685b38a42
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125413"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771335"
 ---
 # <a name="flat-file-source"></a>플랫 파일 원본
   플랫 파일 원본은 텍스트 파일에서 데이터를 읽습니다. 텍스트 파일은 구분 기호로 분리됨, 고정 폭 또는 혼합 형식 중 하나일 수 있습니다.  
@@ -56,15 +55,15 @@ ms.locfileid: "48125413"
   
  **플랫 파일 원본 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [플랫 파일 원본 편집기 &#40;연결 관리자 페이지&#41;](../flat-file-source-editor-connection-manager-page.md)  
+-   [플랫 파일 원본 편집기&#40;연결 관리자 페이지&#41;](../flat-file-source-editor-connection-manager-page.md)  
   
--   [플랫 파일 원본 편집기 &#40;열 페이지&#41;](../flat-file-source-editor-columns-page.md)  
+-   [플랫 파일 원본 편집기&#40;열 페이지&#41;](../flat-file-source-editor-columns-page.md)  
   
--   [플랫 파일 원본 편집기 &#40;오류 출력 페이지&#41;](../flat-file-source-editor-error-output-page.md)  
+-   [플랫 파일 원본 편집기&#40;오류 출력 페이지&#41;](../flat-file-source-editor-error-output-page.md)  
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](../common-properties.md)  
+-   [공용 속성](../common-properties.md)  
   
 -   [플랫 파일 사용자 지정 속성](flat-file-custom-properties.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 기능 Analysis Services의 새로운 | Microsoft Docs
+title: SQL Server 2016 Analysis Services의 새로운 기능 | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 70fb50abdd9411e5f34b704d53e66302270fdfd7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: HT
+ms.openlocfilehash: 873fd4bc1e010b2f7e2795368f8f209dfee23ea0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145998"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210192"
 ---
 # <a name="what39s-new-in-analysis-services"></a>기능 Analysis Services의 새로운
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -32,7 +32,7 @@ SQL Server 2016 Service SP1 Analysis Services는 NUMA(Non-Uniform Memory Access)
 
 특히 SQL Server 2016 SP1 Analysis Services는 다음과 같은 주요 영역에서 향상된 기능을 제공합니다.
 
--   **NUMA 인식** - NUMA에 대한 지원을 개선하기 위해 이제 Analysis Services 내의 메모리 내(VertiPaq) 엔진이 각 NUMA 노드에서 별도의 작업 큐를 유지 관리합니다. 따라서 세그먼트에 대해 메모리가 할당된 것과 동일한 노드에서 세그먼트 검색 작업이 실행되도록 합니다. 기본적으로 NUMA 인식은 4 개 이상의 NUMA 노드가 있는 시스템에서만 사용됩니다. 2노드 시스템에서는 할당된 원격 메모리에 액세스하는 비용이 일반적으로 NUMA 고유 정보를 관리하는 오버헤드를 보증하지 않습니다.
+-   **NUMA 인식** - NUMA에 대한 지원을 개선하기 위해 이제 Analysis Services 내의 메모리 내(VertiPaq) 엔진이 각 NUMA 노드에서 별도의 작업 큐를 유지 관리합니다. 따라서 세그먼트에 대해 메모리가 할당된 것과 동일한 노드에서 세그먼트 검색 작업이 실행되도록 합니다. 기본적으로 NUMA 인식은 4 개 이상의 NUMA 노드가 있는 시스템에서만 사용됩니다. 2 노드 시스템에서는 비용에 액세스 하는 원격 일반적으로 메모리를 할당 된 NUMA 고유 정보를 관리 하는 오버 헤드를 보증 하지 않습니다.
 -   **메모리 할당** - Analysis Services는 모든 코어에 별도의 메모리 풀을 제공하는 확장 가능한 할당자인 Intel Threading Building Blocks로 가속화되었습니다. 코어 수가 증가하면 시스템이 거의 선형으로 확장됩니다.
 -   **힙 조각화** - 또한 Intel TBB 기반의 확장 가능한 할당자를 사용하면 Windows 힙에서 발생하는 것으로 나타난 힙 조각화로 인한 성능 문제를 완화할 수 있습니다.
 
@@ -49,10 +49,6 @@ SQL Server 2016 Service SP1 Analysis Services는 NUMA(Non-Uniform Memory Access)
 - [SSMS(SQL Server Management Studio) 다운로드](http://msdn.microsoft.com/library/mt238290.aspx)   
 
 사용자 지정 AMO 종속 애플리케이션이 있으면 업데이트된 AMO 버전을 설치해야 할 수 있습니다. 자세한 내용은 [Analysis Services 데이터 공급자&#40;AMO, ADOMD.NET, MSOLAP&#41; 설치](../analysis-services/instances/install-windows/install-analysis-services-data-providers-amo-adomd-net-msolap.md)를 참조하세요.    
-
- #### <a name="technet-virtual-labs-sql-server-2016-analysis-services"></a>TechNet 가상 랩: SQL Server 2016 Analysis Services
-보다 효과적으로 배우려면 [What's New in SQL Server 2016 Analysis Services Virtual Lab](http://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23110&lod=true)(SQL Server 2016 Analysis Services의 새로운 기능 가상 랩)을 단계별로 수행하세요.
-이 랩에서는 xEvents(확장 이벤트) 만들기 및 모니터, 테이블 형식 프로젝트를 호환성 수준 1200으로 업그레이드, Visual Studio 구성 작업, 새 계산 기능 구현, 새 테이블 관계 기능 구현, 표시 폴더 구성, 모델 번역 관리, 새 TMSL(Tabular Model Scripting Language) 작업, PowerShell 사용 및 새로운 DirectQuery 모드 기능 체험을 수행합니다.
 
 ## <a name="modeling"></a>모델링    
 ### <a name="improved-modeling-performance-for-tabular-1200-models"></a>테이블 형식 1200 모델의 모델링 성능 향상    
@@ -92,7 +88,7 @@ SQL Server 2016 Service SP1 Analysis Services는 NUMA(Non-Uniform Memory Access)
 
 ## <a name="scripting"></a>스크립팅
  ### <a name="powershell-for-tabular-models"></a>테이블 형식 모델에 대한 PowerShell    
- 이번 릴리스에서는 호환성 수준 1200의 테이블 형식 모델에 대한 PowerShell 기능이 향상되었습니다. 적용되는 모든 cmdlet과 테이블 형식 모드 관련 cmdlet인 [Invoke-ProcessASDatabase](../analysis-services/powershell/invoke-processasdatabase.md) 및 [Invoke-ProcessTable cmdlet](../analysis-services/powershell/invoke-processtable-cmdlet.md)을 사용할 수 있습니다.    
+ 이번 릴리스에서는 호환성 수준 1200의 테이블 형식 모델에 대한 PowerShell 기능이 향상되었습니다. 모든 적용 가능한 cmdlet 및 테이블 형식 모드 관련 cmdlet 사용할 수 있습니다. [Invoke-processasdatabase](../analysis-services/powershell/invoke-processasdatabase.md) 하 고 [Invoke-processtable cmdlet](../analysis-services/powershell/invoke-processtable-cmdlet.md)합니다.    
  ### <a name="ssms-scripting-database-operations"></a>SSMS 스크립팅 데이터베이스 작업    
  이제 [최신 SSMS(SQL Server Management Studio)](http://msdn.microsoft.com/library/mt238290.aspx)에서 스크립트는 Create, Alter, Delete, Backup, Restore, Attach, Detach를 비롯한 데이터베이스 명령에 사용됩니다. 출력은 JSON의 TMSL(Tabular Model Scripting Language)입니다. 자세한 내용은 [TMSL&#40;Tabular Model Scripting Language&#41; 참조](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)를 참조하세요.    
  ### <a name="analysis-services-execute-ddl-task"></a>Analysis Services DDL 실행 태스크    
@@ -101,7 +97,7 @@ SQL Server 2016 Service SP1 Analysis Services는 NUMA(Non-Uniform Memory Access)
  SSAS PowerShell cmdlet **Invoke-ASCmd** 에서 TMSL(Tabular Model Scripting Language) 명령을 허용합니다. 기타 SSAS PowerShell cmdlet은 새 테이블 형식 메타데이터를 사용하도록 이후 릴리스에서 업데이트될 수 있습니다(예외는 릴리스 정보에 명시되어 있음).    
 자세한 내용은 [Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md) 를 참조하세요.    
  ### <a name="tabular-model-scripting-language-tmsl-supported-in-ssms"></a>SSMS에서 TMSL(Tabular Model Scripting Language) 지원    
-  [최신 버전의 SSMS](http://msdn.microsoft.com/library/mt238290.aspx)를 사용하여 테이블 형식 1200 모델에 대한 대부분의 관리 태스크를 자동화하는 스크립트를 만들 수 있습니다. 현재 모든 수준의 Process 및 데이터베이스 수준의 CREATE, ALTER, DELETE 작업을 스크립팅할 수 있습니다.    
+  [최신 버전의 SSMS](http://msdn.microsoft.com/library/mt238290.aspx)를 사용하여 테이블 형식 1200 모델에 대한 대부분의 관리 태스크를 자동화하는 스크립트를 만들 수 있습니다. 현재 다음과 같은 작업을 스크립팅할 수 있습니다. 프로세스 수준 및 CREATE, ALTER에서 데이터베이스 수준에서 삭제 합니다.    
     
  TMSL이 **model**, **table**, **relationship** 등의 네이티브 설명자를 사용하여 테이블 형식 메타데이터를 설명한다는 점을 제외하고 기능상, TMSL은 다차원 개체 정의를 제공하는 XMLA ASSL 확장에 해당합니다. 스키마에 대한 자세한 내용은 [TMSL&#40;Tabular Model Scripting Language&#41; 참조](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)를 참조하세요.    
     
@@ -134,7 +130,7 @@ refresh|개체를 처리합니다. ASSL에서는 PROCESS에 해당합니다.
 
 ## <a name="dax"></a>DAX
 ### <a name="improved-dax-formula-editing"></a>DAX 수식 편집 기능 향상
-수식 입력줄이 업데이트되어 구문 색 지정을 사용하여 함수, 필드, 측정값을 구분하는 방식으로 더 쉽게 수식을 작성할 수 있습니다. 이 기능은 지능형 함수 및 필드 제안을 제공하고 오류 *물결선*을 사용하여 DAX 식의 일부가 잘못된 경우 잘못된 부분을 알립니다. 또한 여러 줄(Alt + Enter) 및 들여쓰기(Tab)를 사용할 수 있습니다. 이제 수식 입력줄에서 측정값 부분으로 주석을 작성할 수 있습니다. “//”를 입력하면 같은 줄에서 이 문자 뒤의 모든 내용이 주석으로 간주됩니다.
+수식 입력줄이 업데이트되어 구문 색 지정을 사용하여 함수, 필드, 측정값을 구분하는 방식으로 더 쉽게 수식을 작성할 수 있습니다. 이 기능은 지능형 함수 및 필드 제안을 제공하고 오류 *물결선*을 사용하여 DAX 식의 일부가 잘못된 경우 잘못된 부분을 알립니다. 또한 여러 줄(Alt + Enter) 및 들여쓰기(Tab)를 사용할 수 있습니다. 수식 입력줄 지금 할 수도 있습니다에 측정값 부분으로 주석을 작성할 입력 "/ /" 고 같은 줄에 이러한 문자는 주석으로 간주 합니다.
 
 ### <a name="dax-variables"></a>DAX 변수    
 이번 릴리스에서는 DAX의 변수를 지원합니다. 이제 나중에 다른 측정값 식에 인수로 전달될 수 있는 명명된 변수로 식의 결과를 저장할 수 있습니다. 일단 변수 식에 대한 결과 값이 계산되면 변수가 다른 식에서 참조되더라도 해당 값은 변경되지 않습니다. 자세한 내용은 [VAR Function](http://msdn.microsoft.com/library/mt243785.aspx)(VAR 함수)을 참조하세요.    
@@ -177,10 +173,10 @@ Visual Studio 2015의 코드 보기는 테이블 형식 1200 모델에 대한 JS
     }    
     ```    
     
-> [!WARNING]    
+> [!WARNING]
 > JSON을 직접 편집하지 마세요. 직접 편집하면 모델이 손상될 수 있습니다.    
- ### <a name="new-elements-in-ms-csdlbi-20-schema"></a>MS-CSDLBI 2.0 스키마의 새로운 요소    
- [MS-CSDLBI] 2.0 스키마에 정의된 **TProperty** 복합 형식에 다음 요소가 추가되었습니다.    
+>  ### <a name="new-elements-in-ms-csdlbi-20-schema"></a>MS-CSDLBI 2.0 스키마의 새로운 요소    
+>  [MS-CSDLBI] 2.0 스키마에 정의된 **TProperty** 복합 형식에 다음 요소가 추가되었습니다.    
     
 |요소|정의|    
 |-------------|----------------|    
@@ -189,7 +185,7 @@ Visual Studio 2015의 코드 보기는 테이블 형식 1200 모델에 대한 JS
     
 ## <a name="directquery"></a>DirectQuery    
 ### <a name="new-directquery-implementation"></a>새 DirectQuery 구현    
-이번 릴리스에서는 테이블 형식 1200 모델의 DirectQuery가 크게 향상되었습니다. 다음은 요약 내용입니다.    
+이번 릴리스에서는 테이블 형식 1200 모델의 DirectQuery가 크게 향상되었습니다. 요약 정보는 다음과 같습니다.    
 -   이제 DirectQuery에서 향상된 성능을 제공하는 보다 간단한 쿼리를 생성합니다.    
 -   모델 디자인 및 테스트에 사용되는 샘플 데이터 세트를 추가로 제어할 수 있습니다.    
 -   이제 테이블 형식 1200 모델의 DirectQuery 모드에서 RLS(행 수준 보안)가 지원됩니다. 이전에는 RLS를 사용하여 DirectQuery 모드에서 테이블 형식 모델을 배포할 수 없도록 했습니다.    

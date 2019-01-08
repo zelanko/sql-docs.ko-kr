@@ -21,12 +21,12 @@ ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1a82c376481b5c0bb563ea5c48be8053d70f0d52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8945ba72471855b2c3de5b169b12bea4cc2b656e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636571"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391348"
 ---
 # <a name="managedbackupspbackupondemand-transact-sql"></a>managed_backup.sp_backup_on_demand (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ EXEC managed_backup.sp_backup_on_demand
  백업을 수행할 데이터베이스의 이름입니다. 합니다 @database_name 됩니다 **SYSNAME**합니다.  
   
  @type  
- 수행할 백업 유형을: 데이터베이스 또는 로그 합니다. 합니다 @type 매개 변수가 **NVARCHAR(32)** 합니다.  
+ 수행할 백업 유형으로서,  데이터베이스 또는 로그입니다. 합니다 @type 매개 변수가 **NVARCHAR(32)** 합니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -65,7 +65,7 @@ EXEC managed_backup.sp_backup_on_demand
  멤버 자격이 필요 **db_backupoperator** 사용 하 여 데이터베이스 역할 **ALTER ANY CREDENTIAL** 권한 및 **EXECUTE** 에 대 한 권한을 **sp_delete_ backuphistory**저장 프로시저입니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 'TestDB' 데이터베이스에 대한 데이터베이스 백업 요청을 수행합니다. 이 데이터베이스에는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 설정되어 있습니다.  
+ 다음 예에서는 'TestDB' 데이터베이스에 대 한 데이터베이스 백업 요청을 합니다. 이 데이터베이스에는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 설정되어 있습니다.  
   
 ```  
 Use MSDB  

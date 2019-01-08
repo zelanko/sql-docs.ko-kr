@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQRT function
@@ -14,12 +13,12 @@ ms.assetid: 54a75389-c501-4e22-87b8-905f66d6a3a5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b223b4f96f70e2d7526bcf1c9f076733da167619
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a28999be5ed890e142d7d081637ab0f9aa1baaca
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103632"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822867"
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT(SSIS 식)
   숫자 식의 제곱근을 반환합니다.  
@@ -68,6 +67,6 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 >  식에서 변수 이름에는 항상 \@ 접두사가 포함되어 있어야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [함수 &#40;SSIS 식&#41;](functions-ssis-expression.md)  
+ [함수&#40;SSIS 식&#41;](functions-ssis-expression.md)  
   
   

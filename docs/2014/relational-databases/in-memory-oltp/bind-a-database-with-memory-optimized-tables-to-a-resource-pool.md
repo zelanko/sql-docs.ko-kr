@@ -10,12 +10,12 @@ ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8ee9e17df37ef97f8abe945405934e2aeb1364f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 635dabe67e8311d71097e445523de2be0974bc35
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152673"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537102"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩
   리소스 풀은 관리할 수 있는 물리적 리소스의 하위 집합을 나타냅니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스는 기본 리소스 풀의 리소스에 바인딩되고 이 리소스를 사용합니다. 하나 이상의 메모리 최적화 테이블에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 리소스를 사용하지 않고 다른 메모리 사용자가 메모리 최적화 테이블에 필요한 메모리를 사용하지 않게 하려면 별도의 리소스 풀을 만들어 메모리 최적화 테이블이 있는 데이터베이스의 메모리 사용을 관리해야 합니다.  
@@ -84,7 +84,7 @@ GO
 ###  <a name="bkmk_CreateResourcePool"></a> 리소스 풀 만들기 및 메모리 구성  
  메모리 최적화 테이블의 메모리를 구성할 때 용량 계획은 MAX_MEMORY_PERCENT가 아니라 MIN_MEMORY_PERCENT를 기준으로 해야 합니다.  MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT에 대한 자세한 내용은 [ALTER RESOURCE POOL&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-pool-transact-sql)을 참조하세요. 이렇게 하면 MIN_MEMORY_PERCENT로 인해 다른 리소스 풀에 대한 메모리 압력이 발생하여 메모리가 확실히 적용되므로 메모리 최적화 테이블의 메모리 가용성을 보다 효율적으로 예측할 수 있습니다. 메모리를 사용할 수 있고 OOM(메모리 부족) 조건을 방지할 수 있도록 하려면 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 값이 동일해야 합니다. 커밋된 메모리의 양에 따라 메모리 최적화 테이블에 사용 가능한 메모리의 비율은 아래 [메모리 최적화 테이블 및 인덱스에 사용 가능한 메모리 비율](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_percentavailable) 을 참조하세요.  
   
- VM 환경에서 작업할 때 자세한 내용은 [최선의 구현 방법: VM 환경에서 메모리 내 OLTP 사용](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) 을 참조하세요.  
+ [최선의 구현 방법: VM 환경에서 메모리 내 OLTP를 사용 하 여](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) VM 환경에서 작업할 때 자세한 내용은 합니다.  
   
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드에서는 메모리의 절반을 사용할 수 있는 Pool_IMOLTP라는 리소스 풀을 만듭니다.  풀이 만들어진 후 Pool_IMOLTP를 포함하도록 리소스 관리자가 다시 구성됩니다.  
   
@@ -140,7 +140,7 @@ GO
  이제 데이터베이스가 리소스 풀에 바인딩됩니다.  
   
 ##  <a name="bkmk_ChangeAllocation"></a> 기존 풀에서 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 변경  
- 서버에 메모리를 더 추가하거나 메모리 최적화 테이블에 필요한 메모리 양이 변경되면 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 값을 수정해야 합니다. 다음 단계에서는 리소스 풀에서 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT의 값을 변경하는 방법을 보여 줍니다. MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT에 사용할 값에 대한 지침은 아래 섹션을 참조하십시오.  자세한 내용은 [최선의 구현 방법: VM 환경에서 메모리 내 OLTP 사용](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) 항목을 참조하세요.  
+ 서버에 메모리를 더 추가하거나 메모리 최적화 테이블에 필요한 메모리 양이 변경되면 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 값을 수정해야 합니다. 다음 단계에서는 리소스 풀에서 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT의 값을 변경하는 방법을 보여 줍니다. MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT에 사용할 값에 대한 지침은 아래 섹션을 참조하십시오.  자세한 내용은 [모범 사례: VM 환경에서 메모리 내 OLTP를 사용 하 여](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) 자세한 내용은 합니다.  
   
 1.  `ALTER RESOURCE POOL` 을 사용해서 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 값을 모두 변경합니다.  
   
@@ -163,7 +163,7 @@ GO
 ##  <a name="bkmk_PercentAvailable"></a> 메모리 최적화 테이블 및 인덱스에 사용 가능한 메모리 비율  
  메모리 최적화 테이블과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업을 동일한 리소스 풀에 매핑하면 리소스 관리자는 풀 사용자가 풀 사용에서 충돌을 일으키지 않도록 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 사용에 대한 내부 임계값을 설정합니다. 일반적으로 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 사용에 대한 임계값은 풀의 약 80%입니다. 다음 표에서는 다양한 메모리 크기에 대한 실제 임계값을 보여 줍니다.  
   
- [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 데이터베이스의 전용 리소스 풀을 만드는 경우 행 버전과 데이터 증가율을 고려한 후 메모리 내 테이블에 필요한 물리적 메모리 양을 추정해야 합니다. 필요한 메모리를 추정했으면 DMV `sys.dm_os_sys_info` 에서 ‘committed_target_kb’ 열에 반영된 대로 SQL 인스턴스의 커밋 대상 메모리 비율을 사용하여 리소스 풀을 만듭니다( [sys.dm_os_sys_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql)참조). 예를 들어, 인스턴스에 사용할 수 있는 총 메모리의 40%로 리소스 풀 P1을 만들 수 있습니다. 이 40%에서 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 엔진은 더 적은 비율을 사용하여 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 데이터를 저장합니다.  이는 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 에서 이 풀의 메모리를 모두 사용하지 않도록 하기 위한 것입니다.  이 비율 값은 대상에 커밋된 메모리에 따라 다릅니다. 다음 테이블은 OOM 오류가 발생하기 전 리소스 풀(명명된 또는 기본값)의 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 데이터베이스에서 사용할 수 있는 메모리에 대해 설명합니다.  
+ [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 데이터베이스의 전용 리소스 풀을 만드는 경우 행 버전과 데이터 증가율을 고려한 후 메모리 내 테이블에 필요한 물리적 메모리 양을 추정해야 합니다. 필요한 메모리를 추정했으면 DMV `sys.dm_os_sys_info`에서 ‘committed_target_kb’ 열에 반영된 대로 SQL 인스턴스의 커밋 대상 메모리 비율을 사용하여 리소스 풀을 만듭니다([sys.dm_os_sys_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql) 참조). 예를 들어, 인스턴스에 사용할 수 있는 총 메모리의 40%로 리소스 풀 P1을 만들 수 있습니다. 이 40%에서 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 엔진은 더 적은 비율을 사용하여 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 데이터를 저장합니다.  이는 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 에서 이 풀의 메모리를 모두 사용하지 않도록 하기 위한 것입니다.  이 비율 값은 대상에 커밋된 메모리에 따라 다릅니다. 다음 테이블은 OOM 오류가 발생하기 전 리소스 풀(명명된 또는 기본값)의 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 데이터베이스에서 사용할 수 있는 메모리에 대해 설명합니다.  
   
 |대상에 커밋된 메모리|메모리 내 테이블에서 사용할 수 있는 비율|  
 |-----------------------------|---------------------------------------------|  
@@ -173,7 +173,7 @@ GO
 |\<= 96GB|85%|  
 |>96GB|90%|  
   
- 예를 들어, ‘대상에 커밋된 메모리’가 100GB인 경우 메모리 최적화 테이블과 인덱스에 60GB의 메모리가 필요한 것으로 추정한 다음 MAX_MEMORY_PERCENT = 67(60GB의 필요량/0.90 = 66.667GB – 67GB로 반올림됨. 67GB/100GB의 설치량 = 67%)의 리소스 풀을 만들어 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 개체에 필요한 60GB를 확보하도록 할 수 있습니다.  
+ 예를 들어, ‘대상에 커밋된 메모리’가 100GB인 경우 메모리 최적화 테이블과 인덱스에 60GB의 메모리가 필요한 것으로 추정한 다음, MAX_MEMORY_PERCENT = 67(60GB의 필요량/0.90 = 66.667GB – 67GB로 반올림됨. 67GB/100GB의 설치량 = 67%)의 리소스 풀을 만들어 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 개체에 필요한 60GB를 확보하도록 할 수 있습니다.  
   
  데이터베이스가 명명된 리소스 풀에 바인딩되면 다음 쿼리를 사용하여 다른 리소스 풀 전반의 메모리 할당량을 확인합니다.  
   
@@ -203,7 +203,7 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
   
  자세한 내용은 [sys.dm_resource_governor_resource_pools(Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql)를 참조하세요.  
   
- 데이터베이스를 명명된 리소스 풀에 바인딩하지 않으면 '기본' 풀에 바인딩됩니다. 기본 리소스 풀은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 대다수의 다른 할당에 사용되므로 DMV sys.dm_resource_governor_resource_pools를 사용하여 원하는 데이터베이스에 대해 메모리 최적화 테이블에서 사용하는 메모리를 모니터링할 수 없습니다.  
+ 데이터베이스를 명명된 리소스 풀에 바인딩하지 않으면 ‘기본’ 풀에 바인딩됩니다. 기본 리소스 풀은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 대다수의 다른 할당에 사용되므로 DMV sys.dm_resource_governor_resource_pools를 사용하여 원하는 데이터베이스에 대해 메모리 최적화 테이블에서 사용하는 메모리를 모니터링할 수 없습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [sys.sp_xtp_bind_db_resource_pool&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)   

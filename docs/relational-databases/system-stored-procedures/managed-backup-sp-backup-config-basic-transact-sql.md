@@ -21,12 +21,12 @@ ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7722193dc643b4fd5afaa9a21559febe137cba6b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f3345e2b27a14285f3b9a3bfffd1ec95549ef124
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662852"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201822"
 ---
 # <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ EXEC managed_backup.sp_backup_config_basic
  @credential_name  
  Windows Azure 저장소 계정 인증에 사용되는 SQL 자격 증명의 이름입니다. @credentail_name 됩니다 **SYSNAME**합니다. 지정 하면 백업 페이지 blob에 저장 됩니다. 이 매개 변수가 NULL 인 경우 백업 블록 blob으로 저장 됩니다. 페이지 blob에 백업 하는 것이 좋습니다 새 블록 blob의 백업 기능을 사용 하므로 사용 되지 않습니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 구성 변경에 사용하는 경우 이 매개 변수는 선택 사항입니다. 지정 하지 않으면 기존 구성 값이 유지 됩니다.  
   
-> [!WARNING]  
+> [!WARNING]
 >  합니다 **@credential_name** 지금은 매개 변수를 사용할 수 없습니다. Null이이 매개 변수를 요구 하는 블록 blob에만 백업이 지원 됩니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  

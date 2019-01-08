@@ -19,12 +19,12 @@ ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13a011ab9545b9e5b9f02daf46654b0f8253a66d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bcca4bc6161526d1bd78e55bc9452f2d7d9d69d3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142520"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776185"
 ---
 # <a name="mapping-data-types-odbc"></a>데이터 형식 매핑(ODBC)
   합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 맵 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL 데이터 형식을 ODBC SQL 데이터 형식입니다. 아래 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL 데이터 형식과 이러한 데이터 형식이 매핑되는 ODBC SQL 데이터 형식에 대해 설명합니다. 또한 ODBC SQL 데이터 형식 및 해당 ODBC C 데이터 형식과 지원되는 변환 및 기본 변환에 대해 설명합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48142520"
 ## <a name="dealing-with-sqlvariant-data-type-in-odbc"></a>ODBC의 sql_variant 데이터 형식 처리  
  **sql_variant** 데이터 형식의 열 데이터 형식 중 하나를 포함할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 같은 Lob (large object)를 제외한 **텍스트**를 **ntext**, 및  **이미지**합니다. 예를 들어 열 포함할 수 있습니다 **smallint** 일부 행에 값 **float** 다른 행에 대 한 값 및 **char/nchar** 나머지의 값입니다.  
   
- 합니다 **sql_variant** 데이터 형식은 비슷합니다 합니다 **Variant** Microsoft Visual Basic®의 데이터 형식입니다.  
+ 합니다 **sql_variant** 데이터 형식은 비슷합니다 합니다 **Variant** Microsoft Visual Basic 데이터 형식?? 합니다.  
   
 ### <a name="retrieving-data-from-the-server"></a>서버에서 데이터 검색  
  ODBC 없는 variant 형식의 개념이의 사용을 제한 합니다 **sql_variant** 데이터 형식에서 ODBC 드라이버를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]바인딩이 지정 하는 경우는 **sql_variant** 데이터 형식을 문서화 된 ODBC 데이터 형식 중 하나에 바인딩해야 합니다. **SQL_CA_SS_VARIANT_TYPE**, 관련 새 특성을를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버의 인스턴스 데이터 형식을 반환 합니다 **sql_variant** 사용자에 게 열입니다.  

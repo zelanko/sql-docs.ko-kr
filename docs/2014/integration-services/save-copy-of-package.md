@@ -15,12 +15,12 @@ ms.assetid: 7b44c0d7-d8fa-4491-8836-0899f621d3a8
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0cd386cad85726707f1ce3ea9f7931bda4e66c25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c9018dcf8ae02d939f7ba3bc29d46231ef39d1f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140503"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545554"
 ---
 # <a name="save-copy-of-package"></a>패키지 복사본 저장
   **에서 사용할 수 있는** 패키지 복사본 저장 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]대화 상자를 통해 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 패키지 복사본을 다른 위치에 저장하고 필요에 따라 패키지의 보호 수준을 수정할 수 있습니다.  
@@ -54,15 +54,15 @@ ms.locfileid: "48140503"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하는 경우 암호를 입력합니다.  
   
  **패키지 경로**  
- 패키지 경로를 입력하거나 찾아보기 **(...)** 단추를 클릭한 다음 패키지를 저장할 폴더를 찾습니다.  
+ 패키지 경로 입력 하거나 찾아보기 **(...)**  단추 및 패키지를 저장할 폴더를 찾습니다.  
   
  **보호 수준**  
- 찾아보기 **(...)** 단추를 클릭한 다음 **패키지 보호 수준** 대화 상자에서 보호 수준을 업데이트합니다. 자세한 내용은 [패키지 및 프로젝트 보호 수준 대화 상자](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)를 참조하세요.  
+ 찾아보기 **(...)**  단추를에서 보호 수준을 업데이트 합니다 **패키지 보호 수준** 대화 상자. 자세한 내용은 [패키지 및 프로젝트 보호 수준 대화 상자](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [패키지 가져오기 대화 상자 UI 참조](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [패키지 내보내기 대화 상자 UI 참조](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [패키지 저장](save-packages.md)   
- [패키지 가져오기 및 내보내기 &#40;SSIS 서비스&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
+ [패키지 가져오기 및 내보내기&#40;SSIS 서비스&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   
