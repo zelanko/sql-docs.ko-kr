@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - messages [SQL Server], SQL Server Agent
@@ -15,12 +15,12 @@ ms.assetid: 2597d0d7-951a-48cf-989f-abb67b9fdb36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2ab4aa53c70c15615f3d2ce4f780f2095c1fecec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 75c7fbe2997c84963f2ed1d420840b514fb89860
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141533"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779045"
 ---
 # <a name="send-sql-server-agent-error-messages"></a>Send SQL Server Agent Error Messages
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 오류 메시지를 net send를 통해 보내도록 해당 에이전트를 구성하는 방법에 대해 설명합니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "48141533"
   
 2.  **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-3.  **SQL Server 에이전트 속성-***server_name* 대화 상자의 **일반** 페이지에 있는 **오류 로그**에서 **Net send 수신자** 상자에 오류 메시지를 보내려는 사용자 이름 또는 컴퓨터 이름을 입력합니다.  
+3.  에 **SQL Server 에이전트 속성-* * * server_name* 대화 상자의 **오류 로그** 에 **일반** 페이지를 보내려는 사용자 이름 또는 컴퓨터 이름을 입력 오류 메시지를 **Net send 수신자** 상자입니다.  
   
 4.  **확인**을 클릭합니다.  
   

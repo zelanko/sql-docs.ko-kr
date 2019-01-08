@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 66f178ecbfd65d9788790d64229785e3f86cc351
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: HT
+ms.openlocfilehash: 4c96a85ceb4347d663735dfb310764be1052860e
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148125"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52984054"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>다차원 모델 데이터 액세스(Analysis Services - 다차원 데이터)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "50148125"
 |AMO(Analysis Services Management Objects)|AMO는 코드에서 Analysis Services 인스턴스 및 다차원 데이터베이스를 관리하는 기본 개체 모델입니다. 예를 들어 SQL Server Management Studio는 AMO를 사용하여 서버 및 데이터베이스 관리를 지원합니다. 자세한 내용은 [AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)을 참조하세요.|  
 |ADOMD.NET|ADOMD.NET은 사용자 지정 애플리케이션에서 다차원 데이터를 만들고 액세스하는 기본 개체 모델입니다. 관리되는 클라이언트 애플리케이션에서 ADOMD.NET을 사용하여 공용 Microsoft .NET Framework 데이터 액세스 인터페이스를 통해 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 정보를 검색할 수 있습니다. 자세한 내용은 [ADOMD.NET을 사용하여 개발](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net) 및 [ADOMD.NET 클라이언트 프로그래밍](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming)을 참조하세요.|  
 |Analysis Services OLE DB 공급자(MSOLAP.dll)|네이티브 OLE DB 공급자를 사용하여 관리되지 않는 API에서 프로그래밍 방식으로 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 액세스할 수 있습니다. 자세한 내용은 [Analysis Services OLE DB 공급자&#40;Analysis Services - 다차원 데이터&#41;](http://msdn.microsoft.com/library/cdeecd50-1d91-4162-a4a2-01c7799b02a8)를 참조하세요.|  
-|스키마 행 집합|스키마 행 집합 테이블은 서버에 배포된 다차원 모델에 대한 정보 및 서버의 현재 작업에 대한 설명 정보를 포함하는 데이터 구조입니다. 프로그래머는 클라이언트 애플리케이션에서 스키마 행 집합 테이블을 쿼리하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에 저장된 메타데이터를 검토하고 지원 및 모니터링 정보를 검색할 수 있습니다. OLE DB, Analysis Services용 OLE DB, 데이터 마이닝용 OLE DB 또는 XMLA 프로그래밍 인터페이스를 통해 스키마 행 집합을 사용할 수 있습니다. 자세한 내용은 [Analysis Services 스키마 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)을 참조하세요.<br /><br /> 다음 목록에서는 스키마 행 집합을 사용하는 몇 가지 방법에 대해 설명합니다.<br /><br /> SQL Server Management Studio 또는 사용자 지정 보고서에서 DMV 쿼리를 실행하여 SQL 구문을 통해 스키마 행 집합에 액세스합니다. 자세한 내용은 [DMV&#40;동적 관리 뷰&#41;를 사용하여 Analysis Services 모니터링](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)을 참조하세요.<br /><br /> -스키마 행 집합을 호출하는 ADOMD.NET 코드를 작성합니다.<br /><br /> - [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에 대해 직접 XMLA **Discover** 메서드를 실행하여 스키마 행 집합 정보를 검색합니다. 자세한 내용은 [Discover 메서드&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)를 참조하세요.|  
+|스키마 행 집합|스키마 행 집합 테이블은 서버에 배포된 다차원 모델에 대한 정보 및 서버의 현재 작업에 대한 설명 정보를 포함하는 데이터 구조입니다. 프로그래머는 클라이언트 애플리케이션에서 스키마 행 집합 테이블을 쿼리하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에 저장된 메타데이터를 검토하고 지원 및 모니터링 정보를 검색할 수 있습니다. OLE DB, Analysis Services용 OLE DB, 데이터 마이닝용 OLE DB 또는 XMLA와 같은 프로그래밍 인터페이스를 통해 스키마 행 집합을 사용할 수 있습니다. 자세한 내용은 [Analysis Services 스키마 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)을 참조하세요.<br /><br /> 다음 목록에서는 스키마 행 집합을 사용하는 몇 가지 방법에 대해 설명합니다.<br /><br /> SQL Server Management Studio 또는 사용자 지정 보고서에서 DMV 쿼리를 실행하여 SQL 구문을 통해 스키마 행 집합에 액세스합니다. 자세한 내용은 [DMV&#40;동적 관리 뷰&#41;를 사용하여 Analysis Services 모니터링](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)을 참조하세요.<br /><br /> -스키마 행 집합을 호출하는 ADOMD.NET 코드를 작성합니다.<br /><br /> - [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에 대해 직접 XMLA **Discover** 메서드를 실행하여 스키마 행 집합 정보를 검색합니다. 자세한 내용은 [Discover 메서드&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)를 참조하세요.|  
 |XMLA|XMLA는 Analysis Services 프로그래머가 사용할 수 있는 가장 낮은 수준의 API이며 모든 Analysis Services 데이터 액세스 방법의 공통 분모입니다. XMLA는 HTTP 연결에서 사용할 수 있는 모든 표준 다차원 데이터 원본에 대한 범용 데이터 액세스를 지원하는 산업 표준, SOAP 기반 XML 프로토콜입니다. XMLA는 SOAP를 사용하여 다차원 데이터에 대한 요청 및 응답을 작성합니다. 애플리케이션이 Windows 이외의 플랫폼에서 실행되는 경우 XMLA를 사용하여 네트워크의 Windows 서버에서 실행되고 있는 다차원 데이터베이스에 액세스할 수 있습니다. 자세한 내용은 [Analysis Services에서 XMLA를 사용하여 개발](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)을 참조하세요.|  
 |ASSL(Analysis Services Scripting Language)|ASSL은 XMLA 프로토콜의 Analysis Services 확장에 적용되는 설명적인 용어입니다. XMLA 프로토콜에서 설명하는 Execute와 Discover 메서드 외에 ASSL은 다음과 같은 기능을 추가합니다.<br /><br /> -XMLA 스크립트<br /><br /> -XMLA 개체 정의<br /><br /> -XMLA 명령<br /><br /> ASSL 확장을 통해 Analysis Services는 프로토콜에서 기본적으로 제공하는 기능 외에 데이터 정의, 데이터 조작 및 데이터 제어 지원까지 추가하여 XMLA 구문을 사용할 수 있습니다. 자세한 내용은 [ASSL&#40;Analysis Services Scripting Language&#41;을 사용하여 개발](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)를 참조하십시오.|  
   
@@ -89,6 +89,6 @@ ms.locfileid: "50148125"
  [Analysis Services에 연결](../../../analysis-services/instances/connect-to-analysis-services.md)   
  [ASSL&#40;Analysis Services Scripting Language&#41;을 사용하여 개발](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Analysis Services에서 XMLA를 사용하여 개발](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
- [테이블 형식 모델 데이터 액세스](../../../analysis-services/tabular-models/tabular-model-data-access.md)  
+
   
   

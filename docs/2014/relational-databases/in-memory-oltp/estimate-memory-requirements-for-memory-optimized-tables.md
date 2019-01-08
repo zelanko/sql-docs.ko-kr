@@ -10,15 +10,15 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3471abb7a551de576dfdf01de2a5fcf980b60527
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37931bd25b0a2024e555a7881397fd558d2f260a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061273"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509235"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 필요한 메모리 예측
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 메모리 최적화 새 테이블을 만들든, 기존 디스크 기반 테이블을 메모리 최적화 테이블로 마이그레이션하든 간에 충분한 메모리로 서버를 프로비전할 수 있도록 각 테이블에 필요한 메모리를 적절히 예측하는 것이 중요합니다. 이 섹션에서는 메모리 최적화 테이블의 데이터를 저장하는 데 필요한 메모리 양을 예측하는 방법에 대해 설명합니다.  
+  작성 하는 경우 새 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 충분 한 사용 하 여 서버를 프로 비전 할 수 있도록 각 테이블의 메모리 요구 사항을 적절히 추정 하는 것이 중요은 메모리 액세스에 최적화 된 테이블 또는 메모리 최적화 테이블에 기존 디스크 기반 테이블 마이그레이션 메모리입니다. 이 섹션에서는 메모리 최적화 테이블의 데이터를 저장하는 데 필요한 메모리 양을 예측하는 방법에 대해 설명합니다.  
   
  디스크 기반 테이블에서 메모리 최적화 테이블로 마이그레이션을 고려하는 경우 이 항목을 진행하기 전에 마이그레이션에 가장 적합한 테이블에 대한 지침에 대해 [메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) 항목을 참조하세요. [메모리 내 OLTP로 마이그레이션](migrating-to-in-memory-oltp.md) 아래의 모든 항목은 디스크 기반 테이블에서 메모리 최적화 테이블로 마이그레이션하는 지침을 제공합니다.  
   
@@ -77,7 +77,7 @@ GO
   
  **테이블의 행에 대 한 메모리**  
   
- 위의 계산에서 메모리 최적화 테이블의 각 행 크기는 24 + 32 + 200 또는 256바이트입니다.  행이 5백만 개이므로 테이블은 5,000,000 * 256바이트 또는 1,280,000,000바이트, 즉 1.28GB 정도를 사용합니다.  
+ 위의 계산에서 메모리 최적화 테이블의 각 행 크기는 24 + 32 + 200 또는 256바이트입니다.  행이 500만 개이므로 테이블은 5,000,000 * 256바이트 또는 1,280,000,000바이트, 즉 1.28GB 정도를 사용합니다.  
   
 ##  <a name="bkmk_IndexMeemory"></a> 인덱스에 대한 메모리  
  **각 해시 인덱스에 대 한 메모리**  
@@ -115,7 +115,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  해시 인덱스가 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 메모리 최적화 테이블에서 작동하는 방식에 대한 자세한 내용은 [해시 인덱스](../../database-engine/hash-indexes.md)를 참조하세요.  
   
- **참고:** 즉석에서 해시 인덱스 배열 크기를 변경할 수 없습니다. 해시 인덱스 배열 크기를 변경하려면 테이블을 삭제하고 bucket_count 값을 변경한 다음 테이블을 다시 만들어야 합니다.  
+ **참고:** 즉석에서 해시 인덱스 배열 크기를 변경할 수는 없습니다. 해시 인덱스 배열 크기를 변경하려면 테이블을 삭제하고 bucket_count 값을 변경한 다음 테이블을 다시 만들어야 합니다.  
   
  **해시 인덱스 배열 크기를 설정합니다.**  
   
@@ -173,7 +173,7 @@ SELECT * FROM t_hk
 ##  <a name="bkmk_MemoryForGrowth"></a> 증가에 대한 메모리  
  위의 계산에서는 현재 상태의 테이블에 필요한 메모리를 예측합니다. 이 메모리 외에도 테이블의 증가를 예측하고 이러한 증가를 수용하는 데 충분한 메모리를 제공해야 합니다.  예를 들어 10% 증가를 예상하는 경우 위의 결과에 1.1을 곱하여 테이블에 필요한 총 메모리를 얻어야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [메모리 내 OLTP로 마이그레이션](migrating-to-in-memory-oltp.md)  
   
   

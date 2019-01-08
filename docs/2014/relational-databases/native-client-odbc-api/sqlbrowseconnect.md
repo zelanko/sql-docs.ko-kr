@@ -14,12 +14,12 @@ ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5300285872c0c03ce25410ba0bfd636c7ccf6bca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d9cb9439dd76c636df46b8ac3d737d79415b5ea5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208536"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352679"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
   **SQLBrowseConnect** 연결 정보의 세 가지 수준으로 분류할 수 있는 키워드를 사용 합니다. 다음 표에서는 각 키워드에 대해 유효한 값 목록의 반환 여부와 키워드가 선택 사항인지 여부를 보여 줍니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "48208536"
 |키워드|목록 반환 여부|선택 사항 여부|Description|  
 |-------------|--------------------|---------------|-----------------|  
 |DSN|해당 사항 없음|아니요|데이터 소스에서 반환 되는 이름 **SQLDataSources**. DRIVER 키워드가 사용되는 경우에는 DSN 키워드를 사용할 수 없습니다.|  
-|DRIVER|해당 사항 없음|아니요|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 ODBC 드라이버 이름이 {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 11}. DSN 키워드가 사용되는 경우에는 DRIVER 키워드를 사용할 수 없습니다.|  
+|DRIVER|해당 사항 없음|아니요|Microsoft?? [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 이름은 {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}입니다. DSN 키워드가 사용되는 경우에는 DRIVER 키워드를 사용할 수 없습니다.|  
   
 ## <a name="level-2"></a>수준 2  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48208536"
 |SQL_COPT_SS_BROWSE_CACHE_DATA에 대한 설명을 포함시켰습니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLBrowseConnect 함수](http://go.microsoft.com/fwlink/?LinkId=59329)   
+ [SQLBrowseConnect 함수](https://go.microsoft.com/fwlink/?LinkId=59329)   
  [ODBC API 구현 정보](odbc-api-implementation-details.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 테이블 삭제 | Microsoft Docs
+title: Analysis Services 테이블 형식 모델에서 테이블 삭제 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: de1fa5d58beb36a5f3a7ce6eee0c09c5636acfd4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f47b8eec9642fa9553f6b2e25196b82b38b56a91
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039989"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072127"
 ---
 # <a name="delete-a-table"></a>테이블 삭제
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34039989"
   
 -   해당 테이블을 사용하여 계산 열을 만든 경우 해당 테이블의 열도 삭제됩니다. 다른 테이블에서 삭제된 테이블의 열을 사용하는 계산 열에서는 오류가 표시됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [테이블 및 열](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

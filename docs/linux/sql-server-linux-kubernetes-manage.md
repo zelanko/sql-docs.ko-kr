@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1760256333abad2c6ae32d0aa2a94e1deaebd551
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: ad4f310ce6c0e200d5e658b3d5814131000d0004
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356364"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518489"
 ---
 # <a name="manage-sql-server-always-on-availability-group-kubernetes"></a>SQL Server 가용성 그룹 Kubernetes Always On 관리
 
@@ -37,7 +37,7 @@ Always On 가용성 그룹에서 kubernetes를 관리 하려면 매니페스트�
 
   사용자 환경에 대 한 파일을 업데이트 합니다.
 
-  - 대체 `<containerName>` 예상 되는 가용성 그룹 대상의 이름입니다.
+  - 대체 `<containerName>` pod 이름 (예:: mssql2-0) 예상 되는 가용성 그룹 대상으로 합니다.
   - 가용성 그룹에 없는 경우는 `ag1` 네임 스페이스 대체 `ag1` 네임 스페이스를 사용 하 여 합니다.
 
   이 파일은 명명 된 장애 조치 작업을 정의 `manual-failover`합니다.
@@ -63,7 +63,7 @@ Always On 가용성 그룹에서 kubernetes를 관리 하려면 매니페스트�
   다음 예제에서는 명명 된 작업의 상태를 반환 합니다. `manual-failover`합니다.
 
   ```azurecli
-  kubectl describe jobs/manual-failover -–namespace ag1
+  kubectl describe jobs/manual-failover --namespace ag1
   ```
 
 1. 수동 장애 조치 작업을 삭제 합니다. 
@@ -76,7 +76,7 @@ Always On 가용성 그룹에서 kubernetes를 관리 하려면 매니페스트�
   다음 명령은 작업을 삭제 합니다.
 
   ```azurecli
-  kubectl delete jobs manual-failover -–namespace ag1
+  kubectl delete jobs manual-failover --namespace ag1
   ```
 
 ## <a name="rotate-credentials"></a>자격 증명 회전
@@ -127,7 +127,7 @@ kubectl create secret generic new-sql-secrets --from-literal=sapassword="<>" --f
 
   Kubernetes 마스터 키를 업데이트 하 고 `sa` 가용성 그룹에 SQL Server의 단일 인스턴스에 대 한 암호입니다.
 
-1. 작업이 완료 되었는지 확인 합니다. 다음 명령을 실행 합니다: 작업이 완료 되 고 있는지를 확인 하려면 
+1. 작업이 완료 되었는지 확인 합니다. 다음 명령을 실행합니다. 작업이 완료 되 고 있는지를 확인. 
 
   ```azcli
   kubectl describe job rotate-creds --namespace ag1

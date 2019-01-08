@@ -14,15 +14,15 @@ ms.assetid: cba0e02b-b201-4863-bf1b-9164e68e5fa8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e0c243dcacf653167477137e26f0767985f6fa3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef0dfbb1c0e62bbe5301f769ee0f3e4d585b06b6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150873"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521265"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>쿼리 편집기를 사용하여 확장 이벤트 세션 만들기
-  쿼리 편집기를 사용하거나 개체 탐색기에서 확장 이벤트 세션을 만들 수 있습니다. 개체 탐색기에서 확장 이벤트는 이벤트 세션 데이터를 생성, 수정 및 보는 데 사용할 수 있는 두 가지 인터페이스를 제공합니다. 즉, 마법사는 이벤트 세션 생성 프로세스를 단계별로 안내하고 새 세션 UI는 고급 구성 옵션을 제공합니다. 확장 이벤트 세션을 만들어 SQL Server 추적을 진단하면 다음과 같은 문제를 해결할 수 있습니다.  
+  쿼리 편집기를 사용하거나 개체 탐색기에서 확장 이벤트 세션을 만들 수 있습니다. 개체 탐색기에서 확장 이벤트 만들기, 수정 및 이벤트 세션 데이터-이벤트 세션 생성 프로세스를 안내 하는 마법사 및 고급 구성 옵션을 제공 하는 새 세션 UI를 확인 하 여 두 개의 사용자 인터페이스를 제공 합니다. 확장 이벤트 세션을 만들어 SQL Server 추적을 진단하면 다음과 같은 문제를 해결할 수 있습니다.  
   
 -   가장 비용이 많이 드는 쿼리 찾기  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48150873"
   
  새 세션 마법사를 사용하여 확장 이벤트 세션을 만드는 방법은 [마법사를 사용하여 확장 이벤트 세션 만들기&#40;개체 탐색기&#41;](../ssms/object/object-explorer.md)를 참조하세요. 새 세션 UI를 사용하여 확장 이벤트 세션을 만드는 방법은 [새 세션 대화 상자를 사용하여 확장 이벤트 세션 만들기](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)를 참조하세요.  
   
-##  <a name="BeforeYouBegin"></a> 사용 권한  
+##  <a name="BeforeYouBegin"></a> Permissions  
  확장 이벤트 세션을 만들려면 ALTER ANY EVENT SESSION 권한이 있어야 합니다.  
   
 ## <a name="creating-an-extended-events-session-using-query-editor"></a>쿼리 편집기를 사용하여 확장 이벤트 세션 만들기  
@@ -219,7 +219,7 @@ ADD TARGET package0.asynchronous_file_target
    (SET filename = 'c:\temp\xelog.xel', metadatafile = 'c:\temp\xelog.xem')  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [CREATE EVENT SESSION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [SQL Server 확장 이벤트 대상](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [SQL Server 확장 이벤트 패키지](../relational-databases/extended-events/sql-server-extended-events-packages.md)  

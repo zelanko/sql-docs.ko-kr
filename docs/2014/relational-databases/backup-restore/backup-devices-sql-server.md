@@ -25,12 +25,12 @@ ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0d6cd424915692bcdfbe258975b8cf771ad80eba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 7cd01f1a3c98bcf0d67ab0224772538a7a82514d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084829"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520143"
 ---
 # <a name="backup-devices-sql-server"></a>백업 디바이스(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 백업 작업 중에 백업되는 데이터인 *백업*은 물리적 백업 장치에 기록됩니다. 이 물리적 백업 디바이스는 미디어 세트의 첫 번째 백업을 디바이스에 기록할 때 초기화됩니다. 하나 이상의 백업 디바이스 세트에서의 백업이 미디어 세트 하나를 구성합니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "48084829"
   
  BACKUP DATABASE *database_name*  
   
- TO DISK **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ TO DISK **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
  이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
@@ -100,7 +100,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM DISK **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ FROM DISK **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
  예:  
   
@@ -110,13 +110,13 @@ RESTORE DATABASE AdventureWorks2012
 ```  
   
 ###  <a name="BackupFileDiskPath"></a> 디스크 백업 파일의 경로 지정합니다.  
- 백업 파일을 지정할 경우 전체 경로 및 파일 이름을 입력해야 합니다. 파일에 백업할 때 파일 이름이나 상대 경로만 지정하면 백업 파일이 기본 백업 디렉터리에 저장됩니다. 기본 백업 디렉터리는 C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup입니다. 여기서 *n* 은 서버 인스턴스의 번호입니다. 따라서 기본 서버 인스턴스의 기본 백업 디렉터리는 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup입니다.  
+ 백업 파일을 지정할 경우 전체 경로 및 파일 이름을 입력해야 합니다. 파일에 백업할 때 파일 이름이나 상대 경로만 지정하면 백업 파일이 기본 백업 디렉터리에 저장됩니다. 기본 백업 디렉터리는 C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup입니다. 여기서 *n* 은 서버 인스턴스의 번호입니다. 따라서 기본 서버 인스턴스의 경우 기본 백업 디렉터리는 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup입니다.  
   
  특히 스크립트에서 모호성을 피하기 위해 모든 DISK 절에 백업 디렉터리의 경로를 명시적으로 지정하는 것이 좋습니다. 그러나 쿼리 편집기를 사용할 경우 이는 그다지 중요하지 않습니다. 쿼리 편집기를 사용할 경우 백업 파일이 확실히 기본 백업 디렉터리에 있으면 DISK 절에서 경로를 생략할 수 있습니다. 예를 들어 다음 `BACKUP` 문은 기본 백업 디렉터리에 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 백업합니다.  
   
 ```  
 BACKUP DATABASE AdventureWorks2012   
-   TO DISK = ’AdventureWorks2012.bak’;  
+   TO DISK = 'AdventureWorks2012.bak';  
 GO  
 ```  
   
@@ -136,7 +136,7 @@ GO
     >  네트워크를 통해 데이터를 백업하면 네트워크 오류가 발생하기 쉬우므로 원격 디스크를 사용하는 경우 완료 후에 백업 작업을 확인하는 것이 좋습니다. 자세한 내용은 [RESTORE VERIFYONLY&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)를 참조하세요.  
   
 #### <a name="specifying-a-universal-naming-convention-unc-name"></a>UNC(Universal Naming Convention) 이름 지정  
- 백업이나 복원 명령에서 네트워크 공유를 지정하려면 백업 디바이스에 정규화된 UNC 파일 이름을 사용해야 합니다. UNC 이름은 **\\\\***Systemname***\\***ShareName***\\***Path***\\***FileName* 형식입니다.  
+ 백업이나 복원 명령에서 네트워크 공유를 지정하려면 백업 디바이스에 정규화된 UNC 파일 이름을 사용해야 합니다. UNC 이름은 **\\\\**_Systemname_**\\**_ShareName_**\\**_Path_**\\**_FileName_.  
   
  이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
@@ -174,7 +174,7 @@ GO
   
  BACKUP { DATABASE | LOG } *database_name*  
   
- TO TAPE **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ TO TAPE **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
  이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
@@ -188,7 +188,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM TAPE **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ FROM TAPE **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
 ###  <a name="TapeOptions"></a> 테이프와 관련 된 BACKUP 및 RESTORE 옵션 (TRANSACT-SQL)  
  테이프를 편리하게 관리할 수 있도록 BACKUP 문은 다음과 같은 테이프 관련 옵션을 제공합니다.  
@@ -207,7 +207,7 @@ GO
 ###  <a name="OpenTapes"></a> 열려 있는 테이프 관리  
  열려 있는 테이프 디바이스 목록 및 탑재 요청 상태를 보려면 [sys.dm_io_backup_tapes](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql) 동적 관리 뷰를 쿼리합니다. 이 뷰는 다음 BACKUP 또는 RESTORE 작업을 기다리는 동안 일시적으로 유휴 상태에 있는 사용 중인 테이프를 비롯하여 열려 있는 모든 테이프를 표시합니다.  
   
- 테이프가 실수로 열려 있는 경우, 테이프를 가장 빨리 해제하는 방법으로 RESTORE REWINDONLY FROM TAPE **=***backup_device_name* 명령을 사용할 수 있습니다. 자세한 내용은 [RESTORE REWINDONLY&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql)를 참조하세요.  
+ 테이프를 실수로 열어 놓은 경우 테이프를 해제하는 가장 빠른 방법은 RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_합니다. 자세한 내용은 [RESTORE REWINDONLY&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql)를 참조하세요.  
   
 ## <a name="using-the-windows-azure-blob-storage-service"></a>Microsoft Azure Blob Storage Service 사용  
  Windows Azure Blob 저장소 서비스에 SQL Server 백업을 작성할 수 있습니다.  Windows Azure Blob 저장소 서비스를 백업에 사용하는 방법에 대한 자세한 내용은 [Windows Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하십시오.  

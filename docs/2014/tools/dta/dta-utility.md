@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
@@ -21,15 +20,15 @@ ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 174343d5c937c8c58277579192a9deb968355a0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: edafb305050b36798990ecea21b08dde42e3f068
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091740"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770715"
 ---
 # <a name="dta-utility"></a>dta 유틸리티
-  **dta** 유틸리티는 데이터베이스 엔진 튜닝 관리자의 명령 프롬프트 버전입니다. **dta** 유틸리티를 통해 응용 프로그램과 스크립트에서 데이터베이스 엔진 튜닝 관리자의 기능을 사용할 수 있습니다.  
+  **dta** 유틸리티는 데이터베이스 엔진 튜닝 관리자의 명령 프롬프트 버전입니다. **dta** 유틸리티를 통해 애플리케이션과 스크립트에서 데이터베이스 엔진 튜닝 관리자의 기능을 사용할 수 있습니다.  
   
  데이터베이스 엔진 튜닝 관리자와 마찬가지로 **dta** 유틸리티는 작업을 분석하고 이 작업에 대해 서버 성능을 향상시키기 위한 물리적 디자인 구조를 제안합니다. 작업은 계획 캐시, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적 파일이나 테이블 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트일 수 있습니다. 물리적 디자인 구조에는 인덱스, 인덱싱된 뷰 및 분할이 포함됩니다. 작업을 분석한 후 **dta** 유틸리티는 실제 데이터베이스 디자인을 제안하며 이 제안 사항을 구현하는 데 필요한 스크립트를 생성할 수 있습니다. 명령 프롬프트에서 **-if** 또는 **-it** 인수를 사용하여 작업을 지정할 수 있습니다. 또한 명령 프롬프트에서 **-ix** 인수를 사용하여 XML 입력 파일을 지정할 수도 있습니다. 이러한 경우 작업은 XML 입력 파일에서 지정됩니다.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "48091740"
 [ -? ] |  
 [  
       [ -S server_name[ \instance ] ]  
-      { { -U login_id [-P password ] } | –E  }  
+      { { -U login_id [-P password ] } | -E  }  
       { -D database_name [ ,...n ] }  
       [ -ddatabase_name ]   
       [ -Tltable_list | -Tf table_list_file ]  
@@ -103,13 +102,13 @@ ms.locfileid: "48091740"
  튜닝할 각 데이터베이스의 이름을 지정합니다. 첫 번째 데이터베이스가 기본 데이터베이스입니다. 다음과 같이 데이터베이스 이름을 쉼표로 구분하여 여러 데이터베이스를 지정할 수 있습니다.  
   
 ```  
-dta –D database_name1, database_name2...  
+dta -D database_name1, database_name2...  
 ```  
   
  또는 다음과 같이 각 데이터베이스 이름에 **–D** 인수를 사용하여 여러 데이터베이스를 지정할 수 있습니다.  
   
 ```  
-dta –D database_name1 -D database_name2... n  
+dta -D database_name1 -D database_name2... n  
 ```  
   
  **-D** 인수는 필수 인수입니다. **-d** 인수를 지정하지 않은 경우 초기에 **dta** 는 작업에서 첫 번째 `USE database_name` 절로 지정된 데이터베이스에 연결합니다. 작업에 명시적 `USE database_name` 절이 없으면 **-d** 인수를 사용해야 합니다.  
@@ -135,7 +134,7 @@ dta -d AdventureWorks2012 ...
   
  데이터베이스 이름을 여러 개 지정할 경우 **dta** 는 오류를 반환합니다. **-d** 인수는 선택 사항입니다.  
   
- XML 입력된 파일을 사용 하는 경우 첫 번째 데이터베이스를 지정할 수 있습니다 **dta** 사용 하 여 연결 된 `DatabaseToConnect` 아래에 있는 요소는 `TuningOptions` 요소입니다. 자세한 내용은 [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)을(를) 참조하세요.  
+ XML 입력된 파일을 사용 하는 경우 첫 번째 데이터베이스를 지정할 수 있습니다 **dta** 사용 하 여 연결 된 `DatabaseToConnect` 아래에 있는 요소는 `TuningOptions` 요소입니다. 자세한 내용은 [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)을 참조하세요.  
   
  데이터베이스를 하나만 튜닝하는 경우 **-d** 인수는 **sqlcmd** 유틸리티의 **-d** 인수와 유사한 기능을 제공하지만 USE *database_name* 문을 실행하지는 않습니다. 자세한 내용은 [sqlcmd Utility](../sqlcmd-utility.md)을(를) 참조하십시오.  
   
@@ -344,7 +343,7 @@ dta -n number_of_events -A 0
  이 예에서는 보안 연결(`-E`)을 통해 MyServer에 있는 **tpcd1G** 데이터베이스에 연결하여 작업을 분석하고 권장 구성을 만듭니다. 그리고 script.sql이라는 스크립트 파일에 출력 파일을 씁니다. script.sql이 이미 있을 경우 **인수를 지정했으므로** dta `-F` 는 이 파일을 덮어씁니다. 작업 분석이 완료될 때까지 제한 시간 없이(`-A 0`) 튜닝 세션이 실행됩니다. 권장 구성에서는 최소 향상률 값으로 5%(`-m 5`)를 지정해야 합니다. **dta** 는 최종 권장 구성(`-fa IDX_IV`)에 인덱스 및 인덱싱된 뷰를 포함합니다.  
   
 ```  
-dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5 -fa IDX_IV  
+dta -S MyServer -E -D tpcd1G -if tpcd_22.sql -F -of script.sql -A 0 -m 5 -fa IDX_IV  
 ```  
   
  **B. 디스크 사용 제한**  
@@ -352,7 +351,7 @@ dta –S MyServer –E -D tpcd1G -if tpcd_22.sql -F –of script.sql –A 0 -m 5
  이 예에서는 원시 데이터 및 추가 인덱스를 포함하여 총 데이터베이스 크기를 3GB(`-B 3000`)로 제한하고 출력을 d:\result_dir\script1.sql로 보냅니다. 1시간(`-A 60`) 동안만 실행됩니다.  
   
 ```  
-dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A 60  
+dta -D tpcd1G -if tpcd_22.sql -B 3000 -of "d:\result_dir\script1.sql" -A 60  
 ```  
   
  **C. 튜닝 쿼리 수 제한**  
@@ -360,7 +359,7 @@ dta –D tpcd1G –if tpcd_22.sql -B 3000 –of "d:\result_dir\script1.sql" –A
  이 예에서는 orders_wkld.sql 파일에서 읽혀지는 최대 쿼리 수를 10(`-n 10`)개로 제한하고 15분(`-A 15`) 동안 실행합니다. 최대 쿼리 10개에 도달하거나 15분이 되면 종료됩니다. 10개 쿼리를 모두 튜닝하려면 `-A 0`을 사용하여 튜닝 시간을 무제한으로 지정합니다. 시간이 중요할 경우 다음 예와 같이 `-A` 인수로 튜닝할 수 있는 시간(분)을 지정하여 적절한 제한 시간을 설정합니다.  
   
 ```  
-dta –D orders –if orders_wkld.sql –of script.sql –A 15 -n 10  
+dta -D orders -if orders_wkld.sql -of script.sql -A 15 -n 10  
 ```  
   
  **D. 파일에 나열된 특정 테이블 튜닝**  
@@ -386,11 +385,11 @@ AdventureWorks2012.Production.Product  2000000
  튜닝 시간은 2시간(`-A 120`)이며 출력은 XML 파일(`-ox XMLTune.xml`)에 기록됩니다.  
   
 ```  
-dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.txt  
+dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [명령 프롬프트 유틸리티 참조 &#40;데이터베이스 엔진&#41;](../command-prompt-utility-reference-database-engine.md)   
- [데이터베이스 엔진 튜닝 관리자](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [명령 프롬프트 유틸리티 참조&#40;데이터베이스 엔진#41;](../command-prompt-utility-reference-database-engine.md)   
+ [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

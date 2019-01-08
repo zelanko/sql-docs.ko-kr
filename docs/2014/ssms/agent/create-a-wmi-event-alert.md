@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - WMI event alerts [SQL Server Management Studio]
@@ -12,12 +12,12 @@ ms.assetid: b8c46db6-408b-484e-98f0-a8af3e7ec763
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0916acc815ecff5c994b57850b8ce218ff4f2b18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5af4472d80e74c9d2845e6397f815ffb1c27f4d8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181963"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764195"
 ---
 # <a name="create-a-wmi-event-alert"></a>WMI 이벤트 경고 만들기
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 서버 이벤트용 WMI 공급자가 모니터링하여 특정 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 이벤트가 발생할 때 [!INCLUDE[tsql](../../includes/tsql-md.md)]에이전트 경고를 만드는 방법에 대해 설명합니다.  
@@ -94,7 +94,7 @@ ms.locfileid: "48181963"
     EXEC dbo.sp_add_alert  
         @name = N'Test Alert 2',  
         @message_id = 54001  
-        @notification_message = N'Error 54001 has occurred on the Sales.SalesOrderDetail table on the AdventureWorks2012 database. Please see the following information…',  
+        @notification_message = N'Error 54001 has occurred on the Sales.SalesOrderDetail table on the AdventureWorks2012 database. Please see the following information...',  
         @wmi_namespace = '\\.\root\Microsoft\SqlServer\ServerEvents\,  
         @wmi_query = N'SELECT * FROM ALTER_TABLE   
     WHERE DatabaseName = 'AdventureWorks2012' AND SchemaName = 'Sales'   

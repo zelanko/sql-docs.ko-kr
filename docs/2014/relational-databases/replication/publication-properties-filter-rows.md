@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.filterrows.f1
@@ -13,12 +12,12 @@ ms.assetid: 2c5fdbed-9b10-4818-98cc-cc6b01351318
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a33c0344fd0b195f920919bcabfdbf49fb0b63dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 5a12867b5efe457fa2361a85ac426db07c2760ac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065673"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780385"
 ---
 # <a name="publication-properties-filter-rows"></a>게시 속성, 행 필터
   **게시 속성** 대화 상자의 **행 필터** 페이지를 사용하여 추가, 편집 또는 삭제할 수 있습니다.  
@@ -51,7 +50,7 @@ ms.locfileid: "48065673"
  이 창은 게시의 테이블 아티클에 필터를 추가하면 추가된 필터로 채워집니다. 행 필터가 있는 테이블은 창에서 최상위 노드로 표시됩니다. 병합 게시의 경우 조인 필터를 통해 필터링이 확장된 테이블은 자식 노드로 표시됩니다.  
   
  **추가**  
- **추가** 를 클릭하면 테이블 아티클을 필터링할 수 있는 대화 상자가 시작됩니다. 스냅숏 또는 트랜잭션 게시에 대해 **추가** 를 클릭하면 대화 상자가 바로 시작됩니다. 병합 게시에 대해 **추가** 를 클릭하면 **필터 추가**, **선택한 필터 확장을 위해 조인 추가**, **자동으로 필터 생성**의 세 가지 선택이 표시됩니다.  
+ **추가** 를 클릭하면 테이블 아티클을 필터링할 수 있는 대화 상자가 시작됩니다. 스냅숏 또는 트랜잭션 게시에 대해 **추가** 를 클릭하면 대화 상자가 바로 시작됩니다. 클릭 **추가** 병합 게시에는 세 가지 선택이 표시 됩니다. **필터 추가**; **선택한 필터 확장을 위해 조인 추가**; **자동으로 필터 생성**합니다.  
   
 -   **필터 추가** 를 선택하면 **필터 추가** 대화 상자가 시작됩니다. 이 대화 상자를 사용하여 테이블 아티클에 행 필터를 적용할 수 있습니다. 예를 들어 **필터 추가** 대화 상자에서 고객 데이터가 들어 있는 테이블을 구독자로 복제할 때 프랑스 고객의 데이터만 포함되도록 지정할 수 있습니다.  
   

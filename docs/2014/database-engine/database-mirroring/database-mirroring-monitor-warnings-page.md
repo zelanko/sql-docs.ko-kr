@@ -12,12 +12,12 @@ ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 56720ad795fb6df4de3c4cca72b9634d6fb6cf96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: deee5ba0d402dce6c2c0c5779c676ac7b42a926a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213213"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520321"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>데이터베이스 미러링 모니터(경고 페이지)
   데이터베이스 미러링 이벤트에서 지원되는 경고와 지정된 경고 임계값(사용 가능한 경우)의 읽기 전용 목록을 표시합니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "48213213"
  지정된 파트너에서 기록되는 이벤트는 현재 역할(주 서버 또는 미러 서버)에 따라 달라집니다. 그러나 데이터베이스가 장애 조치될 경우 경고가 유지되도록 두 파트너 모두에 지정된 이벤트에 대한 경고 임계값을 설정하는 것이 좋습니다. 각 파트너에 적합한 임계값은 각 파트너 시스템의 성능 기능에 따라 달라집니다.  
   
 > [!NOTE]  
->  또한 **sp_dbmmonitorchangealert** 시스템 저장 프로시저를 사용하여 이러한 이벤트(보내지 않은 로그, 복구되지 않은 로그, 보내지 않은 가장 오래된 트랜잭션 및 미러 커밋 오버헤드)에 대한 임계값을 구성할 수 있습니다. 자세한 내용은 [sp_dbmmonitorchangealert&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql)를 참조하세요.  
+>  또한 **sp_dbmmonitorchangealert** 시스템 저장 프로시저를 사용하여 해당 이벤트(예: 보내지 않은 로그, 복구되지 않은 로그, 보내지 않은 가장 오래된 트랜잭션 및 미러 커밋 오버헤드)에 대한 임계값을 구성할 수 있습니다. 자세한 내용은 [sp_dbmmonitorchangealert&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql)를 참조하세요.  
   
  다음 표에서는 각 경고와 연관된 이벤트 ID를 보여 줍니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48213213"
   
  **dbm_monitor** 역할의 멤버 자격을 사용하면 **경고** 페이지에서 최신 상태 행만 볼 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터베이스 미러링 모니터 시작&#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [데이터베이스 미러링 모니터링&#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  

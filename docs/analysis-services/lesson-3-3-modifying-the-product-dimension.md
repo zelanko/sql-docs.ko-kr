@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b35f1712af9d501ff35a92cecb0eeea068d9aac0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6fd0617d5c3d79ae0cf2eb7021f730a8062bd969
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019570"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525837"
 ---
 # <a name="lesson-3-3---modifying-the-product-dimension"></a>단원 3-3-Product 차원 수정
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "34019570"
   
 2.  **차원 구조** 탭의 **특성** 창에서 **Product Line**을 선택합니다.  
   
-3.  화면 오른쪽에 있는 속성 창의 맨 아래에서 **NameColumn** 속성 필드를 클릭한 다음 찾아보기(**…**) 단추를 클릭하여 **이름 열** 대화 상자를 엽니다. 화면 오른쪽의 **속성** 탭을 클릭하여 속성 창을 열어야 할 수도 있습니다.  
+3.  화면의 오른쪽 속성 창에서 클릭 합니다 **NameColumn** 속성 창 맨 아래에 필드 및 클릭 한 다음 (**...** ) 버튼을 클릭 하 여 **이름 열** 대화 상자. 화면 오른쪽의 **속성** 탭을 클릭하여 속성 창을 열어야 할 수도 있습니다.  
   
 4.  **원본 열** 목록의 맨 아래에서 **ProductLineName** 을 선택하고 **확인**을 클릭합니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34019570"
   
 5.  **차원 구조** 탭의 **특성** 창에서 **Product Key**를 선택합니다.  
   
-6.  속성 창에서 **NameColumn** 속성 필드를 클릭한 다음 줄임표(**…**) 단추를 클릭하여 **이름 열** 대화 상자를 엽니다.  
+6.  속성 창에서 클릭 합니다 **NameColumn** 속성, 필드 및 줄임표를 클릭 한 다음 (**...** ) 버튼을 클릭 하 여 **이름 열** 대화 상자.  
   
 7.  **원본 열** 목록에서 **EnglishProductName** 을 선택하고 **확인**을 클릭합니다.  
   
@@ -182,8 +182,8 @@ ms.locfileid: "34019570"
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [Date 차원 수정](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
   
-## <a name="see-also"></a>관련 항목:  
-[데이터 원본 뷰 & #40; 명명 된 계산을 정의 합니다. Analysis Services & #41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+## <a name="see-also"></a>관련 항목  
+[데이터 원본 뷰에서 명명된 계산 정의&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
 [사용자 정의 계층 만들기](../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
 [특성 계층에 대해 &#40;All&#41; 수준 구성](../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   

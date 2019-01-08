@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -19,12 +18,12 @@ ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: da828154eff0b5cfc8a5cfc8ef5deba02e24579a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224663"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816895"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>병합 아티클에 대한 비즈니스 논리 처리기 구현
   이 항목에서는 복제 프로그래밍 또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 병합 아티클에 대한 비즈니스 논리 처리기를 구현하는 방법에 대해 설명합니다.  
@@ -183,7 +182,7 @@ ms.locfileid: "48224663"
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> - 비즈니스 논리 처리기에 액세스할 때 사용하는 이름  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> -값 `true`합니다.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> - `true` 값  
   
 #### <a name="to-deploy-a-business-logic-handler"></a>비즈니스 논리 처리기를 배포하려면  
   
@@ -215,7 +214,7 @@ ms.locfileid: "48224663"
   
 4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성에 대해 1단계에서 만든 연결을 설정합니다.  
   
-5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 반환 하는 경우 `false`, 3 단계에서 아티클 속성이 올바르게 정의 되지 또는 아티클이 없습니다. 자세한 내용은 [View and Modify Article Properties](publish/view-and-modify-article-properties.md)을 참조하세요.  
+5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 `false`를 반환하는 경우 3단계에서 아티클 속성이 올바르게 정의되지 않았거나 아티클이 없습니다. 자세한 내용은 [View and Modify Article Properties](publish/view-and-modify-article-properties.md)을 참조하세요.  
   
 6.  <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>에 대한 비즈니스 논리 처리기의 이름을 설정합니다. 이 이름은 비즈니스 논리 처리기를 등록할 때 지정된 <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> 속성의 값입니다.  
   

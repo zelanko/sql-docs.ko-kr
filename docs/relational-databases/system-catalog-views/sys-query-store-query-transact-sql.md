@@ -1,7 +1,7 @@
 ---
 title: sys.query_store_query (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/29/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,15 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7fc3462eae5ca53d1c1b0b2ef4ad65c9579569e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff4b428c87da7180869cb3b0c51f4a8fb118a351
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726791"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52711854"
 ---
 # <a name="sysquerystorequery-transact-sql"></a>sys.query_store_query (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   쿼리 및 해당 관련 된 전체 집계 된 런타임 실행 통계에 대 한 정보를 포함합니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "47726791"
 |**batch_sql_handle**|**varbinary(64)**|문 일괄 처리 쿼리 ID의 일부입니다. 임시 테이블 또는 테이블 변수 쿼리가 참조 하는 경우에 채워집니다.|  
 |**query_hash**|**binary(8)**|논리 쿼리 트리를 기반으로 개별 쿼리의 MD5 해시입니다. 최적화 프로그램 힌트를 포함합니다.|  
 |**is_internal_query**|**bit**|쿼리는 내부적으로 생성 되었습니다.|  
-|**query_parameterization_type**|**tinyint**|매개 변수화의 종류:<br /><br /> 0 – 없음<br /><br /> 1-사용자<br /><br /> 2 – 단순<br /><br /> 3 – 강제|  
+|**query_parameterization_type**|**tinyint**|매개 변수화의 종류:<br /><br /> 0-없음<br /><br /> 1-사용자<br /><br /> 2-간단한<br /><br /> 3-강제|  
 |**query_parameterization_type_desc**|**nvarchar(60)**|매개 변수화 형식에 대 한 텍스트 설명입니다.|  
 |**initial_compile_start_time**|**datetimeoffset**|시작 시간을 컴파일하십시오.|  
 |**last_compile_start_time**|**datetimeoffset**|시작 시간을 컴파일하십시오.|  

@@ -16,12 +16,12 @@ ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0dda9622ec6b5faa753310861557961ca54b4971
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 06b97ac4bf58b933f55c4b53bfeacfbc9a736f28
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063163"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516218"
 ---
 # <a name="create-clustered-indexes"></a>클러스터형 인덱스 만들기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 테이블에 클러스터형 인덱스를 만들 수 있습니다. 몇 가지 경우를 제외하고 모든 테이블에는 클러스터형 인덱스가 있어야 합니다. 쿼리 성능을 향상시키는 것 외에도 요청 시 클러스터형 인덱스를 다시 작성하거나 다시 구성하여 테이블 조각화를 제어할 수 있습니다. 뷰에서 클러스터형 인덱스를 만들 수도 있습니다. 클러스터형된 인덱스는 [클러스터형 및 비클러스터형 인덱스 소개](clustered-and-nonclustered-indexes-described.md)항목에 정의되어 있습니다.  
@@ -80,11 +80,11 @@ ms.locfileid: "48063163"
   
 1.  개체 탐색기에서 클러스터형 인덱스를 만들 테이블을 확장합니다.  
   
-2.  **인덱스** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 인덱스**를 가리킨 다음 **클러스터형 인덱스...** 를 선택합니다.  
+2.  **인덱스** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 인덱스**를 가리킨 다음, **클러스터형 인덱스...** 를 선택합니다.  
   
 3.  **새 인덱스** 대화 상자의 **일반** 페이지에서 **인덱스 이름** 상자에 새 인덱스의 이름을 입력합니다.  
   
-4.  **인덱스 키 열**아래에서 **추가...** 를 클릭합니다.  
+4.  **인덱스 키 열** 아래에서 **추가...** 를 클릭합니다.  
   
 5.  *****table_name에서 열 선택* 대화 상자에서 클러스터형 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "48063163"
   
  자세한 내용은 [CREATE INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [기본 키 만들기](../tables/create-primary-keys.md)   
  [UNIQUE 제약 조건 만들기](../tables/create-unique-constraints.md)  
   

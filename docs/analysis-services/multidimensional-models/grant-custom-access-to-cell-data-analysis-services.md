@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5e3b354d2bd4f4561962391bf3f0495b63833290
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: 42348298676334a84d9c4d3664aec2eeda4feed6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025247"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539047"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>셀 데이터에 대한 사용자 지정 액세스 부여(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34025247"
   
  셀 사용 권한은 셀 내부의 데이터에 적용되며, 메타데이터에는 적용되지 않습니다. 셀이 쿼리 결과에 여전히 나타나며 실제 셀 값 대신 **#N/A** 값을 표시하는 방식을 살펴보세요. 클라이언트 애플리케이션에서 값을 변환하거나 연결 문자열에 Secured Cell Value 속성을 설정하여 다른 값을 지정하는 경우를 제외하고 셀에는 **#N/A** 값이 나타납니다.  
   
- 셀을 완전히 숨기려면 볼 수 있는 구성원(차원, 차원 특성 및 차원 특성 구성원)을 제한해야 합니다. 자세한 내용은 [차원 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)를 참조하세요.  
+ 셀을 완전히 숨기려면 차원 멤버, 차원 특성 및 차원 특성 멤버를 제한 해야-볼 수 있습니다. 자세한 내용은 [차원 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)를 참조하세요.  
   
  관리자는 구성원이 큐브 내 셀에 대한 읽기, 불확정 읽기 또는 읽기/쓰기 권한을 갖는지 여부를 지정할 수 있습니다. 셀에 대한 사용 권한 부여는 허용된 가장 낮은 보안 수준이므로 이 수준에서 사용 권한 적용을 시작하기 전에 다음과 같은 사항에 유의하세요.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "34025247"
   
  Excel에서 셀 보안은 다음 그림과 같이 명확합니다.  
   
- ![Excel 열을 사용할 수 없음으로 셀을 보여 주는](../../analysis-services/multidimensional-models/media/ssas-permscellshidemeasure.png "Excel 셀을 사용할 수 없음으로 표시 하는 열")  
+ ![사용할 수 없음으로 셀을 표시 하는 열을 excel](../../analysis-services/multidimensional-models/media/ssas-permscellshidemeasure.png "Excel 셀 사용할 수 없음으로 표시 하는 열")  
   
 ## <a name="set-read-permissions-on-calculated-measures"></a>계산된 측정값에 대한 읽기 권한 설정  
  계산된 측정값에 대한 사용 권한은 해당 구성 요소와는 별도로 설정할 수 있습니다. 계산된 측정값과 종속 측정값 사이에 사용 권한을 조정하려는 경우에는 불확정 읽기에 대한 다음 섹션으로 건너뛰세요.  
@@ -74,7 +74,7 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
   
  Excel에서 현재 역할을 사용하여 큐브에 연결하고 세 가지 측정값을 모두 선택하여 셀 보안 결과를 살펴보세요. 거부된 집합의 측정값은 사용할 수 없지만 계산된 측정값은 사용자에게 표시됩니다.  
   
- ![사용 가능 하 고 사용할 수 없는 cellls 있는 Excel 테이블](../../analysis-services/multidimensional-models/media/ssas-permscalculatedcells.png "사용 가능 하 고 사용할 수 없는 cellls 있는 Excel 테이블")  
+ ![Excel 테이블과 사용 가능 하 고 사용할 수 없게 cellls](../../analysis-services/multidimensional-models/media/ssas-permscalculatedcells.png "사용 가능 하 고 사용할 수 없게 cellls 사용 하 여 Excel 테이블")  
   
 ## <a name="set-read-contingent-permissions-on-calculated-measures"></a>계산된 측정값에 대한 불확정 읽기 권한 설정  
  셀 보안에서는 계산에 포함되는 관련 셀에 대한 사용 권한을 설정하는 데 대체 권한인 불확정 읽기를 제공합니다. **Reseller Gross Profit** 예제를 다시 생각해 보세요. 이전 섹션에서 입력한 것과 동일한 MDX 식을 입력하되 이번에는 **역할 만들기** | **셀 데이터** 대화 상자의 두 번째 텍스트 영역( **셀 보안 설정에 따라 셀 내용을 읽을 수 있습니다.** 아래 텍스트 영역)에 식을 지정하면 Excel에서 볼 때 결과가 표시됩니다. **Reseller Gross Profit** 이 **Reseller Sales Amount** 및 **Reseller Total Product Cost**에 따라 달라지기 때문에 이제 해당 구성 요소에 액세스할 수 없으므로 매출 총 이익에도 액세스할 수 없습니다.  
@@ -90,8 +90,8 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
 ## <a name="see-also"></a>관련 항목:  
  [MDX 작성기&#40;Analysis Services - 다차원 데이터&#41;](http://msdn.microsoft.com/library/fecbf093-65ea-4e1b-b637-f04876f1cb0f)   
  [기본 MDX 스크립트 & #40; Mdx& #41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
- [처리 권한 부여 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)   
- [차원에 대 한 사용 권한을 부여 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)   
+ [처리 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)   
+ [차원에 대한 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)   
  [데이터 & #40; 차원에 대 한 사용자 지정 액세스 부여 Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
  [큐브 또는 모델 사용 권한 & #40; 부여 Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
   

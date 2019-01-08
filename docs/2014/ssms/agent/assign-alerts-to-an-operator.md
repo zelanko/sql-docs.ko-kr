@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
@@ -17,12 +17,12 @@ ms.assetid: aa818155-6fa2-4565-a09f-5c7e31c89754
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 62479a884be565fd58bc931f821cb049ea0bf8a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 905114d0190a7d1e8441e98249664c985a433988
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102941"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762855"
 ---
 # <a name="assign-alerts-to-an-operator"></a>운영자에게 경고 할당
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 운영자들이 작업에 대한 알림을 받을 수 있도록 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고를 운영자에게 할당하는 방법을 설명합니다.  
@@ -68,9 +68,9 @@ ms.locfileid: "48102941"
   
 4.  경고를 할당하려는 운영자를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택한 후 **알림** 페이지를 선택합니다.  
   
-5.  *operator_name***속성** 대화 상자의 **페이지 선택**에서 **알림**을 선택합니다.  
+5.  _operator_name_**속성** 대화 상자의 **페이지 선택**에서 **알림**을 선택합니다.  
   
-6.  **사용자에게 알림을 보내는 방법**아래에서 **경고** 를 선택하여 이 운영자에게 보내진 경고 목록을 보거나 **작업** 을 선택하여 이 운영자에게 알림을 보내는 작업 목록을 봅니다. **전자 메일**, **호출기**또는 **Net send**중 하나 이상의 확인란을 선택하여 필요에 따라 각 알림에 대한 알림 방법을 정의합니다.  
+6.  **사용자에게 알림을 보내는 방법**아래에서 **경고** 를 선택하여 이 운영자에게 보내진 경고 목록을 보거나 **작업** 을 선택하여 이 운영자에게 알림을 보내는 작업 목록을 봅니다. 전자 메일, 호출기 또는 Net send 중 하나 이상의 확인란을 선택하여 필요에 따라 **전자 메일**하십시오 **호출기**, 또는 **Net send**합니다.  
   
 7.  완료되었으면 **확인**을 클릭합니다.  
   
@@ -86,13 +86,13 @@ ms.locfileid: "48102941"
   
     ```  
     -- adds an e-mail notification for the specified alert (Test Alert)  
-    -- This example assumes that Test Alert already exists and that François Ajenstat is a valid operator name.  
+    -- This example assumes that Test Alert already exists and that Fran??ois Ajenstat is a valid operator name.  
     USE msdb ;  
     GO  
   
     EXEC dbo.sp_add_notification  
      @alert_name = N'Test Alert',  
-     @operator_name = N'François Ajenstat',  
+     @operator_name = N'Fran??ois Ajenstat',  
      @notification_method = 1 ;  
     GO  
     ```  

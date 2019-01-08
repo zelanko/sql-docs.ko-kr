@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4387cee85465bce957622e6d12c596c8aceb6b6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c03726aa3d4ca4c3f6f405aa518d8128aca980a2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712423"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527021"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>이전 버전 SQL Server에 대한 향상된 날짜 및 시간 형식 동작(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47712423"
   이 항목에서는 향상된 날짜 및 시간 기능을 사용하는 클라이언트 응용 프로그램이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]와 통신할 경우 및 Microsoft Data Access Components, Windows Data Access Components 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client를 사용하는 클라이언트 응용 프로그램이 향상된 날짜 및 시간 기능을 지원하는 서버에 명령을 보낼 경우 예상되는 동작에 대해 설명합니다.  
   
 ## <a name="down-level-client-behavior"></a>하위 수준 클라이언트 동작  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client를 사용하여 컴파일된 클라이언트 응용 프로그램에서는 새로운 날짜/시간 형식을 nvarchar 열로 인식합니다. 열 내용이 리터럴 표현, "데이터 형식:: 문자열 및 리터럴" 섹션에 설명 된 대로 [ODBC 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)합니다. 열 크기는 열에 지정된 초 소수 부분 자릿수에 대한 최대 리터럴 길이입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client를 사용하여 컴파일된 클라이언트 응용 프로그램에서는 새로운 날짜/시간 형식을 nvarchar 열로 인식합니다. 열의 내용은 리터럴 표현입니다. 자세한 내용은 문자열 및 리터럴"섹션 [ODBC 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)합니다. 열 크기는 열에 지정된 초 소수 부분 자릿수에 대한 최대 리터럴 길이입니다.  
   
  카탈로그 API는 클라이언트에 반환된 하위 수준 데이터 형식 코드(예: nvarchar)와 일관된 메타데이터 및 관련된 하위 수준 표현(예: 적절한 리터럴 형식)을 반환합니다. 그러나 반환되는 데이터 형식의 이름은 실제 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 형식 이름입니다.  
   
@@ -42,8 +42,8 @@ ms.locfileid: "47712423"
 |||SQL_C_TYPE_TIMESTAMP|시간 필드가 0으로 설정됩니다.|정상(2)<br /><br /> 시간 필드가 0 이외의 값이면 실패합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
 ||Time(0)|SQL_C_TYPE_TIME|확인|확인 (1)|  
 |||SQL_C_TYPE_TIMESTAMP|날짜 필드가 현재 날짜로 설정됩니다.|정상(2)<br /><br /> 날짜가 무시됩니다. 초 소수 부분이 0 이외의 값이면 실패합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동합니다.|  
-||Time(7)|SQL_C_TIME|실패 - 시간 리터럴이 잘못되었습니다.|확인 (1)|  
-|||SQL_C_TYPE_TIMESTAMP|실패 - 시간 리터럴이 잘못되었습니다.|확인 (1)|  
+||Time(7)|SQL_C_TIME|실패-시간 리터럴이 잘못 되었습니다.|확인 (1)|  
+|||SQL_C_TYPE_TIMESTAMP|실패-시간 리터럴이 잘못 되었습니다.|확인 (1)|  
 ||datetime2(3)|SQL_C_TYPE_TIMESTAMP|확인|확인 (1)|  
 ||datetime2(7)|SQL_C_TYPE_TIMESTAMP|확인|클라이언트 변환 시 값이 1/300초로 반올림됩니다.|  
 |Smalldatetime|Date|SQL_C_TYPE_DATE|확인|확인|  
@@ -70,10 +70,10 @@ ms.locfileid: "47712423"
 ### <a name="column-metadata-returned-by-sqlcolumns-sqlprocedurecolumns-and-sqlspecialcolumns"></a>SQLColumns, SQLProcedureColumns 및 SQLSpecialColumns가 반환하는 열 메타데이터  
  날짜/시간 형식에 대해 다음 열 값이 반환됩니다.  
   
-|열 유형|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
+|열 유형|date|Time|Smalldatetime|Datetime|Datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
-|TYPE_NAME|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|date|Time|Smalldatetime|Datetime|Datetime2|datetimeoffset|  
 |COLUMN_SIZE|10|8,10..16|16|23|19, 21..27|26, 28..34|  
 |BUFFER_LENGTH|20|16, 20..32|16|16|38, 42..54|52, 56..68|  
 |DECIMAL_DIGITS|NULL|NULL|0|3|NULL|NULL|  
@@ -87,13 +87,13 @@ ms.locfileid: "47712423"
 ### <a name="data-type-metadata-returned-by-sqlgettypeinfo"></a>SQLGetTypeInfo가 반환하는 데이터 형식 메타데이터  
  날짜/시간 형식에 대해 다음 열 값이 반환됩니다.  
   
-|열 유형|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
+|열 유형|date|Time|Smalldatetime|Datetime|Datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|date|Time|Smalldatetime|Datetime|Datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
-|LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
-|LITERAL_SUFFIX|‘|‘|‘|‘|‘|‘|  
+|LITERAL_PREFIX|'|'|'|'|'|'|  
+|LITERAL_SUFFIX|'|'|'|'|'|'|  
 |CREATE_PARAMS|NULL|NULL|NULL|NULL|NULL|NULL|  
 |NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|  
 |CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
@@ -101,7 +101,7 @@ ms.locfileid: "47712423"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |AUTO_UNIQUE_VALUE|NULL|NULL|NULL|NULL|NULL|NULL|  
-|LOCAL_TYPE_NAME|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|Time|Smalldatetime|Datetime|Datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|NULL|0|3|NULL|NULL|  
 |MAXIMUM_SCALE|NULL|NULL|0|3|NULL|NULL|  
 |SQL_DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_DATETIME|SQL_DATETIME|SQL_WVARCHAR|SQL_WVARCHAR|  

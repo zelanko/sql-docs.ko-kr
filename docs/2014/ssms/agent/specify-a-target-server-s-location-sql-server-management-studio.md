@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, target servers
@@ -13,12 +13,12 @@ ms.assetid: 511ff311-21f5-4f2f-839f-b4deee26ec98
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5ffae4f02e598157215e1062863ffce05794983f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1d08c7f660d4deee887f95a06a7848f6d40b2d4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135373"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780515"
 ---
 # <a name="specify-a-target-server39s-location-sql-server-management-studio"></a>대상 서버 위치 지정(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 다중 서버 관리 구성에서 대상 서버의 위치를 지정하는 방법을 설명합니다.  

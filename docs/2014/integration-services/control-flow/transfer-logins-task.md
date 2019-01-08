@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferloginstask.f1
@@ -15,12 +14,12 @@ ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d22dc265eda8e090d00674e198be2616514b857b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c0506d617a3fe8070ceb0903eb2d4cfc6e62557f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143905"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762065"
 ---
 # <a name="transfer-logins-task"></a>로그인 전송 태스크
   로그인 전송 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 사이에서 하나 이상의 로그인을 전송합니다.  
@@ -69,9 +68,9 @@ ms.locfileid: "48143905"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [로그인 전송 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [로그인 전송 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [로그인 전송 태스크 편집기 &#40;로그인 페이지&#41;](../transfer-logins-task-editor-logins-page.md)  
+-   [로그인 전송 태스크 편집기&#40;로그인 페이지&#41;](../transfer-logins-task-editor-logins-page.md)  
   
 -   [식 페이지](../expressions/expressions-page.md)  
   

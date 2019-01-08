@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.updatablesubscriptions.f1
@@ -13,12 +12,12 @@ ms.assetid: 8e9a13a0-6b24-47c6-9d83-3cbaf08f673d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: daad0f855f531a343871ad99bdd97df81da0318d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00d51c24583231f28ec15dd86c1848ba95c345d6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130103"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771005"
 ---
 # <a name="updatable-subscriptions"></a>업데이트할 수 있는 구독
   복제된 데이터는 읽기 전용으로 취급되어야 하지만 트랜잭션 복제를 사용하면 업데이트할 수 있는 구독을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자에서 복제된 데이터를 수정할 수 있습니다. 구독자에서 데이터를 수정해야 하는 경우 요구 사항에 따라 다음 옵션 중 하나를 선택합니다.  

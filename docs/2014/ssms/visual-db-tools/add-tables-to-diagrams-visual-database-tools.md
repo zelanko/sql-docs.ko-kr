@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - inserting tables
@@ -13,12 +13,12 @@ ms.assetid: 5440fdf7-ac04-4325-9f32-181f4cd402e5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ebc0a3ef5a9ad8f452c96e8294dc46847ee6e982
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26c13eb6c9cb142cac3ba0981177fb2c605ab5fa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181133"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812445"
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>다이어그램에 테이블 추가(Visual Database Tools)
   데이터베이스 다이어그램에 테이블을 추가하여 구조를 편집하거나 다이어그램에 있는 다른 테이블에 연결할 수 있습니다. 다이어그램에 기존의 데이터베이스 테이블을 추가하거나 데이터베이스에 아직 정의되지 않은 새 테이블을 삽입할 수 있습니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "48181133"
 > [!NOTE]  
 >  선택한 테이블에서 외래 키 제약 조건에 의해 참조되는 테이블과 외래 키 제약 조건이 있는 선택된 테이블을 참조하는 테이블 모두가 다이어그램에 추가됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터베이스 다이어그램 작업 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [데이터베이스 다이어그램에서 테이블 작업&#40;Visual Database Tools&#41;](work-with-tables-in-database-diagram-visual-database-tools.md)  
   

@@ -16,12 +16,12 @@ ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3e806bc2997826aa8a44be94e79d1a0b428cee3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 932bd340e84e352eb6de2bd714508135328024d1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124593"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533061"
 ---
 # <a name="create-nonclustered-indexes"></a>비클러스터형 인덱스 만들기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 비클러스터형 인덱스를 만들 수 있습니다. 비클러스터형 인덱스는 하나 이상의 선택된 열을 다시 정렬하는 테이블에 저장된 데이터와 구별되는 인덱스 구조입니다. 비클러스터형 인덱스는 기본 테이블을 검색할 때보다 빠르게 데이터를 찾는 데 도움이 될 수 있습니다. 비클러스터형 인덱스의 데이터가 쿼리에 대한 완전한 대답이 되는 경우도 있지만, 비클러스터형 인덱스에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 기본 테이블의 행으로 연결할 수도 있습니다. 일반적으로 비클러스터형 인덱스는 클러스터형 인덱스를 적용할 수 없고 자주 사용되는 쿼리의 성능을 개선하거나, 클러스터형 인덱스(힙이라고 함) 없이 테이블에서 행을 찾기 위해 만듭니다. 테이블 또는 인덱싱된 뷰에 비클러스터형 인덱스를 여러 개 만들 수 있습니다.  
@@ -92,11 +92,11 @@ ms.locfileid: "48124593"
   
 3.  비클러스터형 인덱스를 만들 테이블을 확장합니다.  
   
-4.  **인덱스** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 인덱스**를 가리킨 다음 **비클러스터형 인덱스...** 를 선택합니다.  
+4.  **인덱스** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 인덱스**를 가리킨 다음, **비클러스터형 인덱스...** 를 선택합니다.  
   
 5.  **새 인덱스** 대화 상자의 **일반** 페이지에서 **인덱스 이름** 상자에 새 인덱스의 이름을 입력합니다.  
   
-6.  **인덱스 키 열**아래에서 **추가...** 를 클릭합니다.  
+6.  **인덱스 키 열** 아래에서 **추가...** 를 클릭합니다.  
   
 7.  **Select Columns from***table_name* 대화 상자에서 비클러스터형 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
   

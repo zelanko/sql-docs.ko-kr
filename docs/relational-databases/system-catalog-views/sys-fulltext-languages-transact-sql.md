@@ -22,17 +22,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f77ccdfc7c236d1f009ff872712991a4c104fc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3fac82c2fd669bb1a7dd3f45b5a614738fdf189
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779691"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529890"
 ---
 # <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  이 카탈로그 뷰는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 단어 분리기가 등록된 언어당 한 개의 행을 포함합니다. 각 행에는 LCID 및 언어의 이름을 표시합니다. 특정 언어의 단어 분리기가 등록되면 해당 언어의 형태소 분석기, 의미 없는 단어(중지 단어) 및 동의어 사전 파일과 같은 다른 언어 리소스를 전체 텍스트 인덱싱/쿼리 작업에 사용할 수 있습니다. 변수의 **이름을** 또는 **lcid** 전체 텍스트 쿼리 및 전체 텍스트 인덱스를 지정할 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.  
+  이 카탈로그 뷰는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 단어 분리기가 등록된 언어당 한 개의 행을 포함합니다. 각 행에는 LCID 및 언어의 이름을 표시합니다. 언어, 다른 언어 리소스 형태소 분석기, 의미 없는 단어 (중지 단어) 및 동의어 사전 파일 수에 대 한 단어 분리기가 등록 하는 경우 전체 텍스트 인덱싱/쿼리 작업에 사용할 수 있습니다. 변수의 **이름을** 또는 **lcid** 전체 텍스트 쿼리 및 전체 텍스트 인덱스를 지정할 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.  
    
 |Column|데이터 형식|Description|  
 |------------|---------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "47779691"
 |언어|LCID|  
 |--------------|----------|  
 |아랍어|1025|  
-|벵골어(인도)|1093|  
+|벵골어 (인도)|1093|  
 |영어(영국)|2057|  
 |불가리아어|1026|  
 |카탈로니아어|1027|  
@@ -61,7 +61,7 @@ ms.locfileid: "47779691"
 |독일어|1031|  
 |**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 그리스어|1032|  
 |구자라트어|1095|  
-|Hebrew|1037|  
+|히브리어|1037|  
 |힌디어|1081|  
 |아이슬란드어|1039|  
 |인도네시아어|1057|  
@@ -104,7 +104,7 @@ ms.locfileid: "47779691"
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [sp_fulltext_load_thesaurus_file &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
  [sp_fulltext_service&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   

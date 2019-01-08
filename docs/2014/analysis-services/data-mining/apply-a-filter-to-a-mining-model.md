@@ -16,12 +16,12 @@ ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b851f631535008d1655a35c4b4af5321c8c4534
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b26f246b85f708976fd792247996cfb2084af5e7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159993"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512637"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>마이닝 모델에 필터 적용
   마이닝 구조에 중첩 테이블이 포함된 경우 사례 테이블, 중첩 테이블 또는 두 테이블 모두에 필터를 적용할 수 있습니다.  
@@ -67,7 +67,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  **값** 입력란을 클릭하고 상자에 값을 입력합니다.  
   
-     예를 들어 선택할 `Income` 열 선택 큼 연산자 (>)를 입력 한 후와 `30000`합니다.  
+     예를 들어 `Income`을(를) 열로 선택하고 보다 큼 연산자(>)를 선택한 다음 `30000`을(를) 입력합니다.  
   
 9. 표에서 다음 행을 클릭합니다.  
   
@@ -79,7 +79,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 11. 7-8단계의 설명에 따라 연산자를 선택하고 값을 입력합니다.  
   
-     예를 들어 선택할 `Income` 다시 열 보다 작음 (<) 연산자를 선택한 다음 입력 `40000`합니다.  
+     예를 들어 `Income`을(를) 열로 다시 선택하고 보다 작음 연산자(<)를 선택한 다음 `40000`을(를) 입력합니다.  
   
 12. 표에서 다음 행을 클릭합니다.  
   
@@ -97,7 +97,7 @@ WHERE [Model] <> 'Water Bottle' )
   
      사례 테이블에서 중첩 테이블의 특정 값을 포함하는 사례만 허용하도록 지정했으므로 이러한 조건만 **모델 필터** 대화 상자의 중첩 테이블에서 사용할 수 있습니다. 다음 단계에서는 중첩 테이블의 조건에 대한 값을 설정합니다.  
   
-4.  **값** 상자를 클릭한 다음 **(…)** 단추를 클릭하여 식을 작성합니다.  
+4.  클릭 합니다 **값** 상자를 선택한 다음 클릭는 **(...)**  식을 작성 하려면 식 단추입니다.  
   
      합니다  **\<이름 > 필터** 대화 상자가 열립니다. 이 대화 상자에서는 현재 테이블의 조건만 설정할 수 있습니다. 이 사례에서 현재 테이블은 중첩 테이블입니다.  
   
@@ -127,7 +127,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
   
   
 ## <a name="see-also"></a>관련 항목  
- [마이닝 모델에 대 한 필터 &#40;Analysis Services-데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)   
+ [마이닝 모델에 대한 필터&#40;Analysis Services - 데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)   
  [마이닝 모델 태스크 및 방법](mining-model-tasks-and-how-tos.md)   
  [마이닝 모델에서 필터 삭제](delete-a-filter-from-a-mining-model.md)  
   

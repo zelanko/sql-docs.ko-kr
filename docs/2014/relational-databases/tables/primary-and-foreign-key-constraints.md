@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - foreign keys [SQL Server], cascading referential integrity
@@ -16,12 +15,12 @@ ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b90a461af4969c9404af77bfbac75ebf7cad0fbc
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 45d4cd390e0369d8289ed9e58de01b7a02f752c5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120360"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770195"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>PRIMARY KEY 및 FOREIGN KEY 제약 조건
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 데이터 무결성을 강제 적용하는 데 사용할 수 있는 두 가지 유형의 제약 조건으로 기본 키와 외래 키가 있습니다. 이들 키는 중요한 데이터베이스 개체입니다.  
@@ -108,7 +107,7 @@ ms.locfileid: "49120360"
   
 -   INSTEAD OF 트리거가 있는 테이블은 연계 동작을 지정하는 REFERENCES 절도 가질 수 없습니다. 그러나 연계 동작의 대상이 되는 테이블의 AFTER 트리거는 다른 테이블 또는 그 개체에 정의된 INSTEAD OF 트리거를 시작하는 뷰에서 INSERT, UPDATE 또는 DELETE 문을 실행할 수 있습니다.  
   
-##  <a name="Tasks"></a> 관련 태스크  
+##  <a name="Tasks"></a> 관련 작업  
  다음 표에서는 기본 키 및 외래 키 제약 조건과 연관된 일반 태스크를 보여 줍니다.  
   
 |태스크|항목|  

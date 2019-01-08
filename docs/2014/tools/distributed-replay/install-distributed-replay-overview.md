@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 7ab77d42-8e84-4396-aa7f-47e2b84d59b2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7b4959f9cf9e070d65ff3fad7868b8af60260a4e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 037e3c9c61b2c6648ec1194a766256d5e6cae5cb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204863"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781740"
 ---
 # <a name="install-distributed-replay"></a>Distributed Replay 설치
   다음 항목을 참조하여 Distributed Replay 기능을 설치할 수 있습니다.  

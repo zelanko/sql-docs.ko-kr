@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], history
@@ -17,12 +17,12 @@ ms.assetid: ddee1ce8-9d1b-4017-9894-bf7256aed95d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a451791925ac70baadce6fa04a50352834aed85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1a8c9ab517d1f6a122144604d6b147e6f5eeaf6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098805"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762995"
 ---
 # <a name="resize-the-job-history-log"></a>Resize the Job History Log
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 기록 로그의 크기 제한을 설정하는 방법에 대해 설명합니다.  

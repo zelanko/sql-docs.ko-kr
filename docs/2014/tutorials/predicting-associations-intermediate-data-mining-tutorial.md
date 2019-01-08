@@ -11,12 +11,12 @@ ms.assetid: 9140c5f2-b340-45a6-9c27-d870d15aafea
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 09084760637464c5e985eeb17762959c8576c5ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a66c6284ea53f65351a964e3f24492c569521af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222809"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544256"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>연결 예측(중급 데이터 마이닝 자습서)
   모델이 처리되면 모델에 저장된 연결 정보를 사용하여 예측을 만들 수 있습니다. 이 단원의 마지막 태스크에서는 만든 연결 모델에 대해 예측 쿼리를 작성하는 방법에 대해 설명합니다. 이 단원에서는 사용자가 예측 쿼리 작성기를 사용하는 방법에 익숙하며 연결 모델에 대해 예측 쿼리를 작성하는 방법을 알아보려 한다고 가정합니다. 자세한 내용은 예측 쿼리 작성기를 사용 하는 방법 [데이터 마이닝 쿼리 인터페이스](../../2014/analysis-services/data-mining/data-mining-query-tools.md)합니다.  
@@ -208,8 +208,8 @@ ms.locfileid: "48222809"
   
  여러 모델에 대해 비슷한 예측 쿼리를 만들어 필터링으로 예측 결과가 변경되는지 여부를 확인할 수 있습니다. 예측 및 다른 유형의 쿼리를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [연결 모델 쿼리 예제](../../2014/analysis-services/data-mining/association-model-query-examples.md)합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [마이닝 모델 콘텐츠 연결 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
+## <a name="see-also"></a>관련 항목:  
+ [연결 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)   
  [예측 쿼리 작성기를 사용하여 예측 쿼리 만들기](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   

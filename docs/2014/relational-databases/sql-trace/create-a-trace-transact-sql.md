@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], example
@@ -14,12 +13,12 @@ ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc5f8bdf3fdc8b182821e668e11fd6e7f20773c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a99f8c338ec829703c9e4c321fec1c1ced02da03
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220863"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761058"
 ---
 # <a name="create-a-trace-transact-sql"></a>추적 만들기(Transact-SQL)
   이 항목에서는 저장 프로시저를 사용하여 추적을 만드는 방법에 대해 설명합니다.  
@@ -102,7 +101,7 @@ EXEC sp_trace_setstatus @TraceID, 2
 ## <a name="example"></a>예제  
  추적 파일을 검사하려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 SampleTrace.trc 파일을 엽니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Profiler 저장 프로시저&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql)   
  [sp_trace_create&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-create-transact-sql)   
  [sp_trace_setevent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   

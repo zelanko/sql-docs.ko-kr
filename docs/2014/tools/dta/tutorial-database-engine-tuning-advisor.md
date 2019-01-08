@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], tutorials
@@ -14,12 +13,12 @@ ms.assetid: 3b54cbbe-d8c6-424d-92f1-aa58179f4da8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 438c037c52e3cdefda7bfdac4138ef10f75063e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 484919274e7b7df3c49ce03668950807c3627d30
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047904"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767615"
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>자습서: 데이터베이스 엔진 튜닝 관리자
   데이터베이스 엔진 튜닝 관리자 자습서를 시작합니다. 사용자가 지정한 데이터베이스에서 쿼리를 처리하는 방법을 검사한 다음 인덱스, 인덱싱된 뷰 및 분할과 같은 데이터베이스 구조를 수정하여 쿼리 처리 성능을 높일 수 있는 방법을 권장합니다.  
@@ -29,13 +28,13 @@ ms.locfileid: "48047904"
 ## <a name="what-you-will-learn"></a>학습 내용  
  이 자습서에서는 데이터베이스 엔진 튜닝 관리자 GUI를 탐색하는 방법과 GUI와 **dta** 유틸리티를 모두 사용하여 일부 기본 태스크를 수행하는 방법을 배웁니다. 다음 단원이 포함됩니다.  
   
- [1단원: 데이터베이스 엔진 튜닝 관리자 기본 탐색](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [1 단원: 데이터베이스 엔진 튜닝 관리자 기본 탐색](../../relational-databases/performance/database-engine-tuning-advisor.md)  
  이 단원에서는 새 데이터베이스 엔진 튜닝 관리자 GUI에 익숙해지고 표시 옵션과 레이아웃을 설정하는 방법을 배웁니다.  
   
- [2단원: 데이터베이스 엔진 튜닝 관리자 사용](lesson-2-using-database-engine-tuning-advisor.md)  
+ [2단원: 데이터베이스 엔진 튜닝 관리자를 사용 하 여](lesson-2-using-database-engine-tuning-advisor.md)  
  이 단원에서는 데이터베이스 엔진 튜닝 관리자 GUI로 기본 튜닝 태스크를 수행하는 방법을 배웁니다.  
   
- [3단원: dta 명령 프롬프트 유틸리티 사용](lesson-3-using-the-dta-command-prompt-utility.md)  
+ [3 단원: Dta 명령 프롬프트 유틸리티를 사용 하 여](lesson-3-using-the-dta-command-prompt-utility.md)  
  이 단원에서는 **dta** 명령 프롬프트 유틸리티를 시작하는 방법과 일부 단순 튜닝 명령을 실행하는 방법을 알아봅니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -51,6 +50,6 @@ ms.locfileid: "48047904"
 -   [dta Utility](dta-utility.md) - 유틸리티 작업을 제어하는 데 사용할 수 있는 명령 프롬프트 유틸리티 및 선택적 XML 파일에 대한 참조 자료  
   
 ## <a name="next-lesson"></a>다음 단원  
- [1단원: 데이터베이스 엔진 튜닝 관리자 기본 탐색](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [1 단원: 데이터베이스 엔진 튜닝 관리자 기본 탐색](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

@@ -16,23 +16,23 @@ ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6ccf5a83cd53b953a9b43c252e90a6e13f1e3f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db2065bd599b1aca1542318bfab0d0ce57e2a938
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635871"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542604"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 ADO에서 런타임 오류 유형을 지정합니다.  
   
  오류 번호의 세 가지 양식은 나열 됩니다.  
   
--   양의 10 진수-10 진수 형식의 전체 개수 낮은 2 바이트입니다. 이 번호는 기본 Visual Basic 오류 메시지 대화 상자에 표시 됩니다. 예를 들어, 런타임 오류가 발생 했습니다 '3707'.  
+-   양의 10 진수의 낮은 두 바이트 10 진수 형식의 전체 개수입니다. 이 번호는 기본 Visual Basic 오류 메시지 대화 상자에 표시 됩니다. 예를 들어, 런타임 오류가 발생 했습니다 '3707'.  
   
--   음의 10 진수-전체 오류 수의 10 진수 변환 합니다.  
+-   전체 오류 수의 10 진수의 10 진수 변환을 음수입니다.  
   
--   16 진수-전체 오류 번호의 16 진수 표현입니다. Windows 기능 코드는 네 번째 숫자입니다. ADO 오류 번호에 대 한 기능 코드 *는*합니다. 예를 들어: 0x800***는***0e7b 같은 형식입니다.  
+-   전체 오류 번호의 16 진수는 16 진수 표현입니다. Windows 기능 코드는 네 번째 숫자입니다. ADO 오류 번호에 대 한 기능 코드 *는*합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다. 0x800***는***0e7b 같은 형식입니다.  
   
 > [!NOTE]
 >  OLE DB 오류 ADO 응용 프로그램에 전달할 수 있습니다. 일반적으로 Windows 기능 코드의로 식별할 수 있습니다 *4*합니다. 예를 들어, 0x800***4***합니다.  
@@ -91,8 +91,8 @@ ADO에서 런타임 오류 유형을 지정합니다.
 |**adErrURLNamedRowDoesNotExist**|3737 -2146824551 0x800A0E99|이 URL에 의해 명명 된 레코드가 없습니다.|  
 |**adErrVolumeNotFound**|3733 -2146824555 0x800A0E95|공급자는 URL에서 표시 하는 저장 장치를 찾을 수 없습니다. URL을 올바르게 입력 했는지 확인 합니다.|  
 |**adErrWriteFile**|3004 -2146825284 0x800A0BBC|파일에 쓰지 못했습니다.|  
-|**adWrnSecurityDialog**|3717 -2146824571 0x800A0E85|내부용으로만 사용할 수 있습니다. 사용하지 마십시오.|  
-|**adWrnSecurityDialogHeader**|3718 -2146824570 0x800A0E86|내부용으로만 사용할 수 있습니다. 사용하지 마십시오.|  
+|**adWrnSecurityDialog**|3717 -2146824571 0x800A0E85|내부 전용입니다. 사용하지 마십시오.|  
+|**adWrnSecurityDialogHeader**|3718 -2146824570 0x800A0E86|내부 전용입니다. 사용하지 마십시오.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 해당  
  Package: **com.ms.wfc.data**  

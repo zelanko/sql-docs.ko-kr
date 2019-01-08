@@ -18,12 +18,12 @@ ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a8b3f01c833e725fc807de11c15e39142509626
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b5ba2a19505d0d7a1493b997eda7d12f3a588f7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668331"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524114"
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  [  **@severity =** ]*심각도*  
  오류의 심각도입니다. *심각도* 됩니다 **smallint** 이며 기본값은 NULL입니다. 유효한 수준은 0에서 25까지입니다. 심각도에 대한 자세한 내용은 [데이터베이스 엔진 오류 심각도](../../relational-databases/errors-events/database-engine-error-severities.md)를 참조하세요.  
   
- [ **@msgtext =** ] **'***msg***'**  
+ [  **@msgtext =** ] **'**_msg_**'**  
  오류 메시지의 텍스트입니다. *msg* 됩니다 **nvarchar(255)** 이며 기본값은 NULL입니다.  
   
- [  **@lang =** ] **'***언어***'**  
+ [  **@lang =** ] **'**_언어_**'**  
  이 메시지의 언어입니다. *언어* 됩니다 **sysname** 이며 기본값은 NULL입니다. 동일한 서버에서 여러 언어를 설치할 수 있으므로 *언어* 각 메시지가 작성 되는 언어를 지정 합니다. 때 *언어* 는 생략 하면 언어는 기본 언어는 세션에 대 한 합니다.  
   
  [  **@with_log =** ] { **'** TRUE **'** | **'FALSE'** }  
@@ -61,7 +61,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 > [!NOTE]  
 >  Windows 응용 프로그램 로그에 메시지가 기록된 경우에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 오류 로그 파일에도 기록됩니다.  
   
- [ **@replace** *=* ] **'***대체***'**  
+ [ **@replace** *=* ] **'**_바꾸기_**'**  
  문자열로 지정 된 경우 *대체*, 기존의 오류 메시지는 새 메시지 텍스트와 심각도 수준으로 덮어씁니다. *바꿉니다* 됩니다 **varchar(7)** 이며 기본값은 NULL입니다. 하는 경우이 옵션을 지정 해야 *msg_id* 이미 있습니다. 영어(미국)로 작성된 모든 메시지는 다른 모든 언어의 영어 메시지 심각도 바뀝니다 *msg_id*합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

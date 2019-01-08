@@ -1,7 +1,8 @@
 ---
-title: Insights 및 Azure Data Studio의 일반적인 작업에 빠르게 액세스 | Microsoft Docs
-description: Azure Data Studio 통찰력 있는 위젯을 표시 하는 방법을 알아봅니다.
-ms.custom: tools|sos
+title: Insights 및 일반 작업에 빠르게 액세스
+titleSuffix: Azure Data Studio
+description: Azure Data Studio의 데이터베이스 대시보드에서 위젯을 표시 하는 방법을 알아봅니다.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: b163d110353d07811f0feb991772c90053651659
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: faaa59e8607f707bb43f31638880f771ae7ae6ab
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356196"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030487"
 ---
 # <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>대시보드 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -42,7 +43,7 @@ ms.locfileid: "49356196"
 Insight 세부 정보 플라이 아웃 관련된 정보 위젯에 대 한 자세한 정보를 제공합니다. 
 - 에 대 한 정보 위젯 개수, 선, 차트 등을 일목요연 요약 보기를 렌더링합니다. 
 - Insight 세부 정보 플라이 아웃 "드릴" 세부 정보를 나열 하는 높은 수준의 정보 위젯에 나열 된 각 항목에 대 한 더 심층적인 데이터 통찰력을 제공 합니다. 
-  - 세부 정보 플라이 아웃 내용은 기본 위젯의 쿼리를 별도 SQL 쿼리를 사용 하 여 정의 됩니다. 
+  - 세부 정보 플라이 아웃 내용은 기본 위젯의 쿼리를 별도 SQL 쿼리를 사용 하 여 정의 됩니다.
 
 Insight 세부 정보 쿼리를 사용 하는 집합 않아도 이지만 레이아웃 표준입니다.
 - 보기의 위쪽 절반은 항상 2 열 "요약" 뷰입니다. JSON 구성의 "레이블" 및 "value" 속성으로 정의 된 열을 사용 하 여
@@ -88,11 +89,11 @@ Insight 세부 정보 쿼리를 사용 하는 집합 않아도 이지만 레이�
 |자세히|json 개체|||해당 구조 내에서 세부 정보 정의 대 한 정보를 정의 하는 필수 속성||
 |queryFile|string|||insight 세부 정보 sql 쿼리 파일 경로 및 package.json의 위치에 상대적인 파일 이름||
 |레이블|json 개체|||각 품목 요약 목록 뷰에서 정의할 필수 속성|나중에 'summaryList'와 같은 변경 하려면이 속성의 이름|
-|아이콘|string|||각 요약 목록 보기 항목에 대 한 reder 아이콘 이름을 나타냅니다.|지원 되는 아이콘 목록 (tbd) 문서화 됩니다.|
+|아이콘|string|||각 요약 목록 보기 항목에 대해 렌더링할 아이콘 이름을 나타냅니다.|지원 되는 아이콘 목록 (tbd) 문서화 됩니다.|
 |column|string|||쿼리 결과 집합에서 요약 목록 보기에서 첫 번째 열의 이름을 나타냅니다.|이 속성의 이름은 보다 알기 쉬운 이름으로 변경 됩니다 나중에|
-|value|string|||쿼리 결과 집합에서 요약 목록 보기에서 두 번째 열의 이름을 표시 합니다. 이 열의 값은 조건을 확인 하 고 각 요약 목록 뷰 항목의 색 점 색을 설정 하는 데 사용 됩니다.|직관적으로이 속성의 이름이 변경 되는 나중에|
+|value|string|||쿼리 결과 집합에서 요약 목록 보기에서 두 번째 열의 이름을 표시 합니다. 이 열의 값은 조건을 확인 하 고 각 요약 목록 보기 항목 색 점 색을 설정 하는 데 사용 됩니다.|직관적으로이 속성의 이름이 변경 되는 나중에|
 |condition(조건)|json 개체|||열 값에 대 한 조건 검사를 정의 하 고 각 요약 목록 보기 항목에 대 한 색을 결정||
-|if|string|항상 equals, notEquals, greaterThan, lessThan, greaterThanOrEqauls, lessThanOrEquals||조건 확인 연산자|운영자에 게 속성 이름이 변경 되는 나중에|
+|if|string|항상 equals, notEquals, greaterThan, lessThan, greaterThanOrEquals, lessThanOrEquals||조건 확인 연산자|운영자에 게 속성 이름이 변경 되는 나중에|
 |equals|string|||조건 확인 값|이 속성 이름 'value'으로 변경 됩니다 나중에|
 
 ## <a name="insight-actions"></a>Insight 작업
@@ -104,7 +105,7 @@ Insight 세부 정보 쿼리를 사용 하는 집합 않아도 이지만 레이�
 
 ## <a name="sample-insight-action-definition"></a>샘플 정보 작업 정의
 
-```"actions"{}``` insight 작업을 정의합니다. 작업을 특정 범위에 대해 같은 정의할 수 있습니다 ```"server"```, ```"database"``` 등 및 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 동작에 현재 연결 컨텍스트 정보를 전달 합니다. 
+```"actions"{}``` insight 작업을 정의합니다. 작업을 특정 범위에 대해 같은 정의할 수 있습니다 ```"server"```, ```"database"``` 등 및 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 동작에 현재 연결 컨텍스트 정보를 전달 합니다.
 
 복원 작업 WideWorldImporters 데이터베이스에 대 한 시작 될 때에 예를 들어 ```"database": "${Database}"``` 전달할 정의 나타냅니다 ```Database``` 복원 작업에 쿼리 결과의 열 값입니다. 그러면 데이터베이스에 대 한 복원 작업 시작합니다. ```"types"``` json 배열 및 배열에 여러 작업을 나열할 수 있습니다. 상황에 맞는 메뉴를 기본적으로 되기 Insight 세부 정보 대화 상자에서 해당 사용자 수 클릭 하 고 작업을 수행 합니다. 
 

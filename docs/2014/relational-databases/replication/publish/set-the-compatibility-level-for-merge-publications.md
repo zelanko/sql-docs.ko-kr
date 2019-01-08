@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [SQL Server], replication
@@ -15,12 +14,12 @@ ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e3795b11f492a8a691ec8777cb87cf4b8379a76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7aecff691139b1041a928c42c3df2987c992cd91
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218021"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781965"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>병합 게시에 대한 호환성 수준 설정
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 병합 게시의 호환성 수준을 설정하는 방법에 대해 설명합니다. 병합 복제는 게시 호환성 수준을 사용하여 지정된 데이터베이스에서 게시에 사용할 수 있는 기능을 확인합니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "48218021"
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- 새 게시 마법사의 **구독자 유형** 페이지에서 호환성 수준을 설정합니다. 이 마법사에 액세스하는 방법은 [Create a Publication](create-a-publication.md)에서 병합 게시의 호환성 수준을 설정하는 방법에 대해 설명합니다. 게시 스냅숏이 생성된 후 호환성 수준을 증가시킬 수는 있지만 감소시킬 수는 없습니다. **게시 속성 - \<Publication>** 대화 상자의 **일반** 페이지에서 호환성 수준을 늘립니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요. 게시 호환성 수준을 증가시키면 이전 버전의 호환성 수준을 실행하는 서버에 있는 기존 구독은 더 이상 동기화할 수 없게 됩니다.  
+ 새 게시 마법사의 **구독자 유형** 페이지에서 호환성 수준을 설정합니다. 이 마법사에 액세스하는 방법은 [Create a Publication](create-a-publication.md)에서 병합 게시의 호환성 수준을 설정하는 방법에 대해 설명합니다. 게시 스냅숏이 생성된 후 호환성 수준을 증가시킬 수는 있지만 감소시킬 수는 없습니다. **게시 속성 - \<Publication>** 대화 상자의 **일반** 페이지에서 호환성 수준을 늘립니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Publication Properties](view-and-modify-publication-properties.md)을 참조하세요. 게시 호환성 수준을 증가시키면 이전 버전의 호환성 수준을 실행하는 서버에 있는 기존 구독은 더 이상 동기화할 수 없게 됩니다.  
   
 > [!NOTE]  
 >  호환성 수준은 다른 게시 속성 및 유효한 아티클 속성을 결정하는 데에도 의미를 가지므로 대화 상자를 동일하게 사용할 때는 호환성 수준 및 다른 속성을 변경하지 마세요. 속성을 변경하면 게시를 위한 스냅숏을 다시 생성해야 합니다.  

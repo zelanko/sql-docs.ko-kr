@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], non-SQL Server Subscribers
@@ -21,12 +20,12 @@ ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 19516e1b90a04c29efdfc8175d003a30ddf7957c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071063"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763225"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers
   다음[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자는 밀어넣기 구독을 사용하여 스냅숏 및 트랜잭션 게시를 구독할 수 있습니다. 구독은 나열된 OLE DB 공급자의 최신 버전을 사용하는 나열된 각 데이터베이스의 가장 최신 버전 두 개에 대해 지원됩니다.  
@@ -70,7 +69,7 @@ ms.locfileid: "48071063"
   
 -   게시에서 아티클을 추가하거나 삭제하면[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에 대한 구독을 다시 초기화해야 합니다.  
   
--   모든[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에 대해 지원되는 유일한 제약 조건은 NULL 및 NOT NULL입니다. PRIMARY KEY 제약 조건은 고유 인덱스로 복제됩니다.  
+-   모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에 대해 지원되는 유일한 제약 조건은 NULL 및 NOT NULL입니다. PRIMARY KEY 제약 조건은 고유 인덱스로 복제됩니다.  
   
 -   빈 값, 빈 문자열 및 NULL이 표시되는 방법에 영향을 주는 NULL 값은 다른 데이터베이스와 다르게 처리됩니다. 이로 인해 UNIQUE 제약 조건이 정의된 열에 삽입된 값의 동작도 영향을 받게 됩니다. 예를 들어 Oracle에서는 고유하다고 판단되는 열에 여러 NULL 값을 사용할 수 있지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 고유 열에 NULL 값을 하나만 사용할 수 있습니다.  
   

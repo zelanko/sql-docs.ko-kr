@@ -1,7 +1,8 @@
 ---
-title: '자습서: Azure Data Studio TRANSACT-SQL 편집기를 사용 하 여 데이터베이스 개체를 만드는 | Microsoft Docs'
-description: 이 자습서에서는 T-SQL을 사용 하 여 단순화 하는 Azure Data Studio의 주요 기능을 보여줍니다.
-ms.custom: tools|sos
+title: '자습서: TRANSACT-SQL 편집기를 사용 하 여 데이터베이스 개체 만들기'
+titleSuffix: Azure Data Studio
+description: 이 자습서에서는 T-SQL을 사용 하 여 작업을 간소화 하는 Azure Data Studio의 주요 기능을 보여줍니다.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2a517b1efb6a86d70bd05f9a1418792c0b61098
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
-ms.translationtype: HT
+ms.openlocfilehash: 04e6e366d1fd0a5d710296353d6326022f716199
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355934"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030457"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>자습서: TRANSACT-SQL 편집기를 사용하여 데이터베이스 개체 만들기 - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>자습서: TRANSACT-SQL 편집기를 사용 하 여 데이터베이스 개체 만들기 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 쿼리 작성 및 실행, 저장된 프로시저, 스크립트 등은 데이터베이스 전문가의 핵심 작업입니다. 이 자습서에서는 데이터베이스 개체를 만드는 T-SQL 편집기의 주요 기능을 설명합니다.
 
@@ -33,8 +34,8 @@ ms.locfileid: "49355934"
 
 이 자습서에서는 SQL Server 또는 Azure SQL Database의 *TutorialDB*가 필요합니다. *TutorialDB* 데이터베이스를 만들려면, 다음 빠른 시작 중 하나를 수행합니다.
 
-- [연결 및 SQL Server를 사용 하 여 쿼리 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [연결 및 Azure SQL Database를 사용 하 여 쿼리 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)를 사용하여 SQL Server에 연결 및 쿼리
+- [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)를 사용하여 Azure SQL Database에 연결 및 쿼리
 
 
 ## <a name="quickly-locate-a-database-object-and-perform-a-common-task"></a>신속 하 게 데이터베이스 개체를 찾아 일반적인 작업 수행

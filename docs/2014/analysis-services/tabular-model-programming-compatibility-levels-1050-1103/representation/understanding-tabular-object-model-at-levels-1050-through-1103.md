@@ -12,12 +12,12 @@ ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 12ea22b773613fc274af29de1a28ba214a10cce4
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 574614976a9d24f6c9cedbfede2fd5a150211416
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148438"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525793"
 ---
 # <a name="understanding-the-tabular-object-model"></a>테이블 형식 개체 모델 이해
   테이블 형식 모델은 테이블, 관계, 계층, 큐브 뷰, 측정값 및 핵심 성과의 논리적 표현입니다. 이 섹션에서는 AMO를 사용한 내부 구현에 대해 소개합니다. 참조 [Analysis Management Objects를 사용 하 여 개발 &#40;AMO&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo) AMO를 사용한 적이 없는 경우.  
@@ -57,7 +57,7 @@ ms.locfileid: "50148438"
   
  참조 [계층 표현 &#40;테이블 형식&#41; ](tables-hierarchy-representation.md) 에 대 한 자세한 내용은 계층 표현을 만들고 조작 하는 방법입니다.  
   
-### <a name="key-performance-indicator-kpi--representation"></a>KPI(핵심 성과 지표) 표현  
+### <a name="key-performance-indicator--kpi--representation"></a>핵심 성과 지표 표현을-KPI  
  KPI는 기본 측정값으로 정의된 값을 대상 값과 비교하여 값 성과를 측정하는 데 사용됩니다. AMO 개체를 기준으로 KPI 표현은 일 대 다 매핑 관계를 가지며 KPI는 <xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> AMO 개체를 사용하여 나타납니다. <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A>가 주된 필수 개체입니다.  모델링을 수행할 때 앞에서 말한 AMO 개체의 포함된 개체를 모두 사용할 수 있다는 의미는 아닙니다.  
   
 > [!NOTE]  

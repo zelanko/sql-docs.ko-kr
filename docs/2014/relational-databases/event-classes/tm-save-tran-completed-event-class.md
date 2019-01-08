@@ -1,11 +1,10 @@
 ---
-title: 'TM: Save Tran Completed 이벤트 클래스 | Microsoft 문서'
+title: 'TM: Save Tran Completed 이벤트 클래스 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: e6b37780-5ad8-4d50-89a3-d8a22496faac
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb14b93ce3fd7cf4e04dd5ab47b3b6427dc9e57d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: b50f4026daa390000a1a46377446abc3cee709e5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138113"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774365"
 ---
 # <a name="tm-save-tran-completed-event-class"></a>TM: Save Tran Completed 이벤트 클래스
   TM: Save Tran Completed 이벤트 클래스는 SAVE TRANSACTION 요청이 완료되었음을 나타냅니다. 요청은 클라이언트에서 트랜잭션 관리 인터페이스를 통해 전송됩니다.  

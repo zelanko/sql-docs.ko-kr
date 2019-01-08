@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 07f068a24c60fe82c299387fe859f07296f21df8
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: b11b3154162fafdfc717e9785fb65e59dc45799c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269437"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510823"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Linux의 SQL Server에 대 한 영구 메모리 (PMEM)를 구성 하는 방법
 
@@ -40,7 +40,7 @@ SQL Server 2019 미리 보기를 확장 영구 메모리에 대 한 지원 (PMEM
   - 네임 스페이스를 만들려면 [ndctl]를 사용 합니다.
 
   ```bash 
-  ndctl create-namespace -f -e namespace0.0 --mode=fsdax* -–map=mem
+  ndctl create-namespace -f -e namespace0.0 --mode=fsdax* --map=mem
   ```
 
   >[!NOTE]
@@ -67,7 +67,7 @@ ndctl list
 
     ```bash
     mkfs.xfs -f /dev/pmem0
-    mount –o dax,noatime /dev/pmem0 /mnt/dax
+    mount -o dax,noatime /dev/pmem0 /mnt/dax
     xfs_io -c "extsize 2m" /mnt/dax
     ```
 
@@ -75,7 +75,7 @@ ndctl list
 
     ```bash
     mkfs.ext4 -b 4096 -E stride=512 -F /dev/pmem0
-    mount –o dax,noatime /dev/pmem0 /mnt/dax
+    mount -o dax,noatime /dev/pmem0 /mnt/dax
     ```
 
   장치 ndctl를 사용 하 여 구성, 포맷 되어 탑재를 후에 데이터베이스 파일을 배치할 수 있습니다. 새 데이터베이스를 만들 수도 있습니다. 

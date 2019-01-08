@@ -15,12 +15,12 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 59067479ebd57b8a26cf3de6ef243e0eb7072bce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 7d4a8d29e27fae9b54a6060ec1be8f6c5a4163a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200953"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507275"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션에 클라이언트 연결(SQL Server)
   데이터베이스 미러링 세션에 연결하기 위해 클라이언트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 또는 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용할 수 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스에 대해 구성하면 두 데이터 액세스 공급자가 모두 데이터베이스 미러링을 완전하게 지원합니다. 미러된 데이터베이스 사용 시 프로그래밍 고려 사항에서 대한 자세한 내용은 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)을 참조하십시오. 또한 현재 주 서버 인스턴스를 사용할 수 있어야 하며 서버 인스턴스에 클라이언트 로그인이 만들어져 있어야 합니다. 자세한 내용은 [분리된 사용자 문제 해결&#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)을 실행합니다. 클라이언트에서 데이터베이스 미러링 세션에 연결할 때는 미러링 모니터 서버 인스턴스가 있어도 사용되지 않습니다.  
@@ -83,7 +83,7 @@ Network=dbnmpntw;
 >  명명된 파이프는 TCP/IP 다시 시도 알고리즘을 사용하지 않으므로 미러된 데이터베이스에 연결하기 전에 명명된 파이프 연결 시도가 시간 초과되는 경우가 많습니다.  
   
 #### <a name="server-attribute"></a>Server 특성  
- 연결 문자열에 포함 해야 합니다는 `Server` 현재 주 서버 인스턴스를 식별 하는 초기 파트너 이름을 제공 하는 특성입니다.  
+ 연결 문자열에는 초기 파트너 이름을 제공하는 `Server` 특성이 있어야 합니다. 이 특성은 현재 주 서버 인스턴스를 식별합니다.  
   
  서버 인스턴스를 식별하는 가장 간단한 방법은 *<server_name>*[**\\***<SQL_Server_instance_name>*]과 같이 해당 이름을 지정하는 것입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
@@ -137,7 +137,7 @@ Server=123.34.45.56,4724;
 >  초기 파트너 이름만 제공되면 다시 연결 방법에 대한 경우를 제외하고 애플리케이션 개발자가 다른 동작을 수행하거나 코드를 작성할 필요가 없습니다.  
   
 > [!NOTE]  
->  관리 코드 응용 프로그램 개발자는 장애 조치 파트너 이름을 제공 합니다 `ConnectionString` 의 `SqlConnection` 개체입니다. 이러한 연결 문자열을 사용하는 방법은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK에 포함된 ADO.NET 설명서에서 "Database Mirroring Support in the .NET Framework Data Provider for SQL Server"를 참조하십시오.  
+>  관리 코드 응용 프로그램 개발자는 `ConnectionString` 개체의 `SqlConnection`에 장애 조치(failover) 파트너 이름을 제공합니다. 이러한 연결 문자열을 사용하는 방법은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK에 포함된 ADO.NET 설명서에서 "Database Mirroring Support in the .NET Framework Data Provider for SQL Server"를 참조하십시오.  
   
 #### <a name="example-connection-string"></a>연결 문자열 예  
  예를 들어 TCP/IP를 사용하여 Prtner_A 또는 Partner_B의 **AdventureWorks** 데이터베이스에 명시적으로 연결하기 위해 ODBC 드라이버를 사용하는 클라이언트 애플리케이션에서 다음 연결 문자열을 제공할 수 있습니다.  
@@ -192,7 +192,7 @@ Server=123.34.45.56,4724;
 )  
   
 ### <a name="retry-delays-during-failover"></a>장애 조치 중 다시 시도 지연  
- 클라이언트가 장애 조치 중인 파트너에 연결하면 해당 파트너가 비활성 상태라고 즉시 응답합니다. 이 경우 각 라운드의 연결 시도가 할당된 다시 시도 시간보다 훨씬 짧습니다. 즉, 로그인 기간이 시간 초과되기 전에 많은 라운드의 연결 시도가 수행될 수 있습니다. 장애 조치 중에 연결 시도를 빨리 연속하여 파트너를 오버로드하지 않도록 방지하기 위해 데이터 액세스 공급자는 각 다시 시도 주기 후에 짧은 다시 시도 지연을 추가합니다. 지정된 다시 시도 지연의 길이는 다시 시도 지연 알고리즘에 의해 결정됩니다. 첫 번째 라운드 후의 지연은 100밀리초입니다. 다음 세 라운드 후에는 다시 시도 지연이 각각 두 배씩 증가하여 200, 400, 800이 됩니다. 이후의 모든 라운드에서 다시 시도 지연은 연결 시도가 성공하거나 시간이 초과될 때까지 1초입니다.  
+ 클라이언트가 장애 조치 중인 파트너에 연결하면 해당 파트너가 비활성 상태라고 즉시 응답합니다. 이 경우 각 라운드의 연결 시도가 할당된 다시 시도 시간보다 훨씬 짧습니다. 즉, 로그인 기간이 시간 초과되기 전에 많은 라운드의 연결 시도가 수행될 수 있습니다. 장애 조치 중에 연결 시도를 빨리 연속하여 파트너를 오버로드하지 않도록 방지하기 위해 데이터 액세스 공급자는 각 다시 시도 주기 후에 짧은 다시 시도 지연을 추가합니다. 지정된 다시 시도 지연의 길이는 다시 시도 지연 알고리즘에 의해 결정됩니다. 첫 번째 라운드 후의 지연은 100밀리초입니다. 다음 세 라운드 후에는 각각 다시 시도 지연이 각각 두 배씩 증가하여 200, 400, 800이 됩니다. 이후의 모든 라운드에서 다시 시도 지연은 연결 시도가 성공하거나 시간이 초과될 때까지 1초입니다.  
   
 > [!NOTE]  
 >  서버 인스턴스가 중지되면 연결 요청이 즉시 실패합니다.  

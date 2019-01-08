@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4a308427ec839c316dbf0e3b215ea6d1506b1fa1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: 20d730ed2fd975d800b27882ecc218f7ce1868b3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015380"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529061"
 ---
 # <a name="content-queries-data-mining"></a>내용 쿼리(데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -134,7 +134,7 @@ ms.locfileid: "34015380"
   
  선택한 알고리즘이 모델에 저장된 정보의 종류에 어떠한 영향을 미치는지를 보여 주는 몇 가지 예가 이 섹션에서 제공됩니다. 마이닝 모델 콘텐츠 및 각 모델 유형에 지정된 콘텐츠에 대한 자세한 내용은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
   
-###  <a name="bkmk_Assoc"></a> 예 1: 연결 모델에 대한 내용 쿼리  
+###  <a name="bkmk_Assoc"></a> 예제 1: 연결 모델에 대한 내용 쿼리  
  `SELECT FROM <model>.CONTENT`문은 쿼리하는 모델의 유형에 따라 서로 다른 종류의 정보를 반환합니다. 연결 모델의 경우 주요 정보는 *노드 유형*입니다. 노드는 모델 콘텐츠의 정보에 대한 컨테이너와 같습니다. 연결 모델에서 규칙을 나타내는 노드에는 NODE_TYPE 값 8이 있지만 항목 집합을 나타내는 노드에는 NODE_TYPE 값 7이 있습니다.  
   
  따라서 다음 쿼리는 지지도 순으로 순위가 지정된(기본 순서) 상위 10개 항목 집합을 반환합니다.  
@@ -144,7 +144,7 @@ SELECT TOP 10 NODE_DESCRIPTION, NODE_PROBABILITY, SUPPORT
 FROM <model>.CONTENT WHERE NODE_TYPE = 7  
 ```  
   
- 다음 쿼리는 이 정보를 기반으로 합니다. 이 쿼리에서는 노드 ID, 전체 규칙, 항목 집합의 오른쪽에 있는 제품 즉, 항목 집합의 일부로서 일부 다른 제품과 관련이 있는 것으로 예측되는 제품이 반환됩니다.  
+ 다음 쿼리는 이 정보를 기반으로 합니다. 세 개의 열을 반환 하는 쿼리: 노드 ID, 전체 규칙, 항목 집합의 오른쪽에 제품-즉, 항목 집합의 일부로 서 일부 다른 제품과 관련이 있는 수에 예측 된 제품.  
   
 ```  
 SELECT FLATTENED NODE_UNIQUE_NAME, NODE_DESCRIPTION,  
@@ -166,7 +166,7 @@ ORDER BY NODE_SUPPORT DESC
   
  자세한 내용은 [연결 모델 쿼리 예제](../../analysis-services/data-mining/association-model-query-examples.md)를 참조하세요.  
   
-###  <a name="bkmk_DecTree"></a> 예 2: 의사 결정 트리 모델에 대한 내용 쿼리  
+###  <a name="bkmk_DecTree"></a> 예제 2: 의사 결정 트리 모델에 대한 내용 쿼리  
  의사 결정 트리 모델은 예측뿐만 아니라 분류에도 사용할 수 있습니다.  이 예에서는 모델을 사용하여 결과를 예측한다고 가정하지만 결과를 분류하는 데 사용할 수 있는 요소나 규칙을 찾으려고 할 수도 있습니다.  
   
  의사 결정 트리 모델에서 노드는 트리 및 리프 노드를 나타내는 데 사용됩니다. 각 노드에 대한 캡션에는 결과 경로에 대한 설명이 포함되어 있습니다. 따라서 특정 결과에 대한 경로를 추적하려면 해당 결과가 포함된 노드를 식별하고 해당 노드에 대한 세부 정보를 얻어야 합니다.  
@@ -195,7 +195,7 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
   
  계층적 행 집합으로 작업하는 방법은 MSDN에서 OLEDB 사양을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [DMX Select 문 이해](../../dmx/understanding-the-dmx-select-statement.md)   
  [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)  
   

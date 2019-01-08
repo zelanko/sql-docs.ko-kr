@@ -20,16 +20,16 @@ ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec1690e8c9f4f0e8c491bedac1a27faf65cde747
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f83b8ce83c1433ce7e20f00580100b65be84961
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809922"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209252"
 ---
 # <a name="sqlgettypeinfo-function"></a>SQLGetTypeInfo 함수(SQLGetTypeInfo Function)
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLGetTypeInfo** 데이터 원본에서 지 원하는 데이터 형식에 대 한 정보를 반환 합니다. 드라이버는 SQL 결과 집합의 형태로 정보를 반환합니다. 데이터 형식은 데이터 정의 언어 (DDL) 문에서 사용이 됩니다.  
@@ -50,8 +50,8 @@ SQLRETURN SQLGetTypeInfo(
  *StatementHandle*  
  [입력] 결과 집합에 대 한 문의 핸들입니다.  
   
- *데이터 형식*  
- [입력] SQL 데이터 형식입니다. 값 중 하나 이어야 합니다는 [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md) 부록 d: 데이터 형식 또는 드라이버별 SQL 데이터 형식에 대 한 부분입니다. SQL_ALL_TYPES 모든 데이터 형식에 대 한 정보 반환 되어야 함을 지정 합니다.  
+ *DataType*  
+ [입력] SQL 데이터 형식입니다. 값 중 하나 이어야 합니다는 [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md) 섹션의 부록 d: 데이터 형식 또는 드라이버별 SQL 데이터 형식입니다. SQL_ALL_TYPES 모든 데이터 형식에 대 한 정보 반환 되어야 함을 지정 합니다.  
   
 ## <a name="returns"></a>반환 값  
  관계 없이 SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR를 또는 SQL_INVALID_HANDLE 합니다.  
@@ -62,7 +62,7 @@ SQLRETURN SQLGetTypeInfo(
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
-|01S02|옵션 값이 변경 됨|지정 된 문 특성을 일시적으로 유사한 값에 대체 되므로 구현 작업 조건으로 인해 잘못 되었습니다. (호출 **SQLGetStmtAttr** 일시적으로 대체 값을 결정 합니다.) 대체 값이 적합 합니다 *StatementHandle* 커서를 닫을 때까지 합니다. 변경할 수 있는 문 특성은: SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE, SQL_ATTR_KEYSET_SIZE, SQL_ATTR_MAX_LENGTH, SQL_ATTR_MAX_ROWS, SQL_ATTR_QUERY_TIMEOUT, 및 SQL_ATTR_SIMULATE_CURSOR 합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
+|01S02|옵션 값이 변경 됨|지정 된 문 특성을 일시적으로 유사한 값에 대체 되므로 구현 작업 조건으로 인해 잘못 되었습니다. (호출 **SQLGetStmtAttr** 일시적으로 대체 값을 결정 합니다.) 대체 값이 적합 합니다 *StatementHandle* 커서를 닫을 때까지 합니다. 변경할 수 있는 문 특성은 다음과 같습니다. SQL_ATTR_CONCURRENCY SQL_ATTR_CURSOR_TYPE, SQL_ATTR_KEYSET_SIZE, SQL_ATTR_MAX_LENGTH, SQL_ATTR_MAX_ROWS, SQL_ATTR_QUERY_TIMEOUT, 및 SQL_ATTR_SIMULATE_CURSOR 합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버는 연결 된 데이터 원본 간의 통신 링크 하지 못했습니다.|  
 |24000|잘못된 커서 상태|커서가에서 열린 합니다 *StatementHandle,* 및 **SQLFetch** 또는 **SQLFetchScroll** 호출 되었지만 합니다. 이 오류는 경우 드라이버 관리자에 의해 반환 됩니다 **SQLFetch** 하거나 **SQLFetchScroll** 에서 SQL_NO_DATA를 반환 하지 않은 한 경우 드라이버에서 반환 됩니다 **SQLFetch** 또는**SQLFetchScroll** SQL_NO_DATA를 반환 했습니다.<br /><br /> 결과 집합에 열려 합니다 *StatementHandle*, 있지만 **SQLFetch** 또는 **SQLFetchScroll** 호출한 되었습니다.|  
 |40001|Serialization 오류|트랜잭션은 다른 트랜잭션과 리소스 교착 상태로 인해 롤백 되었습니다.|  
@@ -114,9 +114,9 @@ SQLRETURN SQLGetTypeInfo(
   
 |열 이름|Column<br /><br /> number|데이터 형식|주석|  
 |-----------------|-----------------------|---------------|--------------|  
-|TYPE_NAME (ODBC 2.0)|1|NULL이 아닌 Varchar|데이터 소스에 따라 다릅니다 데이터 형식 이름입니다. 예를 들어, "char ()", "VARCHAR()", "MONEY", "LONG VARBINARY" 또는 "CHAR () FOR BIT DATA"입니다. 응용 프로그램에서이 이름을 사용 해야 합니다 **CREATE TABLE** 하 고 **ALTER TABLE** 문입니다.|  
-|DATA_TYPE (ODBC 2.0)|2|NULL이 아닌 Smallint|SQL 데이터 형식입니다. 이 ODBC SQL 데이터 형식 또는 드라이버별 SQL 데이터 형식 수 있습니다. 이 열 데이터 형식 datetime 또는 간격에 대 한 간결한 데이터 형식 (예: SQL_TYPE_TIME 또는 SQL_INTERVAL_YEAR_TO_MONTH)를 반환합니다. 유효한 ODBC SQL 데이터 형식의 목록을 참조 하세요 [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md) 부록 d: 데이터 형식에서입니다. 드라이버별 SQL 데이터 형식에 대 한 내용은 드라이버의 설명서를 참조 하십시오.|  
-|COLUMN_SIZE (ODBC 2.0)|3|정수|서버에서이 데이터 형식에 대 한 지 최대 열 크기입니다. 숫자 데이터의 최대 전체 자릿수입니다. 문자열 데이터의 문자 길이입니다. Datetime 데이터 형식의 경우 문자 (최대 허용된 전체 자릿수 소수 자릿수 초 구성 요소를 가정) 문자열 표현의 길이입니다. NULL 열 크기 적용할 수 없는 데이터 형식에 대해 반환 됩니다. 간격 데이터 형식에 대 한 리터럴 간격의 문자 표현에 있는 문자의 수입니다 (선행 정밀도; 간격에 따라 정의 된 대로 참조 하세요 [간격 데이터 형식 길이](../../../odbc/reference/appendixes/interval-data-type-length.md) 부록 d: 데이터 형식에서).<br /><br /> 열 크기에 대 한 자세한 내용은 참조 하세요. [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식에서입니다.|  
+|TYPE_NAME (ODBC 2.0)|1|NULL이 아닌 Varchar|데이터 원본에 종속적인 데이터 형식 이름입니다. 예를 들어, "char ()", "VARCHAR()", "MONEY", "LONG VARBINARY" 또는 "CHAR () FOR BIT DATA"입니다. 응용 프로그램에서이 이름을 사용 해야 합니다 **CREATE TABLE** 하 고 **ALTER TABLE** 문입니다.|  
+|DATA_TYPE (ODBC 2.0)|2|NULL이 아닌 Smallint|SQL 데이터 형식입니다. 이 ODBC SQL 데이터 형식 또는 드라이버별 SQL 데이터 형식 수 있습니다. 이 열 데이터 형식 datetime 또는 간격에 대 한 간결한 데이터 형식 (예: SQL_TYPE_TIME 또는 SQL_INTERVAL_YEAR_TO_MONTH)를 반환합니다. 유효한 ODBC SQL 데이터 형식의 목록을 참조 하세요 [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md) 부록 d: 데이터 형식입니다. 드라이버별 SQL 데이터 형식에 대 한 내용은 드라이버의 설명서를 참조 하십시오.|  
+|COLUMN_SIZE (ODBC 2.0)|3|정수|서버에서이 데이터 형식에 대 한 지 최대 열 크기입니다. 숫자 데이터의 최대 전체 자릿수입니다. 문자열 데이터의 문자 길이입니다. Datetime 데이터 형식의 경우 문자 (최대 허용된 전체 자릿수 소수 자릿수 초 구성 요소를 가정) 문자열 표현의 길이입니다. NULL 열 크기 적용할 수 없는 데이터 형식에 대해 반환 됩니다. 간격 데이터 형식에 대 한 리터럴 간격의 문자 표현에 있는 문자의 수입니다 (선행 정밀도; 간격에 따라 정의 된 대로 참조 하세요 [간격 데이터 형식 길이](../../../odbc/reference/appendixes/interval-data-type-length.md) 부록 d: 데이터 형식)입니다.<br /><br /> 열 크기에 대 한 자세한 내용은 참조 하세요. [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식입니다.|  
 |LITERAL_PREFIX (ODBC 2.0)|4|Varchar|문자 또는 문자 리터럴을; 접두사를 지정 하는 데 사용 예를 들어, 작은따옴표 (') 문자 데이터 형식 또는 이진 데이터 형식에 대 한 0x NULL 리터럴 접두사를 적용할 수 없는 데이터 형식에 대해 반환 됩니다.|  
 |LITERAL_SUFFIX (ODBC 2.0)|5|Varchar|문자 또는 문자 리터럴을;를 종료 하는 데 사용 예를 들어, 작은따옴표 ('); 문자 데이터 형식에 대 한 NULL 리터럴 접미사를 적용할 수 없는 데이터 형식에 대해 반환 됩니다.|  
 |CREATE_PARAMS (ODBC 2.0)|6|Varchar|목록 TYPE_NAME 필드에서 반환 되는 이름을 사용 하는 경우 응용 프로그램 괄호 안에 지정할 수 있는 각 매개 변수에 해당 하는 쉼표로 구분 하 여 키워드입니다. 키워드 목록에는 다음 중 하나일 수 있습니다: 길이, 전체 자릿수 또는 소수입니다. 구문을 사용할 해야 하는 순서에 표시 됩니다. 예를 들어, 소수의 CREATE_PARAMS 것 "precision, scale"; Varchar CREATE_PARAMS "길이입니다."와 같습니다. 데이터 형식 정의;에 대 한 매개 변수가 없는 경우 NULL이 반환 됩니다. 예를 들어 정수입니다.<br /><br /> 드라이버는 사용 된 국가/지역의 언어로 CREATE_PARAMS 텍스트를 제공 합니다.|  
@@ -126,13 +126,13 @@ SQLRETURN SQLGetTypeInfo(
 |UNSIGNED_ATTRIBUTE (ODBC 2.0)|10|Smallint|여부는 데이터 형식은 부호가 없습니다.<br /><br /> Sql_true는 해당 데이터 형식이 서명 되어 있지 않으면입니다.<br /><br /> 데이터 형식에 부호가 경우 SQL_FALSE입니다.<br /><br /> 특성 데이터 형식에 적용할 수 없거나 데이터 형식이 숫자가 아닌 경우 NULL이 반환 됩니다.|  
 |FIXED_PREC_SCALE (ODBC 2.0)|11|NULL이 아닌 Smallint|전체 자릿수 및 소수 (임, 데이터 소스 관련), money 데이터 형식과 같은 데이터 형식에 미리 정의 된 여부 수정 됨:<br /><br /> SQL_TRUE는 미리 정의 하는 경우에 전체 자릿수 및 소수 수정 되었습니다.<br /><br /> 미리 정의 된 정밀도 배율이 고정 되지 않은 경우 SQL_FALSE입니다.|  
 |AUTO_UNIQUE_VALUE (ODBC 2.0)|12|Smallint|데이터 형식이 자동 증가 인지 여부.<br /><br /> Sql_true는 해당 데이터 형식이 자동 증가 합니다.<br /><br /> 데이터 형식이 자동 증가 하는 경우 SQL_FALSE입니다.<br /><br /> 특성 데이터 형식에 적용할 수 없거나 데이터 형식이 숫자가 아닌 경우 NULL이 반환 됩니다.<br /><br /> 응용 프로그램 값이이 특성을 가진 열을 삽입할 수 있지만 일반적으로 열에 값을 업데이트할 수 없습니다.<br /><br /> 자동 증가 열에 삽입 수행 되 면 삽입 시 고유 값 열에 삽입 됩니다. Increment를 정의 하지 않은 이지만 데이터 소스 관련 있습니다. 응용 프로그램 특정 값으로 자동 증분 열을 증가 나 특정 지점에서 시작 하는 것을 가정 하지 않아야 합니다.|  
-|LOCAL_TYPE_NAME (ODBC 2.0)|13|Varchar|데이터 형식의 데이터 소스에 따라 다릅니다 이름의 지역화 된 버전입니다. 데이터 원본이 지역화된 이름을 지원하지 않는 경우에는 NULL이 반환됩니다. 이 이름은 표시 대화 상자와 같이 등만 위한 것입니다.|  
-|MINIMUM_SCALE (ODBC 2.0)|14|Smallint|데이터 원본에서 데이터 형식의 최소 소수 자릿수입니다. 데이터 형식이 고정 소수 자릿수인 경우에는 MINIMUM_SCALE 및 MAXIMUM_SCALE 열 모두 이 값을 포함합니다. 예를 들어는 SQL_TYPE_TIMESTAMP 열 소수 자릿수 초에 대 한 고정된 소수가 있을 수 있습니다. 소수 자릿수가 적용되지 않는 경우에는 NULL이 반환됩니다. 자세한 내용은 [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식에서입니다.|  
-|MAXIMUM_SCALE (ODBC 2.0)|15|Smallint|데이터 원본에서 데이터 형식의 최대 소수 자릿수입니다. 소수 자릿수가 적용되지 않는 경우에는 NULL이 반환됩니다. 최대 소수 자릿수에 정의 되어 있지 별도로 데이터 원본에 정의 됩니다. 대신 최대 자릿수와 동일 하지만이 열에는 동일한 COLUMN_SIZE 열의 값을 포함 합니다. 자세한 내용은 [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식에서입니다.|  
+|LOCAL_TYPE_NAME (ODBC 2.0)|13|Varchar|데이터 원본에 종속적인 데이터 형식 이름의 지역화된 버전입니다. 데이터 원본이 지역화된 이름을 지원하지 않는 경우에는 NULL이 반환됩니다. 이 이름은 표시 대화 상자와 같이 등만 위한 것입니다.|  
+|MINIMUM_SCALE (ODBC 2.0)|14|Smallint|데이터 원본에서 데이터 형식의 최소 소수 자릿수입니다. 데이터 형식이 고정 소수 자릿수인 경우에는 MINIMUM_SCALE 및 MAXIMUM_SCALE 열 모두 이 값을 포함합니다. 예를 들어는 SQL_TYPE_TIMESTAMP 열 소수 자릿수 초에 대 한 고정된 소수가 있을 수 있습니다. 소수 자릿수가 적용되지 않는 경우에는 NULL이 반환됩니다. 자세한 내용은 [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식입니다.|  
+|MAXIMUM_SCALE (ODBC 2.0)|15|Smallint|데이터 원본에서 데이터 형식의 최대 소수 자릿수입니다. 소수 자릿수가 적용되지 않는 경우에는 NULL이 반환됩니다. 최대 소수 자릿수에 정의 되어 있지 별도로 데이터 원본에 정의 됩니다. 대신 최대 자릿수와 동일 하지만이 열에는 동일한 COLUMN_SIZE 열의 값을 포함 합니다. 자세한 내용은 [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식입니다.|  
 |SQL_DATA_TYPE (ODBC 3.0)|16|smallint NOT NULL|설명자의 SQL_DESC_TYPE 필드에는 SQL 데이터 형식으로 값 표시 됩니다. 이 열은 간격 및 datetime 데이터 형식 제외 하 고는 DATA_TYPE 열과 동일 합니다.<br /><br /> 간격 및 datetime 데이터 형식에 대 한 결과 집합의 SQL_DATA_TYPE 필드, SQL_DATETIME 또는 sql_interval 인 반환 하 고 SQL_DATETIME_SUB 필드는 특정 간격 또는 날짜/시간 데이터 형식에 대 한 하위 코드를 반환 합니다. (참조 [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md).)|  
 |SQL_DATETIME_SUB (ODBC 3.0)|17|Smallint|SQL_DATA_TYPE 값 SQL_DATETIME 또는 sql_interval 인 경우이 열에 날짜/시간/간격 하위 코드를 포함 합니다. 날짜/시간 및 간격 이외 데이터 형식의 경우이 필드는 NULL입니다.<br /><br /> 간격 또는 날짜/시간 데이터 형식에 대 한 결과 집합의 SQL_DATA_TYPE 필드, SQL_DATETIME 또는 sql_interval 인 반환 하 고 SQL_DATETIME_SUB 필드는 특정 간격 또는 날짜/시간 데이터 형식에 대 한 하위 코드를 반환 합니다. (참조 [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md).)|  
 |NUM_PREC_RADIX (ODBC 3.0)|18|정수|데이터 형식이 근사치 숫자 형식, COLUMN_SIZE 지정 된 비트 수를 표시 하는 2 값이이 열에 포함 됩니다. 정확한 숫자 형식인 경우이 열 값 COLUMN_SIZE 소수 자릿수를 지정 하는지 표시 하는 10을 포함 합니다. 그렇지 않은 경우 이 열은 NULL입니다.|  
-|INTERVAL_PRECISION (ODBC 3.0)|19|Smallint|데이터 형식이 간격 데이터 유형을 이면이 열이 선행 간격 정밀도 값을 포함 합니다. (참조 [간격 데이터 형식 전체 자릿수](../../../odbc/reference/appendixes/interval-data-type-precision.md) 부록 d: 데이터 형식에서입니다.) 그렇지 않은 경우 이 열은 NULL입니다.|  
+|INTERVAL_PRECISION (ODBC 3.0)|19|Smallint|데이터 형식이 간격 데이터 유형을 이면이 열이 선행 간격 정밀도 값을 포함 합니다. (참조 [간격 데이터 형식 전체 자릿수](../../../odbc/reference/appendixes/interval-data-type-precision.md) 부록 d: 데이터 형식입니다.) 그렇지 않은 경우 이 열은 NULL입니다.|  
   
  특성 정보 또는 결과 집합의 특정 열 데이터 형식에 적용할 수 있습니다. **SQLGetTypeInfo** ; 데이터 형식과 연결 된 특성에 대 한 정보를 반환 합니다. **SQLColAttribute** 결과 집합의 열과 연결 된 특성에 대 한 정보를 반환 합니다.  
   

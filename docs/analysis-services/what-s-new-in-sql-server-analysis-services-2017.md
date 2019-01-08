@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 76e9bedbd7807b78288a901d0b2a7674232c7e91
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 188406e99f32b42079b66536db42810222eb2a24
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145988"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516744"
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>SQL Server 2017 Analysis Services의 새로운 기능
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -64,7 +64,7 @@ SQL Server Data Tools (SSDT)에서는 최신을 테이블 형식 모델에 데�
 
 * 해시 인코딩을 group by 열 (대개 차원 테이블 값) 및 외래 키에 대 한는 것이 좋습니다. 문자열 열은 항상 인코딩된 해시입니다.
 
-숫자 열 인코딩 이러한 메서드 중 하나를 사용할 수 있습니다. 값 또는 해시 인코딩을 적용할지 여부를 확인 하려면 각 숫자 열에 대 한 샘플 값 이동 Analysis Services 테이블을 처리 하거나 테이블 (파티션 없이 또는) 비어 있는 경우 시작 또는 전체 테이블 처리 작업을 수행 중인 경우 . 기본적으로 값 인코딩을 선택 경우 열의 고유 값의 샘플을 충분히 – 그렇지 않으면 해시 인코딩을 일반적으로 제공 보다 효율적인 압축 합니다. Analysis services가 인코딩 프로세스를 다시 시작 후 열은 부분적으로 처리 하 여 데이터 분포에 대 한 추가 정보에 따라 인코딩 방법을 변경할 수 그러나이 처리 시간이 늘어나고 비효율적입니다. 성능 튜닝 백서는 재 인코딩이 자세히 설명 하 고 SQL Server Profiler를 사용 하 여 검색 하는 방법에 설명 합니다.
+숫자 열 인코딩 이러한 메서드 중 하나를 사용할 수 있습니다. 값 또는 해시 인코딩을 적용할지 여부를 확인 하려면 각 숫자 열에 대 한 샘플 값 이동 Analysis Services 테이블을 처리 하거나 테이블 (파티션 없이 또는) 비어 있는 경우 시작 또는 전체 테이블 처리 작업을 수행 중인 경우 . 기본적으로 값 인코딩을 선택 됩니다 때 열의 고유 값의 샘플을 충분히-그렇지 않은 경우 더 나은 압축을 제공 일반적으로 해시 인코딩을. Analysis services가 인코딩 프로세스를 다시 시작 후 열은 부분적으로 처리 하 여 데이터 분포에 대 한 추가 정보에 따라 인코딩 방법을 변경할 수 그러나이 처리 시간이 늘어나고 비효율적입니다. 성능 튜닝 백서는 재 인코딩이 자세히 설명 하 고 SQL Server Profiler를 사용 하 여 검색 하는 방법에 설명 합니다.
 
 인코딩 힌트 모델에서 데이터 프로 파일링 및/또는 대 한 응답으로 다시 추적 이벤트를 인코딩 사전 지식이 지정 된 인코딩 방법에 대 한 기본 설정을 지정할 수 있습니다. 있으므로 해시 인코딩된 열에 대 한 집계 값 인코딩된 열을 통해 값 인코딩을 지정할 수 있습니다 이러한 열에 대 한 힌트로 보다 느립니다. 기본 설정이 적용 되는 보장 되지 않습니다. 이 설정 하는 대신 힌트입니다. 인코딩 힌트를 지정 하려면 열에 EncodingHint 속성을 설정 합니다. 가능한 값은 "Default", "Value" 및 "해시"입니다. Model.bim 파일에서 JSON 기반 메타 데이터의 다음 코드 조각은 Sales Amount 열에 대 한 인코딩 값을 지정 합니다.
 

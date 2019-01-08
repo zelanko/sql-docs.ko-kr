@@ -25,12 +25,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61d67e223ffe0a68c9f5bd92d1a4a3ef169edc9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 611e202007fb9a5b9438e3432984c3722e264bd7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855901"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522859"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>sql:identity 및 sql:guid 주석 사용
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47855901"
  합니다 **sql: identity** 하 고 **sql: guid** 복합 콘텐츠 요소에서 주석을 정의할 수 있습니다.  
   
 ## <a name="sqlidentity-annotation"></a>sql:identity 주석  
- 지정할 수 있습니다 합니다 **sql: identity** IDENTITY 형식의 데이터베이스 열에 매핑되는 임의의 노드에에서 XSD 스키마에서 주석입니다. 이 주석에 지정되는 값은 updategram에 제공된 값을 사용하여 열을 수정하거나, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 생성된 값이 이 열에 사용되는 경우 이 값을 무시하여 IDENTITY 형식의 열 업데이트 방법을 지정합니다.  
+ 지정할 수 있습니다 합니다 **sql: identity** IDENTITY 형식의 데이터베이스 열에 매핑되는 임의의 노드에에서 XSD 스키마에서 주석입니다. 이 주석에 지정 된 값을 IDENTITY 형식의 열 업데이트 방법을 정의 (updategram에 제공 된 값을 사용 하 여 열을 수정 하거나 여는 경우 값이 무시를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-생성 된 값은이 열에 사용).  
   
  합니다 **sql: identity** 주석 두 값을 할당할 수 있습니다.  
   

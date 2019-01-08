@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication logical records [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e350687f69ea8e6a8ab70f5fa2eb5a1552058525
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c1c5be804f60fa57b677a418c19d8aadee23f22
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069923"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780455"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>병합 테이블 아티클 간의 논리적 레코드 관계 정의
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 테이블 아티클 간 논리적 레코드 관계를 정의하는 방법에 대해 설명합니다.  
@@ -161,7 +160,7 @@ ms.locfileid: "48069923"
   
 2.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만들고 게시에 대한 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 속성을 설정한 다음, 1단계에서 만든 연결에 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 설정합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 반환 하는 경우 `false`, 2 단계에서 게시 속성이 올바르게 정의 되지 또는 게시가 없는 것입니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 `false`를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergePublication.PartitionGroupsOption%2A> 속성이 <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.False>로 설정된 경우 <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.True>로 설정합니다.  
   

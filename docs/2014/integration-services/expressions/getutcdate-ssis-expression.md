@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], GETUTCDATE
@@ -16,12 +15,12 @@ ms.assetid: 2282339c-c24f-493e-8e66-181ea8af5ad0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d266d5c329776279f21dfbfdaa51a823f460a407
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9dfddc692246050d97893141715b105fc017b46f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087104"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779105"
 ---
 # <a name="getutcdate-ssis-expression"></a>GETUTCDATE(SSIS 식)
   DT_DBTIMESTAMP 형식을 사용하여 현재 시스템 날짜를 UTC 시간(국제 표준시 또는 그리니치 표준시)으로 반환합니다. GETUTCDATE 함수는 인수가 필요 없습니다.  
@@ -59,7 +58,7 @@ DATEADD("Month",3,GETUTCDATE())
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [GETDATE &#40;SSIS 식&#41;](getdate-ssis-expression.md)   
- [함수 &#40;SSIS 식&#41;](functions-ssis-expression.md)  
+ [GETDATE&#40;SSIS 식&#41;](getdate-ssis-expression.md)   
+ [함수&#40;SSIS 식&#41;](functions-ssis-expression.md)  
   
   

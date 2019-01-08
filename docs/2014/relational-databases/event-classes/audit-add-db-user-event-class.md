@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: ac9ed573-c84d-444c-81fb-923a6240c1ef
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ebc8777030cd198503bd9f40ba758e3068762255
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 36d9be6a759e2684602a20ed0c493818d5fe4cc4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181931"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775605"
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User 이벤트 클래스
   **Audit Add DB User** 이벤트 클래스는 데이터베이스 사용자 로그인이 데이터베이스에 추가 또는 제거될 때마다 발생합니다. 이 이벤트 클래스는 **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**및 **sp_dropuser** 저장 프로시저에 사용됩니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "48181931"
 |**ColumnPermissions**|**int**|열 사용 권한이 설정되어 있는지 나타냅니다. 문 텍스트를 구문 분석하여 어떤 사용 권한이 어떤 열에 적용되었는지 알 수 있습니다.|44|사용자 계정 컨트롤|  
 |**DatabaseID**|**int**|USE *database* 문에서 지정한 데이터베이스 ID이거나, 지정한 인스턴스에 대해 USE *database* 문을 실행하지 않은 경우 기본 데이터베이스입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ServerName **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면** 에 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|사용자 계정 컨트롤|  
 |**DatabaseName**|**nvarchar**|사용자 이름이 추가 또는 제거되는 데이터베이스의 이름입니다.|35|사용자 계정 컨트롤|  
-|**DBUserName**|**nvarchar**|데이터베이스에서 발급자의 사용자 이름입니다.|40|사용자 계정 컨트롤|  
+|**DBUserName**|**nvarchar**|데이터베이스에 있는 발급자의 사용자 이름입니다.|40|사용자 계정 컨트롤|  
 |**EventClass**|**int**|이벤트 유형 = 109|27|아니요|  
 |**EventSequence**|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니요|  
 |**EventSubClass**|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 1=추가<br /><br /> 2=삭제<br /><br /> 3=데이터베이스 액세스 권한 부여<br /><br /> 4=데이터베이스 액세스 권한 취소|21|사용자 계정 컨트롤|  

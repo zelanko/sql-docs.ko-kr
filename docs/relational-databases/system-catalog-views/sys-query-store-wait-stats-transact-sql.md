@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 96f6b91d68159bd1326b30ffc8b7e89e61cb8402
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 620413448f7bd6c10af2d0e7333cd9eb793ef41a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169143"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521247"
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (Transact SQL)
 
@@ -40,8 +40,8 @@ ms.locfileid: "49169143"
 |**runtime_stats_interval_id**|**bigint**|외래 키입니다. 에 조인 [sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)합니다.|  
 |**wait_category**|**tinyint**|아래 테이블을 사용 하 여 대기 유형을 분류 되며 대기 시간 집계 한 다음 이러한 대기 범주. 대기 범주 마다 문제를 해결 하지만 유사한 문제 해결 환경의 형식을 동일한 범주 잠재 고객에서 대기 하는 다른 후속 분석 하며 완료 하려면 누락 된 부분에는 또한 대기에 영향을 받는 쿼리를 제공 합니다 대부분의 조사 했습니다.|
 |**wait_category_desc**|**nvarchar(128)**|대기 범주 필드의 텍스트 설명에 대 한 아래 표를 검토 합니다.|
-|**execution_type**|**tinyint**|쿼리 실행의 유형을 결정 합니다.<br /><br /> 0 – 일반 실행 (완료)<br /><br /> 3-클라이언트에서 시작한 실행을 중단 했습니다.<br /><br /> 4-예외 실행이 중단 됨|  
-|**execution_type_desc**|**nvarchar(128)**|실행 형식 필드의 텍스트 설명:<br /><br /> 0 – 일반<br /><br /> 3 – 중단<br /><br /> 4-예외|  
+|**execution_type**|**tinyint**|쿼리 실행의 유형을 결정 합니다.<br /><br /> 0-일반 실행 (완료)<br /><br /> 3-클라이언트에서 시작한 실행을 중단 했습니다.<br /><br /> 4-예외 실행이 중단 됨|  
+|**execution_type_desc**|**nvarchar(128)**|실행 형식 필드의 텍스트 설명:<br /><br /> 0-일반<br /><br /> 3-중단<br /><br /> 4-예외|  
 |**total_query_wait_time_ms**|**bigint**|총 `CPU wait` 집계 간격 내에서 쿼리 계획에 대 한 시간 및 대기 범주 (밀리초 단위로 보고 됨).|
 |**avg_query_wait_time_ms**|**float**|평균 대기 시간 (밀리초 단위로 보고 됨)는 집계 간격 및 대기 범주 내에서 실행 당 쿼리 계획에 대 한입니다.|
 |**last_query_wait_time_ms**|**bigint**|마지막으로 집계 간격 내에서 쿼리 계획에 대 한 기간 대기 및 대기 범주 (밀리초 단위로 보고 됨).|
@@ -55,7 +55,7 @@ ms.locfileid: "49169143"
   
 |정수 값|대기 범주|대기 형식 범주에 포함 됩니다.|  
 |-----------------|---------------|-----------------|  
-|**0**|**알 수 없음**|Unknown |  
+|**0**|**알 수 없음**|알 수 없음 |  
 |**1**|**CPU**|SOS_SCHEDULER_YIELD|
 |**2**|**작업자 스레드**|THREADPOOL|
 |**3**|**잠금**|LCK_M_%|

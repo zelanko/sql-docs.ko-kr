@@ -14,12 +14,12 @@ ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0e5a129fbd9a6dc9fbafd6b06fe5088d162ac9ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 876397aeab28f0d328e3fb80555bdae18699bb01
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210853"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536969"
 ---
 # <a name="database-mirroring-monitor-overview"></a>데이터베이스 미러링 모니터 개요
   올바른 사용 권한이 있는 경우 데이터베이스 미러링 모니터를 사용하여 서버 인스턴스에 있는 미러된 데이터베이스의 모든 하위 집합을 모니터링할 수 있습니다. 모니터링을 사용하면 데이터베이스 미러링 세션에서 데이터가 제대로 흐르고 있는지 확인할 수 있습니다. 또한 데이터베이스 미러링 모니터는 데이터 흐름 감소의 원인을 해결하는 데 도움이 됩니다.  
@@ -102,7 +102,7 @@ ms.locfileid: "48210853"
   
 -   [데이터베이스 미러링 모니터 시작&#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터베이스 미러링 모니터링&#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   

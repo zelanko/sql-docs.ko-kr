@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3d80c4dc4d304dfb6b3043475026e0e5e34c2e57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca9e4b8dd9c00904b09645e4d0c45673fbb6020f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072571"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811635"
 ---
 # <a name="define-a-state-variable"></a>상태 변수 정의
   이 절차에서는 CDC 상태가 저장되는 패키지 변수를 정의하는 방법을 설명합니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "48072571"
 |`CS`|이렇게 하면 현재 처리 범위 시작점(현재 시작)이 표시됩니다.|  
 |`<cs-lsn>`|이전 CDC 실행 시 마지막으로 처리된 LSN(로그 시퀀스 번호)입니다.|  
 |`CE`|이렇게 하면 현재 처리 범위 끝점(현재 끝)이 표시됩니다. CDC 상태에 CE 구성 요소가 있으면 CDC 패키지가 현재 처리 중이거나 해당 CDC 패키지에서 CDC 처리 범위를 완전히 처리하기 전에 실패했음을 나타냅니다.|  
-|`<ce-lsn>`|현재 CDC 실행 시 마지막으로 처리된 LSN입니다. 항상 처리할 마지막 시퀀스 번호를 최대값(0xFFF…)으로 가정합니다.|  
+|`<ce-lsn>`|현재 CDC 실행 시 마지막으로 처리된 LSN입니다. 처리할 마지막 시퀀스 번호를 항상 최댓값(0xFFF…)으로 가정합니다.|  
 |`IR`|이렇게 하면 초기 처리 범위가 표시됩니다.|  
 |`<ir-start>`|초기 로드가 시작되기 직전 변경 내용의 LSN입니다.|  
 |`<ir-end>`|초기 로드가 끝난 직후 변경 내용의 LSN입니다.|  
@@ -50,10 +49,10 @@ ms.locfileid: "48072571"
 |-----------|-----------------|  
 |(INITIAL)|현재 CDC 그룹에서 패키지가 실행되기 전의 초기 상태입니다. CDC 상태가 비어 있을 때의 상태이기도 합니다.|  
 |ILSTART(초기 로드 시작)|CDC 제어 태스크에 대한 `MarkInitialLoadStart` 작업 호출 이후 초기 로드 패키지를 시작할 때의 상태입니다.|  
-|ILEND(초기 로드 종료)|초기 로드 패키지가 성공적으로 종료 될 때이 상태 후의 `MarkInitialLoadEnd` CDC 제어 태스크 작업 호출 합니다.|  
-|ILUPDATE(초기 로드 업데이트)|초기 처리 범위를 처리 중인 동안 초기 로드 이후에 trickle feed 업데이트 패키지를 실행할 때의 상태입니다. 이 이후의 `GetProcessingRange` CDC 제어 태스크 작업 호출 합니다.<br /><br /> __$reprocessing 열을 사용하는 경우 이 상태는 패키지가 이미 대상에 있는 행을 다시 처리하고 있을 수 있음을 나타내는 1로 설정됩니다.|  
+|ILEND(초기 로드 종료)|CDC 제어 태스크에 대한 `MarkInitialLoadEnd` 작업 호출 이후 초기 로드 패키지가 성공적으로 끝날 때의 상태입니다.|  
+|ILUPDATE(초기 로드 업데이트)|초기 처리 범위를 처리 중인 동안 초기 로드 이후에 trickle feed 업데이트 패키지를 실행할 때의 상태입니다. CDC 제어 태스크에 대한 `GetProcessingRange` 작업 호출 이후에 발생합니다.<br /><br /> __$reprocessing 열을 사용하는 경우 이 상태는 패키지가 이미 대상에 있는 행을 다시 처리하고 있을 수 있음을 나타내는 1로 설정됩니다.|  
 |TFEND(Trickle-Feed 업데이트 종료)|일반 CDC 실행에 대해 예상되는 상태입니다. 이 상태는 이전 실행이 성공적으로 완료되었으며 새 처리 범위를 사용한 새 실행을 시작할 수 있음을 나타냅니다.|  
-|TFSTART|이후에 trickle feed 업데이트 패키지를 실행 하는 초기 비 상태는이 `GetProcessingRange` CDC 제어 태스크 작업 호출 합니다.<br /><br /> 이 일반 CDC 실행 시작 하지만 완료 되지 않았습니다 또는 나타냅니다가 아직 완료 되지 완전히 (`MarkProcessedRange`).|  
+|TFSTART|이 상태는 CDC 제어 태스크에 대한 `GetProcessingRange` 작업 호출 이후에 trickle feed 업데이트 패키지를 처음 실행하는 것이 아닌 두 번째 실행부터 발생하는 상태입니다.<br /><br /> 이 상태는 일반 CDC 실행이 시작되었지만 종료되지 않았거나 아직 확실하게 종료되지 않았음을 나타냅니다(`MarkProcessedRange`).|  
 |TFREDO(Trickle-Feed 업데이트 다시 처리)|이 상태는 TFSTART 실행 후`GetProcessingRange`에서 발생하는 상태입니다. 이 상태는 이전 실행이 성공적으로 완료되지 않았음을 나타냅니다.<br /><br /> __$reprocessing 열을 사용하는 경우 이 상태는 패키지가 이미 대상에 있는 행을 다시 처리하고 있을 수 있음을 나타내는 1로 설정됩니다.|  
 |ERROR|CDC 그룹이 ERROR 상태에 있습니다.|  
   
@@ -85,8 +84,8 @@ ms.locfileid: "48072571"
   
  자동 상태 지속과 함께 CDC 제어 태스크를 사용하지 않는 경우에는 패키지가 마지막으로 실행되었을 때 변수 값이 저장된 영구 저장소에서 해당 값을 로드하고 현재 처리 범위에 대한 처리가 완료될 때 영구 저장소에 다시 써야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [CDC 제어 태스크](../control-flow/cdc-control-task.md)   
- [CDC 제어 태스크 편집기](../cdc-control-task-editor.md)  
+## <a name="see-also"></a>관련 항목:  
+ [CDC Control Task](../control-flow/cdc-control-task.md)   
+ [CDC Control Task Editor](../cdc-control-task-editor.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.beta2.f1
@@ -15,12 +14,12 @@ ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9dc5221dc30c5b5d8c0bdcd808ad719a8508816b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 780c4913a75b6014c43c407f05181ef93eddb594
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115703"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813972"
 ---
 # <a name="replication-monitor"></a>복제 모니터
   설명서의 이 섹션에는 복제 모니터에 대한 정보가 포함되어 있습니다. 모니터에 표시되는 페이지와 대화 상자는 모니터링 중인 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 버전 및 복제 유형에 따라 달라집니다.  

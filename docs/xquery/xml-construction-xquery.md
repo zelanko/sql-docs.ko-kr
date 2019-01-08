@@ -22,12 +22,12 @@ ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 58a7f5c5702123ae6be475b1cb377b2f8a9c52fc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3ca45caed31d31b1614947cbcbf3fbf6c4c27273
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657542"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515375"
 ---
 # <a name="xml-construction-xquery"></a>XML 생성(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- 이 예와 같이 상수 식에서 요소를 생성하는 것도 유용하지만 XQuery 언어 기능의 진정한 강점은 데이터베이스에서 동적으로 데이터를 추출하는 XML을 생성하는 기능입니다. 중괄호를 사용하여 쿼리 식을 지정할 수 있습니다. 결과 XML에서 식이 해당 값으로 바뀝니다. 예를 들어 다음 쿼리에서는 자식 요소(<`e`>)가 하나 있는 <`NewRoot`> 요소를 생성합니다. 요소의 값이 <`e`> 중괄호 ("{...} 안에 경로 식을 지정 하 여 계산 됩니다 }").  
+ 이 예와 같이 상수 식에서 요소를 생성하는 것도 유용하지만 XQuery 언어 기능의 진정한 강점은 데이터베이스에서 동적으로 데이터를 추출하는 XML을 생성하는 기능입니다. 중괄호를 사용하여 쿼리 식을 지정할 수 있습니다. 결과 XML에서 식이 해당 값으로 바뀝니다. 예를 들어 다음 쿼리에서는 자식 요소(<`e`>)가 하나 있는 <`NewRoot`> 요소를 생성합니다. 요소의 값이 <`e`> 중괄호 ("{...}") 안에 경로 식을 지정 하 여 계산 됩니다.  
   
 ```sql
 DECLARE @x xml;  
@@ -278,7 +278,7 @@ where ProductModelID=7;
   
 ```xml
 <FirstLocation LocationID="10" SetupHours="0.5" >  
-  <AWMI:step …   
+  <AWMI:step ...   
   </AWMI:step>  
   ...  
 </FirstLocation>  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 4ea55922-608c-4db2-8b3f-873862755bba
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a040a25f541e3d11e47fcbb14b76002004b2371
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 9692b27e2c9c366808ba70ca9bd7ff0c14771bf7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079723"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814686"
 ---
 # <a name="audit-add-role-event-class"></a>Audit Add Role 이벤트 클래스
   **Audit Add Role** 이벤트 클래스는 데이터베이스에서 데이터베이스 역할이 추가되거나 제거될 때 발생합니다. 이 이벤트 클래스는 **sp_addrole** 및 **sp_droprole** 저장 프로시저에서 사용됩니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "48079723"
 |**ClientProcessID**|**int**|클라이언트 애플리케이션이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|사용자 계정 컨트롤|  
 |**DatabaseID**|**int**|USE *database* 문에서 지정한 데이터베이스 ID이거나, 지정한 인스턴스에 대해 USE *database* 문을 실행하지 않은 경우 기본 데이터베이스입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ServerName **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면** 에 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|사용자 계정 컨트롤|  
 |**DatabaseName**|**nvarchar**|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|사용자 계정 컨트롤|  
-|**DBUserName**|**nvarchar**|데이터베이스에서 발급자의 사용자 이름입니다.|40|사용자 계정 컨트롤|  
+|**DBUserName**|**nvarchar**|데이터베이스에 있는 발급자의 사용자 이름입니다.|40|사용자 계정 컨트롤|  
 |**EventClass**|**int**|이벤트 유형 = 111|27|아니요|  
 |**EventSequence**|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니요|  
 |**EventSubClass**|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 1=추가<br /><br /> 2=삭제|21|사용자 계정 컨트롤|  

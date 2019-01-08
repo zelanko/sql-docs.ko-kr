@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 50cb0d8de78b85a3fc6531c3eb5fb63c450205a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe88db4809b69abf292ae0888786bc4606785c3d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142833"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773045"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>로컬 CDC Service를 관리하는 방법
   이 절차에서는 CDC Service 구성 콘솔을 사용하여 특정 CDC Service를 관리하는 방법에 대해 설명합니다.  
@@ -58,6 +57,6 @@ ms.locfileid: "48142833"
          속성을 편집할 CDC Service를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택할 수도 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Oracle CDC Service 관리](manage-an-oracle-cdc-service.md)  
+ [Manage an Oracle CDC Service](manage-an-oracle-cdc-service.md)  
   
   

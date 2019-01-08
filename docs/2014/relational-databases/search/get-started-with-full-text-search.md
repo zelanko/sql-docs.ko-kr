@@ -15,12 +15,12 @@ ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 722921015886e8aed687a8bf689dd7f7d8c592ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6dc03709ea16fb718ff93ed60f75ad4d1515eaf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125043"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541400"
 ---
 # <a name="get-started-with-full-text-search"></a>전체 텍스트 검색 시작
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 데이터베이스는 기본적으로 전체 텍스트를 사용하도록 설정되어 있습니다. 하지만 테이블에서 전체 텍스트 인덱스를 사용하려면 먼저 전체 텍스트 엔진을 사용하여 액세스하려는 테이블 열에 전체 텍스트 인덱싱 기능을 설정해야 합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "48125043"
   
 2.  테이블 또는 인덱싱된 뷰에서 전체 텍스트 인덱스를 만듭니다.  
   
-     전체 텍스트 인덱스는 전체 텍스트 엔진에서 작성 및 유지 관리하는 특수한 유형의 토큰 기반 인덱스입니다. 테이블 또는 뷰에 대한 전체 텍스트 검색을 만들려면 해당 테이블이나 뷰에 Null이 아닌 고유한 단일 열이 있어야 합니다. 테이블의 각 행을 압축할 수 있는 고유 키에 매핑하려면 전체 텍스트 엔진에 이 고유 인덱스가 필요합니다. 전체 텍스트 인덱스를 포함할 수 있습니다 `char`, `varchar`, `nchar`, `nvarchar`, `text`를 `ntext`, `image`를 `xml`를 `varbinary`, 및 `varbinary(max)` 열. 자세한 내용은 [전체 텍스트 인덱스 만들기 및 관리](create-and-manage-full-text-indexes.md)를 참조하세요.  
+     전체 텍스트 인덱스는 전체 텍스트 엔진에서 작성 및 유지 관리하는 특수한 유형의 토큰 기반 인덱스입니다. 테이블 또는 뷰에 대한 전체 텍스트 검색을 만들려면 해당 테이블이나 뷰에 Null이 아닌 고유한 단일 열이 있어야 합니다. 테이블의 각 행을 압축할 수 있는 고유 키에 매핑하려면 전체 텍스트 엔진에 이 고유 인덱스가 필요합니다. 전체 텍스트 인덱스는 `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary` 및 `varbinary(max)` 열을 포함할 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 만들기 및 관리](create-and-manage-full-text-indexes.md)를 참조하세요.  
   
  전체 텍스트 인덱스를 만드는 방법을 알아보기 전에 먼저 전체 텍스트 인덱스와 일반 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인덱스의 차이점을 고려해야 합니다. 다음 표에서는 이러한 차이점을 나열합니다.  
   
@@ -108,7 +108,7 @@ CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;
 GO  
 ```  
   
- 다음 [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문에서 먼저 스페인어에 다음 프랑스어에 단어 'en' 추가 myStoplist 라는 중지 목록을 변경 합니다.  
+ 다음 [ALTER FULLTEXT STOPLIST](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 문에서는 myStoplist라는 중지 목록에서 먼저 스페인어에 단어 'en'을 추가한 다음 프랑스어에 단어 'en'을 추가하여 중지 목록을 변경합니다.  
   
 ```  
 ALTER FULLTEXT STOPLIST MyStoplist ADD 'en' LANGUAGE 'Spanish';  
@@ -129,7 +129,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
  일반적으로 전체 채우기가 진행 중이면 반환 결과는 1입니다.  
   
   
-##  <a name="example"></a> 예제: 전체 텍스트 검색 설정  
+##  <a name="example"></a> 예: 전체 텍스트 검색 설정  
  다음 두 부분으로 구성된 예에서는 AdventureWorks 데이터베이스에 `AdvWksDocFTCat`라는 전체 텍스트 카탈로그를 만든 다음 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]의 `Document` 테이블에 전체 텍스트 인덱스를 만듭니다. 이 문은 설치할 때 지정한 기본 디렉터리에 전체 텍스트 카탈로그를 만듭니다. `AdvWksDocFTCat` 폴더는 기본 디렉터리에 있습니다.  
   
 1.  이 예제에서는 `AdvWksDocFTCat`라는 전체 텍스트 카탈로그를 만들기 위해 [CREATE FULLTEXT CATALOG](/sql/t-sql/statements/create-fulltext-catalog-transact-sql) 문을 사용합니다.  
@@ -161,7 +161,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
   
     ```  
   
-     이 예에서 정의된 TYPE COLUMN은 'Document' 열(이진 형식)의 각 행에 있는 문서 유형이 포함된 테이블의 유형 열을 지정합니다. 유형 열은 지정된 행의 문서에 대한 사용자 제공 파일 확장명("doc", "xls" 등)을 저장합니다. 전체 텍스트 엔진은 지정된 행의 확장명을 사용하여 이러한 행의 데이터를 구문 분석하는 데 적합한 필터를 호출합니다. 필터가 이러한 행의 이진 데이터를 구문 분석하면 지정된 단어 분리기가 내용을 구문 분석합니다. 이 예에서는 영어(영국)에 대한 단어 분리기가 사용됩니다. 필터링 프로세스는 사용자가 기본 테이블에서 열을 삽입 또는 업데이트하는 경우나 인덱싱 단계에서 발생합니다. 단, 전체 텍스트 인덱스에 자동 변경 추적이 사용되는 경우에 한합니다. 자세한 내용은 [고급 분석 확장 구성 및 관리](configure-and-manage-filters-for-search.md)를 참조하세요.  
+     이 예에서 정의된 TYPE COLUMN은 'Document' 열(이진 형식)의 각 행에 있는 문서 유형이 포함된 테이블의 유형 열을 지정합니다. 유형 열 지정된 된 행에는 사용자 제공 파일 확장명-".doc", "xls" 및 등의 문서를 저장합니다. 전체 텍스트 엔진은 지정된 행의 확장명을 사용하여 이러한 행의 데이터를 구문 분석하는 데 적합한 필터를 호출합니다. 필터가 이러한 행의 이진 데이터를 구문 분석하면 지정된 단어 분리기가 내용을 구문 분석합니다. 이 예에서는 영어(영국)에 대한 단어 분리기가 사용됩니다. 필터링 프로세스는 사용자가 기본 테이블에서 열을 삽입 또는 업데이트하는 경우나 인덱싱 단계에서 발생합니다. 단, 전체 텍스트 인덱스에 자동 변경 추적이 사용되는 경우에 한합니다. 자세한 내용은 [고급 분석 확장 구성 및 관리](configure-and-manage-filters-for-search.md)를 참조하세요.  
   
   
 ##  <a name="tasks"></a> 일반 작업  
@@ -201,7 +201,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
 |[sys.dm_fts_index_population&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)|현재 진행 중인 전체 텍스트 인덱스 채우기에 대한 정보를 반환합니다.|  
   
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [CREATE FULLTEXT CATALOG&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
  [CREATE FULLTEXT INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
  [CREATE FULLTEXT STOPLIST&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   

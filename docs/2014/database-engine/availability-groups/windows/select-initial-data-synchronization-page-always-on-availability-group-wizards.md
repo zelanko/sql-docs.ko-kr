@@ -14,15 +14,15 @@ ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f48418911358fb7833b745ee8c3172de2d763155
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 329bc7fb351406f0c53c69e4addb4513dca1c556
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091443"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519438"
 ---
 # <a name="select-initial-data-synchronization-page-alwayson-availability-group-wizards"></a>초기 데이터 동기화 페이지 선택(AlwaysOn 가용성 그룹 마법사)
-  AlwaysOn **초기 데이터 동기화 선택** 페이지를 사용하여 새 보조 데이터베이스의 초기 데이터 동기화에 대한 기본 설정을 표시합니다. 이 페이지는 세 가지 마법사( [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]및 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)])에서 공유합니다.  
+  AlwaysOn **초기 데이터 동기화 선택** 페이지를 사용하여 새 보조 데이터베이스의 초기 데이터 동기화에 대한 기본 설정을 표시합니다. 이 페이지는 세 가지 마법사([!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]및 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)])에서 공유됩니다.  
   
  가능한 선택 항목에는 **전체**, **조인만**또는 **초기 데이터 동기화 건너뛰기**등이 있습니다. **전체** 또는 **조인만** 을 선택하기 전에 현재 환경이 사전 요구 사항을 충족하는지 확인합니다.  
   

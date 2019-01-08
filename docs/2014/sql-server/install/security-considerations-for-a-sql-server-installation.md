@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - firewall systems [SQL Server]
@@ -27,12 +26,12 @@ ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c486dfe6e1d41d18274bb5825c3ed63dc4598a0b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: eec38b5ecc524f0d3decd02c0832efd1909e8f00
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093593"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762915"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>SQL Server 설치에 대한 보안 고려 사항
   보안은 모든 제품과 모든 비즈니스에서 중요합니다. 간단한 권장 사항을 따르면 많은 보안상의 취약점을 방지할 수 있습니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하기 전과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치한 후에 모두 고려해야 하는 보안 권장 사항에 대해 설명합니다. 특정 기능에 대한 보안 지침은 해당 기능에 대한 참조 항목에 포함되어 있습니다.  
@@ -144,7 +143,7 @@ ms.locfileid: "48093593"
   
  **강력한 암호**  
   
--   항상 강력한 암호를 할당 합니다 `sa` 계정.  
+-   `sa` 계정에는 항상 강력한 암호를 지정합니다.  
   
 -   암호 강도 및 만료를 검사하는 암호 정책을 항상 사용하도록 설정합니다.  
   

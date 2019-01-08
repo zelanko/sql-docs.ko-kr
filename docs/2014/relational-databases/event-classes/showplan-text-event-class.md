@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: f36c73b2-a1d1-4513-9594-78818f3fcb0d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a37c2c3937634705dd521d5942ca03ae9d85b138
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 6108a35d3f1c51f4d3dedbcf673be1d837091b71
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176853"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782815"
 ---
 # <a name="showplan-text-event-class"></a>Showplan Text 이벤트 클래스
   Showplan Text 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 SQL 문을 실행할 때 발생합니다. Showplan All, Showplan XML Statistics Profile 또는 Showplan XML 이벤트 클래스에서 사용할 수 있는 정보의 일부만 포함하고 있습니다.  

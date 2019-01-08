@@ -12,12 +12,12 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 25559152ebb3b748cee44a3a04dec2c23b7432b8
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 87f260bc69a582726c2e995ed1934d10a1481db9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072037"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772345"
 ---
 # <a name="ddl-triggers"></a>DDL 트리거
   DDL 트리거는 다양한 DDL(데이터 정의 언어) 이벤트에 대한 응답으로 실행됩니다. 이러한 이벤트는 주로 CREATE, ALTER, DROP, GRANT, DENY, REVOKE 또는 UPDATE STATISTICS 키워드로 시작하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 해당합니다. DDL과 같은 작업을 수행하는 특정 시스템 저장 프로시저에서 DDL 트리거가 발생할 수도 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "49072037"
   
 ## <a name="types-of-ddl-triggers"></a>DDL 트리거 유형  
  Transact-SQL DDL 트리거  
- 특수 한 유형의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 실행 하는 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 서버 범위 또는 데이터베이스 범위 이벤트에 응답 합니다. 예를 들어 ALTER SERVER CONFIGURATION과 같은 문을 실행하거나 DROP TABLE을 사용하여 테이블을 삭제하면 DDL 트리거가 실행될 수 있습니다.  
+ 서버 범위 또는 데이터베이스 범위 이벤트에 대한 응답으로 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하는 특수 유형의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저입니다. 예를 들어 ALTER SERVER CONFIGURATION과 같은 문을 실행하거나 DROP TABLE을 사용하여 테이블을 삭제하면 DDL 트리거가 실행될 수 있습니다.  
   
  CLR DDL 트리거  
  CLR 트리거는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 실행하는 대신 .NET Framework에서 생성되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 업로드되는 어셈블리 멤버인 관리 코드로 작성된 하나 이상의 메서드를 실행합니다.  
@@ -118,7 +118,7 @@ GO
 |EVENTDATA 함수를 사용하여 DDL 트리거를 발생하는 이벤트에 대한 정보를 반환하는 방법에 대해 설명합니다.|[EVENTDATA 함수 사용](use-the-eventdata-function.md)|  
 |트리거 보안을 관리하는 방법에 대해 설명합니다.|[트리거 보안 관리](manage-trigger-security.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [DML 트리거](dml-triggers.md)   
  [LOGON 트리거](logon-triggers.md)   
  [CREATE TRIGGER&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)  

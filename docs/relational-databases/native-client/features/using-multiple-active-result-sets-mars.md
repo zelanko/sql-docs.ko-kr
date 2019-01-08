@@ -19,18 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e05d6734333e6863d2f487cf77943763fdd8229
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b072c3c07ea2f70e365ca04be83d407203d48b01
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816133"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521368"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>MARS(Multiple Active Result Sets) 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]에 액세스하는 응용 프로그램에서 MARS(Multiple Active Result Sets)를 지원합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 데이터베이스 응용 프로그램이 연결에 대한 다중 활성 문을 유지할 수 없었습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본 결과 집합을 사용할 경우 응용 프로그램에서 한 일괄 작업의 모든 결과 집합을 처리하거나 취소해야만 해당 연결에서 다른 일괄 작업을 실행할 수 있었습니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서는 응용 프로그램에서 연결당 둘 이상의 보류 중인 요청을 유지할 수 있도록 하는 새로운 연결 특성이 도입되었습니다. 즉, 연결당 둘 이상의 활성 기본 결과 집합을 유지할 수 있게 되었습니다.  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]에 액세스하는 애플리케이션에서 MARS(Multiple Active Result Sets)를 지원합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 데이터베이스 응용 프로그램이 연결에 대한 다중 활성 문을 유지할 수 없었습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본 결과 집합을 사용할 경우 응용 프로그램에서 한 일괄 작업의 모든 결과 집합을 처리하거나 취소해야만 해당 연결에서 다른 일괄 작업을 실행할 수 있었습니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서는 응용 프로그램에서 연결당 둘 이상의 보류 중인 요청을 유지할 수 있도록 하는 새로운 연결 특성이 도입되었습니다. 즉, 연결당 둘 이상의 활성 기본 결과 집합을 유지할 수 있게 되었습니다.  
   
  MARS는 다음과 같은 새로운 기능을 사용하여 응용 프로그램 디자인을 단순화합니다.  
   
@@ -107,7 +107,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
   
  문 및 인터리브 됩니다.이 atomic 블록을 수행한 변경 내용을 서로 격리 됩니다. 예를 들어, 한 문 또는 atomic 블록 일부 변경을 수행 하 고 다음 다른 문으로 실행을 생성, 새 문을 첫 번째 문에서 수행한 변경 내용은 표시 되지 않습니다. 또한 첫 번째 문에서 실행을 다시 시작 하는 경우 다른 문에서 변경한 나타나지 않습니다. 문 완료 되며 문이 시작 되기 전에 커밋된 변경 내용을 표시 됩니다.  
   
- BEGIN TRANSACTION 문을 사용 하 여 현재 사용자 트랜잭션 내에서 새 사용자 트랜잭션을 시작할 수 있습니다 –이 BEGIN TRANSACTION T-SQL 문에서 호출할 수 있도록 interop 모드 에서만에서 지원 되 고 있지에서 내에서 고유 하 게 컴파일된 저장 프로시저입니다. 저장을 만들면 SAVE TRANSACTION 또는 트랜잭션 API 호출을 사용 하 여 트랜잭션을 지정 합니다. 저장 점으로 롤백하려면 Save(save_point_name) 합니다. 이 기능은 T-SQL 문을 에서만 활성화 및 제외할 범위 내에서 고유 하 게 컴파일된 저장된 프로시저.  
+ BEGIN TRANSACTION 문을 사용 하 여 현재 사용자 트랜잭션 내에서 새 사용자 트랜잭션을 시작할 수 있습니다-이 BEGIN TRANSACTION T-SQL 문에서 호출할 수 있도록 interop 모드 에서만에서 지원 되며 제외할 범위 내에서 고유 하 게 컴파일된 저장 프로시저입니다. 저장을 만들면 SAVE TRANSACTION 또는 트랜잭션 API 호출을 사용 하 여 트랜잭션을 지정 합니다. 저장 점으로 롤백하려면 Save(save_point_name) 합니다. 이 기능은 T-SQL 문을 에서만 활성화 및 제외할 범위 내에서 고유 하 게 컴파일된 저장된 프로시저.  
   
  **MARS 및 columnstore 인덱스**  
   
@@ -226,8 +226,8 @@ SQLAllocHandle(SQL_HANDLE_STMT, hdbc, &hstmt2);
   
 // The 2nd execute would have failed with connection busy error if  
 // MARS were not enabled.  
-SQLExecDirect(hstmt1, L”SELECT * FROM Authors”, SQL_NTS);  
-SQLExecDirect(hstmt2, L”SELECT * FROM Titles”, SQL_NTS);  
+SQLExecDirect(hstmt1, L"SELECT * FROM Authors", SQL_NTS);  
+SQLExecDirect(hstmt2, L"SELECT * FROM Titles", SQL_NTS);  
   
 // Result set processing can interleave.  
 SQLFetch(hstmt1);  

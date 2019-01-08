@@ -11,22 +11,22 @@ ms.assetid: 9095212c-9068-4dd8-85ce-17a467adeabb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 21a1f76992e902f8b9b3c5ba18efad3f16734300
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e6b1995ad715ea529da548f06e0643be076abe96
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110033"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518896"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>콜 센터 모델 탐색(중급 데이터 마이닝 자습서)
   지금까지 탐구 모델을 작성했으므로 이제 이 모델을 사용하여 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 제공되는 다음과 같은 도구로 데이터에 대해 보다 자세한 정보를 알 수 있습니다.  
   
 -   [Microsoft 신경망 뷰어](#bkmk_NNviewer) **:** 이 뷰어는에서 사용할 수는 **마이닝 모델 뷰어** 데이터 마이닝 디자이너의 데이터에서 상호 작용을 실험할 수 있도록 설계 되었습니다.  
   
--   [Microsoft 일반 콘텐츠 트리 뷰어](#bkmk_genviewer) **:** 통계 검색 알고리즘에서 생성 하는 경우 모델 및이 표준 뷰어에서 패턴에 대 한 자세한 정보를 제공 합니다.  
+-   [Microsoft 일반 콘텐츠 트리 뷰어](#bkmk_genviewer) **:** 이 표준 뷰어에서는 모델을 생성할 때 알고리즘을 통해 발견한 패턴 및 통계를 보다 상세히 볼 수 있습니다.  
   
 ##  <a name="bkmk_NNviewer"></a> Microsoft 신경망 뷰어  
- 뷰어에 세 가지 창인 — **입력**를 **출력**, 및 **변수**합니다.  
+ 뷰어에 세 가지 창인- **입력**하십시오 **출력**, 및 **변수**.  
   
  사용 하 여 합니다 **출력** 창 예측 가능한 특성 또는 종속 변수에 대해 서로 다른 값을 선택할 수 있습니다. 모델에 예측 가능한 특성이 여러 개 있으면에서 특성을 선택할 수 있습니다 합니다 **출력 특성** 목록입니다.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48110033"
   
 2.  에 대 한 **값**를 선택 **AM**합니다.  
   
-     합니다 **변수** 창은 교대조 때 모델에 끼치는 영향을 표시 하도록 업데이트 **AM**합니다. 다른 모든 선택은 동일하게 남아 있습니다. 계속 가장 낮은 서비스 등급과 가장 높은 서비스 등급을 비교합니다.  
+     합니다 **변수** 창은 교대조 때 모델에 끼치는 영향을 표시 하도록 업데이트 **AM**합니다. 다른 모든 선택 항목 동일 하 게 유지-최저 및 최고 서비스 등급을 비교 하는 합니다.  
   
 3.  에 대 한 **값**를 선택 **PM1**합니다.  
   
@@ -94,13 +94,13 @@ ms.locfileid: "48110033"
 ### <a name="interpreting-the-statistics-provided-in-the-viewer"></a>뷰어에서 제공하는 통계 해석  
  오래 걸리는 대기 시간은 높은 중단율을 예측하는 강력한 요인으로, 낮은 서비스 등급을 의미합니다. 확실하게 이러한 결론을 내릴 수 있지만 마이닝 모델에서는 이러한 추세를 해석하는 데 유용한 몇 가지 추가 통계 데이터를 제공합니다.  
   
--   **점수**: 결과 판별 하기 위한이 변수의 전체 중요도 나타내는 값입니다. 점수가 높을수록 변수가 결과에 끼치는 영향도 큽니다.  
+-   **점수**: 결과를 판별하기 위한 이 변수의 전체 중요도를 나타내는 값입니다. 점수가 높을수록 변수가 결과에 끼치는 영향도 큽니다.  
   
--   **값 1의 확률**:이 결과 대 한이 값의 확률을 나타내는 백분율입니다.  
+-   **값 1의 확률**: 이 결과에 대한 이 값의 확률을 나타내는 백분율입니다.  
   
--   **값 2의 확률**:이 결과 대 한이 값의 확률을 나타내는 백분율입니다.  
+-   **값 2의 확률**: 이 결과에 대한 이 값의 확률을 나타내는 백분율입니다.  
   
--   **값 1에 대 한 리프트** 하 고 **값 2에 대 한 리프트**: 값 1 및 값 2 결과 예측 하기 위해이 특정 변수를 사용 하는 영향을 나타내는 점수입니다. 점수가 높을수록 변수가 결과를 보다 잘 예측할 수 있습니다.  
+-   **값 1에 대 한 리프트** 하 고 **값 2에 대 한 리프트**: 값 1 및 값 2 결과를 예측하기 위해 이 특정 변수를 사용할 경우의 영향을 나타내는 점수입니다. 점수가 높을수록 변수가 결과를 보다 잘 예측할 수 있습니다.  
   
  다음 표에는 가장 많은 영향을 주는 요인에 대한 일부 값 예가 포함되어 있습니다. 예를 들어 합니다 **값 1의 확률** 은 60.6% 및 **값 2의 확률** Average Time Per Issue 범위는 44-70 분 인 사례의 60.6%는 shift에 있던 이므로 8.30%는 가장 높은 서비스 등급 (값 1), 고 사례의 8.30% 서비스 등급 (값 2)를 사용 하 여 교대조에 있었습니다.  
   
@@ -110,8 +110,8 @@ ms.locfileid: "48110033"
   
 |attribute|값|유사성 \< 0.07|유사성 >= 0.12|  
 |---------------|-----------|--------------------|----------------------|  
-|Average Time Per Issue|89.087 120.000||점수: 100<br /><br /> 값 1의 확률: 4.45%<br /><br /> 값 2의 확률: 51.94%<br /><br /> 값 1에 대 한 리프트: 0.19<br /><br /> 값 2의 리프트: 1.94|  
-|Average Time Per Issue|44.000 70.597|점수: 92.35<br /><br /> 값 1의 확률: 60.06%<br /><br /> 값 2의 확률: 8.30%<br /><br /> 값 1의 리프트: 2.61<br /><br /> 값 2의 리프트: 0.31||  
+|Average Time Per Issue|89.087 120.000||점수:  100<br /><br /> 값 1의 확률: 4.45%<br /><br /> 값 2의 확률: 51.94%<br /><br /> 값 1에 대한 리프트: 0.19<br /><br /> 값 2에 대한 리프트: 1.94|  
+|Average Time Per Issue|44.000 70.597|점수: 92.35<br /><br /> 값 1의 확률: 60.06%<br /><br /> 값 2의 확률: 8.30%<br /><br /> 값 1에 대한 리프트: 2.61<br /><br /> 값 2에 대한 리프트: 0.31||  
   
  [맨 위로 이동](#bkmk_NNviewer)  
   
@@ -151,8 +151,8 @@ WHERE NODE_NAME = '10000000000000000'
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [콜 센터 구조에 로지스틱 회귀 모델 추가 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/add-logistic-regression-model-to-call-center-intermediate-data-mining.md)  
   
-## <a name="see-also"></a>관련 항목  
- [마이닝 모델 콘텐츠 신경망 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+## <a name="see-also"></a>관련 항목:  
+ [신경망 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [신경망 모델 쿼리 예제](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)   
  [Microsoft 신경망 알고리즘 기술 참조](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [마이닝 모델에서 열의 분할 변경](../../2014/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)  

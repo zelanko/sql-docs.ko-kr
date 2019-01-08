@@ -16,12 +16,12 @@ ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1620b1dc5f25506e1da54c426333817efd29882a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 550914167b005803e7ff39ebbcf3727f7b6b0b8c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118193"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526100"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>교차 유효성 검사(Analysis Services - 데이터 마이닝)
   *교차 유효성 검사*는 분석의 표준 도구이며 데이터 마이닝 모델 개발 및 미세 조정에 도움이 되는 중요한 기능입니다. 마이닝 구조 및 관련 마이닝 모델을 만든 후 교차 유효성 검사를 사용하여 모델의 유효성을 확인합니다.  교차 유효성 검사는 다음과 같이 적용됩니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "48118193"
   
  예측 가능한 특성을 선택하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 동일한 예측 가능한 특성을 사용하는 모든 모델을 자동으로 테스트합니다. 대상 특성에 불연속 값이 포함되어 있는 경우에는 예측 가능한 열을 선택한 후 예측할 특정 값이 있으면 필요에 따라 대상 상태를 입력할 수 있습니다.  
   
- 선택하는 대상 상태는 반환되는 측정값에 영향을 줍니다. 대상 특성, 즉 열 이름을 지정하고 모델이 예측할 특정 값을 선택하지 않으면 기본적으로 가능성이 가장 높은 상태에 대한 예측에 따라 모델이 평가됩니다.  
+ 선택하는 대상 상태는 반환되는 측정값에 영향을 줍니다. 대상 특성을 지정 하는 경우-즉, 열 이름-및 예측 가능성이 가장 높은 상태에 따라 모델을 평가할 기본적으로 예측 모델을 특정 값을 선택 하지 않습니다.  
   
  클러스터링 모델에서 교차 유효성 검사를 사용하는 경우에는 예측 가능한 열이 없습니다. 대신 **대상 특성** 목록 상자의 예측 가능한 특성 목록에서 **#Cluster** 를 선택합니다. 이 옵션을 선택한 후에는 **대상 상태**와 같이 클러스터링 모델과 관계가 없는 기타 옵션을 사용할 수 없게 됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 마이닝 구조와 연결된 모든 클러스터링 모델을 테스트합니다.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48118193"
  사용자 인터페이스를 사용하여 교차 유효성 검사 보고서를 만드는 방법의 예는 [교차 유효성 검사 보고서 만들기](create-a-cross-validation-report.md)를 참조하세요.  
   
 ### <a name="cross-validation-stored-procedures"></a>교차 유효성 검사 저장 프로시저  
- 고급 사용자의 경우 전체 매개 변수가 있는 시스템 저장 프로시저 형태의 교차 유효성 검사를 사용할 수 있습니다. [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 또는 임의의 관리 코드 응용 프로그램에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]인스턴스에 연결하여 저장 프로시저를 실행할 수 있습니다.  
+ 고급 사용자의 경우 전체 매개 변수가 있는 시스템 저장 프로시저 형태의 교차 유효성 검사를 사용할 수 있습니다. [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 또는 임의의 관리 코드 애플리케이션에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]인스턴스에 연결하여 저장 프로시저를 실행할 수 있습니다.  
   
  저장 프로시저는 마이닝 모델 유형별로 그룹화됩니다. 하나의 저장 프로시저 집합은 클러스터링 모델에서만 작동합니다. 다른 저장 프로시저 집합은 다른 마이닝 모델에서 작동합니다.  
   
@@ -112,17 +112,17 @@ ms.locfileid: "48118193"
   
  첫 번째 단계에서는 데이터 집합 내에 사용자가 지정하는 수만큼의 파티션을 만들고 각 파티션에 대한 정확도 결과를 반환하는 시스템 저장 프로시저를 호출합니다. 그러면 Analysis Services에서 각 메트릭에 대해 파티션의 평균값과 표준 편차를 계산합니다.  
   
--   [SystemGetCrossValidationResults &#40;Analysis Services-데이터 마이닝&#41;](/sql/analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining)  
+-   [SystemGetCrossValidationResults&#40;Analysis Services - 데이터 마이닝&#41;](/sql/analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining)  
   
--   [SystemGetClusterCrossValidationResults &#40;Analysis Services-데이터 마이닝&#41;](/sql/analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining)  
+-   [SystemGetClusterCrossValidationResults&#40;Analysis Services - 데이터 마이닝&#41;](/sql/analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining)  
   
  **전체 데이터 집합의 메트릭 생성**  
   
  두 번째 단계에서는 다른 저장 프로시저 집합을 호출합니다. 이러한 저장 프로시저는 데이터 집합을 분할하지 않고 지정된 데이터 집합 전체에 대한 정확도 결과를 생성합니다. 마이닝 구조를 이미 분할하고 처리한 경우 이 두 번째 저장 프로시저 집합을 호출하여 동일한 결과를 얻을 수 있습니다.  
   
--   [SystemGetAccuracyResults &#40;Analysis Services-데이터 마이닝&#41;](/sql/analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining)  
+-   [SystemGetAccuracyResults&#40;Analysis Services - 데이터 마이닝&#41;](/sql/analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining)  
   
--   [SystemGetClusterAccuracyResults &#40;Analysis Services-데이터 마이닝&#41;](/sql/analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining)  
+-   [SystemGetClusterAccuracyResults&#40;Analysis Services - 데이터 마이닝&#41;](/sql/analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining)  
   
 #### <a name="defining-the-testing-data"></a>테스트 데이터 정의  
  정확도를 계산하는 교차 유효성 검사 저장 프로시저(SystemGetAccuracyResults 또는 SystemGetClusterAccuracyResults)를 실행할 때 교차 유효성 검사 중 테스트에 사용되는 데이터의 원본을 지정할 수 있습니다. 사용자 인터페이스에는 이 옵션이 제공되지 않습니다.  
@@ -182,16 +182,16 @@ ms.locfileid: "48118193"
   
 |항목|링크|  
 |------------|-----------|  
-|SQL Server Development Studio에서 교차 유효성 검사 매개 변수를 설정하는 방법에 대해 설명합니다.|[교차 유효성 검사 탭 &#40;마이닝 정확도 차트 뷰&#41;](../cross-validation-tab-mining-accuracy-chart-view.md)|  
+|SQL Server Development Studio에서 교차 유효성 검사 매개 변수를 설정하는 방법에 대해 설명합니다.|[교차 유효성 검사 탭&#40;마이닝 정확도 차트 뷰&#41;](../cross-validation-tab-mining-accuracy-chart-view.md)|  
 |교차 유효성 검사에서 제공되는 메트릭에 대해 설명합니다.|[교차 유효성 검사 수식](cross-validation-formulas.md)|  
 |교차 유효성 검사 보고서 형식을 설명하고 각 모델 유형에 대해 제공되는 통계 측정값을 정의합니다.|[교차 유효성 검사 보고서의 측정값](measures-in-the-cross-validation-report.md)|  
-|교차 유효성 검사 통계를 계산하는 저장 프로시저를 나열합니다.|[데이터 마이닝 저장 프로시저 &#40;Analysis Services-데이터 마이닝&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)|  
+|교차 유효성 검사 통계를 계산하는 저장 프로시저를 나열합니다.|[데이터 마이닝 저장 프로시저&#40;Analysis Services - 데이터 마이닝&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)|  
 |||  
 |마이닝 구조 및 관련 모델의 테스트 데이터 집합을 만드는 방법에 대해 설명합니다.|[데이터 집합 학습 및 테스트](training-and-testing-data-sets.md)|  
-|다른 정확도 차트 유형에 대한 예를 참조합니다.|[분류 행렬 &#40;Analysis Services-데이터 마이닝&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [리프트 차트 &#40;Analysis Services-데이터 마이닝&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [수익 차트 &#40;Analysis Services-데이터 마이닝&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [산 점도 &#40;Analysis Services-데이터 마이닝&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|여러 가지 정확도 차트를 만드는 단계에 대해 설명합니다.|[테스트 및 유효성 검사 태스크 및 방법 &#40;데이터 마이닝&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|다른 정확도 차트 유형에 대한 예를 참조합니다.|[분류표&#40;Analysis Services - 데이터 마이닝&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [리프트 차트&#40;Analysis Services - 데이터 마이닝&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [수익 차트&#40;Analysis Services - 데이터 마이닝&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [산점도&#40;Analysis Services - 데이터 마이닝&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|여러 가지 정확도 차트를 만드는 단계에 대해 설명합니다.|[테스트 및 유효성 검사 태스크 및 방법&#40;데이터 마이닝&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>관련 항목  
- [테스트 및 유효성 검사 &#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md)  
+ [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md)  
   
   

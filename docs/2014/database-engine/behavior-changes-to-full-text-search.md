@@ -14,12 +14,12 @@ ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: b269c4c3decfa2a4d7523666841e7cb04b441b3f
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
-ms.translationtype: HT
+ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461018"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508873"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>전체 텍스트 검색의 동작 변경
   이 항목에서는 전체 텍스트 검색의 동작 변경 내용에 대해 설명합니다. 동작 변경 내용은 이전 버전의 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 와 비교해서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 기능이 작동하고 상호 작용하는 방법에 영향을 줍니다.  
@@ -68,8 +68,8 @@ ms.locfileid: "49461018"
   
 |**용어**|**이전 단어 분리기 및 형태소 분석기를 사용 하 여 결과**|**새 단어 분리기 및 형태소 분석기를 사용 하 여 결과**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  
-|jěˊÿqℭžl<br /><br /> *(여기서 용어는 하지 유효한 영어 문자가)*|‘jěˊÿｑℭžl’|je yq zl|  
-|table's|table’s<br /><br /> 테이블|table’s|  
+|jěˊÿqℭžl<br /><br /> *(여기서 용어는 하지 유효한 영어 문자가)*|' jěˊÿqℭžl'|je yq zl|  
+|table's|table's<br /><br /> 테이블|table's|  
 |cat-|cat<br /><br /> cat-|cat|  
 |v-z *(여기서 v 및 z는 의미 없는 단어)*|*(결과 없음)*|v-z|  
 |$100 000 USD|$100<br /><br /> 000<br /><br /> nn000<br /><br /> nn100$<br /><br /> usd|$100 000 USD<br /><br /> nn100000usd|  
@@ -79,7 +79,7 @@ ms.locfileid: "49461018"
 ## <a name="behavior-changes-in-full-text-search-in-sql-server-2008"></a>SQL Server 2008 전체 텍스트 검색의 동작 변경 내용  
  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 이상 버전에서는 전체 텍스트 엔진은 서버 쿼리 및 저장소 엔진 인프라의 일부로 관계형 데이터베이스에 데이터베이스 서비스로 통합 되어 있습니다. 새로운 전체 텍스트 검색 아키텍처는 다음과 같은 목표를 달성합니다.  
   
--   저장과 관리가 통합-전체 텍스트 검색의 내재 된 저장소 및 관리 기능을 사용 하 여 직접 통합 되었습니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], MSFTESQL 서비스는 더 이상 없습니다.  
+-   통합 된 저장소 및 관리-전체 텍스트 검색의 내재 된 저장소 및 관리 기능을 사용 하 여 직접 통합 되었습니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], MSFTESQL 서비스는 더 이상 없습니다.  
   
     -   전체 텍스트 인덱스가 파일 시스템이 아닌 데이터베이스 파일 그룹 내에 저장됩니다. 데이터베이스에 대한 백업 만들기와 같은 관리 작업은 전체 텍스트 인덱스에 자동으로 영향을 줍니다.  
   
@@ -88,9 +88,9 @@ ms.locfileid: "49461018"
         > [!NOTE]  
         >  전체 텍스트 카탈로그를 지정하는 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] DDL 문은 올바르게 작동합니다.  
   
--   쿼리 처리가 통합되었습니다. 새로운 전체 텍스트 검색 쿼리 프로세서는 데이터베이스 엔진의 일부이며 SQL Server 쿼리 프로세서와 완벽하게 통합되어 있습니다. 따라서 쿼리 최적화 프로그램에서 전체 텍스트 쿼리 조건자를 인식하여 자동으로 최대한 효율적으로 실행합니다.  
+-   통합된 쿼리 처리는 새로운 전체 텍스트 검색 쿼리 프로세서 데이터베이스 엔진의 일부 이며 SQL Server 쿼리 프로세서와 완전히 통합 됩니다. 따라서 쿼리 최적화 프로그램에서 전체 텍스트 쿼리 조건자를 인식하여 자동으로 최대한 효율적으로 실행합니다.  
   
--   관리 및 문제 해결 기능이 향상되었습니다. 통합된 전체 텍스트 검색에서는 전체 텍스트 인덱스, 특정 단어 분리기의 출력, 중지 단어 구성 등의 검색 구조를 분석하는 데 도움이 되는 도구를 제공합니다.  
+-   향상 된 관리 및 문제 해결-통합 전체 텍스트 검색 전체 텍스트 인덱스, 특정된 단어 분리기, 중지 단어 구성 등의 출력 등의 검색 구조를 분석할 수 있도록 하는 도구를 제공 합니다.  
   
 -   의미 없는 단어 및 의미 없는 단어 파일 대신 중지 단어 및 중지 목록이 사용됩니다. 중지 목록은 중지 단어에 대한 관리 태스크를 지원하고 서로 다른 서버 인스턴스와 환경 사이의 무결성을 높여 주는 데이터베이스 개체입니다. 자세한 내용은 [전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)를 참조하세요.  
   

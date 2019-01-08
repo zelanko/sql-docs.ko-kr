@@ -19,12 +19,12 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 145bfe599fa0117b689a002d47807eca217ba7bc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 39fc70d04635008cf00a9c8e02ef0bae97af1cbf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669092"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540305"
 ---
 # <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_filestream_force_garbage_collection
 ```  
   
 ## <a name="arguments"></a>인수  
- **@dbname** = *database_name***'**  
+ **@dbname** = _database_name_**'**  
  가비지 수집기를 실행할 데이터베이스 이름을 표시합니다.  
   
 > [!NOTE]  
@@ -56,13 +56,13 @@ sp_filestream_force_garbage_collection
   
 |||  
 |-|-|  
-|값|설명|  
+|값|Description|  
 |0|작업 성공|  
 |1|작업 실패|  
   
 ## <a name="result-sets"></a>결과 집합  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |*file_name*|FILESTREAM 컨테이너 이름을 나타냅니다.|  
 |*num_collected_items*|이 컨테이너에서 가비지 수집된(삭제된) FILESTREAM 항목(파일/디렉터리) 수를 나타냅니다.|  

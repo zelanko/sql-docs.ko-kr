@@ -5,8 +5,7 @@ ms.date: 05/02/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_dropmergearticle
@@ -17,12 +16,12 @@ ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d15a58815c7a3e394df968aae4e26d04fbf8eee2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d96dd15857847e739600f087fa63b2c34453d27
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702331"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816045"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +162,7 @@ EXEC sp_dropmergearticle
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [아티클 삭제](../../relational-databases/replication/publish/delete-an-article.md)   
  [기존 게시에 대한 아티클 추가 및 삭제](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
  [sp_addmergearticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   

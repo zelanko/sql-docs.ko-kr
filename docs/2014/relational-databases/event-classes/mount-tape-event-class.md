@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 4c595e0a-d968-47d3-a84f-9b6857342671
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa4b3409cba18044e437e119ab3f47870ef854bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 513792c12833a14b8d1d3fc78f4b3bb6be173627
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075533"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782665"
 ---
 # <a name="mount-tape-event-class"></a>Mount Tape 이벤트 클래스
   Mount Tape 이벤트 클래스는 테이프 탑재 요청을 받을 때 발생합니다. 이 이벤트 클래스를 사용하여 테이프 탑재 요청 및 요청의 성공 또는 실패를 모니터링할 수 있습니다.  

@@ -10,12 +10,12 @@ ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 402416503f927f74dcb711ac3bffb3c901f10e79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1dbbb57527fc2d362837e0340f35a241d764b75
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737821"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408320"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>SSMA 콘솔 (AccessToSQL) 실행
 Microsoft는 강력한 파일 명령 스크립트 및 실행 하 고 SSMA 작업을 제어 하는 명령줄 옵션을 제공 합니다. 결과 섹션을 자세히 설명 동일 합니다.  
@@ -25,7 +25,7 @@ Microsoft는 강력한 파일 명령 스크립트 및 실행 하 고 SSMA 작업
   
 **Command**  
   
-새-프로젝트 만들기: 새 SSMA 프로젝트를 만듭니다.  
+create-new-project: 새 SSMA 프로젝트를 만듭니다.  
   
 **스크립트**  
   
@@ -62,7 +62,7 @@ Microsoft는 강력한 파일 명령 스크립트 및 실행 하 고 SSMA 작업
   
   overwrite-if-exists="<true/false>"  
   
-  project-type=”<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>”  
+  project-type="<sql-server-2008 | sql-server-2005 | sql-server-2012 | sql-server-2014 | sql-azure>"  
   
 />  
 ```  
@@ -72,7 +72,7 @@ Microsoft는 강력한 파일 명령 스크립트 및 실행 하 고 SSMA 작업
   
 **Command**  
   
-프로젝트 열기: 기존 프로젝트를 엽니다.  
+오픈-프로젝트: 기존 프로젝트를 엽니다.  
   
 **스크립트**  
   
@@ -91,11 +91,11 @@ Microsoft는 강력한 파일 명령 스크립트 및 실행 하 고 SSMA 작업
   
 />  
 ```  
-**참고:** SSMA에 대 한 액세스 콘솔 응용 프로그램에서 이전 버전과 호환성을 지원 합니다. SSMA의 이전 버전에서 만든 프로젝트를 열 수 있습니다.  
+**참고:** SSMA에 대 한 액세스 콘솔 응용 프로그램 이전 버전과 호환성을 지원합니다. SSMA의 이전 버전에서 만든 프로젝트를 열 수 있습니다.  
   
 **Command**  
   
-저장-프로젝트: 마이그레이션 프로젝트를 저장 합니다.  
+저장-프로젝트: 마이그레이션 프로젝트를 저장합니다.  
   
 **스크립트**  
   
@@ -106,7 +106,7 @@ Microsoft는 강력한 파일 명령 스크립트 및 실행 하 고 SSMA 작업
 ```  
 **Command**  
   
-프로젝트 닫기: 마이그레이션 프로젝트를 닫습니다.  
+닫기-프로젝트: 마이그레이션 프로젝트를 닫습니다.  
   
 **스크립트**  
   
@@ -149,7 +149,7 @@ connect-source-database
 ```  
 **Command**  
   
-로드-액세스-데이터베이스: access 데이터베이스 파일을 로드 하는 데 사용  
+로드-액세스-데이터베이스: Access 데이터베이스 파일을 로드 하는 데 사용  
   
 **스크립트**  
   
@@ -325,7 +325,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
 ## <a name="migration-script-file-commands"></a>마이그레이션 스크립트 파일 명령  
 마이그레이션 명령은 소스 스키마에 대상 데이터베이스 스키마를 변환 및 대상 서버에 데이터를 마이그레이션합니다.  
   
-마이그레이션 명령에 대 한 설정 기본 콘솔 출력은 'Full' 출력 보고서 없습니다 자세한 오류 보고와:만 원본 개체 트리의 루트 노드에서 요약 합니다.  
+마이그레이션 명령에 대 한 설정 기본 콘솔 출력은 'Full' 출력 보고서와 자세한 오류 보고 하지 않습니다. 원본 개체 트리의 루트 노드에서 요약 합니다.  
   
 **Command**  
   
@@ -452,7 +452,7 @@ convert-schema
 ```  
 **Command**  
   
-테이블 연결:이 명령은 대상 테이블에 (Access) 원본 테이블에 연결 합니다.  
+링크-테이블: 이 명령은 대상 테이블에 (Access) 원본 테이블을 연결합니다.  
   
 **스크립트**  
   
@@ -478,7 +478,7 @@ convert-schema
 ```  
 **Command**  
   
-테이블 연결을 해제 합니다:이 명령은 대상 테이블에서 원본 (Access) 테이블의 연결을 해제 합니다.  
+연결 해제-테이블: 이 명령은 대상 테이블에서 원본 (Access) 테이블을 연결 해제합니다.  
   
 **스크립트**  
   
@@ -508,7 +508,7 @@ convert-schema
   
 **Command**  
   
-맵 스키마: 대상 스키마에 원본 데이터베이스의 스키마 매핑.  
+맵 스키마의 경우: 대상 스키마에 원본 데이터베이스의 스키마 매핑.  
   
 **스크립트**  
   
@@ -527,7 +527,7 @@ convert-schema
 ## <a name="manageability-commands"></a>관리 명령  
 관리 효율성 명령 도움말 원본 데이터베이스와 대상 데이터베이스 개체를 동기화 합니다.  
   
-마이그레이션 명령에 대 한 설정 기본 콘솔 출력은 'Full' 출력 보고서 없습니다 자세한 오류 보고와:만 원본 개체 트리의 루트 노드에서 요약 합니다.  
+마이그레이션 명령에 대 한 설정 기본 콘솔 출력은 'Full' 출력 보고서와 자세한 오류 보고 하지 않습니다. 원본 개체 트리의 루트 노드에서 요약 합니다.  
   
 **Command**  
   

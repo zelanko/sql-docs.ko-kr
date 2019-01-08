@@ -15,14 +15,14 @@ ms.assetid: 911cd335-f2c0-4d03-9739-1078308a678a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 63f999fa01623898be6561c9f5a450c6ec81487d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d78de7b3bd1d91351a4159847d6605e30cc1353d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654231"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516897"
 ---
-# <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>부록 G: 이전 버전과의 호환성을 위한 드라이버 지침
+# <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>부록 g: 이전 버전과 호환성에 대 한 드라이버 지침
 이 부록에서는 ODBC 3에서 작동 하는 드라이버 작성자에 대 한 정보를 제공 합니다. *x* ODBC 2를 지원 해야 하는 드라이버. *x* 응용 프로그램입니다. 이전 버전과 호환성에 대 한 자세한 내용은 참조 하세요. [이전 버전과 호환성 및 표준 준수](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  

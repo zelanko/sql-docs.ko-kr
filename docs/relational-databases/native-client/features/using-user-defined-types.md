@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8cb82752697453f5179ac4d3432e60cbc8398c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14e14c23741f5473e6c9eaae46140a2f7a0668bb
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615050"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406180"
 ---
 # <a name="using-user-defined-types"></a>사용자 정의 형식 사용
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "47615050"
 |DBTYPE_VARIANT(VT_UI1 &#124; VT_ARRAY)|지원 되는<sup>6</sup>|해당 없음<sup>2</sup>|지원 되는<sup>4</sup>|해당 없음<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|지원 되는<sup>3,6</sup>|해당 없음<sup>2</sup>|해당 사항 없음|해당 없음<sup>2</sup>|  
   
- <sup>1</sup>DBTYPE_UDT 이외의 서버 유형이 **ICommandWithParameters::SetParameterInfo**로 지정되고 접근자 유형이 DBTYPE_UDT인 경우 문을 실행하면 오류가 발생합니다(DB_E_ERRORSOCCURRED, 매개 변수 상태는 DBSTATUS_E_BADACCESSOR임). 그렇지 않은 경우에는 데이터가 서버로 전송되지만 UDT에서 매개 변수의 데이터 형식으로의 암시적 변환이 이루어지지 않았음을 나타내는 오류가 반환됩니다.  
+ <sup>1</sup>DBTYPE_UDT 이외의 서버 유형이 **ICommandWithParameters::SetParameterInfo**로 지정되고 접근자 유형이 DBTYPE_UDT인 경우 문을 실행하면 오류가 발생합니다(DB_E_ERRORSOCCURRED, 매개 변수 상태는 DBSTATUS_E_BADACCESSOR임). 그렇지는 데이터가 서버로 전송 됩니다 있지만 서버는 매개 변수의 데이터 형식으로 UDT에서 암시적 변환이 오류를 반환 합니다.  
   
  <sup>2</sup>이 항목의 범위를 벗어납니다.  
   

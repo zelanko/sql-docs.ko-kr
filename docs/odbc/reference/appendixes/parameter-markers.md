@@ -15,12 +15,12 @@ ms.assetid: 07213d04-cd31-45fd-a8c8-2e16e09eeaf4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5ac59cddb24d5e08e3b620c178f40e206460eb7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 833e2740e54f07701fb66a894bb5e4798c4a42e2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835421"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516396"
 ---
 # <a name="parameter-markers"></a>매개 변수 표식
 SQL-92 사양에 따라 응용 프로그램은 다음 위치에 매개 변수 표식을 배치할 수 없습니다. 보다 포괄적인 목록은 SQL-92 사양을 참조 하세요.  

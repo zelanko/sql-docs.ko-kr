@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f33a7e4bbfe05ebdba0a566afe0f05192ff62e91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75e914e3b5edb97972978ad678bc1bcf2878d0b9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656191"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540756"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,9 +45,9 @@ ms.locfileid: "47656191"
   
 -   [행 집합](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
--   [저장 프로시저](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
+-   [저장된 프로시저](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
--   [BLOB 및 OLE 개체](../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)  
+-   [Blob 및 OLE 개체](../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)  
   
 -   [테이블 및 인덱스](../../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "47656191"
   
 -   [FILESTREAM 지원 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
   
--   [의](../../../relational-databases/native-client-ole-db-transactions/transactions.md)  
+-   [트랜잭션](../../../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
 -   [오류](../../../relational-databases/native-client-ole-db-errors/errors.md)  
   

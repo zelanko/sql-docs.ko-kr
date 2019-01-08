@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 98eb49e7-b190-4a21-8316-08c07cde14ed
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e7a7ad1f7eada2cfa1276b76bee759fd04cfce5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: eca4263dae38ad561d62cdf0419523c1400e7dcb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128243"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814605"
 ---
 # <a name="validation-master-data-services"></a>유효성 검사(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 데이터의 유효성을 검사하여 정확성을 확인합니다. 일부 유효성 검사는 자동으로 발생하고, 일부 유효성 검사는 관리자가 만든 비즈니스 규칙을 기반으로 합니다.  
@@ -34,12 +33,12 @@ ms.locfileid: "48128243"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|비즈니스 규칙을 만들고 이 규칙에 대해 데이터 유효성 검사를 수행하도록 규칙을 게시합니다.|[비즈니스 규칙 만들기 및 게시 &#40;Master Data Services&#41;](create-and-publish-a-business-rule-master-data-services.md)|  
-|비즈니스 규칙에 대해 데이터 버전의 유효성을 검사합니다. 관리자 전용입니다.|[비즈니스 규칙에 대해 버전 유효성 검사 &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)|  
-|비즈니스 규칙에 대해 특정 하위 집합 데이터의 유효성을 검사합니다. **탐색기** 기능 영역에 대한 사용 권한을 가진 모든 사용자용입니다.|[비즈니스 규칙에 대해 특정 멤버 유효성 검사 &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
-|비즈니스 규칙에 대해 특정 하위 집합 데이터의 유효성을 검사합니다. **탐색기** 기능 영역에 대한 사용 권한을 갖고 있으며 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]을 사용하는 모든 사용자용입니다.|[비즈니스 규칙 적용 &#40;MDS 추가 기능에 Excel 용&#41;](microsoft-excel-add-in/apply-business-rules-mds-add-in-for-excel.md)|  
+|비즈니스 규칙을 만들고 이 규칙에 대해 데이터 유효성 검사를 수행하도록 규칙을 게시합니다.|[비즈니스 규칙 만들기 및 게시&#40;Master Data Services&#41;](create-and-publish-a-business-rule-master-data-services.md)|  
+|비즈니스 규칙에 대해 데이터 버전의 유효성을 검사합니다. 관리자 전용입니다.|[비즈니스 규칙에 대해 버전 유효성 검사&#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)|  
+|비즈니스 규칙에 대해 특정 하위 집합 데이터의 유효성을 검사합니다. **탐색기** 기능 영역에 대한 사용 권한을 가진 모든 사용자용입니다.|[비즈니스 규칙에 대해 특정 멤버 유효성 검사&#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
+|비즈니스 규칙에 대해 특정 하위 집합 데이터의 유효성을 검사합니다. **탐색기** 기능 영역에 대한 사용 권한을 갖고 있으며 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]을 사용하는 모든 사용자용입니다.|[비즈니스 규칙 적용&#40;Excel용 MDS 추가 기능&#41;](microsoft-excel-add-in/apply-business-rules-mds-add-in-for-excel.md)|  
   
 ## <a name="see-also"></a>관련 항목  
- [비즈니스 규칙 &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+ [비즈니스 규칙&#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

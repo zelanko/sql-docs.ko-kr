@@ -15,12 +15,12 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b3fd46b767b41e442621d7554daee713bd98abd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214733"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540125"
 ---
 # <a name="data-tier-applications"></a>의
   DAC(데이터 계층 애플리케이션)는 사용자의 데이터베이스와 연결된 로그인을 포함하여 테이블, 뷰 및 인스턴스 개체와 같은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 정의하는 논리적인 데이터베이스 관리 엔터티입니다. DAC는 데이터 계층 개발자 및 데이터베이스 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 DAC 패키지(또는 DACPAC)라고 부르는 이식 가능한 아티팩트로 패키징할 수 있게 해주는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 자체 포함 배포 단위입니다.  
@@ -89,14 +89,14 @@ ms.locfileid: "48214733"
   
 -   **배포** - 사용자가 DACPAC를 호스트 서버에 배포할 수 있습니다. SQL Server Management Studio 또는 SQL Azure용 관리 포털과 같은 관리 도구에서 배포를 수행할 경우 호스트 서버의 결과 데이터베이스가 암시적으로 데이터 계층 애플리케이션으로 등록됩니다.  
   
--   **등록** - 사용자가 데이터베이스를 데이터 계층 응용 프로그램으로 등록할 수 있습니다.  
+-   **등록** - 사용자가 데이터베이스를 데이터 계층 애플리케이션으로 등록할 수 있습니다.  
   
 -   **등록 취소** - 이전에 DAC로 등록된 데이터베이스를 등록 취소할 수 있습니다.  
   
 -   **업그레이드** - DACPAC를 사용하여 데이터베이스를 업그레이드할 수 있습니다. 이전에 데이터 계층 애플리케이션으로 등록되지 않은 데이터베이스에서도 업그레이드가 지원되지만 업그레이드할 경우 데이터베이스가 암시적으로 등록됩니다.  
   
 ## <a name="backup-package-bacpac"></a>백업 패키지(.bacpac)  
- BACPAC는 데이터베이스에 저장된 데이터뿐만 아니라 데이터베이스 스키마를 캡슐화하는 아티팩트입니다. BACPAC는 확장명이 .bacpac인 Windows 파일입니다. DACPAC와 비슷하게 BACPAC 파일 형식도 개방형 형식이며, BACPAC의 스키마 콘텐츠는 DACPAC의 스키마 콘텐츠와 동일합니다. 데이터는 JSON 형식으로 저장됩니다.  
+ BACPAC는 데이터베이스에 저장된 데이터뿐만 아니라 데이터베이스 스키마를 캡슐화하는 아티팩트입니다. BACPAC는 확장명이 .bacpac인 Windows 파일입니다. DACPAC와 비슷하게 BACPAC 파일 형식도 개방형이며, BACPAC의 스키마 콘텐츠는 DACPAC의 스키마 콘텐츠와 동일합니다. 데이터는 JSON 형식으로 저장됩니다.  
   
  DACPAC와 BACPAC는 서로 비슷하지만 대상 시나리오가 서로 다릅니다. DACPAC는 기존 데이터베이스의 업그레이드를 포함하여 스키마를 캡처하고 배포하는 데 사용됩니다. DACPAC를 개발, 테스트 및 다음 프로덕션 환경에서는 반대로 밀접 하 게 정의 된 스키마를 배포 하는 것에 대 한 주요 사용 사례: 프로덕션 환경의 스키마를 캡처하고 다시 테스트 및 개발 환경에 적용 합니다.  
   
@@ -104,14 +104,14 @@ ms.locfileid: "48214733"
   
  BACPAC는 두 가지 주요 작업을 지원합니다.  
   
--   **내보내기**- 사용자가 데이터베이스의 스키마 및 데이터를 BACPAC로 내보낼 수 있습니다.  
+-   **내보내기** - 사용자가 데이터베이스의 스키마 및 데이터를 BACPAC로 내보낼 수 있습니다.  
   
--   **가져오기** - 사용자가 스키마 및 데이터를 호스트 서버에 있는 새 데이터베이스로 가져올 수 있습니다.  
+-   **가져오기** - 사용자가 스키마 및 데이터를 호스트 서버의 새 데이터베이스로 가져올 수 있습니다.  
   
- 데이터베이스 관리 도구에서 이러한 두 기능을 지원 합니다: Server Management Studio, SQL Azure 용 관리 포털 및 DACFx API.  
+ 이러한 두 기능은 Server Management Studio, SQL Azure용 관리 포털 및 DACFx API와 같은 데이터베이스 관리 도구에서 지원됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 멤버 여야 합니다는 `dbmanager` 역할 할당 또는 `CREATE DATABASE` DAC 패키지를 배포 하 여 데이터베이스 만들기를 포함 하 여 데이터베이스를 만들 수 있는 권한이 있습니다. 멤버 여야 합니다는 `dbmanager` 역할에 할당 된 또는 `DROP DATABASE` 데이터베이스를 삭제 하는 권한을 합니다.  
+ DAC 패키지를 배포하여 데이터베이스를 만드는 작업을 포함하여 데이터베이스를 만들기 위해서는 사용자가 `dbmanager` 역할의 멤버이거나 사용자에게 `CREATE DATABASE` 권한이 할당되어 있어야 합니다. 데이터베이스를 삭제하기 위해서는 사용자가 `dbmanager` 역할의 멤버이거나 사용자에게 `DROP DATABASE` 권한이 할당되어 있어야 합니다.  
   
 ## <a name="data-tier-application-tasks"></a>데이터 계층 애플리케이션 태스크  
   

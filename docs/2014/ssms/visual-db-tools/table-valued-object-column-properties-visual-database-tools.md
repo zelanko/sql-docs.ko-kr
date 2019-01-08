@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.QueryViewColumn
@@ -12,12 +12,12 @@ ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b49ee8643b7cc86ea385d1d3ccd458edf5c3283e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14c2fff96c89ee696df1a437f958e4560bfab142
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121441"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771865"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>테이블 반환 개체(열) 속성(Visual Database Tools)
   이러한 속성은 쿼리 및 뷰 디자이너의 **다이어그램** 창에서 테이블 반환 개체의 열을 선택하는 경우 표시됩니다.  

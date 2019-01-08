@@ -14,12 +14,12 @@ ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3eb100042c36d86d604d48e716023dc0c0c4b04c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c64555e0035de8a06d3bb9227262f4202f73f9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679971"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538042"
 ---
 # <a name="records-and-provider-supplied-fields"></a>레코드 및 공급자 제공 필드
 경우는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체를 열, 해당 소스에서 현재 열려 있는 행 수 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 개방적이 고와 함께에서 상대 URL 또는 절대 URL [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 .  
@@ -41,7 +41,7 @@ ms.locfileid: "47679971"
 ## <a name="special-fields-for-document-source-providers"></a>문서에 대 한 특별 한 필드가 소스 공급자  
  공급자 라는 특수 클래스 *소스 공급자 문서*, 폴더를 관리 하 고 설명 합니다. 경우는 **레코드** 문서 또는 개체에서 나타내는 **레코드 집합** 개체가 나타내는 문서 폴더, 문서 소스 공급자를 설명 하는 필드의 고유 집합과 해당 개체를 채웁니다 문서의 특성 대신 실제 문서 자체에 있습니다. 하나의 필드에 대 한 참조를 포함 하는 일반적으로 **Stream** 문서를 나타내는입니다.  
   
- 이러한 필드는 리소스 구성 **레코드** 또는 **레코드 집합** 에 지원 되는 특정 공급자에 대 한 나열 됩니다 [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)합니다.  
+ 이러한 필드는 리소스 구성 **레코드** 또는 **recordset** 에 지원 되는 특정 공급자에 대해 나열 된 및 [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)합니다.  
   
  두 상수 인덱스는 **필드** 리소스의 컬렉션 **레코드** 하거나 **레코드 집합** 일반적으로 사용 되는 필드의 쌍을 검색 하 합니다. 합니다 **필드** 개체 [값](../../../ado/reference/ado-api/value-property-ado.md) 속성에는 원하는 콘텐츠를 반환 합니다.  
   
@@ -79,4 +79,4 @@ ms.locfileid: "47679971"
   
 ## <a name="see-also"></a>관련 항목  
  [레코드 개체 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)

@@ -1,7 +1,8 @@
-﻿---
-title: '자습서: Azure Data Studio 사용자 지정 정보 위젯을 빌드 | Microsoft Docs'
+---
+title: '자습서: 빌드 사용자 지정 정보 위젯'
+titleSuffix: Azure Data Studio
 description: 이 자습서에는 사용자 지정 정보 위젯 빌드하고 Azure Data Studio의 데이터베이스 및 서버 대시보드에 추가 하는 방법을 보여 줍니다.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: caecf780f5c8cc656f6b0b2a95dd3d68c48355cb
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
-ms.translationtype: HT
+ms.openlocfilehash: ab545d4d058780503778fb470bc5802ecae9d077
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356344"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030037"
 ---
-# <a name="tutorial-build-a-custom-insight-widget"></a>자습서: 사용자 지정 정보 위젯 빌드
+# <a name="tutorial-build-a-custom-insight-widget"></a>자습서: 빌드 사용자 지정 정보 위젯
 
 이 자습서에는 고유한 정보 쿼리를 사용하여 사용자 지정 정보 위젯을 빌드하는 방법을 보여줍니다.
 
@@ -163,7 +164,7 @@ ms.locfileid: "49356344"
     ![activesession 정보](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
 
 ## <a name="next-steps"></a>다음 단계
-이 자습서에서는 학습 하는 방법.
+이 자습서에서는 다음과 같은 방법을 학습했습니다.
 > [!div class="checklist"]
 > * 사용자 고유의 쿼리를 실행하고 차트 보기
 > * 차트에서 사용자 지정 정보 위젯 빌드

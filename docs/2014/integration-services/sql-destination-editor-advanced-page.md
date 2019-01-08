@@ -15,12 +15,12 @@ ms.assetid: 9b46bcf8-ddaf-4d7d-90a6-80bc19517e9b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a251b8599ba194a151790c2a781e49c643b00048
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a70bcc9e853908022147ef02e9d2019179c90875
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089033"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545494"
 ---
 # <a name="sql-destination-editor-advanced-page"></a>SQL 대상 편집기(고급 페이지)
   **SQL 대상 편집기** 대화 상자의 **고급** 페이지를 사용하여 고급 대량 삽입 옵션을 지정할 수 있습니다.  
@@ -29,19 +29,19 @@ ms.locfileid: "48089033"
   
 ## <a name="options"></a>변수  
  **ID 유지**  
- 태스크에서 ID 열에 값을 삽입할지 여부를 지정합니다. 이 속성의 기본값은 `False`합니다.  
+ 태스크에서 ID 열에 값을 삽입할지 여부를 지정합니다. 이 속성의 기본값은 `False`입니다.  
   
  **Null 유지**  
- 태스크에서 Null 값을 유지할지 여부를 지정합니다. 이 속성의 기본값은 `False`합니다.  
+ 태스크에서 Null 값을 유지할지 여부를 지정합니다. 이 속성의 기본값은 `False`입니다.  
   
  **테이블 잠금**  
- 데이터를 로드할 때 테이블을 잠글지 여부를 지정합니다. 이 속성의 기본값은 `True`합니다.  
+ 데이터를 로드할 때 테이블을 잠글지 여부를 지정합니다. 이 속성의 기본값은 `True`입니다.  
   
  **CHECK 제약 조건**  
- 태스크에서 제약 조건을 확인할지 여부를 지정합니다. 이 속성의 기본값은 `True`합니다.  
+ 태스크에서 제약 조건을 확인할지 여부를 지정합니다. 이 속성의 기본값은 `True`입니다.  
   
  **트리거 실행**  
- 대량 삽입에서 테이블에 대해 트리거를 실행할지 여부를 지정합니다. 이 속성의 기본값은 `False`합니다.  
+ 대량 삽입에서 테이블에 대해 트리거를 실행할지 여부를 지정합니다. 이 속성의 기본값은 `False`입니다.  
   
  **첫 번째 행**  
  삽입할 첫 번째 행을 지정합니다. 이 속성의 기본값은 **-1**이며 이 경우 값이 할당되지 않습니다.  
@@ -69,8 +69,8 @@ ms.locfileid: "48089033"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [SQL 대상 편집기 &#40;연결 관리자 페이지&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
- [SQL 대상 편집기 &#40;매핑 페이지&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
+ [SQL 대상 편집기&#40;연결 관리자 페이지&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
+ [SQL 대상 편집기&#40;매핑 페이지&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
  [SQL Server 대상을 사용하여 데이터 대량 로드](data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
   

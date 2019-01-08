@@ -13,12 +13,12 @@ ms.assetid: f58a3e14-ab27-44d3-8c26-f5c9ee7583b0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6441ffd954beb6514badf55ced35239c61da0859
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 7abb4560696dba21512066a7ff0ba3153ae2319a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218953"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508011"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>차원 특성 선택(차원 마법사)
   **차원 특성 선택** 페이지를 사용하여 차원에 대해 만들 특성을 선택하고 수정할 수 있습니다.  
@@ -49,13 +49,13 @@ ms.locfileid: "48218953"
  **검색 사용**  
  최종 사용자가 특성을 찾아보고 필터링할 수 있게 하려면 선택합니다. 키 특성에 대해**찾아보기 사용** 을 선택해야 합니다. 키가 아닌 특성의 경우에는 **찾아보기 사용** 이 기본적으로 선택되어 있지 않습니다. 따라서 키가 아닌 특성은 멤버 속성으로만 표시됩니다.  
   
- 대부분의 경우에서 특성 이루어집니다 사용할 수 없거나 설정 하 여 검색에 사용할 수 없습니다는 `AttributeHierarchyEnabled` 속성을 `True` 또는 `False`, 각각. 그러나 다음 세 가지 사례에서 마법사는 다른 설정을 사용합니다.  
+ 대부분의 경우 `AttributeHierarchyEnabled` 속성을 `True` 또는 `False`로 설정하여 특성을 찾아보기에 사용하거나 사용하지 못하게 합니다. 그러나 다음 세 가지 사례에서 마법사는 다른 설정을 사용합니다.  
   
 |사례|설정|  
 |----------|--------------|  
-|차원에 부모-자식 계층이 포함되고 **찾아보기 사용** 이 선택되지 않은 경우|마법사를 `AttributeHierarchyEnabled` 속성이로 설정 `True`를 설정 합니다 `AttributeHierarchyVisible` 특성을 `False` 키 특성에 대 한 합니다.|  
+|차원에 부모-자식 계층이 포함되고 **찾아보기 사용** 이 선택되지 않은 경우|마법사는 `AttributeHierarchyEnabled` 속성을 `True`로 두고, 키 특성에 대해 `AttributeHierarchyVisible` 특성을 `False`로 설정합니다.|  
 |차원 내의 테이블에 차원에 없는 테이블에 대한 외래 키가 포함된 경우|마법사는 외래 키를 포함되는 특성으로 선택하지만 **찾아보기 사용**은 선택하지 않습니다. 이 설정을 유지하면 특성의 `AttributeHiearchyEnabled` 속성이 `True`로 설정되고 `AttributeHieararchyVisible` 속성이 `False`로 설정됩니다.|  
-|null이 허용되는 외래 키 열을 통해 도달하는 눈송이 테이블이 차원에 포함된 경우<br /><br /> —및—<br /><br /> 눈송이 테이블의 키를 기반으로 한 특성에 대해 찾아보기 사용이 선택되지 않은 경우|마법사가 있는 새 특성을 만듭니다는 `AttributeHiearchyEnabled` 속성으로 설정 `True`, 및 `AttributeHieararchyVisible` 속성이 설정 `False`합니다.|  
+|null이 허용되는 외래 키 열을 통해 도달하는 눈송이 테이블이 차원에 포함된 경우<br /><br /> 및<br /><br /> 눈송이 테이블의 키를 기반으로 한 특성에 대해 찾아보기 사용이 선택되지 않은 경우|마법사는 `AttributeHiearchyEnabled` 속성이 `True`로 설정되고 `AttributeHieararchyVisible` 속성이 `False`로 설정된 새 특성을 만듭니다.|  
   
  **특성 유형**  
  (옵션) 특성의 유형을 설정합니다. 기본값은 **Regular**입니다. 특성 유형은 특성에 포함할 정보에 대한 지침을 클라이언트 애플리케이션에 제공합니다.  

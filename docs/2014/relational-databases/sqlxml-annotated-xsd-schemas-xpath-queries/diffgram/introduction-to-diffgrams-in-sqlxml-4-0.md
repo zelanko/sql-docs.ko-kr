@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - annotations [SQLXML]
@@ -15,12 +13,12 @@ ms.assetid: 1902d67f-baf3-46e6-a36c-b24b5ba6f8ea
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f7f94ac060cc4f76472c56c284636c09349261de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f772e860509275c70ae4db05b2da0aa0b0d5418a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160773"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777093"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>SQLXML 4.0의 DiffGrams 소개
   이 항목에서는 DiffGrams에 대해 간략하게 소개합니다.  

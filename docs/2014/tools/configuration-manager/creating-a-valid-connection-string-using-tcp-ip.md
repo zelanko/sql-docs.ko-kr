@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - connection strings [Database Engine]
@@ -17,12 +16,12 @@ ms.assetid: ee5dbc2c-1fc6-42bd-bdf5-efa792557934
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e46748234c0cf9a8cb810bb8ff2613b8b45794d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 6449b073adb406d15f41cfe02d477a05ad8b0b31
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211823"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764255"
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>TCP/IP를 사용하여 유효한 연결 문자열 만들기
   TCP/IP를 사용하여 유효한 연결 문자열을 만들려면 다음을 수행해야 합니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "48211823"
  연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 구성 요소는 지정한 별칭에 대한 서버, 프로토콜 및 포트 값을 레지스트리에서 읽어온 후 `tcp:<servername>[\<instancename>],<port>` 또는 `tcp:<IPAddress>[\<instancename>],<port>`형식으로 연결 문자열을 만듭니다.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 방화벽에서는 포트 1433이 기본적으로 닫힙니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 포트 1433에서 통신하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 TCP/IP를 사용하여 들어오는 클라이언트 연결을 수신하도록 구성된 경우 이 포트를 다시 열어야 합니다. 방화벽 구성에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "방법: SQL Server 액세스를 허용하도록 방화벽 구성"을 참조하거나 해당 방화벽 설명서를 검토하세요.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 방화벽에서는 포트 1433이 기본적으로 닫힙니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 포트 1433에서 통신하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 TCP/IP를 사용하여 들어오는 클라이언트 연결을 수신하도록 구성된 경우 이 포트를 다시 열어야 합니다. 방화벽을 구성하는 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "방법: SQL Server 액세스를 허용하도록 방화벽 구성"을 참조하거나 해당 방화벽 설명서를 검토하십시오.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 인터넷 프로토콜 버전 4(IPv4)와 인터넷 프로토콜 버전 6(IPv6)을 둘 다 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 IP 주소로 IPv4 및 IPv6 형식을 둘 다 허용합니다. IPv6에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "IPv6을 사용하여 연결"을 참조하십시오.  
   
@@ -167,10 +166,10 @@ Server             .\<instancename>
 ```  
   
 > [!NOTE]  
->  **sqlcmd** 매개 변수로 네트워크 프로토콜을 지정하는 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "방법: sqlcmd.exe를 사용하여 데이터베이스 엔진에 연결"을 참조하세요.  
+>  네트워크 프로토콜을 지정 하는 방법은 **sqlcmd** 매개 변수를 참조 하세요 "방법: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "방법: sqlcmd.exe를 사용하여 데이터베이스 엔진에 연결"을 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
- [공유 메모리 프로토콜을 사용 하 여 유효한 연결 문자열 만들기](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
+ [공유 메모리 프로토콜을 사용하여 유효한 연결 문자열 만들기](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
  [명명된 파이프를 사용하여 유효한 연결 문자열 만들기](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-named-pipes.md)   
  [네트워크 프로토콜 선택](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)  
   

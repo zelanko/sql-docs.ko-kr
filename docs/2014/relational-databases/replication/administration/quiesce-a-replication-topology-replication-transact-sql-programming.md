@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -17,12 +16,12 @@ ms.assetid: 7626d575-9994-47be-b772-5b6f1b7ef7ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: be357eb541887f149daf8ea1f24223f7b92d23bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 59c179c81c1b6b60787603f5953b85e583668c80
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068957"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777515"
 ---
 # <a name="quiesce-a-replication-topology-replication-transact-sql-programming"></a>복제 토폴로지 정지(복제 Transact-SQL 프로그래밍)
   시스템*정지* 과정에서는 모든 노드에서 게시된 테이블에 대한 작업을 중지하고 각 노드가 다른 모든 노드의 변경 내용을 받았는지 확인합니다. 이 항목에서는 여러 가지 관리 태스크에 필요한 복제 토폴로지 정지 방법과 노드가 다른 노드의 변경 내용을 모두 받았는지 확인하는 방법을 설명합니다.  
@@ -80,7 +79,7 @@ ms.locfileid: "48068957"
     > [!NOTE]  
     >  동기화 중 충돌이 발생하면 병합 에이전트를 두 번 실행한 후 충돌 해결에 필요한 변경 내용이 모든 노드에 전파되지 않을 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [피어 투 피어 토폴로지 관리&#40;복제 Transact-SQL 프로그래밍&#41;](administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [트랜잭션 복제에 대한 대기 시간 측정 및 연결 유효성 검사](../monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

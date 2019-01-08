@@ -11,12 +11,12 @@ ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 1df28dfd9e260f09da8eabcc6613e82e8a720e72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: d258a21fe4e6e0be3f0cf33230d6e8c5928780b1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086893"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516557"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>필터 추가(보고서 작성기 및 SSRS)
   계산 또는 표시 내용에 특정 값을 포함하거나 제외하려는 경우 데이터 세트, 데이터 영역 또는 그룹에 필터를 추가할 수 있습니다. 필터는 런타임에 데이터 세트에 대해 가장 먼저 적용된 다음 데이터 영역과 그룹(그룹 계층 구조에 대해 하향식으로)에 차례로 적용됩니다. 테이블, 행렬 또는 목록에서 행 그룹, 열 그룹 및 인접 그룹의 필터는 독립적으로 적용됩니다. 또한 차트에서 범주 그룹 및 계열 그룹의 필터는 독립적으로 적용됩니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "48086893"
   
 1.  **디자인** 뷰에서 보고서를 엽니다.  
   
-2.  디자인 화면에서 데이터 영역을 선택한 다음, *\<데이터 영역>***속성**을 마우스 오른쪽 단추로 클릭합니다. 계기의 경우 **계기 패널 속성**을 선택합니다. *\<데이터 영역>***속성** 대화 상자가 열립니다.  
+2.  디자인 화면에서 데이터 영역을 선택한 다음 _\<data region>_**속성**을 마우스 오른쪽 단추로 클릭합니다. 계기의 경우 **계기 패널 속성**을 선택합니다. _\<data region>_**속성** 대화 상자가 열립니다.  
   
     > [!NOTE]  
     >  테이블릭스 데이터 영역에서 모퉁이 셀이나 행 또는 열 핸들을 마우스 오른쪽 단추로 클릭한 다음 **테이블릭스 속성**을 클릭합니다.  
@@ -130,8 +130,8 @@ ms.locfileid: "48086893"
 ## <a name="see-also"></a>관련 항목  
  [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [계기 &#40;보고서 작성기 및 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [계기&#40;보고서 작성기 및 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [목록&#40;보고서 작성기 및 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

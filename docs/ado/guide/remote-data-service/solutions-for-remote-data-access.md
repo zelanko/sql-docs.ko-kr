@@ -13,12 +13,12 @@ ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 302a43238c755890e9fd106d8784eabdd0361d88
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
-ms.translationtype: HT
+ms.openlocfilehash: a761267c3d25619b58f23e2e7b6396f0e9b43958
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558620"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535805"
 ---
 # <a name="solutions-for-remote-data-access"></a>원격 데이터 액세스에 대한 솔루션
 ## <a name="the-issue"></a>문제  
@@ -41,7 +41,7 @@ ms.locfileid: "51558620"
  3 계층 시스템을 지 원하는 반환 하는 정보를 쉽게 검색 한 것 처럼 2 계층 시스템에서 응용 프로그램 프로그래밍 인터페이스를 간단 하 고 효율적으로 해야 합니다. 원격 데이터 서비스 (RDS)는이 인터페이스입니다.  
   
 ## <a name="the-solution"></a>솔루션  
- RDS 프로그래밍 모델을 정의-일련의 활동에 액세스할 수 있고 데이터 원본을 업데이트 하는 데 필요한-인터넷 정보 서비스 (IIS)와 같은 매개 자를 통해 데이터에 액세스할 수 있습니다. Rds.의 전체 기능을 요약 하는 프로그래밍 모델  
+ RDS는 프로그래밍 모델에 액세스할 수 있고, 인터넷 정보 서비스 (IIS)와 같은 매개 자를 통해 데이터에 대 한 액세스 권한을 얻으려고-데이터 소스를 업데이트 하는 데 필요한 작업 순서를 정의 합니다. Rds.의 전체 기능을 요약 하는 프로그래밍 모델  
   
 ## <a name="see-also"></a>관련 항목  
  [기본 RDS 프로그래밍 모델](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)   

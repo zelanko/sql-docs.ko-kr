@@ -11,12 +11,12 @@ ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9791e381b9233137055c680efb8bdfcad62929a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abfaedbc8eb415d00b1947fe36bef0a51716f536
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110703"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513014"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>편집기 열기(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]쿼리, MDX, DMX 또는 XML/A 편집기를 여는 방법에 대해 설명합니다. 편집기를 열면 각 편집기 창이 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]가운데 창에 탭으로 표시됩니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "48110703"
   
 -   **현재 연결에서의 쿼리** - [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 현재 연결에 연결된 유형의 새 편집기 창을 엽니다. 편집기 창에서는 현재 연결과 동일한 인증 정보를 사용합니다. 예를 들어 개체 탐색기에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 선택한 다음 **현재 연결에서의 쿼리**를 사용할 경우 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서는 동일한 인증 정보를 사용하여 동일한 인스턴스에 연결된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기를 엽니다.  
   
--   **데이터베이스 엔진 쿼리** - [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기와 대화 상자를 열어서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결하는 데 필요한 정보를 가져옵니다.  
+-   **데이터베이스 엔진 쿼리** - [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기와 대화 상자를 열어서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 인스턴스에 연결하는 데 필요한 정보를 가져옵니다.  
   
 -   **Analysis Services MDX 쿼리** - 새 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 쿼리 편집기와 대화 상자를 열어서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결하는 데 필요한 정보를 가져옵니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48110703"
   
 -   **새 쿼리** - [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 현재 연결에 연결된 유형의 새 편집기 창을 엽니다. 편집기 창에서는 현재 연결과 동일한 인증 정보를 사용합니다. 예를 들어 개체 탐색기에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 선택한 다음 **새 쿼리** 단추를 클릭하면 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서는 동일한 인증 정보를 사용하여 동일한 인스턴스에 연결된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기를 엽니다.  
   
--   **데이터베이스 엔진 쿼리** - [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기와 대화 상자를 열어서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결하는 데 필요한 정보를 가져옵니다.  
+-   **데이터베이스 엔진 쿼리** - [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기와 대화 상자를 열어서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 인스턴스에 연결하는 데 필요한 정보를 가져옵니다.  
   
 -   **Analysis Services MDX 쿼리** - 새 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 쿼리 편집기와 대화 상자를 열어서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결하는 데 필요한 정보를 가져옵니다.  
   

@@ -22,12 +22,12 @@ ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 52acf8b0d2ebe628deeac19f994f53d25861452c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 48fafd92104745ac438c212847e9b2976e84db6d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170303"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352696"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Analysis Services 데이터베이스 백업 및 복원
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에는 데이터베이스와 해당 개체를 특정 시점에서 복구할 수 있도록 백업 및 복원이 포함되어 있습니다. 백업 및 복원은 데이터베이스를 업그레이드한 서버에 마이그레이션하거나 서버 간에 데이터베이스를 이동하거나 데이터베이스를 프로덕션 서버에 배포하는 데 사용할 수 있는 기술이기도 합니다. 중요한 데이터에 대한 백업 계획이 없는 경우 데이터 복구를 위해 가능한 한 빨리 계획을 수립하고 구현해야 합니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "48170303"
   
  원본 데이터를 포함하는 전체 백업의 경우 세부 데이터가 포함된 데이터베이스를 백업해야 합니다. 특히 ROLAP 또는 DirectQuery 데이터베이스 저장소를 사용하는 경우 Analysis Services 데이터베이스와 별개의 외부 SQL Server 관계형 데이터베이스에 세부 데이터가 저장됩니다. 그렇지 않으면 모든 개체가 테이블 형식 개체 또는 다차원 개체인 경우 Analysis Services 백업에 메타데이터와 원본 데이터 모두가 포함됩니다.  
   
- 백업을 자동화하면 지정한 자동 백업 빈도만큼 데이터 스냅숏이 항상 최신 상태로 유지된다는 장점이 있습니다. 자동화된 스케줄러를 사용하면 백업을 잊지 않고 수행할 수 있습니다. 또한 데이터베이스 복원을 자동화할 수 있으며 이러한 자동화 역시 데이터를 복제하는 좋은 방법이 될 수 있으나 이때 복제의 대상 위치가 되는 인스턴스의 암호화 키 파일을 반드시 백업해야 합니다. 동기화 기능은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 복제 전용이며 최신이 아닌 데이터에 대해서만 사용할 수 있습니다. 여기에 언급된 모든 기능은 XML/A 명령을 사용하거나 AMO를 통해 프로그래밍 방식으로 실행하여 사용자 인터페이스를 통해 구현할 수 있습니다. 백업 전략에 대한 자세한 내용은 [SQL Server 2005 Analysis Services를 사용한 백업 전략](http://go.microsoft.com/fwlink/?LinkId=81888)을 참조하십시오.  
+ 백업을 자동화하면 지정한 자동 백업 빈도만큼 데이터 스냅숏이 항상 최신 상태로 유지된다는 장점이 있습니다. 자동화된 스케줄러를 사용하면 백업을 잊지 않고 수행할 수 있습니다. 또한 데이터베이스 복원을 자동화할 수 있으며 이러한 자동화 역시 데이터를 복제하는 좋은 방법이 될 수 있으나 이때 복제의 대상 위치가 되는 인스턴스의 암호화 키 파일을 반드시 백업해야 합니다. 동기화 기능은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 복제 전용이며 최신이 아닌 데이터에 대해서만 사용할 수 있습니다. 여기에 언급된 모든 기능은 XML/A 명령을 사용하거나 AMO를 통해 프로그래밍 방식으로 실행하여 사용자 인터페이스를 통해 구현할 수 있습니다. 백업 전략에 대한 자세한 내용은 [SQL Server 2005 Analysis Services를 사용한 백업 전략](https://go.microsoft.com/fwlink/?LinkId=81888)을 참조하십시오.  
   
  이 항목은 다음과 같은 섹션으로 구성됩니다.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48170303"
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 복원 방법은 [복원 옵션](restore-options.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [백업, 복원 및 데이터베이스를 동기화 할 &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
+ [데이터베이스 백업, 복원 및 동기화&#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
  [Analysis Services PowerShell](../analysis-services-powershell.md)  
   
   

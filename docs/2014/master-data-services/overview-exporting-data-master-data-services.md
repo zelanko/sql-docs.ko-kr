@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - exporting data [Master Data Services]
@@ -15,15 +14,15 @@ ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3e7a228062035772b9c394a246de0452f36239b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76a9133a013087d96f9acc102232b2340212d19f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158643"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758935"
 ---
 # <a name="exporting-data-master-data-services"></a>데이터 내보내기(Master Data Services)
-  내보낼 수 있습니다 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 구독 뷰를 만들어 구독 시스템으로 데이터입니다. 그러면 임의의 구독 시스템에서 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 게시된 데이터를 볼 수 있습니다. 뷰에 대한 자세한 내용은 [뷰](../relational-databases/views/views.md)를 참조하세요.  
+  구독 뷰를 만들어 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터를 구독 시스템으로 내보낼 수 있습니다. 그러면 임의의 구독 시스템에서 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 게시된 데이터를 볼 수 있습니다. 뷰에 대한 자세한 내용은 [뷰](../relational-databases/views/views.md)를 참조하세요.  
   
 ## <a name="subscription-view-formats"></a>구독 뷰 형식  
  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 뷰를 만들 때 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에서 제공하는 표준 뷰 형식 집합 중에서 선택합니다. 이러한 형식을 사용하여 다음을 표시하는 뷰를 만들 수 있습니다.  
@@ -48,11 +47,11 @@ ms.locfileid: "48158643"
 |태스크 설명|항목|  
 |----------------------|-----------|  
 |마스터 데이터 구독 뷰를 만듭니다.|[구독 뷰를 만들어 &#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)|  
-|기존 구독 뷰를 삭제합니다.|[구독 뷰 삭제 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)|  
+|기존 구독 뷰를 삭제합니다.|[구독 뷰 삭제&#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   
--   [구독 뷰 형식 &#40;Master Data Services&#41;](../../2014/master-data-services/subscription-view-formats-master-data-services.md)  
+-   [구독 뷰 형식&#40;Master Data Services&#41;](../../2014/master-data-services/subscription-view-formats-master-data-services.md)  
   
 -   [뷰](../relational-databases/views/views.md)  
   

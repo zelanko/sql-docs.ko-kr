@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSmerge_past_partition_mappings
@@ -19,12 +18,12 @@ ms.assetid: 06d54ff5-4d29-4eeb-b8be-64d032e53134
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0419e6fab53cec8cd0ae266f89b6840701dc1724
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ad8c5db6a067477e3e4e5d349a8faa2adba5199
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638851"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775395"
 ---
 # <a name="msmergepastpartitionmappings-transact-sql"></a>MSmerge_past_partition_mappings(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47638851"
 |**publication_number**|**smallint**|에 저장 되는 게시 번호 **sysmergepublications**합니다.|  
 |**tablenick**|**int**|게시된 테이블의 애칭입니다.|  
 |**rowguid**|**uniqueidentifier**|지정된 행의 행 식별자입니다.|  
-|**partition_id**|**int**|행이 속한 파티션의 ID입니다. 행 변경 내용이 모든 구독자와 관련 있는 경우 값은 -1입니다.|  
+|**partition_id**|**int**|행이 속한 파티션의 ID입니다. 값은 행 변경 내용이 모든 구독자와 관련 된 경우-1입니다.|  
 |**generation**|**bigint**|파티션 변경이 발생한 generation의 값입니다.|  
 |**reason**|**tinyint**|내부적으로만 사용됩니다.|  
   

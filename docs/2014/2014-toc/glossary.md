@@ -24,12 +24,12 @@ ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 5338e17678f31a4bcdef1a6f7a73696f903bb76a
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
-ms.translationtype: HT
+ms.openlocfilehash: 9b565fb16621760a69e2462680444db5f0ea3916
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120480"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519479"
 ---
 # <a name="glossary"></a>용어 설명
   
@@ -175,10 +175,10 @@ ms.locfileid: "49120480"
 |인증서 발급자(certificate issuer)|특정 주체에 대한 인증서를 발급한 인증 기관입니다.|  
 |Certificate Lifecycle Manager 클라이언트(Certificate Lifecycle Manager Client)|최종 사용자의 스마트 카드 관리를 지원하는 CLM(Certificate Lifecycle Manager) 클라이언트 도구 모음입니다. 이 도구에는 스마트 카드 셀프 서비스 컨트롤, 스마트 카드 개인화 컨트롤 및 인증서 프로필 업데이트 컨트롤이 포함됩니다. 스마트 카드 셀프 서비스 컨트롤, 스마트 카드 개인화 컨트롤, 인증서 프로필 업데이트 컨트롤을 참조하십시오.|  
 |인증서 관리자(certificate manager)|다른 CLM 사용자를 관리하거나 CLM 애플리케이션 자체를 관리할 수 있는 적합한 CLM 권한이 있는 CLM(Certificate Lifecycle Manager) 사용자입니다.|  
-|인증서 관리자 웹 포털(certificate manager Web portal)|CLM(Certificate Lifecycle Manager) 서버에서 실행되는 웹 애플리케이션입니다. 이 포털에서는 인증서 관리자가 다른 사용자의 인증서와 스마트 카드를 관리할 수 있습니다. 인증서 구독자 및 인증서 관리자 웹 포털은 모두 동일한 URL(universal resource locator)을 통해 액세스할 수 있지만 표시되는 내용은 사용자의 역할 및 권한에 따라 달라집니다.|  
+|인증서 관리자 웹 포털(certificate manager Web portal)|CLM(Certificate Lifecycle Manager) 서버에서 실행되는 웹 애플리케이션입니다. 이 포털에 인증서 관리자가 다른 사용자의 인증서 및 스마트 카드를 관리할 수 있습니다. 인증서 구독자 및 인증서 관리자 웹 포털은 모두 동일한 URL(universal resource locator)을 통해 액세스할 수 있지만 표시되는 내용은 사용자의 역할 및 권한에 따라 달라집니다.|  
 |인증서 프로필 업데이트 컨트롤(Certificate Profile Update Control)|클라이언트 컴퓨터에서 CLM(Certificate Lifecycle Manager) 프로필 업데이트를 자동화하는 ActiveX 컨트롤입니다.|  
 |인증서 해지(certificate revocation)|디지털 인증서를 해지하는 프로세스입니다.|  
-|인증서 구독자(certificate subscriber)|스마트 카드 사용 여부에 관계없이 인증서가 필요한 사용자입니다. 인증서 구독자는 사용자의 고유 인증서에 대해서만 수행할 수 있는 소수의 기능에 액세스할 수 있습니다.|  
+|인증서 구독자(certificate subscriber)|스마트 카드 사용 여부에 관계없이 인증서가 필요한 사용자입니다. 인증서 구독자는 소수의 사용자가 소유한 인증서만 수행할 수 있는 함수에 액세스할 수 있습니다.|  
 |인증서 구독자 웹 포털(certificate subscriber Web portal)|CLM(Certificate Lifecycle Manager) 서버에서 실행되는 웹 애플리케이션입니다. CLM 서버의 이 구성 요소는 셀프 서비스 모드에서 사용자와 직접 상호 작용합니다. 구체적인 기능은 Active Directory 그룹 멤버 자격과 권한에 따라 달라집니다. 인증서 구독자 및 인증서 관리자 웹 포털은 모두 동일한 URL(universal resource locator)을 통해 액세스할 수 있지만 표시되는 내용은 사용자의 역할 및 권한에 따라 달라집니다.|  
 |인증서 템플릿(certificate template)|인증서의 사용 목적에 따라 인증서의 형식과 내용을 지정하는 Windows 생성 개체입니다. Windows 엔터프라이즈 CA(인증 기관)에서 인증서를 요청할 때, 인증서 요청자는 인증서 템플릿을 기반으로 다양한 인증서 유형 중에서 선택할 수 있습니다.|  
 |변경 적용자(change applier)|일괄 변경 내용에 대해 충돌 검색, 충돌 처리 및 변경 내용 적용을 수행하는 개체입니다.|  
@@ -212,16 +212,16 @@ ms.locfileid: "49120480"
 |CLM 감사(CLM Audit)|Active Directory에서 CLM 정책 템플릿의 생성 및 표시를 허용하여 프로필 템플릿 내에 관리 정책을 정의하고 CLM 보고서를 생성할 수 있게 해 주는 CLM(Certificate Lifecycle Manager) 확장 권한입니다.|  
 |CLM 자격 증명(CLM credentials)|CLM(Certificate Lifecycle Manager)에 대해 사용자를 인증하기 위해 사용할 수 있는 사용자 계정 정보입니다. 이러한 자격 증명은 도메인 자격 증명 또는 일회용 암호 형식으로 지정할 수 있습니다.|  
 |CLM 등록(CLM Enroll)|Active Directory에서 사용자가 템플릿을 사용하여 인증서를 발급하는 동안 워크플로 및 수집할 데이터를 지정할 수 있게 해 주는 CLM(Certificate Lifecycle Manager) 확장 권한입니다. 이 확장 권한은 프로필 템플릿에만 적용됩니다.|  
-|CLM 등록 에이전트(CLM Enrollment Agent)|Active Directory에서 사용자 또는 그룹이 다른 사용자를 대신하여 인증서 요청을 수행할 수 있게 해 주는 CLM(Certificate Lifecycle Manager) 확장 권한입니다. 발급된 인증서의 제목에는 요청자 이름 대신 대상 사용자의 이름이 포함됩니다.|  
+|CLM 등록 에이전트(CLM Enrollment Agent)|Active Directory에서 사용자 또는 그룹이 다른 사용자를 대신하여 인증서 요청을 수행할 수 있게 해 주는 CLM(Certificate Lifecycle Manager) 확장 권한입니다. 발급 된 인증서의 주체는 요청자 이름 대신 대상 사용자의 이름을 포함 됩니다.|  
 |CLM 복구(CLM Recover)|Active Directory에서 인증 기관 데이터베이스로부터 암호화 키 복구 시작을 허용하는 CLM(Certificate Lifecycle Manager) 확장 권한입니다.|  
-|CLM 갱신(CLM Renew)|Active Directory에서 등록 요청의 시작, 실행 또는 완료를 허용하는 CLM(Certificate Lifecycle Manager) 확장 권한입니다. 갱신 요청은 만료 날짜가 가까운 사용자 인증서를 새 유효 기간을 포함하는 새 인증서로 교체합니다.|  
+|CLM 갱신(CLM Renew)|Active Directory에서 등록 요청의 시작, 실행 또는 완료를 허용하는 CLM(Certificate Lifecycle Manager) 확장 권한입니다. 갱신 요청에는 새 유효 기간이 있는 새 인증서를 사용 하 여 만료 날짜가 가까운 사용자 인증서를 대체 합니다.|  
 |CLM 보고서(CLM reports)|CLM(Certificate Lifecycle Manager) 내에서 자격 증명 관리 활동과 관련된 감사 정보입니다.|  
 |CLM 요청 등록(CLM Request Enroll)|Active Directory에서 등록 요청의 시작, 실행 또는 완료를 허용하는 CLM(Certificate Lifecycle Manager) 확장 권한입니다.|  
 |CLM 요청 복구(CLM Request Recover)|Active Directory에서 인증 기관 데이터베이스로부터 암호화 키 복구 시작을 허용하는 CLM(Certificate Lifecycle Manager) 확장 권한입니다.|  
-|CLM 요청 갱신(CLM Request Renew)|Active Directory에서 등록 요청의 시작, 실행 또는 완료를 허용하는 CLM(Certificate Lifecycle Manager) 확장 권한입니다. 갱신 요청은 만료 날짜가 가까운 사용자 인증서를 새 유효 기간을 포함하는 새 인증서로 교체합니다.|  
-|CLM 요청 취소(CLM Request Revoke)|Active Directory에서 인증서의 유효 기간이 만료되기 전에 인증서 해지를 허용하는 CLM(Certificate Lifecycle Manager) 확장 권한입니다. 예를 들어 사용자의 컴퓨터 또는 스마트 카드가 손상(도난)된 경우에 필요합니다.|  
-|CLM 요청 차단 해제 스마트 카드(CLM Request Unblock Smart Card)|Active Directory에서 스마트 카드의 사용자 PIN(개인 식별 번호)을 재설정하도록 설정하여 스마트 카드의 핵심 자료에 액세스하고 해당 자료를 다시 설정할 수 있게 해 주는 CLM(Certificate Lifecycle Manager) 확장 권한입니다.|  
-|CLM 취소(CLM Revoke)|Active Directory에서 인증서의 유효 기간이 만료되기 전에 인증서 해지를 허용하는 CLM(Certificate Lifecycle Manager) 확장 권한입니다. 예를 들어 사용자의 컴퓨터 또는 스마트 카드가 손상(도난)된 경우에 필요합니다.|  
+|CLM 요청 갱신(CLM Request Renew)|Active Directory에서 등록 요청의 시작, 실행 또는 완료를 허용하는 CLM(Certificate Lifecycle Manager) 확장 권한입니다. 갱신 요청에는 새 유효 기간이 있는 새 인증서를 사용 하 여 만료 날짜가 가까운 사용자 인증서를 대체 합니다.|  
+|CLM 요청 취소(CLM Request Revoke)|수명 주기 CLM (Certificate Manager) 확장 Active Directory에서 인증서의 유효 기간이 만료 되기 전에 인증서 해지를 허용 하는 권한입니다. 필요한 경우의 예는 경우 사용자의 컴퓨터 또는 스마트 카드가 손상 (도난)입니다.|  
+|CLM 요청 차단 해제 스마트 카드(CLM Request Unblock Smart Card)|수명 주기 CLM (Certificate Manager) 확장 스마트 카드와 해당 자료를 다시 설정할 수에 대 한 키 자료에 대 한 액세스를 허용 Active Directory에서 스마트 카드의 사용자 개인 식별 번호 (PIN)를 다시 설정 하려면 사용 하도록 설정 하는 권한입니다.|  
+|CLM 취소(CLM Revoke)|수명 주기 CLM (Certificate Manager) 확장 Active Directory에서 인증서의 유효 기간이 만료 되기 전에 인증서 해지를 허용 하는 권한입니다. 필요한 경우의 예는 경우 사용자의 컴퓨터 또는 스마트 카드가 손상 (도난)입니다.|  
 |클록 벡터(clock vector)|복제본에 대한 업데이트를 나타내는 클록 벡터 요소의 컬렉션입니다. 0과 틱 수 사이에서 발생한 모든 변경 내용이 벡터에 포함됩니다.|  
 |클록 벡터 요소(clock vector element)|복제본에 대한 변경 사항을 나타내는 복제본 키와 틱 수로 구성되는 값의 쌍입니다.|  
 |CLR 함수(CLR function)|SQL Server 어셈블리에 대해 만든 함수로, .NET Framework CLR(공용 언어 런타임)에서 생성된 어셈블리에 함수 구현이 정의됩니다.|  
@@ -737,7 +737,7 @@ ms.locfileid: "49120480"
 |높은 수염(high whisker)|상자 그림 차트에서 이상값이 아닌 가장 큰 값입니다.|  
 |힌트(hint)|SELECT, INSERT, UPDATE 또는 DELETE 문에서 SQL Server 쿼리 프로세서에 의해 적용되기 위해 지정된 옵션 또는 전략입니다. 힌트는 쿼리 최적화 프로그램이 쿼리에 대해 선택할 수 있는 실행 계획보다 우선합니다.|  
 |기록|운영 체제 셸에서 입력된 명령, Gopher를 사용하여 전달된 메뉴 또는 웹 브라우저를 사용하여 이동한 링크와 같은 프로그램 내의 사용자 동작 목록입니다.|  
-|유지 기능(holdability)|처리되었으며 일반적으로 처리 후 닫히는 결과 집합을 열어 두는("유지 중") 가능성을 의미하며 "SQL Server는 연결 수준에서만 유지 기능을 지원합니다."를 예로 들 수 있습니다.|  
+|유지 기능(holdability)|처리되었으며 일반적으로 처리 후 닫히는 결과 집합을 열어 두는("유지 중") 가능성을 말합니다.  "SQL Server는 연결 수준에서만 유지 기능을 지원합니다."를 예로 들 수 있습니다.|  
 |홀드아웃|데이터 마이닝 모델 구조의 정확도를 측정하는 데 사용하기 위해 예약된 학습 데이터의 비율입니다.|  
 |홀드아웃 데이터(holdout data)|데이터 마이닝 모델 구조의 정확도를 측정하는 데 사용하기 위해 예약된 학습 데이터의 비율입니다.|  
 |홀드아웃 저장소(holdout store)|홀드아웃 데이터를 캐시하는 데 사용되는 데이터 마이닝 구조입니다. 홀드아웃 데이터에 대한 참조를 포함합니다.|  
@@ -782,7 +782,7 @@ ms.locfileid: "49120480"
 |초기 테이프(initial tape)|테이프 백업 디바이스를 사용하는 미디어 세트에서 미디어 패밀리의 첫 번째 테이프를 말합니다.|  
 |내부 조인(inner join)|원본 테이블 간에 공유되는 열의 값을 비교하여 여러 원본 테이블에서 행을 가져오는 작업입니다. 내부 조인은 다른 원본 테이블에 일치하는 행이 없는 행은 원본 테이블에서 제외시킵니다.|  
 |직접 인증(in-person authentication)|인증서 요청 트랜잭션을 완료하기 위한 물리적 인증입니다. 예를 들어 PIN(개인 식별 번호)의 차단 해제를 요청하는 최종 사용자는 인증서 관리자를 직접 방문하여 직원 배지 또는 운전 면허증과 같은 식별 수단으로 직접 인증을 제공합니다.|  
-|InProc|COM 개체의 코드가 DLL 파일에서 로드되고 클라이언트와 동일한 프로세스에 있는 상황입니다.|  
+|InProc|COM 개체의 코드 DLL 파일에서 로드 되 고 클라이언트와 동일한 프로세스에 있는 상황입니다.|  
 |입력 어댑터(input adapter)|데이터베이스, 파일, 주식 종목 피드, 네트워크 포트, 제조 디바이스 등의 외부 원본에서 들어오는 이벤트 스트림을 허용하는 어댑터입니다.|  
 |입력 멤버(input member)|해당 값이 다른 데이터에서 계산되지 않고 데이터 원본에서 직접 로드되는 멤버를 말합니다.|  
 |입력 집합(input set)|식이 작동되는 MDX(Multidimensional Expressions) 값 식에 제공되는 데이터 집합입니다.|  
@@ -841,11 +841,11 @@ ms.locfileid: "49120480"
 |핵심 성과 지표(key performance indicator)|전략 목표, 목표, 계획, 이니셔티브 또는 비즈니스 프로세스의 성과를 추적하는 데 사용되는 미리 정의된 측정값입니다. KPI는 목표에 대해 평가됩니다. 데이터 원본에서 직접 가져온 명시적이고 측정 가능한 값입니다. KPI(핵심 성과 지표)는 고객별 수익과 같은 특정 영역의 성과를 측정하는 데 사용됩니다.|  
 |키 범위 잠금(key range lock)|레코드 집합에 대한 가상 추가 또는 삭제를 방지하기 위해 테이블의 레코드 간 범위를 잠그는 데 사용되는 잠금으로, 직렬화 가능 트랜잭션을 보장합니다.|  
 |키 복구(key recovery)|사용자의 개인 키를 복구하는 프로세스입니다.|  
-|키 복구 에이전트(Key Recovery Agent)|사용자의 개인 키를 복구하기 위해 인증서 관리자와 작업하는 지정된 사용자입니다. 특정 인증서 템플릿이 키 복구 에이전트에 적용됩니다.|  
+|키 복구 에이전트(Key Recovery Agent)|사용자의 개인 키를 복구 하기 위해 인증서 관리자를 사용 하 여 작동 하는 사용자 지정된 합니다. 특정 인증서 템플릿이 키 복구 에이전트에 적용됩니다.|  
 |키 집합 커서(keyset-driven cursor)|커서가 열려 있는 동안 다른 사용자에 의한 멤버 행의 업데이트 결과는 표시하지만 삽입 또는 삭제 작업의 결과는 표시하지 않는 커서입니다.|  
 |정보(knowledge)|참가자가 확인했고 유지 관리하는 모든 변경 내용에 대한 메타데이터입니다.|  
 |KPI|전략 목표, 목표, 계획, 이니셔티브 또는 비즈니스 프로세스의 성과를 추적하는 데 사용되는 미리 정의된 측정값입니다. KPI는 목표에 대해 평가됩니다. 데이터 원본에서 직접 가져온 명시적이고 측정 가능한 값입니다. KPI(핵심 성과 지표)는 고객별 수익과 같은 특정 영역의 성과를 측정하는 데 사용됩니다.|  
-|KRA|사용자의 개인 키를 복구하기 위해 인증서 관리자와 작업하는 지정된 사용자입니다. 특정 인증서 템플릿이 키 복구 에이전트에 적용됩니다.|  
+|KRA|사용자의 개인 키를 복구 하기 위해 인증서 관리자를 사용 하 여 작동 하는 사용자 지정된 합니다. 특정 인증서 템플릿이 키 복구 에이전트에 적용됩니다.|  
 |유니코드를 지원하지 않는 프로그램용 언어(Language for non-Unicode programs)|특정 컴퓨터의 모든 사용자에게 영향을 미치는 해당 컴퓨터의 기본 코드 페이지 및 관련 비트맵 글꼴 파일을 지정하는 국가 및 언어 옵션 설정입니다. 기본 코드 페이지 및 글꼴을 사용하면 한 운영 체제 언어 버전용으로 작성된 유니코드를 지원하지 않는 애플리케이션이 다른 운영 체제 언어 버전에서 올바르게 실행될 수 있습니다.|  
 |언어 서비스 파서(language service parser)|원본 코드의 토큰 범위와 함수를 설명하는 데 사용되는 구성 요소입니다.|  
 |언어 서비스 검사기(language service scanner)|원본 코드의 토큰 유형을 식별하는 데 사용되는 구성 요소입니다. 이 정보는 구문 강조에 사용되며 중괄호 일치 등의 다른 작업을 트리거할 수 있는 토큰 유형을 신속하게 식별하는 데 사용됩니다.|  
@@ -1186,7 +1186,7 @@ ms.locfileid: "49120480"
 |개인 키(private key)|공개 키 알고리즘에 사용되는 암호화 키 쌍 중 절반의 암호입니다. 개인 키는 일반적으로 대칭 세션 키의 암호를 해독하거나, 데이터를 디지털로 서명하거나, 해당 공개 키로 암호화된 데이터의 암호를 해독하기 위해 사용됩니다.|  
 |자동 관리 캐싱|쿼리가 ROLAP 저장소로 리디렉션될 때 MOLAP 저장소의 개체가 캐시에서 자동으로 업데이트 및 처리되는 큐브의 데이터 진부화(Data Obsolescence)를 관리하는 시스템입니다.|  
 |프로시저 캐시(procedure cache)|Transact-SQL 일괄 처리, 저장 프로시저 및 트리거에 대한 실행 계획을 저장하는 데 사용되는 SQL Server 메모리 풀의 일부입니다.|  
-|프로필 템플릿(profile template)|모든 CLM(Certificate Lifecycle Manager) 관리 활동의 핵심입니다. 프로필 템플릿은 인증서의 전체 수명 주기에서 사용자 커뮤니티에 필요할 수 있는 여러 인증서를 관리하는 데 필요한 모든 정보가 포함된 단일 관리 단위를 제공합니다. 프로필 템플릿에는 또한 이러한 인증서의 최종 위치와 관련된 정보가 포함되며, 이러한 인증서는 소프트웨어를 기반으로 하거나(즉, 로컬 컴퓨터에 저장됨) 하드웨어를 기반으로 할 수 있습니다(스마트 카드에 저장됨). 프로필 템플릿은 소프트웨어 기반 및 스마트 카드 기반 인증서를 모두 포함할 수 없습니다.|  
+|프로필 템플릿(profile template)|모든 CLM(Certificate Lifecycle Manager) 관리 활동의 핵심입니다. 프로필 템플릿 인증서의 수명 주기 내내 사용자 커뮤니티에서 필요할 수 있는 여러 인증서를 관리 하는 데 필요한 모든 정보가 포함 된 단일 관리 단위를 제공 합니다. 프로필 템플릿에는 또한 이러한 인증서의 최종 위치와 관련된 정보가 포함되며, 이러한 인증서는 소프트웨어를 기반으로 하거나(즉, 로컬 컴퓨터에 저장됨) 하드웨어를 기반으로 할 수 있습니다(스마트 카드에 저장됨). 프로필 템플릿은 소프트웨어 기반 및 스마트 카드 기반 인증서를 모두 포함할 수 없습니다.|  
 |수익 차트|여러 데이터 모델을 사용하여 얻을 수 있는 이론상의 수익 증가분을 표시하는 다이어그램입니다.|  
 |프로그래밍 가능(programmable)|태스크 또는 작업을 수행하기 위해 명령을 수용할 수 있음을 의미합니다. 프로그래밍 가능은 컴퓨터의 특징입니다.|  
 |속성 페이지|인터페이스의 개체에 대한 정보를 표시하는 대화 상자입니다.|  
@@ -1464,10 +1464,10 @@ ms.locfileid: "49120480"
 |sleep|작업을 종료하지 않고 일시 중단하는 것을 의미합니다.|  
 |조각(slice)|차원의 멤버를 기준으로 하나 이상의 차원을 제한하여 지정한 큐브의 데이터 하위 집합입니다.|  
 |슬라이서(Slicers)|표시되는 데이터 집합의 범위를 쉽게 좁힐 수 있는 원클릭 필터링 제어를 제공하는 기능입니다.|  
-|슬라이딩 윈도우(sliding window)|스트림의 이벤트에 따라 시간대에서 이동하는 고정 길이(L)의 윈도우입니다. 이벤트 시작 시간부터 해당 시간대의 모든 이벤트에 대해 새 윈도우가 만들어집니다.|  
+|슬라이딩 윈도우(sliding window)|스트림의 이벤트에 따라 시간대를 따라 이동 하는 고정된 길이 L의 창입니다. 타임 라인에서 모든 이벤트와 이벤트의 시작 시간에 시작 새 창이 생성 됩니다.|  
 |통합 설치(slipstream)|결과 파일이 업데이트된 소프트웨어를 한 번에 설치할 수 있도록 업데이트, 패치 또는 서비스 팩을 원래 소프트웨어의 기본 설치 파일로 통합하는 것을 말합니다.|  
 |통합 설치(slipstream installation)|운영 체제 또는 프로그램의 기본 설치 파일을 서비스 팩, 업데이트 또는 패치와 통합하며 한 번에 설치될 수 있도록 하는 설치 유형입니다.|  
-|스마트 카드(smart card)|인증서 기반 인증을 위해 액세스 코드와 함께 사용되는 적은 양의 저장소와 포함된 마이크로프로세서가 있는 플라스틱(신용 카드 크기 이하) 디바이스입니다. 스마트 카드는 인증서, 공개 및 개인 키, 암호 및 다른 유형의 개인 정보를 안전하게 저장합니다.|  
+|스마트 카드(smart card)|포함 된 마이크로프로세서가와 적은 양의 사용 되는 저장소, 액세스 코드를 사용 하 여 인증서 기반 인증을 사용 하도록 설정 하려면 플라스틱 (신용 카드 크기 또는 더 작은) 장치. 스마트 카드는 인증서, 공개 및 개인 키, 암호 및 다른 유형의 개인 정보를 안전하게 저장합니다.|  
 |스마트 카드 개인 설정 컨트롤(Smart Card Personalization Control)|클라이언트 컴퓨터에서 모든 CLM(Certificate Lifecycle Manager) 스마트 카드 애플리케이션 관리 작업을 수행하는 ActiveX 컨트롤입니다.|  
 |스마트 카드 프로필(smart card profile)|스마트 카드 기반 인증서 템플릿만 포함하는 프로필 템플릿을 사용하여 요청이 수행될 때 만들어지는 CLM(Certificate Lifecycle Manager) 프로필입니다.|  
 |스마트 카드 판독기(smart card reader)|컴퓨터에 설치된 디바이스로, 향상된 보안 기능을 위해 스마트 카드를 사용할 수 있도록 합니다.|  
@@ -1785,7 +1785,7 @@ ms.locfileid: "49120480"
 |x축(x-axis)|가로 및 세로 크기가 있는 표, 차트 또는 그래프의 가로 참조 선입니다.|  
 |XML for Analysis|World Wide Web에 존재하는 데이터 원본에 대한 데이터 액세스를 지원하는 개방형 표준이 기술되어 있는 사양입니다.|  
 |XMLA|World Wide Web에 존재하는 데이터 원본에 대한 데이터 액세스를 지원하는 개방형 표준이 기술되어 있는 사양입니다.|  
-|XQuery|Quilt, XPath 및 XQL에서 파생된 다양한 XML 데이터 형식에 폭넓게 적용 가능한 기능적 쿼리 언어입니다. Ipedo와 Software AG는 W3C에서 제안한 XQuery 언어 사양에 대한 자체 버전을 구현합니다. XML 쿼리, XQL이라고도 합니다.|  
+|XQuery|Quilt, XPath 및 XQL에서 파생된 다양한 XML 데이터 형식에 폭넓게 적용 가능한 기능적 쿼리 언어입니다. Ipedo와 Software AG는 W3C에서 제안한 XQuery 언어 사양에 대한 자체 버전을 구현합니다. XML 쿼리, 즉 XQL이라고도 합니다.|  
 |XSL|표시 규칙을 정의하는 스타일시트를 통해 XML 데이터를 HTML 등의 다른 형태로 변환하는 데 사용되는 XML 어휘입니다.|  
 |XSL 변환(XSL Transformation)|XML 데이터를 표시하거나 변환하는 데 사용되는 선언적 XML 기반 언어입니다.|  
 |XSLT|XML 데이터를 표시하거나 변환하는 데 사용되는 선언적 XML 기반 언어입니다.|  

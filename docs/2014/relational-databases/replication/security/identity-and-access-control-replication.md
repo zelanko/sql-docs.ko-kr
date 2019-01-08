@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - access controls [SQL Server replication]
@@ -16,12 +15,12 @@ ms.assetid: 4da0e793-1ee4-4f69-a80b-45c6732a238d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7e84336a873fea526c77605f7a9a03e455b53c4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ded862d81364d8ade38ed687a0665bba1b0f3df
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180773"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815466"
 ---
 # <a name="identity-and-access-control-replication"></a>ID 및 Access Control(복제)
   인증은 한 엔터티(이 컨텍스트에서는 일반적으로 컴퓨터)가 *보안 주체*라고도 하는 다른 엔터티(일반적으로 다른 컴퓨터 또는 사용자)의 신원 또는 실체를 확인하는 프로세스입니다. 권한 부여는 파일 시스템의 파일이나 데이터베이스의 테이블과 같은 리소스에 대한 액세스 권한을 인증된 보안 주체에게 부여하는 프로세스입니다.  

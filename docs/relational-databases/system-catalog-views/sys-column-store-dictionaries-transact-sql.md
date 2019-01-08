@@ -20,12 +20,12 @@ ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dbcd828ea886bd1c83b327cae9a49bca4668ef15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd497326f278dcc01b4fa81a0e64da6a93cbe8cd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617901"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518809"
 ---
 # <a name="syscolumnstoredictionaries-transact-sql"></a>sys.column_store_dictionaries(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47617901"
 |**column_id**|**int**|1부터 columnstore 열의 ID입니다. 첫 번째 열에 ID = 1, 두 번째 열에 ID = 2, 등입니다.|  
 |**dictionary_id**|**int**|두 종류의 사전, 전역 및 로컬, 열 세그먼트와 연결 될 수 있습니다. 0 dictionary_id 모든 열 세그먼트 (각 행 그룹에 대해 하나) 해당 열에 대 한 간에 공유 되는 전역 사전을 나타냅니다.|  
 |**version**|**int**|사전 형식의 버전입니다.|  
-|**type**|**int**|사전 종류입니다.<br /><br /> 1-포함 하는 해시 사전 **int** 값<br /><br /> 2 – 사용되지 않음<br /><br /> 3 – 문자열 값을 포함하는 해시 사전<br /><br /> 4-해시 들어 있는 사전을 **float** 값<br /><br /> 사전에 대 한 자세한 내용은 참조 하세요. [Columnstore 인덱스 가이드](~/relational-databases/indexes/columnstore-indexes-overview.md)합니다.|  
+|**type**|**int**|사전 종류입니다.<br /><br /> 1-포함 하는 해시 사전 **int** 값<br /><br /> 2-사용<br /><br /> 3-문자열 값을 포함 하는 해시 사전<br /><br /> 4-해시 들어 있는 사전을 **float** 값<br /><br /> 사전에 대 한 자세한 내용은 참조 하세요. [Columnstore 인덱스 가이드](~/relational-databases/indexes/columnstore-indexes-overview.md)합니다.|  
 |**last_id**|**int**|사전의 마지막 데이터 ID입니다.|  
 |**entry_count**|**bigint**|사전에 있는 항목의 개수입니다.|  
 |**on_disc_size**|**bigint**|사전의 크기(바이트)입니다.|  

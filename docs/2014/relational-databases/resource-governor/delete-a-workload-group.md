@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - workload groups [SQL Server], delete
@@ -14,19 +13,19 @@ ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 28de150be95c10e8c1c1ef9f4c5280d185c5bc18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2daf8fe7e12cec5317335a0dcce273b16d428bcc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174333"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764025"
 ---
 # <a name="delete-a-workload-group"></a>작업 그룹 삭제
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 Transact-SQL을 사용하여 작업 그룹 또는 리소스 풀을 삭제할 수 있습니다.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **시작하기 전 주의 사항:**  [제한 사항 및 제한 사항](#LimitationsRestrictions), [권한](#Permissions)  
   
--   **작업 그룹을 삭제하려면:**  [개체 탐색기](#DelWGObjEx), [리소스 관리자 속성](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
+-   **작업을 삭제 하려면 그룹을 사용 하 여:**  [개체 탐색기](#DelWGObjEx)하십시오 [Resource Governor 속성](#DelWGRGProp), [TRANSACT-SQL](#DelWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  활성 세션이 들어 있는 작업 그룹은 삭제할 수 없습니다.  
@@ -68,9 +67,9 @@ ms.locfileid: "48174333"
 ##  <a name="DelWGTSQL"></a> Transact-SQL을 사용하여 작업 그룹 삭제  
  **Transact-SQL을 사용하여 작업 그룹을 삭제하려면**  
   
-1.  실행 된 `DROP WORKLOAD GROUP` 삭제할 작업 그룹의 이름을 지정 하는 문입니다.  
+1.  삭제할 작업 그룹의 이름을 지정하여 `DROP WORKLOAD GROUP` 문을 실행합니다.  
   
-2.  `ALTER RESOURCE GOVERNOR RECONFIGURE` 문을 실행하기 전에 삭제할 작업 그룹에 활성 요청이 없어야 합니다. 활성 요청이 없으면 `ALTER RESOURCE GOVERNOR` 실패 합니다. 이 문제를 방지하려면 다음 동작 중 하나를 수행하세요.  
+2.  `ALTER RESOURCE GOVERNOR RECONFIGURE` 문을 실행하기 전에 삭제할 작업 그룹에 활성 요청이 없어야 합니다. 활성 요청이 있으면 `ALTER RESOURCE GOVERNOR`가 실패합니다. 이 문제를 방지하려면 다음 동작 중 하나를 수행하세요.  
   
     -   작업 그룹에서 모든 세션의 연결이 끊어질 때까지 기다립니다.  
   

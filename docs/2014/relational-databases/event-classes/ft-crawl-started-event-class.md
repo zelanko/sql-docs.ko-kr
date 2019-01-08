@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 2535b856-97e8-4fb2-8ba0-5d5446355fa6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d5cbfb6d0ec7cf057d4bf3c7edbc6d1735dbc47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b249aff99abbe692e1515397c493109c54c86713
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203613"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772615"
 ---
 # <a name="ftcrawl-started-event-class"></a>FT:Crawl Started 이벤트 클래스
   **FT:Crawl Started** 이벤트 클래스는 전체 텍스트 탐색(채우기)을 시작했음을 나타냅니다. 이 이벤트 클래스를 사용하여 작업자 태스크에 의해 실제로 탐색 요청이 선택되는지 확인할 수 있습니다.  

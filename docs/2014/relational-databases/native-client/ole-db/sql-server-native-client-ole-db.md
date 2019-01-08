@@ -18,12 +18,12 @@ ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c49bbaa5e143f241997e6ff707d84b641c3118a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 924c8f9dca934c81eab74c102509a8d04f66997b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093273"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517466"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client(OLE DB)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 데이터 액세스에 사용되는 낮은 수준의 COM API입니다. 고성능이 필요한 도구, 유틸리티 및 하위 수준 구성 요소 개발에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용하는 것이 좋습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] TDS(Tabular Data Stream) 프로토콜에 직접적으로 액세스하는 고성능 네이티브 공급자입니다.  
@@ -42,9 +42,9 @@ ms.locfileid: "48093273"
   
 -   [행 집합](../../native-client-ole-db-rowsets/rowsets.md)  
   
--   [저장 프로시저](stored-procedures.md)  
+-   [저장된 프로시저](stored-procedures.md)  
   
--   [BLOB 및 OLE 개체](../../native-client-ole-db-blobs/blobs-and-ole-objects.md)  
+-   [Blob 및 OLE 개체](../../native-client-ole-db-blobs/blobs-and-ole-objects.md)  
   
 -   [테이블 및 인덱스](../../native-client-ole-db-tables-indexes/tables-and-indexes.md)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48093273"
   
 -   [FILESTREAM 지원 &#40;OLE DB&#41;](filestream-support-ole-db.md)  
   
--   [의](../../native-client-ole-db-transactions/transactions.md)  
+-   [트랜잭션](../../native-client-ole-db-transactions/transactions.md)  
   
 -   [오류](../../native-client-ole-db-errors/errors.md)  
   

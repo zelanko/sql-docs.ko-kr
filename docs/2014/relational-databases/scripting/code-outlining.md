@@ -14,18 +14,18 @@ ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1368cc570439259b7353f074ba1ecfe2744f006d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c109b96192112a914b06748654c5a7e1510569e0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060813"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541835"
 ---
 # <a name="code-outlining"></a>코드 개요
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 쿼리를 편집할 때 개요 기능을 사용하여 코드를 필요에 따라 숨길 수 있습니다. 이 기능을 사용하면 특히 큰 쿼리 파일에서 작업 중인 코드를 쉽게 볼 수 있습니다.  
   
 ## <a name="outlining-overview"></a>개요 기능 개요  
- 기본적으로 쿼리 편집기 창을 열 때 모든 코드가 표시되지만 필요에 따라 코드 영역을 축소하여 코드를 숨길 수 있습니다. 편집기 창 왼쪽 가장자리의 세로선에서 빼기 기호(-)가 있는 사각형은 축소 가능한 각 코드 영역의 시작 부분을 나타냅니다. 빼기 기호를 클릭하면 코드 영역의 텍스트는 3개의 마침표( )가 포함된 상자로 바뀌고 빼기 기호는 더하기 기호(+)로 변합니다. 더하기 기호를 클릭하면 축소된 코드가 나타나고 더하기 기호가 빼기 기호로 변합니다. 포인터를 3개의 마침표가 있는 상자 위로 이동하면 축소된 섹션의 코드를 보여 주는 도구 설명이 나타납니다.  
+ 기본적으로 쿼리 편집기 창을 열 때 모든 코드가 표시되지만 필요에 따라 코드 영역을 축소하여 코드를 숨길 수 있습니다. 편집기 창 왼쪽 가장자리의 세로선에서 빼기 기호(-)가 있는 사각형은 축소 가능한 각 코드 영역의 시작 부분을 나타냅니다. 빼기 기호를 클릭하면 코드 영역의 텍스트는 3개의 마침표(...)가 포함된 상자로 대체되고 빼기 기호는 더하기 기호(+)로 변합니다. 더하기 기호를 클릭하면 축소된 코드가 나타나고 더하기 기호가 빼기 기호로 변합니다. 포인터를 3개의 마침표가 있는 상자 위로 이동하면 축소된 섹션의 코드를 보여 주는 도구 설명이 나타납니다.  
   
 ## <a name="system-outline-regions"></a>시스템 개요 영역  
  각 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 편집기에서는 기본 시스템 정의 개요 영역 집합을 생성합니다.  

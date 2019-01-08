@@ -14,12 +14,12 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb23627ef869fdc4117297f43efd8ed8898820f9
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
-ms.translationtype: HT
+ms.openlocfilehash: 6c39c1c9651872a7e47070cfec400e77fa578a7f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031510"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512049"
 ---
 # <a name="run-a-matching-project"></a>일치 프로젝트 실행
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 데이터 일치를 수행하는 방법에 대해 설명합니다. 일치 프로세스에서는 일치 정책의 일치 규칙에 따라 일치 레코드 클러스터를 확인하고 Survivorship 규칙에 따라 각 클러스터에서 하나의 레코드를 존속 레코드로 지정한 후 결과를 내보냅니다. 일치 프로세스(중복 제거라고도 함)는 DQS의 컴퓨터 기반 프로세스에서 수행되지만, 대화형으로 일치 규칙을 만들고 여러 선택 항목에서 Survivorship 규칙을 선택하여 일치 프로세스를 제어할 수 있습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "51031510"
 ####  <a name="Permissions"></a> Permissions  
  일치 프로젝트를 실행하려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
-##  <a name="StartingaMatchingProject"></a> 1단계: 일치 프로젝트 시작  
+##  <a name="StartingaMatchingProject"></a> 첫 번째 단계: 일치 프로젝트 시작  
  DQS 클라이언트 애플리케이션에서 만든 데이터 품질 프로젝트에서 일치 작업을 수행합니다.  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
@@ -107,7 +107,7 @@ ms.locfileid: "51031510"
   
  Survivorship은 선택 사항입니다. Survivorship을 실행하지 않고 결과를 내보낼 수 있습니다. 이 경우 DQS에서는 일치 분석에서 지정된 피벗 레코드를 사용합니다. 클러스터에 있는 둘 이상 레코드가 Survivorship 규칙을 준수하는 경우에는 Survivorship 프로세스에서 충돌하는 레코드 중 레코드 ID가 가장 낮은 레코드를 존속 레코드로 선택합니다. 다른 Survivorship 규칙을 사용하여 존속 레코드를 다른 파일 또는 테이블로 내보낼 수 있습니다.  
   
-1.  **내보내기** 페이지의 **대상 유형**: **SQL Server**, **CSV 파일**또는 **Excel 파일**에서 일치 데이터를 내보낼 대상을 선택합니다.  
+1.  에 **내보낼** 페이지에서 일치 하는 데이터를 내보낼 대상을 선택 합니다 **대상 유형**: **SQL Server**하십시오 **CSV 파일**, 또는 **Excel 파일**합니다.  
   
     > [!IMPORTANT]  
     >  64비트 버전의 Excel을 사용 중인 경우 일치하는 데이터를 Excel 파일로 내보낼 수 없습니다. SQL Server 데이터베이스 또는 .csv 파일로만 내보낼 수 있습니다.  
@@ -123,7 +123,7 @@ ms.locfileid: "51031510"
   
     -   클러스터 및 각 클러스터의 일치하는 레코드 목록(규칙 이름 및 점수 포함). 피벗 레코드는 "피벗"으로 표시됩니다. 클러스터가 내보내기 목록에 맨 먼저 나타납니다.  
   
-    -   일치하지 않는 레코드(점수 및 규칙 이름 열에 "NULL"이 표시됨). 이러한 레코드는 내보내기 목록에서 클러스터 뒤에 추가됩니다.  
+    -   일치하지 않는 레코드 목록(점수 및 규칙 이름 열에 "NULL"이 표시됨). 이러한 레코드는 내보내기 목록에서 클러스터 뒤에 추가됩니다.  
   
      Survivorship 결과에 대한 내보내기 항목은 다음과 같습니다.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "51031510"
     > [!NOTE]  
     >  일치 프로젝트를 완료한 다음 다시 사용하면 해당 일치 프로젝트에서 당시에 게시된 기술 자료를 사용합니다. 즉, 프로젝트를 완료한 이후에 기술 자료에 적용한 변경 내용은 사용되지 않습니다. 이러한 변경 내용을 사용하거나 새 기술 자료를 사용하려면 새로운 일치 프로젝트를 만들어야 합니다. 반면, 일치 프로젝트를 만들고 완료하지 않은 경우 프로젝트에서 일치를 실행하면 일치 정책에 게시한 변경 내용이 사용됩니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 일치 프로젝트를 실행한 후  
+##  <a name="FollowUp"></a> 후속편: 일치 프로젝트를 실행한 후  
  일치 프로젝트를 실행한 후 기술 자료의 일치 정책을 변경하고 업데이트된 일치 정책에 따라 다른 일치 프로젝트를 만들어 실행할 수 있습니다. 자세한 내용은 [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md)을 참조하세요.  
   
 ##  <a name="Profiler"></a> 프로파일러 및 결과 탭  
@@ -191,9 +191,9 @@ ms.locfileid: "51031510"
   
 -   **도메인**: 필드에 매핑된 도메인의 이름  
   
--   **새 항목**: 새로 발견된 일치 레코드 수와 해당 백분율  
+-   **새**: 새로 발견된 일치 레코드 수와 해당 백분율  
   
--   **고유**: 필드의 고유 레코드 수와 해당 백분율  
+-   **고유한**: 필드의 고유 레코드 수와 해당 백분율  
   
 -   **완결성**: 규칙 실행의 완료율  
   

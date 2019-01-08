@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - custom procedures [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: ccf68a13-e748-4455-8168-90e6d2868098
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25ab3b779f8bd3f5b4b7b8255368c8100cbd6245
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a99a98fd0d471e8cb0f8ab880ae1a6c55e1b121
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124629"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815675"
 ---
 # <a name="regenerate-custom-transactional-procedures-to-reflect-schema-changes"></a>스키마 변경 내용을 반영하기 위해 사용자 지정 트랜잭션 프로시저 다시 생성
   기본적으로 트랜잭션 복제는 게시의 각 테이블 아티클에 대해 내부 프로시저로 생성된 저장 프로시저를 통해 구독자에서 모든 데이터 변경 내용을 적용합니다. 3개의 프로시저(삽입, 업데이트 및 삭제에 대해 각각 하나씩)가 구독자에 복사되고 삽입, 업데이트 또는 삭제가 구독자에 복제되면 실행됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 게시자의 테이블에서 스키마를 변경하면 복제는 새 프로시저가 새 스키마와 일치하도록 동일한 내부 스크립팅 프로시저 집합을 호출하여 이러한 프로시저를 자동으로 다시 생성합니다. Oracle 게시자의 경우 스키마 변경 내용의 복제는 지원되지 않습니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "48124629"
   
      다음에 관련 스키마를 변경하면 이 스크립트는 동일한 트랜잭션 내 각 구독자에서 DDL 명령으로 실행됩니다. 스키마를 변경한 다음에는 스크립트 등록이 취소됩니다. 후속 스키마 변경 이후에 스크립트를 실행하려면 해당 스크립트를 다시 등록해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](transactional-articles-specify-how-changes-are-propagated.md)   
  [게시 데이터베이스의 스키마 변경](../publish/make-schema-changes-on-publication-databases.md)  
   

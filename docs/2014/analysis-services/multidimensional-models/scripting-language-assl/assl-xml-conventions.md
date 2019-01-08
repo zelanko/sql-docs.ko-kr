@@ -26,19 +26,19 @@ ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ab537a266924c352466d3b6d2b8364c3498b2b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd0a84928e1d5b531119a0a37dbb60d2b9eb3db9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112813"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531420"
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 표기 규칙
   ASSL(Analysis Services Scripting Language)은 개체의 계층을 요소 유형의 집합으로 나타내며, 각 요소 유형은 포함할 수 있는 자식 요소를 정의합니다.  
   
  개체 계층을 나타내기 위해 ASSL에서는 다음과 같은 XML 표기 규칙을 사용합니다.  
   
--   ‘xml:lang’과 같은 표준 XML 특성을 제외한 개체와 속성은 모두 요소로 표현됩니다.  
+-   모든 개체 및 속성 요소를 제외 하 고 'xml: lang'와 같은 표준 XML 특성으로 표시 됩니다.  
   
 -   요소 이름과 열거형 값을 모두 파스칼식 Microsoft.NET Framework 명명 규칙을 따르는 없습니다 밑줄을 사용 합니다.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48112813"
   
  `<Database>`  
   
- `…`  
+ `...`  
   
  `<Dimensions>`  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48112813"
   
  `<Cubes>`  
   
- `<Cube xsi:type=”RegularCube”>`  
+ `<Cube xsi:type="RegularCube">`  
   
  `<Name>Sales</Name>`  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48112813"
   
  `</Cube>`  
   
- `<Cube xsi:type=”VirtualCube”>`  
+ `<Cube xsi:type="VirtualCube">`  
   
  `<Name>SalesAndInventory</Name>`  
   
@@ -123,10 +123,10 @@ ms.locfileid: "48112813"
  Analysis Services는 다음과 같은 표준 XSD(XML 스키마 정의 언어) 데이터 형식을 사용합니다.  
   
  `Int`  
- -231에서 231-1 사이의 정수 값입니다.  
+ -231 231-1 범위의 정수 값입니다.  
   
  `Long`  
- -263에서 263-1 사이의 정수 값입니다.  
+ 263-1 사이의 263-범위의 정수 값입니다.  
   
  `String`  
  다음과 같은 전역 규칙을 따르는 문자열 값입니다.  
@@ -152,7 +152,7 @@ ms.locfileid: "48112813"
 |-------------------|-------------------|  
 |`Boolean`|False|  
 |`String`|""(빈 문자열)|  
-|`Integer` 또는 `Long`|0(영)|  
+|`Integer` 또는 `Long`|0 (영)|  
 |`Timestamp`|12시: 00 AM, 1/1/0001 (해당 하는.NET Frameworks `System.DateTime` 틱 수가 0 인)|  
   
  존재하기는 하지만 비어 있는 요소는 기본값이 아닌 Null 문자열 값을 갖는 것으로 해석됩니다.  

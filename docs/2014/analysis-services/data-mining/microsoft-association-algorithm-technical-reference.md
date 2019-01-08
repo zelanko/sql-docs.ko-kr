@@ -21,12 +21,12 @@ ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4d709a575ddde6fe9d3f31e7d8a50b8f6dec83a5
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 4389ab6f8cd2df0f744eca5b4552a4bb18723627
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146018"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524397"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft 연결 알고리즘 기술 참조
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘은 잘 알려진 Apriori 알고리즘을 간단하게 구현한 것입니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "50146018"
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 데이터 마이닝 디자이너를 사용하여 언제든지 마이닝 모델의 매개 변수를 변경할 수 있습니다. 사용 하 여 매개 변수를 프로그래밍 방식으로 변경할 수도 있습니다는 <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> 또는 AMO를 사용 하 여 컬렉션을 [MiningModels 요소 &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) XMLA의 합니다. 다음 표에서는 각 매개 변수에 대해 설명합니다.  
   
 > [!NOTE]  
->  DMX 문을 사용하여 기존 모델의 매개 변수를 변경할 수 없습니다. 따라서 모델을 만들 때 DMX CREATE MODEL 또는 ALTER STRUCTURE… ADD MODEL에 매개 변수를 지정해야 합니다.  
+>  DMX 문에;를 사용 하 여 기존 모델의 매개 변수를 변경할 수 없습니다. DMX CREATE MODEL 또는 ALTER STRUCTURE 매개 변수를 지정 해야 하는 중... ADD MODEL에 매개 변수를 지정해야 합니다.  
   
  *MAXIMUM_ITEMSET_COUNT*  
  생성할 최대 항목 집합 수를 지정합니다. 값을 지정하지 않으면 기본값이 사용됩니다.  
@@ -162,9 +162,9 @@ ms.locfileid: "50146018"
 > [!NOTE]  
 >  Cyclical  및 Ordered  내용 유형이 지원되기는 하지만 알고리즘은 해당 유형을 불연속 값으로 처리하고 특수한 처리를 수행하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Microsoft 연결 알고리즘](microsoft-association-algorithm.md)   
  [연결 모델 쿼리 예제](association-model-query-examples.md)   
- [연결 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [연결 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

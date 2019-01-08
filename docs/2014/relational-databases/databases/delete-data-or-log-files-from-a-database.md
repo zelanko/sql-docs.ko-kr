@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], files
@@ -19,12 +18,12 @@ ms.assetid: 0db4018c-ce2c-4ba1-bb29-1e4f3791c925
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a602568d9a54843cc109e5b8b77a54420f9d96f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e0f2de1f7003e61dbdc8e82f7a9b549fd42c77fc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207903"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783442"
 ---
 # <a name="delete-data-or-log-files-from-a-database"></a>데이터베이스에서 데이터 또는 로그 파일 삭제
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 데이터 또는 로그 파일을 삭제하는 방법에 대해 설명합니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "48207903"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
   
 -   빈 파일만 삭제할 수 있습니다. 자세한 내용은 [파일 축소](shrink-a-file.md)를 참조하세요.  
   
@@ -69,7 +68,7 @@ ms.locfileid: "48207903"
   
  더 많은 예제를 보려면 [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터베이스 축소](shrink-a-database.md)   
  [데이터베이스에 데이터 또는 로그 파일 추가](add-data-or-log-files-to-a-database.md)  
   

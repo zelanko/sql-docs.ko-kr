@@ -20,19 +20,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52bf96d8f53f875aacb0488d519157f6553f558a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 44df86f4862ba6e9892e611dabe143e251d9d3cc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677262"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532998"
 ---
 # <a name="schemata-transact-sql"></a>SCHEMATA(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  현재 데이터베이스 내의 각 스키마당 한 개의 행을 반환합니다. 이러한 뷰에서 정보를 검색할의 정규화 된 이름을 지정 **INFORMATION_SCHEMA. * * * view_name*합니다. 인스턴스의 모든 데이터베이스에 대 한 정보를 검색할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 쿼리 합니다 [sys.databases &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰.  
+  현재 데이터베이스 내의 각 스키마당 한 개의 행을 반환합니다. 이러한 뷰에서 정보를 검색할의 정규화 된 이름을 지정 **INFORMATION_SCHEMA.** _view_name_합니다. 인스턴스의 모든 데이터베이스에 대 한 정보를 검색할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 쿼리 합니다 [sys.databases &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**CATALOG_NAME**|**sysname**|현재 데이터베이스의 이름입니다.|  
 |**SCHEMA_NAME**|**nvarchar(** 128 **)**|스키마 이름을 반환합니다.|  

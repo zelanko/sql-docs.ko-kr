@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 ms.assetid: 2f986436-aaf2-4eaf-9809-df849d97d4fb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de831b5eadcfcd8d44c46189e5d2b0735e5ab3e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 9432d9ae69ff9802d41e376c06d86ebbd2d594b0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229593"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777465"
 ---
 # <a name="backward-compatibility-in-smo"></a>SMO의 이전 버전과의 호환성
   이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 작성된 SMO 응용 프로그램은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 SMO를 사용하여 다시 컴파일할 수 있습니다.  

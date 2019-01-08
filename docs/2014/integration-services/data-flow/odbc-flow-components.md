@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 559864d5d3931a1ef57c51089ce671bcb53215d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5466587560477d331e475cf8d32488757975b730
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187513"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764305"
 ---
 # <a name="odbc-flow-components"></a>ODBC 흐름 구성 요소
   이 항목에서는 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7cd44eb2e5d5449283d1e222b854d065a72e15ca
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 192f55c8194bfb9b85b3e0bfad51d8261e45ab0a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014880"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540657"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>모델에 예측 함수 적용
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -120,9 +120,9 @@ ms.locfileid: "34014880"
     |----------------|--------------|-------------|-------------|  
     |0|클러스터 8|954|953.948638926372|  
   
- 문의 임의 위치에 다른 절을 추가하려는 경우(예: WHERE 절을 추가하려는 경우) 표를 사용하여 작업을 수행할 수 없으며 먼저 DMX 뷰로 전환해야 합니다.  
+ 문에 절을 다른 곳에서 추가 하려는 경우-예를 들어, WHERE 절을 추가 하려는 경우-; 표를 사용 하 여 추가할 수 없습니다 먼저 DMX 뷰로 전환 해야 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

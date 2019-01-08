@@ -20,16 +20,16 @@ ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12fe4ceda2a6ee219763b2d07b23e73508e84363
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0a075b96e7a29cef4a10f034147732bf03f64b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778371"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538882"
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 3.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 3.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLAllocHandle** 환경, 연결, 문 또는 설명자 핸들을 할당 합니다.  
@@ -79,7 +79,7 @@ SQLRETURN SQLAllocHandle(
   
  드라이버 관리자에 대 한 메모리를 할당할 수 없습니다 하는 경우  *\*OutputHandlePtr* 면 **SQLAllocHandle** 사용 하 여를 *HandleType* SQL_HANDLE_ENV의 호출 또는 응용 프로그램에 대해 null 포인터를 제공 *OutputHandlePtr*하십시오 **SQLAllocHandle** SQL_ERROR를 반환 합니다. 드라이버 관리자를 설정 하는 **OutputHandlePtr* SQL_NULL_HENV를 (하지 않는 한 SQL_ERROR를 반환 하는 null 포인터를 제공 하는 응용 프로그램). 추가적인 진단 정보를 연결 하는 핸들이 있습니다.  
   
- 드라이버 관리자 응용 프로그램이 호출 될 때까지 드라이버 수준 환경 핸들 할당 함수를 호출 하지 않습니다 **SQLConnect**하십시오 **SQLBrowseConnect**, 또는 **SQLDriverConnect**. 드라이버 수준에서 오류가 발생 하는 경우 **SQLAllocHandle** 함수에 다음 드라이버 관리자 – 수준 **SQLConnect**하십시오 **SQLBrowseConnect**, 또는  **SQLDriverConnect** SQL_ERROR를 반환 합니다. 진단 데이터 구조에는 SQLSTATE IM004 포함 (운전 **SQLAllocHandle** 실패). 연결 핸들에서 오류가 반환 됩니다.  
+ 드라이버 관리자 응용 프로그램이 호출 될 때까지 드라이버 수준 환경 핸들 할당 함수를 호출 하지 않습니다 **SQLConnect**하십시오 **SQLBrowseConnect**, 또는 **SQLDriverConnect**. 드라이버 수준에서 오류가 발생 하는 경우 **SQLAllocHandle** 함수를 다음 드라이버 관리자 수준 **SQLConnect**하십시오 **SQLBrowseConnect**, 또는  **SQLDriverConnect** SQL_ERROR를 반환 합니다. 진단 데이터 구조에는 SQLSTATE IM004 포함 (운전 **SQLAllocHandle** 실패). 연결 핸들에서 오류가 반환 됩니다.  
   
  드라이버 관리자와 드라이버 간의 함수 호출의 흐름에 대 한 자세한 내용은 참조 하세요. [SQLConnect 함수](../../../odbc/reference/syntax/sqlconnect-function.md)합니다.  
   
@@ -96,7 +96,7 @@ SQLRETURN SQLAllocHandle(
 |HY010|함수 시퀀스 오류입니다.|(DM)는 *HandleType* 인수가 SQL_HANDLE_DBC, 및 **SQLSetEnvAttr** SQL_ODBC_VERSION 환경 특성을 설정 하는 호출 되지 않았습니다.<br /><br /> (DM)를 비동기적으로 실행 중인 함수에 대해 호출 된 합니다 **InputHandle** 때 계속 실행 하 고는 **SQLAllocHandle** 함수를 사용 하 여 호출한 **HandleType** 설정 호출 하거나 SQL_HANDLE_DESC 합니다.|  
 |HY013|메모리 관리 오류|합니다 *HandleType* 인수가 SQL_HANDLE_DBC, 호출 하 여, 또는 SQL_HANDLE_DESC; 및 기본 메모리 개체에 액세스할 수 없습니다, 가능한 경우 메모리 부족으로 인해 했으므로 함수 호출을 처리할 수 없습니다 조건입니다.|  
 |HY014|초과 하는 핸들의 수를 제한|핸들 형식의 할당 될 수 있는 핸들의 수에 대 한 드라이버에서 정의 된 제한에 나타난 합니다 *HandleType* 인수에 도달 했습니다.|  
-|HY092|잘못 된 특성/옵션 식별자입니다.|(DM)는 *HandleType* 인수가 없습니다: SQL_HANDLE_ENV, SQL_HANDLE_DBC, 호출 하 여, 또는 SQL_HANDLE_DESC 합니다.|  
+|HY092|잘못 된 특성/옵션 식별자입니다.|(DM)는 *HandleType* 인수가 없습니다. SQL_HANDLE_ENV, SQL_HANDLE_DBC, 호출 하 여, 또는 SQL_HANDLE_DESC 합니다.|  
 |HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용으로 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 하세요. [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.|  
 |HYC00|선택적 기능이 구현 되지 않았습니다|합니다 *HandleType* 인수가 SQL_HANDLE_DESC 했는데 드라이버는 ODBC 2. *x* 드라이버입니다.|  
 |HYT01|연결 제한 시간 만료 됨|데이터 원본 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
@@ -189,6 +189,6 @@ SQLRETURN SQLAllocHandle(
 |환경 특성 설정|[SQLSetEnvAttr 함수](../../../odbc/reference/syntax/sqlsetenvattr-function.md)|  
 |문 특성 설정|[SQLSetStmtAttr 함수](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

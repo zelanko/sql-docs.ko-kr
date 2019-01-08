@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c63c004b3a7ac631a4914c681f7613b0bb010dd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffdedf95865e2653ea434c30eb5c07f19ba8286f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728191"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409166"
 ---
 # <a name="sysdmexecdescribefirstresultsetforobject-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -111,7 +111,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |5|CLR_PROCEDURE|CLR 저장 프로시저가 첫 번째 결과를 반환할 수 있으므로 결과를 확인할 수 없습니다.|  
 |6|CLR_TRIGGER|CLR 트리거가 첫 번째 결과를 반환할 수 있으므로 결과를 확인할 수 없습니다.|  
 |7|EXTENDED_PROCEDURE|확장 저장 프로시저가 첫 번째 결과를 반환할 수 있으므로 결과를 확인할 수 없습니다.|  
-|8|UNDECLARED_PARAMETER|결과 집합의 열 중 하나 이상의 데이터 형식이 선언되지 않은 매개 변수에 의해 결정될 수 있으므로 결과를 확인할 수 없습니다.|  
+|8|UNDECLARED_PARAMETER|잠재적으로 선언 되지 않은 매개 변수를 하나 이상의 결과 집합의 열 데이터 형식에 따라 다르기 때문에 결과 확인할 수 없습니다.|  
 |9|RECURSION|일괄 처리에 재귀 문이 포함되어 있어 결과를 확인할 수 없습니다.|  
 |10|TEMPORARY_TABLE|일괄 처리에 임시 테이블이 포함 및에서 지원 되지 않습니다 때문에 결과 확인할 수 없습니다 **sp_describe_first_result_set** 합니다.|  
 |11|UNSUPPORTED_STATEMENT|일괄 처리에서 지원 되지 않는 문이 포함 되어 있으므로 결과 확인할 수 없습니다 **sp_describe_first_result_set** (예를 들어, FETCH, REVERT 등.).|  

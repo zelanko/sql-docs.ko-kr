@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 06fe5f07-a0dd-4968-b123-56b124a86020
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb325d4121670940b22292a7c4ee3d73cc3edcc7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 975da6bc447ed3a29f39dd9a8e877a5b556098c6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143283"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774525"
 ---
 # <a name="user-configurable-event-class"></a>User-Configurable 이벤트 클래스
   User-Configurable 이벤트 범주를 사용하여 사용자 정의 이벤트를 모니터링할 수 있습니다. 다른 이벤트 범주의 시스템 제공 이벤트 클래스에서 모니터링할 수 없는 이벤트를 모니터링하도록 사용자 정의 이벤트 클래스를 만듭니다. 예를 들어 테스트 중인 애플리케이션의 진행률을 모니터링하도록 사용자 정의 이벤트를 만들 수 있습니다. 애플리케이션이 실행될 때 미리 정의한 지점에서 이벤트를 생성하여 애플리케이션의 현재 실행 지점을 판단하도록 할 수 있습니다.  

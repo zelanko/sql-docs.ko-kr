@@ -13,15 +13,15 @@ ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2bfa1c59fb47a859bb680970617a81add871908e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05c8785427b905138e513ab7134d56def7cdcf4d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061753"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353069"
 ---
-# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>태스크 4(선택 사항): 새 데이터 집합 결합, 일치 및 게시
-  시간이 지날수록 MDS 저장소에 추가하는 데이터가 늘어나게 됩니다. 데이터를 추가하기 전에 새 데이터와 MDS에서 관리되는 기존 데이터를 비교하면 중복되거나 정확하지 않은 데이터가 추가되는 것을 방지할 수 있습니다. Excel용 Master Data Services 추가 기능에서는 데이터를 MDS에 게시하기 전에 두 워크시트의 데이터를 결합하고 데이터를 비교해서 중복된 항목을 식별하고 제거할 수 있습니다. MDS Excel 추가 기능의 일치 기능에는 데이터에서 일치 항목을 식별하기 위해 DQS 일치 기능이 사용됩니다. 이 작업에서는 MDS에 데이터를 게시하기 전에 두 워크시트의 데이터를 하나로 결합한 후 일치 작업을 수행해서 중복된 항목을 식별하고 제거합니다. 참조 [MDS 추가 기능에서 Excel 용 데이터 품질 일치](http://msdn.microsoft.com/library/hh548681.aspx) 하 고 [데이터 결합](http://msdn.microsoft.com/library/hh548680.aspx) 자세한 세부 정보에 대 한 항목입니다.  
+# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>작업 4 (선택 사항): 새 데이터 집합 결합, 일치 및 게시
+  시간이 지날수록 MDS 저장소에 추가하는 데이터가 늘어나게 됩니다. 데이터를 추가 하기 전에 새 데이터 중복 되거나 정확 하지 않은 데이터를 추가 하지 않는 되도록 MDS에서 이미 관리 되는 데이터를 비교할 때 유용 수 있습니다. Excel용 Master Data Services 추가 기능에서는 데이터를 MDS에 게시하기 전에 두 워크시트의 데이터를 결합하고 데이터를 비교해서 중복된 항목을 식별하고 제거할 수 있습니다. MDS Excel 추가 기능의 일치 기능에는 데이터에서 일치 항목을 식별하기 위해 DQS 일치 기능이 사용됩니다. 이 작업에서는 MDS에 데이터를 게시하기 전에 두 워크시트의 데이터를 하나로 결합한 후 일치 작업을 수행해서 중복된 항목을 식별하고 제거합니다. 참조 [MDS 추가 기능에서 Excel 용 데이터 품질 일치](https://msdn.microsoft.com/library/hh548681.aspx) 하 고 [데이터 결합](https://msdn.microsoft.com/library/hh548680.aspx) 자세한 세부 정보에 대 한 항목입니다.  
   
 1.  새 인스턴스를 시작할 **Excel**합니다. 클릭 **시작**, 가리킨 **실행**, 형식 **Excel**를 클릭 하 고 **확인**합니다.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "48061753"
   
 4.  표시 되어야 합니다 **마스터 데이터 탐색기** 오른쪽에 있는 창입니다. 마스터 데이터 탐색기에 표시 되지 않으면, 클릭 **탐색기 표시** 리본의 단추입니다.  
   
-5.  에 **마스터 데이터 탐색기** 창에서 **Suppliers** 드롭 다운 목록에서를 **모델**합니다. 모델 엔터티 하나에 표시 됩니다. **Supplier**합니다.  
+5.  에 **마스터 데이터 탐색기** 창에서 **Suppliers** 드롭 다운 목록에서를 **모델**합니다. 모델에는 엔터티가 **공급 업체**합니다.  
   
      ![Excel-마스터 데이터 탐색기 창](../../2014/tutorials/media/et-combinematchandpublishnewsod-02.jpg "Excel-마스터 데이터 탐색기 창")  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48061753"
   
 8.  오픈 **Suppliers.xls** (원래 입력된 파일 자습서 파일에 포함 된) 파일과의 (3) 모든 행을 복사 합니다 **CombineAndCleanse** 워크시트 **Sheet2**합니다.  
   
-9. 으로 전환 합니다 **공급 업체** 에서 시트를 **Book 1 – Microsoft Excel** (하지는 **Cleansed and Matched Supplier List** Excel)에 연결 된 **MDS**.  
+9. 으로 전환 합니다 **공급 업체** 에서 시트를 **Book 1-Microsoft Excel** (하지를 **Cleansed and Matched Supplier List** Excel)에 연결 된 **MDS**.  
   
 10. 메뉴 모음에서 **마스터 데이터** 를 클릭합니다.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48061753"
   
 25. **확인**을 클릭합니다.  
   
-26. 일치 하는 과정을 가진 공급 업체에 대 한 중복 항목이 하나 식별 해야 **코드: S1**합니다.  
+26. 일치 프로세스에 따라 **Code: S1**합니다.  
   
      ![Excel-일치 결과](../../2014/tutorials/media/et-combinematchandpublishnewsod-08.jpg "Excel-일치 결과")  
   
@@ -111,9 +111,9 @@ ms.locfileid: "48061753"
   
 33. **정렬** 별로 목록을 **코드** 사용 하 여 레코드를 찾아서 **S57** 하 고 **S66** 코드로 합니다. 사용할 수도 있습니다는 **필터** 모음의 목록에서 특정 레코드를 검색 합니다.  
   
-34. 이제 닫습니다 **Book1 – Microsoft Excel** 파일을 저장 하지 않고 창입니다.  
+34. 이제 닫습니다 **Book1-Microsoft Excel** 파일을 저장 하지 않고 창입니다.  
   
 ## <a name="next-step"></a>다음 단계  
- [태스크 5: Excel에서 도메인 기반 특성 만들기](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
+ [작업 5: Excel에서 도메인 기반 특성 만들기](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
   
   

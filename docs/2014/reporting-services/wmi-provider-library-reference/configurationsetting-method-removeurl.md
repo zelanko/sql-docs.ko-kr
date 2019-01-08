@@ -13,12 +13,12 @@ ms.assetid: 3d98bd97-e152-48ce-ab1c-bd2c4f8b7fe9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e6736f0d05de76abbd230892c1b6ab8c23fc625e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: c9ab7dc3ea75201bd011b85f80169d50e2ba0d37
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053035"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518888"
 ---
 # <a name="removeurl-method-wmi-msreportserverconfigurationsetting"></a>RemoveURL 메서드(WMI MSReportServer_ConfigurationSetting)
   보고서 서버용으로 예약된 URL을 제거합니다. 제거할 URL이 여러 개인 경우 이 API를 호출하여 하나씩 수행해야 합니다.  
@@ -58,7 +58,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
 ## <a name="remarks"></a>Remarks  
  *UrlString*에는 가상 디렉터리 이름이 포함되지 않습니다. 해당 용도로 [SetVirtualDirectory 메서드&#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setvirtualdirectory.md) 메서드가 제공됩니다.  
   
- 호출 하기 전에 [ReserveURL](configurationsetting-method-reserveurl.md) 메서드를 VirtualDirectory 구성 속성에 대 한 값을 제공 해야 합니다 *응용 프로그램* 매개 변수입니다. [SetVirtualDirectory 메서드&#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setvirtualdirectory.md) 메서드를 사용하여 VirtualDirectory 속성을 설정할 수 있습니다.  
+ [ReserveURL](configurationsetting-method-reserveurl.md) 메서드를 호출하기 전에 *Application* 매개 변수의 VirtualDirectory 구성 속성에 값을 제공해야 합니다. [SetVirtualDirectory 메서드&#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setvirtualdirectory.md) 메서드를 사용하여 VirtualDirectory 속성을 설정할 수 있습니다.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 제공한 SSL 인증서가 다른 URL에서 더 이상 사용되지 않을 경우 해당 인증서는 제거됩니다.  
   

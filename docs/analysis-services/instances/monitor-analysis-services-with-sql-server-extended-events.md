@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 616cc1e633d6683283d62d6fb3b3434780d9a919
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: dc51c444483dc9a89cf0b9edbd557c3dce11a054
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147248"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544406"
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>SQL Server 확장 이벤트를 사용하여 Analysis Services 모니터링
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "50147248"
   
 -   **ProgressReportBegin** 및 **ProgressReportEnd** (처리 작업)  
   
--   **AuditLogin** 및 **AuditLogout** (클라이언트 응용 프로그램이 Analysis Services에 연결되는 사용자 ID 캡처).  
+-   **AuditLogin** 및 **AuditLogout** (클라이언트 애플리케이션이 Analysis Services에 연결되는 사용자 ID 캡처).  
   
  **데이터 저장소 선택**  
   
@@ -75,18 +75,18 @@ ms.locfileid: "50147248"
  확장 이벤트 추적은 다음과 같은 XMLA 개체 만들기 스크립트 명령을 사용하여 설정할 수 있습니다.  
   
 ```  
-<Execute …>  
+<Execute ...>  
    <Command>  
-      <Batch …>  
-         <Create …>  
+      <Batch ...>  
+         <Create ...>  
             <ObjectDefinition>  
                <Trace>  
                   <ID>trace_id</ID>  
                   <Name>trace_name</Name>  
                   <ddl300_300:XEvent>  
-                     <event_session …>  
+                     <event_session ...>  
                         <event package="AS" name="AS_event">  
-                           <action package="PACKAGE0" …/>  
+                           <action package="PACKAGE0" .../>  
                         </event>  
                         <target package="PACKAGE0" name="asynchronous_file_target">  
                            <parameter name="filename" value="data_filename.xel"/>  
@@ -128,8 +128,8 @@ ms.locfileid: "50147248"
 ```  
 <Execute xmlns="urn:schemas-microsoft-com:xml-analysis">  
    <Command>  
-      <Batch …>  
-         <Delete …>  
+      <Batch ...>  
+         <Delete ...>  
             <Object>  
                <TraceID>trace_id</TraceID>  
             </Object>  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: t-sql
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.synonym.general.f1
@@ -15,12 +15,12 @@ ms.assetid: fedfa7a5-d0b6-4e2b-90f4-a08122958e33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0df7ddb36f75c018b626e99bf8253fba02734594
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e2a45cf4f34b73996b6ecbd4f9cbb5f5a902e760
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164733"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773305"
 ---
 # <a name="create-synonyms"></a>동의어 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 동의어를 만드는 방법에 대해 설명합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "48164733"
   
 1.  **개체 탐색기**에서 새 뷰를 만들 데이터베이스를 확장합니다.  
   
-2.  **동의어** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 동의어...** 를 클릭합니다.  
+2.  **동의어** 폴더를 마우스 오른쪽 단추로 클릭한 다음, **새 동의어...** 를 클릭합니다.  
   
 3.  **새 동의어 추가** 대화 상자에 다음 정보를 입력합니다.  
   

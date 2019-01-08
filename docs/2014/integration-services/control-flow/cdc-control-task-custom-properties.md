@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70ad2bc83f1a77bc9649e3747c309ad6522b2007
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 327e02721efaeb480d2b816de6af8135e1d1a80f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196363"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771105"
 ---
 # <a name="cdc-control-task-custom-properties"></a>CDC 제어 태스크 사용자 지정 속성
   다음 표에서는 CDC 제어 태스크의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "48196363"
 |CommandTimeout|integer|이 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 통신할 때 사용할 제한 시간(초)을 나타냅니다. 이 값은 데이터베이스로부터의 응답이 매우 느리고 기본값(30초)이 충분하지 않은 경우 사용됩니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [CDC 제어 태스크](cdc-control-task.md)   
- [CDC 제어 태스크 편집기](../cdc-control-task-editor.md)  
+ [CDC Control Task](cdc-control-task.md)   
+ [CDC Control Task Editor](../cdc-control-task-editor.md)  
   
   

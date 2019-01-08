@@ -16,12 +16,12 @@ ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d161786019750aae9740ce42ab0a15464b0dfc2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b61f5e3e44f9584fc3f93efb521585e3173b6c1d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160873"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532051"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort(OLE DB)
   비동기적으로 실행 중인 작업을 취소합니다.  
@@ -42,7 +42,7 @@ HRESULT Abort(
  *eOperation*[in]  
  중단할 작업입니다. 값은 다음과 같아야 합니다.  
   
- DBASYNCHOP_OPEN - 취소 요청이 행 집합의 비동기 열기 또는 채우기나 데이터 원본 개체의 비동기 초기화에 적용됩니다.  
+ DBASYNCHOP_OPEN-요청을 취소 하는 비동기 열기 또는 행 집합의 채우기 또는 데이터 원본 개체의 비동기 초기화에 적용 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  S_OK  

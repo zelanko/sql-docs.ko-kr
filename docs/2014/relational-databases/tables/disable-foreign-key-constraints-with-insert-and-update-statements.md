@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - constraints [SQL Server], foreign keys
@@ -17,12 +16,12 @@ ms.assetid: 029168d7-085e-4b13-9b86-5644b67c6e24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b473b24cf9b02b7325708251915d4a6476dc767a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 548e894f64aba590475472d843337d8de1fe5e0e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215563"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782075"
 ---
 # <a name="disable-foreign-key-constraints-with-insert-and-update-statements"></a>NSERT 및 UPDATE 문에서 FOREIGN KEY 제약 조건 사용 안 함
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 INSERT 및 UPDATE 트랜잭션 중 FOREIGN KEY 제약 조건을 해제할 수 있습니다. 새 데이터가 기존 제약 조건을 위반할지를 알고 있는 경우 또는 제약 조건이 데이터베이스에 이미 있는 데이터에만 적용될 경우 이 옵션을 사용합니다.  

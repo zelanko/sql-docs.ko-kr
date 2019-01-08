@@ -10,12 +10,12 @@ ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a4feb316cf43524fa84734d85bf62631833e26d0
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: fd68f6f8bcb83bfbc980be0809e12141403e4012
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120070"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522529"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>Microsoft Azure에 대한 SQL Server 관리되는 백업 문제 해결
   이 항목에서는 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 작업 중 발생할 수 있는 오류를 해결하는 데 사용할 수 있는 태스크 및 도구에 대해 설명합니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "49120070"
 ## <a name="overview"></a>개요  
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]에는 검사 및 문제 해결 단계가 내장되어 있어 많은 내부 오류가 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 프로세스에 의해 자체 해결됩니다.  
   
- 예를 들어 백업 파일 삭제로 로그 체인이 끊어져서 복구 기능에 영향을 미치는 경우 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 로그 체인이 끊어진 것을 확인하고 백업이 즉시 실행되도록 예약합니다. 그러나 상태를 모니터링하여 수동 작업이 필요한 오류를 해결하는 것이 좋습니다.  
+ 이러한 사례의 예로 로그의 바꿈이 발생 하는 백업 파일의 삭제 체인에 영향을 주는 복구- [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 로그 체인에서 중단을 식별 하 여 즉시 실행 되도록 백업을 예약 합니다. 그러나 상태를 모니터링하여 수동 작업이 필요한 오류를 해결하는 것이 좋습니다.  
   
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 시스템 저장 프로시저, 시스템 뷰 및 확장 이벤트를 사용하여 이벤트 및 오류를 기록합니다. 시스템 뷰 및 저장 프로시저는 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 구성 정보, 예약된 백업의 백업 상태 및 확장 이벤트에서 검색한 오류를 제공합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 확장 이벤트를 사용하여 문제 해결에 사용할 오류를 검색합니다. 이벤트 기록 외에도 SQL Server 스마트 관리 정책은 오류 및 문제 또는 알림을 제공하는 전자 메일 알림 작업에 사용되는 상태를 제공합니다. 자세한 내용은 참조 [모니터 SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)합니다.  
   
@@ -42,29 +42,29 @@ ms.locfileid: "49120070"
 ### <a name="common-causes-of-errors"></a>오류의 일반적인 원인  
  다음은 오류를 일으키는 일반적인 원인 목록입니다.  
   
-1.  **SQL 자격 증명 변경:** 자격 증명의 이름을 사용 하는 경우 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 변경 또는 삭제 되 면 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 백업을 수행할 수 없습니다. 이 변경은 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 구성 설정에 적용되어야 합니다.  
+1.  **SQL 자격 증명 변경:** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]에서 사용되는 자격 증명 이름이 변경되거나 삭제되면 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]이 백업을 수행할 수 없습니다. 이 변경은 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 구성 설정에 적용되어야 합니다.  
   
-2.  **저장소 액세스 키 값 변경:** Windows Azure 계정에 대 한 저장소 키 값이 변경 되었지만 SQL 자격 증명을 새 값으로 업데이트 되지 않습니다 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 저장소에 인증할 때 실패 하 고 백업에 실패 이 계정을 사용 하도록 구성 된 데이터베이스입니다.  
+2.  **저장소 액세스 키 값 변경:** Windows Azure 계정에 대해 저장소 키 값이 변경되었지만 SQL 자격 증명이 새 값으로 업데이트되지 않은 경우 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 저장소에 인증할 때 실패하고 이 계정을 사용하도록 구성된 데이터베이스를 백업하지 못합니다.  
   
-3.  **Windows Azure 저장소 계정으로 변경:** 없이 해당 SQL 자격 증명을 변경 하면 저장소 계정 이름 바꾸기 또는 삭제 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 실패 및 백업이 수행 됩니다. 저장소 계정을 삭제한 경우에는 데이터베이스가 올바른 저장소 계정 정보로 다시 구성되었는지 확인하십시오. 저장소 계정의 이름이 변경되거나 키 값이 변경되면 이러한 변경 사항이 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]에서 사용하는 SQL 자격 증명에도 반영되도록 해야 합니다.  
+3.  **Windows Azure 저장소 계정에 변경 내용:** 해당 SQL 자격 증명을 변경하지 않고 저장소 계정을 삭제하거나 이름을 바꾸면 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]이 실패하고 백업이 수행되지 않습니다. 저장소 계정을 삭제한 경우에는 데이터베이스가 올바른 저장소 계정 정보로 다시 구성되었는지 확인하십시오. 저장소 계정의 이름이 변경되거나 키 값이 변경되면 이러한 변경 사항이 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]에서 사용하는 SQL 자격 증명에도 반영되도록 해야 합니다.  
   
-4.  **데이터베이스 속성 변경:** 복구 모델을 변경 하거나 이름을 변경 하면 백업에 문제가 발생 합니다.  
+4.  **데이터베이스 속성 변경:** 복구 모델을 변경하거나 이름을 변경하면 백업이 실패할 수 있습니다.  
   
-5.  **복구 모델 변경:** 데이터베이스의 복구 모델을 전체 또는 대량 로그에서 단순으로 변경 됩니다 백업이 중지 되 고 하 여 데이터베이스를 건너뜁니다 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]합니다. 자세한 내용은 참조 하세요. [SQL Server Managed Backup to Windows Azure: 상호 운용성 및 공존 성](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
+5.  **복구 모델 변경:** 데이터베이스의 복구 모델이 전체 또는 대량 로그에서 단순 모델로 변경되면 백업이 중지되고 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]에서 데이터베이스를 건너뜁니다. 자세한 내용은 참조 하세요. [SQL Server Managed Backup to Windows Azure: 상호 운용성 및 공존 성](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
   
 ### <a name="most-common-error-messages-and-solutions"></a>가장 일반적인 오류 메시지 및 해결 방법  
   
 1.  **오류 설정 또는 구성 시 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]:**  
   
-     오류: "... 저장소 URL에 액세스 실패 올바른 SQL 자격 증명을 제공... " :이 고 SQL 자격 증명을 참조 하는 다른 유사한 오류가 나타날 수 있습니다.  이러한 경우에 이름 제공한 SQL 자격 증명 및 SQL 자격 증명-storage 계정 이름 및 저장소 액세스 키를 저장 된 정보를 검토 하 고 현재 및 유효 해야 합니다.  
+     오류: " 저장소 URL에 액세스 하지 못했습니다. 올바른 SQL 자격 증명을 제공... ": SQL 자격 증명과 관련하여 이러한 오류가 발생할 수 있습니다.  이러한 경우에 이름 제공한 SQL 자격 증명 및 SQL 자격 증명-storage 계정 이름 및 저장소 액세스 키를 저장 된 정보를 검토 하 고 현재 및 유효 해야 합니다.  
   
-     오류: "... 시스템 데이터베이스 이므로... 데이터베이스를 구성할 수 없습니다": 사용 하도록 설정 하려는 경우이 오류가 나타납니다 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 시스템 데이터베이스에 대 한 합니다.  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 시스템 데이터베이스 백업을 지원하지 않습니다.  시스템 데이터베이스에 대한 백업을 구성하려면 유지 관리 계획 등 다른 SQL Server 백업 기술을 사용하십시오.  
+     오류: "... 시스템 데이터베이스 이므로... 데이터베이스를 구성할 수 없습니다". 이 오류는 시스템 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]을 설정하려고 할 때 발생합니다.  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 시스템 데이터베이스 백업을 지원하지 않습니다.  시스템 데이터베이스에 대한 백업을 구성하려면 유지 관리 계획 등 다른 SQL Server 백업 기술을 사용하십시오.  
   
-     오류: "... ... 보존 기간을 제공 하는 " : 하거나 지정 하지 않으면 데이터베이스 또는 인스턴스에 대 한 보존 기간을 처음으로 이러한 값을 구성 하는 경우 경우 보존 기간 관련 오류가 나타날 수 있습니다. 1-30 이외의 값을 지정한 경우에도 오류가 발생할 수 있습니다. 보존 기간에 대해 허용된 값은 1-30의 숫자입니다.  
+     오류: "... 제공... 보존 기간 "합니다. 데이터베이스 또는 인스턴스에 대한 보존 기간을 처음으로 구성할 때 이러한 값을 지정하지 않은 경우 보존 기간 관련 오류가 발생할 수 있습니다. 1-30 이외의 값을 지정한 경우에도 오류가 발생할 수 있습니다. 보존 기간에 대해 허용된 값은 1-30의 숫자입니다.  
   
 2.  **전자 메일 알림 오류:**  
   
-     오류: "데이터베이스 메일은 사용할 수 없습니다..." –이 오류가 표시 됩니다이 전자 메일 알림을 설정 했지만 데이터베이스 메일이 인스턴스에서 구성 되어 있지 않습니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]의 상태에 대한 알림을 수신하려면 인스턴스에서 데이터베이스 메일을 구성해야 합니다. 데이터베이스 메일을 활성화 하는 방법에 대 한 정보를 참조 하세요 [데이터베이스 메일 구성](../relational-databases/database-mail/configure-database-mail.md)합니다. 또한 알림에 데이터베이스 메일을 사용하도록 SQL Server 에이전트를 설정해야 합니다. 자세한 내용은 [시작 하기 전에](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md#BeforeYouBegin)입니다.  
+     오류: "데이터베이스 메일은 사용할 수 없습니다..."-전자 메일 알림을 설정 했지만 데이터베이스 메일이 인스턴스에서 구성 되지 경우이 오류가 나타납니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]의 상태에 대한 알림을 수신하려면 인스턴스에서 데이터베이스 메일을 구성해야 합니다. 데이터베이스 메일을 활성화 하는 방법에 대 한 정보를 참조 하세요 [데이터베이스 메일 구성](../relational-databases/database-mail/configure-database-mail.md)합니다. 또한 알림에 데이터베이스 메일을 사용하도록 SQL Server 에이전트를 설정해야 합니다. 자세한 내용은 [시작 하기 전에](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md#BeforeYouBegin)입니다.  
   
      다음은 전자 메일 알림과 관련하여 표시될 수 있는 오류 번호의 목록입니다.  
   
@@ -76,9 +76,9 @@ ms.locfileid: "49120070"
   
 3.  **연결 오류:**  
   
-    -   **SQL 연결 관련 오류:** SQL Server 인스턴스에 연결 하는 문제가 있는 경우 이러한 오류가 발생 합니다. 확장 이벤트는 관리 채널을 통해 이러한 유형의 오류를 노출합니다. 다음은 이러한 유형의 연결 문제와 관련된 오류에 대해 표시될 수 있는 두 가지 확장 이벤트입니다.  
+    -   **SQL 연결 관련 오류:** 이러한 오류는 SQL Server 인스턴스에 연결할 때 문제가 있으면 발생합니다. 확장 이벤트는 관리 채널을 통해 이러한 유형의 오류를 노출합니다. 다음은 이러한 유형의 연결 문제와 관련된 오류에 대해 표시될 수 있는 두 가지 확장 이벤트입니다.  
   
-         event_type = SqlError인 FileRetentionAdminXEvent. 이 오류에 대한 자세한 내용은 해당 이벤트의 error_code, error_message 및 stack_trace를 참조하십시오. error_code는 SqlException의 오류 번호입니다.  
+         event_type = SqlError인 FileRetentionAdminXEvent. 이 오류에 대한 자세한 내용은 해당 이벤트의 error_code, error_message 및 stack_trace를 참조하십시오. Error_code는 SqlException의 오류 번호입니다.  
   
          다음 메시지/메시지 접두사가 포함된 SmartBackupAdminXevent:  
   
@@ -101,7 +101,7 @@ ms.locfileid: "49120070"
 ### <a name="troubleshooting-system-issues"></a>시스템 문제 해결  
  시스템(SQL Server, SQL Server 에이전트)에 문제가 있는 몇 가지 시나리오와 해당 문제가 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]에 미치는 영향은 다음과 같습니다.  
   
--   **Sqlservr.exe가 응답 하지 않거나 작동 중지 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 중인지:** 작동을 중지 하는 경우 SQL Server, SQL 에이전트가 정상적으로 종료 됩니다, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 중지 되며 이벤트가 SQL Agent.out 파일에도 로깅됩니다.  
+-   **Sqlservr.exe가 응답 하지 않거나 작동 중지 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 실행 됩니다.** SQL Server가 작동하지 않는 경우 SQL 에이전트가 정상적으로 종료되고 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]도 중지되며 이벤트가 SQL Agent.out 파일에 기록됩니다.  
   
      SQL Server가 응답하지 않는 경우 이벤트가 관리 채널에 기록됩니다.  이벤트 로그의 예:  
   

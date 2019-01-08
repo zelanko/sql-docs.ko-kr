@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 5bd5581b2842ec5d11cd27a989aa41ddb2cee1de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e93f85302417674b31de0129650dbb85092f8962
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661941"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532001"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>장애 조치 클러스터 인스턴스-SMB-Linux의 SQL Server 구성
 
@@ -22,7 +22,7 @@ ms.locfileid: "47661941"
 
 이 문서에서는 Linux에서 장애 조치 클러스터 인스턴스 (FCI)에 대 한 SMB 저장소를 구성 하는 방법에 설명 합니다. 
  
-Windows가 아닌 환경에서는 SMB는 종종으로 파일 시스템 CIFS (일반 인터넷) 공유 및 참조 Samba를 통해 구현 됩니다. Windows 환경에서 SMB 공유에 액세스 이루어집니다이 이렇게: \\SERVERNAME\SHARENAME 합니다. Linux 기반 SQL Server 설치에 대 한 SMB 공유 폴더로 탑재 되어야 합니다.
+Windows가 아닌 환경에서는 SMB는 종종으로 파일 시스템 CIFS (일반 인터넷) 공유 및 참조 Samba를 통해 구현 됩니다. Windows 환경에서 SMB 공유에 액세스 하면 이러한 방식으로 수행 됩니다. \\SERVERNAME\SHARENAME 합니다. Linux 기반 SQL Server 설치에 대 한 SMB 공유 폴더로 탑재 되어야 합니다.
 
 ## <a name="important-source-and-server-information"></a>원본 및 서버에 대 한 중요 한 정보
 
@@ -102,7 +102,7 @@ Windows가 아닌 환경에서는 SMB는 종종으로 파일 시스템 CIFS (일
    *    기존 SQL Server 데이터 디렉터리에서 파일을 삭제 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
  
     ```bash
-    rm – f /var/opt/mssql/data/*
+    rm - f /var/opt/mssql/data/*
     ```
 
    *    파일이 삭제 되었는지 확인 합니다. 

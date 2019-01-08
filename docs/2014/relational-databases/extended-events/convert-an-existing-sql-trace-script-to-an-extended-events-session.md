@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace, convert script to extended events
@@ -14,12 +13,12 @@ ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1affac058c5df7ba5c8329cc6435be6a1f0681a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83cf9390524d2fdc013fdddc41c610c28930e998
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062523"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766935"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>기존 SQL 추적 스크립트를 확장 이벤트 세션으로 변환
   확장 이벤트 세션으로 변환할 기존 SQL 추적 스크립트가 있는 경우 이 항목의 절차를 따라 해당하는 확장 이벤트 세션을 만들 수 있습니다. trace_xe_action_map 및 trace_xe_event_map 시스템 테이블의 정보를 사용하여 변환을 수행하는 데 필요한 정보를 수집할 수 있습니다.  
@@ -40,7 +39,7 @@ ms.locfileid: "48062523"
   
 2.  추적 ID를 확인합니다. 이렇게 하려면 다음 쿼리를 사용합니다.  
   
-    ```  
+    ```sql
     SELECT * FROM sys.traces;  
     GO  
     ```  
@@ -55,7 +54,7 @@ ms.locfileid: "48062523"
     > [!NOTE]  
     >  이 예에서는 기본 추적의 추적 ID(1)가 사용됩니다.  
   
-    ```  
+    ```sql
     USE MASTER;  
     GO  
     DECLARE @trace_id int;  
@@ -82,7 +81,7 @@ ms.locfileid: "48062523"
   
     3.  다음 쿼리를 사용하여 이전 단계에서 확인한 이벤트에 사용할 올바른 데이터 필드를 확인합니다. 이 쿼리는 확장 이벤트 데이터 필드를 "event_field" 열에 표시합니다. 쿼리에서 *<event_name>* 을 이전 단계에서 지정한 이벤트의 이름으로 바꿉니다.  
   
-        ```  
+        ```sql
         SELECT xp.name package_name, xe.name event_name  
            ,xc.name event_field, xc.description  
         FROM sys.trace_xe_event_map AS em  
@@ -103,7 +102,7 @@ ms.locfileid: "48062523"
   
 1.  다음과 같이 이벤트 세션을 만드는 문을 추가합니다.*session_name* 을 확장 이벤트 세션에 사용할 이름으로 바꿉니다.  
   
-    ```  
+    ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
        DROP EVENT SESSION [Session_Name] ON SERVER;  
     CREATE EVENT SESSION [Session_Name]  
@@ -130,7 +129,7 @@ ms.locfileid: "48062523"
   
      이 결과 집합을 확장 이벤트의 해당 항목으로 변환하기 위해 동작 목록과 함께 sqlserver.sp_statement_starting 및 sqlserver.sp_statement_completed 이벤트가 추가됩니다. 조건자 문은 WHERE 절로 포함되어 있습니다.  
   
-    ```  
+    ```sql
     ADD EVENT sqlserver.sp_statement_starting  
        (ACTION  
           (  
@@ -158,7 +157,7 @@ ms.locfileid: "48062523"
   
 3.  다음과 같이 비동기 파일 대상을 추가합니다. 파일 경로는 출력을 저장할 위치로 바꿉니다. 파일 대상을 지정할 때는 로그 파일 및 메타데이터 파일 경로를 포함해야 합니다.  
   
-    ```  
+    ```sql
     ADD TARGET package0.asynchronous_file_target(  
        SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
     ```  
@@ -167,7 +166,7 @@ ms.locfileid: "48062523"
   
 1.  sys.fn_xe_file_target_read_file 함수를 사용하여 출력을 볼 수 있습니다. 이렇게 하려면 다음 쿼리를 실행합니다. 파일 경로는 지정한 경로로 바꿉니다.  
   
-    ```  
+    ```sql
     SELECT *, CAST(event_data as XML) AS 'event_data_XML'  
     FROM sys.fn_xe_file_target_read_file('c:\temp\ExtendedEventsStoredProcs*.xel', 'c:\temp\ExtendedEventsStoredProcs*.xem', NULL, NULL);  
   
@@ -178,7 +177,7 @@ ms.locfileid: "48062523"
   
      sys.fn_xe_file_target_read_file 함수에 대한 자세한 내용은 [sys.fn_xe_file_target_read_file&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)을 참조하세요.  
   
-    ```  
+    ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
        DROP EVENT SESSION [session_name] ON SERVER;  
     CREATE EVENT SESSION [session_name]  
@@ -214,7 +213,7 @@ ms.locfileid: "48062523"
   
 ## <a name="example"></a>예제  
   
-```  
+```sql
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
    DROP EVENT SESSION [session_name] ON SERVER;  
 CREATE EVENT SESSION [session_name]  

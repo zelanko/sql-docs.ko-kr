@@ -14,12 +14,12 @@ ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 90bc2c9f6f268bf03904d768fd25b25b3ade3fbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 9dd6b8e754ea4bc56884b456d673e5af31a013d5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157994"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518265"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>SQL Server에 대한 클라우드 어댑터
   클라우드 어댑터 서비스는 Windows Azure VM에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로비전의 일부로 만들어집니다. 클라우드 어댑터 서비스는 첫 번째 실행 중에 자체 서명된 SSL 인증서를 생성한 다음 **로컬 시스템** 계정으로 실행됩니다. 이 서비스는 자체적으로 구성하는 데 사용되는 구성 파일을 생성합니다. 또한 클라우드 어댑터는 기본 포트 11435에서 들어오는 TCP 연결을 허용하는 Windows Firewall 규칙도 만듭니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "48157994"
 ## <a name="cloud-adapter-configuration-settings"></a>클라우드 어댑터 구성 설정  
  다음 클라우드 어댑터 구성 세부 정보를 사용하여 클라우드 어댑터에 대한 설정을 수정합니다.  
   
--   **구성 파일에 대 한 기본 경로** – C:\Program Files\Microsoft SQL server\120\tools\cloudadapter \  
+-   **구성 파일에 대 한 기본 경로** -C:\Program Files\Microsoft SQL server\120\tools\cloudadapter \  
   
 -   **구성 파일 매개 변수** -  
   
@@ -62,9 +62,9 @@ ms.locfileid: "48157994"
   
     -   \</configuration >  
   
--   **인증서 세부 정보** – 인증서의 값은 다음과 같습니다.  
+-   **인증서 세부 정보** -인증서에는 다음 값:  
   
-    -   제목 – "CN = CloudAdapter\<VMName >, DC = SQL Server, DC = Microsoft"  
+    -   주체-"CN = CloudAdapter\<VMName >, DC = SQL Server, DC = Microsoft"  
   
     -   인증서에는 서버 인증 EKU만 사용해야 합니다.  
   
@@ -81,11 +81,11 @@ ms.locfileid: "48157994"
 ## <a name="cloud-adapter-troubleshooting"></a>클라우드 어댑터 문제 해결  
  다음 정보를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대한 클라우드 어댑터의 문제를 해결할 수 있습니다.  
   
--   **오류 처리 및 로깅** - 오류 및 상태 메시지는 응용 프로그램 이벤트 로그에 기록됩니다.  
+-   **오류 처리 및 로깅** -오류 및 상태 메시지에는 응용 프로그램 이벤트 로그에 기록 됩니다.  
   
--   **추적, 이벤트** - 모든 이벤트는 응용 프로그램 이벤트 로그에 기록됩니다.  
+-   **추적, 이벤트** -모든 이벤트는 응용 프로그램 이벤트 로그에 기록 됩니다.  
   
--   **제어, 구성** –에 있는 구성 파일을 사용 하 여: C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\\합니다.  
+-   **제어, 구성** -에 있는 구성 파일을 사용 합니다.  C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\\합니다.  
   
 |Error|오류 ID|원인|해결 방법|  
 |-----------|--------------|-----------|----------------|  

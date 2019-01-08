@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - SetStringValue Method (ServerNetworkProtocolProperty Class)
@@ -20,12 +18,12 @@ ms.assetid: 0911df30-55f7-4fca-a1fb-01d2c91c1467
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 355fdfbec6ec57625410437400474f1f95f70788
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5736b6e4e88d103c29d0d027327a9f3f46d0cfdf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207333"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352751"
 ---
 # <a name="setstringvalue-method-servernetworkprotocolproperty-class"></a>SetStringValue 메서드(ServerNetworkProtocolProperty 클래스)
   참조된 속성의 문자열 값을 설정합니다.  
@@ -57,6 +55,6 @@ StrValue
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>관련 항목  
- [서버 네트워크 프로토콜 및 네트워크 라이브러리 구성](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [서버 네트워크 프로토콜 및 네트워크 라이브러리 구성](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -20,16 +20,16 @@ ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a044f3122f3f553e068d474901e52cce3eef1c9
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 260406eddd6caef88035376a764c3e140547e6c4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120090"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204672"
 ---
 # <a name="sqlprocedures-function"></a>SQLProcedures 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수: ODBC  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. ODBC  
   
  **요약**  
  **SQLProcedures** 특정 데이터 원본에 저장 된 프로시저 이름 목록을 반환 합니다. *프로시저* 는 일반적인 용어에 설명 하는 데는 *실행 개체*, 또는 입력 및 출력 매개 변수를 사용 하 여 호출할 수 있는 명명된 된 엔터티입니다. 프로시저에 대 한 자세한 내용은 참조는 [프로시저](../../../odbc/reference/develop-app/procedures-odbc.md)합니다.  
@@ -135,7 +135,7 @@ SQLRETURN SQLProcedures(
 |NUM_OUTPUT_PARAMS (ODBC 2.0)|5|해당 사항 없음|나중에 사용하도록 예약되어 있습니다. 이러한 결과 열에 반환 되는 데이터 응용 프로그램 안 됩니다.|  
 |NUM_RESULT_SETS (ODBC 2.0)|6|해당 사항 없음|나중에 사용하도록 예약되어 있습니다. 이러한 결과 열에 반환 되는 데이터 응용 프로그램 안 됩니다.|  
 |설명 (ODBC 2.0)|7|Varchar|절차의 설명입니다.|  
-|PROCEDURE_TYPE (ODBC 2.0)|8|Smallint|프로시저 유형을 정의합니다.<br /><br /> SQL_PT_UNKNOWN: 확인할 수 없으면 프로시저에 값을 반환 하는지 합니다.<br /><br /> SQL_PT_PROCEDURE: 반환된 된 개체는 프로시저입니다. 즉,이 경우 반환 값<br /><br /> SQL_PT_FUNCTION: 반환된 된 개체는 함수입니다. 즉, 반환 값에 있습니다.|  
+|PROCEDURE_TYPE (ODBC 2.0)|8|Smallint|프로시저 유형을 정의합니다.<br /><br /> SQL_PT_UNKNOWN: 프로시저에 값을 반환 하는지 확인할 수 없습니다.<br /><br /> SQL_PT_PROCEDURE: 반환된 된 개체는 프로시저입니다. 즉,이 경우 반환 값<br /><br /> SQL_PT_FUNCTION: 반환된 된 개체는 함수입니다. 즉, 반환 값에 있습니다.|  
   
  합니다 *SchemaName* 하 고 *ProcName* 인수 검색 패턴을 허용 합니다. 올바른 검색 패턴에 대 한 자세한 내용은 참조 하세요. [패턴 값 인수](../../../odbc/reference/develop-app/pattern-value-arguments.md)합니다.  
   

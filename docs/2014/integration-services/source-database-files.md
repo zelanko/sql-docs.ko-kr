@@ -13,12 +13,12 @@ ms.assetid: 7dc6bfeb-37c1-45e8-a705-a87564922265
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 277575fdd10231300bcfa6726f35aa648f75d7e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 42ac066ede8be2af8f08106ed358e63821a92c54
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172803"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533945"
 ---
 # <a name="source-database-files"></a>원본 데이터베이스 파일
   **원본 데이터베이스 파일** 대화 상자를 사용하여 원본 서버의 데이터베이스 파일 이름 및 위치를 보거나 데이터베이스 전송 태스크에 대한 네트워크 파일 공유 위치를 지정할 수 있습니다. 이 태스크에 대한 자세한 내용은 [데이터베이스 전송 태스크](control-flow/transfer-database-task.md)를 참조하세요.  
@@ -39,9 +39,9 @@ ms.locfileid: "48172803"
   
  오프라인 모드에서 데이터베이스를 전송할 때는 데이터베이스 파일이 대상 서버에 전송되기 전에 원본 서버의 **네트워크 파일 공유** 위치에 복사됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [데이터베이스 전송 태스크 편집기 &#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
- [데이터베이스 전송 태스크 편집기 &#40;페이지를 데이터베이스&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
+ [데이터베이스 전송 태스크 편집기&#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
+ [데이터베이스 전송 태스크 편집기&#40;데이터베이스 페이지&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
   
   

@@ -17,17 +17,17 @@ ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5d489a533caf4fe53521d440991b545483be76e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d425a6896a64f06bf1610ed8f6be87dd60af25d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833971"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507420"
 ---
 # <a name="new-features"></a>새로운 기능
 ODBC 3에서 다음과 같은 새 기능이 도입 되었습니다. *x*합니다. ODBC 3입니다. *x* 는 ODBC 2를 사용 하는 응용 프로그램 *.x* 드라이버는이 기능을 사용할 수 없습니다. ODBC 3입니다. *x* 는 ODBC 2를 사용 하 여 작업할 때 드라이버 관리자에서는 이러한 기능을 매핑하지 않습니다 *.x* 드라이버입니다.  
   
--   설명자를 사용 하는 함수의 인수로 처리: **SQLSetDescField**, **SQLGetDescField**하십시오 **SQLSetDescRec**, **SQLGetDescRec**, 및 **SQLCopyDesc**합니다.  
+-   설명자를 사용 하는 함수의 인수로 서 처리 합니다. **SQLSetDescField**, **SQLGetDescField**합니다 **SQLSetDescRec**를 **SQLGetDescRec**, 및 **SQLCopyDesc**합니다.  
   
 -   함수 **SQLSetEnvAttr** 하 고 **SQLGetEnvAttr**합니다.  
   
@@ -81,7 +81,7 @@ ODBC 3에서 다음과 같은 새 기능이 도입 되었습니다. *x*합니다
   
 -   명명 된 매개 변수입니다.  
   
--   ODBC 3 중 하나입니다. *x*– 특정 **SQLGetInfo** 옵션입니다. (경우 ODBC 3입니다. *x* 응용 프로그램을 사용 하는 ODBC 2. *x* 드라이버 호출을 SQL_XXX_CURSOR_ATTRIBUTES1 정보 형식인 몇 가지 ODBC 2를 대체 했습니다. *x* 정보 유형, 신뢰할 수 있는 수 정보의 일부 있지만 일부 수 없습니다. 자세한 내용은 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
+-   ODBC 3 중 하나입니다. *x*-특정 **SQLGetInfo** 옵션입니다. (경우 ODBC 3입니다. *x* 응용 프로그램을 사용 하는 ODBC 2. *x* 드라이버 호출을 SQL_XXX_CURSOR_ATTRIBUTES1 정보 형식인 몇 가지 ODBC 2를 대체 했습니다. *x* 정보 유형, 신뢰할 수 있는 수 정보의 일부 있지만 일부 수 없습니다. 자세한 내용은 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
   
 -   오프셋을 바인딩하십시오.  
   
@@ -103,10 +103,10 @@ ODBC 3에서 다음과 같은 새 기능이 도입 되었습니다. *x*합니다
   
 -   사용 **SQLDescribeCol** 하 고 **SQLColAttribute** 0 열에 있습니다.  
   
--   ODBC 3 사용 합니다. *x*– 특정 열에 대 한 호출 특성 **SQLColAttribute**합니다.  
+-   ODBC 3 사용 합니다. *x*-에 대 한 호출에서 특정 열 특성 **SQLColAttribute**합니다.  
   
 -   여러 환경 핸들을 사용 합니다.  
   
  이 섹션에서는 다음 항목을 포함합니다.  
   
--   [ODBC 3.x 응용 프로그램의 블록 커서, 스크롤 가능 커서 및 이전 버전과의 호환성](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md)
+-   [ODBC 3.x 애플리케이션의 블록 커서, 스크롤 가능 커서 및 이전 버전과의 호환성](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md)

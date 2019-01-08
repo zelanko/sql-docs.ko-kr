@@ -14,12 +14,12 @@ ms.assetid: 1275157b-f4e1-4c24-b273-c02555e261c2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: afd5a20d99692c1a623b13b53218f62c00cb218a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 4a4ac67e1a593cdfd7e67d789289bd1a5ece1467
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845921"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515309"
 ---
 # <a name="oracle-software-patches"></a>Oracle 소프트웨어 패치
 > [!IMPORTANT]  
@@ -36,7 +36,7 @@ ms.locfileid: "47845921"
   
 2.  다음 디렉터리로 이동 합니다. /server/wgt_tech/server/windowsNT 합니다.  
   
-3.  Windows 95, Windows 98 및 Windows NT/Windows 2000에 대 한 가장 관련성이 높은 패치를 다운로드 하려면 Oracle 버전에 대 한 하위 디렉터리로 이동-7.3 또는 8.0입니다. 두 개의 하위 디렉터리는 /73patchsets 및 /80patchsets입니다.  
+3.  Windows 95, Windows 98 및 Windows NT/Windows 2000에 대 한 가장 관련성이 높은 패치를 다운로드 하려면 Oracle-7.3 또는 8.0의 버전에 대 한 하위 디렉터리로 이동 합니다. 두 개의 하위 디렉터리는 /73patchsets 및 /80patchsets입니다.  
   
 4.  두 SQL, Oracle의 네트워크 기술에 대 한 패치를 다운로드 하려면 * Net 또는 Net8를 다음 디렉터리로 이동: 네트워크입니다.  
   

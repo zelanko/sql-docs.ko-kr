@@ -1,10 +1,10 @@
 ---
-title: '연습: 데이터베이스 다이어그램 추가 및 변경 | Microsoft 문서'
+title: '연습: 데이터베이스 다이어그램 추가 및 변경 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], about database diagrams
@@ -14,12 +14,12 @@ ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46333534aebb2991fe0dc3239264bc94f7ddb821
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195523"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822627"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>연습: 데이터베이스 다이어그램 추가 및 변경
   이 연습에서는 데이터베이스 다이어그램을 만들고 수정하는 방법과 데이터베이스 다이어그램 구성 요소를 통해 데이터베이스를 변경하는 방법을 설명합니다. 또한 다이어그램에 테이블을 추가하고, 테이블 간에 관계를 만들고, 열에 대해 제약 조건과 인덱스를 만들며 각 테이블에 대해 표시할 정보 수준을 변경하는 방법을 설명합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "48195523"
   
 3.  데이터베이스 다이어그램 노드를 마우스 오른쪽 단추로 클릭한 다음 **새 데이터베이스 다이어그램**을 선택합니다.  
   
-     데이터베이스에 다이어그램을 만드는 데 필요한 개체가 없는 경우에는 다음과 같은 메시지가 나타납니다. **이 데이터베이스에는 데이터베이스 다이어그램을 사용하는 데 필요한 지원 개체가 하나 이상 없습니다. 지원 개체를 만드시겠습니까?** 라는 메시지가 나타납니다. **예**를 선택합니다.  
+     데이터베이스에 다이어그램을 만드는 데 필요한 개체가 없으면 **이 데이터베이스에는 데이터베이스 다이어그램을 사용하는 데 필요한 지원 개체가 하나 이상 없습니다. 지원 개체를 만드시겠습니까?** 라는 메시지가 나타납니다. **예**를 선택합니다.  
   
      **테이블 추가** 대화 상자가 표시됩니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48195523"
   
 1.  `Address` 테이블을 마우스 오른쪽 단추로 클릭합니다. 바로 가기 메뉴에서 **테이블 뷰**를 가리킨 다음 **표준**을 클릭합니다.  
   
-     테이블 표에 **열 이름**, **데이터 형식**및 **Null 허용**의 세 열이 표시됩니다.  
+     테이블 표에 **열 이름**, **데이터 형식**, 및 **11.0][sql**합니다.  
   
 2.  `Address` 테이블을 마우스 오른쪽 단추로 클릭하고 **테이블 뷰** 를 클릭한 다음 **키**를 선택합니다.  
   
@@ -72,15 +72,15 @@ ms.locfileid: "48195523"
   
 2.  에 **이름 선택** 대화 상자, 클릭 **확인** 기본 이름을 적용 `Table1`합니다.  
   
-     새 테이블 표에 **열 이름**, **데이터 형식**및 **Null 허용**의 세 열이 나타납니다.  
+     새 테이블 표에 **열 이름**, **데이터 형식**, 및 **11.0][sql**합니다.  
   
 3.  다음 정보를 추가 `Table1`:  
   
     |**열 이름**|**데이터 형식**|**Null 허용**|  
     |---------------------|-------------------|---------------------|  
-    |`T1col1`|`int`|선택|  
-    |`T1col2`|`varchar(50)`|선택|  
-    |`T1col3`|`float`|선택|  
+    |`T1col1`|`int`|checked|  
+    |`T1col2`|`varchar(50)`|checked|  
+    |`T1col3`|`float`|checked|  
   
 4.  `T1col1` 을 마우스 오른쪽 단추로 클릭한 다음 **기본 키 설정**을 선택합니다.  
   
@@ -122,15 +122,15 @@ ms.locfileid: "48195523"
     |**열 이름**|**데이터 형식**|**Null 허용**|  
     |---------------------|-------------------|---------------------|  
     |`T2col1`|`int`|선택 안 함|  
-    |`T2col2`|`varchar(50)`|선택|  
-    |`T2col3`|`xml`|선택|  
+    |`T2col2`|`varchar(50)`|checked|  
+    |`T2col3`|`xml`|checked|  
   
     > [!NOTE]  
     >  외래 키 관계의 기본 키 쪽에 있는 열은 기본 키나 UNIQUE 제약 조건에 참여해야 합니다.  
   
 2.  `T2col1` 을 `T1col1`로 끕니다.  
   
-     백그라운드의 **외래 키 관계** 대화 상자와 포그라운드의 **테이블 및 열** 대화 상자 두 개가 나타납니다.  
+     백그라운드에 **외래 키 관계** 백그라운드로 및 **테이블 및 열** 포그라운드에서 합니다.  
   
 3.  **확인** 을 클릭하여 새 관계를 저장합니다.  
   
@@ -206,7 +206,7 @@ ms.locfileid: "48195523"
   
 -   비트맵으로 다이어그램 복사  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [다이어그램에 표시 된 정보의 양 사용자 지정 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [데이터베이스 다이어그램 디자이너 설정 &#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
  [다이어그램에 테이블 추가 &#40;Visual Database Tools&#41;](add-tables-to-diagrams-visual-database-tools.md)   

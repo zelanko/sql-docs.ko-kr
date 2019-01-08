@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - scan for startup procs option
@@ -13,12 +12,12 @@ ms.assetid: 6bf9d252-e766-458d-9dcd-23d895f032a2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 12bd68e17762a041e9d5c106f60d3e60e736750c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ccda9c60880bb6864fc411966ab3e410b5008101
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149033"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640845"
 ---
 # <a name="configure-the-scan-for-startup-procs-server-configuration-option"></a>scan for startup procs 서버 구성 옵션 구성
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 시작 프로시저 검색 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **시작 프로시저 검색** 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 시 저장 프로시저의 자동 실행을 검색할 수 있습니다. 이 옵션을 1로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 서버에 정의된 자동 실행 저장 프로시저를 모두 검색하여 실행합니다. **시작 프로시저 검색** 의 기본값은 0(검색 안 함)입니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "48149033"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **후속 작업:**  [시작 프로시저 검색 옵션을 구성한 후](#FollowUp)  
+-   **후속 작업:**  [Scan for startup procs 옵션을 구성한 후](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -86,7 +85,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> 후속 작업: 시작 프로시저 검색 옵션을 구성한 후  
+##  <a name="FollowUp"></a> 후속편: 시작 프로시저 검색 옵션을 구성한 후  
  설정을 적용하려면 서버를 다시 시작해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  

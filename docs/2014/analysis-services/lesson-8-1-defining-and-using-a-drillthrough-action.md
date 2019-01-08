@@ -11,12 +11,12 @@ ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 13738a9a4e533ac8a9882724aa1b9c9f12e3048f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 606fe679f4cc58a627b2d2978b52d9865da741c1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090683"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545309"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>드릴스루 동작 정의 및 사용
   쿼리가 반환하는 데이터를 올바르게 필터링하지 않고 팩트 차원별로 팩트 데이터의 차원을 지정하면 쿼리 성능이 느려집니다. 이 문제를 방지하려면 반환되는 전체 행 수를 제한하는 드릴스루 동작을 정의하면 됩니다. 이렇게 하면 쿼리 성능이 대폭 향상됩니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "48090683"
   
 8.  에 **최대 행** 상자에 입력 `10`합니다.  
   
-9. 에 **캡션** 상자에 입력 `Drillthrough to Order Details…`합니다.  
+9. 에 **캡션** 상자에 입력 `Drillthrough to Order Details...`합니다.  
   
      이렇게 설정하면 반환되는 행 수가 제한되며 클라이언트 애플리케이션 메뉴에 표시되는 캡션이 지정됩니다. 다음 그림에서는 **추가 속성** 상자에서 지정하는 이러한 설정을 보여 줍니다.  
   
@@ -144,9 +144,9 @@ ms.locfileid: "48090683"
      ![Adam Powell에 주문 배송](../../2014/tutorials/media/l8-action8.gif "Adam Powell에 배송 주문")  
   
 ## <a name="next-lesson"></a>다음 단원  
- [9단원: 큐브 뷰 및 번역 정의](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
+ [9 단원: 큐브 뷰 및 번역 정의](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [작업 &#40;Analysis Services-다차원 데이터&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [다차원 모델의 동작](multidimensional-models/actions-in-multidimensional-models.md)   
  [차원 관계](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

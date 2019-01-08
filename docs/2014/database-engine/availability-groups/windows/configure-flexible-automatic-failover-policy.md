@@ -14,12 +14,12 @@ ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a2f3c3da8228924a7d4b697865ee729e9b84aff5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b9a063413a665d9e159cb513ea936ab851715ce4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131193"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515399"
 ---
 # <a name="configure-the-flexible-failover-policy-to-control-conditions-for-automatic-failover-always-on-availability-groups"></a>유연한 장애 조치(failover) 정책을 구성하여 자동 장애 조치(failover)의 상태 제어(Always On 가용성 그룹)
   이 항목에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 대해 유연한 장애 조치(failover) 정책을 구성하는 방법에 대해 설명합니다. 유연한 장애 조치(failover) 정책을 통해 가용성 그룹에 대해 자동 장애 조치를 수행해야 하는 상태를 세부적으로 제어할 수 있습니다. 자동 장애 조치를 트리거하는 오류 상태 및 상태 확인 빈도를 변경하여 자동 장애 조치가 수행될 가능성을 높이거나 줄임으로써 고가용성에 대한 SLA를 지원할 수 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "48131193"
   
 -   가용성 그룹이 해당 WSFC 오류 임계값을 초과하면 WSFC 클러스터가 가용성 그룹에 대해 자동 장애 조치를 시도하지 않습니다. 또한 클러스터 관리자가 실패한 리소스 그룹을 수동으로 온라인 상태로 만들거나 데이터베이스 관리자가 가용성 그룹의 수동 장애 조치를 수행할 때까지 가용성 그룹의 WSFC 리소스 그룹이 실패한 상태로 유지됩니다. *WSFC 오류 임계값* 은 특정 기간 동안 가용성 그룹에 대해 지원되는 최대 오류 수로 정의됩니다. 기본 기간은 6시간이며, 이 기간 동안의 최대 오류 수에 대한 기본값은 *n*-1입니다. 여기서 *n* 은 WSFC 노드의 수입니다. 지정된 가용성 그룹에 대한 오류-임계값 값을 변경하려면 WSFC 장애 조치(Failover) 관리자 콘솔을 사용하세요.  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
   
 -   주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48131193"
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  
  **유연한 장애 조치(failover) 정책을 구성하려면**  
   
-1.  기본 설정 (`cd`) 주 복제본을 호스팅하는 서버 인스턴스에 있습니다.  
+1.  기본값(`cd`)을 주 복제본을 호스팅하는 서버 인스턴스로 설정합니다.  
   
 2.  가용성 그룹에 가용성 복제본을 추가하는 경우 `New-SqlAvailabilityGroup` cmdlet을 사용합니다. 기존 가용성 복제본을 수정하는 경우 `Set-SqlAvailabilityGroup` cmdlet을 사용합니다.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48131193"
         ```  
   
 > [!NOTE]  
->  Cmdlet의 구문을 보려면 사용 하 여는 `Get-Help` cmdlet은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경입니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
+>  cmdlet의 구문을 보려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경에서 `Get-Help` cmdlet을 사용합니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
   
  **SQL Server PowerShell 공급자를 설정하고 사용하려면**  
   

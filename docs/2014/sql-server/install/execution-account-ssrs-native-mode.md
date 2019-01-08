@@ -13,12 +13,12 @@ ms.assetid: 440b5a09-5fd4-4c3a-b510-f3c33cbf1c82
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3a3300f448d9bc3df34369963cd4b697ada44211
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 9ba41b602ec91516e87b7fe5ec0276c586b17613
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150549"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352975"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>실행 계정(SSRS 기본 모드)
   이 페이지를 사용하여 무인 모드 처리용으로 사용할 계정을 구성할 수 있습니다. 이 계정은 다음과 같이 다른 자격 증명 원본을 사용할 수 없는 특별한 환경에서 사용됩니다.  
@@ -36,9 +36,9 @@ ms.locfileid: "48150549"
  Windows 사용자 계정을 사용할 수 있습니다. 최상의 결과를 얻으려면 다른 컴퓨터와의 연결을 지원하는 네트워크 로그온 권한과 읽기 권한을 가진 계정을 선택합니다. 보고서에서 사용하려는 모든 외부 이미지 또는 데이터 파일에 대해 읽기 권한을 갖고 있어야 합니다. 모든 보고서 데이터 원본과 외부 이미지가 보고서 서버 컴퓨터에 저장되어 있지 않으면 로컬 계정을 지정하지 마세요. 이 계정은 무인 보고서 처리에만 사용합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]을 사용하는 경우 보고서에서 외부 이미지를 참조하고 해당 이미지 파일에 액세스하는 데 사용 권한이 필요할 때만 이 계정을 구성하면 됩니다. SQL Server Express는 원격 서버에 대한 데이터 원본 연결을 지원하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2012 버전에서 지원하는 기능](http://go.microsoft.com/fwlink/?linkid=232473)을 참조하세요.  
+>  [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]을 사용하는 경우 보고서에서 외부 이미지를 참조하고 해당 이미지 파일에 액세스하는 데 사용 권한이 필요할 때만 이 계정을 구성하면 됩니다. SQL Server Express는 원격 서버에 대한 데이터 원본 연결을 지원하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2012 버전에서 지원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473)을 참조하세요.  
   
- 이 페이지를 열려면 시작 합니다 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 선택한 Configuration Manager **실행 계정** 탐색 창에서. 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)을 참조하세요.  
+ 이 페이지를 열려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 시작하고 탐색 창에서 **실행 계정** 에 연결합니다. 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)을 참조하세요.  
   
 ## <a name="options"></a>변수  
  **실행 계정 지정**  

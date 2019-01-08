@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.articleissues.f1
@@ -13,12 +12,12 @@ ms.assetid: bde57da2-dd47-412f-9df7-9224968b2448
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b1d4595ee3b5bb01e32fbd733c97ea65488b9dc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 9093ac313f0b72671e647461318793c21f476c75
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083753"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772035"
 ---
 # <a name="article-issues"></a>아티클 문제
   **아티클 문제** 페이지는 아티클에 대해 검색된 조건 및 이러한 조건의 결과로 필요한 변경 내용을 나열합니다. 다음 표에서는 발생 가능한 문제 및 복제와 기존 애플리케이션이 올바르게 작동하는지 여부를 확인하는 데 필요한 동작을 나열합니다.  

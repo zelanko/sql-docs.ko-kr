@@ -18,12 +18,12 @@ ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c9b6b7e6118fc23ef821d85ea6d0ac2f040e69b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6ac15a78e8689e76fc9687a6cd8784eb1fc4dd2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603041"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537867"
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,25 +55,25 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@job_name =** ] **'***job_name***'**  
+ [  **@job_name =** ] **'**_job_name_**'**  
  작업의 이름입니다. 이름은 고유 해야 하며 퍼센트를 포함할 수 없습니다 (**%**) 문자입니다. *job_name*됩니다 **nvarchar (128)**, 기본값은 없습니다.  
   
  [  **@enabled =** ] *사용 하도록 설정*  
  추가된 작업의 상태를 나타냅니다. *사용 하도록 설정*됩니다 **tinyint**, 기본값은 1 (사용). 그러나 하는 경우 **0**, 실행할 수 있습니다 수동으로; 작업이 사용 되지 않으며 해당 일정에 따라 실행 되지 않습니다.  
   
- [  **@description =** ] **'***설명***'**  
+ [  **@description =** ] **'**_설명을_**'**  
  작업에 대한 설명입니다. *설명* 됩니다 **nvarchar(512)**, 기본값은 NULL입니다. 하는 경우 *설명을* 는 생략 하면 "설명이 없습니다"가 사용 됩니다.  
   
  [ **@start_step_id =** ] *step_id*  
  작업을 실행하기 위한 첫 단계의 ID입니다. *step_id*됩니다 **int**, 기본값은 1입니다.  
   
- [  **@category_name =** ] **'***범주***'**  
+ [  **@category_name =** ] **'**_category_**'**  
  작업의 범주입니다. *범주*됩니다 **sysname**, 기본값은 NULL입니다.  
   
  [ **@category_id =** ] *category_id*  
  작업 범주를 지정하는 데 필요한 언어 독립 메커니즘입니다. *category_id*됩니다 **int**, 기본값은 NULL입니다.  
   
- [ **@owner_login_name =** ] **'***login***'**  
+ [  **@owner_login_name =** ] **'**_로그인_**'**  
  작업을 소유하는 로그인의 이름입니다. *로그인*됩니다 **sysname**, 기본값은 NULL 사용 하 여 현재 로그인 이름으로 해석 됩니다. 멤버는 **sysadmin** 고정된 서버 역할 설정 하거나 값을 변경할 수 있습니다 **@owner_login_name**합니다. 경우 멤버가 아닌 사용자의 합니다 **sysadmin** 역할을 설정 하거나 값을 변경 **@owner_login_name**이 저장된 프로시저의 실행이 실패 하 고 오류가 반환 됩니다.  
   
  [ **@notify_level_eventlog =** ] *eventlog_level*  
@@ -84,7 +84,7 @@ sp_add_job [ @job_name = ] 'job_name'
 |**0**|안 함|  
 |**1**|성공한 경우|  
 |**2** (기본값)|실패한 경우|  
-|**3**|항상|  
+|**3**|Always|  
   
  [ **@notify_level_email =** ] *email_level*  
  이 작업 완료 시 전자 메일을 보낼 시간을 나타내는 값입니다. *email_level*됩니다 **int**, 기본값은 **0**에 없음을 나타냅니다. *email_level*와 동일한 값을 사용 하 여 *eventlog_level*합니다.  
@@ -95,13 +95,13 @@ sp_add_job [ @job_name = ] 'job_name'
  [ **@notify_level_page =** ] *page_level*  
  이 작업이 완료될 때 페이지를 보낼 시간을 나타내는 값입니다. *page_level*됩니다 **int**, 기본값은 **0**에 없음을 나타냅니다. *page_level*와 동일한 값을 사용 하 여 *eventlog_level*합니다.  
   
- [ **@notify_email_operator_name =** ] **'***email_name***'**  
+ [  **@notify_email_operator_name =** ] **'**_email_name_**'**  
  전자 메일을 보낼 때 사용자의 전자 메일 이름 *email_level* 에 도달 합니다. *email_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [ **@notify_netsend_operator_name =** ] **'***netsend_name***'**  
+ [  **@notify_netsend_operator_name =** ] **'**_netsend_name_**'**  
  이 작업 완료 시 네트워크 메시지를 보낼 운영자의 이름입니다. *netsend_name*됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [ **@notify_page_operator_name =** ] **'***page_name***'**  
+ [  **@notify_page_operator_name =** ] **'**_page_name_**'**  
  이 작업 완료 시 호출할 사람의 이름입니다. *page_name*됩니다 **sysname**, 기본값은 NULL입니다.  
   
  [ **@delete_level =** ] *delete_level*  
@@ -110,7 +110,7 @@ sp_add_job [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  때 *delete_level* 됩니다 **3**작업이 한 번만 실행 되, 작업에 대 한 일정에 관계 없이 정의 합니다. 또한 작업 자체를 삭제하는 경우 작업에 대한 모든 기록도 함께 삭제됩니다.  
   
- [ **@job_id =** ] *job_id***OUTPUT**  
+ [  **@job_id =** ] _job_id_**출력**  
  성공적으로 생성된 작업에 할당되는 작업 ID입니다. *job_id*는 형식의 출력 변수 **uniqueidentifier**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

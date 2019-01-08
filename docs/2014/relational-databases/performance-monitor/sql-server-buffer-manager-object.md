@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Buffer Manager object
@@ -13,12 +13,12 @@ ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9a5ef0580e2c13f191a233f5eb42029e4749f949
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed9c8ff90798205f9db02ae4b4b47eb4310d4b06
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115935"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777525"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server, Buffer Manager 개체
   **Buffer Manager** 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 다음 항목을 어떻게 사용하는지 모니터링하는 카운터를 제공합니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "48115935"
 |**Page writes/sec**|실행한 물리적 데이터베이스 페이지 초당 쓰기 수를 나타냅니다.|  
 |**Readahead pages/sec**|사용을 미리 예측하여 읽은 초당 페이지 수를 나타냅니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server:Buffer Node](sql-server-buffer-node.md)   
  [서버 메모리 서버 구성 옵션](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [SQL Server, Plan Cache 개체](sql-server-plan-cache-object.md)   

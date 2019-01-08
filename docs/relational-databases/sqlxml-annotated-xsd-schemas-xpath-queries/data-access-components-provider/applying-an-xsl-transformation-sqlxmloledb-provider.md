@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ebaa2f29054b1fee64c44ea5c269f7d741617f97
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5b9a357303950bc7c36a605483a2a94daf1f3748
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673862"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523359"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>XSL 변환 적용(SQLXMLOLEDB 공급자)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "51673862"
   
  Xsl 속성은 응용 프로그램에 지정 된 따라서 클라이언트에서 생성 되는 XML 문서에 XSL 변환이 적용 되 고 결과 2 열 표.  
   
- 템플릿 명령을 실행하려면 XML 템플릿 언어 {5d531cb2-e6ed-11d2-b252-00c04f681b71}을 지정해야 합니다.  
+ 템플릿 명령을 실행 하려면 XML 템플릿 언어-{5d531cb2-e6ed-11d2-b252-00c04f681b71}-지정 되어야 합니다.  
   
 > [!NOTE]  
 >  코드에서 연결 문자열에 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다. 또한 이 예에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 데이터 공급자로 사용하도록 지정하는데 이를 위해서는 추가 네트워크 클라이언트 소프트웨어가 설치되어 있어야 합니다. 자세한 내용은 [SQL Server Native Client에 대 한 시스템 요구 사항](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)합니다.  

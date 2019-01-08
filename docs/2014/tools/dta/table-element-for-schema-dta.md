@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7d85b45ff292d4262393542909566b233de882d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b3a72f800643afa5e7edf6bdfa9928196f5da2d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074420"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781815"
 ---
 # <a name="table-element-for-schema-dta"></a>Schema의 Table 요소(DTA)
   튜닝에 사용할 테이블을 지정합니다.  
@@ -52,8 +51,8 @@ ms.locfileid: "48074420"
   
 |관계|요소|  
 |------------------|--------------|  
-|**부모 요소**|[데이터베이스에 대 한 스키마 요소 &#40;DTA&#41;](schema-element-for-database-dta.md)|  
-|**자식 요소**|[테이블에 대 한 요소 이름을 &#40;DTA&#41;](name-element-for-table-dta.md)|  
+|**부모 요소**|[Database의 Schema 요소&#40;DTA&#41;](schema-element-for-database-dta.md)|  
+|**자식 요소**|[Table의 Name 요소&#40;DTA&#41;](name-element-for-table-dta.md)|  
   
 ## <a name="remarks"></a>Remarks  
  `Table` 요소를 지정하지 않을 경우 데이터베이스 엔진 튜닝 관리자는 지정된 데이터베이스의 모든 테이블을 튜닝할 수 있다고 가정합니다.  

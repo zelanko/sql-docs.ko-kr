@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - log files [SQL Server], changing default location
@@ -14,12 +13,12 @@ ms.assetid: 70a57fda-fcfe-490f-9cf6-5df620e32b2a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6446f6aaaa08ea8cd4b8375791ecb6cd93187fee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 06d17a4feaec0db614f61fb7761b37ea415efc24
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092761"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639321"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files-sql-server-management-studio"></a>데이터 및 로그 파일의 기본 위치 보기 또는 변경(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 새 데이터 및 로그 파일의 기본 위치를 보고 변경하는 방법에 대해 설명합니다. 기본 경로는 레지스트리에서 가져옵니다. 위치를 변경하면 다른 위치를 지정하지 않는 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 만들어지는 모든 새 데이터베이스가 해당 위치를 사용합니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "48092761"
   
      다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
   
--   **후속 작업:**  [기본 위치를 변경한 후](#FollowUp)  
+-   **후속 작업:**  [기본 위치 변경](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -55,7 +54,7 @@ ms.locfileid: "48092761"
   
 3.  **데이터베이스 기본 위치**에서 새 데이터 파일 및 새 로그 파일의 현재 기본 위치를 봅니다. 기본 위치를 변경하려면 **데이터** 또는 **로그** 필드에 새 기본 경로 이름을 입력하거나 찾아보기 단추를 클릭한 다음 경로 이름을 찾아 선택합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 기본 위치를 변경한 후  
+##  <a name="FollowUp"></a> 후속편: 기본 위치를 변경한 후  
  변경 내용을 적용하려면 SQL Server 서비스를 중지했다가 시작해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  

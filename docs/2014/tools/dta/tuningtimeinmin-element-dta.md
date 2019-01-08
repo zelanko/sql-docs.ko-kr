@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c81d0dd5ad56db2216143ed847f148467fc2e91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c30c6a4f746ae9aa81b8c1a71c0e380bdd26df03
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140333"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815875"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin 요소(DTA)
   튜닝 세션의 최대 길이(분)를 지정합니다.  
@@ -39,15 +38,15 @@ ms.locfileid: "48140333"
   
 |특징|Description|  
 |--------------------|-----------------|  
-|**데이터 형식 및 길이**|`unsignedInt`길이 제한 없음된.|  
+|**데이터 형식 및 길이**|`unsignedInt`, 길이 제한 없음|  
 |**기본값**|480분(8시간)|  
-|**발생 빈도**|에 대 한 값을 지정 하지 않는 필요는 `NumberOfEvents` 요소입니다.|  
+|**발생 빈도**|`NumberOfEvents` 요소에 값을 지정하지 않은 경우 지정해야 합니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
 |관계|요소|  
 |------------------|--------------|  
-|**부모 요소**|[TuningOptions 요소 &#40;DTA&#41;](tuningoptions-element-dta.md)|  
+|**부모 요소**|[TuningOptions 요소&#40;DTA&#41;](tuningoptions-element-dta.md)|  
 |**자식 요소**|없음|  
   
 ## <a name="example"></a>예제  

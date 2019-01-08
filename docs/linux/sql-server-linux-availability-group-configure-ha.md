@@ -1,21 +1,22 @@
 ---
-title: 구성 SQL Server Always On 가용성 그룹 Linux에서 고가용성을 위해 | Microsoft Docs
-description: ''
+title: 구성 SQL Server Always On 가용성 그룹 Linux에서 고가용성을 위해
+titleSuffix: SQL Server
+description: SQL Server 항상에서 AG (가용성 그룹) 고가용성을 위해 Linux에서 만들기에 대해 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 56a61a4bc319c06becc104db0bd846871a533d1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f88178450fb5ca19e52703ad02e29d107ca562a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621081"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201962"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>구성 SQL Server Always On 가용성 그룹 Linux에서 고가용성을 위해
 
@@ -177,8 +178,8 @@ Linux에서 고가용성에 대 한 AG를 만듭니다. 사용 된 [CREATE AVAIL
          FAILOVER_MODE = EXTERNAL,
          SEEDING_MODE = AUTOMATIC
       ),
-      N'node2' WITH ( 
-         ENDPOINT_URL = N'tcp://node2:5022', 
+      N'node2' WITH ( 
+         ENDPOINT_URL = N'tcp://node2:5022', 
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
          FAILOVER_MODE = EXTERNAL,
          SEEDING_MODE = AUTOMATIC
@@ -210,7 +211,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 [!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
 >[!IMPORTANT]
->AG를 만든 후 고가용성을 위해 Pacemaker와 같은 클러스터 기술을 사용 하 여 통합을 구성 해야 합니다. Ag를 사용 하 여 시작을 사용 하 여 읽기-배율 구성에 대해 [!INCLUDE [SQL Server version](..\includes\sssqlv14-md.md)], 클러스터를 설정 하지 않아도 됩니다.
+>AG를 만든 후 고가용성을 위해 Pacemaker와 같은 클러스터 기술을 사용 하 여 통합을 구성 해야 합니다. Ag를 사용 하 여 시작을 사용 하 여 읽기-배율 구성 [!INCLUDE [SQL Server version](../includes/sssqlv14-md.md)], 클러스터를 설정 하지 않아도 됩니다.
 
 이 문서의 단계를 수행 하는 경우 아직 클러스터 되지 않은 AG 해야 합니다. 다음 단계는 클러스터를 추가 하는 것입니다. 이 구성은 읽기-배율/부하 분산 시나리오에 대 한 유효한, 고가용성을 위해 완전 하지 않습니다. 고가용성을 위해 AG를 클러스터 리소스로 추가 해야 합니다. 참조 [다음 단계](#next-steps) 지침에 대 한 합니다. 
 

@@ -16,12 +16,12 @@ ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aeae626f924776092bc8f6652e716747768b689c
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 30d358dab4ab983109d354238b35b64a3d7976da
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350527"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544181"
 ---
 # <a name="visual-c-extensions"></a>Visual c + + 확장
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding 인터페이스
@@ -34,7 +34,7 @@ ms.locfileid: "51350527"
 ## <a name="binding-entries"></a>바인딩 항목
  ADO의 Visual c + + 확장의 필드를 매핑하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 C/c + + 변수입니다. 필드 및 변수 간의 매핑 정의 라고는 *항목을 바인딩*합니다. 매크로 숫자, 고정 길이 및 가변 길이 데이터에 대 한 바인딩 항목을 제공합니다. Visual c + + 확장 클래스에서 파생 된 클래스에서 선언 된 C/c + + 변수와 바인딩 항목 **CADORecordBinding**합니다. 합니다 **CADORecordBinding** 클래스 바인딩 항목 매크로 통해 내부적으로 정의 됩니다.
 
- ADO OLE DB에 내부적으로 이러한 매크로의 매개 변수를 매핑합니다 **DBBINDING** OLE DB를 만들고 구조체 **접근자** 이동 및 변환 필드 및 변수 간에 데이터를 관리 하는 개체입니다. 구성 데이터를 정의 하는 OLE DB의 세 부분: A *버퍼* 데이터가 저장 됩니다; 여기서는 *상태* 저장 버퍼 하거나 변수를 복원 해야 하는 방법을 나타내는 필드입니다. 하며 *길이* 데이터입니다. (참조 [가져오기 및 설정 데이터 (OLE DB)](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)자세한 정보에 대 한 OLE DB 프로그래머 참조.)
+ ADO OLE DB에 내부적으로 이러한 매크로의 매개 변수를 매핑합니다 **DBBINDING** OLE DB를 만들고 구조체 **접근자** 이동 및 변환 필드 및 변수 간에 데이터를 관리 하는 개체입니다. 구성 데이터를 정의 하는 OLE DB의 세 부분으로 구성 합니다. A *버퍼* 데이터가 저장 됩니다; 여기서는 *상태* 여부를 필드에에서 저장 되었습니다. 버퍼 또는 변수의; 필드를 복원 해야 하는 방법을 나타내는 및 *길이* 데이터. (참조 [가져오기 및 설정 데이터 (OLE DB)](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)자세한 정보에 대 한 OLE DB 프로그래머 참조.)
 
 ## <a name="header-file"></a>헤더 파일
  ADO의 Visual c + + 확장을 사용 하려면 응용 프로그램에서 다음 파일을 포함 합니다.
@@ -58,7 +58,7 @@ ms.locfileid: "51350527"
  자세한 내용은 참조는 [Visual c + + 확장 예제](../../../ado/guide/appendixes/visual-c-extensions-example.md)합니다.
 
 ## <a name="interface-methods"></a>인터페이스 메서드
- 합니다 **IADORecordBinding** 인터페이스에는: **BindToRecordset**에 **AddNew**, 및 **업데이트**합니다. 각 방법의 유일한 인수는에서 파생 된 클래스의 인스턴스에 대 한 포인터 **CADORecordBinding**합니다. 따라서 합니다 **AddNew** 하 고 **업데이트** 메서드는 ADO 메서드 namesakes의 매개 변수를 지정할 수 없습니다.
+ 합니다 **IADORecordBinding** 인터페이스에 세 가지 방법이 있습니다. **BindToRecordset**하십시오 **AddNew**, 및 **업데이트**합니다. 각 방법의 유일한 인수는에서 파생 된 클래스의 인스턴스에 대 한 포인터 **CADORecordBinding**합니다. 따라서 합니다 **AddNew** 하 고 **업데이트** 메서드는 ADO 메서드 namesakes의 매개 변수를 지정할 수 없습니다.
 
 ## <a name="syntax"></a>구문
  **BindToRecordset** 메서드에 연결 합니다 **레코드 집합** C/c + + 변수를 사용 하 여 필드입니다.
@@ -84,7 +84,7 @@ Update(CADORecordBinding *binding)
 
  매크로의 제품군과 같은 고정 길이 데이터에 대 한 제공 됩니다 **adDate** 하거나 **adBoolean**; 숫자 데이터와 같은 **adTinyInt**, **adInteger**, 또는 **adDouble**; 및 가변 길이 데이터와 같은 **adChar**를 **집합이 있으므로 필요** 또는 **adVarBinary**합니다. 모든 숫자 형식, 제외한 **adVarNumeric**, 고정 길이 형식 이기도 합니다. 각 제품군 서로 다른 매개 변수 집합에 있으므로 관련 없는 바인딩 정보를 제외할 수 있습니다.
 
- 자세한 내용은 [부록 a: 데이터 형식](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6), OLE DB 프로그래머 참조입니다.
+ 자세한 내용은 참조 하세요. [부록 a: 데이터 형식](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6), OLE DB 프로그래머 참조입니다.
 
 ### <a name="begin-binding-entries"></a>바인딩 항목 시작
  **BEGIN_ADO_BINDING**(*Class*)
@@ -111,7 +111,7 @@ Update(CADORecordBinding *binding)
 ### <a name="end-binding-entries"></a>바인딩 항목 끝
  **END_ADO_BINDING**()
 
-|매개 변수|설명|
+|매개 변수|Description|
 |---------------|-----------------|
 |*클래스*|C/c + + 변수와 바인딩 항목 정의 되는 클래스입니다.|
 |*Ordinal*|서 수를 1에서 계산 된 **레코드 집합** C/c + + 변수에 해당 하는 필드.|
@@ -129,7 +129,7 @@ Update(CADORecordBinding *binding)
 
  데이터를 설정 하는 경우 *상태* 로 설정할 수 있습니다 **adFldNull** 나타내려면 합니다 **레코드 집합** 필드를 설정 해야 null로 합니다.
 
-|상수|값|설명|
+|상수|값|Description|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Null이 아닌 필드 값을 반환 했습니다.|
 |**adFldBadAccessor**|1|바인딩이 잘못 되었습니다.|
@@ -139,7 +139,7 @@ Update(CADORecordBinding *binding)
 |**adFldSignMismatch**|5|값은 로그인 및 변수 데이터 형식은 부호가 없습니다.|
 |**adFldDataOverFlow**|6|값이 변수 데이터 형식에 저장할 수 있습니다 보다 큽니다.|
 |**adFldCantCreate**|7|알 수 없는 열 형식 및 필드가 이미 열려 있습니다.|
-|**adFldUnavailable**|8|필드 값을 확인할 수 없습니다-기본값은 없습니다 새 할당 되지 않은 필드에서 예를 들어 있습니다.|
+|**adFldUnavailable**|8|필드 값에 결정-예를 들어, 기본값이 사용 하 여 새 할당 되지 않은 필드를 사용할 수 없습니다.|
 |**adFldPermissionDenied**|9|업데이트, 데이터를 쓸 수 있는 권한이 없습니다.|
 |**adFldIntegrityViolation**|10|를 업데이트할 때 필드 값을 열 무결성을 위반 합니다.|
 |**adFldSchemaViolation**|11|를 업데이트할 때 필드 값을 열 스키마를 위반 합니다.|

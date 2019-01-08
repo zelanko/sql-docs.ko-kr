@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSmerge_conflict_publication_article_TSQL
@@ -19,12 +18,12 @@ ms.assetid: dc4490b4-02d8-4dfc-98f5-0cf8de8e11be
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4ab6a6578da86fb7dd1fdb3564cdbf7b854e9b84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 78036e91dd87b3295c9b8c4e6d0a39311133bbdd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843211"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777955"
 ---
 # <a name="msmergeconflictltpublicationgtltarticlegt-transact-sql"></a>MSmerge_conflict_&lt;발행물&gt;_&lt;문서&gt; (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47843211"
 |**ModifiedDate**|**datetime**|충돌이 발생한 시간입니다.|  
 |**origin_datasource_id**|**uniqueidentifier**|해당 행 변경이 취소되었거나 충돌 내용이 손실된 구독입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

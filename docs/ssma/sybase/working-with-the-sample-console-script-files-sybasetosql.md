@@ -12,12 +12,12 @@ ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 1c638a220aa423f9e30c1ef0fb746dd56a77d2a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a87b213731ac0b8cb1b76eb87b1997f86157c6c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798131"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411080"
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>샘플 콘솔 스크립트 파일 작업(SybaseToSQL)
 사용자 참조 및 사용에 대 한 몇 가지 샘플 파일 제품와 함께 제공 되었습니다. 이 섹션에서는 최종 사용자 요구에 맞게 이러한 스크립트를 쉽게 사용자 지정 하는 방법은 설명 합니다.  
@@ -80,11 +80,11 @@ ms.locfileid: "47798131"
   
     대상 스키마에 원본 데이터베이스의 스키마 매핑.  
   
-    **Attribute**  
+    **특성**  
   
     -   `source-schema:` 변환 하는 데 필요한 원본 데이터베이스를 지정 합니다.  
   
-    -   `sql-server-schema`:로 마이그레이션해야 하는 대상 데이터베이스를 지정 합니다.  
+    -   `sql-server-schema`: 로 마이그레이션해야 하는 대상 데이터베이스를 지정 합니다.  
   
     **명령 이름**  
   
@@ -94,9 +94,9 @@ ms.locfileid: "47798131"
   
     -   사용자가 여러 개체를 평가 / 그 데이터베이스 여러 개 지정할 수 있습니다 `metabase-object` 에 설명 된 대로 노드는 `convert-schema` 샘플 콘솔 스크립트 파일의 예제 4 명령입니다.  
   
-    **Attribute**  
+    **특성**  
   
-    `object-name`: 원본 데이터베이스를 지정 합니다. / 이름 변환 하는 데 필요한 개체입니다. 해당 되도록 `object-type` 에 지정 된 개체의 형식에 따라 변경 되는 `object-name`  
+    `object-name`: 원본 데이터베이스 지정/이름 변환 하는 데 필요한 개체입니다. 해당 되도록 `object-type` 에 지정 된 개체의 형식에 따라 변경 되는 `object-name`  
   
     **명령 이름**  
   
@@ -106,7 +106,7 @@ ms.locfileid: "47798131"
   
     -   사용자가 여러 개체를 평가 / 그 데이터베이스 여러 개 지정할 수 있습니다 `metabase-object` 에 설명 된 대로 노드는 `synchronize-target` 샘플 콘솔 스크립트 파일의 명령의 예제 3입니다.  
   
-    **Attribute**  
+    **특성**  
   
     `object-name:` Sql server 데이터베이스 지정/개체 만들어야 하는 데 필요한 이름. 해당 되도록 `object-type` 에 지정 된 개체의 형식에 따라 변경 되는 `object-name`  
   
@@ -118,11 +118,11 @@ ms.locfileid: "47798131"
   
     -   사용자가 여러 개체를 평가 / 그 데이터베이스 여러 개 지정할 수 있습니다 `metabase-object` 에 설명 된 대로 노드는 `migrate-data` 샘플 콘솔 스크립트 파일의 명령의 예 2.  
   
-    **Attribute**  
+    **특성**  
   
     `object-name:` 원본 데이터베이스 지정/마이그레이션해야 하는 데 필요한 이름 테이블입니다. 해당 되도록 `object-type` 에 지정 된 개체의 형식에 따라 변경 되는 `object-name`  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
 [변수 값 파일 만들기 &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
 [서버 연결 파일 만들기 &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
 [보고서 생성 &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)  

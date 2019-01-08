@@ -17,12 +17,12 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9e4e680bc7b22e31bf9da0c3502adf49d3bc8159
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 13a863603353ee47639cd327c8c5eebd6df8e12a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153686"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352611"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>가용성 복제본에 대한 클라이언트 연결 액세스 정보(SQL Server)
   AlwaysOn 가용성 그룹에서 보조 역할 즉, 보조 복제본으로 실행되는 동안 읽기 전용 연결을 허용하도록 하나 이상의 가용성 복제본을 구성할 수 있습니다. 주 역할 즉, 주 복제본으로 실행되는 동안 읽기 전용 연결을 허용하거나 제외하도록 각 가용성 복제본을 구성할 수도 있습니다.  
@@ -118,9 +118,9 @@ ms.locfileid: "48153686"
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>관련 항목  
  [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

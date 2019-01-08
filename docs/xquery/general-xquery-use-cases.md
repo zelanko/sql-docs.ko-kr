@@ -15,12 +15,12 @@ ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cdfb1bf06bd7b1157525ffd2beed10c4c3daf2be
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a3f3e2b41dcda79c21d3b7b4f3dc6ab7ed6573ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659382"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539871"
 ---
 # <a name="general-xquery-use-cases"></a>일반 XQuery 사용 사례
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,8 +33,8 @@ ms.locfileid: "51659382"
  다음 쿼리는 제품 카탈로그 설명에서 제품 모델 ID와 중량(있는 경우)을 반환합니다. 쿼리는 다음 형식의 XML을 생성합니다.  
   
 ```  
-<Product ProductModelID="…">  
-  <Weight>…</Weight>  
+<Product ProductModelID="...">  
+  <Weight>...</Weight>  
 </Product>  
 ```  
   
@@ -95,7 +95,7 @@ WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight
  카탈로그 설명에 소형 전면 사진이 포함된 제품 모델에 대해 이 쿼리는 다음과 같은 형식의 XML을 생성합니다.  
   
 ```  
-< Product ProductModelID="…">  
+< Product ProductModelID="...">  
   <Picture>  
     <Angle>front</Angle>  
     <Size>small</Size>  
@@ -339,7 +339,7 @@ AND     CatalogDescription.exist('declare namespace p1="https://schemas.microsof
   
 -   모든 제품 설명에는 <`Picture`> 요소가 포함되기 때문에 이 경우 결과 집합이 비어 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [계층 구조와 관련 된 XQueries](../xquery/xqueries-involving-hierarchy.md)   
  [XQueries 정렬 포함](../xquery/xqueries-involving-order.md)   
  [XQueries 관계형 데이터 처리](../xquery/xqueries-handling-relational-data.md)   

@@ -20,21 +20,21 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4cc9715d3b4fc6874b992201a1913838ff7f86cf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9e80fcce9d3ecd1e39131da807805691eb59721c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670361"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517618"
 ---
 # <a name="domains-transact-sql"></a>DOMAINS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   현재 데이터베이스에서 현재 사용자가 액세스할 수 있는 각 별칭 데이터 형식에 대해 행 하나를 반환합니다.  
   
- 이러한 뷰에서 정보를 검색할의 정규화 된 이름을 지정 **INFORMATION_SCHEMA. * * * view_name*합니다.  
+ 이러한 뷰에서 정보를 검색할의 정규화 된 이름을 지정 **INFORMATION_SCHEMA.** _view_name_합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|별칭 데이터 형식이 존재하는 데이터베이스입니다.|  
 |**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|별칭 데이터 형식이 들어 있는 스키마의 이름입니다.<br /><br /> **\*\* 중요 \* \***  데이터 형식의 스키마를 확인할 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 형식의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 TYPEPROPERTY 함수를 사용하는 것입니다.|  
@@ -54,7 +54,7 @@ ms.locfileid: "51670361"
 |**DATETIME_PRECISION 에서처럼**|**smallint**|하위 형식 코드입니다 **날짜/시간** 및 ISO **간격** 데이터 형식입니다. 다른 데이터 형식에 대해서는 이 열이 NULL을 반환합니다.|  
 |**DOMAIN_DEFAULT**|**nvarchar (** 4000 **)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 정의 문의 실제 텍스트입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [시스템 뷰 &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [정보 스키마 뷰 &#40;TRANSACT-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.syscharsets &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syscharsets-transact-sql.md)   

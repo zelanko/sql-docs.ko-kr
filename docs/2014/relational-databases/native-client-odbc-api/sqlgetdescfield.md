@@ -14,17 +14,17 @@ ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f3c06bbb9a8390b6ec41aa3e2233feeb10b8ce5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a92b3a9491b8424fb9015fc4d30875fedb38758
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187763"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353004"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 드라이버별 설명자 필드 (IRD) 구현 행 설명자만를 노출 합니다. IRD 내 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설명자 필드는 드라이버별 열 특성을 통해 참조 됩니다. 사용 가능한 드라이버별 설명자 필드의 전체 목록에 대 한 정보를 참조 하세요 [SQLColAttribute](sqlcolattribute.md)합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 IRD(구현 행 설명자) 전용의 드라이버별 설명자 필드를 노출합니다. IRD 내에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설명자 필드는 드라이버별 열 특성을 통해 참조됩니다. 사용 가능한 드라이버별 설명자 필드의 전체 목록에 대한 자세한 내용은 [SQLColAttribute](sqlcolattribute.md)를 참조하십시오.  
   
- 열 식별자 문자열이 포함된 설명자 필드는 대체로 길이가 0인 문자열입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 설명자 필드 값은 모두 읽기 전용입니다.  
+ 열 식별자 문자열이 포함된 설명자 필드는 대체로 길이가 0인 문자열입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]관련 설명자 필드 값은 모두 읽기 전용입니다.  
   
  특성이 같은 보고서 행 수준 특성 (예: SQL_CA_SS_COMPUTE_ID) 결과 집합의 모든 열에 대해 보고 되는 설명자 필드 SQLColAttribute를 사용 하 여 검색 합니다.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "48187763"
  SQLGetDescField는 테이블 반환 매개 변수 및 테이블 반환 매개 변수 열의 확장된 특성에 대 한 값을 가져오는 데 사용할 수 있습니다. 테이블 반환 매개 변수에 대 한 자세한 내용은 참조 하세요. [테이블 반환 매개 변수 &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)합니다.  
   
 ## <a name="sqlgetdescfield-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 SQLGetDescField 지원  
- 새 날짜/시간 형식에 사용할 수 있는 설명자 필드에 대 한 정보를 참조 하세요 [Parameter and Result Metadata](../native-client-odbc-date-time/metadata-parameter-and-result.md)합니다.  
+ 새로운 날짜/시간 형식에 사용할 수 있는 설명자 필드에 대한 자세한 내용은 [Parameter and Result Metadata](../native-client-odbc-date-time/metadata-parameter-and-result.md)를 참조하십시오.  
   
  자세한 내용은 [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  
   
@@ -151,8 +151,8 @@ if (SQLMoreResults(g_hStmt) == SQL_SUCCESS)
     }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [SQLGetDescField 함수](http://go.microsoft.com/fwlink/?LinkId=59351)   
+## <a name="see-also"></a>관련 항목:  
+ [SQLGetDescField 함수](https://go.microsoft.com/fwlink/?LinkId=59351)   
  [ODBC API 구현 정보](odbc-api-implementation-details.md)  
   
   

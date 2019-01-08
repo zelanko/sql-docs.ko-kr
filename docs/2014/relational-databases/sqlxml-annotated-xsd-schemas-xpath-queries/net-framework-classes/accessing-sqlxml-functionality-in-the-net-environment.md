@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - Managed Classes [SQLXML], accessing SQLXML functionality
@@ -17,12 +15,12 @@ ms.assetid: 74744535-2945-414d-9a5b-7e8cc363953a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cab28e4252c1d2a07b3e19c7017f8cb3a4f0396e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4d4235b86669ad6baff481d9e69166b9f22fcf26
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190833"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767945"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>.NET 환경에서 SQLXML 기능 액세스
   이 예에서는 다음 내용을 설명합니다.  

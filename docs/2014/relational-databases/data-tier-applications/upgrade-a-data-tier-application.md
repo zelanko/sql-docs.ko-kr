@@ -24,19 +24,19 @@ ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b4876d7d41a286cae12a39e11d8442d1fbe360f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 553f35862684c7b7c860b70211f903dec253a799
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152703"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774325"
 ---
 # <a name="upgrade-a-data-tier-application"></a>데이터 계층 애플리케이션 업그레이드
   데이터 계층 애플리케이션 업그레이드 마법사 또는 Windows PowerShell 스크립트를 사용하여 현재 배포된 DAC(데이터 계층 애플리케이션)의 스키마와 속성을 새 DAC 버전에 정의된 스키마와 속성과 일치하도록 변경할 수 있습니다.  
   
--   **시작하기 전 주의 사항:**  [DAC 업그레이드 옵션 선택](#ChoseDACUpgOptions), [제한 사항](#LimitationsRestrictions), [필수 구성 요소](#Prerequisites), [보안](#Security), [사용 권한](#Permissions)  
+-   **시작하기 전 주의 사항:**  [DAC 업그레이드 옵션 선택](#ChoseDACUpgOptions), [제한 사항 및 제한 사항](#LimitationsRestrictions)를 [필수 구성 요소](#Prerequisites)를 [보안](#Security), [권한](#Permissions)  
   
--   **DAC를 업그레이드하려면:**  [데이터 계층 응용 프로그램 업그레이드 마법사](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
+-   **DAC를 업그레이드 하려면 사용 합니다.**  [업그레이드 데이터 계층 응용 프로그램 마법사](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  DAC 업그레이드는 기존 데이터베이스의 스키마를 새 DAC 버전에 정의된 스키마와 일치하도록 변경하는 전체 업그레이드 프로세스입니다. 새 버전의 DTS가 DAC 패키지 파일에 제공됩니다. DAC 패키지를 만드는 방법은 [데이터 계층 애플리케이션](data-tier-applications.md)을 참조하세요.  
@@ -44,13 +44,13 @@ ms.locfileid: "48152703"
 ###  <a name="ChoseDACUpgOptions"></a> DAC 업그레이드 옵션 선택  
  전체 업그레이드에는 4가지 업그레이드 옵션이 있습니다.  
   
--   **데이터 손실 무시** – `True`, 일부 작업 데이터의 손실 될 경우에 업그레이드를 진행 합니다. `False`인 경우 이러한 작업은 업그레이드를 종료합니다. 예를 들어, 현재 데이터베이스의 테이블을 새 DAC의 스키마에 없는 경우 테이블 삭제할지 경우 `True` 지정 됩니다. 기본 설정은 `True`합니다.  
+-   **데이터 손실 무시** - `True`, 일부 작업 데이터의 손실 될 경우에 업그레이드를 진행 합니다. `False`인 경우 이러한 작업은 업그레이드를 종료합니다. 예를 들어, 현재 데이터베이스의 테이블이 새로운 DAC의 스키마에 제공되지 않는 경우 `True`가 지정되면 테이블이 삭제됩니다. 기본 설정은 `True`입니다.  
   
--   **변경 내용에 대 한 블록** – `True`, 데이터베이스 스키마가 이전 DAC에 정의 된 것과 다르면 업그레이드가 종료 됩니다. 경우 `False`, 변경이 감지 되는 경우에 업그레이드가 계속 됩니다. 기본 설정은 `False`합니다.  
+-   **변경 내용에 대 한 블록** - `True`, 데이터베이스 스키마가 이전 DAC에 정의 된 것과 다르면 업그레이드가 종료 됩니다. `False`인 경우 변경이 감지되어도 업그레이드가 계속됩니다. 기본 설정은 `False`입니다.  
   
--   **실패 시 롤백** – `True`, 경우 업그레이드가 트랜잭션에 포함 되 오류가 발생 하는 경우 롤백을 시도 됩니다. `False`인 경우 변경이 되면 모든 변경 내용이 커밋되고 오류가 발생하면 데이터베이스의 이전 백업을 복원해야 할 수 있습니다. 기본 설정은 `False`합니다.  
+-   **실패 시 롤백** -경우 `True`, 경우 업그레이드가 트랜잭션에 포함 되 고 오류가 발생 롤백을 시도 됩니다. `False`인 경우 변경이 되면 모든 변경 내용이 커밋되고 오류가 발생하면 데이터베이스의 이전 백업을 복원해야 할 수 있습니다. 기본 설정은 `False`입니다.  
   
--   **Skip Policy Validation** – `True`, DAC 서버 선택 정책이 평가 되지 않습니다. 경우 `False`정책이 평가 되 고 유효성 검사 오류가 있으면 업그레이드가 종료 됩니다. 기본 설정은 `False`합니다.  
+-   **Skip Policy Validation** - `True`, DAC 서버 선택 정책이 평가 되지 않습니다. `False`인 경우 정책이 평가되고 유효성 검사 오류가 있으면 업그레이드가 종료됩니다. 기본 설정은 `False`입니다.  
   
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
  DAC 업그레이드는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4(서비스 팩 4) 이상에서만 수행될 수 있습니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "48152703"
   
 2.  **관리** 노드, **데이터 계층 응용 프로그램** 노드를 차례로 확장합니다.  
   
-3.  업그레이드할 DAC에 대한 노드를 마우스 오른쪽 단추로 클릭한 다음 **데이터 계층 애플리케이션 업그레이드…** 를 선택합니다.  
+3.  업그레이드할 DAC에 대한 노드를 마우스 오른쪽 단추로 클릭한 다음, **데이터 계층 애플리케이션 업그레이드...** 를 선택합니다.  
   
 4.  마법사 대화 상자를 완료합니다.  
   
@@ -178,7 +178,7 @@ ms.locfileid: "48152703"
 ## <a name="options-page"></a>옵션 페이지  
  이 페이지를 사용하여 업그레이드에 대한 실패 시 롤백 옵션을 선택합니다.  
   
- **Rollback on Failure** - 오류가 발생할 경우에 마법사에서 롤백을 시도할 수 있는 트랜잭션에 업그레이드를 포함하려면 이 옵션을 선택합니다. 이 옵션에 대한 자세한 내용은 [DAC 업그레이드 옵션 선택](#ChoseDACUpgOptions)을 참조하세요.  
+ **오류 발생 시 롤백** - 오류가 발생할 경우에 마법사에서 롤백을 시도할 수 있는 트랜잭션에 업그레이드를 포함하려면 이 옵션을 선택합니다. 이 옵션에 대한 자세한 내용은 [DAC 업그레이드 옵션 선택](#ChoseDACUpgOptions)을 참조하세요.  
   
  **기본값 복원** - 기본 설정인 false로 옵션을 반환합니다.  
   
@@ -195,11 +195,11 @@ ms.locfileid: "48152703"
   
  **새로 고침** – 동작 목록을 새로 고칩니다.  
   
- **동작 보고서 저장** – 동작 창의 내용을 HTML 파일로 저장합니다.  
+ **동작 보고서 저장** – 동작 창의 콘텐츠를 HTML 파일로 저장합니다.  
   
  **변경 내용이 손실되더라도 계속합니다.** - 현재 데이터베이스의 개체나 데이터 일부가 새 데이터베이스에 누락될 수 있음을 이해하고 업그레이드를 계속하도록 지정합니다. 변경 내용 보고서를 분석했으며 새 데이터베이스에 필요한 개체나 데이터를 수동으로 전송하는 데 필요한 단계를 이해하는 경우에만 이 단추를 사용해야 합니다. 확실하지 않은 경우에는 **동작 보고서 저장** 단추를 클릭하여 변경 보고서를 저장하고 **스크립트 저장** 단추로 Transact-SQL 스크립트를 저장한 다음 **취소**를 클릭합니다. 보고서와 스크립트를 분석하고 업그레이드를 완료하고 마법사를 다시 시작한 이후에 필요한 개체와 데이터를 전송하는 방법을 계획합니다.  
   
- **스크립트 저장** - 텍스트 파일로 업그레이드를 수행하기 위해 사용될 Transact-SQL 문을 저장합니다.  
+ **스크립트 저장** - 텍스트 파일로 업그레이드를 수행하는 데 사용될 Transact-SQL 문을 저장합니다.  
   
  **기본값 복원** - 기본 설정인 false로 옵션을 반환합니다.  
   
@@ -234,15 +234,15 @@ ms.locfileid: "48152703"
   
 1.  SMO Server 개체를 만든 다음 업그레이드할 DAC를 포함하는 인스턴스로 설정합니다.  
   
-2.  열기는 `ServerConnection` 개체와 동일한 인스턴스에 연결 합니다.  
+2.  `ServerConnection` 개체를 열고 동일한 인스턴스에 연결합니다.  
   
-3.  사용 하 여 `System.IO.File` DAC 패키지 파일을 로드 합니다.  
+3.  `System.IO.File`을 사용하여 DAC 패키지 파일을 로드합니다.  
   
-4.  사용 하 여 `add_DacActionStarted` 고 `add_DacActionFinished` DAC 업그레이드 이벤트를 구독할 수 있습니다.  
+4.  `add_DacActionStarted` 및 `add_DacActionFinished`를 사용하여 DAC 업그레이드 이벤트에 등록합니다.  
   
-5.  설정 된 `DacUpgradeOptions`합니다.  
+5.  `DacUpgradeOptions`를 설정합니다.  
   
-6.  사용 된 `IncrementalUpgrade` DAC를 업그레이드 하는 방법입니다.  
+6.  `IncrementalUpgrade` 메서드를 사용하여 DAC를 업그레이드합니다.  
   
 7.  DAC 패키지 파일을 읽는 데 사용되는 파일 스트림을 닫습니다.  
   

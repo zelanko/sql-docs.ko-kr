@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:69639
@@ -14,12 +14,12 @@ ms.assetid: 90383473-2922-40e5-9682-3850849aa856
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 470bf9691aebfeaf87e99b7c7222bd1a5b29a25c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 781963ddd2011c9e16cf67fdcd878039527546cd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121273"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768985"
 ---
 # <a name="query-definitions-differ-dialog-box-visual-database-tools"></a>쿼리 정의 다름 대화 상자(Visual Database Tools)
   이 대화 상자에는 다이어그램 창과 조건 창에서 쿼리를 그래픽 방식으로 표현할 수 없고 SQL 창에서만 쿼리를 편집할 수 있다는 메시지가 나타납니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "48121273"
 > [!NOTE]  
 >  문이 올바르지만 쿼리 및 뷰 디자이너에서 그래픽 방식으로 나타낼 수 없는 경우 다이어그램 창과 조건 창에 이 문이 표현되지 않더라도 문을 실행할 수 있습니다. 예를 들어, 통합 쿼리를 입력한 경우 문을 실행할 수 있지만 다른 창에는 표현되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [쿼리 및 뷰 디자이너 도구&#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

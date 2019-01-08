@@ -15,12 +15,12 @@ ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5ee7bb13e8a9fa4826297cd0c55b82881aee5296
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 959263ce45c5f15adab12625d8af10148d98dc22
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198083"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520708"
 ---
 # <a name="script-task-editor-script-page"></a>스크립트 태스크 편집기(스크립트 페이지)
   **스크립트 태스크 편집기** 대화 상자의 **스크립트** 페이지를 사용하여 스크립트 속성을 설정하고 스크립트에서 액세스할 수 있는 변수를 지정할 수 있습니다.  
@@ -44,13 +44,13 @@ ms.locfileid: "48198083"
  VSTA 프로젝트에서 메서드 이름을 변경한 경우 **EntryPoint** 속성의 값을 변경해야 합니다.  
   
  **ReadOnlyVariables**  
- 스크립트에 사용할 수 있는 읽기 전용 변수 목록을 쉼표로 구분하여 입력하거나 줄임표 단추(**…**)를 클릭하고 **변수 선택** 대화 상자에서 변수를 선택합니다.  
+ 스크립트에 사용할 수 있는 읽기 전용 변수 목록을 쉼표로 구분하여 입력하거나 줄임표 단추(**...**)를 클릭하고 **변수 선택** 대화 상자에서 변수를 선택합니다.  
   
 > [!NOTE]  
 >  변수 이름은 대/소문자를 구분합니다.  
   
  **ReadWriteVariables**  
- 스크립트에 사용할 수 있는 읽기/쓰기 변수 목록을 쉼표로 구분하여 입력하거나 줄임표 단추(**…**)를 클릭하고 **변수 선택** 대화 상자에서 변수를 선택합니다.  
+ 스크립트에 사용할 수 있는 읽기/쓰기 변수 목록을 쉼표로 구분하여 입력하거나 줄임표 단추(**...**)를 클릭하고 **변수 선택** 대화 상자에서 변수를 선택합니다.  
   
 > [!NOTE]  
 >  변수 이름은 대/소문자를 구분합니다.  
@@ -60,11 +60,11 @@ ms.locfileid: "48198083"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [일반 페이지](general-page-of-integration-services-designers-options.md)   
- [스크립트 태스크 편집기 &#40;일반 페이지&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
+ [General Page](general-page-of-integration-services-designers-options.md)   
+ [스크립트 태스크 편집기&#40;일반 페이지&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
  [식 페이지](expressions/expressions-page.md)   
  [스크립트 태스크 예](extending-packages-scripting-task-examples/script-task-examples.md)   
- [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)   
+ [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)   
  [패키지에서 사용자 정의 변수의 범위 추가, 삭제, 변경](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   
   

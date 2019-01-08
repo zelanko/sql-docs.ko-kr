@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3895097e-28fa-4808-a3a8-ba821b4ba4d4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 042ded6eb375dd77655d423dbf238662ba9093a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dbb56b79e8f800af24b0982debb1bcd72065bba6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195013"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772985"
 ---
 # <a name="how-to-create-the-sql-server-change-database-instance"></a>SQL Server 변경 데이터베이스 인스턴스를 만드는 방법
   이 절차에서는 CDC Designer 콘솔을 사용하여 CDC 인스턴스를 만드는 방법에 대해 설명합니다.  

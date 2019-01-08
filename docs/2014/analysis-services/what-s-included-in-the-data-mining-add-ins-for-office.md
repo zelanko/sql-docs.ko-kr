@@ -13,12 +13,12 @@ ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2652dd6ababc37a3883eef0cf385914a880ebdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7776ed3550d5bfa8caec4c017c46946e31845af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157633"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519093"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>새로운&#39;용 데이터 마이닝 추가 기능의 Office에에서 포함 된
   Office 2013용 데이터 마이닝 추가 기능을 설치할 때 모든 설치 옵션을 선택하면 다음과 같은 도구 모음과 템플릿이 추가됩니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "48157633"
   
 -   [Excel 용 데이터 마이닝 클라이언트 &#40;SQL Server 데이터 마이닝 추가 기능&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   
-     이 추가 기능은 필요할 수 있는 모든 데이터 마이닝 태스크에 대한 도구를 제공합니다. 여기에는 데이터 정리 및 샘플링부터 모델 작성, 모델 정확도 테스트 및 교차 유효성 검사가 포함됩니다. 또한 모델을 관리 및 문서화하고 템플릿에서 DMX 쿼리를 작성할 수 있습니다.  
+     이 추가 기능에 해야 할 수 있습니다-모델 작성, 모델 정확도 테스트, 교차 유효성 검사를 수행 하 여 데이터 정리 및 샘플링에서 거의 모든 데이터 마이닝 태스크에 대 한 도구를 제공 합니다. 또한 모델을 관리 및 문서화하고 템플릿에서 DMX 쿼리를 작성할 수 있습니다.  
   
      경험이 많은 데이터 마이너는 모델 가져오기 및 내보내기, 예측 쿼리 및 내용 쿼리를 비롯하여 SQL Server 데이터 마이닝에서 사용할 수 있는 모든 도구에 액세스할 수 있습니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48157633"
   
     -   \<드라이브 >: \Program 파일 (x86) \Microsoft SQL Server 2014 DM 추가 기능  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝을 시작 하기 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  
   
   

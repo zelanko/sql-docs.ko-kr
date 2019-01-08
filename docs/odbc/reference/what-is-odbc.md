@@ -13,17 +13,17 @@ ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27e153fd72c588f81342d74ce1fc851adc6fda91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc9c7a3d9f75e1863d90b16986234e0036229d01
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622331"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540444"
 ---
 # <a name="what-is-odbc"></a>ODBC란?
 ODBC에 대 한 많은 오해 컴퓨팅 전 세계에 존재합니다. 최종 사용자에 게는 Microsoft® Windows® 제어판에 있는 아이콘 것입니다. 응용 프로그램 프로그래머에 게 데이터 액세스 루틴을 포함 하는 라이브러리는 것입니다. 기타 다양 한 항목 것 적이 기대 하는 모든 데이터베이스 액세스 문제에 대 한 답 합니다.  
   
- 무엇 보다도, ODBC는 데이터베이스 API에 대 한 사양입니다. 이 API는 하나의 DBMS 또는 운영 체제에 독립적입니다. 이 설명서는 C를 사용 하지만 ODBC API는 언어 독립적입니다. ODBC API는 Open Group 및 ISO/IEC는 CLI 사양을 기반으로 합니다. ODBC 3입니다. *x* 완벽 하 게 이러한 사양의 둘 다 구현-이전 버전의 ODBC 예비 버전의 이러한 사양 기반 하지만 완벽 하 게 구현 하지 않았습니다-화면 중심의 개발자가 일반적으로 필요한 기능 추가 스크롤 가능 커서와 같은 데이터베이스 응용 프로그램을 합니다.  
+ 무엇 보다도, ODBC는 데이터베이스 API에 대 한 사양입니다. 이 API는 하나의 DBMS 또는 운영 체제에 독립적입니다. 이 설명서는 C를 사용 하지만 ODBC API는 언어 독립적입니다. ODBC API는 Open Group 및 ISO/IEC는 CLI 사양을 기반으로 합니다. ODBC 3입니다. *x* 완전히-이전 버전의 ODBC 예비 버전의 이러한 사양 기반 되었지만 완전히 구현 하지 않았습니다.-이러한 사양의 둘 다 구현 하 고 화면 중심의 개발자가 일반적으로 필요한 기능 추가 스크롤 가능 커서와 같은 데이터베이스 응용 프로그램을 합니다.  
   
  ODBC API 함수는 특정 DBMS 드라이버의 개발자가 구현 됩니다. 이러한 드라이버는 DBMS에 관계 없이 데이터에 액세스 하는 함수를 호출 하는 응용 프로그램입니다. 드라이버 관리자는 응용 프로그램 및 드라이버 간의 통신을 관리합니다.  
   

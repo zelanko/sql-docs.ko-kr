@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Buffer Node
@@ -13,12 +13,12 @@ ms.assetid: fd3f9f0f-7c38-4cfd-a0c5-ee93dd52d9a5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1191715e4fbd6c055ef408b4e32e75d985c0a510
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e99c6e4f28ecef032ff3b793393e5465740156d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053024"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776165"
 ---
 # <a name="sql-serverbuffer-node"></a>SQL Server:Buffer Node
   **Buffer Node** 개체는 **Buffer Manager** 개체가 제공하는 카운터를 보완하는 카운터를 제공합니다. 이 카운터를 사용하여 각 NUMA(Non-Uniform Memory Access) 노드에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버퍼 풀 페이지 배포를 모니터링할 수 있습니다. 사용 중인 각 NUMA 노드에 대해 하나의 **Buffer Node** 개체 인스턴스가 있습니다. 비-NUMA 아키텍처에는 단일 **Buffer Node** 개체 인스턴스가 있습니다.  

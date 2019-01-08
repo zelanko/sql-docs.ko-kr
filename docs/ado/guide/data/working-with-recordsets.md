@@ -13,15 +13,15 @@ ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 39d8a1bdbc3a56cc03710bc6982b708235c47c45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2378d438c575ad54a89f09c4c9ddcb157c246ffd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762431"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508747"
 ---
 # <a name="working-with-recordsets"></a>레코드 집합 작업
-합니다 **레코드 집합** 개체에 결과 집합의 데이터를 제공 하는 조건에 따라 특정 레코드를 검색 하 고 인덱스를 사용 하 여 해당 검색 작업을 최적화 하기 위해도 순서를 다시 정렬할 수 있는 기본 제공 기능이 있습니다. 일부 경우에는 공급자에 따라 달라 집니다 이러한 기능에 사용할 수 있는지 여부-등 합니다 [인덱스](../../../ado/reference/ado-api/index-property.md) 속성-데이터 원본 자체의 구조입니다.  
+합니다 **레코드 집합** 개체에 결과 집합의 데이터를 제공 하는 조건에 따라 특정 레코드를 검색 하 고 인덱스를 사용 하 여 해당 검색 작업을 최적화 하기 위해도 순서를 다시 정렬할 수 있는 기본 제공 기능이 있습니다. 이러한 기능에 사용할 수 있는지 여부 등 일부 경우에서 공급자에 따라 달라 집니다 합니다 [인덱스](../../../ado/reference/ado-api/index-property.md) 속성-데이터 원본 자체의 구조입니다.  
   
 ## <a name="arranging-data"></a>데이터 정렬  
  데이터를 정렬 하는 가장 효율적인 방법은 자주 하 **레코드 집합** SQL 명령에 결과 반환 하는 데에 ORDER BY 절을 지정 하는 것입니다. 그러나 데이터의 순서를 변경 하려면 있을 **레코드 집합** 는 이미 만들었습니다. 사용할 수는 **정렬** 속성을 설정 하는 행의 순서를 **Recordset** 트래버스 됩니다. 또한 합니다 **필터** 속성 결정 어떤 행이 행을 검색할 때에 액세스할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "47762431"
 ## <a name="finding-a-specific-record"></a>특정 레코드 찾기  
  ADO를 제공 합니다 [찾을](../../../ado/reference/ado-api/find-method-ado.md) 및 [Seek](../../../ado/reference/ado-api/seek-method.md) 의 특정 레코드를 찾기 위한 메서드를 **레코드 집합**합니다. 합니다 **찾을** 메서드는 다양 한 공급자에서 지원 되지만 단일 검색 조건으로 제한 됩니다. 합니다 **Seek** 메서드 여러 조건을 검색을 지원 하지만 대부분의 공급자에서 지원 되지 않습니다.  
   
- 필드에 인덱스의 성능을 크게 향상 시킬 수는 **찾을** 메서드 및 **정렬** 및 **필터** 의 속성을 **레코드 집합** 개체입니다. 에 대 한 내부 인덱스를 만들 수는 **필드** 해당 동적을 설정 하 여 개체 [최적화](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) 속성입니다. 이 동적 속성을 추가 합니다 **속성** 컬렉션을 **필드** 설정 하는 경우 개체를 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성을 **adUseClient**. 이 인덱스는 ADO 내부-다른 용도로 사용 하거나에 액세스할 수 없습니다. 또한이 인덱스는 다릅니다 합니다 [인덱스](../../../ado/reference/ado-api/index-property.md) 의 속성을 **레코드 집합** 개체.  
+ 필드에 인덱스의 성능을 크게 향상 시킬 수는 **찾을** 메서드 및 **정렬** 및 **필터** 의 속성을 **레코드 집합** 개체입니다. 에 대 한 내부 인덱스를 만들 수는 **필드** 해당 동적을 설정 하 여 개체 [최적화](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) 속성입니다. 이 동적 속성을 추가 합니다 **속성** 컬렉션을 **필드** 설정 하는 경우 개체를 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성을 **adUseClient**. 이 인덱스는 ADO 내부-액세스할 수 없거나 다른 용도로 사용 해야 합니다. 또한이 인덱스는 다릅니다 합니다 [인덱스](../../../ado/reference/ado-api/index-property.md) 의 속성을 **레코드 집합** 개체.  
   
  합니다 **찾을** 메서드 (필드) 열에 값을 신속 하 게 찾습니다는 **레코드 집합**합니다. 자주의 속도 향상 시킬 수 있습니다는 **찾을** 메서드를 사용 하 여 열에는 **최적화** 인덱스를 만들려면 속성입니다.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "47762431"
 |--------------|-----------------|  
 |**adFilterAffectedRecords**|마지막 영향을 받는 레코드만 보기에 대 한 필터 **삭제**, **Resync**를 **UpdateBatch**, 또는 **CancelBatch** 호출 합니다.|  
 |**adFilterConflictingRecords**|마지막 일괄 처리 업데이트를 실패 한 레코드를 보기 위한 필터입니다.|  
-|**adFilterFetchedRecords**|현재 캐시에서 레코드를 보기에 대 한 필터-즉, 데이터베이스에서 레코드를 검색에 대 한 마지막 호출 결과입니다.|  
+|**adFilterFetchedRecords**|필터 현재 캐시 기능에서 레코드를 보기 위한 즉, 데이터베이스에서 레코드를 검색에 대 한 마지막 호출 결과입니다.|  
 |**adFilterNone**|현재 필터를 제거 하 고 보기에 대 한 모든 레코드를 복원 합니다.|  
 |**adFilterPendingRecords**|레코드만 보기에 대 한 필터는 변경 되었지만 서버에 아직 보내지 않았습니다. 일괄 업데이트 모드에만 적용 됩니다.|  
   

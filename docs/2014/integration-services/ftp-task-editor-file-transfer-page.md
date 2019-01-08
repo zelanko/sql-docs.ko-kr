@@ -15,12 +15,12 @@ ms.assetid: 37e52220-feb2-474c-ad88-fa1b1059acd4
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9fff9948011cd81df80e71237d8381079e52bbf6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4de5cf0a8e932c30c0eea619b185aa37f0cf875
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087483"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533332"
 ---
 # <a name="ftp-task-editor-file-transfer-page"></a>FTP 태스크 편집기(파일 전송 페이지)
   **FTP 태스크 편집기** 대화 상자의 **파일 전송** 페이지를 사용하여 태스크에서 수행할 FTP 작업을 구성할 수 있습니다.  
@@ -70,13 +70,13 @@ ms.locfileid: "48087483"
  **RemoteVariable**  
  기존 사용자 정의 변수를 선택하거나 \<**새 변수...**>를 클릭하여 사용자 정의 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), 변수 추가  
+ **관련된 항목:** [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md), 변수 추가  
   
 ### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
  기존 FTP 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 연결 관리자를 만듭니다.  
   
- **관련 항목**: [FTP 연결 관리자](connection-manager/ftp-connection-manager.md), [FTP 연결 관리자 편집기](../../2014/integration-services/ftp-connection-manager-editor.md)  
+ **관련된 항목:** [FTP 연결 관리자](connection-manager/ftp-connection-manager.md), [FTP 연결 관리자 편집기](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
 ## <a name="islocalpathvariable-dynamic-options"></a>IsLocalPathVariable 동적 옵션  
   
@@ -84,17 +84,17 @@ ms.locfileid: "48087483"
  **LocalVariable**  
  기존 사용자 정의 변수를 선택하거나 \<**새 변수...**>를 클릭하여 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), 변수 추가  
+ **관련된 항목:** [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md), 변수 추가  
   
 ### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  
  기존 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 연결 관리자를 만듭니다.  
   
- **관련 항목**: [Flat File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **관련 항목**: [플랫 파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [FTP 태스크 편집기 &#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
+ [FTP 태스크 편집기&#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
  [식 페이지](expressions/expressions-page.md)  
   
   

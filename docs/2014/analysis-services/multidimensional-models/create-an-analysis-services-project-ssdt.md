@@ -18,12 +18,12 @@ ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 22df70966fe1bac4f9a825a97c7998d6900af02a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: ccf355df8a26136a72b48c4b81a1953d84d90186
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168103"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529639"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Analysis Services 프로젝트 만들기(SSDT)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 템플릿을 사용하거나 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 데이터베이스 가져오기 마법사를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 내용을 읽어서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 정의할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 현재 로드된 솔루션이 없는 경우 새 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 만들면 자동으로 새 솔루션이 생성됩니다. 로드된 솔루션이 있으면 새로운 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트가 기존 솔루션에 추가됩니다. 솔루션을 개발하는 가장 좋은 방법은 애플리케이션 데이터 유형별로 다른 개별 프로젝트를 만들어 프로젝트와 관련 있는 단일 솔루션을 사용하는 것입니다. 예를 들어 동일한 비즈니스 애플리케이션에 사용되는 Integration Services 패키지, Analysis Services 데이터베이스 및 Reporting Services 보고서에 대해 별도의 프로젝트를 포함하는 단일 솔루션을 사용할 수 있습니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "48168103"
   
 5.  기존 솔루션에 새 프로젝트를 추가하려면 **솔루션** 드롭다운 목록에서 **솔루션에 추가**를 선택합니다.  
   
-     —또는—  
+     -또는-  
   
      새 솔루션을 만들려면 **솔루션** 드롭다운 목록에서 **새 솔루션 만들기**를 선택합니다. 새 솔루션용 폴더를 새로 만들려면 **솔루션용 디렉터리 만들기**를 선택합니다. **솔루션 이름**에 새 솔루션의 이름을 입력합니다.  
   
@@ -161,8 +161,8 @@ ms.locfileid: "48168103"
 ||마이닝 구조|데이터 마이닝 마법사를 시작하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 새 마이닝 구조 및 관련 마이닝 모델을 추가합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 프로젝트 속성 구성 &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
- [Analysis Services 프로젝트 빌드 &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
- [Analysis Services 프로젝트 배포 &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
+ [Analysis Services 프로젝트 속성 구성&#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
+ [Analysis Services 프로젝트 빌드&#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
+ [Analysis Services 프로젝트 배포&#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

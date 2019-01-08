@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 278780dd8457a90a6ee2fba632216bd1697ec0f7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4415c5dba3382e636488ac94408f163c8e54dc6f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021490"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539020"
 ---
-# <a name="attribute-properties---modify-the-keycolumn-property"></a>속성을 특성-KeyColumn 속성 수정
+# <a name="attribute-properties---modify-the-keycolumn-property"></a>특성 속성 - KeyColumn 속성 수정
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   특성의 **KeyColumns** 속성을 수정할 수 있습니다. 예를 들어 단일 키 대신 복합 키를 특성 키로 지정할 수 있습니다.  
   
@@ -28,9 +28,9 @@ ms.locfileid: "34021490"
   
     -   **솔루션 탐색기**의 **차원** 폴더에서 차원을 마우스 오른쪽 단추로 클릭한 다음 **열기** 또는 **뷰 디자이너**를 클릭합니다.  
   
-         —또는—  
+         -또는-  
   
-    -   큐브 디자이너에서에 **큐브 구조** 탭에서 큐브 차원을 확장 하 고는 **차원** 창을 **편집 \<차원 >** 합니다.  
+    -   큐브 디자이너에서에 **큐브 구조** 탭에서 큐브 차원을 확장 하 고는 **차원** 창을 열고 **편집 \<차원 >** 합니다.  
   
 3.  **차원 구조** 탭의 **특성** 창에서 수정할 **KeyColumns** 속성이 있는 특성을 클릭합니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "34021490"
   
 8.  키 열의 순서를 변경하려면 열을 선택한 다음 **위로** 또는 **아래로** 단추를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [차원 특성 속성 참조](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

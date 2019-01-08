@@ -34,12 +34,12 @@ ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 606d3e19334e37ee418d4e99472845d24344d452
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 60b3e29ae94c4dcf5d136bcc01bf291a9a6118fe
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148093"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510545"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>데이터 원본 및 바인딩(SSAS 다차원)
   큐브, 차원 및 기타 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체는 데이터 원본에 바인딩될 수 있습니다. 데이터 원본은 다음 개체 중 하나일 수 있습니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "48148093"
   
  데이터 원본의 표현 방법은 데이터 원본의 형식에 따라 달라집니다. 예를 들어 관계형 데이터 원본은 연결 문자열로 구분됩니다. 데이터 원본에 대한 자세한 내용은 [Data Sources in Multidimensional Models](data-sources-in-multidimensional-models.md)를 참조하세요.  
   
- 사용되는 데이터 원본에 관계없이 DSC(데이터 원본 뷰)에는 데이터 원본에 대한 메타데이터가 포함됩니다. 따라서 큐브 또는 다른 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체에 대한 바인딩은 DSV에 대한 바인딩으로 표현됩니다. 이러한 바인딩은 논리 개체(데이터 원본에 물리적으로는 존재하지 않는 뷰, 계산된 열, 관계 등)에 대한 바인딩을 포함할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 식을 DSV로 캡슐화하는 계산 열을 추가한 다음 해당 OLAP 측정값을 DSV의 이 열에 바인딩합니다. DSV에 대한 자세한 내용은 [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)를 참조하십시오.  
+ 사용되는 데이터 원본에 관계없이 DSC(데이터 원본 뷰)에는 데이터 원본에 대한 메타데이터가 포함됩니다. 따라서 큐브 또는 다른 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체에 대한 바인딩은 DSV에 대한 바인딩으로 표현됩니다. 이러한 바인딩은 논리 개체-뷰, 계산된 열 및 데이터 원본에 물리적으로 존재 하지 않는 관계와 같은 개체에 대 한 바인딩이 포함할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 식을 DSV로 캡슐화하는 계산 열을 추가한 다음 해당 OLAP 측정값을 DSV의 이 열에 바인딩합니다. DSV에 대한 자세한 내용은 [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md)를 참조하십시오.  
   
  각 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체는 자체적인 방식으로 데이터 원본에 바인딩됩니다. 또한 이러한 개체에 대한 데이터 바인딩과 데이터 원본 정의는 데이터 바인딩된 개체(예: 차원)의 정의와 인라인으로 제공되거나 별도의 정의 집합으로 아웃오브 라인으로 제공될 수 있습니다.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "48148093"
 |Date|배정밀도 부동 소수점 숫자로 저장되는 날짜 데이터입니다. 정수 부분은 1899년 12월 30일 이후의 날짜 수이고, 소수 부분은 하루를 분수로 표시한 수입니다. 이 데이터 형식은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 의 DateTime 데이터 형식 및 OLE DB의 DBTYPE_DATE 데이터 형식에 매핑됩니다.|  
 |Double|-1.79E+308부터 1.79E+308 사이의 배정밀도 부동 소수점 숫자입니다. 이 데이터 형식은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 의 Double 데이터 형식 및 OLE DB의 DBTYPE_R8 데이터 형식에 매핑됩니다.|  
 |정수|부호 있는 32비트 정수입니다. 이 데이터 형식은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 의 Int32 데이터 형식 및 OLE DB의 DBTYPE_I4 데이터 형식에 매핑됩니다.|  
-|단일|-3.40E+38부터 3.40E+38 사이의 단정밀도 부동 소수점 숫자입니다. 이 데이터 형식은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 의 Single 데이터 형식 및 OLE DB의 DBTYPE_R4 데이터 형식에 매핑됩니다.|  
+|Single|-3.40E+38부터 3.40E+38 사이의 단정밀도 부동 소수점 숫자입니다. 이 데이터 형식은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 의 Single 데이터 형식 및 OLE DB의 DBTYPE_R4 데이터 형식에 매핑됩니다.|  
 |SmallInt|부호 있는 16비트 정수입니다. 이 데이터 형식은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 의 Int16 데이터 형식 및 OLE DB의 DBTYPE_I2 데이터 형식에 매핑됩니다.|  
-|TinyInt|부호 있는 8비트 정수입니다. 이 데이터 형식은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 의 SByte 데이터 형식 및 OLE DB의 DBTYPE_I1 데이터 형식에 매핑됩니다.<br /><br /> 참고: 데이터 원본에서 데이터 형식이 tinyint인 필드가 포함되어 있고, AutoIncrement 속성이 True로 설정되어 있는 경우 이러한 필드는 데이터 원본 뷰에서 정수로 변환됩니다.|  
+|TinyInt|부호 있는 8비트 정수입니다. 이 데이터 형식은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 의 SByte 데이터 형식 및 OLE DB의 DBTYPE_I1 데이터 형식에 매핑됩니다.<br /><br /> 참고: 데이터 원본에 데이터 형식이 tinyint인 필드가 포함되어 있고, AutoIncrement 속성이 True로 설정되어 있는 경우 이러한 필드는 데이터 원본 뷰에서 정수로 변환됩니다.|  
 |UnsignedBigInt|부호 없는 64비트 정수입니다. 이 데이터 형식은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 의 UInt64 데이터 형식 및 OLE DB의 DBTYPE_UI8 데이터 형식에 매핑됩니다.|  
 |UnsignedInt|부호 없는 32비트 정수입니다. 이 데이터 형식은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 의 UInt32 데이터 형식 및 OLE DB의 DBTYPE_UI4 데이터 형식에 매핑됩니다.|  
 |UnsignedSmallInt|부호 없는 16비트 정수입니다. 이 데이터 형식은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 의 UInt16 데이터 형식 및 OLE DB의 DBTYPE_UI2 데이터 형식에 매핑됩니다.|  
@@ -76,20 +76,20 @@ ms.locfileid: "48148093"
  데이터 원본으로부터 받은 모든 데이터는 대개 처리 중에 바인딩에 지정된 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 형식으로 변환됩니다. String을 Int로 변환할 때와 같이 변환을 수행할 수 없는 경우 오류가 발생합니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서는 일반적으로 바인딩의 데이터 형식을 데이터 원본의 유형에 가장 일치하는 형식으로 설정합니다. 예를 들어 SQL 유형의 Date, DateTime, SmallDateTime, DateTime2, DateTimeOffset은 [!INCLUDE[ssAS](../../includes/ssas-md.md)] Date에 매핑되고 SQL 유형의 Time은 String에 매핑됩니다.  
   
 ## <a name="bindings-for-dimensions"></a>차원에 대한 바인딩  
- 차원의 각 특성은 DSV의 열에 바인딩됩니다. 차원의 모든 특성은 하나의 데이터 원본에서 가져와야 합니다. 그러나 특성은 다른 테이블의 열에 바인딩될 수 있습니다. 테이블 간의 관계는 DSV에 정의됩니다. 동일한 테이블에 대해 두 개 이상의 관계 집합이 존재하는 경우 DSV에 ‘별칭’ 테이블 역할을 수행할 명명된 쿼리를 사용해야 할 수 있습니다. DSV에서 식과 필터는 명명된 계산 및 명명된 쿼리를 사용하여 정의됩니다.  
+ 차원의 각 특성은 DSV의 열에 바인딩됩니다. 차원의 모든 특성은 하나의 데이터 원본에서 가져와야 합니다. 그러나 특성은 다른 테이블의 열에 바인딩될 수 있습니다. 테이블 간의 관계는 DSV에 정의됩니다. 동일한 테이블에 둘 이상의 관계 집합이 있는 경우 역할 '별칭' 테이블을 DSV의 명명 된 쿼리를 할 수 있습니다. DSV에서 식과 필터는 명명된 계산 및 명명된 쿼리를 사용하여 정의됩니다.  
   
 ## <a name="bindings-for-measuregroups-measures-and-partitions"></a>MeasureGroups, Measures 및 Partitions에 대한 바인딩  
  각 측정값 그룹에는 다음과 같은 기본 바인딩이 있습니다.  
   
 -   측정값 그룹은 DSV의 테이블에 바인딩됩니다(예: `MeasureGroup.Source`).  
   
--   각 측정값은 해당 테이블의 열에 바인딩됩니다 (예를 들어 `Measure.ValueColumn.Source`).  
+-   각 측정값은 이 테이블의 열에 바인딩됩니다(예: `Measure.ValueColumn.Source`).  
   
 -   각 측정값 그룹 차원에는 측정값 그룹의 세분성을 정의하는 *세분성 특성* 집합이 있습니다. 이러한 각 특성은 특성 키를 포함하는 팩트 테이블의 열에 바인딩되어야 합니다. 세분성 특성에 대한 자세한 내용은 이 항목의 뒷부분에 있는 MeasureGroup 세분성 특성을 참조하십시오.  
   
  이러한 기본 바인딩은 파티션별로 선택적으로 재정의할 수 있습니다. 각 파티션은 다른 데이터 원본, 테이블이나 쿼리 이름, 또는 필터 식을 지정할 수 있습니다. 가장 일반적인 분할 전략은 동일한 데이터 원본을 사용하여 파티션별로 테이블을 재정의하는 것입니다. 대안으로는 파티션별로 다른 필터를 적용하거나 데이터 원본을 바꾸는 것이 있습니다.  
   
- 기본 데이터 원본은 DSV에 정의되어 관계의 세부 정보를 포함한 스키마 정보를 제공해야 합니다. 파티션 수준에서 정의되는 추가 테이블 또는 쿼리는 DSV에 나열되지 않아도 되지만 측정값 그룹에 대해 정의된 기본 테이블과 같은 스키마를 갖거나 최소한 측정값 또는 세분성 특성에 사용된 모든 열을 포함해야 합니다. 측정값 및 세분성 특성별로 세분화된 바인딩은 파티션 수준에서 재정의할 수 없으며 측정값 그룹에 대해 정의된 것과 동일한 열에 있는 것으로 가정됩니다. 따라서 데이터 원본을 사용 하는 경우는 실제로 있는 다른 스키마를는 `TableDefinition` 쿼리 정의 파티션 결과 측정값 그룹에서 사용 된 스키마와 동일한 스키마 여야 합니다.  
+ 기본 데이터 원본은 DSV에 정의되어 관계의 세부 정보를 포함한 스키마 정보를 제공해야 합니다. 파티션 수준에서 정의되는 추가 테이블 또는 쿼리는 DSV에 나열되지 않아도 되지만 측정값 그룹에 대해 정의된 기본 테이블과 같은 스키마를 갖거나 최소한 측정값 또는 세분성 특성에 사용된 모든 열을 포함해야 합니다. 측정값 및 세분성 특성별로 세분화된 바인딩은 파티션 수준에서 재정의할 수 없으며 측정값 그룹에 대해 정의된 것과 동일한 열에 있는 것으로 가정됩니다. 따라서 파티션에서 실제로 다른 스키마를 가진 데이터 원본을 사용하는 경우 파티션에 대해 정의된 `TableDefinition` 쿼리의 결과는 측정값 그룹에 의해 사용된 스키마와 동일한 스키마여야 합니다.  
   
 ### <a name="measuregroup-granularity-attributes"></a>MeasureGroup 세분성 특성  
  측정값 그룹의 세분성이 데이터베이스에 알려진 세분성에 일치하고 팩트 테이블에서 차원 테이블로 직접적인 관계가 있는 경우 세분성 특성은 적절한 외래 키 열 또는 팩트 테이블의 열에만 바인딩되면 됩니다. 예를 들어 다음 팩트 테이블 및 차원 테이블을 살펴보십시오.  
@@ -108,7 +108,7 @@ ms.locfileid: "48148093"
   
  주문된 제품별로 분석해 보면 Sales 차원 역할의 Ordered Product의 경우 Product 세분성 특성은 Sales.OrderedProductID에 바인딩될 것입니다.  
   
- 한편 `GranularityAttributes`가 팩트 테이블의 열로 존재하지 않는 경우도 있습니다. 예를 들어는 `GranularityAttributes` 다음과 같은 경우에는 열으로 존재 하지 않을 수 있습니다.  
+ 한편 `GranularityAttributes`가 팩트 테이블의 열로 존재하지 않는 경우도 있습니다. 예를 들어 `GranularityAttributes`는 다음과 같은 경우에는 열로 존재하지 않을 것입니다.  
   
 -   OLAP 세분성이 원본의 세분성보다 성긴 경우.  
   
@@ -156,18 +156,18 @@ ms.locfileid: "48148093"
   
  OLAP 마이닝 모델에서 데이터 바인딩은 다음과 같은 규칙을 따릅니다.  
   
--   해당 큐브의 차원의 특성 큐브에서 측정값에 바인딩된 각 비중첩 테이블 열 (지정 된 `CubeDimension` 차원 역할의 경우 모호함 없애기 위해), 또는 차원의 특성.  
+-   각 비중첩 테이블 열은 큐브의 측정값, 해당 큐브의 차원의 특성(차원 역할의 경우 모호함을 없애기 위해 `CubeDimension` 지정), 또는 차원의 특성에 바인딩됩니다.  
   
 -   각 중첩 테이블 열은 `CubeDimension`에 바인딩됩니다. 즉 차원에서 관련된 큐브로, 또는 드물지만 중첩 테이블의 경우 큐브에서 차원 중 하나로 이동하는 방법을 정의합니다.  
   
 ## <a name="out-of-line-bindings"></a>아웃오브 라인 바인딩  
  아웃오브 라인 바인딩을 사용하여 명령을 실행하는 동안 일시적으로 기존 데이터 바인딩을 변경할 수 있습니다. 아웃오브 라인 바인딩은 명령에 포함되며 지속되지 않는 바인딩을 지칭합니다. 아웃오브 라인 바인딩은 이러한 특정 명령이 실행되는 동안에만 적용됩니다. 반면 인라인 바인딩은 ASSL 개체 정의에 포함되며 서버 메타데이터 내에서 개체 정의와 함께 지속됩니다.  
   
- ASSL 허용 아웃오브 라인 바인딩 중 하나를 지정 해야는 `Process` 명령, 또는 일괄 처리에 없으면를 `Batch` 명령입니다. 아웃오브 라인 바인딩이 `Batch` 명령에 지정되는 경우 `Batch` 명령에 지정되는 모든 바인딩은 일괄 처리의 모든 `Process` 명령이 실행되는 새 바인딩 컨텍스트를 생성합니다. 이 새 바인딩 컨텍스트에는 `Process` 명령으로 인해 간접적으로 처리되는 개체가 포함됩니다.  
+ ASSL에서는 `Process` 명령, 또는 일괄 처리에 포함되지 않은 경우 `Batch` 명령에서 아웃오브 라인 바인딩 지정이 허용됩니다. 아웃오브 라인 바인딩이 `Batch` 명령에 지정되는 경우 `Batch` 명령에 지정되는 모든 바인딩은 일괄 처리의 모든 `Process` 명령이 실행되는 새 바인딩 컨텍스트를 생성합니다. 이 새 바인딩 컨텍스트에는 `Process` 명령으로 인해 간접적으로 처리되는 개체가 포함됩니다.  
   
- 명령에 아웃오브 라인 바인딩이 지정되면 이러한 바인딩은 지정된 개체에 대한 지속형 DDL에 포함된 인라인 바인딩을 다시 정의합니다. 이러한 처리 된 개체에서 직접 명명 된 개체를 포함할 수 있습니다는 `Process` 명령 또는 해당 처리가 처리의 일부로 자동으로 시작 하는 다른 개체를 포함할 수 있습니다.  
+ 명령에 아웃오브 라인 바인딩이 지정되면 이러한 바인딩은 지정된 개체에 대한 지속형 DDL에 포함된 인라인 바인딩을 다시 정의합니다. 이렇게 처리되는 개체에는 `Process` 명령에서 직접 명명된 개체 또는, 처리의 일부로 자동으로 처리 작업이 시작되는 기타 개체가 포함될 수 있습니다.  
   
- 아웃오브 라인 바인딩은 옵션인 `Bindings` 컬렉션 개체를 처리 명령으로 포함하여 지정합니다. 선택적 `Bindings` 컬렉션에는 다음 요소를 포함 합니다.  
+ 아웃오브 라인 바인딩은 옵션인 `Bindings` 컬렉션 개체를 처리 명령으로 포함하여 지정합니다. 옵션인 `Bindings` 컬렉션에는 다음 요소가 포함됩니다.  
   
 |속성|카디널리티|형식|Description|  
 |--------------|-----------------|----------|-----------------|  
@@ -180,12 +180,12 @@ ms.locfileid: "48148093"
 ### <a name="definition-of-the-out-of-line-binding-type"></a>아웃오브 라인 바인딩 유형 정의  
  아웃오브 라인 `Bindings` 컬렉션 내에서 ASSL은 각 `Binding`당 여러 개체에 대한 바인딩 컬렉션을 허용합니다. 각 `Binding`에는 확장 개체 참조가 있습니다. 확장 개체 참조는 개체 참조와 비슷하지만 보조 개체(예: 차원 특성 및 측정값 그룹 특성)도 참조할 수 있습니다. 이 개체에 일반적인 플랫 형식을 취합니다 합니다 `Object` 요소에 `Process` 명령을 제외한 합니다 \< *개체*>\<*개체*> 태그가 제공 되지 않습니다.  
   
- 바인딩이 지정 되는 각 개체 형식의 XML 요소로 식별 됩니다 \< *개체*> ID (예를 들어 `DimensionID`). 개체를 확인 한 후 폼을 사용 하 여 구체적으로 최대한 \< *개체*>는 일반적으로는 바인딩이 지정 되는 요소를 식별 하는 다음 ID `Source`. 일반적인 경우에는 `Source` 가 `DataItem`, 하는 경우에 해당 특성의 열 바인딩이 합니다. 이 경우에는 `DataItem` 태그를 지정하지 않고 바인딩할 열에 바로 있는 것처럼 `Source` 속성만 지정합니다.  
+ 바인딩이 지정 되는 각 개체 형식의 XML 요소로 식별 됩니다 \< *개체*> ID (예를 들어 `DimensionID`). 개체를 확인 한 후 폼을 사용 하 여 구체적으로 최대한 \< *개체*>는 일반적으로는 바인딩이 지정 되는 요소를 식별 하는 다음 ID `Source`. 한 가지 일반적인 경우는 `Source`가 `DataItem`의 속성인 경우로, 특성의 열 바인딩이 이에 해당합니다. 이 경우에는 `DataItem` 태그를 지정하지 않고 바인딩할 열에 바로 있는 것처럼 `Source` 속성만 지정합니다.  
   
  `KeyColumns`는 `KeyColumns` 컬렉션 내의 순서에 의해 식별됩니다. 여기에서는 예를 들어 특성의 첫 번째와 세 번째 키 열만 지정할 수는 없습니다. 두 번째 키 열을 건너뛴다는 점을 나타낼 방법이 없기 때문입니다. 모든 키 열은 차원 특성에 대한 아웃오브 라인 바인딩에 있어야 합니다.  
   
  `Translations`는 ID가 없지만 언어에 의해 의미상으로 식별됩니다. 따라서 `Translations` 내의 `Binding`는 언어 식별자를 포함해야 합니다.  
   
- 하나의 추가 요소 내에서 사용할 수는 `Binding` DDL에 직접 존재 하지 않는 `ParentColumnID`, 데이터 마이닝을 위한 중첩된 테이블에 사용 되는 합니다. 이 경우 바인딩이 제공되는 중첩 테이블에 있는 부모 열을 식별해야 합니다.  
+ `Binding`내에 허용되는, DDL에 직접 존재하지 않는 한 가지 추가 요소는 `ParentColumnID`로, 이 요소는 데이터 마이닝을 위한 중첩 테이블에 사용됩니다. 이 경우 바인딩이 제공되는 중첩 테이블에 있는 부모 열을 식별해야 합니다.  
   
   

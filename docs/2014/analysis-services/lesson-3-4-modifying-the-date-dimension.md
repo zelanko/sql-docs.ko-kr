@@ -11,12 +11,12 @@ ms.assetid: 4689d780-4bf6-4cf8-8fde-eb3f15dd668a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6450b85b00906facfb291d8085d729474577bd32
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 77d37fff5b22e15656ef2eb76f33ada44572ba4c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753580"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526114"
 ---
 # <a name="modifying-the-date-dimension"></a>Date 차원 수정
   이 항목의 태스크에서는 사용자 정의 계층을 만들고 Date, Month, Calendar Quarter 및 Calendar Semester 특성에 대해 표시되는 멤버 이름을 변경합니다. 또한 특성에 대한 복합 키를 정의하고 차원 멤버의 정렬 순서를 제어하고 특성 관계도 정의합니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "50753580"
   
 3.  속성 창이 열려 있지 않으면 속성 창을 열고 제목 표시줄의 **자동 숨기기** 단추를 클릭하여 열린 상태를 유지합니다.  
   
-4.  창 아래쪽에서 **NameColumn** 속성 필드를 클릭한 다음 줄임표 단추(**…**)를 클릭하여 **이름 열** 대화 상자를 엽니다.  
+4.  클릭 합니다 **NameColumn** 속성 창 아래쪽에 있는 필드 및 줄임표를 클릭 한 다음 (**...** ) 버튼을 클릭 하 여 **이름 열** 대화 상자.  
   
 5.  선택 `SimpleDate` 맨 아래에 **원본 열** 목록을 연 다음 클릭 **확인**합니다.  
   

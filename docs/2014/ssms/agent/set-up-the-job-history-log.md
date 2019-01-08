@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], history
@@ -15,19 +15,19 @@ ms.assetid: 018e5c49-d3a0-4504-851a-f70996a34bb7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0741180bb126d45ad99512a596fbab66c9a8047f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 613c0ccae7be912bd3bec63905b838b7f07b59b0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209123"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812795"
 ---
 # <a name="set-up-the-job-history-log"></a>Set Up the Job History Log
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 기록 로그를 설정하는 방법에 대해 설명합니다.  
   
 -   **시작하기 전 주의 사항:**  [보안](#Security)  
   
--   **작업 기록 로그 설정에 사용되는 도구:**  [SQL Server Management Studio](#SSMS)  
+-   **설정 작업 기록 로그를 사용 하 여:**  다른 도구는 [SQL Server Management Studio](#SSMS)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   

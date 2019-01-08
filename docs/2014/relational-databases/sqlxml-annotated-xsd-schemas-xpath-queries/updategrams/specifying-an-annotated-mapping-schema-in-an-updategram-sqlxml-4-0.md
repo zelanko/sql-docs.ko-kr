@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas, updategrams
@@ -22,12 +20,12 @@ ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f9ea8423567f7ad8f5dcfff4ee0c57d37c87fe98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 135ca9d30b6baa9d5f358409c9a49fb3d0fc61e2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112949"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772166"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Updategram에 주석이 추가된 매핑 스키마 지정(SQLXML 4.0)
   이 항목에서는 Updategram에 지정된 매핑 스키마(XSD 또는 XDR)를 사용하여 업데이트를 처리하는 방법에 대해 설명합니다. Updategram에서 updategram의 특성과 해당 요소에서 테이블 및 열에 매핑할 때 사용할 주석이 추가 된 매핑 스키마의 이름을 제공할 수 있습니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. Updategram에 매핑 스키마가 지정되어 있으면 Updategram에 지정된 요소 및 특성 이름이 매핑 스키마의 요소와 특성에 매핑되어야 합니다.  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerCommands
@@ -12,12 +12,12 @@ ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46f40b9da6e127ab295848aa67f9b8588e33fdb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd2aeedcfcb9c4888e730f94c73aabe2cdd6607d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172163"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772735"
 ---
 # <a name="options-sql-server-object-explorer-commands"></a>옵션 (SQL Server 개체 탐색기-명령)
   개체 탐색기에서 테이블이나 뷰를 마우스 오른쪽 단추로 클릭하면 테이블의 행을 표시하는 다음 두 가지 옵션이 나타납니다.  

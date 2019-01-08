@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58c86f9eed16b83d9cc63c54f907f50dda1aab4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd6b9c144df14f9480ff825726fc918deb86f6cf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702721"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516284"
 ---
 # <a name="sysexternaltables-transact-sql"></a>sys.external_tables (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47702721"
 |reject_type|**tinyint**|HADOOP 외부 데이터 원본에 대해 외부 테이블의 경우이 방법이 거부 된 행 외부 데이터를 쿼리할 때 계산 됩니다.|값-거부 된 행의 수입니다.<br /><br /> 비율-거부 된 행의 비율입니다.|  
 |reject_value|**float**|HADOOP 외부 데이터 원본에 대해 외부 테이블.<br /><br /> 에 대 한 *reject_type =* 값 쿼리 실패 하기 전까지 허용 거부 행의 수입니다.<br /><br /> 에 대 한 *reject_type* = percentage, 쿼리에 실패 하기 전까지 허용 거부 행의 비율입니다.||  
 |reject_sample_value|**int**|에 대 한 *reject_type* = percentage, 거부 된 행의 비율을 계산 하기 전에 로드, 성공 또는 실패를 하는 행의 수입니다.|경우에는 NULL reject_type = VALUE입니다.|  
-|distribution_type|**int**|SHARD_MAP_MANAGER 외부 데이터 원본에 대해 외부 테이블에 대 한 기본 테이블 내 행의 데이터 분포입니다.|0 – Sharded<br /><br /> 1 – 복제<br /><br /> 2-라운드 로빈|  
+|distribution_type|**int**|SHARD_MAP_MANAGER 외부 데이터 원본에 대해 외부 테이블에 대 한 기본 테이블 내 행의 데이터 분포입니다.|0-분할<br /><br /> 1-복제<br /><br /> 2-라운드 로빈|  
 |distribution_desc|**nvarchar(120)**|SHARD_MAP_MANAGER 외부 데이터 원본에 대해 외부 테이블에 대 한 문자열로 표시 되는 배포 형식입니다.||  
 |sharding_column_id|**int**|SHARD_MAP_MANAGER 외부 데이터 원본 및 sharded 배포를 통해 외부 테이블에 대 한 분할 키 값을 포함 하는 열의 열 ID입니다.||  
 |remote_schema_name|**sysname**|SHARD_MAP_MANAGER 외부 데이터 원본에 대해 외부 테이블에 대 한 기본 테이블 (다른 경우 외부 테이블 정의 되어 있는 스키마) 원격 데이터베이스에 위치한 곳 스키마입니다.||  

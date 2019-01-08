@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.utility.remove.f1
@@ -12,12 +12,12 @@ ms.assetid: ae1d126a-46d2-47bf-b339-17c743df6491
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8a35c00e0177e9ea5086ef3a7cc13ab2e84746c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49459743e2eb8af64b1c41910c660f713dbdb2a5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175183"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772115"
 ---
 # <a name="remove-an-instance-of-sql-server-from-the-sql-server-utility"></a>SQL Server 유틸리티에서 SQL Server 인스턴스 제거
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스를 제거하려면 다음 단계를 수행하세요. 이 절차를 수행하면 UCP 목록 뷰에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 제거되며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 데이터 컬렉션이 중지됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 제거되는 것은 아닙니다.  
@@ -27,9 +27,9 @@ ms.locfileid: "48175183"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 유틸리티 탐색기에서 **관리되는 인스턴스**를 클릭합니다. 유틸리티 탐색기 탐색 창에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스 목록 뷰를 살펴봅니다.  
   
-2.  목록 뷰의 **SQL Server 인스턴스 이름** 열에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 제거할 인스턴스를 선택합니다. 제거할 인스턴스를 마우스 오른쪽 단추로 클릭하고 **관리되는 인스턴스 제거…** 를 선택합니다.  
+2.  목록 뷰의 **SQL Server 인스턴스 이름** 열에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 제거할 인스턴스를 선택합니다. 제거할 인스턴스를 마우스 오른쪽 단추로 클릭하고 **Managed Instance 제거...** 를 선택합니다.  
   
-3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 관리자 권한이 있는 자격 증명을 지정합니다. **연결…** 을 클릭하고 **서버에 연결** 대화 상자의 정보를 확인한 다음 **연결**을 클릭합니다. **관리되는 인스턴스 제거** 대화 상자에 로그인 정보가 표시됩니다.  
+3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 관리자 권한이 있는 자격 증명을 지정합니다. 클릭 **연결 하는 중...** , 정보를 확인 합니다 **서버에 연결** 대화 상자, 클릭 **연결**합니다. **관리되는 인스턴스 제거** 대화 상자에 로그인 정보가 표시됩니다.  
   
 4.  작업을 수행하려면 **확인**을 클릭합니다. 작업을 취소하려면 **취소**를 클릭합니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48175183"
 ```  
 # Get Ucp connection  
 $UcpServerInstanceName = "ComputerName\InstanceName";  
-$UtilityInstance = new-object –Type Microsoft.SqlServer.Management.Smo.Server $UcpServerInstanceName;  
+$UtilityInstance = new-object -Type Microsoft.SqlServer.Management.Smo.Server $UcpServerInstanceName;  
 $UcpConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection $UtilityInstance.ConnectionContext.SqlConnectionObject;  
 $Utility = [Microsoft.SqlServer.Management.Utility.Utility]::Connect($UcpConnection);  
   

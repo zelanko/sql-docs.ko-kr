@@ -13,12 +13,12 @@ ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ecc2a15cda3c63b1f4b29510192a28f962ffe93c
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: f3990965c78bec153ef87011f152ca0f13881055
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032770"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519196"
 ---
 # <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>참조 데이터에 도메인 또는 복합 도메인 연결
   이 항목에서는 데이터 품질 기술 자료의 도메인/복합 도메인을 Windows Azure Marketplace의 참조 데이터 서비스에 연결하여 고품질 데이터 참조 데이터에 대한 정보를 구축하는 방법에 대해 설명합니다. 각 참조 데이터 서비스에는 스키마(데이터 열)가 포함되어 있습니다. 도메인 또는 복합 도메인을 참조 데이터 서비스에 연결한 후 연결된 도메인 또는 연결된 복합 도메인 내의 개별 도메인을 참조 데이터 서비스 스키마의 적절한 열에 매핑해야 합니다. 복합 도메인을 참조 데이터 서비스에 연결하면 한 도메인만 참조 데이터 서비스에 연결한 다음 복합 도메인 내 개별 도메인을 참조 데이터 서비스 스키마의 적절한 열에 매핑할 수 있습니다.  
@@ -26,13 +26,13 @@ ms.locfileid: "51032770"
 > [!WARNING]  
 >  도메인을 참조 데이터 서비스 스키마의 열에 매핑하는 동안 참조 데이터 서비스에 연결된 복합 도메인을 도메인 드롭다운 목록에서 사용할 수 있습니다. 복합 도메인을 참조 데이터 서비스 스키마의 열에 매핑하지 마세요. 복합 도메인 내의 개별 도메인만 참조 데이터 서비스 스키마의 적절한 열에 매핑해야 합니다. 그렇지 않으면 오류가 발생합니다.  
   
- 참조 데이터 서비스를 사용하도록 선택한 경우 참조 데이터 서비스 스키마에 적절한 도메인과 함께 매핑되어야 하는 필수 열이 있을 수 있습니다. 참조 데이터 스키마의 필수 열은 "(M)"으로 열 이름과 식별됩니다. 예를 들어 **AddressLine** 은 **Melissa Data – Address Data** 의 필수 스키마 열이고 **CompanyName** 은 **Digital Trowel Inc. – Us companies and professional data for SQL users**의 필수 스키마 열입니다.  
+ 참조 데이터 서비스를 사용하도록 선택한 경우 참조 데이터 서비스 스키마에 적절한 도메인과 함께 매핑되어야 하는 필수 열이 있을 수 있습니다. 참조 데이터 스키마의 필수 열은 열 이름에서 "(M)"으로 식별됩니다. 예를 들어 **AddressLine**은 **Melissa Data – Address Data**의 필수 스키마 열이고 **CompanyName**은 **Digital Trowel Inc. – Us companies and professional data for SQL users**의 필수 스키마 열입니다.  
   
- 이 항목에서는 복합 도메인 **Address Verification**아래에 **Address Line**, **City**, **State**및 **Zip**의 4개 도메인을 만들고 도메인을 **Melissa Data – Address Check** 참조 데이터 서비스에 연결한 다음 복합 도메인 내의 개별 도메인을 참조 데이터 서비스 스키마의 적절한 열에 매핑합니다.  
+ 이 항목에서는 **Address Line**, **도시**, **상태**, 및 **Zip**, 복합 도메인에서 **Address Verification**를 연결 합니다 복합 도메인을 **Melissa Data-Address Check** 참조 데이터 서비스에 매핑한 다음 복합 도메인 내 개별 도메인은 참조 데이터 서비스 스키마의 적절 한 열입니다.  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
  참조 데이터 서비스를 사용하도록 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )를 구성한 상태여야 합니다. [참조 데이터를 사용하도록 DQS 구성](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md)을 참조하세요.  
   
 ###  <a name="Security"></a> 보안  
@@ -48,7 +48,7 @@ ms.locfileid: "51032770"
   
 3.  **새 기술 자료** 화면에서 새 기술 자료의 이름을 입력하고 **도메인 관리** 작업을 클릭한 후 **만들기**를 클릭합니다.  
   
-4.  **도메인 관리** 화면에서 **도메인 만들기** 아이콘을 클릭하여 도메인을 만듭니다. 4개의 도메인 **Address Line**, **City**, **State**및 **Zip**을 만듭니다.  
+4.  **도메인 관리** 화면에서 **도메인 만들기** 아이콘을 클릭하여 도메인을 만듭니다. 4개 도메인 **Address Line**, **도시**를 **상태**, 및 **Zip**합니다.  
   
 5.  **복합 도메인 만들기** 아이콘을 클릭하여 복합 도메인을 만듭니다. **복합 도메인 만들기** 대화 상자에서 **복합 도메인 이름** 입력란에 **Address Verification** 을 입력하고 3단계에서 만든 모든 도메인을 복합 도메인에 포함합니다. **확인**을 클릭합니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "51032770"
   
     -   **자동 수정 임계값**: 신뢰도 수준이 이 임계값보다 높은 참조 데이터 서비스의 수정 사항이 자동으로 적용됩니다. 해당 백분율 값의 10진수 표기법으로 값을 입력합니다. 예를 들어 90%의 경우 0.9를 입력합니다.  
   
-    -   **제안된 후보**: 참조 데이터 서비스에서 표시할 제안된 후보의 개수입니다.  
+    -   **제안 된 후보**: 참조 데이터 서비스에서 표시할 제안된 후보의 개수입니다.  
   
     -   **최소 신뢰도**: 신뢰도 수준이 이 값보다 낮은 참조 데이터 서비스의 제안은 무시됩니다. 해당 백분율 값의 10진수 표기법으로 값을 입력합니다. 예를 들어 60%의 경우 0.6을 입력합니다.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "51032770"
   
  이제 데이터 품질 프로젝트의 정리 작업에 이 기술 자료를 사용하여 Windows Azure Marketplace를 통해 Melissa Data에서 제공하는 정보를 기반으로 원본 데이터의 미국 주소를 표준화하고 정리할 수 있습니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 참조 데이터에 도메인을 매핑한 후  
+##  <a name="FollowUp"></a> 후속편: 참조 데이터에 도메인을 매핑한 후  
  데이터 품질 프로젝트를 만들고 미국 주소가 포함된 원본 데이터를 이 항목에서 만든 기술 자료와 비교하여 정리 작업을 실행합니다. [참조 데이터&#40;외부&#41; 기술 자료를 사용하여 데이터 정리](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  

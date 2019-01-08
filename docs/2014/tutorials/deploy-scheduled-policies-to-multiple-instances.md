@@ -11,12 +11,12 @@ ms.assetid: f551b8e8-3668-4ed4-852f-bae826254f4f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: e0e98af473babc84863c8e0a1610107843ca76d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f69addfdda05b00ff1f322b526bb656c2c9b317
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128273"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518619"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>여러 인스턴스에 예약된 정책 배포
   등록된 서버를 사용하면 중앙 위치에서 관리되는 서버로 예약된 정책을 배포할 수 있습니다. 로컬 서버 그룹 또는 중앙 관리 서버에서 예약된 정책을 배포할 수 있습니다.  
@@ -94,11 +94,11 @@ ms.locfileid: "48128273"
  이 자습서에서는 하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 대해 최선의 구현 방법 정책에 대한 요청 시 평가와 예약된 평가를 모두 수행하는 방법을 살펴보았습니다.  
   
 ## <a name="next"></a>다음  
- 이 자습서를 마칩니다. 참조 시작으로 돌아가려면 [자습서: 정책 기반 관리에서 모범 사례를 평가](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)합니다.  
+ 이 자습서를 마칩니다. 시작으로 돌아가려면 참조 [자습서: 정책 기반 관리를 사용 하 여 최선의 구현 방법 평가](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)합니다.  
   
  목록을 보려면 [!INCLUDE[ssDE](../includes/ssde-md.md)] 자습서, 클릭 [데이터베이스 엔진 자습서](../relational-databases/database-engine-tutorials.md)합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [정책 기반 관리를 사용하여 서버 관리](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

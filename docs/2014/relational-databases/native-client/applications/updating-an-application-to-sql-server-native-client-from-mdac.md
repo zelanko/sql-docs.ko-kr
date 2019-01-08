@@ -16,12 +16,12 @@ ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4630510a625a6c358370318902cb28eb80b9f09e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: d2c8afa1fbbb51947bef28ae45cabd445aaf0bf2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058273"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541922"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>MDAC에서 SQL Server Native Client로 애플리케이션 업데이트
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 및 MDAC(Microsoft Data Access Components) 사이에는 많은 차이점이 있습니다. Windows Vista부터 이제 데이터 액세스 구성 요소를 Windows Data Access Components 또는 Windows DAC라고 합니다. 양쪽 모두 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스의 네이티브 데이터에 액세스하기 위한 것이지만, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 특히 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]의 새 기능을 노출하도록 설계되었으며 동시에 이전 버전과의 호환성도 유지합니다.  

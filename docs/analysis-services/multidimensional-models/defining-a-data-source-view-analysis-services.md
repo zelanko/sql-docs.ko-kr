@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6966a0763146c9fd787be39d5be011704c048f66
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: 545204349cf895dd0592f1a2dcba66de4cb054ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025850"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523098"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>데이터 원본 뷰 정의(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  데이터 원본 뷰는 큐브, 차원 및 마이닝 구조인 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다차원 데이터베이스 개체에서 사용하는 스키마의 논리 모델을 포함합니다. 데이터 원본 뷰는 UDM(Unified Dimensional Model)과 마이닝 구조에서 사용하는 이러한 스키마 요소의 메타데이터 정의이며 XML 형식으로 저장됩니다. 데이터 원본 뷰의 특성은 다음과 같습니다.  
+  데이터 원본 뷰를 포함 하 여 사용 하는 스키마의 논리 모델 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다차원 데이터베이스 개체 즉 큐브, 차원 및 마이닝 구조입니다. 데이터 원본 뷰는 UDM(Unified Dimensional Model)과 마이닝 구조에서 사용하는 이러한 스키마 요소의 메타데이터 정의이며 XML 형식으로 저장됩니다. 데이터 원본 뷰의 특성은 다음과 같습니다.  
   
 -   스키마 생성에 대한 하향식 접근 방식을 사용할 경우 여러 기본 데이터 원본에서 선택한 개체를 나타내는 메타데이터 또는 기본 관계형 데이터 저장소를 생성하는 데 사용될 메타데이터를 포함합니다.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "34025850"
   
 4.  **사용 가능한 개체 필터**  
   
-     사용 가능한 개체 목록에 많은 개체가 포함된 경우 문자열을 선택 조건으로 지정하는 간단한 필터를 적용하여 목록을 줄일 수 있습니다. 예를 들어 **dbo** 를 입력하고 **필터** 단추를 클릭하면 "dbo"로 시작하는 항목만 **사용 가능한 개체** 목록에 표시됩니다. 필터는 부분 문자열(예: “sal”은 매출과 급여를 반환함)이 될 수 있지만 여러 문자열 또는 연산자를 포함할 수 없습니다.  
+     사용 가능한 개체 목록에 많은 개체가 포함된 경우 문자열을 선택 조건으로 지정하는 간단한 필터를 적용하여 목록을 줄일 수 있습니다. 예를 들어 **dbo** 를 입력하고 **필터** 단추를 클릭하면 "dbo"로 시작하는 항목만 **사용 가능한 개체** 목록에 표시됩니다. 필터는 부분 문자열 (예: "sal" 반환 sales 및 급여) 수는 있지만 여러 문자열 또는 연산자를 포함할 수 없습니다.  
   
 5.  테이블 관계가 정의되지 않은 관계형 데이터 원본에 대해서는 적절한 이름 일치 방법을 선택할 수 있도록 **이름 일치** 페이지가 표시됩니다. 자세한 내용은 이 항목의 [관계에 대한 이름 일치 조건 지정](#bkmk_NameMatch) 섹션을 참조하세요.  
   
@@ -125,15 +125,15 @@ ms.locfileid: "34025850"
 > [!NOTE]  
 >  데이터 원본 뷰 마법사를 완료한 후 데이터 원본 뷰 디자이너의 스키마 창에서 관계를 추가 또는 제거할 수 있습니다. 자세한 내용은 [데이터 원본 뷰에서 논리적 관계 정의&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 원본 뷰에서 테이블이나 뷰 추가 또는 제거&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
- [데이터 원본 뷰에서 논리적 기본 키 정의 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
- [데이터 원본 뷰에서 명명 된 계산 정의 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
- [데이터 원본 뷰에서 명명 된 쿼리 정의 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)   
- [테이블 또는 데이터 원본 뷰에서 명명된 된 쿼리 바꾸기 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
+ [데이터 원본 뷰에서 논리적 기본 키 정의&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
+ [데이터 원본 뷰에서 명명된 계산 정의&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
+ [데이터 원본 뷰에서 명명된 쿼리 정의&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)   
+ [데이터 원본 뷰의 테이블 또는 명명된 쿼리 바꾸기&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
  [데이터 원본 뷰 디자이너 & #40;에서 다이어그램 작업 Analysis Services & #41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
- [데이터 원본 뷰에서 데이터 탐색 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)   
- [데이터 원본 뷰 삭제 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/delete-a-data-source-view-analysis-services.md)   
+ [데이터 원본 뷰에서 데이터 탐색&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)   
+ [데이터 원본 뷰 삭제&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/delete-a-data-source-view-analysis-services.md)   
  [데이터 원본 뷰에서 스키마 새로 고침&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
   

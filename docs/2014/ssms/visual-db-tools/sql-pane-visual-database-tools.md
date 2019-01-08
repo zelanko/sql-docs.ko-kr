@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], SQL pane
@@ -14,12 +14,12 @@ ms.assetid: dbabab18-0614-415b-a2ef-9bcd0d320d5c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2377bd9368bd8d1e4eae59b1ffaaa5d8d6c9fc71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fd223c0a66b533cb2b405dd0e766f7053b7a4e89
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085693"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773565"
 ---
 # <a name="sql-pane-visual-database-tools"></a>SQL Visual Database Tools)
   SQL 창을 사용하여 고유한 SQL 문을 만들거나 조건 창 및 다이어그램 창을 사용하여 문을 만들 수 있습니다. 조건 창이나 다이어그램 창을 사용해도 SQL 문은 SQL 창에 작성됩니다. 쿼리를 작성할 때 SQL 창은 자동으로 업데이트되고 읽기 쉽도록 서식이 다시 지정됩니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "48085693"
 > [!NOTE]  
 >  SQL 문을 입력한 다음 다이어그램 창과 조건 창을 변경하여 쿼리를 추가로 변경하면 쿼리 및 뷰 디자이너는 SQL 문을 다시 작성하여 표시합니다. 일부 경우 이 동작으로 인해 결과는 같지만 원래 입력한 내용과 다른 SQL 문이 만들어지기도 합니다. 이러한 차이는 AND와 OR로 연결된 여러 절을 포함하는 검색 조건을 사용하여 작업할 때 특히 자주 나타납니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [쿼리를 만들 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [쿼리 실행 &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
  [방법 도움말 항목을 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   

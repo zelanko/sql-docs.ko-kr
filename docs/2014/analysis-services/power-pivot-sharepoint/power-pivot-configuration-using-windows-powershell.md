@@ -11,15 +11,15 @@ ms.assetid: 4d83e53e-04f1-417d-9039-d9e81ae0483d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f61c87bdb1790b254ca024132d7ed1f90aa5e985
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d3e0cdae7e9f57a7bfd62a3a0e947c43ced0b8c2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164273"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530651"
 ---
 # <a name="powerpivot-configuration-using-windows-powershell"></a>Windows PowerShell을 사용하여 PowerPivot 구성
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]의 설치를 구성하는 데 사용할 수 있는 Windows PowerShell cmdlet이 포함되어 있습니다. PowerShell을 사용하여 설치를 완전히 구성하려면 SharePoint cmdlet과 SharePoint용 PowerPivot cmdlet을 모두 사용해야 합니다. 대부분의 구성은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 도구 중 하나를 사용하여 완료할 수 있습니다. 도구에 대 한 자세한 내용은 참조 하세요. [PowerPivot 구성 도구](power-pivot-configuration-tools.md)합니다.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]의 설치를 구성하는 데 사용할 수 있는 Windows PowerShell cmdlet이 포함되어 있습니다. PowerShell을 사용하여 설치를 완전히 구성하려면 SharePoint cmdlet과 SharePoint용 PowerPivot cmdlet을 모두 사용해야 합니다. 대부분의 구성은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 도구 중 하나를 사용하여 완료할 수 있습니다. 도구에 대한 자세한 내용은 [PowerPivot Configuration Tools](power-pivot-configuration-tools.md)를 참조하십시오.  
   
 > [!IMPORTANT]  
 >  SharePoint 2010 팜의 경우 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 데이터베이스 서버를 사용하는 SharePoint 팜이나 SharePoint용 PowerPivot을 구성하려면 먼저 SharePoint 2010 SP1을 설치해야 합니다. 서비스 팩을 아직 설치하지 않았으면 서버를 구성하기 전에 설치합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "48164273"
   
     -   SharePoint 모드 및 SharePoint 2010에서 구성한 SQL Server 2012 Analysis Services 서버에서는 cmdlet을 17개까지 사용할 수 있습니다.  
   
-     목록으로 반환되는 명령이 없거나 "`get-help could not find *powerpivot* in a help file in this session.`"라는 오류 메시지가 나타나는 경우 서버에서 PowerPivot cmdlet을 활성화하는 방법에 대한 지침은 이 항목의 다음 섹션을 참조하십시오.  
+     목록에서 반환 되는 명령이 없는 또는 유사한 오류 메시지가 표시 하는 경우 "`get-help could not find *powerpivot* in a help file in this session.`", 서버에서 PowerPivot cmdlet을 사용 하도록 설정 하는 방법에 대 한 지침은이 항목의 다음 섹션을 참조 하세요.  
   
      모든 cmdlet에는 온라인 도움말이 있습니다. 다음 예에서는 `New-PowerPivotServiceApplication` cmdlet에 대한 온라인 도움말을 보는 방법을 보여 줍니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48164273"
 2.  첫 번째 cmdlet을 실행합니다.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
      이 cmdlet을 실행하면 솔루션의 이름,  솔루션 ID  및 Deployed=False가 반환됩니다. 다음 단계에서는 솔루션을 배포합니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "48164273"
 3.  두 번째 cmdlet을 실행하여 솔루션을 배포합니다.  
   
     ```  
-    Install-SPSolution –Identity PowerPivotFarm.wsp –GACDeployment -Force  
+    Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
 4.  창을 닫습니다. **관리자 권한으로 실행** 옵션을 사용하여 창을 다시 엽니다.  

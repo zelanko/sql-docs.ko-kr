@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Merge Agent, executables
@@ -16,12 +15,12 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d3b7a3b52b30bdce214dd7d481403425dd07cd09
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 9d3b323be70911881b99f055503d12bb6b79988d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237109"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762825"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   복제 병합 에이전트는 데이터베이스 테이블에 저장된 초기 스냅숏 파일을 구독자에 적용하는 유틸리티 실행 파일입니다. 또한 이 에이전트는 초기 스냅숏이 만들어진 후 게시자에서 발생한 증분 데이터 변경 내용을 병합하고, 사용자가 구성한 규칙에 따라 또는 사용자가 만든 사용자 지정 해결 프로그램을 사용하여 충돌을 조정합니다.  
@@ -64,7 +63,7 @@ ms.locfileid: "50237109"
 [-InternetLogininternet_login]  
 [-InternetPasswordinternet_password]  
 [-InternetProxyLogininternet_proxy_login]  
-[–InternetProxyPasswordinternet_proxy_password]  
+[-InternetProxyPasswordinternet_proxy_password]  
 [-InternetProxyServerinternet_proxy_server]  
 [-InternetSecurityMode [0|1]]  
 [-InternetTimeoutinternet_timeout]  
@@ -120,7 +119,7 @@ ms.locfileid: "50237109"
  게시의 이름입니다. 이 매개 변수는 게시가 새 구독이나 다시 초기화된 구독에 대해 항상 스냅숏을 사용할 수 있도록 설정된 경우에만 유효합니다.  
   
  **-Subscriber** *server_name*[**\\***instance_name*]  
- 구독자의 이름입니다. 해당 서버에 있는 기본 *server_name* 인스턴스에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 기본 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정하고,  
+ 구독자의 이름입니다. 해당 서버에 있는 기본 *인스턴스에 대해* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정하고, 해당 서버에 있는 기본 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정하고,  
   
  **-SubscriberDB** *subscriber_database*  
  구독자 데이터베이스의 이름입니다.  
@@ -243,7 +242,7 @@ ms.locfileid: "50237109"
  **-InternetProxyLogin**  *internet_proxy_login*  
  인증이 필요한 프록시 서버( *internet_proxy_server*에 정의됨)에 연결할 때 사용되는 로그인 이름을 지정합니다.  
   
- **–InternetProxyPassword**  *internet_proxy_password*  
+ **-InternetProxyPassword**  *internet_proxy_password*  
  인증이 필요한 프록시 서버( *internet_proxy_server*에 정의됨)에 연결할 때 사용되는 암호를 지정합니다.  
   
  **-InternetProxyServer**  *internet_proxy_server*  

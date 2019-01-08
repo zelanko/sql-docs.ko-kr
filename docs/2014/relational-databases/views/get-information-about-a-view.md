@@ -21,15 +21,15 @@ ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb169a7054a5b93bd923bc989baf95f5d9e22ce0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f439a52c1f2d13ed3d3d7fc96030df9c6e020b2e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140344"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528438"
 ---
 # <a name="get-information-about-a-view"></a>뷰 정보 보기
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 뷰 정의 또는 속성에 대한 정보를 얻을 수 있습니다. 뷰 정의를 보면 어떻게 데이터가 원본 테이블에서 파생되었는지 알 수 있고 뷰에서 정의한 데이터를 볼 수 있습니다.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을(를) 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 뷰 정의 또는 속성에 대한 정보를 얻을 수 있습니다. 뷰 정의를 보면 어떻게 데이터가 원본 테이블에서 파생되었는지 알 수 있고 뷰에서 정의한 데이터를 볼 수 있습니다.  
   
 > [!IMPORTANT]  
 >  뷰가 참조하는 개체의 이름을 변경하려면 뷰를 수정하여 뷰의 텍스트에 새 이름이 적용되도록 해야 합니다. 따라서 개체 이름을 바꾸기 전에는 개체의 종속 관계를 먼저 표시하여 변경으로 인해 영향을 받는 뷰가 있는지 확인해야 합니다.  
@@ -137,7 +137,7 @@ ms.locfileid: "48140344"
      선택한 뷰에서 모든 열이 반환되는지 여부를 표시합니다. 이 옵션은 뷰가 만들어질 때 설정됩니다.  
   
      **SQL 주석**  
-     SQL 문에 대한 설명을 표시합니다. 전체 설명을 보거나 편집하려면 설명을 클릭한 다음 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다. 뷰의 사용자나 사용 시기 등과 같은 정보를 주석에 포함할 수 있습니다.  
+     SQL 문에 대한 설명을 표시합니다. 전체 설명을 보거나 편집하려면 설명을 클릭한 다음, 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다. 뷰의 사용자나 사용 시기 등과 같은 정보를 주석에 포함할 수 있습니다.  
   
      **Top 사양**  
      확장하면 **상위**, **식**, **백분율**및 **동률** 속성이 표시됩니다.  

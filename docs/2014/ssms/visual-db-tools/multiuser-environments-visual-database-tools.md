@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - users [SQL Server], multiuser environments
@@ -18,12 +18,12 @@ ms.assetid: 330bd48c-9427-4967-b58e-b7c492d5ee36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d64fc5039cfb6f8d46bb3f245163d17c7b2beb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 382aca19452d5cf21a4b1112d872b12afe38782d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094673"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767405"
 ---
 # <a name="multiuser-environments-visual-database-tools"></a>다중 사용자 환경(Visual Database Tools)
   다중 사용자 환경은 작업하고 있는 동일한 데이터베이스에 다른 사용자가 연결하여 변경할 수 있는 환경입니다. 결과적으로 여러 명의 사용자가 동시에 동일한 데이터베이스 개체에서 작업할 수 있습니다. 따라서 다중 사용자 환경에서 현재 사용자가 작업 중인 데이터베이스를 다른 사용자가 변경할 수 있으며 그 반대의 경우도 가능합니다.  

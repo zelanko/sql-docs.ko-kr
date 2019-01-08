@@ -1,5 +1,5 @@
 ---
-title: 데이터 마이닝 프로그래밍 | Microsoft Docs
+title: Analysis Services 데이터 마이닝 프로그래밍 | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1be416528bc923e757afb9a8f3e556790941bf11
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 27a964581782d5868e4089a1063dbbce0c689525
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019960"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072760"
 ---
 # <a name="data-mining-programming"></a>데이터 마이닝 프로그래밍
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34019960"
   
      데이터 마이닝 개체를 XMLA 스크립트에서 전적으로 만들고 수정할 수 있으며, 사용자 고유의 응용 프로그램에서 모델에 대한 예측 쿼리를 프로그래밍 방식으로 실행할 수 있습니다.  
   
--   **Analysis Management Objects (AMO)**  
+-   **AMO (analysis Management Objects)**  
   
      [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 또한 타사 데이터 마이닝 공급자가 데이터 마이닝 개체를 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에 통합할 수 있도록 하는 완전한 프레임워크를 제공합니다.  
   
@@ -54,17 +54,17 @@ ms.locfileid: "34019960"
  데이터 마이닝 및 다차원 데이터를 지원할 수 있도록 새로운 스키마 행 집합 및 열, 마이닝 구조를 만들고 관리하는 데 사용할 수 있는 DMX(Data Mining Extensions) 언어 등 사양에 새로 추가된 사항을 설명합니다.  
   
 ## <a name="related-reference"></a>관련 참조  
- [ADOMD.NET을 사용 하 여 개발](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
+ [ADOMD.NET을 사용하여 개발](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
  ADOMD.NET 클라이언트 및 서버 프로그래밍 개체를 소개합니다.  
   
- [분석 관리 개체 & #40;를 사용 하 여 개발 AMO & #41;](../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
  AMO 프로그래밍 라이브러리를 소개합니다.  
   
- [스크립팅 언어 & #40; Analysis Services를 사용 하 여 개발 ASSL & #41;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [ASSL&#40;Analysis Services Scripting Language&#41;을 사용하여 개발](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
  XMLA(XML for Analysis) 및 해당 확장을 소개합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Analysis Services 개발자 설명서](../analysis-services/analysis-services-developer-documentation.md)   
- [Data Mining Extensions & #40; DMX & #41; 참조](../dmx/data-mining-extensions-dmx-reference.md)  
+ [DMX&#40;Data Mining Extensions&#41; 참조](../dmx/data-mining-extensions-dmx-reference.md)  
   
   

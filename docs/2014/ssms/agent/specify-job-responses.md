@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], responses
@@ -15,12 +15,12 @@ ms.assetid: 050242e1-9b79-4ade-91a9-580707b9d2d9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0bc3b747e1dcb1c2d027eb2c1df39c3715c011a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 9fa238a639321e9464ca3de2cc074b516f7df1e1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122883"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771675"
 ---
 # <a name="specify-job-responses"></a>작업 응답 지정
   작업 응답은 작업이 완료된 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 수행할 동작을 지정합니다. 작업 응답은 데이터베이스 관리자에게 작업 완료 시점과 작업 실행 간격을 알립니다. 일반적인 작업 응답은 다음과 같습니다.  

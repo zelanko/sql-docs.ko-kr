@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6b838766e7a6d6bfb9a68bb832cd7a8feb3c9960
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: eec9e3e211c68b7f56fe6829a70064317b96e646
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696621"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519571"
 ---
 # <a name="determine-polling-frequency"></a>폴링 빈도 결정 합니다.
 이 문서에는 분석 플랫폼 시스템 어플라이언스 경고에 대 한 폴링 빈도 결정 하는 방법을 설명 합니다.  
@@ -22,11 +22,11 @@ ms.locfileid: "51696621"
 ## <a name="to-determine-the-polling-frequency"></a>폴링 빈도 확인 하려면  
 경고가 발생할 경우 PDW 사전 알림의 현재 지원 되지 않으므로, 모니터링 솔루션에 Dll 어플라이언스 폴링을 계속 해야 합니다.  내부적으로 PDW 다른 간격으로 구성 요소를 폴링합니다.  
   
--   클러스터 – 60 초  
+-   클러스터-60 초  
   
--   하트 비트 – 60 초  
+-   하트 비트-60 초  
   
--   다른 모든 구성 요소 – 5 분  
+-   다른 모든 구성 요소-5 분  
   
 -   성능 카운터-3 초  
   

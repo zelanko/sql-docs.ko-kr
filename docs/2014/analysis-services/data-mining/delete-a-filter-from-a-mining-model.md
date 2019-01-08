@@ -13,12 +13,12 @@ ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02bf9026d14f759b5e5931b132faae3ee0fec1a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9cb98e29f320a64518c968f3bbc35b590c96a891
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082943"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508397"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>마이닝 모델에서 필터 삭제
   마이닝 모델에 대한 필터를 정의할 때 데이터 원본 뷰에서 데이터의 하위 집합에 대한 모델을 만들 수 있습니다. 필터는 원래 데이터의 하위 집합에 대한 모델의 정확도를 테스트하는 데에도 유용합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "48082943"
 -   **필터 편집기** 대화 상자에서 표의 아무 행이나 마우스 오른쪽 단추로 클릭하고 **모두 삭제**를 선택합니다.  
   
 ## <a name="working-with-model-filters-using-the-properties-window"></a>속성 창을 사용하여 모델 필터 작업  
- 전체 필터를 삭제하는 경우에는 필터 편집기 대화 상자를 열지 않아도 됩니다. 만든 필터 조건에서 사용할 수는 `Filter` 마이닝 모델의 속성입니다.  
+ 전체 필터를 삭제하는 경우에는 필터 편집기 대화 상자를 열지 않아도 됩니다. 만든 필터 조건은 마이닝 모델의 `Filter` 속성에서 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  마이닝 모델의 속성은 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서는 볼 수 있지만 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 볼 수 없습니다.  
@@ -62,6 +62,6 @@ ms.locfileid: "48082943"
 ## <a name="see-also"></a>관련 항목  
  [마이닝 모델에서 사례 데이터로 드릴스루](drill-through-to-case-data-from-a-mining-model.md)   
  [마이닝 모델 태스크 및 방법](mining-model-tasks-and-how-tos.md)   
- [마이닝 모델에 대 한 필터 &#40;Analysis Services-데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)  
+ [마이닝 모델에 대한 필터&#40;Analysis Services - 데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)  
   
   
