@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9176be66c987d3ff4f7cdf09ac8dd70fc1447273
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba07558d4b85fabf1388f2fcafd26b3638b80f79
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411860"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979859"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -151,7 +151,7 @@ SHUTDOWN
 ## <a name="examples"></a>예  
   
 ### <a name="a-changing-a-server-audit-name"></a>1. 서버 감사 이름 변경  
- 다음 예에서는 서버 감사 이름 `HIPPA_Audit`를 `HIPAA_Audit_Old`로 변경합니다.  
+ 다음 예에서는 서버 감사 이름 `HIPAA_Audit`를 `HIPAA_Audit_Old`로 변경합니다.  
   
 ```  
 USE master  
@@ -168,7 +168,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-server-audit-target"></a>2. 서버 감사 대상 변경  
- 다음 예에서는 `HIPPA_Audit`라는 서버 감사를 파일 대상으로 변경합니다.  
+ 다음 예에서는 `HIPAA_Audit`라는 서버 감사를 파일 대상으로 변경합니다.  
   
 ```  
 USE master  
@@ -201,7 +201,7 @@ ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = ON);
 GO  
 ```  
   
-### <a name="d-removing-a-where-clause"></a>4. WHERE 절 제거  
+### <a name="d-removing-a-where-clause"></a>D. WHERE 절 제거  
  다음 예에서는 WHERE 절 조건자 식을 제거합니다.  
   
 ```sql  
@@ -214,7 +214,7 @@ ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = ON);
 GO  
 ```  
   
-### <a name="e-renaming-a-server-audit"></a>5. 서버 감사 이름 바꾸기  
+### <a name="e-renaming-a-server-audit"></a>E. 서버 감사 이름 바꾸기  
  다음 예에서는 서버 감사 이름을 `FilterForSensitiveData`에서 `AuditDataAccess`로 변경합니다.  
   
 ```sql  
