@@ -11,12 +11,12 @@ ms.assetid: 70db7832-b5a0-4db5-a8ad-42ad8630d8e8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 23d07daa8b67edc171dce033c3e46ebc8f9a9f1c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b3d90e98fd80a1ee7e7f1f6704800401d6e76a00
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419894"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201652"
 ---
 # <a name="replacenull-ssis-expression"></a>REPLACENULL(SSIS 식)
   첫 번째 식 매개 변수의 값이 NULL이면 두 번째 식 매개 변수의 값을 반환하고, 그렇지 않으면 첫 번째 식의 값을 반환합니다.  
@@ -54,8 +54,8 @@ REPLACENULL(expression 1,expression 2)
 REPLACENULL(MyColumn, "1900-01-01")  
 ```  
   
-> [!NOTE]  
->  다음 예에서는 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]/[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]에서 이 함수를 사용하는 방법을 보여 줍니다.  
+> [!NOTE]
+>  다음 예에서는 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]/ [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]에서 이 함수를 사용하는 방법을 보여 줍니다.  
   
 ```  
 (DT_DBTIMESTAMP) (ISNULL(MyColumn) ? "1900-01-01" : MyColumn)   

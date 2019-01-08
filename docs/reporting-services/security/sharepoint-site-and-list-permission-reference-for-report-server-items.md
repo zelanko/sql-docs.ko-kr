@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3b164b167de39a8a465e19b1f751ab22c9295c6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a51a863a36562d7be1ef242ca9ad680e9149c73b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725951"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213052"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조
   이 항목에서는 SharePoint 통합 모드로 실행되는 보고서 서버에 보고서 서버 작업에 대한 액세스 권한을 부여하는 데 사용할 수 있는 SharePoint의 사용 권한 참조를 제공합니다. 사용자 지정 권한 수준을 만드는 경우 이 항목은 사용할 권한을 선택하는 데 도움이 될 수 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "47725951"
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 &#124; SharePoint 2010 및 SharePoint 2013.|  
+| [!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 &#124; SharePoint 2010 및 SharePoint 2013.|  
   
 ## <a name="list-permissions"></a>목록 사용 권한  
  보고서 서버 항목이 포함된 라이브러리에 설정한 사용 권한에 따라 사용자가 이러한 항목에 액세스하는 방법이 결정됩니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "47725951"
 |사용 권한 열거|웹 사이트, 목록, 폴더, 문서 또는 목록 항목의 사용 권한을 열거합니다.|X|||모든 보고서 서버 항목에 대한 사용 권한을 읽습니다. 모델 항목 보안 설정이 포함된 보고서 모델을 사용하는 클릭 광고 보고서를 봅니다.|  
 |알림 관리|웹 사이트의 모든 사용자에 대해 알림을 관리합니다.|X|||사이트의 모든 구독을 만들고 변경 및 삭제합니다.|  
 |원격 인터페이스 사용|SOAP, Web DAV 또는 SharePoint Designer 인터페이스를 사용하여 웹 사이트에 액세스합니다.|X|X|X|보고서 서버에 대한 URL 프록시 엔드포인트를 호출하는 데 사용됩니다.|  
-|열기|웹 사이트, 목록 또는 폴더를 열어 해당 컨테이너 내부 항목에 액세스합니다.|X|X|X|일정 및 항목 속성을 읽습니다.|  
+|파일|웹 사이트, 목록 또는 폴더를 열어 해당 컨테이너 내부 항목에 액세스합니다.|X|X|X|일정 및 항목 속성을 읽습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services의 역할 및 태스크와 SharePoint 그룹 및 사용 권한 비교](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   

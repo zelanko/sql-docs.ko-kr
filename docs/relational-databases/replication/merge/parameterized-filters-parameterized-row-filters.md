@@ -21,12 +21,12 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03226910c9af65708504dc3d99865e88c9ab193e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00ef0f5df65f6b472e6c439e097c745d03d86040
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605161"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215154"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>매개 변수가 있는 필터 - 매개 변수가 있는 행 필터
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47605161"
  매개 변수가 있는 행 필터를 정의하거나 수정하려면 [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하십시오.  
   
 ## <a name="how-parameterized-filters-work"></a>매개 변수가 있는 필터의 동작 방식  
- 매개 변수가 있는 행 필터는 WHERE 절을 사용하여 게시할 데이터를 선택합니다. 정적 행 필터와는 달리 해당 절에 리터럴 값을 지정하는 대신 SUSER_SNAME() 및 HOST_NAME() 시스템 함수를 하나 또는 둘 모두 지정합니다. 사용자 정의 함수를 사용할 수도 있지만 사용자 정의 함수는 함수 본문에 SUSER_SNAME() 또는 HOST_NAME()을 포함해야 하거나 `MyUDF(SUSER_SNAME()`과 같은 시스템 함수 중 하나를 평가해야 합니다. 사용자 정의 함수의 본문에 SUSER_SNAME() 또는 HOST_NAME()이 포함되어 있는 경우 함수에 매개 변수를 전달할 수 없습니다.  
+ 매개 변수가 있는 행 필터는 WHERE 절을 사용하여 게시할 데이터를 선택합니다. 정적 행 필터와는 달리 해당 절에 리터럴 값을 지정하는 대신 하나 또는 둘 모두를 지정합니다. 사용자 정의 함수를 사용할 수도 있지만 사용자 정의 함수는 함수 본문에 SUSER_SNAME() 또는 HOST_NAME()을 포함해야 하거나 `MyUDF(SUSER_SNAME()`과 같은 시스템 함수 중 하나를 평가해야 합니다. 사용자 정의 함수의 본문에 SUSER_SNAME() 또는 HOST_NAME()이 포함되어 있는 경우 함수에 매개 변수를 전달할 수 없습니다.  
   
  SUSER_SNAME() 및 HOST_NAME() 시스템 함수는 병합 복제에 사용하는 것이 아니라 병합 복제에서 매개 변수가 있는 필터링용으로 사용합니다.  
   
@@ -95,7 +95,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
  예를 들어 직원 Pamela Ansman-Wolfe에게 직원 ID로 280을 할당합니다. 이 직원에 대한 구독을 만들 때 HOST_NAME() 값에 직원 ID 값(이 경우 280)을 지정합니다. 병합 에이전트가 게시자로 연결하면 HOST_NAME()에서 반환된 값을 해당 테이블의 값과 비교한 다음 **EmployeeID** 열에 280이라는 값이 포함된 행만 다운로드합니다.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  HOST_NAME() 함수는 **nchar** 값을 반환하므로 위의 예처럼 필터 절의 열이 숫자 데이터 형식인 경우 CONVERT를 사용해야 합니다. 성능상의 이유로 `CONVERT(nchar,EmployeeID) = HOST_NAME()`과 같은 매개 변수가 있는 행 필터 절의 열 이름에는 함수를 적용하지 않는 것이 좋습니다. 대신 `EmployeeID = CONVERT(int,HOST_NAME())`예제에서 보여준 방식을 사용하는 것이 좋습니다. 이 절을 **@subset_filterclause** @allow_partition_realignment [@subset_filterclause](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)매개 변수에 사용할 수 있지만 일반적으로 새 게시 마법사에서는 사용할 수 없습니다. 마법사는 필터 절을 실행하여 유효성을 검사하는데 컴퓨터 이름을 **int**에서는 매개 변수가 있는 행 필터를 동적 필터라고 불렀습니다. 새 게시 마법사를 사용할 경우 게시에 대한 스냅숏을 만들기 전에 마법사에서 `CONVERT(nchar,EmployeeID) = HOST_NAME()` 을 지정한 다음 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 을 사용하여 해당 절을 `EmployeeID = CONVERT(int,HOST_NAME())` 로 변경하는 것이 좋습니다.  
   
  **HOST_NAME() 값을 재정의하려면**  
@@ -180,7 +180,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   조인 필터 계층에서 겹치는 파티션이 있는 아티클은 겹치지 않는 파티션이 있는 아티클 위에 표시될 수 없습니다. 즉 자식 아티클이 겹치지 않는 파티션을 사용하면 부모 아티클도 겹치지 않는 파티션을 사용해야 합니다. 조인 필터에 대한 자세한 내용은 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)를 참조하십시오.  
   
--   겹치지 않는 파티션이 자식인 조인 필터에서는 **join unique key** 속성을 1로 설정해야 합니다. 자세한 내용은 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)를 참조하세요.  
+-   겹치지 않는 파티션이 자식인 조인 필터에서는 **join unique key** 속성을 1로 설정해야 합니다. 자세한 내용은 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)을 참조하세요.  
   
 -   아티클에는 매개 변수가 있는 필터 또는 조인 필터가 하나만 있어야 합니다. 매개 변수가 있는 필터가 있으면서 조인 필터에서 부모일 수 있습니다. 매개 변수가 있는 필터가 있으면서 조인 필터에서 자식일 수는 없습니다. 조인 필터가 두 개 이상일 수도 없습니다.  
   

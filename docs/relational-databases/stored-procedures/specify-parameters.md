@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42db9954a071865124d443be32203fc284dfe699
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 079a54bdbf107ec9f83e1078fedba1be84374c5b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838961"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589137"
 ---
 # <a name="specify-parameters"></a>매개 변수 지정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -135,7 +135,7 @@ GO
   
  출력 매개 변수를 지정하려면 CREATE PROCEDURE 문의 매개 변수 정의에서 OUTPUT 키워드를 반드시 지정해야 합니다. 프로시저는 출력 매개 변수의 현재 값을 프로시저가 끝날 때 호출 프로그램에 반환합니다. 호출 프로그램에서 프로시저를 실행할 때 OUTPUT 키워드도 사용해야 호출 프로그램에서 사용할 수 있는 변수에 매개 변수 값을 저장할 수 있습니다.  
   
- 다음 예에서는 지정된 가격을 초과하지 않는 제품 목록을 반환하는 `Production.usp_GetList` 프로시저를 만듭니다. 다음 예에서는 여러 SELECT 문과 여러 OUTPUT 매개 변수의 사용을 보여 줍니다. OUTPUT 매개 변수를 사용하면 프로시저를 실행하는 동안 외부 프로시저, 일괄 처리 또는 한 개 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 값 집합에 액세스할 수 있습니다.  
+ 다음 예는 한 개의 입력 매개 변수 `Production.usp_GetList` 프로시저를 만듭니다. 다음 예에서는 여러 SELECT 문과 여러 OUTPUT 매개 변수의 사용을 보여 줍니다. OUTPUT 매개 변수를 사용하면 프로시저를 실행하는 동안 외부 프로시저, 일괄 처리 또는 한 개 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 값 집합에 액세스할 수 있습니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -169,7 +169,7 @@ GO
  `usp_GetList` 를 실행하여 가격이 $700 미만인 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 제품(자전거) 목록을 반환합니다. OUTPUT 매개 변수인 **\@cost**와 **\@compareprices**는 **메시지** 창의 메시지를 반환하기 위해 흐름 제어 언어와 함께 사용됩니다.  
   
 > [!NOTE]  
->  OUTPUT 변수는 프로시저를 만들 때와 변수를 사용할 때 정의되어야 합니다. 매개 변수 이름과 변수 이름은 일치하지 않아도 되지만 **\@listprice=** *variable*을 사용하지 않는 경우 데이터 형식과 매개 변수 위치는 일치해야 합니다.  
+>  OUTPUT 변수는 프로시저를 만들 때와 변수를 사용할 때 정의되어야 합니다. 매개 변수 이름과 변수 이름은 일치하지 않아도 되지만 **\@listprice=** _variable_을 사용하지 않는 경우 데이터 형식과 매개 변수 위치는 일치해야 합니다.  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  

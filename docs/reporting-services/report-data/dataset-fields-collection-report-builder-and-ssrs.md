@@ -8,35 +8,35 @@ ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 56ab751d420fe323b641d3fea0e7454d20447e15
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 90b1e966a2f62877e658658048b12427bca109cc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031862"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202412"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>데이터 세트 필드 컬렉션(보고서 작성기 및 SSRS)
   데이터 세트 필드는 데이터 연결의 데이터를 나타냅니다. 필드는 숫자 데이터나 숫자가 아닌 데이터를 나타낼 수 있습니다. 예로는 판매액, 총 판매액, 고객 이름, 데이터베이스 식별자, URL, 이미지, 공간 데이터, 전자 메일 주소 등이 있습니다. 디자인 화면에서 필드는 입력란, 테이블 및 차트와 같은 보고서 항목에서 식으로 나타납니다.  
   
  보고서에는 데이터 세트 필드, 데이터 세트 계산 필드 및 기본 제공 필드 등 세 가지 유형의 필드가 있고 보고서 데이터 창에 표시됩니다.  
   
--   **데이터 집합 필드.** 데이터 세트 쿼리가 데이터 원본에 대해 실행될 때 반환될 필드의 컬렉션을 나타내는 메타데이터입니다.  
+-   **데이터 세트 필드.** 데이터 세트 쿼리가 데이터 원본에 대해 실행될 때 반환될 필드의 컬렉션을 나타내는 메타데이터입니다.  
   
--   **데이터 집합 계산 필드.** 데이터 세트에 대해 만드는 추가 필드입니다. 각 계산 필드는 사용자가 정의하는 식을 계산하여 만들어집니다.  
+-   **데이터 세트 계산 필드.** 데이터 세트에 대해 만드는 추가 필드입니다. 각 계산 필드는 사용자가 정의하는 식을 계산하여 만들어집니다.  
   
 -   **기본 제공 필드.** 보고서를 처리할 때 보고서 이름 또는 시간과 같은 보고서 정보를 제공하는 보고서 작성기에서 제공하는 필드의 컬렉션을 나타내는 메타데이터입니다. 자세한 내용은 [기본 제공 Globals 및 Users 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)를 참조하세요.  
   
- 데이터 세트 필드 이름은 보고서 데이터 세트 정의의 일부로 저장됩니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)를 참조하세요.  
+ 데이터 세트 필드 이름은 보고서 데이터 세트 정의의 일부로 저장됩니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Fields"></a> 데이터 집합 필드 및 쿼리  
+##  <a name="Fields"></a> 데이터 세트 필드 및 쿼리  
  데이터 세트 필드는 데이터 세트 쿼리 명령 및 사용자가 정의하는 계산 필드로 지정됩니다. 보고서에 표시되는 필드의 컬렉션은 사용하는 데이터 세트의 유형에 따라 다릅니다.  
   
--   **공유 데이터 집합.** 필드 컬렉션은 보고서에 공유 데이터 세트를 직접 추가했을 때나 공유 데이터 세트가 포함된 보고서 파트를 추가했을 때 공유 데이터 세트 정의의 쿼리에 대한 필드의 목록입니다. 공유 데이터 세트 정의가 보고서 서버에서 변경될 때 로컬 필드 컬렉션은 변경되지 않습니다. 로컬 필드 컬렉션을 업데이트하려면 로컬 공유 데이터 세트의 목록을 새로 고쳐야 합니다.  
+-   **공유 데이터 세트.** 필드 컬렉션은 보고서에 공유 데이터 세트를 직접 추가했을 때나 공유 데이터 세트가 포함된 보고서 파트를 추가했을 때 공유 데이터 세트 정의의 쿼리에 대한 필드의 목록입니다. 공유 데이터 세트 정의가 보고서 서버에서 변경될 때 로컬 필드 컬렉션은 변경되지 않습니다. 로컬 필드 컬렉션을 업데이트하려면 로컬 공유 데이터 세트의 목록을 새로 고쳐야 합니다.  
   
--   **포함된 데이터 집합.** 필드 컬렉션은 데이터 원본에 대해 현재 쿼리를 실행할 때 반환되는 필드의 목록입니다.  
+-   **포함된 데이터 세트.** 필드 컬렉션은 데이터 원본에 대해 현재 쿼리를 실행할 때 반환되는 필드의 목록입니다.  
   
  자세한 내용은 [보고서 데이터 창에서 필드 추가, 편집, 새로 고침&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)을 참조하세요.  
   
@@ -55,8 +55,8 @@ ms.locfileid: "50031862"
 ### <a name="using-extended-field-properties"></a>확장 필드 속성 사용  
  다차원 쿼리를 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]와 같은 데이터 원본은 필드의 필드 속성을 지원합니다. 필드 속성은 쿼리의 결과 집합에 나타나지만 **보고서 데이터** 창에 표시되지 않습니다. 보고서에서 이 필드 속성을 계속 사용할 수 있습니다. 필드의 속성을 참조하려면 필드를 보고서로 끌고 기본 속성 **Value** 를 원하는 속성의 필드 이름으로 변경합니다. 예를 들어 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 큐브에서 큐브 셀의 값에 대한 서식을 정의할 수 있습니다. 서식이 지정된 값은 필드 속성 **FormattedValue**를 통해 사용할 수 있습니다. 값을 사용하고 입력란의 서식 속성을 설정하는 대신 값을 직접 사용하려면 필드를 입력란으로 끌고 기본 식 `=Fields!FieldName.Value` 를 `=Fields!FieldName.FormattedValue`로 변경합니다.  
   
-> [!NOTE]  
->  모든 데이터 원본에 대해 모든 **Field** 속성을 사용할 수 있는 것은 아닙니다. **Value** 및 **IsMissing** 속성은 모든 데이터 원본에 대해 정의됩니다. 미리 정의된 다른 속성(다차원 데이터 원본에 대한 **Key**, **UniqueName**및 **ParentUniqueName** )은 데이터 원본에서 제공하는 경우에만 지원됩니다. 일부 데이터 공급자는 사용자 지정 속성을 지원합니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)를 참조하세요. 예를 들어, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에 대한 자세한 내용은 [Analysis Services 데이터베이스에 대한 확장 필드 속성&#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)을 참조하세요.  
+> [!NOTE]
+>  모든 데이터 원본에 대해 모든 **Field** 속성을 사용할 수 있는 것은 아닙니다. **Value** 및 **IsMissing** 속성은 모든 데이터 원본에 대해 정의됩니다. 미리 정의된 다른 속성(다차원 데이터 원본에 대한 **Key**, **UniqueName**및 **ParentUniqueName** )은 데이터 원본에서 제공하는 경우에만 지원됩니다. 일부 데이터 공급자는 사용자 지정 속성을 지원합니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)에서 데이터 원본 유형에 대한 확장 필드 속성에 대한 특정 항목을 참조하세요. 예를 들어, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에 대한 자세한 내용은 [Analysis Services 데이터베이스에 대한 확장 필드 속성&#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)을 참조하세요.  
   
   
 ##  <a name="Defaults"></a> 필드에 대한 기본 식 이해  
@@ -98,16 +98,16 @@ ms.locfileid: "50031862"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 형식에 대한 자세한 내용은 [데이터 형식(데이터베이스 엔진)](https://go.microsoft.com/fwlink/?linkid=98362) 및 [날짜 및 시간 데이터 형식 및 함수(Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98360)를 참조하세요.  
   
- 식에서 데이터 집합 필드에 대한 참조를 포함하는 방법은 [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)을 참조하세요.  
+ 식에서 데이터 세트 필드에 대한 참조를 포함하는 방법은 [식의 데이터 형식&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)을 참조하세요.  
   
   
 ##  <a name="MissingFields"></a> 런타임에 누락된 필드 검색  
- 보고서가 처리될 때 해당 열이 더 이상 데이터 원본에 존재하지 않아 데이터 세트에 대한 결과 집합에서 지정된 일부 열에 대한 값이 누락될 수 있습니다. 필드 속성 IsMissing을 사용하여 필드에 대한 값이 런타임에 반환되었는지를 검색할 수 있습니다. 자세한 내용은 [데이터 집합 필드 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)를 참조하세요.  
+ 보고서가 처리될 때 해당 열이 더 이상 데이터 원본에 존재하지 않아 데이터 세트에 대한 결과 집합에서 지정된 일부 열에 대한 값이 누락될 수 있습니다. 필드 속성 IsMissing을 사용하여 필드에 대한 값이 런타임에 반환되었는지를 검색할 수 있습니다. 자세한 내용은 [데이터 세트 필드 컬렉션 참조&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)를 참조하세요.  
   
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 집합 속성 대화 상자, 필드&#40;보고서 작성기&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
- [보고서 작성기의 보고서 파트 및 데이터 집합](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [데이터 세트 속성 대화 상자, 필드&amp;#40;보고서 작성기&amp;#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
+ [보고서 작성기의 보고서 파트 및 데이터 세트](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
+ [보고서 포함된 데이터 세트 및 공유 데이터 세트&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

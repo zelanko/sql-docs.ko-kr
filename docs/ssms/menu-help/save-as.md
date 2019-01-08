@@ -15,12 +15,12 @@ ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8f64fb29a90f38d777d0963b9f985bb65e2e2a8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6c48e1dd5a5fbcdc2141f14288e10f452b64c850
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701348"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201442"
 ---
 # <a name="save-as"></a>다른 이름으로 저장
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,8 +33,8 @@ ms.locfileid: "51701348"
 **파일 이름**  
 이 옵션을 사용하여 현재 파일 이름을 보거나 파일 이름을 변경하거나 표시되는 파일과 폴더를 필터링할 수 있습니다. 표시되는 파일과 폴더를 필터링하려면 필터링할 파일의 전체 이름 또는 일부를 입력합니다. 별표(`*`)를 와일드카드로 사용할 수 있습니다.  
   
-> [!TIP]  
-> 웹 및 네트워크 위치에 있는 파일을 표시하려면 **파일 이름** 상자에 URL이나 네트워크 경로를 입력합니다. 예를 들어 " https://mywebsite "를 입력하면 "mywebsite" 웹 위치에서 사용 가능한 파일이 표시되고 "\\myserver\myshare"를 입력하면 "myserver"의 "myshare" 위치에서 사용 가능한 파일이 표시됩니다.  
+> [!TIP]
+> 웹 및 네트워크 위치에 있는 파일을 표시하려면 **파일 이름** 상자에 URL이나 네트워크 경로를 입력합니다. 예를 들어 " <https://mywebsite> "를 입력하면 "mywebsite" 웹 위치에서 사용 가능한 파일이 표시되고 "\\myserver\myshare"를 입력하면 "myserver"의 "myshare" 위치에서 사용 가능한 파일이 표시됩니다.  
   
 **파일 형식**  
 이 옵션을 사용하여 선택한 항목의 파일 형식을 새로 선택할 수 있습니다. 표시되는 파일 형식에는 선택한 항목을 변환할 수 있는 사용 가능한 파일 형식이 모두 포함됩니다.  

@@ -11,17 +11,17 @@ ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1fe0017d3797f260aede9e712cbf1cecfe6a45a6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3bb34a00c22e1fa3ceafb7d2f203c1dbd43ac80d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420574"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214022"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>SQL Server 2017 Integration Services의 새로운 기능
 이 항목에서는 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 추가되거나 업데이트된 기능에 대해 설명합니다.
 
->   [!NOTE]
+> [!NOTE]
 > 또한 SQL Server 2017에는 SQL Server 2016의 기능과 SQL Server 2016 업데이트에 추가된 기능도 포함되어 있습니다. SQL Server 2016의 새로운 SSIS기능에 대한 자세한 내용은 [SQL Server 2016 Integration Services의 새로운 기능](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)을 참조하세요.
 
 ## <a name="highlights-of-this-release"></a>이 릴리스의 주요 내용
@@ -42,7 +42,7 @@ ms.locfileid: "52420574"
 
 자세한 내용은 [SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)를 참조하세요.
 
-이러한 새로운 기능을 사용하려면 SSDT(SQL Server Data Tools) 버전 17.2 이상이 필요하지만, SQL Server 2017 또는 SQL Server 2016은 필요하지 않습니다. Azure에 패키지를 배포하는 경우 패키지 배포 마법사는 항상 패키지를 최신 패키지 형식으로 업그레이드합니다.
+이러한 새로운 기능을 사용하려면 SSDT(SQL Server Data Tools) 버전 17.2 이상이 필요하지만, SQL Server 2017 또는 SQL Server 2016은 필요하지 않습니다. Azure에 패키지를 배포할 때 패키지 배포 마법사는 항상 패키지를 최신 패키지 형식으로 업그레이드합니다.
 
 ## <a name="new-in-the-azure-feature-pack"></a>Azure Feature Pack의 새로운 기능
 

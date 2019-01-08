@@ -29,12 +29,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f7d1e7476e014b1ad3d865bd2b322dd0b9030e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9e216fdf05bd473ad05a55469858ee9a053bd75
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831911"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213682"
 ---
 # <a name="create-database-encryption-key-transact-sql"></a>CREATE DATABASE ENCRYPTION KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -70,7 +70,7 @@ CREATE DATABASE ENCRYPTION KEY
 ## <a name="arguments"></a>인수  
 WITH ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY  }  
 암호화 키에 사용되는 암호화 알고리즘을 지정합니다.   
->  [!NOTE]
+> [!NOTE]
 >    SQL Server 2016부터는 AES_128, AES_192 및 AES_256 이외의 모든 알고리즘을 지원하지 않습니다. 오래된 알고리즘을 사용하려면(권장하지 않음) 데이터베이스 호환성 수준을 120 이하로 설정해야 합니다.  
   
 ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name  

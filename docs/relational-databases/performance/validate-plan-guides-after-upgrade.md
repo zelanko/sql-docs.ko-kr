@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - plan guides [SQL Server], validating after upgrade
 ms.assetid: a55ebd88-6f58-454d-b1c4-991b88add522
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 43c7297f490c913663c8d08f62cabb7a21cca86d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d325ac1d922956c92bd27eb099c655f72e5b2631
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636951"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366415"
 ---
 # <a name="validate-plan-guides-after-upgrade"></a>업그레이드 후 계획 지침의 유효성 검사
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

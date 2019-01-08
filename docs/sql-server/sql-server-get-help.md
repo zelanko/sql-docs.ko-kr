@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4eb0d351eeb3555f9f0162670209a9c15af6d964
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 746150438e87746c6fefc81fa7c0bff354147ed6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531487"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205332"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server 도움말 및 피드백
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,7 +85,7 @@ SQL 팀에게 연결할 수 있는 여러 소셜 미디어가 있습니다.
 
 ## <a name="i-want-to-contribute-to-sql-server-documentation"></a>SQL Server 설명서에 기여하려는 경우
 
-###<a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![콘텐츠 편집](../includes/media/edit-topic-pencil.png) 콘텐츠 편집
+### <a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![콘텐츠 편집](../includes/media/edit-topic-pencil.png) 콘텐츠 편집
 문서에 잘못된 내용이 있나요? 또는 설명서를 개선할 만한 기여를 했나요? 물론 docs.microsoft.com에 있는 콘텐츠를 직접 편집할 수 있습니다. 이렇게 하면 문서가 더 이상 개선되지 않지만 페이지에 공헌자로 기입됩니다. [https://aka.ms/editsqldocs](https://aka.ms/editsqldocs)에서 자세한 정보를 확인합니다. 
 
 모든 공용 기여의 기술적 정확성 및 일관성에 대해 SQL 콘텐츠 팀에서 검토합니다. 

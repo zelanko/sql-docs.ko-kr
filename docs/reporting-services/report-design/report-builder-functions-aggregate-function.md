@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b97d2a45a0312e2d2db0425f89262526ddbe76ae
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ea1a6e2a0cca043fc7465a3dd7408ec24ab98286
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030532"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202592"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>보고서 작성기 함수 - 집계 함수
   데이터 공급자가 정의한 대로 지정한 식의 사용자 지정 집계를 반환합니다.  
@@ -47,14 +47,14 @@ Aggregate(expression, scope)
   
  이러한 기본 동작은 **데이터 세트 속성** 대화 상자에서 **부분합을 정보 행으로 해석** 옵션의 값을 수정하여 변경할 수 있습니다. 이 옵션이 **True**로 설정된 경우 서버 집계를 포함한 모든 데이터가 정보 데이터로 표시됩니다. **False**로 설정된 경우 서버 집계가 합계로 표시됩니다. 이 속성에 대한 설정은 이 데이터 세트에 연결되어 있는 모든 데이터 영역에 적용됩니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  **Aggregate** 를 참조하는 보고서 항목에 대한 모든 포함 그룹에는 해당 그룹 식에 대한 단순 필드 참조가 있어야 합니다(예: `[FieldName]`). 복잡한 그룹 식을 사용하는 데이터 영역에서는 **Aggregate** 를 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 처리 확장 프로그램의 경우 **Aggregate** 함수를 사용하여 집계를 지원하려면 쿼리에 **MemberProperty**가 아닌 **LevelProperty**형식의 MDX 필드가 포함되어야 합니다.  
   
  *Expression* 에는 다음 예외와 조건이 있는 중첩 집계 함수에 대한 호출이 포함될 수 있습니다.  
   
 -   중첩 집계의*Scope* 는 외부 집계의 범위와 동일하거나 외부 집계의 범위에 포함되어야 합니다. 식에 있는 모든 고유 범위의 경우 한 범위는 다른 모든 범위에 대한 자식 관계에 있어야 합니다.  
   
--   중첩 집계의*Scope* 는 데이터 집합의 이름일 수 없습니다.  
+-   중첩 집계의 *Scope*는 데이터 세트의 이름일 수 없습니다.  
   
 -   *Expression* 에는 **First**, **Last**, **Previous**또는 **RunningValue** 함수가 포함되지 않아야 합니다.  
   
@@ -65,7 +65,7 @@ Aggregate(expression, scope)
  재귀 집계에 대한 자세한 내용은 [재귀 계층 구조 그룹 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="comparing-the-aggregate-and-sum-functions"></a>Aggregate 함수와 Sum 함수 비교  
- **Aggregate** 함수는 **Sum** 과 같은 숫자 집계 함수와 다릅니다. 즉, **Aggregate** 함수는 데이터 공급자 또는 데이터 처리 확장 프로그램에 의해 계산되는 값을 반환합니다. **Sum** 과 같은 숫자 집계 함수는 *scope* 매개 변수로 결정되는 데이터 집합의 일련의 데이터에 대해 보고서 처리기가 계산하는 값을 반환합니다. 자세한 내용은 [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)에 나열된 집계 함수를 참조하세요.  
+ **Aggregate** 함수는 **Sum** 과 같은 숫자 집계 함수와 다릅니다. 즉, **Aggregate** 함수는 데이터 공급자 또는 데이터 처리 확장 프로그램에 의해 계산되는 값을 반환합니다. **Sum**과 같은 숫자 집계 함수는 *scope* 매개 변수로 결정되는 데이터 세트의 일련의 데이터에 대해 보고서 처리기가 계산하는 값을 반환합니다. 자세한 내용은 [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)에 나열된 집계 함수를 참조하세요.  
   
 ## <a name="example"></a>예제  
  다음 코드 예에서는 `LineTotal`필드에 대한 서버 집계를 검색하는 식을 보여 줍니다. `GroupbyOrder`그룹에 속하는 행의 셀에 식이 추가됩니다.  

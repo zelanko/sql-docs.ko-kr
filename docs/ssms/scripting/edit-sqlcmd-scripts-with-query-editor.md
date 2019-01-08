@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d1afb4913b758397d4d072859c3fb80879f2e46
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0999d5011df80bae97c767ac910b2a5fd810127c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643563"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211812"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>쿼리 편집기로 SQLCMD 스크립트 편집
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "51643563"
   
 -   이 올 수 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기는 SQLCMD 스크립트의 일부로 정의된 환경 변수 및 변수를 지원하지만 기본 제공 SQLCMD 또는 **osql** 변수는 지원하지 않습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 처리하는 SQLCMD는 변수에 대해 대/소문자를 구분합니다. 예를 들어 PRINT '$(COMPUTERNAME)'는 올바른 결과를 생성하는 반면 PRINT '$(ComputerName)'는 오류를 반환합니다.  
   
-> [!CAUTION]  
+> [!CAUTION]
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 일반 및 SQLCMD 모드에서의 실행을 위해 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient를 사용합니다. 명령줄에서 실행할 경우 SQLCMD는 OLE DB 공급자를 사용합니다. 다른 기본 옵션이 적용될 수 있으므로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] SQLCMD 모드 및 SQLCMD 유틸리티에서 동일한 쿼리를 실행하는 동안 다른 동작이 수행될 수 있습니다.  
   
 ## <a name="supported-sqlcmd-syntax"></a>지원되는 SQLCMD 구문  
