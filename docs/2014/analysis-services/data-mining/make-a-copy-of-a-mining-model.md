@@ -16,12 +16,12 @@ ms.assetid: 7975bb02-f188-49a0-b7de-5b9b216254ad
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1ce5f68df0b543fb4c461fb34921ce2ee32a3357
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfae5c36cd05f7122645479980517b14bd2c328d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116243"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529089"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>마이닝 모델 복사본 만들기
   마이닝 모델의 복사본을 만들면 동일한 데이터를 기반으로 여러 마이닝 모델을 빠르게 만들 때 유용합니다. 모델을 복사한 후 매개 변수를 변경하거나 필터를 추가하여 새 복사본을 편집할 수도 있습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "48116243"
   
 1.  마이닝 모델을 선택합니다.  
   
-2.  **속성** 창에서 **Filter** 속성의 입력란을 클릭하고 작성 **(...)** 단추를 클릭합니다.  
+2.  에 **속성** 창에 대 한 입력란을 클릭 합니다 **필터** 속성 및 빌드를 클릭 하 **(...)**  단추입니다.  
   
 3.  필터 조건을 변경합니다.  
   
@@ -58,8 +58,8 @@ ms.locfileid: "48116243"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
- [마이닝 모델에 대 한 필터 &#40;Analysis Services-데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)   
+## <a name="see-also"></a>관련 항목:  
+ [마이닝 모델에 대한 필터&#40;Analysis Services - 데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)   
  [마이닝 모델 태스크 및 방법](mining-model-tasks-and-how-tos.md)   
  [마이닝 모델에서 필터 삭제](delete-a-filter-from-a-mining-model.md)  
   

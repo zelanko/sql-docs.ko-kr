@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.security.MA.f1
@@ -15,19 +14,19 @@ ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 26bfcd55d32c0cc124e0d2d6220ca04a9834aafb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 47571fcfe6b11945ab910f40feeb35145ab8d2a3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166323"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765085"
 ---
 # <a name="merge-agent-security"></a>병합 에이전트 보안
   **병합 에이전트 보안** 대화 상자를 사용하여 병합 에이전트를 실행하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정을 지정할 수 있습니다. 병합 에이전트는 밀어넣기 구독의 경우에는 배포자에서, 끌어오기 구독의 경우에는 구독자에서 실행됩니다. Windows 계정으로 에이전트 프로세스가 실행되기 때문에 이 계정을 *프로세스 계정*이라고도 합니다. 이 대화 상자에서 사용 가능한 추가 옵션은 대화 상자에 액세스하는 방법에 따라 달라집니다.  
   
 -   새 구독 마법사에서 이 대화 상자에 액세스하는 경우에는 구독자(밀어넣기 구독의 경우) 또는 게시자 및 배포자(끌어오기 구독의 경우)에 병합 에이전트를 연결하는 컨텍스트도 지정할 수 있습니다. Windows 계정을 사용하거나 지정한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정의 컨텍스트에서 연결을 설정할 수 있습니다.  
   
--   **구독 속성** 대화 상자에서 이 대화 상자에 액세스하는 경우에는 해당 대화 상자의**구독자 연결**또는 **게시자 연결** 행의 속성 단추 ( **...** )를 클릭하여 병합 에이전트를 연결하는 컨텍스트를 지정합니다. **구독 속성** 대화 상자에 액세스하는 방법은 [밀어넣기 구독 속성 보기 및 수정](view-and-modify-push-subscription-properties.md) 및 방법: [끌어오기 구독 속성 보기 및 수정](view-and-modify-pull-subscription-properties.md)을 참조하세요.  
+-   **구독 속성** 대화 상자에서 이 대화 상자에 액세스하는 경우에는 해당 대화 상자의**구독자 연결**또는 **게시자 연결** 행의 속성 단추 ( **...** )를 클릭하여 병합 에이전트를 연결하는 컨텍스트를 지정합니다. 에 액세스 하는 방법에 대 한 자세한 내용은 합니다 **구독 속성** 대화 상자, 참조 [뷰와 Modify Push Subscription Properties](view-and-modify-push-subscription-properties.md) 및 방법: [끌어오기 구독 속성 보기 및 수정](view-and-modify-pull-subscription-properties.md)합니다.  
   
  모든 계정이 유효해야 하며 각 계정에 대해 올바른 암호를 지정해야 합니다. 계정 및 암호의 유효성은 에이전트를 실행할 때 검사합니다.  
   

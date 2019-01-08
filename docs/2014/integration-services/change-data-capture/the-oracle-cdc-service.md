@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ffa8524e3bf7423d4712eb1539d2b2cece8a8a0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 61c63b771b7314f12c709e080aa7db581306e523
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125973"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780251"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC Service
   Oracle CDC Service는 xdbcdcsvc.exe 프로그램을 실행하는 Windows 서비스입니다. 동일한 컴퓨터에서 각각 다른 Windows 서비스 이름이 있는 여러 Windows 서비스를 실행하도록 Oracle CDC Service를 구성할 수 있습니다. 일반적으로 서비스 간을 더 잘 분리하기 위해 또는 각 서비스가 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 작업해야 하는 경우에 단일 컴퓨터에서 여러 Oracle CDC Windows 서비스를 만듭니다.  
@@ -94,7 +93,7 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
 -   [Oracle CDC Service 작업](the-oracle-cdc-service.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [로컬 CDC Service를 관리 하는 방법](how-to-manage-a-local-cdc-service.md)   
+ [로컬 CDC Service를 관리하는 방법](how-to-manage-a-local-cdc-service.md)   
  [Oracle CDC Service 관리](manage-an-oracle-cdc-service.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
@@ -28,12 +27,12 @@ ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f3d3850e98bce1031d285388b6f5fbe75737e37b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 5eae331b064d83510d657f6f09a819955e6259a0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107343"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778445"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>데이터베이스 분리 및 연결(SQL Server)
   데이터베이스의 데이터 및 트랜잭션 로그 파일은 분리할 수 있으며 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스나 다른 인스턴스에 다시 연결할 수 있습니다. 데이터베이스 분리 및 연결은 데이터베이스를 같은 컴퓨터의 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 변경하거나 데이터베이스를 이동하는 경우 유용합니다.  
@@ -93,7 +92,7 @@ ms.locfileid: "48107343"
 > [!NOTE]  
 >  연결되는 주 데이터 파일이 읽기 전용일 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 해당 데이터베이스를 읽기 전용으로 가정합니다.  
   
- 암호화 된 데이터베이스는 처음 연결 된 경우 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 데이터베이스 소유자는 다음 문을 실행 하 여 데이터베이스의 마스터 키를 열어야 합니다: OPEN MASTER KEY DECRYPTION BY PASSWORD = **' *`password`*'**. 그런 다음 ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY 문을 실행하여 데이터베이스 마스터 키의 자동 암호 해독을 설정하는 것이 좋습니다. 자세한 내용은 [CREATE MASTER KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) 및 [ALTER MASTER KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)를 참조하세요.  
+ 암호화된 데이터베이스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 처음 연결된 경우 데이터베이스 소유자는 OPEN MASTER KEY DECRYPTION BY PASSWORD = **'*`password`*'** 합니다. ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY 문을 실행하여 마스터 키의 자동 암호 해독을 설정하는 것이 좋습니다. 자세한 내용은 [CREATE MASTER KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) 및 [ALTER MASTER KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)를 참조하세요.  
   
  로그 파일 연결 요구 사항은 데이터베이스가 읽기/쓰기인지 아니면 읽기 전용인지에 따라 다음과 같이 달라집니다.  
   

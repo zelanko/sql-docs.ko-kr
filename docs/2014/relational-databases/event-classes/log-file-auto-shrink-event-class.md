@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 4bf82a13-9985-4f20-9ef8-0083f104d124
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec419efcc2c5354aaa6e51e070c47e0f9a457445
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: eab2902600f26abfc0f714b231fcf1bb684f513b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107903"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779735"
 ---
 # <a name="log-file-auto-shrink-event-class"></a>Log File Auto Shrink 이벤트 클래스
   **Log File Auto Shrink** 이벤트 클래스는 자동으로 축소되는 로그 파일을 나타냅니다. 로그 파일이 명시적인 ALTER DATABASE 문 때문에 축소하는 경우 이 이벤트는 트리거되지 않습니다.  

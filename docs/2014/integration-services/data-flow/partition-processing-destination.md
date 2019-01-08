@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.partitionprocessingdest.f1
@@ -17,12 +16,12 @@ ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3405133c121901344de0bda7a6291dcdf150a2b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57c40f85bf372538db22ae3fceb9106b2cccbab0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140513"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773165"
 ---
 # <a name="partition-processing-destination"></a>파티션 처리 대상
   파티션 처리 대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 파티션을 로드하고 처리합니다. 파티션에 대한 자세한 내용은 [파티션&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)을 참조하세요.  
@@ -49,15 +48,15 @@ ms.locfileid: "48140513"
   
  **파티션 처리 대상 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [파티션 처리 대상 편집기 &#40;연결 관리자 페이지&#41;](../partition-processing-destination-editor-connection-manager-page.md)  
+-   [파티션 처리 대상 편집기&#40;연결 관리자 페이지&#41;](../partition-processing-destination-editor-connection-manager-page.md)  
   
--   [파티션 처리 대상 편집기 &#40;매핑 페이지&#41;](../partition-processing-destination-editor-mappings-page.md)  
+-   [파티션 처리 대상 편집기&#40;매핑 페이지&#41;](../partition-processing-destination-editor-mappings-page.md)  
   
--   [파티션 처리 대상 편집기 &#40;고급 페이지&#41;](../partition-processing-destination-editor-advanced-page.md)  
+-   [파티션 처리 대상 편집기&#40;고급 페이지&#41;](../partition-processing-destination-editor-advanced-page.md)  
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](../common-properties.md)  
+-   [공용 속성](../common-properties.md)  
   
 -   [파티션 처리 대상 사용자 지정 속성](partition-processing-destination-custom-properties.md)  
   

@@ -12,12 +12,12 @@ ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 99c2f117eb5e7ce3844b4ea435c6f99ffa3c3557
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: af3859f5e402dce2854cce02439ff6cb26529f46
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663422"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413460"
 ---
 # <a name="new-project-ssma-accesstosql"></a>새 프로젝트 (SSMA) (AccessToSQL)
 사용 된 **새 프로젝트** 대화 상자의 새 SSMA 프로젝트를 만듭니다. 액세스 하는 **새 프로젝트** 대화 상자의 합니다 **파일** 메뉴에서 클릭 **새 프로젝트**.  

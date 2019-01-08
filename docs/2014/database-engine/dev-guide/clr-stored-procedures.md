@@ -23,12 +23,12 @@ ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d0949b6fddf1755da48dd7922a4fbda50d4b2787
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 99fd0d558fccab09f0c73ddd47ef5b4b22d303c3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112053"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511505"
 ---
 # <a name="clr-stored-procedures"></a>CLR 저장 프로시저
   저장 프로시저는 스칼라 식에서 사용할 수 없는 루틴입니다. 스칼라 함수와 달리 저장 프로시저는 테이블 형식의 결과와 메시지를 클라이언트에 반환하고 DDL(데이터 정의 언어) 및 DML(데이터 조작 언어) 문을 호출하고 출력 매개 변수를 반환할 수 있습니다. 관리 코드 중에서 선택 하 고 CLR 통합의 장점에 대 한 자세한 및 [!INCLUDE[tsql](../../includes/tsql-md.md)]를 참조 하세요 [CLR 통합의 개요](../../relational-databases/clr-integration/clr-integration-overview.md)합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "48112053"
   
 ```  
 Imports System.Runtime.InteropServices  
-…  
+...  
 Public Shared Sub PriceSum ( <Out()> ByRef value As SqlInt32)  
 ```  
   

@@ -16,12 +16,12 @@ ms.assetid: 162e0686-ada3-4dd3-9151-9589926e6613
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ffec1e01fd5e1c0c35a2088235cc2979a7694f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2cd9c01ada73773f826c8ff45c55687158480841
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196693"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518286"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>정확도 차트에 대한 입력으로 중첩 테이블 데이터 사용
   외부 데이터를 사용하여 마이닝 모델의 정확도를 테스트할 때 마이닝 모델에 중첩 테이블이 포함되어 있으면 외부 데이터에도 사례 테이블 및 연결된 중첩 테이블이 포함되어 있어야 합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "48196693"
   
 3.  **정확도 차트에 사용할 데이터 집합을 선택하십시오**에서 **다른 데이터 집합 지정**옵션을 선택합니다.  
   
-4.  찾아보기 단추 **(…)** 를 클릭하여 현재 서버의 데이터 원본 뷰 목록에서 외부 데이터 집합을 선택합니다.  
+4.  찾아보기 단추를 클릭 **(...)**  현재 서버의 데이터 원본 뷰 목록에서 외부 데이터 집합을 선택 합니다.  
   
 5.  **사례 테이블 선택**을 클릭합니다. **테이블 선택** 대화 상자에서 사례 데이터가 포함된 데이터 원본 뷰의 테이블을 선택한 다음 **확인**을 클릭합니다.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "48196693"
   
      중첩 테이블과 사례 테이블 간의 관계를 수정해야 하는 경우 **조인 수정** 을 클릭하여 **관계 만들기** 대화 상자를 엽니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [모델 테스트 데이터 선택 및 매핑](choose-and-map-model-testing-data.md)   
  [모델 테스트 데이터에 필터 적용](apply-filters-to-model-testing-data.md)  
   

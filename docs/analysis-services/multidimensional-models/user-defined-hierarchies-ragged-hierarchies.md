@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4c5eb53a8ae3ff25b7c0b4d390d9c5ffc896e542
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: cf8844188330a408c29c8b959994637e097f7043
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023100"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529344"
 ---
-# <a name="user-defined-hierarchies---ragged-hierarchies"></a>사용자 정의 계층-비정형된 계층 구조
+# <a name="user-defined-hierarchies---ragged-hierarchies"></a>사용자 정의 계층 구조 - 비정형 계층 구조
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   비정형 계층은 균일하지 않은 수준 수가 있는 사용자 정의 계층입니다. 일반적인 예로 계정 차트, 고위 관리자가 부서 관리자와 비관리자를 부하 직원으로 둔 조직 차트, Washington D.C., Vatican City 또는 New Delhi와 같이 부모 State 또는 Province가 없이 Country-Region-City로 구성된 지역 계층 등이 있습니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34023100"
   
 -   수준 멤버를 명시적으로 관리하는 부모-자식 계층을 만듭니다. 이 기술의 일러스트레이션을 보려면 [SSAS의 비정형 계층(블로그 포스트)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/)을 참조하세요. 자세한 내용은 온라인 설명서의 [부모-자식 차원](../../analysis-services/multidimensional-models/parent-child-dimension.md)을 참조하세요. 부모-자식 계층을 만드는 경우의 단점은 차원당 부모-자식 계층이 하나만 있을 수 있으며 중간 멤버에 대한 집계를 계산할 때 일반적으로 성능 저하가 발생하는 것입니다.  
   
- 차원에 둘 이상의 비정형 계층이 포함된 경우 첫 번째 방법인 **HideMemberIf**를 설정해야 합니다. 비정형 계층 작업 실무 경험이 있는 BI 개발자는 물리적 데이터 테이블에서 추가 변경 내용을 지원하고 각 수준에 대한 별도의 테이블을 만듭니다. 이 기술에 대한 자세한 내용은 [Martin Mason의 SSAS 재무 큐브–1a 파트–비정형 계층(블로그)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) 을 참조하세요.  
+ 차원에 둘 이상의 비정형 계층이 포함된 경우 첫 번째 방법인 **HideMemberIf**를 설정해야 합니다. 비정형 계층 작업 실무 경험이 있는 BI 개발자는 물리적 데이터 테이블에서 추가 변경 내용을 지원하고 각 수준에 대한 별도의 테이블을 만듭니다. 참조 [Martin Mason의 SSAS 재무 큐브 부분 1a 비정형 계층 (블로그)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) 이 기술에 대 한 세부 정보에 대 한 합니다.  
   
 ##  <a name="bkmk_Hide"></a> 일반 계층에서 멤버를 숨기도록 HideMemberIf 설정  
  비정형 차원 테이블의 경우 논리적으로 누락된 멤버를 여러 방법으로 표시할 수 있습니다. 테이블 셀에는 Null 또는 빈 문자열을 포함할 수 있습니다. 또는 자리 표시자 역할을 하기 위해 부모와 같은 값을 포함할 수도 있습니다. 자리 표시자의 표현은 클라이언트 애플리케이션에 대한 **HideMemberIf** 연결 문자열 속성 및 **MDX Compatibility** 속성에 의해 결정되는 자식 멤버의 자리 표시자 상태에 의해 결정됩니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "34023100"
   
     |HideMemberIf 설정|Description|  
     |--------------------------|-----------------|  
-    |**안 함**|수준 멤버를 숨기지 않습니다. 이 값은 기본값입니다.|  
+    |**안 함**|수준 멤버를 숨기지 않습니다. 이것은 기본값입니다.|  
     |**OnlyChildWithNoName**|부모의 유일한 자식이고 이름이 Null 또는 빈 문자열인 수준 멤버를 숨깁니다.|  
     |**OnlyChildWithParentName**|부모의 유일한 자식이고 이름이 부모와 동일한 수준 멤버를 숨깁니다.|  
     |**NoName**|이름이 비어 있는 수준 멤버를 숨깁니다.|  
@@ -68,7 +68,7 @@ ms.locfileid: "34023100"
 |**1**|자리 표시자 값을 표시합니다.|이 값은 Excel, SSDT 및 SSMS에서 사용되는 기본값입니다. 비정형 계층에서 빈 수준을 드릴다운할 때 서버에서 자리 표시자 값을 반환하도록 지시합니다. 자리 표시자 값을 클릭하면 자식(리프) 노드로 계속 드릴다운할 수 있습니다.<br /><br /> Excel은 Analysis Services에 연결하는 데 사용되는 연결 문자열을 소유하고 각 새 연결에 대해 **MDX Compatibility** 을 항상 1로 설정합니다. 이 동작은 이전 버전과의 호환성을 유지됩니다.|  
 |**2**|자리 표시자 값(부모 수준의 null 값 또는 중복)을 숨기지만 관련 값을 가진 다른 수준 및 노드는 표시합니다.|**MDX Compatibility**=2는 일반적으로 비정형 계층의 개념으로 기본 설정으로 표시됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 및 일부 타사 클라이언트 응용 프로그램에서는 이 설정을 유지할 수 있습니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [사용자 정의 계층 만들기](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [사용자 계층](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [부모-자식 차원](../../analysis-services/multidimensional-models/parent-child-dimension.md)   

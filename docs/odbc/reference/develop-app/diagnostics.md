@@ -15,15 +15,15 @@ ms.assetid: 450abd88-90a1-4fbc-b417-8efbdd8e1dea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0c7ddfeda7538027c56af17664e5962d09903b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72e79d377371277720e2fcc15a31ce715693d832
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686351"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512095"
 ---
 # <a name="diagnostics"></a>진단
-Odbc에서 함수는 두 가지 방법으로 진단 정보를 반환합니다. 반환 코드에 진단 레코드는 함수에 대 한 자세한 정보를 제공 하는 동안 전반적인 성공 또는 실패 함수를 나타냅니다. 하나 이상의 진단 레코드-헤더 레코드-함수가 성공 하는 경우에 반환 됩니다.  
+Odbc에서 함수는 두 가지 방법으로 진단 정보를 반환합니다. 반환 코드에 진단 레코드는 함수에 대 한 자세한 정보를 제공 하는 동안 전반적인 성공 또는 실패 함수를 나타냅니다. 하나 이상의 진단 레코드는 헤더 레코드-함수가 성공 하는 경우에 반환 됩니다.  
   
  진단 정보는 하드 코드 된 SQL 문에서 잘못 된 핸들과 같은 프로그래밍 오류 및 구문 오류를 catch 하려면 개발 시에 사용 됩니다. 사용자가 입력 한 SQL 문에서 런타임 오류 및 경고 데이터 잘림, 액세스 위반 등 구문 오류를 catch 하려면 런타임에 사용 됩니다.  
   

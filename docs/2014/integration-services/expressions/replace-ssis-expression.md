@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - replacing string expression
@@ -14,12 +13,12 @@ ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dabde936354e052a7a670b0235b994edf26093f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee88a12261d44c5090ae8d8f6ecac9f4b4ee216b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178293"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754415"
 ---
 # <a name="replace-ssis-expression"></a>REPLACE(SSIS 식)
   식 내의 문자열을 다른 문자열이나 빈 문자열로 바꾼 후 문자 식을 반환합니다.  
@@ -78,7 +77,7 @@ REPLACE((DT_WSTR,8)DaysToManufacture,"6","5")
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [부분 문자열이 &#40;SSIS 식&#41;](substring-ssis-expression.md)   
- [함수 &#40;SSIS 식&#41;](functions-ssis-expression.md)  
+ [SUBSTRING&#40;SSIS 식&#41;](substring-ssis-expression.md)   
+ [함수&#40;SSIS 식&#41;](functions-ssis-expression.md)  
   
   

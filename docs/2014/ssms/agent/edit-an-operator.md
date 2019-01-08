@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
@@ -15,12 +15,12 @@ ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8f290d76a6c7b352e438e836bfd48eedeb28e4db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 3c037aedf4fa3199be658999f676731875e0b785
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093333"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764205"
 ---
 # <a name="edit-an-operator"></a>운영자 편집
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 알림 메시지 수신을 위한 운영자의 응답 가능 여부와 전자 메일, 호출기 및 Net Send 주소를 편집하는 방법에 대해 설명합니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "48093333"
   
     -   [운영자 속성 및 새로운 연산자 &#40;일반 페이지&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [연산자 속성: 새 운영자 &#40;알림 페이지&#41;](operator-properties-new-operator-notifications-page.md)  
+    -   [연산자 속성: New 연산자 &#40;알림 페이지&#41;](operator-properties-new-operator-notifications-page.md)  
   
     -   [운영자 속성&#40;기록 페이지&#41;](operator-properties-history-page.md)  
   
@@ -93,9 +93,9 @@ ms.locfileid: "48093333"
     GO  
   
     EXEC dbo.sp_update_operator   
-        @name = N'François Ajenstat',  
+        @name = N'Fran??ois Ajenstat',  
         @enabled = 1,  
-        @email_address = N'françoisa',  
+        @email_address = N'fran??oisa',  
         @pager_address = N'5551290AW@pager.Adventure-Works.com',  
         @weekday_pager_start_time = 080000,  
         @weekday_pager_end_time = 170000,  

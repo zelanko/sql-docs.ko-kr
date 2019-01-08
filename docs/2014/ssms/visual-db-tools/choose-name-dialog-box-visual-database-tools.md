@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.choosename
@@ -14,12 +14,12 @@ ms.assetid: cd6b5527-c032-473e-b954-1a549e1cdf4a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2bec66c77bfab971a3e1c29ca9b04b17b1194499
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1916c87eae6a884775ae612e42381a12586d894
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207263"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763701"
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>이름 선택 대화 상자(Visual Database Tools)
   선택한 경우이 대화 상자에 나타납니다 **저장할 \<TableName**>를 **저장 \<DiagramName >**, 또는 **저장 \<ViewName >** 에서 **파일** 메뉴.  

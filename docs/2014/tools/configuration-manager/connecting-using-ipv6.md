@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - Internet Protocol
@@ -15,12 +14,12 @@ ms.assetid: 2669098c-f5f1-43da-aec6-e91003ac89f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bf7d2893d588db9f67c6f2a0c15f44192193820a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db26351430c6b7e0737273b2107bea242c455a2a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182723"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775245"
 ---
 # <a name="connecting-using-ipv6"></a>IPv6을 사용하여 연결
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 인터넷 프로토콜 버전 4(IPv4)와 인터넷 프로토콜 버전 6(IPv6)을 둘 다 지원합니다. Windows가 IPv6 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 구성되어 있으면 구성 요소가 자동으로 IPv6을 인식합니다. 특별한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성은 필요하지 않습니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "48182723"
     > [!NOTE]  
     >  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 IPv4에서 수신하지 않는 경우 시도된 IPv4 연결은 IPv6 주소가 시도될 때까지 제한 시간 동안 대기해야 합니다. 이를 방지하려면 IPv6 IP 주소에 직접 연결하거나 IPv6 주소를 가진 클라이언트에서 별칭을 구성합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 구성 관리자](../../relational-databases/sql-server-configuration-manager.md)  
   
   

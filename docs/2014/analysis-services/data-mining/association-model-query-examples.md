@@ -17,12 +17,12 @@ ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ad20cca3b87a3d3b94bef48dcdf94c55cf30a282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 268685c489d03f7e9055042ab613223146f89600
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117385"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519399"
 ---
 # <a name="association-model-query-examples"></a>연결 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 만들 때 분석 중에 발견된 규칙과 항목 집합에 대한 세부 정보를 제공하는 내용 쿼리를 만들거나, 데이터에서 발견된 연결을 사용하여 예측을 수행하는 예측 쿼리를 만들 수 있습니다. 연결 모델에서 예측은 일반적으로 규칙을 기반으로 하여 권장 구성을 생성하는 데 사용되고, 내용에 대한 쿼리는 일반적으로 항목 집합 간의 관계를 탐색합니다. 모델에 대한 메타데이터를 검색할 수도 있습니다.  
@@ -74,7 +74,7 @@ WHERE NODE_TYPE = 1
 |CHILDREN_CARDINALITY|942|  
 |NODE_DESCRIPTION|Association Rules Model; ITEMSET_COUNT=679; RULE_COUNT=263; MIN_SUPPORT=14; MAX_SUPPORT=4334; MIN_ITEMSET_SIZE=0; MAX_ITEMSET_SIZE=3; MIN_PROBABILITY=0.400390625; MAX_PROBABILITY=1; MIN_LIFT=0.14309369632511; MAX_LIFT=1.95758227647523|  
   
- 연결 모델에서 이러한 열의 의미의 정의 참조 하세요 [마이닝 모델 콘텐츠에 대 한 연결 모델 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)합니다.  
+ 연결 모델에서 이러한 열의 의미에 대한 정의는 [연결 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)를 참조하세요.  
   
  [맨 위로 이동](#bkmk_top2)  
   
@@ -166,8 +166,8 @@ WHERE NODE_TYPE = 7
   
  서로 다른 교차 판매 전략의 효율성을 비교할 수 있도록 다양한 규칙과 항목 집합에 대한 신뢰도를 반환하려는 경우 연결 모델에 대한 쿼리가 유용할 수 있습니다. 다음 예에서는 이러한 쿼리를 만드는 방법을 보여 줍니다.  
   
-###  <a name="bkmk_Query6"></a> 예제 쿼리 6: 관련 항목 예측  
- 다음 예제에서는 [중간 데이터 마이닝 자습서&#40;Analysis Services - 데이터 마이닝&#41;](../../tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)에서 만든 연결 모델을 사용하며, 특정 제품을 구매한 고객에게 어떤 제품을 권장할 것인지를 알려 주는 예측 쿼리를 만드는 방법을 보여 줍니다. 사용자가 `SELECT…UNION` 문에서 모델에 값을 제공하는 쿼리를 단일 쿼리라고 합니다. 새로운 값에 해당하는 예측 가능한 모델 열이 중첩 테이블이므로 `SELECT` 절을 하나 사용하여 새 값을 중첩 테이블 열 `[Model]`에 매핑하고, 또 다른 `SELECT` 절을 사용하여 중첩 테이블 열을 사례 수준 열 `[v Assoc Seq Line Items]`에 매핑해야 합니다. INCLUDE-STATISTICS 키워드를 쿼리에 추가하면 권장 구성에 대한 확률과 지지도를 확인할 수 있습니다.  
+###  <a name="bkmk_Query6"></a> 예제 쿼리 6: 연관된 항목 예측  
+ 다음 예제에서는 [중간 데이터 마이닝 자습서&#40;Analysis Services - 데이터 마이닝&#41;](../../tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)에서 만든 연결 모델을 사용하며, 특정 제품을 구매한 고객에게 어떤 제품을 권장할 것인지를 알려 주는 예측 쿼리를 만드는 방법을 보여 줍니다. 사용자가 `SELECT...UNION` 문에서 모델에 값을 제공하는 쿼리를 단일 쿼리라고 합니다. 새로운 값에 해당하는 예측 가능한 모델 열이 중첩 테이블이므로 `SELECT` 절을 하나 사용하여 새 값을 중첩 테이블 열 `[Model]`에 매핑하고, 또 다른 `SELECT` 절을 사용하여 중첩 테이블 열을 사례 수준 열 `[v Assoc Seq Line Items]`에 매핑해야 합니다. INCLUDE-STATISTICS 키워드를 쿼리에 추가하면 권장 구성에 대한 확률과 지지도를 확인할 수 있습니다.  
   
 ```  
 SELECT PredictAssociation([Association].[vAssocSeqLineItems],INCLUDE_STATISTICS, 3)  
@@ -189,7 +189,7 @@ AS t
   
  [맨 위로 이동](#bkmk_top2)  
   
-###  <a name="bkmk_Query7"></a> 예제 쿼리 7: 관련 항목 집합에 대한 신뢰도 확인  
+###  <a name="bkmk_Query7"></a> 예제 쿼리 7: 관련 항목 집합에 대한 신뢰도 결정  
  규칙은 권장 구성을 생성하는 데 유용한 반면 항목 집합은 데이터 집합의 패턴을 보다 상세하게 분석하는 데 더 유용합니다. 예를 들어 이전 예제 쿼리에 의해 반환된 권장 구성이 만족스럽지 않을 경우 제품 A가 포함된 다른 항목 집합을 검사하여 제품 A가 고객이 다른 종류의 제품과 함께 구매하고자 하는 액세서리인지 여부 또는 제품 A가 특정 제품의 구매와 강한 상관 관계가 있는지 여부를 확인할 수 있습니다. 이러한 관계를 확인하는 가장 쉬운 방법은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 뷰어에서 항목 집합을 필터링하는 것이지만 쿼리를 통해 동일한 정보를 검색할 수 있습니다.  
   
  다음 예제 쿼리는 단일 항목인 Water Bottle을 포함하여 Water Bottle 항목을 포함하는 모든 항목 집합을 반환합니다.  
@@ -226,19 +226,19 @@ ORDER BY NODE_SUPPORT DESC
 |||  
 |-|-|  
 |예측 함수|사용법|  
-|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|한 노드가 신경망 그래프에서 다른 노드의 자식인지 여부를 확인합니다.|  
-|[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|지정한 노드에 현재 사례가 포함되었는지 여부를 나타냅니다.|  
-|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|가중치 확률을 반환합니다.|  
-|[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|연관 데이터 세트에서의 멤버 자격을 예측합니다.|  
-|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|현재 예측된 값과 관련 된 값의 테이블을 반환 합니다.|  
-|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|각 사례에 대한 Node_ID를 반환합니다.|  
-|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|예측 값의 확률을 반환합니다.|  
-|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|지정한 상태에 대한 지원 값을 반환합니다.|  
-|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|예측 값의 분산을 반환합니다.|  
+|[IsDescendant & #40; DMX & #41;](/sql/dmx/isdescendant-dmx)|한 노드가 신경망 그래프에서 다른 노드의 자식인지 여부를 확인합니다.|  
+|[IsInNode & #40; DMX & #41;](/sql/dmx/isinnode-dmx)|지정한 노드에 현재 사례가 포함되었는지 여부를 나타냅니다.|  
+|[PredictAdjustedProbability & #40; DMX & #41;](/sql/dmx/predictadjustedprobability-dmx)|가중치 확률을 반환합니다.|  
+|[PredictAssociation & #40; DMX & #41;](/sql/dmx/predictassociation-dmx)|연관 데이터 세트에서의 멤버 자격을 예측합니다.|  
+|[PredictHistogram & #40; DMX & #41;](/sql/dmx/predicthistogram-dmx)|현재 예측된 값과 관련 된 값의 테이블을 반환 합니다.|  
+|[PredictNodeId & #40; DMX & #41;](/sql/dmx/predictnodeid-dmx)|각 사례에 대한 Node_ID를 반환합니다.|  
+|[PredictProbability & #40; DMX & #41;](/sql/dmx/predictprobability-dmx)|예측 값의 확률을 반환합니다.|  
+|[PredictSupport & #40; DMX & #41;](/sql/dmx/predictsupport-dmx)|지정한 상태에 대한 지원 값을 반환합니다.|  
+|[PredictVariance & #40; DMX & #41;](/sql/dmx/predictvariance-dmx)|예측 값의 분산을 반환합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [Microsoft 연결 알고리즘](microsoft-association-algorithm.md)   
  [Microsoft 연결 알고리즘 기술 참조](microsoft-association-algorithm-technical-reference.md)   
- [마이닝 모델 콘텐츠 연결 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [연결 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - version flags [Master Data Services], about version flags
@@ -16,12 +15,12 @@ ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5003667b952e927454e5674538d0b40fab577aa9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67f99012be602f80279826de0446df006ff4e69f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190920"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778395"
 ---
 # <a name="versions-master-data-services"></a>버전(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 모델 내에 여러 버전의 마스터 데이터를 만들 수 있습니다. 버전은 데이터 유효성을 검사하는 동안 잠그고 데이터 유효성 검사 이후에 커밋할 수 있습니다. 커밋된 버전은 감사 가능한 변경 사항 레코드를 형성합니다. 이러한 각 버전에는 모델의 모든 멤버, 특성 값, 계층 멤버, 계층 관계 및 컬렉션이 포함됩니다.  
@@ -70,22 +69,22 @@ ms.locfileid: "48190920"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|기존 버전의 이름을 변경합니다.|[버전 이름 변경 &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)|  
-|관리자만 데이터를 편집할 수 있도록 버전을 잠급니다.|[버전 잠금 &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)|  
-|사용자가 데이터를 편집할 수 있도록 버전을 잠금 해제합니다.|[버전 잠금 해제 &#40;Master Data Services&#41;](../../2014/master-data-services/unlock-a-version-master-data-services.md)|  
-|모든 데이터의 유효성 검사를 마친 후 버전을 커밋합니다.|[버전 커밋 &#40;Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)|  
-|버전을 표시하는 새 플래그를 만듭니다.|[버전 플래그 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)|  
-|기존 버전 플래그의 이름을 변경합니다.|[버전 플래그 이름 변경 &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)|  
-|기존 플래그를 버전에 할당합니다.|[버전에 플래그 할당 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
-|기존 버전의 새 복사본을 만듭니다.|[버전 복사 &#40;Master Data Services&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)|  
-|기존 버전을 삭제합니다.|[버전 삭제 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-version-master-data-services.md)|  
+|기존 버전의 이름을 변경합니다.|[버전 이름 변경&#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)|  
+|관리자만 데이터를 편집할 수 있도록 버전을 잠급니다.|[버전 잠금&#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)|  
+|사용자가 데이터를 편집할 수 있도록 버전을 잠금 해제합니다.|[버전 잠금 해제&#40;Master Data Services&#41;](../../2014/master-data-services/unlock-a-version-master-data-services.md)|  
+|모든 데이터의 유효성 검사를 마친 후 버전을 커밋합니다.|[버전 커밋&#40;Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)|  
+|버전을 표시하는 새 플래그를 만듭니다.|[버전 플래그 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)|  
+|기존 버전 플래그의 이름을 변경합니다.|[버전 플래그 이름 변경&#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)|  
+|기존 플래그를 버전에 할당합니다.|[버전에 플래그 할당&#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
+|기존 버전의 새 복사본을 만듭니다.|[버전 복사&#40;Master Data Services&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)|  
+|기존 버전을 삭제합니다.|[버전 삭제&#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-version-master-data-services.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   
--   [트랜잭션 되돌리기 &#40;Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)  
+-   [트랜잭션 되돌리기&#40;Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)  
   
--   [알림 &#40;Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
+-   [알림&#40;Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
   
--   [비즈니스 규칙 &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [비즈니스 규칙&#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

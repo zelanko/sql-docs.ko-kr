@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af8f20f14ed02a351101580566ab7b6393c24c52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01542ee3219a7fda68330d19b88161de25f14329
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059743"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783895"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>SQL Server PowerShell 경로 작업
   [!INCLUDE[ssDE](../includes/ssde-md.md)] 공급자 경로의 노드로 이동한 후에는 노드에 연결된 [!INCLUDE[ssDE](../includes/ssde-md.md)] 관리 개체에서 메서드 및 속성을 사용하여 작업을 수행하거나 정보를 검색할 수 있습니다.  
   
 1.  [시작하기 전에](#BeforeYouBegin)  
   
-2.  **경로 노드에서 작업하려면**  [메서드 및 속성 나열](#ListPropMeth), [메서드 및 속성 사용](#UsePropMeth)  
+2.  **다음 경로 노드에서 작업 하려면**  [메서드 및 속성 나열](#ListPropMeth), [메서드 및 속성 사용](#UsePropMeth)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  [!INCLUDE[ssDE](../includes/ssde-md.md)] 공급자 경로의 노드로 이동한 후에는 다음 두 가지 동작을 수행할 수 있습니다.  
@@ -44,7 +43,7 @@ ms.locfileid: "48059743"
   
 ```  
 $MyDBVar = New-Object Microsoft.SqlServer.Management.SMO.Database  
-$MyDBVar | Get-Member –Type Methods  
+$MyDBVar | Get-Member -Type Methods  
 $MyDBVar | Get-Member -Type Properties  
 ```  
   
@@ -97,7 +96,7 @@ $MyDBVar.State
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell 공급자](sql-server-powershell-provider.md)   
  [SQL Server PowerShell 경로 탐색](navigate-sql-server-powershell-paths.md)   
  [URN을 SQL Server 공급자 경로로 변환](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

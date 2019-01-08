@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - synchronization [SQL Server replication], subscriptions
@@ -15,12 +14,12 @@ ms.assetid: cbe13120-8dd9-4309-88dd-07a801c68f5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5efa0a0e46362fa94805a1eb9487fbe186d3176d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d82ef2a50da415504c2a7c461e652beb7547d501
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123763"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772016"
 ---
 # <a name="synchronize-subscriptions-replication"></a>구독 동기화(복제)
   구독은 복제 에이전트에 의해 동기화됩니다. 배포 에이전트는 트랜잭션 및 스냅숏 게시에 대한 구독을 동기화하며 병합 에이전트는 병합 게시에 대한 구독을 동기화합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], 복제 저장 프로시저 및 RMO(복제 관리 개체)를 사용하여 구독을 동기화하고 동기화 동작을 제어할 수 있습니다. 다음 항목에서는 구독을 동기화하고 동기화 옵션을 지정하는 방법을 설명합니다.  
@@ -61,7 +60,7 @@ ms.locfileid: "48123763"
   
 -   [병합 아티클용 사용자 지정 충돌 해결 프로그램 구현](implement-a-custom-conflict-resolver-for-a-merge-article.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터 동기화](synchronize-data.md)  
   
   

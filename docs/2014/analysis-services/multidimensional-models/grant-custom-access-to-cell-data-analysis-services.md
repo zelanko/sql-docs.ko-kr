@@ -20,12 +20,12 @@ ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6c45471990d3eac42c8805fc9c6ba820a9762627
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc9d003fc4c1f3b3cd32e8f23fe635d56e48555e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105173"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510898"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>셀 데이터에 대한 사용자 지정 액세스 부여(Analysis Services)
   셀 보안은 큐브 내 측정값 데이터에 대한 액세스를 허용하거나 거부하는 데 사용됩니다. 다음 그림은 특정 측정값에 대한 액세스만 허용된 사용자로 연결했을 때 피벗 테이블에서 허용된 측정값과 거부된 측정값의 조합을 보여 줍니다. 이 예제에서 **재판매인 판매액** 및 **재판매인 총 제품 원가** 는 이 역할을 통해 사용할 수 있는 유일한 측정값입니다. 다른 모든 측정값은 암시적으로 거부됩니다. 이 결과를 얻는 데 사용한 단계는 아래의 다음 섹션인 "특정 측정값에 대한 액세스 허용"에 나와 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "48105173"
   
  셀 사용 권한은 셀 내부의 데이터에 적용되며, 메타데이터에는 적용되지 않습니다. 셀이 쿼리 결과에 여전히 나타나며 실제 셀 값 대신 `#N/A` 값을 표시하는 방식을 살펴보세요. `#N/A` 클라이언트 응용 프로그램에서 값을 변환 하거나 연결 문자열에 Secured Cell Value 속성을 설정 하 여 다른 값을 지정 하지 않으면 값이 셀에 표시 됩니다.  
   
- 셀을 완전히 숨기려면 볼 수 있는 구성원(차원, 차원 특성 및 차원 특성 구성원)을 제한해야 합니다. 자세한 내용은 [차원 데이터에 대 한 사용자 지정 액세스 부여 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)합니다.  
+ 셀을 완전히 숨기려면 차원 멤버, 차원 특성 및 차원 특성 멤버를 제한 해야-볼 수 있습니다. 자세한 내용은 [차원 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)를 참조하세요.  
   
  관리자는 구성원이 큐브 내 셀에 대한 읽기, 불확정 읽기 또는 읽기/쓰기 권한을 갖는지 여부를 지정할 수 있습니다. 셀에 대한 사용 권한 부여는 허용된 가장 낮은 보안 수준이므로 이 수준에서 사용 권한 적용을 시작하기 전에 다음과 같은 사항에 유의하세요.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48105173"
 ## <a name="allow-access-to-specific-measures"></a>특정 측정값에 대한 액세스 허용  
  셀 보안을 사용하여 사용 가능한 측정값을 명시적으로 선택할 수 있습니다. 허용되는 구성원을 명확하게 식별한 후 다른 모든 구성원은 사용할 수 없게 됩니다. 이 방법은 아래 단계에 설명된 대로 MDX 스크립트를 통해 구현할 수 있는 가장 간단한 시나리오일 것입니다.  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 인스턴스에 연결하고, 데이터베이스를 선택하고, **역할** 폴더를 연 후 데이터베이스 역할을 클릭하거나 새로운 데이터베이스 역할을 만듭니다. 멤버 자격이 이미 지정 하 고 역할 있어야 `Read` 큐브에 액세스 합니다. 자세한 내용은 [Grant cube or model permissions &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) 를 참조하세요.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 인스턴스에 연결하고, 데이터베이스를 선택하고, **역할** 폴더를 연 후 데이터베이스 역할을 클릭하거나 새로운 데이터베이스 역할을 만듭니다. 멤버 자격이 이미 지정되어 있어야 하며, 해당 역할에 큐브에 대한 `Read` 권한이 있어야 합니다. 차원 권한을 설정하는 방법에 대한 자세한 내용은 [큐브 또는 모델 권한 부여&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) 를 참조하세요.  
   
 2.  **셀 데이터**에서 큐브 선택을 점검하여 올바른 항목을 선택했는지 확인한 후 **읽기 권한 설정**을 선택합니다.  
   
@@ -97,12 +97,12 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
 ## <a name="set-readwrite-permissions-on-a-cell"></a>셀에 대한 읽기/쓰기 권한 설정  
  구성원에게 큐브 자체에 대한 읽기/쓰기 권한이 있다면 셀에 대한 읽기/쓰기 권한은 쓰기 저장을 사용하도록 설정하는 데 사용됩니다. 셀 수준에서 부여되는 사용 권한은 큐브 수준에서 부여되는 사용 권한보다 클 수 없습니다. 자세한 내용은 [Set Partition Writeback](set-partition-writeback.md) 를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 작성기 &#40;Analysis Services-다차원 데이터&#41;](../mdx-builder-analysis-services-multidimensional-data.md)   
- [기본 MDX 스크립트 &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)   
- [처리 권한 부여 &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)   
- [차원에 대 한 권한 부여 &#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)   
- [차원 데이터에 대 한 사용자 지정 액세스 부여 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [큐브 또는 모델 권한 부여 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
+## <a name="see-also"></a>관련 항목:  
+ [MDX 작성기&#40;Analysis Services - 다차원 데이터&#41;](../mdx-builder-analysis-services-multidimensional-data.md)   
+ [기본 MDX 스크립트 & #40; Mdx& #41;](mdx/the-basic-mdx-script-mdx.md)   
+ [처리 권한 부여&#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)   
+ [차원에 대한 권한 부여&#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)   
+ [데이터 & #40; 차원에 대 한 사용자 지정 액세스 부여 Analysis Services & #41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [큐브 또는 모델 사용 권한 & #40; 부여 Analysis Services & #41;](grant-cube-or-model-permissions-analysis-services.md)  
   
   

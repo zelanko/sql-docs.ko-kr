@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.alert.response.f1
@@ -12,12 +12,12 @@ ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 864859365dac094377ab00cb6848f3fb7c3a81f7
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 135207a16ef49fca4820e0d7872d9c3542628d8b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906223"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773795"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>경고 속성-새 경고 (응답 페이지)
   이 페이지에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고에 대한 응답으로 실행할 작업을 지정하거나 알림을 받을 운영자 목록을 가져올 수 있습니다.  
@@ -51,9 +51,9 @@ ms.locfileid: "48906223"
  새 운영자를 만드는 데 사용할 수 있는 **새 운영자** 대화 상자를 표시합니다.  
   
  **운영자 보기**  
- 현재 선택된 운영자에 대한 **속성** 대화 상자를 표시합니다. 볼 수 있습니다에서 연산자 속성을 수정 합니다 **운영자 속성** 대화 상자.  
+ 현재 선택된 운영자에 대한 **속성** 대화 상자를 표시합니다. **운영자 속성** 대화 상자에서 운영자 속성을 확인 및 수정할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Alerts](alerts.md)   
  [심각도 사용 하 여 경고 수준 만들기](create-an-alert-using-severity-level.md)   
  [Alerts](alerts.md)   

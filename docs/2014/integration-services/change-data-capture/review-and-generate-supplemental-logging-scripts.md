@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - scripts
@@ -13,12 +12,12 @@ ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a622bdebc82f1c557a80ea43a18f474a852cca9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9d4731cbc7b6b4a761de3c5d0e3777a028c8a3c6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048993"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777087"
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>보완 로깅 스크립트 검토 및 생성
   **스크립트** 탭을 사용하여 보완 로깅을 설정하는 Oracle 원본 데이터베이스에서 스크립트를 실행하거나 다시 실행할 수 있습니다.  
@@ -55,7 +54,7 @@ ms.locfileid: "48048993"
 2.  파일 이름을 지정하고 **저장** 을 클릭하여 파일을 저장합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [CDC 인스턴스 속성을 편집 하는 방법](how-to-edit-the-cdc-instance-properties.md)   
- [스크립트 실행을 위한 Oracle 자격 증명](oracle-credentials-for-running-script.md)  
+ [CDC 인스턴스 속성을 편집하는 방법](how-to-edit-the-cdc-instance-properties.md)   
+ [Oracle Credentials for Running Script](oracle-credentials-for-running-script.md)  
   
   

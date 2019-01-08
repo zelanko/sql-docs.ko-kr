@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], DATEADD
@@ -15,12 +14,12 @@ ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8f49e6ebab115dd4d0363fd19ae477902389bd8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c202f5d990d707de4aa4a3077d055e7cd72e7bac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140593"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781185"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD(SSIS 식)
   날짜에서 지정한 날짜 부분에 날짜 또는 시간 간격을 나타내는 숫자를 더한 후 새로운 DT_DBTIMESTAMP 값을 반환합니다. 숫자 매개 변수는 정수로 계산되고 날짜 매개 변수는 유효한 날짜여야 합니다.  
@@ -92,11 +91,11 @@ DATEADD("yyyy", 2, (DT_DBTIMESTAMP)"8/6/2003")
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [DATEDIFF &#40;SSIS 식&#41;](datediff-ssis-expression.md)   
+ [DATEDIFF&#40;SSIS 식&#41;](datediff-ssis-expression.md)   
  [DATEPART&#40;SSIS 식&#41;](datepart-ssis-expression.md)   
  [DAY&#40;SSIS 식&#41;](day-ssis-expression.md)   
  [MONTH&#40;SSIS 식&#41;](month-ssis-expression.md)   
  [YEAR&#40;SSIS 식&#41;](year-ssis-expression.md)   
- [함수 &#40;SSIS 식&#41;](functions-ssis-expression.md)  
+ [함수&#40;SSIS 식&#41;](functions-ssis-expression.md)  
   
   

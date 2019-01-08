@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.maintenancecleanuptask.f1
@@ -17,12 +16,12 @@ ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 90ef3f848df9bd9b0e321e96ad558d4ed452f21a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c931eb9b72a2ede8f7f69e3762c499cfc239597d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112235"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767995"
 ---
 # <a name="maintenance-cleanup-task"></a>유지 관리 정리 태스크
   유지 관리 정리 태스크는 유지 관리 계획에서 만든 데이터베이스 백업 파일 및 보고서를 비롯하여 유지 관리 계획과 관련된 파일을 제거합니다. 자세한 내용은 [유지 관리 계획](../../relational-databases/maintenance-plans/maintenance-plans.md) 및 [SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)을 참조하세요.  

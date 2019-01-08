@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 46572a9fac9e3d1749c65acf9370718fbc8b3dd0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: e4d8da5c0b352964fe9017be902557e29e1e2ed3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125513"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781425"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>SAP BW 대상 편집기(연결 관리자 페이지)
   **SAP BW 대상 편집기** 의 **연결 관리자** 페이지를 사용하여 SAP BW 대상이 사용할 SAP BW 연결 관리자를 선택할 수 있습니다. 이 페이지에서는 SAP Netweaver BW 시스템으로 데이터를 로드하기 위한 매개 변수도 선택합니다.  
@@ -80,7 +79,7 @@ ms.locfileid: "48125513"
  게이트웨이 호스트의 서버 이름 또는 IP 주소를 입력합니다. 일반적으로 이름 또는 IP 주소는 SAP 애플리케이션 서버와 동일합니다.  
   
  **게이트웨이 서비스**  
- 게이트웨이 서비스의 이름 형식으로 입력 `sapgwNN`여기서 `NN` 은 시스템 번호입니다.  
+ 게이트웨이 서비스 이름을 `sapgwNN` 형식으로 입력합니다. 여기서 `NN`은 시스템 번호입니다.  
   
  **프로그램 ID**  
  RFC 대상과 연결된 프로그램 ID를 입력합니다.  
@@ -111,7 +110,7 @@ ms.locfileid: "48125513"
 |**InfoPackage**|**InfoPackage 만들기** 대화 상자를 사용하여 새 InfoPackage를 만듭니다. 이 대화 상자에 대한 자세한 내용은 [Create InfoPackage](create-infopackage.md)을 참조하십시오.|  
   
 ## <a name="see-also"></a>관련 항목  
- [SAP BW 대상 편집기 &#40;매핑 페이지&#41;](sap-bw-destination-editor-mappings-page.md)   
+ [SAP BW 대상 편집기&#40;매핑 페이지&#41;](sap-bw-destination-editor-mappings-page.md)   
  [SAP BW 대상 편집기&#40;오류 출력 페이지&#41;](sap-bw-destination-editor-error-output-page.md)   
  [SAP BW 대상 편집기&#40;고급 페이지&#41;](sap-bw-destination-editor-advanced-page.md)   
  [Microsoft Connector 1.1 for SAP BW F1 도움말](../microsoft-connector-for-sap-bw-f1-help.md)  

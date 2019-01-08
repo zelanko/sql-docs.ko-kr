@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], xevent
@@ -15,17 +14,17 @@ ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f500b1805d4af2e7b13ad74b439fff72d667060f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e0a7393a3b0547d37c5f69f4e75915f8706acf12
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185083"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752845"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>확장 이벤트에 PowerShell 공급자 사용
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 공급자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트를 관리할 수 있습니다. XEvent 하위 폴더는 SQLSERVER 드라이브 아래에 있습니다. 다음 방법 중 하나를 사용하여 이 폴더에 액세스할 수 있습니다.  
   
--   명령 프롬프트에서 입력 `sqlps`, 한 다음 ENTER를 누릅니다. `cd xevent`를 입력한 다음 Enter 키를 누릅니다. 여기에서 사용할 수 있습니다는 **cd** 하 고 `dir` 명령 (또는 **Set-location** 및 **Get-childitem** cmdlet) 서버 이름 및 인스턴스 이름으로 이동할입니다.  
+-   명령 프롬프트에서 `sqlps`를 입력하고 Enter 키를 누릅니다. `cd xevent`를 입력한 다음 Enter 키를 누릅니다. 여기에서 사용할 수 있습니다는 **cd** 하 고 `dir` 명령 (또는 **Set-location** 및 **Get-childitem** cmdlet) 서버 이름 및 인스턴스 이름으로 이동할입니다.  
   
 -   개체 탐색기에서 인스턴스 이름, **관리**를 차례로 확장하고 **확장 이벤트**를 마우스 오른쪽 단추로 클릭한 다음 **PowerShell 시작**을 클릭합니다. 이렇게 하면 다음 경로의 PowerShell이 시작됩니다.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48185083"
   
 -   스크립트를 .ps1 확장명으로 저장해야 합니다.  
   
--   PowerShell 실행 정책에서 스크립트 실행을 허용해야 합니다. 실행 정책을 설정하려면 **Set-Executionpolicy** cmdlet을 사용합니다. (자세한 내용은 입력 `get-help set-executionpolicy -detailed`, 한 다음 ENTER를 누릅니다.)  
+-   PowerShell 실행 정책에서 스크립트 실행을 허용해야 합니다. 실행 정책을 설정하려면 **Set-Executionpolicy** cmdlet을 사용합니다. 자세한 내용을 확인하려면 `get-help set-executionpolicy -detailed`를 입력하고 Enter 키를 누릅니다.  
   
  다음 스크립트는 'TestSession'이라는 새 세션을 만듭니다.  
   

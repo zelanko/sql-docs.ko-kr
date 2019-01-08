@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - smallest integer great than or equal to expression
@@ -14,12 +13,12 @@ ms.assetid: c35bd4ee-1ab6-46ab-89a7-cf771527faa2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb8882090de6302d6abeaa7ee8112ca31112e938
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5771d0b0eec65bc6d22be86a09b08a4b052de821
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084943"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781305"
 ---
 # <a name="ceiling-ssis-expression"></a>CEILING(SSIS 식)
   숫자 식보다 크거나 같은 최소 정수를 반환합니다.  
@@ -63,7 +62,7 @@ CEILING(0.00)
  0.00을 반환합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [FLOOR &#40;SSIS 식&#41;](floor-ssis-expression.md)   
- [함수 &#40;SSIS 식&#41;](functions-ssis-expression.md)  
+ [FLOOR&#40;SSIS 식&#41;](floor-ssis-expression.md)   
+ [함수&#40;SSIS 식&#41;](functions-ssis-expression.md)  
   
   

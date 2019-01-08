@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: acdc9600b7d1081492893f3cc8497359df65fdb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 7a456d68283d81cf7eb4f879d76f086484c5e052
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153730"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782885"
 ---
 # <a name="tables"></a>테이블
   테이블은 데이터베이스의 모든 데이터를 포함하는 데이터베이스 개체입니다. 테이블에서 데이터는 스프레드시트와 비슷한 논리적인 행 및 열 형식으로 구성됩니다. 각 행은 고유한 레코드를 나타내며 각 열은 레코드 내의 필드를 나타냅니다. 예를 들어 회사 사원 데이터가 들어 있는 테이블은 각 사원에 대한 행과 사원 번호, 이름, 주소, 직책 및 집 전화번호와 같은 자세한 사원 정보를 나타내는 열로 구성할 수 있습니다.  

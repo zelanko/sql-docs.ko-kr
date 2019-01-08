@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], permissions
@@ -17,12 +16,12 @@ ms.assetid: 5c580a87-88ae-4314-8fe1-54ade83f227f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 683fce95bca8a2e08b893031d88c46d8fe5de590
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bed2868b74087cd0e4c119ada7e29f0c5db73ce5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176083"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754605"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>SQL Server 프로파일러 실행에 필요한 권한
   기본적으로 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]를 실행하려면 추적 작성에 사용된 Transact-SQL 저장 프로시저와 같은 동일한 사용자 권한이 있어야 합니다. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]를 실행하려면 사용자에게 ALTER TRACE 권한이 있어야 합니다. 자세한 내용은 [GRANT 서버 사용 권한&#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-server-permissions-transact-sql)을 참조하세요.  
@@ -33,7 +32,7 @@ ms.locfileid: "48176083"
 ## <a name="permissions-used-to-replay-traces"></a>추적 재생에 사용되는 권한  
  추적을 재생할 때도 추적을 재생하는 사용자에게 ALTER TRACE 권한이 있어야 합니다.  
   
- 그러나 추적을 재생하는 동안 재생 중인 추적에 로그인 감사 이벤트가 발생하는 경우 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 에서 EXECUTE AS 명령을 사용합니다. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]에서는 EXECUTE AS 명령을 사용하여 로그인 이벤트와 연관된 사용자를 가장합니다.  
+ 그러나 추적을 재생하는 동안 재생 중인 추적에 로그인 감사 이벤트가 발생하는 경우 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 에서 EXECUTE AS 명령을 사용합니다. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 에서는 EXECUTE AS 명령을 사용하여 로그인 이벤트와 연관된 사용자를 가장합니다.  
   
  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 에서 재생 중인 추적에 로그인 이벤트가 발생하는 경우 다음 권한 검사가 수행됩니다.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "48176083"
   
 2.  사용자2에 대한 로그인 이벤트가 재생된 추적에서 발생합니다.  
   
-3.  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]에서 EXECUTE AS 명령을 사용하여 사용자2를 가장합니다.  
+3.  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 에서 EXECUTE AS 명령을 사용하여 사용자2를 가장합니다.  
   
 4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용자2에 대한 인증을 시도하고 그 결과에 따라 다음 중 하나가 발생합니다.  
   
@@ -65,11 +64,11 @@ ms.locfileid: "48176083"
   
  ![SQL Server Profiler 추적 재생 권한](../../database-engine/media/replaytracedecisiontree.gif "SQL Server Profiler 추적 재생 권한")  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Profiler 저장 프로시저&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql)   
  [추적 재생](replay-traces.md)   
- [추적 만들기 &#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)   
- [추적 테이블 재생 &#40;SQL Server Profiler&#41;](replay-a-trace-table-sql-server-profiler.md)   
+ [추적 만들기&#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)   
+ [추적 테이블 재생&#40;SQL Server Profiler&#41;](replay-a-trace-table-sql-server-profiler.md)   
  [추적 파일 재생&#40;SQL Server Profiler&#41;](replay-a-trace-file-sql-server-profiler.md)  
   
   

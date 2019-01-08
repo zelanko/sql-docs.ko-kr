@@ -1,5 +1,5 @@
 ---
-title: 요구 사항 및 고려 사항에 대 한 Analysis Services 배포 | Microsoft Docs
+title: 요구 사항 및 고려 사항 분석을 위해 서비스 배포 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8fc21b64be49a74359dcde41e10be5524bc1d9ab
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: 991fdab41b7e14e88e621927371d7cc2da3ed3c4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026530"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530423"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Analysis Services 배포에 대한 요구 사항 및 고려 사항
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   솔루션의 성능과 가용성은 기본 하드웨어의 기능, 서버 배포 토폴로지, 해당 솔루션의 특성(예: 여러 서버에 분산된 파티션을 갖는가 또는 관계형 엔진에 직접 액세스해야 하는 ROLAP 저장소를 사용하는가), SLA(서비스 수준 계약) 및 데이터 모델의 복잡성을 포함하여 여러 요인에 따라 달라질 수 있습니다.  
   
 ## <a name="memory-and-processor-requirements"></a>메모리 및 프로세서 요구 사항  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]다음과 같은 경우에 더 많은 메모리와 프로세서 리소스가 필요합니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 더 많은 메모리와 프로세서 리소스가 필요합니다.  
   
 -   크거나 복잡한 큐브를 처리할 경우. 이러한 큐브에는 작거나 간단한 큐브보다 더 많은 메모리와 프로세서 리소스가 필요합니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "34026530"
  큰 팩트 테이블이 있는 큐브에는 작은 팩트 테이블이 있는 큐브보다 더 많은 디스크 공간이 필요합니다. 마찬가지로 팩트 테이블에 비해 정도는 적지만 큰 차원이 많이 있는 큐브에는 보다 작은 차원 멤버가 있는 큐브보다 더 많은 디스크 공간이 필요합니다. 일반적으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에는 기본 관계형 데이터베이스에 동일 데이터를 저장하는 데 필요한 공간의 약 20%가 필요합니다.  
   
  Aggregations  
- 집계에는 추가된 집계에 비례하여 추가 공간이 필요합니다. 즉, 집계가 많을수록 공간도 더 필요합니다. 필요 없는 집계를 만들지 않으려면 집계에 필요한 추가 디스크 공간이 대체로 기본 관계형 데이터베이스에 저장되는 데이터 크기의 약 10% 이하여야 합니다.  
+ 집계 필요한 추가 집계에 비례하여 추가 공간이 집계가 많을, 더 많은 공간이 필요 합니다. 필요 없는 집계를 만들지 않으려면 집계에 필요한 추가 디스크 공간이 대체로 기본 관계형 데이터베이스에 저장되는 데이터 크기의 약 10% 이하여야 합니다.  
   
  데이터 마이닝  
  기본적으로 마이닝 구조는 학습에 사용된 데이터 세트를 디스크에 캐시합니다. 마이닝 구조 개체에서 **구조 지우기 처리** 처리 옵션을 사용하여 디스크에서 이 캐시된 데이터를 제거할 수 있습니다. 자세한 내용은 [처리 요구 사항 및 고려 사항&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)을 참조하세요.  
@@ -64,7 +64,7 @@ ms.locfileid: "34026530"
 ### <a name="providing-availability-in-the-event-of-hardware-or-software-failures"></a>하드웨어나 소프트웨어 장애 발생 시 가용성 제공  
  다양한 이유로 하드웨어나 소프트웨어 장애가 발생할 수 있습니다. 그러나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 가용성을 유지하는 작업은 장애 원인을 찾아내서 문제를 해결하는 작업인 동시에 오류 발생 시 사용자가 시스템을 계속 사용할 수 있도록 대체 리소스를 제공하는 작업이기도 합니다. 하드웨어나 소프트웨어 장애 발생 시 대개 서버 클러스터링과 로드 균형 조정을 사용하여 가용성을 유지하는 데 필요한 대체 리소스를 제공합니다.  
   
- 하드웨어나 소프트웨어 장애 발생 시 가용성을 제공하려면 장애 조치 클러스터에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 배포해 봅니다. 장애 조치 클러스터에서 어떤 이유로든 주 노드에 장애가 발생하거나 주 노드를 다시 부팅해야 할 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 클러스터링이 보조 노드로 장애 조치합니다. 장애 조치는 매우 빠르게 수행되며 이후부터 쿼리를 실행하는 사용자는 보조 노드에서 실행되고 있는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 액세스하게 됩니다. 장애 조치 클러스터에 대한 자세한 내용은 [Windows Server 기술: 장애 조치(Failover) 클러스터](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)를 참조하세요.  
+ 하드웨어나 소프트웨어 장애 발생 시 가용성을 제공하려면 장애 조치 클러스터에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 배포해 봅니다. 장애 조치 클러스터에서 어떤 이유로든 주 노드에 장애가 발생하거나 주 노드를 다시 부팅해야 할 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 클러스터링이 보조 노드로 장애 조치합니다. 장애 조치는 매우 빠르게 수행되며 이후부터 쿼리를 실행하는 사용자는 보조 노드에서 실행되고 있는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 액세스하게 됩니다. 장애 조치 클러스터에 대 한 자세한 내용은 참조 하세요. [Windows Server 기술:  장애 조치 클러스터](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)합니다.  
   
  가용성 문제를 해결하는 또 다른 방법은 둘 이상의 프로덕션 서버에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 배포하는 것입니다. 그런 다음 Windows 서버의 네트워크 로드 균형 조정(NLB) 기능을 사용하여 이러한 프로덕션 서버를 단일 클러스터로 결합할 수 있습니다. NLB 클러스터에서 하드웨어나 소프트웨어 문제로 인해 클러스터의 서버를 사용할 수 없으면 NLB 서비스가 사용 가능한 서버로 사용자 쿼리를 보냅니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "34026530"
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 데이터를 제공하는 관계형 데이터베이스가 여러 개 있으면 이러한 데이터베이스를 다른 컴퓨터로 이동할 수 있습니다. 데이터베이스를 이동하기 전에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스와 해당 기본 데이터베이스 간의 네트워크 속도와 대역폭을 고려합니다. 네트워크가 느리거나 혼잡한 경우 기본 데이터베이스를 다른 컴퓨터로 이동하면 처리 성능이 저하됩니다.  
   
--   처리가 쿼리 성능에 영향을 주지만 쿼리 로드가 적을 때 처리할 수 없으면 처리 태스크를 준비 서버(staging server)로 이동한 다음 프로덕션 서버와 준비 서버(staging server)의 온라인 동기화를 수행해 봅니다. 자세한 내용은 [Synchronize Analysis Services Databases](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)을(를) 참조하세요. 원격 파티션을 사용하여 여러 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 처리를 분산할 수도 있습니다. 원격 파티션 처리에는 로컬 컴퓨터의 리소스 대신 원격 서버의 프로세서와 메모리 리소스가 사용됩니다. 원격 파티션 관리에 대한 자세한 내용은 [원격 파티션 만들기 및 관리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)를 참조하세요.  
+-   처리에는 쿼리 성능에 영향을 감소 쿼리 로드의 시간 동안 처리할 수 없습니다. 하지만 경우 스테이징 서버에 처리 태스크를 이동한 다음 프로덕션 서버와 스테이징 서버의 온라인 동기화를 수행할 것이 좋습니다. 자세한 내용은 [Synchronize Analysis Services Databases](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)을(를) 참조하세요. 원격 파티션을 사용하여 여러 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 처리를 분산할 수도 있습니다. 원격 파티션 처리에는 로컬 컴퓨터의 리소스 대신 원격 서버의 프로세서와 메모리 리소스가 사용됩니다. 원격 파티션 관리에 대한 자세한 내용은 [원격 파티션 만들기 및 관리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)를 참조하세요.  
   
 -   쿼리 성능이 나쁘지만 로컬 서버의 프로세서와 메모리 리소스를 늘릴 수 없으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 둘 이상의 프로덕션 서버에 배포해 봅니다. 그런 다음 NLB를 사용하여 서버를 단일 클러스터로 결합할 수 있습니다. NLB 클러스터에서 쿼리는 NLB 클러스터에 속한 모든 서버에 자동으로 분산됩니다.  
   

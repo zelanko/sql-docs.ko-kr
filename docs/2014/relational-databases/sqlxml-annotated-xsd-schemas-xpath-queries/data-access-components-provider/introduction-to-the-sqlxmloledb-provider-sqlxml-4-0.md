@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - SQLXMLOLEDB Provider, properties
@@ -16,12 +14,12 @@ ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 63badb45984b754e8f586e30f2d659a840db5d43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ec13acbaa0025b871475675140e83363eb64b81
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134729"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759075"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB 공급자 소개(SQLXML 4.0)
   SQLXMLOLEDB 공급자는 ADO(ActiveX Data Objects)를 통해 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 기능을 노출하는 OLE DB Provider입니다. 하지만 이 공급자는 ADO의 "출력 스트림에 쓰기" 모드에서만 명령을 실행할 수 있습니다. SQLXMLOLEDB 공급자는 행 집합 공급자가 아닙니다. 명령을 실행 하면, 지정한 출력 스트림을 사용 하 여 ADO 맵으로 adExecuteStream 플래그를 지정 해야 합니다.  
@@ -49,7 +47,7 @@ oTestCommand.Execute , , adExecuteStream
 |--------------------------|----------------------------|-----------------|  
 |기본 경로|""|기본 파일 경로를 지정합니다. 기본 파일 경로는 XSL(XML Stylesheet Language) 또는 매핑 스키마 파일의 위치를 지정하는 데 사용됩니다. 기본 파일 경로 또한 XSL 또는 매핑 매핑 스키마 또는 XSL 속성에 지정 된 스키마 파일의 상대 경로 확인 합니다.<br /><br /> 이 속성을 사용 하는 예제를 보려면 [실행 되는 XPath 쿼리 &#40;SQLXMLOLEDB 공급자&#41;](executing-xpath-queries-sqlxmloledb-provider.md).|  
 |ClientSideXML|False|행 집합을 XML로 변환하는 프로세스가 서버 대신 클라이언트에서 수행되도록 하려면 이 속성을 True로 설정합니다. 이 속성은 성능 부하를 중간 계층으로 이동하려는 경우에 유용합니다.<br /><br /> 이 속성을 사용 하는 예제를 보려면 [SQL 쿼리 실행 &#40;SQLXMLOLEDB 공급자&#41; ](executing-sql-queries-sqlxmloledb-provider.md) 또는 [실행 서식 파일에 포함 되어 SQL 쿼리 &#40;SQLXMLOLEDB 공급자&#41; ](executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  
-|내용 유형||출력 내용 유형을 반환합니다. READ ONLY 속성입니다.<br /><br /> 이 속성은 내용 유형(예: TEXT/XML, TEXT/HTML, image/jpeg 등)에 대한 정보를 브라우저에 제공합니다. 이 속성의 값이 있는 **콘텐츠 형식** 문서의 본문으로 전송 되는 MIME 형식 (다목적 인터넷 메일 확장)이 포함 된 HTTP 헤더의 일부로 브라우저에 보낸 필드.|  
+|콘텐츠 형식||출력 내용 유형을 반환합니다. READ ONLY 속성입니다.<br /><br /> 이 속성은 내용 유형(예: TEXT/XML, TEXT/HTML, image/jpeg 등)에 대한 정보를 브라우저에 제공합니다. 이 속성의 값이 있는 **콘텐츠 형식** 문서의 본문으로 전송 되는 MIME 형식 (다목적 인터넷 메일 확장)이 포함 된 HTTP 헤더의 일부로 브라우저에 보낸 필드.|  
 |매핑 스키마|NULL|클라이언트 응용 프로그램이 매핑 스키마(XDR 또는 XSD)에 대해 XPath 쿼리를 실행하는 경우 이 속성은 매핑 스키마의 이름을 지정하는 데 사용됩니다.<br /><br /> 지정된 경로는 상대 경로(xyz/abc/MySchema.xml) 또는 절대 경로(C:\MyFolder\abc\MySchema.xml)일 수 있습니다.<br /><br /> 상대 경로 지정 하는 경우 기본 경로 속성으로 지정 된 기본 경로 상대 경로 확인 하는 데 사용 됩니다. 자료 Path 속성에 지정 된 경로가 없는 경우 상대 경로 현재 디렉터리에 상대적입니다.<br /><br /> 매핑 스키마 속성에 값을 지정 하는 로컬 디렉터리 경로 또는 URL (http://)을 지정할 수 있습니다. URL을 지정하는 경우 프록시 서버를 통해 HTTP 및 HTTPS 서버에 액세스하도록 WinHTTP를 구성해야 합니다. Proxycfg.exe 유틸리티를 실행하여 이 작업을 수행할 수 있습니다. 자세한 내용은 MSDN 라이브러리의 "WinHTTP 프록시 구성 유틸리티 사용"을 참조하십시오.<br /><br /> 이 속성을 사용 하는 예제를 보려면 [실행 되는 XPath 쿼리 &#40;SQLXMLOLEDB 공급자&#41;](executing-xpath-queries-sqlxmloledb-provider.md).|  
 |네임스페이스||이 속성을 사용하면 네임스페이스를 사용하는 XPath 쿼리를 실행할 수 있습니다. 이 속성을 사용 하는 예제를 보려면 [네임 스페이스를 사용 하 여 XPath 쿼리 실행 &#40;SQLXMLOLEDB 공급자&#41;](executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md).|  
 |ss Stream Flags||이 속성은 보안 제한의 특정 유형을 지정하는 데 사용됩니다. 예를 들어 파일에 대한 URL 참조나 파일(예: 외부 사이트)에 대한 절대 경로를 허용하지 않을 수 있습니다. 또는 템플릿에서 쿼리를 허용하지 않을 수도 있습니다.<br /><br /> 이 속성에는 다음과 같은 값을 할당할 수 있습니다.<br /><br /> 1 = 2 STREAM_FLAGS_DISALLOW_URL STREAM_FLAGS_DISALLOW_ABSOLUTE_PATH 4 = 8 STREAM_FLAGS_DISALLOW_QUERY = STREAM_FLAGS_ DONTCACHEMAPPINGSCHEMA 16 = STREAM_FLAGS_DONTCACHETEMPLATE 32 = STREAM_FLAGS_DONTCACHEXSL =<br /><br /> 다음 표에서는 이러한 값에 대한 추가 정보를 제공합니다.|  

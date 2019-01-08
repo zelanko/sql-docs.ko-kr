@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d1a0d8e895189e3fe71d9d99178beff7cd603208
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf59655f907b048d08166e8cb7ef1e0f4bc63503
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103973"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771245"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>ODBC 대상을 사용하여 데이터 로드
   이 절차에서는 ODBC 대상을 사용하여 데이터를 로드하는 방법을 보여 줍니다. ODBC 대상을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 원본이 이미 들어 있어야 합니다.  
@@ -35,9 +34,9 @@ ms.locfileid: "48103973"
   
 6.  데이터 액세스 방법을 선택합니다.  
   
-    -   **테이블 이름 - 일괄 처리**: 일괄 처리 모드에서 작업하도록 ODBC 대상을 구성하려면 이 옵션을 선택합니다. 이 옵션을 선택하면 **일괄 처리 크기**를 설정할 수 있습니다.  
+    -   **테이블 이름-일괄 처리**: 일괄 처리 모드에서 작업하도록 ODBC 대상을 구성하려면 이 옵션을 선택합니다. 이 옵션을 선택하면 **일괄 처리 크기**를 설정할 수 있습니다.  
   
-    -   **테이블 이름 - 행 단위**: 각 행을 한 번에 하나씩 대상 테이블에 삽입하도록 ODBC 대상을 구성하려면 이 옵션을 선택합니다. 이 옵션을 선택하면 데이터가 한 번에 한 행씩 테이블로 로드됩니다.  
+    -   **테이블 이름-행 단위**: 각 행을 한 번에 하나씩 대상 테이블에 삽입하도록 ODBC 대상을 구성하려면 이 옵션을 선택합니다. 이 옵션을 선택하면 데이터가 한 번에 한 행씩 테이블로 로드됩니다.  
   
 7.  **테이블 또는 뷰 이름** 필드의 목록에서 데이터베이스의 가용 테이블 또는 뷰를 선택하거나 테이블을 식별하는 정규식을 입력합니다. 이 목록에는 처음 1000개의 테이블만 포함됩니다. 데이터베이스에 포함되어 있는 테이블이 1000개를 넘는 경우 테이블 이름의 시작 부분을 입력하거나 와일드카드(*)를 통해 이름의 일부를 입력하여 사용할 테이블을 표시합니다.  
   
@@ -52,8 +51,8 @@ ms.locfileid: "48103973"
 12. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [ODBC 대상 편집기 &#40;연결 관리자 페이지&#41;](../odbc-destination-editor-connection-manager-page.md)   
+ [ODBC 대상 편집기&#40;연결 관리자 페이지&#41;](../odbc-destination-editor-connection-manager-page.md)   
  [ODBC 대상 편집기&#40;매핑 페이지&#41;](../odbc-destination-editor-mappings-page.md)   
- [ODBC 원본 편집기 &#40;오류 출력 페이지&#41;](../odbc-source-editor-error-output-page.md)  
+ [ODBC 원본 편집기&#40;오류 출력 페이지&#41;](../odbc-source-editor-error-output-page.md)  
   
   

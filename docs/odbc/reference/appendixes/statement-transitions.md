@@ -15,12 +15,12 @@ ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df4a73890841b4a72dbffa0d5a5ae934bf618f16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db8ec0edfa1a5ae1b6b94ed07f63c930bc896f5c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649849"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523905"
 ---
 # <a name="statement-transitions"></a>명령문 전환
 ODBC 문에 상태는 다음 권한이 있습니다.  
@@ -47,7 +47,7 @@ ODBC 문에 상태는 다음 권한이 있습니다.
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--[1], [5], [6]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
 |--[2], [5]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
@@ -66,37 +66,37 @@ ODBC 문에 상태는 다음 권한이 있습니다.
   
 ## <a name="sqlbindcol"></a>SQLBindCol  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|--|--|HY010|HY010|  
   
 ## <a name="sqlbindparameter"></a>SQLBindParameter  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|--|--|HY010|HY010|  
   
 ## <a name="sqlbrowseconnect-sqlconnect-and-sqldriverconnect"></a>SQLBrowseConnect, SQLConnect를 및 SQLDriverConnect  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |08002|08002|08002|08002|08002|08002|08002|  
   
 ## <a name="sqlbulkoperations"></a>SQLBulkOperations  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|HY010|24000|다음 표를 참조 하세요.|HY010|HY010 o NS [c]|  
   
 ## <a name="sqlbulkoperations-cursor-states"></a>SQLBulkOperations (커서 상태)  
   
-|S5<br /><br /> 열|S6<br /><br /> SQLFetch 또는 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> Opened|S6<br /><br /> SQLFetch 또는 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
 |-[s] S8 S11 [d] [x]|-[s] S8 S11 [d] [x]|HY010|  
   
 ## <a name="sqlcancel"></a>SQLCancel  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|--|--|S1 [1] S2 [nr] [2] S3 [r] 및 [2] S5 [3] 및 [5] S6 ([3] 또는 [4]) 및 S7 [6] [4] [7] 및|다음 표를 참조 하세요.|  
   
@@ -126,13 +126,13 @@ ODBC 문에 상태는 다음 권한이 있습니다.
   
 ## <a name="sqlclosecursor"></a>SQLCloseCursor  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|24000|24000|24000|S1 S3 [np] [p]|HY010|HY010|  
   
 ## <a name="sqlcolattribute"></a>SQLColAttribute  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|다음 표를 참조 하세요.|24000|-[s] S11 [x]|HY010|HY010 o NS [c]|  
   
@@ -148,7 +148,7 @@ ODBC 문에 상태는 다음 권한이 있습니다.
   
 ## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumnPrivileges, SQLColumns, SQLForeignKeys, SQLGetTypeInfo, SQLPrimaryKeys, SQLProcedureColumns, SQLProcedures, SQLSpecialColumns, SQLStatistics, SQLTablePrivileges, 및 SQLTables  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(구매자)|S5 [s] S11 [x]|S1 S5 [e] [s] S11 [x]|S1 [e] [1] S5 [s] 및 [1] S11 [x] [1] 및 [2] 24000|다음 표를 참조 하세요.|HY010|HY010 o NS [c]|  
   
@@ -158,7 +158,7 @@ ODBC 문에 상태는 다음 권한이 있습니다.
   
 ## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables-cursor-states"></a>SQLColumnPrivileges, SQLColumns, SQLForeignKeys, SQLGetTypeInfo, SQLPrimaryKeys, SQLProcedureColumns, SQLProcedures, SQLSpecialColumns, SQLStatistics, SQLTablePrivileges, 및 SQLTables (커서 상태)  
   
-|S5<br /><br /> 열|S6<br /><br /> SQLFetch 또는 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> Opened|S6<br /><br /> SQLFetch 또는 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
 |24000|24000[1]|24000|  
   
@@ -166,7 +166,7 @@ ODBC 문에 상태는 다음 권한이 있습니다.
   
 ## <a name="sqlcopydesc"></a>SQLCopyDesc  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH [1]|--|--|--|--|HY010|NS [c] 및 [3] HY010 [o] 또는 [4]|  
 |IH [2]|HY010|다음 표를 참조 하세요.|24000|-[s] S11 x|HY010|NS [c] 및 [3] HY010 [o] 또는 [4]|  
@@ -189,13 +189,13 @@ ODBC 문에 상태는 다음 권한이 있습니다.
   
 ## <a name="sqldatasources-and-sqldrivers"></a>SQLDataSources 및 SQLDrivers  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqldescribecol"></a>SQLDescribeCol  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|다음 표를 참조 하세요.|24000|-[s] S11 [x]|HY010|HY010 o NS [c]|  
   
@@ -207,13 +207,13 @@ ODBC 문에 상태는 다음 권한이 있습니다.
   
 ## <a name="sqldescribeparam"></a>SQLDescribeParam  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|-[s] S11 [x]|HY010|HY010|HY010|[C] NS HY010 [o]|  
   
 ## <a name="sqldisconnect"></a>SQLDisconnect  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--[1]|S0 [1]|S0 [1]|S0 [1]|S0 [1]|(HY010)|(HY010)|  
   
@@ -221,7 +221,7 @@ ODBC 문에 상태는 다음 권한이 있습니다.
   
 ## <a name="sqlendtran"></a>SQLEndTran  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|-[2] 또는 [3] S1 [1]|--S1 [np] [3] 및 ([1] 또는 [2]) S1 [p] 및 [1] S2 [p] 및 [2]|--S1 [np] [3] 및 ([1] 또는 [2]) S1 [p] 및 [1] S3 [p] 및 [2]|(HY010)|(HY010)|  
   
@@ -233,7 +233,7 @@ ODBC 문에 상태는 다음 권한이 있습니다.
   
 ## <a name="sqlexecdirect"></a>SQLExecDirect  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(구매자)|S4 [s] 및 [nr] S5 [s] 및 [r] [d] S8 S11 [x]|--S1 [e] [1] 및 [2] S4 [s] 및 [nr] S5 [e] 및 [s] 및 [r] [d] S8 S11 [x]|-[e], [1] 및 [3] S1 [e], [2], [3] S4 [s] 및 [nr] 및 [3] S5 [s] [r] S8 [3] [d] 및 [3] S11 [x]과 [3] 24000 [4]|다음 표를 참조 하세요.|HY010|[C] NS HY010 [o]|  
   
@@ -247,7 +247,7 @@ ODBC 문에 상태는 다음 권한이 있습니다.
   
 ## <a name="sqlexecdirect-cursor-states"></a>SQLExecDirect (커서 상태)  
   
-|S5<br /><br /> 열|S6<br /><br /> SQLFetch 또는 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> Opened|S6<br /><br /> SQLFetch 또는 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
 |24000|24000 [1]|24000|  
   
@@ -255,7 +255,7 @@ ODBC 문에 상태는 다음 권한이 있습니다.
   
 ## <a name="sqlexecute"></a>SQLExecute  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(구매자)|(HY010)|다음 표를 참조 하세요.|S2 [e] p 및 [1] S4 [s] [p] [nr] 및 [1] S5 [s] [p] [r] 및 S8 [d] [p] [1] 및 [1] S11 [x] [p] [1] 및 24000 [p] 및 [2] HY010 [np]|커서 상태 표를 참조 하세요.|HY010|[C] NS HY010 [o]|  
   
@@ -271,7 +271,7 @@ ODBC 문에 상태는 다음 권한이 있습니다.
   
 ## <a name="sqlexecute-cursor-states"></a>SQLExecute (커서 상태)  
   
-|S5<br /><br /> 열|S6<br /><br /> SQLFetch 또는 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> Opened|S6<br /><br /> SQLFetch 또는 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
 |24000 [p] HY010 [np]|24000 [p], [1] HY010 [np]|24000 [p] HY010 [np]|  
   
@@ -279,31 +279,31 @@ ODBC 문에 상태는 다음 권한이 있습니다.
   
 ## <a name="sqlextendedfetch"></a>SQLExtendedFetch  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|S1010|S1010|24000|다음 표를 참조 하세요.|S1010|[C] NS S1010 [o]|  
   
 ## <a name="sqlextendedfetch-cursor-states"></a>SQLExtendedFetch (커서 상태)  
   
-|S5<br /><br /> 열|S6<br /><br /> SQLFetch 또는 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> Opened|S6<br /><br /> SQLFetch 또는 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
 |S7 [s] 또는 [nf] S11 [x]|S1010|-[s] 또는 [nf] S11 [x]|  
   
 ## <a name="sqlfetch-and-sqlfetchscroll"></a>SQLFetch 및 SQLFetchScroll  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|HY010|24000|다음 표를 참조 하세요.|HY010|[C] NS HY010 [o]|  
   
 ## <a name="sqlfetch-and-sqlfetchscroll-cursor-states"></a>SQLFetch 및 SQLFetchScroll (커서 상태)  
   
-|S5<br /><br /> 열|S6<br /><br /> SQLFetch 또는 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> Opened|S6<br /><br /> SQLFetch 또는 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
 |S6 [s] 또는 [nf] S11 [x]|-[s] 또는 [nf] S11 [x]|HY010|  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |-- [1]|HY010|HY010|HY010|HY010|HY010|HY010|  
 |IH [2]|S0|S0|S0|S0|HY010|HY010|  
@@ -317,7 +317,7 @@ ODBC 문에 상태는 다음 권한이 있습니다.
   
 ## <a name="sqlfreestmt"></a>SQLFreeStmt  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH [1]|--|--|S1 S2 [np] [p]|S1 S3 [np] [p]|HY010|HY010|  
 |IH [2]|--|--|--|--|HY010|HY010|  
@@ -328,31 +328,31 @@ ODBC 문에 상태는 다음 권한이 있습니다.
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqlgetcursorname"></a>SQLGetCursorName  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|--|--|HY010|HY010|  
   
 ## <a name="sqlgetdata"></a>SQLGetData  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|HY010|24000|다음 표를 참조 하세요.|HY010|[C] NS HY010 [o]|  
   
 ## <a name="sqlgetdata-cursor-states"></a>SQLGetData (커서 상태)  
   
-|S5<br /><br /> 열|S6<br /><br /> SQLFetch 또는 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> Opened|S6<br /><br /> SQLFetch 또는 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
 |24000|-[s] 또는 [nf] [x] [b] HY109 24000 S11 [i]|-[s] 또는 [nf] [x] [b] HY109 24000 S11 [i]|  
   
 ## <a name="sqlgetdescfield-and-sqlgetdescrec"></a>SQLGetDescField 및 SQLGetDescRec  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|-[1] 또는 [2] HY010 [3]|다음 표를 참조 하세요.|-[1] 또는 [2] 24000 [3]|-[1], [2], [3] S11 [3] 및 [x]|HY010|NS [c] 또는 [4] HY010 [o] [5]|  
   
@@ -380,7 +380,7 @@ ODBC 문에 상태는 다음 권한이 있습니다.
   
 ## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>SQLGetDiagRec 및 SQLGetDiagField  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--[1]|--|--|--|--|--|--|  
 |IH [2]|--[3]|--[3]|--|--|--[3]|--[3]|  
@@ -393,25 +393,25 @@ ODBC 문에 상태는 다음 권한이 있습니다.
   
 ## <a name="sqlgetenvattr"></a>SQLGetEnvAttr  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqlgetfunctions"></a>SQLGetFunctions  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqlgetinfo"></a>SQLGetInfo  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqlgetstmtattr"></a>SQLGetStmtAttr  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--[1] 24000[2]|--[1] 24000[2]|--[1] 24000[2]|다음 표를 참조 하세요.|HY010|HY010|  
   
@@ -421,7 +421,7 @@ ODBC 문에 상태는 다음 권한이 있습니다.
   
 ## <a name="sqlgetstmtattr-cursor-states"></a>SQLGetStmtAttr (커서 상태)  
   
-|S5<br /><br /> 열|S6<br /><br /> SQLFetch 또는 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> Opened|S6<br /><br /> SQLFetch 또는 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
 |--[1] 24000[2]|-[1] 또는 ([v] 및 [2]) 24000 [b] 및 [2] HY109 [i] 및 [2]|-[i] 또는 ([v] 및 [2]) 24000 [b] 및 [2] HY109 [1] 및 [2]|  
   
@@ -431,7 +431,7 @@ ODBC 문에 상태는 다음 권한이 있습니다.
   
 ## <a name="sqlmoreresults"></a>SQLMoreResults  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(구매자)|--[1]|--[1]|-[s] 및 [2] S1 [nf] [np] 및 [4] S2 [nf] [p] 및 [4] S5 [s] 및 [3] S11 [x]|S1 [nf] [np] 및 [4] S3 [nf] [p] 및 [4] S4 [s] 및 [2] S5 [s] 및 [3] S11 [x]|HY010|[C] NS HY010 [o]|  
   
@@ -445,25 +445,25 @@ ODBC 문에 상태는 다음 권한이 있습니다.
   
 ## <a name="sqlnativesql"></a>SQLNativeSql  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqlnumparams"></a>SQLNumParams  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|-[s] S11 [x]|-[s] S11 [x]|-[s] S11 [x]|HY010|[C] NS HY010 [o]|  
   
 ## <a name="sqlnumresultcols"></a>SQLNumResultCols  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|-[s] S11 [x]|-[s] S11 [x]|-[s] S11 [x]|HY010|[C] NS HY010 [o]|  
   
 ## <a name="sqlparamdata"></a>SQLParamData  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|HY010|HY010|HY010|다음 표를 참조 하세요.|[C] NS HY010 [o]|  
   
@@ -485,7 +485,7 @@ ODBC 문에 상태는 다음 권한이 있습니다.
   
 ## <a name="sqlprepare"></a>SQLPrepare  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(구매자)|S2 [s] 및 [nr] S3 [s] 및 [r] S11 [x]|-[s] 또는 ([e] 및 [1]) S1 [e] 및 [2] S11 [x]|S1 [e] 및 [3] S2 [s], [nr] 및 [3] S3 [s] [r] 및 [3] S11 [x] [3] 및 24000 [4]|다음 표를 참조 하세요.|HY010|[C] NS HY010 [o]|  
   
@@ -499,13 +499,13 @@ ODBC 문에 상태는 다음 권한이 있습니다.
   
 ## <a name="sqlprepare-cursor-states"></a>SQLPrepare (커서 상태)  
   
-|S5<br /><br /> 열|S6<br /><br /> SQLFetch 또는 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> Opened|S6<br /><br /> SQLFetch 또는 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
 |24000|24000|24000|  
   
 ## <a name="sqlputdata"></a>SQLPutData  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|HY010|HY010|HY010|다음 표를 참조 하세요.|[C] NS HY010 [o]|  
   
@@ -529,13 +529,13 @@ ODBC 문에 상태는 다음 권한이 있습니다.
   
 ## <a name="sqlrowcount"></a>SQLRowCount  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(구매자)|(HY010)|(HY010)|--|--|(HY010)|(HY010)|  
   
 ## <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--[1]|--|--|--|--[2] 24000[3]|HY010|HY010|  
   
@@ -547,13 +547,13 @@ ODBC 문에 상태는 다음 권한이 있습니다.
   
 ## <a name="sqlsetcursorname"></a>SQLSetCursorName  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|24000|24000|HY010|HY010|  
   
 ## <a name="sqlsetdescfield-and-sqlsetdescrec"></a>SQLSetDescField 및 SQLSetDescRec  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH [1]|--|--|--|--|HY010|HY010|  
   
@@ -561,25 +561,25 @@ ODBC 문에 상태는 다음 권한이 있습니다.
   
 ## <a name="sqlsetenvattr"></a>SQLSetEnvAttr  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |HY011|HY011|HY011|HY011|Y011|HY01|HY011|  
   
 ## <a name="sqlsetpos"></a>SQLSetPos  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|HY010|24000|다음 표를 참조 하세요.|HY010|[C] NS HY010 [o]|  
   
 ## <a name="sqlsetpos-cursor-states"></a>SQLSetPos (커서 상태)  
   
-|S5<br /><br /> 열|S6<br /><br /> SQLFetch 또는 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
+|S5<br /><br /> Opened|S6<br /><br /> SQLFetch 또는 SQLFetchScroll|S7<br /><br /> SQLExtendedFetch|  
 |-------------------|---------------------------------------|-----------------------------|  
 |24000|-[s] S8 [d] [x] [b] HY109 24000 S11 [i]|-[s] S8 [d] [x] [b] HY109 24000 S11 [i]|  
   
 ## <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
   
-|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 – S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 – S7<br /><br /> 커서|S8 – S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> 비동기|  
+|S0<br /><br /> 할당되지 않음|S1<br /><br /> 할당|S2 S3<br /><br /> Prepared|S4<br /><br /> 실행|S5 S7<br /><br /> Cursor|S8 S10<br /><br /> 데이터가 필요|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|-[1] HY011 [2]|--[1] 24000[2]|--[1] 24000[2]|HY010 [np] 또는 [1] HY011 [p] 및 [2]|HY010 [np] 또는 [1] HY011 [p] 및 [2]|  
   

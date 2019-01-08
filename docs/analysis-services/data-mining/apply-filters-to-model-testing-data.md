@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 03eb6a8b8a459f0d5d0769d1f7af16f06b81f560
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d9254d42d61fdf6bf087d83d0ced4ff1761dd077
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020040"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539946"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>모델 테스트 데이터에 필터 적용
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34020040"
   
  결과에 영향을 줄 수 있는 미리 정의된 필터가 모델에 포함되어 있는지 확인하려면 **속성** 창에서 **Filter** 속성을 확인하거나 데이터 마이닝 스키마 행 집합을 사용하여 모델을 쿼리합니다. 예를 들어 다음 쿼리는 지정된 모델에 대한 필터 텍스트를 반환합니다.  
   
- `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model’`  
+ `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model'`  
   
 > [!WARNING]  
 >  기존 마이닝 모델에서 필터를 제거하거나 필터 조건을 변경하려는 경우에는 마이닝 모델을 다시 처리해야 합니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "34020040"
   
 3.  **입력 선택** 탭의 **정확도 차트에 사용할 데이터 집합을 선택하십시오.** 에서 **다른 데이터 집합 지정**옵션을 선택합니다.  
   
-4.  찾아보기 단추 **(…)** 를 클릭하여 대화 상자를 열고 외부 데이터 집합을 선택합니다.  
+4.  찾아보기 단추를 클릭 **(...)**  대화 상자를 열고 외부 데이터 집합을 선택 합니다.  
   
 5.  사례 테이블을 선택하고, 필요한 경우 중첩된 테이블을 추가합니다. 필요한 경우 모델의 열을 외부 데이터 집합의 열에 매핑합니다. **열 매핑 지정** 대화 상자를 닫아 원본 테이블 정의를 저장합니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "34020040"
   
 9. **및/또는** 입력란을 클릭하고 논리 연산자를 선택하여 여러 조건이 결합되는 방법을 정의합니다.  
   
-10. 필요에 따라 **값** 텍스트 상자의 오른쪽에 있는 찾아보기 단추 **(…)** 를 클릭하여 **필터** 대화 상자를 열고 중첩 테이블 또는 개별 사례 테이블 열에 대한 조건을 설정합니다.  
+10. 필요에 따라 찾아보기 단추를 클릭 **(...)**  의 오른쪽에는 **값** 텍스트 상자를 엽니다는 **필터** 대화 상자 및 개별 사례 테이블 열 또는 중첩된 테이블에 대 한 조건을 설정 합니다.  
   
 11. **식** 창의 텍스트를 읽어 전체 필터 조건이 올바른지 확인합니다.  
   
@@ -85,9 +85,9 @@ ms.locfileid: "34020040"
   
      필터 조건은 정확도 차트를 만들 때 데이터 원본에 적용됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [모델 테스트 데이터 선택 및 매핑](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
- [사용 하 여 중첩 테이블 데이터를 입력으로 정확도 차트에 대 한](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
- [정확도 차트 유형 선택 및 집합 차트 옵션](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
+ [정확도 차트에 대한 입력으로 중첩 테이블 데이터 사용](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
+ [정확도 차트 유형 선택 및 차트 옵션 설정](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

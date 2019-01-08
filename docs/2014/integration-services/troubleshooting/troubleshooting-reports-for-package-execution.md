@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8fc476ac-bd69-434e-9636-70776e0b3b6c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 23cc199958a43fc9056a7a5dc1b83f691ae15523
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d9518a92cbd3b1f39c49adcdd84bb18e254e6f67
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063740"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760945"
 ---
 # <a name="troubleshooting-reports-for-package-execution"></a>패키지 실행 보고서 문제 해결
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 현재 릴리스에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 카탈로그에 배포된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 모니터링하고 문제를 해결하는 데 도움이 되는 표준 보고서를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 사용할 수 있습니다. 특히 이 두 가지 패키지 보고서는 패키지 실행 상태를 보고 실행 실패 원인을 파악하는 데 도움이 됩니다.  
@@ -25,9 +24,9 @@ ms.locfileid: "48063740"
   
      시작 시간, 종료 시간 및 기간은 다음과 같이 해석될 수 있습니다.  
   
-    -   패키지가 계속 실행 중이면 기간 = 현재 시간 – 시작 시간입니다.  
+    -   패키지가 계속 실행 중이면 기간 = 현재 시간 – 시작 시간  
   
-    -   패키지가 완료된 경우에는 기간 = 종료 시간 - 시작 시간입니다.  
+    -   패키지가 완료된 경우에는 기간 = 종료 시간 - 시작 시간  
   
      대시보드에서는 서버에서 실행된 각 패키지를 "확대"하여 발생했을 수 있는 패키지 실행 오류에 대한 특정 세부 정보를 찾을 수 있습니다. 예를 들어 **개요** 를 클릭하여 실행에 포함된 태스크의 상태에 대한 상위 수준 개요를 표시하거나 **모든 메시지** 를 클릭하여 패키지 실행의 일부로 캡처된 자세한 메시지를 표시할 수 있습니다.  
   

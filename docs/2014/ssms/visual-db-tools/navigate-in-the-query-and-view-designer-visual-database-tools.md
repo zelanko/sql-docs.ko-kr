@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, navigating
@@ -15,12 +15,12 @@ ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3f12ed69b92922046f4a4432ed56b46d9a40904d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a9c21d6bff4b30ad73d9653d51f2a49629985fc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123194"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769165"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>쿼리 및 뷰 디자이너에서 탐색(Visual Database Tools)
   키보드 또는 마우스를 사용하여 쿼리 및 뷰 디자이너에서 작업할 수 있습니다. 구체적인 방법은 다음 표를 참조하십시오.  
@@ -36,7 +36,7 @@ ms.locfileid: "48123194"
   
 ## <a name="diagram-pane"></a>다이어그램 창  
   
-|**수행할 작업**|**작업 방법**|**클릭 대상**|  
+|**대상**|**작업 방법**|**클릭 대상**|  
 |------------|---------------|---------------|  
 |테이블, 기타 테이블 구조 개체 및 조인 선(가능한 경우) 사이를 이동|Tab 키 또는 Shift+Tab|이동할 대상 테이블, 테이블 구조 개체 또는 조인 선|  
 |테이블 또는 테이블 구조 개체의 열 사이를 이동|화살표 키|이동할 대상 열|  
@@ -51,7 +51,7 @@ ms.locfileid: "48123194"
   
 ## <a name="criteria-pane"></a>조건 창  
   
-|수행할 작업|작업 방법|클릭 대상|  
+|수행할 작업|작업 방법|클릭|  
 |--------|-----------|-----------|  
 |셀 사이를 이동|화살표 키, Tab 키 또는 Shift+Tab|대상 셀|  
 |선택한 열의 마지막 행으로 이동|Ctrl+아래쪽 화살표||  
@@ -86,7 +86,7 @@ ms.locfileid: "48123194"
   
 ## <a name="results-pane"></a>결과 창  
   
-|**수행할 작업**|**작업 방법**|**클릭 대상**|  
+|**대상**|**작업 방법**|**클릭 대상**|  
 |------------|---------------|---------------|  
 |셀 사이를 이동|화살표 키, Tab 키 또는 Shift+Tab|대상 셀|  
 |현재 행의 첫째 셀 또는 마지막 셀로 이동|Home 키 또는 End 키||  
@@ -96,7 +96,7 @@ ms.locfileid: "48123194"
 |셀의 첫째 문자까지 선택|Shift+Home||  
 |셀의 마지막 문자까지 선택|Shift+End||  
 |편집 모드와 셀 선택 모드 사이를 전환|F2||  
-|셀 편집 중에 삽입 모드와 겹쳐쓰기 모드 사이를 전환|Ins||  
+|셀 편집 중에 삽입 모드와 겹쳐쓰기 모드 사이를 전환|INS||  
 |테이블에서 특정 행 삭제|Delete||  
 |현재 셀에 대한 변경 취소|변경된 셀에서 Esc 키||  
 |현재 행에 대한 변경 취소|변경되지 않은 셀에서 Esc 키||  

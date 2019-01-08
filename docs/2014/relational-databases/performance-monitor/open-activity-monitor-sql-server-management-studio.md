@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Activity Monitor [SQL Server], setting the refresh interval
@@ -15,15 +15,15 @@ ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf893c3d46530a8d4457e3d7e434be792d5647ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171663"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755516"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>작업 모니터 열기(SQL Server Management Studio)
-  이 항목에 대 한 정보를 가져올 작업 모니터를 여는 방법에 설명 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스와 이러한 프로세스의 현재 인스턴스에 미치는 영향 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 또한 작업 모니터의 새로 고침 간격을 설정하는 방법에 대해서도 설명합니다.  
+  이 항목에서는 작업 모니터를 열어서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에 대한 정보 및 이러한 프로세스가 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 미치는 영향에 대한 정보를 얻을 수 있습니다. 또한 작업 모니터의 새로 고침 간격을 설정하는 방법에 대해서도 설명합니다.  
   
  **항목 내용**  
   
@@ -35,7 +35,7 @@ ms.locfileid: "48171663"
   
      다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
   
--   **새로 고침 간격 설정에 사용되는 도구:**  [SQL Server Management Studio](#Refresh)  
+-   **새로 고침 간격을 설정 합니다.**  다른 도구는 [SQL Server Management Studio](#Refresh)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  작업 모니터에서는 모니터링 대상 인스턴스에 대해 쿼리를 실행하여 작업 모니터 표시 창에 대한 정보를 가져옵니다. 자동 새로 고침 간격을 10초보다 작게 설정하면 이러한 쿼리를 실행하는 데 사용되는 시간이 서버 성능에 영향을 줄 수 있습니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "48171663"
   
 #### <a name="to-open-activity-monitor-in-sql-server-management-studio"></a>SQL Server Management Studio에서 작업 모니터를 열려면  
   
-1.  에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 표준 도구 모음에서 클릭 **작업 모니터**합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 표준 도구 모음에서 **작업 모니터**를 클릭합니다.  
   
 2.  **서버에 연결** 대화 상자에서 서버 이름과 인증 모드를 선택한 다음 **연결**을 클릭합니다.  
   
