@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Stretch Database, disabling
 - disabling Stretch Database
 ms.assetid: c1bbb24e-47e3-46aa-b786-fcadf9fb65ce
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbfe0a9f6927e1dd62469c8d3e7c3be542cbda76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb71506fabe25de06e991574bcdf013e3c111d19
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794811"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596774"
 ---
 # <a name="disable-stretch-database-and-bring-back-remote-data"></a>Stretch Database 비활성화 및 원격 데이터 다시 가져오기
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "47794811"
 ## <a name="disable-stretch-database-for-a-database"></a>데이터베이스에서 Stretch Database 비활성화  
  데이터베이스에서 개별적으로 스트레치가 활성화된 테이블에 대한 스트레치 데이터베이스를 비활성화한 후 데이터베이스에서 스트레치 데이터베이스를 비활성화할 수 있습니다.  
   
-### <a name="use-sql-server-management-studio-to-disable-stretch-database-for-a-database"></a>SQL Server Management Studio를 사용하여 데이터베이스에서 스트레치 데이터베이스 비활성화  
+### <a name="use-sql-server-management-studio-to-disable-stretch-database-for-a-database"></a>SQL Server Management Studio를 사용하여 데이터베이스에서 Stretch Database 비활성화  
   
 1.  SQL Server Management Studio의 개체 탐색기에서 스트레치 데이터베이스를 비활성화하려는 데이터베이스를 선택합니다.  
   

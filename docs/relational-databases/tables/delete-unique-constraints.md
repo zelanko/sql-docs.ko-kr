@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b93de07afe217b475c55e74170a5b2e453494b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c61ba41037065c49e4a6e49a5cd0adc3b760a10
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630231"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589597"
 ---
 # <a name="delete-unique-constraints"></a>UNIQUE 제약 조건 삭제
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47630231"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Security"></a> 보안  
   
@@ -69,7 +69,7 @@ ms.locfileid: "47630231"
   
 4.  **삭제**를 클릭합니다.  
   
-5.  **파일** 메뉴에서 *테이블 이름* **저장**을 클릭합니다.  
+5.  **파일** 메뉴에서 _테이블 이름_ **저장**을 클릭합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
