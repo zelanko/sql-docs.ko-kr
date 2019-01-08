@@ -5,7 +5,7 @@ ms.date: 04/10/2018
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.reviewer: ''
-ms.technology: database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
@@ -14,17 +14,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb330dfed7671762b353176cc7d94df02c5c0e65
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1e79acde0423f9a03c7f34bcc74436ae8c65a2ed
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535561"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765485"
 ---
 # <a name="full-text-search"></a>전체 텍스트 검색
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 의 전체 텍스트 검색을 사용하면 사용자와 응용 프로그램이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블의 문자 기반 데이터에 대해 전체 텍스트 쿼리를 실행할 수 있습니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 의 전체 텍스트 검색을 사용하면 사용자와 애플리케이션이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블의 문자 기반 데이터에 대해 전체 텍스트 쿼리를 실행할 수 있습니다.
   
 ## <a name="basic-tasks"></a>기본 태스크
 이 항목에서는 전체 텍스트 검색의 개요를 제공하고 해당 구성 요소 및 아키텍처에 대해 설명합니다. 지금 바로 시작하려면 기본 태스크는 다음과 같습니다.
