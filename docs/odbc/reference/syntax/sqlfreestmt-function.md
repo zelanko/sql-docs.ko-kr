@@ -20,16 +20,16 @@ ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d48d9742f9b3fafe77f441226961218f47c6005
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3cca214aeb63720e193f57f06a22481ae7d369f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719711"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213442"
 ---
 # <a name="sqlfreestmt-function"></a>SQLFreeStmt 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLFreeStmt** 특정 문과 사용 하 여 연결 된 처리를 중지, 보류 중인 결과가 삭제 된 문과 연결 된 열려 있는 모든 커서가 닫히거나, 필요에 따라 문 핸들을 사용 하 여 연결 된 모든 리소스를 해제 합니다.  
@@ -52,11 +52,11 @@ SQLRETURN SQLFreeStmt(
   
  SQL_ 닫기: 연관 된 커서를 닫고 *StatementHandle* (정의 된) 경우 모든 보류 중인 결과 무시 하 고 있습니다. 응용 프로그램을 다시 열 수이 커서 나중에 실행 하 여는 **선택** 동일 하거나 다른 매개 변수 값을 사용 하 여 다시 문입니다. 없음 커서를 연 경우이 옵션은 응용 프로그램에 대 한 영향을 주지 않습니다. **SQLCloseCursor** 커서 닫기 호출할 수도 있습니다. 자세한 내용은 [커서 닫기](../../../odbc/reference/develop-app/closing-the-cursor.md)합니다.  
   
- SQL_DROP:이 옵션은 사용 되지 않습니다. 에 대 한 호출 **SQLFreeStmt** 사용 하 여는 *옵션* SQL_DROP의 드라이버 관리자에 매핑되어 [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)합니다.  
+ SQL_DROP: 이 옵션은 더 이상 사용되지 않습니다. 에 대 한 호출 **SQLFreeStmt** 사용 하 여는 *옵션* SQL_DROP의 드라이버 관리자에 매핑되어 [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)합니다.  
   
- SQL_UNBIND: 집합의 모든 열 버퍼를 해제 하는 0으로 카드가 SQL_DESC_COUNT 필드 구속 **SQLBindCol** 에 대 한는 주어진 *StatementHandle*합니다. 책갈피 열; 연결을 끊지 않습니다이 이렇게 하려면 책갈피 열에 대 한 카드가의 SQL_DESC_DATA_PTR 필드가 NULL로 설정 됩니다. 둘 이상의 문에 의해 공유 되는 명시적으로 할당 된 설명자를에서이 작업을 수행 하는 경우 작업에는 영향이 설명자를 공유 하는 모든 문은의 바인딩을 확인할 수 있습니다. 자세한 내용은 [개요의 검색 결과 (기본)](../../../odbc/reference/develop-app/retrieving-results-basic.md)합니다.  
+ SQL_UNBIND: 집합의 모든 열 버퍼를 해제 하는 0으로 카드가 SQL_DESC_COUNT 필드 구속 **SQLBindCol** 에 대 한는 주어진 *StatementHandle*. 책갈피 열; 연결을 끊지 않습니다이 이렇게 하려면 책갈피 열에 대 한 카드가의 SQL_DESC_DATA_PTR 필드가 NULL로 설정 됩니다. 둘 이상의 문에 의해 공유 되는 명시적으로 할당 된 설명자를에서이 작업을 수행 하는 경우 작업에는 영향이 설명자를 공유 하는 모든 문은의 바인딩을 확인할 수 있습니다. 자세한 내용은 [개요의 검색 결과 (기본)](../../../odbc/reference/develop-app/retrieving-results-basic.md)합니다.  
   
- SQL_RESET_PARAMS: APD의 SQL_DESC_COUNT 필드를 0으로 설정한 모든 매개 변수 버퍼를 해제를 설정 **SQLBindParameter** 에 대 한는 주어진 *StatementHandle*합니다. 둘 이상의 문에 의해 공유 되는 명시적으로 할당 된 설명자를에서이 작업을 수행 하는 경우이 작업 설명자를 공유 하는 모든 문은의 바인딩을 적용 됩니다. 자세한 내용은 [매개 변수 바인딩](../../../odbc/reference/develop-app/binding-parameters-odbc.md)합니다.  
+ SQL_RESET_PARAMS: APD의 SQL_DESC_COUNT 필드를 0으로 설정한 모든 매개 변수 버퍼를 해제 설정 **SQLBindParameter** 에 대 한는 주어진 *StatementHandle*합니다. 둘 이상의 문에 의해 공유 되는 명시적으로 할당 된 설명자를에서이 작업을 수행 하는 경우이 작업 설명자를 공유 하는 모든 문은의 바인딩을 적용 됩니다. 자세한 내용은 [매개 변수 바인딩](../../../odbc/reference/develop-app/binding-parameters-odbc.md)합니다.  
   
 ## <a name="returns"></a>반환 값  
  관계 없이 SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR를 또는 SQL_INVALID_HANDLE 합니다.  

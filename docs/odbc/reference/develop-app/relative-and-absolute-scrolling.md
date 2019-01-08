@@ -16,12 +16,12 @@ ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a6b77f61c8eadd8ef58d9eb475aaeb3faf88c57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ba05cb9079514750cf087149bae476efe0d8d41
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661861"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510764"
 ---
 # <a name="relative-and-absolute-scrolling"></a>상대 및 절대 스크롤
 스크롤 옵션의 대부분 **SQLFetchScroll** 현재 위치를 기준으로 또는 절대 위치에 커서를 놓습니다. **SQLFetchScroll** 다음을 인출할 이전, 첫 번째 및 마지막 행 집합에도으로 상대 인출로 (행 집합을 인출할 *n* 현재 행 집합의 시작 부분에서 행)과 절대 인출 (페치를 시작 하는 행 집합 행 *n*). 하는 경우 *n* 는 절대 인출에서 음수 이면 행 결과 집합의 끝에서 계산 됩니다. 따라서 결과 집합의 마지막 행을 시작 하는 행 집합을 인출 하는-1 행의 절대 인출을 의미 합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "47661861"
 |--------------------------|-------------------------------------|  
 |페이지 위로|SQL_FETCH_PRIOR|  
 |페이지 아래로|SQL_FETCH_NEXT|  
-|줄 위로|인 SQL_FETCH_RELATIVE *FetchOffset* -1과 같음|  
+|줄 위로|인 SQL_FETCH_RELATIVE *FetchOffset* -1|  
 |줄 아래로|인 SQL_FETCH_RELATIVE *FetchOffset* 1|  
 |맨 위에 있는 스크롤 상자|SQL_FETCH_FIRST|  
 |스크롤 상자 맨 아래에 있는|SQL_FETCH_LAST|  

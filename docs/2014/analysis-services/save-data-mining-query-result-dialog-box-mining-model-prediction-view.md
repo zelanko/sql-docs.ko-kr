@@ -15,12 +15,12 @@ ms.assetid: 112fb527-7466-4fd4-9cf1-75596135648f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c4736083dedc6899a55e49926d1010ef39fc4444
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6b5c5f74ba8951bae27193b6796f09dcbdb8302
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090284"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511212"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>데이터 마이닝 쿼리 결과 저장 대화 상자(마이닝 모델 예측 뷰)
   **데이터 마이닝 쿼리 결과 저장** 대화 상자를 사용하여 데이터 마이닝 쿼리 결과를 새 테이블에 저장할 수 있습니다.  
@@ -53,10 +53,10 @@ ms.locfileid: "48090284"
  **DSV에 추가**  
  테이블을 기존 데이터 원본에 추가하려면 프로젝트에 포함된 데이터 원본 뷰를 선택합니다(옵션).  
   
- 이 옵션은 학습 데이터, 예측 원본 데이터, 쿼리 결과와 같은 모델에 대한 모든 관련 테이블을 동일한 데이터 원본에 유지하려는 경우에 유용합니다.  
+ 이 옵션에 대 한 모든 관련된 테이블을 유지 하려는 경우는 모델 같은 학습 데이터, 예측 원본 데이터 및 쿼리 결과-동일한 데이터 원본에서 유용 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [예측 쿼리 작성기 &#40;데이터 마이닝&#41;](prediction-query-builder-data-mining.md)   
+ [예측 쿼리 작성기&#40;데이터 마이닝&#41;](prediction-query-builder-data-mining.md)   
  [데이터 마이닝 쿼리 인터페이스](data-mining/data-mining-query-tools.md)   
  [DMX&#40;Data Mining Extensions&#41; 문 참조](/sql/dmx/data-mining-extensions-dmx-statements)  
   

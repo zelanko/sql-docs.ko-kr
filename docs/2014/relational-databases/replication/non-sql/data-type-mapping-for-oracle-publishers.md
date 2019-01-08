@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], data type mapping
@@ -15,12 +14,12 @@ ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46eb3d71eb1c8ec7793cc2be798ef4e774dd9595
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194743"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786655"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 게시자에 대한 데이터 형식 매핑
   Oracle 데이터 형식 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식이 항상 정확히 일치하지는 않습니다. Oracle 테이블을 게시할 때 가능한 일치하는 데이터 형식이 자동으로 선택됩니다. 단일 데이터 형식 매핑이 명확하지 않으면 대체 데이터 형식 매핑이 제공됩니다. 대체 매핑을 선택하는 방법은 아래의 "대체 데이터 형식 매핑 지정" 섹션을 참조하십시오.  
@@ -50,7 +49,7 @@ ms.locfileid: "48194743"
 |RAW([1-2000])|VARBINARY([1-2000])|아니요|  
 |real|FLOAT|아니요|  
 |ROWID|CHAR(18)|아니요|  
-|TIMESTAMP|DATETIME|사용자 계정 컨트롤|  
+|timestamp|DATETIME|사용자 계정 컨트롤|  
 |TIMESTAMP(0-7)|DATETIME|사용자 계정 컨트롤|  
 |TIMESTAMP(8-9)|DATETIME|사용자 계정 컨트롤|  
 |TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|사용자 계정 컨트롤|  
@@ -82,7 +81,7 @@ ms.locfileid: "48194743"
 ### <a name="float-and-number-types"></a>FLOAT 및 NUMBER 형식  
  FLOAT 및 NUMBER 데이터 형식 매핑 중에 지정하는 전체 자릿수 및 소수 자릿수는 Oracle 데이터베이스에서 해당 데이터 형식을 사용하는 열에 지정된 전체 자릿수 및 소수 자릿수에 따라 달라집니다. 전체 자릿수는 숫자의 모든 자릿수이고 소수 자릿수는 숫자에서 소수점 오른쪽에 있는 자릿수입니다. 예를 들어 123.45의 전체 자릿수는 5이고 소수 자릿수는 2입니다.  
   
- Oracle에서는 NUMBER(4,5)처럼 전체 자릿수보다 큰 소수 자릿수로 숫자를 정의할 수 있지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 전체 자릿수가 소수 자릿수보다 크거나 같아야 합니다. 데이터가 잘리지 않도록 하기 위해 Oracle 게시자에서 소수 자릿수가 전체 자릿수보다 클 경우 데이터 형식이 매핑될 때 전체 자릿수가 소수 자릿수와 동일하게 설정됩니다.NUMBER(4,5)는 NUMERIC(5,5)로 매핑됩니다.  
+ Oracle에서는 NUMBER(4,5)처럼 전체 자릿수보다 큰 소수 자릿수로 숫자를 정의할 수 있지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 전체 자릿수가 소수 자릿수보다 크거나 같아야 합니다. 데이터가 잘리지 않도록 하기 위해 Oracle 게시자에서 소수 자릿수가 전체 자릿수보다 클 경우 데이터 형식이 매핑될 때 전체 자릿수가 소수 자릿수와 동일하게 설정됩니다. NUMBER(4,5)는 NUMERIC(5,5)로 매핑됩니다.  
   
 > [!NOTE]  
 >  NUMBER에 대한 소수 자릿수와 전체 자릿수를 지정하지 않으면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 기본적으로 최대 소수 자릿수(8)와 최대 전체 자릿수(38)를 사용합니다. 데이터를 복제할 때 더 나은 저장소를 사용하고 성능을 높이려면 Oracle에서 특정 소수 자릿수와 전체 자릿수를 설정하는 것이 좋습니다.  

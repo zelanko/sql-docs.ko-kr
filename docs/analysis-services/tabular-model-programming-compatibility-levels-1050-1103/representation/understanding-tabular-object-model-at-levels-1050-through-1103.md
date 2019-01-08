@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 16808ae1ceccd64a109a78c33d861ab45076b98d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: ad3963cd7b0b2b40e6b3a08cab68ad809378bff1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146418"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526790"
 ---
 # <a name="understanding-tabular-object-model-at-levels-1050-through-1103"></a>1050~1103 수준에서 테이블 형식 개체 모델 이해
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "50146418"
   
  참조 [계층 표현 &#40;테이블 형식&#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-hierarchy-representation.md) 에 대 한 자세한 내용은 계층 표현을 만들고 조작 하는 방법입니다.  
   
-### <a name="key-performance-indicator-kpi--representation"></a>KPI(핵심 성과 지표) 표현  
+### <a name="key-performance-indicator--kpi--representation"></a>핵심 성과 지표 표현을-KPI  
  KPI는 기본 측정값으로 정의된 값을 대상 값과 비교하여 값 성과를 측정하는 데 사용됩니다. AMO 개체를 기준으로 KPI 표현은 일 대 다 매핑 관계를 가지며 다음 AMO 개체를 사용 하 여 KPI 표시 됩니다. `xref:Microsoft.AnalysisServices.MdxScript.Commands%2A` 및 `xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A` 가 주된 필수 개체입니다.  모델링을 수행할 때 앞에서 말한 AMO 개체의 포함된 개체를 모두 사용할 수 있다는 의미는 아닙니다.  
   
 > [!NOTE]  

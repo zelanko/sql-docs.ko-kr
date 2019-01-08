@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.databasesettings.f1
@@ -13,12 +12,12 @@ ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 357d7ba5fdd790bf32534b8e274ed67ef715cdea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 21731b1b99c29257700393b5b7713a723c35dbac
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178259"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639431"
 ---
 # <a name="server-properties-database-settings-page"></a>서버 속성(데이터베이스 설정 페이지)
   이 페이지를 사용하여 데이터베이스 설정을 보거나 수정할 수 있습니다.  
@@ -60,7 +59,7 @@ ms.locfileid: "48178259"
  **복구 간격(분)**  
  데이터베이스당 최대 복구 시간을 분 단위로 설정합니다. 기본값 0을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동으로 구성합니다. 기본값을 설정하면 실제 운영 시 1분 이하의 복구 시간이 사용되고 활성 데이터베이스의 경우 약 1분 간격으로 검사점이 실행됩니다. 자세한 내용은 [Configure the recovery interval Server Configuration Option](configure-the-recovery-interval-server-configuration-option.md)을(를) 참조하세요.  
   
- **Data**  
+ **데이터**  
  데이터 파일의 기본 위치를 지정합니다. 새 기본 위치로 이동하려면 찾아보기 단추를 클릭합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 다시 시작할 때까지는 적용되지 않습니다.  
   
  **Log**  

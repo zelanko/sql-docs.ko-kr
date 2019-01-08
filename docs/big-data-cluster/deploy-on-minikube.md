@@ -1,26 +1,28 @@
 ---
-title: SQL Server 2019 빅 데이터 클러스터 배포에 대 한 Minikube 구성 | Microsoft Docs
-description: 단일 컴퓨터에서 SQL Server 2019 빅 데이터 클러스터 (미리 보기) 배포에 대 한 Minikube를 구성 하는 방법에 알아봅니다.
+title: Minikube를 구성 합니다.
+titleSuffix: SQL Server 2019 big data clusters
+description: 단일 컴퓨터에서 SQL Server 2019 빅 데이터 클러스터 (미리 보기) 배포에 대 한 minikube를 구성 하는 방법에 알아봅니다.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 9b6902057c3bf5da706de8832b33c959ed285a9b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.custom: seodec18
+ms.openlocfilehash: a4bdccba6d42868225a39792cb94566df1f56680
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702351"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246572"
 ---
-# <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>SQL Server 2019 빅 데이터 클러스터 배포에 대 한 Minikube 구성
+# <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>SQL Server 2019 빅 데이터 클러스터 배포용 minikube를 구성 합니다.
 
 이 문서에서는 구성 하는 방법 설명 **minikube** SQL Server 2019 빅 데이터 클러스터 (미리 보기) 배포에 대 한 단일 컴퓨터에서. Minikube는 쉽게 데스크톱 이나 랩톱 같은 단일 컴퓨터에서 Kubernetes를 실행 하는 도구입니다. Minikube VM 내에서 단일 노드 Kubernetes 클러스터에서 실행 Kubernetes 사용해 또는를 사용 하 여 개발 하려는 사용자에 대 한 노트북 일상적인 됩니다. 
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
-- Minikube 클러스터 SQL Server 2019 CTP 2.1에 대 한 SQL 빅 데이터 클러스터 구성에서를 실행 하려면 컴퓨터에 있는 최소 32GB의 RAM이 좋습니다.
+- Minikube 클러스터 SQL Server 2019 (미리 보기)에 대 한 빅 데이터 클러스터를 실행 하려면 컴퓨터에 있는 최소 32GB의 RAM이 좋습니다.
 
    > [!TIP] 
    > 컴퓨터에 최소 메모리를 권장 하는 경우에 계산 풀 인스턴스를 하나만, 1 데이터 풀 인스턴스 및 1 저장소 풀 인스턴스에 있는 클러스터를 배포를 구성 합니다. 이 구성만 사용할 평가 환경에 대 한 내구성 및 가용성 데이터는 중요 하지 않습니다. 참조를 [배포 설명서](deployment-guidance.md#define-environment-variables) 데이터 풀에 대 한 복제본의 수를 구성 하려면 설정 환경 변수에 대 한 자세한 내용은 풀 및 저장소 풀을 계산 합니다.
@@ -28,8 +30,6 @@ ms.locfileid: "51702351"
 - 컴퓨터의 BIOS에서 VT x 또는 amd-v 가상화를 활성화 되어야 합니다.
 
 ## <a name="install-dependencies"></a>종속성 설치
-
-1. 아직 설치 하지 않았으면, 로컬에서 git을 설치 [Windows](https://git-for-windows.github.io/)하십시오 [Linux 또는 Mac](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)합니다.
 
 1. 설치할 [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)합니다.
 
@@ -44,7 +44,7 @@ ms.locfileid: "51702351"
 
 ## <a name="install-minikube"></a>Minikube를 설치 합니다.
 
-에 대 한 지침에 따라 Minikube를 설치 합니다 [v0.28.2 릴리스](https://github.com/kubernetes/minikube/releases/tag/v0.28.2)합니다. SQL Server 2019 CTP 2.1 빅 데이터 클러스터 버전 v0.24.1와 등록에 작동합니다.
+에 대 한 지침에 따라 Minikube를 설치 합니다 [v0.28.2 릴리스](https://github.com/kubernetes/minikube/releases/tag/v0.28.2)합니다. SQL Server 2019 빅 데이터 클러스터 (미리 보기) 버전 v0.24.1와 등록에 작동합니다.
 
 ## <a name="create-a-minikube-cluster"></a>Minikube 클러스터 만들기
 
@@ -74,4 +74,4 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 이 문서의 단계 Minikube 클러스터를 구성 합니다. 다음 단계는 SQL Server 2019 빅 데이터 클러스터를 배포 하는 것입니다. 자세한 내용은 다음 문서를 참조 합니다.
 
-[SQL Server 2019 CTP 2.1 Kubernetes에 배포](deployment-guidance.md#deploy)
+[Kubernetes에서 SQL Server 2019 빅 데이터 클러스터를 배포 합니다.](deployment-guidance.md#deploy)

@@ -13,12 +13,12 @@ ms.assetid: 781cf5a5-325e-4523-8633-d96d9e98277c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2125d299570c3e5b381a6bfa5500b5b5e61636f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b3dcd9c348d83dad1e295e253cb37768fbb0abb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772031"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526721"
 ---
 # <a name="sqlrowcount-cursor-library"></a>SQLRowCount(커서 라이브러리)
 > [!IMPORTANT]  
@@ -30,4 +30,4 @@ ms.locfileid: "47772031"
   
  응용 프로그램을 호출할 때 **SQLRowCount** 커서 라이브러리 위치 지정된 update 또는 delete 문을 사용 하 여 연결 된 문을 사용 하면 문에 의해 영향을 받는 행 수를 반환 합니다.  
   
- 응용 프로그램을 호출할 때 **SQLRowCount** 후를 **선택** 문을 커서 라이브러리는 – 1을 반환 합니다.
+ 응용 프로그램을 호출할 때 **SQLRowCount** 후를 **선택** 문을 커서 라이브러리는-1을 반환 합니다.

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 399665103725cec573a790667c9253b25836b076
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8bed79906ff69305a135b1c7249cd4d3331ca3d7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095955"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207592"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>데이터 새로 고침(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 데이터를 새로 고쳐 새 워크시트를 열지 않고도 MDS 리포지토리에서 최신 정보를 가져올 수 있습니다. 모든 셀이나 선택한 셀을 새로 고칠 수 있습니다. 이 방법은 사용자 지정 수식이나 MDS에서 관리되지 않는 기타 데이터가 포함된 열을 삽입했으며 이를 보존하려는 경우에 유용하게 사용할 수 있습니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "48095955"
   
 -   MDS 저장소에서 특성 값이 변경된 경우 워크시트의 값이 MDS 저장소의 값으로 업데이트됩니다. 셀 색은 변경되지 않습니다.  
   
-> [!WARNING]  
+> [!WARNING]
 >  -   활성 워크시트에서 관리되지 않는 데이터가 MDS 관리 데이터 아래의 행에 있으면 관리되지 않는 데이터를 덮어쓸 수 있습니다. 이 경우는 시트를 새로 고치고 관리되지 않는 데이터와 겹치는 MDS 관리 데이터의 새 행이 추가될 때 발생합니다.  
 > -   게시하면 MDS 관리 셀에 대한 주석이 삭제됩니다.  
   
@@ -56,6 +55,6 @@ ms.locfileid: "48095955"
   
 -   [데이터 로드 &#40;MDS 추가 기능에 Excel 용&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
--   [Master Data Services add-in for Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
+-   [Microsoft Excel용 Master Data Services 추가 기능](master-data-services-add-in-for-microsoft-excel.md)  
   
   

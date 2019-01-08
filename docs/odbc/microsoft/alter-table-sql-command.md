@@ -13,12 +13,12 @@ ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 054cc0f649a120805fb3ed2f5f58911959ddceaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f656396455a8d5669debc158c3edc866491fcb5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694759"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207012"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE - SQL 명령
 프로그래밍 방식으로 테이블의 구조를 수정합니다.  
@@ -192,6 +192,6 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  ALTER TABLE-데이터베이스에 수정 하는 테이블이 있을 경우 SQL 데이터베이스를 배타적으로 사용을 해야 합니다. 단독 사용을 위해 데이터베이스를 열려면 배타적 데이터베이스 열에 포함 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [CREATE TABLE-SQL 명령](../../odbc/microsoft/create-table-sql-command.md)   
  [INDEX 명령](../../odbc/microsoft/index-command.md)

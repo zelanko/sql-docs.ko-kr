@@ -1,5 +1,5 @@
 ---
-title: 정의 하 고 드릴스루 동작을 사용 하 여 | Microsoft Docs
+title: 드릴스루 동작 정의 및 사용 | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 45f35145b116f36280ff7d70ee820f4e333382aa
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: 3b57c18d159c677fe10d99fbae1ea9e4bffbed9a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018050"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507960"
 ---
-# <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>8-1-정의 하 고 드릴스루 동작을 사용 하 여 단원
+# <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>단원 8-1-드릴스루 동작 정의 및 사용
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 쿼리가 반환하는 데이터를 올바르게 필터링하지 않고 팩트 차원별로 팩트 데이터의 차원을 지정하면 쿼리 성능이 느려집니다. 이 문제를 방지하려면 반환되는 전체 행 수를 제한하는 드릴스루 동작을 정의하면 됩니다. 이렇게 하면 쿼리 성능이 대폭 향상됩니다.  
@@ -31,13 +31,13 @@ ms.locfileid: "34018050"
   
     다음 그림에서는 큐브 디자이너의 **동작** 탭을 보여 줍니다.  
   
-    ![큐브 디자이너의 동작 탭](../analysis-services/media/l8-action1.gif "큐브 디자이너의 동작 탭")  
+    ![큐브 디자이너의 작업 탭](../analysis-services/media/l8-action1.gif "큐브 디자이너의 작업 탭")  
   
 2.  **동작** 탭의 도구 모음에서 **새 드릴스루 동작** 단추를 클릭합니다.  
   
     표시 창에 빈 동작 템플릿이 표시됩니다.  
   
-    ![디스플레이 창에서 빈 동작 템플릿](../analysis-services/media/l8-action2.gif "디스플레이 창에서 빈 동작 템플릿이")  
+    ![표시 창의 빈 동작 템플릿](../analysis-services/media/l8-action2.gif "표시 창의 빈 동작 템플릿이")  
   
 3.  **이름** 상자에서 이 동작의 이름을 **Internet Sales Details Drillthrough Action**으로 변경합니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "34018050"
   
 8.  **최대 행 수** 상자에 **10**을 입력합니다.  
   
-9. **캡션** 상자에 **Drillthrough to Order Details…** 를 입력합니다.  
+9. 에 **캡션** 상자에 입력 **Drillthrough to Order Details...** .  
   
     이렇게 설정하면 반환되는 행 수가 제한되며 클라이언트 애플리케이션 메뉴에 표시되는 캡션이 지정됩니다. 다음 그림에서는 **추가 속성** 상자에서 지정하는 이러한 설정을 보여 줍니다.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "34018050"
   
     다음 그림에 표시된 것처럼 Adam Powell에게 운송된 주문에 대한 세부 정보가 **데이터 샘플 뷰어**에 표시됩니다. 그러나 주문일, 기한 및 운송일과 같은 일부 추가 세부 정보가 도움이 될 수도 있습니다. 다음 절차에서는 이러한 세부 정보를 추가합니다.  
   
-    ![Adam Powell에 게 운송 된 주문](../analysis-services/media/l8-action6.gif "Adam Powell에 게 운송 된 주문")  
+    ![Adam Powell에 주문 배송](../analysis-services/media/l8-action6.gif "Adam Powell에 배송 주문")  
   
 8.  Excel 닫기  
   
@@ -141,12 +141,12 @@ ms.locfileid: "34018050"
   
     Adam Powell에게 운송된 이 주문에 대한 세부 정보가 임시 워크시트에 표시됩니다. 다음 그림에 표시된 것처럼 여기에는 항목에 대한 설명, 주문 번호, 주문 날짜, 기한 및 운송 날짜 정보가 포함됩니다.  
   
-    ![Adam Powell에 게 운송 된 주문](../analysis-services/media/l8-action8.gif "Adam Powell에 게 운송 된 주문")  
+    ![Adam Powell에 주문 배송](../analysis-services/media/l8-action8.gif "Adam Powell에 배송 주문")  
   
 ## <a name="next-lesson"></a>다음 단원  
-[9 단원: Defining Perspectives and Translations](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
+[9 단원: 큐브 뷰 및 번역 정의](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [동작&#40;Analysis Services - 다차원 데이터&#41;](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  
 [다차원 모델의 동작](../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
 [차원 관계](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  

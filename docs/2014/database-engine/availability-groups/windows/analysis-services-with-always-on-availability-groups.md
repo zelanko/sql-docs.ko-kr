@@ -10,12 +10,12 @@ ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a8ab0e95ce4998540e14849bb74b53d1be1c8e15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 813740a542f06417156c746574dd0995e59aabd6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207581"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414090"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Always On 가용성 그룹이 포함된 Analysis Services
   AlwaysOn 가용성 그룹은 미리 정의된 SQL Server 관계형 데이터베이스 컬렉션으로, 조건이 한 데이터베이스에서 장애 조치(failover)를 트리거하면 전체 데이터베이스에서 함께 장애 조치가 수행되고, 동일한 가용성 그룹에 있는 다른 인스턴스의 미러된 데이터베이스로 요청을 리디렉션합니다. 가용성 그룹을 고가용성 솔루션으로 사용하는 경우 해당 그룹의 데이터베이스를 Analysis Services 테이블 형식 또는 다차원 솔루션의 데이터 원본으로 사용할 수 있습니다. 가용성 데이터베이스를 사용할 경우 데이터 처리 또는 가져오기, 관계형 데이터 직접 쿼리(ROLAP 저장소 또는 DirectQuery 모드 사용), 쓰기 저장과 같은 모든 Analysis Services 작업이 예상대로 작동합니다.  
@@ -105,11 +105,11 @@ ms.locfileid: "48207581"
   
 3.  자리 표시자를 사용자 배포에 맞는 값으로 바꿔 스크립트를 수정합니다.  
   
-    -   ‘Computer01’은 주 복제본을 호스팅하는 서버 인스턴스의 이름으로 바꿉니다.  
+    -   'Computer01'은 주 복제본을 호스팅하는 서버 인스턴스의 이름으로 바꿉니다.  
   
-    -   ‘Computer02’는 보조 복제본을 호스팅하는 서버 인스턴스의 이름으로 바꿉니다.  
+    -   'Computer02'는 보조 복제본을 호스팅하는 서버 인스턴스의 이름으로 바꿉니다.  
   
-    -   ‘contoso.com’은 도메인 이름으로 바꾸거나, 모든 컴퓨터가 동일한 도메인인 경우 생략합니다. 수신기가 기본 포트를 사용하는 경우 포트 번호는 그대로 유지합니다. 실제로 수신기에서 사용하는 포트의 목록은 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]의 속성 페이지에 나와 있습니다.  
+    -   'contoso.com'은 도메인 이름으로 바꾸거나, 모든 컴퓨터가 동일한 도메인인 경우 생략합니다. 수신기가 기본 포트를 사용하는 경우 포트 번호는 그대로 유지합니다. 실제로 수신기에서 사용하는 포트의 목록은 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]의 속성 페이지에 나와 있습니다.  
   
 4.  스크립트를 실행합니다.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "48207581"
   
 1.  SQL Server Profiler를 시작하고 보조 복제본을 호스팅하는 SQL Server 인스턴스에 연결합니다.  
   
-     추적이 실행 되는 `SQL:BatchStarting` 고 `SQL:BatchCompleting` 이벤트는 데이터베이스 엔진 인스턴스에서 실행 중인 Analysis Services에서 실행 하는 쿼리가 표시 됩니다. 이러한 이벤트는 기본적으로 선택되므로 사용자는 추적을 시작하기만 하면 됩니다.  
+     추적이 실행되면 `SQL:BatchStarting` 및 `SQL:BatchCompleting` 이벤트가 데이터베이스 엔진 인스턴스에서 실행 중인 Analysis Services에서 실행한 쿼리를 보여 줍니다. 이러한 이벤트는 기본적으로 선택되므로 사용자는 추적을 시작하기만 하면 됩니다.  
   
 2.  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]에서 테스트할 데이터 원본 연결이 포함된 Analysis Services 프로젝트 또는 솔루션을 엽니다. 데이터 원본은 그룹의 인스턴스가 아닌 가용성 그룹 수신기를 지정해야 합니다.  
   
@@ -165,9 +165,9 @@ ms.locfileid: "48207581"
   
 4.  솔루션을 배포하고 배포가 완료되면 추적을 중지합니다.  
   
-     추적 창에 **Microsoft SQL Server Analysis Services**애플리케이션의 이벤트가 표시됩니다. 표시 `SELECT` 보조 복제본에 수신기를 통해 연결 하는 데는 보조 복제본을 호스팅하는 서버 인스턴스에서 데이터베이스에서 데이터를 검색 하는 문입니다.  
+     추적 창에 **Microsoft SQL Server Analysis Services**애플리케이션의 이벤트가 표시됩니다. 보조 복제본을 호스팅하는 서버 인스턴스의 데이터베이스에서 데이터를 검색하는 `SELECT` 문이 표시되면 수신기를 통해 보조 복제본에 연결되었음을 알 수 있습니다.  
   
-#### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>2단계: 계획된 장애 조치(failover)를 수행하여 구성 테스트  
+#### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>2단계: 계획된 장애 조치를 수행하여 구성 테스트  
   
 1.  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 에서 주 복제본 및 보조 복제본 둘 다 동기 커밋 모드로 구성되었고 현재 동기화되어 있는지 확인합니다.  
   
@@ -199,9 +199,9 @@ ms.locfileid: "48207581"
 9. Analysis Services 솔루션에서 처리 또는 쿼리 명령을 반복한 다음 SQL Server Profiler에서 추적을 나란히 표시하여 확인합니다. 새 보조 복제본이 된 다른 인스턴스에서 처리가 진행됨을 알 수 있습니다.  
   
 ##  <a name="bkmk_whathappens"></a> 장애 조치 발생 후의 상황  
- 장애 조치(failover) 중에 보조 복제본은 주 역할로 전환되고 이전의 주 복제본은 보조 역할로 전환됩니다. 모든 클라이언트 연결이 종료되고 가용성 그룹 수신기의 소유권은 주 복제본 역할과 함께 새 SQL Server 인스턴스로 옮겨지며 수신기 엔드포인트는 새 인스턴스의 가상 IP 주소 및 TCP 포트에 바인딩됩니다. 자세한 내용은 [가용성 복제본에 대한 클라이언트 연결 액세스 정보&#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)를 참조하세요.  
+ 장애 조치(failover) 중에 보조 복제본은 주 역할로 전환되고 이전의 주 복제본은 보조 역할로 전환됩니다. 모든 클라이언트 연결이 종료되고 가용성 그룹 수신기의 소유권은 주 복제본 역할과 함께 새 SQL Server 인스턴스로 옮겨지며 수신기 엔드포인트는 새 인스턴스의 가상 IP 주소 및 TCP 포트에 바인딩됩니다. 자세한 내용은 이 항목 뒷부분에 있는 [가용성 복제본에 대한 클라이언트 연결 액세스 정보&#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)와 같은 시스템 데이터베이스, 사용자 데이터베이스를 비롯하여 보조 복제본을 호스트하는 서버 인스턴스의 읽기/쓰기 데이터베이스에는 데이터를 쓸 수 있습니다.  
   
- 처리 중 장애 조치(failover)가 발생하면 Analysis Services의 로그 파일 또는 출력 창에 다음과 같은 오류가 나타납니다. “OLE DB 또는 ODBC 오류: 통신 연결 오류입니다. 08S01; TPC 공급자: 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다. ; 08S01.”  
+ 처리 중 장애 조치가 발생하면 Analysis Services의 로그 파일 또는 출력 창에 다음과 같은 오류가 나타납니다. "OLE DB 오류: OLE DB 또는 ODBC 오류: 통신 연결 오류입니다. 08S01; TPC 공급자: 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다. ; 08S01."  
   
  이 오류는 잠시 기다렸다가 다시 시도하면 해결됩니다. 가용성 그룹이 읽기 가능한 보조 복제본에 대해 올바로 구성된 경우 처리를 재시도하면 새 보조 복제본에서 처리가 재개됩니다.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "48207581"
 ##  <a name="bkmk_writeback"></a> AlwaysOn 가용성 데이터베이스를 사용할 때의 쓰기 저장  
  쓰기 저장은 Excel의 가상 분석을 지원하는 Analysis Services 기능입니다. 또한 이 기능은 사용자 지정 애플리케이션에서 예산 작성 및 예측 태스크에 일반적으로 사용됩니다.  
   
- 쓰기 저장을 지원하려면 READWRITE 클라이언트 연결이 필요합니다. Excel에서 읽기 전용 연결에 대한 쓰기 저장을 시도하면 “외부 데이터 원본에서 데이터를 검색할 수 없습니다.” 오류가 발생합니다.  
+ 쓰기 저장을 지원하려면 READWRITE 클라이언트 연결이 필요합니다. Excel에서 읽기 전용 연결에 대한 쓰기 저장을 시도하면 다음과 같은 오류가 발생합니다. 오류가 발생합니다. 오류가 발생합니다.  
   
  항상 읽기 가능한 보조 복제본에 액세스하도록 연결을 구성했다면 이제 주 복제본에 대한 READWRITE 연결을 사용하는 새 연결을 구성해야 합니다.  
   

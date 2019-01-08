@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], security
@@ -13,12 +12,12 @@ ms.assetid: d7292121-1c8e-4b8e-ac44-8eea36ae27fe
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 809ae2bc72d567464cc20615e976130f526746e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e6ee98c48c4e332ed24766da396715d1f0f0cda
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092333"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815455"
 ---
 # <a name="secure-a-replication-topology"></a>복제 토폴로지 보안 설정
   복제에 필요한 보안 계정, 로그인 및 암호는 복제가 구성될 때와 게시 및 구독이 생성될 때 제공됩니다. 이러한 보안 설정은 나중에 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], 복제 저장 프로시저 및 RMO(복제 관리 개체)를 사용하여 변경할 수 있습니다. 다음 항목에서는 복제 보안 설정을 수정하는 방법을 설명합니다.  

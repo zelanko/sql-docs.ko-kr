@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7bb77d40ee2635d210346e459dcfbd9aed619ed4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: bcfe927f3b58787ab316a637d0c1d493f73c104a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016620"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511419"
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>마이닝 모델 테스트에 사용할 열 선택
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,13 +22,13 @@ ms.locfileid: "34016620"
   
  다음 목록에서는 테스트에 사용할 예측 가능한 특성을 선택할 때 추가적으로 고려할 사항에 대해 설명합니다.  
   
--   일부 유형의 데이터 마이닝 모델에서는 여러 특성 간의 관계를 탐색할 수 있는 신경망과 같은 여러 특성을 예측할 수 있습니다.  
+-   일부 유형의 데이터 마이닝 모델에는 여러 특성와 같은 여러 특성 간의 관계를 탐색할 수 있는 신경망 예측할 수 있습니다.  
   
--   클러스터링 모델과 같은 다른 유형의 마이닝 모델에는 예측 가능한 특성이 필요하지 않습니다. 예측 가능한 특성이 없는 클러스터링 모델은 테스트할 수 없습니다.  
+-   다른 유형의 마이닝 모델 등과 같이 클러스터링 모델 수행 하지 않을 예측 가능한 특성이 있습니다. 예측 가능한 특성이 없는 클러스터링 모델은 테스트할 수 없습니다.  
   
 -   회귀 모델의 산점도를 만들거나 정확도를 측정하려면 연속된 예측 가능한 특성을 결과로 선택해야 합니다. 이 경우 대상 값은 지정할 수 없습니다. 산점도가 아닌 다른 항목을 만들려면 기본 마이닝 구조 열의 내용 유형이 **불연속** 또는 **분할**이어야 합니다.  
   
--   불연속 특성을 예측 가능한 결과로 선택한 경우에는 대상 값을 지정하거나 **예측 값** 필드를 비워 둘 수 있습니다. **예측 값**을 포함하면 차트에서 예측된 대상 값에서만 모델의 효율성을 측정합니다. 대상 결과를 지정하지 않으면 모든 결과를 예측할 때 모델의 정확도가 측정됩니다.  
+-   불연속 특성을 예측 가능한 결과로 선택한 경우에는 대상 값을 지정하거나 **예측 값** 필드를 비워 둘 수 있습니다. 포함 하는 경우는 **예측 값**, 차트에서 예측 된 대상 값 에서만 모델의 효율성을 측정 합니다. 대상 결과를 지정하지 않으면 모든 결과를 예측할 때 모델의 정확도가 측정됩니다.  
   
 -   여러 모델을 포함하여 하나의 정확도 차트에서 비교하려면 모든 모델에서 동일한 예측 가능한 열을 사용해야 합니다.  
   
@@ -50,8 +50,8 @@ ms.locfileid: "34016620"
   
 5.  모델의 리프트를 결정하려면 **예측 값** 목록에서 측정할 특정 결과 값을 선택해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [모델 테스트 데이터 선택 및 매핑](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
- [정확도 차트 유형 선택 및 집합 차트 옵션](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
+ [정확도 차트 유형 선택 및 차트 옵션 설정](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

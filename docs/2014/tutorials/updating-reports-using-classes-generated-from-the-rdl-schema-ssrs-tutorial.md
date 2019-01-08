@@ -15,12 +15,12 @@ ms.assetid: 8f81d48f-7ab9-4ef8-bce0-7d16d9a47fbd
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 361f3094e1a40cbfc6075888b2be13f42d74c8bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 2f104892e3ee8a8c542c41bc07789a94ab8d0c4e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136053"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349381"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>RDL 스키마에서 생성한 클래스를 사용하여 보고서 업데이트(SSRS 자습서)
   이 자습서에는 XML 스키마 정의 도구 (Xsd.exe) 클래스를 생성 및 보고서 정의 파일 (.rdl 및.rdlc)을 deserialize 할 serialize 할 수 있는 사용 하는 방법을 보여 줍니다 합니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer> 클래스입니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "48136053"
 ## <a name="what-you-will-learn"></a>학습 내용  
  이 자습서를 통해 다음 작업을 완료합니다.  
   
--   응용 프로그램 만들기를 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 콘솔 응용 프로그램 프로젝트 템플릿.  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 콘솔 애플리케이션 프로젝트 템플릿을 사용하여 애플리케이션을 만듭니다.  
   
 -   **xsd** 도구를 사용하여 RDL(Report Definition Language) 스키마의 클래스를 생성합니다.  
   
@@ -54,25 +54,25 @@ ms.locfileid: "48136053"
   
 -   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 인스턴스에 설치된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 예제 데이터베이스  
   
--   보고서 서버에 설치된 보고서. 이 자습서에서는 예제 보고서 Company Sales 2012를 사용합니다. 예제 보고서에 대한 자세한 내용은 [SQL Server Reporting Services 제품 예제(SQL Server Reporting Services Product Samples)](http://go.microsoft.com/fwlink/?LinkId=177889)를 참조하십시오.  
+-   보고서 서버에 설치된 보고서. 이 자습서에서는 예제 보고서 Company Sales 2012를 사용합니다. 예제 보고서에 대한 자세한 내용은 [SQL Server Reporting Services 제품 예제(SQL Server Reporting Services Product Samples)](https://go.microsoft.com/fwlink/?LinkId=177889)를 참조하십시오.  
   
 > [!NOTE]  
->  설치 시 예제가 자동으로 설치되지 않지만 예제는 언제든지 설치할 수 있습니다. 예제에 대한 정보는 [SQL Server 제품 예제](http://go.microsoft.com/fwlink/?LinkId=182887)를 참조하십시오.  
+>  설치 시 예제가 자동으로 설치되지 않지만 예제는 언제든지 설치할 수 있습니다. 예제에 대한 정보는 [SQL Server 제품 예제](https://go.microsoft.com/fwlink/?LinkId=182887)를 참조하십시오.  
   
- **자습서에 소요되는 예상 시간:** 30분  
+ **자습서를 완료 예상된 시간:** 30분  
   
 ## <a name="tasks"></a>태스크  
- [1단원: RDL Schema Visual Studio 프로젝트 만들기](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  
+ [1 단원: RDL Schema Visual Studio 프로젝트 만들기](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  
   
- [2단원: xsd 도구를 사용하여 RDL 스키마에서 클래스 생성](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)  
+ [2단원: Xsd 도구를 사용 하 여 RDL 스키마에서 클래스를 생성 합니다.](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)  
   
- [3단원: 보고서 서버에서 보고서 정의 로드](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)  
+ [3 단원: 보고서 서버에서 보고서 정의 로드 합니다.](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)  
   
- [4단원: 프로그래밍 방식으로 보고서 정의 업데이트](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)  
+ [4 단원: 보고서 정의 프로그래밍 방식으로 업데이트](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)  
   
- [5단원: 보고서 정의를 보고서 서버에 게시](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)  
+ [5 단원: 보고서 정의 보고서 서버에 게시](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)  
   
- [6 단원: RDL Schema 응용 프로그램을 실행 &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)  
+ [6 단원: RDL Schema 응용 프로그램 실행 &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [RDL(Report Definition Language)&#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  

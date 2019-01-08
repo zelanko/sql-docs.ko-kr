@@ -13,12 +13,12 @@ ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3086eff0e4a774e7f63e7ff876a9675668d5912
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 632703a1f7817986a6bc192006ef079af20cfb08
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707881"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527451"
 ---
 # <a name="comments-on-hellodata"></a>HelloData에 대한 설명
 HelloData 응용 프로그램을 일반적인 ADO 응용 프로그램의 기본 작업을 통해 단계: 가져오기, 검사, 편집 및 데이터를 업데이트 합니다. 응용 프로그램을 시작 하면 첫 번째 단추를 클릭 **데이터 가져오기**합니다. 이렇게 하면 실행 합니다 **GetData** 서브루틴입니다.  
@@ -74,4 +74,4 @@ HelloData 응용 프로그램을 일반적인 ADO 응용 프로그램의 기본 
  데이터를 업데이트 하는 방법에 대 한 자세한 정보에 대 한 경우 수행할 작업을 포함 하는 동안 서버 변경 내용에 대 한 데이터에 **레코드 집합** 가 참조 연결이 끊긴 [업데이트 및 데이터 유지](../../../ado/guide/data/updating-and-persisting-data.md)합니다.  
   
 ## <a name="formunload"></a>Form_Unload  
- 합니다 **Form_Unload** 서브루틴은 여러 가지 이유로 중요 합니다. 첫째, 샘플 응용 프로그램 이므로 form_unload 응용 프로그램이 종료 되기 전에 데이터베이스에 대 한 변경 내용을 합니다. 둘째, 코드 명령을 개방적이 고에서 직접 실행 하는 방법을 보여줍니다 **연결** 사용 하 여 개체를 **Execute** 메서드. 마지막으로, 데이터 원본에 대해 행을 반환 되지 않은 쿼리 (업데이트 쿼리)를 실행 하는 예를 보여줍니다.
+ 합니다 **Form_Unload** 서브루틴은 여러 가지 이유로 중요 합니다. 첫째, 샘플 응용 프로그램 이므로 form_unload 응용 프로그램이 종료 되기 전에 데이터베이스에 대 한 변경 내용을 합니다. 둘째, 코드 명령을 개방적이 고에서 직접 실행 하는 방법을 보여줍니다 **연결** 사용 하 여 개체를 **Execute** 메서드. 마지막으로, 데이터 원본에 대 한 행 반환 하지 않는 쿼리 (업데이트 쿼리)를 실행 하는 예를 보여줍니다.

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -17,12 +16,12 @@ ms.assetid: 16e6498a-b449-4051-aec4-ea814a2ad993
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac76aac61b5e0848e40ced7a0d6afda4a3a289a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09e535057fcf573dfa189b7e5fdc0e0df06e5d4a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090893"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753175"
 ---
 # <a name="bulk-load-data-into-tables-in-a-merge-publication-replication-transact-sql-programming"></a>병합 게시에서 데이터를 테이블로 대량 로드(복제 Transact-SQL 프로그래밍)
   [bcp 유틸리티](../../tools/bcp-utility.md) 또는 [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql) 명령을 사용하여 데이터를 테이블로 로드할 경우 기본적으로 [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql) 시스템 테이블의 추적 데이터를 유지 관리하는 병합 복제 트리거가 발생하지 않습니다. 데이터가 로드될 때 병합 복제 트리거가 강제로 발생하도록 하거나 복제 저장 프로시저를 사용하여 대량 복사 작업을 수행한 후 생성된 복제 메타데이터를 프로그래밍 방식으로 삽입할 수 있습니다.  

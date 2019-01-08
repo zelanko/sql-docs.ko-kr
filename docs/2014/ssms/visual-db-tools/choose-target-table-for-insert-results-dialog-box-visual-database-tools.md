@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.choosetableforinsertfrom
@@ -13,12 +13,12 @@ ms.assetid: 4ffd62c1-da72-4daf-832b-cc1268abf351
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fbd8681d5b930515a4fc01215f684130b2823407
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d69745b3316222f9ebabbad29fbc12e023351d2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114213"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768892"
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>결과 삽입의 대상 테이블 선택 대화 상자(Visual Database Tools)
   이 대화 상자를 사용하면 INSERT RESULTS 쿼리의 결과로 데이터 행을 추가할 테이블을 지정할 수 있습니다. 이 대화 상자는 INSERT RESULTS 쿼리를 시작할 때 나타납니다.  

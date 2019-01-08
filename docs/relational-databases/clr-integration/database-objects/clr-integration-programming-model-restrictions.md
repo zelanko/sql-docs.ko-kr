@@ -15,12 +15,12 @@ ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7c39bb3499302ef1b60744a4332c665506c7fd21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 828608b5c00cdcf0ed625a302359bb5c271381b4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809041"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538534"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 통합 프로그래밍 모델 제한 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "47809041"
  런타임에 코드 어셈블리에서 다음 조건이 검사됩니다. 이러한 조건 중 하나가 발견되면 관리 코드를 실행할 수 없으며 예외가 throw됩니다.  
   
 ### <a name="unsafe"></a>UNSAFE  
- 어셈블리를 로드-명시적으로 호출 하 여 하나를 **System.Reflection.Assembly.Load()** 메서드를 사용 하 여 암시적으로 바이트 배열에서 또는 **Reflection.Emit** 네임 스페이스-허용 되지 않습니다.  
+ 어셈블리를 호출 하 여 명시적으로 로드 합니다 **System.Reflection.Assembly.Load()** 메서드를 사용 하 여 암시적으로 바이트 배열에서 또는 **Reflection.Emit** 네임 스페이스-허용 되지 않습니다.  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  모든 **UNSAFE** 조건이 검사 됩니다.  
@@ -117,7 +117,7 @@ ms.locfileid: "47809041"
 ### <a name="safe"></a>SAFE  
  모든 **EXTERNAL_ACCESS** 조건이 검사 됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [지원 되는.NET Framework 라이브러리](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)   
  [CLR 통합 코드 액세스 보안](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [호스트 보호 특성 및 CLR 통합 프로그래밍](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   

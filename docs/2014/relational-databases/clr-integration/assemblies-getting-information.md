@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: clr
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration], metadata
@@ -14,12 +14,12 @@ ms.assetid: 6aa7f18e-baad-4481-9777-8c3b230b392f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9433234aae4bbe09e8ad8c08bfa457c61bede8e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ebbb5ac25ea71dc5b9929fb529414b059c0589fb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182510"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760325"
 ---
 # <a name="getting-information-about-assemblies"></a>어셈블리에 대한 정보 가져오기
   다음 카탈로그 뷰와 함수에서 어셈블리에 대한 메타데이터를 쿼리할 수 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "48182510"
   
 -   [sys.sql_modules&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [어셈블리 &#40;데이터베이스 엔진&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [어셈블리 디자인](../../relational-databases/clr-integration/assemblies-designing.md)   
  [어셈블리 구현](assemblies-implementing.md)  

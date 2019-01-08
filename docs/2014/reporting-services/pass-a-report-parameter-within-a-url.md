@@ -14,12 +14,12 @@ ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 80450865b72360068555cb1a25224a3ea503e5a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfbf2362b06abc254879d25c4f8e7b8e876a6737
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097583"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215862"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>URL에 보고서 매개 변수 전달
   보고서 매개 변수를 보고서 URL에 포함시켜 보고서에 전달할 수 있습니다. 이러한 URL 매개 변수는 보고서 처리 엔진에 직접 전달되기 때문에 접두사가 붙지 않습니다.  
@@ -31,12 +31,12 @@ ms.locfileid: "48097583"
   
  모든 쿼리 매개 변수에는 해당하는 보고서 매개 변수가 있을 수 있습니다. 해당 보고서 매개 변수를 전달하여 보고서에 쿼리 매개 변수를 전달할 수 있습니다. 자세한 내용은 [관계형 쿼리 디자이너에서 쿼리 빌드&#40;보고서 작성기 및 SSRS&#41;](report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)를 참조하세요.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  보고서 매개 변수는 대/소문자를 구분합니다.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  보고서 매개 변수는 대/소문자를 구분하고 다음과 같은 특수 문자를 사용합니다.  
->   
+> 
 >  -   URL 문자열에서 공백 문자는 URL 인코딩 표준에 따라 "%20" 문자로 바뀝니다.  
 > -   URL의 매개 변수 부분에서 공백 문자는 더하기 문자(+)로 대체됩니다.  
 > -   문자열의 모든 부분에서 세미콜론은 "%3A" 문자로 바뀝니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "48097583"
 parameter=value  
 ```  
   
- 예를 들어 보고서에 정의된 두 개의 매개 변수 “ReportMonth” 및 “ReportYear”를 지정하려면 기본 모드 보고서 서버에 다음 URL을 사용합니다.  
+ 예를 들어 보고서에 정의된 두 개의 매개 변수 "ReportMonth" 및 "ReportYear"를 지정하려면 기본 모드 보고서 서버에 다음 URL을 사용합니다.  
   
 ```  
 http://myrshost/ReportServer?/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2&ReportMonth=3&ReportYear=2008  
@@ -84,30 +84,30 @@ SalesOrderNumber:isnull=true
 ##  <a name="bkmk_examples"></a> 추가 예  
  다음 URL 예제에는 공백 및 여러 매개 변수가 포함됩니다.  
   
--   “SQL Server 사용자 교육 팀” 폴더 이름에는 공백이 포함되므로 “+”가 공백을 각각 대체합니다.  
+-   "SQL Server 사용자 교육 팀" 폴더 이름에는 공백이 포함되므로 "+"가 공백을 각각 대체합니다.  
   
--   “팀 프로젝트 보고서” 보고서 이름에는 공백이 포함되므로 “+”가 공백을 각각 대체합니다.  
+-   "팀 프로젝트 보고서" 보고서 이름에는 공백이 포함되므로 "+"가 공백을 각각 대체합니다.  
   
--   두 개의 매개 변수 “teamgrouping2” 및 “teamgrouping1”에 값 “xgroup” 및 “ygroup”을 전달합니다.  
+-   두 개의 매개 변수 "teamgrouping2" 및 "teamgrouping1"에 값 "xgroup" 및 "ygroup"을 전달합니다.  
   
 ```  
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup  
 ```  
   
- 다음 URL 예제에는 다중 값 매개 변수 ”OrderID”를 포함합니다. 다중 값 매개 변수의 형식은 각 값에 대해 매개 변수 이름을 반복합니다.  
+ 다음 URL 예제에는 다중 값 매개 변수 "OrderID"를 포함합니다. 다중 값 매개 변수의 형식은 각 값에 대해 매개 변수 이름을 반복합니다.  
   
 ```  
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  
 ```  
   
- 다음 URL 예제는 기본 모드 보고서 서버에 대해 “7/1/2005” 값이 포함된 *SellStartDate* 의 단일 매개 변수를 전달합니다.  
+ 다음 URL 예제는 기본 모드 보고서 서버에 대해 "7/1/2005" 값이 포함된 *SellStartDate*의 단일 매개 변수를 전달합니다.  
   
 ```  
 http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [URL 액세스 &#40;SSRS&#41;](url-access-ssrs.md)   
+## <a name="see-also"></a>관련 항목:  
+ [URL 액세스&#40;SSRS&#41;](url-access-ssrs.md)   
  [URL 액세스 매개 변수 참조](url-access-parameter-reference.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Power View 보고서의 테이블 동작 속성 구성 | Microsoft Docs
+title: Power View 보고서에 대 한 Analysis Services 테이블 속성 구성 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 13d2213746c79a396d681796cb863174248f54ff
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ba6b9184dba10ecdd9f466304dd114247ee4ac27
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044867"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072549"
 ---
-# <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View-보고서에 대 한 테이블 동작 속성 구성
+# <a name="power-view---configure-table-behavior-properties-for-reports"></a>파워 뷰-보고서에 대 한 테이블 동작 속성 구성
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   테이블 형식 모델을 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]에 대한 데이터 모델로 사용할 경우 정보 행을 더 자세히 표시하는 테이블 동작 속성을 설정할 수 있습니다. 테이블 동작 속성을 설정하면 정보 행의 그룹화 동작이 변경되고 바둑판식 배열, 카드 및 차트 레이아웃의 식별 정보(예: 이름, 사진 ID, 로고 이미지)의 기본 배치가 향상됩니다.  
   
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]수 있으므로 사용 중인 표시 형식 기준으로 보고서 필드 목록에 배치 하는 열을 평가 하 여 보고서 디자인 중 항목을 자동으로 그룹화 합니다 것 한다는 점에서 다른 보고 응용 프로그램에서 다릅니다. 대부분의 경우 기본 그룹화를 통해 최적의 결과가 만들어집니다. 그러나 정보 데이터가 포함된 일부 테이블의 경우 그룹화되지 않아야 할 행이 기본 그룹화 동작에 의해 그룹화되는 경우도 있습니다. 이러한 테이블의 경우 그룹 평가 방법을 변경하는 속성을 설정할 수 있습니다.  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 는 다른 보고 애플리케이션과 달리 사용 중인 표시 형식을 기준으로 보고서 필드 목록에 배치되는 열을 평가하여 보고서 디자인 중에 항목을 자동으로 그룹화합니다. 대부분의 경우 기본 그룹화를 통해 최적의 결과가 만들어집니다. 그러나 정보 데이터가 포함된 일부 테이블의 경우 그룹화되지 않아야 할 행이 기본 그룹화 동작에 의해 그룹화되는 경우도 있습니다. 이러한 테이블의 경우 그룹 평가 방법을 변경하는 속성을 설정할 수 있습니다.  
   
  테이블 동작 속성은 직원 또는 고객 레코드와 같이 개별 행이 주요 대상인 테이블에 대해 설정하는 것이 좋습니다. 반대로 조회 테이블로 사용되는 테이블(예: 상대적으로 적은 수의 행과 열로 구성되는 데이터 테이블, 제품 범주 테이블 또는 부서 테이블)이나 요약할 때만 필요한 행이 포함된 요약 테이블(예: 성별, 연령별 또는 지역별로 롤업되는 인구 조사 데이터)의 경우 이러한 속성이 유용하지 않습니다. 조회 및 요약 테이블의 경우 기본 그룹화 동작으로 최상의 결과가 만들어집니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "34044867"
 -   **기본 이미지** - 행 데이터를 표시하는 이미지를 제공하는 열을 지정합니다(예: 직원 레코드의 사진 ID).  
   
 > [!NOTE]  
->  특정 표시 형식의 관점에서 레이아웃을 최적화하는 방법에 대한 자세한 내용은  [특정 레이아웃 최적화](#bkmk_optimizeforlayout)섹션을 참조하세요.  
+>  특정 표시 형식의 관점에서 레이아웃을 최적화하는 방법은 다음 섹션을 참조하십시오.  [특정 레이아웃 최적화](#bkmk_optimizeforlayout)합니다.  
   
 ## <a name="opening-the-table-behavior-dialog-box"></a>테이블 동작 대화 상자 열기  
   
@@ -49,11 +49,11 @@ ms.locfileid: "34044867"
 3.  **테이블 동작** 대화 상자에서 **행 식별자**를 설정한 다음 이 대화 상자에서 다른 속성을 지정합니다.  
   
 ## <a name="setting-the-row-identifier-property"></a>행 식별자 속성 설정  
- 테이블에서 행 식별자는 공백이 아닌 고유한 값만 포함하는 단일 열을 지정합니다. 행 식별자 속성은 특정 보고서 레이아웃에 사용되는 필드에 상관없이 항상 행을 고유하게 식별하는 데 사용되는 고정 열 대신 행의 필드 컴퍼지션을 기반으로 그룹화하지 않도록 그룹화를 변경하는 데 사용됩니다.  
+ 테이블에서 행 식별자는 공백이 아닌 고유한 값만 포함하는 단일 열을 지정합니다. 행 식별자 속성을 그룹 행의 필드 컴퍼지션을 하지만 항상 특정 보고서 레이아웃에 사용 된 필드에 관계 없이 행을 고유 하 게 식별 하는 데 사용 되는 고정된 열 대신에 기반 하지 않도록 그룹화를 변경 됩니다.  
   
  이 속성을 설정하면 기본 그룹화 동작이 캔버스에 있는 열을 기반으로 하는 동적 그룹화에서 행 식별자를 기반으로 요약하는 고정 그룹화 동작으로 변경됩니다. 기본 그룹화 동작 변경은 행의 각 열에 대해 그룹화하거나 부분합을 표시하는 보고서 레이아웃(예: 행렬)과 관련이 있습니다.  
   
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]에서 행 식별자를 설정하여 추가 속성인 **Keep Unique Rows** 속성, **Default Label** 속성 및 **Default Image** 속성을 활성화합니다.  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]에서 행 식별자를 설정하여 추가 속성인 **고유한 행 유지** 속성인 **기본 레이블** 속성인 및 **Default Image** 속성입니다.  
   
  **행 식별자** 를 독립 실행형 속성으로 사용하여 다음을 설정할 수도 있습니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "34044867"
   
 -   행렬 보고서에서 원치 않는 부분합 제거. 필드 수준의 기본 그룹화는 각 필드에 대한 부분합을 만듭니다. 행 수준에서 단일 부분합만 계산하려면 행 식별자를 설정합니다.  
   
- 날짜 테이블로 표시된 테이블에 대해서는 행 식별자를 설정할 수 없습니다. 날짜 테이블의 경우 테이블을 표시하면 행 식별자가 지정됩니다. 자세한 내용은 참조 [날짜 테이블 대화 상자로 표시 ](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9)합니다.  
+ 날짜 테이블로 표시된 테이블에 대해서는 행 식별자를 설정할 수 없습니다. 날짜 테이블의 경우 테이블을 표시하면 행 식별자가 지정됩니다. 자세한 내용은 [날짜 테이블 대화 상자로 표시 ](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9)합니다.  
   
 ## <a name="setting-the-keep-unique-rows-property"></a>고유한 행 유지 속성 설정  
  이 속성을 사용하면 각 행을 구별하여 ID 정보(예: 직원 이름, 제품 코드 등)를 전달하는 열을 지정할 수 있습니다. 두 고객의 이름이 같은 경우처럼 여러 행이 동일하게 나타나는 경우 이 속성에 대해 지정한 열이 보고서 테이블에서 반복됩니다.  
@@ -90,7 +90,7 @@ ms.locfileid: "34044867"
 ### <a name="images-are-missing"></a>이미지가 없습니다.  
  모델에서 설정한 속성에 따라 보고서에서 이미지가 시각화되는지 아니면 텍스트 값으로 표시되는지가 결정됩니다.  
   
- ![이미지 Url이 보고서에 텍스트로 표시](../../analysis-services/tabular-models/media/ssas-rptprop-noimageurl.gif "이미지 Url 보고서에서 텍스트로 나타남")  
+ ![이미지 Url을 보고서에서 텍스트로 나타남](../../analysis-services/tabular-models/media/ssas-rptprop-noimageurl.gif "이미지 Url을 보고서에서 텍스트로 나타남")  
   
  기본적으로 모델의 텍스트는 보고서에서 텍스트로 해석됩니다. 텍스트 열이 보고서 이미지에 대한 URL 주소인 경우 **에서 이미지 파일을 검색하도록** 이미지 URL [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 속성을 설정해야 합니다. 이진 이미지의 경우 **행 식별자** 속성을 설정해야 합니다.  
   
@@ -99,11 +99,11 @@ ms.locfileid: "34044867"
   
  그러나 기본 행에 다른 항목에 대한 데이터가 포함되어 있어서 행의 여러 인스턴스를 표시하려는 다른 예를 생각해 볼 수 있습니다. 이 예에서는 이름이 **Jon Yang**인 두 고객이 있다고 가정합니다. 기본 그룹화 동작을 사용하면 **Jon Yang** 인스턴스가 보고서에 하나만 표시됩니다. 또한 인스턴스가 목록에 하나만 표시되기 때문에 **연간 수입** 측정값은 두 고객에 대한 해당 값의 합계입니다.  
   
- ![기본 그룹 1에 2를 통합](../../analysis-services/tabular-models/media/ssas-jonyang-norowid.gif "기본 그룹 1에 2를 통합")  
+ ![기본 그룹 1에 2를 통합](../../analysis-services/tabular-models/media/ssas-jonyang-norowid.gif "기본 그룹 1에 2 통합")  
   
  기본 그룹화 동작을 변경하려면 **행 식별자** 및 **고유한 행 유지** 속성을 설정합니다. **고유한 행 유지**에서 성 값이 다른 행에 이미 표시되어 있더라도 이 값을 행에 대해 반복하도록 성 열을 선택합니다. 속성을 변경하고 통합 문서를 다시 게시한 후 동일한 보고서를 만들 수 있습니다. 이 경우에만 **연간 소득**이 올바르게 할당된 상태로 **Jon Yang** 이라는 두 고객이 모두 표시됩니다.  
   
- ![행 ID에 따라 중복 항목이 포함 된 데이터 행](../../analysis-services/tabular-models/media/ssas-jonyang.gif "행 ID에 따라 중복 항목이 포함 된 데이터 행")  
+ ![행 ID를 기반으로 하는 중복 항목이 포함 된 데이터 행](../../analysis-services/tabular-models/media/ssas-jonyang.gif "행 ID를 기반으로 하는 중복 항목이 포함 된 데이터 행")  
   
 ### <a name="matrix-layout-is-too-crowded"></a>행렬 레이아웃이 너무 복잡합니다.  
  행렬에 정보 테이블을 표시할 때 기본 그룹화 동작은 각 열에 대한 요약된 값을 제공합니다. 목적에 따라 원하는 것보다 더 많은 요약 내용이 표시될 수 있습니다. 이 동작을 변경하려면 **행 식별자**를 설정하면 됩니다. 추가 속성을 설정할 필요는 없습니다. 고유한 행 식별자를 기반으로 각 행에 대한 요약 내용을 계산하도록 그룹화 동작을 변경하려면 행 식별자를 설정하는 것만으로 충분합니다.  
@@ -114,7 +114,7 @@ ms.locfileid: "34044867"
   
  ![행 식별자에 그룹화 된 행렬 레이아웃](../../analysis-services/tabular-models/media/ssas-rptprop-matrixrowid.gif "행 식별자에 그룹화 된 행렬 레이아웃")  
   
- **이후: 행 식별자를 기반으로 그룹화**  
+ **이후: 행 식별자에 대 한 그룹화**  
   
  ![행 식별자에 그룹화 된 행렬 레이아웃](../../analysis-services/tabular-models/media/ssas-rptprop-matrixrowid.gif "행 식별자에 그룹화 된 행렬 레이아웃")  
   
@@ -125,9 +125,9 @@ ms.locfileid: "34044867"
   
  **이전: 차트의 필드를 기반으로 기본 그룹화**  
   
- ![필드 수준의 기본 그룹화를 기반으로 차트](../../analysis-services/tabular-models/media/ssas-rptprop-chartfieldgroup.gif "필드 수준의 기본 그룹화를 기반으로 차트")  
+ ![필드 수준에서 기본 그룹화를 기반으로 차트](../../analysis-services/tabular-models/media/ssas-rptprop-chartfieldgroup.gif "필드 수준에서 기본 그룹화를 기반으로 차트")  
   
- **이후: 행 식별자를 기반으로 그룹화(행 식별자가 축이 됨)**  
+ **이후: 행 식별자에 그룹화 (행 식별자가 축이 됨)**  
   
  ![행 ID 그룹화를 기반으로 차트](../../analysis-services/tabular-models/media/ssas-rptprop-chartrowid.gif "행 ID 그룹화를 기반으로 차트")  
   

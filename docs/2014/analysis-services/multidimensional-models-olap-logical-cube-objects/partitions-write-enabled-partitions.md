@@ -19,12 +19,12 @@ ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8429c02d84520524906fb0fbd411ee0a49169815
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0dcfda333d3381b1a35313c00e6c95173b869c7d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194643"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352495"
 ---
 # <a name="write-enabled-partitions"></a>쓰기 가능 파티션
   큐브의 데이터는 일반적으로 읽기 전용입니다. 그러나 특정 시나리오에 대해 파티션을 쓰기 가능으로 설정할 수 있습니다. 쓰기 가능 파티션을 사용하면 비즈니스 사용자가 셀 값을 변경하고 큐브 데이터에 대한 이러한 변경의 효과를 분석하여 여러 시나리오를 조사해 볼 수 있습니다. 파티션을 쓰기 가능하도록 설정하면 클라이언트 응용 프로그램에서 파티션의 데이터에 변경 내용을 기록할 수 있습니다. 쓰기 저장(writeback) 데이터라고 하는 이러한 변경 내용은 별도의 테이블에 저장되며 측정값 그룹의 기존 데이터를 덮어쓰지 않습니다. 그러나 큐브 데이터의 일부인 것처럼 쿼리 결과에 포함됩니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "48194643"
  전체 큐브나 큐브의 특정 파티션만 쓰기 가능으로 설정할 수 있습니다. 쓰기 가능 차원은 각기 다르지만 서로 보완됩니다. 쓰기 가능 파티션을 사용하면 사용자가 파티션 셀을 업데이트할 수 있고 쓰기 가능 차원을 사용하면 사용자가 차원 멤버를 업데이트할 수 있습니다. 이러한 두 기능을 조합하여 사용할 수도 있습니다. 예를 들어 쓰기 가능 큐브나 쓰기 가능 파티션에 쓰기 가능 차원이 포함되지 않아도 됩니다. **관련된 항목:**[쓰기 가능한 차원](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)합니다.  
   
 > [!NOTE]  
->  데이터 원본이 Microsoft Access 데이터베이스인 큐브를 쓰기 가능하도록 설정하려면 큐브, 해당 파티션 또는 해당 차원에 대한 데이터 원본 정의에 Microsoft OLE DB Provider for ODBC Drivers를 사용하지 마십시오. 대신 Jet 4.0 OLE를 포함하는 Jet 서비스 팩의 모든 버전이나 Microsoft Jet 4.0 OLE DB Provider를 사용할 수 있습니다. 자세한 내용은 Microsoft 기술 자료 문서를 참조 하세요 [Microsoft Jet 4.0 데이터베이스 엔진용 최신 서비스 팩을 구하는 방법](http://support.microsoft.com/?kbid=239114)합니다.  
+>  데이터 원본이 Microsoft Access 데이터베이스인 큐브를 쓰기 가능하도록 설정하려면 큐브, 해당 파티션 또는 해당 차원에 대한 데이터 원본 정의에 Microsoft OLE DB Provider for ODBC Drivers를 사용하지 마십시오. 대신 Jet 4.0 OLE를 포함하는 Jet 서비스 팩의 모든 버전이나 Microsoft Jet 4.0 OLE DB Provider를 사용할 수 있습니다. 자세한 내용은 Microsoft 기술 자료 문서를 참조 하세요 [Microsoft Jet 4.0 데이터베이스 엔진용 최신 서비스 팩을 구하는 방법](https://support.microsoft.com/?kbid=239114)합니다.  
   
  큐브는 모든 해당 측정값이 `Sum` 집계 함수를 사용하는 경우에만 쓰기 가능하도록 설정할 수 있습니다. 연결된 측정값 그룹과 로컬 큐브는 쓰기 가능하도록 설정할 수 없습니다.  
   
@@ -55,10 +55,10 @@ ms.locfileid: "48194643"
 ## <a name="security"></a>보안  
  큐브 셀에 대한 읽기/쓰기 권한이 있는 역할에 속하는 비즈니스 사용자만 큐브의 쓰기 저장 테이블에 변경 내용을 기록할 수 있습니다. 각 역할에 대해 업데이트할 수 있는 큐브 셀과 업데이트할 수 없는 큐브 셀을 제어할 수 있습니다. 자세한 내용은 [큐브 또는 모델 권한 부여 &#40;Analysis Services&#41;](../multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [쓰기 가능 차원](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)   
  [집계 및 집계 디자인](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
- [파티션 &#40;Analysis Services-다차원 데이터&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [파티션 & #40; Analysis Services-다차원 데이터 & #41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [쓰기 가능 차원](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   

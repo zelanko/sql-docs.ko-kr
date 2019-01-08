@@ -15,14 +15,14 @@ ms.assetid: 59c7cd5e-32d6-43ab-bac3-7010322d105a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94e33460d3c50363e96e90fb457467b8e5cda315
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71c80efdb2f4a87537d472ee4b6dc6bdc65af70f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631861"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540513"
 ---
-# <a name="appendix-e-scalar-functions"></a>부록 E: 스칼라 함수
+# <a name="appendix-e-scalar-functions"></a>부록 e: 스칼라 함수
 ODBC이이 부록의 해당 섹션에 제공 된 이러한 함수 형식을 각각에 대 한 자세한 정보를 사용 하 여 다음과 같은 유형의 스칼라 함수를 지정 합니다. 함수 설명에는 연결 된 구문 포함 됩니다.  
   
  이 부록에는 다음 항목에 있습니다.  
@@ -39,7 +39,7 @@ ODBC이이 부록의 해당 섹션에 제공 된 이러한 함수 형식을 각�
   
 -   [SQL-92 CAST 함수](../../../odbc/reference/appendixes/sql-92-cast-function.md)  
   
- 함수는 데이터 소스별 경우가 많기 때문에 ODBC 스칼라 함수에서 반환 값에 대 한 데이터 형식을 위임 하지 않습니다. 응용 프로그램 데이터 형식 변환에 적용할 가능한 CONVERT 스칼라 함수를 사용 해야 합니다.  
+ 함수는 데이터 소스 관련 경우가 많기 때문에 ODBC 스칼라 함수에서 반환 값에 대 한 데이터 형식을 위임 하지 않습니다. 응용 프로그램 데이터 형식 변환에 적용할 가능한 CONVERT 스칼라 함수를 사용 해야 합니다.  
   
 ## <a name="odbc-and-sql-92-scalar-functions"></a>ODBC 및 SQL-92 스칼라 함수  
  이 부록의 표에서 SQL-92에 맞게 ODBC 3.0에서 추가 된 함수를 포함 합니다. ODBC에 정의 된 대로 특정 유형의 스칼라 함수에 대 한 추가 이러한 함수는 각 섹션에 표시 됩니다.  

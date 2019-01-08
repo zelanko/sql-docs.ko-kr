@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -29,12 +28,12 @@ ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d0b69773070201021390926e6da1a7fdd20d8fce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137290"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813915"
 ---
 # <a name="programmatically-monitor-replication"></a>프로그래밍 방식으로 복제 모니터링
   복제 모니터는 복제 토폴로지를 모니터링하는 데 사용할 수 있는 그래픽 도구입니다. [!INCLUDE[tsql](../../../includes/tsql-md.md)] 복제 저장 프로시저 또는 RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 동일한 모니터링 데이터에 액세스할 수 있습니다. 이러한 개체를 사용하면 다음 태스크를 프로그래밍할 수 있습니다.  
@@ -173,7 +172,7 @@ ms.locfileid: "48137290"
   
 2.  다음 방법 중 하나로 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 개체를 가져옵니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 클래스의 인스턴스를 만듭니다. 게시자의 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> 속성을 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 으로 설정합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 반환 하는 경우 `false`, 게시자 이름이 올바르게 정의 되지 또는 게시가 없는 것입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 클래스의 인스턴스를 만듭니다. 게시자의 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> 속성을 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 으로 설정합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 `false`를 반환하는 경우 게시자 이름이 올바르게 정의되지 않았거나 해당 게시가 없는 것입니다.  
   
     -   기존 <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> 개체의 <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> 속성을 통해 액세스한 <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> 에서 가져옵니다.  
   
@@ -269,13 +268,13 @@ ms.locfileid: "48137290"
   
         |값|Description|  
         |-----------|-----------------|  
-        |1|`expiration` -트랜잭션 게시에 대 한 구독의 만료가 임박 했는지 모니터링 합니다.|  
-        |2|`latency` -트랜잭션 게시에 대 한 구독의 성능 모니터링 합니다.|  
-        |4|`mergeexpiration` -병합 게시에 대 한 구독의 만료가 임박 했는지 모니터링 합니다.|  
-        |5|`mergeslowrunduration` -저대역폭 (전화 접속) 연결을 통한 병합 동기화의 기간을 모니터링 합니다.|  
-        |6|`mergefastrunduration` -고대역폭 (LAN) 연결을 통한 병합 동기화의 기간을 모니터링 합니다.|  
+        |1|`expiration` - 트랜잭션 게시에 대한 구독의 만료가 임박했는지 모니터링합니다.|  
+        |2|`latency` - 트랜잭션 게시에 대한 구독의 성능을 모니터링합니다.|  
+        |4|`mergeexpiration` - 병합 게시에 대한 구독의 만료가 임박했는지 모니터링합니다.|  
+        |5|`mergeslowrunduration` - 저대역폭(전화 접속) 연결을 통한 병합 동기화의 기간을 모니터링합니다.|  
+        |6|`mergefastrunduration` - 고대역폭(LAN) 연결을 통한 병합 동기화의 기간을 모니터링합니다.|  
         |7|`mergefastrunspeed` - 고대역폭(LAN) 연결을 통한 병합 동기화의 동기화 속도를 모니터링합니다.|  
-        |8|`mergeslowrunspeed` -저대역폭 (전화 접속) 연결을 통한 병합 동기화의 동기화 속도 모니터링 합니다.|  
+        |8|`mergeslowrunspeed` - 저대역폭(전화 접속) 연결을 통한 병합 동기화의 동기화 속도를 모니터링합니다.|  
   
     -   *enable* - <xref:System.Boolean> 값입니다.  
   

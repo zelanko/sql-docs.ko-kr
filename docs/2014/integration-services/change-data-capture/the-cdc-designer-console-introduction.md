@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a46478b31feb3a15a260ae2cd1598ae18f605c2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8df088a088a68d91668978bef5761cc2b5b543f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107753"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779895"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC Designer 콘솔 소개
   이 섹션에서는 Attunity Oracle CDC Designer 설치 절차에 대해 설명합니다.  
@@ -38,13 +37,13 @@ ms.locfileid: "48107753"
 ## <a name="database-prerequisites"></a>데이터베이스 필수 구성 요소  
  Attunity Oracle CDC Designer 작업은 Oracle 데이터베이스를 사용하여 수행합니다. Attunity Oracle CDC Designer는 다음과 같은 버전을 지원합니다.  
   
- **Oracle 데이터베이스**  
+ **Oracle Database**  
   
--   Oracle 데이터베이스 10g 릴리스 2: 10.2.0.1-10.2.0.5(2010년 4월 기준 패치)  
+-   Oracle Database 10g 릴리스 2: 10.2.0.1-10.2.0.5(2010년 4월 기준 패치 집합)  
   
--   Oracle 데이터베이스 11g 릴리스 1: 11.1.0.6-11.1.0.7(2008년 9월 기준 패치)  
+-   Oracle Database 11g 릴리스 1: 11.1.0.6-11.1.0.7(2010년 9월 패치 집합 적용)  
   
--   Oracle 데이터베이스 11g 릴리스 2: 11.2.0.1-11.2.0.3(2011년 9월 기준 패치)  
+-   Oracle Database 11g 릴리스 2: 11.2.0.1-11.2.0.3(2011년 9월 패치 집합 적용)  
   
  **SQL Server 데이터베이스**  
   
@@ -57,7 +56,7 @@ ms.locfileid: "48107753"
   
 -   Oracle 11.x 클라이언트  
   
- **참고**: Oracle CDC Designer 콘솔을 설치의 버전에 따라이 소프트웨어의 32 비트 또는 64 비트 버전을 사용 해야 합니다.  
+ **참고**: 설치된 Oracle CDC Designer 콘솔에 따라 이 소프트웨어의 32비트 또는 64비트 버전을 사용해야 합니다.  
   
  Oracle CDC Designer 콘솔은 Oracle ODBC 공급자를 사용하여 원본 Oracle 데이터베이스와 통신합니다.  
   

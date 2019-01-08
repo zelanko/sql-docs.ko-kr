@@ -21,19 +21,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 641519b479f89609e72e52bb1b1526dc09a976a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2c7f7f4296b3cbed025303f58cf07717db06c8e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637441"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510875"
 ---
 # <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   파일 크기, 물리적 위치 및 트랜잭션 ID를 포함하여 검사점 파일에 대한 정보를 표시합니다.  
   
-> **참고:** 닫히지 않은, 상태에 대 한 열의 s 현재 검사점`ys.dm_db_xtp_checkpoint_files` 새 파일에서 생성 됩니다. 검사점을 실행 하는 경우 또는 마지막 검사점 이후 트랜잭션 로그 증가 충분 한 경우 자동으로 닫힙니다 합니다 `CHECKPOINT` 명령 ([검사점 &#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)).  
+> **참고:** 현재 검사점 닫히지 않은, s의 상태 열에 대해`ys.dm_db_xtp_checkpoint_files` 새 파일에서 생성 됩니다. 검사점을 실행 하는 경우 또는 마지막 검사점 이후 트랜잭션 로그 증가 충분 한 경우 자동으로 닫힙니다 합니다 `CHECKPOINT` 명령 ([검사점 &#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)).  
   
  내부적으로 메모리 최적화 파일 그룹을 메모리 내 테이블에 대 한 삽입 및 삭제 된 행을 저장 하려면 추가 전용 파일을 사용 합니다. 두 가지 유형의 파일이 있으며, 데이터 파일이 델타 파일에는 삭제 된 행에 대 한 참조를 포함 하는 동안 삽입 된 행을 포함 합니다. 
   
@@ -57,8 +57,8 @@ ms.locfileid: "47637441"
 |file_size_in_bytes|**bigint**|디스크에 있는 파일의 크기입니다.|  
 |file_size_used_in_bytes|**bigint**|계속 채워지고 있는 검사점 파일 쌍의 경우 다음 검사점 이후 이 열이 업데이트됩니다.|  
 |logical_row_count|**bigint**|데이터의 경우 삽입 된 행 수입니다.<br /><br /> 델타 행 수가 테이블 삭제를 고려한 후 삭제 합니다.<br /><br /> 루트에 대해 NULL입니다.|  
-|state|**smallint**|0 – PRECREATED<br /><br /> 1-UNDER_CONSTRUCTION<br /><br /> 2 - ACTIVE<br /><br /> 3 – MERGE TARGET<br /><br /> 8 – 로그 잘림을 위해 대기합니다.|  
-|state_desc|**nvarchar(60)**|PRECREATED – 검사점 파일의 수를 최소화 하거나 없애기 트랜잭션이 실행 되는 대로 새 파일을 할당 하기 위한 대기 미리 할당 됩니다. 이러한 파일을 사전 생성 된 크기가 예상된 작업 요구에 따라 달라질 수 있습니다 하지만 데이터가 없습니다. MEMORY_OPTIMIZED_DATA 파일 그룹이 있는 데이터베이스의 저장소 오버 헤드를입니다.<br /><br /> UNDER_CONSTRUCTION-이러한 검사점 파일은 생성 되 고 채워집니다 데이터베이스에 의해 생성 된 로그 레코드에 따라 의미 하 고 검사점의 일부가 아직 않습니다.<br /><br /> ACTIVE-이전의 닫힌된 검사점에서 삽입/삭제 된 행을 포함 합니다. 데이터베이스를 다시 시작할 때 트랜잭션 로그의 활성 부분을 적용 하기 전에 메모리로 읽어들인 영역이 있는 테이블의 콘텐츠를 포함 합니다. 병합 작업을 가정 하는 메모리 최적화 테이블을 메모리 내 크기의 약 2 배 트랜잭션 워크 로드를 사용 하 여 동기화가 되도록 이러한 검사점 파일의 크기는 예정입니다.<br /><br /> MERGE TARGET – 병합 작업-이러한 검사점 파일의 대상 병합 정책에 의해 식별 된 원본 파일의 통합된 데이터 행을 저장 합니다. 병합이 설치되면 MERGE TARGET이 ACTIVE 상태로 전환됩니다.<br /><br /> 병합이 설치 되 고 MERGE TARGET CFP가 지속형 검사점을이 상태로 병합 원본 검사점 파일이 전환의 일부인 로그 잘림은 – 기다리는 중입니다. 이 상태의 파일이 메모리 최적화 테이블을 사용 하 여 데이터베이스의 작동 수정에 필요 합니다.  예를 들어 이전 시점으로 돌아가기 위해 영구 검사점에서 복구할 수 있습니다.|  
+|state|**smallint**|0-사전 생성 된<br /><br /> 1-UNDER_CONSTRUCTION<br /><br /> 2 - ACTIVE<br /><br /> 3-MERGE TARGET<br /><br /> 8-로그 잘림을 위해 대기합니다.|  
+|state_desc|**nvarchar(60)**|PRECREATED-검사점 파일의 수를 최소화 하거나 없애기 트랜잭션이 실행 되는 대로 새 파일을 할당 하기 위한 대기 미리 할당 됩니다. 이러한 파일을 사전 생성 된 크기가 예상된 작업 요구에 따라 달라질 수 있습니다 하지만 데이터가 없습니다. MEMORY_OPTIMIZED_DATA 파일 그룹이 있는 데이터베이스의 저장소 오버 헤드를입니다.<br /><br /> UNDER_CONSTRUCTION-이러한 검사점 파일은 생성 되 고 채워집니다 데이터베이스에 의해 생성 된 로그 레코드에 따라 의미 하 고 검사점의 일부가 아직 않습니다.<br /><br /> ACTIVE-이전의 닫힌된 검사점에서 삽입/삭제 된 행을 포함 합니다. 데이터베이스를 다시 시작할 때 트랜잭션 로그의 활성 부분을 적용 하기 전에 메모리로 읽어들인 영역이 있는 테이블의 콘텐츠를 포함 합니다. 병합 작업을 가정 하는 메모리 최적화 테이블을 메모리 내 크기의 약 2 배 트랜잭션 워크 로드를 사용 하 여 동기화가 되도록 이러한 검사점 파일의 크기는 예정입니다.<br /><br /> MERGE TARGET-병합 작업-이러한 검사점 파일의 대상 병합 정책에 의해 식별 된 원본 파일의 통합된 데이터 행을 저장 합니다. 병합이 설치되면 MERGE TARGET이 ACTIVE 상태로 전환됩니다.<br /><br /> 병합이 설치 되 고 MERGE TARGET CFP가 지속형 검사점을이 상태로 병합 원본 검사점 파일이 전환의 일부인 로그 잘림은-기다리는 중입니다. 이 상태의 파일이 메모리 최적화 테이블을 사용 하 여 데이터베이스의 작동 수정에 필요 합니다.  예를 들어 이전 시점으로 돌아가기 위해 영구 검사점에서 복구할 수 있습니다.|  
 |lower_bound_tsn|**bigint**|파일의 트랜잭션에 대 한 바인딩 상태에 있지는 않음 (1, 3) 하는 경우 null입니다.|  
 |upper_bound_tsn|**bigint**|파일에서 트랜잭션의 상한 상태에 있지는 않음 (1, 3) 하는 경우 null입니다.|  
 |begin_checkpoint_id|**bigint**|Begin 검사점의 ID입니다.|  
@@ -77,7 +77,7 @@ ms.locfileid: "47637441"
 |checkpoint_file_id|**GUID**|데이터 또는 델타 파일의 ID입니다.|  
 |relative_file_path|**nvarchar(256)**|컨테이너 위치에 상대적인 데이터 또는 델타 파일의 경로입니다.|  
 |file_type|**tinyint**|데이터 파일의 경우 0이고,<br /><br /> 델타 파일의 경우 1입니다.<br /><br /> 상태 열이 7로 설정된 경우 NULL입니다.|  
-|file_type_desc|**nvarchar(60)**|파일의 형식: DATA_FILE, DELTA_FILE 또는 상태 열이 7로 설정 하는 경우 NULL입니다.|  
+|file_type_desc|**nvarchar(60)**|파일의 형식으로, DATA_FILE, DELTA_FILE 또는 상태 열이 7로 설정된 경우 NULL입니다.|  
 |internal_storage_slot|**int**|내부 저장소 배열에 있는 파일의 인덱스입니다. 상태 열이 2 또는 3이 아닌 경우 NULL입니다.|  
 |checkpoint_pair_file_id|**uniqueidentifier**|해당하는 데이터 또는 델타 파일입니다.|  
 |file_size_in_bytes|**bigint**|사용되는 파일의 크기입니다. 상태 열이 5, 6 또는 7로 설정된 경우 NULL입니다.|  
@@ -85,8 +85,8 @@ ms.locfileid: "47637441"
 |inserted_row_count|**bigint**|데이터 파일의 행 수입니다.|  
 |deleted_row_count|**bigint**|델타 파일의 삭제된 행 수입니다.|  
 |drop_table_deleted_row_count|**bigint**|테이블 삭제의 영향을 받는 데이터 파일의 행 수입니다. 상태 열이 1인 경우 데이터 파일에 적용됩니다.<br /><br /> 삭제된 테이블에서 삭제된 행 수를 표시합니다. 삭제된 테이블에서 행의 메모리 가비지 수집이 완료되고 검사점이 확인된 후 drop_table_deleted_row_count 통계가 컴파일됩니다. 테이블 삭제 통계가 이 열에 적용되기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작하는 경우 통계가 복구의 일부로 업데이트됩니다. 복구 프로세스는 삭제된 테이블에서 행을 로드하지 않습니다. 삭제된 테이블의 통계는 로드 단계에서 컴파일되고 복구가 완료되면 이 열에서 보고됩니다.|  
-|state|**int**|0 – PRECREATED<br /><br /> 1 – UNDER_CONSTRUCTION<br /><br /> 2 - ACTIVE<br /><br /> 3 – MERGE TARGET<br /><br /> 4 – MERGED SOURCE<br /><br /> 5 – REQUIRED FOR BACKUP/HA<br /><br /> 6 – IN TRANSITION TO TOMBSTONE<br /><br /> 7 – TOMBSTONE|  
-|state_desc|**nvarchar(60)**|PRECREATED - 트랜잭션이 실행되는 동안 새 파일 할당에 따른 대기 시간을 최소화하거나 없애기 위해 CFP(검사점 파일 쌍)라고도 하는 데이터 및 델타 파일 쌍의 작은 집합이 미리 할당된 상태로 유지됩니다. 전체 크기는 128MB의 데이터 파일 크기와 8MB의 델타 파일 크기를 포함하지만 데이터를 포함하지 않습니다. CFP 수는 최소값이 8개인 논리 프로세서 또는 스케줄러의 수(코어당 1개, 최대값 없음)로 계산됩니다. 메모리 최적화 테이블이 있는 데이터베이스의 고정된 저장소 오버헤드입니다.<br /><br /> UNDER CONSTRUCTION – 마지막 검사점 이후 새로 삽입된 데이터 행과 삭제되었을 수 있는 데이터 행을 저장하는 CFP의 집합입니다.<br /><br /> ACTIVE - 이전의 닫힌 검사점에서 삽입된 행과 삭제된 행이 포함됩니다. 이러한 CFP에는 데이터베이스를 다시 시작할 때 트랜잭션 로그의 활성 부분을 적용하기 전에 필요한 모든 삽입된 행과 삭제된 행이 포함됩니다. 이러한 CFP의 크기는 병합 작업이 트랜잭션 작업과 동시에 이루어지는 경우 메모리 최적화 테이블에 대한 메모리 내 크기의 두 배 정도입니다.<br /><br /> MERGE TARGET – 병합 정책에 따라 식별된 CFP의 통합된 데이터 행이 CFP에 저장됩니다. 병합이 설치되면 MERGE TARGET이 ACTIVE 상태로 전환됩니다.<br /><br /> MERGED SOURCE – 병합 작업이 설치되면 원본 CFP가 MERGED SOURCE로 표시됩니다. 병합 정책 평가기가 여러 병합을 식별할 수 있지만 CFP는 하나의 병합 작업에만 참여할 수 있습니다.<br /><br /> REQUIRED FOR BACKUP/HA – 병합이 설치되고 MERGE TARGET CFP가 영구 검사점의 일부이면 병합 원본 CFP가 이 상태로 전환됩니다. 이 상태의 CFP는 메모리 최적화 테이블이 포함된 데이터베이스의 정확한 작업을 위해 필요합니다.  예를 들어 이전 시점으로 돌아가기 위해 영구 검사점에서 복구할 수 있습니다. 로그 잘림 지점이 트랜잭션 범위를 벗어나는 경우 가비지 수집에 대해 CFP를 표시할 수 있습니다.<br /><br /> IN TRANSITION TO TOMBSTONE – 이러한 CFP는 메모리 내 OLTP 엔진에 필요하지 않으며 가비지 수집될 수 있습니다. 이 상태는 이러한 CFP가 백그라운드 스레드에서 다음 상태인 TOMBSTONE으로 전환되기를 기다리고 있음을 나타냅니다.<br /><br /> TOMBSTONE – 이러한 CFP는 filestream 가비지 수집기에 의해 가비지 수집되기를 기다리고 있습니다. ([sp_filestream_force_garbage_collection &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md))|  
+|state|**int**|0-사전 생성 된<br /><br /> 1-UNDER_CONSTRUCTION<br /><br /> 2 - ACTIVE<br /><br /> 3-MERGE TARGET<br /><br /> 4-MERGED SOURCE<br /><br /> 5-필요한 FOR BACKUP/HA<br /><br /> 6-TOMBSTONE로 전환<br /><br /> 7-삭제|  
+|state_desc|**nvarchar(60)**|PRECREATED-소수의 데이터 및 델타 파일 쌍으로 알려진 검사점 파일 쌍 (Cfp)를 최소화 하거나 없애기 트랜잭션이 실행 되는 대로 새 파일을 할당 하기 위한 대기로 미리 할당 유지 됩니다. 전체 크기는 128MB의 데이터 파일 크기와 8MB의 델타 파일 크기를 포함하지만 데이터를 포함하지 않습니다. CFP 수는 최소값이 8개인 논리 프로세서 또는 스케줄러의 수(코어당 1개, 최대값 없음)로 계산됩니다. 메모리 최적화 테이블이 있는 데이터베이스의 고정된 저장소 오버헤드입니다.<br /><br /> 새로 저장 하는 Cfp 집합 UNDER_CONSTRUCTION-삽입 하 고 마지막 검사점 이후 데이터 행을 삭제 되었을 수 있습니다.<br /><br /> ACTIVE - 이전의 닫힌 검사점에서 삽입된 행과 삭제된 행이 포함됩니다. 이러한 CFP에는 데이터베이스를 다시 시작할 때 트랜잭션 로그의 활성 부분을 적용하기 전에 필요한 모든 삽입된 행과 삭제된 행이 포함됩니다. 이러한 CFP의 크기는 병합 작업이 트랜잭션 작업과 동시에 이루어지는 경우 메모리 최적화 테이블에 대한 메모리 내 크기의 두 배 정도입니다.<br /><br /> -MERGE TARGET CFP 병합 정책에 의해 식별 된 CFP의 통합된 데이터 행을 저장 합니다. 병합이 설치되면 MERGE TARGET이 ACTIVE 상태로 전환됩니다.<br /><br /> MERGED SOURCE-병합 작업이 한 번 되어, 원본 cfp가 MERGED SOURCE로 표시 됩니다. 병합 정책 평가기가 여러 병합을 식별할 수 있지만 CFP는 하나의 병합 작업에만 참여할 수 있습니다.<br /><br /> 필요한 FOR BACKUP/HA-병합을 설치 하 고 MERGE TARGET CFP는 영구 검사점을 병합 원본 cfp가이 상태로 전환의 일부입니다. 이 상태의 CFP는 메모리 최적화 테이블이 포함된 데이터베이스의 정확한 작업을 위해 필요합니다.  예를 들어 이전 시점으로 돌아가기 위해 영구 검사점에서 복구할 수 있습니다. 로그 잘림 지점이 트랜잭션 범위를 벗어나는 경우 가비지 수집에 대해 CFP를 표시할 수 있습니다.<br /><br /> IN TRANSITION TO TOMBSTONE-이러한 Cfp는 메모리 내 OLTP 엔진에서 필요 하지 않은 하 고 수 가비지 수집 될 수 있습니다. 이 상태는 이러한 CFP가 백그라운드 스레드에서 다음 상태인 TOMBSTONE으로 전환되기를 기다리고 있음을 나타냅니다.<br /><br /> 삭제 표시-이러한 Cfp는 filestream 가비지 수집기에 의해 가비지 수집 하기 위해 대기 중인 합니다. ([sp_filestream_force_garbage_collection &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md))|  
 |lower_bound_tsn|**bigint**|파일에 포함된 트랜잭션의 하한입니다. 상태 열이 2, 3 또는 4가 아닌 경우 Null입니다.|  
 |upper_bound_tsn|**bigint**|파일에 포함된 트랜잭션의 상한입니다. 상태 열이 2, 3 또는 4가 아닌 경우 Null입니다.|  
 |last_backup_page_count|**int**|마지막 백업에서 결정되는 논리 페이지 수입니다. 상태 열이 2, 3, 4 또는 5로 설정된 경우 적용됩니다. 페이지 수를 알 수 없으면 NULL입니다.|  

@@ -7,23 +7,21 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.debug.watch
 helpviewer_keywords:
 - Watch Window [Transact-SQL]
 ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ba5a2b12d4f80f497491fef208d5eb0f29f1104
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01caaf26257c06aae8cb7668693fd3ff6b8b5135
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213496"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328753"
 ---
 # <a name="watch-window"></a>조사식 창
-  **조사식** 창은 선택한 식에 대한 정보를 표시합니다. **조사식 1**, **조사식 2, 조사식 3**및 **조사식 4**의 최대 4개의 창으로 구성할 수 있습니다. 식은 **호출 스택** 창에서 선택한 현재 호출 스택 프레임 범위 내에서 평가됩니다. 변수 및 식을 조사하려면 디버그 모드여야 합니다.  
+  **조사식** 창은 선택한 식에 대한 정보를 표시합니다. 조사식 창은 **조사식 1**하십시오 **조사식 2, 조사식 3**, 및 **조사식 4**합니다. 식은 **호출 스택** 창에서 선택한 현재 호출 스택 프레임 범위 내에서 평가됩니다. 변수 및 식을 조사하려면 디버그 모드여야 합니다.  
   
 ## <a name="task-list"></a>작업 목록  
  **조사식 창에 액세스하려면**  
@@ -46,7 +44,7 @@ ms.locfileid: "48213496"
   
 -   @IntegerCounter + 1 또는 FirstName + LastName과 같이 하나 이상의 변수, 매개 변수 또는 시스템 함수에 연산자를 적용하여 빌드한 식  
   
--   SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1 등의 단일 값을 반환하는 Transact-SQL 문입니다.  
+-   SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1과 같이 단일 값을 반환하는 Transact-SQL 문  
   
  **Value**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거에서 **이름**에 지정된 식을 평가한 후 반환되는 값을 표시합니다.  
@@ -58,12 +56,10 @@ ms.locfileid: "48213496"
  **형식**  
  식의 데이터 형식을 표시합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Transact-SQL 디버거](transact-sql-debugger.md)   
  [Transact-SQL 디버거 정보](transact-sql-debugger-information.md)   
  [지역 창](transact-sql-debugger-locals-window.md)   
  [호출 스택 창](transact-sql-debugger-call-stack-window.md)   
  [간략한 조사식 대화 상자](transact-sql-debugger-quickwatch-dialog-box.md)   
  [식&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/expressions-transact-sql)  
-  
-  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - dropping queues
@@ -15,12 +15,12 @@ ms.assetid: 084e1504-3d2f-4bd9-b97c-b9c8c874751c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a302423f432e1fd1c5d51fd4436d835f4497fc82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e046aef7cd5fb4049b4bfb92c99272f625224c2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178323"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815945"
 ---
 # <a name="delete-queries-visual-database-tools"></a>쿼리 삭제(Visual Database Tools)
   쿼리를 프로젝트에서 제거하고 파일 시스템에서 영구 삭제하는 방식으로 쿼리를 삭제할 수 있습니다. 다음 절차를 사용하여 삭제한 쿼리는 휴지통에 보관되지 않으므로 복원할 수 없습니다.  

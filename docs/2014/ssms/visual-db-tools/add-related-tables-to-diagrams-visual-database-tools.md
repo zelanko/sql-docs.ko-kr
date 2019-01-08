@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - inserting tables
@@ -14,12 +14,12 @@ ms.assetid: be6f421b-5697-4a52-8cab-ed5f90c3f506
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5580fcc577a42322e12d783ea9b345d687abc980
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c49b343e9eb04a349219b9a5a752496c9bc0abda
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192543"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781613"
 ---
 # <a name="add-related-tables-to-diagrams-visual-database-tools"></a>다이어그램에 관련 테이블 추가(Visual Database Tools)
   선택한 테이블과 관련된 모든 테이블을 데이터베이스 다이어그램에 간편하게 추가할 수 있습니다.  

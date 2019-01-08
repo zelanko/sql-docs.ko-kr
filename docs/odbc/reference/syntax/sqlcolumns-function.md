@@ -20,16 +20,16 @@ ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 359805d311252a6ce141b5e3654ba058b74a7d2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51b14014853e0ccb91293097fd3aa81c1edcb2ae
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791761"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207742"
 ---
 # <a name="sqlcolumns-function"></a>SQLColumns 함수
 **규칙**  
- 버전에 도입 된: ODBC 1.0 표준 준수: Open Group  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. 그룹 열기  
   
  **요약**  
  **SQLColumns** 지정 된 테이블의 열 이름 목록을 반환 합니다. 드라이버는 결과 집합으로 지정 된이 정보를 반환 합니다. *StatementHandle*합니다.  
@@ -164,20 +164,20 @@ SQLRETURN SQLColumns(
 |TABLE_SCHEM 순 (ODBC 1.0)|2|Varchar|스키마 이름입니다. 데이터 원본에 해당 하지 않는 경우 NULL입니다. 드라이버에서 지 원하는 경우 스키마 일부 테이블에 대해서만, 다른 Dbms에서 데이터를 검색 하는 드라이버, 빈 문자열을 반환 하는 등 ("") 스키마에 있지 않은 테이블에 대 한 합니다.|  
 |TABLE_NAME (ODBC 1.0)|3|NULL이 아닌 Varchar|테이블 이름입니다.|  
 |COLUMN_NAME (ODBC 1.0)|4|NULL이 아닌 Varchar|열 이름입니다. 드라이버 이름 없는 열에 대 한 빈 문자열을 반환 합니다.|  
-|DATA_TYPE (ODBC 1.0)|5|NULL이 아닌 Smallint|SQL 데이터 형식입니다. 이 ODBC SQL 데이터 형식 또는 드라이버별 SQL 데이터 형식 수 있습니다. 날짜/시간 및 간격 데이터 형식에 대해이 열에는 간결한 데이터 형식을 (예: SQL_TYPE_DATE 또는 SQL_DATETIME 또는 sql_interval 인 같은 nonconcise 데이터 형식 대신 SQL_INTERVAL_YEAR_TO_MONTH) 반환합니다. 유효한 ODBC SQL 데이터 형식의 목록을 참조 하세요 [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md) 부록 d: 데이터 형식에서입니다. 드라이버별 SQL 데이터 형식에 대 한 내용은 드라이버의 설명서를 참조 하십시오.<br /><br /> ODBC 3에 대 한 반환 데이터 형식입니다. *x* 및 ODBC 2. *x* 응용 프로그램 다를 수 있습니다. 자세한 내용은 [이전 버전과 호환성 및 표준 준수](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)합니다.|  
-|TYPE_NAME (ODBC 1.0)|6|NULL이 아닌 Varchar|데이터 소스에 따라 다릅니다 데이터 형식 이름입니다. 예를 들어, "CHAR", "VARCHAR", "MONEY", "LONG VARBINAR" 또는 "CHAR () FOR BIT DATA"입니다.|  
-|COLUMN_SIZE (ODBC 1.0)|7|정수|DATA_TYPE SQL_CHAR 또는 SQL_VARCHAR 인 경우이 열에 문자 열의 최대 길이 포함 합니다. 날짜/시간 데이터 형식에 대 한 자로 변환 될 때 값을 표시 하는 데 필요한 문자의 총 수입니다. 숫자 데이터 형식에 대 한이 경우 전체 자릿수 또는 총 열에서 허용 하는 비트 NUM_PREC_RADIX 열에 따라 간격 데이터 형식에 대 한 리터럴 간격의 문자 표현에 있는 문자의 수입니다 (전체 자릿수를 유도 하는 간격으로 정의 된 대로 참조 하세요 [간격 데이터 형식 길이](../../../odbc/reference/appendixes/interval-data-type-length.md) 부록 d: 데이터 형식에서). 자세한 내용은 [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식에서입니다.|  
-|BUFFER_LENGTH (ODBC 1.0)|8|정수|SQL_C_DEFAULT를 지정 하는 경우 SQLGetData, SQLFetch, 또는 SQLFetchScroll 작업에서 전송 된 데이터의 길이 (바이트). 숫자 데이터에 대 한이 크기는 데이터 원본에 저장 된 데이터의 크기와에서 달라질 수 있습니다. 이 값은 문자 데이터에 대 한 COLUMN_SIZE 열의 달라질 수 있습니다. 길이 대 한 자세한 내용은 참조 하세요. [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식에서입니다.|  
-|DECIMAL_DIGITS (ODBC 1.0)|9|Smallint|소수점 오른쪽 자릿수의 총 수입니다. SQL_TYPE_TIME 및 SQL_TYPE_TIMESTAMP의 경우이 열 소수 자릿수 초 구성 요소에서 자릿수를 포함합니다. 다른 데이터 형식에 데이터 원본에 열 10 진수 숫자입니다. 시간 구성 요소를 포함 하는 간격 데이터 형식에 대해이 열에 소수 자릿수 (소수 자릿수 초) 소수점 오른쪽에 포함 되어 있습니다. 시간 구성 요소를 포함 하지 않는 간격 데이터 형식에 대해이 열은 0입니다. 소수 자릿수에 대 한 자세한 내용은 참조 하세요. [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식에서입니다. NULL은 DECIMAL_DIGITS 적용할 수 없는 데이터 형식에 대해 반환 됩니다.|  
+|DATA_TYPE (ODBC 1.0)|5|NULL이 아닌 Smallint|SQL 데이터 형식입니다. 이 ODBC SQL 데이터 형식 또는 드라이버별 SQL 데이터 형식 수 있습니다. 날짜/시간 및 간격 데이터 형식에 대해이 열에는 간결한 데이터 형식을 (예: SQL_TYPE_DATE 또는 SQL_DATETIME 또는 sql_interval 인 같은 nonconcise 데이터 형식 대신 SQL_INTERVAL_YEAR_TO_MONTH) 반환합니다. 유효한 ODBC SQL 데이터 형식의 목록을 참조 하세요 [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md) 부록 d: 데이터 형식입니다. 드라이버별 SQL 데이터 형식에 대 한 내용은 드라이버의 설명서를 참조 하십시오.<br /><br /> ODBC 3에 대 한 반환 데이터 형식입니다. *x* 및 ODBC 2. *x* 응용 프로그램 다를 수 있습니다. 자세한 내용은 [이전 버전과 호환성 및 표준 준수](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)합니다.|  
+|TYPE_NAME (ODBC 1.0)|6|NULL이 아닌 Varchar|데이터 원본에 종속적인 데이터 형식 이름입니다. 예를 들어, "CHAR", "VARCHAR", "MONEY", "LONG VARBINAR" 또는 "CHAR () FOR BIT DATA"입니다.|  
+|COLUMN_SIZE (ODBC 1.0)|7|정수|DATA_TYPE SQL_CHAR 또는 SQL_VARCHAR 인 경우이 열에 문자 열의 최대 길이 포함 합니다. 날짜/시간 데이터 형식에 대 한 자로 변환 될 때 값을 표시 하는 데 필요한 문자의 총 수입니다. 숫자 데이터 형식에 대 한이 경우 전체 자릿수 또는 총 열에서 허용 하는 비트 NUM_PREC_RADIX 열에 따라 간격 데이터 형식에 대 한 리터럴 간격의 문자 표현에 있는 문자의 수입니다 (전체 자릿수를 유도 하는 간격으로 정의 된 대로 참조 하세요 [간격 데이터 형식 길이](../../../odbc/reference/appendixes/interval-data-type-length.md) 부록 d: 데이터 형식)입니다. 자세한 내용은 [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식입니다.|  
+|BUFFER_LENGTH (ODBC 1.0)|8|정수|SQL_C_DEFAULT를 지정 하는 경우 SQLGetData, SQLFetch, 또는 SQLFetchScroll 작업에서 전송 된 데이터의 길이 (바이트). 숫자 데이터에 대 한이 크기는 데이터 원본에 저장 된 데이터의 크기와에서 달라질 수 있습니다. 이 값은 문자 데이터에 대 한 COLUMN_SIZE 열의 달라질 수 있습니다. 길이 대 한 자세한 내용은 참조 하세요. [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식입니다.|  
+|DECIMAL_DIGITS (ODBC 1.0)|9|Smallint|소수점 오른쪽 자릿수의 총 수입니다. SQL_TYPE_TIME 및 SQL_TYPE_TIMESTAMP의 경우이 열 소수 자릿수 초 구성 요소에서 자릿수를 포함합니다. 다른 데이터 형식에 데이터 원본에 열 10 진수 숫자입니다. 시간 구성 요소를 포함 하는 간격 데이터 형식에 대해이 열에 소수 자릿수 (소수 자릿수 초) 소수점 오른쪽에 포함 되어 있습니다. 시간 구성 요소를 포함 하지 않는 간격 데이터 형식에 대해이 열은 0입니다. 소수 자릿수에 대 한 자세한 내용은 참조 하세요. [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식입니다. NULL은 DECIMAL_DIGITS 적용할 수 없는 데이터 형식에 대해 반환 됩니다.|  
 |NUM_PREC_RADIX (ODBC 1.0)|10|Smallint|숫자 데이터 형식에 대 한 10 또는 2입니다. 10 인 경우 COLUMN_SIZE 및 DECIMAL_DIGITS 값 열에 대해 허용 된 10 진수 자릿수를 제공 합니다. 예를 들어 DECIMAL(12,5) 열 10, 12, COLUMN_SIZE 및 5; DECIMAL_DIGITS NUM_PREC_RADIX 반환 FLOAT 열에는 10, 15, COLUMN_SIZE 및 DECIMAL_DIGITS의 NULL의 NUM_PREC_RADIX 반환할 수 있습니다.<br /><br /> 2 인 경우에 있는 값 COLUMN_SIZE 및 DECIMAL_DIGITS 열의 허용 하는 비트 수를 제공 합니다. 예를 들어, FLOAT 열 2, 53, COLUMN_SIZE 및 DECIMAL_DIGITS의 NULL의 기 수를 반환할 수 있습니다.<br /><br /> NULL은 NUM_PREC_RADIX 적용할 수 없는 데이터 형식에 대해 반환 됩니다.|  
 |NULL을 허용 (ODBC 1.0)|11|NULL이 아닌 Smallint|SQL_NO_NULLS 열 수 없는 경우 NULL 값입니다.<br /><br /> 열 NULL 값을 허용 하는 경우 SQL_NULLABLE 합니다.<br /><br /> SQL_NULLABLE_UNKNOWN 경우 열에 NULL 값 허용 하는지 여부를 알 수 없습니다.<br /><br /> 이 열에 대해 반환 되는 값 IS_NULLABLE 열에 대해 반환 된 값에서 서로 다릅니다. Null 허용 열은 열 Null을 허용할 수 있지만 열 Null을 허용 하지 않습니다 확실 하 게 나타낼 수 없습니다는 확실 하 게 나타냅니다. IS_NULLABLE 열은 열 Null을 허용할 수 없습니다 있지만 열 Null을 허용 하는지 확실 하 게 나타낼 수 없습니다는 확실 하 게 나타냅니다.|  
 |설명 (ODBC 1.0)|12|Varchar|열 설명입니다.|  
 |COLUMN_DEF (ODBC 3.0)|13|Varchar|열의 기본값입니다. 따옴표로 묶어야 하는 경우이 열의 값을 문자열로 해석 수 해야 합니다.<br /><br /> NULL 값을 기본값으로 지정 된 경우이 열은 NULL 이라는 단어를 따옴표로 묶여 있지. 기본값을 잘림 없이 표현할 수 없는 경우이 열 잘림, 작은따옴표를 포함 하지 않고 포함 됩니다. 기본값이 지정 된 경우이 열은 NULL입니다.<br /><br /> COLUMN_DEF 값 잘림 값이 포함 된 경우 제외 하 고 새 열 정의 생성할 때 사용할 수 있습니다.|  
-|SQL_DATA_TYPE (ODBC 3.0)|14|NULL이 아닌 Smallint|IRD의 SQL_DESC_TYPE 레코드 필드에 표시 된 대로 SQL 데이터 형식입니다. 이 ODBC SQL 데이터 형식 또는 드라이버별 SQL 데이터 형식 수 있습니다. 이 열은 datetime 및 interval 데이터 형식 제외 하 고는 DATA_TYPE 열과 동일 합니다. 이 열이 datetime에 대해 간결한 데이터 형식 (예: SQL_TYPE_DATE 또는 SQL_INTERVAL_YEAR_TO_MONTH) 및 간격 데이터 형식 대신 nonconcise 데이터 형식을 (예: SQL_DATETIME 또는 sql_interval 인)를 반환합니다. SQL_DATETIME 또는 sql_interval 인이 열이 반환 하는 경우 특정 데이터 형식 SQL_DATETIME_SUB 열에서 확인할 수 있습니다. 유효한 ODBC SQL 데이터 형식의 목록을 참조 하세요 [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md) 부록 d: 데이터 형식에서입니다. 드라이버별 SQL 데이터 형식에 대 한 내용은 드라이버의 설명서를 참조 하십시오.<br /><br /> ODBC 3에 대 한 반환 데이터 형식입니다. *x* 및 ODBC 2. *x* 응용 프로그램 다를 수 있습니다. 자세한 내용은 [이전 버전과 호환성 및 표준 준수](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)합니다.|  
+|SQL_DATA_TYPE (ODBC 3.0)|14|NULL이 아닌 Smallint|IRD의 SQL_DESC_TYPE 레코드 필드에 표시 된 대로 SQL 데이터 형식입니다. 이 ODBC SQL 데이터 형식 또는 드라이버별 SQL 데이터 형식 수 있습니다. 이 열은 datetime 및 interval 데이터 형식 제외 하 고는 DATA_TYPE 열과 동일 합니다. 이 열이 datetime에 대해 간결한 데이터 형식 (예: SQL_TYPE_DATE 또는 SQL_INTERVAL_YEAR_TO_MONTH) 및 간격 데이터 형식 대신 nonconcise 데이터 형식을 (예: SQL_DATETIME 또는 sql_interval 인)를 반환합니다. SQL_DATETIME 또는 sql_interval 인이 열이 반환 하는 경우 특정 데이터 형식 SQL_DATETIME_SUB 열에서 확인할 수 있습니다. 유효한 ODBC SQL 데이터 형식의 목록을 참조 하세요 [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md) 부록 d: 데이터 형식입니다. 드라이버별 SQL 데이터 형식에 대 한 내용은 드라이버의 설명서를 참조 하십시오.<br /><br /> ODBC 3에 대 한 반환 데이터 형식입니다. *x* 및 ODBC 2. *x* 응용 프로그램 다를 수 있습니다. 자세한 내용은 [이전 버전과 호환성 및 표준 준수](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)합니다.|  
 |SQL_DATETIME_SUB (ODBC 3.0)|15|Smallint|날짜/시간 및 간격 데이터 형식의 하위 형식 코드입니다. 다른 데이터 형식에 대해서는 이 열이 NULL을 반환합니다. 날짜/시간 및 간격 하위 코드에 대 한 자세한 내용은 "값을 SQL_DESC_DATETIME_INTERVAL_CODE"를 참조 하세요 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)합니다.|  
 |CHAR_OCTET_LENGTH (ODBC 3.0)|16|정수|문자 또는 이진 데이터의 최대 길이 (바이트)에서 열을 입력 합니다. 다른 모든 데이터 형식의 경우에는 이 열이 NULL을 반환합니다.|  
 |ORDINAL_POSITION (ODBC 3.0)|17|NULL이 아닌 Integer|테이블에 있는 열의 서수 위치입니다. 테이블의 첫 번째 열은 숫자 1입니다.|  
-|IS_NULLABLE (ODBC 3.0)|18|Varchar|"아니요" 열에 Null이 포함 되어 있지 않으면입니다.<br /><br /> 면 "YES" 열이 Null을 포함할 수 없습니다.<br /><br /> Null 허용 여부를 알 수 없으면 이 열에서는 길이가 0인 문자열을 반환합니다.<br /><br /> ISO 규칙을 따라서 null 허용 여부를 결정합니다. ISO SQL-호환 DBMS는 빈 문자열을 반환할 수 없습니다.<br /><br /> 이 열에 대해 반환 되는 값의 null 허용 열에 대 한 반환 된 값에서 서로 다릅니다. (Null 허용 열에 대 한 설명을 참조).|  
+|IS_NULLABLE (ODBC 3.0)|18|Varchar|"아니요" 열에 Null이 포함 되어 있지 않으면입니다.<br /><br /> 면 "YES" 열이 Null을 포함할 수 없습니다.<br /><br /> Null 허용 여부를 알 수 없으면 이 열에서는 길이가 0인 문자열을 반환합니다.<br /><br /> ISO 규칙을 따라서 null 허용 여부를 결정합니다. ISO SQL-호환 DBMS에서는 빈 문자열을 반환할 수 없습니다.<br /><br /> 이 열에 대해 반환 되는 값의 null 허용 열에 대 한 반환 된 값에서 서로 다릅니다. (Null 허용 열에 대 한 설명을 참조).|  
   
 ## <a name="code-example"></a>코드 예  
  다음 예제에서는 응용 프로그램에서 반환한 결과 집합에 대 한 버퍼를 선언 **SQLColumns**합니다. 호출한 **SQLColumns** EMPLOYEE 테이블의 각 열을 설명 하는 결과 집합을 반환 합니다. 그런 다음 호출 **SQLBindCol** 결과 버퍼 집합의 열을 바인딩해야 합니다. 응용 프로그램에서 사용 하 여 데이터의 각 행을 인출 하는 마지막으로, **SQLFetch** 하 고 처리 합니다.  
@@ -298,6 +298,6 @@ int main() {
 |데이터 원본에서 테이블의 목록 반환|[SQLTables 함수](../../../odbc/reference/syntax/sqltables-function.md)|  
 |테이블 또는 테이블에 대 한 권한을 반환합니다.|[SQLTablePrivileges 함수](../../../odbc/reference/syntax/sqltableprivileges-function.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

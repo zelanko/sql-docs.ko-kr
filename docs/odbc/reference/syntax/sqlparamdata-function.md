@@ -20,16 +20,16 @@ ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7ffba9afd0609bab57cdaa182b650f7bd5a0fb34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec0038e0ec6c87dba403bbe62441815dfa6d0251
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606822"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205182"
 ---
 # <a name="sqlparamdata-function"></a>SQLParamData 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLParamData** 와 함께 사용 됩니다 **SQLPutData** 문 실행 시와 매개 변수 데이터를 제공 하 **SQLGetData** 스트리밍된 출력 매개 변수 데이터를 검색 합니다.  
@@ -61,7 +61,7 @@ SQLRETURN SQLParamData(
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |07006|제한 된 데이터 형식 특성을 위반 했습니다.|로 식별 된 데이터 값을 *ValueType* 에서 인수 **SQLBindParameter** 바인딩된 매개 변수에서 식별 되는 데이터 형식 변환 하지 못했습니다에 대 한는 *ParameterType*에 인수 **SQLBindParameter**합니다.<br /><br /> SQL_PARAM_OUTPUT 또는 SQL_PARAM_INPUT_OUTPUT 수 변환할 없습니다으로 식별 되는 데이터 형식으로 바인딩된 매개 변수에 대해 반환 되는 데이터 값을 *ValueType* 에서 인수 **SQLBindParameter**합니다.<br /><br /> (하나 이상의 행에 대 한 데이터 값을 변환할 수 없습니다, 하지만 하나 이상의 행이 성공적으로 반환 하는 경우이 함수 SQL_SUCCESS_WITH_INFO를 반환 합니다.)|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버는 연결 된 데이터 원본 간의 통신 링크 하지 못했습니다.|  
-|22026|문자열 데이터, 길이가 일치하지 않음|SQL_NEED_LONG_DATA_LEN 정보 유형을 **SQLGetInfo** "Y" 되었으며 지정 된 것 보다 더 적은 양의 데이터 (데이터 형식이 SQL_LONGVARBINARY, SQL_LONGVARCHAR, long 데이터 소스 관련 데이터 형식이) 긴 매개 변수에 대해 전송 된 사용 하 여 합니다 *StrLen_or_IndPtr* 에서 인수 **SQLBindParameter**합니다.<br /><br /> SQL_NEED_LONG_DATA_LEN 정보 유형을 **SQLGetInfo** "Y" 되었으며에서 지정 된 것 보다 긴 열 (데이터 형식이 SQL_LONGVARBINARY, SQL_LONGVARCHAR, long 데이터 소스 관련 데이터 형식이가 하는 데 사용)에 대 한 적은 데이터를 전송 합니다 열 추가 또는 업데이트 된 데이터 행에 해당 하는 길이 버퍼 **SQLBulkOperations** 으로 업데이트 하거나 **SQLSetPos**합니다.|  
+|22026|문자열 데이터, 길이가 일치하지 않음|SQL_NEED_LONG_DATA_LEN 정보 유형을 **SQLGetInfo** "Y" 되었으며 지정 된 것 보다 더 적은 양의 데이터를 긴 매개 변수 (데이터 형식이 SQL_LONGVARBINARY, SQL_LONGVARCHAR, 긴 데이터 소스 특정 데이터 형식)에 대 한 전송 된 사용 하 여 합니다 *StrLen_or_IndPtr* 에서 인수 **SQLBindParameter**합니다.<br /><br /> SQL_NEED_LONG_DATA_LEN 정보 유형을 **SQLGetInfo** "Y" 되었으며에서 지정 된 것 보다 긴 열 (데이터 형식이 SQL_LONGVARBINARY, SQL_LONGVARCHAR, 긴 데이터 소스 특정 데이터 형식)에 대 한 적은 데이터를 전송 합니다 열 추가 또는 업데이트 된 데이터 행에 해당 하는 길이 버퍼 **SQLBulkOperations** 으로 업데이트 하거나 **SQLSetPos**합니다.|  
 |40001|Serialization 오류|트랜잭션은 다른 트랜잭션과 리소스 교착 상태로 인해 롤백 되었습니다.|  
 |40003|알 수 없는 문 완성|이 함수를 실행 하는 동안 관련된 연결 하지 못했으며 트랜잭션의 상태를 확인할 수 없습니다.|  
 |HY000|일반 오류|오류가 없는 관련 SQLSTATE 했습니다는 및 없습니다 구현 별 SQLSTATE 정의 되었습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*MessageText* 버퍼 오류 및 해당 원인에 설명 합니다.|  
@@ -82,7 +82,7 @@ SQLRETURN SQLParamData(
   
  응용 프로그램을 호출할 때 **SQLExecute**를 **SQLExecDirect**를 **SQLBulkOperations**, 또는 **SQLSetPos**, 드라이버 SQL_NEED_를 반환 합니다. 실행 시 데이터 데이터가 필요한 경우 데이터입니다. 그런 다음 응용 프로그램 호출 **SQLParamData** 보낼 데이터를 결정 합니다. 드라이버는 매개 변수 데이터에 필요한 드라이버에서 반환 된  *\*ValuePtrPtr* 출력 버퍼는 행 집합 버퍼에 포함 된 응용 프로그램 값을 합니다. 응용 프로그램 드라이버를 요청 하는 매개 변수 데이터를 결정이 값을 사용할 수 있습니다. 드라이버는 열 데이터에 필요한 드라이버에서 반환 된  *\*ValuePtrPtr* 버퍼 열에 다음과 같은 바인딩된 원래 주소:  
   
- *주소에 바인딩된* + *오프셋 바인딩* + ((*행 번호* – 1) x *요소 크기*)  
+ *주소에 바인딩된* + *오프셋 바인딩* + ((*행 번호* -1) x *요소 크기*)  
   
  여기서 변수는 다음 표와 같이 정의 됩니다.  
   

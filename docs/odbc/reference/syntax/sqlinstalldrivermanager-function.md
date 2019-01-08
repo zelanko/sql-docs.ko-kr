@@ -20,16 +20,16 @@ ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1bd012fc4f3d1e55c27a585600bff7f85459d469
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 47069f1003b9b3f9bddb1e8601b3b4284372ae7e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844361"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205192"
 ---
 # <a name="sqlinstalldrivermanager-function"></a>SQLInstallDriverManager 함수
 **규칙**  
- 버전 도입 되었습니다: ODBC 1.0: Windows XP 서비스 팩 2, Windows Server 2003 서비스 팩 1 이상 운영 체제에서 사용 되지 않음  
+ 도입 된 버전: ODBC 1.0: Windows XP 서비스 팩 2, Windows Server 2003 서비스 팩 1 이상 운영 체제에서 사용 되지 않음  
   
  **요약**  
  **SQLInstallDriverManager** ODBC 핵심 구성 요소 설치에 대 한 대상 디렉터리의 경로 반환 합니다. 실제로 호출 프로그램 대상 디렉터리에 드라이버 관리자의 파일을 복사 해야 합니다.  
@@ -74,7 +74,7 @@ BOOL SQLInstallDriverManager(
   
  경우 이전 버전의 드라이버 관리자 응용 프로그램 설치 프로그램을 설치 했던 것 핵심 구성 요소를 제거 하 고 다시 설치 핵심 구성 요소 사용 횟수는 유효한 해야 합니다. **SQLRemoveDriverManager** 구성 요소 사용 횟수를 감소 시키기 위해 먼저 호출 해야 합니다. **SQLInstallDriverManager** 다음 구성 요소 사용 횟수를 증가 시킬 호출 해야 합니다. 응용 프로그램 설치 프로그램을 새 파일로 이전 핵심 구성 요소 파일을 대체 해야 합니다. 파일 사용 횟수를 동일 하 게 유지 됩니다 및 이전 버전 핵심 구성 요소 파일을 사용 하는 다른 응용 프로그램에서 이제 최신 버전 파일을 사용 합니다.  
   
- ODBC 핵심 구성 요소, 드라이버 및 변환기를 새로 설치할, 응용 프로그램 설치 프로그램 순서 다음 함수를 호출 해야 합니다. **SQLInstallDriverManager**, **SQLInstallDriverEx**, **SQLConfigDriver** (사용 하 여는 *문제점과* ODBC_INSTALL_DRIVER의)을 차례로 **SQLInstallTranslatorEx**합니다. 핵심 구성 요소, 드라이버 및 변환기를 제거, 응용 프로그램 설치 프로그램 순서 다음 함수를 호출 해야 합니다. **SQLRemoveTranslator**, **SQLRemoveDriver**, 고 **SQLRemoveDriverManager**합니다. 이 시퀀스에서 이러한 함수를 호출 해야 합니다. 모든 구성 요소를 업그레이드에서 시퀀스의 모든 제거 함수를 호출 해야 하 고 시퀀스의 모든 설치 함수를 호출 해야 합니다.  
+ ODBC 핵심 구성 요소, 드라이버 및 translator의 새로운 치의 경우 응용 프로그램 설치 프로그램 순서로 다음 함수를 호출 해야 합니다. **SQLInstallDriverManager**, **SQLInstallDriverEx**를 **SQLConfigDriver** (사용 하 여를 *문제점과* ODBC_INSTALL_DRIVER의)을 차례로  **SQLInstallTranslatorEx**합니다. 응용 프로그램 설치 프로그램의 핵심 구성 요소, 드라이버 및 변환기의 제거를 시퀀스에서 다음 함수를 호출 해야 합니다. **SQLRemoveTranslator**, **SQLRemoveDriver**를 차례로 **SQLRemoveDriverManager**합니다. 이 시퀀스에서 이러한 함수를 호출 해야 합니다. 모든 구성 요소를 업그레이드에서 시퀀스의 모든 제거 함수를 호출 해야 하 고 시퀀스의 모든 설치 함수를 호출 해야 합니다.  
   
 ## <a name="related-functions"></a>관련 함수  
   

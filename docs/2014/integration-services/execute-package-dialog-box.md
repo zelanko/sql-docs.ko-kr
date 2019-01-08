@@ -14,19 +14,19 @@ ms.assetid: 4f7a806d-4867-4d1f-bc65-b00c1caee7b6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a5e90c0ceb79af8834bb2df17ab84943099276bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 715bcfdda978801bac28e59246aeddc9ab76851e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129883"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418654"
 ---
 # <a name="execute-package-dialog-box"></a>Execute Package Dialog Box
   **패키지 실행** 대화 상자를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 저장된 패키지를 실행할 수 있습니다.  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지는 환경 변수에 값이 저장된 매개 변수를 포함할 수 있습니다. 이러한 패키지를 실행하려면 먼저 환경 변수 값을 제공하는 데 사용할 환경을 지정해야 합니다. 프로젝트에 여러 환경을 포함할 수는 있지만 실행할 때는 하나의 환경만 사용하여 환경 변수 값을 바인딩할 수 있습니다. 패키지에 사용되는 환경 변수가 없는 경우에는 환경이 필요하지 않습니다.  
   
- 수행 작업  
+ 수행할 작업  
   
 -   [패키지 실행 대화 상자 열기](#open_dialog)  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48129883"
  패키지 실행에 대한 로깅 수준을 선택합니다. 자세한 내용은 [catalog.set_execution_parameter_value&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database)를 참조하세요.  
   
  **오류 덤프**  
- 패키지 실행 시 오류가 발생할 경우 덤프 파일을 생성할지 여부를 지정합니다. 자세한 내용은 [패키지 실행을 위한 덤프 파일 생성](troubleshooting/generating-dump-files-for-package-execution.md)을 참조하세요.  
+ 패키지 실행 시 오류가 발생할 경우 덤프 파일을 생성할지 여부를 지정합니다. 자세한 내용은 [Generating Dump Files for Package Execution](troubleshooting/generating-dump-files-for-package-execution.md)을 참조하세요.  
   
  **32비트 런타임**  
  패키지가 32비트 시스템에서 실행되도록 지정합니다.  

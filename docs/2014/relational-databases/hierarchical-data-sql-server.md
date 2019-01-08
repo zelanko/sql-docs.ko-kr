@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [SQL Server], tables to support
@@ -18,12 +17,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ab581202049b9dab362de4278950e0597cf5b3b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154759"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817565"
 ---
 # <a name="hierarchical-data-sql-server"></a>계층적 데이터(SQL Server)
   기본 제공 `hierarchyid` 데이터 형식을 쉽게 계층적 데이터를 저장 및 쿼리 합니다. `hierarchyid` 계층적 데이터의 가장 일반적인 유형인 트리를 나타내기 위해 최적화 됩니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "48154759"
  [hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) 를 데이터 형식으로 사용하여 계층 구조가 있는 테이블을 만들거나 다른 위치에 저장된 데이터의 계층 구조를 설명할 수 있습니다. [의](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) hierarchyid 함수 [!INCLUDE[tsql](../includes/tsql-md.md)] 를 사용하면 계층적 데이터를 쿼리하고 관리할 수 있습니다.  
   
 ##  <a name="keyprops"></a> hierarchyid의 주요 속성  
- 값은 `hierarchyid` 기원후는 트리 계층의 위치를 나타냅니다. `hierarchyid` 값의 속성은 다음과 같습니다.  
+ `hierarchyid` 데이터 형식의 값은 트리 계층에서의 위치를 나타냅니다. `hierarchyid` 값의 속성은 다음과 같습니다.  
   
 -   높은 압축성  
   
@@ -61,11 +60,11 @@ ms.locfileid: "48154759"
 ##  <a name="limits"></a> hierarchyid의 제한 사항  
  `hierarchyid` 데이터 형식에는 다음 제한이 있습니다.  
   
--   형식의 열 `hierarchyid` 자동으로 트리를 나타내지 않습니다. 응용 프로그램에 따라 원하는 행 간 관계가 값에 반영되도록 `hierarchyid` 값이 생성되어 할당됩니다. 일부 응용 프로그램에는 다른 테이블에 정의된 계층에서의 위치를 나타내는 `hierarchyid` 형식의 열이 있을 수 있습니다.  
+-   `hierarchyid` 형식의 열은 자동으로 트리를 나타내지 않습니다. 응용 프로그램에 따라 원하는 행 간 관계가 값에 반영되도록 `hierarchyid` 값이 생성되어 할당됩니다. 일부 응용 프로그램에는 다른 테이블에 정의된 계층에서의 위치를 나타내는 `hierarchyid` 형식의 열이 있을 수 있습니다.  
   
--   생성 되어 할당에 대 한 동시성이 달리 관리 응용 프로그램에 달려 `hierarchyid` 값입니다. 응용 프로그램에서 UNIQUE KEY 제약 조건을 사용하거나 자체 논리를 통해 자체적으로 고유성을 적용하지 않는 한 열의 `hierarchyid` 값에 대한 고유성이 보장되지 않습니다.  
+-   응용 프로그램에 따라 `hierarchyid` 값이 생성되어 할당되는 작업에 대한 동시성이 달리 관리됩니다. 응용 프로그램에서 UNIQUE KEY 제약 조건을 사용하거나 자체 논리를 통해 자체적으로 고유성을 적용하지 않는 한 열의 `hierarchyid` 값에 대한 고유성이 보장되지 않습니다.  
   
--   나타내는 계층 관계 `hierarchyid` 외래 키 관계와 같은 값이 적용 되지 않습니다. A에 자식 B가 있는 상태에서 A를 삭제하여 B에 존재하지 않는 레코드에 대한 관계가 남게 되는 계층 관계를 만들 수 있으며 이러한 관계가 적절한 경우도 있습니다. 이 동작이 허용되지 않는 경우에는 애플리케이션에서 부모를 삭제하기 전에 하위 항목에 대해 쿼리해야 합니다.  
+-   `hierarchyid` 값이 나타내는 계층 관계는 외래 키 관계와 같은 방식으로 적용되지 않습니다. A에 자식 B가 있는 상태에서 A를 삭제하여 B에 존재하지 않는 레코드에 대한 관계가 남게 되는 계층 관계를 만들 수 있으며 이러한 관계가 적절한 경우도 있습니다. 이 동작이 허용되지 않는 경우에는 애플리케이션에서 부모를 삭제하기 전에 하위 항목에 대해 쿼리해야 합니다.  
   
   
 ##  <a name="alternatives"></a> hierarchyid에 대한 대체 방법을 사용하는 경우  
@@ -95,17 +94,17 @@ GO
   
  일반 작업에 대한 부모/자식과 `hierarchyid` 비교  
   
--   하위 트리 쿼리가 훨씬 더 빨라집니다와 `hierarchyid`합니다.  
+-   `hierarchyid`를 사용하면 하위 트리 쿼리가 훨씬 더 빨라집니다.  
   
 -   `hierarchyid`를 사용하면 직계 하위 항목 쿼리가 약간 더 느려집니다.  
   
--   리프가 아닌 노드 이동이 낮아질 `hierarchyid`합니다.  
+-   `hierarchyid`를 사용하면 리프가 아닌 노드 이동이 더 느려집니다.  
   
 -   `hierarchyid`를 사용할 경우 리프가 아닌 노드 삽입과 리프 노드의 삽입 및 이동의 복잡성은 동일합니다.  
   
  다음 경우 부모/자식이 더 우수할 수 있습니다.  
   
--   키의 크기가 중요한 경우. 동일한 노드 수를 `hierarchyid` 값은 정수 패밀리 보다 크거나 (`smallint`, `int`, `bigint`) 값입니다. 이 드문 경우에서 부모/자식을 사용 하는 이유만 때문 `hierarchyid` 부모/자식 구조를 사용할 때 필요한 공통 테이블 식 보다 I/O 및 CPU 복잡성의 효율을 크게 향상 했습니다.  
+-   키의 크기가 중요한 경우. 노드 수가 같은 경우 `hierarchyid` 값은 정수 패밀리(`smallint`, `int`, `bigint`) 값보다 크거나 같습니다. `hierarchyid`에서는 부모/자식 구조를 사용할 때 필요한 공통 테이블 식보다 I/O 및 CPU 복잡성의 효율이 훨씬 증가하므로 이 경우에 한해 부모/자식을 많이 사용합니다.  
   
 -   계층의 섹션 간 쿼리를 거의 하지 않는 쿼리의 경우. 즉, 쿼리가 일반적으로 계층의 단일 지점만 다루는 경우입니다. 이러한 경우 같은 위치에 배치하는 작업이 중요하지 않습니다. 예를 들어 조직 테이블이 개별 직원에 대한 급여를 처리하는 데에만 사용되는 경우 부모/자식이 더 우수합니다.  
   
@@ -160,7 +159,7 @@ GO
   
      너비 우선 인덱스에서는 노드의 모든 직계 자식이 같은 위치에 배치됩니다. 따라서 "이 관리자에게 직접 보고하는 모든 직원 찾기"와 같은 인접한 자식에 대한 쿼리에 답하는 데에는 너비 우선 인덱스가 효율적입니다.  
   
- 깊이 우선을 사용할 것인지, 너비 우선을 사용할 것인지 또는 둘 다를 사용할 것인지 여부와 클러스터링 키(있는 경우)를 만들 인덱스는 위의 쿼리 형식에 대한 상대적 중요도와 SELECT 및 DML 작업의 상대적 중요도에 따라 달라집니다. 인덱싱 방법에 대한 자세한 예는 [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)을 참조하십시오.  
+ 깊이 우선을 사용할 것인지, 너비 우선을 사용할 것인지 또는 둘 다를 사용할 것인지 여부와 클러스터링 키(있는 경우)를 만들 인덱스는 위의 쿼리 형식에 대한 상대적 중요도와 SELECT 및 DML 작업의 상대적 중요도에 따라 달라집니다. 인덱싱 방법의 자세한 예제를 참조 하세요. [자습서: Hierarchyid 데이터 형식을 사용 하 여](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)입니다.  
   
   
 ### <a name="creating-indexes"></a>인덱스 만들기  
@@ -266,11 +265,11 @@ VALUES ('/', 'Earth', 'Planet');
 ##  <a name="tasks"></a> 관련 태스크  
   
 ###  <a name="migrating"></a> 부모/자식에서 hierarchyid로 마이그레이션  
- 대부분의 트리는 부모/자식을 사용하여 표현됩니다. 사용 하 여 테이블에 부모/자식 구조에서 마이그레이션하는 가장 쉬운 방법은 `hierarchyid` 계층의 각 수준에서 노드 수를 추적 하는 임시 열 이나 임시 테이블을 사용 하는 것입니다. 부모/자식 테이블 마이그레이션의 예제는 [자습서: hierarchyid 데이터 형식 사용](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)의 1단원을 참조하세요.  
+ 대부분의 트리는 부모/자식을 사용하여 표현됩니다. 부모/자식 구조를 `hierarchyid`를 사용하는 테이블로 마이그레이션하는 가장 쉬운 방법은 임시 열이나 임시 테이블을 사용하여 계층의 각 수준에서 노드 수를 추적하는 것입니다. 부모/자식 테이블 마이그레이션의 예의 1 단원을 참조 [자습서: Hierarchyid 데이터 형식을 사용 하 여](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)입니다.  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> hierarchyid를 사용하여 트리 관리  
- 하지만 한 `hierarchyid` 열이 트리에 반드시 나타내지는지 않습니다, 응용 프로그램에는 쉽게 확인할 수 있습니다.  
+ `hierarchyid` 열이 반드시 트리를 나타내는 것은 아니지만 응용 프로그램에서 손쉽게 해당 열이 트리를 나타내도록 만들 수 있습니다.  
   
 -   새 값을 생성할 때 다음 중 하나를 수행합니다.  
   
@@ -526,7 +525,7 @@ GO
   
 ## <a name="see-also"></a>관련 항목  
  [hierarchyid 데이터 형식 메서드 참조](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
- [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [자습서: Hierarchyid 데이터 형식 사용](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid&#40;Transact-SQL&#41;](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   
   

@@ -20,16 +20,16 @@ ms.assetid: 8cfdb64f-64c5-47e6-ad57-0533ac630afa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 099582fa557d9e970db3b38c4fb95ae677bb5274
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe1b3a3420ad882136b13b131938169dbdb224bd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678321"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204086"
 ---
 # <a name="sqltableprivileges-function"></a>SQLTablePrivileges 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수: ODBC  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. ODBC  
   
  **요약**  
  **SQLTablePrivileges** 테이블과 각 테이블과 연결 된 권한 목록을 반환 합니다. 드라이버는 결과 집합으로 지정 된 문에 대 한 정보를 반환 합니다.  
@@ -130,7 +130,7 @@ SQLRETURN SQLTablePrivileges(
 |TABLE_NAME (ODBC 1.0)|3|NULL이 아닌 Varchar|테이블 이름입니다.|  
 |GRANTOR (ODBC 1.0)|4|Varchar|권한을 부여할 사용자의 이름 데이터 원본에 해당 하지 않는 경우 NULL입니다.<br /><br /> 피부 여자에 게 열의 값은 개체의 소유자는 모든 행에 대해 GRANTOR 열에 "(_s)" 됩니다.|  
 |피부 여 자가 (ODBC 1.0)|5|NULL이 아닌 Varchar|부여 된 권한을 부여한 사용자 이름입니다.|  
-|권한 (ODBC 1.0)|6|NULL이 아닌 Varchar|테이블 권한입니다. 다음 오류 또는 데이터 소스 관련 권한 중 하나일 수 있습니다.<br /><br /> 선택: 피부 여자에 게는 테이블의 하나 이상의 열에 대 한 데이터를 검색할 허용 됩니다.<br /><br /> INSERT의 경우: 피부 여자에 게는 테이블에 하나 이상의 열에 대 한 데이터를 포함 하는 새 행을 삽입 하도록 허용 합니다.<br /><br /> 업데이트: 피부 여자에 게는 테이블의 하나 이상의 열에서 데이터를 업데이트 하도록 허용 합니다.<br /><br /> 삭제: 피부 여자에 게는 테이블에서 데이터의 행을 삭제 하도록 허용 합니다.<br /><br /> 참조: 피부 여자에 게 제약 조건 내에 있는 테이블의 하나 이상의 열을 참조할 때 허용 됩니다 (예를 들어, 고유, 참조, 또는 check 제약 조건 테이블).<br /><br /> 피부 여 자가 지정된 된 테이블 권한에서 허용 하는 작업의 범위는 데이터 원본에 따라 다릅니다. 예를 들어 UPDATE 권한은 피부 여자 하나의 데이터 원본에서 테이블의 모든 열 그리고 다른 데이터 원본에서 grantor가 UPDATE 권한을는 열만 업데이트를 허용 될 수 있습니다.|  
+|권한 (ODBC 1.0)|6|NULL이 아닌 Varchar|테이블 권한입니다. 다음 오류 또는 데이터 소스 관련 권한 중 하나일 수 있습니다.<br /><br /> 선택 합니다. 피부 여자에 게는 테이블의 하나 이상의 열에 대 한 데이터를 검색 하도록 허용 됩니다.<br /><br /> INSERT의 경우: 피부 여자에 게 테이블에 하나 이상의 열에 대 한 데이터를 포함 하는 새 행을 삽입할 수 있습니다.<br /><br /> 업데이트: 피부 여자에 게는 테이블의 하나 이상의 열에서 데이터를 업데이트 하도록 허용 됩니다.<br /><br /> 삭제: 피부 여자에 게는 테이블에서 데이터의 행을 삭제 하도록 허용 됩니다.<br /><br /> 참조: 피부 여자에 게 제약 조건 내에 있는 테이블의 하나 이상의 열을 참조할 때 허용 됩니다 (예를 들어, 고유, 참조, 또는 check 제약 조건 테이블).<br /><br /> 피부 여 자가 지정된 된 테이블 권한에서 허용 하는 작업의 범위는 데이터 원본에 따라 결정 됩니다. 예를 들어 UPDATE 권한은 피부 여자 하나의 데이터 원본에서 테이블의 모든 열 그리고 다른 데이터 원본에서 grantor가 UPDATE 권한을는 열만 업데이트를 허용 될 수 있습니다.|  
 |IS_GRANTABLE (ODBC 1.0)|7|Varchar|다른 사용자에 게 권한을 부여할 피부 여자에 게 허용 되는지 여부를 나타냅니다. "YES", "아니요" 또는 데이터 원본에 적용할 수 없거나 알 수 없는 경우 NULL입니다.<br /><br /> 권한을은 부여할 수 있는 되었거나 하나만 부여할 수 없습니다. 반환한 결과 집합 **SQLColumnPrivileges** IS_GRANTABLE 열을 제외한 모든 열에는 동일한 값을 포함 하는 두 개의 행이 포함 되지 않는 합니다.|  
   
 ## <a name="code-example"></a>코드 예  

@@ -20,16 +20,16 @@ ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d1e4c4462aa10a2d99e50e71d7b2e86fa4d8555
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 001238b4e5d47b22ca991efcd8b4ee28971d7af7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825941"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213092"
 ---
 # <a name="sqlfetch-function"></a>SQLFetch 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLFetch** 결과 집합에서 데이터의 다음 행 집합을 인출 하 고 모든 바인딩된 열에 대 한 데이터를 반환 합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "47825941"
 ```  
   
 SQLRETURN SQLFetch(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -65,7 +65,7 @@ SQLRETURN SQLFetch(
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버는 연결 된 데이터 원본 간의 통신 링크 하지 못했습니다.|  
 |22001|문자열 데이터 오른쪽 잘림|열에 대해 반환 된 가변 길이 책갈피가 잘렸습니다.|  
 |22002|지표 변수가 필요 하지만 제공 되지|NULL 데이터가 페치된 열을 갖는 *StrLen_or_IndPtr* 설정한 **SQLBindCol** (또는 설정한 SQL_DESC_INDICATOR_PTR **SQLSetDescField** 또는  **SQLSetDescRec**)가 null 포인터입니다.|  
-|22003|숫자 값 범위를 벗어났습니다.|하나 이상의 바인딩된 열에 대 한 문자열을 숫자로 숫자 값을 반환 되 었어야 하지만 (소수) 대신 전체 부분 숫자를 자를 수입니다.<br /><br /> 자세한 내용은 [SQL에서 C 데이터 형식으로 변환 데이터](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) 부록 d: 데이터 형식에서입니다.|  
+|22003|숫자 값 범위를 벗어났습니다.|하나 이상의 바인딩된 열에 대 한 문자열을 숫자로 숫자 값을 반환 되 었어야 하지만 (소수) 대신 전체 부분 숫자를 자를 수입니다.<br /><br /> 자세한 내용은 [SQL에서 C 데이터 형식으로 변환 데이터](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) 부록 d: 데이터 형식입니다.|  
 |22007|잘못 된 날짜/시간 형식|결과 집합의 문자 열 된 날짜, 시간 또는 타임 스탬프 C 구조에 바인딩되며 열에 값을 각각는 잘못 된 날짜, 시간 또는 타임 스탬프입니다.|  
 |22012|0으로 나누기|산술 식에서 값을 반환한, 부서에서 발생 하는 0입니다.|  
 |22015|간격 필드 오버플로|정확한 수치 또는 간격 SQL 형식에서 C 간격 유형을 할당 선행 필드에 유효 자릿수 손실이 발생 합니다.<br /><br /> 간격 C 형식으로 데이터를 인출할 때 C 간격 유형으로 SQL 형식의 값 표현 방식이 없기 있었습니다.|  
@@ -93,7 +93,7 @@ SQLRETURN SQLFetch(
   
  경우는 ODBC 3 *.x* 는 ODBC 2를 사용 하 여 응용 프로그램이 작동 *.x* 드라이버를 드라이버 관리자 매핑합니다 **SQLFetch** 호출 **SQLExtendedFetch** 에 대 한는 ODBC 2 *.x* 드라이버를 지 원하는 **SQLExtendedFetch**합니다. 경우 ODBC 2 *.x* 드라이버를 지원 하지 않습니다 **SQLExtendedFetch**, 드라이버 관리자 매핑합니다 **SQLFetch** 호출 **SQLFetch** ODBC 2 *.x* 드라이버 단일 행만 인출할 수 있습니다.  
   
- 자세한 내용은 [블록 커서, 스크롤 가능 커서 및 이전 버전과 호환성](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) 이전 버전과 호환성에 대 한 부록 g: 드라이버 지침입니다.  
+ 자세한 내용은 [블록 커서, 스크롤 가능 커서 및 이전 버전과 호환성](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) 부록 g:에서 이전 버전과 호환성에 대 한 드라이버 지침입니다.  
   
 ## <a name="positioning-the-cursor"></a>커서를 놓고  
  결과 집합을 만든 경우 커서는 결과 집합을 시작 하기 전에 배치 됩니다. **SQLFetch** 다음 행 집합을 인출 합니다. 호출 하는 것과 같습니다 **SQLFetchScroll** 사용 하 여 *FetchOrientation* SQL_FETCH_NEXT로 설정 합니다. 커서에 대 한 자세한 내용은 참조 하세요. [커서](../../../odbc/reference/develop-app/cursors.md) 하 고 [블록 커서](../../../odbc/reference/develop-app/block-cursors.md)합니다.  
@@ -107,15 +107,15 @@ SQLRETURN SQLFetch(
 |조건|새 행 집합의 첫 번째 행|  
 |---------------|-----------------------------|  
 |시작 하기 전에|1|  
-|*CurrRowsetStart* \< =  *LastResultRow – RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
-|*CurrRowsetStart* > *LastResultRow – RowsetSize*[1]|종료 후|  
+|*CurrRowsetStart* \< =  *LastResultRow-RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
+|*CurrRowsetStart* > *LastResultRow-RowsetSize*[1]|종료 후|  
 |종료 후|종료 후|  
   
  [1] 행 집합 크기 인출 간에 변경 되 면 이전 인출에 사용 된 행 집합 크기입니다.  
   
  [2] 행 집합 크기 인출 간에 변경 되 면 새 인출에 사용 된 행 집합 크기입니다.  
   
-|표기법|의미|  
+|Notation|의미|  
 |--------------|-------------|  
 |시작 하기 전에|블록 커서 결과 집합을 시작 하기 전에 배치 됩니다. 결과 집합을 시작 하기 전에 새 행 집합의 첫 번째 행 이면 **SQLFetch** SQL_NO_DATA를 반환 합니다.|  
 |종료 후|블록 커서는 결과의 끝을 설정한 후에 배치 됩니다. 결과 집합의 끝 뒤에 새 행 집합의 첫 번째 행 이면 **SQLFetch** SQL_NO_DATA를 반환 합니다.|  

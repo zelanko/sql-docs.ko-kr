@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/02/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], dynamic filters
@@ -21,12 +20,12 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fcc10aefddfe657e038f524f90075ae1fae0ce23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 3eba894a08df8a491df428cd5f34b4c9850ffae0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216313"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205924"
 ---
 # <a name="parameterized-row-filters"></a>매개 변수가 있는 행 필터
   매개 변수가 있는 행 필터를 사용하면 여러 게시를 만들지 않고도 데이터의 여러 파티션을 서로 다른 구독자로 보낼 수 있습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 매개 변수가 있는 행 필터를 동적 필터라고 불렀습니다. 파티션은 테이블에 있는 행의 하위 집합입니다. 게시된 테이블의 각 행은 매개 변수가 있는 필터를 만들 때 선택한 설정에 따라 하나의 파티션에만 속하거나(겹치지 않는 파티션 생성) 두 개 이상의 파티션에 속할 수 있습니다(겹치는 파티션 생성).  
@@ -38,7 +37,7 @@ ms.locfileid: "48216313"
  매개 변수가 있는 행 필터를 정의하거나 수정하려면 [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](../publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하십시오.  
   
 ## <a name="how-parameterized-filters-work"></a>매개 변수가 있는 필터의 동작 방식  
- 매개 변수가 있는 행 필터는 WHERE 절을 사용하여 게시할 데이터를 선택합니다. 정적 행 필터와는 달리 해당 절에 리터럴 값을 지정하는 대신 SUSER_SNAME() 및 HOST_NAME() 시스템 함수를 하나 또는 둘 모두 지정합니다. 사용자 정의 함수를 사용할 수도 있지만 사용자 정의 함수는 함수 본문에 SUSER_SNAME() 또는 HOST_NAME()을 포함해야 하거나 `MyUDF(SUSER_SNAME()`과 같은 시스템 함수 중 하나를 평가해야 합니다. 사용자 정의 함수의 본문에 SUSER_SNAME() 또는 HOST_NAME()이 포함되어 있는 경우 함수에 매개 변수를 전달할 수 없습니다.  
+ 매개 변수가 있는 행 필터는 WHERE 절을 사용하여 게시할 데이터를 선택합니다. 정적 행 필터와는 달리 해당 절에 리터럴 값을 지정하는 대신 하나 또는 둘 모두를 지정합니다. 사용자 정의 함수를 사용할 수도 있지만 사용자 정의 함수는 함수 본문에 SUSER_SNAME() 또는 HOST_NAME()을 포함해야 하거나 `MyUDF(SUSER_SNAME()`과 같은 시스템 함수 중 하나를 평가해야 합니다. 사용자 정의 함수의 본문에 SUSER_SNAME() 또는 HOST_NAME()이 포함되어 있는 경우 함수에 매개 변수를 전달할 수 없습니다.  
   
  SUSER_SNAME() 및 HOST_NAME() 시스템 함수는 병합 복제에 사용하는 것이 아니라 병합 복제에서 매개 변수가 있는 필터링용으로 사용합니다.  
   
@@ -94,8 +93,8 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
  예를 들어 직원 Pamela Ansman-Wolfe에게 직원 ID로 280을 할당합니다. 이 직원에 대한 구독을 만들 때 HOST_NAME() 값에 직원 ID 값(이 경우 280)을 지정합니다. 병합 에이전트가 게시자로 연결하면 HOST_NAME()에서 반환된 값을 해당 테이블의 값과 비교한 다음 **EmployeeID** 열에 280이라는 값이 포함된 행만 다운로드합니다.  
   
-> [!IMPORTANT]  
->  Host_name () 함수를 반환 합니다는 `nchar` 값 이므로 위의 예제에서는 필터 절에서 열을 숫자 데이터 형식인 경우 CONVERT 사용 해야 합니다 있습니다. 성능상의 이유로 `CONVERT(nchar,EmployeeID) = HOST_NAME()`과 같은 매개 변수가 있는 행 필터 절의 열 이름에는 함수를 적용하지 않는 것이 좋습니다. 대신 `EmployeeID = CONVERT(int,HOST_NAME())`예제에서 보여준 방식을 사용하는 것이 좋습니다. 이 절에 사용할 수 있습니다는 **@subset_filterclause** 의 매개 변수 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), 하지만 일반적으로 사용할 수 없습니다 새 게시 마법사에서 (마법사 실행 후의 유효성을 검사 하려면 필터 절 컴퓨터 이름을 변환할 수 없습니다 때문에 파일을 덮어쓰지는 `int`). 새 게시 마법사를 사용할 경우 게시에 대한 스냅숏을 만들기 전에 마법사에서 `CONVERT(nchar,EmployeeID) = HOST_NAME()` 을 지정한 다음 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 을 사용하여 해당 절을 `EmployeeID = CONVERT(int,HOST_NAME())` 로 변경하는 것이 좋습니다.  
+> [!IMPORTANT]
+>  HOST_NAME() 함수는 `nchar` 값을 반환하므로 위의 예처럼 필터 절의 열이 숫자 데이터 형식인 경우 CONVERT를 사용해야 합니다. 성능상의 이유로 `CONVERT(nchar,EmployeeID) = HOST_NAME()`과 같은 매개 변수가 있는 행 필터 절의 열 이름에는 함수를 적용하지 않는 것이 좋습니다. 대신 `EmployeeID = CONVERT(int,HOST_NAME())`예제에서 보여준 방식을 사용하는 것이 좋습니다. 이 절에 사용할 수 있습니다는 **@subset_filterclause** 의 매개 변수 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), 하지만 일반적으로 사용할 수 없습니다 새 게시 마법사에서 (마법사 실행 후의 유효성을 검사 하려면 필터 절 컴퓨터 이름을 변환할 수 없습니다 때문에 파일을 덮어쓰지는 `int`). 새 게시 마법사를 사용할 경우 게시에 대한 스냅숏을 만들기 전에 마법사에서 `CONVERT(nchar,EmployeeID) = HOST_NAME()` 을 지정한 다음 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 을 사용하여 해당 절을 `EmployeeID = CONVERT(int,HOST_NAME())` 로 변경하는 것이 좋습니다.  
   
  **HOST_NAME() 값을 재정의하려면**  
   
@@ -120,7 +119,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  필터링 옵션을 설정하려면 [Optimize Parameterized Row Filters](../publish/optimize-parameterized-row-filters.md)를 참조하십시오.  
   
 ### <a name="setting-use-partition-groups-and-keep-partition-changes"></a>'use partition groups' 및 'keep partition changes' 설정  
- **use partition groups** 및 **keep partition changes** 옵션은 모두 게시 데이터베이스에 추가 메타데이터를 저장하여 필터링된 아티클이 있는 게시에 대한 동기화 성능을 향상시킵니다. **use partition groups** 옵션은 사전 계산 파티션 기능을 사용하여 더욱 향상된 성능을 제공합니다. 이 옵션 설정 `true` 게시의 아티클에 다양 한 요구 사항 준수 하는 경우 기본적으로 합니다. 이러한 요구 사항에 대한 자세한 내용은 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](parameterized-filters-optimize-for-precomputed-partitions.md)를 참조하세요. 아티클이 사전 계산된 파티션을 사용 하기 위한 요구 사항을 충족 하지 않는 경우는 **파티션 변경 내용을 유지** 하는 옵션을 설정 `true`합니다.  
+ **use partition groups** 및 **keep partition changes** 옵션은 모두 게시 데이터베이스에 추가 메타데이터를 저장하여 필터링된 아티클이 있는 게시에 대한 동기화 성능을 향상시킵니다. **use partition groups** 옵션은 사전 계산 파티션 기능을 사용하여 더욱 향상된 성능을 제공합니다. 게시의 아티클이 일련의 요구 사항을 충족하는 경우 이 옵션은 기본적으로 `true`로 설정됩니다. 이러한 요구 사항에 대한 자세한 내용은 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](parameterized-filters-optimize-for-precomputed-partitions.md)를 참조하세요. 아티클이 사전 계산된 파티션을 사용 하기 위한 요구 사항을 충족 하지 않는 경우는 **파티션 변경 내용을 유지** 하는 옵션을 설정 `true`합니다.  
   
 ### <a name="setting-partition-options"></a>'partition options' 설정  
  아티클을 만들 때 필터링된 테이블의 데이터를 구독자에서 공유하는 방식에 따라 **partition options** 속성의 값을 지정합니다. 속성은 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)및 **Article Properties** 대화 상자를 사용하여 네 값 중 하나로 설정할 수 있습니다. 새 게시 마법사와 **게시 속성** 대화 상자의 **필터 추가** 또는 **필터 편집** 대화 상자를 사용하여 이 속성을 두 개의 값 중 하나로 설정할 수 있습니다. 다음 표에서는 사용할 수 있는 값을 요약합니다.  

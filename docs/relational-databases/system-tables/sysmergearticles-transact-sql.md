@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysmergearticles
@@ -19,12 +18,12 @@ ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 660b42ef3864e5c61d51edfc33c073b804237f45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4834ebec21b69d000a84c6d4fdd5c615f2ca833e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712571"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757015"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,8 +84,8 @@ ms.locfileid: "47712571"
 |**procname_postfix**|**nchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**well_partitioned_lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**before_upd_view_objid**|**int**|추가될 예정입니다.|  
-|**delete_tracking**|**bit**|삭제 내용을 복제하는지 여부를 나타냅니다.<br /><br /> **0** = 삭제 내용을 복제 하지 않습니다<br /><br /> **1** = 삭제 내용을 복제, 병합 복제에 대 한 기본 동작입니다.<br /><br /> 경우 값 *delete_tracking* 됩니다 **0**, 구독자에서 삭제 된 행 게시자에서 수동으로 제거 및 게시자에서 삭제 된 행은 구독자에서 수동으로 제거 해야 합니다.<br /><br /> 참고: 값 **0** 불일치가 발생 합니다.|  
-|**compensate_for_errors**|**bit**|동기화 중에 오류가 발생할 경우 보정 동작을 수행하는지 여부를 나타냅니다.<br /><br /> **0** = 보정 작업이 비활성화 됩니다.<br /><br /> **1** = 병합 복제에 대 한 기본 동작을 이러한 변경 내용을 실행 취소 하는 보상 동작이에 구독자 또는 게시자 인해 항상 적용할 수 없는 변경 합니다.<br /><br /> 참고: 값 **0** 불일치가 발생 합니다.|  
+|**delete_tracking**|**bit**|삭제 내용을 복제하는지 여부를 나타냅니다.<br /><br /> **0** = 삭제 내용을 복제 하지 않습니다<br /><br /> **1** = 삭제 내용을 복제, 병합 복제에 대 한 기본 동작입니다.<br /><br /> 경우 값 *delete_tracking* 됩니다 **0**, 구독자에서 삭제 된 행 게시자에서 수동으로 제거 및 게시자에서 삭제 된 행은 구독자에서 수동으로 제거 해야 합니다.<br /><br /> 참고: 값이 **0** 불일치가 발생 합니다.|  
+|**compensate_for_errors**|**bit**|동기화 중에 오류가 발생할 경우 보정 동작을 수행하는지 여부를 나타냅니다.<br /><br /> **0** = 보정 작업이 비활성화 됩니다.<br /><br /> **1** = 병합 복제에 대 한 기본 동작을 이러한 변경 내용을 실행 취소 하는 보상 동작이에 구독자 또는 게시자 인해 항상 적용할 수 없는 변경 합니다.<br /><br /> 참고: 값이 **0** 불일치가 발생 합니다.|  
 |**pub_range**|**bigint**|게시자 ID의 범위 크기입니다.|  
 |**range**|**bigint**|조정 시 구독자에게 할당되는 연속 ID 값의 크기입니다.|  
 |**threshold**|**int**|ID 범위 임계값 비율입니다.|  

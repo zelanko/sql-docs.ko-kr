@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
@@ -26,12 +25,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0c9d0d1885413e5931f495c6eb5cd711bc0a9106
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 323ccf41b5285f4bc395223025ea164a330c28a8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111173"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823687"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 유틸리티(Service Broker)
   **ssbdiagnose** 유틸리티는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스 구성이나 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화의 문제를 보고합니다. 이때 두 서비스나 한 서비스에 대한 구성 검사를 수행할 수 있습니다. 오류는 명령 프롬프트 창에 사람이 읽을 수 있는 텍스트 또는 다른 응용 프로그램으로 리디렉션될 수 있는 서식이 설정된 XML로 보고됩니다.  
@@ -92,7 +91,7 @@ ms.locfileid: "48111173"
   [ CONNECT TO <connectionoptions> ] [ ...n]  
   
 <connectionoptions> ::=  
-    [ –E | { -Ulogin_id [ -Ppassword ] } ]  
+    [ -E | { -Ulogin_id [ -Ppassword ] } ]  
   [ -Sserver_name[\instance_name] ]  
   [ -ddatabase_name ]  
   [ -llogin_timeout ]  
@@ -159,9 +158,9 @@ WHERE database_id = DB_ID();
   
  **ON**: 기본 설정입니다. 전체 대화 보안이 구성됩니다. 인증서가 대화의 양측에 배포되었고, 원격 서비스 바인딩이 있으며, 대상 서비스에 대한 GRANT SEND 문이 시작 사용자를 지정했습니다.  
   
- **OFF**: 대화 보안이 구성되지 않습니다. 인증서가 배포되지 않았고, 원격 서비스 바인딩이 만들어지지 않았으며, 시작자 서비스에 대한 GRANT SEND가 **public** 역할을 지정했습니다.  
+ **해제**: 대화 보안이 구성되지 않습니다. 인증서가 배포되지 않았고, 원격 서비스 바인딩이 만들어지지 않았으며, 시작자 서비스에 대한 GRANT SEND가 **public** 역할을 지정했습니다.  
   
- **ANONYMOUS**: 익명 대화 보안이 구성됩니다. 인증서 한 개가 배포되었고, 원격 서비스 바인딩이 익명 절을 지정했으며, 대상 서비스에 대한 GRANT SEND가 **public** 역할을 지정했습니다.  
+ **익명**: 익명 대화 보안이 구성됩니다. 인증서 한 개가 배포되었고, 원격 서비스 바인딩이 익명 절을 지정했으며, 대상 서비스에 대한 GRANT SEND가 **public** 역할을 지정했습니다.  
   
  **RUNTIME**  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화에 대해 런타임 오류를 일으키는 문제에 대한 보고서를 요청합니다. **-NEW** 와 **-ID** 를 둘 다 지정하지 않을 경우 **ssbdiagnose** 가 연결 옵션에 지정된 모든 데이터베이스에 있는 대화를 모두 모니터링합니다. **-NEW** 또는 **-ID** 를 지정할 경우 **ssbdiagnose** 는 매개 변수에 지정된 ID 목록을 작성합니다.  
@@ -206,7 +205,7 @@ WHERE database_id = DB_ID();
  **\<runtimeconnectionoptions>**  
  모니터링 중인 대화 요소와 연결된 서비스를 포함하는 데이터베이스에 대한 연결 정보를 지정합니다. 모든 서비스가 동일한 데이터베이스에 있으면 **CONNECT TO** 절을 하나만 지정하면 됩니다. 서비스가 서로 다른 데이터베이스에 있으면 각 데이터베이스에 대해 **CONNECT TO** 절을 제공해야 합니다. **runtimeconnectionoptions** 를 지정하지 않은 경우 **ssbdiagnose** 는 **baseconnectionoptions**의 연결 정보를 사용합니다.  
   
- **–E**  
+ **-E**  
  현재 Windows 계정을 로그인 ID로 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 대해 Windows 인증 연결을 엽니다. 로그인은 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
  -E 옵션은 SQLCMDUSER 및 SQLCMDPASSWORD 환경 변수의 사용자와 암호 설정을 무시합니다.  

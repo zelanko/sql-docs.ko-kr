@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87a5be3dc726b86b1710dd45416404cf3899f4c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 243207c6175f5604e7cc887bd7c67085e2d86291
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595701"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507639"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -79,8 +79,8 @@ sp_describe_parameter_encryption
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|결과 집합에서 행의 id입니다.|  
 |**parameter_name**|**sysname**|지정 된 매개 변수 중 하나의 이름을 합니다  *\@params* 인수입니다.|  
-|**column_encryption_algorithm**|**tinyint**|매개 변수 열에 대해 구성 하는 암호화 알고리즘을 나타내는 코드에 해당 합니다. 현재 지원 되는 값: 2 **AEAD_AES_256_CBC_HMAC_SHA_256**합니다.|  
-|**column_encryption_type**|**tinyint**|매개 변수 열에 대 한 구성 암호화 종류를 나타내는 코드에 해당 합니다. 지원 되는 값은 다음과 같습니다.<br /><br /> 0 – 일반 텍스트 (열이 암호화 되지 않습니다.)<br /><br /> 1 – 임의 암호화<br /><br /> 2-결정적 암호화 합니다.|  
+|**column_encryption_algorithm**|**tinyint**|매개 변수 열에 대해 구성 하는 암호화 알고리즘을 나타내는 코드에 해당 합니다. 현재 지원 되는 값은 다음과 같습니다. 에 대 한 2 **AEAD_AES_256_CBC_HMAC_SHA_256**합니다.|  
+|**column_encryption_type**|**tinyint**|매개 변수 열에 대 한 구성 암호화 종류를 나타내는 코드에 해당 합니다. 지원 되는 값은 다음과 같습니다.<br /><br /> 0-일반 텍스트 (열이 암호화 되지 않습니다.)<br /><br /> 1-임의 암호화<br /><br /> 2-결정적 암호화 합니다.|  
 |**column_encryption_key_ordinal**|**int**|코드의 첫 번째 결과의 행을 설정합니다. 에 해당 하는 매개 변수, 참조 되는 행의 열에 대해 구성 된 열 암호화 키를 설명 합니다.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|버전 번호 형식 정규화 알고리즘입니다.|  
   
@@ -164,7 +164,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
 |--------------------------------------|------------------------------------------------------|  
 |1|1|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [상시 암호화&#40;데이터베이스 엔진&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [상시 암호화&#40;클라이언트 개발&#41;](../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createapp.f1
@@ -13,12 +12,12 @@ ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d05645a9dcf73dff1ffff2f2370260f44ca1e015
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: dac7b74969c341b7f68c7dfbf56d2314d9ab4427
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074663"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788365"
 ---
 # <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>웹 애플리케이션 만들기 대화 상자(Master Data Services 구성 마법사)
   **웹 응용 프로그램 만들기** 대화 상자를 사용하여 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을 만들 수 있습니다. 이 웹 애플리케이션은 **웹 구성** 페이지에서 선택한 사이트에 만들어집니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "48074663"
 |**암호 확인**|지정된 사용자 계정의 암호를 다시 입력합니다. **암호** 필드와 **암호 확인** 필드에는 같은 암호를 입력해야 합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [웹 구성 페이지 &#40;Master Data Services 구성 관리자&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
+ [웹 구성 페이지&#40;Master Data Services 구성 마법사&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
  [Master Data Services에 대 한 데이터베이스 및 웹 사이트 설정](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
  [웹 응용 프로그램 요구 사항 &#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
  [마스터 데이터 관리자 웹 응용 프로그램 만들기&#40;Master Data Services&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)  

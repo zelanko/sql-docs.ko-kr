@@ -15,12 +15,12 @@ ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33259a56faa19dda2403996b6d6d8930ec2a87be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3866a45a2b55a5372769eacc0bb6b0eb1e5c088f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706001"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514497"
 ---
 # <a name="escape-sequences-in-odbc"></a>ODBC의 이스케이프 시퀀스
 언어 등의 기능, 외부 조인 및 스칼라 함수 호출 수는 일반적으로 Dbms에 의해 구현 됩니다. 그러나 이러한 기능에 대 한 구문은 경향이 DBMS 관련 표준 구문을 다양 한 표준 기관에서 정의 된 경우에 있습니다. 이 인해 ODBC는 다음 언어 기능에 대 한 표준 구문을 포함 하는 이스케이프 시퀀스를 정의 합니다.  
@@ -44,12 +44,12 @@ ms.locfileid: "47706001"
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 이스케이프 시퀀스를 인식 하 고 드라이버 특정 DBMS 문법 이스케이프 시퀀스를 대체 하 여 구문 분석 합니다. 이스케이프 시퀀스 구문에 대 한 자세한 내용은 참조 하세요. [ODBC 이스케이프 시퀀스](../../../odbc/reference/appendixes/odbc-escape-sequences.md) 부록 c: SQL 문법에서입니다.  
+ 이스케이프 시퀀스를 인식 하 고 드라이버 특정 DBMS 문법 이스케이프 시퀀스를 대체 하 여 구문 분석 합니다. 이스케이프 시퀀스 구문에 대 한 자세한 내용은 참조 하세요. [ODBC 이스케이프 시퀀스](../../../odbc/reference/appendixes/odbc-escape-sequences.md) 부록 c: SQL 문법입니다.  
   
 > [!NOTE]  
->  Odbc 2. *x*,이 이스케이프 시퀀스의 표준 구문을: **-(\*공급 업체 (***공급 업체 이름***), 제품 (***제품 이름***) * * * 확장*  **\*)--**  
+>  Odbc 2. *x*,이 이스케이프 시퀀스의 표준 구문을: **-(\*공급 업체 (**_공급 업체 이름_**), 제품 (** _제품 이름_**)**_확장_  **\*)-**  
 >   
->  이 구문은 외에도 축약형 구문 형식의 정의 된: **{0}***확장***}**  
+>  이 구문은 외에도 축약형 구문 형식의 정의 된: **{0}**_확장_**}**  
 >   
 >  Odbc 3. *x*, 긴 형식의 이스케이프 시퀀스는 더 이상 사용 되지 않습니다, 및 약식 형태는 단독으로 사용 해야 합니다.  
   

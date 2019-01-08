@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - ending queries [SQL Server]
@@ -14,12 +14,12 @@ ms.assetid: b97c5099-1039-4e6a-95df-14e1a34af344
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1841e466148b99af2438af8615014e3fed1eed88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f76a48481066ff30bbd5a825d477d0e6309abaca
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066523"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787295"
 ---
 # <a name="stop-a-query-visual-database-tools"></a>쿼리 중지(Visual Database Tools)
   쿼리에 시간이 너무 오래 걸리거나 예상한 결과를 반환하지 않은 경우 아직 완료되지 않았으면 쿼리를 중지할 수 있습니다.  

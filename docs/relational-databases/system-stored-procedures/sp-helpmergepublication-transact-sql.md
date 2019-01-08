@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpmergepublication
@@ -17,12 +16,12 @@ ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26c19d33b9834d2a8cdf1ee0b05530138c3fa006
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3328facfd0f19d6fa5f5f02a614c45cd22a79f76
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717931"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754129"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |enabled_for_internet|**int**|인터넷에서 게시를 사용할 수 있는지 여부를 나타냅니다. 하는 경우 **1**, 게시용 동기화 파일이 `C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp` 디렉터리입니다. 사용자가 FTP(파일 전송 프로토콜) 디렉터리를 만들어야 합니다. 하는 경우 **0**를 인터넷 액세스용는 게시가 활성화 되지 않았습니다.|  
 |dynamic_filter|**int**|매개 변수가 있는 행 필터가 사용되는지 여부를 나타냅니다. **0** 의미 매개 변수가 있는 행 필터가 사용 되지 않습니다.|  
 |has_subscription|**bit**|게시에 구독이 있는지 여부를 나타냅니다. **0** 은 현재이 게시에 구독이 없음을 의미 합니다.|  
-|snapshot_in_default_folder|**bit**|스냅숏 파일을 기본 폴더에 저장하는지 여부를 지정합니다.<br /><br /> 하는 경우 **1**, 스냅숏 파일이 기본 폴더에서 찾을 수 있습니다.<br /><br /> 하는 경우 **0**, 스냅숏 파일에서 지정한 대체 위치에 저장 됩니다 **alt_snapshot_folder**합니다. 대체 위치는 다른 서버, 네트워크 드라이브 또는 이동식 미디어(예, CD-ROM 또는 이동식 디스크)가 될 수 있습니다. 또한 구독자가 나중에 검색할 수 있도록 FTP 사이트에 스냅숏 파일을 저장할 수도 있습니다.<br /><br /> 참고:이 매개 변수 true 여야 하는 위치 아직 합니다 **alt_snapshot_folder** 매개 변수입니다. 이 경우 스냅숏 파일은 기본 위치와 대체 위치에 모두 저장됩니다.|  
+|snapshot_in_default_folder|**bit**|스냅숏 파일을 기본 폴더에 저장하는지 여부를 지정합니다.<br /><br /> 하는 경우 **1**, 스냅숏 파일이 기본 폴더에서 찾을 수 있습니다.<br /><br /> 하는 경우 **0**, 스냅숏 파일에서 지정한 대체 위치에 저장 됩니다 **alt_snapshot_folder**합니다. 대체 위치는 다른 서버, 네트워크 드라이브 또는 이동식 미디어(예, CD-ROM 또는 이동식 디스크)가 될 수 있습니다. 또한 구독자가 나중에 검색할 수 있도록 FTP 사이트에 스냅숏 파일을 저장할 수도 있습니다.<br /><br /> 참고: 이 매개 변수를 true의 위치를 아직 합니다 **alt_snapshot_folder** 매개 변수입니다. 이 경우 스냅숏 파일은 기본 위치와 대체 위치에 모두 저장됩니다.|  
 |alt_snapshot_folder|**nvarchar(255)**|스냅숏의 대체 폴더 위치를 지정합니다.|  
 |pre_snapshot_script|**nvarchar(255)**|에 대 한 포인터를 지정 합니다는 **.sql** 전에 복제 된 개체의 병합 에이전트가 실행 되는 파일을 구독자에서 스냅숏을 적용할 때 스크립트입니다.|  
 |post_snapshot_script|**nvarchar(255)**|에 대 한 포인터를 지정 된 **.sql** 병합 에이전트가 실행 하는 모든 다른 파일 복제 된 개체 스크립트 및 데이터는 초기 동기화 동안 적용 된 합니다.|  
@@ -94,7 +93,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |ftp_subdirectory|**nvarchar(255)**|FTP를 사용하여 스냅숏을 배달할 때 배포 에이전트에서 스냅숏 파일을 선택할 수 있는 위치를 지정합니다.|  
 |ftp_login|**sysname**|FTP 서비스 연결에 사용되는 사용자 이름입니다.|  
 |conflict_retention|**int**|충돌을 보존할 보존 기간을 일 수로 지정합니다. 지정한 일 수가 지나면 충돌 행은 충돌 테이블에서 제거됩니다.|  
-|keep_partition_changes|**int**|해당 게시에 대해 동기화가 최적화되는지 여부를 지정합니다. **keep_partition_changes** 의 기본값은 **0**합니다. 값이 **0** 동기화가 최적화 되지 않으며 모든 구독자에 게 보낸 파티션은 파티션에서 데이터가 변경 될 때 확인 됩니다.<br /><br /> **1** 동기화가 최적화 하 고 변경 된 파티션에 행을 가진 구독자만 영향을 받는 함을 의미 합니다.<br /><br /> 참고: 기본적으로 병합 게시가이 옵션 보다 높은 수준의 최적화를 제공 하는 사전 계산된 파티션을 사용 합니다. 자세한 내용은 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) 하 고 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)합니다.|  
+|keep_partition_changes|**int**|해당 게시에 대해 동기화가 최적화되는지 여부를 지정합니다. **keep_partition_changes** 의 기본값은 **0**합니다. 값이 **0** 동기화가 최적화 되지 않으며 모든 구독자에 게 보낸 파티션은 파티션에서 데이터가 변경 될 때 확인 됩니다.<br /><br /> **1** 동기화가 최적화 하 고 변경 된 파티션에 행을 가진 구독자만 영향을 받는 함을 의미 합니다.<br /><br /> 참고: 기본적으로 병합 게시는 사전 계산 파티션을 사용하므로 이 옵션보다 높은 수준의 최적화를 제공합니다. 자세한 내용은 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) 하 고 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)합니다.|  
 |allow_subscription_copy|**int**|해당 게시를 구독하는 구독 데이터베이스를 복사하는 기능이 활성화되었는지 여부를 지정합니다. 값이 **0** 복사 허용 되지 않음을 의미 합니다.|  
 |allow_synctoalternate|**int**|대체 동기화 파트너가 해당 게시자와 동기화될 수 있는지 여부를 지정합니다. 값이 **0** 동기화 파트너가 허용 되지 않음을 의미 합니다.|  
 |validate_subscriber_info|**nvarchar(500)**|구독자 정보를 검색하고 구독자에서 매개 변수가 있는 행 필터링 조건의 유효성을 검사하는 데 사용하는 함수를 나열합니다. 정보가 각 병합으로 일관성 있게 분할되는지 확인하는 데 유용합니다.|  
@@ -128,7 +127,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_helpmergepublication](../../relational-databases/replication/codesnippet/tsql/sp-helpmergepublication-_1.sql)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [게시 속성 보기 및 수정](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   

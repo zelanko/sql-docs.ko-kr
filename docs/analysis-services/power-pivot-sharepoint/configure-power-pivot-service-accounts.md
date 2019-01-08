@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 54dc66e30356f3896d7ce509bf83e56a1973c5b2
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: 55eb472ef14e980f77a47a2c6989031cebec91e9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984845"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509548"
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Power Pivot 서비스 계정 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "38984845"
   
  [문제 해결: 수동으로 관리 권한 부여](#updatemanually)  
   
- [문제 해결: 중앙 관리 또는 SharePoint Foundation 웹 응용 프로그램 서비스의 암호 만료로 인해 발생한 HTTP 503 오류 해결](#expired)  
+ [문제 해결: 확인할 HTTP 503 오류 중앙 관리 또는 SharePoint Foundation에 대 한 암호 만료로 인해 웹 응용 프로그램 서비스](#expired)  
   
 ##  <a name="bkmk_passwordssas"></a> SQL Server Analysis Services(Power Pivot) 인스턴스에 대해 만료된 암호 업데이트  
   
@@ -110,7 +110,7 @@ ms.locfileid: "38984845"
   
 |요구 사항|Description|  
 |-----------------|-----------------|  
-|프로비전 요구 사항|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스는 서비스 응용 프로그램을 만들 때 사용할 수 있는 팜의 공유 리소스입니다. 서비스 애플리케이션을 만들 때 서비스 애플리케이션 풀을 지정해야 합니다. 이 풀은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 사용하거나 PowerShell 명령 등의 두 가지 방법으로 지정할 수 있습니다.<br /><br /> 고유 계정으로 실행되도록 애플리케이션 풀 ID를 구성했을 수 있습니다. 그렇지 않은 경우 다른 계정으로 실행되도록 지금 변경하는 것이 좋습니다.|  
+|프로비전 요구 사항|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스는 서비스 응용 프로그램을 만들 때 사용할 수 있는 팜의 공유 리소스입니다. 서비스 애플리케이션을 만들 때 서비스 애플리케이션 풀을 지정해야 합니다. 이 풀은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 사용하거나 PowerShell 명령 등의 두 가지 방법으로 지정할 수 있습니다.<br /><br /> 고유 계정으로 실행되도록 애플리케이션 풀 ID를 구성했을 수 있습니다. 하지만 그렇지 않은 경우 다른 계정으로 실행 되도록 지금 변경 합니다.|  
 |도메인 사용자 계정 요구 사항|애플리케이션 풀 ID는 Windows 도메인 사용자 계정이어야 합니다. 기본 제공 컴퓨터 계정(예: 네트워크 서비스 또는 로컬 서비스)은 사용할 수 없습니다.|  
 |사용 권한 요구 사항|이 계정에는 컴퓨터에 대한 로컬 시스템 관리자 권한이 필요하지 않습니다. 그러나 이 계정에는 동일한 컴퓨터에 설치된 로컬 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 에 대한 Analysis Services 시스템 관리자 권한이 있어야 합니다. 이러한 권한은 SQL Server 설치 프로그램을 실행하거나 중앙 관리에서 애플리케이션 풀 ID를 설정 또는 변경할 때 자동으로 부여됩니다.<br /><br /> [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]로 쿼리를 전달하려면 관리 권한이 필요합니다. 상태를 모니터링하고 비활성 세션을 종료하며 추적 이벤트를 수신 대기할 때도 관리 권한이 필요합니다.<br /><br /> 계정에는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 애플리케이션 데이터베이스에 대한 연결, 읽기 및 쓰기 권한이 있어야 합니다. 이러한 권한은 애플리케이션을 만들 때 자동으로 부여되며 중앙 관리에서 계정이나 암호를 변경할 때 자동으로 업데이트됩니다.<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램은 파일을 검색하기 전에 SharePoint 사용자가 데이터를 볼 권한이 있는지를 확인하지만 사용자를 가장하지는 않습니다. 가장에 대한 사용 권한 요구 사항은 없습니다.|  
 |확장 요구 사항|없음|  
@@ -159,7 +159,7 @@ ms.locfileid: "38984845"
   
     1.  애플리케이션 풀 이름을 마우스 오른쪽 단추로 클릭하고 **고급 설정**을 선택합니다.  
   
-    2.  **ID** 를 선택하고 ... 버튼을 클릭하여 애플리케이션 풀 ID 대화 상자를 엽니다.  
+    2.  선택 **Identity** 클릭를... 단추 응용 프로그램 풀 Id 대화 상자를 엽니다.  
   
     3.  **설정**을 클릭합니다.  
   
@@ -181,6 +181,6 @@ ms.locfileid: "38984845"
   
 ## <a name="see-also"></a>관련 항목  
  [SharePoint용 PowerPivot 서버 시작 또는 중지](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)   
- [파워 피벗 구성 무인된 데이터 새로 고침 계정 (SharePoint 용 파워 피벗)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)  
+ [Power Pivot 무인 데이터 새로 고침 계정 구성(SharePoint용 Power Pivot)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)  
   
   

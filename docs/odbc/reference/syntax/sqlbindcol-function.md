@@ -20,16 +20,16 @@ ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5092ae588c69c28fcfa243101b57f97da75e8681
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab434e90f1b92911bfdfb9f66da67244e26ef776
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755321"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515951"
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLBindCol** 결과 집합의 열에 응용 프로그램 데이터 버퍼를 바인딩합니다.  
@@ -52,10 +52,10 @@ SQLRETURN SQLBindCol(
  [입력] 문 핸들입니다.  
   
  *ColumnNumber*  
- [입력] 결과의 수에 바인딩되도록 열을 설정 합니다. 열은 열 0 인 책갈피 열의 0부터 증가 열 순서 대로 번호가 지정 됩니다. 책갈피 사용 되지 않는 경우-SQL_ATTR_USE_BOOKMARKS 문 특성 SQL_UB_OFF로 되어,-다음 열 번호는 1부터 시작 합니다.  
+ [입력] 결과의 수에 바인딩되도록 열을 설정 합니다. 열은 열 0 인 책갈피 열의 0부터 증가 열 순서 대로 번호가 지정 됩니다. 책갈피 사용 되지 않는 경우 SQL_ATTR_USE_BOOKMARKS 문 특성 SQL_UB_OFF-를, 열 번호 1부터 시작 합니다.  
   
  *TargetType*  
- [입력] C 데이터 형식 식별자를 \* *TargetValuePtr* 버퍼입니다. 데이터를 검색 하는 사용 하 여 데이터 원본에서 하는 경우 **SQLFetch**를 **SQLFetchScroll**합니다 **SQLBulkOperations**, 또는 **SQLSetPos**, 드라이버를이 형식; 데이터 변환 사용 하 여 데이터 원본에 데이터를 보낼 때 **SQLBulkOperations** 하거나 **SQLSetPos**, 드라이버는이 형식에서 데이터를 변환 합니다. 유효한 C 데이터 형식 및 형식 식별자의 목록을 참조 하세요. 합니다 [C 데이터 형식](../../../odbc/reference/appendixes/c-data-types.md) 부록 d: 데이터 형식에 대 한 섹션입니다.  
+ [입력] C 데이터 형식 식별자를 \* *TargetValuePtr* 버퍼입니다. 데이터를 검색 하는 사용 하 여 데이터 원본에서 하는 경우 **SQLFetch**를 **SQLFetchScroll**합니다 **SQLBulkOperations**, 또는 **SQLSetPos**, 드라이버를이 형식; 데이터 변환 사용 하 여 데이터 원본에 데이터를 보낼 때 **SQLBulkOperations** 하거나 **SQLSetPos**, 드라이버는이 형식에서 데이터를 변환 합니다. 유효한 C 데이터 형식 및 형식 식별자의 목록을 참조 하세요. 합니다 [C 데이터 형식](../../../odbc/reference/appendixes/c-data-types.md) 섹션의 부록 d: 데이터 형식입니다.  
   
  경우는 *TargetType* 인수가 SQL_DESC_DATETIME_INTERVAL_PRECISION 및 자릿수가 SQL_DESC_PRECISION 필드에 설정 된 대로 기본 간격 선행 정밀도 (2) 및 기본 간격 초 전체 자릿수 (6) 간격 데이터 형식 각각은 카드가 데이터에 사용 됩니다. 경우는 *TargetType* 인수 SQL_C_NUMERIC, 기본 전체 자릿수 (드라이버 정의 됨) 및 (0), 확장 된 카드가의 SQL_DESC_PRECISION 및 자릿수가 SQL_DESC_SCALE 필드에 설정 된 대로 기본 이면 데이터에 사용 됩니다. 모든 기본 전체 자릿수 또는 소수 적합 하지 않은 경우 응용 프로그램이 명시적으로 설정 해야 적절 한 설명자 필드를 호출한 **SQLSetDescField** 하거나 **SQLSetDescRec**합니다.  
   
@@ -126,7 +126,7 @@ SQLRETURN SQLBindCol(
 |HY013|메모리 관리 오류|기본 메모리 개체에 액세스할 수 없습니다, 가능한 경우 메모리 부족으로 인해 함수 호출을 처리할 수 없습니다.|  
 |HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|인수에 지정 된 값 (DM) *BufferLength* 0 보다 작습니다.<br /><br /> (DM) 드라이버는 ODBC 2 되었습니다. *x* 드라이버를 *ColumnNumber* 인수는 0이 고, 인수에 지정 된 값으로 설정 되었습니다 *BufferLength* 수준이 4 없습니다.|  
 |HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용으로 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 하세요. [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.|  
-|HYC00|선택적 기능이 구현 되지 않았습니다|드라이버 또는 데이터 원본 조합에 의해 지정 된 변환을 지원 하지 않습니다 합니다 *TargetType* 인수 및 해당 열의 드라이버별 SQL 데이터 형식입니다.<br /><br /> 인수 *ColumnNumber* 되었습니다. 0 및 드라이버 책갈피를 지원 하지 않습니다.<br /><br /> 드라이버는 ODBC 2에만 지원합니다. *x* 고 인수가 *TargetType* 다음 중 하나 였습니다.<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> C 간격 데이터 형식 중 하나에 나열 [C 데이터 형식](../../../odbc/reference/appendixes/c-data-types.md) 부록 d: 데이터 형식에서입니다.<br /><br /> 드라이버 3.50, 및 인수 이전 ODBC 버전 지원 *TargetType* SQL_C_GUID 되었습니다.|  
+|HYC00|선택적 기능이 구현 되지 않았습니다|드라이버 또는 데이터 원본 조합에 의해 지정 된 변환을 지원 하지 않습니다 합니다 *TargetType* 인수 및 해당 열의 드라이버별 SQL 데이터 형식입니다.<br /><br /> 인수 *ColumnNumber* 되었습니다. 0 및 드라이버 책갈피를 지원 하지 않습니다.<br /><br /> 드라이버는 ODBC 2에만 지원합니다. *x* 고 인수가 *TargetType* 다음 중 하나 였습니다.<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> C 간격 데이터 형식 중 하나에 나열 [C 데이터 형식](../../../odbc/reference/appendixes/c-data-types.md) 부록 d: 데이터 형식입니다.<br /><br /> 드라이버 3.50, 및 인수 이전 ODBC 버전 지원 *TargetType* SQL_C_GUID 되었습니다.|  
 |HYT01|연결 제한 시간 만료 됨|데이터 원본 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|(DM) 드라이버를 사용 하 여 연결 합니다 *StatementHandle* 함수를 지원 하지 않습니다.|  
   
@@ -144,7 +144,7 @@ SQLRETURN SQLBindCol(
 ## <a name="binding-columns"></a>열 바인딩  
  응용 프로그램이 호출 열을 바인딩하려면 **SQLBindCol** 를 열 수, 유형, 주소 및 데이터 버퍼의 길이 및 길이/표시기 버퍼의 주소를 전달 합니다. 이러한 주소를 사용 하는 방법에 대 한 내용은 "버퍼 주소를"이이 섹션의 뒷부분에 나오는 참조 하세요. 바인딩 열에 대 한 자세한 내용은 참조 하세요. [를 사용 하 여 SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)합니다.  
   
- 이러한 버퍼를 사용 하 여 지연 됩니다. 응용 프로그램에 바인딩합니다 이므로 **SQLBindCol** 하지만 드라이버에 다른 함수에서 액세스-namely **SQLBulkOperations**를 **SQLFetch**,  **SQLFetchScroll**, 또는 **SQLSetPos**합니다. 포인터에 지정 되어 있는지 확인 해야 하는 응용 프로그램의 것 **SQLBindCol** 바인딩을 적용 동안 유효 합니다. 이러한 포인터를 사용할 수 없게 허용-버퍼를 해제 하는 예를 들어,-및 다음 유효 하도록 예상 하는 함수 호출 결과 정의 되지 않습니다. 자세한 내용은 [지연 버퍼](../../../odbc/reference/develop-app/deferred-buffers.md)합니다.  
+ 이러한 버퍼를 사용 하 여 지연 됩니다. 즉, 응용 프로그램에서는 **SQLBindCol** 하지만 드라이버에 액세스 하 고 다른 기능에서 namely **SQLBulkOperations**하십시오 **SQLFetch**,  **SQLFetchScroll**, 또는 **SQLSetPos**합니다. 포인터에 지정 되어 있는지 확인 해야 하는 응용 프로그램의 것 **SQLBindCol** 바인딩을 적용 동안 유효 합니다. 이 응용 프로그램에서는 이러한 포인터를 사용할 수 없게-예를 들어-버퍼를 해제 하 고 필요한 유효 하도록 함수 호출을 하는 경우 결과가 정의 되지 않습니다. 자세한 내용은 [지연 버퍼](../../../odbc/reference/develop-app/deferred-buffers.md)합니다.  
   
  새 바인딩을 사용 하 여 대체 될, 열 바인딩되지 또는 문을 해제 될 때까지 바인딩이 적용 됩니다.  
   
@@ -232,7 +232,7 @@ SQLRETURN SQLBindCol(
 ## <a name="buffer-addresses"></a>버퍼 주소  
  합니다 *버퍼 주소* 데이터 또는 길이/표시기 버퍼의 실제 주소입니다. 드라이버 (예: 가져오기 시간 동안) 버퍼에 쓰기 전에 방금 버퍼 주소를 계산 합니다. 에 지정 된 주소를 사용 하는 다음 수식에서 계산 되는 *TargetValuePtr* 및 *StrLen_or_IndPtr* 인수, 바인딩 오프셋 및 행 번호:  
   
- *주소에 바인딩된* + *오프셋 바인딩* + ((*행 번호* – 1) x *요소 크기*)  
+ *주소에 바인딩된* + *오프셋 바인딩* + ((*행 번호* -1) x *요소 크기*)  
   
  여기서는 다음 표에 설명 된 대로 수식의 변수에 정의 됩니다.  
   

@@ -14,12 +14,12 @@ ms.assetid: c5b33f75-42d4-4598-89e7-94815c142ce6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 87659ab790e7583c23ac9c597603b531734c7b25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ba2f28e4f2e66fd642273d06409eb128d219d8b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106463"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543699"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>예측 마법사(Excel용 데이터 마이닝 추가 기능)
   ![데이터 마이닝 리본의 연결 마법사](media/dmc-forecast.gif "연결 데이터 마이닝 리본의 마법사")  
@@ -67,7 +67,7 @@ ms.locfileid: "48106463"
     -   **임시 모델 사용**. 이 옵션을 선택하면 모델이 서버에 저장되지 않습니다. 임시 모델은 Excel을 닫을 때 삭제됩니다.  
   
 ### <a name="requirements"></a>요구 사항  
- 데이터에 시계열로 사용할 수 있는 열이 하나 이상 포함되어야 합니다. 이 열의 값은 고유하고 연속적이어야 합니다(즉, 간격이 없어야 함). 마법사를 실행하기 전에 시계열 열을 기준으로 데이터를 오름차순으로 정렬합니다.  
+ 데이터에 시계열로 사용할 수 있는 열이 하나 이상 포함되어야 합니다. 이 열의 값은 고유 하 고 연속적 이어야 합니다-, 없어야 간격이 없어야 합니다. 마법사를 실행하기 전에 시계열 열을 기준으로 데이터를 오름차순으로 정렬합니다.  
   
  데이터에 시간 또는 날짜 열이 포함되지 않은 경우 임의 숫자 계열을 지정하거나 마법사에서 자동으로 만들 수 있습니다. 마법사에서 계열 순서 열을 자동으로 만들 경우, 마법사를 시작하기 전에 다른 열이 원하는 순서로 정렬되어 있는지 확인합니다.  
   

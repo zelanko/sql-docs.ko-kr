@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: f38c2380-24e0-4484-806c-d076f4f194cf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f7f2d41ac372f774d51336647c3ff89a775771a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 53b96a33e4fc369c486dcdf19ed34279898eee57
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147533"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784645"
 ---
 # <a name="audit-schema-object-management-event-class"></a>Audit Schema Object Management 이벤트 클래스
   **Audit Schema Object Management** 이벤트 클래스는 서버 개체를 생성, 변경 또는 삭제할 때 발생합니다.  

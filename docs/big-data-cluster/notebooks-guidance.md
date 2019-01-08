@@ -1,30 +1,34 @@
 ---
-title: SQL Server 2019 미리 보기에서 notebook을 사용 하는 방법 | Microsoft Docs
-description: ''
+title: Azure Data Studio에서 노트북을 실행 합니다.
+titleSuffix: SQL Server 2019 big data clusters
+description: 이 문서에서는 Azure Data Studio conneected에서 SQL Server 2019 빅 데이터 클러스터에 Jupyter Notebook을 실행 하는 방법에 설명 합니다.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 9f9db16431cd6c3befbb32383725ec008f5a9081
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: af1393b38b297e451903d5a39942a3e878c88ee6
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221639"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246612"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>SQL Server 2019 미리 보기에서 notebook을 사용 하는 방법
 
-이 문서는 클러스터에서 Jupyter Notebook을 시작할 고유한 전자 필기장 제작을 시작 하는 방법을 설명 합니다. 또한 클러스터에 대 한 작업을 제출 하는 방법을 보여 줍니다.
+이 문서에는 빅 데이터 클러스터에 Jupyter 노트북을 시작 하는 방법 및 고유한 전자 필기장 제작을 시작 하는 방법을 설명 합니다. 또한 클러스터에 대 한 작업을 제출 하는 방법을 보여 줍니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 Notebook을 사용 하려면 다음 필수 구성 요소를 설치 해야 합니다.
 
 - [SQL Server 2019 빅 데이터 클러스터](deployment-guidance.md)
-- [Azure Data Studio](../azure-data-studio/what-is.md)
-- [SQL Server 2019 확장 (미리 보기)](../azure-data-studio/sql-server-2019-extension.md)합니다.
+- [SQL Server 2019 빅 데이터 도구도](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **SQL Server 2019 확장**
+   - **Kubectl**
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -105,15 +109,15 @@ PySpark 커널을 선택 하 고 다음 코드에서 셀 형식에:
 
 ![Image12](media/notebooks-guidance/image12.png)
 
-아래 – 옵션 아이콘을 클릭할 때에 "셀" 옵션을 볼 수 있습니다.
+아래 옵션 아이콘을 클릭할 때에 "셀" 옵션을 볼 수 있습니다.
 
 ![Image13](media/notebooks-guidance/image13.png)
 
-– 모든 셀에 대 한 옵션은 다음과 같습니다.
+다음은 모든 셀에 대 한 옵션
 
 ![Image14](media/notebooks-guidance/image14.png)-
 
-셀 입력/붙여넣기 및 커널에 대 한 드롭다운 목록에서 Spark 커널은 이제 선택
+-셀 입력/붙여넣기 및 커널에 대 한 드롭다운 목록에서 Spark 커널은 이제 선택
 
 ![Image15](media/notebooks-guidance/image15.png)
 

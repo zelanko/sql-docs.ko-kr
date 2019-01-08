@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d9f922dfcc073ce72834515b42691bef2e3c90d3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2d777d39bed047ac1807ebb2413eec3539d70428
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019050"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514707"
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>단원 3-2-Customer 차원 수정
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "34019050"
   
 3.  같은 방법으로 다음 특성 이름을 변경합니다.  
   
-    -   **English Education** 특성을 **Education**  
+    -   **English Education** 특성-변경 **교육**  
   
-    -   **English Occupation** 특성을 **Occupation**  
+    -   **English Occupation** 특성-변경 **Occupation**  
   
-    -   **State Province Name** 특성을 **State-Province**  
+    -   **State Province Name** 특성-변경 **State-province**  
   
 4.  **파일** 메뉴에서 **모두 저장**을 클릭합니다.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "34019050"
   
 4.  **Name** 속성 필드에 **Full Name**을 입력합니다.  
   
-5.  아래쪽의 **NameColumn** 속성 필드를 클릭한 다음 찾아보기(**…**) 단추를 클릭하여 **이름 열** 대화 상자를 엽니다.  
+5.  클릭 합니다 **NameColumn** 속성 아래에 필드 및 클릭 한 다음 (**...** ) 버튼을 클릭 하 여 **이름 열** 대화 상자.  
   
 6.  **원본 열** 목록의 맨 아래에서 **FullName** 을 선택하고 **확인**을 클릭합니다.  
   
@@ -265,7 +265,7 @@ ms.locfileid: "34019050"
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [Product 차원 수정](../analysis-services/lesson-3-3-modifying-the-product-dimension.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [차원 특성 속성 참조](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
 [차원에서 특성 제거](../analysis-services/multidimensional-models/attribute-properties-remove-an-attribute-from-a-dimension.md)  
 [특성 이름 변경](../analysis-services/multidimensional-models/attribute-properties-rename-an-attribute.md)  

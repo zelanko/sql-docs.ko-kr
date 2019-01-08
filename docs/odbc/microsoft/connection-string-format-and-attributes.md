@@ -14,12 +14,12 @@ ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a28c3f7128d05307afba95d288f6a20afd75aeea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 98c8e18432bfd386555863a917824b18b2d11885
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652471"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542784"
 ---
 # <a name="connection-string-format-and-attributes"></a>연결 문자열 형식 및 특성
 > [!IMPORTANT]  
@@ -45,7 +45,7 @@ ms.locfileid: "47652471"
 |DSN|드라이버 탭에서 데이터 원본 이름을 나열 합니다 **ODBC 데이터 원본 관리자** 대화 상자.|""|  
 |PWD|액세스 하려면 Oracle 서버에 대 한 암호입니다. 이 드라이버는 Oracle 암호를 배치 하는 제한 사항을 지원 합니다.|""|  
 |SERVER|액세스 하려면 Oracle 서버에 대 한 연결 문자열입니다.|""|  
-|UID|Oracle 서버 사용자 이름입니다. 시스템에 따라이 특성 되지 않을 수 있습니다 (옵션)-즉, 특정 데이터베이스 및 테이블 필요할 수 있습니다이 특성 보안상의 이유로 합니다.<br /><br /> 사용 하 여 "/" Oracle을 사용 하도록 운영 체제 인증 합니다.|""|  
+|UID|Oracle 서버 사용자 이름입니다. 시스템에 따라 선택적이 특성이 설정 되지 않을 수 있습니다-즉, 특정 데이터베이스 및 테이블 필요할 수 있습니다이 특성 보안상의 이유로 합니다.<br /><br /> 사용 하 여 "/" Oracle을 사용 하도록 운영 체제 인증 합니다.|""|  
 |BUFFERSIZE|열을 가져올 때 사용 되는 최적의 버퍼 크기입니다.<br /><br /> 드라이버 페치 Oracle 서버 로부터의 페치에서 하나의이 크기의 버퍼에 맞게 충분 한 행 반환 되도록 최적화 합니다. 더 큰 값을 많은 양의 데이터를 인출 하는 경우 성능을 향상 시키기 위해는 경향이 있습니다.|65535|  
 |SYNONYMCOLUMNS|이 값이 true (1), SQLColumn () API 호출을 열 정보를 반환 합니다. SQLColumn (), 테이블 및 뷰에 대 한 열만 반환합니다. Oracle 용 ODBC 드라이버는이 값이 설정 되지 않은 빠른 액세스를 제공 합니다.|1|  
 |REMARKS|이 값이 true (1), 드라이버에 대 한 설명 열을 반환 합니다는 [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) 결과 집합입니다. Oracle 용 ODBC 드라이버는이 값이 설정 되지 않은 빠른 액세스를 제공 합니다.|0|  

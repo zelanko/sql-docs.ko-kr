@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed73e9e97c34ad1bd1d3aa4e0d37a351cbac0703
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: d98e87d18d76162e5bf9dcb4779a8bc7fec74385
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798047"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617630"
 ---
 # <a name="wideworldimporters-database-catalog"></a>WideWorldImporters 데이터베이스 카탈로그
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -140,7 +140,7 @@ WideWorldImporters 소수의 스키마를 사용 하므로 데이터베이스 �
 - 모든 스키마, 테이블, 열, 인덱스 및 check 제약 조건에는 Description 확장 속성의 개체 또는 열 용도 파악 하는 경우 메모리 최적화 테이블에는이 확장된 속성을 현재 지원 하지 않으므로 합니다.
 - 모든 외래 키 같은 왼쪽 구성 요소에 있는 다른 비클러스터형 인덱스 없는 자동으로 인덱싱됩니다.
 - 테이블에서 자동 번호 매기기 시퀀스를 기반으로 합니다. 이러한 시퀀스는 연결 된 서버 및 ID 열 보다 유사한 환경에서 사용 하기 쉽습니다. 메모리 최적화 테이블에서 SQL Server 2016을 지원 하지 않으므로 ID 열을 사용 합니다.
-- 이러한 테이블에 대 한 단일 시퀀스 (트랜잭션 Id)는: CustomerTransactions, SupplierTransactions, 및 StockItemTransactions 합니다. 이 테이블의 집합을 단일 시퀀스를 가질 수 있습니다 하는 방법을 보여 줍니다.
+- 단일 시퀀스 (트랜잭션 Id)는 이러한 테이블에 사용 됩니다. CustomerTransactions SupplierTransactions, 하며 StockItemTransactions 합니다. 이 테이블의 집합을 단일 시퀀스를 가질 수 있습니다 하는 방법을 보여 줍니다.
 - 일부 열에 적절 한 기본값입니다.
 
 ### <a name="security-schemas"></a>보안 스키마
@@ -187,7 +187,7 @@ WideWorldImporters 소수의 스키마를 사용 하므로 데이터베이스 �
 |-----------------------------|---------------------|
 |Configuration_ApplyDataLoadSimulationProcedures|절차를 다시 만드는 데 필요한 데이터에 대 한 부하 시뮬레이션 합니다. 이 현재 날짜 까지의 데이터를 가져오는에 필요 합니다.|
 |Configuration_RemoveDataLoadSimulationProcedures|제거 절차 다시 완료 되 면 데이터 시뮬레이션 합니다.|
-|DeactiveTemporalTablesBeforeDataLoad|모든 temporal 테이블의 임시 특성을 제거 하 고 해당 하는 경우 sys temporal 테이블을 허용 하는 보다 이전 날짜에 적용 되 고 된 것 처럼 변경할 수 있도록 트리거를 적용 합니다.|
+|DeactivateTemporalTablesBeforeDataLoad|모든 temporal 테이블의 임시 특성을 제거 하 고 해당 하는 경우 sys temporal 테이블을 허용 하는 보다 이전 날짜에 적용 되 고 된 것 처럼 변경할 수 있도록 트리거를 적용 합니다.|
 |PopulateDataToCurrentDate|현재 날짜 까지의 데이터를 표시 하는 데 사용 합니다. 초기 백업에서 데이터베이스를 복원한 후 다른 구성 옵션 보다 먼저 실행 되어야 합니다.|
 |ReactivateTemporalTablesAfterDataLoad|데이터 일관성 확인을 포함 하 여 temporal 테이블을 다시 설정 합니다. (연결 된 트리거를 제거) 합니다.|
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2bf94fb04bd6f96de019c7e8543b8a626cebe439
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c5b9a1eddf8bf06a9d9e5b59754b2c6a34b94267
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699130"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524475"
 ---
 # <a name="antivirus-software-for-analytics-platform-system"></a>Analytics Platform System에 대 한 바이러스 백신 소프트웨어
 데이터 센터에서 바이러스 백신 소프트웨어에 필요한 경우 분석 플랫폼 시스템에 바이러스 백신 소프트웨어를 설치 하려면 이러한 지침을 따르세요. 데이터 센터의 요구 사항 확실 하지 않은 바이러스 백신 소프트웨어를 설치 하지 않는 것이 좋습니다.  
@@ -46,13 +46,13 @@ ms.locfileid: "51699130"
 ## <a name="exclusion-list-for-virtual-machines-vms"></a>Virtual Machines (Vm)에 대 한 제외 목록  
 Vm에서 바이러스 백신 소프트웨어를 설치 하려면 다음 목록을 디렉터리 및 파일을 제외 합니다. 이러한는 바이러스 백신 소프트웨어가 검색 되지 않습니다.  
   
-***PDW_region*-CTL01**  
+**_PDW_region_-CTL01**  
   
 -   C:\windows\cluster\  
   
 -   G:\  
   
-***appliance_domain *-AD01** 및 ***appliance_domain *-AD02**  
+**_appliance_domain_-AD01** 하 고  **_appliance_domain_-AD02**  
   
 -   제한 없음  
   
@@ -62,15 +62,15 @@ Vm에서 바이러스 백신 소프트웨어를 설치 하려면 다음 목록�
   
 -   G:\  
   
-***appliance_domain*-VMM**  
+**_appliance_domain_VMM**  
   
 -   제한 없음  
   
-***appliance_domain*-WDS**  
+**_appliance_domain_-WDS**  
   
 -   제한 없음  
   
-***appliance_domain*-ISCSI01**  
+**_appliance_domain_-ISCSI01**  
   
 -   C:\iscsitarget  
   

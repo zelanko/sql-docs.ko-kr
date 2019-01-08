@@ -11,12 +11,12 @@ ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 74e98548349d073cf5f008c6015ce55ac3768acb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40b08c40b8b327ad26bb2974627e81000846a1b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067210"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350656"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Analysis Services 캐시 지우기
   Analysis Services는 데이터를 캐시하여 쿼리 성능을 향상시킵니다. 이 항목에서는 XMLA ClearCache 명령을 사용하여 MDX 쿼리에 대한 응답으로 만들어진 캐시를 지우는 데 대한 권장 사항을 제공합니다. ClearCache의 실행 효과는 테이블 형식 모델을 사용하는지 다차원 모델을 사용하는지에 따라 달라집니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "48067210"
   
  ClearCache를 실행하면 xVelocity 메모리 내 분석 엔진(VertiPaq)의 메모리 내 캐시도 지워집니다. xVelocity 엔진에서는 작은 캐시 결과 집합을 유지합니다. ClearCache를 실행하면 xVelocity 엔진의 이러한 캐시가 무효화됩니다.  
   
- 마지막으로, ClearCache를 실행 하면에 제거 됩니다 남아 있던 잔여 데이터 메모리 테이블 형식 모델을 다시 구성 하는 경우 `DirectQuery` 모드입니다. 이 사실은 모델에 포함되어 있는 중요한 데이터가 엄격하게 제어될 수 있는 경우에 특히 중요합니다. 이 경우에는 중요한 데이터가 필요한 위치에만 존재하도록 하기 위해 수행할 수 있는 예방 조치로 ClearCache를 실행합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 모델을 배포하고 쿼리 모드를 변경하는 경우에는 캐시를 수동으로 지워야 합니다. 반대로 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]를 사용하여 모델과 파티션에 `DirectQuery`를 지정하면 해당 쿼리 모드를 사용하도록 모드를 전환할 때 캐시가 자동으로 지워집니다.  
+ 마지막으로, ClearCache를 실행하면 `DirectQuery` 모드용으로 테이블 형식 모델이 다시 구성될 때 메모리에 남아 있던 잔여 데이터도 제거됩니다. 이 사실은 모델에 포함되어 있는 중요한 데이터가 엄격하게 제어될 수 있는 경우에 특히 중요합니다. 이 경우에는 중요한 데이터가 필요한 위치에만 존재하도록 하기 위해 수행할 수 있는 예방 조치로 ClearCache를 실행합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 모델을 배포하고 쿼리 모드를 변경하는 경우에는 캐시를 수동으로 지워야 합니다. 반대로 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]를 사용하여 모델과 파티션에 `DirectQuery`를 지정하면 해당 쿼리 모드를 사용하도록 모드를 전환할 때 캐시가 자동으로 지워집니다.  
   
  성능을 테스트하는 중에 다차원 모델 캐시를 지우기 위한 권장 사항과 비교했을 때 테이블 형식 모델 캐시를 지우기 위한 광범위한 권장 사항은 없습니다. 중요한 데이터가 포함된 테이블 형식 모델에 대한 배포를 관리하는 경우가 아니면 캐시를 지우는 특정 관리 태스크가 없습니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48067210"
  캐시를 지우려면 XMLA와 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용합니다. 데이터베이스, 큐브, 차원이나 테이블 또는 측정값 그룹 수준에서 캐시를 지울 수 있습니다. 데이터베이스 수준에서 캐시를 지우는 데 필요한 다음 단계는 다차원 모델과 테이블 형식 모델 모두에 적용됩니다.  
   
 > [!NOTE]  
->  엄격한 성능 테스트를 위해서는 캐시를 지우는 데 대한 더욱 포괄적인 접근이 필요할 수 있습니다. Analysis Services 및 파일 시스템 캐시를 플러시하는 방법은 [SQL Server 2008 R2 Analysis Services 작업 가이드](http://go.microsoft.com/fwlink/?linkID=http://go.microsoft.com/fwlink/?LinkID=225539)에서 캐시 지우기에 대한 섹션을 참조하십시오.  
+>  엄격한 성능 테스트를 위해서는 캐시를 지우는 데 대한 더욱 포괄적인 접근이 필요할 수 있습니다. Analysis Services 및 파일 시스템 캐시를 플러시하는 방법은 [SQL Server 2008 R2 Analysis Services 작업 가이드](https://go.microsoft.com/fwlink/?linkID=https://go.microsoft.com/fwlink/?LinkID=225539)에서 캐시 지우기에 대한 섹션을 참조하십시오.  
   
  다차원 모델과 테이블 형식 모델 모두 두 단계의 프로세스를 통해 이러한 캐시를 지울 수 있습니다. 이 프로세스는 ClearCache를 실행할 때 캐시를 무효화하고 다음 쿼리를 받을 때 캐시를 지우는 단계로 구성되어 있습니다. 실제로 캐시를 비운 후에만 메모리 사용량의 감소가 확실히 나타납니다.  
   
@@ -57,10 +57,10 @@ ms.locfileid: "48067210"
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **XMLA**를 선택합니다.  
   
-2.  다음 코드 예제를 XMLA 쿼리 창에 복사합니다. 변경 `DatabaseID` 현재 연결 되어 있는 데이터베이스의 id입니다.  
+2.  다음 코드 예제를 XMLA 쿼리 창에 복사합니다. `DatabaseID`를 현재 연결 데이터베이스의 ID로 변경합니다.  
   
     ```  
-    <ClearCache xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <ClearCache xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
       <Object>  
         <DatabaseID> Adventure Works DW Multidimensional</DatabaseID>  
       </Object>  
@@ -71,7 +71,7 @@ ms.locfileid: "48067210"
      또는 측정값 그룹과 같은 자식 개체의 경로를 지정하여 해당 개체에 대한 캐시만 지울 수 있습니다.  
   
     ```  
-    <ClearCache xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <ClearCache xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
       <Object>  
         <DatabaseID>Adventure Works DW Multidimensional</DatabaseID>  
             <CubeID>Adventure Works</CubeID>  
