@@ -13,12 +13,12 @@ ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6ba4b4189691bf907b3ad67db91a8534268a8ec0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9930e76c902080cb7df22bf2a28afc1ae18b3cfd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616431"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202222"
 ---
 # <a name="dealing-with-failed-updates"></a>실패한 업데이트 처리
 업데이트 오류 끝납니다, 경우 오류를 해결 하는 방법을 특성 및 오류의 심각도 및 응용 프로그램의 논리에 따라 달라 집니다. 그러나 데이터베이스는 다른 사용자와 공유 하는 경우 일반적인 오류 수행 하기 전에 필드를 수정 누군가 합니다. 이러한 종류의 오류 충돌을 이라고 합니다. ADO에서이 상황을 감지 하 고 오류를 보고 합니다.  
@@ -29,10 +29,10 @@ ms.locfileid: "47616431"
  사용자 업데이트 충돌을 경고 하는 코드는 다음과 같습니다.  
   
 ```  
-objRs.Filter = adFilterConflictingRecords  
+objRs.Filter = adFilterConflictingRecords  
 objRs.MoveFirst  
-Do While Not objRst.EOF  
-   Debug.Print "Conflict: Name =  "; objRs!au_fname; " "; objRs!au_lname  
+Do While Not objRst.EOF  
+   Debug.Print "Conflict: Name =  "; objRs!au_fname; " "; objRs!au_lname  
    objRs.MoveNext  
 Loop  
 ```  

@@ -14,12 +14,12 @@ ms.assetid: ec41f017-f5e0-40ef-913a-65d206068631
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: feb5cd9df428ec09441ae1ebe0ff1cb051660754
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0001f1d6e45e855b884028a595a2b61263c2e58
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203993"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365995"
 ---
 # <a name="sqlprocedures"></a>SQLProcedures
   모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저는 값을 반환합니다. **SQLProcedures** 결과 집합 열 PROCEDURE_TYPE에 대해 sql_pt_function을 합니다.  
@@ -30,8 +30,8 @@ ms.locfileid: "48203993"
   
  **SQLProcedures** 이름과 일치 하는 모든 프로시저에 대 한 정보를 반환 *ProcName* 는 현재 사용자에 부여 된 VIEW DEFINITION 권한 또는 현재 사용자가 실행 될 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [SQLProcedures 함수](http://go.microsoft.com/fwlink/?LinkId=59364)   
+## <a name="see-also"></a>관련 항목:  
+ [SQLProcedures 함수](https://go.microsoft.com/fwlink/?LinkId=59364)   
  [ODBC API 구현 정보](odbc-api-implementation-details.md)  
   
   

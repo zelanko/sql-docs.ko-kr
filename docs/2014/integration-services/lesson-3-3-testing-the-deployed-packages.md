@@ -1,25 +1,24 @@
 ---
-title: '3단계: 배포된 패키지 테스트 | Microsoft Docs'
+title: '3단계: 배포 된 패키지 테스트 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41107206bbe8fe8948bc6c2fb3d17ea761add869
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 503e73900510285556d3c1743c9ae26a44a18129
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173053"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356505"
 ---
 # <a name="step-3-testing-the-deployed-packages"></a>3단계: 배포된 패키지 테스트
-  이 태스크에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 배포한 패키지를 테스트합니다.  
+  이 태스크에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에 배포한 패키지를 테스트합니다.  
   
  다른 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 자습서에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]디버그 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]메뉴의 **디버깅 시작** 옵션을 사용하여 **용 개발 환경인** 에서 패키지를 실행했습니다. 여기에서는 패키지를 다르게 실행합니다.  
   
@@ -104,7 +103,7 @@ ms.locfileid: "48173053"
   
      쿼리는 21개의 데이터 행을 반환합니다. 반환 결과는 XML 데이터 파일 orders.xml의 행으로 구성됩니다. 각 행은 국가/지역별 요약이며 각 행에는 국가/지역의 이름, 각 국가/지역의 주문 수, 최신 주문과 가장 오래된 주문의 날짜가 나열됩니다.  
   
-![Integration Services 아이콘 (작은)](media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [dtexec 유틸리티](packages/dtexec-utility.md)  

@@ -1,18 +1,19 @@
 ---
-title: SQL Server 빅 데이터 클러스터에서 Oracle 쿼리 하는 방법 | Microsoft Docs
+title: Oracle에서 데이터를 외부 쿼리
+titleSuffix: SQL Server 2019 big data clusters
 description: 이 자습서에는 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 Oracle 데이터를 쿼리 하는 방법을 보여 줍니다. Oracle에서 데이터에 대 한 외부 테이블을 만들고 쿼리를 실행 합니다.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/12/2018
+ms.date: 12/12/2018
 ms.topic: tutorial
-ms.prod: sql
-ms.openlocfilehash: 7f5383a6faf13f0454439a42efb7524eaeda7c76
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: f7a367a41814a7cb590276b10fcfb7c4c8697011
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644251"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432156"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에서 Oracle 쿼리
 
@@ -27,13 +28,13 @@ ms.locfileid: "49644251"
 > [!TIP]
 > 원한다 면 다운로드 하 고이 자습서의 명령에 대 한 스크립트를 실행할 수 있습니다. 지침은 합니다 [데이터 가상화 샘플](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) github입니다.
 
-## <a id="prereqs"></a> 사전 요구 사항
+## <a id="prereqs"></a> 필수 구성 요소
 
-* [Kubernetes에서 빅 데이터 클러스터를 배포](deployment-guidance.md)합니다.
-* [Azure Data Studio 및 SQL Server 2019 확장 설치](deploy-big-data-tools.md)합니다.
-* [클러스터에 샘플 데이터 로드](#sampledata)합니다.
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [빅 데이터 도구](deploy-big-data-tools.md)
+   - **Kubectl**
+   - **Azure Data Studio**
+   - **SQL Server 2019 확장**
+- [빅 데이터 클러스터에 샘플 데이터 로드](tutorial-load-sample-data.md)
 
 ## <a name="create-an-oracle-table"></a>Oracle 테이블 만들기
 
@@ -61,7 +62,7 @@ ms.locfileid: "49644251"
 
 먼저는 Oracle 서버에 액세스할 수 있는 외부 데이터 원본을 만드는 것입니다.
 
-1. Azure Data Studio, 빅 데이터 클러스터의 마스터 SQL Server 인스턴스에 연결 합니다. 자세한 내용은 [SQL Server 마스터 인스턴스에 연결할](deploy-big-data-tools.md#master)합니다.
+1. Azure Data Studio, 빅 데이터 클러스터의 마스터 SQL Server 인스턴스에 연결 합니다. 자세한 내용은 [SQL Server 마스터 인스턴스에 연결할](connect-to-big-data-cluster.md#master)합니다.
 
 1. 연결을 두 번 클릭 합니다 **서버** 창 마스터 SQL Server 인스턴스에 대 한 서버 대시보드를 표시 합니다. 선택 **새 쿼리**합니다.
 

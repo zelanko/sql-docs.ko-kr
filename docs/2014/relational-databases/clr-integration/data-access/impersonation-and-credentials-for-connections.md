@@ -19,12 +19,12 @@ ms.assetid: 293dce7d-1db2-4657-992f-8c583d6e9ebb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 05f3255dac93940439174c20b11769a022bcb7bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50069ad5b96914d98f3d08e795467c2693fabe87
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072703"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360315"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>연결에 대한 가장 및 자격 증명
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR(공용 언어 런타임) 통합에서 Windows 인증 사용은 복잡하지만 SQL Server 인증을 사용하는 것보다 더 안전합니다. Windows 인증을 사용하는 경우 다음 사항을 고려하십시오.  
@@ -73,9 +73,9 @@ catch
 > [!NOTE]  
 >  가장의 동작 변경 내용에 대 한 정보를 참조 하세요 [SQL Server 2014 데이터베이스 엔진 기능의 주요 변경 내용](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)합니다.  
   
- 또한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows ID 값을 받은 경우 기본적으로 해당 인스턴스를 다른 컴퓨터에 전파할 수 없습니다. Windows 보안 인프라에서 기본적으로 이 작업이 제한됩니다. 하지만 신뢰할 수 있는 여러 컴퓨터에 Windows ID를 전파할 수 있는 "위임"이라는 메커니즘이 있습니다. 자세한 내용은 TechNet 문서에서는 위임에 대 한 "[Kerberos 프로토콜 전환 및 제한 된 위임](http://go.microsoft.com/fwlink/?LinkId=50419)"입니다.  
+ 또한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows ID 값을 받은 경우 기본적으로 해당 인스턴스를 다른 컴퓨터에 전파할 수 없습니다. Windows 보안 인프라에서 기본적으로 이 작업이 제한됩니다. 하지만 신뢰할 수 있는 여러 컴퓨터에 Windows ID를 전파할 수 있는 "위임"이라는 메커니즘이 있습니다. 자세한 내용은 TechNet 문서에서는 위임에 대 한 "[Kerberos 프로토콜 전환 및 제한 된 위임](https://go.microsoft.com/fwlink/?LinkId=50419)"입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SqlContext 개체](../../clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  
   
   

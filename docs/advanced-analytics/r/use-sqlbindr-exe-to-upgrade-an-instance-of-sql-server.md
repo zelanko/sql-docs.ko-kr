@@ -1,5 +1,5 @@
 ---
-title: SQL Server 인스턴스 (Machine Learning 서비스)에서 R 및 Python 구성 요소를 업그레이드 | Microsoft Docs
+title: R 및 Python 구성 요소-SQL Server Machine Learning Services 업그레이드
 description: R 및 Python에서 SQL Server 2016 Services 또는 SQL Server 2017 Machine Learning Services Machine Learning Server 바인딩할 sqlbindr.exe를 사용 하 여 업그레이드 합니다.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c2677885719c0b9a54a39b1609a0c2652728820f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 897f83e7272a47428d696802adf79ff816805486
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078893"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645452"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>기계 학습 (R 및 Python) 구성에서 SQL Server 인스턴스 요소를 업그레이드 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +28,7 @@ SQL Server에서 R 및 Python 통합 Microsoft 독점 및 오픈 소스 패키�
 
 와 함께 업데이트 된 구성 요소 모델 서비스에서 스위치를 제공 합니다. 대신 합니다 [SQL Server 제품 수명 주기](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202017)를 사용 하 여 [SQL Server 누적 업데이트](https://support.microsoft.com/help/4047329/sql-server-2017-build-versions), 서비스 업데이트에 맞게는 [Microsoft R Server 컴퓨터에 대 한 지원 타임 라인 서버 학습](https://docs.microsoft.com/machine-learning-server/resources-servicing-support) 에 [최신 수명 주기](https://support.microsoft.com/help/30881/modern-lifecycle-policy)합니다.
 
-바인딩 구성 요소 버전 및 서비스 업데이트를 제외 하 고 설치에 대 한 기본적인을 변경 하지 않습니다: R 및 Python 통합은 여전히이 데이터베이스 엔진 인스턴스의 일부 라이선스는 변경 되지 않습니다 (추가 비용 없이 바인딩과 연결 된), 및 SQL Server 지원 정책은 계속 데이터베이스 엔진에 보관합니다. 이 문서의 나머지 부분에서는 바인딩 메커니즘 및 각 버전의 SQL Server에 대 한 작동 하는 방법을 설명 합니다.
+구성 요소 버전 및 서비스 업데이트를 제외 하 고 바인딩에서는 설치에 대 한 기본적인 변경 되지 않습니다. R 및 Python 통합은 여전히이 데이터베이스 엔진 인스턴스의 일부 라이선스는 변경 되지 않습니다 (추가 비용 없이 바인딩과 연결 된), 및 지원 정책은 SQL Server 데이터베이스 엔진에 대 한 유지 합니다. 이 문서의 나머지 부분에서는 바인딩 메커니즘 및 각 버전의 SQL Server에 대 한 작동 하는 방법을 설명 합니다.
 
 > [!NOTE]
 > 바인딩 (In-database) 인스턴스에 SQL Server 인스턴스에 바인딩되는 적용 됩니다. 바인딩 (독립 실행형) 설치에 대 한 관련이 있습니다.
@@ -109,7 +109,7 @@ Microsoft Machine Learning 설치 기존 기능 및 SQL Server 버전을 검색 
 
 1. 기본 R 버전을 확인 하 고 기존 버전을 확인 하려면 RevoScaleR 패키지는 바꿀 하려는 것 보다 낮습니다. SQL Server 2016 R Services에 대 한 R 기본 패키지 3.2.2 이며 RevoScaleR 8.0.3 합니다.
 
-    ```SQL
+    ```sql
     EXECUTE sp_execute_external_script
     @language=N'R'
     ,@script = N'str(OutputDataSet);
@@ -139,7 +139,7 @@ Microsoft Machine Learning 설치 기존 기능 및 SQL Server 버전을 검색 
 
    오른쪽의 인스턴스 이름 옆의 확인란을 선택 합니다. 나열 된 인스턴스가 없는 경우는 호환 되지 않는 조합을 해야 합니다. 인스턴스를 선택 하지 않으면 Machine Learning Server는 새 독립 실행형 설치를 만들고 SQL Server 라이브러리 변경 되지 않습니다. 인스턴스를 선택할 수 없습니다, 경우에 없을 수도 있습니다 [SP1 CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1)합니다. 
 
-    ![Microsoft Machine Learning Server 설치 마법사](media/mls-931-installer-mssql13.png)
+    ![설치 단계 구성](media/mls-931-installer-mssql13.png)
 
 1. 에 **사용권 계약** 페이지에서 **이러한 조건에 동의** Machine Learning Server에 대 한 라이선스 사용 조건에 동의 합니다. 
 
@@ -151,7 +151,7 @@ Microsoft Machine Learning 설치 기존 기능 및 SQL Server 버전을 검색 
 
 설치 과정에서 SQL Server에서 사용 되는 모든 R 또는 Python 라이브러리 바뀝니다 및 실행 패드 최신 구성 요소를 사용 하도록 업데이트 됩니다. 결과적으로, 인스턴스 라이브러리 기본적 R_SERVICES 폴더에서 이전에 사용 하는 경우 업그레이드 후 이러한 라이브러리 제거 되 고 새 위치에 라이브러리를 사용 하는 실행 패드 서비스에 대 한 속성 변경 됩니다.
 
-바인딩 이러한 폴더의 내용에 영향을 줍니다: C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\library는 C:\Program Files\Microsoft\ML Server\R_SERVER의 내용으로 바뀝니다. 두 번째 폴더 및 해당 콘텐츠가 Microsoft Machine Learning Server 설치 프로그램에서 생성 됩니다. 
+바인딩 이러한 폴더의 내용을 영향을 줍니다. C:\Program Files\Microsoft SQL Server\MSSQL13입니다. MSSQLSERVER\R_SERVICES\library는 C:\Program Files\Microsoft\ML Server\R_SERVER의 내용으로 바뀝니다. 두 번째 폴더 및 해당 콘텐츠가 Microsoft Machine Learning Server 설치 프로그램에서 생성 됩니다. 
 
 업그레이드에 실패 하면 체크 [SqlBindR 오류 코드](#sqlbindr-error-codes) 자세한 내용은 합니다.
 
@@ -159,7 +159,7 @@ Microsoft Machine Learning 설치 기존 기능 및 SQL Server 버전을 검색 
 
 최신 버전을 확인 하려면 R 및 RevoScaleR의 버전을 다시 확인 합니다. 데이터베이스 엔진 인스턴스에 R 패키지를 사용 하 여 분산 R 콘솔을 사용 하 여 패키지 정보를 가져오려면:
 
-```SQL
+```sql
 EXECUTE sp_execute_external_script
 @language=N'R'
 ,@script = N'str(OutputDataSet);
@@ -227,12 +227,12 @@ Microsoft Machine Learning Server를 실행 한 후 SqlBindR.exe 라는 명령�
 R 및 Python 구성 요소, SQL Server 설치 프로그램에서 설정의 초기 설치에 바인딩된 인스턴스를 복원할 수 있습니다. SQL Server 서비스를 다시 되돌리기 세 부분이 있습니다.
 
 + [1 단계: Microsoft Machine Learning Server에서에서 바인딩 해제](#step-1-unbind)
-+ [2 단계: 인스턴스를 원래 상태로 복원](#step-2-restore)
-+ [3 단계: 설치에 추가 하는 모든 패키지를 다시 설치](#step-3-reinstall-packages)
++ [2단계: 인스턴스를 원래 상태로 복원](#step-2-restore)
++ [3 단계: 설치에 추가 하는 모든 패키지 다시 설치](#step-3-reinstall-packages)
 
 <a name="step-1-unbind"></a> 
 
-### <a name="step-1-unbind"></a>1 단계: 바인딩 해제
+### <a name="step-1-unbind"></a>1단계: 언바인딩
 
 두 가지 바인딩 롤백에 대 한 옵션: 다시 설치를 다시 실행 하거나 SqlBindR 명령줄 유틸리티를 사용 합니다.
 
@@ -257,7 +257,7 @@ R 및 Python 구성 요소, SQL Server 설치 프로그램에서 설정의 초�
 
 <a name="step-2-restore"></a> 
 
-###  <a name="step-2-repair-the-sql-server-instance"></a>2 단계: SQL Server 인스턴스에 복구
+###  <a name="step-2-repair-the-sql-server-instance"></a>2단계: SQL Server 인스턴스에 복구
 
 R 및 Python 기능의 데이터베이스 엔진 인스턴스를 복구 하려면 SQL Server 설치 프로그램을 실행 합니다. 기존 업데이트는 유지 되지만 서비스 R 및 Python 패키지를 업데이트 하는 모든 SQL Server을 놓친 경우이 단계는 이러한 패치 적용 됩니다.
 
@@ -265,7 +265,7 @@ R 및 Python 기능의 데이터베이스 엔진 인스턴스를 복구 하려�
 
 <a name="step-3-reinstall-packages"></a> 
 
-### <a name="step-3-add-any-third-party-packages"></a>3 단계: 모든 타사 패키지를 추가 합니다.
+### <a name="step-3-add-any-third-party-packages"></a>3단계: 모든 타사 패키지를 추가 합니다.
 
 다른 오픈 소스 또는 타사 패키지 패키지 라이브러리에 추가한 수 있습니다. 기본 패키지 라이브러리의 위치를 전환 바인딩의 반대로, 이후 R 및 Python 지금 사용 하는 라이브러리에 패키지를 다시 설치 해야 합니다. 자세한 내용은 [패키지를 기본](installing-and-managing-r-packages.md), [새 R 패키지 설치](install-additional-r-packages-on-sql-server.md), 및 [새 Python 패키지 설치](../python/install-additional-python-packages-on-sql-server.md)합니다.
 
@@ -283,7 +283,7 @@ R 및 Python 기능의 데이터베이스 엔진 인스턴스를 복구 하려�
 |*bind*| 지정된 SQL Database 인스턴스를 최신 버전의 R 서버로 업그레이드하고 인스턴스가 R 서버의 향후 업그레이드를 자동으로 가져오도록 합니다.|
 |*unbind*|지정된 SQL Database 인스턴스에서 최신 버전의 R 서버를 제거하고 향후 R 서버 업그레이드가 인스턴스에 영향을 주지 않도록 합니다.|
 
-<a name="sqlbinder-error-codes"><a/>
+<a name="sqlbindr-error-codes"><a/>
 
 ## <a name="binding-errors"></a>바인딩 오류
 
@@ -328,7 +328,7 @@ Microsoft Machine Learning Server 9.2.1 및 9.3에이 문제가 없습니다.
 ### <a name="binding-or-unbinding-leaves-multiple-temporary-folders"></a>바인딩 또는 바인딩 해제가 여러 임시 폴더
 
 경우에 따라 바인딩 및 바인딩 해제 작업 임시 폴더 정리에 실패 합니다.
-다음과 같은 이름의 폴더를 찾을 경우 제거할 수 있습니다 설치가 완료 된 후: R_SERVICES_<guid>
+다음과 같은 이름의 폴더를 찾은 경우 설치가 완료 되 면 제거할 수 있습니다. R_SERVICES_<guid>
 
 > [!NOTE]
 > 설치가 완료 될 때까지 대기 해야 합니다. R 라이브러리 버전을 사용 하 여 연결을 제거한 다음 새 R 라이브러리를 추가 하는 데 시간이 오래 걸릴 수 있습니다. 작업이 완료 되 면 임시 폴더 제거 됩니다.

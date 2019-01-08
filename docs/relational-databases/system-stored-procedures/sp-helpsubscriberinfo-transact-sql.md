@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpsubscriberinfo
@@ -17,12 +16,12 @@ ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2836ff3e649d48db12ad6ed0b644a6ba73eedf23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14ab67bb9d69272960bbce3e1a7cfa059c609e3f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763281"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589807"
 ---
 # <a name="sphelpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +39,10 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@subscriber =** ] **'***구독자***'**  
+ [  **@subscriber =** ] **'**_구독자_**'**  
  구독자의 이름입니다. *구독자* 됩니다 **sysname**, 기본값은 **%**, 모든 정보를 반환 하는 합니다.  
   
- [  **@publisher =** ] **'***게시자***'**  
+ [  **@publisher =** ] **'**_게시자_**'**  
  게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 현재 서버의 이름입니다.  
   
 > [!NOTE]  
@@ -95,7 +94,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ## <a name="permissions"></a>사용 권한  
  멤버만 합니다 **sysadmin** 고정 서버 역할을 합니다 **db_owner** 고정된 데이터베이스 역할 또는 게시에 대 한 게시 액세스 목록에서 실행할 수 있습니다 **sp_helpsubscriberinfo**.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_addpullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
  [sp_changesubscriber &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   

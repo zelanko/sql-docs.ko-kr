@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server utility [SQL Server]
@@ -17,23 +17,23 @@ ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 81d816d58780f32eeaca64c1d90257eef1a8aaff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d3f61904a1a820df58583212dcbd2e998dbabbd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056709"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767125"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server 유틸리티 기능 및 태스크
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고객은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경을 통합적으로 관리하기를 원했으며 이 릴리스에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 응용 프로그램 및 다중 서버 관리 개념을 통해 이러한 고객의 요구 사항을 해결했습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고객은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경을 통합적으로 관리하기를 원했으며 이 릴리스에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 애플리케이션 및 다중 서버 관리 개념을 통해 이러한 고객의 요구 사항을 해결했습니다.  
   
 ## <a name="benefits-of-the-sql-server-utility"></a>SQL Server 유틸리티의 이점  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티는 조직의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]관련 엔터티를 통합 뷰로 모델링합니다. SSMS( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )의 유틸리티 탐색기와 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 유틸리티 뷰포인트는 UCP(유틸리티 제어 지점) 역할을 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 통해 관리자에게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 상태에 대한 전체적인 뷰를 제공합니다. UCP에 나오는 사용 미달 및 사용 과다 정책과 다양한 핵심 매개 변수에 대한 요약 및 상세 데이터를 통해 손쉽게 리소스 통합 기회와 리소스 사용 과다를 식별할 수 있습니다. 상태 정책은 구성할 수 있으며 상위 또는 하위 리소스 사용 임계값을 변경하도록 조정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 관리되는 엔터티의 전역 모니터링 정책을 변경하거나 각 엔터티의 개별 모니터링 정책을 구성할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티는 조직의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 엔터티를 통합 뷰로 모델링합니다. SSMS( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )의 유틸리티 탐색기와 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 유틸리티 뷰포인트는 UCP(유틸리티 제어 지점) 역할을 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 통해 관리자에게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 상태에 대한 전체적인 뷰를 제공합니다. UCP에 나오는 사용 미달 및 사용 과다 정책과 다양한 핵심 매개 변수에 대한 요약 및 상세 데이터를 통해 손쉽게 리소스 통합 기회와 리소스 사용 과다를 식별할 수 있습니다. 상태 정책은 구성할 수 있으며 상위 또는 하위 리소스 사용 임계값을 변경하도록 조정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 관리되는 엔터티의 전역 모니터링 정책을 변경하거나 각 엔터티의 개별 모니터링 정책을 구성할 수 있습니다.  
   
 ##  <a name="typical_scenarios"></a> SQL Server 유틸리티 시작  
  일반적인 사용자 시나리오는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 대한 중심 원리 지점인 유틸리티 제어 지점을 생성하는 것으로 시작됩니다. UCP는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 관리되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로부터 수집되는 리소스 상태를 한 눈에 볼 수 있는 통합 보기를 제공합니다. UCP가 생성된 다음에는 UCP로 관리할 수 있도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 등록합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 관리되는 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 및 데이터 계층 응용 프로그램은 전역 정책 정의 또는 개별 정책 정의에 따라 모니터할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 관리되는 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 및 데이터 계층 애플리케이션은 전역 정책 정의 또는 개별 정책 정의에 따라 모니터할 수 있습니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
  다음 항목을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티를 시작합니다.  

@@ -15,12 +15,12 @@ ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 65ed1ab997566c44aa67da44c8d14418304eecd0
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: HT
+ms.openlocfilehash: 29addb89a5713b32b98df374a673fff4d549d771
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600663"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213792"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB 원격 공급자 개요
 Microsoft OLE DB 원격 공급자에는 원격 컴퓨터에서 데이터 공급자를 호출 하는 클라이언트 컴퓨터에서 로컬 사용자를 수 있습니다. 원격 컴퓨터의 로컬 사용자와 원격 컴퓨터에 대 한 데이터 공급자 매개 변수를 지정 합니다. 원격 공급자는 원격 컴퓨터에 액세스 하는 데 사용할 매개 변수를 지정 합니다. 그런 다음 로컬 사용자 처럼 원격 컴퓨터를 액세스할 수 있습니다.
@@ -47,9 +47,9 @@ Microsoft OLE DB 원격 공급자에는 원격 컴퓨터에서 데이터 공급�
 
 |동적 속성 이름|설명|
 |---------------------------|-----------------|
-|**DFMode**|DataFactory 모드를 나타냅니다. 원하는 버전을 지정 하는 문자열을 [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 서버의 개체입니다. 특정 버전의 요청에 대 한 연결을 열기 전에이 속성을 설정 합니다 **DataFactory**합니다. 요청 된 버전을 사용할 수 없는 경우 이전 버전을 사용 하는 시도가 수행 됩니다. 이전 버전이 없는 경우 오류가 발생 합니다. 하는 경우 **DFMode** 보다 작으면 사용 가능한 버전을 오류가 발생 합니다. 연결 된 후이 속성은 읽기 전용입니다.<br /><br /> 다음 유효한 문자열 값 중 하나일 수 있습니다.<br /><br /> -"25"-버전 2.5 (기본값)<br />-"21", 버전 2.1<br />-"20"-버전 2.0<br />-"15"-버전 1.5|
+|**DFMode**|DataFactory 모드를 나타냅니다. 원하는 버전을 지정 하는 문자열을 [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 서버의 개체입니다. 특정 버전의 요청에 대 한 연결을 열기 전에이 속성을 설정 합니다 **DataFactory**합니다. 요청 된 버전을 사용할 수 없는 경우 이전 버전을 사용 하는 시도가 수행 됩니다. 이전 버전이 없는 경우 오류가 발생 합니다. 하는 경우 **DFMode** 보다 작으면 사용 가능한 버전을 오류가 발생 합니다. 연결 된 후이 속성은 읽기 전용입니다.<br /><br /> 다음 유효한 문자열 값 중 하나일 수 있습니다.<br /><br /> -"25"-버전 2.5 (기본값)<br />-"21"-버전 2.1<br />-"20"-버전 2.0<br />-"15"-버전 1.5|
 |**명령 속성**|MS 원격 공급자가 서버에 전송 하는 명령 (행 집합) 속성의 문자열에 추가 될 값을 나타냅니다. 이 문자열에 대 한 기본값은 vt_empty 합니다.|
-|**현재 DFMode**|실제 버전 번호를 나타내는 합니다 **DataFactory** 서버의 합니다. 버전에서 요청 된 경우를 확인 하려면이 속성을 확인 합니다 **DFMode** 속성 적용 되었습니다.<br /><br /> 다음 유효한 정수 (Long) 값 중 하나일 수 있습니다.<br /><br /> -25-버전 2.5 (기본값)<br />-21-버전 2.1<br />-20-버전 2.0<br />-15-버전 1.5<br /><br /> 추가 "DFMode = 20;"을 사용 하는 경우 연결 문자열을 **MSRemote** 데이터가 업데이트 될 때 공급자 서버의 성능을 향상 시킬 수 있습니다. 이 설정을 사용 합니다 **업데이트할** 서버의 개체를 덜 리소스 집약적 모드를 사용 합니다. 그러나 다음과 같은 기능이이 구성에서 사용할 수 없습니다.<br /><br /> -매개 변수가 있는 쿼리를 사용 합니다.<br />-호출 하기 전에 매개 변수 또는 열의 정보를 시작 합니다 **Execute** 메서드.<br />-설정 **업데이트 &#40;transact** 하 **True**합니다.<br />-시작 행 상태입니다.<br />-호출 된 **Resync** 메서드.<br />-새로 고침 (명시적 또는 자동으로)를 통해 합니다 **업데이트를 다시 동기화** 속성입니다.<br />-설정 **명령** 하거나 **Recordset** 속성입니다.<br />사용 하 여 **adCmdTableDirect**합니다.|
+|**현재 DFMode**|실제 버전 번호를 나타내는 합니다 **DataFactory** 서버의 합니다. 버전에서 요청 된 경우를 확인 하려면이 속성을 확인 합니다 **DFMode** 속성 적용 되었습니다.<br /><br /> 다음 유효한 정수 (Long) 값 중 하나일 수 있습니다.<br /><br /> -25 버전 2.5 (기본값)<br />-21-버전 2.1<br />-20-버전 2.0<br />-15 버전 1.5<br /><br /> 추가 "DFMode = 20;"을 사용 하는 경우 연결 문자열을 **MSRemote** 데이터가 업데이트 될 때 공급자 서버의 성능을 향상 시킬 수 있습니다. 이 설정을 사용 합니다 **업데이트할** 서버의 개체를 덜 리소스 집약적 모드를 사용 합니다. 그러나 다음과 같은 기능이이 구성에서 사용할 수 없습니다.<br /><br /> -매개 변수가 있는 쿼리를 사용 합니다.<br />-호출 하기 전에 매개 변수 또는 열의 정보를 시작 합니다 **Execute** 메서드.<br />-설정 **업데이트 &#40;transact** 하 **True**합니다.<br />-시작 행 상태입니다.<br />-호출 된 **Resync** 메서드.<br />-새로 고침 (명시적 또는 자동으로)를 통해 합니다 **업데이트를 다시 동기화** 속성입니다.<br />-설정 **명령** 하거나 **Recordset** 속성입니다.<br />사용 하 여 **adCmdTableDirect**합니다.|
 |**Handler**|기능을 확장 하는 서버 쪽 사용자 지정 프로그램 (또는 처리기)의 이름을 나타냅니다 합니다 [업데이트할](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), 및 처리기에서 사용 되는 매개 변수 *,* 쉼표 (모든 분리 된 ","). **문자열** 값입니다.|
 |**인터넷 제한 시간**|요청이 서버에서 전달 될 때까지 기다리는 시간 (밀리초)의 최대 수를 나타냅니다. (기본값은 5 분입니다.)|
 |**원격 공급자**|원격 서버에서 사용 하도록 데이터 공급자의 이름을 나타냅니다.|
@@ -84,7 +84,7 @@ cn.Properties("Internet Timeout") = 5000
 Dim rs as New ADODB.Recordset
 Dim cn as New ADODB.Connection
 cn.Open  "Provider=MS Remote;Data Source=pubs;" & _
-         "Remote Server=https://YourServer"
+         "Remote Server=https://YourServer"
 rs.Open "SELECT * FROM authors", cn
 ...                'Edit the recordset
 rs.UpdateBatch     'Equivalent of RDS SubmitChanges

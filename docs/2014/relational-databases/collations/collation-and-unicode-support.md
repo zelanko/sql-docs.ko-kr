@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - binary collations [SQL Server]
@@ -28,15 +27,15 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f313854119094b4407dc8bf4f6e62fdf7a31677
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 1985e7c3fc55f6783c88569c196713050fa40287
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126533"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377873"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 데이터 정렬은 데이터에 대한 정렬 규칙과 대/소문자 및 악센트 구분 속성을 제공합니다. 같은 문자 데이터 형식을 함께 사용 되는 데이터 정렬은 `char` 및 `varchar` 코드 지정 페이지와 해당 문자 데이터 형식에 나타낼 수 있는 합니다. 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 설치하든 데이터베이스 백업을 복원하든 서버를 클라이언트 데이터베이스에 연결하든 사용할 데이터의 로캘 요구 사항, 정렬 순서, 대/소문자 및 악센트 구분 여부를 파악해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 사용 가능한 데이터 정렬을 나열하려면 [sys를 참조하세요.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)를 참조하세요.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 데이터 정렬은 데이터에 대한 정렬 규칙과 대/소문자 및 악센트 구분 속성을 제공합니다. `char` 및 `varchar`과 같은 문자 데이터 형식과 함께 사용되는 데이터 정렬은 해당 데이터 형식을 나타내는 데 사용할 수 있는 코드 페이지와 해당 문자를 지정합니다. 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 설치하든 데이터베이스 백업을 복원하든 서버를 클라이언트 데이터베이스에 연결하든 사용할 데이터의 로캘 요구 사항, 정렬 순서, 대/소문자 및 악센트 구분 여부를 파악해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 사용 가능한 데이터 정렬을 나열하려면 [sys를 참조하세요.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)를 참조하세요.  
   
  서버, 데이터베이스, 열 또는 식에 대한 데이터 정렬을 선택하면 데이터에 일정한 특성이 부여되며, 이는 여러 데이터베이스 작업의 결과에 영향을 줍니다. 예를 들어 ORDER BY를 사용하여 쿼리를 작성할 경우 결과 집합의 정렬 순서는 쿼리의 식 수준에서 COLLATE 절에 지정되거나 데이터베이스에 적용된 데이터 정렬에 따라 달라집니다.  
   
@@ -53,8 +52,8 @@ ms.locfileid: "48126533"
 |옵션|Description|  
 |------------|-----------------|  
 |대/소문자 구분(_CS)|대/소문자를 구분합니다. 이 정렬 순서를 선택하면 소문자가 대문자보다 먼저 정렬됩니다. 이 옵션을 선택하지 않으면 데이터 정렬에서 대/소문자를 구분하지 않습니다. 즉, SQL Server에서 정렬할 때 대문자와 소문자를 동일한 것으로 간주합니다. _CI를 지정하여 대/소문자를 구분하지 않도록 명시적으로 선택할 수 있습니다.|  
-|악센트 구분(_AS)|악센트가 있는 문자와 악센트가 없는 문자를 구분합니다. 예를 들어 'a'와 'ấ'는 같지 않습니다. 이 옵션을 선택하지 않으면 데이터 정렬에서 악센트를 구분하지 않습니다. 즉, SQL Server에서 정렬할 때 악센트가 있는 문자와 악센트가 없는 문자를 동일한 것으로 간주합니다. _AI를 지정하여 악센트를 구분하지 않도록 명시적으로 선택할 수 있습니다.|  
-|일본어 가나 구분(_KS)|일본어 가나 문자의 두 가지 유형인 히라가나와 가타가나를 구분합니다. 이 옵션을 선택하지 않으면 데이터 정렬에서 가나를 구분하지 않습니다. 즉, SQL Server에서 정렬할 때 히라가나 문자와 가타카나 문자를 동일한 것으로 간주합니다. 일본어 가나를 구분하지 않도록 지정하는 유일한 방법은 이 옵션을 생략하는 것입니다.|  
+|악센트 구분(_AS)|악센트가 있는 문자와 악센트가 없는 문자를 구분합니다. 예를 들어 ' a'가 같음 '??? '입니다. 이 옵션을 선택하지 않으면 데이터 정렬에서 악센트를 구분하지 않습니다. 즉, SQL Server에서 정렬할 때 악센트가 있는 문자와 악센트가 없는 문자를 동일한 것으로 간주합니다. _AI를 지정하여 악센트를 구분하지 않도록 명시적으로 선택할 수 있습니다.|  
+|일본어 가나 구분(_KS)|일본어 가나 문자의 두 가지 유형인 히라가나와 가타카나)를 구분할지 여부를 나타냅니다. 이 옵션을 선택하지 않으면 데이터 정렬에서 가나를 구분하지 않습니다. 즉, SQL Server에서 정렬할 때 히라가나 문자와 가타카나 문자를 동일한 것으로 간주합니다. 일본어 가나를 구분하지 않도록 지정하는 유일한 방법은 이 옵션을 생략하는 것입니다.|  
 |전자/반자 구분(_WS)|전자와 반자 문자를 구분합니다. 이 옵션을 선택하지 않으면 SQL Server에서는 정렬할 때 같은 문자의 전자 표시와 반자 표시를 동일한 문자로 간주합니다. 전자/반자를 구분하지 않도록 지정하는 유일한 방법은 이 옵션을 생략하는 것입니다.|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 지원하는 데이터 정렬 집합은 다음과 같습니다.  
@@ -70,9 +69,9 @@ ms.locfileid: "48126533"
  SQL Server 데이터 정렬  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬(SQL_*)은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 정렬 순서가 호환됩니다. 비유니코드에 대한 사전 정렬 규칙은 Windows 운영 체제에서 제공하는 정렬 루틴과 호환되지 않지만 유니코드 데이터의 정렬은 특정 버전의 Windows 정렬 규칙과 호환됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬은 비유니코드 데이터와 유니코드 데이터에 대해 다른 비교 규칙을 사용하므로 기본 데이터 형식에 따라 동일한 데이터에 대한 비교 결과가 달라집니다. 자세한 내용은 [SQL Server 데이터 정렬 이름&#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql)을 참조하세요.  
   
-> [!NOTE]  
+> [!NOTE]
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 영어 인스턴스를 업그레이드할 때 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와의 호환성을 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬(SQL_*)을 지정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 기본 데이터 정렬은 설치 중에 정의되므로 다음 사항에 해당하는 경우 데이터 정렬 설정을 신중하게 지정해야 합니다.  
->   
+> 
 >  -   애플리케이션 코드가 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬의 동작에 의존할 경우  
 > -   여러 언어를 반영하는 문자 데이터를 저장해야 하는 경우  
   
@@ -88,7 +87,7 @@ ms.locfileid: "48126533"
   
  서버에 대한 데이터 정렬을 변경하는 경우를 제외하고는 시스템 데이터베이스의 데이터 정렬을 변경할 수 없습니다.  
   
- 데이터베이스 데이터 정렬은 데이터베이스의 모든 메타데이터에 사용되며 데이터베이스에 사용되는 모든 문자열 열, 임시 개체, 변수 이름 및 기타 모든 문자열의 기본값이 됩니다. 사용자 데이터베이스의 데이터 정렬을 변경할 경우 데이터베이스 액세스 임시 테이블에서 쿼리할 때 데이터 정렬 충돌이 발생할 수 있습니다. 임시 테이블에 항상 저장 되는 `tempdb` 시스템 데이터베이스 인스턴스에 대 한 데이터 정렬을 사용 합니다. 사용자 데이터베이스 간의 문자 데이터를 비교 하는 쿼리 및 `tempdb` 데이터 정렬은 문자 데이터를 평가할 때 충돌이 발생 하는 경우 실패할 수 있습니다. 쿼리에 COLLATE 절을 지정하여 이 문제를 해결할 수 있습니다. 자세한 내용은 [COLLATE&#40;Transact-SQL&#41;](/sql/t-sql/statements/collations)를 참조하세요.  
+ 데이터베이스 데이터 정렬은 데이터베이스의 모든 메타데이터에 사용되며 데이터베이스에 사용되는 모든 문자열 열, 임시 개체, 변수 이름 및 기타 모든 문자열의 기본값이 됩니다. 사용자 데이터베이스의 데이터 정렬을 변경할 경우 데이터베이스 액세스 임시 테이블에서 쿼리할 때 데이터 정렬 충돌이 발생할 수 있습니다. 임시 테이블은 항상 `tempdb` 시스템 데이터베이스에 저장되므로, 인스턴스에 대한 데이터 정렬을 사용합니다. 사용자 데이터베이스와 `tempdb` 간의 문자 데이터를 비교하는 쿼리를 실행할 경우 문자 데이터를 평가할 때 데이터 정렬이 충돌하면 쿼리가 실패할 수 있습니다. 쿼리에 COLLATE 절을 지정하여 이 문제를 해결할 수 있습니다. 자세한 내용은 [COLLATE&#40;Transact-SQL&#41;](/sql/t-sql/statements/collations)를 참조하세요.  
   
  열 수준 데이터 정렬  
  테이블을 만들거나 변경할 때 COLLATE 절을 사용하여 각 문자열 열에 대한 데이터 정렬을 지정할 수 있습니다. 데이터 정렬을 지정하지 않으면 열에 데이터베이스의 기본 데이터 정렬이 할당됩니다.  
@@ -102,7 +101,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ###  <a name="Locale_Defn"></a> 로캘  
- 로캘은 위치나 문화권과 관련된 정보의 모음입니다. 여기에는 통용 언어의 이름과 식별자, 언어를 기록하는 데 사용되는 문자 및 문화권별 표기법 등이 포함될 수 있습니다. 데이터 정렬은 하나 이상의 로캘과 연결될 수 있습니다. 자세한 내용은 참조 [Microsoft에 의해 할당되는 로캘 ID](http://msdn.microsoft.com/goglobal/bb964664.aspx)를 참조하세요.  
+ 로캘은 위치나 문화권과 관련된 정보의 모음입니다. 여기에는 통용 언어의 이름과 식별자, 언어를 기록하는 데 사용되는 문자 및 문화권별 표기법 등이 포함될 수 있습니다. 데이터 정렬은 하나 이상의 로캘과 연결될 수 있습니다. 자세한 내용은 참조 [Microsoft에 의해 할당되는 로캘 ID](https://msdn.microsoft.com/goglobal/bb964664.aspx)를 참조하세요.  
   
   
 ###  <a name="Code_Page_Defn"></a> Code Page  
@@ -114,7 +113,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="Unicode_Defn"></a> 유니코드 지원  
- 유니코드는 코드 포인트를 문자에 매핑하기 위한 표준입니다. 유니코드는 전 세계 모든 언어의 모든 문자를 지원하기 때문에 각 문자 집합을 처리하는 데 서로 다른 코드 페이지가 필요하지 않습니다. 여러 언어를 반영 하는 문자 데이터를 저장 하는 경우 항상 유니코드 데이터 형식 사용 (`nchar`, `nvarchar`, 및 `ntext`)에서 비유니코드 데이터 형식 대신 (`char`, `varchar`, 및 `text`).  
+ 유니코드는 코드 포인트를 문자에 매핑하기 위한 표준입니다. 유니코드는 전 세계 모든 언어의 모든 문자를 지원하기 때문에 각 문자 집합을 처리하는 데 서로 다른 코드 페이지가 필요하지 않습니다. 여러 언어를 반영하는 문자 데이터를 저장할 경우에는 비유니코드 데이터 형식(`nchar`, `nvarchar` 및 `ntext`) 대신 항상 유니코드 데이터 형식(`char`, `varchar` 및 `text`)을 사용하세요.  
   
  비유니코드 데이터 형식에는 여러 가지 제한 사항이 있습니다. 이는 비유니코드 컴퓨터에서는 단일 코드 페이지만 사용할 수 있기 때문입니다. 유니코드를 사용하면 코드 페이지 변환이 별로 필요하지 않으므로 성능이 향상될 수 있습니다. 이러한 경우 유니코드 데이터 정렬이 서버 수준에서 지원되지 않으므로 데이터베이스, 열 또는 식 수준에서 유니코드 데이터 정렬을 개별적으로 선택해야 합니다.  
   
@@ -211,11 +210,11 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="Related_Content"></a> 관련 내용  
- [SQL Server Best Practices Collation Change](http://go.microsoft.com/fwlink/?LinkId=113891)  
+ [SQL Server Best Practices Collation Change](https://go.microsoft.com/fwlink/?LinkId=113891)  
   
- ["SQL Server Best Practices Migration to Unicode"](http://go.microsoft.com/fwlink/?LinkId=113890)  
+ ["SQL Server Best Practices Migration to Unicode"](https://go.microsoft.com/fwlink/?LinkId=113890)  
   
- [유니코드 컨소시엄 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=48619)  
+ [유니코드 컨소시엄 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=48619)  
   
 ## <a name="see-also"></a>관련 항목  
  [포함된 데이터베이스 데이터 정렬](../databases/contained-database-collations.md)   

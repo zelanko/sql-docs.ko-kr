@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 29998bdd95a24b66ff2aebf304cd6b36b7701d02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1eff0a59ad719f2f609bd96a7a11147204c7b8a3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102313"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367515"
 ---
 # <a name="sap-bw-destination"></a>SAP BW 대상
   SAP BW 대상은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW의 대상 구성 요소입니다. 따라서 SAP BW 대상은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에서 SAP Netweaver BW 버전 7 시스템으로 데이터를 로드합니다.  
@@ -84,18 +83,18 @@ ms.locfileid: "48102313"
   
  대상을 구성하는 데 필요한 값 중 모르는 것이 있으면 SAP 관리자에게 문의하십시오.  
   
- SAP BW 연결 관리자, 원본 및 대상을 구성하고 사용하는 방법을 제시하는 연습은 [SAP BI 7.0에서 SQL Server 2008 Integration Services 사용](http://go.microsoft.com/fwlink/?LinkID=137090)백서를 참조하십시오. 또한 이 백서는 SAP BW에 필요한 개체를 구성하는 방법을 보여 줍니다.  
+ SAP BW 연결 관리자, 원본 및 대상을 구성하고 사용하는 방법을 제시하는 연습은 [SAP BI 7.0에서 SQL Server 2008 Integration Services 사용](https://go.microsoft.com/fwlink/?LinkID=137090)백서를 참조하십시오. 또한 이 백서는 SAP BW에 필요한 개체를 구성하는 방법을 보여 줍니다.  
   
 ### <a name="using-the-ssis-designer-to-configure-the-destination"></a>SSIS 디자이너를 사용하여 대상 구성  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 SAP BW 대상의 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [SAP BW 대상 편집기 &#40;연결 관리자 페이지&#41;](sap-bw-destination-editor-connection-manager-page.md)  
+-   [SAP BW 대상 편집기&#40;연결 관리자 페이지&#41;](sap-bw-destination-editor-connection-manager-page.md)  
   
--   [SAP BW 대상 편집기 &#40;매핑 페이지&#41;](sap-bw-destination-editor-mappings-page.md)  
+-   [SAP BW 대상 편집기&#40;매핑 페이지&#41;](sap-bw-destination-editor-mappings-page.md)  
   
--   [SAP BW 대상 편집기 &#40;오류 출력 페이지&#41;](sap-bw-destination-editor-error-output-page.md)  
+-   [SAP BW 대상 편집기&#40;오류 출력 페이지&#41;](sap-bw-destination-editor-error-output-page.md)  
   
--   [SAP BW 대상 편집기 &#40;고급 페이지&#41;](sap-bw-destination-editor-advanced-page.md)  
+-   [SAP BW 대상 편집기&#40;고급 페이지&#41;](sap-bw-destination-editor-advanced-page.md)  
   
  SAP BW 대상을 구성하는 동안 다양한 대화 상자를 사용하여 SAP Netweaver BW 개체를 조회하거나 만들 수도 있습니다. 이러한 대화 상자에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   

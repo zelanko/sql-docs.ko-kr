@@ -15,17 +15,17 @@ ms.assetid: b9622c48-3243-4408-a1de-9ba20e32ff70
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6e37e5a540d452b745bc4a533d3a523b5484eca1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49c05c47492913c02df6591f78e1deea531de809
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134333"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377922"
 ---
 # <a name="xml-task-editor-general-page"></a>XML 태스크 편집기(일반 페이지)
   **XML 태스크 편집기** 대화 상자의 **일반** 노드를 사용하여 작업 유형을 지정하고 작업을 구성할 수 있습니다.  
   
- 이 태스크에 대한 자세한 내용은 [XML Task](control-flow/xml-task.md)를 참조하십시오. XML 문서 및 데이터 작업 방법은 MSDN Library의 "[.NET Framework에 XML 적용(Employing XML in the .NET Framework)](http://go.microsoft.com/fwlink/?LinkId=56214)"을 참조하십시오.  
+ 이 태스크에 대한 자세한 내용은 [XML Task](control-flow/xml-task.md)를 참조하십시오. XML 문서 및 데이터 작업 방법은 MSDN Library의 "[.NET Framework에 XML 적용(Employing XML in the .NET Framework)](https://go.microsoft.com/fwlink/?LinkId=56214)"을 참조하십시오.  
   
 ## <a name="static-options"></a>정적 옵션  
  **OperationType**  
@@ -54,11 +54,11 @@ ms.locfileid: "48134333"
   
  **Source**를 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **관련된 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **Source**를 **변수**로 설정한 경우 기존 변수를 선택하거나 **\<새 변수...>** 를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
+ **관련 항목**: [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수 추가](../../2014/integration-services/add-variable.md)합니다.  
   
 ## <a name="operationtype-dynamic-options"></a>OperationType 동적 옵션  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48134333"
  **대상**  
  기존 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **관련된 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **DestinationType**  
  XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
@@ -111,15 +111,15 @@ ms.locfileid: "48134333"
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
   
  **SecondOperand**  
- **SecondOperandType**을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 **(…)** 를 클릭하고 **원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
+ **SecondOperandType**을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 **(...)** 를 클릭하고 **원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
   
  **SecondOperandType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **관련된 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **XPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
+ **관련 항목**: [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수 추가](../../2014/integration-services/add-variable.md)합니다.  
   
 ### <a name="operationtype--xslt"></a>OperationType = XSLT  
  XSLT 작업에 대한 옵션을 지정합니다.  
@@ -133,11 +133,11 @@ ms.locfileid: "48134333"
  **대상**  
  **DestinationType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **관련된 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **DestinationType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
+ **관련 항목**: [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수 추가](../../2014/integration-services/add-variable.md)합니다.  
   
  **DestinationType**  
  XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
@@ -157,15 +157,15 @@ ms.locfileid: "48134333"
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
   
  **SecondOperand**  
- **SecondOperandType**을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 **(…)** 를 클릭하고 **원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
+ **SecondOperandType**을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 **(...)** 를 클릭하고 **원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
   
  **SecondOperandType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **관련된 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **XPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
+ **관련 항목**: [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수 추가](../../2014/integration-services/add-variable.md)합니다.  
   
 ### <a name="operationtype--xpath"></a>OperationType = XPATH  
  XPath 작업에 대한 옵션을 지정합니다.  
@@ -179,11 +179,11 @@ ms.locfileid: "48134333"
  **대상**  
  **DestinationType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **관련된 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **DestinationType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
+ **관련 항목**: [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수 추가](../../2014/integration-services/add-variable.md)합니다.  
   
  **DestinationType**  
  XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
@@ -203,15 +203,15 @@ ms.locfileid: "48134333"
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
   
  **SecondOperand**  
- **SecondOperandType**을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 **(…)** 를 클릭하고 **원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
+ **SecondOperandType**을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 **(...)** 를 클릭하고 **원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
   
  **SecondOperandType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **관련된 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **XPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
+ **관련 항목**: [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수 추가](../../2014/integration-services/add-variable.md)합니다.  
   
  **PutResultInOneNode**  
  결과를 단일 노드에 쓸지 여부를 지정합니다.  
@@ -238,15 +238,15 @@ ms.locfileid: "48134333"
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
   
  **XPathStringSource**  
- **XPathStringSourceType**을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 **(…)** 를 클릭하고 **문서 원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
+ **XPathStringSourceType**을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 **(...)** 를 클릭하고 **문서 원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
   
  **XPathStringSourceType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **관련된 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **XPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
+ **관련 항목**: [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수를 추가 합니다.](../../2014/integration-services/add-variable.md)  
   
  XPath 문을 사용하여 원본 문서의 병합 위치를 식별하는 경우 이 문은 단일 노드를 반환해야 합니다. 여러 노드가 반환되는 경우에는 첫 번째 노드만 사용됩니다. 두 번째 문서의 내용은 XPath 쿼리에서 반환하는 첫 번째 노드 아래에 병합됩니다.  
   
@@ -259,11 +259,11 @@ ms.locfileid: "48134333"
  **대상**  
  **DestinationType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **관련된 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **DestinationType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
+ **관련 항목**: [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수 추가](../../2014/integration-services/add-variable.md)합니다.  
   
  **DestinationType**  
  XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
@@ -283,15 +283,15 @@ ms.locfileid: "48134333"
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
   
  **SecondOperand**  
- **SecondOperandType** 을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 **(…)** 를 클릭하고 **문서 원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
+ **SecondOperandType**을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 **(...)** 를 클릭하고 **문서 원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
   
  **SecondOperandType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **관련된 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **SecondOperandType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
+ **관련 항목**: [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수를 추가 합니다.](../../2014/integration-services/add-variable.md)  
   
 ### <a name="operationtype--diff"></a>OperationType = Diff  
  비교 작업에 대한 옵션을 지정합니다.  
@@ -313,11 +313,11 @@ ms.locfileid: "48134333"
 |**IgnoreXMLDeclaration**|XML 선언을 비교할지 여부를 지정합니다.|  
 |**IgnoreDTD**|DTD(문서 유형 정의)를 무시할지 여부를 지정합니다.|  
 |**IgnoreWhiteSpaces**|문서 비교 시 공백 양의 차이를 무시할 것인지 여부를 지정합니다.|  
-|**IgnoreNamespaces**|요소의 네임스페이스 URI(Uniform Resource Identifier)와 해당 요소의 특성 이름을 비교할지 여부를 지정합니다.<br /><br /> 참고:이 옵션 설정 하는 경우 `True`, 다른 두 요소는 동일한 로컬 이름을 네임 스페이스와 동일한 것으로 간주 됩니다.|  
+|**IgnoreNamespaces**|요소의 네임스페이스 URI(Uniform Resource Identifier)와 해당 요소의 특성 이름을 비교할지 여부를 지정합니다.<br /><br /> 참고: 이 옵션을 `True`로 설정하는 경우 로컬 이름은 같지만 네임스페이스가 다른 두 요소를 동일한 것으로 간주합니다.|  
 |**IgnoreProcessingInstructions**|처리 명령을 비교할지 여부를 지정합니다.|  
-|**IgnoreOrderOfChildElements**|자식 요소의 순서를 비교할지 여부를 지정합니다.<br /><br /> 참고:이 옵션 설정 하는 경우 `True`, 형제 목록에서 해당 위치 에서만에서 차이가 있는 자식 요소는 동일한 것으로 간주 합니다.|  
+|**IgnoreOrderOfChildElements**|자식 요소의 순서를 비교할지 여부를 지정합니다.<br /><br /> 참고: 이 옵션을 `True`로 설정하는 경우 형제 목록에서의 위치만 다른 여러 자식 요소를 동일한 것으로 간주합니다.|  
 |**IgnoreComments**|주석 노드를 비교할지 여부를 지정합니다.|  
-|**IgnorePrefixes**|요소와 특성 이름의 접두사를 비교할지 여부를 지정합니다.<br /><br /> 참고:이 옵션을 설정 하는 경우 `True`, 로컬 이름은 같지만 다른 네임 스페이스 Uri 및 접두사가 있는 두 개의 요소가 동일한 것으로 간주 됩니다.|  
+|**IgnorePrefixes**|요소와 특성 이름의 접두사를 비교할지 여부를 지정합니다.<br /><br /> 참고: 이 옵션을 `True`로 설정하는 경우 로컬 이름은 같지만 네임스페이스 URI 및 접두사가 다른 두 요소를 동일한 것으로 간주합니다.|  
   
  **FailOnDifference**  
  비교 작업이 실패할 경우 태스크가 실패할지 여부를 지정합니다.  
@@ -334,11 +334,11 @@ ms.locfileid: "48134333"
  **대상**  
  **DestinationType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **관련된 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **DestinationType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
+ **관련 항목**: [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수 추가](../../2014/integration-services/add-variable.md)합니다.  
   
  **DestinationType**  
  XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
@@ -358,15 +358,15 @@ ms.locfileid: "48134333"
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
   
  **SecondOperand**  
- **SecondOperandType** 을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 **(…)** 를 클릭하고 **문서 원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
+ **SecondOperandType**을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 **(...)** 를 클릭하고 **문서 원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
   
  **SecondOperandType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **관련된 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **SecondOperandType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
+ **관련 항목**: [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수를 추가 합니다.](../../2014/integration-services/add-variable.md)  
   
 ### <a name="operationtype--patch"></a>OperationType = Patch  
  패치 작업에 대한 옵션을 지정합니다.  
@@ -380,11 +380,11 @@ ms.locfileid: "48134333"
  **대상**  
  **DestinationType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **관련된 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **DestinationType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
+ **관련 항목**: [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수 추가](../../2014/integration-services/add-variable.md)합니다.  
   
  **DestinationType**  
  XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
@@ -404,17 +404,17 @@ ms.locfileid: "48134333"
 |**변수**|원본을 XML 문서가 포함된 변수로 설정합니다.|  
   
  **SecondOperand**  
- **SecondOperandType** 을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 **(…)** 를 클릭하고 **문서 원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
+ **SecondOperandType**을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 **(...)** 를 클릭하고 **문서 원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
   
  **SecondOperandType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **관련된 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **SecondOperandType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
+ **관련 항목**: [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수를 추가 합니다.](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [식 페이지](expressions/expressions-page.md)  
   

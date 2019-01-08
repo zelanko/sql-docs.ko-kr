@@ -10,12 +10,12 @@ ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3bffdc944c10a534cffd58a6b9931165f556432b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 7ff22023f9f6f8bcbe1d2a1d0f57557676cea1cc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145383"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353017"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>전체 텍스트 쿼리 성능 향상
   다음은 전체 텍스트 쿼리 성능 향상에 도움이 될 권장 사항 목록입니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "48145383"
   
 -   [ALTER FULLTEXT CATALOG REORGANIZE](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)를 사용하여 전체 텍스트 카탈로그를 다시 구성합니다. 이 문을 실행하면 해당 카탈로그에 있는 전체 텍스트 인덱스의 마스터 병합이 수행되므로 성능 테스트 전에 실행해야 합니다.  
   
--   작은 열을 전체 텍스트 키 열로 선택합니다. 900바이트 열이 지원되지만 전체 텍스트 인덱스에서는 비교적 작은 키 열을 사용하는 것이 좋습니다. `int` 및 `bigint` 최상의 성능을 제공 합니다.  
+-   작은 열을 전체 텍스트 키 열로 선택합니다. 900바이트 열이 지원되지만 전체 텍스트 인덱스에서는 비교적 작은 키 열을 사용하는 것이 좋습니다. `int` 및 `bigint`는 최적의 성능을 제공합니다.  
   
 -   정수 전체 텍스트 키를 사용하면 **docid** 매핑 테이블과의 조인이 방지됩니다. 따라서 정수 전체 텍스트 키는 작업량을 줄여 쿼리 성능을 높이고 탐색 성능을 개선합니다. 전체 텍스트 키가 클러스터형 인덱스 키인 경우에도 또 다른 성능 이점을 얻을 수 있습니다.  
   
@@ -48,9 +48,9 @@ ms.locfileid: "48145383"
 -   선택적 관계 조건을 포함하는 애플리케이션의 경우 선택적 관계 조건자와 비선택적 전체 텍스트 조건자를 사용하는 쿼리는 쿼리 최적화 프로그램을 사용하도록 작성되었을 때 최상의 성능을 발휘할 수 있습니다. 이렇게 하면 쿼리 최적화 프로그램이 효과적인 쿼리 계획을 생성하기 위해 조건자나 범위 축소 중 어느 것을 이용할지 결정할 수 있습니다. 이러한 방식은 관계형 데이터를 전체 텍스트 데이터로 인덱싱하는 것보다 간단하고 효율적일 때가 많습니다.  
   
 ## <a name="related-resources"></a>관련 리소스  
- [SQL Server 2008 전체 텍스트 검색: 내부 및 향상 내용](http://go.microsoft.com/fwlink/?LinkId=129544)  
+ [SQL Server 2008 전체 텍스트 검색: 내부 및 향상 내용](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [sys.dm_fts_memory_buffers&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   
  [sys.dm_fts_memory_pools&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)  
   

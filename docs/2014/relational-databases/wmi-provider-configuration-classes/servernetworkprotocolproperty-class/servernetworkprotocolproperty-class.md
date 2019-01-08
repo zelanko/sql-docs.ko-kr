@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - ServerNetworkProtocolProperty Class
@@ -20,12 +18,12 @@ ms.assetid: 72e124ad-a610-405a-8749-b2508068b348
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b26bc325aae512a580225c2f473ddd7a58db0c9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 39d0a86147d40bb4f2eaf85dbf5b9ae92bfe540d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094532"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350231"
 ---
 # <a name="servernetworkprotocolproperty-class"></a>ServerNetworkProtocolProperty 클래스
   [ServerNetworkProtocolProperty 클래스] servernetworkprotocolproperty-class.md)는 서버 네트워크 프로토콜의 속성을 나타냅니다.  
@@ -42,7 +40,7 @@ ms.locfileid: "48094532"
   
 -   현재 속성에 대한 플래그를 설정합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [서버 네트워크 프로토콜 및 네트워크 라이브러리 구성](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>관련 항목:  
+ [서버 네트워크 프로토콜 및 네트워크 라이브러리 구성](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

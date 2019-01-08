@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4158fd290b2a64ddf7e8f3a8fc9b566dd5602d4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb4742d65ca25ecf656e442d03e1925cbe1bb518
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704371"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591788"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@objname=** ] **'***테이블***'**  
+ [  **@objname=** ] **'**_테이블_**'**  
  제약 조건의 정보가 반환될 대상 테이블입니다. 지정된 테이블은 반드시 현재 데이터베이스에 대해 로컬이어야 합니다. *테이블* 됩니다 **nvarchar(776)**, 기본값은 없습니다.  
   
- [  **@nomsg=**] **'***no_message***'**  
+ [  **@nomsg=**] **'**_no_message_**'**  
  테이블 이름을 출력하는 선택적 매개 변수입니다. *no_message* 됩니다 **varchar(5)**, 기본값은 **msg**합니다. **nomsg** 인쇄를 표시 하지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -55,7 +55,7 @@ sp_helpconstraint [ @objname = ] 'table'
  **sp_helpconstraint** 기본 키에 참여 하는 경우 내림차순으로 인덱싱된 열이 표시 됩니다. 내림차순으로 인덱싱된 열은 이름 다음에 빼기 기호(-)를 포함한 상태로 결과 집합에 나열됩니다. 기본값에 따라 오름차순으로 인덱싱된 열은 이름만 나열됩니다.  
   
 ## <a name="remarks"></a>Remarks  
- 실행 **sp_help * * * 테이블* 지정된 된 테이블에 대 한 모든 정보를 보고 합니다. 제약 조건 정보만 보려면 **sp_helpconstraint**합니다.  
+ 실행 **sp_help**_테이블_ 지정된 된 테이블에 대 한 모든 정보를 보고 합니다. 제약 조건 정보만 보려면 **sp_helpconstraint**합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  

@@ -15,15 +15,15 @@ ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fd9604fb38d20e03f33623bacb606d1a9d114ae9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 2272cffe68db5c4ad417bfdbf81ed45a8d309a17
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092489"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376915"
 ---
 # <a name="rendering-extensions-overview"></a>렌더링 확장 프로그램 개요
-  렌더링 확장 프로그램은 보고서 데이터 및 레이아웃 정보를 디바이스별 형식으로 변환하는 보고서 서버의 구성 요소 또는 모듈입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에는 HTML, Excel, Word, CSV 또는 텍스트, XML, 이미지 및 PDF의 7개 렌더링 확장 프로그램이 포함되어 있습니다. 추가 렌더링 확장 프로그램을 만들어 다른 형식으로 보고서를 생성할 수 있습니다.  
+  렌더링 확장 프로그램은 보고서 데이터 및 레이아웃 정보를 디바이스별 형식으로 변환하는 보고서 서버의 구성 요소 또는 모듈입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 7 개 렌더링 확장 프로그램이 포함 되어 있습니다. HTML, Excel, Word, CSV 또는 텍스트, XML, 이미지, PDF의 7가지 렌더링 확장 프로그램이 포함되어 있습니다. 추가 렌더링 확장 프로그램을 만들어 다른 형식으로 보고서를 생성할 수 있습니다.  
   
 > [!NOTE]  
 >  사용 가능한 렌더링 확장 프로그램을 확인하려면 RSReportServer.config 파일에서 설치된 확장 프로그램 목록을 볼 수 있습니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "48092489"
   
  사용자 지정 렌더링 확장 프로그램 작성은 어려운 작업입니다. 렌더링 확장 프로그램은 일반적으로 가능한 모든 보고서 요소 조합을 지원해야 하며 수많은 클래스, 인터페이스, 메서드 및 속성 구현이 필요합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에 포함되지 않은 형식으로 보고서를 렌더링해야 하고 렌더링 확장 프로그램의 고유한 관리 코드 구현을 작성하려는 경우, 렌더링 확장 프로그램 코드는 보고서 서버에서 요구되는 `Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension` 인터페이스를 구현해야 합니다.  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에 대한 추가 설명서 및 백서는 [Reporting Services 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=19951)에서 최신 기술 리소스를 참조하십시오.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에 대한 추가 설명서 및 백서는 [Reporting Services 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=19951)에서 최신 기술 리소스를 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
  [렌더링 확장 프로그램 구현](implementing-a-rendering-extension.md)   

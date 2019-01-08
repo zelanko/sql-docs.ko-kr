@@ -11,15 +11,15 @@ ms.assetid: 6ed56d36-18d9-40c2-b51f-f2a4c71d1e73
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 860102dff3b20bd42da048dbd33960c8f936cea1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8ee32faea8c8390c0ecb1540e6115a3baedfc92
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120255"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357710"
 ---
 # <a name="create-the-ssis-catalog"></a>SSIS 카탈로그 만들기
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 패키지를 디자인하고 테스트한 후에는 이 패키지가 포함된 프로젝트를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. 프로젝트를 배포 하기 전에 합니다 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 서버를 포함 해야 합니다는 `SSISDB` 카탈로그입니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 설치 프로그램에서 카탈로그를 자동으로 만들지 않으므로 다음 지침에 따라 카탈로그를 수동으로 만들어야 합니다.  
+  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 패키지를 디자인하고 테스트한 후에는 이 패키지가 포함된 프로젝트를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 프로젝트를 배포하려면 서버에 `SSISDB` 카탈로그가 있어야 합니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 설치 프로그램에서 카탈로그를 자동으로 만들지 않으므로 다음 지침에 따라 카탈로그를 수동으로 만들어야 합니다.  
   
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 SSISDB 카탈로그를 만들 수 있습니다. Windows PowerShell을 사용하여 프로그래밍 방식으로 카탈로그를 만들 수도 있습니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48120255"
   
 6.  암호를 입력하고 **확인**을 클릭합니다.  
   
-     암호는 카탈로그 데이터를 암호화하는 데 사용되는 데이터베이스 마스터 키를 보호합니다. 암호를 안전한 위치에 저장하십시오. 데이터베이스 마스터 키도 백업하는 것이 좋습니다. 자세한 내용은 [데이터베이스 마스터 키 백업](../relational-databases/security/encryption/back-up-a-database-master-key.md)을 참조하세요.  
+     암호는 카탈로그 데이터를 암호화하는 데 사용되는 데이터베이스 마스터 키를 보호합니다. 암호를 안전한 위치에 저장하십시오. 데이터베이스 마스터 키도 백업하는 것이 좋습니다. 자세한 내용은 [Back Up a Database Master Key](../relational-databases/security/encryption/back-up-a-database-master-key.md)을 참조하세요.  
   
 ### <a name="to-create-the-ssisdb-catalog-programmatically"></a>SSISDB 카탈로그를 프로그래밍 방식으로 만들려면  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48120255"
   
     ```  
   
-     Windows PowerShell 및 <xref:Microsoft.SqlServer.Management.IntegrationServices> 네임스페이스를 사용하는 방법의 예를 더 보려면 blogs.msdn.com에서 [SQL Server 2012의 SSIS 및 PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539) 블로그 항목을 참조하세요. 네임스페이스 및 코드 예제에 대한 개요는 blogs.msdn.com에서 [SSIS 카탈로그 관리 개체 모델에 대한 이해](http://go.microsoft.com/fwlink/?LinkId=254267)블로그 항목을 참조하십시오.  
+     Windows PowerShell 및 <xref:Microsoft.SqlServer.Management.IntegrationServices> 네임스페이스를 사용하는 방법의 예를 더 보려면 blogs.msdn.com에서 [SQL Server 2012의 SSIS 및 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539) 블로그 항목을 참조하세요. 네임스페이스 및 코드 예제에 대한 개요는 blogs.msdn.com에서 [SSIS 카탈로그 관리 개체 모델에 대한 이해](https://go.microsoft.com/fwlink/?LinkId=254267)블로그 항목을 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
  [SSIS 카탈로그](catalog/ssis-catalog.md)   

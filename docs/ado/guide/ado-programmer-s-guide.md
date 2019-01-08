@@ -13,14 +13,14 @@ ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3e78700456c26fda0a71da9219fc5d244abeec8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: bc79564bfd71ae46ef25092294c624f67b51e42c
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761201"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53731918"
 ---
-# <a name="ado-programmer39s-guide-for-using-ado-objects"></a>ADO 개체 사용을 위한 ADO 프로그래머 가이드
+# <a name="ado-programmers-guide-for-using-ado-objects"></a>ADO 개체를 사용 하 여 ADO 프로그래머 가이드
 이 설명서는 ADO 개체를 사용하여 다양한 데이터 원본의 데이터로 작업하는 방법에 대한 개요를 제공합니다. 우선, 소개에서는 ADO 구성 요소의 설치, 사용 및 재배포에 대한 새로운 기능과 요구 사항을 요약합니다. 다음 섹션에서는 다양한 유형의 ADO 개체 활용법에 대해 설명합니다. 마지막으로 부록에서는 Microsoft에서 제공하는 다양한 데이터 및 서비스 공급자, 오류 메시지 및 여러 프로그래밍 언어로 ADO를 사용하는 방법에 대한 팁과 샘플 및 용어집에 대해 설명합니다.
 
  이 섹션에서는 다음 항목을 다룹니다.

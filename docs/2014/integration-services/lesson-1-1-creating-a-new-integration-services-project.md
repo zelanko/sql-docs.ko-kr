@@ -1,22 +1,21 @@
 ---
-title: '1단계: 새 Integration Services 프로젝트 만들기 | Microsoft Docs'
+title: '1단계: 만드는 새 Integration Services 프로젝트 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 363c3c86c9c98c17d937b1ea766fd2015f985218
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eff00a91c6fff1caee5e5fc41dd6d59f8635f78f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147143"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377413"
 ---
 # <a name="step-1-creating-a-new-integration-services-project"></a>1단계: 새 Integration Services 프로젝트 만들기
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지를 만드는 첫 번째 단계는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만드는 것입니다. 이 프로젝트는 데이터 변환 솔루션에서 사용하는 데이터 원본, 데이터 원본 뷰, 패키지 등의 개체에 대한 템플릿을 포함합니다.  
@@ -26,7 +25,7 @@ ms.locfileid: "48147143"
 > [!NOTE]  
 >  이 자습서를 사용하려면 Microsoft SQL Server Data Tools가 필요합니다.  
 >   
->  SQL Server Data Tools 설치에 대한 자세한 내용은 [SQL Server Data Tools 다운로드](http://msdn.microsoft.com/data/hh297027)를 참조하십시오.  
+>  SQL Server Data Tools 설치에 대한 자세한 내용은 [SQL Server Data Tools 다운로드](https://msdn.microsoft.com/data/hh297027)를 참조하십시오.  
   
 ### <a name="to-create-a-new-integration-services-project"></a>새 Integration Services 프로젝트를 만들려면  
   
@@ -47,6 +46,6 @@ ms.locfileid: "48147143"
 7.  **솔루션 탐색기** 도구 모음에서 **Package.dtsx**를 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 클릭한 다음 기본 패키지의 이름을 **Lesson 1.dtsx**로 바꿉니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [2단계: 플랫 파일 연결 관리자 추가 및 구성](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+ [2단계: 추가 하 고 플랫 파일 연결 관리자 구성](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
   

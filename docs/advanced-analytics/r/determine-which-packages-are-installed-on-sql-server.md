@@ -1,5 +1,5 @@
 ---
-title: SQL Server Machine Learning에서 R 및 Python 패키지 정보를 가져올 | Microsoft Docs
+title: R 및 Python 패키지 정보-SQL Server Machine Learning Services 가져오기
 description: R 및 Python 패키지 버전을 확인 하 고 설치를 확인 합니다. SQL Server R Services 또는 Machine Learning 서비스에서 설치 된 패키지 목록을 가져옵니다.
 ms.custom: ''
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 96cda599e260982b26e6c565bd38c5097fc01763
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 47badb15b5f5a2d0eabc63b8fd1be3e83a0caffb
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291539"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645372"
 ---
 #  <a name="get-r-and-python-package-information"></a>R 및 Python 패키지 정보 가져오기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -91,9 +91,9 @@ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\si
 
 ### <a name="r"></a>R
 
-다음 예제에서는 R 함수 `installed.packages()` 에 [!INCLUDE [tsql](..\..\includes\tsql-md.md)] 저장 프로시저의 현재 인스턴스에 대 한 R_SERVICES 라이브러리에 설치 된 패키지 매트릭스를 가져옵니다. 이 스크립트는 DESCRIPTION 파일의 패키지 이름 및 버전 필드를 반환, 이름만 반환 됩니다.
+다음 예제에서는 R 함수 `installed.packages()` 에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저의 현재 인스턴스에 대 한 R_SERVICES 라이브러리에 설치 된 패키지 매트릭스를 가져옵니다. 이 스크립트는 DESCRIPTION 파일의 패키지 이름 및 버전 필드를 반환, 이름만 반환 됩니다.
 
-```SQL
+```sql
 EXECUTE sp_execute_external_script
   @language=N'R',
   @script = N'str(OutputDataSet);
@@ -142,7 +142,7 @@ EXECUTE sp_execute_external_script
 GO
 ```
 
-+ 패키지가 없으면 메시지가 반환 됩니다: "명령이 완료 되었습니다."
++ 패키지가 없으면 메시지가 반환 됩니다. "명령이 완료 되었습니다."
 
 + 텍스트가 포함 된 오류가 표시 된 패키지를 찾거나 로드할 수 없습니다, 하는 경우: "'MissingPackageName' 라는 패키지가 없음 이"
 

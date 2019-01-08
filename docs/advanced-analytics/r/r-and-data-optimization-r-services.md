@@ -1,5 +1,5 @@
 ---
-title: SQL Server R Services-데이터 최적화에 대 한 성능 | Microsoft Docs
+title: SQL Server Machine Learning Services-데이터 최적화를 위한 성능 튜닝
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3fda560aedb7a0e1119a0524ffefe42a476c4aed
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b6e25ec0c7bc1ce332514910cdaf5cdf9fdb9e07
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699511"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432406"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services-데이터 최적화에 대 한 성능
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ SQL Server 2016 및 2017에서는 사용할 수 있습니다 합니다 **로컬*
 
 ## <a name="factors"></a>요소
 
-R 언어에 대 한 개념이 *요인*는 범주 데이터에 대 한 특수 변수입니다. 데이터 과학자는 종종 수식에서 요소 변수를 사용, 범주 변수 요소로 처리 되도록 데이터 때문에 machine learning 함수에서 제대로 처리 됩니다. 자세한 내용은 [for Dummies R: 요소 변수](https://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/)합니다.
+R 언어에 대 한 개념이 *요인*는 범주 데이터에 대 한 특수 변수입니다. 데이터 과학자는 종종 수식에서 요소 변수를 사용, 범주 변수 요소로 처리 되도록 데이터 때문에 machine learning 함수에서 제대로 처리 됩니다. 자세한 내용은 참조 하세요. [for Dummies R: 요소 변수](https://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/)합니다.
 
 기본적으로 정수를 저장 또는 처리를 위해 다시 백 요소 변수 문자열에서 변환할 수 있습니다. R `data.frame` 하지 않으면 함수 요소 변수도 모든 문자열을 처리 인수 *stringsAsFactors* 로 설정 되어 **False**합니다. 즉, 처리에 대 한 정수로 변환 되 고 원래 문자열에 다시 매핑됩니다 다음 문자열은 자동으로 합니다.
 
@@ -149,11 +149,11 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 RevoScaleR의 최적화에 대 한 추가 지침, 이러한 문서를 참조 하세요.
 
-+ 지원 문서: [성능 튜닝 rxDForest 및 rxDTree에 대 한 옵션](https://support.microsoft.com/kb/3104235)
++ 문서를 지원 합니다. [성능 튜닝 rxDForest 및 rxDTree에 대 한 옵션](https://support.microsoft.com/kb/3104235)
 
-+ 모델을 제어 하기 위한 메서드는 승격 된 트리 모델에 맞지 않습니다: [예측 모델 사용 하 여 Stochastic 그라데이션 부스 팅](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
++ 향상 된 트리 모델에 맞게 모델을 제어 하기 위한 메서드: [예측 확률 그라데이션 부스 팅을 사용 하 여 모델](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
 
-+ RevoScaleR의 이동 및 데이터를 처리 하는 방법에 대 한 개요: [ScaleR의 사용자 지정 청크 알고리즘 작성](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
++ RevoScaleR의 이동 및 데이터를 처리 하는 방법의 개요: [ScaleR의 사용자 지정 청크 알고리즘 작성](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
 
 + RevoScaleR에 대 한 프로그래밍 모델: [RevoScaleR의 스레드 관리](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads)
 
@@ -173,9 +173,9 @@ RevoScaleR의 최적화에 대 한 추가 지침, 이러한 문서를 참조 하
 
 시나리오에는 저장 된 모델을 사용 하 여 빠른 예측이 포함 또는 기계 학습 응용 프로그램 통합을 사용할 수 있습니다 하는 경우는 [운영 화](https://docs.microsoft.com/r-server/what-is-operationalization) Microsoft R Server (이전의 DeployR)의 기능입니다.
 
-+ 으로 **데이터 과학자**를 사용 합니다 [mrsdeploy 패키지](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package) 다른 컴퓨터를 사용 하 여 R 코드를 공유 하 고 R 분석 내부 웹, 데스크톱, 모바일 및 대시보드 응용 프로그램 통합을: [게시 하는 방법 R Server에서 R 웹 서비스 및 관리](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
++ 로 **데이터 과학자**를 사용 합니다 [mrsdeploy 패키지](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package) 다른 컴퓨터를 사용 하 여 R 코드를 공유 하 고 웹, 데스크톱, 모바일 및 대시보드 응용 프로그램 내에서 R 분석을 통합 하: [게시 및 R Server에서 R 웹 서비스를 관리 하는 방법](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
 
-+ 로 **관리자**, 패키지 관리, 웹 노드를 모니터링 하는 방법 및 계산 노드 및 R 작업에 대 한 보안 제어: [상호 작용 하 고 R에서 웹 서비스를 사용 하는 방법](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
++ 로 **관리자**, 패키지 관리, 웹 노드를 모니터링 하는 방법 및 계산 노드 및 R 작업에 대 한 보안 제어 합니다. [R services와 상호 작용 및 웹을 사용 하는 방법](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
 
 ## <a name="articles-in-this-series"></a>이 시리즈의 기사
 

@@ -14,19 +14,19 @@ ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 01149b1f75c78ba5ca6da467abf8955adf41f2f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54a38a78f990ff4c2cc48c7277146dd0c2a07ee2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170403"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354826"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>WinForms ReportViewer 컨트롤 사용
   보고서 서버에 배포된 보고서 또는 로컬 파일 시스템에 있는 보고서를 보려면 WinForms ReportViewer 컨트롤을 사용하여 Windows 응용 프로그램에서 렌더링할 수 있습니다.  
   
 ###### <a name="to-add-the-reportviewer-control-to-a-windows-application"></a>ReportViewer 컨트롤을 Windows 응용 프로그램에 추가하려면  
   
-1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]을 사용하여 새 Windows 응용 프로그램을 만듭니다.  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[csprcs](../../includes/csprcs-md.md)] 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]을 사용하여 새 Windows 애플리케이션을 만듭니다.  
   
      \- 또는 -  
   
@@ -42,7 +42,7 @@ ms.locfileid: "48170403"
   
  컨트롤이 폼에 추가되면 **ReportViewer 태스크** 스마트 태그가 나타나 보고서를 선택하도록 알립니다.  
   
- 보려는 보고서가 보고서 서버에 배포된 경우 **보고서 선택** 드롭다운 목록에서 **\<서버 보고서>** 옵션을 선택합니다. **\<서버 보고서>** 옵션이 선택되면 **보고서 서버 URL** 및 **보고서 경로**의 두 가지 속성이 추가로 나타납니다. **보고서 서버 URL**은 보고서 서버에 대한 주소이고 **보고서 경로**는 렌더링할 보고서의 전체 경로입니다.  
+ 보려는 보고서가 보고서 서버에 배포된 경우 **보고서 선택** 드롭다운 목록에서 **\<서버 보고서>** 옵션을 선택합니다. 후 합니다  **\<서버 보고서 >** 옵션을 선택 하면 두 가지 속성이 추가로 나타납니다. **보고서 서버 Url** 하 고 **보고서 경로**합니다. **보고서 서버 URL**은 보고서 서버에 대한 주소이고 **보고서 경로**는 렌더링할 보고서의 전체 경로입니다.  
   
  ![서버 보고서 선택](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "서버 보고서 선택")  
   
@@ -154,7 +154,7 @@ End Class
   
 3.  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 보고서 샘플 프로젝트를 설치한 위치를 찾습니다.  
   
-     보고서 샘플을 다운로드하려면 [AdventureWorks 2012 보고서 샘플](http://go.microsoft.com/fwlink/?LinkId=404153)(영문)로 이동합니다.  
+     보고서 샘플을 다운로드하려면 [AdventureWorks 2012 보고서 샘플](https://go.microsoft.com/fwlink/?LinkId=404153)(영문)로 이동합니다.  
   
 4.  Sales Order Detail.rdl 파일을 선택하고 **추가** 단추를 클릭합니다.  
   

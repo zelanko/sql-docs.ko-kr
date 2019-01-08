@@ -1,27 +1,85 @@
 ---
-title: (SQL과 R 심층 분석) R을 사용해 SQL Server 데이터 시각화하기 | Microsoft Docs
+title: RevoScaleR rxHistogram-SQL Server Machine Learning을 사용 하 여 SQL Server 데이터 시각화
+description: SQL Server에서 R 언어를 사용 하 여 데이터를 시각화 하는 방법에 대 한 연습 자습서입니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/27/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0d34ece68c421dbb7aabd845e117c9f07e00d013
-ms.sourcegitcommit: 2420c57d2952add3697dbe0467ee1d755c5c2ee5
+ms.openlocfilehash: 4f8ab37cefd55cd78556ac7bbf5af24cc01dca8e
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47217518"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596474"
 ---
-#  <a name="visualize-sql-server-data-using-r-sql-and-r-deep-dive"></a>(SQL과 R 심층 분석) R을 사용해 SQL Server 데이터 시각화하기
+#  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>R (RevoScaleR 및 SQL Server 자습서)를 사용 하 여 SQL Server 데이터 시각화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서는 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)과 SQL Server를 함께 쓰는 방법에 대한 데이터 과학 심층 분석 자습서의 일부입니다.
+이 단원에서는의 일부인를 [RevoScaleR 자습서](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 사용 하는 방법에 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server를 사용 하 여 합니다.
 
-[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 의 향상된 패키지는 확장성과 병렬 처리에 최적화된 여러 함수를 제공합니다. 일반적으로 이러한 함수 앞에는 **rx** 또는 **Rx**가 붙습니다.
+이 단원에서는를 사용 하 여 R 함수에 있는 값의 분포를 확인 합니다 *creditLine* 성별 열입니다.
 
-이 단계에서는 **rxHistogram** 함수를 시용해 _creditLin_ 열에서 성별에 따른 데이터의 분포를 확인해보겠습니다.
+> [!div class="checklist"]
+> * 히스토그램 입력에 대 한 최소-최대 변수 만들기
+> * 사용 하 여 히스토그램 데이터 시각화 **rxHistogram** 에서 **RevoScaleR**
+> * 사용 하 여 산 점도 사용 하 여 시각화 **levelplot** 에서 **격자** 기본 R 배포에 포함
+
+이 단원 에서처럼 동일한 스크립트에서 오픈 소스 및 Microsoft 특정 함수를 결합할 수 있습니다.
+
+## <a name="add-maximum-and-minimum-values"></a>최댓값 및 최솟값 추가하기
+
+이전 단원에서 계산된 된 요약 통계에 따라 추가 계산에 대 한 데이터 소스에 삽입할 수 있는 데이터에 대 한 유용한 정보를 발견 했습니다. 예를 들어 최솟값 및 최댓값은 히스토그램을 계산하는 데에 사용될 수 있습니다. 이 연습에서는 높고 낮은 값을 추가 합니다 **RxSqlServerData** 데이터 원본입니다.
+
+1. 먼저 몇 가지 임시 변수를 설정합니다.
+  
+    ```R
+    sumDF <- sumOut$sDataFrame
+    var <- sumDF$Name
+    ```
+  
+2. 변수를 사용 하 여 *ccColInfo* 데이터 원본의 열을 정의 하는 이전 단원에서 만든 합니다.
+  
+   새 계산된 열 추가 (*numTrans*, *numIntlTrans*, 및 *creditLine*) 원래 정의 재정의 하는 열 컬렉션입니다. 아래 스크립트의 출력을 메모리에 저장 되어 있는 sumOut에서 가져온 최소 및 최대 값을 기반으로 하는 요소를 추가 **rxSummary**합니다. 
+  
+    ```R 
+    ccColInfo <- list(
+        gender = list(type = "factor",
+          levels = c("1", "2"), 
+          newLevels = c("Male", "Female")),
+        cardholder = list(type = "factor",
+          levels = c("1", "2"), 
+          newLevels = c("Principal", "Secondary")), 
+        state = list(type = "factor", 
+          levels = as.character(1:51), 
+          newLevels = stateAbb), 
+        balance  = list(type = "numeric"),
+        numTrans = list(type = "factor", 
+          levels = as.character(sumDF[var == "numTrans", "Min"]:sumDF[var == "numTrans", "Max"])),
+        numIntlTrans = list(type = "factor",  
+            levels = as.character(sumDF[var == "numIntlTrans", "Min"]:sumDF[var =="numIntlTrans", "Max"])),
+        creditLine = list(type = "numeric")
+            )
+    ```
+  
+3. 열 목록을 업데이트했으므로 다음 명령문을 실행해 앞에서 업데이트한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본을 생성하십시오.
+  
+    ```R
+    sqlFraudDS <- RxSqlServerData(
+        connectionString = sqlConnString,
+        table = sqlFraudTable,
+        colInfo = ccColInfo,
+        rowsPerRead = sqlRowsPerRead)
+    ```
+  
+    이제 sqlFraudDS 데이터 소스에 사용 하 여 추가 된 새 열에 포함 *ccColInfo*합니다.
+  
+이 시점에서 수정하면 R의 데이터 원본에만 영향을 끼칩니다. 즉 어떤 데이터도 아직 데이터베이스 테이블에 기록되지 않았습니다. 그러나 시각화 및 요약을 만들려면 sumOut 변수에서 캡처한 데이터를 사용할 수 있습니다. 
+
+> [!TIP]
+> 사용 중인 계산 컨텍스트가 어느를 잊은 경우 실행할 **rxGetComputeContext()** 합니다. 반환 값이 "RxLocalSeq Compute Context" 라면 로컬 계산 환경을 사용하고 있음을 나타냅니다.
 
 ## <a name="visualize-data-using-rxhistogram"></a>RxHistogram을 사용해 데이터 시각화하기
 
@@ -37,13 +95,19 @@ ms.locfileid: "47217518"
   
     ```R
     rxSetComputeContext(sqlCompute)
+    rxHistogram(~creditLine|gender, data = sqlFraudDS,  histType = "Percent")
     ```
  
-3. 같은 데이터 원본을 사용하므로 결과는 정확히 같지만, 계산은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에서 수행됩니다.  그런 다음 결과가 로컬 워크스테이션에 반환되어 그려집니다.
+3. 결과 동일 하므로 동일한 데이터 원본을 사용 하는 두 번째 단계에서는 계산 원격 서버에서 수행 됩니다. 그런 다음 결과가 로컬 워크스테이션에 반환되어 그려집니다.
    
-![히스토그램 결과](media/rsql-sue-histogramresults.jpg "히스토그램 결과")
+  ![히스토그램 결과](media/rsql-sue-histogramresults.jpg "히스토그램 결과")
 
-4. 또한, **rxCube** 함수를 호출하고 그 결과를 그릴 수도 있습니다.  예를 들어, 다음 예제는 **rxCube** 를 사용하여 *numTrans* 및 *numIntlTrans* 의 모든 조합에 대해 *fraudRisk*의 평균을 계산합니다.
+
+## <a name="visualize-with-scatter-plots"></a>산 점도 사용 하 여 시각화
+
+산 점도 두 변수 간의 관계를 비교할 데이터 탐색 하는 동안 자주 사용 됩니다. 제공 하는 입력을 사용 하 여이 작업을 위해 기본 제공 R 패키지를 사용할 수 있습니다 **RevoScaleR** 함수입니다.
+
+1. 호출을 [rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcrosstabs) 의 평균을 계산 하는 함수 *fraudRisk* 조합 마다 *numTrans* 하 고 *numIntlTrans*:
   
     ```R
     cube1 <- rxCube(fraudRisk~F(numTrans):F(numIntlTrans),  data = sqlFraudDS)
@@ -51,9 +115,9 @@ ms.locfileid: "47217518"
   
     그룹 평균을 계산하는 데 사용되는 그룹을 지정하려면 `F()` 표기법을 사용합니다. 이 예제의 `F(numTrans):F(numIntlTrans)`는 `numTrans` 및 `numIntlTrans` 변수를 각 정숫값에 따라 범주 변수로 처리하는 것을 의미합니다.
   
-    최솟값과 최댓값이 `sqlFraudDS` 데이터 원본에 추가되었으므로(`colInfo` 매개 변수를 사용해), 히스토그램에 자동으로 적용됩니다.
+    **rxCube**는 기본적으로 *rxCube 개체*를 반환합니다. 이 개체는 교차 집계를 나타냅니다. 
   
-5. **rxCube**는 기본적으로 *rxCube 개체*를 반환합니다. 이 개체는 교차 집계를 나타냅니다. 이 개체를 [rxResultsDF](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf) 함수를 사용해 R의 표준 그리기 함수 중 하나에서 쉽게 사용할 수 있는 데이터 프레임으로 결과를 변환할 수 있습니다.
+2. 호출 [rxResultsDF](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf) R의 표준 그리기 함수 중 하나에서 쉽게 사용할 수 있는 데이터 프레임으로 결과 변환 하는 함수입니다.
   
     ```R
     cubePlot <- rxResultsDF(cube1)
@@ -63,9 +127,9 @@ ms.locfileid: "47217518"
     
     `print(rxCube(fraudRisk~F(numTrans):F(numIntlTrans), data = sqlFraudDS, returnDataFrame = TRUE))`
        
-    하지만 **rxResultsDF** 출력이 훨씬 더 보기 쉬우므로 원본 열의 이름을 유지합니다.
+    그러나 출력 **rxResultsDF** 깨끗 하며 원본 열의 이름을 유지 합니다. 실행할 수 있습니다 `head(cube1)` 뒤에 `head(cubePlot)` 출력을 비교 합니다.
   
-6. 마지막으로 사용 하 여 열 지도 만들려면 다음 코드를 실행 합니다 `levelplot` 에서 함수를 **격자** 모든 R 배포에 포함 된 패키지입니다.
+3. 사용 하 여 열 지도 **levelplot** 에서 작동 합니다 **격자** 모든 R 배포에 포함 된 패키지.
   
     ```R
     levelplot(fraudRisk~numTrans*numIntlTrans, data = cubePlot)
@@ -75,14 +139,11 @@ ms.locfileid: "47217518"
   
     ![산점도 결과](media/rsql-sue-scatterplotresults.jpg "산점도 결과")
   
-이런 간단한 분석을 통해서도 거래 수와 국제 거래 수가 증가할수록 사기의 위험이 증가하는 것을 확인할 수 있습니다.
+이 빠른 분석에서 트랜잭션 수와 국제 트랜잭션 수를 사용 하 여 사기 위험을 증가 함을 확인할 수 있습니다.
 
 에 대 한 자세한 내용은 합니다 **rxCube** 함수와 크로스탭 일반적으로 볼 수 [RevoScaleR를 사용 하 여 데이터 요약](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)합니다.
 
-## <a name="next-step"></a>다음 단계
+## <a name="next-steps"></a>다음 단계
 
-[SQL Server 데이터를 사용 하 여 R 모델 만들기](../../advanced-analytics/tutorials/deepdive-create-models.md)
-
-## <a name="previous-step"></a>이전 단계
-
-[R 스크립트 만들기 및 실행](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)
+> [!div class="nextstepaction"]
+> [SQL Server 데이터를 사용 하 여 R 모델 만들기](../../advanced-analytics/tutorials/deepdive-create-models.md)

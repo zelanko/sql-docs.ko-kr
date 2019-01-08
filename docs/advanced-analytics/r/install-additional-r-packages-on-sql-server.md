@@ -1,5 +1,5 @@
 ---
-title: SQL Server Machine Learning 서비스에 새 R 패키지 설치 | Microsoft Docs
+title: 새 R 언어 패키지-SQL Server Machine Learning Services 설치
 description: SQL Server 2016 R Services 또는 SQL Server 2017 Machine Learning Services (In-database)를 새 R 패키지를 추가 합니다.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f345dc0649c5b7b9665e095207ad7a5a12d16871
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 590dbcc08d433147b61678c2b865ba205a0e547d
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697051"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432806"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>SQL Server에 새로운 R 패키지 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51697051"
 
 R 패키지 라이브러리를 물리적으로 제한 된 액세스를 사용 하 여 안전한 폴더에서 SQL Server 인스턴스, Program Files 폴더에 있습니다. 이 위치에 쓰기는 관리자 권한이 필요합니다.
 
-관리자가 아닌 패키지를 설치할 수 있지만 이렇게 하려면 addititional 구성 및 기능 초기 설치에서 사용할 수 없습니다. 관리자가 아닌 패키지 설치에 대 한 두 가지: RevoScaleR 버전 9.0.1 사용 하거나 나중에 CREATE EXTERNAL LIBRARY (SQL Server 2017에만 해당)를 사용 하 여 합니다. SQL Server 2017에서 **dbo_owner** 또는 현재 데이터베이스에 CREATE EXTERNAL LIBRARY 권한이 있는 사용자를 다른 R 패키지를 설치할 수 있습니다.
+관리자가 아닌 패키지를 설치할 수 있지만 이렇게 하려면 addititional 구성 및 기능 초기 설치에서 사용할 수 없습니다. 관리자가 아닌 패키지 설치 하는 방법은 두 가지가 있습니다. RevoScaleR 버전 9.0.1 사용 하거나 나중에 CREATE EXTERNAL LIBRARY (SQL Server 2017에만 해당)를 사용 하 여 합니다. SQL Server 2017에서 **dbo_owner** 또는 현재 데이터베이스에 CREATE EXTERNAL LIBRARY 권한이 있는 사용자를 다른 R 패키지를 설치할 수 있습니다.
 
 R 개발자가 익숙한 중앙에 위치한 라이브러리 쉽지 경우 필요한 패키지에 대 한 사용자 라이브러리 만들기. 이 방법은 SQL Server 데이터베이스 엔진 인스턴스를 실행 하는 R 코드에 대 한 문제가 됩니다. 해당 라이브러리는 동일한 컴퓨터의 경우에 SQL Server 외부 라이브러리에서 패키지를 로드할 수 없습니다. SQL Server에서 실행 되는 R 코드에서 인스턴스 라이브러리에서 패키지에만 사용할 수 있습니다.
 

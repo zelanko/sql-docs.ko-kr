@@ -10,12 +10,12 @@ ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 063b286b1addf62b226fc075299dbabd119d3764
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
-ms.translationtype: HT
+ms.openlocfilehash: e4d4f5af2a9b0c58e8cef89f143e4ec42cb03695
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032063"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372925"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>SQL Server 업데이트 설치 후 DQS 데이터베이스 스키마 업그레이드
   이전에 구성한 DQS 인스턴스에 SQL Server 업데이트(패치, 핫픽스 또는 누적 업데이트)를 설치한 후에 **upgrade** 명령줄 매개 변수로 DQSInstaller.exe 파일을 실행하여 DQS 데이터베이스를 업그레이드해야 할 수 있습니다. 그렇지 않으면 Data Quality 클라이언트를 사용하여 Data Quality Server에 연결하려고 할 때 다음과 같은 오류 메시지가 나타날 수 있습니다.  
@@ -27,9 +27,9 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
  DQS 데이터베이스 스키마를 업그레이드해도 DQS 데이터베이스의 기존 데이터(기술 자료, 데이터 품질 프로젝트, DQS_STAGING_DATA 데이터베이스의 내보낸 결과)에 영향을 주지 않습니다. 그러나 스키마 업그레이드 중에 데이터 손실을 방지하기 위해 DQS 데이터베이스 스키마를 업그레이드하기 전에 DQS 데이터베이스를 백업해야 합니다. DQS 데이터베이스 백업에 대한 자세한 내용은 [Backing Up and Restoring DQS Databases](../backing-up-and-restoring-dqs-databases.md)을 참조하십시오.  
   
 > [!NOTE]  
->  대부분의 경우 SQL Server를 업데이트하려면 DQS 데이터베이스 스키마로 업그레이드해야 합니다. DQS 데이터베이스 스키마로 업그레이드해야 하는 SQL Server 업데이트에 대한 자세한 내용은 [DQS 업그레이드: Data Quality Services에서 누적 업데이트 또는 핫픽스 패치 설치](http://go.microsoft.com/fwlink/?LinkID=251565)의 1.A 단계를 참조하세요.  
+>  대부분의 경우 SQL Server를 업데이트하려면 DQS 데이터베이스 스키마로 업그레이드해야 합니다. DQS 데이터베이스 스키마로 업그레이드 해야 하는 SQL Server 업데이트에 대 한 자세한 참조 차트의 1.A 단계 [DQS 업그레이드: Data Quality Services에서 누적 업데이트 또는 핫픽스 패치 설치](https://go.microsoft.com/fwlink/?LinkID=251565)합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
   
 -   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 컴퓨터에서 Administrators 그룹의 멤버로 로그온해야 합니다.  
   
@@ -60,7 +60,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
 ## <a name="next-steps"></a>다음 단계  
  Data Quality 클라이언트 애플리케이션에서 업그레이드된 Data Quality Server에 로그온합니다.  
   
- SQL Server 업데이트 설치 후 DQS 데이터베이스 스키마 업그레이드 및 관련 문제 해결 단계에 대한 자세한 내용은 [DQS 업그레이드: Data Quality Services에서 누적 업데이트 또는 핫픽스 패치 설치](http://go.microsoft.com/fwlink/?LinkID=251565)를 참조하세요.  
+ DQS를 업그레이드 하는 방법에 대 한 자세한 내용은 SQL Server를 설치한 후 데이터베이스 스키마 업데이트 및 관련 문제 해결 단계 [DQS 업그레이드: Data Quality Services에서 누적 업데이트 또는 핫픽스 패치 설치](https://go.microsoft.com/fwlink/?LinkID=251565)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Data Quality Services 설치](install-data-quality-services.md)   

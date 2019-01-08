@@ -13,12 +13,12 @@ ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5e0c556930dc843f9a512f09f26ae9187dcd0c84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 5c57ef0020031e944d1c482bf7ec9bc3928681a4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132513"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374665"
 ---
 # <a name="relational-query-designer-ssas"></a>관계형 쿼리 디자이너(SSAS)
   관계형 쿼리 디자이너는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 관계형 데이터베이스 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]에서 검색할 데이터를 지정하는 쿼리를 만들 때 유용합니다. 그래픽 쿼리 디자이너를 사용하여 메타데이터를 탐색하고 쿼리를 대화형으로 작성하며 쿼리 결과를 볼 수 있습니다.  텍스트 기반 쿼리 디자이너를 사용하면 그래픽 쿼리 디자이너로 만든 쿼리를 보거나 쿼리를 수정할 수 있습니다. 파일 또는 보고서에서 기존 쿼리를 가져올 수도 있습니다.  
@@ -81,9 +81,9 @@ ms.locfileid: "48132513"
   
  집계는 데이터에 대한 요약을 제공하며 데이터는 요약 데이터를 전달하는 집계를 지원하도록 그룹화됩니다. 쿼리에 집계를 사용하는 경우 쿼리에서 반환되는 다른 필드는 모두 자동으로 그룹화되며 쿼리에는 SQL  GROUP  BY  절이 포함됩니다. **그룹화 및 집계** 목록에서 **그룹화 기준** 옵션만 사용하면 집계를 추가하지 않고 데이터를 요약할 수 있습니다. 대부분의 집계에는 DISTINCT  키워드를 사용하는 버전이 포함됩니다. DISTINCT를 포함하면 중복 값이 제거됩니다.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용 하 여 [!INCLUDE[tsql](../includes/tsql-md.md)] 하 고 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] 사용 하 여 [!INCLUDE[DWsql](../includes/dwsql-md.md)]입니다. 두 SQL  언어 모두 쿼리 디자이너가 제공하는 집계,  절 및 키워드를 지원합니다.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 [!INCLUDE[tsql](../includes/tsql-md.md)] 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] 에서는 [!INCLUDE[DWsql](../includes/dwsql-md.md)]를 참조하세요. 두 SQL  언어 모두 쿼리 디자이너가 제공하는 집계,  절 및 키워드를 지원합니다.  
   
- [!INCLUDE[tsql](../includes/tsql-md.md)]에 대한 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?LinkId=141687)에서 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](/sql/t-sql/language-reference)를 참조하세요.  
+ [!INCLUDE[tsql](../includes/tsql-md.md)]에 대한 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?LinkId=141687)에서 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](/sql/t-sql/language-reference)를 참조하세요.  
   
  다음 표에서는 집계를 나열하고 각 집계에 대한 간단한 설명을 제공합니다.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "48132513"
 -   **자동 검색** 테이블 간 관계를 자동으로 만드는 자동 검색 기능을 설정/해제합니다. 자동 검색을 설정하면 쿼리 디자이너를 통해 테이블의 외래 키에서 관계가 만들어지고,  자동 검색을 설정하지 않으면 수동으로 관계를 만들어야 합니다. **데이터베이스 뷰** 창에서 테이블을 선택하면 자동 검색 기능을 통해 자동으로 관계가 만들어집니다. 수동으로 조인을 만든 후 자동 검색을 설정하면 해당 조인이 삭제됩니다.  
   
     > [!IMPORTANT]  
-    >  사용 시 [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] 조인을 만드는 데 필요한 메타 데이터가 제공 되지 않으며 관계를 자동으로 검색할 수 없습니다. 쿼리가 [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]에서 데이터를 검색하는 경우 모든 테이블 조인을 수동으로 만들어야 합니다.  
+    >  [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] 와 함께 사용할 경우 조인을 만드는 데 필요한 메타데이터가 제공되지 않으며 자동으로 관계를 검색할 수 없습니다. 쿼리가 [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]에서 데이터를 검색하는 경우 모든 테이블 조인을 수동으로 만들어야 합니다.  
   
 -   **관계 추가** **관계** 목록에 관계를 추가합니다.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "48132513"
   
 -   **왼쪽 테이블** 조인 관계에 속하는 첫 번째 테이블의 이름이 표시됩니다.  
   
--   **조인 유형** 자동으로 생성된 쿼리에 사용된 SQL  JOIN  문의 유형을 표시합니다. 외래 키 제약 조건이 있는 경우 기본적으로 INNER  JOIN이 사용됩니다. 다른 조인 유형으로는 LEFT  JOIN  또는 RIGHT  JOIN이 사용될 수 있습니다. 이러한 조인 유형 중 어느 것도 적용되지 않으면 **조인 유형** 열에 **관련 없음**이 표시됩니다. 관련 없는 테이블에 대해서는 CROSS  JOIN  조인이 만들어지지 않습니다.  대신 왼쪽 테이블의 열과 오른쪽 테이블의 열을 조인하여 수동으로 관계를 만들어야 합니다. 조인 유형에 대 한 자세한 내용은 "조인 기본 사항"에서 참조 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [온라인](http://go.microsoft.com/fwlink/?LinkId=141687) msdn.microsoft.com...  
+-   **조인 유형** 자동으로 생성된 쿼리에 사용된 SQL  JOIN  문의 유형을 표시합니다. 외래 키 제약 조건이 있는 경우 기본적으로 INNER  JOIN이 사용됩니다. 다른 조인 유형으로는 LEFT  JOIN  또는 RIGHT  JOIN이 사용될 수 있습니다. 이러한 조인 유형 중 어느 것도 적용되지 않으면 **조인 유형** 열에 **관련 없음**이 표시됩니다. 관련 없는 테이블에 대해서는 CROSS  JOIN  조인이 만들어지지 않습니다.  대신 왼쪽 테이블의 열과 오른쪽 테이블의 열을 조인하여 수동으로 관계를 만들어야 합니다. 조인 유형에 대한 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?LinkId=141687) 에 있는 "조인 기본 사항"을 참조하십시오.  
   
 -   **오른쪽 테이블** 조인 관계에서 두 번째 테이블의 이름이 표시됩니다.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "48132513"
   
  이 데이터는 쿼리를 실행할 때의 데이터 원본의 값을 나타냅니다.  
   
- 결과 집합의 정렬 순서는 데이터 원본에서 데이터가 검색되는 순서에 따라 결정됩니다. 쿼리 텍스트를 직접 수정하여 정렬 순서를 변경할 수 있습니다. 쿼리에서 GROUP BY 문의 사용 방법은 [SQL Server 온라인 사용 설명서](http://go.microsoft.com/fwlink/?linkid=98335)에서 "GROUP BY(Transact-SQL)"를 참조하세요.  
+ 결과 집합의 정렬 순서는 데이터 원본에서 데이터가 검색되는 순서에 따라 결정됩니다. 쿼리 텍스트를 직접 수정하여 정렬 순서를 변경할 수 있습니다. 쿼리에서 GROUP BY 문의 사용 방법은 [SQL Server 온라인 사용 설명서](https://go.microsoft.com/fwlink/?linkid=98335)에서 "GROUP BY(Transact-SQL)"를 참조하세요.  
   
 ### <a name="graphical-query-designer-toolbar"></a>그래픽 쿼리 디자이너 도구 모음  
  그래픽 쿼리 디자이너 도구 모음은 쿼리 결과를 지정하거나 보는 데 사용할 수 있는 다음 단추를 제공합니다.  
@@ -263,6 +263,6 @@ uspGetWhereUsedProductID
   
  `ContactType`  
   
- 테이블 이름을 입력할 때 `ContactType`에 SQL 문을 만드는 것 `SELECT * FROM ContactType`입니다.  
+ 테이블 이름 `ContactType`을 입력하면 SQL 문 `SELECT * FROM ContactType`을 만드는 것과 동일합니다.  
   
   

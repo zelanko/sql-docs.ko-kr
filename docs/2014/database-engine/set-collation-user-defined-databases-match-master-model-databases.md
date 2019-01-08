@@ -12,12 +12,12 @@ ms.assetid: c686446f-dae1-4b05-a3df-837b3422988d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6aea5507c008d608b7fcc9e50c7defcdff90924d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfb00b1cc1a9930f7a374403b40e2c0d793eb090
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190403"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371085"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>master 및 model 데이터베이스와 일치하도록 사용자 정의 데이터베이스의 데이터 정렬 설정
   이 규칙은 사용자 정의 데이터베이스가 master 또는 model의 데이터 정렬과 동일한 데이터베이스 데이터 정렬을 사용하여 정의되었는지 확인합니다.  
@@ -48,11 +48,11 @@ ms.locfileid: "48190403"
   
  [sys.databases&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [Microsoft 기술 자료 문서 325335](http://go.microsoft.com/fwlink/?linkid=117751)  
+ [Microsoft 기술 자료 문서 325335](https://go.microsoft.com/fwlink/?linkid=117751)  
   
- [방법: 명령 프롬프트에서 SQL Server 2008 설치](http://go.microsoft.com/fwlink/?LinkId=81585)  
+ [방법: 명령 프롬프트에서 SQL Server 2008 설치](https://go.microsoft.com/fwlink/?LinkId=81585)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [정책 기반 관리를 사용하여 최선의 방법 모니터링 및 적용](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

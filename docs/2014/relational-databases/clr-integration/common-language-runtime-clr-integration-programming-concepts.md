@@ -16,12 +16,12 @@ ms.assetid: 951bf851-3e6e-4361-ae6a-2bcd5b837ebd
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 15fb0616503af2cb4da30fd69a98deaf635095b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ffd706cdb17bd73281ee4a62842362b09c6311ef
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057683"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360362"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>CLR(공용 언어 런타임) 통합 프로그래밍 개요
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 통합된 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows용 .NET Framework의 CLR(공용 언어 런타임) 구성 요소를 제공합니다. 이를 통해 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#을 포함한 모든 .NET Framework 언어를 사용하여 저장 프로시저, 트리거, 사용자 정의 형식, 사용자 정의 함수, 사용자 정의 집계 및 스트리밍 테이블 반환 함수를 작성할 수 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "48057683"
  The Microsoft.SqlServer.Server 네임스페이스에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 CLR 프로그래밍에 대한 핵심 기능이 포함되어 있습니다. 그러나 Microsoft.SqlServer.Server 네임스페이스는 .NET Framework SDK에 설명되어 있는데, 이 설명서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서에 포함되어 있지 않습니다.  
   
 > [!IMPORTANT]  
->  기본적으로 .NET Framework는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 설치하면 자동으로 설치되지만 .NET Framework SDK는 그렇지 않습니다. 컴퓨터에 SDK가 설치되지 않아 온라인 설명서 컬렉션이 포함되어 있지 않을 경우 이 섹션의 SDK 내용에 대한 링크가 작동하지 않습니다. 따라서 .NET Framework SDK를 설치하는 것이 좋습니다. 설치 되 면 SDK를 추가 Books Onl 온라인 설명서 컬렉션과 목차에 있는 지침에 따라 [.NET Framework SDK 설치](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)합니다.  
+>  기본적으로 .NET Framework는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 설치하면 자동으로 설치되지만 .NET Framework SDK는 그렇지 않습니다. 컴퓨터에 SDK가 설치되지 않아 온라인 설명서 컬렉션이 포함되어 있지 않을 경우 이 섹션의 SDK 내용에 대한 링크가 작동하지 않습니다. 따라서 .NET Framework SDK를 설치하는 것이 좋습니다. 설치 되 면 SDK를 추가 Books Onl 온라인 설명서 컬렉션과 목차에 있는 지침에 따라 [.NET Framework SDK 설치](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)합니다.  
   
  다음 표에서는 이 섹션에서 다루는 항목을 나열합니다.  
   
@@ -65,6 +65,6 @@ ms.locfileid: "48057683"
   
 ## <a name="see-also"></a>관련 항목  
  [어셈블리 &#40;데이터베이스 엔진&#41;](assemblies-database-engine.md)   
- [.NET Framework SDK 설치](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
+ [.NET Framework SDK 설치](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
   
   

@@ -12,32 +12,32 @@ ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 195b38804045c26053771d263d650cfaa2efecde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 842e862dff7eca85a05df0222989c6ee6390ab89
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227013"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361145"
 ---
 # <a name="use-a-statement-odbc"></a>문 사용(ODBC)
     
 ### <a name="to-use-a-statement"></a>문을 사용하려면  
   
-1.  SQL_HANDLE_STMT의 *HandleType*으로 [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396)을 호출하여 문 핸들을 할당합니다.  
+1.  SQL_HANDLE_STMT의 *HandleType*으로 [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)을 호출하여 문 핸들을 할당합니다.  
   
 2.  필요에 따라 [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)을 호출하여 문 옵션을 설정하거나 [SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md)을 호출하여 문 특성을 가져옵니다.  
   
      서버 커서를 사용하려면 커서 특성을 기본값 이외의 값으로 설정해야 합니다.  
   
-3.  문이 여러 번 실행되는 경우 필요에 따라 [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360)(SQLPrepare 함수)을 사용하여 문 실행을 준비합니다.  
+3.  문이 여러 번 실행되는 경우 필요에 따라 [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360)(SQLPrepare 함수)을 사용하여 문 실행을 준비합니다.  
   
-4.  문에 바인딩된 매개 변수 표식이 있으면 필요에 따라 [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md)를 사용하여 프로그램 변수에 매개 변수 표식을 바인딩합니다. 문이 준비되어 있으면 [SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) 및 [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md)을 호출하여 매개 변수의 수와 특징을 확인할 수 있습니다.  
+4.  문에 바인딩된 매개 변수 표식이 있으면 필요에 따라 [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md)를 사용하여 프로그램 변수에 매개 변수 표식을 바인딩합니다. 문이 준비되어 있으면 [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) 및 [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md)을 호출하여 매개 변수의 수와 특징을 확인할 수 있습니다.  
   
 5.  SQLExecDirect를 사용하여 문을 직접 실행합니다.  
   
      \- 또는-  
   
-     문이 준비되어 있는 경우 [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400)를 사용하여 여러 번 실행합니다.  
+     문이 준비되어 있는 경우 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)를 사용하여 여러 번 실행합니다.  
   
      \- 또는-  
   

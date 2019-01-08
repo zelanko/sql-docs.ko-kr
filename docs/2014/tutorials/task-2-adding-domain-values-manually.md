@@ -13,15 +13,15 @@ ms.assetid: aa6898db-f54b-4e98-84e4-ac64e48c3561
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b0383bc30f93afd893abcf86717df3a4e3a06d7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 756f69f172c1c901ffdf15658a6fefdcee64df1e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138393"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359955"
 ---
-# <a name="task-2-adding-domain-values-manually"></a>태스크 2: 도메인 값을 수동으로 추가
-  이 작업에 대 한 값을 추가 합니다 **국가** 도메인 수동으로. 참조 [Change Domain Values](http://msdn.microsoft.com/library/hh510408.aspx) 이 페이지의 필드에 대 한 자세한 내용은 항목입니다.  
+# <a name="task-2-adding-domain-values-manually"></a>작업 2: 도메인 값을 수동으로 추가
+  이 작업에 대 한 값을 추가 합니다 **국가** 도메인 수동으로. 참조 [Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx) 이 페이지의 필드에 대 한 자세한 내용은 항목입니다.  
   
 1.  클릭 **국가** 도메인에는 **도메인 목록**합니다.  
   
@@ -36,6 +36,6 @@ ms.locfileid: "48138393"
      ![도메인 값에 대해 United States](../../2014/tutorials/media/et-addingdomainvaluesmanually-02.jpg "도메인 값에 대 한 미국")  
   
 ## <a name="next-step"></a>다음 단계  
- [태스크 3: Excel 파일에서 도메인 값 가져오기](../../2014/tutorials/task-3-importing-domain-values-from-an-excel-file.md)  
+ [작업 3: Excel 파일에서 도메인 값 가져오기](../../2014/tutorials/task-3-importing-domain-values-from-an-excel-file.md)  
   
   

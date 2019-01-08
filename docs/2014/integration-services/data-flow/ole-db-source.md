@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsource.f1
@@ -16,12 +15,12 @@ ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b1d37bba3216a22d732c5562108db51925d37bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b428117cd445cf4cc8f06e588d344924394dcf02
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120580"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357600"
 ---
 # <a name="ole-db-source"></a>OLE DB 원본
   OLE DB 원본은 데이터베이스 테이블, 뷰 또는 SQL 명령을 사용하여 다양한 OLE DB 호환 관계형 데이터베이스에서 데이터를 추출합니다. 예를 들어 OLE DB 원본은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 테이블에서 데이터를 추출할 수 있습니다.  
@@ -81,7 +80,7 @@ ms.locfileid: "48120580"
  이 저장 프로시저에는 매개 변수 값을 제공할 변수 `@StartProductID` 및 `@CheckDate`가 필요합니다. **매핑** 목록에 매개 변수가 나타나는 순서는 상관없으며 \@ 기호를 포함한 매개 변수 이름이 저장 프로시저의 변수 이름과 일치하기만 하면 됩니다.  
   
 ### <a name="mapping-parameters-to-variables"></a>변수에 매개 변수 매핑  
- 매개 변수는 런타임에 매개 변수 값을 제공하는 변수에 매핑됩니다. 변수는 일반적으로 사용자 정의 변수이지만 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 제공하는 시스템 변수를 사용할 수도 있습니다. 사용자 정의 변수를 사용하는 경우에는 매핑된 매개 변수가 참조하는 열의 데이터 형식과 호환되는 형식으로 데이터 형식을 설정합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md)를 참조하세요.  
+ 매개 변수는 런타임에 매개 변수 값을 제공하는 변수에 매핑됩니다. 변수는 일반적으로 사용자 정의 변수이지만 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 제공하는 시스템 변수를 사용할 수도 있습니다. 사용자 정의 변수를 사용하는 경우에는 매핑된 매개 변수가 참조하는 열의 데이터 형식과 호환되는 형식으로 데이터 형식을 설정합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md)을 참조하세요.  
   
 ## <a name="troubleshooting-the-ole-db-source"></a>OLE DB 원본 문제 해결  
  OLE DB 원본이 외부 데이터 공급자에 대해 수행하는 호출을 로깅할 수 있습니다. 이 로깅 기능을 사용하면 OLE DB 원본이 외부 데이터 원본에서 데이터를 로드할 때 발생하는 문제를 해결할 수 있습니다. OLE DB 원본이 외부 데이터 공급자에 대해 수행하는 호출을 로깅하려면 패키지 로깅을 설정하고 패키지 수준에서 **Diagnostic** 이벤트를 선택합니다. 자세한 내용은 [패키지 실행 문제 해결 도구](../troubleshooting/troubleshooting-tools-for-package-execution.md)를 참조하세요.  
@@ -91,15 +90,15 @@ ms.locfileid: "48120580"
   
  **OLE DB 원본 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [OLE DB 원본 편집기 &#40;연결 관리자 페이지&#41;](../ole-db-source-editor-connection-manager-page.md)  
+-   [OLE DB 원본 편집기&#40;연결 관리자 페이지&#41;](../ole-db-source-editor-connection-manager-page.md)  
   
--   [OLE DB 원본 편집기 &#40;열 페이지&#41;](../ole-db-source-editor-columns-page.md)  
+-   [OLE DB 원본 편집기&#40;열 페이지&#41;](../ole-db-source-editor-columns-page.md)  
   
--   [OLE DB 원본 편집기 &#40;오류 출력 페이지&#41;](../ole-db-source-editor-error-output-page.md)  
+-   [OLE DB 원본 편집기&#40;오류 출력 페이지&#41;](../ole-db-source-editor-error-output-page.md)  
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](../common-properties.md)  
+-   [공용 속성](../common-properties.md)  
   
 -   [OLE DB 사용자 지정 속성](ole-db-custom-properties.md)  
   
@@ -114,11 +113,11 @@ ms.locfileid: "48120580"
 -   [병합 및 병합 조인 변환을 위한 데이터 정렬](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>관련 내용  
- social.technet.microsoft.com의 Wiki 문서 - [Oracle 커넥터가 있는 SSIS](http://go.microsoft.com/fwlink/?LinkId=220670)  
+ social.technet.microsoft.com의 Wiki 문서 - [Oracle 커넥터가 있는 SSIS](https://go.microsoft.com/fwlink/?LinkId=220670)  
   
 ## <a name="see-also"></a>관련 항목  
  [OLE DB 대상](ole-db-destination.md)   
- [Integration Services &#40;SSIS&#41; 변수](../integration-services-ssis-variables.md)   
+ [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md)   
  [데이터 흐름](data-flow.md)  
   
   

@@ -1,41 +1,32 @@
 ---
-title: SQL Server Machine Learning의 R 데이터 형식 작업 | Microsoft Docs
+title: SQL을 R 데이터 형식 변환-SQL Server Machine Learning 서비스
+description: 데이터 과학 및 기계 학습 솔루션에서 R 및 SQL Server 간에 명시적 및 암시적 데이터 형식 converstions를 검토 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 12/10/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: bcabb40cffb00e4f3ed1f5b7bb1df72f20f3f121
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 23318c4a0ad9fceff9b293b706ff61f62643ee6d
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43890069"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644952"
 ---
-# <a name="r-libraries-and-r-data-types"></a>R 라이브러리 및 R 데이터 형식
+# <a name="data-type-mappings-betweenr-and-sql-server"></a>데이터 형식 매핑 betweenR 및 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에 포함 된 R 라이브러리 및 다음 제품의 지원 되는 데이터 형식을 설명 합니다.
+SQL Server Machine Learning Services에서 R 통합 기능에서 실행 되는 R 솔루션의 경우 지원 되지 않는 데이터 형식 및 R 라이브러리 및 SQL Server 간에 데이터를 전달 하는 경우 암시적으로 수행할 수 있는 데이터 형식 변환의 목록을 검토 합니다.
 
-+ SQL Server 2016 R Services (In-database)
-+ SQL Server Machine Learning Services (In-database)
+## <a name="base-r-version"></a>기본 R 버전
 
-이 문서는 지원 되지 않는 데이터 형식에도 나열 및 목록 데이터 형식 변환이 SQL Server와 R 간에 데이터 전달 될 때 암시적으로 수행할 수 있는 합니다.
+SQL Server 2016 R Services 및 R 사용 하 여 SQL Server 2017 Machine Learning Services는 특정 버전의 Microsoft R Open을 사용 하 여 정렬 됩니다. 예를 들어 최신 릴리스의 SQL Server 2017 Machine Learning Services는 기반으로 Microsoft R Open 3.3.3 합니다.
 
-## <a name="r-libraries"></a>R 라이브러리
+SQL Server의 특정 인스턴스와 연결 된 R 버전을 보려면 엽니다 **RGui**합니다. 기본 인스턴스에 대 한 경로 다음과 같을 수 됩니다. `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
 
-두 제품의 R Services 및 R 사용 하 여 Machine Learning 서비스는 특정 버전의 Microsoft R Open을 사용 하 여 정렬 됩니다. 예를 들어 최신 릴리스의 SQL Server 2017 Machine Learning Services는 기반으로 Microsoft R Open 3.3.3 합니다.
-
-SQL Server의 특정 인스턴스와 연결 된 R 버전을 보려면 RGui를 엽니다.
-
-1. 기본 인스턴스에 대 한 경로 다음과 같을 수 됩니다. `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
-2. 메시지에는 R 배포 및 Microsoft R Open 버전 번호를 나열 하는 표시 됩니다.
-
-Microsoft R Server의 특정 버전에 포함 된 R 버전을 참조 하세요 [R Server-새로운](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages)합니다.
-
-동일한 패키지를 공유 하거나 동일한 패키지의 서로 다른 버전을 사용 하 여 여러 사용자와 동일한 컴퓨터에 R 패키지의 여러 버전을 설치할 수는 SQL Server에서 패키지 관리 시스템을 의미 하는 참고 합니다. 자세한 내용은 [SQL Server에서 R 패키지 관리](../r/install-additional-r-packages-on-sql-server.md)합니다.
+이 도구는 기본 R 및 다른 라이브러리를 로드합니다. 패키지 버전 정보는 세션 시작 시 로드 되는 각 패키지에 대 한 알림이 제공 됩니다. 
 
 ## <a name="r-and-sql-data-types"></a>R 및 SQL 데이터 형식
 
@@ -109,18 +100,18 @@ GUID (uniqueidentifier)), 타임 스탬프 및 감사에 사용 되는 다른 �
 R에서 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원하지 않지만 R 스크립트에서 데이터 열을 사용해야 하는 경우 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) 함수를 사용하여 R 스크립트에서 데이터를 사용하기 전에 데이터 형식 변환이 의도한 대로 시행되었는지 확인하는 것이 좋습니다.  
 
 > [!WARNING]
-데이터를 이동하는 동안 **rxDataStep**을 사용하여 호환되지 않는 열을 삭제할 경우 **RxSqlServerData** 데이터 원본 형식에는 인수 _varsToKeep_ 및 _varsToDrop_이 지원되지 않습니다.
+> 데이터를 이동하는 동안 **rxDataStep**을 사용하여 호환되지 않는 열을 삭제할 경우 **RxSqlServerData** 데이터 원본 형식에는 인수 _varsToKeep_ 및 _varsToDrop_이 지원되지 않습니다.
 
 
 ## <a name="examples"></a>예
 
-### <a name="example-1-implicit-conversion"></a>예제 1: 암시적 변환
+### <a name="example-1-implicit-conversion"></a>예 1: 암시적 변환
 
 다음 예제에서는 SQL Server와 R 간에 왕복을 수행할 때 데이터를 변환하는 방법을 보여 줍니다.
 
 쿼리를 일련의 값을 가져옵니다를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 및 저장된 프로시저를 사용 하 여 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) R 런타임을 사용 하 여 값을 출력 합니다.
 
-```SQL
+```sql
 CREATE TABLE MyTable (    
  c1 int,    
  c2 varchar(10),    
@@ -176,7 +167,7 @@ R에서 `str` 함수를 사용할 경우 출력 데이터의 스키마를 가져
 -   **열 C4**: 이 열에는 R 스크립트에서 생성된 값이 포함되며 원본 데이터에 표시되지 않습니다.
 
 
-## <a name="example-2-dynamic-column-selection-using-r"></a>예제 2: R을 사용하여 동적 열 선택
+## <a name="example-2-dynamic-column-selection-using-r"></a>예 2: R을 사용 하 여 동적 열 선택
 
 다음 예제에서는 R 코드를 사용하여 잘못된 열 형식이 있는지 확인하는 방법을 보여 줍니다. SQL Server 시스템 뷰를 사용하여 지정된 테이블의 스키마를 가져오고 지정된 잘못된 형식이 포함된 열을 제거합니다.
 
@@ -188,5 +179,5 @@ columnList <- do.call(paste, c(as.list(columns$COLUMN_NAME), sep = ","))
 sqlQuery <- paste("SELECT", columnList, "FROM testdata")
 ```
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고자료
 

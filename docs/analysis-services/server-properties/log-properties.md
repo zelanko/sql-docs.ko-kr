@@ -1,4 +1,5 @@
 ---
+title: Analysis Services 로그 속성 | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4e76f53329280caa589b2e45c19a967dc7c4e7dc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: db79a57c3e63cf09f36cd1b9af2d529811b67ea0
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999345"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071930"
 ---
 # <a name="log-properties"></a>로그 속성
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -131,7 +132,7 @@ ms.locfileid: "37999345"
  이 속성의 기본값은 빈 문자열이며 이후 FlightRecorderTraceDef.xml이 기본값이 됩니다.  
   
 ## <a name="query-log"></a>쿼리 로그  
- **적용 대상:** 다차원 서버 모드에만  
+ **적용 대상:** 다차원 서버 모드에만 적용됩니다.  
   
  **QueryLog\QueryLogFileName**  
  쿼리 로그 파일의 이름을 지정하는 문자열 속성입니다. 이 속성은 데이터베이스 테이블과는 달리 디스크 파일이 로깅용으로 사용되는 경우에만 적용됩니다(기본 동작).  
@@ -156,9 +157,6 @@ ms.locfileid: "37999345"
  쿼리 로그 테이블을 만들지 여부를 지정하는 부울 속성입니다.  
   
  이 속성의 기본값은 False로 서버가 로그 테이블을 자동으로 만들지 않고 쿼리 이벤트를 기록하지 않음을 나타냅니다.  
-  
-> [!NOTE]  
->  쿼리 로그 구성 방법에 대한 자세한 내용은 [Configuring the Analysis Services Query Log](http://go.microsoft.com/fwlink/?LinkId=81890)(Analysis Services 쿼리 로그 구성)를 참조하세요.  
   
 ## <a name="trace"></a>Trace  
  **Trace\TraceBackgroundDistributionPeriod**  

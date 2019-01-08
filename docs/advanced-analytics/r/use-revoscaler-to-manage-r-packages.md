@@ -1,5 +1,5 @@
 ---
-title: SQL Server에서 패키지를 찾거나 R 설치 RevoScaleR 함수를 사용 하는 방법 | Microsoft Docs
+title: RevoScaleR 함수를 사용 하 여 찾거나 R 패키지-SQL Server Machine Learning Services를 설치 하는 방법
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e9009e26a891c031194697de78cac97db6844d58
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: 64f930a72dbb7f8c6aff8338f22dd3e9b7cc7bbe
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563979"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645362"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>RevoScaleR 함수를 사용 하 여 찾거나 SQL Server에 R 패키지를 설치 하는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -97,7 +97,7 @@ connString <- paste("Driver=SQL Server;Server=", instance_name, ";Database=", da
 sqlcc <- RxInSqlServer(connectionString = connString, wait = sqlWait, consoleOutput = sqlConsoleOutput, numTasks = 4);
 ```
 
-서버가 위치한 및 보안 모델에 따라 연결 문자열에서 도메인 및 서브넷 사양을 제공 하 여 SQL 로그인을 사용 해야 합니다. 예를 들어:
+서버가 위치한 및 보안 모델에 따라 연결 문자열에서 도메인 및 서브넷 사양을 제공 하 여 SQL 로그인을 사용 해야 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
 
 ```R
 connStr <- "Driver=SQL Server;Server=myserver.financeweb.contoso.com;Database=Finance;Uid=RUser1;Pwd=RUserPassword"
@@ -181,7 +181,7 @@ rxSyncPackages(computeContext=computeContext, verbose=TRUE)
 
 Management Studio 또는 T-SQL을 현재 인스턴스에 설치 된 패키지의 목록을 가져오려면를 지 원하는 다른 도구에서이 명령을 사용 하 여 `rxInstalledPackages` 저장된 프로시저에서 합니다.
 
-```SQL
+```sql
 EXEC sp_execute_external_script 
   @language=N'R', 
   @script=N'
@@ -192,7 +192,7 @@ EXEC sp_execute_external_script
 
 `rxSqlLibPaths` SQL Server Machine Learning Services에서 사용 하는 액티브 라이브러리를 확인 하려면 함수를 사용할 수 있습니다. 이 스크립트는 현재 서버에 대 한 라이브러리 경로 반환할 수 있습니다. 
 
-```SQL
+```sql
 declare @instance_name nvarchar(100) = @@SERVERNAME, @database_name nvarchar(128) = db_name();
 exec sp_execute_external_script 
   @language = N'R',

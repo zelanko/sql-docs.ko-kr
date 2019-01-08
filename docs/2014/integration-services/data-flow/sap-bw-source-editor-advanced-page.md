@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67e45ef54da3d79d877882c94ee34fcaf0814514
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7729e4762b5289c4ed63b9cf204eac87381a232b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100713"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823647"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>SAP BW 원본 편집기(고급 페이지)
   **SAP BW 원본 편집기** 의 **고급** 페이지를 사용하여 문자열 변환 규칙과 제한 시간을 지정하고 특정 요청 ID의 상태를 다시 설정할 수 있습니다.  
@@ -47,7 +46,7 @@ ms.locfileid: "48100713"
   
 |옵션|Description|  
 |------------|-----------------|  
-|**자동 문자열 변환**|모든 문자열을 변환 `nvarchar` SAP Netweaver BW 시스템이 유니코드 시스템이 경우. 그렇지 않으면 모든 문자열을 변환 `varchar`합니다.|  
+|**자동 문자열 변환**|SAP Netweaver BW 시스템이 유니코드 시스템이면 모든 문자열을 `nvarchar`로 변환하고, 그렇지 않으면 모든 문자열을 `varchar`로 변환합니다.|  
 |**VarChar로 문자열 변환**|모든 문자열을 `varchar`로 변환합니다.|  
 |**NVarChar로 문자열 변환**|모든 문자열을 `nvarchar`로 변환합니다.|  
   
@@ -55,7 +54,7 @@ ms.locfileid: "48100713"
  원본이 대기해야 하는 최대 시간(초)을 지정합니다.  
   
 > [!NOTE]  
->  이 옵션은 편집기의 **연결 관리자** 페이지에서 **실행 모드** 의 값으로 **W - 알릴 때까지 대기** 를 선택한 경우에만 유효합니다. 자세한 내용은 [SAP BW 원본 편집기 &#40;연결 관리자 페이지&#41;](sap-bw-source-editor-connection-manager-page.md)합니다.  
+>  이 옵션은 편집기의 **연결 관리자** 페이지에서 **실행 모드** 의 값으로 **W - 알릴 때까지 대기** 를 선택한 경우에만 유효합니다. 자세한 내용은 [SAP BW 원본 편집기&#40;연결 관리자 페이지&#41;](sap-bw-source-editor-connection-manager-page.md)을 참조하세요.  
   
  **요청 ID**  
  **다시 설정**을 클릭할 때 "G - 녹색"으로 상태를 다시 설정할 요청 ID를 지정합니다.  
@@ -64,8 +63,8 @@ ms.locfileid: "48100713"
  확인 메시지를 표시한 후 지정된 요청 ID의 상태를 "G - 녹색"으로 다시 설정할 수 있습니다. 이 옵션은 문제가 발생하고 SAP Netweaver BW 시스템에서 노란색 또는 빨간색 상태로 요청에 플래그를 지정한 경우에 유용할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SAP BW 원본 편집기 &#40;연결 관리자 페이지&#41;](sap-bw-source-editor-connection-manager-page.md)   
- [SAP BW 원본 편집기 &#40;열 페이지&#41;](sap-bw-source-editor-columns-page.md)   
+ [SAP BW 원본 편집기&#40;연결 관리자 페이지&#41;](sap-bw-source-editor-connection-manager-page.md)   
+ [SAP BW 원본 편집기&#40;열 페이지&#41;](sap-bw-source-editor-columns-page.md)   
  [SAP BW 원본 편집기&#40;오류 출력 페이지&#41;](sap-bw-source-editor-error-output-page.md)   
  [Microsoft Connector 1.1 for SAP BW F1 도움말](../microsoft-connector-for-sap-bw-f1-help.md)  
   

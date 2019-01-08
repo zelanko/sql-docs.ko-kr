@@ -13,12 +13,12 @@ ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d3b8d3c1d86983b66379c31b556e9eb378b4dc51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: c9c5c491fe14027bdc85a5771e88125944676070
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223514"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377615"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>네트워크 부하 분산 클러스터에서 보고서 서버 구성
   NLB(네트워크 부하 분산) 클러스터에서 실행되도록 보고서 서버 확장을 구성하는 경우 다음을 수행해야 합니다.  
@@ -38,10 +38,10 @@ ms.locfileid: "48223514"
 |----------|-----------------|----------------------|  
 |1|NLB 클러스터의 서버 노드에서 Reporting Services를 설치하기 전에 스케일 아웃 배포를 위한 요구 사항을 확인합니다.|[기본 모드 보고서 서버 스케일 아웃 배포 구성 &#40;SSRS 구성 관리자&#41; ](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서|  
 |2|NLB 클러스터를 구성하고 제대로 작동하는지 확인합니다.<br /><br /> NLB 클러스터의 가상 서버 IP에 호스트 헤더 이름을 매핑합니다. 호스트 헤더 이름은 보고서 서버 URL에서 사용되며 IP 주소보다 기억하기 쉽고 입력하기도 편리합니다.|자세한 내용은 실행 중인 Windows 운영 체제 버전에 대한 Windows Server 제품 설명서를 참조하십시오.|  
-|3|Windows 레지스트리에 저장된 **BackConnectionHostNames** 목록에 호스트 헤더의 NetBIOS와 FQDN(정규화된 도메인 이름)을 추가합니다. [KB 896861](http://support.microsoft.com/kb/896861)(http://support.microsoft.com/kb/896861)에 있는 **메서드 2: 호스트 이름 지정**의 단계를 사용하여 다음과 같이 적절하게 조정합니다. 즉, 이 KB 문서의**7단계** 에 설명된 것과 같이 "레지스트리 편집기를 끝낸 다음 IISAdmin 서비스를 다시 시작"하지 않고 컴퓨터를 다시 부팅하여 변경 내용이 적용되도록 합니다.<br /><br /> 예를 들어 호스트 헤더 이름 \<MyServer>가 Windows 컴퓨터 이름인 "contoso"의 가상 이름인 경우 FQDN 형식 "contoso.domain.com"을 참조할 수 있습니다. **BackConnectionHostNames**의 목록에 호스트 헤더 이름(MyServer)과 FQDN 이름(contoso.domain.com)을 모두 추가해야 합니다.|이 단계는 서버 환경의 로컬 컴퓨터에 NTLM 인증이 사용되어 루프백 연결이 생성되는 경우에 필요합니다.<br /><br /> 이 경우 보고서 관리자와 보고서 서버 간의 요청이 401(권한 없음) 오류와 함께 실패하게 됩니다.|  
-|4|NLB 클러스터에 이미 속해 있는 노드에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 파일만 모드로 설치하고 스케일 아웃 배포를 위한 보고서 서버 인스턴스를 구성합니다.<br /><br /> 구성한 확장은 가상 서버 IP에 전송되는 요청에 응답하지 않을 수 있습니다. 가상 서버 IP를 사용하도록 확장을 구성하는 작업은 뷰 상태 유효성 검사를 구성한 후 그 다음 단계에서 수행됩니다.|[기본 모드 보고서 서버 스케일 아웃 배포 구성 &#40;SSRS 구성 관리자&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
+|3|Windows 레지스트리에 저장된 **BackConnectionHostNames** 목록에 호스트 헤더의 NetBIOS와 FQDN(정규화된 도메인 이름)을 추가합니다. **방법 2: 호스트 이름 지정** 에 [KB 896861](https://support.microsoft.com/kb/896861) (https://support.microsoft.com/kb/896861)를 조정 합니다. 즉, 이 KB 문서의**7단계** 에 설명된 것과 같이 "레지스트리 편집기를 끝낸 다음 IISAdmin 서비스를 다시 시작"하지 않고 컴퓨터를 다시 부팅하여 변경 내용이 적용되도록 합니다.<br /><br /> 예를 들어 호스트 헤더 이름 \<MyServer>가 Windows 컴퓨터 이름인 "contoso"의 가상 이름인 경우 FQDN 형식 "contoso.domain.com"을 참조할 수 있습니다. **BackConnectionHostNames**의 목록에 호스트 헤더 이름(MyServer)과 FQDN 이름(contoso.domain.com)을 모두 추가해야 합니다.|이 단계는 서버 환경의 로컬 컴퓨터에 NTLM 인증이 사용되어 루프백 연결이 생성되는 경우에 필요합니다.<br /><br /> 이 경우 보고서 관리자와 보고서 서버 간의 요청이 401(권한 없음) 오류와 함께 실패하게 됩니다.|  
+|4|NLB 클러스터에 이미 속해 있는 노드에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 파일만 모드로 설치하고 스케일 아웃 배포를 위한 보고서 서버 인스턴스를 구성합니다.<br /><br /> 구성한 확장은 가상 서버 IP에 전송되는 요청에 응답하지 않을 수 있습니다. 가상 서버 IP를 사용하도록 확장을 구성하는 작업은 뷰 상태 유효성 검사를 구성한 후 그 다음 단계에서 수행됩니다.|[기본 모드 보고서 서버 확장 배포 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |5|뷰 상태 유효성 검사를 구성합니다.<br /><br /> 최상의 결과를 얻으려면 스케일 아웃 배포를 구성한 후에 가상 서버 IP를 사용하도록 보고서 서버 인스턴스를 구성하기 전에 이 단계를 수행하세요. 뷰 상태 유효성 검사를 먼저 구성하면 사용자가 대화형 보고서에 액세스할 때 상태 유효성 검사 실패에 대한 예외가 발생하는 것을 방지할 수 있습니다.|이 항목의[뷰 상태 유효성 검사 구성 방법](#ViewState) 을 참조하십시오.|  
-|6|구성할 `Hostname` 고 `UrlRoot` NLB 클러스터의 가상 서버 IP를 사용 하도록 합니다.|이 항목의[Hostname 및 UrlRoot 구성 방법](#SpecifyingVirtualServerName) 을 참조하십시오.|  
+|6|NLB 클러스터의 가상 서버 IP를 사용하도록 `Hostname` 및 `UrlRoot`를 구성합니다.|이 항목의[Hostname 및 UrlRoot 구성 방법](#SpecifyingVirtualServerName) 을 참조하십시오.|  
 |7|지정한 호스트 이름을 통해 서버에 액세스할 수 있는지 확인합니다.|이 항목의[보고서 서버 액세스 권한 확인](#Verify) 을 참조하십시오.|  
   
 ##  <a name="ViewState"></a> 뷰 상태 유효성 검사 구성 방법  
@@ -59,20 +59,20 @@ ms.locfileid: "48223514"
     <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
     ```  
   
-2.  보고서 관리자에 대 한 및 Web.config 파일을 엽니다는 <`system.web`> 섹션에 붙여 넣습니다를 <`machineKey`> 생성 하는 요소입니다. 기본적으로 보고서 관리자 Web.config 파일은 \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager\Web.config에 있습니다.  
+2.  보고서 관리자에 대한 Web.config 파일을 열고 생성한 <`machineKey`> 요소를 <`system.web`> 섹션에 붙여 넣습니다. 기본적으로 보고서 관리자 Web.config 파일은 \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager\Web.config에 있습니다.  
   
 3.  파일을 저장합니다.  
   
 4.  스케일 아웃 배포의 각 보고서 서버에 대해 이전 단계를 반복합니다.  
   
-5.  \Reporting services\report Manager 폴더에서 모든 Web.Config 파일에 동일한 포함 되어 있는지 확인 <`machineKey`> 요소는 <`system.web`> 섹션입니다.  
+5.  \Reporting Services\Report Manager 폴더에 있는 모든 Web.Config 파일의 <`system.web`> 섹션에 동일한 <`machineKey`> 요소가 포함되어 있는지 확인합니다.  
   
 ##  <a name="SpecifyingVirtualServerName"></a> Hostname 및 UrlRoot 구성 방법  
  NLB 클러스터에서 보고서 서버 스케일 아웃 배포를 구성하려면 서버 클러스터에 대한 단일 액세스 지점을 제공하는 단일 가상 서버 이름을 정의해야 합니다. 그런 다음 가상 서버 이름을 사용자 환경의 DNS(Domain Name Server)에 등록합니다.  
   
  가상 서버 이름을 정의한 후에는 RSReportServer.config 파일에서 보고서 서버 URL에 가상 서버 이름이 포함되도록 `Hostname` 및 `UrlRoot` 속성을 구성할 수 있습니다.  
   
- 구성 된 `Hostname` 보고 환경에서 와일드 카드 URL 예약을 사용 하는 속성입니다. NLB 서버의 가상 서버 이름으로 사용할 `Hostname` 속성을 지정하면 보고 환경의 네트워크 트래픽이 NLB 서버로 전송됩니다. 그러면 NLB가 보고서 서버 노드에 요청을 배포합니다.  
+ 보고 환경에서 와일드카드 URL 예약을 사용하는 경우 `Hostname` 속성을 구성합니다. NLB 서버의 가상 서버 이름으로 사용할 `Hostname` 속성을 지정하면 보고 환경의 네트워크 트래픽이 NLB 서버로 전송됩니다. 그러면 NLB가 보고서 서버 노드에 요청을 배포합니다.  
   
  또한 Excel 또는 PDF 형식과 같은 정적 보고서로 내보낸 보고서나 전자 메일 구독과 같은 구독을 통해 생성되는 보고서에서 보고서 링크가 작동하도록 `UrlRoot` 속성을 구성합니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48223514"
     <Hostname>virtual_server</Hostname>  
     ```  
   
-3.  찾을 `UrlRoot`합니다. 요소는 구성 파일에 지정 되지 않지만 사용 된 기본값은이 형식으로 URL: https:// 또는 http://\<*computername*>/\<*reportserver*>, 여기서 \< *reportserver*> 보고서 서버 웹 서비스의 가상 디렉터리 이름입니다.  
+3.  `UrlRoot` 찾기. 요소는 구성 파일에 지정 되지 않지만 사용 된 기본값은이 형식으로 URL: https:// 또는 http://\<*computername*>/\<*reportserver*>, 여기서 \< *reportserver*> 보고서 서버 웹 서비스의 가상 디렉터리 이름입니다.  
   
 4.  에 대 한 값을 입력 `UrlRoot` 형식으로 클러스터의 가상 이름을 포함 합니다: http:// 또는 https://\<*virtual_server*>/\<*reportserver*>.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48223514"
 ##  <a name="Verify"></a> 보고서 서버 액세스 권한 확인  
  가상 서버 이름을 통해 스케일 아웃 배포에 액세스할 수 있는지 확인 (예를 들어 https://MyVirtualServerName/reportserver 고 https://MyVirtualServerName/reports)입니다.  
   
- 보고서 서버 로그 파일 또는 RS 실행 로그를 검토하여 실제로 보고서를 처리하는 노드를 확인할 수 있습니다. 실행 로그 테이블에는 특정 요청을 처리한 인스턴스를 나타내는 **InstanceName** 열이 포함되어 있습니다. 자세한 내용은 [Reporting Services 로그 파일 및 소스](../report-server/reporting-services-log-files-and-sources.md) 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onl 온라인 설명서.  
+ 보고서 서버 로그 파일 또는 RS 실행 로그를 검토하여 실제로 보고서를 처리하는 노드를 확인할 수 있습니다. 실행 로그 테이블에는 특정 요청을 처리한 인스턴스를 나타내는 **InstanceName** 열이 포함되어 있습니다. 자세한 내용은 [온라인 설명서에서](../report-server/reporting-services-log-files-and-sources.md) Reporting Services 로그 파일 및 소스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 참조하세요.  
   
  보고서 서버에 연결할 수 없으면 NLB를 검사하여 보고서 서버에 요청이 전송되었는지 확인하고 보고서 서버 HTTP 로그를 검토하여 보고서 서버에서 요청을 수신하고 있는지 확인합니다.  
   
@@ -108,13 +108,13 @@ ms.locfileid: "48223514"
   
 1.  텍스트 편집기에서 RSReportServer.config 파일을 엽니다.  
   
-2.  찾을 <`Hostname`>, <`ReportServerUrl`>, 및 <`UrlRoot`>에서 각 설정에 대 한 호스트 이름을 확인 합니다. 호스트 이름이 올바르지 않은 경우에는 올바른 호스트 이름으로 바꾸십시오.  
+2.  <`Hostname`>, <`ReportServerUrl`> 및 <`UrlRoot`>를 찾고 각 설정의 호스트 이름을 확인합니다. 호스트 이름이 올바르지 않은 경우에는 올바른 호스트 이름으로 바꾸십시오.  
   
  이러한 변경을 수행한 후 Reporting Services 구성 도구를 시작하면 <`ReportServerUrl`> 설정이 기본값으로 변경될 수 있습니다. 구성 파일을 필요한 설정이 포함된 버전으로 바꾸어야 하는 경우에는 항상 해당 백업 복사본을 보관해 두십시오.  
   
 ## <a name="see-also"></a>관련 항목  
- [Reporting Services 구성 관리자 &#40;기본 모드&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [URL 구성 &#40;SSRS 구성 관리자&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [URL 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [기본 모드 보고서 서버 스케일 아웃 배포 구성&#40;SSRS Configuration Manager&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
  [Reporting Services 기본 모드 보고서 서버 관리](manage-a-reporting-services-native-mode-report-server.md)  
   

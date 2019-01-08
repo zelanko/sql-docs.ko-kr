@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, about packages
@@ -21,12 +20,12 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c610f28e0b36e6dcf0ad34345c78868d09a4f1eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee169caab78d3b83d647a1a9cd20a2e88507fde2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058883"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377625"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services(SSIS) 패키지
   패키지는 연결, 제어 흐름 요소, 데이터 흐름 요소, 이벤트 처리기, 변수, 매개 변수 및 구성으로 이루어진 컬렉션으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 제공하는 그래픽 디자인 도구를 사용하여 조합하거나 프로그래밍 방식으로 작성합니다.  그런 다음 완성된 패키지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소 또는 파일 시스템에 저장하거나, ssISnoversion 프로젝트를 [!INCLUDE[ssIS](../includes/ssis-md.md)] 서버에 배포할 수 있습니다. 패키지는 검색, 실행 및 저장되는 작업 단위입니다.  
@@ -51,9 +50,9 @@ ms.locfileid: "48058883"
 ## <a name="package-templates"></a>패키지 템플릿  
  패키지는 기본 기능을 공유하는 패키지를 작성하는 템플릿으로 자주 사용됩니다. 기본 패키지를 작성한 다음 복사하거나 해당 패키지가 템플릿이 되도록 지정할 수 있습니다. 예를 들어 파일을 다운로드하고 복사한 다음 데이터를 추출하는 패키지에 한 폴더에 있는 파일을 열거하는 Foreach 루프의 FTP 및 파일 시스템 태스크가 포함될 수 있습니다. 또한 데이터에 액세스할 플랫 파일 연결 관리자 및 데이터를 추출할 플랫 파일 원본이 포함될 수 있습니다. 데이터의 대상은 다양하며 기본 패키지에서 복사된 후 각각의 새 패키지에 추가됩니다. 또한 패키지를 만든 다음 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에 추가할 새 패키지의 템플릿으로 사용할 수 있습니다. 자세한 내용은 [Create Packages in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md)을 참조하세요.  
   
- GUID는 추가할 프로그래밍 방식으로 또는 SSIS 디자이너를 사용 하 여 패키지를 처음 만들 때 해당 `ID` 속성과 이름을 해당 `Name` 속성입니다. 기존 패키지를 복사하거나 템플릿 패키지를 사용하여 새 패키지를 만드는 경우 이름 및 GUID도 복사됩니다. 이는 로깅을 사용하는 경우 로깅된 정보가 속하는 패키지를 식별할 수 있도록 패키지의 GUID 및 이름이 로그에 기록되기 때문에 문제가 발생할 수 있습니다. 따라서 새 패키지와 새 패키지를 복사된 패키지 및 로그 데이터에 있는 패키지와 구분할 수 있도록 새 패키지의 이름 및 GUID를 업데이트해야 합니다.  
+ 프로그래밍 방식으로 또는 SSIS 디자이너를 사용하여 패키지를 처음 만드는 경우 GUID가 해당 `ID` 속성에 추가되고 이름이 `Name` 속성에 추가됩니다. 기존 패키지를 복사하거나 템플릿 패키지를 사용하여 새 패키지를 만드는 경우 이름 및 GUID도 복사됩니다. 이는 로깅을 사용하는 경우 로깅된 정보가 속하는 패키지를 식별할 수 있도록 패키지의 GUID 및 이름이 로그에 기록되기 때문에 문제가 발생할 수 있습니다. 따라서 새 패키지와 새 패키지를 복사된 패키지 및 로그 데이터에 있는 패키지와 구분할 수 있도록 새 패키지의 이름 및 GUID를 업데이트해야 합니다.  
   
- GUID를 다시 생성 하면 패키지 GUID를 변경 하려면 합니다 `ID` 속성의 속성 창에서 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]합니다. 패키지 이름을 변경 하려면 값을 업데이트할 수 있습니다는 `Name` 속성 창에서 속성입니다. 또한 **dtutil** 명령 프롬프트를 사용하거나 GUID 및 이름을 프로그래밍 방식으로 업데이트할 수 있습니다. 자세한 내용은 [패키지 속성 설정](set-package-properties.md) 및 [dtutil 유틸리티](dtutil-utility.md)를 참조하세요.  
+ 패키지 GUID를 변경하려면 `ID`의 속성 창에 있는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 속성에 GUID를 다시 생성합니다. 패키지 이름을 변경하려면 속성 창에서 `Name` 속성 값을 업데이트해야 합니다. 또한 **dtutil** 명령 프롬프트를 사용하거나 GUID 및 이름을 프로그래밍 방식으로 업데이트할 수 있습니다. 자세한 내용은 [패키지 속성 설정](set-package-properties.md) 및 [dtutil 유틸리티](dtutil-utility.md)를 참조하세요.  
   
 ## <a name="objects-that-extend-package-functionality"></a>패키지 기능을 확장하는 개체  
  패키지는 이벤트 처리기, 구성, 로깅 및 변수와 같이 고급 기능을 제공하거나 기존 기능을 확장하는 추가 개체를 포함할 수 있습니다.  
@@ -72,7 +71,7 @@ ms.locfileid: "48058883"
 ### <a name="variables"></a>변수  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 시스템 변수와 사용자 정의 변수를 지원합니다. 시스템 변수는 런타임 시 패키지 개체에 대한 유용한 정보를 제공하며 사용자 정의 변수는 패키지의 사용자 지정 시나리오를 지원합니다. 식, 스크립트 및 구성에 두 유형의 변수를 모두 사용할 수 있습니다.  
   
- 패키지 수준 변수에는 패키지에 사용 가능한 미리 정의된 시스템 변수와 패키지 범위 내의 사용자 정의 변수가 포함됩니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)를 참조하세요.  
+ 패키지 수준 변수에는 패키지에 사용 가능한 미리 정의된 시스템 변수와 패키지 범위 내의 사용자 정의 변수가 포함됩니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)을 참조하세요.  
   
 ### <a name="parameters"></a>매개 변수  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 매개 변수를 사용하여 패키지 실행 시 패키지 내의 속성에 값을 할당할 수 있습니다. 프로젝트 수준에서 *프로젝트 매개 변수* 를 만들고 패키지 수준에서 *패키지 매개 변수* 를 만들 수 있습니다. 프로젝트 매개 변수는 프로젝트가 수신하는 외부 입력을 프로젝트 내 하나 이상의 패키지에 제공하기 위해 사용됩니다. 패키지 매개 변수를 사용하면 패키지를 편집하여 다시 배포할 필요 없이 패키지 실행을 수정할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 매개 변수](integration-services-ssis-package-and-project-parameters.md)를 참조하세요.  
@@ -81,7 +80,7 @@ ms.locfileid: "48058883"
  패키지 개체를 구성하여 검사점에서 패키지 다시 시작, 디지털 인증서로 패키지 서명, 패키지 보호 수준 설정, 트랜잭션을 사용하여 데이터 무결성 보장 등의 기능을 지원할 수 있습니다.  
   
 ### <a name="restarting-packages"></a>패키지 다시 시작  
- 패키지에는 해당 태스크가 하나 이상 실패할 때 패키지를 다시 시작하기 위해 사용할 수 있는 검사점 속성이 있습니다. 예를 들어 패키지에 두 개의 다른 테이블을 업데이트하는 두 개의 데이터 흐름 태스크가 있고 두 번째 태스크가 실패할 경우 첫 번째 데이터 흐름 태스크를 반복하지 않고 패키지를 다시 실행할 수 있습니다. 장기 실행 패키지의 경우 패키지 다시 시작 기능을 사용하면 시간을 절약할 수 있습니다. 다시 시작은 전체 패키지를 다시 실행할 필요 없이 실패한 태스크부터 패키지를 시작할 수 있다는 것을 의미합니다. 자세한 내용은 [검사점을 사용하여 패키지 다시 시작](packages/restart-packages-by-using-checkpoints.md)을 참조하세요.  
+ 패키지에는 해당 태스크가 하나 이상 실패할 때 패키지를 다시 시작하기 위해 사용할 수 있는 검사점 속성이 있습니다. 예를 들어 패키지에 두 개의 다른 테이블을 업데이트하는 두 개의 데이터 흐름 태스크가 있고 두 번째 태스크가 실패할 경우 첫 번째 데이터 흐름 태스크를 반복하지 않고 패키지를 다시 실행할 수 있습니다. 장기 실행 패키지의 경우 패키지 다시 시작 기능을 사용하면 시간을 절약할 수 있습니다. 다시 시작은 전체 패키지를 다시 실행할 필요 없이 실패한 태스크부터 패키지를 시작할 수 있다는 것을 의미합니다. 자세한 내용은 [Restart Packages by Using Checkpoints](packages/restart-packages-by-using-checkpoints.md)을 참조하세요.  
   
 ### <a name="securing-packages"></a>패키지 보안  
  디지털 서명으로 패키지를 서명하고 암호 또는 사용자 키를 사용하여 암호화할 수 있습니다. 디지털 서명은 패키지 원본을 인증합니다. 단, 패키지가 로드될 때 디지털 서명을 확인하도록 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 를 구성해야 합니다. 자세한 내용은 [디지털 서명을 사용하여 패키지 원본 확인](security/identify-the-source-of-packages-with-digital-signatures.md) 및 [패키지의 중요한 데이터에 대한 액세스 제어](security/access-control-for-sensitive-data-in-packages.md)를 참조하세요.  
@@ -116,8 +115,8 @@ ms.locfileid: "48058883"
   
 ## <a name="related-content"></a>관련 내용  
   
--   [Microsoft Dynamics Mobile 사용 하 여 SQL Server Integration Services를 구현합니다.](http://msdn.microsoft.com/library/cc563950)  
+-   [Microsoft Dynamics Mobile 사용 하 여 SQL Server Integration Services를 구현합니다.](https://msdn.microsoft.com/library/cc563950)  
   
--   [방법: Microsoft Dynamics AX 용 SQL Server Integration Services 패키지 구성](http://msdn.microsoft.com/library/bb986852)  
+-   [방법: Microsoft Dynamics AX 용 SQL Server Integration Services 패키지 구성](https://msdn.microsoft.com/library/bb986852)  
   
   

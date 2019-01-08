@@ -1,5 +1,5 @@
 ---
-title: SQL Server machine learning 위한 보안 | Microsoft Docs
+title: R 및 Python 확장-SQL Server Machine Learning에 대 한 보안 개요
 description: SQL Server Machine Learning Services의 확장성 프레임 워크에 대 한 보안 개요입니다. 로그인 및 사용자 계정, SQL Server 실행 패드 서비스, 여러 스크립트 및 파일 권한을 실행 하는 작업자 계정에 대 한 보안.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a5d109e16c81481f9e4267dc4963ecea74cfa736
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 5fd8850271ab4ebf7ac69ff32cfa0877394f1d89
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419378"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596574"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 확장성 프레임 워크에 대 한 보안 개요
 
@@ -71,7 +71,7 @@ SQL Server에서 해당 스크립트를 실행 하려는 고 예를 들어, 로�
 
 ## <a name="services-used-in-external-processing-launchpad"></a>외부 처리 (실행 패드)에 사용 된 서비스
 
-하나의 새 NT 서비스를 추가 하는 확장성 프레임 워크를 [서비스 목록을](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) SQL Server 설치에서: [ **SQL Server 실행 패드 (MSSSQLSERVER)**](extensibility-framework.md#launchpad)합니다.
+하나의 새 NT 서비스를 추가 하는 확장성 프레임 워크를 [서비스 목록을](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) SQL Server 설치에서: [**SQL Server 실행 패드 (MSSSQLSERVER)**](extensibility-framework.md#launchpad)합니다.
 
 데이터베이스 엔진이 별도 프로세스로 R 또는 Python 세션을 인스턴스화하기 위해 SQL Server 실행 패드 서비스를 사용 합니다. 낮은 권한 계정을; 프로세스 실행 SQL Server, 자체 실행 패드 및 저장된 프로시저 또는 호스트 쿼리가 실행 되는 사용자 id에서 고유 합니다. 낮은 권한 계정으로 별도 프로세스에서 스크립트를 실행 중인 R 및 Python에서 SQL Server에 대 한 보안 및 격리 모델의 기반이 됩니다.
 

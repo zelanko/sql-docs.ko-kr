@@ -9,12 +9,12 @@ ms.date: 12/07/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.custom: seodec18
-ms.openlocfilehash: c760bd4c149a63de0335c6d6651036bba56533a0
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.openlocfilehash: f5ddd80eaf29db657c42eec5c84c8485e8b0d8b6
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246762"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531158"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>빠른 시작: Azure Kubernetes Service (AKS)에서 SQL Server 빅 데이터 클러스터를 배포 합니다.
 
@@ -29,7 +29,7 @@ AKS 클러스터 만들기, 빅 데이터 클러스터를 동시에 설치를 �
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 빠른 시작이에서는 이미 v1.10의 최소 버전을 사용 하 여 AKS 클러스터를 구성한 필요 합니다. 자세한 내용은 참조는 [AKS에 배포](deploy-on-aks.md) 가이드입니다.
 
@@ -56,7 +56,6 @@ Windows 또는 Linux/macOS 클라이언트 사용 하는지에 따라 달라 집
 - 에 [명령 창](https://docs.microsoft.com/visualstudio/ide/reference/command-window), 따옴표 환경 변수에 포함 됩니다. 따옴표를 사용 하 여 암호를 래핑할 경우 큰따옴표는 암호에 포함 됩니다.
 - Bash에서 따옴표 변수에 포함 되지 않습니다. 큰따옴표를 사용 하는 예제 `"`합니다.
 - 원하는에 환경 변수는 암호를 설정할 수는 있지만 해야 속도가 충분히 복잡 한 사용 하지 않는 합니다 `!`, `&`, 또는 `'` 문자입니다.
-- CTP 2.2 릴리스에 대 한 기본 포트를 변경 하지 마세요.
 - `sa` 계정은 설치 중에 생성 되는 SQL Server Master 인스턴스의 시스템 관리자입니다. SQL Server 컨테이너를 만든 후 컨테이너에서 `echo $MSSQL_SA_PASSWORD`를 실행하여 지정한 `MSSQL_SA_PASSWORD` 환경 변수를 검색할 수 있습니다. 보안상의 이유로 변경 프로그램 `sa` 설명 된 모범 사례에 따라 암호 [여기](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password)합니다.
 
 다음 환경 변수를 초기화 합니다.  빅 데이터 클러스터를 배포 하는 데 필요 합니다.

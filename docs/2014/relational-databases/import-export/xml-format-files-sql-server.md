@@ -14,12 +14,12 @@ ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a6dee085342d800caf2cf7353d28a6813d8b74b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 29da5204dc5bd88ed2c92b93347358b9860fc5c4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201043"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373875"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 서식 파일(SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 *테이블에 데이터를 대량으로 가져오는 데 사용할* XML 형식 파일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 작성하기 위한 구문을 정의하는 XML 스키마를 제공합니다. XML 서식 파일은 XSDL(XML Schema Definition Language)에 정의되어 있는 이 스키마에 충실해야 합니다. XML 서식 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client와 함께 설치한 경우에만 지원됩니다.  
@@ -176,7 +176,7 @@ ms.locfileid: "48201043"
 |ID **= "*`fieldID`*"**|데이터 파일에서 필드의 논리적 이름을 지정합니다. 필드의 ID는 필드를 참조하는 데 사용되는 키입니다.<br /><br /> < 필드 ID **= "*`fieldID`*"**/ >에 매핑됩니다 < COLUMN SOURCE **= "*`fieldID`*"**/>|필수|  
 |xsi: type **= "*`fieldType`*"**|요소의 인스턴스 유형을 식별하는 XML 구문(특성처럼 사용)입니다. *fieldType* 값은 지정한 인스턴스에서 필요한 옵션 특성(아래)을 결정합니다.|필수(데이터 형식에 따라 다름)|  
 |LENGTH **="*`n`*"**|이 특성은 고정 길이 데이터 형식의 인스턴스 길이를 정의합니다.<br /><br /> *n* 값은 양의 정수여야 합니다.|선택(xsi:type 값에서 필요로 하지 않는 경우)|  
-|PREFIX_LENGTH **= "*`p`*"**|이 특성은 이진 데이터 표현의 접두사 길이를 정의합니다. PREFIX_LENGTH 값인 *p*는 1, 2, 4 또는 8 중 하나를 사용해야 합니다.|선택(xsi:type 값에서 필요로 하지 않는 경우)|  
+|PREFIX_LENGTH **= "*`p`*"**|이 특성은 이진 데이터 표현의 접두사 길이를 정의합니다. PREFIX_LENGTH 값인 *p*, 다음 중 하나 여야 합니다. 1, 2, 4 또는 8 중 하나를 사용해야 합니다.|선택(xsi:type 값에서 필요로 하지 않는 경우)|  
 |MAX_LENGTH **= "*`m`*"**|이 특성은 지정된 필드에 저장할 수 있는 최대 바이트 수입니다. 대상 테이블이 없는 경우 열의 최대 길이를 알 수 없습니다. MAX_LENGTH 특성은 출력 문자 열의 최대 길이를 제한하여 열 값에 할당된 저장소를 제한합니다. 특히 SELECT FROM 절에서 OPENROWSET 함수의 BULK 옵션을 사용할 때 편리합니다.<br /><br /> *m* 값은 양의 정수여야 합니다. 기본적으로 최대 길이는 **char** 열의 경우 8000자, **nchar** 열의 경우 4000자입니다.|선택 사항|  
 |데이터 정렬 **= "*`collationName`*"**|COLLATION은 문자 필드에서만 사용할 수 있습니다. SQL 데이터 정렬 이름 목록은 [SQL Server 데이터 정렬 이름&#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql)을 참조하세요.|선택 사항|  
 |종결자 **= "*`terminator`*"**|이 특성은 데이터 필드의 종결자를 지정합니다. 종결자는 어떠한 문자도 가능합니다. 종결자는 데이터의 일부가 아닌 고유 문자여야 합니다.<br /><br /> 기본적으로 필드 종결자는 탭 문자(\t로 표시)입니다. 단락 기호를 표시하려면 \r\n을 사용하세요.|이 특성이 필요한 문자 데이터의 xsi:type에만 사용됩니다.|  
@@ -228,7 +228,7 @@ ms.locfileid: "48201043"
 |----------------------|-----------------|------------------------------|  
 |소스 **= "*`fieldID`*"**|열에 매핑되는 필드의 ID를 지정합니다.<br /><br /> < COLUMN SOURCE **= "*`fieldID`*"**/ >에 매핑됩니다 < ID 필드 **= "*`fieldID`*"**/>|필수|  
 |NAME = "*columnName*"|서식 파일에 의해 표현된 행 집합의 열 이름을 지정합니다. 이 열 이름은 결과 집합에서 열을 식별하는 데 사용되며 대상 테이블에서 사용되는 열 이름과 일치할 필요는 없습니다.|필수|  
-|xsi **:** 형식을 **= "*`ColumnType`*"**|요소의 인스턴스 데이터 형식을 식별하는 XML 구문(특성처럼 사용)입니다. *ColumnType* 값은 지정한 인스턴스에서 필요한 옵션 특성(아래)을 결정합니다.<br /><br /> 참고:의 가능한 값 *ColumnType* 관련된 특성은 다음 표에 나열 됩니다.|선택 사항|  
+|xsi **:** 형식을 **= "*`ColumnType`*"**|요소의 인스턴스 데이터 형식을 식별하는 XML 구문(특성처럼 사용)입니다. *ColumnType* 값은 지정한 인스턴스에서 필요한 옵션 특성(아래)을 결정합니다.<br /><br /> 참고: 가능한 값 *ColumnType* 관련된 특성은 다음 표에 나열 됩니다.|선택 사항|  
 |LENGTH **="*`n`*"**|고정 길이 데이터 형식의 인스턴스 길이를 정의합니다. LENGTH는 xsi:type이 문자열 데이터 형식인 경우에만 사용됩니다.<br /><br /> *n* 값은 양의 정수여야 합니다.|선택(xsi:type이 문자열 데이터 형식인 경우에만 사용 가능)|  
 |PRECISION **="*`n`*"**|숫자의 전체 자릿수를 나타냅니다. 예를 들어 123.45의 전체 자릿수는 5입니다.<br /><br /> 값은 양의 정수여야 합니다.|선택(xsi:type이 가변 숫자 데이터 형식인 경우에만 사용 가능)|  
 |크기 조정 **= "*`int`*"**|숫자에서 소수점 이하 자릿수를 나타냅니다. 예를 들어 123.45의 소수 자릿수는 2입니다.<br /><br /> 값은 정수여야 합니다.|선택(xsi:type이 가변 숫자 데이터 형식인 경우에만 사용 가능)|  
@@ -241,7 +241,7 @@ ms.locfileid: "48201043"
   
 |형식 범주|\<COLUMN> 데이터 형식|데이터 형식의<br /><br /> 선택적 XML 특성|데이터 형식의<br /><br /> 선택적 XML 특성|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
-|고정|`SQLBIT``SQLTINYINT`, `SQLSMALLINT`, `SQLINT`, `SQLBIGINT`, `SQLFLT4`를 `SQLFLT8`, `SQLDATETIME`를 `SQLDATETIM4`, `SQLDATETIM8`를 `SQLMONEY`, `SQLMONEY4`, `SQLVARIANT`, 및 `SQLUNIQUEID`|없음|NULLABLE|  
+|고정|`SQLBIT`, `SQLTINYINT`, `SQLSMALLINT`, `SQLINT`, `SQLBIGINT`, `SQLFLT4`, `SQLFLT8`, `SQLDATETIME`, `SQLDATETIM4`, `SQLDATETIM8`, `SQLMONEY`, `SQLMONEY4`, `SQLVARIANT` 및 `SQLUNIQUEID`|없음|NULLABLE|  
 |가변 숫자|`SQLDECIMAL` 및 `SQLNUMERIC`|없음|NULLABLE, PRECISION, SCALE|  
 |LOB|`SQLIMAGE`, `CharLOB`, `SQLTEXT` 및 `SQLUDT`|없음|NULLABLE|  
 |문자 LOB|`SQLNTEXT`|없음|NULLABLE|  
@@ -308,9 +308,9 @@ for(int i=0;i<ColumnList.Count;i++)
 ###  <a name="OrderCharFieldsSameAsCols"></a> 1. 테이블 열과 동일하게 문자 데이터 필드 정렬  
  다음 예에서는 3개의 문자 데이터 필드가 포함된 데이터 파일을 설명하는 XML 서식 파일을 보여 줍니다. 서식 파일은 데이터 파일을 3개의 열이 포함된 테이블로 매핑합니다. 데이터 필드는 테이블 열과 일 대 일로 대응합니다.  
   
- **테이블(행):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
+ **테이블 (행):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
- **데이터 파일(레코드):** Age\<tab>Firstname\<tab>Lastname\<return>  
+ **데이터 파일 (레코드):** Age\<탭 > Firstname\<탭 > Lastname\<반환 >  
   
  다음 XML 서식 파일은 데이터 파일의 데이터를 테이블로 읽어 옵니다.  
   
@@ -321,7 +321,7 @@ for(int i=0;i<ColumnList.Count;i++)
 ```  
 <?xml version="1.0"?>  
 <BCPFORMAT   
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
@@ -346,9 +346,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="OrderFieldsAndColsDifferently"></a> 2. 데이터 필드와 테이블 열을 서로 다르게 정렬  
  다음 예에서는 3개의 문자 데이터 필드가 포함된 데이터 파일을 설명하는 XML 서식 파일을 보여 줍니다. 서식 파일은 데이터 파일을 데이터 파일의 필드와 다르게 정렬된 3개의 열을 포함하는 테이블로 매핑합니다.  
   
- **테이블(행):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
+ **테이블 (행):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
- **데이터 파일**(레코드): Age\<tab>Lastname\<tab>Firstname\<return>  
+ **데이터 파일** (레코드): Age\<탭 > Lastname\<탭 > Firstname\<반환 >  
   
  서식 파일은 `<RECORD>` 요소에서 3개의 필드에 있는 데이터 값을 문자 데이터로 표현합니다.  
   
@@ -357,7 +357,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
 <?xml version="1.0"?>  
 <BCPFORMAT   
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
@@ -381,9 +381,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ### <a name="c-omitting-a-data-field"></a>3. 데이터 필드 생략  
  다음 예에서는 4개의 문자 데이터 필드가 포함된 데이터 파일을 설명하는 XML 서식 파일을 보여 줍니다. 서식 파일은 데이터 파일을 3개의 열이 포함된 테이블로 매핑합니다. 두 번째 데이터 필드는 대응되는 테이블 열이 없습니다.  
   
- **테이블(행):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
+ **테이블 (행):** Person (Age int, FirstName Varchar(20), LastName Varchar(30))  
   
- **데이터 파일(레코드):** Age\<tab>employeeID\<tab>Firstname\<tab>Lastname\<return>  
+ **데이터 파일 (레코드):** Age\<탭 > employeeID\<탭 > Firstname\<탭 > Lastname\<반환 >  
   
  서식 파일은 `<RECORD>` 요소에서 4개의 필드에 있는 데이터 값을 문자 데이터로 표현합니다. 각 필드에서 TERMINATOR 특성은 데이터 값 다음에 오는 종결자를 나타냅니다.  
   
@@ -391,7 +391,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
 ```  
 <BCPFORMAT   
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
@@ -423,7 +423,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
 <?xml version = "1.0"?>  
 <BCPFORMAT  
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
    <RECORD>  
       <FIELD xsi:type="CharTerm" ID="C1" TERMINATOR="\t"   
@@ -465,7 +465,7 @@ CREATE TABLE t_xml (c1 int, c2 xml)
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativePrefix" PREFIX_LENGTH="1"/>  
@@ -484,7 +484,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
 <?xml version="1.0"?>  
 <BCPFORMAT  
-       xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
+       xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharFixed" LENGTH="10"/>  
@@ -507,7 +507,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
 -   [서식 파일을 사용하여 테이블 열을 데이터 파일 필드에 매핑&#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [서식 파일 만들기&#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   

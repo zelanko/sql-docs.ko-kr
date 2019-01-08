@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpmergeconflictrows_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26bf2e89462c0096c9a6fd2a081cb72c68e9a32a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af247734b941a0d9fd7010d4699f9ddb296c890e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746581"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589167"
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,16 +42,16 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_게시_**'**  
  게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 **%** 합니다. 게시가 지정된 경우에는 해당 게시에 대한 모든 충돌이 반환됩니다. 예를 들어 경우는 **MSmerge_conflict_Customers** 테이블에 대 한 충돌 행의 **WA** 및 **CA** 게시에 게시 이름을 **CA**  와 관련 된 충돌을 검색 합니다 **CA** 게시 합니다.  
   
- [  **@conflict_table=**] **'***conflict_table***'**  
- 충돌 테이블의 이름입니다. *conflict_table* 됩니다 **sysname**, 기본값은 없습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서 충돌 테이블 이름으로 형식 이름을 사용 하 여 **MSmerge_conflict_* 게시 *_* 문서 *, 게시 된 각 테이블을 사용 하 여 문서입니다.  
+ [  **@conflict_table=**] **'**_conflict_table_**'**  
+ 충돌 테이블의 이름입니다. *conflict_table* 됩니다 **sysname**, 기본값은 없습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서 충돌 테이블 이름으로 형식 이름을 사용 하 여 **MSmerge_conflict\__게시\_문서_** 를 사용 하 여 게시 된 각 아티클당 한 테이블입니다.  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_게시자_**'**  
  게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_**'**  
  게시자 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
  [  **@logical_record_conflicts=** ] *logical_record_conflicts*  
@@ -64,7 +63,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**origin_datasource**|**varchar(255)**|충돌의 시작입니다.|  
-|**conflict_type**|**int**|충돌 유형을 표시하는 코드입니다.<br /><br /> **1** = 업데이트 충돌: 행 수준에서 충돌이 검색 됩니다.<br /><br /> **2** = 열 업데이트 충돌: 충돌이 열 수준에서 검색 합니다.<br /><br /> **3** = 업데이트 / 충돌 시 삭제: 삭제 충돌에서 승리 합니다.<br /><br /> **4** = 업데이트 Wins 삭제 충돌: 삭제 충돌이 손실 된 rowguid가이 테이블에 기록 됩니다.<br /><br /> **5** = 업로드 삽입 실패: 게시자의 구독자에서의 삽입을 적용할 수 없습니다.<br /><br /> **6** = 다운로드 삽입 실패: 구독자에서 게시자에서의 삽입을 적용할 수 없습니다.<br /><br /> **7** = 업로드 삭제 실패: 구독자에서의 삭제를 게시자로 업로드할 수 없습니다.<br /><br /> **8** = 다운로드 삭제 실패: 게시자에서의 삭제를 구독자로 다운로드할 수 없습니다.<br /><br /> **9** = 업로드 업데이트 실패: 게시자의 구독자에서 업데이트를 적용할 수 없습니다.<br /><br /> **10** = 다운로드 업데이트 실패: 구독자에 게시자에서 업데이트를 적용할 수 없습니다.<br /><br /> **12** = 논리 레코드 업데이트 Wins 삭제: 삭제 충돌이 손실 된 논리 레코드가이 테이블에 기록 됩니다.<br /><br /> **13** = 논리 레코드 충돌 삽입 업데이트: 업데이트를 사용 하 여 충돌을 논리적 레코드를 삽입 합니다.<br /><br /> **14** = 논리 레코드 삭제 Wins 업데이트 충돌: 업데이트 충돌이 손실 된 논리 레코드가이 테이블에 기록 됩니다.|  
+|**conflict_type**|**int**|충돌 유형을 표시하는 코드입니다.<br /><br /> **1** = 업데이트 충돌: 충돌이 행 수준에서 검색됩니다.<br /><br /> **2** = 열 업데이트 충돌: 충돌이 열 수준에서 검색됩니다.<br /><br /> **3** = 업데이트 / 삭제 충돌 합니다. 삭제가 충돌에서 적용됩니다.<br /><br /> **4** = 업데이트 / 삭제 충돌 합니다. 충돌에서 패한 삭제된 rowguid가 이 테이블에 기록됩니다.<br /><br /> **5** = 업로드 삽입 실패: 구독자에서의 삽입을 게시자에 적용할 수 없습니다.<br /><br /> **6** = 다운로드 삽입 실패: 게시자에서의 삽입을 구독자에 적용할 수 없습니다.<br /><br /> **7** = 업로드 삭제 실패: 구독자에서의 삭제를 게시자로 업로드할 수 없습니다.<br /><br /> **8** = 다운로드 삭제 실패: 게시자에서의 삭제를 구독자로 다운로드할 수 없습니다.<br /><br /> **9** = 업로드 업데이트 실패: 구독자에서의 업데이트를 게시자에 적용할 수 없습니다.<br /><br /> **10** = 다운로드 업데이트 실패: 게시자에서의 업데이트를 구독자에 적용할 수 없습니다.<br /><br /> **12** = 논리 레코드 업데이트/삭제 충돌 합니다. 충돌에서 적용하지 못한 삭제된 논리 레코드가 이 테이블에 기록됩니다.<br /><br /> **13** = 논리 레코드 삽입/업데이트 충돌: 논리 레코드 삽입이 업데이트와 충돌합니다.<br /><br /> **14** = 논리 레코드 삭제 / 업데이트 충돌: 충돌에서 적용하지 못한 업데이트된 논리 레코드가 이 테이블에 기록됩니다.|  
 |**reason_code**|**int**|상황에 맞는 오류 코드입니다.|  
 |**reason_text**|**varchar(720)**|상황에 맞는 오류 설명입니다.|  
 |**pubid**|**uniqueidentifier**|게시 식별자입니다.|  

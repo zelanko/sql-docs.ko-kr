@@ -1,6 +1,6 @@
 ---
-title: SQL Server 2016 R Services (In-database) 설치 | Microsoft Docs
-description: SQL Server에서 R는 Windows에서 SQL Server 2016 R Services를 설치할 때 사용할 수 있습니다.
+title: 설치 SQL Server 2016 R Services (In-database)-SQL Server Machine Learning
+description: R 프로그래밍 언어 지원 Windows의 SQL Server 2016 R Services에서 데이터베이스 엔진에 추가 합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/01/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f4ba4e28a17b0a025b48d41b077d4a536a9be8e9
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: 69b3b9a57b2a4f6120c88552ca3100b288968b69
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878126"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645322"
 ---
 # <a name="install-sql-server-2016-r-services"></a>SQL Server 2016 R Services 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,7 +42,7 @@ SQL Server 2017에서 R 통합으로 제공 됩니다 [Machine Learning Services
 모든 이전 버전의 Revolution Analytics 개발 환경 또는 RevoScaleR 패키지를 사용 하는 경우, SQL Server 2016의 시험판 버전을 설치한 경우 소프트웨어를 제거 해야 합니다. RevoScaleR 및 다른 전용 패키지의 이전 버전과 새 버전을 실행 하는 것은 지원 되지 않습니다. 이전 버전을 제거 하는 도움말을 참조 하세요 [업그레이드 및 설치 FAQ에 대 한 SQL Server Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md)합니다.
 
 > [!IMPORTANT]
-> 설치를 완료 한 후에이 문서에 설명 된 추가 사후 구성 단계를 완료 해야 합니다. 외부 스크립트를 사용 하 여 SQL Server를 사용 하도록 설정 하 고 계정 사용자를 대신해 R 작업을 실행 하려면 SQL Server에 필요한 추가이 단계에 포함 됩니다. 구성 변경에는 일반적으로 인스턴스를 다시 시작 또는 실행 패드 서비스를 다시 시작 해야합니다.
+> 설치를 완료 한 후에이 문서에 설명 된 추가 사후 구성 단계를 완료 해야 합니다. 외부 스크립트를 사용 하 여 SQL Server를 사용 하도록 설정 하 고 계정 사용자를 대신해 R 작업을 실행 하려면 SQL Server에 필요한 추가이 단계에 포함 됩니다. 구성을 변경하려면 일반적으로 인스턴스를 다시 시작하거나 Launchpad 서비스를 다시 시작해야 합니다.
 
 ## <a name="get-the-installation-media"></a>설치 미디어 다운로드
 
@@ -91,6 +91,19 @@ Microsoft는 SQL Server에서 필수 조건으로 설치되는 Microsoft VC++ 20
 
 7. 설치가 완료 되 면 컴퓨터를 다시 시작 하 라는 메시지가 표시 되는 경우 지금 합니다. 설치가 끝나면 설치 마법사에 표시되는 메시지를 읽어야 합니다. 자세한 내용은 [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)을 참조하세요.
 
+## <a name="set-environment-variables"></a>환경 변수 설정
+
+R 기능 통합만로 설정 해야 합니다 **MKL_CBWR** 환경 변수를 [일관 된 출력을 확인](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) Intel 라이브러리 MKL (Math Kernel) 계산에서 합니다.
+
+1. 제어판에서 클릭 **시스템 및 보안** > **System** > **고급 시스템 설정**  >   **환경 변수**합니다.
+
+2. 새 사용자 또는 시스템 변수를 만듭니다. 
+
+  + 변수 이름 설정 `MKL_CBWR`
+  + 변수 값 설정 `AUTO`
+
+이 단계에서는 서버를 다시 시작을 해야 합니다. 스크립트 실행을 사용 하도록 설정 하려는 경우 있습니다 수 보류 다시 시작의 모든 구성 작업이 완료 될 때까지 합니다.
+
 <a name="bkmk_enableFeature"></a>
 
 ##  <a name="enable-script-execution"></a>스크립트 실행 활성화
@@ -98,20 +111,20 @@ Microsoft는 SQL Server에서 필수 조건으로 설치되는 Microsoft VC++ 20
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 엽니다. 
 
     > [!TIP]
-    > 다운로드 하 고이 페이지에서 적절 한 버전을 설치할 수 있습니다: [SQL Server Management Studio (SSMS 다운로드)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)합니다.
+    > 다운로드 하 고이 페이지에서 적절 한 버전을 설치할 수 있습니다. [SSMS(SQL Server Management Studio) 다운로드합니다](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
     > 
     > 미리 보기 릴리스도 사용할 수 있는 [Azure Data Studio](../../azure-data-studio/what-is.md), 관리 작업 및 SQL Server에 대 한 쿼리를 지 합니다.
   
 2. Machine Learning 서비스를 설치한 인스턴스에 연결, 클릭 **새 쿼리** 쿼리 창을 열고 다음 명령을 실행 합니다.
 
-   ```SQL
+   ```sql
    sp_configure
    ```
     이때 속성 값 `external scripts enabled`는 **0**이어야 합니다. 기능을 기본적으로 해제 되어 있으므로입니다. R 또는 Python 스크립트를 실행 하기 전에 기능 관리자가 명시적으로 설정 해야 합니다.
      
 3. 외부 스크립팅 기능을 사용 하려면 다음 문을 실행 합니다.
   
-    ```SQL
+    ```sql
     EXEC sp_configure  'external scripts enabled', 1
     RECONFIGURE WITH OVERRIDE
     ```
@@ -132,7 +145,7 @@ Microsoft는 SQL Server에서 필수 조건으로 설치되는 Microsoft VC++ 20
 
 1. SQL Server Management studio에서 새 쿼리 창을 열고 다음 명령을 실행 합니다.
     
-    ```SQL
+    ```sql
     EXEC sp_configure  'external scripts enabled'
     ```
 
@@ -144,7 +157,7 @@ Microsoft는 SQL Server에서 필수 조건으로 설치되는 Microsoft VC++ 20
 
     새 **쿼리** 창에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], 다음과 같은 스크립트를 실행 하 고:
     
-    ```SQL
+    ```sql
     EXEC sp_execute_external_script  @language =N'R',
     @script=N'
     OutputDataSet <- InputDataSet;
@@ -162,7 +175,7 @@ Microsoft는 SQL Server에서 필수 조건으로 설치되는 Microsoft VC++ 20
 
 <a name="apply-cu"></a>
 
-## <a name="apply-updates"></a>업데이트를 적용 합니다.
+## <a name="apply-updates"></a>업데이트 적용
 
 데이터베이스 엔진 및 기계 학습 구성 요소 모두에 최신 누적 업데이트를 적용 하는 것이 좋습니다.
 
@@ -170,9 +183,9 @@ Microsoft는 SQL Server에서 필수 조건으로 설치되는 Microsoft VC++ 20
 
 연결이 끊어진된 서버에 추가 단계가 필요 합니다. 자세한 내용은 [인터넷 액세스 없이 컴퓨터에 설치 > 누적 업데이트를 적용할](sql-ml-component-install-without-internet-access.md#apply-cu)합니다.
 
-1. 이미 설치 된 기본 인스턴스를 시작 합니다: SQL Server 2016의 초기 릴리스, SQL Server 2016 SP 1 또는 SQL Server 2016 sp2.
+1. 이미 설치 된 기본 인스턴스를 시작 합니다. SQL Server 2016의 초기 릴리스, SQL Server 2016 SP 1 또는 SQL Server 2016 sp2.
 
-2. 누적 업데이트 목록으로 이동: [SQL Server 2016 업데이트](https://sqlserverupdates.com/sql-server-2016-updates/)
+2. 누적 업데이트 목록으로 이동 합니다. [SQL Server 2016 업데이트](https://sqlserverupdates.com/sql-server-2016-updates/)
 
 3. 최신 누적 업데이트를 선택 합니다. 실행 파일 다운로드 되어 자동으로 추출 합니다.
 
@@ -203,7 +216,7 @@ Microsoft는 SQL Server에서 필수 조건으로 설치되는 Microsoft VC++ 20
 * [SQLRUserGroup을 데이터베이스 사용자로 추가](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)
 
 > [!NOTE]
-> 나열 된 모든 변경 내용이 필요 하 고 none 필요할 수 있습니다. 요구 사항 보안 스키마를 설치한 SQL Server 및 데이터베이스에 연결 하 여 외부 스크립트를 실행 하는 사용자를 예상 하는 방법에 따라 달라 집니다. 추가 문제 해결 팁을 여기서 확인할 수 있습니다: [업그레이드 및 설치 FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)
+> 나열 된 모든 변경 내용이 필요 하 고 none 필요할 수 있습니다. 요구 사항 보안 스키마를 설치한 SQL Server 및 데이터베이스에 연결 하 여 외부 스크립트를 실행 하는 사용자를 예상 하는 방법에 따라 달라 집니다. 추가 문제 해결 팁을 여기서 확인할 수 있습니다. [업그레이드 및 설치 FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
 ## <a name="suggested-optimizations"></a>제안 된 최적화
 
@@ -241,7 +254,7 @@ R 패키지 설치 및 관리에 대 한 프로세스는 SQL Server 2016 및 SQL
 
 R 개발자가 몇 가지 간단한 예제를 사용 하 여 시작할 수 있습니다 및 SQL Server를 사용 하 여 R을 작동 하는 방법의 기본 사항을 알아봅니다. 다음 단계를 다음 링크를 참조 하세요.
 
-+ [자습서: T-SQL에서 R 실행](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [자습서: T-SQL에서 R을 실행 합니다.](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
 + [자습서: R 개발자를 위한 데이터베이스 내 분석](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 실제 시나리오를 기반으로 하는 기계 학습의 예제를 보려면 [기계 학습 자습서](../tutorials/machine-learning-services-tutorials.md)합니다.

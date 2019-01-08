@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadatasource.f1
@@ -13,23 +12,23 @@ ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff54dc41b8a39107c191f8976d22005c80d5f65c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1cff58f58543ae5876840bb7640f9cc11abf793d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216343"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370275"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>데이터 원본 선택(SQL Server 가져오기 및 내보내기 마법사)
   사용 합니다 **데이터 원본 선택** 복사 하려는 데이터의 원본을 지정 하는 페이지입니다.  
   
  이 마법사에 대 한 자세한 내용은 참조 하세요 [SQL Server 가져오기 및 내보내기 마법사](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)합니다. 마법사 시작 옵션에 대 한 마법사를 성공적으로 실행 하는 데 필요한 권한에 대 한 자세한 내용은 참조 하세요 [SQL Server 가져오기 및 내보내기 마법사를 실행](start-the-sql-server-import-and-export-wizard.md)합니다.  
   
- 용도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원본에서 대상 데이터를 복사 하는 가져오기 및 내보내기 마법사. 이 마법사는 대상 데이터베이스 및 대상 테이블도 만들 수 있습니다. 그러나 여러 개의 데이터베이스 또는 테이블을 복사하거나 다른 종류의 데이터베이스 개체를 복사할 경우 대신 데이터베이스 복사 마법사를 사용해야 합니다. 자세한 내용은 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사는 원본에서 대상으로 데이터를 복사할 목적으로 사용됩니다. 이 마법사는 대상 데이터베이스 및 대상 테이블도 만들 수 있습니다. 그러나 여러 개의 데이터베이스 또는 테이블을 복사하거나 다른 종류의 데이터베이스 개체를 복사할 경우 대신 데이터베이스 복사 마법사를 사용해야 합니다. 자세한 내용은 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)을 참조하세요.  
   
 ## <a name="options"></a>변수  
  **데이터 원본**  
- 원본의 데이터 저장 형식과 일치하는 데이터 공급자를 선택합니다. 데이터 원본에 사용할 수 있는 공급자가 여러 개 있을 수 있습니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 따르면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client,.NET Framework Data Provider for SQL Server 또는 Microsoft OLE DB Provider for SQL Server입니다.  
+ 원본의 데이터 저장 형식과 일치하는 데이터 공급자를 선택합니다. 데이터 원본에 사용할 수 있는 공급자가 여러 개 있을 수 있습니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, .Net Framework Data Provider for SQL Server 또는 Microsoft OLE DB Provider for SQL Server를 사용할 수 있습니다.  
   
  **데이터 원본** 속성의 옵션은 컴퓨터에 설치된 공급자에 따라 달라집니다. 다음 표에서는 자주 사용되는 일부 대상에 대한 옵션을 나열합니다. 다른 공급자에 대한 내용은 공급자 설명서를 참조하십시오.  
   
@@ -44,10 +43,10 @@ ms.locfileid: "48216343"
  패키지에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증을 사용하여 데이터베이스에 로그인하도록 할지 여부를 지정합니다. 보안을 강화하려면 Windows 인증을 사용하는 것이 좋습니다.  
   
  **SQL Server 인증 사용**  
- 패키지를 사용할지 여부를 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 로그인을 인증 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 사용자 이름과 암호를 입력해야 합니다.  
+ 패키지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 데이터베이스에 로그인할지 여부를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 사용자 이름과 암호를 입력해야 합니다.  
   
  **사용자 이름**  
- 사용 중인 경우 데이터베이스 연결에 대 한 사용자 이름을 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 데이터베이스 연결에 대한 사용자 이름을 지정합니다.  
   
  **암호**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 데이터베이스 연결에 대한 암호를 입력합니다.  
@@ -68,15 +67,15 @@ ms.locfileid: "48216343"
  원본 데이터베이스의 이름을 입력합니다.  
   
  **통합 보안**  
- 지정 `True` 권장 되지 않는 Windows 통합된 인증을 사용 하 여 연결 하거나 `False` 사용 하 여 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 합니다. `False`를 지정하면 사용자 ID와 암호를 입력해야 합니다. 기본값은 `False`입니다.  
+ Windows 통합 인증을 사용하여 연결(권장)하려면 `True`를 지정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 연결하려면 `False`를 지정합니다. `False`를 지정하면 사용자 ID와 암호를 입력해야 합니다. 기본값은 `False`입니다.  
   
  **사용자 ID**  
- 사용 중인 경우 데이터베이스 연결에 대 한 사용자 이름을 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 데이터베이스 연결에 대한 사용자 이름을 지정합니다.  
   
  **암호**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 데이터베이스 연결에 대한 암호를 입력합니다.  
   
- 이 공급자 선택 시 나열되는 추가 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원본 데이터베이스에 성공적으로 연결하기 위해 꼭 필요한 옵션은 아닙니다. 이러한 추가 옵션에 대 한 설명서를 참조 합니다 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 소프트웨어 개발 키트.  
+ 이 공급자 선택 시 나열되는 추가 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원본 데이터베이스에 성공적으로 연결하기 위해 꼭 필요한 옵션은 아닙니다. 이러한 추가 옵션에 대한 자세한 설명은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 소프트웨어 개발 키트의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Provider for [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 에 대한 설명서를 참조하십시오.  
   
 ### <a name="data-source--microsoft-excel"></a>데이터 원본 = Microsoft Excel  
   
@@ -113,7 +112,7 @@ ms.locfileid: "48216343"
  작업 그룹 정보 파일이 데이터베이스에 연결된 경우 데이터베이스 연결에 대한 사용자 암호를 입력합니다. 그러나 데이터베이스가 모든 사용자에 대해 단일 암호로 보호되는 경우 **고급** 을 클릭하여 액세스할 수 있는 **데이터 연결 속성**대화 상자에 해당 값을 입력해야 합니다.  
   
  **고급**  
- 데이터베이스 암호나 기본이 아닌 작업 그룹 정보 파일을 같은 고급 옵션을 사용 하 여 지정 하려는 경우는 **데이터 연결 속성** 대화 상자. OLE DB 공급자 속성에 대 한 자세한 내용은 데이터 액세스 섹션을 검색 합니다 [MSDN 라이브러리](http://go.microsoft.com/fwlink/?linkid=62553)합니다.  
+ 데이터베이스 암호나 기본이 아닌 작업 그룹 정보 파일을 같은 고급 옵션을 사용 하 여 지정 하려는 경우는 **데이터 연결 속성** 대화 상자. OLE DB 공급자 속성에 대 한 자세한 내용은 데이터 액세스 섹션을 검색 합니다 [MSDN 라이브러리](https://go.microsoft.com/fwlink/?linkid=62553)합니다.  
   
 ### <a name="data-source--flat-file-source"></a>데이터 원본 = 플랫 파일 원본  
  플랫 파일 데이터 원본 옵션에 대한 자세한 내용은 다음 항목을 참조하십시오.  

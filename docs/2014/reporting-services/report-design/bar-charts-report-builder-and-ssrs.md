@@ -11,17 +11,17 @@ ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5407fdc291cd1d0d0a533466b0e45dd0cbce320b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: cc40f29ec61c1818a4cdb1186a4ceccf3553a107
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106103"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365915"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>가로 막대형 차트(보고서 작성기 및 SSRS)
   가로 막대형 차트는 계열을 가로 막대 집합으로 표시합니다. 일반 가로 막대형 차트는 세로 막대 집합으로 계열을 표시하는 세로 막대형 차트 및 시작점과 끝점이 다양한 가로 막대 집합으로 계열을 표시하는 범위형 가로 막대 차트와 밀접하게 연관되어 있습니다.  
   
- 가로 막대형 차트는 데이터를 가로로 표시하는 유일한 차트 종류입니다. 따라서 이 차트는 시작 및 끝 날짜가 명시된 일정한 기간 동안 발생하는 데이터를 나타내는 데 주로 사용됩니다. 범주를 가로로 표시할 수 있으므로 이 차트는 범주 정보를 표시하는 데도 자주 사용됩니다. 가로 막대형 차트로 데이터를 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)합니다.  
+ 가로 막대형 차트는 데이터를 가로로 표시하는 유일한 차트 종류입니다. 따라서 이 차트는 시작 및 끝 날짜가 명시된 일정한 기간 동안 발생하는 데이터를 나타내는 데 주로 사용됩니다. 범주를 가로로 표시할 수 있으므로 이 차트는 범주 정보를 표시하는 데도 자주 사용됩니다. 막대형 차트에 데이터를 추가하는 방법은 [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)를 참조하세요.  
   
  다음 그림에서는 가로 막대형 차트를 보여 줍니다. 세 계열이 모두 공통 기간을 공유하여 각 계열을 서로 비교하는 것이 가능하므로 이 데이터에는 가로 막대형 차트가 적합합니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48106103"
   
 -   보고서 내의 테이블이나 행렬에 막대를 추가하려는 경우에는 가로 막대형 차트 대신 선형 계기를 사용하는 것이 좋습니다. 선형 계기는 여러 그룹 대신 한 개의 값만 표시하도록 디자인되었으므로 목록이나 테이블 데이터 영역 내에서 더 유연성 있게 사용할 수 있습니다. 자세한 내용은 [계기&#40;보고서 작성기 및 SSRS&#41;](gauges-report-builder-and-ssrs.md)를 참조하세요.  
   
--   가로 막대형 차트의 개별 막대에 특별한 그리기 스타일을 추가하여 시각적 효과를 더욱 높일 수 있습니다. 그리기 스타일에는 쐐기형, 볼록, 원통형 및 그라데이션 효과 등이 있습니다. 이러한 효과는 2D 차트의 모양을 향상시킬 목적으로 디자인되었습니다. 3D 차트를 사용할 때도 그리기 스타일을 적용할 수는 있지만 그 효과는 다를 수 있습니다. 가로 막대형 차트에 그리기 스타일을 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [추가 3d 가장자리, 볼록 효과 및 질감 스타일 차트에 &#40;보고서 작성기 및 SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)합니다.  
+-   가로 막대형 차트의 개별 막대에 특별한 그리기 스타일을 추가하여 시각적 효과를 더욱 높일 수 있습니다. 그리기 스타일에는 쐐기형, 볼록, 원통형 및 그라데이션 효과 등이 있습니다. 이러한 효과는 2D 차트의 모양을 향상시킬 목적으로 디자인되었습니다. 3D 차트를 사용할 때도 그리기 스타일을 적용할 수는 있지만 그 효과는 다를 수 있습니다. 막대형 차트에 그리기 스타일을 추가하는 방법에 대한 자세한 내용은 [차트에 빗면 효과, 볼록 효과 및 질감 스타일 추가&#40;보고서 작성기 및 SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)를 참조하세요.  
   
 -   누적 가로 막대형 차트는 계열을 각 막대의 맨 위에 배치하여 누적되는 형태로 막대를 표시합니다. 누적 가로 막대형 차트를 범주별로 여러 스택 집합으로 구분하는 옵션이 제공됩니다. 그러면 그룹화된 누적 가로 막대형 차트가 나란히 표시됩니다. 차트에는 원하는 수의 그룹화된 계열을 누적할 수 있습니다.  
   
@@ -63,12 +63,12 @@ ms.locfileid: "48106103"
  [차트 종류&#40;보고서 작성기 및 SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [차트의 빈 데이터 요소 및 Null 데이터 요소&#40;보고서 작성기 및 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [세로 막대형 차트&#40;보고서 작성기 및 SSRS&#41;](column-charts-report-builder-and-ssrs.md)   
- [범위 형 차트 &#40;보고서 작성기 및 SSRS&#41;](range-charts-report-builder-and-ssrs.md)   
+ [범위형 차트&#40;보고서 작성기 및 SSRS&#41;](range-charts-report-builder-and-ssrs.md)   
  [차트에서 계열 색 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [차트의 축 레이블 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [차트의 범례 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](chart-legend-formatting-report-builder.md)   
+ [차트의 범례 서식 지정&#40;보고서 작성기 및 SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [차트에 3D 가장자리, 볼록 및 질감 스타일 추가&#40;보고서 작성기 및 SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [자습서: 보고서에 가로 막대형 차트 추가(보고서 작성기)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [자습서: 보고서에 가로 막대형 차트 추가](http://go.microsoft.com/fwlink/?LinkId=198042)  
+ [자습서: 가로 막대형 차트를 보고서에 추가 (보고서 작성기)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [자습서: 보고서에 가로 막대형 차트 추가](https://go.microsoft.com/fwlink/?LinkId=198042)  
   
   

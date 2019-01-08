@@ -19,15 +19,15 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 31232de01fcd2e1f4c9d6ce67d446c737990d105
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 6b54c44c88c384b28f9966ad9c7e3888fd038aa3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161763"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353908"
 ---
 # <a name="books-online-for-sql-server-2014"></a>SQL Server 2014용 온라인 설명서
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)]®용 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]® 온라인 설명서를 시작합니다. 태스크 설명과 참조 설명서를 사용 하 여 데이터 관리 및 비즈니스 인텔리전스 작업을 수행 하는 방법을 설명 하는 온라인 설명서에 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)]®용 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]® 온라인 설명서를 시작합니다. 온라인 설명서에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 사용하여 데이터 관리 및 비즈니스 인텔리전스 작업을 수행하는 방법을 설명하는 태스크 설명과 참조 설명서가 들어 있습니다.  
   
  **사용해보기:**  
  ![Azure 가상 머신 소형](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Azure 계정이 있나요?  이동 **[여기](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 이미 설치 된 SQL Server 2014 서비스 팩 1 (SP1)를 사용 하 여 가상 머신을 스핀업 하 합니다. SQL Server 2014 (SP1)에 대 한 자세한 내용은 참조 하세요. [SQL Server 2014 서비스 팩 1 릴리스 정보 ](https://support.microsoft.com/en-us/kb/3058865)합니다. 
@@ -50,17 +50,17 @@ ms.locfileid: "48161763"
   
  **SQL Server 웹 사이트**  
   
--   [Microsoft.com의 SQL Server](http://go.microsoft.com/fwlink/?linkid=8504)  
+-   [Microsoft.com의 SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)  
   
--   [SQL Server 리소스 센터](http://go.microsoft.com/fwlink/?linkid=218841)  
+-   [SQL Server 리소스 센터](https://go.microsoft.com/fwlink/?linkid=218841)  
   
--   [SQL Server TechCenter](http://go.microsoft.com/fwlink/?linkid=28107)  
+-   [SQL Server TechCenter](https://go.microsoft.com/fwlink/?linkid=28107)  
   
--   [SQL Server 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=42457)  
+-   [SQL Server 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=42457)  
   
--   [데이터 플랫폼 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=17386)  
+-   [데이터 플랫폼 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=17386)  
   
--   [XML 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=42458)  
+-   [XML 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=42458)  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 구성 관리자 도움말](../tools/configuration-manager/sql-server-configuration-manager-help.md)  

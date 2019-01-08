@@ -10,12 +10,12 @@ ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8cd37ca4058fb79eddfa296896c3da230b98789
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: a90a30a0ae7fe09d49b1d42b577b13370c48c0de
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018799"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360935"
 ---
 # <a name="install-sql-server-powershell"></a>SQL Server PowerShell 설치
   사용자가 PowerShell 구성 요소가 포함된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 선택했지만 Windows PowerShell 2.0이 설치되지 않은 것으로 감지되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램이 중지됩니다. Windows 관리 프레임워크를 사용하여 PowerShell을 설치하고 설치 프로그램을 다시 실행해야 합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "51018799"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 은 개체 탐색기 트리에서 Windows PowerShell 세션을 시작하도록 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 Windows PowerShell 작업 단계를 지원합니다.  
   
- Windows PowerShell 2.0 설치 되지 않은, 또는 제거 된 경우 다음 지침에 따라 설치 해야 합니다 [Windows Management Framework](http://go.microsoft.com/fwlink/?LinkId=186214) 페이지입니다.  
+ Windows PowerShell 2.0 설치 되지 않은, 또는 제거 된 경우 다음 지침에 따라 설치 해야 합니다 [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) 페이지입니다.  
   
  설치가 완료된 후 Windows PowerShell이 제거되면 Windows PowerShell의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능이 작동하지 않습니다. Windows 사용자는 Windows PowerShell을 제거할 수 있으며 일부 Windows 운영 체제 업그레이드 시 Windows PowerShell을 제거해야 할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 기능을 사용하려면 Windows 관리 프레임워크를 사용하여 PowerShell 2.0을 다시 설치해야 합니다.  
   

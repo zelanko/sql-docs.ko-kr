@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b9a6df6cd1c4f96c241260be29b77560146f7f85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2d15f17b867cd02d700ce6c749edddaa2c65083
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184343"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772945"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>CDC 인스턴스 속성을 편집하는 방법
   이 절차에서는 CDC Designer 콘솔을 사용하여 CDC 인스턴스에 대한 구성 속성을 편집하는 방법에 대해 설명합니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "48184343"
   
 5.  속성 편집기의 다음 탭에서 속성을 편집합니다.  
   
-    -   **Oracle**: U속성 편집기에서 **Oracle** 탭을 사용하여 새 인스턴스 마법사의 CDC 데이터베이스 만들기 페이지에 제공한 설명을 변경하고 Oracle 로그 마이닝 데이터베이스 연결 정보를 변경할 수 있습니다.  
+    -   **Oracle**: 사용 된 **Oracle** Oracle 로그 마이닝 데이터베이스 연결 정보를 변경 하는 CDC 데이터베이스 만들기 페이지의 새 인스턴스 마법사에 제공한 설명을 변경 하려면 속성 편집기에서 탭 합니다.  
   
          이 탭에서 편집할 수 있는 항목에 대한 자세한 내용은 [Edit the Oracle Database Properties](edit-the-oracle-database-properties.md)을 참조하십시오.  
   
@@ -43,7 +42,7 @@ ms.locfileid: "48184343"
   
          이 탭에서 편집할 수 있는 항목에 대한 자세한 내용은 [Edit Tables](edit-tables.md)을 참조하십시오.  
   
-    -   **스크립트**: **스크립트** 탭을 사용하여 보완 로깅을 설정할 Oracle 원본 데이터베이스에서 스크립트를 실행하거나 다시 실행할 수 있습니다.  
+    -   **스크립트**: 사용 된 **스크립트** 탭을 실행 하거나 다시 보완 로깅을 설정할 Oracle 원본 데이터베이스에서 스크립트를 실행 합니다.  
   
          이 탭에서 수행할 수 있는 작업에 대한 자세한 내용은 [Review and Generate Supplemental Logging Scripts](review-and-generate-supplemental-logging-scripts.md)을 참조하십시오.  
   

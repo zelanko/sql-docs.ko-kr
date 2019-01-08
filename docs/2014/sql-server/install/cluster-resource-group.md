@@ -13,12 +13,12 @@ ms.assetid: 69a6582f-f1a8-40fe-a991-c3ca42d62540
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 67de722e96d6818dc491410da4feb0f5dfe76bed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c3ff85f2d8f99f530ad784b3a68c3ef2bfcd6432
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201923"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369615"
 ---
 # <a name="cluster-resource-group"></a>클러스터 리소스 그룹
   클러스터 리소스 그룹 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가상 서버 리소스를 저장할 디스크를 지정할 수 있습니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "48201923"
   
 -   새로 만들 그룹의 이름을 입력합니다. "Available storage"는 올바른 그룹 이름이 아닙니다.  
   
-## <a name="see-also"></a>관련 항목  
- [방법: 새 SQL Server 장애 조치 클러스터 만들기](http://go.microsoft.com/fwlink/?LinkId=190960)  
+## <a name="see-also"></a>관련 항목:  
+ [방법: 새 SQL Server 장애 조치 클러스터 만들기](https://go.microsoft.com/fwlink/?LinkId=190960)  
   
   

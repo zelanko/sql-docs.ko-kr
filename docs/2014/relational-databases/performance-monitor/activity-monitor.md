@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Activity Monitor [SQL Server]
@@ -12,18 +12,18 @@ ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ebdcf8fd98d24be3c0d8e6d9f2c5a97a90433218
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2420a4df5b971ae2190b2a66f24b226f472fee2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109373"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801395"
 ---
 # <a name="activity-monitor"></a>작업 모니터
   작업 모니터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스와 이러한 프로세스가 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 미치는 영향에 대한 정보를 표시합니다.  
   
 ## <a name="benefits-of-activity-monitor"></a>작업 모니터의 이점  
- 작업 모니터는 **개요**, **활성 사용자 태스크**, **리소스 대기**, **데이터 파일 I/O**및 **비용이 드는 최근 쿼리**와 같은 확장 및 축소 가능한 창이 있는 탭 문서 창입니다. 창을 확장하면 작업 모니터는 인스턴스에서 정보를 쿼리합니다. 창을 축소하면 해당 창에 대한 모든 쿼리 작업이 중지됩니다. 또한 하나 이상의 창을 동시에 확장하여 인스턴스에 대한 여러 종류의 작업을 볼 수도 있습니다.  
+ 작업 모니터는 **개요**, **활성 사용자 태스크**합니다 **리소스 대기**를 **데이터 파일 I/O**, 및 **비용이 드는 최근 쿼리**합니다. 창을 확장하면 작업 모니터는 인스턴스에서 정보를 쿼리합니다. 창을 축소하면 해당 창에 대한 모든 쿼리 작업이 중지됩니다. 또한 하나 이상의 창을 동시에 확장하여 인스턴스에 대한 여러 종류의 작업을 볼 수도 있습니다.  
   
  **활성 사용자 태스크**, **리소스 대기**, **데이터 파일 I/O**및 **비용이 드는 최근 쿼리** 창에 포함된 열의 경우 다음과 같은 방법으로 표시를 사용자 지정할 수 있습니다.  
   

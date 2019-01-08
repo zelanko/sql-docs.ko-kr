@@ -15,12 +15,12 @@ ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0f20619f4f1bbd1632539f3675c8e955e1073130
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 13e52520b78796f41f94e5bf783e99a9bca3b3e3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187553"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366775"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>보고서 정의 스키마 버전 찾기(SSRS)
   보고서 정의 파일은 rdl 파일의 유효성을 검사하는 데 사용되는 보고서 정의 스키마의 버전에 대한 RDL 네임스페이스를 지정합니다. 보고서가 이전 네임스페이스용으로 작성된 경우 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 보고서 디자이너 또는 보고서 작성기와 같은 보고서 제작 환경에서 .rdl 파일을 열면 백업 파일이 자동으로 만들어지고 보고서가 현재 네임스페이스로 업그레이드됩니다. 업그레이드된 보고서 정의를 저장하면 변환된 .rdl 파일이 저장됩니다. 이 방법은 보고서 정의를 업그레이드할 수 있는 유일한 방법입니다. 보고서 정의 자체는 보고서 서버에서 업그레이드되지 않습니다. 컴파일된 보고서는 보고서 서버에서 업그레이드됩니다. 자세한 내용은 [Upgrade Reports](../install-windows/upgrade-reports.md)을(를) 참조하세요.  
@@ -32,11 +32,11 @@ ms.locfileid: "48187553"
      XML 보고서 요소는 스키마 네임스페이스를 지정합니다. 예를 들어 다음 보고서 요소는 보고서 디자이너에 대한 네임스페이스와 보고서 정의에 대한 네임스페이스를 지정합니다.  
   
     ```  
-    <Report xmlns:rd=http://schemas.microsoft.com/SQLServer/reporting/reportdesigner   
-    xmlns="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
+    <Report xmlns:rd=https://schemas.microsoft.com/SQLServer/reporting/reportdesigner   
+    xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
     ```  
   
-     보고서 정의 네임스페이스는 다음 URL `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`(으)로 지정됩니다.  
+     보고서 정의 네임스페이스는 다음 URL `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`(으)로 지정됩니다.  
   
 ### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>방법: 보고서 디자이너의 RDL 스키마 버전 확인  
   
@@ -55,11 +55,11 @@ ms.locfileid: "48187553"
      XML 보고서 요소는 스키마 네임스페이스를 지정합니다. 예를 들어 다음 보고서 요소는 보고서 디자이너에 대한 네임스페이스와 보고서 정의에 대한 네임스페이스를 지정합니다.  
   
     ```  
-    <Report xmlns:rd=http://schemas.microsoft.com/SQLServer/reporting/reportdesigner  
-    xmlns="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
+    <Report xmlns:rd=https://schemas.microsoft.com/SQLServer/reporting/reportdesigner  
+    xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
     ```  
   
-     보고서 정의 네임스페이스는 다음 URL `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
+     보고서 정의 네임스페이스는 다음 URL `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
 ### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>방법: 보고서 서버의 RDL 스키마 버전 확인  
   
@@ -73,16 +73,16 @@ ms.locfileid: "48187553"
   
     ```  
     <xsd:schema   
-    targetNamespace="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
+    targetNamespace="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
-    xmlns="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
+    xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
     elementFormDefault="qualified">  
     ```  
   
-     보고서 정의 네임스페이스는 다음 URL `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
+     보고서 정의 네임스페이스는 다음 URL `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 업그레이드](../install-windows/upgrade-reports.md)   
+ [Upgrade Reports](../install-windows/upgrade-reports.md)   
  [RDL(Report Definition Language)&#40;SSRS&#41;](report-definition-language-ssrs.md)  
   
   

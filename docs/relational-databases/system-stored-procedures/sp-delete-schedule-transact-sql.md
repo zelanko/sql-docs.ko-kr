@@ -18,12 +18,12 @@ ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dd7f01df2c381ae4ee13b62e196efbc33809e23d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ec2fe4ba5ad90d044a9407be04acc850ae16b73
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803771"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591497"
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +44,12 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
  [ **@schedule_id=** ] *schedule_id*  
  삭제할 일정의 ID입니다. *schedule_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
-> **참고:** 중 하나 *schedule_id* 하거나 *schedule_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
+> **참고:** 어느 *schedule_id* 하거나 *schedule_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [ **@schedule_name=** ] **'***schedule_name***'**  
+ [  **@schedule_name=** ] **'**_schedule_name_**'**  
  삭제할 일정의 이름입니다. *schedule_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
-> **참고:** 중 하나 *schedule_id* 하거나 *schedule_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
+> **참고:** 어느 *schedule_id* 하거나 *schedule_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
  [ **@force_delete** =] *force_delete*  
  일정을 작업에 연결할 경우 프로시저의 실패 여부를 지정합니다. *Force_delete* 는 bit 이며 기본값은 **0**합니다. 때 *force_delete* 됩니다 **0**, 일정을 작업에 연결 되어 있으면 저장된 프로시저가 실패 합니다. 때 *force_delete* 됩니다 **1**, 작업에 일정 연결 되었는지 여부에 관계 없이 일정이 삭제 됩니다.  
@@ -105,7 +105,7 @@ EXEC dbo.sp_delete_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [작업 구현](../../ssms/agent/implement-jobs.md)   
  [sp_add_schedule&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
   

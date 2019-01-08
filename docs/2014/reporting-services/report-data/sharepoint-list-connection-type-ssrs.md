@@ -11,12 +11,12 @@ ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 09adbf8ca6fb16becd98b94c15f93052c003abb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: d218103d5a8de6b10ad5b1981f13ac4526f59aee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116353"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358245"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 목록 연결 형식(SSRS)
   Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microsoft SharePoint 목록 유형의 보고서 데이터 원본을 기반으로 하는 데이터 세트를 추가하거나 만들어야 합니다. 이는 Microsoft SQL Server Reporting Services SharePoint 목록 데이터 확장 프로그램을 기반으로 하는 기본 제공 데이터 원본 유형입니다. 이 데이터 원본 유형을 사용하여 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 및 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 사이트에 연결하고 이러한 사이트에서 목록 데이터를 검색할 수 있습니다.  
@@ -42,18 +42,18 @@ ms.locfileid: "48116353"
 ||지원되는 자격 증명|클래식 모드 Windows 인증|<sup>3</sup> 클레임 인증|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |로컬 팜 SharePoint 팜 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-||저장 하 고, 프롬프트, 없음 (Windows 자격 증명을 사용 하 여<sup>1</sup>)|사용자 계정 컨트롤|아니요|  
+||저장됨, 프롬프트, 없음(Windows 자격 증명 사용<sup>1</sup>)|사용자 계정 컨트롤|아니요|  
 |원격 SharePoint 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|사용자 계정 컨트롤|이상<sup>2</sup>|  
-||저장 하 고, 프롬프트, 없음 (Windows 자격 증명을 사용 하 여<sup>1</sup>)|사용자 계정 컨트롤|이상<sup>2</sup>|  
+||저장됨, 프롬프트, 없음(Windows 자격 증명 사용<sup>1</sup>)|사용자 계정 컨트롤|이상<sup>2</sup>|  
   
  **표 2**  
   
 ||지원되는 자격 증명|클래식 모드 Windows 인증|<sup>3</sup> 클레임 인증|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |로컬 팜 SharePoint 팜 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-||저장 하 고, 프롬프트, 없음 (Windows 자격 증명을 사용 하 여<sup>1</sup>)|아니요|아니요|  
+||저장됨, 프롬프트, 없음(Windows 자격 증명 사용<sup>1</sup>)|아니요|아니요|  
 |원격 SharePoint 목록|Windows 인증(통합) 또는 SharePoint 사용자 토큰|사용자 계정 컨트롤|이상<sup>2</sup>|  
-||저장 하 고, 프롬프트, 없음 (Windows 자격 증명을 사용 하 여<sup>1</sup>)|아니요|이상<sup>2</sup>|  
+||저장됨, 프롬프트, 없음(Windows 자격 증명 사용<sup>1</sup>)|아니요|이상<sup>2</sup>|  
   
  <sup>1</sup> 저장 및 프롬프트 자격 증명 비 Windows 자격 증명을 사용 하 여 지원 되지 않습니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48116353"
  **자격 증명 필요 없음(자격 증명 사용 안 함):**  
  이 옵션을 사용하려면 보고서 서버에서 무인 실행 계정을 구성해야 합니다. 자세한 내용은 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.  
   
- Microsoft BI 스택 간 클레임 인증 지원에 대한 자세한 내용은 [Microsoft BI 스택 간 클레임 인증 사용](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx)을 참조하십시오.  
+ Microsoft BI 스택 간 클레임 인증 지원에 대한 자세한 내용은 [Microsoft BI 스택 간 클레임 인증 사용](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx)을 참조하십시오.  
   
  자세한 내용은 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)를 [보고서 작성기에 자격 증명 지정](../specify-credentials-in-report-builder.md), 및 [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)합니다.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "48116353"
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  쿼리에 의해 생성되는 데이터 세트 필드 컬렉션에 대한 정보를 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
  각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.  
   
   

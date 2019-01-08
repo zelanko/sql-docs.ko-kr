@@ -1,5 +1,6 @@
 ---
-title: Linux의 SQL Server에 대 한 active Directory 인증 | Microsoft Docs
+title: Linux의 SQL Server에 대 한 active Directory 인증
+titleSuffix: SQL Server
 description: 이 문서에서는 Linux의 SQL Server에 대 한 Active Directory 인증 개요를 제공 합니다.
 author: rothja
 ms.date: 02/23/2018
@@ -7,16 +8,16 @@ ms.author: jroth
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 94b3aa8b63b76d03ccd08acf312b3efcf8b45bca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcc2148119634c7114d72f67b2c7143fa7d47724
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610371"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160402"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Linux의 SQL Server에 대 한 active Directory 인증
 
@@ -39,7 +40,7 @@ AD 인증을 통해 다음과 같은 이점을 [!INCLUDE[ssNoVersion](../include
 
 Active Directory 인증을 사용 하려면 네트워크에서 AD 도메인 컨트롤러 (Windows) 해야 합니다.
 
-AD 인증을 구성 하는 방법에 대 한 세부 정보는 자습서에 제공 됩니다 [자습서: Linux의 SQL Server를 사용 하 여 사용 하 여 Active Directory 인증](sql-server-linux-active-directory-authentication.md)합니다. 다음은 자습서의 각 섹션에 대 한 링크를 사용 하 여 요약을 제공:
+AD 인증을 구성 하는 방법에 대 한 세부 정보는 자습서에 나와 [자습서: Linux의 SQL Server를 사용 하 여 Active Directory 인증을 사용 하 여](sql-server-linux-active-directory-authentication.md)입니다. 다음은 자습서의 각 섹션에 대 한 링크를 사용 하 여 요약을 제공:
 
 1. [SQL Server 호스트는 Active Directory 도메인에 가입](sql-server-linux-active-directory-authentication.md#join)합니다.
 1. [SQL Server에 대 한 AD 사용자를 만들고 ServicePrincipalName 설정](sql-server-linux-active-directory-authentication.md#createuser)합니다.
@@ -53,4 +54,4 @@ AD 인증을 구성 하는 방법에 대 한 세부 정보는 자습서에 제�
 
 ## <a name="next-steps"></a>다음 단계
 
-Linux에서 SQL Server 용 Active Directory 인증을 구현 하는 방법에 대 한 자세한 내용은 참조 하세요. [자습서: Linux의 SQL Server를 사용 하 여 사용 하 여 Active Directory 인증](sql-server-linux-active-directory-authentication.md)합니다.
+Linux에서 SQL Server 용 Active Directory 인증을 구현 하는 방법에 대 한 자세한 내용은 참조 하세요. [자습서: Linux의 SQL Server를 사용 하 여 Active Directory 인증을 사용 하 여](sql-server-linux-active-directory-authentication.md)입니다.

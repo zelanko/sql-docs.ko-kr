@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scripttask.f1
@@ -17,12 +16,12 @@ ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 38586615ce582ed4534bf23612bfca64b53af461
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc99090255eb0667c09f180be0b52d570b6cb682
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224413"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371325"
 ---
 # <a name="script-task"></a>스크립트 태스크
   스크립트 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 가 제공하는 기본 제공 태스크와 변환에서 사용할 수 없는 기능을 수행하는 코드를 제공합니다. 또한 여러 개의 태스크와 변환을 사용하는 대신 여러 기능을 하나의 스크립트에 결합할 수 있습니다. 스크립트 태스크는 데이터 행마다 한 번 수행하는 대신 패키지에서 한 번 또는 열거된 개체마다 한 번 수행해야 하는 작업에 사용합니다.  
@@ -69,13 +68,13 @@ ms.locfileid: "48224413"
   
 |로그 항목|Description|  
 |---------------|-----------------|  
-|`ScriptTaskLogEntry`|스크립트에서 로깅을 구현한 결과를 보고합니다. 작업을 호출할 때마다 로그 항목을 기록 합니다 `Log` 메서드는 `Dts` 개체입니다. 이러한 항목은 코드가 실행될 때 기록됩니다. 자세한 내용은 [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md)을 참조하세요.|  
+|`ScriptTaskLogEntry`|스크립트에서 로깅을 구현한 결과를 보고합니다. 이 태스크는 `Log` 개체의 `Dts` 메서드를 호출할 때마다 로그 항목을 기록합니다. 이러한 항목은 코드가 실행될 때 기록됩니다. 자세한 내용은 [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md)을 참조하세요.|  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   [스크립트 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [스크립트 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [스크립트 태스크 편집기 &#40;스크립트 페이지&#41;](../script-task-editor-script-page.md)  
+-   [스크립트 태스크 편집기&#40;스크립트 페이지&#41;](../script-task-editor-script-page.md)  
   
 -   [식 페이지](../expressions/expressions-page.md)  
   
@@ -90,6 +89,6 @@ ms.locfileid: "48224413"
   
 ## <a name="related-content"></a>관련 내용  
   
--   shareourideas.com의 기술 문서 - [C#의 배달 알림으로 메일을 보내는 방법](http://go.microsoft.com/fwlink/?LinkId=237625)  
+-   shareourideas.com의 기술 문서 - [C#의 배달 알림으로 메일을 보내는 방법](https://go.microsoft.com/fwlink/?LinkId=237625)  
   
   

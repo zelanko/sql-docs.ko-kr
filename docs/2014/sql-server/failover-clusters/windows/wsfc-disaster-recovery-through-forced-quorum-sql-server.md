@@ -14,17 +14,17 @@ ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c93f9327adf0801898c45a541d935a4d3b34758c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c170fa1b302ccd0a1edec156b3b30429fc2daf8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161885"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365376"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>강제 쿼럼을 통해 WSFC 재해 복구(SQL Server)
   쿼럼 실패는 일반적으로 시스템 관련 재해나, 지속적인 통신 오류 또는 WSFC 클러스터의 여러 노드와 관련된 잘못된 구성으로 인해 발생합니다.  쿼럼 실패에서 복구하려면 수동 개입이 필요합니다.  
   
--   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
+-   **시작 하기 전에:**  [필수 구성 요소](#Prerequisites), [보안](#Security)  
   
 -   **강제 쿼럼 절차를 통해 WSFC 재해 복구** [강제 쿼럼 절차를 통해 WSFC 재해 복구](#Main)  
   
@@ -34,13 +34,13 @@ ms.locfileid: "48161885"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
  강제 쿼럼 절차는 쿼럼 실패 전에 정상 상태의 쿼럼이 있었다고 가정합니다.  
   
 > [!WARNING]  
 >  사용자는 Windows Server 장애 조치(Failover) 클러스터링, WSFC 쿼럼 모델, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]및 환경의 특정 배포 구성에 대한 개념 및 상호 작용에 대해 잘 알고 있어야 합니다.  
 >   
->  자세한 내용은  [SQL Server의 WSFC(Windows Server 장애 조치(failover) 클러스터링)](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC 쿼럼 모드 및 투표 구성(SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)을 참조하세요.  
+>  참조 항목:  [Windows Server 장애 조치 클러스터링 (WSFC) SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC 쿼럼 모드 및 투표 구성 (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
 ###  <a name="Security"></a> 보안  
  사용자는 WSFC 클러스터의 각 노드에 대한 로컬 Administrators 그룹의 멤버인 도메인 계정이어야 합니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "48161885"
   
      이 노드에서 강제 쿼럼 절차를 수행하여 수동으로 클러스터를 온라인 상태로 전환합니다.  데이터 손실 위험을 최소화하려면 가용성 그룹 주 복제본을 마지막으로 호스팅한 노드를 선택합니다.  
   
-     자세한 내용은  [쿼럼 없이 WSFC 클러스터 강제 시작](http://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)을 참조하세요.  
+     참조 항목:  [쿼럼 없이 WSFC 클러스터 강제 시작](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
   
     > [!NOTE]  
     >  강제 쿼럼 설정은 클러스터 전반에 영향을 주어 논리적 WSFC 클러스터가 과반수의 투표를 확보하고 자동으로 정상 쿼럼 작업 모드로 전환될 때까지 쿼럼 검사를 차단합니다.  
@@ -103,7 +103,7 @@ ms.locfileid: "48161885"
   
 8.  **RPO/RTO 분석 실시.** SQL Server 시스템 로그, 데이터베이스 타임스탬프 및 Windows 이벤트 로그를 분석하여 실패의 근본 원인을 파악하고 실제 복구 지점 및 복구 시간 방법을 문서화해야 합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [쿼럼 없이 WSFC 클러스터 강제 시작](force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
@@ -117,9 +117,9 @@ ms.locfileid: "48161885"
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   [장애 조치(Failover) 클러스터에 대한 이벤트 및 로그 보기](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [장애 조치(Failover) 클러스터에 대한 이벤트 및 로그 보기](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Get-ClusterLog 장애 조치(Failover) 클러스터 Cmdlet](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog 장애 조치(Failover) 클러스터 Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server의 WSFC&#40;Windows Server 장애 조치(failover) 클러스터링&#41;](windows-server-failover-clustering-wsfc-with-sql-server.md)  

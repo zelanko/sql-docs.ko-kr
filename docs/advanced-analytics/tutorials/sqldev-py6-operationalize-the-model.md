@@ -1,5 +1,5 @@
 ---
-title: Python 모델 (SQL Server Machine Learning)를 사용 하 여 잠재적인 결과 예측 합니다. | Microsoft Docs
+title: Python 모델-SQL Server Machine Learning을 사용 하 여 잠재적인 결과 예측
 description: SQL Server에 포함 된 PYthon 스크립트를 운영 하는 방법을 보여 주는 자습서 저장 프로시저 T-SQL 함수를 사용 하 여
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3d1466fba7c659887578bf349a07968bfb580158
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 9a75c25528003d0133cfd33c3eaddc20a8241692
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033680"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644772"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>저장된 프로시저에 포함 된 Python을 사용 하 여 예측을 실행 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "51033680"
 
 이 단원에 Python 모델을 기반으로 예측을 만드는 두 가지 방법을 보여 줍니다: 점수 매기기 및 행 단위 점수 매기기 배치 합니다.
 
-- **일괄 처리 점수 매기기:** 여러 행의 입력된 데이터를 제공 하려면 SELECT 쿼리에서 인수로 저장된 프로시저에 전달 합니다. 결과 입력된 사례에 해당 하는 관찰 테이블입니다.
+- **일괄 처리 점수 매기기:** 여러 행의 입력된 데이터를 제공 하려면 SELECT 쿼리를 저장된 프로시저에 인수로 전달 합니다. 결과 입력된 사례에 해당 하는 관찰 테이블입니다.
 - **개별 점수 매기기:** 개별 매개 변수 값 집합을 입력으로 전달 합니다.  저장 프로시저에서 단일 행 또는 값을 반환합니다.
 
 점수 매기기에 필요한 모든 Python 코드는 저장된 프로시저의 일부로 제공 됩니다.
@@ -48,7 +48,7 @@ ms.locfileid: "51033680"
 
 + 입력을 포함 하는 데이터 프레임에 전달 되는 `predict_proba` 로지스틱 회귀 모델의 함수 `mod`합니다. `predict_proba` 함수 (`probArray = mod.predict_proba(X)`)를 반환을 **float** (모든 양의) 팁 지정 될 확률을 나타내는입니다.
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSciKitPy;
 GO
 
@@ -92,7 +92,7 @@ GO
 
 이 저장된 프로시저 동일한 입력을 사용 하 고 이전 저장된 프로시저와 같은 유형의 점수 만들지만에서 기능을 사용 하는 **revoscalepy** 패키지가 SQL Server machine learning을 통해 제공 합니다.
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipRxPy;
 GO
 
@@ -142,7 +142,7 @@ GO
 
 1. 사용 하는 **scikit-알아봅니다** 점수 매기기에 모델 저장된 프로시저를 호출할 **PredictTipSciKitPy**모델 이름을 전달 하 고 쿼리 문자열을 입력으로 합니다.
 
-    ```SQL
+    ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
       SET @query_string='
       select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance,
@@ -157,7 +157,7 @@ GO
 
 2. 사용 하는 **revoscalepy** 모델 점수 매기기에 대 한 저장된 프로시저를 호출 합니다 **PredictTipRxPy**모델 이름을 전달 하 고 쿼리 문자열을 입력으로 합니다.
 
-    ```SQL
+    ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
       SET @query_string='
       select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance,
@@ -188,7 +188,7 @@ GO
 
 사용 하 여 점수 매기기를 수행 하는 저장된 프로시저의 코드를 검토 합니다 **scikit-알아봅니다** 모델.
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeSciKitPy;
 GO
 
@@ -255,7 +255,7 @@ GO
 
 다음 저장된 프로시저를 사용 하 여 점수 매기기를 수행 합니다 **revoscalepy** 모델입니다.
 
-```SQL
+```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeRxPy;
 GO
 
@@ -297,7 +297,7 @@ X = InputDataSet[["passenger_count", "trip_distance", "trip_time_in_secs", "dire
 probArray = rx_predict(mod, X)
 
 probList = []
-prob_list = prob_array["tipped_Pred"].values
+probList = probArray["tipped_Pred"].values
 
 # Create output data frame
 OutputDataSet = pandas.DataFrame(data = probList, columns = ["predictions"])
@@ -335,14 +335,14 @@ GO
 
 1. 사용 하 여 예측을 생성 하는 **revoscalepy** 모델에서이 문을 실행 합니다.
   
-    ```SQL
+    ```sql
     EXEC [dbo].[PredictTipSingleModeRxPy] 'revoscalepy_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 2. 사용 하 여 점수를 생성 하는 **scikit-알아봅니다** 모델에서이 문을 실행:
 
-    ```SQL
-    EXEC [dbo].[PredictTipSingleModeSciKitPy] 'ScitKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+    ```sql
+    EXEC [dbo].[PredictTipSingleModeSciKitPy] 'SciKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 두 절차 모두에서 출력 되 고 지정 된 매개 변수 또는 기능을 사용 하 여 택시 여정에 대해 지불 된 팁의 확률은.

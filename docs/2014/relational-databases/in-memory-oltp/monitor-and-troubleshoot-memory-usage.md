@@ -10,12 +10,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4bca6dcb1287918901f3bfb11a8e33e9c8917e84
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 9534be5b6a8f33910201be38969cd9133922b967
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100074"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360265"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>메모리 사용량 모니터링 및 문제 해결
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 에서는 디스크 기반 테이블과 다른 패턴으로 메모리를 사용합니다. 메모리 및 가비지 수집 하위 시스템에 제공되는 DMV 또는 성능 카운터를 사용하여 데이터베이스에 할당된 메모리의 양과 메모리 최적화 테이블 및 인덱스에서 사용하는 메모리의 양을 모니터링할 수 있습니다.  이를 통해 시스템 및 데이터베이스 수준에서 가시성을 확보하고 메모리 부족으로 인한 문제를 방지할 수 있습니다.  
@@ -126,7 +126,7 @@ ms.locfileid: "50100074"
 ##  <a name="bkmk_Monitoring"></a> 메모리 사용 모니터링  
   
 ###  <a name="bkmk_UsingSSMS"></a> 사용 중 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서는 메모리 내 테이블이 사용하는 메모리를 모니터링할 수 있는 기본 표준 보고서를 제공합니다. 이러한 보고서는 [여기](http://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)에 설명된 개체 탐색기를 사용하여 액세스할 수 있습니다. 또한 개체 탐색기를 사용하여 메모리 최적화 개별 테이블에서 사용하는 메모리를 모니터링할 수 있습니다.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서는 메모리 내 테이블이 사용하는 메모리를 모니터링할 수 있는 기본 표준 보고서를 제공합니다. 이러한 보고서는 [여기](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)에 설명된 개체 탐색기를 사용하여 액세스할 수 있습니다. 또한 개체 탐색기를 사용하여 메모리 최적화 개별 테이블에서 사용하는 메모리를 모니터링할 수 있습니다.  
   
 #### <a name="consumption-at-the-database-level"></a>데이터베이스 수준에서 사용  
  다음과 같이 데이터베이스 수준에서 메모리 사용을 모니터링할 수 있습니다.  
@@ -170,7 +170,7 @@ NULL       -3          0                             0                       2  
 NULL       -2          192                           25                      16                              16  
 ```  
   
- 자세한 내용은 [sys.dm_db_xtp_table_memory_stats](http://msdn.microsoft.com/99b8a95f-d04b-4edb-a764-17b95581d071)를 참조하세요.  
+ 자세한 내용은 [sys.dm_db_xtp_table_memory_stats](https://msdn.microsoft.com/99b8a95f-d04b-4edb-a764-17b95581d071)를 참조하세요.  
   
 #### <a name="memory-consumption-by-internal-system-structures"></a>내부 시스템 구조의 메모리 사용  
  메모리는 트랜잭션 구조, 데이터 및 델타 파일 버퍼, 가비지 수집 구조 등의 시스템 개체에서도 사용합니다. 이러한 시스템 개체에서 사용하는 메모리는 여기 표시된 대로 `sys.dm_xtp_system_memory_consumers` 를 쿼리하여 확인할 수 있습니다.  
@@ -282,7 +282,7 @@ MEMORYCLERK_XTP      Default    64             0
   
 3.  잠재적인 메모리 문제를 해소하기 위한 정정 작업을 수행합니다. 자세한 내용은 [OOM(메모리 부족) 문제 해결](resolve-out-of-memory-issues.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [기존 풀에서 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 변경](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)  
   

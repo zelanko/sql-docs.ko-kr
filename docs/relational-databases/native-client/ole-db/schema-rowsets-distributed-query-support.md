@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 47ef27112e91b98bcc907f429d728acda22146c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2da969eb707ad5b943773626940cbfde80c8a80
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806155"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588397"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>스키마 행 집합 - 분산 쿼리 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47806155"
 
   지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 분산 쿼리는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 OLE DB 공급자 **IDBSchemaRowset** 연결 된 서버의 메타 데이터를 반환 하는 인터페이스.  
   
- DBPROPSET_SQLSERVERSESSION 속성 SSPROP_QUOTEDCATALOGNAMES가 VARIANT_TRUE이면 카탈로그 이름에 따옴표 붙은 식별자(예: "my.catalog")를 지정할 수 있습니다. 카탈로그에서 스키마 행 집합의 출력을 제한 하는 경우는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 OLE DB 공급자에 연결 된 서버와 카탈로그 이름을 포함 하는 두 부분 이름을 인식 합니다. 아래 표의 스키마 행 집합에 대해 두 부분으로 구성된 카탈로그 이름을 *linked_server ***.*** catalog*로 지정하면 명명된 연결된 서버에 적용 가능한 카탈로그로 출력이 제한됩니다.  
+ DBPROPSET_SQLSERVERSESSION 속성 SSPROP_QUOTEDCATALOGNAMES가 VARIANT_TRUE이면 카탈로그 이름에 따옴표 붙은 식별자(예: "my.catalog")를 지정할 수 있습니다. 카탈로그에서 스키마 행 집합의 출력을 제한 하는 경우는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 OLE DB 공급자에 연결 된 서버와 카탈로그 이름을 포함 하는 두 부분 이름을 인식 합니다. 아래 표의 스키마 행 집합을 지정 하는 두 부분으로 구성 된 카탈로그 이름을 _linked_server_**.** _카탈로그_ 명명 된 연결 된 서버에 적용 가능한 카탈로그로 출력이 제한 합니다.  
   
 |스키마 행 집합|카탈로그 제한|  
 |-------------------|-------------------------|  

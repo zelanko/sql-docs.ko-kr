@@ -1,5 +1,6 @@
 ---
-title: 학습 및 T-SQL을 사용 하 여 Python 모델을 저장 합니다. | Microsoft Docs
+title: 학습 및 T-SQL-SQL Server Machine Learning을 사용 하 여 Python 모델을 저장 합니다.
+description: 학습 및 SQL Server에서 TRANSACT-SQL을 사용 하 여 모델을 저장 하는 방법을 보여 주는 Python 자습서입니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
@@ -7,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d3917678cb16462f065754dd389be53ae8cd6016
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: a0991f43ed7446cc9b86325d4f536a0787b8dcc1
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032720"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645181"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>학습 및 T-SQL을 사용 하 여 Python 모델을 저장 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "51032720"
 
     이 저장된 프로시저를 만든 해야 하지만을 만드는 다음 코드를 실행할 수 있습니다.
 
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyTrainTestSplit;
     GO
 
@@ -48,20 +49,10 @@ ms.locfileid: "51032720"
 
 2. 사용자 지정 분할을 사용 하 여 데이터를 분할, 저장된 프로시저를 실행 하 고 학습 집합에 할당 된 데이터의 백분율을 나타내는 정수를 입력 합니다. 예를 들어 다음 문에서 학습 집합에 데이터를 60%를 할당 합니다.
 
-    ```SQL
+    ```sql
     EXEC PyTrainTestSplit 60
     GO
     ```
-
-## <a name="add-a-name-column-in-nyctaximodels"></a>Nyc_taxi_models에서 이름 열 추가
-
-이 자습서의 스크립트 생성 된 모델에 대 한 레이블로 모델 이름을 저장합니다. 모델 이름은 revoscalepy 또는 SciKit 모델을 선택 하려면 쿼리에서 사용 됩니다.
-
-1. Management Studio에서 엽니다는 **nyc_taxi_models** 테이블입니다.
-
-2. 마우스 오른쪽 단추로 클릭 **열** 누릅니다 **새 열**합니다. 열 이름으로 설정 *이름*, 형식과 **nchar(250)**, null을 허용 합니다.
-
-    ![모델 이름을 저장 하는 것에 대 한 이름 열](media/sqldev-python-newcolumn.png)
 
 ## <a name="build-a-logistic-regression-model"></a>로지스틱 회귀 모델 작성
 
@@ -78,7 +69,7 @@ ms.locfileid: "51032720"
 
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], 새 **쿼리** 창 및 저장된 프로시저를 만들려면 다음 문 실행 **PyTrainScikit**합니다.  저장된 프로시저 입력된 쿼리를 제공 하지 않아도 되므로 입력된 데이터의 정의 포함 합니다.
 
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyTrainScikit;
     GO
 
@@ -117,7 +108,7 @@ ms.locfileid: "51032720"
 
 2. 다음 실행 하 여 학습 된 모델을 삽입 하는 SQL 문을 테이블 nyc\_taxi_models 합니다.
 
-    ```SQL
+    ```sql
     DECLARE @model VARBINARY(MAX);
     EXEC PyTrainScikit @model OUTPUT;
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
@@ -136,11 +127,11 @@ ms.locfileid: "51032720"
 
 이 저장된 프로시저를 사용 하 여 새 **revoscalepy** Python에 대 한 새 패키지를 패키지 합니다. 개체, 변환 및 R 언어에 대해 제공 된 것과 비슷한 알고리즘 있기 **RevoScaleR** 패키지 있습니다. 
 
-사용 하 여 **revoscalepy**, 원격 계산 컨텍스트를 만들 수 있습니다, 간에 데이터 이동 계산 컨텍스트, 데이터 변환 및 로지스틱 및 선형 회귀, 의사 결정 트리와 같은 인기 있는 알고리즘을 사용 하 여 예측 모델을 학습 하 고 자세한 합니다. 자세한 내용은 참조 하세요. [revoscalepy 란?](../python/what-is-revoscalepy.md)
+사용 하 여 **revoscalepy**, 원격 계산 컨텍스트를 만들 수 있습니다, 간에 데이터 이동 계산 컨텍스트, 데이터 변환 및 로지스틱 및 선형 회귀, 의사 결정 트리와 같은 인기 있는 알고리즘을 사용 하 여 예측 모델을 학습 하 고 자세한 합니다. 자세한 내용은 [SQL Server에서 revoscalepy 모듈](../python/ref-py-revoscalepy.md) 하 고 [revoscalepy 함수 참조](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package).
 
 1. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], 새 **쿼리** 창 및 저장된 프로시저를 만들려면 다음 문 실행 _TrainTipPredictionModelRxPy_합니다.  저장 프로시저에 이미 입력된 데이터의 정의가 포함되므로 입력 쿼리를 제공할 필요가 없습니다.
 
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS TrainTipPredictionModelRxPy;
     GO
 
@@ -181,7 +172,7 @@ ms.locfileid: "51032720"
 
 2. 그러면 학습 된 삽입을 다음과 같이 저장된 프로시저를 실행 **revoscalepy** 테이블로 모델 *nyc_taxi_models*합니다.
 
-    ```SQL
+    ```sql
     DECLARE @model VARBINARY(MAX);
     EXEC TrainTipPredictionModelRxPy @model OUTPUT;
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);

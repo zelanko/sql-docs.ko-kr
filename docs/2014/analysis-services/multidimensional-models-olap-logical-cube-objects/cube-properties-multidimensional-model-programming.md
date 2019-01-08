@@ -33,12 +33,12 @@ ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fdd7ff7f21bcf0dbd761e745fc1fcd42f7e2d3d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 315635739984bd76d79ff3a36b32f09783aecae3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084613"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371445"
 ---
 # <a name="cube-properties"></a>큐브 속성
   큐브에는 큐브 차원 동작에 영향을 주기 위해 설정할 수 있는 많은 속성이 있습니다. 다음 표에서는 이러한 속성을 요약하여 설명합니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "48084613"
 |`Name`|큐브의 이름을 지정합니다.|  
 |`ProactiveCaching`|큐브에 대한 자동 관리 캐싱 설정을 정의합니다.|  
 |`ProcessingMode`|인덱싱 및 집계를 처리 중에 수행할지 아니면 처리 후에 수행할지를 나타냅니다. 옵션은 **정기적인** 또는 `lazy`합니다.|  
-|`ProcessingPriority`|지연 집계 및 지연 인덱싱과 같이 백그라운드 작업 중의 큐브 처리 우선 순위를 결정합니다. 기본값은 **0**입니다.|  
+|`ProcessingPriority`|지연 집계 및 지연 인덱싱과 같이 백그라운드 작업 중의 큐브 처리 우선 순위를 결정합니다. 기본값은 **0**합니다.|  
 |`ScriptCacheProcessingMode`|스크립트 캐시를 처리 중에 작성할지, 아니면 처리 후에 작성할지를 나타냅니다. 옵션은 **정기적인** 고 `lazy`입니다.|  
 |`ScriptErrorHandlingMode`|오류 처리를 결정합니다. 사용할 수 있는 옵션은 `IgnoreNone` 또는 `IgnoreAll`입니다.|  
 |`Source`|큐브에 사용된 데이터 원본 뷰를 표시합니다.|  
@@ -70,9 +70,9 @@ ms.locfileid: "48084613"
 |`Visible`|큐브의 표시 여부를 결정합니다.|  
   
 > [!NOTE]  
->  Null 값 및 다른 데이터 무결성 문제를 작업할 때 ErrorConfiguration 속성에 대 한 값을 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [Analysis Services 2005에서 데이터 무결성 문제 처리](http://go.microsoft.com/fwlink/?LinkId=81891)합니다.  
+>  Null 값 및 다른 데이터 무결성 문제를 작업할 때 ErrorConfiguration 속성에 대 한 값을 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [Analysis Services 2005에서 데이터 무결성 문제 처리](https://go.microsoft.com/fwlink/?LinkId=81891)합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [자동 관리 캐싱 &#40;파티션&#41;](partitions-proactive-caching.md)  
   
   

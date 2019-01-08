@@ -16,12 +16,12 @@ ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 696c9d5a560e4b7fd4614a0a6575ebbeb308fdd4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: f39911901b6ab729382c2e08b34c3452d4ec65cd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070813"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367055"
 ---
 # <a name="windows-server-failover-clustering-wsfc-with-sql-server"></a>SQL Server의 WSFC(Windows Server 장애 조치(Failover) 클러스터링)
   WSFC( *Windows Server 장애 조치(failover) 클러스터링* ) 클러스터는 애플리케이션 및 서비스의 가용성 향상을 위해 함께 작동하는 독립 서버 그룹입니다. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에서는 WSFC 서비스와 기능을 활용하여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스를 지원합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "48070813"
  강제 쿼럼  
  쿼럼에 필요한 요소 중 일부만 통신 중이더라도 클러스터를 시작하는 프로세스입니다.  
   
- 참조 항목: [장애 조치(Failover) 클러스터 용어 설명](/previous-versions/windows/desktop/MsCS/server-cluster-glossary)  
+ 참조 항목: [장애 조치 클러스터 용어 설명](/previous-versions/windows/desktop/MsCS/server-cluster-glossary)  
   
 ##  <a name="Overview"></a> Windows Server 장애 조치(Failover) 클러스터링 개요  
  Windows Server 장애 조치(Failover) 클러스터링은 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , Microsoft Exchange 등의 호스팅된 서버 애플리케이션의 고가용성 및 재해 복구 시나리오를 지원하는 인프라 기능을 제공합니다. 클러스터 노드 또는 서비스가 실패하면 해당 노드에 호스팅된 서비스는 *장애 조치(Failover)* 라는 프로세스를 통해 사용 가능한 다른 노드에 자동으로 전송되거나 수동으로 전송할 수 있습니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "48070813"
   
 -   **장애 조치(Failover) 조정.** 각 리소스는 주 노드에 호스팅되도록 구성되며, 하나 이상의 보조 노드에 자동 또는 수동으로 전송될 수 있습니다. 상태 기반 장애 조치(Failover) 정책은 노드 간의 리소스 소유권 자동 전송을 제어합니다. 장애 조치(Failover)가 발생할 경우 적절히 대응할 수 있도록 노드 및 호스팅된 애플리케이션에 알림을 제공합니다.  
   
- 참조 항목: [Windows Server 2008 R2의 장애 조치(Failover) 클러스터](http://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
+ 참조 항목: [Windows Server 2008 R2의 장애 조치(Failover) 클러스터](https://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
   
 ##  <a name="AlwaysOnWsfcTech"></a> SQL Server AlwaysOn 기술 및 WSFC  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *AlwaysOn* 새 높은 가용성 및 재해 복구 솔루션을 WSFC를 활용 하는 합니다. AlwaysOn은 애플리케이션 가용성을 높이고 하드웨어에 대한 ROI(투자 수익률)를 향상시키고 고가용성 배포 및 관리를 간소화하는 유연한 통합 솔루션입니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "48070813"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 기술을 최대한 활용하려면 여러 WSFC 관련 사전 요구 사항을 적용해야 합니다.  
 >   
->  자세한 내용은 [AlwaysOn 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)을 참조하세요.  
+>  참조 항목: [필수 구성 요소, 제한 사항 및 AlwaysOn 가용성 그룹에 대 한 권장 사항 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
 ### <a name="instance-level-high-availability-with-alwayson-failover-cluster-instances"></a>AlwaysOn 장애 조치(Failover) 클러스터 인스턴스가 있는 인스턴스 수준 고가용성  
  *AlwaysOn FCI(장애 조치(Failover) 클러스터 인스턴스* )는 WSFC 클러스터에서 노드를 통해 설치되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스입니다. 이 유형의 인스턴스는 공유 디스크 저장소(파이버 채널 또는 iSCSI SAN 사용) 및 가상 네트워크 이름에 대한 리소스 종속성이 있습니다. 가상 네트워크 이름은 서로 다른 서브넷에 있는 하나 이상의 가상 IP 주소에 대한 리소스 종속성이 있습니다. SQL Server 서비스와 SQL Server 에이전트 서비스는 리소스로 등록되고 가상 네트워크 이름 리소스에 종속됩니다.  
@@ -97,7 +97,7 @@ ms.locfileid: "48070813"
 > [!NOTE]  
 >  AlwaysOn 장애 조치(Failover) 클러스터 인스턴스는 SAN(Storage Area Network) 또는 SMB 파일 공유와 같은 대칭 공유 디스크 저장소가 필요합니다.  공유 디스크 저장소 볼륨은 WSFC 클러스터의 모든 잠재적인 장애 조치(Failover) 노드에서 사용할 수 있어야 합니다.  
   
- 자세한 내용은 참조: [AlwaysOn 장애 조치 클러스터 인스턴스](always-on-failover-cluster-instances-sql-server.md)  
+ 참조 항목: [AlwaysOn 장애 조치 클러스터 인스턴스](always-on-failover-cluster-instances-sql-server.md)  
   
 ### <a name="database-level-high-availability-with-includesshadrincludessshadr-mdmd"></a>다음이 있는 데이터베이스 수준 고가용성 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]  
  *가용성 그룹* 은 함께 장애 조치되는 사용자 데이터베이스 집합입니다. 가용성 그룹은 주 *가용성 복제본* 과 공유 저장소를 필요로 하지 않고 데이터 보호를 위해 SQL Server 로그 기반 데이터 이동을 통해 유지 관리되는 1-4개의 보조 복제본으로 구성됩니다. 각 복제본은 WSFC 클러스터의 서로 다른 노드에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 인스턴스에 의해 호스팅됩니다. 가용성 그룹과 해당 가상 네트워크 이름은 WSFC 클러스터에 리소스로 등록됩니다.  
@@ -113,7 +113,7 @@ ms.locfileid: "48070813"
 >   
 >  FCI(장애 조치(Failover) 클러스터 인스턴스)를 가용성 그룹과 함께 사용하여 가용성 복제본의 가용성을 높일 수 있습니다. 그러나 WSFC 클러스터에서 잠재적 경합 상태를 방지하기 위해 FCI에 호스팅된 가용성 복제본을 원본 또는 대상으로 하는 가용성 그룹 자동 장애 조치(Failover)는 지원되지 않습니다.  
   
- 자세한 내용은 [AlwaysOn 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)를 참조하세요.  
+ 참조 항목: [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
 ##  <a name="AlwaysOnWsfcHealth"></a> WSFC 상태 모니터링 및 장애 조치(Failover)  
  AlwaysOn 솔루션에 대한 고가용성을 위해서는 물리/논리적 WSFC 클러스터 리소스의 상태를 사전에 모니터링하고 중복 하드웨어를 자동으로 장애 조치하고 다시 구성해야 합니다.  또한 시스템 관리자는 가용성 그룹 또는 *인스턴스를 다른 노드로* 수동 장애 조치(Failover) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 할 수 있습니다.  
@@ -123,7 +123,7 @@ ms.locfileid: "48070813"
   
  가용성 그룹 복제본에 대한 장애 조치(Failover)는 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 영향을 주지 않습니다.  FCI를 장애 조치하면 호스팅된 가용성 그룹 복제본이 인스턴스와 함께 이동합니다.  
   
- 자세한 내용은 [장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책](failover-policy-for-failover-cluster-instances.md)을 참조하세요.  
+ 참조 항목: [장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책](failover-policy-for-failover-cluster-instances.md)  
   
 ### <a name="wsfc-resource-health-detection"></a>WSFC 리소스 상태 검색  
  WSFC 클러스터 노드의 각 리소스는 요청이 있을 때나 정기적으로 상태를 보고할 수 있습니다. 정전, 디스크 또는 메모리 오류, 네트워크 통신 오류, 응답하지 않는 서비스 등, 다양한 경우에 리소스 오류가 발생할 수 있습니다.  
@@ -140,7 +140,7 @@ ms.locfileid: "48070813"
 > [!TIP]  
 >  WSFC 클러스터 내에서 쿼럼 투표 수를 항상 홀수로 유지하는 것이 좋습니다.  쿼럼 투표를 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 클러스터의 모든 노드에 설치할 필요는 없습니다. 추가 서버가 쿼럼 멤버 역할을 하거나 원격 파일 공유를 결정 기준으로 사용하도록 WSFC 쿼럼 모델을 구성할 수 있습니다.  
 >   
->  자세한 내용은 [WSFC 쿼럼 모드 및 투표 구성&#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md)을 참조하세요.  
+>  참조 항목: [WSFC 쿼럼 모드 및 투표 구성&#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md)  
   
 ### <a name="disaster-recovery-through-forced-quorum"></a>쿼럼 강제를 통해 재해 복구  
  운영 방법과 WSFC 클러스터 구성에 따라 자동 장애 조치(Failover)와 수동 장애 조치(Failover)를 모두 수행할 수 있으며 내결함성이 있는 강력한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 솔루션을 유지 관리할 수 있습니다. 그러나 WSFC 클러스터의 적격한 투표 노드 쿼럼에서 노드 간에 통신할 수 없거나 WSFC 클러스터에서 상태 검증에 실패할 경우 WSFC 클러스터가 오프라인으로 전환될 수 있습니다.  
@@ -149,7 +149,7 @@ ms.locfileid: "48070813"
   
  그런 다음 일련의 단계를 수행하여 WSFC 클러스터를 다시 구성하고, 영향을 받는 데이터베이스 복제본을 복구하고, 새 쿼럼을 다시 설정해야 합니다.  
   
- 자세한 내용은 [강제 쿼럼을 통해 WSFC 재해 복구&#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)를 참조하세요.  
+ 참조 항목: [강제 쿼럼을 통해 WSFC 재해 복구&#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
   
 ##  <a name="AlwaysOnWsfcRelationship"></a> SQL Server AlwaysOn 구성 요소와 WSFC의 관계  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn과 WSFC의 기능 및 구성 요소 간에 여러 계층의 관계가 존재합니다.  
@@ -181,13 +181,13 @@ ms.locfileid: "48070813"
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   [Windows Server 기술: 장애 조치(failover) 클러스터](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Windows Server 기술:  장애 조치 클러스터](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
--   [Windows Server 2008 R2의 장애 조치(Failover) 클러스터](http://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
+-   [Windows Server 2008 R2의 장애 조치(Failover) 클러스터](https://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
   
--   [장애 조치(Failover) 클러스터에 대한 이벤트 및 로그 보기](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [장애 조치(Failover) 클러스터에 대한 이벤트 및 로그 보기](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Get-ClusterLog 장애 조치(Failover) 클러스터 Cmdlet](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog 장애 조치(Failover) 클러스터 Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## <a name="see-also"></a>관련 항목  
  [AlwaysOn 장애 조치 클러스터 인스턴스 (SQL Server)](always-on-failover-cluster-instances-sql-server.md)   

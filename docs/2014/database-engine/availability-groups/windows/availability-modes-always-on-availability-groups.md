@@ -17,12 +17,12 @@ ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d993ef299f08400a54487a4e7e99b017e8e9bc55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a05f52eceb554d8f4b023a3136fd4cf8e55d4fc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129043"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376315"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>가용성 모드(Always On 가용성 그룹)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 *가용성 모드* 는 지정된 가용성 복제본을 동기 커밋 모드에서 실행할 수 있는지 여부를 결정하는 복제본 속성입니다. 각 가용성 복제본에 대해 가용성 모드를 동기 커밋 모드나 비동기 커밋 모드로 구성해야 합니다.  주 복제본이 *비동기 커밋 모드*로 구성된 경우 주 복제본에서는 보조 복제본이 들어오는 트랜잭션 로그 레코드를 디스크에 기록( *로그 확정*)할 때까지 기다리지 않습니다. 특정 보조 복제본이 비동기 커밋 모드로 구성된 경우 주 복제본은 해당 보조 복제본이 로그를 확정할 때까지 기다리지 않습니다. 주 복제본과 특정 보조 복제본이 모두 *동기 커밋 모드*로 구성된 경우에는 보조 복제본이 주 복제본의 *세션 제한 시간*내에 주 복제본을 ping하는 데 실패하지 않은 한 주 복제본은 보조 복제본이 로그를 확정했음을 확인할 때까지 기다립니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "48129043"
   
   
 ##  <a name="SupportedAvModes"></a> 지원되는 가용성 모드  
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 아래 설명되어 있는 비동기-커밋 모드 및 동기-커밋 모드라는 두 가지 가용성 모드를 지원합니다.  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 다음과 같이 두 가지 가용성 모드-비동기-커밋 모드 및 동기-커밋 모드를 지원합니다.  
   
 -   *비동기-커밋 모드* 는 여러 가용성 복제본이 상당한 거리를 두고 분산되어 있는 경우에 적합한 재해 복구 솔루션입니다. 모든 보조 복제본이 비동기-커밋 모드로 실행될 경우 주 복제본은 보조 복제본이 로그를 확정할 때까지 기다리지 않습니다. 대신 주 복제본은 로그 레코드를 로컬 로그 파일에 쓴 후 곧바로 트랜잭션 확인을 클라이언트로 보냅니다. 주 복제본은 비동기-커밋 모드로 구성된 보조 복제본에 비해 최소한의 트랜잭션 대기 시간으로 실행됩니다.  현재 주 복제본이 비동기 커밋 가용성 모드로 구성되어 있는 경우 주 복제본은 보조 복제본 각각의 가용성 모드 설정에 관계없이 모든 보조 복제본에 대해 비동기로 트랜잭션을 커밋합니다.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "48129043"
 > [!NOTE]  
 >  WSFC 쿼럼 및 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 자세한 내용은 [WSFC 쿼럼 모드 및 투표 구성&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **가용성 모드와 장애 조치(failover) 모드를 변경하려면**  
   
 -   [가용성 복제본의 가용성 모드 변경&#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
@@ -149,11 +149,11 @@ ms.locfileid: "48129043"
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [장애 조치 및 장애 조치 모드 &#40;AlwaysOn 가용성 그룹&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [SQL Server의 WSFC&#40;Windows Server 장애 조치(failover) 클러스터링&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  

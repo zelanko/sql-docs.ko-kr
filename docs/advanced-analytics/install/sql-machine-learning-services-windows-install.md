@@ -1,6 +1,6 @@
 ---
-title: SQL Server Machine Learning Services (In-database) Windows에서 설치 | Microsoft Docs
-description: SQL Server 또는 SQL Server의 Python에는 R은 Windows에서 SQL Server 2017의 Machine Learning Services를 설치할 때 사용할 수입니다.
+title: Windows-SQL Server에서 설치 SQL Server Machine Learning Services (In-database) 기계 학습
+description: SQL Server 또는 Windows에서 SQL Server 2017 Machine Learning Services에 대 한 SQL Server 설치 단계에서 Python R입니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/01/2018
@@ -8,17 +8,17 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7f96c2acbca436ff18ccb6a12421d84bda965e4d
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
-ms.translationtype: HT
+ms.openlocfilehash: 9118edd1ab25cf13cbb6d10212b50f7e7428fe9f
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878096"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645352"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Windows에 SQL Server Machine Learning를 설치합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 2017부터 R 및 Python의 데이터베이스 내 분석은 SQL Server 2016에서 소개된 [SQL Server R Services](../r/sql-server-r-services.md) 의 후속 제품인 SQL Server Machine Learning 서비스에서 제공됩니다. 함수 라이브러리는 R 및 Python에서 사용할 수 있으며 데이터베이스 엔진 인스턴스에서 외부 스크립트로 실행할 수 있습니다. 
+SQL Server 2017부터 R 및 Python에 대 한 지원이 데이터베이스 내 분석에 제공 됩니다 **SQL Server Machine Learning Services**에 대 한 후속 [SQL Server R Services](../r/sql-server-r-services.md) SQL Server 2016에서 도입 되었습니다. 함수 라이브러리는 R 및 Python에서 사용할 수 있으며 데이터베이스 엔진 인스턴스에서 외부 스크립트로 실행할 수 있습니다. 
 
 이 문서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 실행하고 화면의 지시에 따라 머신 러닝 구성 요소를 설치하는 방법을 설명합니다.
 
@@ -54,7 +54,7 @@ SQL Server 2017부터 R 및 Python의 데이터베이스 내 분석은 SQL Serve
   
 2. 에 **설치** 탭을 선택 **새 SQL Server 독립 실행형 설치 또는 기존 설치에 기능 추가**합니다.
 
-   ![Machine Learning Services in-database 설치](media/2017setup-installation-page-mlsvcs.PNG)
+   ![새 SQL Server 독립 실행형 설치](media/2017setup-installation-page-mlsvcs.PNG)
    
 3. **기능 선택** 페이지에서 다음 옵션을 선택합니다.
   
@@ -101,6 +101,19 @@ SQL Server 2017부터 R 및 Python의 데이터베이스 내 분석은 SQL Serve
 
 7. 설치가 완료 되 면 컴퓨터를 다시 시작 하 라는 메시지가 표시 되는 경우 지금 합니다. 설치가 끝나면 설치 마법사에 표시되는 메시지를 읽어야 합니다. 자세한 내용은 [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)을 참조하세요.
 
+## <a name="set-environment-variables"></a>환경 변수 설정
+
+R 기능 통합만로 설정 해야 합니다 **MKL_CBWR** 환경 변수를 [일관 된 출력을 확인](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) Intel 라이브러리 MKL (Math Kernel) 계산에서 합니다.
+
+1. 제어판에서 클릭 **시스템 및 보안** > **System** > **고급 시스템 설정**  >   **환경 변수**합니다.
+
+2. 새 사용자 또는 시스템 변수를 만듭니다. 
+
+  + 변수 이름 설정 `MKL_CBWR`
+  + 변수 값 설정 `AUTO`
+
+이 단계에서는 서버를 다시 시작을 해야 합니다. 스크립트 실행을 사용 하도록 설정 하려는 경우 있습니다 수 보류 다시 시작의 모든 구성 작업이 완료 될 때까지 합니다.
+
 <a name="bkmk_enableFeature"></a>
 
 ## <a name="enable-script-execution"></a>스크립트 실행 활성화
@@ -108,13 +121,13 @@ SQL Server 2017부터 R 및 Python의 데이터베이스 내 분석은 SQL Serve
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 엽니다. 
 
     > [!TIP]
-    > 다운로드 하 고이 페이지에서 적절 한 버전을 설치할 수 있습니다: [SQL Server Management Studio (SSMS 다운로드)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)합니다.
+    > 다운로드 하 고이 페이지에서 적절 한 버전을 설치할 수 있습니다. [SSMS(SQL Server Management Studio) 다운로드합니다](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
     > 
     > 미리 보기 릴리스도 사용할 수 있는 [Azure Data Studio](../../azure-data-studio/what-is.md), 관리 작업 및 SQL Server에 대 한 쿼리를 지 합니다.
   
 2. Machine Learning 서비스를 설치한 인스턴스에 연결, 클릭 **새 쿼리** 쿼리 창을 열고 다음 명령을 실행 합니다.
 
-   ```SQL
+   ```sql
    sp_configure
    ```
 
@@ -122,7 +135,7 @@ SQL Server 2017부터 R 및 Python의 데이터베이스 내 분석은 SQL Serve
     
 3.  외부 스크립팅 기능을 사용 하려면 다음 문을 실행 합니다.
     
-    ```SQL
+    ```sql
     EXEC sp_configure  'external scripts enabled', 1
     RECONFIGURE WITH OVERRIDE
     ```
@@ -145,7 +158,7 @@ SQL Server 2017부터 R 및 Python의 데이터베이스 내 분석은 SQL Serve
 
 1. SQL Server Management studio에서 새 쿼리 창을 열고 다음 명령을 실행 합니다.
     
-    ```SQL
+    ```sql
     EXEC sp_configure  'external scripts enabled'
     ```
 
@@ -159,7 +172,7 @@ SQL Server 2017부터 R 및 Python의 데이터베이스 내 분석은 SQL Serve
     
     + R에 대 한
     
-    ```SQL
+    ```sql
     EXEC sp_execute_external_script  @language =N'R',
     @script=N'
     OutputDataSet <- InputDataSet;
@@ -171,7 +184,7 @@ SQL Server 2017부터 R 및 Python의 데이터베이스 내 분석은 SQL Serve
 
     + Python 용
     
-    ```SQL
+    ```sql
     EXEC sp_execute_external_script  @language =N'Python',
     @script=N'
     OutputDataSet = InputDataSet;
@@ -197,7 +210,7 @@ SQL Server 2017부터 R 및 Python의 데이터베이스 내 분석은 SQL Serve
 
 <a name="apply-cu"></a>
 
-## <a name="apply-updates"></a>업데이트를 적용 합니다.
+## <a name="apply-updates"></a>업데이트 적용
 
 데이터베이스 엔진 및 기계 학습 구성 요소 모두에 최신 누적 업데이트를 적용 하는 것이 좋습니다.
 
@@ -205,15 +218,15 @@ SQL Server 2017부터 R 및 Python의 데이터베이스 내 분석은 SQL Serve
 
 연결이 끊어진된 서버에 추가 단계가 필요 합니다. 자세한 내용은 [인터넷 액세스 없이 컴퓨터에 설치 > 누적 업데이트를 적용할](sql-ml-component-install-without-internet-access.md#apply-cu)합니다.
 
-1. 이미 설치 된 기본 인스턴스를 시작 합니다: SQL Server 2017 초기 릴리스
+1. 이미 설치 된 기본 인스턴스를 시작 합니다. SQL Server 2017 초기 릴리스
 
-2. 누적 업데이트 목록으로 이동: [SQL Server 2017 업데이트](https://sqlserverupdates.com/sql-server-2017-updates/)
+2. 누적 업데이트 목록으로 이동 합니다. [SQL Server 2017 업데이트](https://sqlserverupdates.com/sql-server-2017-updates/)
 
 3. 최신 누적 업데이트를 선택 합니다. 실행 파일 다운로드 되어 자동으로 추출 합니다.
 
 4. 설치 프로그램을 실행합니다. 라이선스 조건에 동의 하 고 기능 선택 페이지의 누적 업데이트 적용 되는 기능을 검토 합니다. Machine learning 기능을 포함 하 여 현재 인스턴스에 대해 설치 된 모든 기능에 표시 됩니다. 모든 기능을 업데이트 하는 데 필요한 CAB 파일이 다운로드 됩니다.
 
-  ![](media/cumulative-update-feature-selection.png)
+  ![설치 된 기능 요약](media/cumulative-update-feature-selection.png)
 
 5. R 및 Python 배포에 대 한 라이선스 조건에 동의 하 여 마법사를 진행 합니다. 
 
@@ -275,12 +288,12 @@ R 패키지 설치 및 관리에 대 한 프로세스는 SQL Server 2016 및 SQL
 
 R 개발자가 몇 가지 간단한 예제를 사용 하 여 시작할 수 있습니다 및 SQL Server를 사용 하 여 R을 작동 하는 방법의 기본 사항을 알아봅니다. 다음 단계를 다음 링크를 참조 하세요.
 
-+ [자습서: T-SQL에서 R 실행](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [자습서: T-SQL에서 R을 실행 합니다.](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
 + [자습서: R 개발자를 위한 데이터베이스 내 분석](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Python 개발자는 이러한 자습서를 수행 하 여 SQL Server를 사용 하 여 Python을 사용 하는 방법을 배울 수 있습니다.
 
-+ [자습서: t-sql로 Python 실행](../tutorials/run-python-using-t-sql.md)
-+ [Python 개발자를 위한 자습서: 데이터베이스 내 분석](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [자습서: T-sql로 Python 실행](../tutorials/run-python-using-t-sql.md)
++ [자습서: Python 개발자를 위한 데이터베이스 내 분석](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 실제 시나리오를 기반으로 하는 기계 학습의 예제를 보려면 [기계 학습 자습서](../tutorials/machine-learning-services-tutorials.md)합니다.

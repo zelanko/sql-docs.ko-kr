@@ -1,5 +1,5 @@
 ---
-title: 포함 된 R 및 Python (SQL Server Machine Learning)에 대 한 NYC Taxi 데이터 및 스크립트 다운로드 | Microsoft Docs
+title: 포함 된 R 및 Python-SQL Server Machine Learning에 대 한 NYC Taxi 데이터 및 스크립트 다운로드
 description: 뉴욕 시 택시 샘플 데이터를 다운로드 하 고 데이터베이스를 만들기 위한 지침입니다. 데이터는 SQL Server 저장 프로시저 및 T-SQL 함수에서 스크립트를 포함 하는 방법에 대 한 SQL Server Python 및 R 언어 자습서에 사용 됩니다.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,17 +8,17 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ea4651c76d0c8fbc14d22a51c7789d65a20b8484
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 25ac1b4884b0d12de9de59f44ba02ac9fec7e952
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701351"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645034"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 및 R 자습서에 대 한 NYC Taxi 데이터
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 공용 데이터로 구성 된 샘플 데이터베이스를 설정 하는 방법에 설명 합니다 [뉴욕 시 택시 및 리무진 수수료](https://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)합니다. 이 데이터는 SQL Server에서 데이터베이스 내 분석에 대 한 몇 가지 R 및 Python 자습서에 사용 됩니다. 샘플 코드를 더 빨리 실행하기 위해 데이터의 대표적인 1 % 샘플링을 만들었습니다. 시스템 데이터베이스 백업 파일에는 약간 넘는 90MB, 기본 데이터 테이블의 1.7 백만 행을 제공 합니다.
+이 문서에서는 공용 데이터로 구성 된 샘플 데이터베이스를 설정 하는 방법에 설명 합니다 [뉴욕 시 택시 및 리무진 수수료](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)합니다. 이 데이터는 SQL Server에서 데이터베이스 내 분석에 대 한 몇 가지 R 및 Python 자습서에 사용 됩니다. 샘플 코드를 더 빨리 실행하기 위해 데이터의 대표적인 1 % 샘플링을 만들었습니다. 시스템 데이터베이스 백업 파일에는 약간 넘는 90MB, 기본 데이터 테이블의 1.7 백만 행을 제공 합니다.
 
 이 연습을 완료 하려면 있어야 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) 또는 데이터베이스 백업 파일을 복원 하 고 T-SQL 쿼리를 실행할 수 있는 다른 도구입니다.
 
@@ -57,7 +57,7 @@ ms.locfileid: "51701351"
 
 |**개체 이름**|**개체 유형**|**설명**|
 |----------|------------------------|---------------|
-|**NYCTaxi_Sample** | database | 데이터베이스와 다음 두 개의 테이블을 만듭니다.<br /><br />dbo.nyctaxi_sample 테이블: 주 NYC Taxi 데이터 집합을 포함 합니다. 저장소 및 쿼리 성능 향상을 위해 클러스터형 columnstore 인덱스가 테이블에 추가됩니다. NYC Taxi 데이터 집합의 1% 샘플이이 테이블에 삽입 됩니다.<br /><br />dbo.nyc_taxi_models 테이블: 고급 분석 학습 된 모델을 유지 하는 데 사용 합니다.|
+|**NYCTaxi_Sample** | database | 데이터베이스와 다음 두 개의 테이블을 만듭니다.<br /><br />dbo.nyctaxi_sample 테이블: 주 NYC Taxi 데이터 집합을 포함합니다. 저장소 및 쿼리 성능 향상을 위해 클러스터형 columnstore 인덱스가 테이블에 추가됩니다. NYC Taxi 데이터 집합의 1% 샘플이이 테이블에 삽입 됩니다.<br /><br />dbo.nyc_taxi_models 테이블: 고급 분석 학습 된 모델을 유지 하는 데 사용 합니다.|
 |**fnCalculateDistance** |스칼라 반환 함수(scalar-valued function) | 승차 및 하 차 위치 사이의 직접 거리를 계산합니다. 이 함수는 [데이터 기능 만들기](sqldev-create-data-features-using-t-sql.md), [학습 모델을 저장 하 고](sqldev-train-and-save-a-model-using-t-sql.md) 하 고 [R 모델 운영 화](sqldev-operationalize-the-model.md)합니다.|
 |**fnEngineerFeatures** |테이블 반환 함수(table-valued function) | 모델 학습을 위한 새로운 데이터 기능을 만듭니다. 이 함수는 [데이터 기능 만들기](sqldev-create-data-features-using-t-sql.md) 하 고 [R 모델 운영 화](sqldev-operationalize-the-model.md)합니다.|
 
@@ -88,7 +88,7 @@ ms.locfileid: "51701351"
 
 3. 데이터베이스 내에서 한 **nyctaxi_sample** 데이터 집합을 포함 하는 테이블입니다. 추가 집합 기반 계산에 최적화 된 테이블을 [columnstore 인덱스](../../relational-databases/indexes/columnstore-indexes-overview.md)합니다. 아래 문을 실행해서 테이블에 대한 빠른 요약을 생성합니다.
 
-    ```SQL
+    ```sql
     SELECT DISTINCT [passenger_count]
         , ROUND (SUM ([fare_amount]),0) as TotalFares
         , ROUND (AVG ([fare_amount]),0) as AvgFares

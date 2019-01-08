@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: faf49ce16cdf76af644944a2a3cc21700863ade9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f58a349ebf67f710b4ff4722b85328992b3555eb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198373"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371125"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Microsoft Excel용 Master Data Services 추가 기능
   사용 하 여 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], 참조 데이터의 마스터 목록을 Excel을 사용 하는 조직에서 모든 사용자에 게 배포할 수 있습니다. 데이터 사용자의 보기 및 업데이트 권한은 보안에 따라 결정됩니다.  
@@ -28,12 +27,12 @@ ms.locfileid: "48198373"
  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 DQS(Data Quality Services)를 사용하여 데이터를 MDS에 로드하기 전에 일치시킬 수 있습니다. 이렇게 하면 MDS에서 데이터가 중복되지 않도록 방지하는 데 도움이 됩니다.  
   
 > [!IMPORTANT]  
->  계속 사용 합니다 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 의 Master Data Services 추가 기능에 Excel 용 Master Data Services 및 Data Quality Services를 업그레이드 한 후 SP1 버전 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 합니다. 하지만 SQL Server 2014 CTP2로 업그레이드한 후에는 이전 버전의 Excel용 MDS(Master Data Services) 추가 기능이 모두 작동하지 않습니다. 다운로드할 수 있습니다 합니다 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 버전의 Master Data Services 추가 기능에 Excel에 대 한 [여기](http://go.microsoft.com/fwlink/?LinkId=328664)합니다.  
+>  MDS(Master Data Services) 및 Data Quality Services를 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2로 업그레이드한 후 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 버전의 Excel용 MDS(Master Data Services) 추가 기능을 계속 사용할 수 있습니다. 하지만 SQL Server 2014 CTP2로 업그레이드한 후에는 이전 버전의 Excel용 MDS(Master Data Services) 추가 기능이 모두 작동하지 않습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 버전의 Excel용 MDS(Master Data Services) 추가 기능은 [여기](https://go.microsoft.com/fwlink/?LinkId=328664)서 다운로드할 수 있습니다.  
   
 ## <a name="terms"></a>용어  
  추가 기능 사용과 관련해서는 다음과 같은 용어가 사용됩니다.  
   
--   *MDS repository* 는 모든 마스터 데이터가 저장되는 위치입니다. 이 위치는 MDS 데이터를 저장하도록 구성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다. 저장소의 데이터를 사용하기 위해서는 데이터를 Excel에 로드하고, 작업이 끝나면 변경 내용을 다시 저장소에 게시합니다. 관리자는 새로운 엔터티 및 특성을 저장소에 추가할 수 있습니다.  
+-   *MDS repository* 는 모든 마스터 데이터가 저장되는 위치입니다. 이 위치는 MDS 데이터를 저장하도록 구성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다. 리포지토리의 데이터를 사용하기 위해서는 데이터를 Excel에 로드하고, 작업이 끝나면 변경 내용을 다시 리포지토리에 게시합니다. 관리자는 새로운 엔터티 및 특성을 저장소에 추가할 수 있습니다.  
   
 -   *MDS 관리 데이터* 는 MDS 리포지토리에 저장되며 데이터가 강조 표시된 행으로 표시되는 Excel에 로드하는 데이터입니다. 비 MDS 관리 데이터를 워크시트에 추가할 수 있으며, 이러한 데이터는 MDS 관리 데이터를 새로 고칠 때 영향을 받지 않습니다.  
   

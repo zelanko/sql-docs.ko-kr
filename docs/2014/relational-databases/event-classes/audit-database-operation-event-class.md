@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: cfca52be-e092-4fb7-994f-a44948bce510
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2b7acc4032fdc7ec834f9756258bfc5b349f0db3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 24599cad44366b0a0af6d3328f64b07b248f2e7c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087753"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775885"
 ---
 # <a name="audit-database-operation-event-class"></a>Audit Database Operation 이벤트 클래스
   **Audit Database Operation** 이벤트 클래스는 데이터베이스에서 검사점 또는 쿼리 알림 구독과 같은 작업이 수행될 때 발생합니다.  

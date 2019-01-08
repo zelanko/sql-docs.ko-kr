@@ -11,12 +11,12 @@ ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 0db138c140b0f5e51a148a3114ad6f0a7054f8c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49feffa82a1ae20735a2b9b70982782c3562c9cf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166953"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370095"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>색상표를 사용하여 차트에 대한 색 정의(보고서 작성기 및 SSRS)
   미리 정의된 색상표를 선택하거나 사용자 지정 색상표를 정의하여 차트의 색상표를 변경할 수 있습니다. 사용자 지정 색상표는 이를 지정한 보고서에 대해서만 적용됩니다.  
@@ -45,11 +45,11 @@ ms.locfileid: "48166953"
   
 3.  에 **차트** 섹션에 대 한 합니다 `Palette` 속성을 선택 **사용자 지정**합니다.  
   
-4.  CustomPaletteColors 속성에서 컬렉션 편집(**…**) 단추를 클릭합니다. **ReportColorExpression 컬렉션 편집기** 가 열립니다.  
+4.  CustomPaletteColors 속성에서 컬렉션 편집(**...**) 단추를 클릭합니다. **ReportColorExpression 컬렉션 편집기** 가 열립니다.  
   
 5.  색을 추가하려면 **추가** 를 클릭합니다. 드롭다운 목록에서 색을 선택하거나 식을 선택한 다음 특정 색의 16진수 값을 지정합니다. 예를 들어 ff6600은 "주황색"을 의미합니다.  
   
-     16진수 값에 대한 자세한 내용은 MSDN에서 [색상표(Color Table)](http://go.microsoft.com/fwlink/?linkid=9258) 를 참조하십시오.  
+     16진수 값에 대한 자세한 내용은 MSDN에서 [색상표(Color Table)](https://go.microsoft.com/fwlink/?linkid=9258) 를 참조하십시오.  
   
 6.  색상표에 다른 색을 더 추가하려면 **추가** 를 클릭합니다.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48166953"
   
  사용자 지정 색상표를 사용하면 색의 순서를 변경하여 차트의 다른 계열 색을 변경할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [차트에서 계열 색 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [여러 셰이프 차트에 일관된 색 지정&#40;보고서 작성기 및 SSRS&#41;](shape-charts-report-builder-and-ssrs.md)  

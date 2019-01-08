@@ -1,6 +1,6 @@
 ---
-title: SQL Server 기계 학습 인터넷 액세스가 없는 R 및 Python 구성 요소를 설치 합니다. | Microsoft Docs
-description: 오프 라인 상태 이거나 연결이 끊긴 Machine Learning R 및 Python 설치 SQL Server 인스턴스에서 격리 합니다.
+title: R 언어와 SQL Server Machine Learning-인터넷 액세스 없이 Python 구성 요소를 설치 합니다.
+description: 오프 라인 상태 이거나 연결이 끊긴 Machine Learning R 및 Python 설치 격리 된 SQL Server 인스턴스에서 네트워크 방화벽으로 보호 합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/01/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 24369c69df30e2723ce0c2098f2050ed0e5d7b20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01f871b6f6a96c053daca13060cac1223415eb20
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150553"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596994"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>SQL Server 기계 학습의 R 및 Python 인터넷 액세스 없이 컴퓨터를 설치 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +55,7 @@ Microsoft Python 서버    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 
 ## <a name="sql-server-2016-offline-install"></a>SQL Server 2016 오프 라인 설치
 
-SQL Server 2016 데이터베이스 내 분석은 두 가지를 사용 하 여 R 전용 CAB 파일에 대 한 제품 패키지 및 Microsoft의 오픈 소스 R 배포 각각. 이러한 버전 중 하나를 설치 하 여 시작: SP 2, SP 1 RTM입니다. 기본 설치 위치에 있으면 다음 단계로 누적 업데이트를 적용할 수 있습니다.
+SQL Server 2016 데이터베이스 내 분석은 두 가지를 사용 하 여 R 전용 CAB 파일에 대 한 제품 패키지 및 Microsoft의 오픈 소스 R 배포 각각. 이러한 버전 중 하나를 설치 하 여 시작 합니다. RTM에서 SP 1, SP 2입니다. 기본 설치 위치에 있으면 다음 단계로 누적 업데이트를 적용할 수 있습니다.
 
 인터넷 연결 컴퓨터에서 SQL Server 2016에서 데이터베이스 내 분석을 설치 하려면 설치 프로그램에서 사용 되는 CAB 파일을 다운로드 합니다. 
 
@@ -121,9 +121,22 @@ SQL Server 2016 데이터베이스 내 분석은 두 가지를 사용 하 여 R 
 
 6. 설치 프로그램을 실행합니다. 라이선스 조건에 동의 하 고 기능 선택 페이지의 누적 업데이트 적용 되는 기능을 검토 합니다. Machine learning 기능을 포함 하 여 현재 인스턴스에 대해 설치 된 모든 기능에 표시 됩니다.
 
-  ![](media/cumulative-update-feature-selection.png)
+  ![기능 트리에서 기능 선택](media/cumulative-update-feature-selection.png "기능 목록")
 
 5. R 및 Python 배포에 대 한 라이선스 조건에 동의 하 여 마법사를 진행 합니다. 설치 하는 동안 업데이트 된 CAB 파일이 포함 된 폴더 위치를 선택 하 라는 메시지가 표시 됩니다.
+
+## <a name="set-environment-variables"></a>환경 변수 설정
+
+R 기능 통합만로 설정 해야 합니다 **MKL_CBWR** 환경 변수를 [일관 된 출력을 확인](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) Intel 라이브러리 MKL (Math Kernel) 계산에서 합니다.
+
+1. 제어판에서 클릭 **시스템 및 보안** > **System** > **고급 시스템 설정**  >   **환경 변수**합니다.
+
+2. 새 사용자 또는 시스템 변수를 만듭니다. 
+
+  + 변수 이름 설정 `MKL_CBWR`
+  + 변수 값 설정 `AUTO`
+
+이 단계에서는 서버를 다시 시작을 해야 합니다. 스크립트 실행을 사용 하도록 설정 하려는 경우 있습니다 수 보류 다시 시작의 모든 구성 작업이 완료 될 때까지 합니다.
 
 ## <a name="post-install-configuration"></a>설치 후 구성
 

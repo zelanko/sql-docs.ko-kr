@@ -13,12 +13,12 @@ ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cee911569d1b90751e6c553b365a08bbaa3108eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 278cbff64973a76afd82ae7f01e8c81d12f20e5a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138273"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373395"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>보고서 포함된 데이터 세트 및 공유 데이터 세트(보고서 작성기 및 SSRS)
   데이터 세트는 데이터 연결에서 사용할 데이터를 지정합니다. 데이터 세트는 포함된 데이터 원본 또는 보고서 서버의 공유 데이터 원본에 대한 참조로 보고서에 저장된 데이터 연결을 기반으로 합니다. 데이터 세트는 필드 집합을 지정하는 쿼리를 포함합니다. 이러한 필드를 디자인 화면으로 끌면 보고서를 실행할 때 실제 데이터를 계산하는 식이 만들어집니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "48138273"
 ##  <a name="Overview"></a> 보고서 데이터 집합 및 쿼리 이해  
  보고서 데이터 세트에는 외부 데이터 원본에 대해 실행되며 검색할 데이터를 지정하는 쿼리 명령이 들어 있습니다. 쿼리 명령을 작성하려면 외부 데이터 원본용 데이터 확장 프로그램에 연결된 쿼리 디자이너를 사용합니다. 쿼리 디자이너에서 쿼리 명령을 실행하고 결과 집합을 확인할 수 있습니다. 결과 집합은 열 이름이 있으며 각 행에 같은 수의 값이 포함된 사각형 행 집합입니다. *비정형 계층*이라고도 하는 계층적 데이터는 지원되지 않습니다. 열 이름은 데이터 세트 필드 목록으로 보고서 정의에 저장됩니다.  
   
- 보고서에 데이터 세트를 추가한 후 보고서 데이터 창의 필드 컬렉션에 있는 필드를 끌어 보고서 레이아웃을 디자인하는 데 사용하는 테이블, 차트 및 기타 보고서 항목에 놓을 수 있습니다. 필드를 사용 하 여 작업에 대 한 자세한 내용은 참조 하세요. [데이터 집합 필드 컬렉션 &#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)합니다.  
+ 보고서에 데이터 세트를 추가한 후 보고서 데이터 창의 필드 컬렉션에 있는 필드를 끌어 보고서 레이아웃을 디자인하는 데 사용하는 테이블, 차트 및 기타 보고서 항목에 놓을 수 있습니다. 필드 작업에 대한 자세한 내용은 [데이터 세트 필드 컬렉션&amp;#40;보고서 작성기 및 SSRS&amp;#41;](dataset-fields-collection-report-builder-and-ssrs.md)을 참조하세요.  
   
 ### <a name="understanding-data-from-a-report-dataset"></a>보고서 데이터 세트의 데이터 이해  
  데이터 확장 프로그램에 따라 보고서 데이터 세트는 다음 데이터 형식으로 구성될 수 있습니다.  
@@ -76,11 +76,11 @@ ms.locfileid: "48138273"
   
 -   등록 및 구성된 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 데이터 공급자의 결과 집합  
   
--   미리 정의된 엔터티,  엔터티 관계 및 필드를 포함하여 특정 데이터 원본에 대해 디자인된 보고서 모델의 데이터. 자세한 내용은 SQL  Server  온라인 설명서의**Reporting Services 설명서** 에서 “ [보고서 모델](http://go.microsoft.com/fwlink/?linkid=121312) 을 데이터 원본으로 사용”을 참조하세요.  
+-   미리 정의된 엔터티,  엔터티 관계 및 필드를 포함하여 특정 데이터 원본에 대해 디자인된 보고서 모델의 데이터. 자세한 내용은 SQL  Server  온라인 설명서의**Reporting Services 설명서** 에서 “ [보고서 모델](https://go.microsoft.com/fwlink/?linkid=121312) 을 데이터 원본으로 사용”을 참조하세요.  
   
- 런타임에 보고서가 처리되면 쿼리에 대해 반환된 실제 결과 집합에는 0개 이상의 행이 있을 수 있습니다. 또한 데이터 원본에 쿼리에서 정의한 열이 없을 수도 있습니다. 데이터 원본의 null 값이 매핑되는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 값 `System.DBNull.Value`합니다.  
+ 런타임에 보고서가 처리되면 쿼리에 대해 반환된 실제 결과 집합에는 0개 이상의 행이 있을 수 있습니다. 또한 데이터 원본에 쿼리에서 정의한 열이 없을 수도 있습니다. 데이터 원본의 Null  값은 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 값 `System.DBNull.Value`로 매핑됩니다.  
   
- 데이터 집합 필드에 대 한 자세한 내용은 참조 하세요. [데이터 집합 필드 컬렉션 &#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)합니다.  
+ 데이터 세트 필드에 대한 자세한 내용은 [데이터 세트 필드 컬렉션&amp;#40;보고서 작성기 및 SSRS&amp;#41;](dataset-fields-collection-report-builder-and-ssrs.md)을 참조하세요.  
   
 ### <a name="dataset-query"></a>데이터 세트 쿼리  
  디자인 타임에 쿼리 디자이너에서 데이터 세트 쿼리를 실행하면 예제 데이터를 보여 주는 데이터 원본의 행 집합이 표시됩니다. 런타임에는 데이터 원본의 데이터가 변경되었으므로 사용자가 보고서를 볼 때 데이터 세트 쿼리에서 다른 값이 생성될 수 있습니다. 보고서가 처리될 때마다 새 데이터가 나타날 수 있습니다.  
@@ -107,7 +107,7 @@ ms.locfileid: "48138273"
   
 -   데이터베이스 필드를 기반으로 새 사용자 지정 필드를 만들고 사용자 지정 형식을 제공합니다.  
   
- 자세한 내용은 [데이터 집합 필드 컬렉션 &#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)합니다.  
+ 자세한 내용은 [데이터 세트 필드 컬렉션&amp;#40;보고서 작성기 및 SSRS&amp;#41;](dataset-fields-collection-report-builder-and-ssrs.md)을 참조하세요.  
   
 ### <a name="importing-existing-queries-for-a-dataset"></a>데이터 세트에 대한 기존 쿼리 가져오기  
  데이터 세트를 만드는 경우 새로운 쿼리를 만들거나 파일 또는 다른 보고서에서 기존 쿼리를 가져올 수 있습니다. 다른 보고서에서 쿼리를 가져오는 경우 보고서의 데이터 세트 목록에서 가져올 쿼리를 선택할 수 있습니다.  
@@ -152,7 +152,7 @@ ms.locfileid: "48138273"
 |필드|쿼리 명령의 필드<br /><br /> 데이터 세트 정의의 일부가 아닌 계산 필드|필드를 볼 수 있지만 변경할 수는 없음<br /><br /> 필드 컬렉션은 보고서에 공유 데이터 세트를 추가할 때의 쿼리를 기반으로 정적입니다. 업데이트하려면 **데이터 세트 속성** 대화 상자에서 **필드 새로 고침**을 클릭합니다. 실제 필드 컬렉션은 정의의 현재 쿼리가 반환하는 필드 컬렉션입니다.<br /><br /> 계산 필드 추가|  
 |데이터 세트|대/소문자 구분과 같은 데이터 옵션|인스턴스의 데이터 옵션 무시|  
   
- 데이터 집합을 만드는 방법은 SQL Server 온라인 설명서의 [Reporting Services 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에서 [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) 및 [Reporting Services 도구](../tools/reporting-services-tools.md)를 참조하세요.  
+ 데이터 집합을 만드는 방법은 SQL Server 온라인 설명서의 [Reporting Services 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에서 [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) 및 [Reporting Services 도구](../tools/reporting-services-tools.md)를 참조하세요.  
   
 ##  <a name="SortGroupFilter"></a> 데이터 집합의 데이터 필터링,  정렬 및 그룹화  
  데이터 세트의 데이터는 외부 데이터 원본에 대해 쿼리 명령을 실행한 결과로 반환되는 생성됩니다. 데이터 확장 프로그램의 쿼리 명령 구문에 따라 데이터 정렬 또는 그룹화 가능 여부가 결정됩니다. 보고서에서 데이터를 검색하기 전에 쿼리에서 정렬 및 그룹화가 수행됩니다. 필터링은 보고서에서 데이터를 검색한 후에 수행됩니다.  
@@ -206,7 +206,7 @@ ms.locfileid: "48138273"
   
 -   별도의 데이터 영역을 사용하여 각 데이터 세트의 데이터를 표시합니다. 자세한 내용은 [데이터 영역 및 지도&#40;보고서 작성기 및 SSRS&#41;](../report-design/data-regions-and-maps-report-builder-and-ssrs.md)를 참조하세요.  
   
--   데이터 세트에 둘 이상의 데이터 영역을 연결하여 동일한 데이터에 대한 다양한 뷰를 제공할 수 있습니다. 자세한 내용은 [동일한 데이터 집합에 여러 데이터 영역 연결 &#40;보고서 작성기 및 SSRS&#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)합니다.  
+-   데이터 세트에 둘 이상의 데이터 영역을 연결하여 동일한 데이터에 대한 다양한 뷰를 제공할 수 있습니다. 자세한 내용은 [동일한 데이터 세트에 여러 데이터 영역 연결&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)을 참조하세요.  
   
 -   데이터 세트를 사용하여 사용 가능한 값이나 보고서 매개 변수 기본값에 대한 드롭다운 목록을 제공할 수 있습니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)를 참조하세요.  
   
@@ -218,11 +218,11 @@ ms.locfileid: "48138273"
  보고서를 처리하는 동안 데이터 세트에 대한 쿼리를 실행하면 결과 집합에 행이 없을 수 있습니다. 렌더링된 보고서에서 빈 데이터 세트에 연결된 데이터 영역은 빈 데이터 영역으로 표시됩니다. 렌더링된 보고서에서 빈 데이터 영역을 표시하는 대신 텍스트를 지정하여 표시할 수 있습니다. 모든 데이터 세트에 대한 쿼리에서 런타임에 생성된 데이터가 없는 경우 하위 보고서에 사용할 메시지도 지정할 수 있습니다. 자세한 내용은 [데이터 영역에 대한 데이터 없음 메시지 설정&#40;보고서 작성기 및 SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)을 참조하세요.  
   
 ##  <a name="Options"></a> 데이터 집합 옵션 설정  
- 국가별 데이터를 지원하는 데이터 원본의 경우 정렬 순서, 국가별 문자 속성 및 대/소문자 구분에 영향을 주는 데이터 세트의 속성을 조정해야 할 수 있습니다. 이러한 속성에는 대/소문자,  일본어 가나,  전자,  악센트,  데이터 정렬 등이 있습니다. 자세한 내용은 [SQL Server 온라인 설명서](http://go.microsoft.com/fwlink/?linkid=98335)의 "데이터베이스 및 데이터베이스 엔진 애플리케이션에 대한 국가별 고려 사항" 및 "데이터 정렬 작업"을 참조하십시오. 이러한 속성을 설정하는 방법은 [데이터 집합 속성 대화 상자, 옵션&#40;보고서 작성기&#41;](dataset-properties-dialog-box-options-report-builder.md)을 참조하세요.  
+ 국가별 데이터를 지원하는 데이터 원본의 경우 정렬 순서, 국가별 문자 속성 및 대/소문자 구분에 영향을 주는 데이터 세트의 속성을 조정해야 할 수 있습니다. 이러한 속성에는 대/소문자,  일본어 가나,  전자,  악센트,  데이터 정렬 등이 있습니다. 자세한 내용은 [SQL Server 온라인 설명서](https://go.microsoft.com/fwlink/?linkid=98335)의 "데이터베이스 및 데이터베이스 엔진 애플리케이션에 대한 국가별 고려 사항" 및 "데이터 정렬 작업"을 참조하십시오. 이러한 속성을 설정하는 방법은 [데이터 집합 속성 대화 상자, 옵션&#40;보고서 작성기&#41;](dataset-properties-dialog-box-options-report-builder.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
- [데이터 연결, 데이터 원본 및 보고서 작성기에서 연결 문자열](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-datasets-ssrs.md)  
   
   

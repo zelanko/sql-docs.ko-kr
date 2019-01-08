@@ -1,70 +1,66 @@
 ---
-title: SQL Server 데이터 (SQL 및 R 심층 분석) 쿼리 및 수정 | Microsoft Docs
+title: RevoScaleR-SQL Server Machine Learning을 사용 하 여 SQL Server 데이터 쿼리 및 수정
+description: 쿼리 및 SQL Server에서 R 언어를 사용 하 여 데이터를 수정 하는 방법에 대 한 연습 자습서입니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/27/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 57fff9b8ddfd6507876bd6eb174a127d70d0b916
-ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
+ms.openlocfilehash: 191dd7237307d33d3cdaca5872fee9a09d27f321
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45975652"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645412"
 ---
-# <a name="query-and-modify-the-sql-server-data-sql-and-r-deep-dive"></a>SQL Server 데이터 (SQL 및 R 심층 분석) 쿼리 및 수정
+# <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>SQL Server 데이터 (SQL Server 및 RevoScaleR 자습서) 쿼리 및 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서는 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)과 SQL Server를 함께 쓰는 방법에 대한 데이터 과학 심층 분석 자습서의 일부입니다.
+이 단원에서는의 일부인를 [RevoScaleR 자습서](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 사용 하는 방법에 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server를 사용 하 여 합니다.
 
-이제 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 불러왔으므로 앞서 만든 데이터 원본을 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]의 R 함수에 대한 인수로 사용하여 변수에 대한 기본 정보를 가져오고 요약 및 히 스토그램을 생성할 수 있습니다.
+이전 단원에서는 데이터를 로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이 단계에서는 탐색 고 사용 하 여 데이터를 수정할 수 있습니다 **RevoScaleR**:
 
-이 단계에서는 간단한 분석을 수행한 다음 데이터를 강화하도록 데이터 원본을 다시 사용합니다.
+> [!div class="checklist"]
+> * 변수에 대 한 기본 정보를 반환 합니다.
+> * 원시 데이터에서 범주 데이터 만들기
 
-## <a name="query-the-data"></a>데이터를 쿼리 합니다.
+범주 데이터 또는 *요소 변수*, 예비 데이터 시각화에 유용 합니다. 변수 데이터 모양을 파악할에 히스토그램에 대 한 입력으로 사용할 수 있습니다.
 
-먼저, 열과 해당 데이터 형식 목록을 가져옵니다.
+## <a name="query-for-columns-and-types"></a>열 및 형식에 대 한 쿼리
 
-1.  [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) 함수를 사용하여  분석하려는 데이터 원본을 지정합니다.
+R 스크립트를 실행 하려면 R IDE 또는 RGui.exe를 사용 합니다. 
 
-    RevoScaleR의 버전에 따라 사용할 수도 있습니다 [rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames)합니다. 
+먼저, 열과 해당 데이터 형식 목록을 가져옵니다. 함수를 사용할 수 있습니다 [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) 분석 하려는 데이터 원본을 지정 합니다. 버전에 따라 **RevoScaleR**를 사용할 수도 있습니다 [rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames)합니다. 
   
-    ```R
-    rxGetVarInfo(data = sqlFraudDS)
-    ```
+```R
+rxGetVarInfo(data = sqlFraudDS)
+```
 
-    **결과**
-    
-    *Var 1: custID, Type: integer*
-    
-    *Var 2: gender, Type: integer*
-    
-    *Var 3: state, Type: integer*
-    
-    *Var 4: cardholder, Type: integer*
-    
-    *Var 5: balance, Type: integer*
-    
-    *Var 6: numTrans, Type: integer*
-    
-    *Var 7: numIntlTrans, Type: integer*
-    
-    *Var 8: creditLine, Type: integer*
-    
-    *Var 9: fraudRisk, Type: integer*
+**결과**
 
+```R
+Var 1: custID, Type: integer
+Var 2: gender, Type: integer
+Var 3: state, Type: integer
+Var 4: cardholder, Type: integer
+Var 5: balance, Type: integer
+Var 6: numTrans, Type: integer
+Var 7: numIntlTrans, Type: integer
+Var 8: creditLine, Type: integer
+Var 9: fraudRisk, Type: integer
+```
 
-## <a name="modify-metadata"></a>메타 데이터 수정하기
+## <a name="create-categorical-data"></a>범주 데이터 만들기
 
-모든 변수가 정수로 저장 되지만 일부 변수 라고 하는 범주 데이터를 나타내며 *요소 변수* R에서 예를 들어 열 *상태* 50 개 주와 콜롬비아 특별구의 식별자로 사용 하는 숫자를 포함 합니다.  데이터를 더 쉽게 이해하기 위해 숫자를 주 약어 목록으로 바꿉니다.
+모든 변수가 정수로 저장 되지만 일부 변수 라고 하는 범주 데이터를 나타내며 *요소 변수* R에서 예를 들어 열 *상태* 50 개 주와 콜롬비아 특별구의 식별자로 사용 하는 숫자를 포함 합니다. 데이터를 더 쉽게 이해하기 위해 숫자를 주 약어 목록으로 바꿉니다.
 
 이 단계에서는 약어를 포함 하는 문자열 벡터를 만들고 이러한 범주 값을 원래 정수 식별자에 매핑됩니다. 새 변수를 사용 하 여는 *colInfo* 인수에는이 열이 요소로 처리 되도록 지정 합니다. 를 데이터를 분석 하거나 이동할 때마다 약어가 사용 되 고 열 요소로 처리 됩니다.
 
-열을 요인으로 사용하지 말고 약어에 매핑하는 것은 실제로 성능 향상의 요인이 됩니다. 자세한 내용은 [R 및 데이터 최적화](..\r\r-and-data-optimization-r-services.md)를 참조하세요.
+열을 요인으로 사용하지 말고 약어에 매핑하는 것은 실제로 성능 향상의 요인이 됩니다. 자세한 내용은 [R 및 데이터 최적화](../r/r-and-data-optimization-r-services.md)를 참조하세요.
 
-1. 먼저 R 변수 *stateAbb*를 만들고 다음과 같이 추가할 문자열 벡터를 정의합니다.
+1. 먼저 R 변수를 만듭니다 *stateAbb*, 후에 다음과 같이 추가할 문자열 벡터를 정의 하 고 있습니다.
   
     ```R
     stateAbb <- c("AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC",
@@ -99,7 +95,7 @@ ms.locfileid: "45975652"
     )
     ```
   
-3. 업데이트된 데이터를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본을 만들려면 이전과 같이 **RxSqlServerData** 함수를 호출하되, *colInfo* 인수를 추가합니다.
+3. 만들려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 호출이 업데이트 된 데이터를 사용 하는 데이터 원본 합니다 **RxSqlServerData** 이전과 마찬가지로 작동 하지만 추가 *colInfo* 인수.
   
     ```R
     sqlFraudDS <- RxSqlServerData(connectionString = sqlConnString,
@@ -118,30 +114,21 @@ ms.locfileid: "45975652"
 
     **결과**
     
-    *Var 1: custID, Type: integer*
-    
-    *Var 2: gender 2 factor levels: Male Female*
-    
-    *Var 3: state 51 factor levels: AK AL AR AZ CA ...  VT WA WI WV WY*
-    
-    *Var 4: cardholder 2 factor levels: Principal Secondary*
-    
-    *Var 5: balance, Type: integer*
-    
-    *Var 6: numTrans, Type: integer*
-    
-    *Var 7: numIntlTrans, Type: integer*
-    
-    *Var 8: creditLine, Type: integer*
-    
-    *Var 9: fraudRisk, Type: integer*
+    ```R
+    Var 1: custID, Type: integer
+    Var 2: gender  2 factor levels: Male Female
+    Var 3: state   51 factor levels: AK AL AR AZ CA ... VT WA WI WV WY
+    Var 4: cardholder  2 factor levels: Principal Secondary
+    Var 5: balance, Type: integer
+    Var 6: numTrans, Type: integer
+    Var 7: numIntlTrans, Type: integer
+    Var 8: creditLine, Type: integer
+    Var 9: fraudRisk, Type: integer
+    ```
 
-이제 지정한 변수 3개(_gender_, _state_, _cardholder_)가 요인으로 처리됩니다.
+이제 지정한 변수 3개(*gender*, *state*, *cardholder*)가 요인으로 처리됩니다.
 
-## <a name="next-step"></a>다음 단계
+## <a name="next-steps"></a>다음 단계
 
-[계산 컨텍스트 정의 및 사용](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)
-
-## <a name="previous-step"></a>이전 단계
-
-[RxSqlServerData를 사용하여 SQL Server 데이터 개체 만들기](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
+> [!div class="nextstepaction"]
+> [계산 컨텍스트 정의 및 사용](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)

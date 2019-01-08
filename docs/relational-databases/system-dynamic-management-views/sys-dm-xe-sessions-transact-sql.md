@@ -20,12 +20,12 @@ ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78a083b519c7d29d9e2421f7f8a91ee540ace271
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5c46d9051fb1760791c16c9274a1803c58c1e90
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814421"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785884"
 ---
 # <a name="sysdmxesessions-transact-sql"></a>sys.dm_xe_sessions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "47814421"
 |address|**varbinary(8)**|세션의 메모리 주소입니다. 주소는 로컬 시스템에서 고유 합니다. Null을 허용하지 않습니다.|  
 |NAME|**nvarchar(256)**|세션의 이름입니다. 이름은 로컬 시스템에서 고유 합니다. Null을 허용하지 않습니다.|  
 |pending_buffers|**int**|처리가 보류된 가득 찬 버퍼의 수입니다. Null을 허용하지 않습니다.|  
-|total_regular_buffers|**int**|세션과 연결된 정규 버퍼의 총 수입니다. Null을 허용하지 않습니다.<br /><br /> 참고: 정규 버퍼는 대부분의 경우 사용 됩니다. 이러한 버퍼는 충분한 크기를 가지고 있어 많은 이벤트를 보유할 수 있습니다. 일반적으로 세션당 3개 이상의 버퍼가 있습니다. 정규 버퍼의 수는 MEMORY_PARTITION_MODE 옵션을 통해 설정된 메모리 분할을 기반으로 서버에 의해 자동으로 결정됩니다. 정규 버퍼의 크기는 MAX_MEMORY 옵션(기본값: 4MB) 값을 버퍼 수로 나눈 것과 동일합니다. MEMORY_PARTITION_MODE 및 MAX_MEMORY 옵션에 대 한 자세한 내용은 참조 하세요. [CREATE EVENT SESSION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)합니다.|  
+|total_regular_buffers|**int**|세션과 연결된 정규 버퍼의 총 수입니다. Null을 허용하지 않습니다.<br /><br /> 참고: 정규 버퍼는 대부분의 경우에 사용됩니다. 이러한 버퍼는 충분한 크기를 가지고 있어 많은 이벤트를 보유할 수 있습니다. 일반적으로 세션당 3개 이상의 버퍼가 있습니다. 정규 버퍼의 수는 MEMORY_PARTITION_MODE 옵션을 통해 설정된 메모리 분할을 기반으로 서버에 의해 자동으로 결정됩니다. 정규 버퍼의 크기는 MAX_MEMORY 옵션(기본값: 4MB) 값을 버퍼 수로 나눈 것과 동일합니다. MEMORY_PARTITION_MODE 및 MAX_MEMORY 옵션에 대 한 자세한 내용은 참조 하세요. [CREATE EVENT SESSION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)합니다.|  
 |regular_buffer_size|**bigint**|정규 버퍼 크기(바이트 단위)입니다. Null을 허용하지 않습니다.|  
-|total_large_buffers|**int**|대용량 버퍼의 총 수입니다. Null을 허용하지 않습니다.<br /><br /> 참고: 대용량 버퍼는 이벤트가 정규 버퍼 보다 큰 경우 사용 됩니다. 대용량 버퍼는 이 용도에 맞게 명시적으로 따로 설정합니다. 대용량 버퍼는 이벤트 세션이 시작될 때 할당되고 MAX_EVENT_SIZE 옵션에 따라 크기가 결정됩니다. MAX_EVENT_SIZE 옵션에 대 한 자세한 내용은 참조 하세요. [CREATE EVENT SESSION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)합니다.|  
+|total_large_buffers|**int**|대용량 버퍼의 총 수입니다. Null을 허용하지 않습니다.<br /><br /> 참고: 대용량 버퍼는 이벤트가 정규 버퍼보다 큰 경우에 사용됩니다. 대용량 버퍼는 이 용도에 맞게 명시적으로 따로 설정합니다. 대용량 버퍼는 이벤트 세션이 시작될 때 할당되고 MAX_EVENT_SIZE 옵션에 따라 크기가 결정됩니다. MAX_EVENT_SIZE 옵션에 대 한 자세한 내용은 참조 하세요. [CREATE EVENT SESSION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)합니다.|  
 |large_buffer_siz|**bigint**|대용량 버퍼 크기(바이트 단위)입니다. Null을 허용하지 않습니다.|  
 |total_buffer_size|**bigint**|세션 이벤트를 저장하는 데 사용되는 메모리 버퍼의 총 크기(바이트 단위)입니다. Null을 허용하지 않습니다.|  
 |buffer_policy_flags|**int**|모든 버퍼가 가득 찼는데 새 이벤트가 발생한 경우 세션 이벤트 버퍼의 동작 방법을 나타내는 비트맵입니다. Null을 허용하지 않습니다.|  
@@ -54,14 +54,6 @@ ms.locfileid: "47814421"
   
 ## <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
-  
-## <a name="change-history"></a>변경 내역  
-  
-|업데이트된 내용|  
-|---------------------|  
-|name과 blocked_event_fire_time 열에 대한 데이터 형식을 수정했습니다.|  
-|buffer_size 및 total_buffers 열을 제거했습니다.|  
-|Total_regular_buffers, regular_buffer_size, total_large_buffers, large_buffer_size 및 total_buffer_size 열을 추가 합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  

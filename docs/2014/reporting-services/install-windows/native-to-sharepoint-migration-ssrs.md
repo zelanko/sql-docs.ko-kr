@@ -11,12 +11,12 @@ ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e5a00f42527f081c2240e4f427bd9e690c67bf5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: d0b8526bf0a56f550659e613988b31c20f1ccde7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073453"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372625"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>기본 모드에서 SharePoint 모드로의 마이그레이션(SSRS)
   한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버 모드에서 다른 서버 모드로 업그레이드하거나 변환할 수 없습니다. 예를 들어 기본 모드 보고서 서버를 SharePoint 모드로 업그레이드하거나 변환할 수 없습니다. 사용되는 데이터베이스 스키마가 다르기 때문에 모드 간에 보고서 서버 데이터베이스를 복사할 수 없습니다. 한 보고서 서버에서 다른 보고서 서버로 콘텐츠를 마이그레이션할 수 있습니다. 사용하는 도구는 원본 서버 및 대상 서버에 맞게 구성된 보고서 서버 모드의 유형에 따라 달라집니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "48073453"
 ##  <a name="bkmk_native_to_sharepoint"></a> Reporting Services 마이그레이션 도구  
  이 도구는 기본 모드 배포에서 SharePoint 모드 배포로의 콘텐츠 마이그레이션을 지원합니다. 이 도구는 SharePoint 모드에서 SharePoint 모드로 또는 SharePoint 모드에서 기본 모드로의 마이그레이션을 지원하지 않습니다.  
   
- 자세한 내용은 [Reporting Services 마이그레이션 도구](http://www.microsoft.com/download/details.aspx?id=29560)(http://www.microsoft.com/download/details.aspx?id=29560)를 참조하세요.  
+ 자세한 내용은 [Reporting Services 마이그레이션 도구](https://www.microsoft.com/download/details.aspx?id=29560)(https://www.microsoft.com/download/details.aspx?id=29560)를 참조하세요.  
   
 ## <a name="use-script-to-migrate-content"></a>스크립트를 사용하여 콘텐츠 마이그레이션  
  마이그레이션 도구가 사용자 요구에 맞지 않는 경우 수동으로 보고서 서버 데이터를 마이그레이션할 수 있습니다. 다음은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 배포 간에 보고서 항목을 마이그레이션하는 데 필요한 단계를 요약한 내용입니다. 이 방법은 기본 또는 SharePoint 모드를 원본 또는 대상 서버로 지원하지 않습니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "48073453"
 |모델|사용자 계정 컨트롤||  
 |데이터 세트|사용자 계정 컨트롤||  
 |보고서 파트||마이그레이션 후 보고서 파트에 대한 경로를 확인하거나 업데이트합니다.|  
-|일정|사용자 계정 컨트롤|ListSchedules 메서드 참조 [구독 및 배달 메서드](../report-server-web-service/methods/subscription-and-delivery-methods.md)|  
+|일정|사용자 계정 컨트롤|ListSchedules 메서드 [Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md)를 참조하세요.|  
 |구독|예|List Subscriptions 메서드를 참조 하세요 [Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md) 와 ChangeSubscriptionOwner 메서드 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>|  
 |스냅숏|||  
 ||||  

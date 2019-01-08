@@ -20,16 +20,16 @@ ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d64f536b88d3b6fd8f10fc36b75cd3395c818af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e4c15cfe0d82fc4b68115c029334fa7d3ec7410
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814981"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590290"
 ---
 # <a name="sqlprepare-function"></a>SQLPrepare 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLPrepare** SQL 문자열 실행을 준비 합니다.  
@@ -63,13 +63,13 @@ SQLRETURN SQLPrepare(
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
-|01S02|옵션 값이 변경 됨|지정 된 문 특성을 일시적으로 유사한 값에 대체 되므로 구현 작업 조건으로 인해 잘못 되었습니다. (**SQLGetStmtAttr** 일시적으로 대체 값 결정 호출할 수 있습니다.) 대체 값이 적합 합니다 *StatementHandle* 커서를 닫을 때까지 합니다. 변경할 수 있는 문 특성은: SQL_ATTR_CONCURRENCY SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE SQL_ATTR_MAX_LENGTH SQL_ATTR_MAX_ROWS SQL_ATTR_QUERY_TIMEOUT SQL_ATTR_SIMULATE_CURSOR<br /><br /> (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
+|01S02|옵션 값이 변경 됨|지정 된 문 특성을 일시적으로 유사한 값에 대체 되므로 구현 작업 조건으로 인해 잘못 되었습니다. (**SQLGetStmtAttr** 일시적으로 대체 값 결정 호출할 수 있습니다.) 대체 값이 적합 합니다 *StatementHandle* 커서를 닫을 때까지 합니다. 변경할 수 있는 문 특성은 다음과 같습니다. SQL_ATTR_CONCURRENCY SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE SQL_ATTR_MAX_LENGTH SQL_ATTR_MAX_ROWS SQL_ATTR_QUERY_TIMEOUT SQL_ATTR_SIMULATE_CURSOR<br /><br /> (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버는 연결 된 데이터 원본 간의 통신 링크 하지 못했습니다.|  
 |21S01|삽입 값 목록이 열 목록과 일치 하지 않습니다.|\**StatementText* 포함 된 **삽입** 문과 값을 삽입할 수는 파생된 테이블의 정도 일치 하지 않습니다.|  
 |21S02|파생된 테이블의 단계가 열 목록과 일치 하지 않습니다.|\**StatementText* 포함 된 **CREATE VIEW** 문과 수가 지정 된 이름은 쿼리 사양에 정의 된 파생 테이블을 같은 정도로 아닙니다.|  
 |22018|캐스트 사양의 문자 값|**StatementText* 리터럴 또는 매개 변수를 포함 하는 SQL 문을 포함 하 고 값 연결 된 테이블 열의 데이터 형식과 호환 되지 않았습니다.|  
 |22019|잘못 된 이스케이프 문자|인수 *StatementText* 포함 된를 **와 같은** 조건자와 함께 **이스케이프** 에 **여기서** 절과 이스케이프의 길이 다음 문자 **이스케이프** 1 없습니다.|  
-|22025|잘못 된 이스케이프 시퀀스|인수 *StatementText* 포함 된 "**와 같은** *패턴 값* **이스케이프** *이스케이프 문자*"에 **위치** 절 및 패턴 값의 이스케이프 문자 뒤의 문자"%"나"_"되었습니다.|  
+|22025|잘못 된 이스케이프 시퀀스|인수 *StatementText* 포함 된 "**와 같은** _패턴 값_ **이스케이프** _이스케이프 문자_"에 **위치** 절 및 패턴 값의 이스케이프 문자 뒤의 문자"%"나"_"되었습니다.|  
 |24000|잘못된 커서 상태|(DM)에서 커서가 열린 합니다 *StatementHandle*, 및 **SQLFetch** 또는 **SQLFetchScroll** 호출 되었지만 합니다.<br /><br /> 커서가 열린 합니다 *StatementHandle*, 있지만 **SQLFetch** 또는 **SQLFetchScroll** 호출한 되었습니다.|  
 |34000|잘못된 커서 이름|\**StatementText* 배치는 포함 된 **삭제** 또는 위치를 지정 **업데이트**, 및 준비 중인 문에서 참조 하는 커서를 열 수 없습니다.|  
 |3D000|잘못 된 카탈로그 이름|에 지정 된 카탈로그 이름을 *StatementText* 올바르지 않습니다.|  
@@ -102,7 +102,7 @@ SQLRETURN SQLPrepare(
 > [!NOTE]  
 >  응용 프로그램에서 사용 하는 경우 **SQLPrepare** 준비 및 **SQLExecute** 제출 하는 **커밋** 또는 **롤백** 문 수 없습니다 DBMS 제품 간의 상호 운용 가능 합니다. 호출에서는 커밋하거나 트랜잭션을 롤백하려면 **SQLEndTran**합니다.  
   
- 드라이버는 데이터 원본에서 사용 된 SQL 형식을 사용 하 고 다음 준비를 위해 데이터 원본에 제출 하는 문을 수정할 수 있습니다. 특히 드라이버 특정 기능에 대 한 SQL 구문을 정의 하는 데 이스케이프 시퀀스를 수정 합니다. (SQL 문 문법에 대 한 참조 [ODBC의 이스케이프 시퀀스](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md) 하 고 [부록 c: SQL 문법](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).) 드라이버의 경우 문 핸들은 포함 된 SQL 코드에서 문 식별자 비슷합니다. 데이터 원본에서 문을 식별자를 지 원하는 드라이버는 데이터 원본에는 문 식별자와 매개 변수 값 보낼 수 있습니다.  
+ 드라이버는 데이터 원본에서 사용 된 SQL 형식을 사용 하 고 다음 준비를 위해 데이터 원본에 제출 하는 문을 수정할 수 있습니다. 특히 드라이버 특정 기능에 대 한 SQL 구문을 정의 하는 데 이스케이프 시퀀스를 수정 합니다. (SQL 문 문법에 대 한 참조 [ODBC의 이스케이프 시퀀스](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md) 고 [부록 c: SQL 문법을](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).) 드라이버의 경우 문 핸들은 포함 된 SQL 코드에서 문 식별자 비슷합니다. 데이터 원본에서 문을 식별자를 지 원하는 드라이버는 데이터 원본에는 문 식별자와 매개 변수 값 보낼 수 있습니다.  
   
  문이 준비 되 면 응용 프로그램은 문 핸들을 사용 하 여 이후 함수 호출의 문으로 참조. 문 핸들을 사용 하 여 연결 하 여 준비 된 문을 호출 하 여 다시 실행할 수 있습니다 **SQLExecute** 응용 프로그램에 대 한 호출을 사용 하 여 문을 해제 될 때까지 **SQLFreeStmt** SQL_DROP 옵션을 사용 하 여 또는 문 핸들에 대 한 호출에 사용 될 때까지 **SQLPrepare**하십시오 **SQLExecDirect**, 또는 카탈로그 함수 중 하나 (**SQLColumns**,  **SQLTables**등). 문을 준비 하는 응용 프로그램을 한 후 결과 집합의 형식에 대 한 정보를 요청할 수 있습니다. 일부 구현에서는 호출에 대 한 **SQLDescribeCol** 하거나 **SQLDescribeParam** 후 **SQLPrepare** 후함수를호출하는만큼효율적이지못할**SQLExecute** 나 **SQLExecDirect**합니다.  
   

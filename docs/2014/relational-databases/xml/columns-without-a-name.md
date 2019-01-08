@@ -12,15 +12,15 @@ ms.assetid: 440de44e-3a56-4531-b4e4-1533ca933cac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d36934be00b7d4be6b28a6ed1748f99ded2d310e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83e7687e310f0a1d9abf12eb6101f4e78e5a7b68
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227003"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357277"
 ---
 # <a name="columns-without-a-name"></a>이름이 없는 열
-  이름이 없는 열은 인라인됩니다. 예를 들어 계산 열이나 열 별칭을 지정하지 않는 중첩된 스칼라 쿼리는 이름이 없는 열을 생성합니다. 열이 있으면 `xml` 형식, 해당 데이터 형식 인스턴스의 내용이 삽입 됩니다. 그렇지 않을 경우에는 열 내용이 텍스트 노드로 삽입됩니다.  
+  이름이 없는 열은 인라인됩니다. 예를 들어 계산 열이나 열 별칭을 지정하지 않는 중첩된 스칼라 쿼리는 이름이 없는 열을 생성합니다. `xml` 유형의 열일 경우 해당 데이터 형식 인스턴스의 내용이 삽입됩니다. 그렇지 않을 경우에는 열 내용이 텍스트 노드로 삽입됩니다.  
   
 ```  
 SELECT 2+2  
@@ -38,7 +38,7 @@ USE AdventureWorks2012;
 GO  
 SELECT ProductModelID,  
        Name,  
-       Instructions.query('declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
                 /MI:root/MI:Location   
               ')   
 FROM Production.ProductModel  
@@ -63,7 +63,7 @@ GO
   
  `</row>`  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [FOR XML에서 PATH 모드 사용](use-path-mode-with-for-xml.md)  
   
   

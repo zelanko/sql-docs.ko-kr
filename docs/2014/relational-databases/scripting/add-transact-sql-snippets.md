@@ -11,18 +11,18 @@ ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b93171cad6896b32086604b54bce30c3fe396fb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72e3d99672b17fcf6d7cafa3825d04f8989ecdea
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144323"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373065"
 ---
 # <a name="add-transact-sql-snippets"></a>Transact-SQL 코드 조각 추가
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함된 미리 정의된 코드 조각 집합에 사용자 고유의 Transact-SQL 코드 조각을 추가할 수 있습니다.  
   
 ## <a name="creating-a-transact-sql-snippet-file"></a>Transact-SQL 코드 조각 파일 만들기  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 조각을 만드는 첫 번째 단계는 사용자 코드 조각의 텍스트가 포함된 XML 파일을 만드는 것입니다. 이 파일은 파일 확장명이 .snippet이고 [코드 조각 스키마](http://go.microsoft.com/fwlink/?LinkId=207504)의 요구 사항을 충족해야 합니다. 코드 조각 언어는 SQL로 설정합니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 조각을 만드는 첫 번째 단계는 사용자 코드 조각의 텍스트가 포함된 XML 파일을 만드는 것입니다. 이 파일은 파일 확장명이 .snippet이고 [코드 조각 스키마](https://go.microsoft.com/fwlink/?LinkId=207504)의 요구 사항을 충족해야 합니다. 코드 조각 언어는 SQL로 설정합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 함께 제공되는 미리 정의된 코드 조각을 예로 사용할 수 있습니다. 미리 정의된 코드 조각을 찾으려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 열고 **도구** 메뉴를 선택한 다음 **코드 조각 관리자**를 클릭합니다. **언어** 목록 상자에서 **SQL** 을 선택하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 조각의 경로가 **위치** 상자에 표시됩니다.  
   
@@ -52,13 +52,13 @@ ms.locfileid: "48144323"
 4.  코드 조각이 들어 있는 폴더로 이동하고 .snippet 파일을 클릭한 다음 **열기** 단추를 클릭합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `TRY-CATCH` 코드 감싸기 조각으로 가져옵니다 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  
+ 다음 예에서는 `TRY-CATCH` 코드 감싸기 조각을 만들어 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]로 가져옵니다.  
   
 1.  다음 코드를 메모장에 붙여 넣은 다음 TryCatch.snippet이라는 파일로 저장합니다.  
   
     ```  
     <?xml version="1.0" encoding="utf-8" ?>  
-    <CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
+    <CodeSnippets  xmlns="https://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
     <_locDefinition xmlns="urn:locstudio">  
         <_locDefault _loc="locNone" />  
         <_locTag _loc="locData">Title</_locTag>  

@@ -15,12 +15,12 @@ ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9073dddaf2a992ae5b735a7884bfaaa278f9d049
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 1c5066a27097bb0919a6d0af0ffa9ad1c53e8624
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068944"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371165"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Analysis Services 액세스를 허용하도록 Windows 방화벽 구성
   네트워크에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 을 사용할 수 있도록 만드는 데 필수적인 첫 번째 단계는 방화벽에서 포트를 차단 해제해야 할지 여부를 결정하는 것입니다. 대부분 설치의 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 연결을 허용하는 하나 이상의 인바운드 방화벽 규칙을 만들어야 합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48068944"
   
 -   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010의 경우에는 Windows 방화벽에서 포트를 열지 마십시오. SharePoint의 추가 기능인 이 서비스는 SharePoint에 대해 구성된 포트를 사용하며 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 모델을 로드 및 쿼리하는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 인스턴스에 로컬로만 연결합니다.  
   
--   Windows Azure 가상 컴퓨터에서 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 경우에는 서버 액세스를 구성하는 데 다른 지침을 사용하십시오. [Windows Azure 가상 컴퓨터의 SQL Server Business Intelligence](http://msdn.microsoft.com/library/windowsazure/jj992719.aspx)를 참조하십시오.  
+-   Windows Azure 가상 컴퓨터에서 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 경우에는 서버 액세스를 구성하는 데 다른 지침을 사용하십시오. [Windows Azure 가상 컴퓨터의 SQL Server Business Intelligence](https://msdn.microsoft.com/library/windowsazure/jj992719.aspx)를 참조하십시오.  
   
  하지만 기본 인스턴스의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] TCP 포트 2383에서 수신 대기를 구성할 수 있습니다 다른 고정된 포트에서 수신 하도록 서버를 서버에이 형식에 연결: \<서버 이름 >:\<portnumber >.  
   
@@ -60,15 +60,15 @@ ms.locfileid: "48068944"
 ##  <a name="bkmk_checkport"></a> Analysis Services의 포트 및 방화벽 설정 확인  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]가 지원하는 Microsoft Windows 운영 체제에서는 기본적으로 Windows 방화벽이 설정되어 원격 연결을 차단합니다. 방화벽에서 수동으로 포트를 열어 Analysis Services에 대한 인바운드 요청을 허용해야 합니다. SQL Server 설치 프로그램에서는 이 단계를 수행하지 않습니다.  
   
- 포트 설정은 msmdsrv.ini 파일 및 SQL Server Management Studio의 Analysis Services 인스턴스 일반 속성 페이지에서 지정됩니다. 경우 `Port` 설정할지 양의 정수로, 서비스는 고정된 포트에서 수신 대기 합니다. 경우 `Port` 설정할지를 0으로 서비스가 수신 하는 기본 인스턴스인 경우 포트 2383에서 또는 동적으로 할당된 된 포트에서 명명 된 인스턴스인 경우.  
+ 포트 설정은 msmdsrv.ini 파일 및 SQL Server Management Studio의 Analysis Services 인스턴스 일반 속성 페이지에서 지정됩니다. `Port`가 양수로 설정된 경우 서비스는 고정 포트에서 수신 대기합니다. `Port`가 0으로 설정된 경우 서비스는 기본 인스턴스인 경우 포트 2383에서, 명명된 인스턴스인 경우 동적으로 할당된 포트에서 수신 대기합니다.  
   
  동적 포트 할당은 명명된 인스턴스에서만 사용합니다. `MSOLAP$InstanceName` 서비스는 시작할 때, 사용할 포트를 결정합니다. 다음을 수행하여 명명된 인스턴스가 사용하는 실제 포트 번호를 확인할 수 있습니다.  
   
 -   작업 관리자를 시작 하 고 클릭 **Services** 의 PID를 가져오려고 합니다 `MSOLAP$InstanceName`합니다.  
   
--   명령줄에서 `netstat –ao –p TCP`를 실행하여 해당 PID의 TCP 포트 정보를 확인합니다.  
+-   명령줄에서 `netstat -ao -p TCP`를 실행하여 해당 PID의 TCP 포트 정보를 확인합니다.  
   
--   SQL Server Management Studio를 사용 하 여 포트를 확인 하 고이 형식으로 Analysis Services 서버에 연결 합니다. \<ip 주소 >:\<portnumber >.  
+-   SQL Server Management Studio를 사용하여 포트를 확인하고 \<Ip 주소 >:\<portnumber >.  
   
  애플리케이션이 특정 포트에서 수신 대기하고 있더라도 방화벽에서 액세스를 차단하면 연결에 성공할 수 없습니다. 명명된 Analysis Services 인스턴스에 연결하려면 msmdsrv.exe 또는 msmdsrv.exe가 방화벽에서 수신 대기하고 있는 고정 포트에 대한 액세스 차단을 해제해야 합니다. 이 항목의 남은 섹션에서는 액세스 차단을 해제하는 방법에 대한 지침을 제공합니다.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "48068944"
   
  SQL Server Browser 서비스를 사용할 수 없는 경우에는 연결 문자열의 고정 포트를 할당하고 도메인 이름 확인을 무시해야 합니다. SQL Server Browser 서비스를 사용하지 않는 모든 클라이언트 연결은 연결 문자열에 포트 번호를 포함해야 합니다(예: AW-SRV01:54321).  
   
- **옵션 1: 동적 포트 할당을 사용하고 SQL Server Browser 서비스에 대한 액세스를 차단 해제합니다.**  
+ **옵션 1: 동적 포트 할당을 사용 하 고 SQL Server Browser 서비스에 대 한 액세스를 차단 해제**  
   
  Analysis Services의 명명된 인스턴스에 대한 동적 포트 할당은 `MSOLAP$InstanceName` 서비스가 시작될 때 이 서비스에 의해 설정됩니다. 기본적으로 서비스는 찾은 포트 번호 중 첫 번째로 사용 가능한 포트 번호를 사용합니다(서비스가 다시 시작될 때마다 다른 포트 번호 사용).  
   
@@ -157,7 +157,7 @@ ms.locfileid: "48068944"
   
 8.  원격 연결이 설정 되어 있는지를 확인 하려면 다른 컴퓨터에 SQL Server Management Studio 또는 Excel을 열고 및 형식이으로 서버의 네트워크 이름 및 인스턴스 이름을 지정 하 여 Analysis Services에 연결: \<서버 이름 > \\< n a m e\>합니다. 예를 들어 서버 이름은 **AW-SRV01** 이고 명명된 인스턴스 이름은 **Finance**인 경우 네트워크 서버 이름은 **AW-SRV01\Finance**가 됩니다.  
   
- **옵션 2: 명명된 인스턴스에 고정 포트 사용**  
+ **옵션 2: 명명 된 인스턴스에 대해 고정된 포트 사용**  
   
  고정 포트를 할당한 다음 해당 포트에 대한 액세스 차단을 해제할 수도 있습니다. 이 방법을 사용하면 프로그램 실행 파일에 대한 액세스를 허용하는 경우보다 감사 기능의 효율성이 더 높아집니다. 이러한 이유 때문에 Analysis Services 인스턴스에 액세스하기 위한 방법으로 고정 포트를 사용하도록 권장됩니다.  
   
@@ -204,7 +204,7 @@ ms.locfileid: "48068944"
   
 1.  사용 가능한 TCP/IP 포트 중에서 사용할 포트를 결정합니다.  
   
-     사용하지 않아야 하는 예약된 포트와 등록된 포트의 목록을 보려면 [Port Numbers(IANA)](http://go.microsoft.com/fwlink/?LinkID=198469)(포트 번호)를 참조하세요. 시스템에서 이미 사용 중인 포트의 목록을 보려면 명령 프롬프트 창을 열고 `netstat –a –p TCP`를 입력하여 시스템에서 열려 있는 TCP 포트의 목록을 표시합니다.  
+     사용하지 않아야 하는 예약된 포트와 등록된 포트의 목록을 보려면 [Port Numbers(IANA)](https://go.microsoft.com/fwlink/?LinkID=198469)(포트 번호)를 참조하세요. 시스템에서 이미 사용 중인 포트의 목록을 보려면 명령 프롬프트 창을 열고 `netstat -a -p TCP`를 입력하여 시스템에서 열려 있는 TCP 포트의 목록을 표시합니다.  
   
 2.  사용할 포트를 결정한 후 SQL Server Management Studio의 Analysis Services 인스턴스 일반 속성 페이지 또는 msmdsrv.ini 파일에서 `Port` 구성 설정을 편집하여 포트를 지정합니다.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "48068944"
 5.  Management Studio에서 로컬로 연결하여 확인한 다음 다른 컴퓨터의 클라이언트 애플리케이션에서 원격으로 연결하여 확인합니다. Management Studio를 사용 하려면 Analysis Services 기본 인스턴스에 연결 형식으로 서버 이름을 지정 하 여: \<서버 이름 >:\<portnumber >. 명명 된 인스턴스의 경우 서버 이름 지정 \<서버 이름 >\\< n a m e\>합니다.  
   
 ##  <a name="bkmk_cluster"></a> Analysis Services 클러스터에 대한 포트 구성  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 장애 조치(failover) 클러스터는 기본 인스턴스 또는 명명된 인스턴스로 설치했는지 여부에 관계없이 항상 TCP 포트 2383에서 수신합니다. 동적 포트 할당은 Windows 장애 조치(failover) 클러스터에 설치되어 있는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 사용되지 않습니다. 클러스터에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 클러스터에.를 실행하는 모든 노드에서 TCP 2383을 열어야 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]클러스터링에 대한 자세한 내용은 [SQL Server Analysis Services를 클러스터링하는 방법](http://go.microsoft.com/fwlink/p/?LinkId=396548)을 참조하십시오.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 장애 조치(failover) 클러스터는 기본 인스턴스 또는 명명된 인스턴스로 설치했는지 여부에 관계없이 항상 TCP 포트 2383에서 수신합니다. 동적 포트 할당은 Windows 장애 조치(failover) 클러스터에 설치되어 있는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 사용되지 않습니다. 클러스터에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 클러스터에.를 실행하는 모든 노드에서 TCP 2383을 열어야 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]클러스터링에 대한 자세한 내용은 [SQL Server Analysis Services를 클러스터링하는 방법](https://go.microsoft.com/fwlink/p/?LinkId=396548)을 참조하십시오.  
   
 ##  <a name="bkmk_powerpivot"></a> SharePoint 용 PowerPivot에 대 한 포트 구성  
  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 의 서버 아키텍처는 사용 중인 SharePoint 버전에 따라 근본적으로 다릅니다.  
@@ -230,7 +230,7 @@ ms.locfileid: "48068944"
   
  **SharePoint 2010**  
   
- SharePoint 2010을 설치하려는 경우에는 Windows 방화벽에서 포트를 열 필요가 없습니다. SharePoint는 필요한 포트 및 SharePoint 환경 내에서 작동하는 SharePoint용 PowerPivot과 같은 추가 기능을 엽니다. SharePoint 2010용 PowerPivot 설치에서는 PowerPivot 시스템 서비스가 같은 컴퓨터에 함께 설치된 로컬 SQL Server Analysis Services(PowerPivot) 서비스 인스턴스에 대한 독점적인 사용권을 가집니다. PowerPivot 시스템 서비스는 네트워크 연결이 아닌 로컬 연결을 사용하여 SharePoint 서버의 PowerPivot 데이터를 로드, 쿼리 및 처리하는 로컬 Analysis Services 엔진 서비스에 액세스합니다. 클라이언트 애플리케이션에 PowerPivot 데이터를 요청하면 요청은 SharePoint 설치 프로그램이 연 포트를 통해 라우팅됩니다(즉, SharePoint – 80, SharePoint 중앙 관리 v4, SharePoint 웹 서비스 및 SPUserCodeV4에 대한 액세스를 허용하도록 인바운드 규칙이 정의됨). PowerPivot 웹 서비스는 SharePoint 팜 내부에서 실행되므로 SharePoint 팜의 PowerPivot 데이터에 원격 액세스하기 위해서는 SharePoint 방화벽 규칙만으로도 충분합니다.  
+ SharePoint 2010을 설치하려는 경우에는 Windows 방화벽에서 포트를 열 필요가 없습니다. SharePoint는 필요한 포트 및 SharePoint 환경 내에서 작동하는 SharePoint용 PowerPivot과 같은 추가 기능을 엽니다. SharePoint 2010용 PowerPivot 설치에서는 PowerPivot 시스템 서비스가 같은 컴퓨터에 함께 설치된 로컬 SQL Server Analysis Services(PowerPivot) 서비스 인스턴스에 대한 독점적인 사용권을 가집니다. PowerPivot 시스템 서비스는 네트워크 연결이 아닌 로컬 연결을 사용하여 SharePoint 서버의 PowerPivot 데이터를 로드, 쿼리 및 처리하는 로컬 Analysis Services 엔진 서비스에 액세스합니다. 클라이언트 응용 프로그램에서 PowerPivot 데이터를 요청 하려면 요청은 SharePoint 설치 프로그램이 연 포트를 통해 라우팅됩니다 (SharePoint-80에 대 한 액세스를 허용 하도록 인바운드 규칙이 정의 되는 특히 SharePoint 중앙 관리 v4, SharePoint 웹 서비스 및 SPUserCodeV4). PowerPivot 웹 서비스는 SharePoint 팜 내부에서 실행되므로 SharePoint 팜의 PowerPivot 데이터에 원격 액세스하기 위해서는 SharePoint 방화벽 규칙만으로도 충분합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server Browser 서비스&#40;데이터베이스 엔진 및 SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   

@@ -10,17 +10,17 @@ ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 68acf1991e3d1b5af44f6335f59635fcc1eacefc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2a01b9d9d13bf5e9135d287553beb8b87c2dcd5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144523"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361305"
 ---
 # <a name="what39s-new-in-sql-server-native-client"></a>새로운&#39;SQL Server Native Client 기능
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client를 설치하며, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Native Client는 없습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서 ODBC 드라이버에 대한 업데이트는 더 이상 없습니다. Windows에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC Driver 11 for [!INCLUDE[msCoName](../../includes/msconame-md.md)]이라 불리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client의 후속 ODBC 드라이버는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]와 함께 설치됩니다. 에 대 한 자세한 내용은 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows, 표시 [Microsoft ODBC Driver 11 for SQL Server-Windows](http://www.microsoft.com/download/details.aspx?id=36434)합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서 ODBC 드라이버에 대한 업데이트는 더 이상 없습니다. Windows에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC Driver 11 for [!INCLUDE[msCoName](../../includes/msconame-md.md)]이라 불리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client의 후속 ODBC 드라이버는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]와 함께 설치됩니다. 에 대 한 자세한 내용은 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows, 표시 [Microsoft ODBC Driver 11 for SQL Server-Windows](https://www.microsoft.com/download/details.aspx?id=36434)합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client의 OLE DB 공급자는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client에서 마지막으로 업데이트되었습니다. OLE DB 공급자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 최신 버전에 연결하려는 개발자는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client에서 제공되는 OLE DB 공급자를 사용해야 합니다.  
   
@@ -38,13 +38,13 @@ ms.locfileid: "48144523"
   
  또한 이제 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client의 ODBC에서는 Windows 7 SDK의 표준 ODBC에 추가된 다음과 같은 3가지 기능을 지원합니다.  
   
--   연결 관련 작업에 대한 비동기 실행. 자세한 내용은 [비동기 실행](http://go.microsoft.com/fwlink/?LinkID=191493)합니다.  
+-   연결 관련 작업에 대한 비동기 실행. 자세한 내용은 [비동기 실행](https://go.microsoft.com/fwlink/?LinkID=191493)합니다.  
   
--   C 데이터 형식 확장성. 자세한 내용은 [odbc에서 C 데이터 형식](http://go.microsoft.com/fwlink/?LinkID=191495)합니다.  
+-   C 데이터 형식 확장성. 자세한 내용은 [odbc에서 C 데이터 형식](https://go.microsoft.com/fwlink/?LinkID=191495)합니다.  
   
      이 기능을 지원 하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client SQLGetDescField 반환할 수 있습니다 `SQL_C_SS_TIME2` (에 대 한 `time` 형식) 또는 `SQL_C_SS_TIMESTAMPOFFSET` (에 대 한 `datetimeoffset`) 대신 `SQL_C_BINARY`응용 프로그램에서 ODBC 3.8을 사용 하는 경우. 자세한 내용은 [ODBC 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](features/date-and-time-improvements.md)합니다.  
   
--   큰 매개 변수 값을 검색하기 위해 작은 버퍼로 여러 번 `SQLGetData` 호출. 자세한 내용은 [SQLGetData를 사용 하 여 출력 매개 변수 검색](http://go.microsoft.com/fwlink/?LinkID=191494)합니다.  
+-   큰 매개 변수 값을 검색하기 위해 작은 버퍼로 여러 번 `SQLGetData` 호출. 자세한 내용은 [SQLGetData를 사용 하 여 출력 매개 변수 검색](https://go.microsoft.com/fwlink/?LinkID=191494)합니다.  
   
  다음 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서의 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client 동작 변경에 대해 설명합니다.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "48144523"
   
 -   [문자 변환을 처리 시 ODBC 드라이버 동작 변경](features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Native Client 기능](features/sql-server-native-client-features.md)  
   
   

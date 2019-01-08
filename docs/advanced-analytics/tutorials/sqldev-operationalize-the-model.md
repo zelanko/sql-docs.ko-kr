@@ -1,30 +1,30 @@
 ---
-title: R 모델 (SQL Server Machine Learning)를 사용 하 여 4 개의 예측 가능한 결과 단원 | Microsoft Docs
+title: R 모델-SQL Server Machine Learning을 사용 하 여 4 단원 예측 가능한 결과
 description: SQL Server에 포함 된 R 스크립트를 운영 하는 방법을 보여 주는 자습서 저장 프로시저 T-SQL 함수를 사용 하 여
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/30/2018
+ms.date: 11/16/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8485cd4e24e067cf6a4e6feef0c39c3c3051a166
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 2b22d971764be99c5542c7cd8615c11ebb3e6cba
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032540"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644783"
 ---
-# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>4 단원: 저장된 프로시저에 포함 된 R을 사용 하 여 실행 예측
+# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>4단원: 저장된 프로시저에 포함 된 R을 사용 하 여 예측을 실행 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 SQL Server에서 R을 사용 하는 방법에 대 한 SQL 개발자를 위한 자습서의 일부입니다.
 
 이 단계에서는 새 관찰에 대해 모델을 사용 하 여 잠재적인 결과 예측 하 배웁니다. 모델은 다른 응용 프로그램에서 직접 호출할 수 있는 저장된 프로시저에 래핑됩니다. 이 연습에서는 점수 매기기를 수행 하는 여러 방법을 보여 줍니다.
 
-- **일괄 처리 점수 매기기 모드**: 저장 프로시저에 대한 입력으로 SELECT 조회를 사용하십시오.  저장 프로시저는 입력된 사례(case)에 해당하는 관측 표를 반환합니다.
+- **일괄 처리 점수 매기기 모드**: 저장된 프로시저에 대 한 입력으로 선택 쿼리를 사용 합니다. 저장 프로시저는 입력된 사례(case)에 해당하는 관측 표를 반환합니다.
 
-- **개별 점수 매기기 모드**: 개별 매개 변수 값 집합을 입력으로 전달합니다.  저장 프로시저에서 단일 행 또는 값을 반환합니다.
+- **개별 점수 매기기 모드**: 개별 매개 변수 값 집합을 입력으로 전달 합니다.  저장 프로시저에서 단일 행 또는 값을 반환합니다.
 
 먼저 점수 매기기의 일반적인 작동 방식을 살펴보겠습니다.
 
@@ -32,12 +32,12 @@ ms.locfileid: "51032540"
 
 저장된 프로시저 **RxPredict** 저장된 프로시저에서 RevoScaleR rxPredict 호출을 래핑하는 기본 구문을 보여 줍니다.
 
-```SQL
-CREATE PROCEDURE [dbo].[RxPredict] @inquery nvarchar(max) 
+```sql
+CREATE PROCEDURE [dbo].[RxPredict] (@model varchar(250), @inquery nvarchar(max))
 AS 
 BEGIN 
-  
-DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);  
+
+DECLARE @lmodel2 varbinary(max) = (SELECT model FROM nyc_taxi_models WHERE name = @model);  
 EXEC sp_execute_external_script @language = N'R',
   @script = N' 
     mod <- unserialize(as.raw(model)); 
@@ -70,7 +70,7 @@ GO
 
 1.  입력된 데이터를 사용 하 여 작동 한 정하여를 가져와서 시작 합니다. 이 쿼리는 승객 수 및 예측을 수행하는 데 필요한 다른 특성과 함께 "상위 10개"의 여정 목록을 만듭니다.
   
-    ```SQL
+    ```sql
     SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance
     
     FROM (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample)a
@@ -86,7 +86,7 @@ GO
 
     **샘플 결과**
     
-    ```
+    ```sql
     passenger_count   trip_time_in_secs    trip_distance  dropoff_datetime   direct_distance
     1  283 0.7 2013-03-27 14:54:50.000   0.5427964547
     1  289 0.7 2013-02-24 12:55:29.000   0.3797099614
@@ -95,12 +95,11 @@ GO
 
 2. 호출할 저장된 프로시저를 만듭니다 **RxPredictBatchOutput** 에서 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다.
 
-    ```SQL
-    /****** Object:  StoredProcedure [dbo].[RxPredictBatchOutput]  ******/
-    CREATE PROCEDURE [dbo].[RxPredictBatchOutput] @inquery nvarchar(max)
+    ```sql
+    CREATE PROCEDURE [dbo].[RxPredictBatchOutput] (@model varchar(250), @inquery nvarchar(max))
     AS
     BEGIN
-    DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
+    DECLARE @lmodel2 varbinary(max) = (SELECT model FROM nyc_taxi_models WHERE name = @model);
     EXEC sp_execute_external_script 
       @language = N'R',
       @script = N'
@@ -119,13 +118,13 @@ GO
 
 3.  변수에 쿼리 텍스트를 입력하고 저장 프로시저에 매개변수로 전달합니다.
 
-    ```SQL
+    ```sql
     -- Define the input data
     DECLARE @query_string nvarchar(max)
     SET @query_string='SELECT TOP 10 a.passenger_count as passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance FROM  (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample  )a   LEFT OUTER JOIN (SELECT medallion, hack_license, pickup_datetime FROM nyctaxi_sample TABLESAMPLE (70 percent) REPEATABLE (98052))b ON a.medallion=b.medallion AND a.hack_license=b.hack_license AND a.pickup_datetime=b.pickup_datetime WHERE b.medallion is null'
-
+    
     -- Call the stored procedure for scoring and pass the input data
-    EXEC [dbo].[RxPredictBatchOutput] @inquery = @query_string;
+    EXEC [dbo].[RxPredictBatchOutput] @model = 'RxTrainLogit_model', @inquery = @query_string;
     ```
   
 저장 프로시저는 상위 10개 여정 각각에 대한 예측을 나타내는 일련의 값을 반환합니다. 그러나, 상위 여정은 운전자가 팁을 얻지 못할 수도 있는 비교적 여행 거리가 짧은 단일 승객 여행이기도 합니다.
@@ -145,12 +144,12 @@ GO
 
 1. 저장된 프로시저를 만듭니다 **RxPredictSingleRow**합니다.
   
-    ```SQL
-    CREATE PROCEDURE [dbo].[RxPredictSingleRow] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
+    ```sql
+    CREATE PROCEDURE [dbo].[RxPredictSingleRow] @model varchar(50), @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
     AS
     BEGIN
     DECLARE @inquery nvarchar(max) = N'SELECT * FROM [dbo].[fnEngineerFeatures](@passenger_count, @trip_distance, @trip_time_in_secs,  @pickup_latitude, @pickup_longitude, @dropoff_latitude, @dropoff_longitude)';
-    DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
+    DECLARE @lmodel2 varbinary(max) = (SELECT model FROM nyc_taxi_models WHERE name = @model);
     EXEC sp_execute_external_script  
       @language = N'R',
       @script = N'  
@@ -170,20 +169,21 @@ GO
   
     새 **쿼리** 창을 열고 저장 프로시저를 호출하여 각 매개변수의 값을 제공합니다.  매개변수는 모델에서 사용하는 특성 열을 나타내며 필수 항목입니다.
 
-    ```
-    EXEC [dbo].[RxPredictSingleRow] @passenger_count = 0,
+    ```sql
+    EXEC [dbo].[RxPredictSingleRow] @model = 'RxTrainLogit_model',
+    @passenger_count = 1,
     @trip_distance = 2.5,
     @trip_time_in_secs = 631,
     @pickup_latitude = 40.763958,
     @pickup_longitude = -73.973373,
     @dropoff_latitude =  40.782139,
-    @dropoff_longitude = 73.977303
+    @dropoff_longitude = -73.977303
     ```
 
     또는 [저장 프로시저 매개변수](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters)에서 지원되는 짧은 형식을 사용하십시오.
   
-    ```SQL
-    EXEC [dbo].[PredictRxMultipleInputs] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+    ```sql
+    EXEC [dbo].[RxPredictSingleRow] 'RxTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 3. 결과 임을 팁을 받을 확률이 낮은 (영) 이러한 상위 10 개의 여정에서 비교적 짧은 거리에 따라 단일 승객 여정 모두 때문입니다.
@@ -194,4 +194,4 @@ GO
 
 ## <a name="previous-lesson"></a>이전 단원
 
-[3 단원: 학습 및 T-SQL을 사용 하 여 R 모델 저장](sqldev-train-and-save-a-model-using-t-sql.md)
+[3 단원: 학습 및 T-SQL을 사용 하 여 R 모델을 저장 합니다.](sqldev-train-and-save-a-model-using-t-sql.md)

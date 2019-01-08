@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3d961edcab2527cf31342209286bee4c9b51c854
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4ff7e5568ee16f1b7efa5429fd93d2279b43549
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164843"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372595"
 ---
 # <a name="microsoft-connector-11-for-sap-bw"></a>Microsoft Connector 1.1 for SAP BW
   SAP BW용 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1은 SAP Netweaver BW 버전 7 시스템에서 데이터를 추출하거나 해당 시스템으로 데이터를 로드할 수 있도록 지원하는 3가지 구성 요소 집합으로 구성됩니다.  
@@ -30,13 +29,13 @@ ms.locfileid: "48164843"
 ## <a name="components"></a>구성 요소  
  SAP BW용 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1은 다음 구성 요소가 포함됩니다.  
   
--   **SAP BW 원본**- SAP BW 원본은 SAP Netweaver BW 버전 7 시스템에서 데이터를 추출할 수 있도록 지원하는 데이터 흐름 원본 구성 요소입니다.  
+-   **SAP BW 원본** - SAP BW 원본은 SAP Netweaver BW 버전 7 시스템에서 데이터를 추출할 수 있도록 지원하는 데이터 흐름 원본 구성 요소입니다.  
   
--   **SAP BW 대상**- SAP BW 대상은 SAP Netweaver BW 버전 7 시스템으로 데이터를 로드할 수 있도록 지원하는 데이터 흐름 대상 구성 요소입니다.  
+-   **SAP BW 대상** - SAP BW 대상은 SAP Netweaver BW 버전 7 시스템으로 데이터를 로드할 수 있도록 지원하는 데이터 흐름 대상 구성 요소입니다.  
   
--   **SAP BW 연결 관리자**- SAP BW 연결 관리자는 SAP BW 원본 또는 SAP BW 대상을 SAP Netweaver BW 버전 7 시스템으로 연결합니다.  
+-   **SAP BW 연결 관리자** - SAP BW 연결 관리자는 SAP BW 원본 또는 SAP BW 대상을 SAP Netweaver BW 버전 7 시스템으로 연결합니다.  
   
- SAP BW 연결 관리자, 원본 및 대상을 구성하고 사용하는 방법을 제시하는 연습은 [SAP BI 7.0에서 SQL Server Integration Services 사용](http://go.microsoft.com/fwlink/?LinkId=301897)백서를 참조하십시오. 또한 이 백서는 SAP BW에 필요한 개체를 구성하는 방법을 보여 줍니다.  
+ SAP BW 연결 관리자, 원본 및 대상을 구성하고 사용하는 방법을 제시하는 연습은 [SAP BI 7.0에서 SQL Server Integration Services 사용](https://go.microsoft.com/fwlink/?LinkId=301897)백서를 참조하십시오. 또한 이 백서는 SAP BW에 필요한 개체를 구성하는 방법을 보여 줍니다.  
   
 ## <a name="documentation"></a>설명서  
  SAP BW용 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1에 대한 도움말 파일에는 다음 항목과 섹션이 포함되어 있습니다.  

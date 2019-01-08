@@ -1,6 +1,6 @@
 ---
-title: SQL Server Machine Learning Services 하도록 사용자 권한 부여 | Microsoft Docs
-description: SQL Server Machine Learning Services 하도록 사용자 권한 부여 방법입니다.
+title: R 및 Python 스크립트 실행-SQL Server Machine Learning Services에 대 한 Grant 데이터베이스 사용 권한
+description: SQL Server Machine Learning Services에서 R 및 Python 스크립트 실행에 대 한 데이터베이스 사용자 권한을 부여 하는 방법입니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 07268386ad66350eed7f1382348fa4d698863600
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: e281f1712163aeee1846565458c2b037077c8588
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419068"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644842"
 ---
 # <a name="give-users-permission-to-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services 하도록 사용자 권한 부여
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "49419068"
 
 그러나 대부분의 사용자가 이러한 권한 없습니다. 예를 들어 SQL 로그인을 사용 하 여 일반적으로 데이터베이스에 액세스 하는 조직에서 사용자에는 관리자 권한이 없습니다. 따라서 R 또는 Python을 사용 하는 각 사용자에 대 한 권한을 부여 해야 Machine Learning Services의 사용자는 언어를 사용 하는 각 데이터베이스에서 외부 스크립트를 실행 합니다. 다음은 어떻게:
 
-```SQL
+```sql
 USE <database_name>
 GO
 GRANT EXECUTE ANY EXTERNAL SCRIPT TO [UserName]
@@ -49,7 +49,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO [UserName]
 
 다음 예를 들어 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 SQL 로그인을 제공 *MySQLLogin* T-SQL 쿼리를 실행할 수 있는 권한을 합니다 *ML_Samples* 데이터베이스. 이 문을 실행하려면 SQL 로그인이 서버의 보안 컨텍스트에 이미 있어야 합니다.
 
-```SQL
+```sql
 USE ML_Samples
 GO
 EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'

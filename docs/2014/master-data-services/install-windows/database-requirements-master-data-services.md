@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f230705afab21f6e2b4090d5576dd786714a8d0f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 9d790a9308ab185a8beadfc1af9bbb4c9583148e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201813"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785845"
 ---
 # <a name="database-requirements-master-data-services"></a>데이터베이스 요구 사항(MDS(Master Data Services))
   모든 마스터 데이터는 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스에 저장됩니다. 이 데이터베이스를 호스팅하는 컴퓨터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 인스턴스를 실행해야 합니다.  
@@ -64,7 +63,7 @@ ms.locfileid: "48201813"
  매일 작업량이 적은 시간에 전체 데이터베이스를 백업하고 사용자 환경의 요구 사항에 따라 트랜잭션 로그를 보다 자주 백업하는 것이 가장 좋습니다. 데이터베이스 백업에 대한 자세한 내용은 [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [Master Data Services 설치](install-master-data-services.md)   
+ [MDS(Master Data Services) 설치](install-master-data-services.md)   
  [Master Data Services 데이터베이스 만들기](create-a-master-data-services-database.md)   
  [Master Data Services 데이터베이스](../master-data-services-database.md)   
  [Master Data Services 데이터베이스에 연결 대화 상자](../connect-to-a-master-data-services-database-dialog-box.md)   

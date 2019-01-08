@@ -12,12 +12,12 @@ ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 374ba32b5cc79a503333b691b4708921f507004a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7fa2edb4437b2d97a5a78da609838c6fcaaadda3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182773"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353578"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>전체 텍스트 카탈로그 속성(일반 페이지)
   이 섹션에서는 **전체 텍스트 카탈로그 속성** 대화 상자의 **일반** 페이지에서 사용할 수 있는 옵션과 기능을 보여 줍니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "48182773"
   
 -   **인덱스 작성 중**  
   
--   **디스크가 꽉-일시 중지 됨**  
+-   **디스크는 전체 일시 중지**  
   
 -   **Change tracking**  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48182773"
   
 -   **예**  
   
--   분음 기호에 대한 자세한 내용은 MSN Encarta Encyclopeida의 [분음 기호(Diacritical Mark)](http://go.microsoft.com/fwlink/?LinkId=154091) 를 참조하십시오.  
+-   분음 기호에 대한 자세한 내용은 MSN Encarta Encyclopeida의 [분음 기호(Diacritical Mark)](https://go.microsoft.com/fwlink/?LinkId=154091) 를 참조하십시오.  
   
  **마지막 채우기 날짜**  
  마지막으로 카탈로그를 채운 날짜를 표시합니다.  

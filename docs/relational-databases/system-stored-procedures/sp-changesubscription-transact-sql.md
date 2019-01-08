@@ -5,8 +5,7 @@ ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - changesubscription
@@ -19,12 +18,12 @@ ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91c3b60aedb42c6d249920cb42da021c474faf5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a293be4b745f30f4ee4a9bff6226e4e2ef80676f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640711"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209842"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,22 +49,22 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication**=] **'***게시***'**  
+ [ **@publication**=] **'**_게시_**'**  
  변경할 게시의 이름입니다. *게시*됩니다 **sysname**, 기본값은 없습니다  
   
- [ **@article** =] **'***문서***'**  
+ [ **@article** =] **'**_문서_**'**  
  변경할 아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@subscriber** =] **'***구독자***'**  
+ [ **@subscriber** =] **'**_구독자_**'**  
  구독자의 이름입니다. *구독자* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@destination_db** =] **'***destination_db***'**  
+ [ **@destination_db** =] **'**_destination_db_**'**  
  구독 데이터베이스의 이름입니다. *destination_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@property=**] **'***속성***'**  
+ [  **@property=**] **'**_속성_**'**  
  지정된 구독에 대해 변경할 속성입니다. *속성* 됩니다 **nvarchar(30)**, 테이블의 값 중 하나일 수 있습니다.  
   
- [  **@value=**] **'***값***'**  
+ [  **@value=**] **'**_값_**'**  
  지정 된 새 값입니다 *속성*합니다. *값* 됩니다 **nvarchar(4000)**, 테이블의 값 중 하나일 수 있습니다.  
   
 |속성|값|Description|  
@@ -86,8 +85,8 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**3**|OLE DB 공급자|  
 |**메모리 액세스에 최적화**|**bit**|구독 메모리 액세스에 최적화 된 테이블을 지원함을 나타냅니다. *memory_optimized* 됩니다 **비트**, 1 (구독 메모리 액세스에 최적화 된 테이블에서 지원) true와 같습니다.|  
   
- [  **@publisher =** ] **'***게시자***'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외의 게시자를 지정합니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+ [  **@publisher =** ] **'**_게시자_**'**  
+ 지정 된 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *게시자* 에 대해 지정할 수 없습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  

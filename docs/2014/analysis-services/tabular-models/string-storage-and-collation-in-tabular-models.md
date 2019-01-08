@@ -11,12 +11,12 @@ ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f8b451134d621c8f151fa43ec4214317ab087918
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: c9bc74d7ac6c1e3fb826e2a1b3ebdc0122fd2720
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072737"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353773"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>테이블 형식 모델의 문자열 저장소 및 데이터 정렬
   테이블 형식 모델에서 문자열(텍스트 값)은 고도로 압축된 형식으로 저장되며, 이러한 압축으로 인해 전체 또는 부분 문자열을 검색할 때 예기치 않은 결과를 얻게 될 수 있습니다. 또한 문자열 로캘 및 데이터 정렬은 가장 가까운 부모 개체에서 계층적으로 상속되므로 문자열 언어가 명시적으로 정의되어 있지 않은 경우 각 문자열이 저장되는 방식과 문자열이 고유한지 아니면 부모 데이터 정렬에 의해 정의된 유사 문자열과 혼합되는지는 부모의 로캘 및 데이터 정렬에 따라 달라질 수 있습니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "48072737"
 |trEE|  
 |PlAnT|  
   
- 모델에서 **Classification – English**열을 사용할 경우 식물 분류를 표시할 때는 항상 대/소문자의 사용이 다양한 원래 값이 아니라 첫 번째 인스턴스만 표시됩니다. 이 데이터 정렬 및 로캘에서는 **tree** 의 대문자 및 소문자 변형이 모두 동일한 것으로 간주되기 때문입니다. 따라서 한 문자열만 보관되며 시스템에서 발견한 첫 번째 문자열 인스턴스가 저장 인스턴스가 됩니다.  
+ 열을 사용 하는 경우 **Classification-English**, 모델 식물 분류를 표시할 때는 항상 나타납니다의 다양 한 용도 및 소문자 하지만 첫 번째 인스턴스만 사용 하 여 원래 값 없습니다. 이 데이터 정렬 및 로캘에서는 **tree** 의 대문자 및 소문자 변형이 모두 동일한 것으로 간주되기 때문입니다. 따라서 한 문자열만 보관되며 시스템에서 발견한 첫 번째 문자열 인스턴스가 저장 인스턴스가 됩니다.  
   
 > [!WARNING]  
 >  사용자가 판단하는 올바른 형태에 따라 첫 번째로 저장할 문자열을 정의할 수도 있지만 이 과정은 매우 어려울 수 있습니다. 모든 값이 동일한 것으로 간주될 경우 엔진에서 처음 처리될 행을 미리 결정할 수 있는 간단한 방법은 없습니다. 대신 표준 값을 설정해야 하는 경우에는 모델을 로드하기 전에 모든 문자열을 정리해야 합니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "48072737"
   
 -   데이터 정렬은 문자 순서와 문자 일치성을 정의합니다.  
   
- 언어 식별자는 언어를 식별할 뿐 아니라 해당 언어가 사용되는 국가 또는 지역도 식별한다는 점에 주의해야 합니다. 각 언어 식별자에는 기본 데이터 정렬도 지정되어 있습니다. 언어 식별자에 자세한 내용은 [Microsoft에서 할당한 로캘 ID](http://msdn.microsoft.com/goglobal/bb964664.aspx)를 참조하십시오. 수동으로 값을 삽입할 때는 10진수 LCID 열에서 올바른 ID를 확인할 수 있습니다. SQL의 데이터 정렬 개념에 대한 자세한 내용은 [COLLATE&#40;Transact-SQL&#41;](/sql/t-sql/statements/collations)를 참조하세요. 데이터 정렬 지정자 및 Windows 데이터 정렬 이름의 비교 스타일에 대한 자세한 내용은 [Windows 데이터 정렬 이름&#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql)을 참조하세요. [SQL Server 데이터 정렬 이름&#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql) 항목에서는 Windows 데이터 정렬 이름을 SQL에 사용되는 이름에 매핑합니다.  
+ 언어 식별자는 언어를 식별할 뿐 아니라 해당 언어가 사용되는 국가 또는 지역도 식별한다는 점에 주의해야 합니다. 각 언어 식별자에는 기본 데이터 정렬도 지정되어 있습니다. 언어 식별자에 자세한 내용은 [Microsoft에서 할당한 로캘 ID](https://msdn.microsoft.com/goglobal/bb964664.aspx)를 참조하십시오. 수동으로 값을 삽입할 때는 10진수 LCID 열에서 올바른 ID를 확인할 수 있습니다. SQL의 데이터 정렬 개념에 대한 자세한 내용은 [COLLATE&#40;Transact-SQL&#41;](/sql/t-sql/statements/collations)를 참조하세요. 데이터 정렬 지정자 및 Windows 데이터 정렬 이름의 비교 스타일에 대한 자세한 내용은 [Windows 데이터 정렬 이름&#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql)을 참조하세요. [SQL Server 데이터 정렬 이름&#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql) 항목에서는 Windows 데이터 정렬 이름을 SQL에 사용되는 이름에 매핑합니다.  
   
  테이블 형식 model 데이터베이스를 만든 후 모델의 모든 새 개체는 데이터베이스 특성에서 언어 및 데이터 정렬 특성을 상속합니다. 이는 모든 개체에 대해 적용됩니다. 상속 경로는 개체에서 시작되어, 부모에서 상속할 언어 및 데이터 정렬 특성을 확인하고, 특성을 찾을 수 없는 경우 최상위 수준까지 계속 진행하여 데이터베이스 수준에서 언어 및 데이터 정렬 특성을 찾는 방식으로 진행됩니다. 즉, 개체의 언어 및 데이터 정렬 특성을 지정하지 않을 경우 기본적으로 개체는 가장 가까운 부모의 특성을 상속합니다.  
   

@@ -20,12 +20,12 @@ ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e911f31751ed0ef2d6fedb17c1b79affde79eef3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 400b7ca37d5eef130df855b3519079e2ccc8799e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166163"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376125"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>숫자 및 날짜 서식 지정(보고서 작성기 및 SSRS)
   해당 데이터 영역 **속성** 대화 상자의 **숫자** 페이지에서 형식을 선택하여 데이터 영역에 있는 숫자와 날짜의 형식을 지정할 수 있습니다.  
@@ -47,21 +47,21 @@ ms.locfileid: "48166163"
   
 -   기본적으로 클라이언트 컴퓨터의 culture 설정에 따라 숫자 형식이 지정됩니다. 형식 문자열을 사용하여 숫자 표시 방법을 지정하면 보고서를 보는 사람의 위치에 관계 없이 일관된 형식으로 숫자를 표시할 수 있습니다.  
   
--   **숫자** 페이지에서 제공되는 형식은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 표준 숫자 형식 문자열의 일부입니다. 대화 상자에 표시되지 않는 사용자 지정 형식을 사용하여 숫자나 날짜에 형식을 지정하려는 경우에는 숫자 또는 날짜에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 형식 문자열을 사용할 수 있습니다. 사용자 지정 형식 문자열에 대한 자세한 내용은 MSDN에서 [형식 지정](http://go.microsoft.com/fwlink/?LinkId=112024) 항목을 참조하십시오.  
+-   **숫자** 페이지에서 제공되는 형식은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 표준 숫자 형식 문자열의 일부입니다. 대화 상자에 표시되지 않는 사용자 지정 형식을 사용하여 숫자나 날짜에 형식을 지정하려는 경우에는 숫자 또는 날짜에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 형식 문자열을 사용할 수 있습니다. 사용자 지정 형식 문자열에 대한 자세한 내용은 MSDN에서 [형식 지정](https://go.microsoft.com/fwlink/?LinkId=112024) 항목을 참조하십시오.  
   
 -   사용자 지정 형식 문자열을 지정하면 culture별 기본 설정보다 높은 우선 순위를 가집니다. 예를 들어 숫자 1234를 1,234로 표시하기 위한 사용자 지정 형식 문자열인 "#,###"를 설정했다고 가정하겠습니다. 미국의 사용자와 유럽의 사용자는 이 형식 문자열을 다르게 해석할 수 있습니다. 사용자 지정 형식을 지정하기 전에, 선택한 형식이 해당 보고서를 보게 될 다른 culture의 사용자에게 어떤 영향을 줄지에 대해 고려하십시오.  
   
 -   잘못된 형식 문자열을 지정하면 형식 지정된 텍스트는 형식 지정을 무시하는 리터럴 문자열로 해석됩니다.  
   
--   같은 입력란에 함께 포함된 숫자와 문자의 형식을 지정할 때는 숫자를 나머지 텍스트와 구분하기 위해 자리 표시자를 사용하는 것을 고려하십시오. 자세한 내용은 [텍스트 및 자리 표시자 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)을 참조하세요. 입력란의 Format 속성에 잘못된 형식 문자열을 지정하면 형식 문자열이 무시됩니다. 차트나 계기의 Format 속성에 잘못된 형식 문자열을 지정하면 지정한 형식 문자열은 문자열로 해석되고 형식이 적용되지 않습니다.  
+-   같은 입력란에 함께 포함된 숫자와 문자의 형식을 지정할 때는 숫자를 나머지 텍스트와 구분하기 위해 자리 표시자를 사용하는 것을 고려하십시오. 자세한 내용은 [텍스트 및 자리 표시자 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)를 클릭합니다. 입력란의 Format 속성에 잘못된 형식 문자열을 지정하면 형식 문자열이 무시됩니다. 차트나 계기의 Format 속성에 잘못된 형식 문자열을 지정하면 지정한 형식 문자열은 문자열로 해석되고 형식이 적용되지 않습니다.  
   
 -   **범주** 에서 **통화** 를 선택하고 **값 표시 단위**를 선택한 경우 재무 형식을 사용하여 숫자를 표시하는 단위로 **천**, **백만**또는 **10억** 을 선택할 수 있습니다. 예를 들어 필드 값이 1,789,905,394인 경우 값 표시 단위로 **10억** 을 선택하고 소수 자릿수를 두 자리로 지정하면 보고서에는 1.78이 값으로 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [텍스트 및 자리 표시자 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>관련 항목:  
+ [텍스트 및 자리 표시자 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [선, 색 및 이미지 서식 지정&#40;보고서 작성기 및 SSRS&#41;](images-report-builder-and-ssrs.md)   
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [축 레이블의 서식을 날짜 또는 통화로 지정&#40;보고서 작성기 및 SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [계기의 눈금 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [계기의 눈금 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

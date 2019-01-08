@@ -10,12 +10,12 @@ ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 396f26f617ec64aa1d2c46f4c4b600a824a2f278
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 201ccae98886e5126eb347c10d16985cbeeddffe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018938"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354939"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>SysPrep을 사용하여 SQL Server 설치 시 고려 사항
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep을 사용하여 컴퓨터에 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 준비하고 나중에 구성을 완료할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep은 두 단계로 된 과정을 통해 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 구성합니다. 단계는 다음과 같습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "51018938"
   
 -   Windows 시스템 준비 도구(또는 Windows SysPrep)와 함께 사용하면 구성되지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스를 포함하여 원본 컴퓨터에서 운영 체제 이미지를 만들 수 있습니다. 그런 다음 이 운영 체제 이미지를 여러 컴퓨터에 배포할 수 있습니다. 운영 체제 구성을 완료한 후에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 이미지 완료 단계를 사용하여 준비 인스턴스를 구성할 수 있습니다.  
   
-     Windows SysPrep 도구는 Windows 운영 체제 이미지를 준비하는 데 사용됩니다. 이 도구는 조직에 배포할 운영 체제의 사용자 지정 이미지를 캡처하는 데 사용됩니다. SysPrep 및 그 사용법에 대한 자세한 내용은 [Sysprep이란?](http://go.microsoft.com/fwlink/?LinkId=143546)을 참조하십시오.  
+     Windows SysPrep 도구는 Windows 운영 체제 이미지를 준비하는 데 사용됩니다. 이 도구는 조직에 배포할 운영 체제의 사용자 지정 이미지를 캡처하는 데 사용됩니다. SysPrep 및 그 사용법에 대한 자세한 내용은 [Sysprep이란?](https://go.microsoft.com/fwlink/?LinkId=143546)을 참조하십시오.  
   
 ## <a name="installation-media-considerations"></a>설치 미디어 고려 사항  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]전체 버전을 사용하는 경우 다음 사항을 고려하십시오.  

@@ -11,23 +11,23 @@ ms.assetid: c2372180-e847-4cdb-b267-4befac3faf7e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a9a260261a2078ac732c9b3eba2b0c1a9f335cf4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc17daefbe5e84522fdc46ddf046403260ebf4e3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165889"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367855"
 ---
 # <a name="install-adomdnet-on-web-front-end-servers-running-central-administration"></a>중앙 관리를 실행하는 웹 프런트 엔드 서버에 ADOMD.NET 설치
   Excel Services 또는 SharePoint용 PowerPivot이 없는 중앙 관리의 토폴로지가 포함된 팜에 SharePoint용 PowerPivot을 설치하는 경우, PowerPivot 관리 대시보드의 모든 기본 제공 보고서에 액세스하려면 Microsoft ADOMD.NET 클라이언트 라이브러리를 다운로드하여 설치합니다. 대시보드의 일부 보고서는 ADOMD.NET을 사용하여 팜의 PowerPivot 쿼리 처리 및 서버 상태에 대한 보고 데이터를 제공하는 내부 데이터에 액세스합니다.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010  
   
- SharePoint 2013의 경우 공급자가 SQL Server 기능 팩에 포함되어 있습니다. spPowerPivot.msi를 다운로드하는 방법에 대한 자세한 내용은 [Microsoft SQL Server 2014 기능 팩](http://www.microsoft.com/download/details.aspx?id=35577)을 참조하십시오.  
+ SharePoint 2013의 경우 공급자가 SQL Server 기능 팩에 포함되어 있습니다. spPowerPivot.msi를 다운로드하는 방법에 대한 자세한 내용은 [Microsoft SQL Server 2014 기능 팩](https://www.microsoft.com/download/details.aspx?id=35577)을 참조하십시오.  
   
 ### <a name="download-and-install-the-client-library"></a>클라이언트 라이브러리 다운로드 및 설치  
   
-1.  [SQL Server 2014 기능 팩 페이지](http://go.microsoft.com/fwlink/?LinkID=296473)에서 Microsoft ADOMD.NET을 찾습니다.  
+1.  [SQL Server 2014 기능 팩 페이지](https://go.microsoft.com/fwlink/?LinkID=296473)에서 Microsoft ADOMD.NET을 찾습니다.  
   
 2.  `SQL_AS_ADOMD.msi` 설치 프로그램의 x64 패키지를 다운로드합니다.  
   

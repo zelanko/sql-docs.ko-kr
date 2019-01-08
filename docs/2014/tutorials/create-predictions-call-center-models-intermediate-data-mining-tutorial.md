@@ -11,12 +11,12 @@ ms.assetid: 5be0cec7-f639-4eeb-835e-e3204ae619e9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ebaafa4b25c4bd4847af24a36462e15d04d7774a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 792e3e8eb7e27f41aa03523d93dba02379213a17
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148003"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372975"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>콜 센터 모델에 대한 예측 만들기(중급 데이터 마이닝 자습서)
   교대조, 전화 상담원 수, 호출 및 서비스 등급에 대한 몇 가지 사항을 배웠으므로 이제 비즈니스 분석 및 계획에 사용할 수 있는 일부 예측 쿼리를 만들 준비가 되었습니다. 먼저 탐구 모델에서 일부 예측을 만들어 몇 가지 가정을 테스트합니다. 다음으로 로지스틱 회귀 모델을 사용하여 대량 예측을 만듭니다.  
@@ -184,19 +184,19 @@ ms.locfileid: "48148003"
 ## <a name="remarks"></a>Remarks  
  Excel 2007용 데이터 마이닝 추가 기능에서는 로지스틱 회귀 마법사를 제공하기 때문에 서비스 등급을 특정 교대조에 대한 대상 수준으로 개선하는 데 필요한 두 번째 수준의 전화 상담원의 수와 같은 복잡한 질문에 보다 쉽게 대답할 수 있습니다. 데이터 마이닝 추가 기능은 무료로 다운로드할 수 있으며 신경망 또는 로지스틱 회귀 알고리즘을 기반으로 하는 마법사를 포함합니다. 자세한 내용은 다음 링크를 참조하십시오.  
   
--   [SQL Server 2005 데이터 마이닝 추가 기능 Office 2007 용](http://www.microsoft.com/sql/technologies/dm/addins.mspx): 목표 검색 및 가상 시나리오 분석  
+-   [SQL Server 2005 데이터 마이닝 추가 기능 Office 2007 용](https://www.microsoft.com/sql/technologies/dm/addins.mspx): 목표 검색 및 가상 시나리오 분석  
   
--   [SQL Server 2008 데이터 마이닝 추가 기능 Office 2007 용](http://go.microsoft.com/fwlink/?LinkID=117790): 목표 검색 시나리오 분석 가상 시나리오 분석 및 예측 계산기  
+-   [SQL Server 2008 데이터 마이닝 추가 기능 Office 2007 용](https://go.microsoft.com/fwlink/?LinkID=117790): 목표 검색 시나리오 분석, 가상 시나리오 분석 및 예측 계산기  
   
 ## <a name="conclusion"></a>결론  
  이 단원에서는 Microsoft 신경망 알고리즘 및 Microsoft 로지스틱 회귀 알고리즘을 기반으로 하는 마이닝 모델을 생성, 사용자 지정 및 해석하는 방법을 배웠습니다. 이러한 모델 유형은 복잡하고 거의 제한 없이 다양하게 분석될 수 있으므로 복잡하고 마스터하기가 어렵습니다.  
   
  그러나 이러한 알고리즘은 요인의 여러 조합을 통해 반복을 수행하고 가장 강력한 상관 관계를 자동으로 식별할 수 있습니다. 이를 통해 Transact-SQL이나 PowerPivot을 사용한 데이터의 수동 탐색을 통해서는 발견하기가 매우 어려운 통찰력에 대한 통계학적 지원을 제공합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [로지스틱 회귀 모델 쿼리 예제](../../2014/analysis-services/data-mining/logistic-regression-model-query-examples.md)   
  [Microsoft 로지스틱 회귀 알고리즘](../../2014/analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
- [Microsoft 신경망 알고리즘](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [신경망 모델 쿼리 예제](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

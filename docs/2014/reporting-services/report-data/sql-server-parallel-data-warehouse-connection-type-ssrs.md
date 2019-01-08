@@ -11,23 +11,23 @@ ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a65bd852ade2375a36a9a9b1e11a7009684a3621
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 671f574f81bdceb35c1ee235f8ae545b5ae60296
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226683"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372835"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server 병렬 데이터 웨어하우스 연결 형식(SSRS)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] 방대한 병렬 처리를 통해 성능 및 확장성을 제공 하는 확장성이 뛰어난 데이터 웨어하우스 어플라이언스입니다. [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 사용 하 여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 분산된 처리 및 데이터 저장소에 대 한 데이터베이스입니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] 는 방대한 병렬 처리를 통해 성능 및 확장성을 제공하는 확장 가능한 데이터 웨어하우스 어플라이언스입니다. [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 는 분산 처리 및 데이터 저장을 위해 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 데이터베이스를 사용합니다.  
   
  이 어플라이언스는 고유한 인스턴스의 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 실행하는 각 노드로 구성된 여러 물리적 노드에서 큰 데이터베이스 테이블을 분할합니다. 보고서는 보고서 데이터를 검색하기 위해 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 에 연결될 때 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 어플라이언스에서 쿼리 처리를 관리하는 제어 노드에 연결됩니다. 연결이 설정되면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 환경이 아니더라도 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 인스턴스를 사용할 때와 아무런 차이가 없습니다.  
   
- 데이터를 포함 하려면 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 유형의 보고서 데이터 원본을 기반으로 하는 데이터 집합이 보고서에 해야 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 병렬 데이터 웨어하우스. 이 기본 제공 데이터 원본 유형을 기반으로 합니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 병렬 데이터 웨어하우스 데이터 확장 프로그램입니다. 이 데이터 원본 유형을 사용하여 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]에 연결하고 데이터를 검색할 수 있습니다.  
+ 보고서에 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]의 데이터를 포함하려면 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 병렬 데이터 웨어하우스 유형의 보고서 데이터 원본을 기반으로 하는 데이터 세트가 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 병렬 데이터 웨어하우스 데이터 확장 프로그램을 기반으로 합니다. 이 데이터 원본 유형을 사용하여 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]에 연결하고 데이터를 검색할 수 있습니다.  
   
  이 데이터 확장 프로그램은 다중값 매개 변수, 서버 집계 및 연결 문자열과 별개로 관리되는 자격 증명을 지원합니다.  
   
- 자세한 내용은 [SQL Server 2008 R2 병렬 데이터 웨어하우스](http://go.microsoft.com/fwlink/?LinkId=150895)웹 사이트를 참조하십시오.  
+ 자세한 내용은 [SQL Server 2008 R2 병렬 데이터 웨어하우스](https://go.microsoft.com/fwlink/?LinkId=150895)웹 사이트를 참조하십시오.  
   
  이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결이 나 데이터 원본 추가 및 확인 &#40;보고서 작성기 및 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)합니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48226683"
 HOST=<IP address>; database= CustomerSales; port=<port>  
 ```  
   
- 또한 **데이터 원본 속성** 대화 상자를 사용하여 사용자 이름 및 암호와 같은 자격 증명을 제공합니다. `User Id` 및 `Password` 옵션은 연결 문자열에 자동으로 추가되므로 연결 문자열의 일부로 입력할 필요가 없습니다. 사용자 인터페이스에 있는 제어 노드의 IP 주소를 지정 하는 옵션을 제공 합니다 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 어플라이언스 및 포트 번호입니다. 기본적으로 포트는 17000입니다. 포트는 관리자가 구성할 수 있으며 연결 문자열에서 다른 포트 번호를 사용할 수도 있습니다.  
+ 또한 **데이터 원본 속성** 대화 상자를 사용하여 사용자 이름 및 암호와 같은 자격 증명을 제공합니다. `User Id` 및 `Password` 옵션은 연결 문자열에 자동으로 추가되므로 연결 문자열의 일부로 입력할 필요가 없습니다. 또한 사용자 인터페이스에서는 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 어플라이언스에 있는 제어 노드의 IP 주소 및 포트 번호를 지정할 수 있는 옵션이 제공됩니다. 기본적으로 포트는 17000입니다. 포트는 관리자가 구성할 수 있으며 연결 문자열에서 다른 포트 번호를 사용할 수도 있습니다.  
   
  연결 문자열 예제에 대한 자세한 내용은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](../data-connections-data-sources-and-connection-strings-in-report-builder.md)을 참조하세요.  
   
@@ -51,7 +51,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   저장된 사용자 이름 및 암호 사용. 보고서 데이터를 포함하는 데이터베이스가 보고서 서버와 다른 경우 발생하는 이중 홉을 협상하려면 Windows 자격 증명을 자격 증명으로 사용하도록 옵션을 선택합니다. 데이터 원본에 연결한 후 인증된 사용자를 가장하도록 선택할 수도 있습니다.  
   
--   자격 증명 필요 없음. 이 옵션을 사용하려면 보고서 서버에서 무인 실행 계정을 구성해야 합니다. 자세한 내용은 msdn.microsoft.com의 [Reporting Services 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에서 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.  
+-   자격 증명 필요 없음. 이 옵션을 사용하려면 보고서 서버에서 무인 실행 계정을 구성해야 합니다. 자세한 내용은 msdn.microsoft.com의 [Reporting Services 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에서 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.  
   
  자세한 내용은 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) 하거나 [보고서 작성기에 자격 증명 지정](../specify-credentials-in-report-builder.md)합니다.  
   
@@ -64,7 +64,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   대화식으로 쿼리를 작성합니다. 관계형 쿼리 디자이너를 사용합니다. 관계형 쿼리 디자이너는 테이블, 뷰 및 기타 데이터베이스 항목을 데이터베이스 스키마별로 구성하여 계층 구조로 표시합니다. 테이블이나 뷰에서 열을 선택합니다. 필터 조건, 그룹 및 집계를 지정하여 검색할 데이터 행 수를 제한합니다. 매개 변수 옵션을 설정하여 보고서를 실행할 때 필터를 사용자 지정합니다.  
   
--   쿼리를 입력하거나 붙여넣습니다. 텍스트 기반 쿼리 디자이너를 사용 하 여 입력 [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 텍스트를 직접 관계형 쿼리 디자이너를 사용 하 여 작성할 수 없는 복잡 한 쿼리를 입력 하거나, 쿼리 기반 식을 입력할 다른 원본에서 쿼리 텍스트를 붙여넣으려고 합니다.  
+-   쿼리를 입력하거나 붙여넣습니다. 텍스트 기반 쿼리 디자이너를 사용하여 [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 텍스트를 직접 입력하거나, 다른 원본에서 쿼리 텍스트를 붙여넣거나, 관계형 쿼리 디자이너를 사용하여 작성할 수 없는 복잡한 쿼리를 입력하거나, 쿼리 기반 식을 입력할 수 있습니다.  
   
 -   파일 또는 보고서에서 기존 쿼리를 가져옵니다. 쿼리 디자이너에서 쿼리 **가져오기** 단추를 사용하여 .sql 파일 또는 .rdl 파일을 찾아서 쿼리를 가져옵니다.  
   
@@ -78,14 +78,14 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 등과 같은 데이터 웨어하우스를 비롯한 큰 데이터베이스에서 보고서 데이터를 검색하는 쿼리는 쿼리가 반환하는 행 수를 줄이기 위해 데이터를 집계 및 요약하지 않을 경우 매우 많은 수의 행을 가진 결과 집합을 생성할 수 있습니다. 그래픽 또는 텍스트 기반 쿼리 디자이너를 사용하여 집계 및 그룹화를 포함하는 쿼리를 작성할 수 있습니다.  
   
- [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 절, 키워드 및 집계 데이터를 요약 하는 쿼리 디자이너를 지원 합니다.  
+ [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 은 데이터를 요약하기 위해 쿼리 디자이너가 제공하는 집계, 절 및 키워드를 지원합니다.  
   
- [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 에서 사용하는 그래픽 쿼리 디자이너는 요약 데이터만 검색하는 쿼리를 작성하는 데 도움이 되는 그룹화 및 집계를 기본적으로 지원합니다. [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 언어 기능은:는 GROUP BY 절, DISTINCT 키워드 및 SUM, COUNT 등과 같은 집계 합니다. 텍스트 기반 쿼리 디자이너에 대 한 전체 지원을 제공 합니다 [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 그룹화 및 집계를 비롯 한 언어를 합니다.  
+ [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 에서 사용하는 그래픽 쿼리 디자이너는 요약 데이터만 검색하는 쿼리를 작성하는 데 도움이 되는 그룹화 및 집계를 기본적으로 지원합니다. [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 언어 기능은 GROUP BY 절, DISTINCT 키워드 및 SUM, COUNT 등과 같은 집계입니다. 텍스트 기반 쿼리 디자이너는 그룹화 및 집계를 비롯한 [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 언어를 완벽하게 지원합니다.  
   
- [!INCLUDE[tsql](../../../includes/tsql-md.md)]에 대한 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?LinkId=141687)에서 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](/sql/t-sql/language-reference)를 참조하세요.  
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)]에 대한 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?LinkId=141687)에서 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](/sql/t-sql/language-reference)를 참조하세요.  
   
 ###  <a name="QueryText"></a> Text 쿼리 유형 사용  
- 텍스트 기반 쿼리 디자이너에서는 [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 명령을 입력하여 데이터 세트의 데이터를 정의합니다. 데이터를 검색 하는 데 사용 하는 쿼리 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 의 인스턴스에서 데이터를에서 검색 하는 데 필드로 동일 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 내에서 실행 되지 않는 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 응용 프로그램입니다. 예를 들어, 다음 [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 쿼리는 마케팅 지원을 담당 하는 모든 직원의 이름을 선택 합니다.  
+ 텍스트 기반 쿼리 디자이너에서는 [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 명령을 입력하여 데이터 세트의 데이터를 정의합니다. [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 에서 데이터를 검색하기 위해 사용하는 쿼리는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 애플리케이션 내에서 실행되지 않는 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 의 인스턴스에서 데이터를 검색하기 위해 사용하는 쿼리와 동일합니다. 예를 들어 다음 [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 쿼리는 마케팅 지원을 담당하는 모든 직원의 이름을 선택합니다.  
   
 ```  
 SELECT  
@@ -128,7 +128,7 @@ WHERE EmployeeID = (@EmpID)
 ##  <a name="Remarks"></a> 주의  
   
 ###### <a name="platform-and-version-information"></a>플랫폼 및 버전 정보  
- 플랫폼 및 버전 지원에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서에서 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ 플랫폼 및 버전 지원에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서에서 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
@@ -158,7 +158,7 @@ WHERE EmployeeID = (@EmpID)
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  쿼리에 의해 생성되는 데이터 세트 필드 컬렉션에 대한 정보를 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
  각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.  
   
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  

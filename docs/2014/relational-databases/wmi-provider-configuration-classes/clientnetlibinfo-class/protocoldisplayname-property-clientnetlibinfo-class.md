@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - ProtocolDisplayName Property (ClientNetLibInfo Class)
@@ -20,12 +18,12 @@ ms.assetid: b90755fd-7cac-4bdb-8e45-e95119a7665c
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c1ca74f20b0710dfd8dcd3f21500aaa2b6c29efa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33113482d021b1f0aa105ccb039f8076cf6a6549
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085253"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375415"
 ---
 # <a name="protocoldisplayname-property-clientnetlibinfo-class"></a>ProtocolDisplayName 속성(ClientNetLibInfo 클래스)
   프로토콜을 표시하는 데 사용할 이름을 가져오거나 설정합니다.  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>관련 항목  
- [클라이언트 프로토콜 구성](http://technet.microsoft.com/library/ms181035.aspx)  
+ [클라이언트 프로토콜 구성](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

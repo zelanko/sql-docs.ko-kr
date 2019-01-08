@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.subscribers.f1
@@ -15,12 +14,12 @@ ms.assetid: 43fb2454-c220-4d25-a826-83c332eb00d2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f222569b5c134d46165d012850a8a2374d4ad8df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 725be263e30687a3f2ded90990e952e1cd97a185
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129063"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806205"
 ---
 # <a name="subscribers"></a>게시자 속성
   선택한 게시에 대한 구독을 받을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자를 지정합니다.  
@@ -51,7 +50,7 @@ ms.locfileid: "48129063"
   
 -   선택한 게시의 게시자가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전입니다.  
   
- **구독자 추가** 를 클릭하면 **SQL Server 구독자 추가** 및 **SQL Server 이외 구독자 추가**의 두 선택 사항으로 메뉴가 표시됩니다. Oracle 또는 IBM DB2 구독자를 추가하려면 **SQL Server 이외 구독자 추가** 를 클릭합니다.  
+ 클릭 **구독자 추가** 두 선택 사항으로 메뉴가 표시: **SQL Server 구독자 추가** 하 고 **비 SQL Server 구독자 추가**합니다. Oracle 또는 IBM DB2 구독자를 추가하려면 **SQL Server 이외 구독자 추가** 를 클릭합니다.  
   
  **SQL Server 구독자 추가**  
  구독자로 설정할 수 있는 서버 목록에 서버를 추가합니다. 이 단추는 다음 조건 중 하나 이상이 충족되는 경우 표시됩니다.  
@@ -68,7 +67,7 @@ ms.locfileid: "48129063"
   
     -   게시에서 익명 구독을 허용합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Create a Pull Subscription](create-a-pull-subscription.md)   
  [ssSDSFull](create-a-push-subscription.md)   
  [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)   

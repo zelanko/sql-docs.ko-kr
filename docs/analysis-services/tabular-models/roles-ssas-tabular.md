@@ -1,5 +1,5 @@
 ---
-title: 역할 | Microsoft Docs
+title: Analysis Services 테이블 형식 모델 역할 | Microsoft Docs
 ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2f33d46750085f06f890a101382d7949a85048b9
-ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
+ms.openlocfilehash: bbbf4f080696d41360e7fd654ef4b6878df268a6
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45975692"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072170"
 ---
 # <a name="roles"></a>역할
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "45975692"
   
  기본적으로 새 테이블 형식 모델 프로젝트를 만들 경우 모델 프로젝트에는 아무 역할도 없습니다. SSDT에서 역할 관리자 대화 상자를 사용 하 여 역할을 정의할 수 있습니다. 모델 제작 중에 역할을 정의한 경우 해당 역할은 모델 작업 영역 데이터베이스에 적용됩니다. 모델을 배포하면 동일한 역할이 배포된 모델에 적용됩니다. 모델을 배포한 후 멤버는 서버 역할 ([Analysis Services 관리자) 및 데이터베이스 관리자의 모델에 연결 된 역할 및 각 역할과 연결 된 SSMS를 사용 하 여 멤버를 관리할 수 있습니다.  
   
-##  <a name="bkmk_permissions"></a> 사용 권한  
+##  <a name="bkmk_permissions"></a> Permissions  
  결합된 읽기 및 처리 권한을 제외하고 역할별로 하나의 데이터베이스 권한이 정의되어 있습니다. 기본적으로 새 역할은 없음 권한을 갖게 됩니다. 즉, 없음 권한을 가진 역할에 추가된 멤버는 다른 권한이 부여될 때까지 데이터베이스를 수정하거나, 프로세스 작업을 실행하거나, 데이터를 쿼리하거나, 데이터베이스를 볼 수 없습니다.  
   
  그룹 또는 사용자 역할의 여러 다른 사용 권한 사용 하 여 각 역할의 멤버 수 있습니다. 사용자가 여러 역할의 멤버인 경우 각 역할에 대해 정의된 사용 권한은 누적됩니다. 예를 들어 사용자가 읽기 권한을 가진 역할의 멤버인 동시에 없음 권한을 가진 역할의 멤버일 경우 해당 사용자는 읽기 권한을 가집니다.  
@@ -63,14 +63,14 @@ ms.locfileid: "45975692"
   
  읽기 권한과 읽기 및 처리 권한을 가진 역할에 대해서만 행 필터를 정의할 수 있습니다. 기본적으로 특정 테이블에 대해 행 필터를 정의하지 않을 경우 읽기 권한 또는 읽기 및 처리 권한을 가진 역할의 멤버는 다른 테이블에서 교차 필터링이 적용되지 않는 한 테이블의 모든 행을 쿼리할 수 있습니다.  
   
- 특정 테이블에 대해 행 필터를 정의할 경우 TRUE/FALSE 값으로 평가되어야 하는 DAX 수식을 통해 해당 역할의 멤버가 쿼리할 수 있는 행을 정의합니다. DAX 수식에 포함되지 않은 행은 쿼리할 수 없습니다. 예를 들어 Sales 역할 멤버에 대해서 행 필터 식, *=Customers [Country] = “USA”* 를 가진 Customers 테이블에서 Sales 역할 멤버는 USA의 고객만 볼 수 있습니다.  
+ 특정 테이블에 대해 행 필터를 정의할 경우 TRUE/FALSE 값으로 평가되어야 하는 DAX 수식을 통해 해당 역할의 멤버가 쿼리할 수 있는 행을 정의합니다. DAX 수식에 포함되지 않은 행은 쿼리할 수 없습니다. 예를 들어 Sales 역할의 멤버에 대 한 다음 행을 가진 Customers 테이블 필터 식, *= Customers [Country] = "USA"*, Sales 역할의 멤버는 USA의 고객만 볼 수만 있습니다.  
   
  행 필터는 지정된 행과 관련 행에 적용됩니다. 테이블에 여러 관계가 있는 경우 필터는 활성 관계에 대한 보안을 적용합니다. 행 필터는 관련 테이블에 대해 정의된 다른 행 필터와 교차됩니다. 예를 들면 다음과 같습니다.  
   
 |Table|DAX 식|  
 |-----------|--------------------|  
-|Region|=Region[Country]=”USA”|  
-|ProductCategory|=ProductCategory[Name]=”Bicycles”|  
+|Region|= 영역 [Country] = "USA"|  
+|ProductCategory|= ProductCategory [이름] = "자전거"|  
 |의|=Transactions[Year]=2008|  
   
  Transactions 테이블에 이러한 사용 권한이 적용되면 멤버는 고객이 USA에 있고, 제품 범주가 Bicycles이며, 연도가 2008년에 해당하는 데이터 행을 쿼리할 수 있습니다. 사용자는 해당 사용 권한이 부여된 다른 역할의 멤버가 아닌 한 미국 이외의 국가에서 발생한 거래, Bicycles 범주가 아닌 거래 또는 2008년에 발생하지 않은 거래를 쿼리할 수 없습니다.  
@@ -84,8 +84,8 @@ ms.locfileid: "45975692"
   
 |기능|Description|  
 |--------------|-----------------|  
-|[USERNAME 함수 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)|현재 로그온한 사용자의 domain\ username을 반환합니다.|  
-|[CUSTOMDATA 함수 (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)|연결 문자열의 CustomData 속성을 반환합니다.|  
+|[USERNAME 함수(DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)|현재 로그온한 사용자의 domain\ username을 반환합니다.|  
+|[CUSTOMDATA 함수(DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)|연결 문자열의 CustomData 속성을 반환합니다.|  
   
  LOOKUPVALUE 함수를 사용하여 Windows 사용자 이름이 USERNAME 함수에서 반환된 사용자 이름 또는 CustomData 함수에서 반환된 문자열과 동일한 열의 값을 반환할 수 있습니다. 그런 다음 LOOKUPVALUE에서 반환된 값이 동일한 테이블 또는 관련된 테이블의 값과 일치하는 경우로 쿼리를 제한할 수 있습니다.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "45975692"
 |7|Sales and Marketing|  
   
 ##  <a name="bkmk_testroles"></a> Testing roles  
- 모델 프로젝트를 제작할 때 Excel의 분석 기능을 사용하여 정의한 역할의 효율성을 테스트할 수 있습니다. 모델 디자이너의 **모델** 메뉴에서 **Excel에서 분석**을 클릭하면 Excel이 열리기 전에 **자격 증명 및 큐브 뷰 선택** 대화 상자가 나타납니다. 이 대화 상자에서 현재 사용자 이름, 다른 사용자 이름, 역할, 데이터 원본으로 작업 영역 모델에 연결하는 데 사용할 큐브 뷰를 지정할 수 있습니다. 자세한 내용은 참조 하세요 [Excel에서 분석](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)합니다.  
+ 모델 프로젝트를 제작할 때 Excel의 분석 기능을 사용하여 정의한 역할의 효율성을 테스트할 수 있습니다. 모델 디자이너의 **모델** 메뉴에서 **Excel에서 분석**을 클릭하면 Excel이 열리기 전에 **자격 증명 및 큐브 뷰 선택** 대화 상자가 나타납니다. 이 대화 상자에서 현재 사용자 이름, 다른 사용자 이름, 역할, 데이터 원본으로 작업 영역 모델에 연결하는 데 사용할 큐브 뷰를 지정할 수 있습니다. 자세한 내용은 [Excel에서 분석](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)가 설치되어 있는 컴퓨터에 Excel이 설치되어 있어야 합니다.  
   
 ##  <a name="bkmk_rt"></a> Related tasks  
   
@@ -125,11 +125,11 @@ ms.locfileid: "45975692"
 |-----------|-----------------|  
 |[역할 만들기 및 관리](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)|이 항목의 태스크에서는 **역할 관리자** 대화 상자를 사용하여 역할을 만들고 관리하는 방법을 설명합니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [큐브 뷰](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [Excel에서 분석](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
- [USERNAME 함수 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)   
- [LOOKUPVALUE 함수 (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)   
- [CUSTOMDATA 함수 (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
+ [USERNAME 함수(DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)   
+ [LOOKUPVALUE 함수(DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)   
+ [CUSTOMDATA 함수(DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
   
   

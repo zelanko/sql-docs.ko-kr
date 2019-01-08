@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 1053f3a11bed9efbf75d7270f677c9f226221a3f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 669d02d32642ba4723892a98a1f4d0f3bc6e51f6
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674203"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626323"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Azure Kubernetes 서비스 (AKS)를 사용 하 여 Kubernetes에서 SQL Server 컨테이너를 배포 합니다.
 
@@ -41,13 +41,13 @@ Kubernetes 버전 1.6 이상에 대 한 지원 [저장소 클래스](https://kub
 
 다음 다이어그램에는 `mssql-server` 컨테이너에 실패 했습니다. 오 케 스트레이 터로 Kubernetes 복제본에 정상 인스턴스의 정확한 수를 설정 및 구성에 따라 새 컨테이너를 시작을 보장 합니다. 오 케 스트레이 터 같은 노드에서 새 pod를 시작 하 고 `mssql-server` 같은 영구 저장소에 다시 연결 합니다. 서비스에 다시 만들어진 연결 `mssql-server`합니다.
 
-![Kubernetes SQL Server 클러스터의 다이어그램](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
+![Kubernetes SQL Server 클러스터의 다이어그램](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
 
 다음 다이어그램에서 호스트 하는 노드는 `mssql-server` 컨테이너에 실패 했습니다. Orchestrator 다른 노드에서 새 pod를 시작 하 고 `mssql-server` 같은 영구 저장소에 다시 연결 합니다. 서비스에 다시 만들어진 연결 `mssql-server`합니다.
 
-![Kubernetes SQL Server 클러스터의 다이어그램](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
+![Kubernetes SQL Server 클러스터의 다이어그램](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 * **Kubernetes 클러스터**
    - 이 자습서에는 Kubernetes 클러스터에 필요합니다. 단계를 사용 하 여 [kubectl](https://kubernetes.io/docs/user-guide/kubectl/) 클러스터를 관리 합니다. 
@@ -174,13 +174,15 @@ Kubernetes 클러스터에서 SA 암호를 만듭니다. Kubernetes로 암호와
          terminationGracePeriodSeconds: 10
          containers:
          - name: mssql
-           image: mcr.microsoft.com/mssql/server/mssql-server-linux
+           image: mcr.microsoft.com/mssql/server:2017-latest
            ports:
            - containerPort: 1433
            env:
+           - name: MSSQL_PID
+             value: "Developer"
            - name: ACCEPT_EULA
              value: "Y"
-           - name: SA_PASSWORD
+           - name: MSSQL_SA_PASSWORD
              valueFrom:
                secretKeyRef:
                  name: mssql
@@ -209,14 +211,14 @@ Kubernetes 클러스터에서 SA 암호를 만듭니다. Kubernetes로 암호와
 
    라는 새 파일에 앞의 코드를 복사 `sqldeployment.yaml`합니다. 다음 값을 업데이트 합니다. 
 
-   * `value: "Developer"`: SQL Server Developer edition을 실행 하도록 컨테이너를 설정 합니다. Developer edition은 프로덕션 데이터에 대 한 허가 받지 않았습니다. 프로덕션 사용에 대 한 배포가 되 면 적절 한 버전을 설정 (`Enterprise`, `Standard`, 또는 `Express`). 
+   * MSSQL_PID `value: "Developer"`: SQL Server Developer edition을 실행 하도록 컨테이너를 설정 합니다. Developer edition은 프로덕션 데이터에 대 한 허가 받지 않았습니다. 프로덕션 사용에 대 한 배포가 되 면 적절 한 버전을 설정 (`Enterprise`, `Standard`, 또는 `Express`). 
 
       >[!NOTE]
       >자세한 내용은 [SQL Server 라이선스 방법](https://www.microsoft.com/sql-server/sql-server-2017-pricing)합니다.
 
-   * `persistentVolumeClaim`:이 값에 대 한 항목이 필요한 `claimName:` 영구적 볼륨 클레임에 대 한 사용 되는 이름에 매핑되는 합니다. 이 자습서에서는 `mssql-data`합니다. 
+   * `persistentVolumeClaim`: 이 값에 대 한 항목이 필요한 `claimName:` 영구적 볼륨 클레임에 대 한 사용 되는 이름에 매핑되는 합니다. 이 자습서에서는 `mssql-data`합니다. 
 
-   * `name: SA_PASSWORD`:이 섹션에 정의 된 대로 SA 암호를 설정 하려면 컨테이너 이미지를 구성 합니다.
+   * `name: SA_PASSWORD`: 이 섹션에 정의 된 대로 SA 암호를 설정 하려면 컨테이너 이미지를 구성 합니다.
 
      ```yaml
      valueFrom:

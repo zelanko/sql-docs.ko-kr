@@ -1,30 +1,31 @@
 ---
-title: 클라우드에서 SQL Server 시작 | Microsoft Docs
+title: 클라우드에서 (Linux)의 SQL Server 시작
+titleSuffix: SQL Server
 description: 이 빠른 시작에는 선택한 클라우드에서 Linux의 SQL Server를 실행 하는 방법을 보여 줍니다.
-author: annashres
-ms.author: annashres
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.date: 10/25/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 8c7131f8b4fb9f9b326e2596d53332b9e6bf9248
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c64c2ab3927c111b29f0bafa6745fbab2f7fd13
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682981"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160541"
 ---
-# <a name="quickstart-run-the-sql-server-in-the-cloud"></a>클라우드에서 SQL Server를 실행 하는 빠른 시작:
+# <a name="quickstart-run-sql-server-in-the-cloud"></a>빠른 시작: 클라우드에서 SQL Server를 실행 합니다.
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 빠른 시작에서는 Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server SLES () 또는 사용자가 선택한 클라우드에 Ubuntu에서 SQL Server를 설치 합니다. 로 이동 [Azure portal에서 Linux SQL Server 가상 컴퓨터를 프로 비전](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) Azure에서 Linux 기반 SQL Server를 실행 합니다.
 
-    > [!NOTE]
-    > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)
+> [!NOTE]
+> 유료 버전의 SQL Server를 실행 하려는 경우 사용자 고유의 라이선스 필요 (BYOL) 해야 합니다.
 
 ## <a name="amazon-web-services"></a>Amazon 웹 서비스
 1.  최소 2GB의 marketplace에서 메모리를 사용 하 여 Linux AMI 만들기 

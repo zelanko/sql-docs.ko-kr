@@ -11,12 +11,12 @@ ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 729780b737502557830e6f1ccdea39203b0154ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: da6d96efaa23d50042ea4f4501b89b4a5cc1dd31
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077833"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365047"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Analysis Services에서 지원하는 인증 방법
   클라이언트 애플리케이션에서 Analysis Services 인스턴스에 연결하려면 Windows 인증(통합)이 필요합니다. 다음 방법 중 하나를 사용하여 Windows 사용자 ID를 제공할 수 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "48077833"
   
  클레임 인증은 지원되지 않습니다. Windows 클레임 토큰을 사용하여 Analysis Services에 액세스할 수 없습니다. Analysis Services 클라이언트 라이브러리는 Windows 보안 주체와만 작동합니다. BI 솔루션에 클레임 ID가 포함된 경우 각 사용자에 대한 Windows ID 섀도 계정이 필요하며 저장된 자격 증명을 사용하여 Analysis Services 데이터에 액세스해야 합니다.  
   
- BI 및 Analysis Services 인증 흐름에 대한 자세한 내용은 [Microsoft BI 인증 및 ID 위임](http://go.microsoft.com/fwlink/?LinkID=286576)을 참조하십시오.  
+ BI 및 Analysis Services 인증 흐름에 대한 자세한 내용은 [Microsoft BI 인증 및 ID 위임](https://go.microsoft.com/fwlink/?LinkID=286576)을 참조하십시오.  
   
 ##  <a name="bkmk_auth"></a> 인증 대체 방법 이해  
  Analysis Services 데이터베이스에 연결하려면 Windows 사용자 또는 그룹 ID 및 연결된 사용 권한이 필요합니다. 이 ID는 보고서를 보려는 사용자가 사용하는 일반적인 목적의 로그인이지만, 개별 사용자의 ID를 포함할 가능성이 높습니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "48077833"
   
  EffectiveUserName은 ID 정보를 Analysis Services에 전달하는 데 사용되는 연결 문자열 속성입니다. SharePoint용 PowerPivot은 이 속성을 사용하여 사용자 작업을 사용 현황 로그에 기록합니다. Excel Services 및 PerformancePoint Services에서는 이 속성을 사용하여 SharePoint의 통합 문서 또는 대시보드에 사용된 데이터를 검색할 수 있습니다. 또한 Analysis Services 인스턴스에서 작업을 수행하는 사용자 지정 애플리케이션 또는 스크립트에서도 이 속성을 사용할 수 있습니다.  
   
- SharePoint에서 EffectiveUserName을 사용하는 방법에 대한 자세한 내용은 [SharePoint Server 2010에서 Analysis Services EffectiveUserName 사용](http://go.microsoft.com/fwlink/?LinkId=311905)을 참조하십시오.  
+ SharePoint에서 EffectiveUserName을 사용하는 방법에 대한 자세한 내용은 [SharePoint Server 2010에서 Analysis Services EffectiveUserName 사용](https://go.microsoft.com/fwlink/?LinkId=311905)을 참조하십시오.  
   
  **기본 인증 및 익명 사용자**  
   
@@ -77,13 +77,13 @@ ms.locfileid: "48077833"
   
  대부분의 중간 계층 애플리케이션 서비스에는 나중에 Analysis Services 또는 SQL Server 관계형 엔진 등 하위 데이터 저장소에서 데이터를 검색하는 데 사용되는 사용자 이름과 암호를 저장하는 기능이 있습니다. 즉, 저장된 자격 증명은 데이터를 가져오는 다섯 번째 방법입니다. 이 방법의 단점은 사용자 이름 및 암호를 최신으로 유지하는 데 필요한 유지 관리 비용, 그리고 연결 시 단일 ID를 사용한다는 점 등입니다. 사용자 솔루션에서 원래 호출자의 ID를 요구하는 경우에는 저장된 자격 증명을 대안으로 이용할 수 없습니다.  
   
- 저장된 자격 증명에 대한 자세한 내용은 [공유 데이터 원본 만들기, 수정 및 삭제&#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 및 [SharePoint Server 2013에서 보안 저장소 서비스와 함께 Excel Services 사용](http://go.microsoft.com/fwlink/?LinkID=309869)을 참조하세요.  
+ 저장된 자격 증명에 대한 자세한 내용은 [공유 데이터 원본 만들기, 수정 및 삭제&#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 및 [SharePoint Server 2013에서 보안 저장소 서비스와 함께 Excel Services 사용](https://go.microsoft.com/fwlink/?LinkID=309869)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [전송 보안을 통해 가장 사용](http://go.microsoft.com/fwlink/?LinkId=311727)   
+ [전송 보안을 통해 가장 사용](https://go.microsoft.com/fwlink/?LinkId=311727)   
  [IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [Kerberos 제한된 위임에 대해 Analysis Services 구성](configure-analysis-services-for-kerberos-constrained-delegation.md)   
- [Analysis Services 인스턴스에 대 한 SPN 등록](spn-registration-for-an-analysis-services-instance.md)   
+ [Analysis Services 인스턴스에 대한 SPN 등록](spn-registration-for-an-analysis-services-instance.md)   
  [Analysis Services에 연결](connect-to-analysis-services.md)  
   
   

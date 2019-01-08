@@ -13,15 +13,15 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e29e919d48c484788715512a9daaafef5bbde9b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194143"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377495"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]의 트랜잭션 성능 수집기를 사용하면 메모리 내 OLTP로 데이터베이스 응용 프로그램의 성능이 향상될지 평가할 수 있습니다. 트랜잭션 성능 분석 보고서에는 응용 프로그램에서 메모리 내 OLTP를 사용하기 위해 얼마나 많은 작업을 수행해야 하는지도 나와 있습니다. 메모리 내 OLTP에 이식할 디스크 기반 테이블을 식별한 후 [메모리 최적화 관리자](memory-optimization-advisor.md)를 사용하여 테이블을 마이그레이션할 수 있습니다. 마찬가지로 [Native Compilation Advisor](native-compilation-advisor.md) 를 사용하여 저장 프로시저를 고유하게 컴파일된 저장 프로시저에 이식할 수 있습니다.  
+  트랜잭션 성능 수집기 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 메모리 내 OLTP 데이터베이스 응용 프로그램의 성능이 향상 될를 평가 하는 데 도움이 됩니다. 트랜잭션 성능 분석 보고서에는 응용 프로그램에서 메모리 내 OLTP를 사용하기 위해 얼마나 많은 작업을 수행해야 하는지도 나와 있습니다. 메모리 내 OLTP에 이식할 디스크 기반 테이블을 식별한 후 [메모리 최적화 관리자](memory-optimization-advisor.md)를 사용하여 테이블을 마이그레이션할 수 있습니다. 마찬가지로 [Native Compilation Advisor](native-compilation-advisor.md) 를 사용하여 저장 프로시저를 고유하게 컴파일된 저장 프로시저에 이식할 수 있습니다.  
   
  이 항목에서는 다음과 같은 작업을 수행하는 방법에 대해 설명합니다.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "48194143"
   
 -   트랜잭션 성능 분석 보고서를 생성하여 성능이 중요한 테이블 및 저장 프로시저를 확인하십시오.  
   
- 마이그레이션 방법에 대한 자세한 내용은 [메모리 내 OLTP – 일반적인 작업 패턴 및 마이그레이션 고려 사항](http://msdn.microsoft.com/library/dn673538.aspx)을 참조하세요.  
+ 마이그레이션 방법에 대한 자세한 내용은 [메모리 내 OLTP – 일반적인 작업 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)을 참조하세요.  
   
  트랜잭션 성능 수집기 및 트랜잭션 성능 분석 보고서를 사용하여 다음과 같은 작업을 수행할 수 있습니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48194143"
     > [!IMPORTANT]  
     >  데이터베이스 시스템의 성능은 다양한 요소에 따라 달라지며 트랜잭션 성능 수집기 중 일부는 관찰하고 측정하지 못할 수도 있습니다. 따라서 트랜잭션 성능 분석 보고서는 실제 성능 향상 정도가 어떠한 예측과도 일치한다고 보증하지 않습니다.  
   
- 트랜잭션 성능 수집기와 트랜잭션 성능 분석 보고서를 생성 하는 기능을 선택 하면 설치 된 **관리 도구-기본** 하거나 **관리 도구-고급** 설치 하는 경우 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]합니다.  
+ 트랜잭션 성능 수집기와 트랜잭션 성능 분석 보고서를 생성 하는 기능을 선택 하면 설치 된 **관리 도구-Basic** 하거나 **관리 도구-고급** 설치 하는 경우 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]합니다.  
   
 ## <a name="best-practices"></a>최선의 구현 방법  
  다음 순서도에서는 권장 워크플로를 보여 줍니다. 노란색 노드는 선택적 절차를 나타냅니다.  
@@ -186,13 +186,13 @@ ms.locfileid: "48194143"
   
 -   경합 통계 섹션  
   
-     이 섹션에는 데이터베이스 테이블에 대한 경합을 보여 주는 테이블이 있습니다. 데이터베이스 래치 및 잠금에 대 한 자세한 내용은 참조 하십시오 [잠금 아키텍처](http://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx)합니다. 열은 다음과 같습니다.  
+     이 섹션에는 데이터베이스 테이블에 대한 경합을 보여 주는 테이블이 있습니다. 데이터베이스 래치 및 잠금에 대 한 자세한 내용은 참조 하십시오 [잠금 아키텍처](https://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx)합니다. 열은 다음과 같습니다.  
   
     -   총 대기의 백분율. 데이터베이스 작업과 비교하여 이 데이터베이스 테이블에 대한 래치 및 잠금 대기에 대한 백분율입니다. 이 백분율이 높을수록 데이터베이스의 다른 테이블과 비교하여 해당 테이블이 더 많이 사용된 것입니다.  
   
-    -   래치 통계. 이러한 열은 이 테이블의 관련 쿼리에 대한 래치 대기 수를 기록합니다. 래치에 대 한 내용은 참조 하세요 [래칭](http://msdn.microsoft.com/library/aa224727\(v=SQL.80\).aspx)합니다. 이 숫자가 클수록 테이블에 대한 래치 경합이 더 큰 것입니다.  
+    -   래치 통계. 이러한 열은 이 테이블의 관련 쿼리에 대한 래치 대기 수를 기록합니다. 래치에 대 한 내용은 참조 하세요 [래칭](https://msdn.microsoft.com/library/aa224727\(v=SQL.80\).aspx)합니다. 이 숫자가 클수록 테이블에 대한 래치 경합이 더 큰 것입니다.  
   
-    -   잠금 통계. 이 열 그룹은 이 테이블에 대한 페이지 잠금 획득 및 쿼리 대기 수를 기록합니다. 잠금에 대 한 자세한 내용은 참조 하세요. [SQL Server의 잠금 이해](http://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx)합니다. 대기가 많을수록 테이블에 대한 잠금 경합이 더 큰 것입니다.  
+    -   잠금 통계. 이 열 그룹은 이 테이블에 대한 페이지 잠금 획득 및 쿼리 대기 수를 기록합니다. 잠금에 대 한 자세한 내용은 참조 하세요. [SQL Server의 잠금 이해](https://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx)합니다. 대기가 많을수록 테이블에 대한 잠금 경합이 더 큰 것입니다.  
   
 -   마이그레이션 문제 섹션  
   
@@ -204,7 +204,7 @@ ms.locfileid: "48194143"
   
 -   실행 통계 섹션  
   
-     이 섹션에는 저장 프로시저 실행에 대해 수집된 통계를 보여 주는 테이블이 있습니다. 열은 다음과 같습니다.  
+     이 섹션에는 저장 프로시저 실행에 대해 수집된 통계를 보여 주는 테이블이 포함됩니다. 열은 다음과 같습니다.  
   
     -   캐시된 시간. 이 실행 계획이 캐시된 시간입니다. 저장 프로시저가 계획 캐시에서 삭제되고 다시 입력될 때 각 캐시에 대한 시간이 발생합니다.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "48194143"
   
     -   총 실행 시간. 프로파일링 동안 저장 프로시저에서 사용한 총 실행 시간입니다. 이 숫자와 CPU 시간 간의 차이가 클수록 저장 프로시저에서 비효율적으로 CPU를 사용하는 것입니다.  
   
-    -   누락된 총 캐시. 프로파일링 동안 저장 프로시저 실행으로 인해 발생한 캐시 누락(실제 저장소에서 읽기) 수입니다.  
+    -   누락된 총 캐시. 프로파일링 동안 저장 프로시저 실행으로 인해 발생한 캐시 누락(실제 스토리지에서 읽기) 수입니다.  
   
     -   실행 수. 프로파일링 동안 이 저장 프로시저가 실행한 횟수입니다.  
   

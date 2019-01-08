@@ -1,5 +1,5 @@
 ---
-title: Revoscalepy를 사용 하 여 Python를 사용 하 여 SQL Server에서 모델 만들기 | Microsoft Docs
+title: Revoscalepy를 사용 하 여 Python을 사용 하 여 SQL Server Machine Learning-모델을 만들려면
 description: Revoscalepy 함수를 사용 하 여 SQL Server에서 원격으로 실행 되는 데이터 과학 모델을 만드는 Python 스크립트를 작성 합니다.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f554badcba282bad7fb386daf8c4c0f4106804b4
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 18c5b801198946313e4f489902eb5f7c9ff0d7af
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100164"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596834"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>Revoscalepy를 사용 하 여 Python을 사용 하 여 SQL Server에서 원격으로 실행 되는 모델을 만들려면
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "50100164"
 > * 사용 하 여 **revoscalepy** 선형 모델을 만들려면
 > * 원격 계산 컨텍스트를 로컬에서 작업을 이동
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 연습에서 사용 하는 샘플 데이터를 [ **flightdata** ](demo-data-airlinedemo-in-sql.md) 데이터베이스입니다.
 
@@ -72,7 +72,7 @@ SQL Server에서 Python 코드를 실행 하려면 필요 합니다 **revoscalep
 모든 작업은 SQL Server의 인스턴스를 사용 하 여 계산 컨텍스트로 수행 됩니다.
 
 > [!NOTE]
-> 명령줄에서 실행이 샘플을 보려면이이 비디오를 참조 하세요.: [Python 사용 하 여 SQL Server 2017 고급 분석](https://www.youtube.com/watch?v=FcoY795jTcc)
+> 명령줄에서 실행이 샘플을 보려면이이 비디오를 참조 하세요. [SQL Server 2017을 사용한 고급 분석 Python](https://www.youtube.com/watch?v=FcoY795jTcc)
 
 ### <a name="sample-code"></a>예제 코드
 
@@ -130,7 +130,7 @@ def test_linmod_sql():
 
     이러한 변수를 전달 합니다 [RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata) 생성자를 구현 하는 **데이터 원본 개체** 라는 `data_source`합니다.
 
-+ 만든를 **계산 컨텍스트 개체** 사용 하 여 합니다 [RxInSqlServer](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxinsqlserverdata) 생성자입니다. 결과 **계산 컨텍스트 개체** 이름은 `sql_cc`합니다.
++ 만든를 **계산 컨텍스트 개체** 사용 하 여 합니다 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) 생성자입니다. 결과 **계산 컨텍스트 개체** 이름은 `sql_cc`합니다.
 
     다시이 예제에서는 데이터 원본의 데이터를 계산 컨텍스트로 사용 하는 동일한 SQL Server 인스턴스에서 있음을 가정 하에서 사용 했던 동일한 연결 문자열을 사용 합니다. 
     

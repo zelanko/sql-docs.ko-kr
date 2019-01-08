@@ -11,12 +11,12 @@ ms.assetid: 80f499d6-2c90-49eb-a5b3-0bb5b7faaa3b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d66e01079a0ab86a1456e53dd310614d3c291267
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2639f783f862e27041985ac27ff16740b47cbb5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173419"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356761"
 ---
 # <a name="incompatible-database-engine-server-collation-upgrade-advisor"></a>호환되지 않는 데이터베이스 엔진 서버 데이터 정렬(업그레이드 관리자)
   업그레이드 관리자 검색 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 사용 하는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 는 호환 되지 않는 서버 데이터 정렬을 사용 하도록 구성 된 합니다.  
@@ -44,8 +44,8 @@ ms.locfileid: "48173419"
 ## <a name="corrective-action"></a>수정 동작  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 서버 데이터 정렬 속성은 변경할 수 없습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 업그레이드를 완료할 수 없습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 호환되는 서버 데이터 정렬을 사용 중인 새 서버로 마이그레이션해야 합니다. 자세한 내용은 다음 항목을 참조하세요.  
   
--   [Reporting Services 업그레이드 및 마이그레이션](http://go.microsoft.com/fwlink/?LinkId=233227)  
+-   [Reporting Services 업그레이드 및 마이그레이션](https://go.microsoft.com/fwlink/?LinkId=233227)  
   
--   [SQL Server 데이터 정렬 선택](http://go.microsoft.com/fwlink/?LinkId=233226)  
+-   [SQL Server 데이터 정렬 선택](https://go.microsoft.com/fwlink/?LinkId=233226)  
   
   

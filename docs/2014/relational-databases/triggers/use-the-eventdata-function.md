@@ -13,12 +13,12 @@ ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 184e6a3354069ae5a1ed0d6b7557f4b0ac3fa716
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 65103e99a6cba7d21daca85f3295135a43f435a5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222653"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776385"
 ---
 # <a name="use-the-eventdata-function"></a>EVENTDATA 함수 사용
   DDL 트리거를 발생하는 이벤트에 대한 정보는 EVENTDATA 함수를 사용하여 캡처합니다. 이 함수는 `xml` 값을 반환합니다. XML 스키마에는 다음에 대한 정보가 포함됩니다.  
@@ -95,7 +95,7 @@ ALTER TABLE Person.Address ALTER COLUMN ModifiedDate date;
   
 -   이벤트를 구성한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문  
   
- 에 대해 XQuery를 사용 하 여 마지막 두 항목도 캡처합니다 다시는 `xml` 그런 다음 EVENTDATA로 생성 되는 데이터입니다.  
+ 그런 다음 EVENTDATA로 생성된 `xml` 데이터에 대해 XQuery를 사용하여 마지막 두 항목도 캡처합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -125,7 +125,7 @@ GO
 ```  
   
 > [!NOTE]  
->  이벤트 데이터를 반환하려면 `value()` 메서드보다 XQuery `query()` 메서드를 사용하는 것이 좋습니다. 합니다 `query()` 출력에 XML 및 앰퍼샌드로 이스케이프 된 캐리지 리턴 및 줄 바꿈 (CRLF) 인스턴스를 반환 하는 메서드 동안는 `value()` 메서드 출력에서 보이지 않는 CRLF 인스턴스 렌더링 합니다.  
+>  이벤트 데이터를 반환하려면 `value()` 메서드보다 XQuery `query()` 메서드를 사용하는 것이 좋습니다. `query()` 메서드는 출력에서 XML 및 앰퍼샌드로 이스케이프 처리된 CRLF(캐리지 리턴 및 줄 바꿈) 인스턴스를 반환하며 `value()` 메서드는 출력에서 보이지 않는 CRLF 인스턴스를 렌더링합니다.  
   
  이와 유사한 DDL 트리거 예가 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스와 함께 제공됩니다. 이 예를 사용하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 데이터베이스 트리거 폴더를 찾으십시오. 이 폴더는 **데이터베이스의** 프로그래밍 기능 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 폴더 아래에 있습니다. **ddlDatabseTriggerLog** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 트리거 스크립팅**을 선택합니다. DDL 트리거 **ddlDatabseTriggerLog** 는 기본적으로 해제되어 있습니다.  
   

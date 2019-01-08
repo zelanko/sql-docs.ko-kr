@@ -11,12 +11,12 @@ ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1938012555328b389c2b1b3e6c10fc20514496db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: bce7d17a2edb004f662d5229ea929d89c6d66d4f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166103"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350487"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot 연결 유형(SSRS)
   SQL Server Analysis Services 데이터 처리 확장 프로그램을 사용하면 SharePoint PowerPivot 갤러리에 게시된 PowerPivot 통합 문서에서 데이터를 검색할 수 있습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "48166103"
 ## <a name="prerequisites"></a>사전 요구 사항  
  PowerPivot 데이터 원본은 SharePoint 사이트의 PowerPivot 갤러리에 게시되어야 합니다.  
   
- 보고서 작성기에서 PowerPivot 통합 문서로의 연결을 지원하려면 워크스테이션 컴퓨터에 SQL Server 2008 R2 ADOMD.NET이 있어야 합니다. 이 클라이언트 라이브러리는 PowerPivot for Excel과 함께 설치되지만 이 애플리케이션이 없는 컴퓨터를 사용하는 경우에는 [SQL Server 2008 R2 기능 팩](http://go.microsoft.com/fwlink/?LinkId=192565)에서 ADOMD.NET을 다운로드하여 설치해야 합니다.  
+ 보고서 작성기에서 PowerPivot 통합 문서로의 연결을 지원하려면 워크스테이션 컴퓨터에 SQL Server 2008 R2 ADOMD.NET이 있어야 합니다. 이 클라이언트 라이브러리는 PowerPivot for Excel과 함께 설치되지만 이 애플리케이션이 없는 컴퓨터를 사용하는 경우에는 [SQL Server 2008 R2 기능 팩](https://go.microsoft.com/fwlink/?LinkId=192565)에서 ADOMD.NET을 다운로드하여 설치해야 합니다.  
   
 ## <a name="data-source-type"></a>데이터 원본 유형  
  보고서 데이터 원본 유형 **Microsoft SQL Server Analysis Services**를 사용합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "48166103"
   
  PowerPivot 통합 문서의 데이터는 고도로 압축되어 있으며 보고서에 대해 PowerPivot 통합 문서에서 검색된 데이터는 압축되지 않았습니다. 쿼리 디자이너를 사용하여 보고서에 필요한 데이터만 포함되도록 제한할 필터 및 매개 변수를 지정합니다.  
   
- Analysis Services 큐브에 연결하는 것과 달리 PowerPivot 모델에는 계층이 없습니다. 통합 문서의 관련 슬라이서에 유사한 기능을 제공하려면 보고서에서 연계된 매개 변수를 만들어야 합니다. 자세한 내용은 [보고서에 연계 매개 변수 추가 &#40;보고서 작성기 및 SSRS&#41;](../report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)합니다.  
+ Analysis Services 큐브에 연결하는 것과 달리 PowerPivot 모델에는 계층이 없습니다. 통합 문서의 관련 슬라이서에 유사한 기능을 제공하려면 보고서에서 연계된 매개 변수를 만들어야 합니다. 자세한 내용은 [보고서에 연계 매개 변수 추가&#40;보고서 작성기 및 SSRS&#41;](../report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)에서 만드는 모바일 보고서에서 보고서 매개 변수를 사용할 수 있습니다.  
   
  일부 경우에는 PowerPivot 모델의 기본 데이터 값을 수용하도록 식을 조정해야 할 수도 있습니다. 데이터를 올바른 데이터 형식으로 변환하거나 집계 함수를 추가 또는 제거하도록 식을 수정해야 할 수도 있습니다. 예를 들어 데이터 형식을 String에서 Integer로 변환하려면 `=CInt`를 사용합니다. 보고서를 게시하기 전에 PowerPivot 모델의 데이터에서 원하는 값이 보고서에 표시되는지 항상 확인하십시오.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48166103"
 -   보고서는 PowerPivot 데이터 원본의 PowerPivot 데이터만 포함합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services MDX 쿼리 디자이너 사용자 인터페이스 &#40;보고서 작성기&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
+ [Analysis Services MDX 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
  [식&#40;보고서 작성기 및 SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

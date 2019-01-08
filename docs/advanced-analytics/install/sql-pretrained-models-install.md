@@ -1,5 +1,5 @@
 ---
-title: 미리 학습 된 기계 학습 모델을 SQL Server 설치 | Microsoft Docs
+title: 미리 학습 된 기계 학습 모델-SQL Server Machine Learning 설치
 description: SQL Server 2017 Machine Learning Services (R 또는 Python) 또는 SQL Server 2016 R Services에 감정 분석 및 이미지 기능화 (featurization)에 대 한 미리 학습 된 모델을 추가 합니다.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b2dfee04a7c0c9c39b7969551a85a49d441f30e5
-ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
+ms.openlocfilehash: 901ab45ea727ec03a439f07ac2b4a971c98060f2
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39216834"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645442"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>SQL Server에 대 한 모델을 학습 하는 미리 학습 된 기계를 설치 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -104,7 +104,7 @@ R 및 Python 모델에 대 한 설치 경로 다음과 같습니다.
 
 2. 명령 프롬프트에서 다음 R 스크립트에 붙여 넣습니다.
 
-    ```r
+    ```R
     # Create the data
     CustomerReviews <- data.frame(Review = c(
     "I really did not like the taste of it",
@@ -126,7 +126,7 @@ R 및 Python 모델에 대 한 설치 경로 다음과 같습니다.
 
 3. Enter 키를 눌러 감정 점수를 볼 수 있습니다. 출력은 다음과 같이 됩니다.
 
-    ```
+    ```R
     > sentimentScores
                                             Review SentimentScore
     1           I really did not like the taste of it      0.4617899
@@ -168,7 +168,7 @@ R 및 Python 모델에 대 한 설치 경로 다음과 같습니다.
 
 3. Enter 키를 눌러 점수를 인쇄 합니다. 출력은 다음과 같이 됩니다.
 
-    ```
+    ```python
     >>> print(sentiment_scores)
                                                 review    scores         eval
     0            I really did not like the taste of it  0.461790         BLAH

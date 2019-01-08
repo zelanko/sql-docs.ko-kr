@@ -16,15 +16,15 @@ ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3eb6bbc5a3c08ca8668219dd3a11354c2fed2ca8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0899922eb2cdec88e73901f14ebeb6dfe953622
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056513"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367216"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>SQL 실행 태스크의 매개 변수 및 반환 코드
-  SQL 문과 저장된 프로시저를 자주 사용 `input` 매개 변수를 `output` 매개 변수 및 반환 코드입니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 SQL 실행 태스크는 `Input`, `Output` 및 `ReturnValue` 매개 변수 유형을 지원합니다. 사용할를 `Input` 입력된 매개 변수의 형식을 `Output` 출력 매개 변수에 대 한 및 `ReturnValue` 에 대 한 코드를 반환 합니다.  
+  SQL 문과 저장 프로시저에서는 일반적으로 `input` 매개 변수, `output` 매개 변수 및 반환 코드를 사용합니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 SQL 실행 태스크는 `Input`, `Output` 및 `ReturnValue` 매개 변수 유형을 지원합니다. 입력 매개 변수에는 `Input` 유형, 출력 매개 변수에는 `Output` 유형, 반환 코드에는 `ReturnValue` 유형을 사용합니다.  
   
 > [!NOTE]  
 >  데이터 공급자가 지원하는 경우에만 SQL 실행 태스크에 매개 변수를 사용할 수 있습니다.  
@@ -54,10 +54,10 @@ ms.locfileid: "48056513"
   
 |연결 형식|매개 변수 표식|매개 변수 이름|SQL 명령 예|  
 |---------------------|----------------------|--------------------|-------------------------|  
-|ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|ADO|?|Param1, Param2, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<매개 변수 이름>|\@\<매개 변수 이름>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
-|ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|EXCEL 및 OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|ODBC|?|1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|EXCEL 및 OLE DB|?|0, 1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
 ### <a name="using-parameters-with-adonet-and-ado-connection-managers"></a>ADO.NET 및 ADO 연결 관리자의 매개 변수 사용  
  [!INCLUDE[vstecado](../includes/vstecado-md.md)] 및 ADO 연결 관리자에는 매개 변수를 사용하는 SQL 명령에 대한 특별한 요구 사항이 있습니다.  
@@ -76,29 +76,29 @@ ms.locfileid: "48056513"
  연결 관리자에서 사용하는 공급자에 따라 일부 OLE DB 데이터 형식이 지원되지 않을 수 있습니다. 예를 들어 Excel 드라이버는 제한된 데이터 형식 집합만 인식합니다. Excel 드라이버를 사용하는 Jet 공급자의 동작에 대한 자세한 내용은 [Excel Source](data-flow/excel-source.md)을 참조하십시오.  
   
 #### <a name="using-parameters-with-ole-db-connection-managers"></a>OLE DB 연결 관리자의 매개 변수 사용  
- SQL 실행 태스크에서 OLE DB 연결 관리자를 사용할 때는 태스크의 BypassPrepare 속성을 사용할 수 있습니다. 이 속성을 설정 해야 `true` SQL 실행 태스크에 매개 변수를 사용 하 여 SQL 문을 사용 하는 경우.  
+ SQL 실행 태스크에서 OLE DB 연결 관리자를 사용할 때는 태스크의 BypassPrepare 속성을 사용할 수 있습니다. SQL 실행 태스크에서 매개 변수가 있는 SQL 문을 사용하는 경우 이 속성을 `true`로 설정해야 합니다.  
   
  OLE DB 연결 관리자를 사용하는 경우 SQL 실행 태스크에서 OLE DB Provider를 통해 매개 변수 정보를 파생할 수 없으므로 매개 변수가 있는 하위 쿼리를 사용할 수 없습니다. 그러나 식을 사용하여 매개 변수 값을 쿼리 문자열로 연결하고 태스크의 SqlStatementSource 속성을 설정할 수 있습니다.  
   
 ##  <a name="Date_and_time_data_types"></a> 매개 변수를 사용 하 여 날짜 및 시간 데이터 형식  
   
 ### <a name="using-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>ADO.NET 및 ADO 연결 관리자의 날짜 및 시간 매개 변수 사용  
- 데이터를 읽을 때는 합니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 형식 `time` 및 `datetimeoffset`, 중 하나를 사용 하는 SQL 실행 태스크는 [!INCLUDE[vstecado](../includes/vstecado-md.md)] ADO 연결 관리자 추가 요구 사항은 또는:  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 형식인 `time` 및 `datetimeoffset` 데이터를 읽을 때는 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 또는 ADO 연결 관리자를 사용하는 SQL 실행 태스크에 다음과 같은 요구 사항이 추가로 적용됩니다.  
   
 -   에 대 한 `time` 데이터를 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자가이 데이터는 매개 변수 형식의 매개 변수에서 저장할 필요 `Input` 또는 `Output`, 및 데이터 형식이 `string`합니다.  
   
--   에 대 한 `datetimeoffset` 데이터는 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자에 다음 매개 변수 중 하나에 저장 될이 데이터가 필요 합니다.  
+-   `datetimeoffset` 데이터의 경우 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자를 사용하려면 다음과 같은 매개 변수 중 하나에 이 데이터가 저장되어야 합니다.  
   
     -   매개 변수 유형이 `Input`이고 데이터 형식이 `string`인 매개 변수  
   
-    -   매개 변수 형식이 매개 변수 `Output` 또는 `ReturnValue`, 및 데이터 형식이 `datetimeoffset`를 `string`, 또는 `datetime2`합니다. 데이터 형식이 있는 매개 변수를 선택 하는 경우 `string` 나 `datetime2`, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 데이터를 string 이나 datetime2로 변환 합니다.  
+    -   매개 변수 유형이 `Output` 또는 `ReturnValue`이고 데이터 형식이 `datetimeoffset`, `string` 또는 `datetime2`인 매개 변수. 데이터 형식이 `string` 또는 `datetime2`인 매개 변수를 선택하면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 데이터를 string 또는 datetime2로 변환합니다.  
   
 -   ADO 연결 관리자를 사용하려면 매개 변수 유형이 `time` 또는 `datetimeoffset`이고 데이터 형식이 `Input`인 매개 변수에 `Output` 또는 `adVarWchar` 데이터를 저장해야 합니다.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 형식 및 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 데이터 형식에 매핑하는 방법에 대한 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql) 및 [Integration Services 데이터 형식](data-flow/integration-services-data-types.md)을 참조하세요.  
   
 ### <a name="using-date-and-time-parameters-with-ole-db-connection-managers"></a>OLE DB 연결 관리자의 날짜 및 시간 매개 변수 사용  
- SQL 실행 태스크의 데이터에 대 한 특정 저장소 요구 사항이 OLE DB 연결 관리자를 사용 하는 경우는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 형식 `date`를 `time`, `datetime`를 `datetime2`, 및 `datetimeoffset`합니다. 이러한 데이터를 다음과 같은 매개 변수 유형 중 하나에 저장해야 합니다.  
+ OLE DB 연결 관리자를 사용하는 경우 SQL 실행 태스크에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 형식인 `date`, `time`, `datetime`, `datetime2` 및 `datetimeoffset` 데이터를 저장할 때 특수한 요구 사항이 적용됩니다. 이러한 데이터를 다음과 같은 매개 변수 유형 중 하나에 저장해야 합니다.  
   
 -   NVARCHAR 데이터 형식의 입력 매개 변수  
   
@@ -114,11 +114,11 @@ ms.locfileid: "48056513"
  적절한 입력 또는 출력 매개 변수에 데이터가 저장되지 않으면 패키지가 실패합니다.  
   
 ### <a name="using-date-and-time-parameters-with-odbc-connection-managers"></a>ODBC 연결 관리자의 날짜 및 시간 매개 변수 사용  
- SQL 실행 태스크 중 하나를 사용 하 여 데이터에 대 한 특정 저장소 요구 사항에 ODBC 연결 관리자를 사용 하는 경우는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 형식 `date`를 `time`, `datetime`를 `datetime2`, 또는 `datetimeoffset`합니다. 이러한 데이터를 다음과 같은 매개 변수 유형 중 하나에 저장해야 합니다.  
+ ODBC 연결 관리자를 사용하는 경우 SQL 실행 태스크에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 형식인 `date`, `time`, `datetime`, `datetime2` 또는 `datetimeoffset` 데이터를 저장할 때 특수한 요구 사항이 적용됩니다. 이러한 데이터를 다음과 같은 매개 변수 유형 중 하나에 저장해야 합니다.  
   
 -   SQL_WVARCHAR 데이터 형식의 `input` 매개 변수  
   
--   `output` 다음 표에 나열 된 적절 한 데이터 형식과 매개 변수입니다.  
+-   다음 표에 나와 있는 적절한 데이터 형식의 `output` 매개 변수  
   
     |`Output` 매개 변수 유형|날짜 데이터 형식|  
     |-------------------------------|--------------------|  
@@ -158,7 +158,7 @@ ms.locfileid: "48056513"
 |연결 형식|EXEC 구문|  
 |---------------------|-----------------|  
 |EXCEL 및 OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> ODBC 호출 구문에 대한 자세한 내용은 MSDN Library의 ODBC 프로그래머 참조에서 [프로시저 매개 변수](http://go.microsoft.com/fwlink/?LinkId=89462)항목을 참조하십시오.|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> ODBC 호출 구문에 대한 자세한 내용은 MSDN Library의 ODBC 프로그래머 참조에서 [프로시저 매개 변수](https://go.microsoft.com/fwlink/?LinkId=89462)항목을 참조하십시오.|  
 |ADO|IsQueryStoredProcedure로 설정 된 경우 `False`, `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> IsQueryStoredProcedure로 설정 된 경우 `True`, `uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|IsQueryStoredProcedure로 설정 된 경우 `False`, `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> IsQueryStoredProcedure로 설정 된 경우 `True`, `uspGetBillOfMaterials`|  
   
@@ -167,16 +167,16 @@ ms.locfileid: "48056513"
  Transact-SQL 저장 프로시저에서 입력 및 출력 매개 변수 사용에 대한 자세한 내용은 [EXECUTE&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql)를 참조하세요.  
   
 ##  <a name="Return_codes"></a> 반환 코드 값 가져오기  
- 저장 프로시저는 반환 코드라고 하는 정수 값을 반환하여 프로시저의 실행 상태를 나타낼 수 있습니다. 매개 변수를 사용 하면 SQL 실행 태스크에서 반환 코드를 구현 하는 `ReturnValue` 형식입니다.  
+ 저장 프로시저는 반환 코드라고 하는 정수 값을 반환하여 프로시저의 실행 상태를 나타낼 수 있습니다. SQL 실행 태스크에 반환 코드를 구현하려면 `ReturnValue` 유형의 매개 변수를 사용합니다.  
   
- 다음 표에서는 반환 코드를 구현하는 EXEC 명령의 몇 가지 예를 연결 유형별로 나열합니다. 모든 예에서는 `input` 매개 변수를 사용합니다. 매개 변수 표식과 매개 변수 이름을 사용 하는 방법에 대 한 규칙은 모든 매개 변수 유형에 대해 동일 —`Input`, `Output`, 및 `ReturnValue`합니다.  
+ 다음 표에서는 반환 코드를 구현하는 EXEC 명령의 몇 가지 예를 연결 형식별로 나열합니다. 모든 예에서는 `input` 매개 변수를 사용합니다. 매개 변수 표식과 매개 변수 이름을 사용 하는 방법에 대 한 규칙은 모든 매개 변수 형식-동일`Input`, `Output`, 및 `ReturnValue`합니다.  
   
  일부 구문은 매개 변수 리터럴을 지원하지 않습니다. 이러한 경우 변수를 사용하여 매개 변수 값을 제공해야 합니다.  
   
 |연결 형식|EXEC 구문|  
 |---------------------|-----------------|  
 |EXCEL 및 OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> ODBC 호출 구문에 대한 자세한 내용은 MSDN Library의 ODBC 프로그래머 참조에서 [프로시저 매개 변수](http://go.microsoft.com/fwlink/?LinkId=89462)항목을 참조하십시오.|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> ODBC 호출 구문에 대한 자세한 내용은 MSDN Library의 ODBC 프로그래머 참조에서 [프로시저 매개 변수](https://go.microsoft.com/fwlink/?LinkId=89462)항목을 참조하십시오.|  
 |ADO|IsQueryStoreProcedure로 설정 된 경우 `False`, `EXEC ? = myStoredProcedure 1`<br /><br /> IsQueryStoreProcedure로 설정 된 경우 `True`, `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Set IsQueryStoreProcedure로 설정 된 `True`합니다.<br /><br /> `myStoredProcedure`|  
   
@@ -198,11 +198,11 @@ ms.locfileid: "48056513"
   
 ## <a name="related-content"></a>관련 내용  
   
--   blogs.msdn.com의 블로그 항목 - [출력 매개 변수를 포함하는 저장 프로시저(Stored procedures with output parameters)](http://go.microsoft.com/fwlink/?LinkId=157786)  
+-   blogs.msdn.com의 블로그 항목 - [출력 매개 변수를 포함하는 저장 프로시저(Stored procedures with output parameters)](https://go.microsoft.com/fwlink/?LinkId=157786)  
   
--   msftisprodsamples.codeplex.com의 CodePlex 예제 - [SQL 실행 매개 변수 및 결과 집합(Execute SQL Parameters and Result Sets)](http://go.microsoft.com/fwlink/?LinkId=157863)  
+-   msftisprodsamples.codeplex.com의 CodePlex 예제 - [SQL 실행 매개 변수 및 결과 집합(Execute SQL Parameters and Result Sets)](https://go.microsoft.com/fwlink/?LinkId=157863)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL 실행 태스크](control-flow/execute-sql-task.md)   
  [SQL 실행 태스크의 결과 집합](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
   

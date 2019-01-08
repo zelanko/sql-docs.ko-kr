@@ -1,6 +1,6 @@
 ---
-title: SQL Server Machine Learning에 새로운 Python 패키지 설치 | Microsoft Docs
-description: SQL Server 2017 Machine Learning Services (In-database) 및 Machine Learning Server (독립 실행형)에 새로운 Python 패키지 추가
+title: 새 Python 언어 패키지-SQL Server Machine Learning 설치
+description: SQL Server 2017 Machine Learning Services (In-database) 및 Machine Learning Server (독립 실행형)에 새로운 Python 패키지를 추가 합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/10/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4e7ad9382f1e85bd5f816065116b5a52c6745c8b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fc038f94fc24b8c0f795efc18c62acc1656877a7
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697646"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432316"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server에 새로운 Python 패키지 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,11 +22,11 @@ ms.locfileid: "51697646"
 
 패키지 위치 및 설치 경로 대 한 자세한 내용은 참조 하세요. [가져오려면 R 또는 Python 패키지 정보](../r/determine-which-packages-are-installed-on-sql-server.md)합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 + [SQL Server 2017 Machine Learning Services (In-database)](../install/sql-machine-learning-services-windows-install.md) Python 언어 옵션을 사용 하 여 합니다. 
 
-+ 패키지에는 Windows에 Python 3.5 규정을 준수 하 고 실행할 수 있어야 합니다. 
++ 패키지에는 Windows에서 Python 3.5 준수 하 고 실행 해야 합니다. 
 
 + 서버에 대 한 관리 액세스는 패키지를 설치 해야 합니다.
 
@@ -45,13 +45,6 @@ ms.locfileid: "51697646"
 패키지 설치가 인스턴스당입니다. Machine Learning Services의 여러 인스턴스가 있는 경우에 각각에 패키지를 추가 해야 합니다.
 
 이 예제의 설치 패키지가 [CNTK](https://docs.microsoft.com/cognitive-toolkit/), Microsoft에서 사용자 지정을 지 원하는 다양 한 신경망의 공유 하 고 교육, 심층 학습을 위한 프레임 워크입니다.
-
-> [!TIP]
-> Python 도구를 구성 합니다. 도움이 필요 하세요? 이러한 블로그를 참조 하세요.
-> 
-> [Machine Learning Server를 사용 하 여 Python 웹 서비스를 시작 하기](https://blogs.msdn.microsoft.com/mlserver/2017/12/13/getting-started-with-python-web-services-using-machine-learning-server/)
-> 
-> [David Crook: Microsoft Cognitive Toolkit 및 VS 코드](https://dacrook.com/cntk-vs-code-awesome/)
 
 ### <a name="step-1-download-the-windows-version-of-the-python-package"></a>1단계. Windows 버전의 Python 패키지를 다운로드 합니다.
 
@@ -116,7 +109,7 @@ Successfully installed cntk-2.1
 
 설치가 완료 되 면 다음 단계에 설명 된 대로 패키지를 사용 하 여 바로 시작할 수 있습니다.
 
-CNTK를 사용 하 여 딥 러닝의 예로이 자습서를 참조 하세요. [CNTK Python API](https://cntk.ai/pythondocs/tutorials.html)
+CNTK를 사용 하 여 딥 러닝의 예로, 이러한 자습서를 참조 하세요. [CNTK Python API](https://cntk.ai/pythondocs/tutorials.html)
 
 스크립트에 패키지에서 함수를 사용 하려면 표준 삽입 `import <package_name>` 스크립트의 초기 줄에서 문:
 

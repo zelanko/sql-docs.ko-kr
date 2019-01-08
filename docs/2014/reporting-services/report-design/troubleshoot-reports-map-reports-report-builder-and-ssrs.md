@@ -1,5 +1,5 @@
 ---
-title: '보고서 문제 해결: 지도 보고서(보고서 작성기 및 SSRS) | Microsoft Docs'
+title: '보고서 문제 해결: 지도 보고서 (보고서 작성기 및 SSRS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c4ac3f5504aef33661afd7c94cec2b63b0b64f0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 1c9a3adeb3e63c24aa7a78f5a44f1cd2692ce2b7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197415"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375345"
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>보고서 문제해결: 지도 보고서(보고서 작성기 및 SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>보고서 문제 해결: 지도 보고서(보고서 작성기 및 SSRS)
   보고서의 지도 문제는 지도나 지도 계층을 보고서에 추가하거나, 보고서에서 기존 지도 또는 지도 계층을 사용자 지정하거나, 보고서에서 지도를 미리 보거나, 지도가 포함된 보고서를 게시하는 경우 발생할 수 있습니다. 이 항목에서는 이러한 문제를 해결하는 데 유용한 정보를 제공합니다.  
   
 > [!NOTE]  
@@ -173,7 +173,7 @@ ms.locfileid: "48197415"
 -   자세한 내용은 [규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경&#40;보고서 작성기 및 SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)를 참조하세요.  
   
 ### <a name="what-is-the-value-nan-on-the-color-scale"></a>색 범위에 있는 NaN 값의 의미  
- `NaN` Not a Number의 약자입니다. 색 눈금 값은 숫자로 예상됩니다. 색 눈금과 연결된 규칙의 범례 텍스트 값과 분포 설정을 확인합니다. 사용자 지정 분포 범위를 만든 경우 첫 번째 범위에서 하한을 지정하고 마지막 범위에서 상한을 지정했는지 확인합니다.  
+ `NaN`은 Not a Number(숫자가 아님)의 약어입니다. 색 눈금 값은 숫자로 예상됩니다. 색 눈금과 연결된 규칙의 범례 텍스트 값과 분포 설정을 확인합니다. 사용자 지정 분포 범위를 만든 경우 첫 번째 범위에서 하한을 지정하고 마지막 범위에서 상한을 지정했는지 확인합니다.  
   
 ### <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>보고서를 실행할 때 색 눈금이 표시되지 않음  
  지도 계층이 전체 계층이나 포함된 지도 요소에 대한 다각형, 선 또는 점의 색 규칙을 지정하는 경우 색 눈금은 사용자에게 정보를 표시합니다. 지도 요소가 색 규칙을 지정하지 않거나 색 규칙이 색 지도 대신 범례를 사용하여 지정되는 경우 색 지도가 렌더링된 보고서에 표시되지 않습니다.  
@@ -194,7 +194,7 @@ ms.locfileid: "48197415"
   
 -   지도 도법이 **메르카토르**여야 합니다.  
   
--   로컬 미리 보기의 경우 인터넷에 액세스할 수 있어야 합니다. 보고서 서버에서 실행되는 보고서의 경우 보고서 서버가 타일 배경을 지원하도록 구성되어 있어야 합니다. 자세한 내용은 SQL Server 온라인 설명서의 [Reporting Services 설명서](http://go.microsoft.com/fwlink/?linkid=121312) 에서 "지도 지원 계획"을 참조하십시오.  
+-   로컬 미리 보기의 경우 인터넷에 액세스할 수 있어야 합니다. 보고서 서버에서 실행되는 보고서의 경우 보고서 서버가 타일 배경을 지원하도록 구성되어 있어야 합니다. 자세한 내용은 SQL Server 온라인 설명서의 [Reporting Services 설명서](https://go.microsoft.com/fwlink/?linkid=121312) 에서 "지도 지원 계획"을 참조하십시오.  
   
  타일 계층에 대한 자세한 내용은 [지도 또는 지도 계층 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)를 참조하세요.  
   

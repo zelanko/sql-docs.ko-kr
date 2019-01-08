@@ -1,6 +1,6 @@
 ---
-title: 동적 관리 뷰 (Dmv)를 사용 하 여 SQL Server Machine Learning Services 모니터링 | Microsoft Docs
-description: 동적 관리 뷰 (Dmv)를 사용 하 여 SQL Server Machine Learning Services를 모니터링 합니다.
+title: 동적 관리 뷰 (Dmv)-SQL Server Machine Learning을 사용 하 여 R 및 Python 스크립트 실행을 모니터링
+description: 동적 관리 뷰 (Dmv)를 사용 하 여 SQL Server Machine Learning Services에서 R 및 Python 외부 스크립트 실행을 모니터링 합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/29/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: aa05c78f8bac4af5187b815126e0ec9e4b6fff4e
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: 0d07288bccc641f67644a37cd027e093fc3967c8
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743456"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645552"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>동적 관리 뷰 (Dmv)를 사용 하 여 SQL Server Machine Learning Services 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -45,8 +45,8 @@ SQL server에서 machine learning 워크 로드를 모니터링 하는 경우 �
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | 실행 | 외부 스크립트를 실행 중인 각 활성 작업자 계정 행을 반환합니다. |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | 실행 | 외부 스크립트 요청의 각 유형에 대해 하나의 행을 반환합니다. |
 | [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | 실행 | 서버에서 유지되는 각 성능 카운터에 대해 행을 반환합니다. 검색 조건을 사용 하는 경우 `WHERE object_name LIKE '%External Scripts%'`,이 정보를 사용 하 여 얼마나 많은 스크립트 실행에 인증 모드 또는 얼마나 많은 R을 사용 하 여 스크립트 실행 또는 전체 인스턴스에서 실행 된 Python 호출 합니다. |
-| [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) | 관리 | 리소스 관리자에서 리소스 풀 및 리소스 풀 통계의 현재 구성을 현재 외부 리소스 풀 상태에 대 한 정보를 반환합니다. |
-| [sys.dm_resource_governor_external_resource_pool_affinity](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md) | 관리 | 리소스 관리자의 현재 외부 리소스 풀 구성에 대 한 CPU 선호도 정보를 반환합니다. 각 스케줄러가 개별 프로세서에 매핑되는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]의 스케줄러당 하나의 행을 반환합니다. 이 뷰를 사용하여 스케줄러 상태를 모니터링하거나 런어웨이 태스크를 식별할 수 있습니다. |
+| [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) | 리소스 관리자 | 리소스 관리자에서 리소스 풀 및 리소스 풀 통계의 현재 구성을 현재 외부 리소스 풀 상태에 대 한 정보를 반환합니다. |
+| [sys.dm_resource_governor_external_resource_pool_affinity](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md) | 리소스 관리자 | 리소스 관리자의 현재 외부 리소스 풀 구성에 대 한 CPU 선호도 정보를 반환합니다. 각 스케줄러가 개별 프로세서에 매핑되는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]의 스케줄러당 하나의 행을 반환합니다. 이 뷰를 사용하여 스케줄러 상태를 모니터링하거나 런어웨이 태스크를 식별할 수 있습니다. |
 
 모니터링에 대 한 자세한 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 인스턴스를 참조 하세요 [카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) 하 고 [리소스 관리자 관련 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)합니다.
 
@@ -58,7 +58,7 @@ Machine Learning 서비스 설치 설정 및 구성 옵션을 확인 합니다.
 
 이 출력을 가져오려면 다음 쿼리를 실행 합니다. 보기 및 사용 되는 함수에 대 한 자세한 내용은 참조 하세요. [sys.dm_server_registry](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)를 [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md), 및 [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)합니다.
 
-```SQL
+```sql
 SELECT CAST(SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS INT) AS IsMLServicesInstalled
     , CAST(value_in_use AS INT) AS ExternalScriptsEnabled
     , COALESCE(SIGN(SUSER_ID(CONCAT (
@@ -93,7 +93,7 @@ WHERE name = 'external scripts enabled';
 
 이 출력을 가져오려면 다음 쿼리를 실행 합니다. 사용 되는 동적 관리 뷰에 대 한 자세한 내용은 참조 하세요. [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)하십시오 [sys.dm_external_script_requests](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md), 및 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)합니다.
 
-```SQL
+```sql
 SELECT r.session_id, r.blocking_session_id, r.status, DB_NAME(s.database_id) AS database_name
     , s.login_name, r.wait_time, r.wait_type, r.last_wait_type, r.total_elapsed_time, r.cpu_time
     , r.reads, r.logical_reads, r.writes, er.language, er.degree_of_parallelism, er.external_user_name
@@ -133,7 +133,7 @@ R 및 Python에 대 한 외부 런타임 실행 통계를 보고 합니다. Micr
 
 이 출력을 가져오려면 다음 쿼리를 실행 합니다. 사용 되는 동적 관리 뷰에 대 한 자세한 내용은 참조 하세요. [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)합니다. 쿼리는만 한 번 실행 된 함수를 반환 합니다.
 
-```SQL
+```sql
 SELECT language, counter_name, counter_value
 FROM sys.dm_external_script_execution_stats
 WHERE counter_value > 0
@@ -156,7 +156,7 @@ ORDER BY language, counter_name;
 
 이 출력을 가져오려면 다음 쿼리를 실행 합니다. 사용 되는 동적 관리 뷰에 대 한 자세한 내용은 참조 하세요. [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)합니다.
 
-```SQL
+```sql
 SELECT counter_name, cntr_value
 FROM sys.dm_os_performance_counters 
 WHERE object_name LIKE '%External Scripts%'
@@ -182,7 +182,7 @@ OS, SQL Server 및 외부 풀을 사용 하는 메모리에 대 한 정보를 �
 
 이 출력을 가져오려면 다음 쿼리를 실행 합니다. 사용 되는 동적 관리 뷰에 대 한 자세한 내용은 참조 하세요. [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) 하 고 [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)합니다.
 
-```SQL
+```sql
 SELECT physical_memory_kb, committed_kb
     , (SELECT SUM(peak_memory_kb)
         FROM sys.dm_resource_governor_external_resource_pools AS ep
@@ -200,13 +200,13 @@ FROM sys.dm_os_sys_info;
 
 ## <a name="memory-configuration"></a>메모리 구성
 
-SQL Server 및 외부 리소스 풀의 백분율로 최대 메모리 구성에 대 한 정보를 봅니다. SQL Sever의 기본값을 사용 하 여 실행 중인 경우 `max server memory (MB)`, OS 메모리의 100%로 간주 됩니다.
+SQL Server 및 외부 리소스 풀의 백분율로 최대 메모리 구성에 대 한 정보를 봅니다. 기본값을 사용 하 여 SQL Server를 실행 하는 경우 `max server memory (MB)`, OS 메모리의 100%로 간주 됩니다.
 
 ![메모리 구성 쿼리에서 출력](media/dmv-memory-configuration.png "메모리 구성 쿼리에서 출력")
 
 이 출력을 가져오려면 다음 쿼리를 실행 합니다. 사용 되는 보기에 대 한 자세한 내용은 참조 하세요. [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 하 고 [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)합니다.
 
-```SQL
+```sql
 SELECT 'SQL Server' AS name
     , CASE CAST(c.value AS BIGINT)
         WHEN 2147483647 THEN 100
@@ -234,7 +234,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 이 출력을 가져오려면 다음 쿼리를 실행 합니다. 사용 되는 동적 관리 뷰에 대 한 자세한 내용은 참조 하세요. [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) 하 고 [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)합니다.
 
-```SQL
+```sql
 SELECT CONCAT ('SQL Server - ', p.name) AS pool_name
     , p.total_cpu_usage_ms, p.read_io_completed_total, p.write_io_completed_total
 FROM sys.dm_resource_governor_resource_pools AS p
@@ -265,7 +265,7 @@ SQL Server Machine Learning Services에 설치 된 R 패키지를 봅니다.
 
 이 출력을 가져오려면 다음 쿼리를 실행 합니다. 쿼리 사용 하 여 R 패키지를 확인 하려면 R 스크립트를 SQL Server를 사용 하 여 설치 합니다.
 
-```SQL
+```sql
 EXEC sp_execute_external_script @language = N'R'
 , @script = N'
 OutputDataSet <- data.frame(installed.packages()[,c("Package", "Version", "Depends", "License", "LibPath")]);'
@@ -291,7 +291,7 @@ SQL Server Machine Learning Services에 설치 된 Python 패키지를 봅니다
 
 이 출력을 가져오려면 다음 쿼리를 실행 합니다. SQL Server를 사용 하 여 설치 된 Python 패키지를 확인 하는 Python 스크립트를 사용 하는 쿼리 합니다.
 
-```SQL
+```sql
 EXEC sp_execute_external_script @language = N'Python'
 , @script = N'
 import pip

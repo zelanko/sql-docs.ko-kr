@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 helpviewer_keywords:
 - queries [WMI]
@@ -18,12 +16,12 @@ ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 16bf7df8d4c20db8f2598259af296824df3eeade
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 18c4b6448438ebb8c95f999569d51edfecf04206
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182083"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375828"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>서버 이벤트용 WMI 공급자에 WQL 사용
   관리 응용 프로그램은 서버 이벤트용 WMI 공급자를 통해 WQL(WMI Query Language) 문을 실행하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트에 액세스합니다. WQL은 몇 가지 WMI 관련 확장 기능이 포함된 SQL(구조적 쿼리 언어)의 단순화된 일부입니다. WQL을 사용할 경우 응용 프로그램은 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스, 데이터베이스 또는 데이터베이스 개체(현재 지원되는 유일한 개체는 큐임)에 대해 이벤트 유형을 검색합니다. 쿼리 또는 데이터베이스 범위 또는 개체 범위 이벤트 알림에 대 한 대상 데이터베이스에서 만든 이벤트 알림을를 변환 하는 서버 이벤트 용 WMI 공급자를 **마스터** 서버 범위 이벤트에 대 한 데이터베이스 알림입니다.  
@@ -50,7 +48,7 @@ CREATE EVENT NOTIFICATION SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9
 GO  
 ```  
   
- WQL 쿼리(`FROM`)의 `DDL_DATABASE_LEVEL_EVENTS` 절에 있는 인수는 이벤트 알림을 만들 수 있는 유효한 모든 이벤트일 수 있습니다. `SELECT` 및 `WHERE` 절의 인수는 이벤트 또는 해당 부모 이벤트와 연결된 이벤트 속성을 지정할 수 있습니다. 유효한 이벤트 및 이벤트 속성의 목록을 참조 하세요 [Event Notifications (Database Engine)](http://technet.microsoft.com/library/ms182602.aspx)합니다.  
+ WQL 쿼리(`FROM`)의 `DDL_DATABASE_LEVEL_EVENTS` 절에 있는 인수는 이벤트 알림을 만들 수 있는 유효한 모든 이벤트일 수 있습니다. `SELECT` 및 `WHERE` 절의 인수는 이벤트 또는 해당 부모 이벤트와 연결된 이벤트 속성을 지정할 수 있습니다. 유효한 이벤트 및 이벤트 속성의 목록을 참조 하세요 [Event Notifications (Database Engine)](https://technet.microsoft.com/library/ms182602.aspx)합니다.  
   
  서버 이벤트용 WMI 공급자가 명시적으로 지원하는 WQL 구문은 다음과 같습니다. 추가 WQL 구문을 지정할 수도 있지만 해당 구문은 이 공급자와 관련이 없으며 대신 WMI 호스트 서비스에 의해 구문 분석됩니다. WMI 쿼리 언어에 대한 자세한 내용은 MSDN(Microsoft Developer Network)의 WQL 설명서를 참조하십시오.  
   
@@ -74,7 +72,7 @@ WHERE where_condition
  이벤트와 관련된 모든 속성이 쿼리되도록 지정합니다.  
   
  *event_type*  
- 이벤트 알림을 만들 수 있는 모든 이벤트입니다. 사용 가능한 이벤트 목록을 참조 하세요 [Server 이벤트 클래스 및 속성에 대 한 WMI 공급자](http://technet.microsoft.com/library/ms186449.aspx)합니다. 사실은 *이벤트 유형을* 이름은 동일 하 게 해당 *event_type* | *event_group* 수동으로 이벤트 알림을 만들 때 지정할 수 있습니다 CREATE EVENT NOTIFICATION을 사용 하 여 예가 *이벤트 유형을* 포함 CREATE_TABLE, LOCK_DEADLOCK, DDL_USER_EVENTS 및 trc_database가 있습니다.  
+ 이벤트 알림을 만들 수 있는 모든 이벤트입니다. 사용 가능한 이벤트 목록을 참조 하세요 [Server 이벤트 클래스 및 속성에 대 한 WMI 공급자](https://technet.microsoft.com/library/ms186449.aspx)합니다. 사실은 *이벤트 유형을* 이름은 동일 하 게 해당 *event_type* | *event_group* 수동으로 이벤트 알림을 만들 때 지정할 수 있습니다 CREATE EVENT NOTIFICATION을 사용 하 여 예가 *이벤트 유형을* 포함 CREATE_TABLE, LOCK_DEADLOCK, DDL_USER_EVENTS 및 trc_database가 있습니다.  
   
 > [!NOTE]  
 >  DDL과 같은 작업을 수행하는 특정 시스템 저장 프로시저에서 이벤트 알림이 발생할 수도 있습니다. 이벤트 알림을 테스트하여 실행된 시스템 저장 프로시저에 대한 응답을 확인합니다. 예를 들어 CREATE TYPE 문 및 **sp_addtype** 저장된 프로시저 모두 CREATE_TYPE 이벤트에서 생성 되는 이벤트 알림을 발생 합니다. 그러나 합니다 **sp_rename** 저장된 프로시저 이벤트 알림을 발생 하지 않습니다. 자세한 내용은[DDL 이벤트](../triggers/ddl-events.md)합니다.  
@@ -109,7 +107,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
   
  하는 경우 `SchemaName='X' AND ObjectType='Y' AND ObjectName='Z'` 를 모두 지정 합니다 `WHERE` 절을 시도 하는 개체에 직접 이벤트 알림이 등록 됩니다 `Z` 스키마에서 `X`합니다. 클라이언트에 사용 권한이 있으면 등록이 성공합니다. 현재 개체 수준 이벤트는 지원 큐에 대해서만 하 고 QUEUE_ACTIVATION 동안만 *event_type*합니다.  
   
- 임의의 특정 범위에서 모든 이벤트를 쿼리할 수는 없습니다. 예를 들어 Lock_Deadlock과 같은 추적 이벤트나 TRC_LOCKS와 같은 추적 이벤트 그룹의 WQL 쿼리는 서버 수준에서만 등록할 수 있습니다. 이와 유사하게, CREATE_ENDPOINT 이벤트 및 DDL_ENDPOINT_EVENTS 이벤트 그룹도 서버 수준에서만 등록할 수 있습니다. 이벤트 등록에 대 한 적절 한 범위에 대 한 자세한 내용은 참조 하세요. [이벤트 알림 디자인](http://technet.microsoft.com/library/ms175854\(v=sql.105\).aspx)합니다. WQL을 등록 하려고 시도 하는 쿼리 갖는 *event_type* 만 등록할 수 있습니다 서버 수준 항상 변경 됩니다 서버 수준에서. WMI 클라이언트에 사용 권한이 있으면 등록이 성공합니다. 그렇지 않으면 오류가 클라이언트에 반환됩니다. 하지만 경우에 따라 이벤트에 해당하는 속성을 기반으로 WHERE 절을 서버 수준 이벤트의 필터로 사용할 수 있습니다. 예를 들어 많은 추적 이벤트에는 WHERE 절에 필터로 사용할 수 있는 `DatabaseName` 속성이 있습니다.  
+ 임의의 특정 범위에서 모든 이벤트를 쿼리할 수는 없습니다. 예를 들어 Lock_Deadlock과 같은 추적 이벤트나 TRC_LOCKS와 같은 추적 이벤트 그룹의 WQL 쿼리는 서버 수준에서만 등록할 수 있습니다. 이와 유사하게, CREATE_ENDPOINT 이벤트 및 DDL_ENDPOINT_EVENTS 이벤트 그룹도 서버 수준에서만 등록할 수 있습니다. 이벤트 등록에 대 한 적절 한 범위에 대 한 자세한 내용은 참조 하세요. [이벤트 알림 디자인](https://technet.microsoft.com/library/ms175854\(v=sql.105\).aspx)합니다. WQL을 등록 하려고 시도 하는 쿼리 갖는 *event_type* 만 등록할 수 있습니다 서버 수준 항상 변경 됩니다 서버 수준에서. WMI 클라이언트에 사용 권한이 있으면 등록이 성공합니다. 그렇지 않으면 오류가 클라이언트에 반환됩니다. 하지만 경우에 따라 이벤트에 해당하는 속성을 기반으로 WHERE 절을 서버 수준 이벤트의 필터로 사용할 수 있습니다. 예를 들어 많은 추적 이벤트에는 WHERE 절에 필터로 사용할 수 있는 `DatabaseName` 속성이 있습니다.  
   
  서버 범위 이벤트 알림의 만들어집니다는 **마스터** 데이터베이스를 사용 하 여 메타 데이터를 쿼리할 수는 [sys.server_event_notifications](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql) 카탈로그 뷰.  
   
@@ -118,7 +116,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
 ## <a name="examples"></a>예  
   
 ### <a name="a-querying-for-events-at-the-server-scope"></a>1. 서버 범위에서 이벤트 쿼리  
- 다음 WQL 쿼리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 발생하는 `SERVER_MEMORY_CHANGE` 추적 이벤트의 모든 이벤트 속성을 검색합니다.  
+ 다음 WQL 쿼리는 `SERVER_MEMORY_CHANGE` 인스턴스에서 발생하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 추적 이벤트의 모든 이벤트 속성을 검색합니다.  
   
 ```  
 SELECT * FROM SERVER_MEMORY_CHANGE  
@@ -141,8 +139,8 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
     AND ObjectType='Table' AND ObjectName = 'SalesOrderDetail'  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [용 WMI 공급자 서버 이벤트 개념](http://technet.microsoft.com/library/ms180560.aspx)   
- [이벤트 알림 (데이터베이스 엔진)](http://technet.microsoft.com/library/ms182602.aspx)  
+## <a name="see-also"></a>관련 항목:  
+ [용 WMI 공급자 서버 이벤트 개념](https://technet.microsoft.com/library/ms180560.aspx)   
+ [이벤트 알림 (데이터베이스 엔진)](https://technet.microsoft.com/library/ms182602.aspx)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: 01b54e6f-66e5-485c-acaa-3f9aa53119c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1af27b0571ef073a5ada2937b93b6cc0487974d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: c3d385ae733c44e403ba9de412c0c2a3e0eacd3c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143750"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365555"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>SharePoint 2010에서 PowerPivot 데이터 새로 고침
   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 데이터 새로 고침은 예약된 서버 쪽 작업으로서, 외부 데이터 원본을 쿼리하여 콘텐츠 라이브러리에 저장된 Excel 2010 통합 문서의 포함된 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 데이터를 업데이트합니다.  
@@ -30,23 +30,23 @@ ms.locfileid: "48143750"
  **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] SharePoint Server 2013 Excel Services 데이터 새로 고침에 다른 아키텍처를 사용 하 고 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 데이터 모델입니다. 새로운 아키텍처는 Excel Services를 기본 구성 요소로 사용하여 PowerPivot 데이터 모델을 로드합니다. 이전에 사용한 데이터 새로 고침 아키텍처는 PowerPivot 시스템 서비스와 SharePoint 모드의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 사용하여 데이터 모델을 로드했습니다. 자세한 내용은 [SharePoint 2013을 사용 하 여 PowerPivot 데이터 새로 고침](power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md)합니다.  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 및 SharePoint Server 2013 Excel Services에서는 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 데이터 모델의 데이터 새로 고침에 다른 아키텍처를 사용합니다. 새로운 아키텍처는 Excel Services를 기본 구성 요소로 사용하여 PowerPivot 데이터 모델을 로드합니다. 이전에 사용한 데이터 새로 고침 아키텍처는 PowerPivot 시스템 서비스와 SharePoint 모드의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 사용하여 데이터 모델을 로드했습니다. 자세한 내용은 [SharePoint 2013을 사용 하 여 PowerPivot 데이터 새로 고침](power-pivot-sharepoint/power-pivot-data-refresh-with-sharepoint-2013.md)합니다.  
   
  **항목 내용**  
   
  [1 단계: Secure Store Service 사용 및 마스터 키 생성](#bkmk_services)  
   
- [2 단계: 기능을 지원 하지 않으려는 경우 자격 증명 옵션 해제](#bkmk_creds)  
+ [2단계: 지원 하지 않으려는 경우 자격 증명 옵션 해제](#bkmk_creds)  
   
  [3 단계: 데이터 새로 고침에 사용 되는 자격 증명을 저장할 대상 응용 프로그램 만들기](#bkmk_stored)  
   
- [4 단계: 확장 가능한 데이터 새로 고침에 대 한 서버를 구성 합니다.](#bkmk_scale)  
+ [4 단계: 확장 가능한 데이터 새로 고침에 대 한 서버 구성](#bkmk_scale)  
   
- [5 단계: PowerPivot 데이터를 가져오는 데 사용 하는 데이터 공급자를 설치 합니다.](#bkmk_installdp)  
+ [5 단계: PowerPivot 데이터를 가져오는 데 사용 되는 데이터 공급자 설치](#bkmk_installdp)  
   
  [6 단계: 일정을 만들고 외부 데이터 원본에 액세스 하는 권한 부여](#bkmk_accounts)  
   
- [7 단계: 데이터 새로 고침에 대 한 통합 문서 업그레이드 사용](#bkmk_upgradewrkbk)  
+ [7 단계: 데이터 새로 고침을 위해 통합 문서 업그레이드 사용](#bkmk_upgradewrkbk)  
   
  [8 단계: 데이터 새로 고침 구성 확인](#bkmk_verify)  
   
@@ -96,9 +96,9 @@ ms.locfileid: "48143750"
   
 15. **확인**을 클릭합니다.  
   
- 문제 해결에 유용한 Store Service 작업의 감사 로깅을 사용하려면 이 기능을 사용하도록 설정해야 합니다. 로깅을 사용하도록 설정하는 방법은 [Secure Store Service 구성(SharePoint 2010)](http://go.microsoft.com/fwlink/p/?LinkID=223294)을 참조하십시오.  
+ 문제 해결에 유용한 Store Service 작업의 감사 로깅을 사용하려면 이 기능을 사용하도록 설정해야 합니다. 로깅을 사용하도록 설정하는 방법은 [Secure Store Service 구성(SharePoint 2010)](https://go.microsoft.com/fwlink/p/?LinkID=223294)을 참조하십시오.  
   
-##  <a name="bkmk_creds"></a> 2 단계: 기능을 지원 하지 않으려는 경우 자격 증명 옵션 해제  
+##  <a name="bkmk_creds"></a> 2 단계: 지원하지 않으려는 자격 증명 옵션 해제  
  PowerPivot 데이터 새로 고침은 데이터 새로 고침 일정에 세 가지 자격 증명 옵션을 제공합니다. 통합 문서 소유자는 데이터 새로 고침을 예약할 때 이러한 옵션 중 하나를 선택하여 데이터 새로 고침 작업을 실행할 계정을 결정할 수 있습니다. 관리자는 일정 소유자가 사용할 수 있는 자격 증명 옵션을 결정할 수 있습니다.  
   
  데이터 새로 고침이 작동하려면 사용 가능한 옵션이 하나 이상 있어야 합니다.  
@@ -117,13 +117,13 @@ ms.locfileid: "48143750"
   
  ![SSAS_PPS_ScheduleDataRefreshCreds](media/ssas-pps-scheduledatarefreshcreds.gif "SSAS_PPS_ScheduleDataRefreshCreds")  
   
- 이 자격 증명 옵션은 기본적으로 사용하도록 설정되어 있습니다. 이 자격 증명 옵션을 사용하도록 설정하면 PowerPivot System Service에서 Secure Store Service에 일정 소유자가 입력한 사용자 이름 및 암호를 저장하는 대상 애플리케이션을 생성합니다. 이 명명 규칙을 사용 하 여 생성 된 대상 응용 프로그램이 만들어집니다: PowerPivotDataRefresh_\<guid >. 각 Windows 자격 증명 집합에 대해 하나의 대상 애플리케이션이 만들어집니다. PowerPivot System Service에서 소유하고 일정을 정의하는 사용자가 입력한 사용자 이름 및 암호를 저장하는 대상 애플리케이션이 이미 있는 경우에는 PowerPivot System Service에서 대상 애플리케이션을 만들지 않고 해당 대상 애플리케이션을 사용합니다.  
+ 이 자격 증명 옵션은 기본적으로 사용하도록 설정되어 있습니다. 이 자격 증명 옵션을 사용하도록 설정하면 PowerPivot System Service에서 Secure Store Service에 일정 소유자가 입력한 사용자 이름 및 암호를 저장하는 대상 애플리케이션을 생성합니다. 생성된 대상 응용 프로그램은 PowerPivotDataRefresh_\<guid >. 각 Windows 자격 증명 집합에 대해 하나의 대상 애플리케이션이 만들어집니다. PowerPivot System Service에서 소유하고 일정을 정의하는 사용자가 입력한 사용자 이름 및 암호를 저장하는 대상 애플리케이션이 이미 있는 경우에는 PowerPivot System Service에서 대상 애플리케이션을 만들지 않고 해당 대상 애플리케이션을 사용합니다.  
   
- 이 자격 증명 옵션을 사용할 경우의 가장 큰 이점은 사용 편의성과 단순성입니다. 대상 애플리케이션이 자동으로 만들어지므로 추가 작업이 최소화됩니다. 또한 일정 소유자(통합 문서를 만든 사람과 거의 동일함)의 자격 증명으로 데이터 새로 고침을 실행하면 권한 요구 사항 다운스트림이 간소화됩니다. 대부분 이 사용자에게는 대상 데이터베이스에 대한 권한이 이미 있습니다. 이 사람의 Windows 사용자 ID로 데이터 새로 고침을 실행하면 '현재 사용자'를 지정하는 모든 데이터 연결이 자동으로 작동합니다.  
+ 이 자격 증명 옵션을 사용할 경우의 가장 큰 이점은 사용 편의성과 단순성입니다. 대상 애플리케이션이 자동으로 만들어지므로 추가 작업이 최소화됩니다. 또한 일정 소유자(통합 문서를 만든 사람과 거의 동일함)의 자격 증명으로 데이터 새로 고침을 실행하면 권한 요구 사항 다운스트림이 간소화됩니다. 대부분 이 사용자에게는 대상 데이터베이스에 대한 권한이 이미 있습니다. 데이터 새로 고침이 실행이 사람의 Windows 사용자 id로 데이터를 지정 하는 연결 하는 경우 '현재 사용자' 자동으로 작동 합니다.  
   
  반면, 단점은 관리 기능이 제한된다는 것입니다. 대상 애플리케이션은 자동으로 만들어지지만 계정 정보가 변경될 때 자동으로 업데이트되거나 삭제되지 않습니다. 또한 암호 만료 정책으로 인해 이러한 대상 애플리케이션이 더 이상 사용되지 않게 될 수도 있습니다. 만료된 자격 증명을 사용하는 데이터 새로 고침 작업은 시작할 수 없습니다. 이 경우 일정 소유자는 데이터 새로 고침 일정에서 현재 사용자 이름 및 암호 값을 제공하여 자격 증명을 업데이트해야 합니다. 그러면 새 대상 애플리케이션이 만들어집니다. 시간이 지나면서 사용자가 데이터 새로 고침 일정에서 자격 증명 정보를 추가하고 수정함에 따라 시스템에서 유지되는 자동 생성된 대상 애플리케이션이 증가할 수 있습니다.  
   
- 현재 이러한 대상 애플리케이션이 활성 상태인지, 비활성 상태인지 확인할 방법은 없으며 특정 대상 애플리케이션을 해당 데이터 새로 고침 일정에 따라 역추적할 방법도 없습니다. 일반적으로 대상 애플리케이션은 독립적으로 유지해야 합니다. 대상 애플리케이션을 삭제하면 기존 데이터 새로 고침 일정이 중단될 수 있기 때문입니다. 현재 사용 중인 대상 애플리케이션을 삭제하면 데이터 새로 고침이 실패하고 통합 문서의 데이터 새로 고침 기록 페이지에 "대상 애플리케이션이 없습니다."라는 메시지가 나타납니다.  
+ 현재 이러한 대상 애플리케이션이 활성 상태인지, 비활성 상태인지 확인할 방법은 없으며 특정 대상 애플리케이션을 해당 데이터 새로 고침 일정에 따라 역추적할 방법도 없습니다. 일반적으로 대상 애플리케이션은 독립적으로 유지해야 합니다. 대상 애플리케이션을 삭제하면 기존 데이터 새로 고침 일정이 중단될 수 있기 때문입니다. 아직 사용 중인 대상 응용 프로그램을 삭제 하면 데이터 새로 고침 "대상 응용 프로그램 찾을 수 없습니다" 통합 문서의 데이터 새로 고침 기록 페이지에 나타나는 메시지와 함께 실패 합니다.  
   
  이 자격 증명 옵션을 사용하지 않도록 선택한 경우 PowerPivot 데이터 새로 고침을 위해 생성된 모든 대상 애플리케이션을 안전하게 삭제할 수 있습니다.  
   
@@ -139,14 +139,14 @@ ms.locfileid: "48143750"
   
      ![SSAS_PowerPivotDatarefreshOptions_AllowUser](media/ssas-powerpivotdatarefreshoptions-allowuser.gif "SSAS_PowerPivotDatarefreshOptions_AllowUser")  
   
-##  <a name="bkmk_stored"></a> 3 단계: 데이터 새로 고침에 사용 되는 자격 증명을 저장할 대상 응용 프로그램 만들기  
+##  <a name="bkmk_stored"></a> 3 단계: 데이터 새로 고침에 사용된 자격 증명을 저장할 대상 응용 프로그램 만들기  
  Secure Store Service가 구성되면 SharePoint 관리자는 대상 애플리케이션을 만들어 PowerPivot 무인 데이터 새로 고침 계정 또는 데이터 새로 고침 작업을 실행하거나 외부 데이터 원본에 연결하는 데 사용할 다른 계정의 자격 증명을 비롯하여 저장된 자격 증명을 데이터 새로 고침 작업에 사용할 수 있게 설정할 수 있습니다.  
   
  이전 섹션에서 특정 자격 증명 옵션을 다시 사용하려면 대상 애플리케이션을 만들어야 한다는 점을 설명했습니다. 특히, PowerPivot 무인 데이터 새로 고침 계정에 대한 대상 애플리케이션을 만들고 이후 데이터 새로 고침 작업에서 사용할 수 있도록 저장해야 할 추가 자격 증명을 만들어야 합니다.  
   
  저장 된 자격 증명을 포함 하는 대상 응용 프로그램을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [PowerPivot 무인 데이터 새로 고침 계정 구성 &#40;SharePoint 용 PowerPivot&#41; ](configure-unattended-data-refresh-account-powerpivot-sharepoint.md) 하 고 [ PowerPivot 데이터 새로 고침에 대 한 저장 된 자격 증명 구성 &#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)합니다.  
   
-##  <a name="bkmk_scale"></a> 4 단계: 확장 가능한 데이터 새로 고침에 대 한 서버를 구성 합니다.  
+##  <a name="bkmk_scale"></a> 4 단계: 확장 가능한 데이터 새로 고침을 위한 서버 구성  
  기본적으로 각 SharePoint용 PowerPivot 설치에서는 요청 시 쿼리와 예약된 데이터 새로 고침을 둘 다 지원합니다.  
   
  각 설치에 대해 Analysis Services 서버 인스턴스에서 쿼리와 예약된 데이터 새로 고침을 둘 다 지원할지, 아니면 인스턴스가 특정 유형의 작업에만 사용되도록 할지 지정할 수 있습니다. 팜에 설치된 SharePoint용 PowerPivot이 여러 개인 경우 데이터 새로 고침 작업이 지연되거나 실패할 때를 대비하여 데이터 새로 고침 작업 전용 서버를 두는 것이 좋을 수 있습니다.  
@@ -155,15 +155,15 @@ ms.locfileid: "48143750"
   
  자세한 내용은 [Query-Only 처리 또는 구성 전용 데이터 새로 고침 &#40;SharePoint 용 PowerPivot&#41;](configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md)합니다.  
   
-##  <a name="bkmk_installdp"></a> 5 단계: PowerPivot 데이터를 가져오는 데 사용 하는 데이터 공급자를 설치 합니다.  
+##  <a name="bkmk_installdp"></a> 5 단계: PowerPivot 데이터를 가져오는 데 사용되는 데이터 공급자 설치  
  데이터 새로 고침 작업은 기본적으로 원래 데이터를 검색하는, 반복되는 가져오기 작업입니다. 즉, PowerPivot 클라이언트 애플리케이션에서 데이터를 가져오는 데 사용되는 것과 동일한 데이터 공급자가 PowerPivot 서버에도 설치되어 있어야 합니다.  
   
  Windows 서버에 데이터 공급자를 설치하려면 로컬 관리자여야 합니다. 추가 드라이버를 설치하려는 경우 SharePoint용 PowerPivot이 설치되어 있는 SharePoint 팜의 각 컴퓨터에 설치해야 합니다. 팜에 PowerPivot 서버가 여러 대 있는 경우 각 서버에 공급자를 설치해야 합니다.  
   
  SharePoint 서버는 64비트 애플리케이션입니다. 데이터 새로 고침 작업을 지원하려면 사용 중인 데이터 공급자의 64비트 버전을 설치해야 합니다.  
   
-##  <a name="bkmk_accounts"></a> 6 단계: 일정을 만들고 외부 데이터 원본에 액세스 하는 권한 부여  
- 통합 문서 소유자 또는 만든 이가 통합 문서에서 데이터 새로 고침을 예약하려면 **참가** 권한이 있어야 합니다. 이 권한 수준이 제공되면 통합 문서의 데이터 새로 고침 구성 페이지를 열고 편집하여 데이터 새로 고침에 사용되는 자격 증명 및 일정 정보를 지정할 수 있습니다.  
+##  <a name="bkmk_accounts"></a> 6 단계: 일정을 만들고 외부 데이터 원본에 액세스할 수 있는 권한 부여  
+ 통합 문서 소유자 또는 만든 이가 통합 문서에서 데이터 새로 고침을 예약하려면 **참가** 권한이 있어야 합니다. 이 권한 수준은 들어 자신이 열고 편집할 수 있습니다 일정 데이터 새로 고침 하는 데 사용 되는 정보 및 자격 증명을 지정 하는 통합 문서의 데이터 새로 고침 구성 페이지입니다.  
   
  SharePoint 사용 권한 외에 외부 데이터 원본에 대한 데이터베이스 권한도 검토하여 데이터 새로 고침 중에 사용되는 계정에 데이터에 대한 액세스 권한이 있는지 확인해야 합니다. 부여해야 하는 권한은 통합 문서의 연결 문자열 및 데이터 새로 고침 작업을 실행하는 사용자 ID에 따라 다르므로 권한 요구 사항을 결정할 때는 신중하게 평가해야 합니다.  
   
@@ -171,11 +171,11 @@ ms.locfileid: "48143750"
   
  데이터 새로 고침이 실행되면 서버에서 데이터를 처음 가져올 때 만든 연결 문자열을 사용하여 외부 데이터 원본에 연결 요청을 보냅니다. 그런 다음 데이터 새로 고침 중에 이 연결 문자열에 지정된 서버 위치, 데이터베이스 이름 및 인증 매개 변수를 다시 사용하여 동일한 데이터 원본에 액세스합니다. 연결 문자열과 해당 전체 구성은 데이터 새로 고침을 위해 수정할 수 없습니다. 연결 문자열은 데이터 새로 고침 중에 있는 그대로 재사용됩니다. 경우에 따라 Windows 인증 이외의 인증을 사용하여 데이터 원본에 연결한 경우 연결 문자열에서 사용자 이름과 암호를 재정의할 수 있습니다. 여기에 대한 자세한 내용은 이 항목의 뒷부분에 제공되어 있습니다.  
   
- 대부분의 통합 문서에서는 연결에 대한 기본 인증 옵션으로 트러스트된 연결 또는 Windows 통합 보안을 사용하므로 연결 문자열에 `SSPI=IntegratedSecurity` 또는 `SSPI=TrustedConnection`이 포함됩니다. 이 연결 문자열이 데이터 새로 고침 중에 사용된 경우 데이터 새로 고침 작업을 실행하는 데 사용되는 계정이 '현재 사용자'가 됩니다. 따라서 이 계정에는 트러스트된 연결을 통해 액세스되는 모든 외부 데이터 원본에 대한 읽기 권한이 있어야 합니다.  
+ 대부분의 통합 문서에서는 연결에 대한 기본 인증 옵션으로 트러스트된 연결 또는 Windows 통합 보안을 사용하므로 연결 문자열에 `SSPI=IntegratedSecurity` 또는 `SSPI=TrustedConnection`이 포함됩니다. 데이터 새로 고침 하는 동안이 연결 문자열을 사용 하면 데이터 새로 고침 작업을 실행 하는 데 사용한 계정이 '현재 사용자' 됩니다. 따라서 이 계정에는 트러스트된 연결을 통해 액세스되는 모든 외부 데이터 원본에 대한 읽기 권한이 있어야 합니다.  
   
  **PowerPivot 사용 하면 무인된 데이터 새로 고침 계정?**  
   
- 그렇다면 해당 계정에 데이터를 새로 고치는 동안 액세스할 수 있는 데이터 원본에 대한 읽기 권한을 부여해야 합니다. 이 계정에 읽기 권한이 필요한 이유는 기본 인증 옵션을 사용하는 통합 문서에서는 무인 계정이 데이터를 새로 고치는 동안 '현재 사용자'가 되기 때문입니다. 일정 소유자가 연결 문자열에서 자격 증명을 재정의하지 않는 한 이 계정에는 조직에서 자주 사용되는 모든 데이터 원본에 대한 읽기 권한이 필요합니다.  
+ 그렇다면 해당 계정에 데이터를 새로 고치는 동안 액세스할 수 있는 데이터 원본에 대한 읽기 권한을 부여해야 합니다. 이 계정에 읽기 권한을 이기 때문에 기본 인증 옵션을 사용 하는 통합 문서에서 무인된 계정 '현재 사용자' 데이터 중 필요 이유 이유를 새로 고칩니다. 일정 소유자가 연결 문자열에서 자격 증명을 재정의하지 않는 한 이 계정에는 조직에서 자주 사용되는 모든 데이터 원본에 대한 읽기 권한이 필요합니다.  
   
  **자격 증명 옵션 2: Windows 사용자 이름 및 암호를 입력할 경우 일정 소유자?**  
   
@@ -225,7 +225,7 @@ ms.locfileid: "48143750"
   
  데이터에 액세스해야 하는 계정을 이해한 후에는 PowerPivot 통합 문서에서 가장 자주 사용되는 데이터 원본에 대한 사용 권한을 확인할 수 있습니다. 자주 사용되는 데이터 웨어하우스 또는 보고 데이터베이스부터 시작하되, 활성 PowerPivot 사용자의 입력을 요청하여 이들이 사용 중인 데이터 원본도 확인합니다. 데이터 원본 목록이 확보되면 하나씩 검사하여 사용 권한이 올바르게 설정되었는지 확인할 수 있습니다.  
   
-##  <a name="bkmk_upgradewrkbk"></a> 7 단계: 데이터 새로 고침에 대 한 통합 문서 업그레이드 사용  
+##  <a name="bkmk_upgradewrkbk"></a> 7 단계: 데이터 새로 고침을 위해 통합 문서 업그레이드 사용  
  기본적으로 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 버전의 PowerPivot for Excel을 사용하여 만든 통합 문서는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 버전의 SharePoint용 PowerPivot에서 예약된 데이터 새로 고침에 맞게 구성할 수 없습니다. SharePoint 환경에서 이후 버전 또는 이전 버전의 PowerPivot 통합 문서를 호스팅하는 경우 서버에서 자동 데이터 새로 고침을 위해 예약하려면 먼저 모든 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 통합 문서를 업그레이드해야 합니다.  
   
 ##  <a name="bkmk_verify"></a> 8 단계: 데이터 새로 고침 구성 확인  
@@ -235,7 +235,7 @@ ms.locfileid: "48143750"
   
  지원하려는 모든 자격 증명 옵션을 시도해야 합니다. 예를 들어 PowerPivot 무인 데이터 새로 고침 계정을 구성한 경우 해당 옵션을 사용하여 데이터 새로 고침을 성공적으로 완료할 수 있는지 확인합니다. 일정 및 상태 정보를 확인 하는 방법에 대 한 자세한 내용은 참조 하세요. [데이터 새로 고침 예약 &#40;SharePoint 용 PowerPivot&#41; ](schedule-a-data-refresh-powerpivot-for-sharepoint.md) 하 고 [데이터 새로 고침 기록 보기 &#40;SharePoint 용 PowerPivot &#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md).  
   
- 데이터 새로 고침에 실패한 경우 가능한 해결 방안에 대한 자세한 내용은 TechNet Wiki에서 [PowerPivot 데이터 새로 고침 문제 해결](http://go.microsoft.com/fwlink/?LinkID=223279) 페이지를 참조하십시오.  
+ 데이터 새로 고침에 실패한 경우 가능한 해결 방안에 대한 자세한 내용은 TechNet Wiki에서 [PowerPivot 데이터 새로 고침 문제 해결](https://go.microsoft.com/fwlink/?LinkID=223279) 페이지를 참조하십시오.  
   
 ##  <a name="bkmk_config"></a> 데이터 새로 고침에 대 한 구성 설정을 수정 합니다.  
  각 PowerPivot 서비스 애플리케이션에는 데이터 새로 고침 작업에 영향을 주는 구성 설정이 포함됩니다. 이 섹션에서는 이러한 설정을 수정하는 방법에 대해 설명합니다.  

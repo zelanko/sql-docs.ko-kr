@@ -20,16 +20,16 @@ ms.assetid: 01f4590f-427a-4280-a1c3-18de9f7d86c1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a41829e9cb1f905c82e7cd5f8b179e5e1f777741
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70fe1ca95f5160f801eaf3528e625116705eda6d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771681"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203812"
 ---
 # <a name="sqlgetenvattr-function"></a>SQLGetEnvAttr 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 3.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 3.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLGetEnvAttr** 환경 특성의 현재 설정을 반환 합니다.  
@@ -50,7 +50,7 @@ SQLRETURN SQLGetEnvAttr(
  *EnvironmentHandle*  
  [입력] 환경 핸들입니다.  
   
- *Attribute*  
+ *특성*  
  [입력] 검색할 특성입니다.  
   
  *ValuePtr*  
@@ -88,7 +88,7 @@ SQLRETURN SQLGetEnvAttr(
   
  **SQLGetEnvAttr** 할당 하 고 환경 핸들을 해제 간에 언제 든 호출할 수 있습니다. 모든 환경 특성을 환경에 대 한 응용 프로그램에서 성공적으로 설정 될 때까지 지속 **SQLFreeHandle** 라고 하는 *EnvironmentHandle* 사용 하 여를 *HandleType*SQL_HANDLE_ENV입니다. 둘 이상의 환경 핸들이 ODBC 3에 동시에 할당할 수 있습니다 *.x*합니다. 다른 환경에 할당 된 환경 특성 환경에 영향을 주지 않습니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  SQL_ATTR_OUTPUT_NTS 환경 특성은 표준 호환 응용 프로그램에서 지원 됩니다. 때 **SQLGetEnvAttr** 호출 되는 ODBC 3 *.x* 드라이버 관리자는 항상 SQL_TRUE이이 특성을 반환 합니다. 호출 하 여만 SQL_ATTR_OUTPUT_NTS SQL_TRUE로 설정할 수 있습니다 **SQLSetEnvAttr**합니다.  
   
 ## <a name="related-functions"></a>관련 함수  
@@ -101,6 +101,6 @@ SQLRETURN SQLGetEnvAttr(
 |환경 특성 설정|[SQLSetEnvAttr 함수](../../../odbc/reference/syntax/sqlsetenvattr-function.md)|  
 |문 특성 설정|[SQLSetStmtAttr 함수](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

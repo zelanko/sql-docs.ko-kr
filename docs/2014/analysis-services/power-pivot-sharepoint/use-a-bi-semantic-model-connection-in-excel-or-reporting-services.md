@@ -11,12 +11,12 @@ ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fae71e74f2c8498b537f1d93d951de76f5625094
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 1356eeaabf8de5d406e7fbc11d86cbb043f64be2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123543"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366295"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Excel 또는 Reporting Services에서 BI 의미 체계 모델 연결 사용
   이 항목에서는 다른 항목의 지침을 사용하여 만든 BI 의미 체계 모델 연결을 사용하는 방법에 대해 설명합니다. BI 의미 체계 모델을 아직 만들지 않은 경우 [PowerPivot 통합 문서에 BI 의미 체계 모델 연결 만들기](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) 하 고 [테이블 형식 모델 데이터베이스에 BI 의미 체계 모델 연결 만들기](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)합니다.  
@@ -46,9 +46,9 @@ ms.locfileid: "48123543"
   
 5.  마지막 페이지에서 이름 및 설명을 제공할 수 있습니다. **마침**을 클릭하고 데이터 가져오기 대화 상자에서 **확인** 을 클릭하여 데이터를 가져옵니다.  
   
- 연결에 성공하려면 Excel 2010 및 MSOLAP.5.dll이 클라이언트 컴퓨터에 설치되어 있어야 합니다. 버전의 PowerPivot for Excel이이 릴리스에 현재 사용할을 설치 하 여 공급자를 가져올 수 있습니다 또는에서 Analysis Services OLE DB 공급자를 다운로드할 수 있습니다 합니다 [기능 팩 다운로드 페이지](http://go.microsoft.com/fwlink/?linkid=214066)합니다.  
+ 연결에 성공하려면 Excel 2010 및 MSOLAP.5.dll이 클라이언트 컴퓨터에 설치되어 있어야 합니다. 버전의 PowerPivot for Excel이이 릴리스에 현재 사용할을 설치 하 여 공급자를 가져올 수 있습니다 또는에서 Analysis Services OLE DB 공급자를 다운로드할 수 있습니다 합니다 [기능 팩 다운로드 페이지](https://go.microsoft.com/fwlink/?linkid=214066)합니다.  
   
- MSOLAP.5.dll이 최신 버전 인지를 확인 하려면 확인 `HKEY_CLASSES_ROOT\MSOLAP` 레지스트리에서 합니다. `CurVer` MSOLAP.5로 설정 되어야 합니다.  
+ MSOLAP.5.dll이 최신 버전인지 확인하려면 레지스트리에서 `HKEY_CLASSES_ROOT\MSOLAP`을(를) 확인합니다. `CurVer`이 MSOLAP.5로 설정되어 있어야 합니다.  
   
  또한 SharePoint에서 BI 의미 체계 모델 파일에 대한 읽기 권한도 있어야 합니다. 읽기 권한에는 다운로드 권한이 포함됩니다. Excel에서는 SharePoint에서 BI 의미 체계 모델 연결 정보를 다운로드하고 `HTTP Get`을 통해 데이터베이스에 직접 연결합니다. BI 의미 체계 모델 연결 정보가 로컬로 저장되면 연결 요청이 SharePoint를 통해 전달되지 않습니다.  
   

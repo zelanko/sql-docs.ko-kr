@@ -1,18 +1,20 @@
 ---
-title: SQL Server 2019 빅 데이터 클러스터에 대 한 릴리스 | Microsoft Docs
-description: 이 문서에서는 최신 업데이트 및 SQL Server 2019 (미리 보기) 빅 데이터 클러스터에 대 한 알려진된 문제를 설명 합니다.
+title: 릴리스 정보
+titleSuffix: SQL Server 2019 big data clusters
+description: 이 문서에서는 최신 업데이트 및 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에 대 한 알려진된 문제를 설명 합니다.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: b39b7ff732d068214e257061d7fbf60015070985
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 8c9c57e641c76f78bf66565cc8e1ce8f67323b7e
+ms.sourcegitcommit: 3f19c843b38d3835d07921612f0143620eb9a0e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221679"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53709816"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>SQL Server 2019 빅 데이터 클러스터에 대 한 릴리스 정보
 
@@ -20,11 +22,80 @@ ms.locfileid: "51221679"
 
 | 릴리스 | Date |
 |---|---|
+| [CTP 2.2](#ctp22) | 2018 년 12 월 |
 | [CTP 2.1](#ctp21) | 2018 년 11 월 |
 | [CTP 2.0](#ctp20) | 2018 년 10 월 |
 
-
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+
+## <a id="ctp22"></a> CTP 2.2 (2018 년 12 월)
+
+다음 섹션에서는 새로운 기능 및 SQL Server 2019 CTP 2.2에서 빅 데이터 클러스터에 대해 알려진된 문제를 설명합니다.
+
+### <a name="whats-in-the-ctp-22-release"></a>CTP 2.2 릴리스에서 란?
+
+- 사용 하 여 클러스터 관리 포털에 액세스할 `/portal` (**https://\<ip 주소\>: 30777/포털**).
+- 마스터 풀 서비스 이름을 변경할 `service-master-pool-lb` 하 고 `service-master-pool-nodeport` 에 `endpoint-master-pool`입니다.
+- 새 버전의 **mssqlctl** 이미지를 업데이트 합니다.
+- 기타 버그 수정 및 개선 합니다.
+
+### <a name="known-issues"></a>알려진 문제
+
+다음 섹션에서는 CTP 2.2에서 SQL Server 빅 데이터 클러스터에 대해 알려진된 문제를 제공합니다.
+
+#### <a name="deployment"></a>배포
+
+- 이전 릴리스에서 빅 데이터 데이터 클러스터를 업그레이드 하는 것은 지원 되지 않습니다. 백업 하 고 최신 릴리스를 배포 하기 전에 모든 기존 빅 데이터 클러스터를 삭제 해야 합니다. 자세한 내용은 [새 릴리스로 업그레이드](deployment-guidance.md#upgrade)합니다.
+
+- AKS를 배포한 후 배포에서 다음 두 경고 이벤트를 볼 수 있습니다. 이러한 이벤트는 알려진 문제, 있지만 AKS에서 빅 데이터 클러스터를 성공적으로 배포를 방지 하지 않습니다.
+
+   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
+
+   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
+
+- 빅 데이터 클러스터 배포에 실패 하면 연결된 된 네임 스페이스 제거 되지 않습니다. 이 클러스터에서 분리 된 네임 스페이스를 발생할 수 있습니다. 동일한 이름 사용 하 여 클러스터를 배포 하기 전에 네임 스페이스를 수동으로 삭제 됩니다.
+
+#### <a name="cluster-administration-portal"></a>클러스터 관리 포털
+
+클러스터 관리 포털에서 마스터 SQL Server 인스턴스에 대 한 끝점을 표시 하지 않습니다. 마스터 인스턴스에 대 한 IP 주소 및 포트를 찾으려면 다음 사용 **kubectl** 명령:
+
+```
+kubectl get svc endpoint-master-pool -n <your-cluster-name>
+```
+
+#### <a name="external-tables"></a>외부 테이블
+
+- 지원 되지 않는 열 형식에는 테이블에 대 한 데이터 풀 외부 테이블을 만들 가능성이 있습니다. 외부 테이블을 쿼리 하는 경우 메시지가 다음과 비슷합니다.
+
+   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
+
+- 저장소 풀 외부 테이블을 쿼리 하는 경우 오류가 발생할 수 있습니다는 동시에 기본 파일은 HDFS에 복사 되는 경우.
+
+   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+#### <a name="spark-and-notebooks"></a>Spark 및 notebook
+
+- POD IP 주소는 Pod 다시 시작으로 Kubernetes 환경에서 변경 될 수 있습니다. 마스터 pod를 다시 시작 되는 시나리오에서 Spark 세션을 사용 하 여 못할 `NoRoteToHostException`합니다. 이 새 IP를 사용 하 여 새로 고쳐지는 가져오기 하지 JVM 캐시 주소입니다.
+
+- Windows에 이미 설치 된 Jupyter 및 별도 Python을 있다면 Spark 노트북 실패할 수 있습니다. 이 문제를 해결 하려면 Jupyter를 최신 버전으로 업그레이드 합니다.
+
+- 노트북을 클릭할 경우에 **텍스트 추가** 명령, 텍스트 셀이 편집 모드 보다는 미리 보기 모드에서 추가 됩니다. 편집 모드에 있고 셀을 편집 하 여 전환한 다음 미리 보기 아이콘을 클릭할 수 있습니다.
+
+#### <a name="hdfs"></a>HDFS
+
+- 미리 HDFS의 파일을 마우스 오른쪽 단추로 클릭 하는 경우 다음 오류가 표시 될 수 있습니다.
+
+   `Error previewing file: File exceeds max size of 30MB`
+
+   현재는 Azure Data Studio에서 30 MB 보다 큰 파일을 미리 볼 수 없습니다.
+
+- 구성 변경 내용은 hdfs-site.xml 변경 내용을 포함 하는 HDFS에 지원 되지 않습니다.
+
+#### <a name="security"></a>보안
+
+- SA_PASSWORD는 (예: 코드 덤프 파일)의 일부 환경의 및 검색할 수입니다. 배포 후 마스터 인스턴스에서 SA_PASSWORD 다시 설정 해야 합니다. 이 변경은 버그 아니라 보안 단계입니다. Linux 컨테이너에서 SA_PASSWORD 변경 하는 방법에 대 한 자세한 내용은 참조 하세요. [SA 암호 변경](../linux/quickstart-install-connect-docker.md#sapassword)합니다.
+
+- AKS 로그는 빅 데이터 클러스터 배포에 대 한 SA 암호를 포함할 수 있습니다.
 
 ## <a id="ctp21"></a> CTP 2.1 (2018 년 11 월)
 

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], SQL Server Agent
@@ -16,12 +16,12 @@ ms.assetid: de920425-fa44-469f-b83d-49e3f97e97f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e6369fc45ffd26bf28064735c23a1d9d7f75e37c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 798d9f09bcfa2c9f73b0b70b795ebb53cfb97a79
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073813"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823067"
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>SQL Server 에이전트 오류 로그 보기(SQL Server Management Studio)
   이 항목에서는  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에이전트 오류 로그를 보는 방법에 대해 설명합니다.  
@@ -99,7 +99,7 @@ ms.locfileid: "48073813"
      **인스턴스**  
      이벤트가 발생한 인스턴스의 이름입니다. 이 이름은 *컴퓨터 이름*\\*인스턴스 이름*으로 표시됩니다.  
   
-     **날짜**  
+     **Date**  
      이벤트의 날짜를 표시합니다.  
   
      **원본**  

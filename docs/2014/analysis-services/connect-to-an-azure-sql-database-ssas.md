@@ -13,20 +13,20 @@ ms.assetid: 4e0344e9-1822-4698-ad22-05f1f341ced7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2b81207d2cb045b330560c652e98b2488aad421b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 94a830bba0339262148a0a7f826f3bcb89371274
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149213"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372895"
 ---
 # <a name="connect-to-an-azure-sql-database-ssas"></a>Azure SQL Database에 연결(SSAS)
   **테이블 가져오기 마법사**의 이 페이지에서는 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]에 연결할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
   
 > [!NOTE]  
->  Azure DataMarket 데이터 집합에 연결할 경우 [보고서 또는 데이터 피드에 연결&#40;SSAS&#41;](connect-to-a-report-or-data-feed-ssas.md)을 참조하세요.  
+>  Azure DataMarket 데이터 세트에 연결할 경우 [보고서 또는 데이터 피드에 연결&amp;#40;SSAS&amp;#41;](connect-to-a-report-or-data-feed-ssas.md)을 참조하세요.  
   
- [!INCLUDE[ssSDS](../includes/sssds-md.md)] 는 SQL Server 인증을 사용하여 연결하는 호스팅된 관계형 데이터베이스입니다. [!INCLUDE[ssSDS](../includes/sssds-md.md)]에 대한 자세한 내용은 [SQL 데이터베이스](http://go.microsoft.com/fwlink/?LinkID=157856)웹 사이트를 참조하세요. 데이터 원본에 연결하려면 컴퓨터에 적절한 공급자를 설치해야 합니다.  
+ [!INCLUDE[ssSDS](../includes/sssds-md.md)] 는 SQL Server 인증을 사용하여 연결하는 호스팅된 관계형 데이터베이스입니다. [!INCLUDE[ssSDS](../includes/sssds-md.md)]에 대한 자세한 내용은 [SQL 데이터베이스](https://go.microsoft.com/fwlink/?LinkID=157856)웹 사이트를 참조하세요. 데이터 원본에 연결하려면 컴퓨터에 적절한 공급자를 설치해야 합니다.  
   
 > [!NOTE]  
 >  이 페이지에서 데이터베이스를 선택하는 경우 현재 사용자의 자격 증명이 사용됩니다. 하지만 가장 정보 페이지에 지정된 사용자에게 선택한 데이터베이스를 읽을 수 있는 권한이 없는 경우에는 가져오기 작업이 실패합니다.  

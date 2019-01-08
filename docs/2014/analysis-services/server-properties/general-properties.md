@@ -39,12 +39,12 @@ ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2ad086a7d6ee677fc54241f45d1dbe81e5c4c2d5
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
-ms.translationtype: HT
+ms.openlocfilehash: b854692aa00d953ebd8de783104869b784115277
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905763"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369145"
 ---
 # <a name="general-properties"></a>일반 속성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 표에 나열된 서버 속성을 사용할 수 있습니다. 이 항목에서는 msmdsrv.ini 파일의 서버 속성 중 보안, 네트워크, ThreadPool 등 특정 섹션에 포함되지 않은 속성에 대해 설명됩니다. 추가 서버 속성 및 해당 속성 설정 방법은 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)을 참조하세요.  
@@ -69,10 +69,10 @@ ms.locfileid: "48905763"
  `CommitTimeout`  
  서버가 트랜잭션을 커밋하기 위해 쓰기 잠금을 획득할 때까지 대기하는 시간(밀리초)을 지정하는 정수 속성입니다. 서버에서는 트랜잭션을 커밋하는 쓰기 잠금을 적용하기 전에 다른 잠금이 해제될 때까지 기다려야 하므로 대기 기간이 필요할 수 있습니다.  
   
- 이 속성의 기본값은 0으로 서버에서 무기한 대기함을 나타냅니다. 잠금 관련 속성에 대한 자세한 내용은 [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539)(SQL Server 2008 R2 Analysis Services 작업 가이드)를 참조하세요.  
+ 이 속성의 기본값은 0으로 서버에서 무기한 대기함을 나타냅니다. 잠금 관련 속성에 대한 자세한 내용은 [SQL Server 2008 R2 Analysis Services Operations Guide](https://go.microsoft.com/fwlink/?LinkID=225539)(SQL Server 2008 R2 Analysis Services 작업 가이드)를 참조하세요.  
   
  `CoordinatorBuildMaxThreads`  
- 파티션 인덱스를 작성하도록 할당된 최대 스레드 수를 정의하는 부호 있는 32비트 정수 속성입니다. 메모리 사용을 늘리는 대신 파티션 인덱싱 속도를 높이려면 이 값을 늘리십시오. 이 속성에 대한 자세한 내용은 [SQL Server 2008 R2 Analysis Services 작업 가이드](http://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오.  
+ 파티션 인덱스를 작성하도록 할당된 최대 스레드 수를 정의하는 부호 있는 32비트 정수 속성입니다. 메모리 사용을 늘리는 대신 파티션 인덱싱 속도를 높이려면 이 값을 늘리십시오. 이 속성에 대한 자세한 내용은 [SQL Server 2008 R2 Analysis Services 작업 가이드](https://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오.  
   
  `CoordinatorCancelCount`  
  내부 반복 횟수에 따라 Cancel 이벤트가 발생했는지 여부를 서버에서 검사하는 빈도를 정의하는 부호 있는 32비트 정수 속성입니다. 일반 성능 대신 Cancel 이벤트를 보다 자주 검사하려면 이 값을 줄이십시오.  
@@ -84,7 +84,7 @@ ms.locfileid: "48905763"
   
  테이블 형식 서버 모드에서는 `CoordinatorExecutionMode`가 무시됩니다.  
   
- 이 속성의 기본값은 -4로 프로세서당 4개의 병렬 작업으로 서버가 제한됩니다. 이 속성에 대한 자세한 내용은 [SQL Server 2008 R2 Analysis Services 작업 가이드](http://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오.  
+ 이 속성의 기본값은 -4로 프로세서당 4개의 병렬 작업으로 서버가 제한됩니다. 이 속성에 대한 자세한 내용은 [SQL Server 2008 R2 Analysis Services 작업 가이드](https://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오.  
   
  `CoordinatorQueryMaxThreads`  
  쿼리 해결 중 파티션 세그먼트당 최대 스레드 수를 정의하는 부호 있는 32비트 정수 속성입니다. 동시 사용자 수가 적을수록 메모리 사용량이 높은 대신 이 값을 높일 수 있습니다. 반대로 동시 사용자 수가 많으면 값을 줄여야 합니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "48905763"
  데이터가 저장되는 디렉터리의 이름을 식별하는 문자열 속성입니다.  
   
  `DeploymentMode`  
- Analysis Services 서버 인스턴스의 작업 컨텍스트를 결정합니다. 대화 상자, 메시지 및 설명서에서는 이 속성을 '서버 모드'라고 합니다. 이 속성은 Analysis Services를 설치할 때 선택한 서버 모드를 기준으로 SQLServer 설치 프로그램이 구성합니다. 이 속성을 내부 값으로만 간주하여 항상 설치 프로그램에서 지정한 값을 사용해야 합니다.  
+ Analysis Services 서버 인스턴스의 작업 컨텍스트를 결정합니다. 이 속성 대화 상자, 메시지 및 설명서의 '서버 모드로' 이라고 합니다. 이 속성은 Analysis Services를 설치할 때 선택한 서버 모드를 기준으로 SQLServer 설치 프로그램이 구성합니다. 이 속성을 내부 값으로만 간주하여 항상 설치 프로그램에서 지정한 값을 사용해야 합니다.  
   
  이 속성에 유효한 값은 다음과 같습니다.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "48905763"
 > [!NOTE]  
 >  이 이벤트에 의해 취소된 쿼리와 프로세스는 "`Server: The operation has been cancelled`"라는 오류 메시지를 보고합니다.  
   
- 이 속성에 대한 자세한 내용은 [SQL Server 2008 R2 Analysis Services 작업 가이드](http://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오.  
+ 이 속성에 대한 자세한 내용은 [SQL Server 2008 R2 Analysis Services 작업 가이드](https://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오.  
   
 > [!IMPORTANT]  
 >  `ForceCommitTimeout`은 큐브 처리 명령과 쓰기 저장 작업에 적용됩니다.  

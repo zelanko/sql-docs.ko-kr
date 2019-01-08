@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server]
@@ -14,15 +13,15 @@ ms.assetid: 65e2f424-1386-45a6-8912-bd053f434073
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e4bd5e87f611d88c0ad2c6ce3e3e95aeb2f0fffa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b3c24b5c3f86e26d8a98e0c1ec59e10e441c5cc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056493"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359235"
 ---
 # <a name="sql-server-database-engine"></a>SQL Server 데이터베이스 엔진
-  [!INCLUDE[ssDE](../includes/ssde-md.md)] 은 데이터 저장, 처리 및 보안 유지를 위한 핵심 서비스입니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 에서는 기업 내에서 가장 다루기 어려운 데이터 소비형 응용 프로그램에 대한 요구 사항을 충족하기 위해 액세스 제어 및 빠른 트랜잭션 처리를 제공합니다.  
+  [!INCLUDE[ssDE](../includes/ssde-md.md)] 은 데이터 저장, 처리 및 보안 유지를 위한 핵심 서비스입니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 에서는 기업 내에서 가장 다루기 어려운 데이터 소비형 애플리케이션에 대한 요구 사항을 충족하기 위해 액세스 제어 및 빠른 트랜잭션 처리를 제공합니다.  
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)] 을 사용하여 OLTP(온라인 트랜잭션 처리) 또는 OLAP(온라인 분석 처리) 데이터에 사용할 관계형 데이터베이스를 만들 수 있습니다. 이 과정에는 데이터를 저장할 테이블과 데이터 보기, 관리 및 보안을 위한 인덱스, 뷰, 저장 프로시저 등의 데이터베이스 개체를 만드는 작업이 포함됩니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 데이터베이스 개체를 관리하고 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]를 사용하여 서버 이벤트를 캡처할 수 있습니다.  
   
@@ -42,6 +41,6 @@ ms.locfileid: "48056493"
  ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [XQuery 참조](/sql/xquery/xquery-language-reference-sql-server)  
   
 ## <a name="see-also"></a>관련 항목  
- [SQL Server 리소스 센터](http://go.microsoft.com/fwlink/?LinkId=219676)  
+ [SQL Server 리소스 센터](https://go.microsoft.com/fwlink/?LinkId=219676)  
   
   

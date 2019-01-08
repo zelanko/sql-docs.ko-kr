@@ -16,12 +16,12 @@ ms.assetid: 36d78393-a54c-44b0-8709-7f003f44c27f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 532a9ae9b44b300cb8d75ea0ea45d24ad5827887
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fd38d33bf0ed5d074fe2784dfba38348342df98
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114773"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359685"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>Integration Services 서비스 구성(SSIS 서비스)
     
@@ -123,7 +123,7 @@ ms.locfileid: "48114773"
   
   
 > [!CAUTION]  
->  레지스트리 키를 잘못 편집하면 운영 체제를 다시 설치해야 하는 심각한 문제가 발생할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)]는 레지스트리를 잘못 편집하여 발생하는 문제에 대한 해결을 보증하지 않습니다. 레지스트리를 편집하기 전에 중요한 데이터를 백업하십시오. 레지스트리를 백업, 복원 및 편집하는 방법은 [!INCLUDE[msCoName](../includes/msconame-md.md)] 기술 자료 문서 [Microsoft Windows 레지스트리 설명](http://support.microsoft.com/kb/256986)을 참조하십시오.  
+>  레지스트리 키를 잘못 편집하면 운영 체제를 다시 설치해야 하는 심각한 문제가 발생할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 는 레지스트리를 잘못 편집하여 발생하는 문제에 대한 해결을 보증하지 않습니다. 레지스트리를 편집하기 전에 중요한 데이터를 백업하십시오. 레지스트리를 백업, 복원 및 편집하는 방법은 [!INCLUDE[msCoName](../includes/msconame-md.md)] 기술 자료 문서 [Microsoft Windows 레지스트리 설명](https://support.microsoft.com/kb/256986)을 참조하십시오.  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스는 시작될 때 구성 파일을 로드하므로 레지스트리 항목의 변경 내용을 적용하려면 서비스를 다시 시작해야 합니다.  
   

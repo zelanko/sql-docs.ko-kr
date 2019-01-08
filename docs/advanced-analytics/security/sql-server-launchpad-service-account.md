@@ -1,5 +1,5 @@
 ---
-title: SQL Server 실행 패드 서비스 계정 구성 | Microsoft Docs
+title: SQL Server 실행 패드 서비스 계정 구성-SQL Server Machine Learning 서비스
 description: SQL Server에 대 한 외부 스크립트 실행에 사용 되는 SQL Server 실행 패드 서비스 계정을 수정 하는 방법.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 8af27f3bc9fb3e5b602ef6ad5555d9bd8c6720ca
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: aa4d6c38423a805ef672761e3f202061ed842304
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419118"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596380"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>SQL Server 실행 패드 서비스 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,10 +64,12 @@ SQL Server 서비스를 실행하는 데 필요한 권한에 대한 자세한 �
 
 |**설정 이름**|**형식**|**설명**|
 |----|----|----|
-|작업\_정리\_ON\_종료|정수 |이 내부 설정 –이 값을 변경 하지 마십시오. </br></br>세션이 완료 된 후 각 외부 런타임 세션에 대해 생성 된 임시 작업 폴더를 정리할 해야 여부를 지정 합니다. 이 설정은 디버깅 작업에 유용합니다. </br></br>지원 되는 값은 **0** (해제) 또는 **1** (사용). </br></br>기본값은 1, 종료 시 의미 로그 파일이 제거 됩니다.|
-|추적\_수준|정수 |디버깅을 위해 MSSQLLAUNCHPAD 추적의 자세한 정도 수준을 구성 합니다. 이 LOG_DIRECTORY 설정에 의해 지정 된 경로에서 추적 파일을 영향을 줍니다. </br></br>지원 되는 값: **1** (오류), **2** (성능)에 **3** (경고), **4** (정보). </br></br>기본값은 1, 출력 오류만을 의미 합니다.|
+|작업\_정리\_ON\_종료|정수 |이 내부 설정-이 값을 변경 하지 마십시오. </br></br>세션이 완료 된 후 각 외부 런타임 세션에 대해 생성 된 임시 작업 폴더를 정리할 해야 여부를 지정 합니다. 이 설정은 디버깅 작업에 유용합니다. </br></br>지원 되는 값은 **0** (해제) 또는 **1** (사용). </br></br>기본값은 1, 종료 시 의미 로그 파일이 제거 됩니다.|
+|추적\_수준|정수 |디버깅을 위해 MSSQLLAUNCHPAD 추적의 자세한 정도 수준을 구성 합니다. 이 LOG_DIRECTORY 설정에 의해 지정 된 경로에서 추적 파일을 영향을 줍니다. </br></br>지원되는 값은 다음과 같습니다. **1** (오류), **2** (성능)에 **3** (경고), **4** (정보). </br></br>기본값은 1, 출력 오류만을 의미 합니다.|
 
 모든 설정은 별도 줄의 각 설정으로 키-값 쌍의 형식을 사용합니다. 예를 들어, 추적 수준을 변경 하는 줄 추가 `Default: TRACE_LEVEL=4`합니다.
+
+<a name="bkmk_EnforcePolicy"></a>
 
 ## <a name="enforcing-password-policy"></a>암호 정책 강제 적용
 
