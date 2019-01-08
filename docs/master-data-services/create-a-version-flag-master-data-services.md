@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - creating version flags [Master Data Services]
@@ -16,12 +15,12 @@ ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 161b7fdda7655c3111bef6b016e52db76106e82f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 894c27e89f2dc9be90c792b4cce8db5690a32863
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808331"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769596"
 ---
 # <a name="create-a-version-flag-master-data-services"></a>버전 플래그 만들기(Master Data Services)
 
