@@ -10,12 +10,12 @@ ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5b00513b2522d83605f1d8ee29c9dcf68a86f625
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 549efcd796d9cef721995b48fc5e7b3cc02403a7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154813"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354410"
 ---
 # <a name="restoring-from-backups-stored-in-windows-azure"></a>Microsoft Azure에 저장된 백업 복원
   이 항목에서는 Windows Azure Blob 저장소 서비스에 저장된 백업을 사용하여 데이터베이스를 복원할 때의 고려 사항에 대해 간단히 설명합니다. 이 내용은 URL에 대한 SQL Server 백업이나 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 사용하여 만들어진 백업에 적용됩니다.  
@@ -36,11 +36,11 @@ ms.locfileid: "48154813"
 -   복원 태스크는 SQL Server Management Studio를 사용하여 데이터베이스를 복원하는 데 사용됩니다. 이제 백업 미디어 페이지에 Windows Azure Blob 저장소 서비스에 저장된 백업 파일을 표시하는 **URL** 옵션이 포함됩니다. 저장소 계정 인증에 사용되는 SQL 자격 증명도 제공해야 합니다. **복원에 사용할 백업 세트** 표가 Windows Azure Blob 저장소의 사용 가능한 백업으로 채워집니다. 자세한 내용은 [SQL Server Management Studio를 사용하여 Windows Azure 저장소에서 복원](sql-server-backup-to-url.md#RestoreSSMS)을 참조하세요.  
   
 ### <a name="optimizing-restores"></a>복원 최적화  
- 복원 쓰기 시간을 줄이려면 SQL Server 사용자 계정에 **볼륨 유지 관리 작업 수행** 사용자 권한을 추가합니다. 자세한 내용은 [데이터베이스 파일 초기화](http://go.microsoft.com/fwlink/?LinkId=271622)를 참조하세요. 즉시 파일 초기화가 설정되었는데도 복원 속도가 느리면 데이터베이스가 백업된 인스턴스에서 로그 파일의 크기를 확인해야 합니다. 로그 크기가 매우 큰 경우(여러 GB) 복원 속도가 느려질 수 있습니다. 복원 중에 로그 파일이 초기화되어야 하며 여기에는 상당한 시간이 걸립니다.  
+ 복원 쓰기 시간을 줄이려면 SQL Server 사용자 계정에 **볼륨 유지 관리 작업 수행** 사용자 권한을 추가합니다. 자세한 내용은 [데이터베이스 파일 초기화](https://go.microsoft.com/fwlink/?LinkId=271622)를 참조하세요. 즉시 파일 초기화가 설정되었는데도 복원 속도가 느리면 데이터베이스가 백업된 인스턴스에서 로그 파일의 크기를 확인해야 합니다. 로그 크기가 매우 큰 경우(여러 GB) 복원 속도가 느려질 수 있습니다. 복원 중에 로그 파일이 초기화되어야 하며 여기에는 상당한 시간이 걸립니다.  
   
- 복원 시간을 단축하기 위해서는 압축된 백업을 사용하는 것이 좋습니다.  25GB를 초과하는 백업 크기에 대해서는 [AzCopy 유틸리티](http://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx) (영문)를 사용하여 로컬 드라이브로 다운로드한 후 복원을 수행하세요. 기타 백업 모범 사례 및 권장 사항에 대해서는 [URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결](sql-server-backup-to-url-best-practices-and-troubleshooting.md)을 참조하세요.  
+ 복원 시간을 단축하기 위해서는 압축된 백업을 사용하는 것이 좋습니다.  25GB를 초과하는 백업 크기에 대해서는 [AzCopy 유틸리티](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx) (영문)를 사용하여 로컬 드라이브로 다운로드한 후 복원을 수행하세요. 기타 백업 모범 사례 및 권장 사항에 대해서는 [URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결](sql-server-backup-to-url-best-practices-and-troubleshooting.md)을 참조하세요.  
   
- 추적 플래그 3051을 설정하여 복원을 수행할 때 자세한 로그를 생성할 수도 있습니다. 이 로그 파일은 로그 디렉터리에 배치되며 BackupToUrl-\<instancename>-\<dbname>-action-\<PID>.log 형식을 사용하여 이름이 지정됩니다. 로그 파일에는 문제 진단에 도움이 될 수 있는 시간을 비롯하여 각각의 Windows Azure Storage 왕복에 대한 정보가 포함됩니다.  
+ 추적 플래그 3051을 설정하여 복원을 수행할 때 자세한 로그를 생성할 수도 있습니다. 이 로그 파일은 로그 디렉터리에 배치되며 BackupToUrl-\<인스턴스 이름 >-\<dbname > 작업-\<PID >. 로그 합니다. 로그 파일에는 문제 진단에 도움이 될 수 있는 시간을 비롯하여 각각의 Windows Azure Storage 왕복에 대한 정보가 포함됩니다.  
   
 ### <a name="topics-on-performing-restore-operations"></a>복원 작업 수행에 대한 항목  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.registerserver.general.sqlce.f1
@@ -15,12 +15,12 @@ ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6480fc8aea74144ee54fd0c96e50fcbdd74e9cfb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8561eb723337530818f45c5a845f7b352b328653
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185503"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757965"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>새 등록된 서버 만들기(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 등록된 서버 구성 요소에 서버를 등록하여 자주 액세스하는 서버에 대한 연결 정보를 저장하는 방법에 대해 설명합니다. 서버는 연결 전이나 개체 탐색기에서 연결할 때 등록할 수 있습니다. 로컬 컴퓨터에 있는 서버 인스턴스를 등록하는 특별한 메뉴 옵션이 있습니다.  

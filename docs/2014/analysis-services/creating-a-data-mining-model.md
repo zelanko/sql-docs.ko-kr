@@ -20,12 +20,12 @@ ms.assetid: 804b7db3-1f6a-4f73-a81d-bbe02520d7c6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0375d2254a742149215d5e3328510d598f0fea3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d7efc9df277f609bf53ffb49f2253a937f45a4b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134795"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394466"
 ---
 # <a name="creating-a-data-mining-model"></a>데이터 마이닝 모델 만들기
   데이터 모델링은 데이터 마이닝의 단계를 작성할 수 있는 패턴 및 추세를 적용 하 여 *알고리즘* 데이터입니다. 이러한 패턴을 사용하여 나중에 분석하거나 예측할 수 있습니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "48134795"
  [클러스터 마법사 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)합니다.  
   
 ## <a name="detect-categories-analyze"></a>범주 검색(분석)  
- 합니다 **범주 검색** 도구를 사용 하면 데이터 집합을 추가 하 고 그룹의 데이터를 찾고 클러스터링을 적용 합니다. 이것은 추가 분석을 위해 유사성을 찾고 그룹을 만드는 데 유용합니다.  
+ 합니다 **범주 검색** 도구를 사용 하면 데이터 집합을 추가 하 고 그룹의 데이터를 찾고 클러스터링을 적용 합니다. 유사성을 찾고를 상세히 분석 하려면 그룹을 만들기 위한 유용 합니다.  
   
  합니다 **범주 검색** 도구 Microsoft 클러스터링 알고리즘을 사용 합니다.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "48134795"
   
  [예측 계산기 &#40;Excel 용 테이블 분석 도구&#41;](prediction-calculator-table-analysis-tools-for-excel.md)  
   
-## <a name="scenario-goal-seek-analyze"></a>시나리오: 목표 검색 (분석)  
+## <a name="scenario-goal-seek-analyze"></a>시나리오: 목표 검색(분석)  
  에 **목표 검색** 도구인 지정할 대상 값 및 도구에는 해당 대상에 맞게 변경 해야 하는 기본 요인이 식별 합니다. 예를 들어, 전화 만족도를 20% 증가시켜야 하는 경우 해당 모델을 통해 목표를 달성하기 위해 변경해야 하는 요소를 예측할 수 있습니다.  
   
  합니다 **목표 검색** 도구 Microsoft 로지스틱 회귀 알고리즘을 사용 합니다.  
@@ -125,7 +125,7 @@ ms.locfileid: "48134795"
   
  [목표 검색 시나리오 &#40;Excel 용 테이블 분석 도구&#41;](goal-seek-scenario-table-analysis-tools-for-excel.md)  
   
-## <a name="scenario-what-if-scenario-analyze"></a>시나리오: What-if 시나리오 (분석)  
+## <a name="scenario-what-if-scenario-analyze"></a>시나리오: 가상 시나리오(분석)  
  합니다 **가상 분석** 보완 도구는 **목표값 찾기** 도구입니다. 이 도구를 사용하여 변경하려는 값을 입력하면 모델에서 해당 변경을 통해 원하는 결과를 얻기에 충분한지 예측합니다. 예를 들어, 모델을 통해 전화 상담원을 한 명 더 추가하면 해당 시점에서 고객 만족도를 높일 수 있는지 유추할 수 있습니다.  
   
  합니다 **What-if** 도구 Microsoft 로지스틱 회귀 알고리즘을 사용 합니다.  
@@ -141,7 +141,7 @@ ms.locfileid: "48134795"
   
  [시장 바구니 분석 &#40;Excel 테이블 분석 도구&#41;](shopping-basket-analysis-table-analysistools-for-excel.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터 탐색 및 지우기](exploring-and-cleaning-data.md)   
  [모델 유효성 검사 및 예측 용 모델 사용 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
  [마이닝 모델 배포 및 확장 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  

@@ -21,12 +21,12 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8a2b5668ba75c2825ab62b2a86aafb84f1f1488
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 3a86a39aa3473495b5eed6bc2eff92376a5a68cc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054739"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362785"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 스키마 컬렉션 [SQL Server]
   항목에 설명 된 대로 [xml &#40;TRANSACT-SQL&#41;](/sql/t-sql/xml/xml-transact-sql)를 통해 XML 데이터의 기본 저장소를 제공 하는 SQL Server는 `xml` 데이터 형식입니다. 열 또는 변수와 XSD 스키마를 필요에 따라 연결할 수 있습니다 `xml` XML 스키마 컬렉션을 통해 형식입니다. XML 스키마 컬렉션은 가져온 XML 스키마를 저장하고 다음을 수행하는 데 사용됩니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "48054739"
  또한 XML 스키마 컬렉션을 사용하여 XML 변수, 매개 변수 및 열을 형식화할 수 있습니다.  
   
 ##  <a name="ddl"></a> 스키마 컬렉션 관리 DDL  
- 데이터베이스에서 XML 스키마 컬렉션을 만들고를 변수 및 열과 연결할 `xml` 형식입니다. 데이터베이스에 있는 스키마 컬렉션을 관리하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 다음 DDL 문을 제공합니다.  
+ 데이터베이스에서 XML 스키마 컬렉션을 만들고 이를 `xml` 유형의 변수 및 열과 연결할 수 있습니다. 데이터베이스에 있는 스키마 컬렉션을 관리하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 다음 DDL 문을 제공합니다.  
   
 -   [CREATE XML SCHEMA COLLECTION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)은 데이터베이스에 스키마 구성 요소를 가져옵니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48054739"
   
 -   [DROP XML SCHEMA COLLECTION&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql)은 전체 XML 스키마 컬렉션 및 모든 해당 구성 요소를 삭제합니다.  
   
- XML 스키마 컬렉션과 여기에 포함되는 스키마를 사용하려면 먼저 CREATE XML SCHEMA COLLECTION 문을 사용하여 컬렉션과 스키마를 만들어야 합니다. 스키마 컬렉션을 만든 후 다음 만들면 변수 및 열 `xml` 입력 하 고 스키마 컬렉션과 연결할입니다. 스키마 컬렉션을 만든 다음에는 여러 스키마 구성 요소가 메타데이터에 포함됩니다. 또한 ALTER XML SCHEMA COLLECTION을 사용하여 기존 스키마에 더 많은 구성 요소를 추가하거나 기존 컬렉션에 새로운 스키마를 추가할 수 있습니다.  
+ XML 스키마 컬렉션과 여기에 포함되는 스키마를 사용하려면 먼저 CREATE XML SCHEMA COLLECTION 문을 사용하여 컬렉션과 스키마를 만들어야 합니다. 스키마 컬렉션을 만든 다음에는 `xml` 유형의 변수와 열을 만들고 스키마 컬렉션과 연결할 수 있습니다. 스키마 컬렉션을 만든 다음에는 여러 스키마 구성 요소가 메타데이터에 포함됩니다. 또한 ALTER XML SCHEMA COLLECTION을 사용하여 기존 스키마에 더 많은 구성 요소를 추가하거나 기존 컬렉션에 새로운 스키마를 추가할 수 있습니다.  
   
  스키마 컬렉션을 삭제하려면 DROP XML SCHEMA COLLECTION 문을 사용합니다. 이렇게 하면 컬렉션에 포함된 모든 스키마가 삭제되고 컬렉션 개체가 제거됩니다. 스키마 컬렉션을 삭제하려면 [DROP XML SCHEMA COLLECTION&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-xml-schema-collection-transact-sql)에 기술된 조건을 충족해야 합니다.  
   
@@ -191,11 +191,11 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
  컬렉션 내의 개별 XML 스키마로 가져올 수 있습니다 `xml` 세 번째 인수로 대상 네임 스페이스를 지정 하 여 데이터 형식의 인스턴스로 **xml_schema_namespace ()** 합니다. 이는 다음 예에서 확인할 수 있습니다.  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>예: XML 스키마 컬렉션으로부터 지정된 스키마 출력  
- 다음 명령문은 관계형 스키마 dbo 내에 있는 XML 스키마 컬렉션 "myCollection"으로부터 대상 네임스페이스가 http://www.microsoft.com/books인 XML 스키마를 출력합니다.  
+ 다음 명령문은 관계형 스키마 dbo 내에 있는 XML 스키마 컬렉션 "myCollection"으로부터 대상 네임스페이스가 <https://www.microsoft.com/books>인 XML 스키마를 출력합니다.  
   
 ```  
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   
-N'http://www.microsoft.com/books')  
+N'https://www.microsoft.com/books')  
 ```  
   
 ### <a name="querying-xml-schemas"></a>XML 스키마 쿼리  
@@ -203,7 +203,7 @@ N'http://www.microsoft.com/books')
   
 -   XML 스키마 네임스페이스에 대한 카탈로그 뷰에서 Transact-SQL 쿼리를 작성합니다.  
   
--   `xml` 데이터 형식의 열이 포함된 테이블을 만들어서 XML 스키마를 저장하고 이를 XML 유형의 시스템으로 로드합니다. 사용 하 여 XML 열을 쿼리할 수는 `xml` 데이터 형식 메서드. 또한 이 열에서 XML 인덱스를 작성할 수 있습니다. 하지만 이 접근 방식에서는 애플리케이션이 XML 열에 저장된 XML 스키마와 XML 유형 시스템 간의 일관성을 유지 관리해야 합니다. 예를 들어 XML 유형 시스템으로부터 XML 스키마 네임스페이스를 삭제하면 일관성 유지를 위해 테이블에서도 삭제해야 합니다.  
+-   `xml` 데이터 형식의 열이 포함된 테이블을 만들어서 XML 스키마를 저장하고 이를 XML 유형의 시스템으로 로드합니다. `xml` 데이터 형식의 메서드를 사용하여 XML 열을 쿼리할 수 있습니다. 또한 이 열에서 XML 인덱스를 작성할 수 있습니다. 하지만 이 접근 방식에서는 애플리케이션이 XML 열에 저장된 XML 스키마와 XML 유형 시스템 간의 일관성을 유지 관리해야 합니다. 예를 들어 XML 유형 시스템으로부터 XML 스키마 네임스페이스를 삭제하면 일관성 유지를 위해 테이블에서도 삭제해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [저장된 XML 스키마 컬렉션 보기](../xml/view-a-stored-xml-schema-collection.md)   

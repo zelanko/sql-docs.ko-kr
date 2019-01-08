@@ -15,12 +15,12 @@ ms.assetid: a4489103-a874-44c2-8f75-95cb238928ed
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4e938b75bce51aa89952b7cb13cb4fd52434386c
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 26d75b623c9a3ca92b0d395e3ec4df47dd03418f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168873"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375265"
 ---
 # <a name="helplink-element"></a>HelpLink 요소
   **Detail** 속성의 **HelpLink** 요소는 보고서 서버에서 생성되는 URL 문자열입니다. 이 URL은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 도움말 및 지원에서 관리되는 웹 페이지를 대상으로 하며 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 발생하는 특정 오류에 대한 추가 도움말 및 기술 자료 문서를 제공합니다. URL의 구문은 다음과 같습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "49168873"
  다음 예제는 **HelpLink** 오류 코드에 대해 반환 되는 URL `rsReservedItem`합니다. 이 오류는 사용자가 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 예약된 항목을 수정하거나 삭제하려고 시도할 때 발생합니다.  
   
 ```  
-http://www.microsoft.com/products/ee/transform.aspx?  
+https://www.microsoft.com/products/ee/transform.aspx?  
 EvtSrc=Microsoft.ReportingServices.Diagnostics.ErrorStrings.resources.Strings  
 &EvtID=rsReservedItem&ProdName=Microsoft%20SQL%20Server%20Reporting%20Services&ProdVer=8.00  
 ```  

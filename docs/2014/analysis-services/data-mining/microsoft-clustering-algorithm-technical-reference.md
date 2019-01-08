@@ -24,19 +24,19 @@ ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 33f2e8751befd42ee0b92690a17d668ba37a4c9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 3bf6919230c1621d2b81eb41cd715fc1878a90c5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089723"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371525"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft 클러스터링 알고리즘 기술 참조
   이 섹션에서는 클러스터링 모델의 동작을 제어하는 데 사용할 수 있는 매개 변수를 비롯한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘 구현에 대해 설명합니다. 또한 클러스터링 모델을 만들고 처리할 때 성능을 향상시킬 수 있는 방법도 제공합니다.  
   
  클러스터링 모델 사용 방법은 다음 항목을 참조하십시오.  
   
--   [클러스터링 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [클러스터링 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [클러스터링 모델 쿼리 예제](clustering-model-query-examples.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48089723"
   
  Microsoft 구현은 Scalable EM과 Non-scalable EM을 제공합니다. 기본적으로 Scalable  EM에서는 처음 50,000개의 레코드를 사용하여 초기 검색을 시드합니다. 이 작업이 성공할 경우 모델은 이 데이터만 사용합니다. 50,000개의 레코드를 사용해도 모델이 적합하지 않을 경우 50,000개의 레코드를 추가로 읽습니다. Non-scalable EM에서는 크기에 관계없이 전체 데이터 세트를 읽습니다. 이 메서드를 사용하면 보다 정확한 클러스터를 만들 수는 있지만 메모리 요구 사항이 상당히 증가될 수 있습니다. Scalable  EM은 로컬 버퍼에서 작동하기 때문에 Non-scalable  EM에 비해 데이터를 보다 빨리 반복 처리할 수 있으며 알고리즘은 CPU  메모리 캐시를 보다 효율적으로 사용할 수 있습니다. 또한 모든 데이터가 주 메모리에 저장될 수 있어도 Scalable  EM은 Non-scalable  EM보다 3배 이상 빠릅니다. 대부분의 경우 성능이 향상되었다고 해서 전체 모델의 품질이 저하되는 것은 아닙니다.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘의 EM 구현에 대해 설명하는 기술 보고서는 [Scaling EM (Expectation Maximization) Clustering to Large Databases](http://go.microsoft.com/fwlink/?LinkId=45964)(EM(Expectation Maximization) 클러스터링을 큰 데이터베이스로 크기 조정)를 참조하세요.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘의 EM 구현에 대해 설명하는 기술 보고서는 [Scaling EM (Expectation Maximization) Clustering to Large Databases](https://go.microsoft.com/fwlink/?LinkId=45964)(EM(Expectation Maximization) 클러스터링을 큰 데이터베이스로 크기 조정)를 참조하세요.  
   
 ### <a name="k-means-clustering"></a>K-Means  클러스터링  
  K-Means  클러스터링은 클러스터에 포함된 항목 간의 차이는 최소화하면서 클러스터 간의 거리는 최대화하여 클러스터 멤버 자격을 할당하는 잘 알려진 메서드입니다. K-Means의 "means"는 클러스터의 *중심* 을 의미하는데, 이 중심은 임의로 선택된 다음 클러스터에 포함된 모든 데이터 요소의 정확한 평균을 나타낼 때까지 반복적으로 구체화되는 데이터 요소입니다. "K"는 클러스터링 프로세스를 시드하는 데 사용되는 임의의 데이터 요소 수를 의미합니다. K-Means  알고리즘은 클러스터에 포함된 데이터 레코드와 클러스터 평균을 나타내는 벡터 간의 유클리드 제곱 거리를 계산하여 해당 합계가 최소값에 도달할 경우 최종 K  클러스터 집합에 수렴합니다.  
@@ -162,11 +162,11 @@ ms.locfileid: "48089723"
   
 |모델링 플래그|Description|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|열이 Missing 및 Existing 상태를 갖는 것으로 간주됩니다. Null은 누락 값입니다.<br /><br /> 마이닝 모델 열에 적용됩니다.|  
+|MODEL_EXISTENCE_ONLY|열은 두 가지 가능한 상태인 Missing 및 Existing 상태를 갖는 것으로 처리됨을 의미합니다. Null은 누락 값입니다.<br /><br /> 마이닝 모델 열에 적용됩니다.|  
 |NOT NULL|이 열에는 Null이 포함될 수 없습니다. 따라서 Analysis Services가 모델 학습 중 Null을 발견할 경우 오류가 발생합니다.<br /><br /> 마이닝 구조 열에 적용됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- 클러스터링 모델은 키 열 및 입력 열을 포함해야 합니다. 입력 열을 예측 가능한 열로 정의할 수도 있습니다. 열으로 `Predict Only` 클러스터 작성에 사용 되지 않습니다. 클러스터의 이러한 값 분포는 클러스터가 작성된 다음에 계산됩니다.  
+ 클러스터링 모델은 키 열 및 입력 열을 포함해야 합니다. 입력 열을 예측 가능한 열로 정의할 수도 있습니다. `Predict Only`로 설정된 열은 클러스터를 작성하는 데 사용되지 않습니다. 클러스터의 이러한 값 분포는 클러스터가 작성된 다음에 계산됩니다.  
   
 ### <a name="input-and-predictable-columns"></a>입력 열과 예측 가능한 열  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 다음 표에 나열된 특정 입력 열과 예측 가능한 열을 지원합니다. 마이닝 모델에 사용되는 경우 콘텐츠 형식의 의미에 대한 자세한 내용은 [콘텐츠 형식&#40;데이터 마이닝&#41;](content-types-data-mining.md)을 참조하세요.  
@@ -182,6 +182,6 @@ ms.locfileid: "48089723"
 ## <a name="see-also"></a>관련 항목  
  [Microsoft 클러스터링 알고리즘](microsoft-clustering-algorithm.md)   
  [클러스터링 모델 쿼리 예제](clustering-model-query-examples.md)   
- [클러스터링 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [클러스터링 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

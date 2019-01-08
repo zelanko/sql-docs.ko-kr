@@ -18,19 +18,19 @@ ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e429badf8d6ad656f0ba5f0944a7d6bdf21553c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 3baf73ba7f2c9e5d4d206234b1c9b874fbb15c59
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107339"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366265"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>보고서 매개 변수(보고서 작성기 및 보고서 디자이너)
   이 항목에서는 SSRS 보고서 매개 변수의 일반적인 용도, 설정할 수 있는 속성 및 매개 변수에 대한 기타 정보를 설명합니다. 보고서 매개 변수를 사용하면 보고서 데이터를 제어하고, 관련된 보고서를 서로 연결하고, 다양하게 보고서를 표현할 수 있습니다.  
   
 [!INCLUDE[applies](../../includes/applies-md.md)] SharePoint 모드 및 기본 모드
   
- 보고서에 매개 변수를 추가하는 방법은 [자습서: 보고서에 매개 변수 추가(SSRS)](http://technet.microsoft.com/library/aa337432\(v=SQL.105\).aspx)를 참조하세요.  
+ 보고서에 매개 변수를 추가 하는 방법을 데모를 참조 하세요. [자습서: (SSRS) 보고서에 매개 변수를 추가합니다.](https://technet.microsoft.com/library/aa337432\(v=SQL.105\).aspx)  
 
   
 ##  <a name="bkmk_Common_Uses_for_Parameters"></a> 매개 변수의 일반적인 용도  
@@ -75,7 +75,7 @@ ms.locfileid: "48107339"
   
 3.  **@Subcategory 매개 변수** 매개 변수 @Subcategory 데이터 형식이 `Text`합니다. 때문에 @Subcategory 에 사용 가능한 값 목록이, 유효한 값 드롭다운 목록에 나타납니다. 이 목록에서 값을 선택해야 합니다. 때문에 @Subcategory 는 다중값을 **모두 선택** 모두 지우고 목록에서 모든 값을 선택할 수 있는 옵션이 나타납니다.  
   
-4.  **@ShowAllRows 매개 변수** 매개 변수 @ShowAllRows 데이터 형식이 `Boolean`합니다. 라디오 단추를 사용 하 여 지정할 `True` 또는 `False`합니다.  
+4.  **@ShowAllRows 매개 변수** 매개 변수 @ShowAllRows 데이터 형식이 `Boolean`합니다. 라디오 단추를 사용하여 `True` 또는 `False`를 지정합니다.  
   
 5.  **매개 변수 영역 핸들 표시 또는 숨기기** 보고서 뷰어 도구 모음에서 이 화살표를 클릭하여 매개 변수 창을 표시하거나 숨깁니다.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "48107339"
   
 -   드롭다운 목록에서 단일 매개 변수의 값을 선택합니다. 이 선택에 따라 드롭다운 목록에서 다른 매개 변수에 사용할 수 있는 값이 결정됩니다. 이들은 연계 매개 변수입니다. 연계 매개 변수를 사용하면 수천 개 값의 매개 변수 값을 관리 가능한 수치로 연속적으로 필터링할 수 있습니다.  
   
-     자세한 내용은 [보고서에 연계 매개 변수 추가 &#40;보고서 작성기 및 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)합니다.  
+     자세한 내용은 [보고서에 연계 매개 변수 추가&#40;보고서 작성기 및 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)에서 만드는 모바일 보고서에서 보고서 매개 변수를 사용할 수 있습니다.  
   
 -   매개 변수의 기본값이 생성되었으므로 먼저 매개 변수 값을 선택하지 않고 보고서를 실행합니다.  
   
@@ -131,16 +131,16 @@ ms.locfileid: "48107339"
 |--------------|-----------------|  
 |이름|매개 변수의 대/소문자를 구분하는 이름을 입력합니다. 이 이름은 문자로 시작해야 하고 문자, 숫자 및 밑줄(_)을 포함할 수 있습니다. 이름에 공백은 포함할 수 없습니다. 자동으로 생성된 매개 변수의 이름은 데이터 세트 쿼리의 매개 변수와 일치합니다. 기본적으로 수동으로 만든 매개 변수는 ReportParameter1과 이름이 유사합니다.|  
 |프롬프트|보고서 뷰어 도구 모음에서 매개 변수 옆에 표시되는 텍스트입니다.|  
-|데이터 형식|데이터 형식이 있는 경우에 사용자의 드롭다운 목록에서 값 선택 매개 변수에 대해 사용 가능한 값은 정의 하는 경우 `DateTime`합니다. 보고서 매개 변수는 다음 데이터 형식 중 하나여야 합니다.<br /><br /> `Boolean` 을 참조하세요. 사용자가 라디오 단추에서 True 또는 False를 선택합니다.<br /><br /> `DateTime` 을 참조하세요. 사용자가 달력 컨트롤에서 날짜를 선택합니다.<br /><br /> **Integer**. 사용자가 입력란에 값을 입력합니다.<br /><br /> **Float**. 사용자가 입력란에 값을 입력합니다.<br /><br /> `Text` 을 참조하세요. 사용자가 입력란에 값을 입력합니다.<br /><br /> 보고서 데이터 형식에 대 한 자세한 내용은 참조 하세요. [RDL 데이터 형식](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)합니다.|  
+|데이터 형식|데이터 형식이 있는 경우에 사용자의 드롭다운 목록에서 값 선택 매개 변수에 대해 사용 가능한 값은 정의 하는 경우 `DateTime`합니다. 보고서 매개 변수는 다음 데이터 형식 중 하나여야 합니다.<br /><br /> `Boolean` 을 참조하세요. 사용자가 라디오 단추에서 True 또는 False를 선택합니다.<br /><br /> `DateTime` 을 참조하세요. 사용자가 달력 컨트롤에서 날짜를 선택합니다.<br /><br /> **Integer**. 사용자가 입력란에 값을 입력합니다.<br /><br /> **Float**. 사용자가 입력란에 값을 입력합니다.<br /><br /> `Text` 을 참조하세요. 사용자가 입력란에 값을 입력합니다.<br /><br /> 보고서 데이터 형식에 대한 자세한 내용은 [RDL Data Types](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)을 참조하세요.|  
 |빈 값 허용|매개 변수 값에 빈 문자열이나 공백을 허용하려면 이 옵션을 선택합니다.<br /><br /> 매개 변수에 대한 유효한 값을 지정할 경우 공백 값을 유효한 값 중 하나로 허용하려면 지정한 값 중 하나로 공백 값을 포함시켜야 합니다. 이 옵션을 선택해도 사용 가능한 값에 공백이 자동으로 포함되지는 않습니다.|  
 |Null 값 허용|매개 변수 값이 Null이 될 수 있도록 허용하려면 이 옵션을 선택합니다.<br /><br /> 매개 변수에 대한 유효한 값을 지정할 경우 null을 유효한 값 중 하나로 허용하려면 지정한 값 중 하나로 null을 포함시켜야 합니다. 이 옵션을 선택해도 사용 가능한 값에 null이 자동으로 포함되지는 않습니다.|  
 |다중 값 허용|사용자가 선택할 수 있는 드롭다운 목록을 만드는 데 사용 가능한 값을 제공합니다. 이렇게 하면 데이터 세트 쿼리에서 유효한 값만 제출되도록 할 수 있습니다.<br /><br /> 매개 변수의 값이 드롭다운 목록에 표시되는 다중 값이 될 수 있도록 허용하려면 이 옵션을 선택합니다. Null 값은 허용되지 않습니다. 이 옵션을 선택하면 매개 변수 드롭다운 목록의 사용 가능한 값 목록에 확인란이 추가되고 목록의 맨 위에 **모두 선택**에 대한 확인란이 포함됩니다. 사용자는 원하는 값을 선택할 수 있습니다.<br /><br /> 값을 제공하는 데이터가 빠르게 변동될 경우 사용자에게 표시되는 목록이 최신 상태가 아닐 수도 있습니다.|  
 |표시|보고서를 실행할 때 보고서 위쪽에 보고서 매개 변수를 표시하려면 이 옵션을 선택합니다. 이 옵션을 설정하면 사용자가 런타임에 매개 변수 값을 선택할 수 있습니다.|  
 |숨김|게시된 보고서에서 보고서 매개 변수를 숨기려면 이 옵션을 선택합니다. 보고서 매개 변수 값은 여전히 보고서 URL, 구독 정의 또는 보고서 서버에 설정할 수 있습니다.|  
 |내부|보고서 매개 변수를 숨기려면 이 옵션을 선택합니다. 게시된 보고서에서 보고서 매개 변수는 보고서 정의에서만 볼 수 있습니다.|  
-|사용 가능한 값|매개 변수에 대해 사용 가능한 값을 지정한 경우에는 유효한 값이 항상 드롭다운 목록으로 표시됩니다. 예를 들어, 사용 가능한 값을 제공 하는 경우는 `DateTime` 달력 컨트롤 대신 매개 변수 창의 매개 변수를 날짜에 대 한 드롭다운 목록이 표시 됩니다. 값 목록이 보고서와 하위 보고서 간에 일관되도록 하려면 데이터 원본과 연관된 데이터 세트의 모든 쿼리에 단일 트랜잭션을 사용하도록 데이터 원본에서 옵션을 설정할 수 있습니다.<br /><br /> **\*\* 보안 참고 \* \***  데이터 형식의 매개 변수가 포함 된 보고서에서는 `Text`(유효한 값 목록이 라고도 함)는 사용 가능한 값 목록을 사용 해야 하 고 보고서를 실행 하는 모든 사용자만 있는지 확인 합니다 보고서의 데이터를 보는 데 필요한 권한입니다. 자세한 내용은 [보안&#40;보고서 작성기#41;](../report-builder/security-report-builder.md)을 참조하세요.|  
+|사용 가능한 값|매개 변수에 대해 사용 가능한 값을 지정한 경우에는 유효한 값이 항상 드롭다운 목록으로 표시됩니다. 예를 들어 `DateTime` 매개 변수에 사용할 수 있는 값을 제공하면 날짜에 대한 드롭다운 목록이 달력 컨트롤 대신 매개 변수 창에 표시됩니다. 값 목록이 보고서와 하위 보고서 간에 일관되도록 하려면 데이터 원본과 연관된 데이터 세트의 모든 쿼리에 단일 트랜잭션을 사용하도록 데이터 원본에서 옵션을 설정할 수 있습니다.<br /><br /> **\*\* 보안 참고 \* \***  데이터 형식의 매개 변수가 포함 된 보고서에서는 `Text`(유효한 값 목록이 라고도 함)는 사용 가능한 값 목록을 사용 해야 하 고 보고서를 실행 하는 모든 사용자만 있는지 확인 합니다 보고서의 데이터를 보는 데 필요한 권한입니다. 자세한 내용은 [보안&#40;보고서 작성기#41;](../report-builder/security-report-builder.md)을 참조하세요.|  
 |기본값|쿼리 또는 정적 목록에서 기본값을 설정합니다.<br /><br /> 매개 변수마다 기본값이 있을 경우에는 보고서를 처음으로 볼 때 보고서가 자동으로 실행됩니다.|  
-|고급|이 매개 변수가 보고서의 데이터에 직접 또는 간접으로 영향을 주는지를 나타내는 값인 보고서 정의 특성 `UsedInQuery`를 설정합니다.<br /><br /> **새로 고칠 시기 자동으로 결정**<br /> 보고서 프로세서가 이 값에 대한 설정을 결정하도록 하려면 이 옵션을 선택합니다. 보고서 프로세서가 이 매개 변수에 대한 직접 또는 간접 참조가 있는 데이터 집합 쿼리를 검색하거나 보고서에 하위 보고서가 있으면 `True`입니다.<br /><br /> **항상 새로 고침**<br /> 보고서 매개 변수가 데이터 세트 쿼리 또는 매개 변수 식에 직접 또는 간접으로 사용되는 경우 이 옵션을 선택합니다. 이 옵션은 `UsedInQuery`를 True로 설정합니다.<br /><br /> **새로 고침 안 함**<br /> 보고서 매개 변수가 데이터 세트 쿼리 또는 매개 변수 식에 직접 또는 간접으로 사용되지 않는 경우 이 옵션을 선택합니다. 이 옵션을 설정 `UsedInQuery` False로 합니다.<br /><br /> **\*\* 주의 \*\*** **새로 고침 안 함** 은 주의해서 사용하세요. 보고서 서버에서 `UsedInQuery` 스냅숏 보고서의 매개 변수 옵션과 보고서 데이터와 렌더링 된 보고서에 대 한 캐시 옵션을 제어 하는 데 사용 됩니다. **새로 고침 안 함** 을 잘못 설정하면 잘못된 보고서 데이터 또는 보고서가 캐시되거나 스냅숏 보고서에 일치하지 않는 데이터가 포함될 수 있습니다. 자세한 내용은 [RDL(Report Definition Language)&#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)을 참조하세요.|  
+|고급|이 매개 변수가 보고서의 데이터에 직접 또는 간접으로 영향을 주는지를 나타내는 값인 보고서 정의 특성 `UsedInQuery`를 설정합니다.<br /><br /> **새로 고칠 시기 자동으로 결정**<br /> 보고서 프로세서가 이 값에 대한 설정을 결정하도록 하려면 이 옵션을 선택합니다. 보고서 프로세서가 이 매개 변수에 대한 직접 또는 간접 참조가 있는 데이터 집합 쿼리를 검색하거나 보고서에 하위 보고서가 있으면 `True`입니다.<br /><br /> **항상 새로 고침**<br /> 보고서 매개 변수가 데이터 세트 쿼리 또는 매개 변수 식에 직접 또는 간접으로 사용되는 경우 이 옵션을 선택합니다. 이 옵션은 `UsedInQuery`를 True로 설정합니다.<br /><br /> **새로 고침 안 함**<br /> 보고서 매개 변수가 데이터 세트 쿼리 또는 매개 변수 식에 직접 또는 간접으로 사용되지 않는 경우 이 옵션을 선택합니다. 이 옵션은 `UsedInQuery`를 False로 설정합니다.<br /><br /> **\*\* 주의 \*\*** **새로 고침 안 함** 은 주의해서 사용하세요. 보고서 서버에서 `UsedInQuery`는 보고서 데이터와 렌더링된 보고서의 캐시 옵션 및 스냅숏 보고서의 매개 변수 옵션을 제어하는 데 사용됩니다. **새로 고침 안 함** 을 잘못 설정하면 잘못된 보고서 데이터 또는 보고서가 캐시되거나 스냅숏 보고서에 일치하지 않는 데이터가 포함될 수 있습니다. 자세한 내용은 [RDL(Report Definition Language)&#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)을 참조하세요.|  
   
 ##  <a name="bkmk_Dataset_Parameters"></a> 데이터 집합 쿼리  
  데이터 세트 쿼리에서 데이터를 필터링하려면 결과 집합에서 포함하거나 제외할 값을 지정하여 검색된 데이터를 제한하는 제한 절을 포함합니다.  
@@ -196,7 +196,7 @@ ms.locfileid: "48107339"
  직원 또는 개인 데이터에 대해 매개 변수를 사용하는 대신 안전하게 사용자 컬렉션의 **UserID** 필드가 포함된 식을 기반으로 데이터를 선택할 수 있습니다. 사용자 컬렉션은 보고서를 실행하는 사용자의 ID를 가져온 다음 이 ID를 사용하여 사용자별 데이터를 검색하는 방법을 제공합니다.  
   
 > [!IMPORTANT]  
->  형식의 매개 변수가 포함 된 보고서에서는 `String`(유효한 값 목록이 라고도 함)는 사용 가능한 값 목록을 사용 해야 하 고 보고서를 실행 하는 모든 사용자가 보고서의 데이터를 보는 데 필요한 권한만 갖도록 합니다. 형식의 매개 변수를 정의 하는 경우 `String`, 사용자가 모든 값을 사용할 수 있는 텍스트 상자가 표시 됩니다. 사용 가능한 값 목록은 입력할 수 있는 값을 제한합니다. 보고서 매개 변수가 데이터 세트 매개 변수에 연결되어 있고 사용 가능한 값 목록을 사용하지 않는 경우에는 보고서 사용자가 입력란에 SQL 구문을 입력할 수 있으므로 보고서와 서버가 SQL 인젝션 공격을 받을 가능성이 있습니다. 사용자에게 새 SQL 문 실행을 위한 충분한 권한이 있으면 서버에 원하지 않은 결과가 발생할 수 있습니다.  
+>  `String` 형식의 매개 변수가 포함된 보고서에서는 유효한 값 목록이라고도 하는 사용 가능한 값 목록을 사용해야 하며 보고서를 실행하는 모든 사용자가 보고서의 데이터를 보는 데 필요한 권한만 갖도록 해야 합니다. `String` 유형의 매개 변수를 정의할 경우 모든 값을 사용할 수 있는 입력란이 사용자에게 제공됩니다. 사용 가능한 값 목록은 입력할 수 있는 값을 제한합니다. 보고서 매개 변수가 데이터 세트 매개 변수에 연결되어 있고 사용 가능한 값 목록을 사용하지 않는 경우에는 보고서 사용자가 입력란에 SQL 구문을 입력할 수 있으므로 보고서와 서버가 SQL 인젝션 공격을 받을 가능성이 있습니다. 사용자에게 새 SQL 문 실행을 위한 충분한 권한이 있으면 서버에 원하지 않은 결과가 발생할 수 있습니다.  
 >   
 >  보고서 매개 변수가 데이터 세트 매개 변수에 연결되어 있지 않고 매개 변수 값이 보고서에 포함된 경우에는 보고서 사용자가 식 구문 또는 URL을 매개 변수 값에 입력하고 보고서를 Excel 또는 HTML로 렌더링할 수 있습니다. 이후 다른 사용자가 보고서를 보면서 렌더링된 매개 변수 내용을 클릭할 경우 악의적인 스크립트나 링크가 실수로 실행될 수 있습니다.  
 >   
@@ -205,44 +205,44 @@ ms.locfileid: "48107339"
 ##  <a name="bkmk_How_To_Topics"></a> 방법 도움말 항목  
  이 섹션에는 매개 변수와 필터를 사용하여 작업하는 방법을 단계별로 보여 주는 절차가 나열되어 있습니다.  
   
--   [추가, 변경 또는 Delete a Report Parameter &#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
+-   [보고서 매개 변수 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   
--   [추가, 변경 또는 보고서 매개 변수의 사용 가능한 값을 삭제 &#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)  
+-   [보고서 매개 변수의 사용 가능한 값 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)  
   
--   [추가, 변경 또는 보고서 매개 변수의 기본값을 삭제 &#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)  
+-   [보고서 매개 변수의 기본값 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)  
   
--   [보고서 매개 변수의 순서를 변경 &#40;보고서 작성기 및 SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
+-   [보고서 매개 변수의 순서 변경&#40;보고서 작성기 및 SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
--   [보고서에 연계 매개 변수를 추가 &#40;보고서 작성기 및 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)  
+-   [보고서에 연계 매개 변수 추가&#40;보고서 작성기 및 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)  
   
 -   [데이터 집합에 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
--   [Add a Subreport and 매개 변수 &#40;보고서 작성기 및 SSRS&#41;](add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
+-   [하위 보고서 및 매개 변수 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
   
--   [저장된 프로시저를 사용 하 여 SSRS 매개 변수를 사용 하는 방법](http://go.microsoft.com/fwlink/p/?LinkId=396970)  
+-   [저장된 프로시저를 사용 하 여 SSRS 매개 변수를 사용 하는 방법](https://go.microsoft.com/fwlink/p/?LinkId=396970)  
   
-## <a name="did-this-article-help-you-were-listening"></a>이 문서가 도움이 되었나요? 여러분의 의견을 환영합니다.  
- 어떤 정보를 찾고 계세요? 정보를 찾으셨나요? 여러분의 의견은 문서의 내용을 개선하는 데 많은 도움이 됩니다. 의견이 있으면 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Report%20Parameters%20page)  
+## <a name="did-this-article-help-you-were-listening"></a>이 문서가 도움이 되었나요? 피드백 환영  
+ 어떤 정보를 찾고 계세요? 정보를 찾으셨나요? 콘텐츠를 개선 하기 위해 귀하의 의견을 환영 합니다. 의견이 있으면 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Report%20Parameters%20page)  
   
 ##  <a name="bkmk_Related_Topics"></a> 관련 내용  
- [SSRS 보고서 매개 변수(퀴즈) 구성(영문)](http://go.microsoft.com/fwlink/p/?LinkID=306443)  
+ [SSRS 보고서 매개 변수(퀴즈) 구성(영문)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
   
- [자습서: 보고서에 매개 변수를 추가 &#40;보고서 작성기&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [자습서: 보고서 매개 변수를 추가 &#40;보고서 작성기&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
- [보고 서비스에서 InvalidReportParameterException의 발생을 버스팅](http://go.microsoft.com/fwlink/p/?LinkId=393118)  
+ [보고 서비스에서 InvalidReportParameterException의 발생을 버스팅](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
   
- [보고서 예제(보고서 작성기 및 SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+ [보고서 예제(보고서 작성기 및 SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
- [보고서에 사용 되는 식 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
  [식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   
- [필터링, 그룹화 및 데이터 정렬 &#40;보고서 작성기 및 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
- [보안 &#40;보고서 작성기&#41;](../report-builder/security-report-builder.md)  
+ [보안&#40;보고서 작성기&#41;](../report-builder/security-report-builder.md)  
   
- [대화형 정렬, 문서 구조 및 링크 &#40;보고서 작성기 및 SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
+ [대화형 정렬, 문서 구조 및 링크&#40;보고서 작성기 및 SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
   
- [드릴스루, 드릴 다운, 하위 보고서 및 중첩된 데이터 영역 &#40;보고서 작성기 및 SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [드릴스루, 드릴다운, 하위 보고서 및 중첩 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

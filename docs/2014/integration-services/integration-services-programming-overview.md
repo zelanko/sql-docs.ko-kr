@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - Integration Services, programming
@@ -22,12 +20,12 @@ ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 634cbd5158331dde35afc81dd58c2e30b8d41fed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2abb71a0c70a8caaacfee79d346f6c7101846a2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156553"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357814"
 ---
 # <a name="integration-services-programming-overview"></a>Integration Services 프로그래밍 개요
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 데이터 이동 및 변환을 패키지 제어 흐름 및 관리와 분리하는 아키텍처가 있습니다. 또한 이 아키텍처를 정의하며 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 프로그래밍할 때 자동화하고 확장할 수 있는 두 가지 엔진이 있습니다. 런타임 엔진은 개발자가 실행 흐름을 제어하고 로깅, 이벤트 처리기 및 변수에 대한 옵션을 설정할 수 있게 해 주는 제어 흐름 및 패키지 관리 인프라를 구현합니다. 데이터 흐름 엔진은 데이터 추출, 변환 및 로드에만 사용되는 특수한 고성능 엔진입니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 프로그래밍할 때 실제 프로그래밍 작업은 이러한 두 엔진에 대해 수행됩니다.  
@@ -52,7 +50,7 @@ ms.locfileid: "48156553"
  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]나 다른 코드 또는 텍스트 편집기에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지, 사용자 지정 태스크 및 구성 요소를 프로그래밍할 수 있습니다. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]에서는 코딩, 디버깅 및 테스트 등의 반복되는 주기를 간소화하고 신속하게 처리하기 위한 여러 가지 도구와 기능을 제공합니다. 또한 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]를 사용하면 배포가 간편해집니다. 그러나 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 코드 프로젝트를 컴파일하고 빌드하는 데는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]가 필요하지 않습니다. [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK에는 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 및 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 컴파일러와 관련 도구가 포함되어 있습니다.  
   
 > [!IMPORTANT]  
->  기본적으로 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]와 함께 설치되지만 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK는 설치되지 않습니다. 컴퓨터에 SDK가 설치되지 않아 SDK 설명서가 온라인 설명서 컬렉션에 포함되어 있지 않을 경우 이 섹션의 SDK 내용에 대한 링크가 작동하지 않습니다. [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK를 설치한 후 [SQL Server 제품 설명서 추가 또는 제거](../2014-toc/books-online-for-sql-server-2014.md)의 지침에 따라 온라인 설명서 컬렉션과 목차에 SDK 설명서를 추가할 수 있습니다.  
+>  기본적으로 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]와 함께 설치되지만 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK는 설치되지 않습니다. 컴퓨터에 SDK가 설치되지 않아 SDK 설명서가 온라인 설명서 컬렉션에 포함되어 있지 않을 경우 이 섹션의 SDK 내용에 대한 링크가 작동하지 않습니다. [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK를 설치한 후 [SQL Server 제품 설명서 추가 또는 제거](../2014-toc/books-online-for-sql-server-2014.md)의 지침에 따라 온라인 설명서 컬렉션과 목차에 SDK 설명서를 추가할 수 있습니다.  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 스크립트 태스크와 스크립트 구성 요소에서는 VSTA([!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications)를 포함된 스크립팅 환경으로 사용합니다. VSTA는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#을 지원합니다.  
   
@@ -76,6 +74,6 @@ ms.locfileid: "48156553"
   
 ||  
 |-|  
-![Integration Services 아이콘 (작은)](media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
   

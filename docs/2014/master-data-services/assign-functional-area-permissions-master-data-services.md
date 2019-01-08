@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Master Data Services], assigning functional area permissions
@@ -14,12 +13,12 @@ ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6a485c3c3293316502a4d5038d39070fb1f43185
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b1649b95e751a3ea3a93285f480b0ec9b2b04075
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096993"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814295"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>기능 영역 권한 할당(Master Data Services)
   기능 영역 권한을 할당하여 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]의 기능 영역에 대한 액세스 권한을 사용자나 그룹에 부여합니다.  
@@ -47,10 +46,10 @@ ms.locfileid: "48096993"
   
 ## <a name="next-steps"></a>다음 단계  
   
--   [모델 개체 사용 권한 할당 &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)  
+-   [모델 개체 사용 권한 할당&#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [모델 관리자 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)   
+ [모델 관리자 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)   
  [보안&#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
   
   

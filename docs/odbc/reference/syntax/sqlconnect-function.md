@@ -20,16 +20,16 @@ ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a04daf57a348f20c8a5febe8d56f8ed9358b9053
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 530a5acf9cc7c0de375906279aff2bc6a05ec8a0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631991"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213702"
 ---
 # <a name="sqlconnect-function"></a>SQLConnect 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLConnect** 드라이버 및 데이터 원본에 대 한 연결을 설정 합니다. 연결 핸들의 상태, 트랜잭션 상태 및 오류 정보를 포함 하 여 데이터 원본에 연결 하는 방법에 대 한 모든 정보는 저장소를 참조 합니다.  

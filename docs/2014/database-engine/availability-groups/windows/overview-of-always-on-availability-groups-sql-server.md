@@ -16,12 +16,12 @@ ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2d0db051e473a5b84bef5139137e33b91b62d2d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
-ms.translationtype: HT
+ms.openlocfilehash: 749aaffe61033564649f9cd70871f2cb01340757
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559392"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363595"
 ---
 # <a name="overview-of-alwayson-availability-groups-sql-server"></a>AlwaysOn 가용성 그룹 개요(SQL Server)
   이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에서 하나 이상의 가용성 그룹을 구성하고 관리하는 데 중심이 되는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]개념을 소개합니다. 가용성 그룹에서 제공하는 이점의 요약과 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 용어의 개요는 [AlwaysOn 가용성 그룹&amp;#40;SQL Server&amp;#41;](always-on-availability-groups-sql-server.md)을 참조하세요.  
@@ -29,9 +29,9 @@ ms.locfileid: "51559392"
  *가용성 그룹* 은 함께 장애 조치(Failover)되는 사용자 데이터베이스( *가용성 데이터베이스*라고 함)의 불연속 집합에 대한 장애 조치(Failover) 환경을 지원합니다. 가용성 그룹은 주 데이터베이스 집합과 1~8개의 해당 보조 데이터베이스 집합을 지원합니다. 보조 데이터베이스는 백업이 *아닙니다* . 계속하여 정기적으로 데이터베이스 및 해당 트랜잭션 로그를 백업하세요.  
   
 > [!TIP]  
->  모든 유형의 주 데이터베이스 백업을 만들 수 있습니다. 또는 로그 백업과 보조 데이터베이스의 복사 전용 전체 백업을 만들 수 있습니다. 자세한 내용은 [활성 보조: 보조 복제본에 백업&#40;AlwaysOn 가용성 그룹&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
+>  모든 유형의 주 데이터베이스 백업을 만들 수 있습니다. 또는 로그 백업과 보조 데이터베이스의 복사 전용 전체 백업을 만들 수 있습니다. 자세한 내용은 참조 하세요. [활성 보조: 보조 복제본에 백업 &#40;AlwaysOn 가용성 그룹&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)합니다.  
   
- 각 가용성 데이터베이스 집합은 *가용성 복제본*에 의해 호스팅됩니다. 가용성 복제본에는 *주 복제본*과 *보조 복제본*의 두 가지 유형이 있습니다. 주 복제본은 하나이고 주 데이터베이스를 호스팅하며, 보조 복제본은 1~8개로 각각 보조 데이터베이스 집합을 호스팅하고 가용성 그룹에 대한 잠재적인 장애 조치(Failover) 대상 역할을 합니다. 가용성 그룹은 가용성 복제본의 수준에서 장애 조치(Failover)됩니다. 가용성 복제본은 가용성 그룹에 속한 데이터베이스 집합에 대해 데이터베이스 수준에서만 중복을 제공합니다. 따라서 데이터 파일 손실, 트랜잭션 로그 손상 등으로 인해 주의 대상 데이터베이스가 발생할 경우 이러한 데이터베이스 문제로는 장애 조치(Failover)가 수행되지 않습니다.  
+ 각 가용성 데이터베이스 집합은 *가용성 복제본*에 의해 호스팅됩니다. 가용성 복제본에는 *주 복제본*과 *보조 복제본*의 두 가지 유형이 있습니다. 주 복제본은 하나이고 주 데이터베이스를 호스팅하며, 보조 복제본은 1~8개로 각각 보조 데이터베이스 집합을 호스팅하고 가용성 그룹에 대한 잠재적인 장애 조치(Failover) 대상 역할을 합니다. 가용성 그룹은 가용성 복제본의 수준에서 장애 조치(Failover)됩니다. 가용성 복제본은 가용성 그룹에 속한 데이터베이스 세트에 대해 데이터베이스 수준에서만 중복을 제공합니다. 따라서 데이터 파일 손실, 트랜잭션 로그 손상 등으로 인해 주의 대상 데이터베이스가 발생할 경우 이러한 데이터베이스 문제로는 장애 조치(Failover)가 수행되지 않습니다.  
   
  주 복제본은 주 데이터베이스를 클라이언트에서 읽기/쓰기 연결에 사용할 수 있게 만듭니다. 또한 데이터베이스 수준에서 발생하는 *데이터 동기화*라고 하는 프로세스에서 주 복제본은 각 주 데이터베이스의 트랜잭션 로그 레코드를 모든 보조 복제본에 보냅니다. 모든 보조 복제본은 트랜잭션 로그 레코드를 캐시, 즉 로그를*확정* 한 다음 해당하는 보조 데이터베이스에 적용합니다. 데이터 동기화는 주 데이터베이스 및 연결된 각 보조 데이터베이스 간에 다른 데이터베이스와 독립적으로 발생합니다. 따라서 보조 데이터베이스가 중지되거나 실패할 때 다른 보조 데이터베이스에 영향을 주지 않을 수 있으며, 주 데이터베이스는 중지되거나 실패할 때 다른 주 데이터베이스에 영향을 주지 않을 수 있습니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "51559392"
 >  장애 조치(Failover) 도중과 같이 가용성 복제본의 역할이 불확실할 때 데이터베이스는 일시적으로 NOT SYNCHRONIZING 상태에 있습니다. 가용성 복제본의 역할이 확인될 때까지 데이터베이스의 역할은 RESOLVING으로 설정됩니다. 가용성 복제본이 주 역할로 확인되면 해당 데이터베이스는 주 데이터베이스가 됩니다. 가용성 복제본이 보조 역할로 확인되면 해당 데이터베이스는 보조 데이터베이스가 됩니다.  
   
 ##  <a name="AvailabilityModes"></a> 가용성 모드  
- 가용성 모드는 각 가용성 복제본의 속성입니다. 가용성 모드는 지정된 보조 복제본이 트랜잭션 로그 레코드를 디스크에 쓸 때까지(로그 확정) 주 복제본이 데이터베이스에서 트랜잭션을 커밋하기 위해 기다리는지 여부를 결정합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은*비동기-커밋 모드* 및 *동기-커밋 모드*라는 두 가지 가용성 모드를 지원합니다.  
+ 가용성 모드는 각 가용성 복제본의 속성입니다. 가용성 모드는 지정된 보조 복제본이 트랜잭션 로그 레코드를 디스크에 쓸 때까지(로그 확정) 주 복제본이 데이터베이스에서 트랜잭션을 커밋하기 위해 기다리는지 여부를 결정합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]는 *비동기-커밋 모드* 및 *동기-커밋 모드*라는 두 가지 가용성 모드를 지원합니다.  
   
 -   **Asynchronous-commit mode**  
   
@@ -118,11 +118,11 @@ ms.locfileid: "51559392"
   
 -   **보조 복제본에 대한 백업 작업 수행**  
   
-     보조 복제본은 전체 데이터베이스, 파일 또는 파일 그룹의 [복사 전용](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) 백업 및 로그 백업 수행을 지원합니다. 가용성 그룹을 구성하여 백업을 수행해야 하는 위치에 대한 기본 설정을 지정할 수 있습니다. 기본 설정은 SQL Server에서 적용하는 것이 아니므로 임시 백업에 영향을 미치지 않는다는 것을 이해해야 합니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 각 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 개별 가용성 복제본에 대해 동일한 가용성 그룹의 다른 복제본과 관련하여 이 복제본에서 백업을 수행하기 위한 우선 순위를 지정할 수 있습니다. 자세한 내용은 [활성 보조: 보조 복제본에 백업&#40;AlwaysOn 가용성 그룹&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
+     보조 복제본은 전체 데이터베이스, 파일 또는 파일 그룹의 [복사 전용](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) 백업 및 로그 백업 수행을 지원합니다. 가용성 그룹을 구성하여 백업을 수행해야 하는 위치에 대한 기본 설정을 지정할 수 있습니다. 기본 설정은 SQL Server에서 적용하는 것이 아니므로 임시 백업에 영향을 미치지 않는다는 것을 이해해야 합니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 각 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 개별 가용성 복제본에 대해 동일한 가용성 그룹의 다른 복제본과 관련하여 이 복제본에서 백업을 수행하기 위한 우선 순위를 지정할 수 있습니다. 자세한 내용은 참조 하세요. [활성 보조: 보조 복제본에 백업 &#40;AlwaysOn 가용성 그룹&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)합니다.  
   
 -   **하나 이상의 보조 복제본(읽기 가능한 보조 복제본)에 대한 읽기 전용 액세스(읽기 가능한 보조 복제본)**  
   
-     가용성 복제본이 보조 역할을 수행할 경우 로컬 데이터베이스에 대한 읽기 전용 액세스를 허용하도록 구성할 수 있습니다. 그러나 일부 작업은 부분적으로만 지원됩니다. 또한 주 복제본에서 읽기 전용 작업이 실행되지 않도록 하려는 경우에는 주 역할로 실행될 때 읽기/쓰기 액세스만 허용하도록 복제본을 구성할 수 있습니다. 자세한 내용은 [활성 보조: 읽기 가능한 보조 복제본&#40;AlwaysOn 가용성 그룹&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
+     가용성 복제본이 보조 역할을 수행할 경우 로컬 데이터베이스에 대한 읽기 전용 액세스를 허용하도록 구성할 수 있습니다. 그러나 일부 작업은 부분적으로만 지원됩니다. 또한 주 복제본에서 읽기 전용 작업이 실행되지 않도록 하려는 경우에는 주 역할로 실행될 때 읽기/쓰기 액세스만 허용하도록 복제본을 구성할 수 있습니다. 자세한 내용은 참조 하세요. [활성 보조: 읽기 가능한 보조 복제본 &#40;AlwaysOn 가용성 그룹&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)합니다.  
   
      가용성 그룹에 현재 가용성 그룹 수신기와 하나 이상의 읽기 가능한 보조 복제본이 있는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 읽기 전용 연결 요청을 이러한 보조 복제본 중 하나로 라우팅할 수 있습니다(*읽기 전용 라우팅*). 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)개념을 소개합니다.  
   
@@ -149,23 +149,23 @@ ms.locfileid: "51559392"
   
 -   **블로그:**  
   
-     [AlwaysON-HADRON 학습 시리즈: HADRON 작업자 풀 사용 가능 데이터베이스](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON-HADRON 학습 시리즈: HADRON 작업자 풀 사용 가능 데이터베이스](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server 엔지니어 블로그](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 엔지니어 블로그](https://blogs.msdn.com/b/psssql/)  
   
 -   **비디오:**  
   
      [Microsoft SQL Server 코드 이름된 "Denali" AlwaysOn 시리즈, 1 부: 차세대 고가용성 솔루션 소개](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server 코드 이름된 "Denali" AlwaysOn 시리즈, 파트 2: AlwaysOn을 사용 하 여 중요 업무용 고가용성 솔루션 빌드](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server 코드 이름된 "Denali" AlwaysOn 시리즈, 2 부: AlwaysOn을 사용 하 여 중요 업무용 고가용성 솔루션 빌드](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **백서:**  
   
-     [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [SQL Server 2012에 대한 Microsoft 백서](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [SQL Server 2012에 대한 Microsoft 백서](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server 고객 자문 팀 백서](http://sqlcat.com/)  
   

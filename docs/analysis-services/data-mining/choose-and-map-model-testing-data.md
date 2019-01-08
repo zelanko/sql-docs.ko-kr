@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3c731f1a439a817abd133e14815b85a8f6d0077b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2e1b4751d21b9aea4f80561909910d81abbc3756
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015310"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545318"
 ---
 # <a name="choose-and-map-model-testing-data"></a>모델 테스트 데이터 선택 및 매핑
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "34015310"
   
 3.  **입력 선택** 탭의 **정확도 차트에 사용할 데이터 집합을 선택하십시오.** 에서 **다른 데이터 집합 지정**을 선택합니다.  
   
-4.  찾아보기 단추 **(…)** 를 클릭하여 대화 상자를 열고 외부 데이터 집합의 정의를 작성합니다.  
+4.  찾아보기 단추를 클릭 **(...)**  대화 상자를 열고 외부 데이터 집합의 정의 작성 합니다.  
   
 5.  **마이닝 구조 선택** 대화 상자에서 작업할 모델이 포함된 마이닝 구조를 선택한 다음 **확인**을 클릭합니다.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "34015310"
   
 4.  **정확도 차트에 사용할 데이터 집합을 선택하십시오**에서 **다른 데이터 집합 지정**옵션을 선택합니다.  
   
-5.  찾아보기 단추 **(…)** 를 클릭하여 대화 상자를 열고 외부 데이터 원본의 정의를 작성합니다.  
+5.  찾아보기 단추를 클릭 **(...)**  대화 상자를 열고 외부 데이터 원본의 정의 작성 합니다.  
   
 6.  **열 매핑 지정** 대화 상자에서 **사례 테이블 선택**을 클릭합니다.  
   
@@ -115,6 +115,6 @@ ms.locfileid: "34015310"
      **열 매핑 지정** 대화 상자에 새 열 매핑이 표시됩니다. 열 사이의 선을 선택하고 Delete 키를 눌러 매핑을 제거할 수 있습니다. **마이닝 구조** 테이블의 열을 선택하고 **입력 테이블 선택** 테이블의 해당 열로 끌어 새 연결을 만들 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [테스트 및 유효성 검사 작업과 방법&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [테스트 및 유효성 검사 태스크 및 방법&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

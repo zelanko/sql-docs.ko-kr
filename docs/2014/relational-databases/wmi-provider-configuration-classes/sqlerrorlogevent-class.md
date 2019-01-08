@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 helpviewer_keywords:
 - SqlErrorLogEvent class
@@ -15,12 +13,12 @@ ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dd0b66fb83d62291d30ca3488591e1cceda5d781
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 558e60a5638ab3af75c5450e3f6fc22c6f9d9601
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179813"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359555"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent 클래스
   지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일에서 이벤트를 보기 위한 속성을 제공합니다.  
@@ -44,11 +42,11 @@ class SQLErrorLogEvent
   
 |||  
 |-|-|  
-|FileName|데이터 형식: `string`<br /><br /> 액세스 형식: 읽기 전용<br /><br /> <br /><br /> 오류 로그 파일의 이름입니다.|  
-|InstanceName|데이터 형식: `string`<br /><br /> 액세스 형식: 읽기 전용<br /><br /> 한정자: Key<br /><br /> 로그 파일이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|  
-|LogDate|데이터 형식: `datetime`<br /><br /> 액세스 형식: 읽기 전용<br /><br /> 한정자: Key<br /><br /> <br /><br /> 이벤트가 로그 파일에 기록된 날짜와 시간입니다.|  
-|메시지|데이터 형식: `string`<br /><br /> 액세스 형식: 읽기 전용<br /><br /> <br /><br /> 이벤트 메시지입니다.|  
-|ProcessInfo|데이터 형식: `string`<br /><br /> 액세스 형식: 읽기 전용<br /><br /> <br /><br /> 이벤트의 SPID(원본 서버 프로세스 ID)에 대한 정보입니다.|  
+|FileName|데이터 형식: `string`<br /><br /> 액세스 유형: 읽기 전용<br /><br /> <br /><br /> 오류 로그 파일의 이름입니다.|  
+|InstanceName|데이터 형식: `string`<br /><br /> 액세스 유형: 읽기 전용<br /><br /> 한정자: Key<br /><br /> 로그 파일이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|  
+|LogDate|데이터 형식: `datetime`<br /><br /> 액세스 유형: 읽기 전용<br /><br /> 한정자: Key<br /><br /> <br /><br /> 이벤트가 로그 파일에 기록된 날짜와 시간입니다.|  
+|메시지|데이터 형식: `string`<br /><br /> 액세스 유형: 읽기 전용<br /><br /> <br /><br /> 이벤트 메시지입니다.|  
+|ProcessInfo|데이터 형식: `string`<br /><br /> 액세스 유형: 읽기 전용<br /><br /> <br /><br /> 이벤트의 SPID(원본 서버 프로세스 ID)에 대한 정보입니다.|  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -95,7 +93,7 @@ Next
   
      **\<드라이브 >: \Program Files\Microsoft SQL Server\MSSQL12** **.\< N a m e > \MSSQL\Log**  
   
- 방화벽을 통해 연결하는 경우 방화벽에 원격 대상 컴퓨터의 WMI에 대한 예외가 설정되어 있는지 확인합니다. 자세한 내용은 [WMI Remotely Starting with Windows Vista 연결할](http://go.microsoft.com/fwlink/?LinkId=178848)합니다.  
+ 방화벽을 통해 연결하는 경우 방화벽에 원격 대상 컴퓨터의 WMI에 대한 예외가 설정되어 있는지 확인합니다. 자세한 내용은 [WMI Remotely Starting with Windows Vista 연결할](https://go.microsoft.com/fwlink/?LinkId=178848)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SqlErrorLogFile 클래스](sqlerrorlogfile-class.md)   

@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addpullsubscription
@@ -17,12 +16,12 @@ ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d3c09a2d625f8b1a8c92d3fc55d8b571336a020
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c003b103c7957e737f53eb8733022e68073b3aef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857031"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802505"
 ---
 # <a name="spaddpullsubscription-transact-sql"></a>sp_addpullsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
  해당 게시에 독립 실행형 배포 에이전트가 있는지 여부를 지정합니다. *independent_agent* 됩니다 **nvarchar(5)**, 기본값은 TRUE입니다. 하는 경우 **true**,이 게시에 대 한 독립 실행형 배포 에이전트가 있습니다. 하는 경우 **false**, 된 각 게시자 데이터베이스/구독자 데이터베이스 쌍에 대해 하나의 배포 에이전트가 있습니다. *independent_agent* 게시의 속성 이며 동일한 값을 가져야 합니다 게시자와 같습니다.  
   
  [  **@subscription_type=**] **'***subscription_type***'**  
- 구독 유형입니다. *subscription_type* 됩니다 **nvarchar(9)**, 기본값은 **익명**합니다. 값을 지정 해야 합니다 **끌어오기** 에 대 한 *subscription_type*게시자에서 구독을 등록 하지 않고 구독을 만들려는 경우가 아니면 합니다. 값을 지정 해야 하는 예에서 **익명**합니다. 이렇게 해야만 설정할 수 없는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독 구성 중에 게시자에 연결 합니다.  
+ 구독 유형입니다. *subscription_type* 됩니다 **nvarchar(9)**, 기본값은 **익명**합니다. 값을 지정 해야 합니다 **끌어오기** 에 대 한 *subscription_type*게시자에서 구독을 등록 하지 않고 구독을 만들려는 경우가 아니면 합니다. 값을 지정 해야 하는 예에서 **익명**합니다. 구독 구성 중에 게시자에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결을 설정할 수 없는 경우 이 작업을 수행해야 합니다.  
   
  [  **@description=**] **'***설명***'**  
  게시에 대한 설명입니다. *설명* 됩니다 **nvarchar(100)**, 기본값은 NULL입니다.  
@@ -95,7 +94,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_addpullsubscription**합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create an Updatable Subscription to a Transactional Publication](../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md) [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpullsubscription_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   

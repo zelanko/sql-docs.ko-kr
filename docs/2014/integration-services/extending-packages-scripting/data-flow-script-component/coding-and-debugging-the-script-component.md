@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -23,12 +21,12 @@ ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ecec815644ab8650503f4a5f6c8ea3f4af5f10a2
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 36c49775535e6fbc6a4ed867279d1ae058a932a5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460888"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356366"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>스크립트 구성 요소 코딩 및 디버깅
   [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 스크립트 구성 요소에는 메타데이터 디자인 모드와 코드 디자인 모드의 두 가지 모드가 있습니다. **스크립트 변환 편집기**를 열면 구성 요소가 메타데이터 디자인 모드로 전환됩니다. 여기서는 메타데이터를 구성하고 구성 요소 속성을 설정할 수 있습니다. 메타데이터 디자인 모드에서 스크립트 구성 요소 속성을 설정하고 입/출력을 구성한 후에는 코드 디자인 모드로 전환하여 사용자 지정 스크립트를 작성할 수 있습니다. 메타데이터 디자인 모드 및 코드 디자인 모드에 대한 자세한 내용은 [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](configuring-the-script-component-in-the-script-component-editor.md)을 참조하세요.  
@@ -57,7 +55,7 @@ ms.locfileid: "49460888"
   
 -   `ComponentWrapper` 프로젝트 항목은 다음의 세 클래스를 포함합니다.  
   
-    -   `UserComponent` 클래스 - <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>에서 상속되며, 데이터를 처리하고 패키지와 상호 작용하는 데 사용할 메서드와 속성을 포함합니다. `ScriptMain` 클래스는 `UserComponent` 클래스에서 상속됩니다.  
+    -   `UserComponent` 클래스 - <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>에서 상속되며, 데이터를 처리하고 패키지와 상호 작용하는 데 사용할 메서드와 속성을 포함합니다. `ScriptMain` 클래스는 `UserComponent` 클래스에서 상속합니다.  
   
     -   `Connections` 컬렉션 클래스 - 스크립트 변환 편집기의 연결 관리자 페이지에서 선택한 연결에 대한 참조를 포함합니다.  
   
@@ -208,9 +206,9 @@ public class ScriptMain : UserComponent
   
 ## <a name="external-resources"></a>외부 리소스  
   
--   blogs.msdn.com의 블로그 항목 - [SSIS 2008 및 R2 설치의 VSTA 설치 및 구성 문제](http://go.microsoft.com/fwlink/?LinkId=215661)  
+-   blogs.msdn.com의 블로그 항목 - [SSIS 2008 및 R2 설치의 VSTA 설치 및 구성 문제](https://go.microsoft.com/fwlink/?LinkId=215661)  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](configuring-the-script-component-in-the-script-component-editor.md)  

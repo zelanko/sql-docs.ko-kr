@@ -1,5 +1,5 @@
 ---
-title: '단원 9: Defining Perspectives and Translations | Microsoft Docs'
+title: '9 단원: Defining Perspectives and Translations | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: edc7a43485acd7c0e2d1c4a914867d8de9d1bc19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a9bad2db754aca80d6cf1501a0c178f694e9210
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094063"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362235"
 ---
-# <a name="lesson-9-defining-perspectives-and-translations"></a>9단원: 큐브 뷰 및 번역 정의
+# <a name="lesson-9-defining-perspectives-and-translations"></a>9 단원: 큐브 뷰 및 번역 정의
   이 단원에서는 큐브 뷰 및 번역을 정의하는 방법을 배웁니다. 큐브 뷰를 정의하여 큐브의 복잡성을 줄이고 사용자들이 선택한 언어로 큐브 메타데이터를 볼 수 있도록 하는 번역을 정의할 수 있습니다.  
   
 > [!NOTE]  
->  이 자습서의 모든 단원에 대한 완료된 프로젝트를 온라인으로 사용할 수 있습니다. 이전 단원에서 완료된 프로젝트를 시작 지점으로 사용하여 어떠한 단원으로든 이동할 수 있습니다. 이 자습서와 함께 제공되는 샘플 프로젝트를 다운로드하려면[여기를 클릭](http://go.microsoft.com/fwlink/?LinkID=221866) 하십시오.  
+>  이 자습서의 모든 단원에 대한 완료된 프로젝트를 온라인으로 사용할 수 있습니다. 이전 단원에서 완료된 프로젝트를 시작 지점으로 사용하여 어떠한 단원으로든 이동할 수 있습니다. 이 자습서와 함께 제공되는 샘플 프로젝트를 다운로드하려면[여기를 클릭](https://go.microsoft.com/fwlink/?LinkID=221866) 하십시오.  
   
  이 단원에서는 다음 태스크를 다룹니다.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "48094063"
  이 태스크에서는 특정 언어로의 특정 메타데이터 번역을 정의하고 검색합니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [10단원: 관리자 역할 정의](lesson-10-defining-administrative-roles.md)  
+ [10 단원: 관리자 역할 정의](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services Tutorial 시나리오](../analysis-services/analysis-services-tutorial-scenario.md)   

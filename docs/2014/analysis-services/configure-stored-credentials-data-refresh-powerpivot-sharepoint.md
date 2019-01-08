@@ -11,12 +11,12 @@ ms.assetid: 987eff0f-bcfe-4bbd-81e0-9aca993a2a75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4c12e62d3a74ca1112ac7983fa6480b49171c308
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 73ee3f7f86203f4fa0ac2e4da86fecee0e2b4cf5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149423"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365087"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>PowerPivot 데이터 새로 고침을 위한 저장된 자격 증명 구성(SharePoint용 PowerPivot)
   사용하려는 자격 증명을 저장할 대상 응용 프로그램을 Secure Store Service에 만들면 Windows 사용자 계정으로 PowerPivot 데이터 새로 고침 작업을 실행할 수 있습니다. 마찬가지로, 원래 PowerPivot for Excel에서 데이터를 가져오는 데 사용된 것과 다른 데이터베이스 로그인을 제공하려는 경우 해당 자격 증명을 보안 저장소 서비스 대상 응용 프로그램에 매핑한 다음 데이터 새로 고침 일정에서 해당 응용 프로그램을 지정하면 됩니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48149423"
   
  [외부 또는 타사 데이터 원본에 액세스 하기 위한 미리 정의 된 계정 구성](#config3rd)  
   
- 에 구성 하거나 데이터 새로 고침을 사용 하 여 문제가 있는 경우 참조를 [PowerPivot 데이터 새로 고침 문제 해결](http://go.microsoft.com/fwlink/?LinkID=223279) 가능한 해결 방법에 대 한 TechNet wiki의 페이지입니다.  
+ 에 구성 하거나 데이터 새로 고침을 사용 하 여 문제가 있는 경우 참조를 [PowerPivot 데이터 새로 고침 문제 해결](https://go.microsoft.com/fwlink/?LinkID=223279) 가능한 해결 방법에 대 한 TechNet wiki의 페이지입니다.  
   
 ##  <a name="configAny"></a> 데이터 새로 고침에 대 한 모든 Windows 계정 구성  
  SharePoint 사용자는 데이터 새로 고침 일정을 정의할 때 데이터 새로 고침이 수행될 사용자 ID를 지정해야 합니다. PowerPivot 무인 데이터 새로 고침 계정을 선택하거나 자신의 Windows 도메인 사용자 계정을 입력하거나 데이터 새로 고침 작업에 사용할 수 있는 다른 Windows 사용자 계정을 입력하면 됩니다. 이 섹션의 단계에서는 다른 Windows 계정을 지정하는 마지막 옵션을 사용합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "48149423"
   
 -   데이터 새로 고침 일정에 이 대상 응용 프로그램을 지정하면 데이터 새로 고침이 작동하는지 확인합니다.  
   
-### <a name="step-1-create-a-target-application"></a>1 단계: 대상 응용 프로그램 만들기  
+### <a name="step-1-create-a-target-application"></a>1단계: 대상 응용 프로그램 만들기  
   
 1.  중앙 관리의 애플리케이션 관리에서 **서비스 애플리케이션 관리**를 클릭합니다.  
   
@@ -117,16 +117,16 @@ ms.locfileid: "48149423"
   
 5.  선택 **참가**를 클릭 하 고 **확인**합니다.  
   
-###  <a name="bkmk_dbread"></a> 3 단계: 읽기 데이터 새로 고침에 사용 되는 외부 데이터 원본에 액세스 하는 권한 부여  
+###  <a name="bkmk_dbread"></a> 3 단계: 데이터를 새로 고치는 데 사용되는 외부 데이터 원본에 액세스할 수 있는 읽기 권한 부여  
  PowerPivot 통합 문서로 데이터를 가져올 때 외부 데이터에 대한 연결은 현재 사용자의 ID를 데이터 원본에 연결하는 데 사용하는 가장된 연결이나 트러스트된 연결을 기반으로 하는 경우가 많습니다. 이러한 유형의 연결은 현재 사용자에게 자신이 가져오는 데이터를 읽을 수 있는 권한이 있는 경우에만 작동합니다.  
   
  데이터 새로 고침 시나리오에서는 데이터를 가져오는 데 사용된 것과 같은 연결 문자열이 데이터를 새로 고치는 데 다시 사용됩니다. 연결 문자열이 현재 사용자를 가정하는 경우(예를 들어 Integrated_Security=SSPI를 포함하는 문자열의 경우), PowerPivot 시스템 서비스에서는 대상 응용 프로그램에 지정된 사용자 ID를 현재 사용자로 전달합니다. 이 연결은 계정에 외부 데이터 원본에 대한 읽기 권한이 있는 경우에만 성공합니다.  
   
  이러한 이유로 데이터를 새로 고치는 동안 사용되는 모든 외부 데이터 원본에 대한 읽기 전용 권한을 계정에 부여해야 합니다.  
   
- 조직에서 사용하는 데이터 원본의 관리자인 경우 로그인을 만들고 필요한 사용 권한을 할당할 수 있습니다. 그렇지 않은 경우에는 데이터 소유자에게 문의하여 계정 정보를 제공해야 합니다. 대상 응용 프로그램에 매핑할 Windows 도메인 사용자 계정을 지정해야 합니다. 이 계정에 지정 된 "1 단계: 대상 응용 프로그램 만들기"이이 항목의 합니다.  
+ 조직에서 사용하는 데이터 원본의 관리자인 경우 로그인을 만들고 필요한 사용 권한을 할당할 수 있습니다. 그렇지 않은 경우에는 데이터 소유자에게 문의하여 계정 정보를 제공해야 합니다. 대상 응용 프로그램에 매핑할 Windows 도메인 사용자 계정을 지정해야 합니다. 이 계정에 지정 된 "1 단계: 대상 응용 프로그램 만들기 "이이 항목의 합니다.  
   
-###  <a name="bkmk_verify"></a> 4 단계: 데이터에서 계정의 가용성 확인 구성 페이지를 새로 고칩니다.  
+###  <a name="bkmk_verify"></a> 4 단계: 데이터 새로 고침 구성 페이지에서 계정의 가용성 확인  
   
 1.  PowerPivot 데이터가 포함되어 있는 게시된 통합 문서에 대한 데이터 새로 고침 구성 페이지를 엽니다. 페이지를 여는 방법에 지침은 [데이터 새로 고침 예약 &#40;SharePoint 용 PowerPivot&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)합니다.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "48149423"
   
  오류가 발생 하는 경우 클릭할 수 있습니다 **일정 구성** 데이터의 서로 다른 자격 증명을 기록 페이지를 새로 고칩니다. 또한 원래 통합 문서의 데이터 원본 연결 정보를 검사하여 데이터를 새로 고치는 동안 사용되는 연결 문자열을 확인해야 할 수 있습니다. 연결 문자열은 문제를 해결하는 데 사용할 수 있는 데이터베이스와 서버 위치에 대한 정보를 제공합니다.  
   
- 문제 해결에 대 한 자세한 내용은 참조 하세요. [PowerPivot 데이터 새로 고침 문제 해결](http://go.microsoft.com/fwlink/p/?LinkID=223279) TechNet wiki의 합니다.  
+ 문제 해결에 대 한 자세한 내용은 참조 하세요. [PowerPivot 데이터 새로 고침 문제 해결](https://go.microsoft.com/fwlink/p/?LinkID=223279) TechNet wiki의 합니다.  
   
 ##  <a name="config3rd"></a> 외부 또는 타사 데이터 원본에 액세스 하기 위한 미리 정의 된 계정 구성  
  데이터베이스 서버는 자체 인증 방법과 함께 제공되는 경우가 있습니다. 데이터 새로 고침 중에 외부 데이터 원본에 액세스하는 데 데이터베이스 자격 증명이 필요한 PowerPivot 통합 문서가 있을 경우 자격 증명에 대한 대상 응용 프로그램 ID를 만든 다음 일정 데이터 새로 고침 페이지의 데이터 원본 섹션에서 대상 응용 프로그램을 지정할 수 있습니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Configuration Manager, accessing
@@ -25,12 +24,12 @@ ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d99ea23504c3777bd3e4f1d9213e590d1cb0f282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: e747a85c816c8e57757be9acb61b14204266ff35
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169743"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639239"
 ---
 # <a name="manage-the-database-engine-services"></a>데이터베이스 엔진 서비스 관리
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 운영 체제에서 서비스로 실행됩니다. 서비스는 시스템 백그라운드에서 실행되는 일종의 애플리케이션입니다. 서비스는 일반적으로 웹 지원, 이벤트 로깅 또는 파일 지원 등 운영 체제의 중요한 기능을 제공합니다. 서비스는 컴퓨터 바탕 화면에 사용자 인터페이스를 표시하지 않고 실행할 수 있습니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 및 여러 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소가 서비스로 실행됩니다. 이러한 서비스는 일반적으로 운영 체제를 시작할 때 함께 시작되지만 설치 시 지정된 설정에 따라 달라질 수 있으며 일부 서비스는 기본적으로 시작되지 않습니다. 이 섹션에서는 다양한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 관리에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 로그인하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 시작, 중지, 일시 중지, 재개 및 다시 시작하는 방법에 대해 알아야 합니다. 로그인한 후에 서버 관리 또는 데이터베이스 쿼리와 같은 태스크를 수행할 수 있습니다.  

@@ -10,12 +10,12 @@ ms.assetid: c2695a5c-9cc5-4b18-8771-53027ca9a9af
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c0993dfccf1ab48d509f47e5d179402240b453cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 3419faca26d9d252610c07cb994ab5faa738f937
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219953"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399186"
 ---
 # <a name="rename-user-defined-functions"></a>사용자 정의 함수 이름 바꾸기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 사용자 정의 함수의 이름을 바꿀 수 있습니다.  

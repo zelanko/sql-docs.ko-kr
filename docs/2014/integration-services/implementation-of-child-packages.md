@@ -13,12 +13,12 @@ ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f415816f935e03b6b533fded2fb00760a101526d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec58691ab78fdf7c57871805bb095ca48f221da7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100189"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373405"
 ---
 # <a name="implementation-of-child-packages"></a>자식 패키지 구현
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 사용하여 로그 균형 조정을 구현하면 사용 가능한 CPU 또는 서버 시간을 사용할 다른 서버에 자식 패키지가 설치됩니다. 자식 패키지를 만들고 실행하려면 다음 단계를 수행하십시오.  
@@ -56,7 +56,7 @@ ms.locfileid: "48100189"
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 원격 컴퓨터에서 개별 SQL Server 에이전트 작업을 실행하여 패키지가 실행되는지 확인합니다.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 작업에서 실행한 패키지의 문제를 해결하는 방법은 [지원 기술 자료에서](http://support.microsoft.com/kb/918760) SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행하지 않는다 [!INCLUDE[msCoName](../includes/msconame-md.md)] 를 참조하십시오.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 작업에서 실행한 패키지의 문제를 해결하는 방법은 [지원 기술 자료에서](https://support.microsoft.com/kb/918760) SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행하지 않는다 [!INCLUDE[msCoName](../includes/msconame-md.md)] 를 참조하십시오.  
   
  SQL Server 에이전트는 프록시에 대한 하위 시스템 액세스 권한을 확인하고 작업 단계가 실행될 때마다 프록시에 대한 액세스 권한을 부여합니다.  
   
@@ -68,8 +68,8 @@ ms.locfileid: "48100189"
   
 ## <a name="related-content"></a>관련 내용  
   
--   consultingblogs.emc.com의 블로그 항목 - [SSIS: 부모 패키지의 변수 액세스](http://go.microsoft.com/fwlink/?LinkId=257729)   
+-   블로그 항목, [SSIS: 부모 패키지의 변수 액세스](https://go.microsoft.com/fwlink/?LinkId=257729), consultingblogs.emc.com 합니다.  
   
--   consultingblogs.emc.com의 블로그 항목 - [SSIS: 자식 패키지를 in-process로 실행해야 하는지 out-of-process로 실행해야 하는지 여부](http://go.microsoft.com/fwlink/?LinkId=220819)  
+-   블로그 항목, [SSIS: In-process와 out-of-process-자식 패키지를 실행 해야 있습니다? ](https://go.microsoft.com/fwlink/?LinkId=220819), consultingblogs.emc.com 합니다.  
   
   

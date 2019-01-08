@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzylookuptrans.f1
@@ -31,18 +30,18 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 53385dd40fa0b180fcc6994832faf5feffcdd8f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: a09abfe2d5370e9564dd3d081346c022cb2ca0d7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106402"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361965"
 ---
 # <a name="fuzzy-lookup-transformation"></a>유사 항목 조회 변환
   유사 항목 조회 변환은 데이터 표준화, 데이터 수정, 누락된 값 제공 등 데이터 정리 태스크를 수행합니다.  
   
 > [!NOTE]  
->  성능 및 메모리 제한 사항을 포함하여 유사 항목 조회 변환에 대한 자세한 내용은 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)(SQL Server Integration Services 2005에서 유사 항목 조회 및 유사 항목 그룹화) 백서를 참조하세요.  
+>  성능 및 메모리 제한 사항을 포함하여 유사 항목 조회 변환에 대한 자세한 내용은 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)(SQL Server Integration Services 2005에서 유사 항목 조회 및 유사 항목 그룹화) 백서를 참조하세요.  
   
  유사 항목 조회 변환 작업은 유사 항목 일치를 사용한다는 점에서 조회 변환과 다릅니다. 조회 변환은 동등 조인을 사용하여 참조 테이블에서 일치하는 레코드를 찾으며 일치하는 레코드가 하나 이상 있는 레코드와 일치하는 레코드가 없는 레코드를 반환합니다. 반대로 유사 항목 조회 변환은 유사 일치를 사용하여 참조 테이블에서 하나 이상의 근접하게 일치하는 항목을 반환합니다.  
   
@@ -120,18 +119,18 @@ ms.locfileid: "48106402"
 ## <a name="temporary-tables-and-indexes"></a>임시 테이블 및 인덱스  
  유사 항목 조회 변환은 런타임에 변환이 연결하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에서 테이블 및 인덱스 등의 임시 개체를 만듭니다. 이러한 임시 테이블 및 인덱스의 크기는 참조 테이블에 있는 행 및 토큰 개수와 유사 항목 조회 변환이 만드는 토큰 개수에 비례하므로 많은 양의 디스크 공간을 소모할 수 있습니다. 변환은 또한 이 임시 테이블을 쿼리합니다. 그러므로 특히 프로덕션 서버가 사용 가능한 디스크 공간을 제한한 경우 유사 항목 조회 변환을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스의 비-프로덕션 인스턴스에 연결하는 방법을 고려해야 합니다.  
   
- 변환에서 사용하는 테이블 및 인덱스가 로컬 컴퓨터에 있는 경우 변환의 성능이 향상될 수 있습니다. 유사 항목 조회 변환에서 사용하는 참조 테이블이 프로덕션 서버에 있는 경우 테이블을 비-프로덕션 서버에 복사하고 복사본을 액세스하도록 유사 항목 조회 변환을 구성하는 방법을 고려해야 합니다. 이렇게 하면 조회 쿼리가 프로덕션 서버의 리소스를 소모하지 않도록 방지할 수 있습니다. 이외에 유사 항목 조회 변환이 일치 인덱스를 유지 관리하는 경우, 즉 MatchIndexOptions가 **GenerateAndMaintainNewIndex**로 설정된 경우에 변환은 데이터 정리 작업을 수행하는 동안 참조 테이블을 잠그고 다른 사용자와 애플리케이션이 이 테이블에 액세스하지 못하게 할 수 있습니다.  
+ 변환에서 사용하는 테이블 및 인덱스가 로컬 컴퓨터에 있는 경우 변환의 성능이 향상될 수 있습니다. 유사 항목 조회 변환에서 사용하는 참조 테이블이 프로덕션 서버에 있는 경우 테이블을 비-프로덕션 서버에 복사하고 복사본을 액세스하도록 유사 항목 조회 변환을 구성하는 방법을 고려해야 합니다. 이렇게 하면 조회 쿼리가 프로덕션 서버의 리소스를 소모하지 않도록 방지할 수 있습니다. 또한 유사 항목 조회 변환이 일치 인덱스를 유지 관리하는 경우, 즉 MatchIndexOptions가 **GenerateAndMaintainNewIndex**로 설정되는 경우 변환은 데이터 정리 작업을 수행하는 동안 참조 테이블을 잠그고 다른 사용자와 애플리케이션이 해당 테이블에 액세스하지 못하게 할 수 있습니다.  
   
 ## <a name="configuring-the-fuzzy-lookup-transformation"></a>유사 항목 조회 변환의 구성  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
  **유사 항목 조회 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   [유사 항목 조회 변환 편집기 &#40;참조 테이블 탭&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
+-   [유사 항목 조회 변환 편집기&#40;참조 테이블 탭&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
   
--   [유사 항목 조회 변환 편집기 &#40;열 탭&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
+-   [유사 항목 조회 변환 편집기&#40;열 탭&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
   
--   [유사 항목 조회 변환 편집기 &#40;고급 탭&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
+-   [유사 항목 조회 변환 편집기&#40;고급 탭&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
  **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   

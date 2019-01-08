@@ -17,19 +17,19 @@ ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35fad6632f6c03cbbcc913868da15a60d4b87453
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: bcf2d5924e160f38c9b00b564a8ae94b6f8705c3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095899"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358005"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>SQL Server 2014 버전에서 지원하는 기능
   이 항목은 다른 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]버전에서 지원되는 기능의 세부 정보를 제공합니다.  
   
-> **참고:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 180 일 평가 기간 동안 평가 버전에서 사용할 수 있습니다. 자세한 내용은 참조는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [평가판 소프트웨어 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=190955)합니다.  
-  
-> **참고:** Evaluation 및 Developer 버전에서 지 원하는 기능 참조는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 기능 집합입니다.  
+> **참고:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 180 일 평가 기간 동안 평가 버전에서 사용할 수 있습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [평가판 소프트웨어 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=190955)를 참조하세요.  
+> 
+> **참고:** Evaluation 및 Developer 버전에서 지원하는 기능은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 기능 집합을 참조하세요.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기술과 관련된 표로 이동하려면 해당 링크를 클릭합니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48095899"
   
  [BI 의미 체계 모델 (다차원)](#BISemModel_multi)  
   
- [BI 의미 체계 모델 (테이블 형식)](#BISemModel_tabular)  
+ [BI 의미 체계 모델(테이블 형식)](#BISemModel_tabular)  
   
  [SharePoint용 PowerPivot](#PowerPivot)  
   
@@ -103,7 +103,7 @@ ms.locfileid: "48095899"
 |데이터베이스 미러링|사용자 계정 컨트롤|지원(Safety Full만)|지원(Safety Full만)|미러링 모니터만|미러링 모니터만|미러링 모니터만|미러링 모니터만|  
 |백업 압축|사용자 계정 컨트롤|예|사용자 계정 컨트롤|||||  
 |데이터베이스 스냅숏|사용자 계정 컨트롤|||||||  
-|AlwaysOn 장애 조치(failover) 클러스터 인스턴스|지원(노드 지원: 운영 체제가 지원하는 최대 크기)|지원(노드 지원: 2)|지원(노드 지원: 2)|||||  
+|AlwaysOn 장애 조치(failover) 클러스터 인스턴스|지원(노드 지원: 운영 체제가 지원하는 최대 크기|지원(노드 지원: 2)|지원(노드 지원: 2)|||||  
 |AlwaysOn 가용성 그룹|예(2개의 동기 보조 복제본을 포함하여 최대 8개까지 보조 복제본 지원)|||||||  
 |Connection Director|사용자 계정 컨트롤|||||||  
 |온라인 페이지 및 파일 복원|사용자 계정 컨트롤|||||||  
@@ -193,7 +193,7 @@ ms.locfileid: "48095899"
 |관리자 전용 연결|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|지원(추적 플래그 사용)|지원(추적 플래그 사용)|지원(추적 플래그 사용)|  
 |PowerShell 스크립팅 지원|사용자 계정 컨트롤|예|예|예|예|예|사용자 계정 컨트롤|  
 |SysPrep 지원<sup>1</sup>|사용자 계정 컨트롤|예|예|예|예|예|사용자 계정 컨트롤|  
-|데이터 계층 애플리케이션 구성 요소 작업 지원 - 추출, 배포, 업그레이드, 삭제|사용자 계정 컨트롤|예|예|예|예|예|사용자 계정 컨트롤|  
+|지원 데이터 계층 응용 프로그램 구성 요소 작업-추출, 배포, 업그레이드, 삭제|사용자 계정 컨트롤|예|예|예|예|예|사용자 계정 컨트롤|  
 |정책 자동화(일정 및 변경 내용 검사)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤||||  
 |성능 데이터 수집기|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤||||  
 |다중 인스턴스 관리에서 관리되는 인스턴스로 등록 가능|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤||||  
@@ -218,7 +218,7 @@ ms.locfileid: "48095899"
 |기능 이름|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |[!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio 통합|사용자 계정 컨트롤|예|예|예|예|예|사용자 계정 컨트롤|  
-|Intellisense ([!INCLUDE[tsql](../includes/tsql-md.md)] 및 MDX)|사용자 계정 컨트롤|예|예|예|예|예|예|  
+|Intellisense([!INCLUDE[tsql](../includes/tsql-md.md)] 및 MDX)|사용자 계정 컨트롤|예|예|예|예|예|예|  
 |[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|예|예|예|예|사용자 계정 컨트롤|||  
 |SQL 쿼리, 편집 및 디자인 도구<sup>1</sup>|사용자 계정 컨트롤|예|사용자 계정 컨트롤|||||  
 |버전 제어 지원<sup>1</sup>|사용자 계정 컨트롤|예|사용자 계정 컨트롤|||||  
@@ -280,7 +280,7 @@ ms.locfileid: "48095899"
 ##  <a name="MDS"></a> Master Data Services  
   
 > [!NOTE]  
->  -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Business Intelligence 및 Enterprise의 64 비트 버전 에서만 사용할 수 있는 경우  
+>  -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]는 Business Intelligence 및 Enterprise 64비트 버전에서만 사용할 수 있습니다.  
   
 |기능|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -439,7 +439,7 @@ ms.locfileid: "48095899"
 |Evaluation|Evaluation|  
   
 ##  <a name="BIClients"></a> Business Intelligence 클라이언트  
- 다음 소프트웨어 클라이언트 응용 프로그램은 Microsoft 다운로드 센터에서 사용 가능한 및 지원에서 실행 되는 비즈니스 인텔리전스 문서를 작성 하기 위해 제공 되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스. 서버 환경에서 이러한 문서를 호스트할 때 버전을 사용 하 여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 해당 문서 유형을 지 원하는 합니다. 다음 표에서는 이러한 클라이언트 애플리케이션에서 만든 문서를 호스팅하는 데 필요한 서버 기능이 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 보여 줍니다.  
+ Microsoft 다운로드 센터에서 제공하는 다음 소프트웨어 클라이언트 애플리케이션을 사용하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 실행되는 비즈니스 인텔리전스 문서를 손쉽게 만들 수 있습니다. 이러한 문서를 서버 환경에서 호스팅하려는 경우 해당 문서 유형을 지원하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 사용하세요. 다음 표에서는 이러한 클라이언트 애플리케이션에서 만든 문서를 호스팅하는 데 필요한 서버 기능이 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 보여 줍니다.  
   
 |기능 이름|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -448,9 +448,9 @@ ms.locfileid: "48095899"
 |[!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 2010|사용자 계정 컨트롤|사용자 계정 컨트롤||||||  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|사용자 계정 컨트롤|사용자 계정 컨트롤||||||  
   
-> [!NOTE]  
+> [!NOTE]
 >  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] Excel 추가 기능 및 종속 되지 않는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 그러나 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)]은 SharePoint에서 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]통합 문서를 공유하고 공동 작업하는 데 필요하며 이 기능은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 및 Business Intelligence 버전의 일부로 사용할 수 있습니다.  
-> 2.  위의 표에서 합니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이러한 클라이언트 도구를 사용 하도록 설정 하는 데 필요한 버전;이 기능이의 모든 버전에서 호스트 되는 데이터에 액세스할 수 있지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다.  
+> 2.  위의 표는 이러한 클라이언트 도구를 활성화하는 데 필요한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 식별하지만 이러한 기능은 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서 호스팅되는 데이터에 액세스할 수 있습니다.  
   
 ##  <a name="Spatial"></a> Spatial and Location Services  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - server management [SQL Server], connections
@@ -21,12 +20,12 @@ ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9e379e8ebfded2175fe3c0c787c156bd131ef3e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f1a426f91af1f284cc0e60505dc2fcbfae9c4ad
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147561"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377565"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>데이터베이스 관리자를 위한 진단 연결
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 서버에 대한 표준 연결이 불가능할 때 관리자에게 특별 진단 연결을 제공합니다. 이 진단 연결을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 표준 연결 요청에 응답하지 않은 경우에도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 액세스하여 진단 쿼리를 실행하고 문제를 해결할 수 있습니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "48147561"
   
 ||  
 |-|  
-|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
   
 ## <a name="connecting-with-dac"></a>DAC를 사용하여 연결  
  기본적으로 서버에서 실행되는 클라이언트에서만 연결이 허용됩니다. [remote admin connections 옵션](remote-admin-connections-server-configuration-option.md)이 사용된 sp_configure 저장 프로시저를 사용하여 구성하지 않은 경우에는 네트워크 연결이 허용되지 않습니다.  
@@ -55,7 +54,7 @@ ms.locfileid: "48147561"
   
 -   DAC는 처음에 로그인과 관련된 기본 데이터베이스에 연결을 시도합니다. 성공적으로 연결되면 master 데이터베이스에 연결할 수 있습니다. 기본 데이터베이스가 오프라인이거나 사용할 수 없는 경우 연결은 4060 오류를 반환합니다. 그러나 다음 명령을 사용하면 기본 데이터베이스를 무시하고 master 데이터베이스에 연결할 수 있습니다.  
   
-     **sqlcmd –A –d master**  
+     **sqlcmd -A -d master**  
   
      [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스가 시작되면 master를 사용할 수 있으므로 DAC로 master 데이터베이스에 연결하는 것이 좋습니다.  
   
@@ -75,7 +74,7 @@ ms.locfileid: "48147561"
   
 -   카탈로그 뷰를 쿼리합니다.  
   
--   DBCC FREEPROCCACHE, DBCC FREESYSTEMCACHE, DBCC DROPCLEANBUFFERS 등의 기본 DBCC 명령을`,` DBCC sqlperf 합니다. **DBCC** CHECKDB, DBCC DBREINDEX 또는 DBCC SHRINKDATABASE 등 리소스를 많이 사용하는 명령을 실행하지 마세요.  
+-   DBCC FREEPROCCACHE, DBCC FREESYSTEMCACHE, DBCC DROPCLEANBUFFERS`,` DBCC SQLPERF 등의 기본 DBCC 명령을 사용합니다. **DBCC** CHECKDB, DBCC DBREINDEX 또는 DBCC SHRINKDATABASE 등 리소스를 많이 사용하는 명령을 실행하지 마세요.  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL*\<spid>* 명령 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 상태에 따라 KILL 명령은 성공하지 않을 수도 있습니다. 이러한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작하는 것이 유일한 해결 방법입니다. 일반적인 지침은 다음과 같습니다.  
   
@@ -94,7 +93,7 @@ ms.locfileid: "48147561"
   
  시작할 때 DAC 포트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 의해 동적으로 할당됩니다. 기본 인스턴스에 연결할 때 DAC는 SQL Server Browser 서비스에 대한 SSRP( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol) 요청을 사용하지 않습니다. 먼저 TCP 포트 1434를 통해 연결합니다. 연결이 실패할 경우 SSRP 호출을 실행하여 포트를 설정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser가 SSRP 요청을 수신하지 않을 경우 연결 요청이 오류를 반환합니다. 오류 로그를 참조하여 DAC를 수신 대기 중인 포트 번호를 찾으십시오. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 원격 관리 연결을 허용하도록 구성되어 있는 경우 DAC를 명시적 포트 번호로 시작해야 합니다.  
   
- **sqlcmd–Stcp:** *\<서버>,\<포트>*  
+ **sqlcmd Stcp:**  *\<서버 >,\<포트 >*  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그는 DAC의 포트 번호를 표시합니다. 포트 번호는 기본적으로 1434입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 로컬 DAC 연결만 허용하도록 구성된 경우 다음 명령을 사용하여 루프백 어댑터를 통해 연결하십시오.  
   
@@ -103,7 +102,7 @@ ms.locfileid: "48147561"
 ## <a name="example"></a>예제  
  이 예에서 관리자는 `URAN123` 서버가 응답하지 않음을 확인하고 문제를 진단하려고 합니다. 이 작업을 수행하려면 사용자는 `sqlcmd` 명령 프롬프트 유틸리티를 활성화하고 DAC를 나타내는 `URAN123` 를 사용하여 `-A` 서버에 연결해야 합니다.  
   
- `sqlcmd -S URAN123 -U sa -P <xxx> –A`  
+ `sqlcmd -S URAN123 -U sa -P <xxx> -A`  
   
  이제 관리자가 쿼리를 실행하여 문제를 진단하고 응답하지 않는 세션을 종료할 수 있습니다.  
   

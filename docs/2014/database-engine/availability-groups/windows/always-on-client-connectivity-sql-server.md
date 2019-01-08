@@ -14,12 +14,12 @@ ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 53f514e83e980e0a91184581d186bcb4046727c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 1368d29801a414de866003b86c63fb4823c4a7b8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192750"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355761"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Always On 클라이언트 연결(SQL Server)
   이 항목에서는 클라이언트 구성 및 설정에 대한 사전 요구 사항, 제한 사항 및 권장 사항을 비롯하여 AlwaysOn 가용성 그룹에 클라이언트를 연결할 때 고려해야 할 사항에 대해 설명합니다.  
@@ -41,9 +41,9 @@ ms.locfileid: "48192750"
 |연결 패치가 포함 된.NET Framework 3.5 SP1이 있는 ADO.NET **<sup>**</sup>**|사용자 계정 컨트롤|예|예|예|예|  
 |SQL Server용 Microsoft JDBC Driver 4.0|예|예|예|예|사용자 계정 컨트롤|  
   
- **<sup>*</sup>**  .NET Framework 4.0이 있는 ADO.NET 용 연결 패치 다운로드: [ http://support.microsoft.com/kb/2600211 ](http://support.microsoft.com/kb/2600211)합니다.  
+ **<sup>*</sup>**  .NET Framework 4.0이 있는 ADO.NET 용 연결 패치 다운로드: [ https://support.microsoft.com/kb/2600211 ](https://support.microsoft.com/kb/2600211)합니다.  
   
- **<sup>**</sup>* *.NET Framework 3.5 SP1이 있는 ADO.NET 용 연결 패치 다운로드: [ http://support.microsoft.com/kb/2654347 ](http://support.microsoft.com/kb/2654347)합니다.  
+ **<sup>**</sup>* *.NET Framework 3.5 SP1이 있는 ADO.NET 용 연결 패치 다운로드: [ https://support.microsoft.com/kb/2654347 ](https://support.microsoft.com/kb/2654347)합니다.  
   
 > [!IMPORTANT]  
 >  가용성 그룹 수신기에 연결하려면 클라이언트에서 TCP 연결 문자열을 사용해야 합니다.  
@@ -62,10 +62,10 @@ ms.locfileid: "48192750"
  [필수 구성 요소, 제한 사항 및 AlwaysOn 가용성 그룹에 대 한 권장 사항 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [가용성 복제본에 대한 클라이언트 연결 액세스 정보&#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](http://go.microsoft.com/fwlink/?LinkId=227600)   
- [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](http://blogs.msdn.com/b/sqlalwayson/)   
- [Windows Server 2003, Windows Vista, Windows Server 2008, Windows 7 또는 Windows Server 2008 R2를 실행하는 컴퓨터에서 IPSec 연결을 다시 연결할 때 시간이 오래 지연 발생](http://support.microsoft.com/kb/980915)   
- [클러스터 서비스가 Windows Server 2008 R2에서 IPv6 IP 주소를 장애 조치하는 데 30초 정도 걸림(영문)](http://support.microsoft.com/kb/2578113)   
- [클러스터와 응용 프로그램 서버 간에 라우터가 없는 경우 장애 조치(Failover) 작업이 느림](http://support.microsoft.com/kb/2582281)  
+ [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](https://go.microsoft.com/fwlink/?LinkId=227600)   
+ [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](https://blogs.msdn.com/b/sqlalwayson/)   
+ [Windows Server 2003, Windows Vista, Windows Server 2008, Windows 7 또는 Windows Server 2008 R2를 실행하는 컴퓨터에서 IPSec 연결을 다시 연결할 때 시간이 오래 지연 발생](https://support.microsoft.com/kb/980915)   
+ [클러스터 서비스가 Windows Server 2008 R2에서 IPv6 IP 주소를 장애 조치하는 데 30초 정도 걸림(영문)](https://support.microsoft.com/kb/2578113)   
+ [클러스터와 애플리케이션 서버 간에 라우터가 없는 경우 장애 조치(Failover) 작업이 느림](https://support.microsoft.com/kb/2582281)  
   
   

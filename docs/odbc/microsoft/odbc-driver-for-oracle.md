@@ -15,12 +15,12 @@ ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57f0713c6da777a7c338a3be888a43e72e287342
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 4685d209d768bd3ff41c1c7367ef6cb6dcd45bcf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806731"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515108"
 ---
 # <a name="odbc-driver-for-oracle"></a>Oracle용 ODBC 드라이버
 > [!IMPORTANT]  
@@ -34,7 +34,7 @@ ms.locfileid: "47806731"
   
  ![Oracle 앱에 대 한 ODBC 드라이버&#47;드라이버 아키텍처](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
   
- Oracle 용 ODBC 드라이버 적합성 수준 1 API 및 SQL 적합성 수준 Core 준수합니다. 또한 API 적합성 수준 2 코어 및 확장 SQL 적합성 수준에서 문법의 대부분에 일부 기능을 지원합니다. 드라이버는 ODBC 2.5 규정을 준수 하 고 32 비트 시스템을 지원 합니다. Oracle 7.3 x는 완전히; 지원 열고 Oracle8 제한적으로 지원 합니다. Oracle 용 ODBC 드라이버는 새로운 열고 Oracle8 데이터 형식 중 하나를 지원 하지 않습니다-유니코드 데이터 형식, Blob, Clob, 등-도 Oracle의 새로운 관계형 개체 모델을 지원 하지 않습니다. 지원 되는 데이터 형식에 대 한 자세한 내용은 참조 하세요. [Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md) 이 가이드에서.  
+ Oracle 용 ODBC 드라이버 적합성 수준 1 API 및 SQL 적합성 수준 Core 준수합니다. 또한 API 적합성 수준 2 코어 및 확장 SQL 적합성 수준에서 문법의 대부분에 일부 기능을 지원합니다. 드라이버는 ODBC 2.5 규정을 준수 하 고 32 비트 시스템을 지원 합니다. Oracle 7.3 x는 완전히; 지원 열고 Oracle8 제한적으로 지원 합니다. Oracle 용 ODBC 드라이버-유니코드 데이터 형식, Blob, Clob, 및 등-새 열고 Oracle8 데이터 형식 중 하나를 지원 하지 않습니다도 Oracle의 새로운 관계형 개체 모델을 지원 하지 않습니다. 지원 되는 데이터 형식에 대 한 자세한 내용은 참조 하세요. [Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md) 이 가이드에서.  
   
  Oracle 데이터에 액세스 하려면 다음 구성 요소가 필요 합니다.  
   

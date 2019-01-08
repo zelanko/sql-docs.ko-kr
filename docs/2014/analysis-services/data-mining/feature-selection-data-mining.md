@@ -22,12 +22,12 @@ ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4d2cf693a4f4c909ef66b647f3ddd644a9bda6a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 6618a4a0818519ba4c3f0bbd63a46e02b4217296
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067923"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360145"
 ---
 # <a name="feature-selection-data-mining"></a>기능 선택(데이터 마이닝)
   *기능 선택* 도구와 입력 처리 및 분석을 위해 관리 하기 쉬운 크기로 줄이는 데 사용할 수 있는 기법을 설명 하기 위해 데이터 마이닝에서 일반적으로 사용 하는 용어입니다. 기능 선택은 뿐 아니라 *카디널리티 감소가*, 즉, 모델 뿐만 아니라 특성, 즉 선택 빌드할 때 고려할 수 있는 특성의 수에는 임의의 또는 미리 정의 된 구분 나아가 분석가 또는 모델링 도구가 적극적으로 선택 하거나 분석의 유용성을 기반으로 특성을 삭제 합니다.  
@@ -43,9 +43,9 @@ ms.locfileid: "48067923"
  데이터 원본의 500개 열 중에서 50개 열에만 모델 작성에 유용한 정보가 있을 경우 이러한 열을 모델에 포함하지 않거나, 기능 선택 기술을 사용하여 최상의 기능을 자동으로 검색하고 통계적으로 중요하지 않은 값을 제외할 수 있습니다. 기능 선택은 중요하지 않은 데이터가 너무 많거나, 매우 중요한 데이터가 너무 적은 두 가지 문제를 해결하는 데 도움이 됩니다.  
   
 ## <a name="feature-selection-in-analysis-services-data-mining"></a>Analysis Services 데이터 마이닝의 기능 선택  
- 일반적으로 기능 선택에서 자동으로 수행 됩니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 및 각 알고리즘에는 기능 축소를 지능형으로 적용 하기 위한 기본 기술 집합이 있습니다. 기능 선택은 모델에 사용될 가능성이 가장 높은 특성을 데이터 집합에서 자동으로 선택하기 위해 모델을 학습하기 전에 항상 수행됩니다. 하지만 기능 선택 동작에 영향을 주는 매개 변수를 수동으로 설정할 수도 있습니다.  
+ 일반적으로 기능 선택은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 자동으로 수행되며 각 알고리즘에는 기능 축소를 지능형으로 적용하기 위한 기본 기술 집합이 있습니다. 기능 선택은 모델에 사용될 가능성이 가장 높은 특성을 데이터 집합에서 자동으로 선택하기 위해 모델을 학습하기 전에 항상 수행됩니다. 하지만 기능 선택 동작에 영향을 주는 매개 변수를 수동으로 설정할 수도 있습니다.  
   
- 일반적으로 기능 선택은 각 특성에 대한 점수를 계산한 다음 점수가 가장 높은 특성만 선택하는 방식으로 작동합니다. 최고 점수에 대한 임계값도 조정할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 이러한 요인에 따라 특정 모델에 적용 되는 정확한 방법과 이러한 점수를 계산 하기 위한 여러 방법을 제공 합니다.  
+ 일반적으로 기능 선택은 각 특성에 대한 점수를 계산한 다음 점수가 가장 높은 특성만 선택하는 방식으로 작동합니다. 최고 점수에 대한 임계값도 조정할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 이러한 점수를 계산하기 위한 여러 방법을 제공하며 특정 모델에 적용되는 정확한 방법은 다음 요소에 따라 결정됩니다.  
   
 -   모델에 사용되는 알고리즘  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48067923"
 #### <a name="bayesian-with-k2-prior"></a>Bayesian with K2 Prior  
  Analysis Services에서는 Bayesian 네트워크를 기반으로 하는 두 개의 기능 선택 점수를 제공합니다. Bayesian 네트워크는 상태 및 상태 전환에 대한 *방향* 또는 *비순환* 그래프로, 항상 현재 상태 앞에 오는 상태도 있고 현재 상태 뒤에 오는 상태도 있으며 그래프가 반복되거나 순환되지 않음을 의미합니다. 정의에 따라 Bayesian 네트워크에서는 사전 지식을 활용할 수 있습니다. 그러나 이후 상태에 대한 확률을 계산하는 데 사용할 이전 상태가 어떤 것인가는 알고리즘 설계, 성능 및 정확도에 중요합니다.  
   
- Bayesian 네트워크를 통한 학습을 위해 고안된 K2 알고리즘은 Cooper와 Herskovits가 개발하였으며 데이터 마이닝에 자주 사용됩니다. K2 알고리즘은 확장 가능하며 여러 변수를 분석할 수 있지만 입력으로 사용되는 변수의 정렬을 필요로 합니다. 자세한 내용은 [Learning Bayesian Networks](http://go.microsoft.com/fwlink/?LinkId=105885) (Chickering, Geiger 및 Heckerman 공저)를 참조하십시오.  
+ Bayesian 네트워크를 통한 학습을 위해 고안된 K2 알고리즘은 Cooper와 Herskovits가 개발하였으며 데이터 마이닝에 자주 사용됩니다. K2 알고리즘은 확장 가능하며 여러 변수를 분석할 수 있지만 입력으로 사용되는 변수의 정렬을 필요로 합니다. 자세한 내용은 [Learning Bayesian Networks](https://go.microsoft.com/fwlink/?LinkId=105885) (Chickering, Geiger 및 Heckerman 공저)를 참조하십시오.  
   
  이 점수 매기기 메서드는 불연속 특성과 불연속화된 특성에 사용할 수 있습니다.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48067923"
   
  BDEU(Bayesian Dirichlet Equivalent with Uniform Prior) 메서드는 이전 상태에 대한 고정 분포 및 균일 분포를 만드는 데 수학 상수가 사용되는 Dirichlet 분포의 특수한 사례를 가정합니다. BDE 점수도 데이터가 등가 구조를 판별할 수 없음을 의미하는 가능성 등가를 가정합니다. 다시 말해서 If A Then B에 대한 점수가 If B Then A에 대한 점수와 동일한 경우 데이터를 기반으로 구조를 구별할 수 없으며 인과 관계를 추론할 수 없습니다.  
   
- Bayesian 네트워크 및 이러한 점수 매기기 메서드의 구현에 대한 자세한 내용은 [Bayesian 네트워크 학습(Learning Bayesian Networks)](http://go.microsoft.com/fwlink/?LinkId=105885)을 참조하십시오.  
+ Bayesian 네트워크 및 이러한 점수 매기기 메서드의 구현에 대한 자세한 내용은 [Bayesian 네트워크 학습(Learning Bayesian Networks)](https://go.microsoft.com/fwlink/?LinkId=105885)을 참조하십시오.  
   
 ### <a name="feature-selection-methods-used-by-analysis-services-algorithms"></a>Analysis Services 알고리즘에서 사용하는 기능 선택 방법  
  다음 표에서는 기능 선택을 지원하는 알고리즘, 알고리즘에서 사용하는 기능 선택 방법 및 기능 선택 동작을 제어하기 위해 설정하는 매개 변수를 보여 줍니다.  

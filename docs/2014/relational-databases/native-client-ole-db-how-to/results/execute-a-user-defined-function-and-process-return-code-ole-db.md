@@ -12,20 +12,20 @@ ms.assetid: d96c33fd-ed17-4713-8921-bf2dc3347f78
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 34b81207ab9d633bf8e110b3e3ed0c29e70a3b5b
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
-ms.translationtype: HT
+ms.openlocfilehash: 1c5a54f678f9b52551523b04af4658539d98ef56
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084943"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361105"
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>사용자 정의 함수 실행 및 반환 코드 처리(OLE DB)
   이 예에서는 사용자 정의 함수를 실행하고 반환 코드를 인쇄합니다. 이 예제는 IA64에서 지원되지 않습니다.  
   
- 이 예제에는 [Microsoft SQL Server 예제 및 커뮤니티 프로젝트(Microsoft SQL Server Samples and Community Projects)](http://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지에서 다운로드할 수 있는 AdventureWorks 예제 데이터베이스가 필요합니다.  
+ 이 예제에는 [Microsoft SQL Server 예제 및 커뮤니티 프로젝트(Microsoft SQL Server Samples and Community Projects)](https://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지에서 다운로드할 수 있는 AdventureWorks 예제 데이터베이스가 필요합니다.  
   
 > [!IMPORTANT]  
->  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
   
 ## <a name="example"></a>예제  
  첫 번째([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록을 실행하여 애플리케이션에서 사용하는 저장 프로시저를 만듭니다.  

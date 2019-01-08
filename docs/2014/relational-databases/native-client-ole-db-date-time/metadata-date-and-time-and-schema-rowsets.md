@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: native-client
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], schema rowsets
@@ -12,12 +12,12 @@ ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5a06cf806845645073c883d87e8a7b0e0338cfb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 710fbfdfd57608c24c56def1f2f9c4ec373f1957
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205613"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774755"
 ---
 # <a name="date-and-time-and-schema-rowsets"></a>날짜 및 시간과 스키마 행 집합
   이 항목에서는 COLUMNS 및 PROCEDURE_PARAMETERS 행 집합에 대한 정보를 제공합니다. 이 정보는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에 새로 추가된 향상된 OLE DB 날짜 및 시간 기능과 관련이 있습니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "48205613"
   
 |열 유형|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|날짜|DBTYPE_DBDATE|지우기|0|  
+|date|DBTYPE_DBDATE|지우기|0|  
 |Time|DBTYPE_DBTIME2|Set|0..7|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|지우기|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|지우기|3|  
@@ -64,13 +64,13 @@ ms.locfileid: "48205613"
 ## <a name="providertypes-rowset"></a>PROVIDER_TYPES 행 집합  
  날짜/시간 형식에 대해 다음 행이 반환됩니다.  
   
-|형식 -><br /><br /> Column|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
+|형식 -><br /><br /> Column|date|Time|Smalldatetime|Datetime|Datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|date|Time|Smalldatetime|Datetime|Datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
-|LITERAL_PREFIX|‘|‘|‘|‘|‘|‘|  
-|LITERAL_SUFFIX|‘|‘|‘|‘|‘|‘|  
+|LITERAL_PREFIX|'|'|'|'|'|'|  
+|LITERAL_SUFFIX|'|'|'|'|'|'|  
 |CREATE_PARAMS|NULL|소수 자릿수|NULL|NULL|소수 자릿수|소수 자릿수|  
 |IS_NULLABLE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
 |CASE_SENSITIVE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
@@ -78,7 +78,7 @@ ms.locfileid: "48205613"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|Time|Smalldatetime|Datetime|Datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|0|NULL|NULL|0|0|  
 |MAXIMUM_SCALE|NULL|7|NULL|NULL|7|7|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  
@@ -90,7 +90,7 @@ ms.locfileid: "48205613"
   
  OLE DB는 numeric 및 decimal 형식의 MINIMUM_SCALE 및 MAXIMUM_SCALE만 정의하므로 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서는 time, datetime2 및 datetimeoffset에 이러한 열을 사용하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [메타 데이터 &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
   
   

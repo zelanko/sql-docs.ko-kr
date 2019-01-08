@@ -13,12 +13,12 @@ ms.assetid: 0d6b863d-5972-4a20-9990-64ee8016fea6
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 55c4bd42e1a025543bfb249c82453903670e713f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea021ed6e3613d4a39641c582e0b091ebfe1a6f1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102673"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519659"
 ---
 # <a name="cluster-disk-selection"></a>클러스터 디스크 선택
   **설치 마법사의** 클러스터 디스크 선택 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터를 위한 공유 클러스터 디스크 리소스를 선택할 수 있습니다. 클러스터 디스크에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터가 저장됩니다.  

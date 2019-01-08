@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], creating
@@ -14,12 +13,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8bd30b84643032cf68796b9ebc14bf0407d76427
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a69d4805a21cfbd83bd9a8d79b5150460d4977be
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215633"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358195"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>초기 스냅숏 만들기 및 적용
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 초기 스냅숏을 만들고 적용하는 방법에 대해 설명합니다. 매개 변수가 있는 필터를 사용하는 병합 게시에는 두 부분으로 구성된 스냅숏이 필요합니다. 자세한 내용은 [매개 변수가 있는 필터로 병합 게시에 대한 스냅숏 만들기](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
@@ -148,7 +147,7 @@ ms.locfileid: "48215633"
  스냅숏 에이전트는 게시가 만들어진 후 스냅숏을 생성합니다. RMO(복제 관리 개체)를 사용하여 이러한 스냅숏을 프로그래밍 방식으로 생성하고 복제 에이전트 기능에 액세스하도록 관리 코드에 지시할 수 있습니다. 사용하는 개체는 복제 유형에 따라 달라집니다. 스냅숏 에이전트는 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> 개체를 사용하여 동기적으로 시작하거나 에이전트 작업을 사용하여 비동기적으로 시작할 수 있습니다. 생성된 초기 스냅숏은 구독이 처음 동기화될 때 구독자로 전송되어 적용됩니다. 기존 스냅숏에 유효한 최신 데이터가 필요하게 될 때마다 에이전트를 다시 실행해야 합니다. 자세한 내용은 [게시 유지 관리](publish/maintain-publications.md)를 참조하세요.  
   
 > [!IMPORTANT]  
->  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](http://go.microsoft.com/fwlink/?LinkId=34733) 암호화 서비스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용합니다.  
+>  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](https://go.microsoft.com/fwlink/?LinkId=34733) 암호화 서비스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용합니다.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-starting-the-snapshot-agent-job-asynchronous"></a>스냅숏 에이전트 작업을 시작하여 스냅숏 또는 트랜잭션 게시에 대한 초기 스냅숏을 생성하려면(비동기)  
   
@@ -156,13 +155,13 @@ ms.locfileid: "48215633"
   
 2.  <xref:Microsoft.SqlServer.Replication.TransPublication> 클래스의 인스턴스를 만듭니다. 게시에 대해 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 속성을 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 연결로 설정합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 로드합니다. 이 메서드가 반환 하는 경우 `false`, 2 단계에서 게시 속성이 올바르게 정의 되지 또는 게시가 없는 것입니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 로드합니다. 이 메서드가 `false`를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
   
-4.  경우 값 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> 됩니다 `false`를 호출 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> 이 게시에 대 한 스냅숏 에이전트 작업을 만듭니다.  
+4.  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>의 값이 `false`이면 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>를 호출하여 이 게시에 대한 스냅숏 에이전트 작업을 만듭니다.  
   
 5.  <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 메서드를 호출하여 이 게시에 대한 스냅숏을 생성하는 에이전트 작업을 시작합니다.  
   
-6.  (선택 사항) 경우 값 <xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A> 는 `true`, 스냅숏이 구독자에 게 제공 합니다.  
+6.  (옵션) <xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A> 값이 `true`이면 구독자에서 스냅숏을 사용할 수 있습니다.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-running-the-snapshot-agent-synchronous"></a>스냅숏 에이전트를 실행하여 스냅숏 또는 트랜잭션 게시에 대한 초기 스냅숏을 생성하려면(동기)  
   
@@ -190,13 +189,13 @@ ms.locfileid: "48215633"
   
 2.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만듭니다. 게시에 대해 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 속성을 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 연결로 설정합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 로드합니다. 이 메서드가 반환 하는 경우 `false`, 2 단계에서 게시 속성이 올바르게 정의 되지 또는 게시가 없는 것입니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 로드합니다. 이 메서드가 `false`를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
   
-4.  경우 값 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> 됩니다 `false`를 호출 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> 이 게시에 대 한 스냅숏 에이전트 작업을 만듭니다.  
+4.  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>의 값이 `false`이면 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>를 호출하여 이 게시에 대한 스냅숏 에이전트 작업을 만듭니다.  
   
 5.  <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 메서드를 호출하여 이 게시에 대한 스냅숏을 생성하는 에이전트 작업을 시작합니다.  
   
-6.  (선택 사항) 경우 값 <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 는 `true`, 스냅숏이 구독자에 게 제공 합니다.  
+6.  (옵션) <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 값이 `true`이면 구독자에서 스냅숏을 사용할 수 있습니다.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-merge-publication-by-running-the-snapshot-agent-synchronous"></a>스냅숏 에이전트를 실행하여 병합 게시에 대한 초기 스냅숏을 생성하려면(동기)  
   
@@ -238,7 +237,7 @@ ms.locfileid: "48215633"
  [Specify Synchronization Schedules](specify-synchronization-schedules.md)   
  [스냅숏 만들기 및 적용](create-and-apply-the-snapshot.md)   
  [스냅숏으로 구독 초기화](initialize-a-subscription-with-a-snapshot.md)   
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
+ [복제 관리 개체 개념](concepts/replication-management-objects-concepts.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
  [스크립팅 변수와 함께 sqlcmd 사용](../scripting/sqlcmd-use-with-scripting-variables.md)  

@@ -17,12 +17,12 @@ ms.assetid: 8dc2b44e-5ad9-411d-a29f-7213e29321a9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 919f77d0f2295091133203de2474cf81a070d956
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ca26d9b4af7adebda9f5bf0021ba7871f8425aa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162193"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358297"
 ---
 # <a name="implementing-a-data-processing-extension"></a>데이터 처리 확장 프로그램 구현
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 데이터 처리 확장 프로그램을 통해 데이터 원본에 연결하고 데이터를 검색할 수 있습니다. 이 프로그램은 데이터 원본과 데이터 집합을 연결하는 역할도 합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 데이터 공급자 인터페이스의 하위 집합을 본떠서 만든 것입니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "48162193"
  [데이터 처리 확장 프로그램에 대한 DataReader 클래스 구현](implementing-a-datareader-class-for-a-data-processing-extension.md)  
  데이터 판독기의 특성 및 데이터 처리 확장 프로그램에 대해 고유의 **DataReader** 클래스를 구현하는 방법을 설명합니다.  
   
- [Reporting Services에서 외부 데이터 집합 사용](using-an-external-dataset-with-reporting-services.md)  
+ [Reporting Services에서 외부 데이터 세트 사용](using-an-external-dataset-with-reporting-services.md)  
  사용자 지정 **DataSet** 개체를 보고서 서버에서 사용할 수 있도록 표시하는 방법을 설명합니다.  
   
  [데이터 처리 확장 프로그램 배포](deploying-a-data-processing-extension.md)  
@@ -58,9 +58,9 @@ ms.locfileid: "48162193"
  [데이터 처리 확장 프로그램 제거](removing-a-data-processing-extension.md)  
  보고서 서버 또는 보고서 디자이너에서 데이터 처리 확장 프로그램을 제거하는 방법을 설명합니다.  
   
- 완전히 구현된 데이터 처리 확장 프로그램 예는 [SQL Server Reporting Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=177889)를 참조하십시오.  
+ 완전히 구현된 데이터 처리 확장 프로그램 예는 [SQL Server Reporting Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=177889)를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Reporting Services 확장 프로그램](../reporting-services-extensions.md)   
  [Reporting Services 확장 라이브러리](../reporting-services-extension-library.md)  
   

@@ -13,15 +13,15 @@ ms.assetid: eaeafd65-d0d4-4a7d-a3ad-110ef644e90b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2d52304ff9a8dae16e74d9d5aa7324adb2aac4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9b01c9394419a4e526969c4a8ecccaf262f576d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138173"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368215"
 ---
-# <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>태스크 5: 정리 결과를 Excel 파일로 내보내기
-  이 작업에서는 정리 작업의 결과를 Excel 파일로 내보냅니다. 참조 [내보내기 단계](http://msdn.microsoft.com/library/hh213061.aspx#Export) 자세한 세부 정보에 대 한 항목입니다.  
+# <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>작업 5: 정리 결과를 Excel 파일로 내보내기
+  이 작업에서는 정리 작업의 결과를 Excel 파일로 내보냅니다. 참조 [내보내기 단계](https://msdn.microsoft.com/library/hh213061.aspx#Export) 자세한 세부 정보에 대 한 항목입니다.  
   
 1.  오른쪽 창에서 선택 **Excel** 에 대 한 합니다 **대상 유형**합니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48138173"
   
 7.  열기는 **Cleansed Supplier List.xls** 다음을 수행 합니다.  
   
-    1.  워크시트에서 adventure-work.com으로 검색해서 adventure-work.com('s' 문자가 없음)으로 끝나는 전자 메일 주소가 없는지 확인합니다.  
+    1.  Adventure-work.com으로 끝나는 전자 메일 주소가 있는지 확인 하십시오 (문자가 없음 ') 워크시트에서 adventure-work.com를 검색 합니다.  
   
     2.  이 없는 **USA** 값을 **국가** 열입니다.  
   
@@ -50,6 +50,6 @@ ms.locfileid: "48138173"
     5.  삭제 된 **Address Validation** 열 스프레드시트에서 excel 파일을 저장 합니다. 이 추가 열은 Address Validation 복합 도메인에 해당합니다.  
   
 ## <a name="next-step"></a>다음 단계  
- [태스크 6: Cleanse Supplier List 프로젝트에서 값 가져오기](../../2014/tutorials/task-6-importing-values-from-the-cleanse-supplier-list-project.md)  
+ [태스크 6: 값 가져오기는 Cleanse Supplier List 프로젝트](../../2014/tutorials/task-6-importing-values-from-the-cleanse-supplier-list-project.md)  
   
   

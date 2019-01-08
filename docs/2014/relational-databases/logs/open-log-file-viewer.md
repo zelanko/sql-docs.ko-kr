@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - Log File Viewer, opening
@@ -13,12 +12,12 @@ ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 84f624ce603a852bed3527b45c942f1ffa00fdbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2cf214691c2bcffeb617d3f7534fac94f8941db5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170249"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818145"
 ---
 # <a name="open-log-file-viewer"></a>로그 파일 뷰어 열기
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 로그 파일 뷰어를 사용하여 다음 로그에 기록되는 오류 및 이벤트에 대한 정보에 액세스할 수 있습니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "48170249"
   
  로그 파일 뷰어는 보려는 정보에 따라 여러 방법으로 열 수 있습니다.  
   
-##  <a name="BeforeYouBegin"></a> 사용 권한  
+##  <a name="BeforeYouBegin"></a> Permissions  
  온라인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 로그 파일에 액세스하려면 securityadmin 고정 서버 역할의 멤버 자격이 필요합니다.  
   
  오프라인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 로그 파일에 액세스하려면 **Root\Microsoft\SqlServer\ComputerManagement10** WMI 네임스페이스 및 로그 파일이 저장된 폴더 모두에 대한 읽기 권한이 있어야 합니다. 자세한 내용은 [오프라인 로그 파일 보기](view-offline-log-files.md)항목의 보안 섹션을 참조하세요.  

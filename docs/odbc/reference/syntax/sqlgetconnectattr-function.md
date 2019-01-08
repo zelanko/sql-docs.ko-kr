@@ -20,21 +20,21 @@ ms.assetid: 2cb4ffa8-19d3-4664-8c2f-6682cdcc3f33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d9006d2b1792e66c1f37faa94c9c4b3f9304f3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a24ccf58a1cd0f6d0f4fb2fd32dbee79feb896b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764361"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204442"
 ---
 # <a name="sqlgetconnectattr-function"></a>SQLGetConnectAttr 함수(SQLGetConnectAttr Function)
 **규칙**  
- 버전에 도입 되었습니다: ODBC 3.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 3.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLGetConnectAttr** 연결 특성의 현재 설정을 반환 합니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  새로운 드라이버 관리자는이 함수를 경우 맵을 ODBC 3 대 한 자세한 내용은 *.x* 는 ODBC 2를 사용 하 여 응용 프로그램이 작동 *.x* 드라이버를 참조 하세요. [뒤로 대 한 대체 함수 매핑 응용 프로그램의 호환성](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -53,7 +53,7 @@ SQLRETURN SQLGetConnectAttr(
  *ConnectionHandle*  
  [입력] 연결 핸들입니다.  
   
- *Attribute*  
+ *특성*  
  [입력] 검색할 특성입니다.  
   
  *ValuePtr*  

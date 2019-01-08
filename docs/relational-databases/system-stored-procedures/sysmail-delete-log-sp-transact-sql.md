@@ -18,12 +18,12 @@ ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1a61fa55fc9f2b1209d0f7da7f483c0fedce07f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb2db3e60d416324a413bf9d6eb69f6125bc00b5
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649212"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588466"
 ---
 # <a name="sysmaildeletelogsp-transact-sql"></a>sysmail_delete_log_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@logged_before** =] **'***logged_before***'**  
+ [ **@logged_before** =] **'**_logged_before_**'**  
  날짜 및 지정 된 시간 까지의 항목을 삭제 합니다 *logged_before* 인수입니다. *logged_before* 됩니다 **datetime** 기본적으로 null입니다. NULL은 모든 날짜를 나타냅니다.  
   
- [ **@event_type** = ] **'***event_type***'**  
+ [ **@event_type** =] **'**_event_type_**'**  
  로그로 지정 된 형식의 항목을 삭제 합니다 *event_type*합니다. *event_type* 됩니다 **varchar(15)** 기본값은 없습니다. 유효한 항목은 **성공**, **경고**합니다 **오류**, 및 **정보**합니다. NULL은 모든 이벤트 유형을 나타냅니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

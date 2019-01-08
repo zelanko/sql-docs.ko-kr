@@ -1,5 +1,5 @@
 ---
-title: 테이블, 열 또는 행 필터 매핑 변경 | Microsoft Docs
+title: Analysis Services 테이블 형식 모델 테이블, 열 또는 행 필터 매핑 변경 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,23 +9,23 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6eab5a756fb52afeb69c5f4c7646d768b9ec263f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a421f9c43b827f24b15073a4d9a41904f8812f4b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039737"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53071760"
 ---
 # <a name="change-table-column-or-row-filter-mappings"></a>테이블, 열 또는 행 필터 매핑 변경 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  이 문서를 사용 하 여 테이블, 열 또는 행 필터 매핑을 변경 하는 방법에 설명 된 **테이블 속성 편집** 대화 상자에서 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]합니다.  
+  이 문서를 사용 하 여 테이블, 열 또는 행 필터 매핑을 변경 하는 방법에 설명 합니다 **테이블 속성 편집** 대화 상자 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]합니다.  
   
  **테이블 속성 편집** 대화 상자의 옵션은 원래 데이터를 가져올 때 목록에서 테이블을 선택하는 방법을 사용했는지 아니면 SQL 쿼리를 사용하는 방법을 사용했는지에 따라 다릅니다. 목록에서 선택하여 데이터를 가져온 경우 **테이블 속성 편집** 대화 상자에 테이블 미리 보기 모드가 표시됩니다. 이 모드에서는 원본 테이블의 첫 50개 행으로 제한된 하위 집합만 표시됩니다. SQL 문을 사용하여 데이터를 가져온 경우 **테이블 속성 편집** 대화 상자에 SQL 문만 표시됩니다. SQL 쿼리 문을 사용하면 필터를 디자인하거나 SQL 문을 직접 편집하여 행의 일부만 검색할 수 있습니다.  
   
  현재 테이블과 다른 열이 있는 테이블로 원본을 변경하면 열이 다르다는 경고 메시지가 표시됩니다. 그런 다음 현재 테이블에 넣을 열을 선택하고 **저장**을 클릭합니다. 테이블 왼쪽의 확인란을 선택하여 테이블 전체를 바꿀 수 있습니다.  
   
 > [!NOTE]  
->  테이블에 파티션이 여러 개 있는 경우 테이블 속성 편집 대화 상자를 사용하여 행 필터 매핑을 변경할 수 없습니다. 파티션이 여러 개 있는 테이블에 대한 행 필터 매핑을 변경하려면 파티션 관리자를 사용합니다. 자세한 내용은 참조 [파티션을](../../analysis-services/tabular-models/partitions-ssas-tabular.md)합니다.  
+>  테이블에 파티션이 여러 개 있는 경우 테이블 속성 편집 대화 상자를 사용하여 행 필터 매핑을 변경할 수 없습니다. 파티션이 여러 개 있는 테이블에 대한 행 필터 매핑을 변경하려면 파티션 관리자를 사용합니다. 자세한 내용은 [파티션을](../../analysis-services/tabular-models/partitions-ssas-tabular.md)합니다.  
   
 #### <a name="to-change-table-column-or-row-filter-mappings"></a>테이블, 열 또는 행 필터 매핑을 변경하려면  
   

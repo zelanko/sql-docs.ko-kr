@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysmergepartitioninfoview
@@ -19,12 +18,12 @@ ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75b68bd0699443c46be512520822b2faea0daed1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f39591079377dcfc1f357e582474f034a004af6d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762051"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816315"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,8 +84,8 @@ ms.locfileid: "47762051"
 |**procname_postfix**|**nchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**well_partitioned_lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**before_upd_view_objid**|**int**|업데이트 전 테이블의 뷰 ID입니다.|  
-|**delete_tracking**|**bit**|삭제 내용을 복제할지 여부를 나타냅니다.<br /><br /> **0** = 삭제 내용을 복제 하지 않습니다.<br /><br /> **1** = 삭제 내용을 복제, 병합 복제에 대 한 기본 동작입니다.<br /><br /> 경우 값 *delete_tracking* 됩니다 **0**, 구독자에서 삭제 된 행 게시자에서 수동으로 제거 및 게시자에서 삭제 된 행은 구독자에서 수동으로 제거 해야 합니다.<br /><br /> 참고: 값 **0** 불일치가 발생 합니다.|  
-|**compensate_for_errors**|**bit**|동기화 중에 오류가 발생할 경우 보정 동작이 수행될지 여부를 나타냅니다.<br /><br /> **0** = 보정 작업이 비활성화 됩니다.<br /><br /> **1** = 병합 복제에 대 한 기본 동작을 이러한 변경 내용을 실행 취소 하는 보상 동작이에 구독자 또는 게시자 인해 항상 적용할 수 없는 변경 합니다.<br /><br /> 참고: 값 **0** 불일치가 발생 합니다.|  
+|**delete_tracking**|**bit**|삭제 내용을 복제할지 여부를 나타냅니다.<br /><br /> **0** = 삭제 내용을 복제 하지 않습니다.<br /><br /> **1** = 삭제 내용을 복제, 병합 복제에 대 한 기본 동작입니다.<br /><br /> 경우 값 *delete_tracking* 됩니다 **0**, 구독자에서 삭제 된 행 게시자에서 수동으로 제거 및 게시자에서 삭제 된 행은 구독자에서 수동으로 제거 해야 합니다.<br /><br /> 참고: 값이 **0** 불일치가 발생 합니다.|  
+|**compensate_for_errors**|**bit**|동기화 중에 오류가 발생할 경우 보정 동작이 수행될지 여부를 나타냅니다.<br /><br /> **0** = 보정 작업이 비활성화 됩니다.<br /><br /> **1** = 병합 복제에 대 한 기본 동작을 이러한 변경 내용을 실행 취소 하는 보상 동작이에 구독자 또는 게시자 인해 항상 적용할 수 없는 변경 합니다.<br /><br /> 참고: 값이 **0** 불일치가 발생 합니다.|  
 |**pub_range**|**bigint**|게시자 ID의 범위 크기입니다.|  
 |**range**|**bigint**|조정 시 구독자에게 할당되는 연속 ID 값의 크기입니다.|  
 |**threshold**|**int**|ID 범위 임계값 비율입니다.|  
@@ -108,7 +107,7 @@ ms.locfileid: "47762051"
 |**partition_options**|**tinyint**|아티클의 데이터 분할 방식을 정의합니다. 데이터를 분할하면 모든 행이 하나의 파티션 또는 하나의 구독에만 속한 경우 성능을 최적화할 수 있습니다. 합니다 *partition_options* 다음 값 중 하나일 수 있습니다.<br /><br /> **0** = 필터링이 정적 이거나 각 파티션에 대 한 데이터의 고유 하위 집합 즉, 생성 하지 않습니다 아티클에 대 한 "겹치는" 파티션입니다.<br /><br /> **1** = 파티션이 겹치며 구독자에서 DML 업데이트 행이 속한 파티션이 변경 합니다.<br /><br /> **2** = 필터링 문서 하면 겹치지 않는 파티션이 생성 되지만 여러 구독자가 동일한 파티션을 받을 수 있습니다.<br /><br /> **3** = 필터링 문서는 각 구독에 대 한 고유한 겹치지 않는 파티션을 생성 합니다.|  
 |**name**|**sysname**|파티션의 이름입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [매개 변수가 있는 필터로 병합 게시에 대 한 파티션 관리](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
  [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   

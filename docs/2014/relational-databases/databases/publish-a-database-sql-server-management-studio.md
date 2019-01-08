@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e9bb58b72cb4a4e785c4dc94b448e5e754ac0c80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b11aa11f942e6f0f801de36c7d15e17cae4141b7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129743"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353286"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>데이터베이스 게시(SQL Server Management Studio)
   **스크립트 생성 및 게시 마법사** 를 사용하여 전체 데이터베이스 또는 개별 데이터베이스 개체를 웹 호스팅 공급자에 게시할 수 있습니다.  
@@ -25,7 +24,7 @@ ms.locfileid: "48129743"
 >  이 항목에서 설명하는 기능은 데이터베이스 게시 마법사에서 제공했던 기능입니다. 게시 기능이 스크립트 생성 및 게시 마법사에 추가되었고 데이터베이스 게시 마법사는 더 이상 사용되지 않습니다.  
   
 ## <a name="generate-and-publish-scripts-wizard"></a>스크립트 생성 및 게시 마법사  
- 스크립트 생성 및 게시 마법사를 사용하여 데이터베이스 또는 선택된 데이터베이스 개체를 웹 호스팅 공급자에 게시할 수 있습니다. SQL Server 웹 호스팅 공급자는 웹 서비스에 대한 연결 인터페이스입니다. 웹 서비스는 CodePlex의 SQL Server Hosting Toolkit에 있는 데이터베이스 게시 서비스 프로젝트를 사용하여 생성됩니다. 웹 서비스를 통해 웹 호스터 고객은 스크립트 생성 및 게시 마법사를 사용하여 데이터베이스를 서비스로 쉽게 게시할 수 있습니다. SQL Server Hosting Toolkit을 다운로드하는 방법은 [SQL Server 데이터 게시 서비스(SQL Server Database Publishing Services)](http://go.microsoft.com/fwlink/?LinkId=142025)를 참조하세요.  
+ 스크립트 생성 및 게시 마법사를 사용하여 데이터베이스 또는 선택된 데이터베이스 개체를 웹 호스팅 공급자에 게시할 수 있습니다. SQL Server 웹 호스팅 공급자는 웹 서비스에 대한 연결 인터페이스입니다. 웹 서비스는 CodePlex의 SQL Server Hosting Toolkit에 있는 데이터베이스 게시 서비스 프로젝트를 사용하여 생성됩니다. 웹 서비스를 통해 웹 호스터 고객은 스크립트 생성 및 게시 마법사를 사용하여 데이터베이스를 서비스로 쉽게 게시할 수 있습니다. SQL Server Hosting Toolkit을 다운로드하는 방법은 [SQL Server 데이터 게시 서비스(SQL Server Database Publishing Services)](https://go.microsoft.com/fwlink/?LinkId=142025)를 참조하세요.  
   
  스크립트 생성 및 게시 마법사는 데이터베이스를 전송하기 위한 스크립트를 만드는 데 사용할 수도 있습니다.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "48129743"
   
 5.  **스크립트 저장 또는 게시** 페이지에서 게시 진행률을 모니터링합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [스크립트 생성&#40;SQL Server Management Studio&#41;](../scripting/generate-scripts-sql-server-management-studio.md)   
  [데이터베이스를 다른 서버로 복사](copy-databases-to-other-servers.md)  
   

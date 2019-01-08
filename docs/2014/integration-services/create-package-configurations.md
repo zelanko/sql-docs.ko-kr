@@ -19,12 +19,12 @@ ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1e4d13fb24ad337ed6395e8529f4067d8acd2a1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5bf5ca4c2e27f366a6f5ded97f9a9aa5213db122
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140643"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361075"
 ---
 # <a name="create-package-configurations"></a>패키지 구성 만들기
   **패키지 구성 도우미** 대화 상자 및 패키지 구성 마법사를 사용하여 패키지 구성을 만들 수 있습니다. 이 도구에 액세스하려면 **의** SSIS **메뉴에서** 패키지 구성 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]을 클릭합니다.  
@@ -111,11 +111,11 @@ ms.locfileid: "48140643"
   
 ## <a name="external-resources"></a>외부 리소스  
   
--   msdn.microsoft.com의 기술 문서 - [Integration Services 패키지 구성 이해](http://go.microsoft.com/fwlink/?LinkId=165643)   
+-   msdn.microsoft.com의 기술 문서 - [Integration Services 패키지 구성 이해](https://go.microsoft.com/fwlink/?LinkId=165643)   
   
--   www.sqlis.com의 블로그 항목, [코드에 패키지 만들기 – 패키지 구성](http://go.microsoft.com/fwlink/?LinkId=217663)  
+-   블로그 항목 [패키지 구성을 코드에서 패키지를 만드는](https://go.microsoft.com/fwlink/?LinkId=217663), www.sqlis.com에 있습니다.  
   
--   blogs.msdn.com의 블로그 항목 - [API 예제 – 구성 파일을 패키지에 프로그래밍 방식으로 추가](http://go.microsoft.com/fwlink/?LinkId=217664)  
+-   블로그 항목 [API 샘플-패키지 구성 파일을 프로그래밍 방식으로 추가](https://go.microsoft.com/fwlink/?LinkId=217664)을 보려면 blogs.msdn.com에서.  
   
 ## <a name="see-also"></a>관련 항목  
  [패키지 구성](../../2014/integration-services/package-configurations.md)   

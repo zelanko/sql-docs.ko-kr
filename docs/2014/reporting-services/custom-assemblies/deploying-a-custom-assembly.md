@@ -17,15 +17,15 @@ ms.assetid: c6674cd8-0de7-4a5a-9e7c-12ffa49f6fd2
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 204e5828442182065c8f31c96b2af15eafa31788
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4715b7b0b1cf810a2874e41d1f3ad0bed1a2f59
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095963"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356586"
 ---
 # <a name="deploying-a-custom-assembly"></a>사용자 지정 어셈블리 배포
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 사용자 지정 어셈블리를 배포하려면 어셈블리를 보고서 디자이너 및 보고서 서버의 응용 프로그램 폴더에 둡니다. 기본적으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 사용자 지정 어셈블리에는 `Execution` 권한이 부여됩니다. 사용자 지정 어셈블리에 실행 권한 이상의 권한을 부여하려면 보고서 서버에 대한 rssrvpolicy.config 구성 파일 및 보고서 디자이너 미리 보기 창에 대한 rspreviewpolicy.config 구성 파일을 편집해야 합니다. 또는 GAC(전역 어셈블리 캐시)에 사용자 지정 어셈블리를 설치할 수도 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 사용자 지정 어셈블리를 배포하려면 어셈블리를 보고서 디자이너 및 보고서 서버의 애플리케이션 폴더에 둡니다. 기본적으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 사용자 지정 어셈블리에는 `Execution` 권한이 부여됩니다. 사용자 지정 어셈블리에 실행 권한 이상의 권한을 부여하려면 보고서 서버에 대한 rssrvpolicy.config 구성 파일 및 보고서 디자이너 미리 보기 창에 대한 rspreviewpolicy.config 구성 파일을 편집해야 합니다. 또는 GAC(전역 어셈블리 캐시)에 사용자 지정 어셈블리를 설치할 수도 있습니다.  
   
 > [!NOTE]  
 >  보고서 디자이너에는 보고서 프로젝트를 `DebugLocal` 모드에서 시작할 때 실행되는 팝업 미리 보기 창과 미리 보기 탭이라는 두 개의 미리 보기 모드가 있습니다. 미리 보기 탭에서는 `FullTrust` 권한 집합을 사용하여 모든 보고서 식을 실행하며 보안 정책 설정을 적용하지 않습니다. 팝업 미리 보기 창은 보고서 서버 기능을 시뮬레이션하기 위한 것이므로 보고서 디자이너에서 사용자 지정 어셈블리를 사용하기 위해 작업자나 관리자가 수정해야 하는 정책 구성 파일을 포함합니다. 또한 이 팝업 미리 보기는 사용자 지정 어셈블리를 잠급니다. 따라서 사용자 지정 어셈블리 코드를 수정하거나 업데이트하려면 미리 보기 창을 닫아야 합니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "48095963"
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서를 사용 하 여 사용자 지정 어셈블리 사용](using-custom-assemblies-with-reports.md)   
- [어셈블리 및 전역 어셈블리 캐시 사용](http://go.microsoft.com/fwlink/?LinkId=63912)  
+ [보고서에서 사용자 지정 어셈블리 사용](using-custom-assemblies-with-reports.md)   
+ [어셈블리 및 전역 어셈블리 캐시 사용](https://go.microsoft.com/fwlink/?LinkId=63912)  
   
   

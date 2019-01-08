@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - Foreach Loop containers
@@ -17,12 +15,12 @@ ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a876962d68d081542c7c5032c1bf06a0e527fe4c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 674ec4fc122c845b57026897aabe8816a6a585ef
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155054"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364045"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>스크립트 태스크를 사용하여 ForEach 루프에 사용할 목록 수집
   Foreach from Variable 열거자는 변수에서 해당 열거자에 전달된 목록의 항목을 열거하고 각 항목에 대해 동일한 태스크를 수행합니다. 스크립트 태스크에서 사용자 지정 코드를 사용하여 이러한 용도로 사용할 목록을 채울 수 있습니다. 이 열거자에 대한 자세한 내용은 [Foreach 루프 컨테이너](../control-flow/foreach-loop-container.md)를 참조하세요.  
@@ -247,7 +245,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
     }  
 ```  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [Foreach 루프 컨테이너](../control-flow/foreach-loop-container.md)   

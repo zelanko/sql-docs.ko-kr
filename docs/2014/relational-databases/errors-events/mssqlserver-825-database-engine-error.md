@@ -12,12 +12,12 @@ ms.assetid: f69f8214-5af1-4769-878b-117ad6eaff52
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ffeec78e6f62470d4034b94c20a47555c23ab191
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 97e10f93b2a61c1f2f096b1de9205e2bd22406b3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146453"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355166"
 ---
 # <a name="mssqlserver825"></a>MSSQLSERVER_825
     
@@ -33,7 +33,7 @@ ms.locfileid: "48146453"
 |메시지 텍스트|오류로 인해 읽기 시도를 %d번 실패한 후 오프셋 %#016I64x에서 파일 '%ls'의 읽기 작업이 성공했습니다: %ls. SQL Server 오류 로그 및 시스템 이벤트 로그의 추가 메시지에서 더 자세한 정보를 얻을 수 있습니다. 이 오류 조건은 데이터베이스 무결성을 침해할 수 있으므로 수정되어야 합니다. 전체 데이터베이스 일관성 확인(DBCC CHECKDB)을 완료하십시오. 이 오류는 여러 요인으로 인해 발생할 수 있습니다. 자세한 내용은 SQL Server 온라인 설명서를 참조하십시오.|  
   
 ## <a name="explanation"></a>설명  
- 이 메시지는 읽기 작업이 적어도 한 번 이상 다시 실행되어야 했음을 나타내며 디스크 하드웨어에 중요한 문제가 있음을 나타냅니다. 현재 이 메시지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문제를 나타내고 있지 않지만 문제가 해결되지 않을 경우 데이터 손실 또는 데이터베이스 손상을 일으킬 수 있습니다. 시스템 이벤트 로그에 문제의 진단에 도움이 되는 관련 이벤트가 포함되어 있을 수 있습니다. I/O 오류에 대한 자세한 내용은 [Microsoft SQL Server I/O Basics, Chapter 2](http://go.microsoft.com/fwlink/?LinkId=69370)(Microsoft SQL Server I/O 기본 사항, 2장)를 참조하세요.  
+ 이 메시지는 읽기 작업이 적어도 한 번 이상 다시 실행되어야 했음을 나타내며 디스크 하드웨어에 중요한 문제가 있음을 나타냅니다. 현재 이 메시지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문제를 나타내고 있지 않지만 문제가 해결되지 않을 경우 데이터 손실 또는 데이터베이스 손상을 일으킬 수 있습니다. 시스템 이벤트 로그에 문제의 진단에 도움이 되는 관련 이벤트가 포함되어 있을 수 있습니다. I/O 오류에 대한 자세한 내용은 [Microsoft SQL Server I/O Basics, Chapter 2](https://go.microsoft.com/fwlink/?LinkId=69370)(Microsoft SQL Server I/O 기본 사항, 2장)를 참조하세요.  
   
 ## <a name="user-action"></a>사용자 동작  
  다음은 기본 문제를 확인하고 해결하는 데 도움이 되는 동작입니다.  

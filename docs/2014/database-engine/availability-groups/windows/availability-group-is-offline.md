@@ -14,12 +14,12 @@ ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f2d6612b50fc3bd9b07231c42363a8e1e6889e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 35d8f9cdda7c3b85c77d290f9c793640705438e9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148723"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359715"
 ---
 # <a name="availability-group-is-offline"></a>가용성 그룹이 오프라인 상태임
     
@@ -38,7 +38,7 @@ ms.locfileid: "48148723"
  가용성 그룹의 클러스터 리소스가 온라인이고 가용성 그룹에 주 복제본이 있으면 정책 상태가 정상입니다.  
   
 > [!NOTE]  
->  이 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]릴리스의 경우 가능한 원인 및 해결 방법에 대한 자세한 내용은 TechNet Wiki에서 [가용성 그룹이 오프라인 상태임](http://go.microsoft.com/fwlink/p/?LinkId=220850) 을 참조하세요.  
+>  이 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]릴리스의 경우 가능한 원인 및 해결 방법에 대한 자세한 내용은 TechNet Wiki에서 [가용성 그룹이 오프라인 상태임](https://go.microsoft.com/fwlink/p/?LinkId=220850) 을 참조하세요.  
   
 ## <a name="possible-causes"></a>가능한 원인  
  이 문제는 주 복제본을 호스팅하는 서버 인스턴스에 장애가 있거나 WSFC(Windows Server 장애 조치(Failover) 클러스터) 가용성 그룹 리소스가 오프라인 상태가 되어 발생할 수 있습니다. 다음과 같은 경우 가용성 그룹이 오프라인 상태가 될 수 있습니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "48148723"
   
 -   장애 조치(Failover)가 진행 중인 경우 해당 장애 조치가 완료될 때까지 기다립니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 대시보드 사용&#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   

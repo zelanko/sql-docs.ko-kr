@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - .SPID
@@ -23,12 +23,12 @@ ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 77b678508867f39a37acbf640eb159a61a4f3727
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7fbfa9066f5531eead9b12a3f1ebc8c2f110a56
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122333"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754265"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>속성 창 F1 도움말(Management Studio)
   **속성** 창을 사용하여 선택한 요소의 속성을 확인할 수 있습니다. 또한 **속성** 창을 사용하여 파일, 프로젝트 및 솔루션 속성을 볼 수도 있습니다. **속성** 창은 **보기** 메뉴에서 **속성** 창을 클릭하여 사용할 수 있습니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "48122333"
  **설명 창**  
  설명 창은 **속성** 창의 맨 아래에 나타나며 속성 유형과 속성에 대한 간단한 설명을 표시합니다. 바로 가기 메뉴의 **설명** 명령을 사용하여 속성 설명을 설정 및 해제할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Management Studio에서 속성 창 사용](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)  
   
   

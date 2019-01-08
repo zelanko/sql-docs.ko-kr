@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
@@ -12,17 +12,17 @@ ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 89a427c841aa904565fae1fa8a0a1043778d58c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12108fb9d52081b70b87929bacb6882b3463a4a8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207233"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357177"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>Management Studio에 사용자 지정 보고서 추가
   이 항목에서는 .rdl 파일로 저장되는 간단한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 만든 다음 이 rdl 파일을 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에 사용자 지정 보고서로 추가하는 방법에 대해 설명합니다. [!INCLUDE[ssRS](../../includes/ssrs.md)] 다양한 고급 보고서를 만들 수 있습니다. 이 항목을 사용하여 보고서를 만들려면 컴퓨터에 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 가 설치되어 있어야 합니다. [!INCLUDE[ssRS](../../includes/ssrs.md)] 를 사용하여 사용자 지정 보고서를 실행하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 설치할 필요는 없습니다.  
   
- [보고서 샘플](http://go.microsoft.com/fwlink/?LinkId=81792)을 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서 만든 표준 보고서와 함께 다운로드할 수 있습니다. 이러한 예제는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 수정할 수 있습니다.  
+ [보고서 샘플](https://go.microsoft.com/fwlink/?LinkId=81792)을 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서 만든 표준 보고서와 함께 다운로드할 수 있습니다. 이러한 예제는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 수정할 수 있습니다.  
   
 ### <a name="to-create-a-simple-report-saved-as-an-rdl-file"></a>.rdl 파일로 저장되는 간단한 보고서를 만들려면  
   

@@ -19,12 +19,12 @@ ms.assetid: 5c12f202-2ed9-41fa-bee2-0f7ab3ff058a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2bb84f3ba798ba8d1af4132f6553e6428365ca9d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7949729f3ebee87d06e5e591c46513c111b70016
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171303"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358895"
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>분류 행렬(Analysis Services - 데이터 마이닝)
   *분류 행렬* 은 예측된 값이 실제 값과 일치하는지 여부에 따라 모델의 모든 사례를 해당 범주로 분류합니다. 그런 다음 각 범주의 모든 사례 수가 계산되고 행렬에 합계가 표시됩니다. 분류 행렬은 통계 모델을 평가하기 위한 표준 도구로 *혼동 행렬*이라고도 합니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "48171303"
 |1|2|123|17|  
 |2|19|0|20|  
   
- 열이 추가되어 보고서가 더 복잡해 보이지만 잘못된 예측의 누적 비용을 평가하려는 경우 추가 세부 정보가 매우 유용할 수 있습니다. 대각선의 합계를 구하거나 다른 행 조합의 결과를 비교하려면 **분류 행렬** 탭에서 제공된 **복사** 단추를 클릭하고 보고서를 Excel에 붙여넣습니다. 또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전을 지원하는 Excel용 데이터 마이닝 클라이언트와 같은 클라이언트를 사용하여 개수 및 비율을 모두 포함하는 분류 보고서를 Excel에서 직접 만들 수 있습니다. 자세한 내용은 [SQL Server 데이터 마이닝(SQL Server Data Mining)](http://go.microsoft.com/fwlink/?LinkID=77733)을 참조하십시오.  
+ 열이 추가되어 보고서가 더 복잡해 보이지만 잘못된 예측의 누적 비용을 평가하려는 경우 추가 세부 정보가 매우 유용할 수 있습니다. 대각선의 합계를 구하거나 다른 행 조합의 결과를 비교하려면 **분류 행렬** 탭에서 제공된 **복사** 단추를 클릭하고 보고서를 Excel에 붙여넣습니다. 또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전을 지원하는 Excel용 데이터 마이닝 클라이언트와 같은 클라이언트를 사용하여 개수 및 비율을 모두 포함하는 분류 보고서를 Excel에서 직접 만들 수 있습니다. 자세한 내용은 [SQL Server 데이터 마이닝(SQL Server Data Mining)](https://go.microsoft.com/fwlink/?LinkID=77733)을 참조하십시오.  
   
 ## <a name="restrictions-on-the-classification-matrix"></a>분류 행렬의 제한 사항  
  분류 행렬은 예측 가능한 불연속 특성에서만 사용할 수 있습니다.  
@@ -79,12 +79,12 @@ ms.locfileid: "48171303"
   
 |항목|링크|  
 |------------|-----------|  
-|타겟 메일링 모델에 대한 리프트 차트를 만드는 방법을 보여 주는 연습을 제공합니다.|[기본 데이터 마이닝 자습서](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [리프트 차트를 사용 하 여 정확도 테스트 &#40;기본 데이터 마이닝 자습서&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
-|관련 차트 종류에 대해 설명합니다.|[리프트 차트 &#40;Analysis Services-데이터 마이닝&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [수익 차트 &#40;Analysis Services-데이터 마이닝&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [산 점도 &#40;Analysis Services-데이터 마이닝&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|마이닝 모델 및 마이닝 구조에 대한 교차 유효성 검사의 용도를 설명합니다.|[교차 유효성 검사 &#40;Analysis Services-데이터 마이닝&#41;](cross-validation-analysis-services-data-mining.md)|  
-|리프트 차트 및 기타 정확도 차트를 만드는 단계를 설명합니다.|[테스트 및 유효성 검사 태스크 및 방법 &#40;데이터 마이닝&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|타겟 메일링 모델에 대한 리프트 차트를 만드는 방법을 보여 주는 연습을 제공합니다.|[기본 데이터 마이닝 자습서](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [리프트 차트를 사용하여 정확도 테스트&#40;기본 데이터 마이닝 자습서&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|관련 차트 종류에 대해 설명합니다.|[리프트 차트&#40;Analysis Services - 데이터 마이닝&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [수익 차트&#40;Analysis Services - 데이터 마이닝&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [산점도&#40;Analysis Services - 데이터 마이닝&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|마이닝 모델 및 마이닝 구조에 대한 교차 유효성 검사의 용도를 설명합니다.|[교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](cross-validation-analysis-services-data-mining.md)|  
+|리프트 차트 및 기타 정확도 차트를 만드는 단계를 설명합니다.|[테스트 및 유효성 검사 태스크 및 방법&#40;데이터 마이닝&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>관련 항목  
- [테스트 및 유효성 검사 &#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md)  
+ [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md)  
   
   

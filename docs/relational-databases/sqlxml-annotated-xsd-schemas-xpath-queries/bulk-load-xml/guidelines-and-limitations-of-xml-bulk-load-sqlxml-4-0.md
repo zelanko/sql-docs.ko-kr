@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b3b9b66ee257cb3d82acb18112ed46d837a3468
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1640ff8c4daab2260253d1104f1f8099d306120a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798577"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512751"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>XML 대량 로드에 대한 지침 및 제한 사항(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47798577"
   
 -   XML 문서는 형식만 검사되고 유효성은 검사되지 않습니다.  
   
-     XML 대량 로드는 XML 문서를 검사하여 형식이 올바른지, 즉 XML이 World Wide Web Consortium의 XML 1.0 권장 사항의 구문 요구 사항을 준수하는지 확인합니다. 문서 형식이 올바르지 않으면 XML 대량 로드에서 처리가 취소되고 오류가 반환됩니다. 그러나 문서가 조각인 경우(예: 문서에 단일 루트 요소가 없는 경우)에만 예외적으로 형식이 올바르지 않은 문서도 로드됩니다.  
+     XML 대량 로드 XML이 World Wide Web Consortium의 XML 1.0 권장 사항의 구문 요구 사항을 준수 하는지 확인 하려면 XML 문서가 잘 formed는 인지 확인 하는 것을 확인 합니다. 문서 형식이 올바르지 않으면 XML 대량 로드에서 처리가 취소되고 오류가 반환됩니다. 그러나 문서가 조각인 경우(예: 문서에 단일 루트 요소가 없는 경우)에만 예외적으로 형식이 올바르지 않은 문서도 로드됩니다.  
   
      XML 대량 로드는 XML 데이터 파일 안에 정의되거나 참조되는 XML 데이터 또는 DTD 스키마와 관련하여 문서의 유효성을 검사하지 않습니다. 또한 XML 대량 로드에서는 제공된 매핑 스키마를 기준으로 XML 데이터 파일의 유효성을 검사하지 않습니다.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "47798577"
   
      매핑 스키마에 식별된 테이블이 생성됩니다(데이터베이스가 존재해야 함). 테이블 중 하나 이상이 데이터베이스에 이미 있으면 SGDropTables 속성은 기존의 테이블 삭제 하 고 다시 생성 되는지 여부를 결정 합니다.  
   
--   SchemaGen 속성을 지정 하는 경우 (SchemaGen 예를 들어, = true), 매핑 스키마에 식별 된 테이블이 생성 됩니다. 하지만 SchemaGen 예외적으로 이러한 테이블의 모든 제약 조건 (예: 기본 키/외래 키 제약 조건)을 만들지 않습니다: 관계의 기본 키를 구성 하는 XML 노드는 XML 형식의 ID 가진 것으로 정의 된 경우 (즉, **유형 = "xsd: id"** XSD에 대 한) SGUseID 속성을 SchemaGen True로 설정 하 고 다음 뿐만 아니라 기본 키에서 만들어진 ID를 입력 하기는 했지만 매핑 스키마 관계에서 기본 키/외래 키 관계를 만들.  
+-   SchemaGen 속성을 지정 하는 경우 (SchemaGen 예를 들어, = true), 매핑 스키마에 식별 된 테이블이 생성 됩니다. 하지만 SchemaGen 예외적으로이 테이블에서 모든 제약 조건 (예: PRIMARY KEY/FOREIGN KEY 제약 조건)을 만들지 않습니다. 관계의 기본 키를 구성 하는 XML 노드 ID의 XML 형식으로 정의 된 경우 (즉, **형식 = "xsd: id"** xsd) SGUseID 속성 SchemaGen True로 설정 되 고에서 기본 키 생성 뿐만 아니라 ID 형식 노드에서, 있지만 매핑 스키마 관계에서 기본 키/외래 키 관계가 생성 됩니다.  
   
 -   SchemaGen 사용 하지 않는 확장 스키마 패싯을 XSD 및 관계형 생성 하 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 스키마입니다.  
   

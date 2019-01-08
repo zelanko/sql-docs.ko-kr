@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -22,12 +20,12 @@ ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18475c7d85823b542cb48fb4d08c327e918757b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 084f2630733f4db5ba0b47035d1a93c56ba685d3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071793"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361115"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>프로그래밍 방식으로 로컬 패키지 로드 및 실행
   [패키지 실행](../packages/run-integration-services-ssis-packages.md)에 설명된 방법을 사용하여 필요에 따라 또는 미리 지정한 시간에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 수 있습니다. 그러나 단 몇 줄의 코드로도 Windows Forms 응용 프로그램, 콘솔 응용 프로그램, ASP.NET Web Form 또는 웹 서비스, Windows 서비스 등의 사용자 지정 응용 프로그램에서 패키지를 실행할 수 있습니다.  
@@ -70,7 +68,7 @@ ms.locfileid: "48071793"
   
 5.  프로젝트를 실행합니다. 예제 코드에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예제와 함께 설치된 CalculatedColumns 예제 패키지를 실행합니다. 패키지 실행 결과는 콘솔 창에 표시됩니다.  
   
-### <a name="sample-code"></a>예제 코드  
+### <a name="sample-code"></a>샘플 코드  
   
 ```vb  
 Imports Microsoft.SqlServer.Dts.Runtime  
@@ -138,7 +136,7 @@ namespace RunFromClientAppCS
   
 3.  프로젝트를 실행합니다. 예제 코드에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예제와 함께 설치된 CalculatedColumns 예제 패키지를 실행합니다. 패키지 실행 결과는 발생한 오류와 함께 콘솔 창에 표시됩니다.  
   
-### <a name="sample-code"></a>예제 코드  
+### <a name="sample-code"></a>샘플 코드  
   
 ```vb  
 Imports Microsoft.SqlServer.Dts.Runtime  
@@ -175,7 +173,7 @@ Class EventListener
     ByVal helpFile As String, ByVal helpContext As Integer, _  
     ByVal idofInterfaceWithError As String) As Boolean  
   
-    ' Add application–specific diagnostics here.  
+    ' Add application-specific diagnostics here.  
     Console.WriteLine("Error in {0}/{1} : {2}", source, subComponent, description)  
     Return False  
   
@@ -225,9 +223,9 @@ namespace RunFromClientAppWithEventsCS
 }  
 ```  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [로컬 실행과 원격 실행의 차이점 이해](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [프로그래밍 방식으로 원격 패키지 로드 및 실행](../run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)   
  [로컬 패키지의 출력 로드](../run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  

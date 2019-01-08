@@ -20,21 +20,21 @@ ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dff8cfc38e71c2594ecbfb753d5e7b9b432f7263
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aad8baf55dc8960c533e1694309083952dece3d3
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688201"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591247"
 ---
 # <a name="sqlsetconnectattr-function"></a>SQLSetConnectAttr 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 3.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 3.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLSetConnectAttr** 연결의 측면을 제어 하는 특성을 설정 합니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  새로운 드라이버 관리자는이 함수를 경우 맵을 ODBC 3 대 한 자세한 내용은 *.x* 는 ODBC 2를 사용 하 여 응용 프로그램이 작동 *.x* 드라이버를 참조 하세요. [뒤로 대 한 대체 함수 매핑 응용 프로그램의 호환성](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -52,7 +52,7 @@ SQLRETURN SQLSetConnectAttr(
  *ConnectionHandle*  
  [입력] 연결 핸들입니다.  
   
- *Attribute*  
+ *특성*  
  [입력] 특성을 설정 하려면 "주석입니다."에 나열 된  
   
  *ValuePtr*  
@@ -119,10 +119,10 @@ SQLRETURN SQLSetConnectAttr(
   
  현재 정의 된 특성 및 도입 된 ODBC의 버전은이 섹션의 뒷부분에 나오는 표에 표시 됩니다. 다른 데이터 원본 활용 하기 위해 더 많은 특성을 정의할는 예상 됩니다. 특성의 범위는 ODBC;에 예약 되어 있습니다. 드라이버 개발자는 Open Group에서 자신의 드라이버별 사용에 대 한 값을 예약 해야 합니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  연결 수준에서 호출 하 여 문 특성을 설정 하는 기능 **SQLSetConnectAttr** ODBC 3에서 사용 되지 *.x*합니다. ODBC 3 *.x* 응용 프로그램 연결 수준에서 문 특성을 설정 해서는 안됩니다. ODBC 3 *.x* 문 특성은 연결 특성 및 문 특성을 둘 다 수 있으며 SQL_ATTR_METADATA_ID 및 SQL_ATTR_ASYNC_ENABLE 특성을 제외 하 고 연결 수준에서 설정할 수 없습니다 연결 수준 또는 문 수준에서 설정 합니다.  
->   
->  ODBC 3 *.x* ODBC 2를 사용 하 여 작동 해야 하는 경우 드라이버에서이 기능은 지원 해야 *.x* ODBC 2를 설정 하는 응용 프로그램 *.x* 연결 수준에서 문 옵션입니다. 자세한 내용은 [SQLSetConnectOption 매핑](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md) 이전 버전과 호환성에 대 한 부록 g: 드라이버 지침입니다.  
+> 
+>  ODBC 3 *.x* ODBC 2를 사용 하 여 작동 해야 하는 경우 드라이버에서이 기능은 지원 해야 *.x* ODBC 2를 설정 하는 응용 프로그램 *.x* 연결 수준에서 문 옵션입니다. 자세한 내용은 [SQLSetConnectOption 매핑](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md) 부록 g:에서 이전 버전과 호환성에 대 한 드라이버 지침입니다.  
   
  응용 프로그램에서 호출할 수 있습니다 **SQLSetConnectAttr** 언제 든 지는 시간 사이의 연결이 할당 되 고 해제 합니다. 연결에 대 한 응용 프로그램에서 성공적으로 설정 하는 모든 연결 및 문 특성 될 때까지 지속 **SQLFreeHandle** 연결에서 호출 됩니다. 예를 들어 응용 프로그램 호출 **SQLSetConnectAttr** 특성을 데이터 원본에 연결 하기 전에 지속 되 면 경우에 **SQLSetConnectAttr** 응용 프로그램에 연결 하는 경우 드라이버에서 실패를 데이터 원본 드라이버별 특성을 설정 하는 응용 프로그램, 응용 프로그램을 연결에서 다른 드라이버에 연결 하는 경우에 특성이 유지 됩니다.  
   
@@ -168,27 +168,27 @@ SQLRETURN SQLSetConnectAttr(
   
  합니다 *StringLength* 인수 길이 특성으로 정의 되어 있으면 ODBC 2에 도입 된 모든 특성의 경우와 마찬가지로 *.x* 또는 이전 버전입니다.  
   
-|*Attribute*|*ValuePtr* 내용|  
+|*특성*|*ValuePtr* 내용|  
 |-----------------|-------------------------|  
 |SQL_ATTR_ACCESS_MODE (ODBC 1.0)|SQLUINTEGER 값입니다. SQL_MODE_READ_ONLY는 드라이버나 데이터 원본에서 연결이 필요 하지 않은 업데이트는 SQL 문을 지원 하기 위해 표시기로 사용 됩니다. 이 모드에서 드라이버 또는 데이터 원본에 따라 다른 영역 잠금 전략, 트랜잭션 관리를 최적화 하기 위해 사용할 수 있습니다. 드라이버는 이러한 문의 데이터 원본에 전송 되지 않도록 방지 필요가 없습니다. 드라이버 및 데이터 원본 없는 읽기 전용으로 읽기 전용으로 연결 하는 동안 SQL 문을 처리 하 라는 메시지가 표시 되는 경우의 동작은 구현 시 정의 합니다. SQL_MODE_READ_WRITE 기본값입니다.|  
-|SQL_ATTR_ASYNC_DBC_EVENT (ODBC 3.8)|이벤트 핸들에 해당 하는 대 SQLPOINTER 값입니다.<br /><br /> 호출 하 여 비동기 함수 완료 알림을 설정할지 **SQLSetConnectAttr** SQL_ATTR_ASYNC_STMT_EVENT 특성 및 이벤트 핸들을 지정 합니다. **참고:** 커서 라이브러리를 사용 하 여 알림 메서드를 사용할 수 없습니다. 응용 프로그램 알림 방법을 사용 하는 경우 SQLSetConnectAttr 통해 커서 라이브러리를 사용 하도록 설정 하려고 하면 오류 메시지가 표시 됩니다.|  
+|SQL_ATTR_ASYNC_DBC_EVENT (ODBC 3.8)|이벤트 핸들에 해당 하는 대 SQLPOINTER 값입니다.<br /><br /> 호출 하 여 비동기 함수 완료 알림을 설정할지 **SQLSetConnectAttr** SQL_ATTR_ASYNC_STMT_EVENT 특성 및 이벤트 핸들을 지정 합니다. **참고:**  알림 방법은 커서 라이브러리를 사용 하 여 지원 되지 않습니다. 응용 프로그램 알림 방법을 사용 하는 경우 SQLSetConnectAttr 통해 커서 라이브러리를 사용 하도록 설정 하려고 하면 오류 메시지가 표시 됩니다.|  
 |SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE (ODBC 3.8)|연결 핸들에 대해 선택한 함수의 비동기 실행을 사용 하지 않도록 설정 하는 SQLUINTEGER 값입니다. 자세한 내용은 [비동기 실행 (폴링 메서드)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)합니다.<br /><br /> SQL_ASYNC_DBC_ENABLE_ON = 지정 된 연결 관련 함수에 대 한 비동기 작업을 사용 하도록 설정 합니다.<br /><br /> SQL_ASYNC_DBC_ENABLE_OFF = 지정 된 연결 관련 함수에 대 한 비동기 작업 (기본값) 사용 하지 않도록 설정 합니다.<br /><br /> 설정 SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE은 항상 동기 (즉, 돌아가지 SQL_STILL_EXECUTING).<br /><br /> 문 작업의 비동기 실행 SQL_ATTR_ASYNC_ENABLE을 사용 하 여 사용할 수 있습니다.|  
 |SQL_ATTR_ASYNC_DBC_PCALLBACK (ODBC 3.8)|상황에 맞는 구조를 가리키는 대 SQLPOINTER 값입니다.<br /><br /> 드라이버 관리자는 드라이버를 호출할 수 있습니다만 **SQLSetStmtAttr** 이 특성을 사용 하 여 함수입니다.|  
 |SQL_ATTR_ASYNC_DBC_PCONTEXT (ODBC 3.8)|상황에 맞는 구조를 가리키는 대 SQLPOINTER 값입니다.<br /><br /> 드라이버 관리자는 드라이버를 호출할 수 있습니다만 **SQLSetStmtAttr** 이 특성을 사용 하 여 함수입니다.|  
 |SQL_ATTR_ASYNC_ENABLE (ODBC 3.0)|지정된 된 연결에서 문을 사용 하 여 호출 된 함수를 비동기적으로 실행 되는지 여부를 지정 하는 SQLULEN 값:<br /><br /> SQL_ASYNC_ENABLE_OFF = 문 작업 (기본값)에 대 한 연결 수준 비동기 실행 지원 사용 하지 않도록 설정 합니다.<br /><br /> Sql_async_enable_on으로 = 문 작업에 대 한 연결 수준 비동기 실행 지원 사용 합니다.<br /><br /> 이 특성 수 있는지 여부를 설정 **SQLGetInfo** SQL_ASYNC_MODE 정보를 사용 하 여 형식 SQL_AM_CONNECTION 또는 SQL_AM_STATEMENT을 반환 합니다.|  
 |SQL_ATTR_AUTO_IPD (ODBC 3.0)|지정 하는 읽기 전용 SQLUINTEGER 값 여부를를 호출한 후 IPD의 자동 채우기 **SQLPrepare** 지원 됩니다.<br /><br /> SQL_TRUE =를 호출한 후 IPD의 자동 채우기 **SQLPrepare** 드라이버에서 지원 됩니다.<br /><br /> SQL_FALSE =를 호출한 후 IPD의 자동 채우기 **SQLPrepare** 드라이버에서 지원 되지 않습니다. 문 준비를 지원 하지 않는 서버 IPD를 자동으로 채울 수 없습니다.<br /><br /> SQL_TRUE SQL_ATTR_AUTO_IPD 연결 특성에 대해 반환 되 면 문 특성 SQL_ATTR_ENABLE_AUTO_IPD IPD의 자동 채우기 기능을 켜거나 끄려면를 설정할 수 있습니다. SQL_ATTR_AUTO_IPD SQL_FALSE 이면 SQL_ATTR_ENABLE_AUTO_IPD SQL_TRUE로 설정할 수 없습니다. 기본값인 SQL_ATTR_ENABLE_AUTO_IPD SQL_ATTR_AUTO_IPD 값과 같습니다.<br /><br /> 이 연결 특성에서 반환 될 수 있습니다 **SQLGetConnectAttr** 으로 설정할 수 있지만 **SQLSetConnectAttr**합니다.|  
-|SQL_ATTR_AUTOCOMMIT (ODBC 1.0)|자동 커밋 또는 수동 커밋 모드를 사용할지 여부를 지정 하는 SQLUINTEGER 값:<br /><br /> SQL_AUTOCOMMIT_OFF = 수동 커밋 모드를 사용 하는 드라이버 및 응용 프로그램이 명시적으로 커밋하거나 사용 하 여 트랜잭션을 롤백합니다 **SQLEndTran**합니다.<br /><br /> Sql_autocommit_on으로 드라이버는 자동 커밋 모드 =. 각 문이 실행 된 후에 즉시 커밋됩니다. 기본값입니다. 수동 커밋 모드에서 다시 자동 커밋 모드로 변경 하려면 SQL_ATTR_AUTOCOMMIT을 sql_autocommit_on으로 설정 된 경우 연결에서 열려 있는 모든 트랜잭션이 커밋됩니다.<br /><br /> 자세한 내용은 [커밋 모드](../../../odbc/reference/develop-app/commit-mode.md)합니다. **중요:** 액세스 계획을 삭제 하는 일부 데이터 원본 닫기 연결 될 때마다 모든 문에 대해 커서 문은 커밋된; 자동 커밋 모드를 사용 하면 각 nonquery 문이 실행 된 후 또는 커서가 있을 때 발생 합니다.이 쿼리에 대 한 닫힙니다. 자세한 내용은 참조에서 SQL_CURSOR_ROLLBACK_BEHAVIOR 정보 형식과 SQL_CURSOR_COMMIT_BEHAVIOR [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) 하 고 [커서 및 준비 된 문에서 영향의 트랜잭션을](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md)합니다. <br /><br /> 일괄 처리는 자동 커밋 모드에서 실행 되 면 두 가지 있을 수 있습니다. 전체 일괄 처리는 autocommitable 단위로 처리 되거나 일괄 처리의 각 문에 autocommitable 단위로 취급 됩니다. 특정 데이터 소스 모두 이러한 동작을 지원할 수 있으며 둘 중 하나를 선택 하는 방법을 제공할 수 있습니다. Autocommitable 단위로 일괄 처리는 처리 하는 여부 또는 일괄 처리 내의 각 개별 문을 autocommitable 인지 드라이버 정의입니다.|  
+|SQL_ATTR_AUTOCOMMIT (ODBC 1.0)|자동 커밋 또는 수동 커밋 모드를 사용할지 여부를 지정 하는 SQLUINTEGER 값:<br /><br /> SQL_AUTOCOMMIT_OFF = 수동 커밋 모드를 사용 하는 드라이버 및 응용 프로그램이 명시적으로 커밋하거나 사용 하 여 트랜잭션을 롤백합니다 **SQLEndTran**합니다.<br /><br /> Sql_autocommit_on으로 드라이버는 자동 커밋 모드 =. 각 문이 실행 된 후에 즉시 커밋됩니다. 기본값입니다. 수동 커밋 모드에서 다시 자동 커밋 모드로 변경 하려면 SQL_ATTR_AUTOCOMMIT을 sql_autocommit_on으로 설정 된 경우 연결에서 열려 있는 모든 트랜잭션이 커밋됩니다.<br /><br /> 자세한 내용은 [커밋 모드](../../../odbc/reference/develop-app/commit-mode.md)합니다. **중요:**  일부 데이터 원본 액세스 계획을 삭제 하 고 문이 커밋됩니다 때마다 연결의 모든 문에 대해 커서 닫기 자동 커밋 모드는 각 nonquery 문이 실행 된 후 또는 쿼리에 대 한 커서를 닫을 때 발생 합니다.이 발생할 수 있습니다. 자세한 내용은 참조에서 SQL_CURSOR_ROLLBACK_BEHAVIOR 정보 형식과 SQL_CURSOR_COMMIT_BEHAVIOR [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) 하 고 [커서 및 준비 된 문에서 영향의 트랜잭션을](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md)합니다. <br /><br /> 일괄 처리는 자동 커밋 모드에서 실행 되 면 두 가지 있을 수 있습니다. 전체 일괄 처리는 autocommitable 단위로 처리 되거나 일괄 처리의 각 문에 autocommitable 단위로 취급 됩니다. 특정 데이터 소스 모두 이러한 동작을 지원할 수 있으며 둘 중 하나를 선택 하는 방법을 제공할 수 있습니다. Autocommitable 단위로 일괄 처리는 처리 하는 여부 또는 일괄 처리 내의 각 개별 문을 autocommitable 인지 드라이버 정의입니다.|  
 |SQL_ATTR_CONNECTION_DEAD<br /><br /> (ODBC 3.5)|읽기 전용 SQLUINTEGER 하는 값 연결의 상태를 나타냅니다. 경우 SQL_CD_TRUE를 연결이 끊어졌습니다. SQL_CD_FALSE를 연결 아직 활성 상태인 경우 합니다.|  
 |SQL_ATTR_CONNECTION_TIMEOUT (ODBC 3.0)|응용 프로그램에 반환 하기 전에 완료에 대 한 연결에서 모든 요청에 대 한 대기 시간 (초) 수에 해당 하는 SQLUINTEGER 값입니다. 드라이버는 SQLSTATE HYT00 반환할지 (제한 시간 만료 됨)는 쿼리 실행 또는 로그인을 사용 하 여 연결 되지 않은 상황에서 시간 초과 수는 언제 든 지 합니다.<br /><br /> 하는 경우 *ValuePtr* 은 0 (기본값) 일 제한 시간은 없습니다.|  
-|SQL_ATTR_CURRENT_CATALOG (ODBC 2.0)|데이터 원본에서 사용할 카탈로그의 이름을 포함 하는 문자열입니다. 예를 들어, SQL Server에서 카탈로그는 데이터베이스 드라이버 보냅니다를 **사용 하 여** *데이터베이스* 문은 데이터 원본에 있는 *데이터베이스* 에 지정 된 데이터베이스 \* *ValuePtr*합니다. 단일 계층 드라이버의 경우 드라이버에서 지정한 디렉터리를 현재 디렉터리를 변경 하므로 카탈로그 디렉터리를 수 있습니다 **ValuePtr*합니다.|  
+|SQL_ATTR_CURRENT_CATALOG (ODBC 2.0)|데이터 원본에서 사용할 카탈로그의 이름을 포함 하는 문자열입니다. 예를 들어, SQL Server에서 카탈로그는 데이터베이스 드라이버 보냅니다를 **사용 하 여** _데이터베이스_ 문은 데이터 원본에 있는 *데이터베이스* 에 지정 된 데이터베이스 \* *ValuePtr*합니다. 단일 계층 드라이버의 경우 드라이버에서 지정한 디렉터리를 현재 디렉터리를 변경 하므로 카탈로그 디렉터리를 수 있습니다 **ValuePtr*합니다.|  
 |(ODBC 3.8 SQL_ATTR_DBC_INFO_TOKEN|설정 하는 데 대 SQLPOINTER 값 다시는 dbc 입니다에 연결 정보 토큰 처리 시기 [SQLRateConnection](../../../odbc/reference/syntax/sqlrateconnection-function.md)의 (\**pRating*) 매개 변수를 100와 같지 않습니다.<br /><br /> SQL_ATTR_DBC_INFO_TOKEN 집합 전용입니다. 사용 하는 것이 불가능 **SQLGetConnectAttr** 하거나 **SQLGetConnectOption** 이 값을 검색 합니다. 드라이버 관리자의 **SQLSetConnectAttr** 응용 프로그램은이 특성을 설정 하지 않아야 하므로 SQL_ATTR_DBC_INFO_TOKEN를 허용 하지 것입니다.<br /><br /> SQL_ATTR_DBC_INFO_TOKEN를 설정한 후 SQL_ERROR를 반환 하는 드라이버를 하는 경우 풀에서 방금 가져온 연결 해제 됩니다. 그런 다음 드라이버 관리자는 다른 연결 풀에서 가져올 하려고 합니다. 참조 [ODBC 드라이버에서 연결 풀 인식 개발](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md) 자세한 내용은 합니다.|  
 |SQL_ATTR_ENLIST_IN_DTC (ODBC 3.0)|Microsoft 구성 요소 서비스에 의해 조정 된 분산 트랜잭션에서 ODBC 드라이버를 사용할지 여부를 지정 하는 대 SQLPOINTER 값입니다.<br /><br /> DTC OLE 트랜잭션 개체를 SQL Server, 또는 SQL_DTC_DONE DTC와 연결 종료에 내보낼 트랜잭션을 지정 하는 전달 합니다.<br /><br /> 클라이언트는 MS DTC 트랜잭션을 시작 하 여 트랜잭션을 나타내는 MS DTC 트랜잭션 개체를 만들 Microsoft Distributed Transaction Coordinator (MS DTC) OLE itransactiondispenser:: Begintransaction 메서드를 호출 합니다. 그러면 응용 프로그램이 ODBC 연결을 사용 하 여 트랜잭션 개체를 연결 하는 SQL_ATTR_ENLIST_IN_DTC 옵션을 사용 하 여 SQLSetConnectAttr를 호출 합니다. 관련된 모든 데이터베이스 작업은 MS DTC 트랜잭션의 보호 아래 수행됩니다. 응용 프로그램에 대 한 호출에서는 sql_dtc_done과 함께 SQLSetConnectAttr DTC와 연결을 종료 합니다. 자세한 내용은 MS DTC 설명서를 참조하십시오.|  
 |SQL_ATTR_LOGIN_TIMEOUT (ODBC 1.0)|로그인 요청을 응용 프로그램에 반환 하기 전에 완료 될 때까지 기다리는 시간 (초) 수에 해당 하는 SQLUINTEGER 값입니다. 기본값은 드라이버에 따라 다릅니다. 하는 경우 *ValuePtr* 이 0 이면의 제한 시간이 비활성화 되었는지 이며 연결 시도 무기한으로 대기 합니다.<br /><br /> 지정된 된 시간 제한 데이터 원본에서 최대 로그인 제한 시간을 초과 하면 드라이버 해당 값을 대체 하 고 SQLSTATE 01S02를 반환 합니다 (옵션 값이 변경 됨).|  
 |SQL_ATTR_METADATA_ID (ODBC 3.0)|카탈로그 함수의 문자열 인수를 처리 하는 방법을 결정 하는 SQLUINTEGER 값입니다.<br /><br /> 면 SQL_TRUE를 카탈로그 함수의 문자열 인수는 식별자로 처리 됩니다. 대/소문자는 중요 하지 않습니다. Nondelimited 문자열에 대 한 드라이버 후행 공백을 제거한 문자열을 대문자로 정리 됩니다. 구분 기호로 분리 된 문자열에 대 한 드라이버 선행 또는 후행 공백을 제거 하 고 무엇이 든 간에 구분 기호 문자 그대로 사용 합니다. 함수 반환 SQL_ERROR 및 SQLSTATE HY009 null 포인터로 설정 되어 이러한 인수 중 하나 (null 포인터를 잘못 사용).<br /><br /> 경우 SQL_FALSE를 카탈로그 함수의 문자열 인수를 사용 하는 식별자로 처리 되지 됩니다. 대/소문자는 중요 합니다. 포함할 수 있습니다 하거나 문자열 검색 패턴으로 인수에 따라.<br /><br /> 기본값은 SQL_FALSE입니다.<br /><br /> *TableType* 인수의 **SQLTables**,이 특성에 의해 영향을 받지 않습니다 값 목록을 사용 합니다.<br /><br /> SQL_ATTR_METADATA_ID 문 수준에서 설정할 수도 있습니다. (은 연결 특성 문 특성 이기도 합니다.)<br /><br /> 자세한 내용은 [카탈로그 함수의 인수](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)합니다.|  
-|SQL_ATTR_ODBC_CURSORS (ODBC 2.0)|드라이버 관리자는 ODBC 커서 라이브러리를 사용 하는 방법을 지정 하는 SQLULEN 값:<br /><br /> SQL_CUR_USE_IF_NEEDED 필요할 경우에 The Driver Manager에서 사용 하는 ODBC 커서 라이브러리를 =. 드라이버에서 SQL_FETCH_PRIOR 옵션을 지 원하는 경우 **SQLFetchScroll**, 드라이버 관리자 드라이버의 스크롤 기능을 사용 합니다. 그렇지 않은 경우 ODBC 커서 라이브러리를 사용합니다.<br /><br /> SQL_CUR_USE_ODBC = The Driver Manager에서 사용 하는 ODBC 커서 라이브러리입니다.<br /><br /> SQL_CUR_USE_DRIVER = The Driver Manager에서 사용 하는 드라이버의 스크롤 기능입니다. 이 값은 기본 설정입니다.<br /><br /> ODBC 커서 라이브러리에 대 한 자세한 내용은 참조 하세요. [부록 f: ODBC 커서 라이브러리](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)합니다. **경고:** 커서 라이브러리는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는이 기능을 사용 하지 말고 현재이 기능을 사용 하는 응용 프로그램은 수정 합니다. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.|  
-|SQL_ATTR_PACKET_SIZE (ODBC 2.0)|네트워크 패킷 크기를 바이트 단위로 지정 하는 SQLUINTEGER 값입니다. **참고:** 반환 하지만 네트워크 패킷 크기를 설정 하지 수만 또는 여러 데이터 원본은이 옵션을 하거나 지원 하지 않습니다. <br /><br /> 지정된 된 크기 최대 패킷 크기를 초과 하거나 최소 패킷 크기 보다 작으면, 드라이버 해당 값을 대체 하 고 SQLSTATE 01S02를 반환 합니다 (옵션 값이 변경 됨).<br /><br /> 연결을 이미 수행 된 후 패킷 크기를 설정 하는 응용 프로그램, 드라이버 SQLSTATE HY011 반환 됩니다 (특성 지금 설정할 수 없습니다).|  
-|SQL_ATTR_QUIET_MODE (ODBC 2.0)|창 핸들 (HWND)입니다.<br /><br /> 창 핸들을 null 포인터 이면 드라이버는 모든 대화 상자를 표시 되지 않습니다.<br /><br /> 창 핸들을 null 포인터를 없는 경우 응용 프로그램의 부모 창 핸들을 해야 합니다. 기본값입니다. 드라이버는이 핸들을 사용 하 여 대화 상자를 표시 하도록 합니다. **참고:** SQL_ATTR_QUIET_MODE 연결 특성으로 표시 하는 대화 상자에 적용 되지 않습니다 **SQLDriverConnect**합니다.|  
-|SQL_ATTR_TRACE (ODBC 1.0)|드라이버 관리자 추적을 수행할지 여부를 지시 하는 SQLUINTEGER 값:<br /><br /> SQL_OPT_TRACE_OFF 추적 off (기본값) =<br /><br /> SQL_OPT_TRACE_ON 추적 = on<br /><br /> 추적 되 면 드라이버 관리자 추적 파일에 각 ODBC 함수 호출을 씁니다. **참고:** 추적이 설정 되어 드라이버 관리자 SQLSTATE IM013를 반환할 수 있습니다 (파일 오류 추적) 함수에서. <br /><br /> 응용 프로그램 SQL_ATTR_TRACEFILE 옵션을 사용 하 여 추적 파일을 지정합니다. 파일이 이미 있는 경우 드라이버 관리자는 파일에 추가 합니다. 그렇지 않은 경우 파일을 만듭니다. 추적에 있고 지정 된 추적 파일이 없습니다 드라이버 관리자는 SQL 파일에 씁니다. 루트 디렉터리에 로그인 합니다.<br /><br /> 응용 프로그램 변수를 설정할 수 있습니다 **ODBCSharedTraceFlag** 동적으로 추적을 사용 하도록 설정 합니다. 추적은 현재 실행 중인 모든 ODBC 응용 프로그램에 대 한 설정 됩니다. 응용 프로그램 추적을 해제, 해당 응용 프로그램에 대해서만 꺼져 있습니다.<br /><br /> 경우는 **추적** 시스템 정보에는 키워드는 응용 프로그램이 호출 하면 1로 설정 됩니다 **SQLAllocHandle** 사용 하 여는 *HandleType* SQL_HANDLE_ENV의 모든 추적을 사용 처리합니다. 호출 하는 응용 프로그램에 대해서만 사용 하도록 설정 **SQLAllocHandle**합니다.<br /><br /> 호출 **SQLSetConnectAttr** 사용 하 여는 *특성* SQL_ATTR_TRACE의 필요가 없는 합니다 *ConnectionHandle* 인수 유효 경우 SQL_ERROR를 반환 하지 것입니다 하 고 *ConnectionHandle* NULL입니다. 이 특성은 모든 연결에 적용 됩니다.|  
+|SQL_ATTR_ODBC_CURSORS (ODBC 2.0)|드라이버 관리자는 ODBC 커서 라이브러리를 사용 하는 방법을 지정 하는 SQLULEN 값:<br /><br /> SQL_CUR_USE_IF_NEEDED 필요할 경우에 The Driver Manager에서 사용 하는 ODBC 커서 라이브러리를 =. 드라이버에서 SQL_FETCH_PRIOR 옵션을 지 원하는 경우 **SQLFetchScroll**, 드라이버 관리자 드라이버의 스크롤 기능을 사용 합니다. 그렇지 않은 경우 ODBC 커서 라이브러리를 사용합니다.<br /><br /> SQL_CUR_USE_ODBC = The Driver Manager에서 사용 하는 ODBC 커서 라이브러리입니다.<br /><br /> SQL_CUR_USE_DRIVER = The Driver Manager에서 사용 하는 드라이버의 스크롤 기능입니다. 이 값은 기본 설정입니다.<br /><br /> ODBC 커서 라이브러리에 대 한 자세한 내용은 참조 하세요. [부록 f: ODBC 커서 라이브러리](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)합니다. **경고:**  커서 라이브러리는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는이 기능을 사용 하지 말고 현재이 기능을 사용 하는 응용 프로그램은 수정 합니다. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.|  
+|SQL_ATTR_PACKET_SIZE (ODBC 2.0)|네트워크 패킷 크기를 바이트 단위로 지정 하는 SQLUINTEGER 값입니다. **참고:**  여러 데이터 원본은이 옵션을 하거나 지원 하지 않습니다 또는 반환 하지만 네트워크 패킷 크기를 설정 하지 수만 있습니다. <br /><br /> 지정된 된 크기 최대 패킷 크기를 초과 하거나 최소 패킷 크기 보다 작으면, 드라이버 해당 값을 대체 하 고 SQLSTATE 01S02를 반환 합니다 (옵션 값이 변경 됨).<br /><br /> 연결을 이미 수행 된 후 패킷 크기를 설정 하는 응용 프로그램, 드라이버 SQLSTATE HY011 반환 됩니다 (특성 지금 설정할 수 없습니다).|  
+|SQL_ATTR_QUIET_MODE (ODBC 2.0)|창 핸들 (HWND)입니다.<br /><br /> 창 핸들을 null 포인터 이면 드라이버는 모든 대화 상자를 표시 되지 않습니다.<br /><br /> 창 핸들을 null 포인터를 없는 경우 응용 프로그램의 부모 창 핸들을 해야 합니다. 기본값입니다. 드라이버는이 핸들을 사용 하 여 대화 상자를 표시 하도록 합니다. **참고:**  SQL_ATTR_QUIET_MODE 연결 특성으로 표시 하는 대화 상자에 적용 되지 않습니다 **SQLDriverConnect**합니다.|  
+|SQL_ATTR_TRACE (ODBC 1.0)|드라이버 관리자 추적을 수행할지 여부를 지시 하는 SQLUINTEGER 값:<br /><br /> SQL_OPT_TRACE_OFF 추적 off (기본값) =<br /><br /> SQL_OPT_TRACE_ON 추적 = on<br /><br /> 추적 되 면 드라이버 관리자 추적 파일에 각 ODBC 함수 호출을 씁니다. **참고:**  추적이 설정 되어 드라이버 관리자 SQLSTATE IM013를 반환할 수 있습니다 (파일 오류 추적) 함수에서. <br /><br /> 응용 프로그램 SQL_ATTR_TRACEFILE 옵션을 사용 하 여 추적 파일을 지정합니다. 파일이 이미 있는 경우 드라이버 관리자는 파일에 추가 합니다. 그렇지 않은 경우 파일을 만듭니다. 추적에 있고 지정 된 추적 파일이 없습니다 드라이버 관리자는 SQL 파일에 씁니다. 루트 디렉터리에 로그인 합니다.<br /><br /> 응용 프로그램 변수를 설정할 수 있습니다 **ODBCSharedTraceFlag** 동적으로 추적을 사용 하도록 설정 합니다. 추적은 현재 실행 중인 모든 ODBC 응용 프로그램에 대 한 설정 됩니다. 응용 프로그램 추적을 해제, 해당 응용 프로그램에 대해서만 꺼져 있습니다.<br /><br /> 경우는 **추적** 시스템 정보에는 키워드는 응용 프로그램이 호출 하면 1로 설정 됩니다 **SQLAllocHandle** 사용 하 여는 *HandleType* SQL_HANDLE_ENV의 모든 추적을 사용 처리합니다. 호출 하는 응용 프로그램에 대해서만 사용 하도록 설정 **SQLAllocHandle**합니다.<br /><br /> 호출 **SQLSetConnectAttr** 사용 하 여는 *특성* SQL_ATTR_TRACE의 필요가 없는 합니다 *ConnectionHandle* 인수 유효 경우 SQL_ERROR를 반환 하지 것입니다 하 고 *ConnectionHandle* NULL입니다. 이 특성은 모든 연결에 적용 됩니다.|  
 |SQL_ATTR_TRACEFILE (ODBC 1.0)|추적 파일의 이름을 포함 하는 null로 끝나는 문자열입니다.<br /><br /> SQL_ATTR_TRACEFILE 특성의 기본 값이 지정 된 된 **TraceFile** 시스템 정보에는 키워드입니다. 자세한 내용은 [ODBC 하위 키](../../../odbc/reference/install/odbc-subkey.md)합니다.<br /><br /> 호출 **SQLSetConnectAttr** 사용 하 여는 *특성* SQL_ATTR_ TRACEFILE의 필요 하지 않습니다는 *ConnectionHandle* 인수가 유효한 경우 SQL_ERROR를 반환 하지 것입니다 하 고 *ConnectionHandle* 올바르지 않습니다. 이 특성은 모든 연결에 적용 됩니다.|  
 |SQL_ATTR_TRANSLATE_LIB (ODBC 1.0)|함수를 포함 하는 라이브러리의 이름이 포함 된 null로 끝나는 문자열로 **SQLDriverToDataSource** 하 고 **SQLDataSourceToDriver** 드라이버 액세스와 같은 작업을 수행 하는 문자 집합 변환 합니다. 이 옵션은 드라이버에 데이터 원본에 연결 하는 경우에 지정 합니다. 이 특성의 설정은 연결 간에 유지 됩니다. 데이터를 변환 하는 방법에 대 한 자세한 내용은 참조 하세요. [변환 Dll](../../../odbc/reference/develop-app/translation-dlls.md) 하 고 [변환 DLL 함수 참조](../../../odbc/reference/syntax/translation-dll-api-reference.md)합니다.|  
 |SQL_ATTR_TRANSLATE_OPTION (ODBC 1.0)|변환 DLL에 전달 되는 32 비트 플래그 값입니다. 이 특성 수 드라이버에 데이터 원본에 연결 하는 경우에 지정 합니다. 데이터를 변환 하는 방법에 대 한 내용은 [변환 Dll](../../../odbc/reference/develop-app/translation-dlls.md)합니다.|  

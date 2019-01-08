@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_wait_stats (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2018
+ms.date: 12/04/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 513b85aafb4cd25d55dfb40e37dabd6fc47b814f
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: d271d8e7a0601353439df8a5848978f2a89af3e2
+ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878196"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52886888"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -331,7 +331,7 @@ GO
 |HADR_NOTIFICATION_WORKER_STARTUP_SYNC |백그라운드 태스크가 Windows Server 장애 조치(Failover) 클러스터링 알림을 처리하는 백그라운드 태스크가 시작될 때까지 기다리고 있습니다. 내부 에서만 사용 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_NOTIFICATION_WORKER_TERMINATION_SYNC |백그라운드 태스크가 Windows Server 장애 조치(Failover) 클러스터링 알림을 처리하는 백그라운드 태스크가 종료될 때까지 기다리고 있습니다. 내부 에서만 사용 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_PARTNER_SYNC |파트너 목록에 대 한 동시성 제어 대기입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HADR_READ_ALL_NETWORKS |WSFC 네트워크 목록에 대한 읽기 또는 쓰기 액세스를 얻기 위해 기다립니다. 내부적으로만 사용됩니다. 참고: 엔진이 동적 관리 뷰 (예: sys.dm_hadr_cluster_networks)에 사용 되는 WSFC 네트워크 목록을 유지 하거나 유효성을 검사할 항상에서 TRANSACT-SQL WSFC를 참조 하는 문이 네트워크 정보. 이 목록은 엔진 시작 시 업데이트 되 면 WSFC 관련 알림 및 내부 Alwayson 다시 시작 (예를 들어, 손실 및 WSFC 쿼럼을 다시 얻기). 해당 목록에서 업데이트가 진행 중일 때는 일반적으로 태스크가 차단됩니다. , <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_READ_ALL_NETWORKS |WSFC 네트워크 목록에 대한 읽기 또는 쓰기 액세스를 얻기 위해 기다립니다. 내부적으로만 사용됩니다. 참고: 동적 관리 뷰 (예: sys.dm_hadr_cluster_networks)에서 사용 되는 WSFC 네트워크 목록을 유지 하는 엔진 또는 항상에서 TRANSACT-SQL 유효성을 검사 하려면 WSFC를 참조 하는 문이 네트워크 정보입니다. 이 목록은 엔진 시작 시 업데이트 되 면 WSFC 관련 알림 및 내부 Alwayson 다시 시작 (예를 들어, 손실 및 WSFC 쿼럼을 다시 얻기). 해당 목록에서 업데이트가 진행 중일 때는 일반적으로 태스크가 차단됩니다. , <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_RECOVERY_WAIT_FOR_CONNECTION |복구를 실행하기 전에 보조 데이터베이스가 주 데이터베이스에 연결될 때까지 기다립니다. 이 주 복제본에 대 한 연결이 느린 경우 길게 할 수는 예상 되는 대기,., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_RECOVERY_WAIT_FOR_UNDO |데이터베이스 복구가 보조 데이터베이스에서 주 데이터베이스와의 공통 로그 지점으로 다시 설정하기 위해 되돌리기 및 초기화 단계를 완료할 때까지 기다립니다. 장애 조치 후 예상 되는 대기입니다. 실행 취소 Windows 시스템 모니터 (perfmon.exe) 및 동적 관리 뷰를 통해 진행률을 추적할 수 있습니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_REPLICAINFO_SYNC |현재 복제본 상태를 업데이트 하는 동시성 제어 대기입니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
@@ -931,6 +931,7 @@ GO
 |VIA_ACCEPT |시작하는 동안 VIA(Virtual Interface Adapter) 공급자 연결이 완료된 경우에 발생합니다.| 
 |VIEW_DEFINITION_MUTEX |캐시된 뷰 정의에 대한 액세스 동기화 중에 발생합니다.| 
 |WAIT_FOR_RESULTS |쿼리 알림이 트리거될 때까지 대기하는 경우에 발생합니다.| 
+|WAIT_ON_SYNC_STATISTICS_REFRESH |동기 통계 업데이트 쿼리 컴파일 전에 완료 하 고 실행을 다시 시작할 수에 대 한 대기 하는 경우 발생 합니다.<br /> **적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]로 시작|
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |WAIT_XLOGREAD_SIGNAL |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 

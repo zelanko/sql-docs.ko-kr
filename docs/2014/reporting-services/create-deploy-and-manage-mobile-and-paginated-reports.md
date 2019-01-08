@@ -17,12 +17,12 @@ ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b6837fdc076db7abfe4a085c2bb98201e1a298d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: ea6a5ef9a9ced2399ba5539f8117cc40e5c13db0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055263"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352037"
 ---
 # <a name="reporting-services-ssrs"></a>Reporting Services(SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 즉시 사용할 도구 및 서비스 만들기, 배포 및 조직에 대 한 보고서를 관리 하는 데 전체 범위를 제공 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에는 보고 기능을 확장하고 사용자 지정할 수 있는 프로그래밍 기능이 있습니다.  
@@ -67,6 +67,6 @@ ms.locfileid: "48055263"
  ![폴더 아이콘](media/hlp-16folder.gif "폴더 아이콘") [기능 참조 &#40;Reporting Services&#41;](feature-reference-reporting-services.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [SQL Server 리소스 센터](http://go.microsoft.com/fwlink/?linkID=219676)  
+ [SQL Server 리소스 센터](https://go.microsoft.com/fwlink/?linkID=219676)  
   
   

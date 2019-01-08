@@ -10,20 +10,20 @@ ms.assetid: 50f98cab-8c80-43c5-bc9a-5d2f95f67f17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31bdf5f2b1e435496f2b00f141a7387f9e7560eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: b614db01d4128ec30d6d52260a781fffd69e8c8b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118863"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363815"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>향상된 날짜 및 시간 기능 사용(OLE DB)
   이 예제에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에 도입된 날짜/시간 기능을 사용하는 방법을 보여 줍니다. 이 샘플에서는 네 가지 새로운 날짜 및 시간 형식 사용 (`date`, **시간**, `datetime2`, 및 `datetimeoffset`) 매개 변수를 사용 하 여 명령을 실행 하 여 행 집합 결과 검색 합니다.  
   
- 이 예제에는 [Microsoft SQL Server 예제 및 커뮤니티 프로젝트(Microsoft SQL Server Samples and Community Projects)](http://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지에서 다운로드할 수 있는 AdventureWorks 예제 데이터베이스가 필요합니다.  
+ 이 예제에는 [Microsoft SQL Server 예제 및 커뮤니티 프로젝트(Microsoft SQL Server Samples and Community Projects)](https://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지에서 다운로드할 수 있는 AdventureWorks 예제 데이터베이스가 필요합니다.  
   
 > [!IMPORTANT]  
->  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
   
 ## <a name="example"></a>예제  
  첫 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은 예제에서 사용하는 저장 프로시저를 만듭니다.  

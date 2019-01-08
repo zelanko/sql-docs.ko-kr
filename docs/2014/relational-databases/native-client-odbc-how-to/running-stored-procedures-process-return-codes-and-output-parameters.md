@@ -13,24 +13,24 @@ ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 19a151435ec23ae2e445d80e510c5bca7b066e04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: e9b9a581a4f5331479c7dc5ed87fc5d213e8d465
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118720"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377355"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>반환 코드 및 출력 매개 변수 처리(ODBC)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저는 정수 반환 코드 및 출력 매개 변수를 사용할 수 있습니다. 서버의 마지막 패킷으로 전송 되 고 때까지 응용 프로그램을 사용할 수 없는 반환 코드 및 출력 매개 변수를 [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) SQL_NO_DATA를 반환 합니다. 오류가 저장된 프로시저에서 반환 되 면 호출 SQLMoreResults SQL_NO_DATA가 반환 될 때까지를 다음 결과로 이동 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저는 정수 반환 코드 및 출력 매개 변수를 사용할 수 있습니다. 반환 코드와 출력 매개 변수는 서버의 마지막 패킷으로 전달되므로 [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) 에서 SQL_NO_DATA를 반환할 때까지 애플리케이션에서 사용할 수 없습니다. 오류가 저장된 프로시저에서 반환 되 면 호출 SQLMoreResults SQL_NO_DATA가 반환 될 때까지를 다음 결과로 이동 합니다.  
   
 > [!IMPORTANT]  
->  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>반환 코드 및 출력 매개 변수를 처리하려면  
   
 1.  ODBC CALL 이스케이프 시퀀스를 사용하는 SQL 문을 생성합니다. 이 문에서는 각 입력, 입/출력 및 출력 매개 변수와 프로시저 반환 값(있는 경우)에 대해 매개 변수 표식을 사용해야 합니다.  
   
-2.  호출 [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) 각 입력에 대 한 입/출력 및 출력 매개 변수 및 프로시저 반환 값 (있는 경우).  
+2.  각 입력, 입/출력 및 출력 매개 변수와 프로시저 반환 값(있는 경우)에 대해 [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) 를 호출합니다.  
   
 3.  `SQLExecDirect`를 사용하여 문을 실행합니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48118720"
 ## <a name="example"></a>예제  
  이 예제에서는 반환 코드 및 출력 매개 변수를 처리하는 방법을 보여 줍니다. 이 예제는 IA64에서 지원되지 않습니다. 이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  
   
- AdventureWorks 예제 데이터베이스를 기본 데이터베이스로 사용하는 AdventureWorks라는 ODBC 데이터 원본이 필요합니다. AdventureWorks 샘플 데이터베이스는 [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384)(Microsoft SQL Server 샘플 및 커뮤니티 프로젝트) 홈 페이지에서 다운로드할 수 있습니다. 이 데이터 원본은 운영 체제에서 제공하는 ODBC 드라이버를 기반으로 해야 합니다. 이 드라이버의 이름은 "SQL Server"입니다. 이 예제를 64비트 운영 체제에서 32비트 애플리케이션으로 작성하여 실행하려는 경우 %windir%\SysWOW64\odbcad32.exe에서 ODBC 관리자를 사용하여 ODBC 데이터 원본을 만들어야 합니다.  
+ AdventureWorks 예제 데이터베이스를 기본 데이터베이스로 사용하는 AdventureWorks라는 ODBC 데이터 원본이 필요합니다. AdventureWorks 샘플 데이터베이스는 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384)(Microsoft SQL Server 샘플 및 커뮤니티 프로젝트) 홈 페이지에서 다운로드할 수 있습니다. 이 데이터 원본은 운영 체제에서 제공하는 ODBC 드라이버를 기반으로 해야 합니다. 이 드라이버의 이름은 "SQL Server"입니다. 이 예제를 64비트 운영 체제에서 32비트 애플리케이션으로 작성하여 실행하려는 경우 %windir%\SysWOW64\odbcad32.exe에서 ODBC 관리자를 사용하여 ODBC 데이터 원본을 만들어야 합니다.  
   
  이 예제는 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 명명된 인스턴스에 연결하려면 ODBC 데이터 원본의 정의를 변경하여 server\namedinstance 형식으로 인스턴스를 지정합니다. 기본적으로 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 는 명명된 인스턴스에 설치됩니다.  
   

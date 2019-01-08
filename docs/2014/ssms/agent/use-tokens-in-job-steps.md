@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server Agent]
@@ -16,12 +16,12 @@ ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 009c83975aa730626858c793b53c51c309c218b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2036dd0624e8c2c6479c8ba039aa5646f374902d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222793"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356871"
 ---
 # <a name="use-tokens-in-job-steps"></a>작업 단계에서 토큰 사용
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업 단계 스크립트에 토큰을 사용할 수 있습니다. 작업 단계를 작성할 때 토큰을 사용하면 소프트웨어 프로그램 작성 시 변수를 사용하는 것과 같은 유연성이 있습니다. 작업 단계 스크립트에 토큰을 삽입하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하위 시스템에서 해당 작업 단계를 실행하기 전에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에이전트가 런타임 시 토큰을 바꿉니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "48222793"
 ## <a name="understanding-using-tokens"></a>토큰 사용 이해  
   
 > [!IMPORTANT]  
->  Windows 이벤트 로그에 대한 쓰기 권한이 있는 모든 Windows 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고 또는 WMI 경고로 활성화되는 작업 단계에 액세스할 수 있습니다. 이러한 보안상 위험을 방지하기 위해 경고로 활성화되는 작업에 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 토큰은 기본적으로 해제됩니다. 이러한 토큰에는: **A-DBN**를 **A-SVR**를 **A-ERR**를 **A-SEV**를 **A-MSG**., 및 **WMI ( *`property`*)**. 이번 릴리스에서는 모든 경고에 토큰을 사용할 수 있습니다.  
+>  Windows 이벤트 로그에 대한 쓰기 권한이 있는 모든 Windows 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고 또는 WMI 경고로 활성화되는 작업 단계에 액세스할 수 있습니다. 이러한 보안상 위험을 방지하기 위해 경고로 활성화되는 작업에 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 토큰은 기본적으로 해제됩니다. 이러한 토큰에는 **A-DBN**, **A-SVR**를 **A-ERR**를 **A-SEV**를 **A-MSG**., 및 **WMI ( *`property`*)**. 이번 릴리스에서는 모든 경고에 토큰을 사용할 수 있습니다.  
 >   
 >  이러한 토큰을 사용해야 하는 경우 먼저 Administrators 그룹과 같은 트러스트된 Windows 보안 그룹의 멤버만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 컴퓨터의 이벤트 로그에 대한 쓰기 권한이 있는지 확인합니다. 그런 다음 개체 탐색기에서 **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택하고 **경고 시스템** 페이지에서 **경고에 대한 모든 응답 작업에 대해 토큰 바꾸기** 를 선택하여 이러한 토큰을 설정합니다.  
   
@@ -67,13 +67,13 @@ ms.locfileid: "48222793"
 |**(A-SEV)**|오류 심각도입니다. 작업이 경고로 실행되면 이 토큰은 작업 단계에서 자동으로 오류 심각도 값으로 대체됩니다.|  
 |**(A-MSG)**|메시지 내용입니다. 작업이 경고로 실행되면 이 토큰은 작업 단계에서 자동으로 메시지 텍스트 값으로 대체됩니다.|  
 |**(DATE)**|현재 날짜(YYYYMMDD 형식)입니다.|  
-|**(INST)**|인스턴스 이름입니다. 기본 인스턴스의 경우 이 토큰에는 기본 인스턴스 이름인 MSSQLSERVER를 가집니다.|  
+|**(INST)**|인스턴스 이름입니다. 기본 인스턴스의 경우 이 토큰에는 기본 인스턴스 이름인 MSSQLSERVER가 지정됩니다.|  
 |**(JOBID)**|작업 ID입니다.|  
 |**(MACH)**|컴퓨터 이름입니다.|  
 |**(MSSA)**|마스터 SQLServerAgent 서비스 이름입니다.|  
 |**(OSCMD)**|**CmdExec** 작업 단계를 실행하는 데 사용되는 프로그램의 접두사입니다.|  
 |**(SQLDIR)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 디렉터리입니다. 기본적으로 C:\Program Files\Microsoft SQL Server\MSSQL에 설치됩니다.|  
-|**(SQLLOGDIR)**|SQL Server 오류 로그 폴더 경로의 대체 토큰입니다. 예를 들면 $(ESCAPE_SQUOTE(SQLLOGDIR))입니다.|  
+|**(SQLLOGDIR)**|SQL Server 오류 로그 폴더 경로의 대체 토큰입니다(예: $(ESCAPE_SQUOTE(SQLLOGDIR))).|  
 |**(STEPCT)**|해당 단계가 실행된 횟수(다시 시도 제외)입니다. 단계 명령이 다중 단계 루프를 강제로 종료하기 위해 사용할 수 있습니다.|  
 |**(STEPID)**|단계 ID입니다.|  
 |**(SRVR)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행 중인 컴퓨터의 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 명명된 인스턴스이면 이 이름에는 해당 인스턴스 이름이 포함됩니다.|  
@@ -94,7 +94,7 @@ ms.locfileid: "48222793"
 ## <a name="updating-job-steps-to-use-macros"></a>매크로를 사용하도록 작업 단계 업데이트  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서비스 팩 1부터 이스케이프 매크로 없이 토큰이 포함된 작업 단계는 실패하고 작업을 실행하기 전에 매크로를 사용하여 작업 단계에 포함된 하나 이상의 토큰을 업데이트해야 한다는 오류 메시지가 반환됩니다.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 기술 자료 문서 915845: [토큰을 사용하는 SQL Server 에이전트 작업 단계가 SQL Server 2005 서비스 팩 1에서 실패합니다](http://support.microsoft.com/kb/915845). 이 스크립트를 통해 토큰을 사용하는 모든 작업 단계를 **ESCAPE_NONE** 매크로로 업데이트할 수 있습니다. 이 스크립트를 사용한 다음 토큰을 사용하는 작업 단계를 가능한 한 빨리 검토하여 **ESCAPE_NONE** 매크로를 작업 단계 컨텍스트에 맞는 이스케이프 매크로로 바꾸는 것이 좋습니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 기술 자료 문서 915845: [SQL Server 에이전트 작업 단계 토큰을 사용 하는 SQL Server 2005 서비스 팩 1에서에서 실패](https://support.microsoft.com/kb/915845)합니다. 이 스크립트를 사용 하 여 모든 토큰을 사용 하는 작업 단계를 업데이트 하는 **ESCAPE_NONE** 매크로입니다. 이 스크립트를 사용한 다음 토큰을 사용하는 작업 단계를 가능한 한 빨리 검토하여 **ESCAPE_NONE** 매크로를 작업 단계 컨텍스트에 맞는 이스케이프 매크로로 바꾸는 것이 좋습니다.  
   
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 토큰 바꾸기를 처리하는 방법에 대해 설명합니다. 경고 토큰 바꾸기를 설정하거나 해제하려면 개체 탐색기에서 **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택하고 **경고 시스템** 페이지에서 **경고에 대한 모든 응답 작업에 대해 토큰 바꾸기** 확인란을 선택하거나 선택을 취소합니다.  
   

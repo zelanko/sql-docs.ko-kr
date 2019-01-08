@@ -12,12 +12,12 @@ ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b19f0a7e8bbc3724ddea364055c8023f327faa6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4896c9219632d816565fdd30c11aa82ccbf7fef1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170163"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355359"
 ---
 # <a name="administration-of-an-availability-group-sql-server"></a>가용성 그룹 관리(SQL Server)
   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 의 기존 AlwaysOn 가용성 그룹 관리에는 다음 태스크 중 하나 이상이 포함됩니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "48170163"
 -   OS 업그레이드를 위한 AlwaysOn 가용성 그룹의 클러스터 간 마이그레이션  
   
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **기존 가용성 그룹을 구성하려면**  
   
 -   [가용성 그룹에 보조 복제본 추가&#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
@@ -117,24 +117,24 @@ ms.locfileid: "48170163"
   
 -   **블로그:**  
   
-     [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server 엔지니어 블로그](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 엔지니어 블로그](https://blogs.msdn.com/b/psssql/)  
   
 -   **비디오:**  
   
      [Microsoft SQL Server 코드 이름된 "Denali" AlwaysOn 시리즈, 1 부: 차세대 고가용성 솔루션 소개](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server 코드 이름된 "Denali" AlwaysOn 시리즈, 파트 2: AlwaysOn을 사용 하 여 중요 업무용 고가용성 솔루션 빌드](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server 코드 이름된 "Denali" AlwaysOn 시리즈, 2 부: AlwaysOn을 사용 하 여 중요 업무용 고가용성 솔루션 빌드](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **백서:**  
   
-     [SQL Server 2012에 대한 Microsoft 백서](http://msdn.microsoft.com/library/hh403491.aspx)  
+     [SQL Server 2012에 대한 Microsoft 백서](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server 고객 자문 팀 백서](http://sqlcat.com/)  
   
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](always-on-availability-groups-sql-server.md)   
  [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 가용성 그룹에 대 한 서버 인스턴스 구성 &#40;SQL Server&#41;](configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)  

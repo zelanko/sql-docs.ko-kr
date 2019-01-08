@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
@@ -12,12 +12,12 @@ ms.assetid: 3b1ec9fe-f6c5-46f7-aa63-6e671be1572d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8fc6356b4a4325f394324f91e2e7f8e76e30f367
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8abad1f3dbeb8a8667999e90de63d80c2328d90c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170583"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359465"
 ---
 # <a name="check-integrity-of-database-with-suspect-pages"></a>주의 대상 페이지가 있는 데이터베이스의 무결성 검사
   이 규칙은 데이터베이스 상태가 주의 대상으로 설정된 사용자 데이터베이스를 검사합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이 824 오류가 포함된 데이터베이스 페이지를 읽는 경우 페이지는 주의 대상 페이지로 간주되고 페이지 ID는 msdb의 suspect_pages 테이블에 기록되며 해당 페이지를 포함하는 데이터베이스는 주의 대상으로 설정됩니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "48170583"
   
 -   전체 데이터베이스 일관성 검사([DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql))를 완료합니다.  
   
--   [MSSQLSERVER_824](http://go.microsoft.com/fwlink/?LinkId=81397)에 정의된 사용자 동작을 구현합니다.  
+-   [MSSQLSERVER_824](https://go.microsoft.com/fwlink/?LinkId=81397)에 정의된 사용자 동작을 구현합니다.  
   
 ## <a name="for-more-information"></a>참조 항목  
  [suspect_pages 테이블 관리&#40;SQL Server&#41;](../backup-restore/manage-the-suspect-pages-table-sql-server.md)  

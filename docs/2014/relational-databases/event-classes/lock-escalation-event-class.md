@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -16,12 +15,12 @@ ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bf72cd4c22003fef09805789b7ac9b70fbc42227
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: c85b6983cbff901ae39c365503a6ab1ae0fcede1
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190873"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980179"
 ---
 # <a name="lockescalation-event-class"></a>Lock:Escalation 이벤트 클래스
   **Lock:Escalation** 이벤트 클래스는 행 잠금이 개체 잠금으로 변환되는 것과 같이 미세 잠금이 성긴 잠금으로 변환되었음을 나타냅니다. 에스컬레이션 이벤트 클래스는 이벤트 ID 60입니다.  
@@ -75,7 +74,7 @@ EXEC sp_trace_setevent @TraceID, 60, 22, 1; -- 22 = ObjectID
 EXEC sp_trace_setevent @TraceID, 60, 25, 1; -- 25 = IntegerData  
 EXEC sp_trace_setevent @TraceID, 60, 55, 1; -- 25 = IntegerData2  
 EXEC sp_trace_setevent @TraceID, 60, 57, 1; -- 57 = Type  
--- Set any filter  byusing sp_trace_setfilter.  
+-- Set any filter  by using sp_trace_setfilter.  
 -- Start the trace.  
 EXEC sp_trace_setstatus @TraceID, 1;  
 GO  

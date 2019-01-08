@@ -15,12 +15,12 @@ ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d98e80da1f311292daf3fa275c87e4db5f9cc2e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 62cd98e586e5bd57f846b0203aa41c6a3efd50bb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100633"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530633"
 ---
 # <a name="execute-process-task-editor-process-page"></a>프로세스 실행 태스크 편집기(프로세스 페이지)
   **프로세스 실행 태스크 편집기** 대화 상자의 **프로세스** 페이지를 사용하여 프로세스 실행 옵션을 구성할 수 있습니다. 이러한 옵션에는 실행할 실행 파일, 해당 위치, 명령 프롬프트 인수, 입력 제공 및 출력 캡처 변수가 포함됩니다.  
@@ -38,12 +38,12 @@ ms.locfileid: "48100633"
  명령 프롬프트 인수를 제공합니다.  
   
  **WorkingDirectory**  
- 실행 파일이 들어 있는 폴더의 경로를 입력하거나 찾아보기 단추 **(...)** 를 클릭하고 해당 폴더를 찾습니다.  
+ 실행 파일이 들어 있는 폴더의 경로를 입력하거나 찾아보기 단추 **(...)** 를 클릭하여 해당 폴더를 찾습니다.  
   
  **StandardInputVariable**  
  프로세스에 입력을 제공할 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련된 항목:**[변수 추가  ](../../2014/integration-services/add-variable.md)  
+ **관련된 항목:**  [변수 추가](../../2014/integration-services/add-variable.md)  
   
  **StandardOutputVariable**  
  프로세스 출력을 캡처할 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  

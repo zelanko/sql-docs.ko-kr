@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publisherinfo.subscriptionssummary.snapshot.f1
@@ -13,24 +12,24 @@ ms.assetid: 2ebeee62-7f54-4c77-9d37-15708bc5cc23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b0f3ba53ad4d59a43d0eae7c377066cf33aaf58a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1520e67a3aee6a7afdec7bcc7dfbe6d4e8ee81b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080323"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777545"
 ---
 # <a name="publisher-information-subscription-watch-list-snapshot-publication-sql-server-2005-and-later"></a>게시자 정보, 구독 조사 목록(스냅숏 게시, SQL Server 2005 이상)
-  **구독 조사 목록** 탭은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전을 실행하는 배포자에 대해 사용할 수 있으며 선택한 게시자에서 사용 가능한 모든 게시의 구독 정보를 표시합니다. 구독 목록을 필터링하여 오류, 경고 및 성능이 저조한 구독을 볼 수 있습니다. 이 탭에서는 관리자가 게시자에서의 모든 복제 작업을 모니터링할 수 있는 단일 위치를 제공합니다. 복제 모니터는 선택한 복제 유형과 **표시** 드롭다운 목록 상자에서 선택한 옵션에 기반하여 주의가 필요한 모든 구독을 표시합니다. 이 탭에 표시되는 항목은 현재 상태와 성능에 기반하기 때문에 현재 **표시** 목록 상자의 옵션과 일치하는 구독만 이 페이지에 표시됩니다.  
+  **구독 조사 목록** 탭은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전을 실행하는 배포자에 대해 사용할 수 있으며 선택한 게시자에서 사용 가능한 모든 게시의 구독 정보를 표시합니다. 구독 목록을 필터링하여 오류, 경고 및 성능이 저조한 구독을 볼 수 있습니다. 이 탭에서는 관리자가 게시자에서의 모든 복제 작업을 모니터링할 수 있는 복제 모니터를 제공합니다. 복제 모니터는 선택한 복제 유형과 및에서 선택한 옵션에 기반 하 여 주의가 필요한 모든 구독을 표시 합니다 **표시** 드롭다운 목록 상자입니다. 이 탭에 표시되는 항목은 현재 상태와 성능에 기반하기 때문에 현재 **표시** 목록 상자의 옵션과 일치하는 구독만 이 페이지에 표시됩니다.  
   
 ## <a name="options"></a>변수  
  자세한 내용 및 구독과 관련된 태스크를 보려면 해당 구독에 대한 행을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 옵션을 클릭합니다. 표에서 데이터를 표시하는 방식을 변경하려면 표를 마우스 오른쪽 단추로 클릭한 후 다음 옵션 중 하나를 클릭합니다.  
   
--   **정렬**: **열 정렬** 대화 상자에서 한 개 이상의 열에 대해 정렬합니다.  
+-   **정렬**: 하나 이상의 열에 정렬 된 **정렬 열** 대화 상자.  
   
--   **표시할 열 선택**: **열 선택** 대화 상자에서 표시할 열 및 해당 열이 표시되는 순서를 선택합니다.  
+-   **표시할 열 선택**: 열을 표시 및 표시 되는 순서를 선택 합니다 **열 선택** 대화 상자.  
   
--   **필터**: **필터 설정** 대화 상자의 열 값에 따라 표의 행을 필터링합니다.  
+-   **필터**: 열 값에 따라 표의 행을 필터링 합니다 **필터 설정** 대화 상자.  
   
 -   **필터 지우기**: 표에 대한 모든 필터 설정을 지웁니다.  
   
@@ -66,10 +65,10 @@ ms.locfileid: "48080323"
  **곧 만료됨/만료됨** 상태 값은 임계값을 설정한 경우에만 표시됩니다. 임계값 설정에 대한 자세한 내용은 [복제 모니터에 임계값 및 경고 설정](monitor/set-thresholds-and-warnings-in-replication-monitor.md)을 참조하세요.  
   
  **구독**  
- 각 구독의 이름으로 *SubscriberName: SubscriptionDatabaseName*형식입니다.  
+ 각 구독의 이름으로, 형식은 형식은 *SubscriberName: SubscriptionDatabaseName*합니다.  
   
  **게시**  
- 구독을 동기화할 게시의 이름으로, 형식은 *PublicationDatabaseName: PublicationName*입니다.  
+ 구독을 동기화할 게시의 이름입니다. 형식은 *PublicationDatabaseName: PublicationName*합니다.  
   
  **마지막 동기화**  
  배포 에이전트가 마지막으로 실행된 시간입니다. 동기화가 진행 중인 경우 **진행 중** 이 표시됩니다.  

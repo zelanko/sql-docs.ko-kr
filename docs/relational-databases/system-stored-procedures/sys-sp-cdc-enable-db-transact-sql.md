@@ -22,19 +22,19 @@ ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 26fdd13e19e2542f5020467323d9e640a4b563b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9778d44f3a11bcea066aea3ef43d36489b5daded
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827521"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211512"
 ---
 # <a name="sysspcdcenabledb-transact-sql"></a>sys.sp_cdc_enable_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   현재 데이터베이스에 대해 변경 데이터 캡처를 활성화합니다. 데이터베이스의 테이블에서 변경 데이터 캡처를 사용할 수 있도록 설정하려면 먼저 해당 데이터베이스에 대해 이 프로시저를 실행해야 합니다. 변경 데이터 캡처는 설정된 테이블에 적용된 삽입, 업데이트 및 삭제 작업을 기록하고 변경 내용의 세부 정보를 쉽게 사용할 수 있는 관계형 형식으로 만듭니다. 추적된 원본 테이블의 열 구조를 미러하는 열 정보가 대상 환경에 변경 내용을 적용하는 데 필요한 메타데이터와 함께 수정된 행에 대해 캡처됩니다.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  변경 데이터 캡처는 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

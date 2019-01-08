@@ -18,12 +18,12 @@ ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6605840bc887f4869d1ed0c153de7ca4374053fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad003060588215c0d5a218ade5103f5748e5ebfc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183163"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369565"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>인라인 XSD 스키마 생성
   FOR XML 절에서는 쿼리가 쿼리 결과와 함께 인라인 스키마를 반환하도록 요청할 수 있습니다. XDR 스키마가 필요한 경우 FOR XML 절에 XMLDATA 키워드를 사용합니다. XSD 스키마가 필요한 경우 XMLSCHEMA 키워드를 사용합니다.  
@@ -32,15 +32,15 @@ ms.locfileid: "48183163"
   
 -   XMLSCHEMA는 RAW 및 AUTO 모드에서만 지정할 수 있으며 EXPLICIT 모드에서는 지정할 수 없습니다.  
   
--   TYPE 지시어를 지정 하는 중첩된 FOR XML 쿼리를 하는 경우 쿼리 결과 `xml` 유형이 며이 결과 형식화 되지 않은 XML 데이터의 인스턴스로 취급 됩니다. 자세한 내용은 [XML 데이터&#40;SQL Server&#41;](xml-data-sql-server.md)를 참조하세요.  
+-   중첩 FOR XML 쿼리에 TYPE 지시어를 지정하는 경우 쿼리 결과는 `xml` 형식이 되며 형식화되지 않은 XML 데이터의 인스턴스로 취급됩니다. 자세한 내용은 [XML 데이터&#40;SQL Server&#41;](xml-data-sql-server.md)를 참조하세요.  
   
  FOR XML 쿼리에 XMLSCHEMA를 지정하는 경우 스키마와 XML 데이터를 모두 쿼리 결과로 수신합니다. 데이터의 각 최상위 요소는 기본 네임스페이스 선언을 사용하여 이전 스키마를 참조하며, 이 선언은 인라인 스키마의 대상 네임스페이스를 참조합니다.  
   
  이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
-<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
-  <xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="http://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
+<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
+  <xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
   <xsd:element name="Production.ProductModel">  
     <xsd:complexType>  
       <xsd:attribute name="ProductModelID" type="sqltypes:int" use="required" />  
@@ -65,7 +65,7 @@ ms.locfileid: "48183163"
   
 -   다른 스키마 문서는 FOR XML 쿼리 결과의 셰이프를 기술합니다.  
   
- 또한 형식화 된 경우 `xml` 데이터 형식이 쿼리 결과 연결 된 형식화 된 해당 스키마에에서 포함 된 `xml` 데이터 형식이 포함 됩니다.  
+ 또한 형식화된 `xml` 데이터 형식이 쿼리 결과에 포함된 경우 형식화된 해당 `xml` 데이터 형식과 연결된 스키마가 포함됩니다.  
   
  FOR XML 결과의 셰이프를 기술하는 스키마 문서의 대상 네임스페이스에는 고정 부분과 자동으로 증가하는 숫자 부분이 포함됩니다. 이 네임스페이스의 형식은 다음과 같으며 여기서 *n* 은 양의 정수입니다. 예를 들어 이전 쿼리에서 urn:schemas-microsoft-com:sql:SqlRowSet1은 대상 네임스페이스입니다.  
   
@@ -116,9 +116,9 @@ FOR XML AUTO, ELEMENTS, XMLSCHEMA
   
  이 쿼리는 ELEMENTS 지시어를 지정하기 때문에 결과 XML은 요소 중심입니다. 이 쿼리는 또한 XMLSCHEMA 지시어를 지정합니다. 따라서 인라인 XSD 스키마가 반환됩니다. 다음은 결과입니다.  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
- `<xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="http://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />`  
+ `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />`  
   
  `<xsd:element name="Sales.SalesOrderHeader">`  
   
@@ -194,9 +194,9 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
   
  다음은 결과입니다. 인라인 XSD 스키마에서 OrderID 요소는 두 번 정의됩니다. 선언 중 하나에서는 CustOrderDetail 테이블의 OrderID에 따라 minOccurs가 0으로 설정되어 있으며 다른 하나는 minOccurs가 기본적으로 1인 `CustOrder` 테이블의 OrderID 기본 키 열로 매핑됩니다.  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
- `<xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="http://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />`  
+ `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />`  
   
  `<xsd:element name="row">`  
   
@@ -239,11 +239,11 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  이것은 생성된 해당 XML입니다. 인라인 XSD의 일부만 표시됩니다.  
   
- `…`  
+ `...`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
- `<xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
+ `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
  `<xsd:element name="row">`  
   
@@ -277,11 +277,11 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
 -   결과에서는 `DealerPrice` 값이 테이블에서 NULL이기 때문에 `ListPrice`만 <`Price`> 요소로 반환됩니다. `XSINIL` 매개 변수를 ELEMENTS 지시어로 추가하는 경우 DealerPrice에 해당하는 <`Price`> 요소에 대해 `xsi:nil` 값이 TRUE로 설정된 두 요소가 모두 수신됩니다. 또한 `nillable` 특성이 모두 TRUE로 설정된 인라인 XSD 스키마에서 <`row`> 복합 유형 정의에 있는 두 개의 <`Price`> 자식 요소가 수신됩니다. 다음은 결과의 일부입니다.  
   
- `…`  
+ `...`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
- `<xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
+ `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
  `<xsd:element name="row">`  
   
@@ -333,11 +333,11 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  다음은 결과입니다. 인라인 XSD 스키마의 조각만 표시됩니다.  
   
- `…`  
+ `...`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
- `<xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
+ `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
  `<xsd:element name="row">`  
   
@@ -402,11 +402,11 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  다음 쿼리에서 Col2 및 Col3에는 같은 별칭이 지정됩니다. 이 쿼리는 이름이 같고 결과에서 모두 <`raw`> 요소의 자식인 두 개의 형제 요소를 생성합니다. 이 열은 모두 유형이 다르며 모두 NULL일 수 있습니다. 다음은 결과입니다. 인라인 XSD 스키마의 일부만 표시됩니다.  
   
- `…`  
+ `...`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
- `<xsd:import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
+ `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
  `<xsd:simpleType name="Col1">`  
   

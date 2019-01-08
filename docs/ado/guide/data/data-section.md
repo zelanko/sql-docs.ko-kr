@@ -13,12 +13,12 @@ ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f95e963264b122440c85334cb69b622c6aa122a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6a06b2291d07378b63907b4a195fa3902930078
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714122"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207772"
 ---
 # <a name="data-section"></a>데이터 섹션
 데이터 섹션을 업데이트, 삽입 또는 삭제를 보류 중인 함께 행 집합의 데이터를 정의합니다. 데이터 섹션 0 개 이상의 행을 포함할 수 있습니다. 행이 스키마에 정의 되어 있는 행 집합의 데이터를 포함할 수 있습니다. 또한 앞에서 설명한 것 처럼 데이터가 없는 열을 생략할 수 있습니다. 데이터 섹션에서 특성 또는 하위 요소는 해당 구문이 스키마 섹션에 정의 되지 않은 경우 자동으로 무시 됩니다.  
@@ -85,5 +85,5 @@ ms.locfileid: "47714122"
   
  업데이트는 항상 전체 원래 행 데이터를 그 뒤에 변경된 행 데이터를 포함 합니다. 변경된 된 행은 모든 열 이나 실제로 변경 된 열만 포함할 수 있습니다. 이전 예제에서는 운송 업체 2에 대 한 행이 변경 되지 않는 고 Phone 열만 전달자 3에 대 한 값을 변경 했습니다 따라서 변경된 된 행에 포함 하는 유일한 열. Shippers 12, 13 및 14에 대해 삽입 된 행을 함께 일괄 처리 태그 아래에 있는 하나의 rs: 삽입 됩니다. 이 표시 되지 않지만 이전 예제에는 삭제 된 행도 일괄 처리할 수, note 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [XML 형식으로 레코드 유지](../../../ado/guide/data/persisting-records-in-xml-format.md)

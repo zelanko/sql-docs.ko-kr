@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], stopping
@@ -14,12 +14,12 @@ ms.assetid: 4249328a-24d8-4284-9d1d-7d04ed90e3d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2f2d7a8e7ae1e8e6972f98f50eb52a1b31a7ab70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f334834ff1deecebbc719ec71fb8348c13e4f68e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057494"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358765"
 ---
 # <a name="stop-a-job"></a>Stop a Job
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 중지하는 방법에 대해 설명합니다. 작업은 SQL Server 에이전트에서 수행하도록 지정된 일련의 동작입니다.  
@@ -84,6 +84,6 @@ ms.locfileid: "48057494"
 ##  <a name="SMO"></a> SQL Server 관리 개체를 사용 하 여  
  **작업을 중지하려면**  
   
- Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `Stop` 클래스의 `Job` 메서드를 호출합니다. 자세한 내용은 [SMO(SQL Server 관리 개체)](http://msdn.microsoft.com/library/ms162169.aspx)를 참조하세요.  
+ Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `Stop` 클래스의 `Job` 메서드를 호출합니다. 자세한 내용은 [SMO(SQL Server 관리 개체)](https://msdn.microsoft.com/library/ms162169.aspx)를 참조하세요.  
   
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - self-joins
@@ -14,12 +14,12 @@ ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78b17fbcdbc882041cf378a629452c57bc6c3158
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd8e26099ec7152aac08a11b6f7e38550834d248
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116033"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769075"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>수동으로 자체 조인 만들기(Visual Database Tools)
   데이터베이스에서 테이블에 반사 관계가 없는 경우에도 테이블을 자체 조인할 수 있습니다. 예를 들어, 자체 조인을 사용하여 같은 도시에 살고 있는 만든 이 쌍을 찾을 수 있습니다.  
@@ -116,7 +116,7 @@ Cheryl Carson       Abraham Bennet
   
 3.  조인 선을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **속성** 을 선택합니다.  
   
-4.  속성 창에서 **조인 조건 및 형식** 을 클릭하고 속성의 오른쪽에 있는 **줄임표(...)** 를 클릭합니다.  
+4.  속성 창에서 **조인 조건 및 형식**을 클릭하고 속성의 오른쪽에 있는 **줄임표(...)** 를 클릭합니다.  
   
 5.  필요한 경우 [조인 대화 상자](join-dialog-box-visual-database-tools.md) 에서 기본 키 사이의 비교 연산자를 변경합니다. 예를 들어, 연산자를 (<)보다 작음으로 변경할 수 있습니다.  
   

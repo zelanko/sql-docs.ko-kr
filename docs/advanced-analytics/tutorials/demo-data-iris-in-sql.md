@@ -1,5 +1,5 @@
 ---
-title: SQL Server에서 Python 및 R 자습서 아이리스 데모 데이터 집합 | Microsoft Docs
+title: Python 및 R 자습서-SQL Server Machine Learning에 대 한 Iris 데모 데이터 집합
 Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2fbe5915f7b135882bbbefbb83b572d2cd640837
-ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
+ms.openlocfilehash: ce0469b5625af3f38047233737f3afbd209e11b9
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50216687"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046573"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>SQL Server에서 Python 및 R 자습서 아이리스 데이터 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "50216687"
 
 이 데이터 집합을 사용 하 여 퀵 스타트 및 자습서에는 다음과 같습니다.
 
-+  [Python 모델을 학습 및 점수 매기기에 대 한 SQL Server에서 사용](train-score-using-python-in-tsql.md)
++  [빠른 시작: 만들기, 학습 및 Python 모델을 사용 하 여 SQL Server에서 저장된 프로시저를 사용 하 여](quickstart-python-train-score-in-tsql.md)
 
 ## <a name="create-the-database"></a>데이터베이스 만들기
 
@@ -58,7 +58,7 @@ ms.locfileid: "50216687"
     ```
 
     > [!TIP] 
-    > 기억해 야 비로소 T-SQL을 처음 접하는 경우는 `DROP...IF` 문입니다. SQL Server 테이블을 만들려고 시도 하면 이미 있을 경우 오류를 반환 합니다. "이미 있기 'iris_data' 데이터베이스의 명명 된 개체입니다." 이러한 오류를 방지 하는 한 가지 방법은 코드의 일부로 모든 기존 테이블 또는 다른 개체를 삭제 하는 것입니다.
+    > 기억해 야 비로소 T-SQL을 처음 접하는 경우는 `DROP...IF` 문입니다. 테이블을 만들려고 할 때 이미 SQL Server 오류를 반환 합니다. "이미 있기 'iris_data' 데이터베이스의 명명 된 개체입니다." 이러한 오류를 방지 하는 한 가지 방법은 코드의 일부로 모든 기존 테이블 또는 다른 개체를 삭제 하는 것입니다.
 
 4. 학습된 된 모델을 저장 하는 데 사용 하는 테이블을 만들려면 다음 코드를 실행 합니다. SQL Server의 Python (또는 R) 모델을 저장 하려면 수 직렬화 하 고 되어야 형식의 열에 저장 **varbinary (max)** 합니다. 
 
@@ -154,6 +154,6 @@ R 또는 Python에서 기본 제공 아이리스 데이터를 가져올 수 있�
 
 ## <a name="next-steps"></a>다음 단계
 
-다음 단원에서는 기계 학습 모델 및 테이블에 저장 만들고 모델을 사용 하 여 예측된 결과 생성 합니다.
+다음 빠른 시작에서 기계 학습 모델 및 테이블에 저장 만들고 모델을 사용 하 여 예측된 결과 생성 합니다.
 
-+ [Python 모델을 학습 및 점수 매기기에 대 한 SQL Server에서 사용](train-score-using-python-in-tsql.md)
++ [빠른 시작: 만들기, 학습 및 Python 모델을 사용 하 여 SQL Server에서 저장된 프로시저를 사용 하 여](quickstart-python-train-score-in-tsql.md)

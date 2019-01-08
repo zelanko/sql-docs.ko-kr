@@ -19,12 +19,12 @@ ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70afd9ea708a82e45ba10e90022224c6ffdc088a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d272b3ea7efa7800c30518aa2ffb7b43bf7fccb7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229513"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514675"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>전체 텍스트 인덱스 생성 시 언어 선택
   전체 텍스트 인덱스를 만들 때는 인덱싱된 열에 대한 열 수준 언어를 지정해야 합니다. 지정된 언어의 [단어 분리기 및 형태소 분석기](configure-and-manage-word-breakers-and-stemmers-for-search.md) 는 인덱싱된 열에 대한 전체 텍스트 쿼리에 사용됩니다. 전체 텍스트 인덱스를 만들기 위해 열 언어를 선택할 때 고려할 몇 가지 사항이 있습니다. 이러한 고려 사항은 전체 텍스트 엔진으로 텍스트를 토큰화한 다음 인덱싱하는 방법과 관련이 있습니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "48229513"
   
      새롭게 디자인된 단어 분리기는 테스트 결과 이전의 단어 분리기보다 형태소 분석 품질이 뛰어난 것으로 나타났습니다. 이는 재호출 정확성을 높입니다.  
   
--   언어의 광범위 한 목록은 검사, 단어 분리기에 포함 된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본적으로 제공 하 고 기본적으로 사용 하도록 설정 합니다.  
+-   다양한 언어에 대한 단어 분리기가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 포함되었으며 기본적으로 사용하도록 설정되어 있습니다.  
   
  언어의 목록을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 포함 된 단어 분리기 및 형태소 분석기를 참조 하세요 [sys.fulltext_languages &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)합니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48229513"
  전체 텍스트 인덱스를 만들 때는 각 열마다 유효한 언어 이름을 지정해야 합니다. 유효한 언어 이름이 [sys.fulltext_languages&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) 카탈로그 뷰에서 반환되지 않을 경우 전체 텍스트 검색은 동일 언어군에서 가장 근접한 언어 이름이 있으면 이를 대신 사용합니다. 그렇지 않으면 중립 단어 분리기를 사용합니다. 이러한 대체 동작은 재호출 정확성에 영향을 줄 수 있습니다. 따라서 전체 텍스트 인덱스를 만들 때는 각 열마다 유효하고 사용 가능한 언어 이름을 지정하는 것이 가장 좋습니다.  
   
 > [!NOTE]  
->  LCID는 `char` 또는 `nchar` 등의 전체 텍스트 인덱싱에 적합한 모든 데이터 형식에 대해 사용됩니다. 정렬 순서를 `char`, `varchar`, 또는 `text` 언어 LCID, LCID로 식별 된 언어에서 다른 설정으로 형식 열의 전체 텍스트 인덱싱 및 해당 열을 쿼리 하는 동안 사용 됩니다.  
+>  LCID는 `char` 또는 `nchar` 등의 전체 텍스트 인덱싱에 적합한 모든 데이터 형식에 대해 사용됩니다. `char`, `varchar` 또는 `text` 형식 열의 정렬 순서를 LCID로 식별된 언어와 다른 언어 설정으로 지정할 경우에도 이러한 행에 대한 전체 텍스트 인덱싱 및 쿼리를 수행하는 동안에는 LCID가 사용됩니다.  
   
 
   
@@ -96,7 +96,7 @@ ms.locfileid: "48229513"
   
 -   일반 텍스트 내용의 경우  
   
-     콘텐츠는 일반 텍스트, 되도록 변환할 수 있습니다는 `xml` 데이터 형식으로 특정 문서 또는 문서 섹션에 해당 하는 언어를 나타내는 언어 태그를 추가 합니다. 하지만 이렇게 하려면 전체 텍스트 인덱싱 전에 해당 언어를 알아야 합니다.  
+     내용이 일반 텍스트로 구성된 경우 `xml` 데이터 형식으로 변환하여 특정 문서 전체 또는 문서 섹션에 해당하는 언어를 나타내는 언어 태그를 추가할 수 있습니다. 하지만 이렇게 하려면 전체 텍스트 인덱싱 전에 해당 언어를 알아야 합니다.  
   
 
   
@@ -106,9 +106,9 @@ ms.locfileid: "48229513"
 
   
 ##  <a name="type"></a> 전체 텍스트 검색에 대한 열 유형의 영향  
- 언어 선택에서 또 다른 고려 사항은 데이터 표현 방법과 관련이 있습니다. 에 저장 되지 않은 데이터용 `varbinary(max)` 열을 특수 필터링이 수행 됩니다. 일반적으로 텍스트는 있는 그대로 단어 분리기 구성 요소를 통과합니다.  
+ 언어 선택에서 또 다른 고려 사항은 데이터 표현 방법과 관련이 있습니다. `varbinary(max)` 열에 저장되지 않은 데이터에 대해서는 특수 필터링이 수행되지 않습니다. 일반적으로 텍스트는 있는 그대로 단어 분리기 구성 요소를 통과합니다.  
   
- 또한 단어 분리기는 주로 문자 텍스트를 처리합니다. 따라서 HTML과 같은 표시 유형이 텍스트에 포함되어 있을 경우 인덱싱 및 검색 중에 언어 정확도가 떨어질 수 있습니다. 이 경우 두 가지 방법을 선택할 수 있습니다. 권장되는 방법은 단순히 텍스트 데이터를 `varbinary(max)` 열에 저장하고 해당 문서 유형을 필터링하도록 지정하는 것입니다. 이 방법을 선택할 수 없으면 중립 단어 분리기를 사용하고 가능한 경우 의미 없는 단어 목록에 HTML의 'br'과 같은 표시 데이터를 추가할 수 있습니다.  
+ 또한 단어 분리기는 주로 문자 텍스트를 처리합니다. 따라서 HTML과 같은 표시 유형이 텍스트에 포함되어 있을 경우 인덱싱 및 검색 중에 언어 정확도가 떨어질 수 있습니다. 메서드는 단순히 텍스트 데이터를 저장 하는 경우 두 개 있는 선택 항목은 기본 `varbinary(max)` 열 및 하도록 지정 하는 해당 문서 유형을 필터링 할 수 있습니다. 이 방법을 선택할 수 없으면 중립 단어 분리기를 사용하고 가능한 경우 의미 없는 단어 목록에 HTML의 'br'과 같은 표시 데이터를 추가할 수 있습니다.  
   
 > [!NOTE]  
 >  중립 언어를 지정하면 언어 기반 형태소 분석은 적용되지 않습니다.  
@@ -120,7 +120,7 @@ ms.locfileid: "48229513"
   
 
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [CONTAINS&#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)   
  [CONTAINSTABLE&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/containstable-transact-sql)   
  [데이터 형식&#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   

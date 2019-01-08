@@ -11,12 +11,12 @@ ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e701bb22a2350d90fdaf4ab461aa70063eab97b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2f3f982eeee9abc016575b8acd068b8ef2e7450f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120963"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408180"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
   현재 버전의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서는 프로젝트를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에서는 환경을 사용하여 패키지를 관리하고, 패키지를 실행하고, 패키지에 대한 런타임 값을 구성할 수 있습니다.  
@@ -28,9 +28,9 @@ ms.locfileid: "48120963"
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 프로젝트를 배포하려면 다음 태스크를 완료합니다.  
   
-1.  SSISDB 카탈로그를 만듭니다(아직 없는 경우). 자세한 내용은 [SSIS 카탈로그 만들기](catalog/ssis-catalog.md)를 참조하세요.  
+1.  아직 없는 경우 SSISDB 카탈로그를 만듭니다. 자세한 내용은 [SSIS 카탈로그 만들기](catalog/ssis-catalog.md)를 참조하세요.  
   
-2.  **Integration Services 프로젝트 변환 마법사** 를 실행하여 프로젝트를 프로젝트 배포 모델로 변환합니다. 자세한 내용은 아래의 [프로젝트 배포 모델로 프로젝트를 변환하려면](#convert)지침을 참조하세요.  
+2.  **Integration Services 프로젝트 변환 마법사** 를 실행하여 프로젝트를 프로젝트 배포 모델로 변환합니다. 자세한 내용은 [프로젝트를 프로젝트 배포 모델로 변환 하려면](#convert)  
   
     -   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]에서 프로젝트를 만든 경우 기본적으로 해당 프로젝트는 프로젝트 배포 모델을 사용합니다.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48120963"
   
      패키지 업그레이드에 대한 자세한 내용은 [Integration Services 패키지 업그레이드](install-windows/upgrade-integration-services-packages.md) 및 [SSIS 패키지 업그레이드 마법사를 사용하여 Integration Services 패키지 업그레이드](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)를 참조하세요.  
   
-3.  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 프로젝트를 배포합니다. 자세한 내용은 아래의 [Integration Services 서버에 프로젝트를 배포하려면](#deploy)지침을 참조하세요.  
+3.  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 프로젝트를 배포합니다. 자세한 내용은 [Integration Services 서버에 프로젝트를 배포 하려면](#deploy)합니다.  
   
 4.  (선택 사항) 배포한 프로젝트에 대한 환경을 만듭니다. 자세한 내용은 [서버 환경 만들기 및 매핑](../../2014/integration-services/create-and-map-a-server-environment.md)을 참조하세요.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48120963"
   
      -또는-  
   
-     [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], 확장 합니다 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  >  **SSISDB** 개체 탐색기에서 노드를 배포 하려는 프로젝트에 대 한 프로젝트 폴더를 찾습니다. **프로젝트** 폴더를 마우스 오른쪽 단추로 클릭하고 **프로젝트 배포**를 클릭합니다.  
+     [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] > **SSISDB** 노드를 확장하고 배포할 프로젝트의 프로젝트 폴더를 찾습니다. **프로젝트** 폴더를 마우스 오른쪽 단추로 클릭하고 **프로젝트 배포**를 클릭합니다.  
   
      -또는-  
   

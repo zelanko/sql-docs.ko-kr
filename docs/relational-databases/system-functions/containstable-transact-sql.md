@@ -34,12 +34,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3614abd1e02425dcda0943f3e4b3773eeb8b4499
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b2a987309091ada65c036d518d948c21c521bded
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660110"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524435"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -89,9 +89,9 @@ CONTAINSTABLE
 <custom_proximity_term> ::=   
   NEAR (   
      {  
-        { <simple_term> | <prefix_term> } [ ,…n ]  
+        { <simple_term> | <prefix_term> } [ ,...n ]  
      |  
-        ( { <simple_term> | <prefix_term> } [ ,…n ] )   
+        ( { <simple_term> | <prefix_term> } [ ,...n ] )   
       [, <maximum_distance> [, <match_order> ] ]  
      }  
        )   
@@ -281,7 +281,7 @@ GO
 > [!NOTE]  
 >  언어 *language_term* 사용 하 여 필요 하지 않습니다 argumentis *top_n_by_rank 합니다.*  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [RANK 사용 하 여 검색 결과 제한](../../relational-databases/search/limit-search-results-with-rank.md)   
  [전체 텍스트 검색을 사용한 쿼리](../../relational-databases/search/query-with-full-text-search.md)   
  [전체 텍스트 검색 쿼리 만들기&#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   

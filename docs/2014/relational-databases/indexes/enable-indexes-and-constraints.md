@@ -17,12 +17,12 @@ ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0f9f0130c90796efa8bc12f663fbe3ad32f19413
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d68f329aecdd1284bac311db4139470bba55e41
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152623"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533140"
 ---
 # <a name="enable-indexes-and-constraints"></a>인덱스 및 제약 조건 활성화
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 비활성화된 인덱스를 활성화하는 방법에 대해 설명합니다. 비활성화된 인덱스는 다시 작성되거나 삭제될 때까지 비활성화된 상태로 유지됩니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "48152623"
   
 -   클러스터형 인덱스를 비활성화하거나 활성화하고 비클러스터형 인덱스를 비활성화하면 클러스터형 인덱스 동작으로 인해 다음과 같은 결과가 비활성화된 비클러스터형 인덱스에 나타납니다.  
   
-    |클러스터형 인덱스 동작|비활성화된 비클러스터형 인덱스 …|  
+    |클러스터형 인덱스 동작|비활성화된 비클러스터형 인덱스...|  
     |----------------------------|-----------------------------------|  
     |ALTER INDEX REBUILD|비활성화된 상태로 유지됩니다.|  
     |ALTER INDEX ALL REBUILD|다시 작성되고 활성화됩니다.|  

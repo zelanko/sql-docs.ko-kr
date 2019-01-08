@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - xsi:nil attribute
@@ -35,12 +33,12 @@ ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 95989f956f01039cec5bbbc3ab61417981a094f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c890bb596c83c75330165ae1105f97df83ef69b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053303"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365855"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 삽입(SQLXML 4.0)
   Updategram은 레코드 인스턴스가 표시 되는 경우 삽입 작업을 나타냅니다 합니다  **\<후 >** 블록 아니라 해당  **\<전에 >** 블록입니다. Updategram은 레코드를 삽입 하는 경우에  **\<후 >** 데이터베이스로 블록입니다.  
@@ -213,7 +211,7 @@ ms.locfileid: "48053303"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 테이블 이름은 Northwind 데이터베이스의 Order Details 테이블과 같이 공백을 포함할 수 있습니다. 그러나이 올바르지 않습니다 유효한 XML 문자 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 식별자 이지만 유효 하지 않은 XML 식별자를 사용 하 여 인코딩할 수 ' __xHHHH\_\_' 여기서 hhhh는 4 자리 16 진수 ucs-2 코드에 대 한 인코딩 값으로 가장 중요 한 비트 우선 순서 문자입니다.  
   
 > [!NOTE]  
->  이 예에서는 Northwind 데이터베이스를 사용합니다. 다운로드할 수 있는 SQL 스크립트를 사용 하 여 Northwind 데이터베이스를 설치할 수 있습니다 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=30196)합니다.  
+>  이 예에서는 Northwind 데이터베이스를 사용합니다. 다운로드할 수 있는 SQL 스크립트를 사용 하 여 Northwind 데이터베이스를 설치할 수 있습니다 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=30196)합니다.  
   
  또한 요소 이름은 대괄호 () 안에 묶어야 합니다. 문자 [및] XML에서 유효 하지를 인코딩해야 _x005B으로 하므로\_ 및 _x005D\_, 각각. 매핑 스키마를 사용하는 경우 공백과 같은 유효하지 않은 문자가 포함된 요소 이름을 제공할 수 있습니다. 매핑 스키마에서 필요한 매핑을 수행하므로 이러한 문자를 인코딩할 필요가 없습니다.  
   
@@ -632,8 +630,8 @@ CustOrder(OrderID, EmployeeID, OrderType)
  <ProductModel>  
     <Name>Mountain-100</Name>  
     <Desc><?xml-stylesheet href="ProductDescription.xsl" type="text/xsl"?>  
-        <p1:ProductDescription xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
-              xmlns:wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
+        <p1:ProductDescription xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
+              xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
               xmlns:wf="http://www.adventure-works.com/schemas/OtherFeatures"   
               xmlns:html="http://www.w3.org/1999/xhtml"   
               xmlns="">  
@@ -688,7 +686,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 <?xml version="1.0" encoding="utf-8" ?>  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
            xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
-           xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
+           xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
   <xsd:element name="ProductModel"  sql:relation="Production.ProductModel" >  
      <xsd:complexType>  
        <xsd:sequence>  

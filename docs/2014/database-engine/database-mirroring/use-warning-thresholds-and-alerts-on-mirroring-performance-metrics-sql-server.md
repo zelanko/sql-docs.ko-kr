@@ -17,12 +17,12 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 46f8591a7fe3e8a69ceb3df60011248db38da722
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 41044c16343ba93055815851000a1a642578e39a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132703"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354730"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>미러링 성능 메트릭에 대해 경고 임계값 및 경고 사용(SQL Server)
   이 항목에는 데이터베이스 미러링에 대해 경고 임계값을 구성하고 관리할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트에 대한 정보가 포함되어 있습니다. 데이터베이스 미러링 모니터 서버 또는 **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**및 **sp_dbmmonitordropalert** 저장 프로시저를 사용할 수 있습니다. 또한 이 항목에는 데이터베이스 미러링 이벤트에 대해 경고를 구성하는 방법에 대한 정보도 포함되어 있습니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "48132703"
     |[sp_dbmmonitordropalert&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql)|지정한 성능 메트릭에 대한 경고를 삭제합니다.|  
   
 ## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>Windows 이벤트 로그로 전송되는 성능 임계값 이벤트  
- 성능 메트릭에 대해 경고 임계값을 정의하면 상태 테이블이 업데이트될 때 최신 값이 임계값에 대해 평가됩니다. 임계값에 도달하지 않은 경우 업데이트 프로시저 **sp_dbmmonitorupdate**가 메트릭에 대해 정보 이벤트( *성능 임계값 이벤트*)를 생성하고 해당 이벤트를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 이벤트 로그에 기록합니다. 다음 표에서는 성능 임계값 이벤트의 이벤트 ID를 보여 줍니다.  
+ 성능 메트릭에 대해 경고 임계값을 정의하면 상태 테이블이 업데이트될 때 최신 값이 임계값에 대해 평가됩니다. 임계값에 도달하지 않은 경우 업데이트 프로시저 **sp_dbmmonitorupdate**가 메트릭에 대해 정보 이벤트(*성능 임계값 이벤트*)를 생성하고 해당 이벤트를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 이벤트 로그에 기록합니다. 다음 표에서는 성능 임계값 이벤트의 이벤트 ID를 보여 줍니다.  
   
 |성능 메트릭|이벤트 ID|  
 |------------------------|--------------|  
@@ -105,7 +105,7 @@ ms.locfileid: "48132703"
   
  데이터베이스 미러링 이벤트에 대해 경고를 정의하는 경우 두 파트너 서버 인스턴스에서 모두 경고 임계값과 경고를 정의하는 것이 좋습니다. 개별 이벤트는 주 서버나 미러 서버 중 하나에서 생성되지만 각 파트너가 언제든지 두 역할 중 하나를 수행할 수 있습니다. 장애 조치 후에도 경고가 계속 작동하려면 두 파트너에서 모두 경고를 정의해야 합니다.  
   
- 자세한 내용은 [SQL Server 웹 사이트](http://go.microsoft.com/fwlink/?linkid=62373)에서 데이터베이스 미러링 이벤트에 대한 경고와 관련된 백서를 참조하세요. 이 백서에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트, 데이터베이스 미러링 WMI 이벤트 및 예제 스크립트를 사용하여 경고를 구성하는 방법에 대한 정보가 들어 있습니다.  
+ 자세한 내용은 [SQL Server 웹 사이트](https://go.microsoft.com/fwlink/?linkid=62373)에서 데이터베이스 미러링 이벤트에 대한 경고와 관련된 백서를 참조하세요. 이 백서에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트, 데이터베이스 미러링 WMI 이벤트 및 예제 스크립트를 사용하여 경고를 구성하는 방법에 대한 정보가 들어 있습니다.  
   
 > [!IMPORTANT]  
 >  모든 미러링 세션에서 상태 변경 이벤트에 대해 경고를 보내도록 데이터베이스를 구성하는 것이 좋습니다. 수동 구성 변경의 결과로 상태 변경이 예상되는 경우가 아니면 문제가 발생한 것이므로 데이터가 손상될 수 있습니다. 데이터를 보호하려면 예기치 않은 상태 변경의 원인을 확인하고 해결합니다.  

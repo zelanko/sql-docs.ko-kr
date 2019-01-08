@@ -11,12 +11,12 @@ ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4e47b2cc13c05438ce38d1b6f63bcbcb357c60d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 24804b6233e701ef0c27f113a294987156b6174c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211953"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363375"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML 연결 형식(SSRS)
   보고서에 XML 데이터 원본의 데이터를 포함하려면 XML 유형의 보고서 데이터 원본에 기초하는 데이터 세트가 있어야 합니다. 이 기본 제공 데이터 원본 유형은 XML 데이터 확장 프로그램을 기반으로 합니다. 이 데이터 원본 유형을 사용하여 쿼리에 포함된 XML 문서, 웹 서비스 또는 XML에서 데이터에 연결하여 검색합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "48211953"
   
 -   현재 Windows 사용자(통합 보안).  
   
--   자격 증명 필요 없음. 자격 증명을 사용하지 않도록 선택하는 경우 익명 액세스가 사용됩니다. 보고서 서버에서 외부 데이터 원본에 연결할 수 있도록 무인 실행 계정을 정의했는지 확인합니다. XML 데이터 처리 확장 프로그램에서는 자격 증명을 대상 URL이나 웹 서비스로 전달하지 않으므로 무인 실행 계정을 정의하지 않은 경우에는 연결이 실패합니다. 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.  
+-   자격 증명 필요 없음. 자격 증명을 사용하지 않도록 선택하는 경우 익명 액세스가 사용됩니다. 보고서 서버에서 외부 데이터 원본에 연결할 수 있도록 무인 실행 계정을 정의했는지 확인합니다. XML 데이터 처리 확장 프로그램에서는 자격 증명을 대상 URL이나 웹 서비스로 전달하지 않으므로 무인 실행 계정을 정의하지 않은 경우에는 연결이 실패합니다. 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.  
   
  저장된 자격 증명 및 입력 정보를 요청하는 자격 증명은 지원되지 않습니다. Windows 통합 보안을 사용하지 않도록 설정한 경우 이를 사용하여 데이터를 검색할 수 없습니다. 저장된 자격 증명 및 입력 정보를 요청하는 자격 증명을 지정할 경우 런타임에 오류가 발생합니다.  
   
@@ -62,11 +62,11 @@ ms.locfileid: "48211953"
   
  XML 형식의 데이터 원본에 대한 데이터 세트 쿼리에서 사용할 수 있는 값이 아래에 나와 있습니다.  
   
--   *빈*: 기본 결과 집합을 만들려면 빈 쿼리를 사용 합니다. 기본 쿼리는 데이터 원본을 읽고 XML 노드 계층에서 첫 번째 리프 컬렉션까지 탐색하도록 만들어집니다. 결과 집합에는 텍스트 값이 있는 모든 노드와 해당 경로의 모든 노드 특성이 포함됩니다. 결과 집합의 열은 데이터 세트의 필드에 매핑됩니다.  
+-   *빈*: 기본 결과 집합을 만들려면 빈 쿼리를 사용합니다. 기본 쿼리는 데이터 원본을 읽고 XML 노드 계층에서 첫 번째 리프 컬렉션까지 탐색하도록 만들어집니다. 결과 집합에는 텍스트 값이 있는 모든 노드와 해당 경로의 모든 노드 특성이 포함됩니다. 결과 집합의 열은 데이터 세트의 필드에 매핑됩니다.  
   
--   요소 경로: 데이터 원본의 XML 데이터를 검색할 때 사용할 노드 시퀀스를 지정 합니다.  
+-   요소 경로: 데이터 원본에서 XML 데이터를 검색할 때 사용할 노드 시퀀스를 지정합니다.  
   
--   XML 쿼리 요소가: 다음과 같은 선택적 요소를 사용 하 여 XML 쿼리 사양:  
+-   XML 쿼리 요소: 다음과 같은 선택적 요소를 포함하는 XML 쿼리 사양입니다.  
   
     -   **웹 서비스:**  
   
@@ -108,9 +108,9 @@ ms.locfileid: "48211953"
   
          `<ElementPath IgnoreNamespaces="true">`  *element path*  `</ElementPath>`  
   
- 쿼리 구문에 대한 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [XML 보고서 데이터를 위한 XML 쿼리 구문&#40;SSRS&#41;](report-data-ssrs.md)을 참조하세요.  
+ 쿼리 구문에 대한 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [XML 보고서 데이터를 위한 XML 쿼리 구문&#40;SSRS&#41;](report-data-ssrs.md)을 참조하세요.  
   
- 예를 보려면 [Reporting Services: XML 및 웹 서비스 데이터 원본 사용(Reporting Services: Using XML and Web Service Data Sources)](http://go.microsoft.com/fwlink/?LinkId=81654)을 참조하십시오.  
+ 예를 들어 참조 [Reporting Services: Using XML and Web Service Data Sources](https://go.microsoft.com/fwlink/?LinkId=81654)합니다.  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>XML 웹 서비스 데이터 검색을 위한 요구 사항  
  XML 데이터 처리 확장 프로그램은 스키마를 검색하지 않습니다. 따라서 다른 방법으로 원하는 데이터를 검색할 SOAP 메서드를 찾아야 합니다. 또한 웹 서비스에서 해당 데이터에 사용하는 주소 지정 스키마나 네임스페이스에 대해 이해하고 있어야 합니다.  
@@ -124,7 +124,7 @@ ms.locfileid: "48211953"
   
  XQuery와 유사한 XML 구문을 사용하여 요소 경로를 지정할 수 있습니다.  
   
- 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [XML 보고서 데이터를 위한 요소 경로 구문&#40;SSRS&#41;](element-path-syntax-for-xml-report-data-ssrs.md)을 참조하세요.  
+ 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [XML 보고서 데이터를 위한 요소 경로 구문&#40;SSRS&#41;](element-path-syntax-for-xml-report-data-ssrs.md)을 참조하세요.  
   
 ##  <a name="Parameters"></a> 매개 변수  
  쿼리는 매개 변수 식별을 위해 분석되지 않습니다.  
@@ -160,7 +160,7 @@ ms.locfileid: "48211953"
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  쿼리에 의해 생성되는 데이터 세트 필드 컬렉션에 대한 정보를 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
  각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.  
   
 ## <a name="see-also"></a>관련 항목  

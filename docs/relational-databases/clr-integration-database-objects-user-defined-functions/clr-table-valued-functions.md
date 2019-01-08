@@ -18,12 +18,12 @@ ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2ed37d62e887bcb9820496a66d65108cb69fbe10
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 97ad8e64260d337135a1b0d5cda739d8c81b1799
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669842"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980249"
 ---
 # <a name="clr-table-valued-functions"></a>CLR 테이블 반환 함수
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "51669842"
  테이블 반환 매개 변수는 프로시저 또는 함수로 전달되는 사용자 정의 테이블 형식이며 여러 개의 데이터 행을 서버로 편리하게 전달할 수 있습니다. 테이블 반환 매개 변수는 매개 변수 배열과 유사한 기능을 제공하지만 더 유연하며 [!INCLUDE[tsql](../../includes/tsql-md.md)]과 더 밀접하게 통합됩니다. 또한 성능도 향상될 수 있습니다. 또한 테이블 반환 매개 변수는 서버와의 왕복 횟수를 줄이는 데 도움이 될 수 있습니다. 스칼라 매개 변수 목록과 같이 서버로 여러 개의 요청을 보내는 대신 서버에 데이터를 테이블 반환 매개 변수로 보낼 수 있습니다. 사용자 정의 테이블 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에서 실행 중인 관리되는 저장 프로시저 또는 함수에 테이블 반환 매개 변수로 전달되거나 이러한 저장 프로시저 또는 함수에서 테이블 반환 매개 변수로 반환될 수 없습니다. 테이블 반환 매개 변수에 관한 자세한 내용은 [Use Table-Valued Parameters&#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)를 참조하세요.  
   
 ## <a name="output-parameters-and-table-valued-functions"></a>출력 매개 변수와 테이블 반환 함수  
- 테이블 반환 함수에서 출력 매개 변수를 사용하여 정보를 반환할 수 있습니다. 구현 코드의 테이블 반환 함수에 있는 해당 매개 변수는 참조 전달(pass-by-reference) 매개 변수를 인수로 사용해야 합니다. Visual Basic은 Visual C#과 같은 방식으로 출력 매개 변수를 지원하지 않습니다. 적용 하 고 참조로 매개 변수를 지정 해야 합니다 \<나타내야 >는 다음과 같이 출력 매개 변수를 나타내는 특성:  
+ 테이블 반환 함수에서 출력 매개 변수를 사용하여 정보를 반환할 수 있습니다. 구현 코드의 테이블 반환 함수에 있는 해당 매개 변수는 참조 전달(pass-by-reference) 매개 변수를 인수로 사용해야 합니다. Visual Basic은 Visual C#과 같은 방식으로 출력 매개 변수를 지원하지 않습니다. 참조로 매개 변수를 지정 하 고 적용 해야 합니다 \<나타내야 >는 다음과 같이 출력 매개 변수를 나타내는 특성:  
   
 ```vb  
 Imports System.Runtime.InteropServices  
-…  
+...  
 Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)  
 ```  
   
@@ -84,7 +84,7 @@ select * from table t cross apply function(t.column);
 ## <a name="a-sample-table-valued-function"></a>예제 테이블 반환 함수  
  다음 테이블 반환 함수는 시스템 이벤트 로그의 정보를 반환합니다. 함수는 읽을 이벤트 로그의 이름을 포함하는 단일 문자열 인수를 받습니다.  
   
-###### <a name="sample-code"></a>예제 코드  
+###### <a name="sample-code"></a>샘플 코드  
   
 ```csharp  
 using System;  

@@ -20,12 +20,12 @@ ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cab25279fe7842d21b3657d34edef8234ae058cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 895eeeea22b305236d263827156c6717b458a96a
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738864"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785924"
 ---
 # <a name="sysdmxepackages-transact-sql"></a>sys.dm_xe_packages(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,12 +35,12 @@ ms.locfileid: "47738864"
  
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|NAME|**nvarchar(60)**|패키지의 이름입니다. 설명은 패키지 자체에서 표시됩니다. Null을 허용하지 않습니다.|  
+|NAME|**nvarchar(256)**|패키지의 이름입니다. 설명은 패키지 자체에서 표시됩니다. Null을 허용하지 않습니다.|  
 |guid|**uniqueidentifier**|패키지를 식별하는 GUID입니다. Null을 허용하지 않습니다.|  
-|description|**nvarchar(256)**|패키지 설명입니다. descriptionis는 패키지 작성자가 설정한 이며 null을 허용 하지 않습니다.|  
+|description|**nvarchar(3072)**|패키지 설명입니다. descriptionis는 패키지 작성자가 설정한 이며 null을 허용 하지 않습니다.|  
 |capabilities|**int**|해당 패키지의 기능을 설명하는 비트맵입니다. Null을 허용합니다.|  
 |capabilities_desc|**nvarchar(256)**|이 패키지에 사용할 수 있는 모든 기능 목록입니다. Null을 허용합니다.|  
-|module_guid|**uniqueidentifier**|이 패키지를 표시하는 모듈의 GUID입니다. Null을 허용하지 않습니다.|  
+|module_guid|**nvarchar(60)**|이 패키지를 표시하는 모듈의 GUID입니다. Null을 허용하지 않습니다.|  
 |module_address|**varbinary(8)**|패키지를 포함하는 모듈이 로드된 기준 주소입니다. 한 개의 모듈이 여러 개의 패키지를 표시할 수 있습니다. Null을 허용하지 않습니다.|  
   
 ## <a name="permissions"></a>사용 권한  

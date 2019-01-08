@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - output data [Integration Services]
@@ -18,12 +17,12 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3df6a97e37f301c4ac55b8e662e81098023a5064
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 038fdb6f07604d3fac1fcbd8e9ee632e3af2fbdc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159513"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360245"
 ---
 # <a name="data-flow"></a>데이터 흐름
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에는 원본, 변환, 대상 등 3가지 다른 유형의 데이터 흐름 구성 요소가 있습니다. 원본은 관계형 데이터베이스의 테이블과 뷰, 파일 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스와 같은 데이터 저장소로부터 데이터를 추출합니다. 변환은 데이터를 수정, 요약 및 삭제합니다. 대상은 데이터를 데이터 저장소로 로드하거나 메모리 내 데이터 세트를 만듭니다.  
@@ -100,11 +99,11 @@ ms.locfileid: "48159513"
   
 |원본|Description|  
 |------------|-----------------|  
-|Oracle 원본|Oracle 원본은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity의 원본 구성 요소입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity에는 연결 관리자 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](http://go.microsoft.com/fwlink/?LinkId=254963)다운로드 페이지를 참조하십시오.|  
-|SAP BI 원본|SAP BI 원본은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI의 원본 구성 요소입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI에는 연결 관리자 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft SQL Server 2008 기능 팩](http://go.microsoft.com/fwlink/?LinkId=110393)다운로드 페이지를 참조하십시오.|  
-|Teradata 원본|Teradata 원본은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity의 원본 구성 요소입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity에는 연결 관리자 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](http://go.microsoft.com/fwlink/?LinkId=254963)다운로드 페이지를 참조하십시오.|  
+|Oracle 원본|Oracle 원본은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity의 원본 구성 요소입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity에는 연결 관리자 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](https://go.microsoft.com/fwlink/?LinkId=254963)다운로드 페이지를 참조하십시오.|  
+|SAP BI 원본|SAP BI 원본은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI의 원본 구성 요소입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI에는 연결 관리자 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft SQL Server 2008 기능 팩](https://go.microsoft.com/fwlink/?LinkId=110393)다운로드 페이지를 참조하십시오.|  
+|Teradata 원본|Teradata 원본은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity의 원본 구성 요소입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity에는 연결 관리자 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](https://go.microsoft.com/fwlink/?LinkId=254963)다운로드 페이지를 참조하십시오.|  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity의 뛰어난 성능을 활용하는 방법을 보려면 [Microsoft Connector for Oracle by Attunity의 성능(SQL Server 비디오)](http://go.microsoft.com/fwlink/?LinkID=210369)을 참조하세요.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity의 뛰어난 성능을 활용하는 방법을 보려면 [Microsoft Connector for Oracle by Attunity의 성능(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkID=210369)을 참조하세요.  
   
 ## <a name="transformations"></a>변환  
  변환의 기능은 매우 다양합니다. 변환은 데이터 업데이트, 요약, 삭제, 병합 및 배포와 같은 태스크를 수행할 수 있습니다. 열 값을 수정하고, 테이블 값을 조회하고, 데이터를 정리하고, 열 값을 집계할 수 있습니다.  
@@ -161,11 +160,11 @@ ms.locfileid: "48159513"
   
 |원본|Description|  
 |------------|-----------------|  
-|Oracle 대상|Oracle 대상은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity의 대상 구성 요소입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity에는 연결 관리자 및 원본도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](http://go.microsoft.com/fwlink/?LinkId=254963)다운로드 페이지를 참조하십시오.|  
-|SAP BI 대상|SAP BI 대상은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI의 대상 구성 요소입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI에는 연결 관리자 및 원본도 포함되어 있습니다. 자세한 내용은 [Microsoft SQL Server 2008 기능 팩](http://go.microsoft.com/fwlink/?LinkId=110393)다운로드 페이지를 참조하십시오.|  
-|Teradata 대상|Teradata 대상은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity의 대상 구성 요소입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity에는 연결 관리자 및 원본도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](http://go.microsoft.com/fwlink/?LinkId=254963)다운로드 페이지를 참조하십시오.|  
+|Oracle 대상|Oracle 대상은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity의 대상 구성 요소입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity에는 연결 관리자 및 원본도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](https://go.microsoft.com/fwlink/?LinkId=254963)다운로드 페이지를 참조하십시오.|  
+|SAP BI 대상|SAP BI 대상은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI의 대상 구성 요소입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI에는 연결 관리자 및 원본도 포함되어 있습니다. 자세한 내용은 [Microsoft SQL Server 2008 기능 팩](https://go.microsoft.com/fwlink/?LinkId=110393)다운로드 페이지를 참조하십시오.|  
+|Teradata 대상|Teradata 대상은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity의 대상 구성 요소입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity에는 연결 관리자 및 원본도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](https://go.microsoft.com/fwlink/?LinkId=254963)다운로드 페이지를 참조하십시오.|  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity의 뛰어난 성능을 활용하는 방법을 보려면 [Microsoft Connector for Oracle by Attunity의 성능(SQL Server 비디오)](http://go.microsoft.com/fwlink/?LinkID=210369)을 참조하세요.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity의 뛰어난 성능을 활용하는 방법을 보려면 [Microsoft Connector for Oracle by Attunity의 성능(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkID=210369)을 참조하세요.  
   
 ## <a name="connection-managers"></a>연결 관리자  
  여러 데이터 흐름 구성 요소는 데이터 원본에 연결되며, 구성 요소를 제대로 구성하려면 구성 요소에 필요한 연결 관리자를 패키지에 추가해야 합니다. 연결 관리자는 데이터 흐름을 구성할 때나 데이터 흐름 구성을 시작하기 전에 추가할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](../connection-manager/integration-services-ssis-connections.md) 및 [연결 관리자 만들기](../create-connection-managers.md)를 참조하세요.  
@@ -185,12 +184,12 @@ ms.locfileid: "48159513"
  원본 및 변환에는 항상 출력이 포함됩니다. 출력에는 데이터 흐름 구성 요소가 외부 열을 사용하도록 구성된 경우 이러한 외부 열을 참조할 수 있는 하나 이상의 출력 열이 포함됩니다. 출력은 데이터의 다운스트림 처리에 유용한 정보를 제공하도록 구성될 수 있습니다. 예를 들어 출력이 정렬되는지 여부를 나타낼 수 있습니다. 또한 출력에 대한 설명을 제공하거나 출력 이름을 업데이트할 수 있습니다. [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 출력은 **고급 편집기** 대화 상자를 사용하여 구성됩니다.  
   
 ### <a name="error-outputs"></a>오류 출력  
- 원본, 대상 및 변환에는 오류 출력이 포함될 수 있습니다. **오류 출력 구성** 대화 상자를 사용하여 각 입력 또는 열에서 오류에 대한 데이터 흐름 구성 요소의 대응 방식을 지정할 수 있습니다. 런타임 시 오류 또는 데이터 잘림이 발생하고 데이터 흐름 구성 요소가 열을 리디렉션하도록 구성된 경우 오류가 포함된 데이터 행이 오류 출력으로 보내집니다. 오류 출력은 추가 변환을 적용하거나 데이터를 다른 대상으로 지정하는 변환에 연결될 수 있습니다. 기본적으로 오류 출력에는 출력 열과 두 개의 오류 열인 **ErrorCode** 와 **ErrorColumn**이 포함됩니다. 출력 열에는 실패한 행의 데이터가 포함되고, **ErrorCode** 는 오류 코드를 제공하며, **ErrorColumn** 은 실패한 열을 식별합니다.  
+ 원본, 대상 및 변환에는 오류 출력이 포함될 수 있습니다. **오류 출력 구성** 대화 상자를 사용하여 각 입력 또는 열에서 오류에 대한 데이터 흐름 구성 요소의 대응 방식을 지정할 수 있습니다. 런타임 시 오류 또는 데이터 잘림이 발생하고 데이터 흐름 구성 요소가 열을 리디렉션하도록 구성된 경우 오류가 포함된 데이터 행이 오류 출력으로 보내집니다. 오류 출력은 추가 변환을 적용하거나 데이터를 다른 대상으로 지정하는 변환에 연결될 수 있습니다. 기본적으로 오류 출력에는 출력 열과 두 개의 오류 열인 **ErrorCode** 하 고 **ErrorColumn**합니다. 출력 열에는 실패한 행의 데이터가 포함되고, **ErrorCode** 는 오류 코드를 제공하며, **ErrorColumn** 은 실패한 열을 식별합니다.  
   
  자세한 내용은 [데이터 오류 처리](error-handling-in-data.md)를 참조하세요.  
   
 ### <a name="columns"></a>열  
- 입력, 출력 및 오류 출력에는 해당 열이 포함됩니다. 각 열은 구성이 가능하며, 입력, 출력 또는 외부 등의 열 유형에 따라[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 는 열에 대해 서로 다른 속성을 제공합니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에는 프로그래밍 방식으로 설정하거나 구성 요소 관련 대화 상자를 통해 설정하거나 **고급 편집기** 대화 상자를 통해 설정하는 세 가지 열 속성 설정 방법이 제공됩니다.  
+ 입력, 출력 및 오류 출력에는 해당 열이 포함됩니다. 각 열은 구성이 가능 하며 열 형식 입력, 출력 또는 외부-따라 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 열의 다른 속성을 제공 합니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에는 프로그래밍 방식으로 설정하거나 구성 요소 관련 대화 상자를 통해 설정하거나 **고급 편집기** 대화 상자를 통해 설정하는 세 가지 열 속성 설정 방법이 제공됩니다.  
   
 ## <a name="paths"></a>경로  
  경로는 데이터 흐름 구성 요소를 연결합니다. [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 경로 속성을 보고 수정하고, 경로 시작 지점의 출력 메타데이터를 보고, 데이터 뷰어를 경로에 연결할 수 있습니다.  
@@ -217,8 +216,8 @@ ms.locfileid: "48159513"
 -   [데이터 흐름의 구성 요소 연결](connect-components-in-a-data-flow.md)  
   
 ## <a name="related-content"></a>관련 내용  
- technet.microsoft.com의 비디오, [Microsoft Connector for Oracle by Attunity의 성능(SQL Server 비디오)](http://go.microsoft.com/fwlink/?LinkID=210369)  
+ technet.microsoft.com의 비디오, [Microsoft Connector for Oracle by Attunity의 성능(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkID=210369)  
   
- 큐레이트 응답, curatedviews.cloudapp.net의 [SSIS에서 동적 연결 문자열을 만드는 방법](http://go.microsoft.com/fwlink/?LinkId=321994)  
+ 큐레이트 응답, curatedviews.cloudapp.net의 [SSIS에서 동적 연결 문자열을 만드는 방법](https://go.microsoft.com/fwlink/?LinkId=321994)  
   
   

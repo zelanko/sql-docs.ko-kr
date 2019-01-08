@@ -15,21 +15,21 @@ ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 79eb8344ef875aa76cde5b0ffcc34aa0bf23e1b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1061ae540d4773ae53560c464d2af568c8e35782
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122373"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589627"
 ---
 # <a name="project-property-pages-dialog-box"></a>프로젝트 속성 페이지 대화 상자
-  프로젝트 속성 페이지를 사용하여 보고서 서버 프로젝트의 배포 속성을 구성할 수 있습니다. 이 대화 상자를 열려면 **프로젝트** 메뉴에서 *\<Report Project Name>***속성**을 클릭합니다.  
+  프로젝트 속성 페이지를 사용하여 보고서 서버 프로젝트의 배포 속성을 구성할 수 있습니다. 이 대화 상자를 열려면 **프로젝트** 메뉴에서 _\<Report Project Name>_**속성**을 클릭합니다.  
   
  구성 속성을 정의한 후 도구 모음의 **솔루션 구성** 드롭다운 목록에서 구성을 선택할 수 있습니다.  
   
 ## <a name="options"></a>변수  
  **Configuration**  
- 편집할 구성을 선택합니다. 처음에는 **Debug**, **DebugLocal**및 **Release**의 3가지 구성을 사용할 수 있습니다. 활성 구성이 첫 번째로 표시됩니다(예: **활성(디버그)**).  
+ 편집할 구성을 선택합니다. 처음에는 **디버그**하십시오 **DebugLocal**, 및 **릴리스**합니다. 활성 구성이 첫 번째로 표시됩니다(예: **활성(디버그)**).  
   
  두 개 이상의 구성에 대한 속성을 동시에 보려면 **모든 구성** 또는 **여러 구성**을 선택합니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48122373"
 ## <a name="see-also"></a>관련 항목  
  [보고서 게시](../publish-reports.md)   
  [SharePoint 라이브러리에 보고서 게시](../reports/publish-a-report-to-a-sharepoint-library.md)   
- [배포 속성 설정 &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)   
+ [배포 속성 설정&#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)   
  [보고서 디자이너 F1 도움말](report-designer-f1-help.md)  
   
   

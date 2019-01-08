@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bda588201965644089d3918c687095bb97d31d45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 022113a9cabe678e3136d50beb3a87cd29fa07d4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610211"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205832"
 ---
 # <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47610211"
 |stack_bytes_committed|**int**|스택에서 커밋된 바이트 수입니다.|  
 |stack_bytes_used|**int**|스레드에서 사용하고 있는 바이트 수입니다.|  
 |affinity|**bigint**|이 스레드가 실행되고 있는 CPU 마스크입니다. 구성 값에는 **변경 서버 구성 프로세스 선호도 설정** 문. 소프트 선호도의 경우 스케줄러와 다를 수 있습니다.|  
-|Priority|**int**|이 스레드의 우선 순위 값입니다.|  
+|우선 순위|**int**|이 스레드의 우선 순위 값입니다.|  
 |로캘|**int**|스레드의 캐시된 로캘 LCID입니다.|  
 |토큰|**varbinary(8)**|스레드의 캐시된 가장 토큰 핸들입니다.|  
 |is_impersonating|**int**|이 스레드의 Win32 가장 사용 여부를 나타냅니다.<br /><br /> 1 = 스레드에서 프로세스의 기본값과 다른 보안 자격 증명을 사용하고 있습니다. 이것은 스레드가 프로세스를 만든 엔터티와 다른 엔터티를 가장하고 있다는 것을 나타냅니다.|  
@@ -76,7 +76,7 @@ ms.locfileid: "47610211"
   
  다음 쿼리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 시작하지 않은 스레드를 실행하는 작업자와 실행 소요 시간을 확인하는 데 사용됩니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  간단하게 다음 쿼리에서는 `*` 문에 별표(`SELECT`)를 사용합니다. 특히 카탈로그 뷰, 동적 관리 뷰 및 시스템 테이블 반환 함수에 대해서는 별표(*)를 사용하지 않아야 합니다. 향후 업그레이드 및 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 수 있습니다 열을 추가 하 고 이러한 뷰와 함수 열 순서를 변경 합니다. 그렇게 되면 특정 열 순서 및 열 수를 예상하는 응용 프로그램에서 오류가 발생할 수 있습니다.  
   
 ```  
@@ -85,7 +85,7 @@ SELECT *
   WHERE started_by_sqlservr = 0;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
   [sys.dm_os_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)   
  [SQL Server 운영 체제 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   

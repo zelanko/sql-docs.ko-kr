@@ -1,5 +1,5 @@
 ---
-title: '1 단원: Windows Azure 저장소 계정 및 컨테이너 만들기 | Microsoft Docs'
+title: '1단원: Windows Azure 저장소 계정 및 컨테이너 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 43489355aabc9c03407dd6b5779996ceef8967b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: edeefac46805ba74b011d7c86202c7d5dbcdec14
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143651"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367155"
 ---
-# <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>1단원: Windows Azure 저장소 계정 및 컨테이너 만들기
+# <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>1단원: Microsoft Azure Storage 계정 및 컨테이너 만들기
   Windows Azure 저장소에 SQL Server 데이터 파일을 저장하려면 먼저 Windows Azure 저장소 계정, BLOB 컨테이너 및 공유 액세스 서명을 만들어야 합니다. 1단원에서는 Windows Azure 관리 포털에 로그인하여 저장소 계정, BLOB 컨테이너 및 공유 액세스 서명을 만드는 과정을 단계별로 안내합니다.  
   
  기본적으로 저장소 계정의 소유자만 해당 계정 내에서 BLOB, 테이블 및 큐에 액세스할 수 있습니다. 저장소 계정 액세스 키를 공유하지 않고 이 새로운 향상된 SQL Server 기능을 사용하여 이러한 리소스에 액세스할 수 있으려면 다음을 수행해야 합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "48143651"
   
 -   저장된 액세스 정책을 사용하여 컨테이너 또는 해당 BLOB에 대한 공유 액세스 서명을 관리합니다. 저장된 액세스 정책을 통해 공유 액세스 서명을 추가로 제어할 수 있을 뿐만 아니라 간단하게 취소할 수도 있습니다.  
   
- 자세한 내용은 [Windows Azure 저장소 리소스에 대한 액세스 관리](http://msdn.microsoft.com/library/windowsazure/ee393343.aspx)를 참조하십시오.  
+ 자세한 내용은 [Windows Azure 저장소 리소스에 대한 액세스 관리](https://msdn.microsoft.com/library/windowsazure/ee393343.aspx)를 참조하십시오.  
   
 ## <a name="create-storage-account"></a>저장소 계정 만들기  
  Windows Azure 관리 포털에서 저장소 계정을 만들려면 다음 단계를 수행합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "48143651"
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-4.gif "SQL 14 CTP2")  
   
 > [!NOTE]  
->  프로그래밍 방식으로 컨테이너를 만들려면 REST API를 사용할 수도 있습니다. 자세한 내용은 [컨테이너 만들기](http://msdn.microsoft.com/library/windowsazure/dd179468.aspx) 및 [Windows Azure 저장소 서비스 REST API 참조](http://msdn.microsoft.com/library/windowsazure/dd179355.aspx)를 참조하세요.  
+>  프로그래밍 방식으로 컨테이너를 만들려면 REST API를 사용할 수도 있습니다. 자세한 내용은 [컨테이너 만들기](https://msdn.microsoft.com/library/windowsazure/dd179468.aspx) 및 [Windows Azure 저장소 서비스 REST API 참조](https://msdn.microsoft.com/library/windowsazure/dd179355.aspx)를 참조하세요.  
   
  **다음 단원:**  
   

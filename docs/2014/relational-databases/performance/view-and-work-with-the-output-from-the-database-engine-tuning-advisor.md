@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 f1_keywords:
 - sql12.dta.reports.f1
@@ -27,12 +26,12 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fdb4e44e946ce4f46dc20d344693342162d81731
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 29dac7e1636026da3f77ac832a148a832abe240a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116897"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356729"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자의 출력 보기 및 작업
   데이터베이스 엔진 튜닝 관리자는 데이터베이스를 튜닝할 때 요약, 권장 구성, 보고서 및 튜닝 로그를 만듭니다. 튜닝 로그 출력을 사용하여 데이터베이스 엔진 튜닝 관리자 튜닝 세션의 문제를 해결할 수 있습니다. 요약, 권장 구성 및 보고서를 사용하여 튜닝 권장 구성을 구현하거나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 필요한 쿼리 성능이 향상될 때까지 튜닝을 계속합니다. 데이터베이스 튜닝 관리자를 사용하여 작업을 만들고 데이터베이스를 튜닝하는 방법은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](database-engine-tuning-advisor.md)을 참조하세요.  
@@ -149,7 +148,7 @@ ms.locfileid: "48116897"
   
 2.  **파일** 메뉴에서 **세션 결과 내보내기** 를 클릭한 다음 XML 파일로 저장합니다.  
   
-3.  2단계에서 만든 XML 파일을 선호하는 XML 편집기, 텍스트 편집기 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 엽니다. 아래로 스크롤하여는 `Configuration` 요소입니다. 복사 및 붙여넣기 합니다 `Configuration` 요소 섹션에는 XML 입력 파일 템플릿의 `TuningOptions` 요소입니다. XML 입력 파일을 저장합니다.  
+3.  2단계에서 만든 XML 파일을 선호하는 XML 편집기, 텍스트 편집기 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 엽니다. `Configuration` 요소로 스크롤합니다. `Configuration` 요소 섹션을 복사하여 XML 입력 파일 템플릿의 `TuningOptions` 요소 다음에 붙여 넣습니다. XML 입력 파일을 저장합니다.  
   
 4.  3단계에서 새로 만든 XML 입력 파일에서 원하는 튜닝 옵션을 `TuningOptions` 요소에 지정하고 `Configuration` 요소 섹션을 편집하고(분석에 적합하도록 물리적 디자인 구조를 추가 또는 삭제) 파일을 저장한 다음 데이터베이스 엔진 튜닝 관리자 XML 스키마에 대해 유효성을 검사합니다. 이 XML 파일을 편집하는 방법은 [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)를 참조하세요.  
   
@@ -164,7 +163,7 @@ ms.locfileid: "48116897"
   
 2.  [사용자 정의 구성이 포함된 XML 입력 파일 샘플&#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)을 복사하여 XML 편집기 또는 텍스트 편집기에 붙여넣습니다. 이 예제를 사용하여 튜닝 세션용 XML 입력 파일을 만듭니다. 이 태스크를 수행하는 방법은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](database-engine-tuning-advisor.md)의 "XML 입력 파일 만들기" 섹션을 참조하세요.  
   
-3.  편집 된 `TuningOptions` 및 `Configuration` 샘플 XML 입력된 파일의 요소입니다. 에 `TuningOptions` 요소를 데이터베이스 엔진 튜닝 관리자 튜닝 세션 중 고려할 물리적 디자인 구조를 지정 합니다. `Configuration` 요소에서 데이터베이스 엔진 튜닝 관리자가 분석할 물리적 데이터베이스 디자인 구조의 가상 구성과 일치하는 물리적 디자인 구조를 지정합니다. 특성 및 자식 요소에 대 한 정보를 사용할 수 있습니다 합니다 `TuningOptions` 하며 `Configuration` 부모 요소를 참조 하십시오 [XML 입력 파일 참조 &#40;데이터베이스 엔진 튜닝 관리자&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
+3.  예제 XML 입력 파일에서 `TuningOptions` 및 `Configuration` 요소를 편집합니다. `TuningOptions` 요소에서 데이터베이스 엔진 튜닝 관리자가 튜닝 세션 중 고려할 물리적 디자인 구조를 지정합니다. `Configuration` 요소에서 데이터베이스 엔진 튜닝 관리자가 분석할 물리적 데이터베이스 디자인 구조의 가상 구성과 일치하는 물리적 디자인 구조를 지정합니다. 특성 및 자식 요소에 대 한 정보를 사용할 수 있습니다 합니다 `TuningOptions` 하며 `Configuration` 부모 요소를 참조 하십시오 [XML 입력 파일 참조 &#40;데이터베이스 엔진 튜닝 관리자&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
 4.  입력 파일을 **.xml** 확장명으로 저장합니다.  
   
@@ -174,9 +173,9 @@ ms.locfileid: "48116897"
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
     ```  
   
-     데이터베이스 엔진 튜닝 관리자 XML 스키마는 [http://schemas.microsoft.com/sqlserver/2004/07/dta](http://schemas.microsoft.com/sqlserver/2004/07/dta)에서 온라인으로도 제공됩니다.  
+     데이터베이스 엔진 튜닝 관리자 XML 스키마는 [https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta)에서 온라인으로도 제공됩니다.  
   
-6.  작업 및 XML 입력 파일을 만든 후에는 분석을 위해 **dta** 명령줄 유틸리티에 이 입력 파일을 전송할 수 있습니다. **-ox** 유틸리티 인수에 XML 출력 파일 이름을 지정했는지 확인하세요. 에 지정 된 권장된 구성을 사용 하 여 XML 출력 파일을 만들고이 `Configuration` 요소입니다. 출력을 기반으로 하는 다른 가상 구성을 확인 하려면 다시 데이터베이스 엔진 튜닝 관리자를 실행 하려는 경우에 복사 및 붙여넣을 수 있습니다는 `Configuration` 새 출력 파일 또는 원래 XML 입력된 파일에서 요소 내용입니다. **dta** 유틸리티에서 XML 입력 파일을 사용하는 방법에 대한 자세한 내용은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](database-engine-tuning-advisor.md)의 "dta 유틸리티를 사용하여 데이터베이스 튜닝" 섹션을 참조하세요.  
+6.  작업 및 XML 입력 파일을 만든 후에는 분석을 위해 **dta** 명령줄 유틸리티에 이 입력 파일을 전송할 수 있습니다. **-ox** 유틸리티 인수에 XML 출력 파일 이름을 지정했는지 확인하세요. 이렇게 하면 `Configuration` 요소에 지정된 권장 구성으로 XML 출력 파일이 생성됩니다. 이 출력에 따른 다른 가상 구성을 확인하기 위해 데이터베이스 엔진 튜닝 관리자를 다시 실행하려면 출력 파일에서 `Configuration` 요소 내용을 복사하여 원본 또는 새 XML 입력 파일에 붙여 넣습니다. **dta** 유틸리티에서 XML 입력 파일을 사용하는 방법에 대한 자세한 내용은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](database-engine-tuning-advisor.md)의 "dta 유틸리티를 사용하여 데이터베이스 튜닝" 섹션을 참조하세요.  
   
      튜닝을 완료한 다음 데이터베이스 엔진 튜닝 관리자 GUI를 사용하여 튜닝 보고서를 보거나 XML 출력 파일을 열어 `TuningSummary` 및 `Configuration` 요소의 데이터베이스 엔진 튜닝 관리자 권장 구성을 볼 수 있습니다. 튜닝 세션의 결과를 보는 방법은 이 항목의 앞부분에 나오는 [튜닝 출력 보기](#View) 를 참조하세요. XML 출력 파일에는 데이터베이스 엔진 튜닝 관리자 분석 보고서가 포함될 수 있습니다.  
   

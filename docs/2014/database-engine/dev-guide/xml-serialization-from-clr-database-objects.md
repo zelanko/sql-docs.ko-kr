@@ -17,12 +17,12 @@ ms.assetid: ac84339b-9384-4710-bebc-01607864a344
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8125f5b8693eccfc619dd2ee3aed6f203e17dad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b61f863aa3d32ae60ff1cbcac562e74250899088
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183173"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356573"
 ---
 # <a name="xml-serialization-from-clr-database-objects"></a>CLR 데이터베이스 개체에서 XML 직렬화
   XML 직렬화는 다음과 같은 두 가지 시나리오에서 필요합니다.  
@@ -37,11 +37,11 @@ ms.locfileid: "48183173"
   
 2.  `CREATE ASSEMBLY` 문을 사용하여 생성한 어셈블리를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 등록합니다.  
   
- 나타날 수 있는 경우 오류에 대 한 내용은 다음 Microsoft 지원 문서를 참조 XML 직렬화 수행 중: ["동적으로 생성 된 serialization 어셈블리를 로드할 수 없습니다"](http://support.microsoft.com/kb/913668)합니다.  
+ XML 직렬화 수행 중 발생할 수 있는 오류에 대한 자세한 내용은 Microsoft 고객 지원 문서 ["동적으로 생성 된 serialization 어셈블리를 로드할 수 없습니다"](https://support.microsoft.com/kb/913668)합니다.  
   
  XMLSerializer에서 지원하지 않는 데이터 형식에 대한 자세한 내용은 .NET Framework 설명서의 .NET Framework에서 XML 스키마의 바인딩 지원을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [CLR 데이터베이스 개체에서 데이터 액세스](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [CREATE ASSEMBLY&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)  
   

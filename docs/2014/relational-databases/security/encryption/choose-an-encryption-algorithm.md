@@ -15,12 +15,12 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 6d89cd1ee72b39c3441a4aea70f3e0ad622b4e49
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 853e85ea84b84f1ed0af040be5d8614feab193b0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204493"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365655"
 ---
 # <a name="choose-an-encryption-algorithm"></a>암호화 알고리즘 선택
   암호화는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인터페이스를 보호하려는 관리자가 사용할 수 있는 여러 가지 심층 방어 중 하나입니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "48204493"
 >   
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 솔트를 자동으로 제공하지 않기 때문에 서로 다른 데이터 블록에서 동일한 RC4 또는 RC4_128 KEY_GUID를 반복해서 사용하면 동일한 RC4 키가 만들어집니다. 동일한 RC4 키를 반복해서 사용하는 것은 암호화를 매우 약하게 만드는 잘 알려진 오류입니다. 따라서 RC4 및 RC4_128 키워드는 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]  
   
- 암호화 알고리즘 및 암호화 기술에 대한 자세한 내용은 MSDN에서 .NET Framework Developer's Guide의 [주요 보안 개념(Key Security Concepts)](http://go.microsoft.com/fwlink/?LinkId=62082) 을 참조하십시오.  
+ 암호화 알고리즘 및 암호화 기술에 대한 자세한 내용은 MSDN에서 .NET Framework Developer's Guide의 [주요 보안 개념(Key Security Concepts)](https://go.microsoft.com/fwlink/?LinkId=62082) 을 참조하십시오.  
   
  **DES 알고리즘 관련 설명:**  
   

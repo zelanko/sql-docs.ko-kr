@@ -11,15 +11,15 @@ ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 64d690c11a76d40e851a23374c568727e3f47a40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c2873a6864e3ac5d55f180bfc2555d8cb471620
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172783"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354473"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>SSIS 카탈로그 백업, 복원 및 이동
-  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] SSISDB 데이터베이스를 포함합니다. SSISDB 데이터베이스에서 뷰를 쿼리하여 **SSISDB** 카탈로그에 저장된 개체, 설정 및 작업 데이터를 검사할 수 있습니다. 이 항목에서는 데이터베이스 백업 및 복원에 대한 지침을 제공합니다.  
+  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 에는 SSISDB 데이터베이스가 포함되어 있습니다. SSISDB 데이터베이스에서 뷰를 쿼리하여 **SSISDB** 카탈로그에 저장된 개체, 설정 및 작업 데이터를 검사할 수 있습니다. 이 항목에서는 데이터베이스 백업 및 복원에 대한 지침을 제공합니다.  
   
  **SSISDB** 카탈로그는 사용자가 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포한 패키지를 저장합니다. 카탈로그에 대한 자세한 내용은 [SSIS 카탈로그](catalog/ssis-catalog.md)를 참조하세요.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48172783"
   
     ```  
   
-3.  **에서** 데이터베이스 백업 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 SSISDB 데이터베이스를 백업합니다. 자세한 내용은 [방법: 데이터베이스 백업(SQL Server Management Studio)](http://go.microsoft.com/fwlink/?LinkId=231812)을 참조하세요.  
+3.  **에서** 데이터베이스 백업 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 SSISDB 데이터베이스를 백업합니다. 자세한 내용은 참조 하세요. [방법: 데이터베이스 (SQL Server Management Studio) 백업](https://go.microsoft.com/fwlink/?LinkId=231812)합니다.  
   
 4.  다음을 수행하여 ##MS_SSISServerCleanupJobLogin##에 대한 CREATE LOGIN 스크립트를 생성합니다. 자세한 내용은 [CREATE LOGIN&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)을 참조하세요.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48172783"
   
 ### <a name="to-restore-the-ssis-database"></a>SSIS 데이터베이스를 복원하려면  
   
-1.  SSISDB 카탈로그가 만들어지지 않은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 SSISDB 데이터베이스를 복원할 경우 sp_configure 저장 프로시저를 실행하여 CLR(공용 언어 런타임)을 사용하도록 설정합니다. 자세한 내용은 [sp_configure&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 및 [clr enabled 옵션](http://go.microsoft.com/fwlink/?LinkId=231855)을 참조하세요.  
+1.  SSISDB 카탈로그가 만들어지지 않은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 SSISDB 데이터베이스를 복원할 경우 sp_configure 저장 프로시저를 실행하여 CLR(공용 언어 런타임)을 사용하도록 설정합니다. 자세한 내용은 [sp_configure&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 및 [clr enabled 옵션](https://go.microsoft.com/fwlink/?LinkId=231855)을 참조하세요.  
   
     ```  
     use master   
@@ -80,7 +80,7 @@ ms.locfileid: "48172783"
   
     ```  
   
-     로그인에는 Microsoft Win32 API와 같은 제한된 리소스에 대한 추가 액세스가 필요하기 때문에 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] CLR 저장 프로시저를 사용하려면 해당 로그인에 UNSAFE 권한을 부여해야 합니다. UNSAFE 코드 권한에 대한 자세한 내용은 [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md)를 참조하십시오.  
+     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] CLR 저장 프로시저를 사용하려면 해당 로그인에 UNSAFE 권한을 부여해야 합니다. UNSAFE 코드 권한에 대한 자세한 내용은 [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md)를 참조하십시오.  
   
     ```  
     Create Login MS_SQLEnableSystemAssemblyLoadingUser  
@@ -112,7 +112,7 @@ ms.locfileid: "48172783"
   
     -   **메서드 1**  
   
-         이미 데이터베이스 마스터 키에 대한 백업을 수행했고 마스터 키를 암호화하기 위해 사용된 암호를 갖고 있는 경우 이 방법을 사용합니다.  
+         이미 데이터베이스 마스터 키에 대한 백업을 수행했고 마스터 키를 암호화하기 위해 사용된 암호가 있는 경우 이 방법을 사용합니다.  
   
         ```  
                Restore master key from file = 'c:\temp\RCTestInstKey'  

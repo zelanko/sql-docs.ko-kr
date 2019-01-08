@@ -1,5 +1,5 @@
 ---
-title: 구성 및 SharePoint와 진단 로깅 보기 | Microsoft Docs
+title: 구성 및 SharePoint 및 진단 로깅 보기 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9d36c65115f1ad786340ec8a4058bd20c52cb6a1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: e2df09cb9bf167c0af28c240ff69f8666cce01a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027220"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410420"
 ---
-# <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>구성 하 고 SharePoint 및 진단 로깅 확인
+# <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>구성 및 SharePoint 및 진단 로깅 보기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서버 작업, 이벤트 및 메시지가 SharePoint 로그 파일에 기록됩니다. 로깅 수준을 구성하고 로그 파일 정보를 보려면 이 항목의 정보를 사용합니다. 파일에 기록되는 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서버 이벤트를 제어할 수 있습니다. 또한 기록되는 메시지의 심각도를 제어할 수 있습니다. 자세한 내용은 [사용 현황 데이터 수집 구성&#40;SharePoint용 파워 피벗](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)을 참조하세요.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "34027220"
   
 -   상관 관계 ID를 제공하는 오류인 경우 ID를 복사한 후 로그 파일에서 검색 단어로 사용합니다.  
   
--   오류 상태 "High" 또는 "Exception"을 검색합니다. “[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스”를 검색합니다.  
+-   오류 상태 "High" 또는 "Exception"을 검색합니다. 검색할 "[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스"입니다.  
   
 -   오류가 발생한 시간을 알고 있는 경우 날짜 및 시간 정보를 사용하여 스크롤해야 하는 항목 범위를 좁힙니다.  
   
@@ -116,13 +116,13 @@ ms.locfileid: "34027220"
 #### <a name="entries-for-power-pivot-services"></a>Power Pivot 서비스에 대한 항목  
  다음 표는 SharePoint 로그 파일에 표시될 가능성이 높은 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 이벤트 작업 항목을 보여 줍니다.  
   
-|처리|영역|범주|Level|메시지|세부 정보|  
+|처리|영역|범주|Level|메시지|설명|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스|사용법|Verbose|로그는 물론이고 현재 요청 통계도 없습니다.|미리 정해진 간격에 따라 서비스에서는 사용 데이터 컬렉션 시스템에 쿼리 응답 통계를 사용 이벤트로 보고합니다. 이 메시지는 보고할 쿼리 통계가 없다는 것을 나타냅니다.|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스|웹 프런트 엔드|Verbose|데이터 원본에 대 한 응용 프로그램 서버 찾기 시작 =\<*경로*>|연결 요청이 수신되면 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스에서는 요청을 처리하는 데 사용할 수 있는 [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] 를 식별합니다. 팜에 서버가 하나만 있는 경우 로컬 서버에서 모든 경우의 요청을 수락합니다.|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스|웹 프런트 엔드|Verbose|애플리케이션 서버를 찾았습니다.|요청이 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스 애플리케이션에 할당되었습니다.|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스|웹 프런트 엔드|Verbose|에 대 한 요청을에 리디렉션합니다는 \< *PowerPivotdata 원본*>에 [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)]합니다.|요청이 [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)]에 전달되었습니다.|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스|요청 처리|Verbose|사용자 이름에 대 한 요청을에 리디렉션합니다\<*SharePoint 사용자*> 데이터베이스에|SharePoint 사용자를 대신하여 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 데이터 원본에 대한 가장 연결을 만들었습니다.|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스|사용법|자세히|로그는 물론이고 현재 요청 통계도 없습니다.|미리 정해진 간격에 따라 서비스에서는 사용 데이터 컬렉션 시스템에 쿼리 응답 통계를 사용 이벤트로 보고합니다. 이 메시지는 보고할 쿼리 통계가 없다는 것을 나타냅니다.|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스|웹 프런트 엔드|자세히|데이터 원본에 대 한 응용 프로그램 서버 찾기 시작 =\<*경로*>|연결 요청이 수신되면 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스에서는 요청을 처리하는 데 사용할 수 있는 [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] 를 식별합니다. 팜에 서버가 하나만 있는 경우 로컬 서버에서 모든 경우의 요청을 수락합니다.|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스|웹 프런트 엔드|자세히|애플리케이션 서버를 찾았습니다.|요청이 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스 애플리케이션에 할당되었습니다.|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스|웹 프런트 엔드|자세히|에 대 한 요청을 \< *PowerPivotdata 원본*>에 [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|요청이 [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)]에 전달되었습니다.|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스|요청 처리|자세히|사용자 이름에 대 한 요청\<*SharePoint 사용자*> 데이터베이스로|SharePoint 사용자를 대신하여 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 데이터 원본에 대한 가장 연결을 만들었습니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [Power Pivot 사용 데이터 컬렉션](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)   

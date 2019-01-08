@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: table-view-index
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - partitioned tables [SQL Server], about partitioned tables
@@ -15,12 +15,12 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8d3342c6a45b705c72c113f58bde7d8df2ae71c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 946b447b974be9c24403957681f26df627094084
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229823"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353406"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 테이블 및 인덱스 분할을 지원합니다. 분할 테이블 및 인덱스의 데이터는 데이터베이스에서 두 개 이상의 파일 그룹으로 분할될 수 있는 단위로 나뉩니다. 행 그룹이 개별 파티션에 매핑되도록 데이터는 수평적으로 분할됩니다. 단일 인덱스나 테이블의 모든 파티션은 동일 데이터베이스에 상주해야 합니다. 데이터에서 쿼리나 업데이트가 수행되면 테이블이나 인덱스는 단일 논리적 엔터티로 처리됩니다. 분할된 테이블 및 인덱스는 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서만 사용할 수 있습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
@@ -45,13 +45,13 @@ ms.locfileid: "48229823"
  테이블 및 인덱스 분할에 적용되는 용어는 다음과 같습니다.  
   
  파티션 함수  
- 분할 열이라고 하는 특정 열의 값을 기반으로 파티션 집합에 테이블이나 인덱스의 행을 매핑하는 방식을 정의하는 데이터베이스 개체입니다. 즉, 파티션 함수는 테이블이 포함할 파티션 수를 정의하고 파티션 경계의 정의 방법을 정의합니다. 예를 들어, 판매 주문 데이터를 포함 하는 테이블에 지정 하려는 테이블을 기반으로 하는 12 개 (월별) 파티션으로 분할할는 `datetime` 경우 매출 날짜와 같은 열입니다.  
+ 분할 열이라고 하는 특정 열의 값을 기반으로 파티션 집합에 테이블이나 인덱스의 행을 매핑하는 방식을 정의하는 데이터베이스 개체입니다. 즉, 파티션 함수는 테이블이 포함할 파티션 수를 정의하고 파티션 경계의 정의 방법을 정의합니다. 예를 들어 매출 주문 데이터가 포함된 테이블이 있다고 가정할 경우 매출 날짜와 같은 `datetime` 열을 기준으로 테이블을 12개(월별) 파티션으로 분할해야 할 수 있습니다.  
   
  파티션 구성표  
  파티션 함수의 파티션을 파일 그룹 집합으로 매핑하는 데이터베이스 개체입니다. 별개의 파일 그룹에 파티션을 넣는 주된 이유는 파티션 백업 작업을 독립적으로 수행하기 위해서입니다. 이는 개별 파일 그룹에 대해 백업을 수행할 수 있기 때문입니다.  
   
  분할 열  
- 파티션 함수가 테이블이나 인덱스를 분할하는 데 사용하는 테이블 또는 인덱스의 열입니다. 파티션 함수에 참여하는 계산 열은 명시적으로 PERSISTED로 표시되어야 합니다. 에 유효한 모든 데이터 형식을 제외 하 고 인덱스 열을 분할 열으로 사용할 수 있습니다 사용 `timestamp`합니다. `ntext`, `text`, `image`, `xml`, `varchar(max)`, `nvarchar(max)` 또는 `varbinary(max)` 데이터 형식은 지정할 수 없습니다. 또한 Microsoft .NET Framework CLR(공용 언어 런타임) 사용자 정의 유형 및 별칭 데이터 형식 열은 지정할 수 없습니다.  
+ 파티션 함수가 테이블이나 인덱스를 분할하는 데 사용하는 테이블 또는 인덱스의 열입니다. 파티션 함수에 참여하는 계산 열은 명시적으로 PERSISTED로 표시되어야 합니다. `timestamp`를 제외하고 인덱스 열로 사용할 수 있는 모든 데이터 형식을 분할 열로 사용할 수 있습니다. `ntext`, `text`, `image`, `xml`, `varchar(max)`, `nvarchar(max)` 또는 `varbinary(max)` 데이터 형식은 지정할 수 없습니다. 또한 Microsoft .NET Framework CLR(공용 언어 런타임) 사용자 정의 유형 및 별칭 데이터 형식 열은 지정할 수 없습니다.  
   
  정렬된 인덱스  
  해당 테이블과 동일한 파티션 구성표를 기반으로 작성되는 인덱스입니다. 테이블과 인덱스가 정렬되면 SQL Server에서 테이블과 인덱스의 파티션 구조를 유지하면서 신속하고 효율적으로 파티션을 전환할 수 있습니다. 인덱스가 기본 테이블에 맞게 정렬되기 위해 반드시 같은 이름의 파티션 함수를 사용할 필요는 없습니다. 그러나 인덱스와 기본 테이블의 파티션 함수는 1) 파티션 함수의 인수가 동일한 데이터 형식이어야 하고 2) 정의되는 파티션 수가 같아야 하고 3) 동일한 파티션 경계 값이 정의되어야 한다는 점에서 기본적으로 동일합니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "48229823"
   
  파티션 수가 늘어날수록 정렬된 인덱스를 만들거나 다시 작성하는 데 더 많은 시간이 걸릴 수 있습니다. 인덱스 만들기 및 다시 작성 명령을 한 번에 여러 개씩 실행하지 않는 것이 좋습니다. 그러면 성능 및 메모리 문제가 발생할 수 있습니다.  
   
- SQL Server에서 정렬을 수행하여 분할된 인덱스를 작성할 때는 먼저 파티션마다 하나씩 정렬 테이블을 만듭니다. 그런 다음 기반 정렬 테이블이 각 파티션의 또는 해당 파일 그룹에 `tempdb`SORT_IN_TEMPDB 인덱스 옵션이 지정 된 경우. 각 정렬 테이블을 만드는 데는 최소 메모리 크기가 요구됩니다. 기본 테이블에 맞게 정렬된 분할된 인덱스를 작성할 때는 정렬 테이블이 한 번에 하나씩 만들어지므로 메모리가 적게 소모됩니다. 그러나 정렬되지 않은 분할된 인덱스를 작성할 때는 모든 정렬 테이블이 동시에 만들어집니다. 따라서 이러한 동시 정렬을 처리하기에 충분한 메모리 양이 필요하게 됩니다. 파티션의 수가 많을수록 필요한 메모리 양은 늘어납니다. 파티션별 각 정렬 테이블의 최소 크기는 40페이지이며 페이지당 8KB의 용량이 필요합니다. 예를 들어 정렬되지 않은 분할된 인덱스의 파티션 수가 100개이면 4,000(40*100)페이지를 동시에 연속적으로 정렬하기에 충분한 메모리 양이 필요합니다. 메모리가 충분하면 인덱스 작성 작업을 수행할 수 있지만 성능이 저하될 수 있습니다. 메모리가 충분하지 않으면 작성 작업을 수행할 수 없습니다. 반면 정렬된 분할된 인덱스의 경우 파티션 수가 100개라도 정렬 작업이 동시에 수행되지 않으므로 40페이지를 정렬하기에 충분한 메모리만 있으면 됩니다.  
+ SQL Server에서 정렬을 수행하여 분할된 인덱스를 작성할 때는 먼저 파티션마다 하나씩 정렬 테이블을 만듭니다. 그런 다음 각 파티션에 있는 각각의 파일 그룹에 정렬 테이블을 만들거나 SORT_IN_TEMPDB 인덱스 옵션이 지정된 경우 `tempdb`에 정렬 테이블을 만듭니다. 각 정렬 테이블을 만드는 데는 최소 메모리 크기가 요구됩니다. 기본 테이블에 맞게 정렬된 분할된 인덱스를 작성할 때는 정렬 테이블이 한 번에 하나씩 만들어지므로 메모리가 적게 소모됩니다. 그러나 정렬되지 않은 분할된 인덱스를 작성할 때는 모든 정렬 테이블이 동시에 만들어집니다. 따라서 이러한 동시 정렬을 처리하기에 충분한 메모리 양이 필요하게 됩니다. 파티션의 수가 많을수록 필요한 메모리 양은 늘어납니다. 파티션별 각 정렬 테이블의 최소 크기는 40페이지이며 페이지당 8KB의 용량이 필요합니다. 예를 들어 정렬되지 않은 분할된 인덱스의 파티션 수가 100개이면 4,000(40*100)페이지를 동시에 연속적으로 정렬하기에 충분한 메모리 양이 필요합니다. 메모리가 충분하면 인덱스 작성 작업을 수행할 수 있지만 성능이 저하될 수 있습니다. 메모리가 충분하지 않으면 작성 작업을 수행할 수 없습니다. 반면 정렬된 분할된 인덱스의 경우 파티션 수가 100개라도 정렬 작업이 동시에 수행되지 않으므로 40페이지를 정렬하기에 충분한 메모리만 있으면 됩니다.  
   
  SQL Server가 다중 프로세서 컴퓨터에서 작성 작업을 수행할 때 병렬 처리 수준을 적용하면 정렬된 인덱스와 정렬되지 않은 인덱스 모두 메모리 요구 사항이 더 커질 수 있습니다. 이는 병렬 처리 수준이 높을수록 메모리 요구 사항이 커지기 때문입니다. 예를 들어 SQL Server에서 병렬 처리 수준을 4로 설정하면 파티션 수가 100개인 정렬되지 않은 분할된 인덱스의 경우 4개의 프로세서에서 4,000페이지(16,000페이지)를 동시에 정렬하는 데 충분한 메모리 크기가 필요하게 됩니다. 분할된 인덱스가 정렬되어 있는 경우에는 4개의 프로세서에서 40페이지, 즉 160페이지(4*40)를 정렬할 수 있는 메모리 크기만 있으면 됩니다. 병렬 처리 수준은 MAXDOP 인덱스 옵션을 사용하여 수동으로 낮출 수 있습니다.  
   
@@ -109,15 +109,15 @@ ms.locfileid: "48229823"
 ## <a name="related-content"></a>관련 내용  
  분할된 테이블 및 인덱스 전략과 구현에 대한 자세한 내용은 다음 백서를 참조하십시오.  
   
--   [SQL Server 2008을 사용할 경우의 분할된 테이블 및 인덱스 전략](http://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
+-   [SQL Server 2008을 사용할 경우의 분할된 테이블 및 인덱스 전략](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
   
--   [자동 슬라이딩 윈도우를 구현하는 방법](http://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
+-   [자동 슬라이딩 윈도우를 구현하는 방법](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
   
--   [분할된 테이블로 대량 로드](http://msdn.microsoft.com/library/cc966380.aspx)  
+-   [분할된 테이블로 대량 로드](https://msdn.microsoft.com/library/cc966380.aspx)  
   
--   [Project REAL: 데이터 수명 주기 - 분할](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=a4139d84-ad2d-4cd5-a463-239c6b7d88c9&DisplayLang=en)  
+-   [Project REAL: 데이터 수명 주기-분할](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=a4139d84-ad2d-4cd5-a463-239c6b7d88c9&DisplayLang=en)  
   
--   [분할된 테이블 및 인덱스에서의 향상된 쿼리 처리](http://msdn.microsoft.com/library/ms345599.aspx)  
+-   [분할된 테이블 및 인덱스에서의 향상된 쿼리 처리](https://msdn.microsoft.com/library/ms345599.aspx)  
   
 -   [대규모 관계형 데이터 웨어하우스를 구축하기 위한 상위 10가지 최선의 방법](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
   

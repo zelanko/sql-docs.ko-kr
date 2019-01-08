@@ -10,12 +10,12 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d9bcc1a87bd4853736cdc43d597e58728b848e1
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
-ms.translationtype: HT
+ms.openlocfilehash: 8ba3763c9ccf28286c61e87f4105c3d3293351dd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018268"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371055"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>SysPrep을 사용하여 SQL Server 2014 설치
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 관련 설치 동작에 액세스할 수 있습니다. **설치 센터**의 **고급** 페이지에는 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이미지 준비**와 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스의 이미지 완료**라는 두 옵션이 있습니다. [준비](#prepare) 및 [완료](#complete) 섹션에서는 설치 프로세스에 대해 자세히 설명합니다. 자세한 내용은 [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md)을 참조하세요.  
@@ -53,7 +53,7 @@ ms.locfileid: "51018268"
 -   [SQL Server의 완료된 인스턴스 수정 또는 제거](install-sql-server-using-sysprep.md#bk_modifying_uninstalling)  
   
 ##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 클러스터 지원  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 SysPrep은 명령줄에서 클러스터형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 설치를 지원합니다. 자세한 내용은 [Sysprep이란?](http://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx)을 참조하십시오.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 SysPrep은 명령줄에서 클러스터형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 설치를 지원합니다. 자세한 내용은 [Sysprep이란?](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx)을 참조하십시오.  
   
 #### <a name="to-prepare-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 준비하려면  
   
@@ -131,13 +131,13 @@ ms.locfileid: "51018268"
   
 11. 인스턴스 구성 페이지에서 해당 인스턴스의 인스턴스 ID를 지정합니다. 계속하려면 **다음** 을 클릭합니다.  
   
-     **인스턴스 ID** — 인스턴스 ID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 설치 디렉터리 및 레지스트리 키를 식별하는 데 사용됩니다. 이는 기본 인스턴스와 명명된 인스턴스에 모두 해당됩니다. 준비 인스턴스가 완료 단계 중에 기본 인스턴스로 완료되면 MSSQLSERVER가 인스턴스 이름을 덮어쓰고 인스턴스 ID는 지정한 대로 유지됩니다.  
+     **인스턴스 ID** — 인스턴스 ID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 설치 디렉터리 및 레지스트리 키를 식별하는 데 사용됩니다. 이는 기본 인스턴스와 명명된 인스턴스에 모두 해당됩니다. 준비 인스턴스가 완료 단계 중에 기본 인스턴스로 완료되면 MSSQLSERVER가 인스턴스 이름을 덮어쓰고 인스턴스 ID는 지정한 대로 유지됩니다.  
   
-     **인스턴스 루트 디렉터리** — 기본적으로 인스턴스 루트 디렉터리는 [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]입니다. 기본 위치가 아닌 루트 디렉터리를 지정하려면 제공된 필드를 사용하거나 **찾아보기** 를 클릭하여 설치 폴더를 찾습니다. 준비 단계에서 지정된 디렉터리는 완료 단계의 구성 작업에 사용됩니다.  
+     **인스턴스 루트 디렉터리** - 기본적으로 인스턴스 루트 디렉터리는 [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]입니다. 기본 위치가 아닌 루트 디렉터리를 지정하려면 제공된 필드를 사용하거나 **찾아보기** 를 클릭하여 설치 폴더를 찾습니다. 준비 단계에서 지정된 디렉터리는 완료 단계의 구성 작업에 사용됩니다.  
   
      모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 팩 및 업그레이드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 모든 구성 요소에 적용됩니다.  
   
-     **설치된 인스턴스** — 설치 프로그램을 실행 중인 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 표 형식으로 표시됩니다.  
+     **설치된 인스턴스** - 설치 프로그램을 실행 중인 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 표 형식으로 표시됩니다.  
   
 12. **디스크 공간 요구 사항** 페이지에서는 지정한 기능에 필요한 디스크 공간을 계산합니다. 그런 다음 사용 가능한 디스크 공간과 필요한 디스크 공간을 비교합니다.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "51018268"
   
 7.  **준비 인스턴스 선택** 페이지의 드롭다운 상자에서 완료할 준비 인스턴스를 선택합니다. **인스턴스 ID** 목록에서 구성되지 않은 인스턴스를 선택합니다.  
   
-     **설치된 인스턴스:** 준비 인스턴스를 포함하여 이 컴퓨터에 설치되어 있는 모든 인스턴스가 표시됩니다.  
+     **설치 된 인스턴스:** 준비 인스턴스를 포함하여 이 컴퓨터에 설치되어 있는 모든 인스턴스가 표시됩니다.  
   
 8.  준비 단계에서 설치에 포함하도록 선택한 기능 및 구성 요소가 **기능 검토** 페이지에 표시됩니다. 준비 인스턴스에 포함되지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 다른 기능을 더 추가하려면 먼저 이 단계를 완료하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 완료한 다음, **설치 센터** 의 **기능 추가**에서 기능을 추가해야 합니다.  
   
@@ -180,13 +180,13 @@ ms.locfileid: "51018268"
   
 9. 인스턴스 구성 페이지에서 준비 인스턴스의 인스턴스 이름을 지정합니다. 이것은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구성을 완료한 인스턴스의 이름입니다. 계속하려면 **다음** 을 클릭합니다.  
   
-     **인스턴스 ID** — 인스턴스 ID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 설치 디렉터리 및 레지스트리 키를 식별하는 데 사용됩니다. 이는 기본 인스턴스와 명명된 인스턴스에 모두 해당됩니다. 준비 인스턴스가 완료 단계 중에 기본 인스턴스로 완료되면 MSSQLSERVER가 인스턴스 이름을 덮어쓰고 인스턴스 ID는 준비 단계에서 지정한 대로 유지됩니다.  
+     **인스턴스 ID** — 인스턴스 ID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 설치 디렉터리 및 레지스트리 키를 식별하는 데 사용됩니다. 이는 기본 인스턴스와 명명된 인스턴스에 모두 해당됩니다. 준비 인스턴스가 완료 단계 중에 기본 인스턴스로 완료되면 MSSQLSERVER가 인스턴스 이름을 덮어쓰고 인스턴스 ID는 준비 단계에서 지정한 대로 유지됩니다.  
   
-     **인스턴스 루트 디렉터리** — 준비 단계에서 지정한 디렉터리가 사용되고 이 단계에서 수정할 수 없습니다.  
+     **인스턴스 루트 디렉터리** - 준비 단계에서 지정한 디렉터리가 사용되고 이 단계에서 수정할 수 없습니다.  
   
      모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 팩 및 업그레이드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 모든 구성 요소에 적용됩니다.  
   
-     **설치된 인스턴스** — 설치 프로그램을 실행 중인 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 표 형식으로 표시됩니다.  
+     **설치된 인스턴스** - 설치 프로그램을 실행 중인 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 표 형식으로 표시됩니다.  
   
 10. 이 항목의 나머지 부분에 대한 워크플로는 준비 단계에서 선택한 기능에 따라 달라집니다. 선택 항목에 따라 일부 페이지가 표시되지 않을 수도 있습니다.  
   
@@ -204,7 +204,7 @@ ms.locfileid: "51018268"
   
 13. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 - 계정 프로비전 페이지를 사용하여 다음을 지정합니다.  
   
-    -   보안 모드 — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대해 Windows 인증 또는 혼합 모드 인증을 선택합니다. 혼합 모드 인증을 선택할 경우 기본 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자 계정에 강력한 암호를 제공해야 합니다.  
+    -   보안 모드 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 인증(Windows 인증 또는 혼합 모드 인증)을 선택합니다. 혼합 모드 인증을 선택할 경우 기본 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자 계정에 강력한 암호를 제공해야 합니다.  
   
          디바이스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 성공적으로 연결되면 Windows 인증 및 혼합 모드에 모두 동일한 보안 메커니즘이 적용됩니다. 자세한 내용은 [Database Engine Configuration - Account Provisioning](../../sql-server/install/database-engine-configuration-account-provisioning.md)을 참조하세요.  
   
@@ -323,7 +323,7 @@ ms.locfileid: "51018268"
 -   [SQL Server의 기존 인스턴스 제거&#40;설치 프로그램&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [Sysprep이란?](http://go.microsoft.com/fwlink/?LinkId=143546)   
- [Windows Sysprep 작동 방법](http://go.microsoft.com/fwlink/?LinkId=143547)  
+ [Sysprep이란?](https://go.microsoft.com/fwlink/?LinkId=143546)   
+ [Windows Sysprep 작동 방법](https://go.microsoft.com/fwlink/?LinkId=143547)  
   
   

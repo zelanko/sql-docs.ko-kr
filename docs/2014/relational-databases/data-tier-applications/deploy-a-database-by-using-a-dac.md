@@ -18,12 +18,12 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 03233cc3a35818352c3a8875f62610b5a0814522
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050483"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362815"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>DAC를 사용 하여 데이터베이스 배포
   **SQL Azure에 데이터베이스 배포** 마법사를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스와 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 서버 간에 또는 두 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]서버 간에 데이터베이스를 배포합니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "48050483"
   
 3.  **데이터베이스** 노드를 확장합니다.  
   
-4.  배포하려는 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 선택한 다음 **SQL Azure에 데이터베이스 배포…** 를 선택합니다.  
+4.  배포하려는 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 선택한 다음, **SQL Azure에 데이터베이스 배포...** 를 선택합니다.  
   
 5.  다음 마법사 대화 상자를 완료합니다.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48050483"
   
  **로컬 호스트:**  
   
--   **서버 연결** – 서버 연결 세부 정보를 지정한 후 **연결** 을 클릭하여 연결을 확인합니다.  
+-   **서버 연결** – 서버 연결 세부 정보를 지정한 다음, **연결** 을 클릭하여 연결을 확인합니다.  
   
 -   **새 데이터베이스 이름** – 새 데이터베이스 이름을 지정합니다.  
   
@@ -122,19 +122,19 @@ ms.locfileid: "48050483"
 ## <a name="using-a-net-framework-application"></a>.Net Framework 애플리케이션 사용  
  **.Net Framework 응용 프로그램에서 DacStoreExport() 및 Import() 메서드를 사용하여 데이터베이스를 배포합니다.**  
   
- 코드 예제를 보려면 [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)에서 DAC 샘플 애플리케이션을 다운로드합니다.  
+ 코드 예제를 보려면 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)에서 DAC 샘플 애플리케이션을 다운로드합니다.  
   
 1.  SMO Server 개체를 만든 후 이 개체를 배포할 데이터베이스를 포함하는 인스턴스 또는 서버로 설정합니다.  
   
-2.  열기는 `ServerConnection` 개체와 동일한 인스턴스에 연결 합니다.  
+2.  `ServerConnection` 개체를 열고 동일한 인스턴스에 연결합니다.  
   
-3.  사용 합니다 `Export` 메서드는 `Microsoft.SqlServer.Management.Dac.DacStore` 데이터베이스를 BACPAC 파일로 내보낼 형식입니다. 내보낼 데이터베이스의 이름과 BACPAC 파일을 배치할 폴더의 경로를 지정합니다.  
+3.  `Export` 형식의 `Microsoft.SqlServer.Management.Dac.DacStore` 메서드를 사용하여 데이터베이스를 BACPAC 파일로 내보냅니다. 내보낼 데이터베이스의 이름과 BACPAC 파일을 배치할 폴더의 경로를 지정합니다.  
   
 4.  SMO Server 개체를 만든 다음 대상 인스턴스 또는 서버로 설정합니다.  
   
-5.  열기는 `ServerConnection` 개체와 동일한 인스턴스에 연결 합니다.  
+5.  `ServerConnection` 개체를 열고 동일한 인스턴스에 연결합니다.  
   
-6.  사용 합니다 `Import` 메서드는 `Microsoft.SqlServer.Management.Dac.DacStore` BACPAC를 가져올 형식입니다. 내보내기에 의해 생성되는 BACPAC 파일을 지정합니다.  
+6.  `Import` 형식의 `Microsoft.SqlServer.Management.Dac.DacStore` 메서드를 사용하여 BACPAC를 가져옵니다. 내보내기에 의해 생성되는 BACPAC 파일을 지정합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 계층 응용 프로그램](data-tier-applications.md)   

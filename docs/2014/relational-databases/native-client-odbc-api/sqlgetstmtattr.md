@@ -14,23 +14,23 @@ ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cfd74525cda5946fb7c86f21638437ee91c3ac7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5604aafbbc8a6d77081e829269955c8b7600f4ee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211201"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359926"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 드라이버별 문 특성을 노출 하는 SQLGetStmtAttr 확장 합니다.  
   
- [SQLSetStmtAttr](sqlsetstmtattr.md) 읽고 쓰기 문 특성을 모두 나열 합니다. 이 항목에서는 읽기 전용 문 특성을 나열합니다.  
+ [SQLSetStmtAttr](sqlsetstmtattr.md) 에서는 읽기 및 쓰기 문 특성을 나열합니다. 이 항목에서는 읽기 전용 문 특성을 나열합니다.  
   
 ## <a name="sqlsoptsscurrentcommand"></a>SQL_SOPT_SS_CURRENT_COMMAND  
  SQL_SOPT_SS_CURRENT_COMMAND 특성은 명령 일괄 처리의 현재 명령을 노출합니다. 반환 값은 일괄 처리에서 명령의 위치를 지정하는 정수 값입니다. *ValuePtr* 값은 SQLLEN 유형입니다.  
   
 ## <a name="sqlsoptssnocountstatus"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
- SQL_SOPT_SS_NOCOUNT_STATUS 특성은 NOCOUNT의 현재 설정을 나타냅니다 옵션을 제어 하는 여부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문에 의해 영향을 받는 행 수가 보고 때 [SQLRowCount](sqlrowcount.md) 라고 합니다. *ValuePtr* 값은 SQLLEN 유형입니다.  
+ SQL_SOPT_SS_NOCOUNT_STATUS 특성은 NOCOUNT 옵션의 현재 설정을 나타냅니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLRowCount [를 호출할 때](sqlrowcount.md) 가 문의 영향을 받는 행 수를 보고할지 여부를 제어합니다. *ValuePtr* 값은 SQLLEN 유형입니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -45,12 +45,12 @@ ms.locfileid: "48211201"
  SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT 특성은 쿼리 알림 요청에 대한 메시지 텍스트를 반환합니다.  
   
 ## <a name="sqlgetstmtattr-and-table-valued-parameters"></a>SQLGetStmtAttr 및 테이블 반환 매개 변수  
- 테이블 반환 매개 변수를 사용 하 여 작업 하는 경우 응용 프로그램 매개 변수 설명자 (APD)의 SQL_SOPT_SS_PARAM_FOCUS 값을 검색할 SQLGetStmtAttr은 호출할 수 있습니다. SQL_SOPT_SS_PARAM_FOCUS에 대 한 자세한 내용은 참조 하세요. [SQLSetStmtAttr](sqlsetstmtattr.md)합니다.  
+ 테이블 반환 매개 변수를 사용 하 여 작업 하는 경우 응용 프로그램 매개 변수 설명자 (APD)의 SQL_SOPT_SS_PARAM_FOCUS 값을 검색할 SQLGetStmtAttr은 호출할 수 있습니다. SQL_SOPT_SS_PARAM_FOCUS에 대한 자세한 내용은 [SQLSetStmtAttr](sqlsetstmtattr.md)을 참조하십시오.  
   
  테이블 반환 매개 변수에 대 한 자세한 내용은 참조 하세요. [테이블 반환 매개 변수 &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLSetStmtAttr 함수](http://go.microsoft.com/fwlink/?LinkId=59370)   
+ [SQLSetStmtAttr 함수](https://go.microsoft.com/fwlink/?LinkId=59370)   
  [ODBC API 구현 정보](odbc-api-implementation-details.md)  
   
   

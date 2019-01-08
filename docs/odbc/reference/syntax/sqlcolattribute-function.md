@@ -20,16 +20,16 @@ ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76d3189285cdca20f503284cbbf3b439383a0655
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb4ba702d540ccad7a976cc4045408d5e1d88766
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758121"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542173"
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute 함수(SQLColAttribute Function)
 **규칙**  
- 버전에 도입 되었습니다: ODBC 3.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 3.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLColAttribute** 결과 집합의 열에 대 한 설명자 정보를 반환 합니다. 설명자 정보 문자열, 설명자 종속 값 또는 정수 값으로 반환 됩니다.  
@@ -77,7 +77,7 @@ SQLRETURN SQLColAttribute (
   
 -   하는 경우 *CharacterAttributePtr* 결과인 이진 버퍼는 응용 프로그램 위치에 대 한 포인터를 SQL_LEN_BINARY_ATTR (*길이*)에서 매크로 *BufferLength*합니다. 에 음수 값이 배치 *BufferLength*합니다.  
   
--   하는 경우 *CharacterAttributePtr* 고정 길이 데이터 형식에 대 한 포인터 *BufferLength* 다음 중 하나 여야 합니다: SQL_IS_INTEGER, SQL_IS_UNINTEGER, SQL_SMALLINT, 또는 SQLUSMALLINT 합니다.  
+-   하는 경우 *CharacterAttributePtr* 고정 길이 데이터 형식에 대 한 포인터 *BufferLength* 다음 중 하나 여야 합니다. SQL_IS_INTEGER, SQL_IS_UNINTEGER, SQL_SMALLINT, 또는 SQLUSMALLINT 합니다.  
   
  *StringLengthPtr*  
  [출력] 바이트 (문자 데이터에 대 한 null 종료 바이트 제외)의 총 수를 반환 하는 버퍼에 대 한 포인터를 반환 하려면 사용할 수 있습니다 **CharacterAttributePtr*합니다.  
@@ -153,26 +153,26 @@ SQLRETURN SQLColAttribute (
 |SQL_DESC_BASE_TABLE_NAME (ODBC 3.0)|*CharacterAttributePtr*|열이 포함 된 기본 테이블의 이름입니다. 기본 테이블 이름을 정의할 수 없습니다 또는 적용할 수 없는 경우이 변수는 빈 문자열을 포함 합니다.<br /><br /> 이 정보는 읽기 전용 필드인 IRD의 SQL_DESC_BASE_TABLE_NAME 레코드 필드에서 반환 됩니다.|  
 |SQL_DESC_CASE_SENSITIVE (ODBC 1.0)|*NumericAttributePtr*|열 데이터 정렬 및 비교에 대 한 대/소문자 구분으로 처리 되 면 SQL_TRUE 합니다.<br /><br /> 열 데이터 정렬 및 비교에 대 한 대/소문자 구분으로 처리 되지 않습니다 이거나 문자가 아닌 경우 SQL_FALSE입니다.|  
 |SQL_DESC_CATALOG_NAME (ODBC 2.0)|*CharacterAttributePtr*|열이 포함 된 테이블의 카탈로그입니다. 반환된 된 값 또는 열이 뷰의 일부 열이 식이면 구현 시 정의 됩니다. 데이터 소스는 카탈로그를 지원 하지 않습니다 또는 카탈로그 이름을 확인할 수 없는 경우 빈 문자열이 반환 됩니다. 이 VARCHAR 레코드 필드 128 자로 제한 됩니다.|  
-|SQL_DESC_CONCISE_TYPE (ODBC 1.0)|*NumericAttributePtr*|간결한 데이터 형식입니다.<br /><br /> 이 필드는 날짜/시간 및 간격 데이터 형식에 대 한 간결한 데이터 형식으로를 반환 합니다. 예를 들어, SQL_TYPE_TIME 또는 SQL_INTERVAL_YEAR 합니다. (자세한 내용은 [데이터 형식 식별자 및 설명자](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md) 부록 d: 데이터 형식에서입니다.)<br /><br /> 이 정보는 IRD의 SQL_DESC_CONCISE_TYPE 레코드 필드에서 반환 됩니다.|  
+|SQL_DESC_CONCISE_TYPE (ODBC 1.0)|*NumericAttributePtr*|간결한 데이터 형식입니다.<br /><br /> 이 필드는 날짜/시간 및 간격 데이터 형식에 대 한 간결한 데이터 형식으로를 반환 합니다. 예를 들어, SQL_TYPE_TIME 또는 SQL_INTERVAL_YEAR 합니다. (자세한 내용은 [데이터 형식 식별자 및 설명자](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md) 부록 d: 데이터 형식입니다.)<br /><br /> 이 정보는 IRD의 SQL_DESC_CONCISE_TYPE 레코드 필드에서 반환 됩니다.|  
 |SQL_DESC_COUNT (ODBC 1.0)|*NumericAttributePtr*|결과 집합에서 사용할 수 있는 열의 수입니다. 이 결과 집합의 열이 없는 경우 0을 반환 합니다. 값을 *ColumnNumber* 인수는 무시 됩니다.<br /><br /> 이 정보는 IRD의 SQL_DESC_COUNT 헤더 필드에서 반환 됩니다.|  
-|SQL_DESC_DISPLAY_SIZE (ODBC 1.0)|*NumericAttributePtr*|열의 데이터를에서 표시 하는 데 필요한 문자의 최대 수입니다. 디스플레이 크기에 대 한 자세한 내용은 참조 하세요. [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식에서입니다.|  
-|SQL_DESC_FIXED_PREC_SCALE (ODBC 1.0)|*NumericAttributePtr*|Sql_true는 해당 열에 데이터 소스 관련 된 고정된 전체 자릿수 및 0이 아닌 확장 합니다.<br /><br /> 고정 전체 자릿수 및 0이 아닌 확장 데이터 소스 관련 된 열에 없는 경우 SQL_FALSE입니다.|  
+|SQL_DESC_DISPLAY_SIZE (ODBC 1.0)|*NumericAttributePtr*|열의 데이터를에서 표시 하는 데 필요한 문자의 최대 수입니다. 디스플레이 크기에 대 한 자세한 내용은 참조 하세요. [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식입니다.|  
+|SQL_DESC_FIXED_PREC_SCALE (ODBC 1.0)|*NumericAttributePtr*|Sql_true는 해당 열에 데이터 소스 관련 된 고정된 전체 자릿수 및 0이 아닌 확장 합니다.<br /><br /> 고정 전체 자릿수 및 0이 아닌 확장 데이터 원본 관련 된 열에 없는 경우 SQL_FALSE입니다.|  
 |SQL_DESC_LABEL (ODBC 2.0)|*CharacterAttributePtr*|열 레이블 또는 제목입니다. 예를 들어 EmpName 라는 열 직원 이름 레이블을 지정할 수 있습니다 또는 별칭으로 레이블을 지정할 수 있습니다.<br /><br /> 열에는 레이블이 없는 경우 열 이름이 반환 됩니다. 레이블 열은 명명 되지 않은 경우, 빈 문자열이 반환 됩니다.|  
-|SQL_DESC_LENGTH (ODBC 3.0)|*NumericAttributePtr*|숫자 값을 문자 문자열 또는 이진 데이터의 실제 또는 최대 문자 길이 입력 합니다. 고정 길이 데이터 형식에 대 한 최대 문자 길이 또는 가변 길이 데이터 형식에 대 한 실제 문자 길이입니다. 해당 값에는 항상 null 종료 바이트 문자열을 종료 하는 제외 됩니다.<br /><br /> 이 정보는 IRD의 SQL_DESC_LENGTH 레코드 필드에서 반환 됩니다.<br /><br /> 길이 대 한 자세한 내용은 참조 하세요. [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식에서입니다.|  
+|SQL_DESC_LENGTH (ODBC 3.0)|*NumericAttributePtr*|숫자 값을 문자 문자열 또는 이진 데이터의 실제 또는 최대 문자 길이 입력 합니다. 고정 길이 데이터 형식에 대 한 최대 문자 길이 또는 가변 길이 데이터 형식에 대 한 실제 문자 길이입니다. 해당 값에는 항상 null 종료 바이트 문자열을 종료 하는 제외 됩니다.<br /><br /> 이 정보는 IRD의 SQL_DESC_LENGTH 레코드 필드에서 반환 됩니다.<br /><br /> 길이 대 한 자세한 내용은 참조 하세요. [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식입니다.|  
 |SQL_DESC_LITERAL_PREFIX (ODBC 3.0)|*CharacterAttributePtr*|이 VARCHAR(128) 레코드 필드에는이 데이터 형식의 리터럴에 접두사로 드라이버 인식 하는 문자를 포함 합니다. 이 필드는 리터럴 접두사는 해당 데이터 형식에 대 한 빈 문자열을 포함 합니다. 자세한 내용은 [리터럴 접두사 및 접미사](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)합니다.|  
 |SQL_DESC_LITERAL_SUFFIX (ODBC 3.0)|*CharacterAttributePtr*|이 VARCHAR(128) 레코드 필드에는이 데이터 형식의 리터럴에 접미사로 드라이버 인식 하는 문자를 포함 합니다. 이 필드는에 대 한 리터럴 접미사는 해당 데이터 형식에 대 한 빈 문자열을 포함 합니다. 자세한 내용은 [리터럴 접두사 및 접미사](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)합니다.|  
 |SQL_DESC_LOCAL_TYPE_NAME (ODBC 3.0)|*CharacterAttributePtr*|이 VARCHAR(128) 레코드 필드에는 데이터 형식의 일반 이름과 다를 수 있는 데이터 형식에 대 한 모든 지역화 된 (native language) 이름을 포함 합니다. 지역화 된 이름이 없는 경우 빈 문자열이 반환 됩니다. 이 필드는 표시 용도로 됩니다. 문자열의 문자 집합을 로캘별 이며 일반적으로 서버의 기본 문자 집합입니다.|  
 |SQL_DESC_NAME (ODBC 3.0)|*CharacterAttributePtr*|열 별칭에 적용 되는 경우입니다. 열 별칭이 적용 되지 않는 경우 열 이름이 반환 됩니다. 두 경우 모두 SQL_DESC_UNNAMED는 SQL_NAMED 설정 됩니다. 열 이름 없음 또는 열 별칭을 있으면 빈 문자열 반환 되 고 SQL_DESC_UNNAMED 하면으로 설정 됩니다.<br /><br /> 이 정보는 IRD의 SQL_DESC_NAME 레코드 필드에서 반환 됩니다.|  
 |SQL_DESC_NULLABLE (ODBC 3.0)|*NumericAttributePtr*|SQL_ null 허용 열에 NULL 값을 가질 수 있으면 SQL_NO_NULLS 열에 NULL 값이 없는 경우 또는 SQL_NULLABLE_UNKNOWN 경우 열에 NULL 값 허용 하는지 여부를 알 수 없습니다.<br /><br /> 이 정보는 IRD의 SQL_DESC_NULLABLE 레코드 필드에서 반환 됩니다.|  
 |SQL_DESC_NUM_PREC_RADIX (ODBC 3.0)|*NumericAttributePtr*|SQL_DESC_TYPE 필드의 데이터 형식은 근사 숫자 데이터 형식이 면 SQL_DESC_PRECISION 필드 비트 수 있기 때문에이 SQLINTEGER 필드 값이 2 포함 합니다. SQL_DESC_TYPE 필드의 데이터 형식은 정확한 숫자 데이터 형식인 경우이 필드 SQL_DESC_PRECISION 필드 10 진수 수 있기 때문에 있는 값 10 포함 합니다. 이 필드는 모든 숫자가 아닌 데이터 형식에 대해 0으로 설정 됩니다.|  
-|SQL_DESC_OCTET_LENGTH (ODBC 3.0)|*NumericAttributePtr*|문자 문자열 또는 이진 데이터 형식의 길이 (바이트) 합니다. 고정 길이 문자 또는 이진 형식의 실제 길이 (바이트)입니다. 가변 길이 문자 또는 이진 형식의 최대 길이 (바이트)입니다. 이 값에 null 종결자를 포함 되지 않습니다.<br /><br /> 이 정보는 IRD의 SQL_DESC_OCTET_LENGTH 레코드 필드에서 반환 됩니다.<br /><br /> 길이 대 한 자세한 내용은 참조 하세요. [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식에서입니다.|  
+|SQL_DESC_OCTET_LENGTH (ODBC 3.0)|*NumericAttributePtr*|문자 문자열 또는 이진 데이터 형식의 길이 (바이트) 합니다. 고정 길이 문자 또는 이진 형식의 실제 길이 (바이트)입니다. 가변 길이 문자 또는 이진 형식의 최대 길이 (바이트)입니다. 이 값에 null 종결자를 포함 되지 않습니다.<br /><br /> 이 정보는 IRD의 SQL_DESC_OCTET_LENGTH 레코드 필드에서 반환 됩니다.<br /><br /> 길이 대 한 자세한 내용은 참조 하세요. [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식입니다.|  
 |자릿수가 SQL_DESC_PRECISION (ODBC 3.0)|*NumericAttributePtr*|나타내는 숫자 데이터 형식에 대 한 해당 전체 자릿수는 숫자 값입니다. 데이터에 대 한 형식 SQL_TYPE_TIMESTAMP, SQL_TYPE_TIME 이며 시간 간격, 해당 값을 나타내는 모든 interval 데이터 형식을 해당 전체 자릿수 소수 자릿수 초 구성 요소입니다.<br /><br /> 이 정보는 IRD의 자릿수가 SQL_DESC_PRECISION 레코드 필드에서 반환 됩니다.|  
 |자릿수가 SQL_DESC_SCALE (ODBC 3.0)|*NumericAttributePtr*|숫자 데이터 형식에 대 한 해당 소수 자릿수는 숫자 값입니다. DECIMAL 및 NUMERIC 데이터 형식에 정의 된 소수 자릿수입니다. 다른 모든 데이터 형식에 대해 정의 된 것입니다.<br /><br /> 이 정보는 IRD의 배율 레코드 필드에서 반환 됩니다.|  
 |SQL_DESC_SCHEMA_NAME (ODBC 2.0)|*CharacterAttributePtr*|열이 포함 된 테이블의 스키마입니다. 반환된 된 값 또는 열이 뷰의 일부 열이 식이면 구현 시 정의 됩니다. 데이터 원본 스키마를 지원 하지 않으므로 또는 스키마 이름을 확인할 수 없는 경우 빈 문자열이 반환 됩니다. 이 VARCHAR 레코드 필드 128 자로 제한 됩니다.|  
 |SQL_DESC_SEARCHABLE (ODBC 1.0)|*NumericAttributePtr*|SQL_PRED_NONE WHERE 절에서 열을 사용할 수 없는 경우. (이 / ODBC 2에서 SQL_UNSEARCHABLE 값과 동일 합니다. *x*.)<br /><br /> SQL_PRED_CHAR LIKE 조건자만 하지만 WHERE 절에서 열을 사용할 수 있는 경우. (이 / ODBC 2에서 SQL_LIKE_ONLY 값과 동일 합니다. *x*.)<br /><br /> SQL_PRED_BASIC 같은 제외한 모든 비교 연산자를 사용 하 여 WHERE 절에서 열을 사용할 수 있는 경우. (이 / ODBC 2에서 SQL_EXCEPT_LIKE 값과 동일 합니다. *x*.)<br /><br /> SQL_PRED_SEARCHABLE 모든 비교 연산자와 함께 WHERE 절에서 열을 사용할 수 있는 경우.<br /><br /> 열에는 일반적으로 반환 SQL_PRED_CHAR SQL_LONGVARBINARY 및 SQL_LONGVARCHAR 입력합니다.|  
 |SQL_DESC_TABLE_NAME (ODBC 2.0)|*CharacterAttributePtr*|열을 포함하는 테이블의 이름입니다. 반환된 된 값 또는 열이 뷰의 일부 열이 식이면 구현 시 정의 됩니다.<br /><br /> 테이블 이름을 확인할 수 없는 경우 빈 문자열이 반환 됩니다.|  
-|SQL_DESC_TYPE (ODBC 3.0)|*NumericAttributePtr*|SQL 데이터 형식을 지정 하는 숫자 값입니다.<br /><br /> 때 *ColumnNumber* 같으면 0으로 SQL_BINARY 가변 길이 책갈피에 대 한 반환 되 고 SQL_INTEGER 고정 길이 책갈피에 대해 반환 됩니다.<br /><br /> 이 필드는 날짜/시간 및 간격 데이터 형식에 대 한 자세한 데이터 형식을 반환 합니다: SQL_DATETIME 또는 sql_interval 인 합니다. (자세한 내용은 [데이터 형식 식별자 및 설명자](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md) 부록 d: 데이터 형식에서입니다.<br /><br /> 이 정보는 IRD의 SQL_DESC_TYPE 레코드 필드에서 반환 됩니다. **참고:** ODBC 2에 대해 작동 하도록 합니다. *x* 드라이버 SQL_DESC_CONCISE_TYPE를 대신 사용 합니다.|  
-|인 SQL_DESC_TYPE_NAME (ODBC 1.0)|*CharacterAttributePtr*|데이터 소스에 따라 다릅니다 데이터 형식 이름입니다. 예를 들어, "CHAR", "VARCHAR", "MONEY", "LONG VARBINARY" 또는 "CHAR () FOR BIT DATA"입니다.<br /><br /> 종류를 알 수 없는 경우 빈 문자열이 반환 됩니다.|  
+|SQL_DESC_TYPE (ODBC 3.0)|*NumericAttributePtr*|SQL 데이터 형식을 지정 하는 숫자 값입니다.<br /><br /> 때 *ColumnNumber* 같으면 0으로 SQL_BINARY 가변 길이 책갈피에 대 한 반환 되 고 SQL_INTEGER 고정 길이 책갈피에 대해 반환 됩니다.<br /><br /> 날짜/시간 및 간격 데이터 형식에 대 한이 필드에 자세한 데이터 형식을 반환합니다. SQL_DATETIME 또는 sql_interval 인 합니다. (자세한 내용은 [데이터 형식 식별자 및 설명자](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md) 부록 d: 데이터 형식입니다.<br /><br /> 이 정보는 IRD의 SQL_DESC_TYPE 레코드 필드에서 반환 됩니다. **참고:**  ODBC 2에 대해 작동 합니다. *x* 드라이버 SQL_DESC_CONCISE_TYPE를 대신 사용 합니다.|  
+|인 SQL_DESC_TYPE_NAME (ODBC 1.0)|*CharacterAttributePtr*|데이터 원본에 종속적인 데이터 형식 이름입니다. 예를 들어, "CHAR", "VARCHAR", "MONEY", "LONG VARBINARY" 또는 "CHAR () FOR BIT DATA"입니다.<br /><br /> 종류를 알 수 없는 경우 빈 문자열이 반환 됩니다.|  
 |SQL_DESC_UNNAMED (ODBC 3.0)|*NumericAttributePtr*|SQL_NAMED 또는 하면 합니다. IRD의 SQL_DESC_NAME 필드 열 별칭 또는 열 이름이 있으면 SQL_NAMED 반환 됩니다. 열 이름이 나 열 별칭 없습니다 있으면 하면 반환 됩니다.<br /><br /> 이 정보는 IRD의 SQL_DESC_UNNAMED 레코드 필드에서 반환 됩니다.|  
 |SQL_DESC_UNSIGNED (ODBC 1.0)|*NumericAttributePtr*|부호 없는 (또는 숫자가 아닌) 열 이면 SQL_TRUE 합니다.<br /><br /> SQL_FALSE 열 서명 된 경우입니다.|  
 |SQL_DESC_UPDATABLE (ODBC 1.0)|*NumericAttributePtr*|열 정의 된 상수에 대 한 값으로 설명 되어 있습니다.<br /><br /> SQL_ATTR_READONLY SQL_ATTR_WRITE SQL_ATTR_READWRITE_UNKNOWN<br /><br /> SQL_DESC_UPDATABLE 결과 집합의 열, 기본 테이블의 열이 아닌 업데이트 가능성을 설명합니다. 결과 집합 열 기준으로 하는 기본 열의 업데이트 가능성은이 필드의 값과에서 다를 수 있습니다. 열이 업데이트할 수 있는 데이터 형식, 사용자 권한 및 결과 집합 자체의 정의에 기반 할 수 있습니다. 열을 업데이트할 수 있는지 여부에 명확한 아니라면 SQL_ATTR_READWRITE_UNKNOWN 반환 되어야 합니다.|  

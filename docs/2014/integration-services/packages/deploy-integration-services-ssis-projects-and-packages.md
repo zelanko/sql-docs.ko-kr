@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9648e78567bbddf9209c53923cfe6c12d046d1a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bd9e036baa91991352d00f97fcf2c8e689bae6c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200903"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372155"
 ---
 # <a name="deployment-of-projects-and-packages"></a>프로젝트 및 패키지 배포
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 프로젝트 배포 모델 및 패키지 배포 모델의 두 가지 배포 모델을 지원합니다. 프로젝트 배포 모델을 사용하면 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "48200903"
 |데이터베이스 엔진에서 CLR 통합이 필요합니다.|데이터베이스 엔진에서 CLR 통합이 필요하지 않습니다.|  
 |환경 관련 매개 변수 값이 환경 변수에 저장됩니다.|환경 관련 구성 값이 구성 파일에 저장됩니다.|  
 |카탈로그에 있는 프로젝트 및 패키지를 실행하기 전에 서버에서 유효성을 검사할 수 있습니다. SQL Server Management Studio, 저장 프로시저 또는 관리 코드를 사용하여 유효성 검사를 수행할 수 있습니다.|패키지를 실행하기 바로 전에 유효성을 검사합니다. 또한 dtExec 또는 관리 코드를 사용하여 패키지의 유효성을 검사할 수도 있습니다.|  
-|데이터베이스 엔진에서 실행을 시작하는 방식으로 패키지를 실행합니다. 실행을 시작하기 전에 실행에 프로젝트 식별자, 명시적 매개 변수 값(옵션) 및 환경 참조(옵션)를 할당합니다.<br /><br /> 또한 `dtExec`를 사용하여 패키지를 실행할 수도 있습니다.|사용 하 여 패키지를 실행 합니다 `dtExec` 고 `DTExecUI` 실행 유틸리티입니다. 해당 구성이 명령 프롬프트 인수(옵션)로 식별됩니다.|  
+|데이터베이스 엔진에서 실행을 시작하는 방식으로 패키지를 실행합니다. 실행을 시작하기 전에 실행에 프로젝트 식별자, 명시적 매개 변수 값(옵션) 및 환경 참조(옵션)를 할당합니다.<br /><br /> 또한 `dtExec`를 사용하여 패키지를 실행할 수도 있습니다.|패키지는 `dtExec` 및 `DTExecUI` 실행 유틸리티를 사용하여 실행됩니다. 해당 구성이 명령 프롬프트 인수(옵션)로 식별됩니다.|  
 |실행 시 패키지에 의해 생성된 이벤트가 자동으로 캡처되고 카탈로그에 저장됩니다. Transact-SQL 뷰를 사용하여 이러한 이벤트를 쿼리할 수 있습니다.|실행 시 패키지에 의해 생성된 이벤트가 자동으로 캡처되지 않습니다. 이벤트를 캡처하려면 로그 공급자를 패키지에 추가해야 합니다.|  
 |패키지가 별도의 Windows 프로세스에서 실행됩니다.|패키지가 별도의 Windows 프로세스에서 실행됩니다.|  
 |SQL Server 에이전트를 사용하여 패키지 실행을 예약합니다.|SQL Server 에이전트를 사용하여 패키지 실행을 예약합니다.|  
@@ -61,9 +60,9 @@ ms.locfileid: "48200903"
 -   [Integration Services 서버에 프로젝트 배포](../deploy-projects-to-integration-services-server.md)  
   
 ## <a name="related-content"></a>관련 내용  
- mattmasson.com의 블로그 항목 [SSIS 프로젝트의 분기 전략에 대한 고려 사항](http://go.microsoft.com/fwlink/?LinkId=245739)  
+ mattmasson.com의 블로그 항목 [SSIS 프로젝트의 분기 전략에 대한 고려 사항](https://go.microsoft.com/fwlink/?LinkId=245739)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [dtexec 유틸리티](dtexec-utility.md)  
   
   

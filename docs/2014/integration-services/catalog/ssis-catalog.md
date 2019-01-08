@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1984802df92929cb4a311f1de8527f764d96d0fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: a9eb4de07ad7bd564578462b053637bb472b22f6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201343"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353980"
 ---
 # <a name="ssis-catalog"></a>SSIS 카탈로그
   합니다 `SSISDB` 카탈로그는 작업에 대 한 중심점 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 프로젝트를 배포한는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버. 예를 들어 프로젝트 및 패키지 매개 변수를 설정하고, 패키지의 런타임 값을 지정하기 위한 환경을 구성하고, 패키지를 실행하거나 문제를 해결하고, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버 작업을 관리할 수 있습니다.  
@@ -27,7 +26,7 @@ ms.locfileid: "48201343"
   
  `SSISDB` 데이터베이스를 유지 관리하려면 사용자 데이터베이스 관리를 위한 표준 엔터프라이즈 정책을 적용하는 것이 좋습니다. 유지 관리 계획 만들기에 대해서는 [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)을 참조하십시오.  
   
- 합니다 `SSISDB` 카탈로그 및 `SSISDB` 데이터베이스 Windows PowerShell을 지원 합니다. Windows PowerShell과 SQL Server를 함께 사용하는 방법은 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)을 참조하십시오. Windows PowerShell을 사용하여 프로젝트 배포와 같은 태스크를 수행하는 방법의 예는 blogs.msdn.com에서 [SQL Server 2012의 SSIS 및 PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)블로그 항목을 참조하십시오.  
+ 합니다 `SSISDB` 카탈로그 및 `SSISDB` 데이터베이스 Windows PowerShell을 지원 합니다. Windows PowerShell과 SQL Server를 함께 사용하는 방법은 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)을 참조하십시오. Windows PowerShell을 사용하여 프로젝트 배포와 같은 태스크를 수행하는 방법의 예는 blogs.msdn.com에서 [SQL Server 2012의 SSIS 및 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)블로그 항목을 참조하십시오.  
   
  작업 데이터를 보는 방법에 대 한 자세한 내용은 참조 하세요. [패키지 실행 및 기타 작업에 대 한 모니터링](../performance/monitor-running-packages-and-other-operations.md)합니다.  
   
@@ -98,7 +97,7 @@ ms.locfileid: "48201343"
  다음 `SSISDB` 카탈로그 속성을 정의 하는 방법을이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업의 동작입니다. **카탈로그 속성** 대화 상자를 사용하거나 [catalog.catalog_properties&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) 및 [catalog.configure_catalog&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database)를 사용하여 속성을 보고 수정할 수 있습니다.  
   
  **주기적으로 로그 정리**  
- 이 속성 설정 된 경우 작업 정리를 위한 작업 단계가 실행 `True`합니다.  
+ 이 속성이 `True`로 설정된 경우 작업 정리를 위한 작업 단계가 실행됩니다.  
   
  **보존 기간(일)**  
  허용 가능한 작업 데이터의 최대 수명(일)을 정의합니다. 오래된 데이터는 제거됩니다.  
@@ -106,7 +105,7 @@ ms.locfileid: "48201343"
  최소값은 1일입니다. 최 댓 값의 최대값에 의해서만 제한 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int` 데이터입니다. 이 데이터 형식에 대한 자세한 내용은 [int, bigint, smallint 및 tinyint&#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)를 참조하세요.  
   
  **주기적으로 이전 버전을 제거**  
- 이 속성 설정 된 경우 프로젝트 버전 정리를 위한 작업 단계가 실행 `True`합니다.  
+ 이 속성이 `True`로 설정된 경우 프로젝트 버전 정리를 위한 작업 단계가 실행됩니다.  
   
  **프로젝트당 최대 버전 수**  
  카탈로그에 저장되는 프로젝트 버전 수를 정의합니다. 오래된 버전의 프로젝트는 제거됩니다.  
@@ -128,7 +127,7 @@ ms.locfileid: "48201343"
   
 -   DES  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]서버에 배포하는 경우 카탈로그에서 패키지 데이터와 중요한 값을 자동으로 암호화합니다. 카탈로그에서는 검색하는 데이터의 암호도 자동으로 해제합니다. SSISDB 카탈로그에서는 `ServerStorage` 보호 수준입니다. 자세한 내용은 [Access Control for Sensitive Data in Packages](../security/access-control-for-sensitive-data-in-packages.md)을 참조하세요.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]서버에 배포하는 경우 카탈로그에서 패키지 데이터와 중요한 값을 자동으로 암호화합니다. 카탈로그에서는 검색하는 데이터의 암호도 자동으로 해제합니다. SSISDB 카탈로그에서는 `ServerStorage` 보호 수준을 사용합니다. 자세한 내용은 [Access Control for Sensitive Data in Packages](../security/access-control-for-sensitive-data-in-packages.md)을 참조하세요.  
   
  암호화 알고리즘을 변경하는 작업에는 시간이 많이 소비됩니다. 먼저 서버에서 이전에 지정된 알고리즘을 사용하여 모든 구성 값의 암호를 해독해야 합니다. 그런 다음 새 알고리즘을 사용하여 값을 다시 암호화해야 합니다. 그 동안 서버에서 다른 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 작업을 수행할 수 없습니다. 따라서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 작업을 중단 없이 지속되게 하려면 암호화 알고리즘이 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 대화 상자에서 읽기 전용 값으로 지정되어야 합니다.  
   
@@ -284,10 +283,10 @@ ms.locfileid: "48201343"
   
 ## <a name="related-content"></a>관련 내용  
   
--   blogs.msdn.com의 블로그 항목 - [SQL Server 2012의 SSIS 및 PowerShell](http://go.microsoft.com/fwlink/?LinkId=242539)  
+-   blogs.msdn.com의 블로그 항목 - [SQL Server 2012의 SSIS 및 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)  
   
--   blogs.msdn.com의 블로그 항목 - [SSIS 카탈로그 액세스 제어 팁](http://go.microsoft.com/fwlink/?LinkId=246669)  
+-   blogs.msdn.com의 블로그 항목 - [SSIS 카탈로그 액세스 제어 팁](https://go.microsoft.com/fwlink/?LinkId=246669)  
   
--   blogs.msdn.com의 블로그 항목 - [SSIS 카탈로그 관리 개체 모델에 대한 이해](http://go.microsoft.com/fwlink/?LinkId=254267)  
+-   blogs.msdn.com의 블로그 항목 - [SSIS 카탈로그 관리 개체 모델에 대한 이해](https://go.microsoft.com/fwlink/?LinkId=254267)  
   
   

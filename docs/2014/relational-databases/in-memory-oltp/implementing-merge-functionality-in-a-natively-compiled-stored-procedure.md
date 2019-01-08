@@ -10,17 +10,17 @@ ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9614ee30c6e0566dc270f07e20b0c4dc29d1feb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: faf6112fa3f8ec588d00480d09ff072a71051a02
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063943"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508161"
 ---
 # <a name="implementing-merge-functionality"></a>MERGE 기능 구현
   데이터베이스에 특정 행 이 이미 있는지 여부에 따라 데이터베이스에서 삽입 또는 업데이트를 수행해야 할 수 있습니다.  
   
- 사용 하지 않고 합니다 `MERGE` 문, 다음은 사용할 수 있습니다 하는 한 가지 방법은 [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
+ `MERGE` 문을 사용하지 않는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 사용할 수 있는 방법 중 하나는 다음과 같습니다.  
   
 ```tsql  
 UPDATE mytable SET col=@somevalue WHERE myPK = @parm  
@@ -32,7 +32,7 @@ IF @@ROWCOUNT = 0
   
 ```tsql  
 IF EXISTS (SELECT 1 FROM mytable WHERE myPK = @parm)  
-    UPDATE….  
+    UPDATE....  
 ELSE  
     INSERT  
 ```  
@@ -43,7 +43,7 @@ ELSE
 DECLARE @i  int  = 0  -- or whatever your PK data type is  
 UPDATE mytable SET @i=myPK, othercolums = other values WHERE myPK = @parm  
 IF @i = 0  
-   INSERT….  
+   INSERT....  
 ```  
   
 ## <a name="see-also"></a>관련 항목  

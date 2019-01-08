@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.changetracking.f1
@@ -13,12 +12,12 @@ ms.assetid: 9b929640-bc62-449b-9b06-b5a77b8cf372
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 210fba26d1a99ade85000e3ef94a41e638a8774b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 926f6227d5a3a2e11dffbf4b9f080b1fc5ec35a2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176213"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799305"
 ---
 # <a name="database-properties-changetracking-page"></a>데이터베이스 속성(변경 내용 추적 페이지)
   이 페이지를 사용하여 선택한 데이터베이스의 변경 내용 추적 설정을 확인하거나 수정할 수 있습니다. 이 페이지에서 사용할 수 있는 옵션에 대한 자세한 내용은 [변경 내용 추적 설정 및 해제&#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)를 참조하세요.  

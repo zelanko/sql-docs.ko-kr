@@ -20,16 +20,16 @@ ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70ee26274d101d1b18b00c83a89bd0c946da6742
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b42339c74102b86fe08c84b15da3266a1040dfd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855821"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212452"
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData 함수(SQLGetData Function)
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLGetData** 한 후 단일 매개 변수 또는 결과 집합의 단일 열에 대 한 데이터를 검색 **SQLParamData** SQL_PARAM_DATA_AVAILABLE를 반환 합니다. 여러 번 부분에서 가변 길이 데이터를 검색할 호출할 수 있습니다 것입니다.  
@@ -57,7 +57,7 @@ SQLRETURN SQLGetData(
  매개 변수 데이터를 검색, 1부터 시작 하는 매개 변수의 서 수입니다.  
   
  *TargetType*  
- [입력] C 데이터 형식의 형식 식별자는 **TargetValuePtr* 버퍼입니다. 유효한 C 데이터 형식 및 형식 식별자의 목록을 참조 하세요. 합니다 [C 데이터 형식](../../../odbc/reference/appendixes/c-data-types.md) 부록 d: 데이터 형식에 대 한 섹션입니다.  
+ [입력] C 데이터 형식의 형식 식별자는 **TargetValuePtr* 버퍼입니다. 유효한 C 데이터 형식 및 형식 식별자의 목록을 참조 하세요. 합니다 [C 데이터 형식](../../../odbc/reference/appendixes/c-data-types.md) 섹션의 부록 d: 데이터 형식입니다.  
   
  하는 경우 *TargetType* SQL_ARD_TYPE, 형식 식별자는 카드가 SQL_DESC_CONCISE_TYPE 필드에 지정 된 드라이버 사용 됩니다. 하는 경우 *TargetType* SQL_APD_TYPE, 됩니다 **SQLGetData** 에 지정 된 동일한 C 데이터 형식을 사용 합니다 **SQLBindParameter**합니다. C 데이터 형식을 지정 하는 고, 그렇지 **SQLGetData** C 데이터 형식에 지정 된 재정의 **SQLBindParameter**합니다. SQL_C_DEFAULT 인 경우 드라이버 원본의 SQL 데이터 형식에 따라 기본 C 데이터 형식을 선택 합니다.  
   
@@ -105,8 +105,8 @@ SQLRETURN SQLGetData(
 |07009|잘못 된 설명자 인덱스입니다.|인수에 지정 된 값 *Col_or_Param_Num* 0 되었으며 SQL_ATTR_USE_BOOKMARKS 문 특성 SQL_UB_OFF로 설정 되었습니다.<br /><br /> 인수에 지정 된 값 *Col_or_Param_Num* 결과 집합의 열 수보다 큽니다.<br /><br /> 합니다 *Col_or_Param_Num* 값을 사용할 수 있는 매개 변수의 서 수와 같지 없습니다.<br /><br /> (DM) 지정된 된 열에 바인딩 되었습니다. 이 설명은 SQL_GETDATA_EXTENSIONS 옵션에 대 한 SQL_GD_BOUND 비트 마스크를 반환 하는 드라이버에 적용 되지 않습니다 **SQLGetInfo**합니다.<br /><br /> (DM) 지정 된 열의 숫자가 가장 높은 바인딩된 열의 개수 보다 작거나 합니다. 이 설명은 SQL_GETDATA_EXTENSIONS 옵션에 대 한 SQL_GD_ANY_COLUMN 비트 마스크를 반환 하는 드라이버에 적용 되지 않습니다 **SQLGetInfo**합니다.<br /><br /> (DM) 응용 프로그램에 이미 호출 **SQLGetData** 현재 행에 대 한 현재 호출에 지정 된 열의 숫자가, 이전 호출에서 지정 된 열의 수보다 작 및 드라이버를 SQL_ 반환 하지 않습니다 SQL_GETDATA_EXTENSIONS 옵션에 대 한 비트 마스크 GD_ANY_ORDER **SQLGetInfo**합니다.<br /><br /> (DM)는 *TargetType* 인수가 SQL_ARD_TYPE, 및 *Col_or_Param_Num* 설명자 레코드는 카드가 일관성 검사에 실패 합니다.<br /><br /> (DM)는 *TargetType* 인수가 SQL_ARD_TYPE, 및는 카드가 SQL_DESC_COUNT 필드에 값이 보다 작은 *Col_or_Param_Num* 인수입니다.|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버는 연결 된 데이터 원본 간의 통신 링크 하지 못했습니다.|  
 |22002|지표 변수가 필요 하지만 제공 되지|*StrLen_or_IndPtr* 가 null 포인터 및 NULL 데이터를 검색 합니다.|  
-|22003|숫자 값 범위를 벗어났습니다.|열에 대 한 숫자 값 (숫자 또는 문자열)으로 반환 되 었어야 하지만 (소수) 대신 전체 부분 숫자를 자를 수입니다.<br /><br /> 자세한 내용은 [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)합니다.|  
-|22007|잘못 된 날짜/시간 형식|결과 집합의 문자 열 C 날짜, 시간 또는 타임 스탬프 구조에 바인딩 되었습니다 및 각각 열에 값이는 잘못 된 날짜, 시간 또는 타임 스탬프입니다. 자세한 내용은 [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)합니다.|  
+|22003|숫자 값 범위를 벗어났습니다.|열에 대 한 숫자 값 (숫자 또는 문자열)으로 반환 되 었어야 하지만 (소수) 대신 전체 부분 숫자를 자를 수입니다.<br /><br /> 자세한 내용은 참조 하세요. [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)합니다.|  
+|22007|잘못 된 날짜/시간 형식|결과 집합의 문자 열 C 날짜, 시간 또는 타임 스탬프 구조에 바인딩 되었습니다 및 각각 열에 값이는 잘못 된 날짜, 시간 또는 타임 스탬프입니다. 자세한 내용은 참조 하세요. [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)합니다.|  
 |22012|0으로 나누기|0으로 나누기에서 발생 하는 산술 식의 값이 반환 되었습니다.|  
 |22015|간격 필드 오버플로|정확한 수치 또는 간격 SQL 형식에서 C 간격 유형을 할당 선행 필드에 유효 자릿수 손실이 발생 합니다.<br /><br /> 간격 C 형식으로 데이터를 반환 하는 경우 C 간격 유형으로 SQL 형식의 값 표현 방식이 없기 있었습니다.|  
 |22018|캐스트 사양의 문자 값|C 문자 버퍼에 반환 된 결과 집합의 문자 열 및 열 버퍼의 문자 집합에 표현이 없는 된 문자를 포함 합니다.<br /><br /> C 형식이는 정확 하거나 대략적인 숫자, datetime, 또는 간격 데이터 형식 열의 SQL 형식이 된 문자 데이터 형식입니다. 하는 열에 값을 바인딩된 C 형식의 유효한 리터럴이 없습니다.|  
@@ -121,7 +121,7 @@ SQLRETURN SQLGetData(
 |HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|인수에 대 한 지정 된 값 (DM) *BufferLength* 0 보다 작습니다.<br /><br /> 인수에 대 한 지정 된 값 *BufferLength* 보다 작은 4 합니다 *Col_or_Param_Num* 인수를 0으로 설정 된 했는데 드라이버는 ODBC 2 *.x* 드라이버입니다.|  
 |HY109|잘못 된 커서 위치|커서가 있었기 (하 여 **SQLSetPos**, **SQLFetch**를 **SQLFetchScroll**, 또는 **SQLBulkOperations**)는 삭제 된 행 또는 가져올 수 없습니다.<br /><br /> 커서는 정방향 전용 커서 되었으며 행 집합 크기가 1 보다 큰 것입니다.|  
 |HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용으로 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 하세요. [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.|  
-|HYC00|선택적 기능이 구현 되지 않았습니다|드라이버 또는 데이터 원본 사용을 지원 하지 않습니다 **SQLGetData** 에서 여러 행을 갖는 **SQLFetchScroll**합니다. 이 설명은 SQL_GETDATA_EXTENSIONS 옵션에 대 한 SQL_GD_BLOCK 비트 마스크를 반환 하는 드라이버에 적용 되지 않습니다 **SQLGetInfo**합니다.<br /><br /> 드라이버 또는 데이터 원본 조합에 의해 지정 된 변환을 지원 하지 않습니다 합니다 *TargetType* 인수 및 해당 열의 SQL 데이터 형식입니다. 이 오류는 SQL 데이터 형식의 열 드라이버별 SQL 데이터 형식에 매핑한 경우에 적용 됩니다.<br /><br /> 드라이버는 ODBC 2만 지원 *.x*, 및 인수 *TargetType* 다음 중 하나 였습니다.<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> C 간격 데이터 형식 중 하나에 나열 [C 데이터 형식](../../../odbc/reference/appendixes/c-data-types.md) 부록 d: 데이터 형식에서입니다.<br /><br /> 드라이버 3.50, 및 인수 이전 ODBC 버전 지원 *TargetType* SQL_C_GUID 되었습니다.|  
+|HYC00|선택적 기능이 구현 되지 않았습니다|드라이버 또는 데이터 원본 사용을 지원 하지 않습니다 **SQLGetData** 에서 여러 행을 갖는 **SQLFetchScroll**합니다. 이 설명은 SQL_GETDATA_EXTENSIONS 옵션에 대 한 SQL_GD_BLOCK 비트 마스크를 반환 하는 드라이버에 적용 되지 않습니다 **SQLGetInfo**합니다.<br /><br /> 드라이버 또는 데이터 원본 조합에 의해 지정 된 변환을 지원 하지 않습니다 합니다 *TargetType* 인수 및 해당 열의 SQL 데이터 형식입니다. 이 오류는 SQL 데이터 형식의 열 드라이버별 SQL 데이터 형식에 매핑한 경우에 적용 됩니다.<br /><br /> 드라이버는 ODBC 2만 지원 *.x*, 및 인수 *TargetType* 다음 중 하나 였습니다.<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> C 간격 데이터 형식 중 하나에 나열 [C 데이터 형식](../../../odbc/reference/appendixes/c-data-types.md) 부록 d: 데이터 형식입니다.<br /><br /> 드라이버 3.50, 및 인수 이전 ODBC 버전 지원 *TargetType* SQL_C_GUID 되었습니다.|  
 |HYT01|연결 제한 시간 만료 됨|데이터 원본 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|(DM)에 해당 하는 드라이버는 *StatementHandle* 함수를 지원 하지 않습니다.|  
 |IM017|비동기 알림 모드로 폴링 되지|알림 모델을 사용할 때마다 폴링 비활성화 됩니다.|  
@@ -153,11 +153,11 @@ SQLRETURN SQLGetData(
   
  경우는 *TargetType* 인수가 SQL_DESC_DATETIME_INTERVAL_PRECISION 및 자릿수가 SQL_DESC_PRECISION 필드에 설정 된 대로 기본 간격 선행 정밀도 (2) 및 기본 간격 초 전체 자릿수 (6) 간격 데이터 형식 각각은 카드가 데이터에 사용 됩니다. 경우는 *TargetType* 인수는 SQL_C_NUMERIC 데이터 형식, 기본 전체 자릿수 (드라이버 정의 됨) 및 (0), 확장 된 카드가의 SQL_DESC_PRECISION 및 자릿수가 SQL_DESC_SCALE 필드에 설정 된 대로 기본, 데이터에 사용 됩니다. 모든 기본 전체 자릿수 또는 소수 적합 하지 않은 경우 응용 프로그램이 명시적으로 설정 해야 적절 한 설명자 필드를 호출한 **SQLSetDescField** 하거나 **SQLSetDescRec**합니다. SQL_DESC_CONCISE_TYPE 필드 SQL_C_NUMERIC 호출을 설정할 수 있습니다 **SQLGetData** 사용 하 여를 *TargetType* 설명자 필드에 전체 자릿수 및 소수 자릿수 값이 그러면 SQL_ARD_TYPE의 인수 사용할 수 있습니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC 2에서 *.x*, 응용 프로그램 집합 *TargetType* SQL_C_DATE, SQL_C_TIME, 또는 SQL_C_TIMESTAMP 나타내는 \* *TargetValuePtr* 날짜, 시간 또는 타임 스탬프 구조입니다. ODBC 3에서 *.x*, 응용 프로그램 집합 *TargetType* SQL_C_TYPE_DATE, SQL_C_TYPE_TIME, 또는 SQL_C_TYPE_TIMESTAMP 합니다. 드라이버 관리자를 사용 하면 적절 한 매핑이 필요한 경우 기반 응용 프로그램 및 드라이버 버전에 있습니다.  
   
 ## <a name="retrieving-variable-length-data-in-parts"></a>파트의 가변 길이 데이터를 검색합니다.  
- **SQLGetData** 부분에서 가변 길이 데이터가 포함 된 열에서 데이터를 검색할 수-때 SQL 데이터 형식의 열 식별자 즉, SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_WCHAR, SQL_WVARCHAR, SQL_ WLONGVARCHAR, SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY, 또는 가변 길이 유형에 대 한 드라이버 관련 식별자입니다.  
+ **SQLGetData** 가변 길이 데이터가 들어 있는 파트 즉, SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_WCHAR, SQL_WVARCHAR, SQL_ 식별자는 SQL 데이터 형식 열의 경우 열에서 데이터를 검색할 수 WLONGVARCHAR, SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY, 또는 가변 길이 유형에 대 한 드라이버 관련 식별자입니다.  
   
  일부 열에서 데이터를 검색할 응용 프로그램 호출 **SQLGetData** 여러 번의 연속 해 서 동일한 열에 대 한 합니다. 호출할 때마다 **SQLGetData** 데이터의 다음 부분을 반환 합니다. 것은 문자 데이터의 중간 부분에서 null 종료 문자를 제거 하도록 파트를 어셈블해야 하기 때문에 응용 프로그램입니다. 종결 문자에 대 한 충분 한 버퍼를 할당할 지 여부를 반환 하려면 더 많은 데이터가 있으면 **SQLGetData** SQL_SUCCESS_WITH_INFO 및 SQLSTATE 01004 (데이터 잘림)를 반환 합니다. 데이터의 마지막 부분을 반환할 때 **SQLGetData** 관계 없이 SQL_SUCCESS를 반환 합니다. SQL_NO_TOTAL 아니고 0 있으므로 응용 프로그램은 다음 응용 프로그램 버퍼에 데이터의 양을 유효 알 수 없습니다 열에서 데이터를 검색할 유효한 마지막 호출에서 반환할 수 있습니다. 하는 경우 **SQLGetData** 라고 그러면 SQL_NO_DATA를 반환할 합니다. 자세한 내용은 다음 섹션에서는 "SQLGetData 사용 하 여 검색 데이터입니다."을 참조 하세요.  
   
@@ -194,7 +194,7 @@ SQLRETURN SQLGetData(
   
 7.  배치에 있는 데이터의 길이 \* *StrLen_or_IndPtr*합니다. 하는 경우 *StrLen_or_IndPtr* 가 null 포인터 **SQLGetData** 길이 반환 하지 않습니다.  
   
-    -   문자 또는 이진 데이터에 대 한이 값은 길이 데이터의 변환 후로 인해 자르기 전에 *BufferLength*합니다. 드라이버는 경우에 따라 긴 데이터의 경우 변환 후 데이터의 길이 확인할 수 없으면, SQL_SUCCESS_WITH_INFO를 반환 하 고 길이 SQL_NO_TOTAL를 설정 합니다. (마지막 호출 **SQLGetData** 항상 0 또는 SQL_NO_TOTAL 아니라 데이터의 길이 반환 해야 합니다.) SQL_ATTR_MAX_LENGTH 문으로 인해 데이터가 잘렸습니다 경우 특성을이 특성의 값, 실제 길이 달리-에 위치한 \* *StrLen_or_IndPtr*합니다. 드라이버가 어떤 실제 길이 알아내는 방법이 아니므로 변환 하기 전에 서버에서 데이터를 자를이 특성은 때문입니다. 때 **SQLGetData** 현재 호출의 시작 부분에 사용할 수 있는 데이터의 길이 동일한 열에 대 한 연속 해 서에서 여러 번 호출 이며, 길이 줄입니다 각 후속 호출을 사용 하 여 합니다.  
+    -   문자 또는 이진 데이터에 대 한이 값은 길이 데이터의 변환 후로 인해 자르기 전에 *BufferLength*합니다. 드라이버는 경우에 따라 긴 데이터의 경우 변환 후 데이터의 길이 확인할 수 없으면, SQL_SUCCESS_WITH_INFO를 반환 하 고 길이 SQL_NO_TOTAL를 설정 합니다. (마지막 호출 **SQLGetData** 항상 0 또는 SQL_NO_TOTAL 아니라 데이터의 길이 반환 해야 합니다.) 데이터가 SQL_ATTR_MAX_LENGTH 문 특성으로 인해 잘렸습니다,--실제 길이 달리이 특성의 값에 배치 됩니다 \* *StrLen_or_IndPtr*합니다. 드라이버가 어떤 실제 길이 알아내는 방법이 아니므로 변환 하기 전에 서버에서 데이터를 자를이 특성은 때문입니다. 때 **SQLGetData** 현재 호출의 시작 부분에 사용할 수 있는 데이터의 길이 동일한 열에 대 한 연속 해 서에서 여러 번 호출 이며, 길이 줄입니다 각 후속 호출을 사용 하 여 합니다.  
   
     -   다른 모든 데이터 형식에 대 한이 값은 길이 데이터의 변환 후 즉, 해당 데이터를 변환 하는 형식의 크기입니다.  
   

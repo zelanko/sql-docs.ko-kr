@@ -16,17 +16,17 @@ ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b1cc46a4f9f4e6897971f45d8947c3eff6f830f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 70b092f81030c7905fe1d771844369f2d59317b9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072243"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354169"
 ---
 # <a name="debugging-clr-database-objects"></a>CLR 데이터베이스 개체 디버깅
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 데이터베이스의 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 및 CLR(공용 언어 런타임) 개체 디버깅을 지원합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 디버깅에서 중요한 점은, 설치 및 사용이 쉽고 SQL Server 디버거를 Microsoft Visual Studio 디버거와 통합할 수 있다는 것입니다. 또한 디버깅이 여러 언어에서 작동합니다. 사용자는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 CLR 개체로 매끄럽게 한 단계씩 코드를 실행할 수 있으며 그 반대의 경우도 가능합니다. 관리되는 데이터베이스 개체를 디버깅할 때는 SQL Server Management Studio의 Transact-SQL 디버거를 사용할 수 없지만 Visual Studio의 디버거를 사용하여 개체를 디버깅할 수 있습니다. Visual Studio의 관리되는 데이터베이스 개체 디버깅은 서버에서 실행 중인 루틴에서 "step into" 및 "step over" 문과 같은 대부분의 일반적인 디버깅 기능을 지원합니다. 디버거는 디버깅하는 동안 중단점을 설정하고, 호출 스택을 검사하고, 변수를 검사하고, 변수 값을 수정할 수 있습니다. Visual Studio .NET 2003은 CLR 통합 프로그래밍 또는 디버깅에 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에는 .NET Framework가 미리 설치되어 있으며 Visual Studio .NET 2003에서는 .NET Framework 2.0 어셈블리를 사용할 수 없습니다.  
   
- Visual Studio를 사용 하 여 관리 되는 코드를 디버깅 하는 방법에 대 한 자세한 내용은 참조는 "[Debugging Managed Code](http://go.microsoft.com/fwlink/?LinkId=120377)" Visual Studio 설명서의 항목입니다.  
+ Visual Studio를 사용 하 여 관리 되는 코드를 디버깅 하는 방법에 대 한 자세한 내용은 참조는 "[Debugging Managed Code](https://go.microsoft.com/fwlink/?LinkId=120377)" Visual Studio 설명서의 항목입니다.  
   
 ## <a name="debugging-permissions-and-restrictions"></a>디버깅 권한 및 제한 사항  
  디버깅은 높은 권한이 필요한 작업, 및의 멤버만 합니다 **sysadmin** 고정된 서버 역할을 하므로 수행할 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "48072243"
 ## <a name="overview-of-debugging-managed-database-objects"></a>관리되는 데이터베이스 개체 디버깅 개요  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 디버깅은 각 연결 모델을 따릅니다. 디버거는 자신이 연결된 클라이언트 연결에 대해서만 작업을 감지하고 디버깅할 수 있습니다. 디버거 기능은 연결 유형의 제한을 받지 않으므로 TDS(Tabular Data Stream) 및 HTTP 연결을 모두 디버깅할 수 있습니다. 하지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 기존 연결 디버깅은 허용되지 않습니다. 디버깅은 서버에서 실행 중인 루틴에서 대부분의 일반적인 디버깅 기능을 지원합니다. 디버거와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 간의 상호 작용은 분산 COM(구성 요소 개체 모델)을 통해 이루어집니다.  
   
- 자세한 내용 및 관리 되는 저장된 프로시저, 함수, 트리거, 사용자 정의 형식 및 집계를 디버깅 하는 방법에 대 한 시나리오에 대 한 참조를 "[SQL Server CLR 통합 데이터베이스 디버깅](http://go.microsoft.com/fwlink/?LinkId=120378)" Visual studio에서 항목 설명서입니다.  
+ 자세한 내용 및 관리 되는 저장된 프로시저, 함수, 트리거, 사용자 정의 형식 및 집계를 디버깅 하는 방법에 대 한 시나리오에 대 한 참조를 "[SQL Server CLR 통합 데이터베이스 디버깅](https://go.microsoft.com/fwlink/?LinkId=120378)" Visual studio에서 항목 설명서입니다.  
   
  Visual Studio를 원격 개발, 디버깅 및 개발에 사용하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 TCP/IP 네트워크 프로토콜을 사용할 수 있어야 합니다. 서버에서 TCP/IP 프로토콜을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md)합니다.  
   

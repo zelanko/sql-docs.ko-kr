@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server Agent]
@@ -16,12 +16,12 @@ ms.assetid: 7aba19ff-72b3-45f6-8e54-23f4988d63a8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5489dec3f665f56ebd267ccd24ec069a3906bdbf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 379877d3a08c60a293b96c5c57d55a2894ba0a79
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187323"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768385"
 ---
 # <a name="handle-multiple-job-steps"></a>다중 작업 단계 처리
   작업에 둘 이상의 작업 단계가 있는 경우에는 작업 단계가 실행되는 순서를 지정해야 합니다. 이를 *흐름 제어**라고 합니다.* 언제든지 새 작업 단계를 추가하고 작업 단계의 흐름을 다시 정렬할 수 있습니다. 변경 내용은 다음에 작업이 실행될 때 적용됩니다. 다음 그림에서는 데이터베이스 백업 작업에 대한 흐름 제어를 보여 줍니다.  

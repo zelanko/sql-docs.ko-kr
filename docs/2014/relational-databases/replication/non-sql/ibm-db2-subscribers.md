@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - non-SQL Server Subscribers, IBM DB2
@@ -17,12 +16,12 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bedd4c228f540cd4277b4f77750e797b70424c30
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155363"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356666"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server와 함께 제공되는 OLE DB 공급자를 통해 IBM DB2/AS 400, DB2/MVS 및 DB2/Universal Database에 대한 밀어넣기 구독을 지원합니다.  
@@ -32,11 +31,11 @@ ms.locfileid: "48155363"
   
 1.  배포자에 최신 버전의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for DB2를 설치합니다.  
   
-    -   사용 중인 경우 [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]에 [SQL Server 2008 다운로드](http://go.microsoft.com/fwlink/?LinkId=149256) 웹 페이지를 **관련 다운로드** 섹션에서 최신 버전의 Microsoft SQL Server 2008 기능 팩에 대 한 링크를 클릭 합니다. **Microsoft SQL Server 2008 기능 팩** 웹 페이지에서 **Microsoft OLE DB Provider for DB2**를 검색합니다.  
+    -   [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]을 사용하는 경우 [SQL Server 2008 다운로드](https://go.microsoft.com/fwlink/?LinkId=149256) 웹 페이지의 **관련 다운로드(Related Downloads)** 섹션에서 Microsoft SQL Server 2008 기능 팩의 최신 버전에 대한 링크를 클릭합니다. **Microsoft SQL Server 2008 기능 팩** 웹 페이지에서 **Microsoft OLE DB Provider for DB2**를 검색합니다.  
   
-    -   [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Standard를 사용하는 경우 해당 공급자가 포함된 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] HIS(Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]) 서버의 최신 버전을 설치합니다.  
+    -   [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Standard를 사용하는 경우 해당 공급자가 포함된 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] HIS(Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ) 서버의 최신 버전을 설치합니다.  
   
-     공급자를 설치 하는 것 외에도 다음 단계에서 사용 되는 데이터 액세스 도구를 설치 하는 권장 (다운로드 시 기본적으로 설치 됩니다 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Enterprise). 데이터 액세스 도구 설치 및 사용 방법은 공급자 설명서나 HIS 설명서를 참조하십시오.  
+     공급자 설치 외에 다음 단계에서 사용되는 데이터 액세스 도구도 설치하는 것이 좋습니다. 이 도구는 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Enterprise 다운로드 시 기본적으로 설치됩니다. 데이터 액세스 도구 설치 및 사용 방법은 공급자 설명서나 HIS 설명서를 참조하십시오.  
   
 2.  구독자에 대한 연결 문자열을 만듭니다. 연결 문자열은 일반적인 텍스트 편집기로 만들 수 있지만 데이터 액세스 도구를 사용하는 것이 좋습니다. 데이터 액세스 도구에서 문자열을 만들려면 다음 작업을 수행하십시오.  
   

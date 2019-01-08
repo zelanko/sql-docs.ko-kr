@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - HostName Property (SqlService Class)
@@ -20,12 +18,12 @@ ms.assetid: 3df0ca15-9eca-4cbd-8c39-cb00be6a0215
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 03c05758f9c535a0f1da90e0022ed3d14af9d621
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c27c0e32953833a8b7438501d1d42a617cae2cc0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092013"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357492"
 ---
 # <a name="hostname-property-sqlservice-class"></a>HostName 속성(SqlService 클래스)
   서비스의 호스트 이름을 가져옵니다.  
@@ -48,6 +46,6 @@ object
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>관련 항목  
- [서비스 시작 및 중지](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

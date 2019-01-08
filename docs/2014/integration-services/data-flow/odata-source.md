@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.ODATASOURCE.F1
@@ -13,18 +12,18 @@ ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 788a644f191fe84bf8bfe2dc580b62fb345493a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 331baa7fd450b1a49879f7f1be3d985425ad1267
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188983"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363455"
 ---
 # <a name="odata-source"></a>OData 원본
   SSIS 패키지의 OData 원본 구성 요소를 사용하여 Open Data Protocol(OData) 서비스에서 데이터를 사용할 수 있습니다. 이 구성 요소는 OData v2 및 v3 프로토콜뿐만 아니라 ATOM 및 JSON 데이터 형식을 지원합니다.  
   
 > [!NOTE]  
->  OData 원본을 사용하여 SharePoint 목록에서 읽을 수 있습니다. SharePoint 서버의 모든 목록을 보려면, 다음 URL을 사용 합니다: http://\<서버 > / /_vti_bin/listdata.svc. 합니다. SharePoint URL 규칙에 대한 자세한 내용은 [SharePoint Foundation REST 인터페이스](http://msdn.microsoft.com/library/ff521587.aspx)를 참조하십시오.  
+>  OData 원본을 사용하여 SharePoint 목록에서 읽을 수 있습니다. SharePoint 서버의 모든 목록을 보려면, 다음 URL을 사용 합니다: http://\<서버 > / /_vti_bin/listdata.svc. 합니다. SharePoint URL 규칙에 대한 자세한 내용은 [SharePoint Foundation REST 인터페이스](https://msdn.microsoft.com/library/ff521587.aspx)를 참조하십시오.  
   
 ## <a name="odata-format"></a>OData 형식  
  대부분의 OData 서비스는 여러 형식으로 결과를 반환합니다. $format 쿼리 옵션을 사용하여 결과 집합의 형식을 지정할 수 있습니다. JSON 및 JSON Light와 같은 형식은 ATOM/XML보다 효율적이며 많은 양의 데이터를 전송하는 경우 더 나은 성능을 제공할 수 있습니다. 다음 표에서는 샘플 테스트의 결과를 제공합니다. 표에 나와 있듯이 ATOM에서 JSON으로 전환하는 경우 성능이 30-53% 향상되었고, ATOM에서 새로운 JSON Light 형식(WCF Data Services 5.1에서 사용 가능)으로 전환하는 경우에는 성능이 67% 향상되었습니다.  
@@ -54,7 +53,7 @@ ms.locfileid: "48188983"
   
 -   [OData 원본 속성](odata-source-properties.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [OData 연결 관리자](../connection-manager/odata-connection-manager.md)  
   
   

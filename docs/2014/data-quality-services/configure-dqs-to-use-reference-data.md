@@ -14,20 +14,20 @@ ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff622236100399f43b8420bb71a7ae4d5a915013
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: da0514f10e4669d5e1e0bd20469b5922d38f2d70
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030111"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367255"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>참조 데이터를 사용하도록 DQS 구성
   이 항목에서는 데이터를 정리하는 데 참조 데이터를 사용하도록 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )를 구성하는 방법에 대해 설명합니다. Windows Azure Marketplace 또는 다이렉트 온라인 타사 참조 데이터 공급자의 참조 데이터를 사용할 수 있습니다.  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
- Marketplace의 참조 데이터를 사용하려면 유효한 Marketplace 계정 키가 있어야 합니다. Marketplace 계정 키를 만드는 방법은 [계정 만들기](http://go.microsoft.com/fwlink/?LinkId=212936)(http://go.microsoft.com/fwlink/?LinkId=212936))를 참조하세요. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면의 **관리** 에서 **구성** 을 클릭한 다음 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 참조 데이터 **탭에서** DataMarket 계정 ID 만들기 **를 클릭하여** 내에서 Marketplace 계정 키를 만들 수도 있습니다.  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
+ Marketplace의 참조 데이터를 사용하려면 유효한 Marketplace 계정 키가 있어야 합니다. Marketplace 계정 키를 만드는 방법은 [계정 만들기](https://go.microsoft.com/fwlink/?LinkId=212936)(https://go.microsoft.com/fwlink/?LinkId=212936))를 참조하세요. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면의 **관리** 에서 **구성** 을 클릭한 다음 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 참조 데이터 **탭에서** DataMarket 계정 ID 만들기 **를 클릭하여** 내에서 Marketplace 계정 키를 만들 수도 있습니다.  
   
 ###  <a name="Security"></a> 보안  
   
@@ -76,7 +76,7 @@ ms.locfileid: "51030111"
   
  이제 DQS에서 새로 구성한 다이렉트 온라인 타사 참조 데이터 서비스 공급자의 참조 데이터 서비스를 사용할 준비가 완료되었습니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 참조 데이터를 사용하도록 DQS를 구성한 후  
+##  <a name="FollowUp"></a> 후속편: 참조 데이터를 사용하도록 DQS를 구성한 후  
  이제 방금 구성한 데이터 공급자에서 사용할 수 있는 참조 데이터에 필요한 기술 자료 도메인을 매핑해야 합니다. 이렇게 하려면 참조 [참조 데이터에 도메인 또는 복합 도메인 연결](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)합니다.  
   
   

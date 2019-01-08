@@ -22,12 +22,12 @@ ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c682b29a4265b9c6955b440dc45e4920ca87d081
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f70b3367d2ca0b6c896c970f29b179dc969640c9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223383"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366645"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>SQL Server 2014 빠른 시작 설치
     
@@ -82,7 +82,7 @@ ms.locfileid: "48223383"
   
      참조 [SQL Server 장애 조치 클러스터 설치](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md) 설치 하는 방법에 대 한 절차 정보 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 장애 조치 클러스터입니다.  
   
- 기본적으로 예제 데이터베이스와 예제 코드는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치의 일부로 설치되지 않습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express Edition 이외의 버전을 위한 샘플 데이터베이스 및 샘플 코드를 설치하려면 [CodePlex 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=87843)를 참조하세요. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 예제 데이터베이스 및 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]예제 코드에 대한 지원 정보를 확인하려면 [데이터베이스 및 예제 개요](http://go.microsoft.com/fwlink/?LinkId=110391)를 참조하십시오.  
+ 기본적으로 예제 데이터베이스와 예제 코드는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치의 일부로 설치되지 않습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express Edition 이외의 버전을 위한 샘플 데이터베이스 및 샘플 코드를 설치하려면 [CodePlex 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=87843)를 참조하세요. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 예제 데이터베이스 및 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]예제 코드에 대한 지원 정보를 확인하려면 [데이터베이스 및 예제 개요](https://go.microsoft.com/fwlink/?LinkId=110391)를 참조하십시오.  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-installation"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치 마법사와 명령 프롬프트 중 어느 쪽을 사용하든 관계없이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치에는 다음 단계가 하나 이상 포함됩니다.  
@@ -129,7 +129,7 @@ ms.locfileid: "48223383"
 |Description|항목|  
 |-----------------|-----------|  
 |[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 다양한 구성 요소 설치에 대한 항목 및 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 설치에 대한 절차 항목 링크를 제공합니다.|[SQL Server 2014 설치](../database-engine/install-windows/install-sql-server.md)|  
-|Windows Server Core에 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]를 설치하려면 이 항목을 검토합니다.|[Server Core에 SQL Server 2014 설치](../database-engine/install-windows/install-sql-server-on-server-core.md)|  
+|Windows Server Core에 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 를 설치하려면 이 항목을 검토합니다.|[Server Core에 SQL Server 2014 설치](../database-engine/install-windows/install-sql-server-on-server-core.md)|  
 |기존 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 인스턴스에 개별 기능을 추가하려면 이 항목을 검토하십시오|[SQL server 2014 인스턴스에 기능 추가 &#40;설치&#41;](../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)|  
 |새 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스를 만들려면 이 항목을 검토하십시오.|[새 SQL Server 장애 조치(failover) 클러스터 만들기&#40;설치 프로그램&#41;](../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |이 항목에서는 기존 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스에서 노드를 관리합니다.|[SQL Server 장애 조치(Failover) 클러스터에서 노드 추가 또는 제거&#40;설치&#41;](../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
@@ -146,7 +146,7 @@ ms.locfileid: "48223383"
 |Description|항목|  
 |-----------------|-----------|  
 |이 항목에 있는 정보를 사용하여 방화벽의 포트 차단을 해제하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 또는 SharePoint용 PowerPivot에 대한 액세스를 허용하도록 결정할 수 있습니다. 이 항목에서 제공하는 단계를 수행하여 포트와 방화벽 설정을 모두 구성할 수 있습니다.|[Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
-|이 항목에서는 방화벽 구성의 개요를 제공하고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리자에게 유용한 정보를 요약하여 설명합니다.|[SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
+|이 항목에서는 방화벽 구성의 개요를 제공하고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리자에게 유용한 정보를 요약하여 설명합니다.|[Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |이 항목에서는 다중 홈 환경에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 네트워크 연결을 제공하기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 와 고급 보안이 포함된 Windows 방화벽을 구성하는 방법에 대해 설명합니다.|[SQL Server 액세스를 허용하도록 다중 홈 컴퓨터 구성](../../2014/sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|  
   
 ###  <a name="BKMK_Uninstalling"></a> 제거 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  

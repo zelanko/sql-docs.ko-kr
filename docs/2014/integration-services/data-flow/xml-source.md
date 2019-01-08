@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsource.f1
@@ -17,12 +16,12 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3a2e2ff2fd28004d924f2b06a19b6bab3c52914
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e8d49827c9f533c75933a316ff3b655d3f13025
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155373"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353899"
 ---
 # <a name="xml-source"></a>XML 원본
   XML 원본은 XML 데이터 파일을 읽고 원본 출력의 열을 해당 데이터로 채웁니다.  
@@ -66,7 +65,7 @@ ms.locfileid: "48155373"
 ## <a name="configuration-of-the-xml-source"></a>XML 원본 구성  
  XML 원본은 3가지 데이터 액세스 모드를 지원합니다. XML 데이터 파일의 파일 위치, 이 파일 위치가 포함된 변수 또는 XML 데이터가 포함된 변수를 지정할 수 있습니다.  
   
- XML 소스에 포함 된 `XMLData` 및 `XMLSchemaDefinition` 를 패키지 로드 시 속성 식을 통해 업데이트할 수 있는 사용자 지정 속성입니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../expressions/integration-services-ssis-expressions.md), [패키지에서 속성 식 사용](../expressions/use-property-expressions-in-packages.md) 및 [XML 원본 사용자 지정 속성](xml-source-custom-properties.md)을 참조하세요.  
+ XML 원본은 패키지 로드 시 속성 식을 사용하여 업데이트할 수 있는 `XMLData` 및 `XMLSchemaDefinition` 사용자 지정 속성을 포함합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../expressions/integration-services-ssis-expressions.md), [패키지에서 속성 식 사용](../expressions/use-property-expressions-in-packages.md) 및 [XML 원본 사용자 지정 속성](xml-source-custom-properties.md)을 참조하세요.  
   
  XML 원본은 여러 개의 일반 출력과 여러 개의 오류 출력을 지원합니다.  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48155373"
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](../common-properties.md)  
+-   [공용 속성](../common-properties.md)  
   
 -   [XML 원본 사용자 지정 속성](xml-source-custom-properties.md)  
   
@@ -96,6 +95,6 @@ ms.locfileid: "48155373"
  [XML 원본을 사용하여 데이터 추출](xml-source.md)  
   
 ## <a name="related-content"></a>관련 내용  
- 큐레이트 응답, curatedviews.cloudapp.net에 [SSIS 패키지에 대한 XML 대상 만들기](http://go.microsoft.com/fwlink/?LinkId=321993)  
+ 큐레이트 응답, curatedviews.cloudapp.net에 [SSIS 패키지에 대한 XML 대상 만들기](https://go.microsoft.com/fwlink/?LinkId=321993)  
   
   

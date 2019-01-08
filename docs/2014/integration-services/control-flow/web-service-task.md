@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicetask.f1
@@ -15,12 +14,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a83900ff92611778bb5b71574a7e98ce5e6df18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee28bbfa3cea482f934b3491f51e0caf601f5465
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189193"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363165"
 ---
 # <a name="web-service-task"></a>웹 서비스 태스크
   웹 서비스 태스크는 웹 서비스 메서드를 실행합니다. 웹 서비스 태스크는 다음 용도로 사용할 수 있습니다.  
@@ -83,8 +82,8 @@ ms.locfileid: "48189193"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## <a name="related-content"></a>관련 내용  
- technet.microsoft.com의 비디오, [How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=259642)(방법: 웹 서비스 태스크를 사용하여 웹 서비스 호출(SQL Server 비디오))  
+ 비디오에서는 [방법: 웹 서비스 태스크 (SQL Server 비디오)를 사용 하 여 웹 서비스 호출](https://go.microsoft.com/fwlink/?LinkId=259642), technet.microsoft.com 합니다.  
   
- curatedviews.cloudapp.net의 큐레이트 응답, [스크립트를 사용하여 SSIS의 웹 서비스 사용](http://go.microsoft.com/fwlink/?LinkId=321996)  
+ curatedviews.cloudapp.net의 큐레이트 응답, [스크립트를 사용하여 SSIS의 웹 서비스 사용](https://go.microsoft.com/fwlink/?LinkId=321996)  
   
   

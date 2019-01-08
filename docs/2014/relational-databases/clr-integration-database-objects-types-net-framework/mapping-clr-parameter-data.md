@@ -26,12 +26,12 @@ ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8ba043e2c19a1fd835f04c5426c0518dec2831b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51e94f1cf42b8c40b4f0023371bc7a538bdba76f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148123"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357081"
 ---
 # <a name="mapping-clr-parameter-data"></a>CLR 매개 변수 데이터 매핑
   다음 표에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 CLR (공용 언어 런타임)에 있는 동등한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 `System.Data.SqlTypes` 네임 스페이스와 해당 기본 CLR에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
@@ -50,9 +50,9 @@ ms.locfileid: "48148123"
 |`DATETIMEOFFSET`|`None`|**DateTimeOffset, Nullable\<DateTimeOffset>**|  
 |`decimal`|`SqlDecimal`|**Decimal, Nullable\<10 진수 >**|  
 |`float`|`SqlDouble`|**Double, Nullable\<Double>**|  
-|`geography`|`SqlGeography`<br /><br /> `SqlGeography` SQL Server와 함께 설치 되 고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](http://go.microsoft.com/fwlink/?LinkId=131220)합니다.|없음|  
-|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` SQL Server와 함께 설치 되 고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](http://go.microsoft.com/fwlink/?LinkId=131220)합니다.|없음|  
-|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` SQL Server와 함께 설치 되 고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](http://go.microsoft.com/fwlink/?LinkId=131220)합니다.|없음|  
+|`geography`|`SqlGeography`<br /><br /> `SqlGeography` SQL Server와 함께 설치 되 고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](https://go.microsoft.com/fwlink/?LinkId=131220)합니다.|없음|  
+|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` SQL Server와 함께 설치 되 고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](https://go.microsoft.com/fwlink/?LinkId=131220)합니다.|없음|  
+|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` SQL Server와 함께 설치 되 고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](https://go.microsoft.com/fwlink/?LinkId=131220)합니다.|없음|  
 |`image`|없음|없음|  
 |`int`|`SqlInt32`|**Int32, Nullable\<Int32>**|  
 |`money`|`SqlMoney`|**Decimal, Nullable\<10 진수 >**|  
@@ -86,13 +86,13 @@ ms.locfileid: "48148123"
 ```csharp  
 [Microsoft.SqlServer.Server.SqlProcedure]  
 public static void PriceSum(out SqlInt32 value)  
-{ … }  
+{ ... }  
 ```  
   
 ```vb  
 <Microsoft.SqlServer.Server.SqlProcedure> _  
 Public Shared Sub PriceSum( <Out()> ByRef value As SqlInt32)  
-…  
+...  
 End Sub  
 ```  
   

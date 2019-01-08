@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing server properties
@@ -16,12 +15,12 @@ ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9028735d7c33220dc4a9728f5cb3171207e8eee5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83fc6db21fd2892ebbc42b329515a94b371cb1ce
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157863"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641544"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>서버 속성 보기 또는 변경(SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 SQL Server 구성 관리자를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]인스턴스의 속성을 보거나 변경하는 방법에 대해 설명합니다.  
@@ -155,10 +154,10 @@ GO
   
 4.  **SQL Server(\<***instancename***>) 속성** 대화 상자에서 **서비스** 탭 또는 **고급** 탭의 서버 속성을 변경한 다음 **확인**을 클릭합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 서버 속성을 변경한 후  
+##  <a name="FollowUp"></a> 후속편: 서버 속성을 변경한 후  
  일부 속성의 경우 변경 내용을 적용하려면 서버를 다시 시작해야 할 수도 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [SET 문&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statements-transact-sql)   
  [SERVERPROPERTY&#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)   

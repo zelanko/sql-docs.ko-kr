@@ -18,12 +18,12 @@ ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c0c65216c2a74653cb2752d0183b3d0635a6c3cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 320737c3a84eb1f01899c14dfb2f4c1eefb60856
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187963"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354466"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>지도(보고서 작성기 및 SSRS)
   지리적 배경에 대해 비즈니스 데이터를 시각화하기 위해 보고서에 지도를 추가할 수 있습니다. 선택하는 지도 유형은 보고서에 나타낼 정보에 따라 다릅니다. 위치만 표시하는 지도, 지역의 세대 수에 따라 거품 크기가 달라지는 거품형 지도, 각 상점에서 이윤이 가장 높은 제품에 따라 표식 스타일이 달라지는 표식 지도 또는 상점 간 경로를 표시하는 선 지도 등을 추가할 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "48187963"
   
  ![rs_MapElements](../media/rs-mapelements.gif "rs_MapElements")  
   
- 지도 사용을 즉시 시작하려면 [자습서: 지도 보고서&#40;보고서 작성기&#41;](../tutorial-map-report-report-builder.md) 또는 [보고서 예제(보고서 작성기 및 SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)를 참조하세요.  
+ 지도 사용을 즉시 시작, 참조 [자습서: 지도 보고서 &#40;보고서 작성기&#41; ](../tutorial-map-report-report-builder.md) 하거나 [보고서 예제 (보고서 작성기 및 SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)합니다.  
   
 > [!NOTE]  
 >  보고서와는 별도로 지도를 보고서 파트로 저장할 수 있습니다.  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -83,13 +83,13 @@ ms.locfileid: "48187963"
     > [!NOTE]  
     >  이 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 지도 제작 기능은 미 통계국([http://www.census.gov/](http://www.census.gov/)). TIGER/Line Shapefile은 Census MAF/TIGER 데이터베이스에서 선택한 지리 및 지도 정보를 추출한 것입니다. TIGER/Line Shapefile은 미 통계국에 요금을 지불하지 않고 사용할 수 있습니다. TIGER/Line Shapefile에 대한 자세한 내용은 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger)를 참조하십시오. TIGER/Line Shapefile의 경계 정보는 통계 데이터 수집 및 집계 목적으로만 사용되며 통계 목적의 설명 및 지정은 사법권이나 소유권 또는 수급권의 판결에 영향을 미치지 않고 법적인 토지 설명이 아닙니다. Census TIGER 및 TIGER/Line은 미 통계국의 등록 상표입니다.  
   
--   **ESRI 셰이프 파일.** ESRI 셰이프 파일은 ESRI(Environmental Systems Research Institute, Inc.) 셰이프 파일 공간 데이터 형식을 따르는 데이터를 포함합니다. ESRI 셰이프 파일은 파일 집합입니다. .shp 파일의 데이터는 지리적 또는 기하학적 모양을 지정합니다. .dbf 파일의 데이터는 모양의 특성을 제공합니다. 디자인 뷰에서 지도를 보거나 보고서 서버에서 지도를 실행하려면 두 파일이 모두 같은 폴더에 있어야 합니다. 로컬 파일 시스템에서 .shp 파일의 공간 데이터를 추가하면 이 공간 데이터가 보고서에 포함됩니다. 런타임에 동적으로 공간 데이터를 검색하려면 셰이프 파일을 보고서 서버로 업로드한 다음 공간 데이터 원본으로 지정합니다. 자세한 내용은 [Finding ESRI Shapefiles for a Map](http://go.microsoft.com/fwlink/?linkid=178814)을 참조하십시오.  
+-   **ESRI 셰이프 파일.** ESRI 셰이프 파일은 ESRI(Environmental Systems Research Institute, Inc.) 셰이프 파일 공간 데이터 형식을 따르는 데이터를 포함합니다. ESRI 셰이프 파일은 파일 집합입니다. .shp 파일의 데이터는 지리적 또는 기하학적 모양을 지정합니다. .dbf 파일의 데이터는 모양의 특성을 제공합니다. 디자인 뷰에서 지도를 보거나 보고서 서버에서 지도를 실행하려면 두 파일이 모두 같은 폴더에 있어야 합니다. 로컬 파일 시스템에서 .shp 파일의 공간 데이터를 추가하면 이 공간 데이터가 보고서에 포함됩니다. 런타임에 동적으로 공간 데이터를 검색하려면 셰이프 파일을 보고서 서버로 업로드한 다음 공간 데이터 원본으로 지정합니다. 자세한 내용은 [Finding ESRI Shapefiles for a Map](https://go.microsoft.com/fwlink/?linkid=178814)을 참조하십시오.  
   
--   **데이터베이스에 저장된 SQL Server 공간 데이터.** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스에서 `SQLGeometry` 또는 `SQLGeography` 데이터 형식을 지정하는 쿼리를 사용할 수 있습니다. 자세한 내용은 [SQL Server 온라인 설명서](../../relational-databases/spatial/spatial-data-types-overview.md) 에서 [공간 데이터 형식 개요](http://go.microsoft.com/fwlink/?linkid=98335)를 참조하세요.  
+-   **데이터베이스에 저장된 SQL Server 공간 데이터.** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스에서 `SQLGeometry` 또는 `SQLGeography` 데이터 형식을 지정하는 쿼리를 사용할 수 있습니다. 자세한 내용은 [SQL Server 온라인 설명서](../../relational-databases/spatial/spatial-data-types-overview.md) 에서 [공간 데이터 형식 개요](https://go.microsoft.com/fwlink/?linkid=98335)를 참조하세요.  
   
      쿼리 디자이너에 나타나는 결과 집합에서 각 공간 데이터 행은 하나의 단위로 처리되고 단일 지도 요소에 저장됩니다. 예를 들어 결과 집합에서 한 행에 여러 개의 점이 정의되어 있으면 표시 속성이 해당 지도 요소의 모든 점에 적용됩니다.  
   
--   **만드는 사용자 지정 위치.** 위치를 포함된 점 계층에 포함된 점으로 직접 추가할 수 있습니다. 자세한 내용은 [지도에 사용자 지정 위치 추가 &#40;보고서 작성기 및 SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)합니다.  
+-   **만드는 사용자 지정 위치.** 위치를 포함된 점 계층에 포함된 점으로 직접 추가할 수 있습니다. 자세한 내용은 [지도에 사용자 지정 위치 추가&#40;보고서 작성기 및 SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)를 참조하세요.  
   
 #### <a name="spatial-data-in-design-view"></a>디자인 뷰의 공간 데이터  
  디자인 뷰에서 보고서 처리기는 지도 계층을 디자인하는 데 도움이 되는 예제 공간 데이터를 표시합니다. 표시되는 데이터는 공간 데이터의 사용 가능 여부에 따라 달라집니다.  
@@ -172,9 +172,9 @@ ms.locfileid: "48187963"
   
 -   보안 연결을 사용하여 Bing Maps 웹 서비스의 타일을 검색할지 여부  
   
- 단계별 지침은 [추가, 변경 또는 지도 또는 지도 계층을 삭제 &#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)합니다.  
+ 단계별 지침은 [지도 또는 지도 계층 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)를 참조하세요.  
   
- 타일에 대한 자세한 내용은 [Bing 지도 타일 시스템(Bing Maps Tiles System)](http://go.microsoft.com/fwlink/?linkid=147315)을 참조하십시오. 보고서에서 Bing 지도 타일을 사용하는 방법은 [추가 사용 조건(Additional Terms of Use)](http://go.microsoft.com/fwlink/?LinkId=151371) 및 [개인 정보 취급 방침](http://go.microsoft.com/fwlink/?LinkId=151372)을 참조하십시오.  
+ 타일에 대한 자세한 내용은 [Bing 지도 타일 시스템(Bing Maps Tiles System)](https://go.microsoft.com/fwlink/?linkid=147315)을 참조하십시오. 보고서에서 Bing 지도 타일을 사용하는 방법은 [추가 사용 조건(Additional Terms of Use)](https://go.microsoft.com/fwlink/?LinkId=151371) 및 [개인 정보 취급 방침](https://go.microsoft.com/fwlink/?LinkId=151372)을 참조하십시오.  
   
  
   
@@ -197,7 +197,7 @@ ms.locfileid: "48187963"
   
  ![rsMapLayerZone](../media/rsmaplayerzone.gif "rsMapLayerZone")  
   
- 지도 계층에 대 한 자세한 내용은 참조 하세요. [추가, 변경 또는 지도 또는 지도 계층을 삭제 &#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)합니다.  
+ 지도 계층에 대한 자세한 내용은 [지도 또는 지도 계층 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)를 참조하세요.  
   
 ### <a name="varying-display-properties-for-points-lines-and-polygons"></a>점, 선 및 다각형의 표시 속성 변경  
  지도 요소의 표시 옵션은 계층에 대한 규칙을 사용하여 계층 수준에서 설정하거나 개별 요소에서 설정할 수 있습니다. 예를 들어 계층의 모든 점에 대한 표시 속성을 설정하거나, 포함되었는지 여부와 관계없이 계층의 모든 점에 대한 표시 속성을 제어하는 규칙을 설정하거나, 특정 포함된 점에 대한 표시 속성 설정을 무시할 수 있습니다.  
@@ -244,36 +244,36 @@ ms.locfileid: "48187963"
   
  지도 보고서를 볼 때 원하는 결과가 표시되지 않으면 근본 원인은 다양한 문제에서 비롯될 수 있습니다. 각 문제를 확인하고 이해하려면 한 번에 한 계층에서 작업하는 것이 유용합니다. 지도 창을 사용하여 계층을 선택하고 계층의 표시 유형을 쉽게 설정/해제할 수 있습니다.  
   
- 지도 보고서 문제에 대한 자세한 내용은 [보고서 문제 해결: 지도 보고서&#40;보고서 작성기 및 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)를 참조하세요.  
+ 지도 보고서 문제에 대 한 자세한 내용은 참조 하세요. [보고서 문제 해결: 지도 보고서 &#40;보고서 작성기 및 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
 
   
 ##  <a name="HowTo"></a> 방법 도움말 항목  
  이 섹션에는 보고서에서 지도와 지도 계층을 사용하여 작업하는 방법을 단계별로 보여 주는 절차가 나열되어 있습니다.  
   
--   [추가, 변경 또는 삭제 지도 또는 지도 계층 &#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+-   [지도 또는 지도 계층 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
--   [지도 범례를 변경, 색 눈금 및 관련 규칙 &#40;보고서 작성기 및 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+-   [지도 범례, 색 눈금 및 관련 규칙 변경&#40;보고서 작성기 및 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
--   [지도에 사용자 지정 위치 추가 &#40;보고서 작성기 및 SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+-   [지도에 사용자 지정 위치 추가&#40;보고서 작성기 및 SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
  
   
 ##  <a name="Section"></a> 섹션 내용  
- [지도 보고서 계획 &#40;보고서 작성기 및 SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
+ [지도 보고서 계획&#40;보고서 작성기 및 SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
   
  [지도 마법사 및 지도 계층 마법사&#40;보고서 작성기 및 SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
- [데이터 및 지도 또는 지도 계층의 표시를 사용자 지정 &#40;보고서 작성기 및 SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [지도 또는 지도 계층의 데이터 및 표시 사용자 지정&#40;보고서 작성기 및 SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
  [규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경&#40;보고서 작성기 및 SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
- [추가, 변경 또는 삭제 지도 또는 지도 계층 &#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [지도 또는 지도 계층 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
- [지도 범례를 변경, 색 눈금 및 관련 규칙 &#40;보고서 작성기 및 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [지도 범례, 색 눈금 및 관련 규칙 변경&#40;보고서 작성기 및 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
- [지도에 사용자 지정 위치 추가 &#40;보고서 작성기 및 SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+ [지도에 사용자 지정 위치 추가&#40;보고서 작성기 및 SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [보고서 문제해결: 지도 보고서 &#40;보고서 작성기 및 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [보고서 문제 해결: 지도 보고서 &#40;보고서 작성기 및 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

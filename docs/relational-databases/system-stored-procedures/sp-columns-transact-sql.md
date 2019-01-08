@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c768b2d64c38fdda66d6abeea0aef2010b4dfe35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d61c0d2a7c7b15db9e96a354d5b7f062d10ca8f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653002"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514085"
 ---
 # <a name="spcolumns-transact-sql"></a>sp_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ sp_columns [ @table_name = ] object
  현재 사용자가 지정된 이름의 개체를 소유한 경우 해당 개체의 열이 반환됩니다. 하는 경우 *소유자* 지정 하지 않으면 현재 사용자 지정 된 개체를 소유 하지 않는 한 *개체*합니다 **sp_columns** 지정 된 개체를 찾습니다  *개체* 데이터베이스 소유자가 소유 합니다. 개체가 있으면 개체의 열이 반환됩니다.  
   
  [ **@table_qualifier****=**] *qualifier*  
- 개체 한정자의 이름입니다. *한정자* 됩니다 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 세 부분으로 구성 된 개체에 대 한 이름 (*한정자 ***.*** 소유자 ***.*** 이름*). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 개체 데이터베이스 환경의 서버 이름을 나타냅니다.  
+ 개체 한정자의 이름입니다. *한정자* 됩니다 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 세 부분으로 구성 된 개체에 대 한 이름 (_한정자_**.** _소유자_**.** _이름을_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 개체 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
  [  **@column_name=**] *열*  
  카탈로그 정보 중 한 열만을 사용하고자 할 때 지정하는 단일 열입니다. *열* 됩니다 **nvarchar(384)**, 기본값은 NULL입니다. 하는 경우 *열* 은 지정 하지 않으면 모든 열 반환 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *열* 에 나열 된 열 이름을 나타냅니다 합니다 **syscolumns** 테이블입니다. 와일드카드 패턴 일치가 지원됩니다. 상호 운용성을 극대화하려면 게이트웨이 클라이언트가 SQL-92 표준 패턴 일치(% 및 _ 와일드카드 문자)만을 사용해야 합니다.  

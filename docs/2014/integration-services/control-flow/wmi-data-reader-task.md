@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmidatareadertask.f1
@@ -16,12 +15,12 @@ ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3d0262328fd3f5a2ed948fb8f2c62781dc19ae17
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 23a6e6fd3c6639abedc0324d2f8831e782270bc1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229784"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363125"
 ---
 # <a name="wmi-data-reader-task"></a>WMI 데이터 판독기 태스크
   WMI 데이터 판독기 태스크는 WMI(Windows Management Instrumentation) 쿼리 언어를 사용하여 WMI로부터 컴퓨터 시스템에 대한 정보를 반환하는 쿼리를 실행합니다. WMI 데이터 판독기 태스크는 다음 용도로 사용할 수 있습니다.  
@@ -49,7 +48,7 @@ ms.locfileid: "48229784"
  WMI 데이터 판독기 태스크는 WMI 연결 관리자를 사용하여 WMI 정보를 읽어 온 서버에 연결합니다. 자세한 내용은 [WMI Connection Manager](../connection-manager/wmi-connection-manager.md)을 참조하세요.  
   
 ## <a name="wql-query"></a>WQL 쿼리  
- WQL은 WMI 이벤트 알림 및 기타 WMI 관련 기능을 지원하기 위한 확장 기능이 포함된 SQL의 언어입니다. WQL에 대한 자세한 내용은 [MSDN Library](http://go.microsoft.com/fwlink/?linkid=7022)에서 WMI(Windows Management Instrumentation) 설명서를 참조하십시오.  
+ WQL은 WMI 이벤트 알림 및 기타 WMI 관련 기능을 지원하기 위한 확장 기능이 포함된 SQL의 언어입니다. WQL에 대한 자세한 내용은 [MSDN Library](https://go.microsoft.com/fwlink/?linkid=7022)에서 WMI(Windows Management Instrumentation) 설명서를 참조하십시오.  
   
 > [!NOTE]  
 >  WMI 클래스는 Windows 버전마다 다릅니다.  
@@ -85,7 +84,7 @@ Select * FROM Win32_QuickFixEngineering
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [WMI 데이터 판독기 태스크 편집기 &#40;WMI 옵션 페이지&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
+-   [WMI 데이터 판독기 태스크 편집기&#40;WMI 옵션 페이지&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
   
 -   [식 페이지](../expressions/expressions-page.md)  
   

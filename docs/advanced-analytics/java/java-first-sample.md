@@ -1,6 +1,6 @@
 ---
-title: SQL Server 2019에 Java 언어 확장 | Microsoft Docs
-description: Java 언어 확장을 사용 하 여 SQL Server 2019에서 Java 코드를 실행 합니다.
+title: Java 샘플 및 SQL Server 2019-SQL Server Machine Learning Services에 대 한 자습서
+description: SQL Server 데이터를 사용 하 여 Java 언어 확장을 사용 하는 단계를 알아보려면 SQL Server 2019에서 Java 샘플 코드를 실행 합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/24/2018
@@ -9,12 +9,12 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bf6fec32e28342e355b3393bb531ad1833d8af6b
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 32c0792882020612c40a0c41b1c54aaeb51da91c
+ms.sourcegitcommit: 15b780aa5abe3f42cd70b6edf7d5a645e990b618
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715479"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069063"
 ---
 # <a name="sql-server-java-sample-walkthrough"></a>SQL Server Java 샘플 연습
 
@@ -226,7 +226,7 @@ Windows, 좋습니다 비교적 단순 폴더를 사용 하 여 구조를 하나
    + 클릭 **개체 유형** 있는지 확인 하 고 *기본 제공 보안 원칙* 하 고 *그룹* 선택 됩니다.
    + 클릭 **위치** 목록의 맨 위에 있는 로컬 컴퓨터 이름을 선택 합니다.
 5. 입력 **SQLRUserGroup**이름을 확인 하 고 그룹을 추가 하려면 확인을 클릭 합니다.
-6. 입력 **모든 응용 패키지**이름을 확인 하 고 추가 확인을 클릭 합니다. 이름을 해결 되지 않으면 위치 단계를 다시 확인 합니다. SID를 컴퓨터에 로컬입니다.
+6. 입력 **ALL APPLICATION PACKAGES**이름을 확인 하 고 추가 확인을 클릭 합니다. 이름을 해결 되지 않으면 위치 단계를 다시 확인 합니다. SID를 컴퓨터에 로컬입니다.
 
 '두 보안 id 읽기 및 실행 권한이 ' 폴더 및 "패키지" 하위 폴더에 있는지 확인 합니다.
 

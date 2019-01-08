@@ -11,12 +11,12 @@ ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b0830a6be96cbfdf85d53976b0a7c3ac2ec86b80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 0be629b4c2b8c47ed191651260bf1a722b40f007
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214783"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355081"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>SharePoint용 PowerPivot 설치 확인
   SharePoint 팜에 설치하는 SharePoint용 PowerPivot 인스턴스는 SharePoint 중앙 관리를 통해 관리됩니다. 최소한 중앙 관리와 SharePoint 사이트에서 페이지를 검사하여 PowerPivot 서버 구성 요소 및 기능이 사용 가능한지를 확인할 수는 있습니다. 그러나 설치를 전체적으로 확인하려면 SharePoint에 게시하여 라이브러리에서 액세스할 수 있는 PowerPivot 통합 문서가 있어야 합니다. 테스트를 위해 이미 PowerPivot 데이터가 포함된 예제 통합 문서를 게시하여 SharePoint 통합이 올바르게 구성되어 있는지 확인하는 데 사용할 수 있습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "48214783"
     5.  **닫기**를 클릭한 다음 **확인**을 클릭합니다.  
   
         > [!NOTE]  
-        >  SharePoint 설치 설명서에는 프록시 서버 오류를 해결하고 업데이트를 다운로드 및 설치할 수 있도록 Internet Explorer의 강화된 보안 구성을 해제하기 위한 추가 지침이 포함되어 있습니다. 자세한 내용은 Microsoft 웹 사이트의 **SQL Server와 함께 단일 서버 배포** 에서 [추가 태스크 수행](http://go.microsoft.com/fwlink/?LinkId=177754) 섹션을 참조하십시오.  
+        >  SharePoint 설치 설명서에는 프록시 서버 오류를 해결하고 업데이트를 다운로드 및 설치할 수 있도록 Internet Explorer의 강화된 보안 구성을 해제하기 위한 추가 지침이 포함되어 있습니다. 자세한 내용은 Microsoft 웹 사이트의 **SQL Server와 함께 단일 서버 배포** 에서 [추가 태스크 수행](https://go.microsoft.com/fwlink/?LinkId=177754) 섹션을 참조하십시오.  
   
 3.  중앙 관리의 시스템 설정에서 **팜 기능 관리**를 클릭합니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48214783"
 ## <a name="verify-data-access-on-the-server"></a>서버의 데이터 액세스 확인  
  서버에서 PowerPivot 데이터 액세스를 확인하려면 다음을 수행하십시오.  
   
-1.  Reporting Services 자습서와 함께 제공되는 Picnic 데이터 예제를[다운로드](http://go.microsoft.com/fwlink/?LinkID=219108) 합니다. 이 다운로드에 포함된 예제 통합 문서를 사용하여 PowerPivot 데이터 액세스를 확인합니다. 파일의 압축을 풉니다.  
+1.  Reporting Services 자습서와 함께 제공되는 Picnic 데이터 예제를[다운로드](https://go.microsoft.com/fwlink/?LinkID=219108) 합니다. 이 다운로드에 포함된 예제 통합 문서를 사용하여 PowerPivot 데이터 액세스를 확인합니다. 파일의 압축을 풉니다.  
   
 2.  Excel 통합 문서(.xlsx)를 공유 문서로 업로드합니다. 통합 문서에는 포함된 PowerPivot 데이터가 들어 있습니다.  
   

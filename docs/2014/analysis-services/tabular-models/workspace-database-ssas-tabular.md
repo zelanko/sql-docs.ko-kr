@@ -11,12 +11,12 @@ ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 65d4a23044084f18662c3aca1cc68bfd157ea3dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d70cf1724eb67dbf8f1a75989df5f4021b5512d6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134993"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416704"
 ---
 # <a name="workspace-database-ssas-tabular"></a>작업 영역 데이터베이스(SSAS 테이블 형식)
   모델을 제작하는 동안 사용되는 테이블 형식 모델 작업 영역 데이터베이스는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 새 테이블 형식 모델 프로젝트를 만들 때 만들어집니다. 작업 영역 데이터베이스는 일반적으로 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]와 동일한 컴퓨터에서 테이블 형식 모드로 실행하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 메모리 내에 상주합니다.  
@@ -74,14 +74,14 @@ ms.locfileid: "48134993"
 > [!WARNING]  
 >  모델 디자이너에 프로젝트가 열려 있는 동안 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 작업 영역 데이터베이스를 관리하지 마십시오. 이렇게 하면 데이터가 손실될 수 있습니다.  
   
-##  <a name="bkmk_related_tasks"></a> 관련 태스크  
+##  <a name="bkmk_related_tasks"></a> 관련 작업  
   
 |항목|Description|  
 |-----------|-----------------|  
-|[모델 속성 &#40;&AMP;#40;SSAS 테이블 형식&#41;](model-properties-ssas-tabular.md)|모델의 작업 영역 데이터베이스 속성에 대한 설명 및 구성 단계를 제공합니다.|  
+|[모델 속성&#40;SSAS 테이블 형식&#41;](model-properties-ssas-tabular.md)|설명 및 구성 단계는 모델 작업 영역에 대 한 데이터베이스 속성 제공합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [기본 데이터 모델링 및 배포 속성 구성 &#40;&AMP;#40;SSAS 테이블 형식&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
- [프로젝트 속성 &#40;&AMP;#40;SSAS 테이블 형식&#41;](properties-ssas-tabular.md)  
+ [기본 데이터 모델링 및 배포 속성 구성&#40;SSAS 테이블 형식&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
+ [프로젝트 속성&#40;SSAS 테이블 형식&#41;](properties-ssas-tabular.md)  
   
   

@@ -20,12 +20,12 @@ ms.assetid: 0c22a546-683e-4c84-ab97-1e9e95304b03
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8b430e6f8c5d9d1febefadf615ca24cfff02fa87
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6725ebaf9aa90e8ab3ae768ad30199a3a8b9b2aa
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835048"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785834"
 ---
 # <a name="sysdmxesessioneventactions-transact-sql"></a>sys.dm_xe_session_event_actions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "47835048"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|이벤트 세션의 메모리 주소입니다. Null을 허용하지 않습니다.|  
-|action_name|**nvarchar(60)**|작업 이름입니다. Null을 허용하지 않습니다.|  
+|action_name|**nvarchar(256)**|작업의 이름입니다. Null을 허용하지 않습니다.|  
 |action_package_guid|**uniqueidentifier**|동작이 포함된 패키지의 GUID입니다. Null을 허용하지 않습니다.|  
-|event_name|**nvarchar(60)**|동작이 바인딩된 이벤트의 이름입니다. Null을 허용하지 않습니다.|  
+|event_name|**nvarchar(256)**|동작이 바인딩된 이벤트의 이름입니다. Null을 허용하지 않습니다.|  
 |event_package_guid|**uniqueidentifier**|이벤트가 포함된 패키지의 GUID입니다. Null을 허용하지 않습니다.|  
   
 ## <a name="permissions"></a>사용 권한  
@@ -48,14 +48,8 @@ ms.locfileid: "47835048"
 |보낸 사람|수행할 작업|관계|  
 |----------|--------|------------------|  
 |sys.dm_xe_session_event_actions.event_session_address|sys.dm_xe_sessions.address|다 대 일|  
-|sys.dm_xe_session_event_actions.action_name<br /><br /> sys.dm_xe_session_event_actions.action_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_session_events.event_package_guid|다 대 일|  
-|sys.dm_xe_session_event_actions.event_name<br /><br /> sys.dm_xe_session_event_actions.event_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|다 대 일|  
-  
-## <a name="change-history"></a>변경 내역  
-  
-|업데이트된 내용|  
-|---------------------|  
-|"관계 카디널리티" 표를 올바른 동적 관리 뷰 이름 및 열 이름으로 업데이트했습니다.|  
+|sys.dm_xe_session_event_actions.action_name,<br /><br /> sys.dm_xe_session_event_actions.action_package_guid|sys.dm_xe_objects.name,<br /><br /> sys.dm_xe_session_events.event_package_guid|다 대 일|  
+|sys.dm_xe_session_event_actions.event_name,<br /><br /> sys.dm_xe_session_event_actions.event_package_guid|sys.dm_xe_objects.name,<br /><br /> sys.dm_xe_objects.package_guid|다 대 일|  
   
 ## <a name="see-also"></a>관련 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  

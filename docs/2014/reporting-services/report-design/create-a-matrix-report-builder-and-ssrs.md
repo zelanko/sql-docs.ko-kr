@@ -11,21 +11,21 @@ ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2e520e394ba98cc4dddb0057abde1598da352045
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: b61dfe7512f17b6c67c93d02d6b4a9e11164d6b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223353"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361695"
 ---
 # <a name="matrices-report-builder-and-ssrs"></a>행렬(보고서 작성기 및 SSRS)
   행렬을 사용하여 그룹화된 데이터 및 요약 정보를 표시할 수 있습니다. 행 및 열 그룹의 여러 필드나 식으로 데이터를 그룹화할 수 있습니다. 행렬은 크로스탭 및 피벗 테이블과 비슷한 기능을 제공합니다. 런타임에 보고서 데이터 및 데이터 영역이 결합되면서 페이지에서 행렬이 가로와 세로 방향으로 확장됩니다. 행렬 셀의 값으로는 셀이 속한 행 및 열 그룹의 교차점으로 한정된 집계 값이 표시됩니다. 행 및 열의 서식을 지정하여 강조하려는 데이터를 강조 표시할 수 있습니다. 또한 처음에 정보 데이터를 숨기는 드릴다운 토글을 포함할 수도 있습니다. 사용자는 필요한 경우 이 토글을 클릭하여 내용을 자세히 또는 간략히 볼 수 있습니다.  
   
  최초 디자인 후에도 사용자의 보기 환경을 개선하기 위해 계속해서 행렬을 개발할 수 있습니다. 자세한 내용은 [보고서 페이지에서 테이블릭스 데이터 영역 표시 제어&#40;보고서 작성기 및 SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)를 참조하세요.  
   
- 행렬을 빠르게 시작하려면 [자습서: 행렬 보고서 만들기&#40;보고서 작성기&#41;](../tutorial-creating-a-matrix-report-report-builder.md)를 참조하세요.  
+ 신속 하 게 시작 하기 위한 행렬을 참조 하세요. [자습서: 행렬 보고서 만들기 &#40;보고서 작성기&#41;](../tutorial-creating-a-matrix-report-report-builder.md)합니다.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 예제 보고서에는 행렬을 사용하는 다양한 보고서가 포함되어 있습니다. 보고서 작성기 또는 보고서 디자이너에서 예제 보고서의 보고서 정의를 탐색하거나 보고서 작성기 또는 보고서 디자이너에서 렌더링된 보고서를 검토하여 행렬에 대해 알 수 있습니다. 예제 보고서를 다운로드하는 방법은 [(SSRS) Reporting Services 예제](http://go.microsoft.com/fwlink/?LinkID=198283)를 참조하십시오.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 예제 보고서에는 행렬을 사용하는 다양한 보고서가 포함되어 있습니다. 보고서 작성기 또는 보고서 디자이너에서 예제 보고서의 보고서 정의를 탐색하거나 보고서 작성기 또는 보고서 디자이너에서 렌더링된 보고서를 검토하여 행렬에 대해 알 수 있습니다. 예제 보고서를 다운로드하는 방법은 [(SSRS) Reporting Services 예제](https://go.microsoft.com/fwlink/?LinkID=198283)를 참조하십시오.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -93,7 +93,7 @@ ms.locfileid: "48223353"
  인접 열 그룹에 대해 합계 열을 추가하려면 열 그룹 정의 셀을 클릭하고 **합계 추가** 명령을 사용합니다. 기존 행의 모든 숫자 필드에 대한 기본 집계 합이 들어 있는 새로운 정적 열이 열 그룹 옆에 추가됩니다. 식을 변경하려면 `Avg([Sales])`와 같이 기본 집계 함수를 수동으로 편집합니다. 자세한 내용은 [그룹 또는 테이블릭스 데이터 영역에 합계 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [집계 함수 참조 &#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

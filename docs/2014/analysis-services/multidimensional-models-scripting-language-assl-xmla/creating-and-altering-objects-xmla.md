@@ -20,12 +20,12 @@ ms.assetid: a2080867-e130-440c-92eb-f768869f34a8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 16d4b84c5d1dec2a09300fe23dab58774bf74cdb
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3d4249f12e062659778eb9bcf3ce562f92465f01
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146258"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354059"
 ---
 # <a name="creating-and-altering-objects-xmla"></a>개체 만들기 및 변경(XMLA)
   주요 개체는 독립적으로 만들고 변경하고 삭제할 수 있습니다. 주요 개체에는 다음과 같은 개체가 포함됩니다.  
@@ -102,7 +102,7 @@ ms.locfileid: "50146258"
 ### <a name="code"></a>코드  
   
 ```  
-<Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Create xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
     <ParentObject>  
         <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
     </ParentObject>  
@@ -127,7 +127,7 @@ ms.locfileid: "50146258"
 ### <a name="code"></a>코드  
   
 ```  
-<Alter ObjectExpansion="ObjectProperties" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Alter ObjectExpansion="ObjectProperties" xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
     <Object>  
         <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
         <DataSourceID>AdventureWorksDW2012</DataSourceID>  

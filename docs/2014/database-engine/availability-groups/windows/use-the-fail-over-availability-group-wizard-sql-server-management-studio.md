@@ -20,15 +20,15 @@ ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 62fb2107b74518afbf55b64057aec63c4e2eec36
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38a5c58f7376fa44438dff5d6ef9e94f0c2809c0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206223"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519299"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>가용성 그룹 장애 조치(Failover) 마법사 사용(SQL Server Management Studio)
-  이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 대해 계획된 수동 장애 조치(failover) 또는 강제 수동 장애 조치(강제 장애 조치)를 수행하는 방법에 대해 설명합니다. 가용성 그룹은 가용성 복제본의 수준에서 장애 조치(Failover)됩니다. SYNCHRONIZED 상태의 보조 복제본으로 장애 조치하는 경우 마법사는 계획된 수동 장애 조치(데이터가 손실되지 않음)를 수행합니다. UNSYNCHRONIZED 또는 NOT SYNCHRONIZING 상태의 보조 복제본으로 장애 조치하는 경우 마법사는 강제 수동 장애 조치( *강제 장애 조치* (데이터가 손실될 수 있음))를 수행합니다. 두 형태의 수동 장애 조치는 현재 연결되어 있는 보조 복제본을 주 역할로 전환합니다. 계획된 수동 장애 조치는 이전의 주 복제본을 보조 역할로 전환합니다. 강제 장애 조치가 끝난 후 이전의 주 복제본은 온라인 상태가 되면 보조 역할로 전환됩니다.  
+  이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 대해 계획된 수동 장애 조치(failover) 또는 강제 수동 장애 조치(강제 장애 조치)를 수행하는 방법에 대해 설명합니다. 가용성 그룹은 가용성 복제본의 수준에서 장애 조치(Failover)됩니다. SYNCHRONIZED 상태의 보조 복제본으로 장애 조치하는 경우 마법사는 계획된 수동 장애 조치(데이터가 손실되지 않음)를 수행합니다. UNSYNCHRONIZED 또는 NOT SYNCHRONIZING 상태의 보조 복제본으로 장애 조치하는 경우 마법사는 *강제 장애 조치*(데이터가 손실될 수 있음)로 강제 수동 장애 조치를 수행합니다. 두 형태의 수동 장애 조치는 현재 연결되어 있는 보조 복제본을 주 역할로 전환합니다. 계획된 수동 장애 조치는 이전의 주 복제본을 보조 역할로 전환합니다. 강제 장애 조치가 끝난 후 이전의 주 복제본은 온라인 상태가 되면 보조 역할로 전환됩니다.  
   
 
 
@@ -50,7 +50,7 @@ ms.locfileid: "48206223"
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  첫 번째 계획된 수동 장애 조치를 시작하기 전에 [가용성 그룹의 계획된 수동 장애 조치(Failover) 수행&#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 대해 계획된 수동 장애 조치(failover) 또는 강제 수동 장애 조치(강제 장애 조치)를 수행하는 방법을 설명합니다.  
   
- 첫 번째 강제 장애 조치를 시작하기 전에 [가용성 그룹의 강제 수동 장애 조치(failover) 수행&#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 대해 계획된 수동 장애 조치(failover) 또는 강제 수동 장애 조치(강제 장애 조치)를 수행하는 방법을 설명합니다.  
+ 첫 번째 강제 장애 조치를 시작하기 전에 강제 장애 조치 후 필수 태스크"섹션 [가용성 그룹의 강제 수동 장애 조치를 수행 합니다. &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)합니다.  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48206223"
   
 4.  **소개** 페이지에 제공되는 정보는 보조 복제본에 대해 계획된 장애 조치를 수행할 수 있는지 여부에 따라 달라집니다. 페이지에 "**이 가용성 그룹에 대해 계획된 장애 조치(Failover)를 수행합니다.**"라고 표시되면 데이터 손실 없이 가용성 그룹을 장애 조치할 수 있습니다.  
   
-5.  새로운 주 복제본( **장애 조치 대상** )이 될 보조 복제본을 선택하기 전에 *새로운 주 복제본 선택*페이지에서 현재 주 복제본의 상태와 WSFC 쿼럼의 상태를 볼 수 있습니다. 계획된 수동 장애 조치를 수행할 경우 **장애 조치(Failover) 준비** 값이 "**데이터 손실 없음**"인 보조 복제본을 선택해야 합니다. 강제 장애 조치를 수행할 경우 가능한 모든 장애 조치 대상에 대해 이 값이 "**데이터 손실, 경고(***#***)**"로 표시되며 여기서 *#* 는 지정된 보조 복제본에 대한 경고 수를 나타냅니다. 지정된 장애 조치 대상에 대한 경고 수를 보려면 해당 "장애 조치(Failover) 준비" 값을 클릭합니다.  
+5.  새로운 주 복제본( **장애 조치 대상** )이 될 보조 복제본을 선택하기 전에 *새로운 주 복제본 선택*페이지에서 현재 주 복제본의 상태와 WSFC 쿼럼의 상태를 볼 수 있습니다. 계획된 수동 장애 조치를 수행할 경우 **장애 조치(Failover) 준비** 값이 "**데이터 손실 없음**"인 보조 복제본을 선택해야 합니다. 강제 장애 조치의 경우 가능한 모든 장애 조치 대상에 대해 이 값이 "**데이터 손실, 경고(***#***)**"로 표시되며 여기서 *#* 는 지정된 보조 복제본에 대한 경고 수를 나타냅니다. 지정된 장애 조치 대상에 대한 경고를 보려면 해당 "장애 조치(Failover) 준비" 값을 클릭합니다.  
   
      자세한 내용은 이 항목의 뒷부분에 나오는 [새로운 주 복제본 선택 페이지](#SelectNewPrimaryReplica)를 참조하세요.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48206223"
   
      자세한 내용은 [결과 페이지&#40;AlwaysOn 가용성 그룹 마법사&#41;](results-page-always-on-availability-group-wizards.md)를 참조하세요.  
   
-11. 강제 장애 조치 작업이 끝나면 [가용성 그룹의 강제 수동 장애 조치(failover) 수행&#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)에서 "후속 작업: 강제 장애 조치(Failover) 후" 섹션을 참조하세요.  
+11. 강제 장애 조치 작업이 끝나면 "강제 장애 조치 후 섹션에는 [가용성 그룹의 강제 수동 장애 조치를 수행 합니다. &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)합니다.  
   
 ## <a name="help-for-pages-that-are-exclusive-to-this-wizard"></a>이 마법사에만 있는 페이지에 대한 도움말  
  이 섹션에서는 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]에만 있는 페이지에 대해 설명합니다.  
@@ -199,7 +199,7 @@ ms.locfileid: "48206223"
  **취소**  
  마법사를 취소하려면 클릭합니다. **복제본에 연결** 페이지에서 마법사를 취소하면 동작이 수행되지 않고 마법사가 종료됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [ 가용성 모드 (AlwaysOn 가용성 그룹)](availability-modes-always-on-availability-groups.md)   
  [장애 조치 및 장애 조치 모드 &#40;AlwaysOn 가용성 그룹&#41;](failover-and-failover-modes-always-on-availability-groups.md)   

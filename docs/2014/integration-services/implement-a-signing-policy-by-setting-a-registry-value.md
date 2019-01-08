@@ -13,12 +13,12 @@ ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2968561d90f1bc45f50f040d7d303b969cc3c3b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f8daa6582f18d9c5279e7539dd9c3740d90e36d2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103023"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353206"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>레지스트리 값을 설정하여 서명 정책 구현
   선택적 레지스트리 값을 사용하여 서명된 패키지나 서명되지 않은 패키지를 로드하기 위한 조직의 정책을 관리할 수 있습니다. 이 레지스트리 값을 사용하면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 실행하고 정책을 적용할 각 컴퓨터에 이 레지스트리 값을 만들어야 합니다. 레지스트리 값이 설정된 후 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 패키지를 로드하기 전에 서명을 확인합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "48103023"
 |3|잘못된 서명과 신뢰할 수 없는 서명, 서명되지 않은 패키지를 차단합니다.<br /><br /> 이 설정은 자체 생성된 서명도 차단합니다.|  
   
 > [!NOTE]  
->  `BlockedSignatureStates`에 대한 권장 설정은 3입니다. 이 설정은 서명되지 않은 패키지나 잘못된 서명 또는 신뢰할 수 없는 서명에 대해 가장 강력한 보호 기능을 제공합니다. 그러나 권장 설정이 모든 경우에 적합하지는 않습니다. 디지털 자산에 서명하는 방법은 MSDN Library에서 "[코드 서명 소개(Introduction to Code Signing)](http://go.microsoft.com/fwlink/?LinkId=51414)" 항목을 참조하십시오.  
+>  `BlockedSignatureStates`에 대한 권장 설정은 3입니다. 이 설정은 서명되지 않은 패키지나 잘못된 서명 또는 신뢰할 수 없는 서명에 대해 가장 강력한 보호 기능을 제공합니다. 그러나 권장 설정이 모든 경우에 적합하지는 않습니다. 디지털 자산에 서명하는 방법은 MSDN Library에서 "[코드 서명 소개(Introduction to Code Signing)](https://go.microsoft.com/fwlink/?LinkId=51414)" 항목을 참조하십시오.  
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>패키지에 대한 서명 정책을 구현하려면  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48103023"
   
 4.  **MSDTS**를 마우스 오른쪽 단추로 클릭하고 **새로 만들기**를 가리킨 다음 **DWORD 값**을 클릭합니다.  
   
-5.  새 값의 이름을 업데이트 `BlockedSignatureStates`합니다.  
+5.  새 값의 이름을 `BlockedSignatureStates`(으)로 업데이트합니다.  
   
 6.  마우스 오른쪽 단추로 클릭 `BlockedSignatureStates` 누릅니다 **수정**합니다.  
   
@@ -65,8 +65,8 @@ ms.locfileid: "48103023"
   
 9. **파일** 메뉴에서 **끝내기**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [보안 개요 &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
+## <a name="see-also"></a>관련 항목:  
+ [보안 개요&#40;Integration Services&#41;](security/security-overview-integration-services.md)   
  [디지털 서명을 사용하여 패키지 원본 확인](security/identify-the-source-of-packages-with-digital-signatures.md)  
   
   

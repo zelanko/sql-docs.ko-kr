@@ -1,18 +1,20 @@
 ---
-title: SQL Server 빅 데이터에서 kubernetes 클러스터를 사용 하 여 데이터 지 속성 | Microsoft Docs
+title: Kubernetes에 데이터 지 속성
+titleSuffix: SQL Server 2019 big data clusters
 description: SQL Server 2019 빅 데이터 클러스터에서 데이터 지 속성의 작동 방식에 대해 알아봅니다.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 100372f339f2d064e14b7882fdfb1a661b824cc6
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 75cf78e7c73ad61e5e28ed6f0707639899d8ec19
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221789"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207672"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 사용 하 여 데이터 지 속성
 
@@ -23,8 +25,7 @@ ms.locfileid: "51221789"
 SQL Server 빅 데이터 클러스터 이러한 영구 볼륨을 사용 하는 방법은 사용 하 여 것 [저장소 클래스](https://kubernetes.io/docs/concepts/storage/storage-classes/)합니다. 다른 종류의 저장소에 대 한 다양 한 저장소 클래스를 만들고 빅 데이터 클러스터 배포 시에 지정할 수 있습니다. (풀) 어떤 용도로 사용 하는 저장소 클래스를 구성할 수 있습니다. SQL Server 빅 데이터 클러스터를 만듭니다 [영구적 볼륨 클레임](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) 영구적 볼륨에 필요한 각 pod에 대 한 지정 된 저장소 클래스 이름입니다. 그런 다음 pod에 해당 영구 볼륨을 탑재합니다.
 
 > [!NOTE]
-
-> CTP 2.1의 경우만 `ReadWriteOnce` 전체 클러스터에 대 한 액세스 모드가 지원 됩니다.
+> CTP 2.2에만 한 `ReadWriteOnce` 전체 클러스터에 대 한 액세스 모드가 지원 됩니다.
 
 ## <a name="deployment-settings"></a>배포 설정
 
@@ -65,7 +66,7 @@ Minikube에서 영구적 볼륨을 사용 하 여 설정 하 여 무시할 수 �
 
 설정 해야 하므로, 온-프레미스 클러스터 물론 모든 기본 제공 저장소 클래스를 사용 하 여 제공 되지 않습니다 [영구적 볼륨](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)/[프로 비 저 너를](https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/) 미리 사용 하 여 해당 SQL Server 빅 데이터 클러스터 배포 시 저장소 클래스입니다.
 
-# <a name="customize-storage-size-for-each-pool"></a>각 풀에 대 한 저장소 크기를 사용자 지정
+## <a name="customize-storage-size-for-each-pool"></a>각 풀에 대 한 저장소 크기를 사용자 지정
 기본적으로 각 클러스터에 프로 비전 된 pod에 대 한 프로 비전 된 영구적 볼륨의 크기는 6GB 됩니다. 이 환경 변수를 설정 하 여 구성할 수는 `STORAGE_SIZE` 다른 값으로. 예를 들어, 아래 10GB로 실행 하기 전에 값을 설정 하는 명령을 실행할 수 있습니다는 `mssqlctl create cluster command`합니다.
 
 ```bash

@@ -11,12 +11,12 @@ ms.assetid: 84d66436-ed62-4967-bbbd-b457593ee787
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 186c5df6ca1014176d32c3f67cb7608065c50500
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 85c1849cb2fb5fdfda78a147880d9c39003b8257
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149813"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358815"
 ---
 # <a name="add-scale-breaks-to-a-chart-report-builder-and-ssrs"></a>차트에 배율 구분선 추가(보고서 작성기 및 SSRS)
   배율 구분선은 값 축(일반적으로 세로 또는 Y축)에서 높은 값과 낮은 값 사이의 연속성을 구분하기 위해 차트의 그리기 영역에 표시되는 줄무늬입니다. 배율 구분선을 사용하여 동일한 차트 영역에 두 개의 서로 다른 범위를 표시할 수 있습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "48149813"
 > [!NOTE]  
 >  차트에서 배율 구분선의 배치 위치는 지정할 수 없습니다. 차트는 데이터 세트의 값을 기반으로 자체 계산을 사용하여 런타임에 값 축(y축)에 배율 구분선을 그릴 수 있을 만큼 데이터 범위가 충분히 분리되어 있는지 여부를 확인합니다.  
   
- 배율 구분선이 있는 차트의 예는 예제 보고서로 제공됩니다. 이 샘플 보고서 및 기타 보고서를 다운로드하는 방법은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][보고서 작성기 및 보고서 디자이너 샘플 보고서](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ 배율 구분선이 있는 차트의 예는 예제 보고서로 제공됩니다. 이 샘플 보고서 및 기타 보고서를 다운로드하는 방법은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][보고서 작성기 및 보고서 디자이너 샘플 보고서](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -50,6 +50,6 @@ ms.locfileid: "48149813"
 ## <a name="see-also"></a>관련 항목  
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [축 속성 대화 상자, 축 옵션 &#40;보고서 작성기 및 SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
+ [축 속성 대화 상자, 축 옵션&#40;보고서 작성기 및 SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
   
   

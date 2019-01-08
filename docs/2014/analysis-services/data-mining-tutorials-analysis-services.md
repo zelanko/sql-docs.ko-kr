@@ -13,12 +13,12 @@ ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a8e454e12f3e3c9f4c341406596771276f120a83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d94209a4716e8e559028125899ba4e46b2d1b61
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197693"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358925"
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>데이터 마이닝 자습서(Analysis Services)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 쉽게 정교한 데이터 마이닝 솔루션을 만들 수 있도록 합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 도구를 사용하여 관계형 또는 큐브 데이터를 사용하는 데이터 마이닝 모델을 디자인, 생성 및 관리할 수 있습니다. 데이터 마이닝 모델에 대한 클라이언트 액세스를 관리하고 여러 클라이언트에서 예측 쿼리를 생성할 수 있습니다.  
@@ -48,22 +48,22 @@ ms.locfileid: "48197693"
      이러한 단원에서는 중첩 테이블, 교차 예측, 사용자 지정 데이터 원본 뷰 및 명명된 쿼리, 데이터 마이닝 쿼리에서의 필터링 등의 고급 개념을 다룹니다. 또한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에 포함된 예측 쿼리 도구를 사용하면 효율성을 높일 수 있습니다.  
   
 ## <a name="reference"></a>참조  
- [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [데이터 마이닝 알고리즘 & #40; Analysis Services-데이터 마이닝 & #41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Data Mining Extensions &#40;DMX&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [DMX&#40;Data Mining Extensions&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)  
   
 ## <a name="related-sections"></a>관련 섹션  
  [데이터 마이닝 도구](data-mining/data-mining-tools.md)  
   
- [논리적 아키텍처 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [논리적 아키텍처 & #40; Analysis Services-데이터 마이닝 & #41;](data-mining/logical-architecture-analysis-services-data-mining.md)  
   
  [논리적 아키텍처 &#40;Analysis Services-다차원 데이터&#41;](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
  [데이터 마이닝 프로젝트](data-mining/data-mining-projects.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 솔루션](data-mining/data-mining-solutions.md)   
- [Microsoft SQL Server 데이터 마이닝 리소스](http://go.microsoft.com/fwlink/?LinkId=97965)   
- [DMX 사용 하 여 데이터 마이닝 모델 만들기 및 쿼리: 자습서 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [Microsoft SQL Server 데이터 마이닝 리소스](https://go.microsoft.com/fwlink/?LinkId=97965)   
+ [만들기 및 DMX 사용 하 여 데이터 마이닝 모델을 쿼리 합니다. 자습서 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

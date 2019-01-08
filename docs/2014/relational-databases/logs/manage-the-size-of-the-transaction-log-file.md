@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], size management
@@ -12,15 +12,15 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9a681921eb1db363f8a2ddf7fc14836e0d9b781b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2ebcd653adebed5541b1d2cdf814f638d0af683
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066763"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816615"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>트랜잭션 로그 파일의 크기 관리
-  경우에 따라 축소 하거나 확장의 트랜잭션 로그의 물리적 로그 파일에 유용할 수 있습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션 로그 크기 모니터링, 트랜잭션 로그 축소, 트랜잭션 로그 파일 추가 또는 확장, **tempdb** 트랜잭션 로그 증가율 최적화, 트랜잭션 로그 파일 증가 제어 등을 수행하는 방법에 대해 설명합니다.  
+  경우에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 트랜잭션 로그에 대한 실제 로그 파일을 축소하거나 확장하는 것이 유용할 수 있습니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션 로그 크기 모니터링, 트랜잭션 로그 축소, 트랜잭션 로그 파일 추가 또는 확장, **tempdb** 트랜잭션 로그 증가율 최적화, 트랜잭션 로그 파일 증가 제어 등을 수행하는 방법에 대해 설명합니다.  
   
   
 ##  <a name="MonitorSpaceUse"></a> 로그 공간 사용 모니터링  
@@ -55,7 +55,7 @@ ms.locfileid: "48066763"
 -   [sys.database_files&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)(로그 파일 또는 파일의 **size**, **max_size** 및 **growth** 열 참조)  
   
 > [!NOTE]  
->  데이터베이스 및 로그 파일 축소는 자동으로 발생하도록 설정할 수 있습니다. 그러나 자동 축소는 사용하지 않는 것이 좋으며 `autoshrink` 데이터베이스 속성도 기본적으로 FALSE로 설정됩니다. `autoshrink`를 TRUE로 설정하면 파일 공간의 25% 이상이 사용되지 않을 때만 자동 축소에 의해 파일 크기가 줄어듭니다. 파일은 파일의 25%만 사용되지 않을 때의 크기 또는 파일의 원래 크기 중 더 큰 크기로 축소됩니다. 설정을 변경 하는 것에 대 한 자세한를 `autoshrink` 속성을 참조 하세요 [데이터베이스의 속성 보기 또는 변경](../databases/view-or-change-the-properties-of-a-database.md)-사용는 **자동 축소** 속성을는 **옵션**페이지-또는 [ALTER DATABASE SET 옵션 &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)-AUTO_SHRINK 옵션을 사용 합니다.  
+>  데이터베이스 및 로그 파일 축소는 자동으로 발생하도록 설정할 수 있습니다. 그러나 자동 축소는 사용하지 않는 것이 좋으며 `autoshrink` 데이터베이스 속성도 기본적으로 FALSE로 설정됩니다. `autoshrink`를 TRUE로 설정하면 파일 공간의 25% 이상이 사용되지 않을 때만 자동 축소에 의해 파일 크기가 줄어듭니다. 파일은 파일의 25%만 사용되지 않을 때의 크기 또는 파일의 원래 크기 중 더 큰 크기로 축소됩니다. 설정을 변경 하는 것에 대 한 자세한를 `autoshrink` 속성을 참조 하세요 [데이터베이스의 속성 보기 또는 변경](../databases/view-or-change-the-properties-of-a-database.md)-사용는 **자동 축소** 속성을는 **옵션**페이지에서 또는 [ALTER DATABASE SET 옵션 &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)-AUTO_SHRINK 옵션을 사용 합니다.  
   
   
 ##  <a name="AddOrEnlarge"></a> 로그 파일 추가 또는 확장  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d70f58bfb5dba352d154f18b4c3db675b69147ad
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ce74bb210e3d5d3cd01120b0bd406672db6dd5ed
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975101"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785824"
 ---
 # <a name="server-properties-in-analysis-services"></a>Analysis Services의 서버 속성
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -30,7 +30,7 @@ SQL Server Management Studio의 속성 페이지에는 수정할 가능성이 �
 > 
 > 서버 구성에 영향을 주는 기타 속성에는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 배포 구성 속성이 포함됩니다. 이러한 속성에 대한 자세한 내용은 [솔루션 배포를 위한 구성 설정 지정](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)을 참조하세요.
  
-##  <a name="bkmk_config"></a> Management Studio에서 속성 구성 
+## <a name="configure-properties-in-management-studio"></a>Management Studio에서 속성 구성 
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 연결합니다.  
   
@@ -40,12 +40,11 @@ SQL Server Management Studio의 속성 페이지에는 수정할 가능성이 �
   
      테이블 형식 모드 및 다차원 모드 서버에 대해서만 서버 속성을 수정할 수 있습니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]을 설치한 경우 Microsoft 지원 담당자가 다르게 지시한 경우가 아니라면 항상 기본값을 사용합니다.  
   
-     서버 속성을 통해 운영 또는 성능 문제를 해결하는 방법은 [SQL Server 2008 R2 Analysis Services 작업 가이드](http://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오.  
   
-     Microsoft 백서 [SQL Server 2005 Analysis Services (SSAS) Server Properties](http://go.microsoft.com/fwlink/?LinkID=199102)(SQL Server 2005 Analysis Services(SSAS) 서버 속성)에 나와 있는 서버 속성도 참조할 수 있습니다. 서버 속성의 대부분은 지난 몇 번의 릴리스에서 변경되지 않았습니다.    
+## <a name="configure-properties-in-msmdsrvini"></a>Msmdsrv.ini에서 속성 구성
   
-##  <a name="bkmk_msmdsrvini"></a> Msmdsrv.ini에서 속성 구성
-  일부 속성은 msmdrsrv.ini 파일에서만 설정할 수 있습니다. 고급 속성을 표시한 후에도 설정할 속성이 표시되지 않으면 msmdsrv.ini 파일을 직접 편집해야 합니다.
+일부 속성은 msmdrsrv.ini 파일에서만 설정할 수 있습니다. 이러한 속성은 Azure Analysis Services에 적용 되지 않습니다.
+고급 속성을 표시한 후에도 설정할 속성이 표시되지 않으면 msmdsrv.ini 파일을 직접 편집해야 합니다. 
   
 1.  Management Studio의 일반 속성 페이지에서 **DataDir** 속성을 검토하여 msmdsrv.ini 파일을 비롯한 Analysis Services 프로그램 파일의 위치를 확인합니다.
 
@@ -59,7 +58,7 @@ SQL Server Management Studio의 속성 페이지에는 수정할 가능성이 �
   
 5.  파일을 저장하고 서비스를 다시 시작합니다.  
   
-##  <a name="bkmk_ref"></a> 서버 속성 참조  
+##  <a name="server-property-reference"></a>서버 속성 참조  
   
  다음 항목에서는 여러 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 구성 속성에 대해 설명합니다.  
   
@@ -79,7 +78,7 @@ SQL Server Management Studio의 속성 페이지에는 수정할 가능성이 �
 |[보안 속성](../../analysis-services/server-properties/security-properties.md)|보안 섹션에는 액세스 권한을 정의하는 기본 및 고급 속성이 모두 포함됩니다. 여기에는 관리자 및 사용자와 관련된 설정이 포함됩니다.|  
 |[스레드 풀 속성](../../analysis-services/server-properties/thread-pool-properties.md)|스레드 풀 속성은 서버에서 만드는 스레드 개수를 제어합니다. 이 속성은 주로 고급 속성입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Analysis Services 인스턴스 관리](../../analysis-services/instances/analysis-services-instance-management.md)   
  [솔루션 배포를 위한 구성 설정 지정](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   

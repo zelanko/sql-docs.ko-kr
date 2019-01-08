@@ -1,5 +1,5 @@
 ---
-title: 스레드 풀 속성 | Microsoft Docs
+title: Analysis Services 스레드 풀 속성 | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ea8ea712579b4d9c96d793a0c633c63508c376b1
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
-ms.translationtype: HT
+ms.openlocfilehash: ee8f8c4a222b2949f49c8be019b6e4f6724cfa04
+ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396380"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53785964"
 ---
 # <a name="thread-pool-properties"></a>스레드 풀 속성
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -23,24 +23,8 @@ ms.locfileid: "40396380"
   
  각 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스는 고유한 스레드 풀 집합을 유지 관리합니다. 테이블 형식과 다차원 인스턴스에서 스레드 풀이 사용되는 방법에는 차이점이 있습니다. 예를 들어 다차원 인스턴스만 **IOProcess** 스레드 풀을 사용합니다. 따라서 합니다 **PerNumaNode** 이 문서에서 설명 하는 속성은 테이블 형식 인스턴스에 대 한 의미가 없습니다. [속성 참조](#bkmk_propref) 섹션 아래에 각 속성의 모드 요구 사항이 설명되어 있습니다.
   
- 이 문서에는 다음과 같은 섹션이 포함되어 있습니다.  
-  
--   [Analysis Services의 스레드 관리](#bkmk_threadarch)  
-  
--   [스레드 풀 속성 참조](#bkmk_propref)  
-  
--   [GroupAffinity를 설정하여 프로세서 그룹의 프로세서에 대한 스레드 선호도 설정](#bkmk_groupaffinity)  
-  
--   [NUMA 노드에서 프로세서에 대한 IO 스레드 선호도를 설정하기 위한 PerNumaNode 설정](#bkmk_pernumanode)  
-  
--   [현재 스레드 풀 설정 확인](#bkmk_currentsettings)  
-  
--   [종속되었거나 관련된 속성](#bkmk_related)  
-  
--   [MSMDSRV.INI 정보](#bkmk_msmdrsrvini)  
-  
 > [!NOTE]  
->  NUMA 시스템의 테이블 형식 배포는 이 항목의 범위를 벗어납니다. 테이블 형식 솔루션을 NUMA 시스템에 성공적으로 배포할 수 있지만 테이블 형식 모델에 사용되는 메모리 내 데이터베이스 기술의 성능 특성으로 인해 고도로 확장된 아키텍처에서는 이에 대한 이점이 제한적일 수 있습니다. 자세한 내용은 [Analysis Services 사례 연구: 대규모 상용 솔루션에서 테이블 형식 모델 사용](http://msdn.microsoft.com/library/dn751533.aspx) 및 [테이블 형식 솔루션의 하드웨어 크기 조정](http://go.microsoft.com/fwlink/?LinkId=330359)을 참조하세요.  
+>  NUMA 시스템의 테이블 형식 배포는 이 항목의 범위를 벗어납니다. 테이블 형식 솔루션을 NUMA 시스템에 성공적으로 배포할 수 있지만 테이블 형식 모델에 사용되는 메모리 내 데이터베이스 기술의 성능 특성으로 인해 고도로 확장된 아키텍처에서는 이에 대한 이점이 제한적일 수 있습니다. 자세한 내용은 참조 하세요. [Analysis Services 사례 연구: 대규모 상용 솔루션에서 테이블 형식 모델을 사용 하 여](http://msdn.microsoft.com/library/dn751533.aspx) 하 고 [테이블 형식 솔루션의 크기를 조정 하는 하드웨어](http://go.microsoft.com/fwlink/?LinkId=330359)합니다.  
   
 ##  <a name="bkmk_threadarch"></a> Analysis Services의 스레드 관리  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 다중 스레드를 사용해서 병렬로 실행되는 작업 수를 늘림으로써 사용 가능한 CPU 리소스의 활용도를 높입니다. 저장소 엔진은 다중 스레드로 지정됩니다. 저장소 엔진 내에서 실행되는 다중 스레드 작업의 예로는 병렬 개체 처리 또는 저장소 엔진에 밀어 넣은 불연속 쿼리 처리 또는 쿼리에서 요청된 데이터 값 반환이 포함됩니다. 수식 엔진은 수식이 평가하는 계산의 직렬 특성으로 인해 단일 스레드로 지정됩니다. 각 쿼리는 기본적으로 단일 스레드로 실행되며, 데이터를 요청하고 종종 저장소 엔진에서 데이터가 반환될 때까지 기다립니다. 쿼리 스레드는 실행하는 데 더 오래 걸리며, 전체 쿼리가 완료된 다음에만 해제됩니다.  
@@ -82,7 +66,7 @@ ms.locfileid: "40396380"
   
  속성은 사전순으로 나열됩니다.  
   
-|속성|형식|Description|기본값|지침|  
+|이름|형식|Description|기본값|지침|  
 |----------|----------|-----------------|-------------|--------------|  
 |**IOProcess** \ **Concurrency**|double|큐에 한 번에 넣을 수 있는 스레드 수의 목표치를 설정하는 알고리즘을 결정하는 배정밀도 부동 소수점 값입니다.|2.0|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.<br /><br /> Windows에서 IO 완료 포트를 사용해서 구현되는 동시성을 사용해서 스레드 풀이 초기화됩니다. 자세한 내용은 [I/O 완료 포트](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 를 참조하세요.<br /><br /> 다차원 모델에만 적용됩니다.|  
 |**IOProcess** \ **GroupAffinity**|string|시스템의 프로세서 그룹에 해당하는 16진수 값 배열로, 각 프로세서 그룹의 논리적 프로세서에 대한 IOProcess 스레드 풀의 스레드 선호도를 설정하는 데 사용됩니다.|none|이 속성을 사용해서 사용자 지정 선호도를 만들 수 있습니다. 이 속성은 기본적으로 비어 있습니다.<br /><br /> 자세한 내용은 [GroupAffinity를 설정하여 프로세서 그룹의 프로세서에 대한 스레드 선호도 설정](#bkmk_groupaffinity) 를 참조하세요.<br /><br /> 다차원 모델에만 적용됩니다.|  
@@ -175,7 +159,7 @@ ms.locfileid: "40396380"
  다차원 Analysis  Services  인스턴스에서는 **IOProcess** 스레드 풀에서 **PerNumaNode** 를 설정하여 스레드 예약 및 실행을 추가로 최적화할 수 있습니다. **GroupAffinity** 는 제공된 스레드 풀에 사용할 논리적 프로세서 집합을 식별하지만 **PerNumaNode** 는 추가적으로 허용된 논리적 프로세서의 일부 하위 집합으로 선호도가 설정된 다중 스레드 풀을 만들지 여부를 지정하여 한 단계 더 나아갑니다.  
   
 > [!NOTE]  
->  Windows Server 2012에서 작업 관리자를 사용하여 컴퓨터의 NUMA 노드 수를 확인할 수 있습니다. 작업 관리자의 성능 탭에서 **CPU** 를 선택한 다음 그래프 영역을 마우스 오른쪽 단추로 클릭하면 NUMA 노드 수가 표시됩니다. 또는 Windows  Sysinternals에서 Coreinfo  유틸리티를 [다운로드](http://technet.microsoft.com/sysinternals/cc835722.aspx) 하고 `coreinfo –n` 을 실행하여 NUMA  노드 수와 각 노드의 논리적 프로세서 수를 반환합니다.  
+>  Windows Server 2012에서 작업 관리자를 사용하여 컴퓨터의 NUMA 노드 수를 확인할 수 있습니다. 작업 관리자의 성능 탭에서 **CPU** 를 선택한 다음 그래프 영역을 마우스 오른쪽 단추로 클릭하면 NUMA 노드 수가 표시됩니다. 또는 Windows  Sysinternals에서 Coreinfo  유틸리티를 [다운로드](http://technet.microsoft.com/sysinternals/cc835722.aspx) 하고 `coreinfo -n` 을 실행하여 NUMA  노드 수와 각 노드의 논리적 프로세서 수를 반환합니다.  
   
  **PerNumaNode** 의 올바른 값은 이 항목의 [스레드 풀 속성 참조](#bkmk_propref) 섹션에 설명된 대로 -1, 0, 1, 2입니다.  
   
@@ -247,17 +231,17 @@ ms.locfileid: "40396380"
   
  `"10/28/2013 9:20:52 AM) Message: The Query thread pool now has 1 minimum threads, 16 maximum threads, and a concurrency of 16.  Its thread pool affinity mask is 0x00000000000000ff. (Source: \\?\C:\Program Files\Microsoft SQL Server\MSAS11.MSSQLSERVER\OLAP\Log\msmdsrv.log, Type: 1, Category: 289, Event ID: 0x4121000A)"`  
   
- **MinThread** 및 **MaxThread** 설정을 위한 알고리즘에는 시스템 구성,  특히 프로세서 수가 포함됩니다. 블로그 게시물 [Analysis Services 2012 구성 설정(Wordpress 블로그)](http://go.microsoft.com/fwlink/?LinkId=330387)에서는 이러한 값이 계산되는 방법에 대해 자세히 설명합니다. 이러한 설정 및 동작은 이후 릴리스에서의 조정에 따라 변경될 수 있습니다.  
+ **MinThread** 및 **MaxThread** 설정을 위한 알고리즘에는 시스템 구성,  특히 프로세서 수가 포함됩니다. 다음 블로그 게시물에서는 이러한 값이 계산되는 방법에 대해 자세히 설명합니다. [Analysis Services 2012 구성 설정 (Wordpress 블로그)](http://go.microsoft.com/fwlink/?LinkId=330387)합니다. 이러한 설정 및 동작은 이후 릴리스에서의 조정에 따라 변경될 수 있습니다.  
   
  다음 목록에서는 다양한 프로세서 조합에 대한 다른 선호도 마스크 설정의 예를 보여 줍니다.  
   
--   8코어 시스템에서 프로세서 3-2-1-0에 대한 선호도 설정은 비트 마스크: 00001111 및 16진수 값: 0xF를 지정합니다.  
+-   8코어 시스템에서 프로세서 3-2-1-0에 대한 선호도 설정은 비트 마스크: 00001111, 및 16 진수 값: 0xF를 지정합니다.  
   
--   8코어 시스템에서 프로세서 7-6-5-4에 대한 선호도 설정은 비트 마스크: 11110000 및 16진수 값: 0xF0을 지정합니다.  
+-   8 코어 시스템에서 프로세서 7-6-5-4에 대 한 선호도 비트이 마스크 발생합니다. 11110000, 및 16 진수 값: 0xF0을 지정합니다.  
   
--   8코어 시스템에서 프로세서 5-4-3-2에 대한 선호도 설정은 비트 마스크: 00111100 및 16진수 값: 0x3C를 지정합니다.  
+-   8 코어 시스템에서 프로세서 5-4-3-2에 대 한 선호도 비트이 마스크 발생합니다. 00111100, 및 16 진수 값: 0x3C를 지정합니다.  
   
--   8코어 시스템에서 프로세서 7-6-1-0에 대한 선호도 설정은 비트 마스크: 11000011 및 16진수 값: 0xC3을 지정합니다.  
+-   8 코어 시스템에서 프로세서 7-6-1-0에 대 한 선호도 비트이 마스크 발생합니다. 11000011 및 16 진수 값: 0xC3을 지정합니다.  
   
  다중 프로세서 그룹을 포함하는 시스템에서는 쉼표로 구분된 목록의 각 그룹에 대해 별도의 선호도 마스크가 생성됩니다.  
   
@@ -275,9 +259,9 @@ ms.locfileid: "40396380"
  [프로세스 및 스레드 정보](/windows/desktop/ProcThread/about-processes-and-threads)   
  [다중 프로세서](/windows/desktop/ProcThread/multiple-processors)   
  [프로세서 그룹](/windows/desktop/ProcThread/processor-groups)   
- [SQL Server 2012에서에서 analysis Services 스레드 풀 변경](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
- [Analysis Services 2012 구성 설정 (Wordpress 블로그)](http://go.microsoft.com/fwlink/?LinkId=330387)   
- [프로세서가 64 개를 초과 하는 시스템 지원](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
+ [SQL Server 2012에서 Analysis Services 스레드 풀 변경](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
+ [Analysis Services 2012 구성 설정(Wordpress 블로그)](http://go.microsoft.com/fwlink/?LinkId=330387)   
+ [프로세서가 64개를 초과하는 시스템 지원](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
  [SQL Server Analysis Services 작업 가이드](http://go.microsoft.com/fwlink/?LinkID=225539)  
   
   

@@ -11,15 +11,15 @@ ms.assetid: f8a485d5-47ed-4dd5-bb66-ef4d6d463845
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a30991f6104263d4c6f497a721cee340f3dc9e2b
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: fe57736160762f90f574f835673e55d19107fa15
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085479"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590187"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>시퀀스 클러스터링 모델 탐색(중급 데이터 마이닝 자습서)
-  만든 했으므로 합니다 **Sequence Clustering with Region** 모델을 탐색할 수 있습니다 사용 하 여는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시퀀스 클러스터링 뷰어를를 **마이닝 모델 뷰어** 데이터 마이닝 디자이너의 탭 합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 시퀀스 클러스터 뷰어에: **클러스터 다이어그램**, **클러스터 프로필**하십시오 **클러스터 특징**,  **ClusterDiscrimination**, 및 **상태 전환**합니다. 이 뷰어를 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오 [Microsoft 시퀀스 클러스터 뷰어를 사용 하 여 모델 찾아보기](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)합니다.  
+  만든 했으므로 합니다 **Sequence Clustering with Region** 모델을 탐색할 수 있습니다 사용 하 여는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시퀀스 클러스터링 뷰어를를 **마이닝 모델 뷰어** 데이터 마이닝 디자이너의 탭 합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 시퀀스 클러스터 뷰어에는 **클러스터 다이어그램**, **클러스터 프로필**, **클러스터 특징**하십시오 **ClusterDiscrimination**, 및 **상태 전환**. 이 뷰어를 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오 [Microsoft 시퀀스 클러스터 뷰어를 사용 하 여 모델 찾아보기](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)합니다.  
   
 -   [클러스터 다이어그램 탭](#bkmk_CDiagram)  
   
@@ -171,7 +171,7 @@ ms.locfileid: "49085479"
  [맨 위로 이동](#bkmk_CDiagram)  
   
 ##  <a name="bkmk_CDiscrim2"></a> 클러스터 판별 탭  
- 합니다 **클러스터 판별** 탭 다른 클러스터에서 특정 클러스터를 구별 하는 특성을 확인 하려면 두 클러스터를 비교 하면 확인할 수 있습니다. 이 탭에 4 개의 열: **변수**를 **값**를 **클러스터 1**, 및 **Cluster 2**합니다.  모든 클러스터로 사용할 수 있습니다 **클러스터 1** 하 고 **Cluster 2**합니다.  
+ 합니다 **클러스터 판별** 탭 다른 클러스터에서 특정 클러스터를 구별 하는 특성을 확인 하려면 두 클러스터를 비교 하면 확인할 수 있습니다. 이 탭에는 **변수**, **값**합니다 **클러스터 1**, 및 **Cluster 2**합니다.  모든 클러스터로 사용할 수 있습니다 **클러스터 1** 하 고 **Cluster 2**합니다.  
   
  합니다 **변수** 열은 열 이름 이거나 열 이름 및 단어의 조합 수 있는 특성의 이름을 **전환**합니다. 합니다 **값** 열 특성 또는 전환의 정확한 값을 표시 합니다. 에 대 한 열에 있는 음영 처리 된 막대 **클러스터 1** 하 고 **Cluster 2** 비교 하는 클러스터의 특성의 강도 나타냅니다. 막대가 길수록 클러스터가 해당 특성이 지정된 사례를 포함할 가능성이 높아집니다.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "49085479"
   
 1.  에 **클러스터 판별** 탭에 대 한 **클러스터 1**선택, `Pacific Cluster`합니다.  
   
-     기본적으로 대 한 선택 **클러스터 2** 변경 **태평양의 보수 * * * 클러스터**합니다.  
+     기본적으로 대 한 선택 **클러스터 2** 변경 **Pacific Cluster 보수**합니다.  
   
      구별 하는 가장 중요 한 특성 `Pacific Cluster` 다른 모든 경우에서의 영역입니다. Region은 클러스터링에 대해 영향이 큰 특성이어서 다른 특성을 모호하게 만듭니다. 이러한 영향을 방지하려면 보다 작은 여러 클러스터를 서로 비교해 보십시오. 이렇게 하면 특성 목록이 변경되어 모델 간에 더 많은 전환이 포함될 수 있습니다.  
   
