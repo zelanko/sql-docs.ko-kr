@@ -22,22 +22,22 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0a79eed306e8920ece4cc6ea1de97352c4706622
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afab607b547302d3f24f3bb64060757bfa76495a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604621"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209912"
 ---
 # <a name="sysresourceusage-azure-sql-database"></a>sys.resource_usage(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
     
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  이 기능은 미리 보기 상태입니다. 이 기능은 향후 릴리스에서 변경되거나 제거될 수 있으므로 이 기능의 특정 구현에 의존하지 마세요.  
->   
+> 
 >  미리 보기 상태에 있는 동안 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 작업 팀에서 이 DMV에 대해 데이터 컬렉션을 설정 및 해제할 수 있음:  
->   
+> 
 >  -   설정된 경우 집계 시 DMV에서 현재 데이터를 반환합니다.  
 > -   해제된 경우DMV에서 기록 데이터를 반환하며, 이 데이터는 유효하지 않을 수 있습니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "47604621"
 |Time|**datetime**|시간 단위로 시간(UTC)입니다.|  
 |database_name|**nvarchar**|사용자 데이터베이스 이름입니다.|  
 |sku|**nvarchar**|SKU 이름입니다. 가능한 값은 다음과 같습니다.<br /><br /> Web<br /><br /> Business<br /><br /> Basic<br /><br /> 표준<br /><br /> Premium|  
-|usage_in_seconds|**int**|해당 시간에 사용된 CPU 시간의 합계입니다.<br /><br /> 참고:이 열 V11에서 사용 되지 않습니다 및 V12에 적용 되지 않습니다. **값은 항상 0으로 설정 됩니다.**|  
+|usage_in_seconds|**int**|해당 시간에 사용된 CPU 시간의 합계입니다.<br /><br /> 참고: 이 열은 V11에 대 한 않으며 V12에 적용 되지 않습니다. **값은 항상 0으로 설정 됩니다.**|  
 |storage_in_megabytes|**decimal**|데이터베이스 데이터, 인덱스, 저장 프로시저 및 메타데이터를 포함하여 해당 시간에 대한 최대 저장소 크기입니다.|  
   
 ## <a name="permissions"></a>사용 권한  

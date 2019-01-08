@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], about entities
@@ -14,12 +13,12 @@ ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 97a3fe9e9552170332e6be0d5cf5a3cb8541fe9b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb54250b1be15916055dd59a3f2e6d37330d5d93
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072913"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800915"
 ---
 # <a name="entities-master-data-services"></a>엔터티(Master Data Services)
   엔터티는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 모델에 포함된 개체입니다. 각 엔터티에는 관리하는 마스터 데이터의 행인 멤버가 들어 있습니다.  
@@ -50,7 +49,7 @@ ms.locfileid: "48072913"
  관련 모델 개체를 포함하여 엔터티에 대한 사용 권한을 사용자에게 부여할 수 있습니다. 자세한 내용은 [엔터티 권한&#40;Master Data Services&#41;](../../2014/master-data-services/entity-permissions-master-data-services.md)을 참조하세요.  
   
 ## <a name="entity-examples"></a>엔터티 예  
- 다음 예의 엔터티에는 멤버를 설명하는 Name, Code, Subcategory, StandardCost, ListPrice 및 FilePhoto 특성이 있습니다. 각 멤버는 단일 특성 값 행으로 표시됩니다.  
+ 다음 예는 Name, Code, Subcategory, StandardCost, ListPrice 및 FilePhoto 특성이 있습니다. 있습니다. 각 멤버는 단일 특성 값 행으로 표시됩니다.  
   
  ![Bike 제품 엔터티 테이블](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "Bike 제품 엔터티 테이블")  
   
@@ -65,18 +64,18 @@ ms.locfileid: "48072913"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|새 엔터티를 만듭니다.|[엔터티를 만듭니다. &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
+|새 엔터티를 만듭니다.|[엔터티 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
 |엔터티에 명시적 계층 및 컬렉션을 포함할 수 있음을 지정합니다.|[명시적 계층 및 컬렉션에 대 한 엔터티를 사용 하도록 설정 &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
 |기존 엔터티의 이름을 변경합니다.|[엔터티 이름 변경 &#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)|  
-|기존 엔터티를 삭제합니다.|[엔터티 삭제 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)|  
-|엔터티에 사용 권한을 할당합니다.|[모델 개체 사용 권한 할당 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
+|기존 엔터티를 삭제합니다.|[엔터티 삭제&#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)|  
+|엔터티에 사용 권한을 할당합니다.|[모델 개체 사용 권한 할당&#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   
 -   [모델&#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)  
   
--   [멤버 &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
+-   [멤버&#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
--   [특성 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [특성&#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

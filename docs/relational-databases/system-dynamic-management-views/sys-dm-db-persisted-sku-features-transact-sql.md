@@ -20,19 +20,19 @@ ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f35bb06301fb7d4f53a415e055371db989942586
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9d8001765a06ce432ea8f5f7e3081e4a54e7efa
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642421"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202072"
 ---
 # <a name="sysdmdbpersistedskufeatures-transact-sql"></a>sys.dm_db_persisted_sku_features(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 일부 기능 중 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 데이터베이스 파일의 정보를 저장하는 방법이 변경되었습니다. 이러한 기능은 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전으로 제한됩니다. 이러한 기능을 포함하는 데이터베이스는 이러한 기능이 지원되지 않는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전으로 이동할 수 없습니다. 현재 데이터베이스에서 사용 되는 버전별 기능을 나열 하려면 sys.dm_db_persisted_sku_features 동적 관리 뷰를 사용 합니다.
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -47,17 +47,17 @@ ms.locfileid: "47642421"
   
  sys.dm_db_persisted_sku_features에 특정 제한 하는 대로 다음 데이터베이스 변경 기능을 나열할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전:  
   
--   **ChangeCapture**: 데이터베이스에 변경 데이터 캡처를 사용할 수 있음을 나타냅니다. 변경 데이터 캡처를 제거 하려면 사용 합니다 [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) 저장 프로시저입니다. 자세한 내용은 [변경 데이터 캡처 정보&#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)를 참조하세요.  
+-   **ChangeCapture**: 데이터베이스에서 변경 데이터 캡처를 사용하도록 설정합니다. 변경 데이터 캡처를 제거 하려면 사용 합니다 [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) 저장 프로시저입니다. 자세한 내용은 [변경 데이터 캡처 정보&#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)를 참조하세요.  
   
 -   **ColumnStoreIndex**: 하나 이상의 테이블에 columnstore 인덱스를 나타냅니다. 데이터베이스 버전으로 이동할 수 있도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 기능은 지원 하지 않는, 사용 합니다 [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 또는 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) columnstore 인덱스를 제거 하는 문. 자세한 내용은 [Columnstore 인덱스](../../relational-databases/indexes/columnstore-indexes-overview.md)합니다.  
   
-    **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+    **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
--   **압축**: 하나 이상의 테이블 또는 인덱스 데이터 압축 또는 vardecimal 저장소 형식을 사용 함을 나타냅니다. 데이터베이스 버전으로 이동할 수 있도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 기능은 지원 하지 않는, 사용 하 여는 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 또는 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) 문을 데이터 압축을 제거 합니다. vardecimal 저장소 형식을 제거하려면 sp_tableoption 문을 사용합니다. 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요.  
+-   **압축**: 하나 이상의 테이블 또는 인덱스에서 데이터 압축 또는 vardecimal 저장소 형식을 사용하도록 지정합니다. 데이터베이스 버전으로 이동할 수 있도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 기능은 지원 하지 않는, 사용 하 여는 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 또는 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) 문을 데이터 압축을 제거 합니다. vardecimal 저장소 형식을 제거하려면 sp_tableoption 문을 사용합니다. 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요.  
   
--   **MultipleFSContainers**: 데이터베이스에서 여러 FILESTREAM 컨테이너를 사용 함을 나타냅니다. 데이터베이스에 여러 컨테이너 (파일)를 사용 하 여 FILESTREAM 파일 그룹입니다. 자세한 내용은 [FILESTREAM&#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)을 참조하세요.  
+-   **MultipleFSContainers**: 데이터베이스가 여러 FILESTREAM 컨테이너를 사용 함을 나타냅니다. 데이터베이스에 여러 컨테이너 (파일)를 사용 하 여 FILESTREAM 파일 그룹입니다. 자세한 내용은 [FILESTREAM&#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)을 참조하세요.  
   
--   **InMemoryOLTP**: 데이터베이스에서 메모리 내 OLTP를 사용 함을 나타냅니다. 데이터베이스에 MEMORY_OPTIMIZED_DATA 파일 그룹이 포함됩니다. 자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.  
+-   **InMemoryOLTP**: 데이터베이스에서 메모리 내 OLTP가 사용됨을 나타냅니다. 데이터베이스에 MEMORY_OPTIMIZED_DATA 파일 그룹이 포함됩니다. 자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.  
   
   **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). 
   

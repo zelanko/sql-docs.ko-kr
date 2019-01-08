@@ -1,5 +1,5 @@
 ---
-title: SSMS에서 DirectQuery 모드를 사용 하도록 설정 | Microsoft Docs
+title: SSMS에서 Analysis Services의 DirectQuery 모드에서 사용 하도록 설정 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c0a6ddb7b06cf325235f3d3998b0f57d640667a9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 27e704e6274910e2c9e3f77fe235e02918d95425
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700591"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072210"
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>SSMS에서 DirectQuery 모드를 사용하도록 설정
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "51700591"
   
  테이블 형식 모델을 DirectQuery 모드로 변경하면 새 데이터 저장소 모드가 즉시 적용됩니다.  
   
-## <a name="step-2a-switch-a-tabular-1200-database-to-directquery-mode"></a>2a단계: 테이블 형식 1200 데이터베이스를 DirectQuery 모드로 전환  
+## <a name="step-2a-switch-a-tabular-1200-database-to-directquery-mode"></a>2a 단계: 테이블 형식 1200 데이터베이스를 DirectQuery 모드로 전환  
   
 1.  개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **속성** > **모델** > **기본 모드**를 선택합니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "51700591"
     |**DirectQuery**|쿼리는 모델에 대해 정의된 데이터 원본 연결을 사용하여 백엔드 관계형 데이터베이스에 대해 실행됩니다.<br /><br /> 모델에 대한 쿼리는 기본 데이터베이스 쿼리로 변환되고 데이터 원본으로 리디렉션됩니다.<br /><br /> DirectQuery 모드로 설정되어 있는 모델을 처리할 경우 메타데이터만 컴파일되어 배포됩니다. 데이터 자체는 작동 가능한 데이터 원본의 데이터베이스 파일에 있는 모델의 외부입니다.|  
     |**가져오기**|쿼리는 MDX 또는 DAX에서 테이블 형식 데이터베이스에 대해 실행됩니다.<br /><br /> 가져오기 모드로 설정된 모델을 처리할 때 데이터는 백엔드 데이터 원본에서 검색되어 디스크에 저장됩니다. 데이터베이스가 로드되면 데이터는 매우 빠른 테이블 검색 및 쿼리에 대해 메모리로 완전히 복사됩니다.<br /><br /> 테이블 형식 모델에 대한 기본 모드이며 특정(비관계형) 데이터 원본에 대한 유일한 모드입니다.|  
   
-## <a name="step-2b-switch-a-tabular-1100-1103-database-to-directquery-mode"></a>2b단계: 테이블 형식 1100-1103 데이터베이스를 DirectQuery 모드로 전환  
+## <a name="step-2b-switch-a-tabular-1100-1103-database-to-directquery-mode"></a>2b 단계: 테이블 형식 1100-1103 데이터베이스를 DirectQuery 모드로 전환  
   
 1.  개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **속성** > **데이터베이스** > **DirectQueryMode**를 선택합니다.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "51700591"
   
  모델을 메모리에 내에서만 사용하는 경우에는 가장을 사용할 수 없습니다. 모델에서 DirectQuery 모드를 사용하지 않는 경우에는 **ImpersonateCurrentUser**설정이 유효하지 않습니다.  
   
-## <a name="step-4-validate-directquery-access"></a>4단계: DirectQuery 액세스의 유효성 검사  
+## <a name="step-4-validate-directquery-access"></a>4단계: DirectQuery 액세스의 유효성을 검사합니다  
   
 1.  SQL Server의 관계형 데이터베이스에 연결된 Management Studio에서 SQL Server Profiler 또는 xEvent를 사용하여 추적을 시작합니다.  
   

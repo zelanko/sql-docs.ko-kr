@@ -1,5 +1,5 @@
 ---
-title: OLAP 속성 | Microsoft Docs
+title: Analysis Services OLAP 속성 | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0e98fb016ff43ff34456fd02e43fa710c9156334
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.openlocfilehash: 936b05f8d54d3a5e67e7e03a02cc7907c56eab02
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239293"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072520"
 ---
 # <a name="olap-properties"></a>OLAP 속성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 표에 나열된 OLAP 서버 속성을 지원합니다. 추가 서버 속성 및 해당 속성 설정 방법에 대한 자세한 내용은 [Analysis Services의 서버 속성](../../analysis-services/server-properties/server-properties-in-analysis-services.md)을 참조하세요.  
   
- **적용 대상:** 다차원 서버 모드에만  
+ **적용 대상:** 다차원 서버 모드에만 적용됩니다.  
   
 ## <a name="memory"></a>메모리  
  **DefaultPageSizeForData**  

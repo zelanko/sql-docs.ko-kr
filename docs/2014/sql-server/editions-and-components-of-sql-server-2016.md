@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - Enterprise Edition [SQL Server]
@@ -34,33 +33,33 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d3198f2d361726a3e17c152b259471062f6a297
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 9610dc1cc729dc555d42c0dfe5eeb117f9cfba18
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142193"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798285"
 ---
 # <a name="editions-and-components-of-sql-server-2014"></a>SQL Server 2014 버전 및 구성 요소
   설치 요구 사항은 사용자의 애플리케이션 요구에 따라 달라질 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전별로 각기 다르게 조직 및 개인의 고유한 성능, 런타임 및 가격 요구 사항을 충족시켜 줍니다. 설치하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소도 특정 요구 사항에 따라 달라집니다. 다음 섹션은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 여러 버전과 구성 요소 중에서 가장 적합한 항목을 선택하는 방법을 이해하는 데 도움이 될 것입니다.  
   
-## <a name="principal-editions-of-includesscurrentincludessscurrent-mdmd"></a>주 버전 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+## <a name="principal-editions-of-includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 주 버전  
  다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 주 버전에 대해 설명합니다. 자세한 내용은 참조 하세요. [SQL Server 2014 버전에서 지 원하는 기능](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|정의|  
 |---------------------------------------|----------------|  
-|Enterprise(64비트 및 32비트)|프리미엄 제품인 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise 버전에서는 초고속 성능, 무제한 가상화 및 종단 간 비즈니스 인텔리전스 기능이 포함된 포괄적인 고성능 데이터 센터를 제공함으로써 중요한 작업의 서비스 수준을 높이고 데이터 인사이트에 대한 최종 사용자의 액세스가 가능하도록 합니다.|  
+|Enterprise(64비트 및 32비트)|프리미엄 제품인 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise 버전에서는 초고속 성능, 무제한 가상화 및 엔드투엔드 비즈니스 인텔리전스 기능이 포함된 포괄적인 고성능 데이터 센터를 제공하여 중요한 워크로드의 서비스 수준을 높이고 데이터 인사이트에 대해 최종 사용자 액세스를 가능하게 합니다.|  
 |Business Intelligence(64비트 및 32비트)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Business Intelligence 버전에서는 안전하고 확장 가능하며 관리하기 쉬운 BI 솔루션을 구축하고 배포할 수 있도록 조직의 능력을 강화하는 포괄적인 플랫폼을 제공합니다. 이 버전에서는 데이터 탐색 및 시각화를 기반으로 한 브라우저, 강력한 데이터 분해 기능 및 향상된 통합 관리와 같은 뛰어난 기능이 제공됩니다.|  
-|Standard(64비트 및 32비트)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Standard 버전에서는 부서와 소규모 조직이 응용 프로그램을 실행하기 위한 기본 데이터 관리 및 비즈니스 인텔리전스 데이터베이스를 제공하고 온-프레미스 및 클라우드용 공용 개발 도구를 지원함으로써, 최소한의 IT 리소스만으로도 데이터베이스 관리를 효율적으로 수행할 수 있도록 합니다.|  
+|Standard(64비트 및 32비트)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Standard 버전에서는 부서와 소규모 조직이 애플리케이션을 실행하기 위한 기본 데이터 관리 및 비즈니스 인텔리전스 데이터베이스를 제공하고 온-프레미스 및 클라우드용 공용 개발 도구를 지원하여 최소한의 IT 리소스로 데이터베이스 관리를 효율적으로 사용하도록 설정합니다.|  
   
-## <a name="specialized-editions-of-includesscurrentincludessscurrent-mdmd"></a>특수 버전 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+## <a name="specialized-editions-of-includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 특수 버전  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 특수 버전은 비즈니스 작업을 대상으로 합니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 특수 버전에 대해 설명합니다.  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|Description|  
 |---------------------------------------|-----------------|  
 |Web(64비트 및 32비트)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Web 버전을 사용하면 소규모부터 대규모에 이르는 웹 속성에 대한 확장성, 경제성 및 관리 효율성 기능을 제공하여 웹 호스터와 웹 VAP의 총 소유 비용을 낮출 수 있습니다.|  
   
-## <a name="breadth-editions-of-includesscurrentincludessscurrent-mdmd"></a>확장형 버전 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+## <a name="breadth-editions-of-includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 확장형 버전  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 확장형 버전은 특정 고객 시나리오에 맞게 엔지니어링되었으며 무료로 또는 최소한의 비용으로 제공됩니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 확장형 버전에 대해 설명합니다.  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|Description|  

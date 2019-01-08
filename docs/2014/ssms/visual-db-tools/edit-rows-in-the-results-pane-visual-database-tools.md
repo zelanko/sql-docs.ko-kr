@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.pane.results
@@ -17,12 +17,12 @@ ms.assetid: de36f636-cfe9-4ae6-a474-06e9c51f9f0c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0c837864701814ce0a1a9a45735cd8524bda1a90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1ff20051f5486fc8e9550c961f838ab5dc5c738
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121873"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818675"
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>결과 창에서 행 편집(Visual Database Tools)
   대부분의 경우 [결과 창](visual-database-tools.md)에서 데이터를 편집할 수 있습니다. 데이터 변경에 대한 자세한 내용은 [결과 업데이트 규칙&#40;Visual Database Tools&#41;](rules-for-updating-results-visual-database-tools.md) 및 [결과 창에서 데이터 작업&#40;Visual Database Tools&#41;](work-with-data-in-the-results-pane-visual-database-tools.md)에서 데이터를 편집할 수 있습니다.  

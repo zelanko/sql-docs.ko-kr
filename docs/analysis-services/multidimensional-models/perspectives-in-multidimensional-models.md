@@ -1,5 +1,5 @@
 ---
-title: 다차원 모델의 큐브 뷰 | Microsoft Docs
+title: 관점에서 Analysis Services 다차원 모델 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5427142f682d4fb76011c0514539267d05c3097b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: ae14c0e76564ebcaffecb7591d14c283fffd2906
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023680"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072590"
 ---
 # <a name="perspectives-in-multidimensional-models"></a>다차원 모델의 큐브 뷰
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -45,13 +45,13 @@ ms.locfileid: "34023680"
   
 -   KPI  
   
--   작업  
+-   동작  
   
 -   계산 멤버  
   
  개체를 표시하려면**큐브 개체**에서 해당 개체 유형에 대한 범주( **측정값 그룹**, **차원**, **KPI**, **계산**또는 **동작**)를 확장합니다. 차원의 계층이나 특성을 표시하려면 먼저 차원을 확장한 다음 **계층** 또는 **특성** 행을 확장합니다. 측정값 그룹의 측정값을 표시하려면 측정값 그룹을 확장합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [다차원 모델의 큐브](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

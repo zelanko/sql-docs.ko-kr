@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: c01b0ed3-67e4-4561-92d2-a8fbb086aca8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e961628f9cae062861b61bf46569331cd42da61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f53c456832e89aa96c0f7c9a1decd9fabbe96360
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087019"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815965"
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>관리 도구 명령줄 옵션(Distributed Replay Utility)
   합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 관리 도구인 `DReplay.exe`, distributed replay controller와 통신 하는 데 사용할 수 있는 명령줄 도구입니다. 이 관리 도구를 사용하여 컨트롤러에서 작업을 시작, 모니터링 및 취소할 수 있습니다.  
@@ -59,13 +59,13 @@ Usage:
   
  명령 인수 및 예가 포함된 자세한 구문 정보는 다음 항목을 참조하십시오.  
   
--   [전처리 옵션 &#40;Distributed Replay Administration Tool&#41;](preprocess-option-distributed-replay-administration-tool.md)  
+-   [전처리 옵션&#40;Distributed Replay Utility Administration Tool&#41;](preprocess-option-distributed-replay-administration-tool.md)  
   
--   [재생 옵션 &#40;Distributed Replay Administration Tool&#41;](replay-option-distributed-replay-administration-tool.md)  
+-   [재생 옵션&#40;Distributed Replay Administration Tool&#41;](replay-option-distributed-replay-administration-tool.md)  
   
--   [상태 옵션 &#40;Distributed Replay Administration Tool&#41;](status-option-distributed-replay-administration-tool.md)  
+-   [상태 옵션&#40;Distributed Replay Administration Tool&#41;](status-option-distributed-replay-administration-tool.md)  
   
--   [취소 옵션 &#40;Distributed Replay Administration Tool&#41;](cancel-option-distributed-replay-administration-tool.md)  
+-   [취소 옵션&#40;Distributed Replay Administration Tool&#41;](cancel-option-distributed-replay-administration-tool.md)  
   
  RPC는 언어 이벤트가 아닌 RPC로 재생됩니다.  
   

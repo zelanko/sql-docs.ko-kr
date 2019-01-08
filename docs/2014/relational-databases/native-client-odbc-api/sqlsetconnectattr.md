@@ -14,12 +14,12 @@ ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f95a4d3cc6903121c3c46d926e9d66b2d81f866a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: b1b48f9ee2e7ee3092e3f31fd6ef97e91c5cd9db
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070591"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351679"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 SQL_ATTR_CONNECTION_TIMEOUT의 설정을 무시합니다.  
@@ -71,19 +71,19 @@ ms.locfileid: "48070591"
 |SQL_COPT_SS_USER_DATA|모두|  
 |SQL_COPT_SS_WARN_ON_CP_ERROR|이전|  
   
- 동일한 세션, 데이터베이스 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 상태에 대해 사전 연결 특성 및 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명령을 사용하면 예기치 못한 동작이 발생할 수 있습니다. 예:  
+ 동일한 세션, 데이터베이스 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 상태에 대해 사전 연결 특성 및 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명령을 사용하면 예기치 못한 동작이 발생할 수 있습니다. 예를 들면 다음과 같습니다.  
   
 ```  
 SQLSetConnectAttr(SQL_COPT_SS_QUOTED_IDENT, SQL_QI_ON) // turn ON via attribute  
-SQLDriverConnect(…);  
+SQLDriverConnect(...);  
 SQLExecDirect("SET QUOTED_IDENTIFIER OFF") // turn OFF via Transact-SQL  
-SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, …) // restores to pre-connect attribute value  
+SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, ...) // restores to pre-connect attribute value  
 ```  
   
 ## <a name="sqlcoptssansinpw"></a>SQL_COPT_SS_ANSI_NPW  
  SQL_COPT_SS_ANSI_NPW는 비교와 연결의 NULL, 문자 데이터 형식 패딩 및 경고에 ISO 처리를 사용하거나 사용하지 않도록 설정합니다. 자세한 내용은 SET ANSI_NULLS, SET ANSI_PADDING, SET ANSI_WARNINGS 및 SET CONCAT_NULL_YIELDS_NULL을 참조하십시오.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |SQL_AD_ON|기본. 연결에서 NULL 비교, 패딩, 경고 및 NULL 연결 처리에 ANSI 기본 동작을 사용합니다.|  
 |SQL_AD_OFF|연결에서 NULL, 문자 데이터 형식 패딩 및 경고에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 정의된 처리 방식을 사용합니다.|  
@@ -102,14 +102,14 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 ## <a name="sqlcoptssattachdbfilename"></a>SQL_COPT_SS_ATTACHDBFILENAME  
  SQL_COPT_SS_ATTACHDBFILENAME은 연결할 수 있는 데이터베이스의 주 파일 이름을 지정합니다. 이 데이터베이스는 연결되어 해당 연결에 대한 기본 데이터베이스가 됩니다. SQL_COPT_SS_ATTACHDBFILENAME을 사용 하려면 데이터베이스의 이름을 연결 특성 SQL_ATTR_CURRENT_CATALOG의 값으로 지정 하거나 데이터베이스의 매개 변수 = 해야 합니다는 [SQLDriverConnect](sqldriverconnect.md)합니다. 데이터베이스가 이전에 연결된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 데이터베이스를 다시 연결하지 않습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |문자열에 대한 SQLPOINTER|연결할 데이터베이스의 주 파일 이름이 문자열에 포함됩니다. 파일의 전체 경로 이름을 포함해야 합니다.|  
   
 ## <a name="sqlcoptssbcp"></a>SQL_COPT_SS_BCP  
  SQL_COPT_SS_BCP를 사용하면 연결에서 대량 복사 함수를 사용할 수 있습니다. 자세한 내용은 [대량 복사 함수](../native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |SQL_BCP_OFF|기본. 연결에서 대량 복사 함수를 사용할 수 없습니다.|  
 |SQL_BCP_ON|연결에서 대량 복사 함수를 사용할 수 있습니다.|  
@@ -117,7 +117,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 ## <a name="sqlcoptssbrowseconnect"></a>SQL_COPT_SS_BROWSE_CONNECT  
  이 특성에서 반환 된 결과 집합을 사용자 지정 하는 데 사용 됩니다 [SQLBrowseConnect](sqlbrowseconnect.md)합니다. SQL_COPT_SS_BROWSE_CONNECT를 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 열거된 인스턴스에서 추가적인 정보를 반환하거나 반환하지 않도록 설정합니다. 추가적인 정보에는 서버가 클러스터인지 여부, 여러 인스턴스의 이름 및 버전 번호가 포함됩니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |SQL_MORE_INFO_NO|기본. 서버 목록을 반환합니다.|  
 |SQL_MORE_INFO_YES|**SQLBrowseConnect** 서버 속성의 확장된 문자열을 반환 합니다.|  
@@ -125,7 +125,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 ## <a name="sqlcoptssbrowseserver"></a>SQL_COPT_SS_BROWSE_SERVER  
  이 특성에서 반환 된 결과 집합을 사용자 지정 하는 데 사용 됩니다 **SQLBrowseConnect**합니다. SQL_COPT_SS_BROWSE_SERVER는 서버 이름을 지정 **SQLBrowseConnect** 정보를 반환 합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |컴퓨터 이름|**SQLBrowseConnect** 의 인스턴스 목록을 반환 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지정한 컴퓨터의 합니다. 이중 백슬래시 (\\\\) 서버 이름에 쓰일 수 없습니다 (예를 들어 대신의 \\\MyServer, MyServer를 사용 해야) 합니다.|  
 |NULL|기본. **SQLBrowseConnect** 도메인의 모든 서버에 대 한 정보를 반환 합니다.|  
@@ -133,7 +133,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 ## <a name="sqlcoptssconcatnull"></a>SQL_COPT_SS_CONCAT_NULL  
  SQL_COPT_SS_CONCAT_NULL은 문자열을 연결할 때 NULL에 대해 ISO 처리를 사용하거나 사용하지 않도록 설정합니다. 자세한 내용은 SET CONCAT_NULL_YIELDS_NULL을 참조하십시오.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |SQL_CN_ON|기본. 연결에서 문자열을 연결할 때 ISO 기본값을 사용하여 NULL 값을 처리합니다.|  
 |SQL_CN_OFF|연결에서 문자열을 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 정의된 동작을 사용하여 NULL 값을 처리합니다.|  
@@ -143,7 +143,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
  암호화에는 서버에 있는 인증서가 사용됩니다. 이 인증서는 연결 특성 SQL_COPT_SS_TRUST_SERVER_CERTIFICATE를 SQL_TRUST_SERVER_CERTIFICATE_YES로 설정하거나 연결 문자열에 "TrustServerCertificate=yes"가 포함된 경우를 제외하고는 인증 기관에서 확인된 인증서여야 합니다. 이 두 조건 중 하나에 해당하는 경우 서버에 인증서가 없으면 서버에서 생성되고 서명된 인증서를 사용하여 연결을 암호화할 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |SQL_EN_ON|연결을 암호화합니다.|  
 |SQL_EN_OFF|연결을 암호화하지 않습니다. 기본값입니다.|  
@@ -151,7 +151,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 ## <a name="sqlcoptssenlistindtc"></a>SQL_COPT_SS_ENLIST_IN_DTC  
  Microsoft Distributed Transaction Coordinator (MS DTC) OLE DB를 호출 하는 클라이언트가 **itransactiondispenser:: Begintransaction** MS DTC 트랜잭션을 시작 하는 MS DTC 트랜잭션 개체를 만드는 메서드를 나타냅니다는 트랜잭션입니다. 그런 다음 응용 프로그램 호출 `SQLSetConnectAttr` ODBC 연결을 사용 하 여 트랜잭션 개체를 연결 하는 SQL_COPT_SS_ENLIST_IN_DTC 옵션과 함께 합니다. 관련된 모든 데이터베이스 작업은 MS DTC 트랜잭션의 보호 아래 수행됩니다. 응용 프로그램이 호출 `SQLSetConnectAttr` DTC와 연결을 종료 하려면에서는 sql_dtc_done과 함께 합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |DTC 개체*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 내보낼 트랜잭션을 지정하는 MS DTC OLE 트랜잭션 개체입니다.|  
 |SQL_DTC_DONE|DTC 트랜잭션의 종료를 구분합니다.|  
@@ -172,7 +172,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 ## <a name="sqlcoptssintegratedsecurity"></a>SQL_COPT_SS_INTEGRATED_SECURITY  
  SQL_COPT_SS_INTEGRATED_SECURITY를 사용하면 서버 로그인 시 액세스를 확인하는 데 Windows 인증이 사용됩니다. 드라이버의 일부로 제공 되는 사용자 식별자와 암호 값을 무시 Windows 인증을 사용 하는 경우 **SQLConnect**하십시오 [SQLDriverConnect](sqldriverconnect.md), 또는 [SQLBrowseConnect](sqlbrowseconnect.md)처리 합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |SQL_IS_OFF|기본. 로그인 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 사용자 식별자와 암호를 확인합니다.|  
 |SQL_IS_ON|Windows 인증 모드를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 사용자의 액세스 권한을 확인합니다.|  
@@ -180,7 +180,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 ## <a name="sqlcoptssmarsenabled"></a>SQL_COPT_SS_MARS_ENABLED  
  이 특성은 MARS(Multiple Active Result Sets)를 사용하거나 사용하지 않도록 설정합니다. 기본적으로 MARS는 사용되지 않습니다. 이 특성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하기 전에 설정해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결된 후 MARS는 연결의 유효 기간 동안 설정되거나 설정되지 않은 상태로 유지됩니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |SQL_MARS_ENABLED_NO|기본. MARS(Multiple Active Result Sets)를 사용하지 않습니다.|  
 |SQL_MARS_ENABLED_YES|MARS를 사용합니다.|  
@@ -196,7 +196,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
  에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서 지 원하는 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] Ag를 참조 하십시오 [SQL Server 네이티브 클라이언트에 대 한 지원 High Availability, Disaster Recovery](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |SQL_IS_ON|장애 조치(failover)가 있는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서는 보다 빠른 재연결을 제공합니다.|  
 |SQL_IS_OFF|장애 조치(failover)가 있는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서는 보다 빠른 재연결을 제공하지 않습니다.|  
@@ -206,14 +206,14 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
  자세한 내용은 [프로그래밍 방식으로 암호 변경](../native-client/features/changing-passwords-programmatically.md)합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |SQL_COPT_SS_OLD_PASSWORD|이전 암호가 포함된 문자열에 대한 SQLPOINTER입니다. 이 값은 쓰기 전용이며 서버에 연결하기 전에 설정해야 합니다.|  
   
 ## <a name="sqlcoptssperfdata"></a>SQL_COPT_SS_PERF_DATA  
  SQL_COPT_SS_PERF_DATA는 성능 데이터 로깅을 시작하거나 중지합니다. 데이터 로그 파일 이름은 데이터 로깅을 시작하기 전에 설정해야 합니다. 아래의 SQL_COPT_SS_PERF_DATA_LOG를 참조하십시오.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |SQL_PERF_START|성능 데이터를 샘플링하는 드라이버를 시작합니다.|  
 |SQL_PERF_STOP|카운터의 성능 데이터 샘플링을 중지합니다.|  
@@ -229,7 +229,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 ## <a name="sqlcoptssperfquery"></a>SQL_COPT_SS_PERF_QUERY  
  SQL_COPT_SS_PERF_QUERY는 장기 실행 쿼리에 대한 로깅을 시작하거나 중지합니다. 쿼리 로그 파일 이름은 로깅을 시작하기 전에 지정해야 합니다. 응용 프로그램에서는 로깅 간격을 설정하여 "장기 실행"을 정의할 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |SQL_PERF_START|장기 실행 쿼리의 로깅을 시작합니다.|  
 |SQL_PERF_STOP|장기 실행 쿼리의 로깅을 중지합니다.|  
@@ -245,7 +245,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 ## <a name="sqlcoptsspreservecursors"></a>SQL_COPT_SS_PRESERVE_CURSORS  
  이 특성을 사용하면 트랜잭션을 커밋/롤백할 때 연결에 커서를 유지할지 여부를 설정하고 쿼리할 수 있습니다. SQL_PC_ON 또는 SQL_PC_OFF로 설정할 수 있으며 기본값은 SQL_PC_OFF입니다. 이 설정은 제어 여부 드라이버가 닫힙니다 사용자를 호출할 때 [SQLEndTran](sqlendtran.md) (또는 SQLTransact).  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |SQL_PC_OFF|기본. 트랜잭션을 커밋하거나 롤백할 때 커서를 닫을지를 사용 하 여 다시 **SQLEndTran**합니다.|  
 |SQL_PC_ON|트랜잭션을 커밋하거나 롤백할 때 커서가 닫히지 않습니다를 사용 하 여 다시 **SQLEndTran**, 비동기 모드에서 정적 또는 키 집합 커서를 사용 하는 경우를 제외 하 고 있습니다. 커서가 완전하게 채워지지 않은 상태에서 롤백을 실행하면 커서가 닫힙니다.|  
@@ -253,7 +253,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 ## <a name="sqlcoptssquotedident"></a>SQL_COPT_SS_QUOTED_IDENT  
  SQL_COPT_SS_QUOTED_IDENT를 사용하면 연결에서 전송하는 ODBC 및 Transact-SQL 문에 따옴표 붙은 식별자를 사용할 수 있습니다. 따옴표 붙은 식별자를 제공하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 식별자에 공백 문자가 들어 있어 원래는 올바르지 않은 "My Table" 같은 개체 이름을 사용할 수 있습니다. 자세한 내용은 SET QUOTED_IDENTIFIER를 참조하십시오.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |SQL_QI_OFF|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결에서 전송하는 [!INCLUDE[tsql](../../includes/tsql-md.md)]에 따옴표 붙은 식별자를 사용할 수 없습니다.|  
 |SQL_QI_ON|기본. 연결에서 전송하는 [!INCLUDE[tsql](../../includes/tsql-md.md)]에 따옴표 붙은 식별자를 사용할 수 있습니다.|  
@@ -261,7 +261,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 ## <a name="sqlcoptsstranslate"></a>SQL_COPT_SS_TRANSLATE  
  SQL_COPT_SS_TRANSLATE를 설정하면 MBCS 데이터를 교환할 때 드라이버가 클라이언트와 서버 코드 페이지 간에 문자를 변환합니다. 특성에 저장 된 데이터에만 영향을 줍니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char**하십시오 **varchar**, 및 **텍스트** 열.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |SQL_XL_OFF|드라이버가 클라이언트와 서버 사이에 교환되는 문자 데이터에서 코드 페이지의 문자를 다른 문자로 변환하지 않습니다.|  
 |SQL_XL_ON|기본. 드라이버가 클라이언트와 서버 사이에 교환되는 문자 데이터에서 코드 페이지의 문자를 다른 문자로 변환합니다. 드라이버는 문자 변환을 자동으로 구성하여 서버에 설치된 코드 페이지와 클라이언트에서 사용하는 코드 페이지를 확인합니다.|  
@@ -271,7 +271,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
  클라이언트 응용 프로그램은 연결이 열린 후에 이 속성을 쿼리하여 실제 사용되는 암호화 및 유효성 검사 설정을 확인할 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |SQL_TRUST_SERVER_CERTIFICATE_NO|기본. 인증서 확인 없는 암호화를 사용할 수 없습니다.|  
 |SQL_TRUST_SERVER_CERTIFICATE_YES|인증서 확인 없는 암호화를 사용할 수 있습니다.|  
@@ -279,7 +279,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 ## <a name="sqlcoptsstxnisolation"></a>SQL_COPT_SS_TXN_ISOLATION  
  SQL_COPT_SS_TXN_ISOLATION은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]별 스냅숏 격리 특성을 설정합니다. 이 경우 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 따라 다르기 때문에 SQL_ATTR_TXN_ISOLATION을 사용하여 스냅숏 격리를 설정할 수 없습니다. 그러나 스냅숏 격리를 검색할 때는 SQL_ATTR_TXN_ISOLATION 또는 SQL_COPT_SS_TXN_ISOLATION을 사용할 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |SQL_TXN_SS_SNAPSHOT|트랜잭션에서 다른 트랜잭션의 변경 내용을 볼 수 없고 다시 쿼리하는 경우에도 변경 내용을 볼 수 없음을 나타냅니다.|  
   
@@ -296,7 +296,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 ## <a name="sqlcoptsswarnoncperror"></a>SQL_COPT_SS_WARN_ON_CP_ERROR  
  이 특성은 코드 페이지 변환 중에 데이터가 손실될 경우 경고를 표시할지 여부를 결정합니다. 이 특성은 서버에서 들어오는 데이터에만 적용됩니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |SQL_WARN_YES|코드 페이지 변환 중에 데이터 손실이 발생할 경우 경고를 생성합니다.|  
 |SQL_WARN_NO|(기본값) 코드 페이지 변환 중에 데이터 손실이 발생할 경우 경고를 생성하지 않습니다.|  
@@ -356,7 +356,7 @@ SQLSetConnectAttr(hDbc, SQL_COPT_SS_PERF_DATA,
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLSetConnectAttr 함수](http://go.microsoft.com/fwlink/?LinkId=59368)   
+ [SQLSetConnectAttr 함수](https://go.microsoft.com/fwlink/?LinkId=59368)   
  [ODBC API 구현 정보](odbc-api-implementation-details.md)   
  [대량 복사 함수](../native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)   
  [SET ANSI_NULLS&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
@@ -364,7 +364,7 @@ SQLSetConnectAttr(hDbc, SQL_COPT_SS_PERF_DATA,
  [SET ANSI_WARNINGS&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
  [SET CONCAT_NULL_YIELDS_NULL&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
  [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)   
- [SQLPrepare 함수](http://go.microsoft.com/fwlink/?LinkId=59360)   
+ [SQLPrepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360)   
  [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md)  
   
   

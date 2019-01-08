@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6dbd6a425222c0e3f31d55a590294e9d3554f96e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f9439fd1b0844b09e26331859ce37d18817f908
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181113"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822117"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>컨트롤러 및 클라이언트 서비스 계정 수정
   이 항목에서는 Distributed Replay Controller 및 Distributed Replay Client 서비스 계정을 수정한 후 ACL(액세스 제어 목록)을 다시 적용하는 방법에 대해 설명합니다.  
   
 ### <a name="to-start-or-stop-the-distributed-replay-services-using-computer-management"></a>컴퓨터 관리를 사용하여 Distributed Replay 서비스를 시작 또는 중지하려면  
   
-1.  Distributed Replay 서비스가 설치 된 컴퓨터에서 명령 프롬프트에서 입력 `dcomcnfg`합니다.  
+1.  Distributed Replay 서비스가 설치된 컴퓨터에서 명령 프롬프트에 `dcomcnfg`을(를) 입력합니다.  
   
 2.  **서비스**를 두 번 클릭하고 아래로 스크롤한 다음, **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<서비스 이름>** 을 마우스 오른쪽 단추로 클릭하고 **시작** 또는 **중지**를 클릭합니다.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "48181113"
   
 3.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller Properties** 창의 **로그온** 탭에서 **계정 지정**을 선택하거나 **찾아보기** 를 클릭하고 새 로그온 계정을 입력한 다음 **확인**을 클릭합니다.  
   
-     **중요**: Distributed Replay Controller를 구성할 때 Distributed Replay Client 서비스를 실행하는 데 사용할 사용자 계정을 하나 이상 지정할 수 있습니다. 다음은 지원되는 계정 목록입니다.  
+     **중요 한**: Distributed Replay Controller를 구성할 때 Distributed Replay Client 서비스를 실행하는 데 사용할 사용자 계정을 하나 이상 지정할 수 있습니다. 다음은 지원되는 계정 목록입니다.  
   
     -   도메인 사용자 계정  
   
@@ -57,7 +56,7 @@ ms.locfileid: "48181113"
   
     1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 서비스를 중지합니다.  
   
-    2.  컴퓨터의 컨트롤러는 컨트롤러 서비스가 설치 되어, 명령 프롬프트에서 입력 `dcomcnfg`합니다.  
+    2.  Controller 서비스가 설치된 컨트롤러 컴퓨터에서 명령 프롬프트에 `dcomcnfg`을(를) 입력합니다.  
   
     3.  **구성 요소 서비스** 창에서 **콘솔 루트 -> 구성 요소 서비스 -> 컴퓨터 -> 내 컴퓨터 -> DCOM Config ->DReplayController**로 이동합니다.  
   

@@ -5,8 +5,7 @@ ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_adddistpublisher
@@ -17,12 +16,12 @@ ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b8233a5ba3d4610e43dc2c9fb47ba9107ffad268
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 171618db612b77de63feb2a7e53b248a6ac847b0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716991"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206572"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  배포 데이터베이스의 이름입니다. *distributor_db* 됩니다 **sysname**, 기본값은 없습니다. 이 매개 변수는 복제 에이전트가 게시자에 연결할 때 사용합니다.  
   
  [  **@security_mode=**] *security_mode*  
- 구현된 보안 모드입니다. 이 매개 변수는 복제 에이전트가 지연 업데이트 구독에 대한 게시자 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외의 게시자에 연결하는 경우에만 사용됩니다. *security_mode* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
+ 구현된 보안 모드입니다. 이 매개 변수는만 데 복제 에이전트가 지연된 업데이트 구독 또는 비-를 사용 하 여 게시자에 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *security_mode* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  

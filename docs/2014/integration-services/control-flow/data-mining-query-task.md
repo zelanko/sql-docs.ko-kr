@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingquerytask.f1
@@ -16,14 +15,14 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4eddd53df9d9a373a9a4101686dd016a09d20e38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa3e66397a61dc6cf5679e089bc03ce0e2d252cc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225163"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785035"
 ---
-# <a name="data-mining-query-task"></a>Data Mining Query Task
+# <a name="data-mining-query-task"></a>데이터 마이닝 쿼리 태스크
   데이터 마이닝 쿼리 태스크는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 작성된 데이터 마이닝 모델을 기반으로 예측 쿼리를 실행합니다. 예측 쿼리는 마이닝 모델을 사용하여 새 데이터에 대한 예측을 만듭니다. 예를 들어 예측 쿼리는 여름 기간 동안 판매될 요트 수를 예측하거나 요트를 구매할 잠재 고객 목록을 생성할 수 있습니다.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 은 DDL(데이터 정의 언어) 문 실행과 분석 개체 처리 등의 기타 비즈니스 인텔리전스 작업을 수행하는 태스크를 제공합니다.  
@@ -52,11 +51,11 @@ ms.locfileid: "48225163"
   
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [데이터 마이닝 쿼리 태스크 편집기 &#40;마이닝 모델 탭&#41;](../data-mining-query-task-editor-mining-model-tab.md)  
+-   [데이터 마이닝 쿼리 태스크 편집기&#40;마이닝 모델 탭&#41;](../data-mining-query-task-editor-mining-model-tab.md)  
   
--   [데이터 마이닝 쿼리 태스크 편집기 &#40;쿼리 탭&#41;](../data-mining-query-task-editor-query-tab.md)  
+-   [데이터 마이닝 쿼리 태스크 편집기&#40;쿼리 탭&#41;](../data-mining-query-task-editor-query-tab.md)  
   
--   [데이터 마이닝 쿼리 태스크 편집기 &#40;출력 탭&#41;](../data-mining-query-task-editor-output-tab.md)  
+-   [데이터 마이닝 쿼리 태스크 편집기&#40;출력 탭&#41;](../data-mining-query-task-editor-output-tab.md)  
   
 > [!NOTE]  
 >  데이터 마이닝 쿼리 편집기에는 식 페이지가 없습니다. 대신 **속성** 창을 사용하여 데이터 마이닝 쿼리 태스크의 속성 식을 만들고 관리하는 도구에 액세스할 수 있습니다.  

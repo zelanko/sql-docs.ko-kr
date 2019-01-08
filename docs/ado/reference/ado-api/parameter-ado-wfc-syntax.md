@@ -14,12 +14,12 @@ ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7bcb96b2bd0710af94b944d2f8e3417d9cfbcee6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad7331fbbfed123da5d7121d83558ba4bbabc912
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720711"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527248"
 ---
 # <a name="parameter-ado---wfc-syntax"></a>매개 변수(ADO - WFC 구문)
 ## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
@@ -70,9 +70,9 @@ public AdoProperties getProperties()
   
  ADO/WFC 구현를 **값** 속성을 합니다 **getValue** ; VARIANT를 반환 하는 메서드 및 **setValue** VARIANT를 인수로 사용 하는 메서드를 합니다. 변형은 Microsoft Visual Basic 같은 특정 언어에서 매우 효율적입니다.  
   
- 외에 **값** 속성인 ADO/WFC 제공 *접근자* Java 데이터 형식 가져오기 및 설정의 콘텐츠를 사용 하는 방법 **매개 변수** 개체입니다. 이러한 메서드 중 대부분은 폼의 이름이 **가져오기 * * * DataType* 또는 **설정 * * * DataType*합니다.  
+ 외에 **값** 속성인 ADO/WFC 제공 *접근자* Java 데이터 형식 가져오기 및 설정의 콘텐츠를 사용 하는 방법 **매개 변수** 개체입니다. 이러한 메서드 중 대부분은 폼의 이름이 **가져옵니다**_DataType_ 또는 **설정**_DataType_합니다.  
   
- 한 가지 주목할 만한 예외가: 방법이 없는 **getNull** 속성 대신는 **isNull** 필드가 null 인지 여부를 나타내는 부울 값을 반환 하는 속성입니다.  
+ 한 가지 주목할 만한 예외는 있습니다. 방법이 없는 **getNull** 속성 대신는 **isNull** 필드가 null 인지 여부를 나타내는 부울 값을 반환 하는 속성입니다.  
   
 ```  
 public boolean getBoolean()  

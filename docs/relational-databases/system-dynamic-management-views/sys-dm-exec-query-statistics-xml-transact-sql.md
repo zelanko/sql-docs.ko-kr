@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: e5cb0bdbbbb535293835a0114061d8ca322ec8a8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 99e51be32264dd90b126860b33abe35c7a27781a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675102"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819105"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
 
 ## <a name="table-returned"></a>반환된 테이블
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|
 |session_id|**smallint**|세션의 ID입니다. Null을 허용하지 않습니다.|
 |request_id|**int**|요청의 ID입니다. Null을 허용하지 않습니다.|
@@ -55,7 +55,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 |query_plan|**xml**|일부 통계를 사용 하 여 Showplan XML입니다. Null을 허용합니다.|
 
 ## <a name="remarks"></a>Remarks
-이 시스템 함수는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
+이 시스템 함수는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. 기술 자료를 참조 하세요. [3190871](https://support.microsoft.com/en-us/help/3190871)
 
 이 시스템 함수 둘 다에서 작동 **표준** 하 고 **경량** 쿼리 실행 통계 인프라를 프로 파일링 합니다.  
   
@@ -64,7 +64,7 @@ sys.dm_exec_query_statistics_xml(session_id)
   -  [SET STATISTICS PROFILE](../../t-sql/statements/set-statistics-profile-transact-sql.md)
   -  `query_post_execution_showplan` 확장된 이벤트입니다.  
   
-**경량** 인프라를 프로 파일링 통계는 사용할 수 있습니다 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 사용 하도록 설정할 수 있습니다.
+**경량** 에서 사용할 수 있는 통계 인프라를 프로 파일링은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 사용 하도록 설정할 수 있습니다.
   -  전역적으로 추적을 사용 하 여 플래그 7412입니다.
   -  사용 하 여 [ *query_thread_profile* ](https://support.microsoft.com/kb/3170113) 확장된 이벤트입니다.
   
@@ -105,7 +105,7 @@ CROSS APPLY sys.dm_exec_query_statistics_xml(session_id);
 GO  
 ```   
   
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>관련 항목:
   [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [데이터베이스 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  

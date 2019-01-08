@@ -1,7 +1,8 @@
 ---
-title: 하거나 사용 하 고, 사용 현황 데이터 수집을 사용 하지 않도록 설정 하 고, 크래시 보고에 대 한 Azure Data Studio | Microsoft Docs
+title: 사용 또는 사용 현황 데이터 수집 및 크래시 보고를 사용 하지 않도록 설정
+titleSuffix: Azure Data Studio
 description: 이 문서에서는 사용량 및 크래시 보고 데이터는 수집 되 고 Microsoft로 전송 하는 경우를 제어 하는 방법을 설명 합니다.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0a5adf802ab07e05f1041b1385044e2d580db32
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 1f9dd29edf2474ab8db0e3dc7ad7dc2ff78016d1
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356484"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030107"
 ---
 # <a name="enable-or-disable-usage-data-collection-for-includename-sosincludesname-sos-shortmd"></a>에 대 한 사용 데이터 컬렉션 설정 또는 해제 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -31,7 +32,7 @@ Microsoft 사용 현황 데이터 보내기 않으려면 경우 설정할 수 �
     "telemetry.enableTelemetry": false
 ```
 
-**중요 알림**:이 옵션의 다시 시작이 필요한 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 적용 합니다. 
+**중요 알림**: 이 옵션의 다시 시작이 필요한 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 적용 합니다. 
 
 ## <a name="how-to-disable-crash-reporting"></a>작동 중단 보고를 사용 하지 않도록 설정 하는 방법
 
@@ -41,7 +42,7 @@ Microsoft 사용 현황 데이터 보내기 않으려면 경우 설정할 수 �
     "telemetry.enableCrashReporter": false
 ```
 
-**중요 알림**:이 옵션의 다시 시작이 필요한 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 적용 합니다.
+**중요 알림**: 이 옵션의 다시 시작이 필요한 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 적용 합니다.
 
 ## <a name="additional-resources"></a>추가 리소스
 - [작업 영역 및 사용자 설정](settings.md)

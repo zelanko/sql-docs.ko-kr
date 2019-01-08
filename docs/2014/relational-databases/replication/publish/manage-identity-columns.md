@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - identity values [SQL Server replication]
@@ -17,12 +16,12 @@ ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a05cbb061c2f0df716458de35b3a1bad9fbae7e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 12233854049cf83f809a434b0e28dd4fb06d8d65
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198263"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816645"
 ---
 # <a name="manage-identity-columns"></a>ID 열 관리
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 ID 열을 관리하는 방법에 대해 설명합니다. 구독자 삽입이 게시자로 복제되는 경우 구독자와 게시자 모두에 동일한 ID 값이 할당되지 않도록 ID 열을 관리해야 합니다. 복제는 ID 범위를 자동으로 관리할 수 있으며, 사용자가 ID 범위 관리를 수동으로 처리하도록 선택할 수도 있습니다.  복제에서 제공하는 ID 범위 관리 옵션에 대한 자세한 내용은 [ID 열 복제](replicate-identity-columns.md)를 참조하세요.  
@@ -61,7 +60,7 @@ ms.locfileid: "48198263"
     |------------|-----------|-----------------|  
     |**게시자 범위 크기**|범위 크기에 대한 정수 값(예: 20000)|[ID 열 복제](replicate-identity-columns.md)의 "ID 범위 할당" 섹션을 참조하세요.|  
     |**구독자 범위 크기**|범위 크기에 대한 정수 값(예: 10000)|[ID 열 복제](replicate-identity-columns.md)의 "ID 범위 할당" 섹션을 참조하세요.|  
-    |**범위 임계값 비율**|백분율 임계값의 정수 값(예: 90은 90%)|새 ID 범위를 할당하기 전에 노드에 사용되는 전체 ID 값의 백분율입니다.<br /><br /> 참고: 이 값은 지정은 해야 하지만 지연 업데이트 구독을 사용하는 구독자와 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 또는 다른 SQL Server 에디션의 이전 버전을 실행하는 병합 게시 구독자에 의해서만 사용됩니다. 자세한 내용은 [ID 열 복제](replicate-identity-columns.md)의 "ID 범위 할당" 섹션을 참조하세요.|  
+    |**범위 임계값 비율**|백분율 임계값의 정수 값(예: 90은 90%)|새 ID 범위를 할당하기 전에 노드에 사용되는 전체 ID 값의 백분율입니다.<br /><br /> 참고: 이 값은 반드시 지정해야 하지만 지연 업데이트 구독을 사용하는 구독자와 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 또는 이전 버전의 다른 SQL Server 버전을 실행하는 병합 게시 구독자에 의해서만 사용됩니다. 자세한 내용은 [ID 열 복제](replicate-identity-columns.md)의 "ID 범위 할당" 섹션을 참조하세요.|  
     |**다음 범위 시작 값**|정수 값. 읽기 전용입니다.|다음 범위가 시작되는 값입니다. 예를 들어 현재 범위가 5001-6000이면 이 값은 6001이 됩니다.|  
     |**최대 ID 값**|정수 값. 읽기 전용입니다.|ID 열의 최대값입니다. 열의 기본 데이터 형식에 따라 결정됩니다.|  
     |**ID 증가값**|정수 값. 읽기 전용입니다.|각 삽입 작업마다 ID 열의 숫자가 증가 또는 감소되는 크기이며 일반적으로 1로 설정합니다.|  
@@ -74,7 +73,7 @@ ms.locfileid: "48198263"
   
 2.  **아티클 속성**을 클릭한 다음 **선택한 테이블 아티클 속성 설정**을 클릭합니다.  
   
-3.  **아티클 속성 - \<Article>** 대화 상자 **속성** 탭의 **ID 범위 관리** 섹션에서 **게시자 범위 크기**, **구독자 범위 크기** 및 **범위 임계값 비율** 속성 중 하나 이상에 대해 값을 입력합니다.  
+3.  에 **속성** 탭의 **아티클 속성- \<문서 >** 대화 상자의 **Id 범위 관리** 섹션, 하나 이상의 값을 입력 속성: **게시자 범위 크기**하십시오 **구독자 범위 크기**, 및 **범위 임계값 비율**합니다.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

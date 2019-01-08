@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.conditionalsplittrans.f1
@@ -16,12 +15,12 @@ ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b6cfae604393fa2fec1c8d3a22edf2c0379581b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6d5c075898bc503a58c6b90641788d01e9b97d0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073583"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814915"
 ---
 # <a name="conditional-split-transformation"></a>조건부 분할 변환
   조건부 분할 변환은 데이터 내용에 따라 각 데이터 행을 서로 다른 출력으로 라우팅할 수 있습니다. 조건부 분할 변환의 구현은 프로그래밍 언어의 CASE 의사 결정 구조와 유사합니다. 이 변환은 식을 평가한 후 평가 결과를 기준으로 데이터 행을 지정된 출력으로 보냅니다. 기본 출력도 제공되므로 일치하는 식이 없을 경우 행을 기본 출력으로 보냅니다.  
@@ -45,9 +44,9 @@ ms.locfileid: "48073583"
   
  `SUBSTRING(FirstName,1,1) == "B"`  
   
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에는 입력 데이터를 평가하고 출력 데이터를 전달하는 식을 만들 때 사용할 수 있는 함수와 연산자가 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../../expressions/integration-services-ssis-expressions.md)을 참조하세요.  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에는 입력 데이터를 평가하고 출력 데이터를 전달하는 식을 만들 때 사용할 수 있는 함수와 연산자가 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../../expressions/integration-services-ssis-expressions.md)가 될 때까지 워크플로를 반복합니다.  
   
- 조건부 분할 변환에 포함 된 `FriendlyExpression` 사용자 지정 속성입니다. 이 속성은 패키지가 로드되면 속성 식을 사용하여 업데이트할 수 있습니다. 자세한 내용은 [패키지에서 속성 식 사용](../../expressions/use-property-expressions-in-packages.md) 및 [변환 사용자 지정 속성](transformation-custom-properties.md)을 참조하세요.  
+ 조건부 분할 변환은 `FriendlyExpression` 사용자 지정 속성을 포함합니다. 이 속성은 패키지가 로드되면 속성 식을 사용하여 업데이트할 수 있습니다. 자세한 내용은 [패키지에서 속성 식 사용](../../expressions/use-property-expressions-in-packages.md) 및 [변환 사용자 지정 속성](transformation-custom-properties.md)을 참조하세요.  
   
  이 변환에는 하나의 입력, 여러 출력 및 하나의 오류 출력이 있습니다.  
   
@@ -63,12 +62,12 @@ ms.locfileid: "48073583"
   
  속성 설정 방법을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [조건부 분할 변환을 사용하여 데이터 집합 분할](conditional-split-transformation.md)  
+-   [조건부 분할 변환을 사용하여 데이터 세트 분할](conditional-split-transformation.md)  
   
 -   [데이터 흐름 구성 요소의 속성 설정](../set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-tasks"></a>관련 작업  
- [조건부 분할 변환을 사용하여 데이터 집합 분할](conditional-split-transformation.md)  
+ [조건부 분할 변환을 사용하여 데이터 세트 분할](conditional-split-transformation.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 흐름](../data-flow.md)   

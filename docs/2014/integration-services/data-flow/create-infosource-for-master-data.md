@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd05395098a6ce9a4dd23dc2f8dc886fe7273ece
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
-ms.translationtype: HT
+ms.openlocfilehash: 0b9460ee16c73d5bf61fdfab1f67a796d5b033c1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085071"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793556"
 ---
 # <a name="create-infosource-for-master-data"></a>마스터 데이터용 InfoSource 만들기
   **마스터 데이터용 InfoSource 만들기** 대화 상자에서는 SAP Netweaver BW 시스템의 마스터 데이터에 대한 새 InfoSource를 만듭니다.  
@@ -48,7 +47,7 @@ ms.locfileid: "49085071"
  InfoObject를 선택하면 선택한 InfoObject 이름으로 **InfoObject 이름** 입력란이 채워집니다.  
   
  **새로 만들기**  
- 새 InfoObject를 만듭니다. 이 옵션을 열립니다는 **새 InfoObject 만들기** 대화 상자는 새 InfoObject를 만들 수 있습니다. 이 대화 상자에 대한 자세한 내용은 [Create New InfoObject](create-new-infoobject.md)을 참조하십시오.  
+ 새 InfoObject를 만듭니다. 이 옵션을 선택하면 새 InfoObject를 만들 수 있는 **새 InfoObject 만들기** 대화 상자가 열립니다. 이 대화 상자에 대한 자세한 내용은 [Create New InfoObject](create-new-infoobject.md)을 참조하십시오.  
   
  InfoObject를 만들면 새 InfoObject 이름으로 **InfoObject 이름** 입력란이 채워집니다.  
   

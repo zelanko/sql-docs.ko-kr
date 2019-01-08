@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server Management Studio], query associations
@@ -15,12 +15,12 @@ ms.assetid: 7b8851b8-eccb-4e6c-944a-68fa90fc5870
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 635149ed13f94dfb4326654bda9f368a774a04f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f666bf30ebddbc173f6f23f13b1eca4c2d9024a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147753"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806555"
 ---
 # <a name="change-the-connection-associated-with-a-query"></a>쿼리와 연관된 연결 변경
   쿼리에 사용되는 연결을 변경하여 다른 여러 개의 서버나 데이터베이스에 대해 쿼리를 실행할 수 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "48147753"
   
 2.  **데이터베이스 엔진에 연결** 대화 상자에서 새 연결 정보를 제공한 다음 **연결**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [솔루션 탐색기](solution-explorer.md)   
  [쿼리를 프로젝트의 연결 정보로 연결](associate-a-query-with-a-connection-in-a-project.md)   
  [프로젝트의 연결 속성 보기 및 변경](view-or-change-the-properties-of-a-connection-in-a-project.md)  

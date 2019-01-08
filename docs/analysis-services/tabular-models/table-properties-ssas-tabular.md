@@ -1,5 +1,5 @@
 ---
-title: 테이블 속성 | Microsoft Docs
+title: Analysis Services 테이블 형식 모델 테이블 속성 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c479fd46f5303d95e5c0390eb97246f8eeb08890
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: e5104eacafe60ab3fd1ea1ff29cc64b8453e4ff7
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040447"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072010"
 ---
 # <a name="table-properties"></a>Table Properties 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -27,20 +27,20 @@ ms.locfileid: "34040447"
 -   [테이블 속성 설정 구성](#bkmk_config_prop)  
   
 ##  <a name="bkmk_properties"></a> 테이블 속성  
- **Basic**  
+ **기본**  
   
 |속성|기본 설정|Description|  
 |--------------|---------------------|-----------------|  
-|**연결 이름**|\<연결 이름 >|테이블의 데이터 원본에 대한 연결의 이름입니다.<br /><br /> 연결을 편집하려면 단추를 클릭합니다.|  
+|**연결 이름**|\<연결 이름 >|테이블의 데이터 원본에 대 한 연결의 이름입니다.<br /><br /> 연결을 편집하려면 단추를 클릭합니다.|  
 |**숨김**|False|보고 클라이언트 필드 목록에서 테이블이 숨겨지는지 여부를 지정합니다.|  
 |**파티션**||**속성** 창에 표시될 수 없는 테이블의 파티션입니다. 파티션을 보거나 만들거나 편집하려면 단추를 클릭하여 파티션 관리자를 엽니다.|  
 |**원본 데이터**||**속성** 창에 표시될 수 없는 테이블의 원본 데이터입니다. 원본 데이터를 보거나 편집하려면 단추를 클릭하여 테이블 속성 편집 대화 상자를 엽니다.|  
 |**테이블 속성 설명**||테이블에 대한 텍스트 설명입니다.<br /><br /> [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]에서 최종 사용자가 필드 목록의 이 테이블 위에 커서를 두면 설명이 도구 설명으로 나타납니다.|  
-|**테이블 이름**|\<식별 이름 >|테이블의 이름을 지정합니다. 테이블 이름은 테이블 가져오기 마법사를 사용하여 테이블을 가져올 때 지정하거나 테이블을 가져온 후 언제든지 지정할 수 있습니다. 모델의 테이블 이름을 관련된 원본 테이블 이름과 다르게 지정할 수 있습니다. 테이블 이름은 보고 클라이언트 애플리케이션 필드 목록과 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 모델 데이터베이스에 나타납니다.|  
+|**테이블 이름**|\<이름 >|테이블의 이름을 지정합니다. 테이블 이름은 테이블 가져오기 마법사를 사용하여 테이블을 가져올 때 지정하거나 테이블을 가져온 후 언제든지 지정할 수 있습니다. 모델의 테이블 이름을 관련된 원본 테이블 이름과 다르게 지정할 수 있습니다. 테이블 이름은 보고 클라이언트 애플리케이션 필드 목록과 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 모델 데이터베이스에 나타납니다.|  
   
  **보고 속성**  
   
- 자세한 설명 및 속성을 보고에 대 한 구성 정보에 대 한 참조 [Power View 보고 속성](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)합니다.  
+ 자세한 설명 및 보고 속성에 대 한 구성 정보를 참조 하세요 [파워 뷰 보고 속성](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)합니다.  
   
 |속성|기본 설정|Description|  
 |--------------|---------------------|-----------------|  

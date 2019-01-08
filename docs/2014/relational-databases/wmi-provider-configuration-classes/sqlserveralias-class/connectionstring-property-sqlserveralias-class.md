@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - ConnectionString Property (SqlServerAlias Class)
@@ -20,12 +18,12 @@ ms.assetid: 8a3692b9-3a34-42e2-b0b9-28e6bd3a7aba
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 306fa22f4a828b3367d6af66d729853b1ce21514
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 647fb88b6af501ad17dcf64738d72679f36e704e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053713"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797403"
 ---
 # <a name="connectionstring-property-sqlserveralias-class"></a>ConnectionString 속성(SqlServerAlias 클래스)
   서버 연결 별칭에 대한 연결을 설정하는 데 사용되는 연결 문자열을 가져옵니다.  

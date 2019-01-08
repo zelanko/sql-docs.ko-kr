@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], monitoring
@@ -15,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dc1702fd89a232d6b939dc8300e42925a0da293b
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: c3843fafac0616ffed52e82a307b1f3bfa801cc2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560170"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788905"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>변경 데이터 캡처 관리 및 모니터링(SQL Server)
   이 항목에서는 변경 데이터 캡처를 관리 및 모니터링하는 방법에 대해 설명합니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "51560170"
  캡처 작업의 동작을 이해하려면 구성 가능한 매개 변수가 `sp_cdc_scan`에서 어떻게 사용되는지 알아야 합니다.  
   
 #### <a name="maxtrans-parameter"></a>maxtrans 매개 변수  
- *maxtrans* 매개 변수는 단일 로그 검색 주기에서 처리할 수 있는 트랜잭션의 최대 수를 지정합니다. 검색 하는 동안 처리할 트랜잭션 수가이 한계에 도달 하는 경우 현재 검색에 추가 트랜잭션이 포함 됩니다. 검색 주기가 완료된 후에는 처리된 트랜잭션의 수가 항상 *maxtrans*보다 작거나 같습니다.  
+ *maxtrans* 매개 변수는 단일 로그 검색 주기에서 처리할 수 있는 트랜잭션의 최대 수를 지정합니다. 검색 중에 처리할 트랜잭션 수가 이 한도에 도달하면 현재 검색에 추가 트랜잭션이 포함되지 않습니다. 검색 주기가 완료된 후에는 처리된 트랜잭션의 수가 항상 *maxtrans*보다 작거나 같습니다.  
   
 #### <a name="maxscans-parameter"></a>maxscans 매개 변수  
  *maxscans* 매개 변수는 반환(continuous = 0) 또는 waitfor 실행(continuous = 1) 전에 로그를 비우기 위해 시도되는 검색 주기의 최대 수를 지정합니다.  
@@ -76,7 +75,7 @@ ms.locfileid: "51560170"
  정리 작업을 수행하면 모든 캡처 인스턴스의 하위 워터마크가 단일 트랜잭션 내에서 처음으로 업데이트됩니다. 그런 다음 변경 테이블과 cdc.lsn_time_mapping 테이블에서 오래된 항목을 제거하려고 시도합니다. 구성 가능한 임계값은 모든 단일 문에서 삭제할 수 있는 항목의 개수를 제한합니다. 모든 개별 테이블에서 삭제 작업을 수행하지 못한 경우에도 남은 테이블에서 작업을 계속 시도할 수 있습니다.  
   
 ### <a name="cleanup-job-customization"></a>정리 작업 사용자 지정  
- 정리 작업에서 삭제할 변경 테이블 항목을 결정하는 데 사용되는 전략을 사용자 지정할 수 있습니다. 배달된 정리 작업에서 지원되는 유일한 전략은 시간 기반 전략입니다. 이 경우 마지막으로 처리된 트랜잭션의 커밋 시간에서 허용되는 보존 기간을 빼는 방식으로 새로운 하위 워터마크가 계산됩니다. 기본 정리 프로시저는 기반으로 하므로 `lsn` 시간 대신 원하는 만큼의 전략 사용할 수는 가장 작은 결정할 `lsn` 변경 테이블에 보관 합니다. 이들 중 일부만 엄격히 시간에 기반을 둡니다. 예를 들어 변경 테이블에 액세스해야 하는 다운스트림 프로세스를 실행할 수 없는 경우 클라이언트에 대한 지식을 사용하여 장애 조치를 제공할 수 있습니다. 또한 기본 전략은 동일한 `lsn`을 사용하여 데이터베이스의 모든 변경 테이블을 정리하지만 기본 정리 프로시저를 호출하여 캡처 인스턴스 수준에서 정리를 수행할 수도 있습니다.  
+ 정리 작업에서 삭제할 변경 테이블 항목을 결정하는 데 사용되는 전략을 사용자 지정할 수 있습니다. 배달된 정리 작업에서 지원되는 유일한 전략은 시간 기반 전략입니다. 이 경우 마지막으로 처리된 트랜잭션의 커밋 시간에서 허용되는 보존 기간을 빼는 방식으로 새로운 하위 워터마크가 계산됩니다. 기본 정리 프로시저는 기반으로 하므로 `lsn` 시간 대신 원하는 만큼의 전략 사용할 수는 가장 작은 결정할 `lsn` 변경 테이블에 보관 합니다. 이들 중 일부만 엄격히 시간에 기반을 둡니다. 예를 들어 변경 테이블에 액세스해야 하는 다운스트림 프로세스를 실행할 수 없는 경우 클라이언트에 대한 지식을 사용하여 장애 조치를 제공할 수 있습니다. 또한 기본 전략은 동일 하지만 `lsn` 데이터베이스의 모든 변경 테이블을 정리 하려면 기본 정리 프로시저를 수 라고도 하 여 캡처 인스턴스 수준에서 정리 합니다.  
   
 ##  <a name="Monitor"></a> 변경 데이터 캡처 프로세스 모니터링  
  변경 데이터 캡처 프로세스 모니터링을 통해 변경 내용이 올바르게 기록되고 있고 변경 테이블에 대한 대기 시간이 적절한지 확인할 수 있습니다. 모니터링을 사용하면 발생할 수 있는 오류를 확인할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 변경 데이터 캡처를 모니터링하는 데 도움이 되는 두 가지 동적 관리 뷰인 [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) 및 [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md)가 포함되어 있습니다.  
@@ -160,7 +159,7 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
   
 4.  1단계에서 구성한 데이터 웨어하우스에서 custom_snapshots.cdc_log_scan_data 테이블을 찾습니다. 이 테이블은 로그 검색 세션의 데이터 스냅숏 기록을 제공합니다. 이 데이터를 사용하여 시간에 따른 대기 시간, 처리량 및 기타 성능 측정값을 분석할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터 변경 내용 추적&#40;SQL Server&#41;](track-data-changes-sql-server.md)   
  [변경 데이터 캡처 정보&#40;SQL Server&#41;](../track-changes/about-change-data-capture-sql-server.md)   
  [변경 데이터 캡처 설정 및 해제&#40;SQL Server&#41;](enable-and-disable-change-data-capture-sql-server.md)   

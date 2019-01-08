@@ -20,16 +20,16 @@ ms.assetid: ead464aa-cdc3-47dd-a0c0-997711205d31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd56404bfedece75d78ebaabd670cf25f19cbb0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a247b9916bd4b8bfe8704d7f374ef027043e2ae
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680231"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206592"
 ---
 # <a name="sqlreadfiledsn-function"></a>SQLReadFileDSN 함수
 **규칙**  
- ODBC 3.0 버전에 도입 되었습니다.  
+ 도입 된 버전: ODBC 3.0  
   
  **요약**  
  **SQLReadFileDSN** 파일 DSN에서 정보를 읽습니다.  

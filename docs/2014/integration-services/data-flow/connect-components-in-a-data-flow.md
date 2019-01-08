@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - components [Integration Services], connections
@@ -14,12 +13,12 @@ ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd6904980e160b027147649751d076085307a3ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14bbe37b0b13c9325c56bd0892a4b660c202c313
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204463"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796005"
 ---
 # <a name="connect-components-in-a-data-flow"></a>데이터 흐름의 구성 요소 연결
   이 절차에서는 데이터 흐름의 구성 요소 출력을 동일 데이터 흐름 내의 다른 구성 요소에 연결하는 방법에 대해 설명합니다.  
@@ -42,8 +41,8 @@ ms.locfileid: "48204463"
 6.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 흐름 구성 요소를 삭제 또는 추가](data-flow.md)   
- [데이터 흐름 구성 요소의 오류 출력 구성](../configure-an-error-output-in-a-data-flow-component.md)   
+ [데이터 흐름에서 구성 요소 추가 또는 삭제](data-flow.md)   
+ [데이터 흐름 구성 요소에서 오류 출력 구성](../configure-an-error-output-in-a-data-flow-component.md)   
  [데이터 흐름](data-flow.md)  
   
   

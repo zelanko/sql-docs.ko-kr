@@ -20,16 +20,16 @@ ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52ad6bc3fc84b0d50675b4e0a4e7bb44a6ded1c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f44ae90a82e778bf8e8564b719aa6b9f0157a05a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849361"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204372"
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns 함수
 **규칙**  
- 버전에 도입 된: ODBC 1.0 표준 준수: Open Group  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. 그룹 열기  
   
  **요약**  
  **SQLSpecialColumns** 지정된 된 테이블 내의 열에 대 한 다음 정보를 검색 합니다.  
@@ -93,11 +93,11 @@ SQLRETURN SQLSpecialColumns(
  *범위*  
  [입력] 범위는 rowid에 필요한 최소입니다. 반환 된 rowid 더 넓은 범위의 될 수 있습니다. 다음 중 하나여야 합니다.  
   
- SQL_SCOPE_CURROW: rowid 해당 행에 있는 동안에 유효 하도록 보장 됩니다. Rowid를 사용 하 여 나중에 다시 선택 행 업데이트 되거나 다른 트랜잭션에 의해 삭제 된 경우 행을 반환 하지 않을 수 있습니다.  
+ SQL_SCOPE_CURROW: Rowid 해당 행에 있는 동안에 유효 하도록 보장 됩니다. Rowid를 사용 하 여 나중에 다시 선택 행 업데이트 되거나 다른 트랜잭션에 의해 삭제 된 경우 행을 반환 하지 않을 수 있습니다.  
   
- SQL_SCOPE_TRANSACTION: rowid 현재 트랜잭션 기간 동안 유효 하도록 보장 됩니다.  
+ SQL_SCOPE_TRANSACTION: Rowid 현재 트랜잭션 기간 동안 유효 하도록 보장 됩니다.  
   
- SQL_SCOPE_SESSION: rowid가 유효 하도록 보장 세션 기간 (트랜잭션이 바뀌어도).  
+ SQL_SCOPE_SESSION: Rowid가 유효 하도록 보장 세션 기간 (트랜잭션이 바뀌어도).  
   
  *Null 허용*  
  [입력] NULL 값을 가질 수 있는 특수 열을 반환할 것인지를 결정 합니다. 다음 중 하나여야 합니다.  
@@ -168,11 +168,11 @@ SQLRETURN SQLSpecialColumns(
 |범위 (ODBC 1.0)|1|Smallint|Rowid의 실제 범위입니다. 다음 값 중 하나가 포함 되어 있습니다.<br /><br /> SQL_SCOPE_CURROW SQL_SCOPE_TRANSACTION SQL_SCOPE_SESSION<br /><br /> NULL이 반환 됩니다 *IdentifierType* SQL_ROWVER 됩니다. 각 값에 대 한 참조에 대 한 설명을 *범위* 이 섹션 앞부분의 "구문 에서"입니다.|  
 |COLUMN_NAME (ODBC 1.0)|2|NULL이 아닌 Varchar|열 이름입니다. 드라이버 이름 없는 열에 대 한 빈 문자열을 반환 합니다.|  
 |DATA_TYPE (ODBC 1.0)|3|NULL이 아닌 Smallint|SQL 데이터 형식입니다. 이 ODBC SQL 데이터 형식 또는 드라이버별 SQL 데이터 형식 수 있습니다. 유효한 ODBC SQL 데이터 형식의 목록을 참조 하세요 [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md)합니다. 드라이버별 SQL 데이터 형식에 대 한 내용은 드라이버의 설명서를 참조 하십시오.|  
-|TYPE_NAME (ODBC 1.0)|4|NULL이 아닌 Varchar|데이터 소스에 따라 다릅니다 데이터 형식 이름입니다. 예를 들어, "CHAR", "VARCHAR", "MONEY", "LONG VARBINARY" 또는 "CHAR () FOR BIT DATA"입니다.|  
+|TYPE_NAME (ODBC 1.0)|4|NULL이 아닌 Varchar|데이터 원본에 종속적인 데이터 형식 이름입니다. 예를 들어, "CHAR", "VARCHAR", "MONEY", "LONG VARBINARY" 또는 "CHAR () FOR BIT DATA"입니다.|  
 |COLUMN_SIZE (ODBC 1.0)|5|정수|데이터 원본에서 열의 크기를 지정 합니다. 열 크기에 관한 자세한 내용은 [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)합니다.|  
 |BUFFER_LENGTH (ODBC 1.0)|6|정수|전송 되는 데이터의 바이트 길이 **SQLGetData** 하거나 **SQLFetch** SQL_C_DEFAULT를 지정 하는 경우 작업 합니다. 숫자 데이터에 대 한이 크기는 데이터 원본에 저장 된 데이터의 크기 보다 다 수 있습니다. 이 값은 문자 또는 이진 데이터에 대 한 COLUMN_SIZE 열과 동일 합니다. 자세한 내용은 [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)합니다.|  
 |DECIMAL_DIGITS (ODBC 1.0)|7|Smallint|데이터 원본에 열 10 진수 숫자입니다. NULL이 반환 됩니다 데이터 형식의 소수 자릿수가 적용 되지 않습니다. 10 진수 숫자와 관련 된 자세한 내용은 [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)합니다.|  
-|PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|의사 (pseudo) 열을 Oracle ROWID 같은 열인지 여부를 나타냅니다.<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO **참고:** 최대 상호 운용성에 대 한 의사 (pseudo) 열은 따옴표로 묶어서는 안 반환한 식별자 따옴표 문자를 사용 하 여 **SQLGetInfo**합니다.|  
+|PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|의사 (pseudo) 열을 Oracle ROWID 같은 열인지 여부를 나타냅니다.<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO **참고 합니다.**  최대 상호 운용성에 대 한 의사 (pseudo) 열은 따옴표로 묶어서는 안 반환한 식별자 따옴표 문자를 사용 하 여 **SQLGetInfo**합니다.|  
   
  SQL_BEST_ROWID에 대 한 값을 검색 하는 응용 프로그램, 후 응용 프로그램 정의 된 범위 내에서 해당 행을 다시 선택 하려면 이러한 값을 사용할 수 있습니다. 합니다 **선택** 문에 행 또는 행이 하나씩 반환 하도록 보장 합니다.  
   
@@ -198,6 +198,6 @@ SQLRETURN SQLSpecialColumns(
 |데이터 블록을 인출 또는 결과 통해 스크롤 설정|[SQLFetchScroll 함수](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
 |기본 키의 열을 반환합니다.|[SQLPrimaryKeys 함수](../../../odbc/reference/syntax/sqlprimarykeys-function.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

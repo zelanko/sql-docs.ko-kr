@@ -1,20 +1,22 @@
 ---
-title: SQL Server 클러스터 관리 포털을 사용 하 여 빅 데이터 클러스터 (미리 보기) 모니터링 | Microsoft Docs
+title: 클러스터 관리 포털
+titleSuffix: SQL Server 2019 big data clusters
 description: SQL Server 2019 빅 데이터 클러스터 (미리 보기)를 모니터링 하는 클러스터 관리 포털을 사용 하는 방법에 알아봅니다.
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: eaff715d1fe29e1484dec7bde24de6bb16449458
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 46d2565ac90bfd007bbe0f3c9e8a2382ca5eeb74
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221469"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215539"
 ---
-# <a name="introduction-to-the-cluster-administration-portal"></a>클러스터 관리 포털 소개
+# <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>클러스터 관리 포털을 사용 하 여 SQL Server 빅 데이터 클러스터를 모니터링 하는 방법
 
 모니터링 또는 SQL Server 2019 빅 데이터 클러스터 (미리 보기) 문제 해결 하려는 경우 클러스터 관리 포털을 사용 합니다.
 
@@ -29,10 +31,10 @@ ms.locfileid: "51221469"
 
 에 따라 합니다 [빅 데이터 클러스터를 배포 하는 빠른 시작](quickstart-big-data-cluster-deploy.md) 열릴 때까지 합니다 **클러스터 관리 포털** 섹션. Mssqlctl를 사용 하 여 실행 하는 빅 데이터 클러스터를 만든 후 다음이 지침을 따릅니다.
 
-컨트롤러 pod가 실행 되 면 배포를 모니터링 하려면 클러스터 관리 포털을 사용할 수 있습니다. 외부 IP 주소 및 포트 번호를 사용 하 여 포털에 액세스할 수 있습니다 합니다 `service-proxy-lb` (예: **https://\<ip 주소\>: 30777**). 값은 관리 포털 액세스에 대 한 자격 증명 `CONTROLLER_USERNAME` 고 `CONTROLLER_PASSWORD` 위에 제공 된 환경 변수입니다.
+컨트롤러 pod가 실행 되 면 배포를 모니터링 하려면 클러스터 관리 포털을 사용할 수 있습니다. 외부 IP 주소 및 포트 번호를 사용 하 여 포털에 액세스할 수 있습니다 합니다 `service-proxy-lb` (예: **https://\<ip 주소\>: 30777/포털**). 값은 관리 포털 액세스에 대 한 자격 증명 `CONTROLLER_USERNAME` 고 `CONTROLLER_PASSWORD` 위에 제공 된 환경 변수입니다.
 
 > [!NOTE]
-> CTP 2.1에 대 한 경우 보안 경고를 자동으로 생성 된 SSL 인증서 사용 하므로 웹 페이지에 액세스 하는 경우
+> CTP 2.2에 대 한 경우 보안 경고를 자동으로 생성 된 SSL 인증서 사용 하므로 웹 페이지에 액세스 하는 경우
 
 ## <a name="overview"></a>개요
 

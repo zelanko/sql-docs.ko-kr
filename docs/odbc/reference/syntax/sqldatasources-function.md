@@ -20,16 +20,16 @@ ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9055fa6c277ebcbeccae909ddd397d39d62cf04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7b04dc2554b820fc6ac8344457754aae984d4b8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846061"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213112"
 ---
 # <a name="sqldatasources-function"></a>SQLDataSources 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLDataSources** 데이터 원본에 대 한 정보를 반환 합니다. 이 함수에만 드라이버 관리자에 의해 구현 됩니다.  
@@ -71,7 +71,7 @@ SQLRETURN SQLDataSources(
  *NameLength1Ptr*  
  [출력] 문자 (null 종결 문자가 제외)의 총 수를 반환 하는 버퍼에 대 한 포인터를 반환 하려면 사용 가능한 \* *ServerName*합니다. 반환할 사용 가능한 문자 개수 보다 크거나 같은 경우 *BufferLength1*, 데이터 원본 이름을 \* *ServerName* 잘립니다 *BufferLength1* null 종료 문자 길이 뺀 값입니다.  
   
- *Description*  
+ *설명*  
  [출력] 데이터 소스에 연결 된 드라이버의 설명을 반환 하는 버퍼에 대 한 포인터입니다. 예를 들어, dBASE 또는 SQL Server입니다.  
   
  하는 경우 *설명을* 가 null 인 경우 *NameLength2Ptr* (문자 데이터에 대 한 null 종료 문자를 제외한) 문자의 총 수를 반환 계속 됩니다 가리키는 버퍼에서 반환할 사용 가능한 *설명을*합니다.  
@@ -90,7 +90,7 @@ SQLRETURN SQLDataSources(
   
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
-|01000|일반 경고|(DM) 드라이버 관리자 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
+|01000|일반 경고|(DM) 드라이버 관리자 별 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|(DM) 버퍼 \* *ServerName* 충분히 전체 데이터 원본 이름을 반환할 수 없습니다. 따라서 이름이 잘렸습니다. 전체 데이터 원본 이름의 길이가 반환 됩니다 \* *NameLength1Ptr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)<br /><br /> (DM) 버퍼 \* *설명을* 전체 드라이버 설명을 반환 하는 충분히 큰 수 없습니다. 따라서 설명을 잘렸습니다. 잘리지 않은 데이터 원본 설명의 길이에서 **NameLength2Ptr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |HY000|일반 오류|(DM) 오류가 발생 했습니다에 대 한 관련 없는 SQLSTATE 했습니다 및 없습니다 구현 별 SQLSTATE 정의 되었습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*MessageText* 버퍼 오류 및 해당 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류|(DM)의 드라이버 관리자 지원 함수 완료 또는 실행 하는 데 필요한 메모리를 할당할 수 없습니다.|  

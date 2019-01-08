@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], object security
@@ -14,15 +13,15 @@ ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b2e4feb3f09b8012c17156e085e16dcf39df3088
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f5d485aec6d3056022ea55f1cb2bc8ee29a4e314
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183523"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822237"
 ---
 # <a name="database-object-security-master-data-services"></a>데이터베이스 개체 보안(Master Data Services)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 데이터는 여러 데이터베이스 테이블에 저장되고 뷰에서 볼 수 있습니다. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에서 보안을 설정한 정보는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에 액세스할 수 있는 사용자가 볼 수 있습니다.  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 데이터는 여러 데이터베이스 테이블에 저장되고 뷰에서 볼 수 있습니다. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션에서 보안을 설정한 정보는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에 액세스할 수 있는 사용자가 볼 수 있습니다.  
   
  특히 직원 급여 정보가 Employee 모델에 포함되거나 회사 재무 정보가 Account 모델에 포함될 수 있습니다. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 사용자 인터페이스에서 이러한 모델에 대한 사용자 액세스를 거부할 수 있지만 데이터베이스에 액세스할 수 있는 사용자는 이 데이터를 볼 수 있습니다.  
   
@@ -47,11 +46,11 @@ ms.locfileid: "48183523"
   
 |작업|보안 개체|사용 권한|  
 |------------|----------------|-----------------|  
-|리프 멤버 및 해당 속성을 준비 테이블에 로드합니다.|stg.name_Leaf|필수: INSERT<br /><br /> 선택 사항: SELECT 및 UPDATE|  
+|리프 멤버 및 해당 속성을 준비 테이블에 로드합니다.|stg.name_Leaf|필수 사항: INSERT<br /><br /> 선택 사항: SELECT 및 UPDATE|  
 |리프 준비 테이블의 데이터를 해당 MDS 데이터 집합 테이블에 로드합니다.|stg.udp_name_Leaf|CREATE 문을 실행하기 전에|  
-|리프 통합 멤버 및 해당 속성을 준비 테이블에 로드합니다.|stg.name_Consolidated|필수: INSERT<br /><br /> 선택 사항: SELECT 및 UPDATE|  
+|리프 통합 멤버 및 해당 속성을 준비 테이블에 로드합니다.|stg.name_Consolidated|필수 사항: INSERT<br /><br /> 선택 사항: SELECT 및 UPDATE|  
 |통합 준비 테이블의 데이터를 해당 MDS 데이터 집합 테이블에 로드합니다.|stg.udp_name_Consolidated|CREATE 문을 실행하기 전에|  
-|명시적 계층 내의 리프 멤버와 통합 멤버 간의 관계를 준비 테이블에 로드합니다.|stg.name_Relationship|필수: INSERT<br /><br /> 선택 사항: SELECT 및 UPDATE|  
+|리프 및 통합된 멤버 간의 관계를 명시적 계층에서 준비 테이블로 로드 합니다.|stg.name_Relationship|필수 사항: INSERT<br /><br /> 선택 사항: SELECT 및 UPDATE|  
 |관계 준비 테이블의 데이터를 해당 MDS 테이블에 로드합니다.|stg.udp_name_Relationship|CREATE 문을 실행하기 전에|  
 |준비 테이블의 데이터를 MDS 데이터 집합 테이블에 삽입하는 동안 발생한 오류를 봅니다.|stg.udp_name_Relationship|SELECT|  
   

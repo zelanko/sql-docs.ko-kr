@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.f1
@@ -13,12 +12,12 @@ ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2238676493cce8a732055dea853e7368fe817865
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b928b54236929238c404597f4ba1eeeddb427ccc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054363"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790645"
 ---
 # <a name="odbc-source"></a>ODBC 원본
   ODBC 원본은 데이터베이스 테이블, 뷰 또는 SQL 문을 사용하여 ODBC 지원 데이터베이스에서 데이터를 추출합니다.  
@@ -71,11 +70,11 @@ ms.locfileid: "48054363"
   
  자세한 내용은 다음 항목 중 하나를 참조하십시오.  
   
--   [ODBC 원본 편집기 &#40;연결 관리자 페이지&#41;](../odbc-source-editor-connection-manager-page.md)  
+-   [ODBC 원본 편집기&#40;연결 관리자 페이지&#41;](../odbc-source-editor-connection-manager-page.md)  
   
--   [ODBC 원본 편집기 &#40;열 페이지&#41;](../odbc-source-editor-columns-page.md)  
+-   [ODBC 원본 편집기&#40;열 페이지&#41;](../odbc-source-editor-columns-page.md)  
   
--   [ODBC 원본 편집기 &#40;오류 출력 페이지&#41;](../odbc-source-editor-error-output-page.md)  
+-   [ODBC 원본 편집기&#40;오류 출력 페이지&#41;](../odbc-source-editor-error-output-page.md)  
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 포함됩니다.  
   
@@ -87,14 +86,14 @@ ms.locfileid: "48054363"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [ODBC 원본 편집기 &#40;오류 출력 페이지&#41;](../odbc-source-editor-error-output-page.md)  
+-   [ODBC 원본 편집기&#40;오류 출력 페이지&#41;](../odbc-source-editor-error-output-page.md)  
   
--   [ODBC 원본 편집기 &#40;열 페이지&#41;](../odbc-source-editor-columns-page.md)  
+-   [ODBC 원본 편집기&#40;열 페이지&#41;](../odbc-source-editor-columns-page.md)  
   
--   [ODBC 원본 편집기 &#40;연결 관리자 페이지&#41;](../odbc-source-editor-connection-manager-page.md)  
+-   [ODBC 원본 편집기&#40;연결 관리자 페이지&#41;](../odbc-source-editor-connection-manager-page.md)  
   
 -   [ODBC 원본을 사용하여 데이터 추출](odbc-source.md)  
   
--   [ODBC 원본 사용자 지정 속성](odbc-source-custom-properties.md)  
+-   [ODBC Source Custom Properties](odbc-source-custom-properties.md)  
   
   

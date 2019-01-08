@@ -11,12 +11,12 @@ ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: dc6adc856477cbfb9b870c921676f1bd3470450c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2b8979b945e6f7149f14ba11d8703221adab3a5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095373"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350020"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>SharePoint 웹 파트를 사용하여 기본 모드 보고서 보기 및 탐색(SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 특정 버전의 보고서 서버 및 배포 모드에서 작동하는 다양한 웹 파트를 제공합니다.  
@@ -97,7 +97,7 @@ ms.locfileid: "48095373"
   
     > rswebparts.cab    00000000-0000-0000-0000-000000000000     True  
   
-     PowerShell 사용에 대한 자세한 내용은 [Install-SPWebPartPack(http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx)을 참조합니다.  
+     PowerShell 사용에 대한 자세한 내용은 [Install-SPWebPartPack(https://technet.microsoft.com/library/ff607840.aspx)](https://technet.microsoft.com/library/ff607840.aspx)을 참조합니다.  
   
 #### <a name="install-web-parts-using-stsadmexe"></a>STSADM.exe를 사용하여 웹 파트 설치  
   
@@ -141,7 +141,7 @@ ms.locfileid: "48095373"
   
 7.  **보고서 관리자 URL**에 액세스할 기본 모드 보고서 서버에 연결된 보고서 관리자 인스턴스의 URL을 입력합니다. 기본적으로 보고서 관리자 URL의 구문은 **http://\<servername>/reports**입니다.  
   
-8.  **보고서 경로**에 슬래시를 지정하고 그 뒤에 폴더 경로와 보고서 이름을 지정합니다. 이때 서버 이름이나 보고서 관리자 가상 디렉터리는 포함하지 **마세요** . 예를 들어 Adventure Works 폴더에 있는 'Company Sales' 보고서를 열려면 **/Adventure Works/Company Sales**를 지정합니다. 다음은 '제품' 보고서가 보고서 서버 루트 폴더인 **/Products**에 있는 또 다른 예입니다.  
+8.  **보고서 경로**에 슬래시를 지정하고 그 뒤에 폴더 경로와 보고서 이름을 지정합니다. 이때 서버 이름이나 보고서 관리자 가상 디렉터리는 포함하지 **마세요** . 예를 들어 Adventure Works 폴더에 있는 'Company Sales' 보고서를 열려면 **/Adventure Works/Company Sales**를 지정합니다. 다음은 '제품' 보고서가 보고서 서버 루트 폴더인 **/Products**에 있는 또 다른 예제입니다.  
   
 9. **확인**을 클릭합니다.  
   
@@ -166,8 +166,8 @@ ms.locfileid: "48095373"
     3.  **보고서 뷰어**를 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)   
- [Reporting Services 보고서 서버 &#40;SharePoint 모드&#41;](../reporting-services-report-server-sharepoint-mode.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)   
+ [Reporting Services 보고서 서버&#40;SharePoint 모드&#41;](../reporting-services-report-server-sharepoint-mode.md)   
  [Reporting Services 보고서 서버&#40;기본 모드&#41;](../report-server/reporting-services-report-server-native-mode.md)  
   
   

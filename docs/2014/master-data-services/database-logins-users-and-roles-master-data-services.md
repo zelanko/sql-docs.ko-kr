@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Master Data Services], database roles
@@ -18,12 +17,12 @@ ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f7fd2e31b87725419f7b9c9bf6b5e76249e9def1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 2b7430a12c64ab669182ab2877bb6620b42b2f48
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208993"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795419"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>데이터베이스 로그인, 사용자 및 역할(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 데이터베이스를 호스팅하는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 인스턴스에 자동으로 설치되는 로그인, 사용자 및 역할이 포함되어 있습니다. 이러한 로그인, 사용자 및 역할은 수정하면 안 됩니다.  
@@ -40,7 +39,7 @@ ms.locfileid: "48208993"
 |사용자|Description|  
 |----------|-----------------|  
 |`mds_clr_user`|사용되지 않습니다.<br /><br /> mds_dlp_login에 매핑됩니다.|  
-|`mds_email_user`|알림에 사용됩니다.<br /><br /> mds_email_login에 매핑됩니다.<br /><br /> 역할의 멤버인: DatabaseMailUserRole 합니다.|  
+|`mds_email_user`|알림에 사용됩니다.<br /><br /> mds_email_login에 매핑됩니다.<br /><br /> DatabaseMailUserRole 역할의 멤버입니다.|  
   
 ## <a name="master-data-services-database-users"></a>Master Data Services 데이터베이스 사용자  
   
@@ -65,6 +64,6 @@ ms.locfileid: "48208993"
 |**stg**|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스 테이블, 저장 프로시저 및 준비 프로세스와 관련된 뷰를 포함합니다. 이러한 개체는 삭제하지 마십시오. 준비 프로세스에 대 한 자세한 내용은 참조 하세요. [데이터 가져오기 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터베이스 개체 보안 &#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)  
+ [데이터베이스 개체 보안&#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)  
   
   

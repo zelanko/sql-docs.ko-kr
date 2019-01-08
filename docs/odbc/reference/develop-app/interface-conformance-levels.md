@@ -16,12 +16,12 @@ ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df78a4890658ec83a62eeccbce23d891d5afc56d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74d4ceb4532ee09004f035958860833aef488aaa
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812108"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206212"
 ---
 # <a name="interface-conformance-levels"></a>인터페이스 적합성 수준
 사용할 수 있는 기능을 드라이버에서 응용 프로그램에 알리기 위해 평준화의 목적은입니다. 함수를 기반으로 평준화 체계를 충분히이 목표를 얻지 않습니다. Odbc 3. *x*, 드라이버는 소유 하는 기능을 기반으로 분류 됩니다. 기능을 지 원하는 함수를 지 원하는 포함 될 수 있습니다. 반환 된 정보 유형에 대 한 설명자 필드, 문 특성, "Y" 값을 지 원하는 포함할 수도 있습니다 **SQLGetInfo**등입니다.  
@@ -34,9 +34,9 @@ ms.locfileid: "47812108"
   
  드라이버는 전체 규칙 클레임을 수준 이상의 기능을 구현 하는 무료입니다. 호출 하 여 이러한 모든 추가 기능을 검색 하는 응용 프로그램 **SQLGetFunctions** (결정할 ODBC 함수를 사용할 수 있는) 및 **SQLGetInfo** (다른 다양 한 ODBC 기능 쿼리)를 합니다.  
   
- ODBC 인터페이스 규칙 수준은 다음 세 가지: Core, 수준 1 및 수준 2입니다.  
+ ODBC 인터페이스 적합성 수준 세 가지 Core, 수준 1 및 수준 2입니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  이러한 적합성 수준 ODBC 2에 있는 동일한 이름의 ODBC API 적합성 수준 보다 다양 한 요구 사항이 *.x*합니다. ODBC 2에 의해 모든 기능을 포함 하는 특히 *.x* API 규칙 Level 1 Core 인터페이스 적합성 수준 포함 됩니다. 결과적으로, 대부분의 ODBC 드라이버는 핵심 수준 인터페이스 적합성을 보고할 수 있습니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  

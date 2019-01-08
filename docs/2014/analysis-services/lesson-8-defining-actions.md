@@ -1,5 +1,5 @@
 ---
-title: '8 단원: 동작 정의 | Microsoft Docs'
+title: '8 단원: 작업 정의 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ ms.assetid: 15459396-83c9-48a0-b10a-99ae38768c79
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cfdec0d2b77b88cff7fad643606ee3da001a67a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 92abf8eb92301af8dd3bf32d5ac5f6a38b1b5481
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174343"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351263"
 ---
-# <a name="lesson-8-defining-actions"></a>8단원: 동작 정의
+# <a name="lesson-8-defining-actions"></a>8 단원: 동작 정의
   이 단원에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트에 동작을 정의하는 방법을 알아봅니다. 동작은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에 저장되며 클라이언트 애플리케이션에 통합되고 사용자가 시작할 수 있는 MDX(Multidimensional Expressions) 문입니다.  
   
 > [!NOTE]  
->  이 자습서의 모든 단원에 대한 완료된 프로젝트를 온라인으로 사용할 수 있습니다. 이전 단원에서 완료된 프로젝트를 시작 지점으로 사용하여 어떠한 단원으로든 이동할 수 있습니다. 이 자습서와 함께 제공되는 샘플 프로젝트를 다운로드하려면[여기를 클릭](http://go.microsoft.com/fwlink/?LinkID=221866) 하십시오.  
+>  이 자습서의 모든 단원에 대한 완료된 프로젝트를 온라인으로 사용할 수 있습니다. 이전 단원에서 완료된 프로젝트를 시작 지점으로 사용하여 어떠한 단원으로든 이동할 수 있습니다. 이 자습서와 함께 제공되는 샘플 프로젝트를 다운로드하려면[여기를 클릭](https://go.microsoft.com/fwlink/?LinkID=221866) 하십시오.  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 다음 표에 설명된 동작 유형을 지원합니다.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 다음 표에 설명된 동작 유형을 지원합니다.  
   
 |||  
 |-|-|  
@@ -49,9 +49,9 @@ ms.locfileid: "48174343"
  이 태스크에서는 자습서 앞부분에서 정의한 팩트 차원 관계를 통해 드릴스루 동작을 정의, 사용 및 수정합니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [9단원: 큐브 뷰 및 번역 정의](lesson-9-defining-perspectives-and-translations.md)  
+ [9 단원: 큐브 뷰 및 번역 정의](lesson-9-defining-perspectives-and-translations.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Analysis Services Tutorial 시나리오](analysis-services-tutorial-scenario.md)   
  [다차원 모델링 &#40;Adventure Works 자습서&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [작업 &#40;Analysis Services-다차원 데이터&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   

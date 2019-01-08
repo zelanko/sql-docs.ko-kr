@@ -16,12 +16,12 @@ ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d1372b868499bc6b903dd7fb6c4022e724870b67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f948b50fae0995e16024ac41d8dd891630d1dbe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782201"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208464"
 ---
 # <a name="c-data-types"></a>C 데이터 형식
 ODBC C 데이터 형식에는 응용 프로그램에서 데이터를 저장 하는 데 사용 되는 C 버퍼의 데이터 형식을 나타냅니다.  
@@ -109,7 +109,7 @@ struct tagSQL_NUMERIC_STRUCT {
    SQLCHAR precision;  
    SQLSCHAR scale;  
    SQLCHAR sign[g];  
-   SQLCHAR val[SQL_MAX_NUMERIC_LEN];[e], [f]   
+   SQLCHAR val[SQL_MAX_NUMERIC_LEN];[e], [f]   
 } SQL_NUMERIC_STRUCT;  
 ```  
   
@@ -138,7 +138,7 @@ struct tagSQLGUID {
   
  [e]는 숫자를 저장 합니다 *val* sql_numeric_struct를 사용에 대 한 구조로 little endian 모드 (최하위 바이트 왼쪽에 있는 바이트)을 크기 조정 된 정수 필드입니다. 예를 들어, 4, 소수 수 10.001 상용 100010의 정수로 크기가 조정 됩니다. Sql_numeric_struct를 사용에서 값을 "AA 86 01 00 00... 것 이기 때문에 186AA 16 진수 형식 00"는 SQL_MAX_NUMERIC_LEN 정의한 바이트 수가 **#define**합니다.  
   
- 에 대 한 자세한 내용은 **sql_numeric_struct를 사용**를 참조 하세요 [방법: sql_numeric_struct를 사용을 사용 하 여 숫자 데이터 검색](retrieve-numeric-data-sql-numeric-struct-kb222831.md)합니다.  
+ 에 대 한 자세한 내용은 **sql_numeric_struct를 사용**를 참조 하세요 [방법: 사용 sql_numeric_struct를 사용 하 여 숫자 데이터를 검색할](retrieve-numeric-data-sql-numeric-struct-kb222831.md)합니다.  
   
  [SQL_C_NUMERIC 데이터의 전체 자릿수 및 소수 필드 f]를 areused 응용 프로그램에서 입력 및 출력 드라이버에서 응용 프로그램에 입력합니다. 에 대 한 값으로는 자체의 드라이버 관련 기본 드라이버를 sql_numeric_struct를 사용에 숫자 값을 씁니다를 때 사용 됩니다 합니다 *정밀도* 필드 및 해당 응용 프로그램 설명자 (의 자릿수가 SQL_DESC_SCALE 필드에 값이 사용 됩니다 기본값 0은)에 대 한 합니다 *확장* 필드입니다. 응용 프로그램 응용 프로그램 설명자의 SQL_DESC_PRECISION 및 자릿수가 SQL_DESC_SCALE 필드를 설정 하 여 전체 자릿수 및 소수에 대 한 고유한 값을 제공할 수 있습니다.  
   
@@ -148,7 +148,7 @@ struct tagSQLGUID {
   
  [ODBC 3에서 i] _SQL_C_BOOKMARK 되지 *.x*합니다.  
   
- [j] _SQL_C_SHORT, SQL_C_LONG, 및 SQL_C_TINYINT 바뀌었습니다 ODBC의 부호 있는 형식과 부호 없는 형식: SQL_C_SSHORT 및 SQL_C_USHORT, SQL_C_SLONG 및 SQL_C_ULONG, 및 SQL_C_STINYINT SQL_C_UTINYINT 합니다. ODBC 3 *.x* ODBC 2를 사용 하 여 작동 해야 하는 드라이버. *x* 를 호출할 때 드라이버 관리자를 통해 드라이버를 전달 하기 때문에 응용 프로그램 SQL_C_SHORT, SQL_C_LONG, 및 SQL_C_TINYINT을를 지원 해야 합니다.  
+ [j] _SQL_C_SHORT, SQL_C_LONG, 및 SQL_C_TINYINT 바뀌었습니다 ODBC의 계열과 부호 없는 형식: SQL_C_SSHORT 및 SQL_C_USHORT, SQL_C_SLONG SQL_C_ULONG, 및 SQL_C_STINYINT 및 SQL_C_UTINYINT 합니다. ODBC 3 *.x* ODBC 2를 사용 하 여 작동 해야 하는 드라이버. *x* 를 호출할 때 드라이버 관리자를 통해 드라이버를 전달 하기 때문에 응용 프로그램 SQL_C_SHORT, SQL_C_LONG, 및 SQL_C_TINYINT을를 지원 해야 합니다.  
   
  [k] SQL_C_GUID SQL_CHAR 또는 SQL_WCHAR로만 변환할 수 있습니다.  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: a8be7ec364a257752576fa150434a67a92c28d9c
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909513"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527859"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Analytics Platform System에 대 한 어플라이언스를 끄거나 전원
 이 항목에서는 어떻게 전원에 Analytics 플랫폼 Systemappliance 해제 전원 켜 짐 또는 실행 하 병렬 데이터 웨어하우스를 설명 합니다. 사용 하 여이 항목에서는 분석 플랫폼 시스템 어플라이언스를 이동 하면 하거나 전원 어플라이언스에서 심각한 전원 오류가 발생 한 후입니다.  
@@ -39,15 +39,15 @@ ms.locfileid: "37909513"
 > [!WARNING]  
 > 나열 된 정확한 순서로 모든 단계를 수행 해야 하 고 다른 설명이 없는 한 각 단계는 다음 단계를 수행 하기 전에 완료 해야 합니다. 잘못 된 순서 없이 각 단계가 완료 되기를 기다리는 단계를 수행 나중에 어플라이언스 전원이 켜진 경우 오류가 발생할 수 있습니다.  
   
-1.  PDW 제어 노드에 연결 (***PDW_region *-CTL01** ) 및 Analytics Platform System appliance 도메인 관리자 계정으로 로그인 합니다.  
+1.  PDW 제어 노드에 연결 (**_PDW_region_-CTL01** ) 및 Analytics Platform System appliance 도메인 관리자 계정으로 로그인 합니다.  
   
 2.  실행할 `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` 열려면 합니다 **Configuration Manager**합니다.  
   
 3.  Configuration Manager에서 아래를 **병렬 데이터 웨어하우스 토폴로지** 메뉴에서 클릭 합니다 **서비스 상태** 탭을 클릭 **중지 지역** PDW 서비스를 중지 하 합니다.   
   
-4.  연결할 ***appliance_domain *-HST01** 어플라이언스 도메인 관리자 계정으로 로그인 합니다.  
+4.  연결할  **_appliance_domain_-HST01** 어플라이언스 도메인 관리자 계정으로 로그인 합니다.  
   
-5.  사용 하 여는 **장애 조치 클러스터 관리자** 에 연결 합니다 ***appliance_domain *-WFOHST01** 자동으로 연결 하는 경우 클러스터 및 탐색 창에서 클릭 **역할**. 에 **역할** 창:  
+5.  사용 하 여 합니다 **장애 조치 클러스터 관리자** 에 연결 합니다  **_appliance_domain_-WFOHST01** 자동으로 연결 하는 경우 클러스터 및 탐색 창에서 클릭 **역할**입니다. 에 **역할** 창:  
   
     1.  가상 머신의 모든 다중 선택 합니다. 마우스 오른쪽 단추로 클릭 **종료**합니다.  
   
@@ -55,9 +55,9 @@ ms.locfileid: "37909513"
   
 6.  닫기 합니다 **장애 조치 클러스터 관리자** 응용 프로그램입니다.  
   
-7. 제외한 모든 서버를 종료 ***appliance_domain *-HST01**합니다.  
+7. 제외한 모든 서버를 종료할  **_appliance_domain_-HST01**합니다.  
   
-8. 종료는 ***appliance_domain *-HST01** 서버.  
+8. 종료 합니다  **_appliance_domain_-HST01** 서버.  
   
 9. 전력 분배 장치 (Pdu)를 종료 합니다.  
   
@@ -70,25 +70,25 @@ ms.locfileid: "37909513"
   
 1.  전력 분배 장치 (PDU의) 및 스위치에 대 한 대기를 자동으로 시작의 전원을 켭니다.  
   
-2.  전원 켜기는 ***appliance_domain *-HST01** 서버.  
+2.  전원 켜기 합니다  **_appliance_domain_-HST01** 서버.  
   
-3.  로그인 ***appliance_domain *-HST01** 어플라이언스 도메인 관리자 권한으로 합니다.  
+3.  에 로그인  **_appliance_domain_-HST01** 어플라이언스 도메인 관리자 권한으로 합니다.  
   
-4.  시작 합니다 **Hyper-v 관리자** 프로그램 (**virtmgmt.msc**)에 연결 하 고 ***appliance_domain *-HST01** 기본적으로 연결 되지 않은 경우.  
+4.  시작 합니다 **Hyper-v 관리자** 프로그램 (**virtmgmt.msc**)에 연결한  **_appliance_domain_-HST01** 기본적으로 연결 되지 않은 경우.  
   
-    1.  때문에 이름으로 연결할 수 없는 경우는 ***PDW_region *-AD01** 는 실행 되지 않는 IP 주소를 사용 하 여 연결 시도 합니다.  
+    1.  때문에 이름으로 연결할 수 없는 경우는  **_PDW_region_-AD01** 는 실행 되지 않는 IP 주소를 사용 하 여 연결 시도 합니다.  
   
-    2.  에 **Virtual Machines** 창 찾을 ***PDW_region *-AD01** 하 고 실행 중인지 확인 합니다. 그렇지 않은 경우이 VM을 시작 하 고 완전히 시작 되려면 일 기다립니다.  
+    2.  에 **Virtual Machines** 창 찾습니다  **_PDW_region_-AD01** 하 고 실행 중인지 확인 합니다. 그렇지 않은 경우이 VM을 시작 하 고 완전히 시작 되려면 일 기다립니다.  
   
 5.  어플라이언스에서 서버의 나머지의 전원을 켭니다.  
   
 6.  에 있는 동안 **HST01** 에서 어플라이언스 도메인 관리자로 로그온 **Hyper-v 관리자**:  
   
-    1.  연결할 ***appliance_domain *-HST02**합니다.  
+    1.  연결할  **_appliance_domain_-HST02**합니다.  
   
-    2.  에 **Virtual Machines** 창 찾을 ***PDW_region *-AD02** 하 고 실행 중인지 확인 합니다.  그렇지 않은 경우이 VM을 시작 하 고 완전히 시작 되려면 일 기다립니다.  
+    2.  에 **Virtual Machines** 창 찾습니다  **_PDW_region_-AD02** 하 고 실행 중인지 확인 합니다.  그렇지 않은 경우이 VM을 시작 하 고 완전히 시작 되려면 일 기다립니다.  
   
-7.  사용 하 여는 **장애 조치 클러스터 관리자** 연결할는 ***appliance_domain *-WFOHST01** 클러스터를 자동으로 연결 하는 경우 선택한 후는 **탐색** 창 클릭 **역할**입니다. 에 **역할** 창:  
+7.  사용 하 여는 **장애 조치 클러스터 관리자** 에 연결 합니다  **_appliance_domain_-WFOHST01** 클러스터를 자동으로 연결 하는 경우 선택한 다음는  **탐색** 창 클릭 **역할**입니다. 에 **역할** 창:  
   
     1.  다중 선택의 모든 가상 컴퓨터를 마우스 오른쪽 단추로 클릭 **시작**합니다.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "37909513"
   
 8. 연결 끊기 **HST01** 하려는 경우.  
   
-9. 연결할 ***PDW_region *-CTL01** 어플라이언스 도메인 관리자 계정을 사용 합니다.  
+9. 연결할  **_PDW_region_-CTL01** 어플라이언스 도메인 관리자 계정을 사용 합니다.  
   
 10. 실행 `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` 를 시작 합니다 **Configuration Manager**합니다.  
   

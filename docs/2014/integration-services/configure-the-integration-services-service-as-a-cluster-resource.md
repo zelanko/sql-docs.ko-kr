@@ -11,12 +11,12 @@ ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ec1406b5259a68eadc821092bea3cccd10e032d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0bd0382906d3ee56055cc026036816af64b55dc6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185823"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408977"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Integration Services 서비스를 클러스터 리소스로 구성
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스를 클러스터 리소스로 구성할 때 얻는 장점이 단점보다 많다고 생각하는 사용자를 위해 이 섹션에서는 필요한 구성 방법을 설명합니다. 그러나 [!INCLUDE[msCoName](../includes/msconame-md.md)] 서비스를 클러스터 리소스로 구성하지 않는 것이 좋습니다( [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 권장).  
@@ -79,7 +79,7 @@ ms.locfileid: "48185823"
   
 4.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **리소스**를 클릭합니다.  
   
-5.  리소스 마법사의 **새 리소스** 페이지에서 이름을 입력하고 **서비스 유형** 으로 **"일반 서비스"** 를 선택합니다. **그룹**값을 변경하지 마십시오. **다음**을 클릭합니다.  
+5.  리소스 마법사의 **새 리소스** 페이지에서 이름을 입력하고 **서비스 유형**으로 **"일반 서비스"** 를 선택합니다. **그룹**값을 변경하지 마십시오. **다음**을 클릭합니다.  
   
 6.  **가능한 소유자** 페이지에서 클러스터의 노드를 리소스의 가능한 소유자로 추가하거나 제거합니다. **다음**을 클릭합니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48185823"
   
 2.  공유 디스크에서 패키지 저장소로 사용할 **Packages** 라는 새 폴더를 만듭니다. 해당 사용자 및 그룹에 새 폴더에 대한 폴더 보기 및 쓰기 권한을 부여합니다.  
   
-3.  공유 디스크에서 텍스트 편집기나 XML 편집기로 구성 파일을 엽니다. 값을 변경 합니다 `ServerName` 가상의 이름으로 요소 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 동일한 리소스 그룹에 있습니다.  
+3.  공유 디스크에서 텍스트 편집기나 XML 편집기로 구성 파일을 엽니다. `ServerName` 요소의 값을 같은 리소스 그룹에 있는 가상 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이름으로 변경합니다.  
   
 4.  값을 변경 합니다 `StorePath` 의 정규화 된 경로에 요소는 **패키지** 이전 단계에서 공유 디스크에 만든 폴더입니다.  
   

@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio에서 소스 제어 | Microsoft Docs
-description: Azure Data Studio에서 소스 제어를 구성 하는 방법에 알아봅니다.
-ms.custom: tools|sos
+title: 원본 제어
+titleSuffix: Azure Data Studio
+description: Azure Data Studio에서 소스 제어를 구성 하는 방법 알아보기
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 956ead73c4fe28a045f5ff24280012ed32937f9c
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 5fb3c8dea11e570bba4452e181626625e31acbe0
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356314"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030677"
 ---
 #  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>소스 제어를 사용 하 여 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

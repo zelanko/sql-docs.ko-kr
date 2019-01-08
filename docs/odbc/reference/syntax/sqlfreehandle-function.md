@@ -20,21 +20,21 @@ ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14d883228c17b24f42765c6fbf8484592b5fa117
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f63af414d59afed2bbe2e8eed3fba7a1362bb4bb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820201"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203912"
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 3.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 3.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLFreeHandle** 특정 환경, 연결, 문 또는 설명자 핸들과 연결 된 리소스를 해제 합니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  이 함수는 제네릭 함수 핸들을 해제 합니다. ODBC 2.0 함수 대체 **SQLFreeConnect** (에 대 한 연결 핸들을 해제) 하 고 **SQLFreeEnv** (에 대 한 환경 핸들을 해제) 합니다. **SQLFreeConnect** 하 고 **SQLFreeEnv** 둘 다에서 사용 되지 않는 ODBC 3 *.x*합니다. **SQLFreeHandle** 또한 ODBC 2.0 함수를 대체 **SQLFreeStmt** (SQL_DROP를 사용 하 여 *옵션*) 문 핸들을 해제 합니다. 자세한 내용은 "설명입니다."을 참조 하세요. 새로운 드라이버 관리자는이 함수를 경우 맵을 ODBC 3 대 한 자세한 내용은 *.x* 는 ODBC 2를 사용 하 여 응용 프로그램이 작동 *.x* 드라이버를 참조 하세요. [뒤로 대 한 대체 함수 매핑 응용 프로그램의 호환성](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -109,7 +109,7 @@ SQLRETURN SQLFreeHandle(
 ## <a name="freeing-a-descriptor-handle"></a>설명자 핸들 해제  
  에 대 한 호출 **SQLFreeHandle** 사용 하 여를 *HandleType* SQL_HANDLE_DESC의에 있는 설명자 핸들을 해제 *처리*합니다. 에 대 한 호출 **SQLFreeHandle** 의 포인터 필드 (SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, 및 SQL_DESC_OCTET_LENGTH_PTR 포함)에서 참조 될 수 있는 응용 프로그램에서 할당 된 메모리를 해제 하지 않습니다 설명자 레코드 *처리*합니다. 포인터 필드 되지 않는 필드에 대 한 드라이버에 의해 할당 된 메모리는 핸들이 해제 될 때 해제 됩니다. 사용자 할당 된 설명자 핸들을 해제 되 면 모든 문 핸들을 해제 했습니다 연결 된 해당 해당 자동으로 할당 된 설명자 핸들 되돌아갑니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC 2 *.x* 설명자 핸들 할당을 지원 하지 않는 것 처럼 드라이버 해제 설명자 핸들을 지원 하지 않습니다.  
   
  있음을 **SQLDisconnect** 연결에서 모든 문 및 설명자 열기를 자동으로 삭제 합니다. 문 핸들을 해제 하는 응용 프로그램, 드라이버는 핸들과 연결 된 모든 자동으로 생성 된 설명자를 해제 합니다.  

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_change_subscription_properties_TSQL
@@ -17,12 +16,12 @@ ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f87fb9b43b723fa489e42f05f5f4f727bafd18dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45aadf2eab3cad31bfc376de59e8cce25126533f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692291"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785735"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +80,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**distributor_security_mode**|**1**|배포자에 연결할 때 Windows 인증을 사용합니다.|  
 ||**0**|배포자에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용합니다.|  
 |**dts_package_name**||SQL Server 2000 DTS(데이터 변환 서비스) 패키지의 이름을 지정합니다. 이 값은 트랜잭션 또는 스냅숏 게시일 때만 지정할 수 있습니다.|  
-|**dts_package_password**||패키지 암호를 지정합니다. *dts_package_password* 됩니다 **sysname** 기본값은 NULL 사용 하 여 변경 되지 않은 상태로 남아 있을 암호 속성이 지정 합니다.<br /><br /> 참고: DTS 패키지 암호가 지정 되어야 합니다.<br /><br /> 이 값은 트랜잭션 또는 스냅숏 게시일 때만 지정할 수 있습니다.|  
+|**dts_package_password**||패키지 암호를 지정합니다. *dts_package_password* 됩니다 **sysname** 기본값은 NULL 사용 하 여 변경 되지 않은 상태로 남아 있을 암호 속성이 지정 합니다.<br /><br /> 참고: DTS 패키지에는 암호가 있어야 합니다.<br /><br /> 이 값은 트랜잭션 또는 스냅숏 게시일 때만 지정할 수 있습니다.|  
 |**dts_package_location**||DTS 패키지가 저장된 위치입니다. 이 값은 트랜잭션 또는 스냅숏 게시일 때만 지정할 수 있습니다.|  
 |**dynamic_snapshot_location**||스냅숏 파일을 저장한 폴더의 경로를 지정합니다. 이 값은 병합 게시일 때만 지정할 수 있습니다.|  
 |**ftp_address**||이전 버전과의 호환성을 위해서만 지원됩니다.|  
@@ -91,8 +90,8 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**호스트 이름**||게시자에 연결할 때 사용하는 호스트 이름입니다.|  
 |**internet_login**||기본 인증을 사용하여 웹 동기화를 호스팅하는 웹 서버에 연결할 때 병합 에이전트가 사용하는 로그인입니다.|  
 |**internet_password**||기본 인증을 사용하여 웹 동기화를 호스팅하는 웹 서버에 연결할 때 병합 에이전트가 사용하는 암호입니다.|  
-|**internet_security_mode**|**1**|웹 동기화에 Windows 통합 인증을 사용합니다. 웹 동기화에는 기본 인증을 사용하는 것이 좋습니다. 자세한 내용은 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)을 참조하세요.|  
-||**0**|웹 동기화에 기본 인증을 사용합니다.<br /><br /> 참고: 웹 동기화 웹 서버에 SSL 연결이 필요합니다.|  
+|**internet_security_mode**|**1**|웹 동기화에 Windows 통합 인증을 사용합니다. 웹 동기화에는 기본 인증을 사용하는 것이 좋습니다. 자세한 내용은 [웹 동기화 구성](../../relational-databases/replication/configure-web-synchronization.md)을 참조하세요.|  
+||**0**|웹 동기화에 기본 인증을 사용합니다.<br /><br /> 참고: 웹 동기화를 수행하려면 웹 서버에 대한 SSL 연결이 필요합니다.|  
 |**internet_timeout**||웹 동기화 요청이 만료되기 전까지의 시간(초)입니다.|  
 |**internet_url**||웹 동기화를 위한 복제 수신기의 위치를 나타내는 URL입니다.|  
 |**merge_job_login**||에이전트가 실행되는 Windows 계정의 로그인입니다.|  

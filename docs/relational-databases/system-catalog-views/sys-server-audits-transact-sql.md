@@ -20,12 +20,12 @@ ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c89ec6b6054f6a681550fa3fb12aa925476bc0c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cf8e911f8b8e871cf7389bf40d6a84bc455bffa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742681"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506361"
 ---
 # <a name="sysserveraudits-transact-sql"></a>sys.server_audits(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "47742681"
 |**create_date**|**datetime**|감사를 만든 UTC 날짜입니다.|  
 |**modify_date**|**datetime**|감사를 마지막으로 수정한 UTC 날짜입니다.|  
 |**principal_id**|**int**|서버에 등록된 감사 소유자의 ID입니다.|  
-|**type**|**char(2)**|감사 유형:<br /><br /> SL - NT 보안 이벤트 로그<br /><br /> AL - NT 응용 프로그램 이벤트 로그<br /><br /> FL - 파일 시스템의 파일|  
+|**type**|**char(2)**|감사 유형:<br /><br /> SL-NT 보안 이벤트 로그<br /><br /> AL-NT 응용 프로그램 이벤트 로그<br /><br /> FL-파일 시스템의 파일|  
 |**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPICATION LOG<br /><br /> FILE|  
-|**on_failure**|**tinyint**|동작 항목을 쓰지 못한 경우:<br /><br /> 0 – 계속<br /><br /> 1 – 서버 인스턴스 종료<br /><br /> 2 - 작업 실패|  
+|**on_failure**|**tinyint**|동작 항목을 쓰지 못한 경우:<br /><br /> 0-계속<br /><br /> 1-서버 인스턴스 종료<br /><br /> 2-작업이 실패 합니다.|  
 |**on_failure_desc**|**nvarchar(60)**|동작 항목을 쓰지 못한 경우:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
-|**is_state_enabled**|**tinyint**|0 - 사용 안 함<br /><br /> 1 - 사용|  
+|**is_state_enabled**|**tinyint**|0-사용 안 함<br /><br /> 1 - 사용|  
 |**queue_delay**|**int**|디스크에 쓸 때까지 대기할 최대 시간(밀리초)입니다. 0인 경우 이벤트가 계속될 수 있도록 감사에 의해 쓰기가 보장됩니다.|  
 |**조건자**|**nvarchar(3000)**|이벤트에 적용되는 조건자 식입니다.|  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], permissions
@@ -17,12 +16,12 @@ ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: acb8ea24effbb07d5ecad1f7efec491acb6fb55d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2f0bac42ce0fb2ae814b48cd21e0cffb84128b1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103263"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812105"
 ---
 # <a name="leaf-permissions-master-data-services"></a>리프 권한(Master Data Services)
   리프 권한은 엔터티의 모든 리프 멤버에 대한 특성 값에 적용됩니다.  
@@ -48,7 +47,7 @@ ms.locfileid: "48103263"
 |----------------|-----------------|  
 |**읽기 전용**|특성이 표시되지만 사용자가 특성 값을 변경할 수 없습니다.|  
 |**Update**|특성이 표시되고 사용자가 특성 값을 변경할 수 있습니다.|  
-|**거부**|특성이 표시되지 않습니다.<br /><br /> 참고: 이름 및 코드 특성에 대한 액세스를 명시적으로 거부할 수 없습니다.|  
+|**거부**|특성이 표시되지 않습니다.<br /><br /> 참고: Name 및 Code 특성에 대한 액세스를 명시적으로 거부할 수 없습니다.|  
   
 ### <a name="example"></a>예제  
  Product 엔터티에 대해 Subcategory 특성에 **업데이트** 권한을 할당합니다. 모든 다른 특성에 대한 사용 권한은 거부합니다.  
@@ -63,11 +62,11 @@ ms.locfileid: "48103263"
 > [!NOTE]  
 >  이 예에서 Subcategory는 SubcategoryList 엔터티를 기반으로 하는 도메인 기반 특성입니다. Mountain-100에 대해 다른 Subcategory를 선택할 수 있지만 SubcategoryList 엔터티에서 멤버를 추가하거나 삭제할 수는 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [모델 개체 사용 권한 할당 &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   
+## <a name="see-also"></a>관련 항목:  
+ [모델 개체 사용 권한 할당&#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   
  [통합 사용 권한 &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)   
- [모델 개체 권한 &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+ [모델 개체 권한&#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [멤버&#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
- [특성 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+ [특성&#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

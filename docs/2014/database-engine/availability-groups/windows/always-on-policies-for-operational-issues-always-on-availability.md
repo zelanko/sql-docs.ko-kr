@@ -13,12 +13,12 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1e4c878004f3cdcc492637d338e8ff6c8d92937
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104175"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350016"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹의 운영 문제에 대한 Always On 정책(SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 상태 모델은 미리 정의된 PBM(정책 기반 관리) 정책 집합을 평가합니다. 이를 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 가용성 그룹 및 가용성 복제본과 데이터베이스의 상태를 볼 수 있습니다.  
@@ -48,15 +48,15 @@ ms.locfileid: "48104175"
   
 |정책 이름|문제점|범주**<sup>*</sup>**|패싯|  
 |-----------------|-----------|------------------------------|-----------|  
-|WSFC 클러스터 상태|[WSFC cluster service is offline](wsfc-cluster-service-is-offline.md)입니다.|심각|SQL Server 인스턴스|  
-|가용성 그룹 온라인 상태|[Availability group is offline](availability-group-is-offline.md)입니다.|심각|가용성 그룹|  
-|가용성 그룹 자동 장애 조치(Failover) 준비|[Availability group is not ready for automatic failover](availability-group-is-not-ready-for-automatic-failover.md)입니다.|심각|가용성 그룹|  
+|WSFC 클러스터 상태|[WSFC cluster service is offline](wsfc-cluster-service-is-offline.md)입니다.|위험|SQL Server 인스턴스|  
+|가용성 그룹 온라인 상태|[Availability group is offline](availability-group-is-offline.md)입니다.|위험|가용성 그룹|  
+|가용성 그룹 자동 장애 조치(Failover) 준비|[Availability group is not ready for automatic failover](availability-group-is-not-ready-for-automatic-failover.md)입니다.|위험|가용성 그룹|  
 |가용성 복제본 데이터 동기화 상태|[Some availability replicas are not synchronizing data](some-availability-replicas-are-not-synchronizing-data.md)입니다.|경고|가용성 그룹|  
 |동기 복제본 데이터 동기화 상태|[Some synchronous replicas are not synchronized](some-synchronous-replicas-are-not-synchronized.md)입니다.|경고|가용성 그룹|  
 |가용성 복제본 역할 상태|[Some availability replicas do not have a healthy role](some-availability-replicas-do-not-have-a-healthy-role.md)입니다.|경고|가용성 그룹|  
 |가용성 복제본 연결 상태|[Some availability replicas are disconnected](some-availability-replicas-are-disconnected.md)입니다.|경고|가용성 그룹|  
-|가용성 복제본 역할 상태|[Availability replica does not have a healthy role](availability-replica-does-not-have-a-healthy-role.md)입니다.|심각|가용성 복제본|  
-|가용성 복제본 연결 상태|[Availability replica is disconnected](availability-replica-is-disconnected.md)입니다.|심각|가용성 복제본|  
+|가용성 복제본 역할 상태|[Availability replica does not have a healthy role](availability-replica-does-not-have-a-healthy-role.md)입니다.|위험|가용성 복제본|  
+|가용성 복제본 연결 상태|[Availability replica is disconnected](availability-replica-is-disconnected.md)입니다.|위험|가용성 복제본|  
 |가용성 복제본 조인 상태|[가용성 복제본이 조인되어 있지 않습니다](availability-replica-is-not-joined.md).|경고|가용성 복제본|  
 |가용성 복제본 데이터 동기화 상태|[Data synchronization state of some availability database is not healthy](data-synchronization-state-of-some-availability-database-is-not-healthy.md)입니다.|경고|가용성 복제본|  
 |가용성 데이터베이스 일시 중지 상태|[Availability database is suspended](availability-database-is-suspended.md)입니다.|경고|가용성 데이터베이스|  
@@ -84,11 +84,11 @@ ms.locfileid: "48104175"
 ##  <a name="ExtendHealthModel"></a> AlwaysOn 상태 모델 확장  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 상태 모델 확장은 단순히 사용자의 고유한 사용자 정의 정책을 만들고 사용자가 모니터링하는 개체 유형에 따라 이를 특정 범주에 넣는 작업입니다.  일부 설정을 변경한 후에는 AlwaysOn 대시보드가 AlwaysOn 미리 정의된 정책뿐만 아니라 사용자의 고유한 사용자 정의 정책을 자동으로 평가합니다.  
   
- 사용자 정의 정책은 AlwaysOn 미리 정의된 정책에서 사용되는 패싯을 포함하여 사용 가능한 모든 PBM 패싯을 사용할 수 있습니다(이 항목의 앞 부분에 나오는 [미리 정의된 정책 및 문제](#AlwaysOnPBM) 참조). 모니터링에 대 한 속성을 제공 하는 서버 패싯은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 상태: (`IsHadrEnabled` 고 `HadrManagerStatus`). 서버 패싯은 또한 속성을 제공 다음 정책을 WSFC 클러스터 구성을 모니터링 하기 위해: `ClusterQuorumType`, 및 `ClusterQuorumState`합니다.  
+ 사용자 정의 정책은 AlwaysOn 미리 정의된 정책에서 사용되는 패싯을 포함하여 사용 가능한 모든 PBM 패싯을 사용할 수 있습니다(이 항목의 앞 부분에 나오는 [미리 정의된 정책 및 문제](#AlwaysOnPBM) 참조). 서버 패싯은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 상태 모니터링을 위해 `IsHadrEnabled` 및 `HadrManagerStatus` 속성을 제공합니다. 서버 패싯은 또한 WSFC 클러스터 구성을 모니터링하기 위해 `ClusterQuorumType` 및 `ClusterQuorumState` 정책의 속성을 제공합니다.  
   
- 자세한 내용은 [The AlwaysOn Health Model Part 2 -- Extending the Health Model](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)(AlwaysOn 상태 모델 2부 -- 상태 모델 확장)(SQL Server AlwaysOn 팀 블로그)을 참조하세요.  
+ 자세한 내용은 [The AlwaysOn Health Model Part 2 -- Extending the Health Model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)(AlwaysOn 상태 모델 2부 -- 상태 모델 확장)(SQL Server AlwaysOn 팀 블로그)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [AlwaysOn 정책을 사용 하 여 가용성 그룹의 상태를 보려면 &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
@@ -104,11 +104,11 @@ ms.locfileid: "48104175"
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   [AlwaysOn 상태 모델 파트 1--상태 모델 아키텍처](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [AlwaysOn 상태 모델 파트 1--상태 모델 아키텍처](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
--   [AlwaysOn 상태 모델 파트 2--상태 모델 확장](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [AlwaysOn 상태 모델 파트 2--상태 모델 확장](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
--   [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>관련 항목  
  [AlwaysOn 가용성 그룹 (SQL Server)](always-on-availability-groups-sql-server.md)   

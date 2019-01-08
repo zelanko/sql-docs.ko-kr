@@ -13,12 +13,12 @@ ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1451ddc8ec43b1960ed6073fb836b05e8384bb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62d13bdc9d1a0fc030dc33bf982f6561b454c4ea
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683014"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213502"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE - SQL 명령
 지정 된 필드가 있는 테이블을 만듭니다.  
@@ -111,12 +111,12 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
 ```  
   
  기본 키 *eExpression2* 태그 *TagName2*  
- 만들려는 기본 인덱스를 지정 합니다. *eExpression2* 테이블의 모든 필드 또는 필드의 조합은 지정 합니다. 태그 *TagName2의*만들어지는 기본 인덱스 태그에 대 한 이름을 지정 합니다. 인덱스 태그 이름은 최대 10 개의 문자를 포함할 수 있습니다.  
+ 만들려는 기본 인덱스를 지정 합니다. *eExpression2* 테이블의 모든 필드 또는 필드의 조합은 지정 합니다. 태그 *TagName2* 만들어지는 기본 인덱스 태그에 대 한 이름을 지정 합니다. 인덱스 태그 이름은 최대 10 개의 문자를 포함할 수 있습니다.  
   
  테이블에서 하나의 기본 인덱스를 가질 수 있으므로 필드에 대 한 기본 인덱스를 이미 만든 경우이 절을 포함할 수 없습니다. Visual FoxPro CREATE TABLE에서 둘 이상의 기본 키 절을 포함 하는 경우에 오류가 발생 합니다.  
   
  고유한 *eExpression3*태그 *TagName3*  
- 후보 인덱스를 만듭니다. *eExpression3* 테이블의 모든 필드 또는 필드의 조합은 지정 합니다. 그러나 키 옵션 중 하나를 사용 하 여 기본 인덱스를 만든 경우 기본 인덱스에 대해 지정 된 필드를 포함할 수 없습니다. 태그 *TagName3의*만든 후보 인덱스 태그의 태그 이름을 지정 합니다. 인덱스 태그 이름은 최대 10 개의 문자를 포함할 수 있습니다.  
+ 후보 인덱스를 만듭니다. *eExpression3* 테이블의 모든 필드 또는 필드의 조합은 지정 합니다. 그러나 키 옵션 중 하나를 사용 하 여 기본 인덱스를 만든 경우 기본 인덱스에 대해 지정 된 필드를 포함할 수 없습니다. 태그 *TagName3* 만든 후보 인덱스 태그의 태그 이름을 지정 합니다. 인덱스 태그 이름은 최대 10 개의 문자를 포함할 수 있습니다.  
   
  테이블에는 여러 후보 인덱스가 있을 수 있습니다.  
   
@@ -166,7 +166,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  예를 들어, 임시 테이블을 만들려는 트랜잭션이 필요한 문의 시작 하기 전에 테이블을 만들어야 합니다. CREATE TABLE 문 일괄 처리 트랜잭션이 필요로 하는 SQL 문 포함 하는 경우 드라이버는 오류 메시지를 반환 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [ALTER TABLE-SQL 명령](../../odbc/microsoft/alter-table-sql-command.md)   
  [지원 되는 데이터 형식 (Visual FoxPro ODBC 드라이버)](../../odbc/microsoft/supported-data-types-visual-foxpro-odbc-driver.md)   
  [INSERT-SQL 명령](../../odbc/microsoft/insert-sql-command.md)   

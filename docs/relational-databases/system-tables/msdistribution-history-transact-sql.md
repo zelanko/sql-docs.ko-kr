@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSdistribution_history
@@ -19,12 +18,12 @@ ms.assetid: 55665bd2-9e1d-4efc-8f60-c63a24f66b28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8f1db56fafb069836c7fa2ecd2f85cfac38ae548
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 305223fca45bb1916598f02c16cc4e38981e861d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830221"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817325"
 ---
 # <a name="msdistributionhistory-transact-sql"></a>MSdistribution_history(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,12 +42,12 @@ ms.locfileid: "47830221"
 |**주석**|**nvarchar(4000)**|메시지 텍스트입니다.|  
 |**xact_seqno**|**varbinary(16)**|마지막에 처리된 트랜잭션 시퀀스 번호입니다.|  
 |**current_delivery_rate**|**float**|마지막 기록 항목 이후에 초당 전달된 평균 명령 수입니다.|  
-|**current_delivery_latency**|**int**|마지막 기록 항목 이후 배포 데이터베이스를 시작하고 구독자에 적용될 때까지의 대기 시간입니다. 단위는 밀리초입니다.|  
+|**current_delivery_latency**|**int**|마지막 기록 항목 이후 배포 데이터베이스를 시작하고 구독자에 적용될 때까지의 대기 시간입니다. 밀리초.|  
 |**delivered_transactions**|**int**|세션 중에 전달된 총 트랜잭션 수입니다.|  
 |**delivered_commands**|**int**|세션 중에 전달된 총 명령 수입니다.|  
 |**average_commands**|**int**|세션 중에 전달된 평균 명령 수입니다.|  
 |**delivery_rate**|**float**|초당 전달된 평균 명령 수입니다.|  
-|**delivery_latency**|**int**|배포 데이터베이스를 시작하고 구독자에 적용될 때까지의 대기 시간입니다. 단위는 밀리초입니다.|  
+|**delivery_latency**|**int**|배포 데이터베이스를 시작하고 구독자에 적용될 때까지의 대기 시간입니다. 밀리초.|  
 |**total_delivered_commands**|**bigint**|구독이 생성된 이후에 전달된 총 명령 수입니다.|  
 |**error_id**|**int**|오류 메시지의 ID를 **MSrepl_error** 시스템 테이블입니다.|  
 |**updateable_row**|**bit**|로 **1** 기록 행을 덮어쓸 수 있는 경우.|  

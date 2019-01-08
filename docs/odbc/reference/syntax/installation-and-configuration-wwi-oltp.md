@@ -13,16 +13,16 @@ ms.assetid: bfd4dfc2-fbca-4ef3-81e5-2706f2389256
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5b886bdf5ce769201addacfdfe9e2f22c6e8a15d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c344315764eac32e2e63663f07b7f797571a0e6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706011"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204692"
 ---
 # <a name="sqlsetdriverconnectinfo-function"></a>SQLSetDriverConnectInfo 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 3.81 표준 준수: ODBC  
+ 도입 된 버전: ODBC 3.81 표준 준수 합니다. ODBC  
   
  **요약**  
  **SQLSetDriverConnectInfo** 응용 프로그램에 대 한 연결 정보 토큰에 연결 문자열을 설정 하는 데 사용 됩니다 **SQLDriverConnect** 호출 합니다.  
@@ -61,7 +61,7 @@ SQLRETURN SQLSetDriverConnectInfo(
   
  ODBC 드라이버 개발을 위한 sqlspi.h 포함 됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [ODBC 드라이버 개발](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [드라이버 인식 연결 풀링](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [ODBC 드라이버에서 연결 풀 인식 개발](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

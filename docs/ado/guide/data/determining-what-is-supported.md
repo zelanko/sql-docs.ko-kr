@@ -14,12 +14,12 @@ ms.assetid: 65090cba-6d46-4775-8d61-f6838e7752a6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 835584da4c51f5e65306d0609b4e69f78a7d58b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a9b8bcf01f348679fc16230c021166d4d9dc786
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707571"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514329"
 ---
 # <a name="determining-what-is-supported"></a>지원되는 기능 확인
 합니다 **지원** 메서드는 지정 된 확인 데 **레코드 집합** 개체는 특정 종류의 기능을 지원 합니다. 다음 구문이 사용:  
@@ -34,4 +34,4 @@ boolean = recordset.Supports(CursorOptions )
   
  사용 하 여는 **지원** 메서드의 기능에 대 한 확인할 수 있습니다 합니다 **레코드 집합** 책갈피를 사용 하 여 새 레코드를 추가, 사용 하 여 개체를 **찾을** 메서드를 사용 하 여 스크롤을 사용 합니다  **인덱스** 속성 및 일괄 처리 업데이트를 수행 합니다. 상수 및 해당 의미의 전체 목록은 참조 하세요 [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md)합니다.  
   
- 하지만 합니다 **지원** 메서드를 반환할 수 있습니다 **True** 지정된 된 기능에 대 한 보장 하지는 않습니다 공급자를 사용할 수 있는 기능을 모든 상황입니다. 합니다 **지원** 메서드는 단순히 특정 조건이 충족 될 된다는 가정 하는 공급자 지정 된 기능을 지원할 수 있는지 여부를 반환 합니다. 예를 들어, 합니다 **지원** 메서드 되었음을 나타낼 수는 **레코드 집합** 커서 여러 개의 테이블 조인을 기반으로 하는 경우에 개체에 업데이트를 지원-는 일부 열은 업데이트할 수 없습니다.
+ 하지만 합니다 **지원** 메서드를 반환할 수 있습니다 **True** 지정된 된 기능에 대 한 보장 하지는 않습니다 공급자를 사용할 수 있는 기능을 모든 상황입니다. 합니다 **지원** 메서드는 단순히 특정 조건이 충족 될 된다는 가정 하는 공급자 지정 된 기능을 지원할 수 있는지 여부를 반환 합니다. 예를 들어 합니다 **지원** 메서드 되었음을 나타낼 수는 **레코드 집합** 커서의 일부 열을 업데이트할 수 없는 여러 테이블 조인-기반으로 하는 경우에 개체에 업데이트를 지원 합니다.

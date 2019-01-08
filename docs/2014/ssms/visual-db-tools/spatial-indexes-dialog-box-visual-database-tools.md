@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.spatialindexes
@@ -12,12 +12,12 @@ ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ef93973a6be743a6c79b2ba46c2f05d2af6bae5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b347715a601be779b864500a6bc28655141ceeeb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113363"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773475"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>공간 인덱스 대화 상자(Visual Database Tools)
   **공간 인덱스** 대화 상자를 사용하면 **인덱스/키** 대화 상자를 통해 인덱싱할 수 없는 **기하 도형** 또는*지리*데이터 형식의 열( **공간 열** )에 대한 인덱스를 만들 수 없습니다. 각 공간 열에는 둘 이상의 공간 인덱스가 있을 수 있으며, 이러한 공간 인덱스는 한 번에 하나씩 만들어야 합니다.  
@@ -88,7 +88,7 @@ ms.locfileid: "48113363"
  공간 인덱스의 이름을 표시합니다. 새 인덱스를 만들면 테이블 디자이너의 활성 창에 있는 테이블을 기반으로 한 기본 이름이 지정됩니다. 언제든지 이름을 변경할 수 있습니다.  
   
  **설명**  
- 인덱스에 대해 설명합니다. 자세한 설명을 기록하려면 **설명** 을 클릭한 다음 속성 필드의 오른쪽에 있는 줄임표 단추(**...**)를 클릭합니다. 이렇게 하면 텍스트를 쓸 수 있는 더 큰 영역이 제공됩니다.  
+ 인덱스에 대해 설명합니다. 자세한 설명을 기록하려면 **설명**을 클릭한 다음, 속성 필드의 오른쪽에 있는 줄임표 단추(**...**)를 클릭합니다. 이렇게 하면 텍스트를 쓸 수 있는 더 큰 영역이 제공됩니다.  
   
  **테이블 디자이너 범주**  
  확장하면 현재 공간 인덱스의 속성에 대한 정보가 표시됩니다.  
@@ -109,7 +109,7 @@ ms.locfileid: "48113363"
  **페이지 잠금 허용**  
  현재 인덱스에 대해 페이지 수준의 잠금이 허용되는지 여부를 지정합니다. 페이지 수준의 잠금 허용 여부는 데이터베이스 성능에 영향을 줍니다.  
   
- **다시 계산****통계**   
+ **다시 계산****통계**  
  인덱스를 만들 때 새 통계를 계산할지 여부를 지정합니다. 통계를 다시 계산하면 인덱스 작성 속도가 느려지지만 일반적으로 쿼리 성능을 향상시킬 수 있습니다.  
   
  **행 잠금 허용**  

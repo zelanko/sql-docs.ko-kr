@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - + (add)
@@ -15,12 +14,12 @@ ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 68222335dadbbccabd0bf53282fe9df4c7e6045c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f80063d9e567cc9bb31545f9ce5a27f82c55bd5d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080103"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814779"
 ---
 # <a name="-add-ssis"></a>+(더하기)(SSIS)
   두 숫자 식을 더합니다.  
@@ -63,7 +62,7 @@ StandardCost + (StandardCost * @[Profit%])
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [연산자 우선순위 및 결합성](operator-precedence-and-associativity.md)   
- [연산자 &#40;SSIS 식&#41;](operators-ssis-expression.md)  
+ [연산자 우선 순위 및 계산 방향](operator-precedence-and-associativity.md)   
+ [연산자&#40;SSIS 식&#41;](operators-ssis-expression.md)  
   
   

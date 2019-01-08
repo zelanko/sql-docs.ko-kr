@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/04/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - identities [SQL Server replication]
@@ -18,12 +17,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e47126e626c76f25d6c376a3c4247e2caf6de9f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: e89bfac90a0658c8f5ba839632451187ffa9760d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089855"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810955"
 ---
 # <a name="replicate-identity-columns"></a>ID 열 복제
   열에 IDENTITY 속성을 할당하면 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 ID 열을 포함하는 테이블에 순차적 개수대로 삽입되는 새 행을 자동으로 생성합니다. 자세한 내용은 [IDENTITY&#40;속성&#41;&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)를 참조하세요. ID 열은 기본 키의 일부분으로 포함될 수 있으므로 ID 열에 중복 값을 사용하지 않아야 합니다. 둘 이상의 노드에서 업데이트된 ID 열을 복제 토폴로지에서 사용하려면 복제 토폴로지의 각 노드가 다른 범위의 ID 값을 사용해야 중복이 발생하지 않습니다.  
@@ -57,7 +56,7 @@ ms.locfileid: "48089855"
  **db_owner** 고정 데이터베이스 역할의 멤버가 삽입을 수행했으면 게시자가 삽입 후 ID 범위를 모두 사용한 경우 구독자가 자동으로 새 범위를 할당할 수 있습니다. 해당 역할의 사용자가 아닌 사용자가 삽입을 수행했으면 로그 판독기 에이전트, 병합 에이전트 또는 **db_owner** 역할의 멤버인 사용자가 [sp_adjustpublisheridentityrange&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql)를 실행해야 합니다. 트랜잭션 게시의 경우 새 범위를 자동으로 할당하려면 로그 판독기 에이전트가 실행되고 있어야 합니다. 기본적으로 에이전트는 계속 실행됩니다.  
   
 > [!WARNING]  
->  큰 일괄 처리 동안 복제 트리거 삽입은 삽입의 각 행에 대해 한 번만 발생합니다. id 범위가 큰 삽입 시와 같은 사용 되는 경우 insert 문에 오류가 발생할 수 있습니다는 `INSERT INTO` 문입니다.  
+>  큰 일괄 처리 동안 복제 트리거 삽입은 삽입의 각 행에 대해 한 번만 발생합니다. ID 범위가 큰 삽입 시 사용되는 경우 `INSERT INTO` 문과 같은 insert 문이 실패할 수 있습니다.  
   
 |데이터 형식|범위|  
 |---------------|-----------|  
@@ -99,7 +98,7 @@ ms.locfileid: "48089855"
  예를 들어 **@pub_identity_range**에 대해 10000을, **@identity_range** 에 대해 1000(구독자에서의 업데이트 수가 적다고 가정)을, 그리고 **@threshold**를 참조하세요. 구독자에서 800(1000의 80%)이 삽입되면 구독자에 새 범위가 할당됩니다. 게시자에서 8000이 삽입되면 게시자에 새 범위가 할당됩니다. 새 범위를 지정하면 테이블의 ID 범위 값에 간격이 발생합니다. 더 높은 임계값을 지정하면 이러한 간격이 줄어들지만 시스템의 내결함성이 저하됩니다. 어떤 이유로든 배포 에이전트를 실행할 수 없으면 구독자에서 ID가 보다 빠른 속도로 줄어들 수 있습니다.  
   
 ## <a name="assigning-ranges-for-manual-identity-range-management"></a>ID 범위 수동 관리를 위한 범위 할당  
- ID 범위 수동 관리를 지정할 경우 게시자와 각 구독자가 서로 다른 ID 범위를 사용하고 있는지 확인해야 합니다. 예를 들어 게시자에 있는 테이블의 ID 열이 `IDENTITY(1,1)`로 정의되어 있다고 가정합니다. 이 ID 열은 1에서 시작하고 행이 삽입될 때마다 1씩 증가합니다. 게시자의 테이블에 5,000개의 행이 있고 애플리케이션 수명 동안 테이블이 얼마간 커질 것으로 예상되는 경우 게시자는 1-10,000 범위를 사용할 수 있습니다. 두 개의 구독자가 있는 경우 구독자 A는 10,001-20,000을 사용하고 구독자 B는 20,001-30,000을 사용할 수 있습니다.  
+ ID 범위 수동 관리를 지정할 경우 게시자와 각 구독자가 서로 다른 ID 범위를 사용하고 있는지 확인해야 합니다. 예를 들어 게시자에 있는 테이블의 ID 열이 `IDENTITY(1,1)`로 정의되어 있다고 가정합니다. 이 ID 열은 1에서 시작하고 행이 삽입될 때마다 1씩 증가합니다. 게시자의 테이블에 5,000개의 행이 있고 애플리케이션 수명 동안 테이블이 얼마간 커질 것으로 예상되는 경우 게시자는 1-10,000 범위를 사용할 수 있습니다. 두 구독자가 있는 경우 구독자 A는 10,001-20,000을 사용하고 구독자 B는 20,001-30,000을 사용할 수 있습니다.  
   
  스냅숏 또는 다른 방법으로 구독자가 초기화되면 DBCC CHECKIDENT를 실행하여 구독자에게 해당 ID 범위의 시작 지점을 할당합니다. 예를 들어 구독자 A에서 `DBCC CHECKIDENT('<TableName>','reseed',10001)`를 실행하고 구독자 B에서 `CHECKIDENT('<TableName>','reseed',20001)`를 실행합니다.  
   

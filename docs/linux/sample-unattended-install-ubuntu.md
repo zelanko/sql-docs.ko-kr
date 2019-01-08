@@ -1,5 +1,6 @@
 ---
-title: Ubuntu의 SQL Server의 무인된 설치 | Microsoft Docs
+title: Ubuntu의 SQL Server의 무인된 설치
+titleSuffix: SQL Server
 description: SQL Server 스크립트 샘플-Ubuntu의 무인된 설치
 author: rothja
 ms.author: jroth
@@ -7,16 +8,16 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: dc6d12a52c20bf3269f52fcc8d2ef87c4366061f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab93dde353b8576f682a2e032888da36a5743012
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626551"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160501"
 ---
-# <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Ubuntu에 대 한 샘플: SQL Server를 무인된 설치 스크립트
+# <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>예제: Ubuntu에 대 한 SQL Server 설치 스크립트를 무인된
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

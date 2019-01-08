@@ -1,5 +1,5 @@
 ---
-title: 네트워크 속성 | Microsoft Docs
+title: Analysis Services 네트워크 속성 | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a7fdeb553473c3a7ef560cce914e0c3e5612f287
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3b9bb77c5139b299a25fbd75bc30a58790ee0c30
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991605"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072360"
 ---
 # <a name="network-properties"></a>네트워크 속성
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "37991605"
 |값|Description|  
 |-----------|-----------------|  
 |*0*|IPv4가 해제되어 클라이언트가 연결할 수 없습니다.|  
-|*1.*|(기본값) IPv4가 필요하고 IPv4를 수신할 수 없으면 서버가 시작되지 않습니다.|  
+|*1*|(기본값) IPv4가 필요하고 IPv4를 수신할 수 없으면 서버가 시작되지 않습니다.|  
 |*2*|IPv4가 옵션이고 서버가 IPv4로 수신을 시도하기는 하지만 불가능한 경우에도 서버가 시작됩니다.|  
   
  **IPV6Support**  
@@ -43,7 +43,7 @@ ms.locfileid: "37991605"
 |값|Description|  
 |-----------|-----------------|  
 |*0*|IPv6이 해제되어 클라이언트가 연결할 수 없습니다.|  
-|*1.*|(기본값) IPv6이 필요하고 IPv6을 수신할 수 없으면 서버가 시작되지 않습니다.|  
+|*1*|(기본값) IPv6이 필요하고 IPv6을 수신할 수 없으면 서버가 시작되지 않습니다.|  
 |*2*|IPv6이 옵션이고 서버가 IPv6으로 수신을 시도하기는 하지만 불가능한 경우에도 서버가 시작됩니다.|  
   
  **MaxAllowedRequestSize**  

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c187ed1ede04f8ed140ddbb73d251af304745cf2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b2a01f7c8ffa3616deb0c7f1ebcec1ea94e65dd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705719"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535188"
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "47705719"
   
  Sys.dm_exec_connections, sys.dm_exec_sessions 및 sys.dm_exec_requests 동적 관리 뷰를 매핑하는 [sys.sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) 시스템 테이블입니다.  
   
-> **참고:** 이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 하거나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 이름을 사용 하 여 **sys.dm_pdw_nodes_exec_sessions**합니다.  
+> **참고:** 이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_exec_sessions**합니다.  
   
 |열 이름|데이터 형식|설명 및 버전 정보|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|각각의 기본 활성 연결과 연결된 세션을 식별합니다. Null을 허용하지 않습니다.|  
 |login_time|**datetime**|세션이 설정된 시간입니다. Null을 허용하지 않습니다.|  
-|host_name|**nvarchar(128)**|세션에 따라 달라지는 클라이언트 워크스테이션의 이름입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.<br /><br /> **보안 정보:** 클라이언트 응용 프로그램에서 워크스테이션 이름을 제공 하며이 정확 하지 않은 데이터를 제공할 수 있습니다. HOST_NAME을 보안 용도로는 사용하지 마세요.|  
+|host_name|**nvarchar(128)**|세션에 따라 달라지는 클라이언트 워크스테이션의 이름입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.<br /><br /> **보안 정보:** 클라이언트 응용 프로그램에서 워크스테이션 이름을 제공하므로 제공된 데이터가 정확하지 않을 수 있습니다. HOST_NAME을 보안 용도로는 사용하지 마세요.|  
 |program_name|**nvarchar(128)**|세션을 시작한 클라이언트 프로그램의 이름입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.|  
 |host_process_id|**int**|세션을 시작한 클라이언트 프로그램의 프로세스 ID입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.|  
 |client_version|**int**|클라이언트가 서버에 연결하는 데 사용하는 TDS 프로토콜 버전의 인터페이스입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.|  
@@ -50,7 +50,7 @@ ms.locfileid: "47705719"
 |login_name|**nvarchar(128)**|현재 세션을 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이름입니다. 세션을 만든 원래 로그인 이름은 original_login_name을 참조하십시오. 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이름 또는 Windows 도메인 인증 된 사용자 이름이 인증. Null을 허용하지 않습니다.|  
 |nt_domain|**nvarchar(128)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 세션에서 Windows 인증 또는 트러스트된 연결을 사용하는 경우 클라이언트의 Windows 도메인입니다. 내부 세션 및 비도메인 사용자에 대한 값은 NULL입니다. Null을 허용합니다.|  
 |nt_user_name|**nvarchar(128)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 세션에서 Windows 인증 또는 트러스트된 연결을 사용하는 경우 클라이언트의 Windows 사용자 이름입니다. 내부 세션 및 비도메인 사용자에 대한 값은 NULL입니다. Null을 허용합니다.|  
-|상태|**nvarchar(30)**|세션 상태입니다. 가능한 값은 다음과 같습니다.<br /><br /> **실행** -현재 하나 이상의 요청을 실행 합니다.<br /><br /> **휴면** -현재 요청이 실행 되 고<br /><br /> **휴지** -세션 연결 풀링으로 인해 다시 설정 하 고 사전 로그인 상태입니다.<br /><br /> **사전 연결** -세션이 리소스 관리자 분류자입니다.<br /><br /> Null을 허용하지 않습니다.|  
+|상태|**nvarchar(30)**|세션 상태입니다. 가능한 값:<br /><br /> **실행** -현재 하나 이상의 요청을 실행 합니다.<br /><br /> **휴면** -현재 요청이 실행 되 고<br /><br /> **유휴** -세션 연결 풀링으로 인해 다시 설정 및 로그인 하기 전 상태가 되었습니다.<br /><br /> **사전 연결** -세션이 리소스 관리자 분류자입니다.<br /><br /> Null을 허용하지 않습니다.|  
 |context_info|**varbinary(128)**|세션의 CONTEXT_INFO 값입니다. 컨텍스트 정보를 사용 하 여 사용자가 설정 되는 [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) 문입니다. Null을 허용합니다.|  
 |cpu_time|**int**|이 세션에서 사용한 CPU 시간(밀리초)입니다. Null을 허용하지 않습니다.|  
 |memory_usage|**int**|이 세션에서 사용한 8KB 메모리 페이지 수입니다. Null을 허용하지 않습니다.|  
@@ -93,8 +93,8 @@ ms.locfileid: "47705719"
   
 ## <a name="permissions"></a>사용 권한  
 모든 사람이 자신의 세션 정보를 볼 수 있습니다.  
-**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** 필요 `VIEW SERVER STATE` 권한을 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 서버의 모든 세션을 볼 수 있습니다.  
-**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** 필요 `VIEW DATABASE STATE` 현재 데이터베이스에 대 한 모든 연결을 볼 수 있습니다. `VIEW DATABASE STATE` 에 부여할 수 없습니다는 `master` 데이터베이스. 
+**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** 필요 `VIEW SERVER STATE` 에 대 한 권한이 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 서버의 모든 세션을 확인 합니다.  
+**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** 필요한 `VIEW DATABASE STATE` 현재 데이터베이스에 대 한 모든 연결을 확인 합니다. `VIEW DATABASE STATE` 에 부여할 수 없습니다는 `master` 데이터베이스. 
   
   
 ## <a name="remarks"></a>Remarks  

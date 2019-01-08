@@ -1,20 +1,21 @@
 ---
-title: 디버그 및 Spark 기록 서버에서 SQL Server 빅 데이터 클러스터에 Spark 응용 프로그램 진단
-description: 디버그 및 Spark 기록 서버에서 SQL Server 빅 데이터 클러스터에 Spark 응용 프로그램 진단
-services: SQL Server 2019 big data cluster spark
-ms.service: SQL Server 2019 big data cluster spark
+title: Spark 응용 프로그램을 디버그/진단
+titleSuffix: SQL Server 2019 big data clusters
+description: Spark 기록 서버를 사용 하 여 디버그 및 SQL Server 2019 빅 데이터 클러스터에서 실행 중인 Spark 응용 프로그램 진단.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
-ms.custom: ''
+manager: craigg
+ms.date: 12/06/2018
 ms.topic: conceptual
-ms.date: 10/01/2018
-ms.openlocfilehash: 09d22e5d3b55f48ab1873507e6f474f07d842801
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.prod: sql
+ms.custom: seodec18
+ms.openlocfilehash: a9416f774e84d6b458e14aeb28db2ab39ad8543e
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460868"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53029748"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>디버그 및 Spark 기록 서버에서 SQL Server 빅 데이터 클러스터에 Spark 응용 프로그램 진단
 
@@ -25,7 +26,7 @@ ms.locfileid: "49460868"
 Spark 기록 서버 사용자 환경에서 오픈 소스 빅 데이터 클러스터에 대 한 작업 그래프와 데이터 흐름의 대화형 시각화 및 작업 관련 데이터를 포함 하는 정보를 사용 하 여 향상 되었습니다. 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>Spark 기록 서버 웹 URL로 UI 열기
-다음 URL로 이동 하 여 Spark 기록 서버 열기 바꿉니다 `<Ipaddress>` 및 `<Port>` 빅 데이터 클러스터에 대 한 특정 정보를 사용 하 여 합니다. 자세한 정보를 참조할 수 있습니다: [빅 데이터 클러스터 SQL Server 배포](quickstart-big-data-cluster-deploy.md)
+다음 URL로 이동 하 여 Spark 기록 서버 열기 바꿉니다 `<Ipaddress>` 및 `<Port>` 빅 데이터 클러스터에 대 한 특정 정보를 사용 하 여 합니다. 자세한 정보를 참조할 수 있습니다. [SQL Server 빅 데이터 클러스터를 배포 합니다.](quickstart-big-data-cluster-deploy.md)
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -41,31 +42,31 @@ Spark 기록 서버 웹 UI 다음과 같습니다.
 
 + 확인 합니다 **입력**를 **출력**, 및 **테이블 작업** 별도로 탭을 선택 하 여 합니다.
 
-    ![데이터 탭](./media/apache-azure-spark-history-server/sparkui-data-tabs.png)
+    ![Spark 기록 서버 데이터 탭](./media/apache-azure-spark-history-server/sparkui-data-tabs.png)
 
 + 단추를 클릭 하 여 모든 행을 복사 **복사**합니다.
 
-    ![데이터 복사](./media/apache-azure-spark-history-server/sparkui-data-copy.png)
+    ![모든 행 복사](./media/apache-azure-spark-history-server/sparkui-data-copy.png)
 
 + 단추를 클릭 하 여 모든 데이터 CSV 파일로 저장 **csv**합니다.
 
-    ![데이터 저장](./media/apache-azure-spark-history-server/sparkui-data-save.png)
+    ![CSV 파일로 데이터를 저장 합니다.](./media/apache-azure-spark-history-server/sparkui-data-save.png)
 
 + 검색 필드에서 키워드를 입력 하 여 **검색**, 검색 결과 즉시 표시 됩니다.
 
-    ![데이터 검색](./media/apache-azure-spark-history-server/sparkui-data-search.png)
+    ![키워드를 사용 하 여 검색](./media/apache-azure-spark-history-server/sparkui-data-search.png)
 
 + 테이블을 정렬, 자세한 세부 정보를 표시할 행을 확장 하려면 더하기 기호를 클릭 하거나 행을 축소 하려면 빼기 기호를 클릭 하려면 열 머리글을 클릭 합니다.
 
-    ![데이터 테이블](./media/apache-azure-spark-history-server/sparkui-data-table.png)
+    ![데이터 테이블 기능](./media/apache-azure-spark-history-server/sparkui-data-table.png)
 
 + 단추를 클릭 하 여 단일 파일 다운로드 **부분 다운로드** 선택한 파일은 로컬 위치에 다운로드 한 다음 오른쪽에 배치 하는입니다. 파일이 더 이상 존재 하지 않는, 오류 메시지를 표시할 새 탭이 열립니다.
 
-    ![데이터 다운로드 행](./media/apache-azure-spark-history-server/sparkui-data-download-row.png)
+    ![데이터 행을 다운로드 합니다.](./media/apache-azure-spark-history-server/sparkui-data-download-row.png)
 
 + 선택 하 여 전체 경로 또는 상대 경로 복사 합니다 **전체 경로 복사**를 **상대 경로 복사** 다운로드 메뉴에서를 확장 하는 합니다. Azure 데이터 레이크 저장소 파일에 대 한 **Azure Storage 탐색기에서 열기** Azure Storage 탐색기 시작 됩니다. 로그인 할 때 정확한 폴더를 찾습니다.
 
-    ![경로 데이터 복사](./media/apache-azure-spark-history-server/sparkui-data-copy-path.png)
+    ![전체 경로나 상대 경로 복사](./media/apache-azure-spark-history-server/sparkui-data-copy-path.png)
 
 + 한 페이지에 표시할 행 대부분 이동할 수 표 아래 너무 때 페이지를 클릭 합니다. 
 
@@ -99,11 +100,11 @@ Spark 기록 서버 웹 UI 다음과 같습니다.
 
 + 클릭 하 여 작업을 재생 합니다 **재생** 단추 및 [중지] 단추를 클릭 하 여 언제 든 지 중지 합니다. 재생 하는 경우 다른 상태를 표시 하도록 색에 표시 되는 작업:
 
-    + 성공에 대 한 녹색: 작업이 완료 되었습니다.
-    + 다시 시도 대 한 주황색: 인스턴스의 작업에 실패 했지만 작업의 최종 결과 영향을 주지 않습니다. 이러한 작업 복제 해야 하거나 나중에 처리할 수 있는 인스턴스를 다시 시도 하세요.
-    + 실행에 대 한 파란색: 작업을 실행 합니다.
-    + 대기 흰색이 나 작업을 건너뛰었습니다:를 실행 하려고 대기 하는 작업 또는 단계를 무시 했습니다.
-    + 실패에 대 한 빨간색: 작업이 실패 했습니다.
+    + 녹색 성공에 대 한 합니다. 작업이 완료 되었습니다.
+    + 주황색에 대 한 다시 시도 합니다. 작업 실패 했지만 작업의 최종 결과 영향을 주지 않습니다의 인스턴스. 이러한 작업 복제 해야 하거나 나중에 처리할 수 있는 인스턴스를 다시 시도 하세요.
+    + 실행에 대 한 파란색: 작업 실행 중입니다.
+    + 대기 흰색이 나 작업을 건너뛰었습니다. 를 실행 하려고 대기 하는 작업 또는 단계를 무시 했습니다.
+    + 빨간색 실패 했습니다. 작업에 실패 했습니다.
 
     ![색 샘플을 실행 중인 그래프](./media/apache-azure-spark-history-server/sparkui-graph-color-running.png)
  
@@ -161,13 +162,13 @@ Spark 기록 서버 웹 UI 다음과 같습니다.
 ### <a name="data-skew"></a>데이터 기울이기
 클릭 **데이터 기울이기** 해당 탭 불균형된 작업은 지정 된 매개 변수에 따라 표시 됩니다. 
 
-+ **매개 변수를 지정** -첫 번째 섹션은 데이터 기울이기 검색에 사용 되는 매개 변수를 표시 합니다. 기본 제공 규칙은: 읽은 태스크 데이터 보다 평균 작업 데이터 읽기의 3 배 이며 읽은 태스크 데이터 10MB 이상. 불균형된 작업에 대 한 사용자 고유의 규칙을 정의 하려는 경우에 매개 변수를 선택할 수 있습니다 합니다 **기울어진 스테이지**, 및 **Char 기울이기** 섹션 그에 따라 새로 고쳐지는 합니다. 
++ **매개 변수를 지정** -첫 번째 섹션은 데이터 기울이기 검색에 사용 되는 매개 변수를 표시 합니다. 기본 제공 규칙 다음과 같습니다. 읽은 태스크 데이터를 읽은 평균 작업 데이터의 세 번 보다 큰 이며 읽은 태스크 데이터 10MB 이상. 불균형된 작업에 대 한 사용자 고유의 규칙을 정의 하려는 경우에 매개 변수를 선택할 수 있습니다 합니다 **기울어진 스테이지**, 및 **Char 기울이기** 섹션 그에 따라 새로 고쳐지는 합니다. 
 
 + **기울어진 스테이지** -두 번째 섹션은 위에 지정 된 조건을 충족 하는 작업을 기울였을 수 있는 단계를 표시 합니다. 단계에 둘 이상의 불균형된 작업 인 경우 기울어진된 스테이지 테이블 가장 불균형된 작업 (예를 들어, 데이터 오차에 대 한 가장 큰 데이터)만 표시 됩니다. 
 
     ![데이터 기울이기 section2](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section2.png)
 
-+ **차트를 기울이기** 오차 준비 테이블의 행을 선택 하면 – 더 많은 작업에 대 한 배포 세부 정보 데이터 읽기 및 실행 시간에 따라 오차 차트가 표시 합니다. 불균형 된 작업을 빨간색으로 표시 됩니다 하 고 일반 작업을 파란색으로 표시 됩니다. 차트에는 성능 고려 사항에 대 한 최대 100 개의 샘플 태스크만 표시 됩니다. 작업 세부 정보는 오른쪽 아래 패널에 표시 됩니다.
++ **차트를 기울이기** -오차 준비 테이블의 행을 선택 하는 경우 더 많은 작업에 대 한 배포 세부 정보 데이터 읽기 및 실행 시간에 따라 오차 차트가 표시 합니다. 불균형 된 작업을 빨간색으로 표시 됩니다 하 고 일반 작업을 파란색으로 표시 됩니다. 차트에는 성능 고려 사항에 대 한 최대 100 개의 샘플 태스크만 표시 됩니다. 작업 세부 정보는 오른쪽 아래 패널에 표시 됩니다.
 
     ![데이터 기울이기 section3](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section3.png)
 

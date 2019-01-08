@@ -20,16 +20,16 @@ ms.assetid: f09ff660-1e4a-4370-be85-90d4da0487d3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c89da6f3b5b531b311d81c9d89aacb8c52320d01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6762eb4ea9b350a76fc794fa7074af2a107b511
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840687"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204092"
 ---
 # <a name="sqlgetdescfield-function"></a>SQLGetDescField 함수(SQLGetDescField Function)
 **규칙**  
- 버전에 도입 되었습니다: ODBC 3.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 3.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLGetDescField** 설명자 레코드의 단일 필드의 값을 현재 설정을 반환 합니다.  
@@ -127,6 +127,6 @@ SQLRETURN SQLGetDescField(
 |단일 설명자 필드 설정|[SQLSetDescField 함수](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
 |여러 설명자 필드 설정|[SQLSetDescRec 함수](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4fdd0df76d4b61896abd3c0478472f20384b05c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 64204c8eb91d17a266e10f0a2b7fb938a0148397
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153419"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779915"
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>CDC Service를 만들고 편집하는 방법
   이 프로시저에서는 CDC Service 구성 콘솔에서 새 Oracle CDC Service를 만들고 편집하는 방법을 설명합니다.  
@@ -62,7 +61,7 @@ ms.locfileid: "48153419"
 5.  Oracle에 연결 대화 상자에서 **확인** 을 클릭합니다. 두 대화 상자가 모두 닫히며 서비스가 업데이트되고 등록됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [변경 데이터 캡처 Designer for Oracle by Attunity](change-data-capture-designer-for-oracle-by-attunity.md)   
- [Oracle CDC Service 만들기 및 편집](create-and-edit-an-oracle-cdc-service.md)  
+ [Change Data Capture Designer for Oracle by Attunity](change-data-capture-designer-for-oracle-by-attunity.md)   
+ [Create and Edit an Oracle CDC Service](create-and-edit-an-oracle-cdc-service.md)  
   
   

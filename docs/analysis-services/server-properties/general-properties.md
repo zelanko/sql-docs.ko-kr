@@ -1,5 +1,5 @@
 ---
-title: 일반 속성 | Microsoft Docs
+title: Analysis Services 일반 속성 | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 935d2559705aba64ecb1f19cb25bebf174d995cb
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
-ms.translationtype: HT
+ms.openlocfilehash: 883df6b2562e7fa3b80fac6a0063bd6483d1119d
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906213"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072390"
 ---
 # <a name="general-properties"></a>일반 속성
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "48906213"
  데이터가 저장되는 디렉터리의 이름을 식별하는 문자열 속성입니다.  
   
  **DeploymentMode**  
- Analysis Services 서버 인스턴스의 작업 컨텍스트를 결정합니다. 대화 상자, 메시지 및 설명서에서는 이 속성을 '서버 모드'라고 합니다. 이 속성은 Analysis Services를 설치할 때 선택한 서버 모드를 기준으로 SQLServer 설치 프로그램이 구성합니다. 이 속성을 내부 값으로만 간주하여 항상 설치 프로그램에서 지정한 값을 사용해야 합니다.  
+ Analysis Services 서버 인스턴스의 작업 컨텍스트를 결정합니다. 이 속성 대화 상자, 메시지 및 설명서의 '서버 모드로' 이라고 합니다. 이 속성은 Analysis Services를 설치할 때 선택한 서버 모드를 기준으로 SQLServer 설치 프로그램이 구성합니다. 이 속성을 내부 값으로만 간주하여 항상 설치 프로그램에서 지정한 값을 사용해야 합니다.  
   
  이 속성에 유효한 값은 다음과 같습니다.  
   

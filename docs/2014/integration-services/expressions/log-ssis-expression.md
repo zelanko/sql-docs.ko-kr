@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - base-10 logarithms
@@ -14,12 +13,12 @@ ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0d5a09e2b641828cacefb188859f5bd794d6e105
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 895b314751601e24d8e7e56ec21d0fb0609046b4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085033"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771155"
 ---
 # <a name="log-ssis-expression"></a>LOG(SSIS 식)
   숫자 식의 상용 로그를 반환합니다.  
@@ -62,9 +61,9 @@ LOG(Length)
 LOG(@Length)   
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [EXP &#40;SSIS 식&#41;](exp-ssis-expression.md)   
+## <a name="see-also"></a>관련 항목:  
+ [EXP&#40;SSIS 식&#41;](exp-ssis-expression.md)   
  [LN&#40;SSIS 식&#41;](ln-ssis-expression.md)   
- [함수 &#40;SSIS 식&#41;](functions-ssis-expression.md)  
+ [함수&#40;SSIS 식&#41;](functions-ssis-expression.md)  
   
   

@@ -1,22 +1,24 @@
 ---
-title: SQL 빅 데이터 클러스터 데이터 풀 란? | Microsoft Docs
+title: 데이터 풀이란?
+titleSuffix: SQL Server 2019 big data clusters
 description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터에 데이터 풀을 설명 합니다.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: bf47aa1734e2b1a849fb8333da9c914ea4244f41
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.custom: seodec18
+ms.openlocfilehash: 088d6681910aad6a02205c812ff0e5a9d7d090ee
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050766"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030807"
 ---
-# <a name="what-is-a-sql-big-data-clusters-data-pool"></a>SQL 빅 데이터 클러스터 데이터 풀 란?
+# <a name="what-are-data-pools-in-a-sql-server-2019-big-data-cluster"></a>SQL Server 2019 빅 데이터 클러스터에 데이터 풀이란?
 
-이 문서에서는 설명의 역할 *SQL Server 데이터 풀* SQL Server 2019 미리 보기 빅 데이터 클러스터에 있습니다. 다음 섹션에서는 아키텍처 및 SQL 데이터 풀의 기능을 설명합니다.
+이 문서에서는 설명의 역할 *SQL Server 데이터 풀* SQL Server 2019 빅 데이터 클러스터 (미리 보기)에 있습니다. 다음 섹션에서는 아키텍처 및 SQL 데이터 풀의 기능을 설명합니다.
 
 ## <a name="data-pool-architecture"></a>데이터 풀 아키텍처
 

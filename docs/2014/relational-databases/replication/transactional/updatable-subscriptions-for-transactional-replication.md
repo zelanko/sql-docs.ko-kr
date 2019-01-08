@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/31/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
@@ -18,12 +17,12 @@ ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 42af9ddf36f60980ae1bdf2b6152e91159178467
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: b8592517c71651b457c660e1d73e683c1c5ed332
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137073"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813985"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "48137073"
   
  트랜잭션 게시에 대해 업데이트할 수 있는 구독을 설정하려면 [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md)을 참조하세요.  
   
- 트랜잭션 게시에 대해 업데이트할 수 있는 구독을 만들려면 참조 [Create an Updatable Subscription to Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md)  
+ 트랜잭션 게시에 대해 업데이트할 수 있는 구독을 만들려면 [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md)를 참조하세요.  
   
 ## <a name="switching-between-update-modes"></a>업데이트 모드 전환  
  업데이트할 수 있는 구독을 사용할 때는 구독에서 특정 업데이트 모드를 사용하도록 지정한 다음 애플리케이션의 필요에 따라 다른 업데이트 모드로 전환할 수 있습니다. 예를 들어 구독에서 즉시 업데이트를 사용하도록 지정한 다음 시스템 오류로 인해 네트워크 연결이 손실된 경우에 지연 업데이트로 전환할 수 있습니다.  
@@ -65,7 +64,7 @@ ms.locfileid: "48137073"
   
 -   데이터 재게시는 지원되지 않습니다.  
   
--   복제는 추적을 위해 **msrepl_tran_version** 열을 게시된 테이블에 추가합니다. 이 추가 열 때문에 모든 `INSERT` 문에 열 목록이 포함 되어야 합니다.  
+-   복제는 추적을 위해 **msrepl_tran_version** 열을 게시된 테이블에 추가합니다. 이 추가 열 때문에 모든 `INSERT` 문에 열 목록이 포함되어야 합니다.  
   
 -   구독 업데이트를 지원하는 게시의 테이블에서 스키마를 변경하려면 게시자와 구독자에서 해당 테이블에 대한 모든 작업을 중단해야 하고 보류 중인 데이터 변경 내용이 스키마를 변경하기 전에 모든 노드로 전파되어야 합니다. 이렇게 하면 처리 중인 트랜잭션이 보류 중인 스키마 변경과 충돌하지 않습니다. 스키마 변경을 모든 노드로 전파하면 게시된 테이블에 대한 작업을 재개할 수 있습니다. 자세한 내용은 [복제 토폴로지 정지&#40;복제 Transact-SQL 프로그래밍&#41;](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)를 참조하세요.  
   
@@ -77,13 +76,13 @@ ms.locfileid: "48137073"
   
 -   구독자에서의 업데이트는 구독이 만료되었거나 비활성화 상태에 있더라도 게시자로 전파됩니다. 이러한 구독은 삭제하거나 다시 초기화하십시오.  
   
--   하는 경우 `TIMESTAMP` 또는 `IDENTITY` 열을 사용 하는 자체 기본 데이터 형식으로 복제 되 고 이러한 열의 값을 구독자에서 업데이트 되지 않아야 합니다.  
+-   `TIMESTAMP` 또는 `IDENTITY` 열을 사용하고 이러한 열이 자체 기본 데이터 형식으로 복제되는 경우에는 이러한 열의 값을 구독자에서 업데이트할 수 없습니다.  
   
--   구독자 업데이트 하거나 삽입할 수 없습니다 `text`하십시오 `ntext` 또는 `image` 복제 변경 내용 추적 트리거 내의 inserted 또는 deleted 테이블에서 읽을 수 없기 때문에 값입니다. 구독자 업데이트 하거나 삽입할 수 없습니다 마찬가지로 `text` 나 `image` 사용 하 여 값 `WRITETEXT` 또는 `UPDATETEXT` 게시자가 데이터를 덮어쓰므로 합니다. 대신 분할할 수 있는 합니다 `text` 및 `image` 열을 별도의 테이블 및 트랜잭션 내에서 두 테이블을 수정 합니다.  
+-   복제에 대한 변경 내용 추적 트리거 내의 삽입 테이블 또는 삭제 테이블에서는 읽기 작업을 수행할 수 없으므로 구독자는 `text`, `ntext` 또는 `image` 값을 업데이트하거나 삽입할 수 없습니다. 마찬가지로 게시자가 데이터를 덮어쓰므로 구독자는 `WRITETEXT` 또는 `UPDATETEXT`를 사용하여 `text` 또는 `image` 값을 업데이트하거나 삽입할 수 없습니다. 대신 `text` 및 `image` 열을 별개의 테이블에 분할할 수 있고 트랜잭션 내에서 두 테이블을 수정할 수 있습니다.  
   
-     구독자에서 큰 개체를 업데이트 하려면 데이터 형식을 사용 하 여 `varchar(max)`, `nvarchar(max)`, `varbinary(max)` 대신 `text`를 `ntext`, 및 `image` 각각의 데이터 형식입니다.  
+     구독자에서 큰 개체를 업데이트하려면 `text`, `ntext` 및 `image` 데이터 형식 대신 `varchar(max)`, `nvarchar(max)` 및 `varbinary(max)` 데이터 형식을 사용합니다.  
   
--   중복을 생성하는 고유 키(기본 키 포함)에 대한 업데이트(예: `UPDATE <column> SET <column> =<column>+1` 형식의 업데이트)는 허용되지 않으며 고유성 위반 때문에 거부됩니다. 구독자에서의 업데이트 설정이 개별 복제에 의해 전파 되기 때문에 이것이 `UPDATE` 영향을 받는 각 행에 대 한 문입니다.  
+-   중복을 생성하는 고유 키(기본 키 포함)에 대한 업데이트(예: `UPDATE <column> SET <column> =<column>+1` 형식의 업데이트)는 허용되지 않으며 고유성 위반 때문에 거부됩니다. 이는 구독자에서의 업데이트 설정이 영향을 받는 각 행에 대한 개별 `UPDATE` 문으로 복제에 의해 전파되기 때문입니다.  
   
 -   구독자 데이터베이스가 수평으로 분할되고 파티션에 구독자에는 존재하면서 게시자에는 없는 행이 있다면 구독자는 기존 행을 업데이트할 수 없습니다. 이러한 행을 업데이트하려고 하면 오류가 발생합니다. 테이블에서 이 행을 삭제하고 다시 삽입해야 합니다.  
   
@@ -91,7 +90,7 @@ ms.locfileid: "48137073"
   
 -   애플리케이션이 구독자에 대한 트리거를 요구하는 경우에는 게시자와 구독자에서 `NOT FOR REPLICATION` 옵션을 사용하여 트리거를 정의해야 합니다. 이렇게 하면 원래 데이터가 변경될 때만 트리거가 발생되고 변경 내용이 복제될 때는 트리거가 발생되지 않습니다.  
   
-     복제 트리거에 의해 테이블이 업데이트될 때 사용자 정의 트리거가 발생되지 않도록 합니다. 이렇게 하려면 프로시저를 호출 하 여 `sp_check_for_sync_trigger` 사용자 정의 트리거 본문에서 합니다. 자세한 내용은 [sp_check_for_sync_trigger&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-check-for-sync-trigger-transact-sql)를 참조하세요.  
+     복제 트리거에 의해 테이블이 업데이트될 때 사용자 정의 트리거가 발생되지 않도록 합니다. 이는 사용자 정의 트리거 본문에서 `sp_check_for_sync_trigger` 프로시저를 호출하여 수행할 수 있습니다. 자세한 내용은 [sp_check_for_sync_trigger&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-check-for-sync-trigger-transact-sql)를 참조하세요.  
   
 ### <a name="immediate-updating"></a>즉시 업데이트  
   
@@ -107,11 +106,11 @@ ms.locfileid: "48137073"
   
 -   지연 업데이트를 사용할 경우에는 기본 키가 모든 쿼리에 대해 레코드 로케이터로 사용되기 때문에 기본 키 열에 대해 업데이트를 하지 않는 것이 좋습니다. 충돌 해결 정책이 구독자 내용을 적용하도록 설정된 경우 기본 키는 주의해서 업데이트해야 합니다. 게시자 및 구독자 모두에서 기본 키를 업데이트하면 그 결과로 다른 기본 키를 가진 두 개의 행이 생성됩니다.  
   
--   데이터 형식의 열에 대 한 `SQL_VARIANT`: 데이터를 삽입 하거나 구독자에서 업데이트를 하는 경우 매핑된 같은 방식으로 큐 판독기 에이전트에 의해 구독자에서 큐에 복사 될 때:  
+-   데이터 형식이 `SQL_VARIANT`인 열의 경우: 데이터를 구독자에서 삽입하거나 업데이트하면 해당 데이터가 구독자에서 큐로 복사될 때 큐 판독기 에이전트에 의해 다음과 같은 방식으로 매핑됩니다.  
   
-    -   `BIGINT`를 `DECIMAL`, `NUMERIC`를 `MONEY`, 및 `SMALLMONEY` 매핑됩니다 `NUMERIC`합니다.  
+    -   `BIGINT`, `DECIMAL`, `NUMERIC`, `MONEY` 및 `SMALLMONEY`는 `NUMERIC`으로 매핑됩니다.  
   
-    -   `BINARY` 및 `VARBINARY` 매핑됩니다 `VARBINARY` 데이터입니다.  
+    -   `BINARY` 및 `VARBINARY`는 `VARBINARY` 데이터로 매핑됩니다.  
   
 ### <a name="conflict-detection-and-resolution"></a>충돌 감지 및 해결  
   

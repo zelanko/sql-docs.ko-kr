@@ -1,5 +1,6 @@
 ---
-title: Linux의 SQL Server에 대 한 active Directory 인증 자습서 | Microsoft Docs
+title: '자습서: Linux의 SQL Server에 대 한 active Directory 인증'
+titleSuffix: SQL Server
 description: 이 자습서에서는 Linux의 SQL Server에 대 한 AAD 인증에 대 한 구성 단계를 제공 합니다.
 author: meet-bhagdev
 ms.date: 02/23/2018
@@ -7,18 +8,18 @@ ms.author: meetb
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: c641b6ee84ffd13e17bc540b3272ba9a95d74648
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 237924a1bc4309b4e4d686076d1e0862ea3afe92
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658501"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160610"
 ---
-# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Linux의 SQL Server를 사용 하 여 사용 하 여 Active Directory 인증 자습서:
+# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>자습서: Linux의 SQL Server를 사용 하 여 Active Directory 인증을 사용 합니다.
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -37,7 +38,7 @@ ms.locfileid: "51658501"
 >
 > 구성 하려는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 타사 AD 공급자를 사용 하도록 linux에서 하세요 [타사 Active Directory 공급자를 사용 하 여 Linux의 SQL Server를 사용 하 여](./sql-server-linux-active-directory-third-party-providers.md)입니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 AD 인증을 구성 하기 전에 해야 합니다.
 
@@ -230,7 +231,7 @@ AD 인증을 구성 하기 전에 해야 합니다.
    ```
 
    > [!NOTE]
-   > Spn은 도메인이 큰 경우에 도메인을 통해 전파 되는 데 몇 분 정도 걸릴 수 있습니다. 오류를 수신 하는 경우 "kvno: 서버 데이터베이스에 없는 Kerberos MSSQLSvc에 대 한 자격 증명을 가져오는 동안 /\*\*\<호스트 컴퓨터의 정규화 된 도메인 이름\>\*\*:\* \* \<tcp 포트\>\*\*\@CONTOSO.COM ", 몇 분 정도 기다렸다가 다시 시도 하십시오.
+   > Spn은 도메인이 큰 경우에 도메인을 통해 전파 되는 데 몇 분 정도 걸릴 수 있습니다. 오류를 수신 하는 경우 "kvno: MSSQLSvc에 대 한 자격 증명을 가져오는 동안 Kerberos 데이터베이스에서 발견 되지 않았음 /\*\*\<호스트 컴퓨터의 정규화 된 도메인 이름\>\*\*:\* \* \< tcp 포트\>\*\*\@CONTOSO.COM ", 몇 분 정도 기다렸다가 다시 시도 하십시오.
 
 2. 사용 하 여 keytab 파일을 만듭니다 **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** 이전 단계에서 만든 AD 사용자에 대 한 합니다. 메시지가 표시 되 면 해당 AD 계정의 암호를 입력 합니다.
 
@@ -292,7 +293,7 @@ AD 인증을 구성 하기 전에 해야 합니다.
    sudo systemctl restart mssql-server
    ```
 
-6. 선택 사항: 성능 향상을 위해 도메인 컨트롤러에 대 한 UDP 연결 사용 하지 않도록 설정 합니다. 대부분의 경우에서 UDP 연결에 항상 실패 구성 옵션을 설정할 수 있는 도메인 컨트롤러에 연결할 때 `/etc/krb5.conf` 건너뛸 UDP 호출 합니다. 편집 `/etc/krb5.conf` 다음 옵션을 설정 합니다.
+6. 선택 사항: 성능 향상을 위해 도메인 컨트롤러에 대 한 UDP 연결을 사용 하지 않도록 설정 합니다. 대부분의 경우에서 UDP 연결에 항상 실패 구성 옵션을 설정할 수 있는 도메인 컨트롤러에 연결할 때 `/etc/krb5.conf` 건너뛸 UDP 호출 합니다. 편집 `/etc/krb5.conf` 다음 옵션을 설정 합니다.
 
    ```/etc/krb5.conf
    [libdefaults]
@@ -339,8 +340,8 @@ AD 인증을 사용 하는 클라이언트에 대 한 특정 연결 문자열 �
 
 * 다른 클라이언트 드라이버를 사용 하 여 AD 인증
 
-  * JDBC: [Kerberos를 사용 하 여 통합 인증을 SQL Server 연결](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
-  * ODBC: [통합된 인증을 사용 하 여](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
+  * JDBC: [Kerberos 통합된 인증을 사용 하 여 SQL Server에 연결할](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
+  * ODBC: [통합 인증 사용](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
   * ADO.NET: [연결 문자열 구문](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
 
 ## <a name="performance-improvements"></a>성능 향상

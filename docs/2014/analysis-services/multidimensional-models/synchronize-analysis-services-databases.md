@@ -16,12 +16,12 @@ ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bede06ab45511cbb1ec96aefb7e933f077bbe92c
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3b80a13d61e1ddb1187f8114f756484dd608ad7b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147858"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352162"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Analysis Services 데이터베이스 동기화
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에는 원본 서버의 데이터베이스에 있는 데이터와 메타데이터를 대상 서버의 데이터베이스로 복사하여 두 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 동일하게 만드는 데이터베이스 동기화 기능이 포함되어 있습니다. 데이터베이스 동기화 기능을 사용하여 다음 작업을 수행할 수 있습니다.  
@@ -41,9 +41,9 @@ ms.locfileid: "50147858"
  데이터베이스를 동기화하려면 데이터베이스 동기화 마법사를 실행하여 데이터베이스를 즉시 동기화하거나, 데이터베이스 동기화 마법사를 사용하여 나중에 실행할 수 있는 동기화 스크립트를 생성합니다. 어느 방법이든 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 및 큐브의 가용성과 확장성을 높이는 데 사용할 수 있습니다.  
   
 > [!NOTE]  
->  이전 버전의 Analysis Services용으로 작성된 다음 백서는 SQL Server 2012를 사용하여 구축된 확장 가능한 다차원 솔루션에도 적용됩니다. 자세한 내용은 [Analysis Services의 쿼리 확장](http://go.microsoft.com/fwlink/?LinkId=253136) 및 [읽기 전용 데이터베이스로 Analysis Services의 쿼리 확장](http://go.microsoft.com/fwlink/?LinkId=253137.)을 참조하세요.  
+>  이전 버전의 Analysis Services용으로 작성된 다음 백서는 SQL Server 2012를 사용하여 구축된 확장 가능한 다차원 솔루션에도 적용됩니다. 자세한 내용은 [Analysis Services의 쿼리 확장](https://go.microsoft.com/fwlink/?LinkId=253136) 및 [읽기 전용 데이터베이스로 Analysis Services의 쿼리 확장](https://go.microsoft.com/fwlink/?LinkId=253137.)을 참조하세요.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  데이터베이스 동기화를 시작하는 대상 서버에서 Analysis Services 서버 관리자 역할의 멤버여야 합니다. 원본 서버에서 Windows 사용자 계정에 원본 데이터베이스에 대한 모든 권한이 있어야 합니다. 데이터베이스를 대화형으로 동기화하는 경우 동기화가 Windows 사용자 ID의 보안 컨텍스트에서 실행됩니다. 특정 개체에 대한 계정의 액세스가 거부되는 경우 해당 개체가 작업에서 제외됩니다. 서버 관리자 역할 및 데이터베이스 권한에 대 한 자세한 내용은 참조 하세요. [서버 관리자 권한 부여 &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) 하 고 [데이터베이스 권한 부여 &#40; Analysis Services&#41;](grant-database-permissions-analysis-services.md)합니다.  
   
  TCP 포트 2383이 기본 인스턴스 간의 원격 연결을 허용하기 위해 두 서버에서 열려 있어야 합니다. Windows 방화벽에서 예외를 만드는 방법은 [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하십시오.  
@@ -55,7 +55,7 @@ ms.locfileid: "50147858"
  원본 서버에서 지연 집계 처리를 사용하는 경우 지연 집계 처리를 해제합니다. 백그라운드에서 처리되고 있는 집계는 데이터베이스 동기화에 방해가 될 수 있습니다. 이 서버 속성을 설정하는 방법은 [OLAP Properties](../server-properties/olap-properties.md)을 참조하십시오.  
   
 > [!NOTE]  
->  데이터베이스 크기는 동기화가 적합한 방식인지 결정하는 요소입니다. 까다로운 요구 사항은 없지만 동기화가 너무 느리면 [Analysis Services 동기화 모범 사례](http://go.microsoft.com/fwlink/?LinkID=253136)문서에 설명된 대로 여러 서버를 병렬로 동기화하는 것이 좋습니다.  
+>  데이터베이스 크기는 동기화가 적합한 방식인지 결정하는 요소입니다. 까다로운 요구 사항은 없지만 동기화가 너무 느리면 [Analysis Services 동기화 모범 사례](https://go.microsoft.com/fwlink/?LinkID=253136)합니다.  
   
 ## <a name="synchronize-database-wizard"></a>데이터베이스 동기화 마법사  
  데이터베이스 동기화 마법사를 사용하여 원본 데이터베이스에서 대상 데이터베이스로 단방향 동기화를 수행하거나 데이터베이스 동기화 작업을 지정하는 스크립트를 생성할 수 있습니다. 동기화 프로세스 중에 로컬 및 원격 파티션을 둘 다 동기화하고 역할을 포함할지 여부를 선택할 수 있습니다.  
@@ -187,7 +187,7 @@ ms.locfileid: "50147858"
 ## <a name="next-steps"></a>다음 단계  
  역할 또는 멤버 자격을 동기화하지 않은 경우 지금 대상 데이터베이스에 대한 사용자 액세스 권한을 지정해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Synchronize 요소&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
  [XMLA를 사용하여 모델 솔루션 배포](deploy-model-solutions-using-xmla.md)   
  [배포 마법사를 사용하여 모델 솔루션 배포](deploy-model-solutions-using-the-deployment-wizard.md)  

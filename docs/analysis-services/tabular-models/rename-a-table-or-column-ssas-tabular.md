@@ -1,5 +1,5 @@
 ---
-title: 테이블 또는 열 이름 바꾸기 | Microsoft Docs
+title: Analysis Services 테이블 형식 모델 테이블 또는 열 이름 바꾸기 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0c8564b7a61a73937bc5f9a207c98fd77c7b1bb7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0e5c0173de2ea22e91c0a1f13517a9bcb7c58ed9
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040107"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072640"
 ---
 # <a name="rename-a-table-or-column"></a>테이블 또는 열 이름 바꾸기 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34040107"
   
  데이터를 모델에 추가하면 모델 디자이너 아래의 테이블 탭에 테이블의 이름 또는 제목이 나타납니다. 테이블의 이름을 보다 적절한 이름으로 변경할 수 있습니다. 모델에 데이터를 추가한 후 열의 이름을 바꿀 수도 있습니다. 이 옵션은 특히 여러 원본에서 데이터를 가져왔을 때 서로 다른 테이블의 열에 쉽게 구분할 수 있는 이름을 지정하려는 경우에 중요합니다.  
   
-### <a name="to-rename-a-table"></a>테이블의 이름을 바꾸려면  
+### <a name="to-rename-a-table"></a>테이블 이름을 바꾸려면  
   
 1.  모델 디자이너에서 이름을 바꾸려는 테이블이 포함된 탭을 마우스 오른쪽 단추로 클릭한 다음 **이름 바꾸기**를 클릭합니다.  
   
@@ -44,14 +44,14 @@ ms.locfileid: "34040107"
   
 -   제어 문자  
   
--   다음 문자 (Analysis Services 개체 이름에 유효 하지 않은):., ': / \\*|? & % $! + = (){}<>  
+-   (잘못 된 Analysis Services 개체 이름에) 다음 문자:., '. / \\*|? & % $! + = (){}<>  
   
 -   MDX(Multidimensional Expressions) 및 DMX(Data Mining Extensions) 함수 이름과 연산자를 비롯한 Analysis Services의 예약된 키워드  
   
 ## <a name="effect-of-renaming-on-existing-tables-columns-and-calculations"></a>기존 테이블, 열 및 계산 이름을 바꿀 경우의 영향  
- 테이블의 이름을 변경할 때마다 여러 열이나 측정값이 포함될 수 있는 기본 테이블 개체의 이름을 변경하게 됩니다. 테이블에 있는 모든 열과 테이블을 사용 하는 모든 관계는 해당 정의의 새 이름을 사용 하도록 업데이트 되어야 합니다. 대부분의 경우에 이러한 업데이트가 자동으로 수행 합니다.
+ 테이블의 이름을 변경할 때마다 여러 열이나 측정값이 포함될 수 있는 기본 테이블 개체의 이름을 변경하게 됩니다. 테이블에 있는 모든 열과 테이블을 사용 하는 모든 관계는 해당 정의에서 새 이름을 사용 하도록 업데이트 되어야 합니다. 이 업데이트는 대부분의 경우에서 자동으로 발생합니다.
   
- 이름이 바뀐된 테이블의 열을 사용 하는 하거나 이름이 바꾼된 테이블을 사용 하는 모든 계산도 업데이트 되어야 하 고 해당 계산에서 파생 된 데이터가 새로 고쳐지고 다시 계산 되어야 합니다. 영향을 받는 테이블과 계산의 수에 따라서는 이러한 작업을 완료하는 데 시간이 걸릴 수 있습니다. 따라서 가져오기 프로세스를 진행하는 동안 또는 복잡한 관계와 계산을 만들기 전에 테이블 이름을 바꾸는 것이 가장 좋습니다.  
+ 이름이 바뀐된 테이블을 사용 하는 또는 이름이 바뀐된 테이블의 열을 사용 하는 어떠한 계산도 업데이트 수 및 해당 계산에서 파생 된 데이터를 새로 고침 및 다시 계산 해야 합니다. 영향을 받는 테이블과 계산의 수에 따라서는 이러한 작업을 완료하는 데 시간이 걸릴 수 있습니다. 따라서 가져오기 프로세스를 진행하는 동안 또는 복잡한 관계와 계산을 만들기 전에 테이블 이름을 바꾸는 것이 가장 좋습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [테이블 및 열](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   

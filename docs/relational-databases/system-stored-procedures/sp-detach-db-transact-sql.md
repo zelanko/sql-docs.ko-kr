@@ -19,12 +19,12 @@ ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b727bceb20b275128ea030f87c85872a88e931d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf38282332f1cf8c3a5d3dd7716f9adc21e7bd8f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825671"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201912"
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  [ **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
  분리되는 데이터베이스와 연결된 전체 텍스트 인덱스 파일이 데이터베이스 분리 작업 동안 삭제되지 않도록 지정합니다. *KeepFulltextIndexFile* 되는 **nvarchar(10)** 이며 기본값은 값 **true**합니다. 하는 경우 *KeepFulltextIndexFile* 됩니다 **false**, 데이터베이스와 연결 된 모든 전체 텍스트 인덱스 파일 및 전체 텍스트 인덱스의 메타 데이터 데이터베이스가 읽기 전용 아니면 삭제 됩니다. Null 인 경우 또는 **true**, 전체 텍스트 관련 메타 데이터가 유지 됩니다.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  합니다**@keepfulltextindexfile** 매개 변수는 이후 버전의에서 제거할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 새 개발 작업에서는 이 매개 변수를 사용하지 말고 현재 이 매개 변수를 사용하는 응용 프로그램은 가능한 한 빨리 수정하십시오.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -114,7 +114,7 @@ GO
 ```  
   
 > [!NOTE]  
->  현재 강제로 사용자가 데이터베이스 즉시 또는 지정 된 시간 (초), 내 옵션을 사용할 수도 롤백: ALTER DATABASE *database_name* SINGLE_USER WITH ROLLBACK 설정 *rollback_option*. 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
+>  현재 사용자를 즉시 또는 지정된 시간(초) 내에 데이터베이스에서 강제로 연결을 끊으려면 ROLLBACK 옵션을 사용하십시오. ALTER DATABASE *database_name* SINGLE_USER WITH ROLLBACK 설정 *rollback_option*합니다. 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
   
 ## <a name="reattaching-a-database"></a>데이터베이스 다시 연결  
  분리된 파일은 그대로 남아 있으며 FOR ATTACH 또는 FOR ATTACH_REBUILD_LOG 옵션과 함께 CREATE DATABASE를 사용하여 다시 연결할 수 있습니다. 또한 파일을 다른 서버로 이동하거나 첨부할 수 있습니다.  

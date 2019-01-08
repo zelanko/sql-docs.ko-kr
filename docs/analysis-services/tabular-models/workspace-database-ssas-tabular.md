@@ -1,5 +1,5 @@
 ---
-title: SQL Server Data Tools에서 작업 영역 데이터베이스 | Microsoft Docs
+title: SQL Server Data Tools에서 analysis Services 작업 영역 데이터베이스 | Microsoft Docs
 ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8ebea50408a46ea2ac79030228ee06f149cece4c
-ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
+ms.openlocfilehash: b3f9d94d35d5aaa4ea86cf1f1d9dc845b67eaf4f
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45975722"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072270"
 ---
 # <a name="workspace-database"></a>작업 영역 데이터베이스
 

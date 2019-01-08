@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 api_name:
 - LocalDBGetVersions
@@ -18,12 +16,12 @@ ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 333cd5a6793c335a0003ac6b39ddd6abba710f74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 431124cff2fcf293ccf1e8e8bcb74321245a661e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077813"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807955"
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions 함수
   컴퓨터에서 사용할 수 있는 모든 SQL Server Express LocalDB 버전을 반환합니다.  
@@ -38,7 +36,7 @@ ms.locfileid: "48077813"
   
 ## <a name="parameters"></a>매개 변수  
  *pVersionNames*  
- [출력] 사용자의 워크스테이션에서 사용할 수 있는 LocalDB 버전의 이름이 들어 있습니다.  
+ [출력] 사용자의 워크스테이션에서 사용할 수 있는 LocalDB 버전의 이름을 포함 합니다.  
   
  *lpdwNumberOfVersions*  
  [입력/출력] 입력 시 *pVersionNames* 버퍼의 버전에 대한 슬롯 수를 저장합니다.   

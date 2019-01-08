@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, XML Bulk Load
@@ -17,12 +15,12 @@ ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b832f6d92b847ee823a350559dbc54fd35a13ec2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50b5630b3ee200f0eda402b62acc14ba458ebb84
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175883"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807365"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>.NET 환경에서 SQLXML 대량 로드 사용
   이 항목에서는 .NET 환경에서 XML 대량 로드 기능을 사용하는 방법에 대해 설명합니다. XML 대량 로드에 대 한 자세한 내용은 [XML 데이터의 대량 로드 수행 &#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)합니다.  
@@ -30,7 +28,7 @@ ms.locfileid: "48175883"
  관리되는 환경에서 SQLXML 대량 로드 COM 개체를 사용하려면 이 개체에 대한 프로젝트 참조를 추가해야 합니다. 이렇게 하면 대량 로드 COM 개체에 대한 관리되는 래퍼 인터페이스가 생성됩니다.  
   
 > [!NOTE]  
->  관리되는 XML 대량 로드는 관리되는 스트림에는 사용할 수 없으며 네이티브 스트림에 대한 래퍼가 있어야 합니다. SQLXML 대량 로드 구성 요소는 다중 스레드 환경('[MTAThread]' 특성)에서는 실행되지 않습니다. 하면 다음과 같은 추가 정보를 사용 하 여 InvalidCastException 예외가 다중 스레드 환경에서 대량 로드 구성 요소를 실행 하려는 경우: "SQLXMLBULKLOADLib.ISQLXMLBulkLoad 인터페이스에 대 한 queryinterface가 실패 했습니다." 대량 로드 개체가 단일 스레드 액세스할 수 있는 개체가 되도록이 문제를 해결 (사용 하 여 예를 들어 합니다 **[STAThread]** 샘플에 표시 된 대로 특성).  
+>  관리되는 XML 대량 로드는 관리되는 스트림에는 사용할 수 없으며 네이티브 스트림에 대한 래퍼가 있어야 합니다. SQLXML 대량 로드 구성 요소는 다중 스레드 환경('[MTAThread]' 특성)에서는 실행되지 않습니다. 다중 스레드 환경에서 대량 로드 구성 요소를 실행 하려고 하면 다음과 같은 추가 정보를 사용 하 여 InvalidCastException 예외가 가져옵니다. 예외가 표시됩니다. 대량 로드 개체가 단일 스레드 액세스할 수 있는 개체가 되도록이 문제를 해결 (사용 하 여 예를 들어 합니다 **[STAThread]** 샘플에 표시 된 대로 특성).  
   
  이 항목에서는 XML 데이터를 데이터베이스에 대량 로드하기 위한 C# 작업 예제 응용 프로그램을 제공합니다. 작업 예제를 만들려면 다음 단계를 수행합니다.  
   
@@ -149,7 +147,7 @@ ms.locfileid: "48175883"
   
      그러면 .NET Framework 프로젝트에서 사용할 수 있는 관리되는 래퍼 DLL(SQLXMLBULKLOADLib.dll)이 생성됩니다. .NET Framework에서 새로 생성된 DLL에 대한 프로젝트 참조를 추가합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [XML 데이터 대량 로드 수행 &#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

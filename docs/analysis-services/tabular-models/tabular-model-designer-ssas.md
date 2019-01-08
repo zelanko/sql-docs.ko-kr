@@ -1,5 +1,5 @@
 ---
-title: SQL Server Data Tools의 테이블 형식 모델 디자이너 | Microsoft Docs
+title: SQL Server Data Tools에서 analysis Services 테이블 형식 모델 디자이너 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 98c836650ef00b283718ddf22834f7e4d4a56e0f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8be4f1f78b444933cc1ad7f4ec4fb71b28bfae1b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044847"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072570"
 ---
 # <a name="tabular-model-designer"></a>테이블 형식 모델 디자이너
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-테이블 형식 모델 디자이너는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 일부로 Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에 통합되어 있으며, 전문적인 테이블 형식의 모델 솔루션을 개발하기 위한 추가 프로젝트 형식 템플릿이 함께 제공됩니다.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 무료 웹 다운로드로 설치됩니다. 자세한 내용은 [SSDT(SQL Server Data Tools) 다운로드](../../ssdt/download-sql-server-data-tools-ssdt.md)를 참조하세요.    
+테이블 형식 모델 디자이너는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 일부로 Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에 통합되어 있으며, 전문적인 테이블 형식의 모델 솔루션을 개발하기 위한 추가 프로젝트 형식 템플릿이 함께 제공됩니다.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 무료 웹 다운로드로 설치됩니다. 자세한 내용은 [SSDT(SQL Server Data Tools) 다운로드](../../ssdt/download-sql-server-data-tools-ssdt.md) 를 참조하세요.    
   
 ##  <a name="bkmk_benefits"></a> 이점  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 설치하면 테이블 형식의 모델을 만들기 위한 새 프로젝트 템플릿이 사용 가능한 프로젝트 형식에 추가됩니다. 이 템플릿 중 하나를 사용하여 테이블 형식의 새 모델 프로젝트를 만든 다음 테이블 형식 모델 디자이너 도구와 마법사를 사용하여 모델 제작을 시작할 수 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "34044847"
  대부분의 모델 제작 태스크를 이 두 가지 뷰에서 수행할 수 있습니다.  
   
 ### <a name="view-code-window"></a>코드 창 보기  
- 솔루션 탐색기에서 마우스 오른쪽 단추를 클릭하고 파일에 대해 **코드 보기** 를 선택하면 Model.bim 파일의 코드를 볼 수 있습니다. 호환성 수준 1200 이상에서 테이블 형식 모델에 대 한 모델 정의 JSON으로 표현 됩니다.  
+ 솔루션 탐색기에서 마우스 오른쪽 단추를 클릭하고 파일에 대해 **코드 보기** 를 선택하면 Model.bim 파일의 코드를 볼 수 있습니다. 1200 이상 호환성 수준의 테이블 형식 모델에 대 한 모델 정의 JSON으로 표현 됩니다.  
   
  이 정의를 확인하려면 JSON 편집기를 제공하는 정식 버전 Visual Studio가 필요합니다. 상용 버전의 추가 기능이 필요하지 않으면 [무료 Visual Studio Community 버전](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx) 을 다운로드하여 설치할 수 있습니다.  
   
@@ -66,13 +66,13 @@ ms.locfileid: "34044847"
  솔루션 탐색기를 보려면 **보기** 메뉴를 클릭한 다음 **솔루션 탐색기**를 클릭합니다.  
 
 ### <a name="tabular-model-explorer"></a>테이블 형식 모델 탐색기
-  첫 번째의 2016 년 8 월 릴리스 (14.0.60812.0)에서 사용할 수 있는 [SQL Server Data Tools](https://msdn.microsoft.com/mt186501), 테이블 형식 모델 탐색기를 사용 하면 테이블 형식 모델에서 메타 데이터 개체를 이동할 수 있습니다.
+  첫 번째의 2016 년 8 월 릴리스 (14.0.60812.0)에서 사용할 수 있습니다 [SQL Server Data Tools](https://msdn.microsoft.com/mt186501), 테이블 형식 모델 탐색기를 사용 하면 테이블 형식 모델에서 메타 데이터 개체를 이동 합니다.
 
  테이블 형식 모델 탐색기를 표시하려면 **보기** > **다른 창**을 클릭한 다음 **테이블 형식 모델 탐색기**를 클릭합니다.
    
   ![테이블 형식 모델 탐색기](../../analysis-services/tabular-models/media/tabular-model-explorer.png) 
   
- 테이블 형식 모델 탐색기 유사한 테이블 형식 모델의 스키마는 트리 구조로 메타 데이터 개체를 구성 합니다. 데이터 원본, 큐브 뷰, 관계, 역할, 테이블 및 변환은 최상위 스키마 개체에 해당합니다. 특히 KPI 및 측정값과 같이 기술적으로 최상위 개체는 아니지만 모델에서 여러 테이블의 자식 개체인 예외 항목이 몇 가지 있습니다. 그러나 모든 KPI 및 측정값에 대한 최상위 컨테이너를 통합하면 특히 모델에 아주 많은 테이블을 포함한 경우 이러한 개체를 사용하여 쉽게 작업할 수 있습니다. 측정값은 해당 부모 테이블에도 나열되므로 실제 부모-자식 관계에 대해 명확하게 확인할 수 있습니다. 최상위 측정값 컨테이너에서 측정값을 선택하면 동일한 측정값이 테이블 하위의 자식 컬렉션에서도 선택됩니다. 그 반대의 경우도 마찬가지입니다.  
+ 테이블 형식 모델 탐색기와 테이블 형식 모델의 스키마를 매우 비슷한 트리 구조로 메타 데이터 개체를 구성 합니다. 데이터 원본, 큐브 뷰, 관계, 역할, 테이블 및 변환은 최상위 스키마 개체에 해당합니다. 특히 Kpi 및 측정값과 기술적으로 최상위 개체는 있지만 모델에서 여러 테이블의 자식 개체를 아닌 일부 예외가 있습니다. 그러나 모든 KPI 및 측정값에 대한 최상위 컨테이너를 통합하면 특히 모델에 아주 많은 테이블을 포함한 경우 이러한 개체를 사용하여 쉽게 작업할 수 있습니다. 측정값은 해당 부모 테이블에도 나열되므로 실제 부모-자식 관계에 대해 명확하게 확인할 수 있습니다. 최상위 측정값 컨테이너에서 측정값을 선택하면 동일한 측정값이 테이블 하위의 자식 컬렉션에서도 선택됩니다. 그 반대의 경우도 마찬가지입니다.  
  
  테이블 형식 모델 탐색기에서 개체 노드는 Visual Studio의 모델, 테이블 및 열 메뉴 아래에서 숨겨져 있었던 적절한 메뉴 옵션에 연결됩니다. 개체를 마우스 오른쪽 단추로 클릭하여 개체 형식에 대한 옵션을 탐색할 수 있습니다. 일부 개체 노드 형식에는 상황에 맞는 메뉴가 있지만 추가 옵션 및 향상된 기능이 후속 릴리스에서 도입될 예정입니다. 
 
@@ -83,13 +83,13 @@ ms.locfileid: "34044847"
   
 -   Model.bim  
   
--   테이블  
+-   Table  
   
--   열  
+-   Column  
   
 -   이름  
   
- 프로젝트 속성에 속성 창에 프로젝트 이름과 프로젝트 폴더만 표시 합니다. 프로젝트에는 또한 모달 속성 대화 상자에서 설정할 수 있는 추가 배포 옵션 및 배포 서버 설정이 있습니다. 이 속성을 보려면 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+ 속성 창에서 프로젝트 이름과 프로젝트 폴더를 표시 하는 프로젝트 속성. 프로젝트에는 또한 모달 속성 대화 상자에서 설정할 수 있는 추가 배포 옵션 및 배포 서버 설정이 있습니다. 이 속성을 보려면 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
  속성 창의 필드에는 클릭하면 열리는 컨트롤이 포함되어 있습니다. 편집 컨트롤 유형은 특정 속성에 따라 달라집니다. 컨트롤에는 편집 상자, 드롭다운 목록, 사용자 지정 대화 상자에 대한 링크 등이 있습니다. 흐리게 표시되는 속성은 읽기 전용입니다.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "34044847"
  **바로 가기 키**  
  도구->옵션->키보드 대화 상자를 통해 Analysis Services 키보드 바로 가기를 구성하거나 다시 매핑할 수 있습니다. 빌드, 저장, 디버그, 새 프로젝트 등과 같은 전역 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 바로 가기가 테이블 형식 모델 디자이너 컨텍스트에서 지원됩니다. 그 외 테이블 형식 모델 디자이너용 바로 가기 키는 Analysis Services 컨텍스트에서 지원됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [테이블 형식 모델 프로젝트](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
   
   

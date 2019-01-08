@@ -1,5 +1,5 @@
 ---
-title: '11 단원: 파티션 만들기 | Microsoft Docs'
+title: '11 단원: 파티션을 만들 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: caea636c7c319bfb4db2cc54e062bb00de9bb3b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c0817db540c9db8f17fbc71da68f43cc68645190
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089651"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391716"
 ---
-# <a name="lesson-11-create-partitions"></a>11단원: 파티션 만들기
-  이 단원에서는 다른 파티션과 독립적으로 처리(새로 고침)할 수 있도록 파티션을 만들어 Internet Sales 테이블을 더 작은 논리적 부분으로 나눕니다. 기본적으로 모델에 포함하는 각 테이블에는 테이블의 열과 행이 모두 들어 있는 파티션이 하나씩 포함되어 있습니다. 여기서는 Internet Sales 테이블의 데이터를 연도별로 나누고, 테이블에 있는 5개의 연도 각각에 대해 파티션을 하나씩 만들려고 합니다.  이렇게 하면 각 파티션을 독립적으로 처리할 수 있습니다. 자세한 내용은 [파티션&#40;SSAS 테이블 형식&#41;](tabular-models/partitions-ssas-tabular.md)을 참조하세요.  
+# <a name="lesson-11-create-partitions"></a>11 단원: 파티션 만들기
+  이 단원에서는 다른 파티션과 독립적으로 처리(새로 고침)할 수 있도록 파티션을 만들어 Internet Sales 테이블을 더 작은 논리적 부분으로 나눕니다. 기본적으로 모델에 포함 된 모든 테이블에는 테이블의 열과 행 모두 포함 하는 하나의 파티션이 있습니다. Internet Sales 테이블에 대 한 연도별; 데이터를 분할 하려는 각 테이블의 5 년에 대해 하나의 파티션을 합니다.  이렇게 하면 각 파티션을 독립적으로 처리할 수 있습니다. 자세한 내용은 [파티션&#40;SSAS 테이블 형식&#41;](tabular-models/partitions-ssas-tabular.md)을 참조하세요.  
   
- 이 단원에 소요되는 예상 시간: **15분**  
+ 이 단원에 소요되는 예상 시간: **15 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
- 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원인 [10단원: 계층 만들기](lesson-9-create-hierarchies.md)를 완료해야 합니다.  
+ 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원을 완료해야 합니다. [10 단원: 계층 구조를 만들](lesson-9-create-hierarchies.md)합니다.  
   
 ## <a name="create-partitions"></a>파티션 만들기  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48089651"
   
 6.  **유효성 검사**를 클릭합니다.  
   
-     특정 열이 원본에 없음을 나타내는 경고가 표시됩니다. 때문에 [3 단원: 열 이름 바꾸기](rename-columns.md), 원본에 동일한 열에서 서로 다른 모델의 Internet Sales 테이블의 열 이름을 바꾼 합니다.  
+     특정 열이 원본에 없음을 나타내는 경고가 표시됩니다. 왜냐하면에서 [단원 3: 열 이름 바꾸기](rename-columns.md), 원본에 동일한 열에서 서로 다른 모델의 Internet Sales 테이블의 해당 열을 변경 합니다.  
   
 #### <a name="to-create-a-partition-for-the-2006-year-in-the-internet-sales-table"></a>Internet Sales 테이블에서 2006 년에 대 한 파티션을 만들려면  
   
@@ -154,6 +154,6 @@ ms.locfileid: "48089651"
      합니다 **데이터 프로세스** 대화 상자가 다음 나타나고 각 파티션에 대 한 처리 정보가 표시 됩니다. 파티션마다 서로 다른 개수의 행이 전송되었음을 확인할 수 있습니다. 이는 각 파티션에 해당 SQL 문의 WHERE 절에 지정된 연도의 행만 포함되어 있기 때문입니다. 2010년에는 해당하는 데이터가 없습니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 이 자습서를 계속하려면 다음 단원인 [12단원: 역할 만들기](lesson-11-create-roles.md)로 이동하세요.  
+ 이 자습서를 계속하려면 다음 단원으로 이동하십시오. 단원: [12 단원: 역할을 만들](lesson-11-create-roles.md)합니다.  
   
   

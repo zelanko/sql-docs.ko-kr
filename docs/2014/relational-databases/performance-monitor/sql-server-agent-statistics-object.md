@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Statistics object
@@ -13,12 +13,12 @@ ms.assetid: ebe92bfa-0721-48aa-9ba6-e7904ad265a1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e018696c9add0e9c73436aa3d2b89b3aa16a09b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34539c79bc0e2d90841837abef895bdceb2eb20d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124273"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801455"
 ---
 # <a name="sql-server-agent-statistics-object"></a>SQL Server 에이전트, Statistics 개체
   SQL Server 에이전트 **Statistics** 성능 개체에는 SQL Server 에이전트에 관한 정보를 보고하는 성능 카운터가 포함되어 있습니다.  

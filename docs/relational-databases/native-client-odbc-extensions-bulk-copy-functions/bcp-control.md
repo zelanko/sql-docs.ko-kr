@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c15063ef190c3858007e7d64bc0e4d7ebf0d5b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3df6609af185d09c01641de495ae23687a083e07
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761761"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210462"
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,7 +72,7 @@ RETCODE bcp_control (
  BCPFILE_RAW: 파일의 데이터가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 코드 페이지에 있습니다.  
   
  BCPFILEFMT  
- 데이터 파일 형식의 버전 번호입니다. 이 값은 80([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 또는 120([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])이 될 수 있습니다. 120 기본값입니다. 이 옵션은 이전 버전 서버에서 지원하는 형식으로 데이터를 가져오고 내보내는 데 유용합니다. 예를 들어 텍스트 열에서 가져온 데이터를 가져오기에는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서버를를 **varchar (max)** 열에는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 서버의 80을 지정 해야 합니다. 마찬가지로,에서 데이터를 내보낼 때 80을 지정 하는 경우는 **varchar (max)** 열에 저장 되는 것 같이 텍스트 열에 저장 되어 합니다 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서식을 지정 하 고 텍스트 열으로 가져올 수 있습니다를 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서버.  
+ 데이터 파일 형식의 버전 번호입니다. 80 일 수 있습니다 ( [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ( [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 하거나 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), 또는 120 ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 기본값입니다. 이 옵션은 이전 버전 서버에서 지원하는 형식으로 데이터를 가져오고 내보내는 데 유용합니다. 예를 들어 텍스트 열에서 가져온 데이터를 가져오기에는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서버를를 **varchar (max)** 열에는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 서버의 80을 지정 해야 합니다. 마찬가지로,에서 데이터를 내보낼 때 80을 지정 하는 경우는 **varchar (max)** 열에 저장 되는 것 같이 텍스트 열에 저장 되어 합니다 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서식을 지정 하 고 텍스트 열으로 가져올 수 있습니다를 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서버.  
   
  BCPFIRST  
  복사할 파일이나 테이블의 첫 번째 데이터 행입니다. 기본값은 1입니다. 1보다 작은 값을 지정하면 이 옵션은 기본값으로 다시 설정됩니다.  
@@ -117,7 +117,7 @@ RETCODE bcp_control (
  BCPODBC  
  TRUE 인 경우 지정 **날짜/시간** 하 고 **smalldatetime** 문자 형식으로 저장 하는 값에 ODBC 타임 스탬프 이스케이프 시퀀스 접두사 및 접미사 사용 합니다. BCPODBC 옵션 DB_OUT에만 적용 됩니다.  
   
- FALSE 인 경우는 **날짜/시간** 1997 년 1 월 1 일을 나타내는 값을 문자열로 변환 됩니다. 1997-01-01 00:00:00.000 합니다. TRUE 이면 동일한 **날짜/시간** 값으로 표현 됩니다. {ts ' 1997-01-01 00:00:00.000'}.  
+ FALSE 인 경우는 **날짜/시간** 1997 년 1 월 1 일을 나타내는 값을 문자열로 변환 됩니다. 변환됩니다. TRUE 이면 동일한 **날짜/시간** 값으로 표현 됩니다. {ts ' 1997-01-01 00:00:00.000'}.  
   
  BCPROWCOUNT  
  현재(또는 마지막) BCP 작업에 의해 영향을 받는 행의 수를 반환합니다.  

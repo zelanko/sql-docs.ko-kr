@@ -1,5 +1,5 @@
 ---
-title: 테이블 형식 모델 데이터베이스에 연결 | Microsoft Docs
+title: Analysis Services 테이블 형식 모델 데이터베이스에 연결 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ce70f8ac3e22e31f0420762019c94fc629951a4b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: 239559dc7d5bfdabe3a3f9060bc92059982c8dae
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045297"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072420"
 ---
 # <a name="connect-to-a-tabular-model-database"></a>테이블 형식 모델 데이터베이스에 연결  
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  테이블 형식 모델을 빌드하여 Analysis Services 테이블 형식 모드 서버로 배포한 후 클라이언트 애플리케이션에서 사용할 수 있도록 권한을 설정해야 합니다. 이 문서에서는 설명 사용 권한 및 클라이언트 응용 프로그램에서 데이터베이스에 연결 하는 방법을 하는 방법입니다.  
+  테이블 형식 모델을 빌드하여 Analysis Services 테이블 형식 모드 서버로 배포한 후 클라이언트 애플리케이션에서 사용할 수 있도록 권한을 설정해야 합니다. 이 문서에서는 설명 권한 및 클라이언트 응용 프로그램에서 데이터베이스에 연결 하는 방법에 대 한 방법입니다.  
   
 > [!NOTE]  
 >  기본적으로 방화벽을 구성해야만 Analysis Services에 대한 원격 연결을 사용할 수 있습니다. 클라이언트 연결에 대해 명명된 인스턴스 또는 기본 인스턴스를 구성하는 경우 적절한 포트를 열어야 합니다. 자세한 내용은 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
@@ -26,7 +26,7 @@ ms.locfileid: "34045297"
 ##  <a name="bkmk_userpermissions"></a> 데이터베이스에 대한 사용자 권한  
  테이블 형식 데이터베이스에 연결하는 사용자는 읽기 액세스 권한을 지정하는 데이터베이스 역할의 멤버여야 합니다.  
   
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 모델을 작성할 때 또는 배포된 모델에 대해 역할 또는 역할 멤버 자격이 정의됩니다. 역할 관리자를 사용 하 여 역할을 만드는 방법에 대 한 자세한 내용은 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], 참조 [만들기 및 관리 역할](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)합니다. 만들기 및 배포 된 모델에 대 한 역할을 관리 하는 방법에 대 한 자세한 내용은 참조 [테이블 형식 모델 역할](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)합니다.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 모델을 작성할 때 또는 배포된 모델에 대해 역할 또는 역할 멤버 자격이 정의됩니다. 역할 관리자를 사용 하 여 역할을 만드는 방법에 대 한 자세한 내용은 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]를 참조 하세요 [만들기 및 관리 역할](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)입니다. 만들기 및 배포 된 모델에 대 한 역할을 관리 하는 방법에 대 한 자세한 내용은 참조 하세요. [테이블 형식 모델 역할](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)입니다.  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 역할 관리자를 사용하여 정의한 역할로 테이블 형식 모델 프로젝트를 다시 배포하면 배포된 테이블 형식 모델에 정의된 역할을 덮어씁니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "34045297"
   
 1.  중앙 관리에서 서비스 계정 구성 페이지를 엽니다.  
   
-2.  Excel 서비스에서 사용하는 서비스 애플리케이션 풀을 선택합니다. **서비스 응용 프로그램 풀 – SharePoint 웹 서비스 시스템** 또는 사용자 지정 응용 프로그램 풀이 여기에 해당합니다. Excel 서비스에서 사용하는 관리되는 계정이 페이지에 나타납니다.  
+2.  Excel 서비스에서 사용하는 서비스 애플리케이션 풀을 선택합니다. 여기에 해당 **서비스 응용 프로그램 풀-SharePoint 웹 서비스 시스템** 또는 사용자 지정 응용 프로그램 풀. Excel 서비스에서 사용하는 관리되는 계정이 페이지에 나타납니다.  
   
      SharePoint 모드의 Reporting Services가 포함된 SharePoint 팜의 경우 Reporting Services 서비스 애플리케이션에 대한 계정 정보도 가져옵니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "34045297"
   
 2.  **Analysis Services**를 선택합니다.  
   
-3.  **서버 이름**에서 해당 데이터베이스를 호스팅하는 Analysis Services 인스턴스를 지정합니다. 서버 이름은 대개 서버 소프트웨어를 실행하는 컴퓨터의 이름입니다. 이 형식으로 이름을 지정 해야 합니다는 서버를 명명 된 인스턴스로 설치할 경우: \<서버 이름 >\\< instancename\>합니다.  
+3.  **서버 이름**에서 해당 데이터베이스를 호스팅하는 Analysis Services 인스턴스를 지정합니다. 서버 이름은 대개 서버 소프트웨어를 실행하는 컴퓨터의 이름입니다. 이 형식으로 이름 서버를 명명 된 인스턴스로 설치 된 경우 지정 해야 합니다. \<서버 이름 >\\< n a m e\>합니다.  
   
      서버 인스턴스는 독립 실행형 테이블 형식 배포를 사용하도록 구성되어야 하며 서버 인스턴스에는 액세스를 허용하는 인바운드 규칙이 있어야 합니다. 자세한 내용은 [Analysis Services 인스턴스의 서버 모드 확인](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md) 및 [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "34045297"
   
 5.  데이터베이스를 선택합니다. 올바르게 선택하면 데이터베이스에 대해 단일 **모델** 큐브가 표시됩니다. **다음** , **마침**을 차례로 클릭합니다.  
   
- 연결이 설정되면 데이터를 사용하여 피벗 테이블 또는 피벗 차트를 만들 수 있습니다. 자세한 내용은 참조 [Excel에서 분석](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)합니다.  
+ 연결이 설정되면 데이터를 사용하여 피벗 테이블 또는 피벗 차트를 만들 수 있습니다. 자세한 내용은 [Excel에서 분석](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)합니다.  
   
 ##  <a name="bkmk_sharepoint"></a> SharePoint에서 연결  
  SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 사용하는 경우 Analysis Services 테이블 형식 모드 서버에서 실행되는 데이터베이스에 대한 리디렉션을 제공하는 BI 의미 체계 모델 연결 파일을 SharePoint에서 만들 수 있습니다. BI 의미 체계 모델 연결은 데이터베이스에 대한 HTTP 끝점을 제공합니다. 또한 BI 의미 체계 모델 연결을 사용하면 SharePoint 사이트에서 문서를 정기적으로 사용하는 지식 근로자가 테이블 형식 모델에 쉽게 액세스할 수 있습니다. 지식 근로자는 BI 의미 체계 모델 연결 파일의 위치 또는 해당 URL만 알면 테이블 형식 모델 데이터베이스에 액세스할 수 있습니다. 서버 위치 또는 데이터베이스 이름 정보는 BI 의미 체계 모델 연결에 캡슐화됩니다. BI 의미 체계 모델 연결 파일을 만들고 사용하는 방법은 [파워 피벗 BI 의미 체계 모델 연결&#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md) 및 [테이블 형식 모델 데이터베이스에 대한 BI 의미 체계 모델 연결 만들기](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)를 참조하세요.  
@@ -89,13 +89,13 @@ ms.locfileid: "34045297"
   
  **데이터 연결 마법사가 지정한 데이터 원본에서 데이터베이스 목록을 가져올 수 없습니다.**  
   
- 데이터를 가져올 때 원격 Analysis Services 서버의 테이블 형식 모델 데이터베이스에 연결 하도록 마법사를 사용 하려고 할 때 충분 한 권한이이 Microsoft Excel 오류가 발생 합니다. 이 오류를 해결하려면 데이터베이스에 대한 사용자 액세스 권한이 있어야 합니다. 이 항목의 앞부분에 있는 데이터에 대한 사용자 액세스 권한 부여 지침을 참조하십시오.  
+ 데이터를 가져올 때 원격 Analysis Services 서버의 테이블 형식 모델 데이터베이스로 연결 마법사를 사용 하려고 하면 충분 한 권한이 없을 때이 Microsoft Excel 오류가 발생 합니다. 이 오류를 해결하려면 데이터베이스에 대한 사용자 액세스 권한이 있어야 합니다. 이 항목의 앞부분에 있는 데이터에 대한 사용자 액세스 권한 부여 지침을 참조하십시오.  
   
- **외부 데이터 원본에 대한 연결을 설정하는 동안 오류가 발생했습니다. 다음과 같은 연결을 새로 고치지 못했습니다: \<모델 이름 > 샌드박스**  
+ **외부 데이터 원본에 대한 연결을 설정하는 동안 오류가 발생했습니다. 다음 연결을 새로 고치지 못했습니다: \<모델 이름 > 샌드박스**  
   
  SharePoint에서 모델 데이터를 사용하는 피벗 테이블에서 데이터 필터링과 같은 데이터 상호 작용을 시도할 때 이 Microsoft Excel 오류가 발생합니다. 이 오류는 원격 Analysis Services 서버에 대한 충분한 사용 권한이 없기 때문에 발생합니다. 이 오류를 해결하려면 데이터베이스에 대한 사용자 액세스 권한이 있어야 합니다. 이 항목의 앞부분에 있는 데이터에 대한 사용자 액세스 권한 부여 지침을 참조하십시오.  
   
- **이 작업을 수행하는 동안 오류가 발생했습니다. 통합 문서를 다시 로드 되 고이 작업을 다시 시도 하십시오.**  
+ **이 작업을 수행하는 동안 오류가 발생했습니다. 통합 문서를 로드 하 고이 작업을 다시 수행 하려고 합니다.**  
   
  SharePoint에서 모델 데이터를 사용하는 피벗 테이블에서 데이터 필터링과 같은 데이터 상호 작용을 시도할 때 이 Microsoft Excel 오류가 발생합니다. 이 오류는 모델 데이터가 배포된 Analysis Services 인스턴스가 Excel 서비스를 신뢰하지 않기 때문에 발생합니다. 이 오류를 해결하려면 Analysis Services 인스턴스에 대한 Excel 서비스 관리 권한을 부여해야 합니다. 이 항목의 앞부분에 있는 관리자 권한 부여 지침을 참조하십시오. 오류가 계속되면 Excel 서비스 애플리케이션 풀을 재활용하십시오.  
   

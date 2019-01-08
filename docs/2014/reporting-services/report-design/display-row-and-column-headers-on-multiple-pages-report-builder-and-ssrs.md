@@ -11,12 +11,12 @@ ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 60bfb038d6712f44d6a0b5cd6cc57863f0f76ade
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 79565c22eab900eb152f8b5fa52748b3e5a09a16
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48904983"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394256"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>여러 페이지에 행 및 열 머리글 표시(보고서 작성기 및 SSRS)
   여러 페이지에 걸쳐 있는 테이블릭스 데이터 영역에 대해 페이지마다 행 및 열 머리글을 반복할지 여부를 제어할 수 있습니다. 테이블릭스 데이터 영역은 테이블, 행렬 또는 목록일 수 있습니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "48904983"
   
  ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
- 새 테이블 또는 행렬 마법사나 새 차트 마법사를 사용 하 여 키를 누르거나, 그룹화 창에 필드를 추가 하거나, 상황에 맞는 메뉴를 사용 하 여 그룹을 추가 하면 행 및 열 그룹 머리글이 자동으로 만들어집니다. 테이블릭스 데이터 영역에 테이블릭스 본문 영역만 있고 그룹 머리글은 없는 경우 행과 열은 테이블릭스 멤버입니다.  
+ 새 테이블 또는 행렬 마법사나 새 차트 마법사를 사용하거나, 그룹화 창에 필드를 추가하거나, 상황에 맞는 메뉴를 사용하여 그룹을 추가하면 행 및 열 그룹 머리글이 자동으로 만들어집니다. 테이블릭스 데이터 영역에 테이블릭스 본문 영역만 있고 그룹 머리글은 없는 경우 행과 열은 테이블릭스 멤버입니다.  
   
  정적 멤버의 경우에는 상단 인접 행 또는 측면 인접 열을 여러 페이지에 표시할 수 있습니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48904983"
   
 3.  스크롤할 때 계속 표시할 정적 멤버(행 또는 열)에 해당하는 정적 멤버를 클릭합니다. 속성 창에 **테이블릭스 멤버** 속성이 표시됩니다.  
   
-     속성 창이 표시되지 않는 경우 보고서 작성기 창의 맨 위에서 **보기** 탭을 클릭한 다음 **속성**을 클릭합니다.  
+     속성 창이 표시되지 않는 경우 보고서 작성기 창의 맨 위에서 **보기** 탭을 클릭한 다음, **속성**을 클릭합니다.  
   
 4.  속성 창에서 **RepeatOnNewPage** 를 True로 설정합니다.  
   

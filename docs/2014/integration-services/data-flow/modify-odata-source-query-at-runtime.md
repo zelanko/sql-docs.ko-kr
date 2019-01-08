@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ea891738a0a22353e67ff72b87d642bd04749270
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0700d2893028efea5486221906636d6c749b66bd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093903"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804853"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>런타임에 OData 원본 쿼리 수정
   데이터 흐름 태스크의 **[OData Source].[Query]** 속성에 식을 추가하여 런타임에 OData 원본 쿼리를 수정할 수 있습니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "48093903"
 ## <a name="exposing-the-query-as-a-parameter"></a>쿼리를 매개 변수로 노출  
  다음 절차에는 OData 원본 구성 요소에서 패키지에 대한 매개 변수로 사용하는 쿼리를 노출하는 단계가 있습니다.  
   
-1.  **데이터 흐름 태스크** 를 마우스 오른쪽 단추로 클릭하고 **매개 변수화…** 옵션을 선택합니다. 옵션에 로컬 컴퓨터 이름을 지정한 경우  
+1.  **데이터 흐름 태스크**를 마우스 오른쪽 단추로 클릭하고 **매개 변수화...** 옵션을 선택합니다.  
   
 2.  **매개 변수화** 대화 상자에서 **속성**에 대한 **[\<OData 원본 구성 요소 이름>].[Query]** 를 선택합니다.  
   
@@ -53,11 +52,11 @@ ms.locfileid: "48093903"
   
 2.  **속성** 창에서 **Expressions** 속성을 강조 표시합니다.  
   
-3.  …(줄임표) 단추를 클릭하여 **속성 식 편집기**를 엽니다.  
+3.  클릭는 하는 중... (줄임표) 단추를 표시 합니다 **속성 식 편집기**합니다.  
   
 4.  **[OData Source].[Query]** 속성을 선택합니다.  
   
-5.  …(줄임표) 단추를 **식**에 대해 클릭합니다.  
+5.  클릭는 하는 중... (줄임표) 단추 **식**합니다.  
   
 6.  **식**을 입력합니다.  
   

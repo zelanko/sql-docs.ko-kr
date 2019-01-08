@@ -23,19 +23,19 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0faae3cec2d71c28056a384b196a9b46929d5d6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb5b2558a6dca79d4794b5d12c8e63fd6f002312
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792111"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527503"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_튜닝\_권장 사항 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   튜닝 권장 구성에 대 한 자세한 정보를 반환 합니다.  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 동적 관리 뷰는 데이터베이스 포함에 영향을 줄 수 있는 정보 또는 사용자가 액세스할 수 있는 다른 데이터베이스 정보를 노출할 수 없습니다. 이러한 정보 노출을 방지하기 위해 연결된 테넌트에 속하지 않는 데이터가 포함된 행은 모두 필터링됩니다.
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 동적 관리 뷰는 데이터베이스 포함에 영향을 줄 수 있는 정보 또는 사용자가 액세스할 수 있는 다른 데이터베이스 정보를 노출할 수 없습니다. 이 정보 공개를 방지 하려면 연결 된 테 넌 트에 속하지 않는 데이터가 포함 된 모든 행 필터링 됩니다.
 
 | **열 이름** | **Data type** | **설명** |
 | --- | --- | --- |
@@ -72,7 +72,7 @@ ms.locfileid: "47792111"
 
 JSON 문서에 `state` 열 현재 상태의 권장 된 이유를 설명 하는 이유를 포함 합니다. 이유 필드의 값 수 있습니다. 
 
-| 원인 | Description |
+| 이유 | Description |
 |--------|-------------|
 | `SchemaChanged` | 권장 사항에는 참조 테이블의 스키마가 변경 하기 때문에 만료 되었습니다. |
 | `StatisticsChanged`| 권장 사항 참조 테이블에서 통계 변경으로 인해 만료 되었습니다. |
@@ -80,7 +80,7 @@ JSON 문서에 `state` 열 현재 상태의 권장 된 이유를 설명 하는 �
 | `AutomaticTuningOptionDisabled` | `FORCE_LAST_GOOD_PLAN` 옵션 확인 프로세스 중 사용자가 비활성화 됩니다. 사용 하도록 설정 `FORCE_LAST_GOOD_PLAN` 를 사용 하 여 옵션 [ALTER 데이터베이스 설정 AUTOMATIC_TUNING &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) 문이나 강제 계획에 스크립트를 사용 하 여 수동으로 `[details]` 열입니다. |
 | `UnsupportedStatementType` | 쿼리 계획을 강제 적용할 수 없습니다. 지원 되지 않는 쿼리의 예로 커서 및 `INSERT BULK` 문입니다. |
 | `LastGoodPlanForced` | 권장 사항은 성공적으로 적용 됩니다. |
-| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 잠재적인 성능 저하를 식별 하지만 `FORCE_LAST_GOOD_PLAN` 옵션은 참조 하세요 [ALTER DATABASE 설정 AUTOMATIC_TUNING &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)합니다. 권장 사항을 수동으로 적용 하거나 사용 `FORCE_LAST_GOOD_PLAN` 옵션입니다. |
+| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 잠재적인 성능 저하를 식별 하지만 `FORCE_LAST_GOOD_PLAN` 옵션은-참조 [ALTER DATABASE 설정 AUTOMATIC_TUNING &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)합니다. 권장 사항을 수동으로 적용 하거나 사용 `FORCE_LAST_GOOD_PLAN` 옵션입니다. |
 | `VerificationAborted`| 확인 프로세스는 쿼리 저장소 정리를 다시 시작으로 인해 중단 됩니다. |
 | `VerificationForcedQueryRecompile`| 쿼리는 성능이 크게 개선 되지 않은 있기 때문에 다시 컴파일됩니다. |
 | `PlanForcedByUser`| 사용자는 수동으로 사용 하 여 계획 강제 [sp_query_store_force_plan &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) 프로시저입니다. |
@@ -110,7 +110,7 @@ WHERE JSON_VALUE(state, '$.currentValue') = 'Active'
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
 온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
 
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [자동 조정](../../relational-databases/automatic-tuning/automatic-tuning.md)   
  [sys.database_automatic_tuning_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)   
  [sys.database_query_store_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   

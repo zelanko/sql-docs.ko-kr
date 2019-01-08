@@ -15,12 +15,12 @@ ms.assetid: e72b1dc7-8cda-4ee6-abb5-d438370f04df
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b9a41fb224d5042c1cc826785ead32376727444
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2e926047d5423d31307dc344bca5717ca7a77dd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105583"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535529"
 ---
 # <a name="transfer-jobs-task-editor-jobs-page"></a>작업 전송 태스크 편집기(작업 페이지)
   **작업 전송 태스크 편집기** 대화 상자의 **작업** 페이지를 사용하여 하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 작업을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 한 인스턴스에서 다른 인스턴스로 복사하기 위한 속성을 지정할 수 있습니다. 작업 전송 태스크에 대한 자세한 내용은 [Transfer Jobs Task](control-flow/transfer-jobs-task.md)을 참조하십시오.  
@@ -46,7 +46,7 @@ ms.locfileid: "48105583"
 |**False**|지정한 작업만 복사합니다.|  
   
  **JobsList**  
- 복사할 작업을 선택하려면 찾아보기 단추 **(…)** 를 클릭합니다. 하나 이상의 작업을 선택해야 합니다.  
+ 복사할 작업을 선택하려면 찾아보기 단추 **(...)** 를 클릭합니다. 하나 이상의 작업을 선택해야 합니다.  
   
 > [!NOTE]  
 >  복사할 작업을 선택하기 전에 **SourceConnection** 을 지정합니다.  

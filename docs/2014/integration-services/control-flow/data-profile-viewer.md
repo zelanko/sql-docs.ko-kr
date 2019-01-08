@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
@@ -14,12 +13,12 @@ ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 009ac57e854323c1340d600063dd1aee7fda2875
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: b05c023e8b0c54f0037af7829421f8f69f2595d4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905753"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805005"
 ---
 # <a name="data-profile-viewer"></a>데이터 프로필 뷰어(Data Profile Viewer)
   데이터 프로파일링 프로세스의 다음 단계는 데이터 프로필을 보고 분석하는 것입니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 내에서 데이터 프로파일링 태스크를 실행하고 데이터 프로필을 계산한 후에 이러한 프로필을 볼 수 있습니다. 데이터 프로파일링 태스크를 설정하고 실행하는 방법은 [데이터 프로파일링 태스크 설정](data-profiling-task.md)을 참조하세요.  
@@ -61,7 +60,7 @@ ms.locfileid: "48905753"
 > [!IMPORTANT]  
 >  데이터 프로필 뷰어에서 사용할 수 있는 드릴다운 기능은 원래 데이터 원본에 라이브 쿼리를 보냅니다. 이러한 쿼리를 사용하면 서버 성능이 저하될 수 있습니다.  
 >   
->  최근에 만들어지지 않은 출력 파일에서 드릴 다운 하면 드릴 다운 쿼리에서 원래 출력이 계산 하는 것 보다는 행의 다른 집합을 반환할 수 있습니다.  
+>  최근에 만들어지지 않은 출력 파일에서 드릴다운하는 경우 드릴다운 쿼리에서 원래 출력이 계산된 행 집합과 다른 행 집합을 반환할 수도 있습니다.  
   
  데이터 프로필 뷰어의 사용자 인터페이스에 대한 자세한 내용은 [Data Profile Viewer F1 Help](../data-profile-viewer-f1-help.md)을 참조하십시오.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 83399fd8-cc25-4d3c-8985-7a824ef08e08
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2174684879a71372e19d9e7ac3390ee7c0831e38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: f9cc17fb916bad5879c4f55737b72f9a1013de51
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157553"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810285"
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute 이벤트 클래스
   **CursorExecute** 이벤트 클래스는 API(응용 프로그래밍 인터페이스) 커서에서 발생하는 커서 실행 이벤트를 설명합니다. 커서 실행 이벤트는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 커서 준비 이벤트로 만들어진 실행 계획의 커서를 만들고 채울 때 발생합니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 396aa22a-4723-47f5-ae72-7de99d92dd6f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24e6ee2cfdf337090d7080a5b5de866a3933f6fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: abffd5a1fc77f6cf4935cbf5172210445dbd7006
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175323"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816555"
 ---
 # <a name="spcachehit-event-class"></a>SP:CacheHit 이벤트 클래스
   SP:CacheHit 이벤트 클래스는 저장 프로시저가 계획 캐시에 있음을 나타냅니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "48175323"
 |DatabaseName|`nvarchar`|저장 프로시저가 실행되는 데이터베이스의 이름입니다.|35|사용자 계정 컨트롤|  
 |EventClass|`int`|이벤트 유형 = 38|27|아니요|  
 |EventSequence|`int`|요청 내의 지정된 이벤트 시퀀스입니다.|51|아니요|  
-|EventSubClass|`int`|이벤트 하위 클래스의 형식입니다.<br /><br /> 1=Execution Context Hit: 계획 캐시에 사용 가능한 실행 계획이 있습니다.<br /><br /> 2=Compplan Hit: 계획 캐시에 컴파일된 계획이 있습니다.|21|사용자 계정 컨트롤|  
+|EventSubClass|`int`|이벤트 하위 클래스의 형식입니다.<br /><br /> 1 = 실행 컨텍스트 키를 누릅니다. 계획 캐시에 사용 가능한 실행 계획이 있습니다.<br /><br /> 2 2=compplan hit: 계획 캐시에 컴파일된 계획이 있습니다.|21|사용자 계정 컨트롤|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|사용자 계정 컨트롤|  
 |HostName|`nvarchar`|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공할 경우 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|사용자 계정 컨트롤|  
 |IsSystem|`int`|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다. 1 = 시스템, 0 = 사용자|60|사용자 계정 컨트롤|  

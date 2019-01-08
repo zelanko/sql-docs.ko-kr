@@ -20,16 +20,16 @@ ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b6bae692efdb1d89642eea52e499b0fb2800377
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 0ec40b97f8953f114081292ac82069fd4a81692a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169346"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208647"
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx 함수
 **규칙**  
- ODBC 3.0 버전에 도입 되었습니다.  
+ 도입 된 버전: ODBC 3.0  
   
  **요약**  
  **SQLInstallDriverEx** Odbcinst.ini 항목 시스템 정보를 드라이버에 대 한 정보를 추가 하 고 드라이버를 증가 시킵니다 *UsageCount* 1만 합니다. 그러나는 버전의 드라이버를 이미 있지만 *UsageCount* 존재 하지 않는 드라이버에 대 한 값 새 *UsageCount* 값이 2로 설정 합니다.  

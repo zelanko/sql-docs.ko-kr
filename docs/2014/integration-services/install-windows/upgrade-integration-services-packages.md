@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, migrating
@@ -14,12 +13,12 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d22744898dcc45ac213436afcdf25359ba24adec
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
-ms.translationtype: HT
+ms.openlocfilehash: a1ff35cfc7d5e8611c06981b2e3a9fe9dd6e82fd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072207"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351460"
 ---
 # <a name="upgrade-integration-services-packages"></a>Integration Services 패키지 업그레이드
   인스턴스를 업그레이드 하는 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 나 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 의 현재 릴리스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 기존 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 패키지는 현재 릴리스는 패키지 형식으로 자동 업그레이드 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 사용합니다. 직접 업그레이드 방법을 선택하고 수동으로 패키지를 업그레이드해야 합니다.  
@@ -47,7 +46,7 @@ ms.locfileid: "49072207"
   
 -   패키지를 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 또는 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]로 마이그레이션한 다음 패키지를 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]로 업그레이드합니다.  
   
-     [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 및 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]로의 DTS 패키지 마이그레이션에 대한 자세한 내용은 [데이터 변환 서비스 패키지 마이그레이션](http://go.microsoft.com/fwlink/?LinkId=251870)(2005) 및 [데이터 변환 서비스 패키지 마이그레이션](http://go.microsoft.com/fwlink/?LinkId=251871)(2008)을 참조하세요.  
+     [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 및 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]로의 DTS 패키지 마이그레이션에 대한 자세한 내용은 [데이터 변환 서비스 패키지 마이그레이션](https://go.microsoft.com/fwlink/?LinkId=251870)(2005) 및 [데이터 변환 서비스 패키지 마이그레이션](https://go.microsoft.com/fwlink/?LinkId=251871)(2008)을 참조하세요.  
   
 -   [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]를 사용하여 DTS 패키지를 다시 만듭니다.  
   
@@ -84,7 +83,7 @@ ms.locfileid: "49072207"
   
  사용 하도록 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 포함 된 패키지를 디자인 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 하 고 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 에 있는 devenv.exe.config 파일을 수정 해야 하는 사용자 지정 구성 요소  *\<드라이브 >*: files\ Microsoft Visual Studio 10.0\Common7\IDE 합니다.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]용 런타임을 사용하여 빌드된 사용자 지정 응용 프로그램으로 이러한 패키지를 사용하려면 실행 파일에 대한 *.exe.config 파일의 구성 섹션에 리디렉션 파일을 포함하십시오. 규칙은 런타임 어셈블리를 버전11.0.0.0([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])으로 리디렉션합니다. 어셈블리 버전 리디렉션에 대한 자세한 내용은 [\<runtime>용 \<assemblyBinding>요소](http://msdn.microsoft.com/library/twy1dw1e.aspx)를 참조하세요.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]용 런타임을 사용하여 빌드된 사용자 지정 응용 프로그램으로 이러한 패키지를 사용하려면 실행 파일에 대한 *.exe.config 파일의 구성 섹션에 리디렉션 파일을 포함하십시오. 규칙은 런타임 어셈블리를 버전11.0.0.0([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])으로 리디렉션합니다. 어셈블리 버전 리디렉션에 대한 자세한 내용은 [\<runtime>용 \<assemblyBinding>요소](https://msdn.microsoft.com/library/twy1dw1e.aspx)를 참조하세요.  
   
 ### <a name="locating-the-assemblies"></a>어셈블리 찾기  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 어셈블리는 .NET 4.0으로 업그레이드되었습니다. *\<드라이브>*:\Windows\Microsoft.NET\assembly에는 .NET 4에 대한 별도의 전역 어셈블리 캐시가 있습니다. 이 경로, 주로 GAC_MSIL 폴더에서 모든 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 어셈블리를 찾을 수 있습니다.  
@@ -108,10 +107,10 @@ ms.locfileid: "49072207"
   
 ## <a name="external-resources"></a>외부 리소스  
   
--   msdn.microsoft.com의 기술 문서, [SQL Server 2012로 SSIS를 업그레이드하기 위한 5가지 팁](http://go.microsoft.com/fwlink/?LinkId=235321)  
+-   msdn.microsoft.com의 기술 문서, [SQL Server 2012로 SSIS를 업그레이드하기 위한 5가지 팁](https://go.microsoft.com/fwlink/?LinkId=235321)  
   
--   blogs.msdn.com의 블로그 항목 - [기존 사용자 지정 SSIS 확장 프로그램 및 애플리케이션을 Denali에서 사용되도록 설정](http://go.microsoft.com/fwlink/?LinkId=238157)  
+-   blogs.msdn.com의 블로그 항목 - [기존 사용자 지정 SSIS 확장 프로그램 및 애플리케이션을 Denali에서 사용되도록 설정](https://go.microsoft.com/fwlink/?LinkId=238157)  
   
--   channel9.msdn.com의 웹 캐스트 - [SSIS 패키지를 SQL Server 2012로 업그레이드](http://go.microsoft.com/fwlink/?LinkId=258674)  
+-   channel9.msdn.com의 웹 캐스트 - [SSIS 패키지를 SQL Server 2012로 업그레이드](https://go.microsoft.com/fwlink/?LinkId=258674)  
   
   

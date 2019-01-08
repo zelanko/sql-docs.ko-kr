@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cf1b17b4-47d5-4eba-83f9-fb0555806867
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 168e98315469da3daba8d228b69fe0ee10794e4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 263bc590c43899c3b9531549f4e73eefbde81c9c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097154"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792975"
 ---
 # <a name="model-deployment-options-master-data-services"></a>모델 배포 옵션(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델 패키지 파일을 배포할 때 새 모델이나 복제된 모델을 배포할지 또는 이전에 복제된 모델을 업데이트할지 여부를 결정해야 합니다.  
@@ -40,8 +39,8 @@ ms.locfileid: "48097154"
 |Update|기존 모델을 패키지의 모델로 업데이트합니다. 두 모델의 식별자가 동일해야 합니다. 이 옵션은 이전에 복제한 모델을 업데이트하는 데 사용합니다.|이전에 복제한 모델만 업데이트할 수 있습니다. 이름과 ID가 일치해야 합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [MDSModelDeploy를 사용 하 여 모델 배포 패키지 배포](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)   
+ [MDSModelDeploy를 사용하여 모델 배포 패키지 배포](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)   
  [마법사를 사용하여 모델 배포 패키지 배포](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)   
- [모델 배포 &#40;Master Data Services&#41;](deploying-models-master-data-services.md)  
+ [모델 배포&#40;Master Data Services&#41;](deploying-models-master-data-services.md)  
   
   

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 4bd04ee62af21255f40363de602c6461aeb350a6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3686ab7df82a3241ee97948ab2ffa9a0b1d41df3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677921"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215459"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Linux에서 SQL Server 문제 해결
 
@@ -24,7 +24,7 @@ ms.locfileid: "51677921"
 이 문서에는 Docker 컨테이너 또는 Linux에서 실행 하는 Microsoft SQL Server의 문제를 해결 하는 방법을 설명 합니다. Linux의 SQL Server의 문제를 해결할 때의 알려진된 제한 사항이 지원 되는 기능을 검토 해야 합니다 [Linux 릴리스 노트의 SQL Server](sql-server-linux-release-notes.md)합니다.
 
 > [!TIP]
-> 자주 묻는 질문에 답변에 대 한 참조를 [의 SQL Server Linux FAQ](sql-server-linux-faq.md)합니다.
+> 자주 묻는 질문에 대한 답변은, [SQL Server on Linux FAQ](sql-server-linux-faq.md)를 참조하세요.
 
 ## <a id="connection"></a> 연결 오류 문제 해결
 Linux SQL Server에 연결 하는 데 문제가 있는 경우 확인할 몇 가지 사항입니다. 
@@ -105,7 +105,7 @@ Linux 및 Docker 설치에서 /var/opt/mssql/log/errorlog 파일에 SQL Server �
 원한다 면 변환할 수도 있습니다 파일 읽기를 사용 하 여 u t F-8로 '자세한' 또는 '작은' 다음 명령을 사용 하 여:
    
    ```bash
-   sudo iconv –f UTF-16LE –t UTF-8 <errorlog> -o <output errorlog file>
+   sudo iconv -f UTF-16LE -t UTF-8 <errorlog> -o <output errorlog file>
    ```
 ## <a name="extended-events"></a>확장 이벤트
 
@@ -118,9 +118,9 @@ Linux에서 로그 디렉터리에 덤프를 찾습니다. Linux 코어 덤프�
 코어 덤프에 대 한 
    ```bash
    sudo ls /var/opt/mssql/log | grep .tar.gz2 
-   ```
+   ```
 
-For SQL dumps 
+SQL 덤프에 대 한 
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
    ```
@@ -205,7 +205,7 @@ SQLCMD 사용 하 여 단일 사용자 모드로 SQL Server를 시작 합니다.
 
    문서의 문제 해결 섹션을 참조 하세요 [Linux의 SQL Server에 연결](#connection)합니다.
 
-2. 오류: 호스트 이름이 15 자 여야 합니다 또는 작습니다.
+2. 오류: 호스트 이름이 15 자 사이 여야 합니다.이 있습니다.
 
    SQL Server Debian 패키지를 설치 하려는 컴퓨터의 이름이 15 자를 초과할 때마다 발생 하는 알려진 문제입니다. 컴퓨터의 이름을 변경 이외의 대안이 없습니다 않습니다. 이 작업을 수행 하는 하나의 방법은 호스트 파일을 편집 하 고 컴퓨터를 다시 부팅 하 여 것입니다. 다음 [웹 사이트 가이드](https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) 이에 대해 자세히 설명 합니다.
 

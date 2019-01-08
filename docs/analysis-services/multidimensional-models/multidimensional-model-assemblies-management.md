@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: df015e99df80915c68fa8f45e9f31ec475e22bc2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: 5b7b04f074dcd11eec022a689f865454681d2ae8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025670"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215792"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>다차원 모델 어셈블리 관리
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다양 한 계층의 멤버를 통과 하는 표준 통계 계산의 모든 정보를 달성 하도록 디자인 된 MDX (Multidimensional Expressions) 및 확장 DMX (Data Mining) 언어와 함께 사용할 내장 함수를 제공 합니다. 그러나 복잡하고 강력한 다른 제품에서도 그렇듯이 제품의 기능을 더 확장할 필요성은 언제나 있기 마련입니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 MDX(Multidimensional Expressions) 및 DMX(Data Mining Extensions) 언어에 사용할 수 있는 다양한 내장 함수를 제공합니다. 이러한 함수를 사용하여 표준 통계 계산을 비롯하여 계층에서의 멤버 이동에 이르는 모든 작업을 수행할 수 있습니다. 그러나 복잡하고 강력한 다른 제품에서도 그렇듯이 제품의 기능을 더 확장할 필요성은 언제나 있기 마련입니다.  
   
  따라서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 또는 데이터베이스에 어셈블리를 추가할 수 있습니다. 어셈블리를 사용하면 Microsoft Visual Basic .NET 또는 Microsoft Visual C#과 같은 CLR(공용 언어 런타임) 언어를 사용하여 사용자 정의 외부 함수를 만들 수 있습니다. 또한 Microsoft Visual Basic 또는 Microsoft Visual C++와 같은 COM(구성 요소 개체 모델) 자동화 언어도 사용할 수 있습니다.  
   
@@ -71,9 +71,9 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
 ## <a name="security"></a>보안  
  어셈블리 보안은 코드 액세스 보안 모델인 .NET Framework 보안 모델에 기반을 둡니다. .NET Framework는 런타임에서 완전히 신뢰할 수 있는 코드와 부분적으로 신뢰할 수 있는 코드를 모두 호스팅할 수 있다고 가정하는 코드 액세스 보안 메커니즘을 지원합니다. 일반적으로 .NET Framework 코드 액세스 보안을 통해 보호되는 리소스는 액세스를 허용하기 전에 먼저 해당 사용 권한을 요구하는 관리 코드에 의해 래핑됩니다. 사용 권한 요청은 호출 스택의 어셈블리 수준에 있는 모든 호출자가 해당 리소스 사용 권한을 가지고 있는 경우에만 충족됩니다.  
   
- 어셈블리의 경우 **PermissionSet** 개체에 **Assembly** 속성이 설정된 상태로 실행 권한이 전달됩니다. 관리 코드가 받게 되는 사용 권한은 적용된 보안 정책에 따라 결정됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 호스팅하지 않는 환경에는 엔터프라이즈, 컴퓨터 및 사용자라는 3가지 수준의 보안 정책이 이미 적용되어 있습니다. 코드가 받게 되는 유효한 사용 권한 목록은 이 3가지 수준에서 확보하는 사용 권한의 공통 사항에 따라 결정됩니다.  
+ 어셈블리의 경우 **PermissionSet** 개체에 **Assembly** 속성이 설정된 상태로 실행 권한이 전달됩니다. 관리 코드가 받게 되는 사용 권한은 적용된 보안 정책에 따라 결정됩니다. 세 가지 수준의 정책 적용에 비-되어 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 호스 티 드 환경: enterprise, 컴퓨터 및 사용자. 코드가 받게 되는 유효한 사용 권한 목록은 이 3가지 수준에서 확보하는 사용 권한의 공통 사항에 따라 결정됩니다.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 CLR을 호스팅하면서 호스트 수준 보안 정책을 CLR에 제공합니다. 이 정책은 항상 적용되는 위의 3가지 정책 수준 아래에 있는 추가 정책 수준입니다. 이 정책은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 만든 모든 애플리케이션 도메인에 대해 설정됩니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 CLR을 호스트하면서 호스트 수준 보안 정책을 CLR에 제공합니다. 이 정책은 항상 적용되는 위의 3가지 정책 수준 아래에 있는 추가 정책 수준입니다. 이 정책은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 만든 모든 애플리케이션 도메인에 대해 설정됩니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 호스트 수준 정책은 시스템 어셈블리에 대한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 고정 정책과 사용자 어셈블리에 대한 사용자 지정 정책을 조합한 것입니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 호스트 정책에서 사용자 지정 부분은 어셈블리 소유자가 각 어셈블리에 대한 3가지 권한 집합 중 어떤 것을 지정하는지에 따라 달라집니다.  
   
@@ -101,7 +101,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  애플리케이션 도메인 경계와 각 도메인에 속하는 어셈블리는 구현에 따라 달라지므로 동일한 애플리케이션 도메인 내에서 어셈블리를 찾는 방법에만 의존해서는 안 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [저장된 프로시저에 대 한 보안을 설정합니다.](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
  [저장된 프로시저 정의](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   

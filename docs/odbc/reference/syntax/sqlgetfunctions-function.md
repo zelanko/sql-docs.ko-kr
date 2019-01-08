@@ -20,16 +20,16 @@ ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98fb29265c17970fbcef0f21778d7a9130e52771
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ac3d24b1213096be20658fb48dbfe9a6d39df8f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644521"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206972"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLGetFunctions** 드라이버 관련 ODBC 함수를 지원 하는지 여부에 대 한 정보를 반환 합니다. 이 함수는 구현 드라이버 관리자입니다. 또한 드라이버에서 구현할 수 있습니다. 드라이버를 구현 하는 경우 **SQLGetFunctions**, 드라이버 관리자가 드라이버에서 함수를 호출 합니다. 그렇지 않으면 함수 자체를 실행합니다.  
@@ -83,7 +83,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="comments"></a>주석  
  **SQLGetFunctions** 는 항상 반환 **SQLGetFunctions**합니다 **SQLDataSources**, 및 **SQLDrivers** 지원 됩니다. 이러한 함수 드라이버 관리자의 구현 되므로이 수행 합니다. 즉 드라이버 관리자는 Unicode 함수가 존재 하 고 ANSI 함수가 존재 하는 경우 유니코드 함수는 해당 ANSI 함수에 매핑하는 ANSI 함수를 해당 유니코드 함수에 매핑됩니다. 응용 프로그램을 사용 하는 방법에 대 한 자세한 **SQLGetFunctions**를 참조 하십시오 [인터페이스 적합성 수준](../../../odbc/reference/develop-app/interface-conformance-levels.md)합니다.  
   
- 다음은 유효한 값 목록을 *FunctionId* ISO 92 표준 – 준수 수준을를 준수 하는 함수에 대 한 합니다.  
+ 다음은 유효한 값 목록을 *FunctionId* ISO 92 표준을 준수 수준을를 준수 하는 함수에 대 한 합니다.  
   
 |FunctionId 값|FunctionId 값|  
 |----------|----------|  
@@ -109,14 +109,14 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLGETCURSORNAME|SQL_API_SQLSETSTMTATTR|  
 |SQL_API_SQLGETDATA| |  
   
- 다음은 유효한 값 목록을 *FunctionId* Open Group 표준 – 준수 수준을 준수 하는 함수에 대 한 합니다.  
+ 다음은 유효한 값 목록을 *FunctionId* Open Group 표준 준수 수준을 준수 하는 함수에 대 한 합니다.  
   
 |FunctionId 값|FunctionId 값|  
 |-|-|  
 |SQL_API_SQLCOLUMNS|SQL_API_SQLSTATISTICS|  
 |SQL_API_SQLSPECIALCOLUMNS|SQL_API_SQLTABLES|  
   
- 다음은 유효한 값 목록을 *FunctionId* ODBC 표준 – 준수 수준을 준수 하는 함수에 대 한 합니다.  
+ 다음은 유효한 값 목록을 *FunctionId* ODBC 표준 준수 수준을 준수 하는 함수에 대 한 합니다.  
   
 |FunctionId 값|FunctionId 값|  
 |-|-|  
@@ -142,7 +142,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS 매크로  
  SQL_FUNC_EXISTS (*SupportedPtr*를 *FunctionID*) 매크로 ODBC 3의 지원을 확인 하는 데 사용 됩니다 *.x* 함수나 이전 후 **SQLGetFunctions**  가 사용 하 여 호출 된를 *FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS의 인수입니다. SQL_FUNC_EXISTS 사용 하 여 호출 하는 응용 프로그램을 *SupportedPtr* 인수와 함께 사용 합니다 *SupportedPtr* 전달 *SQLGetFunctions*와  *FunctionID* 인수와 함께 사용 합니다 **#define** 함수에 대 한 합니다. SQL_FUNC_EXISTS는 그렇지 않은 경우 함수는 지원 되는 경우에 SQL_TRUE 및 SQL_FALSE 반환 합니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC 2를 사용 하 여 작업 하는 경우 *.x* 드라이버는 ODBC 3 *.x* 드라이버 관리자에 대 한 SQL_TRUE를 반환 합니다 **SQLAllocHandle** 고 **SQLFreeHandle**때문에 **SQLAllocHandle** 매핑되 **SQLAllocEnv**합니다 **SQLAllocConnect**, 또는 **SQLAllocStmt**, 및 때문에 **SQLFreeHandle** 매핑됩니다 **SQLFreeEnv**를 **SQLFreeConnect**, 또는 **SQLFreeStmt**합니다. **그러나 SQLAllocHandle** 나 **SQLFreeHandle** 사용 하 여를 *HandleType* SQL_HANDLE_DESC 인수의 지원 되지 않는 SQL_TRUE 있기 때문에 함수에 대해 반환 되는 경우에 없음 ODBC 2 *.x* 매핑할이 경우에 함수입니다.  
   
 ## <a name="code-example"></a>코드 예  

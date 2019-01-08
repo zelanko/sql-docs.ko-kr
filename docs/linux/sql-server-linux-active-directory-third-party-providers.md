@@ -1,5 +1,6 @@
 ---
-title: 타사 Active Directory 공급자를 사용 하 여 Linux의 SQL Server를 사용 하 여 | Microsoft Docs
+title: Linux의 SQL Server를 사용 하 여 타사 Active Directory 공급자를 사용 합니다.
+titleSuffix: SQL Server
 description: 이 자습서는 타사 공급자를 사용 하 여 Active Directory 인증에 대 한 구성 단계를 제공합니다.
 author: dylan-MSFT
 ms.date: 07/25/2018
@@ -7,16 +8,16 @@ ms.author: dygray
 manager: mikehab
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AD authentication
-ms.openlocfilehash: 0ffe146de3a842f9c273b4dbba2a9fe4d9ff7ff5
-ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
+ms.openlocfilehash: de28696efd16a2be61864a810b3fd713b1066258
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50757998"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160571"
 ---
 # <a name="use-third-party-active-directory-providers-with-sql-server-on-linux"></a>Linux의 SQL Server를 사용 하 여 타사 Active Directory 공급자를 사용 합니다.
 
@@ -24,7 +25,7 @@ ms.locfileid: "50757998"
 
 이 문서를 구성 하는 방법에 설명 된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 타사 Active Directory 공급자를 사용 하는 경우 Active Directory 인증을 사용 하 여 Linux 호스트 컴퓨터에서. 예로 [PowerBroker Identity Services (PBI)](https://www.beyondtrust.com/)를 [하나의 Id](https://www.oneidentity.com/products/authentication-services/), 및 [Centrify](https://www.centrify.com/)합니다. 이 가이드는 Active Directory 구성을 확인 하는 단계를 포함 합니다. 컴퓨터를 도메인에 조인 하는 방법을 지시에 없습니다. 조인에 관한 자세한 지침을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] realmd 및 SSSD 사용 하 여 도메인에 호스트를 참조 하십시오 [Linux의 SQL Server를 사용 하 여 사용 하 여 Active Directory 인증](sql-server-linux-active-directory-authentication.md).
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 Active Directory 인증을 구성 하기 전에 Active Directory 도메인 컨트롤러를, Windows, 네트워크에서 설정 해야 합니다. 그런 다음 조인에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Active Directory 도메인에 Linux 호스트에서. 사용할 수 있습니다 [PBI](https://www.beyondtrust.com/)하십시오 [VAS](https://www.oneidentity.com/products/authentication-services/), 또는 [Centrify](https://www.centrify.com/)합니다.
 

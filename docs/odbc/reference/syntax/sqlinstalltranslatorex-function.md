@@ -20,16 +20,16 @@ ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3506e1421ef47c4bb74537f81b7007348895555b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 276b8627588bcd3472c12564db1e8c6e6af1ef2b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742381"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212532"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>SQLInstallTranslatorEx 함수
 **규칙**  
- ODBC 3.0 버전에 도입 되었습니다.  
+ 도입 된 버전: ODBC 3.0  
   
  **요약**  
  **SQLInstallTranslatorEx** 변환기에 대 한 정보 시스템 정보 (HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST Odbcinst.ini 섹션 추가. INI\ODBC 변환기 레지스트리 키)입니다.  

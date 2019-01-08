@@ -18,12 +18,12 @@ ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce9e002b3a01b3cb6e13de5176bd0826870796f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0f1add0f2d249922f00fc1b16d5da12bb903faf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070935"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524995"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>쿼리 매개 변수를 SQL 실행 태스크의 변수에 매핑
   이 항목에서는 SQL 실행 태스크에서 매개 변수가 있는 SQL 문을 사용하는 방법과 SQL 문의 변수와 매개 변수 간 매핑을 만드는 방법에 대해 설명합니다.  
@@ -82,10 +82,10 @@ ms.locfileid: "48070935"
   
     |연결 형식|매개 변수 이름|  
     |---------------------|--------------------|  
-    |ADO|Param1, Param2, …|  
+    |ADO|Param1, Param2, ...|  
     |ADO.NET 및 SQLMOBILE|@\<매개 변수 이름>|  
-    |ODBC|1, 2, 3, …|  
-    |EXCEL 및 OLE DB|0, 1, 2, 3, …|  
+    |ODBC|1, 2, 3, ...|  
+    |EXCEL 및 OLE DB|0, 1, 2, 3, ...|  
   
 10. **변수 이름** 목록에서 변수를 선택합니다. 자세한 내용은 [패키지에서 사용자 정의 변수의 범위 추가, 삭제, 변경](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)을 참조하세요.  
   
@@ -106,6 +106,6 @@ ms.locfileid: "48070935"
 ## <a name="see-also"></a>관련 항목  
  [SQL 실행 태스크](control-flow/execute-sql-task.md)   
  [매개 변수 및 반환 코드는 SQL 실행 태스크](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
- [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)  
+ [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)  
   
   

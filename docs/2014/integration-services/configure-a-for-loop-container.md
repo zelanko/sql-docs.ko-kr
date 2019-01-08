@@ -14,17 +14,17 @@ ms.assetid: b9cd7ea7-b198-4a35-8b16-6acf09611ca5
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2adcb3e79e3733b5fb8151bfa7f65e7bebb4d910
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a88ca178770bb3326202b603318be30119b2febe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126169"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350840"
 ---
 # <a name="configure-a-for-loop-container"></a>For 루프 컨테이너 구성
   이 절차에서는 **For 루프 편집기** 대화 상자를 사용하여 For 루프 컨테이너를 구성하는 방법에 대해 설명합니다.  
   
- For Loop 컨테이너의 예는 bimonkey.com의 [실패하지 않는 SSIS 루프](http://go.microsoft.com/fwlink/?LinkId=240295) 를 참조하십시오.  
+ For Loop 컨테이너의 예는 bimonkey.com의 [실패하지 않는 SSIS 루프](https://go.microsoft.com/fwlink/?LinkId=240295) 를 참조하십시오.  
   
 ### <a name="to-configure-the-for-loop-container"></a>For 루프 컨테이너를 구성하려면  
   

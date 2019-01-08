@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: d1e1254f8a3b3cd994c31f252ca61a0384dc9bdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e951e87abf7e88502597b6a3caf6f7ca4e34e60b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692141"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205752"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>만들고 Linux의 SQL Server에 대 한 가용성 그룹 구성
 
@@ -71,7 +71,7 @@ sudo systemctl restart mssql-server
 
 가용성 그룹을 통신에 대 한 TCP 끝점을 사용합니다. Linux에서 AG에 대 한 끝점은 경우에 지원 인증서 인증에 사용 됩니다. 즉, 동일한 AG에 참여 하는 복제본 수 있는 다른 모든 인스턴스에 대 한 인스턴스에서 인증서를 복원할 수 해야 합니다. 인증서 과정이 구성 전용 복제본에 대해서도 필요 합니다. 
 
-끝점을 만들고 인증서를 복원만 TRANSACT-SQL을 통해 수행할 수 있습니다. 비-사용할 수 있습니다[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-인증서도 생성 합니다. 프로세스를 관리 하 고 만료 되는 모든 인증서를 교체 해야 합니다.
+끝점을 만들고 인증서를 복원만 TRANSACT-SQL을 통해 수행할 수 있습니다. 비-사용할 수 있습니다 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-인증서도 생성 합니다. 프로세스를 관리 하 고 만료 되는 모든 인증서를 교체 해야 합니다.
 
 > [!IMPORTANT]
 > 사용 하려는 경우는 [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] 경우에 AG를 만들기 위해 마법사를 만들고 Linux의 TRANSACT-SQL을 사용 하 여 인증서를 복원 해야 합니다.
@@ -353,11 +353,11 @@ sudo systemctl restart mssql-server
 
 11. 읽을 수 있는 시나리오에 대 한 수신기를 만든 경우 SSMS 17.3 이상 마법사에서 읽기 전용 라우팅을 만들 수 있습니다. SSMS 또는 TRANSACT-SQL을 통해 나중에 추가할 수도 있습니다. 읽기 전용 라우팅을 이제 추가:
 
-    1.  읽기 전용 라우팅을 탭을 선택 합니다.
+    a.  읽기 전용 라우팅을 탭을 선택 합니다.
 
-    2.  읽기 전용 복제본에 대 한 Url을 입력 합니다. 이러한 Url 끝점 하지 인스턴스 포트를 사용 하는 점을 제외 하 고 끝점와 비슷합니다.
+    b.  읽기 전용 복제본에 대 한 Url을 입력 합니다. 이러한 Url 끝점 하지 인스턴스 포트를 사용 하는 점을 제외 하 고 끝점와 비슷합니다.
 
-    c.  각 URL을 선택 하 고 맨 아래에서 읽기 가능한 복제본을 선택 합니다. 다중 선택 하려면 SHIFT 또는 클릭 끌기 누른 합니다.
+    다.  각 URL을 선택 하 고 맨 아래에서 읽기 가능한 복제본을 선택 합니다. 다중 선택 하려면 SHIFT 또는 클릭 끌기 누른 합니다.
 
 12. **다음**을 클릭합니다.
 
@@ -378,7 +378,7 @@ sudo systemctl restart mssql-server
 -   [가용성 그룹 (SQL Server)에 대 한 읽기 전용 라우팅 구성](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)
 -   [(SQL Server)는 가용성 그룹 수신기 만들기 또는 구성](../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)
 
-#### <a name="example-one--two-replicas-with-a-configuration-only-replica-external-cluster-type"></a>구성 전용 복제본 (외부 클러스터 형식)를 사용 하 여 예제 1-2 복제본
+#### <a name="example-one---two-replicas-with-a-configuration-only-replica-external-cluster-type"></a>구성 전용 복제본 (외부 클러스터 형식)를 사용 하 여 예제 1-2 복제본
 
 이 예제에는 구성 전용 복제본을 사용 하는 두 개의 복제본 AG를 만드는 방법을 보여 줍니다.
 
@@ -424,7 +424,7 @@ sudo systemctl restart mssql-server
     GO
    ```
 
-#### <a name="example-two--three-replicas-with-read-only-routing-external-cluster-type"></a>예제 2 – 3 개 복제본 읽기 전용 라우팅을 (외부 클러스터 형식)
+#### <a name="example-two---three-replicas-with-read-only-routing-external-cluster-type"></a>예제 2-3 개 복제본 읽기 전용 라우팅을 (외부 클러스터 형식)
 
 이 예제에서는 세 가지 전체 복제본 및 읽기 전용 라우팅 초기 AG 만들기의 일환으로 구성할 수 있습니다.
 
@@ -482,7 +482,7 @@ sudo systemctl restart mssql-server
     
 3.  세 번째 복제본에 대 한 2 단계를 반복 합니다.
 
-#### <a name="example-three--two-replicas-with-read-only-routing-none-cluster-type"></a>예제 3 – 최고 성능의 두 복제본 (None 클러스터 유형) 읽기 전용 라우팅을 사용 하 여
+#### <a name="example-three---two-replicas-with-read-only-routing-none-cluster-type"></a>예제에서는 3 개의 복제본 (None 클러스터 유형) 읽기 전용 라우팅을 사용 하 여
 
 이 예제에서는 클러스터 유형이 None을 사용 하 여 두 개의 복제 구성의 생성을 보여 줍니다. 읽기 확장 시나리오에 대 한 장애 조치가 필요한 경우 사용 됩니다. 이 읽기 전용 라우팅, 뿐만 아니라 실제로 주 복제본을 라운드 로빈 기능을 사용 하는 수신기를 만듭니다.
 
@@ -568,7 +568,7 @@ Pacemaker 고가용성 클러스터 내부 [!INCLUDE[ssnoversion-md](../includes
     
 4.  CTRL 키를 누른 다음 X 파일을 저장 하 고 종료 한 다음 C 키를 누릅니다.
 
-5.  Execute 
+5.  실행 
     ```bash
     sudo chmod 400 /var/opt/mssql/secrets/passwd
     ```

@@ -1,21 +1,22 @@
 ---
-title: SQL Server 가용성 그룹에 대 한 RHEL 클러스터 구성 | Microsoft Docs
-description: ''
+title: SQL Server 가용성 그룹에 대 한 RHEL 클러스터 구성
+titleSuffix: SQL Server
+description: Red Hat Enterprise Linux (RHEL)를 실행 하는 경우 가용성 그룹 클러스터에 알아봅니다
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 06/14/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: ec5ed0ce61c1b1f48ecc148326b9a1906ff95122
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c498a9ef5422f82671000d6c0e82756df85947cb
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670822"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160608"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>SQL Server 가용성 그룹에 대 한 RHEL 클러스터 구성
 

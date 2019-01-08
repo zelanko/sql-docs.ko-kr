@@ -22,17 +22,17 @@ ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bc96c78af702a2239b517b4fbde78f6926b8490a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5182ab1a72caac4181e50df2199f3e0457d3aaac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076703"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806595"
 ---
 # <a name="autotranslation-of-character-data"></a>문자 데이터 자동 변환
   ANSI 같은 문자 데이터를 SQL_C_CHAR로 선언 된 변수 또는 저장 된 데이터 문자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용 하 여는 **char**를 **varchar**, 또는 **텍스트** 데이터 형식 수 제한 된 수를의 문자를 나타냅니다. 즉, 문자당 1바이트를 사용하여 저장된 문자 데이터는 246자만 나타낼 수 있습니다. SQL_C_CHAR 변수에 저장된 값은 클라이언트 컴퓨터의 ACP(ANSI 코드 페이지)를 사용하여 해석되고, 사용 하 여 저장 된 값 **문자**, **varchar**, 또는 **텍스트** 데이터 형식은 서버에서 서버의 ACP를 사용 하 여 계산 됩니다.  
   
- 서버와 클라이언트에 동일한 ACP 경우 이러한 문제가 발생 하지 않습니다 SQL_C_CHAR 라는 저장 된 값을 해석 **char**하십시오 **varchar**, 또는 **텍스트** 개체입니다. 서버와 클라이언트는 서로 다른 Acp를 사용 하면 경우에 사용 되는 경우 클라이언트의 SQL_C_CHAR 데이터를 서버의 다른 문자로 해석 될 수 있습니다 **char**하십시오 **varchar**, 또는 **텍스트** 열, 변수 또는 매개 변수입니다. 예를 들어, 0xA5 값이 들어 있는 바이트 문자 코드 페이지 437 사용 하는 컴퓨터에서 Ñ 문자로 해석 되 고 코드 페이지 1252 실행 하는 컴퓨터에는 엔화 기호 (¥)으로 해석 됩니다.  
+ 서버와 클라이언트에 동일한 ACP 경우 이러한 문제가 발생 하지 않습니다 SQL_C_CHAR 라는 저장 된 값을 해석 **char**하십시오 **varchar**, 또는 **텍스트** 개체입니다. 서버와 클라이언트는 서로 다른 Acp를 사용 하면 경우에 사용 되는 경우 클라이언트의 SQL_C_CHAR 데이터를 서버의 다른 문자로 해석 될 수 있습니다 **char**하십시오 **varchar**, 또는 **텍스트** 열, 변수 또는 매개 변수입니다. 예를 들어 값 0xA5이 포함 된 문자 바이트가 문자로 해석 됩니다?? 코드를 사용 하는 컴퓨터 페이지 437 및 코드 페이지 1252 실행 하는 컴퓨터는 엔 로그온 (?)으로 해석 됩니다.  
   
  유니코드 데이터는 문자당 2바이트를 사용하여 저장됩니다. 유니코드 사양에 따라 모든 확장 문자가 처리되기 때문에 모든 유니코드 문자는 컴퓨터에 관계없이 동일하게 해석됩니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48076703"
   
  모든 이러한 변환을 수행한 때문에 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ACP 서버는 클라이언트에서 실행 되는 네이티브 클라이언트 ODBC 드라이버가 클라이언트 컴퓨터에 설치 된 코드 페이지 중 하나 여야 합니다.  
   
- 유니코드를 통해 문자를 변환하면 두 코드 페이지에 있는 모든 문자가 올바로 변환됩니다. 문자가 한 코드 페이지에만 있고 다른 한 코드 페이지에는 없는 경우 대상 코드 페이지에서 해당 문자를 나타낼 수 없습니다. 예를 들어 코드 페이지 1252에는 등록 상표 기호( )가 있지만 코드 페이지 437에는 없습니다.  
+ 유니코드를 통해 문자를 변환하면 두 코드 페이지에 있는 모든 문자가 올바로 변환됩니다. 문자가 한 코드 페이지에만 있고 다른 한 코드 페이지에는 없는 경우 대상 코드 페이지에서 해당 문자를 나타낼 수 없습니다. 예를 들어 코드 페이지 1252 코드 페이지 437 않습니다 하지만 등록된 상표 기호 (?)에 있습니다.  
   
  다음과 같은 변환 작업은 AutoTranslate 설정의 영향을 받지 않습니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48076703"
   
  데이터를 문자에서 유니코드로 이동할 때는 항상 변환해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [결과 처리 &#40;ODBC&#41;](processing-results-odbc.md)   
  [데이터 정렬 및 유니코드 지원](../collations/collation-and-unicode-support.md)  
   

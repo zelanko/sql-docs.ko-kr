@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: search
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
@@ -12,15 +12,15 @@ ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ef3beb381aa9cb5f6638920826d92bf01624e96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 560761383a06bf9e3b319546011d58c7c1bdecb4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144193"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788645"
 ---
 # <a name="full-text-search"></a>전체 텍스트 검색
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 의 전체 텍스트 검색을 사용하면 사용자와 응용 프로그램이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블의 문자 기반 데이터에 대해 전체 텍스트 쿼리를 실행할 수 있습니다. 테이블에 대해 전체 텍스트 쿼리를 실행하려면 먼저 데이터베이스 관리자가 해당 테이블에 대한 전체 텍스트 인덱스를 만들어야 합니다. 전체 텍스트 인덱스에는 테이블에 있는 하나 이상의 문자 기반 열이 포함됩니다. 이러한 열 데이터 형식 중 하나일 수 있습니다: `char`, `varchar`, `nchar`, `nvarchar`를 `text`를 `ntext`, `image`를 `xml`, 또는 `varbinary(max)` 및 FILESTREAM 합니다. 각 전체 텍스트 인덱스는 테이블의 열을 하나 이상 인덱싱하며, 각 열은 특정 언어를 사용할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 의 전체 텍스트 검색을 사용하면 사용자와 응용 프로그램이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블의 문자 기반 데이터에 대해 전체 텍스트 쿼리를 실행할 수 있습니다. 테이블에 대해 전체 텍스트 쿼리를 실행하려면 먼저 데이터베이스 관리자가 해당 테이블에 대한 전체 텍스트 인덱스를 만들어야 합니다. 전체 텍스트 인덱스에는 테이블에 있는 하나 이상의 문자 기반 열이 포함됩니다. 이러한 열의 데이터 형식은 `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml` 또는 `varbinary(max)` 및 FILESTREAM 중 하나일 수 있습니다. 각 전체 텍스트 인덱스는 테이블의 열을 하나 이상 인덱싱하며, 각 열은 특정 언어를 사용할 수 있습니다.  
   
  전체 텍스트 쿼리는 영어와 일본어 같은 특정 언어의 규칙을 기준으로 단어와 구에 적용되어 전체 텍스트 인덱스의 텍스트 데이터에 대해 언어 검색을 수행합니다. 전체 텍스트 쿼리에는 간단한 단어와 구 또는 여러 형식의 단어나 구가 포함될 수 있습니다. 전체 텍스트 쿼리는 일치 항목( *적중*이라고도 함)이 하나 이상 있는 문서를 모두 반환합니다. 대상 문서가 전체 텍스트 쿼리에 지정된 모든 용어를 포함하며 일치하는 용어 사이의 거리와 같이 다른 모든 검색 조건과 일치할 때 일치 항목이 발생합니다.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "48144193"
 >  전체 텍스트 검색은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 엔진의 선택적 구성 요소입니다. 자세한 내용은 [SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server.md)합니다.  
   
 ##  <a name="benefits"></a> 전체 텍스트 검색을 사용 하 여 어떻게 해야 합니까?  
- 전체 텍스트 검색은 웹 사이트에서 항목을 검색하는 e-비즈니스, 법률 데이터 리포지토리에서 판례 기록을 검색하는 법률 회사 또는 저장된 이력서 중에서 작업 설명과 일치하는 이력서를 검색하는 인사 부서와 같은 다양한 비즈니스 시나리오에 적용할 수 있습니다. 전체 텍스트 검색의 기본적인 관리 및 개발 태스크는 비즈니스 시나리오에 관계없이 동일합니다. 그러나 특정 비즈니스 시나리오에서는 비즈니스 목표를 충족시키기 위해 전체 텍스트 인덱스 및 쿼리를 조정할 수 있습니다. 예를 들어 e-비즈니스의 경우 결과 순위 지정, 회수 정확성(전체 텍스트 쿼리에서 실제로 반환하는 기존 일치 항목 수) 또는 여러 언어 지원보다 성능 최대화가 더 중요할 수 있고 법률 회사의 경우 일치하는 모든 항목 반환(정보의*전체 회수* )이 가장 중요한 고려 사항일 수 있습니다.  
+ 전체 텍스트 검색 다양 한 범위의 검색 하는 등 e-비즈니스-웹 사이트의 항목에 대 한 비즈니스 시나리오에 적용 됩니다. 법률; 법률 데이터 리포지토리에서 판례 업체-검색 또는 저장 된 이력서를 사용 하 여 인사 부서와 일치 하는 작업 설명 합니다. 전체 텍스트 검색의 기본적인 관리 및 개발 태스크는 비즈니스 시나리오에 관계없이 동일합니다. 그러나 특정 비즈니스 시나리오에서는 비즈니스 목표를 충족시키기 위해 전체 텍스트 인덱스 및 쿼리를 조정할 수 있습니다. 예를 들어 e-비즈니스의 경우 결과 순위 지정, 회수 정확성(전체 텍스트 쿼리에서 실제로 반환하는 기존 일치 항목 수) 또는 여러 언어 지원보다 성능 최대화가 더 중요할 수 있고 법률 회사의 경우 일치하는 모든 항목 반환(정보의*전체 회수* )이 가장 중요한 고려 사항일 수 있습니다.  
   
  [항목 내용](#top)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48144193"
   
  전체 텍스트 쿼리는 일부 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 조건자(CONTAINS 및 FREETEXT) 및 함수(CONTAINSTABLE 및 FREETEXTTABLE) 집합을 사용합니다. 그러나 전체 텍스트 쿼리의 구조는 지정된 비즈니스 시나리오의 검색 목표에 따라 달라집니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
--   e-비즈니스 - 웹 사이트에서 제품 검색:  
+-   e-비즈니스 - 웹 사이트에서 제품 검색  
   
     ```  
     SELECT product_id   
@@ -62,7 +62,7 @@ ms.locfileid: "48144193"
     AND product_cost < 200 ;  
     ```  
   
--   채용 시나리오 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용하여 작업한 경험이 있는 지원자 검색:  
+-   채용 시나리오 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용한 경험이 있는 지원자 검색  
   
     ```  
     SELECT candidate_name,SSN   

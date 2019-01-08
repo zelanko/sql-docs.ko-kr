@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - members [Master Data Services], permissions
@@ -14,12 +13,12 @@ ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4310f16b19fa85012844cc6e0fb71b2dce3ce6f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7e762a450a28f1d07e58a0baa6f7f3ff3948681
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112051"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797045"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>계층 멤버 권한(Master Data Services)
   계층 멤버 권한은 선택 사항이며 사용자에게 특정 멤버에 대한 제한된 액세스 권한을 부여하려는 경우에만 사용해야 합니다. **계층 멤버** 탭에서 아무 권한도 할당하지 않을 경우 사용자의 권한은 전적으로 **모델** 탭에서 할당한 권한을 기반으로 합니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "48112051"
   
 |사용 권한|Description|  
 |----------------|-----------------|  
-|**읽기 전용**|멤버가 표시되지만 사용자가 멤버를 변경할 수 없습니다. 또한 사용자는 멤버가 속한 모든 명시적 계층이나 컬렉션에서 멤버를 이동할 수도 없습니다.<br /><br /> 참고: 할당 하는 경우 **읽기 전용** 권한을 **루트**, 아래에 있는 멤버 **루트** 는 읽기 전용입니다; 단, 명시적 계층 및 컬렉션에서 이동할 수 멤버 **루트** 새 멤버를 추가할 수 있습니다 **루트**입니다.|  
+|**읽기 전용**|멤버가 표시되지만 사용자가 멤버를 변경할 수 없습니다. 또한 사용자는 멤버가 속한 모든 명시적 계층이나 컬렉션에서 멤버를 이동할 수도 없습니다.<br /><br /> 참고: 할당 하는 경우 **읽기 전용** 권한을 **루트**, 아래의 멤버 **루트** 는 읽기 전용입니다; 단, 명시적 계층 및 컬렉션에서 이동할 수 멤버 **루트** 새 멤버를 추가할 수 있습니다 **루트**입니다.|  
 |**Update**|멤버가 표시되며 사용자가 멤버를 변경할 수 있습니다. 또한 사용자는 멤버가 속한 모든 명시적 계층이나 컬렉션에서 멤버를 이동할 수도 있습니다.|  
 |**거부**|멤버가 표시되지 않습니다.|  
   
@@ -56,11 +55,11 @@ ms.locfileid: "48112051"
   
 -   한 계층 노드에 할당 되 면 **업데이트** 또는 **읽기 전용** 권한과 다른 노드에 할당 됩니다 **거부**, 다음 노드의 멤버가 표시 되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [계층 멤버 권한 할당 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
- [사용 권한이 결정 되는 방법 &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)   
+## <a name="see-also"></a>관련 항목:  
+ [계층 멤버 권한 할당&#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
+ [사용 권한이 결정되는 방식&#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)   
  [멤버&#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [계층&#40;Master Data Services&#41;](../../2014/master-data-services/hierarchies-master-data-services.md)   
- [멤버 권한 즉시 적용 &#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md)  
+ [멤버 권한 즉시 적용&#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md)  
   
   

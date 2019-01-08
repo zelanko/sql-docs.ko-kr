@@ -14,17 +14,17 @@ ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd35a8bd0e2a9280d16614a3979dc2af05487e42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35f1ce877d6ed8a390bb6425a4d7f33a5d6947d2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619611"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513989"
 ---
 # <a name="outer-joins"></a>외부 조인
 ODBC는 SQL-92 left, right 및 full outer join 구문을 지원합니다. 외부 조인 이스케이프 시퀀스는  
   
- **{oj** *외부-조인 *}**  
+ **{oj** _외부 조인_**}**  
   
  여기서 *외부 조인* 는  
   
@@ -32,7 +32,7 @@ ODBC는 SQL-92 left, right 및 full outer join 구문을 지원합니다. 외부
   
  *테이블 참조* 테이블 이름을 지정 하 고 *검색 조건* 간에 조인 조건을 지정 합니다 *테이블 참조*합니다.  
   
- 외부 조인 요청을 뒤에 나타나야 합니다.는 **FROM** 키워드 및 하기 전에 **여기서** 절 (있는 경우). 전체 구문 정보를 참조 하세요. [외부 조인 이스케이프 시퀀스](../../../odbc/reference/appendixes/outer-join-escape-sequence.md) 부록 c: SQL 문법에서입니다.  
+ 외부 조인 요청을 뒤에 나타나야 합니다.는 **FROM** 키워드 및 하기 전에 **여기서** 절 (있는 경우). 전체 구문 정보를 참조 하세요. [외부 조인 이스케이프 시퀀스](../../../odbc/reference/appendixes/outer-join-escape-sequence.md) 부록 c: SQL 문법입니다.  
   
  예를 들어, 다음 SQL 문을 모든 고객을 나열 하 고 열린 주문의 표시 하는 동일한 결과 집합을 만듭니다. 첫 번째 문은 이스케이프 시퀀스가 구문을 사용 합니다. 두 번째 문은 Oracle에 대 한 기본 구문을 사용 하 고 상호 운용은 불가능 합니다.  
   

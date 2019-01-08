@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - void ExecuteNonQuery() method
@@ -32,12 +30,12 @@ ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0aba35418c1a7759f5c083bd5e5f7485118cbfc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 736345b7ee5b9c3e40f0ae34fe139cb911cad42f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207223"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807345"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>SqlXmlCommand 개체(SQLXML 관리되는 클래스)
   SqlXmlCommand 개체에 대 한 생성자는 다음과 같습니다.  
@@ -46,7 +44,7 @@ ms.locfileid: "48207223"
 public SqlXmlCommand(string cnString)  
 ```  
   
- 여기서 `cnString`은 서버, 데이터베이스 및 로그인 정보를 식별하는 ADO 또는 OLEDB 연결 문자열입니다(예: `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`).  
+ 여기서 `cnString` 은 서버, 데이터베이스 및 로그인 정보를 식별 하는 ADO 또는 OLEDB 연결 문자열-예를 들어 `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`합니다.  
   
  연결 문자열에서 `Provider`는 SQLOLEDB여야 하고 `Data Provider`는 공급자 문자열에 포함되면 안 됩니다.  
   

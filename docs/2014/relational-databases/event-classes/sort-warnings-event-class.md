@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a834d6752145d290ef2b73ed22f90b405c428f28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 637d06160afba1fc1f93bea0da3aae0a09f954ec
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228753"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808075"
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings 이벤트 클래스
   Sort Warnings 이벤트 클래스는 정렬 작업이 메모리에 맞지 않음을 나타냅니다. 여기에는 인덱스 만들기와 관련된 정렬 작업이 포함되지 않으며 SELECT 문에 사용된 ORDER BY 절과 같은 쿼리 내의 정렬 작업만 포함됩니다.  

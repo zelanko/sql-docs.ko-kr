@@ -20,16 +20,16 @@ ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd3604b6de03d6344470758c4de14c15ad47e572
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f22fc952f0394f9e59ca8d67c76d0b00594b0759
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602681"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212437"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **규칙**  
- ODBC 2.0 버전에 도입 되었습니다.  
+ 도입 된 버전: ODBC 2.0  
   
  **요약**  
  **SQLManageDataSources** 있는 사용자 수 설정, 추가 및 시스템 정보에 대 한 데이터 원본 삭제 대화 상자를 표시 합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "47602681"
 ```  
   
 BOOL SQLManageDataSources(  
-     HWND     hwnd);  
+     HWND     hwnd);  
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -64,7 +64,7 @@ BOOL SQLManageDataSources(
   
  ![ODBC 데이터 원본 관리자 대화 상자](../../../odbc/reference/syntax/media/ch23e.gif "CH23E")  
   
- 대화 상자에는 세 개의 탭에서 시스템 정보에 나열 된 데이터 소스 표시: **사용자 DSN**를 **시스템 DSN**, 및 **파일 DSN**합니다. 하는 경우 사용자 데이터 원본을 두 번 클릭 하거나 데이터 원본을 선택 하 고 클릭 **구성**하십시오 **SQLManageDataSources** 호출 **ConfigDSN** 설치는 ODBC_CONFIG_ 사용 하 여 DLL에서 DSN 옵션입니다.  
+ 대화 상자에는 세 개의 탭에서 시스템 정보에 나열 된 데이터 소스 표시 됩니다. **사용자 DSN**하십시오 **시스템 DSN**, 및 **DSN 파일**합니다. 하는 경우 사용자 데이터 원본을 두 번 클릭 하거나 데이터 원본을 선택 하 고 클릭 **구성**하십시오 **SQLManageDataSources** 호출 **ConfigDSN** 설치는 ODBC_CONFIG_ 사용 하 여 DLL에서 DSN 옵션입니다.  
   
  클릭 하면 **추가**, **SQLManageDataSources** 표시를 **새 데이터 원본 만들기** 대화 상자에서 다음 그림에 표시 합니다.  
   

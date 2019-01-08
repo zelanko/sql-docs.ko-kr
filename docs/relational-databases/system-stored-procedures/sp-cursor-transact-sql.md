@@ -18,12 +18,12 @@ ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1fa8689862184f0554eff0aefd3d39896f2abdf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e3277e64e4c4e04e270298d3532ebc0c2b1f93c5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662522"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210522"
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51662522"
   
 ||  
 |-|  
-|**적용 대상**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**적용 대상**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ sp_cursor  cursor, optype, rownum, table
  *optype*  
  커서가 수행할 작업을 지정하는 필수 매개 변수입니다. *optype* 다음 중 하나 필요로 **int** 값을 입력 합니다.  
   
-|값|이름|설명|  
+|값|이름|Description|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|인출 버퍼에서 하나 이상의 행을 업데이트하는 데 사용됩니다.  에 지정 된 행 *rownum* 다시 액세스 하 고 업데이트 합니다.|  
 |0x0002|Delete|인출 버퍼에서 하나 이상의 행을 삭제하는 데 사용됩니다. 에 지정 된 행 *rownum* 다시 액세스 및 삭제 합니다.|  
@@ -59,7 +59,7 @@ sp_cursor  cursor, optype, rownum, table
 |0X0008|REFRESH|기본 테이블로 버퍼를 다시 채우는 데 사용되며, 낙관적 동시성 제어로 인해 업데이트나 삭제가 실패하는 경우 또는 UPDATE 후에 행을 새로 고치는 데 사용할 수 있습니다.|  
 |0X10|LOCK|SQL Server U-잠금을 얻기 위해 지정된 된 행이 포함 된 페이지에 발생 합니다. 이 잠금은 S 잠금과는 호환되지만 X 잠금 또는 기타 U 잠금과는 호환되지 않습니다. 단기 잠금을 구현하는 데 사용할 수 있습니다.|  
 |0X20|SETPOSITION|DELETE 또는 UPDATE 문을 배치 프로그램은 후속 SQL Server를 실행 하려는 경우에 사용 됩니다.|  
-|0X40|ABSOLUTE|UPDATE 또는 DELETE와 함께 사용해야 합니다.  ABSOLUTE는 KEYSET 커서와 함께 사용해야 하며, DYNAMIC 커서의 경우에는 무시되고 STATIC 커서는 업데이트할 수 없습니다.<br /><br /> 참고: 절대 인출 되지 않은 키 집합의 행에 대해 지정 된 경우 작업은 동시성 확인에 실패할 수 있습니다 하 고 반환 결과 보장할 수 없습니다.|  
+|0X40|ABSOLUTE|UPDATE 또는 DELETE와 함께 사용해야 합니다.  ABSOLUTE는 KEYSET 커서와 함께 사용해야 하며, DYNAMIC 커서의 경우에는 무시되고 STATIC 커서는 업데이트할 수 없습니다.<br /><br /> 참고: 인출되지 않은 키 집합의 행에 대해 ABSOLUTE를 지정하면 작업에서 동시성 검사가 실패할 수 있으며 반환 결과를 보장할 수 없습니다.|  
   
  *rownum*  
  커서가 작업을 수행하거나 업데이트 또는 삭제할 인출 버퍼의 행을 지정합니다.  
@@ -137,7 +137,7 @@ sp_cursor  cursor, optype, rownum, table
   
  단일 매개 변수를 사용하는 경우 다음 구문을 사용해 UPDATE 문을 제출할 수 있습니다.  
   
- `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,…n]`  
+ `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
 >  하는 경우 업데이트 \<테이블 이름 > 지정 된 값에 대 한 합니다 *테이블* 매개 변수는 무시 합니다.  
@@ -169,7 +169,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- 단, VALUES를 지정한 경우는 예외입니다. 이 경우에는 마지막 식 다음에 후행 ")"가 있어야 합니다. 이 경우에  *\<테이블 이름 >* 생성 된 udpate에서 문의 지정 했거나 기본값으로 합니다 *테이블* 매개 변수입니다.  
+ 단, VALUES를 지정한 경우는 예외입니다. 이 경우에는 마지막 식 다음에 후행 ")"가 있어야 합니다. 이 경우에  *\<테이블 이름 >* 생성 된 UPDATE 문을 지정 했거나 기본값으로 합니다 *테이블* 매개 변수입니다.  
   
 > [!NOTE]  
 >  매개 변수 하나를 명명된 매개 변수인 "`@VALUES`"로 제출할 수 있습니다. 이 경우 다른 명명된 매개 변수는 사용할 수 없습니다.  

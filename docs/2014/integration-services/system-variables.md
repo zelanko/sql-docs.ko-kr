@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], variables
@@ -17,17 +16,17 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7c77ca84cd844b5c49f704d44f2eca3ba34c4269
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0798b78aebb308d76585df0e5c7e6e9200e20b6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163473"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792316"
 ---
 # <a name="system-variables"></a>시스템 변수
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 런타임 패키지 및 해당 개체에 대한 정보가 저장되는 일련의 시스템 변수가 제공됩니다. 이러한 변수를 식 및 속성 식에서 사용하여 패키지, 컨테이너, 태스크 및 이벤트 처리기를 사용자 지정할 수 있습니다.  
   
- SQL 실행 태스크에서 변수를 매개 변수에 매핑하는 데 사용되는 매개 변수 바인딩에는 시스템 변수와 사용자 정의 변수를 포함한 모든 변수를 사용할 수 있습니다.  
+ SQL 실행 태스크에서 변수를 매개 변수에 매핑하는 데 사용되는 매개 변수 바인딩에 시스템 변수와 사용자 정의 변수를 포함한 모든 변수를 사용할 수 있습니다.  
   
 ## <a name="system-variables-for-packages"></a>패키지의 시스템 변수  
  다음 표에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지에 대해 제공하는 시스템 변수에 대해 설명합니다.  
@@ -90,7 +89,7 @@ ms.locfileid: "48163473"
 |**ProgressCountHigh**|Int32|OnProgress 이벤트에 의해 처리된 전체 작업 개수를 나타내는 64비트 값의 상위 부분입니다.|OnProgress 이벤트 처리기|  
 |`ProgressCountLow`|Int32|OnProgress 이벤트에 의해 처리된 전체 작업 개수를 나타내는 64비트 값의 하위 부분입니다.|OnProgress 이벤트 처리기|  
 |**ProgressDescription**|String|진행률에 대한 설명입니다.|OnProgress 이벤트 처리기|  
-|`Propagate`|Boolean|이벤트가 상위 수준의 이벤트 처리기로 전달되는지 여부를 나타냅니다.<br /><br /> 참고:의 값을 `Propagate` 변수는 패키지의 유효성을 검사 하는 동안 무시 됩니다.<br /><br /> 자식 패키지에서 `Propagate`를 `False`로 설정해도 이벤트가 부모 패키지로 전달될 수 있습니다.|모든 이벤트 처리기|  
+|`Propagate`|Boolean|이벤트가 상위 수준의 이벤트 처리기로 전달되는지 여부를 나타냅니다.<br /><br /> 참고: 패키지의 유효성을 검사하는 동안에는 `Propagate` 변수의 값이 무시됩니다.<br /><br /> 자식 패키지에서 `Propagate`를 `False`로 설정해도 이벤트가 부모 패키지로 전달될 수 있습니다.|모든 이벤트 처리기|  
 |`SourceDescription`|String|이벤트 처리기에서 이벤트를 발생시킨 실행 개체에 대한 설명입니다.|모든 이벤트 처리기|  
 |`SourceID`|String|이벤트 처리기에서 이벤트를 발생시킨 실행 개체의 고유 식별자입니다.|모든 이벤트 처리기|  
 |**SourceName**|String|이벤트 처리기에서 이벤트를 발생시킨 실행 개체의 이름입니다.|모든 이벤트 처리기|  

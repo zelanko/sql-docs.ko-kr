@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Import and Export Wizard
@@ -16,40 +15,40 @@ ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0791e226f4c4a1c19ab2dffb7a9e7845e59a418c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a01ae02feae938c952096216b89858c007aee4f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100343"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351393"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사 실행
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사는 데이터 원본 간에 데이터를 복사하고 기본 패키지를 구성하는 가장 간단한 방법을 제공합니다. 마법사에 대 한 자세한 내용은 참조 하세요. [SQL Server 가져오기 및 내보내기 마법사](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)합니다.  
   
- Microsoft Excel 스프레드시트에 SQL Server 데이터베이스에서 데이터를 내보내는 패키지를 만들려면 SQL Server 가져오기 및 내보내기 마법사를 사용 하는 방법을 보여 주는 동영상을 참조 하세요 [SQL Server Data to Excel (SQL Server 비디오) 내보내기](http://go.microsoft.com/fwlink/?LinkId=131024)합니다.  
+ Microsoft Excel 스프레드시트에 SQL Server 데이터베이스에서 데이터를 내보내는 패키지를 만들려면 SQL Server 가져오기 및 내보내기 마법사를 사용 하는 방법을 보여 주는 동영상을 참조 하세요 [SQL Server Data to Excel (SQL Server 비디오) 내보내기](https://go.microsoft.com/fwlink/?LinkId=131024)합니다.  
   
 ### <a name="to-start-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사를 시작하려면  
   
 -   에 **시작** 메뉴에서 **모든 프로그램**를 가리킨**Microsoft SQL Server** 를 클릭 하 고 **데이터 가져오기 및 내보내기**.  
   
-     —또는—  
+     -또는-  
   
      [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 마우스 오른쪽 단추로 클릭 합니다 **SSIS 패키지** 폴더를 마우스 클릭 **SSISImport 및 내보내기 마법사**합니다.  
   
-     —또는—  
+     -또는-  
   
      [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 **프로젝트** 메뉴에서 클릭 **SSISImport 및 내보내기 마법사**합니다.  
   
-     —또는—  
+     -또는-  
   
      [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 연결 합니다 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서버 유형, 데이터베이스, 데이터베이스를 마우스 오른쪽 단추로 클릭, 가리킨 **작업**, 클릭 하 고 **데이터 가져오기** 또는 **데이터내보내기**.  
   
-     —또는—  
+     -또는-  
   
      명령 프롬프트 창에서 C:\Program Files\Microsoft SQL Server\100\DTS\Binn에 있는 DTSWizard.exe를 실행합니다.  
   
     > [!NOTE]  
-    >  64비트 컴퓨터의 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 64비트 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사(DTSWizard.exe)를 설치합니다. 그러나 Access 또는 Excel 등의 일부 데이터 원본은 32비트 공급자만 제공합니다. 이러한 데이터 원본을 사용하려면 32비트 버전의 마법사를 설치하여 실행해야 합니다. 마법사의 32 비트 버전을 설치 하려면 클라이언트 도구를 선택 하거나 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 설치 중입니다.  
+    >  64비트 컴퓨터의 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 64비트 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사(DTSWizard.exe)를 설치합니다. 그러나 Access 또는 Excel 등의 일부 데이터 원본은 32비트 공급자만 제공합니다. 이러한 데이터 원본을 사용하려면 32비트 버전의 마법사를 설치하여 실행해야 합니다. 32비트 버전의 마법사를 설치하려면 설치 도중 클라이언트 도구 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 선택합니다.  
   
 ### <a name="to-import-or-export-data-by-using-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터를 가져오거나 내보내려면  
   
@@ -62,7 +61,7 @@ ms.locfileid: "48100343"
     > [!NOTE]  
     >  Oracle용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB 공급자는 Oracle BLOB, CLOB, NCLOB, BFILE 및 UROWID 데이터 형식을 지원하지 않습니다. 따라서 OLE DB 원본은 이러한 데이터 형식의 열이 포함된 테이블의 데이터를 추출할 수 없습니다.  
   
-     사용 가능한 데이터 대상을 포함 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자, OLE DB 공급자, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, Excel, Access 및 플랫 파일 대상입니다.  
+     사용 가능한 데이터 대상에는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자, OLE DB 공급자, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, Excel, Access 및 플랫 파일 대상이 포함됩니다.  
   
 3.  선택한 대상 유형에 따라 옵션을 설정합니다.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "48100343"
   
          원본이 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 공급자인 경우 쿼리 결과를 복사하는 옵션을 사용하여 DBCommand 문자열을 쿼리로 제공할 수도 있습니다.  
   
-         원본 데이터가 뷰일 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상의 테이블 뷰 정책은 가져오기 및 내보내기 마법사.  
+         원본 데이터가 뷰이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기/내보내기 마법사가 자동으로 뷰를 대상의 테이블로 변환합니다.  
   
     -   대상 테이블을 삭제한 다음 다시 만들지 여부와 ID 삽입을 사용할지 여부를 나타냅니다.  
   
@@ -122,12 +121,12 @@ ms.locfileid: "48100343"
   
      패키지를 저장할 때 패키지 보호 수준을 설정할 수 있으며 설정한 보호 수준에서 암호가 사용되는 경우 암호를 제공할 수 있습니다. 패키지 보호 수준에 대 한 자세한 내용은 참조 하세요. [Sensitive Data in Packages에 대 한 액세스 제어](../security/access-control-for-sensitive-data-in-packages.md)입니다.  
   
-     마법사가 시작 하는 경우는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], 마법사에서 패키지를 실행할 수 없습니다. 대신 마법사를 시작한 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에 패키지가 추가됩니다. 패키지를 실행할 수 있습니다 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]합니다.  
+     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 프로젝트에서 마법사를 시작한 경우 마법사에서 패키지를 실행할 수 없습니다. 대신 마법사를 시작한 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에 패키지가 추가됩니다. 그런 다음 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지를 실행할 수 있습니다.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], 마법사에서 만든 패키지를 저장 하는 옵션이 제공 되지 않습니다.  
+    >  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]에서는 마법사가 만든 패키지를 저장하는 옵션을 사용할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 가져오기 및 내보내기 마법사](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
  [SQL Server Data Tools에서 패키지 만들기](../create-packages-in-sql-server-data-tools.md)  
   

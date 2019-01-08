@@ -12,18 +12,18 @@ ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 46795611f8bb3554491dbdd400d383a59a540b5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9506c8c27e17f59c95a1cfeff5cd3885d1657b79
+ms.sourcegitcommit: 753364d8ac569c9f363d2eb6b1b8214948d2ed8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766597"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52826088"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Linux의 SQL Server에 대 한 연결 암호화
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Linux에서 전송 계층 보안 (TLS) 하 여 클라이언트 응용 프로그램의 인스턴스 간의 네트워크를 통해 전송 되는 데이터를 암호화 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Windows와 Linux 모두에서 동일한 TLS 프로토콜을 지원 합니다: TLS 1.2, 1.1 및 1.0입니다. TLS를 구성 하는 단계는 운영 체제에서 관련이 있지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 실행 됩니다.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Linux에서 전송 계층 보안 (TLS) 하 여 클라이언트 응용 프로그램의 인스턴스 간의 네트워크를 통해 전송 되는 데이터를 암호화 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Windows와 Linux 모두에서 동일한 TLS 프로토콜을 지원합니다. TLS 1.2, 1.1 및 1.0입니다. TLS를 구성 하는 단계는 운영 체제에서 관련이 있지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 실행 됩니다.  
 
 ## <a name="requirements-for-certificates"></a>인증서에 대 한 요구 사항 
 시작 하기 전에 인증서에는 이러한 요구 사항을 준수 하는지 확인 해야 합니다.
@@ -56,8 +56,8 @@ TLS를 사용 하 여 클라이언트 응용 프로그램에서 연결을 암호
 
         systemctl stop mssql-server 
         cat /var/opt/mssql/mssql.conf 
-        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssqlfqdn.pem 
-        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssqlfqdn.key 
+        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
+        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
         sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
         sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
 
@@ -65,10 +65,10 @@ TLS를 사용 하 여 클라이언트 응용 프로그램에서 연결을 암호
 
     -   CA 서명 된 인증서를 사용 하는 경우 클라이언트 컴퓨터에 사용자 인증서 대신 CA (인증 기관) 인증서를 복사 해야 합니다. 
     -   자체 서명 된 인증서를 사용 하는 경우 방금.pem 파일을 배포 각각 다음 폴더에 복사 및 명령을 실행 하 여 사용 하도록 설정 하려면 
-        - **Ubuntu**: 인증서를 복사 ```/usr/share/ca-certificates/``` 을.crt로 이름 바꾸기 확장 dpkg reconfigure ca 인증서를 사용 하 여 시스템 CA 인증서로 사용 하도록 설정 합니다. 
+        - **Ubuntu**: 에 복사 인증서 ```/usr/share/ca-certificates/``` 을.crt로 이름 바꾸기 확장 dpkg reconfigure ca 인증서를 사용 하 여 시스템 CA 인증서로 사용 하도록 설정 합니다. 
         - **RHEL**: 인증서를 복사 ```/etc/pki/ca-trust/source/anchors/``` 사용 하 여 ```update-ca-trust``` 시스템 CA 인증서로 사용 하도록 설정 합니다.
         - **SUSE**: 인증서를 복사 ```/usr/share/pki/trust/anchors/``` 사용 하 여 ```update-ca-certificates``` 시스템 CA 인증서로 사용 하도록 설정 합니다.
-        - **Windows**: 현재 사용자 인증서로.pem 파일-> 가져오기-> 인증서 루트 인증 기관을 신뢰할 수 있는
+        - **Windows**:  현재 사용자 인증서로.pem 파일-> 가져오기-> 인증서 루트 인증 기관을 신뢰할 수 있는
         - **macOS**: 
            - 에 대 한 인증서를 복사 합니다. ```/usr/local/etc/openssl/certs```
            - 해시 값을 가져오려면 다음 명령을 실행 합니다. ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
@@ -106,8 +106,8 @@ TLS를 사용 하 여 클라이언트 응용 프로그램에서 연결을 암호
 
         systemctl stop mssql-server 
         cat /var/opt/mssql/mssql.conf 
-        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssqlfqdn.pem 
-        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssqlfqdn.key 
+        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
+        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
         sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
         sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1 
         

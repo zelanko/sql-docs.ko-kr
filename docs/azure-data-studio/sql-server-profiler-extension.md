@@ -1,7 +1,8 @@
 ---
-title: Azure 데이터 Studio SQL Server Profiler 확장 | Microsoft Docs
-description: Azure Data Studio 용 SQL Server Profiler 확장 (미리 보기)
-ms.custom: tools|sos
+title: SQL Server Profiler 확장
+titleSuffix: Azure Data Studio
+description: 설치 하 고 Azure Data Studio 용 SQL Server Profiler 확장 (미리 보기) 사용
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 7f5d1731cfb126b2dbaa259b89b327951d384e1a
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: b883883cbe201de32020e86ca2cd38746caf46be
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356014"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030617"
 ---
 # <a name="sql-server-profiler-extension-preview"></a>SQL Server Profiler 확장 (미리 보기)
 

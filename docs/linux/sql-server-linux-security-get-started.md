@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: sql-linux
-ms.openlocfilehash: feae91ed25dafa499026b2cadf72a2eafa0c63ae
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: c3d3c4a6ac5d5d49e880fc2af1546bdcf9a73779
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906233"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211742"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux의 SQL Server의 보안 기능에 대 한 연습
 
@@ -23,7 +23,7 @@ ms.locfileid: "48906233"
 
 SQL Server의 새로운 Linux 사용자 인 경우 다음 작업을 안내 보안 작업의 일부입니다. 이러한 고유한 또는 Linux를 특정 아니지만 추가 조사를 위해 영역의 아이디어를 제공 하는 데 도움이 됩니다. 각 예제에서는 해당 영역에 대 한 자세한 설명서 링크가 제공 됩니다.
 
->  [!NOTE]
+> [!NOTE]
 >  다음 예에서는 합니다 **AdventureWorks2014** 샘플 데이터베이스. 이 샘플 데이터베이스를 설치 하는 방법에 대 한 자세한 내용은 참조 하세요. [Windows에서 Linux에 SQL Server 데이터베이스를 복원](sql-server-linux-migrate-restore-database.md)합니다.
 
 
@@ -35,7 +35,7 @@ SQL Server의 새로운 Linux 사용자 인 경우 다음 작업을 안내 보�
 CREATE LOGIN Larry WITH PASSWORD = '************';  
 ```
 
->  [!NOTE]
+> [!NOTE]
 >  항상 이전 명령에서 별표 대신 강력한 암호를 사용 합니다.
 
 로그인은 SQL Server에 연결 하 고 (제한 된 권한)으로 master 데이터베이스에 액세스할 수 있습니다. 사용자가 사용자 데이터베이스에 연결 하려면 로그인 이라는 데이터베이스 사용자, 데이터베이스 수준에서 해당 id를 해야 합니다. 사용자가 각 데이터베이스에만 적용 되며 액세스 권한을 부여 하려면 각 데이터베이스에 개별적으로 만들어야 합니다. 다음 예제에서는 AdventureWorks2014 데이터베이스를 이동 하 고 사용 하 여는 [CREATE USER](../t-sql/statements/create-user-transact-sql.md) 문을 Larry 라는 로그인과 연결 된 Larry 이라는 사용자를 만듭니다. 로그인 및 사용자 (서로에 매핑됨) 관련 된, 경우에 다른 개체입니다. 로그인이는 서버 수준 보안 주체입니다. 사용자가 데이터베이스 수준 보안 주체입니다.
@@ -84,44 +84,44 @@ ALTER ROLE db_datareader ADD MEMBER Jerry;
 
 예를 들어 다음 문은 라는 데이터베이스 역할을 만듭니다 `Sales`, 부여는 `Sales` 참조, 업데이트 및에서 행을 삭제 하는 기능 그룹을 `Orders` 테이블을 선택한 다음 사용자를 추가 `Jerry` 에 `Sales` 역할.   
    
-```   
-CREATE ROLE Sales;   
-GRANT SELECT ON Object::Sales TO Orders;   
-GRANT UPDATE ON Object::Sales TO Orders;   
-GRANT DELETE ON Object::Sales TO Orders;   
-ALTER ROLE Sales ADD MEMBER Jerry;   
-```   
+```   
+CREATE ROLE Sales;   
+GRANT SELECT ON Object::Sales TO Orders;   
+GRANT UPDATE ON Object::Sales TO Orders;   
+GRANT DELETE ON Object::Sales TO Orders;   
+ALTER ROLE Sales ADD MEMBER Jerry;   
+```   
 
-사용 권한 시스템에 대 한 자세한 내용은 참조 하세요. [Getting Started with Database Engine Permissions](../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)합니다.
+For more information about the permission system, see [Getting Started with Database Engine Permissions](../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
 
 
-## <a name="configure-row-level-security"></a>행 수준 보안 구성  
+## Configure row-level security  
 
-[행 수준 보안](../relational-databases/security/row-level-security.md) 쿼리를 실행 하는 사용자에 따라 데이터베이스의 행에 대 한 액세스를 제한할 수 있도록 합니다. 이 기능은 고객은 자신의 데이터에만 액세스할 수 있습니다 또는 작업 자가 자신의 부서에 관련 된 데이터에만 액세스할 수 있습니다와 같은 시나리오에 유용 합니다.   
+[Row-Level Security](../relational-databases/security/row-level-security.md) enables you to restrict access to rows in a database based on the user executing a query. This feature is useful for scenarios like ensuring that customers can only access their own data or that workers can only access data that is pertinent to their department.   
 
-다음 단계에서는 두 명의 사용자가 다른 행 수준 액세스를 사용 하 여 설정 하 여 `Sales.SalesOrderHeader` 테이블입니다. 
+The following steps walk through setting up two Users with different row-level access to the `Sales.SalesOrderHeader` table. 
 
-행 수준 보안을 테스트 하려면 두 개의 사용자 계정을 만듭니다.    
+Create two user accounts to test the row level security:    
    
-```   
-USE AdventureWorks2014;   
-GO   
+```   
+USE AdventureWorks2014;   
+GO   
    
-CREATE USER Manager WITHOUT LOGIN;     
+CREATE USER Manager WITHOUT LOGIN;     
    
-CREATE USER SalesPerson280 WITHOUT LOGIN;    
-```   
+CREATE USER SalesPerson280 WITHOUT LOGIN;    
+```   
 
-읽기 액세스 권한을 부여 합니다 `Sales.SalesOrderHeader` 테이블 모두에 게:    
+Grant read access on the `Sales.SalesOrderHeader` table to both users:    
    
-```   
-GRANT SELECT ON Sales.SalesOrderHeader TO Manager;      
-GRANT SELECT ON Sales.SalesOrderHeader TO SalesPerson280;    
-```   
+```   
+GRANT SELECT ON Sales.SalesOrderHeader TO Manager;      
+GRANT SELECT ON Sales.SalesOrderHeader TO SalesPerson280;    
+```   
    
-새 스키마 및 인라인 테이블 반환 함수를 만듭니다. 에 1을 반환 하는 함수를 `SalesPersonID` 열 ID와 일치할는 `SalesPerson` 로그인 또는 쿼리를 실행 하는 사용자가 Manager 사용자 경우.   
+Create a new schema and inline table-valued function. The function returns 1 when a row in the `SalesPersonID` column matches the ID of a `SalesPerson` login or if the user executing the query is the Manager user.   
    
-```     
+```     
 CREATE SCHEMA Security;   
 GO   
    
@@ -131,66 +131,63 @@ WITH SCHEMABINDING
 AS     
    RETURN SELECT 1 AS fn_securitypredicate_result    
 WHERE ('SalesPerson' + CAST(@SalesPersonId as VARCHAR(16)) = USER_NAME())     
-    OR (USER_NAME() = 'Manager');    
-```   
+    OR (USER_NAME() = 'Manager');    
+```   
 
-필터 및 테이블에 대 한 차단 조건자로 함수를 추가 하는 보안 정책을 만듭니다.  
+Create a security policy adding the function as both a filter and a block predicate on the table:  
 
 ```
-CREATE SECURITY POLICY SalesFilter   
-ADD FILTER PREDICATE Security.fn_securitypredicate(SalesPersonID)    
-  ON Sales.SalesOrderHeader,   
-ADD BLOCK PREDICATE Security.fn_securitypredicate(SalesPersonID)    
-  ON Sales.SalesOrderHeader   
+보안 정책 SalesFilter 만들기   
+필터 조건자 Security.fn_securitypredicate(SalesPersonID) 추가    
+  Sales.SalesOrderHeader에   
+차단 조건자 Security.fn_securitypredicate(SalesPersonID) 추가    
+  Sales.SalesOrderHeader에   
 WITH (STATE = ON);   
 ```
 
-다음 쿼리를 실행 합니다 `SalesOrderHeader` 각 사용자 테이블입니다. 확인 `SalesPerson280` 95는 자신의 판매 하 고 있는 행만 표시 합니다 `Manager` 테이블의 모든 행을 볼 수 있습니다.  
+Execute the following to query the `SalesOrderHeader` table as each user. Verify that `SalesPerson280` only sees the 95 rows from their own sales and that the `Manager` can see all the rows in the table.  
 
 ```    
-EXECUTE AS USER = 'SalesPerson280';   
-SELECT * FROM Sales.SalesOrderHeader;    
-REVERT; 
+사용자로 실행 = 'SalesPerson280';   
+선택 * Sales.SalesOrderHeader;에서    
+되돌리기; 
  
-EXECUTE AS USER = 'Manager';   
-SELECT * FROM Sales.SalesOrderHeader;   
-REVERT;   
+사용자로 실행 = 'Manager';   
+선택 * Sales.SalesOrderHeader;에서   
+되돌리기;   
 ```
  
-정책을 사용하지 않도록 보안 정책을 변경합니다.  이제 두 사용자는 모든 행을 액세스할 수 있습니다. 
+Alter the security policy to disable the policy.  Now both users can access all rows. 
 
 ```
-ALTER SECURITY POLICY SalesFilter   
-WITH (STATE = OFF);    
+보안 정책 SalesFilter ALTER   
+사용 하 여 (상태 = OFF).    
 ``` 
 
 
-## <a name="enable-dynamic-data-masking"></a>동적 데이터 마스킹 설정
+## Enable dynamic data masking
 
-[동적 데이터 마스킹](../relational-databases/security/dynamic-data-masking.md) 완전히 또는 부분적으로 특정 열을 마스킹하 여 응용 프로그램의 사용자에 게 중요 한 데이터 노출을 제한할 수 있습니다. 
+[Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md) enables you to limit the exposure of sensitive data to users of an application by fully or partially masking certain columns. 
 
-사용 하 여는 `ALTER TABLE` 문에 추가 하는 마스킹 함수를 추가 합니다 `EmailAddress` 열에는 `Person.EmailAddress` 테이블: 
+Use an `ALTER TABLE` statement to add a masking function to the `EmailAddress` column in the `Person.EmailAddress` table: 
  
 ```
-USE AdventureWorks2014;
-GO
-ALTER TABLE Person.EmailAddress    
-ALTER COLUMN EmailAddress    
-ADD MASKED WITH (FUNCTION = 'email()');
+사용 하 여 AdventureWorks2014; 이동 ALTER TABLE Person.EmailAddress     ALTER 열 EmailAddress    
+와 마스크 추가 (함수 = ' email()');
 ``` 
  
-새 사용자를 만듭니다 `TestUser` 사용 하 여 `SELECT` 테이블에 대 한 권한으로 쿼리를 실행 한 다음 `TestUser` 마스킹된 데이터를 보려면:   
+Create a new user `TestUser` with `SELECT` permission on the table, then execute a query as `TestUser` to view the masked data:   
 
 ```  
-CREATE USER TestUser WITHOUT LOGIN;   
-GRANT SELECT ON Person.EmailAddress TO TestUser;    
+사용자 TestUser 만들 로그인 없이   
+권한 부여 선택 ON Person.EmailAddress TestUser; 하려면    
  
-EXECUTE AS USER = 'TestUser';   
-SELECT EmailAddressID, EmailAddress FROM Person.EmailAddress;       
-REVERT;    
+사용자로 실행 = 'TestUser';   
+선택 EmailAddressID, EmailAddress Person.EmailAddress;에서       
+되돌리기;    
 ```
  
-마스킹 함수에서 첫 번째 레코드에 메일 주소 변경 되는지 확인 합니다.
+Verify that the masking function changes the email address in the first record from:
   
 |EmailAddressID |EmailAddress |  
 |----|---- |   
@@ -203,88 +200,81 @@ into
 |1 |kXXX@XXXX.com |   
 
 
-## <a name="enable-transparent-data-encryption"></a>투명한 데이터 암호화 사용
+## Enable Transparent Data Encryption
 
-데이터베이스에 대 한 위협을 하드 드라이브에서 데이터베이스 파일을 도용는 누군가가 위험이 초래 됩니다. 이 파일 (예: 랩톱)를 포함 하는 컴퓨터의 도용 또는 문제 직원의 동작을 통해 시스템에 대 한 관리자 권한 액세스를 가져오는 경우가 침입을 사용 하 여 발생할 수 있습니다.
+One threat to your database is the risk that someone will steal the database files off of your hard-drive. This could happen with an intrusion that gets elevated access to your system, through the actions of a problem employee, or by theft of the computer containing the files (such as a laptop).
 
-Transparent Data Encryption (TDE)는 하드 드라이브에 저장 된 데이터 파일을 암호화 합니다. Master 데이터베이스는 SQL Server 데이터베이스 엔진에 암호화 키를 있으므로 데이터베이스 엔진 데이터를 조작할 수 있습니다. 키에 액세스 하지 않고 데이터베이스 파일을 읽을 수 없습니다. 고급 관리자를 관리 하 고 백업 하 고 데이터베이스를 이동할 수 있지만 선택한 사람에 의해서만 키를 다시 만들 수 있습니다. TDE를 구성 하는 경우는 `tempdb` 데이터베이스도 자동으로 암호화 됩니다. 
+Transparent Data Encryption (TDE) encrypts the data files as they are stored on the hard drive. The master database of the SQL Server database engine has the encryption key, so that the database engine can manipulate the data. The database files cannot be read without access to the key. High-level administrators can manage, backup, and recreate the key, so the database can be moved, but only by selected people. When TDE is configured, the `tempdb` database is also automatically encrypted. 
 
-데이터베이스 엔진 데이터를 읽을 수 있으므로 투명 한 데이터 암호화 직접 메모리를 읽을 하거나 관리자 계정을 통해 SQL Server에 액세스할 수 있는 컴퓨터의 관리자가 무단된 액세스 로부터 보호 하지 않습니다.
+Since the Database Engine can read the data, Transparent Data Encryption does not protect against unauthorized access by administrators of the computer who can directly read memory, or access SQL Server through an administrator account.
 
-### <a name="configure-tde"></a>TDE를 구성 합니다.
+### Configure TDE
 
-- 마스터 키 만들기
-- 마스터 키로 보호되는 인증서를 만들거나 얻기
-- 데이터베이스 암호화 키를 만들고 인증서로 키 보호
-- 암호화를 사용하도록 데이터베이스 설정
+- Create a master key
+- Create or obtain a certificate protected by the master key
+- Create a database encryption key and protect it by the certificate
+- Set the database to use encryption
 
-TDE를 구성 하려면 `CONTROL` master 데이터베이스에 대 한 권한 및 `CONTROL` 사용자 데이터베이스에 대 한 권한이 있습니다. 일반적으로 관리자는 TDE를 구성합니다. 
+Configuring TDE requires `CONTROL` permission on the master database and `CONTROL` permission on the user database. Typically an administrator configures TDE. 
 
-다음 예에서는 `AdventureWorks2014` 라는 서버에 설치된 인증서를 사용하여 `MyServerCert`데이터베이스를 암호화하고 암호를 해독하는 방법을 보여 줍니다.
+The following example illustrates encrypting and decrypting the `AdventureWorks2014` database using a certificate installed on the server named `MyServerCert`.
 
 
 ```
 USE master;  
 GO  
 
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**********';  
+암호로 암호화 마스터 키 만들기 = ' * ';  
 GO  
 
-CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'My Database Encryption Key Certificate';  
+만들 인증서 MyServerCert SUBJECT = '내 데이터베이스 암호화 키 인증서';  
 GO  
 
-USE AdventureWorks2014;  
-GO
+사용 하 여 AdventureWorks2014;   이동
   
 CREATE DATABASE ENCRYPTION KEY  
-WITH ALGORITHM = AES_256  
-ENCRYPTION BY SERVER CERTIFICATE MyServerCert;  
+= AES_256 알고리즘을 사용 하 여  
+서버 인증서 MyServerCert; 암호화  
 GO
   
 ALTER DATABASE AdventureWorks2014  
-SET ENCRYPTION ON;   
+입력 시 암호화 설정   
 ```
 
-TDE를 제거 하려면 실행 `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
+To remove TDE, execute `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
 
-암호화 및 암호 해독 작업은 SQL Server가 백그라운드 스레드에서 예약 됩니다. 이 항목의 뒷부분에 나오는 카탈로그 뷰 및 동적 관리 뷰를 사용하여 이러한 작업의 상태를 볼 수 있습니다.   
+The encryption and decryption operations are scheduled on background threads by SQL Server. You can view the status of these operations using the catalog views and dynamic management views in the list that appears later in this topic.   
 
->  [!WARNING]
->  TDE가 사용된 데이터베이스의 백업 파일도 데이터베이스 암호화 키를 사용하여 암호화됩니다. 따라서 이러한 백업 파일을 복원하려면 데이터베이스 암호화 키를 보호하는 인증서를 사용할 수 있어야 합니다. 즉, 데이터베이스 백업뿐만 아니라 데이터 손실을 방지하기 위해 서버 인증서의 백업도 유지 관리해야 합니다. 인증서를 더 이상 사용할 수 없을 경우 데이터 손실이 발생합니다. 자세한 내용은 [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)을 참조하세요.  
+> [!WARNING]
+>  Backup files of databases that have TDE enabled are also encrypted by using the database encryption key. As a result, when you restore these backups, the certificate protecting the database encryption key must be available. This means that in addition to backing up the database, you have to make sure that you maintain backups of the server certificates to prevent data loss. Data loss will result if the certificate is no longer available. For more information, see [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
 
-TDE에 대 한 자세한 내용은 참조 하세요. [Transparent Data Encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md)합니다.   
+For more information about TDE, see [Transparent Data Encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md).   
 
 
-## <a name="configure-backup-encryption"></a>백업 암호화를 구성 합니다.
-SQL Server에는 백업을 만드는 동안 데이터를 암호화 하는 기능이 있습니다. 암호화 알고리즘 및 암호기 (인증서 또는 비대칭 키)를 지정 하 여 백업을 만들 경우에 암호화 된 백업 파일을 만들 수 있습니다.    
+## Configure backup encryption
+SQL Server has the ability to encrypt the data while creating a backup. By specifying the encryption algorithm and the encryptor (a certificate or asymmetric key) when creating a backup, you can create an encrypted backup file.    
   
-> [!WARNING]  
->  인증서나 비대칭 키를 백업하는 것이 매우 중요하며, 이때 가급적이면 인증서나 비대칭 키를 사용하여 암호화한 백업 파일과 다른 위치에 백업하는 것이 좋습니다. 인증서나 비대칭 키가 없으면 백업을 복원할 수 없으므로 백업 파일을 사용할 수 없게 됩니다. 
+> [!WARNING]  
+>  It is very important to back up the certificate or asymmetric key, and preferably to a different location than the backup file it was used to encrypt. Without the certificate or asymmetric key, you cannot restore the backup, rendering the backup file unusable. 
  
  
-다음 예제에서는 인증서를 만들고 인증서로 보호 되는 백업을 만듭니다.
+The following example creates a certificate, and then creates a backup protected by the certificate.
 ```
-USE master;  
-GO  
-CREATE CERTIFICATE BackupEncryptCert   
-   WITH SUBJECT = 'Database backups';  
-GO 
-BACKUP DATABASE [AdventureWorks2014]  
-TO DISK = N'/var/opt/mssql/backups/AdventureWorks2014.bak'  
-WITH  
-  COMPRESSION,  
+사용 하 여 마스터;   이동   인증서 BackupEncryptCert 만들기   SUBJECT = '데이터베이스 백업';   데이터베이스 백업 [AdventureWorks2014] 이동   디스크로 N'/var/opt/mssql/backups/AdventureWorks2014.bak ='  
+의 모든 멘션을  
+  압축  
   ENCRYPTION   
    (  
-   ALGORITHM = AES_256,  
-   SERVER CERTIFICATE = BackupEncryptCert  
+   알고리즘 AES_256, =  
+   서버 인증서 BackupEncryptCert =  
    ),  
-  STATS = 10  
+  통계 = 10  
 GO  
 ```
 
-자세한 내용은 [백업 암호화](../relational-databases/backup-restore/backup-encryption.md)를 참조하십시오.
+For more information, see [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md).
 
 
-## <a name="next-steps"></a>다음 단계
+## Next steps
 
-SQL Server의 보안 기능에 대 한 자세한 내용은 참조 [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대 한 보안 센터](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)합니다.
+For more information about the security features of SQL Server, see [Security Center for SQL Server Database Engine and Azure SQL Database](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).

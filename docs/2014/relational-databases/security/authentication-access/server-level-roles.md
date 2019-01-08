@@ -22,12 +22,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2df9244f042098be8b0e7898b70254a2b4c50d85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 714bfb68234a10a61b8ed41651da4f9f7037320e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072653"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351741"
 ---
 # <a name="server-level-roles"></a>서버 수준 역할
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 서버에 대한 사용 권한을 쉽게 관리할 수 있도록 서버 수준 역할을 제공합니다. 서버 역할은 다른 보안 주체를 그룹화하는 보안 주체입니다. 서버 수준 역할은 서버 측 사용 권한 범위에 속합니다. *역할* 은 Windows 운영 체제의 *그룹* 과 같습니다.  
@@ -54,10 +54,10 @@ ms.locfileid: "48072653"
 |public|모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인은 public 서버 역할에 속합니다. 서버 보안 주체에게 보안 개체에 대한 특정 사용 권한이 부여되지 않았거나 거부된 경우 사용자는 해당 개체에 대해 public으로 부여된 사용 권한을 상속 받습니다. 모든 사용자가 개체를 사용할 수 있도록 하려는 경우에만 개체에 public 권한을 할당해야 합니다. public의 멤버 자격은 변경할 수 없습니다.<br /><br /> 참고: public은 다른 역할과는 구현된 방식이 다르지만 public에서 사용 권한을 부여, 거부 또는 취소할 수 있습니다.|  
   
 ## <a name="permissions-of-fixed-server-roles"></a>고정 서버 역할에 대한 사용 권한  
- 각 고정 서버 역할에는 관련된 특정 사용 권한이 있습니다. 서버 역할에 할당된 사용 권한의 차트는 [데이터베이스 엔진 고정 서버 및 고정 데이터베이스 역할](http://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx)(영문)을 참조하세요.  
+ 각 고정 서버 역할에는 관련된 특정 사용 권한이 있습니다. 서버 역할에 할당된 사용 권한의 차트는 [데이터베이스 엔진 고정 서버 및 고정 데이터베이스 역할](https://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx)(영문)을 참조하세요.  
   
 > [!IMPORTANT]  
->  합니다 `CONTROL SERVER` 권한에 유사 하지만 동일 하지는 `sysadmin` 고정된 서버 역할입니다. 권한이 역할 멤버 자격을 의미하지 않으며 역할 멤버 자격이 있다고 해서 사용 권한이 부여되는 것도 아닙니다. 예를 들어 `CONTROL SERVER`가 `sysadmin` 고정 서버 역할의 멤버 자격을 의미하지는 않습니다. 그러나 때로 역할과 해당 권한 간에 가장하는 것이 가능할 수 있습니다. 대부분의 `DBCC` 명령 및 많은 시스템 절차를 수행하려면 `sysadmin` 고정 서버 역할의 멤버 자격이 필요합니다. 목록은 필요한 171 개의 시스템 저장 프로시저 `sysadmin` 멤버 자격 다음 블로그 게시물 목록의 경우 Andreas wolter [CONTROL SERVER 및 sysadmin/sa: 사용 권한, 시스템 프로시저, DBCC, 자동 스키마 생성 및 권한 에스컬레이션-주의 사항](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)합니다.  
+>  `CONTROL SERVER` 권한은 `sysadmin` 고정 서버 역할과 유사하지만 동일하지는 않습니다. 권한이 역할 멤버 자격을 의미하지 않으며 역할 멤버 자격이 있다고 해서 사용 권한이 부여되는 것도 아닙니다. 예를 들어 `CONTROL SERVER`가 `sysadmin` 고정 서버 역할의 멤버 자격을 의미하지는 않습니다. 그러나 때로 역할과 해당 권한 간에 가장하는 것이 가능할 수 있습니다. 대부분의 `DBCC` 명령 및 많은 시스템 절차를 수행하려면 `sysadmin` 고정 서버 역할의 멤버 자격이 필요합니다. 목록은 필요한 171 개의 시스템 저장 프로시저 `sysadmin` 멤버 자격 다음 블로그 게시물 목록의 경우 Andreas wolter [CONTROL SERVER 및 sysadmin/sa: 사용 권한, 시스템 프로시저, DBCC, 자동 스키마 생성 및 권한 에스컬레이션-주의 사항](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)합니다.  
   
 ## <a name="server-level-permissions"></a>서버 수준 사용 권한  
  사용자 정의 서버 역할에는 서버 수준 사용 권한만 추가할 수 있습니다. 서버 수준 사용 권한을 나열하려면 다음 문을 실행하세요. 서버 수준 사용 권한은 다음과 같습니다.  
