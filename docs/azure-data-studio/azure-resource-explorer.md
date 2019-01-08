@@ -1,6 +1,8 @@
 ---
-title: Azure 리소스 탐색기를 사용 하 여 Azure SQL 리소스 탐색 | Microsoft Docs
-description: 탐색 및 Azure SQL Server, Azure SQL DB 및 Azure Resource Explorer를 통해 Azure SQL 관리 되는 인스턴스를 관리 하는 방법에 알아봅니다.
+title: Azure 리소스 탐색기를 사용 하 여 Azure SQL 리소스 탐색
+titleSuffix: Azure Data Studio
+description: 탐색 및 Azure SQL Server, Azure SQL Database 및 Azure Resource Explorer를 통해 Azure SQL 관리 되는 인스턴스를 관리 하는 방법에 알아봅니다.
+ms.custom: seodec18
 author: yanancai
 ms.author: yanacai
 manager: craigg
@@ -8,14 +10,14 @@ ms.date: 09/24/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.openlocfilehash: 5b969ded699c11414c1822c0cb455ee84dfa212f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: d202a305468f78cf1890533292570ebb56edff12
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356064"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030117"
 ---
-# <a name="explore-azure-sql-resources-with-azure-resource-explorer"></a>Azure 리소스 탐색기를 사용 하 여 Azure SQL 리소스 탐색
+# <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>탐색 및 Azure 리소스 탐색기를 사용 하 여 Azure SQL 리소스 관리
 
 탐색 하 고 Azure SQL Server, Azure SQL database 및 Azure SQL 관리 되는 인스턴스 리소스에서 Azure Resource Explorer를 통해 관리할 수는 방법을 알아보려면이 문서에서는 [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)]합니다.
 

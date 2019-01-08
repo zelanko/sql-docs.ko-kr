@@ -54,12 +54,12 @@ ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b72ef3d7579cdcd8e1d3be83d7caf8d202d1bca7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da1f12da9dc3ff3145e2fc1ea9f592e70cfe0c3c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204843"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374595"
 ---
 # <a name="log-properties"></a>로그 속성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 표에 나열된 로그 서버 속성을 사용할 수 있습니다. 추가 서버 속성 및 해당 속성 설정 방법은 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)을 참조하세요.  
@@ -86,11 +86,11 @@ ms.locfileid: "48204843"
  서버가 수행한 작업을 처리하는 동안 속성이 기본값으로 사용되었습니다.  
   
  **ErrorLog\KeyErrorAction**  
- 서버에서 수행할 동작을 지정 하면를 `KeyNotFound` 오류가 발생 합니다. 이 오류에 대한 유효한 응답은 다음과 같습니다.  
+ `KeyNotFound` 오류가 발생할 때 서버에서 수행하는 동작을 지정합니다. 이 오류에 대한 유효한 응답은 다음과 같습니다.  
   
--   `ConvertToUnknown` 알 수 없는 멤버로 오류 키 값을 할당 하도록 서버에 지시 합니다.  
+-   `ConvertToUnknown`은 오류 키 값을 알 수 없는 멤버에 할당하도록 서버에 지시합니다.  
   
--   `DiscardRecord` 레코드를 제외 하도록 서버를 알려 줍니다.  
+-   `DiscardRecord`는 레코드를 제외하도록 서버에 지시합니다.  
   
  **ErrorLog\KeyErrorLogFile**  
  서비스 계정이 읽기-쓰기 권한을 가지고 있는 폴더에 있는 사용자 정의 파일 이름이며, 이 파일의 확장명은 .log여야 합니다. 이 로그 파일에는 처리 중에 생성된 오류만 포함됩니다. 보다 자세한 정보가 필요한 경우 비행 레코더를 사용하십시오.  
@@ -106,22 +106,22 @@ ms.locfileid: "48204843"
 -   `StopLogging`은 오류 제한에 도달하는 경우 오류 기록을 중지하되 처리를 계속하도록 서버에 알려 줍니다.  
   
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
- 서버에서 수행할 동작을 지정 하면를 `KeyNotFound` 오류가 발생 합니다. 이 오류에 대한 유효한 응답은 다음과 같습니다.  
+ `KeyNotFound` 오류가 발생할 때 서버에서 수행하는 동작을 지정합니다. 이 오류에 대한 유효한 응답은 다음과 같습니다.  
   
--   `IgnoreError` 계속 하도록 서버에 지시 하지 않고 오류를 기록 하거나 키 오류 제한에 대해 계산 처리 합니다. 오류를 무시하기만 하면 오류 개수에 추가하거나 화면 또는 로그 파일에 기록하지 않고 처리가 계속됩니다. 문제의 레코드에 데이터 무결성 문제가 있어서 데이터베이스에 레코드를 추가할 수 없습니다. 레코드를 삭제 하거나 알 수 없는 멤버를 기준으로 집계를 `KeyErrorAction` 속성입니다.  
+-   `IgnoreError`는 오류를 기록하거나 키 오류 제한에 대해 오류 개수를 계산하지 않고 처리를 계속하도록 서버에 지시합니다. 오류를 무시하기만 하면 오류 개수에 추가하거나 화면 또는 로그 파일에 기록하지 않고 처리가 계속됩니다. 문제의 레코드에 데이터 무결성 문제가 있어서 데이터베이스에 레코드를 추가할 수 없습니다. 레코드는 `KeyErrorAction` 속성으로 결정된 대로 삭제되거나 알 수 없는 멤버에 집계됩니다.  
   
 -   `ReportAndContinue`는 오류를 기록하고 키 오류 제한에 오류 수를 계산하고 처리를 계속하도록 서버에 알려 줍니다. 오류를 발생시키는 레코드는 삭제되거나 알 수 없는 멤버로 변환됩니다.  
   
 -   `ReportAndStop`은 키 오류 제한에 관계없이 오류를 기록하고 즉시 처리를 중지하도록 서버에 알려 줍니다. 오류를 발생시키는 레코드는 삭제되거나 알 수 없는 멤버로 변환됩니다.  
   
  **ErrorLog\ LogErrorTypes\KeyDuplicate**  
- 중복 키가 있을 때 서버가 수행하는 동작을 지정합니다. 유효한 값은 `IgnoreError` 오류가 발생 하지 않은 것 처럼 처리를 계속 하려면 `ReportAndContinue` 오류 로그를 처리를 계속 하려면 및 `ReportAndStop` 를 오류를 로깅하고 오류 개수가 오류 제한에 미만인 경우에 즉시 처리를 중지 합니다.  
+ 중복 키가 있을 때 서버가 수행하는 동작을 지정합니다. 유효한 값에는 오류가 발생하지 않은 것처럼 처리를 계속하는 `IgnoreError`, 오류를 기록하고 처리를 계속하는 `ReportAndContinue`, 오류를 기록하고 오류 개수가 오류 제한에 못 미치더라도 처리를 즉시 중지하는 `ReportAndStop`이 포함됩니다.  
   
  **ErrorLog\ LogErrorTypes\NullKeyConvertedToUnknown**  
- null 키가 알 수 없는 멤버로 변환된 경우 서버에서 수행하는 동작을 지정합니다. 유효한 값은 `IgnoreError` 오류가 발생 하지 않은 것 처럼 처리를 계속 하려면 `ReportAndContinue` 오류 로그를 처리를 계속 하려면 및 `ReportAndStop` 를 오류를 로깅하고 오류 개수가 오류 제한에 미만인 경우에 즉시 처리를 중지 합니다.  
+ null 키가 알 수 없는 멤버로 변환된 경우 서버에서 수행하는 동작을 지정합니다. 유효한 값에는 오류가 발생하지 않은 것처럼 처리를 계속하는 `IgnoreError`, 오류를 기록하고 처리를 계속하는 `ReportAndContinue`, 오류를 기록하고 오류 개수가 오류 제한에 못 미치더라도 처리를 즉시 중지하는 `ReportAndStop`이 포함됩니다.  
   
  **ErrorLog\ LogErrorTypes\NullKeyNotAllowed**  
- 서버에서 수행할 동작을 지정 하면 `NullProcessing` 로 설정 된 `Error` 차원 특성에 대 한 합니다. null 값이 지정된 특성에서 허용되지 않는 경우 오류가 생성됩니다. 이 오류 구성 속성은 오류를 보고하고 오류 제한에 도달할 때까지 처리를 계속하는 다음 단계를 알려줍니다. 유효한 값은 `IgnoreError` 오류가 발생 하지 않은 것 처럼 처리를 계속 하려면 `ReportAndContinue` 오류 로그를 처리를 계속 하려면 및 `ReportAndStop` 를 오류를 로깅하고 오류 개수가 오류 제한에 미만인 경우에 즉시 처리를 중지 합니다.  
+ 차원 특성에 대해 `NullProcessing`이 `Error`로 설정된 경우 서버에서 수행하는 동작을 지정합니다. null 값이 지정된 특성에서 허용되지 않는 경우 오류가 생성됩니다. 이 오류 구성 속성은 오류를 보고하고 오류 제한에 도달할 때까지 처리를 계속하는 다음 단계를 알려줍니다. 유효한 값에는 오류가 발생하지 않은 것처럼 처리를 계속하는 `IgnoreError`, 오류를 기록하고 처리를 계속하는 `ReportAndContinue`, 오류를 기록하고 오류 개수가 오류 제한에 못 미치더라도 처리를 즉시 중지하는 `ReportAndStop`이 포함됩니다.  
   
  **ErrorLog\ LogErrorTypes\CalculationError**  
  서버가 수행한 작업을 처리하는 동안 속성이 기본값으로 사용되었습니다.  
@@ -172,7 +172,7 @@ ms.locfileid: "48204843"
  이 속성의 기본값은 빈 문자열이며 이후 FlightRecorderTraceDef.xml이 기본값이 됩니다.  
   
 ## <a name="query-log"></a>쿼리 로그  
- **적용 대상:** 다차원 서버 모드에만  
+ **적용 대상:** 다차원 서버 모드에만 적용됩니다.  
   
  **QueryLog\QueryLogFileName**  
  쿼리 로그 파일의 이름을 지정하는 문자열 속성입니다. 이 속성은 데이터베이스 테이블과는 달리 디스크 파일이 로깅용으로 사용되는 경우에만 적용됩니다(기본 동작).  
@@ -199,7 +199,7 @@ ms.locfileid: "48204843"
  이 속성의 기본값은 False로 서버가 로그 테이블을 자동으로 만들지 않고 쿼리 이벤트를 기록하지 않음을 나타냅니다.  
   
 > [!NOTE]  
->  쿼리 로그 구성 방법에 대한 자세한 내용은 [Configuring the Analysis Services Query Log](http://go.microsoft.com/fwlink/?LinkId=81890)(Analysis Services 쿼리 로그 구성)를 참조하세요.  
+>  쿼리 로그 구성 방법에 대한 자세한 내용은 [Configuring the Analysis Services Query Log](https://go.microsoft.com/fwlink/?LinkId=81890)(Analysis Services 쿼리 로그 구성)를 참조하세요.  
   
 ## <a name="trace"></a>Trace  
  **Trace\TraceBackgroundDistributionPeriod**  

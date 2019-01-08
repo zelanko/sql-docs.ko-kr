@@ -13,12 +13,12 @@ ms.assetid: a8ae33b2-1883-4785-922b-ea0e31c0b37a
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: fa7e74d94fba34ebb3ae1e11ccaae308dd14e3e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57d66d48591304d5481cb86c7418ed0ac27051db
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685261"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204942"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>변환된 데이터베이스 개체를 SQL Server로 로드(OracleToSQL)
 Oracle 스키마 변환 하면 SQL server, SQL Server에 결과 데이터베이스 개체를 로드할 수 있습니다. 개체를 만드는 SSMA를 포함할 수 있습니다 또는 개체를 스크립팅 합니다 하 고 직접 스크립트를 실행할 수 있습니다. 또한 SSMA 대상 메타 데이터를 SQL Server 데이터베이스의 실제 내용으로 업데이트할 수 있습니다.  
@@ -99,7 +99,7 @@ SQL Server 개체 정의 하나 이상의 스크립트 저장 한 후 사용할 
   
 4.  문 집합을 실행 하려면 쿼리 편집기 창에 문을 선택 하 고 다음 키를 누릅니다 합니다 **F5** 키입니다.  
   
-쿼리 편집기를 사용 하 여 스크립트를 실행 하는 방법에 대 한 자세한 내용은 참조 하세요. "[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리"에서 SQL Server 온라인 설명서.  
+쿼리 편집기를 사용 하 여 스크립트를 실행 하는 방법에 대 한 자세한 내용은 참조 하세요. " [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리"에서 SQL Server 온라인 설명서.  
   
 사용 하 여 명령줄에서 스크립트를 실행할 수도 있습니다는 **sqlcmd** 유틸리티 및 SQL Server 에이전트에서. 에 대 한 자세한 내용은 **sqlcmd**, SQL Server 온라인 설명서에서 "sqlcmd 유틸리티"를 참조 하세요. SQL Server 에이전트에 대 한 자세한 내용은 "Automating Administrative Tasks (SQL Server Agent)" SQL Server 온라인 설명서의 참조 하세요.  
   

@@ -5,8 +5,7 @@ ms.date: 08/29/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changepublication
@@ -17,12 +16,12 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e80f468f917a240981fc6e4c16df862d72084541
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7b247e6869d3eea05325fd9020ee6a073540deb4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670172"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209132"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,14 +53,14 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   
  이 표에서는 변경할 수 있는 게시의 속성 및 그 속성의 값에 대한 제한에 대해 설명합니다.  
   
-|속성|값|설명|  
+|속성|값|Description|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|지정된 된 게시에 대 한 익명 구독을 만들 수 있습니다 하 고 *immediate_sync* 수도 있어야 **true**합니다. 피어 투 피어 게시의 경우 변경할 수 없습니다.|  
 ||**false**|지정된 게시에 대해 익명 구독을 만들 수 없습니다. 피어 투 피어 게시의 경우 변경할 수 없습니다.|  
 |**allow_initialize_from_backup**|**true**|구독자는 초기 스냅숏이 아닌 백업으로부터 이 게시에 대한 구독을 초기화할 수 있습니다. 이 속성에 대 한 변경할 수 없습니다 이외[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시 합니다.|  
 ||**false**|구독자는 초기 스냅숏을 사용해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시의 경우에는 이 속성을 변경할 수 없습니다.|  
-|**allow_partition_switch**|**true**|ALTER TABLE…SWITCH 문을 게시된 데이터베이스에 대해 실행할 수 있습니다. 자세한 내용은 [분할 테이블 및 인덱스 복제](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)를 참조하세요.|  
-||**false**|ALTER TABLE…SWITCH 문을 게시된 데이터베이스에 대해 실행할 수 없습니다.|  
+|**allow_partition_switch**|**true**|ALTER TABLE... SWITCH 문은 게시 된 데이터베이스에 대해 실행할 수 있습니다. 자세한 내용은 [분할 테이블 및 인덱스 복제](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)를 참조하세요.|  
+||**false**|ALTER TABLE... SWITCH 문은 게시 된 데이터베이스에 대해 실행할 수 없습니다.|  
 |**allow_pull**|**true**|지정된 게시에 대해 끌어오기 구독을 허용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시의 경우에는 이 속성을 변경할 수 없습니다.|  
 ||**false**|지정된 게시에 대해 끌어오기 구독을 허용하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시의 경우에는 이 속성을 변경할 수 없습니다.|  
 |**allow_push**|**true**|지정된 게시에 대해 밀어넣기 구독을 허용합니다.|  
@@ -80,7 +79,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**description**||게시에 관해 설명하는 선택적인 항목입니다.|  
 |**enabled_for_het_sub**|**true**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자를 지원하도록 게시를 설정합니다. **enabled_for_het_sub** 게시에 구독이 있는 경우에 변경할 수 없습니다. 실행 해야 [복제 저장 프로시저 (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) 설정 하기 전에 다음 요구 사항을 준수 하기 위해 **enabled_for_het_sub** true로 합니다.<br /> - **allow_queued_tran** 있어야 **false**합니다.<br /> - **allow_sync_tran** 있어야 **false**합니다.<br /> 변경 **enabled_for_het_sub** 하 **true** 기존 게시 설정이 변경 될 수 있습니다. 자세한 내용은 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)을(를) 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시의 경우에는 이 속성을 변경할 수 없습니다.|  
 ||**false**|게시는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자를 지원하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시의 경우에는 이 속성을 변경할 수 없습니다.|  
-|**enabled_for_internet**|**true**|인터넷에서 게시를 사용할 수 있으며 FTP(파일 전송 프로토콜)를 사용하여 구독자로 스냅숏 파일을 전송할 수 있습니다. 게시의 동기화 파일은 다음 디렉터리에 저장 합니다: C:\Program Files\Microsoft SQL server\mssql\repldata\ftp 디렉터리로 이동 됩니다. *ftp_address* NULL 일 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시의 경우에는 이 속성을 변경할 수 없습니다.|  
+|**enabled_for_internet**|**true**|인터넷에서 게시를 사용할 수 있으며 FTP(파일 전송 프로토콜)를 사용하여 구독자로 스냅숏 파일을 전송할 수 있습니다. 게시용 동기화 파일은 C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp 디렉터리에 저장됩니다. *ftp_address* NULL 일 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시의 경우에는 이 속성을 변경할 수 없습니다.|  
 ||**false**|인터넷에서 게시를 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시의 경우에는 이 속성을 변경할 수 없습니다.|  
 |**enabled_for_p2p**|**true**|게시는 피어 투 피어 복제를 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시의 경우에는 이 속성을 변경할 수 없습니다.<br /> 설정할 **enabled_for_p2p** 하 **true**, 다음과 같은 제한 사항이 적용:<br /> - **allow_anonymous** 있어야 **false**<br /> - **allow_dts** 있어야 **false**합니다.<br /> - **allow_initialize_from_backup** 있어야 **true**<br /> - **allow_queued_tran** 있어야 **false**합니다.<br /> - **allow_sync_tran** 있어야 **false**합니다.<br /> - **enabled_for_het_sub** 있어야 **false**합니다.<br /> - **independent_agent** 있어야 **true**합니다.<br /> - **repl_freq** 있어야 **연속**합니다.<br /> - **replicate_ddl** 있어야 **1**합니다.|  
 ||**false**|게시는 피어 투 피어 복제를 지원하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시의 경우에는 이 속성을 변경할 수 없습니다.|  
@@ -93,19 +92,19 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|새 구독이 있는 경우에만 동기화 파일이 만들어집니다. 구독자는 스냅숏 에이전트가 시작되어 완료될 때까지는 구독 이후의 동기화 파일을 받을 수 없습니다.|  
 |**independent_agent**|**true**|게시에는 전용 배포 에이전트가 있습니다.|  
 ||**false**|게시는 공유 배포 에이전트를 사용하며 게시/구독 데이터베이스 쌍마다 공유 에이전트가 있습니다.|  
-|**p2p_continue_onconflict**|**true**|충돌이 감지되면 배포 에이전트에서 변경 내용을 계속 처리합니다.<br /> **주의:** 의 기본값을 사용 하는 것이 좋습니다 `FALSE`합니다. 이 옵션 설정 하면 `TRUE`, 배포 에이전트에서 가장 높은 송신자 ID를 포함 하는 노드로에서 충돌 하는 행을 적용 하 여 토폴로지의 데이터를 일치 시킵니다. 이 방법으로 데이터가 일치하게 되지 않는 경우도 있습니다. 충돌이 검색된 후 토폴로지의 일관성을 확인해야 합니다. 자세한 내용은 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)의 "충돌 처리"를 참조하십시오.|  
+|**p2p_continue_onconflict**|**true**|충돌이 감지되면 배포 에이전트에서 변경 내용을 계속 처리합니다.<br /> **주의:** 기본값을 사용 하는 것이 좋습니다 `FALSE`합니다. 이 옵션 설정 하면 `TRUE`, 배포 에이전트에서 가장 높은 송신자 ID를 포함 하는 노드로에서 충돌 하는 행을 적용 하 여 토폴로지의 데이터를 일치 시킵니다. 이 방법으로 데이터가 일치하게 되지 않는 경우도 있습니다. 충돌이 검색된 후 토폴로지의 일관성을 확인해야 합니다. 자세한 내용은 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)의 "충돌 처리"를 참조하십시오.|  
 ||**false**|충돌이 감지되면 배포 에이전트에서 변경 내용 처리를 중지합니다.|  
 |**post_snapshot_script**||초기 동기화 동안 다른 모든 복제된 개체 스크립트 및 데이터를 적용한 후에 배포 에이전트가 실행하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일의 위치를 지정합니다.|  
 |**pre_snapshot_script**||초기 동기화 동안 다른 모든 복제된 개체 스크립트 및 데이터를 적용하기 전에 배포 에이전트가 실행하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일의 위치를 지정합니다.|  
 |**publish_to_ActiveDirectory**|**true**|이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해서만 지원됩니다. 더 이상 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory에 게시 정보를 추가할 수 없습니다.|  
 ||**false**|Active Directory에서 게시 정보를 제거합니다.|  
-|**queue_type**|**sql**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 트랜잭션을 저장합니다. 이 속성은 활성 구독이 없을 경우에만 변경될 수 있습니다.<br /><br /> 참고: 사용에 대 한 지원 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 메시지 큐가 중단 되었습니다. 값을 지정 **msmq** 에 대 한 *값* 오류가 발생 합니다.|  
+|**queue_type**|**sql**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 트랜잭션을 저장합니다. 이 속성은 활성 구독이 없을 경우에만 변경될 수 있습니다.<br /><br /> 참고: MSMQ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing) 사용이 더 이상 지원되지 않습니다. 값을 지정 **msmq** 에 대 한 *값* 오류가 발생 합니다.|  
 |**repl_freq**|**연속**|모든 로그 기반의 트랜잭션에 대한 출력을 게시합니다.|  
 ||**스냅숏**|예약된 동기화 이벤트만 게시합니다.|  
 |**replicate_ddl**|**1**|게시자에서 실행된 DDL(데이터 정의 언어) 문이 복제됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시의 경우에는 이 속성을 변경할 수 없습니다.|  
 ||**0**|DDL 문은 복제되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시의 경우에는 이 속성을 변경할 수 없습니다. 피어 투 피어 복제를 사용할 때는 스키마 변경 내용의 복제를 해제할 수 없습니다.|  
-|**replicate_partition_switch**|**true**|게시된 데이터베이스에 대해 실행되는 ALTER TABLE…SWITCH 문을 구독자에 복제해야 합니다. 이 옵션을 사용할 경우에만 *allow_partition_switch* 가 TRUE로 설정 합니다. 자세한 내용은 [분할 테이블 및 인덱스 복제](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)를 참조하세요.|  
-||**false**|ALTER TABLE…SWITCH 문을 구독자에 복제하면 안 됩니다.|  
+|**replicate_partition_switch**|**true**|ALTER TABLE... 게시 데이터베이스에 대해 실행 되는 스위치 문은 구독자에 복제 되어야 합니다. 이 옵션을 사용할 경우에만 *allow_partition_switch* 가 TRUE로 설정 합니다. 자세한 내용은 [분할 테이블 및 인덱스 복제](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)를 참조하세요.|  
+||**false**|ALTER TABLE... SWITCH 문을 구독자에 복제 되어야 합니다.|  
 |**retention**||**int** 구독 작업에 대 한 시간 보존 기간을 나타내는입니다. 구독이 보존 기간 동안 활성화되지 않으면 제거됩니다.|  
 |**snapshot_in_defaultfolder**|**true**|스냅숏 파일이 기본 스냅숏 폴더에 저장됩니다. 하는 경우 *alt_snapshot_folder*옵션도 지정 된 경우에 스냅숏 파일이 기본 및 대체 위치에 저장 됩니다.|  
 ||**false**|스냅숏 파일에서 지정한 대체 위치에 저장 됩니다 *alt_snapshot_folder*합니다.|  
@@ -132,7 +131,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   - **1** 문서 변경으로 인해 기존 구독이 다시 초기화 되도록 지정 하며 구독을 다시 초기화할 수에 대 한 사용 권한을 부여 합니다.  
   
 [ **@publisher** = ] **'***publisher***'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외의 게시자를 지정합니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+ 지정 된 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
   > [!NOTE]  
   >  *게시자* 해서는 안에서 아티클 속성을 변경 하는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  

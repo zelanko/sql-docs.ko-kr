@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8b70cb96a7ed5f0b7df229a0d5de59e14a4e6f77
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 33618c019e59c044e681c45130130adc79d53122
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983695"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414840"
 ---
 # <a name="data-types-supported-in-tabular-models"></a>테이블 형식 모델에서 지 원하는 데이터 형식
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "38983695"
   
  \* 큰 숫자 값이 포함 된 데이터를 가져오려는 경우 다음 오류로 인해 가져오기가 실패할 수 있습니다.  
   
- 메모리 내 데이터베이스 오류:는 '\<열 이름 >'의 열은 '\<테이블 이름 >' 테이블에 값이 있는 ' 1.7976931348623157 e + 308'는 지원 되지 않습니다. 작업이 취소 되었습니다.  
+ 메모리 내 데이터베이스 오류: '\<열 이름 >'의 열은 '\<테이블 이름 >' 테이블에 값이 있는 ' 1.7976931348623157 e + 308'는 지원 되지 않습니다. 작업이 취소 되었습니다.  
   
  이 오류는 모델 디자이너에서 해당 값을 사용하여 null을 나타내기 때문에 발생합니다. 다음 목록의 값은 앞에서 말한 null 값과 동의어입니다.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "38983695"
   
  각 DAX 함수에는 입력 및 출력으로 사용되는 데이터 형식과 관련된 특정 요구 사항이 있습니다. 예를 들어 정수와 날짜를 인수로 사용해야 하는 함수도 있고 텍스트 또는 테이블을 인수로 사용해야 하는 함수도 있습니다.  
   
- 인수로 지정 하는 열의 데이터가 함수에 필요한 데이터 형식과 호환 되지 않으면 대부분의 경우에서 DAX는 오류를 반환 합니다. 그러나 아무 곳에 나 가능한 DAX 하려고 필요한 데이터 형식으로 데이터를 암시적으로 변환 합니다. 예를 들어:  
+ 인수로 지정 하는 열의 데이터가 함수에 필요한 데이터 형식과 호환 되지 않으면 대부분의 경우에서 DAX는 오류를 반환 합니다. 그러나 아무 곳에 나 가능한 DAX 하려고 필요한 데이터 형식으로 데이터를 암시적으로 변환 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
--   숫자(예: "123")를 문자열로 입력할 수 있습니다. DAX는 문자열을 구문 분석 및 숫자 데이터 형식으로 지정 하려고 합니다.  
+-   예를 들어 "123", 숫자를 문자열로 입력할 수 있습니다. DAX는 문자열을 구문 분석 및 숫자 데이터 형식으로 지정 하려고 합니다.  
   
 -   TRUE + 1을 추가하여 2라는 결과를 얻을 수 있습니다. TRUE가 암시적으로 숫자 1로 변환되어 1+1 연산이 수행되기 때문입니다.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "38983695"
 ||||  
 |-|-|-|  
 |식|DAX|내보내기|  
-|BLANK + BLANK|공백|0(영)|  
+|BLANK + BLANK|공백|0 (영)|  
 |BLANK +5|5|5|  
 |BLANK * 5|공백|0(영)|  
 |5/BLANK|Infinity|Error|  
@@ -155,7 +155,7 @@ ms.locfileid: "38983695"
 |TRUE OR BLANK|TRUE|TRUE|  
 |TRUE AND BLANK|FALSE|TRUE|  
 |BLANK OR BLANK|공백|Error|  
-|BLANK AND BLANK|BLANK|Error|  
+|BLANK AND BLANK|공백|Error|  
   
  특정 함수 또는 연산자에서 공백을 처리하는 방법은 [DAX 함수 참조](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)섹션에서 각 DAX 함수에 대한 항목을 참조하세요.  
   

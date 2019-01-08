@@ -1,5 +1,5 @@
 ---
-title: 태스크 6:에서 값 가져오기는 Cleanse Supplier List 프로젝트 | Microsoft Docs
+title: '태스크 6: 값 가져오기는 Cleanse Supplier List 프로젝트 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d0eff880132e33cd8d73e7a1faa6dc6649b2caa2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ac003c18ae36f4cd2d58a1355df16d6d2f9b066
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137643"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359855"
 ---
 # <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>태스크 6: Cleanse Supplier List 프로젝트에서 값 가져오기
-  이 작업에서는 정리 프로세스 중에 수집된 데이터 품질 기술 자료를 가져옵니다. 자세한 내용은 [정리 프로젝트 값을 도메인으로 가져오기](http://msdn.microsoft.com/library/hh479581.aspx) 항목을 참조하십시오. 또한 업데이트된 **Suppliers** 기술 자료를 게시하기 전에 기술 자료를 DQS로 내보냅니다.  
+  이 작업에서는 정리 프로세스 중에 수집된 데이터 품질 기술 자료를 가져옵니다. 자세한 내용은 [정리 프로젝트 값을 도메인으로 가져오기](https://msdn.microsoft.com/library/hh479581.aspx) 항목을 참조하십시오. 또한 업데이트된 **Suppliers** 기술 자료를 게시하기 전에 기술 자료를 DQS로 내보냅니다.  
   
 1.  **DQS 클라이언트**의 기본 페이지에서 **최근 기술 자료** 아래에 있는 **Suppliers** 옆에서 **오른쪽 화살표** 를 클릭하고 **도메인 관리**를 클릭합니다.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "48137643"
     |bobby0@adventure-work.com|bobby0@adventure-works.com|  
     |tad0@adventure-work.com|tad0@adventure-works.com|  
   
-6.  **Country** 도메인에 대해 이전의 프로젝트 값 가져오기 단계를 반복하고 **United State** 를 **United States** ('s' 포함)로 수정하기 위해 새 항목이 추가되는 것을 확인합니다.  
+6.  에 대 한 프로젝트 값 가져오기는 이전 단계를 반복 합니다 **국가** 도메인 및 수정 하기 위해 새 항목이 추가 되는 통지 **United State** 하 **미국** (사용 하 여 ' s').  
   
     |값|다음으로 수정|  
     |-----------|----------------|  
-    |United State|United States|  
+    |United State|미국|  
   
 7.  이전 도메인 값을 보려면 **새 항목만 표시** 확인란의 선택을 취소합니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48137643"
   
 10. 자습서 폴더로 이동하고 **파일 이름** 으로 **Suppliers.dqs**를 입력하고 **저장**을 클릭합니다. 이 DQS 파일을 기반으로 사용해서 새로운 기술 자료를 만들 수 있습니다.  
   
-11. **확인** 을 클릭하여 **기술 자료 내보내기 – Suppliers** 메시지 상자를 닫습니다.  
+11. 클릭 **확인** 닫으려면 합니다 **기술 자료 내보내기-Suppliers** 메시지 상자.  
   
 12. **마침** 을 클릭하여 작업을 마칩니다.  
   
@@ -68,6 +68,6 @@ ms.locfileid: "48137643"
 14. 메시지 상자에서 **확인** 을 클릭합니다.  
   
 ## <a name="next-step"></a>다음 단계  
- [3단원: 데이터 일치로 공급자 목록에서 중복 항목 제거](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)  
+ [3 단원: 공급자 목록에서 중복 제거할 데이터 일치](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)  
   
   
