@@ -10,12 +10,12 @@ ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d2be16142733fe7c54558781e6f916d3c17e7484
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a446fd4ce116ee19aa8b38d1ae6d8213e35c16e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717021"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392477"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>프로젝트 설정 (변환) (DB2ToSQL)
 변환 페이지의 **프로젝트 설정** 대화 상자에는 SSMA DB2 구문을 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구문입니다.  
@@ -33,9 +33,9 @@ ms.locfileid: "47717021"
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/낙관적 모드:** 없음  
+**기본/낙관적 모드:** 아니요  
   
-**전체 모드:** 없음  
+**전체 모드:** 아니요  
   
 ## <a name="miscellaneous-options"></a>기타 옵션  
   
@@ -62,20 +62,20 @@ SSMA ROWNUM 식으로 변환, 식 TOP 절 식 뒤에 변환 됩니다. 다음 �
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/전체 모드:** 없음  
+**기본/전체 모드:** 아니요  
   
-**낙관적 모드:** 예  
+**낙관적 모드:** 사용자 계정 컨트롤  
   
 ### <a name="default-schema-mapping"></a>기본 스키마 매핑  
 이 설정은 DB2 스키마를 SQL Server 스키마에 매핑되는 방식을 지정 합니다. 두 옵션은이 설정을 사용할 수 있습니다.  
   
-1.  **데이터베이스에 스키마:** 이 모드는 DB2 스키마 'sch1' 'dbo' SQL Server 데이터베이스 스키마에 SQL Server 'sch1' 기본적으로 매핑할 수 됩니다.  
+1.  **데이터베이스에 스키마:** 이 모드 DB2 스키마에서 'sch1'는 'b o '가 SQL Server 데이터베이스 스키마에 SQL Server 'sch1' 기본적으로 매핑됩니다.  
   
 2.  **스키마를 스키마:** 이 모드는 DB2 스키마 'sch1' 'sch1' SQL Server 스키마에 연결 대화 상자에서 제공 하는 기본 SQL Server 데이터베이스는 기본적으로 매핑할 수 됩니다.  
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/Optimistic/전체 모드:** 데이터베이스 스키마  
+**기본/낙관적/전체 모드:** 데이터베이스 스키마  
   
 ### <a name="conversion-ways-of-merge-statement"></a>MERGE 문의 변환 방법  
   
@@ -88,7 +88,7 @@ SSMA ROWNUM 식으로 변환, 식 TOP 절 식 뒤에 변환 됩니다. 다음 �
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/Optimistic/전체 모드:** 사용 하 여 병합 문  
+**기본/낙관적/전체 모드:** MERGE 문을 사용 하 여  
   
 ### <a name="convert-calls-to-subprograms-that-use-default-arguments"></a>기본 인수를 사용 하는 하위 프로그램에 대 한 호출으로 변환  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 함수는 함수 호출에서 매개 변수 생략을 지원 하지 않습니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 함수 및 프로시저 식이 기본 매개 변수 값으로 지원 하지 않습니다.  
@@ -99,7 +99,7 @@ SSMA ROWNUM 식으로 변환, 식 TOP 절 식 뒤에 변환 됩니다. 다음 �
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/낙관적/전체 모드:** 예  
+**기본/낙관적/전체 모드:** 사용자 계정 컨트롤  
   
 ### <a name="convert-count-function-to-countbig"></a>Count_big은 COUNT 함수 변환  
 2는 COUNT 함수는 2,147,483,647 보다 큰 값을 반환 하는 일을 할 경우<sup>31</sup>-1 COUNT_BIG 함수를 변환 해야 합니다.  
@@ -110,9 +110,9 @@ SSMA ROWNUM 식으로 변환, 식 TOP 절 식 뒤에 변환 됩니다. 다음 �
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/전체 모드:** 예  
+**기본/전체 모드:** 사용자 계정 컨트롤  
   
-**낙관적 모드:** 없음  
+**낙관적 모드:** 아니요  
   
 ### <a name="convert-forall-statement-to-while-statement"></a>FORALL 문이 WHILE 변환할 문  
 SSMA PL/SQL 컬렉션 요소에 FORALL 루프에서 처리 하는 방법을 정의 합니다.  
@@ -123,9 +123,9 @@ SSMA PL/SQL 컬렉션 요소에 FORALL 루프에서 처리 하는 방법을 정�
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/낙관적 모드:** 없음  
+**기본/낙관적 모드:** 아니요  
   
-**전체 모드:** 예  
+**전체 모드:** 사용자 계정 컨트롤  
   
 ### <a name="convert-foreign-keys-with-set-null-referential-action-on-column-that-is-not-null"></a>Convert 외래 키 열에 SET NULL 참조 동작을 사용 하 여 NOT NULL  
 DB2는 NULL 설정 작업을 하지 수행할 수 있습니다 참조 된 열에서 Null 허용 되지 않으므로 외래 키 제약 조건을 만들 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이러한 외래 키 구성을 허용 하지 않습니다.  
@@ -136,7 +136,7 @@ DB2는 NULL 설정 작업을 하지 수행할 수 있습니다 참조 된 열에
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/낙관적/전체 모드:** 없음  
+**기본/낙관적/전체 모드:** 아니요  
   
 ### <a name="convert-function-calls-to-procedure-calls"></a>프로시저 호출에 대 한 함수 호출 변환  
 일부 DB2 자치 트랜잭션을으로 정의 된 함수나 문을 사용할 수 없는 포함 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이러한 경우 SSMA 프로시저 및 함수를 프로시저에 대 한 래퍼를 만듭니다. 변환된 함수를 구현 프로시저를 호출합니다.  
@@ -151,7 +151,7 @@ SSMA는 프로시저에 대 한 호출으로 래퍼 함수에 대 한 호출을 
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/Optimistic/전체 모드:** 가능한 경우  
+**기본/낙관적/전체 모드:** 가능한 경우  
   
 ### <a name="convert-lock-table-statements"></a>잠금이 TABLE 문을 변환 합니다.  
 SSMA는 테이블 힌트에 잠금이 TABLE 문은 많은 변환할 수 있습니다. SSMA SUBPARTITION, 파티션을 포함 하는 모든 잠금이 TABLE 문을 변환할 수 없습니다. @dblink, NOWAIT 절 및 변환 오류 메시지를 사용 하 여 이러한 문이 표시 됩니다.  
@@ -174,7 +174,7 @@ SSMA는 테이블 힌트에 잠금이 TABLE 문은 많은 변환할 수 있습�
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/낙관적/전체 모드:** 예  
+**기본/낙관적/전체 모드:** 사용자 계정 컨트롤  
   
 ### <a name="convert-open-for-statements-for-ref-cursor-out-parameters"></a>REF CURSOR OUT 매개 변수에 대 한 오픈 FOR 문을 변환 합니다.  
 DB2의 오픈 FOR 문의 결과 하위 프로그램의 OUT REF CURSOR 형식의 매개 변수 집합을 반환 하려면 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 저장된 프로시저는 직접 SELECT 문의 결과를 반환 합니다.  
@@ -187,7 +187,7 @@ SSMA는 많은 오픈 FOR 문이 SELECT 문으로 변환할 수 있습니다.
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/낙관적/전체 모드:** 예  
+**기본/낙관적/전체 모드:** 사용자 계정 컨트롤  
   
 ### <a name="convert-record-as-a-list-of-separates-variables"></a>레코드 구분 변수 목록으로 변환  
 SSMA는 특정 구조를 사용 하 여 XML 변수 및 변수 분리에 DB2 레코드를 변환할 수 있습니다.  
@@ -198,7 +198,7 @@ SSMA는 특정 구조를 사용 하 여 XML 변수 및 변수 분리에 DB2 레�
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/낙관적/전체 모드:** 예  
+**기본/낙관적/전체 모드:** 사용자 계정 컨트롤  
   
 ### <a name="convert-substr-function-calls-to-substring-function-calls"></a>SUBSTR 함수 호출을 부분 문자열 함수 호출 변환  
 SSMA를 DB2 SUBSTR 함수 호출을 변환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **substring** 함수 매개 변수 수에 따라 호출 합니다. SSMA SUBSTR 함수 호출을 변환할 수 없습니다. 매개 변수의 수는 없습니다, 경우 SSMA는 사용자 지정 SSMA 함수 호출으로 SUBSTR 함수 호출을 변환 합니다.  
@@ -209,9 +209,9 @@ SSMA를 DB2 SUBSTR 함수 호출을 변환할 수 있습니다 [!INCLUDE[ssNoVer
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/낙관적 모드:** 예  
+**기본/낙관적 모드:** 사용자 계정 컨트롤  
   
-**전체 모드:** 없음  
+**전체 모드:** 아니요  
   
 ### <a name="convert-subtypes"></a>하위 형식 변환  
 SSMA는 PL/SQL 하위 두 가지 방법으로 변환할 수 있습니다.  
@@ -222,7 +222,7 @@ SSMA는 PL/SQL 하위 두 가지 방법으로 변환할 수 있습니다.
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/낙관적/전체 모드:** 없음  
+**기본/낙관적/전체 모드:** 아니요  
   
 ### <a name="convert-synonyms"></a>동의어를 변환 합니다.  
 다음 DB2 개체에 대 한 동의어로 마이그레이션할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
@@ -253,7 +253,7 @@ SSMA는 PL/SQL 하위 두 가지 방법으로 변환할 수 있습니다.
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/낙관적/전체 모드:** 예  
+**기본/낙관적/전체 모드:** 사용자 계정 컨트롤  
   
 ### <a name="convert-tochardate-format"></a>(날짜, 형식) TO_CHAR 변환  
 SSMA는 DB2 TO_CHAR(date, format) sysdb 데이터베이스의 프로시저를 변환할 수 있습니다.  
@@ -264,9 +264,9 @@ SSMA는 DB2 TO_CHAR(date, format) sysdb 데이터베이스의 프로시저를 �
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/Optimistic 모드:** TO_CHAR_DATE 사용 하 여 함수  
+**기본/낙관적 모드:** TO_CHAR_DATE 함수를 사용 하 여  
   
-**전체 모드:** TO_CHAR_DATE_LS 사용 하 여 함수 (NLS 주의)  
+**전체 모드:** TO_CHAR_DATE_LS 함수 (NLS 주의)를 사용 하 여  
   
 ### <a name="convert-transaction-processing-statements"></a>트랜잭션 처리 문을 변환 합니다.  
 SSMA는 DB2 트랜잭션 처리 문을 변환할 수 있습니다.  
@@ -280,7 +280,7 @@ SSMA는 DB2 트랜잭션 처리 문을 변환할 수 있습니다.
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/낙관적/전체 모드:** 예  
+**기본/낙관적/전체 모드:** 사용자 계정 컨트롤  
   
 ### <a name="emulate-db2-null-behavior-in-order-by-clauses"></a>ORDER BY 절에서 null 동작 DB2 에뮬레이션  
 NULL 값에서 다르게 정렬 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 DB2:  
@@ -299,9 +299,9 @@ SSMA는 NULL 값을 검사 하 여 DB2 ORDER BY 동작을 에뮬레이트할 수
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/낙관적 모드:** 없음  
+**기본/낙관적 모드:** 아니요  
   
-**전체 모드:** 예  
+**전체 모드:** 사용자 계정 컨트롤  
   
 ### <a name="emulate-row-count-exceptions-in-select"></a>선택에서 행 개수 예외 에뮬레이트  
 INTO 절을 사용 하 여 SELECT 문의 모든 행을 반환 하지 않으면 DB2 NO_DATA_FOUND 예외를 발생 시킵니다. 문이 두 개 이상의 행을 반환 하는 경우 TOO_MANY_ROWS 예외가 발생 합니다. 변환된 된 문이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 행 수가 하나에서 다른 경우 모든 예외를 발생 하지 않습니다.  
@@ -312,7 +312,7 @@ INTO 절을 사용 하 여 SELECT 문의 모든 행을 반환 하지 않으면 D
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/낙관적/전체 모드:** 예  
+**기본/낙관적/전체 모드:** 사용자 계정 컨트롤  
   
 ### <a name="generate-error-for-dbmssqlparse"></a>DBMS_SQL에 대 한 오류를 생성 합니다. 구문 분석  
   
@@ -322,7 +322,7 @@ INTO 절을 사용 하 여 SELECT 문의 모든 행을 반환 하지 않으면 D
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/낙관적/전체 모드:** 오류  
+**기본/낙관적/전체 모드:** Error  
   
 ### <a name="generate-rowid-column"></a>행 ID 열 생성  
 SSMA에서 테이블을 만들 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 행 ID 열을 만들 수 있습니다. 데이터를 마이그레이션할 때 각 행에 newid () 함수에 의해 생성 된 새 UNIQUEIDENTIFIER 값을 가져옵니다.  
@@ -338,16 +338,16 @@ SSMA에서 테이블을 만들 경우 [!INCLUDE[ssNoVersion](../../includes/ssno
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/Optimistic 모드:** 트리거가 있는 테이블의 행 ID 열 추가  
+**기본/낙관적 모드:** 트리거가 있는 테이블의 행 ID 열 추가  
   
-**전체 모드:** 예  
+**전체 모드:** 사용자 계정 컨트롤  
   
 ### <a name="generate-unique-index-on-rowid-column"></a>행 ID 열에 고유 인덱스를 생성 합니다.  
 여부 SSMA ROWID 생성 된 열에 고유 인덱스 열을 생성 하는지 여부를 지정 합니다. 고유 인덱스가 생성 되는 옵션을 "예"로 설정 하는 경우 하 고 "아니요"로 설정 된 경우 고유 인덱스 행 ID 열에는 생성 되지 않습니다.  
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/낙관적/전체 모드:** 예  
+**기본/낙관적/전체 모드:** 사용자 계정 컨트롤  
   
 ### <a name="local-modules-conversion"></a>로컬 모듈 변환  
 중첩 된 DB2 하위 프로그램 (독립 실행형 저장 프로시저나 함수에서 선언 됨) 변환 유형을 정의합니다.  
@@ -378,9 +378,9 @@ ISNULL 문이 REPLACE 함수 호출에서 DB2 동작을 에뮬레이트하는 �
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/낙관적 모드:** 없음  
+**기본/낙관적 모드:** 아니요  
   
-**전체 모드:** 예  
+**전체 모드:** 사용자 계정 컨트롤  
   
 ### <a name="use-isnull-in-concat-function-calls"></a>CONCAT 함수 호출의 ISNULL 사용  
 ISNULL 문이 CONCAT 함수 호출에서 DB2 동작을 에뮬레이트하는 데 사용 됩니다. 다음 옵션은이 설정에 대해 존재 합니다.  
@@ -391,9 +391,9 @@ ISNULL 문이 CONCAT 함수 호출에서 DB2 동작을 에뮬레이트하는 데
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/낙관적 모드:** 없음  
+**기본/낙관적 모드:** 아니요  
   
-**전체 모드:** 예  
+**전체 모드:** 사용자 계정 컨트롤  
   
 ### <a name="use-native-convert-function-when-possible"></a>가능 하면 네이티브 convert 함수를 사용 합니다.  
   
@@ -403,9 +403,9 @@ ISNULL 문이 CONCAT 함수 호출에서 DB2 동작을 에뮬레이트하는 데
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/낙관적 모드:** 예  
+**기본/낙관적 모드:** 사용자 계정 컨트롤  
   
-**전체 모드:** 없음  
+**전체 모드:** 아니요  
   
 ### <a name="use-selectfor-xml-when-converting-selectinto-for-record-variable"></a>SELECT를 사용 하는 중... FOR XML 변환 하는 경우 다음을 선택 하는 중... 레코드 변수의 INTO  
 레코드 변수를 선택 하면 설정 XML 결과 생성할지 여부를 지정 합니다.  
@@ -416,7 +416,7 @@ ISNULL 문이 CONCAT 함수 호출에서 DB2 동작을 에뮬레이트하는 데
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/낙관적/전체 모드:** 없음  
+**기본/낙관적/전체 모드:** 아니요  
   
 ## <a name="returning-clause-conversion"></a>절 변환을 반환합니다.  
   
@@ -429,7 +429,7 @@ DB2는 RETURNING 절을 즉시 삭제 된 값을 얻는 방법을 제공 합니�
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/낙관적/전체 모드:** 예  
+**기본/낙관적/전체 모드:** 사용자 계정 컨트롤  
   
 ### <a name="convert-returning-clause-in-insert-statement-to-output"></a>INSERT 문의 RETURNING 절을 출력으로 변환  
 DB2는 RETURNING 절을 바로 삽입 된 값을 얻는 방법을 제공 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OUTPUT 절을 사용 하 여 해당 기능을 제공합니다.  
@@ -440,7 +440,7 @@ DB2는 RETURNING 절을 바로 삽입 된 값을 얻는 방법을 제공 합니�
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/낙관적/전체 모드:** 예  
+**기본/낙관적/전체 모드:** 사용자 계정 컨트롤  
   
 ### <a name="convert-returning-clause-in-update-statement-to-output"></a>UPDATE 문이 RETURNING 절을 출력으로 변환  
 DB2는 RETURNING 절을 즉시 업데이트 된 값을 얻는 방법을 제공 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OUTPUT 절을 사용 하 여 해당 기능을 제공합니다.  
@@ -451,7 +451,7 @@ DB2는 RETURNING 절을 즉시 업데이트 된 값을 얻는 방법을 제공 �
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
-**기본/낙관적/전체 모드:** 예  
+**기본/낙관적/전체 모드:** 사용자 계정 컨트롤  
   
 ## <a name="sequence-conversion"></a>시퀀스 변환  
   

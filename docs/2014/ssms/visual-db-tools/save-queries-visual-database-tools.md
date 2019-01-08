@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], saving
@@ -13,12 +13,12 @@ ms.assetid: 1909b7be-cc87-44f1-9eb0-a3c355628ce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81abe0e1eb8ee12cb47ffe60269bdc02ff38362c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8245c048d4c1a1314835ad70fc7305c7afabd3f1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177463"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771745"
 ---
 # <a name="save-queries-visual-database-tools"></a>쿼리 저장(Visual Database Tools)
   나중에 다시 사용할 수 있도록 쿼리를 저장합니다. 쿼리를 실행해도 변경 내용은 저장되지 않습니다.  

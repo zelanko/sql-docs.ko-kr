@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [SQL Server], queries
@@ -15,12 +15,12 @@ ms.assetid: 025497d1-54a0-402c-81d8-b8b597a0de11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 09b9f0286f368f38c339a6001a576914b0def6ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a768b1e05bc123aecec4175ed6f66f6d920e1806
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065743"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755595"
 ---
 # <a name="print-query-results-visual-database-tools"></a>쿼리 결과 인쇄(Visual Database Tools)
   쿼리 결과를 인쇄하려면 [결과 창](visual-database-tools.md) 의 내용을 워드 프로세서 프로그램 같은 다른 Windows 프로그램에 복사한 다음 서식을 지정하여 인쇄합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "48065743"
   
 5.  결과에 서식을 지정하고 인쇄합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

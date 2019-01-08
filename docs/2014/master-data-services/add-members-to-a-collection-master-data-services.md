@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services], adding members
@@ -13,12 +12,12 @@ ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 14200dfb1156c0cd0561ff2724ab6cb4d5777fe8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5daf66aeb2eba3fd30302ef9e3e806c490f46e72
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205453"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747585"
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>컬렉션에 멤버 추가(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 컬렉션에 리프 멤버 및 통합 멤버를 추가할 수 있습니다.  
@@ -57,6 +56,6 @@ ms.locfileid: "48205453"
 11. 필요에 따라 **가중치** 열에서 값을 클릭하여 가중치를 설정합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [컬렉션 &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
+ [컬렉션&#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
   

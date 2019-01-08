@@ -11,12 +11,12 @@ ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62497d2249131db94d2169e6138a67ee48e73a34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 744a31b805fb46302f4f9ad34a1bc2576a180694
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677731"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321669"
 ---
 # <a name="odbc-64-bit-information"></a>ODBC 64비트 정보
 Windows Server 2003 부터는 Microsoft 운영 체제 지원 되는 64 비트 ODBC 라이브러리입니다. ODBC 헤더 및 라이브러리 MDAC 2.7 SDK를 사용 하 여 처음 출시 프로그래머에 게 새 64 비트 플랫폼에 대 한 코드를 쉽게 작성할 수 있도록 변경 내용을 포함 합니다. 코드는 아래에 나열 된 정의 하는 ODBC 형식 함으로써 64 비트 및 32 비트 플랫폼 모두를 기반으로 동일한 소스 코드를 컴파일할 수 있습니다 합니다 **_WIN64** 하거나 **WIN32** 매크로입니다.  
@@ -34,7 +34,7 @@ Windows Server 2003 부터는 Microsoft 운영 체제 지원 되는 64 비트 OD
 ## <a name="function-declaration-changes"></a>함수 선언 변경  
  64 비트 프로그래밍에 대 한 다음 함수 시그니처가 변경 되었습니다. 굵은 텍스트 항목은 다른 특정 매개 변수입니다.  
   
-```  
+```c
 SQLBindCol (SQLHSTMT StatementHandle, SQLUSMALLINT ColumnNumber,  
    SQLSMALLINT TargetType, SQLPOINTER TargetValuePtr, SQLLEN BufferLength,   SQLLEN * StrLen_or_Ind);  
   
@@ -115,7 +115,7 @@ SQLSetStmtOption (SQLHSTMT StatementHandle, SQLUSMALLINT Option,
 ## <a name="changes-in-sql-data-types"></a>SQL 데이터 형식 변경 내용  
  다음 네 가지 SQL 형식 32 비트 전용;에서 계속 지원 64 비트 컴파일러는 정의 되지 않습니다. 이러한 형식은 더 이상 MDAC 2.7;의 매개 변수 사용 이러한 형식의 사용할은 64 비트 플랫폼에서 컴파일러 오류를 발생 합니다.  
   
-```  
+```cpp
 #ifdef WIN32   
 typedef SQLULEN SQLROWCOUNT;   
 typedef SQLULEN SQLROWSETSIZE;   
@@ -126,7 +126,7 @@ typedef SQLLEN SQLROWOFFSET;
   
  32 비트 및 64 비트 컴파일러 SQLSETPOSIROW의 정의가 변경 되었습니다.  
   
-```  
+```c
 #ifdef _WIN64   
 typedef UINT64 SQLSETPOSIROW;   
 #else   
@@ -136,7 +136,7 @@ typedef UINT64 SQLSETPOSIROW;
   
  64 비트 컴파일러 SQLLEN 및 SQLULEN 정의가 변경 되었습니다.  
   
-```  
+```c
 #ifdef _WIN64   
 typedef INT64 SQLLEN;   
 typedef UINT64 SQLULEN;   
@@ -148,7 +148,7 @@ typedef UINT64 SQLULEN;
   
  2.0 클라이언트에서 64 비트 컴파일러 SQL_C_BOOKMARK ODBC 3.0에서 사용 되지 않지만이 값이 변경 됩니다.  
   
-```  
+```c
 #ifdef _WIN64   
 #define SQL_C_BOOKMARK SQL_C_UBIGINT   
 #else   
@@ -158,7 +158,7 @@ typedef UINT64 SQLULEN;
   
  책갈피 형식 최신 헤더에서 다르게 정의 됩니다.  
   
-```  
+```c
 typedef SQLULEN BOOKMARK;  
 ```  
   

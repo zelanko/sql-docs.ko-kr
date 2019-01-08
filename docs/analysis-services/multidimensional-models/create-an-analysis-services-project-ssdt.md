@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 프로젝트 만들기 (SSDT) | Microsoft Docs
+title: (SSDT)는 Analysis Services 프로젝트 만들기 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1634c864ba88afbcd9489732c5507800709f9931
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: 4fe65216ad293786496f412c9cc1451e6b92a7bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025260"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503390"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Analysis Services 프로젝트 만들기(SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "34025260"
   
 5.  기존 솔루션에 새 프로젝트를 추가하려면 **솔루션** 드롭다운 목록에서 **솔루션에 추가**를 선택합니다.  
   
-     —또는—  
+     -또는-  
   
      새 솔루션을 만들려면 **솔루션** 드롭다운 목록에서 **새 솔루션 만들기**를 선택합니다. 새 솔루션용 폴더를 새로 만들려면 **솔루션용 디렉터리 만들기**를 선택합니다. **솔루션 이름**에 새 솔루션의 이름을 입력합니다.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "34025260"
   
 |Folder|Description|  
 |------------|-----------------|  
-|데이터 원본|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 대한 데이터 원본을 포함합니다. 데이터 원본 마법사를 사용하여 이러한 개체를 만들고 데이터 원본 디자이너에서 편집합니다.|  
+|솔루션 탐색기|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 대한 데이터 원본을 포함합니다. 데이터 원본 마법사를 사용하여 이러한 개체를 만들고 데이터 원본 디자이너에서 편집합니다.|  
 |데이터 원본 뷰|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 대한 데이터 원본 뷰를 포함합니다. 데이터 원본 뷰 마법사를 사용하여 이러한 개체를 만들고 데이터 원본 뷰 디자이너에서 편집합니다.|  
 |큐브|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 대한 큐브를 포함합니다. 큐브 마법사를 사용하여 이러한 개체를 만들고 큐브 디자이너에서 편집합니다.|  
 |차원|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 대한 차원을 포함합니다. 차원 마법사 또는 큐브 마법사를 사용하여 이러한 개체를 만들고 차원 디자이너에서 편집합니다.|  
@@ -127,7 +127,7 @@ ms.locfileid: "34025260"
   
 |파일 유형|Description|  
 |---------------|-----------------|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]프로젝트 정의 파일 (.dwproj)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 정의 및 포함된 항목, 구성 및 어셈블리 참조에 대한 메타데이터를 포함합니다.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 정의 파일(.dwproj)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 정의 및 포함된 항목, 구성 및 어셈블리 참조에 대한 메타데이터를 포함합니다.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 사용자 설정(.dwproj.user)|특정 사용자의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 대한 구성 정보를 포함합니다.|  
 |데이터 원본 파일(.ds)|데이터 원본에 대한 메타데이터를 정의하는 ASSL( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language) 요소를 포함합니다.|  
 |데이터 원본 뷰 파일(.dsv)|데이터 원본 뷰에 대한 메타데이터를 정의하는 ASSL 요소를 포함합니다.|  
@@ -145,14 +145,14 @@ ms.locfileid: "34025260"
   
 |범주|항목 템플릿|Description|  
 |--------------|-------------------|-----------------|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]프로젝트 항목|Cube|큐브 마법사를 시작하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 새 큐브를 추가합니다.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 항목|Cube|큐브 마법사를 시작하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 새 큐브를 추가합니다.|  
 ||데이터 원본|데이터 원본 마법사를 시작하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 새 데이터 원본을 추가합니다.|  
 ||데이터 원본 뷰|데이터 원본 뷰 마법사를 시작하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 새 데이터 원본 뷰를 추가합니다.|  
 ||데이터베이스 역할|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 새 데이터베이스 역할을 추가한 다음 새 데이터베이스 역할의 역할 디자이너를 표시합니다.|  
 ||차원|차원 마법사를 시작하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 새 데이터베이스 차원을 추가합니다.|  
 ||마이닝 구조|데이터 마이닝 마법사를 시작하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 새 마이닝 구조 및 관련 마이닝 모델을 추가합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Analysis Services 프로젝트 속성 구성&#40;SSDT&#41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
  [Analysis Services 프로젝트 빌드&#40;SSDT&#41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
  [Analysis Services 프로젝트 배포&#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  

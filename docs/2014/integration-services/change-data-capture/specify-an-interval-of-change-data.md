@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
@@ -13,12 +12,12 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ecf61c3a073e43dc8ee5b385bf3d84a96d79332a
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 2fd8083c7043d5aeb7259e6a284b28ae66c82a02
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119841"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756966"
 ---
 # <a name="specify-an-interval-of-change-data"></a>변경 데이터의 간격 지정
   변경 데이터를 증분 로드하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 제어 흐름에서 첫 번째 태스크는 변경 간격의 엔드포인트를 계산하는 것입니다. 이러한 엔드포인트는 `datetime` 값이며 패키지에서 나중에 사용하기 위해 패키지 변수에 저장됩니다.  
@@ -101,7 +100,7 @@ ms.locfileid: "49119841"
 3.  **SQL 실행 태스크 편집기** 의 **결과 집합**페이지에서 ExtractStartTime 결과를 ExtractStartTime 패키지 변수에 매핑하고 ExtractEndTime 결과를 ExtractEndTime 패키지 변수에 매핑합니다.  
   
     > [!NOTE]  
-    >  식의 값을 설정 하려면 사용 하는 경우는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 변수 식이 계산 되는 변수 값에 액세스할 때마다 합니다.  
+    >  식을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 변수의 값을 설정하면 변수의 값에 액세스할 때마다 식이 평가됩니다.  
   
 ## <a name="next-step"></a>다음 단계  
  변경 범위의 시작 지점 및 끝 지점을 계산한 후 다음 단계는 변경 데이터가 준비되었는지 여부를 확인하는 것입니다.  

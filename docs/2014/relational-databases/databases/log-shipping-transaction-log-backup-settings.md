@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.logshipping.settings.tlogback.f1
@@ -13,12 +12,12 @@ ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8f4b54d14ff56113e115ce5eb611c227e7bc1020
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2e1484107e4ee5e7f7f2a10eaa719b5c96c098e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208113"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756205"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>로그 전달 트랜잭션 로그 백업 설정
   이 대화 상자를 사용하여 로그 전달 구성에 대한 트랜잭션 로그 백업 설정을 구성하고 수정할 수 있습니다.  
@@ -71,7 +70,7 @@ ms.locfileid: "48208113"
 |**백업 압축**|서버 수준 기본값에 관계없이 백업을 압축하려면 클릭합니다.<br /><br /> **\*\* 중요 \*\*** 기본적으로 압축하면 CPU 사용량이 크게 늘어나고 압축 프로세스로 사용되는 추가 CPU는 동시 작업에 악영향을 줄 수 있습니다. 따라서 CPU 사용량이 [리소스 관리자](../resource-governor/resource-governor.md)에 의해 제한되는 세션에서 우선 순위가 낮은 압축 백업을 만들 수 있습니다. 자세한 내용은 이 항목 뒷부분의 [Resource Governor를 사용하여 백업 압축을 통해 CPU 사용량 제한&#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)에 의해 제한되는 세션에서 우선 순위가 낮은 압축 백업을 만들 수 있습니다.|  
 |**백업 압축 안 함**|서버 수준 기본값에 관계없이 압축되지 않은 백업을 만들려면 클릭합니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 에이전트 작업을 만들고 관리하도록 사용자 구성](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)   
  [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

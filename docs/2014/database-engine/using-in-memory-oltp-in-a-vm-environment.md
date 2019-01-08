@@ -10,12 +10,12 @@ ms.assetid: 27ec7eb3-3a24-41db-aa65-2f206514c6f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad9e70e78229821197fdd80724d8e0924818bb30
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: e7f7f04b04792167fe9c4733f3e066c362f3cae4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103283"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408910"
 ---
 # <a name="using-in-memory-oltp-in-a-vm-environment"></a>VM 환경에서 메모리 내 OLTP 사용
   서버 가상화 기술을 사용하면 IT 자본 및 운영 비용을 줄이고 향상된 애플리케이션 프로비전, 유지 관리, 가용성 및 백업/복구 프로세스를 통해 IT 효율성을 높일 수 있습니다. 최근의 기술적 진보에 따라 가상화를 사용하면 복잡한 데이터베이스 작업도 보다 쉽고 간단하게 통합할 수 있습니다. 이 항목에서는 가상화된 환경에서 [!INCLUDE[hek_1](../includes/hek-1-md.md)] 를 사용하기 위한 모범 사례에 대해 설명합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "48103283"
   
 -   메모리 미리 할당 값은 너무 높게 설정하지 마십시오. 그렇지 않으면 다른 프로세스에 메모리가 필요할 때 충분한 메모리를 사용하지 못하게 되어 메모리 페이징이 발생할 수 있습니다.  
   
- 메모리 최적화 테이블이 포함된 데이터베이스에서 위와 같은 방식을 따를 경우, 데이터베이스 복구에 사용할 수 있는 메모리가 충분하더라도 데이터베이스를 복원 및 복구하려고 하면 데이터베이스가 "복구 보류 중" 상태가 될 수 있습니다. 그 이유는 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 는 시작 시 동적 메모리 할당이 데이터베이스에 메모리를 할당하는 것보다 더 많은 데이터를 메모리로 가져오기 때문입니다.  
+ 메모리 최적화 테이블이 포함된 데이터베이스에서 위와 같은 방식을 따를 경우 데이터베이스 복구에 사용할 수 있는 메모리가 충분하더라도 데이터베이스를 복원 및 복구하려고 하면 데이터베이스가 "복구 보류 중" 상태가 될 수 있습니다. 그 이유는 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 는 시작 시 동적 메모리 할당이 데이터베이스에 메모리를 할당하는 것보다 더 많은 데이터를 메모리로 가져오기 때문입니다.  
   
  **해결 방법**  
   

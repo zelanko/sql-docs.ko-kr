@@ -14,17 +14,17 @@ ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 981b2b5dc1f76d879b18e5569e7fb70dbece1538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 744ae9a9541b5c73d579e097f375b4141e771fce
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813081"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501761"
 ---
 # <a name="what-is-a-lock"></a>잠금이란?
 잠금은 사용 되는 DBMS 다중 사용자 환경에서 행에 액세스를 제한 하는 프로세스입니다. 행 또는 열을 단독으로 잠긴 경우 잠금이 해제 될 때까지 잠긴된 데이터에 액세스 하려면 다른 사용자에 게 허용 되지 않습니다. 이렇게 하면 두 명의 사용자가 행의 동일한 열에 동시에 업데이트 수 없습니다.  
   
- 잠금은 리소스의 관점에서 매우 비용이 많이 들 수 및 데이터 무결성을 유지 하기 위해 필요한 경우에 사용할 해야 합니다. 여기서 수백 또는 수천 명의 사용자 수 액세스 하려고 할 수는 레코드 1 초 마다 데이터베이스에-인터넷에 연결 된 데이터베이스와 같은-응용 프로그램에서 성능이 저하 불필요 한 잠금 신속 하 게 될 수 있습니다.  
+ 잠금은 리소스의 관점에서 매우 비용이 많이 들 수 및 데이터 무결성을 유지 하기 위해 필요한 경우에 사용할 해야 합니다. 여기서 수백 또는 수천 명의 사용자 수 액세스 하려고 할 수 레코드를 인터넷에 연결 된 데이터베이스와 같은 초 마다-데이터베이스에서 불필요 한 잠금 발생할 수 있습니다 신속 하 게 응용 프로그램에서 성능이 저하.  
   
  어떻게 데이터 원본 및 ADO 커서 라이브러리 관리 동시성 적절 한 잠금 옵션을 선택 하 여 제어할 수 있습니다.  
   

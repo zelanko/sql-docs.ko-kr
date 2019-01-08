@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 322160591d1e4ce741459e3a338bca30b0ea1603
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 87bffa2c93442aabc2dd6f193373e024466ecea6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085469"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397105"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>장애 조치 클러스터 인스턴스-Linux (RHEL)에서 SQL Server 구성
 
@@ -35,7 +35,7 @@ SQL Server 2 노드 공유 디스크 장애 조치 클러스터 인스턴스는 
 
 개념 정보를 참조 하세요 [SQL Server 장애 조치 클러스터 인스턴스 (FCI) linux](sql-server-linux-shared-disk-cluster-concepts.md)합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 다음 종단 간 시나리오를 완료 하려면 두 개의 머신을 두 노드 클러스터와 저장소에 대 한 다른 서버를 배포 해야 합니다. 아래 단계는이 서버를 구성 하는 방법을 간략하게 설명 합니다.
 
@@ -131,9 +131,9 @@ SQL Server 2 노드 공유 디스크 장애 조치 클러스터 인스턴스는 
    sudo firewall-cmd --reload
    ```
 
-   > 기본 제공된 고가용성 구성이 없는 또 다른 방화벽을 사용 중인 경우 Pacemaker가 클러스터의 다른 노드와 통신할 수 있으려면 다음 포트를 열어야 합니다.
+   > 다음 포트 pacemaker 클러스터의 다른 노드와 통신할 수를 열어야 할 기본 제공 고가용성 구성 되지 않은 다른 방화벽을 사용 하는 경우
    >
-   > * TCP: 포트 2224, 3121, 21064
+   > * TCP: 2224 3121, 21064 포트
    > * UDP: 포트 5405
 
 1. 각 노드에 Pacemaker 패키지를 설치합니다.

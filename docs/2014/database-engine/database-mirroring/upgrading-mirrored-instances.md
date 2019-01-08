@@ -14,12 +14,12 @@ ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a0ac6ea9d3437e22a1493c9888ccb75e7996f1c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 857e18b1b956d3d8c9d2fc4c5692dbf022bf85fe
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219863"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509426"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>서버 인스턴스 업그레이드 시 미러된 데이터베이스의 작동 중단 최소화
   서버 인스턴스를 업그레이드 하는 경우 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 순차적 업그레이드를 수행 하 여 단일 수동 장애 조치만 미러된 각 데이터베이스에 대 한 가동 중지 시간을 줄일 수 있습니다 이라고는 *롤링 업그레이드*합니다. 롤링 업그레이드란 간단히 말해서 현재 미러링 세션에서 미러 서버 역할을 하고 있는 서버 인스턴스를 업그레이드한 다음 미러된 데이터베이스를 수동으로 장애 조치(Failover)하고, 이전 주 서버를 업그레이드하고, 미러링을 다시 시작하는 여러 단계로 이루어진 프로세스입니다. 실제로 정확한 프로세스는 업그레이드 중인 서버 인스턴스에서 실행되는 미러링 세션의 개수 및 레이아웃과 운영 모드에 따라 달라집니다.  
@@ -69,22 +69,22 @@ ms.locfileid: "48219863"
     > [!IMPORTANT]  
     >  미러 서버가 주 서버와 지리적으로 먼 거리에 있는 경우에는 롤링 업그레이드가 적합하지 않을 수 있습니다.  
   
-    -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 경우: **데이터베이스 속성** 대화 상자의 [미러링 페이지](../../relational-databases/databases/database-properties-mirroring-page.md)를 사용하여 **운영 모드** 옵션을 **자동 장애 조치(Failover) 없는 보호 우선(동기)** 으로 변경합니다. 이 페이지에 액세스하는 방법은 [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)을 참조하세요.  
+    -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: 변경 된 **운영 모드** 옵션을 **(동기) 자동 장애 조치 없는 보호 우선** 사용 하 여는 [미러링 페이지](../../relational-databases/databases/database-properties-mirroring-page.md) 의 **데이터베이스 속성** 대화 상자. 이 페이지에 액세스하는 방법은 [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)을 참조하세요.  
   
-    -   [!INCLUDE[tsql](../../includes/tsql-md.md)]의 경우: 트랜잭션 보안을 FULL로 설정합니다. 자세한 내용은 [데이터베이스 미러링 세션에서 트랜잭션 보안 변경&#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)을 참조하세요.  
+    -   [!INCLUDE[tsql](../../includes/tsql-md.md)]: 트랜잭션 보안을 FULL로 설정합니다. 자세한 내용은 [데이터베이스 미러링 세션에서 트랜잭션 보안 변경&#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)을 참조하세요.  
   
 ### <a name="to-remove-a-witness-from-a-session"></a>세션에서 미러링 모니터를 제거하려면  
   
 1.  미러링 세션에 미러링 모니터가 있을 경우 롤링 업그레이드를 수행하기 전에 미러링 모니터를 제거하는 것이 좋습니다. 미러링 모니터를 제거하지 않으면 미러 서버 인스턴스를 업그레이드할 때 주 서버 인스턴스에 연결된 채로 남아있는 미러링 모니터에 의해 데이터베이스의 가용성이 결정됩니다. 미러링 모니터를 제거하고 나면 데이터베이스 가동 중단의 위험 없이 롤링 업그레이드 프로세스 도중 언제라도 업그레이드할 수 있습니다.  
   
     > [!NOTE]  
-    >  자세한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.  
+    >  자세한 내용은 참조 하세요. [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향 &#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)합니다.  
   
     -   [데이터베이스 미러링 세션에서 미러링 모니터 서버 제거&#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
 ### <a name="to-perform-the-rolling-upgrade"></a>롤링 업그레이드를 수행하려면  
   
-1.  작동 중단을 최소화하려면 롤링 업그레이드를 시작할 때 모든 자체 미러링 세션 내에서 현재 미러 서버인 모든 미러링 파트너를 업데이트하는 것이 좋습니다. 이때 여러 서버 인스턴스를 업데이트해야 할 수도 있습니다.  
+1.  가동 중단을 최소화하려면 롤링 업그레이드를 시작할 때 자체 미러링 세션 내의 미러 서버인 모든 미러링 파트너를 업데이트하는 것이 좋습니다. 이때 여러 서버 인스턴스를 업데이트해야 할 수도 있습니다.  
   
     > [!NOTE]  
     >  미러링 모니터는 롤링 업그레이드 프로세스 도중 언제라도 업그레이드할 수 있습니다. 예를 들어 서버 인스턴스가 Session 1의 미러 서버이고 미러링 모니터가 Session 2에 있을 경우 지금 서버 인스턴스를 업그레이드할 수 있습니다.  
@@ -126,9 +126,9 @@ ms.locfileid: "48219863"
   
 1.  선택적으로, 다음 중 한 가지 방법을 사용하여 성능 우선 모드로 되돌릴 수 있습니다.  
   
-    -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 경우: **데이터베이스 속성** 대화 상자의 **미러링 페이지** 를 사용하여 [운영 모드](../../relational-databases/databases/database-properties-mirroring-page.md) 옵션을 **성능 우선(동기)** 으로 변경합니다.  
+    -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: 변경 합니다 **운영 모드** 옵션을 **성능 우선 (동기)** 사용 하 여는 [미러링 페이지](../../relational-databases/databases/database-properties-mirroring-page.md) 의 **데이터베이스 속성**대화 상자.  
   
-    -   [!INCLUDE[tsql](../../includes/tsql-md.md)]의 경우: [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)를 사용하여 트랜잭션 보안을 OFF로 설정합니다.  
+    -   [!INCLUDE[tsql](../../includes/tsql-md.md)]: 사용 하 여 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)트랜잭션 보안을 OFF로 설정 합니다.  
   
 ### <a name="to-add-a-witness-back-into-a-mirroring-session"></a>미러링 모니터를 미러링 세션에 다시 추가하려면  
   
@@ -140,7 +140,7 @@ ms.locfileid: "48219863"
   
     -   [Windows 인증을 사용하여 데이터베이스 미러링 모니터 추가&#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [ALTER DATABASE 데이터베이스 미러링&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [미러된 데이터베이스 상태 보기&#40;SQL Server Management Studio&#41;](view-the-state-of-a-mirrored-database-sql-server-management-studio.md)   

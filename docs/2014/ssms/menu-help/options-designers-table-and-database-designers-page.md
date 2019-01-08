@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Designers.Table_Designer
@@ -12,12 +12,12 @@ ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 715456e4e358346d19a3fe698cbb5d36fd754929
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e0157b94227a36db7f1f961ab0b0a69518a8163b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168745"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751205"
 ---
 # <a name="options-designers-table-and-database-designers-page"></a>옵션 (디자이너-테이블 및 데이터베이스 디자이너 페이지)
   이 페이지를 사용하여 디자이너의 기본 동작을 결정할 수 있습니다. 이 설정에 액세스하려면 **도구** 메뉴에서 **옵션**을 클릭하고 **디자이너** 폴더를 확장한 다음 **테이블 디자이너**를 클릭합니다.  

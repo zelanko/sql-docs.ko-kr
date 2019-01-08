@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
@@ -13,12 +12,12 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5025524fb0f414a3a419b53d51868009eafc9820
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: ab881af80386badae624b1d5910ba99ba67a4a43
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147019"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767825"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-ole-db-connection-manager"></a>OLE DB 연결 관리자를 사용하여 전체 캐시 모드에서 조회 변환 구현
   전체 캐시 모드와 OLE DB 연결 관리자를 사용하도록 조회 변환을 구성할 수 있습니다. 전체 캐시 모드에서는 조회 변환이 실행되기 전에 참조 데이터 세트가 캐시에 로드됩니다.  
@@ -52,11 +51,11 @@ ms.locfileid: "48147019"
   
     -   **테이블 또는 뷰 사용**을 클릭한 다음 테이블이나 뷰를 선택하거나, **새로 만들기** 를 클릭하여 테이블이나 뷰를 만듭니다.  
   
-         —또는—  
+         -또는-  
   
     -   **SQL 쿼리 결과 사용**을 클릭한 후 **SQL 명령** 창에서 쿼리를 작성하거나 **쿼리 작성** 을 클릭하여 **쿼리 작성기** 에서 제공하는 그래픽 도구를 사용하여 쿼리를 작성합니다.  
   
-         —또는—  
+         -또는-  
   
     -   또는 **찾아보기** 를 클릭하여 파일에서 SQL 문을 가져옵니다.  
   

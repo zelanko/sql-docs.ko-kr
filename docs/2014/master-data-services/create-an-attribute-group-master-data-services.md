@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], creating
@@ -14,18 +13,18 @@ ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4a1aa0fdc536a4f0b80e5f855fb9d04dda264c5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 055c02ae541ec62d0ea556a20aab5d12d9c0a001
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163463"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760915"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>특성 그룹 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 **탐색기** 표의 개별 탭에 특성을 표시하려는 경우 특성 그룹을 만듭니다.  
   
 > [!NOTE]  
->  특성 그룹을 만들면 특성 그룹은 해당 그룹을 만든 사람을 제외한 모든 사용자로부터 자동으로 숨겨집니다. 게 표시할지 그룹에 대 한 자세한 내용은 참조 하세요. [사용자에 게는 특성 그룹 표시 &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)합니다.  
+>  특성 그룹을 만들면 특성 그룹은 해당 그룹을 만든 사람을 제외한 모든 사용자로부터 자동으로 숨겨집니다. 그룹을 표시하는 방법에 대한 자세한 내용은 [특성 그룹을 사용자에게 표시되도록 설정&#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)기능 영역의 표 위에 탭으로 표시됩니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
@@ -71,11 +70,11 @@ ms.locfileid: "48163463"
   
 ## <a name="next-steps"></a>다음 단계  
   
--   [특성 그룹을 사용자에 게 표시 되도록 설정 &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)  
+-   [특성 그룹을 사용자에게 표시되도록 설정&#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [특성 그룹 &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
- [특성 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
+ [특성 그룹&#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
+ [특성&#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
  [특성 그룹 이름 변경&#40;Master Data Services&#41;](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)   
  [특성 그룹 삭제&#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)   
  [리프 권한 &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)   

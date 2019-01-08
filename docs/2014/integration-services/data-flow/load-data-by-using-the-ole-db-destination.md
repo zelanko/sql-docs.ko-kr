@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - loading data
@@ -15,12 +14,12 @@ ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2b1c32cfebdfb1ca3237764d88eedfd70803652d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 865ff640cb64fe212afa5ece8bbdaa7f0be4a14c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072743"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749513"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>OLE DB 대상을 사용하여 데이터 로드
   OLE DB 대상을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 원본이 이미 들어 있어야 합니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "48072743"
   
     -   **테이블 또는 뷰** 데이터베이스에서 데이터가 포함된 테이블 또는 뷰를 선택합니다.  
   
-    -   **테이블 또는 뷰 - 빠른 로드** 데이터베이스에서 데이터가 포함된 테이블 또는 뷰를 선택한 후에 **ID 유지**, **Null 유지**, **테이블 잠금**, **CHECK 제약 조건**, **일괄 처리당 행 수**또는 **최대 삽입 커밋 크기**중에서 빠른 로드 옵션을 설정합니다.  
+    -   **테이블 또는 뷰-빠른 로드** 데이터를 포함 하는 데이터베이스에서 테이블 또는 뷰를 선택한 후 빠른 로드 옵션을 설정 합니다. **Id 유지**, **null 유지**를 **테이블 잠금**를 **Check 제약 조건**를 **일괄 처리당 행**, 또는 **최대 삽입 커밋 크기**합니다.  
   
     -   **테이블 이름 또는 뷰 이름 변수** 데이터베이스의 테이블 또는 뷰 이름이 포함된 사용자 정의 변수를 선택합니다.  
   

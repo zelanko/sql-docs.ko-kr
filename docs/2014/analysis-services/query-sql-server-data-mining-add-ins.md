@@ -16,12 +16,12 @@ ms.assetid: 16af4a6f-18d4-496a-a304-7a13aa32ee76
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b23083870b2f60e3d844d921705f4612ecc975f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: b596612d711925687087a2263013fdf13a0c491e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079423"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418464"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>쿼리(SQL Server 데이터 마이닝 추가 기능)
   ![쿼리 모델 단추, 데이터 마이닝 리본의](media/dmc-query.gif "데이터 마이닝 리본, 모델 쿼리 단추")  
@@ -30,7 +30,7 @@ ms.locfileid: "48079423"
   
  또한 **쿼리** 마법사는 데이터 마이닝 모델 만들기 또는 수정, 사용자 지정 쿼리 생성, 다른 도구에서 지원되지 않는 구조(예: 중첩된 데이터 세트) 사용을 위한 고급 편집기를 제공합니다.  
   
--   텍스트 편집기를 사용하여 다른 곳에서 만든 DMX(Data Mining Extensions) 문에 입력하거나 붙여 넣습니다.  
+-   텍스트 편집기를 사용 하 여 다른 곳에서 만든 Data Mining Extensions (DMX) 문을에 입력 하거나 붙여넣습니다.  
   
 -   대화형 쿼리 작성기를 사용하여 템플릿과 대화 상자를 통해 사용자 지정 DMX 문을 작성합니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48079423"
  언제든지 **고급** 을 클릭하여 DMX 문의 각 부분을 더 세부적으로 제어할 수 있는 **데이터 마이닝 고급 쿼리 편집기**로 전환할 수 있습니다. 고급 쿼리 편집 도구를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [고급 데이터 마이닝 쿼리 편집기](advanced-data-mining-query-editor.md)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
- 사용 하 여 **쿼리** 마법사의 인스턴스에 연결 해야 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다. 또한 서버에는 적절한 유형의 데이터 마이닝 모델이 최소 한 개 이상 있어야 합니다. 사용할 수 있는 마이닝 모델이 없는 경우 Excel용 데이터 마이닝 클라이언트에서 제공하는 마법사를 사용하여 만들 수 있습니다. 마법사를 사용 하 여 새 마이닝 모델을 만드는 방법에 대 한 자세한 내용은 [데이터 마이닝 모델을 만드는](creating-a-data-mining-model.md)합니다.  
+ **쿼리** 마법사를 사용하려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 연결되어 있어야 합니다. 또한 서버에는 적절한 유형의 데이터 마이닝 모델이 최소 한 개 이상 있어야 합니다. 사용할 수 있는 마이닝 모델이 없는 경우 Excel용 데이터 마이닝 클라이언트에서 제공하는 마법사를 사용하여 만들 수 있습니다. 마법사를 사용 하 여 새 마이닝 모델을 만드는 방법에 대 한 자세한 내용은 [데이터 마이닝 모델을 만드는](creating-a-data-mining-model.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [마이닝 모델 배포 및 확장 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   

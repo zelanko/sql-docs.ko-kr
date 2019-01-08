@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Builder [Integration Services]
@@ -16,12 +15,12 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 27c45ab4dc51b86241d198da160b5ae5cf5ccf56
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a08d1a290a1130e9c728702d63ed86df915daf3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158373"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752035"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services(SSIS) 쿼리
   SQL 쿼리는 SQL 실행 태스크, OLE DB 원본, OLE DB 대상 및 조회 변환에서 사용될 수 있습니다. SQL 실행 태스크에서 SQL 문은 데이터베이스 개체 및 데이터를 생성, 업데이트 및 삭제할 수 있으며 저장 프로시저를 실행하고 SELECT 문을 수행할 수 있습니다. OLE DB 원본 및 조회 변환에서 일반적으로 SQL 문은 SELECT 문 또는 EXEC 문입니다. 후자는 결과 집합을 반환하는 저장 프로시저를 가장 자주 실행합니다.  
@@ -56,7 +55,7 @@ ms.locfileid: "48158373"
  자세한 내용은 [Query Builder](../../2014/integration-services/query-builder.md)을 참조하세요.  
   
 ## <a name="sql-in-files"></a>파일 내의 SQL  
- SQL 실행 태스크의 SQL 문을 별도의 파일에 보관할 수 있습니다. 예를 들어 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 쿼리 작성기와 같은 도구를 사용하여 쿼리를 작성하고 파일로 저장한 다음 패키지를 실행할 때 파일에서 쿼리를 읽을 수 있습니다. 이 파일에는 실행할 SQL 문과 주석만 포함될 수 있습니다. 파일에 저장된 SQL 문을 사용하려면 파일 이름 및 위치를 지정하는 파일 연결을 제공해야 합니다. 자세한 내용은 [File Connection Manager](connection-manager/file-connection-manager.md)를 참조하세요.  
+ SQL 실행 태스크의 SQL 문을 별도의 파일에 보관할 수 있습니다. 예를 들어 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 쿼리 작성기와 같은 도구를 사용하여 쿼리를 작성하고 파일로 저장한 다음 패키지를 실행할 때 파일에서 쿼리를 읽을 수 있습니다. 이 파일에는 실행할 SQL 문과 주석만 포함될 수 있습니다. 파일에 저장된 SQL 문을 사용하려면 파일 이름 및 위치를 지정하는 파일 연결을 제공해야 합니다. 자세한 내용은 [File Connection Manager](connection-manager/file-connection-manager.md)을 참조하세요.  
   
 ## <a name="sql-in-variables"></a>변수 내의 SQL  
  SQL 실행 태스크의 SQL 문 원본이 변수인 경우 쿼리를 포함하는 변수의 이름을 지정하십시오. 쿼리 텍스트는 변수의 Value 속성에 포함됩니다. 변수의 ValueType 속성을 문자열 데이터 형식으로 설정한 다음 Value 속성에 SQL 문을 입력하거나 복사합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../../2014/integration-services/use-variables-in-packages.md)을 참조하세요.  

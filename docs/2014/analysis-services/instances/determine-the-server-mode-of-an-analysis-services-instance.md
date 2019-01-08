@@ -11,12 +11,12 @@ ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 50ddca5c3cdb1b7e314ccc6650bbd8fcc3ed3841
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 0f71f7b3f8d2cb6f7bd50ef676742282ee73d540
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113443"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411680"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Analysis Services 인스턴스의 서버 모드 확인
   Analysis Services는 다차원 및 데이터 마이닝(기본값), SharePoint용 PowerPivot, 테이블 형식 중 한 가지 서버 모드로 설치할 수 있습니다. Analysis Services 인스턴스의 서버 모드는 설치 중에 서버 설치 옵션을 선택할 때 결정됩니다.  
@@ -34,10 +34,10 @@ ms.locfileid: "48113443"
  또는 모든 Analysis Services 인스턴스에 포함된 msmdsrv.ini 파일에서 `DeploymentMode` 속성을 확인할 수 있습니다. 이 속성의 값은 서버 모드를 식별합니다. 유효한 값은 0(다차원), 1(SharePoint) 또는 2(테이블 형식)입니다. msmdsrv.ini 파일을 열려면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리자(즉, 서버 역할의 멤버)여야 합니다. 이 파일에는 구조화된 XML이 포함되어 있습니다. 메모장이나 다른 텍스트 편집기를 사용하여 파일을 볼 수 있습니다.  
   
 > [!CAUTION]  
->  값을 변경 하지 마십시오는 `DeploymentMode` 속성입니다. 서버를 설치한 후에는 속성을 수동으로 변경할 수 없습니다.  
+>  `DeploymentMode` 속성 값을 변경하지 마십시오. 서버를 설치한 후에는 속성을 수동으로 변경할 수 없습니다.  
   
 ## <a name="about-the-deploymentmode-property"></a>DeploymentMode 속성 정보  
- `DeploymentMode` 속성은 Analysis Services 서버 인스턴스의 작업 컨텍스트를 결정합니다. 대화 상자, 메시지 및 설명서에서는 이 속성을 '서버 모드'라고 합니다. 이 속성은 Analysis Services 설치 방법에 따라 설치 프로그램에 의해 초기화됩니다. 이 속성을 내부 값으로만 간주하여 항상 설치 프로그램에서 지정한 값을 사용해야 합니다.  
+ `DeploymentMode` 속성은 Analysis Services 서버 인스턴스의 작업 컨텍스트를 결정합니다. 이 속성 대화 상자, 메시지 및 설명서의 '서버 모드로' 이라고 합니다. 이 속성은 Analysis Services 설치 방법에 따라 설치 프로그램에 의해 초기화됩니다. 이 속성을 내부 값으로만 간주하여 항상 설치 프로그램에서 지정한 값을 사용해야 합니다.  
   
  이 속성에 유효한 값은 다음과 같습니다.  
   
@@ -54,8 +54,8 @@ ms.locfileid: "48113443"
  [다차원 및 데이터 마이닝 모드에서 Analysis Services 설치](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
  [PowerPivot for SharePoint 2010 설치](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
  [Analysis Services에 연결](connect-to-analysis-services.md)   
- [테이블 형식 모델 솔루션 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../tabular-model-solutions-ssas-tabular.md)   
- [다차원 모델 솔루션 &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [마이닝 모델 &#40;Analysis Services-데이터 마이닝&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
+ [테이블 형식 모델 솔루션&#40;SSAS 테이블 형식&#41;](../tabular-model-solutions-ssas-tabular.md)   
+ [다차원 모델 솔루션&#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [마이닝 모델&#40;Analysis Services - 데이터 마이닝&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
   
   

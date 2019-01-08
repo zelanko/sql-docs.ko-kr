@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: table-view-index
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7cc06db0cf02a5d2e85b4e49a778f5484446b9be
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0d43e86596e30352286cb94e8994177247856a7c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640760"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763675"
 ---
 # <a name="modify-a-partition-function"></a>파티션 함수 수정
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 사용하여 분할된 테이블이나 인덱스의 파티션 함수에 지정된 파티션 수를 하나씩 더하거나 빼서 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 테이블이나 인덱스가 분할되는 방식을 변경할 수 있습니다. 파티션 추가는 기존의 한 파티션을 두 파티션으로 "분할"하고 새 파티션의 경계를 다시 정의하는 것입니다. 파티션 삭제는 두 파티션의 경계를 하나로 "병합"하는 것입니다. 이 마지막 동작에서 한 파티션은 다시 채워지고 다른 한 파티션은 할당되지 않은 상태로 남게 됩니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "51640760"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -56,7 +56,7 @@ ms.locfileid: "51640760"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 파티션 함수 수정을 위한 복제 지원을 제공하지 않습니다. 게시 데이터베이스의 파티션 함수를 변경하려면 구독 데이터베이스에서 직접 파티션 함수를 수정해야 합니다.  
   
--   ALTER PARTITION FUNCTION의 영향을 받는 모든 파일 그룹이 온라인 상태 여야 합니다.  
+-   ALTER PARTITION FUNCTION의 영향을 받는 모든 파일 그룹이 온라인 상태여야 합니다.  
   
 ###  <a name="Security"></a> 보안  
   
@@ -95,12 +95,12 @@ ms.locfileid: "51640760"
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
     ```  
-    -- Look for a previous version of the partition function “myRangePF1” and deletes it if it is found.  
+    -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  
     IF EXISTS (SELECT * FROM sys.partition_functions  
         WHERE name = 'myRangePF1')  
         DROP PARTITION FUNCTION myRangePF1;  
     GO  
-    -- Create a new partition function called “myRangePF1” that partitions a table into four partitions.  
+    -- Create a new partition function called "myRangePF1" that partitions a table into four partitions.  
     CREATE PARTITION FUNCTION myRangePF1 (int)  
     AS RANGE LEFT FOR VALUES ( 1, 100, 1000 );  
     GO  
@@ -120,12 +120,12 @@ ms.locfileid: "51640760"
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
     ```  
-    -- Look for a previous version of the partition function “myRangePF1” and deletes it if it is found.  
+    -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  
     IF EXISTS (SELECT * FROM sys.partition_functions  
         WHERE name = 'myRangePF1')  
         DROP PARTITION FUNCTION myRangePF1;  
     GO  
-    -- Create a new partition function called “myRangePF1” that partitions a table into four partitions.  
+    -- Create a new partition function called "myRangePF1" that partitions a table into four partitions.  
     CREATE PARTITION FUNCTION myRangePF1 (int)  
     AS RANGE LEFT FOR VALUES ( 1, 100, 1000 );  
     GO  

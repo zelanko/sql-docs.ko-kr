@@ -11,12 +11,12 @@ ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4f0853eb502d810a693e4cc2872710a62c784268
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e84b6e148774fc9b48b6174fa8be87579290fec4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159403"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393418"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>명령 프롬프트에서 PowerPivot 설치
   명령줄에서 설치 프로그램을 실행하여 SQL Server SharePoint용 PowerPivot를 설치할 수 있습니다. 명령에 `/ROLE` 매개 변수를 포함하고 `/FEATURES` 매개 변수는 제외해야 합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "48159403"
   
  이 두 역할은 모두 SharePoint용 PowerPivot이 SharePoint 팜에서 실행될 수 있도록 하는 응용 프로그램, 구성 및 배포 파일을 설치합니다. 두 역할 중 하나를 지정하면 설치 프로그램이 SharePoint 통합에 필요한 하드웨어 및 소프트웨어 요구 사항을 확인합니다.  
   
- 기존 팜 옵션은 SharePoint 팜이 이미 설치되어 있다고 가정합니다. 새 팜 옵션은 새 팜을 만든다고 가정합니다. 즉, 명령줄 구문에서 데이터베이스 엔진 인스턴스를 추가하여 이 데이터베이스 엔진 인스턴스를 팜의 데이터베이스 서버로 사용할 수 있습니다.  
+ 기존 팜 옵션은 SharePoint 팜이 이미 설치되어 있다고 가정합니다. 새 팜 옵션을; 새 팜을 만들어야 하는 것으로 가정 팜의 데이터베이스 서버로 데이터베이스 엔진 인스턴스를 사용할 수 있도록 명령줄 구문에서 데이터베이스 엔진 인스턴스의 추가 지원 합니다.  
   
  이전 릴리스와 달리 모든 서버 구성 태스크는 설치 후 태스크로 수행됩니다. 설치 및 구성 단계를 자동화하는 경우 PowerShell을 사용하여 서버를 구성할 수 있습니다. 자세한 내용은 [Windows PowerShell을 사용 하 여 PowerPivot 구성](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)합니다.  
   
@@ -69,7 +69,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
      `/action` 매개 변수는 설치를 수행하도록 설치 프로그램에 지시합니다.  
   
-     `/role` 매개 변수를 지정하면 SharePoint용 PowerPivot에 필요한 Analysis Services 프로그램 및 구성 파일이 설치됩니다. 이 역할 역시 기존 팜 연결 정보를 검색 및 사용하여 SharePoint 구성 데이터베이스에 액세스합니다. 이 매개 변수는 필수 항목입니다. 설치할 구성 요소를 지정하려면 `/features` 매개 변수 대신 이 매개 변수를 사용합니다.  
+     `/role` 매개 변수를 지정하면 SharePoint용 PowerPivot에 필요한 Analysis Services 프로그램 및 구성 파일이 설치됩니다. 이 역할 역시 기존 팜 연결 정보를 검색 및 사용하여 SharePoint 구성 데이터베이스에 액세스합니다. 이 매개 변수는 필수적 요소입니다. 설치할 구성 요소를 지정하려면 `/features` 매개 변수 대신 이 매개 변수를 사용합니다.  
   
      `/instancename` 매개 변수는 명명된 인스턴스로 'PowerPivot'을 지정합니다. 이 값은 하드 코딩되어 변경할 수 없으며, 교육용으로 명령에 지정되므로 서비스 설치 방법을 확인할 수 있습니다.  
   
@@ -105,7 +105,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
 11. 서버를 구성합니다. 최소한 솔루션을 배포하고 서비스 응용 프로그램을 만들고 각 사이트 모음에 대해 기능을 사용하도록 설정해야 합니다. 자세한 내용은 [PowerPivot 구성 또는 복구 SharePoint 2010 용 &#40;PowerPivot 구성 도구&#41; ](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md) 하거나 [중앙 관리에서 PowerPivot 서버 관리 및 구성 ](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [PowerPivot 서비스 계정 구성](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
  [SharePoint 2010용 PowerPivot 설치](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   

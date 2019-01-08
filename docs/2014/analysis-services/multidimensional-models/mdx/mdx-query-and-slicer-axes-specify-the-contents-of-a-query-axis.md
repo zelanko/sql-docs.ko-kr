@@ -14,12 +14,12 @@ ms.assetid: c745ade0-738e-4a98-a3f0-3eabfd3eeba2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2f3e44d2891d9080b361d07d0bdcacfd0ad2ec39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 05555f9f3b90cbf0eaae410a2b97dc31a0ed17d2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209773"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393097"
 ---
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>쿼리 축의 내용 지정(MDX)
   쿼리 축은 MDX SELECT 문에 의해 반환되는 열 집합의 가장자리를 지정합니다. 열 집합의 가장자리를 지정하면 클라이언트에 표시되는 반환 데이터를 제한할 수 있습니다.  
@@ -72,7 +72,7 @@ FROM [Adventure Works]
   
 ```  
   
- 집합 정의 전에 사용되는 NON EMPTY 키워드는 축에서 모든 빈 튜플을 제거하는 쉬운 방법입니다. 예를 들어 지금까지 살펴본 예제에서는 2004년 8월 이후 큐브에 데이터가 없습니다. 열에 데이터가 없는 셀 집합에서 모든 행을 제거하려면 다음과 같이 Rows 축 정의의 집합 앞에 NON EMPTY를 추가합니다.  
+ 집합 정의 전에 사용되는 NON EMPTY 키워드는 축에서 모든 빈 튜플을 제거하는 쉬운 방법입니다. 예를 들어, 지금까지 살펴본 예제에서 데이터가 없는 큐브의 2004 년 8 월 이상입니다. 열에 데이터가 없는 셀 집합에서 모든 행을 제거하려면 다음과 같이 Rows 축 정의의 집합 앞에 NON EMPTY를 추가합니다.  
   
 ```  
 SELECT {[Measures].[Internet Sales Amount]} ON COLUMNS,  
@@ -116,6 +116,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [Slicer 축의 내용 지정 &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [Slicer 축 & #40;의 내용을 지정 Mdx& #41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

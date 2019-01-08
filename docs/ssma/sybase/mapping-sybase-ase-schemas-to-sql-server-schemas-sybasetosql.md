@@ -12,12 +12,12 @@ ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ae3f3363c8cedee988f55875fab5d15e58114238
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a27b2e7c915a1ac13050d0ed188002cd42746c8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843301"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400436"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Sybase ASE 스키마를 SQL Server 스키마에 매핑(SybaseToSQL)
 Sybase 적응형 Server Enterprise (ASE)에서 각 데이터베이스에 하나 이상의 스키마에 있습니다. 기본적으로 SSMA 동일한 데이터베이스와 스키마에서 데이터베이스 및 스키마 내의 모든 개체를 마이그레이션합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure입니다. ASE 간의 매핑을 사용자 지정할 수는 있지만 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터베이스 및 스키마입니다.  
@@ -64,6 +64,6 @@ ASE 스키마 간의 매핑을 사용자 지정 하면 및 [!INCLUDE[ssNoVersion
 ## <a name="next-steps"></a>다음 단계  
 Sybase ASE 개체를 변환 하는 분석 하려는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 개체를 할 수 있습니다 [변환 보고서를 만드는](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md)합니다. 수이 고, 그렇지 [ASE 데이터베이스 개체 정의 변환](converting-sybase-ase-database-objects-sybasetosql.md) 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 개체를 정의 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
 [Sybase ASE 데이터베이스를 SQL Server-Azure SQL DB로 마이그레이션 &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

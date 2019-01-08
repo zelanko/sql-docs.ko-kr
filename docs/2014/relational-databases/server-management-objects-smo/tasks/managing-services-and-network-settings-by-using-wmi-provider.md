@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - WMI provider [SMO]
@@ -17,17 +15,17 @@ ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc42cd7c5f7670ed3ece73ee424de03891ed5781
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d16548f201f047ba83516469050e41380b7bc6f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211663"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762205"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>WMI 공급자를 사용하여 서비스 및 네트워크 설정 관리
-  WMI 공급자가 사용 되는 게시 된 인터페이스 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console (MMC)를 관리 하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 및 네트워크 프로토콜입니다. Smo에서 <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 개체가 WMI 공급자를 나타냅니다.  
+  WMI 공급자는 MMC( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console)에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 및 네트워크 프로토콜을 관리하는 데 사용하는 게시된 인터페이스입니다. SMO에서 <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 개체가 WMI 공급자를 나타냅니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 개체와 설정 된 연결과 독립적으로 작동 합니다 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체의 인스턴스를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Windows 자격 증명을 사용 하 여 WMI 서비스에 연결 하 고 합니다.  
+ <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 개체는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체와 설정된 연결과 독립적으로 운영되며 Windows 자격 증명을 사용하여 WMI 서비스에 연결합니다.  
   
 ## <a name="example"></a>예제  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

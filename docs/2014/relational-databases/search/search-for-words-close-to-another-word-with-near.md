@@ -20,12 +20,12 @@ ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82e3388321e182e866eb229c7613a1950c80eda1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3493657fb537057f7c0ff8e126582ceb6faccc11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149023"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502848"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>NEAR를 사용하여 근접 단어 검색
   [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 조건자 또는 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 함수에서 근접 단어(NEAR)를 사용하여 단어나 구를 검색할 수 있습니다. 첫 번째 검색 단어와 마지막 검색 단어를 분리하는 검색 대상이 아닌 단어의 최대 수를 지정할 수도 있습니다. 또한 단어나 구를 순서에 관계 없이 검색하거나 지정한 순서로 검색할 수 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 모두 지원 [일반 근접 단어](#Generic_NEAR)에 이제 사용 되지 및 [사용자 지정 근접 단어](#Custom_NEAR)의 새로운 기능인 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "48149023"
   
  {  
   
- *search_term* [ ,…*n* ]  
+ *search_term* [,... *n* ]  
   
  |  
   
@@ -101,15 +101,15 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
   
 -   CONTAINS('NEAR((*term1*,*term2*),5) OR NEAR((*term3*,*term4*),2, TRUE)')  
   
- 예를 들어  
+ 예:  
   
 ```  
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  
 ```  
   
- 사용자 지정 근접 단어를 일반 근접 단어(*term1* NEAR *term2*), 생성 단어(ISABOUT …) 또는 가중치 단어(FORMSOF …)와 결합할 수 없습니다.  
+ 일반 근접 단어를 사용 하 여 사용자 지정 근접 단어를 결합할 수 없습니다 (*term1* NEAR *term2*), 생성 단어 (ISABOUT...) 또는 가중치 단어 (FORMSOF...).  
   
-### <a name="example-using-the-custom-proximity-term"></a>예제: 사용자 지정 근접 단어 사용  
+### <a name="example-using-the-custom-proximity-term"></a>예: 사용자 지정 근접 단어 사용  
  다음 예에서는 `Production.Document` 샘플 데이터베이스의 `AdventureWorks2012` 테이블에서 "bracket"이라는 단어와 동일한 문서에 "reflector"라는 단어가 들어 있는 모든 문서 요약을 검색합니다.  
   
 ```  
@@ -156,11 +156,11 @@ GO
 ##  <a name="Generic_NEAR"></a> 사용 되지 않는 일반 근접 단어  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 사용 하는 것이 좋습니다 합니다 [사용자 지정 근접 단어](#Custom_NEAR)합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] [사용자 지정 근접 단어](#Custom_NEAR)를 사용하는 것이 좋습니다.  
   
  일반 근접 단어를 사용하는 경우 일치 항목이 반환되려면 지정된 검색 단어가 모두 문서에 포함되어 있어야 합니다. 이때 검색 단어 사이의 검색 대상이 아닌 단어 수( *거리*)는 고려되지 않습니다. 기본 구문은 다음과 같습니다.  
   
- { *search_term* { NEAR | ~ } *search_term* } [ ,…*n* ]  
+ { *search_term* {NEAR | ~} *search_term* } [,... *n* ]  
   
  예를 들어 다음 예에서 일치 항목이 반환되려면 순서에 관계없이 단어 'fox'와 'chicken'이 모두 포함되어 있어야 합니다.  
   
@@ -184,9 +184,9 @@ CONTAINSTABLE (Production.ProductDescription,
 )  
 ```  
   
- 일반 근접 단어를 `NEAR((term1,term2),5)`, 가중치 단어(ISABOUT …) 또는 생성 단어(FORMSOF …)와 같은 사용자 지정  근접 단어와 결합할 수 없습니다.  
+ 와 같은 사용자 지정 근접 단어를 사용 하 여 일반 근접 단어를 결합할 수 없습니다 `NEAR((term1,term2),5)`, 가중치 단어 (ISABOUT...) 또는 생성 단어 (FORMSOF...).  
   
-### <a name="example-using-the-generic-proximity-term"></a>예제: 일반 근접 단어 사용  
+### <a name="example-using-the-generic-proximity-term"></a>예: 일반 근접 단어 사용  
  다음 예에서는 일반 근접 단어를 사용하여 "bracket"이라는 단어와 동일한 문서에서 "reflector"라는 단어를 검색합니다.  
   
 ```  

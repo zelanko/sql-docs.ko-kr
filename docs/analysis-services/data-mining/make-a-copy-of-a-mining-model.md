@@ -1,5 +1,5 @@
 ---
-title: 마이닝 모델의 복사본을 만듭니다 | Microsoft Docs
+title: 마이닝 모델의 복사본 | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 23770ec59e31a51b7aca7badf5b827baa6181155
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7c5479a43a07a6398ff45635828a2a9c88b7cb11
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014590"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502159"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>마이닝 모델 복사본 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34014590"
   
 1.  마이닝 모델을 선택합니다.  
   
-2.  **속성** 창에서 **Filter** 속성의 입력란을 클릭하고 작성 **(...)** 단추를 클릭합니다.  
+2.  에 **속성** 창에 대 한 입력란을 클릭 합니다 **필터** 속성 및 빌드를 클릭 하 **(...)**  단추입니다.  
   
 3.  필터 조건을 변경합니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "34014590"
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>관련 항목:  
- [마이닝 모델 & #40;에 대 한 필터 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [마이닝 모델에 대한 필터&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
  [마이닝 모델 태스크 및 방법](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [마이닝 모델에서 필터 삭제](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   

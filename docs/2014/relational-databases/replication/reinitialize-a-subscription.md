@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], reinitializing
@@ -15,12 +14,12 @@ ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 738b9179143b4c6b0c986f7f6a16464980b60f8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3f148cc75ba7ae1987d0114186b76273f35e8d03
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130349"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771395"
 ---
 # <a name="reinitialize-a-subscription"></a>구독 다시 초기화
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 구독을 다시 초기화하는 방법에 대해 설명합니다. 각 게시를 다시 초기화하도록 표시하여 다음 동기화 중에 새 스냅숏을 적용할 수 있습니다.  
@@ -174,7 +173,7 @@ ms.locfileid: "48130349"
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다.  
   
     > [!NOTE]  
-    >  이 메서드가 반환 하는 경우 `false`, 2 단계에서 구독 속성이 올바르게 정의 되지 또는 끌어오기 구독이 존재 하지 않습니다.  
+    >  이 메서드가 `false`를 반환하는 경우 2단계에서 구독 속성이 올바르게 정의되지 않았거나 끌어오기 구독이 없는 것입니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.TransPullSubscription.Reinitialize%2A> 메서드를 호출합니다. 이 메서드는 구독을 다시 초기화하도록 표시합니다.  
   
@@ -189,7 +188,7 @@ ms.locfileid: "48130349"
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다.  
   
     > [!NOTE]  
-    >  이 메서드가 반환 하는 경우 `false`, 2 단계에서 구독 속성이 올바르게 정의 되지 또는 밀어넣기 구독이 존재 하지 않습니다.  
+    >  이 메서드가 `false`를 반환하는 경우 2단계에서 구독 속성이 올바르게 정의되지 않았거나 밀어넣기 구독이 없는 것입니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A> 메서드를 호출합니다. 이 메서드는 구독을 다시 초기화하도록 표시합니다.  
   
@@ -204,7 +203,7 @@ ms.locfileid: "48130349"
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다.  
   
     > [!NOTE]  
-    >  이 메서드가 반환 하는 경우 `false`, 2 단계에서 구독 속성이 올바르게 정의 되지 또는 끌어오기 구독이 존재 하지 않습니다.  
+    >  이 메서드가 `false`를 반환하는 경우 2단계에서 구독 속성이 올바르게 정의되지 않았거나 끌어오기 구독이 없는 것입니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergePullSubscription.Reinitialize%2A> 메서드를 호출합니다. 다시 초기화하기 전에 구독자의 변경 내용을 업로드하려면 `true` 값을 전달하고, 다시 초기화할 때 보류 중인 모든 변경 내용을 무시하려면 `false`를 전달합니다. 이 메서드는 구독을 다시 초기화하도록 표시합니다.  
   
@@ -222,14 +221,14 @@ ms.locfileid: "48130349"
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다.  
   
     > [!NOTE]  
-    >  이 메서드가 반환 하는 경우 `false`, 2 단계에서 구독 속성이 올바르게 정의 되지 또는 밀어넣기 구독이 존재 하지 않습니다.  
+    >  이 메서드가 `false`를 반환하는 경우 2단계에서 구독 속성이 올바르게 정의되지 않았거나 밀어넣기 구독이 없는 것입니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A> 메서드를 호출합니다. 다시 초기화하기 전에 구독자의 변경 내용을 업로드하려면 `true` 값을 전달하고, 다시 초기화할 때 보류 중인 모든 변경 내용을 무시하려면 `false`를 전달합니다. 이 메서드는 구독을 다시 초기화하도록 표시합니다.  
   
     > [!NOTE]  
     >  구독이 만료되면 변경 내용을 업로드할 수 없습니다. 자세한 내용은 [Set the Expiration Period for Subscriptions](publish/set-the-expiration-period-for-subscriptions.md)을 참조하세요.  
   
-5.  밀어넣기 구독을 동기화합니다. 자세한 내용은 [밀어넣기 구독 동기화](synchronize-a-push-subscription.md)을 참조하세요.  
+5.  밀어넣기 구독을 동기화합니다. 자세한 내용은 [Synchronize a Push Subscription](synchronize-a-push-subscription.md)을 참조하세요.  
   
 ###  <a name="PShellExample"></a> 예(RMO)  
  다음 예에서는 트랜잭션 게시에 대한 끌어오기 구독을 다시 초기합니다.  
@@ -244,9 +243,9 @@ ms.locfileid: "48130349"
   
  [!code-vb[HowTo#rmo_vb_ReinitMergePullSub_WithUpload](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_reinitmergepullsub_withupload)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [구독 다시 초기화](reinitialize-subscriptions.md)   
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
+ [복제 관리 개체 개념](concepts/replication-management-objects-concepts.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)  
   
   

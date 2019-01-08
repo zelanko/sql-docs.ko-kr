@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ac0ffe016e2c88a381b230a26c58be2f6b2087a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4d88e90e595cd69da28c4767c723fed63b0e052
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136633"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756645"
 ---
 # <a name="odata-connection-manager"></a>OData 연결 관리자
   OData 연결 관리자를 사용하면 패키지에서 OData 원본에 연결할 수 있습니다. OData 원본 구성 요소는 OData 연결 관리자를 사용하여 OData 원본에 연결하고 서비스에서 데이터를 사용합니다. 이러한 구성 요소 설치 지침을 비롯한 자세한 내용은 [OData Source](../data-flow/odata-source.md)섹션을 참조하십시오.  
@@ -24,11 +23,11 @@ ms.locfileid: "48136633"
 ## <a name="adding-connection-manager-to-an-ssis-package"></a>SSIS 패키지에 연결 관리자 추가  
  세 가지 방법으로 새로운 OData 연결 관리자를 SSIS 패키지에 추가할 수 있습니다.  
   
--   **새로 만들기...** 를 클릭합니다. 에서 **새로 만들기…**  
+-   **OData 원본 편집기**에서 **새로 만들기...** 단추를 클릭합니다.  
   
 -   **솔루션 탐색기** 에서 **연결 관리자** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 연결 관리자**를 클릭합니다. **연결 관리자 유형** 에 대해 **ODATA**를 선택합니다.  
   
--   패키지 디자이너 아래쪽에서 **연결 관리자** 창을 마우스 오른쪽 단추로 클릭하고 **새 연결…** 을 선택합니다. **연결 관리자 유형** 에 대해 **ODATA**를 선택합니다.  
+-   마우스 오른쪽 단추로 클릭 합니다 **연결 관리자** 디자이너에서 선택한 패키지의 아래쪽 창에 **새 연결...** . **연결 관리자 유형** 에 대해 **ODATA**를 선택합니다.  
   
 ## <a name="connection-manager-authentication"></a>연결 관리자 인증  
  OData 연결 관리자는 두 가지 모드의 인증을 지원합니다.  

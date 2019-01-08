@@ -11,12 +11,12 @@ ms.assetid: f9160b48-3beb-439c-9694-f084e1afa625
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bdc6b3aa34ae3d2a75e78fe70862d3186c959f82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91d39b174a0febed1aa6fd57140412828adc843b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223313"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419019"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>Naive Bayes 모델 찾아보기
   사용 하 여 원시 Bayes 모델을 열면 **찾아보기**, 네 개의 다른 창을 사용 하 여 대화형 뷰어에서 모델이 표시 됩니다. 이 뷰어를 사용하여 상관 관계를 탐색하고 모델 및 기본 데이터에 대한 정보를 얻을 수 있습니다.  

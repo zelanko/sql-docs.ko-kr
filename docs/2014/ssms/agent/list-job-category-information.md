@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 0fc668d4-6244-4fef-b90e-62d2c776cd7c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 69abea91334f53993fec78e2204cee1573afd780
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ac903ecb951e98e29dcd6521f8c9623f8cc62768
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181583"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754255"
 ---
 # <a name="list-job-category-information"></a>작업 범주 정보 나열
   작업 범주 정보를 나열 하는 방법을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용 하 여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 SQL Server 관리 개체.  
@@ -51,7 +51,7 @@ ms.locfileid: "48181583"
 ##  <a name="SMO"></a> SQL Server 관리 개체를 사용 하 여  
  **작업 범주 정보를 나열하려면**  
   
- 사용 된 `JobCategory` Visual Basic, Visual C# 또는 PowerShell 등 선택한 프로그래밍 언어를 사용 하 여 클래스... 자세한 내용은 [SQL Server Management Objects &#40;SMO&#41; 프로그래밍 가이드](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)합니다.  
+ Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `JobCategory` 클래스를 사용합니다. 자세한 내용은 [SQL Server Management Objects &#40;SMO&#41; 프로그래밍 가이드](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)합니다.  
   
   
   

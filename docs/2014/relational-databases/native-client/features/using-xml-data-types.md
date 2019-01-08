@@ -30,12 +30,12 @@ ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9540e28716ef81717782e05aa98f173b3e47733f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 9e640f495d216495141131519e0b9aa51d48de4d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138093"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406010"
 ---
 # <a name="using-xml-data-types"></a>XML 데이터 형식 사용
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에는 XML 문서와 조각을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 저장할 수 있는 **xml** 데이터 형식이 도입되었습니다. **xml** 데이터 형식은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 기본 제공 데이터 형식이며 **int** 및 **varchar**와 같은 다른 기본 제공 형식과 비슷합니다. 다른 기본 제공 형식과 마찬가지로 **xml** 데이터 형식도 변수 유형, 매개 변수 유형, 함수 반환 유형 또는 테이블을 만드는 경우 열 유형으로 사용하거나 CAST 및 CONVERT 함수에 사용할 수 있습니다.  
@@ -90,7 +90,7 @@ ms.locfileid: "48138093"
 |DBTYPE_VARIANT(VT_UI1 &#124; VT_ARRAY)|통과<sup>6,7</sup>|해당 없음<sup>2</sup>|해당 사항 없음|해당 없음<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|통과<sup>6,10</sup>|해당 없음<sup>2</sup>|확인<sup>3</sup>|해당 없음<sup>2</sup>|  
   
- <sup>1</sup>DBTYPE_XML 이외의 서버 유형이 **ICommandWithParameters::SetParameterInfo**에 지정되었고 접근자 유형이 DBTYPE_XML이면 문이 실행될 때 오류가 발생합니다(DB_E_ERRORSOCCURRED, 매개 변수 상태는 DBSTATUS_E_BADACCESSOR임). 그렇지 않은 경우에는 데이터가 서버로 전송되지만 XML에서 매개 변수 데이터 형식으로의 암시적 변환이 이루어지지 않았음을 나타내는 오류가 반환됩니다.  
+ <sup>1</sup>서버 이외의 유형이 DBTYPE_XML로 지정 하는 경우 **icommandwithparameters:: Setparameterinfo** 고 접근자 유형이 DBTYPE_XML 이면 문이 실행 될 때 오류가 발생 (DB_E_ERRORSOCCURRED는 매개 변수 상태는 DBSTATUS_E_BADACCESSOR); 그렇지는 데이터가 서버로 전송 됩니다 있지만 서버는 매개 변수의 데이터 형식으로 XML에서 암시적 변환이 오류를 반환 합니다.  
   
  <sup>2</sup>이 항목의 범위를 벗어납니다.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "48138093"
 #### <a name="the-irowsetchange-interface"></a>IRowsetChange 인터페이스  
  소비자는 두 가지 방법으로 열의 XML 인스턴스를 업데이트할 수 있습니다. 하나는 공급자가 만든 저장소 개체 **ISequentialStream**을 사용하는 것입니다. 소비자는 **ISequentialStream::Write** 메서드를 호출하여 공급자가 반환한 XML 인스턴스를 직접 업데이트할 수 있습니다.  
   
- 다른 하나는 **IRowsetChange::SetData** 또는 **IRowsetChange::InsertRow** 메서드를 사용하는 것입니다. 이 방법을 사용할 경우 소비자 버퍼의 XML 인스턴스를 DBTYPE_BSTR, DBTYPE_WSTR, DBTYPE_VARIANT, DBTYPE_XML 또는 DBTYPE_IUNKNOWN 유형의 바인딩에 지정할 수 있습니다.  
+ 다른 하나는 **IRowsetChange::SetData** 또는 **IRowsetChange::InsertRow** 메서드를 사용하는 것입니다. 이 방법에서는 소비자 버퍼의 XML 인스턴스를 DBTYPE_BSTR, DBTYPE_WSTR, DBTYPE_VARIANT, DBTYPE_XML 또는 DBTYPE_IUNKNOWN 유형의 바인딩에 지정할 수 있습니다.  
   
  DBTYPE_BSTR, DBTYPE_WSTR 또는 DBTYPE_VARIANT의 경우 공급자가 소비자 버퍼의 XML 인스턴스를 적절한 열에 저장합니다.  
   
@@ -251,19 +251,19 @@ ms.locfileid: "48138093"
 ### <a name="supported-conversions"></a>지원되는 변환  
  SQL에서 C 데이터 형식으로 변환할 때 다음과 같은 조건 하에 SQL_C_WCHAR, SQL_C_BINARY 및 SQL_C_CHAR를 모두 SQL_SS_XML로 변환할 수 있습니다.  
   
--   SQL_C_WCHAR: 형식은 utf-16 BOM ()에 바이트 순서 표시가 없는 null 종결을 포함 합니다.  
+-   SQL_C_WCHAR: 형식이 UTF-16이고 BOM(바이트 순서 표시)이 없으며 null 종결을 포함합니다.  
   
--   SQL_C_BINARY: 형식은 u t F-16이 고 없는 null 종결을 포함 합니다. 서버에서 받은 데이터에 BOM이 추가됩니다. 서버에서 빈 문자열을 반환하더라도 BOM이 응용 프로그램에 반환됩니다. 버퍼 길이가 홀수 바이트이면 데이터가 올바르게 잘립니다. 전체 값이 청크로 반환되면 연결해서 올바른 값으로 다시 구성할 수 있습니다.  
+-   SQL_C_BINARY: 형식이 UTF-16이고 null 종결을 포함하지 않습니다. 서버에서 받은 데이터에 BOM이 추가됩니다. 서버에서 빈 문자열을 반환하더라도 BOM이 응용 프로그램에 반환됩니다. 버퍼 길이가 홀수 바이트이면 데이터가 올바르게 잘립니다. 전체 값이 청크로 반환되면 연결해서 올바른 값으로 다시 구성할 수 있습니다.  
   
--   SQL_C_CHAR: 형식은 null 종결을 포함 하는 클라이언트 코드 페이지로 인코딩된 멀티 바이트 문자입니다. 서버에서 제공하는 UTF-16에서 변환하면 데이터가 손상될 수 있으므로 이 바인딩은 사용하지 않는 것이 좋습니다.  
+-   SQL_C_CHAR: 형식이 클라이언트 코드 페이지로 인코딩된 멀티바이트 문자이고 null 종결을 포함합니다. 서버에서 제공하는 UTF-16에서 변환하면 데이터가 손상될 수 있으므로 이 바인딩은 사용하지 않는 것이 좋습니다.  
   
  C에서 SQL 데이터 형식으로 변환할 때 다음과 같은 조건 하에 SQL_C_WCHAR, SQL_C_BINARY 및 SQL_C_CHAR를 모두 SQL_SS_XML로 변환할 수 있습니다.  
   
--   SQL_C_WCHAR: BOM은 서버로 전송 된 데이터에 추가 항상 됩니다. 데이터의 시작 부분에 이미 BOM이 있는 경우 결과적으로 버퍼 시작 부분에 두 개의 BOM이 오게 됩니다. 서버에서는 첫 번째 BOM을 통해 인코딩을 UTF-16으로 인식한 다음 이 BOM을 삭제합니다. 두 번째 BOM은 너비가 0인 줄 바꿈하지 않는 공백 문자로 해석됩니다.  
+-   SQL_C_WCHAR: 서버로 전송된 데이터에 항상 BOM이 추가됩니다. 데이터의 시작 부분에 이미 BOM이 있는 경우 결과적으로 버퍼 시작 부분에 두 개의 BOM이 오게 됩니다. 서버에서는 첫 번째 BOM을 통해 인코딩을 UTF-16으로 인식한 다음 이 BOM을 삭제합니다. 두 번째 BOM은 너비가 0인 줄 바꿈하지 않는 공백 문자로 해석됩니다.  
   
--   SQL_C_BINARY: 변환 작업 없이 수행 되 고 데이터가 "있는 그대로" 서버로 전달 됩니다. UTF-16 데이터는 BOM으로 시작해야 합니다. 그렇지 않으면 서버에서 인코딩을 올바르게 인식할 수 없습니다.  
+-   SQL_C_BINARY: 변환이 수행되지 않고 데이터가 "있는 그대로" 서버로 전달됩니다. UTF-16 데이터는 BOM으로 시작해야 합니다. 그렇지 않으면 서버에서 인코딩을 올바르게 인식할 수 없습니다.  
   
--   SQL_C_CHAR: 데이터는 클라이언트에서 u t F-16으로 변환 및 BOM 추가 등 SQL_C_WCHAR와 마찬가지로 서버에 전송 합니다. XML이 클라이언트 코드 페이지로 인코딩되지 않은 경우 데이터가 손상될 수 있습니다.  
+-   SQL_C_CHAR: BOM 추가를 비롯하여 SQL_C_WCHAR와 마찬가지로 데이터가 클라이언트에서 UTF-16으로 변환되어 서버로 전송됩니다. XML이 클라이언트 코드 페이지로 인코딩되지 않은 경우 데이터가 손상될 수 있습니다.  
   
  XML 표준을 따르려면 UTF-16로 인코딩된 XML이 BOM(바이트 순서 표시), 즉 UTF-16 문자 코드 0xFEFF로 시작해야 합니다. SQL_C_BINARY 바인딩을 사용 하 여 작업할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 필요 하지 않거나 인코딩이 바인딩에서 암시적 BOM을 추가 합니다. BOM을 추가하는 목적은 다른 XML 프로세서 및 저장소 시스템을 간편하게 처리할 수 있도록 하기 위한 것입니다. 이 경우 UTF-16으로 인코딩된 XML에 BOM을 제공해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 비롯한 대부분의 XML 프로세서는 값의 처음 몇 바이트를 검사하여 인코딩을 추론하기 때문에 응용 프로그램에서는 실제 인코딩을 확인할 필요가 없습니다. 받은 XML 데이터 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client SQL_C_BINARY를 사용 하 여 바인딩을 항상 인코딩됩니다 인코딩 선언이 포함된 하지 않고 BOM이 있는 u t F-16입니다.  
   

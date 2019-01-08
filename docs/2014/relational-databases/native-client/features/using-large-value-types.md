@@ -17,12 +17,12 @@ ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9553eb4a9993186e3864a9ae0014ce702b7a8f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 5416684273d74a5f40ff6219eaab95323de6a0d8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136193"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414600"
 ---
 # <a name="using-large-value-types"></a>큰 값 형식 사용
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이전에 큰 값 데이터 형식으로 작업하려면 특별한 처리가 필요했습니다. 큰 값 데이터 형식은 최대 행 크기가 8KB를 초과하는 데이터 형식입니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 도입을 **max** 지정자 **varchar**, **nvarchar** 및 **varbinary** 데이터 형식을 저장할 수 있도록 값 2 ^31-1 바이트 수입니다. 테이블 열 및 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 변수를 지정할 수 있습니다 **varchar (max)** 를 **nvarchar (max)** 하거나 **varbinary (max)** 데이터 형식입니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "48136193"
   
  **max** 크기가 무제한으로 설정된 열의 **varchar(max)**, **varbinary(max)** 및 **nvarchar(max)** 데이터 형식은 열 데이터 형식을 반환하는 핵심 OLE DB 스키마 행 집합과 인터페이스를 통해 ISLONG으로 표시됩니다.  
   
- 명령 개체의 **IAccessor** 구현이 DBTYPE_IUNKNOWN으로의 바인딩을 허용하도록 변경되었습니다. 소비자가 DBTYPE_IUNKNOWN을 지정하고 *pObject*를 Null로 설정하면 소비자가 출력 변수에서 **varchar(max)**, **nvarchar(max)** 또는 **varbinary(max)** 데이터를 스트리밍할 수 있도록 공급자가 **ISequentialStream** 인터페이스를 소비자에게 반환합니다.  
+ 명령 개체의 **IAccessor** 구현이 DBTYPE_IUNKNOWN으로 바인딩 수 있도록 변경 되었습니다. 소비자가 DBTYPE_IUNKNOWN을 지정하고 *pObject*를 Null로 설정하면 소비자가 출력 변수에서 **varchar(max)**, **nvarchar(max)** 또는 **varbinary(max)** 데이터를 스트리밍할 수 있도록 공급자가 **ISequentialStream** 인터페이스를 소비자에게 반환합니다.  
   
  스트리밍된 출력 매개 변수 값은 결과 행 뒤에 반환됩니다. 애플리케이션이 반환된 모든 출력 매개 변수 값을 사용하지 않고 **IMultipleResults::GetResult**를 호출하여 다음 결과 집합으로 이동하면 DB_E_OBJECTOPEN이 반환됩니다.  
   

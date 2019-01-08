@@ -15,15 +15,15 @@ ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc3fc5502ee76cfd6aabb98eb719ca318026b73c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e41d71cd3651e1db5d1a533159012b645b8c7764
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802467"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504587"
 ---
 # <a name="core-interface-conformance"></a>핵심 인터페이스 적합성
-모든 ODBC 드라이버를 갖추고 있어야 합니다. 최소한 핵심 인터페이스 적합성 합니다. 코어 수준에서 기능 가장 일반적인 상호 운용 가능한 응용 프로그램에 필요한 것 이기 때문에 이러한 응용 프로그램은 드라이버를 사용할 수 있습니다. 코어 수준에서 기능에도 nonoptional 기능 열기 그룹 CLI 사양에서 정의 하는 ISO CLI 사양에 정의 된 기능에 해당 합니다. 핵심 수준 인터페이스 –와 호환 되는 ODBC 드라이버는 다음과 같은 작업을 수행 하는 응용 프로그램을 허용 합니다.  
+모든 ODBC 드라이버를 갖추고 있어야 합니다. 최소한 핵심 인터페이스 적합성 합니다. 코어 수준에서 기능 가장 일반적인 상호 운용 가능한 응용 프로그램에 필요한 것 이기 때문에 이러한 응용 프로그램은 드라이버를 사용할 수 있습니다. 코어 수준에서 기능에도 nonoptional 기능 열기 그룹 CLI 사양에서 정의 하는 ISO CLI 사양에 정의 된 기능에 해당 합니다. 핵심 수준 인터페이스와 호환 되는 ODBC 드라이버는 다음과 같은 작업을 수행 하는 응용 프로그램을 허용 합니다.  
   
 -   할당 하 고 호출 하 여 모든 유형의 핸들을 해제 **SQLAllocHandle** 하 고 **SQLFreeHandle**합니다.  
   

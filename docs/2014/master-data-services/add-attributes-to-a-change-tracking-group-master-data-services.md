@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - change tracking groups [Master Data Services]
@@ -15,12 +14,12 @@ ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 469a17c909e6b59289dc165c0327e040b2a8503f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d215fe6a1b0c41868816e09e64927b8f736f8c9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158653"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772551"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>변경 내용 추적 그룹에 특성 추가(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 특성 값의 변경 내용을 추적하려는 경우 변경 내용 추적 그룹에 특성을 추가합니다.  
@@ -69,10 +68,10 @@ ms.locfileid: "48158653"
   
 ## <a name="next-steps"></a>다음 단계  
   
--   [특성 값 변경 기반 동작 시작 &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
+-   [특성 값 변경 기반 동작 시작&#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
   
-## <a name="see-also"></a>관련 항목  
- [텍스트 특성 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)   
- [도메인 기반 특성 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+## <a name="see-also"></a>관련 항목:  
+ [텍스트 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)   
+ [도메인 기반 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
   

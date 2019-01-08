@@ -11,12 +11,12 @@ ms.assetid: 4d67a01c-eae4-49ba-a6e8-8e983c0248f5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3bd40d6b97215329bb2cab060853fc06ef862dbd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 7d8e61f4f82df496a475717b34f0ce54db07d4a6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065301"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413693"
 ---
 # <a name="site-settings-page-report-manager"></a>사이트 설정 페이지(보고서 관리자)
   사이트 설정 페이지를 사용하여 애플리케이션 제목을 변경하고 보고서 기록 제한 및 보고서 처리 시간 제한 값에 대한 서버 차원 기본값을 설정하고 시스템 수준 역할 할당을 관리하고 공유 일정을 관리할 수 있습니다. 이 페이지를 보려면 내용 관리자 및 시스템 관리자 권한이 있어야 합니다.  
@@ -33,11 +33,11 @@ ms.locfileid: "48065301"
   
 2.  페이지의 맨 위에서 **사이트 설정**을 클릭합니다. 사이트의 일반 속성 페이지가 열립니다.  
   
-     **참고:** 보이지 않는 경우는 **사이트 설정** 옵션 메뉴에서 필요가 없습니다 필요한 권한, 자세한 내용은의 "사이트 설정" 섹션을 참조 하세요. [에 대 한 기본 모드 보고서 서버를 구성 합니다. 로컬 관리 &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)합니다.  
+     **참고:** 표시 되지 않으면 합니다 **사이트 설정** 옵션 메뉴에서 필요가 없습니다 필요한 권한, 자세한 내용은의 "사이트 설정" 섹션을 참조 하세요. [로컬 관리를 위한 기본 모드 보고서 서버 구성 &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)합니다.  
   
 ## <a name="options"></a>변수  
  **이름**  
- 이 인스턴스에 사용할 제목을 지정 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 보고서 관리자입니다. 기본적으로 제목은 "[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]"입니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 보고서 관리자의 이 인스턴스에 사용할 제목을 지정합니다. 기본적으로 제목은 "[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]"입니다.  
   
  **보고서 기록에 대 한 기본 설정 선택**  
  보관할 보고서 기록 복사본 수로 기본값을 선택합니다. 이 기본값은 보고서 기록 제한을 설정하는 초기 설정이 됩니다. 보고서 수준에서 이 설정을 변경할 수 있습니다. 자세한 내용은 [스냅숏 옵션 속성 페이지&#40;보고서 관리자&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)를 참조하세요.  
@@ -56,7 +56,7 @@ ms.locfileid: "48065301"
   
  **기본 모드 보고서 서버:** 기본 모드 설치에서 기본 URL 인 http:// 형식을 따릅니다\<*computername*> / reportserver/ReportBuilder/ReportBuilder_3_0_0_0.application 합니다.  
   
- SharePoint 통합된 모드: 기본 URL 인 http:// 형식을 따릅니다\<*SharePoint_site*> / _vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application. "  
+ SharePoint 통합 모드: 기본 URL 인 http:// 형식을 따릅니다\<*SharePoint_site*> / _vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application. "  
   
  **적용**  
  변경 내용을 보고서 서버에 저장하려면 클릭합니다.  
@@ -68,9 +68,9 @@ ms.locfileid: "48065301"
  사용자가 자신의 보고서 및 구독용으로 선택 가능한 공유 일정을 미리 정의할 수 있는 일정 페이지를 열려면 이 링크를 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [기본 모드 보고서 서버에 대한 사용 권한 부여](security/granting-permissions-on-a-native-mode-report-server.md)   
- [미리 정의 된 역할](security/role-definitions-predefined-roles.md)   
+ [미리 정의된 역할](security/role-definitions-predefined-roles.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80fb27aa51d6e0a44f8f006711708e24cd04bef3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db3b72b7bdaf60febdeb41eb6f6e1e86c5064f63
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632321"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507166"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 하나 이상의 특성을 지정 하는 [필드](../../../ado/reference/ado-api/field-object.md) 개체입니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "47632321"
 |**adFldIsRowURL**|0x10000|필드에 레코드로 표시 되는 데이터 저장소에서 리소스의 이름을 지정 하는 URL이 포함 되어 있음을 나타냅니다.|  
 |**adFldLong**|0x80|필드 길이의 이진 필드 임을 나타냅니다. 사용할 수 있는 나타내기도 합니다 [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) 및 [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) 메서드.|  
 |**adFldMayBeNull**|0x40|필드에서 null 값을 읽을 수 있는지를 나타냅니다.|  
-|**adFldMayDefer**|0x2|필드는 지연 됨을 나타냅니다-필드의 값을 명시적으로 액세스 하는 경우에 하지만 전체 레코드를 사용 하 여 데이터 원본에서 검색할 수 없습니다, 있습니다.|  
+|**adFldMayDefer**|0x2|지연 된 있는 필드 임을 나타냅니다 인 필드 값을 명시적으로 액세스 하는 경우에 하지만 전체 레코드를 사용 하 여 데이터 원본에서 검색 되지 합니다.|  
 |**adFldNegativeScale**|0x4000|필드 음수 소수 자릿수 값을 지 원하는 열에서 숫자 값을 나타낸다는 것을 나타냅니다. 확장 된 합니다 [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) 속성입니다.|  
 |**adFldRowID**|0x100|필드에 식별 (예: 레코드 번호, 고유 식별자 및 등)의 행만 의미가 있고 쓸 수 없는 영구 행 식별자가 포함 됨을 나타냅니다.|  
 |**adFldRowVersion**|0x200|일부 종류의 업데이트를 추적 하는 데 사용 되는 시간 또는 날짜 스탬프 필드에 포함 되도록 나타냅니다.|  

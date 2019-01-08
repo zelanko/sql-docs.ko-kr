@@ -13,19 +13,19 @@ ms.assetid: 3a9e8a0c-7d03-47cc-8625-e68d73a8c947
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2119013c1c735c9b35a3790fedbf1ac114e9964a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 156bd83662b9b6fa42eb99e8e5810bb4fc71d51a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196863"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414852"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>시퀀스 클러스터링 클러스터 특징 탭(마이닝 모델 뷰어)
   **Microsoft 시퀀스 클러스터링 뷰어** 의 **클러스터 특징** 탭에서는 시퀀스 클러스터를 정의하는 특징의 세부 목록을 제공합니다. 이러한 특징에는 간단한 특성-값 쌍뿐만 아니라 상태 간 전환도 포함될 수 있습니다.  
   
  이 시퀀스 클러스터링 모델 뷰를 사용하여 클러스터 콘텐츠로 드릴다운하고 클러스터의 특징을 나타내는 시퀀스를 확인할 수 있습니다.  
   
- **자세한 내용:** [Microsoft 시퀀스 클러스터링 알고리즘](data-mining/microsoft-sequence-clustering-algorithm.md), [Microsoft 시퀀스 클러스터 뷰어를 사용하여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **참조 항목:** [Microsoft 시퀀스 클러스터링 알고리즘](data-mining/microsoft-sequence-clustering-algorithm.md), [Microsoft 시퀀스 클러스터 뷰어를 사용 하 여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>변수  
  **뷰어 내용 새로 고침**  
@@ -52,8 +52,8 @@ ms.locfileid: "48196863"
 |**확률**|이 열에는 이 특징(간단한 특성-값 쌍 또는 상태의 조합)이 현재 클러스터의 멤버일 상대적인 확률을 나타내는 막대가 표시됩니다.<br /><br /> 마우스를 막대 위로 이동하여 특징의 빈도 값을 표시할 수 있습니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [마이닝 모델 뷰어 &#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [마이닝 모델 뷰어&#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [데이터 마이닝 모델 뷰어](data-mining/data-mining-model-viewers.md)  
   
   

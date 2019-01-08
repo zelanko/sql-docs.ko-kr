@@ -13,19 +13,19 @@ ms.assetid: cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: abc9f00432128750e4b61e971038bbc32dd85e86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e19b832bc3d7ebf1f883633491b309971cf2938e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125703"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398306"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>패키지에서 사용자 정의 변수의 범위 추가, 삭제, 변경
   다음 절차에서는 **변수** 창을 사용하여 패키지에서 사용자 정의 변수를 추가, 삭제 및 변경하는 방법에 대해 설명합니다.  
   
- 변수 범위에 대 한 자세한 내용은 참조 하세요. [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)합니다.  
+ 변수 범위에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)영역 아래에 있습니다.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 또한 런타임에 시스템 정보를 사용할 수 있도록 하 고 패키지 및 이벤트 처리기와 같은 컨테이너에서 사용할 수 있는 시스템 변수를 제공 합니다. 시스템 변수는 삭제할 수 없습니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]는 런타임에 시스템 정보를 사용할 수 있도록 하고 패키지 및 이벤트 처리기와 같은 컨테이너에서 사용할 수 있는 시스템 변수를 제공합니다. 시스템 변수는 삭제할 수 없습니다.  
   
 ### <a name="to-add-a-variable"></a>변수를 추가하려면  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48125703"
   
 4.  삭제할 변수를 선택한 다음 **변수 삭제**를 클릭합니다.  
   
-     변수 창에 변수가 표시되지 않는 경우 **표 옵션** 을 클릭하고 **모든 범위의 변수 표시**를 선택합니다.  
+     변수 창에 변수가 표시되지 않는 경우 **표 옵션**을 클릭한 다음, **모든 범위의 변수 표시**를 선택합니다.  
   
 5.  **변수 삭제 확인** 대화 상자에서 **예** 를 클릭하여 삭제를 확인합니다.  
   
@@ -77,14 +77,14 @@ ms.locfileid: "48125703"
   
 4.  변수를 선택한 다음 **변수 이동**을 클릭합니다.  
   
-     변수 창에 변수가 표시되지 않는 경우 **표 옵션** 을 클릭하고 **모든 범위의 변수 표시**를 선택합니다.  
+     변수 창에 변수가 표시되지 않는 경우 **표 옵션**을 클릭한 다음, **모든 범위의 변수 표시**를 선택합니다.  
   
 5.  **새 범위 선택** 대화 상자에서 변수 범위를 변경할 패키지나 패키지에 들어 있는 컨테이너, 태스크 또는 이벤트 처리기를 선택합니다.  
   
 6.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)   
+## <a name="see-also"></a>관련 항목:  
+ [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)   
  [패키지에서 변수 사용](../../2014/integration-services/use-variables-in-packages.md)   
  [사용자 정의 변수의 속성 설정](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)   
  [자식 패키지에서 변수 및 매개 변수의 값 사용](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  

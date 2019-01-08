@@ -13,17 +13,17 @@ ms.assetid: ae7cfff7-ab1c-4cf5-9a91-97b21d15d85f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc00f10403f748db0802f288ca66e6582429155c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 68f52f1e64d46b2509ae995a1f0dfa56c4dad22f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075063"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400376"
 ---
 # <a name="cluster-discrimination-tab-mining-model-viewer"></a>클러스터 판별 탭(마이닝 모델 뷰어)
   **클러스터 판별** 탭을 사용하여 클러스터링 모델에 있는 두 클러스터를 비교할 수 있습니다. 특성 및 값의 여러 가지 조합이 클러스터 내에서 표시되는 방식을 볼 수 있습니다.  
   
- **자세한 내용:** [Microsoft 클러스터링 알고리즘](data-mining/microsoft-clustering-algorithm.md), [Microsoft 클러스터 뷰어를 사용하여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **참조 항목:** [Microsoft 클러스터링 알고리즘](data-mining/microsoft-clustering-algorithm.md), [Microsoft 클러스터 뷰어를 사용 하 여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>변수  
  **뷰어 내용 새로 고침**  
@@ -48,12 +48,12 @@ ms.locfileid: "48075063"
 |-|-|  
 |**변수**|마이닝 모델의 특성입니다.|  
 |**값**|**변수**에서 선택한 특성의 값입니다.|  
-|**유사성 \<1 클러스터 >**|왼쪽의 막대 그래프는 선택한 특성-값 쌍이 **클러스터 1**에서 선택한 클러스터의 특징을 나타낼 확률을 나타냅니다. 막대 위에 마우스를 놓으면 백분율로 표시된 값을 볼 수 있습니다. 값이 0인 경우라도 특성-값이 반드시 클러스터에 없는 것을 의미하지는 않으며, 분포가 다른 클러스터보다 한 클러스터와 크게 유사함을 의미할 뿐입니다.|  
+|**유사성 \<1 클러스터 >**|왼쪽의 막대 그래프는 선택한 특성-값 쌍이 **클러스터 1**에서 선택한 클러스터의 특징을 나타낼 확률을 나타냅니다. 막대 위에 마우스를 놓으면 백분율로 표시된 값을 볼 수 있습니다. 참고는 값이 0 인 경우에 의미 하지는 않습니다 특성 값을 반드시 없는 경우 클러스터에서 방금는 분포가 하나의 클러스터 둘|  
 |**유사성 \<2 클러스터 >**|오른쪽의 막대 그래프는 선택한 특성-값 쌍이 **클러스터 2**에서 선택한 클러스터의 특징을 나타낼 확률을 나타냅니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [마이닝 모델 뷰어 &#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>관련 항목:  
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [마이닝 모델 뷰어&#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [데이터 마이닝 모델 뷰어](data-mining/data-mining-model-viewers.md)  
   
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.Column.ColumnIdentitySpec
@@ -16,12 +16,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef49a4bee27339849cd7b2ec0f5d64701804284a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120305"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757585"
 ---
 # <a name="column-properties-visual-database-tools"></a>열 속성(Visual Database Tools)
   열 속성 집합에는 테이블 디자이너([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서만 사용 가능) 내 **열 속성** 탭에서 볼 수 있는 전체 집합과 서버 탐색기를 사용하여 속성 창에서 볼 수 있는 하위 집합이 있습니다.  
@@ -111,7 +111,7 @@ ms.locfileid: "48120305"
  확장하면 나머지 속성이 표시됩니다.  
   
  **데이터 정렬**  
- 선택한 열에 대한 데이터 정렬 설정을 표시합니다. 이 설정을 변경하려면 **데이터 정렬** 을 클릭한 다음 값의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다.  
+ 선택한 열에 대한 데이터 정렬 설정을 표시합니다. 이 설정을 변경하려면 **데이터 정렬** 을 클릭한 다음, 값의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다.  
   
  **계산 열 사양 범주**  
  확장하면 **수식** 및 **지속됨**의 속성이 표시됩니다. 계산 열인 경우 수식도 표시됩니다. 수식을 편집하려면 이 범주를 확장한 다음 **수식** 속성에서 편집합니다.  
@@ -126,7 +126,7 @@ ms.locfileid: "48120305"
  필드의 데이터 형식에 대한 정보를 SQL CREATE TABLE 문과 동일한 형식으로 표시합니다. 예를 들어 최대 길이가 20자인 가변 길이 문자열을 포함하는 필드는 "varchar(20)"으로 나타납니다. 이 속성을 변경하려면 직접 값을 입력합니다.  
   
  **설명**  
- 열에 대한 설명을 표시합니다. 전체 설명을 보거나 편집하려면 설명을 클릭한 다음 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다.  
+ 열에 대한 설명을 표시합니다. 전체 설명을 보거나 편집하려면 설명을 클릭한 다음, 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다.  
   
  **전체 텍스트 사양 범주**  
  확장하면 전체 텍스트 열의 속성이 표시됩니다.  

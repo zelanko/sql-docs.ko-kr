@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Distribution Agent, profiles
@@ -21,12 +20,12 @@ ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 67a5355791ddb9043a5da65077ee5e531ab47da9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 95692fd0ecf365f1fb54c8c1c3a090227b0d9a38
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160373"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763325"
 ---
 # <a name="replication-agent-profiles"></a>복제 에이전트 프로필
   복제가 구성되면 에이전트 프로필 집합이 배포자에 설치됩니다. 에이전트 프로필에는 에이전트가 실행될 때마다 사용할 매개 변수 집합이 포함됩니다. 각 에이전트는 시작 과정 중에 배포자로 로그인하여 해당 프로필의 매개 변수에 대해 쿼리합니다. 웹 동기화를 사용하는 병합 구독의 경우 구독자에서 프로필을 다운로드하고 저장합니다. 프로필이 변경되면 다음에 병합 에이전트가 실행될 때 구독자에 있는 프로필이 업데이트됩니다. 웹 동기화에 대한 자세한 내용은 [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md)를 참조하십시오.  

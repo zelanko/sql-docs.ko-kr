@@ -16,12 +16,12 @@ ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 898d2f0982ce5538f853335ea652891e7c390547
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6715c89ff3086f5031e2554929aced39d6f135db
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670052"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501901"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>QNames 관련 함수 - expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   경우는 *$paramLocal* 지정한 값이 올바른 어휘 형식이 xs: ncname 유형에 대 한, 빈 시퀀스가 반환 되 고 동적 오류를 나타냅니다.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 xs:QName 유형을 다른 유형으로 변환할 수 없습니다. 이 인해 합니다 **expanded-qname ()** 함수는 XML 생성에 사용할 수 없습니다. 예를 들어 `<e> expanded-QName(…) </e>`과 같은 노드를 생성할 때 값은 형식화되지 않아야 합니다. 형식화되면 `expanded-QName()`이 반환한 xs:QName 유형 값을 xdt:untypedAtomic으로 변환해야 하기 때문입니다. 앞에서 말했듯이 변환 기능은 지원되지 않습니다. 해결 방법은 이 항목 뒷부분의 예에 나와 있습니다.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 xs:QName 유형을 다른 유형으로 변환할 수 없습니다. 이 인해 합니다 **expanded-qname ()** 함수는 XML 생성에 사용할 수 없습니다. 예를 들어 `<e> expanded-QName(...) </e>`과 같은 노드를 생성할 때 값은 형식화되지 않아야 합니다. 형식화되면 `expanded-QName()`이 반환한 xs:QName 유형 값을 xdt:untypedAtomic으로 변환해야 하기 때문입니다. 앞에서 말했듯이 변환 기능은 지원되지 않습니다. 해결 방법은 이 항목 뒷부분의 예에 나와 있습니다.  
   
 -   기존의 QName 유형 값을 수정하거나 비교할 수 있습니다. 예를 들어 `/root[1]/e[1] eq expanded-QName("https://nsURI" "myNS")` 요소의 값과 비교 <`e`>를 반환한 QName과는 **expanded-qname ()** 함수입니다.  
   
@@ -201,9 +201,9 @@ FROM T
 ```  
   
 ### <a name="implementation-limitations"></a>구현 시 제한 사항  
- 한 가지 제한: 합니다 **expanded-qname ()** 함수는 두 번째 인수로 빈 시퀀스를 허용 하 고 두 번째 인수가 잘못 되었을 때 런타임 오류를 발생 시키는 대신 빈 반환 됩니다.  
+ 한 가지 제한 사항이 있습니다. 합니다 **expanded-qname ()** 함수는 두 번째 인수로 빈 시퀀스를 허용 하 고 두 번째 인수가 잘못 되었을 때 런타임 오류를 발생 시키는 대신 빈 반환 됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [QNames 관련 함수 &#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

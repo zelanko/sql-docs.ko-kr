@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.subscriptionoptions.f1
@@ -13,12 +12,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c36b2de74fd93c36da61e186a1bb3a6a56382d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c630646aa81ebaeccf49f729299394419b7099a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080523"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753855"
 ---
 # <a name="publication-properties-subscription-options"></a>게시 속성, 구독 옵션
   **게시 속성** 대화 상자의 **구독 옵션** 페이지를 사용하여 구독과 연결된 게시 수준 속성을 보고 설정할 수 있습니다. 속성은 다음 범주로 그룹화됩니다.  
@@ -88,7 +87,7 @@ ms.locfileid: "48080523"
  구독자 변경 내용을 즉시 게시자로 복제할 수 있는지 여부를 결정합니다. 이 옵션은 읽기 전용입니다. 게시를 만들 때만 구독 업데이트를 설정할 수 있습니다. 자세한 내용은 [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)을(를) 참조하세요.  
   
  **피어 투 피어 구독 허용**  
- 구독자 변경 내용을 지연하고 나중에 게시자로 복제할 수 있는지 여부를 결정합니다. 이 옵션은 읽기 전용입니다. 게시를 만들 때만 구독 업데이트를 설정할 수 있습니다. 자세한 내용은 [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)을(를) 참조하세요.  
+ 구독자 변경 내용을 지연하고 나중에 게시자로 복제할 수 있는지 여부를 결정합니다. 이 옵션은 읽기 전용입니다. 게시를 만들 때만 구독 업데이트를 설정할 수 있습니다. 자세한 내용은 [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)를 참조하세요.  
   
  **한 곳에서만 충돌 보고**  
  충돌하는 데이터 변경 내용을 게시자에서만 보고할 것인지, 아니면 게시자와 구독자 모두에서 보고할 것인지 여부를 결정합니다( **지연 업데이트 구독 허용**옵션 필요). 이 옵션은 읽기 전용입니다. 새 게시 마법사를 사용하여 만든 게시에 대해 이 옵션은 기본적으로 **True** 로 설정되어 있으며 게시를 만든 후에는 이를 변경할 수 없습니다. **True** 값은 게시자에서만 충돌이 보고됨을 의미합니다. 보고된 위치에서만 충돌을 볼 수 있습니다.  
@@ -107,7 +106,7 @@ ms.locfileid: "48080523"
   
 ### <a name="filtering"></a>필터링  
  **매개 변수가 있는 필터 허용**  
- 게시에서 매개 변수가 있는 필터를 사용하는지 여부에 따라 설정됩니다. 이 옵션은 항상 읽기 전용입니다. 자세한 내용은 [매개 변수가 있는 행 필터](merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
+ 게시에서 매개 변수가 있는 필터를 사용하는지 여부에 따라 설정됩니다. 이 옵션은 항상 읽기 전용입니다. 자세한 내용은 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)을(를) 참조하세요.  
   
  **구독자 유효성 검사**  
  구독자에 올바른 데이터 파티션이 있는지를 검사할 때 사용할 함수를 결정합니다. 값이 여러 개 있으면 쉼표로 구분합니다. 자세한 내용은 [병합 구독자의 파티션 정보 유효성 검사](validate-partition-information-for-a-merge-subscriber.md)를 참조하세요.  

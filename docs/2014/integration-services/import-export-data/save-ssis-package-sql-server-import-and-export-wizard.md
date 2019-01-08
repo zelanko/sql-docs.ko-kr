@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.savedtspackage.f1
@@ -13,18 +12,18 @@ ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b8ef62839d7379c35b55af7bcb65ab46e4b455d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23a8211f27d3ea5377d0f68375ecb75aca5a83e3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048234"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747945"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>SSIS 패키지 저장(SQL Server 가져오기 및 내보내기 마법사)
   사용 된 **SSIS 패키지 저장** 이름, 설명 및 저장 하는 페이지를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 패키지를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` 데이터베이스 또는.dtsx 파일에 있는 확장입니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], 마법사에서 만든 패키지를 저장 하는 옵션이 제공 되지 않습니다.  
+>  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]에서는 마법사가 만든 패키지를 저장하는 옵션을 사용할 수 없습니다.  
   
  이 마법사에 대 한 자세한 내용은 참조 하세요 [SQL Server 가져오기 및 내보내기 마법사](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)합니다. 마법사 시작 옵션에 대 한 마법사를 성공적으로 실행 하는 데 필요한 권한에 대 한 자세한 내용은 참조 하세요 [SQL Server 가져오기 및 내보내기 마법사를 실행](start-the-sql-server-import-and-export-wizard.md)합니다.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "48048234"
  패키지에 대한 설명을 입력합니다. 해당 패키지의 용도를 설명하여 패키지를 이해하기 쉽고 유지 관리하기 편하도록 만드는 것이 가장 좋습니다.  
   
  **대상**  
- 대상 보기 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 파일)는 이전에 대상 파일에 대 한 지정 된 합니다.  
+ 대상 파일에 대해 이전에 지정된 대상([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 파일)을 봅니다.  
   
 ## <a name="target-dynamic-options"></a>대상 동적 옵션  
   
@@ -50,13 +49,13 @@ ms.locfileid: "48048234"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상을 선택한 경우 Windows 통합 인증을 사용하여 서버에 연결할지 여부를 지정합니다. 이 방법은 기본적으로 사용되는 인증 방법입니다.  
   
  **SQL Server 인증 사용**  
- 선택한 경우를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상 SQL Server 인증을 사용 하 여 서버에 연결할지 여부를 지정 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상을 선택한 경우 SQL Server 인증을 사용하여 서버에 연결할지 여부를 지정합니다.  
   
  **사용자 이름**  
- 선택한 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상 SQL Server 인증을 형식 지정 및는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 이름입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상을 선택하고 SQL Server 인증을 지정한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 이름을 입력합니다.  
   
  **암호**  
- 선택한 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상 SQL Server 인증을 형식 지정 및는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 암호입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상을 선택하고 SQL Server 인증을 지정한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 암호를 입력합니다.  
   
 ### <a name="target--file-system"></a>대상 = 파일 시스템  
  **파일 이름**  
@@ -65,7 +64,7 @@ ms.locfileid: "48048234"
  **찾아보기**  
  파일 대상을 선택한 경우 **패키지 저장** 대화 상자를 사용하여 대상 파일을 찾습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [패키지 저장](../save-packages.md)  
   
   

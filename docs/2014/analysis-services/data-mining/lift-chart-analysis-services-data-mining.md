@@ -18,15 +18,15 @@ ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 09c13d17415f44ba52c57c2323e7fd671ddff0b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 177972c5ca9841d0d206e9c20fd1450568fdcb8c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119403"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398017"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>리프트 차트(Analysis Services - 데이터 마이닝)
-  A **리프트 차트** 그래픽을 임의 추측에 대해 비교할 때 마이닝 모델을 제공 하는 향상률을 나타냅니다 변화를 측정의 측면에서 *리프트* 점수입니다. 데이터 집합의 다양한 부분에 대한 리프트 점수와 다양한 모델에 대한 리프트 점수를 비교하면 어떤 모델이 가장 좋은지, 데이터 집합의 사례 중 몇 퍼센트가 모델의 예측 적용에서 이익을 얻는지 확인할 수 있습니다.  
+  A **리프트 차트** 그래픽을 임의 추측에 대해 비교할 때 마이닝 모델을 제공 하는 향상률을 나타냅니다 변화를 측정의 측면에서 *리프트* 점수입니다. 다른 모델 및 데이터 집합의 여러 부분에 대 한 리프트 점수를 비교 하 여 어떤 모델이 가장 좋은지, 및 모델의 예측 적용에서 도움이 되는 데이터 집합의 사례는 비율을 확인할 수 있습니다.  
   
  리프트 차트를 사용하면 동일한 예측 가능한 특성이 있는 여러 모델에 대해 측정의 정확도를 비교할 수 있습니다. 단일 결과(예측 가능한 특성의 단일 값)에 대해 또는 모든 결과(지정된 특성의 모든 값)에 대해 예측의 정확도를 평가할 수도 있습니다.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48119403"
 |30세 미만 타겟 메일링|0.85|51.81%|46.62%|  
 |임의 추측 모델||31.00%||  
 |이상적인 모델: 전체 타겟 메일링||62.48%||  
-|이상적인 모델: 30 미만 타겟 메일링||65.28%||  
+|이상적인 모델: 30세 미만 타겟 메일링||65.28%||  
   
  [맨 위로 이동](#bkmk_Top)  
   
@@ -118,6 +118,6 @@ ms.locfileid: "48119403"
  [맨 위로 이동](#bkmk_Top)  
   
 ## <a name="see-also"></a>관련 항목  
- [테스트 및 유효성 검사 &#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md)  
+ [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md)  
   
   

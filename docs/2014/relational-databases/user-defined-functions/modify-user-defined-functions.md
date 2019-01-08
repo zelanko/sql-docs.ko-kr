@@ -10,12 +10,12 @@ ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ee69a982dd16d165be9a808cb923b342157b4cf0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a114e51ad6f2841cbd6368208bac6771e3b97ed0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163553"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392747"
 ---
 # <a name="modify-user-defined-functions"></a>사용자 정의 함수 수정
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 사용자 정의 함수를 수정할 수 있습니다. 아래 설명과 같이 사용자 정의 함수를 수정하면 함수의 권한이 변경되거나 종속 함수, 저장 프로시저 또는 트리거에 영향을 주지 않습니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 04/26/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], security
@@ -15,12 +14,12 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0fccfdf6883a0b5c049824f75086a97a2533c3c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b15344c41bcfe8f43606683dc2e94f848bdb5923
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217792"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780085"
 ---
 # <a name="secure-the-subscriber"></a>구독자 보안 설정
   병합 에이전트 및 배포 에이전트는 구독자에 연결합니다. 이러한 연결은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 또는 Windows 로그인의 컨텍스트에서 설정됩니다. 필요한 최소 권한만 부여하는 원칙을 따르고 모든 암호 저장소를 보호하면서 이러한 에이전트에 적절한 로그인을 제공하는 것이 중요합니다. 각 에이전트에 필요한 사용 권한에 대한 자세한 내용은 [Replication Agent Security Model](replication-agent-security-model.md)을 참조하십시오.  
@@ -72,7 +71,7 @@ ms.locfileid: "48217792"
     > [!IMPORTANT]  
     >  구독자 연결에 대해서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하고 각 구독자 연결에는 서로 다른 계정을 지정합니다. 끌어오기 구독을 사용하는 경우 복제는 항상 Windows 인증을 사용하도록 연결을 설정합니다. 끌어오기 구독에서 복제는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하는 데 필요한 메타데이터를 구독자에서 액세스할 수 없습니다. 이 경우 구독을 구성한 후 연결에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하도록 변경합니다.  
   
-     자세한 내용은 방법: 트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기(SQL Server Management Studio) 및 [복제 보안 설정 보기 및 수정](view-and-modify-replication-security-settings.md)을 참조하세요.  
+     자세한 내용은 방법: 트랜잭션 게시 (SQL Server Management Studio)에 대 한 업데이트 구독 만들기 및 [복제 보안 설정 보기 및 수정](view-and-modify-replication-security-settings.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   

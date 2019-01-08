@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: df9595071c60680db94a18dc373ce24f1f9b4ea5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9135df30afcec9bdae307d9b12aec6810baa98ec
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43108672"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417234"
 ---
 # <a name="create-a-tabular-model-project"></a>테이블 형식 모델 프로젝트 만들기
 
@@ -22,9 +22,9 @@ ms.locfileid: "43108672"
 
 이 단원에서는 Visual Studio를 사용 하면 SQL Server Data Tools (SSDT) 또는 Microsoft Analysis Services 프로젝트 VSIX를 사용 하 여 Visual Studio 2017을 사용 하 여 1400 호환성 수준에서 새 테이블 형식 모델 프로젝트를 만듭니다. 시작할 수 있습니다 새 프로젝트가 만들어지면 데이터를 추가 하 고 모델을 작성 합니다. 이 단원에서는 테이블 형식 모델 제작 환경에 Visual Studio에 대 한 간략 한 소개를 제공 합니다.  
   
-이 단원에 소요되는 예상 시간: **10분**  
+이 단원에 소요되는 예상 시간: **10 분**  
   
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 문서는 테이블 형식 모델 제작 자습서의에서 첫 번째 단원입니다. 이 단원을 완료 하려면 몇 가지 필수 구성 요소 전체 할 수 있습니다. 자세한 내용은 참조 하세요 [Analysis Services-Adventure Works 자습서](../tutorial-tabular-1400/as-adventure-works-tutorial.md)합니다.  
   
@@ -80,7 +80,7 @@ SSDT를 설치할 때 몇 가지 새 메뉴 항목이 Visual Studio 환경에 �
 
 ## <a name="whats-next"></a>다음 단계
 
-[2 단원: 데이터 가져오기](../tutorial-tabular-1400/as-lesson-2-get-data.md)합니다.
+[2단원: 데이터 가져오기](../tutorial-tabular-1400/as-lesson-2-get-data.md)합니다.
 
   
   

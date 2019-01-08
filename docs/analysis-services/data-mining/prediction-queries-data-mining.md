@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7a8bc3dac0b76adc326b5beab8444475fb76af8d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: 19d555e988ecc1093388d751ea9f66a720b21def
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017850"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506038"
 ---
 # <a name="prediction-queries-data-mining"></a>예측 쿼리(데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "34017850"
 ###  <a name="bkmk_PredFunc"></a> 예측 함수 추가  
  값을 예측하는 것 외에도 예측 쿼리를 사용자 지정하여 예측과 관련된 여러 종류의 정보를 반환할 수 있습니다. 예를 들어 예측에 따라 고객에게 권장할 제품 목록을 만드는 경우 예측을 평가하여 최상위 권장 사항만 사용자에게 제공할 수 있도록 각 예측에 대한 확률을 반환할 수 있습니다.  
   
- 이렇게 하려면 쿼리에 *예측 함수* 를 추가합니다. 지원되는 함수는 모델 또는 쿼리 유형마다 다릅니다. 예를 들어 클러스터링 모델은 모델에서 만들어진 클러스터에 대한 추가 세부 정보를 제공하는 특수한 예측 함수를 지원하지만 시계열 모델에는 시간 경과에 따른 차이를 계산하는 함수가 있습니다. 또한 모든 모델 유형에서 작동하는 일반 예측 함수도 있습니다. 다양한 유형의 쿼리에서 지원되는 예측 함수 목록은 DMX 참조 항목 [일반 예측 함수&#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)를 참조하세요.  
+ 이렇게 하려면 쿼리에 *예측 함수* 를 추가합니다. 지원되는 함수는 모델 또는 쿼리 유형마다 다릅니다. 예를 들어 클러스터링 모델은 모델에서 만들어진 클러스터에 대한 추가 세부 정보를 제공하는 특수한 예측 함수를 지원하지만 시계열 모델에는 시간 경과에 따른 차이를 계산하는 함수가 있습니다. 또한 모든 모델 유형에서 작동하는 일반 예측 함수도 있습니다. 다양한 유형의 쿼리에서 지원하는 예측 함수 목록은 다음 DMX 참조 항목을 참조하십시오.  [일반 예측 함수 &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)합니다.  
   
 ###  <a name="bkmk_SingletonQuery"></a> 단일 예측 쿼리 만들기  
  단일 예측 쿼리는 빠른 예측을 실시간으로 만들려는 경우에 유용합니다. 일반적인 시나리오는 웹 사이트에서 폼을 사용하는 등의 방법으로 고객으로부터 정보를 얻은 다음 해당 데이터를 단일 예측 쿼리에 입력으로 전송하려는 경우입니다. 예를 들어 고객이 목록에서 제품을 선택하는 경우 추천할 최고의 제품을 예측하는 쿼리에 대한 입력으로 해당 선택을 사용할 수 있습니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "34017850"
  단일 예측 쿼리에는 입력을 포함하는 별도의 테이블이 필요하지 않습니다. 대신 하나 또는 여러 행의 값을 모델에 입력으로 제공하면 예측이 실시간으로 반환됩니다.  
   
 > [!WARNING]  
->  이름이 의미하는 것과 달리 단일 예측 쿼리는 단일 예측만 만들지는 않으며 각 입력 집합에 대해 여러 예측을 생성할 수 있습니다. 각 입력 사례에 대해 SELECT 문을 만들고 UNION 연산자로 입력 사례를 결합하여 여러 입력 사례를 제공합니다.  
+>  이름이 단일 예측 쿼리만 만들지 단일 예측-입력의 각 집합에 대해 여러 예측을 생성할 수 있습니다. 각 입력 사례에 대해 SELECT 문을 만들고 UNION 연산자로 입력 사례를 결합하여 여러 입력 사례를 제공합니다.  
   
  단일 예측 쿼리를 만들 때 PREDICTION JOIN의 형태로 모델에 새 데이터를 제공해야 합니다. 즉, 실제 테이블에 매핑하는 것은 아니지만 새 데이터가 마이닝 모델의 기존 열과 일치하도록 해야 합니다. 새 데이터 열과 새 데이터가 정확하게 일치할 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 자동으로 열을 매핑하는데 이를 *NATURAL PREDICTION JOIN*이라고 합니다. 하지만 열이 일치하지 않거나 모델에 있는 것과 동일한 종류 및 양의 데이터가 새 데이터에 들어 있지 않은 경우 모델의 어떤 열이 새 데이터에 매핑되는지 지정하거나 누락된 값을 지정해야 합니다.  
   
@@ -147,7 +147,7 @@ FROM
   
  공급자가 계층적 행 집합을 처리할 수 없는 경우 예측 쿼리에 FLATTEN 키워드를 사용하여 결과를 평면화할 수 있습니다. 일반 행 집합의 예를 비롯한 자세한 내용은 [SELECT&#40;DMX&#41;](../../dmx/select-dmx.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [콘텐츠 쿼리 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
  [데이터 정의 쿼리 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   

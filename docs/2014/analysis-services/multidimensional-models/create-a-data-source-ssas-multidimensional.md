@@ -19,12 +19,12 @@ ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e5c6b02cba58b35472fc5d0224d7faf9534c332a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54971b2b71d37ec4b246d982429fac3d6abf5b9a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049493"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412480"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>데이터 원본 만들기(SSAS 다차원)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다차원 모델에서 데이터 원본 개체는 데이터를 처리하거나 가져올 데이터 원본에 대한 연결을 나타냅니다. 다차원 모델은 적어도 하나 이상의 데이터 원본 개체를 포함해야 하지만 더 추가하여 여러 데이터 웨어하우스의 데이터를 결합할 수 있습니다. 이 항목의 지침에 따라 모델에 대한 데이터 원본 개체를 만들 수 있습니다. 이 개체의 속성 설정에 대한 자세한 내용은 [데이터 원본 속성 설정&#40;SSAS 다차원&#41;](set-data-source-properties-ssas-multidimensional.md)을 참조하세요.  
@@ -67,7 +67,7 @@ ms.locfileid: "48049493"
 >  기본적으로 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서는 연결 문자열과 함께 암호를 저장하지 않습니다. 암호를 저장하지 않으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 필요한 경우 암호를 입력하라는 메시지를 표시합니다. 암호를 저장하면 해당 암호는 데이터 연결 문자열에 암호화된 형식으로 저장됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 데이터 원본이 포함된 데이터베이스의 데이터베이스 암호화 키를 사용하여 데이터 원본에 대한 암호 정보를 암호화합니다. 암호화된 연결 정보를 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스 계정이나 암호를 변경해야 하며 그렇지 않으면 암호화된 정보를 복구할 수 없습니다. 자세한 내용은 [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)을 참조하세요.  
   
 ### <a name="defining-impersonation-information-for-data-mining-objects"></a>데이터 마이닝 개체에 대한 가장 정보 정의  
- 데이터 마이닝 쿼리는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스 계정의 컨텍스트에서 실행할 수 있지만 쿼리를 제출하는 사용자의 컨텍스트나 지정한 사용자의 컨텍스트에서 실행할 수도 있습니다. 쿼리가 실행되는 컨텍스트는 쿼리 결과에 영향을 줄 수도 있습니다. 데이터 마이닝을 위한 `OPENQUERY` 유형 작업에 데이터 마이닝 쿼리를 서비스 계정의 컨텍스트 대신 현재 사용자의 컨텍스트나 (쿼리를 실행 하는 사용자)에 관계 없이 지정된 된 사용자의 컨텍스트에서 실행 되지 않는 것이 좋습니다. 이렇게 하면 제한된 보안 자격 증명을 사용하여 쿼리를 실행할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 현재 사용자를 가장하거나 지정한 사용자를 가장하려면 **특정 사용자 이름 및 암호 사용** 또는 **현재 사용자의 자격 증명 사용** 옵션을 선택합니다.  
+ 데이터 마이닝 쿼리는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스 계정의 컨텍스트에서 실행할 수 있지만 쿼리를 제출하는 사용자의 컨텍스트나 지정한 사용자의 컨텍스트에서 실행할 수도 있습니다. 쿼리가 실행되는 컨텍스트는 쿼리 결과에 영향을 줄 수도 있습니다. 데이터 마이닝 `OPENQUERY` 유형 작업에 대해 서비스 계정의 컨텍스트 대신 쿼리를 실행하는 사용자에 관계없이 현재 사용자의 컨텍스트나 지정한 사용자의 컨텍스트에서 데이터 마이닝 쿼리를 실행할 수 있습니다. 이렇게 하면 제한된 보안 자격 증명을 사용하여 쿼리를 실행할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 현재 사용자를 가장하거나 지정한 사용자를 가장하려면 **특정 사용자 이름 및 암호 사용** 또는 **현재 사용자의 자격 증명 사용** 옵션을 선택합니다.  
   
 ##  <a name="bkmk_steps"></a> 데이터 원본 마법사를 사용하여 데이터 원본 만들기  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48049493"
   
 3.  **연결 정의 방법 선택** 페이지에서 **기존 연결 또는 새 연결을 사용하여 데이터 원본 만들기** 를 선택한 다음 **새로 만들기** 를 클릭하여 **연결 관리자**를 엽니다.  
   
-     새 연결은 연결 관리자에서 만듭니다. 연결 관리자에서 공급자를 선택한 다음 기본 데이터에 연결하기 위해 해당 공급자에 사용되는 연결 문자열 속성을 지정합니다. 실제 필요한 정보는 선택한 공급자에 따라 달라지지만 일반적으로 서버나 서버 인스턴스, 서버나 서버 인스턴스 로그온에 대한 정보, 데이터베이스나 파일 이름, 기타 공급자별 설정 등의 정보가 필요합니다. 이 절차의 남은 부분에서는 SQL Server 데이터베이스 연결을 사용합니다.  
+     새 연결은 연결 관리자에서 만듭니다. 연결 관리자에서 공급자를 선택한 다음 기본 데이터에 연결하기 위해 해당 공급자에 사용되는 연결 문자열 속성을 지정합니다. 실제 필요한 정보는 선택한 공급자에 따라 달라지지만 일반적으로 서버나 서버 인스턴스, 서버나 서버 인스턴스 로그온에 대한 정보, 데이터베이스나 파일 이름, 기타 공급자별 설정 등의 정보가 필요합니다. 이 절차의 나머지 부분에서는 SQL Server 데이터베이스 연결을 가정 합니다.  
   
 4.  연결에 사용할 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 또는 네이티브 OLE DB 공급자를 선택합니다.  
   
@@ -152,13 +152,13 @@ ms.locfileid: "48049493"
  추가 데이터 원본에 대한 연결을 지원하기 위한 두 개 이상의 데이터 원본 개체를 만들 수 있습니다. 각 데이터 원본에는 관계를 만드는 데 사용할 수 있는 열이 있어야 합니다.  
   
 > [!NOTE]  
->  여러 데이터 원본이 정의 되어 단일 쿼리로 여러 원본의 데이터를 쿼리 하는 경우와 같이 눈송이 차원에 대 한 정의 해야 합니다를 사용 하 여 원격 쿼리를 지 원하는 데이터 원본 `OpenRowset`합니다. 일반적으로 Microsoft SQL Server 데이터 원본이 사용됩니다.  
+>  여러 데이터 원본이 정의되어 있고 눈송이 차원에 대한 경우와 같이 단일 쿼리로 여러 원본의 데이터를 쿼리하는 경우 `OpenRowset`을 사용하여 원격 쿼리를 지원하는 데이터 원본을 정의해야 합니다. 일반적으로 Microsoft SQL Server 데이터 원본이 사용됩니다.  
   
  여러 데이터 원본을 사용하기 위한 요구 사항에는 다음과 같은 내용이 포함됩니다.  
   
 -   하나의 데이터 원본을 주 데이터 원본으로 지정합니다. 주 데이터 원본은 데이터 원본 뷰를 만드는 데 사용되는 데이터 원본입니다.  
   
--   주 데이터 원본은 지원 해야 합니다는 `OpenRowset` 함수입니다.  SQL Server의 이 함수에 대한 자세한 내용은 <xref:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlTokenType.OpenRowSet>을 참조하세요.  
+-   주 데이터 원본은 `OpenRowset` 함수를 지원해야 합니다.  SQL Server의 이 함수에 대한 자세한 내용은 <xref:Microsoft.SqlServer.TransactSql.ScriptDom.TSqlTokenType.OpenRowSet>을 참조하세요.  
   
  다음 방법을 사용하여 여러 데이터 원본의 데이터를 결합할 수 있습니다.  
   

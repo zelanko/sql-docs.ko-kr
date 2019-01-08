@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - master database [SQL Server], rebuilding
@@ -16,12 +15,12 @@ ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9cca83a20c7559a8b7192fd345b559226c9c7d57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: b58378e8ba2193a186fb58e3e784bf9bc3cb4d4c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135503"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749405"
 ---
 # <a name="rebuild-system-databases"></a>시스템 데이터베이스 다시 작성
   [master](master-database.md), [model](model-database.md), [msdb](msdb-database.md)또는 [resource](resource-database.md) 시스템 데이터베이스의 손상 문제를 수정하거나 기본 서버 수준 데이터 정렬을 변경하려면 시스템 데이터베이스를 다시 작성해야 합니다. 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 시스템 데이터베이스를 다시 작성하는 단계별 지침을 제공합니다.  
@@ -105,8 +104,8 @@ ms.locfileid: "48135503"
     |/QUIET 또는 /Q|설치 프로그램이 사용자 인터페이스 없이 실행되도록 지정합니다.|  
     |/ACTION=REBUILDDATABASE|설치 시 시스템 데이터베이스를 다시 작성하도록 지정합니다.|  
     |/INSTANCENAME=*InstanceName*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 이름입니다. 기본 인스턴스의 경우 MSSQLSERVER를 입력합니다.|  
-    |/SQLSYSADMINACCOUNTS=*accounts*|에 추가할 Windows 그룹이 나 개별 계정을 지정 합니다 `sysadmin` 고정된 서버 역할입니다. 둘 이상의 계정을 지정할 경우 각 계정 이름을 공백으로 구분합니다. 예를 들면 **BUILTIN\Administrators MyDomain\MyUser**와 같이 입력합니다. 계정 이름에 공백이 포함되어 있는 계정을 지정할 때는 계정을 큰따옴표로 묶습니다. 예를 들어 입력 `NT AUTHORITY\SYSTEM`합니다.|  
-    |[ /SAPWD=*StrongPassword* ]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` 계정의 암호를 지정합니다. 해당 인스턴스에서 혼합 인증([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 인증) 모드를 사용할 경우 이 매개 변수가 필요합니다.<br /><br /> **\*\* 보안 정보 \* \***  는 `sa` 잘 알려진 계정이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정 이므로 악의적인 사용자가 대상 종종 됩니다. 강력한 암호를 사용 하는 것이 중요 합니다 `sa` 로그인 합니다.<br /><br /> Windows 인증 모드에 이 매개 변수를 지정하지 마세요.|  
+    |/SQLSYSADMINACCOUNTS=*accounts*|`sysadmin` 고정 서버 역할에 추가할 Windows 그룹이나 개별 계정을 지정합니다. 둘 이상의 계정을 지정할 경우 각 계정 이름을 공백으로 구분합니다. 예를 들면 **BUILTIN\Administrators MyDomain\MyUser**와 같이 입력합니다. 계정 이름에 공백이 포함되어 있는 계정을 지정할 때는 계정을 큰따옴표로 묶습니다. 예를 들어 다음과 같이 입력합니다. `NT AUTHORITY\SYSTEM`|  
+    |[ /SAPWD=*StrongPassword* ]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` 계정의 암호를 지정합니다. 해당 인스턴스에서 혼합 인증([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 인증) 모드를 사용할 경우 이 매개 변수가 필요합니다.<br /><br /> **\*\* 보안 정보 \* \***  는 `sa` 잘 알려진 계정이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정 이므로 악의적인 사용자가 대상 종종 됩니다. `sa` 로그인에 대해 강력한 암호를 사용하도록 합니다.<br /><br /> Windows 인증 모드에 이 매개 변수를 지정하지 마세요.|  
     |[ /SQLCOLLATION=*CollationName* ]|서버 수준 데이터 정렬을 새로 지정합니다. 이 매개 변수는 선택 사항입니다. 지정하지 않으면 서버의 현재 데이터 정렬이 사용됩니다.<br /><br /> **\*\* 중요 \* \***  서버 수준 데이터 정렬을 변경 해도 기존 사용자 데이터베이스의 데이터 정렬은 변경 되지 않습니다. 새로 만드는 모든 사용자 데이터베이스는 기본적으로 새로운 데이터 정렬을 사용하게 됩니다.<br /><br /> 자세한 내용은 [서버 데이터 정렬 설정 또는 변경](../collations/set-or-change-the-server-collation.md)을 참조하세요.|  
   
 3.  시스템 데이터베이스를 다시 작성하는 작업이 완료되면 아무런 메시지 없이 명령 프롬프트로 돌아갑니다. Summary.txt 로그 파일을 검토하여 프로세스가 성공적으로 완료되었는지 확인합니다. 이 파일은 C:\Program Files\Microsoft SQL Server\120\Setup Bootstrap\Logs에 있습니다.  

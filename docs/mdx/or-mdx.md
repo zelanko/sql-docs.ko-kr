@@ -1,5 +1,5 @@
 ---
-title: 또는 (MDX) | Microsoft Docs
+title: OR (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 668e8f1955290c31ee63ca5b81fc5e9c286d54c4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: ae6b6602d7968bb444dcf4838537bb000b97dd53
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742452"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418403"
 ---
 # <a name="or-mdx"></a>OR(MDX)
 
@@ -36,10 +36,10 @@ Expression1 OR Expression2
  숫자 값을 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 반환 하는 부울 값 **true** 인수 중 하나 또는 둘 다로 계산 되 면 **true**, 그렇지 않으면 **false**합니다.  
+ 반환 하는 부울 값 **true** 인수 중 하나 또는 둘 다로 평가 되 면 **true**이 고, 그렇지 않으면 **false**합니다.  
   
 ## <a name="remarks"></a>Remarks  
- **또는** 연산자는 부울 값으로 두 개의 인수를 처리 (0, 0,으로 **false**, 그렇지 않으면 **true**) 연산자는 논리 분리를 수행 하기 전에. 다음 표에서 설명 방법을 **또는** 연산자로 논리 분리를 수행 합니다.  
+ 합니다 **또는** 연산자는 두 인수가 모두 부울 값으로 처리 (0으로 **false**이 고, 그렇지 않으면 **true**) 연산자는 논리 분리를 수행 하기 전에 합니다. 다음 표에서 설명 하는 방법을 **또는** 연산자로 논리 분리를 수행 합니다.  
   
 |*Expression1*|*Expression2*|반환 값|  
 |-------------------|-------------------|------------------|  
@@ -49,7 +49,7 @@ Expression1 OR Expression2
 |**false**|**false**|**false**|  
   
 ## <a name="example"></a>예제  
- 다음 쿼리에는 Customer 차원의 Gender 계층에 있는 현재 멤버가 Male이거나 Customer 차원의 Marital Status 계층에 있는 현재 멤버가 Married인 경우 “MARRIED OR MALE” 문자열을 반환하고, 그렇지 않으면 “UNMARRIED OR FEMALE” 문자열을 반환하는 계산 측정값이 포함되어 있습니다.  
+ 다음 쿼리는 "MARRIED OR MALE" 이면 Customer 차원의 Gender 계층에 있는 현재 멤버가 Male Customer 차원의 Marital Status 계층에 있는 현재 멤버가 Married 인; 문자열을 반환 하는 계산된 측정값을 포함 그렇지 않으면 "UNMARRIED 또는 FEMALE" 문자열을 반환 합니다.  
   
 ```  
 WITH  

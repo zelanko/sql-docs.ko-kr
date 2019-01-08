@@ -10,12 +10,12 @@ ms.assetid: 0edeaa08-9c5d-4e3a-bc15-b9a1f0c8a9dc
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: ecc3f711c90f46c17de54a6c3659d84b7756b25e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61b706145f708e9b2e8a04ba4e7bc574c503a742
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773901"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407877"
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>Oracle 스키마를 SQL Server 스키마에 매핑(OracleToSQL)
 Oracle에서는 각 데이터베이스에 하나 이상의 스키마에 있습니다. 기본적으로 SSMA는 Oracle 스키마의 모든 개체를 마이그레이션하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스키마에 대 한 명명 된 데이터베이스입니다. Oracle 스키마 간의 매핑을 사용자 지정할 수는 있지만 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.  
@@ -62,7 +62,7 @@ Oracle 스키마 간의 매핑을 사용자 지정 하면 및 [!INCLUDE[ssNoVers
 ## <a name="next-steps"></a>다음 단계  
 Oracle 개체를 변환 하는 분석 하려는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 할 수 있습니다 [변환 보고서를 만드는](assessing-oracle-schemas-for-conversion-oracletosql.md)합니다. 수이 고, 그렇지 [Oracle 데이터베이스 개체 정의 변환](converting-oracle-schemas-oracletosql.md) 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 정의 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
 [SQL Server에 연결 &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
 [SQL Server로 데이터베이스 마이그레이션 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

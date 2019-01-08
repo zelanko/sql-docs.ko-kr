@@ -19,12 +19,12 @@ ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 31276958172d94e72c7b6970728bfac968f678aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 97ace7573ff30891e2b54196204cdfdd4b56b3c9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114333"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402138"
 ---
 # <a name="initializereportserver-method-wmi-msreportserverconfigurationsetting"></a>InitializeReportServer 메서드(WMI MSReportServer_ConfigurationSetting)
   지정된 보고서 서비스 인스턴스를 초기화합니다.  

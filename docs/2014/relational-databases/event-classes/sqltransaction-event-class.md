@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 4e175aa3-4f3d-4b23-a423-4a7a1bd4e84e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17dcca9345ce273e53b58d7dc8237a448f2c957e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: de5a49853f08541cd617afb20273820f956ee660
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098973"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774395"
 ---
 # <a name="sqltransaction-event-class"></a>SQLTransaction 이벤트 클래스
   SQLTransaction 이벤트 클래스를 사용하여 트랜잭션이 시작되고 완료되는 시기와 특히 애플리케이션, 트리거 또는 저장 프로시저를 테스트하는 시기를 모니터링할 수 있습니다.  

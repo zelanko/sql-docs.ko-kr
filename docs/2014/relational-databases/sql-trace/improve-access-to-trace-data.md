@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], space
@@ -15,12 +14,12 @@ ms.assetid: c260c000-fd53-4831-993f-df6894f3228b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a71c15c2485b170dbfc79b2fc872320b0972477d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 540a0bd9430a182ef3eda43fd816b4a495dc36b5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129375"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767896"
 ---
 # <a name="improve-access-to-trace-data"></a>추적 데이터에 대한 액세스 향상
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 추적 데이터에 대한 액세스를 향상시키기 위해 **temp** 디렉터리의 공간을 사용합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에는 적어도 10MB의 사용 가능한 공간이 필요합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하는 동안 여유 공간이 10MB 이하로 내려가면 모든 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 기능이 중지됩니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "48129375"
   
 5.  **확인** 을 클릭하여 변경 내용을 저장합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Profiler 시작](../../tools/sql-server-profiler/start-sql-server-profiler.md)   
  [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

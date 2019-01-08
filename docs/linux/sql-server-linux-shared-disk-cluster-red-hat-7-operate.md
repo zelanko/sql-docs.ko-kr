@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: 4b41e3adeaab22a958e94e373762c57a6d613f6d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2967277ca109b9ee55221a7b12f5af891a5e45a2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661272"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393577"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터 작동
 
@@ -142,9 +142,9 @@ sudo crm_mon
    ```
 
    > [!NOTE]
-   > 기본 제공된 고가용성 구성이 없는 또 다른 방화벽을 사용 중인 경우 Pacemaker가 클러스터의 다른 노드와 통신할 수 있으려면 다음 포트를 열어야 합니다.
+   > 다음 포트 pacemaker 클러스터의 다른 노드와 통신할 수를 열어야 할 기본 제공 고가용성 구성 되지 않은 다른 방화벽을 사용 하는 경우
    >
-   > * TCP: 포트 2224, 3121, 21064
+   > * TCP: 2224 3121, 21064 포트
    > * UDP: 포트 5405
 
 1. 새 노드에 Pacemaker 패키지를 설치 합니다.
@@ -210,7 +210,7 @@ sudo pcs    resource op monitor interval=2s mssqlha
 
 클러스터 문제 해결에 세 개의 디먼 함께 작동 하 클러스터 리소스를 관리 하는 방식을 이해 도움이 될 수 있습니다. 
 
-| 데몬 | 설명 
+| 데몬 | Description 
 | ----- | -----
 | Corosync | 쿼럼 멤버 자격 및 클러스터 노드 간 메시징을 제공 합니다.
 | Pacemaker | Corosync 위에 상주 하 고 리소스에 대 한 상태 시스템을 제공 합니다. 
@@ -261,7 +261,7 @@ pacemaker: active/enabled
 
     다음 포트를 전달할 수 있게 되기를 Pacemaker에 대 한 모든 노드에서 열려 있어야 합니다.
     
-    - **TCP: 2224, 3121, 21064
+    - * * TCP: 2224를 3121, 21064
 
 - **Pacemaker 또는 Corosync 서비스 실행**
 

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_add_agent_profile
@@ -17,12 +16,12 @@ ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b5c6b2c03ff9956a58bf7da8426c87b692d5f879
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edb5fc6c24ce8e59c82b35ac10e6dddb67adeaf4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670441"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752155"
 ---
 # <a name="spaddagentprofile-transact-sql"></a>sp_add_agent_profile(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +46,10 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
  [ **@profile_id=** ] *profile_id*  
  새로 삽입된 프로필과 연결된 ID입니다. *profile_id* 됩니다 **int** 이며 선택적 출력 매개 변수입니다. 지정한 경우 값이 새 프로필 ID로 설정됩니다.  
   
- [ **@profile_name=** ] **'***profile_name***'**  
+ [  **@profile_name=** ] **'**_profile_name_**'**  
  프로필 이름입니다. *profile_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@agent_type=** ] **'***agent_type***'**  
+ [  **@agent_type=** ] **'**_agent_type_**'**  
  복제 에이전트 유형입니다. *agent_type* 됩니다 **int**이며 기본값은 없고 수 이러한 값 중 하나일 수 있습니다.  
   
 |값|Description|  
@@ -66,7 +65,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
   
  **0** 시스템 프로필을 나타냅니다. **1** 은 사용자 지정 프로필을 나타냅니다. 이 저장된 프로시저를 사용 하 여만 사용자 지정 프로필을 만들 수 있습니다. 유효한 값 이므로 **1**합니다. 만 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 프로필을 만듭니다.  
   
- [  **@description=** ] **'***설명***'**  
+ [  **@description=** ] **'**_설명을_**'**  
  프로필에 대한 설명입니다. *설명을* 됩니다 **nvarchar(3000)**, 기본값은 없습니다.  
   
  [  **@default=** ] *기본*  
@@ -85,7 +84,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_add_agent_profile**합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 에이전트 프로필 작업](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [복제 에이전트 프로필](../../relational-databases/replication/agents/replication-agent-profiles.md)   
  [sp_add_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   

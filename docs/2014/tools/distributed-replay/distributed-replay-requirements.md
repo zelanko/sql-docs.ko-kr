@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 048e8d37c7988577586b996687aae9ea4b930664
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0e7a87ad14dbe1b12abb4ca4fe0af6b0a439c57b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168053"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759405"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능을 사용하기 전에 이 항목에서 설명하는 제품 요구 사항을 검토하세요.  
@@ -42,7 +41,7 @@ ms.locfileid: "48168053"
   
 -   확장명이 `.trc` 인 단일 추적 파일  
   
--   파일 롤오버 명명 규칙을 따르는 일련의 롤오버 추적 파일은 예를 들면 `<TraceFile>.trc`, `<TraceFile>_1.trc`, `<TraceFile>_2.trc`, `<TraceFile>_3.trc`…와 같습니다. `<TraceFile>_n.trc`.  
+-   파일 롤오버 명명 규칙을 따르는 일련의 롤오버 추적 파일은 예를 들면 `<TraceFile>.trc`, `<TraceFile>_1.trc`, `<TraceFile>_2.trc`, `<TraceFile>_3.trc`, `<TraceFile>_n.trc`와 같습니다.  
   
 ### <a name="input-trace-events-and-columns"></a>입력 추적 이벤트 및 열  
  Distributed Replay에서 입력 추적 데이터를 재생하려면 데이터가 특정 이벤트 및 열을 포함해야 합니다. **의** TSQL_Replay [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 템플릿에 필요한 모든 이벤트 및 열과 추가 정보가 포함되어 있습니다. 이 템플릿에 대한 자세한 내용은 [Replay Requirements](../sql-server-profiler/replay-requirements.md)을 참조하십시오.  
@@ -158,7 +157,7 @@ ms.locfileid: "48168053"
   
  누락되거나 잘못된 로그인과 연관된 이벤트를 재생하면 재생 오류가 발생하지만 재생 작업은 계속됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Distributed Replay 보안](distributed-replay-security.md)   
  [Distributed Replay 설치](install-distributed-replay-overview.md)  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 588f886f-d6c8-48c8-893d-c2be43a97943
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8cb23239cde77810cae299f5c911889d21936194
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 898f16c0b0588fe61ae76e1e86e85713ba3f898a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057649"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764465"
 ---
 # <a name="sql-server-agent-properties-advanced-tab"></a>SQL Server 에이전트 속성(고급 탭)
   기본적으로 **고급** 탭에는 5개의 속성이 나타납니다. 사용자 지정 속성을 정의한 경우 속성이 해당 값과 함께 이 탭에 나타납니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.replconflictviewer.cvmerge.f1
@@ -13,12 +12,12 @@ ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ac6813542099b955b7430309fe6629f6a5648af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e28a5077057c9a02a3b45de6a88180eab5c87b2b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156073"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756235"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Microsoft 복제 충돌 뷰어(병합 게시)
   복제 충돌 뷰어를 사용하면 복제 동기화를 수행하는 동안 발생한 모든 충돌을 볼 수 있습니다. 충돌은 게시자와 구독자 또는 두 구독자 등 두 위치에서 같은 데이터를 동시에 변경할 때 발생합니다. 복제는 아티클을 만들 때 선택한 충돌 해결 프로그램을 사용하여 충돌을 자동으로 해결합니다. 그러나 필요한 경우 복제 충돌 뷰어를 사용하여 충돌 해결에 다른 해결 방법을 선택할 수 있습니다. 다음과 같은 두 가지 충돌이 일어날 수 있습니다.  
@@ -71,8 +70,8 @@ ms.locfileid: "48156073"
  **처음 다섯 개의 열 및 충돌하는 데이터를 포함하는 기타 열 표시**  
  처음 5개 열과 충돌이 발생한 기타 모든 열을 표시하려면 선택합니다. 이 옵션은 테이블에 많은 열이 있지만 충돌 해결에 가장 도움이 되는 열만 보려는 경우에 유용합니다. 기본 키 또는 이름 필드와 같이 행을 식별하는 필드가 테이블의 앞쪽 열에 포함되어 있는 경우가 많으므로 처음 5개 열은 항상 이 뷰에 포함됩니다.  
   
- **열 정보 표시** (**…**)  
- 열 정보를 보려면 **테이블 이름**, **열 이름**, **데이터 형식**및 **열 값**을 클릭합니다. **열 값** 은 읽기 전용으로 표시되지 않는 경우 편집할 수 있습니다.  
+ **열 정보 표시**(**…**)  
+ 테이블 이름, 열 이름, **테이블 이름**, **열 이름**합니다 **데이터 형식**, 및 **열 값**합니다. **열 값** 은 읽기 전용으로 표시되지 않는 경우 편집할 수 있습니다.  
   
  **적용되는 내용 전송**  
  충돌 해결 프로그램에서 적용되는 내용으로 결정한 행을 유지하려면 클릭합니다. 이 단추를 클릭하기 전에 읽기 전용으로 표시되지 않은 모든 열의 값을 변경할 수 있습니다.  
@@ -83,7 +82,7 @@ ms.locfileid: "48156073"
  **이 충돌 정보 기록**  
  자세한 충돌 정보를 파일에 기록하려면 이 확인란을 선택합니다. 파일 위치를 지정하려면 **보기** 메뉴를 가리키고 **옵션**을 클릭합니다. 값을 입력하거나 찾아보기 (**...**)를 클릭한 다음 해당 파일로 이동합니다. **확인** 을 클릭하여 **옵션** 대화 상자를 종료합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [병합 게시에 대한 데이터 충돌 보기 및 해결&#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)   
  [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   

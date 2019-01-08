@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sysmergepublications
@@ -19,12 +18,12 @@ ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d2a7ed15f4c971cdd7489084717f2a11ecd9a2e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d807b4b62eed46e99fdeaf0225fadb59b26042a8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790281"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748426"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ ms.locfileid: "47790281"
 |**allow_synctoalternate**|**bit**|대체 동기화 파트너가 해당 게시자와 동기화될 수 있는지 여부를 지정합니다. **0** 동기화 파트너가 허용 되지 않음을 의미 합니다.|  
 |**validate_subscriber_info**|**nvarchar(500)**|구독자 정보를 검색하고 구독자에서 매개 변수가 있는 행 필터링 조건의 유효성을 검사하는 데 사용하는 함수를 나열합니다.|  
 |**ad_guidname**|**sysname**|게시를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory에 게시할지 여부를 지정합니다. 올바른 GUID 지정 Active Directory에 게시 하 고 GUID는 해당 Active Directory 게시 개체인 **objectGUID**합니다. NULL인 경우 게시는 Active Directory에 게시되지 않습니다.|  
-|**backward_comp_level**|**int**|데이터베이스 호환성 수준이며 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
+|**backward_comp_level**|**int**|데이터베이스 호환성 수준이며 다음 값 중 하나입니다.<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |**max_concurrent_merge**|**int**|최대 동시 병합 프로세스 수입니다. 값이 **0** 에이 속성의 지정된 된 시간에 실행 중인 동시 병합 프로세스 수 제한이 있다는 것을 의미 합니다. 이 속성은 병합 게시에 대해 한 번에 실행할 수 있는 동시 병합 프로세스의 수를 제한합니다. 실행하도록 허용된 값보다 많은 스냅숏 프로세스를 동시에 실행하도록 예약할 경우 초과 작업은 큐에 두고 현재 실행 중인 병합 프로세스가 완료될 때까지 기다립니다.|  
 |**max_concurrent_dynamic_snapshots**|**int**|병합 게시에 대해 동시에 실행할 수 있는 필터링된 동시 데이터 스냅숏 세션의 최대 수입니다. 하는 경우 **0**, 언제 든 지 게시에 대해 동시에 실행할 수 있는 필터링 된 동시 데이터 스냅숏 세션의 최대 수에 대 한 제한은 없습니다. 이 속성은 병합 게시에 대해 한 번에 실행할 수 있는 동시 스냅숏 프로세스의 수를 제한합니다. 실행하도록 허용된 값보다 많은 스냅숏 프로세스를 동시에 실행하도록 예약할 경우 초과 작업은 큐에 두고 현재 실행 중인 병합 프로세스가 완료될 때까지 기다립니다.|  
 |**use_partition_groups**|**smallint**|게시에서 사전 계산 파티션을 사용하는지 여부를 지정합니다.|  
@@ -82,7 +81,7 @@ ms.locfileid: "47790281"
 |**snapshot_jobid**|**binary(16)**|구독자가 스냅숏 생성 프로세스를 시작할 수 있을 때 스냅숏을 생성하는 에이전트 작업을 식별합니다.|  
 |**allow_web_synchronization**|**bit**|게시 웹 동기화에 사용 되는지 여부를 지정 합니다. 여기서 **1** 웹 동기화는 게시에 대해 사용할 수 있음을 의미 합니다.|  
 |**web_synchronization_url**|**nvarchar(500)**|웹 동기화에 사용되는 인터넷 URL의 기본값을 지정합니다.|  
-|**allow_partition_realignment**|**bit**|게시자의 행 수정으로 인해 파티션이 변경된 경우 구독자에게 삭제 내용을 보낼지 여부를 나타냅니다.<br /><br /> **0** 이전에서 = 데이터 파티션 여기서 게시자에서이 데이터 변경 내용이 구독자로 복제 되지 것입니다 하지만 구독자에서 변경 내용을 게시자로 복제는 구독자에 남게 됩니다.<br /><br /> **1** = 구독자의 파티션에 더 포함 되지 않은 데이터를 제거 하 여 파티션 변경 결과 반영 하도록 구독자에 게 삭제 합니다.<br /><br /> 자세한 내용은 [sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)합니다.<br /><br /> 그러나 참고: 남은 데이터는 구독자에서이 값이 **0** 엄격 하 게 적용 되지 복제 시스템에 의해; 읽기 전용인 것 처럼 처리 해야 합니다.|  
+|**allow_partition_realignment**|**bit**|게시자의 행 수정으로 인해 파티션이 변경된 경우 구독자에게 삭제 내용을 보낼지 여부를 나타냅니다.<br /><br /> **0** 이전에서 = 데이터 파티션 여기서 게시자에서이 데이터 변경 내용이 구독자로 복제 되지 것입니다 하지만 구독자에서 변경 내용을 게시자로 복제는 구독자에 남게 됩니다.<br /><br /> **1** = 구독자의 파티션에 더 포함 되지 않은 데이터를 제거 하 여 파티션 변경 결과 반영 하도록 구독자에 게 삭제 합니다.<br /><br /> 자세한 내용은 [sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)합니다.<br /><br /> 참고: 그러나이 값이 구독자에 남은 데이터는 **0** 엄격 하 게 적용 되지 복제 시스템에 의해; 읽기 전용인 것 처럼 처리 해야 합니다.|  
 |**retention_period_unit**|**tinyint**|정의할 때 사용할 단위를 정의 *보존*에 다음이 값 중 하나일 수 있습니다.<br /><br /> **0** = 일입니다.<br /><br /> **1** = 주입니다.<br /><br /> **2** = 월.<br /><br /> **3** 연도입니다.|  
 |**decentralized_conflicts**|**int**|충돌을 발생시킨 구독자에 충돌 레코드가 저장되는지 여부를 지정합니다.<br /><br /> **0** = 충돌 레코드가 구독자에 저장 되지 않습니다.<br /><br /> **1** = 충돌 레코드가 구독자에 저장 됩니다.|  
 |**generation_leveling_threshold**|**int**|하나의 생성에 포함되는 변경 내용 수를 지정합니다. 생성은 게시자 또는 구독자에 배달되는 변경 내용 모음입니다.|  

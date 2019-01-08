@@ -11,12 +11,12 @@ ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5f6d37f88044d9888c82b5770ea1bca366423459
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: ea7896e5f7c394539793ca65496824691275963d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123255"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393756"
 ---
 # <a name="managing-report-parts"></a>보고서 파트 관리
   부터는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], 보고서 파트는 보고서 서버에 게시 하 고 적절 한 권한이 있는 경우 다른 사용자가 다른 보고서에서 다시 사용할 수 있습니다.  
@@ -92,10 +92,10 @@ ms.locfileid: "48123255"
 -   보고서 파트는 기존 "리소스" 항목 유형과 동일한 사용 권한 정책을 사용합니다. 보안 상속 관점에서 폴더 내의 기존 리소스 항목과 보고서 파트는 차이가 없습니다. 보고서 파트는 같은 폴더에 있는 이미지와 동일한 사용 권한 정책을 상속합니다. 구별해야 하는 경우에는 원하는 보고서 파트에 대해 항목 수준 보안을 구성할 수 있습니다. 또는 올바른 사용 권한이 구성된 별도의 폴더에 보고서 파트를 넣을 수도 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 파트 및 보고서 작성기에서 데이터 집합](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [보고서 작성기의 보고서 파트 및 데이터 세트](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [일반 속성 페이지, 보고서 파트 &#40;보고서 관리자&#41;](../general-properties-page-report-parts-report-manager.md)   
  [항목 페이지 이동 &#40;보고서 관리자&#41;](../move-items-page-report-manager.md)   
- [보고서 서버 콘텐츠 관리 &#40;SSRS 기본 모드&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [보고서 파트 문제 해결 &#40;보고서 작성기 및 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [보고서 디자이너의 보고서 파트&#40;SSRS&#41;](report-parts-in-report-designer-ssrs.md)  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7c0cb7a4-cd07-44cc-85cb-eb1ad91f85fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c571dc5e2cd9d831136f70251d04a807cd654dcf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28cc4183a651fb1e9c52f10d4d518bc94d684cad
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147863"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749511"
 ---
 # <a name="look-up-infopackage"></a>InfoPackage 조회
   **InfoPackage 조회** 대화 상자에서는 SAP Netweaver BW 시스템에 정의된 InfoPackage를 조회할 수 있습니다. InfoPackage 목록이 표시될 때 원하는 InfoPackage를 선택하면 관련 옵션이 대상의 값으로 채워집니다.  
@@ -77,8 +76,8 @@ ms.locfileid: "48147863"
   
  InfoPackage 목록이 표시될 때 원하는 InfoPackage를 선택하면 관련 옵션이 대상의 값으로 채워집니다.  
   
-## <a name="see-also"></a>관련 항목  
- [SAP BW 대상 편집기 &#40;연결 관리자 페이지&#41;](sap-bw-destination-editor-connection-manager-page.md)   
+## <a name="see-also"></a>관련 항목:  
+ [SAP BW 대상 편집기&#40;연결 관리자 페이지&#41;](sap-bw-destination-editor-connection-manager-page.md)   
  [Microsoft Connector 1.1 for SAP BW F1 도움말](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

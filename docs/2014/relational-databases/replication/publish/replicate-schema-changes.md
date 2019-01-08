@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], schema changes
@@ -14,12 +13,12 @@ ms.assetid: c09007f0-9374-4f60-956b-8a87670cd043
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 596c6875bf1d30fded04ab20819e18bc6e5784d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a2c275604d9c74699eeb2b3c77a90e2d819fb6c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136203"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778705"
 ---
 # <a name="replicate-schema-changes"></a>스키마 변경 내용 복제
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 스키마 변경 내용을 복제하는 방법에 대해 설명합니다.  
@@ -52,10 +51,10 @@ ms.locfileid: "48136203"
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
--   ALTER TABLE … DROP COLUMN 문은 스키마 변경 내용 복제를 해제한 경우에도 항상 삭제된 열이 있는 구독이 포함된 모든 구독자에 복제됩니다.  
+-   ALTER TABLE ... DROP COLUMN 문은 스키마 변경 내용 복제를 해제한 경우에도 항상 삭제된 열이 있는 구독이 포함된 모든 구독자에 복제됩니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- 게시에 대한 스키마 변경 내용을 복제하지 않으려면 **게시 속성 - \<Publication>** 대화 상자에서 스키마 변경 내용 복제를 해제합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요.  
+ 게시에 대한 스키마 변경 내용을 복제하지 않으려면 **게시 속성 - \<Publication>** 대화 상자에서 스키마 변경 내용 복제를 해제합니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Publication Properties](view-and-modify-publication-properties.md)을 참조하세요.  
   
 #### <a name="to-disable-replication-of-schema-changes"></a>스키마 변경 내용 복제를 해제하려면  
   
@@ -92,7 +91,7 @@ ms.locfileid: "48136203"
   
 3.  (옵션) **@property**에 **replicate_ddl** 값, **@value**에 **1** 값을 지정하여 [sp_changemergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 실행하면 스키마 변경 내용 복제가 다시 설정됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [게시 데이터베이스의 스키마 변경](make-schema-changes-on-publication-databases.md)   
  [게시 데이터베이스의 스키마 변경](make-schema-changes-on-publication-databases.md)  
   

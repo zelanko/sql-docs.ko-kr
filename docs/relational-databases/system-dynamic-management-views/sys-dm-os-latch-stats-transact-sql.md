@@ -19,15 +19,15 @@ ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1fe8a78047be763aecb898a48a882b8f08d3bfb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb61a77aca509393143d4abae98af0a9efb5e888
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734034"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407150"
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   클래스별로 구성된 모든 래치 대기에 대한 정보를 반환합니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "47734034"
 |-----------------|---------------|-----------------|  
 |latch_class|**nvarchar(120)**|래치 클래스의 이름입니다.|  
 |waiting_requests_count|**bigint**|이 클래스의 래치 대기 수입니다. 이 카운터는 래치 대기가 시작될 때 증가합니다.|  
-|wait_time_ms|**bigint**|이 클래스의 총 래치 대기 시간(밀리초)입니다.<br /><br /> **참고:** 이 열에는 래치 대기가 끝날 때 및 래치 대기 동안 5 분 마다 업데이트 됩니다.|  
+|wait_time_ms|**bigint**|이 클래스의 총 래치 대기 시간(밀리초)입니다.<br /><br /> **참고:** 이 열은 래치 대기 동안 5분마다 업데이트되고 래치 대기가 끝날 때도 업데이트됩니다.|  
 |max_wait_time_ms|**bigint**|메모리 개체가 이 래치를 기다린 최대 시간입니다. 이 값이 지나치게 높으면 내부 교착 상태가 발생한 것일 수 있습니다.|  
 |pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
@@ -166,14 +166,14 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|내부적으로만 사용됩니다.|  
 |SERVICE_BROKER_HOST_NAME|내부적으로만 사용됩니다.|  
 |SERVICE_BROKER_READ_CACHE|내부적으로만 사용됩니다.|  
-|SERVICE_BROKER_WAITFOR_MANAGER| 인스턴스 수준 맵을 대기자 큐 동기화 하는 데 사용 합니다. 데이터베이스 ID, 데이터베이스 버전 및 큐 ID 튜플 당 하나의 큐가 있습니다. 많은 연결 되 면이 클래스의 래치 경합이 발생할 수 있습니다: WAITFOR(RECEIVE)에서 대기 상태입니다. WAITFOR(RECEIVE); 호출 WAITFOR; 제한 시간이 초과 메시지를 표시 합니다. 커밋 또는 WAITFOR(RECEIVE); 포함 된 트랜잭션이 롤백 WAITFOR(RECEIVE) 대기 상태에 있는 스레드의 수를 줄여 경합을 줄일 수 있습니다. |  
+|SERVICE_BROKER_WAITFOR_MANAGER| 인스턴스 수준 맵을 대기자 큐 동기화 하는 데 사용 합니다. 데이터베이스 ID, 데이터베이스 버전 및 큐 ID 튜플 당 하나의 큐가 있습니다. 많은 연결 되 면이 클래스의 래치 경합이 발생할 수 있습니다. WAITFOR(RECEIVE) 대기 상태입니다. WAITFOR(RECEIVE); 호출 WAITFOR; 제한 시간이 초과 메시지를 표시 합니다. 커밋 또는 WAITFOR(RECEIVE); 포함 된 트랜잭션이 롤백 WAITFOR(RECEIVE) 대기 상태에 있는 스레드의 수를 줄여 경합을 줄일 수 있습니다. |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|내부적으로만 사용됩니다.|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|내부적으로만 사용됩니다.|  
 |SERVICE_BROKER_TRANSPORT|내부적으로만 사용됩니다.|  
 |SERVICE_BROKER_MIRROR_ROUTE|내부적으로만 사용됩니다.|  
 |TRACE_ID|내부적으로만 사용됩니다.|  
 |TRACE_AUDIT_ID|내부적으로만 사용됩니다.|  
-|TRACE|내부적으로만 사용됩니다.|  
+|추적|내부적으로만 사용됩니다.|  
 |TRACE_CONTROLLER|내부적으로만 사용됩니다.|  
 |TRACE_EVENT_QUEUE|내부적으로만 사용됩니다.|  
 |TRANSACTION_DISTRIBUTED_MARK|내부적으로만 사용됩니다.|  

@@ -11,12 +11,12 @@ ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f3acf241fbc5737daff76c408159b17b27affe9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: f49c20c8efe233bb49194364943f7ebb95ed6497
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220663"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415281"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>RDL 샌드박싱 설정 및 해제
   RDL(Report Definition Language) 샌드박싱 기능을 사용하면 보고서 서버의 단일 웹 팜을 여러 명이 사용하는 환경에서 각 개인에 대해 특정 유형의 리소스 사용을 검색하고 제한할 수 있습니다. 여러 명 그리고 경우에 따라 서로 다른 회사에서 사용할 수 있는 보고서 서버의 단일 웹 팜을 유지 관리하는 호스팅 서비스 시나리오를 예로 들 수 있습니다. 보고서 서버 관리자는 이 기능을 설정하여 다음과 같이 할 수 있습니다.  
@@ -35,10 +35,10 @@ ms.locfileid: "48220663"
   
 -   식의 명명된 매개 변수  
   
- 이 항목에서는 각 요소에 설명 합니다 <`RDLSandboxing`> RSReportServer.Config 파일의 요소입니다. 이 파일을 수정하는 방법은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요. 서버 추적 로그는 RDL 샌드박싱 기능과 관련된 작업을 기록합니다. 추적 로그에 대 한 자세한 내용은 참조 하세요. [보고서 서버 서비스 추적 로그](report-server/report-server-service-trace-log.md)합니다.  
+ 이 항목에서는 RSReportServer.Config 파일에서 <`RDLSandboxing`> 요소의 각 요소에 대해 설명합니다. 이 파일을 수정하는 방법은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요. 서버 추적 로그는 RDL 샌드박싱 기능과 관련된 작업을 기록합니다. 추적 로그에 대한 자세한 내용은 [보고서 서버 서비스 추적 로그](report-server/report-server-service-trace-log.md)를 참조하세요.  
   
 ## <a name="example-configuration"></a>구성 예  
- 다음 예제에서는 설정 및 예제 값을 <`RDLSandboxing`> RSReportServer.Config 파일의 요소입니다.  
+ 다음 예에서는 RSReportServer.Config 파일의 <`RDLSandboxing`> 요소에 대한 설정 및 값 예를 보여 줍니다.  
   
 ```  
 <RDLSandboxing>  
@@ -47,8 +47,8 @@ ms.locfileid: "48220663"
    <MaxStringResultLength>3000</MaxStringResultLength>  
    <MaxArrayResultLength>250</MaxArrayResultLength>  
    <Types>  
-      <Allow Namespace=”System.Drawing” AllowNew=”True”>Bitmap</Allow>  
-      <Allow Namespace=”TypeConverters.Custom” AllowNew=”True”>*</Allow>  
+      <Allow Namespace="System.Drawing" AllowNew="True">Bitmap</Allow>  
+      <Allow Namespace="TypeConverters.Custom" AllowNew="True">*</Allow>  
    </Types>  
    <Members>  
       <Deny>Format</Deny>  
@@ -72,7 +72,7 @@ ms.locfileid: "48220663"
 |`AllowNew`|**Allow**의 부울 특성이며, 새 형식 인스턴스를 RDL 식에 만들 수 있는지 아니면 RDL **\<Class>** 요소에 만들 수 있는지를 제어합니다.<br /><br /> 참고: 때 `RDLSandboxing` 을 사용 하는 새 배열을 RDL 식의 설정에 관계 없이 만들 수 없습니다 `AllowNew`합니다.|  
 |**Value**|**Allow** 의 값이며, RDL 식에 허용할 형식의 이름입니다. **\*** 값은 네임스페이스의 모든 형식이 허용됨을 나타냅니다. 이 속성은 대/소문자를 구분하지 않습니다.|  
 |**멤버**|**\<Types>** 요소에 포함된 형식 목록의 경우 RDL 식에 허용되지 않는 멤버 이름 목록입니다.|  
-|**거부**|RDL 식에 허용되지 않는 멤버의 이름입니다. 이 속성은 대/소문자를 구분하지 않습니다.<br /><br /> 참고: 멤버에 **Deny** 가 지정되면 모든 형식에 대해 이 이름을 사용하는 멤버가 모두 허용되지 않습니다.|  
+|**거부**|RDL 식에 허용되지 않는 멤버의 이름입니다. 이 속성은 대/소문자를 구분하지 않습니다.<br /><br /> 참고: 멤버에 **거부**가 지정되면 모든 형식에 대해 이 이름을 사용하는 멤버가 모두 허용되지 않습니다.|  
   
 ## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>RDL 샌드박싱을 사용하는 경우 식 작업  
  식에 사용되는 리소스를 관리하기 위해 다음과 같은 방식으로 RDL 샌드박싱 기능을 수정할 수 있습니다.  
@@ -119,7 +119,7 @@ ms.locfileid: "48220663"
   
 -   새 클래스를 허용 목록에 추가합니다.  
   
- 추가할 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework 함수를 허용 목록 Microsoft.VisualBasic 네임 스페이스에서 해당 형식을 허용 목록에 추가 합니다.  
+ [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework 함수를 허용 목록에 추가하려면 Microsoft.VisualBasic 네임스페이스에서 해당하는 형식을 허용 목록에 추가합니다.  
   
  [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework 형식 키워드를 허용 목록에 추가하려면 해당하는 CLR 형식을 허용 목록에 추가합니다. 예를 들어 사용 하는 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework 키워드 `Integer`를 추가 하려면 다음 XML 조각은 합니다  **\<RDLSandboxing >** 요소:  
   
@@ -142,7 +142,7 @@ ms.locfileid: "48220663"
   
 -   허용 목록의 형식에 멤버를 추가하는 경우  
   
--   업데이트 하는 경우는 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 보고서 서버에 있습니다.  
+-   보고서 서버에서 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 를 업데이트하는 경우  
   
 -   보고서 서버를 이후 버전의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]로 업그레이드하는 경우  
   

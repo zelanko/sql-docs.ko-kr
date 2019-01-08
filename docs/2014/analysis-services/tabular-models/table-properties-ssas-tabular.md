@@ -13,12 +13,12 @@ ms.assetid: 16d3347b-7e43-4a6b-9956-fdd6ede092e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 13a1b980174fa04428b1c9d525554501360db1cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 5b9fbcb4aa054d261d47bea61edf1d1815cba27f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169023"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401036"
 ---
 # <a name="table-properties-ssas-tabular"></a>테이블 속성(SSAS 테이블 형식)
   이 항목에서는 테이블 형식 모델 테이블 속성에 대해 설명합니다. 여기에서 설명하는 테이블 속성은 원본에서 가져올 열을 지정할 수 있도록 하는 테이블 속성 편집 대화 상자의 테이블 속성과는 다릅니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "48169023"
   
 |속성|기본 설정|Description|  
 |--------------|---------------------|-----------------|  
-|**연결 이름**|\<연결 이름 >|테이블의 데이터 원본에 대한 연결의 이름입니다.<br /><br /> 연결을 편집하려면 단추를 클릭합니다.|  
+|**연결 이름**|\<연결 이름 >|테이블의 데이터 원본에 대 한 연결의 이름입니다.<br /><br /> 연결을 편집하려면 단추를 클릭합니다.|  
 |**숨김**|False|보고 클라이언트 필드 목록에서 테이블이 숨겨지는지 여부를 지정합니다.|  
 |**파티션**||**속성** 창에 표시될 수 없는 테이블의 파티션입니다. 파티션을 보거나 만들거나 편집하려면 단추를 클릭하여 파티션 관리자를 엽니다.|  
 |**원본 데이터**||**속성** 창에 표시될 수 없는 테이블의 원본 데이터입니다. 원본 데이터를 보거나 편집하려면 단추를 클릭하여 테이블 속성 편집 대화 상자를 엽니다.|  

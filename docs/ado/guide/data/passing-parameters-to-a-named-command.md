@@ -14,12 +14,12 @@ ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f7db54ca3cd3b7574896bac11bce87446b6d4b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c221030b54aef21ffa0a2df891561976aacff76
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773391"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505710"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>명명된 명령에 매개 변수 전달
 명령의 결과로 전달 됩니다와 마찬가지로 *아웃* 명명 된 명령의 매개 변수 매개 변수화 된 명령 수에 대 한 되었습니다로 전달 된 *에서* 명명 된 명령에는 변수.  
@@ -77,7 +77,7 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
- 모든 출력 변수 앞에 야 모든 입력된 매개 변수 및 매개 변수의 데이터 형식과 일치 해야 합니다 또는 해당 필드의 변환 수를 확인 합니다. 다음 문은-  
+ 모든 출력 변수 앞에 야 모든 입력된 매개 변수 및 매개 변수의 데이터 형식과 일치 해야 합니다 또는 해당 필드의 변환 수를 확인 합니다. 다음 문-  
   
 ```  
 objConn.GetOrdersOf 12345, objRs  
@@ -85,7 +85,7 @@ objConn.GetOrdersOf 12345, objRs
   
  -필수 입력된 매개 변수 이므로 일치 하지 않는 데이터 형식 중 오류가 발생 하면를 **문자열** 형식이 아닌는 **정수** 형식입니다.  
   
- 다음 호출은-  
+ 다음 호출-  
   
 ```  
 objConn.GetOrdersOf "12345", objRs  
@@ -93,5 +93,5 @@ objConn.GetOrdersOf "12345", objRs
   
  -유효 하지만 이러한 레코드가 데이터베이스에 존재 하기 때문에 설정 하는 빈 결과 생성 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

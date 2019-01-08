@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.detachdatabase.f1
@@ -16,12 +15,12 @@ ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0b6f227a9ece5133917f435a79895092294df616
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 20dce5a584d7ae990b25dd10312c9474bd08c873
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175853"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749065"
 ---
 # <a name="detach-a-database"></a>데이터베이스 분리
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 데이터베이스를 분리하는 방법에 대해 설명합니다. 분리된 파일은 그대로 남아 있으며 FOR ATTACH 또는 FOR ATTACH_REBUILD_LOG 옵션과 함께 CREATE DATABASE를 사용하여 다시 연결할 수 있습니다. 또한 파일을 다른 서버로 이동하거나 첨부할 수 있습니다.  
@@ -79,21 +78,21 @@ ms.locfileid: "48175853"
      기본적으로 분리 작업은 데이터베이스와 연결된 모든 전체 텍스트 카탈로그를 유지합니다. 전체 텍스트 카탈로그를 제거하려면 **전체 텍스트 카탈로그 유지** 확인란의 선택을 취소합니다. 이 옵션은 데이터베이스를 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 업그레이드하는 경우에만 표시됩니다.  
   
      **상태**  
-     **준비** 또는 **준비 안 됨**상태 중 하나를 표시합니다.  
+     상태 중 하나, 즉 **준비** 나 **준비 안 됨**합니다.  
   
      **메시지**  
      다음과 같이 **메시지** 열에 데이터베이스에 대한 정보가 표시될 수도 있습니다.  
   
     -   데이터베이스가 복제와 관련된 경우 **상태** 는 **준비 안 됨** 이고 **메시지** 열에는 **데이터베이스 복제 완료**가 표시됩니다.  
   
-    -   데이터베이스에 하나 이상의 활성 연결이 있는 경우 **상태**는 **준비 안 됨**이고 **메시지** 열에는 *<number_of_active_connections>***활성 연결**(예: **1개의 활성 연결**)이 표시됩니다. 데이터베이스를 분리하려면 먼저 **연결 삭제**를 선택하여 모든 활성 연결을 끊어야 합니다.  
+    -   데이터베이스에 하나 이상의 활성 연결이 있는 경우는 **상태** 됩니다 **준비 안 됨** 하며 **메시지** 열에 표시 됩니다 *< number_of_active_connections > * * * 활성 연결** 예: **1 활성 연결**합니다. 데이터베이스를 분리하려면 먼저 **연결 삭제**를 선택하여 모든 활성 연결을 끊어야 합니다.  
   
      메시지에 대한 자세한 내용을 보려면 하이퍼링크로 연결된 텍스트를 클릭하여 작업 모니터를 엽니다.  
   
 4.  데이터베이스를 분리할 준비가 되었으면 **확인**을 클릭합니다.  
   
 > [!NOTE]  
->  새로 분리된 데이터베이스는 뷰를 새로 고칠 때까지 개체 탐색기의 **데이터베이스** 노드에 계속 표시됩니다. 뷰는 언제든지 새로 고칠 수 있습니다. 개체 탐색기 창을 클릭한 다음 메뉴 모음에서 **보기** , **새로 고침**을 차례로 선택합니다.  
+>  새로 분리된 데이터베이스는 뷰를 새로 고칠 때까지 개체 탐색기의 **데이터베이스** 노드에 계속 표시됩니다. 뷰는 언제든지 새로 고칠 수 있습니다. 클릭 하 고 메뉴 모음에서 개체 탐색기 창에서 선택 **뷰** 차례로 **새로 고침**합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

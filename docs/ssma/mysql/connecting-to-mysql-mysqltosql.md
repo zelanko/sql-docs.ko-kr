@@ -13,12 +13,12 @@ ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 638a79e5785c74a11cb2e424739c3d80959a4d40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 233b6824ef527a9ed4e7e02164a08e31e41f3699
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843081"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409506"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>MySQL에 연결(MySQLToSQL)
 SQL Server 또는 SQL Azure MySQL 데이터베이스를 마이그레이션하려면, 마이그레이션할는 MySQL 데이터베이스에 연결 해야 합니다. 에 연결 하면 SSMA 모든 MySQL 스키마에 대 한 메타 데이터를 가져오고 MySQL 메타 데이터 탐색기 창에 표시 합니다. SSMA는 데이터베이스 서버에 대 한 정보를 저장 하지만 암호를 저장 하지 않습니다.  
@@ -62,7 +62,7 @@ MySQL 데이터베이스에 연결 하는 데 사용 되는 계정을 하나 이
   
     3.  에 **암호** 상자에 지정된 된 사용자 이름에 대 한 암호를 입력 합니다.  
   
-5.  **SSL:** Secure Socket Layer (SSL)를 사용 하 여 확인 하 여 MySQL에 안전 하 게 연결 하려는 경우 확인 합니다 **SSL** 확인란을 선택 합니다.  
+5.  **SSL:** MySQL에 안전 하 게 연결 하려는 경우 보안 소켓 레이어 (SSL)를 사용 하 여 확인 하 여 확인 합니다 **SSL** 확인란을 선택 합니다.  
   
 6.  **구성:** 보안 소켓 레이어 (SSL)을 통해 MySQL에 대 한 연결을 구성 하는 옵션을 제공 합니다.  
   
@@ -71,7 +71,7 @@ MySQL 데이터베이스에 연결 하는 데 사용 되는 계정을 하나 이
   
     "구성" 단추를 클릭 하면 대화 상자를 표시 됩니다. MySQL 데이터베이스에 대화 상자에 있는 다음 세 개의 인증서 파일의 경로를 연결 해야 하는 동안 암호화를 사용 하려면 [개인 정보 보호 향상 메일 인증서 (PEM)]를 정의 합니다.  
   
-    -   **SSL 인증 기관:** 신뢰 SSL Ca의 목록이 포함 된 파일의 경로 지정 합니다.  
+    -   **SSL 인증 기관:** 신뢰 SSL Ca의 목록이 포함 된 파일 경로 지정합니다.  
   
     -   **SSL 인증서:** 보안 연결을 설정 하는 데 SSL 인증서 파일의 이름을 지정 합니다.  
   
@@ -114,6 +114,6 @@ MySQL 데이터베이스에 대 한 메타 데이터는 자동으로 새로 고�
 ## <a name="next-step"></a>다음 단계  
 마이그레이션 프로세스의 다음 단계 [SQL Server에 연결 &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
 [SQL Server-Azure SQL DB로 마이그레이션 MySQL 데이터베이스 &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.subproperties.subscriber.f1
@@ -15,12 +14,12 @@ ms.assetid: bef66929-3234-4a45-8ec4-3b271519d07a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44047907e0e572eb19dcd5c886de363e7648ae78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9fa0e53e7bccdadf6d1aefdde9b716ad0a75c22
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226795"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761671"
 ---
 # <a name="subscription-properties---subscriber"></a>구독 속성 - 구독자
   구독자에서 **구독 속성** 대화 상자를 사용하여 끌어오기 구독에 대한 속성을 보고 설정할 수 있습니다.  
@@ -76,7 +75,7 @@ ms.locfileid: "48226795"
   
 ## <a name="options-for-merge-subscriptions"></a>병합 구독에 대한 옵션  
  **파티션 정의(HOST_NAME)**  
- 매개 변수가 있는 필터를 사용하는 게시의 경우 병합 복제는 동기화하는 동안 **SUSER_SNAME()** 또는 **HOST_NAME()** 이라는 두 시스템 함수 중 하나(또는 필터가 두 함수를 참조하는 경우 둘 다)를 평가하여 구독자가 수신할 데이터를 결정합니다. 기본적으로 **HOST_NAME()** 은 병합 에이전트가 실행 중인 컴퓨터의 이름을 반환하지만 새 구독 마법사에서 이 값을 재정의할 수 있습니다. 매개 변수가 있는 필터에 대한 자세한 내용과 **HOST_NAME()** 을 재정의하는 방법은 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
+ 매개 변수가 있는 필터를 사용하는 게시의 경우 병합 복제는 동기화하는 동안 **Suser_sname** 나 **host_name ()** 합니다. 기본적으로 **HOST_NAME()** 은 병합 에이전트가 실행 중인 컴퓨터의 이름을 반환하지만 새 구독 마법사에서 이 값을 재정의할 수 있습니다. 매개 변수가 있는 필터에 대한 자세한 내용과 **HOST_NAME()** 을 재정의하는 방법은 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
   
  **구독 유형** 및 **우선 순위**  
  구독이 클라이언트 구독인지 서버 구독인지를 표시합니다. 구독을 만든 후에는 구독 유형을 변경할 수 없습니다. 서버 구독은 데이터를 다른 구독자에 다시 게시할 수 있으며 충돌 해결을 위한 우선 순위를 할당 받을 수 있습니다.  
@@ -87,7 +86,7 @@ ms.locfileid: "48226795"
  병합 동기화를 수행하는 동안 충돌을 해결하기 위해 대화형 해결 프로그램 사용자 인터페이스를 사용할지 여부를 결정합니다. 이 인터페이스를 사용하려면 **Windows 동기화 관리자 사용** 값을 **사용**으로 설정해야 합니다. 자세한 내용은 [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)을 참조하세요.  
   
  **웹 동기화**  
- **웹 동기화 사용** 은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인터넷 정보 서비스(IIS) 서버에 연결하여 구독을 동기화할지 여부를 결정합니다. 이 옵션은 게시가 웹 동기화용으로 설정되어 있는 경우에만 사용할 수 있습니다. 자세한 내용은 [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)를 참조하세요.  
+ **웹 동기화 사용** 은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인터넷 정보 서비스(IIS) 서버에 연결하여 구독을 동기화할지 여부를 결정합니다. 이 옵션은 게시가 웹 동기화용으로 설정되어 있는 경우에만 사용할 수 있습니다. 자세한 내용은 [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)을 참조하세요.  
   
  **웹 동기화 사용** 에 대해 **True**를 선택한 경우 다음을 수행하십시오.  
   

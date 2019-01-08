@@ -1,5 +1,5 @@
 ---
-title: SQL Server 데이터 마이닝 추가 기능에 대 한 Office | Microsoft Docs
+title: SQL Server 용 데이터 마이닝 추가 기능의 Office | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2220bb48704fb29aa00236ebf1ec4ad46ecb4007
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 89986d3c8de4a1cbefbccf285a92a2dc19c6c7aa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014740"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504742"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Office용 SQL Server 데이터 마이닝 추가 기능
 
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Office용 데이터 마이닝 추가 기능은 Excel의 데이터를 사용하여 예측, 권장 또는 탐색을 위한 분석 모델을 작성할 수 있도록 지원하는 일련의 간단한 예측 분석 도구 집합입니다.  
   
 > [!IMPORTANT]
-> 데이터 마이닝 추가 기능을 Office 용 이상 Office 2016에서 지원 되지 않습니다.
+> 데이터 마이닝 추가 기능을 Office 용 Office 2016 이상 지원 되지 않습니다.
   
  추가 기능의 마법사 및 데이터 관리 도구는 다음과 같은 일반 데이터 마이닝 작업에 대한 단계별 지침을 제공합니다.  
   
@@ -45,17 +45,17 @@ ms.locfileid: "34014740"
   
      고급 사용자는 끌어서 놓기 **고급 쿼리 편집기**를 사용하여 사용자 지정 DMX 쿼리를 작성하거나 Excel VBA를 사용하여 예측을 자동화할 수 있습니다.  
   
--   **문서화하고 관리합니다.** 데이터 집합을 만들고 몇 가지 모델을 작성한 다음, 데이터 및 모델 매개 변수에 대한 통계 요약을 생성하여 작업과 통찰을 문서화합니다.  
+-   **문서화하고 관리합니다.** 데이터 집합을 만들고 일부 모델을 작성 한 후 데이터 및 모델 매개 변수의 통계 요약을 생성 하 여 작업과 통찰을 문서화 합니다.  
   
--   **탐색하고 시각화합니다.** 데이터 마이닝은 완전히 자동화할 수 있는 활동이 아닙니다. 직접 결과를 탐색하고 파악해야 의미 있는 작업이 됩니다. 추가 기능은 Excel의 대화형 뷰어, 모델 다이어그램을 사용자 지정할 수 있는 Visio 템플릿, 추가 필터링이나 수정을 위해 차트와 테이블을 Excel로 내보내는 기능을 제공하므로 탐색하는 데 도움이 됩니다.  
+-   **탐색하고 시각화합니다.** 데이터 마이닝 완벽 하 게 자동화할 수 있는 활동이 아닙니다.-탐색 하 고 의미 있는 작업을 수행 하 여 결과 이해 해야 합니다. 추가 기능은 Excel의 대화형 뷰어, 모델 다이어그램을 사용자 지정할 수 있는 Visio 템플릿, 추가 필터링이나 수정을 위해 차트와 테이블을 Excel로 내보내는 기능을 제공하므로 탐색하는 데 도움이 됩니다.  
   
--   **배포하고 통합합니다.** 유용한 모델을 만든 경우 관리 도구를 사용하여 실험 서버에서 다른 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스로 모델을 내보내 프로덕션에 배치합니다.  
+-   **배포하고 통합합니다.** 실험 서버에서 모델의 다른 인스턴스를 내보내려면 관리 도구를 사용 하 여 프로덕션 환경으로 배치 하는 유용한 모델을 만든 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다.  
   
      또는 모델을 만든 서버에 모델을 그대로 두되 학습 데이터를 새로 고치고 Integration Services 또는 DMX 스크립트를 사용하여 예측을 실행할 수도 있습니다.  
   
      고급 사용자는 서버로 전송된 XMLA 및 DMX 문을 표시하는 **추적** 기능을 유용하게 여길 것입니다.  
   
-## <a name="getting-started"></a>시작  
+## <a name="getting-started"></a>시작하기  
  자세한 내용은 [Office용 데이터 마이닝 추가 기능에 포함된 내용](http://go.microsoft.com/fwlink/p/?LinkId=616849)을 참조하세요.  
   
 ## <a name="support-and-requirements"></a>지원 및 요구 사항  
@@ -74,10 +74,10 @@ ms.locfileid: "34014740"
   
 -   Business Intelligence  
   
--   Standard  
+-   표준  
   
  연결하는 SQL Server Analysis Services의 버전에 따라 일부 고급 알고리즘을 사용하지 못할 수 있습니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.  
   
- 설치 관련 추가 도움말에 대 한 다운로드 센터에서이 페이지를 참조 합니다. [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
+ 설치 관련 추가 도움말에 대 한 다운로드 센터에서이 페이지를 참조 하세요. [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   
   

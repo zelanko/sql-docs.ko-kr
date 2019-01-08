@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a327fa18-58f4-4e69-bb87-44faf47e20ef
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 85cf2385b4aaa629259f9a9be745624016d599dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6498dca47486252f1365efe1eff1e6408b3da130
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072493"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780105"
 ---
 # <a name="how-to-prepare-sql-server-for-cdc"></a>CDC를 위해 SQL Server를 준비하는 방법
   Oracle CDC Service에서는 모든 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 MSXDBCDC 데이터베이스가 포함되어야 합니다. CDC Service 구성 콘솔에서 SQL Server 준비 동작을 사용하여 이 데이터베이스를 만듭니다. 이 태스크는 각 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 한 번만 수행됩니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "48072493"
   
      Oracle CDC를 위해 SQL Server 인스턴스를 준비하려면 로그인은 MSXDBCDC 데이터베이스에 대해 쓰기 권한이 있어야 합니다. MSXDBCDC 데이터베이스에 대해 쓰기 권한이 있는 로그인(예: `sysasmin` 역할의 멤버)의 자격 증명을 입력합니다.  
   
- **참고**: **스크립트 보기** 를 클릭하여 설치 스크립트의 읽기 전용 버전을 볼 수 있습니다. 필요한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자는 이 스크립트를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 콘솔에 복사하여 편집하고 실행할 수 있습니다.  
+ **참고**: 클릭할 수 **스크립트 보기** 설치 스크립트의 읽기 전용 버전을 볼 수 있습니다. 필요한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자는 이 스크립트를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 콘솔에 복사하여 편집하고 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [CDC를 위한 SQL Server 준비](prepare-sql-server-for-cdc.md)  

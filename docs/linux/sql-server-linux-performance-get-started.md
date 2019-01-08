@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.custom: sql-linux
-ms.openlocfilehash: f60b16d1fba4e6c6b46615e5a5fd512db20ab854
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3288bb18a4bc8d87b9be1eb8f57bbc66555b9db5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703801"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401356"
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Linux의 SQL Server의 성능 기능에 대 한 연습
 
@@ -159,7 +159,7 @@ SQL Server 메모리 액세스에 최적화 된 테이블에 액세스 하는 �
 ### <a name="learn-more-about-in-memory-oltp"></a>메모리 내 OLTP에 자세히 알아보기
 메모리 내 OLTP에 대 한 자세한 내용은 다음 항목을 참조 하세요.
 
-- [빠른 시작 1: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
+- [빠른 시작 1: 더 빠른 TRANSACT-SQL 성능 위한 메모리 내 OLTP 기술](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
 - [메모리 내 OLTP로 마이그레이션](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)
 - [메모리 최적화를 사용한 더 빠른 임시 테이블 및 테이블 변수](../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)
 - [메모리 사용량 모니터링 및 문제 해결](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)

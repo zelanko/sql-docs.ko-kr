@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - free-form attributes [Master Data Services]
@@ -18,12 +17,12 @@ ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b23f989190b4b164385e790b01cfad7d0f759b90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fbd4e3191f1cf115f157f7ff56c55f7b9ed96bc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129623"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748065"
 ---
 # <a name="attributes-master-data-services"></a>특성(Master Data Services)
   특성은 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 엔터티에 포함된 개체입니다. 특성 값은 엔터티 멤버를 설명합니다. 특성을 사용하여 리프 멤버, 통합 멤버 또는 컬렉션을 설명할 수 있습니다.  
@@ -59,7 +58,7 @@ ms.locfileid: "48129623"
 -   부동 소수점 숫자가 포함된 경우 값은 *왕복* 이 아닐 수 있습니다. 작업이 원래 부동 소수점 숫자를 다른 형식으로 변환하고 역 작업이 변환된 형식을 부동 소수점 숫자로 다시 변환한 다음 최종 부동 소수점 숫자가 원래 부동 소수점 숫자와 같을 경우 값을 왕복이라고 합니다. 하나 이상의 최소 유효 자릿수가 변환 중에 손실되거나 변경되어 왕복이 실패할 수 있습니다.  
   
 ## <a name="attribute-examples"></a>특성 예  
- 다음 예의 엔터티에는 멤버를 설명하는 Name, Code, Subcategory, StandardCost, ListPrice 및 FilePhoto 특성이 있습니다. 각 멤버는 단일 특성 값 행으로 표시됩니다.  
+ 다음 예에서 엔터티에는 Name, Code, Subcategory, StandardCost, ListPrice 및 FilePhoto 특성이 있습니다. 있습니다. 각 멤버는 단일 특성 값 행으로 표시됩니다.  
   
  ![Bike 제품 엔터티 테이블](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "Bike 제품 엔터티 테이블")  
   
@@ -79,25 +78,25 @@ ms.locfileid: "48129623"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|새 자유 형식 텍스트 특성을 만듭니다.|[텍스트 특성 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)|  
-|새 자유 형식 숫자 특성을 만듭니다.|[숫자 특성 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)|  
-|새 자유 형식 링크 특성을 만듭니다.|[링크 특성 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)|  
-|새 파일 특성을 만듭니다.|[파일 특성 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
-|새 도메인 기반 특성을 만듭니다.|[도메인 기반 특성 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
+|새 자유 형식 텍스트 특성을 만듭니다.|[텍스트 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)|  
+|새 자유 형식 숫자 특성을 만듭니다.|[숫자 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)|  
+|새 자유 형식 링크 특성을 만듭니다.|[링크 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)|  
+|새 파일 특성을 만듭니다.|[파일 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
+|새 도메인 기반 특성을 만듭니다.|[도메인 기반 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
 |기존 특성의 이름을 변경합니다.|[특성 이름 변경 &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)|  
-|추적 그룹을 변경하는 기존 특성을 추가합니다.|[변경 내용 추적 그룹에 특성 추가 &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
-|기존 특성을 삭제합니다.|[특성 삭제 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-master-data-services.md)|  
+|추적 그룹을 변경하는 기존 특성을 추가합니다.|[변경 내용 추적 그룹에 특성 추가&#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|기존 특성을 삭제합니다.|[특성 삭제&#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-master-data-services.md)|  
 |특성 순서를 변경합니다.|[특성 순서 변경](../../2014/master-data-services/change-the-order-of-attributes.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   
--   [도메인 기반 특성 &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
+-   [도메인 기반 특성&#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [특성 그룹 &#40;Master Data Services&#41;](attribute-groups-master-data-services.md)  
+-   [특성 그룹&#40;Master Data Services&#41;](attribute-groups-master-data-services.md)  
   
--   [멤버 &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
+-   [멤버&#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
--   [리프 권한 &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
+-   [리프 권한&#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
   
 -   [통합 사용 권한 &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   

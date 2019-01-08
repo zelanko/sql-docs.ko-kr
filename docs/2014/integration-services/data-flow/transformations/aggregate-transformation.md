@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregatetrans.f1
@@ -18,12 +17,12 @@ ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 60375cc418cdc47cc0acc70d943e448e3e91f968
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: debbf39c69a6211e67d68a9206dad2687caad180
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205533"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750225"
 ---
 # <a name="aggregate-transformation"></a>집계 변환
   집계 변환은 Average와 같은 집계 함수를 열 값에 적용하고 결과를 변환 출력에 복사합니다. 집계 함수 외에도 변환은 집계할 그룹을 지정하는 데 사용할 수 있는 GROUP BY 절을 제공합니다.  
@@ -101,7 +100,7 @@ ms.locfileid: "48205533"
   
  집계 변환은 비동기적이며 따라서 행별로 데이터를 사용하고 게시하지 않습니다. 대신 전체 행 집합을 사용하고 그룹화 및 집계를 수행한 다음 결과를 게시합니다.  
   
- 이 변환은 어떤 열을 통해서도 전달되지 않지만 게시하는 데이터에 대한 데이터 흐름에 새 열을 만듭니다. 집계 함수가 적용하는 입력 열이나 변환에서 그룹화를 위해 사용되는 입력 열만 변환 출력으로 복사됩니다. 예를 들어 집계 변환 입력에는 **CountryRegion**, **City**및 **Population**과 같은 3개의 열만 포함될 수 있습니다. 변환은 **CountryRegion** 열에 따라 그룹화되며 Sum 함수를 **Population** 열에 적용합니다. 따라서 출력에는 **City** 열이 포함되지 않습니다.  
+ 이 변환은 어떤 열을 통해서도 전달되지 않지만 게시하는 데이터에 대한 데이터 흐름에 새 열을 만듭니다. 집계 함수가 적용하는 입력 열이나 변환에서 그룹화를 위해 사용되는 입력 열만 변환 출력으로 복사됩니다. 예를 들어 집계 변환 입력에는 **CountryRegion**, **도시**, 및 **채우기**합니다. 변환은 **CountryRegion** 열에 따라 그룹화되며 Sum 함수를 **Population** 열에 적용합니다. 따라서 출력에는 **City** 열이 포함되지 않습니다.  
   
  또한 집계 변환에 여러 출력을 추가하고 각 집계를 서로 다른 출력으로 지정할 수 있습니다. 예를 들어 집계 변환이 Sum 및 the Average 함수를 적용하는 경우 각 집계는 서로 다른 출력으로 지정될 수 있습니다.  
   
@@ -113,9 +112,9 @@ ms.locfileid: "48205533"
   
  **집계 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [집계 변환 편집기 &#40;집계 탭&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
+-   [집계 변환 편집기&#40;집계 탭&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
   
--   [집계 변환 편집기 &#40;고급 탭&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
+-   [집계 변환 편집기&#40;고급 탭&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   

@@ -15,12 +15,12 @@ ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4e2d83f77f8bb9227daab996e425d1880d1bfabd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 35e9da17a9c3980470cfd3dcbb22b4069afec640
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674419"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501747"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>ODBC Visual FoxPro 설치 대화 상자
 합니다 **ODBC Visual FoxPro 설치** 대화 상자에서는 추가 하거나 Visual FoxPro 데이터 원본을 변경할 수 있습니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "51674419"
  이 확인란을 선택 하면 드라이버는 데이터 소스를 사용 하 여 데이터를 액세스 하는 경우에 Visual FoxPro 데이터베이스를 엽니다. 다른 사용자 데이터베이스는 단독으로 열려 있는 동안 데이터베이스 또는 데이터베이스의 테이블을 액세스할 수 없습니다. 단독으로 열려 데이터베이스 내의 테이블이 SHARED로 열립니다. 닫도록 테이블을 사용 합니다 [전용 설정](../../odbc/microsoft/set-exclusive-command.md) 명령입니다. 이 확인란이 비활성화 되어 때 **데이터베이스 유형** 로 설정 된 **무료 테이블 디렉터리**합니다.  
   
  **Null**  
- ALTER TABLE 및 CREATE TABLE을 사용 하 여 만든 열에서 null 값 허용 여부를 결정 합니다. Null ON으로 설정 하는 경우 INSERT-SQL INSERT-SQL에에서 포함 되지 않은 모든 열에 null 값을 삽입 하는 중... VALUE 절입니다. 빈 값을 Null가 OFF 이면 삽입 됩니다. 또한 다음 코드와 같이 전달 된 연결 문자열을 통해이 옵션을 제어할 수 있습니다.  
+ ALTER TABLE 및 CREATE TABLE을 사용 하 여 만든 열에서 null 값 허용 여부를 결정 합니다. Null ON으로 설정한 경우 INSERT-SQL INSERT-SQL에에서 포함 되지 않은 모든 열에 null 값을 삽입 하는 중... VALUE 절입니다. 빈 값을 Null가 OFF 이면 삽입 됩니다. 또한 다음 코드와 같이 전달 된 연결 문자열을 통해이 옵션을 제어할 수 있습니다.  
   
 ```  
 strCon = "DRIVER=MICROSOFT VISUAL FOXPRO DRIVER;  

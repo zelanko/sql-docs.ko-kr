@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - IHsyscolumns
@@ -19,12 +18,12 @@ ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0e9e69891e759468ab0ae62a59c2fc61a19a9bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74116af7883c4b9a3f27c2afed88d16c993198ce
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668881"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747888"
 ---
 # <a name="ihsyscolumns-transact-sql"></a>IHsyscolumns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ ms.locfileid: "47668881"
 |**collation**|**int**|열의 데이터 정렬 이름입니다. NULL이 아닌 문자에 대 한 열 기반합니다.|  
 |**tdscollation**|**int**|TDS(tabular data stream)가 반환한 열의 데이터 정렬 이름입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [다른 유형의 데이터베이스 복제](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   

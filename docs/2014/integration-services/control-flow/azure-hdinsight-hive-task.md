@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 02/28/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.afphivetask.f1
@@ -14,12 +13,12 @@ ms.assetid: e1896c73-128a-4128-9814-3e01f7dfe19b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4729cdb4bfb9e2bdef3a8915d808b82453cf87d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef43e6539840e6c5eec68ad4911f72930d28591d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057713"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749495"
 ---
 # <a name="azure-hdinsight-hive-task"></a>Azure HDInsight 하이브 태스크
 **Azure HDInsight 하이브 태스크** 를 사용하여 Azure HDInsight 클러스터에서 하이브 스크립트를 실행합니다.
@@ -38,8 +37,8 @@ ms.locfileid: "48057713"
   
 5.  두 가지 방법으로 실행할 Hive 스크립트를 지정할 수 있습니다.
   
-    1.  **인라인 스크립트**: **스크립트 입력** 대화 상자에 실행할 인라인 스크립트를 입력하여 **스크립트** 필드를 지정합니다.
+    1.  **인라인 스크립트**: 지정 된 **스크립트** 필드를 입력 하 여 인라인에서 실행할 스크립트를 합니다 **입력 스크립트** 대화 상자.
   
-    2.  **스크립트 파일**: Azure Blob Storage에 스크립트 파일을 업로드하고 **BlobName** 필드를 지정합니다. blob이 기본 저장소 계정 또는 HDInsight 클러스터와 연결된 컨테이너에 없는 경우 **ExternalStorageAccountName** 및 **ExternalBlobContainer** 필드를 지정해야 합니다. 외부 Blob의 경우에는 공용으로 액세스할 수 있도록 구성해야 합니다.  
+    2.  **스크립트 파일**: Azure Blob Storage에 스크립트 파일을 업로드 하 고 지정 된 **BlobName** 필드입니다. blob이 기본 저장소 계정 또는 HDInsight 클러스터와 연결된 컨테이너에 없는 경우 **ExternalStorageAccountName** 및 **ExternalBlobContainer** 필드를 지정해야 합니다. 외부 Blob의 경우에는 공용으로 액세스할 수 있도록 구성해야 합니다.  
   
      스크립트 파일과 인라인 스크립트를 모두 지정하면 스크립트 파일이 사용되며 인라인 스크립트는 무시됩니다.

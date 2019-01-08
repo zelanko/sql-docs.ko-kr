@@ -17,12 +17,12 @@ ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e8c8867b932d291415f584f93a09478bbd05725
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 244161359910896533a1d7179f2ce80b5cb03d86
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152723"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749427"
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
   전체 텍스트 검색을 정의하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 쿼리는 전체 텍스트 조건자(CONTAINS 및 FREETEXT) 및 함수(CONTAINSTABLE 및 FREETEXTTABLE)를 사용합니다. 이러한 조건자와 함수는 다양한 형태의 쿼리 용어를 지원하는 많은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문을 지원합니다. 전체 텍스트 쿼리를 작성하려면 이러한 조건자와 함수를 사용하는 시기와 방법을 알아야 합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "48152723"
   
 -   CONTAINS(또는 CONTAINSTABLE)를 사용하여 특정 단어나 구와 정확히 일치하거나 비슷하게 일치하는 단어를 검색하거나, 서로 근접한 단어를 검색하거나, 가중치 검색을 수행합니다. CONTAINS를 사용할 경우 검색할 텍스트를 지정하는 하나 이상의 검색 조건과 일치 여부를 결정하는 조건을 지정해야 합니다.  
   
-     검색 조건 사이에 논리적 연산을 사용할 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [CONTAINS 및 CONTAINSTABLE에 부울 연산자 AND, OR, AND NOT 사용](#Using_Boolean_Operators)을 참조하세요.  
+     검색 조건 사이에 논리적 연산을 사용할 수 있습니다. 자세한 내용은 [부울 연산자 사용-AND, OR, AND NOT (CONTAINS 및 CONTAINSTABLE)에서](#Using_Boolean_Operators)이 항목의 뒷부분에 나오는.  
   
 -   FREETEXT(또는 FREETEXTTABLE)를 사용하여 지정된 단어, 구 또는 문장( *freetext 문자열*)의 정확한 단어가 아닌 의미를 일치시킵니다. 지정된 열의 모든 용어나 용어 형태가 전체 텍스트 인덱스에 있으면 일치하는 항목이 생성됩니다.  
   
@@ -165,8 +165,8 @@ GO
   
  
   
-##  <a name="Using_Boolean_Operators"></a> 부울 연산자 AND, OR, 사용 및 CONTAINS 및 CONTAINSTABLE에 없는 –  
- CONTAINS 조건자와 CONTAINSTABLE 함수는 동일한 검색 조건을 사용하며, 둘 다 논리적 연산을 수행하는 부울 연산자 AND, OR, AND NOT을 사용하여 여러 검색 단어를 결합할 수 있습니다. 예를 들어 AND를 사용하여 "latte"와 "New York-style bagel"이 둘 다 포함된 행을 찾거나 AND NOT을 사용하여 "bagel"은 포함되지만 "cream cheese"는 포함되지 않은 행을 찾을 수 있습니다.  
+##  <a name="Using_Boolean_Operators"></a> -부울 연산자를 사용 하 고 OR, CONTAINS 및 CONTAINSTABLE에 않습니다 하 고  
+ CONTAINS 조건자와 CONTAINSTABLE 함수는 동일한 검색 조건을 사용하며, 부울 연산자를 사용 하 여 여러 검색 단어를 결합할 수 모두-AND, OR 및 NOT-논리적 연산을 수행 하 합니다. 예를 들어 AND를 사용하여 "latte"와 "New York-style bagel"이 둘 다 포함된 행을 찾거나 AND NOT을 사용하여 "bagel"은 포함되지만 "cream cheese"는 포함되지 않은 행을 찾을 수 있습니다.  
   
 > [!NOTE]  
 >  반면에 FREETEXT 및 FREETEXTTABLE은 부울 단어를 검색할 단어로 취급합니다.  
@@ -214,7 +214,7 @@ GO
  `varbinary(max)`, `varbinary` 또는 `xml` 열이 전체 텍스트 인덱싱된 경우 다른 전체 텍스트 인덱싱된 열과 마찬가지로 전체 텍스트 조건자(CONTAINS 및 FREETEXT) 및 함수(CONTAINSTABLE 및 FREETEXTTABLE)를 사용하여 이러한 열을 쿼리할 수 있습니다.  
   
 > [!IMPORTANT]  
->  전체 텍스트 검색은 이미지 열에서도 작동합니다. 그러나 합니다 `image` 데이터 형식의 이후 버전에서 제거 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 새 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 애플리케이션은 수정하십시오. 사용 된 `varbinary(max)` 데이터 형식 대신 합니다.  
+>  전체 텍스트 검색은 이미지 열에서도 작동합니다. 그러나 `image` 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서 제거될 예정입니다. 새 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 애플리케이션은 수정하십시오. 대신 `varbinary(max)` 데이터 형식을 사용해야 합니다.  
   
 ### <a name="varbinarymax-or-varbinary-data"></a>varbinary(max) 또는 varbinary 데이터  
  단일 `varbinary(max)` 또는 `varbinary` 열에 많은 문서 유형을 저장할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 필터가 설치되어 있고 운영 체제에서 사용할 수 있는 문서 유형을 지원합니다. 각 문서의 문서 유형은 문서의 파일 확장명으로 식별됩니다. 예를 들어 .doc 파일 확장명의 경우 전체 텍스트 검색은 Microsoft Word 문서를 지원하는 필터를 사용합니다. 사용 가능한 문서 유형의 목록을 보려면 [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) 카탈로그 뷰를 쿼리하세요.  
@@ -230,7 +230,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
  
   
 ### <a name="xml-data"></a>xml 데이터  
- `xml` 데이터 형식 열에만 XML 문서 및 조각을 저장 하 고 문서는 XML 필터만 사용 됩니다. 따라서 유형 열은 필요하지 않습니다. `xml` 열, 전체 텍스트 인덱스는 XML 요소의 내용을 인덱싱하지만 XML 태그입니다. 특성 값은 숫자 값이 아니면 전체 텍스트 인덱싱됩니다. 요소 태그는 토큰 경계로 사용됩니다. 여러 언어를 포함하는 올바른 형식의 XML 또는 HTML 문서와 조각이 지원됩니다.  
+ `xml` 데이터 형식 열에는 XML 문서만 저장되고 이러한 문서에는 XML 필터만 사용됩니다. 따라서 유형 열은 필요하지 않습니다. `xml` 열에서 전체 텍스트 인덱스는 XML 요소의 내용은 인덱싱하지만 XML 태그는 무시합니다. 특성 값은 숫자 값이 아니면 전체 텍스트 인덱싱됩니다. 요소 태그는 토큰 경계로 사용됩니다. 여러 언어를 포함하는 올바른 형식의 XML 또는 HTML 문서와 조각이 지원됩니다.  
   
  에 대 한 쿼리 하는 방법에 대 한 자세한 내용은 `xml` 열을 참조 하세요 [XML 열을 사용 하 여 전체 텍스트 검색을 사용 하 여](../xml/use-full-text-search-with-xml-columns.md)합니다.  
   
@@ -244,17 +244,17 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
 |쿼리 용어 형태|Description|지원 요소|  
 |----------------------|-----------------|------------------|  
-|하나 이상의 특정 단어 또는 구(*단순 단어*)|전체 텍스트 검색에서 단어(또는 *토큰*)는 지정된 언어의 언어 규칙에 따라 적절한 단어 분리기에 의해 경계가 식별되는 문자열입니다. 올바른 구는 여러 단어로 구성됩니다. 문장 부호는 있을 수도 있고 없을 수도 있습니다.<br /><br /> 예를 들어 "croissant"은 단어이고 "café au lait"는 구입니다. 이와 같은 단어 및 구를 단순 단어라고 합니다.<br /><br /> 자세한 내용은 이 항목 뒷부분의 [특정 단어 또는 구(단순 단어) 검색](#Simple_Term)을 참조하세요.|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) 및 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 은 정확히 일치하는 구를 검색합니다.<br /><br /> [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 및 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 은 구를 여러 개의 단어로 나눕니다.|  
+|하나 이상의 특정 단어 또는 구(*단순 단어*)|전체 텍스트 검색에서 단어(또는 *토큰*)는 지정된 언어의 언어 규칙에 따라 적절한 단어 분리기에 의해 경계가 식별되는 문자열입니다. 올바른 구는 여러 단어로 구성됩니다. 문장 부호는 있을 수도 있고 없을 수도 있습니다.<br /><br /> 예를 들어 "croissant"은 word 및 "카페?? au lait "는 구입니다. 이와 같은 단어 및 구를 단순 단어라고 합니다.<br /><br /> 자세한 내용은 이 항목 뒷부분의 [특정 단어 또는 구(단순 단어) 검색](#Simple_Term)을 참조하세요.|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) 및 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 은 정확히 일치하는 구를 검색합니다.<br /><br /> [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 및 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 은 구를 여러 개의 단어로 나눕니다.|  
 |특정 텍스트로 시작하는 단어 또는 그러한 단어를 포함하는 구(*접두사 단어*)|접두사 단어는 파생어를 만들거나 굴절형을 만들기 위해 단어 앞에 추가되는 문자열을 말합니다.<br /><br /> 단일 접두사 단어의 경우 지정된 단어로 시작하는 모든 단어가 결과 집합의 일부로 반환됩니다. 예를 들어 "auto*" 단어를 사용하면 "automatic", "automobile" 등이 검색됩니다.<br /><br /> 구의 경우 구에 포함된 각 단어가 접두사 단어로 간주됩니다. 예를 들어 "auto tran\*"은 "automatic transmission" 및 "automobile transducer"와 일치하지만 "automatic motor transmission"과는 일치하지 않습니다.<br /><br /> 자세한 내용은 이 항목 뒷부분의 [접두사(접두사 단어) 검색](#Prefix_Term)을 참조하세요.|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) 및 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
-|특정 단어의 굴절형(*생성 단어-굴절형*)|굴절형은 동사의 여러 시제 및 변화와 명사의 단수형 및 복수형을 의미합니다. 예를 들어 "drive"라는 단어의 굴절형을 검색한다고 가정합니다. 테이블의 여러 행에 "drive", "drives", "drove", "driving", "driven" 등의 단어가 포함되어 있는 경우 이러한 각 단어는 drive라는 단어를 활용하여 생성된 것이므로 모두 결과 집합에 포함됩니다.<br /><br /> 자세한 내용은 이 항목 뒷부분의 [특정 단어의 굴절형(생성 단어) 검색](#Inflectional_Generation_Term)을 참조하세요.|[FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 및 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 은 기본적으로 지정된 모든 단어의 굴절형을 검색합니다.<br /><br /> [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 및 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 은 선택적 INFLECTIONAL 인수를 지원합니다.|  
-|특정 단어의 동의어 형태(*생성 단어-동의어 사전*)|동의어 사전은 단어에 대한 사용자 지정 동의어를 정의합니다. 예를 들어 동의어 사전에 "{car, automobile, truck, van}" 항목을 추가하면 "car"라는 단어의 동의어 형태를 검색할 수 있습니다. "automobile", "truck", "van" 또는 "car"라는 단어는 각각 "car"라는 단어를 포함하는 동의어 확장 집합에 속하므로 이러한 단어를 포함하는 쿼리된 테이블의 모든 행이 결과 집합에 나타납니다.<br /><br /> 동의어 사전 파일의 구조에 대한 자세한 내용은 [전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리](configure-and-manage-thesaurus-files-for-full-text-search.md)를 참조하세요.|[FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 및 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 에는 기본적으로 동의어 사전이 사용됩니다.<br /><br /> [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 및 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 은 선택적 THESAURUS 인수를 지원합니다.|  
+|특정 단어의 굴절 형 (*생성 용어-굴절 형*)|굴절형은 동사의 여러 시제 및 변화와 명사의 단수형 및 복수형을 의미합니다. 예를 들어 "drive"라는 단어의 굴절형을 검색한다고 가정합니다. 테이블의 여러 행에 "drive", "drives", "drove", "driving", "driven" 등의 단어가 포함되어 있는 경우 이러한 각 단어는 drive라는 단어를 활용하여 생성된 것이므로 모두 결과 집합에 포함됩니다.<br /><br /> 자세한 내용은 이 항목 뒷부분의 [특정 단어의 굴절형(생성 단어) 검색](#Inflectional_Generation_Term)을 참조하세요.|[FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 및 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 은 기본적으로 지정된 모든 단어의 굴절형을 검색합니다.<br /><br /> [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 및 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 은 선택적 INFLECTIONAL 인수를 지원합니다.|  
+|특정 단어의 동의어 형태 (*생성 용어-동의어 사전*)|동의어 사전은 단어에 대한 사용자 지정 동의어를 정의합니다. 예를 들어 동의어 사전에 "{car, automobile, truck, van}" 항목을 추가하면 "car"라는 단어의 동의어 형태를 검색할 수 있습니다. "automobile", "truck", "van" 또는 "car"라는 단어는 각각 "car"라는 단어를 포함하는 동의어 확장 집합에 속하므로 이러한 단어를 포함하는 쿼리된 테이블의 모든 행이 결과 집합에 나타납니다.<br /><br /> 동의어 사전 파일의 구조에 대한 자세한 내용은 [전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리](configure-and-manage-thesaurus-files-for-full-text-search.md)를 참조하세요.|[FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 및 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 에는 기본적으로 동의어 사전이 사용됩니다.<br /><br /> [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 및 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 은 선택적 THESAURUS 인수를 지원합니다.|  
 |다른 단어나 구와 근접한 단어나 구(*근접 단어*)|근접 단어는 서로 근접하는 단어나 구를 나타냅니다. 첫 번째 검색 단어와 마지막 검색 단어를 구분하는 검색 대상이 아닌 단어의 최대 개수를 지정할 수도 있습니다. 또한 임의의 순서나 지정한 순서로 단어 또는 구를 검색할 수 있습니다.<br /><br /> 예를 들어 "ice"라는 단어가 "hockey"라는 단어와 근접해 있거나 "ice skating"이라는 구가 "ice hockey"라는 구와 근접해 있는 행을 검색할 수 있습니다.<br /><br /> 자세한 내용은 [NEAR를 사용하여 근접 단어 검색](search-for-words-close-to-another-word-with-near.md)을 참조하세요.|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) 및 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
 |가중치를 사용하는 단어나 구(*가중치 단어*)|단어와 구 집합에서 각 단어와 구의 중요도를 나타내는 가중치입니다. 가중치는 0.0이 가장 낮고 1.0이 가장 높습니다.<br /><br /> 예를 들어 여러 단어를 검색하는 쿼리에서 각 검색 단어에 검색 조건에 있는 다른 단어에 대한 상대적 중요도를 나타내는 가중치를 할당할 수 있습니다. 이러한 쿼리 유형의 결과에서는 검색 단어에 지정한 상대적 가중치에 따라 관련성이 가장 높은 행이 먼저 반환됩니다. 결과 집합에는 지정된 단어(또는 단어 사이의 내용) 중 적어도 하나를 포함하는 문서 또는 행이 반환되지만 일부 결과는 검색된 여러 개의 단어와 관련된 가중치의 차이 때문에 다른 결과보다 관련이 높은 것으로 간주됩니다.<br /><br /> 자세한 내용은 이 항목 뒷부분의 [가중치를 사용하는 단어 또는 구(가중치 단어) 검색](#Weighted_Term)을 참조하세요.|[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
   
 
   
 ###  <a name="Simple_Term"></a> 특정 단어 또는 구 (단순 단어) 검색  
- [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)또는 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 을 사용하여 테이블에서 특정 구를 검색할 수 있습니다. 예를 들어, 검색 하려는 경우는 `ProductReview` 테이블에 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] CONTAINS 조건자를 다음과 같이 사용할 수 있습니다 "learning curve" 라는 구가 포함 된 제품 설명을 모두 찾으려면 데이터베이스:  
+ [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)또는 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 을 사용하여 테이블에서 특정 구를 검색할 수 있습니다. 예를 들어 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 데이터베이스의 `ProductReview` 테이블을 검색하여 "learning curve"라는 구가 포함된 제품 설명을 모두 찾으려면 CONTAINS 조건자를 다음과 같이 사용합니다.  
   
 ```  
 USE AdventureWorks2012  

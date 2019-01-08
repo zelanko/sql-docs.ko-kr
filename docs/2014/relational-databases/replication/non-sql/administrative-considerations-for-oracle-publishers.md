@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], administrative considerations
@@ -14,12 +13,12 @@ ms.assetid: cfd81fb5-419b-4a1b-97c4-be7c9d4ee289
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9b46cca225d0c5abdb912910ee7bb9849c81c831
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 42791ed9e60ad633ee1331dfc8326d58c0546000
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050479"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756295"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Oracle 게시자에 대한 관리 고려 사항
   Oracle 게시자를 구성하고 복제 변경 내용 추적 메커니즘을 설정한 후에도 Oracle 데이터베이스 시스템의 관리자는 표준 Oracle 데이터베이스 유틸리티를 사용하고 일반 시스템 관리 태스크를 수행할 수 있습니다. 그러나 특정 관리 태스크 수행 시 게시된 데이터에 미치는 영향을 알아두어야 합니다.  

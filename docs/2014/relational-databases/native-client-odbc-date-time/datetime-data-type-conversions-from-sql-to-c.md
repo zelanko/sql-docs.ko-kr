@@ -12,12 +12,12 @@ ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 078ccc5951bc0bf607bcc14d3bddcd11a9a12264
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd19cb92f2d2f333954adeb97229feb718c4b592
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142643"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399556"
 ---
 # <a name="conversions-from-sql-to-c"></a>SQL에서 C로 변환
   다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜/시간 형식을 C 형식으로 변환할 때 고려할 문제를 설명합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "48142643"
 |21|버퍼의 크기가 작아 SQL_SS_TIMESTAMPOFFSET_STRUCT를 수용할 수 없으면 값이 SQL_SS_TIMESTAMPOFFSET_STRUCT로 반환됩니다. 그렇지 않으면 SQLSTATE 22003 및 "숫자 값이 범위를 벗어났습니다"라는 메시지가 포함된 진단 레코드가 생성됩니다.|  
 |22|날짜가 추출되기 전에 값이 클라이언트 표준 시간대로 변환됩니다. 따라서 타임스탬프 오프셋 형식에 대한 다른 변환에서 일관성이 유지됩니다. 변환 중 오류가 발생하면 SQLSTATE 22008 및 "Datetime 필드 오버플로" 메시지가 포함된 진단 레코드가 생성됩니다. 이로 인해 날짜가 단순 잘림으로 얻은 값과 달라집니다.|  
   
- 이 항목의 표에서는 클라이언트로 반환된 형식과 바인딩 형식 간의 변환에 대해 설명합니다. 출력 매개 변수에 대 한에서 서버 유형을 지정 하는 경우 SQLBindParameter 서버의 실제 형식과 일치 하지 않습니다 서버에서 변환 하는 암시적 변환을 수행할지 하며 클라이언트에 반환 된 형식이 SQLBindParameter을 통해 지정 된 형식과 일치 합니다. 따라서 서버의 변환 규칙이 앞의 표에서 설명된 내용과 다를 경우 예기치 못한 변환 결과가 나타날 수 있습니다. 예를 들어 기본 날짜를 입력해야 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 현재 날짜를 사용하지 않고 1900-1-1을 사용합니다.  
+ 이 항목의 표에서는 클라이언트로 반환된 형식과 바인딩 형식 간의 변환에 대해 설명합니다. 출력 매개 변수에 대 한에서 서버 유형을 지정 하는 경우 SQLBindParameter 서버의 실제 형식과 일치 하지 않습니다 서버에서 변환 하는 암시적 변환을 수행할지 하며 클라이언트에 반환 된 형식이 SQLBindParameter을 통해 지정 된 형식과 일치 합니다. 이 서버의 변환 규칙이 앞의 표에 나열 된 것과 다른 경우 예기치 못한 변환 결과가 발생할 수 있습니다. 예를 들어 기본 날짜를 입력해야 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 현재 날짜를 사용하지 않고 1900-1-1을 사용합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [날짜 및 시간 기능 향상 &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  

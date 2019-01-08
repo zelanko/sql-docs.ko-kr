@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 3e9e6dad97bbfb2010f71e9e056da8a0912a4506
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 20084c0fadbccab9c920cb81b29cf30cb2cf739c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643811"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392626"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Data Migration Assistant를 사용 하 여 SQL Server 로그인 마이그레이션
 

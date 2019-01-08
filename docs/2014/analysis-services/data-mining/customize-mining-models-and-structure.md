@@ -18,12 +18,12 @@ ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77be91eddebedcdad79f18dfd499cc26778560db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df563ae17a04d37d7d3ea667e79cf9de2c7d9a51
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198839"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407888"
 ---
 # <a name="customize-mining-models-and-structure"></a>마이닝 모델 및 구조 사용자 지정
   비즈니스 요구를 충족하는 알고리즘을 선택한 후 다음과 같은 방법으로 마이닝 모델을 사용자 지정하여 결과를 잠재적으로 향상시킬 수 있습니다.  
@@ -57,12 +57,12 @@ ms.locfileid: "48198839"
   
 -   고유 값이 많은 열 또는 주소나 중간 이름과 같이 실제로 데이터를 참조하고 분석에는 유용하지 않은 열 제거  
   
- 실제로 마이닝 구조에서 열을 제거할 필요는 없으며 열에 **무시**로 플래그를 지정하기만 하면 됩니다. 열이 마이닝 모델에서 제거되지만 구조의 다른 마이닝 모델에서는 해당 열을 계속 사용할 수 있으며 드릴스루 쿼리에서 참조됩니다.  
+ 마이닝 구조에서 열을 물리적으로 제거할 필요가 없습니다. 열으로만 플래그를 수 **무시**합니다. 열이 마이닝 모델에서 제거되지만 구조의 다른 마이닝 모델에서는 해당 열을 계속 사용할 수 있으며 드릴스루 쿼리에서 참조됩니다.  
   
 ### <a name="creating-aliases-for-model-columns"></a>모델 열의 별칭 만들기  
  마이닝 모델을 만들 때 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 마이닝 구조에 있는 이름과 동일한 열 이름을 사용합니다. 마이닝 모델의 모든 열에 별칭을 추가할 수 있습니다. 이렇게 하면 열 내용 또는 사용법을 보다 쉽게 이해할 수 있으며 쿼리 작성 시 편리하도록 이름을 짧게 만들 수 있습니다. 별칭은 열의 복사본을 만들고 이해하기 쉬운 이름을 지정하려는 경우에도 유용합니다.  
   
- 편집 하 여 별칭을 만들어야 합니다 `Name` 마이닝 모델 열의 속성입니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 계속 원래 이름을에 입력 하는 열과 새 값의 ID로 사용 `Name` 열 별칭이 되어 표에서 열 사용법 옆에 괄호로 묶여 나타납니다 및 합니다.  
+ 마이닝 모델 열의 `Name` 속성을 편집하여 별칭을 만듭니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 계속 원래 이름을에 입력 하는 열과 새 값의 ID로 사용 `Name` 열 별칭이 되어 표에서 열 사용법 옆에 괄호로 묶여 나타납니다 및 합니다.  
   
  ![별칭에 마이닝 모델 열](../media/modelcolumnalias-income.gif "별칭에 마이닝 모델 열")  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48198839"
 |CLUSTER_SEED|[Microsoft 클러스터링 알고리즘 기술 참조](microsoft-clustering-algorithm-technical-reference.md)|  
 |CLUSTERING_METHOD|[Microsoft 클러스터링 알고리즘 기술 참조](microsoft-clustering-algorithm-technical-reference.md)|  
 |COMPLEXITY_PENALTY|[Microsoft 의사 결정 트리 알고리즘 기술 참조](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 시계열 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
-|FORCE_REGRESSOR|[Microsoft 의사 결정 트리 알고리즘 기술 참조](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 선형 회귀 알고리즘 기술 참조](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [모델링 플래그 &#40;데이터 마이닝&#41;](modeling-flags-data-mining.md)|  
+|FORCE_REGRESSOR|[Microsoft 의사 결정 트리 알고리즘 기술 참조](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 선형 회귀 알고리즘 기술 참조](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [모델링 플래그&#40;데이터 마이닝&#41;](modeling-flags-data-mining.md)|  
 |FORECAST_METHOD|[Microsoft 시계열 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
 |HIDDEN_NODE_RATIO|[Microsoft 신경망 알고리즘 기술 참조](microsoft-neural-network-algorithm-technical-reference.md)|  
 |HISTORIC_MODEL_COUNT|[Microsoft 시계열 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
@@ -134,7 +134,7 @@ ms.locfileid: "48198839"
 |STOPPING_TOLERANCE|[Microsoft 클러스터링 알고리즘 기술 참조](microsoft-clustering-algorithm-technical-reference.md)|  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [물리적 아키텍처 &#40;Analysis Services-데이터 마이닝&#41;](physical-architecture-analysis-services-data-mining.md)  
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [물리적 아키텍처&#40;Analysis Services - 데이터 마이닝&#41;](physical-architecture-analysis-services-data-mining.md)  
   
   

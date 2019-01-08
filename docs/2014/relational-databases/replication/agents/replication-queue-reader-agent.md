@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication], Queue Reader Agent
@@ -16,12 +15,12 @@ ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f63676830d79bc8ec9c3ffd462e9d836364df159
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 9f8db8ba77e913d1ae07b4dc0008650afe311565
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236970"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762595"
 ---
 # <a name="replication-queue-reader-agent"></a>복제 큐 판독기 에이전트
   복제 큐 판독기 에이전트는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 큐 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 메시지 큐에 저장된 메시지를 읽고 해당 메시지를 게시자에 적용하는 실행 파일입니다. 큐 판독기 에이전트는 지연 업데이트를 허용하는 스냅숏 및 트랜잭션 게시와 함께 사용됩니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - merging datasets [Integration Services]
@@ -17,12 +16,12 @@ ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76245adffaf5dfdacaf2ee8c234b81cfbaae9523
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: ed4ee0e1c46b2fd4b1ddb31c3cc5f1dc53be5b84
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460368"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782655"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>UNION ALL 변환을 사용하여 데이터 병합
   UNION ALL 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 두 개의 데이터 원본이 이미 들어 있어야 합니다.  
@@ -55,7 +54,7 @@ ms.locfileid: "49460368"
   
 9. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Union All Transformation](union-all-transformation.md)   
  [Integration Services 변환](integration-services-transformations.md)   
  [Integration Services 경로](../integration-services-paths.md)   

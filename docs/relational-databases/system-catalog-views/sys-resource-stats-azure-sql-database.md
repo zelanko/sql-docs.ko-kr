@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 83ba28d09e32f043c58bdc1c63837f5b465312f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72945aca048d322ee03c8a1d88b76650ddd1db16
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723491"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392696"
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47723491"
 |max_worker_percent|**decimal(5,2)**|데이터베이스의 서비스 계층 한도에 따른 백분율로 최대 동시 작업자 (요청).<br /><br /> 최대 동시 작업자 수 15 초 샘플을 기반으로 하는 5 분 간격에 대 한 현재 계산 됩니다.|  
 |max_session_percent|**decimal(5,2)**|데이터베이스의 서비스 계층 한도에 따른 백분율로 최대 동시 세션<br /><br /> 최대 동시 세션 수의 15 초 샘플을 기반으로 하는 5 분 간격에 대 한 현재 계산 됩니다.|  
 |dtu_limit|**int**|현재 최대 데이터베이스 DTU 설정이이 데이터베이스에 대 한 간격입니다. |  
-|allocated_storage_in_megabytes|**float**|양을 형식 파일 공간 (mb) 데이터베이스 데이터를 저장 하는 데 사용할 수 있습니다. 서식이 지정 된 파일 공간 데이터 공간 할당 라고도 합니다.  자세한 내용은 참조: [SQL db에서 파일 공간 관리](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
+|allocated_storage_in_megabytes|**float**|양을 형식 파일 공간 (mb) 데이터베이스 데이터를 저장 하는 데 사용할 수 있습니다. 서식이 지정 된 파일 공간 데이터 공간 할당 라고도 합니다.  참조 항목: [SQL db에서 파일 공간 관리](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  
 >  이러한 제한 및 서비스 계층에 대 한 더 많은 컨텍스트 항목을 참조 하세요 [서비스 계층](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)합니다.  
@@ -81,7 +81,7 @@ GROUP BY database_name
 HAVING AVG(avg_cpu_percent) >= 80  
 ```  
     
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [서비스 계층](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
  [서비스 계층 기능 및 제한](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   

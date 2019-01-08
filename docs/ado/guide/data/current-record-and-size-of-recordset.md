@@ -14,12 +14,12 @@ ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a72bb27e95da931fac146fe6bc827b71cdb8460
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bde55939e974c6c879dcd126fac863ef0a866487
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828621"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520655"
 ---
 # <a name="current-record-and-size-of-recordset"></a>현재 레코드 및 레코드 집합의 크기
 이 섹션에서는 샘플에서 커서의 현재 위치를 찾는 방법에 설명 합니다 **Recordset** 에 [JScript 코드 예제에서는 레코드 집합을 반환할](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "47828621"
 ## <a name="size-of-recordset"></a>레코드 집합의 크기  
  크기를 확인 하는 **레코드 집합** 개체, 값을 가져옵니다 합니다 **Recordset.RecordCount** 속성입니다. 이 값은 레코드의 수를 나타내는 정수를 **레코드 집합**합니다. 데이터 집합은 Microsoft SQL Server에 대 한 OLEDB 공급자에서 반환 되 면이 값 반환 되는 행 수를 제공 합니다. 읽기를 **RecordCount** 속성에 닫힌 **레코드 집합** 오류가 발생 합니다.  
   
- 레코드의 수를 확인할 수 없는 경우 속성의 값은-1입니다.  
+ 레코드의 수를 확인할 수 없는 속성의 값은-1입니다.  
   
  값을 **RecordCount** 속성 또한 사용 되는 커서 형식과 공급자의 기능에 따라 달라 집니다. 정방향 전용 커서는 값은-1입니다. 정적 또는 키 집합 커서에 대 한 값이에서 반환 된 레코드의 실제 수는 **레코드 집합** 개체입니다. 동적 커서는 값은-1 또는 데이터 원본에 따라 레코드의 실제 수입니다.  
   

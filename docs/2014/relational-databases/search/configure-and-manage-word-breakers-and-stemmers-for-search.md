@@ -20,12 +20,12 @@ ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0804fedde52ad335197c142b897afab8743f45b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8be3cc7da791b9ea5f950d83bd0f570ca42e686f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199449"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505838"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리
   단어 분리기와 형태소 분석기는 모든 전체 텍스트 인덱싱된 데이터에 대해 언어 분석을 수행합니다. 언어 분석에는 단어 경계 찾기(단어 분리) 및 동사 변화(형태소 분석)가 있습니다. 단어 분리기와 형태소 분석기는 언어별로 제공되며 언어 분석 규칙은 언어마다 다릅니다. 지정된 언어에 대해 *단어 분리기* 는 해당 언어의 어휘 규칙을 기준으로 단어의 경계를 결정하는 개별 단어를 식별합니다. 각 단어( *토큰*이라고도 함)는 압축된 표현으로 크기를 줄여 전체 텍스트 인덱스에 삽입됩니다. *형태소 분석기* 는 해당 언어의 규칙에 따라 특정 단어의 굴절형을 생성합니다. 예를 들어 "running", "ran" 및 "runner"는 "run"이라는 단어의 여러 가지 형태입니다.  
@@ -33,14 +33,14 @@ ms.locfileid: "48199449"
  언어별 단어 분리기를 사용하면 해당 언어에 맞는 비교적 정확한 결과를 반환할 수 있습니다. 해당 언어군의 단어 분리기만 있고 특정 하위 언어의 단어 분리기가 없으면 주 언어가 사용됩니다. 예를 들어 프랑스어 단어 분리기를 사용하여 프랑스어(캐나다) 텍스트를 처리합니다. 특정 언어의 단어 분리기를 사용할 수 없으면 중립 단어 분리기가 사용됩니다. 중립 단어 분리기를 사용하면 공백 및 문장 부호 표시와 같은 중립 문자에서 단어가 분리됩니다.  
   
 ##  <a name="register"></a> 단어 분리기 등록  
- 특정 언어의 단어 분리기를 사용하려면 등록해야 합니다. 단어 분리기가 등록되면 형태소 분석기, 의미 없는 단어(중지 단어) 및 동의어 사전 파일과 같은 관련 언어의 리소스도 전체 텍스트 인덱싱 및 쿼리 작업에 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 현재 단어 분리기가 등록된 언어 목록을 보려면 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하십시오.  
+ 특정 언어의 단어 분리기를 사용하려면 등록해야 합니다. 단어 분리기가 등록된에 대 한 언어 리소스-형태소 분석기, 의미 없는 단어 (중지 단어) 및 동의어 사전 파일에 연결-전체 텍스트 인덱싱 및 쿼리 작업에 사용할 수도 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 현재 단어 분리기가 등록된 언어 목록을 보려면 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하십시오.  
   
  SELECT * FROM sys.fulltext_languages  
   
  단어 분리기를 추가, 제거 또는 변경한 경우에는 전체 텍스트 인덱싱 및 쿼리에서 지원되는 Microsoft Windows LCID(로캘 ID) 목록을 새로 고쳐야 합니다. 자세한 내용은 [등록된 필터와 단어 분리기 보기 및 변경](view-or-change-registered-filters-and-word-breakers.md)을 참조하세요.  
   
 ##  <a name="default"></a> 기본 전체 텍스트 언어 옵션 설정  
- 지역화 된 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 집합을 설치 합니다 `default full-text language` 적절 한 일치 하는 경우 서버의 언어 옵션입니다. 지역화 되지 않은 버전용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `default full-text language` 옵션이 영어입니다.  
+ 지역화 된 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 집합을 설치 합니다 `default full-text language` 적절 한 일치 하는 경우 서버의 언어 옵션입니다. 지역화되지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전의 경우 `default full-text language` 옵션이 영어입니다.  
   
  전체 텍스트 인덱스를 만들거나 변경할 때는 각 전체 텍스트 인덱싱된 열마다 다른 언어를 지정할 수 있습니다. 열에 언어를 지정하지 않으면 기본적으로 구성 옵션 `default full-text language`의 값이 사용됩니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48199449"
   
  모든 단어 분리기의 전체 목록은 참조 하세요 [sys.fulltext_languages &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)   
  [CREATE FULLTEXT INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
  [sp_fulltext_service&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)   

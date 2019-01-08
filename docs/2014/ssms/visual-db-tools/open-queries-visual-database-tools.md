@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - opening queries
@@ -13,12 +13,12 @@ ms.assetid: 6d7ce59b-2ce6-42af-9330-84ce3dc1197e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f5eead90455fd6bdbf61d6ca46bbf0216a60fd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 48d0e96f2cd7b37683399c599f336f78e1ede3fa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091693"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755445"
 ---
 # <a name="open-queries-visual-database-tools"></a>쿼리 열기(Visual Database Tools)
   **열기** 명령을 사용하여 쿼리 및 뷰 디자이너에서 기존 쿼리를 열 수 있습니다.  

@@ -11,12 +11,12 @@ ms.assetid: 81fd4a1f-79a9-4967-86d6-6229413c0995
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 24186d0caa92b983f17b12c2f317d450af8be2bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bbe37d01a3e503d5ffb9aa9dc326d19bb9360d63
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081873"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506933"
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>외부 이미지 추가(보고서 작성기 및 SSRS)
   외부 이미지는 기본 모드나 SharePoint 통합 모드에 있는 보고서 서버 또는 다른 웹 사이트에 있을 수 있습니다. 보고서에 외부 이미지를 포함할 때는 해당 이미지가 존재하며 보고서를 읽는 사용자에게 해당 이미지에 액세스할 수 있는 권한이 있는지 확인해야 합니다. 자세한 내용은 [이미지&#40;보고서 작성기 및 SSRS&#41;](images-report-builder-and-ssrs.md)를 참조하세요.  
@@ -38,7 +38,7 @@ ms.locfileid: "48081873"
   
      기본 모드의 보고서 서버에 있는 이미지를 지정하려면 **이 이미지 사용** 상자에 이미지의 상대 경로(예: ../images/image1.jpg)를 입력합니다.  
   
-     SharePoint 통합 모드의 보고서 서버나 기타 웹 사이트에 있는 이미지를 지정하려면 **이 이미지 사용** 상자에 이미지의 전체 URL(예: http://\<SharePointservername>/\<site>/Documents/images/image1.jpg)을 입력합니다.  
+     다른 웹 사이트 또는 SharePoint 통합된 모드 보고서 서버의 이미지에 대 한 이미지의 전체 URL을 입력 합니다 **이 이미지를 사용 하 여** 상자-예를 들어, http://\<SharePointservername > /\<사이트 > / Documents/images/image1.jpg입니다.  
   
      자세한 내용은 [외부 항목에 대한 경로 지정&#40;보고서 작성기 및 SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)을 참조하세요.  
   
@@ -46,8 +46,8 @@ ms.locfileid: "48081873"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
- [보고서에 이미지 포함 &#40;보고서 작성기 및 SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>관련 항목:  
+ [보고서에 이미지 포함&#40;보고서 작성기 및 SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [배경 이미지 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)   
  [이미지 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   

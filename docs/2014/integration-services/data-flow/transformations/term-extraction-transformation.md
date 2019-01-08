@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termextractiontrans.f1
@@ -26,12 +25,12 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a0e333b31bef63c0f0f8fcf3a9d54dbdba579a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6d63836dbc6827eb47daaf4110bc678357012d3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155133"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762443"
 ---
 # <a name="term-extraction-transformation"></a>용어 추출 변환
   용어 추출 변환은 변환 입력 열의 텍스트에서 용어를 추출한 후 용어를 변환 출력 열에 기록합니다. 변환은 영어 텍스트에서만 작동되며 자체 영어 사전과 영어에 대한 언어적 정보가 사용됩니다.  
@@ -147,7 +146,7 @@ ms.locfileid: "48155133"
   
 -   숫자, 문장 부호 및 영문자 조합. 예를 들어 *A23B#99* 는 용어 *A23B*를 반환합니다.  
   
--   여기에는 문자, %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “ 및 ‘이 포함됩니다.  
+-   여기에는 문자, %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “ 및 ‘가 포함됩니다.  
   
     > [!NOTE]  
     >  하나 이상의 마침표(.)가 포함된 머리 글자어는 여러 문장으로 분리되지 않습니다.  
@@ -174,11 +173,11 @@ ms.locfileid: "48155133"
   
  **용어 추출 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [용어 추출 변환 편집기 &#40;용어 추출 탭&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
+-   [용어 추출 변환 편집기&#40;용어 추출 탭&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   
--   [용어 추출 변환 편집기 &#40;제외 탭&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
+-   [용어 추출 변환 편집기&#40;제외 탭&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
   
--   [용어 추출 변환 편집기 &#40;고급 탭&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
+-   [용어 추출 변환 편집기&#40;고급 탭&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
   
  **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   

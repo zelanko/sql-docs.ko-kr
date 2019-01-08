@@ -10,12 +10,12 @@ ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 14a1cd200b1a795f4349013b991163d08c741b65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93b708511bb0c17211e42f7c436da521ced12713
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676231"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413720"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access (AccessToSQL)의 새로운 기능
 이 문서에서는 SSMA 각 릴리스에 대 한 액세스 변경 내용을 나열 합니다.  

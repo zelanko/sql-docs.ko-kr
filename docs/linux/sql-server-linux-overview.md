@@ -10,23 +10,23 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: bf1d3b2b494377eb964f4a30ea97a48bd1dfcff7
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 37cd2269d6d8fe413b730a111ad0a5f604ed8994
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269527"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408880"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 ::: moniker range="= sql-server-2017 || = sqlallproducts-allversions"
-SQL Server 2017부터 SQL Server는 Linux에서 실행 됩니다. 동일한 SQL Server 데이터베이스 엔진으로 운영 체제와 관계없이 비슷한 기능 및 서비스를 다양하게 제공합니다.
+SQL Server 2017부터 SQL Server는 Linux에서 실행 됩니다. 많은 유사 기능 및 운영 체제에 관계 없이 서비스를 사용 하 여 동일한 SQL Server 데이터베이스 엔진, 것입니다.
 ::: moniker-end
 
 ::: moniker range=">= sql-server-ver15 || >= sql-server-linux-ver15"
-SQL Server 2019 미리 보기는 Linux에서 실행 됩니다. 동일한 SQL Server 데이터베이스 엔진으로 운영 체제와 관계없이 비슷한 기능 및 서비스를 다양하게 제공합니다. 이 릴리스에 대 한 자세한 내용을 참조 하세요 [Linux 용 SQL Server 2019 미리 보기의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)합니다.
+SQL Server 2019 미리 보기는 Linux에서 실행 됩니다. 많은 유사 기능 및 운영 체제에 관계 없이 서비스를 사용 하 여 동일한 SQL Server 데이터베이스 엔진, 것입니다. 이 릴리스에 대 한 자세한 내용을 참조 하세요 [Linux 용 SQL Server 2019 미리 보기의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)합니다.
 ::: moniker-end
 
 ::: moniker range="= sql-server-2017"
@@ -44,11 +44,11 @@ SQL Server 2019 미리 보기는 Linux에서 실행 됩니다. 동일한 SQL Ser
 > SQL Server 2019 미리 보기를 놓았습니다. Linux 용의 새로운 최신 릴리스를 확인 하려면 참조 [Linux 용 SQL Server 2019 미리 보기의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)합니다.
 ::: moniker-end
 
-## <a name="install"></a>설치
+## <a name="install"></a>Install
 
 시작하려면 다음 빠른 시작 자습서 중 하나를 참고하여 SQL Server on Linux를 설치합니다.
 
-- [Red Hat Enterprise Linux 설치](quickstart-install-connect-red-hat.md)
+- [Red Hat Enterprise Linux에 설치](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server에 설치](quickstart-install-connect-suse.md)
 - [Ubuntu에 설치](quickstart-install-connect-ubuntu.md)
 - [Docker에서 실행](quickstart-install-connect-docker.md)
@@ -104,7 +104,7 @@ Linux의 SQL Server에 익숙한 경우 릴리스 정보를 검토 합니다.
 ::: moniker-end
 
 > [!TIP]
-> 자주 묻는 질문에 답변에 대 한 참조를 [의 SQL Server Linux FAQ](sql-server-linux-faq.md)합니다.
+> 자주 묻는 질문에 대한 답변은, [SQL Server on Linux FAQ](sql-server-linux-faq.md)를 참조하세요.
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 

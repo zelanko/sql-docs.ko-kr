@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,19 +14,19 @@ ms.assetid: a150c300-72fa-4231-8f41-f1abd550a429
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d7099149b8725e03430a3d45bc2a6371c1dd1019
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: cf04a73d2ecc100ae5e9b41b5807aa25b05ba32a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136343"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761645"
 ---
 # <a name="lockreleased-event-class"></a>Lock:Released 이벤트 클래스
   Lock:Released 이벤트 클래스는 페이지와 같은 리소스에 대한 잠금이 해제되었음을 나타냅니다.  
   
  Lock:Acquired 및 Lock:Released 이벤트 클래스를 사용하여 개체 잠금 시기, 사용하는 잠금 유형 및 잠금 보유 기간을 모니터링할 수 있습니다. 장기간 보유되는 잠금은 경합 문제를 발생시킬 수 있으므로 면밀히 관찰해야 합니다. 예를 들어 애플리케이션에서 테이블의 행에 대한 잠금을 획득하고 사용자 입력을 기다릴 수 있습니다. 사용자 입력 대기 시간이 길어지는 경우 이러한 잠금으로 인해 다른 사용자가 차단될 수 있습니다. 이런 경우 필요할 경우에만 잠금 요청을 하고 잠금이 획득된 경우 사용자 입력이 필요하지 않도록 애플리케이션을 다시 디자인해야 합니다.  
   
-## <a name="lock-released-event-class-data-columns"></a>Lock: Released 이벤트 클래스 데이터 열  
+## <a name="lock-released-event-class-data-columns"></a>Lock:Released 이벤트 클래스 데이터 열  
   
 |데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  

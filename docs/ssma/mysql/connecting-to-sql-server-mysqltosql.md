@@ -13,12 +13,12 @@ ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2827824224488cbaad99df0784159a5231a7eade
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64dd3fae9776c09f81571a721aa53753e34fbb17
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773941"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52412290"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>SQL Server에 연결(MySQLToSQL)
 SQL Server로 MySQL 데이터베이스를 마이그레이션하려면 대상 인스턴스의 SQL Server에 연결 해야 합니다. 에 연결 하면 SSMA SQL Server 인스턴스의 모든 데이터베이스에 대 한 메타 데이터를 가져오고 SQL Server 메타 데이터 탐색기에서 데이터베이스 메타 데이터를 표시 합니다. SSMA 연결 해도 암호를 저장 하지 않으므로 SQL Server의 인스턴스 정보를 저장 합니다.  
@@ -62,7 +62,7 @@ SQL Server 구문에 MySQL 데이터베이스 개체를 변환 하기 전에 MyS
   
 5.  보안 연결에 대 한 두 개의 추가 되는 **연결 암호화** 하 고 **TrustServerCertificate** 확인란 합니다. 경우에만 **연결 암호화** 을 선택 합니다 **TrustServerCertificate** 확인란이 표시 됩니다. 때 **연결 암호화** 확인란이 선택 되어 (true) 및 **TrustServerCertificate** 선택 하지 않으면 (false) 검사지 것입니다 SQL Server SSL 인증서입니다. 서버 인증서의 유효성 검사는 SSL 핸드셰이크의 일부로 서버가 연결할 올바른 서버인지 확인합니다. 이 위해 클라이언트 쪽 및 서버 쪽에서 인증서를 설치 합니다.  
   
-6.  연결을 클릭 합니다.  
+6.  연결을 클릭합니다.  
   
 **더 높은 버전 호환성**  
   

@@ -15,18 +15,18 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: f748189446ca3d5cfd49c748fa058cf8dbef7fe7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 3b36e720cc390311c851eef55d09a74cc5e5d6ad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601823"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503285"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>엔터프라이즈 평가 및 DMA 사용 하 여 평가 보고서 통합
 
 다음 단계별 지침을 통해 온-프레미스 SQL Server 또는 Azure Vm에서 실행 중인 SQL Server를 업그레이드 또는 Azure SQL Database로 마이그레이션에 대 한 성공적인 크기 조정 된 평가 수행 하려면 Data Migration Assistant를 사용 하 여 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 - DMA가 시작 됩니다. 네트워크에 있는 도구 컴퓨터를 지정 합니다. 이 컴퓨터에 SQL Server 대상에 연결 되어 있는지 확인 합니다.
 - 다운로드 및 설치:
@@ -96,7 +96,7 @@ Modules 디렉터리에 PowerShell 모듈을 로드 하 고 인벤토리를 만�
 
 DmaDataCollector 함수와 연결 된 매개 변수를 다음과에서 같습니다.
 
-|매개 변수  |설명
+|매개 변수  |Description
 |---------|---------|
 |**getServerListFrom** | 인벤토리 합니다. 가능한 값은 **SqlServer** 하 고 **CSV**합니다.<br/>자세한 내용은 참조 하세요. [SQL Server의 인벤토리를 만들고](#create-inventory)합니다. |
 |**serverName** | SQL Server 인스턴스 이름을 사용 하는 경우 인벤토리 **SqlServer** 에 **getServerListFrom** 매개 변수입니다. |
@@ -118,7 +118,7 @@ DmaDataCollector 함수와 연결 된 매개 변수를 다음과에서 같습니
 
 DmaProcessor 함수와 연결 된 매개 변수를 다음과에서 같습니다.
 
-|매개 변수  |설명
+|매개 변수  |Description
 |---------|---------|
 |**processTo**  | JSON 파일을 처리할 수 위치입니다. 가능한 값은 **SQLServer** 하 고 **AzureSQLDatabase**합니다. |
 |**serverName** | 데이터를 처리할지 SQL Server 인스턴스.  지정 하는 경우 **AzureSQLDatabase** 에 대 한 합니다 **processTo** 매개 변수를 SQL Server 이름만 포함 (포함 되지 않습니다. database.windows.net). 메시지가 표시 됩니다 두 로그인에 대 한 Azure SQL 데이터베이스를 대상으로 할 때 첫 번째 Azure 테 넌 트 자격 증명 있고 두 번째는 Azure SQL Server에 대 한 관리자 로그인입니다. |

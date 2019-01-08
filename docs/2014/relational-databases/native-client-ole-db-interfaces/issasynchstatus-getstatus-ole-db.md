@@ -16,12 +16,12 @@ ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d17a75b7bd6021e908200b7a4be5bc800ec81283
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12013ae253680621d154d7a6af87005aedbd92a9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050243"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503761"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus(OLE DB)
   비동기적으로 실행 중인 작업의 상태를 반환합니다.  
@@ -46,7 +46,7 @@ HRESULT GetStatus(
  *eOperation*[in]  
  비동기 상태가 요청되는 작업입니다. 값은 다음과 같아야 합니다.  
   
- DBASYNCHOP_OPEN - 소비자가 행 집합의 비동기 열기 또는 채우기나 데이터 원본 개체의 비동기 초기화에 대한 정보를 요청합니다. 공급자가 직접 URL 바인딩을 지원하는 OLE DB 2.5 규격 공급자이면 소비자는 데이터 원본, 행 집합, 행 또는 스트림 개체의 비동기 초기화나 채우기에 대한 정보를 요청합니다.  
+ DBASYNCHOP_OPEN-소비자 데이터 원본 개체의 비동기 초기화 나 비동기 열기 또는 채우기의 행 집합에 대 한 정보를 요청합니다. 공급자가 직접 URL 바인딩을 지원하는 OLE DB 2.5 규격 공급자이면 소비자는 데이터 원본, 행 집합, 행 또는 스트림 개체의 비동기 초기화나 채우기에 대한 정보를 요청합니다.  
   
  *pulProgress*[out]  
  *pulProgressMax* 매개 변수에 표시된 예상 최대값을 기준으로 비동기 작업의 현재 진행률을 반환할 메모리에 대한 포인터입니다. *pulProgress*의 의미에 대한 자세한 내용은 *peAsynchPhase*설명을 참조하십시오.  
@@ -61,16 +61,16 @@ HRESULT GetStatus(
  *peAsynchPhase*[out]  
  비동기 작업의 진행률과 관련해서 추가 정보를 반환할 메모리에 대한 포인터입니다. 유효한 값은 다음과 같습니다.  
   
- DBASYNCHPHASE_INITIALIZATION - 개체가 초기화 단계에 있습니다. *pulProgress* 및 *pulProgressMax* 인수는 예상 완료율을 나타냅니다. 개체가 완전히 구체화되지 않았습니다. 다른 인터페이스를 호출하려는 시도가 실패할 수 있으며, 개체에서 전체 인터페이스 집합을 사용하지 못할 수도 있습니다. 행을 업데이트, 삭제 또는 삽입하는 명령에 대한 **ICommand::Execute** 호출 결과로 비동기 작업이 수행되었으며 *cParamSets* 가 1보다 큰 경우 *pulProgress* 및 *pulProgressMax* 는 단일 매개 변수 집합이나 전체 매개 변수 집합 배열의 진행률을 나타낼 수 있습니다.  
+ DBASYNCHPHASE_INITIALIZATION-The 개체가 초기화 단계입니다. *pulProgress* 및 *pulProgressMax* 인수는 예상 완료율을 나타냅니다. 개체가 완전히 구체화되지 않았습니다. 다른 인터페이스를 호출하려는 시도가 실패할 수 있으며, 개체에서 전체 인터페이스 집합을 사용하지 못할 수도 있습니다. 행을 업데이트, 삭제 또는 삽입하는 명령에 대한 **ICommand::Execute** 호출 결과로 비동기 작업이 수행되었으며 *cParamSets* 가 1보다 큰 경우 *pulProgress* 및 *pulProgressMax* 는 단일 매개 변수 집합이나 전체 매개 변수 집합 배열의 진행률을 나타낼 수 있습니다.  
   
- DBASYNCHPHASE_POPULATION - 개체가 채우기 단계에 있습니다. 행 집합이 완전히 초기화되었으며 개체에서 모든 인터페이스를 사용할 수 있지만 행 집합에 채워지지 않은 추가 행이 있을 수 있습니다. *pulProgress* 및 *pulProgressMax* 는 채워지는 행 수에 따라 지정될 수도 있지만 일반적으로 행 집합을 채우는 데 필요한 시간이나 노력을 기반으로 지정됩니다. 따라서 호출자는 이 정보를 최종 행 수가 아니라 프로세스에 걸리는 시간의 대략적인 예상 값으로 사용합니다. 이 단계는 행 집합을 채우는 동안에만 반환되며, 데이터 원본 개체의 초기화나 행을 업데이트, 삭제 또는 삽입하는 명령 실행에서는 반환되지 않습니다.  
+ DBASYNCHPHASE_POPULATION-The 개체가 채우기 단계입니다. 행 집합이 완전히 초기화되었으며 개체에서 모든 인터페이스를 사용할 수 있지만 행 집합에 채워지지 않은 추가 행이 있을 수 있습니다. *pulProgress* 및 *pulProgressMax* 는 채워지는 행 수에 따라 지정될 수도 있지만 일반적으로 행 집합을 채우는 데 필요한 시간이나 노력을 기반으로 지정됩니다. 따라서 호출자는 이 정보를 최종 행 수가 아니라 프로세스에 걸리는 시간의 대략적인 예상 값으로 사용합니다. 이 단계는 행 집합을 채우는 동안에만 반환되며, 데이터 원본 개체의 초기화나 행을 업데이트, 삭제 또는 삽입하는 명령 실행에서는 반환되지 않습니다.  
   
- DBASYNCHPHASE_COMPLETE - 개체의 모든 비동기 처리가 완료되었습니다. **ISSAsynchStatus::GetStatus** 는 작업 결과를 나타내는 HRESULT를 반환합니다. 일반적으로 이것은 작업을 동기적으로 호출한 경우에 반환되는 HRESULT입니다. 행을 업데이트, 삭제 또는 삽입하는 명령에 대한 **ICommand::Execute** 호출 결과로 비동기 작업이 수행된 경우 *pulProgress* 및 *pulProgressMax* 는 해당 명령이 적용된 총 행 수와 같습니다. *cParamSets* 가 1보다 크면 이 값은 실행 시 지정한 모든 매개 변수 집합이 적용된 총 행 수입니다. *peAsynchPhase* 가 Null 포인터이면 상태 코드가 반환되지 않습니다.  
+ 개체의 DBASYNCHPHASE_COMPLETE-모든 비동기 처리가 완료 되었습니다. **ISSAsynchStatus::GetStatus** 는 작업 결과를 나타내는 HRESULT를 반환합니다. 일반적으로 이것은 작업을 동기적으로 호출한 경우에 반환되는 HRESULT입니다. 행을 업데이트, 삭제 또는 삽입하는 명령에 대한 **ICommand::Execute** 호출 결과로 비동기 작업이 수행된 경우 *pulProgress* 및 *pulProgressMax* 는 해당 명령이 적용된 총 행 수와 같습니다. *cParamSets* 가 1보다 크면 이 값은 실행 시 지정한 모든 매개 변수 집합이 적용된 총 행 수입니다. *peAsynchPhase* 가 Null 포인터이면 상태 코드가 반환되지 않습니다.  
   
- DBASYNCHPHASE_CANCELED - 개체의 비동기 처리가 중단되었습니다. **ISSAsynchStatus::GetStatus** 에서 DB_E_CANCELED를 반환합니다. 행을 업데이트, 삭제 또는 삽입하는 명령에 대한 **ICommand::Execute** 호출 결과로 비동기 작업이 수행된 경우 *pulProgress* 는 취소 전에 해당 명령의 영향을 받는 모든 매개 변수 집합에 대한 총 행 수와 같습니다.  
+ 개체의 DBASYNCHPHASE_CANCELED 비동기 처리가 중단 되었습니다. **ISSAsynchStatus::GetStatus** 에서 DB_E_CANCELED를 반환합니다. 행을 업데이트, 삭제 또는 삽입하는 명령에 대한 **ICommand::Execute** 호출 결과로 비동기 작업이 수행된 경우 *pulProgress* 는 취소 전에 해당 명령의 영향을 받는 모든 매개 변수 집합에 대한 총 행 수와 같습니다.  
   
  *ppwszStatusText*[in/out]  
- 작업에 대한 추가 정보가 포함된 메모리에 대한 포인터입니다. 공급자는 이 값을 사용하여 작업의 서로 다른 요소(예: 액세스되는 다른 리소스)를 구분할 수 있습니다. 이 문자열은 데이터 원본 개체의 DBPROP_INIT_LCID 속성에 따라 지역화됩니다.  
+ 작업에 대한 추가 정보가 포함된 메모리에 대한 포인터입니다. 공급자 작업의 다른 요소를 구분 하려면이 값을 사용할 수-액세스 되는 예를 들어 다른 리소스입니다. 이 문자열은 데이터 원본 개체의 DBPROP_INIT_LCID 속성에 따라 지역화됩니다.  
   
  *ppwszStatusText* 가 입력 시 Null이 아니면 공급자는 *ppwszStatusText*로 식별된 특정 요소와 연결된 상태를 반환합니다. *ppwszStatusText* 가 *eOperation*의 요소를 나타내지 않으면 공급자는 *pulProgress* 및 *pulProgressMax* 를 같은 값으로 설정하여 S_OK를 반환합니다. 공급자는 텍스트 식별자를 기반으로 요소를 구분하지 않는 경우 *ppwszStatusText* 를 NULL로 설정하고 작업 전체에 대한 정보를 반환합니다. 그렇지 않고 *ppwszStatusText* 가 입력 시 Null이 아니면 공급자는 *ppwszStatusText* 를 그대로 둡니다.  
   

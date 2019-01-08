@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
@@ -13,12 +12,12 @@ ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9749418654d76f542d865aad78135b1a11a987b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b49001c7b62be67097223421ef85db2b475aa1d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088603"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761895"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>변경 데이터 검색을 위한 함수 만들기
   변경 데이터를 증분 로드하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 제어 흐름을 완료한 후 다음 태스크는 변경 데이터를 검색하는 테이블 반환 함수를 만드는 것입니다. 첫 번째 증분 로드 전에 이 함수를 한 번만 만들면 됩니다.  
@@ -133,16 +132,16 @@ deallocate #hfunctions
   
 -   변경 데이터의 모든 요청된 열  
   
--   1문자 또는 2문자 필드를 사용하여 행에 연결된 작업을 식별하는 __CDC_OPERATION이라는 열. 이 필드에서 유효한 값은 다음과 같습니다. 'I'는 삽입, 'D'는 삭제, 'UO'는 이전 값 업데이트 및 'UN'은 새 값 업데이트입니다.  
+-   1문자 또는 2문자 필드를 사용하여 행에 연결된 작업을 식별하는 __CDC_OPERATION이라는 열. 이 필드의 유효한 값은 다음과 같습니다. 된 'I'는 삽입,' delete 'u O'에 대 한 업데이트 이전 값 및 ' u N '은 새 값을 업데이트 합니다.  
   
--   요청 시 작업 코드 뒤에 *@update_flag_list* 매개 변수에 지정된 순서대로 비트 열로 표시되는 업데이트 플래그. 이러한 열의 이름은 관련 열 이름에 ‘_uflag’를 추가한 것입니다.  
+-   요청 시 작업 코드 뒤에 *@update_flag_list* 매개 변수에 지정된 순서대로 비트 열로 표시되는 업데이트 플래그. 이러한 열의 이름은 관련 열 이름에 '_uflag'를 추가한 것입니다.  
   
  패키지에서 모든 변경을 쿼리하는 래퍼 함수를 호출하는 경우 래퍼 함수는 __CDC_STARTLSN 및 \__CDC_SEQVAL 열도 반환합니다. 이러한 두 열은 각각 결과 집합의 첫 번째 열과 두 번째 열이 됩니다. 또한 래퍼 함수는 이러한 두 열에 따라 결과 집합을 정렬합니다.  
   
 ## <a name="writing-your-own-table-value-function"></a>테이블 반환 함수 직접 작성  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 통해 변경 데이터 캡처 쿼리 함수를 호출하는 테이블 반환 함수를 직접 작성하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장할 수도 있습니다. TRANSACT-SQL 함수를 만드는 방법에 대한 자세한 내용은 [CREATE FUNCTION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)을 참조하세요.  
   
- 다음 예에서는 지정한 변경 간격 동안 Customer 테이블에서 변경 내용을 검색하는 테이블 반환 함수를 정의합니다. 이 함수는 변경 데이터 캡처 함수에 매핑하는 `datetime` 값이 이진 로그 시퀀스 번호 (LSN) 값을 변경 테이블은 내부적으로 사용 합니다. 또한 이 함수는 다음과 같은 몇 가지 특수 상황을 처리합니다.  
+ 다음 예에서는 지정한 변경 간격 동안 Customer 테이블에서 변경 내용을 검색하는 테이블 반환 함수를 정의합니다. 이 함수는 변경 데이터 캡처 함수를 사용하여 변경 테이블이 내부적으로 사용하는 이진 LSN(로그 시퀀스 번호) 값에 `datetime` 값을 매핑합니다. 또한 이 함수는 다음과 같은 몇 가지 특수 상황을 처리합니다.  
   
 -   시작 시간에 대해 Null 값이 전달되는 경우 이 함수는 사용할 수 있는 가장 오래된 값을 사용합니다.  
   

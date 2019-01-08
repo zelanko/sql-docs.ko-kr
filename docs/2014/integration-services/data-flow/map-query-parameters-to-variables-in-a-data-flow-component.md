@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [Integration Services], parameter mapping
@@ -16,12 +15,12 @@ ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8a02dbe6174af6dbfefb472b7dddfb878fb569d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc58bc72a9c2d9da96c123ff206616b210e75b6c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228773"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749736"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>쿼리 매개 변수를 데이터 흐름 구성 요소의 변수에 매핑
   매개 변수가 있는 쿼리를 사용하도록 OLE DB 원본을 구성할 경우 매개 변수를 변수에 매핑할 수 있습니다.  
@@ -53,7 +52,7 @@ ms.locfileid: "48228773"
   
 10. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [OLE DB 원본](ole-db-source.md)   
  [조회 변환](transformations/lookup-transformation.md)  
   

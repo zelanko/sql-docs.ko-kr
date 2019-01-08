@@ -11,12 +11,12 @@ ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 91db405d30b3d7dbcfc351b6a7a0c95e5238902a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 362ead31e7cb7b1a35411fa6f8b211e65342a721
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099783"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393734"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>PDF 파일로 내보내기(보고서 작성기 및 SSRS)
   PDF 렌더링 확장 프로그램은 Adobe Acrobat 및 PDF 1.3을 지원하는 타사 PDF 뷰어에서 열 수 있는 파일로 보고서를 렌더링합니다. PDF 1.3은 Adobe Acrobat 4.0 이상 버전과 호환되지만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 Adobe Acrobat 6 이상 버전을 지원합니다. 이 렌더링 확장 프로그램으로 보고서를 렌더링하기 위해 Adobe 소프트웨어가 필요한 것은 아닙니다. 그러나 PDF 형식으로 보고서를 보거나 인쇄하기 위해서는 Adobe Acrobat과 같은 PDF 뷰어가 필요합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "48099783"
 |`Subject`|`Description` RDL 요소|  
 |`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 제품 이름 및 버전|  
 |`Producer`|렌더링 확장 프로그램 이름 및 버전|  
-|`CreationDate`|보고서 실행 시간 PDF `datetime` 형식입니다.|  
+|`CreationDate`|PDF `datetime` 형식의 보고서 실행 시간|  
   
   
   
@@ -112,7 +112,7 @@ ms.locfileid: "48099783"
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [여러 보고서 렌더링 확장 프로그램의 대화형 기능 &#40;보고서 작성기 및 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [보고서 항목 렌더링&#40;보고서 작성기 및 SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

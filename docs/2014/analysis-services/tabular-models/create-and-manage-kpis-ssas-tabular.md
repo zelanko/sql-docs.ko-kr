@@ -13,15 +13,15 @@ ms.assetid: c96026c2-4394-4c3c-986b-4c95a4421900
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dd373f8080878a69200706a7d53d2dd92f9ad160
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dde3d1c12dd4f5b037d24030ae9ec96ae9f97dd0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134117"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405148"
 ---
 # <a name="create-and-manage-kpis-ssas-tabular"></a>KPI 만들기 및 관리(SSAS 테이블 형식)
-  이 항목에서는 테이블 형식 모델에서 KPI(핵심 성과 지표)를 만들거나 편집하거나 삭제하는 방법을 설명합니다. KPI를 만들려면 KPI의 기본 값으로 평가되는 측정값을 선택합니다. 그런 후 핵심 성과 지표 대화 상자를 사용해서 대상 값으로 평가되는 두 번째 측정값 또는 절대값을 선택합니다. 그리고 기본 및 대상 측정값 사이의 성능을 측정하는 상태 임계값을 정의할 수 있습니다.  
+  이 항목에서는 테이블 형식 모델에서 KPI(핵심 성과 지표)를 만들거나 편집하거나 삭제하는 방법을 설명합니다. KPI를 만들려면 KPI의 기본 값으로 계산 되는 측정값을 선택 합니다. 그런 후 핵심 성과 지표 대화 상자를 사용해서 대상 값으로 평가되는 두 번째 측정값 또는 절대값을 선택합니다. 그리고 기본 및 대상 측정값 사이의 성능을 측정하는 상태 임계값을 정의할 수 있습니다.  
   
  이 항목에는 다음 태스크가 포함됩니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48134117"
 ## <a name="tasks"></a>태스크  
   
 > [!IMPORTANT]  
->  KPI를 만들려면 먼저 값으로 계산되는 기본 측정값을 만들어야 합니다. 그런 다음 기본 측정값을 KPI로 확장합니다. 측정값을 만드는 방법을 다른 항목에 설명 되어 있습니다 [만들기 및 관리 하는 측정값 &#40;&AMP;#40;SSAS 테이블 형식&#41;](measures-ssas-tabular.md)합니다. KPI에는 대상 값도 필요합니다. 이 값은 미리 정의된 다른 측정값이나 절대값에서 얻을 수 있습니다. 기본 측정값을 KPI로 확장한 후 핵심 성과 지표 대화 상자에서 대상 값을 선택하고 상태 임계값을 정의할 수 있습니다.  
+>  KPI를 만들려면 먼저 값으로 계산되는 기본 측정값을 만들어야 합니다. 그런 다음 기본 측정값을 KPI로 확장합니다. 측정값을 만드는 방법은 다른 항목 [측정값 만들기 및 관리&#40;SSAS 테이블 형식&#41;](measures-ssas-tabular.md)에서 설명합니다. KPI에는 대상 값도 필요합니다. 이 값은 미리 정의된 다른 측정값이나 절대값에서 얻을 수 있습니다. 기본 측정값을 KPI로 확장한 후 핵심 성과 지표 대화 상자에서 대상 값을 선택하고 상태 임계값을 정의할 수 있습니다.  
   
 ###  <a name="bkmk_create_KPI"></a> KPI 만들기  
   
@@ -84,8 +84,8 @@ ms.locfileid: "48134117"
 |추세|Alt+T|  
   
 ## <a name="see-also"></a>관련 항목  
- [Kpi &#40;&AMP;#40;SSAS 테이블 형식&#41;](kpis-ssas-tabular.md)   
- [측정값 &#40;&AMP;#40;SSAS 테이블 형식&#41;](measures-ssas-tabular.md)   
- [측정값 만들기 및 관리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](create-and-manage-measures-ssas-tabular.md)  
+ [KPI&#40;SSAS 테이블 형식&#41;](kpis-ssas-tabular.md)   
+ [측정값&#40;SSAS 테이블 형식&#41;](measures-ssas-tabular.md)   
+ [측정값 만들기 및 관리&#40;SSAS 테이블 형식&#41;](create-and-manage-measures-ssas-tabular.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 72089aad9a38c488b36fdb65cc94060d70c6482c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f89a84f8e003063883d711f8908ac619d50e93df
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104763"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398675"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>처리 옵션 설정(SharePoint 통합 모드의 Reporting Services)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 처리 옵션을 설정하여 데이터 처리 시기를 결정할 수 있습니다. 현재 보고서에 대해 보고서 기록을 사용할지 여부를 결정하는 옵션과 보고서 처리의 제한 시간 값을 설정할 수도 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "48104763"
 -   보고서 기록은 이전에 실행한 보고서 복사본의 모음입니다. 보고서 기록을 사용하여 시간에 따른 보고서 기록을 유지 관리할 수 있습니다. 보고서 기록은 기밀이나 개인 데이터가 포함된 보고서에 대해서는 사용할 수 없습니다. 따라서 보고서 기록에는 보고서를 실행하는 모든 사용자가 사용할 수 있는 단일 자격 증명 집합(저장된 자격 증명 또는 무인 모드의 보고서 실행에 사용되는 자격 증명)을 사용하여 데이터 원본을 쿼리하는 보고서만 포함될 수 있습니다.  
   
     > [!NOTE]  
-    >  SharePoint와의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 통합에서는 SharePoint의 체크 아웃 및 체크인 콘텐츠 관리 기능을 사용하여 업데이트를 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 콘텐츠 형식에 저장합니다. 여기에는 보고서 스냅샷 만들기도 포함됩니다. 따라서 문서 라이브러리에 대한 버전 관리를 사용하는 경우 새 보고서 기록 스냅샷이 만들어질 때 보고서 버전이 업데이트되는 것을 볼 수 있습니다. 이것은 스냅샷 업데이트로 인해 파생되는 작업입니다. 스냅샷이 업데이트될 때 보고서의 LastExecution 속성이 변경되므로 보고서 버전이 변경되는 것입니다.  
+    >  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 통합에서는 SharePoint의 체크 아웃 및 체크인 콘텐츠 관리 기능을 사용하여 업데이트를 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 콘텐츠 형식에 저장합니다. 여기에는 보고서 스냅샷 만들기도 포함됩니다. 따라서 문서 라이브러리에 대한 버전 관리를 사용하는 경우 새 보고서 기록 스냅샷이 만들어질 때 보고서 버전이 업데이트되는 것을 볼 수 있습니다. 이것은 스냅샷 업데이트로 인해 파생되는 작업입니다. 스냅샷이 업데이트될 때 보고서의 LastExecution 속성이 변경되므로 보고서 버전이 변경되는 것입니다.  
   
 -   제한 시간 값을 지정하여 시스템 리소스 사용 방식에 대해 제한을 설정할 수 있습니다.  
   
@@ -103,11 +103,11 @@ ms.locfileid: "48104763"
   
 ##  <a name="bkmk_set_database_timeout"></a> 데이터베이스 제한 시간 설정  
   
-1.  Windows PowerShell을 사용하여 SharePoint 보고서 서버의 데이터베이스 제한 시간을 설정합니다. 자세한 내용은 가져오기 및 보고 서비스 응용 프로그램 데이터베이스의 속성 설정 "을 참조 하십시오. 부분 [Reporting Services SharePoint 모드용 PowerShell cmdlet](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)합니다.  
+1.  Windows PowerShell을 사용하여 SharePoint 보고서 서버의 데이터베이스 제한 시간을 설정합니다. 자세한 내용은 [PowerShell cmdlets for Reporting Services SharePoint Mode](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)의 "보고 서비스 애플리케이션 데이터베이스의 속성 가져오기 및 설정" 섹션을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 처리 속성 설정](report-server/set-report-processing-properties.md)   
  [보고서 캐시&#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
- [보고서 및 공유 데이터 집합 처리에 대 한 제한 시간 값 설정 &#40;SSRS&#41;](report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [보고서 및 공유 데이터 세트 처리에 대한 제한 시간 값 설정&amp;#40;SSRS&amp;#41;](report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
   
   

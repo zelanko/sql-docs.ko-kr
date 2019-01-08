@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f884a7d70447771769ba2d6ff8928234095c7cae
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: 5e7a1934a207beebca88e3939a211667e94be976
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019460"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415610"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>데이터 마이닝 솔루션 관련 프로젝트
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34019460"
  [의미 체계 인덱싱](#bkmk_SemSearch)  
   
 ##  <a name="bkmk_SSIS"></a> SQL Server Integration Services  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]구성 요소 및 데이터 준비 및 데이터 마이닝 프로젝트의 학습 단계에 필요한 기능을 제공 합니다. 스크립트와 같은 다른 도구를 사용하여 데이터 정리 및 준비 태스크를 수행할 수도 있지만 데이터 마이닝에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 사용하면 다음과 같은 이점이 있습니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 데이터 마이닝 프로젝트의 데이터 준비 및 학습 단계에 필요한 구성 요소 및 기능을 제공합니다. 스크립트와 같은 다른 도구를 사용하여 데이터 정리 및 준비 태스크를 수행할 수도 있지만 데이터 마이닝에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 사용하면 다음과 같은 이점이 있습니다.  
   
 -   태스크를 반복, 자동화, 분기 및 확장이 가능한 워크플로의 일부로 표현할 수 있습니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "34019460"
   
 -   [데이터 마이닝 쿼리 태스크](../../integration-services/control-flow/data-mining-query-task.md)  
   
--   [데이터 프로 파일링 태스크](../../integration-services/control-flow/data-profiling-task.md)  
+-   [데이터 프로파일링 태스크](../../integration-services/control-flow/data-profiling-task.md)  
   
  **데이터 흐름 구성 요소**  
   
@@ -102,11 +102,11 @@ ms.locfileid: "34019460"
   
  DMX 쿼리가 데이터 원본인 경우 Reporting Services를 사용하는 방법은 다음 링크를 참조하세요.  
   
- [데이터 마이닝 모델 & #40; DMX & #41;에서 데이터를 검색 합니다. & #40; Ssrs& #41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [데이터 마이닝 모델에서 데이터 검색&#40;DMX&#41;&#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
  [Analysis Services DMX 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [DMX & #40; analysis Services 연결 유형 Ssrs& #41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [DMX용 Analysis Services 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  DMX를 데이터 원본으로 사용할 필요는 없습니다. 데이터 마이닝용 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 구성 요소는 예측 쿼리의 결과를 관계형 데이터베이스에 저장할 수 있도록 지원합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 사용하여 모델을 업데이트하는 워크플로를 설정한 경우 예측 및 기타 데이터 마이닝 쿼리 결과를 SQL Server에 저장하면 보고를 위해 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 또는 DMX와 인터페이스하지 않는 다른 도구를 사용할 수 있습니다.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "34019460"
   
  자세한 내용은 [검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)를 참조하세요.  
   
- 전체 텍스트 인덱싱 후 저장되는 단어의 버전은 압축된 형식의 토큰입니다. 전체 텍스트 인덱스에 대한 후속 쿼리가 수행됨에 따라 가능성 있는 모든 일치 항목을 찾을 수 있도록 해당 언어의 규칙에 따라 특정 단어의 여러 굴절형이 생성됩니다. 예를 들어 저장된 토큰은 "run"이더라도 쿼리 엔진은 "run"이라는 어원에서 파생된 형태학상의 변형인 "running", "ran" 및 "runner"도 검색합니다.  
+ 전체 텍스트 인덱싱 후 저장되는 단어의 버전은 압축된 형식의 토큰입니다. 전체 텍스트 인덱스에 대한 후속 쿼리가 수행됨에 따라 가능성 있는 모든 일치 항목을 찾을 수 있도록 해당 언어의 규칙에 따라 특정 단어의 여러 굴절형이 생성됩니다. 예를 들어 저장 된 토큰 수 실행할 수 있지만"", 쿼리 엔진 훌륭하면서도 "running", "ran" 및 "runner"는 용어에 대 한 "run" 루트 단어의 파생 된 형태학 됩니다.  
   
  사용자 동의어 사전을 만들어 검색 결과를 향상시키거나 용어 범주화를 작성할 수도 있습니다. 전체 텍스트 데이터에 맞게 동의어 사전을 개발하면 해당 데이터에 대한 전체 텍스트 쿼리의 범위를 효과적으로 넓힐 수 있습니다. 자세한 내용은 [전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)를 참조하세요.  
   

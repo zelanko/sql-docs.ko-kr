@@ -11,12 +11,12 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8ab0b1bc65009a7439c9de8b8728a483413d09a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6160010d02482f9ffd4ed1a4306ae064607b7d75
+ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676571"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947577"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>구성 SQL Server Always On 가용성 그룹에서 Windows 및 Linux (플랫폼 간)
 
@@ -58,7 +58,7 @@ AG를 만드는 단계 읽기 규모 워크 로드에 대 한 AG를 만드는 �
 
    자세한 내용은 [서버 인증 모드 변경](../database-engine/configure-windows/change-server-authentication-mode.md#SSMSProcedure)합니다.
 
-1. Linux의 SQL Server 2017을 설치 합니다. 자세한 내용은 [SQL Sever 설치](sql-server-linux-setup.md)합니다. 사용 하도록 설정 `hadr` mssql 구성이 통해
+1. Linux의 SQL Server 2017을 설치 합니다. 자세한 내용은 [Install SQL Server](sql-server-linux-setup.md)합니다. 사용 하도록 설정 `hadr` mssql 구성이 통해
 
    사용 하도록 설정 하려면 `hadr` mssql conf 셸 프롬프트에서를 통해 다음 명령을 실행 합니다.
 

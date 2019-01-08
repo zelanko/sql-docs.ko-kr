@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
@@ -17,12 +17,12 @@ ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6a20f68eb253f23871f91d95b8f514a9289895d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 361511051bec6cc33f3062c0c4da13fe8a39329b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147783"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751055"
 ---
 # <a name="view-information-about-an-operator"></a>View Information About an Operator
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 운영자에 대한 정보를 보는 방법에 대해 설명합니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "48147783"
   
     -   [운영자 속성 및 새로운 연산자 &#40;일반 페이지&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [연산자 속성: 새 운영자 &#40;알림 페이지&#41;](operator-properties-new-operator-notifications-page.md)  
+    -   [연산자 속성: New 연산자 &#40;알림 페이지&#41;](operator-properties-new-operator-notifications-page.md)  
   
     -   [운영자 속성&#40;기록 페이지&#41;](operator-properties-history-page.md)  
   
@@ -87,13 +87,13 @@ ms.locfileid: "48147783"
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
     ```  
-    -- reports information about operator François Ajenstat   
+    -- reports information about operator Fran??ois Ajenstat   
     -- This example assumes that the operator exists.  
     USE msdb ;  
     GO  
   
     EXEC dbo.sp_help_operator  
-        @operator_name = N'François Ajenstat' ;  
+        @operator_name = N'Fran??ois Ajenstat' ;  
     GO  
     ```  
   

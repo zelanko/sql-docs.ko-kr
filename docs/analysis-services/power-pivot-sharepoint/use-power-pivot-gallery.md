@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a2eb7bfae0c4fcbc82995c120ef588fdfd4710af
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: 03752c2f1d7259f29f634473efdfe570c55b89ee
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980586"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405398"
 ---
 # <a name="use-power-pivot-gallery"></a>파워 피벗 갤러리 사용
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "38980586"
 >  파워 피벗 갤러리에는 Microsoft Silverlight가 필요합니다.  Microsoft Edge 브라우저는 Silverlight를 지원하지 않습니다.   
 > Edge에서 라이브러리 콘텐츠를 보려면 파워 피벗 갤러리에서 **라이브러리** 탭을 클릭한 다음 문서 라이브러리 보기를 **모든 문서**로 변경합니다.    
 > 기본 보기를 변경하려면 **라이브러리** 탭을 클릭한 다음 보기 수정을 클릭합니다. "이 보기를 기본 보기로 만듭니다"를 클릭한 다음 확인을 클릭하여 기본 보기를 저장합니다.  
->  Edge에서 지원하는 사항에 대한 자세한 내용은 Windows 블로그 [과거로부터의 완벽한 변화, 2부: ActiveX, VBScript의 종말...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)(영문)을 참조하세요.  
+>  Edge에서 지 원하는 사항에 대 한 자세한 내용은 Windows 블로그를 참조 하세요. [과거의 2 부를 중단 합니다. ActiveX, VBScript 종말...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
  필수 조건의 전체 목록은 [Create and Customize Power Pivot Gallery](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)을 참조하세요.  
   
@@ -68,13 +68,13 @@ ms.locfileid: "38980586"
   
 1.  파일을 저장합니다.  
   
-2.  1.  **Excel 2010:** 파일 메뉴에서 **저장 및 보내기**를 클릭합니다.  
+2.  1.  **Excel 2010:** 파일 메뉴에서 클릭 **저장 및 보내기**합니다.  
   
     2.  **SharePoint에 저장**을 클릭합니다.  
   
     3.  Excel 서비스 옵션을 사용하여 게시하려는 개별 시트 또는 매개 변수를 선택하려면 **게시 옵션** 을 클릭합니다. 예를 들어 Excel 서비스 옵션의 매개 변수 탭을 사용하면 게시된 통합 문서에 표시할 슬라이서를 선택할 수 있습니다.  
   
-    1.  **Excel 2013:**  파일 메뉴에서 **저장**을 클릭하세요.  
+    1.  **Excel 2013:**  파일 메뉴에서 클릭 **저장할**합니다.  
   
     2.  Excel 서비스 옵션을 사용하여 게시하려는 개별 시트 또는 매개 변수를 선택하려면 **브라우저 보기 옵션** 을 클릭합니다. 예를 들어 Excel 서비스 옵션의 매개 변수 탭을 사용하면 게시된 통합 문서에 표시할 슬라이서를 선택할 수 있습니다.  
   
@@ -153,16 +153,16 @@ ms.locfileid: "38980586"
 ### <a name="document-type-is-not-supported"></a>문서 유형이 지원되지 않습니다.  
  **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 문서** 콘텐츠 형식은 지원되지 않습니다. 문서 라이브러리에 대해 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 문서** 콘텐츠 형식을 사용하도록 설정하고 해당 형식의 새 문서를 만들려고 하면 다음 중 하나와 비슷한 오류 메시지가 표시됩니다.  
   
--   '새 문서'를 사용하려면 Microsoft Sharepoint Foundation 호환 애플리케이션 및 웹 브라우저가 있어야 합니다. 이 문서 라이브러리에 문서를 추가하려면 '문서 업로드' 단추를 클릭하세요.  
+-   '새 문서' Microsoft Sharepoint Foundation 호환 응용 프로그램 및 웹 브라우저가 필요 합니다. 이 문서 라이브러리에 문서를 추가 하려면 ' 문서 업로드 ' 단추를 클릭 합니다.  
   
--   "인터넷 주소 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx'가 잘못되었습니다. Microsoft Excel에서 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' 파일에 액세스할 수 없습니다." 원인은 다음과 같습니다.  
+-   "인터넷 주소 ' http://[server 이름] / testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' 올바르지 않습니다." " Microsoft Excel 파일에 액세스할 수 없습니다. ' http://[server 이름] / testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx'. 원인은 다음과 같습니다.  
   
  **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 문서** 콘텐츠 형식이 문서 라이브러리에 자동으로 추가되지 않습니다. 지원되지 않는 콘텐츠 형식을 사용하도록 수동으로 설정하지 않으면 이 문제가 발생하지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [파워 피벗 갤러리 삭제](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)   
- [만들기 및 파워 피벗 갤러리 사용자 지정](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
- [일정 데이터 새로 고침 (SharePoint 용 파워 피벗)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
+ [Create and Customize Power Pivot Gallery](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
+ [데이터 새로 고침 예약(SharePoint용 파워 피벗)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
   
   

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: 4cce3c1f06978ba0ff5b9630bdaa5f5aebc0ddf1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: HT
+ms.openlocfilehash: 42af33d78a13961b7a85ae408a3c693edf759e75
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667992"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408870"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>SQL Server에 대 한 SLES 공유 디스크 클러스터 구성
 
@@ -25,7 +25,7 @@ ms.locfileid: "51667992"
 
 클러스터 구성, 리소스 에이전트 옵션, 관리, 모범 사례 및 권장 사항에 대 한 자세한 내용은 참조 하세요. [SUSE Linux Enterprise 높은 가용성 확장 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 다음 종단 간 시나리오를 완료 하려면 두 개의 머신을 두 노드 클러스터와 NFS 공유를 구성 하려면 다른 서버를 배포 해야 합니다. 아래 단계는이 서버를 구성 하는 방법을 간략하게 설명 합니다.
 
@@ -123,7 +123,7 @@ SQL Server 데이터베이스 파일 경로 탑재 하는 NFS 공유 저장소 �
     - [클라이언트 구성](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-clients)
 
     > [!NOTE]
-    > SUSE의 모범 사례 및 항상 사용 가능한 NFS 저장소에 대 한 권장 사항을 따라야 하는 것이 좋습니다: [DRBD 및 Pacemaker를 사용 하 여 항상 사용 가능한 NFS 저장소](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html)합니다.
+    > SUSE의 모범 사례 및 항상 사용 가능한 NFS 저장소에 대 한 권장 사항을 따라야 하는 것이 좋습니다. [DRBD 및 Pacemaker를 사용 하 여 항상 사용 가능한 NFS 저장소](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html)합니다.
 
 2. SQL Server의 새 파일 경로 사용 하 여 성공적으로 시작 하는 유효성을 검사 합니다. 각 노드에서이 작업을 수행 합니다. 이 시점에서 한 번에 하나의 노드만 SQL Server를 실행 해야 합니다. 실행할 수 없습니다 둘 다 동시에는 모두 데이터 파일에 동시에 (을 실수로 두 노드에서 모두 SQL Server를 시작 하지 않도록 클러스터 파일 시스템 리소스를 사용 하 여 다른 노드에 의해 두 번 공유를 탑재 되지 않은 되도록) 액세스를 시도 하기 때문입니다. SQL Server 시작한 상태를 확인 한 다음 SQL Server를 중지 하는 다음 명령을 합니다.
 
@@ -197,7 +197,7 @@ SQL Server 데이터베이스 파일 경로 탑재 하는 NFS 공유 저장소 �
 다음 단계를 SQL Server에 대 한 클러스터 리소스를 구성 하는 방법에 설명 합니다. 사용자 지정 해야 하는 방법은 두 가지 설정이 있습니다.
 
 - **SQL Server 리소스 이름**: 클러스터형된 SQL Server 리소스의 이름입니다. 
-- **시간 제한 값**: 시간 제한 값은 클러스터 된 리소스가 온라인 상태가 되는 동안 대기 하는 시간의 양입니다. SQL Server, SQL Server 상태로 전환 하는 데 예상 되는 시간입니다는 `master` 온라인 데이터베이스입니다. 
+- **시간 제한 값**: 시간 제한 값은 클러스터 된 리소스가 온라인 상태가 되는 동안 대기 하는 기간. SQL Server, SQL Server 상태로 전환 하는 데 예상 되는 시간입니다는 `master` 온라인 데이터베이스입니다. 
 
 사용자 환경에 대 한 다음 스크립트에서 값을 업데이트 합니다. 구성 및 클러스터 된 서비스를 시작 하려면 하나의 노드에서 실행 합니다.
 

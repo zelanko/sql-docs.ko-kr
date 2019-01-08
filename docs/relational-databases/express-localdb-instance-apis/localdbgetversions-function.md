@@ -16,12 +16,12 @@ ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 961517ce1fe0c68b355b12b7749f13bdb9fb0d59
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 54551e68d80b675ba040373c5c6bc8055a2162a2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570838"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415870"
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions 함수
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "51570838"
   
 ## <a name="parameters"></a>매개 변수  
  *pVersionNames*  
- [출력] 사용자의 워크스테이션에서 사용할 수 있는 LocalDB 버전의 이름이 들어 있습니다.  
+ [출력] 사용자의 워크스테이션에서 사용할 수 있는 LocalDB 버전의 이름을 포함 합니다.  
   
  *lpdwNumberOfVersions*  
  [입력/출력] 입력 시 *pVersionNames* 버퍼의 버전에 대한 슬롯 수를 저장합니다.   

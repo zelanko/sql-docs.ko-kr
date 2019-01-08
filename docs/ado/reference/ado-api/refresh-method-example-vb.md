@@ -15,17 +15,17 @@ ms.assetid: f5375fa1-4711-4f7e-9ba4-54c427f71325
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 90fecd4dcb60907137aecdbe4cbfb792e9dc4c23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ecf2064576a9124a34d8ab70873f8848e9bfd6d
+ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801341"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52158632"
 ---
 # <a name="refresh-method-example-vb"></a>Refresh 메서드 예제(VB)
 이 예제에서는 합니다 [새로 고침](../../../ado/reference/ado-api/refresh-method-ado.md) 새로 고침 하는 방법의 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 저장된 프로시저에 대 한 컬렉션 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체.  
   
-```  
+```vb
 'BeginRefreshVB  
 Public Sub Main()  
     On Error GoTo ErrorHandler  
@@ -60,7 +60,7 @@ Public Sub Main()
     cmdByRoyalty.CommandType = adCmdStoredProc  
     cmdByRoyalty.Parameters.Refresh  
   
-    ' Get paramater value, execute the command  
+    ' Get parameter value, execute the command  
     ' and store the results in a recordset  
     strRoyalty = InputBox("Enter royalty:")  
     If strRoyalty = "" Then  
@@ -121,7 +121,7 @@ End Sub
 'EndRefreshVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [명령 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Parameters 컬렉션 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Refresh 메서드(ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

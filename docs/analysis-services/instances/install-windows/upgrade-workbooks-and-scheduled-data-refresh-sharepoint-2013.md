@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c6d2b264ca7f6910e3d652d560b276e4056fdc66
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: 5f0d49d6aeb8231dbffb56b42fe1151ae90d0e41
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018720"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505219"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>통합 문서 업그레이드 및 예약된 데이터 새로 고침(SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  이 항목은 이전 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 환경에서 사용자의 통합 문서 환경과 이 릴리스에 새로 도입된 기능을 이용할 수 있도록 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서를 업그레이드 하는 방법에 대해 설명합니다. 새 기능에 대한 자세한 내용은 [PowerPivot의 새로운 기능](http://go.microsoft.com/fwlink/?LinkID=203917)을 참조하세요.  
+  이 항목은 이전 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 환경에서 사용자의 통합 문서 환경과 이 릴리스에 새로 도입된 기능을 이용할 수 있도록 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서를 업그레이드 하는 방법에 대해 설명합니다. 새 기능에 대 한 자세한 내용은 참조 하세요 [What's New in Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917)합니다.  
   
 > [!WARNING]  
 >  서버에서 자동으로 업그레이드된 통합 문서에 대한 업그레이드를 롤백할 수는 없습니다. 업그레이드된 통합 문서는 업그레이드된 상태로 유지됩니다. 이전 버전을 사용하려면 이전 통합 문서를 SharePoint에 다시 게시하거나 이전 버전을 복원하거나 통합 문서를 재활용합니다. SharePoint에서 문서를 복원하거나 재활용하는 방법은 [휴지통 및 버전 관리를 사용한 콘텐츠 보호 계획](http://go.microsoft.com/fwlink/?LinkId=238669)을 참조하세요.  
@@ -41,24 +41,24 @@ ms.locfileid: "34018720"
 |통합 문서 작성 환경|\<|지원 및 동작|>|  
 |----------------|--------|--------------------------|--------|  
 ||**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2010**|**2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2010**|**2012 SP1 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013**|  
-|**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2010**|모든 기능|**환경:** 사용자가 브라우저에서 통합 문서와 상호 작용하고 이를 다른 솔루션의 데이터 원본으로 사용할 수 있습니다.<br /><br /> **업그레이드:** SharePoint 팜에서 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 시스템 서비스에 대해 자동 업그레이드가 사용되는 경우 통합 문서가 문서 라이브러리에서 자동으로 업그레이드됩니다.<br /><br /> **데이터 새로 고침 예약:** 지원되지 않습니다. 통합 문서를 업그레이드해야 합니다.|**환경:** 사용자가 통합 문서와 상호 작용하고 이를 다른 솔루션의 데이터 원본으로 사용할 수 있습니다.<br /><br /> **업그레이드:** 자동 업그레이드를 사용할 수 없습니다. 사용자가 2008 R2 통합 문서를 2012 버전이나 office 2013 버전으로 직접 업그레이드해야 합니다.<br /><br /> **데이터 새로 고침 예약:** 지원되지 않습니다. 통합 문서를 업그레이드해야 합니다.|  
+|**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2010**|모든 기능|**환경:** 사용자가 브라우저에서 통합 문서와 상호 작용하고 이를 다른 솔루션의 데이터 원본으로 사용할 수 있습니다.<br /><br /> **업그레이드:** 통합 문서는 경우 자동으로 업그레이드 문서 라이브러리에 대해 자동 업그레이드가 사용 되는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SharePoint 팜에서 시스템 서비스에<br /><br /> **데이터 새로 고침을 예약 합니다.** 지원되지 않습니다. 통합 문서를 업그레이드해야 합니다.|**환경:** 사용자가 통합 문서와 상호 작용하고 이를 다른 솔루션의 데이터 원본으로 사용할 수 있습니다.<br /><br /> **업그레이드:** 자동 업그레이드를 사용할 수 없습니다. 사용자가 2008 R2 통합 문서를 2012 버전이나 office 2013 버전으로 직접 업그레이드해야 합니다.<br /><br /> **데이터 새로 고침을 예약 합니다.** 지원되지 않습니다. 통합 문서를 업그레이드해야 합니다.|  
 |**Excel용 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**|지원되지 않음|모든 기능|**환경:** 사용자가 브라우저에서 통합 문서와 상호 작용하고 이를 다른 솔루션의 데이터 원본으로 사용할 수 있습니다. 데이터 새로 고침 예약을 사용할 수 있습니다.<br /><br /> **업그레이드:** 자동 업그레이드는 지원되지 않습니다. 사용자가 통합 문서를 Office 2013 버전으로 직접 업그레이드할 수 있습니다.<br /><br /> **데이터 새로고침 예약:** 을 지원합니다.|  
 |**Excel 2013**|지원되지 않음|지원되지 않음|모든 기능|  
   
 ##  <a name="bkmk_to_2012sp1_from_2008r2"></a> SQL Server 2008 R2 통합 문서에서 2012 서비스 팩 1(SP1) 통합 문서로 업그레이드  
  이 섹션에서는 SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2010 통합 문서에서 SQL Server 2012 SP1 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2013 통합 문서로 업그레이드에 대해 설명합니다.  
   
- **동작 변경:** SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서는 SQL Server 2012 SP1 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013에서 사용할 경우 자동으로 업그레이드되지 않습니다. 따라서 예약된 데이터 새로 고침이 SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서에 대해 작동하지 않습니다.  
+ **동작 변경 내용:** SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서 자동 업그레이드 되지 SQL Server 2012 SP1에서 사용할 때 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SharePoint 2013 용입니다. 따라서 예약된 데이터 새로 고침이 SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서에 대해 작동하지 않습니다.  
   
  2008 R2 통합 문서는 SharePoint 2013용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 에서 열리지만 예약된 데이터 새로 고침은 작동하지 않습니다. 새로 고침 기록을 검토하면 다음과 유사한 오류 메시지가 표시됩니다.  
   
- "통합 문서에 지원되지 않는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 모델이 포함되어 있습니다. 통합 문서에서 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 모델은 SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2010 형식으로 되어 있습니다. 지원되는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 모델은 다음과 같습니다.  
+ "통합 문서에는 지원 되지 않는 포함 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 모델입니다. 통합 문서에서 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 모델은 SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2010 형식으로 되어 있습니다. 지원되는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 모델은 다음과 같습니다.  
   
 -   SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2010  
   
 -   SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 2013  
   
- **통합 문서를 업그레이드하는 방법:** 통합 문서를 2012 통합 문서로 업그레이드할 때까지 예약된 데이터 새로 고침이 작동하지 않습니다. 통합 문서와 통합 문서에 포함된 모델을 업그레이드하려면 다음 중 하나를 수행하세요.  
+ **통합 문서 업그레이드 방법:** 통합 문서를 2012 통합 문서로 업그레이드할 때까지 예약된 데이터 새로 고침이 작동하지 않습니다. 통합 문서와 통합 문서에 포함된 모델을 업그레이드하려면 다음 중 하나를 수행하세요.  
   
 -   통합 문서를 다운로드하고 SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 추가 기능이 설치된 Microsoft Excel 2010에서 통합 문서를 엽니다.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "34018720"
   
  통합 문서를 업그레이드하면 이전 버전의 통합 문서에서 예약한 데이터 새로 고침을 시도할 때 발생하는 다음 오류를 해결할 수 있습니다.  
   
- “이전 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 버전을 사용하여 작성된 통합 문서에 대해서는 새로 고침 작업을 사용할 수 없습니다.” 오류가 해결됩니다.  
+ "새로 고침 작업의 이전 버전을 사용 하 여 만든 통합 문서에 대 한 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 를 사용할 수 없습니다."  
   
  **통합 문서 업그레이드 방법**  
   
@@ -98,7 +98,7 @@ ms.locfileid: "34018720"
   
  통합 문서를 업그레이드하면 이전 버전의 통합 문서에서 예약한 데이터 새로 고침을 시도할 때 발생하는 다음 오류를 해결할 수 있습니다.  
   
- “이전 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 버전을 사용하여 작성된 통합 문서에 대해서는 새로 고침 작업을 사용할 수 없습니다.” 오류가 해결됩니다.  
+ "새로 고침 작업의 이전 버전을 사용 하 여 만든 통합 문서에 대 한 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 를 사용할 수 없습니다."  
   
  **통합 문서 업그레이드 방법**  
   
@@ -126,7 +126,7 @@ PS C:\Windows\system32> Get-PowerPivotSystemService
  자동 통합 문서 업그레이드를 활성화하려면 다음 명령을 실행합니다.  
   
 ```  
-PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefresh:$true –Confirm:$false  
+PS C:\Windows\system32> Set-PowerPivotSystemService -WorkbookUpgradeOnDataRefresh:$true -Confirm:$false  
 ```  
   
  통합 문서를 업그레이드한 후에 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel 추가 기능에서 예약된 데이터 새로 고침과 새 기능을 사용할 수 있습니다.  
@@ -162,6 +162,6 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
  [SharePoint 2013으로 파워 피벗 마이그레이션](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   
  [SharePoint용 파워 피벗 업그레이드](../../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [Analysis Services의 새로운 기능](../../../analysis-services/what-s-new-in-analysis-services.md)   
- [데이터 새로 고침 기록 보기 &#40;SharePoint 용 Power Pivot&#41;](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
+ [데이터 새로 고침 기록 보기&#40;SharePoint용 파워 피벗&#41;](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
   
   

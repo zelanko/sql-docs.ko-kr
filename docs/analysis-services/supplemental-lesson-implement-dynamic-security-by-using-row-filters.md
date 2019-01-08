@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ed672aedc62c9521fe475589de0a7aa9ac935614
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 715d3b06ed3017a00852f58c618e2ea0b0de24d8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984391"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403348"
 ---
 # <a name="supplemental-lesson---implement-dynamic-security-by-using-row-filters"></a>추가 단원-행 필터를 사용 하 여 동적 보안 구현
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -23,11 +23,11 @@ ms.locfileid: "38984391"
   
 동적 보안을 구현하려면 데이터 원본인 모델에 대해 연결을 만들고 모델 개체와 데이터를 찾아볼 수 있는 사용자의 Windows 사용자 이름이 포함된 테이블을 모델에 추가해야 합니다. 이 자습서를 사용하여 만드는 모델은 Adventure Works Corp.의 컨텍스트에 있지만 이 단원을 완료하려면 자체 도메인의 사용자가 포함된 테이블을 추가해야 합니다. 추가할 사용자 이름의 암호는 필요 없습니다. 사용자 고유의 도메인에서 사용자의 작은 샘플을 사용 하 여 EmployeeSecurity 테이블을 만들려면 붙여넣기 기능을 Excel 스프레드시트에서 직원 데이터를 붙여 넣는 방법 사용할가 있습니다. 실제 시나리오에서 모델에 추가하는 사용자 이름이 포함된 테이블은 일반적으로 실제 데이터베이스의 테이블을 데이터 원본으로 사용합니다(예: 실제 dimEmployee 테이블).  
   
-동적 보안을 구현하려면 두 개의 새 DAX 함수인 [USERNAME 함수(DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f) 및 [LOOKUPVALUE 함수(DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)를 사용합니다. 행 필터 수식에서 적용되는 이 함수는 새 역할에서 정의됩니다. LOOKUPVALUE 함수를 사용 하 여 수식은 EmployeeSecurity 테이블에서 값을 지정 하 고 로그온 한 사용자의 사용자 이름을 지정 하는 USERNAME 함수에 값이이 역할에 속해 있는지를 전달 합니다. 그런 다음 사용자는 역할의 행 필터에 지정된 데이터만 검색할 수 있습니다. 이 시나리오에서는 영업 직원이 자신이 멤버로 속한 영업 지역에 대한 인터넷 매출 데이터만 찾아볼 수 있도록 지정합니다.  
+동적 보안을 구현하기 위해 두 개의 새 DAX 함수인 [USERNAME 함수 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f) 하 고 [LOOKUPVALUE 함수 (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)합니다. 행 필터 수식에서 적용되는 이 함수는 새 역할에서 정의됩니다. LOOKUPVALUE 함수를 사용 하 여 수식은 EmployeeSecurity 테이블에서 값을 지정 하 고 로그온 한 사용자의 사용자 이름을 지정 하는 USERNAME 함수에 값이이 역할에 속해 있는지를 전달 합니다. 사용자 역할의 행 필터에 지정 된 데이터만 탐색할 수 있습니다. 이 시나리오에서는 영업 직원이 자신이 멤버로 속한 영업 지역에 대한 인터넷 매출 데이터만 찾아볼 수 있도록 지정합니다.  
   
 이 추가 단원을 완료하기 위해 일련의 태스크를 완료합니다. 이러한 태스크는 이 Adventure Works 테이블 형식 모델 시나리오에 해당되는 것이며 실제 시나리오에 반드시 적용되는 것은 아닙니다. 각 태스크에는 태스크의 목적을 설명하는 추가 정보가 포함되어 있습니다.  
   
-이 단원에 소요되는 예상 시간: **30분**  
+이 단원에 소요되는 예상 시간: **30 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
 이 추가 단원 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 추가 단원의 태스크를 수행하려면 이전 단원을 모두 완료해야 합니다.  
@@ -115,7 +115,7 @@ FactInternetSales, DimGeography 및 DimSalesTerritory 테이블을 모두 SalesT
 이 태스크에서는 새 사용자 역할을 만듭니다. 이 역할에는 사용자에 게 표시 되는 DimSalesTerritory 테이블의 행을 정의 하는 행 필터를 포함 됩니다. 필터는 DimSalesTerritory와 관련 된 다른 모든 테이블에 일 대 다 관계 방향으로 적용 됩니다. 역할의 멤버인 모든 사용자가 쿼리할 수 없도록 전체 EmployeeSecurity 테이블을 보호 하는 간단한 필터도 적용 됩니다.  
   
 > [!NOTE]  
-> 이 단원에서 만드는 Sales Employees by Territory 역할은 멤버가 자신이 속한 영업 지역에 대한 판매 데이터만 검색(또는 쿼리)할 수 있도록 제한합니다. 추가할 경우 사용자를 멤버로 Sales Employees by Territory 역할에서 만든 역할의 멤버로 존재 [단원 11: 역할 만들기](../analysis-services/lesson-11-create-roles.md), 결합 된 권한 얻게 됩니다. 사용자가 여러 역할의 멤버인 경우 각 역할에 대해 정의된 사용 권한과 행 필터는 누적됩니다. 즉, 사용자는 역할의 조합으로 결정되는 더 큰 사용 권한을 갖게 됩니다.  
+> 이 단원에서 만드는 Sales Employees by Territory 역할은 멤버가 자신이 속한 영업 지역에 대한 판매 데이터만 검색(또는 쿼리)할 수 있도록 제한합니다. 추가할 경우 사용자를 멤버로 Sales Employees by Territory 역할에서 만든 역할의 멤버로 존재 [단원 11: 역할을 만들](../analysis-services/lesson-11-create-roles.md), 결합 된 권한 얻게 됩니다. 사용자가 여러 역할의 멤버인 경우 각 역할에 대해 정의된 사용 권한과 행 필터는 누적됩니다. 즉, 사용자는 역할의 조합으로 결정되는 더 큰 사용 권한을 갖게 됩니다.  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>Sales Employees by Territory 사용자 역할을 만들려면  
   
@@ -131,7 +131,7 @@ FactInternetSales, DimGeography 및 DimSalesTerritory 테이블을 모두 SalesT
   
 5.  **멤버** 탭을 클릭한 다음 **추가**를 클릭합니다.  
   
-6.  에 **사용자 또는 그룹 선택** 대화 상자의 **선택 하는 명명 된 개체를 입력**, EmployeeSecurity 테이블을 만들 때 사용한 첫 번째 예제 사용자 이름을 입력 합니다. **이름 확인** 을 클릭하여 사용자 이름이 올바른지 확인한 다음 **확인**을 클릭합니다.  
+6.  에 **사용자 또는 그룹 선택** 대화 상자의 **선택 하는 명명 된 개체를 입력**, EmployeeSecurity 테이블을 만들 때 사용한 첫 번째 예제 사용자 이름을 입력 합니다. **이름 확인**을 클릭하여 사용자 이름이 올바른지 확인한 다음 **확인**을 클릭합니다.  
   
     EmployeeSecurity 테이블을 만들 때 사용한 다른 예제 사용자 이름을 추가 하는이 단계를 반복 합니다.  
   
@@ -171,7 +171,7 @@ FactInternetSales, DimGeography 및 DimSalesTerritory 테이블을 모두 SalesT
   
 3.  에 **사용자 또는 그룹 선택** 대화 상자의 **선택할 개체 이름 입력**EmployeeSecurity 테이블에 포함 된 사용자 이름 중 하나를 입력 하 고 클릭 **이름 확인**.  
   
-4.  **확인** 을 클릭하여 **사용자 또는 그룹 선택** 대화 상자를 닫은 다음 **확인** 을 클릭하여 **Excel에서 분석** 대화 상자를 닫습니다.  
+4.  **확인**을 클릭하여 **사용자 또는 그룹 선택** 대화 상자를 닫은 다음 **확인**을 클릭하여 **Excel에서 분석** 대화 상자를 닫습니다.  
   
     새 통합 문서와 함께 Excel이 열립니다. 피벗 테이블을 자동으로 만들어집니다. 피벗 테이블 필드 목록에는 대부분의 새 모델에서 사용할 수 있는 데이터 필드가 포함 됩니다.  
   
@@ -186,6 +186,6 @@ FactInternetSales, DimGeography 및 DimSalesTerritory 테이블을 모두 SalesT
     Sales Employees by Territory 사용자 역할에서 Sales Territory 테이블에 정의된 행 필터가 다른 영업 지역에 관련된 모든 데이터에 대한 데이터를 보호하기 때문에 이 사용자는 자신이 속한 지역 이외의 다른 지역에 대한 인터넷 판매 데이터를 검색하거나 쿼리할 수 없습니다.  
   
 ## <a name="see-also"></a>관련 항목  
-[USERNAME 함수 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)  
-[LOOKUPVALUE 함수 (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)  
-[CUSTOMDATA 함수 (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
+[USERNAME 함수(DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)  
+[LOOKUPVALUE 함수(DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)  
+[CUSTOMDATA 함수(DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  

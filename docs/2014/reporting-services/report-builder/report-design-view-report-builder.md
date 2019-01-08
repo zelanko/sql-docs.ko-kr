@@ -22,12 +22,12 @@ ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 4a1e17c424e4447e64d48bebbe25960aec165e5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: b052ccbd1b91ea66f150dc0995eeeb33994a5e53
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225033"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439525"
 ---
 # <a name="report-design-view-report-builder"></a>보고서 디자인 뷰(보고서 작성기)
   보고서 작성기 창은 보고서 리소스를 쉽게 구성하고 필요한 보고서를 신속하게 작성할 수 있도록 디자인되어 있습니다. 창 가운데에는 디자인 화면이 있고 위쪽에는 리본이 있으며 왼쪽, 아래쪽, 오른쪽에는 보고서 데이터, 그룹화 및 속성 창과 보고서 파트 갤러리가 있습니다. 디자인 화면에서 보고서 항목을 추가하고 구성합니다. 리본에는 기존 메뉴 항목이 사용자가 쉽게 찾아서 사용할 수 있는 범주로 구성되어 있습니다. 창에서는 보고서 리소스를 간편하게 추가, 선택 및 구성할 수 있으며 보고서 항목 속성을 변경할 수 있습니다.  
@@ -101,11 +101,11 @@ ms.locfileid: "48225033"
   
  보고서 데이터 창의 항목에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   [기본 제공 Globals 및 Users 참조 &#40;보고서 작성기 및 SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
+-   [기본 제공 Globals 및 Users 참조&#40;보고서 작성기 및 SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
   
 -   [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
--   [이미지 &#40;보고서 작성기 및 SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)  
+-   [이미지&#40;보고서 작성기 및 SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)  
   
 -   [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   
@@ -150,7 +150,7 @@ ms.locfileid: "48225033"
   
   
 ##  <a name="GroupPane"></a> 그룹화 창(보고서 작성기)  
- 그룹은 보고서 데이터를 시각적 계층으로 구성하고 합계를 계산하는 데 사용됩니다. 디자인 화면은 물론 그룹화 창에서도 데이터 영역 내의 행 및 열 그룹을 볼 수 있습니다. 그룹화 창에는 행 그룹과 열 그룹의 두 창이 있습니다. 데이터 영역을 선택하면 해당 데이터 영역 내의 모든 그룹이 계층적 목록으로 그룹화 창에 표시되며, 자식 그룹은 해당 부모 그룹보다 한 수준 아래에 표시됩니다.  
+ 그룹은 보고서 데이터를 시각적 계층으로 구성하고 합계를 계산하는 데 사용됩니다. 디자인 화면은 물론 그룹화 창에서도 데이터 영역 내의 행 및 열 그룹을 볼 수 있습니다. 그룹화 창에는 행 그룹과 열 그룹이라는 두 개의 창이 있습니다. 데이터 영역을 선택하면 해당 데이터 영역 내의 모든 그룹이 계층적 목록으로 그룹화 창에 표시되며, 자식 그룹은 해당 부모 그룹보다 한 수준 아래에 표시됩니다.  
   
  ![중첩 행 및 열 그룹에 대한 그룹화 창](../media/rs-basictablixdesigngroupingpanedefaultview.gif "중첩 행 및 열 그룹에 대한 그룹화 창")  
   

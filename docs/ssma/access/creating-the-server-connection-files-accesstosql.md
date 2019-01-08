@@ -10,12 +10,12 @@ ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c3c31e4c815ac3c52f029ec474e53488b8202c8e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fabc454fe6adc77ec3e9789925e099fb6b0de6b1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664302"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407749"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>서버 연결 파일 (AccessToSQL) 만들기
 서버 정보 수 스크립트 파일의 서버 섹션에서 중 하나를 지정 합니다. 별도 서버 연결 파일에 서버 정보를 지정할 수도 있습니다. 서버 연결 파일에 대 한 명령줄 매개 변수는 `-c <serverconnectionfile>`합니다. 동일한 서버 id가 스크립트와 서버 연결 파일에 있는 스크립트 파일의 서버 정의 간주 됩니다.  

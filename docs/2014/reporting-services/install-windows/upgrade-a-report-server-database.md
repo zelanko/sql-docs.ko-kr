@@ -15,19 +15,19 @@ ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: dde7b2d66e7b2aebb67de799facf9016f3cd48e9
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: b0881bc82edd5a3d7fd8ca726c34cbf99de1b172
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851824"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413010"
 ---
 # <a name="upgrade-a-report-server-database"></a>보고서 서버 데이터베이스 업그레이드
   보고서 서버 데이터베이스는 하나 이상의 보고서 서버 인스턴스를 위한 저장소를 제공합니다. 보고서 서버 데이터베이스 스키마는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 새 릴리스마다 변경될 수 있으므로 데이터베이스 버전과 사용하는 보고서 서버 인스턴스 버전이 일치해야 합니다. 대부분의 경우 보고서 서버 데이터베이스는 사용자가 특별한 동작을 수행하지 않고도 자동으로 업그레이드할 수 있습니다.  
   
- **기본 모드:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드에서는 보고서 서버 데이터베이스가 실제로 기본 이름이 “ReportServer 및 ReportServerTempDB”인 두 개의 데이터베이스로 구성됩니다.  
+ **기본 모드:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드에서는 보고서 서버 데이터베이스가 실제로 기본 이름이 "ReportServer 및 reportservertempdb"인 두 데이터베이스의 구성 됩니다.  
   
- **SharePoint 모드:** 에 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 보고서 서버 데이터베이스는 데이터베이스의 각 인스턴스에 대해 만들어진 컬렉션 실제로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램입니다.  
+ **SharePoint 모드:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 보고서 서버 데이터베이스는 데이터베이스의 각 인스턴스에 대해 만들어진 컬렉션 실제로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램입니다.  
   
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>기본 모드 보고서 서버 데이터베이스를 업그레이드하는 방법  
  다음 목록에서는 보고서 서버 데이터베이스가 업그레이드되는 조건을 보여 줍니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "48851824"
 #### <a name="to-upgrade-a-native-mode-database-with-scripts"></a>스크립트를 사용하여 기본 모드 데이터베이스를 업그레이드하려면  
  WMI 스크립트를 사용하여 보고서 서버 데이터베이스를 업그레이드할 수 있습니다. 자세한 내용은 [GenerateDatabaseUpgradeScript 메서드&#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [데이터베이스 변경 마법사 &#40;SSRS 기본 모드&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   

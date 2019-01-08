@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configdistwizard.distproperties.general.f1
@@ -15,12 +14,12 @@ ms.assetid: ab4120ec-e524-4c0c-8b48-f2f40adb1a3b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 04d0ae695a5851c56944e709dfa562963e54b7e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3bba069bbe22f4d59e80d6958ab67018d6380ae1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087293"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765827"
 ---
 # <a name="distributor-properties-general"></a>배포자 속성, 일반
   **배포자 속성** 의 **일반** 페이지에서 배포 데이터베이스를 추가 및 삭제하고 배포 데이터베이스 속성을 설정할 수 있습니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "48087293"
  **프로필 기본값**  
  **에이전트 프로필** 대화 상자의 복제 에이전트 프로필에 액세스하려면 클릭합니다. 프로필에 대한 자세한 내용은 [Replication Agent Profiles](agents/replication-agent-profiles.md)을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [배포 구성](configure-distribution.md)   
  [배포자 및 게시자 속성 보기 및 수정](view-and-modify-distributor-and-publisher-properties.md)  
   

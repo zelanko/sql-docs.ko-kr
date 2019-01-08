@@ -11,12 +11,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bc5b6d6738523d359c72b2e294fe1225004ca388
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: bf7824140a6072e58a9f84bc47943d7025aed7a8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059833"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505459"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 데이터 경고
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 데이터 경고는 사용자가 관심을 가지고 있거나 사용자에게 중요한 보고서 데이터에 대한 정보를 적절한 시간에 받아 볼 수 있게 해주는 데이터 기반의 경고 솔루션입니다. 데이터 경고를 사용하면 정보를 자동으로 받아 볼 수 있으므로 더 이상 정보를 직접 찾을 필요가 없습니다.  
@@ -30,11 +30,11 @@ ms.locfileid: "48059833"
 ##  <a name="AlertingWF"></a> 데이터 경고 아키텍처 및 워크플로  
  다음은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 데이터 경고의 주요 영역을 요약한 것입니다.  
   
--   **데이터 경고 정의 및 경고 정의 저장**- 사용자가 보고서를 실행하고, 흥미로운 데이터 값을 식별하는 규칙을 만들고, 데이터 경고 메시지를 보내는 되풀이 패턴을 정의하고, 경고 메시지의 받는 사람을 지정합니다.  
+-   **데이터 경고 정의 및 경고 정의 저장** - 사용자가 보고서를 실행하고, 흥미로운 데이터 값을 식별하는 규칙을 만들고, 데이터 경고 메시지를 보내기 위한 되풀이 패턴을 정의하고, 경고 메시지를 받는 사람을 지정합니다.  
   
--   **데이터 경고 정의 실행**- 경고 서비스에서 예약된 시간에 경고 정의를 처리하고, 보고서 데이터를 검색하고, 경고 정의의 규칙을 기반으로 데이터 경고 인스턴스를 만듭니다.  
+-   **데이터 경고 정의 실행** - 경고 서비스에서 예약된 시간에 경고 정의를 처리하고, 보고서 데이터를 검색하고, 경고 정의의 규칙에 따라 데이터 경고 인스턴스를 만듭니다.  
   
--   **받는 사람에게 데이터 경고 메시지 배달**- 경고 서비스에서 경고 인스턴스를 만들고 받는 사람에게 전자 메일로 경고 메시지를 보냅니다.  
+-   **받는 사람에게 데이터 경고 메시지 배달** - 경고 서비스에서 경고 인스턴스를 만들고 받는 사람에게 이메일로 경고 메시지를 보냅니다.  
   
  또한 데이터 경고 소유자는 자신의 데이터 경고에 대한 정보를 확인하고 해당 데이터 경고 정의를 삭제 및 편집할 수 있습니다. 경고에는 한 명의 소유자(경고를 만든 사용자)가 있습니다.  
   
@@ -187,7 +187,7 @@ ms.locfileid: "48059833"
   
  `<IsAlertingService>True</IsAlertingService>`  
   
- `…`  
+ `...`  
   
  `</Service>`  
   
@@ -196,9 +196,9 @@ ms.locfileid: "48059833"
 ##  <a name="Permissions"></a> 데이터 경고에 대한 사용 권한  
  보고서에 대해 데이터 경고를 만들려면 SharePoint 사이트에서 보고서를 실행하고 경고를 만들 수 있는 권한이 있어야 합니다. 보고서 사용 권한에 대한 자세한 내용은 다음 항목을 참조하세요.  
   
--   [보고서에서 데이터 피드 생성 &#40;보고서 작성기 및 SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
+-   [보고서에서 데이터 피드 생성&#40;보고서 작성기 및 SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)  
   
--   [SharePoint 사이트의 보고서 서버 항목에 대 한 권한 설정 &#40;Reporting Services sharepoint에서 통합 모드&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+-   [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 데이터 경고에서는 정보 근로자 및 경고 관리자의 두 가지 권한 수준이 지원됩니다. 다음 표에서는 관련된 SharePoint 사용 권한 및 사용자 태스크가 나열됩니다.  
   
@@ -222,7 +222,7 @@ ms.locfileid: "48059833"
 ### <a name="logs"></a>로그  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 데이터 경고 정의를 처리할 때 실행되는 보고서, 생성되는 데이터 경고 인스턴스 등에 대한 정보를 얻을 수 있는 많은 로그를 제공합니다. 경고 실행 로그, 보고서 서버 실행 로그, 보고서 서버 추적 로그라는 세 로그가 특히 유용합니다.  
   
- 다른 방법은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 로그를 참조 하세요 [Reporting Services 로그 파일 및 소스](report-server/reporting-services-log-files-and-sources.md)합니다.  
+ 다른 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 로그에 대한 자세한 내용은 [Reporting Services 로그 파일 및 소스](report-server/reporting-services-log-files-and-sources.md)를 참조하세요.  
   
 #### <a name="alerting-execution-log"></a>경고 실행 로그  
  경고 런타임 서비스는 경고 데이터베이스의 ExecutionLogView 테이블에 항목을 작성합니다. 테이블을 쿼리하거나 다음 저장 프로시저를 실행하여 경고 데이터베이스에 저장된 데이터 경고에 대한 보다 다양한 진단 정보를 얻을 수 있습니다.  
@@ -277,13 +277,13 @@ ms.locfileid: "48059833"
 ##  <a name="UserInterface"></a> 데이터 경고 사용자 인터페이스  
  데이터 경고에는 경고 관리를 위한 SharePoint 페이지와 데이터 경고 정의를 만들고 편집하기 위한 디자이너가 제공됩니다.  
   
--   **데이터 경고 디자이너** 에서는 데이터 경고 정의를 만들거나 편집합니다. 자세한 내용은 [데이터 경고 디자이너](../../2014/reporting-services/data-alert-designer.md)를 [데이터 경고 디자이너에서 데이터 경고 만들기](create-a-data-alert-in-data-alert-designer.md) 하 고 [경고 디자이너에서 데이터 경고 편집](edit-a-data-alert-in-alert-designer.md)합니다.  
+-   **데이터 경고 디자이너** 에서는 데이터 경고 정의를 만들거나 편집합니다. 자세한 내용은 [데이터 경고 디자이너](../../2014/reporting-services/data-alert-designer.md), [데이터 경고 디자이너에서 데이터 경고 만들기](create-a-data-alert-in-data-alert-designer.md) 및 [경고 디자이너에서 데이터 경고 편집](edit-a-data-alert-in-alert-designer.md)을 참조하세요.  
   
 -   **데이터 경고 관리자** 에서는 데이터 경고 목록을 보고, 경고를 삭제하고, 경고를 열어서 편집합니다. 데이터 경고 관리자는 두 가지 버전으로 제공됩니다. 하나는 자신이 만든 경고를 관리할 수 있는 사용자용 버전이고 다른 버전은 사이트 사용자에게 속하는 경고를 관리할 수 있는 관리자용 버전입니다.  
   
-     사용자가 만든 데이터 경고를 관리 하는 방법에 대 한 자세한 내용은 참조 하세요. [SharePoint 사용자 용 데이터 경고 관리자](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md) 하 고 [데이터 경고 관리자에서 내 데이터 경고 관리](manage-my-data-alerts-in-data-alert-manager.md)합니다.  
+     직접 만든 데이터 경고 관리에 대한 자세한 내용은 [SharePoint 사용자용 데이터 경고 관리자](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md) 및 [데이터 경고 관리자에서 내 데이터 경고 관리](manage-my-data-alerts-in-data-alert-manager.md)를 참조하세요.  
   
-     사이트의 모든 데이터 경고를 관리 하는 방법에 대 한 자세한 내용은 참조 하세요. [경고 관리자를 위한 데이터 경고 관리자](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) 하 고 [데이터 경고 관리자에서 SharePoint 사이트의 모든 데이터 경고 관리](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)합니다.  
+     사이트의 모든 데이터 경고 관리에 대한 자세한 내용은 [경고 담당자를 위한 데이터 경고 관리자](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) 및 [데이터 경고 관리자에서 SharePoint 사이트의 모든 데이터 경고 관리](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)를 참조하세요.  
   
 -   **구독 및 데이터 경고 프로비전** 에서는 Reporting Services가 데이터 경고를 위해 SQL Server 에이전트를 사용하고 SQL Server 에이전트에 대한 액세스를 허용하는 스크립트를 다운로드할 수 있는지 알아봅니다. 자세한 내용은 [SSRS 서비스 애플리케이션에 대한 구독 및 경고 프로비전](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.  
   
@@ -300,7 +300,7 @@ ms.locfileid: "48059833"
   
 ##  <a name="HowTo"></a> 관련 작업  
   
--   [SharePoint 라이브러리에 보고서 저장 &#40;보고서 작성기&#41;](report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)  
+-   [SharePoint 라이브러리에 보고서 저장&#40;보고서 작성기&#41;](report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)  
   
 -   [데이터 경고 디자이너에서 데이터 경고 만들기](create-a-data-alert-in-data-alert-designer.md)  
   
@@ -314,7 +314,7 @@ ms.locfileid: "48059833"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 경고 디자이너](../../2014/reporting-services/data-alert-designer.md)   
- [데이터 경고 관리자 용 경고 관리자](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+ [경고 담당자를 위한 데이터 경고 관리자](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [SharePoint 사용자용 데이터 경고 관리자](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 67a6c074b6b2b65ef264118bd367e55920b166c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b49b24db5dfa3c9b522247024e0cbb8dbd1a81d2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114053"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411820"
 ---
 # <a name="view-plan-guide-properties"></a>계획 지침 속성 보기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 다음을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 계획 지침의 속성을 확인할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]  
@@ -96,7 +96,7 @@ ms.locfileid: "48114053"
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
     ```  
-    -- If a plan guide named “Guide1” already exists in the AdventureWorks2012 database, delete it.  
+    -- If a plan guide named "Guide1" already exists in the AdventureWorks2012 database, delete it.  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID(N'Guide1') IS NOT NULL  
@@ -124,7 +124,7 @@ ms.locfileid: "48114053"
        hints,  
        is_disabled  
     FROM sys.plan_guides  
-    WHERE name = N’Guide1’;  
+    WHERE name = N'Guide1';  
     GO  
     ```  
   

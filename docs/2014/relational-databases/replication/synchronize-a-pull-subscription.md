@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - pull subscriptions [SQL Server replication], synchronizing
@@ -15,12 +14,12 @@ ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 41374e742c31574f3504c20104f0a7a3775d77cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: d64d1d589d00222c7c48b4a5516dba8bd1185406
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213023"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752645"
 ---
 # <a name="synchronize-a-pull-subscription"></a>끌어오기 구독 동기화
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]복제 에이전트 [또는 RMO(복제 관리 개체)를 사용하여](agents/replication-agents-overview.md)에서 끌어오기 구독을 동기화하는 방법에 대해 설명합니다.  
@@ -164,7 +163,7 @@ ms.locfileid: "48213023"
   
     -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>에 대해 1단계에서 만든 연결  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 나머지 구독 속성을 얻습니다. 이 메서드가 반환 하는 경우 `false`, 구독이 있는지 확인 합니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 나머지 구독 속성을 얻습니다. 이 메서드가 `false`를 반환하는 경우 구독이 있는지 확인합니다.  
   
 4.  다음 방법 중 하나로 구독자에서 배포 에이전트를 시작합니다.  
   
@@ -191,7 +190,7 @@ ms.locfileid: "48213023"
   
     -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>에 대해 1단계에서 만든 연결  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 나머지 구독 속성을 얻습니다. 이 메서드가 반환 하는 경우 `false`, 구독이 있는지 확인 합니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 나머지 구독 속성을 얻습니다. 이 메서드가 `false`를 반환하는 경우 구독이 있는지 확인합니다.  
   
 4.  다음 방법 중 하나로 구독자에서 병합 에이전트를 시작합니다.  
   

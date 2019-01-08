@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic trace start
@@ -15,12 +14,12 @@ ms.assetid: d74b848d-e796-49af-a8c5-dd69230f3a78
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4a7c3df6f07ba224365f8198196f4c0cdf818dcd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: facde89ad6b476fa01b34badce10dd3cae52ecac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100073"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753725"
 ---
 # <a name="start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler"></a>서버 연결 후 자동으로 추적 시작(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]인스턴스에 연결한 후 추적을 자동으로 시작하는 방법에 대해 설명합니다.  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - multiserver queries
@@ -17,12 +17,12 @@ ms.assetid: 427911a7-57d4-4542-8846-47c3267a5d9c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 62a954706d2e96cc83214df8c532994776b1be3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f47eec543c21e74565d750035d20fbcee9baa82e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205313"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783835"
 ---
 # <a name="administer-multiple-servers-using-central-management-servers"></a>중앙 관리 서버를 사용하여 여러 서버 관리
   중앙 관리 서버를 지정하고 서버 그룹을 만들어 여러 서버를 관리할 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48205313"
 ### <a name="related-tasks"></a>관련 작업  
  중앙 관리 서버 및 서버 그룹을 만들려면 **의** 등록된 서버 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]창을 사용합니다. 중앙 관리 서버는 자신이 유지 관리하는 그룹의 멤버가 될 수 없습니다. 중앙 관리 서버 및 서버 그룹을 만드는 방법은 [중앙 관리 서버 및 서버 그룹 만들기&#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [정책 기반 관리를 사용하여 서버 관리](policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

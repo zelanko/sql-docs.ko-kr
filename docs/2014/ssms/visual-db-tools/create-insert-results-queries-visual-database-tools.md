@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
@@ -16,12 +16,12 @@ ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 68197c2fa00cd6853e719a1304be5863144ec9af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ebffc2246f0940c4643af2267086e727882a0633
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068565"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763115"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>결과 삽입 쿼리 만들기(Visual Database Tools)
   결과 삽입 쿼리를 사용하여 테이블 내에서 또는 한 테이블에서 다른 테이블로 행을 복사할 수 있습니다. 예를 들어 `titles` 테이블에서 결과 삽입 쿼리를 사용하여 한 출판사의 모든 도서 제목에 대한 정보를 두 번째 테이블로 복사하고 이 테이블을 해당 출판사에서 사용하도록 만들 수 있습니다. 결과 삽입 쿼리는 테이블 만들기 쿼리와 비슷하지만 행을 기존 테이블에 복사한다는 점에서 차이가 있습니다.  

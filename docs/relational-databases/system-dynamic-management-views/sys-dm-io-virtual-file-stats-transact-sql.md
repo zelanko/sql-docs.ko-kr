@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d55d63b9cfbf501750522f3f5d0ca68757ae1ab3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc6511c6a0999dfd366c87fcfa18630614215efa
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741861"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407300"
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  *database_id* | NULL
 
- **적용 대상:** SQL Server(2008부터), Azure SQL Database
+ **적용 대상:** SQL Server (2008부터), Azure SQL Database
 
  데이터베이스의 ID입니다. *database_id* 은 int 이며 기본값은 없습니다. 올바른 입력은 데이터베이스의 ID 번호 또는 NULL입니다. NULL을 지정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 데이터베이스가 반환됩니다.  
   
@@ -66,7 +66,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 *file_id* | NULL
 
-**적용 대상:** SQL Server(2008부터), Azure SQL Database
+**적용 대상:** SQL Server (2008부터), Azure SQL Database
  
 파일의 ID입니다. *file_id* 은 int 이며 기본값은 없습니다. 올바른 입력은 파일의 ID 번호 또는 NULL입니다. NULL을 지정하면 데이터베이스의 모든 파일이 반환됩니다.  
   
@@ -101,7 +101,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
 ### <a name="a-return-statistics-for-a-log-file"></a>1. 로그 파일에 대 한 통계를 반환 합니다.
 
-**적용 대상:** (2008부터 시작) 하는 SQL Server, Azure SQL Database
+**적용 대상:** SQL Server (2008부터), Azure SQL Database
 
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 로그 파일에 대한 통계를 반환합니다.  
   
@@ -112,11 +112,11 @@ GO
   
 ### <a name="b-return-statistics-for-file-in-tempdb"></a>2. Tempdb에서 파일에 대 한 통계를 반환 합니다.
 
-**적용 대상:** Azure SQL Data Warehouse
+**적용 대상:** Azure SQL 데이터 웨어하우스
 
 ```sql
 SELECT * FROM sys.dm_pdw_nodes_io_virtual_file_stats 
-WHERE database_name = ‘tempdb’ AND file_id = 2;
+WHERE database_name = 'tempdb' AND file_id = 2;
 
 ```
 

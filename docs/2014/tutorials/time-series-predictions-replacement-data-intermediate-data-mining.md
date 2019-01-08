@@ -11,18 +11,18 @@ ms.assetid: a23a6e1d-1d49-41ea-8314-925dc8e4df5e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 815b50c8d687c1df76b9dc5de4b1fbe34f15f233
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b7c23bec5925dbc33d2db7a547daf02f42a6cd7
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120285"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419044"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>대체 데이터를 사용한 시계열 예측(중급 데이터 마이닝 자습서)
   이 태스크에서는 전 세계 판매 데이터를 기준으로 새 모델을 작성합니다. 그런 다음 개별 지역 중 한 곳에 전 세계 판매 모델을 적용하는 예측 쿼리를 만듭니다.  
   
 ## <a name="building-a-general-model"></a>일반 모델 작성  
- 원래 마이닝 모델의 결과 분석에서는 특정 지역 간 및 제품 라인 간에 큰 차이를 보였음을 기억하십시오. 예를 들어 북미 지역에서는 M200 모델의 판매량이 높았던 반면 T1000 모델의 판매량은 그다지 높지 않았습니다. 그러나 일부 계열에는 그리 많지 않은 데이터가 포함되어 있었고 데이터마다 다른 시간에 시작되었다는 점 때문에 분석이 복잡해집니다. 일부 데이터는 누락되기도 했습니다.  
+ 원래 마이닝 모델의 결과 분석에서는 특정 지역 간 및 제품 라인 간에 큰 차이를 보였음을 기억하십시오. 예를 들어 북미 지역에서는 M200 모델의 판매량이 높았던 반면 T1000 모델의 판매량은 그다지 높지 않았습니다. 그러나 많은 데이터 또는 시간상에서 다른 지점에서 시작 하는 데이터를 일부 계열에 않은 팩트에 분석 복잡 합니다. 일부 데이터는 누락되기도 했습니다.  
   
  ![M200 및 T1000 수량을 예측 하는 계열](../../2014/tutorials/media/6series-defaultforecasting.gif "M200 및 T1000 수량을 예측 하는 계열")  
   
@@ -53,9 +53,9 @@ ms.locfileid: "48120285"
   
     -   계열 키 및 시간 키에 대해 다음 열을 선택합니다.  
   
-         시간 키: ReportingDate  
+         Key time: ReportingDate  
   
-         키: 지역  
+         Key: Region  
   
     -   `Input` 및 `Predict`에 대해 다음 열을 선택합니다.  
   
@@ -163,6 +163,6 @@ AND
   
 ## <a name="see-also"></a>관련 항목  
  [시계열 모델 쿼리 예제](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
+ [PredictTimeSeries&#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
   
   

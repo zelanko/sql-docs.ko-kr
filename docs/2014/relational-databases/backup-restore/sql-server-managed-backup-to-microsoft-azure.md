@@ -10,12 +10,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: af11bb2283db0561c176fb543ff21c3c04f676d3
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: b4071bee5e13f415be90328bb7ff0b55ff91087c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100254"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416397"
 ---
 # <a name="sql-server-managed--backup-to-windows-azure"></a>Windows Azure에 대한 SQL Server 관리되는 백업
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]은 Windows Azure BLOB 저장소 서비스에 대한 SQL Server 백업을 관리하고 자동화합니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에서 사용하는 백업 전략은 데이터베이스의 트랜잭션 작업과 보존 기간을 기반으로 합니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 지정한 보존 기간 동안 지정 시간 복원을 지원합니다.   
@@ -53,12 +53,12 @@ ms.locfileid: "50100254"
 ###  <a name="Security"></a> Permissions  
  Transact-SQL은 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 구성 및 모니터링하는 데 사용되는 주 인터페이스입니다. 일반적으로 구성 하려면 저장 프로시저 **db_backupoperator** 데이터베이스 역할과 **ALTER ANY CREDENTIAL** 권한 및 `EXECUTE` 에 대 한 권한을 **sp_delete_ backuphistory** 저장된 프로시저가 필요 합니다.  일반적으로 정보를 검토하는 데 사용되는 저장 프로시저 및 함수는 저장 프로시저에 대한 `Execute` 사용 권한과 함수에 대한 `Select` 사용 권한이 각각 필요합니다.  
   
-###  <a name="Prereqs"></a> 사전 요구 사항  
+###  <a name="Prereqs"></a> 필수 구성 요소  
  **사전 요구 사항:**  
   
  **Windows Azure Storage 서비스** 에서 사용 하는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 백업 파일을 저장 합니다.    개념, 구조 및 Windows Azure 저장소 계정을 만들기 위한 요구 사항에 자세히 설명 되어는 [Introduction to Key Components and Concepts](sql-server-backup-to-url.md#intorkeyconcepts) 섹션을 **SQL Server Backup to URL** 항목입니다.  
   
- **SQL 자격 증명** Windows Azure 저장소 계정에 인증 하는 데 필요한 정보를 저장 하는 데 사용 됩니다. SQL 자격 증명 개체는 계정 이름 및 액세스 키 정보를 저장합니다. 자세한 내용은 참조 하세요. 합니다 [Introduction to Key Components and Concepts](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 섹션을 **SQL Server Backup to URL** 항목입니다. 연습은 Windows Azure Storage 인증 정보를 저장 하는 SQL 자격 증명을 만드는 방법에 대해서 [단원 2: Create a SQL Server Credential](../../tutorials/lesson-2-create-a-sql-server-credential.md)합니다.  
+ **SQL 자격 증명** Windows Azure 저장소 계정에 인증 하는 데 필요한 정보를 저장 하는 데 사용 됩니다. SQL 자격 증명 개체는 계정 이름 및 액세스 키 정보를 저장합니다. 자세한 내용은 참조 하세요. 합니다 [Introduction to Key Components and Concepts](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 섹션을 **SQL Server Backup to URL** 항목입니다. Windows Azure Storage 인증 정보를 저장 하는 SQL 자격 증명을 만드는 방법에 대 한 연습은 참조 [단원 2: SQL Server 자격 증명 만들기](../../tutorials/lesson-2-create-a-sql-server-credential.md)합니다.  
   
 ###  <a name="Concepts_Components"></a> 개념 및 주요 구성 요소  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]은 백업 작업을 관리하는 기능입니다. 메타 데이터를 저장 합니다 **msdb** 전체 데이터베이스 및 트랜잭션 쓸 시스템 작업을 사용 하 여 데이터베이스 로그 백업입니다.  
@@ -95,7 +95,7 @@ ms.locfileid: "50100254"
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]은 가용성 데이터베이스를 제외한 모든 데이터베이스의 SQL Server 인스턴스 이름을 사용하여 Windows Azure 저장소 컨테이너의 이름을 지정합니다.  가용성 데이터베이스의 경우 가용성 그룹 GUID가 Windows Azure 저장소 컨테이너의 이름을 지정하는 데 사용됩니다.  
   
- 비 가용성 데이터베이스에 대 한 백업 파일은 다음 규칙을 사용 하 여 명명 된: 이름은 GUID 데이터베이스 데이터베이스 이름의 첫 40 자를 사용 하 여 만들어집니다 없이 '-', 타임 스탬프와 합니다. 밑줄 문자는 구분 기호로 세그먼트 사이에 삽입됩니다. **.bak** 파일 확장명은 전체 백업에 사용되고 **.log** 파일 확장명은 로그 백업에 사용됩니다. 가용성 그룹 데이터베이스의 경우 위에서 설명한 파일 명명 규칙 외에도 가용성 그룹 데이터베이스 GUID가 40자의 데이터베이스 이름 뒤에 추가됩니다. 가용성 그룹 데이터베이스 GUID 값은 sys.databases의 group_database_id 값입니다.  
+ 비가용성 데이터베이스의 백업 파일은 다음 규칙을 사용하여 이름이 지정됩니다. 이름은 데이터베이스 GUID 데이터베이스 이름의 첫 40 자를 사용 하 여 만들어집니다 없이 '-', 타임 스탬프와 합니다. 밑줄 문자는 구분 기호로 세그먼트 사이에 삽입됩니다. **.bak** 파일 확장명은 전체 백업에 사용되고 **.log** 파일 확장명은 로그 백업에 사용됩니다. 가용성 그룹 데이터베이스의 경우 위에서 설명한 파일 명명 규칙 외에도 가용성 그룹 데이터베이스 GUID가 40자의 데이터베이스 이름 뒤에 추가됩니다. 가용성 그룹 데이터베이스 GUID 값은 sys.databases의 group_database_id 값입니다.  
   
  **전체 데이터베이스 백업:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 에이전트는 다음 중 하나라도 해당 하는 경우 전체 데이터베이스 백업을 예약 합니다.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "50100254"
 -   트랜잭션 로그 백업이 전체 데이터베이스 백업보다 뒤처지는 경우. 목표는 로그 체인이 전체 백업을 앞서도록 유지하는 것입니다.  
   
 #### <a name="retention-period-settings"></a>보존 기간 설정  
- 백업을 사용하도록 설정할 때는 일 단위로 보존 기간을 설정해야 합니다. 최소 1일, 최대 30일입니다.  
+ 백업을 사용하도록 설정할 때는 일 단위로 보존 기간을 설정해야 합니다. 최소값은 1일이고 최대값은 30일입니다.  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 지정한 시간 내 지정 시간에 복구하는 기능을 평가하여 보존해야 할 백업 파일과 삭제할 백업 파일을 결정합니다. 백업의 backup_finish_date는 보존 기간 설정에서 지정한 시간을 확인하고 일치시키는 데 사용됩니다.  
   
@@ -132,35 +132,35 @@ ms.locfileid: "50100254"
 ###  <a name="support_limits"></a> 지원 제한 사항  
  다음은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에만 적용되는 제한 사항입니다.  
   
--   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 에이전트 데이터베이스 백업만 지원 합니다: 전체 및 로그 백업 합니다.  파일 백업 자동화는 지원되지 않습니다.  
+-   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 에이전트는 전체 백업과 로그 백업 등 데이터베이스 백업만 지원합니다.  파일 백업 자동화는 지원되지 않습니다.  
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 작업은 현재 Transact-SQL을 통해 지원됩니다. 모니터링 및 문제 해결은 확장 이벤트를 사용하여 수행됩니다. PowerShell 및 SMO 지원은 SQL Server 인스턴스의 보존 기간 기본 설정 및 저장소 구성, 그리고 SQL Server 정책 기반 관리 정책을 기반으로 한 백업 상태 및 전체 상태 모니터링으로 제한됩니다.  
   
 -   시스템 데이터베이스는 지원되지 않습니다.  
   
--   Windows Azure BLOB 저장소 서비스는 유일하게 지원되는 백업 저장소 옵션입니다. 디스크 또는 테이프 백업은 지원되지 않습니다.  
+-   Microsoft Azure Blob Storage service는 유일하게 지원되는 백업 저장소 옵션입니다. 디스크 또는 테이프 백업은 지원되지 않습니다.  
   
 -   현재 Microsoft Azure Storage에서 페이지 BLOB에 허용되는 최대 파일 크기는 1TB입니다. 1TB보다 큰 백업 파일은 실패합니다. 이러한 상황을 방지하려면 데이터베이스 크기가 큰 경우 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 설정하기 전에 압축을 사용하고 백업 파일 크기를 테스트하는 것이 좋습니다. 로컬 디스크에 백업하거나 `BACKUP TO URL` Transact-SQL 문을 사용하여 Windows Azure 저장소에 수동으로 백업하여 테스트할 수 있습니다. 자세한 내용은 [SQL Server Backup to URL](sql-server-backup-to-url.md)을 참조하세요.  
   
--   복구 모델: 전체 또는 대량 로그 모델에만 데이터베이스 설정 지원 됩니다.  단순 복구 모델로 설정된 데이터베이스는 지원되지 않습니다.  
+-   복구 모델: 전체 또는 대량 로그 모델로 설정된 데이터베이스만 지원됩니다.  단순 복구 모델로 설정된 데이터베이스는 지원되지 않습니다.  
   
--   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 구성한 경우 일부 제한 사항이 있을 수 있습니다. 자세한 내용은 [SQL Server Managed Backup to Windows Azure: 상호 운용성 및 공존 성](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)합니다.  
+-   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 구성한 경우 일부 제한 사항이 있을 수 있습니다. 자세한 내용은 참조 하세요. [SQL Server Managed Backup to Windows Azure: 상호 운용성 및 공존 성](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 |||  
 |-|-|  
 |**태스크 설명**|**항목**|  
 |데이터베이스에 대한 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 구성, 인스턴스 수준에서 기본 설정 구성, 인스턴스 또는 데이터베이스 수준에서 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 해제, [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 일시 중지 및 다시 시작 등의 기본 태스크|[Windows Azure에 대한 SQL Server 관리되는 백업 - 보존 및 저장소 설정](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|  
-|**자습서:** 구성 및 모니터링 하는 단계별 지침 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]합니다.|[Microsoft Azure에 대한 SQL Server 관리되는 백업 설정](enable-sql-server-managed-backup-to-microsoft-azure.md)|  
-|**자습서:** 구성 및 모니터링 하는 단계별 지침 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 가용성 그룹의 데이터베이스에 대 한 합니다.|[가용성 그룹의 Microsoft Azure에 대한 SQL Server 관리되는 백업 설정](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)|  
+|**자습서:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 구성하고 모니터링하기 위한 단계별 지침|[Microsoft Azure에 대한 SQL Server 관리되는 백업 설정](enable-sql-server-managed-backup-to-microsoft-azure.md)|  
+|**자습서:** 가용성 그룹의 데이터베이스에 대한 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 구성하고 모니터링하기 위한 단계별 지침|[가용성 그룹의 Microsoft Azure에 대한 SQL Server 관리되는 백업 설정](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)|  
 |[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 모니터링과 관련된 도구, 개념 및 태스크|[Microsoft Azure에 대한 SQL Server 관리되는 백업 모니터링](sql-server-managed-backup-to-microsoft-azure.md)|  
 |[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 문제 해결 도구 및 단계|[Microsoft Azure에 대한 SQL Server 관리되는 백업 문제 해결](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)|  
   
 ## <a name="see-also"></a>관련 항목  
  [Windows Azure Blob Storage Service로 SQL Server 백업 및 복원](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
  [SQL Server Backup to URL](sql-server-backup-to-url.md)   
- [SQL Server Managed Backup to Windows Azure: 상호 운용성 및 공존 성](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)   
+ [Windows Azure에 SQL Server의 관리 되는 백업: 상호 운용성 및 공존 성](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)   
  [Microsoft Azure에 대한 SQL Server 관리되는 백업 문제 해결](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)  
   
   

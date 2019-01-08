@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e0e0ed3aea02ae8a79d89871f6849b1cbf40c9d0
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 0421361cf1718d6ee280269f9da125c148aa3afd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169342"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518269"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Analytics Platform System에 대 한 InfiniBand 네트워크 어댑터를 구성 합니다.
 병렬 데이터 웨어하우스 (PDW)에서 제어 노드에 연결 하려면 클라이언트 비 어플라이언스 서버의 InfiniBand 네트워크 어댑터를 구성 하는 방법을 설명 합니다. 자동으로 활성 InfiniBand 네트워크 로드, 백업 및 다른 프로세스에 연결할 수 있도록 기본 연결을 고가용성을 위해 다음이 지침을 따르세요.  
@@ -42,9 +42,9 @@ InfiniBand 네트워크 어댑터를 구성한 후 클라이언트 프로세스 
   
 예를 들어 PDW 영역 이름을 MyPDW 이며 어플라이언스 이름이 MyAPS, 데이터를 로드 하기 위한 dwloader 서버 사양에 다음 중 하나입니다.  
   
--   `dwloader –S MYPDW-SQLCTL01.MyAPS.pdw.local`  
+-   `dwloader -S MYPDW-SQLCTL01.MyAPS.pdw.local`  
   
--   `dwloader –S MYPDW-SQLCTL01`  
+-   `dwloader -S MYPDW-SQLCTL01`  
   
 ## <a name="BeforeBegin"></a>시작하기 전 주의 사항  
   
@@ -53,7 +53,7 @@ APS 어플라이언스 도메인 계정을 AD01 노드에 로그인 해야 합�
   
 네트워크 어댑터를 구성할 수 있는 권한을 가진 클라이언트 서버에 대 한 Windows 계정이 필요 합니다.  
   
-### <a name="prerequisites"></a>필수 구성 요소  
+### <a name="prerequisites"></a>사전 요구 사항  
 이러한 지침에는 클라이언트 서버 랙을 탑재 했으며 이미 이며 어플라이언스의 InfiniBand 네트워크를 케이블로 연결 가정 합니다. 랙 및 케이블 연결 지침은 참조 하세요 [로드 서버 획득 및 구성](acquire-and-configure-loading-server.md)합니다.  
   
 ### <a name="general-remarks"></a>일반적인 주의 사항  
@@ -61,7 +61,7 @@ SQLCTL01를 사용 하 여 DNS 분석 플랫폼 시스템 제어 노드에 클�
   
 고유한 비즈니스 요구 사항에 고유한 비 어플라이언스 작업 그룹 또는 Windows 도메인에도 클라이언트 서버를 조인할 수 있습니다.  
   
-## <a name="Sec1"></a>1 단계: 기기를 InfiniBand 네트워크 설정을 가져오려면  
+## <a name="Sec1"></a>1 단계: 어플라이언스 InfiniBand 네트워크 설정을 가져오려면  
 *어플라이언스 InfiniBand 네트워크 설정을 가져오려면*  
   
 1.  로그인 어플라이언스에 AD01 노드 appliance_domain\Administrator 계정을 사용 하 여 합니다.  
@@ -96,7 +96,7 @@ SQLCTL01를 사용 하 여 DNS 분석 플랫폼 시스템 제어 노드에 클�
   
     사용 되지 않는 IP 주소를 찾으려면 명령 창을 열고 어플라이언스에 대 한 주소 범위 내의 IP 주소를 ping 해 봅니다. 이 예제에서는 TeamIB2 네트워크의 ip에서는 172.16.18.30입니다. 사용 되지 않는 172.16.18로 시작 하는 IP 주소를 찾습니다. 예를 들어 명령줄에서 "172.16.18.254 ping"를 입력 합니다. Ping 요청 실패할 경우 IP 주소는 사용할 수 있습니다.  
   
-## <a name="Sec2"></a>2 단계: 클라이언트 서버의 InfiniBand 네트워크 어댑터 설정 구성  
+## <a name="Sec2"></a>2 단계: 클라이언트 서버에서 InfiniBand 네트워크 어댑터 설정 구성  
 
 ### <a name="notes"></a>참고  
   
@@ -161,7 +161,7 @@ SQLCTL01를 사용 하 여 DNS 분석 플랫폼 시스템 제어 노드에 클�
   
 1.  네트워크 연결 창에서 Mellanox 어댑터에 대 한 네트워크 슬롯 중 하나를 마우스 오른쪽 단추로 클릭 하 고 속성을 선택 합니다.  
   
-2.  클릭 된 고급... 단추를 선택합니다.  
+2.  Advanced... 단추 클릭 합니다.  
   
 3.  고급 TCP/IP 설정 창에서 추가 이러한 DNS 접미사 (순서 대로) 옵션은 없습니다 회색으로 표시 하는 경우 체크 상자를 호출 다음 DNS 접미사 추가 (순서로 정렬): 어플라이언스 도메인 접미사를 선택 하 고 추가 클릭 하는 중... 어플라이언스 도메인 접미사가 `appliance_domain.local`  
   

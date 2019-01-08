@@ -20,19 +20,19 @@ ms.assetid: 75cc9f52-3b1f-4754-b1e7-ce0dd3323bc9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5c434f47fdf6dcb17cccee5ca69cefe74971560e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fba195d53911264716c73b54ea8c639ca37951e6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594714"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418314"
 ---
 # <a name="sysspflushlog-transact-sql"></a>sys.sp_flush_log(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   현재 데이터베이스의 트랜잭션 로그를 디스크에 플러시하여 이전에 커밋한 지연된 내구성이 있는 트랜잭션이 모두 강화됩니다.  
   
- 성능상의 이점 때문에 지연된 트랜잭션 내구성을 사용하도록 선택하지만 서버 충돌이나 장애 조치(Failover) 시 손실되는 데이터 양에 대한 보장 한도도 필요한 경우 정기적으로 `sys.sp_flush_log`를 실행하십시오. 예를 들어, 손실되는 데이터를 x초 이하로 제한하려는 경우 x초마다 `sp_flush_log`를 실행합니다.  
+ 성능상의 이점 때문에 지연된 트랜잭션 내구성을 사용하도록 선택하지만 서버 충돌이나 장애 조치(Failover) 시 손실되는 데이터 양에 대한 보장 한도도 필요한 경우 정기적으로 `sys.sp_flush_log`를 실행하십시오. 예를 들어 있는지 확인 하려는 경우 잃지 x 보다 더 많은 실행 초 분량의 데이터를 `sp_flush_log` x 초 마다.  
   
  `sys.sp_flush_log`를 실행하면 이전에 커밋한 지연된 내구성이 있는 트랜잭션이 모두 영구적이 됩니다. 개념 항목을 참조 하세요 [트랜잭션 내구성 제어](../../relational-databases/logs/control-transaction-durability.md) 자세한 내용은 합니다.  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [SQL Server], stored procedures
@@ -16,12 +14,12 @@ ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 474fc37eb8325f2ac7d72bfe1c40810fc7dc5b1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7c992f8b33e2eb96b0e6ea7eec1f58beaf8aefd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053673"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767575"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>유니코드 데이터 및 서버 코드 페이지
     
@@ -35,7 +33,7 @@ ms.locfileid: "48053673"
  확장 저장 프로시저 API 응용 프로그램에서 유니코드를 사용하는 경우 이 데이터를 확장 저장 프로시저 API로 전달하기 전에 유니코드 메타데이터 열 이름, 오류 메시지 등을 멀티바이트 데이터로 변환해야 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 확장 저장 프로시저는 설명된 유니코드 변환의 예를 제공합니다. 다음을 참고하십시오.  
+ 다음 확장 저장 프로시저는 설명된 유니코드 변환의 예를 제공합니다. 다음 사항에 유의합니다.  
   
 -   열 데이터는 유니코드 데이터로 전달 됩니다 **srv_describe** 열이 srvnvarchar 설명 되어 있으므로.  
   

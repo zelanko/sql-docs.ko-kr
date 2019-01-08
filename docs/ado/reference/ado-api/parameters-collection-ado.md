@@ -18,12 +18,12 @@ ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28832f7e96ddbb149db5561654d55ef0003551cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dbfff2a8db4405e19eb448e7bd7db5c8ac236f8
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657852"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321799"
 ---
 # <a name="parameters-collection-ado"></a>Parameters 컬렉션(ADO)
 모두 포함 합니다 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 의 개체를 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "47657852"
   
 2.  매개 변수 및 매개 변수를 명시적으로 추가 사용 하 여 저장된 프로시저를 호출할 때 합니다 **매개 변수** 수집과 **추가**, 반환 값/출력 매개 변수는 에추가할것인지**매개 변수** 컬렉션입니다. 반환 값에 먼저 추가 되어야 합니다 **매개 변수** 컬렉션입니다. 사용 하 여 **추가** 에 다른 매개 변수를 추가 합니다 **매개 변수** 정의 순서 대로 컬렉션입니다. 예를 들어 저장된 프로시저 SPWithParam에 두 개의 매개 변수입니다. 첫 번째 매개 변수를 *InParam*입력된 매개 변수 집합이 있으므로 필요 (20)으로 정의 되어 두 번째 매개 변수를 *OutParam*, 출력 매개 변수 집합이 있으므로 필요 (20)으로 정의 합니다. 다음 코드를 사용 하 여 반환 값/출력 매개 변수를 검색할 수 있습니다.  
   
-    ```  
+    ```vb
     ' Open Connection Conn  
     set ccmd = CreateObject("ADODB.Command")  
     ccmd.Activeconnection= Conn  
@@ -55,7 +55,7 @@ ms.locfileid: "47657852"
   
     ccmd.parameters.Append ccmd.CreateParameter(, adInteger, adParamReturnValue, , NULL)   ' return value  
     ccmd.parameters.Append ccmd.CreateParameter("InParam", adVarChar, adParamInput, 20, "hello world")   ' input parameter  
-    ccmd.parameters.Append ccmd.CreateParameter("OutParam", adVarChar, adParamOuput, 20, NULL)   ' output parameter  
+    ccmd.parameters.Append ccmd.CreateParameter("OutParam", adVarChar, adParamOutput, 20, NULL)   ' output parameter  
   
     ccmd.execute()  
   
@@ -66,7 +66,7 @@ ms.locfileid: "47657852"
   
 3.  매개 변수 및 매개 변수를 호출 하 여 구성를 사용 하 여 저장된 프로시저를 호출할 때 합니다 **항목** 메서드는 **매개 변수** 컬렉션, 저장된 프로시저의 반환 값/출력 매개 변수 수 검색할 수는 **매개 변수** 컬렉션입니다. 예를 들어 저장된 프로시저 SPWithParam에 두 개의 매개 변수입니다. 첫 번째 매개 변수를 *InParam*입력된 매개 변수 집합이 있으므로 필요 (20)으로 정의 되어 두 번째 매개 변수를 *OutParam*, 출력 매개 변수 집합이 있으므로 필요 (20)으로 정의 합니다. 다음 코드를 사용 하 여 반환 값/출력 매개 변수를 검색할 수 있습니다.  
   
-    ```  
+    ```vb
     ' Open Connection Conn  
     set ccmd = CreateObject("ADODB.Command")  
     ccmd.Activeconnection= Conn  

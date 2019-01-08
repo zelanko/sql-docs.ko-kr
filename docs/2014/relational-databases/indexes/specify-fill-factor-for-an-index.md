@@ -13,12 +13,12 @@ ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d7fe5ffc867063d745a01ed12024acc536f8f634
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: cb12dbcee56debfd88b4706ad69ac3ac2d04113a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188083"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398816"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>인덱스의 채우기 비율 지정
   이 항목에서는 채우기 비율의 역할에 대해 설명하고 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 인덱스의 채우기 비율 값을 지정하는 방법에 대해 설명합니다.  

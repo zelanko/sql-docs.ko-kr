@@ -13,12 +13,12 @@ ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ba413a15f0d201ecaddadf83e353d28ee3010c50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40a3cf9db1248292d66d2a296c25c53ccfda002d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721951"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408710"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>MySQL 데이터베이스를 SQL Server 스키마에 매핑(MySQLToSQL)
 기본적으로 MySQL 용 SSMA MySQL 스키마의 모든 개체를 마이그레이션하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 스키마에 대 한 명명 된 SQL Azure 데이터베이스. MySQL 스키마 간의 매핑을 사용자 지정할 수는 있지만 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터베이스.  
@@ -69,7 +69,7 @@ MySQL 스키마 및 SQL Server 스키마 간의 매핑을 사용자 지정 하�
 ## <a name="next-steps"></a>다음 단계  
 SQL Server 또는 SQL Azure 개체로 MySQL 개체 변환 분석 하려는 경우 [변환 보고서를 만들](assessing-mysql-databases-for-conversion-mysqltosql.md) 수이 고, 그렇지 [MySQL 데이터베이스 개체 정의 변환](converting-mysql-databases-mysqltosql.md) sql 서버 또는 SQL Azure 스키마  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
 [프로젝트 설정 &#40;변환&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
 [Azure SQL DB에 연결 &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
 [SQL Server-Azure SQL DB로 마이그레이션 MySQL 데이터베이스 &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  

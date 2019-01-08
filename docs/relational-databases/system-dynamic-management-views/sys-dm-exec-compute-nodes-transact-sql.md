@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7dd9c8117248c509ce95e13f5565827633ef8fc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9f82087cc2549871147d0a85d6c36e9d8d211979
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660622"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416854"
 ---
 # <a name="sysdmexeccomputenodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "51660622"
   
  이 DMV를 사용 하 여 자신의 역할, 이름 및 IP 주소를 사용 하 여 확장 클러스터에서 모든 노드의 목록을 참조 하세요.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|노드와 연결 된 고유 숫자 id입니다. 이 보기에 대 한 키입니다.|형식에 관계 없이 확장 클러스터에서 고유 합니다.|  
 |유형|**nvarchar(32)**|노드의 형식입니다.|' 계산 ', 'HEAD'|  

@@ -1,5 +1,5 @@
 ---
-title: Tutorial 프로젝트를 Services 분석의 수정된 된 버전을 사용 하 여 | Microsoft Docs
+title: Tutorial 프로젝트에 서비스 분석의 수정된 된 버전을 사용 하 여 | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 93847b7e6cade7d77774603ba1852c16a5a783b7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: 4d3fb90b8823ff8a8585647bf60b87ed4098bc6e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017700"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401117"
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>단원 4-1-Analysis Services Tutorial 프로젝트의 수정된 된 버전을 사용 하 여
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -25,15 +25,15 @@ ms.locfileid: "34017700"
   
 ## <a name="downloading-and-extracting-the-project-file"></a>프로젝트 파일 다운로드 및 압축 풀기  
   
-1.  이 자습서와 함께 제공되는 샘플 프로젝트를 제공하는 다운로드 페이지로 이동하려면 [여기를 클릭](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services)하세요. 에 포함 된 자습서 프로젝트는 **adventure-works-다차원-자습서-projects.zip** 다운로드 합니다.  
+1.  이 자습서와 함께 제공되는 샘플 프로젝트를 제공하는 다운로드 페이지로 이동하려면 [여기를 클릭](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services)하세요. 에 포함 된 자습서 프로젝트를 **adventure-작동-다차원-자습서-projects.zip** 다운로드 합니다.  
   
-2.  클릭 **adventure-works-다차원-자습서-projects.zip** 이 자습서에 대 한 프로젝트를 포함 하 여 패키지를 다운로드 합니다.  
+2.  클릭 **adventure-작동-다차원-자습서-projects.zip** 이 자습서에 대 한 프로젝트를 포함 하는 패키지를 다운로드 합니다.  
   
     기본적으로 .zip 파일은 Downloads 폴더에 저장됩니다. .zip 파일을 짧은 경로 위치로 이동해야 합니다. 예를 들어 파일을 저장할 C:\Tutorials 폴더를 만듭니다.  그런 다음 .zip 파일에 포함된 파일의 압축을 풉니다. Downloads 폴더에 있는 긴 경로 파일의 압축을 풀면 1단원만 사용할 수 있습니다.  
   
 3.  루트 드라이브 또는 루트 드라이브 근처에 하위 폴더(예: C:\Tutorial)를 만듭니다.  
   
-4.  이동 된 **adventure-works-다차원-자습서-projects.zip** 하위 폴더에는 파일입니다.  
+4.  이동 합니다 **adventure-작동-다차원-자습서-projects.zip** 하위 폴더에는 파일입니다.  
   
 5.  이 파일을 마우스 오른쪽 단추로 클릭하고 **압축 풀기**를 선택합니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34017700"
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>향상된 프로젝트 로드 및 처리  
   
-1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]의 **파일** 메뉴에서 **솔루션 닫기** 를 클릭하여 사용하지 않을 파일을 닫습니다.  
+1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에 **파일** 메뉴에서 클릭 **솔루션 닫기** 사용 하지 않을 파일을 닫아야 합니다.  
   
 2.  **파일** 메뉴에서 **열기**를 가리킨 다음 **프로젝트/솔루션**을 클릭합니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "34017700"
 #### <a name="internet-sales-diagram"></a>Internet Sales 다이어그램  
 **Internet Sales** 다이어그램에는 인터넷을 통해 고객과 직접 이루어지는 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 제품 판매와 관련된 테이블이 있습니다. 다이어그램의 테이블은 1단원에서 **Adventure Works DW 2012** 데이터 원본 뷰에 추가한 차원 테이블 4개와 팩트 테이블 1개입니다. 이러한 테이블은 다음과 같습니다.  
   
--   **지리**  
+-   **Geography**  
   
 -   **Customer**  
   
@@ -117,6 +117,6 @@ Geography 차원은 **Adventure Works DW 2012** 데이터 원본 뷰의 **Geogra
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [부모-자식 계층의 부모 특성 속성 정의](../analysis-services/lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [Analysis Services 프로젝트 배포](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
   

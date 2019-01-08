@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - manual subscription initialization [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: 27a1bc38-e498-4fff-8082-04b52aa4b22c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aaa09ef5afcd5bf889d0685631734a69624b8c09
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3bd621890bad3bc42fb2d4d5289d71efcbdbcc2b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148783"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777925"
 ---
 # <a name="initialize-a-subscription-manually"></a>수동 구독 초기화
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다. 구독을 초기화하는 데는 일반적으로 초기 스냅숏이 사용되지만 스키마 및 초기 데이터가 이미 구독자에 있는 경우에는 스냅숏을 사용하지 않고 게시에 대한 구독을 초기화할 수 있습니다.  
@@ -85,7 +84,7 @@ ms.locfileid: "48148783"
   
 2.  게시 데이터베이스의 게시자에서 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)을 실행합니다. **@subscriber_db**에 게시된 데이터를 포함하는 구독자의 데이터베이스 이름, **@subscription_type**에 **push** 값, **@sync_type**에 **none** 값을 지정합니다.  
   
-3.  게시 데이터베이스의 게시자에서 [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)를 실행합니다. 자세한 내용은 [밀어넣기 구독 만들기](create-a-push-subscription.md)을 참조하세요.  
+3.  게시 데이터베이스의 게시자에서 [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)를 실행합니다. 자세한 내용은 [Create a Push Subscription](create-a-push-subscription.md)을 참조하세요.  
   
 4.  병합 에이전트를 시작하여 복제 개체를 전송하고 게시자에서 최신 변경 내용을 다운로드합니다. 자세한 내용은 [밀어넣기 구독 동기화](synchronize-a-push-subscription.md)을 참조하세요.  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 452857fb-be1b-4e1e-851c-dd2216640f35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e85edf0da738b51aabaef66d9e52954ffcb44591
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 6eb2a23761dc24243a7a10b0e4cdbeb5b9ffe58d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211093"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775443"
 ---
 # <a name="sql-server-agent-properties-service-tab"></a>SQL Server 에이전트 속성(서비스 탭)
   이 서비스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스입니다. 밝은 회색으로 표시된 속성 값은 이 애플리케이션을 사용하여 변경할 수 없습니다.  
@@ -46,13 +45,13 @@ ms.locfileid: "48211093"
  **시작 모드**  
  이 서비스를 다음 옵션으로 설정합니다.  
   
--   수동: 컴퓨터가 시작될 때 이 서비스가 자동으로 시작되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자나 다른 도구를 사용하여 서비스를 시작해야 합니다.  
+-   수동: 이 서비스는 컴퓨터가 시작될 때 자동으로 시작되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자나 다른 도구를 사용하여 서비스를 시작해야 합니다.  
   
--   자동: 컴퓨터가 시작될 때 이 서비스가 시작됩니다.  
+-   자동: 이 서비스는 컴퓨터가 시작될 때 시작됩니다.  
   
 -   사용 안 함: 이 서비스를 시작할 수 없습니다.  
   
  **State**  
- 이 서비스가 실행 중인지, 중지되었는지 또는 비활성화되었는지 나타냅니다. "**...**"는 상태 변경이 보류 중임을 나타냅니다.  
+ 이 서비스가 실행 중인지, 중지되었는지 또는 비활성화되었는지 나타냅니다. “**...**”는 상태 변경이 보류 중임을 나타냅니다.  
   
   

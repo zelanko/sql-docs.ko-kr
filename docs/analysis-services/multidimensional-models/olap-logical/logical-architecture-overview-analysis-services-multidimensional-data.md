@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 83e91607dfc46bfb60bbc4874fd06c6ae0fd23e9
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 0567ab525c4c8d1c2a9efdbfc3011a925f70401c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559398"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52397758"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>논리 아키텍처 개요(Analysis Services - 다차원 데이터)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -120,7 +120,7 @@ ms.locfileid: "51559398"
   
  여기에 제시된 예에는 단일 팩트 테이블만 있습니다. 큐브에 팩트 테이블이 여러 개 있는 경우 각 팩트 테이블의 측정값은 측정값 그룹으로 구성되고 측정값 그룹은 정의된 차원 관계에 따라 특정 차원 집합에 연결됩니다. 이러한 관계는 참여하는 테이블을 데이터 원본 뷰에 지정하고 관계의 세분성을 지정하여 정의됩니다. **관련된 항목:**[차원 관계](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [다차원 Model 데이터베이스 ](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

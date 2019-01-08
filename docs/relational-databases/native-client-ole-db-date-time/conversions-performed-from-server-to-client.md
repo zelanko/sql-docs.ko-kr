@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad07d16aec3f215c8c9d854e872f8c0555f34747
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f5df8d27f39918cb8ddac4dd46dd8b3ca4449c5
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647421"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399126"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>서버에서 클라이언트로 수행되는 변환
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47647421"
   이 항목에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]이상 버전과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB로 작성된 클라이언트 응용 프로그램 간에 수행되는 날짜 및 시간 변환에 대해 설명합니다.  
   
 ## <a name="conversions"></a>변환  
- 다음 표에서는 클라이언트로 반환된 형식과 바인딩 형식 간의 변환에 대해 설명합니다. 출력 매개 변수의 경우 icommandwithparameters:: Setparameterinfo가 호출 된 경우 지정 된 유형의 *pwszDataSourceType* 서버에서 수행할 변환 하는 암시적 변환 서버의 실제 형식이 일치 하지 않음 를 클라이언트에 반환 되는 형식 icommandwithparameters:: Setparameterinfo를 통해 지정 된 형식과 일치 하 게 됩니다. 따라서 서버의 변환 규칙이 이 항목에서 설명된 내용과 다를 경우 예기치 못한 변환 결과가 나타날 수 있습니다. 예를 들어 기본 날짜를 입력해야 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 1899-12-30을 사용하지 않고, 1900-1-1을 사용합니다.  
+ 다음 표에서는 클라이언트로 반환된 형식과 바인딩 형식 간의 변환에 대해 설명합니다. 출력 매개 변수의 경우 icommandwithparameters:: Setparameterinfo가 호출 된 경우 지정 된 유형의 *pwszDataSourceType* 서버에서 수행할 변환 하는 암시적 변환 서버의 실제 형식이 일치 하지 않음 를 클라이언트에 반환 되는 형식 icommandwithparameters:: Setparameterinfo를 통해 지정 된 형식과 일치 하 게 됩니다. 이 서버의 변환 규칙이이 항목에서 설명 하는 것과 다른 경우 예기치 못한 변환 결과가 발생할 수 있습니다. 예를 들어 기본 날짜를 입력해야 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 1899-12-30을 사용하지 않고, 1900-1-1을 사용합니다.  
   
 |대상 -><br /><br /> 보낸 사람|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  

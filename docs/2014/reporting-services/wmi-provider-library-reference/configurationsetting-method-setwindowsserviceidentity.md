@@ -19,12 +19,12 @@ ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d2cee56a3aa15e00e2de72761eb872f6e297b680
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aff708a3455c98ae0671b4970cd654d54f7dda36
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067313"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399306"
 ---
 # <a name="setwindowsserviceidentity-method-wmi-msreportserverconfigurationsetting"></a>SetWindowsServiceIdentity 메서드(WMI MSReportServer_ConfigurationSetting)
   보고서 서버 Windows 서비스가 지정된 Windows 사용자로 실행되도록 하고 이 계정에 보고서 서버를 작동하기에 충분한 파일 시스템 사용 권한을 부여합니다.  

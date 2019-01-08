@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - moving system databases
@@ -28,12 +27,12 @@ ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3297457db7fb0d363e8122cab9b4d02abcd87ceb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080423"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756275"
 ---
 # <a name="move-system-databases"></a>시스템 데이터베이스 이동
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 시스템 데이터베이스를 이동하는 방법에 대해 설명합니다. 시스템 데이터베이스 이동은 다음과 같은 경우에 유용할 수 있습니다.  

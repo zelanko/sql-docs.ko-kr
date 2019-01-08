@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG002601 error
@@ -13,12 +12,12 @@ ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 55a175f7ac4d7d00b84ea44cf04f34d81fcb35ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a3994aa8a442f0ec1522bdf2314e0d6023e94bcf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176109"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760246"
 ---
 # <a name="mssqleng002601"></a>MSSQL_ENG002601
     
@@ -42,7 +41,7 @@ ms.locfileid: "48176109"
   
 -   ID 열이 있는 테이블이 사용되지만 해당 열이 적절히 관리되지 않습니다.  
   
--   병합 복제에서 이 오류는 시스템 테이블인 **MSmerge_contents**에 삽입하는 동안에도 발생할 수 있습니다. 발생하는 오류는 "고유 인덱스가 'ucl1SycContents'인 개체 'MSmerge_contents'에 중복 키 행을 삽입할 수 없습니다"와 비슷합니다.  
+-   병합 복제에서이 오류가 발생할 수 있습니다 삽입 하는 동안 시스템 테이블로 **MSmerge_contents**; 발생 하는 오류와 비슷합니다. "고유 인덱스가 'ucl1SycContents'인 개체 'MSmerge_contents'에 중복 키 행을 삽입할 수 없습니다"와 비슷합니다.  
   
 ## <a name="user-action"></a>사용자 동작  
  필요한 동작은 오류 발생 원인에 따라 다릅니다.  

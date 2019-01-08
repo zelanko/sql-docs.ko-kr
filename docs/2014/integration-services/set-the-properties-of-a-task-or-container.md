@@ -13,12 +13,12 @@ ms.assetid: 52d47ca4-fb8c-493d-8b2b-48bb269f859b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c1e8c6381aaf8afd848831c8599c4534a77b179e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fc33585e165b8cdac2f7d46c322741b3eb1756c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084793"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503734"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>태스크 또는 컨테이너의 속성 설정
   **속성** 창을 사용하여 태스크 및 컨테이너의 속성을 대부분 설정할 수 있습니다. 태스크 컬렉션의 속성과 **속성** 창을 사용해서 설정하기에 너무 복잡한 속성은 예외입니다. 예를 들어 Foreach 루프 컨테이너에서 사용되는 열거자는 **속성** 창에서 구성할 수 없습니다. 이러한 복잡한 속성을 설정하려면 태스크 또는 컨테이너 편집기를 사용해야 합니다. 대부분의 태스크 및 컨테이너 편집기에는 여러 개의 노드가 포함되어 있으며, 각 노드에는 관련 속성이 들어 있습니다. 노드의 이름은 노드에 들어 있는 속성의 내용을 나타냅니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "48084793"
 5.  **속성** 창에서 속성 값을 업데이트합니다.  
   
     > [!NOTE]  
-    >  대부분의 속성은 입력란에 직접 값을 입력하거나 목록에서 값을 선택하는 방법으로 설정할 수 있습니다. 그러나 일부 속성은 보다 복잡하므로 사용자 지정 속성 편집기를 사용해야 합니다. 이러한 속성을 설정하려면 입력란을 클릭하고 작성 **(…)** 단추를 클릭하여 사용자 지정 편집기를 엽니다.  
+    >  대부분의 속성은 입력란에 직접 값을 입력하거나 목록에서 값을 선택하는 방법으로 설정할 수 있습니다. 그러나 일부 속성은 보다 복잡하므로 사용자 지정 속성 편집기를 사용해야 합니다. 속성을 설정하려면 입력란을 클릭하고 작성 **(...)** 단추를 클릭하여 사용자 지정 편집기를 엽니다.  
   
 6.  선택적으로 속성 식을 만들어 태스크 또는 컨테이너의 속성을 동적으로 업데이트합니다. 자세한 내용은 [속성 식 추가 또는 변경](expressions/add-or-change-a-property-expression.md)을 참조하세요.  
   

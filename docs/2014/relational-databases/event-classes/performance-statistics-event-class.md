@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,18 +14,18 @@ ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 506a577aaec5eb3713a646fa152530e255b79867
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3888782f93dde5726ed808383ea7da0c9a02a4d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176296"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761845"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics 이벤트 클래스
   Performance Statistics 이벤트 클래스는 실행 중인 쿼리, 저장 프로시저 및 트리거의 성능을 모니터링하는 데 사용할 수 있습니다. 6개의 각 이벤트 하위 클래스는 시스템 내의 쿼리, 저장 프로시저 및 트리거의 유효 기간에 있는 이벤트를 나타냅니다. 이 이벤트 하위 클래스 및 관련 sys.dm_exec_query_stats, sys.dm_exec_procedure_stats 및 sys.dm_exec_trigger_stats 동적 관리 뷰를 조합하여 사용하면 지정된 쿼리, 저장 프로시저 또는 트리거의 성능 기록을 다시 구성할 수 있습니다.  
   
 ## <a name="performance-statistics-event-class-data-columns"></a>Performance Statistics 이벤트 클래스 데이터 열  
- 다음 표에서는 EventSubClass 0, EventSubClass 1, EventSubClass 2, EventSubClass 3, EventSubClass 4 및 EventSubClass 5와 같은 각 이벤트 하위 클래스와 관련된 이벤트 클래스 데이터 열에 대해 설명합니다.  
+ 다음 표에서는 EventSubClass 0, EventSubClass 1, EventSubClass 2, EventSubClass 3, EventSubClass 4 및 EventSubClass 5입니다.  
   
 ### <a name="eventsubclass-0"></a>EventSubClass 0  
   

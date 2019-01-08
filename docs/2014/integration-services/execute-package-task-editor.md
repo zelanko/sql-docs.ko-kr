@@ -15,12 +15,12 @@ ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 468823b10b4b97fb2a4fe7fcd0a83f28af6fc5b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67f750d134459b55e3d14772bf8b4c6db25b1ab1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119043"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504523"
 ---
 # <a name="execute-package-task-editor"></a>패키지 실행 태스크 편집기
   패키지 실행 태스크 편집기로 패키지 실행 태스크를 구성합니다. 패키지 실행 태스크는 패키지가 다른 패키지를 워크플로의 일부로 실행할 수 있도록 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 엔터프라이즈 기능을 확장했습니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "48119043"
 >  **ReferenceType** 옵션은 읽기 전용이며 패키지가 포함된 프로젝트가 프로젝트 배포 모델로 전환되지 않은 경우에는 **외부 참조** 로 설정됩니다. 변환에 대한 자세한 내용은 [Integration Services 서버에 프로젝트 배포](../../2014/integration-services/deploy-projects-to-integration-services-server.md)를 참조하세요.  
   
  **암호**  
- 자식 패키지가 암호로 보호되어 있으면 자식 패키지의 암호를 입력하거나 줄임표 단추 (...)를 클릭하여 자식 패키지의 새 암호를 만듭니다.  
+ 자식 패키지가 암호로 보호되어 있으면 자식 패키지의 암호를 입력하거나 줄임표 단추(...)를 클릭하여 자식 패키지의 새 암호를 만듭니다.  
   
  `ExecuteOutOfProcess`  
  자식 패키지를 부모 패키지 프로세스에서 실행할지 아니면 별도의 프로세스에서 실행할지 지정합니다. 기본적으로 패키지 실행 태스크의 ExecuteOutOfProcess 속성 설정 `False`, 및 자식 패키지가 부모 패키지와 동일한 프로세스에서 실행 합니다. 이 속성을 `true`로 설정하면 하위 패키지가 개별 프로세스로 실행됩니다. 이렇게 하면 하위 패키지의 실행 속도가 느려집니다. 또한 이 속성을 `true`로 설정하면 도구만 설치로 패키지를 디버깅할 수 없으며 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 제품을 설치해야 합니다. 자세한 내용은 [Integration Services 설치](install-windows/install-integration-services.md)를 참조하세요.  
@@ -91,16 +91,16 @@ ms.locfileid: "48119043"
  **대량 삽입 태스크 편집기**  
  목록에서 OLE DB 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [OLE DB 연결 관리자](connection-manager/ole-db-connection-manager.md), [OLE DB 연결 관리자 구성](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **관련된 항목:** [OLE DB 연결 관리자](connection-manager/ole-db-connection-manager.md), [OLE DB 연결 관리자 구성](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **PackageName**  
- 자식 패키지의 이름을 입력하거나 줄임표 (...)를 클릭하여 패키지를 찾습니다.  
+ 자식 패키지의 이름을 입력하거나 줄임표(...)를 클릭한 다음, 패키지를 찾습니다.  
   
 #### <a name="location--file-system"></a>Location = 파일 시스템  
  **대량 삽입 태스크 편집기**  
  목록에서 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **관련된 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **PackageNameReadOnly**  
  패키지 이름을 표시합니다.  

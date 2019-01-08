@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - bulk load [SQLXML], object model
@@ -33,18 +31,18 @@ ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fadb3edffa2d7e8030ecaaf95c6a5236aad67cd4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91e7c73f0db30078dfaa884c110f2d813359bc22
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080533"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750475"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 대량 로드 개체 모델(SQLXML 4.0)
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLXMLBulkLoad 개체의 XML 대량 로드 개체 모델은 구성 됩니다. 이 개체는 다음 메서드 및 속성을 지원합니다.  
   
 ## <a name="methods"></a>메서드  
- Execute  
+ 실행  
  매개 변수로 제공된 스키마 파일 및 데이터 파일(또는 스트림)을 사용하여 데이터를 대량 로드합니다.  
   
 ## <a name="properties"></a>속성  

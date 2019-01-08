@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 85501a0b8899e375965a7e999ce2d4e938f14cc0
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: HT
+ms.openlocfilehash: 434996f53cefc3c30cc649411db7699ed2bd3f7e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099723"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401026"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Analysis Services 인스턴스의 서버 모드 확인
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  다차원 및 데이터 마이닝(기본값), SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 및 테이블 형식이라는 세 가지 서버 모드 중 하나에 Analysis Services를 설치할 수 있습니다. Analysis Services 인스턴스의 서버 모드는 설치 중에 서버 설치 옵션을 선택할 때 결정됩니다.  
+  Analysis Services는 다차원 및 데이터 마이닝 (기본값) 이면 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] SharePoint 및 테이블 형식에 대 한 합니다. Analysis Services 인스턴스의 서버 모드는 설치 중에 서버 설치 옵션을 선택할 때 결정됩니다.  
   
  서버 모드에 따라 만들어서 배포하는 솔루션 유형이 결정됩니다. 서버 소프트웨어를 설치하지 않은 경우 서버가 설치된 모드를 확인하려면 이 항목의 정보를 사용할 수 있습니다. 특정 모드의 기능 가용성에 대 한 자세한 내용은 참조 하세요. [비교 테이블 형식 및 다차원 솔루션 ](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)합니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "50099723"
 >  **DeploymentMode** 속성 값을 변경하지 마십시오. 서버를 설치한 후에는 속성을 수동으로 변경할 수 없습니다.  
   
 ## <a name="about-the-deploymentmode-property"></a>DeploymentMode 속성 정보  
- **DeploymentMode** 속성은 Analysis Services 서버 인스턴스의 작업 컨텍스트를 결정합니다. 대화 상자, 메시지 및 설명서에서는 이 속성을 '서버 모드'라고 합니다. 이 속성은 Analysis Services 설치 방법에 따라 설치 프로그램에 의해 초기화됩니다. 이 속성을 내부 값으로만 간주하여 항상 설치 프로그램에서 지정한 값을 사용해야 합니다.  
+ **DeploymentMode** 속성은 Analysis Services 서버 인스턴스의 작업 컨텍스트를 결정합니다. 이 속성 대화 상자, 메시지 및 설명서의 '서버 모드로' 이라고 합니다. 이 속성은 Analysis Services 설치 방법에 따라 설치 프로그램에 의해 초기화됩니다. 이 속성을 내부 값으로만 간주하여 항상 설치 프로그램에서 지정한 값을 사용해야 합니다.  
   
  이 속성에 유효한 값은 다음과 같습니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: '단원 10: 파티션 만들기 | Microsoft Docs'
+title: '10 단원: 파티션을 만들 | Microsoft Docs'
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,22 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3ce1bc8aa83b376aecdf5bd80a180a4777044bce
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.openlocfilehash: d43432a53eb2321c3707f4034e244752a5c368ba
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42791934"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416405"
 ---
-# <a name="lesson-10-create-partitions"></a>10단원: 파티션 만들기
+# <a name="lesson-10-create-partitions"></a>10 단원: 파티션 만들기
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-이 단원에서는 만들려는 FactInternetSales 테이블을 처리할 수 있는 더 작은 논리적 부분으로 나누는 데 (새로 고침) 하는 파티션을 다른 파티션과 독립적으로 합니다. 기본적으로 모델에 포함하는 각 테이블에는 테이블의 열과 행이 모두 들어 있는 파티션이 하나씩 포함되어 있습니다. FactInternetSales 테이블에 대 한 연도별; 데이터를 분할 하려는 각 테이블의 5 년에 대해 하나의 파티션을 합니다. 이렇게 하면 각 파티션을 독립적으로 처리할 수 있습니다. 자세한 내용은 [파티션](../analysis-services/tabular-models/partitions-ssas-tabular.md)을 참조하세요.  
+이 단원에서는 만들려는 FactInternetSales 테이블을 처리할 수 있는 더 작은 논리적 부분으로 나누는 데 (새로 고침) 하는 파티션을 다른 파티션과 독립적으로 합니다. 기본적으로 모델에 포함 된 모든 테이블에는 테이블의 열과 행 모두 포함 하는 하나의 파티션이 있습니다. FactInternetSales 테이블에 대 한 연도별; 데이터를 분할 하려는 각 테이블의 5 년에 대해 하나의 파티션을 합니다. 이렇게 하면 각 파티션을 독립적으로 처리할 수 있습니다. 자세한 내용은 [파티션](../analysis-services/tabular-models/partitions-ssas-tabular.md)을 참조하세요.  
   
-이 단원에 소요되는 예상 시간: **15분**  
+이 단원에 소요되는 예상 시간: **15 분**  
   
-## <a name="prerequisites"></a>필수 구성 요소  
-이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [9 단원: 계층 만들기](../analysis-services/lesson-9-create-hierarchies.md)합니다.  
+## <a name="prerequisites"></a>사전 요구 사항  
+이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원을 완료해야 합니다. [9 단원: 계층 구조를 만들](../analysis-services/lesson-9-create-hierarchies.md)합니다.  
   
 ## <a name="create-partitions"></a>파티션 만들기  
   
@@ -144,4 +144,4 @@ ms.locfileid: "42791934"
     ![-테이블 형식-10 단원에서는-프로세스-완료](../analysis-services/media/as-tabular-lesson10-process-complete.png)
   
  ## <a name="whats-next"></a>다음 단계
-다음 단원으로 이동 합니다. [단원 11: 역할 만들기](../analysis-services/lesson-11-create-roles.md)합니다. 
+다음 단원으로 이동 합니다. [11 단원: 역할을 만들](../analysis-services/lesson-11-create-roles.md)합니다. 

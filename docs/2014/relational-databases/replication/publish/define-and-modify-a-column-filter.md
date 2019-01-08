@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication], column
@@ -16,12 +15,12 @@ ms.assetid: d7c3186a-9a8c-45d8-ab34-05beec4c26dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3cd764670dfb5df51dee40593fd911aade0171a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e0c26e32425f204f7dab29aa65c66f3a11f09d7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130443"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753715"
 ---
 # <a name="define-and-modify-a-column-filter"></a>열 필터 정의 및 수정
   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 열 필터를 정의하고 수정하는 방법에 대해 설명합니다.  
@@ -136,7 +135,7 @@ ms.locfileid: "48130443"
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergearticle)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)   
  [게시된 데이터 필터링](filter-published-data.md)   
  [병합 복제의 게시된 데이터 필터링](../merge/filter-published-data-for-merge-replication.md)  

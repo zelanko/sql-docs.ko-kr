@@ -11,23 +11,23 @@ ms.assetid: c7f64a54-c555-4d31-bf99-3abe57dc8626
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1ab486390e8da36d14d5aac1e1049a5836dd2be9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f31ea33f116cbabf1a808f30a9575ada43bae900
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081833"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392827"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>SharePoint에서 보고서 서버 및 파워 뷰 통합 사이트 모음 기능 활성화
   SharePoint 제품용 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 추가 기능을 설치하면 일반적으로 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 사이트 모음 기능이 기본적으로 활성화됩니다. 일부 경우에는 기능을 수동으로 활성화해야 하는 경우도 있습니다.  
   
- SharePoint 제품의 설치 이후에 SharePoint 2010 제품용 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능을 설치하면 보고서 서버 통합 기능 및 Power View 통합 기능이 루트 사이트 모음에 대해서만 활성화됩니다. 기타 사이트 모음의 경우 기능을 수동으로 활성화해야 합니다. 예를 들어의 사이트 모음이 있는 경우 **http://[my 서버 이름] /sites/ [사이트 모음 이름]** 수동으로 활성화 해야 합니다 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 사이트 모음 기능입니다.  
+ SharePoint 제품의 설치 이후에 SharePoint 2010 제품용 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능을 설치하면 보고서 서버 통합 기능 및 파워 뷰 통합 기능이 루트 사이트 모음에 대해서만 활성화됩니다. 기타 사이트 모음의 경우 기능을 수동으로 활성화해야 합니다. 예를 들어 **http://[내 서버 이름]/sites/[사이트 모음 이름]** 의 사이트 모음이 있는 경우 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 사이트 모음 기능을 수동으로 활성화해야 합니다.  
   
- 루트 사이트 모음이 없으면 있으면는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 다음과 유사한 메시지를 기록에 추가 합니다.  
+ 루트 사이트 모음이 없으면 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능이 다음과 유사한 메시지를 기록합니다.  
   
  "SharePoint 웹 응용 프로그램 80에는 루트 사이트 모음이 없습니다."  
   
- "RS_SP_ #.log"라는 추가 기능 설치 로그에서 메시지를 찾을 수 있습니다. 여기서 #는 증가 숫자입니다. 로그 파일은 현재 사용자 Temp 폴더(예: C:\Users\\[사용자 이름]\AppData\Local\Temp)에서 찾을 수 있습니다. 추가 기능을 사용 하 여 로깅 옵션에 대 한 자세한 내용은 참조 하세요. [설치 또는 SharePoint 용 Reporting Services 추가 기능에 제거 &#40;SharePoint 2010 및 SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)합니다.  
+ "RS_SP_ #.log" 라는 여기서 #은 증분 번호 추가 기능 설치 로그에 메시지를 찾을 수 있습니다. 로그 파일은 현재 사용자 Temp 폴더(예: C:\Users\\[사용자 이름]\AppData\Local\Temp)에서 찾을 수 있습니다. 추가 기능을 사용 하 여 로깅 옵션에 대 한 자세한 내용은 참조 하세요. [설치 또는 SharePoint 용 Reporting Services 추가 기능에 제거 &#40;SharePoint 2010 및 SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)합니다.  
   
  항목 내용  
   

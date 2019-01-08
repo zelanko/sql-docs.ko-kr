@@ -11,12 +11,12 @@ ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77e4b6ba8f70c826dcfdf5a89fc9c577d587a3f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: d1b59b0e279d016d2fcaee9b0fcae6742c4ff87b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181373"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419854"
 ---
 # <a name="roles-ssas-tabular"></a>역할(SSAS 테이블 형식)
   테이블 형식 모델에서 역할은 모델에 대한 멤버 권한을 정의합니다. 각 역할에는 Windows 사용자 이름 또는 Windows 그룹별 멤버와 권한(읽기, 프로세스, 관리자)이 포함됩니다. 역할의 멤버는 모델에 대해 역할 권한에 정의된 동작을 수행할 수 있습니다. 또한 읽기 권한을 갖도록 정의된 역할은 행 수준 필터를 사용하여 행 수준에서 추가적인 보안을 제공할 수 있습니다.  
@@ -76,14 +76,14 @@ ms.locfileid: "48181373"
   
  읽기 권한과 읽기 및 처리 권한을 가진 역할에 대해서만 행 필터를 정의할 수 있습니다. 기본적으로 특정 테이블에 대해 행 필터를 정의하지 않을 경우 읽기 권한 또는 읽기 및 처리 권한을 가진 역할의 멤버는 다른 테이블에서 교차 필터링이 적용되지 않는 한 테이블의 모든 행을 쿼리할 수 있습니다.  
   
- 특정 테이블에 대해 행 필터를 정의할 경우 TRUE/FALSE 값으로 평가되어야 하는 DAX 수식을 통해 해당 역할의 멤버가 쿼리할 수 있는 행을 정의합니다. DAX 수식에 포함되지 않은 행은 쿼리할 수 없습니다. 예를 들어 Sales 역할 멤버에 대해서 행 필터 식, *=Customers [Country] = “USA”* 를 가진 Customers 테이블에서 Sales 역할 멤버는 USA의 고객만 볼 수 있습니다.  
+ 특정 테이블에 대해 행 필터를 정의할 경우 TRUE/FALSE 값으로 평가되어야 하는 DAX 수식을 통해 해당 역할의 멤버가 쿼리할 수 있는 행을 정의합니다. DAX 수식에 포함되지 않은 행은 쿼리할 수 없습니다. 예를 들어 Sales 역할의 멤버에 대 한 다음 행을 가진 Customers 테이블 필터 식, *= Customers [Country] = "USA"*, Sales 역할의 멤버는 USA의 고객만 볼 수만 있습니다.  
   
  행 필터는 지정된 행과 관련 행에 적용됩니다. 테이블에 여러 관계가 있는 경우 필터는 활성 관계에 대한 보안을 적용합니다. 행 필터는 관련 테이블에 대해 정의된 다른 행 필터와 교차됩니다. 예를 들면 다음과 같습니다.  
   
 |Table|DAX 식|  
 |-----------|--------------------|  
-|Region|=Region[Country]=”USA”|  
-|ProductCategory|=ProductCategory[Name]=”Bicycles”|  
+|Region|= 영역 [Country] = "USA"|  
+|ProductCategory|= ProductCategory [이름] = "자전거"|  
 |의|=Transactions[Year]=2008|  
   
  Transactions 테이블에 이러한 사용 권한이 적용되면 멤버는 고객이 USA에 있고, 제품 범주가 Bicycles이며, 연도가 2008년에 해당하는 데이터 행을 쿼리할 수 있습니다. 사용자는 해당 사용 권한이 부여된 다른 역할의 멤버가 아닌 한 미국 이외의 국가에서 발생한 거래, Bicycles 범주가 아닌 거래 또는 2008년에 발생하지 않은 거래를 쿼리할 수 없습니다.  
@@ -136,11 +136,11 @@ ms.locfileid: "48181373"
   
 |항목|Description|  
 |-----------|-----------------|  
-|[역할 만들기 및 관리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](create-and-manage-roles-ssas-tabular.md)|이 항목의 태스크에서는 **역할 관리자** 대화 상자를 사용하여 역할을 만들고 관리하는 방법을 설명합니다.|  
+|[역할 만들기 및 관리&#40;SSAS 테이블 형식&#41;](create-and-manage-roles-ssas-tabular.md)|이 항목의 태스크에서는 **역할 관리자** 대화 상자를 사용하여 역할을 만들고 관리하는 방법을 설명합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [큐브 뷰 &#40;&AMP;#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)   
- [Excel에서 분석 &#40;&AMP;#40;SSAS 테이블 형식&#41;](analyze-in-excel-ssas-tabular.md)   
+ [큐브 뷰&#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)   
+ [Excel에서 분석&#40;SSAS 테이블 형식&#41;](analyze-in-excel-ssas-tabular.md)   
  [USERNAME 함수 &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
  [LOOKUPVALUE 함수 &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
  [CUSTOMDATA 함수 &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  

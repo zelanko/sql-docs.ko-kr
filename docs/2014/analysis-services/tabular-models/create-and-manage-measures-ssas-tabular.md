@@ -11,15 +11,15 @@ ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bfc49813893a296ac5342452a286f39284a8901d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3b50c9284610cfa8c35eba21de7723c18729401
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126369"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405009"
 ---
 # <a name="create-and-manage-measures-ssas-tabular"></a>측정값 만들기 및 관리(SSAS 테이블 형식)
-  측정값은 보고서나 Excel 피벗 테이블 또는 피벗 차트에 사용하기 위해 만드는 수식입니다. COUNT 또는 SUM과 같은 표준 집계 함수를 기반으로 측정값을 만들거나 DAX를 사용하여 고유한 수식을 정의할 수 있습니다. 이 항목의 태스크에서는 테이블의 측정값 표를 사용하여 측정값을 만들고 관리하는 방법을 설명합니다.  
+  측정값은 보고서나 Excel 피벗 테이블 또는 피벗 차트에 사용하기 위해 만드는 수식입니다. COUNT 또는 SUM과 같은 표준 집계 함수를 기반으로 측정값을 만들거나 DAX를 사용하여 고유한 수식을 정의할 수 있습니다. 이 항목의에서 태스크에서는 테이블의 측정값 표를 사용 하 여 측정값을 만들고 방법에 설명 합니다.  
   
  이 항목에는 다음 태스크가 포함됩니다.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "48126369"
 -   [측정값을 삭제하려면](#bkmk_delete)  
   
 ## <a name="tasks"></a>태스크  
- 측정값을 만들고 관리하려면 테이블의 측정값 표를 사용합니다. 모델 디자이너의 데이터 뷰에서만 테이블에 대한 측정값 표를 볼 수 있습니다. 다이어그램 뷰에서는 측정값을 만들거나 측정값 표를 볼 수 없지만 기존 측정값을 볼 수는 있습니다. 테이블의 측정값 표를 보려면 **테이블** 메뉴를 클릭한 다음 **측정값 표 표시**를 클릭합니다.  
+ 을 만들고 측정값을 관리 하는 테이블의 측정값 표를 사용 합니다. 모델 디자이너의 데이터 뷰에서만 테이블에 대한 측정값 표를 볼 수 있습니다. 다이어그램 뷰에서는 측정값을 만들거나 측정값 표를 볼 수 없지만 기존 측정값을 볼 수는 있습니다. 테이블의 측정값 표를 보려면 **테이블** 메뉴를 클릭한 다음 **측정값 표 표시**를 클릭합니다.  
   
 ###  <a name="bkmk_create_stand"></a> 표준 집계 수식을 사용하여 측정값을 만들려면  
   
@@ -61,8 +61,8 @@ ms.locfileid: "48126369"
 -   측정값 표에서 측정값을 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [측정값 &#40;&AMP;#40;SSAS 테이블 형식&#41;](measures-ssas-tabular.md)   
- [Kpi &#40;&AMP;#40;SSAS 테이블 형식&#41;](kpis-ssas-tabular.md)   
- [계산 열 &#40;&AMP;#40;SSAS 테이블 형식&#41;](ssas-calculated-columns.md)  
+ [측정값&#40;SSAS 테이블 형식&#41;](measures-ssas-tabular.md)   
+ [KPI&#40;SSAS 테이블 형식&#41;](kpis-ssas-tabular.md)   
+ [계산 열&#40;SSAS 테이블 형식&#41;](ssas-calculated-columns.md)  
   
   

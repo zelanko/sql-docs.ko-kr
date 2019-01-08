@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7deb70905efe8874e3b512c10eff5c0951ab4b24
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e290e0e15797a8b84a6d52c945a5fd78458515fc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024960"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505635"
 ---
 # <a name="power-pivot-configuration-using-windows-powershell"></a>Windows PowerShell을 사용하여 파워 피벗 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34024960"
   
     -   SharePoint 모드 및 SharePoint 2010에서 구성한 SQL Server 2012 Analysis Services 서버에서는 cmdlet을 17개까지 사용할 수 있습니다.  
   
-     목록으로 반환되는 명령이 없거나 "`get-help could not find *powerpivot* in a help file in this session.`"라는 오류 메시지가 나타나는 경우 서버에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cmdlet을 사용하도록 설정하는 방법에 대한 지침이 나와 있는 이 항목의 다음 섹션을 참조하세요.  
+     목록에서 반환 되는 명령이 없는 또는 유사한 오류 메시지가 표시 하는 경우 "`get-help could not find *powerpivot* in a help file in this session.`"를 사용 하도록 설정 하는 방법에 대 한 지침은이 항목의 다음 섹션을 참조 하세요.를 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버의 cmdlet.  
   
      모든 cmdlet에는 온라인 도움말이 있습니다. 다음 예에서는 **New-PowerPivotServiceApplication** cmdlet에 대한 온라인 도움말을 보는 방법을 보여 줍니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "34024960"
 2.  첫 번째 cmdlet을 실행합니다.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
      이 cmdlet을 실행하면 솔루션의 이름,  솔루션 ID  및 Deployed=False가 반환됩니다. 다음 단계에서는 솔루션을 배포합니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "34024960"
 3.  두 번째 cmdlet을 실행하여 솔루션을 배포합니다.  
   
     ```  
-    Install-SPSolution –Identity PowerPivotFarm.wsp –GACDeployment -Force  
+    Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
 4.  창을 닫습니다. **관리자 권한으로 실행** 옵션을 사용하여 창을 다시 엽니다.  
@@ -85,6 +85,6 @@ ms.locfileid: "34024960"
   
  [Power Pivot Configuration Tools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
   
- [SharePoint용 Power Pivot에 대한 PowerShell 참조](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
+ [SharePoint용 파워 피벗에 대한 PowerShell 참조](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   
   

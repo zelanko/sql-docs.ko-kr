@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying databases
@@ -16,12 +15,12 @@ ms.assetid: 9e8ac097-84b7-46c7-85e3-c1e79f94d747
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29bf748ddcb04b99e610674f1b25c8121d4ab327
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b71a548dabd286437db73224195622ef576bd28b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186243"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748945"
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>데이터베이스의 속성 보기 또는 변경
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]데이터베이스의 속성을 보거나 변경하는 방법에 대해 설명합니다. 데이터베이스 속성을 변경하면 수정 사항이 즉시 반영됩니다.  

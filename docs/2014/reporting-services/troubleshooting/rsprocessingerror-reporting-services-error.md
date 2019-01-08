@@ -13,12 +13,12 @@ ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 68a2b5b9a48523193f263ae0bba1c8eaddc186c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: be7e09d5254efc35761b267655a8949e4b09173d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207323"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403618"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services 오류
     
@@ -56,7 +56,7 @@ ms.locfileid: "48207323"
   
 -   Nullable 속성이로 설정 하는 매개 변수 `False` 매개 변수에서 null 값을 검색 했습니다.  
   
--   데이터 영역의 Hidden 속성에 대한 식에 다음 오류가 있습니다. 개체의 인스턴스에 개체 참조가 설정되지 않았습니다.  
+-   데이터 영역의 Hidden 속성에 대 한 식에 오류가 있습니다. 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.  
   
 -   식에 잘못된 함수 호출 또는 구문 오류가 있습니다.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48207323"
 -   보고서 서버의 로컬 관리자로 실행 중인 경우 로그 파일에서 `ReportProcessingException`을 검색합니다. 로그 항목에 자세한 정보가 있습니다. 보고서 서버 로그 파일은 일반적으로 \<*drive*>:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*datetimestamp*.log에 있습니다. 자세한 내용은 [Reporting Services 로그 파일 및 소스](../report-server/reporting-services-log-files-and-sources.md)를 참조하세요.  
   
 ### <a name="failed-to-load-expression-host-assembly"></a>식 호스트 어셈블리 로드 실패  
- 사용자 지정 어셈블리에는 강력한 이름 서명 및 AllowPartiallyTrustedCallers 특성 집합이 있어야 합니다. 자세한 내용은 [Using Custom Assemblies with Reports](../custom-assemblies/using-custom-assemblies-with-reports.md) 하 고 [Understanding Security Policies](../extensions/secure-development/understanding-security-policies.md)합니다.  
+ 사용자 지정 어셈블리에는 강력한 이름 서명 및 AllowPartiallyTrustedCallers 특성 집합이 있어야 합니다. 자세한 내용은 [Using Custom Assemblies with Reports](../custom-assemblies/using-custom-assemblies-with-reports.md) 및 [Understanding Security Policies](../extensions/secure-development/understanding-security-policies.md)를 참조하세요.  
   
 ### <a name="a-built-in-global-name-does-not-exist"></a>기본 제공 전역 이름이 없음  
  식의 철자를 확인하세요. 기본 제공 전역 변수, 매개 변수 이름 및 필드 이름은 대/소문자를 구분합니다. 오류를 일으킨 식에서 이름이 보고서에 실제로 있는지, 그리고 철자가 정확한지 확인하세요. 자세한 내용은 [식의 기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)을 참조하세요.  
@@ -87,7 +87,7 @@ ms.locfileid: "48207323"
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>하위 보고서가 있는 주 보고서를 처리할 수 없음  
  하위 보고서가 있는 보고서는 동일한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 프로세서 버전으로 처리해야 합니다. 보고서를 현재 버전의 보고서 정의 스키마로 업그레이드할 때 주 보고서와 하위 보고서는 동시에 업데이트될 수도 있고 업데이트되지 않을 수도 있습니다. 보고서와 하위 보고서 간에 버전이 호환되지 않는 경우 "하위 보고서를 처리할 수 없습니다." 메시지가 나타납니다.  
   
- 주 보고서 또는 하위 보고서 중 하나를 변경하여 동일한 보고서 프로세서 버전으로 두 보고서를 처리할 수 있도록 해야 합니다. 보고서 업그레이드가 실패 하는 이유는 대 한 자세한 내용은 [Upgrade Reports](../install-windows/upgrade-reports.md)합니다.  
+ 주 보고서 또는 하위 보고서 중 하나를 변경하여 동일한 보고서 프로세서 버전으로 두 보고서를 처리할 수 있도록 해야 합니다. 보고서 업그레이드가 실패하는 이유에 대한 자세한 내용은 [보고서 업그레이드](../install-windows/upgrade-reports.md)를 참조하세요.  
   
 ### <a name="verify-function-calls-are-visual-basic-and-not-sql"></a>함수 호출이 Visual Basic이며 SQL이 아닌지 확인  
  관계형 데이터베이스에서는 쿼리 텍스트에 SQL 함수를 사용할 수 있지만 쿼리 텍스트에 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 함수를 사용할 수 없습니다.  
@@ -127,12 +127,12 @@ ms.locfileid: "48207323"
   
 ## <a name="see-also"></a>관련 항목  
  [식&#40;보고서 작성기 및 SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
- [집계 함수 참조 &#40;보고서 작성기 및 SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)   
  [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [일반적으로 사용되는 필터&#40;보고서 작성기 및 SSRS&#41;](../report-design/commonly-used-filters-report-builder-and-ssrs.md)   
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [매개 변수 컬렉션 참조 &#40;보고서 작성기 및 SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [매개 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

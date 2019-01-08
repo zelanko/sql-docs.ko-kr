@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: a55f005d-e020-423c-8940-c24ea1b20104
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f0d2cf9840887232e760ea8bd258cf0730b047b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 62dc29f8143f92fc9674ed10c092dc6ad08570fa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055963"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767145"
 ---
 # <a name="sqlstmtcompleted-event-class"></a>SQL:StmtCompleted 이벤트 클래스
   SQL:StmtCompleted 이벤트 클래스는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 완료되었음을 나타냅니다.  

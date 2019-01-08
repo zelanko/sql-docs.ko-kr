@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - mapping schema [SQLXML], security
@@ -22,12 +20,12 @@ ms.assetid: 7d7e44dc-b6d3-4e0f-95c7-8f99930c94f2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b46c996c7b89be06558d3ad4b43e1c1bca6aa370
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6bebdc1f62e95af43ccedf71087a817cff8e502e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162329"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750015"
 ---
 # <a name="annotated-schema-security-considerations-sqlxml-40"></a>주석 스키마 보안 고려 사항(SQLXML 4.0)
   다음은 주석 스키마를 사용하기 위한 보안 지침입니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [Integration Services]
@@ -18,12 +17,12 @@ ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 146d197345851ccf854b478b3ebc220aa6854a5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 5f49a3d44a3e13b6a95b78b695f39519ceea401f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074183"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748865"
 ---
 # <a name="integration-services-backward-compatibility"></a>Integration Services의 이전 버전과의 호환성
   이 섹션에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]버전 간의 변경 사항에 대해 설명하며 더 이상 사용되지 않거나 후속 릴리스에서 제거될 예정인 기능을 포함합니다. 또한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 기능을 비롯한 기존 애플리케이션의 동작을 중단시키거나 변경하는 것으로 알려진 제품 변경 사항에 대해서도 설명합니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.forloopcontainerdetails.f1
@@ -17,15 +16,15 @@ ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f1d04762b61376d2e9ede00467d89f62c55634d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92e1ff31c03e3de20d680544f7f432350151f33e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203734"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761805"
 ---
 # <a name="for-loop-container"></a>For 루프 컨테이너
-  For 루프 컨테이너는 패키지의 반복 제어 흐름을 정의합니다. 루프 구현은 프로그래밍 언어에서의 **For** 루프 구조와 유사합니다. 각 루프를 반복할에서 For 루프 컨테이너는 식을 계산 하 고는 식이 될 때까지 워크플로 반복 `False`합니다.  
+  For 루프 컨테이너는 패키지의 반복 제어 흐름을 정의합니다. 루프 구현은 프로그래밍 언어에서의 **For** 루프 구조와 유사합니다. For 루프 컨테이너는 각 루프를 반복할 때마다 식을 계산하고 식이 `False`가 될 때까지 워크플로를 반복합니다.  
   
  For 루프 컨테이너는 다음 요소를 사용하여 루프를 정의합니다.  
   

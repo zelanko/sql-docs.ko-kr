@@ -13,14 +13,14 @@ ms.assetid: d4ebe420-a4a9-4076-89d3-41abe726fc5c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e43f90743b2449b4be99a0169a061f76fdcf3fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa9f529e286951aab08bb2d29f8dcc06f837e8c2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084593"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408975"
 ---
-# <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>태스크 8: 조건부 분할 변환을 추가하여 정리 출력 분할
+# <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>태스크 8: 분할 정리 출력에 조건부 분할 변환 추가
   이 변환에서는 데이터 흐름에 조건부 분할 변환을 추가합니다. 조건부 분할 변환은 데이터 내용에 따라 각 행을 서로 다른 출력으로 라우팅할 수 있습니다. 이 자습서를 사용 합니다 **레코드 상태** DQS 정리 변환에서 출력 열입니다. 이 자습서에서는 수정 레코드 또는 수정된 레코드만 MDS 서버에 업로드합니다. 따라서 경우 확인 합니다 **레코드 상태** 는 **수정** 또는 **수정 됨**, 레코드를 MDS에 업로드 하기 전에 레코드를 결합 하 고 합니다.  
   
 1.  끌어서 놓기 **조건부 분할 변환** 에서 **일반적인** 섹션을 **SSIS 도구 상자** 하는 **데이터 흐름** 탭**Cleanse Supplier Data**합니다.  
@@ -48,6 +48,6 @@ ms.locfileid: "48084593"
 10. 클릭 **확인** 닫으려면 합니다 **조건부 분할 변환 편집기** 대화 상자.  
   
 ## <a name="next-step"></a>다음 단계  
- [태스크 9: UNION ALL 변환을 추가하여 수정 및 수정된 레코드 결합](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
+ [태스크 9: Union All 변환을 추가 하 여 수정 및 수정 된 레코드 결합](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
   
   

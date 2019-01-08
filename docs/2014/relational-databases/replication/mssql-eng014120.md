@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG014120 error
@@ -13,12 +12,12 @@ ms.assetid: 6b169a3b-30da-4981-b998-b52d61811572
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4ac3752dd3888adf1d7001f00d4b19a9620d8870
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7472ab39376b84b515ee5b57033a0eda6521ab27
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168545"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758145"
 ---
 # <a name="mssqleng014120"></a>MSSQL_ENG014120
     
@@ -39,7 +38,7 @@ ms.locfileid: "48168545"
 ## <a name="user-action"></a>사용자 동작  
  배포 데이터베이스를 삭제하려면 먼저 배포자와 게시자 간 연결을 삭제해야 합니다. 자세한 내용은 [sp_dropdistpublisher&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [오류 및 이벤트 참조&#40;복제&#41;](errors-and-events-reference-replication.md)   
  [배포 구성](configure-distribution.md)  
   

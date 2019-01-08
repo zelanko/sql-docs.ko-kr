@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server], events
@@ -17,12 +16,12 @@ ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 70654d0d256b311d5e15807a3ccf6b895f00ed52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 381007cb26f74cdf945900436d8a9fcea5a4ef39
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138123"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761215"
 ---
 # <a name="filter-a-trace"></a>추적 필터링
   필터가 설정되면 추적에서 수집하는 이벤트가 제한됩니다. 필터가 설정되어 있지 않으면 선택된 이벤트 클래스의 모든 이벤트가 추적 출력에서 반환됩니다. 예를 들어 특정 사용자에 대한 추적에서 Windows 사용자 이름을 제한하면 출력 데이터는 해당 사용자만 표시되도록 간략해집니다.  

@@ -20,16 +20,16 @@ ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e46b6102f71e4ffcc00c4dd1367ab3beaa68732
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d318b73feaec0cfb48548b05ba6d7c06a697c6ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818571"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503525"
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 2.0 표준 준수: ODBC  
+ 도입 된 버전: ODBC 2.0 표준 준수 합니다. ODBC  
   
  **요약**  
  **SQLBindParameter** 버퍼 SQL 문에서 매개 변수 표식에 바인딩합니다. **SQLBindParameter** 기본 드라이버 유니코드 데이터를 지원 하지 않는 경우에 유니코드 C 데이터 형식으로 바인딩을 지원 합니다.  
@@ -112,14 +112,14 @@ SQLRETURN SQLBindParameter(
 |HY104|잘못 된 정밀도 또는 배율 값|인수에 지정 된 값 *ColumnSize* 하거나 *DecimalDigits* 으로 지정 된 SQL 데이터 형식의 열에 대 한 데이터 원본에서 지원 되는 값의 범위를 벗어났습니다는  *ParameterType* 인수입니다.|  
 |HY105|잘못 된 매개 변수 형식|인수에 지정 된 값 (DM) *InputOutputType* 올바르지 않습니다. ("주석입니다." 참조)|  
 |HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용으로 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 하세요. [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.|  
-|HYC00|선택적 기능이 구현 되지 않았습니다|드라이버 또는 데이터 원본과 인수에 지정 된 값의 조합에 의해 지정 된 변환을 지원 하지 않습니다 *ValueType* 인수에 지정 된 드라이버 관련 값 *ParameterType*.<br /><br /> 인수에 지정 된 값 *ParameterType* ODBC의 버전 드라이버에서 지원 되지만 드라이버나 데이터 원본에서 지원 되지에 대 한 유효한 ODBC SQL 데이터 형식 식별자가 있습니다.<br /><br /> 드라이버는 ODBC 2에만 지원합니다. *x* 고 인수가 *ValueType* 다음 중 하나 였습니다.<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 에 나열 된 모든 C 간격 데이터 형식 [C 데이터 형식](../../../odbc/reference/appendixes/c-data-types.md) 부록 d: 데이터 형식에서입니다.<br /><br /> 드라이버 3.50, 및 인수 이전 ODBC 버전 지원 *ValueType* SQL_C_GUID 되었습니다.|  
+|HYC00|선택적 기능이 구현 되지 않았습니다|드라이버 또는 데이터 원본과 인수에 지정 된 값의 조합에 의해 지정 된 변환을 지원 하지 않습니다 *ValueType* 인수에 지정 된 드라이버 관련 값 *ParameterType*.<br /><br /> 인수에 지정 된 값 *ParameterType* ODBC의 버전 드라이버에서 지원 되지만 드라이버나 데이터 원본에서 지원 되지에 대 한 유효한 ODBC SQL 데이터 형식 식별자가 있습니다.<br /><br /> 드라이버는 ODBC 2에만 지원합니다. *x* 고 인수가 *ValueType* 다음 중 하나 였습니다.<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 에 나열 된 모든 C 간격 데이터 형식 [C 데이터 형식](../../../odbc/reference/appendixes/c-data-types.md) 부록 d: 데이터 형식입니다.<br /><br /> 드라이버 3.50, 및 인수 이전 ODBC 버전 지원 *ValueType* SQL_C_GUID 되었습니다.|  
 |HYT01|연결 제한 시간 만료 됨|데이터 원본 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|(DM) 드라이버를 사용 하 여 연결 합니다 *StatementHandle* 함수를 지원 하지 않습니다.|  
   
 ## <a name="comments"></a>주석  
  응용 프로그램 호출 **SQLBindParameter** SQL 문에서 각 매개 변수 표식을 바인딩합니다. 바인딩에 응용 프로그램이 호출 될 때까지 계속 적용 됩니다 **SQLBindParameter** 다시 호출 **SQLFreeStmt** SQL_RESET_PARAMS 옵션 또는 호출 **SQLSetDescField** 를 APD의 SQL_DESC_COUNT 헤더 필드를 0으로 설정 합니다.  
   
- 매개 변수에 대 한 자세한 내용은 참조 하십시오 [문 매개 변수](../../../odbc/reference/develop-app/statement-parameters.md)합니다. 매개 변수 데이터 형식 및 매개 변수 표식에 대 한 자세한 내용은 참조 하세요. [매개 변수 데이터 형식](../../../odbc/reference/appendixes/parameter-data-types.md) 하 고 [매개 변수 표식을](../../../odbc/reference/appendixes/parameter-markers.md) 부록 c: SQL 문법에서입니다.  
+ 매개 변수에 대 한 자세한 내용은 참조 하십시오 [문 매개 변수](../../../odbc/reference/develop-app/statement-parameters.md)합니다. 매개 변수 데이터 형식 및 매개 변수 표식에 대 한 자세한 내용은 참조 하세요. [매개 변수 데이터 형식](../../../odbc/reference/appendixes/parameter-data-types.md) 하 고 [매개 변수 표식을](../../../odbc/reference/appendixes/parameter-markers.md) 부록 c: SQL 문법입니다.  
   
 ## <a name="parameternumber-argument"></a>상태로 인수  
  하는 경우 *상태로* 호출에 **SQLBindParameter** SQL_DESC_COUNT의 값 보다 크면 **SQLSetDescField** SQL_DESC_의 가치를 높일 라고 계산 *상태로*입니다.  
@@ -178,7 +178,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 또는 SQL_DATA_AT_EXEC
   
  또한 확장된 C 데이터 유형을 지정할 수 있습니다. 자세한 내용은 [odbc에서 C 데이터 형식](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)합니다.  
   
- 자세한 내용은 [기본 C 데이터 형식](../../../odbc/reference/appendixes/default-c-data-types.md), [C에서 SQL 데이터 형식으로 변환 데이터](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md), 및 [SQL에서 C 데이터 형식 데이터 변환](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) 부록 d: 데이터 형식에서입니다.  
+ 자세한 내용은 [기본 C 데이터 형식](../../../odbc/reference/appendixes/default-c-data-types.md)를 [C에서 SQL 데이터 형식으로 변환 데이터](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md), 및 [SQL에서 C 데이터 형식으로 변환 데이터](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) 부록 d: 데이터 형식입니다.  
   
 ## <a name="parametertype-argument"></a>ParameterType 인수  
  에 나열 된 값 중 하나 이어야 합니다는 [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md) 섹션의 부록 d: 데이터 형식 또는 드라이버 관련 값 이어야 합니다. 이 인수는 IPD의 SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE, 및 값을 SQL_DESC_DATETIME_INTERVAL_CODE 필드를 설정합니다.  
@@ -189,12 +189,12 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 또는 SQL_DATA_AT_EXEC
   
  경우는 *ValueType* 인수가 SQL_NUMERIC 데이터 형식 (드라이버에서 정의 된를 임) 기본 전체 자릿수가 고 기본 소수 자릿수 (0), IPD의 SQL_DESC_PRECISION 및 자릿수가 SQL_DESC_SCALE 필드에 설정 된 대로 사용 되는 데이터입니다. 기본 전체 자릿수 또는 소수 적합 하지 않은 경우 응용 프로그램이 명시적으로 설정 해야 설명자 필드를 호출한 **SQLSetDescField** 하거나 **SQLSetDescRec**합니다.  
   
- 데이터를 변환 하는 방법에 대 한 내용은 참조 하세요. [C에서 SQL 데이터 형식으로 변환 데이터](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) 하 고 [SQL에서 C 데이터 형식 데이터 변환](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) 부록 d: 데이터 형식에서입니다.  
+ 데이터를 변환 하는 방법에 대 한 자세한 내용은 [C에서 SQL 데이터 형식으로 변환 데이터](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) 하 고 [SQL에서 C 데이터 형식으로 변환 데이터](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) 부록 d: 데이터 형식입니다.  
   
 ## <a name="columnsize-argument"></a>ColumnSize 인수  
  합니다 *ColumnSize* 인수는 열 또는 매개 변수 표식에 해당 데이터 또는 둘 다의 길이에 해당 하는 식의 크기를 지정 합니다. SQL 데이터 형식에 따라 IPD의 다른 필드를 설정 하는이 인수 (합니다 *ParameterType* 인수). 이 매핑에 다음 규칙이 적용 됩니다.  
   
--   하는 경우 *ParameterType* SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY,이 아니거나 의값으로설정되어간결한SQLdatetime또는간격데이터형식,IPD의SQL_DESC_LENGTH필드중하나 *ColumnSize*합니다. (자세한 내용은 참조는 [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식에 대 한 섹션입니다.)  
+-   하는 경우 *ParameterType* SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY,이 아니거나 의값으로설정되어간결한SQLdatetime또는간격데이터형식,IPD의SQL_DESC_LENGTH필드중하나 *ColumnSize*합니다. (자세한 내용은 참조는 [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 섹션의 부록 d: 데이터 형식입니다.)  
   
 -   하는 경우 *ParameterType* SQL_DECIMAL, SQL_NUMERIC, SQL_FLOAT, SQL_REAL, 또는 SQL_DOUBLE, IPD의 SQL_DESC_PRECISION 필드의 값으로 설정 됩니다 *ColumnSize*합니다.  
   
@@ -281,7 +281,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 또는 SQL_DATA_AT_EXEC
     > [!NOTE]  
     >  반환 되는 값 이지만 실행 시 데이터 매개 변수가 실행 시 데이터 열과 비슷한 **SQLParamData** 마다 다릅니다. 실행 시 데이터 매개 변수는 매개 변수는 데이터를 보낼 사용 하 여 SQL 문에서 **SQLPutData** 문을 사용 하 여 실행 될 때 **SQLExecDirect** 또는 **SQLExecute**. 사용 하 여 바인딩된 **SQLBindParameter**합니다. 반환 된 값 **SQLParamData** 에 전달 하는 포인터 값 **SQLBindParameter** 에 *ParameterValuePtr* 인수입니다. 실행 시 데이터 열이 있는 데이터를 보낼 사용 하 여 행 집합의 열 **SQLPutData** 행이 업데이트 되거나 추가 된 경우 **SQLBulkOperations** 사용 하 여 업데이트 또는 **SQLSetPos**. 사용 하 여 바인딩된 **SQLBindCol**합니다. 반환 된 값 **SQLParamData** 에 있는 행의 주소는 **TargetValuePtr* 버퍼 (를 호출 하 여 설정 **SQLBindCol**) 처리 되는 합니다.  
   
-5.  호출 **SQLPutData** 한 번 이상 매개 변수에 대해 데이터를 보내도록 합니다. 데이터 값 보다 큰 경우 둘 이상의 호출이 필요 합니다 \* *ParameterValuePtr* 에 지정 된 버퍼 **SQLPutData**;를 여러 번 호출 **SQLPutData**동일한 매개 변수는 문자, 이진 또는 데이터 소스 관련 데이터 형식의 열에 문자 데이터를 전송 하는 경우에 또는 문자를 이진 열에 이진 C 데이터를 보낼 때 수 또는 데이터 소스 관련 데이터 형식에 대 한 합니다.  
+5.  호출 **SQLPutData** 한 번 이상 매개 변수에 대해 데이터를 보내도록 합니다. 데이터 값 보다 큰 경우 둘 이상의 호출이 필요 합니다 \* *ParameterValuePtr* 에 지정 된 버퍼 **SQLPutData**;를 여러 번 호출 **SQLPutData**동일한 매개 변수는 문자, 이진 또는 데이터 소스 특정 데이터 형식의 열에 문자 데이터를 전송 하는 경우에 또는 문자를 이진 열에 이진 C 데이터를 보낼 때 수 또는 데이터 소스 특정 데이터 형식에 대 한 합니다.  
   
 6.  호출 **SQLParamData** 매개 변수의 모든 데이터가 전송 된는 신호를 다시 합니다.  
   
@@ -296,7 +296,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 또는 SQL_DATA_AT_EXEC
  응용 프로그램을 호출 하는 경우 **SQLCancel** 드라이버 문 실행 취소 드라이버 실행 시 데이터 매개 변수에 대 한 데이터를 필요로 하, 동안; 응용 프로그램을 호출할 수 있습니다 **SQLExecute** 또는 **SQLExecDirect** 다시 합니다.  
   
 ## <a name="retrieving-streamed-output-parameters"></a>스트리밍된 출력 매개 변수 검색  
- 응용 프로그램 설정 하는 경우 *InputOutputType* SQL_PARAM_INPUT_OUTPUT_STREAM 또는 SQL_PARAM_OUTPUT_STREAM 출력 매개 변수 값을 하나 이상 호출 하 여 검색 해야 **SQLGetData**합니다. 다음 함수에 대 한 호출에 대 한 응답에서 SQL_PARAM_DATA_AVAILABLE 드라이버 응용 프로그램에 반환할 스트리밍된 출력 매개 변수 값에 있는 경우 반환 됩니다. **SQLMoreResults**, **SQLExecute**, 및 **SQLExecDirect**합니다. 응용 프로그램 호출 **SQLParamData** 사용할 수 있는 매개 변수 값을 확인 하려면.  
+ 응용 프로그램 설정 하는 경우 *InputOutputType* SQL_PARAM_INPUT_OUTPUT_STREAM 또는 SQL_PARAM_OUTPUT_STREAM 출력 매개 변수 값을 하나 이상 호출 하 여 검색 해야 **SQLGetData**합니다. 드라이버 응용 프로그램에 반환할 스트리밍된 출력 매개 변수 값에 있는 경우 SQL_PARAM_DATA_AVAILABLE 다음 함수에 대 한 호출에 대 한 응답에서 반환 됩니다. **SQLMoreResults**하십시오 **SQLExecute**, 및 **SQLExecDirect**합니다. 응용 프로그램 호출 **SQLParamData** 사용할 수 있는 매개 변수 값을 확인 하려면.  
   
  SQL_PARAM_DATA_AVAILABLE 및 스트리밍된 출력 매개 변수에 대 한 자세한 내용은 참조 하세요. [SQLGetData를 사용 하 여 출력 매개 변수 검색](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)합니다.  
   
@@ -305,7 +305,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 또는 SQL_DATA_AT_EXEC
   
  매개 변수 배열을 처리 될 때 개별 결과 집합/행 개수 (각 매개 변수 집합에 대해 하나)를 사용할 수 있습니다 또는 결과 집합/행 개수는 하나로 롤업 될 수 있습니다. 옵션은 SQL_PARAM_ARRAY_ROW_COUNTS **SQLGetInfo** 행 개수 매개 변수 (SQL_PARC_BATCH)의 각 집합에 사용할 수 있는 하나의 행 개수는 사용할 수 있습니다 (SQL_PARC_NO_BATCH) 여부를 나타냅니다.  
   
- 옵션은 SQL_PARAM_ARRAY_SELECTS **SQLGetInfo** 결과 집합은 각 매개 변수 (SQL_PAS_BATCH) 집합에 사용할 수 있는 하나의 결과 집합을 사용할 수 있습니다 (SQL_PAS_NO_BATCH) 여부를 나타냅니다. 드라이버에서 매개 변수 배열을 사용 하 여 실행 하는 결과 집합 – 생성 문이 허용 되지 않으면, SQL_PARAM_ARRAY_SELECTS SQL_PAS_NO_SELECT를 반환 합니다.  
+ 옵션은 SQL_PARAM_ARRAY_SELECTS **SQLGetInfo** 결과 집합은 각 매개 변수 (SQL_PAS_BATCH) 집합에 사용할 수 있는 하나의 결과 집합을 사용할 수 있습니다 (SQL_PAS_NO_BATCH) 여부를 나타냅니다. 드라이버는 결과 집합 생성 문을 매개 변수 배열을 사용 하 여 실행을 허용 하지 않으면 SQL_PARAM_ARRAY_SELECTS SQL_PAS_NO_SELECT를 반환 합니다.  
   
  자세한 내용은 [SQLGetInfo 함수](../../../odbc/reference/syntax/sqlgetinfo-function.md)합니다.  
   
@@ -411,7 +411,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 또는 SQL_DATA_AT_EXEC
   
 -   SQL_PARAM_PROCEED 헤더 파일에는 0으로 정의 됩니다.  
   
- 응용 프로그램 IRD의 SQL_DESC_ARRAY_STATUS_PTR 필드와 동일한 배열 가리키도록 APD의 가리키는 SQL_DESC_ARRAY_STATUS_PTR 필드로 설정할 수 있습니다. 이 매개 변수 행 데이터에 바인딩하는 경우에 유용 합니다. 매개 변수 행 데이터의 상태에 따라 다음 무시할 수 있습니다. 매개 변수 무시 되도록 SQL 문에서 다음과 같은 코드가 SQL_PARAM_IGNORE, 외에도 발생 합니다:은 SQL_ROW_DELETED, SQL_ROW_UPDATED, 및 SQL_ROW_ERROR 합니다. SQL_PARAM_PROCEED, 외에도 다음 코드는 계속 하려면 SQL 문을 발생할: SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO, 및 SQL_ROW_ADDED 합니다.  
+ 응용 프로그램 IRD의 SQL_DESC_ARRAY_STATUS_PTR 필드와 동일한 배열 가리키도록 APD의 가리키는 SQL_DESC_ARRAY_STATUS_PTR 필드로 설정할 수 있습니다. 이 매개 변수 행 데이터에 바인딩하는 경우에 유용 합니다. 매개 변수 행 데이터의 상태에 따라 다음 무시할 수 있습니다. SQL_PARAM_IGNORE, 외에도 다음 코드는 매개 변수를 무시 되도록 SQL 문에서 발생 합니다. SQL_ROW_DELETED, SQL_ROW_UPDATED, 및 SQL_ROW_ERROR SQL_PARAM_PROCEED, 외에도 다음 코드를 계속 하려면 SQL 문을 발생 합니다. SQL_ROW_SUCCESS SQL_ROW_SUCCESS_WITH_INFO, 하며 SQL_ROW_ADDED 합니다.  
   
 ## <a name="rebinding-parameters"></a>다시 바인딩 매개 변수  
  응용 프로그램 바인딩을 변경 하려면 두 가지 작업 중 하나를 수행할 수 있습니다.  

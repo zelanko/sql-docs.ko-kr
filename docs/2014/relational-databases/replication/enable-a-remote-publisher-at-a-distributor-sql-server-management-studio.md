@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - remote Distributors [SQL Server replication]
@@ -14,12 +13,12 @@ ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eb756cb171c3fe8a1d2d54bbd790ce86a96e4f7a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d7b554dc39832a834ebe1bc2ac2d4bfefa21721a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131673"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753055"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>배포자에서 원격 게시자 설정(SQL Server Management Studio)
   **게시자** 페이지에서 원격 배포자를 사용하려면 게시자를 설정합니다. 이 페이지는 배포 구성 마법사 및 **배포자 속성 - \<Distributor>** 대화 상자에서 사용할 수 있습니다. 마법사 사용 방법 및 대화 상자에 액세스하는 방법은 [게시 및 배포 구성](configure-publishing-and-distribution.md) 및 [배포자 및 게시자 속성 보기 및 수정](view-and-modify-distributor-and-publisher-properties.md)을 참조하세요.  
@@ -34,7 +33,7 @@ ms.locfileid: "48131673"
   
 4.  **배포자 암호** 페이지에서 **암호** 및 **암호 확인** 입력란에 관리 태스크를 수행하기 위해 게시자에서 배포자로 연결할 때 복제에서 사용하는 **distributor_admin** 계정에 대한 강력한 암호를 지정합니다.  
   
-5.  게시자에 대한 설정을 보고 수정하려면 속성 단추 (**...**)를 클릭합니다.  
+5.  게시자에 대한 설정을 보고 수정하려면 속성 단추(**...**)를 클릭합니다.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -48,7 +47,7 @@ ms.locfileid: "48131673"
   
 4.  **게시자** 페이지에서 **암호** 및 **암호 확인** 입력란에 관리 태스크를 수행하기 위해 게시자에서 배포자로 연결할 때 복제에서 사용하는 **distributor_admin** 계정에 대한 강력한 암호를 지정합니다.  
   
-5.  게시자에 대한 설정을 보고 수정하려면 속성 단추 (**...**)를 클릭합니다.  
+5.  게시자에 대한 설정을 보고 수정하려면 속성 단추(**...**)를 클릭합니다.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

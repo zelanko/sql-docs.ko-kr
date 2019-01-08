@@ -1,5 +1,5 @@
 ---
-title: '5단원: 보고서 마법사를 사용하여 하위 보고서 디자인 | Microsoft Docs'
+title: '5단원: 보고서 마법사를 사용 하 여 자식 보고서 디자인 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1eb2cb7693110204767a627e54cd4248e7d1a7cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: bc993c0881eb4aeeddb18c8df0efad69dbba261e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166943"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418354"
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>5단원: 보고서 마법사를 사용하여 자식 보고서 디자인
   자식 보고서에 대한 데이터 테이블 및 데이터 연결을 만든 후에는 보고서 디자이너의 보고서 마법사를 사용하여 자식 보고서를 디자인합니다. 보고서 디자이너에 대한 자세한 내용은 [보고서 디자이너로 보고서 디자인&#40;SSRS&#41;](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)을 참조하세요.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Showplan XML events
@@ -15,12 +14,12 @@ ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 511769ec59b62cef75ffde7f0226fe89b3970bc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 79f3f41d4224baacd485c7d2151db0f3f2059f86
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198293"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752175"
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>Showplan XML Statistics Profile 이벤트를 개별적으로 저장(SQL Server Profiler)
   이 항목에서는 추적에서 캡처된 **Showplan XML Statistics Profile** 이벤트를 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 개별적인 .SQLPlan 파일로 저장하는 방법에 대해 설명합니다. **에서** Showplan XML Statistics Profile [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]이벤트 파일을 열어 각 이벤트에 대한 그래픽 실행 계획을 볼 수 있습니다.  

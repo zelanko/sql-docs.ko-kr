@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], tables
@@ -15,12 +15,12 @@ ms.assetid: ee2c5d84-22bf-4597-ac70-a27ed8cc94f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 82a1c9d7f1b4c4c2c6dc5ac8ed5ebacd1e1d17ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a5d6fb1ca02bd6c6459476cb1d5830a536780a98
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099583"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759145"
 ---
 # <a name="work-with-tables-in-database-diagram-visual-database-tools"></a>데이터베이스 다이어그램에서 테이블 작업(Visual Database Tools)
   테이블 디자이너나 데이터베이스 다이어그램 디자이너에서 데이터베이스 테이블을 만들고 수정할 수 있습니다.  

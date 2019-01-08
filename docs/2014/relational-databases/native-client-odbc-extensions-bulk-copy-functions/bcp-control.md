@@ -18,12 +18,12 @@ ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e20a7ebdffc8972a1c3d1449fd65d2560a1d71b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 323ea04d32501f04156ffa81452fad5e5cf86664
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145243"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753085"
 ---
 # <a name="bcpcontrol"></a>bcp_control
   파일과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 간의 대량 복사에 대한 다양한 제어 매개 변수의 기본 설정을 변경합니다.  
@@ -68,7 +68,7 @@ iValue
  BCPFILECP  
  *iValue* 데이터 파일에 대 한 코드 페이지 번호를 포함 합니다. 1252나 850과 같은 코드 페이지 번호를 지정하거나 다음 값 중 하나를 지정할 수 있습니다.  
   
- BCPFILE_ACP: 파일의 데이터가 클라이언트의 Microsoft Windows  코드 페이지에 있습니다.  
+ BCPFILE_ACP: 파일의 데이터는 Microsoft Windows?? 클라이언트의 코드 페이지입니다.  
   
  BCPFILE_OEMCP: 파일의 데이터가 클라이언트의 OEM 코드 페이지에 있습니다(기본값).  
   
@@ -120,7 +120,7 @@ iValue
  BCPODBC  
  TRUE 인 경우 지정 **날짜/시간** 하 고 **smalldatetime** 문자 형식으로 저장 하는 값에 ODBC 타임 스탬프 이스케이프 시퀀스 접두사 및 접미사 사용 합니다. BCPODBC 옵션은 BCP_OUT에만 적용됩니다.  
   
- FALSE 인 경우는 **날짜/시간** 1997 년 1 월 1 일을 나타내는 값을 문자열로 변환 됩니다. 1997-01-01 00:00:00.000 합니다. TRUE 이면 동일한 **날짜/시간** 값으로 표현 됩니다. {ts ' 1997-01-01 00:00:00.000'}.  
+ FALSE 인 경우는 **날짜/시간** 1997 년 1 월 1 일을 나타내는 값을 문자열로 변환 됩니다. 변환됩니다. TRUE 이면 동일한 **날짜/시간** 값으로 표현 됩니다. {ts ' 1997-01-01 00:00:00.000'}.  
   
  BCPROWCOUNT  
  현재(또는 마지막) BCP 작업에 의해 영향을 받는 행의 수를 반환합니다.  

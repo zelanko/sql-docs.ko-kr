@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.browseprincipals.f1
@@ -13,12 +12,12 @@ ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8389729eac371f01d32d610d69d1d1a8a3d9e8dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96a31970edba4507ab17f93dfb0a139b9a2a1547
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128253"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749546"
 ---
 # <a name="browse-all-principals-dialog-box"></a>모든 보안 주체 찾아보기 대화 상자
   **모든 보안 주체 찾아보기** 대화 상자를 사용하여 데이터베이스 보안 주체를 선택한 후 선택한 프로젝트 또는 선택한 폴더에 포함된 모든 프로젝트에 대해 보안 주체가 가지는 권한을 변경할 수 있습니다.  
@@ -39,9 +38,9 @@ ms.locfileid: "48128253"
   
 3.  **SSISDB** 노드를 확장합니다.  
   
-4.  선택한 폴더에 포함된 모든 프로젝트에 대해 보안 주체가 가지는 권한을 변경하려면 폴더를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+4.  선택한 폴더에 포함된 모든 프로젝트에 대해 보안 주체가 가지는 권한을 변경하려면 폴더를 마우스 오른쪽 단추로 클릭한 다음, **속성**을 클릭합니다.  
   
-     선택한 프로젝트에 대해 보안 주체가 가지는 권한을 변경하려면 프로젝트가 포함된 폴더를 확장하고 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+     선택한 프로젝트에 대해 보안 주체가 가지는 권한을 변경하려면 프로젝트가 포함된 폴더를 확장하고 프로젝트를 마우스 오른쪽 단추로 클릭한 다음, **속성**을 클릭합니다.  
   
 5.  **사용 권한** 페이지를 선택한 다음 **찾아보기**를 클릭합니다.  
   

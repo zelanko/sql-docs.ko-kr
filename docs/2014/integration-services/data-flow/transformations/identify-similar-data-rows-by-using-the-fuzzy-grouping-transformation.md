@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Fuzzy Grouping transformation
@@ -16,12 +15,12 @@ ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0c9538a492ae6f2da0c4a5adeceb86bd7985d539
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 37ec2899e5e6abe3ff8703f664d76b56b28c0ae3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460288"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750155"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>유사 항목 그룹화 변환을 사용하여 유사한 데이터 행 식별
   유사 항목 그룹화 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크 하나의 원본이 이미 들어 있어야 합니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "49460288"
     > [!NOTE]  
     >  변환에는 임시 테이블 및 인덱스를 만들기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 대한 연결이 필요합니다.  
   
-7.  **열** 탭을 클릭하고 **사용 가능한 입력 열** 목록에서 데이터 집합에서 유사 행을 식별하는 데 사용할 입력 열의 확인란을 선택합니다.  
+7.  **열** 탭을 클릭하고 **사용 가능한 입력 열** 목록에서 데이터 세트에서 유사 행을 식별하는 데 사용할 입력 열의 확인란을 선택합니다.  
   
 8.  **통과** 열의 확인란을 선택하여 변환 출력으로 통과할 입력 열을 식별합니다. 통과 열은 중복 행의 식별 과정에 포함되지 않습니다.  
   
@@ -80,7 +79,7 @@ ms.locfileid: "49460288"
   
 20. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md)   
  [Integration Services 변환](integration-services-transformations.md)   
  [Integration Services 경로](../integration-services-paths.md)   

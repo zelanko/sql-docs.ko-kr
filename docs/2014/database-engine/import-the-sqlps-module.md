@@ -11,19 +11,19 @@ ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e73c0d114744241d18dc7946e852e05b3a2c6e5e
-ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
+ms.openlocfilehash: b6fdc0b8267f1e995812d573ae80f0f24ee11843
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51629556"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404119"
 ---
 # <a name="import-the-sqlps-module"></a>SQLPS 모듈 가져오기
   PowerShell에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 관리하는 데 권장되는 방법은 `sqlps` 모듈을 Windows PowerShell 2.0 환경으로 가져오는 것입니다. 이 모듈은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 스냅인 및 관리 효율성 어셈블리를 로드하고 등록합니다.  
   
 1.  **시작하기 전에:**  [보안](#Security)  
   
-2.  **모듈을 로드하려면**  [sqlps 모듈 로드](#LoadSqlps)  
+2.  **모듈을 로드 합니다.**  [Sqlps 모듈 로드](#LoadSqlps)  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  `sqlps` 모듈을 Windows PowerShell로 가져온 후 다음을 수행할 수 있습니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "51629556"
 ```  
 ## Import the SQL Server Module.  
   
-Import-Module “sqlps” -DisableNameChecking  
+Import-Module "sqlps" -DisableNameChecking  
   
 ```  
   

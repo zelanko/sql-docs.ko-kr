@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookuptrans.f1
@@ -21,12 +20,12 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e721fa24a987d0978c2c89f0c0fc81046c113560
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2286ba205d6ca12f025c8ac154b77a11e1754ff2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147403"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749875"
 ---
 # <a name="term-lookup-transformation"></a>용어 조회 변환
   용어 조회 변환은 변환 입력 열의 텍스트에서 추출된 용어와 참조 테이블에 있는 용어가 일치하는지 확인합니다. 그런 다음 조회 테이블의 용어가 입력 데이터 집합에서 발생한 횟수를 계산하고 해당 개수를 참조 테이블의 용어와 함께 변환 출력의 열에 기록합니다. 이러한 변환은 입력 텍스트를 기준으로 단어 빈도 통계가 모두 포함된 사용자 지정 단어 목록을 만들 때 유용합니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "48147403"
   
  용어 조회 변환에서 대/소문자를 구분하여 일치하는 용어를 검색할 수 있도록 구성하여 용어 검색 방법의 사용자 지정 수위를 높일 수 있습니다.  
   
-## <a name="matches"></a>일치  
+## <a name="matches"></a>요청 내용  
  용어 조회에서는 조회를 수행하고 다음 규칙에 따라 값을 반환합니다.  
   
 -   대/소문자 구분 검색을 수행하도록 변환이 구성된 경우 대/소문자가 다른 일치 항목은 무시됩니다. 예를 들어 *student* 와 *STUDENT* 는 별개의 단어로 취급됩니다.  
@@ -55,7 +54,7 @@ ms.locfileid: "48147403"
   
 -   입력 열의 텍스트가 분류된 명사구인 경우 명사구의 마지막 단어만 기본 형태로 변환됩니다. 예를 들어 *doctors appointments* 의 분류된 형태는 *doctors appointment*입니다.  
   
- 하위 용어가 둘 이상의 참조 레코드에 있는 경우처럼 참조 집합에서 겹치는 용어가 조회 항목에 포함되어 있을 때는 용어 조회 변환에서 하나의 조회 결과만 반환됩니다. 다음 예에서는 겹치는 하위 용어가 조회 항목에 포함되어 있는 때의 결과를 보여 줍니다. 이 경우 겹치는 하위 용어는 *Windows*이며 두 개의 참조 용어에 들어 있습니다. 그러나 변환에서는 두 개의 결과를 반환하지 않고 *Windows*라는 하나의 참조 용어만 반환합니다. 두 번째 참조 용어인 *Windows 7 Professional*은 반환되지 않습니다.  
+ 참조 집합에서 겹치는 용어가 조회 항목에 포함되어 있을 경우(즉, 하위 용어가 하나를 초과하는 참조 레코드에 있는 경우) 용어 조회 변환에서는 하나의 조회 결과만 반환합니다. 다음 예에서는 겹치는 하위 용어가 조회 항목에 포함되어 있는 때의 결과를 보여 줍니다. 이 경우 겹치는 하위 용어는 *Windows*이며 두 개의 참조 용어에 들어 있습니다. 그러나 변환에서는 두 개의 결과를 반환하지 않고 *Windows*라는 하나의 참조 용어만 반환합니다. 두 번째 참조 용어인 *Windows 7 Professional*은 반환되지 않습니다.  
   
 |항목|값|  
 |----------|-----------|  
@@ -63,7 +62,7 @@ ms.locfileid: "48147403"
 |참조 용어|Windows, Windows 7 Professional|  
 |출력|Windows|  
   
- 용어 조회 변환에서는 특수 문자가 포함된 명사 및 명사구를 검색할 수 있으며 참조 테이블의 데이터에는 이러한 문자가 포함될 수 있습니다. The special characters are as follows: %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, ‘가 특수 문자에 해당합니다.  
+ 용어 조회 변환에서는 특수 문자가 포함된 명사 및 명사구를 검색할 수 있으며 참조 테이블의 데이터에는 이러한 문자가 포함될 수 있습니다. %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, ‘ 등이 특수 문자에 해당합니다.  
   
 ## <a name="data-types"></a>데이터 형식  
  용어 조회 변환에서는 데이터 형식이 DT_WSTR 또는 DT_NTEXT인 열만 사용할 수 있습니다. 열에 텍스트가 있지만 데이터 형식이 다른 경우 데이터 변환으로 데이터 흐름에 DT_WSTR 또는 DT_NTEXT 데이터 형식의 열을 추가하고 열 값을 새 열로 복사할 수 있습니다. 그런 다음 데이터 변환의 출력을 용어 조회 변환에 대한 입력으로 사용할 수 있습니다. 자세한 내용은 [Data Conversion Transformation](data-conversion-transformation.md)을 참조하세요.  
@@ -79,7 +78,7 @@ ms.locfileid: "48147403"
   
  InputColumnType 속성이 0이나 2로 설정된 변환 출력 열에는 업스트림 데이터 흐름 구성 요소에 의해 열에 할당된 계보 식별자를 포함하는 열에 대한 CustomLineageID 속성이 포함됩니다.  
   
- 기본적으로 명명 된 변환 출력에 두 개의 열을 추가 하는 용어 조회 변환은 `Term` 고 `Frequency`입니다. `Term`은 조회 테이블의 용어를 포함하고 `Frequency`는 참조 테이블의 용어가 입력 데이터 집합에서 발생한 횟수를 포함합니다.  이러한 열에는 CustomLineageID 속성이 포함되지 않습니다.  
+ 용어 조회 변환은 변환 출력에 기본적으로 `Term`과 `Frequency`라는 두 개의 열을 추가합니다. `Term`은 조회 테이블의 용어를 포함하고 `Frequency`는 참조 테이블의 용어가 입력 데이터 집합에서 발생한 횟수를 포함합니다.  이러한 열에는 CustomLineageID 속성이 포함되지 않습니다.  
   
  조회 테이블은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 Access 데이터베이스의 테이블이어야 합니다. 용어 추출 변환의 출력이 테이블에 저장되는 경우 이 테이블을 참조 테이블로 사용할 수 있지만 다른 테이블도 사용할 수 있습니다. 플랫 파일, Excel 통합 문서 또는 다른 원본에 있는 텍스트는 용어 조회 변환을 사용하기 전에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스나 Access 데이터베이스로 가져와야 합니다.  
   
@@ -95,11 +94,11 @@ ms.locfileid: "48147403"
   
  **용어 조회 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [용어 조회 변환 편집기 &#40;참조 테이블 탭&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
+-   [용어 조회 변환 편집기&#40;참조 테이블 탭&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
   
--   [용어 조회 변환 편집기 &#40;용어 조회 탭&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
+-   [용어 조회 변환 편집기&#40;용어 조회 탭&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
--   [용어 조회 변환 편집기 &#40;고급 탭&#41;](../../term-lookup-transformation-editor-advanced-tab.md)  
+-   [용어 조회 변환 편집기&#40;고급 탭&#41;](../../term-lookup-transformation-editor-advanced-tab.md)  
   
  **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   

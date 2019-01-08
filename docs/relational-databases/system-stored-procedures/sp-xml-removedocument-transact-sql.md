@@ -18,15 +18,15 @@ ms.assetid: f9dca50a-8baf-4170-90bc-e72783ce5b73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be63214fb07683f26fc4f03454d350afbbcf8cbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5319f3cd1cb7f06677bfe35eb19ba66f2dca4151
+ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779271"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947607"
 ---
 # <a name="spxmlremovedocument-transact-sql"></a>sp_xml_removedocument(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   문서 핸들로 지정된 XML 문서의 내부 표현을 제거하고 문서 핸들을 무효로 만듭니다.  
   
@@ -59,7 +59,7 @@ sp_xml_removedocument hdoc
 EXEC sp_xml_removedocument @hdoc;  
 ```  
   
-## <a name="see-also"></a>관련 항목      
+## <a name="see-also"></a>관련 항목:      
  <br>[시스템 저장 프로시저 (Transact SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
  <br>[XML 저장 프로시저 (Transact SQL)](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
  <br>[sys.dm_exec_xml_handles (TRANSACT-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)

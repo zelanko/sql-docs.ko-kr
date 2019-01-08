@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - default conflict resolver
@@ -15,12 +14,12 @@ ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cfd11a6f4e54fc835ac35e9d3864fe4190701448
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 17c751898aee25fa98bfeb6c2a7e1f1143bc61ae
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174969"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752255"
 ---
 # <a name="choose-a-resolver"></a>해결 프로그램 선택
   해결 프로그램을 선택할 때는 애플리케이션에서 충돌 해결의 중요성을 고려하고 우선 순위를 기반으로 하는 기본 충돌 해결 프로그램을 사용할 수 있는지 또는 아티클 해결 프로그램을 사용해야 하는지 여부를 고려해야 합니다.  

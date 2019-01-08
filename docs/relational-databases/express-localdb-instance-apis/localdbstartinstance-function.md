@@ -16,12 +16,12 @@ ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 61dc56c503e580d90b17b1b04c5e80ea6fb10d70
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
-ms.translationtype: HT
+ms.openlocfilehash: dc464988d46d5896b4a925253c8c42916897bcd2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571082"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418787"
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance 함수
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,10 +110,10 @@ HRESULT LocalDBStartInstance(
   
 |버퍼|버퍼 크기|이유|작업|  
 |------------|-----------------|---------------|------------|  
-|NULL|NULL|사용자가 인스턴스를 시작하려고 하지만 파이프 이름은 필요하지 않습니다.|인스턴스를 시작합니다(파이프 반환 없음, 필요한 버퍼 크기 반환 없음).|  
+|NULL|NULL|사용자 인스턴스를 시작 하 고 파이프 필요가 이름입니다.|인스턴스를 시작합니다(파이프 반환 없음, 필요한 버퍼 크기 반환 없음).|  
 |NULL|있음|사용자가 출력 버퍼 크기를 요청합니다. 다음 호출에서 사용자는 실제 시작을 요청할 수 있습니다.|필요한 버퍼 크기를 반환합니다(시작 없음, 파이프 반환 없음). 결과는 S_OK입니다.|  
 |있음|NULL|허용되지 않으며 잘못된 입력입니다.|반환된 결과는 LOCALDB_ERROR_INVALID_PARAMETER입니다.|  
-|있음|있음|사용자가 인스턴스를 시작하려고 하며 인스턴스가 시작된 후 인스턴스에 연결하기 위해 파이프 이름이 필요합니다.|버퍼 크기를 검사하고, 인스턴스를 시작하며 버퍼의 파이프 이름을 반환합니다. <br />버퍼 크기 인수는 종료 Null을 포함하지 않은 “server=” 문자열을 반환합니다.|  
+|있음|있음|사용자가 인스턴스를 시작하려고 하며 인스턴스가 시작된 후 인스턴스에 연결하기 위해 파이프 이름이 필요합니다.|버퍼 크기를 검사하고, 인스턴스를 시작하며 버퍼의 파이프 이름을 반환합니다. <br />길이 반환 하는 버퍼 크기 인수는 "server =" 문자열 종료 null을 포함 하지 않습니다.|  
   
  LocalDB API를 사용하는 코드 샘플은 [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md)를 참조하십시오.  
   

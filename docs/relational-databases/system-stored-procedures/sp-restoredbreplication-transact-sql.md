@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_restoredbreplication
@@ -17,12 +16,12 @@ ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3906e98da00d916dd7629c879e18367b3bcda1d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 383c37219a0c1e901f58bcee7ccc436c36973d1c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826618"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775275"
 ---
 # <a name="sprestoredbreplication-transact-sql"></a>sp_restoredbreplication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 하거나 **dbcreator** 고정된 서버 역할 또는 **dbo** 데이터베이스 스키마를 실행할 수 있습니다 **sp_restoredbreplication**.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

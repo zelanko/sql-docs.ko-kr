@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 13d4cd28d07f174c8ceff417f819f8db1bf63340
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14f9ad5eb733db24f47acad192dbe89543831766
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208313"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750927"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>특성 그룹을 사용자에게 표시되도록 설정(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 특성 그룹이 사용자나 그룹에 표시되도록 설정하여 **탐색기** 기능 영역의 표 위에 탭이 나타나도록 할 수 있습니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "48208313"
   
 -   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](administrators-master-data-services.md)를 참조하세요.  
   
--   하나 이상의 특성 그룹이 있어야 합니다. 자세한 내용은 [특성 그룹 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)합니다.  
+-   하나 이상의 특성 그룹이 있어야 합니다. 자세한 내용은 [특성 그룹 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)를 참조하세요.  
   
 ### <a name="to-make-an-attribute-group-visible-to-users"></a>특성 그룹이 사용자에게 표시되도록 설정하려면  
   
@@ -54,8 +53,8 @@ ms.locfileid: "48208313"
   
 10. **저장**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [특성 그룹 &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
- [특성 그룹 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)  
+## <a name="see-also"></a>관련 항목:  
+ [특성 그룹&#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
+ [특성 그룹 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)  
   
   

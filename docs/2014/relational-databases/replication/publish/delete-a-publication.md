@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - removing publications
@@ -16,12 +15,12 @@ ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 91b99df60b08f079f445fe0e4a64f4b4dd087522
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 08623cc2f9bf5d57141644a9f24c01d29d04cbe3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108943"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771655"
 ---
 # <a name="delete-a-publication"></a>게시 삭제
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 게시를 삭제하는 방법에 대해 설명합니다.  
@@ -103,7 +102,7 @@ ms.locfileid: "48108943"
   
 3.  게시에 대해 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 속성을 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 연결로 설정합니다.  
   
-4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 속성을 통해 게시가 존재하는지 확인합니다. 이 속성의 값이 `false`, 3 단계에서 게시 속성이 올바르게 정의 되지 또는 게시가 없는 것입니다.  
+4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 속성을 통해 게시가 존재하는지 확인합니다. 이 속성의 값이 `false`이면 3단계의 게시 속성이 올바르게 정의되지 않았거나 게시가 없는 것입니다.  
   
 5.  <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A> 메서드를 호출합니다.  
   
@@ -111,9 +110,9 @@ ms.locfileid: "48108943"
   
     1.  <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 클래스의 인스턴스를 만듭니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 인스턴스로 설정합니다.  
   
-    2.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 이 메서드가 반환 하는 경우 `false`, 데이터베이스가 있는지 확인 합니다.  
+    2.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 이 메서드가 `false`를 반환할 경우 데이터베이스가 있는지 확인합니다.  
   
-    3.  설정 된 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> 속성을 `false`입니다.  
+    3.  <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> 속성을 `false`으로 설정합니다.  
   
     4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출합니다.  
   
@@ -127,7 +126,7 @@ ms.locfileid: "48108943"
   
 3.  게시에 대해 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 속성을 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 연결로 설정합니다.  
   
-4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 속성을 통해 게시가 존재하는지 확인합니다. 이 속성의 값이 `false`, 3 단계에서 게시 속성이 올바르게 정의 되지 또는 게시가 없는 것입니다.  
+4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 속성을 통해 게시가 존재하는지 확인합니다. 이 속성의 값이 `false`이면 3단계의 게시 속성이 올바르게 정의되지 않았거나 게시가 없는 것입니다.  
   
 5.  <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A> 메서드를 호출합니다.  
   
@@ -137,7 +136,7 @@ ms.locfileid: "48108943"
   
     2.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 이 메서드가 `false`를 반환하면 데이터베이스가 있는지 확인합니다.  
   
-    3.  설정 된 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> 속성을 `false`입니다.  
+    3.  <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> 속성을 `false`로 설정합니다.  
   
     4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출합니다.  
   

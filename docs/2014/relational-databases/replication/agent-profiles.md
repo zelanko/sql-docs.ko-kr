@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.profiles.perfprofiles.f1
@@ -15,12 +14,12 @@ ms.assetid: 0422e99c-e688-419b-bb4c-c7bebeef1d8d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4c469b6d3e4fa23b5b20b70671f2c6a211836a4d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: ce4dff443e52ef214e7c43f5df7eb50140937c1e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186323"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753005"
 ---
 # <a name="agent-profiles"></a>에이전트 프로필
   **에이전트 프로필** 대화 상자를 사용하여 에이전트 프로필을 관리할 수 있습니다. 에이전트 프로필을 사용하면 각 에이전트의 런타임 매개 변수를 편리하게 관리할 수 있습니다. 각 에이전트에는 기본 프로필이 있으며 미리 정의된 프로필이 추가된 에이전트도 있습니다. 예를 들어 병합 에이전트에는 느린 대역폭 연결을 위한 "느린 연결" 프로필이 있습니다. 대부분의 애플리케이션은 미리 정의된 프로필만으로 충분하지만 사용자 정의 프로필을 만들어 에이전트 동작을 사용자 지정할 수도 있습니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "48186323"
  프로필의 이름입니다.  
   
  **형식**  
- 프로필 유형: **사용자** (사용자 정의 프로필) 또는 **시스템** (미리 정의된 프로필)입니다.  
+ 프로필의 유형입니다. **사용자** (사용자 정의) 또는 **시스템** (미리 정의 됨).  
   
  **속성 (...)**  
  에이전트 프로필의 각 매개 변수에 사용된 값을 보려면 클릭합니다.  

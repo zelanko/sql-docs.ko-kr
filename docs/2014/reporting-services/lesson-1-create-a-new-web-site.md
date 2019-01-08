@@ -11,12 +11,12 @@ ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 79cb440796801e7557b59d75c07b72ed7fc06f6b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 11fb6cf816a665bb641671cb79b575367e63e63f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121283"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403828"
 ---
 # <a name="lesson-1-create-a-new-web-site"></a>1단원: 새 웹 사이트 만들기
   이 단원에서는 Visual C#용 ASP.NET 웹 사이트 템플릿을 사용하여 새 웹 사이트 프로젝트를 만드는 방법을 배웁니다.  

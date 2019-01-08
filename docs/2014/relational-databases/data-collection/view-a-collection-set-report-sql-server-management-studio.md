@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dc.reporthistory.calendar.f1
@@ -15,12 +15,12 @@ ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eef644a11cdf99cc480303972b70925e3fd66d13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 898dd309dae82818b60332b29c14f785c18b173b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202673"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760215"
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>컬렉션 집합 보고서 보기(SQL Server Management Studio)
   관리 데이터 웨어하우스를 구성한 다음에는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 컬렉션 집합 보고서를 볼 수 있습니다. 설치 프로그램 실행 중 설치되는 시스템 데이터 컬렉션 집합에 대해 보고서가 제공됩니다. 보고서에는 다음이 포함됩니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "48202673"
  **기간**  
  보고서에 포함할 시간 범위를 지정합니다. 기본값은 240분입니다. 선택 가능한 값은 15분, 60분, 240분(4시간), 720분(12시간) 및 1440분(24시간)입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터 컬렉션](data-collection.md)   
  [Management Studio의 사용자 지정 보고서](../../ssms/object/custom-reports-in-management-studio.md)   
  [관리 데이터 웨어하우스 구성&#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md)  

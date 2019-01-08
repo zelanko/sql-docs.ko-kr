@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 048929ec4ff58def3d392df3f326f31f98fe9d83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 02db491e350de93aff1015583f71566af747c878
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205873"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780265"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>MDSModelDeploy를 사용하여 모델 배포 패키지 배포
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 MDSModelDeploy 도구를 사용하여 다음 중 하나를 포함하는 패키지를 배포합니다.  
@@ -39,7 +38,7 @@ ms.locfileid: "48205873"
   
 -   모델을 배포하는 환경에서 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](administrators-master-data-services.md)를 참조하세요.  
   
--   데이터로 모델을 업데이트하려는 경우 배포하려는 버전을 **잠금** 또는 **커밋됨**상태로 만들 수 없습니다.  
+-   데이터로 모델을 업데이트하려는 경우 배포하려는 버전을 **잠금** 또는 **커밋됨** 상태로 만들 수 없습니다.  
   
 ### <a name="to-deploy-a-model-deployment-package"></a>모델 배포 패키지를 배포하려면  
   
@@ -70,19 +69,19 @@ ms.locfileid: "48205873"
     -   새 모델을 만들려면  
   
         ```  
-        MDSModelDeploy deploynew –package PackageName -model ModelName -service ServiceName  
+        MDSModelDeploy deploynew -package PackageName -model ModelName -service ServiceName  
         ```  
   
     -   모델 복제를 만들려면  
   
         ```  
-        MDSModelDeploy deployclone –package PackageName  
+        MDSModelDeploy deployclone -package PackageName  
         ```  
   
     -   기존 모델과 해당 데이터를 업데이트하려면  
   
         ```  
-        MDSModelDeploy deployupdate –package PackageName –version VersionName  
+        MDSModelDeploy deployupdate -package PackageName -version VersionName  
         ```  
   
     > [!IMPORTANT]  
@@ -115,9 +114,9 @@ ms.locfileid: "48205873"
   
 -   [메타 데이터 추가 &#40;Master Data Services&#41;](../../2014/master-data-services/add-metadata-master-data-services.md)  
   
--   [모델 개체 사용 권한 할당 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
+-   [모델 개체 사용 권한 할당&#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [모델 배포 &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
+ [모델 배포&#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

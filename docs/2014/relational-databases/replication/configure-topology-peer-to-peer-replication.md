@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.p2pwizard.peers.f1
@@ -13,12 +12,12 @@ ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5540401d4b0a05c3ebe87742f902e6e16b59498a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 54de95fe39ea6b99139ee040b93160a1a93ff1bf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208223"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776465"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>토폴로지 구성(피어 투 피어 복제)
   **토폴로지 구성** 페이지를 사용하여 새 노드 추가, 노드 삭제, 기존 노드 간 새 연결 추가와 같은 일반적인 구성 태스크를 수행할 수 있습니다. 이 마법사의 **게시** 페이지에서 선택한 노드는 디자인 화면에 표시됩니다. 구성 옵션을 지정하려면 노드, 연결 또는 디자인 화면을 마우스 오른쪽 단추로 클릭합니다.  
@@ -63,7 +62,7 @@ ms.locfileid: "48208223"
   
 ### <a name="options-for-each-node"></a>각 노드에 대해 사용할 수 있는 옵션  
  **새 피어 연결 추가**  
- 두 노드 사이에 연결을 추가합니다. 예를 들어 노드 A와 노드 B 사이의 연결을 추가하는 경우 복제 과정에서 두 개의 구독이 추가되는데 첫 번째는 노드 A에서 노드 B의 게시 변경 내용을 받는 데 사용되는 구독이고, 두 번째는 노드 B에서 노드 A의 게시 변경 내용을 받는 데 사용되는 구독입니다.  
+ 두 노드 사이에 연결을 추가합니다. 예를 들어 노드 A와 노드 B 사이에 연결을 추가하면 복제 과정에서 두 개의 구독이 추가됩니다. 첫 번째 구독은 노드 A에서 노드 B의 게시 변경 내용을 받는 데 사용되고, 두 번째 구독은 노드 B에서 노드 A의 게시 변경 내용을 받는 데 사용됩니다.  
   
  **피어 노드 삭제**  
  토폴로지에서 노드를 제거합니다. 예를 들어 노드 C를 제거하면 해당 노드에 있는 게시도 제거됩니다. 이 경우 노드 A와 노드 C 간의 구독 및 노드 B와 노드 C 간의 구독도 제거됩니다. 노드 C의 데이터베이스는 삭제되지 않으며 게시 및 배포를 계속 사용할 수 있습니다.  

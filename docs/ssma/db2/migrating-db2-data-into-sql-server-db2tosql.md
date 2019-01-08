@@ -10,12 +10,12 @@ ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b9dbaf1a3cc15373097a1aea996c36f895d45172
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c64b1ea3ecc283cdea92a5722c7a1dad120ecb50
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670392"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395186"
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>DB2 데이터를 SQL Server (DB2ToSQL)로 마이그레이션
 사용 하 여 변환된 된 개체를 성공적으로 동기화 한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 DB2에서 데이터를 마이그레이션할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
@@ -84,10 +84,10 @@ ms.locfileid: "51670392"
   
     -   수행 하는 데 **서버 쪽 데이터 마이그레이션**를 선택 합니다 **서버 쪽 데이터 마이그레이션 엔진** 옵션를 **프로젝트 설정** 대화 상자.  
   
-4.  마우스 오른쪽 단추로 클릭 **스키마** DB2 메타 데이터 탐색기에서를 클릭 한 다음 **데이터 마이그레이션**합니다. 개별 개체 또는 개체의 범주에 대 한 데이터를 마이그레이션할 수도 있습니다: 개체 또는 해당 부모 폴더를 마우스 오른쪽 단추로 클릭 선택 된 **데이터 마이그레이션** 옵션입니다.  
+4.  마우스 오른쪽 단추로 클릭 **스키마** DB2 메타 데이터 탐색기에서를 클릭 한 다음 **데이터 마이그레이션**합니다. 또한 개별 개체 또는 개체의 범주에 대 한 데이터를 마이그레이션할 수 있습니다. 개체 또는 해당 부모 폴더를 마우스 오른쪽 단추로 클릭 선택 된 **데이터 마이그레이션** 옵션입니다.  
   
     > [!NOTE]  
-    > 인스턴스에서 확장 팩 DB2 용 SSMA 설치 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 경우 **서버 쪽 데이터 마이그레이션 엔진** 을 선택한 경우 데이터베이스에서 대상 데이터베이스로 데이터를 마이그레이션하는 동안 다음 오류가 발생 합니다. ' SQL Server에 SSMA 데이터 마이그레이션 구성 요소를 찾을 수 없습니다, 가능한 서버 쪽 데이터 마이그레이션 설정 되지 않습니다. 확장 팩 올바르게 설치 되어 있는지를 확인 하세요. '. 클릭 **취소** 데이터 마이그레이션이 종료 합니다.  
+    > 인스턴스에서 확장 팩 DB2 용 SSMA 설치 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 경우에 **서버 쪽 데이터 마이그레이션 엔진** 을 선택한 경우 데이터베이스에서 대상 데이터베이스로 데이터를 마이그레이션하는 동안 다음 오류가 발생 합니다. ' SQL Server에 SSMA 데이터 마이그레이션 구성 요소를 찾을 수 없습니다, 가능한 서버 쪽 데이터 마이그레이션 설정 되지 것입니다. 확장 팩 올바르게 설치 되어 있는지를 확인 하세요. '. 클릭 **취소** 데이터 마이그레이션이 종료 합니다.  
   
 5.  에 **DB2에 연결** 대화 상자에서 연결 자격 증명을 입력 한 다음 클릭 **Connect**합니다. DB2에 연결 하는 방법에 대 한 자세한 내용은 참조 하세요. [DB2 데이터베이스에 연결 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
   

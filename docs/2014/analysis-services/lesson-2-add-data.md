@@ -1,5 +1,5 @@
 ---
-title: '2 단원: 데이터 추가 | Microsoft Docs'
+title: '2단원: 데이터를 추가 합니다. | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d2ffda70d3af46434886a7f2878ce238d3190905
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 696b4e9402e58da6308e6746cadbc25d43396d8f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049353"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416354"
 ---
 # <a name="lesson-2-add-data"></a>2단원: 데이터 추가
   이 섹션에서는 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 의 테이블 가져오기 마법사를 사용하여 AdventureWorksDW SQL Database에 연결하고, 데이터를 선택하고, 미리 보고 필터링한 다음 해당 데이터를 모델 작업 영역으로 가져옵니다.  
@@ -25,10 +25,10 @@ ms.locfileid: "48049353"
   
  데이터를 가져오는 방법 및 데이터를 가져올 수 있는 다양한 종류의 데이터 원본에 대한 자세한 내용은 [데이터 원본&#40;SSAS 테이블 형식&#41;](data-sources-ssas-tabular.md)을 참조하세요.  
   
- 이 단원에 소요되는 예상 시간: **20분**  
+ 이 단원에 소요되는 예상 시간: **20 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
- 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원인 [1단원: 새 테이블 형식 모델 프로젝트를 만들기](lesson-1-create-a-new-tabular-model-project.md)를 완료해야 합니다.  
+ 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원을 완료해야 합니다. [1 단원: 새 테이블 형식 모델 프로젝트를 만들](lesson-1-create-a-new-tabular-model-project.md)합니다.  
   
 ## <a name="create-a-connection"></a>연결 만들기  
   
@@ -53,9 +53,9 @@ ms.locfileid: "48049353"
   
 7.  **데이터를 가져오는 방법 선택** 페이지에서 **데이터를 가져올 테이블 및 뷰를 목록에서 선택** 이 선택되어 있는지 확인합니다. **다음** 을 클릭하여 원본 데이터베이스에 있는 모든 원본 테이블 목록을 표시할 수 있도록 테이블 및 뷰를 목록에서 선택하려고 합니다.  
   
-8.  **테이블 및 뷰 선택** 페이지에서 **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**, **DimProductSubcategory**및 **FactInternetSales**테이블의 확인란을 선택합니다.  
+8.  에 **테이블 및 뷰 선택** 페이지에서 다음 테이블에 대 한 확인란을 선택 합니다. **DimCustomer**, **DimDate**합니다 **DimGeography**를 **DimProduct**를 **DimProductCategory**,  **DimProductSubcategory**, 및 **FactInternetSales**합니다.  
   
-9. 모델의 테이블에 알아보기 쉬운 이름을 지정하려고 합니다. **DimCustomer** 의 **이름**열에서 셀을 클릭합니다. Dimcustomer에서 "Dim"을 제거하여 테이블의 이름을 바꿉니다.  
+9. 모델의 테이블에 알아보기 쉬운 이름을 지정하려고 합니다. **DimCustomer** 의 **이름**열에서 셀을 클릭합니다. DimCustomer에서 "Dim"을 제거 하 여 테이블을 이름을 바꿉니다.  
   
 10. 다른 테이블의 이름을 바꿉니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48049353"
  데이터베이스에 연결하여 가져올 테이블을 선택하고 테이블에 이름을 지정했으므로 다음 섹션인 [가져오기 전에 테이블 데이터 필터링](#FilterData)으로 이동합니다.  
   
 ##  <a name="FilterData"></a> 테이블 데이터 필터링  
- 데이터베이스에서 가져온 DimCustomer 테이블에는 원래 SQL Server Adventure Works 데이터베이스의 데이터 하위 집합이 포함되어 있습니다. DimCustomer 테이블에서 필요 없는 일부 열을 필터링합니다. 가능하면 모델에 사용되는 메모리 내 공간을 절약하기 위해 사용하지 않을 데이터는 필터링하려고 합니다.  
+ 데이터베이스에서 가져온 DimCustomer 테이블에는 원래 SQL Server Adventure Works 데이터베이스의 데이터 하위 집합이 포함되어 있습니다. 필요 하지 않은 DimCustomer 테이블에서 열의 일부 필터링 됩니다. 가능하면 모델에 사용되는 메모리 내 공간을 절약하기 위해 사용하지 않을 데이터는 필터링하려고 합니다.  
   
 #### <a name="to-filter-the-table-data-prior-to-importing"></a>가져오기 전에 테이블 데이터를 필터링하려면  
   
@@ -92,7 +92,7 @@ ms.locfileid: "48049353"
   
 3.  이외의 다른 열이 모두 선택되어 있는지 확인하고 **확인**을 클릭합니다.  
   
-     **적용된 필터** 라는 단어가 **Customer** 행의 **필터 세부 정보** 열에 표시됩니다. 이 링크를 클릭하면 방금 적용한 필터에 대한 텍스트 설명이 표시됩니다.  
+     라는 단어가 **적용 된 필터** 에 표시 됩니다는 **필터 세부 정보** 열에는 **고객** 행의 텍스트 설명을 보면 해당 링크를 클릭 합니다 방금 적용 한 필터입니다.  
   
 4.  나머지 각 테이블에서 다음 열에 대한 확인란의 선택을 취소하여 테이블을 필터링합니다.  
   
@@ -165,6 +165,6 @@ ms.locfileid: "48049353"
 -   [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 **파일** 메뉴를 클릭한 다음 **모두 저장**을 클릭합니다.  
   
 ## <a name="next-step"></a>다음 단계  
- 이 자습서를 계속하려면 다음 단원인 [3단원: 열 이름 바꾸기](rename-columns.md)로 이동하세요.  
+ 이 자습서를 계속하려면 다음 단원으로 이동하십시오. [3 단원: 열 이름 바꾸기](rename-columns.md)합니다.  
   
   

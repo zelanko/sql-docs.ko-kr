@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fac6931d7645a778bd332f8bc5e1ef3d2f5059ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ae1ad6aabc87d1cf0d7d92da5b97092c23bc02d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629920"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511927"
 ---
 # <a name="bcpbind"></a>bcp_bind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -122,7 +122,7 @@ bcp_bind(hdbc, szName, 0,
   
  *eDataType* 매개 변수는 열거 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlncli.h의 데이터 형식 토큰, ODBC C 데이터 형식 표시기 없습니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 특정 형식 SQLINT2를 사용하여 2바이트 정수인 ODBC 형식 SQL_C_SHORT를 지정할 수 있습니다.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SQLXML 및 SQLUDT 데이터 형식 토큰에 대 한 지원을 도입 된 ***eDataType*** 매개 변수입니다.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SQLXML 및 SQLUDT 데이터 형식 토큰에 대 한 지원을 도입 합니다 **_eDataType_** 매개 변수입니다.  
  
  다음 표에는 유효한 열거형 데이터 형식 및 해당 ODBC C 데이터 형식이 나열되어 있습니다.
   
@@ -144,7 +144,7 @@ bcp_bind(hdbc, szName, 0,
 |SQLBITN|char|  
 |SQLINT1|char|  
 |SQLINT2|short int|  
-|SQLINT4|ssNoversion|  
+|SQLINT4|int|  
 |SQLINT8|_int64|  
 |SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8: SQLINT8|  
 |SQLFLT4|FLOAT|  
@@ -169,7 +169,7 @@ bcp_bind(hdbc, szName, 0,
 |SQLXML|*지원되는 C 데이터 형식:*<br />-   char*<br />-   wchar_t *<br />-   unsigned char *|  
   
  *idxServerCol*  
- 데이터 복사 대상인 데이터베이스 테이블 열의 서수 위치입니다. 테이블의 첫 번째 열은 열 1입니다. 열의 서 수 위치를 보고 [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)합니다.  
+ 데이터 복사 대상인 데이터베이스 테이블 열의 서수 위치입니다. 테이블의 첫 번째 열은 열 1입니다. 열의 서수 위치는 [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md)를 사용하여 확인할 수 있습니다.  
   
 ## <a name="returns"></a>반환 값  
  SUCCEED 또는 FAIL  
@@ -177,7 +177,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="remarks"></a>Remarks  
  사용 하 여 **bcp_bind** 의 테이블에 프로그램 변수에서 데이터를 복사할 빠르고 효율적인 방법을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
- 호출 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 이 또는 다른 대량 복사 함수를 호출 하기 전에 합니다. 호출 **bcp_init** 설정 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사의 대상 테이블입니다. 호출할 때 **bcp_init** 사용에 대 한 **bcp_bind** 하 고 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)서 **bcp_init** *szDataFile*매개 변수를 데이터 파일을 나타내는 NULL로 설정 됩니다 **bcp_init * eDirection* 매개 변수가 DB_IN으로 설정 됩니다.  
+ 호출 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 이 또는 다른 대량 복사 함수를 호출 하기 전에 합니다. 호출 **bcp_init** 설정 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사의 대상 테이블입니다. 호출할 때 **bcp_init** 사용에 대 한 **bcp_bind** 하 고 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)서 **bcp_init** *szDataFile*매개 변수를 데이터 파일을 나타내는 NULL로 설정 됩니다 합니다 **bcp_init**_eDirection_ 매개 변수가 DB_IN으로 설정 됩니다.  
   
  개별적 **bcp_bind** 의 모든 열에 대 한 호출을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복사 하려는 테이블입니다. 필요한 **bcp_bind** 호출을 수행한 다음 호출 **bcp_sendrow** 하 여 프로그램 변수의 데이터 행을 보낼 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 열을 다시 바인딩하는 것은 지원되지 않습니다.  
   
@@ -297,7 +297,7 @@ if ((nRowsProcessed = bcp_done(hdbc)) == -1)
 printf_s("%ld rows copied.\n", nRowsProcessed);  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [대량 복사 함수](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

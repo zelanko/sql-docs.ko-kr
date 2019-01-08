@@ -14,12 +14,12 @@ ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 50dd31c343150362f1124d9476c526216c675fda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9ca50a030fef65c9de02bc93dcd970df2686b0a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196993"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420394"
 ---
 # <a name="connect-to-a-data-mining-server"></a>데이터 마이닝 서버에 연결
   ![연결 단추](media/misc-connection.gif "연결 단추")  
@@ -68,7 +68,7 @@ ms.locfileid: "48196993"
   
  **연결이; 내 모든 작업 손실?**  
   
- 서버에 대한 연결이 끊긴 경우 Excel에 저장되어 있으므로 결과 및 데이터가 손실됩니다. 하지만 몇몇 임시 모델을 만든 경우에는 얼마 안 가서 서버에서 해당 모델이 삭제됩니다. 따라서 연결이 일시적으로 끊긴 경우에는 모델이 아직 삭제되지 않을 수 있습니다.  
+ 서버에 대한 연결이 끊긴 경우 Excel에 저장되어 있으므로 결과 및 데이터가 손실됩니다. 하지만 몇몇 임시 모델을 만든 경우에는 얼마 안 가서 서버에서 해당 모델이 삭제됩니다. 따라서 연결을 일시적으로 손실 되 면 잠시 모델 삭제 되지는 않으며 아직  
   
  모든 보고서와 테이블이 Excel에 저장되기 때문에 생성된 데이터나 결과가 전혀 손실되지 않습니다.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48196993"
   
 2.  연결 활동 로그를 확인하고 열 및 예측 가능 결과(예)를 검토하여 모델을 찾습니다.  
   
-     고급 사용자: DMX 또는 XMLA를 사용 하 여 잘 알고 있다면 문의 나중에 사용할 파일을 복사할 수 있습니다.  
+     고급 사용자: DMX 또는 XMLA에 대해 잘 알고 있는 경우 이 문을 나중에 사용할 수 있도록 파일에 복사할 수 있습니다.  
   
 3.  임시 모델 및 구조 이름을 찾으면 엽니다 **모델 관리** 고 모델을 선택 합니다.  
   

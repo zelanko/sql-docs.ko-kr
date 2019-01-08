@@ -1,24 +1,23 @@
 ---
-title: '4단계: 6단원 패키지 배포 | Microsoft Docs'
+title: '4단계: 6 단원 패키지 배포 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e7cc4a80849f9dfd12bd7148351c0230e30e64ed
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 02491a0773a3ecbaaf6384bf88d7c07d1549745b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905043"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752633"
 ---
-# <a name="step-4-deploying-the-lesson-6-package"></a>4단계: 6단원 패키지 배포
+# <a name="step-4-deploying-the-lesson-6-package"></a>4단계: 6 단원 패키지 배포
   패키지를 배포하려면 SQL Server 인스턴스의 Integration Services에서 SSISDB 카탈로그에 패키지를 추가해야 합니다. 이 단원에서는 6 단원 패키지를 SSISDB 카탈로그에 추가하고, 매개 변수를 설정하 고 패키지를 실행합니다. 이 단원에서 SQL Server Management Studio를 사용하여 SSISDB 카탈로그에 6 단원 패키지를 추가하고 패키지를 배포합니다. 패키지를 배포한 후 새 위치를 가리키도록 패키지를 수정한 다음 매개 변수를 실행합니다.  
   
  이 단원에서는 다음을 수행합니다.  

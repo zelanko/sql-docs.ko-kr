@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3cffdd8b6040e1740e61043433cc95ca3319f5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e33dfa78117b68d1cb67baed2aea6bd7f5487e5b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832041"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398126"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,12 +39,12 @@ ms.locfileid: "47832041"
 |\<열을 상속 >||모든 열을 상속 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)합니다.|  
 |**start_value**|**sql_variant NOT NULL**|시퀀스 개체의 시작 값입니다. ALTER SEQUENCE를 사용하여 시퀀스 개체가 다시 시작될 경우 이 값에서 다시 시작됩니다. 때 시퀀스 개체 순환이 진행 합니다 **minimum_value** 또는 **maximum_value**아니라는 **start_value**합니다.|  
 |**increment**|**sql_variant NOT NULL**|각각의 생성되는 값 다음에 시퀀스 개체를 늘리는 데 사용되는 값입니다.|  
-|**minimum_value**|**NULL sql_variant**|시퀀스 개체가 생성할 수 있는 최소값입니다. 이 값에 도달하면 시퀀스 개체가 값을 더 생성하려고 할 때 오류를 반환하거나 CYCLE 옵션이 지정되는 경우 다시 시작됩니다. MINVALUE가 지정되지 않은 경우 이 열은 시퀀스 생성기의 데이터 형식이 지원하는 최소값을 반환합니다.|  
+|**minimum_value**|**NULL sql_variant**|시퀀스 개체가 생성할 수 있는 최소값입니다. 이 값에 도달하면 시퀀스 개체가 값을 더 생성하려고 할 때 오류를 반환하거나 CYCLE 옵션이 지정되는 경우 다시 시작됩니다. 없는 MINVALUE가 지정 된 경우이 열은 시퀀스 생성기의 데이터 형식이 지 원하는 최소값을 반환 합니다.|  
 |**maximum_value**|**NULL sql_variant**|시퀀스 개체가 생성할 수 있는 최대값입니다. 이 값에 도달하면 시퀀스 개체가 값을 더 생성하려고 할 때 오류 반환을 시작하거나 CYCLE 옵션이 지정되는 경우 다시 시작됩니다. MAXVALUE가 지정되지 않은 경우 이 열은 시퀀스 개체의 데이터 형식이 지원하는 최대값을 반환합니다.|  
 |**is_cycling**|**비트 NOT NULL**|시퀀스 개체에 대해 NO CYCLE이 지정된 경우 0을 반환하고 CYCLE이 지정된 경우 1을 반환합니다.|  
 |**is_cached**|**비트 NOT NULL**|시퀀스 개체에 대해 NO CACHE가 지정된 경우 0을 반환하고 CACHE가 지정된 경우 1을 반환합니다.|  
 |**cache_size**|**int NULL**|시퀀스 개체에 대해 지정된 캐시 크기를 반환합니다. NO CACHE 옵션을 사용하여 시퀀스가 만들어지거나 캐시 크기를 지정하지 않고 CACHE가 지정된 경우 이 열은 NULL을 포함합니다. 캐시 크기로 지정된 값이 시퀀스 개체가 반환할 수 있는 값의 최대 개수보다 클 경우 가져올 수 없는 캐시 크기가 계속 표시됩니다.|  
-|**system_type_id**|**tinyint NOT NULL**|시퀀스 개체의 데이터 형식에 대한 시스템 유형 ID입니다.|  
+|**system_type_id**|**tinyint NOT NULL**|시퀀스 개체의 데이터 형식에 대 한 시스템 형식의 ID입니다.|  
 |**user_type_id**|**int NOT NULL**|사용자가 정의한 시퀀스 개체에 대한 데이터 형식의 ID입니다.|  
 |**전체 자릿수**|**tinyint NOT NULL**|데이터 형식의 최대 전체 자릿수입니다.|  
 |**scale**|**tinyint NOT NULL**|형식의 최대 소수 자릿수입니다. 소수 자릿수는 전체 자릿수와 함께 반환되어 사용자에게 전체 메타데이터를 제공합니다. 정수 형식만 허용되기 때문에 시퀀스 개체의 소수 자릿수는 항상 0입니다.|  

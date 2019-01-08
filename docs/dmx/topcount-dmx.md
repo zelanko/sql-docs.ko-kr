@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e67e1e408186e78f00c4b54399fb2e87ac673541
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0ec801da96735f15b6320c3f0372855c1ff3c2c8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601743"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502827"
 ---
 # <a name="topcount-dmx"></a>TopCount(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -97,9 +97,9 @@ NATURAL PREDICTION JOIN
   
 |Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
-|Sport-100|4334|0.29…|0.25…|  
-|Water Bottle|2866|0.19…|0.17…|  
-|Patch kit|2113|0.14…|0.13…|  
+|Sport-100|4334|0.29...|0.25...|  
+|Water Bottle|2866|0.19...|0.17...|  
+|Patch kit|2113|0.14...|0.13...|  
   
  그러나 이 유형의 쿼리는 프로덕션 설정의 성능에 영향을 미칠 수 있습니다. 이는 이 쿼리가 알고리즘의 모든 예측 집합을 반환하고, 이러한 예측을 정렬하며 최상위 3개를 반환하기 때문입니다.  
   
@@ -111,7 +111,7 @@ SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $
   
  결과에는 지원 값으로 정렬된 최상위 3개 예측이 포함됩니다. $SUPPORT를 $PROBABILITY 또는 $ADJUSTED_PROBABILITY로 대체하여 확률 또는 조정된 확률로 등급이 지정된 예측을 반환할 수 있습니다. 자세한 내용은 **예측 (DMX)** 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)   

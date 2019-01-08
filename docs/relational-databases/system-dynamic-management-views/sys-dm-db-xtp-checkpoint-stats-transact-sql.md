@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 216b04e58d741d3c44cd187ba94eaac7ee791762
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fdb255570febc6d37bef824958c15422b6fae733
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837801"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503189"
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
   
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 상당히 다른 보다 최신 버전 이며 낮은 항목에 설명 되어 [SQL Server 2014](#bkmk_2014)합니다.**
   
-## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상  
+## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상.  
  다음 표에서 열을 설명 `sys.dm_db_xtp_checkpoint_stats`부터 **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** 합니다.  
   
 |열 이름|형식|Description|  
@@ -67,7 +67,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |last_closed_checkpoint_ts|**bigint**|마지막으로 닫힌된 검사점의 타임 스탬프입니다.|  
 |hardened_recovery_lsn|**numeric(38)**|복구는이 LSN에서 시작 됩니다.|  
 |hardened_root_file_guid|**uniqueidentifier**|마지막으로 완료 된 검사점의 결과로 확정 루트 파일의 GUID입니다.|  
-|hardened_root_file_watermark|**bigint**|**내부만**합니다. 얼마나 유효 최대 루트 파일을 읽는 데 (이 내부적으로 관련 형식에만 해당-BSN 호출).|  
+|hardened_root_file_watermark|**bigint**|**내부만**합니다. 얼마나 유효 최대 루트 파일을 읽는 데 (이 내부적으로 관련 형식에만-BSN 호출).|  
 |hardened_truncation_lsn|**numeric(38)**|잘림 지점의 LSN입니다.|  
 |log_bytes_since_last_close|**bigint**|마지막 바이트를 현재 로그 끝을 닫습니다.|  
 |time_since_last_close_in_ms|**bigint**|닫기 마지막 검사점 이후 시간입니다.|  

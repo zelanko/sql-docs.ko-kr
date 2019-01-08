@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace, extended events equivalents
@@ -15,12 +14,12 @@ ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 838a5a3c6b2693ad1d96cab131dd59864ca4788c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0dd90613851184ad7fcff16ecf0a89875433dbfd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123893"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764765"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>SQL 추적 이벤트 클래스에 해당하는 확장 이벤트 항목 확인
   확장 이벤트를 사용하여 SQL 추적 이벤트 클래스 및 열에 해당하는 이벤트 데이터를 수집하려는 경우 SQL 추적 이벤트가 확장 이벤트의 이벤트 및 동작에 매핑되는 방식을 이해하고 있으면 유용합니다.  

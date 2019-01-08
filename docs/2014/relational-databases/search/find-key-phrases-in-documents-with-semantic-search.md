@@ -12,19 +12,19 @@ ms.assetid: 6ee3676e-ed5d-43ec-aeca-1eed78967111
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fbc48ab864b3492346798042c4c1a340c459a287
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ead6e45099ef16f8ee7d4935c5f02b528bd5750
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179563"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407000"
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>의미 체계 검색을 사용하여 문서에서 키 구 찾기
   통계 의미 체계 인덱싱을 위해 구성된 문서 또는 텍스트 열의 키 구를 찾는 방법에 대해 설명합니다.  
   
 ##  <a name="BasicsQueryKey"></a> 문서의 키 구 찾기  
   
-###  <a name="howtofind"></a> 방법: SEMANTICKEYPHRASETABLE 사용 하 여 문서의 키 구 찾기  
+###  <a name="howtofind"></a> 어떻게: SEMANTICKEYPHRASETABLE을 사용하여 문서의 키 구 찾기  
  특정 문서에서 키 구를 식별하거나 특정 키 구가 포함된 문서를 식별하려면 [semantickeyphrasetable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semantickeyphrasetable-transact-sql) 함수를 쿼리합니다.  
   
  SEMANTICKEYPHRASETABLE은 지정된 테이블의 열과 관련된 키 구가 있는 0개 이상의 행으로 구성된 테이블을 반환합니다. SELECT 문의 FROM 절에서 이 행 집합 함수를 일반 테이블 이름과 마찬가지로 참조할 수 있습니다.  
@@ -54,8 +54,8 @@ GO
   
  **SEMANTICKEYPHRASETABLE** 함수는 테이블 검색 대신 인덱스 검색을 사용하여 이러한 결과를 효율적으로 검색합니다.  
   
-###  <a name="HowToTopDocuments"></a> 예제 2: 특정 키 구가 포함 된 상위 문서 찾기  
- 다음 예에서는 AdventureWorks 예제 데이터베이스에 있는 Production.Document 테이블의 Document 열에서 “Bracket” 키 구가 포함된 상위 25개의 문서를 검색합니다.  
+###  <a name="HowToTopDocuments"></a> 예제 2: 특정 키 구가 포함된 상위 문서 찾기  
+ 다음 예제에서는 AdventureWorks 예제 데이터베이스에 있는 Production.Document 테이블의 Document 열에서 "Bracket" 키 구가 포함된 상위 25개의 문서를 검색합니다.  
   
 ```tsql  
 SELECT TOP (25) DOC_TBL.DocumentID, DOC_TBL.DocumentSummary  

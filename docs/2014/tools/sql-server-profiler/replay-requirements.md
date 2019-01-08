@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - event classes [SQL Server], replaying traces
@@ -16,12 +15,12 @@ ms.assetid: 0e01dfc7-84b9-47f6-8bf7-b0656df4fa7d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 447792a89be970078fdfca3f1e79eadbcc25bbfe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 9b9da4b68bba6358ff473846fb710f8fa6454e5d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173673"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757705"
 ---
 # <a name="replay-requirements"></a>Replay Requirements
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 나 Distributed Replay Utility를 사용하여 추적 데이터를 재생하려면 특정 이벤트 클래스 및 열 집합이 추적에 캡처되어야 합니다. **TSQL_Replay** 추적 템플릿을 사용하여 나중에 재생에 사용되도록 추적을 구성한 경우 이러한 설정이 기본적으로 사용됩니다. 이 항목에서는 이러한 설정 및 기타 재생 요구 사항에 대해 설명합니다.  
@@ -124,7 +123,7 @@ ms.locfileid: "48173673"
  추적 재생에 필요한 권한에 대한 자세한 내용은 [Permissions Required to Run SQL Server Profiler](sql-server-profiler.md)을 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
- [추적 테이블 재생 &#40;SQL Server Profiler&#41;](replay-a-trace-table-sql-server-profiler.md)   
+ [추적 테이블 재생&#40;SQL Server Profiler&#41;](replay-a-trace-table-sql-server-profiler.md)   
  [추적 파일 재생&#40;SQL Server Profiler&#41;](replay-a-trace-file-sql-server-profiler.md)   
  [SQL Server 이벤트 클래스 참조](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [sp_defaultdb&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-defaultdb-transact-sql)   

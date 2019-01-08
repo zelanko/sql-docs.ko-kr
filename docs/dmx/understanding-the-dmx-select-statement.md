@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 720956a936127cf3fec82fabc4e140782fe2e0da
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f76729b419fccf3d17e66ddd8ab00e8b54b1b264
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144838"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398076"
 ---
 # <a name="understanding-the-dmx-select-statement"></a>DMX Select 문 이해
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "50144838"
   
      해당 사례에서 데이터 도메인인 마이닝 구조를 드릴스루하고 Gender, Bike Buyer 등 열의 각 행을 확인해야 합니다.  
   
- **중요:** 또는 식 목록에 포함 되는 모든 항목을 **여기서** 절에서 정의한 데이터 도메인에서 가져와야 합니다 합니다 **FROM** 절. 데이터 도메인을 혼합할 수 없습니다.  
+ **중요:** 또는 식 목록에 포함 되는 모든 항목을 **위치** 절에서 정의한 데이터 도메인에서 가져와야는 **FROM** 절. 데이터 도메인을 혼합할 수 없습니다.  
   
 ##  <a name="Select_Types"></a> 유형 선택  
  구문의 **선택** 문은 많은 다양 한 작업을 지원 합니다. 다음 패턴을 사용하여 이러한 태스크를 수행합니다.  
@@ -101,7 +101,7 @@ ms.locfileid: "50144838"
  [Select 유형으로 이동](#Select_Types)  
   
 ## <a name="see-also"></a>관련 항목  
- [DMX&#40;Data Mining Extensions&#41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Data Mining Extensions & #40; DMX & #41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
  [Data Mining Extensions &#40;DMX&#41; 구문 표기 규칙](../dmx/data-mining-extensions-dmx-syntax-conventions.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -20,12 +19,12 @@ ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5de6cba6d67f6b023f14306bfc41a85dbae8023d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd3f6498cbfb4ef8cf38e27879d619472a6693ce
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162093"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763265"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>복제 스크립트 업그레이드(복제 Transact-SQL 프로그래밍)
   [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트 파일을 사용하여 복제 토폴로지를 프로그래밍 방식으로 구성할 수 있습니다. 자세한 내용은 [복제 시스템 저장 프로시저 개념](../concepts/replication-system-stored-procedures-concepts.md)을 참조하세요.  
@@ -92,7 +91,7 @@ ms.locfileid: "48162093"
   
     -   끌어오기 구독의 경우 [sp_addpullsubscription_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)의 실행을 업데이트하여 **@job_name** 및 **@job_password**에 대해 구독자에서 배포 에이전트가 실행되는 Windows 자격 증명을 지정합니다. 이 작업은 [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql)을 실행한 후에 수행합니다. 자세한 내용은 [끌어오기 구독 만들기](../create-a-pull-subscription.md)를 참조하세요.  
   
-    -   밀어넣기 구독의 경우 게시자에서 [sp_addpushsubscription_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)를 실행합니다. **@subscriber**, **@subscriber_db**, **@publication**을 지정하고, **@job_name** 및 **@job_password**에 대해 배포자에서 배포 에이전트가 실행되는 Windows 자격 증명을 지정한 다음 이 에이전트 작업의 일정을 지정합니다. 자세한 내용은 [Specify Synchronization Schedules](../specify-synchronization-schedules.md)을 참조하세요. 이 작업은 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)을 실행한 후에 수행됩니다. 자세한 내용은 [밀어넣기 구독 만들기](../create-a-push-subscription.md)을 참조하세요.  
+    -   밀어넣기 구독의 경우 게시자에서 [sp_addpushsubscription_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)를 실행합니다. **@subscriber**, **@subscriber_db**, **@publication**을 지정하고, **@job_name** 및 **@job_password**에 대해 배포자에서 배포 에이전트가 실행되는 Windows 자격 증명을 지정한 다음 이 에이전트 작업의 일정을 지정합니다. 자세한 내용은 [Specify Synchronization Schedules](../specify-synchronization-schedules.md)을 참조하세요. 이 작업은 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)을 실행한 후에 수행됩니다. 자세한 내용은 [Create a Push Subscription](../create-a-push-subscription.md)을 참조하세요.  
   
 ### <a name="to-upgrade-scripts-that-configure-a-merge-publication"></a>병합 게시를 구성하는 스크립트를 업그레이드하려면  
   
@@ -108,7 +107,7 @@ ms.locfileid: "48162093"
   
     -   끌어오기 구독의 경우 [sp_addmergepullsubscription_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)의 실행을 업데이트하여 **@job_name** 및 **@job_password**에 대해 구독자에서 병합 에이전트가 실행되는 Windows 자격 증명을 지정합니다. 이 작업은 [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)을 실행한 후 수행합니다. 자세한 내용은 [끌어오기 구독 만들기](../create-a-pull-subscription.md)를 참조하세요.  
   
-    -   밀어넣기 구독의 경우 게시자에서 [sp_addmergepushsubscription_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)를 실행합니다. **@subscriber**, **@subscriber_db**, **@publication**을 지정하고, **@job_name** 및 **@job_password**에 배포자에서 병합 에이전트가 실행되는 Windows 자격 증명을 지정한 다음 이 에이전트 작업의 일정을 지정합니다. 자세한 내용은 [Specify Synchronization Schedules](../specify-synchronization-schedules.md)을 참조하세요. 이 작업은 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)을 실행한 후 수행합니다. 자세한 내용은 [밀어넣기 구독 만들기](../create-a-push-subscription.md)을 참조하세요.  
+    -   밀어넣기 구독의 경우 게시자에서 [sp_addmergepushsubscription_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)를 실행합니다. **@subscriber**, **@subscriber_db**, **@publication**을 지정하고, **@job_name** 및 **@job_password**에 배포자에서 병합 에이전트가 실행되는 Windows 자격 증명을 지정한 다음 이 에이전트 작업의 일정을 지정합니다. 자세한 내용은 [Specify Synchronization Schedules](../specify-synchronization-schedules.md)을 참조하세요. 이 작업은 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)을 실행한 후 수행합니다. 자세한 내용은 [Create a Push Subscription](../create-a-push-subscription.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
  다음은 Product 테이블의 트랜잭션 게시를 만드는 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 스크립트의 예제입니다. 이 게시에서는 지연 업데이트를 장애 조치로 사용하는 즉시 업데이트를 지원합니다. 읽기 쉽도록 기본 매개 변수가 삭제되었습니다.  

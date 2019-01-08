@@ -16,12 +16,12 @@ ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 09b48e20683256eddd7d2619e8f4cbe912c6f0a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fc3ab4ce541e194f9768cc710993db0119eaefd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207585"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410190"
 ---
 # <a name="create-modify-and-delete-a-data-driven-subscription"></a>Create, Modify, and Delete a Data-Driven Subscription
   데이터 기반 구독은 런타임에 구독을 처리하는 데 사용하는 데이터 값을 가져오는 쿼리 기반 구독입니다. 구독이 실행될 때 받는 사람, 보고서 배달 옵션, 렌더링 형식 및 매개 변수 설정에 대한 최신 정보를 가져오기 위한 쿼리가 처리됩니다. 쿼리 결과가 구독 정의에 조합되어 직원 데이터베이스, 고객 데이터베이스 또는 구독자 데이터로 사용할 수 있는 정보가 포함된 기타 데이터베이스에서 이미 유지 관리되고 있는 데이터를 사용하는 동적 구독을 형성합니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "48207585"
   
 2.  **구독** 탭을 클릭합니다. 또는 보고서 관리자 맨 위에서 **내 구독** 링크를 클릭합니다.  
   
-3.  수정할 구독을 선택합니다. 다음 아이콘은 데이터 기반 구독을 나타냅니다. ![데이터 기반 구독 아이콘](../media/hlp-16subscriptiondd.gif "데이터 기반 구독 아이콘")  
+3.  수정할 구독을 선택합니다. 다음은 데이터 기반 구독을 나타내는 아이콘입니다. ![데이터 기반 구독 아이콘](../media/hlp-16subscriptiondd.gif "데이터 기반 구독 아이콘")  
   
 #### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>기존 데이터 기반 구독을 수정하려면(SharePoint 모드)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48207585"
   
 -   **데이터 요구 사항**. 구독자 데이터를 포함하는 액세스 가능한 외부 데이터 원본이 있어야 합니다.  
   
--   **사용자 요구 사항**. 구독 작성자는 "보고서 관리" 및 "모든 구독 관리"의 권한을 갖고 있어야 합니다. 항목 수준의 태스크 사용 권한에 대 한 자세한 내용은 참조 하세요. [Tasks and Permissions](../security/tasks-and-permissions.md)합니다. 또한 작성자는 구독자 데이터가 포함된 외부 데이터 원본 액세스를 위해 필요한 자격 증명도 갖고 있어야 합니다.  
+-   **사용자 요구 사항**. 구독 작성자는 "보고서 관리" 및 "모든 구독 관리"의 권한을 갖고 있어야 합니다. 항목 수준의 태스크 사용 권한에 대한 자세한 내용은 [태스크 및 사용 권한](../security/tasks-and-permissions.md)을 참조하세요. 또한 작성자는 구독자 데이터가 포함된 외부 데이터 원본 액세스를 위해 필요한 자격 증명도 갖고 있어야 합니다.  
   
 ##  <a name="bkmk_define_query"></a> 구독 정보를 검색 하는 쿼리를 정의 합니다.  
  데이터 기반 구독은 구독자 데이터를 검색하는 쿼리나 명령을 지정해야 합니다. 쿼리는 구독자마다 하나의 행을 생성해야 합니다. 전자 메일 배달 확장 프로그램을 사용하는 경우 쿼리는 각 구독자에 대한 유효한 전자 메일 별칭을 반환해야 합니다. 생성되는 배달 수는 쿼리에서 반환하는 행 수에 따라 다릅니다. 행 집합이 10,000개의 행으로 구성되는 경우 구독은 10,000개의 보고서를 배달합니다.  
@@ -98,7 +98,7 @@ ms.locfileid: "48207585"
 ##  <a name="bkmk_run_subscription"></a> 구독 실행  
  구독 처리 조건을 구성해야 합니다. 일정을 구성하거나 보고서 실행 스냅숏 업데이트에 맞춰 구독을 트리거할 수 있습니다.  
   
- ![참고](../media/rs-fyinote.png "참고") 즉시 구독을 실행 하는 데 사용할 수 있는 사용자 인터페이스에 기능 없음 상태인 동안 간단한 Windows PowerShell 스크립트를를 사용 하 여 실행에 대 한 구독을 트리거 수 있습니다. 자세한 내용은 참조 하세요.의 "스크립트: (영문)을 단일 구독 실행" 섹션 [변경 하 고 목록 Reporting Services Subscription Owners and Run a Subscription 사용 하 여 PowerShell](manage-subscription-owners-and-run-subscription-powershell.md)합니다.  
+ ![참고](../media/rs-fyinote.png "참고") 즉시 구독을 실행 하는 데 사용할 수 있는 사용자 인터페이스에 기능 없음 상태인 동안 간단한 Windows PowerShell 스크립트를를 사용 하 여 실행에 대 한 구독을 트리거 수 있습니다. 자세한 내용은 참조는 "스크립트: (영문)을 단일 구독 실행"섹션 [변경 하 고 목록 Reporting Services Subscription Owners and Run a Subscription 사용 하 여 PowerShell](manage-subscription-owners-and-run-subscription-powershell.md)합니다.  
   
  데이터 기반 구독 실행에 대한 일정 및 조건은 표준 구독 처리에 대한 일정 및 조건과 동일합니다.  
   
@@ -109,11 +109,11 @@ ms.locfileid: "48207585"
   
  데이터 기반 구독을 취소하는 방법에 대한 자세한 내용은 [실행 중인 프로세스 관리](manage-a-running-process.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [만들기, 수정 및 표준 구독을 삭제 &#40;기본 모드의 Reporting Services&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [구독 및 배달 &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)   
- [기본 모드 보고서 서버에 대 한 구독 만들기 및 관리](../create-manage-subscriptions-native-mode-report-servers.md)   
+ [구독 및 배달&#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)   
+ [기본 모드 보고서 서버 구독 만들기 및 관리](../create-manage-subscriptions-native-mode-report-servers.md)   
  [구독 페이지&#40;보고서 관리자&#41;](../subscriptions-page-report-manager.md)   
  [내 구독 페이지&#40;보고서 관리자&#41;](../my-subscriptions-page-report-manager.md)  
   

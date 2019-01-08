@@ -11,12 +11,12 @@ ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 15034c7bdf1dd32f173e3c2f9eebacda8b72fc11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 20e04f8192753b2ca8a5cb48715fac20118df3e3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187365"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407980"
 ---
 # <a name="create-a-report-data-source"></a>보고서 데이터 원본 만들기
   파워 뷰를 다차원 모델에 연결하려면 SharePoint 라이브러리에서 .rsds 파일이라는 공유 보고서 데이터 원본 정의를 만들어야 합니다. .rsds 파일은 다차원 모델에 연결하는 데 사용되는 Analysis Services 서버 인스턴스의 이름, 연결 형식, 연결 문자열 및 자격 증명을 지정합니다. 사용자가 .rsds를 클릭하면 비어 있는 새 파워 뷰 보고서(.rdlx 파일)가 브라우저에 열립니다.  
@@ -51,14 +51,14 @@ ms.locfileid: "48187365"
   
 5.  **연결 문자열**에서 Analysis Services 서버 이름, 데이터베이스 이름, 큐브 이름 및 선택적 설정을 지정합니다.  
   
-     연결 문자열: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>’`  
+     연결 문자열: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'`  
   
     > [!NOTE]  
     >  큐브가 두 개 이상 있는 경우 큐브 이름을 지정해야 합니다.  
   
-     (선택 사항) 큐브에는 특정 차원 및/또는 측정값 그룹만 클라이언트에 표시되는 선택 뷰를 사용자에게 제공하는 큐브 뷰가 있을 수 있습니다. 큐브 뷰를 지정하려면 큐브 뷰 이름을 Cube 속성에 대한 값으로 지정합니다. `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>’`  
+     (선택 사항) 큐브에는 특정 차원 및/또는 측정값 그룹만 클라이언트에 표시되는 선택 뷰를 사용자에게 제공하는 큐브 뷰가 있을 수 있습니다. 큐브 뷰를 지정하려면 큐브 뷰 이름을 Cube 속성에 대한 값으로 지정합니다. `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>'`  
   
-     (선택 사항) 큐브에는 모델 내의 다양한 언어에 대해 지정된 메타데이터 및 데이터 번역이 있을 수 있습니다. 번역(데이터 및 메타데이터)을 보려면 연결 문자열에 "로캘 ID" 속성을 추가해야 합니다. `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>’; Locale Identifier=<identifier number>`  
+     (선택 사항) 큐브에는 모델 내의 다양한 언어에 대해 지정된 메타데이터 및 데이터 번역이 있을 수 있습니다. 번역 (데이터 및 메타 데이터)를 확인 하기 위해 연결 문자열에 "로캘 Id" 속성을 추가 해야 합니다. `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
   
 6.  **자격 증명**에서 보고서 서버가 외부 데이터 원본에 액세스하는 데 필요한 자격 증명을 얻는 방법을 지정합니다.  
   

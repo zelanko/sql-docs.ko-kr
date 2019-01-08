@@ -1,5 +1,5 @@
 ---
-title: '작업 1: 일치 하는 정책을 정의 하 | Microsoft Docs'
+title: '작업 1: 일치 정책 정의 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a94030fdf0f4ef42e0253022913f06f109e4dc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 55739fd6cf7b6c395c2e7a66c3d80fad22607a83
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107443"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394196"
 ---
-# <a name="task-1-defining-a-matching-policy"></a>태스크 1: 일치 정책 정의
-  이 작업에서는 규칙이 포함된 일치 정책을 만듭니다. 규칙에는 하나의 필요 조건이 포함 됩니다. **Supplier ID**, 규칙의 다른 도메인을 사용 하려면 먼저 Supplier Id와 일치 해야 함을 의미 합니다. 다른 두 도메인을 사용 하는 규칙: **Supplier Name** 사용 하 여 **유사성** 값으로 설정 **70%** 고 **Contact Email** 사용 하 여  **유사성** 값으로 설정 **30%** 합니다.  
+# <a name="task-1-defining-a-matching-policy"></a>작업 1: 일치 정책 정의
+  이 작업에서는 규칙이 포함된 일치 정책을 만듭니다. 이 규칙에는 **Supplier ID**, 규칙의 다른 도메인을 사용 하려면 먼저 Supplier Id와 일치 해야 함을 의미 합니다. 이 규칙에는 **Supplier Name** 사용 하 여 **유사성** 값으로 설정 **70%** 하 고 **Contact Email** 사용 하 여 **유사성** 값설정**30%** 합니다.  
   
 1.  기본 페이지에서 **DQS 클라이언트**, 클릭 **오른쪽 화살표** 옆에 **Suppliers** 지식 베이스를 선택한 **일치 정책**합니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48107443"
   
 10. 클릭 **새 도메인 요소 추가** 다시 도구 모음에서.  
   
-11. 선택 **Supplier Name** 도메인 **근사치** 에 대 한 **유사성**, 형식과 **70** 에 대 한는 **가중치**.  여기에서는 공급자 이름이 동일하지 않고 유사하기만 해도 일치하는 것으로 간주되도록 지정합니다. 가중치는 전체 일치 점수에 대한 이 필드 점수의 기여도를 나타냅니다.  
+11. 선택 **Supplier Name** 도메인 **근사치** 에 대 한 **유사성**, 형식과 **70** 에 대 한는 **가중치**.  여기에서는 공급자 이름이 동일하지 않고 유사하기만 해도 일치하는 것으로 간주되도록 지정합니다. 가중치는 전체 일치 점수에 대 한이 필드 점수의 기여도 나타냅니다.  
   
 12. 이전 두 단계를 반복 추가 **Contact Email** 도메인과 **30** 에 대 한 합니다 **가중치**합니다.  
   
@@ -69,6 +69,6 @@ ms.locfileid: "48107443"
 16. 클릭 **다음** 으로 전환 합니다 **일치 결과** 페이지입니다.  
   
 ## <a name="next-step"></a>다음 단계  
- [태스크 2: 일치 정책 테스트 및 게시](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  
+ [작업 2: 일치 정책 테스트 및 게시](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  
   
   

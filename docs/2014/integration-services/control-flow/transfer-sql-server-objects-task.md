@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfersqlserverobjectstask.f1
@@ -15,12 +14,12 @@ ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7b45c0c3d20b3b7f6405e44a456cd5ebbce6472c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 163418048c50b35bd831174d6cd516d301dfa53f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175473"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761875"
 ---
 # <a name="transfer-sql-server-objects-task"></a>SQL Server 개체 전송 태스크
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 전송 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 간에 한 가지 이상 유형의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터베이스 개체를 전송합니다. 예를 들어 이 태스크로 테이블 및 저장 프로시저를 복사할 수 있습니다. 원본으로 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 따라 복사할 수 있는 개체 유형이 달라집니다. 예를 들어 스키마 및 사용자 정의 집계는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에만 포함됩니다.  
@@ -80,7 +79,7 @@ ms.locfileid: "48175473"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 전송 태스크는 개체를 전송하는 진행 과정은 보고하지 않으며 0% 및 100% 완료만 보고합니다.  
   
 ## <a name="execution-value"></a>실행 값  
- 에 저장 된 실행 값은 `ExecutionValue` 전송 된 개체의 수를 반환 하는 태스크의 속성입니다. SQL Server 개체 전송 태스크의 `ExecValueVariable` 속성에 사용자 정의 변수를 할당하면 패키지의 다른 개체에서 개체 전송에 대한 정보를 사용할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../use-variables-in-packages.md)을 참조하세요.  
+ 태스크의 `ExecutionValue` 속성에 저장된 실행 값은 전송된 개체 수를 반환합니다. SQL Server 개체 전송 태스크의 `ExecValueVariable` 속성에 사용자 정의 변수를 할당하면 패키지의 다른 개체에서 개체 전송에 대한 정보를 사용할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../use-variables-in-packages.md)을 참조하세요.  
   
 ## <a name="log-entries"></a>로그 항목  
  SQL Server 개체 전송 태스크에는 다음 사용자 지정 로그 항목이 포함됩니다.  
@@ -89,7 +88,7 @@ ms.locfileid: "48175473"
   
 -   TransferSqlServerObjectsTaskFinishedTransferringObjects    이 로그 항목에서는 전송이 완료되었음을 보고합니다. 로그 항목에 종료 시간이 포함됩니다.  
   
- 또한 `OnInformation` 이벤트에 대한 로그 항목에서는 전송하도록 선택한 개체 유형의 개체 수, 전송된 개체의 수 및 테이블로 데이터 전송 시 테이블 잘림과 같은 동작을 보고합니다. 에 대 한 로그 항목은 `OnWarning` 은 덮어쓴 대상에 각 개체에 대 한 이벤트가 기록 됩니다.  
+ 또한 `OnInformation` 이벤트에 대한 로그 항목에서는 전송하도록 선택한 개체 유형의 개체 수, 전송된 개체의 수 및 테이블로 데이터 전송 시 테이블 잘림과 같은 동작을 보고합니다. 대상에서 덮어쓴 개체마다 `OnWarning` 이벤트에 대한 로그 항목이 기록됩니다.  
   
 ## <a name="security-and-permissions"></a>보안 및 사용 권한  
  사용자는 원본 서버에서 개체를 검색하는 권한 및 대상 서버에서 개체를 삭제하고 만드는 권한이 필요하며 무엇보다도 지정된 데이터베이스 및 데이터베이스 개체에 대한 액세스가 필요합니다.  
@@ -107,9 +106,9 @@ ms.locfileid: "48175473"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [SQL Server 개체 전송 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [SQL Server 개체 전송 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [SQL Server 개체 전송 태스크 편집기 &#40;페이지를 개체&#41;](../transfer-sql-server-objects-task-editor-objects-page.md)  
+-   [SQL Server 개체 전송 태스크 편집기&#40;개체 페이지&#41;](../transfer-sql-server-objects-task-editor-objects-page.md)  
   
 -   [식 페이지](../expressions/expressions-page.md)  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 459630f452458d4bbc9723133013c861619806bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bfca842a547ac20365dbd79ad5ad3295fa83f75f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093933"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752556"
 ---
 # <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>2단계: 프로젝트를 프로젝트 배포 모델로 변환
   이 작업에서는 프로젝트를 프로젝트 배포 모델로 변환하기 위해 Integration Services 프로젝트 변환 마법사를 사용합니다.  
@@ -52,6 +51,6 @@ ms.locfileid: "48093933"
 13. 매개 변수 탭을 클릭하고 패키지가 VarFolderName에 대한 매개 변수를 포함하게 되었는지 및 Lesson 5 구성 파일의 새 예제 데이터 폴더에서 지정된 것과 같은 경로의 값인지 확인합니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [3단계: 6단원 패키지 테스트](lesson-6-3-testing-the-lesson-6-package.md)  
+ [3 단계: 6 단원 패키지 테스트](lesson-6-3-testing-the-lesson-6-package.md)  
   
   

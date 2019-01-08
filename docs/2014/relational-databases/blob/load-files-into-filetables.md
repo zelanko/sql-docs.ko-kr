@@ -14,12 +14,12 @@ ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b70ca6937526c739edf0d0dd0f8d08c2c914b236
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 560fab599098d1f9e5fae76d42c274ad9a5fb144
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053263"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507797"
 ---
 # <a name="load-files-into-filetables"></a>FileTable로 파일 로드
   파일을 FileTable로 로드 또는 마이그레이션하는 방법에 대해 설명합니다.  
@@ -30,9 +30,9 @@ ms.locfileid: "48053263"
 |파일의 현재 위치|마이그레이션 옵션|  
 |-------------------------------|---------------------------|  
 |파일이 현재 파일 시스템에 저장되어 있습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 파일에 대해 알지 못합니다.|FileTable은 Windows 파일 시스템에 폴더로 나타나므로 파일을 이동하거나 복사하는 데 사용할 수 있는 방법으로 파일을 새 FileTable로 쉽게 로드할 수 있습니다. 이러한 방법에는 Windows 탐색기, 명령줄 옵션(xcopy, robocopy 등), 사용자 지정 스크립트나 애플리케이션이 포함됩니다.<br /><br /> 기존 폴더를 FileTable로 변환할 수 없습니다.|  
-|파일이 현재 파일 시스템에 저장되어 있습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 파일에 대한 포인터가 포함된 메타데이터의 테이블이 포함되어 있습니다.|첫 번째 단계는 위에서 설명한 방법 중 하나를 사용하여 파일을 이동하거나 복사하는 것입니다.<br /><br /> 두 번째 단계는 파일의 새 위치를 가리키도록 기존 메타데이터 테이블을 업데이트하는 것입니다.<br /><br /> 자세한 내용은 이 항목의 [예: 파일 시스템에서 FileTable로 파일 마이그레이션](#HowToMigrateFiles) 을 참조하세요.|  
+|파일이 현재 파일 시스템에 저장되어 있습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 파일에 대한 포인터가 포함된 메타데이터의 테이블이 포함되어 있습니다.|첫 번째 단계는 위에서 설명한 방법 중 하나를 사용하여 파일을 이동하거나 복사하는 것입니다.<br /><br /> 두 번째 단계는 파일의 새 위치를 가리키도록 기존 메타데이터 테이블을 업데이트하는 것입니다.<br /><br /> 자세한 내용은 이 항목의 [예: 마이그레이션 파일을 FileTable로 파일 시스템에서](#HowToMigrateFiles) 이 항목의 합니다.|  
   
-###  <a name="HowToLoadNew"></a> 방법: FileTable로 파일 대량 로드  
+###  <a name="HowToLoadNew"></a> 어떻게: FileTable로 파일 로드  
  다음과 같은 방법으로 파일을 FileTable로 로드할 수 있습니다.  
   
 -   Windows 탐색기에서 원본 폴더의 파일을 새 FileTable 폴더로 끌어 옵니다.  
@@ -44,15 +44,15 @@ ms.locfileid: "48053263"
 ###  <a name="HowToMigrateFiles"></a> 예: 파일 시스템에서 FileTable로 파일 마이그레이션  
  이 시나리오에서는 파일이 파일 시스템에 저장되어 있고 파일에 대한 포인터가 포함된 메타데이터의 테이블이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 있다고 가정합니다. 파일을 FileTable로 이동한 다음 메타데이터에 있는 각 파일의 원래 UNC 경로를 FileTable UNC 경로로 바꾸려고 합니다. [GetPathLocator&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) 함수를 사용하면 이 목표를 쉽게 달성할 수 있습니다.  
   
- 예를 들어 있다고 가정 기존 데이터베이스 테이블을 `PhotoMetadata`, 사진에 대 한 데이터가 포함 되어 있습니다. 이 테이블에 열 `UNCPath` 형식의 `varchar`(512)는.jpg 파일의 실제 UNC 경로가 포함 하는 합니다.  
+ 예를 들어 있다고 가정 기존 데이터베이스 테이블을 `PhotoMetadata`, 사진에 대 한 데이터가 포함 되어 있습니다. 이 테이블에는 .jpg 파일의 실제 UNC 경로가 포함되어 있는 `varchar`(512) 형식의 `UNCPath` 열이 있습니다.  
   
  파일 시스템의 이미지 파일을 FileTable로 마이그레이션하려면 다음을 수행해야 합니다.  
   
-1.  파일을 저장할 새 FileTable을 만듭니다. 이 예에서는 테이블 이름으로 `dbo.PhotoTable`, 하지만 테이블을 만들기 위한 코드 표시 되지 않습니다.  
+1.  파일을 저장할 새 FileTable을 만듭니다. 이 예에서는 테이블 이름으로 `dbo.PhotoTable`을 사용하지만 테이블을 만드는 코드는 표시되지 않습니다.  
   
 2.  xcopy 또는 유사한 도구를 사용하여 .jpg 파일과 해당 디렉터리 구조를 FileTable의 루트 디렉터리에 복사합니다.  
   
-3.  메타 데이터를 수정 합니다 `PhotoMetadata` 다음과 비슷한 코드를 사용 하 여 테이블:  
+3.  다음과 유사한 코드를 사용하여 `PhotoMetadata` 테이블의 메타데이터를 수정합니다.  
   
 ```tsql  
 --  Add a path locator column to the PhotoMetadata table.  
@@ -87,7 +87,7 @@ UPDATE PhotoMetadata
   
     -   CHECK_CONSTRAINTS 절을 사용하는 BULK INSERT  
   
-    -   INSERT INTO … IGNORE_CONSTRAINTS 절을 사용하지 않는 SELECT * FROM OPENROWSET(BULK …)  
+    -   INSERT INTO ... IGNORE_CONSTRAINTS 절을 사용하지 않는 SELECT * FROM OPENROWSET(BULK ...)  
   
 -   FileTable 시스템 정의 제약 조건을 해제하지 않은 경우 제약 조건을 적용하지 않은 대량 로드 작업은 실패합니다. 이 범주에는 다음 작업이 포함됩니다.  
   
@@ -95,9 +95,9 @@ UPDATE PhotoMetadata
   
     -   CHECK_CONSTRAINTS 절을 사용하지 않는 BULK INSERT  
   
-    -   INSERT INTO … IGNORE_CONSTRAINTS 절을 사용하는 SELECT * FROM OPENROWSET(BULK …)  
+    -   INSERT INTO ... IGNORE_CONSTRAINTS 절을 사용하는 SELECT * FROM OPENROWSET(BULK ...)  
   
-###  <a name="HowToBulkLoad"></a> 방법: FileTable로 파일 대량 로드  
+###  <a name="HowToBulkLoad"></a> 어떻게: FileTable로 파일 대량 로드  
  다음과 같은 다양한 방법을 사용하여 파일을 FileTable로 대량 로드할 수 있습니다.  
   
 -   **bcp**  
@@ -112,7 +112,7 @@ UPDATE PhotoMetadata
   
     -   FileTable 네임스페이스를 사용하지 않도록 설정하고, **CHECK_CONSTRAINTS** 절을 사용하지 않고 호출합니다. 그런 다음 FileTable 네임스페이스를 다시 사용하도록 설정합니다.  
   
--   **INSERT INTO … SELECT \* FROM OPENROWSET(BULK …)**  
+-   **INSERT INTO ... SELECT \* FROM OPENROWSET(BULK ...)**  
   
     -   **IGNORE_CONSTRAINTS** 절을 사용하여 호출합니다.  
   
@@ -120,7 +120,7 @@ UPDATE PhotoMetadata
   
  FileTable 제약 조건을 해제하는 방법은 [FileTables 관리](manage-filetables.md)를 참조하세요.  
   
-###  <a name="disabling"></a> 방법: 대량 로드에 대한 FileTable 제약 조건 사용 안 함  
+###  <a name="disabling"></a> 어떻게: 대량 로드에 대한 FileTable 제약 조건 사용 안 함  
  시스템 정의 제약 조건을 적용하는 오버헤드 없이 파일을 FileTable로 대량 로드하려면 제약 조건을 일시적으로 사용하지 않도록 설정할 수 있습니다. 자세한 내용은 [FileTables 관리](manage-filetables.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, modifications to DBs
@@ -13,12 +12,12 @@ ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d08eb0368840a6f2850467d13cbe42c5519c7b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: f78f4bdf08b9a5caf9b2654289bf181080efff02
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083653"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751085"
 ---
 # <a name="modified-features-contained-database"></a>수정된 기능(포함된 데이터베이스)
   다음 기능은 부분적으로 포함된 데이터베이스에서 지원하도록 수정되었습니다. 일반적으로 기능은 데이터베이스 경계를 넘지 않도록 수정됩니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "48083653"
  임시 테이블은 사용자 정의 형식, XML 스키마 컬렉션 또는 사용자 정의 함수를 참조할 수 없습니다.  
   
 ## <a name="collation"></a>데이터 정렬  
- 포함되지 않은 데이터베이스 모델에는 데이터베이스 데이터 정렬, 인스턴스 데이터 정렬 및 tempdb 데이터 정렬이라는 별도의 세 가지 데이터 정렬이 있습니다. 포함된 데이터베이스는 두 가지의 데이터 정렬인 데이터베이스 데이터 정렬과 새 카탈로그 데이터 정렬만 사용합니다. 포함된 데이터베이스 데이터 정렬에 대한 자세한 내용은 [Contained Database Collations](contained-database-collations.md) 을 참조하십시오.  
+ 포함되지 않은 데이터베이스 모델에는 세 가지의 개별적인 데이터 정렬 유형인 데이터베이스 데이터 정렬, 인스턴스 데이터 정렬 및 tempdb 데이터 정렬입니다. 포함된 데이터베이스는 두 가지의 데이터 정렬인 데이터베이스 데이터 정렬과 새 카탈로그 데이터 정렬만 사용합니다. 포함된 데이터베이스 데이터 정렬에 대한 자세한 내용은 [Contained Database Collations](contained-database-collations.md) 을 참조하십시오.  
   
 ## <a name="user-options"></a>사용자 옵션  
  포함된 데이터베이스를 사용하도록 설정할 경우 [인스턴스에 대해](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) user options 옵션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 0으로 설정해야 합니다.  

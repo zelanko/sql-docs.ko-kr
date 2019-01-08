@@ -1,5 +1,5 @@
 ---
-title: 'Analysis Services 자습서 단원 10: 파티션 만들기 | Microsoft Docs'
+title: 'Analysis Services 자습서 단원 10: 파티션을 만들 | Microsoft Docs'
 ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,24 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile"
-ms.openlocfilehash: b7a4cfcb32023c20e05728a3faac3715278c1019
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f7b6e5bfd4c533028758f553e5d8c9b2ca21e6f2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43091331"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401146"
 ---
 # <a name="create-partitions"></a>파티션 만들기
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-이 단원에서는 만든 FactInternetSales 테이블을 처리할 수 있는 더 작은 논리적 부분으로 나누는 데 (새로 고침) 하는 파티션을 다른 파티션과 독립적으로 합니다. 기본적으로 모델에 포함 된 모든 테이블에는 모든 테이블의 열과 행을 포함 하는 하나의 파티션이 있습니다. FactInternetSales 테이블에 대 한 연도별; 데이터를 분할 하려는 각 테이블의 5 년에 대해 하나의 파티션을 합니다. 이렇게 하면 각 파티션을 독립적으로 처리할 수 있습니다. 자세한 내용은 참조 하세요 [파티션을](../tabular-models/partitions-ssas-tabular.md)합니다. 
+이 단원에서는 만든 FactInternetSales 테이블을 처리할 수 있는 더 작은 논리적 부분으로 나누는 데 (새로 고침) 하는 파티션을 다른 파티션과 독립적으로 합니다. 기본적으로 모델에 포함 된 모든 테이블에는 모든 테이블의 열과 행을 포함 하는 하나의 파티션이 있습니다. FactInternetSales 테이블에 대 한 연도별; 데이터를 분할 하려는 각 테이블의 5 년에 대해 하나의 파티션을 합니다. 이렇게 하면 각 파티션을 독립적으로 처리할 수 있습니다. 자세한 내용은 [파티션](../tabular-models/partitions-ssas-tabular.md)을 참조하세요. 
   
-이 단원에 소요되는 예상 시간: **15분**  
+이 단원에 소요되는 예상 시간: **15 분**  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 
-이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [9 단원: 계층 만들기](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)합니다.  
+이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원을 완료해야 합니다. [9 단원: 계층 구조를 만들](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)합니다.  
   
 ## <a name="create-partitions"></a>파티션 만들기  
   
@@ -44,7 +44,7 @@ ms.locfileid: "43091331"
 
     ![as-lesson10-query-editor](../tutorial-tabular-1400/media/as-lesson10-query-editor.png)
 
-6.  행 필터 대화 상자에서의 **조건인 행 표시: OrderDate**를 그대로 둡니다 **이후 또는 같음**, 날짜 필드에 입력 한 다음 **2010 년 1 월 1 일**합니다. 유지 합니다 **및** 연산자를 선택 하면 선택한 **앞**, 날짜 필드에 입력 한 다음 **2011 년 1 월 1**, 클릭 하 고 **확인**합니다.
+6.  행 필터 대화 상자에서에서 **조건인 행 표시: OrderDate**를 그대로 **이후 또는 같음**, 날짜 필드에 입력 한 다음 **2010 년 1 월 1 일**합니다. 유지 합니다 **및** 연산자를 선택 하면 선택한 **앞**, 날짜 필드에 입력 한 다음 **2011 년 1 월 1**, 클릭 하 고 **확인**합니다.
 
     ![as-lesson10-filter-rows](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
     
@@ -117,4 +117,4 @@ FactInternetSales 파티션을; 각 연도 대 한 파티션이 했으므로 삭
   
  ## <a name="whats-next"></a>다음 단계
 
-다음 단원으로 이동 합니다. [단원 11: 역할 만들기](../tutorial-tabular-1400/as-lesson-11-create-roles.md)합니다. 
+다음 단원으로 이동 합니다. [11 단원: 역할을 만들](../tutorial-tabular-1400/as-lesson-11-create-roles.md)합니다. 

@@ -32,12 +32,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89ab6ca4f8b95f4f78b1f6c8b9e33fbd1a3fa138
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3ae51af994665ac4234dc44e84fb5c2c405aa1e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816281"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502559"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>SQLXML 관리되는 클래스 - SqlXmlCommand 개체
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47816281"
 public SqlXmlCommand(string cnString)  
 ```  
   
- 여기서 `cnString`은 서버, 데이터베이스 및 로그인 정보를 식별하는 ADO 또는 OLEDB 연결 문자열입니다(예: `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`).  
+ 여기서 `cnString` 은 서버, 데이터베이스 및 로그인 정보를 식별 하는 ADO 또는 OLEDB 연결 문자열-예를 들어 `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`합니다.  
   
  연결 문자열에서 `Provider`는 SQLOLEDB여야 하고 `Data Provider`는 공급자 문자열에 포함되면 안 됩니다.  
   

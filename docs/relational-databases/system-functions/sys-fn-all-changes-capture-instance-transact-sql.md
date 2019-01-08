@@ -21,12 +21,12 @@ ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 77da6b8a6b4b81f6f7d05e6a64c58834a01b65c0
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 5b2cb804718afc2eeed5aa174b2de51a33f5c3ea
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072057"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409070"
 ---
 # <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  그런 다음 @update_flag_list 매개 변수에 식별된 각 열에 대한 결과 집합에 비트 플래그가 추가됩니다. 에 대 한 합니다 **모든 변경 내용을** 래퍼에 비트 플래그가 항상 NULL이 됩니다 __CDC_OPERATION이 경우 했습니다 ', 'I' 또는 'u O'입니다. 경우 \__CDC_OPERATION은 ' u N '에 플래그를 1 또는 업데이트 작업 결과로 열이 변경 여부에 따라 0으로 설정 됩니다.  
   
- 변경 데이터 캡처 구성 템플릿 'Instantiate CDC Wrapper TVFs for Schema'에서는 sp_cdc_generate_wrapper_function 저장 프로시저를 사용하여 스키마에 정의된 쿼리 함수의 모든 래퍼 함수에 대한 CREATE 스크립트를 가져오는 방법을 보여 줍니다. 그런 다음 이 템플릿에서는 이러한 스크립트를 만듭니다. 템플릿에 대 한 자세한 내용은 참조 하세요. [템플릿 탐색기](../../ssms/template/template-explorer.md)합니다.  
+ 변경 데이터 캡처 구성 템플릿 ' Instantiate CDC Wrapper TVFs for 스키마 ' 모든 스키마의 정의 된 쿼리 함수의 래퍼 함수에 대 한 CREATE 스크립트를 가져오려면 sp_cdc_generate_wrapper_function 저장 프로시저를 사용 하는 방법을 보여 줍니다. 그런 다음 이 템플릿에서는 이러한 스크립트를 만듭니다. 템플릿에 대 한 자세한 내용은 참조 하세요. [템플릿 탐색기](../../ssms/template/template-explorer.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [sys.sp_cdc_generate_wrapper_function &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   

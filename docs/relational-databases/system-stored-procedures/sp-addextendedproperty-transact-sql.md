@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1eced8802504704506402d2ffb75609a096cb51a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 40437cd27af345aff91314f07888c66e2bdff2d0
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689221"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321749"
 ---
 # <a name="spaddextendedproperty-transact-sql"></a>sp_addextendedproperty(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,8 +72,7 @@ sp_addextendedproperty
  지정된 수준 0 개체 유형의 이름입니다. *level0_object_name* 됩니다 **sysname** 이며 기본값은 NULL입니다.  
   
  [ @level1type=] {'*level1_object_type*'}  
- 수준 1 개체의 유형입니다. *level1_object_type* 됩니다 **varchar(128)**, 기본값은 NULL입니다. 유효한 입력은 AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION 및 NULL입니다.  
-  
+ 수준 1 개체의 유형입니다. *level1_object_type* 됩니다 **varchar(128)**, 기본값은 NULL입니다. 유효한 입력에는 집계, 기본, 함수, LOGICAL FILE NAME, 프로시저, 큐, 규칙, 시퀀스, 동의어, 테이블, TABLE_TYPE, 형식, 뷰, XML SCHEMA COLLECTION 및 NULL은입니다.    
  [ @level1name=] {'*level1_object_name*'}  
  지정된 수준 1 개체 유형의 이름입니다. *level1_object_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   

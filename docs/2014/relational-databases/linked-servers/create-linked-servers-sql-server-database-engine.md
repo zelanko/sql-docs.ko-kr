@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 11/20/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.linkedserver.properties.general.f1
@@ -18,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d4026596d06941286b137a60201ba0ee6489c34
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: eebda510e90c499a0bae774d1288d3b886896d25
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120210"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766615"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>연결된 서버 만들기(SQL Server 데이터베이스 엔진)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 연결된 서버를 만들고 다른 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 데이터에 액세스하는 방법을 보여 줍니다. 연결된 서버를 만들면 여러 원본의 데이터로 작업할 수 있습니다. 연결된 서버는 반드시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 인스턴스일 필요는 없지만 이것이 일반적인 시나리오입니다.  
@@ -82,9 +81,9 @@ ms.locfileid: "49120210"
     > [!NOTE]  
     >  **SQL Server** 인스턴스가 기본 인스턴스인 경우 **SQL Server**인스턴스를 호스팅하는 컴퓨터의 이름을 입력합니다. **SQL Server** 가 명명된 인스턴스인 경우 **Accounting\SQLExpress**와 같이 컴퓨터의 이름과 인스턴스의 이름을 입력합니다.  
   
-3.  에 **서버 유형** 영역에서 **SQL Server** 연결된 된 서버 인스턴스의 다른 임을 나타내려면 **SQL Server**합니다.  
+3.  **서버 유형** 영역에서 연결된 서버가 **SQL Server**의 다른 인스턴스임을 나타내도록 **SQL Server**를 선택합니다.  
   
-4.  **보안** 페이지에서 원본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결을 연결된 서버에 연결할 때 사용할 보안 컨텍스트를 지정합니다. 사용자가 도메인 로그인을 사용하여 연결하는 도메인 환경에서는 **로그인의 현재 보안 컨텍스트를 사용하여 연결** 을 선택하는 것이 이상적입니다. 사용자가 **SQL Server** 로그인을 사용하여 원본 **SQL Server** 에 연결하는 경우에는 **다음 보안 컨텍스트를 사용하여 연결**을 선택한 다음 연결된 서버에서 인증하기 위해 필요한 자격 증명을 제공하는 것이 이상적입니다.  
+4.  **보안** 페이지에서 원본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결을 연결된 서버에 연결할 때 사용할 보안 컨텍스트를 지정합니다. 사용자가 도메인 로그인을 사용하여 연결하는 도메인 환경에서는 **로그인의 현재 보안 컨텍스트를 사용하여 연결**을 선택하는 것이 이상적입니다. 사용자가 **SQL Server** 로그인을 사용하여 원본 **SQL Server** 에 연결하는 경우에는 **다음 보안 컨텍스트를 사용하여 연결**을 선택한 다음 연결된 서버에서 인증하기 위해 필요한 자격 증명을 제공하는 것이 이상적입니다.  
   
      **로컬 로그인**  
      연결된 서버에 연결할 수 있는 로컬 로그인을 지정합니다. 로컬 로그인은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 로그인이나 Windows 인증 로그인 중 하나일 수 있습니다. 이 목록을 사용하여 특정 로그인에 대한 연결을 제한하거나 일부 로그인이 다른 로그인으로 연결하도록 허용할 수 있습니다.  
@@ -221,7 +220,7 @@ ms.locfileid: "49120210"
   
     ```  
   
-##  <a name="FollowUp"></a> 추가 작업: 연결된 서버를 만든 후 수행할 단계  
+##  <a name="FollowUp"></a> 후속편: 연결된 서버를 만든 후 수행할 단계  
   
 #### <a name="to-test-the-linked-server"></a>연결된 서버 테스트  
   
@@ -247,7 +246,7 @@ ms.locfileid: "49120210"
   
      연결된 서버에 대해 NULL이 반환되면 로그인이 연결된 서버에 없음을 의미합니다. 이러한 로그인은 연결된 서버가 다른 보안 컨텍스트를 통과시키거나 연결된 서버가 익명 연결을 허용하도록 구성되어야 연결된 서버를 사용할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [연결된 서버&#40;데이터베이스 엔진&#41;](linked-servers-database-engine.md)   
  [sp_addlinkedserver&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)   
  [sp_serveroption&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql)  

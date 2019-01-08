@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - oraIns
@@ -13,12 +12,12 @@ ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6381c494f1f5ecc95eb2e06d34959e43a9133726
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e95a47f2a2fc7444822c19b67bf2d95626fa62c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139629"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770975"
 ---
 # <a name="create-the-sql-server-change-database"></a>SQL Server 변경 데이터베이스 만들기
   새 인스턴스 마법사를 시작하면 CDC 데이터베이스 만들기 페이지가 열립니다. CDC 데이터베이스 만들기 페이지를 사용하여 새 CDC 인스턴스에 대한 정보를 제공하고 변경 데이터베이스를 새로 만들 수 있습니다.  
@@ -38,14 +37,14 @@ ms.locfileid: "48139629"
   
 -   **이름**: 새 서비스의 이름을 입력합니다. 이 이름은 새 변경 데이터베이스의 이름이기도 합니다.  
   
--   **설명**: 새 인스턴스를 식별하는 데 도움이 되는 설명을 입력합니다. 이 구성 요소는 선택 사항입니다.  
+-   **설명**: 새 인스턴스를 식별하는 데 도움이 되는 설명을 입력합니다. 이 옵션은 선택적입니다.  
   
  **SQL Server 변경 데이터베이스**  
  이 섹션은 데이터베이스를 만드는 데 사용됩니다.  
   
-1.  **변경 데이터베이스**: 이 이름은 새 변경 데이터베이스의 이름이기도 합니다. 데이터베이스의 이름은 인스턴스에 대해 지정한 이름과 동일합니다. 이 읽기 전용 필드에는 데이터베이스의 전체 경로가 표시됩니다.  
+1.  **데이터베이스 변경**: 새 변경 데이터베이스의 이름입니다. 데이터베이스의 이름은 인스턴스에 대해 지정한 이름과 동일합니다. 이 읽기 전용 필드에는 데이터베이스의 전체 경로가 표시됩니다.  
   
-2.  **데이터베이스 만들기**: **데이터베이스 만들기** 를 클릭하여 데이터베이스를 만들 수 있습니다.  
+2.  **데이터베이스를 만들**: 클릭 **Create Database** 데이터베이스를 만들려고 합니다.  
   
      데이터베이스를 만들려면 로그인에 `sysasmin` 서버 역할이 있어야 합니다. 자세한 내용은 위의 보안 참고 사항을 참조하십시오.  
   

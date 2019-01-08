@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9f9bcc170883c9c663903d17f3355e27b2b14177
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7bf6396ebe7cfe18aa7d1005d39095a35713e10b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026250"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419054"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>MDX로 하위 큐브 작성(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
  또한 하위 큐브 내의 집계 값은 시각적으로 합쳐집니다. 예를 들어 하위 큐브는 `USA`, `WA`및 `OR`을 포함합니다. `USA` 및 `{WA,OR}` 이 하위 큐브에 의해 정의된 유일한 주이므로 `WA` 에 대한 집계 값은 `OR` 의 합계가 됩니다. 다른 모든 주는 무시합니다.  
   
- 또한 하위 큐브 외부의 셀에 대한 명시적 참조는 전체 큐브의 컨텍스트에서 계산되는 셀 값을 반환합니다. 예를 들어 현재 연도로 제한되는 하위 큐브를 만듭니다. 그런 다음 [ParallelPeriod](../../../mdx/parallelperiod-mdx.md) 함수를 사용하여 현재 연도를 이전 연도와 비교합니다. 이전 연도 값은 하위 큐브 외부에 있지만 두 값의 차이가 반환됩니다.  
+ 또한 하위 큐브 외부의 셀에 대한 명시적 참조는 전체 큐브의 컨텍스트에서 계산되는 셀 값을 반환합니다. 예를 들어 현재 연도로 제한되는 하위 큐브를 만듭니다. 그런 다음 [ParallelPeriod](../../../mdx/parallelperiod-mdx.md) 함수를 사용하여 현재 연도를 이전 연도와 비교합니다. 값의 차이 이전 연도 값은 하위 큐브 외부의 경우에 반환 됩니다.  
   
  마지막으로 원래 컨텍스트를 덮어쓰지 않은 경우 하위 SELECT에서 계산된 집합 함수는 하위 SELECT의 컨텍스트에서 계산됩니다. 컨텍스트를 덮어쓴 경우 집합 함수는 전체 큐브의 컨텍스트에서 계산됩니다.  
   
@@ -59,8 +59,8 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
  `SELECT [Account].[Account].Members ON 0, Measures.Members ON 1 FROM Budget`  
   
-## <a name="see-also"></a>관련 항목:  
- [쿼리 & #40; 큐브 컨텍스트 설정 Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
- [MDX 쿼리 기본 사항 & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>관련 항목  
+ [쿼리에 큐브 컨텍스트 설정&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
+ [MDX 쿼리 기본 사항&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

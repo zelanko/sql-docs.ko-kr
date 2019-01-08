@@ -14,12 +14,12 @@ ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a5f45b4f453780b1c3a0f87d6ec898650ffd8037
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca6d2e98bc631a675aee3d4968103c9981775019
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100353"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521766"
 ---
 # <a name="bind-a-report-or-model-to-a-shared-data-source-ssrs"></a>보고서 또는 모델을 공유 데이터 원본에 바인딩(SSRS)
   보고서나 모델을 테스트 서버에서 프로덕션 서버로 이동할 때와 같이 로컬 컴퓨터에 파일을 저장한 다음 이 파일을 다른 보고서 서버로 업로드해야 하는 경우가 있습니다. 보고서나 모델을 새 서버로 업로드하는 경우 새 보고서 서버에 저장된 공유 데이터 원본에 다시 바인딩해야 합니다. 보고서나 모델을 다시 바인딩하지 않으면 새 보고서 서버에서 액세스할 때 제대로 작동하지 않습니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "48100353"
   
 5.  **연결 형식** 영역에서 **공유 데이터 원본** 이 선택되어 있는지 확인합니다.  
   
-6.  **데이터 원본 링크** 영역에서 줄임표 단추(...)를 클릭합니다.  
+6.  **데이터 원본 링크** 영역에서 줄임표(...) 단추를 클릭합니다.  
   
 7.  사용할 데이터 원본을 찾습니다.  
   
@@ -66,11 +66,11 @@ ms.locfileid: "48100353"
 10. **닫기**를 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [파일 또는 보고서 업로드 &#40;보고서 관리자&#41;](../reports/upload-a-file-or-report-report-manager.md)   
+ [파일 또는 보고서 업로드&#40;보고서 관리자&#41;](../reports/upload-a-file-or-report-report-manager.md)   
  [SharePoint 라이브러리에 문서 업로드&#40;SharePoint 모드의 Reporting Services&#41;](../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
- [공유 데이터 원본을 만들고 관리 &#40;Reporting Services sharepoint에서 통합 모드&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
- [만들기, 삭제 또는 공유 데이터 원본을 수정 &#40;보고서 관리자&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [공유 데이터 원본 만들기 및 관리&#40;SharePoint 통합 모드의 Reporting Services&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
+ [공유 데이터 원본 만들기, 삭제 또는 수정&#40;보고서 관리자&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Reporting Services에서 지 원하는 데이터 원본 &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

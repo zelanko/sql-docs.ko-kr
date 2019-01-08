@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG014117 error
@@ -13,12 +12,12 @@ ms.assetid: e5906a76-9511-4c47-8826-8c765b58a39d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b622aba16b9bf016c1397a331e7fd8d9553bf3e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec41205836a2e367d6fb270e532a505979a3e178
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100983"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758185"
 ---
 # <a name="mssqleng014117"></a>MSSQL_ENG014117
     
@@ -68,7 +67,7 @@ ms.locfileid: "48100983"
   
  배포자 인스턴스가 제대로 등록되었는지 확인한 후 배포 데이터베이스가 **msdb..MSdistributiondbs**에 나열되어 있는지 확인합니다. 배포 데이터베이스가 목록에 없는 경우 다음을 수행하십시오.  
   
-1.  배포 구성을 스크립팅합니다. 자세한 내용은 [Scripting Replication](scripting-replication.md)을 참조하세요.  
+1.  배포 구성을 스크립팅합니다. 자세한 내용은 [Scripting Replication](scripting-replication.md)를 참조하세요.  
   
 2.  배포를 해제한 다음 다시 설정합니다. 자세한 내용은 [Configure Distribution](configure-distribution.md)를 참조하세요.  
   

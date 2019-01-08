@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publicationinfo.allsubscriptions.merge.f1
@@ -13,12 +12,12 @@ ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 00cc474069b56dd0bb6d8f03aa4db73d6bbebd59
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a7139c51aaa960fd2806ba1d969f6057e8f95e2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170433"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761535"
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>게시 정보, 모든 구독(병합 게시)
   **모든 구독** 탭은 선택한 병합 게시에 대한 모든 구독 정보를 표시합니다.  
@@ -26,11 +25,11 @@ ms.locfileid: "48170433"
 ## <a name="options"></a>변수  
  자세한 내용 및 구독과 관련된 태스크를 보려면 해당 구독에 대한 행을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 옵션을 클릭합니다. 표에서 데이터를 표시하는 방식을 변경하려면 표를 마우스 오른쪽 단추로 클릭한 후 다음 옵션 중 하나를 클릭합니다.  
   
--   **정렬**: **열 정렬** 대화 상자에서 한 개 이상의 열에 대해 정렬합니다.  
+-   **정렬**: 하나 이상의 열에 정렬 된 **정렬 열** 대화 상자.  
   
--   **표시할 열 선택**: **열 선택** 대화 상자에서 표시할 열 및 해당 열이 표시되는 순서를 선택합니다.  
+-   **표시할 열 선택**: 열을 표시 및 표시 되는 순서를 선택 합니다 **열 선택** 대화 상자.  
   
--   **필터**: **필터 설정** 대화 상자의 열 값에 따라 표의 행을 필터링합니다.  
+-   **필터**: 열 값에 따라 표의 행을 필터링 합니다 **필터 설정** 대화 상자.  
   
 -   **필터 지우기**: 표에 대한 모든 필터 설정을 지웁니다.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "48170433"
  **곧 만료됨/만료됨** 및 **장기 실행 트랜잭션 병합** 상태 값은 임계값이 설정된 경우에만 표시할 수 있습니다. 상태 값 **성능 심각** 은 동일한 연결 유형(전화 접속 또는 LAN)으로 구독을 5회 동기화한 후에만 표시할 수 있습니다. 성능 측정 및 임계값 설정에 대한 자세한 내용은 [복제 모니터로 성능 모니터링](monitor/monitor-performance-with-replication-monitor.md) 및 [복제 모니터에 임계값 및 경고 설정](monitor/set-thresholds-and-warnings-in-replication-monitor.md)을 참조하세요.  
   
  **구독**  
- 각 구독의 이름으로, 형식은*SubscriberName: SubscriptionDatabaseName*입니다.  
+ 각 구독의 이름입니다. 형식은 *SubscriberName: SubscriptionDatabaseName*합니다.  
   
  **이름**  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당됩니다. 각 구독에 대한 설명입니다. 설명은 **구독 속성** 대화 상자에서 입력하거나 **@description** 또는 [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) 의 [@description](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)가 표시됩니다. 설명을 구독의 "이름" 또는 애칭으로 사용하기도 합니다.  

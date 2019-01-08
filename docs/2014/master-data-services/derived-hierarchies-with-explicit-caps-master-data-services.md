@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Master Data Services], derived hierarchies with explicit caps
@@ -15,12 +14,12 @@ ms.assetid: 6a82ff66-c137-4757-99bb-787d189b4295
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 803ec168404f24ff274ce698515a1a27b61ddd03
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89b4eccbe26817d25d8c80a56e602fcbc5ab6e8a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075627"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763465"
 ---
 # <a name="derived-hierarchies-with-explicit-caps-master-data-services"></a>명시적 캡이 포함된 파생 계층(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 명시적 계층의 수준이 파생 계층의 최상위 수준으로 사용되는 경우 이를 명시적 캡이 포함된 파생 계층이라고 합니다.  
@@ -50,15 +49,15 @@ ms.locfileid: "48075627"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|파생 계층을 만듭니다.|[파생된 계층을 만들려면 &#40;Master Data Services&#41;](create-a-derived-hierarchy-master-data-services.md)|  
-|명시적 계층을 만듭니다.|[명시적 계층 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|기존 파생 계층을 삭제합니다.|[파생된 계층 삭제 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
+|파생 계층을 만듭니다.|[파생 계층 만들기&#40;Master Data Services&#41;](create-a-derived-hierarchy-master-data-services.md)|  
+|명시적 계층을 만듭니다.|[명시적 계층 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
+|기존 파생 계층을 삭제합니다.|[파생 계층 삭제&#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
 |||  
   
 ## <a name="related-content"></a>관련 내용  
   
--   [파생 계층 &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
+-   [파생 계층&#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
   
--   [명시적 계층 &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
+-   [명시적 계층&#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
   

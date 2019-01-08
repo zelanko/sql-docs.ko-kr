@@ -11,12 +11,12 @@ ms.assetid: ace6085b-355b-435b-8734-503fc3c12ec2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e351f08a5e72966c92a7452872532b90e4127964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5f3c133b105c905b79589d86952658b6d39f0f6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837471"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390446"
 ---
 # <a name="odbc-service-provider-interface-summary"></a>ODBC SPI(서비스 공급자 인터페이스) 요약
 다음 표에서 ODBC 서비스 공급자 인터페이스 함수에 설명 합니다. 구문 및 각 함수에 대 한 의미 체계에 대 한 자세한 내용은 참조 하세요. [ODBC 서비스 공급자 인터페이스 (SPI) 참조](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)합니다.  

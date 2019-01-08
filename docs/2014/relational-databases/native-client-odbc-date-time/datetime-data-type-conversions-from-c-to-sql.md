@@ -12,12 +12,12 @@ ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f1f44e37b212c973a59fbead2618bfbb477370e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8179b9452852777bb6d2a06018d0bf86598a5bf8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109503"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399426"
 ---
 # <a name="conversions-from-c-to-sql"></a>C에서 SQL로의 변환
   이 항목에서는 C 형식에서 변환 하는 경우 고려해 야 할 문제 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜/시간 형식입니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "48109503"
 |5|표준 시간대가 클라이언트의 표준 시간대 설정으로 지정됩니다.|  
 |6|시간이 0으로 설정됩니다.|  
 |7|날짜가 현재 날짜로 설정됩니다.|  
-|8|시간이 클라이언트의 표준 시간대에서 UTC로 변환됩니다. 변환 중 오류가 발생하면 SQLSTATE 22008 및 "Datetime 필드 오버플로" 메시지가 포함된 진단 레코드가 생성됩니다.|  
+|8|에 클라이언트의 표준 시간대에서 UTC로 변환 됩니다. 변환 중 오류가 발생하면 SQLSTATE 22008 및 "Datetime 필드 오버플로" 메시지가 포함된 진단 레코드가 생성됩니다.|  
 |9|첫 번째로 발견되는 문장 부호 문자 및 나머지 구성 요소의 유무에 따라 문자열이 date, datetime, datetimeoffset 또는 time 값으로 구문 분석되고 변환됩니다. 그런 다음 위 표에서 이 프로세스에 의해 발견된 원본 형식에 대한 규칙에 따라 문자열이 대상 형식으로 변환됩니다. 데이터를 구분 분석하는 중에 오류가 발견되면 SQLSTATE 22018 및 "캐스트 사양의 문자 값이 올바르지 않습니다"라는 메시지가 표시되고 진단 레코드가 생성됩니다. datetime 및 smalldatetime 매개 변수의 경우 연도가 이러한 형식에서 지원하는 범위를 벗어나면 SQLSATE 22007 및 "잘못된 날짜 시간 형식입니다"라는 메시지가 표시되고 진단 레코드가 생성됩니다.<br /><br /> datetimeoffset의 경우 값은 UTC 변환이 요청되지 않더라도 UTC로 변환된 후의 범위 안에 포함되어야 합니다. 왜냐하면 TDS와 서버는 항상 datetimeoffset 값의 시간을 UTC에 맞게 정규화하므로 클라이언트에서 UTC로의 변환 후 시간 구성 요소가 지원 범위에 포함되는지 확인해야 하기 때문입니다. 값이 지원되는 UTC 범위 내에 포함되지 않으면 SQLSTATE 22007 및 "잘못된 날짜 시간 형식입니다"라는 메시지가 표시되고 진단 레코드가 생성됩니다.|  
 |10|데이터 손실을 유발하는 잘림이 발생하면 SQLSTATE 22008 및 "잘못된 날짜 시간 형식입니다"라는 메시지가 표시되고 진단 레코드가 생성됩니다. 이 오류는 값이 서버에서 사용된 UTC 범위로 표현할 수 있는 범위 밖에 있는 경우에도 발생합니다.|  
 |11|데이터의 바이트 길이가 SQL 형식에 필요한 구조의 크기와 같지 않은 경우 SQLSTATE 22003 및 "숫자 값이 범위를 벗어났습니다"라는 메시지가 표시되고 진단 레코드가 생성됩니다.|  

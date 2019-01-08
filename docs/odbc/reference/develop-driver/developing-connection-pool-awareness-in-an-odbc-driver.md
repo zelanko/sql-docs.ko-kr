@@ -11,12 +11,12 @@ ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a7a38a3d71b28cc32b863bf95ca6b99fa2bddaa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b82e56dd7998ca19ce9e401369cd8d2f52b58573
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661752"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417374"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>ODBC 드라이버에서 연결 풀 인식 개발
 이 항목에서는 드라이버 연결 풀링 서비스를 제공 해야 하는 방법에 대 한 정보를 포함 하는 ODBC 드라이버를 개발 하는 세부 정보를 설명 합니다.  
@@ -44,8 +44,8 @@ ms.locfileid: "51661752"
   
 |기능|추가 기능|  
 |--------------|-------------------------|  
-|[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|새 핸들 형식 지원: SQL_HANDLE_DBC_INFO_TOKEN (아래 설명 참조).|  
-|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|새로운 집합 전용 연결 특성 지원: 연결 다시 설정 하기 위해 SQL_ATTR_DBC_INFO_TOKEN (아래 설명 참조).|  
+|[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|새 핸들 형식을 지원 합니다. SQL_HANDLE_DBC_INFO_TOKEN (아래 설명 참조).|  
+|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|새로운 집합 전용 연결 특성을 지원 합니다. 연결 다시 설정 하기 위해 SQL_ATTR_DBC_INFO_TOKEN (아래 설명 참조).|  
   
 > [!NOTE]  
 >  와 같은 함수를 사용 되지 않음 **SQLError** 하 고 **SQLSetConnectOption** 드라이버 인식 연결 풀링을 지원 되지 않습니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "51661752"
   
  연결 정보 (연결 문자열, 연결 특성 및 DSN)에 여러 원본에서 가져올 수 있습니다, 되므로 드라이버 연결 문자열을 구문 분석 하 고 이러한 위의 함수 호출의 각이 원본 간의 충돌을 해결 해야 합니다.  
   
- 따라서 새 ODBC 핸들을 도입 되었습니다: SQL_HANDLE_DBC_INFO_TOKEN 합니다. SQL_HANDLE_DBC_INFO_TOKEN를 사용 하 여 드라이버 않아도 연결 문자열을 구문 분석 하 고 두 번 이상 연결 정보에서 충돌을 해결 합니다. 드라이버가 연결 정보와 같은 데이터를 저장할 수 있습니다 또는 풀 id입니다. 드라이버별 데이터 구조 이므로  
+ 따라서 새 ODBC 핸들을 도입 되었습니다. SQL_HANDLE_DBC_INFO_TOKEN 합니다. SQL_HANDLE_DBC_INFO_TOKEN를 사용 하 여 드라이버 않아도 연결 문자열을 구문 분석 하 고 두 번 이상 연결 정보에서 충돌을 해결 합니다. 드라이버가 연결 정보와 같은 데이터를 저장할 수 있습니다 또는 풀 id입니다. 드라이버별 데이터 구조 이므로  
   
  이 핸들은 드라이버 관리자와 드라이버 인터페이스로만 사용 됩니다. 응용 프로그램은이 핸들을 직접 할당할 수 없습니다.  
   

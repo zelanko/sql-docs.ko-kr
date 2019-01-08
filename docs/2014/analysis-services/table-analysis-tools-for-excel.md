@@ -14,12 +14,12 @@ ms.assetid: 6d9d1481-18e4-4108-9efa-68152b0940c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: da1d5ceae73ae17f9e3689a13c21619dac5fbc93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 596bc66152f36c25169e4a089644042d25f8c13b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049073"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391901"
 ---
 # <a name="table-analysis-tools-for-excel"></a>Excel용 테이블 분석 도구
   데이터 마이닝 도구를 **분석** 도구 모음에는 데이터 마이닝 시작 하기 가장 쉬운 방법입니다. 각 도구는 자동으로 배포 및 데이터 유형을 분석하고 결과가 유효하다는 것을 증명하기 위한 매개 변수를 설정합니다. 알고리즘을 선택하거나 복잡한 매개 변수를 구성할 필요가 없습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "48049073"
  합니다 **주요 영향 요인 분석** 도구 Microsoft 원시 Bayes 알고리즘을 사용 합니다.  
   
  [범주 검색 &#40;Excel 용 테이블 분석 도구&#41;](detect-categories-table-analysis-tools-for-excel.md)  
- 이 도구를 사용하면 데이터 집합을 추가하고 클러스터링을 적용하여 데이터 그룹화를 찾을 수 있습니다. 이것은 추가 분석을 위해 유사성을 찾고 그룹을 만드는 데 유용합니다.  
+ 이 도구를 사용하면 데이터 집합을 추가하고 클러스터링을 적용하여 데이터 그룹화를 찾을 수 있습니다. 유사성을 찾고를 상세히 분석 하려면 그룹을 만들기 위한 유용 합니다.  
   
  합니다 **범주 검색** 도구 Microsoft 클러스터링 알고리즘을 사용 합니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48049073"
  합니다 **예측** 도구 Microsoft 시계열 알고리즘을 사용 합니다.  
   
  [예외 강조 표시 &#40;Excel 용 테이블 분석 도구&#41;](highlight-exceptions-table-analysis-tools-for-excel.md)  
- 이 도구는 데이터 테이블의 패턴을 분석하고 패턴에 일치하지 않는 행과 값을 찾습니다. 그런 다음 모델을 검토하여 수정한 후 다시 실행하거나 향후 작업을 위해 값에 플래그를 지정합니다.  
+ 이 도구는 데이터 테이블의 패턴을 분석 하 고 패턴에 맞지 않는 행과 값을 찾습니다. 그런 다음 모델을 검토하여 수정한 후 다시 실행하거나 향후 작업을 위해 값에 플래그를 지정합니다.  
   
  합니다 **예외 강조 표시** 도구 Microsoft 클러스터링 알고리즘을 사용 합니다.  
   

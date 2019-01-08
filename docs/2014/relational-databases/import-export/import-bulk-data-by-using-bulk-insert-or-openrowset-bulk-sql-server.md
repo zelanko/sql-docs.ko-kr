@@ -21,12 +21,12 @@ ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 528f05021626fe22543f8ddcd3ed06215d618b42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1dec3a2821e2b92d431680b49e37a7b9819887b2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177483"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505547"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>BULK INSERT 또는 OPENROWSET(BULK...)를 사용하여 데이터 대량 가져오기
   이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT 문 및 INSERT...SELECT * FROM OPENROWSET(BULK...) 문을 사용하여 데이터 파일의 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 대량으로 가져오는 방법을 간략하게 설명합니다. 또한 BULK INSERT 및 OPENROWSET(BULK…)을 사용할 때와 이러한 방법을 사용하여 원격 데이터 원본에서 데이터를 대량으로 가져올 때의 보안 고려 사항에 대해서도 설명합니다.  
@@ -64,12 +64,12 @@ ms.locfileid: "48177483"
   
 -   [서식 파일을 사용하여 테이블 열을 데이터 파일 필드에 매핑&#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK…) 함수  
- OPENROWSET 대량 행 집합 공급자는 OPENROWSET 함수를 호출하고 BULK 옵션을 지정하여 액세스합니다. OPENROWSET(BULK…) 함수를 사용하면 OLE DB 공급자를 통해 데이터 파일 등의 원격 데이터 원본에 연결하여 원격 데이터에 액세스할 수 있습니다.  
+## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK...)은 기능  
+ OPENROWSET 대량 행 집합 공급자는 OPENROWSET 함수를 호출하고 BULK 옵션을 지정하여 액세스합니다. OPENROWSET(BULK...) 함수를 사용하면 OLE DB 공급 기업을 통해 데이터 파일 등의 원격 데이터 원본에 연결하여 원격 데이터에 액세스할 수 있습니다.  
   
- 데이터를 대량으로 가져오려면 INSERT 문 내의 SELECT…FROM 절에서 OPENROWSET(BULK…)를 호출합니다. 데이터 대량 가져오기의 기본 구문은 다음과 같습니다.  
+ 데이터를 대량으로 가져오려면 INSERT 문 내의 SELECT...FROM 절에서 OPENROWSET(BULK...)를 호출합니다. 데이터 대량 가져오기의 기본 구문은 다음과 같습니다.  
   
- INSERT ... 로 기본 값 사용  
+ INSERT ... SELECT * FROM OPENROWSET(BULK...)  
   
  INSERT 문에서 사용하는 경우 OPENROWSET(BULK...)은 테이블 힌트를 지원합니다. 또한 TABLOCK과 같은 일반적인 테이블 힌트 외에도 BULK 절에는 IGNORE_CONSTRAINTS(CHECK 제약 조건만 무시), IGNORE_TRIGGERS, KEEPDEFAULTS 및 KEEPIDENTITY와 같은 특수 테이블 힌트도 사용할 수 있습니다. 자세한 내용은 [테이블 힌트&#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)를 참조하세요.  
   
@@ -115,7 +115,7 @@ GO
 > [!NOTE]  
 >  클라이언트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 독립적으로 파일을 읽기 때문에 **bcp** 유틸리티에는 이러한 제한 사항이 적용되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
  [SELECT 절&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql)   
  [데이터 대량 가져오기 및 내보내기&#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   

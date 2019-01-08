@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b5bf5ce20678845111a1f410739674c50c7bb61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: baf454d021f64931d06c39b49ee0a18f92841507
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596162"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402858"
 ---
 # <a name="backupset-transact-sql"></a>backupset(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47596162"
 |**last_media_number**|**smallint**|백업 세트가 끝나는 미디어의 미디어 번호입니다. NULL일 수 있습니다.|  
 |**catalog_family_number**|**tinyint**|백업 세트 디렉터리의 시작을 포함한 미디어의 패밀리 번호입니다. NULL일 수 있습니다.|  
 |**catalog_media_number**|**smallint**|백업 세트 디렉터리의 시작을 포함한 미디어의 미디어 번호입니다. NULL일 수 있습니다.|  
-|**위치**|**int**|적절한 백업 세트 및 파일의 위치를 찾기 위해 복원 작업에 사용되는 백업 세트 위치입니다. NULL일 수 있습니다. 자세한 내용은 파일을 보려면 [백업 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)합니다.|  
+|**position**|**int**|적절한 백업 세트 및 파일의 위치를 찾기 위해 복원 작업에 사용되는 백업 세트 위치입니다. NULL일 수 있습니다. 자세한 내용은 파일을 보려면 [백업 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)합니다.|  
 |**expiration_date**|**datetime**|백업 세트가 만료되는 날짜 및 시간입니다. NULL일 수 있습니다.|  
 |**software_vendor_id**|**int**|백업 미디어 헤더를 기록하는 소프트웨어 공급업체의 ID입니다. NULL일 수 있습니다.|  
 |**name**|**nvarchar(128)**|백업 세트의 이름입니다. NULL일 수 있습니다.|  
@@ -100,7 +100,7 @@ ms.locfileid: "47596162"
 |**compressed_backup_size**|**Numeric(20,0)**|디스크에 저장된 백업의 총 바이트 수입니다.<br /><br /> 압축 비율을 계산 하려면 **backup_size** 하 고 **backup_size**합니다.<br /><br /> 중에 **msdb** 업그레이드,이 값을 NULL로 설정 됩니다. 백업이 압축되지 않았음을 나타냅니다.|  
 |**key_algorithm**|**nvarchar(32)**|백업을 암호화하는 데 사용되는 암호화 알고리즘입니다. NO_Encryption 값은 백업이 암호화되지 않았음을 나타냅니다.|  
 |**encryptor_thumbprint**|**varbinary(20)**|데이터베이스에서 인증서나 비대칭 키를 찾는 데 사용할 수 있는 암호기의 지문입니다. 백업이 암호화되지 않은 경우 이 값은 NULL입니다.|  
-|**encryptor_type**|**nvarchar(32)**|사용한 암호기 유형: 인증서 또는 비대칭 키입니다. . 백업이 암호화되지 않은 경우 이 값은 NULL입니다.|  
+|**encryptor_type**|**nvarchar(32)**|사용되는 암호기의 유형으로, 인증서 또는 비대칭 키를 반환합니다. . 백업이 암호화되지 않은 경우 이 값은 NULL입니다.|  
   
 ## <a name="remarks"></a>Remarks  
  RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY 채웁니다의 열에는 **backupmediaset** 미디어 세트 헤더의 적절 한 값이 있는 테이블입니다.  

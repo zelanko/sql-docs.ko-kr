@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7cb1a6e0212251eea45e4cc0b8add1cdd99b342c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d13dc442d1c0f5067b3db232d7fd6756503bb91c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017360"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409960"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>수익 차트(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  수익 차트는 마이닝 모델 사용과 관련된 예상 수익성을 표시합니다. 예를 들어 비즈니스 시나리오에서 회사가 어떤 고객에게 연락해야 하는지 예측하는 모델을 가정하겠습니다. 이 경우 수익 차트 정보에 타겟 메일링 캠페인 수행 비용을 추가합니다. 그런 다음 완성된 차트에서 고객에게 무작위로 연락하는 시나리오와 비교하여 고객을 올바르게 타게팅할 때 예상되는 수익을 확인할 수 있습니다.  
+  수익 차트는 마이닝 모델 사용과 관련된 예상 수익성을 표시합니다. 예를 들어 비즈니스 시나리오에서 회사가 어떤 고객에 게 연락 해야 예측 하는 모델을 가정해 보겠습니다. 이 경우 수익 차트 정보에 타겟 메일링 캠페인 수행 비용을 추가합니다. 그런 다음 완성된 차트에서 고객에게 무작위로 연락하는 시나리오와 비교하여 고객을 올바르게 타게팅할 때 예상되는 수익을 확인할 수 있습니다.  
   
 ## <a name="build-a-profit-chart"></a>수익 차트 작성  
  수익 차트는 리프트 차트와 비슷합니다. 가장 먼저 리프트 차트를 만든 다음 비용 및 수익 정보를 추가합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "34017360"
   
  이 예제에서는 타겟 메일링 의사 결정 트리 모델을 사용했습니다. 이 모델은 자전거를 구매할 가능성이 높은 고객을 식별합니다. 수익 극대화를 위해 몇 명의 고객을 타게팅해야 하는지 파악하기 위해 **수익 차트** 를 적용할 수 있습니다.  
   
- 예제 모델이 없는 경우 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)를 사용하여 만들 수 있습니다.  
+ 샘플 모델에 없는 경우 사용 하 여 만들 수 있습니다 합니다 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)합니다.  
   
 1.  마이닝 정확도 차트 작성기를 엽니다.  
   
@@ -53,12 +53,12 @@ ms.locfileid: "34017360"
   
      이 대화 상자에서 타겟 메일링 캠페인과 연관된 비용 및 이익을 지정합니다. 이러한 예제의 차트에는 다음 값을 사용했습니다.  
   
-    |설정|Value|설명|  
+    |설정|값|주석|  
     |-------------|-----------|--------------|  
     |**모집단**|20,000|총 대상 모집단에 대한 값 설정<br /><br /> 데이터베이스에 많은 고객이 있을 수 있지만 발송 비용을 절약하려면 응답할 가능성이 가장 높은 고객 20,000명만 타게팅해야 할 수 있습니다. 이 목록은 예측 쿼리를 실행하고 예측 모델별로 확률 결과를 정렬하여 얻을 수 있습니다.|  
     |**고정 비용**|500|20,000명의 고객들에게 타겟 메일링 캠페인을 한 번 제공할 때 드는 비용을 입력합니다. 여기에는 인쇄 또는 전자 메일 캠페인 설정 비용이 포함될 수 있습니다.|  
     |**개별 비용**|3|타겟 메일링 캠페인의 단위 비용을 입력합니다.<br /><br /> 모델에서 예측한 적절한 잠재 고객 수에 따라 20,000 이하의 숫자를 이 금액에 곱합니다.|  
-    |**개인별 수익**|400|성공적인 결과에서 예상할 수 있는 수익 또는 수입 금액을 나타내는 값을 입력합니다. 이 경우 카탈로그를 발송할 때 평균 400달러의 부속품 또는 자전거를 구매하는 것으로 가정하겠습니다.<br /><br /> 이 금액은 높은 확률 사례와 관련된 총 수익을 산출하는 데 사용됩니다.|  
+    |**개인별 수익**|400|성공적인 결과에서 예상할 수 있는 수익 또는 수입 금액을 나타내는 값을 입력합니다. 이 경우 가정 하겠습니다 우편 카탈로그 부속품 또는 자전거 평균 400 달러의 구매에 대 한 결과입니다.<br /><br /> 이 금액은 높은 확률 사례와 관련된 총 수익을 산출하는 데 사용됩니다.|  
   
 7.  필요한 매개 변수를 설정한 다음 **확인**을 클릭합니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "34017360"
   
  여기서 볼 수 있듯이, 수익 차트가 동일한 불연속 특성을 예측하는 경우 수익 차트를 사용하여 여러 모델을 비교할 수 있습니다.  
   
- ![수익 차트 비교 세 가지 모델](../../analysis-services/data-mining/media/dm14-profitchartupdated.gif "는 수익 차트 세 가지 모델 비교")  
+ ![수익 차트는 세 가지 모델 비교](../../analysis-services/data-mining/media/dm14-profitchartupdated.gif "수익 차트는 세 가지 모델 비교")  
   
  차트의 회색 수직선을 보십시오. 선을 클릭하고 끌면 도구 설명에 해당 지점에 포함된 타겟 모집단의 비율이 표시됩니다.  
   
@@ -86,12 +86,12 @@ ms.locfileid: "34017360"
 |항목|링크|  
 |------------|-----------|  
 |타겟 메일링 모델에 대한 리프트 차트를 만드는 방법을 보여 주는 연습을 제공합니다.|[기본 데이터 마이닝 자습서](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)<br /><br /> [리프트 차트를 사용하여 정확도 테스트&#40;기본 데이터 마이닝 자습서&#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)|  
-|관련 차트 종류에 대해 설명합니다.|[리프트 차트&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [분류표&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [산 점도 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|관련 차트 종류에 대해 설명합니다.|[리프트 차트&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [분류표&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [산점도&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
 |마이닝 모델 및 마이닝 구조에 대한 교차 유효성 검사를 설명합니다.|[교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|리프트 차트 및 기타 정확도 차트를 만드는 단계를 설명합니다.|[테스트 및 유효성 검사 작업과 방법&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|리프트 차트 및 기타 정확도 차트를 만드는 단계를 설명합니다.|[테스트 및 유효성 검사 태스크 및 방법&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>관련 항목:  
- [테스트 및 유효성 검사 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
+ [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
  [리프트 차트를 사용하여 정확도 테스트&#40;기본 데이터 마이닝 자습서&#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)  
   
   

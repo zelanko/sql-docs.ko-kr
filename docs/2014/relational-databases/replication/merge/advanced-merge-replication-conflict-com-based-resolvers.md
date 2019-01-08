@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - COM-based resolvers [SQL Server replication]
@@ -14,12 +13,12 @@ ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66a8adfa8d9e060f316062e033be23ba8f5dbbc4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fb5a27e9087044b1049106ca5abd071db74af9f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186823"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766416"
 ---
 # <a name="microsoft-com-based-resolvers"></a>Microsoft COM-Based Resolvers
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 와 함께 제공되는 모든 COM 기반 해결 프로그램은 업데이트 충돌을 처리하고 표시가 된 곳에서 삽입 및 삭제 충돌도 처리합니다. 모든 해결 프로그램은 열 추적을 처리하며 대부분의 경우 행 추적도 처리합니다. 이러한 해결 프로그램 및 다른 모든 COM 기반 해결 프로그램은 처리할 수 있는 충돌 유형을 선언하며 병합 에이전트는 다른 모든 충돌 유형에 대해 기본 해결 프로그램을 사용합니다.  
@@ -45,7 +44,7 @@ ms.locfileid: "48186823"
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다운로드 전용 충돌 해결 프로그램|입력이 없습니다.|게시자로 업로드된 변경 내용은 거부되며 변경 내용은 구독자로 다운로드됩니다.|모든 충돌 유형을 지원합니다.|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLServer 저장 프로시저 해결 프로그램|해결 프로그램에서 충돌을 해결하기 위해 호출해야 하는 저장 프로시저의 이름입니다.|충돌 해결은 사용자가 지정한 저장 프로시저의 논리에 따라 다릅니다.|업데이트 충돌을 지원합니다. 자세한 내용은 [병합 아티클용 사용자 지정 충돌 해결 프로그램 구현](../implement-a-custom-conflict-resolver-for-a-merge-article.md)을 참조하세요.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)   
  [sp_enumcustomresolvers&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql)  
   

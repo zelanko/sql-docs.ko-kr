@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],preparing query
@@ -13,12 +12,12 @@ ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79d862aa5fa2327a6b88ff1936d92e1c3f45f090
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 831e44cb232dea7f0730c73d360cd787f3895878
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173253"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756995"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>변경 데이터에 대한 쿼리 준비
   변경 데이터를 증분 로드하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 제어 흐름에서 세 번째이자 마지막 태스크는 변경 데이터 쿼리를 준비하고 데이터 흐름 태스크를 추가하는 것입니다.  
@@ -125,7 +124,7 @@ ms.locfileid: "48173253"
   
         ```  
   
-5.  코드를 반환 하는 기본 행을 그대로 둡니다 `DtsExecResult.Success` 스크립트를 실행 합니다.  
+5.  스크립트 실행에서 `DtsExecResult.Success`를 반환하는 기본 코드 행을 그대로 둡니다.  
   
 6.  스크립트 개발 환경 및 **스크립트 태스크 편집기**를 닫습니다.  
   
@@ -171,7 +170,7 @@ ms.locfileid: "48173253"
         ```  
   
         > [!NOTE]  
-        >  `else` 절이 샘플에서의 시작 날짜와 시간에 대 한 null 값을 전달 하 여 변경 데이터의 초기 로드에 대 한 쿼리를 생성 합니다. 이 샘플에서는 변경 데이터 캡처가 설정되기 전에 적용된 변경 내용도 데이터 웨어하우스에 업로드되어야 하는 시나리오를 다루지 않습니다.  
+        >  이 샘플의 `else` 절은 시작 날짜 및 시간에 대해 Null 값을 전달하여 변경 데이터의 초기 로드에 대한 쿼리를 생성합니다. 이 샘플에서는 변경 데이터 캡처가 설정되기 전에 적용된 변경 내용도 데이터 웨어하우스에 업로드되어야 하는 시나리오를 다루지 않습니다.  
   
 3.  **SQL 실행 태스크 편집기** 의 **매개 변수 매핑**페이지에서 다음 매핑을 수행합니다.  
   

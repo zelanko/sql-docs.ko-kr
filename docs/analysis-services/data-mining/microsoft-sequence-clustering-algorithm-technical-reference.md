@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cf5f652cc2cec77fdbcb488710886441788a0631
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 331a7c4df759114e18fd47007058ddc38b2f77d9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016470"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418384"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft 시퀀스 클러스터링 알고리즘 기술 참조
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34016470"
 ### <a name="feature-selection-in-a-sequence-clustering-model"></a>시퀀스 클러스터링 모델의 기능 선택  
  시퀀스를 작성할 때는 기능 선택이 호출되지 않지만 클러스터링 단계에서 기능 선택이 적용됩니다.  
   
-|모델 유형|기능 선택 방법|설명|  
+|모델 유형|기능 선택 방법|주석|  
 |----------------|------------------------------|--------------|  
 |시퀀스 클러스터링|사용되지 않음|기능 선택이 호출되지 않습니다. 그러나 MINIMUM_SUPPORT 및 MINIMUM_PROBABILIITY 매개 변수의 값을 설정하여 알고리즘의 동작을 제어할 수 있습니다.|  
 |Clustering|흥미도 점수|클러스터링 알고리즘은 불연속 또는 불연속화된 알고리즘을 사용할 수 있지만 각 특성의 점수는 거리로 계산되며 연속적입니다. 따라서 흥미도 점수가 사용됩니다.|  
@@ -93,20 +93,20 @@ ms.locfileid: "34016470"
  기본값은 64입니다.  
   
  MAXIMUM_STATES  
- 알고리즘이 지원하는 비시퀀스 특성에 대한 최대 상태 수를 지정합니다. 비시퀀스 특성의 상태 수가 최대 상태 수보다 크면 알고리즘은 특성의 가장 일반적인 상태를 사용하고 나머지 상태는 **Missing**으로 처리합니다.  
+ 알고리즘이 지원하는 비시퀀스 특성에 대한 최대 상태 수를 지정합니다. 비시퀀스 특성의 상태 수가 최대 상태 수보다 크면 알고리즘 특성의 가장 일반적인 상태를 사용 하 여 하 고 나머지 상태를 취급 **Missing**합니다.  
   
  기본값은 100입니다.  
   
 ### <a name="modeling-flags"></a>모델링 플래그  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘에서 지원되는 모델링 플래그는 다음과 같습니다.  
   
- NOT  NULL  
+ NOT NULL  
  열에 null이 포함될 수 없음을 나타냅니다. 따라서 Analysis Services가 모델 학습 중 Null을 발견할 경우 오류가 발생합니다.  
   
  마이닝 구조 열에 적용됩니다.  
   
  MODEL_EXISTENCE_ONLY  
- 열이 **Missing** 및 **Existing**상태를 갖는 것으로 간주됩니다. Null은 **Missing** 값으로 처리됩니다.  
+ 열이 두 가지 가능한 상태인 **누락** 하 고 **기존**합니다. Null은 **Missing** 값으로 처리됩니다.  
   
  마이닝 모델 열에 적용됩니다.  
   
@@ -123,12 +123,12 @@ ms.locfileid: "34016470"
 ### <a name="input-and-predictable-columns"></a>입력 열과 예측 가능한 열  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘은 다음 표에 나열된 특정 입력 열과 예측 가능한 열을 지원합니다. 마이닝 모델에 사용되는 경우 콘텐츠 형식의 의미에 대한 자세한 내용은 [콘텐츠 형식&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/content-types-data-mining.md)을 참조하세요.  
   
-|열|내용 유형|  
+|Column|내용 유형|  
 |------------|-------------------|  
 |입력 특성|Continuous, Cyclical, Discrete, Discretized, Key, Key Sequence, Table 및 Ordered|  
 |예측 가능한 특성|Continuous, Cyclical, Discrete, Discretized, Table 및 Ordered|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 -   시퀀스 예측에 대한 [PredictSequence&#40;DMX&#41;](../../dmx/predictsequence-dmx.md) 함수를 사용합니다. 버전에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시퀀스 예측을 지원 하는 참조 하십시오 [SQL Server 2012 버전에서 지 원하는 기능](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)합니다.  
   
@@ -136,9 +136,9 @@ ms.locfileid: "34016470"
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘에서는 드릴스루, OLAP 마이닝 모델 사용 및 데이터 마이닝 차원 사용을 지원합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [Microsoft 시퀀스 클러스터링 알고리즘](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+## <a name="see-also"></a>관련 항목  
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [시퀀스 클러스터링 모델 쿼리 예제](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [시퀀스 클러스터링 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [시퀀스 클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

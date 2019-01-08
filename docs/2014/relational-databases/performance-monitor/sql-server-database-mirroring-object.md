@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Database Mirroring
@@ -15,12 +15,12 @@ ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8a24e7ad7a6acb6f9c639a89d8cdc30b8301db49
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7834d2f5d0fc8a8e849f796eab93259682ea377c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084363"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753036"
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server, Database Mirroring 개체
   **SQLServer:Database Mirroring** 성능 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 미러링에 대한 정보를 보고하는 성능 카운터를 포함합니다. 다음 표에서는 이 개체가 포함하는 카운터를 나열합니다.  

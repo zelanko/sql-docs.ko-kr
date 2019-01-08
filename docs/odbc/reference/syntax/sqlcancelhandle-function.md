@@ -15,18 +15,18 @@ ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a814b15255a485bf6fbc28ad31d4e789f8482447
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 655c3c76794b170b113442b14ae75cf977ac024c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662121"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391706"
 ---
 # <a name="sqlcancelhandle-function"></a>SQLCancelHandle 함수
 **규칙**  
- ODBC 3.8 버전에 도입 되었습니다.  
+ 도입 된 버전: ODBC 3.8  
   
- 표준 준수: 없음  
+ 표준 준수 합니다. 없음  
   
  대부분의 ODBC 3.8 이상 드라이버가이 함수를 구현 합니다 예상 됩니다. 드라이버에 대 한 호출 하지 않는 경우 **SQLCancelHandle** 연결을 사용 하 여 처리 합니다 *처리* 매개 변수에서 IM001의 SQLSTATE 및 메시지를 사용 하 여 SQL_ERROR를 반환 하는 ' 드라이버는이 함수를 지원 하지 않습니다 ' 호출 **SQLCancelHandle** 문을 사용 하 여로 처리 합니다 *처리* 매개 변수에 대 한 호출으로 매핑될 **SQLCancel** 드라이버 관리자에 의해 경우에 처리 될 수 있습니다 드라이버 구현 **SQLCancel**합니다. 응용 프로그램에서 사용할 수 있습니다 **SQLGetFunctions** 드라이버를 지원 하는지 확인할 **SQLCancelHandle**합니다.  
   

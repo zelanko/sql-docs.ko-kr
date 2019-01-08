@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], ODBC
@@ -16,19 +15,19 @@ ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3fa622999f841950a2129012b6208b324f8bcc5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57bd700e33836835218ee261a3f22211b9b4cb73
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074083"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762441"
 ---
 # <a name="odbc-connection-manager"></a>ODBC 연결 관리자
   ODBC 연결 관리자를 사용하면 패키지에서 ODBC(Open Database Connectivity) 사양을 사용하여 다양한 데이터베이스 관리 시스템에 연결할 수 있습니다.  
   
  패키지에 ODBC 연결을 추가 하 고 연결 관리자 속성을 설정할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 연결 관리자를 만들고 연결 관리자를 추가 합니다 `Connections` 패키지의 컬렉션입니다. 런타임 시 연결 관리자는 물리적 ODBC 연결로 확인됩니다.  
   
- 합니다 `ConnectionManagerType` 연결 관리자의 속성이 `ODBC`합니다.  
+ 연결 관리자의 `ConnectionManagerType` 속성이 `ODBC`로 설정됩니다.  
   
  다음과 같은 방법으로 ODBC 연결 관리자를 구성할 수 있습니다.  
   
@@ -45,9 +44,9 @@ ms.locfileid: "48074083"
   
 -   [ODBC 연결 관리자 UI 참조](../odbc-connection-manager-ui-reference.md)  
   
- 연결 관리자를 프로그래밍 방식으로 구성 하는 방법에 대 한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 하 고 [프로그래밍 방식으로 연결 추가](../building-packages-programmatically/adding-connections-programmatically.md)합니다.  
+ 연결 관리자를 프로그래밍 방식으로 구성하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../building-packages-programmatically/adding-connections-programmatically.md)로 설정됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Integration Services &#40;SSIS&#41; 연결](integration-services-ssis-connections.md)  
+ [Integration Services&#40;SSIS&#41; 연결](integration-services-ssis-connections.md)  
   
   

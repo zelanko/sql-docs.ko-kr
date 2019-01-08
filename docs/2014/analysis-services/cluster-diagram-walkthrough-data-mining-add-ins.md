@@ -17,12 +17,12 @@ ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b617305a8766ff94a699a054ac394be406dc7873
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee4a7a09471078753589463c058ba5ea2e39c4d2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057093"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420008"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>클러스터 다이어그램 연습(데이터 마이닝 추가 기능)
   클러스터링 모델을 만든 후 Visio를 사용 하 여 가져올 수 있습니다 합니다 **클러스터** 셰이프 및 사용자 지정 레이아웃을 개선 하 고 계속 합니다. 합니다 **Visio 용 데이터 마이닝 셰이프** 데이터 마이닝 다이어그램을 사용 하 여 작업에 대 한 다음 사용자 지정 컨트롤을 포함 합니다.  
@@ -73,9 +73,9 @@ ms.locfileid: "48057093"
   
 7.  옵션을 그대로 둡니다 **차트의 행 수가**를 5로 합니다.  
   
-     이 옵션은 모델의 클러스터 수를 변경하지 않고 각 클러스터의 특징으로 표시될 수 있는 특성의 수를 제한하기만 합니다.  
+     이 옵션은 모델에서 클러스터의 수를 변경 되지 않습니다. 각 클러스터의 기능으로 표시 될 수 있는 특성의 수를 제한 하기만 합니다.  
   
-     그러나 이 옵션은 차트 데이터에 대한 필터 역할을 하므로 나중에 항목 수를 늘릴 수 없습니다.  
+     하지만 나중에 항목 수를 늘릴 수 없습니다 있도록 옵션은 차트 데이터에 대 한 필터로 작동 합니다.  
   
 8.  **고급**을 클릭합니다.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48057093"
   
      ![셰이프 색을 선택 하는 고급](media/dm13-visio-clusteroptions-advanced.gif "셰이프 색을 선택 하는 고급을 클릭 합니다.")  
   
-     **팁:** 일부 색 Visio 테마 및 셰이프 편집 컨트롤을 사용 하 여 나중에 변경할 수 있습니다. 그러나 Visio 테마는 이러한 색 선택 중 일부를 재정의하기도 하므로 기본 색부터 시작하여 점차적으로 변경을 적용하는 것이 좋습니다.  
+     **팁:** 일부 색은 Visio 테마 및 셰이프 편집 컨트롤을 사용하여 나중에 변경할 수 있습니다. 그러나 Visio 테마는 이러한 색 선택 중 일부를 재정의하기도 하므로 기본 색부터 시작하여 점차적으로 변경을 적용하는 것이 좋습니다.  
   
 9. 클릭 **완료** 그래프를 만듭니다.  
   

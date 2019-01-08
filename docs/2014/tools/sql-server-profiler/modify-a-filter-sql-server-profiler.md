@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server], modifying
@@ -15,12 +14,12 @@ ms.assetid: 8b317813-4918-4485-b930-77b1951aa00c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2d78d2d621a8cc0cdf96b2d54fd4c6b167c02291
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db6d6220fbb0f756b539e63dc2496d9ddb46d9f5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070636"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775405"
 ---
 # <a name="modify-a-filter-sql-server-profiler"></a>필터 수정(SQL Server Profiler)
   추적 정의가 포함된 추적 템플릿에 필터를 추가하여 추적에서 수집하는 이벤트의 수를 제한할 수 있습니다. 수집된 이벤트의 수를 제한하면 추적의 성능 효과가 저하될 수 있습니다. 추적 템플릿에 필터를 설정했고 추적에서 필요한 유형의 정보를 수집하고 있지 않는 것을 확인하는 경우 해당 필터를 편집할 수 있습니다.  

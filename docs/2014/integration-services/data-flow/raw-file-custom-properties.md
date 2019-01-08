@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7b115edd3e8addbedc60c0c37b4ea014a3123909
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38acf6fd70bebf5033fde5dcf33fe5b2a6ac6722
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098225"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754825"
 ---
 # <a name="raw-file-custom-properties"></a>원시 파일 사용자 지정 속성
   **원본 사용자 지정 속성**  
@@ -44,7 +43,7 @@ ms.locfileid: "48098225"
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer(열거형)|FileName 속성에 파일 이름이 포함되어 있는지, 아니면 파일 이름이 포함된 변수의 이름이 포함되어 있는지를 지정하는 값입니다. 옵션으로는 `File name`(0) 및 `File name from variable`(1)이 있습니다.|  
 |FileName|String|원시 파일 대상에서 쓰는 파일의 이름입니다.|  
-|WriteOption|Integer(열거형)|원시 파일 대상에서 이름이 같은 기존 파일을 삭제하는지 여부를 지정하는 값입니다. 옵션은 `Create Always` (0), `Create Once` (1), `Truncate and Append` (3) 및 `Append` (2). 이 속성의 기본값은 `Create Always` (0).|  
+|WriteOption|Integer(열거형)|원시 파일 대상에서 이름이 같은 기존 파일을 삭제하는지 여부를 지정하는 값입니다. 옵션으로는 `Create Always`(0), `Create Once`(1), `Truncate and Append`(3) 및 `Append`(2)가 있습니다. 이 속성의 기본값은 `Create Always`(0)입니다.|  
   
 > [!NOTE]  
 >  추가 작업을 수행하려면 추가된 데이터의 메타데이터가 파일에 이미 있는 데이터의 메타데이터와 일치해야 합니다.  
@@ -54,6 +53,6 @@ ms.locfileid: "48098225"
  자세한 내용은 [Raw File Destination](raw-file-destination.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [Common Properties](../common-properties.md)  
+ [공용 속성](../common-properties.md)  
   
   

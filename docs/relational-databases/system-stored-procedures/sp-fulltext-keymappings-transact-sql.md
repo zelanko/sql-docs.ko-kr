@@ -21,12 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8e07af93050ec752a9cf26b56238269ca63aa9d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0e9f8894376712472c13479a32503954ad2694d7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660483"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506319"
 ---
 # <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -60,7 +60,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |DocId|**bigint**|키 값에 해당하는 내부 문서 ID(DocId) 열입니다.|  
 |Key|*|지정한 테이블의 전체 텍스트 키 값입니다.<br /><br /> 매핑 테이블에 전체 텍스트 키가 없으면 빈 행 집합이 반환됩니다.|  
@@ -73,7 +73,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 ## <a name="remarks"></a>Remarks  
  다음 표에서는 한 개, 두 개 또는 세 개의 매개 변수를 사용한 결과에 대해 설명합니다.  
   
-|매개 변수 목록|결과|  
+|이 매개 변수 목록|이 결과가 하는 중...|  
 |--------------------------|----------------------|  
 |*table_id*|만 사용 하 여 호출 하는 경우는 *table_id* 매개 변수를 sp_fulltext_keymappings는 함께 각 키에 해당 하는 DocId 지정된 된 기본 테이블에서 모든 전체 텍스트 키 (키) 값을 반환 합니다. 여기에는 삭제가 보류된 키가 포함됩니다.<br /><br /> 이 함수는 다양한 문제를 해결하는 데 유용합니다. 특히, 선택한 전체 텍스트 키가 정수 데이터 형식이 아닐 경우 전체 텍스트 인덱스 내용을 보는 데 유용합니다. 이 경우 sp_fulltext_keymappings의 결과 사용 하 여 결과 조인 해야 **sys.dm_fts_index_keywords_by_document**합니다. 자세한 내용은 [sys.dm_fts_index_keywords_by_document &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)합니다.<br /><br /> 그러나 일반적으로는 가능하면 sp_fulltext_keymappings를 특정 전체 텍스트 키나 DocId를 지정하는 매개 변수와 함께 실행하는 것이 좋습니다. 이 방법은 전체 키 맵을 반환하는 것보다 훨씬 효율적입니다. 특히 매우 큰 테이블의 경우 전체 키 맵을 반환하기 위한 성능 비용이 상당히 크므로 더욱 효율적입니다.|  
 |*table_id*, *docid*|경우에 합니다 *table_id* 및 *docid* 지정 된 *docid* null이 아니어야 하 고 지정된 된 테이블의 올바른 DocId를 지정 해야 합니다. 이 함수는 특정 전체 텍스트 인덱스의 DocId에 해당하는 기본 테이블에서 사용자 지정 전체 텍스트 키를 분리하는 데 유용합니다.|  

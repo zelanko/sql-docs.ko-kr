@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Showplan XML events
@@ -15,12 +14,12 @@ ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 443af7fa03c17e5ba8d0dba1210c5564cc7d51e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c92c08349a473aa4a83205cc539eec3577619109
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086209"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754195"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Showplan XML 이벤트를 개별적으로 저장(SQL Server 프로파일러)
   이 항목에서는 **를 사용하여 추적에서 캡처된** Showplan XML [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]이벤트를 개별 .SQLPLan 파일에 저장하는 방법에 대해 설명합니다. **에서** Showplan XML [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]이벤트 파일을 열면 각 이벤트에 대한 그래픽 실행 계획을 볼 수 있습니다.  
@@ -60,7 +59,7 @@ ms.locfileid: "48086209"
   
 11. SQL Server Management Studio의 **Showplan XML** 이벤트 파일을 보려면 **파일** 메뉴에서 **열기**를 가리키고 **파일**을 클릭합니다. **Showplan XML** 이벤트 파일을 저장한 디렉터리를 탐색하여 하나를 선택한 다음 엽니다. **Showplan XML** 이벤트 파일의 파일 확장자는 .SQLPlan입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Profiler에서 SHOWPLAN 결과로 쿼리 분석](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
   
   

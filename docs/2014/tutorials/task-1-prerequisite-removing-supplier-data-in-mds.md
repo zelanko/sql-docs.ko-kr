@@ -1,5 +1,5 @@
 ---
-title: '태스크 1 (필수): MDS에서 공급자 데이터 제거 | Microsoft Docs'
+title: '태스크 1(필수): MDS에서 공급자 데이터 제거 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74862c1db4ad3c34afc759ba94f36ba5fb896e7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a922d01d0085830cde30bbc16fcd6f79e106ff03
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227703"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52394244"
 ---
 # <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>태스크 1(필수): MDS에서 공급자 데이터 제거
   이 작업에서는 MDS에 저장된 공급자 데이터를 제거합니다. 이전 단원에서는 **MDS Excel 추가 기능** 을 사용하여 데이터를 수동으로 업로드했습니다. 이 단원에서 만드는 SSIS 패키지는 데이터를 MDS에 자동으로 업로드합니다. 따라서 SSIS 패키지를 테스트하기 전에 MDS에서 공급자 데이터를 제거하고, 파생 계층을 제거하고, 공급자 및 상태 엔터티를 제거하고 포함된 데이터 없이 공급자 엔터티를 만들어야 합니다.  
@@ -39,11 +39,11 @@ ms.locfileid: "48227703"
   
 8.  이전 단계를 반복하여 **State** 엔터티를 삭제합니다.  
   
-9. **마스터 데이터 관리자**는 닫지 마십시오.  
+9. 닫지 마세요 **마스터 데이터 관리자**합니다.  
   
 10. **Cleansed and Matched Suppliers.xls** 파일이 열려 있는 Excel 창으로 전환합니다. 하단에서 **Sheet1** 탭으로 전환합니다.  
   
-11. **첫 번째 머리글 행**만 선택합니다. 다른 행은 선택하지 마십시오. Excel 열을 기반으로 엔터티를 만들어야 하지만 데이터를 업로드하지는 않습니다. 따라서 첫 번째 머리글 행만 선택합니다.  
+11. **첫 번째 머리글 행**만 선택합니다. 다른 행을 선택 하지 마십시오. Excel 열을 기반으로 엔터티를 만듭니다. 하지만 모든 데이터를 업로드 하지. 따라서 첫 번째 머리글 행만 선택합니다.  
   
 12. 메뉴 모음에서 **마스터 데이터** 를 클릭합니다.  
   
@@ -86,6 +86,6 @@ ms.locfileid: "48227703"
 22. **탐색기**를 클릭합니다. 모든 특성이 포함된 **Supplier** 엔터티가 **값 없음**으로 만들어졌는지 확인합니다.  
   
 ## <a name="next-step"></a>다음 단계  
- [작업 2 &#40;옵션&#41;: 마스터 데이터 관리자를 사용 하 여 MDS 구독 뷰 만들기](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
+ [작업 2 &#40;선택적&#41;: 마스터 데이터 관리자를 사용 하 여 MDS 구독 뷰 만들기](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
   
   

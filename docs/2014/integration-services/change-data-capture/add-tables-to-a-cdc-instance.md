@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - addTabs
@@ -13,12 +12,12 @@ ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f437cf8a54efcd84f01757b72b278f14a524a8d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f82b6f68d7186d35fd1657cd56c4aa23fcf82b3e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107713"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769055"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>CDC 인스턴스에 테이블 추가
   테이블 선택 대화 상자를 사용하여 Oracle 원본에서 CDC 인스턴스로 다른 테이블을 추가할 수 있습니다. 선택한 테이블이 속성 편집기의 **테이블** 탭에 있는 목록에 추가됩니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "48107713"
 > [!NOTE]  
 >  이러한 필드 중 하나 또는 모두에 조건을 입력할 수 있습니다.  
   
--   **처음 1,000개의 일치하는 테이블 표시**: 기본적으로 이 확인란은 선택되어 있습니다. 이 옵션은 처음 1000개의 일치하는 테이블로 표시를 제한합니다. 이 확인란을 선택하지 않으면 조건과 일치하는 모든 테이블이 표시됩니다. 따라서 많은 테이블이 있는 경우 목록을 표시하는 데 많은 시간이 걸릴 수 있습니다.  
+-   **표시할 처음 1,000 개의 일치 하는 테이블**: 기본적으로 이 확인란은 선택되어 있습니다. 이 옵션은 처음 1000개의 일치하는 테이블로 표시를 제한합니다. 이 확인란을 선택하지 않으면 조건과 일치하는 모든 테이블이 표시됩니다. 따라서 많은 테이블이 있는 경우 목록을 표시하는 데 많은 시간이 걸릴 수 있습니다.  
   
  **CDC 인스턴스에 포함할 테이블을 선택하려면**  
  포함할 테이블 옆의 확인란을 클릭한 다음 **추가**를 클릭합니다. 테이블이 새 인스턴스 마법사의 **테이블 및 열 선택** 페이지에 있는 목록에 추가됩니다.  
@@ -49,8 +48,8 @@ ms.locfileid: "48107713"
 >  뷰어에서 테이블 목록을 볼 수 있습니다. 뷰어를 사용할 때 정보는 읽기 전용입니다. 또한 뷰어에는 테이블에서 캡처된 열 목록이 포함되어 있습니다. 뷰어에 액세스하는 방법은 [How to Manage a CDC Instance](manage-a-cdc-instance.md)을 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
- [CDC 인스턴스 속성을 편집 하는 방법](how-to-edit-the-cdc-instance-properties.md)   
- [CDC 인스턴스를 관리 하는 방법](manage-a-cdc-instance.md)   
+ [CDC 인스턴스 속성을 편집하는 방법](how-to-edit-the-cdc-instance-properties.md)   
+ [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
  [변경 내용을 캡처할 Oracle 테이블 선택](select-oracle-tables-for-capturing-changes.md)  
   
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bafa3d8b45dc2ad59314218f34959120b50e6bfe
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: 52a2754a4c6410430042f2b31805db42def4ec1f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026880"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420284"
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>사용 현황 데이터 수집 구성(SharePoint용 파워 피벗)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -86,9 +86,9 @@ ms.locfileid: "34026880"
 ##  <a name="jobs"></a> 사용 현황 데이터 수집에 사용되는 타이머 작업 구성  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 상태 및 사용 현황 데이터는 사용 현황 데이터 컬렉션 시스템에서 두 개의 타이머 작업을 통해 다른 위치로 이동됩니다.  
   
--   "Microsoft SharePoint Foundation 사용 현황 데이터 가져오기" 타이머 작업이 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 애플리케이션 데이터베이스로 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 사용 데이터를 이동합니다.  
+-   "Microsoft SharePoint Foundation 사용 데이터 가져오기" 타이머 작업이 이동 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 사용량을 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 데이터베이스입니다.  
   
--   "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드 처리 타이머 작업"이 기본 제공 관리 보고서의 데이터 원본인 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서로 데이터를 이동합니다.  
+-   "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드 처리 타이머 작업" 데이터를 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 기본 제공 관리 보고서에 대 한 데이터의 원인이 되는 통합 문서.  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드에 나타나는 관리 보고서를 더 자주 새로 고쳐야 하는 경우에는 다음 단계를 따릅니다.  
   

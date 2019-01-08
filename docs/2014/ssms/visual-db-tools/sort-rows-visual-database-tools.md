@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - sorting rows [SQL Server]
@@ -13,12 +13,12 @@ ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2183b8cb96895dc2bbb1308bccd818fb5a04dba5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3235c9a9305e4476214add63f8710ba9de7b4c19
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156103"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768603"
 ---
 # <a name="sort-rows-visual-database-tools"></a>행 정렬(Visual Database Tools)
   쿼리 결과에서 행을 정렬할 수 있습니다. 즉, 해당 값이 결과 집합의 행 순서를 결정하는 특정 열 또는 열 집합의 이름을 지정할 수 있습니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "48156103"
   
     ```  
   
--   **파생 열을 기준으로 정렬할 수 있습니다.** 예를 들어, 각 행에 책 제목이 있는 결과 집합을 만들어 한 권당 가장 높은 인세를 지불하는 책이 먼저 표시되도록 할 수 있습니다. 결과 SQL은 다음과 같습니다.  
+-   **파생 열을 기준으로 정렬할 수 있습니다.** 예를 들어 각 행에 책 제목이 있는 결과 집합을 만들어 한 권당 가장 높은 인세를 지불하는 책이 먼저 표시되도록 할 수 있습니다. 결과 SQL은 다음과 같습니다.  
   
     ```  
     SELECT title, price * royalty / 100 as royalty_per_unit  
@@ -77,7 +77,7 @@ ms.locfileid: "48156103"
   
      파생 열을 계산하려면 위 예제에서와 같이 SQL 구문을 사용하거나 스칼라 값을 반환하는 사용자 정의 함수를 사용할 수 있습니다. 사용자 정의 함수에 대한 자세한 내용은 SQL Server 설명서를 참조하십시오.  
   
--   **그룹화된 행을 정렬할 수 있습니다.** 예를 들어, 각 행에 도시와 해당 도시에 있는 저자 수를 나타내는 결과 집합을 만들어 저자를 많이 포함하는 도시가 먼저 표시되도록 할 수 있습니다. 결과 SQL은 다음과 같습니다.  
+-   **그룹화된 행을 정렬할 수 있습니다.** 예를 들어 각 행에 도시와 해당 도시에 있는 저자 수를 나타내는 결과 집합을 만들어 저자를 많이 포함하는 도시가 먼저 표시되도록 할 수 있습니다. 결과 SQL은 다음과 같습니다.  
   
     ```  
     SELECT city, state, COUNT(*)  
@@ -89,7 +89,7 @@ ms.locfileid: "48156103"
   
      이 쿼리에서는 `state` 를 두 번째 정렬 열로 사용합니다. 따라서 두 개의 주에 같은 수의 저자가 있을 경우 해당 주들은 사전순으로 표시됩니다.  
   
--   **국가별 데이터를 사용하여 정렬할 수 있습니다.** 해당 열에 대한 기본 규칙과 다른 데이터 정렬 규칙을 사용하여 열을 정렬할 수 있습니다. 예를 들어, Jaime Patiño가 집필한 모든 책 제목을 검색하는 쿼리를 작성할 수 있습니다. 제목을 사전순으로 표시하려면 title 열에 스페인어 데이터 정렬 순서를 사용합니다. 결과 SQL은 다음과 같습니다.  
+-   **국가별 데이터를 사용하여 정렬할 수 있습니다.** 해당 열에 대한 기본 규칙과 다른 데이터 정렬 규칙을 사용하여 열을 정렬할 수 있습니다. 예를 들어, Jaime Pati 모든 책 제목을 검색 하는 쿼리를 작성할 수 있습니다. o입니다. 제목을 사전순으로 표시하려면 title 열에 스페인어 데이터 정렬 순서를 사용합니다. 결과 SQL은 다음과 같습니다.  
   
     ```  
     SELECT title  
@@ -105,7 +105,7 @@ ms.locfileid: "48156103"
                 =  titles.title_id   
     WHERE   
          au_fname = 'Jaime' AND   
-         au_lname = 'Patiño'  
+         au_lname = 'Pati??o'  
     ORDER BY   
          title COLLATE SQL_Spanish_Pref_CP1_CI_AS  
     ```  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 68ab3e189bcf0637003f4ddae41e5f0209988241
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d4217962e6bb899cbf2a838c5214eb35bb576be0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015681"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52505308"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>정확도 차트에 대한 입력으로 중첩 테이블 데이터 사용
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34015681"
   
 3.  **정확도 차트에 사용할 데이터 집합을 선택하십시오**에서 **다른 데이터 집합 지정**옵션을 선택합니다.  
   
-4.  찾아보기 단추 **(…)** 를 클릭하여 현재 서버의 데이터 원본 뷰 목록에서 외부 데이터 집합을 선택합니다.  
+4.  찾아보기 단추를 클릭 **(...)**  현재 서버의 데이터 원본 뷰 목록에서 외부 데이터 집합을 선택 합니다.  
   
 5.  **사례 테이블 선택**을 클릭합니다. **테이블 선택** 대화 상자에서 사례 데이터가 포함된 데이터 원본 뷰의 테이블을 선택한 다음 **확인**을 클릭합니다.  
   
@@ -48,8 +48,8 @@ ms.locfileid: "34015681"
   
      중첩 테이블과 사례 테이블 간의 관계를 수정해야 하는 경우 **조인 수정** 을 클릭하여 **관계 만들기** 대화 상자를 엽니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [모델 테스트 데이터 선택 및 매핑](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
- [테스트 데이터를 모델에 필터 적용](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)  
+ [모델 테스트 데이터에 필터 적용](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)  
   
   

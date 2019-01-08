@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6214dbcef4036bc545a931f90ee8dca4580ef287
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: 7ec5f84d40c3ba0628ea111502dd2be41cc7d346
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015920"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393016"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Analysis Services 인스턴스 이름 바꾸기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "34015920"
   
      가상 계정을 사용하여 서비스를 프로비전하는 경우 데이터베이스 로그인 또는 파일 사용 권한을 업데이트해야 합니다. 가상 계정은 인스턴스 이름을 사용하여 생성되므로 인스턴스의 이름을 바꾸는 경우 가상 계정도 동시에 업데이트됩니다. 즉 이전 인스턴스에 대해 만든 이전 로그인 또는 사용 권한은 더 이상 유효하지 않습니다.  
   
-     다음 예에서는 이러한 내용을 보여 줍니다. 기본 가상 계정을 사용하여 “Tabular”라는 인스턴스로 테이블 형식 모드 서버를 설치한 경우 다음과 같은 구성이 생성됩니다.  
+     다음 예에서는 이러한 내용을 보여 줍니다. "Tabular" 라는 기본 가상 계정을 사용 하 여 다음 구성에서 결과 인스턴스로 테이블 형식 모드 서버를 설치한 가정 합니다.  
   
     1.  Instance name = \<server>\TABULAR  
   
@@ -60,7 +60,7 @@ ms.locfileid: "34015920"
   
     3.  Virtual account = NT Service\ MSOLAP$TABULAR  
   
-     이제 "TAB2"로 인스턴스 이름을 바꾼다고 가정합니다. 이름을 변경하면 구성이 다음과 같이 변경됩니다.  
+     이제 "TAB2" 인스턴스 이름을 바꾼다고 가정 합니다. 이름을 변경하면 구성이 다음과 같이 변경됩니다.  
   
     1.  Instance name = \<server>\TAB2  
   
@@ -68,6 +68,6 @@ ms.locfileid: "34015920"
   
     3.  Virtual account = NT Service\ MSOLAP$TAB2  
   
-     이전에 “NT Service\ MSOLAP$TABULAR”에 부여된 데이터베이스 및 파일 사용 권한은 더 이상 유효하지 않음을 알 수 있습니다. 서비스가 수행하는 태스크 및 작업이 이전과 같이 실행되도록 하려면 “NT Service\ MSOLAP$TAB2”에 새 데이터베이스 및 파일 사용 권한을 부여해야 합니다.  
+     알 수 있듯이 이전에 "NT Service\ MSOLAP$ TABULAR"에 부여 된 데이터베이스 및 파일 사용 권한을 더 이상 유효 합니다. 작업 및 서비스에 의해 수행 된 작업 처럼 이전에 이제 실행 되는지 확인 하려면 "NT Service\ MSOLAP$ TAB2" 새 데이터베이스 및 파일 사용 권한을 부여 해야 합니다.  
   
   

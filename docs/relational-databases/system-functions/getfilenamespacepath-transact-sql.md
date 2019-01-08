@@ -18,12 +18,12 @@ ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 72d1842f81a8a4a3558b96d1dbece16f8ea4352d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 9c94fc80bd516c0be5b414aac98e0e4435ec8b53
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727161"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396186"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "47727161"
   
  `\\<machine>\<instance-level FILESTREAM share>\<database-level directory>\<FileTable directory>\...`  
   
- 이 논리 경로는 물리적 NTFS 경로에 직접적으로 대응되지는 않습니다. 이 논리 경로는 FILESTREAM의 파일 시스템 필터 드라이버 및 FILESTREAM 에이전트에 의해 물리적 경로로 변환됩니다. 논리 경로와 물리적 경로를 구분하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 경로 유효성에 영향을 주지 않고 내부적으로 데이터를 다시 구성할 수 있습니다.  
+ 이 논리 경로는 물리적 NTFS 경로에 직접적으로 대응되지는 않습니다. FILESTREAM의 파일 시스템 필터 드라이버 및 FILESTREAM 에이전트에 의해 물리적 경로로 변환 됩니다. 논리 경로와 물리적 경로를 구분하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 경로 유효성에 영향을 주지 않고 내부적으로 데이터를 다시 구성할 수 있습니다.  
   
 ## <a name="best-practices"></a>최선의 구현 방법  
  코드와 애플리케이션을 현재 컴퓨터 및 데이터베이스 외에서도 사용할 수 있도록 하려면 코드를 작성할 때 절대 파일 경로를 사용하지 않는 것이 좋습니다. 대신 전체 경로 파일에 대 한 런타임 시 사용 하 여 가져올는 **FileTableRootPath** 하 고 **GetFileNamespacePath** 함수를 다음 예제에서와 같이 함께 합니다. 기본적으로 **GetFileNamespacePath** 함수는 데이터베이스의 루트 경로 아래에 있는 파일의 상대 경로를 반환합니다.  
@@ -84,7 +84,7 @@ SELECT @root = FileTableRootPath();
   
 @fullPath = varchar(1000);  
 SELECT @fullPath = @root + file_stream.GetFileNamespacePath() FROM DocumentStore  
-WHERE Name = N’document.docx’;  
+WHERE Name = N'document.docx';  
 ```  
   
 ## <a name="remarks"></a>Remarks  
@@ -93,13 +93,13 @@ WHERE Name = N’document.docx’;
  다음 예제에서는 호출 하는 방법을 보여 줍니다 합니다 **GetFileNamespacePath** 함수 파일 또는 FileTable의 디렉터리에 대 한 UNC 경로 가져오려고 합니다.  
   
 ```  
--- returns the relative path of the form “\MyFileTable\MyDocDirectory\document.docx”  
+-- returns the relative path of the form "\MyFileTable\MyDocDirectory\document.docx"  
 SELECT file_stream.GetFileNamespacePath() AS FilePath FROM DocumentStore  
-WHERE Name = N’document.docx’;  
+WHERE Name = N'document.docx';  
   
--- returns “\\MyServer\MSSQLSERVER\MyDocumentDatabase\MyFileTable\MyDocDirectory\document.docx”  
+-- returns "\\MyServer\MSSQLSERVER\MyDocumentDatabase\MyFileTable\MyDocDirectory\document.docx"  
 SELECT file_stream.GetFileNamespacePath(1, Null) AS FilePath FROM DocumentStore  
-WHERE Name = N’document.docx’;  
+WHERE Name = N'document.docx';  
 ```  
   
 ## <a name="see-also"></a>관련 항목  

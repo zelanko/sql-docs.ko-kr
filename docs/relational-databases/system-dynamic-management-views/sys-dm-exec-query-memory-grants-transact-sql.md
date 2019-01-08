@@ -21,19 +21,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 247b89dcacc30417d01160c490010909cfbf5cfd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2332e4f80e0dded930b22d9f0faf76d80ec09141
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839081"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52413417"
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   요청한 메모리 부여를 대기 및 메모리 부여 받은 모든 쿼리에 대 한 정보를 반환 합니다. 쿼리 메모리 부여 하지 않아도 되는이 뷰에 나타나지 않습니다. 예를 들어, 정렬 및 해시 조인 작업이 없이 쿼리 하는 동안 쿼리 실행 메모리 부여를가지고 **ORDER BY** 절 메모리 부여 수는 없습니다.  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 동적 관리 뷰는 데이터베이스 포함에 영향을 줄 수 있는 정보 또는 사용자가 액세스할 수 있는 다른 데이터베이스 정보를 노출할 수 없습니다. 이러한 정보 노출을 방지하기 위해 연결된 테넌트에 속하지 않는 데이터가 포함된 행은 모두 필터링됩니다. 또한 열에 값 **scheduler_id**, **wait_order**, **pool_id**, **group_id** 필터링 되 열 값 설정 NULL입니다.  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 동적 관리 뷰는 데이터베이스 포함에 영향을 줄 수 있는 정보 또는 사용자가 액세스할 수 있는 다른 데이터베이스 정보를 노출할 수 없습니다. 이 정보 공개를 방지 하려면 연결 된 테 넌 트에 속하지 않는 데이터가 포함 된 모든 행 필터링 됩니다. 또한 열에 값 **scheduler_id**, **wait_order**, **pool_id**, **group_id** 필터링 되 열 값 설정 NULL입니다.  
   
 > [!NOTE]  
 > 이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_exec_query_memory_grants**합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "47839081"
 |**max_used_memory_kb**|**bigint**|현재까지 사용된 최대 실제 메모리(KB)입니다.|  
 |**query_cost**|**float**|예상 쿼리 비용입니다.|  
 |**timeout_sec**|**int**|이 쿼리가 메모리 부여 요청을 포기하기까지의 제한 시간(초)입니다.|  
-|**resource_semaphore_id**|**smallint**|이 쿼리가 대기 중인 리소스 세마포의 고유하지 않은 ID입니다.<br /><br /> **참고:** 이 ID는 고유 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 이전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. 이러한 변경 내용은 쿼리 실행 문제를 해결하는 데 영향을 줄 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "주의" 섹션을 참조하세요.|  
+|**resource_semaphore_id**|**smallint**|이 쿼리가 대기 중인 리소스 세마포의 고유하지 않은 ID입니다.<br /><br /> **참고:** 이 ID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전인 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 버전에서 고유합니다. 이러한 변경 내용은 쿼리 실행 문제를 해결하는 데 영향을 줄 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "주의" 섹션을 참조하세요.|  
 |**queue_id**|**smallint**|이 쿼리가 메모리 부여를 기다리는 대기 큐의 ID입니다. 메모리가 이미 부여된 경우 NULL이 됩니다.|  
 |**wait_order**|**int**|지정 된 대기 쿼리의 순서 대로 **queue_id**합니다. 다른 쿼리가 메모리 부여를 얻거나 시간 초과될 경우 지정된 쿼리에 대해 이 값이 변경될 수 있습니다. 메모리가 이미 부여된 경우 NULL이 됩니다.|  
 |**is_next_candidate**|**bit**|다음 메모리 부여 후보입니다.<br /><br /> 1 = 예<br /><br /> 0 = 아니요<br /><br /> NULL = 메모리가 이미 부여된 경우|  

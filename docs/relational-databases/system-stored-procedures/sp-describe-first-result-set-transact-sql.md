@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 317defb8c3efd99274421f169424cc09ec4caf58
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 62abd4d684c809e9dbf3f2863091f1f103808d87
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072067"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400636"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -69,7 +69,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**비트 NOT NULL**|해당 열이 정보 검색을 목적으로 추가되어 실제로 결과 집합에 나타나지 않는 별도의 열임을 나타냅니다.|  
-|**column_ordinal**|**int NOT NULL**|결과 집합에서 열의 서수 위치를 포함합니다. 첫째 열의 위치가 1로 지정됩니다.|  
+|**column_ordinal**|**int NOT NULL**|결과 집합에서 열의 서수 위치를 포함합니다. 첫 번째 열의 위치가 1로 지정 됩니다.|  
 |**name**|**sysname NULL**|이름을 확인할 수 있으면 열 이름을 포함하고 그렇지 않으면 NULL을 포함합니다.|  
 |**is_nullable**|**비트 NOT NULL**|열이 NULL을 허용하는 경우 1, 열이 NULL을 허용하지 않는 경우 0, 열이 NULL을 허용하는지 확인할 수 없는 경우 1을 포함합니다.|  
 |**system_type_id**|**int NOT NULL**|Sys.types에 지정 된 대로 열 데이터 형식의 system_type_id를 포함 합니다. CLR 형식의 경우 system_type_name 열에서 NULL을 반환해도 이 열은 값 240을 반환합니다.|  
@@ -259,7 +259,7 @@ ELSE
     SELECT a FROM t2;  
 ```  
   
- 결과: 오류 일치 하지 않는 형식 (**int** 비교 **smallint**).  
+ 결과: 오류, 일치 하지 않는 형식 (**int** 비교 **smallint**).  
   
 #### <a name="column-name-cannot-be-determined"></a>열 이름을 확인할 수 없는 경우  
  가능한 첫 번째 결과 집합의 열이 동일한 가변 길이 형식의 길이, Null 허용 여부 및 열 이름이 서로 다릅니다.  
@@ -301,7 +301,7 @@ ELSE
     SELECT c FROM t1;'  
 ```  
   
- 결과: 오류 일치 하지 않는 형식 (**varchar(10)** 비교 **nvarchar(10)**).  
+ 결과: 오류, 일치 하지 않는 형식 (**varchar(10)** 비교 **nvarchar(10)**).  
   
 #### <a name="result-set-can-return-an-error"></a>결과 집합이 오류를 반환할 수 있음  
  첫 번째 결과 집합이 오류 또는 결과 집합입니다.  

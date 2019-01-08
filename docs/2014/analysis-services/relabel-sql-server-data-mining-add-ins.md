@@ -15,12 +15,12 @@ ms.assetid: af041b39-fdd1-4cb5-a5ef-2f3ddab84614
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fd98b0225caad7d6cd723e462eca031750d96d6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 74e2322416ec06c36a7834f35581ed611480b6e6
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049033"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414610"
 ---
 # <a name="relabel-sql-server-data-mining-add-ins"></a>레이블 재지정(SQL Server 데이터 마이닝 추가 기능)
   ![레이블 재지정 도구에 대 한 office 13 아이콘](media/dm13-relabel.gif "레이블 재지정 도구에 대 한 Office 13 아이콘")  
@@ -53,7 +53,7 @@ ms.locfileid: "48049033"
   
 5.  **새로운 레이블**아래의 행에 새 값을 입력합니다. 기존 값 목록에서 값을 선택할 수도 있습니다. 새 값을 입력하면 즉시 다시 사용 가능하게 됩니다.  
   
-6.  행을 충분히 입력한 후 **다음**을 클릭하고 **대상 선택** 페이지에서 레이블 재지정된 데이터를 저장할 위치를 선택합니다.  
+6.  행을 충분히 입력 한 후, 클릭 **다음**, 및를 **대상 선택** 페이지에서 레이블 재지정된 된 데이터를 저장할 위치를 선택 합니다.  
   
     -   **현재 워크시트에 새 열으로 추가**  
   

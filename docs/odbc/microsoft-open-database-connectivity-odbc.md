@@ -11,17 +11,17 @@ ms.assetid: 278cf36e-9817-4ee3-842e-dbd149f15273
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d5d3fcc03b588cd5d014a23a291e04ff9c32f205
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 53e9fdb135b46cedaad6e79fa4ff12c06a4c3ea8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662979"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52503938"
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft ODBC(Open Database Connectivity)
 Microsoft ODBC Open Database Connectivity () 인터페이스는 C 프로그래밍 언어 인터페이스 응용 프로그램의 다양 한 Dbms (데이터베이스 관리 시스템)의 데이터에 액세스할 수 있도록 하는 합니다. ODBC는 관계형 데이터 저장소를 위해 특별히 설계 된 고성능 하위 수준 인터페이스입니다.  
   
- ODBC 인터페이스를 사용 하면 최대 상호 운용성-응용 프로그램 단일 인터페이스를 통해 다양 한 Dbms의 데이터를 액세스할 수 있습니다. 또한 해당 응용 프로그램 데이터를 액세스 하는 DBMS의 독립적인 됩니다. 응용 프로그램의 사용자는 드라이버는 응용 프로그램 및 특정 DBMS 간에 인터페이스를 호출 하는 소프트웨어 구성 요소를 추가할 수 있습니다.  
+ ODBC 인터페이스를 사용 하면 최대 상호 운용성을 응용 프로그램 단일 인터페이스를 통해 다양 한 Dbms의 데이터를 액세스할 수 있습니다. 또한 해당 응용 프로그램 데이터를 액세스 하는 DBMS의 독립적인 됩니다. 응용 프로그램의 사용자는 드라이버는 응용 프로그램 및 특정 DBMS 간에 인터페이스를 호출 하는 소프트웨어 구성 요소를 추가할 수 있습니다.  
   
 ## <a name="documentation"></a>설명서  
  [ODBC 프로그래머 참조](../odbc/reference/odbc-programmer-s-reference.md)  

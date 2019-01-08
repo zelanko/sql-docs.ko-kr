@@ -11,12 +11,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f8a5dc68eed10ea6afce1a1aa0f75c2c2e9e09a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50cf289af9c2b29f7239596ff04102308048456b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764671"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502287"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server 공유 관리 개체 (SMO) 사용 조건
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "47764671"
 * 배포 가능 코드의.dll 파일 이름 확장명이 모든 경우, 프로그램과 함께 링커를 통해 이러한 배포 가능 코드를 실행 하는 결과만 배포
 * 배포자와 외부 최종 사용자가 최소한 본 계약 수준으로 배포 가능한 코드를 보호하는 사용 조건에 동의하게 합니다. 
 * 프로그램에 올바른 저작권 통지를 표시합니다.
-* 프로그램의 배포나 사용과 관련하여 변호사 비용을 포함한 모든 청구에 대해 Microsoft를 면책하고 해를 입히지 않으며 방어해야 합니다.
+* 프로그램의 배포나 사용과 관련하여 변호사 비용을 포함한 모든 청구로부터 Microsoft를 면책하고 해를 입히지 않으며 방어해야 합니다.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**iii.  배포 제한 사항. 다음과 같은 행위는 허용되지 않습니다.**
 * 배포 가능한 코드의 저작권, 상표권 또는 특허권 통지를 변경하는 행위

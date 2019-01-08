@@ -15,12 +15,12 @@ ms.assetid: 4f0ee6ec-a0a8-4c38-aa61-8293ab6ac7fd
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66777a5db1812d1a63e100d4a02522bc1ac3b43a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ea74f0361d5152ade31a91424d594d376e513f8
+ms.sourcegitcommit: b5cea9c67c7f896944065f09dace17b4929a34f7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092861"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52267898"
 ---
 # <a name="event-file-target"></a>Event File Target
   이벤트 파일 대상은 전체 버퍼를 디스크에 기록하는 대상입니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "48092861"
 |max_rollover_files|32비트 정수. 이 값은 선택 사항입니다.|파일 시스템에 보관할 최대 파일 수입니다. 기본값은 5입니다.|  
 |increment|32비트 정수. 이 값은 선택 사항입니다.|파일의 증가분(MB)입니다. 이 값이 지정되지 않은 경우 증분에 대한 기본값은 세션 버퍼 크기의 두 배가 됩니다.|  
   
- 이벤트 파일 대상이 처음 만들어질 때 지정한 파일 이름에는 _0\_ 과 정수(Long) 값이 추가됩니다. 이 정수 값은 1600년 1월 1일에서 파일이 만들어진 날짜 및 시간 사이의 밀리초 수로 계산됩니다. 이후의 롤오버 파일도 이 형식을 사용합니다. 정수(Long) 값을 검토하면 가장 최근 파일을 확인할 수 있습니다. 다음 예에서는 파일 이름 옵션을 C:\OutputFiles\MyOutput.xel로 지정한 경우 파일의 이름이 지정되는 방식을 보여 줍니다.  
+ 이벤트 파일 대상이 처음 만들어질 때 지정한 파일 이름에는 _0\_ 과 정수(Long) 값이 추가됩니다. 1601 년 1 월 1 일 간격 (밀리초)의 수와 정수 값은 계산 및 파일을 만들 날짜와 시간입니다. 이후의 롤오버 파일도 이 형식을 사용합니다. 정수(Long) 값을 검토하면 가장 최근 파일을 확인할 수 있습니다. 다음 예에서는 파일 이름 옵션을 C:\OutputFiles\MyOutput.xel로 지정한 경우 파일의 이름이 지정되는 방식을 보여 줍니다.  
   
 -   처음 생성된 파일 - C:\OutputFiles\MyOutput_0_128500310259380000.xel  
   
@@ -58,7 +58,7 @@ SELECT *, CAST(event_data AS XML) AS 'event_data_XML'
 FROM sys.fn_xe_file_target_read_file('file_name*.xel', NULL, NULL, NULL)  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 확장 이벤트 대상](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [sys.fn_xe_file_target_read_file &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)   
  [CREATE EVENT SESSION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   

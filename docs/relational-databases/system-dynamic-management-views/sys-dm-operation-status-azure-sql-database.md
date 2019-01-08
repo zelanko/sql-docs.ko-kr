@@ -22,25 +22,25 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ad16bb39d693e78f0d6678cbf5d6b1c4abfb5816
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 44db657d10348a0ed2a775ac290167746b9bd9cd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663273"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52407921"
 ---
 # <a name="sysdmoperationstatus-azure-sql-database"></a>sys.dm_operation_status(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
   [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 서버의 데이터베이스에 대해 수행된 작업 정보를 반환합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |session_activity_id|**uniqueidentifier**|작업의 ID입니다. Null이 아닙니다.|  
 |resource_type|**int**|작업이 수행된 리소스의 유형을 나타냅니다. Null이 아닙니다. 현재 릴리스에서 이 뷰는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 수행된 작업을 추적하며 해당 정수 값은 0입니다.|  
 |resource_type_desc|**nvarchar(2048)**|작업이 수행된 리소스 유형에 대한 설명입니다. 현재 릴리스에서 이 뷰는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서만 수행된 작업을 추적합니다.|  
 |major_resource_id|**sql_variant**|작업이 수행된 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 이름입니다. Null이 아닙니다.|  
-|minor_resource_id|**sql_variant**|내부용으로만 사용할 수 있습니다. Null이 아닙니다.|  
+|minor_resource_id|**sql_variant**|내부 전용입니다. Null이 아닙니다.|  
 |operation(작업)|**nvarchar(60)**|CREATE 또는 ALTER와 같이 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 수행된 작업입니다.|  
 |state|**tinyint**|작업의 상태입니다.<br /><br /> 0 = 보류 중<br />1 = 진행 중<br />2 = 완료됨<br />3 = 실패<br />4 = 취소됨|  
 |state_desc|**nvarchar(120)**|PENDING = 작업이 리소스나 할당량을 사용할 수 있을 때까지 대기 중입니다.<br /><br /> IN_PROGRESS = 작업이 시작되었고 진행 중입니다.<br /><br /> COMPLETED = 작업이 성공적으로 완료되었습니다.<br /><br /> FAILED = 작업이 실패했습니다. 참조 된 **error_desc** 세부 정보에 대 한 열입니다.<br /><br /> CANCELLED = 작업이 사용자 요청으로 중지되었습니다.|  
@@ -81,7 +81,7 @@ ms.locfileid: "51663273"
   
 ```  
 SELECT * FROM sys.dm_ operation_status   
-   WHERE major_resource_id = ‘myddb’   
+   WHERE major_resource_id = 'myddb'   
    ORDER BY start_time DESC;  
 ```  
   

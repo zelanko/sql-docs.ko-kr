@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0b79db4806f22c7d25af4f292fedddb46b40d1e7
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2d1e07fca7c18bdecba265a9e69994a9f728e9ba
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696942"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398623"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>분석 플랫폼 시스템에 Windows Server Update Services (WSUS) 구성
 이러한 지침은 Windows Server Update Services (WSUS) 구성 마법사를 사용 하 여 Analytics Platform System에 대 한 WSUS를 구성 하는 단계를 안내 합니다. 어플라이언스로 소프트웨어 업데이트를 적용 하려면 먼저 WSUS를 구성 해야 합니다. WSUS는 이미 어플라이언스의 VMM 가상 컴퓨터에 설치 됩니다.  

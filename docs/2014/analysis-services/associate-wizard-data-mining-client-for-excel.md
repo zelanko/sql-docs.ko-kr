@@ -14,12 +14,12 @@ ms.assetid: 4db6462f-93c7-443f-8ff7-39474dc7029e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9288c6a4f01cff6c3c4a19ff79a1d49775035cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e5ee759c4a23ab2891597fd3a5c884ce7332ea4e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179433"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400476"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>연결 마법사(Excel용 데이터 마이닝 클라이언트)
   ![데이터 마이닝 리본의 연결 마법사](media/dmc-associate.gif "연결 데이터 마이닝 리본의 마법사")  
@@ -62,7 +62,7 @@ ms.locfileid: "48179433"
   
     -   규칙 확률을 낮추는 것은 전체 데이터 집합의 컨텍스트에서 조합이 중요하게 고려되기 위해 충족해야 하는 요구 사항을 낮추는 것입니다.  
   
-     **팁:** 지지도 확률의 다양 한 조합을 사용 하 여 여러 마이닝 모델을 만들 하는 것이 좋습니다. 각 모델에 사용한 설정을 추적을 사용할 수 있습니다는 **문서 모델** Excel 및 사용에 대 한 데이터 마이닝 클라이언트에서 사용할 수 있는 마법사를 **자세히** 옵션을 보고 합니다. 자세한 내용은 [마이닝 모델 문서화 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)합니다.  
+     **팁:** 지지도와 확률의 다양한 조합을 사용하여 여러 개의 마이닝 모델을 만드는 것이 좋습니다. 각 모델에 사용한 설정을 추적을 사용할 수 있습니다는 **문서 모델** Excel 및 사용에 대 한 데이터 마이닝 클라이언트에서 사용할 수 있는 마법사를 **자세히** 옵션을 보고 합니다. 자세한 내용은 [마이닝 모델 문서화 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)합니다.  
   
 6.  필요에 따라 클릭 **매개 변수** 알고리즘 매개 변수를 변경 하 여 마이닝 모델의 동작을 사용자 지정 합니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48179433"
   
          드릴스루는 특정 항목 집합을 클릭해서 원본 데이터를 보고 싶은 경우에 유용합니다.  
   
-    -   **임시 모델 사용**. 모델을 서버에 저장하지 않으려면 이 옵션을 선택합니다. 임시 모델은 Excel을 닫을 때 삭제됩니다.  
+    -   **임시 모델 사용**. 모델을 서버에 저장 하지 않으려면이 옵션을 선택 합니다. 임시 모델은 Excel을 닫을 때 삭제됩니다.  
   
 9. 마법사는 가능한 모든 조합을 분석하고 항목 집합 및 규칙이 포함된 보고서를 만듭니다.  
   

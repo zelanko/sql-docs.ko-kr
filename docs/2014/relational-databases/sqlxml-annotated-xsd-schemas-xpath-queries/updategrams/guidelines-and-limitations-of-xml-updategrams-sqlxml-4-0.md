@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - updategrams [SQLXML], about updategrams
@@ -14,12 +12,12 @@ ms.assetid: b5231859-14e2-4276-bc17-db2817b6f235
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 761241b1ca763d064bd2056cb42f106159fd68b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a146124df2d215532b3da4b85a3a36123de2786f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071503"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754725"
 ---
 # <a name="guidelines-and-limitations-of-xml-updategrams-sqlxml-40"></a>XML updategram에 대한 지침 및 제한 사항(SQLXML 4.0)
   XML updategram 사용 시 다음 사항에 유의하십시오.  

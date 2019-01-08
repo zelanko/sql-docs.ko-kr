@@ -4,20 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 176e73b6-08aa-48ec-b349-e84b431e65cc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d29b9d0237de9ccdea82a9109435db5893a10b1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ea87ec20b6ea16074d24d28be4ded5c1be24548
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062109"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768625"
 ---
-# <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>Modify the Target Server(s) Associated with a SQL Server Agent Master Job
+# <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>SQL Server 에이전트 마스터 작업과 연관된 대상 서버 수정
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 SQL Server 에이전트 마스터 작업과 연결된 대상 서버를 수정하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
@@ -56,7 +56,7 @@ ms.locfileid: "48062109"
   
 4.  대상 서버를 수정할 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-5.  **작업 속성 –***job_name* 대화 상자의 **페이지 선택**에서 **대상**을 선택합니다. 이 페이지에서 사용 가능한 옵션에 대 한 자세한 내용은 참조 하세요. [작업 속성: 새 작업 &#40;대상 페이지&#41;](job-properties-new-job-targets-page.md)합니다.  
+5.  **작업 속성 –***job_name* 대화 상자의 **페이지 선택**에서 **대상**을 선택합니다. 이 페이지에서 사용 가능한 옵션에 대 한 자세한 내용은 참조 하세요. [작업 속성: 새 작업 &#40;페이지를 대상으로&#41;](job-properties-new-job-targets-page.md)합니다.  
   
 6.  완료되었으면 **확인**을 클릭합니다.  
   

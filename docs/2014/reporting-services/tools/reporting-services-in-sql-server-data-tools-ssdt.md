@@ -13,12 +13,12 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: fe561dcba4a0cff5b58ef7810b27f30b1c95e228
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
-ms.translationtype: HT
+ms.openlocfilehash: 5fafd1a86686b7609a8b6e0241c05cc858f2dc41
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906303"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409700"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools의 Reporting Services(SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 비즈니스 인텔리전스 솔루션 관련 기능이 향상 된 환경입니다. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 포함되어 있습니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "48906303"
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#bkmk_Top)  
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> 보고서 디자이너 창 및 하위 창  
- 보고서 디자이너는 두 가지 보기를 지원: **디자인** 보고서 데이터 및 보고서 레이아웃을 정의 하 고 **미리 보기** 보고서의 렌더링 된 보기를 표시 합니다. 각 뷰에서 여러 창을 표시하면 렌더링된 보고서를 디자인하거나 보는 데 도움이 됩니다.  
+ 보고서 디자이너는 두 가지 뷰를 지원합니다. **디자인** 은 보고서 데이터 및 보고서 레이아웃을 정의 하 고 **미리 보기** 보고서의 렌더링 된 보기를 표시 합니다. 각 뷰에서 여러 창을 표시하면 렌더링된 보고서를 디자인하거나 보는 데 도움이 됩니다.  
   
 ###  <a name="bkmk_ReportDataPane"></a> 보고서 데이터 창  
  보고서 데이터 창에는 기본 제공 필드, 데이터 원본, 데이터 세트, 필드 컬렉션, 보고서 매개 변수 및 이미지가 표시됩니다.  
@@ -188,7 +188,7 @@ ms.locfileid: "48906303"
   
 -   **보고서 속성**   **보고서 속성** 대화 상자를 열려면 선택합니다. 이 대화 상자에서 작성자 이름, 눈금 간격 등의 일반 보고서 속성을 할당하고 열 개수 및 페이지 크기와 같은 보고서 레이아웃 속성을 지정할 수 있습니다. 또한 데이터 출력 요소, 데이터 변환 및 데이터 스키마의 이름과 사용자 지정 코드, 어셈블리와 클래스에 대한 참조를 포함할 수 있습니다.  
   
--   **뷰** 보고서 디자이너의 디자인 탭과 미리 보기 탭 간에 전환합니다.  
+-   **보기** 두 보고서 디자이너 탭 간에 전환 합니다. 전환합니다.  
   
 -   **페이지 머리글** 보고서에서 페이지 머리글을 추가하거나 삭제합니다. 페이지 머리글을 삭제하면 페이지 머리글의 모든 항목이 삭제됩니다.  
   

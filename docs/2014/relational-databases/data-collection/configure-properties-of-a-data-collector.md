@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dc.datacollectionprop.advanced.f1
@@ -13,12 +13,12 @@ ms.assetid: cf98f57d-5a6d-4bc3-bf10-783e460fc63d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8c81bc583677375ac14f251c6bd59eabc053fcfb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37df9ccdd0bc2b44384bb9fd3d130c8d3bf8ca36
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212643"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748695"
 ---
 # <a name="configure-properties-of-a-data-collector"></a>데이터 수집기의 속성 구성
   이 항목에서는 데이터 수집기의 속성을 구성하는 방법에 대해 설명합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "48212643"
  **업로드 실패 시의 다시 시도 횟수**  
  관리 데이터 웨어하우스에 대한 업로드가 실패할 경우 다시 시도할 횟수를 지정합니다. 기본값은 1입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터 컬렉션 관리](data-collection.md)   
  [관리 데이터 웨어하우스 구성&#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md)  
   

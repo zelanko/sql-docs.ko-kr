@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas, about annotated XSD schemas
@@ -19,12 +17,12 @@ ms.assetid: 78f318a4-7a36-473b-9852-a4bae6940ce5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7a0e3356b4c83832ce40adabb00bdfdc671ec8ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 46d1a7ad03b30159b2efe10c0b215665a37f5a70
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099703"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756105"
 ---
 # <a name="using-annotations-in-xsd-schemas-sqlxml-40"></a>XSD 스키마에 주석 사용(SQLXML 4.0)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0의 XSD 스키마 언어는 XDR(XML-Data Reduced) 스키마 언어에 도입된 주석과 비슷한 방식으로 주석을 지원합니다. XSD에는 XDR에서는 지원되지 않은 추가 주석도 도입되었습니다.  
@@ -33,7 +31,7 @@ ms.locfileid: "48099703"
   
  주석을 지정하지 않으면 기본 매핑이 수행됩니다. 기본적으로 복합 유형의 XSD 요소는 지정된 데이터베이스의 테이블(뷰) 이름에 매핑되며 단순 유형의 요소 또는 특성은 같은 이름의 열에 매핑됩니다.  
   
- XSD 스키마는 간단히 말해 관계형 데이터의 XML 뷰이므로 이러한 주석을 사용하면 XML의 계층 관계를 지정하여 데이터베이스의 관계를 나타낼 수 있습니다.  
+ 또한 이러한 주석은 XSD 스키마는 관계형 데이터의 XML 뷰 단순히에서 XML-따라서는 데이터베이스의 관계를 나타내는 계층 관계를 지정 하려면 사용할 수 있습니다.  
   
  이 섹션에서는 XSD 스키마에서 사용할 수 있는 주석에 대해 설명하고 사용 예를 제공합니다.  
   

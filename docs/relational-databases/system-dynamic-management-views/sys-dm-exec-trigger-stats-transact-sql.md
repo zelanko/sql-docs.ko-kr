@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cf9299896fb03ea8eb947b5fb5ab9f1967e7d7c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cfd6485955cbdee7bece7ae8ab18c5138a5529f3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649208"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52403538"
 ---
 # <a name="sysdmexectriggerstats-transact-sql"></a>sys.dm_exec_trigger_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,13 +64,13 @@ ms.locfileid: "47649208"
 |**last_elapsed_time**|**bigint**|가장 최근에 이 트리거의 실행을 완료하는 데 소요된 경과 시간(마이크로초)입니다.|  
 |**min_elapsed_time**|**bigint**|최소 경과 시간 (마이크로초)에 대 한이 트리거의 실행을 완료 합니다.|  
 |**max_elapsed_time**|**bigint**|최대 경과 시간 (마이크로초)에 대 한이 트리거의 실행을 완료 합니다.| 
-|**total_spills**|**bigint**|컴파일된 이후이 트리거의 실행에 의해 유출 되는 페이지의 총 수입니다.<br /><br /> **적용할**:부터 시작 하 여 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**last_spills**|**bigint**|트리거가 실행 된 마지막 시간 유출 되는 페이지 수입니다.<br /><br /> **적용할**:부터 시작 하 여 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**min_spills**|**bigint**|단일 실행 중이 트리거가 넘어가지 적이 있는 페이지의 최소 수입니다.<br /><br /> **적용할**:부터 시작 하 여 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**max_spills**|**bigint**|단일 실행 중이 트리거가 넘어가지 적이 있는 페이지의 최대 수입니다.<br /><br /> **적용할**:부터 시작 하 여 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**total_spills**|**bigint**|컴파일된 이후이 트리거의 실행에 의해 유출 되는 페이지의 총 수입니다.<br /><br /> **적용 대상**: 부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|트리거가 실행 된 마지막 시간 유출 되는 페이지 수입니다.<br /><br /> **적용 대상**: 부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|단일 실행 중이 트리거가 넘어가지 적이 있는 페이지의 최소 수입니다.<br /><br /> **적용 대상**: 부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|단일 실행 중이 트리거가 넘어가지 적이 있는 페이지의 최대 수입니다.<br /><br /> **적용 대상**: 부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
   
 ## <a name="remarks"></a>Remarks  
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 동적 관리 뷰는 데이터베이스 포함에 영향을 줄 수 있는 정보 또는 사용자가 액세스할 수 있는 다른 데이터베이스 정보를 노출할 수 없습니다. 이러한 정보 노출을 방지하기 위해 연결된 테넌트에 속하지 않는 데이터가 포함된 행은 모두 필터링됩니다.  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 동적 관리 뷰는 데이터베이스 포함에 영향을 줄 수 있는 정보 또는 사용자가 액세스할 수 있는 다른 데이터베이스 정보를 노출할 수 없습니다. 이 정보 공개를 방지 하려면 연결 된 테 넌 트에 속하지 않는 데이터가 포함 된 모든 행 필터링 됩니다.  
 
 쿼리가 완료되면 뷰의 통계가 업데이트됩니다.  
   

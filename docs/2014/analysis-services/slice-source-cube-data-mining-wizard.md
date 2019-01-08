@@ -13,12 +13,12 @@ ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e4036705b86b26e1f39bd42578c991014096f113
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c68ec29c2461cb7ffddfdbd2792e1a1a191076b2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089993"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416654"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>원본 큐브 조각화(데이터 마이닝 마법사)
   **원본 큐브 조각화** 대화 상자를 사용하여 모델의 학습에 사용되는 데이터를 제한할 수 있습니다. 일반적으로 큐브는 모든 상점, 모든 지역 및 모든 제품 등 여러 다른 차원 및 특성과 관련된 데이터를 포함합니다. 제한 없는 특성 조합의 모델 학습은 실용적이지 않으므로 이 대화 상자를 사용하여 모델 학습에 사용할 특정 집합을 선택하십시오.  
@@ -29,16 +29,16 @@ ms.locfileid: "48089993"
   
 -   [파티션 조각 속성 설정 &#40;Analysis Services&#41;](multidimensional-models/set-the-partition-slice-property-analysis-services.md)  
   
--   [로컬 파티션 만들기 및 관리 &#40;Analysis Services&#41;](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
+-   [로컬 파티션 만들기 및 관리&#40;Analysis Services&#41;](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
 > [!NOTE]  
 >  동적 MDX 함수(예: [Generate&#40;MDX&#41;](/sql/mdx/generate-mdx) 또는 [Except&#40;MDX&#41;](/sql/mdx/except-mdx-function))는 파티션에 대한 Slice 속성에서 지원되지 않습니다. 명시적 튜플 또는 멤버 참조를 사용하여 조각을 정의해야 합니다.  
 >   
 >  예를 들어, 사용 하는 대신 [: &#40;범위&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx) 범위를 정의 하려면 특정 연도별로 각 멤버를 열거 해야 합니다.  
 >   
->  복잡한 조각을 정의해야 하는 경우 XMLA Alter 스크립트를 사용하여 조각에서 튜플을 정의하는 것이 좋습니다. 그런 다음 ascmd 명령줄 도구 또는 SSIS를 사용할 수 있습니다 [Analysis Services Execute DDL Task](../integration-services/control-flow/analysis-services-execute-ddl-task.md) 스크립트를 실행 하 고 파티션을 처리 하기 전에 즉시 지정 된 멤버 집합을 만듭니다.  
+>  복잡한 조각을 정의해야 하는 경우 XMLA Alter 스크립트를 사용하여 조각에서 튜플을 정의하는 것이 좋습니다. 그런 다음 ascmd 명령줄 도구 또는 SSIS [Analysis Services Execute DDL Task](../integration-services/control-flow/analysis-services-execute-ddl-task.md) 를 사용하여 스크립트를 실행하고 지정된 멤버 집합을 만든 후 곧바로 파티션을 처리할 수 있습니다.  
   
- **자세한 내용:** [데이터 마이닝 마법사&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [관계형 마이닝 구조 만들기](data-mining/create-a-relational-mining-structure.md)  
+ **참조 항목:** [데이터 마이닝 마법사 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)하십시오 [관계형 마이닝 구조 만들기](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>변수  
  **Dimension**  
@@ -52,7 +52,7 @@ ms.locfileid: "48089993"
  **연산자**  
  조각화 식을 작성하는 데 사용할 연산자를 선택합니다.  
   
- 예를 들어 Geography를 계층으로 선택한 경우 연산자 =를 선택한 다음 “Europe”을 필터로 입력하여 Europe에 대한 큐브 데이터만 가져올 수 있습니다.  
+ 예를 들어 Geography를 계층을 선택한 경우 연산자를 선택할 수 = 선택한 다음 필터로 유럽에 대 한 큐브 데이터만 가져올 "유럽"를 입력 합니다.  
   
  **필터 식**  
  선택한 차원의 큐브를 필터링할 때 조건 유형으로 사용할 식을 입력합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "48089993"
  **매개 변수**  
  이 옵션은 데이터 마이닝 모델에는 사용되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [마법사 완료 &#40;데이터 마이닝 마법사&#41;](completing-the-wizard-data-mining-wizard.md)   
  [데이터 마이닝 마법사 F1 도움말 &#40;Analysis Services-데이터 마이닝&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [마이닝 모델 열 사용법 지정 &#40;데이터 마이닝 마법사&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  

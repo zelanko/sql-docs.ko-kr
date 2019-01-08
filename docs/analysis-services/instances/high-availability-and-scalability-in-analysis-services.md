@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ece05b0bb8c21c628632e2efca8e54e317f38fab
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
-ms.translationtype: HT
+ms.openlocfilehash: 1135074768a630e6d46844017b9c9aecbbccbf26
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700904"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52439505"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Analysis Services의 고가용성 및 확장성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -96,13 +96,13 @@ ms.locfileid: "35700904"
 
 - 활성/활성은 현재 지원되지 않습니다. 활성/수동(장애 조치(failover))은 Analysis Services에 대해 지원되는 유일한 WSFC 구성입니다.
 - Analysis Services를 클러스터링할 때 클러스터에 참여하는 노드가 동일하거나 매우 비슷한 하드웨어에서 실행되는지, 그리고 각 노드의 운영 컨텍스트가 운영 체제 버전 및 서비스 팩, Analysis Services 버전 및 서비스 팩(또는 누적 업데이트), 서버 모드 면에서 동일한지 확인해야 합니다.
-- 다른 작업의 활성 노드인 수동 노드는 용도를 변경하지 마세요. 노드에서 두 작업을 처리할 수 없는 경우 실제 장애 조치(failover) 상황에서 짧은 시간 동안 컴퓨터를 사용할 수 없게 됩니다.
+- 다른 워크 로드의 활성 노드와 수동 노드 용도 변경 하지 마세요. 노드에서 두 작업을 처리할 수 없는 경우 실제 장애 조치(failover) 상황에서 짧은 시간 동안 컴퓨터를 사용할 수 없게 됩니다.
  
- 장애 조치(failover) 클러스터에서 Analysis Services를 배포하는 방법에 대한 자세한 지침 및 배경 정보는 [SQL Server Analysis Services 클러스터링 방법](https://msdn.microsoft.com/library/dn736073.aspx)을 참조하세요. 이 지침은 SQL Server 2012용으로 작성되었지만 최신 버전의 Analysis Services에도 계속 적용됩니다.  
+ 자세한 지침 및 Analysis Services 장애 조치 클러스터에 배포 하기 위한 배경 정보는이 백서에서 제공 됩니다. [SQL Server Analysis Services 클러스터링 방법](https://msdn.microsoft.com/library/dn736073.aspx)합니다. 이 지침은 SQL Server 2012용으로 작성되었지만 최신 버전의 Analysis Services에도 계속 적용됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services 데이터베이스 동기화](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [Analysis Services 테이블 형식 데이터베이스에 대 한 NUMA 선호도 강제 적용](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
+ [Analysis Services 테이블 형식 데이터베이스에 대한 NUMA 선호도 강제 적용](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
  [Analysis Services 사례 연구: 대규모 상용 솔루션에서 테이블 형식 모델 사용](https://msdn.microsoft.com/library/dn751533.aspx)  
   
   

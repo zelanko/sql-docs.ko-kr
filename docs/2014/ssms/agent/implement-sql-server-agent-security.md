@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, security
@@ -15,12 +15,12 @@ ms.assetid: d770d35c-c8de-4e00-9a85-7d03f45a0f0d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af4556f5acf21616ebfd94cf038b8f453263a34c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52537ac126115fbde3d7d0fb1a13f61f1d25cf15
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210803"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754235"
 ---
 # <a name="implement-sql-server-agent-security"></a>SQL Server 에이전트 보안 구현
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하면 데이터베이스 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시에 의해 결정된 각 작업 단계를 수행하는 데 필요한 사용 권한만 있는 보안 컨텍스트에서 각 작업 단계를 실행할 수 있습니다. 특정 작업 단계의 사용 권한을 설정하려면 필요 사용 권한을 가진 프록시를 만든 다음 해당 프록시를 작업 단계에 할당하십시오. 프록시는 둘 이상의 작업 단계에 대해 지정할 수 있습니다. 동일 사용 권한이 필요한 작업 단계에 대해서는 동일한 프록시를 사용합니다.  
@@ -57,19 +57,19 @@ ms.locfileid: "48210803"
   
 -   NT 관리 계정은 서비스 계정 또는 프록시 계정으로 지정하지 않습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 서로 자산에 대한 액세스를 갖고 있습니다. 두 서비스가 단일 프로세스 공간을 공유하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 sysadmin입니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 서로의 자산에 대한 액세스 권한이 있습니다. 두 서비스가 단일 프로세스 공간을 공유하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 sysadmin입니다.  
   
 -   TSX를 MSF에 등록할 때 MSX sysadmins는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 TSX 인스턴스에 대한 총 제어 권한을 가져옵니다.  
   
--   ACE는 확장 파일이며 그 자체를 호출할 수 없습니다. ACE는 Microsoft.SqlServer.Chainer.Setup.exe라는 비어 있는 Chainer ScenarioEngine.exe에 의해 호출되며 이는 Microsoft.SqlServer.Chainer.Setup.exe로도 알려져 있습니다.  
+-   ACE는 확장 파일이며 그 자체를 호출할 수 없습니다. ACE는 Microsoft.SqlServer.Chainer.Setup.exe라는 Chainer ScenarioEngine.exe에서 호출되거나 다른 호스트 프로세스에서 호출될 수 있습니다.  
   
--   ACE는 해당 API의 DLL이 ACE에서 호출되기 때문에 SSDP에서 소유하는 다음 구성 DLL에 따라 달라집니다.  
+-   ACE는 해당 API의 DLL이 ACE에서 호출되기 때문에 SSDP에서 소유된 다음 구성 DLL에 따라 달라집니다.  
   
-    -   **SCO** -Microsoft.SqlServer.Configuration.Sco.dll, 가상 계정에 대한 새 SCO 자격 증명을 포함합니다.  
+    -   **SCO** -가상 계정에 대한 새 SCO 자격 증명이 포함된 Microsoft.SqlServer.Configuration.Sco.dll  
   
-    -   **클러스터** -Microsoft.SqlServer.Configuration.Cluster.dll  
+    -   **클러스터** - Microsoft.SqlServer.Configuration.Cluster.dll  
   
-    -   **SFC** – Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
+    -   **SFC** - Microsoft.SqlServer.Configuration.SqlConfigBase.dll  
   
     -   **확장** – Microsoft.SqlServer.Configuration.ConfigExtension.dll  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
@@ -14,12 +13,12 @@ ms.assetid: 81f596d2-27a5-489d-bf8d-0f4361decd02
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c18872dee35e55da6af067f9459e15f99f9402bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae9c89b3fa3d9392e27cce9199f7c1b1b8f31dee
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165443"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771425"
 ---
 # <a name="monitoring-replication"></a>복제 모니터링
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터는 복제 토폴로지의 전체적인 상태를 모니터링할 수 있는 그래픽 도구입니다. 복제 모니터는 다음과 같은 일반적인 질문에 대한 답을 제공하는 게시 및 구독의 상태와 성능에 대한 자세한 정보를 제공합니다.  
@@ -65,7 +64,7 @@ ms.locfileid: "48165443"
  [복제 에이전트 모니터링](../agents/replication-agents.md)  
  각 복제 에이전트에 대한 정보를 찾는 방법을 설명합니다.  
   
- [복제 모니터에 임계값 및 경고 설정](set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)  
  복제 모니터에서 설정할 수 있는 경고 및 임계값을 설명합니다. 토폴로지에 대한 경고를 활성화하여 상태 및 성능 정보를 적시에 받아보는 것이 좋습니다.  
   
  [캐싱, 새로 고침 및 복제 모니터 성능](caching-refresh-and-replication-monitor-performance.md)  

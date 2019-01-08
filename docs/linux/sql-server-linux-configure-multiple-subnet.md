@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 0952390e21d174d4d10e99f53904de4d11be6230
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 595add5d077136c4093776fae8e3a2f7ab04bb26
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637477"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396176"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>다중 서브넷 Always On 가용성 그룹 및 장애 조치 클러스터 인스턴스 구성
 
@@ -24,7 +24,7 @@ ms.locfileid: "47637477"
 
 ## <a name="vlan-based-solution"></a>VLAN 기반 솔루션
  
-**필수 구성 요소**:는 VLAN에 대 한 기반 솔루션에는 AG 또는 FCI에 참여 하는 각 서버 필요 두 네트워크 카드 (Nic) (NIC 이중 포트를 실제 서버에서 오류의 단일 지점 수는) 올바른 가용성에 대 한에 IP 주소가 할당할 수 있습니다 해당 기본 서브넷과 VLAN에서 하나입니다. ISCSI는 또한 자체 네트워크 등의 다른 네트워크 요구 하는 것 외에도입니다.
+**필수 구성 요소**: VLAN 기반 솔루션의 경우 각 서버는 AG 또는 FCI를 참여 해야 적절 한 가용성 (NIC 이중 포트는 단일 물리적 서버에서 실패 한 수 없음)에 대 한 두 개의 네트워크 카드 (Nic) 하나 뿐 아니라 네이티브 해당 서브넷에 IP 주소 할당 될 수 있도록 VLAN에서. ISCSI는 또한 자체 네트워크 등의 다른 네트워크 요구 하는 것 외에도입니다.
 
 AG 또는 FCI에 대 한 IP 주소 만들기 VLAN에서 수행 됩니다. 다음 예제에서는 VLAN 192.168.3의 서브넷을 있습니다. *x*이므로 AG 또는 FCI에 대해 만든 IP 주소는 192.168.3.104 합니다. 어떠한 추가 작업도 이므로 AG 또는 FCI에 할당 되는 단일 IP 주소를 구성 해야 합니다.
 

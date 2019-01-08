@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.General
@@ -13,12 +12,12 @@ ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16a62e70239db5688fc37b34f3b11752f43178d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ce643cbaa6cfade08b84894bdd1af9b24533392b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151031"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750116"
 ---
 # <a name="general-page"></a>일반 페이지
   **옵션** 대화 상자에 있는 **Integration Services 디자이너** 페이지의 **일반** 페이지를 사용하여 패키지 로드, 표시 및 업그레이드 옵션을 지정할 수 있습니다.  
@@ -55,7 +54,7 @@ ms.locfileid: "48151031"
  [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] 패키지를 업그레이드할 때 업그레이드된 버전의 패키지에 대해 새 패키지 ID를 만듭니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보안 개요 &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
+ [보안 개요&#40;Integration Services&#41;](security/security-overview-integration-services.md)   
  [스크립팅을 사용한 패키지 확장](extending-packages-scripting/extending-packages-with-scripting.md)  
   
   

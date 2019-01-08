@@ -18,15 +18,15 @@ ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9b955f59cb1c7813be28c7edd46b32d0c8e44b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e89ebe73f7bee6f44df353afca515aca4cbbdcf2
+ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735471"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947627"
 ---
 # <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   입력으로 제공되는 XML 텍스트를 읽고 MSXML 파서(Msxmlsql.dll)를 사용하여 이 텍스트의 구문을 분석한 다음 구문 분석된 문서를 사용할 수 있는 상태로 제공합니다. 이 구문 분석된 문서는 요소, 특성, 텍스트 및 주석 등 XML 문서의 다양한 노드를 트리로 나타낸 것입니다.  
   
@@ -153,7 +153,7 @@ SET @doc ='
 EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc, '<ROOT xmlns:xyz="urn:MyNamespace"/>';  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  <br>[XML 저장 Procedures(Transact-SQL)](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
  <br>[시스템 저장 Procedures(Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
  <br>[OPENXML(Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)

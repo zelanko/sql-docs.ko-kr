@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
@@ -19,12 +18,12 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b30ae5c49ec66b5612e1472c896084ebb92991d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e6df40fef89955b792e31e0a7539a4adf9409d70
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069743"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772575"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services(SSIS) 변수
   변수에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지와 해당 컨테이너, 태스크 및 이벤트 처리기에서 런타임에 사용할 수 있는 값이 저장됩니다. 스크립트 태스크와 스크립트 구성 요소의 스크립트에서도 변수가 사용될 수 있습니다. 태스크 및 컨테이너의 순서를 워크플로에 지정하는 선행 제약 조건에서는 해당 제약 조건 정의에 식이 포함된 경우에 변수가 사용될 수 있습니다.  
@@ -130,7 +129,7 @@ ms.locfileid: "48069743"
  값  
  사용자 정의 변수의 값은 문자 또는 식일 수 있습니다. 변수에는 변수 값과 값의 데이터 형식을 설정하기 위한 옵션이 포함됩니다. 이 두 속성은 호환되어야 합니다. 예를 들어 정수 데이터 형식에는 문자열 값을 사용할 수 없습니다.  
   
- 변수가 식으로 계산되도록 구성된 경우에는 식을 제공해야 합니다. 런타임에 식이 계산되고 변수에는 해당 계산의 결과가 설정됩니다. 예를 들어 변수에 `DATEPART("month", GETDATE())` 식이 사용된 경우 이 변수의 값은 현재 날짜의 월에 해당하는 숫자입니다. 식은 [!INCLUDE[ssIS](../includes/ssis-md.md)] 식 문법 구문을 사용하는 유효한 식이어야 합니다. 변수에 식이 사용되는 경우 이 식에는 식 문법에서 제공하는 연산자와 함수 및 리터럴을 사용할 수 있지만 식에서 패키지의 데이터 흐름에 있는 열을 참조할 수는 없습니다. 식의 최대 길이는 4000자입니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md)을 참조하세요.  
+ 변수가 식으로 계산되도록 구성된 경우에는 식을 제공해야 합니다. 런타임에 식이 계산되고 변수에는 해당 계산의 결과가 설정됩니다. 예를 들어 변수에 `DATEPART("month", GETDATE())` 식이 사용된 경우 이 변수의 값은 현재 날짜의 월에 해당하는 숫자입니다. 식은 [!INCLUDE[ssIS](../includes/ssis-md.md)] 식 문법 구문을 사용하는 유효한 식이어야 합니다. 변수에 식이 사용되는 경우 이 식에는 식 문법에서 제공하는 연산자와 함수 및 리터럴을 사용할 수 있지만 식에서 패키지의 데이터 흐름에 있는 열을 참조할 수는 없습니다. 식의 최대 길이는 4000자입니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md)가 될 때까지 워크플로를 반복합니다.  
   
  ValueType  
  > [!NOTE]  
@@ -143,7 +142,7 @@ ms.locfileid: "48069743"
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용은 [변수 창](../../2014/integration-services/variables-window.md)을 참조하세요.  
   
- 프로그래밍 방식으로 이러한 속성을 설정 하는 방법에 대 한 자세한 내용은 및 변수 속성에 대 한 자세한 내용은를 참조 하세요. <xref:Microsoft.SqlServer.Dts.Runtime.Variable>합니다.  
+ 변수 속성에 대한 자세한 내용과 이러한 변수를 프로그래밍 방식으로 설정하는 방법은 <xref:Microsoft.SqlServer.Dts.Runtime.Variable>을 참조하십시오.  
   
 ## <a name="related-tasks"></a>관련 작업  
  [패키지에서 사용자 정의 변수의 범위 추가, 삭제, 변경](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  

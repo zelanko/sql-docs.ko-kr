@@ -11,12 +11,12 @@ ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 85fbcf7fdf8a15f9705c9b27ba838b41911f31db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 91cc8740dfaeddcf489f3274b6766cdb803b1321
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113593"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416934"
 ---
 # <a name="use-powerpivot-gallery"></a>PowerPivot 갤러리 사용
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리는 특수한 용도의 SharePoint 문서 라이브러리로서 PowerPivot 데이터를 포함하는 게시된 Excel 통합 문서 및 Reporting Services 보고서에 대해 풍부한 미리 보기와 문서 관리 기능을 제공합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "48113593"
 >  파워 피벗 갤러리에는 Microsoft Silverlight가 필요합니다.  Microsoft Edge 브라우저는 Silverlight를 지원하지 않습니다.   
 > Edge에서 라이브러리 콘텐츠를 보려면 파워 피벗 갤러리에서 **라이브러리** 탭을 클릭한 다음 문서 라이브러리 보기를 **모든 문서**로 변경합니다.    
 > 기본 보기를 변경하려면 **라이브러리** 탭을 클릭한 다음 보기 수정을 클릭합니다. "이 보기를 기본 보기로 만듭니다"를 클릭한 다음 확인을 클릭하여 기본 보기를 저장합니다.  
->  Edge에서 지원하는 사항에 대한 자세한 내용은 Windows 블로그 [과거로부터의 완벽한 변화, 2부: ActiveX, VBScript의 종말...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)(영문)을 참조하세요.  
+>  Edge에서 지 원하는 사항에 대 한 자세한 내용은 Windows 블로그를 참조 하세요. [과거의 2 부를 중단 합니다. ActiveX, VBScript 종말...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
  필수 구성 요소 전체 목록은 참조 하세요. [만들기 및 사용자 지정 PowerPivot 갤러리](create-and-customize-power-pivot-gallery.md)합니다.  
   
@@ -70,13 +70,13 @@ ms.locfileid: "48113593"
   
 1.  파일을 저장합니다.  
   
-2.  1.  **Excel 2010:** 파일 메뉴에서 **저장 및 보내기**를 클릭합니다.  
+2.  1.  **Excel 2010:** 파일 메뉴에서 클릭 **저장 및 보내기**합니다.  
   
     2.  **SharePoint에 저장**을 클릭합니다.  
   
     3.  Excel 서비스 옵션을 사용하여 게시하려는 개별 시트 또는 매개 변수를 선택하려면 **게시 옵션** 을 클릭합니다. 예를 들어 Excel 서비스 옵션의 매개 변수 탭을 사용하면 게시된 통합 문서에 표시할 슬라이서를 선택할 수 있습니다.  
   
-    1.  **Excel 2013:**  파일 메뉴에서 **저장**을 클릭하세요.  
+    1.  **Excel 2013:**  파일 메뉴에서 클릭 **저장할**합니다.  
   
     2.  Excel 서비스 옵션을 사용하여 게시하려는 개별 시트 또는 매개 변수를 선택하려면 **브라우저 보기 옵션** 을 클릭합니다. 예를 들어 Excel 서비스 옵션의 매개 변수 탭을 사용하면 게시된 통합 문서에 표시할 슬라이서를 선택할 수 있습니다.  
   
@@ -155,9 +155,9 @@ ms.locfileid: "48113593"
 ### <a name="document-type-is-not-supported"></a>문서 유형이 지원되지 않습니다.  
  **PowerPivot 갤러리 문서** 내용 유형은 지원되지 않습니다. 문서 라이브러리에 대해 **PowerPivot 갤러리 문서** 내용 유형을 사용하도록 설정하고 해당 유형의 새 문서를 만들려고 하면 다음 중 하나와 비슷한 오류 메시지가 표시됩니다.  
   
--   '새 문서'를 사용하려면 Microsoft Sharepoint Foundation 호환 애플리케이션 및 웹 브라우저가 있어야 합니다. 이 문서 라이브러리에 문서를 추가하려면 '문서 업로드' 단추를 클릭하세요.  
+-   '새 문서' Microsoft Sharepoint Foundation 호환 응용 프로그램 및 웹 브라우저가 필요 합니다. 이 문서 라이브러리에 문서를 추가 하려면 ' 문서 업로드 ' 단추를 클릭 합니다.  
   
--   "인터넷 주소 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx'가 잘못되었습니다. Microsoft Excel에서 'http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' 파일에 액세스할 수 없습니다." 원인은 다음과 같습니다.  
+-   "인터넷 주소 ' http://[server 이름] / testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' 올바르지 않습니다." " Microsoft Excel 파일에 액세스할 수 없습니다. ' http://[server 이름] / testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx'. 원인은 다음과 같습니다.  
   
  **PowerPivot 갤러리 문서** 내용 유형이 문서 라이브러리에 자동으로 추가되지 않습니다. 지원되지 않는 내용 유형을 사용하도록 수동으로 설정하지 않으면 이 문제가 발생하지 않습니다.  
   

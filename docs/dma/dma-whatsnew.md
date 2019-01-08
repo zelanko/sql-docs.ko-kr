@@ -14,12 +14,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 094c49afc97436983417e1916091b150a50d8c4b
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 60145b2433d7b9d2b6cda4453e2d91599b865a86
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643951"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410410"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Data Migration Assistant의 새로운 기능
 이 문서는 각 릴리스에 추가의 도우미 DMA (Data Migration)를 나열합니다.
@@ -33,9 +33,9 @@ DMA v4.1 릴리스의 종합적인 평가의 온-프레미스 SQL Server 데이�
 
 - **호환성 문제**합니다. DMA는 또한 다음과 같은 영역에 관련 된 호환성 문제를 식별 합니다.
 
-    - 주요 변경 내용: 특정 스키마 개체를 데이터베이스에서 대상 데이터베이스로 마이그레이션 기능을 중단 될 수 있습니다.  데이터베이스 마이그레이션 후 이러한 스키마 개체를 수정 하는 것이 좋습니다.
-    - 동작 변경 내용: 스키마 개체를 보고 하려면 계속 될 수 있지만 성능 저하가 예를 들어 다른 동작을 그러지 않을 것입니다.
-    - 정보 제공 용 이므로 문제: 이러한 개체 마이그레이션 영향을 주지 것입니다 하지만 SQL Server를 해제 하는 기능에서 사용 되지 않을 수 있습니다.
+    - 주요 변경 내용:  데이터베이스에서 대상 데이터베이스로 마이그레이션 기능을 손상 시킬 수 있는 특정 스키마 개체입니다.  데이터베이스 마이그레이션 후 이러한 스키마 개체를 수정 하는 것이 좋습니다.
+    - 동작 변경 내용: 보고 스키마 개체가 계속 작동 하지만 성능 저하 예를 들어 다른 동작을 그러지 않을 것입니다.
+    - 정보 제공 용 이므로 문제:  이러한 개체는 마이그레이션 영향을 주지 않습니다 하지만 SQL Server를 해제 하는 기능에서 사용 되지 않을 수 있습니다.
 
 사용 하 여 평가 완료 한 후 우리 [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) Azure SQL Database Managed Instance로 SQL Server 데이터베이스의 마이그레이션을 수행 하려면 (DMS).  DMS 둘 다를 지 원하는 [오프 라인](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (1 회) 및 [online](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) Azure SQL Database Managed Instance로 마이그레이션 (최소한의 가동 중지 시간) 데이터베이스입니다.
 

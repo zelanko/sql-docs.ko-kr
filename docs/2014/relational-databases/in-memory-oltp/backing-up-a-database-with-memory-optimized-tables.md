@@ -10,12 +10,12 @@ ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4b791f83342d02fb003a14f48861ae992ddc37df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc4da6702716e845121d2081a166254d4be9449f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190293"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408630"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블이 포함된 데이터베이스 백업
   메모리 액세스에 최적화된 테이블은 일반적인 데이터베이스 백업의 일부로 백업됩니다. 디스크 기반 테이블의 경우 저장소 손상을 검색하기 위해 데이터베이스 백업의 일부로 데이터 및 델타 파일 쌍의 CHECKSUM 유효성이 검사됩니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "48190293"
   
  일반적인 OLTP 작업의 경우 차등 백업이 전체 데이터베이스 백업보다 상당히 작습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](restore-and-recovery-of-memory-optimized-tables.md)  
   
   

@@ -15,18 +15,18 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: e0d3ee1784653205feb4aa95a80a82d5ac27ec46
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 3c16c87ea79e3c80de9f93bc3571a46d0610b22d
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643841"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395426"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>SQL Server 또는 SQL Server Data Migration Assistant를 사용 하 여 Azure Vm에서 온-프레미스 SQL Server 업그레이드
 
 Data Migration Assistant는 Azure Vm 또는 Azure SQL Database에서 SQL Server 온-프레미스 및 이후 버전의 SQL Server로 업그레이드 하거나 SQL Server로의 마이그레이션을 원활 하 게 평가 제공합니다.
 
-이 문서에서는 Data Migration Assistant를 사용 하 여 온-프레미스 SQL Server Azure Vm의 SQL Server 또는 SQL Server의 최신 버전으로 업그레이드 하는 것에 대 한 단계별 지침을 제공 합니다.   
+이 문서에서는 Data Migration Assistant를 사용 하 여 온-프레미스 SQL Server Azure Vm의 SQL Server 또는 SQL Server의 최신 버전으로 업그레이드 하는 것에 대 한 단계별 지침을 제공 합니다.   
 
 ## <a name="create-a-new-migration-project"></a>새 마이그레이션 프로젝트 만들기
 
@@ -65,9 +65,9 @@ Data Migration Assistant는 Azure Vm 또는 Azure SQL Database에서 SQL Server 
    > [!NOTE]
    > 마이그레이션 설정으로 마이그레이션하는 왼쪽된 창에서 서버를 선택 하 여 모든 데이터베이스에 적용할 수 있습니다. 왼쪽된 창에서 데이터베이스를 선택 하 여 특정 설정을 사용 하 여 개별 데이터베이스를 구성할 수 있습니다.
 
-    1. 지정 된 **백업 작업에 대 한 원본 및 대상 SQL 서버에서 액세스할 수 있는 위치를 공유**합니다. 소스를 실행 하는 서비스 계정 SQL Server 인스턴스에 있는 공유 위치에 대 한 권한이 읽고 쓰는 대상 서비스 계정에 공유 위치에 대 한 권한이 있는지 확인 합니다.
+    a. 지정 된 **백업 작업에 대 한 원본 및 대상 SQL 서버에서 액세스할 수 있는 위치를 공유**합니다. 소스를 실행 하는 서비스 계정 SQL Server 인스턴스에 있는 공유 위치에 대 한 권한이 읽고 쓰는 대상 서비스 계정에 공유 위치에 대 한 권한이 있는지 확인 합니다.
 
-    2. 데이터와 대상 서버의 트랜잭션 로그 파일을 복원 하려면 위치를 지정 합니다.
+    b. 데이터와 대상 서버의 트랜잭션 로그 파일을 복원 하려면 위치를 지정 합니다.
 
     ![데이터베이스 페이지를 추가 합니다.](../dma/media/AddDatabases.png)
 

@@ -14,12 +14,12 @@ ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d2d2f8fce7b70c760707bd0d384ffa9b72f7a1d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: faa4d4887079064ac6ccbe9536ac6c36fe8b9f79
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751775"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516989"
 ---
 # <a name="operation-of-parameterized-commands"></a>매개 변수화된 명령 작업
 대규모 자식을 사용 하 여 작업 하는 경우 **레코드 집합**, 특히 부모의 크기에 비해 **레코드 집합**, 하지만 몇 가지 자식 장에서 액세스할 필요가 것이 보다 효율적으로 사용할를 매개 변수가 있는 명령입니다.  

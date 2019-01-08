@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - registry keys [SQLXML]
@@ -16,12 +14,12 @@ ms.assetid: 91994142-32f0-4d8d-a8cf-eb0d8b1f1999
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff1d92a054d85c52e5b69044a2c25da31eb35705
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c23a208a0276a2a3eb71f493aa7e5ce7fad0928
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166733"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749245"
 ---
 # <a name="xsl-caching-sqlxml-40"></a>XSL 캐싱(SQLXML 4.0)
   XSL 스타일시트를 캐시하면 성능이 향상됩니다. XSL 스타일시트를 처음 캐시할 때 XSL 캐싱이 ON으로 설정되어 있으면 XSL 스타일시트가 메모리에 유지되므로 후속 처리의 성능이 향상됩니다. 기본 설정은 ON입니다.  

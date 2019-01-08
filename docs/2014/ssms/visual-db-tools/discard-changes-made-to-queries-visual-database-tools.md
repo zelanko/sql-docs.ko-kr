@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - reverting queries
@@ -14,12 +14,12 @@ ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 13a852b4bdc05f10dc1e06b6168d5b3b12b3ebfe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9666e611b9f0a0a4348cc75a2adb1e8b711c60fc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207173"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775335"
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>쿼리 변경 내용 취소(Visual Database Tools)
   쿼리 정의에 대한 변경 내용을 저장하기 전에 취소할 수 있습니다. 이러한 변경 내용을 저장한 후에는 이전 상태로 되돌릴 수 없습니다.  

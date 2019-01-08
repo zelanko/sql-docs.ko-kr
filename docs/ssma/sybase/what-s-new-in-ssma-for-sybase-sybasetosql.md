@@ -10,12 +10,12 @@ ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c6e423af0a859932cc78e097b7a73e1644d3cccf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 460506c8c29a3ee92f362db57719a711626d83a0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836381"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398316"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SAP ASE (SybaseToSQL) 용 SSMA의 새로운 기능
 이 문서에서는 SAP ASE (이전의 Sybase 용 SSMA) 각 릴리스의 변경 내용에 대 한 SSMA를 나열 합니다. 

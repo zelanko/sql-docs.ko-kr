@@ -1,5 +1,5 @@
 ---
-title: 모델 필터 구문 및 예 (Analysis Services-데이터 마이닝) | Microsoft Docs
+title: 모델 필터 구문 및 예제 (Analysis Services-데이터 마이닝) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 467d3efbe979bf2ea58c700409913ef0767457ab
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ae34f06997d1647f6345c0cf77494aa8688a8616
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018680"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52393549"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>모델 필터 구문 및 예(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -96,7 +96,7 @@ ms.locfileid: "34018680"
   
  *avPredicate*인수가 불연속 열에 적용되는 경우 필터에 사용되는 값은 특정 버킷의 임의 값이 될 수 있습니다.  
   
- 즉, 조건을 `AgeDisc = ’25-35’`로 정의하지 않고 해당 구간에서 값을 계산하여 사용합니다.  
+ 즉, 조건을 `AgeDisc = '25-35'`로 정의하지 않고 해당 구간에서 값을 계산하여 사용합니다.  
   
  예를 들어  `AgeDisc = 27`  은 27과 같은 구간(이 경우 25-35)에 있는 임의의 값을 의미합니다.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "34018680"
 ## <a name="examples-of-filters"></a>필터 예  
  다음 예에서는 마이닝 모델에 적용되는 필터의 사용을 보여 줍니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 **속성** 창 및 필터 대화 상자의 **식** 창에서 필터 식을 만드는 경우 WITH FILTER 키워드 뒤에 나타나는 문자열만 표시됩니다. 여기서는 열 유형 및 사용법을 더 쉽게 이해할 수 있도록 마이닝 구조의 정의를 포함했습니다.  
   
-###  <a name="bkmk_Ex1"></a> 예 1: 일반적인 사례 수준 필터링  
+###  <a name="bkmk_Ex1"></a> 예제 1: 일반적인 사례 수준 필터링  
  이 예에서는 직업이 건축가이고 나이가 31세 이상인 고객으로 모델에 사용되는 사례를 제한하는 간단한 필터를 보여 줍니다.  
   
 ```  
@@ -133,11 +133,11 @@ Age,
 Occupation,  
 MaritalStatus PREDICT  
 )  
-WITH FILTER (Age > 30 AND Occupation=’Architect’)  
+WITH FILTER (Age > 30 AND Occupation='Architect')  
 ```  
   
   
-###  <a name="bkmk_Ex2"></a> 예 2: 중첩 테이블 특성을 사용한 사례 수준 필터링  
+###  <a name="bkmk_Ex2"></a> 예제 2: 중첩 테이블 특성을 사용한 사례 수준 필터링  
  마이닝 구조에 중첩 테이블이 포함되어 있는 경우 중첩 테이블에서 값의 존재 여부를 필터링하거나 특정 값이 포함된 중첩 테이블 행을 필터링할 수 있습니다. 이 예에서는 우유를 포함한 제품을 한 번 이상 구매한 31세 이상의 고객으로 모델에 사용되는 사례를 제한합니다.  
   
  이 예에서 볼 수 있듯이 모델에 포함된 열만 필터에 사용할 필요는 없습니다. 중첩 테이블 **Products** 는 마이닝 구조의 일부이지만 마이닝 모델에는 포함되지 않습니다. 그럼에도 불구하고 중첩 테이블의 값 및 특성을 필터링할 수 있습니다. 이러한 사례에 대한 세부 정보를 보려면 드릴스루를 사용해야 합니다.  
@@ -151,17 +151,17 @@ Occupation,
 MaritalStatus PREDICT  
 )  
 WITH DRILLTHROUGH,   
-FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’)  
+FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk')  
 )  
 ```  
   
   
-###  <a name="bkmk_Ex3"></a> 예 3: 여러 중첩 테이블 특성을 사용한 사례 수준 필터링  
+###  <a name="bkmk_Ex3"></a> 예제 3: 여러 중첩 테이블 특성을 사용한 사례 수준 필터링  
  이 예에서는 사례 테이블에 적용되는 조건, 중첩 테이블의 특성에 적용되는 조건 및 중첩 테이블 열 중 하나의 특정 값에 적용되는 조건이라는 세 부분으로 이루어진 필터를 보여 줍니다.  
   
  필터의 첫 번째 조건인 `Age > 30`은 사례 테이블의 열에 적용됩니다. 나머지 조건은 중첩 테이블에 적용됩니다.  
   
- 두 번째 조건인 `EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’`는 중첩 테이블에 우유를 포함한 한 번 이상의 구매가 있는지 확인합니다. 세 번째 조건인 `Quantity>=2`는 고객이 한 번의 거래 과정에서 두 팩 이상의 우유를 구매했음을 의미합니다.  
+ 두 번째 조건인 `EXISTS (SELECT * FROM Products WHERE ProductName='Milk'`는 중첩 테이블에 우유를 포함한 한 번 이상의 구매가 있는지 확인합니다. 세 번째 조건인 `Quantity>=2`는 고객이 한 번의 거래 과정에서 두 팩 이상의 우유를 구매했음을 의미합니다.  
   
 ```  
 ALTER MINING STRUCTURE MyStructure  ADD MINING MODEL MyModel_3  
@@ -176,12 +176,12 @@ ProductName KEY,
 Quantity        
 )  
 )  
-FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’  AND Quantity >= 2)   
+FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk'  AND Quantity >= 2)   
 )  
 ```  
   
   
-###  <a name="bkmk_Ex4"></a> 예 4: 중첩 테이블 특성의 부재를 사용한 사례 수준 필터링  
+###  <a name="bkmk_Ex4"></a> 예제 4: 중첩 테이블 특성의 부재에서 사례 수준 필터링  
  이 예에서는 중첩 테이블에서 특성의 부재를 필터링하여 특정 제품을 구매하지 않은 고객으로 사례를 제한하는 방법을 보여 줍니다. 이 예에서는 우유를 구입한 적이 없는 31세 이상의 고객을 사용하여 모델을 학습합니다.  
   
 ```  
@@ -196,11 +196,11 @@ Products PREDICT
 ProductName  
 )  
 )  
-FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’) )  
+FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName='Milk') )  
 ```  
   
   
-###  <a name="bkmk_Ex5"></a> 예 5: 여러 중첩 테이블 값을 사용한 필터링  
+###  <a name="bkmk_Ex5"></a> 예제 5: 여러 중첩 테이블 값을 사용한 필터링  
  이 예는 중첩 테이블 필터링을 보여 주기 위한 것입니다. 중첩 테이블 필터는 사례 필터 다음에 적용되며 중첩 테이블 행만 제한합니다.  
   
  이 모델에서는 EXISTS를 지정하지 않았으므로 빈 중첩 테이블이 있는 여러 사례가 모델에 포함될 수 있습니다.  
@@ -216,13 +216,13 @@ Products PREDICT
 (  
 ProductName KEY,  
 Quantity        
-) WITH FILTER(ProductName=’Milk’ OR ProductName=’bottled water’)  
+) WITH FILTER(ProductName='Milk' OR ProductName='bottled water')  
 )  
 WITH DRILLTHROUGH  
 ```  
   
   
-###  <a name="bkmk_Ex6"></a> 예 6: 중첩 테이블 특성 및 EXISTS를 사용한 필터링  
+###  <a name="bkmk_Ex6"></a> 예제 6: 중첩 테이블 특성 및 EXISTS를 사용한 필터링  
  이 예에서 중첩 테이블에 대한 필터는 우유 또는 생수를 포함하는 항목으로만 행을 제한합니다. 그런 다음 **EXISTS** 문을 사용하여 모델의 사례를 제한합니다. 이렇게 하면 중첩 테이블이 비어 있지 않게 됩니다.  
   
 ```  
@@ -236,13 +236,13 @@ Products PREDICT
 (  
 ProductName KEY,  
 Quantity        
-) WITH FILTER(ProductName=’Milk’ OR ProductName=’bottled water’)  
+) WITH FILTER(ProductName='Milk' OR ProductName='bottled water')  
 )  
 FILTER (EXISTS (Products))  
 ```  
   
   
-###  <a name="bkmk_Ex7"></a> 예 7: 복잡한 필터 조합  
+###  <a name="bkmk_Ex7"></a> 예제 7: 복잡한 필터 조합  
  이 모델의 시나리오는 예 4의 시나리오와 비슷하지만 훨씬 더 복잡합니다. 중첩 테이블 **ProductsOnSale**에는 `(OnSale)` 이라는 필터 조건이 있습니다. 이는 **OnSale** 의 값이 **ProductName** 에 나열된 제품에 대해 **true**여야 한다는 의미입니다. 여기서 **OnSale** 은 구조 열입니다.  
   
  **ProductsNotOnSale**에 대한 필터의 두 번째 부분에서도 이 구문이 반복되지만 여기서는 **OnSale** 의 값이 **true가 아닌**`(!OnSale)`제품을 필터링합니다.  
@@ -307,7 +307,7 @@ FILTER (EXISTS (Products))
   
   
 ## <a name="see-also"></a>관련 항목:  
- [마이닝 모델 & #40;에 대 한 필터 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [테스트 및 유효성 검사 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [마이닝 모델에 대한 필터&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

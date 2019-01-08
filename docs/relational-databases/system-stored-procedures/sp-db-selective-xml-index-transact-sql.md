@@ -18,12 +18,12 @@ ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07145e608c850a877a984c7467da6b8974f0d151
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8978c40141d0cd6031b9569ab0daa945666e7e85
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744601"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415160"
 ---
 # <a name="spdbselectivexmlindex-transact-sql"></a>sp_db_selective_xml_index(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47744601"
  선택적 XML 인덱스를 설정 또는 해제할 데이터베이스 이름입니다. 하는 경우 *db_name* 가 NULL 이면 현재 데이터베이스로 간주 됩니다.  
   
  [  **@action =** ] **'***동작***'**  
- 인덱스를 설정 또는 해제할지 여부를 결정합니다. 'on', ‘true’, ‘off’ 또는 ‘false’가 아닌 다른 값을 전달하면 오류가 발생합니다.  
+ 인덱스를 설정 또는 해제할지 여부를 결정합니다. 다른 값 'on', 'true', 'off' 또는 'f a l' 전달 됩니다 점을 제외 하 고, 오류가 발생 합니다.  
   
 ```  
   
@@ -106,7 +106,7 @@ EXECUTE sys.sp_db_selective_xml_index;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SXI&#40;선택적 XML 인덱스&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], snapshots
@@ -17,12 +16,12 @@ ms.assetid: 99d7ae15-5457-4ad4-886b-19c17371f72c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 621966b18de4f7b1d8e48c755b9c52edfa5afe77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 25df8e37a8ed1a9f88438558edc2770081dbddcb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052051"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751016"
 ---
 # <a name="snapshots-for-merge-publications-with-parameterized-filters"></a>매개 변수가 있는 필터를 사용하는 병합 게시의 스냅숏
   병합 게시에서 매개 변수가 있는 행 필터를 사용하면 복제 시 각 구독이 두 부분으로 구성된 스냅숏으로 초기화됩니다. 먼저 복제에 필요한 모든 개체와 게시된 개체의 스키마를 포함하는 스키마 스냅숏이 생성되는데 이때 데이터는 제외됩니다. 그런 다음 스키마 스냅숏의 개체 및 스키마와 구독의 파티션에 속한 데이터를 포함하는 스냅숏으로 각 구독을 초기화합니다. 둘 이상의 구독이 주어진 파티션(동일한 스키마와 데이터)을 받는다면 해당 파티션에 대한 스냅숏은 단 한 번만 생성됩니다. 동일한 스냅숏에서 여러 개의 구독이 초기화됩니다. 매개 변수가 있는 행 필터에 대한 자세한 내용은 [매개 변수가 있는 행 필터](merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  

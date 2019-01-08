@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
@@ -12,12 +12,12 @@ ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e21317e2019fe1530e346567a5767a1dfc18c329
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165423"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758015"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>정책 기반 관리를 사용하여 최선의 방법 모니터링 및 적용
   정책 기반 관리 기능을 사용 하면 모니터링에 대 한 모범 사례는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 최선의 방법 정책으로 가져와서 인스턴스, 인스턴스 개체, 데이터베이스 또는 데이터베이스 개체를 포함하는 대상 집합에 대해 정책을 평가할 수 있는 일련의 정책 파일을 제공합니다. 정책을 수동으로 평가하거나, 일정에 따라 대상 집합을 평가하도록 정책을 설정하거나, 이벤트에 따라 대상 집합을 평가하도록 정책을 설정할 수 있습니다. 정책 기반 관리에 대한 자세한 내용은 [정책 기반 관리를 사용하여 서버 관리](administer-servers-by-using-policy-based-management.md)를 참조하세요.  

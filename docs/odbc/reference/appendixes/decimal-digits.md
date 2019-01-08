@@ -16,12 +16,12 @@ ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: abb7c01b2495ad58c14ca7e2aefede233213f963
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7b9a69941364b32e6b43d79f2d092511fd61f22
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694451"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506081"
 ---
 # <a name="decimal-digits"></a>십진수
 합니다 *진수* decimal 및 numeric 데이터 형식 소수점의 오른쪽 또는 데이터의 소수 자릿수의 최대 수로 정의 됩니다. 근사 부동 소수점 숫자 열 또는 매개 변수의 경우에 대 한 확장 정의 되지 않습니다 소수점 오른쪽 자릿수 수가 고정 되어 있지 않으므로. 초 구성 요소를 포함 하는 datetime 또는 간격 데이터에 대 한 10 진수 숫자 데이터의 초 구성 요소에서 소수점 오른쪽 자릿수도 정의 됩니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "47694451"
 |SQL 유형|10 진수|  
 |--------------|--------------------|  
 |모든 문자 및 이진 유형 [a]|n/a|  
-|SQL_DECIMAL<br />SQL_NUMERIC|소수점 오른쪽 자릿수 정의 된 횟수입니다. 예를 들어 NUMERIC(10,3)로 정의 된 열의 소수 자릿수가 3입니다. 음수 지 수 표기법;를 사용 하지 않고 매우 많은 수의 저장소를 지원 하기 위해 수 있습니다. 예를 들어, "12000" – 3의 확장을 사용 하 여 "12"으로 저장할 수 있습니다.|  
+|SQL_DECIMAL<br />SQL_NUMERIC|소수점 오른쪽 자릿수 정의 된 횟수입니다. 예를 들어 NUMERIC(10,3)로 정의 된 열의 소수 자릿수가 3입니다. 음수 지 수 표기법;를 사용 하지 않고 매우 많은 수의 저장소를 지원 하기 위해 수 있습니다. 예를 들어, "12000"-3의 확장을 사용 하 여 "12"으로 저장할 수 있습니다.|  
 |SQL_DECIMAL 및 [a] SQL_NUMERIC 이외의 모든 정확한 숫자 형식|0|  
 |모든 근사 데이터 형식 [a]|n/a|  
 |SQL_TYPE_DATE, 및 초 구성 요소가 없습니다. [a]를 사용 하 여 모든 간격 유형|n/a|  

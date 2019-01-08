@@ -15,12 +15,12 @@ ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 525e3d131e5bb2e53d35faa73f1c4c579c59cbd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fd2aad1cf57852c2b78db1128a972c0490a52a85
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091453"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416494"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>논리 아키텍처 개요(Analysis Services - 다차원 데이터)
   Analysis Services는 여러 가지 유형의 Analysis Services 모델에 사용되는 메모리 아키텍처 및 런타임 환경을 결정하는 서버 배포 모드에서 작동합니다. 서버 모드는 설치 중에 결정됩니다. **다차원 및 데이터 마이닝 모드** 기존 OLAP 및 데이터 마이닝을 지원 합니다. **테이블 형식 모드** 테이블 형식 모델을 지원 합니다. **SharePoint 통합된 모드** 로드 및 쿼리 하는 통합 문서 내부의 Excel 또는 PowerPivot 데이터 모델에 사용 되는 SharePoint 용 powerpivot 설치 된 Analysis Services의 인스턴스를 가리킵니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "48091453"
  각 데이터베이스 개체에는 하나 이상의 큐브 개체가 포함되어 있습니다. 큐브는 해당 측정값과 차원에 의해 정의됩니다. 큐브의 측정값과 차원은 큐브의 기반이 되고 측정값과 차원 정의에서 생성된 데이터 원본 뷰에 있는 테이블과 뷰에서 파생됩니다.  
   
 ## <a name="object-inheritance"></a>개체 상속  
- ASSL 개체 모델에는 많은 반복 요소 그룹이 포함되어 있습니다. 예를 들어 요소 그룹 “`Dimensions` 포함 `Hierarchies`”는 요소의 차원 계층을 정의합니다. `Cubes` 및 `MeasureGroups` 둘 다에는 요소 그룹 "`Dimensions` 포함 `Hierarchies`"가 포함되어 있습니다.  
+ ASSL 개체 모델에는 많은 반복 요소 그룹이 포함되어 있습니다. 예를 들어 요소 그룹 "`Dimensions` 포함할 `Hierarchies`,"는 요소의 차원 계층을 정의 합니다. `Cubes` 및 `MeasureGroups` 둘 다에는 요소 그룹 "`Dimensions` 포함 `Hierarchies`"가 포함되어 있습니다.  
   
  명시적으로 재정의되지 않는 한 요소는 상위 수준에서 이러한 반복 요소 그룹의 정보를 상속합니다. 예를 들어 `Translations`의 `CubeDimension`는 해당 상위 항목 요소인 `Translations`의 `Cube`과 같습니다.  
   
@@ -126,6 +126,6 @@ ms.locfileid: "48091453"
  여기에 제시된 예에는 단일 팩트 테이블만 있습니다. 큐브에 팩트 테이블이 여러 개 있는 경우 각 팩트 테이블의 측정값은 측정값 그룹으로 구성되고 측정값 그룹은 정의된 차원 관계에 따라 특정 차원 집합에 연결됩니다. 이러한 관계는 참여하는 테이블을 데이터 원본 뷰에 지정하고 관계의 세분성을 지정하여 정의됩니다. **관련된 항목:**[차원 관계](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [다차원 Model 데이터베이스 &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)  
+ [다차원 model 데이터베이스&#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)  
   
   

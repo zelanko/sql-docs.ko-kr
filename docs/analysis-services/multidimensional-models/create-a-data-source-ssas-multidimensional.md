@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c461f38e7e2d0cf43cf206fee0c474f6fd74d35a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2d22e4b3b9c53aa02a7666c929fcba25d2c17ced
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027050"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410320"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>데이터 원본 만들기(SSAS 다차원)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "34027050"
   
 3.  **연결 정의 방법 선택** 페이지에서 **기존 연결 또는 새 연결을 사용하여 데이터 원본 만들기** 를 선택한 다음 **새로 만들기** 를 클릭하여 **연결 관리자**를 엽니다.  
   
-     새 연결은 연결 관리자에서 만듭니다. 연결 관리자에서 공급자를 선택한 다음 기본 데이터에 연결하기 위해 해당 공급자에 사용되는 연결 문자열 속성을 지정합니다. 실제 필요한 정보는 선택한 공급자에 따라 달라지지만 일반적으로 서버나 서버 인스턴스, 서버나 서버 인스턴스 로그온에 대한 정보, 데이터베이스나 파일 이름, 기타 공급자별 설정 등의 정보가 필요합니다. 이 절차의 남은 부분에서는 SQL Server 데이터베이스 연결을 사용합니다.  
+     새 연결은 연결 관리자에서 만듭니다. 연결 관리자에서 공급자를 선택한 다음 기본 데이터에 연결하기 위해 해당 공급자에 사용되는 연결 문자열 속성을 지정합니다. 실제 필요한 정보는 선택한 공급자에 따라 달라지지만 일반적으로 서버나 서버 인스턴스, 서버나 서버 인스턴스 로그온에 대한 정보, 데이터베이스나 파일 이름, 기타 공급자별 설정 등의 정보가 필요합니다. 이 절차의 나머지 부분에서는 SQL Server 데이터베이스 연결을 가정 합니다.  
   
 4.  연결에 사용할 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 또는 네이티브 OLE DB 공급자를 선택합니다.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "34027050"
   
 5.  기본 데이터 원본에 연결하기 위해 선택한 공급자가 요청한 정보를 입력합니다. **네이티브 OLE DB\SQL Server Native Client** 공급자를 선택한 경우 다음 정보를 입력합니다.  
   
-    1.  **서버 이름** 은 데이터베이스 엔진 인스턴스의 네트워크 이름입니다. IP 주소, 컴퓨터의 NETBIOS 이름 또는 정규화된 도메인 이름으로 지정할 수 있습니다. 인스턴스 이름을 포함 해야는 서버가 명명 된 인스턴스로 설치 된 경우 (예를 들어 \<컴퓨터 이름 >\\< instancename\>).  
+    1.  **서버 이름** 은 데이터베이스 엔진 인스턴스의 네트워크 이름입니다. IP 주소, 컴퓨터의 NETBIOS 이름 또는 정규화된 도메인 이름으로 지정할 수 있습니다. 서버가 명명 된 인스턴스로 설치 된, 인스턴스 이름을 포함 해야 합니다 (예를 들어 \<컴퓨터 이름 >\\< n a m e\>).  
   
     2.  **서버에 로그온** 은 연결이 인증이 되는 방식을 지정합니다. **Windows 인증 사용** 은 Windows 인증을 사용합니다. **SQL Server 인증 사용** 은 혼합 모드 인증을 지원하는 Windows Azure SQL Database 또는 SQL Server 인스턴스의 데이터베이스 사용자 로그인을 지정합니다.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "34027050"
   
 5.  추가한 테이블을 찾아 선택합니다. 테이블을 마우스 오른쪽 단추로 클릭하고 **새 관계**를 선택합니다. 일치하는 데이터가 들어 있는 원본 열과 대상 열을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [지원되는 데이터 원본&#40;SSAS - 다차원&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
  [다차원 모델의 데이터 원본 뷰](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   

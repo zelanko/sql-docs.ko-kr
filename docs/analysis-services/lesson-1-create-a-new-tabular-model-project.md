@@ -1,5 +1,5 @@
 ---
-title: '1 단원: 새 테이블 형식 모델 프로젝트 만들기 | Microsoft Docs'
+title: '1단원: 새 테이블 형식 모델 프로젝트 만들기 | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 61ac5b1a0bac9647e6163a13afd0bce6b251ac03
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6b0c376c6ab8625d2f31e6ad6ea132842315b1e1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040861"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410779"
 ---
-# <a name="lesson-1-create-a-new-tabular-model-project"></a>1단원: 새 테이블 형식 모델 프로젝트를 만들기
+# <a name="lesson-1-create-a-new-tabular-model-project"></a>1단원: 새 테이블 형식 모델 프로젝트 만들기
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 이 단원에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 새로운 빈 테이블 형식 모델 프로젝트를 만듭니다. 새 프로젝트를 만든 후 테이블 가져오기 마법사를 사용하여 데이터를 추가할 수 있습니다. 이 단원에서는 제작 환경 SSDT에서 테이블 형식 모델에 대 한 간략 한 소개를 제공 합니다.  
   
-이 단원에 소요되는 예상 시간: **10분**  
+이 단원에 소요되는 예상 시간: **10 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
 이 항목은 테이블 형식 모델 제작 자습서의 첫 번째 단원입니다. 이 단원을 완료 하려면 AdventureWorksDW 예제 데이터베이스를 SQL Server 인스턴스에 설치 되어 있어야 합니다. 자세한 내용은 참조 하세요 [테이블 형식 모델링 &#40;Adventure Works 자습서&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md)합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "38040861"
       
     SQL Server 2016 (1200) RTM 호환성 수준 목록 상자에 표시 되지 않으면, 최신 버전의 SQL Server Data Tools를 사용 하지 않는 합니다. 최신 버전을 다운로드하려면 [SQL Server Data Tools 설치](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)를 참조하세요.  
 
-    최신 버전의 SSDT 사용 하는 경우 SQL Server 2017도 선택할 수 있습니다 (1400). 그러나 전체 단원 13으로: 배포, SQL Server 2017 또는 Azure 서버를 배포 해야 합니다.
+    최신 버전의 SSDT 사용 하는 경우 SQL Server 2017도 선택할 수 있습니다 (1400). 그러나 전체 단원 13를: 배포, SQL Server 2017 또는 Azure 서버를 배포 해야 합니다.
       
     이전 호환성 수준을 선택 하는 이전 버전의 SQL Server를 실행 중인 다른 Analysis Services 인스턴스를 완료 된 테이블 형식 모델을 배포 하려는 경우에 권장 됩니다. 통합된 작업 영역 이전 호환성 수준에 대 한 지원 되지 않습니다. 자세한 내용은 [호환성 수준](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)을참조하세요.   
   
@@ -82,12 +82,12 @@ SSDT를 설치할 때 몇 가지 새 메뉴 항목이 Visual Studio 환경에 �
 테이블 형식 모델 제작과 관련된 다양한 기능의 위치와 대화 상자를 살펴보십시오. 일부 항목은 아직 활성화되어 있지 않지만 테이블 형식 모델 제작 환경을 파악하는 데 도움이 될 것입니다.  
 
 
-## <a name="additional-resources"></a>추가 자료
+## <a name="additional-resources"></a>추가 리소스
 다양 한 유형의 테이블 형식 모델 프로젝트에 대 한 자세한 내용은 참조 하세요 [테이블 형식 모델 프로젝트](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)합니다. 테이블 형식 모델 제작 환경에 대 한 자세한 내용은 참조 하세요 [테이블 형식 모델 디자이너 ](../analysis-services/tabular-models/tabular-model-designer-ssas.md)합니다.  
   
 
 ## <a name="whats-next"></a>다음 단계
-다음 단원으로 이동 합니다. [2 단원: 데이터 추가](../analysis-services/lesson-2-add-data.md)합니다.
+다음 단원으로 이동 합니다. [2단원: 데이터 추가](../analysis-services/lesson-2-add-data.md)합니다.
 
   
   

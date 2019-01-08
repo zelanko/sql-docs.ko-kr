@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - versions [Master Data Services], copying
@@ -14,12 +13,12 @@ ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b8b505f6eb819c0375e2fa50a12c8d6e4b707b3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a42204b6cc095a5a285e5e68aa1aaf7a905668e6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131743"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765385"
 ---
 # <a name="copy-a-version-master-data-services"></a>버전 복사(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델의 버전을 복사하여 새 버전을 만듭니다.  
@@ -46,9 +45,9 @@ ms.locfileid: "48131743"
   
 ## <a name="next-steps"></a>다음 단계  
   
--   [버전 이름 변경 &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)  
+-   [버전 이름 변경&#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [버전 &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
+ [버전&#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
   

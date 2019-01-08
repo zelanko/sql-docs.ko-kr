@@ -19,12 +19,12 @@ ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e322ca0ed99c5c5b84c764cf0d89e2f365b6ed31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2163b7a264fc782cb1f05e98d0400dbd751c8b85
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221293"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502916"
 ---
 # <a name="generatedatabaserightsscript-method-wmi-msreportserverconfigurationsetting"></a>GenerateDatabaseRightsScript 메서드(WMI MSReportServer_ConfigurationSetting)
   보고서 서버 데이터베이스와 보고서 서버 실행에 필요한 기타 데이터베이스에 사용자 권한을 부여하는 데 사용할 수 있는 SQL 스크립트를 생성합니다. 호출자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 서버에 연결하여 해당 스크립트를 실행합니다.  
@@ -89,15 +89,15 @@ out Int32 HRESULT);
   
  [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)]에서 기본 제공 계정을 사용하고 있고 보고서 서버 데이터베이스가 원격이면 오류가 반환됩니다.  
   
- 경우는 `LocalService` 기본 제공 계정이 지정 되어 있고 보고서 서버 데이터베이스를 원격 이면 오류가 반환 됩니다.  
+ `LocalService` 기본 제공 계정이 지정되어 있고 보고서 서버 데이터베이스가 원격이면 오류가 반환됩니다.  
   
  *IsWindowsUser* 가 true이고 *UserName* 에 제공된 값을 변환해야 하는 경우, WMI 공급자는 보고서 서버 데이터베이스가 같은 컴퓨터에 있는지 또는 원격 컴퓨터에 있는지를 확인합니다. WMI 공급자는 로컬 설치 여부를 확인하기 위해 다음 값 목록에 대해 DatabaseServerName 속성을 평가합니다. 일치 항목이 있으면 로컬 데이터베이스이고, 그렇지 않으면 원격 데이터베이스입니다. 비교 시 대/소문자는 구분되지 않습니다.  
   
 |DatabaseServerName 값|예제|  
 |---------------------------------|-------------|  
-|“.”||  
-|“(local)”||  
-|“LOCAL”||  
+|"."||  
+|"(local)"||  
+|"LOCAL"||  
 |localhost||  
 |\<Machinename>|testlab14|  
 |\<MachineFQDN>|example.redmond.microsoft.com|  

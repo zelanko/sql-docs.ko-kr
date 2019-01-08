@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: baa6153adde1a5cc5aaeaad5f8b04366dcb2dad8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 72fadf42bae238fbc656a120e39317ce5211919e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019770"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392966"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>템플릿에서 단일 예측 쿼리 작성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  단일 쿼리는 예측에 사용하려는 모델이 있지만 이 모델을 외부 입력 데이터 집합에 매핑하거나 대량 예측을 수행하지는 않으려는 경우에 유용합니다. 단일 쿼리를 사용하면 모델에 값을 제공하고 바로 예측된 값을 볼 수 있습니다.  
+  단일 쿼리는 모델을 예측에 사용 하려고 하지만 외부 입력된 데이터 집합에 매핑하거나 대량 예측을 수행 하지 않으려는 경우에 유용 합니다. 단일 쿼리를 사용하면 모델에 값을 제공하고 바로 예측된 값을 볼 수 있습니다.  
   
  예를 들어 다음 DMX 쿼리는 타겟 메일링 모델인 TM_Decision_Tree에 대한 단일 쿼리를 나타냅니다.  
   
@@ -90,7 +90,7 @@ AS [t]
   
 11. **실행**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [예측 & #40; 만들기 기본 데이터 마이닝 자습서 & #41;](http://msdn.microsoft.com/library/a8410ed2-bb98-4d51-a9eb-b239be1201c2)  
+## <a name="see-also"></a>관련 항목  
+ [예측 만들기&#40;기본 데이터 마이닝 자습서&#41;](http://msdn.microsoft.com/library/a8410ed2-bb98-4d51-a9eb-b239be1201c2)  
   
   

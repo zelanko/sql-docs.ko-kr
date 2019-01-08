@@ -16,12 +16,12 @@ ms.assetid: 3c7e9ebb-d0c9-498e-a9ba-cc13eaa43520
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 65fc89bf8d93a957f7cb1e25664621a8ff6420a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 572c331cb5f9a88ee78cb26544772b126405c02c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087733"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420234"
 ---
 # <a name="detect-categories-table-analysis-tools-for-excel"></a>범주 검색(Excel용 테이블 분석 도구)
   ![리본 메뉴에서 검색 범주 단추](media/tat-detectcat.gif "리본의 범주 검색 단추")  

@@ -14,12 +14,12 @@ ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 84194cf92cfd4c6270697aa1c3fd4f475df956ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 210f25b55c2cc2536d4c6f00f215b27eac5f7be0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714091"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409230"
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>SSMA 콘솔 실행(OracleToSQL)
 Microsoft 파일 명령을 실행 하 고 제어 SSMA 활동을 스크립트의 강력한 집합을 제공 합니다. 이 섹션에 열거로 특정 표준 스크립트 파일 명령을 사용 하는 콘솔 응용 프로그램 합니다.  
@@ -63,7 +63,7 @@ create-new-project
   
 **Command**  
   
-프로젝트 열기: 기존 프로젝트를 엽니다.  
+오픈-프로젝트: 기존 프로젝트를 엽니다.  
   
 **스크립트**  
   
@@ -294,7 +294,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
 ## <a name="migration-script-file-commands"></a>마이그레이션 스크립트 파일 명령  
 마이그레이션 명령은 소스 스키마에 대상 데이터베이스 스키마를 변환 및 대상 서버에 데이터를 마이그레이션합니다.  
   
-마이그레이션 명령에 대 한 설정 기본 콘솔 출력은 'Full' 출력 보고서 없습니다 자세한 오류 보고와:만 원본 개체 트리의 루트 노드에서 요약 합니다.  
+마이그레이션 명령에 대 한 설정 기본 콘솔 출력은 'Full' 출력 보고서와 자세한 오류 보고 하지 않습니다. 원본 개체 트리의 루트 노드에서 요약 합니다.  
   
 **Command**  
   
@@ -459,7 +459,7 @@ map-schema
 ```  
   
 ## <a name="manageability-script-file-commands"></a>관리 효율성 스크립트 파일 명령  
-관리 효율성 명령 도움말 원본 데이터베이스와 대상 데이터베이스 개체를 동기화 합니다. 마이그레이션 명령에 대 한 설정 기본 콘솔 출력은 'Full' 출력 보고서 없습니다 자세한 오류 보고와:만 원본 개체 트리의 루트 노드에서 요약 합니다.  
+관리 효율성 명령 도움말 원본 데이터베이스와 대상 데이터베이스 개체를 동기화 합니다. 마이그레이션 명령에 대 한 설정 기본 콘솔 출력은 'Full' 출력 보고서와 자세한 오류 보고 하지 않습니다. 원본 개체 트리의 루트 노드에서 요약 합니다.  
   
 **Command**  
   
@@ -589,7 +589,7 @@ map-schema
 ```  
   
 ## <a name="script-generation-script-file-commands"></a>스크립트 생성 스크립트 파일 명령  
-이중 작업을 수행 하는 스크립트 생성 명령을: 콘솔 스크립트 파일에 출력을 절약할 한 T-SQL 출력은 콘솔 이나 지정한 매개 변수를 기준으로 파일을 기록 합니다.  
+스크립트 생성 명령을 이중 작업을 수행합니다. 콘솔에서 스크립트 파일에 출력을 절약합니다 한 T-SQL 출력은 콘솔 이나 지정한 매개 변수를 기준으로 파일을 기록 합니다.  
   
 **Command**  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - server performance [SQL Server], objects for monitoring
@@ -30,12 +30,12 @@ ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0678c741387e6b9e3a252d03fcebad8dcb5e5a52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: de0e30a3d0b7daf014753c225ca34bf7a1b0cd17
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133034"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753595"
 ---
 # <a name="use-sql-server-objects"></a>SQL Server 개체 사용
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 실행하는 컴퓨터의 작업을 모니터링하기 위해 시스템 모니터에서 사용할 수 있는 개체 및 카운터를 제공합니다. 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금이나 Windows 프로세스와 같은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스를 말합니다. 각 개체에는 모니터링할 개체의 여러 요소를 결정하는 하나 이상의 카운터가 포함됩니다. 예를 들어 **SQL Server Locks** 개체에는 **Number of Deadlocks/sec** 및 **Lock Timeouts/sec**이라는 카운터가 포함됩니다.  
@@ -105,13 +105,13 @@ ms.locfileid: "48133034"
 |[SQLServer:Locks](sql-server-locks-object.md)|잠금 제한 시간 및 교착 상태와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 만든 개별 잠금 요청에 관한 정보를 제공합니다. 이 개체에는 인스턴스가 여러 개 있을 수 있습니다.|  
 |[SQLServer:Memory Manager](sql-server-memory-manager-object.md)|현재 할당된 총 잠금 구조 수와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 사용에 관한 정보를 제공합니다.|  
 |[SQLServer:Plan Cache](sql-server-plan-cache-object.md)|저장 프로시저, 트리거, 쿼리 계획과 같은 개체를 저장할 때 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 캐시에 관한 정보를 제공합니다.|  
-|[SQLServer:Resource Pool Stats](sql-server-resource-pool-stats-object.md)|리소스 관리자 리소스 풀 통계에 대한 정보를 제공합니다.|  
+|[SQLServer: Resource Pool Stats](sql-server-resource-pool-stats-object.md)|리소스 관리자 리소스 풀 통계에 대한 정보를 제공합니다.|  
 |[SQLServer:SQL Errors](sql-server-sql-errors-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류에 대한 정보를 제공합니다.|  
 |[SQLServer:SQL Statistics](sql-server-sql-statistics-object.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 받은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 일괄 처리 수와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]쿼리 상태에 관한 정보를 제공합니다.|  
 |[SQLServer:Transactions](sql-server-transactions-object.md)|전체 트랜잭션 수 및 스냅숏 트랜잭션 수와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 활성 트랜잭션에 대한 정보를 제공합니다.|  
 |[SQLServer:User Settable](sql-server-user-settable-object.md)|사용자 지정 모니터링을 수행합니다. 각 카운터는 사용자 지정 저장 프로시저 또는 모니터링할 값을 반환하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 될 수 있습니다.|  
-|[SQLServer:Wait Statistics](sql-server-wait-statistics-object.md)|대기 정보를 제공합니다.|  
-|[SQLServer:Workload Group Stats](sql-server-workload-group-stats-object.md)|리소스 관리자 작업 그룹 통계에 대한 정보를 제공합니다.|  
+|[SQLServer: 대기 작업 통계](sql-server-wait-statistics-object.md)|대기 정보를 제공합니다.|  
+|[SQLServer: Workload Group Stats](sql-server-workload-group-stats-object.md)|리소스 관리자 작업 그룹 통계에 대한 정보를 제공합니다.|  
   
 ##  <a name="SQLServerReplicationPOs"></a> SQL Server 복제 성능 개체  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에서 사용되는 성능 개체를 나열합니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: d3b1e47f-2ba2-49af-b404-1aa231d4e4a0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ffb2858bb00890370cd77a44bc9b82ec43b6b416
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 07016bd61abc84617c8a32935417b7ec936d3dce
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205043"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775675"
 ---
 # <a name="audit-server-scope-gdr-event-class"></a>Audit Server Scope GDR 이벤트 클래스
   **Audit Server Scope GDR** 이벤트 클래스는 로그인 생성과 같은 서버 범위의 사용 권한에 대해 GRANT, REVOKE 또는 DENY가 실행될 때 발생합니다.  

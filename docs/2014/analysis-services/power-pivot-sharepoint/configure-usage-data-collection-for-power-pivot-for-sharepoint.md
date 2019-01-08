@@ -11,17 +11,17 @@ ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 12943c96c64c1a5d20ee94c76a9701fc7a983d85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 9f3544ce4297117be11b3ba68821e3b621fbc400
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083823"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411280"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>사용 현황 데이터 수집 구성(SharePoint용 PowerPivot)
   사용 데이터 컬렉션은 팜 수준의 SharePoint 기능입니다. SharePoint용 PowerPivot은 이 시스템을 사용하고 확장하여 PowerPivot 관리 대시보드에서 PowerPivot 데이터 및 서비스 사용 상태를 보여 주는 보고서를 제공합니다. SharePoint를 구성한 방법에 따라 팜에 대해 사용 데이터 컬렉션이 해제될 수 있습니다. 팜 관리자는 PowerPivot 관리 대시보드에 표시되는 사용 데이터를 만들기 위해 사용 현황 로깅을 설정해야 합니다.  
   
- PowerPivot 관리 대시보드의 사용 데이터에 대 한 자세한 내용은 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)합니다.  
+ PowerPivot 관리 대시보드의 사용 데이터에 대한 자세한 내용을 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)를 참조하십시오.  
   
  **항목 내용**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48083823"
   
 1.  중앙 관리에서 **모니터링**을 클릭합니다.  
   
-2.   **보고**섹션에서 **Usage and Health Data Collection 구성**을 클릭합니다.  
+2.  **보고**섹션에서 **Usage and Health Data Collection 구성**을 클릭합니다.  
   
 3.  **사용 현황 데이터 수집 사용**을 선택합니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48083823"
     |**PowerPivot 연결**|PowerPivot 연결 이벤트는 사용자를 위해 설정된 PowerPivot 서버 연결을 모니터링하는 데 사용됩니다.|  
     |**PowerPivot 데이터 로드 사용**|PowerPivot 데이터 로드 사용은 PowerPivot 데이터를 서버 메모리로 로드하는 요청을 모니터링하는 데 사용됩니다. 콘텐츠 데이터베이스나 캐시에서 로드되는 PowerPivot 데이터 파일에 대해 로드 이벤트가 생성됩니다.|  
     |**PowerPivot 데이터 언로드 사용**|PowerPivot 데이터 언로드 사용은 장기간 사용하지 않는 PowerPivot 데이터 원본을 언로드하기 위한 요청을 모니터링하는 데 사용됩니다. PowerPivot 데이터 원본을 디스크에 캐시하면 언로드 이벤트로 보고됩니다.|  
-    |**PowerPivot 쿼리 사용**|PowerPivot 쿼리 사용은에 로드 된 데이터에 대 한 쿼리 처리 시간을 모니터링 하는 데 사용 되는 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 인스턴스.|  
+    |**PowerPivot 쿼리 사용**|PowerPivot 쿼리 사용은 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 인스턴스에 로드되어 있는 데이터에 대한 쿼리 처리 시간을 모니터링하는 데 사용됩니다.|  
   
     > [!NOTE]  
     >  서버 상태 및 데이터 새로 고침 작업에서도 사용 데이터를 생성하지만 이러한 프로세스와 연관된 이벤트가 없습니다.  
@@ -87,15 +87,15 @@ ms.locfileid: "48083823"
 ##  <a name="jobs"></a> 사용 현황 데이터 수집에 사용되는 타이머 작업 구성  
  PowerPivot 서버 상태 및 사용 현황 데이터는 사용 현황 데이터 컬렉션 시스템에서 두 개의 타이머 작업을 통해 다른 위치로 이동됩니다.  
   
--   "Microsoft SharePoint Foundation 사용 현황 데이터 가져오기" 타이머 작업이 PowerPivot 서비스 애플리케이션 데이터베이스로 PowerPivot 사용 데이터를 이동합니다.  
+-   "Microsoft SharePoint Foundation 사용 데이터 가져오기" 타이머 작업이 PowerPivot 서비스 응용 프로그램 데이터베이스로 PowerPivot 사용을 이동합니다.  
   
--   "PowerPivot 관리 대시보드 처리 타이머 작업"이 기본 제공 관리 보고서의 데이터 원본인 PowerPivot 통합 문서로 데이터를 이동합니다.  
+-   "PowerPivot 관리 대시보드 처리 타이머 작업이" 기본 제공 관리 보고서에 대 한 데이터 원본인 PowerPivot 통합 문서에 데이터입니다.  
   
  PowerPivot 관리 대시보드에 나타나는 관리 보고서를 더 자주 새로 고쳐야 하는 경우에는 다음 단계를 따릅니다.  
   
 1.  중앙 관리에서 **모니터링**을 클릭합니다.  
   
-2.   **작업 정의 검토**를 클릭합니다. 를 클릭합니다. **타이머 작업** 섹션에서  
+2.  **작업 정의 검토**를 클릭합니다. 를 클릭합니다. **타이머 작업** 섹션에서  
   
 3.  **Microsoft SharePoint Foundation 사용 현황 데이터 가져오기**를 클릭합니다.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "48083823"
   
 6.  **지금 실행**을 클릭합니다.  
   
-7.  보고서에서 새로 고침 데이터를 봅니다. 자세한 내용은 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)합니다.  
+7.  보고서에서 새로 고침 데이터를 봅니다. 자세한 내용은 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)을 참조하세요.  
   
 ##  <a name="confighist"></a> 사용 데이터 기록 저장 기간 제한  
  사용 데이터 기록은 이벤트(연결, 로드, 언로드 및 요청 시 쿼리 처리) 및 데이터 새로 고침(예약된 데이터 처리)에 대해 저장됩니다. SharePoint 사용 데이터 컬렉션 시스템을 통해 사용 데이터가 수집되지만 보고 데이터는 장기적 저장을 위해 PowerPivot 애플리케이션 데이터베이스 및 보고 데이터베이스로 이동됩니다. 사용 데이터 기록 설정은 사용 데이터가 PowerPivot 애플리케이션 데이터베이스에 보존되는 기간을 제어합니다. 같은 PowerPivot 서비스 애플리케이션 데이터베이스에 저장된 모든 형식의 사용 데이터에 같은 한계가 동일하게 적용됩니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41c79a6390c89c01a5ff7e5c7fe949cbebff6c6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d22be3bc8d99edd5d8b799e4121e2a591977b255
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097573"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767227"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>열 패턴 프로필 요청 옵션(데이터 프로파일링 태스크)
   **프로필 요청** 페이지의 **요청 속성** 창을 사용하여 요청 창에서 선택한 **열 패턴 프로필 요청** 의 옵션을 설정할 수 있습니다. 열 패턴 프로필은 문자열 열에서 지정된 값의 비율을 포괄하는 정규식 집합을 보고합니다. 이 프로필을 사용하면 잘못된 문자열과 같은 데이터 문제를 식별하는 데 도움이 되며 앞으로 새 값의 유효성 검사에 사용할 수 있는 정규식을 제안 받을 수 있습니다. 예를 들어 US Zip Code 열의 패턴 프로필이 \d{5}-\d{4}, \d{5} 및 \d{9} 정규식을 생성할 수 있습니다. 다른 정규식이 보이면 데이터에 유효하지 않거나 잘못된 형식의 값이 포함되어 있을 가능성이 높습니다.  
@@ -40,7 +39,7 @@ ms.locfileid: "48097573"
  모든 구분 기호는 토큰화 프로세스의 일환으로 단일 공백으로 정규화됩니다. 반면 기호는 유지됩니다.  
   
 ## <a name="understanding-the-use-of-the-tag-table"></a>태그 테이블 사용 이해  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 만든 특수 테이블에 태그 및 관련 용어를 저장하여 관련 토큰을 단일 태그를 사용하여 그룹화할 수도 있습니다. 태그 테이블에는 이름이 하나는 "Tag"이고 다른 하나는 "Term"인 두 개의 문자열 열이 있어야 합니다. 이러한 열 형식이 될 수 있습니다 `char`, `nchar`를 `varchar`, 또는 `nvarchar`, 있지만 `text` 또는 `ntext`합니다. 단일 테이블에서 여러 태그와 해당 용어를 결합할 수 있습니다. 열 패턴 프로필 요청은 하나의 태그 테이블만 사용할 수 있습니다. 별도의 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 사용하여 태그 테이블에 연결할 수 있습니다. 따라서 태그 테이블은 다른 데이터베이스에 있거나 원본 데이터와 다른 서버에 있을 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 만든 특수 테이블에 태그 및 관련 용어를 저장하여 관련 토큰을 단일 태그를 사용하여 그룹화할 수도 있습니다. 태그 테이블에는 이름이 하나는 "Tag"이고 다른 하나는 "Term"인 두 개의 문자열 열이 있어야 합니다. 이러한 열의 유형은 `char`, `nchar`, `varchar` 또는 `nvarchar`일 수 있지만 `text` 또는 `ntext`일 수는 없습니다. 단일 테이블에서 여러 태그와 해당 용어를 결합할 수 있습니다. 열 패턴 프로필 요청은 하나의 태그 테이블만 사용할 수 있습니다. 별도의 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 사용하여 태그 테이블에 연결할 수 있습니다. 따라서 태그 테이블은 다른 데이터베이스에 있거나 원본 데이터와 다른 서버에 있을 수 있습니다.  
   
  예를 들어 단일 태그 "Direction"을 사용하여 주소에 나타날 수 있는 값 "East", "West", "North" 및 "South"를 그룹화할 수 있습니다. 다음 테이블은 이러한 태그 테이블의 예입니다.  
   
@@ -143,8 +142,8 @@ ms.locfileid: "48097573"
   
  자세한 내용은 이 항목의 앞부분에 나오는 "태그 테이블 사용 이해"를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 프로 파일링 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)   
+## <a name="see-also"></a>관련 항목:  
+ [데이터 프로파일링 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)   
  [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

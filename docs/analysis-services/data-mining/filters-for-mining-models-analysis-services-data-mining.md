@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4c678773a77b9411eb1a51dbeb85b5eeb5f08b43
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 81592abc0224b2898b64d834857d23484750b326
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016760"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410670"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>마이닝 모델에 대한 필터(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -54,14 +54,14 @@ ms.locfileid: "34016760"
 ### <a name="creating-filters-on-nested-tables"></a>중첩 테이블에 필터 만들기  
  데이터 원본 뷰에 중첩 테이블이 포함되어 있는 경우 두 번째 필터 대화 상자를 사용하여 중첩 테이블의 행에 대한 조건을 작성할 수 있습니다.  
   
- 예를 들어 사례 테이블이 고객과 관련되어 있고 중첩 테이블에 고객이 구매한 제품이 표시되는 경우 중첩 테이블 필터에 다음 `[ProductName]=’Water Bottle’ OR ProductName=’Water Bottle Cage'`구문을 사용하여 특정 항목을 구매한 고객에 대한 필터를 만들 수 있습니다.  
+ 예를 들어 사례 테이블이 고객과 관련되어 있고 중첩 테이블에 고객이 구매한 제품이 표시되는 경우 중첩 테이블 필터에 다음 `[ProductName]='Water Bottle' OR ProductName='Water Bottle Cage'`구문을 사용하여 특정 항목을 구매한 고객에 대한 필터를 만들 수 있습니다.  
   
- **EXISTS** 또는 **NOT EXISTS** 키워드 및 하위 쿼리를 사용하여 중첩 테이블에 특정 값이 있는지 여부를 필터링할 수도 있습니다. 이렇게 하면 `EXISTS (SELECT * FROM Products WHERE ProductName=’Water Bottle’)`와 같은 조건을 만들 수 있습니다. 중첩 테이블에 `EXISTS SELECT(<subquery>)` 값을 포함하는 하나 이상의 행이 있는 경우 **는** true `Water Bottle`를 반환합니다.  
+ **EXISTS** 또는 **NOT EXISTS** 키워드 및 하위 쿼리를 사용하여 중첩 테이블에 특정 값이 있는지 여부를 필터링할 수도 있습니다. 이렇게 하면 `EXISTS (SELECT * FROM Products WHERE ProductName='Water Bottle')`와 같은 조건을 만들 수 있습니다. 중첩 테이블에 `EXISTS SELECT(<subquery>)` 값을 포함하는 하나 이상의 행이 있는 경우 **는** true `Water Bottle`를 반환합니다.  
   
- 사례 테이블에 대한 조건을 중첩 테이블에 대한 조건과 결합할 수 있습니다. 예를 들어 다음 구문에는 사례 테이블에 대한 조건(`Age > 30` ), 중첩 테이블에 대한 하위 쿼리(`EXISTS (SELECT * FROM Products)`) 및 중첩 테이블에 대한 여러 조건(`WHERE ProductName=’Milk’  AND Quantity>2`)이 포함되어 있습니다.  
+ 사례 테이블에 대한 조건을 중첩 테이블에 대한 조건과 결합할 수 있습니다. 예를 들어 다음 구문에는 사례 테이블에 대한 조건(`Age > 30` ), 중첩 테이블에 대한 하위 쿼리(`EXISTS (SELECT * FROM Products)`) 및 중첩 테이블에 대한 여러 조건(`WHERE ProductName='Milk'  AND Quantity>2`)이 포함되어 있습니다.  
   
 ```  
-(Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName=’Milk’  AND Quantity>2) )  
+(Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk'  AND Quantity>2) )  
 ```  
   
  필터 작성이 완료되면 필터 텍스트가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 평가되고 DMX 식으로 번역된 다음 모델과 함께 저장됩니다.  
@@ -93,7 +93,7 @@ ms.locfileid: "34016760"
 ### <a name="how-can-i-save-a-filter"></a>필터를 저장하려면 어떻게 합니까?  
  필터 식은 연결된 마이닝 모델 또는 중첩 테이블과 함께 저장되는 스크립트로 저장됩니다. 필터 텍스트를 삭제하는 경우 필터 식을 수동으로 다시 만들어야만 해당 텍스트를 복원할 수 있습니다. 따라서 복잡한 필터 식을 만드는 경우 필터 텍스트의 백업 복사본을 만들어야 합니다.  
   
-### <a name="why-cant-i-see-any-effects-from-the-filter"></a>필터에서 효과가 보이지 않는 이유는 무엇입니까?  
+### <a name="why-cant-i-see-any-effects-from-the-filter"></a>필터에서 효과가 보이지 표시 되지 않는 이유  
  필터 식을 변경하거나 추가할 때마다 구조 및 모델을 다시 처리해야 필터 효과를 확인할 수 있습니다.  
   
 ### <a name="why-do-i-see-filtered-attributes-in-prediction-query-results"></a>예측 쿼리 결과에 필터링된 특성이 나타나는 이유는 무엇입니까?  
@@ -114,7 +114,7 @@ ms.locfileid: "34016760"
   
  마이닝 모델을 테스트할 때 모델 필터를 사용하는 방법에 대한 자세한 내용은 [정확도 차트 유형 선택 및 차트 옵션 설정](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [모델 필터 구문 및 예&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
  [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   

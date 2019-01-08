@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8975189d1517bb781e46ee429d02e8e95268bccf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30aed326787133763adff61d140354c41ea4e2d0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212603"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771905"
 ---
 # <a name="look-up-process-chain"></a>프로세스 체인 조회
   **프로세스 체인 조회** 대화 상자에서는 SAP Netweaver BW 시스템에 정의된 프로세스 체인을 조회할 수 있습니다. 사용할 수 있는 프로세스 체인 목록이 표시될 때 원하는 체인을 선택하면 관련 옵션이 원본의 값으로 채워집니다.  
@@ -59,7 +58,7 @@ ms.locfileid: "48212603"
  사용할 수 있는 프로세스 체인 목록이 표시될 때 원하는 체인을 선택하면 관련 옵션이 원본의 값으로 채워집니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SAP BW 원본 편집기 &#40;연결 관리자 페이지&#41;](sap-bw-source-editor-connection-manager-page.md)   
+ [SAP BW 원본 편집기&#40;연결 관리자 페이지&#41;](sap-bw-source-editor-connection-manager-page.md)   
  [Microsoft Connector 1.1 for SAP BW F1 도움말](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

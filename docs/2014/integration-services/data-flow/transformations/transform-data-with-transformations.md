@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data flow [Integration Services], transformations
@@ -15,19 +14,19 @@ ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b98f377a24604abb1657a8e3a8c2b57024d84c38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1243f3cc6e7c8d7cd3ea2078e96e0f3844a8596
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229333"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767535"
 ---
 # <a name="transform-data-with-transformations"></a>변환을 사용하여 데이터 변환
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에는 원본, 변환 및 대상 등 3가지 유형의 데이터 흐름 구성 요소가 있습니다.  
   
  다음 다이어그램에서는 원본 하나, 변환 두 가지, 대상 하나를 포함하는 간단한 데이터 흐름을 보여 줍니다.  
   
- ![데이터 흐름](../../media/mw-dts-08.gif "데이터 흐름")  
+ ![Data flow](../../media/mw-dts-08.gif "Data flow")  
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 변환은 다음과 같은 기능을 제공합니다.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "48229333"
   
 -   [데이터 흐름 구성 요소의 속성 설정](../set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터 흐름 태스크](../../control-flow/data-flow-task.md)   
  [데이터 흐름](../data-flow.md)   
  [경로에 구성 요소 연결](../../connect-components-with-paths.md)   

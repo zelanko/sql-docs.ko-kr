@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.userdefineddatatype.general.f1
@@ -16,12 +15,12 @@ ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 82578b6270bdcb73126c8891f47c41e8ebf1aacf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85eebaa5abbf97b5b7787a788b4294b504a30e10
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184044"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768825"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>사용자 정의 데이터 형식 별칭 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 새 사용자 정의 데이터 형식 별칭을 만드는 방법에 대해 설명합니다.  
@@ -88,10 +87,10 @@ ms.locfileid: "48184044"
   
     |||  
     |-|-|  
-    |1 – 9|5|  
-    |10 – 19|9|  
-    |20 – 28|13|  
-    |29 – 38|17|  
+    |1 - 9|5|  
+    |10 - 19|9|  
+    |20 - 28|13|  
+    |29 - 38|17|  
   
      에 대 한 `nchar` 하 고 `nvarchar` 데이터 형식의 경우 저장소 값이 값의 두 배 항상 **길이**입니다.  
   

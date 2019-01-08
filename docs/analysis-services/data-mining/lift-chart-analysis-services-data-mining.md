@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9a72e7c40719511e8514c38d08cd7cd88a24055f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: cd4c0ea515020067cb7dd5c49b97db69ca6a756c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016410"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52401291"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>리프트 차트(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  A *리프트 chart* 는 임의 추측에 대해 비교할 때 마이닝 모델이 제공하는 향상률을 그래픽으로 나타내며 *리프트* 점수를 기준으로 변화를 측정합니다. 서로 다른 모델에 대한 리프트 점수를 비교하여 가장 적합한 모델을 확인할 수 있습니다. 또한 모델의 예측이 유용하지 않은 지점을 확인할 수 있습니다. 예를 들어 리프트 차트를 검토하면 프로모션 캠페인이 30%의 고객에게만 효과적임을 파악하고 해당 수치를 사용하여 캠페인의 범위를 제한할 수 있습니다.  
+  A *리프트 chart* 는 임의 추측에 대해 비교할 때 마이닝 모델이 제공하는 향상률을 그래픽으로 나타내며 *리프트* 점수를 기준으로 변화를 측정합니다. 서로 다른 모델에 대한 리프트 점수를 비교하여 가장 적합한 모델을 확인할 수 있습니다. 또한는 모델의 예측이 유용 하지 시점을 확인할 수 있습니다. 예를 들어 리프트 차트를 검토하면 프로모션 캠페인이 30%의 고객에게만 효과적임을 파악하고 해당 수치를 사용하여 캠페인의 범위를 제한할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝에서는 리프트 차트를 사용하여 동일한 예측 가능한 특성이 있는 여러 모델의 정확도를 비교할 수 있습니다. 단일 결과(예측 가능한 특성의 단일 값)에 대해 또는 모든 결과(지정된 특성의 모든 값)에 대해 예측의 정확도를 평가할 수도 있습니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "34016410"
   
  이 차트에는 동일한 데이터를 기반으로 여러 모델이 포함됩니다. 이러한 모델 중 하나는 특정 고객을 대상으로 사용자 지정되었습니다. 모델을 학습하는 데 사용되는 데이터에 필터를 추가하여 모델을 사용자 지정할 수 있습니다. 이 필터는 학습 및 평가에 사용되는 사례를 30세 미만의 고객으로 제한합니다. 필터링의 효과 중 하나는 기본 모델과 필터링된 모델이 다른 데이터 집합을 사용하며 따라서 리프트 차트에서 평가에 사용된 사례의 수도 다르다는 것입니다. 예측 결과 및 기타 통계를 해석할 때는 이러한 사실을 반드시 유념해야 합니다.  
   
- ![리프트 차트 보여 주는 두 개의 모델](../../analysis-services/data-mining/media/newliftchart-tm30-30.gif "리프트 차트 보여 주는 두 가지 모델")  
+ ![리프트 차트 보여 주는 두 가지 모델](../../analysis-services/data-mining/media/newliftchart-tm30-30.gif "리프트 차트로 보여 주는 두 가지 모델")  
   
  차트의 X축은 예측을 비교하는 데 사용되는 테스트 데이터 세트의 비율을 나타냅니다. 차트의 Y축은 예측되는 값의 비율을 나타냅니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "34016410"
 |30세 미만 타겟 메일링|0.85|51.81%|46.62%|  
 |임의 추측 모델||31.00%||  
 |이상적인 모델: 전체 타겟 메일링||62.48%||  
-|이상적인 모델: 30 미만 타겟 메일링||65.28%||  
+|이상적인 모델: 30세 미만 타겟 메일링||65.28%||  
   
  [맨 위로 이동](#bkmk_Top)  
   
@@ -89,7 +89,7 @@ ms.locfileid: "34016410"
   
  X축은 예측 가능한 열이 지정된 차트에서와 동일하지만 Y축은 정확한 예측의 비율을 나타냅니다. 따라서 이상적인 선은 대각선이며, 이 선은 모델이 데이터의 50%에서 사례의 50%(예측 가능한 최대값)를 정확히 예측함을 보여 줍니다.  
   
- ![리프트 차트 표시 된 정확한 예측](../../analysis-services/data-mining/media/lift1.gif "정확한 예측을 보여 주는 리프트 차트")  
+ ![차트 표시에 대 한 올바른 예측 리프트](../../analysis-services/data-mining/media/lift1.gif "올바른 예측을 보여 주는 리프트 차트")  
   
  차트를 클릭하여 회색 세로 막대를 옮길 수 있으며 **마이닝 범례** 는 전체 사례의 비율과 정확하게 예측된 사례의 비율을 표시합니다. 예를 들어 회색 슬라이더를 50% 표시 지점에 놓으면 **마이닝 범례** 는 다음과 같은 정확도 점수를 표시합니다. 이 수치는 기본 데이터 마이닝 자습서에서 만든 TM_Decision 트리 모델을 기반으로 합니다.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "34016410"
 ### <a name="related-content"></a>관련 내용  
  [맨 위로 이동](#bkmk_Top)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

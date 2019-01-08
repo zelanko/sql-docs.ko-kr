@@ -10,12 +10,12 @@ ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 759c2eb56bb437f17c06229b7b6a85f22b040319
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: f271f8c3c2d3371326b1ffe8d7f1f55bf5ee89c4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031800"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396540"
 ---
 # <a name="data-matching"></a>데이터 일치
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ) 데이터 일치 프로세스를 통해 데이터 원본에서 데이터 중복을 줄이고 데이터 정확도를 개선할 수 있습니다. 일치는 단일 데이터 원본의 모든 레코드에서 중복 수준을 분석하고 각 비교 대상 레코드 집합 간 일치 항목에 대한 가중 확률을 반환합니다. 그런 다음 어떤 레코드가 일치 항목인지 확인하고 원본 데이터에 대해 적절한 작업을 수행할 수 있습니다.  

@@ -15,12 +15,12 @@ ms.assetid: efe50306-cf7c-46b3-9cc4-e7f0b6968b0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3e3b99c917b6f272f4af325a35712f059313742c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85f0c099aba12fe9a4049fe787e248cfe580ff3b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172563"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400466"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>목표 검색 시나리오(Excel용 테이블 분석 도구)
   ![테이블 분석 도구의 목표 검색 단추](media/tat-goalseek.gif "테이블 분석 도구의 목표 검색 단추")  
@@ -39,7 +39,7 @@ ms.locfileid: "48172563"
   
 2.  클릭 **시나리오**, 선택한 **목표값 찾기**합니다.  
   
-3.  에 **시나리오 분석: 목표 검색** 대화 상자에서 대상이 포함 된 열 목록에서 값입니다.  
+3.  **시나리오 분석: 목표 검색** 대화 상자에서 대상이 포함 된 열 목록에서 값입니다.  
   
 4.  달성 하려는 값을 지정 합니다.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48172563"
   
  사용 되는 알고리즘에 대 한 자세한 합니다 **목표값 찾기** 시나리오 도구에서 "Microsoft 로지스틱 회귀 알고리즘" 항목을 참조 하십시오 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Onl 온라인 설명서.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Excel용 테이블 분석 도구](table-analysis-tools-for-excel.md)  
   
   

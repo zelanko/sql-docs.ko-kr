@@ -1,22 +1,21 @@
 ---
-title: '8단계: 1단원 패키지를 쉽게 이해할 수 있도록 만들기 | Microsoft Docs'
+title: '8단계: 1 단원 패키지를 보다 쉽게 이해 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e549018c7f0654ba40ddd486149059b37ddd46e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04614b8d54815e4286a55b7501187e8ed218db0f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072533"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750618"
 ---
 # <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>8단계: 1단원 패키지를 쉽게 이해할 수 있도록 만들기
   1단원 패키지의 구성을 완료했으므로 이제 패키지 레이아웃을 정리하는 것이 좋습니다. 제어 및 데이터 흐름 레이아웃 셰이프의 크기가 제멋대로이거나 셰이프가 정렬 또는 그룹화되지 않은 경우 패키지의 기능을 이해하기가 매우 어려울 수 있습니다.  
@@ -52,6 +51,6 @@ ms.locfileid: "48072533"
      주석 상자에 텍스트를 추가하지 않은 경우 상자의 바깥쪽을 클릭하면 주석 상자가 사라집니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- [9단계: 1단원 자습서 패키지 테스트](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+ [9 단계: 1 단원 자습서 패키지 테스트](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   

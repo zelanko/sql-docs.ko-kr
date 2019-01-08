@@ -16,12 +16,12 @@ ms.assetid: 2054d1b0-3828-443e-b60e-529adb9afa7f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c54ca4bfa793ed704691d7a757ffb5de16dc96e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 265b3353d3b91f053a431da9929d010bc823fb2b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097513"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410553"
 ---
 # <a name="viewing-models-data-mining-add-ins-for-office"></a>모델 보기(Office용 데이터 마이닝 추가 기능)
   Excel용 데이터 마이닝 추가 기능을 사용하면 이전에 만든 분석 모델을 다음과 같은 방법으로 탐색할 수 있습니다.  

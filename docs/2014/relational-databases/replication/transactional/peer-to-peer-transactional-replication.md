@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - bidirectional replication
@@ -17,12 +16,12 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 69aea0ec22ec03f05f05f10998e955d7f19bffd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 9513e58afc764fe8df5719ad03ac575a2632da6b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216163"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52770085"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>@loopback_detection
   피어 투 피어 복제는 *노드*라고도 하는 여러 서버 인스턴스에 걸쳐 데이터 복사본을 유지 관리함으로써 확장성 및 고가용성 솔루션을 제공합니다. 트랜잭션 복제를 기반으로 구축된 피어 투 피어 복제는 트랜잭션 측면에서 일관적인 변경 내용을 거의 실시간으로 전파합니다. 따라서 읽기 작업을 확장해야 하는 애플리케이션은 클라이언트의 읽기 작업을 여러 노드에 배포할 수 있습니다. 여러 노드의 데이터가 거의 실시간으로 유지 관리되므로 피어 투 피어 복제는 데이터 중복을 제공하며 이러한 중복은 데이터의 가용성을 높여 줍니다.  
@@ -73,7 +72,7 @@ ms.locfileid: "48216163"
   
  각 위치에는 데이터베이스와 애플리케이션 서버가 있어 기술 지원 엔지니어가 고객 통화에 대한 정보를 입력하고 업데이트할 때 사용할 수 있습니다. 토폴로지는 시간별로 분할되므로 현재 업무를 진행 중인 노드에서만 업데이트가 발생하며 이후 다른 참여 데이터베이스로 업데이트 내용이 이동됩니다. 이러한 토폴로지를 사용하면 다음과 같은 이점이 있습니다.  
   
--   지사를 격리하지 않고도 독립적으로 운영할 수 있습니다. 각 지사에서는 데이터를 독립적으로 삽입, 업데이트 또는 삭제할 수 있을 뿐 아니라, 참여하는 다른 모든 데이터베이스에 데이터가 복제되므로 데이터를 공유할 수도 있습니다.  
+-   격리하지 않아도 독립적으로 운영될 수 있습니다. 각 지사에서는 데이터를 독립적으로 삽입, 업데이트 또는 삭제할 수 있지만 참여하는 다른 모든 데이터베이스에 데이터가 복제되므로 데이터를 공유할 수 있습니다.  
   
 -   참여하는 데이터베이스 중 하나 이상에서 오류가 발생하거나 유지 관리가 필요한 경우에도 높은 가용성을 제공합니다.  
   

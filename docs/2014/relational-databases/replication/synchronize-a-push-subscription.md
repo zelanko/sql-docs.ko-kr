@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - synchronization [SQL Server replication], push subscriptions
@@ -15,12 +14,12 @@ ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac4db6c772d7b40daadbded626bcd778356de2b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 60fdfbecf617f0a4aa92b40b72b1b5e969f69388
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225463"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752585"
 ---
 # <a name="synchronize-a-push-subscription"></a>밀어넣기 구독 동기화
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]복제 에이전트 [또는 RMO(복제 관리 개체)를 사용하여](agents/replication-agents-overview.md)에서 밀어넣기 구독을 동기화하는 방법에 대해 설명합니다.  
@@ -214,11 +213,11 @@ REM -- The following command must be supplied without line breaks.
   
     -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>에 대해 1단계에서 만든 연결  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 나머지 구독 속성을 얻습니다. 이 메서드가 반환 하는 경우 `false`, 구독이 있는지 확인 합니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 나머지 구독 속성을 얻습니다. 이 메서드가 `false`를 반환하는 경우 구독이 있는지 확인합니다.  
   
 4.  다음 방법 중 하나로 배포자에서 배포 에이전트를 시작합니다.  
   
-    -   2단계에서 만든 <xref:Microsoft.SqlServer.Replication.TransSubscription.SynchronizeWithJob%2A> 의 인스턴스에서 <xref:Microsoft.SqlServer.Replication.TransSubscription> 메서드를 호출합니다. 이 메서드는 배포 에이전트를 비동기적으로 시작하고 에이전트 작업이 실행되는 동안 애플리케이션에 대한 반환을 즉시 제어합니다. 값을 사용 하 여 구독을 만든 경우이 메서드를 호출할 수 없습니다 `false` 에 대 한 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A>합니다.  
+    -   2단계에서 만든 <xref:Microsoft.SqlServer.Replication.TransSubscription.SynchronizeWithJob%2A> 의 인스턴스에서 <xref:Microsoft.SqlServer.Replication.TransSubscription> 메서드를 호출합니다. 이 메서드는 배포 에이전트를 비동기적으로 시작하고 에이전트 작업이 실행되는 동안 애플리케이션에 대한 반환을 즉시 제어합니다. <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A>에 `false` 값을 사용하여 구독을 만든 경우 이 메서드를 호출할 수 없습니다.  
   
     -   <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> 속성에서 <xref:Microsoft.SqlServer.Replication.TransSubscription.SynchronizationAgent%2A> 클래스의 인스턴스를 가져오고 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize%2A> 메서드를 호출합니다. 이 메서드는 에이전트를 동기적으로 시작하고 실행 중인 에이전트 작업에 대한 제어는 그대로 유지됩니다. 동기화 실행 중에는 에이전트를 실행하면서 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status> 이벤트를 처리할 수 있습니다.  
   
@@ -238,11 +237,11 @@ REM -- The following command must be supplied without line breaks.
   
     -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>에 대해 1단계에서 만든 연결  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 나머지 구독 속성을 얻습니다. 이 메서드가 반환 하는 경우 `false`, 구독이 있는지 확인 합니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 나머지 구독 속성을 얻습니다. 이 메서드가 `false`를 반환하는 경우 구독이 있는지 확인합니다.  
   
 4.  다음 방법 중 하나로 배포자에서 병합 에이전트를 시작합니다.  
   
-    -   2단계에서 만든 <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizeWithJob%2A> 의 인스턴스에서 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 메서드를 호출합니다. 이 메서드는 병합 에이전트를 비동기적으로 시작하고 에이전트 작업이 실행되는 동안 애플리케이션에 대한 반환을 즉시 제어합니다. 값을 사용 하 여 구독을 만든 경우이 메서드를 호출할 수 없습니다 `false` 에 대 한 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A>합니다.  
+    -   2단계에서 만든 <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizeWithJob%2A> 의 인스턴스에서 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 메서드를 호출합니다. 이 메서드는 병합 에이전트를 비동기적으로 시작하고 에이전트 작업이 실행되는 동안 애플리케이션에 대한 반환을 즉시 제어합니다. <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A>에 `false` 값을 사용하여 구독을 만든 경우 이 메서드를 호출할 수 없습니다.  
   
     -   <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> 속성에서 <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizationAgent%2A> 클래스의 인스턴스를 가져오고 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A> 메서드를 호출합니다. 이 메서드는 병합 에이전트를 동기적으로 시작하고 실행 중인 에이전트 작업에 대한 제어는 그대로 유지됩니다. 동기화 실행 중에는 에이전트를 실행하면서 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> 이벤트를 처리할 수 있습니다.  
   

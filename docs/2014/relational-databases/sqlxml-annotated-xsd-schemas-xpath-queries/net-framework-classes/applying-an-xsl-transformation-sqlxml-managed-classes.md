@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - applying XSL transformations [SQLXML]
@@ -17,12 +15,12 @@ ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e3a9849753866454d84c74b57a0215a88514648
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 9e18bd902635a8016234ec714d9929bb48ffbfbc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071020"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758495"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>XSL 변환 적용(SQLXML 관리되는 클래스)
   이 예에서는 AdventureWorks 데이터베이스를 대상으로 SQL 쿼리를 실행합니다. 그리고 쿼리 결과에 XSL 변환을 적용하여 직원의 이름과 성의 두 개 열로 이루어진 테이블을 생성합니다.  

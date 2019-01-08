@@ -10,12 +10,12 @@ ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2a68b60a954e6cd89698d4e906f8272f08d6b11e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7289b3d5b287c1619a08921eba5cc30ff741e3b1
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673161"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399906"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>MySQL에 연결(MySQLToSQL)
 사용 된 **MySQL에 연결** 마이그레이션하려는 MySQL 데이터베이스에 연결 대화 상자.  
@@ -60,7 +60,7 @@ MySQL에 안전 하 게 연결 하려는 경우 보안 소켓 레이어 (SSL)를
   
 "구성" 단추를 클릭 하면 대화 상자를 표시 됩니다. MySQL 데이터베이스에 대화 상자에 있는 다음 세 개의 인증서 파일의 경로를 연결 해야 하는 동안 암호화를 사용 하려면 [개인 정보 보호 향상 메일 인증서 (PEM)]를 정의 합니다.  
   
--   **SSL 인증 기관:** 신뢰 SSL Ca의 목록이 포함 된 파일의 경로 지정 합니다.  
+-   **SSL 인증 기관:** 신뢰 SSL Ca의 목록이 포함 된 파일 경로 지정합니다.  
   
 -   **SSL 인증서:** 보안 연결을 설정 하는 데 SSL 인증서 파일의 이름을 지정 합니다.  
   

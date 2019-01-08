@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f55c922c1424235203505a6ba17bbec56972c9f7
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: 52ede16185515c3df00ff21ece784d62eec984ef
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400816"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396518"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>병렬 데이터 웨어하우스 (PDW)에서 준비 데이터베이스를 사용 하 여
 SQL Server 병렬 데이터 웨어하우스 (PDW)는 스테이징 데이터베이스를 사용 하 여 로드 프로세스 중에 일시적으로 데이터를 저장 합니다. 기본적으로 SQL Server PDW 대상 데이터베이스를 사용 하 여 준비 데이터베이스와 테이블 조각화를 유발할 수 있습니다. 테이블 조각화를 줄이기 위해 사용자 정의 준비 데이터베이스를 만들 수 있습니다. 또는 로드 실패에서 롤백 문제가 없는 경우 임시 테이블을 건너뛰고 대상 테이블에 직접 로드 하 여 성능을 향상 하는 fastappend 로드 모드를 사용할 수 있습니다.  

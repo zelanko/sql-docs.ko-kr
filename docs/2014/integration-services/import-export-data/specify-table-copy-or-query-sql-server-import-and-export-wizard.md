@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.specifytablecopyorquery.f1
@@ -13,12 +12,12 @@ ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 69135b95383c8a00bbde4475717e68d2bbdaf770
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 53d97adb5252594bb38f85989e87742a557331ec
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150763"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750405"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>테이블 복사 또는 쿼리 지정(SQL Server 가져오기 및 내보내기 마법사)
   사용 된 **테이블 복사 또는 쿼리 지정** 페이지 데이터를 복사 하는 방법을 지정 합니다. 그래픽 인터페이스를 사용하여 복사할 기존 데이터베이스 개체를 선택하거나 Transact-SQL을 사용하여 복잡한 쿼리를 만들 수 있습니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "48150763"
  **하나 이상의 테이블 또는 뷰에서 데이터 복사**  
  필드를 사용 하 여 지정 된 대상 또는 대상에 선택한 원본 테이블 및 뷰를 복사 합니다 **원본 테이블 및 뷰 선택** 대화 상자. 레코드를 필터링하거나 순서를 지정하지 않고 원본의 모든 데이터를 복사하려면 이 옵션을 사용합니다.  
   
- 사용 하는 경우는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 원본에 연결 하도록 데이터 공급자는 **하나 이상의 테이블 또는 뷰에서 데이터 복사** 옵션을 사용할 수 없습니다. 이 옵션은 ProviderDescriptors.xml 파일에 ProviderDescription 섹션이 있는 공급자에 대해서만 사용할 수 있습니다. 각 ProviderDescription 섹션에는 해당 공급자에서 메타데이터를 검색하는 데 필요한 정보가 포함되어 있습니다. 기본적으로 다음 공급자에 대해서만 ProviderDescriptors.xml 파일에 ProviderDescription 섹션이 포함됩니다.  
+ [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 사용하여 데이터 원본에 연결하면 **하나 이상의 테이블 또는 뷰에서 데이터 복사** 옵션을 사용하지 못할 수 있습니다. 이 옵션은 ProviderDescriptors.xml 파일에 ProviderDescription 섹션이 있는 공급자에 대해서만 사용할 수 있습니다. 각 ProviderDescription 섹션에는 해당 공급자에서 메타데이터를 검색하는 데 필요한 정보가 포함되어 있습니다. 기본적으로 다음 공급자에 대해서만 ProviderDescriptors.xml 파일에 ProviderDescription 섹션이 포함됩니다.  
   
 -   System.Data.SqlClient  
   

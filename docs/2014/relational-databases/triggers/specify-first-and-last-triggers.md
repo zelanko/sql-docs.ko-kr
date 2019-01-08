@@ -16,12 +16,12 @@ ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 199b3723decf7ab487b7413eec5a1c4220836d50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a851a19a7f00afd055bb2ee8f00eaf4621a1e98f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208653"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782015"
 ---
 # <a name="specify-first-and-last-triggers"></a>첫 번째 및 마지막 트리거 지정
   테이블과 연결된 AFTER 트리거 중 하나를 각 INSERT, DELETE 및 UPDATE 트리거 동작에 대한 첫 번째 AFTER 트리거나 마지막 AFTER 트리거로 지정할 수 있습니다. 첫 번째 트리거와 마지막 트리거 사이에 실행되는 AFTER 트리거는 정의되지 않은 순서로 실행됩니다.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 55ac9eaaaa2313536c27df4c96723e96b70fada5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 958a2990fe3bde49898451c9fefaee74b1b335f8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060864"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750215"
 ---
 # <a name="request-log"></a>요청 로그
   **요청 로그** 대화 상자를 사용하여 샘플 데이터에 대해 SAP Netweaver BW 시스템에 요청하는 동안 기록된 이벤트를 확인할 수 있습니다. SAP BW 원본의 구성 문제를 해결해야 하는 경우 이 정보가 유용할 수 있습니다.  
@@ -61,7 +60,7 @@ ms.locfileid: "48060864"
  기록된 이벤트와 관련된 메시지 텍스트를 표시합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SAP BW 원본 편집기 &#40;연결 관리자 페이지&#41;](sap-bw-source-editor-connection-manager-page.md)   
+ [SAP BW 원본 편집기&#40;연결 관리자 페이지&#41;](sap-bw-source-editor-connection-manager-page.md)   
  [Microsoft Connector 1.1 for SAP BW F1 도움말](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

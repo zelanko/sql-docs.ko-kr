@@ -13,12 +13,12 @@ ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e55050d8ed845f4255c6eebbdada9930f4d140c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 867d476c0132bedf39f709497e035b8264f2b022
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074523"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390608"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>PowerPivot에서 가져오기(SSAS 테이블 형식)
   이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 PowerPivot에서 가져오기 프로젝트 템플릿을 사용하여 PowerPivot 통합 문서에서 메타데이터와 데이터를 가져와서 새로운 테이블 형식 모델 프로젝트를 만드는 방법에 대해 설명합니다.  
@@ -29,11 +29,11 @@ ms.locfileid: "48074523"
 > [!NOTE]  
 >  테이블 형식 모델은 연결된 테이블을 지원하지 않습니다. 연결된 테이블이 포함된 PowerPivot 통합 문서에서 가져오는 경우 연결된 테이블 데이터는 복사/붙여 넣은 데이터로 처리되며 Model.bim 파일에 저장됩니다. 복사하여 붙여넣은 테이블의 속성을 볼 때 **원본 데이터** 속성은 비활성화되고 **테이블** 메뉴의 **테이블 속성** 대화 상자도 비활성화됩니다.  
 >   
->  모델에 포함된 데이터에 추가할 수 있는 행은 최대 10,000개로 제한됩니다. PowerPivot에서 모델을 가져오는 경우 “데이터가 잘렸습니다. 붙여 넣은 테이블은 행을 10000개 이상 포함할 수 없습니다.” 오류가 표시됩니다. 포함된 데이터를 다른 데이터 원본(예를 들어 SQL Server의 테이블)으로 이동하여 PowerPivot 모델을 수정한 다음 다시 가져와야 합니다.  
+>  모델에 포함된 데이터에 추가할 수 있는 행은 최대 10,000개로 제한됩니다. PowerPivot에서 모델을 가져오는 경우 "데이터가 잘렸습니다 오류를 참조 하세요. 붙여넣은 테이블 행을 10000 개 이상 포함할 수 없습니다"SQL Server에서 테이블과 같은 다른 데이터 원본에 포함 된 데이터를 이동 하 여 PowerPivot 모델을 수정 하 고 다시 가져올 해야 있습니다.  
   
  작업 영역 데이터베이스가 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 와 동일한 컴퓨터(로컬)의 Analysis Services 인스턴스에 있는지, 아니면 원격 Analysis Services 인스턴스에 있는지에 따라 특별히 고려해야 할 사항이 있습니다.  
   
- 작업 영역 데이터베이스가 Analysis Services의 로컬 인스턴스에 있는 경우 PowerPivot 통합 문서에서 메타데이터와 데이터를 모두 가져올 수 있습니다. 메타데이터는 통합 문서에서 복사되고 테이블 형식 모델 프로젝트를 만드는 데 사용됩니다. 그런 다음 데이터가 통합 문서에서 복사되고 프로젝트의 작업 영역 데이터베이스에 저장됩니다(복사/붙여넣은 데이터는 제외되며 이러한 데이터는 Model.bim 파일에 저장됨).  
+ 작업 영역 데이터베이스가 Analysis Services의 로컬 인스턴스에 있는 경우 PowerPivot 통합 문서에서 메타데이터와 데이터를 모두 가져올 수 있습니다. 메타데이터는 통합 문서에서 복사되고 테이블 형식 모델 프로젝트를 만드는 데 사용됩니다. 그런 다음 데이터 통합 문서에서 복사 하 고 (복사/붙여넣은 데이터는 Model.bim 파일에 저장 됩니다) 제외 하 고 프로젝트의 작업 영역 데이터베이스에 저장 됩니다.  
   
  작업 영역 데이터베이스가 원격 Analysis Services 인스턴스에 있는 경우 PowerPivot for Excel 통합 문서에서 데이터를 가져올 수 없습니다. 통합 문서 메타데이터를 여전히 가져올 수 있지만 이렇게 하면 스크립트가 원격 Analysis Services 인스턴스에서 실행됩니다. 신뢰할 수 있는 PowerPivot 통합 문서에서만 메타데이터를 가져와야 합니다. 데이터 원본 연결에 정의된 원본에서 데이터를 가져와야 합니다. PowerPivot 통합 문서의 복사/붙여 넣은 테이블 데이터와 연결된 테이블 데이터를 복사하여 테이블 형식 모델 프로젝트에 붙여 넣어야 합니다.  
   
@@ -47,8 +47,8 @@ ms.locfileid: "48074523"
   
 4.  **열기** 대화 상자에서 가져올 모델 메타데이터 및 데이터가 포함된 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 파일을 선택한 다음 **열기**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [작업 영역 데이터베이스 &#40;&AMP;#40;SSAS 테이블 형식&#41;](workspace-database-ssas-tabular.md)   
- [데이터 복사 및 붙여넣기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../copy-and-paste-data-ssas-tabular.md)  
+## <a name="see-also"></a>관련 항목:  
+ [작업 영역 데이터베이스&#40;SSAS 테이블 형식&#41;](workspace-database-ssas-tabular.md)   
+ [데이터 복사 및 붙여넣기&#40;SSAS 테이블 형식&#41;](../copy-and-paste-data-ssas-tabular.md)  
   
   

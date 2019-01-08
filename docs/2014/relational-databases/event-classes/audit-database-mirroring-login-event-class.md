@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -17,12 +16,12 @@ ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d2c920a2b7341b75f85c2c9cf46bc381d607e1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57ad0c696eb8c81a029160417a7d847d6e0600ec
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128863"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776485"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login 이벤트 클래스
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 **Audit Database Mirroring Login** 이벤트를 만들어 데이터베이스 미러링 전송 보안과 관련된 감사 메시지를 보고합니다.  
@@ -65,7 +64,7 @@ ms.locfileid: "48128863"
 |5|Authentication Failure|Authentication Failure 이벤트는 데이터베이스 미러링 엔드포인트가 오류로 인해 연결을 인증할 수 없음을 보고합니다. Windows 인증일 경우 이 이벤트는 데이터베이스 미러링 엔드포인트가 Windows 인증을 사용할 수 없음을 보고합니다. 인증서 기반 인증일 경우 이 이벤트는 데이터베이스 미러링 엔드포인트가 인증서에 액세스할 수 없음을 보고합니다.|  
 |6|Authorization Failure|Authorization Failure 이벤트는 데이터베이스 미러링 엔드포인트에서 연결 인증을 거부했음을 보고합니다. Windows 인증일 경우 이 이벤트는 연결의 보안 식별자가 데이터베이스 사용자와 일치하지 않음을 보고합니다. 인증서 기반 인증일 경우 이 이벤트는 메시지에 전달된 공개 키가 **master** 데이터베이스의 인증서와 맞지 않음을 보고합니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [CREATE ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   
  [ALTER ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
  [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

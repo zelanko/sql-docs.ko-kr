@@ -21,12 +21,12 @@ ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4eff2dd82db75bf1dc0114477152cb18b9d715d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 081eaa3995507edf20be0b83f3e0ce766135139c
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681751"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416324"
 ---
 # <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -117,9 +117,9 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
  결과 매개 변수에서 식별 된 각 열에 대 한 집합에 비트 플래그가 추가 다음 됩니다 @update_flag_list합니다. 에 대 한 합니다 **순 변경 내용** 래퍼의 경우 비트 플래그는 항상 NULL이 될는 @row_filter_option 즉 'all' 또는 'all with merge'는 래퍼 함수 호출에 사용 합니다. 경우는 @row_filter_option 'all with mask', 및 __CDC_OPERATION으로가 ' 또는 'I' 플래그의 값도 NULL이 됩니다. 경우 \__CDC_OPERATION은 ' u N '에 플래그를 1 또는 0 인지에 따라 설정 됩니다는 **net** 업데이트 작업 결과로 열이 변경 합니다.  
   
- 변경 데이터 캡처 구성 템플릿 'Instantiate CDC Wrapper TVFs for Schema'에서는 sp_cdc_generate_wrapper_function 저장 프로시저를 사용하여 스키마에 정의된 쿼리 함수의 모든 래퍼 함수에 대한 CREATE 스크립트를 가져오는 방법을 보여 줍니다. 그런 다음 이 템플릿에서는 이러한 스크립트를 만듭니다. 템플릿에 대 한 자세한 내용은 참조 하세요. [템플릿 탐색기](../../ssms/template/template-explorer.md)합니다.  
+ 변경 데이터 캡처 구성 템플릿 ' Instantiate CDC Wrapper TVFs for 스키마 ' 모든 스키마의 정의 된 쿼리 함수의 래퍼 함수에 대 한 CREATE 스크립트를 가져오려면 sp_cdc_generate_wrapper_function 저장 프로시저를 사용 하는 방법을 보여 줍니다. 그런 다음 이 템플릿에서는 이러한 스크립트를 만듭니다. 템플릿에 대 한 자세한 내용은 참조 하세요. [템플릿 탐색기](../../ssms/template/template-explorer.md)합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [sys.sp_cdc_generate_wrapper_function &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
  [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
   

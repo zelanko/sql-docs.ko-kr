@@ -13,16 +13,16 @@ ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb9f7b9aa75311850efe4a26dcbc373b8697e652
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dda69fa741555f4402bded930f68260b154fd30
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801881"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404858"
 ---
 # <a name="sqlpoolconnect-function"></a>SQLPoolConnect Function
 **규칙**  
- 버전에 도입 되었습니다: ODBC 3.8 표준 준수: ODBC  
+ 도입 된 버전: ODBC 3.8 표준 준수 합니다. ODBC  
   
  **요약**  
  **SQLPoolConnect** 풀에서 연결을 다시 사용할 수 있으면 새 연결을 만드는 데 사용 됩니다.  

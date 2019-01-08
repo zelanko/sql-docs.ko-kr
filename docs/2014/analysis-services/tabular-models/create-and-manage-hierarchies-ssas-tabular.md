@@ -11,12 +11,12 @@ ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2544b53b1fabc94a8ab0801141349d5da7f891c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bda916232a3d1b0c46a4278def28ec3759e346d3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149633"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404888"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>계층 만들기 및 관리(SSAS 테이블 형식)
   모델 디자이너(다이어그램 뷰)에서 계층을 만들고 관리할 수 있습니다. 모델 디자이너(다이어그램 뷰)를 보려면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 **모델** 메뉴를 클릭하고 **모델 뷰**를 가리킨 다음 **다이어그램 뷰**를 클릭합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "48149633"
   
 2.  계층의 이름을 입력합니다.  
   
- 이 계층의 부모 수준으로 추가 열을 끌어 열을 끌 수 있습니다. 열이 복사됩니다. 끈 열을 계층에서 해당 열을 표시하려는 위치의 자식 수준에 놓습니다.  
+ 열을 복사 하는 계층의 부모 수준에 추가 열을 끌 수 있습니다. 끈 열을 계층에서 해당 열을 표시하려는 위치의 자식 수준에 놓습니다.  
   
 > [!NOTE]  
 >  하나 이상의 열과 함께 측정값을 여러 개 선택하거나 여러 테이블의 열을 선택할 경우 계층 만들기 명령이 비활성화됩니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "48149633"
   
 ## <a name="see-also"></a>관련 항목  
  [테이블 형식 모델 디자이너 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../tabular-model-designer-ssas-tabular.md)   
- [계층 &#40;&AMP;#40;SSAS 테이블 형식&#41;](hierarchies-ssas-tabular.md)   
- [측정값 &#40;&AMP;#40;SSAS 테이블 형식&#41;](measures-ssas-tabular.md)  
+ [계층 구조&#40;SSAS 테이블 형식&#41;](hierarchies-ssas-tabular.md)   
+ [측정값&#40;SSAS 테이블 형식&#41;](measures-ssas-tabular.md)  
   
   

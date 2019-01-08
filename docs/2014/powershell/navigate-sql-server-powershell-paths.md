@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e13b3cde8681c4f717f0fa12d7426eea58d0caf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a5d9f7119730a904dd760f43d001f1a7734f47c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135893"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752086"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>SQL Server PowerShell 경로 탐색
   [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell 공급자는 SQL Server 인스턴스의 개체를 파일 경로와 비슷한 구조로 표시합니다. Windows PowerShell cmdlet을 사용하여 공급자 경로를 탐색하고 사용자 지정 드라이브를 만들어 입력해야 하는 경로를 단축할 수 있습니다.  
@@ -115,9 +114,9 @@ Get-ChildItem -force
 ## <a name="create-a-custom-drive"></a>사용자 지정 드라이브 만들기  
  **사용자 지정 드라이브 만들기 및 사용**  
   
-1.  `New-PSDrive`를 사용하여 사용자 지정 드라이브를 정의할 수 있습니다. 사용 된 `Root` 매개 변수를 사용자 지정 드라이브 이름으로 표시 되는 경로 지정 합니다.  
+1.  `New-PSDrive`를 사용하여 사용자 지정 드라이브를 정의할 수 있습니다. `Root` 매개 변수를 사용하여 사용자 지정 드라이브 이름에 표시되는 경로를 지정할 수 있습니다.  
   
-2.  같은 경로 탐색 cmdlet에서 사용자 지정 드라이브 이름을 참조 `Set-Location`합니다.  
+2.  경로 탐색 cmdlet(예: `Set-Location`)에서 사용자 지정 드라이브 이름을 참조합니다.  
   
 ### <a name="custom-drive-example-powershell"></a>사용자 지정 드라이브 예(PowerShell)  
  이 예에서는 AdventureWorks2012 예제 데이터베이스의 배포된 복사본에 대해 노드에 매핑되는 AWDB라는 가상 드라이브를 만듭니다. 그런 다음 가상 드라이브를 사용하여 데이터베이스에서 테이블을 탐색합니다.  
@@ -130,8 +129,8 @@ New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\Adventur
 Set-Location AWDB:\Tables\Purchasing.Vendor  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+## <a name="see-also"></a>관련 항목:  
+ [SQL Server PowerShell 공급자](sql-server-powershell-provider.md)   
  [SQL Server PowerShell 경로 작업](work-with-sql-server-powershell-paths.md)   
  [URN을 SQL Server 공급자 경로로 변환](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

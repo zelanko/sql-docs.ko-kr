@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, administering
@@ -17,12 +16,12 @@ ms.assetid: a3d4e7c6-feb5-411b-8bb9-70b6d943420c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c0fbd2bc3ee7390bc2187afa6f3cb6ce0b6b6462
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51b0626e9a5f8027c57862a3cbeb4c56252a169d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070043"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759415"
 ---
 # <a name="administration-replication"></a>관리(복제)
   이 섹션에서는 복제 토폴로지 관리에 대한 정보를 제공합니다. 최상의 방법 항목을 먼저 읽고 나서 해당 항목의 링크를 따라 이 섹션 및 다른 섹션에 있는 더 자세한 정보를 찾아보는 것이 좋습니다.  

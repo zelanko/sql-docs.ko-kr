@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing [SQL Server replication], stored procedure execution
@@ -15,12 +14,12 @@ ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8dcdd88d8ce974acda7363ba0a7b2199ca2dd2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: f47529726445cf52d280df78a6a96f18889fcd2b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195659"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763176"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>트랜잭션 복제에서 저장 프로시저 실행 게시
   게시자에서 실행되고 게시된 테이블에 영향을 주는 하나 이상의 저장 프로시저가 있는 경우 이러한 저장 프로시저를 저장 프로시저 실행 아티클로 게시에 포함해 보십시오. 프로시저 정의(CREATE PROCEDURE 문)는 구독이 초기화될 때 구독자로 복제되고 게시자에서 프로시저가 실행되면 복제가 구독자에서 해당하는 프로시저를 실행합니다. 이렇게 하면 프로시저 실행만 복제하고 행별 변경 내용은 복제하지 않으므로 대용량 일괄 처리 작업이 수행되는 경우 성능을 크게 향상시킬 수 있습니다. 예를 들어 게시 데이터베이스에서 다음 저장 프로시저를 생성한다고 가정합니다.  

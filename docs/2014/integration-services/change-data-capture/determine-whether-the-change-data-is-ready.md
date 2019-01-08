@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
@@ -13,12 +12,12 @@ ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: afdab0c6817e65e1562a6768394d842a8e944c8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00910fdb6800921a2c6eeae79340eb5d2a79db20
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129174"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756365"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>변경 데이터의 준비 여부 확인
   변경 데이터를 증분 로드하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 제어 흐름에서 두 번째 태스크는 선택한 간격에 대한 변경 데이터가 준비되었는지 확인하는 것입니다. 비동기 캡처 프로세스에서 선택한 엔드포인트까지 변경 내용을 아직 다 처리하지 않았을 수 있기 때문에 이 단계가 필요합니다.  
@@ -200,7 +199,7 @@ ms.locfileid: "48129174"
         > [!NOTE]  
         >  `Thread.Sleep` 메서드는 밀리초 단위로 지정된 인수를 필요로 합니다.  
   
-7.  코드를 반환 하는 기본 행을 그대로 둡니다 `DtsExecResult.Success` 스크립트를 실행 합니다.  
+7.  스크립트 실행에서 `DtsExecResult.Success`를 반환하는 기본 코드 행을 그대로 둡니다.  
   
 8.  스크립트 개발 환경 및 **스크립트 태스크 편집기**를 닫습니다.  
   
@@ -276,7 +275,7 @@ ms.locfileid: "48129174"
   
 6.  **스크립트 태스크 편집기**의 **스크립트** 페이지에서 **스크립트 편집** 을 클릭하여 스크립트 개발 환경을 엽니다.  
   
-7.  Main 프로시저를 호출 하 여 오류를 기록 하는 코드를 입력 합니다 `Dts.Log` 메서드 또는 이벤트 발생 시키기 위해의 메서드 중 하나를 호출 하 여를 `Dts.Events` 인터페이스입니다. `Dts.TaskResult = Dts.Results.Failure`를 반환하여 패키지에 오류를 알립니다.  
+7.  Main 프로시저에 `Dts.Log` 메서드를 호출하여 오류를 기록하거나 `Dts.Events` 인터페이스의 메서드 중 하나를 호출하여 이벤트를 발생시키는 코드를 입력합니다. `Dts.TaskResult = Dts.Results.Failure`를 반환하여 패키지에 오류를 알립니다.  
   
      다음 샘플에서는 로그에 메시지를 기록하는 방법을 보여 줍니다. 자세한 내용은 [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md), [Raising Events in the Script Task](../extending-packages-scripting/task/raising-events-in-the-script-task.md)및 [Returning Results from the Script Task](../extending-packages-scripting/task/returning-results-from-the-script-task.md)을 참조하세요.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.vstahostingui.variablepickermodaldialog.f1
@@ -16,17 +15,17 @@ ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e9e623c8ee9212d8b05aae2bf1448dc201df503d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4cd2b211755884d1b93c19d6b639880ad4bd4a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201183"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769355"
 ---
 # <a name="select-variables-page"></a>변수 선택 페이지
   스크립트 태스크 또는 스크립트 구성 요소를 구성하는 경우 **변수 선택** 대화 상자를 사용하여 **ReadOnlyVariables** 및 **ReadWriteVariables** 속성에 대한 값을 하나 이상 선택할 수 있습니다.  
   
- **변수 선택** 대화 상자를 열려면 **스크립트 변환 편집기** 대화 상자의 **스크립트** 페이지에 있는 **사용자 지정 속성**에서 **ReadOnlyVariables** 또는 **ReadWriteVariables** 속성을 찾은 다음 해당 속성과 연관된 줄임표 단추(…)를 클릭하세요.  
+ **변수 선택** 대화 상자를 열려면 **스크립트 변환 편집기** 대화 상자의 **스크립트** 페이지의 **사용자 지정 속성**에서 **ReadOnlyVariables** 또는 **ReadWriteVariables** 속성을 찾은 다음, 해당 속성과 연결된 줄임표(…) 단추를 클릭합니다.  
   
 ## <a name="options"></a>변수  
  선택 상자  
@@ -38,7 +37,7 @@ ms.locfileid: "48201183"
  **형식**  
  변수의 데이터 형식을 지정합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [스크립트 태스크 편집기 &#40;스크립트 페이지&#41;](../script-task-editor-script-page.md)  
+## <a name="see-also"></a>관련 항목:  
+ [스크립트 태스크 편집기&#40;스크립트 페이지&#41;](../script-task-editor-script-page.md)  
   
   

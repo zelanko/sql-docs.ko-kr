@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b3cbe50437011bc97ba4f4e1e246ee85e89495c1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: 7c55ffcb48d6c079c942d9bdffec0a1dc1c1d8f9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017240"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411310"
 ---
-# <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes 알고리즘
+# <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes Algorithm
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 Bayes 정리를 기반으로 하는 분류 알고리즘으로, 설명 및 예측 모델링 둘 다에 사용할 수 있습니다. Naïve Bayes라는 이름의 naïve는 이 알고리즘이 Bayes 기술을 사용하지만 있을 수 있는 종속성을 고려하지 않는다는 사실에서 비롯된 것입니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 Bayes 정리에 따라 분류 알고리즘 및 예비 및 예측 모델링에 사용할 수 있습니다. Naïve Bayes라는 이름의 naïve는 이 알고리즘이 Bayes 기술을 사용하지만 있을 수 있는 종속성을 고려하지 않는다는 사실에서 비롯된 것입니다.  
   
  이 알고리즘은 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘보다 계산 과정이 단순하여 입력 열과 예측 가능한 열 간의 관계를 검색하는 마이닝 모델을 신속하게 생성하는 데 유용합니다. 이 알고리즘을 사용하여 초기 데이터 탐색을 수행한 후 나중에 그 결과를 적용하여 보다 복잡하고 정확한 다른 알고리즘으로 추가 마이닝 모델을 만들 수 있습니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "34017240"
   
  데이터 마이닝 모델에 대한 쿼리를 만드는 방법에 대한 자세한 내용은 [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)를 참조하세요. Naive Bayes 모델에서 쿼리를 사용하는 방법의 예는 [Naive Bayes 모델 쿼리 예제](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)를 참조하세요.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 -   PMML(Predictive Model Markup Language)을 사용하여 마이닝 모델을 만들 수 있습니다.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "34017240"
   
 -   OLAP 마이닝 모델의 사용을 지원합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [기능 선택 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/feature-selection-data-mining.md)   
  [Naive Bayes 모델 쿼리 예제](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)   

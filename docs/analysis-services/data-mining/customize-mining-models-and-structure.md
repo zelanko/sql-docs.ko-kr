@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 57679e535c796f018cd535773e3766b54243e63e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7c4c951d294ab57e19b4114380fd4692b9fc8151
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019600"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52411370"
 ---
 # <a name="customize-mining-models-and-structure"></a>마이닝 모델 및 구조 사용자 지정
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "34019600"
   
 -   고유 값이 많은 열 또는 주소나 중간 이름과 같이 실제로 데이터를 참조하고 분석에는 유용하지 않은 열 제거  
   
- 실제로 마이닝 구조에서 열을 제거할 필요는 없으며 열에 **무시**로 플래그를 지정하기만 하면 됩니다. 열이 마이닝 모델에서 제거되지만 구조의 다른 마이닝 모델에서는 해당 열을 계속 사용할 수 있으며 드릴스루 쿼리에서 참조됩니다.  
+ 마이닝 구조에서 열을 물리적으로 제거할 필요가 없습니다. 열으로만 플래그를 수 **무시**합니다. 열이 마이닝 모델에서 제거되지만 구조의 다른 마이닝 모델에서는 해당 열을 계속 사용할 수 있으며 드릴스루 쿼리에서 참조됩니다.  
   
 ### <a name="creating-aliases-for-model-columns"></a>모델 열의 별칭 만들기  
  마이닝 모델을 만들 때 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 마이닝 구조에 있는 이름과 동일한 열 이름을 사용합니다. 마이닝 모델의 모든 열에 별칭을 추가할 수 있습니다. 이렇게 하면 열 내용 또는 사용법을 보다 쉽게 이해할 수 있으며 쿼리 작성 시 편리하도록 이름을 짧게 만들 수 있습니다. 별칭은 열의 복사본을 만들고 이해하기 쉬운 이름을 지정하려는 경우에도 유용합니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "34019600"
 |-|-|  
 |[Microsoft 의사 결정 트리 알고리즘](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)|[Microsoft 시계열 알고리즘](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)|  
 |[Microsoft 클러스터링 알고리즘](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)|[Microsoft 신경망 알고리즘](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)|  
-|[Microsoft Naive Bayes 알고리즘](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)|[Microsoft 로지스틱 회귀 알고리즘](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)|  
+|[Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)|[Microsoft 로지스틱 회귀 알고리즘](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)|  
 |[Microsoft 연결 알고리즘](../../analysis-services/data-mining/microsoft-association-algorithm.md)|[Microsoft 선형 회귀 알고리즘](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)|  
 |[Microsoft 시퀀스 클러스터링 알고리즘](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)||  
   
@@ -94,7 +94,7 @@ ms.locfileid: "34019600"
 |CLUSTER_SEED|[Microsoft 클러스터링 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)|  
 |CLUSTERING_METHOD|[Microsoft 클러스터링 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)|  
 |COMPLEXITY_PENALTY|[Microsoft 의사 결정 트리 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 시계열 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)|  
-|FORCE_REGRESSOR|[Microsoft 의사 결정 트리 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 선형 회귀 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [모델링 플래그 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)|  
+|FORCE_REGRESSOR|[Microsoft 의사 결정 트리 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 선형 회귀 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [모델링 플래그&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)|  
 |FORECAST_METHOD|[Microsoft 시계열 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)|  
 |HIDDEN_NODE_RATIO|[Microsoft 신경망 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)|  
 |HISTORIC_MODEL_COUNT|[Microsoft 시계열 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)|  
@@ -127,6 +127,6 @@ ms.locfileid: "34019600"
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [물리적 아키텍처 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
+ [물리적 아키텍처&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.cdw.transfermethod.f1
@@ -26,15 +25,15 @@ ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2d47f2e7ce32ef77ec7188efbc7c09d053cf8208
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108693"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759115"
 ---
 # <a name="use-the-copy-database-wizard"></a>데이터베이스 복사 마법사 사용
-  데이터베이스 복사 마법사를 사용하면 서버를 중단하는 일 없이 데이터베이스 및 그 개체를 쉽게 다른 서버로 이동하거나 복사할 수 있습니다. 이전 데이터베이스를 업그레이드할 수도 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]입니다. 이 마법사를 사용하여 다음을 수행할 수 있습니다.  
+  데이터베이스 복사 마법사를 사용하면 서버를 중단하는 일 없이 데이터베이스 및 그 개체를 쉽게 다른 서버로 이동하거나 복사할 수 있습니다. 데이터베이스를 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드할 수도 있습니다. 이 마법사를 사용하여 다음을 수행할 수 있습니다.  
   
 -   원본 서버 및 대상 서버 선택  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48108693"
   
 -   **업그레이드 후를 수행 합니다.**  
   
-     [SQL Server 데이터베이스를 업그레이드 한 후](#FollowUp)  
+     [SQL Server 데이터베이스를 업그레이드한 후](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -119,10 +118,10 @@ ms.locfileid: "48108693"
      사용자가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 계정을 통해 연결하도록 합니다.  
   
      **SQL Server 인증 사용**  
-     사용자를 제공 하 여 연결 하도록 허용 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 사용자 이름 및 암호입니다.  
+     사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 사용자 이름 및 암호를 제공하여 연결하도록 합니다.  
   
      **사용자 이름**  
-     연결에 사용할 사용자 이름을 입력합니다. 이 옵션은 사용 하 여 연결 하도록 선택한 경우 사용할 수 있습니다만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 합니다.  
+     연결에 사용할 사용자 이름을 입력합니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 연결하도록 선택한 경우에만 사용할 수 있습니다.  
   
      **암호**  
      로그인 암호를 입력합니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 연결하도록 선택한 경우에만 사용할 수 있습니다.  
@@ -142,13 +141,13 @@ ms.locfileid: "48108693"
      사용자가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 계정을 통해 연결하도록 합니다.  
   
      **SQL Server 인증 사용**  
-     사용자를 제공 하 여 연결 하도록 허용 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 사용자 이름 및 암호입니다.  
+     사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 사용자 이름 및 암호를 제공하여 연결하도록 합니다.  
   
      **사용자 이름**  
-     연결에 사용할 사용자 이름을 입력합니다. 이 옵션은 선택한 경우에 사용할 수만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 합니다.  
+     연결에 사용할 사용자 이름을 입력합니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 선택한 경우에만 사용할 수 있습니다.  
   
      **암호**  
-     로그인 암호를 입력합니다. 이 옵션은 선택한 경우에 사용할 수만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 합니다.  
+     로그인 암호를 입력합니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 선택한 경우에만 사용할 수 있습니다.  
   
      **다음**  
      서버에 연결하고 사용자의 유효성을 검사합니다. 이 프로세스는 사용자가 선택한 컴퓨터에서 위의 사용 권한을 가지고 있는지 여부를 확인합니다.  
@@ -229,20 +228,20 @@ ms.locfileid: "48108693"
      **폴더 위치**  
      파일 시스템에 있는 원본 데이터베이스 파일의 위치를 지정합니다.  
   
-     예: C:\Program Files\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\DATA  
+     이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다. C:\Program Files\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\DATA  
   
      **원본 서버의 파일 공유**  
      원본 데이터베이스 파일의 위치를 파일 공유 경로로 지정합니다.  
   
      예를 들어: "\\\\*server_name*\C$\Program Files\Microsoft SQL Server\MSSQL110 합니다. MSSQLSERVER\MSSQL\Data  
   
-9. 데이터베이스 복사 마법사를 만듭니다는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 에서 데이터베이스를 전송 하려면 패키지를 **패키지 구성** 페이지에서 해당 하는 경우에 패키지를 사용자 지정 합니다.  
+9. 데이터베이스 복사 마법사는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 구성 **페이지에서 데이터베이스를 전송할** 패키지를 만들고 패키지를 사용자 지정합니다(해당하는 경우).  
   
      **패키지 위치**  
-     위치를 표시 합니다 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 기록 됩니다.  
+     [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지를 쓸 위치를 표시합니다.  
   
      **패키지 이름**  
-     에 대 한 이름을 입력 합니다 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 있습니다.  
+     [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지의 이름을 입력합니다.  
   
      **로깅 옵션**  
      로깅 정보를 Windows 이벤트 로그에 저장할지 또는 텍스트 파일에 저장할지 여부를 선택합니다.  
@@ -250,7 +249,7 @@ ms.locfileid: "48108693"
      **오류 로그 파일 경로**  
      로그 파일의 위치에 대한 경로를 제공합니다. 이 옵션은 텍스트 파일 로깅 옵션을 선택한 경우에만 사용할 수 있습니다.  
   
-10. **패키지 예약** 페이지에서 이동 또는 복사 작업을 시작할 시기를 지정합니다. 지정 해야 하는 경우가 아닌 시스템 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정에 액세스할 수 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 패키지 실행 하위 시스템입니다.  
+10. **패키지 예약** 페이지에서 이동 또는 복사 작업을 시작할 시기를 지정합니다. 시스템 관리자가 아닌 경우 SSIS( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) 패키지 실행 하위 시스템에 대한 액세스 권한이 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에이전트 프록시 계정을 지정해야 합니다.  
   
      **Run immediately**  
      클릭 한 후 이동 또는 복사 작업을 시작할 **다음**합니다.  
@@ -279,7 +278,7 @@ ms.locfileid: "48108693"
      **메시지**  
      각 단계에서 반환된 메시지를 제공합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: SQL Server 데이터베이스를 업그레이드한 후  
+##  <a name="FollowUp"></a> 후속편: SQL Server 데이터베이스를 업그레이드한 후  
  데이터베이스 복사 마법사를 사용하여 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]버전으로 데이터베이스를 업그레이드하면 데이터베이스를 바로 사용할 수 있으며 데이터베이스가 자동으로 업그레이드됩니다. 데이터베이스에 전체 텍스트 인덱스가 있는 경우 업그레이드 프로세스는 **전체 텍스트 업그레이드 옵션** 서버 속성의 설정에 따라 인덱스를 가져오거나, 다시 설정하거나, 다시 작성합니다. 업그레이드 옵션이 **가져오기** 또는 **다시 작성**으로 설정되어 있는 경우 업그레이드하는 동안 전체 텍스트 인덱스를 사용할 수 없습니다. 인덱싱되는 데이터 양에 따라 가져오기 작업은 몇 시간씩 걸릴 수 있으며 다시 작성 작업은 10배 정도 더 걸릴 수 있습니다. 업그레이드 옵션이 **가져오기**로 설정되어 있으면 전체 텍스트 카탈로그를 사용할 수 없는 경우 관련된 전체 텍스트 인덱스가 다시 작성됩니다. **전체 텍스트 업그레이드 옵션** 속성 설정을 보거나 변경하는 방법은 [서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링](../search/manage-and-monitor-full-text-search-for-a-server-instance.md)을 참조하세요.  
   
  사용자 데이터베이스의 호환성 수준이 업그레이드 이전에 100 이상이었다면 업그레이드 후에도 동일하게 유지됩니다. 업그레이드한 데이터베이스의 호환성 수준이 이전에 90이었다면 업그레이드 후에는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 지원되는 가장 낮은 호환성 수준인 100으로 설정됩니다. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)을 참조하세요.  

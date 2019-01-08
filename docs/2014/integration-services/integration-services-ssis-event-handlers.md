@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, events
@@ -22,12 +21,12 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41762bb046e5b118d7802555c2b676378e81df7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d7ea5c6424283bd7b8aaa44f8a026ea18a9db30
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122843"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751125"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services(SSIS) 이벤트 처리기
   런타임 시 실행 개체(패키지 및 Foreach 루프, For 루프, 시퀀스 및 태스크 호스트 컨테이너)는 이벤트를 발생시킵니다. 예를 들어 오류가 발생하면 OnError 이벤트가 발생합니다. 이러한 이벤트에 대한 사용자 지정 이벤트 처리기를 만들면 패키지 기능을 확장하고 런타임 시 패키지를 더 쉽게 관리할 수 있습니다. 이벤트 처리기는 다음과 같은 태스크를 수행할 수 있습니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "48122843"
   
  ![패키지, For 루프, 태스크 호스트 및 SQL 실행 태스크](media/mw-dts-eventhandlerpkg.gif "패키지, For 루프, 태스크 호스트 및 SQL 실행 태스크")  
   
- 이 패키지에는 `OnError` 이벤트에 대한 이벤트 처리기만 들어 있습니다. SQL 실행 태스크를 실행 하면 오류가 발생 하는 경우는 `OnError` 패키지에 대 한 이벤트 처리기를 실행 합니다. 다음 다이어그램에서는 시킨 호출 시퀀스를 `OnError` 패키지 실행에 대 한 이벤트 처리기입니다.  
+ 이 패키지에는 `OnError` 이벤트에 대한 이벤트 처리기만 들어 있습니다. SQL 실행 태스크가 실행될 때 오류가 발생하면 패키지에 대한 `OnError` 이벤트 처리기가 실행됩니다. 다음 다이어그램은 `OnError` 이벤트 처리기가 패키지를 실행하도록 만드는 호출 시퀀스를 보여 줍니다.  
   
  ![이벤트 처리기 흐름](media/mw-dts-eventhandlers.gif "이벤트 처리기 흐름")  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48122843"
 |**OnProgress**|**OnProgress** 이벤트에 대한 이벤트 처리기입니다. 이 이벤트는 실행 개체의 진행 상태를 측정할 수 있는 경우 실행 개체에 의해 발생합니다.|  
 |**OnQueryCancel**|**OnQueryCancel** 이벤트에 대한 이벤트 처리기입니다. 이 이벤트는 실행 중지 시기를 결정하기 위해 실행 개체에 의해 발생합니다.|  
 |**OnTaskFailed**|**OnTaskFailed** 이벤트에 대한 이벤트 처리기입니다. 이 이벤트는 작업이 실패할 때 해당 태스크에 의해 발생합니다.|  
-|**OnVariableValueChanged**|**OnVariableValueChanged** 이벤트에 대한 이벤트 처리기입니다. 이 이벤트는 변수 값이 변경될 때 실행 개체에 의해 발생합니다. 이 이벤트는 변수가 정의되는 실행 개체에 의해 발생합니다. 설정 하는 경우이 이벤트가 발생 하지 않습니다 합니다 **RaiseChangeEvent** 변수를 속성 `False`합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)를 참조하세요.|  
+|**OnVariableValueChanged**|**OnVariableValueChanged** 이벤트에 대한 이벤트 처리기입니다. 이 이벤트는 변수 값이 변경될 때 실행 개체에 의해 발생합니다. 이 이벤트는 변수가 정의되는 실행 개체에 의해 발생합니다. 설정 하는 경우이 이벤트가 발생 하지 않습니다 합니다 **RaiseChangeEvent** 변수를 속성 `False`합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)을 참조하세요.|  
 |**OnWarning**|**OnWarning** 이벤트에 대한 이벤트 처리기입니다. 이 이벤트는 경고가 발생할 때 실행 개체에 의해 발생합니다.|  
   
 ## <a name="configuration-of-an-event-handler"></a>이벤트 처리기 구성  

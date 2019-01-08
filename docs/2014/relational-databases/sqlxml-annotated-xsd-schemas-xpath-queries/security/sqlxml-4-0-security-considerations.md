@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, security
@@ -15,12 +13,12 @@ ms.assetid: 7281bdbd-cf1d-4d73-9fe7-ee8b2b946696
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 225835257a8efb9e3e9e2422ad6710203516884a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bcaff1509a08cc14ffb0d5ce267607b75a942229
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049711"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753395"
 ---
 # <a name="sqlxml-40-security-considerations"></a>SQLXML 4.0 보안 고려 사항
   이 섹션에서는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML의 보안 관련 고려 사항에 대한 정보를 제공합니다.  

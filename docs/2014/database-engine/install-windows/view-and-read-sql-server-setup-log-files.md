@@ -18,12 +18,12 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6017cadea0039613f7e97dc6e78665e47c9e2575
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: d6a81258e87bf2422f3ae5a55afc5eb6429856b2
+ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018508"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51858658"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>SQL Server 설치 로그 파일 보기 및 읽기
   설치 프로그램을 실행할 각 만듭니다 로그 파일은 %programfiles% 새로운 타임 스탬프 로그 폴더를 사용 하 여 생성 됩니다\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\합니다. 타임스탬프 로그 폴더 이름 형식은 YYYYMMDD_hhmmss입니다. 설치 프로그램을 무인 모드로 실행하면 % temp%\sqlsetup*.log에 로그가 생성됩니다. 로그 폴더의 모든 파일은 각각의 로그 폴더에 Log\*.cab 파일로 보관됩니다.  
@@ -141,11 +141,11 @@ ms.locfileid: "51018508"
   
  MSI 로그 파일의 유형:  
   
--   \<기능>_\<아키텍처>\_\<반복>.log  
+-   \<Feature>_\<Architecture>\_\<Interaction>.log  
   
--   \<기능>_\<아키텍처>\_\<언어>\_\<반복>.log  
+-   \<Feature>_\<Architecture>\_\<Language>\_\<Interaction>.log  
   
--   \<기능>_\<아키텍처>\_\<반복>\_\<워크플로>.log  
+-   \<Feature>_\<Architecture>\_\<Interaction>\_\<workflow>.log  
   
 ### <a name="location"></a>위치  
  MSI 로그 파일은 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< YYYYMMDD_HHMM >\\< 이름\>. 로그 합니다.  

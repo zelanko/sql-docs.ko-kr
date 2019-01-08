@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.saveschedule.f1
@@ -13,12 +12,12 @@ ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: de6560f7bc91a76652be5ca198a91c4ab9c1f1af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc075a50f3b57cf4856dbcd2ee36c13b83d968d4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104511"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773375"
 ---
 # <a name="save-and-execute-package-sql-server-import-and-export-wizard"></a>패키지 저장 및 실행(SQL Server 가져오기 및 내보내기 마법사)
   **패키지 저장 및 실행** 대화 상자를 사용하여 패키지를 즉시 실행하거나 나중에 실행하도록 저장할 수 있고, 즉시 실행하는 동시에 저장할 수도 있습니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "48104511"
  나중에 패키지를 즉시 실행하는 옵션으로 실행할 수 있도록 패키지를 저장합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], 마법사에서 만든 패키지를 저장 하는 옵션이 제공 되지 않습니다.  
+>  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]에서는 마법사가 만든 패키지를 저장하는 옵션을 사용할 수 없습니다.  
   
  **SQL Server**  
  패키지를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` 데이터베이스에 저장하려면 이 옵션을 선택합니다.  

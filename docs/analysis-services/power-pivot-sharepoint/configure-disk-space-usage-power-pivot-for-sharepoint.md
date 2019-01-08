@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 24d96feb0e57bf0b1c62532cca63ddf07f96f21c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: 6fa6090a675326db06491d54b82a6844363ee3e9
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024750"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409200"
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>디스크 공간 사용 구성(SharePoint용 Power Pivot)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34024750"
   
  백업 폴더는 로컬 컴퓨터의 메모리에 로드되는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스에 대한 공통 캐시 저장소를 제공합니다. 팜에 여러 개의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 애플리케이션이 정의되어 있는 경우 그 중 한 애플리케이션이 로컬 서버를 사용하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 로드하고 이후에 해당 데이터를 캐시할 수 있습니다. 데이터 로드 및 캐시 모두 Analysis Services 서버 작업입니다. 따라서 총 디스크 공간 사용량은 Analysis Services 인스턴스 수준에서 백업 폴더에 대해 관리됩니다. 따라서 디스크 공간 사용량을 제한하는 구성 설정은 SharePoint 애플리케이션 서버에서 실행되는 SQL Server Analysis Services 인스턴스에 대해 설정됩니다.  
   
- 캐시에는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스만 포함됩니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스는 단일 부모 폴더(백업 폴더) 아래의 여러 파일에 저장됩니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스가 Excel 통합 문서의 내부 데이터로 사용되기 때문에 데이터베이스 이름은 설명이 포함되지 않은 GUID 기반 이름입니다. 아래의 GUID 폴더  **\<serviceApplicationName >** 의 부모 폴더는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스입니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스가 서버에 로드되면 각 데이터베이스에 대한 추가 폴더가 만들어집니다.  
+ 캐시에는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스만 포함됩니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스는 단일 부모 폴더(백업 폴더) 아래의 여러 파일에 저장됩니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스가 Excel 통합 문서의 내부 데이터로 사용되기 때문에 데이터베이스 이름은 설명이 포함되지 않은 GUID 기반 이름입니다. 아래의 GUID 폴더  **\<a m e >** 의 부모 폴더는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스입니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스가 서버에 로드되면 각 데이터베이스에 대한 추가 폴더가 만들어집니다.  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 팜의 모든 Analysis Services 인스턴스에 로드될 수 있기 때문에 동일한 데이터가 팜의 여러 컴퓨터에서 캐시될 수도 있습니다. 이는 디스크 공간 사용보다 성능에 도움이 되지만 데이터가 디스크에 이미 있는 경우 데이터에 더 빠르게 액세스할 수 있다는 이점이 있습니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "34024750"
   
 -   [파일 서버 리소스 관리자의 새로운 소식](http://technet.microsoft.com/library/hh831746.aspx) (http://technet.microsoft.com/library/hh831746.aspx)합니다.  
   
--   [Windows Server 2008 r 2 용 파일 서버 리소스 관리자 단계별 가이드](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875)합니다.  
+-   [Windows Server 2008 r2 파일 서버 리소스 관리자 단계별 가이드](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875)합니다.  
   
 -   [Windows Server 2008에서 부족 한 디스크 공간 경고 설정](http://go.microsoft.com/fwlink/?LinkID=204870) ( http://go.microsoft.com/fwlink/?LinkID=204870)합니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34024750"
   
 3.  디스크 사용에서 **총 디스크 공간** 의 값(GB)을 설정하여 캐싱 목적으로 사용되는 공간 크기의 상한값을 설정합니다. 기본값은 0이며 이 값을 사용하면 Analysis Services에서 사용 가능한 모든 디스크 공간을 사용할 수 있습니다.  
   
-4.  디스크 사용의 **최근 ‘n’ 시간 내에 캐시된 데이터베이스 삭제** 설정에서 디스크 공간이 최대 한계일 경우 캐시를 비우기 위해 최근에 사용된 기준을 지정합니다.  
+4.  디스크 사용량에서에 **캐시 된 최근 ' n '에서 데이터베이스를 삭제 시간** 일 때 디스크 공간이 최대 한도에 캐시를 비우기 위해 최근에 사용 된 기준을 지정을 설정 합니다.  
   
      기본값은 4시간이며, 이는 4시간 이상 비활성 상태인 모든 데이터베이스가 파일 시스템에서 삭제된다는 의미입니다. 비활성 상태이지만 아직 메모리에 있는 데이터베이스는 언로드된 다음 파일 시스템에서 삭제됩니다.  
   

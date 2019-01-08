@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8a8b84210372484ba8128c188b9f741063083d6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2905ce39c487a1df04d839b6efe360803674ffb9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100993"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747723"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>새 정책 만들기 또는 정책 열기 대화 상자, 설명 페이지
   이 대화 상자를 사용하여 정책 기반 관리 정책에 대한 추가 정보 및 설명을 추가할 수 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "48100993"
  **추가 도움말 하이퍼링크: 주소**  
  사용자가 **결과 자세히 보기** 페이지에 나타나는 하이퍼링크 텍스트를 클릭하면 열리는 웹 페이지의 하이퍼링크를 입력합니다.  
   
- **추가 도움말 하이퍼링크: 텍스트 링크**  
+ **추가 도움말 하이퍼링크: 링크 테스트**  
  하이퍼링크를 열어 링크의 유효성을 테스트하려면 클릭합니다.  
   
  **만든 날짜**  

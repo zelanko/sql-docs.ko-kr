@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a40a02e3fd19ac853c7c4b291bbc3875229c747f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4ba9720f87cd41849cc118482ffbf4731049e8c9
+ms.sourcegitcommit: 4182a1e8be69373dde2fe778f19cab9cd78e447c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016660"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51818499"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>SQL Server 프로파일러를 사용하여 데이터 마이닝 모니터링(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "34016660"
 |**Progress Report Begin**<br /><br /> **Progress Report End**|**34 - DataMiningProgress**|데이터 마이닝 알고리즘의 진행률에 대한 정보를 제공합니다. 예를 들어 클러스터링 모델을 작성하는 경우 작성 중인 후보 클러스터를 알려 주는 진행률 메시지가 나타납니다.|  
 |**Query Begin**<br /><br /> **쿼리 끝**|EXECUTESQL|실행 중인 Transact-SQL 쿼리의 텍스트를 포함합니다.|  
 |**Query Begin**<br /><br /> **쿼리 끝**|**2- SQLQuery**|시스템 테이블 형식의 스키마 행 집합에 대한 쿼리의 텍스트를 포함합니다.|  
-|**DISCOVER Begin**<br /><br /> **DISCOVER End**|여러 항목|XMLA로 캡슐화된 DMX 함수 호출 또는 DISCOVER 문의 텍스트를 포함합니다.|  
+|**DISCOVER Begin**<br /><br /> **DISCOVER End**|다중|XMLA로 캡슐화된 DMX 함수 호출 또는 DISCOVER 문의 텍스트를 포함합니다.|  
 |**오류**|(없음)|서버에서 클라이언트로 보낸 오류의 텍스트를 포함합니다.<br /><br /> **오류(데이터 마이닝):** 이나 **정보(데이터 마이닝):** 가 앞에 오는 오류 메시지는 특별히 DMX 요청에 대한 응답으로 생성됩니다. 그러나 이러한 오류 메시지를 보는 것만으로는 충분하지 않습니다. 파서에서 생성하는 오류 메시지와 같은 다른 오류 메시지도 데이터 마이닝과 관련이 있을 수 있지만 이러한 접두사는 없습니다.|  
   
  추적 로그에 있는 명령 문을 보면 시스템 저장 프로시저에 대한 호출을 포함하여 클라이언트에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버로 보낸 복잡한 문의 구문도 볼 수 있습니다. 이 정보를 사용하여 디버깅을 수행하거나 유효한 문을 새 예측 쿼리 또는 모델을 만들기 위한 템플릿으로 사용할 수 있습니다. 추적을 통해 캡처할 수 있는 저장 프로시저 호출의 예는 [클러스터링 모델 쿼리 예제](../../analysis-services/data-mining/clustering-model-query-examples.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [Analysis Services 인스턴스 모니터](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
+## <a name="see-also"></a>관련 항목  
+
  [SQL Server 확장 이벤트를 사용하여 Analysis Services 모니터링](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
   

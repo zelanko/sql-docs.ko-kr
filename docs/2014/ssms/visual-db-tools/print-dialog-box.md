@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.Print
@@ -12,12 +12,12 @@ ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4692f5c0ceddea6f8a67ea9aacbcb1efe523db7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8019f762d6d80ced2688f0e93f7ad0e0a29bd3f6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180603"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768925"
 ---
 # <a name="print-dialog-box"></a>인쇄 대화 상자
   **인쇄** 대화 상자에서 옵션을 선택하여 원하는 문서 인쇄 방법을 지정할 수 있습니다.  

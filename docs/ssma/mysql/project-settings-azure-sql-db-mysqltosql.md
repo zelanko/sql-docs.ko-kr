@@ -10,12 +10,12 @@ ms.assetid: 8c06420a-533b-4de0-948d-a0c6b368c544
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b319db9bb867e94e2a7400acffe9fb87ccb6b7b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0c16fe617b5808f22f15cdf89af8dc7a1e79898
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756211"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52410870"
 ---
 # <a name="project-settings-azure-sql-db-mysqltosql"></a>프로젝트 설정(Azure SQL DB)(MySQLToSQL)
 SQL Azure 프로젝트 설정에는 SQL Azure 데이터베이스 접미사 연결 대화 상자에서 추가할 수 있으며 또한 SQL Azure 연결에 하트 비트 메커니즘을 구현 하도록 해를 구성할 수 있습니다.  

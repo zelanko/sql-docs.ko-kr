@@ -21,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b5234cf66bc5f829ab9d83c2642da14b5716161
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4107e6c1f675f7fae78ca384c082ef12c2fa309b
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735451"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406460"
 ---
 # <a name="sysserverrolemembers-transact-sql"></a>sys.server_role_members(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47735451"
  를 추가 하거나 서버 역할 멤버 자격을 제거 합니다 [ALTER SERVER ROLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)문.  
   
 ## <a name="permissions"></a>사용 권한  
- 로그인하면 자신의 서버 역할 멤버 자격 및 고정 서버 역할 멤버의 principal_id를 볼 수 있습니다 모든 서버 역할 멤버 자격을 확인 하려면 합니다 **VIEW DEFINITION ON SERVER ROLE** 권한 또는 멤버 자격이 합니다 **securityadmin** 고정된 서버 역할입니다.  
+ 로그인은 자신의 서버 역할 멤버 자격을 볼 수 있습니다 및 고정된 서버 역할의 멤버의 principal_id를 볼 수 있습니다. 모든 서버 역할 멤버 자격을 확인 하려면 합니다 **VIEW DEFINITION ON SERVER ROLE** 권한 또는 멤버 자격이 합니다 **securityadmin** 고정된 서버 역할입니다.  
   
  자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
@@ -58,7 +58,7 @@ JOIN sys.server_principals AS member
     ON sys.server_role_members.member_principal_id = member.principal_id;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [보안 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [서버 수준 역할](../../relational-databases/security/authentication-access/server-level-roles.md)   

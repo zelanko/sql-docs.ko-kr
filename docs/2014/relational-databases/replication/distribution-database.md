@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configuredistributionwizard.distributiondatabase.f1
@@ -13,12 +12,12 @@ ms.assetid: 5b42a083-7a11-41d8-9e3f-320c7c907237
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e074a10011cd0922def946f6bc3f7bda5789cc22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 283fd67d14d57c3d1d5d60dd9d8de2a159ca6d5e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096973"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752425"
 ---
 # <a name="distribution-database"></a>배포 데이터베이스
   배포 데이터베이스는 모든 유형의 복제에 대한 메타데이터 및 기록 데이터와 트랜잭션 복제에 대한 트랜잭션을 저장합니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "48096973"
 > [!NOTE]  
 >  배포 데이터베이스 로그를 배포 데이터베이스에서 별개의 디스크 드라이브에 두어 트랜잭션을 기록하는 데 걸리는 시간을 줄이고 복제 성능을 향상시킬 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [배포 구성](configure-distribution.md)   
  [게시 및 배포 구성](configure-publishing-and-distribution.md)   
  [배포자 및 게시자 속성 보기 및 수정](view-and-modify-distributor-and-publisher-properties.md)  

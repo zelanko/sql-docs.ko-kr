@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 481d5b13-657e-4b51-8783-ccac3595bd45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 661d6bbd8630865c5c2c3a285431d27b5d5bb83b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: f2562f3931f98c040bb3dc475e3863bb6396dbbf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122343"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752875"
 ---
 # <a name="brokeractivation-event-class"></a>Broker:Activation 이벤트 클래스
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 큐 모니터가 활성화 저장 프로시저를 시작하고 QUEUE_ACTIVATION 알림을 보내거나 큐 모니터에서 시작한 활성화 저장 프로시저가 있는 경우에 **Broker:Activation** 이벤트를 생성합니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "48122343"
 |**DatabaseID**|`int`|USE *database* 문으로 지정한 데이터베이스 ID이거나 지정한 인스턴스에 대해 실행된 USE *database*문이 없는 경우 기본 데이터베이스 ID입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ServerName **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면** 에 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|사용자 계정 컨트롤|  
 |**EventClass**|`int`|캡처된 이벤트 클래스 유형입니다. **Broker:Activation** 의 경우 항상 **163**입니다.|27|아니요|  
 |**EventSequence**|`int`|이 이벤트의 시퀀스 번호입니다.|51|아니요|  
-|**EventSubClass**|`nvarchar`|이 이벤트가 보고하는 특정 동작입니다. 다음 값 중 하나입니다.<br /><br /> **시작**: <br />                [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 활성화 저장 프로시저를 시작했습니다.<br /><br /> **종료**: 활성화 저장 프로시저가 정상적으로 종료 되었습니다.<br /><br /> **중단**: 활성화 저장 프로시저가 오류로 인해 종료 되었습니다.|21|아니요|  
+|**EventSubClass**|`nvarchar`|이 이벤트가 보고하는 특정 동작입니다. 다음 값 중 하나입니다.<br /><br /> **시작**: <br />                [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 활성화 저장 프로시저를 시작했습니다.<br /><br /> **종료**: 활성화 저장 프로시저가 정상적으로 종료되었습니다.<br /><br /> **중단**: 활성화 저장 프로시저가 오류로 인해 종료되었습니다.|21|아니요|  
 |**HostName**|`nvarchar`|클라이언트를 실행 중인 컴퓨터의 이름입니다. 클라이언트가 호스트 이름을 제공하면 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|사용자 계정 컨트롤|  
 |**IntegerData**|`int`|이 큐에 활성화된 태스크의 개수입니다.|25|아니요|  
 |**IsSystem**|`int`|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다. 1 = 시스템, 0 = 사용자|60|아니요|  

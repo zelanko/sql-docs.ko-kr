@@ -19,12 +19,12 @@ ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5c89e1d4ee1ec4b3590f6b9e0a738561cd61e1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63bf65118f876a0677592bfe1dd8056b05397f71
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740933"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406680"
 ---
 # <a name="sysdmfilestreamfileiorequests-transact-sql"></a>sys.dm_filestream_file_io_requests(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,15 +34,15 @@ ms.locfileid: "47740933"
 |Column|형식|Description|  
 |------------|----------|-----------------|  
 |**request_context_address**|**varbinary(8)**|드라이버의 I/O 요청이 포함된 NSO 메모리 블록의 내부 주소를 표시합니다. Null을 허용하지 않습니다.|  
-|**current_spid**|**smallint**|현재 SQL Server 연결에 대한 SPID(시스템 프로세스 ID)를 표시합니다. Null을 허용하지 않습니다.|  
+|**current_spid**|**smallint**|현재 SQL Server의 연결에 대 한 시스템 프로세스 id (SPID)를 보여 줍니다. Null을 허용하지 않습니다.|  
 |**request_type**|**nvarchar(60)**|IRP(I/O 요청 패킷) 유형을 표시합니다. 가능한 요청 유형은 REQ_PRE_CREATE, REQ_POST_CREATE, REQ_RESOLVE_VOLUME, REQ_GET_VOLUME_INFO, REQ_GET_LOGICAL_NAME, REQ_GET_PHYSICAL_NAME, REQ_PRE_CLEANUP, REQ_POST_CLEANUP, REQ_CLOSE, REQ_FSCTL, REQ_QUERY_INFO, REQ_SET_INFO, REQ_ENUM_DIRECTORY, REQ_QUERY_SECURITY 및 REQ_SET_SECURITY입니다. Null을 허용하지 않습니다.|  
 |**request_state**|**nvarchar(60)**|NSO에 있는 I/O 요청의 상태를 표시합니다. 가능한 값은 REQ_STATE_RECEIVED, REQ_STATE_INITIALIZED, REQ_STATE_ENQUEUED, REQ_STATE_PROCESSING, REQ_STATE_FORMATTING_RESPONSE, REQ_STATE_SENDING_RESPONSE, REQ_STATE_COMPLETING 및 REQ_STATE_COMPLETED입니다. Null을 허용하지 않습니다.|  
 |**request_id**|**int**|드라이버가 이 요청에 할당한 고유한 요청 ID를 표시합니다. Null을 허용하지 않습니다.|  
 |**irp_id**|**int**|고유한 IRP ID를 표시합니다. 지정된 IRP와 관련된 모든 I/O 요청을 식별하는 데 유용합니다. Null을 허용하지 않습니다.|  
 |**handle_id**|**int**|네임스페이스 핸들 ID를 나타냅니다. NSO 관련 ID이며 인스턴스에서 고유합니다. Null을 허용하지 않습니다.|  
-|**client_thread_id**|**varbinary(8)**|요청을 시작한 클라이언트 응용 프로그램의 스레드 ID를 표시합니다.<br /><br /> **\*\* 경고 \* \***  클라이언트 응용 프로그램은 SQL Server와 동일한 컴퓨터에서 실행 되는 경우에 의미가 있습니다. 클라이언트 응용 프로그램을 원격으로 실행 중일 때 합니다 **client_thread_id** 원격 클라이언트 대신 작동 하는 일부 시스템 프로세스의 스레드 ID를 표시 합니다.<br /><br /> Null을 허용합니다.|  
+|**client_thread_id**|**varbinary(8)**|요청을 시작 하는 클라이언트 응용 프로그램의 스레드 ID를 보여 줍니다.<br /><br /> **\*\* 경고 \* \***  클라이언트 응용 프로그램은 SQL Server와 동일한 컴퓨터에서 실행 되는 경우에 의미가 있습니다. 클라이언트 응용 프로그램을 원격으로 실행 중일 때 합니다 **client_thread_id** 원격 클라이언트 대신 작동 하는 일부 시스템 프로세스의 스레드 ID를 표시 합니다.<br /><br /> Null을 허용합니다.|  
 |**client_process_id**|**varbinary(8)**|클라이언트 응용 프로그램이 SQL Server와 동일한 컴퓨터에서 실행되는 경우 해당 클라이언트 응용 프로그램의 프로세스 ID를 표시합니다. 원격 클라이언트일 경우 해당 클라이언트 대신 작동하는 시스템 프로세스의 ID를 표시합니다. Null을 허용합니다.|  
-|**handle_context_address**|**varbinary(8)**|클라이언트의 핸들과 연결된 내부 NSO 구조의 주소를 표시합니다. Null을 허용합니다.|  
+|**handle_context_address**|**varbinary(8)**|클라이언트의 핸들과 연결 된 내부 NSO 구조의 주소를 보여 줍니다. Null을 허용합니다.|  
 |**filestream_transaction_id**|**varbinary(128)**|지정된 핸들과 연결된 트랜잭션의 ID 및 이 핸들과 연결된 모든 요청을 표시합니다. 것이 값을 반환 합니다 **get_filestream_transaction_context** 함수입니다. Null을 허용합니다.|  
   
 ## <a name="permissions"></a>사용 권한  

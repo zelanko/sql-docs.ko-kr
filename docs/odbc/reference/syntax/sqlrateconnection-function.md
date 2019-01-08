@@ -13,16 +13,16 @@ ms.assetid: e8da2ffb-d6ef-4ca7-824f-57afd29585d8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9f3d0058e798fe9bdbcbfcbc1ed3adea8e405a98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d36224329fa29a54f7163cb4e1ce6228f460875
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776391"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415000"
 ---
 # <a name="sqlrateconnection-function"></a>SQLRateConnection 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 3.81 표준 준수: ODBC  
+ 도입 된 버전: ODBC 3.81 표준 준수 합니다. ODBC  
   
  **요약**  
  **SQLRateConnection** 드라이버 연결 풀에서 기존 연결을 다시 사용할 수 하는 경우를 결정 합니다.  

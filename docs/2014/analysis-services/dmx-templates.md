@@ -11,12 +11,12 @@ ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4332d78fef98d653029d0913c6b7da8cfe5a75f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 7e3bee7fa85c98e50fdb940d2dfb23f76f3a462c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048259"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52504691"
 ---
 # <a name="dmx-templates"></a>DMX 템플릿
   데이터 마이닝 템플릿을 사용하면 정교한 쿼리를 신속하게 작성할 수 있습니다. DMX 쿼리의 일반 구문이 잘 설명되어 있더라도 템플릿을 사용하면 인수 및 데이터 원본을 클릭하고 가리켜서 쿼리를 보다 쉽게 작성할 수 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "48048259"
   
 3.  페이지에서 **모델 선택**을 클릭하고 **고급**을 클릭합니다.  
   
-     **팁:** 모델에서 예측 쿼리를 만들려면 모델을 먼저 선택한 후 **고급**을 클릭하여 템플릿에 모델 이름을 미리 채울 수 있습니다.  
+     **팁:** 모델에 예측 쿼리를 작성 하려는 경우 먼저 모델을 선택 하 고 클릭 수 **고급**, 여 템플릿에 모델 이름 미리 채웁니다.  
   
 4.  **데이터 마이닝 고급 쿼리 편집기**에서 **DMX 템플릿**을 클릭하고 템플릿을 선택합니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48048259"
   
  **만들기**  
   
- 이러한 템플릿을 사용하면 사용자 지정 모델 또는 데이터 구조를 작성할 수 있습니다. 마법사에서 지원되는 모델만 작성할 수 있는 것은 아닙니다. 플러그인 알고리즘을 포함해서 현재 연결된 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에서 지원되는 데이터 마이닝 알고리즘을 사용할 수 있습니다.  
+ 이러한 템플릿을 사용하면 사용자 지정 모델 또는 데이터 구조를 작성할 수 있습니다. 인스턴스에서 지원 되는 데이터 마이닝 알고리즘을 사용할 수 있습니다-마법사에서 지원 되는 모델에 국한 되지 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 플러그 인 알고리즘을 포함 하 여에 연결 됩니다.  
   
 -   마이닝 모델  
   

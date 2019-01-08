@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.selectsource.f1
@@ -12,12 +12,12 @@ ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b57cf80e34b98bd3015fd17ef327a7f415c90ec8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49c96ead9463f49ce81133f8d29127aebb211d85
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052943"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753466"
 ---
 # <a name="select-source-dialog-box"></a>원본 선택 대화 상자
   이 대화 상자를 사용하여 실행할 정책의 원본을 선택할 수 있습니다. 정책이 포함된 하나 이상의 XML 파일을 선택하려면 **파일**을 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 있는 정책을 실행하려면 **서버**를 선택합니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "48052943"
  **암호**  
  로그인 암호를 입력합니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 연결하도록 선택한 경우에만 편집할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [정책 관리 노드&#40;개체 탐색기&#41;](../../ssms/object/object-explorer.md)   
  [정책 기반 관리를 사용하여 서버 관리](administer-servers-by-using-policy-based-management.md)  
   

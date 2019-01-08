@@ -18,12 +18,12 @@ ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34a3ea4ac63a0ace769af174bbdbf433ad63b433
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29fbce7f3e8fee200384f6162b28576d96593b37
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700531"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52502976"
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,19 +58,19 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  지정 된 계획 지침을 삭제 *plan_guide_name*합니다. 계획 지침이 삭제된 후 이전에 이 계획 지침에 맞춘 쿼리를  실행할 경우 이 계획 지침의 영향을 받지 않습니다.  
   
  DROP ALL  
- 현재 데이터베이스에 있는 모든 계획 지침을 삭제합니다. **N' * * * plan_guide_name* DROP ALL 지정 된 경우에 지정할 수 없습니다.  
+ 현재 데이터베이스에 있는 모든 계획 지침을 삭제합니다. **N'**_plan_guide_name_ DROP ALL 지정 된 경우에 지정할 수 없습니다.  
   
  DISABLE  
  지정 된 계획 지침을 사용 하지 않도록 설정 *plan_guide_name*합니다. 계획 지침이 비활성화된 후 이전에 이 계획 지침에 맞춘 쿼리를 실행할 경우 이 계획 지침의 영향을 받지 않습니다.  
   
  DISABLE ALL  
- 현재 데이터베이스에 있는 모든 계획 지침을 비활성화합니다. **N' * * * plan_guide_name* 모두 사용 안 함 지정 된 경우에 지정할 수 없습니다.  
+ 현재 데이터베이스에 있는 모든 계획 지침을 비활성화합니다. **N'**_plan_guide_name_ 모두 사용 안 함 지정 된 경우에 지정할 수 없습니다.  
   
  ENABLE  
  지정 된 계획 지침을 사용 하도록 설정 *plan_guide_name*합니다. 계획 지침을 활성화하면 적합한 쿼리에 맞출 수 있습니다. 기본적으로 계획 지침은 만들어질 때 활성화됩니다.  
   
  ENABLE ALL  
- 현재 데이터베이스에 있는 모든 계획 지침을 활성화합니다. **N'***plan_guide_name***'** ENABLE ALL 지정 된 경우에 지정할 수 없습니다.  
+ 현재 데이터베이스에 있는 모든 계획 지침을 활성화합니다. **N'**_plan_guide_name_**'** ENABLE ALL 지정 된 경우에 지정할 수 없습니다.  
   
 ## <a name="remarks"></a>Remarks  
  활성화 여부에 관계없이 계획 지침에서 참조하는 함수, 저장 프로시저 또는 DML 트리거를 삭제하거나 수정하려고 하면 오류가 발생합니다.  

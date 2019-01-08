@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bca93024414ff9e70d7129d4303b14ba64c3e836
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 605c8f0fc1b198e4afc7034d2f5f15b8c259668b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122613"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771035"
 ---
 # <a name="map-columns-to-composite-domains"></a>복합 도메인에 열 매핑
   복합 도메인은 둘 이상의 단일 도메인으로 구성됩니다. 여러 개의 열을 이 도메인에 매핑하거나 구분된 값이 포함된 단일 열을 이 도메인에 매핑할 수 있습니다.  

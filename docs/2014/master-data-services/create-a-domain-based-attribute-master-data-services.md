@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - domain-based attributes [Master Data Services], creating
@@ -15,12 +14,12 @@ ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 34b101cfdd590c4910f9997b682749df41758a86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1dc346c31b7d26989dd2fac018a7bae0752f77e4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106123"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755415"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>도메인 기반 특성 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 도메인 기반 특성을 만들어서 엔터티의 멤버로 특성 값을 채웁니다.  
@@ -71,9 +70,9 @@ ms.locfileid: "48106123"
 13. **엔터티 유지 관리** 페이지에서 **엔터티 저장**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [도메인 기반 특성 &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)   
- [파생된 계층을 만들려면 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)   
+ [도메인 기반 특성&#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)   
+ [파생 계층 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)   
  [특성 이름 변경 &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
- [특성 삭제 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-master-data-services.md)  
+ [특성 삭제&#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-master-data-services.md)  
   
   

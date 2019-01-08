@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.advancededitor.columnmappings.f1
@@ -17,12 +16,12 @@ ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 85155dec153c3d50f12efd5ddb9ada2c6d0a73a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43cf4ea4b228226bb12be8a47befd6f55513c40d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178043"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756795"
 ---
 # <a name="advanced-editor"></a>고급 편집기
   **고급 편집기** 대화 상자를 사용하여 선택한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체의 속성을 구성할 수 있습니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "48178043"
   
  구성 요소에 따라 다른 속성이 표시됩니다. **고급 편집기**에 표시될 수 있는 속성에 대한 자세한 내용은 다음 항목을 참조하세요.  
   
--   [Common Properties](../../2014/integration-services/common-properties.md)  
+-   [공용 속성](../../2014/integration-services/common-properties.md)  
   
 -   [변환 사용자 지정 속성](data-flow/transformations/transformation-custom-properties.md)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "48178043"
   
 -   [Integration Services 변환](data-flow/transformations/integration-services-transformations.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   
