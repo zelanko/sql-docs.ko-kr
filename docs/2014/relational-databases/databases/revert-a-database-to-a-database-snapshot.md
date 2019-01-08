@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database snapshots [SQL Server], reverting to
@@ -14,12 +13,12 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ffd797b5b59e50b97f2306c1509a01b8372c450
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: ef9bda4b8eeff394e44ba696e228b121015960b9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184303"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774355"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>데이터베이스를 데이터베이스 스냅숏으로 되돌리기
   온라인 데이터베이스의 데이터가 손상되면 일부 경우 데이터베이스를 손상 발생 이전의 데이터베이스 스냅숏으로 되돌리는 작업이 백업에서 온라인 데이터베이스를 복원하는 방법에 대한 대체 방법이 될 수 있습니다. 예를 들어 데이터베이스 되돌리기 작업은 테이블 삭제와 같은 최근의 심각한 사용자 오류 발생 전의 상황으로 돌아가는 데 유용할 수 있습니다. 그러나 스냅숏을 만든 후의 모든 변경 내용은 손실됩니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "48184303"
   
      [보안](#Security)  
   
--   **To Revert a Database to a Database Snapshot, using:**  [Transact-SQL](#TsqlProcedure)  
+-   **데이터베이스를 데이터베이스 스냅숏으로 되돌리려면를 사용 하 여:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   

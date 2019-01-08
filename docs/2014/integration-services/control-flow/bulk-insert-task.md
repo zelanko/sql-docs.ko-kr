@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.f1
@@ -16,12 +15,12 @@ ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 806752a22315586ecd730dad89761a079dc7038e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 463dd8395fd8cd4b696ef54c0a4b0523da0fadd8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064183"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360375"
 ---
 # <a name="bulk-insert-task"></a>대량 삽입 태스크
   대량 삽입 태스크는 많은 양의 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 또는 뷰에 복사할 수 있는 효율적인 방법을 제공합니다. 예를 들어 회사에서 백만 개 행으로 구성된 제품 목록을 메인프레임 시스템에 저장하지만 회사의 전자 상거래 시스템이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 웹 페이지를 채운다고 가정합니다. 또한 메인프레임의 마스터 제품 목록을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품 테이블을 매일 밤 업데이트해야 합니다. 테이블을 업데이트하려면 제품 목록을 탭 구분 형식으로 저장하고 대량 삽입 태스크를 사용하여 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 직접 복사합니다.  
@@ -90,11 +89,11 @@ ms.locfileid: "48064183"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [대량 삽입 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [대량 삽입 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [대량 삽입 태스크 편집기 &#40;연결 페이지&#41;](../bulk-insert-task-editor-connection-page.md)  
+-   [대량 삽입 태스크 편집기&#40;연결 페이지&#41;](../bulk-insert-task-editor-connection-page.md)  
   
--   [대량 삽입 태스크 편집기 &#40;옵션 페이지&#41;](../bulk-insert-task-editor-options-page.md)  
+-   [대량 삽입 태스크 편집기&#40;옵션 페이지&#41;](../bulk-insert-task-editor-options-page.md)  
   
 -   [식 페이지](../expressions/expressions-page.md)  
   
@@ -112,10 +111,10 @@ ms.locfileid: "48064183"
   
 ## <a name="related-content"></a>관련 내용  
   
--   support.microsoft.com의 기술 문서 - [UAC 사용 시스템에서 "데이터 삽입을 위해 SSIS 대량 삽입을 준비할 수 없습니다." 오류가 발생할 수 있습니다.](http://go.microsoft.com/fwlink/?LinkId=233693)  
+-   support.microsoft.com의 기술 문서 - [UAC 사용 시스템에서 "데이터 삽입을 위해 SSIS 대량 삽입을 준비할 수 없습니다." 오류가 발생할 수 있습니다.](https://go.microsoft.com/fwlink/?LinkId=233693)  
   
--   msdn.microsoft.com의 기술 문서 - [데이터 로드 성능 가이드](http://go.microsoft.com/fwlink/?LinkId=233700)  
+-   msdn.microsoft.com의 기술 문서 - [데이터 로드 성능 가이드](https://go.microsoft.com/fwlink/?LinkId=233700)  
   
--   simple-talk.com의 기술 문서, [SQL Server Integration Services를 사용하여 데이터 대량 로드](http://go.microsoft.com/fwlink/?LinkId=233701)  
+-   simple-talk.com의 기술 문서, [SQL Server Integration Services를 사용하여 데이터 대량 로드](https://go.microsoft.com/fwlink/?LinkId=233701)  
   
   

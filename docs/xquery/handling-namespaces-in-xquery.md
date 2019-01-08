@@ -17,12 +17,12 @@ ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 91ca323cf22c41b44ae9f1664e1ca5801aad1e37
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 20fb2d2ec2094e87b904ffdc616942bfb449840c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681361"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527999"
 ---
 # <a name="handling-namespaces-in-xquery"></a>XQuery의 네임스페이스 처리
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ WHERE ProductModelID=7
   
 ```  
 <AWMI:step xmlns:AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>. </AWMI:step>  
-…  
+...  
 ```  
   
  유의 합니다 **네임 스페이스** 키워드 새 네임 스페이스 접두사를 정의 하는 "AWMI:". 그런 다음 해당 네임스페이스의 범위에 포함되는 모든 요소에 대해 쿼리에서 이 접두사를 사용해야 합니다.  
@@ -64,11 +64,11 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- 다음은 결과입니다.  
+ 다음은 결과  
   
 ```  
 <step xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <material>aluminum sheet MS-2341</material> into the <tool>T-85A framing tool</tool>. </step>  
-…  
+...  
 ```  
   
  이 예에서 정의된 네임스페이스 `"https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`는 기본 네임스페이스 또는 비어 있는 네임스페이스를 무시하도록 만들어져 있습니다. 이 때문에 쿼리에 사용된 경로 식에 네임스페이스 접두사가 더 이상 없습니다. 또한 결과에 표시되는 요소 이름에도 네임스페이스 접두사가 더 이상 없습니다. 또한 기본 네임스페이스는 해당 특성을 제외한 모든 요소에 적용됩니다.  

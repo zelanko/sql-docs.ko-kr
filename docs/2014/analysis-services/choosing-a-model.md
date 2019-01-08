@@ -17,12 +17,12 @@ ms.assetid: 444bbf9c-cec8-460e-881d-38784fb146fa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4cbde25ffc504e2e2c41bcf6b46cde9d464daa7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d91e282ebfe0299fd6015530e8af1b6d10e6547
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113293"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400516"
 ---
 # <a name="choosing-a-model"></a>모델 선택
   **마이닝 알고리즘:** 데이터 마이닝 *알고리즘* 데이터에서 패턴을 만드는 메커니즘입니다. 알고리즘은 데이터의 수를 세는 방법, 관계가 파생되는 방법 및 패턴을 저장하는 방법을 정의합니다. 분석할 데이터의 형식에 따라 선택할 알고리즘이 어느 정도는 달라집니다. 예를 들어 연속 숫자에서만 작동하는 알고리즘이 있는 반면 제한된 수의 고유 값에서 최상의 성능을 제공하는 알고리즘이 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "48113293"
   
 -   *노드* 하 여 연결 된 네트워크에서 *가장자리*합니다. 노드는 항목 또는 항목 그룹을 나타냅니다. 가장자리는 노드 간 관계의 강도에 따라 점수가 부여됩니다.  
   
- **모델을 사용 하 여:** 모델을 만든, 제공된 된 뷰어를 사용 하 여 탐색을 하거나 모델에 대 한 쿼리를 만들 수 있습니다. 쿼리는 다음 작업을 수행하는 데 사용할 수 있습니다.  
+ **모델 사용:** 모델을 만든 후 제공된 뷰어를 사용하여 탐색하거나 모델에 대한 쿼리를 만들 수 있습니다. 쿼리는 다음 작업을 수행하는 데 사용할 수 있습니다.  
   
 -   미래 가치를 예측합니다.  
   

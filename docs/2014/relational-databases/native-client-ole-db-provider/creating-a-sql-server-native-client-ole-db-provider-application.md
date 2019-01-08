@@ -14,12 +14,12 @@ ms.assetid: f3ae6815-f32d-4913-a1a2-2ba2f20cfd88
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f2476ebb3997db16c8ffebdd0aac2d6eebe9a68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 0e422ac6535900a287ae610a85241dc67172c4f7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182693"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357731"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>SQL Server Native Client OLE DB 공급자 애플리케이션 만들기
   만들기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 응용 프로그램에 이러한 단계가 포함 됩니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "48182693"
 3.  결과 처리  
   
 > [!NOTE]  
->  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [the Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504)를 사용하여 자격 증명을 암호화해야 합니다.  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [the Win32 cryptoAPI](https://go.microsoft.com/fwlink/?LinkId=9504)를 사용하여 자격 증명을 암호화해야 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

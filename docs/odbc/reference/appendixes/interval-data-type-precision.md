@@ -19,17 +19,17 @@ ms.assetid: eb73bd77-2e7e-4498-a266-4d7c990a0d56
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98be3b4a7e4db30f394a2834364ecab9a20ef182
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8df4339ae30b9058e5a5864c37807c6b02e4fdd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706431"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532117"
 ---
 # <a name="interval-data-type-precision"></a>간격 데이터 형식 전체 자릿수
 전체 자릿수는 간격 데이터 형식에 대 한 전체 자릿수, 전체 자릿수 간격 및 초 전체 자릿수를 유도 하는 간격을 포함 합니다.  
   
- 선행 간격 필드는 부호 있는 숫자입니다. 선행 필드에 대 한 최대 자릿수는 호출을 수량에 따라 결정 됩니다 *전체 자릿수를 유도 하는 간격* 데이터 형식 선언의 일부인 합니다. 예를 들어 선언: 간격 HOUR(5) 분에 5;의 전체 자릿수를 유도 하는 간격 시간 필드에서 99999 –99999 값을 사용할 수 있습니다. 전체 자릿수를 유도 하는 간격 설명자 레코드의 SQL_DESC_DATETIME_INTERVAL_PRECISION 필드에 포함 됩니다.  
+ 선행 간격 필드는 부호 있는 숫자입니다. 선행 필드에 대 한 최대 자릿수는 호출을 수량에 따라 결정 됩니다 *전체 자릿수를 유도 하는 간격* 데이터 형식 선언의 일부인 합니다. 예를 들어 선언: 간격 HOUR(5) 분으로가 간격 선행 자릿수 5; 시간 필드에서 99999-99999 값을 사용할 수 있습니다. 전체 자릿수를 유도 하는 간격 설명자 레코드의 SQL_DESC_DATETIME_INTERVAL_PRECISION 필드에 포함 됩니다.  
   
  간격 데이터 형식으로 구성 된 필드의 목록 이라고 *간격 정밀도*합니다. "Precision" 라는 용어 수 있듯이 숫자 값, 아닙니다. 예를 들어, INTERVAL DAY TO 형식의 간격 정밀도 둘째 목록인 일, 시간, 분, 초입니다. 이 값을 보유 하는 설명자 필드가 없습니다. 간격 정밀도 간격 데이터 형식에 의해 항상 확인할 수 있습니다.  
   

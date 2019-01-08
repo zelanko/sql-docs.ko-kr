@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helppublication_snapshot
@@ -17,12 +16,12 @@ ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c82b95cd68ec451129d0611b55d1366ab823ad47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f1c6d0b3da4718db35f852b2d76f4e14431bdc3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703531"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209262"
 ---
 # <a name="sphelppublicationsnapshot-transact-sql"></a>sp_helppublication_snapshot(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
  게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@publisher =** ] **'***게시자***'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외의 게시자를 지정합니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+ 지정 된 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *게시자* 해서는 안에 아티클을 추가 하는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  
@@ -82,7 +81,7 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할의 멤버나 게시자는 **db_owner** 게시 데이터베이스의 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_help_publication_snapshot** .  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [게시 속성 보기 및 수정](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [sp_addpublication_snapshot &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
  [sp_changepublication_snapshot &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   

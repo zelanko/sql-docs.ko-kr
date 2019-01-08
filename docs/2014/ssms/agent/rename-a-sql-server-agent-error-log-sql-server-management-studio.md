@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], SQL Server Agent
@@ -15,12 +15,12 @@ ms.assetid: dee2b199-48af-44cb-9177-d029a5edb169
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8b0d9538bdb5dfd580526e9c865f6c19e1e00db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3405f69ce36b4b46cdb519d281ab910d7220887
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178893"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778765"
 ---
 # <a name="rename-a-sql-server-agent-error-log-sql-server-management-studio"></a>SQL Server 에이전트 오류 로그 이름 바꾸기(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 오류가 기록된 파일의 이름을 바꾸는 방법에 대해 설명합니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - technical reference [SQL Server replication]
@@ -13,12 +12,12 @@ ms.assetid: b8f7d6d4-4fcc-45ac-abe5-740c147ac177
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35ae15fc44acfd7b9b203c4af2b9e436edecb9d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2fdfc3f9db9b0d404bb1c7dc60fa568198ec2aa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124244"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753997"
 ---
 # <a name="technical-reference-replication"></a>기술 참조(복제)
   이 섹션에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에 대한 기술 참조 설명서에 연결되는 링크가 들어 있습니다.  
@@ -33,14 +32,14 @@ ms.locfileid: "48124244"
   
  [New Publication Wizard](new-publication-wizard.md)  
   
- [기타...](properties-reference-replication.md)  
+ [자세히...](properties-reference-replication.md)  
   
  ![작은 파일 폴더 아이콘](../../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **복제 에이전트**  
  [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
   
  [Replication Distribution Agent](agents/replication-distribution-agent.md)  
   
- [기타...](agents/replication-agents.md)  
+ [자세히...](agents/replication-agents.md)  
   
  ![작은 파일 폴더 아이콘](../../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **복제 저장 프로시저**  
  [sp_addarticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)  
@@ -53,7 +52,7 @@ ms.locfileid: "48124244"
   
  [sp_addsubscriber&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql)  
   
- [기타...](/sql/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql)  
+ [자세히...](/sql/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql)  
   
  ![작은 파일 폴더 아이콘](../../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **복제 테이블**  
  [MSmerge_conflicts_info&#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/msmerge-conflicts-info-transact-sql)  
@@ -62,14 +61,14 @@ ms.locfileid: "48124244"
   
  [syssubscriptions&#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/syssubscriptions-transact-sql)  
   
- [기타...](/sql/relational-databases/system-tables/replication-tables-transact-sql)  
+ [자세히...](/sql/relational-databases/system-tables/replication-tables-transact-sql)  
   
  ![작은 파일 폴더 아이콘](../../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **복제 뷰**  
  [syspublications&#40;시스템 뷰&#41;&#40;Transact-SQL&#41;](/sql/relational-databases/system-views/syspublications-system-view-transact-sql)  
   
  [syssubscriptions&#40;시스템 뷰&#41;&#40;Transact-SQL&#41;](/sql/relational-databases/system-views/syssubscriptions-system-view-transact-sql)  
   
- [기타...](/sql/relational-databases/system-views/replication-views-transact-sql)  
+ [자세히...](/sql/relational-databases/system-views/replication-views-transact-sql)  
   
  ![작은 파일 폴더 아이콘](../../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **복제 클래스 라이브러리**  
  <xref:Microsoft.SqlServer.Replication>  

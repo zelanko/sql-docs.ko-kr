@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG014114 error
@@ -13,12 +12,12 @@ ms.assetid: f5f04590-e1c6-40d8-ab2b-98c791a0fc44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce1aae6b4dac983d05c31ac96c6d2a0c7689c266
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b9f8c468a3de4ce2d0e7e602e9244c23b6c06b8d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196383"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784885"
 ---
 # <a name="mssqleng014114"></a>MSSQL_ENG014114
     
@@ -64,7 +63,7 @@ ms.locfileid: "48196383"
   
      클러스터형 인스턴스에 대해 @@SERVERNAME 값이 올바르지 않으면 클러스터 관리자를 사용하여 해당 이름을 변경해야 합니다. 자세한 내용은 [ AlwaysOn 장애 조치 클러스터 인스턴스 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [오류 및 이벤트 참조&#40;복제&#41;](errors-and-events-reference-replication.md)  
   
   

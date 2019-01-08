@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace collector set
@@ -12,12 +12,12 @@ ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d057ee45a14550b1ba56b9b15b9e7011e5238db1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143443"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798695"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>SQL Server 프로파일러를 사용하여 SQL 추적 컬렉션 집합 만들기(SQL Server Management Studio)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]의 서버 쪽 추적 기능을 이용하여 일반 SQL 추적 수집기 유형을 사용하는 컬렉션 집합을 만들기 위한 추적 정의를 내보낼 수 있습니다. 이 프로세스는 두 부분으로 구성되어 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "48143443"
   
 6.  **일반** 탭에서 다음을 수행합니다.  
   
-    1.  **추적 이름** 상자에서 추적에 사용할 이름을 입력합니다. 이 예에서 추적 이름은 `SPgt80`합니다.  
+    1.  **추적 이름** 상자에서 추적에 사용할 이름을 입력합니다. 이 예에서 추적 이름은 `SPgt80`입니다.  
   
     2.  **템플릿 사용**목록에서 추적에 사용할 템플릿을 선택합니다. 이 예에서는 **TSQL_SPs**를 클릭합니다.  
   
@@ -94,9 +94,9 @@ ms.locfileid: "48143443"
   
 3.  스크립트를 스크롤한 다음 스크립트 주석 텍스트에서 설명하는 다음과 같은 대체 작업을 수행합니다.  
   
-    -   **SQLTrace Collection Set Name Here** 를 컬렉션 집합에 사용할 이름으로 바꿉니다. 이 예에서는 컬렉션 집합 이름을 `SPROC_CollectionSet`입니다.  
+    -   **SQLTrace Collection Set Name Here** 를 컬렉션 집합에 사용할 이름으로 바꿉니다. 이 예에서는 컬렉션 집합 이름을 `SPROC_CollectionSet`으로 지정합니다.  
   
-    -   **SQLTrace Collection Item Name Here** 를 컬렉션 항목에 사용할 이름으로 바꿉니다. 이 예에서는 컬렉션 항목 이름을 `SPROC_Collection_Item`입니다.  
+    -   **SQLTrace Collection Item Name Here** 를 컬렉션 항목에 사용할 이름으로 바꿉니다. 이 예에서는 컬렉션 항목 이름을 `SPROC_Collection_Item`으로 지정합니다.  
   
 4.  **실행** 을 클릭하여 쿼리를 실행하고 컬렉션 집합을 만듭니다.  
   

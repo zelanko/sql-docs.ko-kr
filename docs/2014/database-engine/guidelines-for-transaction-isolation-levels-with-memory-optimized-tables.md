@@ -10,12 +10,12 @@ ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f990d8fef80320a887c0d333619aae2f1d895aa4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: aced288e62fefe46777993fd46130b8dd65e8d1b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050042"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510017"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 트랜잭션 격리 수준에 대한 지침
   대부분의 경우 트랜잭션 격리 수준을 지정해야 합니다. 메모리 최적화 테이블에 대한 트랜잭션 격리는 디스크 기반 테이블과 다릅니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "48050042"
   
 -   트랜잭션 격리 수준은 고유하게 컴파일된 저장 프로시저의 콘텐츠를 구성하는 ATOMIC 블록에 대한 필수 옵션입니다.  
   
--   크로스 컨테이너 트랜잭션에서 격리 수준을 사용할 때 적용되는 제한 사항 때문에 해석된 [!INCLUDE[tsql](../includes/tsql-md.md)]에서 메모리 최적화 테이블을 사용할 때는 종종 테이블에 액세스하는 데 사용되는 격리 수준을 지정하는 테이블 힌트가 있어야 합니다. 격리 수준 힌트 및 크로스 컨테이너 트랜잭션에 대 한 자세한 내용은 참조 하세요. [트랜잭션 격리 수준](../../2014/database-engine/transaction-isolation-levels.md)합니다.  
+-   크로스 컨테이너 트랜잭션에서 격리 수준을 사용할 때 적용되는 제한 사항 때문에 해석된 [!INCLUDE[tsql](../includes/tsql-md.md)]에서 메모리 최적화 테이블을 사용할 때는 종종 테이블에 액세스하는 데 사용되는 격리 수준을 지정하는 테이블 힌트가 있어야 합니다. 격리 수준 힌트 및 크로스 컨테이너 트랜잭션에 대한 자세한 내용은 [Transaction Isolation Levels](../../2014/database-engine/transaction-isolation-levels.md)을 참조하십시오.  
   
 -   원하는 트랜잭션 격리 수준을 명시적으로 선언해야 합니다. 트랜잭션에서 특정 행 또는 테이블의 격리를 보증하기 위해 잠금 힌트(예: XLOCK)를 사용할 수 없습니다.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "48050042"
   
 -   장기적으로 실행되는 트랜잭션은 메모리 최적화 테이블 사용을 피해야 합니다. 이러한 트랜잭션은 충돌 및 후속 트랜잭션 종료 가능성을 높입니다. 장기 실행 트랜잭션으로 인해 가비지 수집도 지연됩니다. 트랜잭션 실행 시간이 늘어날수록, 메모리 내 OLTP에서 최근에 삭제된 행 버전을 더 오래 유지하며, 이는 새 트랜잭션에 대한 조회 성능을 저하시킬 수 있습니다.  
   
- 일반적으로 디스크 기반 테이블은 잠금과 차단을 사용하여 트랜잭션 격리를 처리합니다. 메모리 액세스에 최적화된 테이블은 다중 버전 관리 및 충돌 검색을 사용하여 격리를 보증합니다. 충돌 검색, 유효성 검사 및 커밋 종속성 확인에 자세한 내용은 섹션을 참조 [Transactions in Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)합니다.  
+ 일반적으로 디스크 기반 테이블은 잠금과 차단을 사용하여 트랜잭션 격리를 처리합니다. 메모리 액세스에 최적화된 테이블은 다중 버전 관리 및 충돌 검색을 사용하여 격리를 보증합니다. 자세한 내용은 [Transactions in Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)의 충돌 검색, 유효성 검사 및 커밋 종속성 확인에 대한 섹션을 참조하십시오.  
   
  디스크 기반 테이블은 SNAPSHOT 및 READ_COMMITTED_SNAPSHOT 격리 수준을 사용한 다중 버전 관리를 허용합니다. 메모리 최적화 테이블의 경우 모든 격리 수준이 REPEATABLE READ 및 SERIALIZABLE을 비롯한 여러 버전을 기반으로 합니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48050042"
   
  SNAPSHOT 격리 수준(메모리 최적화 테이블에 대해 지원되는 가장 낮은 격리 수준)이 제공하는 보증에는 READ COMMITTED의 보증이 포함됩니다. 트랜잭션의 각 문은 동일한 버전의 데이터베이스를 읽습니다. 트랜잭션에서 읽은 모든 행이 데이터베이스에 커밋될 뿐 아니라 모든 읽기 작업이 동일한 트랜잭션 집합에 의해 변경된 내용 집합을 참조합니다.  
   
- **안내선**: 사용 하 여 SNAPSHOT 격리를 통해 메모리 최적화 테이블에 액세스 하기 위한 고유 하 게 컴파일된 저장된 프로시저와 해석 된 READ COMMITTED 격리 보증만 필요한 경우 [!INCLUDE[tsql](../includes/tsql-md.md)]합니다.  
+ **지침**: READ COMMITTED 격리 보증만 필요한 경우 고유하게 컴파일된 저장 프로시저에 대해 SNAPSHOT 격리를 사용하여 해석된 [!INCLUDE[tsql](../includes/tsql-md.md)]을 통해 메모리 최적화 테이블에 액세스하세요.  
   
  자동 커밋 트랜잭션의 경우 READ COMMITTED 격리 수준이 메모리 최적화 테이블에 대한 SNAPSHOT에 암시적으로 매핑됩니다. 따라서 TRANSACTION ISOLATION LEVEL 세션 설정이 READ COMMITTED로 설정된 경우 메모리 최적화 테이블에 액세스할 때 테이블 힌트를 통해 격리 수준을 지정할 필요가 없습니다.  
   
@@ -80,7 +80,7 @@ BEGIN TRAN
 SELECT * FROM dbo.Customers c with (SNAPSHOT)   
 LEFT JOIN dbo.[Order History] oh   
     ON c.customer_id=oh.customer_id  
-…  
+...  
 COMMIT  
 ```  
   

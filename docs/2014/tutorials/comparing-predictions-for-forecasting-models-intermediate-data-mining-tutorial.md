@@ -11,12 +11,12 @@ ms.assetid: ead8a1fe-60d8-4017-8fb8-6fe32168e46d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 35883a1cb34a7d3ff6bd4e37f15ef0125aea7951
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb208d3b19e7ca2d49198a2f57edaf48214bb78f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206483"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395376"
 ---
 # <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>예측 모델에 대한 예측 비교(중급 데이터 마이닝 자습서)
   이 자습서의 이전 단계에서는 다음과 같은 여러 시계열 모델을 만들었습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "48206483"
  [REPLACE_MODEL_CASES](#bkmk_REPLACE)  
   
 ##  <a name="bkmk_EXTEND"></a> 데이터를 추가한 후 결과 사용 하 여 원래 결과 비교 합니다.  
- 모델을 새 데이터로 업데이트하면 결과에 어떤 영향을 미치는지 알아보기 위해 태평양 지역의 M200 제품 라인에 대한 데이터만 살펴보도록 하겠습니다. 원래 데이터 계열은 2004년 6월에 끝나고 7, 8, 9월에 대한 새 데이터를 얻었음을 기억해 두십시오.  
+ 방금 새 데이터로 모델을 업데이트 결과 미치는 영향을 확인 하려면 Pacific 지역의 M200 제품 라인에 대 한 데이터를 살펴 보겠습니다. 원래 데이터 계열은 2004년 6월에 끝나고 7, 8, 9월에 대한 새 데이터를 얻었음을 기억해 두십시오.  
   
 -   첫 번째 열에는 추가된 새 데이터가 표시됩니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48206483"
  일반적으로 알고리즘은 모델 데이터의 시작 부분 데이터보다 새 데이터의 변경에 큰 가중치를 둡니다. 그러나 이 경우 새 판매 수치는 이전 기간에 비해 겨우 20~30퍼센트의 증가만 나타내므로, 예상 판매량에는 약간의 상승만 있었으며 이후에는 예상 판매량이 다시 떨어지고 새 데이터 이전 개월 동안의 추세와 더 비슷해집니다.  
   
 ##  <a name="bkmk_REPLACE"></a> 원래와 교차 예측 결과 비교  
- 원래 마이닝 모델에서는 지역 간 및 제품 라인 간에 큰 차이를 보였음을 기억하십시오. 예를 들어 M200 모델의 판매량이 매우 높았던 반면 T1000 모델의 판매량은 모든 지역에 걸쳐 상당히 낮았습니다. 또한 일부 계열에는 그리 많지 않은 데이터가 포함되어 있었습니다. 계열은 균일하지 않았고 이는 시작 요소가 동일하지 않았음을 의미합니다.  
+ 원래 마이닝 모델에서는 지역 간 및 제품 라인 간에 큰 차이를 보였음을 기억하십시오. 예를 들어 M200 모델의 판매량이 매우 높았던 반면 T1000 모델의 판매량은 모든 지역에 걸쳐 상당히 낮았습니다. 또한 일부 계열에 많은 데이터 없었습니다. 계열은 균일 하지 않았음을 의미 동일한 시작점이 하지 않았고 합니다.  
   
  ![M200 및 T1000 수량을 예측 하는 계열](../../2014/tutorials/media/6series-defaultforecasting.gif "M200 및 T1000 수량을 예측 하는 계열")  
   

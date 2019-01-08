@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: fecfbb6c-56c9-4db4-84d3-00d6e338355a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d55e6bc30ec2634fd2b782fbb8986ab99c1fc91a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 56157ce2c29a95d35198ab44835b50e45d7831a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174957"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752975"
 ---
 # <a name="plan-guide-successful-event-class"></a>Plan Guide Successful 이벤트 클래스
   Plan Guide Successful 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 계획 지침이 포함된 쿼리 또는 일괄 처리에 대한 실행 계획을 성공적으로 만들었음을 나타냅니다. 다음과 같은 경우 이 이벤트가 발생합니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "48174957"
 |EventClass|`int`|이벤트 유형 = 214|27|아니요|  
 |EventSequence|`int`|요청 내의 특정 이벤트 시퀀스입니다.|51|아니요|  
 |HostName|`nvarchar`|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공할 경우 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|사용자 계정 컨트롤|  
-|IsSystem|`int`|이벤트가 시스템 프로세스에서 발생했는지, 아니면 사용자 프로세스에서 발생했는지를 나타냅니다(1 = 시스템, 0 = 사용자).|60|사용자 계정 컨트롤|  
+|IsSystem|`int`|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다. 1 = 시스템, 0 = 사용자|60|사용자 계정 컨트롤|  
 |LoginName|`nvarchar`|사용자 로그인 이름이며 DOMAIN [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] username [!INCLUDE[msCoName](../../includes/msconame-md.md)] 형식의\\*Windows 로그인 자격 증명 또는*보안 로그인입니다.|11|사용자 계정 컨트롤|  
 |LoginSid|`image`|로그인한 사용자의 SID(보안 ID)입니다. 이 정보는 [sys.server_principals](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql) 또는 [sys.sql_logins](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql) 카탈로그 뷰에 있습니다. 각 SID는 서버의 각 로그인마다 고유합니다.|41|사용자 계정 컨트롤|  
 |NTDomainName|`nvarchar`|사용자가 속한 Windows 도메인입니다.|7|사용자 계정 컨트롤|  

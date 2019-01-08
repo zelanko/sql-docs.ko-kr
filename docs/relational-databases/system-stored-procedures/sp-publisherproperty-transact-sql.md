@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_publisherproperty
@@ -17,17 +16,17 @@ ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 002e8a5ffc7a619aeda3e8372e30631e96fa9d30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49be961d1bc34bcc06b046e95b73d0b5c8ed33ac
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679431"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204402"
 ---
 # <a name="sppublisherproperty-transact-sql"></a>sp_publisherproperty(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  표시 하거나 변경에 대 한 게시자 속성 이외[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. 이 저장 프로시저는 배포자에서 실행됩니다.  
+  표시 하거나 변경에 대 한 게시자 속성 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. 이 저장 프로시저는 배포자에서 실행됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,7 +68,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>Remarks  
- **sp_publisherproperty** 에 대 한 트랜잭션 복제는 비-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  
+ **sp_publisherproperty** 에 대 한 트랜잭션 복제는 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  
   
  개체만 *게시자* 를 지정 하면 결과 집합에 설정할 수 있는 모든 속성에 대 한 현재 설정을 포함 합니다.  
   

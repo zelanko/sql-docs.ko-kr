@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 271f2c50c38585e26053f88b2d372dae4b7345c6
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: 079988eb037ebeffbbbe6cae053e241518e41c81
+ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980025"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52420792"
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>파워 피벗 구성 및 솔루션 배포(SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "38980025"
  SharePoint 2013용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구를 설치하는 방법은 [SharePoint용 파워 피벗 추가 기능 설치 또는 제거&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)를 참조하세요.  
   
 ##  <a name="bkmk_run_configuration_tool"></a> SharePoint 2013용 파워 피벗 구성 실행  
- **참고:** [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 설치 마법사는 [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]에 대한 두 가지 구성 도구를 설치합니다. 구성 파일은 각각 SharePoint의 다른 버전을 지원합니다.  
+ **참고:** [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 설치 마법사는 [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]에 대한 2개의 구성 파일을 설치합니다. 구성 파일은 각각 SharePoint의 다른 버전을 지원합니다.  
   
 |속성|Description|  
 |----------|-----------------|  
@@ -38,7 +38,7 @@ ms.locfileid: "38980025"
   
  **참고:** 다음 단계를 완료하려면 팜 관리자여야 합니다. 다음과 유사한 오류 메시지가 표시되는 경우  
   
--   "사용자가 팜 관리자가 아닙니다. 유효성 검사 오류를 처리하고 다시 시도하세요."  
+-   "사용자가 팜 관리자가 없습니다. 유효성 검사 오류를 처리하고 다시 시도하십시오."  
   
  SharePoint를 설치한 계정으로 로그인하거나 설치 계정을 SharePoint 중앙 관리 사이트의 주 관리자로 구성합니다.  
   
@@ -56,11 +56,11 @@ ms.locfileid: "38980025"
   
     3.  **암호**: 암호를 입력합니다. 새 SharePoint 팜을 만드는 경우 서버 또는 애플리케이션을 SharePoint 팜에 추가할 때마다 암호가 사용됩니다. 팜이 이미 있는 경우 서버 애플리케이션을 팜에 추가할 수 있는 암호를 입력합니다.  
   
-    4.  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서버**: [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint 모드 서버의 이름을 입력합니다. 단일 서버 배포에서 이는 데이터베이스 서버와 같습니다. `[ServerName]\powerpivot`  
+    4.  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Excel Services 용 서버**: [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint 모드 서버의 이름을 입력합니다. 단일 서버 배포에서 이는 데이터베이스 서버와 같습니다. `[ServerName]\powerpivot`  
   
-    5.  왼쪽 창에서 **사이트 모음 만들기** 를 클릭합니다. 이후 단계에서 참조할 수 있도록 **사이트 URL** 을 기록해 둡니다. SharePoint 서버가 아직 구성되지 않은 경우 구성 마법사가 웹 애플리케이션 및 사이트 모음 URL을 `http://[ServerName]`의 루트로 기본 설정합니다. 기본값을 수정하려면 왼쪽 창에서 **기본 웹 애플리케이션 만들기** 및 **웹 애플리케이션 솔루션 배포**페이지를 검토하세요.  
+    5.  왼쪽 창에서 **사이트 모음 만들기** 를 클릭합니다. 이후 단계에서 참조할 수 있도록 **사이트 URL** 을 기록해 둡니다. SharePoint 서버가 아직 구성되지 않은 경우 구성 마법사가 웹 애플리케이션 및 사이트 모음 URL을 `http://[ServerName]`의 루트로 기본 설정합니다. 왼쪽 창에서 **기본 웹 응용 프로그램 만들기** 고 **웹 응용 프로그램 솔루션 배포**  
   
-5.  필요에 따라 각 동작을 완료하는 데 사용되는 나머지 입력 값을 검토합니다. 동작의 세부 정보를 보고 검토하려면 왼쪽 창에서 각 동작을 클릭하세요. 각 동작에 대한 자세한 내용은 이 항목의 [SharePoint 2010용 파워 피벗 구성 또는 복구(파워 피벗 구성 도구)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046) 에서 "서버를 구성하는 데 사용되는 입력 값" 섹션을 참조하세요.  
+5.  필요에 따라 각 동작을 완료하는 데 사용되는 나머지 입력 값을 검토합니다. 동작의 세부 정보를 보고 검토하려면 왼쪽 창에서 각 동작을 클릭하세요. 각 동작에 대 한 자세한 내용은 섹션을 참조 하세요. "서버를 구성 하는 데 사용 되는 값 입력 [구성 또는 복구 (파워 피벗 구성 도구) SharePoint 2010 용 Powerpivot](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046) 이 항목의 합니다.  
   
 6.  선택적으로 지금 처리하지 않으려는 동작을 제거합니다. 예를 들어, Secure Store Service를 나중에 구성하려는 경우 **Secure Store Service 구성**을 클릭한 다음 **태스크 목록에 이 동작 포함**확인란의 선택을 취소합니다.  
   

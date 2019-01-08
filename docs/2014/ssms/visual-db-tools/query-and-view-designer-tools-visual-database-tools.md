@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.querydesigner
@@ -22,12 +22,12 @@ ms.assetid: 12e4b5a5-b793-4b6c-a0e5-c450c49bf26f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 85b7b24f7a4a21de9602f11c9f05a5882db3ba06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 639e6b7640f3463bfe100345d044437d619a5546
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173623"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781725"
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>쿼리 및 뷰 디자이너 도구(Visual Database Tools)
   쿼리, 뷰, 인라인 함수 또는 단일 문 저장 프로시저를 디자인할 때 사용하는 디자이너는 다이어그램 창, 조건 창, SQL 창 및 결과 창으로 구성됩니다.  

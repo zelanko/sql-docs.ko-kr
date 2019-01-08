@@ -13,15 +13,15 @@ ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0cdbb90bfbca6994a875a0653ee9d34c8e8ffb9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d62c0864678e116e30a0673bdf2625d70de0cedd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775771"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501780"
 ---
 # <a name="binding-parameters-odbc"></a>바인딩 매개 변수 ODBC
-SQL 문의 각 매개 변수에 연결 해야 합니다. 또는 *바인딩된* 문이 실행 되기 전에 응용 프로그램의 변수에 합니다. 해당 변수를 설명 응용 프로그램 변수에 매개 변수를 바인딩할 때-주소, C 데이터 형식 등과-드라이버입니다. 매개 변수 자체에 대해서도 설명-SQL 데이터 형식, 전체 자릿수 및 등입니다. 드라이버는 해당 문에 대 한 유지 관리 하 고 문이 실행 될 때 변수에서 값을 검색 하는 정보를 사용 하 여 구조에이 정보를 저장 합니다.  
+SQL 문의 각 매개 변수에 연결 해야 합니다. 또는 *바인딩된* 문이 실행 되기 전에 응용 프로그램의 변수에 합니다. 응용 프로그램 변수에 매개 변수를 바인딩할 때 해당 변수를-주소, C 데이터 형식 등과-드라이버를 설명 합니다. 또한 매개 변수 자체 SQL 데이터 형식, 전체 자릿수 및 등을 설명합니다. 드라이버는 해당 문에 대 한 유지 관리 하 고 문이 실행 될 때 변수에서 값을 검색 하는 정보를 사용 하 여 구조에이 정보를 저장 합니다.  
   
  매개 변수는 바인딩된 또는 문 실행 전에 언제 든 지 다시 바인딩할 수 있습니다. 문이 실행 된 후 매개 변수는 차츰 회복 되면서 문을 다시 실행 될 때까지 바인딩이 적용 되지 않습니다. 매개 변수를 다른 변수에 바인딩할 응용 프로그램 다시 바인딩합니다; 새 변수를 사용 하 여 매개 변수를 이전 바인딩은 자동으로 해제 됩니다.  
   

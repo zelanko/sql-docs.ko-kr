@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1a114fbb79ff3c6df57991f0db695f357d743adc
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: 2f6568e39b364b0e7d486e0d9e0318709141be63
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983468"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52402648"
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Power Pivot 인증 및 권한 부여
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "38983468"
 |팜 또는 서비스 관리자|서비스 및 애플리케이션 설치, 설정 및 구성<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드 사용 및 관리 보고서 보기|  
 |모든 권한|사이트 모음 수준에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 기능 통합 활성화<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 라이브러리 만들기<br /><br /> 데이터 피드 라이브러리 만들기|  
 |참가|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 추가, 편집, 삭제 및 다운로드<br /><br /> 데이터 새로 고침 구성<br /><br /> SharePoint 사이트에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 기반으로 새 통합 문서 및 보고서 만들기<br /><br /> 데이터 피드 라이브러리에서 데이터 서비스 문서 만들기|  
-|읽기|외부 데이터 원본으로 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 액세스(통합 문서 URL은 Excel의 데이터 연결 마법사와 같은 연결 대화 상자에서 명시적으로 입력)|  
+|읽기|액세스 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 있는 통합 문서의 URL을 명시적으로 (예: Excel의 데이터 연결 마법사)에 연결 대화 상자에서 입력, 외부 데이터 원본으로 통합 문서.|  
 |보기만|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 보기<br /><br /> 데이터 새로 고침 기록 보기<br /><br /> 로컬 통합 문서를 SharePoint 사이트의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 연결하여 해당 데이터를 다른 방식으로 용도 변경<br /><br /> 통합 문서의 스냅숏 다운로드. 스냅숏은 데이터의 정적 복사본이며 슬라이서, 필터, 수식 또는 데이터 연결을 포함하지 않습니다. 스냅숏의 콘텐츠는 브라우저 창에서 셀 값을 복사할 때와 비슷합니다.|  
   
 ##  <a name="excel"></a> Excel 서비스 보안 고려 사항: Power Pivot 통합 문서  
@@ -112,7 +112,7 @@ ms.locfileid: "38983468"
   
 ## <a name="see-also"></a>관련 항목  
  [Power Pivot 서비스 계정 구성](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
- [파워 피벗 구성 무인된 데이터 새로 고침 계정 (SharePoint 용 파워 피벗)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)   
+ [파워 피벗 무인 데이터 새로 고침 계정 구성(SharePoint용 파워 피벗)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)   
  [파워 피벗 사이트에 대한 신뢰할 수 있는 위치 만들기](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Power Pivot 보안 아키텍처](http://go.microsoft.com/fwlink/?linkID=220970)  
   

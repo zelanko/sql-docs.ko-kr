@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: ed7ee22d-c7c1-4a1e-a225-ec37a1ecfdaa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9829efbae81d3fdf982a8d3eae098f6eba89e0f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f93b2c40ca07f29a1751df5a79b8edd6da1b542d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206335"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764835"
 ---
 # <a name="sql-server-agent-ltservergt-sql-server-configuration-manager"></a>SQL Server 에이전트 &lt;server&gt;(SQL Server 구성 관리자)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 지원하는 서비스입니다. 이 서비스의 속성을 보려면 세부 정보 창에서 해당 서비스를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  

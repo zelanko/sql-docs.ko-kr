@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a9df35b685d9814636acaa194d5cb30741e9b994
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: fd7098e2a92ab2a18249e6566e1711637d2489ea
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122763"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807445"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>MDSModelDeploy를 사용하여 모델 배포 패키지 만들기
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 MDSModelDeploy 도구를 사용하여 패키지를 만들 수 있습니다. 지정한 명령에 따라 패키지는 다음 중 하나를 포함할 수 있습니다.  
@@ -100,7 +99,7 @@ ms.locfileid: "48122763"
 -   [MDSModelDeploy를 사용하여 모델 배포 패키지 배포](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [모델 배포 옵션 &#40;Master Data Services&#41;](../../2014/master-data-services/model-deployment-options-master-data-services.md)   
- [모델 배포 &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
+ [모델 배포 옵션&#40;Master Data Services&#41;](../../2014/master-data-services/model-deployment-options-master-data-services.md)   
+ [모델 배포&#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

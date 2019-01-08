@@ -14,12 +14,12 @@ ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a6654b7ec23e2aae071a7e4ce6cd360b7ef10e4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 292baa254bffc16650376dbbc30e7193b8bc367c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107493"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358825"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>사용자 지정 보고서 항목 디자인 타임 구성 요소 만들기
   사용자 지정 보고서 항목 디자인 타임 구성 요소는 Visual Studio 보고서 디자이너 환경에서 사용할 수 있는 컨트롤입니다. 사용자 지정 보고서 항목 디자인 타임 구성 요소는 끌어서 놓기 작업이 가능하고 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 속성 브라우저와 통합되고 사용자 지정 속성 편집기를 제공하는 활성화된 디자인 화면을 제공합니다.  
@@ -29,9 +29,9 @@ ms.locfileid: "48107493"
  개발 환경에서 디자인 타임 구성 요소를 사용하여 설정된 속성은 호스트 디자인 환경에 의해 serialize 및 deserialize된 다음 RDL(Report Definition Language) 파일에 요소로 저장됩니다. 보고서 처리기에 의해 보고서가 실행되면, 디자인 타임 구성 요소를 사용하여 설정된 속성을 보고서 처리기가 사용자 지정 보고서 항목 런타임 구성 요소로 전달하고, 이 런타임 구성 요소는 사용자 지정 보고서 항목을 렌더링한 뒤 다시 보고서 처리기로 전달합니다.  
   
 > [!NOTE]  
->  사용자 지정 보고서 항목 디자인 타임 구성 요소는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 구성 요소로 구현됩니다. 이 문서에서는 사용자 지정 보고서 항목 디자인 타임 구성 요소와 관련된 구현 세부 사항을 설명합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 구성 요소를 개발하는 방법은 MSDN 라이브러리에서 [Visual Studio의 구성 요소](http://go.microsoft.com/fwlink/?LinkId=116576)를 참조하십시오.  
+>  사용자 지정 보고서 항목 디자인 타임 구성 요소는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 구성 요소로 구현됩니다. 이 문서에서는 사용자 지정 보고서 항목 디자인 타임 구성 요소와 관련된 구현 세부 사항을 설명합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 구성 요소를 개발하는 방법은 MSDN 라이브러리에서 [Visual Studio의 구성 요소](https://go.microsoft.com/fwlink/?LinkId=116576)를 참조하십시오.  
   
- 완전히 구현된 사용자 지정 보고서 항목 예는 [SQL Server Reporting Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.  
+ 완전히 구현된 사용자 지정 보고서 항목 예는 [SQL Server Reporting Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.  
   
 ## <a name="implementing-a-design-time-component"></a>디자인 타임 구성 요소 구현  
  사용자 지정 보고서 항목 디자인 타임 구성 요소의 주 클래스는 `Microsoft.ReportDesigner.CustomReportItemDesigner` 클래스에서 상속됩니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 컨트롤에 사용된 표준 특성 외에, 구성 요소 클래스에서 `CustomReportItem` 특성을 정의해야 합니다. 이 특성은 reportserver.config 파일에 정의된 사용자 지정 보고서 항목의 이름과 일치해야 합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 특성 목록은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK 설명서에서 "특성(Attributes)"을 참조하십시오.  
@@ -154,7 +154,7 @@ private void EditableCombo_SelectedIndexChanged(object sender,
 ```  
   
 ### <a name="using-designer-verbs"></a>디자이너 동사 사용  
- 디자이너 동사는 이벤트 처리기에 연결된 메뉴 명령입니다. 사용자 지정 보고서 항목 런타임 컨트롤이 디자인 환경에서 사용될 때 구성 요소의 바로 가기 메뉴에 표시할 디자이너 동사를 추가할 수 있습니다. `Verbs` 속성을 사용하여 런타임 구성 요소에서 사용 가능한 디자이너 동사 목록을 반환할 수 있습니다.  
+ 디자이너 동사는 이벤트 처리기에 연결 된 메뉴 명령입니다. 사용자 지정 보고서 항목 런타임 컨트롤이 디자인 환경에서 사용될 때 구성 요소의 바로 가기 메뉴에 표시할 디자이너 동사를 추가할 수 있습니다. `Verbs` 속성을 사용하여 런타임 구성 요소에서 사용 가능한 디자이너 동사 목록을 반환할 수 있습니다.  
   
  다음 코드 예제는 <xref:System.ComponentModel.Design.DesignerVerbCollection>에 추가할 디자이너 동사 및 이벤트 처리기와 이벤트 처리기 코드를 보여 줍니다.  
   
@@ -186,7 +186,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>도구 영역(adornment) 사용  
- 사용자 지정 보고서 항목 클래스는 `Microsoft.ReportDesigner.Design.Adornment` 클래스도 구현할 수 있습니다. 도구 영역(adornment)을 사용하면 사용자 지정 보고서 항목 컨트롤의 주 사각형 디자인 화면 바깥에 일정 영역이 생깁니다. 이 영역은 마우스 클릭 및 끌어서 놓기 작업과 같은 사용자 인터페이스 이벤트를 처리할 수 있습니다. `Adornment` 에 정의 된 클래스를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner` 네임 스페이스의 통과 구현입니다는 <xref:System.Windows.Forms.Design.Behavior.Adorner> Windows Forms에 있는 클래스입니다. 에 대 한 전체 설명서는 `Adorner` 클래스를 참조 하십시오 [동작 서비스 개요](http://go.microsoft.com/fwlink/?LinkId=116673) MSDN 라이브러리에서. 구현 하는 샘플 코드를 `Microsoft.ReportDesigner.Design.Adornment` 클래스를 참조 하십시오 [SQL Server Reporting Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=177889)합니다.  
+ 사용자 지정 보고서 항목 클래스는 `Microsoft.ReportDesigner.Design.Adornment` 클래스도 구현할 수 있습니다. 도구 영역(adornment)을 사용하면 사용자 지정 보고서 항목 컨트롤의 주 사각형 디자인 화면 바깥에 일정 영역이 생깁니다. 이 영역은 마우스 클릭 및 끌어서 놓기 작업과 같은 사용자 인터페이스 이벤트를 처리할 수 있습니다. `Adornment` 에 정의 된 클래스를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner` 네임 스페이스의 통과 구현입니다는 <xref:System.Windows.Forms.Design.Behavior.Adorner> Windows Forms에 있는 클래스입니다. 에 대 한 전체 설명서는 `Adorner` 클래스를 참조 하십시오 [동작 서비스 개요](https://go.microsoft.com/fwlink/?LinkId=116673) MSDN 라이브러리에서. 구현 하는 샘플 코드를 `Microsoft.ReportDesigner.Design.Adornment` 클래스를 참조 하십시오 [SQL Server Reporting Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=177889)합니다.  
   
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 Windows Forms를 프로그래밍하고 사용하는 방법은 MSDN Library에서 다음 항목을 참조하십시오.  
   
@@ -196,7 +196,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 -   연습: Visual Studio의 디자인 타임 기능을 사용하는 Windows Forms 컨트롤 만들기  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [사용자 지정 보고서 항목 아키텍처](custom-report-item-architecture.md)   
  [사용자 지정 보고서 항목 런타임 구성 요소 만들기](creating-a-custom-report-item-run-time-component.md)   
  [사용자 지정 보고서 항목 클래스 라이브러리](custom-report-item-class-libraries.md)   

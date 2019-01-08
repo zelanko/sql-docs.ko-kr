@@ -19,12 +19,12 @@ ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 517c96deaf37934e82c1161c66b8e5825d1b14b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cbdd0a1394114e3fdef0511c7ed14658f7dd9b0
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780451"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52406410"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>SSMA 콘솔 실행(SybaseToSQL)
 Microsoft 파일 명령을 실행 하 고 제어 SSMA 활동을 스크립트의 강력한 집합을 제공 합니다. 결과 섹션을 자세히 설명 동일 합니다.  
@@ -57,7 +57,7 @@ Microsoft 파일 명령을 실행 하 고 제어 SSMA 활동을 스크립트의 
   
   overwrite-if-exists="<true/false>" (optional)  
   
-   project-type=”<sql-server-2008/sql-server-2005/sql-server-2012/sql-server-2014/sql-azure>”  
+   project-type="<sql-server-2008/sql-server-2005/sql-server-2012/sql-server-2014/sql-azure>"  
 />  
 ```  
 ' 덮어쓰기--있는 경우 ' 특성은 **false** 기본적으로 합니다.  
@@ -136,7 +136,7 @@ Microsoft 파일 명령을 실행 하 고 제어 SSMA 활동을 스크립트의 
 **구문 예제:**  
   
 ```xml  
-<force-load metabase=”<source/target>” >  
+<force-load metabase="<source/target>" >  
   
   <metabase-object object-name="<object-name>"/>  
   
@@ -219,7 +219,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
   
   object-type="<object-category>"  
   
-  write-summary-report-to="<file-name/folder-name>”             (optional)  
+  write-summary-report-to="<file-name/folder-name>"             (optional)  
   
   verbose="<true/false>"                       (optional)  
   
@@ -370,7 +370,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
 마이그레이션 준비 명령 소스 및 대상 데이터베이스 간의 스키마 매핑을 시작합니다.  
   
 > [!NOTE]  
-> 마이그레이션 명령에 대 한 설정 기본 콘솔 출력은 'Full' 출력 보고서 없습니다 자세한 오류 보고와:만 원본 개체 트리의 루트 노드에서 요약 합니다.  
+> 마이그레이션 명령에 대 한 설정 기본 콘솔 출력은 'Full' 출력 보고서와 자세한 오류 보고 하지 않습니다. 원본 개체 트리의 루트 노드에서 요약 합니다.  
   
 ### <a name="map-schema"></a>map-schema  
 이 명령은 원본 데이터베이스를 대상 스키마의 스키마 매핑을 제공합니다.  
@@ -391,7 +391,7 @@ sql-server-schema="<target-schema>"/>
 관리 효율성 명령 도움말 원본 데이터베이스와 대상 데이터베이스 개체를 동기화 합니다.  
   
 > [!NOTE]  
-> 마이그레이션 명령에 대 한 설정 기본 콘솔 출력은 'Full' 출력 보고서 없습니다 자세한 오류 보고와:만 원본 개체 트리의 루트 노드에서 요약 합니다.  
+> 마이그레이션 명령에 대 한 설정 기본 콘솔 출력은 'Full' 출력 보고서와 자세한 오류 보고 하지 않습니다. 원본 개체 트리의 루트 노드에서 요약 합니다.  
   
 ### <a name="synchronize-target"></a>동기화 대상  
 이 명령은 대상 데이터베이스를 사용 하 여 대상 개체를 동기화합니다.  

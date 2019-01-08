@@ -20,22 +20,22 @@ ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1896ec473caf1af8a3fa2bdaa4156ddca3c0a6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e8844d3152f9465c8bb61acca9351f58834087f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697052"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204042"
 ---
 # <a name="sqlextendedfetch-function"></a>SQLExtendedFetch 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수: 사용 되지 않음  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. 사용되지 않음  
   
  **요약**  
  **SQLExtendedFetch** 결과 집합에서 데이터의 지정 된 행 집합을 인출 하 고 모든 바인딩된 열에 대 한 데이터를 반환 합니다. 절대 또는 상대 위치 또는 책갈피 별로 행 집합을 지정할 수 있습니다.  
   
-> [!NOTE]  
->  ODBC 3에서 *.x*하십시오 **SQLExtendedFetch** 바뀌었습니다 **SQLFetchScroll**합니다. ODBC 3 *.x* 응용 프로그램을 호출 하지 않아야 **SQLExtendedFetch**; 대신 호출 해야 **SQLFetchScroll**합니다. 드라이버 관리자 매핑합니다 **SQLFetchScroll** 하 **SQLExtendedFetch** 는 ODBC 2를 사용 하 여 작업 하는 경우 *.x* 드라이버입니다. ODBC 3 *.x* 드라이버를 지원 해야 **SQLExtendedFetch** ODBC 2를 사용 하는 경우 *.x* 호출 하는 응용 프로그램입니다. 자세한 내용은 "설명"을 참조 하세요. 및 [블록 커서, 스크롤 가능 커서 및 이전 버전과 호환성](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) 이전 버전과 호환성에 대 한 부록 g: 드라이버 지침입니다.  
+> [!NOTE]
+>  ODBC 3에서 *.x*하십시오 **SQLExtendedFetch** 바뀌었습니다 **SQLFetchScroll**합니다. ODBC 3 *.x* 응용 프로그램을 호출 하지 않아야 **SQLExtendedFetch**; 대신 호출 해야 **SQLFetchScroll**합니다. 드라이버 관리자 매핑합니다 **SQLFetchScroll** 하 **SQLExtendedFetch** 는 ODBC 2를 사용 하 여 작업 하는 경우 *.x* 드라이버입니다. ODBC 3 *.x* 드라이버를 지원 해야 **SQLExtendedFetch** ODBC 2를 사용 하는 경우 *.x* 호출 하는 응용 프로그램입니다. 자세한 내용은 "설명"을 참조 하세요. 및 [블록 커서, 스크롤 가능 커서 및 이전 버전과 호환성](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) 부록 g:에서 이전 버전과 호환성에 대 한 드라이버 지침입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -65,7 +65,7 @@ SQLRETURN SQLExtendedFetch(
  *RowStatusArray*  
  [출력] 각 행의 상태를 반환 하는 배열에 대 한 포인터입니다. 이 배열은 SQL_ATTR_ROW_STATUS_PTR 문 특성에 지정 된 배열과 같은 방식으로 사용 됩니다.  
   
- 그러나이 배열의 주소 SQL_DESC_STATUS_ARRAY_PTR IRD 필드에 저장 되지 않습니다. 게다가이 배열 에서만 사용 됩니다 **SQLExtendedFetch** 버전과 **SQLBulkOperations** 사용 하 여는 *작업* SQL_ADD의 또는 **SQLSetPos**한 후 호출 되는 경우 **SQLExtendedFetch**합니다. 사용 되지 않습니다 **SQLFetch** 또는 **SQLFetchScroll**, 및에서 사용 되지 않습니다 **SQLBulkOperations** 하거나 **SQLSetPos** 후 호출 될 때 **SQLFetch** 하거나 **SQLFetchScroll**합니다. 것도 하지 사용 되는 경우 **SQLBulkOperations** 사용 하 여는 *작업* SQL_ADD의는 모든 fetch 함수를 호출 하기 전에 호출 됩니다. 즉, S7 문 상태 에서만에서 사용 됩니다. S5 또는 S6 문 상태는 사용 되지 않습니다. 자세한 내용은 [문 전환](../../../odbc/reference/appendixes/statement-transitions.md) 부록 b: ODBC 상태 전환 표에 합니다.  
+ 그러나이 배열의 주소 SQL_DESC_STATUS_ARRAY_PTR IRD 필드에 저장 되지 않습니다. 게다가이 배열 에서만 사용 됩니다 **SQLExtendedFetch** 버전과 **SQLBulkOperations** 사용 하 여는 *작업* SQL_ADD의 또는 **SQLSetPos**한 후 호출 되는 경우 **SQLExtendedFetch**합니다. 사용 되지 않습니다 **SQLFetch** 또는 **SQLFetchScroll**, 및에서 사용 되지 않습니다 **SQLBulkOperations** 하거나 **SQLSetPos** 후 호출 될 때 **SQLFetch** 하거나 **SQLFetchScroll**합니다. 것도 하지 사용 되는 경우 **SQLBulkOperations** 사용 하 여는 *작업* SQL_ADD의는 모든 fetch 함수를 호출 하기 전에 호출 됩니다. 즉, S7 문 상태 에서만에서 사용 됩니다. S5 또는 S6 문 상태는 사용 되지 않습니다. 자세한 내용은 [문 전환](../../../odbc/reference/appendixes/statement-transitions.md) 부록 b: ODBC 상태 전환 테이블입니다.  
   
  응용 프로그램에 대 한 유효한 포인터를 제공 해야 합니다 *RowStatusArray* 인수입니다; 그렇지 않은 경우의 동작 **SQLExtendedFetch** 에 대 한 호출의 동작 및 **SQLBulkOperations**나 **SQLSetPos** 커서에서 배치 된 후 **SQLExtendedFetch** 정의 되지 않습니다.  
   
@@ -86,7 +86,7 @@ SQLRETURN SQLExtendedFetch(
 |07009|잘못 된 설명자 인덱스입니다.|열 0이 사용 하 여 바인딩된 **SQLBindCol**, SQL_ATTR_USE_BOOKMARKS 문 특성 SQL_UB_OFF로 설정 되었습니다.|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버는 연결 된 데이터 원본 간의 통신 링크 하지 못했습니다.|  
 |22002|지표 변수가 필요 하지만 제공 되지|NULL 데이터가 페치된 열을 갖는 *StrLen_or_IndPtr* 설정한 **SQLBindCol** 가 null 포인터입니다.<br /><br /> (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
-|22003|숫자 값 범위를 벗어났습니다.|하나 이상의 열에 대 한 숫자 값 (숫자 또는 문자열)으로 반환 되 었어야 하지만 (소수) 대신 전체 부분 숫자를 자를 수입니다.<br /><br /> (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)<br /><br /> 자세한 내용은 [간격 및 숫자 데이터 형식에 대 한 지침](../../../odbc/reference/appendixes/guidelines-for-interval-and-numeric-data-types.md) 부록 d: 데이터 형식에서입니다.|  
+|22003|숫자 값 범위를 벗어났습니다.|하나 이상의 열에 대 한 숫자 값 (숫자 또는 문자열)으로 반환 되 었어야 하지만 (소수) 대신 전체 부분 숫자를 자를 수입니다.<br /><br /> (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)<br /><br /> 자세한 내용은 [간격 및 숫자 데이터 형식에 대 한 지침](../../../odbc/reference/appendixes/guidelines-for-interval-and-numeric-data-types.md) 부록 d: 데이터 형식입니다.|  
 |22007|잘못 된 날짜/시간 형식|결과 집합의 문자 열 된 날짜, 시간 또는 타임 스탬프 C 구조에 바인딩되며 열에 값을 각각는 잘못 된 날짜, 시간 또는 타임 스탬프입니다.<br /><br /> (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |22012|0으로 나누기|산술 식에서 값을 반환한, 부서에서 발생 하는 0입니다.<br /><br /> (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |22015|간격 필드 오버플로|정확한 수치 또는 간격 SQL 형식에서 C 간격 유형을 할당 선행 필드에 유효 자릿수 손실이 발생 합니다.<br /><br /> 간격 C 형식으로 데이터를 인출할 때 C 간격 유형으로 SQL 형식의 값 표현 방식이 없기 있었습니다.<br /><br /> (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
@@ -121,7 +121,7 @@ SQLRETURN SQLExtendedFetch(
   
 -   **SQLExtendedFetch** 바인딩 오프셋 (SQL_ATTR_ROW_BIND_OFFSET_PTR 문 특성)를 지원 하지 않습니다.  
   
--   에 대 한 호출 **SQLExtendedFetch** 를 호출 하 여 혼합할 수 없습니다 **SQLFetch** 또는 **SQLFetchScroll**, 경우에 **SQLBulkOperations** 라고 모든 인출 함수를 호출 하기 전에 **SQLExtendedFetch** 커서를 닫았다가 다시 열 때까지 호출할 수 없습니다. 즉, **SQLExtendedFetch** 문 상태 S7 에서만에서 호출할 수 있습니다. 자세한 내용은 [문 전환](../../../odbc/reference/appendixes/statement-transitions.md) 부록 b: ODBC 상태 전환 표에 합니다.  
+-   에 대 한 호출 **SQLExtendedFetch** 를 호출 하 여 혼합할 수 없습니다 **SQLFetch** 또는 **SQLFetchScroll**, 경우에 **SQLBulkOperations** 라고 모든 인출 함수를 호출 하기 전에 **SQLExtendedFetch** 커서를 닫았다가 다시 열 때까지 호출할 수 없습니다. 즉, **SQLExtendedFetch** 문 상태 S7 에서만에서 호출할 수 있습니다. 자세한 내용은 [문 전환](../../../odbc/reference/appendixes/statement-transitions.md) 부록 b: ODBC 상태 전환 테이블입니다.  
   
  응용 프로그램을 호출할 때 **SQLFetchScroll** 는 ODBC 2를 사용 하는 동안 *.x* 드라이버를 드라이버 관리자는이 호출을 매핑합니다 **SQLExtendedFetch**합니다. 자세한 내용은 "SQLFetchScroll 및 ODBC 2 *.x* 드라이버"에서 [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)합니다.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,19 +14,19 @@ ms.assetid: 8e22de84-8890-414a-93e4-aebfaa057d7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da29dbf3dae76490fc1a34867006ce82775cd2b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 6c025a899b426de714fb522218467e8d4cf805b6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063083"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374345"
 ---
 # <a name="showplan-xml-event-class"></a>Showplan XML 이벤트 클래스
   Showplan XML 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 SQL 문을 실행할 때 발생합니다. Showplan 연산자를 식별하려면 Showplan XML 이벤트 클래스를 포함시키십시오. 이 이벤트 클래스는 각 이벤트를 정의된 XML 문서로 저장합니다.  
   
  Showplan XML 이벤트 클래스가 추적에 포함되어 있는 경우 오버헤드로 인해 성능이 크게 저하될 수 있습니다. Showplan XML은 쿼리가 최적화될 때 생성되는 쿼리 계획을 저장합니다. 오버헤드 발생을 최소화하려면 이 이벤트 클래스의 용도를 특정 문제를 단기간 모니터링하는 추적으로 제한하십시오.  
   
- Showplan XML 문서는 연관된 스키마를 갖습니다. 이 스키마는 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=41740)에서 찾을 수 있으며 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 시 생성됩니다.  
+ Showplan XML 문서는 연관된 스키마를 갖습니다. 이 스키마는 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=41740)에서 찾을 수 있으며 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 시 생성됩니다.  
   
 ## <a name="showplan-xml-event-class-data-columns"></a>Showplan XML 이벤트 클래스 데이터 열  
   

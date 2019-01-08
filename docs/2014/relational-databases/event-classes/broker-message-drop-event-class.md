@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -16,12 +15,12 @@ ms.assetid: f532b7c9-ca34-4bac-8dc3-53f9895fd6af
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 03885ddd91a5c0c99516ee692f50626c1f0b5b3b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: d1aadd84d42f797026323023b0cf5be27d01d693
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132673"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810435"
 ---
 # <a name="brokermessage-undeliverable-event-class"></a>Broker:Message Undeliverable 이벤트 클래스
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 Service Broker가 이 인스턴스의 서비스에 배달되어야 하는 수신 메시지를 보관할 수 없는 경우 **Broker:Message Undeliverable** 이벤트를 생성합니다. 전달되어야 하는 메시지는 [Broker:Forwarded Message Dropped 이벤트 클래스](broker-forwarded-message-dropped-event-class.md)를 참조하세요.  

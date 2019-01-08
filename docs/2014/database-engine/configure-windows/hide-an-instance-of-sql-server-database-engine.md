@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/19/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], hiding instances
@@ -14,12 +13,12 @@ ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 04bebf8440d039dd228006a252006b6f687fae08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 631d55e1f8921601f25f2b2d8a14f00d11bd0947
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093363"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356771"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진의 인스턴스 숨기기
   이 항목에서는 SQL Server 구성 관리자를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스를 숨기는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 사용하여 컴퓨터에 설치된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스를 열거합니다. 이렇게 하면 클라이언트 애플리케이션에서 서버를 검색하고 클라이언트가 같은 컴퓨터에 있는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 여러 인스턴스를 구분할 수 있습니다. 다음 절차를 통해 SQL Server Browser 서비스에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 찾아보기 **단추를 사용하여 인스턴스를 찾으려고 하는 클라이언트 컴퓨터에** 인스턴스를 노출하지 않도록 할 수 있습니다.  
@@ -37,15 +36,15 @@ ms.locfileid: "48093363"
   자세한 내용은 [특정 TCP 포트로 수신하도록 서버 구성&#40;SQL Server 구성 관리자&#41;](configure-a-server-to-listen-on-a-specific-tcp-port.md)을 참조하세요.  
   
 ### <a name="clustering"></a>Clustering  
- 클러스터된 명명된 인스턴스를 숨기면 클러스터 서비스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하지 못할 수도 있습니다. 이렇게 되면 클러스터 인스턴스의 **IsAlive** 검사가 실패하게 되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 오프라인 상태가 됩니다. 인스턴스에 대해 구성한 정적 포트를 반영하도록 클러스터된 인스턴스의 모든 노드에서 별칭을 만드는 것이 좋습니다.  
+ 클러스터된 명명된 인스턴스를 숨기면 클러스터 서비스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하지 못할 수도 있습니다. 이렇게 되면 클러스터 인스턴스의 **IsAlive** 검사가 실패하게 되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은(는) 오프라인 상태가 됩니다. 인스턴스에 대해 구성한 정적 포트를 반영하도록 클러스터된 인스턴스의 모든 노드에서 별칭을 만드는 것이 좋습니다.  
  자세한 내용은 [클라이언트에서 사용할 서버 별칭 만들기 또는 삭제&#40;SQL Server 구성 관리자&#41;](create-or-delete-a-server-alias-for-use-by-a-client.md)를 참조하세요.  
   
  클러스터된 명명된 인스턴스를 숨기면 **LastConnect** 레지스트리 키(**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI11.0\LastConnect**)에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 수신 중인 포트가 아닌 다른 포트가 있는 경우 클러스터 서비스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하지 못할 수도 있습니다. 클러스터 서비스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 수 없는 경우 다음과 유사한 오류가 표시될 수 있습니다.  
-**Event ID: 1001: Event Name: Failover clustering resource deadlock.**  
+**이벤트 ID: 1001: 이벤트 이름: 장애 조치 클러스터링 리소스 교착 상태가 발생 합니다.**  
   
 ## <a name="see-also"></a>관련 항목  
  [서버 네트워크 구성](server-network-configuration.md)   
  [SQL 가상 서버 클라이언트 연결에 대한 설명(영문)](https://support.microsoft.com/kb/273673)   
- [SQL Server라고 명명된 인스턴스에 정적 포트를 할당하고 일반적인 문제를 방지하는 방법(영문)](http://blogs.msdn.com/b/arvindsh/archive/2012/09/08/how-to-assign-a-static-port-to-a-sql-server-named-instance-and-avoid-a-common-pitfall.aspx)  
+ [SQL Server라고 명명된 인스턴스에 정적 포트를 할당하고 일반적인 문제를 방지하는 방법(영문)](https://blogs.msdn.com/b/arvindsh/archive/2012/09/08/how-to-assign-a-static-port-to-a-sql-server-named-instance-and-avoid-a-common-pitfall.aspx)  
   
   

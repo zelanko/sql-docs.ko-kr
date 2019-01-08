@@ -1,7 +1,7 @@
 ---
 title: sys.query_store_query_text (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,15 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22691879e773939f1c70260460434ee04030f3da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8b5fe04b5852eeebc858067505eaa0342ad8cb87
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747147"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712244"
 ---
 # <a name="sysquerystorequerytext-transact-sql"></a>sys.query_store_query_text (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   포함 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 텍스트 및 쿼리의 SQL 핸들입니다.  
   

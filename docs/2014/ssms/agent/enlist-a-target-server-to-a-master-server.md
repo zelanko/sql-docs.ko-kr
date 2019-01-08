@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - enlisting target servers [SQL Server]
@@ -16,12 +16,12 @@ ms.assetid: 7633adb5-d140-4e58-a8f2-5b4b50c2f95b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 298a3045cc9fc51664c77fcc28d89c95d30fd6fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f3d0d91de95e82fcd174aa9290e208afda5bef91
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085633"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786215"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>마스터 서버에 대상 서버 등록
   이 항목에서는 대상 서버를 다중 서버 관리 구성에 추가하는 방법에 대해 설명합니다. 이 절차는 마스터 서버에서 실행하십시오. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]또는 SMO(SQL Server 관리 개체)를 사용합니다.  

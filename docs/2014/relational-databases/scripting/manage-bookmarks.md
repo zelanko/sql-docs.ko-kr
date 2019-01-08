@@ -7,20 +7,18 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.BookmarkWindow
 helpviewer_keywords:
 - bookmarks [SQL Server Management Studio]
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f79c1074d829697b996de532bff777ea0df0733
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76105982e4a1655fcb91e8432ea69bcee658a7fd
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208263"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328673"
 ---
 # <a name="manage-bookmarks"></a>책갈피 관리
   코드 편집기에서 작업하는 동안 **책갈피** 창을 사용하여 문서 내의 특정 코드 행에 대한 링크를 만들 수 있습니다. 이 창은 **보기** 메뉴에서 표시할 수 있습니다.  
@@ -93,7 +91,5 @@ ms.locfileid: "48208263"
  **모든 책갈피 사용/모든 책갈피 사용 안 함**  
  **책갈피** 창의 모든 책갈피에 대한 확인란을 선택하거나 확인란의 선택을 취소합니다. 책갈피를 제거하거나 책갈피가 표시된 코드 행을 변경하지는 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Management Studio 바로 가기 키](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  

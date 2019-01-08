@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server], updating
@@ -15,12 +15,12 @@ ms.assetid: 178b7b75-8078-4e61-b2a8-4719b9d8033d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: effed5e1e6384c828e4b18bcf3433d06a5509ea5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 47951e101a5f8f480496c8570a22cd1a950b3309
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125223"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821747"
 ---
 # <a name="create-update-queries-visual-database-tools"></a>업데이트 쿼리 만들기(Visual Database Tools)
   업데이트 쿼리를 사용하면 한 번의 작업으로 여러 행의 내용을 변경할 수 있습니다. 예를 들어 `titles` 테이블에서 업데이트 쿼리를 사용하여 특정 출판사의 모든 책 가격에 10%를 추가할 수 있습니다.  

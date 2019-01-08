@@ -21,12 +21,12 @@ ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a36ad2d94982a0e536f223ceff187a04632baa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e8182a0fca11105541f8dd435f352ba0d393731
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647051"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391656"
 ---
 # <a name="sysspxtpbinddbresourcepool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ Resource pool 'Pool_Hekaton' does not exist or resource governor has not been re
 ```  
   
 **Pool_name 예약 된 시스템 풀을 가리킵니다.**  
- 풀 이름 "INTERNAL"과 "DEFAULT"는 시스템 풀용으로 예약되어 있습니다.  이들 중 하나에 데이터베이스를 명시적으로 바인딩할 수 없습니다.  시스템 풀 이름을 입력하면 다음 오류가 반환됩니다.  
+ 풀 이름 "INTERNAL"과 "DEFAULT"는 시스템 풀에 예약 되어 있습니다.  이들 중 하나에 데이터베이스를 명시적으로 바인딩할 수 없습니다.  시스템 풀 이름을 입력하면 다음 오류가 반환됩니다.  
 *리소스 풀 %%s는 시스템 리소스 풀입니다.  이 절차를 사용 하 여 데이터베이스에 시스템 리소스 풀을 명시적으로 바인딩할 수 있습니다.*  
   
 ```  
@@ -153,7 +153,7 @@ END
 -   CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [데이터베이스를 리소스 풀에 바인딩하는 방법에 대한 지침은](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [sys.sp_xtp_unbind_db_resource_pool &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
   
   

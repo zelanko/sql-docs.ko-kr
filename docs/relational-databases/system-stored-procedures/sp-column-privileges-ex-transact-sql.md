@@ -18,12 +18,12 @@ ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9f86f83637cbf71dd128dd262ad1621b2d58270
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b79fbbd504f7294835e92401a2210e6acac3c440
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658665"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514019"
 ---
 # <a name="spcolumnprivilegesex-transact-sql"></a>sp_column_privileges_ex(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,19 +44,19 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@table_server =** ] **'***table_server***'**  
+ [  **@table_server =** ] **'**_table_server_**'**  
  정보가 반환될 연결된 서버의 이름입니다. *table_server* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@table_name =** ] **'***table_name***'**  
+ [  **@table_name =** ] **'**_table_name_**'**  
  지정된 열이 포함된 테이블의 이름입니다. *table_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@table_schema =** ] **'***table_schema***'**  
+ [  **@table_schema =** ] **'**_table_schema_**'**  
  테이블 스키마입니다. *table_schema* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@table_catalog =** ] **'***table_catalog***'**  
+ [  **@table_catalog =** ] **'**_table_catalog_**'**  
  데이터베이스의 이름이 지정 된 *table_name* 상주 합니다. *table_catalog* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@column_name =** ] **'***column_name***'**  
+ [  **@column_name =** ] **'**_column_name_**'**  
  권한 정보를 제공할 대상 열의 이름입니다. *column_name* 됩니다 **sysname**, 기본값은 NULL (모두 공통)를 사용 하 여 합니다.  
   
 ## <a name="result-sets"></a>결과 집합  
@@ -64,7 +64,7 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|테이블 한정자 이름입니다. 다양 한 DBMS 제품에서는 테이블에 대해 세 부분으로 이루어진 이름 (*한정자 ***.*** 소유자 ***.*** 이름*). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다. 이 필드는 NULL이 될 수 있습니다.|  
+|**TABLE_CAT**|**sysname**|테이블 한정자 이름입니다. 다양 한 DBMS 제품에서는 테이블에 대해 세 부분으로 이루어진 이름 (_한정자_**.** _소유자_**.** _이름을_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다. 이 필드는 NULL이 될 수 있습니다.|  
 |**TABLE_SCHEM 순**|**sysname**|테이블 소유자 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 테이블을 만든 데이터베이스 사용자의 이름을 나타냅니다. 이 필드는 항상 값을 반환합니다.|  
 |**TABLE_NAME**|**sysname**|테이블 이름입니다. 이 필드는 항상 값을 반환합니다.|  
 |**COLUMN_NAME**|**sysname**|각 열에 대 한 열 이름에는 **TABLE_NAME** 반환 합니다. 이 필드는 항상 값을 반환합니다.|  
@@ -86,7 +86,7 @@ EXEC sp_column_privileges_ex @table_server = 'Seattle1',
    @table_catalog ='AdventureWorks2012';  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [sp_table_privileges_ex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-ex-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

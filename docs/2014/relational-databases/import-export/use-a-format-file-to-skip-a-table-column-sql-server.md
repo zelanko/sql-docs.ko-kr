@@ -13,12 +13,12 @@ ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bc1101225eae5fd02eec2ee7c29e8ca21a778370
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bf80986582802ad70c39d62ae0fbb835fcb360e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188223"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373135"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>서식 파일을 사용하여 테이블 열 건너뛰기(SQL Server)
   이 항목에서는 서식 파일에 대해 설명합니다. 필드가 데이터 파일에 없는 경우 서식 파일을 사용하여 테이블 열 가져오기를 건너뛸 수 있습니다. 건너뛴 열이 Null을 허용하거나 기본값을 가질 경우에만 데이터 파일에 테이블의 열 수보다 적은 수의 필드가 있을 수 있습니다.  
@@ -134,7 +134,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="7"/>  
   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -156,7 +156,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
   
 ```  
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>  
   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
@@ -204,7 +204,7 @@ WITH (FORMATFILE='C:\myTestSkipCol2.xml');
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   

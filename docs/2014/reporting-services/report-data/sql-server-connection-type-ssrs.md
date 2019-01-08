@@ -11,12 +11,12 @@ ms.assetid: 957e7091-e08f-48d2-9506-872227ae8b20
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 30af34c41cbea7d28e78d2684ce2aa316b116b39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 0776274cfdae3e4f891ad2dc60e123f0bf9d1e64
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196983"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53352265"
 ---
 # <a name="sql-server-connection-type-ssrs"></a>SQL Server 연결 형식(SSRS)
   보고서에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 데이터를 포함하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]유형의 보고서 데이터 원본을 기반으로 하는 데이터 집합이 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 확장 프로그램을 기반으로 합니다. 이 데이터 원본 유형을 사용하여 현재 버전 및 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하고 이 데이터베이스에서 데이터를 검색할 수 있습니다.  
@@ -49,7 +49,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
   
 -   사용자에게 자격 증명을 입력하도록 메시지 표시 이 옵션은 Windows 통합 보안만 지원합니다.  
   
--   자격 증명 필요 없음. 이 옵션을 사용하려면 보고서 서버에서 무인 실행 계정을 구성해야 합니다. 자세한 내용은 msdn.microsoft.com의 [Reporting Services 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에서 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.  
+-   자격 증명 필요 없음. 이 옵션을 사용하려면 보고서 서버에서 무인 실행 계정을 구성해야 합니다. 자세한 내용은 msdn.microsoft.com의 [Reporting Services 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에서 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.  
   
  자세한 내용은 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) 하거나 [보고서 작성기에 자격 증명 지정](../specify-credentials-in-report-builder.md)합니다.  
   
@@ -113,7 +113,7 @@ WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'
   
  저장 프로시저에 기본값을 사용하는 매개 변수가 있는 경우 매개 변수의 값으로 DEFAULT 키워드를 사용하여 해당 값에 액세스할 수 있습니다. 쿼리 매개 변수가 보고서 매개 변수에 연결되어 있으면 사용자가 보고서 매개 변수의 입력란에 DEFAULT라는 단어를 입력하거나 선택할 수 있습니다.  
   
- 자세한 내용은 msdn.microsoft.com의 [SQL Server 온라인 설명서](http://go.microsoft.com/fwlink/?linkid=98335) 에서 "저장 프로시저(데이터베이스 엔진)"를 참조하세요.  
+ 자세한 내용은 msdn.microsoft.com의 [SQL Server 온라인 설명서](https://go.microsoft.com/fwlink/?linkid=98335) 에서 "저장 프로시저(데이터베이스 엔진)"를 참조하세요.  
   
   
 ##  <a name="Parameters"></a> 매개 변수  
@@ -131,7 +131,7 @@ WHERE EmployeeID = (@EmpID)
   
 -   기본적으로 각 보고서 매개 변수의 데이터 형식은 **Text**입니다. 기본 데이터의 데이터 형식이 다르면 매개 변수 데이터 형식을 변경해야 합니다.  
   
--   다중값된 매개 변수에 대 한 옵션을 선택 하면 수동으로 사용 하 여 값 집합의 일부 인지 여부를 테스트 하도록 쿼리를 변경 해야 합니다는 `IN` 연산자, 예를 들어 `WHERE EmployeeID IN (@EmpID)`합니다.  
+-   다중값 매개 변수에 대한 옵션을 선택한 경우 `IN`과 같이 `WHERE EmployeeID IN (@EmpID)` 연산자를 사용하여 값이 집합의 일부인지 여부를 테스트하도록 쿼리를 수동으로 변경해야 합니다.  
   
  자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)를 참조하세요.  
   
@@ -140,7 +140,7 @@ WHERE EmployeeID = (@EmpID)
  OLE DB 또는 ODBC 데이터 원본 유형을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 데이터를 검색할 수도 있습니다. 자세한 내용은 [OLE DB 연결 형식&#40;SSRS&#41;](ole-db-connection-type-ssrs.md) 또는 [ODBC 연결 형식&#40;SSRS&#41;](odbc-connection-type-ssrs.md)을 참조하세요.  
   
 ###### <a name="platform-and-version-information"></a>플랫폼 및 버전 정보  
- 플랫폼 및 버전 지원에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서에서 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ 플랫폼 및 버전 지원에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서에서 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
   
 ##  <a name="HowTo"></a> 방법 도움말 항목  
@@ -168,7 +168,7 @@ WHERE EmployeeID = (@EmpID)
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  쿼리에 의해 생성되는 데이터 세트 필드 컬렉션에 대한 정보를 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
  각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.  
   
   

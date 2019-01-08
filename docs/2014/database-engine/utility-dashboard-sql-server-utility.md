@@ -10,12 +10,12 @@ ms.assetid: 999eb741-4a60-43f6-ab37-2df7dce845c1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d423dc8eb00dfce0434c680046f39e0fb9dfa8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101513"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351651"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>유틸리티 대시보드(SQL Server 유틸리티)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 대시보드에서 데이터를 보려면 "Utility<UCP_Name>\\(ComputerName\UCP)"라고 표시된 유틸리티 탐색기 트리의 최상위 노드를 선택합니다. 대시보드에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티의 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 관리되는 인스턴스와 데이터 계층 애플리케이션의 요약과 세부 데이터가 포함됩니다. 대시보드의 데이터를 새로 고치려면 유틸리티 탐색기 트리에서 최상위 노드를 마우스 오른쪽 단추로 클릭하고 **새로 고침**을 선택합니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "48101513"
  각 상태 매개 변수에 대한 자세한 상태는 슬라이딩 표시기에 나열됩니다. 슬라이딩 표시기의 오른쪽 부분에는 각 상태 범주에 얼마나 많은 데이터 계층 애플리케이션이 해당되는지 표시됩니다. 개별 데이터 계층 응용 프로그램의 상태를 보는 방법과 정책 구성 설정을 보거나 변경하는 방법은 [배포된 데이터 계층 응용 프로그램 세부 정보&#40;SQL Server 유틸리티&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)를 참조하세요.  
   
  유틸리티 저장소 사용 기록  
- 사용 기록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 대시보드 아래쪽의 시간 그래프에 표시됩니다. 시간 데이터는 datetime 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간을 보여 줍니다. 자세한 내용은 SQL Server 온라인 설명서의 [datetime(Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) 을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 SQL Server 온라인 설명서의 [datetimeoffset(Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) 을 참조하세요.  
+ 사용 기록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 대시보드 아래쪽의 시간 그래프에 표시됩니다. 시간 데이터는 datetime 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간을 보여 줍니다. 자세한 내용은 SQL Server 온라인 설명서의 [datetime(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 SQL Server 온라인 설명서의 [datetimeoffset(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 을 참조하세요.  
   
  표시 영역 왼쪽에 있는 라디오 단추를 사용하여 그래프의 보고 기간을 변경할 수 있습니다.  
   

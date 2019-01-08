@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.tabledesigner
@@ -13,12 +13,12 @@ ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33e75ea1383a597f3e896ad2d7d24f05a7021ac2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c56aef79df354ee8e355da215a241836f8c7ab45
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065383"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812855"
 ---
 # <a name="table-properties-visual-database-tools"></a>테이블 속성(Visual Database Tools)
   테이블 디자이너 내부를 마우스 오른쪽 단추로 클릭한 다음 속성을 선택하는 경우 속성 창에 이러한 속성이 나타납니다. 별도로 언급하지 않는 한 테이블을 선택할 때 속성 창에서 이러한 속성을 편집할 수 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "48065383"
  선택한 테이블의 데이터 원본 이름을 표시합니다.  
   
  **설명**  
- 선택한 테이블에 대한 설명을 표시합니다. 전체 설명을 보거나 편집하려면 설명을 클릭한 다음 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다.  
+ 선택한 테이블에 대한 설명을 표시합니다. 전체 설명을 보거나 편집하려면 설명을 클릭한 다음, 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다.  
   
  **스키마**  
  현재 테이블이 속해 있는 스키마의 이름을 표시합니다. Microsoft SQL Server에만 적용됩니다.  

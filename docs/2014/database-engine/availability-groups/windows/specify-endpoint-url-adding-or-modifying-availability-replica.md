@@ -15,15 +15,15 @@ ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 94cf3cff73e98718db6e097f13dcab47cd676ed4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8356014a1b5406f2cd33d5166b5feea7339d782e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097185"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370055"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정(SQL Server)
-  가용성 그룹에 대한 가용성 복제본을 호스팅하려면 서버 인스턴스에서 데이터베이스 미러링 엔드포인트를 처리해야 합니다. 서버 인스턴스는 이 엔드포인트를 사용하여 다른 서버 인스턴스에서 호스팅하는 가용성 복제본의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 메시지를 수신합니다. 가용성 그룹에 대한 가용성 복제본을 정의하려면 복제본을 호스팅하는 서버 인스턴스의 엔드포인트 URL을 지정해야 합니다. *엔드포인트 URL* 은 데이터베이스 미러링 엔드포인트의 전송 프로토콜인 TCP, 서버 인스턴스의 시스템 주소, 엔드포인트와 연결된 포트 번호를 정의합니다.  
+  가용성 그룹에 대한 가용성 복제본을 호스팅하려면 서버 인스턴스에서 데이터베이스 미러링 엔드포인트를 처리해야 합니다. 서버 인스턴스는 이 엔드포인트를 사용하여 다른 서버 인스턴스에서 호스팅하는 가용성 복제본의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 메시지를 수신합니다. 가용성 그룹에 대한 가용성 복제본을 정의하려면 복제본을 호스팅하는 서버 인스턴스의 엔드포인트 URL을 지정해야 합니다. *엔드포인트 URL*은 데이터베이스 미러링 엔드포인트의 전송 프로토콜인 TCP, 서버 인스턴스의 시스템 주소, 엔드포인트와 연결된 포트 번호를 구분합니다.  
   
 > [!NOTE]  
 >  "엔드포인트 URL"이라는 용어는 데이터베이스 미러링 사용자 인터페이스 및 설명서에서 사용하는 "서버 네트워크 주소"라는 용어와 동의어입니다.  
@@ -119,18 +119,18 @@ ms.locfileid: "48097185"
 > [!NOTE]  
 >  정규화된 도메인 이름에 대한 자세한 내용은 시스템 관리자에게 문의하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **데이터베이스 미러링 엔드포인트를 구성하려면**  
   
 -   [데이터베이스 미러링 끝점의 AlwaysOn 가용성 그룹 만들기 &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;Transact-SQL&amp;#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&amp;#40;Transact-SQL&amp;#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [데이터베이스 미러링 엔드포인트에 대한 인증서 사용 #40;Transact-SQL &#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-    -   [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
+    -   [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL &#41;](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
-    -   [데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](../../database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
+    -   [데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL &#41;](../../database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
 -   [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
@@ -148,7 +148,7 @@ ms.locfileid: "48097185"
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>관련 항목  
  [가용성 그룹의 생성 및 구성&#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   

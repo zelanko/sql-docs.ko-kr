@@ -14,15 +14,15 @@ ms.assetid: 65d6d78b-a8c8-489a-9dad-f8d127a44882
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0be194c8e730f1ef797d0db30ff9942735f51617
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f249bb13ece6382e96dfe953b1d3c1d96c7bf65
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618901"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523687"
 ---
 # <a name="statement-handles"></a>명령문 핸들
-A *문* 은 가장 쉽게 생각할 SQL 문 처럼 같은 **선택 \* 에서 직원**합니다. 그러나 문이 지 이상의 SQL 문을-예:는 문에 의해 생성 된 결과 집합 및 매개 변수는 문 실행에 사용 되는 해당 SQL 문과 사용 하 여 연결 정보를 모두의 구성 됩니다. 문을 필요가 없습니다 SQL 문이 응용 프로그램 정의 합니다. 예를 들어 경우 카탈로그 함수가 같은 **SQLTables** 실행 되는 문의 테이블 이름 목록을 반환 하는 미리 정의 된 SQL 문을 실행 합니다.  
+A *문* 은 가장 쉽게 생각할 SQL 문 처럼 같은 **선택 \* 에서 직원**합니다. 그러나 문에 SQL 문 이상의-의 모든 문에 의해 만들어진 결과 집합 및 문 실행에 사용 되는 매개 변수와 같은 해당 SQL 문과 사용 하 여 연결 정보를 모두 구성 됩니다. 문을 필요가 없습니다 SQL 문이 응용 프로그램 정의 합니다. 예를 들어 경우 카탈로그 함수가 같은 **SQLTables** 실행 되는 문의 테이블 이름 목록을 반환 하는 미리 정의 된 SQL 문을 실행 합니다.  
   
  각 문은 문 핸들에 의해 식별 됩니다. 문을 단일 연결을 사용 하 여 연결 되며 해당 연결에서 여러 문이 있을 수 있습니다. 일부 드라이버 지; 활성 문 수를 제한 합니다. 옵션은 SQL_MAX_CONCURRENT_ACTIVITIES **SQLGetInfo** 얼마나 많은 활성 문을 단일 연결에서 지 원하는 드라이버를 지정 합니다. 문을 다음과 같이 정의 됩니다 *active* 보류 중인 결과가 있으면 여기서 결과 결과 집합 또는 영향을 받는 행의 수는 **삽입**합니다 **업데이트**, 또는 **삭제할** 문 또는 데이터에 대 한 여러 호출을 사용 하 여 전송 중인 **SQLPutData**합니다.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: d3e505f2-0a43-486f-aa92-9c8e49b2dfea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 51db04605dd898407a1295e5a80e9d7b9c9ae42a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 22cb73877dcea8fb880d4c565b809990e5ce7123
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067253"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789955"
 ---
 # <a name="brokerconnection-event-class"></a>Broker:Connection 이벤트 클래스
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 Service Broker에서 관리하는 전송 연결의 상태를 보고하기 위해 **Broker:Connection** 이벤트를 생성합니다.  

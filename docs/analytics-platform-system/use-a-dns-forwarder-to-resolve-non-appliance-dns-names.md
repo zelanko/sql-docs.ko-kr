@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 645e2603af6d0447aae22bc7c29b5413501b722f
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 6ce978d7b05382b1a02018f3d5022b0f8bfaf585
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168903"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509324"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>DNS 전달자를 사용 하 여 분석 플랫폼 시스템에 비 어플라이언스 DNS 이름을 확인 하려면
 Active Directory Domain Services 노드에서 DNS 전달자를 구성할 수 있습니다 (**_어플라이언스\_도메인_-AD01** 하 고  **_어플라이언스\_ 도메인_-AD02**) 스크립트 및 소프트웨어 응용 프로그램을 외부 서버에 액세스를 허용 하기 위해 분석 플랫폼 시스템 어플라이언스입니다.  
@@ -36,7 +36,7 @@ Analytics Platform System appliance 기기에 있지 않은 서버의 DNS 이름
   
 6.  이름 확인을 제공 하는 외부 DNS 서버의 IP 주소를 입력 합니다. Vm 및 어플라이언스에서 (호스트) 서버는 정규화 된 도메인 이름을 사용 하 여 외부 서버에 연결 됩니다.  
   
-7.  에 1 ~ 6 단계를 반복 합니다  **_어플라이언스\_도메인_-AD02** 노드  
+7.  1-6 단계를 반복 합니다  **_어플라이언스\_도메인_-AD02** 노드  
   
 **Windows PowerShell을 사용 하 여 DNS 전달자를 만들려면**  
   

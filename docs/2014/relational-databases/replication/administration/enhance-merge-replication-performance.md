@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
@@ -20,12 +19,12 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 72a781fb802609ed778c46e50459a4253dbb3507
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 82452c5e0d4ddff21870ff341673da6d11b18f40
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175663"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772025"
 ---
 # <a name="enhance-merge-replication-performance"></a>병합 복제 성능 향상
   [일반적인 복제 성능 향상](enhance-general-replication-performance.md)에서 설명하는 일반적인 성능 팁을 고려한 후 병합 복제에 대한 다음 영역을 추가로 고려해 보십시오.  
@@ -42,7 +41,7 @@ ms.locfileid: "48175663"
   
 -   LOB(Large Object) 데이터 형식을 포함하는 테이블을 너무 많이 정규화한 경우를 고려해 보십시오.  
   
-     동기화가 발생할 때 병합 에이전트는 게시자 또는 구독자에서 전체 데이터 행을 읽고 전송해야 합니다. 이 행에 LOB를 사용하는 열이 있다면 추가 메모리 할당이 필요하고 이러한 열이 업데이트되지 않았어도 성능에 부정적 영향을 미칠 수 있습니다. 이렇게 성능에 미칠 영향을 줄이려면 나머지 행 데이터에 대해 일 대 일 관계를 사용하여 LOB 열을 별개의 테이블에 두도록 합니다. 데이터 형식 `text`, `ntext`, 및 `image` 사용 되지 않습니다. Lob를 포함 시킬 경우 데이터 형식을 사용 하는 것이 좋습니다 `varchar(max)`하십시오 `nvarchar(max)`, `varbinary(max)`각각.  
+     동기화가 발생할 때 병합 에이전트는 게시자 또는 구독자에서 전체 데이터 행을 읽고 전송해야 합니다. 이 행에 LOB를 사용하는 열이 있다면 추가 메모리 할당이 필요하고 이러한 열이 업데이트되지 않았어도 성능에 부정적 영향을 미칠 수 있습니다. 이렇게 성능에 미칠 영향을 줄이려면 나머지 행 데이터에 대해 일 대 일 관계를 사용하여 LOB 열을 별개의 테이블에 두도록 합니다. `text`, `ntext` 및 `image` 데이터 형식은 사용되지 않습니다. LOB를 포함시킬 경우 데이터 형식 `varchar(max)`, `nvarchar(max)`, `varbinary(max)`를 각각 사용하는 것이 좋습니다.  
   
 ## <a name="publication-design"></a>게시 디자인  
   
@@ -103,7 +102,7 @@ ms.locfileid: "48175663"
   
 -   구독이 빠른 연결을 통해 동기화되고 게시자에서 구독자로 변경 내용이 전송되면 병합 에이전트에 대해 **–ParallelUploadDownload** 매개 변수를 사용합니다.  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 에서는 새로운 병합 에이전트 매개 변수인 **–ParallelUploadDownload**가 도입되었습니다. 이 매개 변수를 설정하면 병합 에이전트가 게시자로 업로드되는 변경 내용과 구독자로 다운로드되는 변경 내용을 병렬로 처리할 수 있습니다. 이것은 네트워크 대역폭이 높은 대규모 환경에서 유용합니다. 에이전트 프로필 및 명령줄에서 에이전트 매개 변수를 지정할 수 있습니다. 참조 항목:  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에는 새로운 병합 에이전트 매개 변수인 **–ParallelUploadDownload**가 도입되었습니다. 이 매개 변수를 설정하면 병합 에이전트가 게시자로 업로드되는 변경 내용과 구독자로 다운로드되는 변경 내용을 병렬로 처리할 수 있습니다. 이것은 네트워크 대역폭이 높은 대규모 환경에서 유용합니다. 에이전트 프로필 및 명령줄에서 에이전트 매개 변수를 지정할 수 있습니다. 참조 항목:  
   
     -   [복제 에이전트 프로필 작업](../agents/replication-agent-profiles.md)  
   
@@ -141,7 +140,7 @@ ms.locfileid: "48175663"
   
 -   병합 복제 시스템 테이블의 인덱스를 가끔씩 다시 만듭니다.  
   
-     병합 복제 유지 관리의 한 부분으로 병합 복제와 연결된 **MSmerge_contents**, **MSmerge_genhistory**및 **MSmerge_tombstone**, **MSmerge_current_partition_mappings**및 **MSmerge_past_partition_mappings**시스템 테이블의 증가를 확인하십시오. 이러한 테이블의 인덱스를 주기적으로 다시 만듭니다. 자세한 내용은 [인덱스 다시 구성 및 다시 작성](../../indexes/reorganize-and-rebuild-indexes.md)을 참조하세요.  
+     병합 복제 유지 관리의 한 부분으로 병합 복제와 연결된 **MSmerge_contents**, **MSmerge_genhistory**, 및 **MSmerge_tombstone**하십시오 **MSmerge_current_partition_mappings**, 및 **MSmerge_ past_partition_mappings**합니다. 이러한 테이블의 인덱스를 주기적으로 다시 만듭니다. 자세한 내용은 [인덱스 다시 구성 및 다시 작성](../../indexes/reorganize-and-rebuild-indexes.md)을 참조하세요.  
   
 -   복제 모니터의 **동기화 기록** 탭을 사용하여 동기화 성능을 모니터링합니다.  
   

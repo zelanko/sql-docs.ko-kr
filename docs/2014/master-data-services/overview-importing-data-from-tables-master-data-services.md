@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], about staging process
@@ -15,15 +14,15 @@ ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1c9113e8e3ae1f65d42b1e55a81cee4dcfc2152b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a3f9d1589c9e7434b16ce3f500b44eb1d9374cd8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217813"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52756815"
 ---
 # <a name="data-import-master-data-services"></a>데이터 가져오기(Master Data Services)
-  데이터 모델을 만든 후 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], 데이터를 추가할 수 있습니다 및 데이터에 변경 된 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스입니다.   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 준비 표, 저장 프로시저 및 마스터 데이터 관리자를 사용할 수 있습니다.  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 데이터에 대한 모델을 만들면 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 데이터 추가를 시작하고 데이터를 변경할 수 있습니다.   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 준비 표, 저장 프로시저 및 마스터 데이터 관리자를 사용할 수 있습니다.  
   
  사용할 수도 있습니다는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]MDS 저장소에 데이터 추가 ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스). 자세한 내용은 [데이터 게시 &#40;MDS 추가 기능에 Excel에 대 한&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)합니다.  
   
@@ -70,11 +69,11 @@ ms.locfileid: "48217813"
 ## <a name="staging-tables-and-stored-procedures"></a>준비 표 및 저장 프로시저  
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에는 보유한 데이터로 채울 수 있는 다음 유형의 준비 표가 포함되어 있습니다.  
   
--   [리프 멤버 준비 테이블 &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
+-   [리프 멤버 준비 테이블&#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
   
--   [통합 멤버 준비 테이블 &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [통합 멤버 준비 테이블&#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
--   [관계 준비 테이블 &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
+-   [관계 준비 테이블&#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
   
  모델의 각 엔터티에 대해 준비 표가 있습니다. 표 이름은 해당 엔터티 및 리프 멤버 등의 엔터티 형식을 나타냅니다. 다음 이미지는 통화, 고객 및 제품 엔터티에 대한 준비 표를 보여 줍니다.  
   
@@ -103,8 +102,8 @@ ms.locfileid: "48217813"
   
 ## <a name="related-content"></a>관련 내용  
   
--   [유효성 검사 &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
+-   [유효성 검사&#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
   
--   [비즈니스 규칙 &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [비즈니스 규칙&#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

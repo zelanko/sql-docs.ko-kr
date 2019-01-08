@@ -11,12 +11,12 @@ ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bff9e3f913ee432988bd7a666673e8f27bc4d04e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 0ffd00cde83f99f1147a85b06e93e3816fb6e376
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069643"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354508"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>디스크 공간 사용 구성(SharePoint용 PowerPivot)
   SharePoint용 PowerPivot 배포에서는 더욱 빠르게 다시 로드하기 위해 호스트 컴퓨터의 디스크 공간을 사용하여 PowerPivot 데이터베이스를 캐시합니다. 메모리에 로드되는 각 PowerPivot 데이터베이스는 이후에 새 요청을 처리하기 위해 신속하게 다시 로드될 수 있도록 디스크에 먼저 캐시됩니다. 기본적으로 SharePoint용 PowerPivot에서는 사용 가능한 모든 디스크 공간을 사용하여 해당 데이터베이스를 캐시하지만 사용되는 디스크 공간 크기를 제한하는 속성을 설정하여 이 동작을 수정할 수 있습니다.  
@@ -51,11 +51,11 @@ ms.locfileid: "48069643"
   
  시스템 수준에서 디스크 공간이 부족할 때 알리는 전자 메일 경고를 만들 수 있습니다. Microsoft System Center에는 전자 메일 경고 기능이 포함되어 있습니다. 파일 서버 리소스 관리자, 작업 스케줄러 또는 PowerShell 스크립트를 사용하여 경고를 설정할 수도 있습니다. 부족한 디스크 공간에 대한 알림을 설정하는 데 대한 유용한 정보를 얻으려면  
   
--   [파일 서버 리소스 관리자의 새로운 소식](http://technet.microsoft.com/library/hh831746.aspx) (http://technet.microsoft.com/library/hh831746.aspx)합니다.  
+-   [파일 서버 리소스 관리자의 새로운 소식](https://technet.microsoft.com/library/hh831746.aspx) (https://technet.microsoft.com/library/hh831746.aspx)합니다.  
   
--   [Windows Server 2008 r2 파일 서버 리소스 관리자 단계별 가이드](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875)합니다.  
+-   [Windows Server 2008 r2 파일 서버 리소스 관리자 단계별 가이드](https://go.microsoft.com/fwlink/?LinkID=204875) (https://go.microsoft.com/fwlink/?LinkID=204875)합니다.  
   
--   [Windows Server 2008에서 부족 한 디스크 공간 경고 설정](http://go.microsoft.com/fwlink/?LinkID=204870) ( http://go.microsoft.com/fwlink/?LinkID=204870)합니다.  
+-   [Windows Server 2008에서 부족 한 디스크 공간 경고 설정](https://go.microsoft.com/fwlink/?LinkID=204870) ( https://go.microsoft.com/fwlink/?LinkID=204870)합니다.  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>캐시된 파일의 저장에 사용되는 디스크 공간 크기를 제한하는 방법  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48069643"
   
 3.  디스크 사용에서 **총 디스크 공간** 의 값(GB)을 설정하여 캐싱 목적으로 사용되는 공간 크기의 상한값을 설정합니다. 기본값은 0이며 이 값을 사용하면 Analysis Services에서 사용 가능한 모든 디스크 공간을 사용할 수 있습니다.  
   
-4.  디스크 사용의 **최근 ‘n’ 시간 내에 캐시된 데이터베이스 삭제** 설정에서 디스크 공간이 최대 한계일 경우 캐시를 비우기 위해 최근에 사용된 기준을 지정합니다.  
+4.  디스크 사용량에서에 **캐시 된 최근 ' n '에서 데이터베이스를 삭제 시간** 일 때 디스크 공간이 최대 한도에 캐시를 비우기 위해 최근에 사용 된 기준을 지정을 설정 합니다.  
   
      기본값은 4시간이며, 이는 4시간 이상 비활성 상태인 모든 데이터베이스가 파일 시스템에서 삭제된다는 의미입니다. 비활성 상태이지만 아직 메모리에 있는 데이터베이스는 언로드된 다음 파일 시스템에서 삭제됩니다.  
   

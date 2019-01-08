@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 881a32bbb21eeeef0e09eaedb98897f90a1c0d27
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: eaafa011f1b99ea90afce2902c877d0a25b9e6e3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215673"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811115"
 ---
 # <a name="work-with-change-data-sql-server"></a>변경 데이터 작업(SQL Server)
   변경 데이터는 TVF(테이블 반환 함수)를 통해 변경 데이터 캡처 소비자에게 제공됩니다. 이러한 함수의 모든 쿼리에는 반환된 결과 집합을 개발할 때 고려할 LSN(로그 시퀀스 번호)의 범위를 정의하는 두 매개 변수가 필요합니다. 간격을 한정하는 LSN 하한/상한 값 모두 간격 내에 포함되는 것으로 간주됩니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "48215673"
   
  `An insufficient number of arguments were supplied for the procedure or function cdc.fn_cdc_get_all_changes_ ...`  
   
- 에 대해 반환 되는 해당 오류를 `net changes` 쿼리는 다음과 같습니다.  
+ `net changes` 쿼리에 대해 반환되는 해당 오류는 다음과 같습니다.  
   
  `Msg 313, Level 16, State 3, Line 1`  
   
@@ -113,7 +112,7 @@ ms.locfileid: "48215673"
   
  모든 변경 내용 쿼리를 래핑하는 함수의 이름은 캡처 인스턴스 이름 앞에 fn_all_changes_가 붙는 형태입니다. 순 변경 내용 함수에 사용되는 접두사는 fn_net_changes_입니다. 두 함수는 모두 연결된 변경 데이터 캡처 TVF와 마찬가지로 3개의 인수를 사용합니다. 그러나 래퍼에 대한 쿼리 간격은 두 개의 LSN 값 대신 두 개의 datetime 값에 의해 제한됩니다. 두 함수 집합에 대한 @row_filter_option 매개 변수는 같습니다.  
   
- 생성된 래퍼 함수는 변경 데이터 캡처 시간대를 체계적으로 탐색하기 위해 이전 간격의 @end_time 매개 변수가 후속 간격의 @start_time 매개 변수로 사용된다는 규칙을 지원합니다. 래퍼 함수는 이 규칙이 준수되는 경우 datetime 값을 LSN 값에 매핑하고 데이터가 손실되거나 반복되지 않도록 합니다.  
+ 생성된 래퍼 함수는 변경 데이터 캡처 시간대를 체계적으로 탐색하기 위해 것으로 예상 되는 합니다 @end_time 이전 간격의 매개 변수를 사용할 수는 @start_time 매개 변수가 후속 간격의 합니다. 래퍼 함수는 이 규칙이 준수되는 경우 datetime 값을 LSN 값에 매핑하고 데이터가 손실되거나 반복되지 않도록 합니다.  
   
  지정된 쿼리 창에서 닫힌 상한이나 열린 상한을 지원하는 래퍼를 생성할 수 있습니다. 즉, 호출자가 커밋 시간이 추출 간격의 상한과 같은 항목을 간격 내에 포함할지 여부를 지정할 수 있습니다. 기본적으로 상한이 포함됩니다.  
   

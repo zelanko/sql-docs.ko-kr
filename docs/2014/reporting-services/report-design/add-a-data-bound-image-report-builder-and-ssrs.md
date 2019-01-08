@@ -11,12 +11,12 @@ ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a82bf63ca0c70543d816cbd191b1ff9a36ced317
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: e9883e7e21e58424fbc6280ad99ac323becd9b00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211473"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526336"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>데이터 바인딩된 이미지 추가(보고서 작성기 및 SSRS)
   데이터베이스에 저장된 이미지에 대한 참조를 보고서에 포함할 수 있습니다. 이러한 이미지를 *데이터 바인딩된 이미지*라고 합니다. 제품 목록에서 제품 이름과 함께 표시되는 그림을 예로 들 수 있습니다.  
@@ -49,9 +49,9 @@ ms.locfileid: "48211473"
      이미지 자리 표시자가 보고서 디자인 화면에 나타납니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [이미지 &#40;보고서 작성기 및 SSRS&#41;](images-report-builder-and-ssrs.md)   
- [보고서에 이미지 포함 &#40;보고서 작성기 및 SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [외부 이미지 추가 &#40;보고서 작성기 및 SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   
+ [이미지&#40;보고서 작성기 및 SSRS&#41;](images-report-builder-and-ssrs.md)   
+ [보고서에 이미지 포함&#40;보고서 작성기 및 SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [외부 이미지 추가&#40;보고서 작성기 및 SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   
  [이미지 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

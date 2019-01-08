@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 13359f151ef1453a7bc8b2020dc4cd8db9a13b80
-ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
+ms.openlocfilehash: 9b1d86b56e836a9b9b7bf575d5e9353a962894ce
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49390835"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405318"
 ---
 # <a name="configure-replication-with-t-sql"></a>T-SQL을 사용 하 여 복제를 구성 합니다.
 
@@ -35,7 +35,7 @@ ms.locfileid: "49390835"
 
 모든 복제 구성을 사용 하 여 구성할 수 있습니다 [복제 저장 프로시저](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 이 자습서를 완료 하려면 해야 합니다.
 
 - Linux에서 SQL Server의 최신 버전을 사용 하 여 SQL Server의 두 인스턴스
@@ -291,6 +291,6 @@ ms.locfileid: "49390835"
 
 ## <a name="next-steps"></a>다음 단계
 
-[Linux에서 SQL Server 복제 개념:](sql-server-linux-replication.md)
+[개념: Linux에서 SQL Server 복제](sql-server-linux-replication.md)
 
 [복제 저장 프로시저](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)합니다.

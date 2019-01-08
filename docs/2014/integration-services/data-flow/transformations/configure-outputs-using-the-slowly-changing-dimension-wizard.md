@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Slowly Changing Dimension transformation
@@ -15,12 +14,12 @@ ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79ae2c560bfc5e5e38d46e72bad0b1a734421ee5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6665b08662834226feac1c99df3e8a63e7026c7b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085423"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750080"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>느린 변경 차원 마법사를 사용하여 출력 구성
   느린 변경 차원 마법사는 느린 변경 차원 변환에 대한 편집기 역할을 수행합니다. 느린 변경 차원 데이터에 대한 데이터 흐름의 작성 및 구성은 복잡한 태스크일 수 있습니다. 느린 변경 차원 마법사를 사용하면 열을 매핑하고, 비즈니스 키 열을 선택하고, 열 변경 특성을 설정하고, 유추 차원 멤버에 대한 지원을 구성하는 단계별 안내에 따라 가장 쉬운 방법으로 느린 변경 차원 변환 출력에 대한 데이터 흐름을 작성할 수 있습니다.  
@@ -80,7 +79,7 @@ ms.locfileid: "48085423"
 ## <a name="updating-slowly-changing-dimension-outputs"></a>느린 변경 차원 출력 업데이트  
  느린 변경 차원 변환 출력의 구성을 업데이트하는 가장 쉬운 방법은 느린 변경 차원 마법사를 다시 실행하고 마법사 페이지에서 속성을 수정하는 것입니다. 또한 **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 느린 변경 차원 변환을 업데이트할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [느린 변경 차원 변환](slowly-changing-dimension-transformation.md)  
+## <a name="see-also"></a>관련 항목:  
+ [Slowly Changing Dimension Transformation](slowly-changing-dimension-transformation.md)  
   
   

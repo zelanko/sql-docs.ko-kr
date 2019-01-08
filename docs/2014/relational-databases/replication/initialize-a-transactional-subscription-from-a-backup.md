@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -19,12 +18,12 @@ ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8996ad69528e739515166311d7de9eae657952c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 2101277aecd3ca9c844fb447f5ab772847d77020
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165673"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776555"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup-replication-transact-sql-programming"></a>백업에서 트랜잭션 구독 초기화(복제 Transact-SQL 프로그래밍)
   일반적으로 트랜잭션 게시에 대한 구독은 스냅숏을 사용하여 초기화하지만 복제 저장 프로시저를 사용하여 백업에서 구독을 초기화할 수도 있습니다. 자세한 내용은 [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  

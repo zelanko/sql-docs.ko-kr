@@ -11,21 +11,21 @@ ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01f03e9e8149fe0d3b1b9599ff0ec94613efcba4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 011ca5ed5066113a467082e0fe05c6d0f831f25b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169233"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363465"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Power View 보고서의 보고 속성 구성
   이 추가 단원에서는 Adventure Works Internet Sales Model 프로젝트에 대한 보고 속성을 설정해 봅니다. 보고 속성을 사용하면 최종 사용자가 Power View에서 모델 데이터를 쉽게 선택하고 표시할 수 있습니다. 또한 특정 열과 테이블을 숨기고 차트에서 사용할 새 데이터를 만드는 속성을 설정합니다.  
   
  이 단원을 마치고 모델을 SharePoint와 통합된 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스 및 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에 재배포하면 데이터 원본을 만들고 데이터 연결 정보를 지정하고 Power View를 시작하고 모델에 대한 보고서를 디자인할 수 있습니다.  
   
- 이 단원에서는 Power View 보고서를 만들고 사용하는 방법에 대해 설명하지는 않습니다. 이 단원의 목적은 테이블 형식 모델 작성자에게 이러한 속성 및 Power View에서 모델 데이터가 표시되는 방식에 영향을 주는 설정에 대한 소개를 제공하기 위한 것입니다. Power View 보고서 작성에 대한 자세한 내용은 [자습서: Power View에서 예제 보고서 만들기](http://go.microsoft.com/fwlink/?LinkId=221204)를 참조하십시오.  
+ 이 단원에서는 Power View 보고서를 만들고 사용하는 방법에 대해 설명하지는 않습니다. 이 단원의 목적은 테이블 형식 모델 작성자에게 이러한 속성 및 Power View에서 모델 데이터가 표시되는 방식에 영향을 주는 설정에 대한 소개를 제공하기 위한 것입니다. Power View 보고서 작성 하는 방법에 대 한 자세한 내용은를 참조 하세요. [자습서: Power View에서 예제 보고서를 만드는](https://go.microsoft.com/fwlink/?LinkId=221204)합니다.  
   
- 이 단원에 소요되는 예상 시간: **30분**  
+ 이 단원에 소요되는 예상 시간: **30 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 추가 단원은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 추가 단원의 태스크를 수행하려면 이전 단원을 모두 완료해야 합니다.  
@@ -41,17 +41,17 @@ ms.locfileid: "48169233"
 ## <a name="model-properties-that-affect-reporting"></a>보고에 영향을 주는 모델 속성  
  테이블 형식 모델을 만들 때 Power View에서 최종 사용자 보고 환경을 향상시키기 위해 개별 열과 테이블에서 설정할 수 있는 특정 속성이 있습니다. 또한 추가 모델 데이터를 만들어 데이터 시각화 및 보고 클라이언트에 대한 다른 기능을 지원할 수 있습니다. 예제 Adventure Works Internet Sales Model의 경우 다음과 같이 일부 내용을 변경할 수 있습니다.  
   
--   **새 데이터 추가** – DAX 수식을 사용하여 계산 열에 새 데이터를 추가하면 차트에 보다 잘 표시할 수 있는 방식으로 날짜 정보가 만들어집니다.  
+-   **새 데이터 추가** -하면 차트에 표시 하기 쉬운 형식으로 날짜 정보가 만들어집니다 계산된 열에 DAX 수식을 사용 하 여 새 데이터를 추가 합니다.  
   
 -   **최종 사용자에게 유용하지 않는 테이블 및 열 숨기기** - **숨김** 속성은 테이블 및 테이블 열을 보고 클라이언트에 표시할지 여부를 제어합니다. 숨겨진 항목은 여전히 모델의 일부이며 쿼리 및 계산에 계속 사용할 수 있습니다.  
   
--   **테이블 한 번 클릭 사용** – 기본적으로 최종 사용자가 필드 목록에서 테이블을 클릭하면 어떤 동작도 수행되지 않습니다. 테이블을 클릭하면 보고서에 테이블을 추가하도록 이 동작을 변경하려면 테이블에 추가하려는 각 열에 기본 필드 집합을 설정합니다. 이 속성은 최종 사용자가 사용하려는 테이블 열에 설정됩니다.  
+-   **테이블 한 번 클릭 사용** -기본적으로 하면 어떤 동작도 수행 하는 최종 사용자가 필드 목록의 테이블을 클릭 합니다. 테이블을 클릭하면 보고서에 테이블을 추가하도록 이 동작을 변경하려면 테이블에 추가하려는 각 열에 기본 필드 집합을 설정합니다. 이 속성은 최종 사용자가 사용하려는 테이블 열에 설정됩니다.  
   
 -   **필요한 경우 그룹화 설정** - **고유한 행 유지** 속성은 열의 값을 식별자 필드와 같이 다른 필드의 값으로 그룹화해야 하는지 여부를 결정합니다\. Customer Name(예: John Smith라는 이름을 가진 여러 고객)과 같이 중복 값이 포함된 열의 경우 최종 사용자에게 올바른 결과를 제공하기 위해 **행 식별자** 필드에서 그룹화(고유한 행 유지)해야 합니다.  
   
 -   **데이터 형식 및 데이터 서식 설정** - 기본적으로 파워 뷰는 열 데이터 형식을 기준으로 규칙을 적용하여 필드를 측정값으로 사용할 수 있는지 여부를 결정합니다. 파워 뷰의 각 데이터 시각화에도 측정값 및 비 측정값을 배치할 수 있는지에 관한 규칙이 있기 때문에 최종 사용자에 대해 원하는 동작을 수행하기 위해 모델에서 데이터 형식을 설정하거나 기본값을 재정의하는 것이 중요합니다.  
   
--   **열 기준 정렬 설정** 속성 – **열 기준 정렬** 속성은 열의 값을 다른 필드의 값을 기준으로 정렬해야 하는지 여부를 지정합니다. 예를 들어 월 이름이 포함된 Month Calendar 열에서 Month Number 열을 기준으로 정렬합니다.  
+-   **열 기준 정렬 설정** 속성-합니다 **열 기준 정렬** 속성 열에 값을 다른 필드의 값으로 정렬 되도록 하는 경우를 지정 합니다. 예를 들어 월 이름이 포함된 Month Calendar 열에서 Month Number 열을 기준으로 정렬합니다.  
   
 ## <a name="hide-tables-from-client-tools"></a>클라이언트 도구에서 테이블 숨기기  
  Product 테이블에 Product Category 계산 열과 Product Subcategory 계산 열이 이미 있으므로 Product Category 및 Product Subcategory 테이블을 클라이언트 애플리케이션에 표시하지 않아도 됩니다.  
@@ -137,7 +137,7 @@ ms.locfileid: "48169233"
 7.  **Product** 테이블에 대해 이 단계를 반복합니다. **Product Id** 열을 행 식별자로 선택하고 **고유한 행 유지** 목록 상자에서 **Product Name** 열을 선택합니다. **기본 레이블**에 대해 **Product Alternate Id**를 선택합니다.  
   
 ## <a name="reporting-properties-for-columns"></a>열의 보고 속성  
- 여러 기본 열 속성과 모델 보고 환경을 향상시키기 위해 설정할 수 있는 열의 특정 보고 속성이 있습니다. 예를 들어 사용자는 모든 테이블의 모든 열을 보지 않아도 됩니다. 이전에 열의 숨김 속성을 사용하여 Product Category 및 Product Subcategory 테이블을 숨긴 것처럼 달리 표시되는 테이블에서 특정 열을 숨길 수 있습니다. 데이터 형식 및 열 기준 정렬 등 다른 속성은 열 데이터가 보고서에서 어떻게 표시될 수 있는지에도 영향을 줄 수 있습니다. 이제 특정 열에서 이러한 일부 속성을 설정합니다. 다른 열에는 어떤 동작도 수행하지 않으며 아래에 표시되지 않습니다.  
+ 여러 기본 열 속성과 모델 보고 환경을 향상시키기 위해 설정할 수 있는 열의 특정 보고 속성이 있습니다. 예를 들어 사용자는 모든 테이블의 모든 열을 보지 않아도 됩니다. 열의 Hidden 속성을 사용 하 여 이전에 Product Category 및 Product Subcategory 테이블을 숨긴 것 처럼 그렇지 않은 경우 표시 되는 테이블의 특정 열을 숨길 수 있습니다. 데이터 형식 및 열 기준 정렬 등 다른 속성은 열 데이터가 보고서에서 어떻게 표시될 수 있는지에도 영향을 줄 수 있습니다. 이제 특정 열에서 이러한 일부 속성을 설정합니다. 다른 열에는 어떤 동작도 수행하지 않으며 아래에 표시되지 않습니다.  
   
  여기에서는 다른 열 속성의 일부만 설정하지만 이외에도 많은 속성이 있습니다. 열 보고 속성에 대한 자세한 내용은 SQL Server 온라인 설명서에서 [열 속성&#40;SSAS 테이블 형식&#41;](tabular-models/properties-ssas-tabular.md)을 참조하세요.  
   
@@ -211,7 +211,7 @@ ms.locfileid: "48169233"
     |Ship Date|데이터 형식|간단한 날짜|  
   
 ## <a name="redeploy-the-adventure-works-internet-sales-tabular-model"></a>Adventure Works Internet Sales 테이블 형식 모델 다시 배포  
- 모델을 변경했기 때문에 다시 배포해야 합니다. 기본적으로 [14단원: 배포](lesson-13-deploy.md)에서 수행한 동작을 반복합니다.  
+ 모델을 변경했기 때문에 다시 배포해야 합니다. 기본적으로 작업을 수행한를 반복 하는 [단원 14: 배포](lesson-13-deploy.md)합니다.  
   
 #### <a name="to-redeploy-the-adventure-works-internet-sales-tabular-model"></a>Adventure Works Internet Sales 테이블 형식 모델을 다시 배포하려면  
   
@@ -222,6 +222,6 @@ ms.locfileid: "48169233"
 ## <a name="next-steps"></a>다음 단계  
  이제 Power View를 사용하여 모델의 데이터를 시각화할 수 있습니다. SharePoint 사이트의 Analysis Services 및 Reporting Services 계정에 모델에 배포한 Analysis Services 인스턴스에 대한 읽기 권한이 있는지 확인하십시오.  
   
- 모델을 가리키는 Reporting Services 보고서 데이터 원본을 만들려면 [테이블 모델 연결 형식(SSRS)](http://msdn.microsoft.com/library/hh270317%28v=SQL.110%29.aspx)을 참조하세요.  
+ 모델을 가리키는 Reporting Services 보고서 데이터 원본을 만들려면 [테이블 모델 연결 형식(SSRS)](https://msdn.microsoft.com/library/hh270317%28v=SQL.110%29.aspx)을 참조하세요.  
   
   

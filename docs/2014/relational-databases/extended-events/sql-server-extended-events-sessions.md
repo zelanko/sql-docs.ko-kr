@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - xe
@@ -15,12 +14,12 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 17062493d2c07e7dfbf1625aad584823953f043d
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 6e589ccad75cea729913b10b6232f61693446595
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120260"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767525"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 확장 이벤트 세션은 확장 이벤트 엔진을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로세스에서 생성됩니다. 확장 이벤트 세션의 다음과 같은 요소는 확장 이벤트 인프라 및 일반적인 프로세스를 파악할 수 있는 컨텍스트를 제공합니다.  
@@ -55,7 +54,7 @@ ms.locfileid: "49120260"
   
  위 그림을 보면 다음과 같은 사실을 알 수 있습니다.  
   
--   패키지 개체와 세션 간의 매핑은 다 대 다 관계에 개체는 여러 세션에 나타날 수 있으며 세션에 여러 개체가 포함 될 수 있습니다.  
+-   패키지 개체와 세션 간의 매핑은 다 대 다이며, 이는 하나의 개체가 여러 세션에서 나타나고 하나의 세션에 여러 개체가 포함될 수 있음을 의미합니다.  
   
 -   동일한 이벤트(Event 1) 또는 대상(Target 1)이 두 개 이상의 세션에서 사용될 수 있습니다.  
   

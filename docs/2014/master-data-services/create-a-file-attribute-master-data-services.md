@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - creating file attributes [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0269a67a1ba7e55c959f1336b9b3fec700c992e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 435f68e67080bf006b0c0f121f565ced2339a705
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172593"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765345"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>파일 특성 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 특성 값을 파일로 채우려면 파일 특성을 만듭니다.  
@@ -67,10 +66,10 @@ ms.locfileid: "48172593"
   
 13. **엔터티 유지 관리** 페이지에서 **엔터티 저장**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [특성 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
+## <a name="see-also"></a>관련 항목:  
+ [특성&#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
  [특성 이름 변경 &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
  [도메인 기반 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [텍스트 특성 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)  
+ [텍스트 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)  
   
   

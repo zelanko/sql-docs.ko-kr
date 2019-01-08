@@ -1,5 +1,5 @@
 ---
-title: SQLRUserGroup을 데이터베이스 사용자 (SQL Server Machine Learning)로 추가 | Microsoft Docs
+title: SQLRUserGroup을 데이터베이스 사용자-SQL Server Machine Learning Services 추가
 description: 묵시적된 인증을 사용 하 여 루프백 연결을 작업자 계정 id 변환 다시 호출 사용자에 게는 서버에 로그인 할 수 있도록 SQLRUserGroup을 데이터베이스 사용자로 추가 합니다.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4685288eb383c486556efba1eb4861ca9d708c0f
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: abd0745126a4f2a23cf559500b93d2fa53fa2cf9
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419088"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432356"
 ---
 # <a name="add-sqlrusergroup-as-a-database-user"></a>SQLRUserGroup을 데이터베이스 사용자로 추가
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

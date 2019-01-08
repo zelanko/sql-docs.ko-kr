@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - summarizing query results
@@ -13,12 +13,12 @@ ms.assetid: 34130ac1-0106-4766-b324-acb0b7bb6f6e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6af00799e343ced8005cec118398c50eb8996c7c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b679eac51bf6fd51d10a88816017f2b767a69041
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202083"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773625"
 ---
 # <a name="summarize-or-aggregate-values-using-custom-expressions-visual-database-tools"></a>사용자 지정 식을 사용하여 값 요약 또는 집계(Visual Database Tools)
   집계 함수를 사용하여 데이터를 집계할 수 있을 뿐만 아니라 사용자 지정 식을 만들어 집계 값을 산출할 수도 있습니다. 집계 쿼리에서 집계 함수를 사용할 위치에 어디든지 사용자 지정 식을 사용할 수 있습니다.  

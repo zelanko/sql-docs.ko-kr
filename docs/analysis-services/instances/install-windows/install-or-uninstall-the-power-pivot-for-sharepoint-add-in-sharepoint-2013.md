@@ -1,5 +1,5 @@
 ---
-title: 설치 또는 파워 피벗에 대 한 SharePoint 추가 기능을 제거 (SharePoint 2013) | Microsoft Docs
+title: 설치 또는 파워 피벗에 대 한 SharePoint 추가 기능 제거 (SharePoint 2013) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c24287c48f450620dfbbebb016c78dd544005da4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: 1fdc41aaaad19317db3b3795cc63d137b19600c2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018080"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418514"
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013"></a>SharePoint용 파워 피벗 추가 기능 설치 또는 제거(SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34018080"
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Analysis Management Objects  
   
--   **백 엔드 서비스:** Excel용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 를 사용해서 분석 데이터가 포함된 통합 문서를 만들 경우, SharePoint 모드로 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 를 실행하는 BI 서버에 Excel Services가 구성되어 서버 환경에서 데이터에 액세스할 수 있어야 합니다. SharePoint Server 2013이 설치된 컴퓨터 또는 SharePoint 소프트웨어가 설치되지 않은 다른 컴퓨터에서 SQL Server 설치 프로그램을 실행할 수 있습니다. Analysis Services는 SharePoint에 종속성이 없습니다.  
+-   **백 엔드 서비스:** Excel용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]를 사용해서 분석 데이터가 포함된 통합 문서를 만들 경우, SharePoint 모드로 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]를 실행하는 BI 서버에 Excel Services가 구성되어 서버 환경에서 데이터에 액세스할 수 있어야 합니다. SharePoint Server 2013이 설치된 컴퓨터 또는 SharePoint 소프트웨어가 설치되지 않은 다른 컴퓨터에서 SQL Server 설치 프로그램을 실행할 수 있습니다. Analysis Services는 SharePoint에 종속성이 없습니다.  
   
      백 엔드 서비스 설치, 제거 및 구성에 대한 자세한 내용은 다음 항목을 참조하세요.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "34018080"
 > [!NOTE]  
 >  **spPowerPivot.msi**를 사용하여 SharePoint 2013 서버에 Analysis Services 데이터 공급자를 설치해야 합니다. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 기능 팩에서 사용할 수 있는 다른 설치 관리자 패키지는 이 환경에서 데이터 공급자가 요구되는 SharePoint 2013 지원 파일을 포함하지 않으므로 지원되지 않습니다.  
   
- **구성 도구:** SharePoint 2013용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구는 SharePoint 서버 중 하나에만 있으면 됩니다. 그러나 다중 서버 팜에서 권장되는 최선의 구현 방법은 두 서버 중 하나가 오프라인일 때 구성 도구에 액세스할 수 있도록 최소 2개 이상의 서버에 구성 도구를 설치하는 것입니다.  
+ **구성 도구:** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SharePoint 2013 구성 도구는 SharePoint 서버 중 하나 에서만 필요 합니다. 그러나 다중 서버 팜에서 권장되는 최선의 구현 방법은 두 서버 중 하나가 오프라인일 때 구성 도구에 액세스할 수 있도록 최소 2개 이상의 서버에 구성 도구를 설치하는 것입니다.  
   
 ##  <a name="bkmk_prereq"></a> 요구 사항 및 필수 구성 요소  
   
@@ -91,11 +91,11 @@ ms.locfileid: "34018080"
 6.  **설치** 를 클릭하여 설치하고 설치를 완료합니다.  
   
 ### <a name="command-line-installation"></a>명령줄 설치  
- 명령줄 설치의 경우 관리 권한으로 명령 프롬프트를 연 다음 **spPowerPivot.msi**를 실행합니다. 예를 들어:  
+ 명령줄 설치의 경우 관리 권한으로 명령 프롬프트를 연 다음 **spPowerPivot.msi**를 실행합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
  `Msiexec.exe /i SpPowerPivot.msi`항목을 참조하세요.  
   
- 설치 로그를 만들려면 표준 MsiExec 로깅 스위치를 사용합니다. 다음 예에서는 “v” 자세한 로깅 스위치를 사용하는 로그 파일 “Install_Log.txt”를 만듭니다.  
+ 설치 로그를 만들려면 표준 MsiExec 로깅 스위치를 사용합니다. 다음 예제에서는 "Install_Log.txt" "v" 자세한 로깅 스위치를 사용 하 여 로그 파일을 만듭니다.  
   
 ```  
 Msiexec.exe /i SpPowerPivot.msi /L v c:\test\Install_Log.txt  
@@ -123,7 +123,7 @@ Msiexec.exe /i SpPowerPivot.msi /L v c:\test\Install_Log.txt
  spPowerPivot.msi를 설치하는 경우 [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] 구성 도구가 아닌 데이터 공급자 등의 특정 항목을 설치하는 명령줄 옵션을 사용할 수 있습니다. 다음 명령줄은 구성 도구를 제외하고 모든 구성 요소를 설치하는 예입니다.  
   
 ```  
-Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADOMD,SQL_AMO,SQLAS_SP_Common”  
+Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD,SQL_AMO,SQLAS_SP_Common"  
 ```  
   
 |옵션|Description|  
@@ -151,7 +151,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADO
   
  **구성 도구를 시작하려면**  
   
- Windows 시작 화면에서 "power"를 입력한 다음 앱 검색 결과에서 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성**을 클릭합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램은 SharePoint 2010 및 SharePoint 2013에 대해 별개의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구를 설치하기 때문에 검색 결과에 두 개의 링크가 포함될 수 있습니다. SharePoint 2013용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구를 시작하는지 확인하세요.  
+ Windows 시작 화면에서 "power"를 입력 앱 검색 결과에서 클릭  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SharePoint 2013 구성에 대 한**합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램은 SharePoint 2010 및 SharePoint 2013에 대해 별개의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구를 설치하기 때문에 검색 결과에 두 개의 링크가 포함될 수 있습니다. SharePoint 2013용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구를 시작하는지 확인하세요.  
   
  ![두 개의 파워 피벗 구성 도구](../../../analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "두 개의 파워 피벗 구성 도구")  
   
@@ -174,11 +174,11 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADO
   
  다음 방법 중 하나를 사용하여 [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] 을 제거하거나 복구할 수 있습니다.  
   
-1.  **Windows 제어판:** SharePoint 2013용 [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]**[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 을 선택합니다.** **제거** 또는 **복구**를 클릭합니다.  
+1.  **Windows 제어판:** 선택 [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SharePoint 2013 용**합니다. **제거** 또는 **복구**를 클릭합니다.  
   
 2.  spPowerPivot.msi를 실행하고 **제거** 옵션 또는 **복구** 옵션을 선택합니다.  
   
- **명령줄:** 명령줄을 사용하여 SharePoint 2013용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 을 복구하거나 제거하려면 **관리자 권한** 으로 명령 프롬프트를 열고 다음 명령 중 하나를 실행합니다.  
+ **명령줄:** 복구 하거나 제거 하려면 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 명령 프롬프트를 열고 명령줄을 사용 하 여 SharePoint 2013에 대 한 **관리자 권한으로** 다음 명령 중 하나를 실행 합니다.  
   
 -   복구하려면 다음 명령을 실행합니다.  
   
@@ -186,7 +186,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADO
     msiexec.exe /f spPowerPivot.msi  
     ```  
   
- OR  
+ 또는  
   
 -   제거하려면 다음 명령을 실행합니다.  
   

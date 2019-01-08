@@ -10,12 +10,12 @@ ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d0a0f167f14910f657f6c65b9778b0aadde65b10
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bfa7b7481589ccb636147b3842a15b92f1a59d43
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664212"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540606"
 ---
 # <a name="managing-passwords-accesstosql"></a>암호 (AccessToSQL) 관리
 데이터베이스 암호와 가져오기 또는 서버에서 내보내야 하는 절차를 보호 하는 방법에 대 한이 섹션은:  
@@ -31,15 +31,15 @@ SSMA를 사용 하면 데이터베이스의 암호를 보호할 수 있습니다
   
 다음 세 가지 방법 중 하나를 사용 하 여 올바른 암호를 지정 합니다.  
   
-1.  **일반 텍스트로:** 'password' 노드의 값 특성에서 데이터베이스 암호를 입력 합니다. 찾은 스크립트 파일 또는 서버 연결 파일의 서버 섹션에서 서버 정의 노드에서 합니다.  
+1.  **텍스트를 지웁니다.** '암호' 노드의 값 특성에서 데이터베이스 암호를 입력 합니다. 찾은 스크립트 파일 또는 서버 연결 파일의 서버 섹션에서 서버 정의 노드에서 합니다.  
   
-    일반 텍스트로 암호 보호 되지 않습니다. 따라서 다음과 같은 경고 메시지가 콘솔 출력에 나타나는: *"Server &lt;서버 id&gt; 암호가 안전 하지 않은 일반 텍스트 형태로 SSMA 콘솔 응용 프로그램에서는 보호 하는 옵션이 제공 합니다 암호화를 통해 암호 하세요 – securepassword 옵션이 표시 SSMA의 도움말 파일에 대 한 자세한 내용은. "*  
+    일반 텍스트로 암호 보호 되지 않습니다. 따라서 콘솔 출력에 다음과 같은 경고 메시지가 발생 됩니다. *"서버 &lt;서버 id&gt; 암호 SSMA 콘솔 응용 프로그램에 안전 하지 않은 일반 텍스트 형식으로 암호화를 통해 암호를 보호 하려면 SSMA 도움말 파일의 자세한-securepassword 옵션을 참조 하십시오 옵션을 제공 하는 입력 않았습니다. 정보입니다. "*  
   
     **암호화 된 암호:** 이 경우 지정된 된 암호 ProtectedStorage.ssma에서 로컬 컴퓨터의 암호화 된 형태로 저장 됩니다.  
   
     -   **암호를 보호 하기**  
   
-        -   실행 합니다 `SSMAforAccessConsole.exe` 사용 하 여를 `–securepassword` 서버 서버 정의 섹션에서 암호 노드를 포함 하는 연결 또는 스크립트 파일을 전달 하는 명령줄에서 스위치를 추가 합니다.  
+        -   실행 합니다 `SSMAforAccessConsole.exe` 사용 하 여를 `-securepassword` 서버 서버 정의 섹션에서 암호 노드를 포함 하는 연결 또는 스크립트 파일을 전달 하는 명령줄에서 스위치를 추가 합니다.  
   
         -   프롬프트에서 사용자는 데이터베이스 암호를 입력 하 고 확인 하 라는 메시지가 표시 됩니다.  
   
@@ -49,7 +49,7 @@ SSMA를 사용 하면 데이터베이스의 암호를 보호할 수 있습니다
             
                 Specify password
                 
-                C:\SSMA\SSMAforAccessConsole.EXE –securepassword –add all –s "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\AssessmentReportGenerationSample.xml" –v "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ VariableValueFileSample.xml"
+                C:\SSMA\SSMAforAccessConsole.EXE -securepassword -add all -s "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ VariableValueFileSample.xml"
                 
                 Enter password for server_id 'XXX_1': xxxxxxx
                 
@@ -57,7 +57,7 @@ SSMA를 사용 하면 데이터베이스의 암호를 보호할 수 있습니다
             
             예 2:
             
-                C:\SSMA\SSMAforAccessConsole.EXE –securepassword –add "source_1,target_1" –c "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ServersConnectionFileSample.xml" – v "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ VariableValueFileSample.xml" -o
+                C:\SSMA\SSMAforAccessConsole.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ VariableValueFileSample.xml" -o
                 
                 Enter password for server_id 'source_1': xxxxxxx
                 
@@ -69,16 +69,16 @@ SSMA를 사용 하면 데이터베이스의 암호를 보호할 수 있습니다
   
     -   **암호화 된 암호를 제거합니다.**  
   
-        실행 된 `SSMAforAccessConsole.exe` 사용 하 여는`–securepassword` 및 `–remove` 로컬 컴퓨터에 있는 보호 된 저장소 파일에서 암호화 된 암호를 제거 하는 서버 id를 전달 하는 명령줄에서 전환 합니다.  
+        실행 된 `SSMAforAccessConsole.exe` 사용 하 여는`-securepassword` 및 `-remove` 로컬 컴퓨터에 있는 보호 된 저장소 파일에서 암호화 된 암호를 제거 하는 서버 id를 전달 하는 명령줄에서 전환 합니다.  
   
-            C:\SSMA\SSMAforAccessConsole.EXE –securepassword –remove all
-            C:\SSMA\SSMAforAccessConsole.EXE –securepassword –remove "source_1,target_1"  
+            C:\SSMA\SSMAforAccessConsole.EXE -securepassword -remove all
+            C:\SSMA\SSMAforAccessConsole.EXE -securepassword -remove "source_1,target_1"  
   
     -   **해당 암호를 암호화 하는 서버 Id를 나열 합니다.**  
   
-        사용 하 여 SSMAforAccessConsole.exe를 실행 합니다 `–securepassword` 및 `–list` 암호 암호화 된 모든 서버 id를 나열 하려면 명령줄에서 전환 합니다.  
+        사용 하 여 SSMAforAccessConsole.exe를 실행 합니다 `-securepassword` 및 `-list` 암호 암호화 된 모든 서버 id를 나열 하려면 명령줄에서 전환 합니다.  
   
-            C:\SSMA\SSMAforAccessConsole.EXE –securepassword –list  
+            C:\SSMA\SSMAforAccessConsole.EXE -securepassword -list  
   
     > [!NOTE]  
     > 1.  스크립트 또는 서버 연결 파일에 언급 된 일반 텍스트로 암호 보안 된 파일의 암호화 된 암호 보다 우선 합니다.  
@@ -92,13 +92,13 @@ SSMA 콘솔 응용 프로그램을 사용 하면 반대로 보안된 파일을 �
     
     Enter password for protecting the exported file
     
-    C:\SSMA\SSMAforAccessConsole.EXE –securepassword –export all "machine1passwords.file"
+    C:\SSMA\SSMAforAccessConsole.EXE -securepassword -export all "machine1passwords.file"
     
     Enter password for protecting the exported file: xxxxxxxx
     
     Please confirm password: xxxxxxxx
     
-    C:\SSMA\SSMAforAccessConsole.EXE –p –e "AccessDB_1_1,Sql_1" "machine2passwords.file"
+    C:\SSMA\SSMAforAccessConsole.EXE -p -e "AccessDB_1_1,Sql_1" "machine2passwords.file"
     
     Enter password for protecting the exported file: xxxxxxxx
     
@@ -109,13 +109,13 @@ SSMA 콘솔 응용 프로그램을 사용 하면 반대로 보안된 파일을 �
     
     Enter password for protecting the imported file
     
-    C:\SSMA\SSMAforAccessConsole.EXE –securepassword –import all "machine1passwords.file"
+    C:\SSMA\SSMAforAccessConsole.EXE -securepassword -import all "machine1passwords.file"
     
     Enter password to import the servers from encrypted file: xxxxxxxx
     
     Please confirm password: xxxxxxxx
     
-    C:\SSMA\SSMAforAccessConsole.EXE –p –i "AccessDB_1,Sql_1" "machine2passwords.file"
+    C:\SSMA\SSMAforAccessConsole.EXE -p -i "AccessDB_1,Sql_1" "machine2passwords.file"
     
     Enter password to import the servers from encrypted file: xxxxxxxx
     

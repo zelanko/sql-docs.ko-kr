@@ -1,5 +1,5 @@
 ---
-title: 테이블 형식 모델 데이터베이스 | Microsoft Docs
+title: Analysis Services 테이블 형식 model 데이터베이스 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6c6a806dc87afa7e1d26d2bf9070debcdaf53144
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1e53a719c4fef684f4b7ec81f2e5c9266adf942b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045967"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072250"
 ---
 # <a name="manage-deployed-tabular-model-databases"></a>배포 된 테이블 형식 모델 데이터베이스 관리
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -33,10 +33,8 @@ ms.locfileid: "34045967"
   
 
     
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [테이블 형식 모델 솔루션](../../analysis-services/tabular-models/tabular-models-ssas.md)  
-  
- [테이블 형식 모델 데이터 액세스](../../analysis-services/tabular-models/tabular-model-data-access.md)  
 
 [Analysis Services 데이터베이스 이동](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)  
   

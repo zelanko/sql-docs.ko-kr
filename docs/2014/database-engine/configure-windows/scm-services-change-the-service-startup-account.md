@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server services, startup account changes
@@ -15,12 +14,12 @@ ms.assetid: d721c796-0397-46a7-901b-1a9a3c3fb385
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bbd2042a5286c337867032e3950c9f7214aad2c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2a830ad4d6fa87cd754910baf8be53216086cab
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153194"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641254"
 ---
 # <a name="change-the-service-startup-account-for-sql-server-sql-server-configuration-manager"></a>SQL Server의 서비스 시작 계정 변경(SQL Server 구성 관리자)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 시작 옵션을 변경하고 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 사용하는 서비스 계정을 변경하는 방법에 대해 설명합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]또는 PowerShell을 사용합니다. 적절한 서비스 계정을 선택하는 방법에 대한 자세한 내용은 [Windows 서비스 계정 및 권한 구성](configure-windows-service-accounts-and-permissions.md)을 참조하세요.  
@@ -40,7 +39,7 @@ ms.locfileid: "48153194"
   
 -   [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 에서 Express 이외 버전으로 SKU 업그레이드  
   
-     [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 설치 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스는 네트워크 서비스를 사용하도록 구성되지만 이는 비활성화됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager에 할당 된 계정을 변경할 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 있지만 서비스 사용 하도록 설정 하거나 시작할 수 없습니다. SKU를 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 에서 Express 이외 버전으로 업그레이드하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 자동으로 활성화되지 않지만 필요한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 서비스 시작 모드를 수동 또는 자동으로 변경하면 활성화할 수 있습니다.  
+     [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 설치 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스는 네트워크 서비스를 사용하도록 구성되지만 이는 비활성화됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스에 할당된 계정을 변경할 수 있지만 서비스를 설정하거나 시작할 수는 없습니다. SKU를 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 에서 Express 이외 버전으로 업그레이드하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 자동으로 활성화되지 않지만 필요한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 서비스 시작 모드를 수동 또는 자동으로 변경하면 활성화할 수 있습니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server 구성 관리자 사용  
   
@@ -49,10 +48,10 @@ ms.locfileid: "48153194"
 1.  **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 독립 실행형 프로그램이 아니라 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 프로그램용 스냅인이므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 최신 버전의 Windows에서 응용 프로그램으로 표시되지 않습니다.  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 독립 실행형 프로그램이 아니라 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 프로그램용 스냅인이므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 최신 버전의 Windows에서 애플리케이션으로 표시되지 않습니다.  
     >   
     >  -   **Windows 10**:  
-    >          열려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager에는 **시작 페이지**, sqlservermanager12.msc (에 대 한 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 12를 더 적은 수로 바꿉니다. SQLServerManager12.msc를 클릭 하면 Configuration Manager 열립니다. 구성 관리자를 시작 페이지나 작업 표시줄을 고정 하려면 SQLServerManager12.msc를 마우스 오른쪽 단추로 클릭 하 고 클릭 **파일 위치 열기**합니다. Windows 파일 탐색기에서 SQLServerManager12.msc를 마우스 오른쪽 단추로 클릭 하 고 클릭 **시작 화면에 고정** 하거나 **작업 표시줄에 고정**합니다.  
+    >          열려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager에는 **시작 페이지**, sqlservermanager12.msc (에 대 한 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 경우 12를 더 작은 수로 바꿉니다. SQLServerManager12.msc를 클릭 하면 Configuration Manager 열립니다. 구성 관리자를 시작 페이지나 작업 표시줄을 고정 하려면 SQLServerManager12.msc를 마우스 오른쪽 단추로 클릭 하 고 클릭 **파일 위치 열기**합니다. Windows 파일 탐색기에서 SQLServerManager12.msc를 마우스 오른쪽 단추로 클릭 하 고 클릭 **시작 화면에 고정** 하거나 **작업 표시줄에 고정**합니다.  
     > -   **Windows 8**:  
     >          열려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager에서의 **검색** 참의 **앱**, 형식 **SQLServerManager\<버전 >.msc** 등`SQLServerManager12.msc`를 누릅니다 **Enter**합니다.  
   

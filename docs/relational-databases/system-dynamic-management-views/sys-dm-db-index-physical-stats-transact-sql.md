@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5869fe4903ea60a42e8710b0acc969e8a8bc6202
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b9d093983408502d391c4025e03ba0a590e8f77a
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673992"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617881"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ sys.dm_db_index_physical_stats (
  지정된 데이터베이스에 있는 모든 테이블 및 뷰에 대한 정보를 반환하려면 NULL을 지정합니다. NULL을 지정 하는 경우 *object_id*에 NULL을 지정 해야 *index_id* 하 고 *partition_number*합니다.  
   
  *index_id* | 0 | NULL | -1 | DEFAULT  
- 인덱스의 ID입니다. *index_id* 됩니다 **int**합니다. 유효한 입력은 ID 번호를 인덱스 0의 경우 *object_id* 힙, NULL,-1 또는 DEFAULT입니다. 기본값은-1입니다. NULL,-1 및 DEFAULT는이 컨텍스트에서 해당 하는 값입니다.  
+ 인덱스의 ID입니다. *index_id* 됩니다 **int**합니다. 유효한 입력은 ID 번호를 인덱스 0의 경우 *object_id* 힙, NULL,-1 또는 DEFAULT입니다. 기본값은 -1입니다. NULL,-1 및 DEFAULT는이 컨텍스트에서 해당 하는 값입니다.  
   
  기본 테이블 또는 뷰에 대한 모든 인덱스 정보를 반환하려면 NULL을 지정합니다. NULL을 지정 하는 경우 *index_id*에 NULL을 지정 해야 *partition_number*합니다.  
   
@@ -87,13 +87,13 @@ sys.dm_db_index_physical_stats (
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|테이블 또는 뷰의 데이터베이스 ID입니다.|  
 |object_id|**int**|인덱스가 있는 테이블 또는 뷰의 개체 ID입니다.|  
 |index_id|**int**|인덱스의 인덱스 ID입니다.<br /><br /> 0 = 힙|  
 |partition_number|**int**|테이블, 뷰 또는 인덱스 등의 소유하는 개체 내의 1부터 시작하는 파티션 번호입니다.<br /><br /> 1 = 분할되지 않은 인덱스 또는 힙|  
-|index_type_desc|**nvarchar(60)**|인덱스 유형에 대한 설명입니다.<br /><br /> HEAP<br /><br /> CLUSTERED  INDEX<br /><br /> NONCLUSTERED  INDEX<br /><br /> PRIMARY  XML  INDEX<br /><br /> SPATIAL INDEX<br /><br /> XML INDEX<br /><br /> COLUMNSTORE 매핑 인덱스 (내부)<br /><br /> DELETEBUFFER COLUMNSTORE (내부)<br /><br /> DELETEBITMAP COLUMNSTORE (내부)|  
+|index_type_desc|**nvarchar(60)**|인덱스 유형에 대한 설명입니다.<br /><br /> HEAP<br /><br /> CLUSTERED  INDEX<br /><br /> NONCLUSTERED  INDEX<br /><br /> PRIMARY  XML  INDEX<br /><br /> 확장 인덱스<br /><br /> XML INDEX<br /><br /> COLUMNSTORE 매핑 인덱스 (내부)<br /><br /> DELETEBUFFER COLUMNSTORE (내부)<br /><br /> DELETEBITMAP COLUMNSTORE (내부)|  
 |hobt_id|**bigint**|힙 또는 B-트리 ID에 인덱스 또는 파티션이입니다.<br /><br /> 사용자 정의 인덱스 hobt_id를 반환 하는 것 외에도 내부 columnstore 인덱스의 hobt_id도 반환 합니다.|  
 |alloc_unit_type_desc|**nvarchar(60)**|할당 단위 유형에 대한 설명입니다.<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> 형식의 열에 저장 된 데이터가 LOB_DATA 할당 단위가 **텍스트**, **ntext**를 **이미지**를 **varchar (max)**, **nvarchar (max)** 하십시오 **varbinary (max)**, 및 **xml**합니다. 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.<br /><br /> ROW_OVERFLOW_DATA 할당 단위 형식 열에 저장 된 데이터가 포함 **varchar (n)**, **nvarchar (n)** 하십시오 **varbinary (n)**, 및 **sql_ variant** 행 외부로 밀어넣은 합니다.|  
 |index_depth|**tinyint**|인덱스 수준의 수입니다.<br /><br /> 1 = 힙 또는 LOB_DATA나 ROW_OVERFLOW_DATA 할당 단위|  
@@ -113,7 +113,7 @@ sys.dm_db_index_physical_stats (
 |compressed_page_count|**bigint**|압축된 페이지 수입니다.<br /><br /> 힙의 경우 새로 할당된 페이지는 PAGE 압축되지 않습니다. 힙은 데이터를 대량으로 가져오거나 힙을 다시 작성하는 경우의 두 가지 특별한 조건에서 PAGE 압축됩니다. 일반적으로 페이지 할당을 발생시키는 DML 작업은 PAGE 압축되지 않습니다. compressed_page_count 값이 원하는 임계값보다 커지면 힙을 다시 작성하십시오.<br /><br /> 클러스터형 인덱스가 있는 테이블의 경우 compressed_page_count 값은 PAGE 압축의 효율성을 나타냅니다.|  
 |hobt_id|BIGINT|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Columnstore 인덱스에 대 한 파티션에 대 한 내부 columnstore 데이터를 추적 하는 행 집합에 대 한 ID입니다. 행 집합으로 데이터를 힙에 저장 되는지 이진 트리. 부모 columnstore 인덱스와 동일한 인덱스 ID를 갖습니다. 자세한 내용은 [sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)합니다.<br /><br /> 경우에는 NULL|  
 |column_store_delete_buffer_state|TINYINT|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = 열기<br /><br /> 2 = 드레이닝<br /><br /> 3 = 플러시하는 중<br /><br /> 4 = 사용 중지<br /><br /> 5 = 준비|  
-|column_store_delete_buff_state_desc||**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> – 잘못 부모 인덱스가 columnstore 인덱스가 아닙니다.<br /><br /> 이 사용 하 여 스캐너를 열고 – deleters 합니다.<br /><br /> 드레이닝 – deleters 드레이닝는 하지만 스캐너에서 계속 사용 합니다.<br /><br /> 플러시 – 버퍼 닫히고 버퍼의 행 삭제 비트맵에 기록 됩니다.<br /><br /> 사용 중지 중-닫힌된 삭제 버퍼의 행 삭제 비트맵에 기록 된 하지만 스캐너 여전히 사용 하기 때문에 버퍼에 잘리지 않습니다. 새 스캐너는 열기 버퍼는 충분 하므로 사용 되지 않는 버퍼를 사용 하지 않아도 됩니다.<br /><br /> 준비 됨 –이 삭제 버퍼를 사용할 준비가 되었습니다.|  
+|column_store_delete_buff_state_desc||**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 유효 하지 않음-부모 인덱스가 columnstore 인덱스가 아닙니다.<br /><br /> -Deleters 열고 스캐너가 옵션을 사용 합니다.<br /><br /> 드레이닝-deleters 드레이닝는 하지만 스캐너에서 계속 사용 합니다.<br /><br /> 플러시하는 중-버퍼 닫히고 버퍼의 행 삭제 비트맵에 기록 됩니다.<br /><br /> 사용 중지 중-닫힌된 삭제 버퍼의 행 삭제 비트맵에 기록 된 하지만 스캐너 여전히 사용 하기 때문에 버퍼에 잘리지 않습니다. 새 스캐너는 열기 버퍼는 충분 하므로 사용 되지 않는 버퍼를 사용 하지 않아도 됩니다.<br /><br /> 준비-이 삭제 버퍼를 사용할 준비가 된 것입니다.|  
   
 ## <a name="remarks"></a>Remarks  
  sys.dm_db_index_physical_stats 동적 관리 함수는 DBCC SHOWCONTIG 문을 대체합니다.  

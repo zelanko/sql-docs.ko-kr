@@ -21,12 +21,12 @@ ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13352451c31822acdc9fea70965b22c6269577f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a149e8940896210a408b36c7cb06814646fd322
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152032"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375945"
 ---
 # <a name="working-with-query-notifications"></a>쿼리 알림 작업
   쿼리 알림은 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 도입되었습니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 도입된 Service Broker 인프라를 기반으로 구축된 쿼리 알림을 통해 응용 프로그램은 데이터 변경 시 알림을 받을 수 있습니다. 이 기능은 데이터베이스의 정보 캐시를 제공하며 원본 데이터 변경 시 알림을 받아야 하는 응용 프로그램(예: 웹 응용 프로그램)에 특히 유용합니다.  
@@ -58,11 +58,11 @@ ms.locfileid: "48152032"
 CREATE QUEUE myQueue  
 CREATE SERVICE myService ON QUEUE myQueue   
   
-([http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification])  
+([https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification])  
 ```  
   
 > [!NOTE]  
->  서비스에서 위에 표시된 미리 정의된 계약 `http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification`을 사용해야 합니다.  
+>  서비스에서 위에 표시된 미리 정의된 계약 `https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification`을 사용해야 합니다.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 공급자  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 행 집합 수정에 소비자 알림을 지원 합니다. 소비자는 모든 행 집합 수정 단계와 변경 시도에 대해 알림을 받습니다.  
@@ -113,7 +113,7 @@ RECEIVE * FROM MyQueue
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
   
- SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT 및 SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS가 NULL이 아니면 명령을 실행할 때마다 위에 정의된 3개의 특성이 포함된 쿼리 알림 TDS 헤더가 서버로 전달됩니다. 둘 중 하나가 Null이면 헤더가 전달되지 않고 SQL_SUCCESS_WITH_INFO가 반환됩니다. 유효성 검사에서 발생 [SQLPrepare 함수](http://go.microsoft.com/fwlink/?LinkId=59360)를 **SqlExecDirect**, 및 **SqlExecute**모든 특성이 유효 하지 않은 경우는 실패 합니다. 마찬가지로, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전의 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 버전에 대해 이러한 쿼리 알림 특성이 설정되어 있으면 SQL_SUCCESS_WITH_INFO로 인해 실행이 실패합니다.  
+ SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT 및 SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS가 NULL이 아니면 명령을 실행할 때마다 위에 정의된 3개의 특성이 포함된 쿼리 알림 TDS 헤더가 서버로 전달됩니다. 둘 중 하나가 Null이면 헤더가 전달되지 않고 SQL_SUCCESS_WITH_INFO가 반환됩니다. 유효성 검사에서 발생 [SQLPrepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360)를 **SqlExecDirect**, 및 **SqlExecute**모든 특성이 유효 하지 않은 경우는 실패 합니다. 마찬가지로, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전의 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 버전에 대해 이러한 쿼리 알림 특성이 설정되어 있으면 SQL_SUCCESS_WITH_INFO로 인해 실행이 실패합니다.  
   
 > [!NOTE]  
 >  문을 준비할 때는 구독이 시작되지 않습니다. 문을 실행해야 구독을 시작할 수 있습니다.  
@@ -133,7 +133,7 @@ RECEIVE * FROM MyQueue
   
  동일한 데이터베이스 컨텍스트에서 동일한 사용자가 제출했으며 템플릿, 매개 변수 값, 알림 ID 및 배달 위치가 기존 활성 구독과 같은 알림에 대해 쿼리를 제출하면 기존 구독이 갱신되고 새로 지정한 제한 시간이 다시 설정됩니다. 즉, 동일한 쿼리에 대해 알림을 요청하면 알림이 한 개만 전송됩니다. 이는 일괄 처리에서 중복된 쿼리나 여러 번 호출된 저장 프로시저의 쿼리에 적용됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Native Client 기능](sql-server-native-client-features.md)  
   
   

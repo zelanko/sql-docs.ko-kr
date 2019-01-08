@@ -21,12 +21,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 192300903c19913ff3762a744db9f999589e2c53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82cd70d9f1baa7741f4ecc449167d5c56e7fe954
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822190"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52392636"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>sys.server_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ Azure SQL 관리 되는 인스턴스의 CPU 사용량, IO 및 storage 데이터�
 |resource_name|nvarchar(128)|리소스의 이름입니다.|
 |sku|nvarchar(128)|인스턴스의 인스턴스 서비스 계층을 관리 합니다. 가능한 값은 다음과 같습니다. <br><ul><li>범용</li></ul><ul><li>중요 비즈니스용</li></ul>|
 |hardware_generation|nvarchar(128)|하드웨어 세대 식별자: Gen 4 또는 Gen 5 등|
-|virtual_core_count|ssNoversion|(8, 16 또는 24 공개 미리 보기로 제공) 인스턴스 당 가상 코어 수를 나타냅니다.|
+|virtual_core_count|int|(8, 16 또는 24 공개 미리 보기로 제공) 인스턴스 당 가상 코어 수를 나타냅니다.|
 |avg_cpu_percent|decimal(5,2)|인스턴스에서 사용 하는 관리 되는 인스턴스 서비스 계층 한도의 백분율로 평균 계산 사용률입니다. 인스턴스의 모든 데이터베이스에 대 한 모든 리소스 풀의 CPU 시간의 합계 계산 이며 지정된 된 간격에 해당 계층에 대 한 사용 가능한 CPU 시간으로 나눈 값입니다.|
 |reserved_storage_mb|BIGINT|예약 인스턴스 당 저장소 (저장소 공간 관리 되는 인스턴스에 대 한 구매 고객)|
 |storage_space_used_mb|decimal(18,2)|모든 관리 되는 인스턴스 데이터베이스의 파일 (데이터베이스 사용자와 시스템 데이터베이스 포함)에서 사용 된 저장소|
@@ -79,5 +79,5 @@ GROUP BY resource_name
 HAVING AVG(avg_cpu_percent) >= 80  
 ```  
     
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [인스턴스 서비스 계층 관리](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)

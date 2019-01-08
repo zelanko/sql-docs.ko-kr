@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation
@@ -16,12 +15,12 @@ ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce09e0765f553d2a884a271b7740118a293a9510
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: fb778827f9193cd9fae136e078e353241d2b55ae
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089773"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769745"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>캐시 없음 또는 부분 캐시 모드로 조회 구현
   부분 캐시 또는 캐시 없음 모드를 사용하여 조회 변환을 구성할 수 있습니다.  
@@ -61,11 +60,11 @@ ms.locfileid: "48089773"
   
     -   **SQL 쿼리 결과 사용**을 클릭한 다음 **SQL 명령** 창에 쿼리를 작성합니다.  
   
-         —또는—  
+         -또는-  
   
          **쿼리 작성** 을 클릭하여 **쿼리 작성기** 에서 공급하는 그래픽 도구를 사용하여 쿼리를 작성합니다.  
   
-         —또는—  
+         -또는-  
   
          **찾아보기** 를 클릭하여 파일에서 SQL 문을 가져옵니다.  
   

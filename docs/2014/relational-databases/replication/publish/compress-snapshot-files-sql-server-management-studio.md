@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], compressed
@@ -14,15 +13,15 @@ ms.assetid: 174ade3e-74a1-4e67-a6da-b874be3ff50f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1451a8645edb5f1da2aa4590246b2e50ff73b4df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c8be85ae97d281113515205fadba9be827492474
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138163"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762573"
 ---
 # <a name="compress-snapshot-files-sql-server-management-studio"></a>스냅숏 파일 압축(SQL Server Management Studio)
-  파일이 **게시 속성 - \<Publication>** 대화 상자의 **스냅숏** 페이지에서 압축되도록 지정합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요.  
+  파일이 **게시 속성 - \<Publication>** 대화 상자의 **스냅숏** 페이지에서 압축되도록 지정합니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Publication Properties](view-and-modify-publication-properties.md)을 참조하세요.  
   
 ### <a name="to-compress-snapshot-files"></a>스냅숏 파일을 압축하려면  
   
@@ -42,7 +41,7 @@ ms.locfileid: "48138163"
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [스냅숏 속성 구성&#40;복제 Transact-SQL 프로그래밍&#41;](configure-snapshot-properties-replication-transact-sql-programming.md)   
  [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)   
  [압축 스냅숏](../compressed-snapshots.md)   

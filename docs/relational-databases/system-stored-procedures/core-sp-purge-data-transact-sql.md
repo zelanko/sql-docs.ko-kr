@@ -21,17 +21,17 @@ ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cbcd8616fc743ee749b3adb9b30f343939fa7f3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23495d6f2d18964bb35395666c3c7b867e508e20
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819241"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211222"
 ---
 # <a name="coresppurgedata-transact-sql"></a>core.sp_purge_data(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  보존 정책을 기준으로 관리 데이터 웨어하우스에서 데이터를 제거합니다. 이 프로시저는 mdw_purge_data 매일 실행할[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지정 된 인스턴스와 연결 된 관리 데이터 웨어하우스에 대 한 에이전트 작업입니다. 다음 저장 프로시저를 사용하여 관리 데이터 웨어하우스에서 데이터를 요청 시 제거할 수 있습니다.  
+  보존 정책을 기준으로 관리 데이터 웨어하우스에서 데이터를 제거합니다. 이 프로시저는 지정된 인스턴스와 연결된 관리 데이터 웨어하우스에 대해 mdw_purge_data [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업에 의해 매일 실행됩니다. 다음 저장 프로시저를 사용하여 관리 데이터 웨어하우스에서 데이터를 요청 시 제거할 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

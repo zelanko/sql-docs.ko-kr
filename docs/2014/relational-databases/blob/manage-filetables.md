@@ -13,17 +13,17 @@ ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76a4c29d0fba58eb941bf26781b052966a0bd5b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: bfb5fa710122df0e467b27a99c08d75cc2897adf
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186743"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52416724"
 ---
 # <a name="manage-filetables"></a>FileTable 관리
   FileTable을 관리하는 데 사용되는 일반적인 관리 태스크에 대해 설명합니다.  
   
-##  <a name="HowToEnumerate"></a> 방법: FileTable 및 관련 개체 목록 가져오기  
+##  <a name="HowToEnumerate"></a> 어떻게: FileTable 및 관련 개체 목록 가져오기  
  FileTable 목록을 가져오려면 다음 카탈로그 뷰 중 하나를 쿼리합니다.  
   
 -   [sys.filetables&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetables-transact-sql)  
@@ -79,7 +79,7 @@ GO
   
 -   인스턴스 수준에서 FILESTREAM을 사용하지 않도록 설정한 경우 인스턴스에 대한 데이터베이스 수준 디렉터리가 표시되지 않습니다.  
   
-###  <a name="HowToDisable"></a> 방법: 데이터베이스 수준에서 비트랜잭션 액세스 사용 해제 및 다시 설정  
+###  <a name="HowToDisable"></a> 어떻게: 데이터베이스 수준에서 비트랜잭션 액세스 사용 해제 및 다시 설정  
  자세한 내용은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)을 참조하세요.  
   
  **전체 비트랜잭션 액세스를 사용하지 않도록 설정하려면**  
@@ -106,7 +106,7 @@ ALTER DATABASE database_name
 GO  
 ```  
   
-###  <a name="visible"></a> 방법: 데이터베이스에서 FileTable의 가시성 보장  
+###  <a name="visible"></a> 어떻게: 데이터베이스에서 FileTable의 가시성 보장  
  다음 조건에 모두 해당하는 경우 데이터베이스 수준 디렉터리와 이 디렉터리 아래의 FileTable 디렉터리가 표시됩니다.  
   
 1.  인스턴스 수준에서 FILESTREAM을 사용하도록 설정한 경우  
@@ -138,7 +138,7 @@ GO
   
 -   FileTable 디렉터리와 이 디렉터리에 포함된 파일 및 디렉터리가 파일 시스템에 표시되고 파일 I/O 액세스 기능을 사용할 수 있습니다.  
   
-###  <a name="HowToEnableNS"></a> 방법: 테이블 수준에서 FileTable 네임스페이스 사용 해제 및 다시 설정  
+###  <a name="HowToEnableNS"></a> 어떻게: 테이블 수준에서 FileTable 네임스페이스 사용 해제 및 다시 설정  
  **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** 옵션을 사용하여 ALTER TABLE 문을 호출합니다.  
   
  **FileTable 네임스페이스를 사용하지 않도록 설정하려면**  
@@ -161,7 +161,7 @@ GO
 > [!WARNING]  
 >  열려 있는 파일 핸들을 중지하면 저장하지 않은 데이터가 손실될 수 있습니다. 이 동작은 파일 시스템 자체의 동작과 일치합니다.  
   
-###  <a name="HowToListOpen"></a> 방법: FileTable과 연결된 열려 있는 파일 핸들 목록 가져오기  
+###  <a name="HowToListOpen"></a> 어떻게: FileTable과 연결된 열려 있는 파일 핸들 목록 가져오기  
  카탈로그 뷰 [sys.dm_filestream_non_transacted_handles&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql)를 쿼리합니다.  
   
 ```tsql  
@@ -169,7 +169,7 @@ SELECT * FROM sys.dm_filestream_non_transacted_handles;
 GO  
 ```  
   
-###  <a name="HowToKill"></a> 방법: FileTable과 연결된 열려 있는 파일 핸들 중지  
+###  <a name="HowToKill"></a> 어떻게: FileTable과 연결된 열려 있는 파일 핸들 중지  
  적절한 인수로 저장 프로시저 [sp_kill_filestream_non_transacted_handles&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles)를 호출하여 데이터베이스 또는 FileTable에 열려 있는 모든 파일 핸들을 중지하거나 특정 핸들을 중지합니다.  
   
 ```  
@@ -188,7 +188,7 @@ EXEC sp_kill_filestream_non_transacted_handles @handle_id = integer_handle_id;
 GO  
 ```  
   
-###  <a name="HowToIdentifyLocks"></a> 방법: FileTable이 보유한 잠금 식별  
+###  <a name="HowToIdentifyLocks"></a> 어떻게: FileTable이 보유한 잠금 식별  
  FileTable이 보유한 대부분의 잠금은 애플리케이션에서 연 파일에 해당합니다.  
   
  **열려 있는 파일과 연결된 잠금을 식별하려면**  

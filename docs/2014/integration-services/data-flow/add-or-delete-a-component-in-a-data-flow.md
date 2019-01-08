@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - adding components
@@ -14,12 +13,12 @@ ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c1a94a9d0dfddde667d2e52d3f612cda41e00a1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38dd3903bdd5f6db52d949a6e3472845b89b5157
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150290"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761915"
 ---
 # <a name="add-or-delete-a-component-in-a-data-flow"></a>데이터 흐름에서 구성 요소 추가 또는 삭제
   데이터 흐름 구성 요소는 데이터 흐름에 있는 원본, 대상 및 변환입니다. 데이터 흐름에 구성 요소를 추가하려면 패키지의 제어 흐름에 데이터 흐름 태스크 포함되어 있어야 합니다.  
@@ -54,7 +53,7 @@ ms.locfileid: "48150290"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 흐름의 구성 요소 연결](data-flow.md)   
- [데이터 흐름 구성 요소의 오류 출력 구성](../configure-an-error-output-in-a-data-flow-component.md)   
+ [데이터 흐름 구성 요소에서 오류 출력 구성](../configure-an-error-output-in-a-data-flow-component.md)   
  [데이터 흐름](data-flow.md)  
   
   

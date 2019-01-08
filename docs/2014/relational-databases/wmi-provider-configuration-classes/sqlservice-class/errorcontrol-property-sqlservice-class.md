@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 api_name:
 - ErrorControl Property (SqlService Class)
@@ -20,12 +18,12 @@ ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 83955510a18a2fbc77be5aeb7005704852f0e4a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89cdfa63bff88c4f4bb5954402034b31ad7f77ce
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135883"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373605"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>ErrorControl 속성(SqlService 클래스)
   시스템을 시작할 때 서비스가 시작되지 않은 경우 오류의 심각도를 가져오거나 설정합니다.  
@@ -54,16 +52,16 @@ object
  심각  
  마지막으로 성공한 올바른 구성으로 시스템을 다시 시작합니다.  
   
- 심각  
+ 위험  
  올바른 구성으로 시스템을 다시 시작합니다.  
   
- Unknown  
+ 알 수 없음  
  심각도를 알 수 없습니다.  
   
 ## <a name="remarks"></a>Remarks  
  이 값은 오류가 발생할 때 시작 프로그램에서 수행하는 동작을 나타냅니다. 모든 오류는 컴퓨터 시스템에 기록됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [서비스 시작 및 중지](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+## <a name="see-also"></a>관련 항목:  
+ [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

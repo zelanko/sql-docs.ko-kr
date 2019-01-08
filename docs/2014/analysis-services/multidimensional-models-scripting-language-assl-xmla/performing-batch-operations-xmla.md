@@ -21,12 +21,12 @@ ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44ffc8084af6917a8df84c5a204df96112441723
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: bca0c74ab978b6f47e68221987777f1818a95b7b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148328"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542579"
 ---
 # <a name="performing-batch-operations-xmla"></a>일괄 작업 수행(XMLA)
   사용할 수는 [일괄 처리](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla) XMLA (XML for Analysis) 단일 XMLA를 사용 하는 여러 XMLA 명령을 실행할 명령을 [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) 메서드. `Batch` 명령에 포함된 여러 명령을 단일 트랜잭션으로 실행하거나 각 명령에 대한 개별 트랜잭션을 순차적으로 또는 병렬로 실행할 수 있습니다. 또한 여러 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 처리하기 위해 `Batch` 명령의 아웃오브 라인 바인딩 및 기타 속성을 지정할 수 있습니다.  
@@ -35,12 +35,12 @@ ms.locfileid: "50148328"
  `Batch` 명령은 다음 두 가지 방법 중 하나로 실행됩니다.  
   
  **트랜잭션**  
- 경우는 `Transaction` 특성을 `Batch` 명령 집합은 true로는 `Batch` 명령이 실행 명령에 포함 된 명령의 모든는 `Batch` 명령을 단일 트랜잭션으로-를 *트랜잭션* 일괄 처리 합니다.  
+ 경우는 `Transaction` 특성을 `Batch` 명령 집합은 true로는 `Batch` 명령이 실행 명령에 포함 된 명령의 모든는 `Batch` 트랜잭션 a는 단일 명령을 *트랜잭션* 일괄 처리 합니다.  
   
  트랜잭션 일괄 처리에서 실패한 명령이 있으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 `Batch` 명령에서 실패한 명령 이전에 실행된 모든 명령을 롤백한 후 `Batch` 명령을 즉시 종료합니다. `Batch` 명령에서 아직 실행되지 않은 명령은 처리되지 않습니다. `Batch` 명령이 종료된 후 `Batch` 명령에서는 실패한 명령에서 발생한 모든 오류를 보고합니다.  
   
  **비트랜잭션**  
- 경우는 `Transaction` 특성이 false로 설정 된를 `Batch` 명령은에 포함 된 각 명령을 실행 합니다 `Batch` 별도 트랜잭션에서 명령을-를 *비트랜잭션* 일괄 처리 합니다. 비트랜잭션 일괄 처리에서 실패한 명령이 있더라도 `Batch` 명령은 실패한 명령 이후의 명령을 계속 실행합니다. `Batch` 명령은 `Batch` 명령에 포함된 모든 명령을 실행하려고 시도한 후 `Batch` 명령에서 발생한 모든 오류를 보고합니다.  
+ 경우는 `Transaction` 특성이 false로 설정 된를 `Batch` 명령은에 포함 된 각 명령을 실행 합니다 `Batch` 트랜잭션을 별도의 명령을 *비트랜잭션* 일괄 처리 합니다. 비트랜잭션 일괄 처리에서 실패한 명령이 있더라도 `Batch` 명령은 실패한 명령 이후의 명령을 계속 실행합니다. `Batch` 명령은 `Batch` 명령에 포함된 모든 명령을 실행하려고 시도한 후 `Batch` 명령에서 발생한 모든 오류를 보고합니다.  
   
  `Batch` 명령에 포함된 명령에서 반환된 모든 결과는 `Batch` 명령에 포함된 명령의 순서대로 반환됩니다. `Batch` 명령에서 반환되는 결과는 `Batch` 명령이 트랜잭션인지 또는 비트랜잭션인지에 따라 달라집니다.  
   

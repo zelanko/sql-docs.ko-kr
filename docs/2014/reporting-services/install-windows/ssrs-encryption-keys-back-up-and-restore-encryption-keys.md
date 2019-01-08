@@ -16,12 +16,12 @@ ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 85bf679fe5ab9f9224a4d8b09aa8fa64643ce80b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 19bdabaab24d9276386095cb8ef97b0130a13c58
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054324"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530371"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>Reporting Services 암호화 키 백업 및 복원
   보고서 서버 구성의 중요한 부분은 중요한 정보의 암호화에 사용되는 대칭 키의 백업 복사본을 만드는 것입니다. 대칭 키의 백업 복사본은 여러 일상 작업에 필요하며 새 설치에서 기존 보고서 서버 데이터베이스를 다시 사용할 수 있도록 합니다.  
@@ -47,12 +47,12 @@ ms.locfileid: "48054324"
 ## <a name="backing-up-the-encryption-keys"></a>암호화 키 백업  
  대칭 키를 백업하면 사용자가 지정한 파일에 키가 기록된 후 사용자가 제공한 암호를 사용하여 키가 스크램블됩니다. 대칭 키는 암호화되지 않은 상태로는 저장될 수 없으므로 디스크에 저장할 때 암호를 제공하여 키를 암호화해야 합니다. 파일이 생성되면 해당 파일을 안전한 위치에 저장하고 파일 잠금을 해제하는 데 사용되는 **암호를 기억해야** 합니다. 대칭 키를 백업하려면 다음과 같은 도구를 사용할 수 있습니다.  
   
- **기본 모드:** Reporting Services 구성 관리자 또는 **rskeymgmt** 유틸리티  
+ **기본 모드:** Reporting Services 구성 관리자 또는 **rskeymgmt** 유틸리티입니다.  
   
  **SharePoint 모드:** SharePoint 중앙 관리 페이지 또는 PowerShell  
   
 ####  <a name="bkmk_backup_sharepoint"></a> SharePoint 모드 보고서 서버 백업  
- SharePoint 모드 보고서 서버의 경우 PowerShell 명령을 사용하거나 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션용 관리 페이지를 사용할 수 있습니다. 자세한 내용은 [Reporting Services SharePoint 서비스 애플리케이션 관리](../manage-a-reporting-services-sharepoint-service-application.md)의 "키 관리" 섹션을 참조하세요.  
+ SharePoint 모드 보고서 서버의 경우 PowerShell 명령을 사용하거나 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션용 관리 페이지를 사용할 수 있습니다. 자세한 내용은 [Reporting Services SharePoint 서비스 애플리케이션 관리](../manage-a-reporting-services-sharepoint-service-application.md)의 “키 관리” 섹션을 참조하세요.  
   
 ####  <a name="bkmk_backup_configuration_manager"></a> 암호화 키 백업 - Reporting Services 구성 관리자(기본 모드)  
   
@@ -101,13 +101,13 @@ ms.locfileid: "48054324"
   
 ####  <a name="bkmk_restore_rskeymgmt"></a> 암호화 키 복원 - rskeymgmt(기본 모드)  
   
-1.  보고서 서버를 호스팅하는 컴퓨터에서 **rskeymgmt.exe** 를 로컬로 실행합니다. 사용 된 `-a` 키를 복원 하는 인수입니다. 정규화된 파일 이름을 제공하고 암호를 지정해야 합니다. 다음은 인수 지정 예입니다.  
+1.  보고서 서버를 호스팅하는 컴퓨터에서 **rskeymgmt.exe** 를 로컬로 실행합니다. `-a` 인수를 사용하여 키를 복원합니다. 정규화된 파일 이름을 제공하고 암호를 지정해야 합니다. 다음은 인수 지정 예입니다.  
   
     ```  
     rskeymgmt -a -f d:\rsdbkey.snk -p<password>  
     ```  
   
 ## <a name="see-also"></a>관련 항목  
- [암호화 키 구성 및 관리 &#40;SSRS 구성 관리자&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
+ [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

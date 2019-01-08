@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b6a55afa2c152fe5a97c474f0a23af1fda12ff57
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 807e1f2c864f4e6574188e3f3d717e9bdf571c93
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040087"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525666"
 ---
 # <a name="database-representationtabular"></a>데이터베이스 표현(테이블 형식)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "34040087"
   
 ```csharp  
 using ADOMD = Microsoft.AnalysisServices.AdomdClient;  
-…  
+...  
    ADOMD.AdomdConnection currrentCnx = new ADOMD.AdomdConnection("Data Source=<<server\instance>>;Catalog=<<database>>");  
    currrentCnx.Open();  
-…  
+...  
   
 ```  
   
@@ -53,7 +53,7 @@ currentCnx.ChangeDatabase("myOtherDatabase");
 ## <a name="database-in-amo"></a>AMO의 데이터베이스  
  AMO를 사용하여 데이터베이스 개체를 관리할 때는 먼저 <xref:Microsoft.AnalysisServices.Server> 개체로 시작하여 데이터베이스 컬렉션에서 데이터베이스를 검색하거나 새 데이터베이스를 컬렉션에 추가하여 데이터베이스를 만듭니다.  
   
- 다음 코드 조각에서는 서버에 연결하기 위한 단계를 보여 주고 존재하지 않는 데이터베이스를 확인한 후 빈 데이터베이스를 만드는 방법을 보여 줍니다.  
+ 다음 코드는 서버에 연결 하 고 빈 데이터베이스를 만드는 단계를 보여 줍니다.를 확인 한 후 데이터베이스가 존재 하지 않습니다.  
   
 ```  
   
@@ -86,6 +86,6 @@ catch (Exception createDBxc)
   
 ```  
   
- AMO 사용 하 여 데이터베이스 표현을 만들고 조작 하는 방법에 대 한 실용적인 이해 Tabular AMO 2012 예제의 소스 코드를 참조 하십시오. 특히 다음 소스 파일에 체크 인: Database.cs 합니다. 예제는 Codeplex에서 사용할 수 있습니다. 예제 코드는 여기에서 설명한 논리적 개념에 대한 지원으로만 제공되며 프로덕션 환경에서 사용해서는 안 됩니다.  
+ AMO를 사용하여 데이터베이스 표현을 만들고 조작하려면 Tabular AMO 2012 예제의 원본 코드를 참조하십시오. 특히 원본 파일 Database.cs에서 확인하십시오. 예제는 Codeplex에서 사용할 수 있습니다. 예제 코드는 여기에서 설명한 논리적 개념에 대한 지원으로만 제공되며 프로덕션 환경에서 사용해서는 안 됩니다.  
   
   

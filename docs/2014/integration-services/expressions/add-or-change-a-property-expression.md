@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], creating
@@ -14,12 +13,12 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c571f92879a31399c0db4c7bc0acacc1355e169
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8144f0a050afd484d77a12c13780de461587513b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178503"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807385"
 ---
 # <a name="add-or-change-a-property-expression"></a>속성 식 추가 또는 변경
   패키지, 태스크, Foreach 루프 컨테이너, For 루프 컨테이너, 시퀀스 컨테이너, 이벤트 처리기, 패키지 및 프로젝트 수준의 연결 관리자 및 로그 공급자에 속성 식을 만들 수 있습니다.  
@@ -38,15 +37,15 @@ ms.locfileid: "48178503"
   
     -   항목을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-3.  **식** 입력란을 클릭한 다음 줄임표(...)를 클릭합니다.  
+3.  **식** 상자를 클릭한 다음, 줄임표(...)를 클릭합니다.  
   
 4.  **속성 식 편집기**에서 **속성** 목록의 속성을 선택하고 다음 중 하나를 수행하십시오.  
   
     -   **식** 열에서 속성 식을 직접 입력하거나 변경한 다음 **확인**을 클릭합니다.  
   
-         —또는—  
+         -또는-  
   
-    -   속성의 식 행에서 줄임표(…)를 클릭하여 **식 작성기**를 엽니다.  
+    -   속성의 식 행에서 줄임표(...)를 클릭하여 **식 작성기**를 엽니다.  
   
 5.  (옵션) **식 작성기**에서 다음 태스크 중 하나를 수행합니다.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48178503"
 ## <a name="see-also"></a>관련 항목  
  [Integration Services&#40;SSIS&#41; 식](integration-services-ssis-expressions.md)   
  [패키지에서 속성 식 사용](use-property-expressions-in-packages.md)   
- [Integration Services &#40;SSIS&#41; 패키지](../integration-services-ssis-packages.md)   
+ [Integration Services&#40;SSIS&#41; 패키지](../integration-services-ssis-packages.md)   
  [Integration Services 컨테이너](../control-flow/integration-services-containers.md)   
  [Integration Services 태스크](../control-flow/integration-services-tasks.md)   
  [Integration Services&#40;SSIS&#41; 이벤트 처리기](../integration-services-ssis-event-handlers.md)   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.namenotfound.f1
@@ -14,12 +14,12 @@ ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04c6b90d4a0be3ffcbbbbfd5f07192f5548e69e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9274157d5a57e04b03e1a9c71d29c7f46e0a1dec
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212782"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809465"
 ---
 # <a name="name-not-found-dialog-box"></a>찾을 수 없는 이름 대화 상자
   대화 상자에 있는 개체 이름 중 하나 이상을 찾을 수 없습니다. 계속하려면 옵션을 선택합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "48212782"
  **개체 이름 입력**  
  찾을 수 없는 개체 이름이 들어 있습니다. 개체 이름을 수정하거나 새 개체 이름을 입력합니다.  
   
- **제거할***\<개체 이름 >***선택 영역에서**   
+ **제거할***\<개체 이름 >***선택 영역에서**  
  **이름을 찾을 수 없음** 대화 상자를 닫고 **개체 선택** 대화 상자에서 항목을 제거하려면 선택합니다.  
   
   

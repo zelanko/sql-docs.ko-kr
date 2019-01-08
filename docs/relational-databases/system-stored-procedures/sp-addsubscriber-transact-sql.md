@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addsubscriber
@@ -17,12 +16,12 @@ ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec23f8c6fd28ba20522c6a2962d8af0c9f809a9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad13c4904270d3162dac8791b7724533e8da6656
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825141"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211752"
 ---
 # <a name="spaddsubscriber-transact-sql"></a>sp_addsubscriber(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -137,7 +136,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |값|Description|  
 |-----------|-----------------|  
 |**1** (기본값)|첫째|  
-|**2**|둘째|  
+|**2**|Second|  
 |**4**|셋째|  
 |**8**|넷째|  
 |**16**|마지막|  
@@ -157,7 +156,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|둘째|  
+|**2**|Second|  
 |**4** (기본값)|Minute|  
 |**8**|Hour|  
   
@@ -207,7 +206,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  이 매개 변수 사용 되지 않으며 설정에 이전 버전과 호환성을 위해 제공 됩니다 *encrypted_password* 값으로 있지만 **0** 오류가 발생 합니다.  
   
  [ **@publisher**=] **'***게시자***'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외의 게시자를 지정합니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+ 지정 된 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *게시자* 해서는 안에서 게시 하는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  
@@ -225,7 +224,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_addsubscriber**합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [sp_changesubscriber &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   

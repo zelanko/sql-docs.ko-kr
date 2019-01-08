@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, classifier function create
@@ -16,12 +15,12 @@ ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 16eb3ef5b20a2aa3d8ffc869d386e541b081752f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5118ebcb3da31b97859ca0b2b38e3ad552604990
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112823"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799671"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>분류자 사용자 정의 함수 만들기 및 테스트
   이 항목에서는 분류자 사용자 정의 함수(Transact-UDF)를 만들고 테스트하는 방법을 보여 줍니다. 이 단계에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 문을 실행하는 작업이 포함되어 있습니다.  
@@ -116,7 +115,7 @@ ms.locfileid: "48112823"
     go  
     ```  
   
-4.  조회 테이블의 시간에 대해 계산될 수 있는 시간 함수 및 값을 사용하는 분류자 함수를 만듭니다. 분류자 함수에서 조회 테이블을 사용하는 방법에 대한 자세한 내용은 이 항목의 "분류자 함수에서 조회 테이블을 사용하는 최선의 구현 방법"을 참조하십시오.  
+4.  조회 테이블의 시간에 대해 계산될 수 있는 시간 함수 및 값을 사용하는 분류자 함수를 만듭니다. 분류자 함수에서 조회 테이블을 사용하는 방법에 대한 자세한 내용은 이 항목의 "분류자 함수에서 조회 테이블을 사용하는 최선의 구현 방법"을 참조하세요.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 에는 날짜 및 시간 데이터 형식 및 함수의 확장된 집합이 도입되었습니다. 자세한 내용은 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)를 참조하세요.  

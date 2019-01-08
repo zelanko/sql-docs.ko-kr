@@ -13,17 +13,17 @@ ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3309d3754d8d4842ed238a54f0120b54bba1d596
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de783ffdb5480a9cdebec2380f81e50a9cba11ec
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219183"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361355"
 ---
 # <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>서버 인스턴스의 HADR 클러스터 컨텍스트 변경(SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이상 버전에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 을 사용하여 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 인스턴스의 HADR 클러스터 컨텍스트를 전환하는 방법에 대해 설명합니다. *HADR 클러스터 컨텍스트* 는 서버 인스턴스에서 호스트하는 가용성 복제본에 대한 메타데이터를 관리하는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 클러스터를 결정합니다.  
   
- 새 WSFC 클러스터에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 인스턴스로의 클러스터 간 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 마이그레이션을 수행하는 동안에만 HADR 클러스터 컨텍스트를 전환합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]의 클러스터 간 마이그레이션은 가용성 그룹의 작동 중단 시간을 최소화하면서 [!INCLUDE[win8](../../../includes/win8-md.md)] 또는 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]로의 OS 업그레이드를 지원합니다. 자세한 내용은 [OS 업그레이드를 위한 AlwaysOn 가용성 그룹의 클러스터 간 마이그레이션](http://msdn.microsoft.com/library/jj873730.aspx)을 참조하십시오.  
+ 새 WSFC 클러스터에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 인스턴스로의 클러스터 간 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 마이그레이션을 수행하는 동안에만 HADR 클러스터 컨텍스트를 전환합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]의 클러스터 간 마이그레이션은 가용성 그룹의 작동 중단 시간을 최소화하면서 [!INCLUDE[win8](../../../includes/win8-md.md)] 또는 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]로의 OS 업그레이드를 지원합니다. 자세한 내용은 [OS 업그레이드를 위한 AlwaysOn 가용성 그룹의 클러스터 간 마이그레이션](https://msdn.microsoft.com/library/jj873730.aspx)을 참조하십시오.  
   
 
   
@@ -40,7 +40,7 @@ ms.locfileid: "48219183"
   
 -   원격 HADR 클러스터 컨텍스트는 언제든지 로컬 클러스터로 다시 전환할 수 있습니다. 그러나 서버 인스턴스에서 가용성 복제본을 호스팅하는 동안에는 컨텍스트를 다시 전환할 수 없습니다.  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
   
 -   HADR 클러스터 컨텍스트를 변경하는 서버 인스턴스에서는 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 이상(Enterprise Edition 이상)을 실행해야 합니다.  
   
@@ -117,7 +117,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = LOCAL;
   
 
   
-##  <a name="FollowUp"></a> 후속 작업: 가용성 복제본의 클러스터 컨텍스트를 전환한 후  
+##  <a name="FollowUp"></a> 후속편: 가용성 복제본의 클러스터 컨텍스트를 전환한 후  
  새 HADR 클러스터 컨텍스트는 서버 인스턴스를 다시 시작하지 않아도 즉시 적용됩니다. HADR 클러스터 컨텍스트 설정은 서버 인스턴스를 다시 시작해도 변경되지 않은 영구 인스턴스 수준 설정입니다.  
   
  다음과 같이 [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql) 동적 관리 뷰를 쿼리하여 새 HADR 클러스터 컨텍스트를 확인합니다.  
@@ -136,7 +136,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [가용성 그룹 수신기 제거&#40;SQL Server&#41;](remove-an-availability-group-listener-sql-server.md)  
   
@@ -154,9 +154,9 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   [SQL Server 2012 기술 문서](http://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
+-   [SQL Server 2012 기술 문서](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](https://blogs.msdn.com/b/sqlalwayson/)  
   
   
   

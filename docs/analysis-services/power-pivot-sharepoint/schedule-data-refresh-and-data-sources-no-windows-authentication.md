@@ -1,5 +1,5 @@
 ---
-title: 데이터 새로 고침 예약 및 데이터 소스에 Windows 인증 안 함 | Microsoft Docs
+title: 예약 데이터 새로 고침 및 데이터 원본-Windows 인증 없음 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b4c7a5a66ff831c94129c2833d74d0eeeb65de30
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: 316fe295473d106d0bea8150deed6a19c07bc3bc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027773"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52408563"
 ---
-# <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>데이터 새로 고침 예약 및 데이터 소스에 Windows 인증 없음
+# <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>예약 데이터 새로 고침 및 데이터 원본-Windows 인증 안 함
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   이 항목에서는 Windows 인증을 지원하지 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 않는 **데이터 원본을 사용할 수 있는 SharePoint용** 데이터 새로 고침 예약 워크플로에 대해 설명합니다. 예를 들어 Oracle 또는 IDM DB2 데이터 원본의 경우입니다. 이 항목의 그림 및 단계는 Oracle 데이터 원본을 참조하지만 동일한 워크플로가 다른 데이터 원본에도 적용됩니다.  
   
@@ -32,9 +32,9 @@ ms.locfileid: "34027773"
   
 -   **(2) OracleAuthentication:** Oracle 자격 증명으로 설정된 보안 저장소 대상 응용 프로그램 ID입니다.  
   
--   **(3)** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램은 **무인 데이터 새로 고침 계정**에 대해 대상 응용 프로그램 “PowerPivotDataRefresh”를 사용하도록 구성됩니다.  
+-   **(3)**  는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램은 대상 응용 프로그램 "PowerPivotDataRefresh"를 사용 하도록 구성에 대 한 합니다 **무인 데이터 새로 고침 계정**합니다.  
   
--   **(4)** PowerPivot 통합 문서는 Oracle 데이터를 사용합니다. 통합 문서 새로 고침 설정은 데이터 원본 연결 자격 증명에 대상 애플리케이션 **(2)** 를 사용하도록 지정합니다.  
+-   **(4)** PowerePivot 통합 문서는 Oracle 데이터를 사용합니다. 통합 문서 새로 고침 설정은 데이터 원본 연결 자격 증명에 대상 애플리케이션 **(2)** 를 사용하도록 지정합니다.  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
   
@@ -54,9 +54,9 @@ ms.locfileid: "34027773"
   
 4.  **새 보안 저장소 대상 응용 프로그램 만들기** 페이지에서 다음 값을 구성합니다.  
   
-    -   **대상 응용 프로그램 ID:** PowerPivotDataRefresh  
+    -   **대상 응용 프로그램 ID:** PowerPivotDataRefresh를 입력합니다.  
   
-    -   **표시 이름:** PowerPivotDataRefresh  
+    -   **표시 이름:** PowerPivotDataRefresh를 입력합니다.  
   
     -   **담당자 메일:** ?  
   
@@ -84,7 +84,7 @@ ms.locfileid: "34027773"
   
 2.  Secure Store Service 애플리케이션의 이름을 클릭합니다.  
   
-3.  에 **관리** 페이지 **새로**![as_powerpivot_refresh_sss_new_target_application](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-new-target-application.gif "as_powerpivot_refresh_sss_new_target_application ").  
+3.  에 **관리** 페이지에서 클릭 **새로 만들기**![as_powerpivot_refresh_sss_new_target_application](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-new-target-application.gif "as_powerpivot_refresh_sss_new_target_application ").  
   
 4.  **새 보안 저장소 대상 응용 프로그램 만들기** 페이지에서 다음 값을 구성합니다.  
   
@@ -114,13 +114,13 @@ ms.locfileid: "34027773"
   
 11. Oracle 사용자 ID 및 Oracle 암호를 입력한 다음 **확인**을 클릭합니다.  
   
- 자세한 내용은 SQL Server 인증에 대 한 대상 응용 프로그램을 만들려면 "을" 섹션의 참조 [(SharePoint Server 2013) SQL Server 인증으로 보안 저장소 사용](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx)합니다.  
+ 자세한 내용은 SQL Server 인증에 대 한 대상 응용 프로그램을 만들려면"" 섹션에서 참조 하세요 [SQL Server 인증 (SharePoint Server 2013)를 사용 하 여 보안 저장소 사용](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx)합니다.  
   
 ## <a name="to-configure-the-power-pivot-service-application"></a>파워 피벗 서비스 애플리케이션을 구성하려면  
   
 1.  SharePoint 중앙 관리에서 서비스 애플리케이션 관리를 클릭합니다.  
   
-2.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 이름을 클릭합니다(예: 기본 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램).  
+2.  이름을 클릭 하면 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 예를 들어 서비스 응용 프로그램을 "기본 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램"입니다.  
   
 3.  동작 섹션에서 **서비스 애플리케이션 설정 구성** 을 클릭합니다.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "34027773"
   
 ## <a name="to-configure-the-workbook"></a>통합 문서를 구성하려면  
   
-1.  통합 문서를 찾습니다는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 클릭 **데이터 새로 고침 관리**![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh").  
+1.  통합 문서를 이동 합니다 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 및 클릭 **데이터 새로 고침 관리**![as_powerpivot_refresh_manage_reresh](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh").  
   
 2.  **데이터 새로 고침 기록** 페이지가 표시되면 **일정 구성**를 클릭합니다.  
   
@@ -163,10 +163,10 @@ ms.locfileid: "34027773"
 ## <a name="to-verify-data-refresh-with-the-new-authentication"></a>새 인증으로 데이터 새로 고침을 확인하려면  
  **확인**을 클릭하면 **새로 고침 기록** 페이지가 표시됩니다. 이전 단계에서 **가능한 빨리 새로 고치십시오.** 를 선택했으므로 몇 분 이내에 새로 고침 기록에 새 항목이 표시됩니다. 타이머 작업 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 새로 고침 타이머 작업** 의 기본값은 1분입니다. 새로 고침 기록에 새 항목이 표시되지 않으면 몇 분 기다렸다가 브라우저를 새로 고치십시오. 여전히 새 항목이 표시되지 않으면 타이머 작업의 현재 값을 확인하십시오.  
   
-## <a name="more-information"></a>자세한 정보  
+## <a name="more-information"></a>추가 정보  
   
 -   [SharePoint 2013에서 보안 저장소 서비스 구성](http://technet.microsoft.com/library/ee806866.aspx).  
   
--   [SharePoint 2013 및 SQL Server 2012 SP1에서 파워 피벗 데이터 새로 고침(Analysis Services)](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh)의 "예약된 데이터 새로 고침" 섹션을 참조하세요.  
+-   "예약 된 데이터 새로 고침" 섹션을 참조 하세요 [파워 피벗 데이터 새로 고침 (Analysis Services) SQL Server 2012 SP1 SharePoint 2013과](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh)합니다.  
   
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [SQL Server], database projects
@@ -15,12 +15,12 @@ ms.assetid: c2e80045-894d-44cf-b65c-e547ed738947
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 953b2f790cfbe68fcd93458fa6d9cf2b2120ecb9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 134ac290601e463063f78a59ea8fd5923d095663
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117083"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790155"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 데이터베이스 프로젝트 빌드
   데이터베이스 스크립트 프로젝트는 데이터베이스와 관련되거나 데이터베이스의 일부인 스크립트, 연결 정보 및 템플릿으로 구성된 집합입니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 스크립트 프로젝트의 컨텍스트 내에서 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 데이터베이스를 관리하고 디자인할 수 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 제공합니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 사용자의 데이터베이스 개발, 배포 및 유지 관리를 도와 주는 디자이너, 편집기, 지침 및 마법사가 포함되어 있습니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "48117083"
   
 -   스크립트와 함께 연결 정보를 저장합니다.  
   
- 솔루션 탐색기는 같은 프로젝트에 관련된 스크립트를 작성하고 다시 사용하기 위한 개발자용 도구입니다. 나중에 유사한 태스크가 필요할 경우 프로젝트에 저장된 스크립트 그룹을 사용할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]를 사용하여 응용 프로그램을 만들어 본 경험이 있다면 솔루션 탐색기가 전혀 낯설지 않을 것입니다.  
+ 솔루션 탐색기는 같은 프로젝트에 관련된 스크립트를 작성하고 다시 사용하기 위한 개발자용 도구입니다. 나중에 유사한 태스크가 필요할 경우 프로젝트에 저장된 스크립트 그룹을 사용할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vsprvs](../includes/vsprvs-md.md)]를 사용하여 애플리케이션을 만들어 본 경험이 있다면 솔루션 탐색기가 전혀 낯설지 않을 것입니다.  
   
  솔루션은 하나 이상의 스크립트 프로젝트로 구성됩니다. 프로젝트는 하나 이상의 스크립트 또는 연결로 구성되며 스크립트가 아닌 파일도 포함할 수 있습니다.  
   

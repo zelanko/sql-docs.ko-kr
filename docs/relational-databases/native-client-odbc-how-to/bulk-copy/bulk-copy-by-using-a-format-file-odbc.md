@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 836e9724f05caa82eb0be01e6ab49cfa1519136e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: HT
+ms.openlocfilehash: cd144d8e32433971368649eb9c80b402c15019e7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671022"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53216032"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>서식 파일을 사용하여 대량 복사(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "51671022"
   
  이 예제는 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 명명된 인스턴스에 연결하려면 ODBC 데이터 원본의 정의를 변경하여 server\namedinstance 형식으로 인스턴스를 지정합니다. 기본적으로 [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] 는 명명된 인스턴스에 설치됩니다.  
   
- 첫 번째([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록을 실행하여 예제에서 사용할 테이블을 만듭니다.  
+ 첫 번째 실행 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록을 샘플에서 사용할 테이블을 만듭니다.  
   
  두 번째 코드 목록을 복사하고 Bcpfmt.fmt라는 파일로 붙여 넣습니다. 테이블의 각 열은 탭 문자로 구분됩니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "51671022"
   
  odbc32.lib 및 odbcbcp.lib를 사용하여 네 번째(C++) 코드 목록을 컴파일합니다. MSBuild.exe를 사용하여 빌드한 경우 먼저 Bcpfmt.fmt 및 Bcpodbc.bcp를 프로젝트 디렉터리에서 .exe가 있는 디렉터리에 복사한 다음 .exe를 호출합니다.  
   
- 다섯 번째([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록을 실행하여 예제에서 사용한 테이블을 삭제합니다.  
+ 다섯 번째 실행 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 샘플을 사용 하는 테이블을 삭제 하는 목록입니다.  
   
 ```  
 use AdventureWorks  

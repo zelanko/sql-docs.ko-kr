@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.taskhostcontainer.f1
@@ -16,12 +15,12 @@ ms.assetid: 7394a2c2-1b07-427d-b94a-9792e7783d35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 377ec6b276d2cc83b296a9d0676f39bc9039ca80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 010b6d8c59e99c4715d349881922bb5b01153e2b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165243"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790935"
 ---
 # <a name="task-host-container"></a>태스크 호스트 컨테이너
   태스크 호스트 컨테이너는 단일 태스크를 캡슐화합니다. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 태스크 호스트는 별도로 구성되지 않고 캡슐화되는 태스크의 속성을 설정할 때 구성됩니다. 태스크 호스트 컨테이너에서 캡슐화하는 태스크에 대한 자세한 내용은 [Integration Services Tasks](integration-services-tasks.md)를 참조하십시오.  

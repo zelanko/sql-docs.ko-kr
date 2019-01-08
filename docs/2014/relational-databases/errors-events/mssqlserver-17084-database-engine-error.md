@@ -12,12 +12,12 @@ ms.assetid: e579d104-3307-4edd-8587-b14ecbc02ed9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8b3796b97b92c56618e1b9fa98198f83206c825d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 95d0da610a8030c68bcf25d650e68aef4ae83128
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215643"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52396549"
 ---
 # <a name="mssqlserver17084"></a>MSSQLSERVER_17084
     
@@ -39,7 +39,7 @@ ms.locfileid: "48215643"
  `ATOMIC` 블록에는 `WITH` 옵션 `TRANSACTION ISOLATION LEVEL` 및 `LANGUAGE`에 대한 값이 필요합니다. 예를 들면 다음과 같습니다.  
   
 ```  
-BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE= N’us_english’)  
+BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE= N'us_english')  
 ```  
   
  자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.  

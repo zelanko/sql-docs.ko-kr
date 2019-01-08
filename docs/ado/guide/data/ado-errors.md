@@ -13,12 +13,12 @@ ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4fadb19aac4700738f4c6ec43449b3de7d4a4a18
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5b2d3f43067750d2fc70a86c6a23bc74dd3bbc4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776371"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509106"
 ---
 # <a name="ado-run-time-errors"></a>ADO에서 런타임 오류
 ADO 오류는 런타임 오류로 프로그램에 보고 됩니다. 트래핑 하 고 처리할 프로그래밍 언어의 오류 트래핑 메커니즘을 사용할 수 있습니다. 예를 들어, Visual Basic의 경우를 사용 합니다 **오류 발생 시** 문입니다. Visual c + +에서 ADO 라이브러리에 액세스 하는 방법에 따라 다릅니다. #Import, 사용 된 **try / catch** 블록. C + + 프로그래머를 명시적으로 호출 하 여 오류 개체를 검색 해야 하는 고, 그렇지 **GetErrorInfo**합니다. 다음 Visual Basic sub 프로시저는 ADO 오류를 트래핑 하는 방법을 보여 줍니다.
@@ -87,7 +87,7 @@ Error reported by: ADODB.Connection
 Help File: E:\WINNT\HELP\ADO260.CHM Topic ID: 1003705
 ```
 
- Visual Basic에서 제공 하는 정보를 포함 하는 오류 메시지 **Err** 제외 하 고 개체를 **LastDLLError** 값으로, 여기에 적용 되지 않습니다. 오류 번호는 오류 발생을 알려 줍니다. 에 대 한 설명에는 원하지 않는 오류를 직접 처리 하는 경우에 유용 합니다. 전달할 수 있습니다 단순히를 따라 사용자에 게 합니다. 모든 오류를 예상할 수 있지만 응용 프로그램에 대 한 사용자 지정 된 메시지를 사용 하려는 일반적으로 설명을은 무엇이 잘못 되었는지에 대 한 단서를 제공 합니다. 샘플 코드에서는 오류를 보고 합니다 **연결** 개체입니다. 개체의 형식 또는 여기에 ID를 프로그래밍 방식으로 표시 됩니다-변수 이름이 아닙니다.
+ Visual Basic에서 제공 하는 정보를 포함 하는 오류 메시지 **Err** 제외 하 고 개체를 **LastDLLError** 값으로, 여기에 적용 되지 않습니다. 오류 번호는 오류 발생을 알려 줍니다. 에 대 한 설명에는 원하지 않는 오류를 직접 처리 하는 경우에 유용 합니다. 전달할 수 있습니다 단순히를 따라 사용자에 게 합니다. 모든 오류를 예상할 수 있지만 응용 프로그램에 대 한 사용자 지정 된 메시지를 사용 하려는 일반적으로 설명을은 무엇이 잘못 되었는지에 대 한 단서를 제공 합니다. 샘플 코드에서는 오류를 보고 합니다 **연결** 개체입니다. 개체의 형식 또는 프로그래밍 방식으로 ID 여기를 보면 변수 이름이 아닙니다.
 
 > [!NOTE]
 >  Visual Basic **Err** 개체는 가장 최근의 오류에 대 한 정보만 포함 합니다. ADO **오류** 의 컬렉션을 **연결** 개체 하나가 포함 되어 있습니다 **오류** 최근 ADO 작업에서 발생 하는 각 오류에 대 한 개체입니다. 사용 된 **오류** 컬렉션 대신 **Err** 여러 오류를 처리 하는 개체입니다. 에 대 한 자세한 내용은 합니다 **오류** 컬렉션에 참조 [공급자 오류](../../../ado/guide/data/provider-errors.md)합니다. 그러나 없으면 잘못 **연결** 개체를 **Err** 개체는 ADO 오류에 대 한 정보에 대 한 유일한 원본입니다.

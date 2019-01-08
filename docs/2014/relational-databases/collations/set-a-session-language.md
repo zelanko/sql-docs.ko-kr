@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - errors [SQL Server], international considerations
@@ -23,12 +22,12 @@ ms.assetid: de7f2c90-8f4f-4cfc-94cc-4933a7fd2bde
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ae7d2d6ae911dbcd062e5548514c6af631c72e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf4eb1d7595d16369a0355562f090b746a4203ca
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114605"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801125"
 ---
 # <a name="set-a-session-language"></a>세션 언어 설정
   세션 언어를 사용하여 언어 및 문화 기본 설정을 기반으로 다음과 같은 요소가 서버에 표시되는 방식을 설정할 수 있습니다.  

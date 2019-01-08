@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1e7a4ea87642ba31693eeea6ea17bedb14c20a24
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: 75e71b4a17aa74ecb33f0a0d8c195b2e60b0e5a1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018960"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506926"
 ---
 # <a name="data-mining-projects"></a>데이터 마이닝 프로젝트
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "34018960"
   
  단일 데이터 마이닝 프로젝트에서 여러 데이터 원본을 참조할 수 있습니다. 마이닝 모델은 한 번에 하나의 데이터 원본만 사용할 수 있지만 프로젝트에는 데이터 원본이 서로 다른 여러 개의 모델 드로잉이 있을 수 있습니다.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 많은 외부 공급자의 데이터를 지원하며, SQL Server 데이터 마이닝에서는 관계형 데이터와 큐브 데이터 둘 다를 데이터 원본으로 사용할 수 있습니다. 그러나 두 유형의 프로젝트(관계형 원본 기반의 모델과 OLAP 큐브 기반의 모델)를 모두 개발할 경우 별도의 프로젝트에서 개발하고 관리할 수 있습니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 많은 외부 공급자의 데이터를 지원하며, SQL Server 데이터 마이닝에서는 관계형 데이터와 큐브 데이터 둘 다를 데이터 원본으로 사용할 수 있습니다. 그러나 두 유형의 프로젝트-관계형 원본 기반의 모델과 OLAP 큐브 기반 모델을 개발 하는 경우-개발 및 관리 하는 별도 프로젝트에서 선택할 수 있습니다.  
   
 -   일반적으로 OLAP 큐브를 기반으로 하는 모델은 OLAP 디자인 솔루션 내에서 개발해야 합니다. 그 이유 중 하나는 큐브를 기반으로 하는 모델은 큐브를 처리하여 데이터를 업데이트해야 하기 때문입니다. 일반적으로 큐브 데이터는 기본적인 데이터 저장 및 액세스 방법으로 사용되거나 다차원 프로젝트에서 만든 집계, 차원 및 특성이 필요한 경우에만 사용해야 합니다.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "34018960"
 ###  <a name="bkmk_Validate"></a> Test and Validate Models  
  모델을 만든 후 결과를 조사하여 가장 적합한 모델을 결정할 수 있습니다.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 마이닝 모델을 직접 비교하고 가장 정확하거나 유용한 마이닝 모델을 선택하는 데 사용할 수 있는 도구를 제공하는 데 사용되는 여러 차트를 제공합니다. 이러한 도구에는 리프트 차트, 수익 차트 및 분류 행렬이 포함됩니다. 데이터 마이닝 디자이너의 **마이닝 정확도 차트** 를 사용하여 이 차트를 생성할 수 있습니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 마이닝 모델을 직접 비교하고 가장 정확하거나 유용한 마이닝 모델을 선택하는 데 사용할 수 있는 도구를 제공하는 데 사용되는 여러 차트를 제공합니다. 이러한 도구에는 리프트 차트, 수익 차트 및 분류 행렬이 포함됩니다. 데이터 마이닝 디자이너의 **마이닝 정확도 차트** 를 사용하여 이 차트를 생성할 수 있습니다.  
   
  교차 유효성 검사 보고서를 통해 데이터를 반복적으로 서브샘플링하여 모델이 특정 데이터 집합에 편향되어 있는지 확인할 수도 있습니다. 또한 보고서에서 제공되는 통계를 사용하여 모델을 객관적으로 비교하고 학습 데이터의 품질을 평가할 수 있습니다.  
   
@@ -191,13 +191,13 @@ ms.locfileid: "34018960"
   
   
 ###  <a name="bkmk_Predict"></a> Create Predictions  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 예측을 만드는 데 기본적으로 사용되고 쉽게 스크립팅할 수 있는 DMX(Data Mining Extensions)라는 쿼리 언어를 제공합니다. DMX 예측 쿼리를 쉽게 작성할 수 있도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 사용할 수 있는 쿼리 작성기를 제공합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에는 쿼리 편집기용 DMX 템플릿도 많이 있습니다. 예측 쿼리를 처음 사용하는 경우 데이터 마이닝 디자이너와 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 제공되는 쿼리 작성기를 사용하는 것이 좋습니다. 자세한 내용은 [Data Mining Tools](../../analysis-services/data-mining/data-mining-tools.md)을 참조하세요.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 예측을 만드는 데 기본적으로 사용되고 쉽게 스크립팅할 수 있는 DMX(Data Mining Extensions)라는 쿼리 언어를 제공합니다. DMX 예측 쿼리를 쉽게 작성할 수 있도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 사용할 수 있는 쿼리 작성기를 제공합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에는 쿼리 편집기용 DMX 템플릿도 많이 있습니다. 예측 쿼리를 처음 사용하는 경우 데이터 마이닝 디자이너와 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 제공되는 쿼리 작성기를 사용하는 것이 좋습니다. 자세한 내용은 [Data Mining Tools](../../analysis-services/data-mining/data-mining-tools.md)을 참조하세요.  
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 만든 예측은 유지되지 않으므로 쿼리가 복잡하거나 결과를 재현해야 하는 경우 예측 쿼리를 DMX 쿼리 파일에 저장하거나 예측 쿼리를 스크립팅하거나 쿼리를 Integration Services 패키지의 일부로 포함하는 것이 좋습니다.  
   
   
 ##  <a name="bkmk_API"></a> 데이터 마이닝 개체에 대한 프로그래밍 방식 액세스  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]프로그래밍 방식으로 데이터 마이닝 프로젝트와 그 안의 개체를 사용 하는 데 사용할 수 있는 여러 가지 도구를 제공 합니다. DMX 언어는 데이터 원본 및 데이터 원본 뷰를 만들고 데이터 마이닝 구조 및 모델을 생성, 학습 및 사용하는 데 사용할 수 있는 문을 제공합니다. 자세한 내용은 [DMX&#40;Data Mining Extensions&#41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)를 참조하세요.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 프로그래밍 방식으로 데이터 마이닝 프로젝트 및 개체 작업을 할 때 사용할 수 있는 여러 도구를 제공합니다. DMX 언어는 데이터 원본 및 데이터 원본 뷰를 만들고 데이터 마이닝 구조 및 모델을 생성, 학습 및 사용하는 데 사용할 수 있는 문을 제공합니다. 자세한 내용은 [DMX&#40;Data Mining Extensions&#41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)를 참조하세요.  
   
  ASSL(Analysis Services Scripting Language) 또는 AMO(Analysis Management Objects)를 사용하여 이러한 태스크를 수행할 수도 있습니다. 자세한 내용은 [Analysis Services에서 XMLA를 사용하여 개발](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)을 참조하세요.  
   
@@ -213,7 +213,7 @@ ms.locfileid: "34018960"
 |각 마이닝 모델 뷰어 관련 정보에 대한 링크를 제공합니다.|[데이터 마이닝 모델 뷰어](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |리프트 차트, 수익 차트 또는 분류표를 만들거나 마이닝 구조를 테스트하는 방법에 대해 설명합니다.|[테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |처리 옵션 및 사용 권한에 대해 설명합니다.|[데이터 마이닝 개체 처리](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
-|Analysis Services에 대한 자세한 정보를 제공합니다.|[다차원 모델 데이터베이스 ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|Analysis Services에 대한 자세한 정보를 제공합니다.|[다차원 Model 데이터베이스 ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 디자이너](../../analysis-services/data-mining/data-mining-designer.md)   

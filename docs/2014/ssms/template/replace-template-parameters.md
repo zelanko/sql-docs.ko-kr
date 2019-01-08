@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.templates.replaceparameters.f1
@@ -17,12 +17,12 @@ ms.assetid: 1234aa14-3464-4a3e-922a-5cfb8fb23627
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 160ccd170228e029484e4c51ffbacc9912bbadde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b1fa26c1bfec54e4e684bcd7e0967281a6ef3301
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214033"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769975"
 ---
 # <a name="replace-template-parameters"></a>템플릿 매개 변수 바꾸기
   템플릿에는 템플릿이 사용될 때마다 구현별 값으로 바꿀 수 있는 매개 변수가 포함되어 있습니다. 코드 편집기에서 템플릿을 연 후 매개 변수를 구현과 관련된 값으로 바꿀 수 있습니다.  

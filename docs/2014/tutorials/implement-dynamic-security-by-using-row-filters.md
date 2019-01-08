@@ -11,23 +11,23 @@ ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7fa34786d8d939581c5b8fecfb54103229a2a2c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: c70d749a560ff5dcc39d36d84e8c9ff09b44894f
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196583"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52404198"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>행 필터를 사용하여 동적 보안 구현
   이 추가 단원에서는 동적 보안을 구현하는 추가 역할을 만들어 봅니다. 동적 보안은 현재 로그온한 사용자의 사용자 이름 또는 로그인 ID를 기반으로 하는 행 수준 보안을 제공합니다. 자세한 내용은 [역할&#40;SSAS 테이블 형식&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md)을 참조하세요.  
   
  동적 보안을 구현하려면 데이터 원본인 모델에 대해 연결을 만들고 모델 개체와 데이터를 찾아볼 수 있는 사용자의 Windows 사용자 이름이 포함된 테이블을 모델에 추가해야 합니다. 이 자습서를 사용하여 만드는 모델은 Adventure Works Corp.의 컨텍스트에 있지만 이 단원을 완료하려면 자체 도메인의 사용자가 포함된 테이블을 추가해야 합니다. 추가할 사용자 이름의 암호는 필요 없습니다. 해당 도메인의 일부 사용자 예제를 사용하여 Employee Security 테이블을 만들려면 붙여넣기 기능을 사용하여 Excel 스프레드시트의 데이터를 붙여 넣습니다. 실제 시나리오에서 모델에 추가하는 사용자 이름이 포함된 테이블은 일반적으로 실제 데이터베이스의 테이블을 데이터 원본으로 사용합니다(예: 실제 dimEmployee 테이블).  
   
- 동적 보안을 구현 하기 위해 두 개의 새 DAX 함수인 사용할지: [USERNAME 함수 &#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230954.aspx) 하 고 [LOOKUPVALUE 함수 &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx). 행 필터 수식에서 적용되는 이 함수는 새 역할에서 정의됩니다. 이 수식은 LOOKUPVALUE 함수를 사용하여 Employee Security 테이블의 값을 지정한 다음 이 값을 USERNAME 함수에 전달하며, 이 함수는 로그온한 사용자의 사용자 이름이 이 역할에 속하도록 지정합니다. 그런 다음 사용자는 역할의 행 필터에 지정된 데이터만 검색할 수 있습니다. 이 시나리오에서는 영업 직원이 자신이 멤버로 속한 영업 지역에 대한 인터넷 매출 데이터만 찾아볼 수 있도록 지정합니다.  
+ 동적 보안을 구현하기 위해 두 개의 새 DAX 함수인 [USERNAME 함수 &#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230954.aspx) 하 고 [LOOKUPVALUE 함수 &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx). 행 필터 수식에서 적용되는 이 함수는 새 역할에서 정의됩니다. 이 수식은 LOOKUPVALUE 함수를 사용하여 Employee Security 테이블의 값을 지정한 다음 이 값을 USERNAME 함수에 전달하며, 이 함수는 로그온한 사용자의 사용자 이름이 이 역할에 속하도록 지정합니다. 사용자 역할의 행 필터에 지정 된 데이터만 탐색할 수 있습니다. 이 시나리오에서는 영업 직원이 자신이 멤버로 속한 영업 지역에 대한 인터넷 매출 데이터만 찾아볼 수 있도록 지정합니다.  
   
  이 추가 단원을 완료하기 위해 일련의 태스크를 완료합니다. 이러한 태스크는 이 Adventure Works 테이블 형식 모델 시나리오에 해당되는 것이며 실제 시나리오에 반드시 적용되는 것은 아닙니다. 각 태스크에는 태스크의 목적을 설명하는 추가 정보가 포함되어 있습니다.  
   
- 이 단원에 소요되는 예상 시간: **30분**  
+ 이 단원에 소요되는 예상 시간: **30 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 추가 단원 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 추가 단원의 태스크를 수행하려면 이전 단원을 모두 완료해야 합니다.  
@@ -121,7 +121,7 @@ ms.locfileid: "48196583"
      이 관계의 활성 속성은 False이므로 비활성입니다. Internet Sales 테이블에는 측정값에서 사용되는 다른 활성 관계가 이미 있기 때문입니다.  
   
 ## <a name="hide-the-employee-security-table-from-client-applications"></a>클라이언트 애플리케이션에서 Employee Security 테이블 숨기기  
- 이 태스크에서는 클라이언트 애플리케이션의 필드 목록에 나타나지 않도록 Employee Security 테이블을 숨깁니다. 테이블 숨기더라도 테이블이 안전하게 보호되는 것은 아닙니다. 방법을 아는 경우 사용자는 여전히 Employee Security 테이블 데이터를 쿼리할 수 있습니다. 사용자가 데이터를 쿼리할 수 없도록 Employee Security 테이블 데이터를 안전하게 보호하려면 이후 태스크에서 필터를 적용합니다.  
+ 이 태스크를 숨길 Employee Security 테이블을 클라이언트 응용 프로그램의 필드 목록에 나타나지 않도록 유지 합니다. 테이블 숨기더라도 테이블이 안전하게 보호되는 것은 아닙니다. 방법을 아는 경우 사용자는 여전히 Employee Security 테이블 데이터를 쿼리할 수 있습니다. 사용자가 데이터를 쿼리할 수 없도록 Employee Security 테이블 데이터를 안전하게 보호하려면 이후 태스크에서 필터를 적용합니다.  
   
 #### <a name="to-hide-the-employee-table-from-client-applications"></a>클라이언트 애플리케이션에서 Employee 테이블을 숨기려면  
   
@@ -131,7 +131,7 @@ ms.locfileid: "48196583"
  이 태스크에서는 새 사용자 역할을 만듭니다. 이 역할에는 Sales Territory 테이블에서 사용자에게 표시되지 않는 행을 정의하는 행 필터가 포함됩니다. 그러면 이 필터는 일대다 관계 방향으로 Sales Territory에 관련된 다른 모든 테이블에 적용됩니다. 역할의 멤버인 사용자가 전체 Employee Security 테이블을 쿼리할 수 없도록 보호하는 간단한 필터도 적용합니다.  
   
 > [!NOTE]  
->  이 단원에서 만드는 Sales Employees by Territory 역할은 멤버가 자신이 속한 영업 지역에 대한 판매 데이터만 검색(또는 쿼리)할 수 있도록 제한합니다. [12단원: 역할 만들기](../analysis-services/lesson-11-create-roles.md)에서 만든 역할의 멤버로도 존재하는 사용자를 Sales Employees by Territory 역할에 멤버로 추가하면 사용 권한의 조합을 얻을 수 있습니다. 사용자가 여러 역할의 멤버인 경우 각 역할에 대해 정의된 사용 권한과 행 필터는 누적됩니다. 즉, 사용자는 역할의 조합으로 결정되는 더 큰 사용 권한을 갖게 됩니다.  
+>  이 단원에서 만드는 Sales Employees by Territory 역할은 멤버가 자신이 속한 영업 지역에 대한 판매 데이터만 검색(또는 쿼리)할 수 있도록 제한합니다. 추가할 경우 사용자를 멤버로 Sales Employees by Territory 역할에서 만든 역할의 멤버로 존재 [12 단원: 역할을 만들](../analysis-services/lesson-11-create-roles.md), 결합 된 권한 얻게 됩니다. 사용자가 여러 역할의 멤버인 경우 각 역할에 대해 정의된 사용 권한과 행 필터는 누적됩니다. 즉, 사용자는 역할의 조합으로 결정되는 더 큰 사용 권한을 갖게 됩니다.  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>Sales Employees by Territory 사용자 역할을 만들려면  
   

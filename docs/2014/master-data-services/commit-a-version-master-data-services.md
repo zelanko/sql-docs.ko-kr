@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - committing versions [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 484986c617742967c41160aaf369b3562e72d938
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db793009e2dd1c2be243b65c6bc50778578b0dc4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085789"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797756"
 ---
 # <a name="commit-a-version-master-data-services"></a>버전 커밋(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델의 멤버 및 특성이 변경되지 않게 하려면 모델의 버전을 커밋합니다. 커밋된 버전의 잠금은 해제할 수 없습니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "48085789"
   
 -   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](administrators-master-data-services.md)를 참조하세요.  
   
--   버전의 상태가 **잠금**이어야 합니다. 자세한 내용은 [버전 잠금&#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)을 참조하세요.  
+-   버전의 상태가 **잠금**이어야 합니다. 자세한 내용은 [버전 잠금&#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)를 참조하세요.  
   
 -   모든 멤버가 유효성 검사를 통과해야 합니다.  
   
@@ -49,13 +48,13 @@ ms.locfileid: "48085789"
   
 ## <a name="next-steps"></a>다음 단계  
   
--   [버전 플래그 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)  
+-   [버전 플래그 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)  
   
--   [버전에 플래그 할당 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
+-   [버전에 플래그 할당&#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
--   [버전 복사 &#40;Master Data Services&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)  
+-   [버전 복사&#40;Master Data Services&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [버전 &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
+ [버전&#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
   

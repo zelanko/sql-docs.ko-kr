@@ -14,12 +14,12 @@ ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d5eadf38bcdb7573cf19941535182e2cc8f87f29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 4fc706cd372f4bee0c9449b15de6d070240141bd
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111503"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52414790"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Create, Modify, and Delete Standard Subscriptions (Reporting Services in Native Mode)
   표준 구독은 전자 메일을 통해 또는 공유 폴더로 보고서를 배달하려는 개인이 만든 구독입니다. 표준 구독은 항상 구독의 기반이 되는 보고서를 통해 정의됩니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "48111503"
  구독을 만드는 사용자가 해당 구독을 소유합니다. 각 사용자는 자신이 소유한 구독을 수정하거나 삭제할 수 있습니다.  
   
 > [!NOTE]  
->  부터는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독의 소유권을 프로그래밍 방식으로 전송할 수 있습니다. 구독 소유권을 전송하는 데 사용할 수 있는 사용자 인터페이스는 없습니다. 자세한 내용은 참조 하세요. <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+>  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]부터는 구독 소유권을 프로그래밍 방식으로 전송할 수 있습니다. 구독 소유권을 전송하는 데 사용할 수 있는 사용자 인터페이스는 없습니다. 자세한 내용은 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>을 참조하세요.  
   
  에 따라 **RSReportServer.config** 구성 파일 설정에 사용자가 구독에 더 많은 사용자를 추가 하는 일을 할 수 있습니다 (예를 들어, 관리자는 자신의 전자 메일 주소를 추가 하거나 각자의 복사본을 받을 수 있도록 자신의 직접 보고서를 보고서)입니다. 이러한 기능의 지원 여부는 개별 구독을 정의할 때 받는 사람: 필드가 표시되는지 여부에 따라 달라집니다. 자세한 내용은 [전자 메일 배달을 위한 보고서 서버 구성 &#40;SSRS 구성 관리자&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)합니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48111503"
   
 -   파일 공유 배달을 이용하려면 먼저 대상 폴더를 정의해야 합니다. 자세한 내용은 [전자 메일 배달을 위한 보고서 서버 구성 &#40;SSRS 구성 관리자&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)합니다.  
   
- 보고서를 구독하려면 먼저 저장된 자격 증명을 사용하거나 자격 증명을 사용하지 않도록 보고서 데이터 원본을 구성해야 합니다. 자세한 내용은 [Reporting Services 데이터 원본에 자격 증명 저장](../report-data/store-credentials-in-a-reporting-services-data-source.md)합니다. 그렇지 않으면 **새 구독** 단추를 사용할 수 없습니다.  
+ 보고서를 구독하려면 먼저 저장된 자격 증명을 사용하거나 자격 증명을 사용하지 않도록 보고서 데이터 원본을 구성해야 합니다. 자세한 내용은 [Reporting Services 데이터 원본에 자격 증명 저장](../report-data/store-credentials-in-a-reporting-services-data-source.md)을 참조하세요. 그렇지 않으면 **새 구독** 단추를 사용할 수 없습니다.  
   
  이 항목에서는 데이터 기반 구독을 만드는 방법에 대해 설명하지 않습니다. 데이터 기반 구독을 만드는 방법에 대한 자세한 내용은 [데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)를 참조하거나 보고서 관리자의 데이터 기반 구독 만들기 페이지에 대한 온라인 도움말을 참조하세요.  
   
@@ -173,11 +173,11 @@ ms.locfileid: "48111503"
   
 ## <a name="see-also"></a>관련 항목  
  [태스크 및 권한](../security/tasks-and-permissions.md)   
- [SharePoint 모드 보고서 서버에 대 한 구독 만들기 및 관리](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [기본 모드 보고서 서버에 대 한 구독 만들기 및 관리](../create-manage-subscriptions-native-mode-report-servers.md)   
- [데이터 기반 구독](data-driven-subscriptions.md)   
- [구독 및 배달 &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)   
+ [SharePoint 모드 보고서 서버 구독 만들기 및 관리](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [기본 모드 보고서 서버 구독 만들기 및 관리](../create-manage-subscriptions-native-mode-report-servers.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
+ [구독 및 배달&#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)   
  [내 구독 사용](use-my-subscriptions-native-mode-report-server.md)  
   
   

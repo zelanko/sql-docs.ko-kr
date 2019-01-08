@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - user-defined tables [SQL Server]
@@ -14,12 +12,12 @@ ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2728200068787d69c6eaa225e0195170625cac4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04bc89c22ab2c49b047ed00b20b37f8abecf97c7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194173"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52758285"
 ---
 # <a name="using-user-defined-tables"></a>사용자 정의 테이블 사용
   사용자 정의 테이블은 테이블 형식의 정보를 나타냅니다. 이들은 테이블 형식 데이터를 저장 프로시저나 사용자 정의 함수로 전달할 때 매개 변수로 사용할 수 있습니다. 데이터베이스 테이블의 열 표시에는 사용자 정의 테이블을 사용할 수 없습니다.  

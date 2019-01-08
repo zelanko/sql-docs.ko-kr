@@ -16,12 +16,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e59fe6624c84c9918e659063d4d46ca0d7337b4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa5c6b607fa7523380950ecd89f9cae20ffc6f21
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135913"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356593"
 ---
 # <a name="performing-distributed-transactions"></a>분산 트랜잭션 수행
   MS DTC(Microsoft Distributed Transaction Coordinator)를 사용하면 응용 프로그램이 둘 이상의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 트랜잭션을 확장할 수 있습니다. 또한 응용 프로그램이 Open Group DTP XA 표준을 준수하는 트랜잭션 관리자가 관리하는 트랜잭션에 참가할 수 있습니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "48135913"
   
  그러나 MS DTC를 사용할 때 MS DTC가 트랜잭션 관리자와 응용 프로그램을 더 이상 사용 **SQLEndTran**.  
   
- 분산 트랜잭션에 등록된 경우 두 번째 분산 트랜잭션에 등록하고 원분 분산 트랜잭션의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 결함을 새 트랜잭션에 등록합니다. 자세한 내용은 [DTC 프로그래머 참조](http://msdn.microsoft.com/library/ms686108\(VS.85\).aspx).  
+ 분산 트랜잭션에 등록된 경우 두 번째 분산 트랜잭션에 등록하고 원분 분산 트랜잭션의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 결함을 새 트랜잭션에 등록합니다. 자세한 내용은 [DTC 프로그래머 참조](https://msdn.microsoft.com/library/ms686108\(VS.85\).aspx).  
   
 ## <a name="see-also"></a>관련 항목  
  [트랜잭션 수행 &#40;ODBC&#41;](../../../database-engine/dev-guide/performing-transactions-odbc.md)  

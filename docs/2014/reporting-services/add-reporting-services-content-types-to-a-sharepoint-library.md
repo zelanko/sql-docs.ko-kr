@@ -11,28 +11,28 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 96b7c2c1c3f603a7b71c823a61f4e2e31cc44b70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 380a257fd72ec776b92581895f85859a0a622003
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155453"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617143"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>Add Report Server Content Types to a Library (Reporting Services in SharePoint Integrated Mode)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 공유 데이터 원본 (.rsds) 파일, 보고서 모델 (.smdl) 및 보고서 작성기 보고서 정의 (.rdl) 파일을 관리 하는 데 사용 되는 미리 정의 된 SharePoint 콘텐츠 형식을 제공 합니다. **보고서 작성기 보고서**, **보고서 모델**및 **보고서 데이터 원본** 콘텐츠 형식을 라이브러리에 추가하면 해당 유형의 새 문서를 만들 수 있도록 **새로 만들기** 명령이 활성화됩니다.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 공유 데이터 원본(.rsds) 파일, 보고서 모델(.smdl) 및 보고서 작성기 보고서 정의(.rdl) 파일을 관리하는 데 사용되는 미리 정의된 SharePoint 콘텐츠 형식을 제공합니다. **보고서 작성기 보고서**, **보고서 모델**및 **보고서 데이터 원본** 콘텐츠 형식을 라이브러리에 추가하면 해당 유형의 새 문서를 만들 수 있도록 **새로 만들기** 명령이 활성화됩니다.  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드  
   
  라이브러리에 콘텐츠 형식을 추가하려면 사이트 관리자이거나 모든 권한 수준의 사용 권한이 있어야 합니다.  
   
- 합니다 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 형식 및 콘텐츠 형식 관리를 자동으로 사용한 다음에서 생성 된 기존 사이트 모음의 모든 문서 라이브러리에서 콘텐츠 **비즈니스 인텔리전스 센터** 사이트 템플릿.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 콘텐츠 형식 및 콘텐츠 형식 관리가 다음 **비즈니스 인텔리전스 센터** 사이트 템플릿 형식에서 생성된 기존 사이트 모음의 모든 문서 라이브러리에서 자동으로 설정됩니다.  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 통합 후에 생성된 사이트에는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 콘텐츠 형식이 설정되어 있지 않습니다.  
   
 > [!TIP]  
->  있는 경우 **하지** 콘텐츠 형식을 라이브러리에 대해 먼저 콘텐츠 형식 관리를 사용 설정한 이전에 구성한는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 콘텐츠 형식입니다. 단일 문서 라이브러리에서 콘텐츠 형식 관리 설정에 대한 절차를 참조하세요.  
+>  라이브러리에 이전에 구성한 콘텐츠 형식이 **없는** 경우 먼저 콘텐츠 형식 관리를 설정한 다음 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 콘텐츠 형식을 설정합니다. 단일 문서 라이브러리에서 콘텐츠 형식 관리 설정에 대한 절차를 참조하세요.  
   
- **짧은 비디오:** [(SSRS)Enabling Content Types in SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w)(http://www.youtube.com/watch?v=yqhm3DrtT1w).  
+ **짧은 비디오:** [(SSRS) Content Types in SharePoint2010.wmv 사용 하도록 설정](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w)합니다.  
   
  **항목 내용**  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48155453"
   
 5.  브라우저를 새로 고친 다음 **보고서 서버 통합 기능** 에 대해 **활성화**를 클릭합니다.  
   
-     ![rs_reportserver_integration_deactive](media/rs-reportserver-integration-deactive.gif "rs_reportserver_integration_deactive")  
+    ![비활성화](media/rs-reportserver-integration-deactivate.gif "rs_reportserver_integration_deactive")  
   
 ##  <a name="bkmk_enable_content_management"></a> 단일 문서 라이브러리에 대해 콘텐츠 형식 관리를 설정하려면(SharePoint 2013)  
   
@@ -107,17 +107,17 @@ ms.locfileid: "48155453"
 8.  콘텐츠 형식 추가를 완료하면 **확인**을 클릭합니다.  
   
 9. > [!NOTE]  
-    >  경우는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 콘텐츠 형식 그룹 **SQL Server Reporting Services 콘텐츠 형식** 에 표시 되지 않으면 합니다 **콘텐츠 형식 추가** 페이지에서 다음 조건 중 하나:  
+    >  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 콘텐츠 형식 그룹 **SQL Server Reporting Services 콘텐츠 형식** 이 **콘텐츠 형식 추가** 페이지에 표시되지 않는 경우 다음 조건 중 하나에 해당하는 것입니다.  
   
     -   SharePoint 제품의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능이 설치되지 않았습니다. 자세한 내용은 [설치 또는 SharePoint 용 Reporting Services 추가 기능에 제거 &#40;SharePoint 2010 및 SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)합니다. 이 항목에는 문제를 해결하기 위한 추가 기능 설치 및 추가 기능 설치 파일의 단계별 실행에 대한 정보가 포함됩니다.  
   
     -   추가 기능은 설치되지만 사이트 모음 기능 **보고서 서버 통합 기능** 은 활성화되지 않습니다. **사이트 설정**에서 사이트 모음 기능을 확인합니다.  
   
-    -   모든는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 콘텐츠 형식을 라이브러리에 이미 추가 되었습니다. 모든 콘텐츠 유형이 라이브러리의 일부인 경우 그룹이 **콘텐츠 형식 추가** 페이지에서 제거됩니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 콘텐츠 형식 중 하나 이상을 제거하는 경우 **SQL Server Reporting Services 콘텐츠 형식** 그룹이 **콘텐츠 형식 추가** 페이지에 표시됩니다.  
+    -   모든 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 콘텐츠 형식이 라이브러리에 이미 추가되었습니다. 모든 콘텐츠 유형이 라이브러리의 일부인 경우 그룹이 **콘텐츠 형식 추가** 페이지에서 제거됩니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 콘텐츠 형식 중 하나 이상을 제거하는 경우 **SQL Server Reporting Services 콘텐츠 형식** 그룹이 **콘텐츠 형식 추가** 페이지에 표시됩니다.  
   
 ##  <a name="bkmk_enable_content_management_2010"></a> 단일 문서 라이브러리에 대해 콘텐츠 형식 관리를 설정하려면(SharePoint 2010)  
   
-1.  여러 개의 콘텐츠 형식을 설정할 라이브러리를 엽니다. 라이브러리 메뉴 모음에 **새로 만들기**, **업로드**, **동작**및 **설정**메뉴가 표시됩니다. **설정**이 표시되지 않는 경우 콘텐츠 형식을 추가할 권한이 없습니다.  
+1.  여러 개의 콘텐츠 형식을 설정할 라이브러리를 엽니다. 라이브러리 메뉴 모음에 **새**, **업로드**를 **동작**, 및 **설정**합니다. **설정**이 표시되지 않는 경우 콘텐츠 형식을 추가할 권한이 없습니다.  
   
 2.  **라이브러리 도구** 리본에서 **라이브러리**를 클릭합니다.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "48155453"
 4.  **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SharePoint Site and List Permission Reference for Report Server Items](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
+ [보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [보고서 작성기를 시작 &#40;보고서 작성기&#41;](report-builder/start-report-builder.md)  
   
   

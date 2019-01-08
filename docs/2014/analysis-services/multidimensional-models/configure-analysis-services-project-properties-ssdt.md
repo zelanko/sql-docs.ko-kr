@@ -15,12 +15,12 @@ ms.assetid: d9786c66-7d8c-48e3-950d-3f25044b4ce2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8e786f699209c384f9baecbbe23a24e2ed5e3611
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb5490f023a2529d102d9ca505092b7f2bc28fec
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118303"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513027"
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>Analysis Services 프로젝트 속성 구성(SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트의 작성 및 배포에 영향을 미치는 몇 가지 기본 속성과 함께 정의됩니다.  
@@ -48,10 +48,10 @@ ms.locfileid: "48118303"
   
  처음에 프로젝트는 Development라는 하나의 구성으로 생성됩니다. 구성 관리자를 사용하여 추가 구성을 만들고 구성 간에 전환할 수 있습니다.  
   
- 추가 구성을 만들 때까지는 모든 개발자가 이 일반 구성을 사용합니다. 그러나 초기 개발 및 프로젝트 테스트 등 다양한 프로젝트 개발 단계에서 개발자마다 각각의 목적을 위해 다른 데이터 원본을 사용하고 프로젝트를 다른 서버에 배포할 수 있습니다. 구성을 사용하면 이러한 각각의 설정을 서로 다른 구성 파일에 유지할 수 있습니다.  
+ 추가 구성을 만들 때까지는 모든 개발자가 이 일반 구성을 사용합니다. 그러나 다양 한 단계 중 초기 개발 하는 동안 같은 개발 프로젝트와 다른 데이터 원본을 사용 및 다양 한 용도로 여러 서버에 프로젝트를 배포할 수 있습니다-다른 개발자가 프로젝트의 테스트 합니다. 구성을 사용하면 이러한 각각의 설정을 서로 다른 구성 파일에 유지할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 프로젝트 빌드 &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
- [Analysis Services 프로젝트 배포 &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
+ [Analysis Services 프로젝트 빌드&#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
+ [Analysis Services 프로젝트 배포&#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

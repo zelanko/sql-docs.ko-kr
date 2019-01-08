@@ -17,12 +17,12 @@ ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c8ade9c0d0d877ca1c12c1361e0e0ba45c2e7ecb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b12b22af124250fe05baab5d08a6585de061b56
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209293"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368075"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>업그레이드 관리자를 사용하여 업그레이드 준비
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업그레이드 관리자는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로의 업그레이드를 준비할 수 있도록 도와 줍니다. 업그레이드 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전에서 설치된 구성 요소를 분석한 다음 업그레이드 전이나 후에 해결해야 할 문제를 보여 주는 보고서를 생성합니다.  
@@ -65,9 +65,9 @@ ms.locfileid: "48209293"
   
 -   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2, Windows 7 SP1 및 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1.  
   
--   Windows  Installer  4.5  버전 이상 Windows Installer를 설치할 수는 [Windows Installer 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=49112)합니다.  
+-   Windows  Installer  4.5  버전 이상 Windows Installer를 설치할 수는 [Windows Installer 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=49112)합니다.  
   
--   Microsoft .NET Framework 4 .NET framework 4에서 사용할 수는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 제품 미디어 및 합니다 [.NET Framework 4 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=209895)합니다.  
+-   Microsoft .NET Framework 4 .NET framework 4에서 사용할 수는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 제품 미디어 및 합니다 [.NET Framework 4 다운로드 페이지](https://go.microsoft.com/fwlink/?LinkId=209895)합니다.  
   
     -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 미디어에서 .NET  Framework  4를 설치하려면 디스크 드라이브의 루트를 찾습니다. 그런 다음 \redist  폴더와 DotNetFrameworks  폴더를 차례로 두 번 클릭하고 dotNetFx40_Full_x86_x64.exe(32비트 운영 체제 및 64비트 운영 체제용)를 실행합니다.  
   

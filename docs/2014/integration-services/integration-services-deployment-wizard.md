@@ -13,12 +13,12 @@ ms.assetid: f3d93e13-2d85-47ff-a913-cda4046491c4
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8a5b2cea7ae8b0166c0190044524941ca28ddca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f90613d3c8e0204e2861008a5f7be0846eca64a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086303"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535906"
 ---
 # <a name="integration-services-deployment-wizard"></a>Integration Services 배포 마법사
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 배포 마법사는 프로젝트 배포 모델을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 SSISDB 카탈로그에 프로젝트를 배포합니다.  
@@ -27,13 +27,13 @@ ms.locfileid: "48086303"
   
  마법사에서 다음 네 단계가 진행됩니다. 클릭 **다음** 하 여 다음 단계로 이동할 또는 **이전** 이전 단계로 돌아갑니다.  
   
-1.  **원본 선택** – 선택 된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 배포 하려는 프로젝트.  
+1.  **원본 선택** -선택 된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 배포 하려는 프로젝트.  
   
 2.  **대상 선택** -프로젝트 대상을 선택 합니다.  
   
-3.  **검토** – 선택 항목을 표시 합니다.  
+3.  **검토** -선택 항목을 표시 합니다.  
   
-4.  **배포/결과** – 프로젝트를 배포 하 고 결과 표시 합니다.  
+4.  **배포/결과** -프로젝트를 배포 하 고 결과 표시 합니다.  
   
 ## <a name="select-source"></a>원본 선택  
  사용자가 만든 프로젝트 배포 파일을 배포 하려면를 선택 **프로젝트 배포 파일** .ispac 파일에 경로 입력 하거나 클릭 하 고 **찾아보기** 에서 찾을 수는 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 프로젝트 폴더입니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 카탈로그에 있는 프로젝트를 배포하려면 **Integration Services 카탈로그**를 선택한 후 서버 이름과 카탈로그에 있는 프로젝트 경로를 입력합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "48086303"
   
  **닫기**를 클릭하여 마법사를 종료합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 서버에 프로젝트 배포](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
  [프로젝트 및 패키지 배포](packages/deploy-integration-services-ssis-projects-and-packages.md)  
   

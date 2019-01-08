@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 76e71ae9c0ceb236c49df8e7fc8ec67713ef3e76
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a9895eb3e52c83c1ee3594b40fa7257fc53fd4d0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018250"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525495"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft 신경망 알고리즘 기술 참조
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망은 최대 3 계층의 뉴런 또는 *퍼셉트론*으로 구성된 *다중 계층 퍼셉트론* 신경망(*역전파 델타 규칙 네트워크*)을 사용합니다. 이러한 3개의 계층은 입력 계층, 출력 계층 및 숨겨진 계층(옵션)입니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망은 최대 3 계층의 뉴런 또는 *퍼셉트론* 으로 구성된 *다중 계층 퍼셉트론*신경망( *역전파 델타 규칙 네트워크*)을 사용합니다. 이러한 3개의 계층은 입력 계층, 출력 계층 및 숨겨진 계층(옵션)입니다.  
   
  다중 계층 퍼셉트론 신경망에 대한 자세한 내용은 이 설명서에서 다루지 않습니다. 이 항목에서는 입력 및 출력 값을 정규화하는 데 사용되는 방법과 특성 카디널리티를 줄이는 데 사용되는 기능 선택 방법을 포함하여 알고리즘의 기본 구현에 대해 설명합니다. 또한 이 항목에서는 알고리즘의 동작을 사용자 지정하는 데 사용할 수 있는 매개 변수 및 기타 설정을 설명하고 모델 쿼리에 대한 추가 정보로 연결되는 링크를 제공합니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "34018250"
   
  모든 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝 알고리즘에서는 자동으로 기능 선택을 사용하여 분석을 향상시키고 처리 로드를 줄입니다. 신경망 모델의 기능 선택에 사용되는 방법은 특성의 데이터 형식에 따라 달라집니다. 다음 표에서는 참조를 위해 신경망 모델에 사용되는 기능 선택 방법과 신경망 알고리즘을 기반으로 하는 로지스틱 회귀 알고리즘에 사용되는 기능 선택 방법을 보여 줍니다.  
   
-|알고리즘|분석 방법|설명|  
+|알고리즘|분석 방법|주석|  
 |---------------|------------------------|--------------|  
 |신경망|흥미도 점수<br /><br /> Shannon Entropy<br /><br /> Bayesian with K2 Prior<br /><br /> Bayesian Dirichlet with uniform prior(기본값)|데이터에 연속 열이 포함된 경우 신경망 알고리즘에서는 Entropy 기반 및 Bayesian 점수 매기기 방법을 모두 사용할 수 있습니다.<br /><br /> 기본.|  
 |로지스틱 회귀|흥미도 점수<br /><br /> Shannon Entropy<br /><br /> Bayesian with K2 Prior<br /><br /> Bayesian Dirichlet with uniform prior(기본값)|이 알고리즘에 매개 변수를 전달하여 기능 선택 동작을 제어할 수 없기 때문에 기본값이 사용됩니다. 그러므로 모든 특성이 불연속 또는 분할된 특성일 경우 기본값은 BDEU입니다.|  
@@ -84,7 +84,7 @@ ms.locfileid: "34018250"
   
  **불연속 값**  
   
- `μ = p` – 상태의 사전 확률  
+ `μ = p` -상태의 사전 확률  
   
  `StdDev  = sqrt(p(1-p))`  
   
@@ -146,7 +146,7 @@ ms.locfileid: "34018250"
 ### <a name="modeling-flags"></a>모델링 플래그  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘에서 지원되는 모델링 플래그는 다음과 같습니다.  
   
- NOT  NULL  
+ NOT NULL  
  열에 null이 포함될 수 없음을 나타냅니다. 따라서 Analysis Services가 모델 학습 중 Null을 발견할 경우 오류가 발생합니다.  
   
  마이닝 구조 열에 적용됩니다.  
@@ -174,7 +174,7 @@ ms.locfileid: "34018250"
 ### <a name="input-and-predictable-columns"></a>입력 열과 예측 가능한 열  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘은 다음 표에 나열된 특정 입력 열과 예측 가능한 열을 지원합니다.  
   
-|열|내용 유형|  
+|Column|내용 유형|  
 |------------|-------------------|  
 |입력 특성|Continuous, Cyclical, Discrete, Discretized, Key, Table 및 Ordered|  
 |예측 가능한 특성|Continuous, Cyclical, Discrete, Discretized 및 Ordered|  
@@ -182,7 +182,7 @@ ms.locfileid: "34018250"
 > [!NOTE]  
 >  Cyclical  및 Ordered  내용 유형이 지원되기는 하지만 알고리즘은 해당 유형을 불연속 값으로 처리하고 특수한 처리를 수행하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Microsoft 신경망 알고리즘](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [신경망 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [신경망 모델 쿼리 예제](../../analysis-services/data-mining/neural-network-model-query-examples.md)  

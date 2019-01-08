@@ -1,67 +1,59 @@
 ---
-title: Azure Data Studio를 사용 하 여 빅 데이터 클러스터를 SQL Server에 연결 | Microsoft Docs
-description: Azure Data Studio를 사용 하 여 SQL Server 2019 빅 데이터 클러스터에 연결 하는 방법에 알아봅니다.
+title: 빅 데이터 도구 설치
+titleSuffix: SQL Server 2019 big data clusters
+description: SQL Server 2019 빅 데이터 클러스터 (미리 보기)와 함께 사용 되는 도구를 설치 하는 방법에 알아봅니다.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/05/2018
+ms.date: 12/13/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 18df937cfed15d7302a58267eb392a1933d73052
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.custom: seodec18
+ms.openlocfilehash: 2327b7db3b21c972a98719a1126c46011bd9691a
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643791"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53431307"
 ---
-# <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Azure Data Studio를 사용 하 여 SQL Server 빅 데이터 클러스터에 연결
+# <a name="install-sql-server-2019-big-data-tools"></a>SQL Server 2019 빅 데이터 도구 설치
 
-이 문서에서는 Azure Data Studio, SQL Server 2019 확장 (미리 보기)를 설치한 다음 빅 데이터 클러스터에 연결 하는 방법을 설명 합니다. 새 SQL Server 2019 확장에 대 한 미리 보기가 지원 됩니다 [SQL Server 2019 빅 데이터 클러스터](big-data-cluster-overview.md), 통합 된 [노트 환경과](notebooks-guidance.md), 및는 PolyBase [Create External Table 마법사](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json).
+이 문서에서는 관리를 만들기 위해 설치 해야 하는 클라이언트 도구를 설명 하 고 SQL Server 2019를 사용 하 여 빅 데이터 클러스터 (미리 보기).
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="install-azure-data-studio"></a>Azure Data Studio를 설치 합니다.
+## <a name="big-data-cluster-tools"></a>빅 데이터 클러스터 도구
 
-Azure Data Studio를 설치 하려면 [Azure Data Studio의 최신 버전 다운로드 및 설치](../azure-data-studio/download.md)합니다.
+다음 표에서 일반적인 빅 데이터 클러스터 도구 및 설치 하는 방법을 나열 합니다.
 
-## <a name="install-the-sql-server-2019-extension-preview"></a>SQL Server 2019 확장 (미리 보기) 설치
+| 도구 | 필수 | Description | 설치 |
+|---|---|---|---|
+| **mssqlctl** | 사용자 계정 컨트롤 | 설치 하 고 빅 데이터 클러스터를 관리 하기 위한 명령줄 도구입니다. | [설치](deploy-install-mssqlctl.md) |
+| **kubectl**<sup>1</sup> | 사용자 계정 컨트롤 | 기본 Kuberentes 클러스터를 모니터링 하기 위한 명령줄 도구 ([자세한 내용은](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
+| **Azure Data Studio** | 사용자 계정 컨트롤 | SQL Server를 쿼리 하기 위한 플랫폼 간 그래픽 도구 ([자세한 내용은](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15)). | [설치](../azure-data-studio/download.md) |
+| **SQL Server 2019 확장** | 사용자 계정 컨트롤 | 빅 데이터 클러스터에 연결을 지 원하는 Azure 데이터 Studio에 대 한 확장입니다. 또한 데이터 가상화 마법사를 제공합니다. | [설치](../azure-data-studio/sql-server-2019-extension.md) |
+| **Azure CLI**<sup>2</sup> | AKS에 대 한 | Azure 서비스를 관리 하는 것에 대 한 최신 명령줄 인터페이스입니다. AKS 빅 데이터 클러스터 배포 사용 ([자세한 내용은](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [설치](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
+| **mssql-cli** | 선택 사항 | SQL Server 쿼리를 위한 최신 명령줄 인터페이스 ([자세한 내용은](https://github.com/dbcli/mssql-cli/blob/master/README.rst)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
+| **sqlcmd** | 일부 스크립트 | SQL Server를 쿼리 하기 위한 레거시 명령줄 도구 ([자세한 내용은](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
+| **curl** <sup>3</sup> | 일부 스크립트 | Url 사용 하 여 데이터를 전송 하기 위한 명령줄 도구입니다. | [Windows](https://curl.haxx.se/windows/) \| Linux: curl 패키지 설치 |
 
-확장을 설치 하려면 [SQL Server 2019 확장 (미리 보기) 설치](../azure-data-studio/sql-server-2019-extension.md)합니다.
+<sup>1</sup> kubectl 버전 1.10 이상을 사용 해야 합니다. 또한 kubectl 버전이 더하기 또는 빼기 Kubernetes 클러스터의 한 부 버전 이어야 합니다. Kubectl 클라이언트에 특정 버전을 설치 하려는 경우 참조 [curl을 통해 이진 kubectl 설치](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) (Windows 10에서 사용 하 여 cmd.exe와 Windows PowerShell이 아닌 curl을 실행).
 
-## <a name="connect-to-the-cluster"></a>클러스터에 연결
+<sup>2</sup> Azure CLI 버전 2.0.4 사용 해야 이상. 실행 `az --version` 필요한 경우 버전을 찾으려고 합니다.
 
-SQL Server에 연결할 수 있는 빅 데이터 클러스터에 연결할 때 [마스터 인스턴스](concept-master-instance.md) 또는 HDFS/Spark 게이트웨이. 다음 섹션에서는 각각에 연결 하는 방법을 보여 줍니다.
+<sup>3</sup> Windows 10에서 실행 하는 경우 **curl** cmd 프롬프트에서 실행 하는 경우 경로에 이미 있습니다. Windows의 다른 버전을 다운로드 **curl** 링크를 사용 하 여 경로에 놓습니다.
 
-## <a id="master"></a> 마스터 인스턴스
+## <a name="which-tools-are-required"></a>어떤 도구가 필요 한가요?
 
-1. Azure Data Studio 눌러 **F1** > **새 연결**합니다.
+앞의 표에 모든 빅 데이터 클러스터와 함께 사용 되는 일반적인 도구를 제공 합니다. 도구에 필요한 시나리오에 따라 달라 집니다. 하지만 일반적으로 다음과 같은 도구는 관리, 연결 및 쿼리 하는 클러스터에 대 한 가장 중요 합니다.
 
-1. **연결 유형**를 선택 **Microsoft SQL Server**합니다.
+- **mssqlctl**
+- **Kubectl**
+- **Azure Data Studio**
+- **SQL Server 2019 확장**
 
-1. SQL Server 마스터 인스턴스의 IP 주소를 입력 **서버 이름** (예:  **\<IP 주소\>31433,**).
-
-1. SQL 로그인을 입력 **사용자 이름** 하 고 **암호**합니다.
-
-1. 변경 된 **데이터베이스 이름** 에 **high_value_data** 데이터베이스.
-
-   ![마스터 인스턴스에 연결](./media/deploy-big-data-tools/connect-to-cluster.png)
-
-1. 키를 눌러 **Connect**, 및 **Server 대시보드** 표시 되어야 합니다.
-
-## <a id="hdfs"></a> HDFS/Spark 게이트웨이
-
-1. Azure Data Studio 눌러 **F1** > **새 연결**합니다.
-
-1. **연결 유형**를 선택 **SQL Server 빅 데이터 클러스터**합니다.
-
-1. 빅 데이터 클러스터의 IP 주소를 입력 **서버 이름**합니다.
-
-1. 입력 `root` 에 대 한는 **사용자** 지정 합니다 **암호** 빅 데이터 클러스터에 있습니다.
-
-   ![HDFS/Spark 게이트웨이에 연결](./media/deploy-big-data-tools/connect-to-cluster-hdfs-spark.png)
-
-1. 키를 눌러 **Connect**, 및 **Server 대시보드** 표시 되어야 합니다.
+나머지 도구는 특정 시나리오 에서만 필요 합니다. **Azure CLI** AKS 배포와 관련 된 Azure 서비스 관리에 사용할 수 있습니다. **mssql cli** 는 클러스터의 마스터 SQL Server 인스턴스에 연결 하 고 명령줄에서 쿼리를 실행할 수 있는 선택 사항 이지만 유용한 도구입니다. 및 **sqlcmd** 하 고 **curl** GitHub 스크립트를 사용 하 여 샘플 데이터를 설치 하려는 경우이 필요 합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-Azure Data Studio notebook을 실행 하려면 참조 [SQL Server 2019 미리 보기에서 notebook을 사용 하는 방법을](notebooks-guidance.md)합니다.
+빅 데이터 클러스터에 대 한 자세한 내용은 참조 하세요. [SQL Server 2019 빅 데이터 클러스터 이란?](big-data-cluster-overview.md)합니다.

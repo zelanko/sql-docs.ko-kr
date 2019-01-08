@@ -11,12 +11,12 @@ ms.assetid: e0040fec-e2b7-4099-ae01-3b9bb9128bbd
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6ee9006aba640c6b2ffa5369dc3fdb04c82f8dc2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 3286d9067401216c17747feaa13c46442fad66dc
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188593"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415830"
 ---
 # <a name="reporting-services-site-settings-and-site-featuressharepoint-mode"></a>Reporting Services 사이트 설정 및 사이트 기능(SharePoint 모드)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드에는 SharePoint 사이트 설정 페이지에서 관리할 수 있는 몇 가지 사이트 수준 사용자 지정 기능과 사이트 기능이 있습니다. 설정은 사이트 전체에 해당하며 모든 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 영향을 줍니다. 이 페이지를 보려면 내용 관리자 및 시스템 관리자 권한이 있어야 합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "48188593"
   
 ## <a name="to-open-the-reporting-services-site-settings-page"></a>Reporting Services 사이트 설정 페이지를 열려면  
   
-1.  SharePoint 사이트의 **사이트 동작** 메뉴에서 **사이트 설정**을 클릭합니다.  
+1.  SharePoint 사이트에서 **사이트 작업** 메뉴 **사이트 설정**합니다.  
   
 2.  **Reporting Services** 섹션에서 **Reporting Services 사이트 설정**을 클릭합니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48188593"
 |**RSClientPrint ActiveX 컨트롤 다운로드 설정**|이 컨트롤은 특정 페이지와 범위, 페이지 여백 및 방향을 지정하는 페이지 선택 기능, 인쇄 미리 보기 기능을 비롯하여 다른 인쇄 대화 상자에 공통적인 기능을 지원하는 사용자 지정 인쇄 대화 상자를 표시합니다. 컨트롤에 대한 자세한 내용은 [Using the RSClientPrint Control in Custom Applications](report-server-web-service/net-framework/using-the-rsclientprint-control-in-custom-applications.md)을 참조하십시오.|  
 |**로컬 모드에서 원격 오류를 사용하도록 설정합니다.**|로컬 모드에서 실행 중일 때 원격 컴퓨터에서 자세한 오류 메시지를 표시하거나 숨깁니다. 다음과 유사한 오류 메시지가 나타날 경우 원격 오류를 사용하면 도움이 될 수 있습니다.<br /><br /> `For more information about this error navigate to the report server on the local server machine or enable remote errors`|  
 |**보고서에 내게 필요한 옵션 메타데이터 사용**|보고서의 HTML 출력에 내게 필요한 옵션 메타데이터 설정|  
-|**보고서에 정확히 맞춘 데이터 시각화 크기 조정 사용**|데이터 시각화 맞춤 동작이 테이블릭스 안에서 정확히 맞도록 구성합니다. 여기에는 차트, 계기 및 지도가 포함됩니다. 사용하지 않도록 설정한 경우 데이터 시각화가 대략적으로 맞도록 조정되며 이로 인해 공백이 생길 수 있습니다. 이 설정은 보고서 뷰어 웹 파트의 렌더링에만 적용됩니다. 서버 쪽 렌더링에 대해 이 동작을 관리하려면 **rsreportserver.config** 파일을 수정해야 합니다. 자세한 내용은 다음 항목을 참조하세요.<br /><br /> [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)합니다.<br /><br /> [Customize Rendering Extension Parameters RSReportServer.Config의](customize-rendering-extension-parameters-in-rsreportserver-config.md)합니다.<br /><br /> [HTML 장치 정보 설정](html-device-information-settings.md)합니다.<br /><br /> 정확한 크기를 결정하기 위한 처리가 대략적인 맞춤보다 오래 걸릴 수 있기 때문에 정확한 수치를 설정하면 성능에 영향을 줄 수 있습니다.|  
+|**보고서에 정확히 맞춘 데이터 시각화 크기 조정 사용**|데이터 시각화 맞춤 동작이 테이블릭스 안에서 정확히 맞도록 구성합니다. 여기에는 차트, 계기 및 지도가 포함됩니다. 사용하지 않도록 설정한 경우 데이터 시각화가 대략적으로 맞도록 조정되며 이로 인해 공백이 생길 수 있습니다. 이 설정은 보고서 뷰어 웹 파트의 렌더링에만 적용됩니다. 서버 쪽 렌더링에 대해 이 동작을 관리하려면 **rsreportserver.config** 파일을 수정해야 합니다. 자세한 내용은 다음 항목을 참조하세요.<br /><br /> [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)합니다.<br /><br /> [Customize Rendering Extension Parameters in RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)입니다.<br /><br /> [HTML Device Information Settings](html-device-information-settings.md)입니다.<br /><br /> 정확한 크기를 결정하기 위한 처리가 대략적인 맞춤보다 오래 걸릴 수 있기 때문에 정확한 수치를 설정하면 성능에 영향을 줄 수 있습니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services SharePoint 서비스 응용 프로그램 관리](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  

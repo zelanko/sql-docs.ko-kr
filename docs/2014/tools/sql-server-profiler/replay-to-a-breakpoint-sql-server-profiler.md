@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - breakpoints [SQL Server]
@@ -14,21 +13,21 @@ ms.assetid: 3caf751e-df3b-40c7-b5e8-4490ae178e0c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d40fd8e92eb7c3453c700eb2ae7f2a45ea6c0b41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33860d4e84e828b404236527dbe3c8c8cf6becc2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166413"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808385"
 ---
 # <a name="replay-to-a-breakpoint-sql-server-profiler"></a>중단점까지 재생(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 재생할 추적 파일이나 테이블에 중단점을 설정하는 방법에 대해 설명합니다. 추적 재생을 시작하기 전에 추적 파일이나 테이블에 중단점을 설정하면 특정 이벤트에서 추적 재생을 일시 중지할 수 있습니다. 추적을 재생하는 동안 중단점을 사용하면 긴 추적 스크립트 재생을 증분 방식으로 분석할 수 있는 짧은 세그먼트로 나눌 수 있으므로 디버깅이 지원됩니다.  
   
 ### <a name="to-replay-to-a-breakpoint"></a>중단점까지 재생하려면  
   
-1.  재생할 추적 파일이나 추적 테이블을 엽니다. 자세한 내용은 [추적 파일 열기&#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) 또는 [추적 테이블 열기&#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md)를 참조하세요.  
+1.  재생할 추적 파일이나 추적 테이블을 엽니다. 자세한 내용은 [추적 파일 열기&#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) 또는 [추적 테이블 열기&#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md)에서 제공되는 사전 정의된 튜닝 템플릿을 사용합니다.  
   
-     열려는 추적 파일이나 추적 테이블에 재생에 필요한 이벤트 클래스가 포함되어 있는지 확인합니다. 자세한 내용은 [Replay Requirements](replay-requirements.md)을 참조하세요.  
+     열려는 추적 파일이나 추적 테이블에 재생에 필요한 이벤트 클래스가 포함되어 있는지 확인합니다. 자세한 내용은 [Replay Requirements](replay-requirements.md)을(를) 참조하세요.  
   
 2.  추적 창에서 중단점으로 사용할 이벤트를 클릭합니다. 다음 세 가지 방법 중 하나를 사용하여 중단점을 설정합니다.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "48166413"
 6.  추적이 끝날 때까지 5단계를 반복합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [커서까지 재생 &#40;SQL Server Profiler&#41;](replay-to-a-cursor-sql-server-profiler.md)   
+ [커서까지 재생&#40;SQL Server Profiler&#41;](replay-to-a-cursor-sql-server-profiler.md)   
  [추적 재생](replay-traces.md)   
  [SQL Server 프로파일러](sql-server-profiler.md)  
   

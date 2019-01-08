@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], initializing subscriptions
@@ -14,12 +13,12 @@ ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7e6f04f1c0b66fe2ec3264c72c5b10b9f77ad941
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71c0b884fea0ceab1da3beba770414e1af14b74a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061523"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776445"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>스냅숏으로 구독 초기화
   게시가 생성된 후 일반적으로 초기 스냅숏이 생성되어 스냅숏 폴더로 복사됩니다. 이 작업은 새 게시 마법사에서 만든 병합 게시에 대해 기본적으로 수행됩니다. 스냅숏은 그런 다음 구독의 초기 동기화 중 배포 에이전트(트랜잭션 및 스냅숏 게시의 경우) 또는 병합 에이전트(병합 게시의 경우)에 의해 구독자에 적용됩니다. 스냅숏 프로세스는 게시 유형에 따라 달라집니다.  
@@ -48,7 +47,7 @@ ms.locfileid: "48061523"
   
 -   FTP(파일 전송 프로토콜)를 사용하여 스냅숏 파일을 전송합니다. 자세한 내용은 [FTP를 통해 스냅숏 전송](transfer-snapshots-through-ftp.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [구독 초기화](initialize-a-subscription.md)   
  [스냅숏 폴더 보안 설정](security/secure-the-snapshot-folder.md)  
   

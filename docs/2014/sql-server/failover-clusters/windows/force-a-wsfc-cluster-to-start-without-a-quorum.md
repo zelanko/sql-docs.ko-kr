@@ -13,21 +13,21 @@ ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec157f7d9e0b793df6881b8fa8e110ec36838ed6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 674f6f53610c8bf864aba5a2b5c7310c10f969c2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078723"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376735"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>쿼럼 없이 WSFC 클러스터 강제 시작
   이 항목에서는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 클러스터 노드를 쿼럼 없이 강제로 시작하는 방법에 대해 설명합니다.  이 기능은 재해 복구 및 다중 서브넷 시나리오에서 데이터를 복구하고 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스의 고가용성을 완전히 다시 설정하는 데 필요할 수 있습니다.  
   
--   **시작하기 전 주의 사항:**  [권장 사항](#Recommendations), [보안](#Security)  
+-   **시작 하기 전에:**  [권장 사항](#Recommendations), [보안](#Security)  
   
--   **다음을 사용하여 쿼럼 없이 클러스터를 강제 시작하려면**  [장애 조치(Failover) 클러스터 관리자 사용](#FailoverClusterManagerProcedure), [Powershell 사용](#PowerShellProcedure), [Net.exe 사용](#CommandPromptProcedure)  
+-   **사용 하 여 쿼럼 없이 시작 하려면 클러스터를 강제 합니다.**  [장애 조치 클러스터 관리자를 사용 하 여](#FailoverClusterManagerProcedure)하십시오 [Powershell을 사용 하 여](#PowerShellProcedure), [Net.exe 사용](#CommandPromptProcedure)  
   
--   **후속 작업:**  [후속 작업: 쿼럼 없이 클러스터를 강제로 시작한 후의 작업](#FollowUp)  
+-   **후속편:**  [후속 작업: 클러스터를 강제로 시작한 후 쿼럼 없이](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -43,11 +43,11 @@ ms.locfileid: "48078723"
   
 1.  장애 조치(Failover) 클러스터 관리자를 열고 온라인으로 강제 전환할 클러스터 노드에 연결합니다.  
   
-2.  **동작** 창에서 **클러스터 강제 시작**을 클릭하고 **예. 클러스터를 강제로 시작합니다.** 를 클릭합니다.  
+2.  **동작** 창에서 **클러스터 강제 시작**을 클릭하고 **예. 클러스터를 강제로 시작**을 클릭합니다.  
   
 3.  왼쪽 창의 **장애 조치(Failover) 클러스터 관리자** 트리에서 클러스터 이름을 클릭합니다.  
   
-4.  요약 창에서 현재 **쿼럼 구성** 값이  **경고: 클러스터가 ForceQuorum 상태에서 실행 중입니다.** 인지 확인합니다.  
+4.  요약 창에서 확인 하는 현재 **쿼럼 구성을** 값은:  **경고: 클러스터가 ForceQuorum 상태에서 실행 되**합니다.  
   
 ##  <a name="PowerShellProcedure"></a> Powershell 사용  
   
@@ -59,9 +59,9 @@ ms.locfileid: "48078723"
   
 3.  `Stop-ClusterNode` 를 사용하여 클러스터 서비스가 중지되었는지 확인합니다.  
   
-4.  `Start-ClusterNode` 와 `–FixQuorum` 을 사용하여 클러스터 서비스를 강제로 시작합니다.  
+4.  `Start-ClusterNode` 와 `-FixQuorum` 을 사용하여 클러스터 서비스를 강제로 시작합니다.  
   
-5.  `Get-ClusterNode` 와 `–Propery NodeWieght = 1` 을 사용하여 노드가 쿼럼의 투표 멤버가 되도록 하는 값을 설정합니다.  
+5.  `Get-ClusterNode` 와 `-Propery NodeWieght = 1` 을 사용하여 노드가 쿼럼의 투표 멤버가 되도록 하는 값을 설정합니다.  
   
 6.  클러스터 노드 속성을 읽기 가능한 형식으로 출력합니다.  
   
@@ -72,8 +72,8 @@ ms.locfileid: "48078723"
 Import-Module FailoverClusters  
   
 $node = "AlwaysOnSrv02"  
-Stop-ClusterNode –Name $node  
-Start-ClusterNode –Name $node -FixQuorum  
+Stop-ClusterNode -Name $node  
+Start-ClusterNode -Name $node -FixQuorum  
   
 (Get-ClusterNode $node).NodeWeight = 1  
   
@@ -102,7 +102,7 @@ net.exe stop clussvc
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a> 후속 작업: 쿼럼 없이 클러스터를 강제로 시작한 후의 작업  
+##  <a name="FollowUp"></a> 후속편: 쿼럼 없이 클러스터를 강제로 시작한 후의 작업  
   
 -   다른 노드를 다시 온라인으로 전환하려면 먼저 NodeWeight 값을 다시 계산하고 다시 구성하여 새 쿼럼을 올바르게 생성해야 합니다. 그러지 않으면 클러스터가 다시 오프라인으로 전환될 수 있습니다.  
   
@@ -122,13 +122,13 @@ net.exe start clussvc /forcequorum
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   [장애 조치(Failover) 클러스터에 대한 이벤트 및 로그 보기](http://technet.microsoft.com/en-us/library/cc772342\(WS.10\).aspx)  
+-   [장애 조치(Failover) 클러스터에 대한 이벤트 및 로그 보기](https://technet.microsoft.com/en-us/library/cc772342\(WS.10\).aspx)  
   
--   [Get-ClusterLog 장애 조치(Failover) 클러스터 Cmdlet](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog 장애 조치(Failover) 클러스터 Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## <a name="see-also"></a>관련 항목  
  [강제 쿼럼을 통해 WSFC 재해 복구&#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [클러스터 쿼럼 NodeWeight 설정 구성](configure-cluster-quorum-nodeweight-settings.md)   
- [태스크 기준으로 나열된 Windows PowerShell의 장애 조치(failover) 클러스터 Cmdlet](http://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
+ [태스크 기준으로 나열된 Windows PowerShell의 장애 조치(failover) 클러스터 Cmdlet](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
   
   

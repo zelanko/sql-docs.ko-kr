@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65555
@@ -13,12 +13,12 @@ ms.assetid: 3c0b1b30-795c-4240-91d6-890b8348014a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33802842eccbd6e9d50c98365cb2b9fe03391a8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a301857168f7da4040df0195bc25c0ab54861eb7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128642"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52812475"
 ---
 # <a name="add-table-dialog-box-database-designer-visual-database-tools"></a>테이블 추가 대화 상자(데이터베이스 디자이너)(Visual Database Tools)
   이 대화 상자를 사용하면 데이터베이스 디자이너에서 테이블을 추가할 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "48128642"
  **닫기**  
  테이블을 계속 추가하지 않고 대화 상자를 닫습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [다이어그램에 테이블 추가&#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

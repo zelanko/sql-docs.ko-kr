@@ -18,12 +18,12 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 21119211d750b8443d0f463e5b6dd3e407bd248b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141973"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355011"
 ---
 # <a name="permissions-database-engine"></a>사용 권한(데이터베이스 엔진)
   모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 개체에는 보안 주체에 부여될 수 있는 연결된 사용 권한이 있습니다. 이 항목에서는 다음 정보를 제공합니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "48141973"
      개체에 대한 REFERENCES 권한은 해당 개체를 참조하는 `WITH SCHEMABINDING` 절을 사용하여 FUNCTION 또는 VIEW를 만드는 데 필요합니다.  
   
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 사용 권한 차트  
- pdf 형식의 모든 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 권한에 대한 포스터 크기의 차트를 보려면 [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)를 참조하세요.  
+ pdf 형식의 모든 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 권한에 대한 포스터 크기의 차트를 보려면 [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142)를 참조하세요.  
   
 ##  <a name="_securables"></a> 특정 보안 개체에 적용 가능한 사용 권한  
  다음 표에서는 주요 사용 권한 클래스와 사용 권한이 적용될 수 있는 보안 개체 종류를 나열합니다.  
@@ -102,15 +102,15 @@ ms.locfileid: "48141973"
 |SELECT|동의어<br /><br /> 테이블 및 열<br /><br /> 테이블 반환 함수, [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR(공용 언어 런타임) 및 열<br /><br /> 뷰 및 열|  
 |VIEW CHANGE TRACKING|테이블<br /><br /> 스키마|  
 |UPDATE|동의어<br /><br /> 테이블 및 열<br /><br /> 뷰 및 열<br /><br /> 시퀀스 개체|  
-|REFERENCES|스칼라 및 집계 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 테이블 및 열<br /><br /> 테이블 반환 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR), 및 열<br /><br /> 유형<br /><br /> 뷰 및 열<br /><br /> 시퀀스 개체|  
+|REFERENCES|스칼라 및 집계 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 테이블 및 열<br /><br /> 테이블 반환 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR) 및 열<br /><br /> 유형<br /><br /> 뷰 및 열<br /><br /> 시퀀스 개체|  
 |INSERT|동의어<br /><br /> 테이블 및 열<br /><br /> 뷰 및 열|  
 |Delete|동의어<br /><br /> 테이블 및 열<br /><br /> 뷰 및 열|  
-|CREATE 문을 실행하기 전에|프로시저 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 스칼라 및 집계 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 동의어<br /><br /> CLR 유형|  
+|CREATE 문을 실행하기 전에|프로시저([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 스칼라 및 집계 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 동의어<br /><br /> CLR 유형|  
 |RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐|  
-|VIEW DEFINITION|가용성 그룹<br /><br /> 프로시저 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 스칼라 및 집계 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 로그인, 사용자 및 역할<br /><br /> 동의어<br /><br /> 테이블<br /><br /> 테이블 반환 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 뷰<br /><br /> 시퀀스 개체|  
-|ALTER|가용성 그룹<br /><br /> 프로시저 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 스칼라 및 집계 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 시퀀스 개체<br /><br /> 로그인, 사용자 및 역할<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 테이블<br /><br /> 테이블 반환 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 뷰|  
-|TAKE OWNERSHIP|가용성 그룹<br /><br /> 역할<br /><br /> 프로시저 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 스칼라 및 집계 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 서버 역할<br /><br /> 동의어<br /><br /> 테이블<br /><br /> 테이블 반환 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 뷰<br /><br /> 시퀀스 개체|  
-|CONTROL|가용성 그룹<br /><br /> 프로시저 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 스칼라 및 집계 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 로그인, 사용자 및 역할<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 동의어<br /><br /> 테이블<br /><br /> 테이블 반환 함수 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 뷰<br /><br /> 시퀀스 개체|  
+|VIEW DEFINITION|가용성 그룹<br /><br /> 프로시저([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 스칼라 및 집계 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 로그인, 사용자 및 역할<br /><br /> 동의어<br /><br /> 테이블<br /><br /> 테이블 반환 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 뷰<br /><br /> 시퀀스 개체|  
+|ALTER|가용성 그룹<br /><br /> 프로시저([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 스칼라 및 집계 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 시퀀스 개체<br /><br /> 로그인, 사용자 및 역할<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 테이블<br /><br /> 테이블 반환 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 뷰|  
+|TAKE OWNERSHIP|가용성 그룹<br /><br /> 역할<br /><br /> 프로시저([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 스칼라 및 집계 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 서버 역할<br /><br /> 동의어<br /><br /> 테이블<br /><br /> 테이블 반환 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 뷰<br /><br /> 시퀀스 개체|  
+|CONTROL|가용성 그룹<br /><br /> 프로시저([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 스칼라 및 집계 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 로그인, 사용자 및 역할<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 동의어<br /><br /> 테이블<br /><br /> 테이블 반환 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 뷰<br /><br /> 시퀀스 개체|  
 |IMPERSONATE|로그인 및 사용자|  
   
 > [!CAUTION]  
@@ -157,7 +157,7 @@ ms.locfileid: "48141973"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 참고:에 적용 됩니다 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 참고: [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에만 적용됩니다.|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +165,7 @@ ms.locfileid: "48141973"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> 참고:에 적용 됩니다 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> 참고: [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에만 적용됩니다.|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -204,7 +204,7 @@ ms.locfileid: "48141973"
 |DATABASE|Delete|DL|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE 문을 실행하기 전에|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 참고:에 적용 됩니다 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 ALTER ANY CONNECTION을 사용합니다.|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 참고: [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에만 적용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 ALTER ANY CONNECTION을 사용합니다.|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
@@ -229,9 +229,9 @@ ms.locfileid: "48141973"
 |FULLTEXT STOPLIST|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |FULLTEXT STOPLIST|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |Login|ALTER|AL|SERVER|ALTER ANY LOGIN|  
-|Login|CONTROL|CL|SERVER|CONTROL SERVER|  
-|Login|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
-|Login|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
+|LOGIN|CONTROL|CL|SERVER|CONTROL SERVER|  
+|LOGIN|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
+|LOGIN|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |MESSAGE TYPE|ALTER|AL|DATABASE|ALTER ANY MESSAGE TYPE|  
 |MESSAGE TYPE|CONTROL|CL|DATABASE|CONTROL|  
 |MESSAGE TYPE|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -239,7 +239,7 @@ ms.locfileid: "48141973"
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
-|OBJECT|DELETE|DL|SCHEMA|Delete|  
+|OBJECT|Delete|DL|SCHEMA|Delete|  
 |OBJECT|CREATE 문을 실행하기 전에|EX|SCHEMA|CREATE 문을 실행하기 전에|  
 |OBJECT|INSERT|IN|SCHEMA|INSERT|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
@@ -331,10 +331,10 @@ ms.locfileid: "48141973"
 |TYPE|REFERENCES|RF|SCHEMA|REFERENCES|  
 |TYPE|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |TYPE|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
-|User|ALTER|AL|DATABASE|ALTER ANY USER|  
+|USER|ALTER|AL|DATABASE|ALTER ANY USER|  
 |User|CONTROL|CL|DATABASE|CONTROL|  
-|User|IMPERSONATE|IM|DATABASE|CONTROL|  
-|User|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
+|USER|IMPERSONATE|IM|DATABASE|CONTROL|  
+|USER|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |XML SCHEMA COLLECTION|ALTER|AL|SCHEMA|ALTER|  
 |XML SCHEMA COLLECTION|CONTROL|CL|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|CREATE 문을 실행하기 전에|EX|SCHEMA|CREATE 문을 실행하기 전에|  

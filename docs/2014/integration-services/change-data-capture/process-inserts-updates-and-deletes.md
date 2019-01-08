@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],processing data
@@ -13,12 +12,12 @@ ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7cf579c8839b2f990486f9bf5dcca1700dac50e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22c944306fd73b6acd2dc2d107d5bfdff69d1439
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066413"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804914"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>삽입, 업데이트 및 삭제 처리
   변경 데이터를 증분 로드하는 Integration Services 패키지의 데이터 흐름에서 두 번째 태스크는 삽입, 업데이트 및 삭제를 구분하는 것입니다. 그런 다음 적절한 명령을 사용하여 대상에 해당 작업을 적용할 수 있습니다.  
@@ -72,6 +71,6 @@ select
   
 ## <a name="see-also"></a>관련 항목  
  [조건부 분할 변환](../data-flow/transformations/conditional-split-transformation.md)   
- [조건부 분할 변환을 사용하여 데이터 집합 분할](../data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+ [조건부 분할 변환을 사용하여 데이터 세트 분할](../data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   
