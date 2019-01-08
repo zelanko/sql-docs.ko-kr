@@ -28,12 +28,12 @@ ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 59a80fcb9fdbd758f1ca76e73d279cdc6b3810d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 619f96921f1fbbaf3d1eec8d2c89a25491b46180
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137633"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364775"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>지도 또는 지도 계층 추가, 변경 또는 삭제(보고서 작성기 및 SSRS)
   지도는 계층의 모음입니다. 보고서에 지도를 추가할 때 첫 번째 계층을 정의합니다. 지도 계층 마법사를 사용하여 추가 계층을 만들 수 있습니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "48137633"
   
  지도 창의 아래쪽에는 지도 보기 영역이 있습니다. 지도의 중심 및 확대/축소 옵션을 변경하려면 화살표 키를 사용하여 보기 중심을 조정하고 슬라이더를 사용하여 확대/축소 수준을 조정합니다.  
   
- 계층에 대 한 자세한 내용은 참조 하세요. [Maps &#40;보고서 작성기 및 SSRS&#41;](maps-report-builder-and-ssrs.md)합니다.  
+ 계층에 대한 자세한 내용은 [지도&#40;보고서 작성기 및 SSRS&#41;](maps-report-builder-and-ssrs.md)를 클릭합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -82,7 +82,7 @@ ms.locfileid: "48137633"
   
 1.  지도 창이 나타날 때까지 지도를 클릭합니다.  
   
-2.  도구 모음에서 **계층 추가** 단추를 클릭하고 드롭다운 목록의 **점**, **선**또는 **다각형**중에서 추가할 계층의 유형을 클릭합니다.  
+2.  도구 모음에서 클릭 합니다 **계층 추가** 드롭 다운 목록에서 추가 하려는 계층의 유형을 클릭 합니다. **지점**하십시오 **줄**, 또는 **다각형**합니다.  
   
     > [!NOTE]  
     >  지도 계층을 추가하고 수동으로 구성할 수 있지만 지도 계층 마법사를 사용하여 새 계층을 추가하는 것이 좋습니다. 지도 창 도구 모음에서에서 마법사를 시작하려면 계층 마법사 단추(![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))를 클릭합니다.  
@@ -125,7 +125,7 @@ ms.locfileid: "48137633"
   
 1.  **지도 점 속성** 대화 상자에서 **일반** 을 선택하여 다음 지도 요소의 레이블, 도구 설명 및 표식 유형 옵션을 변경할 수 있습니다.  
   
-    -   점 계층의 모든 동적 또는 포함된 점. 점의 색 규칙, 크기 규칙 및 표식 유형 규칙은 이러한 옵션을 무시합니다. 특정 포함된 점에 대 한 옵션을 재정의 하려면 사용 합니다 [지도 포함 점 속성 대화 상자, 표식](../map-embedded-point-properties-dialog-box-marker.md) 페이지입니다.  
+    -   점 계층의 모든 동적 또는 포함된 점. 점의 색 규칙, 크기 규칙 및 표식 유형 규칙은 이러한 옵션을 무시합니다. 특정 포함된 점에 대한 옵션을 무시하려면 [Map Embedded Point Properties Dialog Box, Marker](../map-embedded-point-properties-dialog-box-marker.md) 페이지를 사용합니다.  
   
     -   다각형 계층의 모든 동적 또는 포함된 다각형에 대한 중심점. 중심점의 색 규칙, 크기 규칙 및 표식 유형 규칙은 이러한 옵션을 무시합니다. 특정 중심점에 대한 옵션을 무시하려면 [지도 포함 점 속성 대화 상자, 표식](../map-embedded-point-properties-dialog-box-marker.md) 페이지를 사용합니다.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "48137633"
 4.  **파일 이름**에 ESRI 셰이프 파일의 위치를 입력하거나 **찾아보기** 를 클릭하여 ESRI 셰이프 파일을 선택합니다.  
   
     > [!NOTE]  
-    >  셰이프 파일이 로컬 컴퓨터에 있는 경우 공간 데이터가 보고서 정의에 포함됩니다. 보고서가 처리될 때 데이터를 동적으로 검색하려면 ESRI .shp 파일 및 해당 .dbf 지원 파일을 보고서 서버로 업로드해야 합니다. 자세한 내용은 SQL Server 온라인 설명서의 [Reporting Services 설명서](http://go.microsoft.com/fwlink/?linkid=121312) 에서 "방법: 파일 또는 보고서 업로드(보고서 관리자)"를 참조하세요.  
+    >  셰이프 파일이 로컬 컴퓨터에 있는 경우 공간 데이터가 보고서 정의에 포함됩니다. 보고서가 처리될 때 데이터를 동적으로 검색하려면 ESRI .shp 파일 및 해당 .dbf 지원 파일을 보고서 서버로 업로드해야 합니다. 자세한 내용은 "방법: 파일 또는 보고서 업로드 (보고서 관리자) "에 [Reporting Services 설명서](https://go.microsoft.com/fwlink/?linkid=121312) SQL Server 온라인 설명서의 합니다.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -190,7 +190,7 @@ ms.locfileid: "48137633"
 2.  도구 모음에서 **계층 추가** 단추를 클릭하고 드롭다운 목록에서 **타일 계층**을 클릭합니다.  
   
     > [!NOTE]  
-    >  보고서에서 Bing 지도 타일을 사용하는 방법은 [추가 사용 조건(Additional Terms of Use)](http://go.microsoft.com/fwlink/?LinkId=151371) 및 [개인 정보 취급 방침](http://go.microsoft.com/fwlink/?LinkId=151372)을 참조하십시오.  
+    >  보고서에서 Bing 지도 타일을 사용하는 방법은 [추가 사용 조건(Additional Terms of Use)](https://go.microsoft.com/fwlink/?LinkId=151371) 및 [개인 정보 취급 방침](https://go.microsoft.com/fwlink/?LinkId=151372)을 참조하십시오.  
   
 3.  지도 창에서 타일 계층을 마우스 오른쪽 단추로 클릭한 다음 **타일 속성**을 클릭합니다.  
   
@@ -283,6 +283,6 @@ ms.locfileid: "48137633"
   
 ## <a name="see-also"></a>관련 항목  
  [지도&#40;보고서 작성기 및 SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [보고서 문제해결: 지도 보고서 &#40;보고서 작성기 및 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [보고서 문제 해결: 지도 보고서 &#40;보고서 작성기 및 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

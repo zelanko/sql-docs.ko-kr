@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.tableproperties.storage.f1
@@ -17,14 +16,14 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2b518a0044c4d4778fa2b94a6643c805e7c19ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096663"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356287"
 ---
-# <a name="table-properties"></a>테이블 속성
+# <a name="table-properties"></a>Table Properties
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 테이블 속성 편집 대화 상자에 표시된 테이블 속성에 대해 설명합니다. 이러한 속성을 표시하는 방법은 [테이블 정의 보기](view-the-table-definition.md)를 참조하세요.  
   
  **항목 내용**  
@@ -66,7 +65,7 @@ ms.locfileid: "48096663"
  따옴표 붙은 식별자 옵션이 ON으로 설정된 상태에서 개체가 만들어졌는지 여부를 나타냅니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)를 참조하세요.  
   
  **잠금 에스컬레이션**  
- 테이블의 잠금 에스컬레이션 세분성을 나타냅니다. 데이터베이스 엔진에서의 잠금에 대한 자세한 내용은 [SQL Server 트랜잭션 잠금 및 행 버전 관리 지침](http://msdn.microsoft.com/library/jj856598.aspx)을 참조하세요. 가능한 값은  
+ 테이블의 잠금 에스컬레이션 세분성을 나타냅니다. 데이터베이스 엔진에서의 잠금에 대한 자세한 내용은 [SQL Server 트랜잭션 잠금 및 행 버전 관리 지침](https://msdn.microsoft.com/library/jj856598.aspx)을 참조하세요. 가능한 값은  
   
  AUTO  
  이 옵션을 선택하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 테이블 스키마에 적절한 잠금 에스컬레이션 세분성을 선택할 수 있습니다.  
@@ -136,7 +135,7 @@ ms.locfileid: "48096663"
  가능한 값은 `True` 및 `False`입니다.  
   
  **Filestream 파일 그룹**  
- 이면 테이블에 FILESTREAM 데이터 파일 그룹의 이름을 지정는 `varbinary(max)` FILESTREAM 특성이 있는 열입니다. 기본값은 기본 FILESTREAM 데이터 파일 그룹입니다.  
+ 테이블에 FILESTREAM 특성이 있는 `varbinary(max)` 열이 있을 경우 FILESTREAM 데이터 파일 그룹의 이름을 지정합니다. 기본값은 기본 FILESTREAM 데이터 파일 그룹입니다.  
   
  테이블에 FILESTREAM 데이터가 없는 경우 이 필드가 비어 있습니다.  
   

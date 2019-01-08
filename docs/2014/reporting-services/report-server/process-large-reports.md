@@ -17,12 +17,12 @@ ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b22d42d48b3357cc004c89886ebaaaca42c35f96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 4dfc8e272479c9fb2a3a5082624bdda926547212
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084663"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372505"
 ---
 # <a name="process-large-reports"></a>큰 보고서 처리
   큰 보고서는 제대로 실행될 경우 특수한 처리 문제를 발생시키며 특정 구성을 필요로 합니다. 큰 보고서는 페이지 매김을 지원하도록 구성되지 않은 한 요청 시 실행되도록 하면 안 됩니다.  
@@ -34,12 +34,12 @@ ms.locfileid: "48084663"
   
  휘발성 데이터가 포함되어 있는 보고서의 경우 보고서를 실행할 때마다 크기가 급격하게 변경될 수 있습니다. 그럴 경우 데이터 원본을 모니터링하여 데이터 휘발성이 보고서에 미치는 영향 및 이 항목에 설명된 단계를 따라야 하는지 여부를 결정해야 합니다.  
   
- 시간 제한 오류 및 메모리 부족 오류의 진단 방법에 대한 자세한 내용 및 팁을 보려면 blogs.msdn.com에 있는 [보고서 서버에서 보고서를 실행할 때 문제를 진단하는 방법](http://go.microsoft.com/fwlink/?LinkId=85634) 문서를 참조하세요.  
+ 시간 제한 오류 및 메모리 부족 오류의 진단 방법에 대한 자세한 내용 및 팁을 보려면 blogs.msdn.com에 있는 [보고서 서버에서 보고서를 실행할 때 문제를 진단하는 방법](https://go.microsoft.com/fwlink/?LinkId=85634) 문서를 참조하세요.  
   
 ## <a name="configuration-recommendations"></a>구성 권장 사항  
  보고서 실행, 보고서 렌더링 및 보고서 액세스에 대한 권장 사항은 다음과 같습니다.  
   
--   페이지 매김을 지원하도록 보고서를 디자인합니다. 보고서 서버는 보고서를 한 번에 한 페이지씩 보냅니다. 보고서에 페이지 매김이 포함되어 있는 경우 브라우저에 스트림되는 데이터의 양을 제어할 수 있습니다. 자세한 내용은 [캐시를 미리 로드 &#40;보고서 관리자&#41;](preload-the-cache-report-manager.md)합니다.  
+-   페이지 매김을 지원하도록 보고서를 디자인합니다. 보고서 서버는 보고서를 한 번에 한 페이지씩 보냅니다. 보고서에 페이지 매김이 포함되어 있는 경우 브라우저에 스트림되는 데이터의 양을 제어할 수 있습니다. 자세한 내용은 [캐시 사전 로드&#40;보고서 관리자&#41;](preload-the-cache-report-manager.md)를 참조하세요.  
   
 -   보고서가 요청이 있을 때 실행되지 않도록 보고서를 예약된 보고서 스냅숏으로 실행되도록 구성합니다. 보고서 실행에 대한 시간 제한 값을 설정하지 마십시오. 사용률이 낮은 시간에 보고서를 실행합니다.  
   
@@ -70,10 +70,10 @@ ms.locfileid: "48084663"
  전자 메일 보고서 배달을 사용하려면 링크를 포함하도록 구독을 구성합니다. 보고서를 첨부 파일로 보내지는 마십시오.  
   
 ## <a name="see-also"></a>관련 항목  
- [구독 및 배달 &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [구독 및 배달&#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [보고서 처리 속성 설정](set-report-processing-properties.md)   
  [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [보고서 서버 콘텐츠 관리 &#40;SSRS 기본 모드&#41;](report-server-content-management-ssrs-native-mode.md)   
+ [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](report-server-content-management-ssrs-native-mode.md)   
  [캐시 사전 로드&#40;보고서 관리자&#41;](preload-the-cache-report-manager.md)  
   
   

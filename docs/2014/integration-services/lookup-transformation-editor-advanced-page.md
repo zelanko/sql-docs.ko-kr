@@ -15,12 +15,12 @@ ms.assetid: f3395c65-0320-47f9-8d83-daaa082d8713
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa56e9366fdc60a5b411e19b200706f0404e7312
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 2991d6b79c9cbfbd37466484e1c4394b6e0fb804
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209733"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369365"
 ---
 # <a name="lookup-transformation-editor-advanced-page"></a>조회 변환 편집기(고급 페이지)
   **조회 변환 편집기** 대화 상자의 **고급** 페이지를 사용하여 조회 변환의 부분 캐싱을 구성하고 SQL 문을 수정할 수 있습니다.  
@@ -44,19 +44,19 @@ ms.locfileid: "48209733"
  참조 데이터 세트를 생성하는 데 사용되는 SQL 문을 수정합니다.  
   
 > [!NOTE]  
->  이 페이지에서 지정하는 선택적 SQL 문이 **조회 변환 편집기** 의 **연결**페이지에서 지정한 테이블 이름을 재정의하고 대체합니다. 자세한 내용은 [조회 변환 편집기 &#40;연결 페이지&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)합니다.  
+>  이 페이지에서 지정하는 선택적 SQL 문이 **조회 변환 편집기** 의 **연결**페이지에서 지정한 테이블 이름을 재정의하고 대체합니다. 자세한 내용은 [조회 변환 편집기&#40;연결 페이지&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)을 참조하십시오.  
   
  **매개 변수**  
  **쿼리 매개 변수 설정** 대화 상자를 사용하여 입력 열을 매개 변수에 매핑합니다.  
   
 ## <a name="external-resources"></a>외부 리소스  
- blogs.msdn.com의 블로그 항목 - [조회 캐시 모드](http://go.microsoft.com/fwlink/?LinkId=219518)  
+ blogs.msdn.com의 블로그 항목 - [조회 캐시 모드](https://go.microsoft.com/fwlink/?LinkId=219518)  
   
 ## <a name="see-also"></a>관련 항목  
- [조회 변환 편집기 &#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
- [조회 변환 편집기 &#40;연결 페이지&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
+ [조회 변환 편집기&#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
+ [조회 변환 편집기&#40;연결 페이지&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
  [조회 변환 편집기&#40;열 페이지&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
- [조회 변환 편집기 &#40;오류 출력 페이지&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
+ [조회 변환 편집기&#40;오류 출력 페이지&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [유사 항목 조회 변환](data-flow/transformations/fuzzy-lookup-transformation.md)  
   

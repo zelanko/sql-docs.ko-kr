@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 39a1547e2248c62299026440b5b33da88458138e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 011cd07c0f28f884f460d78d5f2f88631bfe2fd9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085883"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807505"
 ---
 # <a name="step-3-modifying-the-directory-property-configuration-value"></a>3단계: Directory 속성 구성 값 수정
   이 태스크에서는 패키지 수준 변수 `User::varFolderName`의 Value 속성에 대해 SSISTutorial.dtsConfig 파일에 저장된 구성 설정을 수정합니다. 이 변수는 Foreach 루프 컨테이너의 Directory 속성을 업데이트합니다. 수정 된 값은 가리킵니다는 `New Sample Data` 이전 태스크에서 만든 폴더에 있습니다. 구성 설정을 수정하고 패키지를 실행하면 Directory 속성은 원래 패키지에서 구성된 디렉터리 값 대신 구성 파일에서 채워진 값을 사용하여 변수를 통해 업데이트됩니다.  
@@ -34,6 +33,6 @@ ms.locfileid: "48085883"
 3.  변경 내용을 저장하고 텍스트 편집기를 닫습니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [4단계: 5단원 자습서 패키지 테스트](../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
+ [4 단계: 5 단원 자습서 패키지 테스트](../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
   
   

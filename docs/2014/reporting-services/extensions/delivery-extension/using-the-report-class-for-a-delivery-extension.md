@@ -15,12 +15,12 @@ ms.assetid: 1145ac63-eafd-452a-82af-16f85b1676dd
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 693c0c18b4ffb2f3ab5209c0133588997c11d539
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23aaec0ff8130ec246bb99ea63ef16dc7a5b106b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159573"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361755"
 ---
 # <a name="using-the-report-class-for-a-delivery-extension"></a>배달 확장 프로그램에 대해 Report 클래스 사용
   <xref:Microsoft.ReportingServices.Interfaces.Report> 클래스는 보고서 서버 데이터베이스의 보고서를 나타냅니다. 구독은 특정 보고서와 연결됩니다. 보고서는 알림에 포함됩니다. 배달 확장 프로그램에서는 알림의 일부인 <xref:Microsoft.ReportingServices.Interfaces.Report> 개체를 사용하여 보고서를 렌더링합니다. <xref:Microsoft.ReportingServices.Interfaces.Report> 개체에는 보고서 이름 및 보고서 서버의 보고서 URL과 같은 보고서별 속성도 포함됩니다. 이러한 속성은 모두 배달 공급자의 일부로 사용됩니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "48159573"
   
  <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> 개체는 보고서 스트림을 포함하며 배달의 일부가 될 수 있습니다.  
   
- <xref:Microsoft.ReportingServices.Interfaces.Report> 클래스 사용 방법에 대한 예는 [SQL Server Reporting Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.  
+ <xref:Microsoft.ReportingServices.Interfaces.Report> 클래스 사용 방법에 대한 예는 [SQL Server Reporting Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [배달 확장 프로그램 구현](implementing-a-delivery-extension.md)   

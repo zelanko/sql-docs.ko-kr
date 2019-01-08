@@ -11,12 +11,12 @@ ms.assetid: 0a3ae788-e8c8-4a4d-bb15-34c673abcd17
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67bb3b093d63564c4eaae0144add029e569281f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 86aa25f148c44343a57e0e55831663155d288830
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068113"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374445"
 ---
 # <a name="install-and-uninstall-odata-source-component"></a>OData 원본 구성 요소 설치 및 제거
   이 항목에서는 컴퓨터에서 OData 원본 구성 요소를 설치하거나 제거하기 위한 지침을 제공합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "48068113"
   
 -   SQL Server Integration Services(Visual Studio 외부에서 패키지를 실행하는 데 사용)  
   
- OData 원본 구성 요소를 설치하려면 [SQL Server 2014 기능 팩](http://go.microsoft.com/fwlink/p/?LinkId=391999) 을 다운로드하고 다음 MSI 파일 중 하나를 실행합니다.  
+ OData 원본 구성 요소를 설치하려면 [SQL Server 2014 기능 팩](https://go.microsoft.com/fwlink/p/?LinkId=391999) 을 다운로드하고 다음 MSI 파일 중 하나를 실행합니다.  
   
 -   ODataSourceForSQLServer2014-amd64.msi(64비트 플랫폼의 경우)  
   

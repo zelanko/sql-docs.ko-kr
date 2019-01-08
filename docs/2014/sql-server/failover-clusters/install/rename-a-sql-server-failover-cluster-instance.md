@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], virtual servers
@@ -16,12 +15,12 @@ ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f7e1927d1b35c1f4a8e7b7aef8d8c3cbfaa0b33
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128813"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362626"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>SQL Server 장애 조치(Failover) 클러스터 인스턴스 이름 변경
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 장애 조치 클러스터의 일부인 경우 가상 서버의 이름을 바꾸는 방법은 독립 실행형 인스턴스의 이름을 바꾸는 방법과 다릅니다. 자세한 내용은 [SQL Server의 독립 실행형 인스턴스를 호스팅하는 컴퓨터 이름 바꾸기](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)를 참조하세요.  
@@ -45,7 +44,7 @@ ms.locfileid: "48128813"
 ## <a name="verify-the-renaming-operation"></a>이름 바꾸기 작업 확인  
  가상 서버 이름을 바꾼 후 이전 이름을 사용하던 연결은 새 이름을 사용하여 연결해야 합니다.  
   
- 이름 바꾸기 작업 완료를 확인 하려면에서 다음 정보를 선택 `@@servername` 또는 `sys.servers`합니다. `@@servername` 함수는 새로운 가상 서버 이름을 반환하며 `sys.servers` 테이블은 새로운 가상 서버 이름을 표시합니다. 또한 장애 조치 프로세스가 새 이름으로 제대로 작동하는지 확인하기 위해 다른 노드에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스에 오류를 발생시켜 봐야 합니다.  
+ 이러한 남은 작업이 완료되었는지 확인하기 위해 `@@servername` 또는 `sys.servers`에서 정보를 선택합니다. `@@servername` 함수는 새로운 가상 서버 이름을 반환하며 `sys.servers` 테이블은 새로운 가상 서버 이름을 표시합니다. 또한 장애 조치 프로세스가 새 이름으로 제대로 작동하는지 확인하기 위해 다른 노드에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스에 오류를 발생시켜 봐야 합니다.  
   
  클러스터 노드로부터의 연결에서는 새 이름을 거의 즉시 사용할 수 있습니다. 하지만 클라이언트 컴퓨터의 새 이름을 사용하는 연결에서는 새 이름이 클라이언트 컴퓨터에 표시되기 전까지 새 이름을 사용하여 서버에 연결할 수 없습니다. 새 이름이 네트워크를 통해 전파되는 데 필요한 시간은 몇 초 정도 걸릴 수 있으며 네트워크 구성에 따라 3-5분까지 걸릴 수도 있습니다. 이전 가상 서버 이름이 네트워크에서 사라지는 데에도 추가 시간이 걸릴 수 있습니다.  
   
@@ -58,15 +57,15 @@ ms.locfileid: "48128813"
     ```  
     ipconfig /flushdns  
     ipconfig /registerdns  
-    nbtstat –RR  
+    nbtstat -RR  
     ```  
   
 ## <a name="additional-considerations-after-the-renaming-operation"></a>이름 바꾸기 작업 후 추가 고려 사항  
  장애 조치(Failover) 클러스터의 네트워크 이름을 바꾼 후에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 및 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 모든 시나리오를 지원하기 위해 다음 지침을 확인하고 수행해야 합니다.  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Windows 클러스터 관리 도구를 사용하여 [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] 장애 조치(Failover) 클러스터 인스턴스의 네트워크 이름을 변경한 후 이후 업그레이드 또는 설치 제거 작업이 실패할 수 있습니다. 이 문제가 업데이트를 확인 하는 **ClusterName** 레지스트리 항목의 해결 방법 섹션의 지침에 따라 [이](http://go.microsoft.com/fwlink/?LinkId=244002) (http://go.microsoft.com/fwlink/?LinkId=244002)합니다.  
+ **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** 네트워크 이름을 변경한 후는 [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] 장애 조치 이후 업그레이드 Windows 클러스터 관리자 도구를 사용 하 여 인스턴스 클러스터 또는 설치 제거 작업이 실패할 수 있습니다. 이 문제가 업데이트를 확인 하는 **ClusterName** 레지스트리 항목의 해결 방법 섹션의 지침에 따라 [이](https://go.microsoft.com/fwlink/?LinkId=244002) (https://go.microsoft.com/fwlink/?LinkId=244002)합니다.  
   
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스에 대한 아래의 추가 작업을 확인 및 수행합니다.  
+ **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스에 대한 아래의 추가 작업을 확인 및 수행합니다.  
   
 -   SQL 에이전트가 이벤트를 전달하도록 구성된 경우 레지스트리 설정을 수정합니다. 자세한 내용은 [이벤트 전달 서버 지정&#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md)을 참조하세요.  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48128813"
   
 -   서버 이름을 기반으로 하는 작업 단계를 업데이트합니다. 자세한 내용은 [Manage Job Steps](../../../ssms/agent/manage-job-steps.md)을(를) 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server의 독립 실행형 인스턴스를 호스팅하는 컴퓨터 이름 바꾸기](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
   
   

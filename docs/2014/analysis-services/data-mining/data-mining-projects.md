@@ -11,12 +11,12 @@ ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7e0d0abca91a6d9a17d7f7e55eb881208f8a16a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 6370034c90acf91bcf69fc0dee697f48458b7e22
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106593"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356402"
 ---
 # <a name="data-mining-projects"></a>데이터 마이닝 프로젝트
   데이터 마이닝 프로젝트는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 솔루션의 일부입니다. 디자인 프로세스 중에 이 프로젝트에서 만든 개체를 작업 영역 데이터베이스의 일부로 테스트 및 쿼리할 수 있습니다. 사용자가 프로젝트에서 개체를 쿼리하거나 찾아볼 수 있도록 하려면 다차원 모드로 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 프로젝트를 배포해야 합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "48106593"
  기존 솔루션 내에 데이터 마이닝 개체를 만든 경우 해당 데이터 마이닝 개체는 기본적으로 솔루션 파일과 동일한 이름으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 배포됩니다. **보고서 속성** 대화 상자를 사용하여 이 이름 및 대상 서버를 변경할 수 있습니다. 자세한 내용은 [Analysis Services 프로젝트 속성 구성&#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md)을 참조하세요.  
   
 > [!WARNING]  
->  프로젝트를 성공적으로 작성하고 배포하려면 OLAP/데이터 마이닝 모드로 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 액세스 권한이 있어야 합니다. 개발 또는 인스턴스에서 데이터 마이닝 솔루션을 배포할 수 없습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 모델을 지 나 메모리 내 데이터 저장소를 사용 하는 테이블 형식 모델 또는 PowerPivot 통합 문서에서 직접 데이터를 사용할 수 있습니다. 사용 중인 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 데이터 마이닝을 지원할 수 있는지 확인하려면 [Analysis Services 인스턴스의 서버 모드 확인](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)을 참조하세요.  
+>  프로젝트를 성공적으로 작성하고 배포하려면 OLAP/데이터 마이닝 모드로 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 액세스 권한이 있어야 합니다. 테이블 형식 모델을 지원하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서는 데이터 마이닝 솔루션을 개발하거나 배포할 수 없으며, PowerPivot 통합 문서 또는 메모리 내 데이터 저장소를 사용하는 테이블 형식 모델에서 직접 데이터를 사용할 수 없습니다. 사용 중인 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 데이터 마이닝을 지원할 수 있는지 확인하려면 [Analysis Services 인스턴스의 서버 모드 확인](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)을 참조하세요.  
   
  만든 각 데이터 마이닝 프로젝트 내에서 다음 단계를 수행합니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48106593"
   
  단일 데이터 마이닝 프로젝트에서 여러 데이터 원본을 참조할 수 있습니다. 마이닝 모델은 한 번에 하나의 데이터 원본만 사용할 수 있지만 프로젝트에는 데이터 원본이 서로 다른 여러 개의 모델 드로잉이 있을 수 있습니다.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 많은 외부 공급자의 데이터를 지원하며, SQL Server 데이터 마이닝에서는 관계형 데이터와 큐브 데이터 둘 다를 데이터 원본으로 사용할 수 있습니다. 그러나 두 유형의 프로젝트(관계형 원본 기반의 모델과 OLAP 큐브 기반의 모델)를 모두 개발할 경우 별도의 프로젝트에서 개발하고 관리할 수 있습니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 많은 외부 공급자의 데이터를 지원하며, SQL Server 데이터 마이닝에서는 관계형 데이터와 큐브 데이터 둘 다를 데이터 원본으로 사용할 수 있습니다. 그러나 두 유형의 프로젝트-관계형 원본 기반의 모델과 OLAP 큐브 기반 모델을 개발 하는 경우-개발 및 관리 하는 별도 프로젝트에서 선택할 수 있습니다.  
   
 -   일반적으로 OLAP 큐브를 기반으로 하는 모델은 OLAP 디자인 솔루션 내에서 개발해야 합니다. 그 이유 중 하나는 큐브를 기반으로 하는 모델은 큐브를 처리하여 데이터를 업데이트해야 하기 때문입니다. 일반적으로 큐브 데이터는 기본적인 데이터 저장 및 액세스 방법으로 사용되거나 다차원 프로젝트에서 만든 집계, 차원 및 특성이 필요한 경우에만 사용해야 합니다.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "48106593"
   
  이러한 시각화 요소는 일시적이므로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 세션을 종료할 때 저장하지 않고 닫힙니다. 따라서 이러한 시각화 요소를 프레젠테이션이나 이후의 분석에 사용하기 위해 다른 애플리케이션으로 내보내야 하는 경우 뷰어 인터페이스의 각 탭이나 창에 제공된 **복사** 명령을 사용합니다.  
   
- Excel용 데이터 마이닝 추가 기능에서도 모델을 Visio 다이어그램으로 표시하고 Visio 도구를 사용하여 주석을 달거나 다이어그램을 수정하는 데 사용할 수 있는 Visio 템플릿을 제공합니다. 자세한 내용은 [Microsoft Office 2007용 Microsoft SQL Server 2008 SP2 데이터 마이닝 추가 기능](http://go.microsoft.com/fwlink/?LinkID=123146)을 참조하세요.  
+ Excel용 데이터 마이닝 추가 기능에서도 모델을 Visio 다이어그램으로 표시하고 Visio 도구를 사용하여 주석을 달거나 다이어그램을 수정하는 데 사용할 수 있는 Visio 템플릿을 제공합니다. 자세한 내용은 [Microsoft Office 2007용 Microsoft SQL Server 2008 SP2 데이터 마이닝 추가 기능](https://go.microsoft.com/fwlink/?LinkID=123146)을 참조하세요.  
   
 
   
@@ -198,16 +198,16 @@ ms.locfileid: "48106593"
 |태스크|항목|  
 |-----------|------------|  
 |마이닝 구조 열로 작업하는 방법에 대해 설명합니다.|[관계형 마이닝 구조 만들기](create-a-relational-mining-structure.md)|  
-|새 마이닝 모델을 추가하고 구조 및 모델을 처리하는 방법에 대해 자세히 설명합니다.|[구조에 마이닝 모델 추가 &#40;Analysis Services-데이터 마이닝&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|새 마이닝 모델을 추가하고 구조 및 모델을 처리하는 방법에 대해 자세히 설명합니다.|[마이닝 모델 구조 & #40;에 추가 Analysis Services-데이터 마이닝 & #41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |마이닝 모델을 작성하는 알고리즘을 사용자 지정하는 데 도움이 되는 리소스에 대한 링크를 제공합니다.|[마이닝 모델 및 구조 사용자 지정](customize-mining-models-and-structure.md)|  
 |각 마이닝 모델 뷰어 관련 정보에 대한 링크를 제공합니다.|[데이터 마이닝 모델 뷰어](data-mining-model-viewers.md)|  
-|리프트 차트, 수익 차트 또는 분류표를 만들거나 마이닝 구조를 테스트하는 방법에 대해 설명합니다.|[테스트 및 유효성 검사 &#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md)|  
+|리프트 차트, 수익 차트 또는 분류표를 만들거나 마이닝 구조를 테스트하는 방법에 대해 설명합니다.|[테스트 및 유효성 검사&#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md)|  
 |처리 옵션 및 사용 권한에 대해 설명합니다.|[데이터 마이닝 개체 처리](processing-data-mining-objects.md)|  
-|Analysis Services에 대한 자세한 정보를 제공합니다.|[다차원 Model 데이터베이스 &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|Analysis Services에 대한 자세한 정보를 제공합니다.|[다차원 model 데이터베이스&#40;SSAS&#41;](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 디자이너](data-mining-designer.md)   
- [다차원 모델을 만들 SQL Server Data Tools를 사용 하 여 &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [작업 영역 데이터베이스 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../tabular-models/workspace-database-ssas-tabular.md)  
+ [SSDT&#40;SQL Server Data Tools&#41;를 사용하여 다차원 모델 만들기](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [작업 영역 데이터베이스&#40;SSAS 테이블 형식&#41;](../tabular-models/workspace-database-ssas-tabular.md)  
   
   

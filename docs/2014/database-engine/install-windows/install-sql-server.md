@@ -13,12 +13,12 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cabca146b31035b6c1023cfc6c8bdda3e6a71958
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 7f631209a655b11062ffd17fa9f83f3e355011cf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018868"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356691"
 ---
 # <a name="install-sql-server-2014"></a>SQL Server 2014 설치
 ## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ SQL Server 2014 Express 다운로드 ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
@@ -27,7 +27,7 @@ ms.locfileid: "51018868"
  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치를 위해 필요한 여러 설치 옵션에 대한 개요를 제공합니다. 다양 한에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치할 수 있는 구성 요소 및 설치 프로세스를 참조 하세요 [SQL Server 2014 설치](installation-for-sql-server.md)합니다.  
 > **참고:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 32 비트 및 64 비트 버전에서 사용할 수 있습니다. 64비트 및 32비트 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 설치 마법사나 명령 프롬프트를 통해 설치됩니다. 에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 참조 하세요 [버전 및 SQL Server 2014 구성 요소](../../sql-server/editions-and-components-of-sql-server-2016.md) 하 고 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
- 기본적으로 예제 데이터베이스와 예제 코드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 일부로 설치되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition 이외의 버전을 위한 샘플 데이터베이스 및 샘플 코드를 설치하려면 [CodePlex 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=87843)를 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예제 데이터베이스 및 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]예제 코드에 대한 지원 정보를 확인하려면 [데이터베이스 및 예제 개요](http://go.microsoft.com/fwlink/?LinkId=110391)를 참조하십시오.  
+ 기본적으로 예제 데이터베이스와 예제 코드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 일부로 설치되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition 이외의 버전을 위한 샘플 데이터베이스 및 샘플 코드를 설치하려면 [CodePlex 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=87843)를 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예제 데이터베이스 및 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]예제 코드에 대한 지원 정보를 확인하려면 [데이터베이스 및 예제 개요](https://go.microsoft.com/fwlink/?LinkId=110391)를 참조하십시오.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하기 전에 설치 요구 사항, 시스템 구성 검사 및 보안 고려 사항을 검토합니다. 자세한 내용은 [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)을(를) 참조하세요. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 여러 설치 시나리오에 대한 정보는 다음 섹션의 항목을 참조하십시오.  
   

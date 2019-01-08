@@ -14,12 +14,12 @@ ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8029a3a2fb059ebfc764c8e29d9f893d1434b2dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204923"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361275"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
   사용할 수 있습니다 `SQLColAttribute` 준비 되거나 실행 ODBC 문에 대 한 결과 집합 열의 특성을 검색 하려면. 호출 `SQLColAttribute` 에서 준비 된 문을 원인에 대 한 왕복 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 문 실행을 호출 하므로의 일부로 결과 집합 열 데이터를 받는 `SQLColAttribute` 완료 되 면 **SQLExecute** 하거나 **SQLExecDirect** 않습니다 서버 왕복은 포함 되지 않습니다.  
@@ -107,7 +107,7 @@ ms.locfileid: "48204923"
  자세한 내용은 [Sparse Columns Support &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLColAttribute 함수](http://go.microsoft.com/fwlink/?LinkId=59334)   
+ [SQLColAttribute 함수](https://go.microsoft.com/fwlink/?LinkId=59334)   
  [ODBC API 구현 정보](odbc-api-implementation-details.md)   
  [SQLSetStmtAttr](sqlsetstmtattr.md)  
   

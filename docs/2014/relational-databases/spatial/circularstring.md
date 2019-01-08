@@ -10,18 +10,18 @@ ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 75845ceafbf776eb15a30b3289de97573109c4d8
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 001c489d9abf887495ea83cee00cede1463514ca
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018196"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376665"
 ---
 # <a name="circularstring"></a>CircularString
   `CircularString`은 0개 이상의 연속 원호 세그먼트 컬렉션입니다. 원호 세그먼트는 2차원 평면에서 3개의 점으로 정의되는 곡선 세그먼트입니다. 첫 번째 점은 세 번째 점과 같을 수 없습니다. 원호 세그먼트의 세 점 모두가 공선상에 있는 경우 원호 세그먼트가 선분으로 처리됩니다.  
   
 > [!IMPORTANT]  
->  자세한 설명 및 예가에 도입 된 새로운 공간 기능에 대 한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]등의 `CircularString` 하위 유형, 백서를 다운로드 [SQL Server 2012의 새로운 공간 기능](http://go.microsoft.com/fwlink/?LinkId=226407)합니다.  
+>  자세한 설명 및 예가에 도입 된 새로운 공간 기능에 대 한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]등의 `CircularString` 하위 유형, 백서를 다운로드 [SQL Server 2012의 새로운 공간 기능](https://go.microsoft.com/fwlink/?LinkId=226407)합니다.  
   
 ## <a name="circularstring-instances"></a>CircularString 인스턴스  
  다음 그림에서는 유효한 `CircularString` 인스턴스를 보여 줍니다.  
@@ -133,7 +133,7 @@ SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Perimeter = 5.65685  
 ```  
   
- `CircularString` 예의 값이 원의 실제 원주인 2∏에 가깝습니다.  
+ 값을 `CircularString` 예제 2에 가깝습니다???, 원의 실제 원주 인 합니다.  
   
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>4. 동일한 문에서 CircularString을 사용하여 Geometry 인스턴스 선언 및 인스턴스화  
  이 조각은 동일한 문에서 `geometry`을 사용하여 `CircularString` 인스턴스를 선언하고 인스턴스화하는 방법을 보여 줍니다.  

@@ -1,5 +1,5 @@
 ---
-title: '예: XMLType 열 쿼리 | Microsoft 문서'
+title: '예: XMLType 열 쿼리 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ae1077d933d9872e3b5691e6233af4b82d61d58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0457f9eddad9130e5b486cd09e754c2059a586a5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218163"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373855"
 ---
 # <a name="example-querying-xmltype-columns"></a>예: XMLType 열 쿼리
-  다음 쿼리는 열이 포함 되어 `xml` 형식입니다. 이 쿼리는 `xml` 유형의 `Instructions` 열로부터 첫 번째 위치에서 제품 모델 ID, 이름 및 제조 단계를 검색합니다.  
+  다음 쿼리에는 `xml` 유형의 열이 포함됩니다. 이 쿼리는 `xml` 유형의 `Instructions` 열로부터 첫 번째 위치에서 제품 모델 ID, 이름 및 제조 단계를 검색합니다.  
   
 ## <a name="example"></a>예제  
   
@@ -29,7 +29,7 @@ USE AdventureWorks2012;
 GO  
 SELECT ProductModelID, Name,  
    Instructions.query('  
-declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
+declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
    /MI:root/MI:Location[1]/MI:step  
 ')   
 FROM Production.ProductModel  
@@ -55,7 +55,7 @@ USE AdventureWorks2012;
 GO  
 SELECT ProductModelID, Name,  
    Instructions.query('  
-declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
+declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
    /MI:root/MI:Location[1]/MI:step  
 ') as ManuSteps  
 FROM Production.ProductModel  
@@ -83,7 +83,7 @@ USE AdventureWorks2012;
 GO  
 SELECT ProductModelID, Name,  
    Instructions.query('  
-declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
+declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
    /MI:root/MI:Location[1]/MI:step  
 ') as ManuSteps  
 FROM Production.ProductModel  

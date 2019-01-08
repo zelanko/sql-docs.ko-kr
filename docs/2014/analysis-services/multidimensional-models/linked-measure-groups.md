@@ -17,12 +17,12 @@ ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a1377552b3e50fe5c536ae0d7d854346ccb062d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: f7695f971504744d42056d0067217e102ef3d990
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140353"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368461"
 ---
 # <a name="linked-measure-groups"></a>연결된 측정값 그룹
   연결된 측정값 그룹은 동일한 데이터베이스 또는 다른 Analysis Services 데이터베이스 내에 있는 다른 큐브의 또 다른 측정값 그룹을 기반으로 합니다. 측정값 집합을 다시 사용하려는 경우 여러 큐브에서 연결된 측정값 그룹과 해당 데이터 값을 사용할 수 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "48140353"
   
 -   연결된 측정값 그룹에서는 쓰기 저장(writeback)이 지원되지 않습니다.  
   
--   연결된 측정값 그룹은 여러 다 대 다 관계에서 사용할 수 없으며 특히 해당 관계가 서로 다른 큐브에 있는 경우에 사용할 수 없습니다. 사용하면 모호한 집계가 발생할 수 있습니다. 자세한 내용은 [다 대 다 관계가 포함된 큐브의 연결된 측정값에 대한 잘못된 집계](http://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)를 참조하세요.  
+-   연결된 측정값 그룹은 여러 다 대 다 관계에서 사용할 수 없으며 특히 해당 관계가 서로 다른 큐브에 있는 경우에 사용할 수 없습니다. 사용하면 모호한 집계가 발생할 수 있습니다. 자세한 내용은 [다 대 다 관계가 포함된 큐브의 연결된 측정값에 대한 잘못된 집계](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)를 참조하세요.  
   
  연결된 측정값 그룹에 포함된 측정값은 동일한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에서 검색한 연결된 차원과만 직접 구성이 가능합니다. 그러나 계산 멤버를 사용하면 연결된 측정값 그룹의 정보를 큐브 내의 연결되지 않은 다른 차원과 연결할 수 있습니다. 또한 참조 또는 다 대 다 관계 등의 간접 관계를 사용하여 연결되지 않은 차원을 연결된 측정값 그룹에 연결할 수 있습니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48140353"
 ## <a name="secure-a-linked-measure"></a>연결된 측정값 보안  
  연결이 정의된 다음에는 연결된 측정값 그룹의 측정값에 대한 액세스가 다른 측정값 그룹에 대한 액세스와 동일한 방법으로 관리됩니다. 연결된 개체가 역할 디자이너에서 연결되지 않은 해당 항목과 함께 나타납니다. 측정값 그룹의 보안 관리에 대한 자세한 내용은 [큐브 또는 모델 권한 부여&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)를 참조하세요.  
   
- Windows 서비스 계정의 정의 하거나 연결 된 측정값 그룹을 사용 하려면를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 속해야 합니다는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가진 데이터베이스 역할 `ReadDefinition` 및 `Read` 원본에 대 한 권한이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스는 원본 큐브 및 측정값 그룹 또는에 속해 있어야 합니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 원본에 대 한 관리자 역할 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스.  
+ 연결된 측정값 그룹을 정의하거나 사용하려면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 Windows 서비스 계정이 원본 큐브 및 측정값 그룹에 대해 원본 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 `ReadDefinition` 및 `Read` 액세스 권한이 있는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 역할에 속하거나 원본 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리자 역할에 속해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [연결된 차원 정의](define-linked-dimensions.md)  

@@ -1,6 +1,6 @@
 ---
-title: SQL Server에서 R 확장 | Microsoft Docs
-description: R 코드 실행 및 SQL Server의 기본 제공 R 라이브러리에 알아봅니다.
+title: R 프로그래밍 언어 확장-SQL Server Machine Learning
+description: R 코드 실행 및 SQL Server 2016 R Services 또는 SQL Server 2017의 Machine Learning Services의 기본 제공 R 라이브러리에 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/05/2018
@@ -8,23 +8,23 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: af71b03238a744702288f1f7411a5ebec3911f60
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
-ms.translationtype: HT
+ms.openlocfilehash: cb9b710ca5ec06e05a93dbee5f22ee0860f7f4ca
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892917"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432766"
 ---
-# <a name="r-extension-in-sql-server"></a>SQL Server에서 R 확장
+# <a name="r-language-extension-in-sql-server"></a>SQL Server에서 R 언어 확장
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-R 확장에는 SQL Server Machine Learning Services 추가 기능을 관계형 데이터베이스 엔진의 일부입니다. R 실행 환경, 표준 라이브러리 및 도구를 사용 하 여 기본 R 배포 추가 및 Microsoft R 라이브러리: [RevoScaleR](../r/revoscaler-overview.md) 대규모로 분석용 [MicrosoftML](../using-the-microsoftml-package.md) machine learning을 위한 알고리즘 및 데이터 또는 SQL Server에서 R 코드에 액세스 하기 위한 다른 라이브러리입니다.
+R 확장에는 SQL Server Machine Learning Services 추가 기능을 관계형 데이터베이스 엔진의 일부입니다. R 실행 환경, 표준 라이브러리 및 도구를 사용 하 여 기본 R 배포에 추가 하 고 Microsoft R 라이브러리: [RevoScaleR](../r/ref-r-revoscaler.md) 대규모로 분석용 [MicrosoftML](../r/ref-r-microsoftml.md) 기계 학습 알고리즘 및 데이터 또는 SQL Server에서 R 코드에 액세스 하기 위한 기타 라이브러리에 대 한 합니다.
 
 R 통합은 SQL Server 2016에서부터 SQL Server에서 사용할 [R Services](../r/sql-server-r-services.md)를 계속의 일부로 전달 [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)합니다.
 
 ## <a name="r-components"></a>R 구성 요소
 
-SQL Server는 오픈 소스와 독점 패키지가 포함 되어 있습니다. 기본 R 라이브러리는 Microsoft의 배포의 오픈 소스 r: Microsoft R 엽니다 (MRO)을 통해 설치 됩니다. R의 현재 사용자는 포트는 R 코드를 적거나 없는 수정 작업을 사용 하 여 SQL Server에서 외부 프로세스로 실행할 수 있어야 합니다. MRO는 SQL 도구와 독립적으로 설치 되 고 확장성 프레임 워크의 핵심 엔진 프로세스 외부에서 실행 됩니다. 설치 하는 동안 오픈 소스 라이선스 약관에 동의 해야 합니다. 그런 다음은 R입니다. 다른 오픈 소스 배포에서 수행 하는 것 처럼 추가 수정 없이 표준 R 패키지 실행할 수 있습니다. 
+SQL Server는 오픈 소스와 독점 패키지가 포함 되어 있습니다. 기본 R 라이브러리는 Microsoft의 오픈 소스 r: 배포를 통해 설치 된 Microsoft R Open (MRO)입니다. R의 현재 사용자는 포트는 R 코드를 적거나 없는 수정 작업을 사용 하 여 SQL Server에서 외부 프로세스로 실행할 수 있어야 합니다. MRO는 SQL 도구와 독립적으로 설치 되 고 확장성 프레임 워크의 핵심 엔진 프로세스 외부에서 실행 됩니다. 설치 하는 동안 오픈 소스 라이선스 약관에 동의 해야 합니다. 그런 다음은 R입니다. 다른 오픈 소스 배포에서 수행 하는 것 처럼 추가 수정 없이 표준 R 패키지 실행할 수 있습니다. 
 
 SQL Server 기본 R 실행 파일을 수정 하지 않습니다 하지만 해당 버전은 소유 패키지를 빌드하고 테스트 하기 때문에 설치 된 R 버전을 사용 해야 합니다. MRO CRAN에서 발생할 수 있는 R의 기본 배포에서 어떻게 다른 지에 대 한 자세한 내용은 참조 하세요. [R 언어와 Microsoft R 제품 및 기능을 사용 하 여 상호 운용성](https://docs.microsoft.com/r-server/what-is-r-server-interoperability)합니다.
 
@@ -35,7 +35,7 @@ Microsoft에서 병렬 및 분산 워크 로드에 대 한 추가 R 패키지는
 | 라이브러리 | Description |
 |---------|-------------|
 | [**RevoScaleR**](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 데이터 원본 개체 및 데이터 탐색, 조작, 변환 및 시각화를 지원합니다. 와 같은 원격 계산 컨텍스트 뿐만 아니라 다양 한 확장성 있는 기계 학습 모델을 만드는 지 원하는 **rxLinMod**합니다. API는 너무 커서 메모리에 맞출 수 없는 데이터 집합을 분석하고 여러 코어 또는 프로세서에 분배되는 계산을 수행하도록 최적화되었습니다. RevoScaleR 패키지는 더 빠른 이동 및 분석을 위해 사용 되는 데이터 저장소에 대 한 XDF 파일 형식으로 지원 합니다. XDF 형식은 열 형식 저장소를 사용하고, 이식 가능하고, 텍스트, SPSS 또는 ODBC 연결과 같은 다양한 원본에서 데이터를 로드하고 나서 조작하는 데 사용될 수 있습니다. |
-| [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | 속도 및 정확성을 위해 최적화 된 뿐만 아니라 줄 텍스트 및 이미지 작업에 대 한 변환 하는 기계 학습 알고리즘을 포함 합니다. 자세한 내용은 [MicrosoftML 패키지를 사용 하 여 SQL Server를 사용 하 여](https://docs.microsoft.com/sql/advanced-analytics/using-the-microsoftml-package)입니다. | 
+| [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | 속도 및 정확성을 위해 최적화 된 뿐만 아니라 줄 텍스트 및 이미지 작업에 대 한 변환 하는 기계 학습 알고리즘을 포함 합니다. 자세한 내용은 [SQL Server에서 MicrosoftML](../r/ref-r-microsoftml.md)합니다. | 
 
 ## <a name="using-r-in-sql-server"></a>SQL Server에서 R 사용
 

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ba180417eb3a426d24ffa6ee8dc985c89fb8e0a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e35293fb7f59475ebdcfea70c1b27d4798e3b93
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205898"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370176"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 데이터베이스
   Oracle CDC 인스턴스는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 동일한 이름으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 연결됩니다. 이 데이터베이스를 Oracle CDC 데이터베이스 또는 CDC 데이터베이스라고 합니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "48205898"
   
 -   SQL Server CDC 메커니즘에 의해 생성되고 Oracle 이외의 일반 SQL Server CDC에서 사용되는 것과 동일한 변경 테이블 및 변경 액세스 기능 집합  
   
- 처음에는 `cdc` dbowner **고정 데이터베이스 역할의 멤버만** 스키마에 액세스할 수 있습니다. 변경 테이블 및 변경 기능에 대한 액세스는 SQL Server CDC와 동일한 보안 모델에 의해 결정됩니다. 보안 모델에 대한 자세한 내용은 [보안 모델](http://go.microsoft.com/fwlink/?LinkId=231151)을 참조하세요.  
+ 처음에는 `cdc` dbowner **고정 데이터베이스 역할의 멤버만** 스키마에 액세스할 수 있습니다. 변경 테이블 및 변경 기능에 대한 액세스는 SQL Server CDC와 동일한 보안 모델에 의해 결정됩니다. 보안 모델에 대한 자세한 내용은 [보안 모델](https://go.microsoft.com/fwlink/?LinkId=231151)을 참조하세요.  
   
 ## <a name="creating-the-cdc-database"></a>CDC 데이터베이스 만들기  
  대부분의 경우 CDC 데이터베이스는 CDC Designer 콘솔을 사용하여 만들지만, CDC Designer 콘솔을 사용하여 생성되는 CDC 배포 스크립트를 사용하여 만들 수도 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자는 필요한 경우 항목(예: 저장소, 보안 또는 가용성)에 대한 데이터베이스 설정을 변경할 수 있습니다.  
@@ -51,11 +50,11 @@ ms.locfileid: "48205898"
  미러 테이블은 비어 있고 데이터가 저장되어 있지 않습니다. 미러 테이블은 Oracle CDC 인스턴스에 사용되는 표준 SQL Server CDC 인프라를 사용하도록 설정하는 데 사용됩니다. 미러 테이블에서 데이터가 삽입되거나 업데이트되지 않도록 모든 UPDATE, DELETE 및 INSERT 작업이 PUBLIC에 대해 거부됩니다. 따라서 미러 테이블에서 데이터를 수정할 수 없습니다.  
   
 ## <a name="access-to-change-data"></a>변경 데이터 액세스  
- 캡처 인스턴스에 연결된 변경 데이터에 액세스하는 데 사용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 모델 때문에 연결된 미러 테이블의 모든 캡처된 열에 대한 `select` 권한을 사용자에게 부여해야 합니다. 원본 Oracle 테이블에 대한 액세스 권한으로는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 변경 테이블에 액세스할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 모델에 대한 자세한 내용은 [보안 모델](http://go.microsoft.com/fwlink/?LinkId=231151)을 참조하세요.  
+ 캡처 인스턴스에 연결된 변경 데이터에 액세스하는 데 사용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 모델 때문에 연결된 미러 테이블의 모든 캡처된 열에 대한 `select` 권한을 사용자에게 부여해야 합니다. 원본 Oracle 테이블에 대한 액세스 권한으로는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 변경 테이블에 액세스할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 모델에 대한 자세한 내용은 [보안 모델](https://go.microsoft.com/fwlink/?LinkId=231151)을 참조하세요.  
   
  또한 캡처 인스턴스를 만들 때 제어 역할을 지정한 경우 호출자도 지정된 제어 역할의 멤버여야 합니다. 메타데이터에 액세스하는 다른 일반적인 변경 데이터 캡처 함수에 모든 데이터베이스 사용자가 PUBLIC 역할을 통해 액세스할 수 있습니다. 물론 반환된 메타데이터에 대한 액세스는 기본 원본 테이블에 대한 선택적 액세스 권한을 사용하거나 정의된 제어 역할의 멤버 자격을 통해 일반적으로 제어됩니다.  
   
- 캡처 인스턴스를 만들 때 SQL Server CDC 구성 요소에 의해 생성된 특수 테이블 기반 함수를 호출하여 변경 데이터를 읽을 수 있습니다. 이 함수에 대한 자세한 내용은 [변경 데이터 캡처 함수(Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=231152)를 참조하세요.  
+ 캡처 인스턴스를 만들 때 SQL Server CDC 구성 요소에 의해 생성된 특수 테이블 기반 함수를 호출하여 변경 데이터를 읽을 수 있습니다. 이 함수에 대한 자세한 내용은 [변경 데이터 캡처 함수(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152)를 참조하세요.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] CDC 원본 구성 요소를 통한 CDC 데이터 액세스에도 동일한 규칙이 적용됩니다.  
   
@@ -81,7 +80,7 @@ ms.locfileid: "48205898"
   
  `<schema-name>.<table-name>`테이블에 캡처를 처음 사용하는 경우 기본 캡처 인스턴스 이름은 `<schema-name>_<table-name>`입니다. 예를 들어 Oracle HR.EMPLOYEES 테이블에 대한 기본 캡처 인스턴스 이름은 HR_EMPLOYEES이고 연결된 변경 테이블은 [cdc]입니다. [HR_EMPLOYEES_CT].  
   
- 캡처 테이블은 Oracle CDC 인스턴스에 의해 기록됩니다. 캡처 인스턴스를 만들 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 의해 생성되는 특수 테이블 반환 함수를 사용하여 캡처 테이블을 읽습니다. `fn_cdc_get_all_changes_HR_EMPLOYEES`)을 입력합니다. 이러한 CDC 함수에 대한 자세한 내용은 [변경 데이터 캡처 함수(Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=231152)를 참조하세요.  
+ 캡처 테이블은 Oracle CDC 인스턴스에 의해 기록됩니다. 캡처 인스턴스를 만들 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 의해 생성되는 특수 테이블 반환 함수를 사용하여 캡처 테이블을 읽습니다. `fn_cdc_get_all_changes_HR_EMPLOYEES`)을 입력합니다. 이러한 CDC 함수에 대한 자세한 내용은 [변경 데이터 캡처 함수(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152)를 참조하세요.  
   
 ###  <a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  **[cdc].[lsn_time_mapping]** 테이블은 SQL Server CDC 구성 요소에 의해 생성됩니다. Oracle CDC에서의 캡처 테이블 사용은 일반적인 사용과는 다릅니다.  
@@ -98,7 +97,7 @@ ms.locfileid: "48205898"
 |항목|Description|  
 |----------|-----------------|  
 |version|CDC 인스턴스 구성의 버전을 추적합니다. 테이블이 업데이트되거나, 새 캡처 인스턴스가 추가되거나, 기존 캡처 인스턴스가 제거될 때마다 업데이트됩니다.|  
-|connect_string|Oracle 연결 문자열입니다. 기본 예:<br /><br /> `<server>:<port>/<instance>` (예: `erp.contoso.com:1521/orcl`)<br /><br /> 연결 문자열에서 Oracle Net 연결 설명자를 지정할 수도 있습니다(예: `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`)<br /><br /> 디렉터리 서버 또는 tnsnames를 사용하는 경우 연결 문자열이 연결의 이름일 수 있습니다.<br /><br /> Oracle CDC Service에서 사용되는 Oracle Instant Client에 대한 Oracle 데이터베이스 연결 문자열에 대한 자세한 내용은 [http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153)을 참조하세요.|  
+|connect_string|Oracle 연결 문자열입니다. 기본 예:<br /><br /> `<server>:<port>/<instance>` (예: `erp.contoso.com:1521/orcl`)<br /><br /> 연결 문자열에서 Oracle Net 연결 설명자를 지정할 수도 있습니다(예: `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`)<br /><br /> 디렉터리 서버 또는 tnsnames를 사용하는 경우 연결 문자열이 연결의 이름일 수 있습니다.<br /><br /> Oracle CDC Service에서 사용되는 Oracle Instant Client에 대한 Oracle 데이터베이스 연결 문자열에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153)을 참조하세요.|  
 |use_windows_authentication|부울 값이며 다음과 같습니다.<br /><br /> **0**: Oracle 사용자 이름 및 암호가 인증을 위해 제공됩니다(기본값).<br /><br /> **1**: Oracle 데이터베이스에 연결하는 데 Windows 인증이 사용됩니다. Windows 인증을 사용하도록 Oracle 데이터베이스를 구성한 경우에만 이 옵션을 사용할 수 있습니다.|  
 |username|로그 마이닝 Oracle 데이터베이스 사용자의 이름입니다. **use_windows_authentication = 0인 경우**에만 필수입니다.|  
 |password|로그 마이닝 Oracle 데이터베이스 사용자의 암호입니다. **use_windows_authentication = 0**인 경우에만 필수입니다.|  
@@ -143,7 +142,7 @@ ms.locfileid: "48205898"
 |상태|현재 Oracle CDC 인스턴스에 대한 현재 상태 코드입니다. 상태는 CDC의 현재 상태를 설명합니다.|  
 |sub_status|현재 상태에 대한 추가 정보를 제공하는 두 번째 수준 상태입니다.|  
 |active|부울 값이며 다음과 같습니다.<br /><br /> **0**: Oracle CDC 인스턴스 프로세스가 활성 상태가 아닙니다.<br /><br /> **1**: Oracle CDC 인스턴스 프로세스가 활성 상태입니다.|  
-|error|부울 값이며 다음과 같습니다.<br /><br /> **0**: Oracle CDC 인스턴스 프로세스가 오류 상태가 아닙니다.<br /><br /> **1**: Oracle CDC 인스턴스가 오류 상태입니다.|  
+|error|부울 값이며 다음과 같습니다.<br /><br /> **0**: Oracle CDC 인스턴스 프로세스가 오류 상태에 있지 않습니다.<br /><br /> **1**: Oracle CDC 인스턴스가 오류 상태에 있습니다.|  
 |status_message|오류 또는 상태에 대해 설명하는 문자열입니다.|  
 |TIMESTAMP|캡처 상태를 마지막으로 업데이트한 시간(UTC)이 포함된 타임스탬프입니다.|  
 |active_capture_node|Oracle 트랜잭션 로그를 처리 중인 Oracle CDC Service 및 Oracle CDC 인스턴스를 현재 실행 중인 호스트의 이름입니다. 호스트는 클러스터 내의 노드일 수 있습니다.|  
@@ -171,7 +170,7 @@ ms.locfileid: "48205898"
 |상태|상태 테이블에서 사용되는 상태 코드입니다.|  
 |sub_status|상태 테이블에서 사용되는 하위 상태 코드입니다.|  
 |status_message|상태 테이블에서 사용되는 상태 메시지입니다.|  
-|data|오류 또는 추적 레코드에 페이로드가 포함되는 사례에 대한 추가 데이터입니다(예: 손상된 로그 레코드).|  
+|데이터|오류 또는 추적 레코드에 페이로드가 포함되는 사례에 대한 추가 데이터입니다(예: 손상된 로그 레코드).|  
   
 ###  <a name="BKMK_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
  이 테이블에는 큰 트랜잭션 또는 장기 실행 트랜잭션에 대한 변경 레코드가 트랜잭션 커밋 또는 롤백 이벤트가 캡처될 때까지 저장됩니다. Oracle CDC Service는 캡처된 로그 레코드를 트랜잭션 커밋 시간을 기준으로 정렬한 다음 각 트랜잭션에 대한 시간순으로 정렬합니다. 동일한 트랜잭션에 대한 로그 레코드는 트랜잭션이 종료될 때까지 메모리에 저장되었다가 대상 변경 테이블에 기록되거나 삭제(롤백의 경우)됩니다. 사용 가능한 메모리 양이 제한되므로 대형 트랜잭션은 트랜잭션이 완료될 때까지 **cdc.xdbcdc_staged_transactions** 테이블에 기록됩니다. 트랜잭션은 오래 동안 실행될 경우 준비 테이블에도 기록됩니다. 따라서 Oracle CDC 인스턴스를 다시 시작할 때 Oracle 트랜잭션 로그에서 이전 변경 사항을 다시 읽을 필요가 없습니다.  
@@ -184,9 +183,9 @@ ms.locfileid: "48205898"
 |seq_num|현재 트랜잭션에 대한 **xcbcdc_staged_transactions** 행의 번호입니다(0부터 시작).|  
 |data_start_cn|이 행에 있는 데이터의 첫 번째 변경에 대한 CN(변경 번호)입니다.|  
 |data_end_cn|이 행에 있는 데이터의 마지막 변경에 대한 CN(변경 번호)입니다.|  
-|data|트랜잭션에 대해 준비된 변경 사항이며 BLOB 형태입니다.|  
+|데이터|트랜잭션에 대해 준비된 변경 사항이며 BLOB 형태입니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [Attunity Oracle CDC Designer](change-data-capture-designer-for-oracle-by-attunity.md)  
+ [Change Data Capture Designer for Oracle by Attunity](change-data-capture-designer-for-oracle-by-attunity.md)  
   
   

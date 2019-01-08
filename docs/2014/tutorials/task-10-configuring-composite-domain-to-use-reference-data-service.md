@@ -13,15 +13,15 @@ ms.assetid: 752eefde-8b87-4f54-878e-9963ccbadc8e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4e4a8ef8c3b9d60040d6d9b5fcbff145a600cd88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8541ea7446fe80bf6bb0fd5f1bc3e80285912ffe
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167683"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370025"
 ---
 # <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>태스크 10: 참조 데이터 서비스를 사용하도록 복합 도메인 구성
-  이 태스크에서는 구성 합니다 **Address Validation** 사용 하도록 복합 도메인의 **Melissa Data – Address Check** 서비스. 런타임에 정리 작업을 수행하는 동안 DQS는 Address Validation 도메인에 있는 도메인 값을 정리하도록 이 서비스에 전달합니다. 참조 [참조 데이터에 도메인/복합 도메인 매핑](http://msdn.microsoft.com/library/hh213030.aspx) 대 한 자세한 내용은 합니다.  
+  이 태스크에서는 구성 합니다 **Address Validation** 사용 하도록 복합 도메인의 **Melissa Data-Address Check** 서비스. 런타임에 정리 작업을 수행하는 동안 DQS는 Address Validation 도메인에 있는 도메인 값을 정리하도록 이 서비스에 전달합니다. 참조 [참조 데이터에 도메인/복합 도메인 매핑](https://msdn.microsoft.com/library/hh213030.aspx) 대 한 자세한 내용은 합니다.  
   
 1.  기본 페이지에서 **DQS 클라이언트**, 클릭 **Suppliers (Domain Management)** 아래의 **최근 기술 자료** 시작 하는 **도메인 관리**페이지.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "48167683"
   
 4.  클릭 **찾아보기** 도구 모음 단추입니다.  
   
-5.  에 **온라인 참조 데이터 공급자 카탈로그** 대화 상자에서 **확인란** 옆에 **Melissa Data – Address Check**합니다.  
+5.  에 **온라인 참조 데이터 공급자 카탈로그** 대화 상자에서 **확인란** 옆에 **Melissa Data-Address Check**합니다.  
   
      ![Melissa Data-Address Check 선택](../../2014/tutorials/media/et-configuringcdtouserds-02.jpg "Melissa Data-Address Check 선택")  
   

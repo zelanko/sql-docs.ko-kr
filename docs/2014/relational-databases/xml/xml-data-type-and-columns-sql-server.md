@@ -10,12 +10,12 @@ ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f26049671f6276b125e06355d7fa15bb5b3febea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: df5d06478e5e48de00efcbdb7b872a7a1907eec0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205283"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370005"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 데이터 형식 및 열(SQL Server)
   이 항목에 장점 및 제한 사항에 설명 합니다 `xml` 데이터 형식에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XML 데이터를 저장 하는 방법을 선택할 수 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "48205283"
   
 -   데이터 구조를 기반으로 데이터를 쿼리하거나 데이터 일부를 업데이트하고자 합니다.  
   
- 이러한 상황에 하나도 해당되지 않으면 관계형 데이터 모델을 사용해야 합니다. 예를 들어 데이터가 XML 형식으로 하지만 응용 프로그램만 사용 하 여 데이터베이스 데이터를 저장 및 검색을 `[n]varchar(max)` 필요한 모든 열이 있습니다. XML 열에 데이터를 저장하면 추가 이점이 있습니다. 이러한 이점에 대한 예로, 엔진에서 데이터가 잘 작성되었거나 유효한지 여부를 확인할 수 있으며, XML 데이터의 세부적 쿼리 및 업데이트가 지원됩니다.  
+ 이러한 상황에 하나도 해당되지 않으면 관계형 데이터 모델을 사용해야 합니다. 예를 들어 데이터가 XML 형식으로 되어 있지만 응용 프로그램에서 데이터의 저장 및 검색을 위해서만 데이터베이스를 사용하는 경우에는 `[n]varchar(max)` 열만 있으면 됩니다. XML 열에 데이터를 저장하면 추가 이점이 있습니다. 이러한 이점에 대한 예로, 엔진에서 데이터가 잘 작성되었거나 유효한지 여부를 확인할 수 있으며, XML 데이터의 세부적 쿼리 및 업데이트가 지원됩니다.  
   
 ## <a name="reasons-for-storing-xml-data-in-sql-server"></a>SQL Server에서 XML 데이터를 저장하는 이유  
  다음은 파일 시스템에서 XML 데이터를 관리하는 대신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 네이티브 XML 기능을 사용하는 몇 가지 이유입니다.  
@@ -59,9 +59,9 @@ ms.locfileid: "48205283"
   
 -   `xml` 데이터 형식의 네이티브 저장소  
   
-     데이터의 XML 내용을 보존하는 내부 표현으로 데이터가 저장됩니다. 이러한 내부 표현에는 포함 계층, 문서 순서, 요소 및 특성 값에 대한 정보가 포함됩니다. 특히 XML 데이터의 InfoSet 내용이 보존됩니다. InfoSet에 대한 자세한 내용을 보려면 [http://www.w3.org/TR/xml-infoset](http://go.microsoft.com/fwlink/?LinkId=48843)를 방문하세요. InfoSet 내용은 다음 정보가 포함되지 않기 때문에 테스트 XML의 동일 복사본이 될 수 없습니다. 제외되는 정보는 중요하지 않은 공백, 특성 순서, 네임스페이스 접두사 및 XML 선언입니다.  
+     데이터의 XML 내용을 보존하는 내부 표현으로 데이터가 저장됩니다. 이러한 내부 표현에는 포함 계층, 문서 순서, 요소 및 특성 값에 대한 정보가 포함됩니다. 특히 XML 데이터의 InfoSet 내용이 보존됩니다. InfoSet에 대한 자세한 내용을 보려면 [http://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843)를 방문하세요. InfoSet 내용은 다음 정보가 포함되지 않기 때문에 테스트 XML의 동일 복사본이 될 수 없습니다. 제외되는 정보는 중요하지 않은 공백, 특성 순서, 네임스페이스 접두사 및 XML 선언입니다.  
   
-     형식화 된 `xml` 데이터 형식으로는 `xml` post-schema validation InfoSet (PSVI) XML 스키마에 바인딩된 데이터 형식을 InfoSet에 유형 정보를 추가 하 고 내부 표현으로 인코딩됩니다. 이렇게 하면 구문 분석 속도가 크게 향상됩니다. 자세한 내용은 [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) 및 [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871)에 있는 W3C XML 스키마 사양을 참조하세요.  
+     형식화 된 `xml` 데이터 형식으로는 `xml` post-schema validation InfoSet (PSVI) XML 스키마에 바인딩된 데이터 형식을 InfoSet에 유형 정보를 추가 하 고 내부 표현으로 인코딩됩니다. 이렇게 하면 구문 분석 속도가 크게 향상됩니다. 자세한 내용은 [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) 및 [http://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871)에 있는 W3C XML 스키마 사양을 참조하세요.  
   
 -   XML 및 관계형 저장소 간 매핑  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48205283"
   
      데이터의 동일 복사본이 저장됩니다. 이 옵션은 법률 문서와 같은 특수한 용도의 애플리케이션에 유용합니다. 대부분의 애플리케이션에는 정확한 복사본이 필요하지 않으며 XML 내용만으로도 충분합니다(InfoSet 정확성).  
   
- 일반적으로 이러한 접근 방식을 조합해서 사용해야 할 수 있습니다. 예를 들어, XML 데이터를 저장 하려면 수는 `xml` 데이터 열을 입력 하 고 속성 열에서 관계형 열으로 승격 합니다. 매핑 기술을 사용 하 여 재귀 부분만 비-XML 열에 비재귀적인 부분을 저장 하려는 또는 `xml` 데이터 형식 열입니다.  
+ 일반적으로 이러한 접근 방식을 조합해서 사용해야 할 수 있습니다. 예를 들어 `xml` 데이터 형식의 열에 XML 데이터를 저장하고 XML 열에서 관계형 열로 속성을 승격해야 할 수 있습니다. 매핑 기술을 사용 하 여 재귀 부분만 비-XML 열에 비재귀적인 부분을 저장 하려는 또는 `xml` 데이터 형식 열입니다.  
   
 ### <a name="choice-of-xml-technology"></a>XML 기술 선택  
  네이티브 XML과 XML 뷰 간의 XML 기술 선택은 일반적으로 다음 요소에 따라 달라집니다.  
@@ -99,7 +99,7 @@ ms.locfileid: "48205283"
  선택한 옵션에 따라 성능 특성이 달라집니다.  
   
 ### <a name="native-xml-storage"></a>네이티브 XML 저장소  
- XML 데이터를 저장할 수는 `xml` 서버에서 데이터 형식 열입니다. 이 옵션은 다음과 같은 상황에서 적절한 대안이 될 수 있습니다.  
+ 서버에서 `xml` 데이터 형식의 열에 XML 데이터를 저장할 수 있습니다. 이 옵션은 다음과 같은 상황에서 적절한 대안이 될 수 있습니다.  
   
 -   서버에 XML 데이터를 저장하고 동시에 문서 순서 및 문서 구조를 보존할 수 있는 직관적인 방식이 필요합니다.  
   
@@ -119,11 +119,11 @@ ms.locfileid: "48205283"
  XML 문서에 적합한 저장소 모델은 `xml` 데이터 형식의 열입니다. 이 모델은 XML 데이터에 대한 InfoSet 내용을 보존합니다. XML 열을 인덱싱하면 쿼리 성능이 높아집니다.  
   
 #### <a name="example-retaining-exact-copies-of-xml-data"></a>예: XML 데이터에 대한 정확한 복사본 유지  
- 이해를 돕기 위해 정부 규제에 따라 XML 문서에 대한 정확한 텍스트 복사본을 유지해야 한다고 가정해 보십시오. 예를 들어 여기에는 서명된 문서, 법률 문서 또는 상품 거래 주문 내역 등이 포함될 수 있습니다. 문서를 저장 하려는 경우는 `[n]varchar(max)` 열입니다.  
+ 이해를 돕기 위해 정부 규제에 따라 XML 문서에 대한 정확한 텍스트 복사본을 유지해야 한다고 가정해 보십시오. 예를 들어 여기에는 서명된 문서, 법률 문서 또는 상품 거래 주문 내역 등이 포함될 수 있습니다. 문서를 `[n]varchar(max)` 열에 저장할 수 있습니다.  
   
  쿼리를 위해서는 데이터를 런타임에 `xml` 데이터 형식으로 변환하고 여기에서 Xquery를 실행합니다. 런타임 변환은 특히 문서가 큰 경우 비용이 많이 듭니다. 쿼리를 자주 수행하는 경우 `xml` 데이터 형식의 열에 문서를 중복해서 저장하고 `[n]varchar(max)` 열에서 정확한 문서 복사본을 반환하는 동안 이를 인덱싱할 수 있습니다.  
   
- XML 열을 기반으로 계산된 열일 수 있습니다는 `[n]varchar(max)` 열입니다. 그러나 XML 계산된 열을 XML 인덱스를 만들 수 없습니다 또는 XML 인덱스에서 빌드할 수 있습니다 `[n]varchar(max)` 또는 `varbinary(max)` 열입니다.  
+ XML 열은 `[n]varchar(max)` 열을 기반으로 계산을 수행하는 계산 열일 수 있습니다. 그러나 XML 계산된 열을 XML 인덱스를 만들 수 없습니다 또는 XML 인덱스에서 빌드할 수 있습니다 `[n]varchar(max)` 또는 `varbinary(max)` 열입니다.  
   
 ### <a name="xml-view-technology"></a>XML 뷰 기술  
  데이터베이스에 있는 테이블과 XML 스키마 간의 매핑을 정의하면 영구적 데이터에 대한 "XML 뷰"를 만들 수 있습니다. XML 대량 로드를 사용하면 XML 뷰를 사용하여 기본 테이블을 채울 수 있습니다. XML 뷰는 XPath 버전 1.0을 사용하여 쿼리할 수 있으며, 이 쿼리는 테이블에서 SQL 쿼리로 변환됩니다. 이와 마찬가지로 이들 테이블에 업데이트를 전파할 수도 있습니다.  
@@ -140,7 +140,7 @@ ms.locfileid: "48205283"
   
 -   XML 데이터를 대량 로드하고 XML 뷰를 사용하여 기본 테이블로 분해해야 합니다.  
   
- 이러한 예로는 데이터 교환 및 웹 서비스에 대해 XML로 제공된 관계형 데이터와 고정 스키마가 포함된 XML 데이터가 있습니다. 자세한 내용은 [MSDN Online Library](http://go.microsoft.com/fwlink/?linkid=31174)를 참조하십시오.  
+ 이러한 예로는 데이터 교환 및 웹 서비스에 대해 XML로 제공된 관계형 데이터와 고정 스키마가 포함된 XML 데이터가 있습니다. 자세한 내용은 [MSDN Online Library](https://go.microsoft.com/fwlink/?linkid=31174)를 참조하십시오.  
   
 #### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>예: AXSD(주석 지정 XML 스키마)를 사용하여 데이터 모델링  
  이해를 돕기 위해 고객, 주문 및 라인 항목 등과 같은 기존 관계형 데이터가 있고 이를 XML로 처리하려는 경우를 가정해 보십시오. 관계형 데이터에 대해 AXSD를 사용하여 XML 뷰를 정의합니다. XML 뷰를 사용하면 XML 데이터를 테이블에 대량 로드하고 XML 뷰를 사용하여 관계형 데이터를 쿼리 및 업데이트할 수 있습니다. 이 모델은 XML 태그가 포함된 데이터를 다른 애플리케이션과 교환하고 SQL 애플리케이션을 방해 받지 않고 실행해야 하는 경우에 유용합니다.  
@@ -162,11 +162,11 @@ ms.locfileid: "48205283"
 ## <a name="limitations-of-the-xml-data-type"></a>xml 데이터 형식의 제한 사항  
  다음의 일반적인 제한 사항이 `xml` 데이터 형식에 적용됩니다.  
   
--   저장 된 표현 `xml` 데이터 형식 인스턴스의 2GB를 초과할 수 없습니다.  
+-   저장된 `xml` 데이터 형식 인스턴스의 표현은 2GB를 초과할 수 없습니다.  
   
 -   **sql_variant** 인스턴스의 하위 유형으로 사용될 수 없습니다.  
   
--   `text` 또는 `ntext`로의 캐스트 또는 변환을 지원하지 않습니다. 사용 하 여 `varchar(max)` 또는 `nvarchar(max)` 대신 합니다.  
+-   `text` 또는 `ntext`로의 캐스트 또는 변환을 지원하지 않습니다. 대신 `varchar(max)` 또는 `nvarchar(max)`를 사용합니다.  
   
 -   비교 또는 정렬할 수 없습니다. 즉, `xml` 데이터 형식은 GROUP BY 문에서 사용할 수 없습니다.  
   

@@ -22,19 +22,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8b395998b8c0408b264ab2ffe7fe7f3390405cf6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 801074dd7e82f5e1564564125486e0845e2303fb
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676352"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589487"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   에 대 한 통계를 포함 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터베이스 **연결** 데이터베이스 연결 성공 및 실패 개요를 제공 하는 이벤트입니다. 연결 이벤트에 대 한 자세한 내용은 참조에서 이벤트 유형을 [sys.event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)합니다.  
   
-|통계|형식|설명|  
+|통계|형식|Description|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|데이터베이스의 이름입니다.|  
 |**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 시간은 항상 5분의 배수입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
@@ -42,8 +42,8 @@ ms.locfileid: "51676352"
 |**success_count**|**int**|성공한 연결 수:|  
 |**total_failure_count**|**int**|실패한 연결의 총 수입니다. 이 값은 합계 **connection_failure_count**를 **terminated_connection_count**, 및 **throttled_connection_count**, 교착 상태 이벤트를 포함 하지 않습니다.|  
 |**connection_failure_count**|**int**|로그인 실패 횟수입니다.|  
-|**terminated_connection_count**|**int**|***에 적용 됩니다 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> 종료된 연결 수:|  
-|**throttled_connection_count**|**int**|***에 적용 됩니다 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> 정체된 연결 수입니다.|  
+|**terminated_connection_count**|**int**|**_에 적용 됩니다 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> 종료된 연결 수:|  
+|**throttled_connection_count**|**int**|**_에 적용 됩니다 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> 정체된 연결 수입니다.|  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -57,7 +57,7 @@ ms.locfileid: "51676352"
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   
 ### <a name="interval-starttime-and-endtime"></a>간격 start_time 및 end_time  
- 이벤트가 발생할 때를 이벤트가 집계 간격에 포함 되는지 *대* 또는 *후 * * * start_time** 및 *하기 전에 * * * end_time** 해당 간격에 대 한 합니다. 예를 들어, 정확히 `2012-10-30 19:25:00.0000000`에 발생하는 이벤트는 아래에 표시된 초 간격에만 표시됩니다.  
+ 이벤트가 발생할 때를 이벤트가 집계 간격에 포함 되는지 *대* 또는 _후_**start_time** 및 _앞_  **end_time** 해당 간격에 대 한 합니다. 예를 들어, 정확히 `2012-10-30 19:25:00.0000000`에 발생하는 이벤트는 아래에 표시된 초 간격에만 표시됩니다.  
   
 ```  
   
@@ -93,7 +93,7 @@ FROM sys.database_connection_stats
 WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Windows Azure SQL Database 문제 해결](https://msdn.microsoft.com/library/windowsazure/ee730906.aspx)  
   
   

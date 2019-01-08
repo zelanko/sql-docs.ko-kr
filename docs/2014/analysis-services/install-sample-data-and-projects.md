@@ -11,12 +11,12 @@ ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8171edaa6e2265191ae4611fea79dd018b43022c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: b325a96c096f0e49f3bbfb2961d0de6cac387a3e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117883"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355070"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Analysis Services 다차원 모델링 자습서에 사용할 예제 데이터 및 프로젝트 설치
   이 항목에 제공된 지침과 링크를 사용하여 Analysis Services 자습서에 사용되는 모든 데이터 및 프로젝트 파일을 설치할 수 있습니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "48117883"
   
      Analysis Services는 Evaluation, Enterprise, Business Intelligence, Standard 버전에서만 사용할 수 있습니다.  
   
-     SQL Server Express 버전에는 Analysis Services가 포함되어 있지 않습니다. 소프트웨어를 무료로 사용해 보려면[평가판 버전을 다운로드하세요](http://go.microsoft.com/fwlink/?LinkId=392824) .  
+     SQL Server Express 버전에는 Analysis Services가 포함되어 있지 않습니다. 소프트웨어를 무료로 사용해 보려면 [평가판 버전을 다운로드하세요](https://go.microsoft.com/fwlink/?LinkId=392824).  
   
      기본적으로 Analysis Services는 다차원 인스턴스로 설치되며 설치 마법사의 서버 구성 페이지에서 테이블 형식 서버 모드를 선택하여 재정의할 수 있습니다. 두 서버 모드를 모두 실행하려는 경우 동일한 컴퓨터의 SQL Server 설치 프로그램을 다시 실행하여 다른 모드에서 Analysis Services의 두 번째 인스턴스를 실행하십시오.  
   
@@ -40,23 +40,23 @@ ms.locfileid: "48117883"
   
  또는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에 기본 제공되는 MDX 쿼리 디자이너를 사용하여 데이터를 검색할 수 있습니다. 쿼리 디자이너는 데이터가 플랫 행 집합으로 제공된다는 점을 제외하면 동일한 데이터를 반환합니다.  
   
-## <a name="step-2-download-sql-server-data-tools--business-intelligence-for-visual-studio-2012"></a>2단계: SQL Server Data Tools – Visual Studio 2012용 Business Intelligence 다운로드  
+## <a name="step-2-download-sql-server-data-tools---business-intelligence-for-visual-studio-2012"></a>2단계: SQL Server Data Tools-Visual Studio 2012 용 Business Intelligence 다운로드  
  이 릴리스에서는 SQL Server Data Tools가 다른 SQL Server 기능과 별도로 다운로드 및 설치됩니다. 이제 BI 모델 및 보고서를 만드는 데 사용되는 디자이너 및 프로젝트 템플릿이 무료 웹 다운로드로 제공됩니다.  
   
--   [Business Intelligence 버전의 SQL Server Data Tools를 다운로드합니다](http://go.microsoft.com/fwlink/p/?LinkID=322038). 파일은 Downloads 폴더에 저장됩니다. 설치 프로그램을 실행하여 도구를 설치합니다.  
+-   [Business Intelligence 버전의 SQL Server Data Tools를 다운로드합니다](https://go.microsoft.com/fwlink/p/?LinkID=322038). 파일은 Downloads 폴더에 저장됩니다. 설치 프로그램을 실행하여 도구를 설치합니다.  
   
      컴퓨터를 다시 부팅하여 설치를 완료합니다.  
   
 ## <a name="step-3-install-databases"></a>3단계: 데이터베이스 설치  
  Analysis Services 다차원 모델에서는 관계형 데이터베이스 관리 시스템에서 가져오는 트랜잭션 데이터를 사용합니다. 이 자습서에서는 다음 관계형 데이터베이스를 데이터 원본으로 사용합니다.  
   
--   **AdventureWorksDW2012** – 데이터베이스 엔진 인스턴스에서 실행되는 관계형 데이터 웨어하우스입니다. 이 데이터베이스는 자습서 전체에서 작성하고 배포하는 Analysis Services 데이터베이스 및 프로젝트에 사용할 원본 데이터를 제공합니다.  
+-   **AdventureWorksDW2012** -데이터베이스 엔진 인스턴스에서 실행 되는 관계형 데이터 웨어하우스입니다. 이 데이터베이스는 자습서 전체에서 작성하고 배포하는 Analysis Services 데이터베이스 및 프로젝트에 사용할 원본 데이터를 제공합니다.  
   
      [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 이 예제 데이터베이스를 사용할 수 있습니다.  
   
  이 데이터베이스를 설치하려면 다음을 수행합니다.  
   
-1.  codeplex의 제품 샘플 페이지에서 [AdventureWorkDW2012](http://go.microsoft.com/fwlink/p/?LinkID=221770) 데이터베이스를 다운로드합니다.  
+1.  codeplex의 제품 샘플 페이지에서 [AdventureWorkDW2012](https://go.microsoft.com/fwlink/p/?LinkID=221770) 데이터베이스를 다운로드합니다.  
   
      데이터베이스 파일이름은 AdvntureWorksDW2012_Data.mdf입니다. 이 파일은 컴퓨터의 Downloads 폴더에 있어야 합니다.  
   
@@ -95,13 +95,13 @@ ms.locfileid: "48117883"
   
  4단원용 프로젝트 파일은 해당 단원뿐 아니라 이후 모든 단원의 기초를 제공하므로 특히 중요합니다. 자습서의 단계를 수행하면 완료된 프로젝트 파일의 정확한 복사본이 생성되는 이전 프로젝트 파일과 달리 4단원의 예제 프로젝트에는 1단원부터 3단원까지 작성한 모델에는 없는 새로운 모델 정보가 포함되어 있습니다. 4단원에서는 다음 다운로드를 통해 사용할 수 있는 예제 프로젝트 파일을 사용하여 시작한다고 가정합니다.  
   
-1.  codeplex의 제품 샘플 페이지에서 [Analysis Services Tutorial SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkID=221866) 를 다운로드합니다.  
+1.  codeplex의 제품 샘플 페이지에서 [Analysis Services Tutorial SQL Server 2012](https://go.microsoft.com/fwlink/p/?LinkID=221866)를 다운로드합니다.  
   
      2012 자습서를 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 릴리스에 사용할 수 있습니다.  
   
-     "Analysis Services Tutorial SQL Server 2012.zip" 파일은 컴퓨터의 Downloads 폴더에 저장됩니다.  
+     "Analysis Services Tutorial SQL Server 2012.zip" 파일을 컴퓨터의 Downloads 폴더에 저장할 됩니다.  
   
-2.  .zip 파일을 루트 드라이브 바로 아래 폴더(예: C:\Tutorial)로 이동합니다. 이 단계를 수행하면 Downloads 폴더에 파일 압축을 풀 경우 가끔 발생하는 "경로가 너무 길다"는 의미의 오류가 줄어듭니다.  
+2.  .zip 파일을 루트 드라이브 바로 아래 폴더(예: C:\Tutorial)로 이동합니다. 이 단계는 다운로드 폴더에 파일의 압축을 하면 경우에 따라 발생 하는 "경로가 너무 깁니다." 오류를 완화 합니다.  
   
 3.  이 파일을 마우스 오른쪽 단추로 클릭하고 **압축 풀기**를 선택하여 샘플 프로젝트의 압축을 풉니다. 파일 압축을 푼 후 다음 프로젝트를 컴퓨터에 설치해야 합니다.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "48117883"
   
 ## <a name="see-also"></a>관련 항목  
  [설치 마법사에서 SQL Server 2014를 설치 &#40;설치&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
- [Analysis Services 액세스를 허용 하도록 Windows 방화벽 구성](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
+ [Configure the Windows Firewall to Allow Analysis Services Access](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
  [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: T-SQL 함수 (SQL Server Machine Learning의 R)를 사용 하 여 2 만들기 데이터 기능 단원 | Microsoft Docs
+title: R 및 T-SQL 함수-SQL Server Machine Learning을 사용 하 여 2 단원 만들기 데이터 기능
 description: Machine learning R 모델에서 사용 하기 위해 저장된 프로시저에 계산을 추가 하는 방법을 보여주는 자습서입니다.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4986d7ae5e51eaf0e89b3ee986ac7597e4a5edb7
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 43086b8d3898e4d9096e82289ce6e6f196542997
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031500"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645402"
 ---
-# <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>2 단원: R 및 T-SQL을 사용 하 여 데이터 기능 만들기
+# <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>2단원: R 및 T-SQL을 사용 하 여 데이터 기능 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 SQL Server에서 R을 사용 하는 방법에 대 한 SQL 개발자를 위한 자습서의 일부입니다.
@@ -46,7 +46,7 @@ ms.locfileid: "51031500"
 
 2. _fnCalculateDistance_를 마우스 오른쪽 단추로 클릭하고 **수정** 을 선택하여 새 쿼리 창에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 엽니다.
   
-    ```SQL
+    ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)  
     -- User-defined function that calculates the direct distance between two geographical coordinates.  
     RETURNS float  
@@ -80,7 +80,7 @@ ms.locfileid: "51031500"
 
 1. 잠시 시간을 내어 이 연습을 준비하는 과정에서 작성해야 하는 사용자 정의 T-SQL 함수인 _fnEngineerFeatures_ 에 대한 코드를 검토하십시오.
   
-    ```SQL
+    ```sql
     CREATE FUNCTION [dbo].[fnEngineerFeatures] (  
     @passenger_count int = 0,  
     @trip_distance float = 0,  
@@ -110,7 +110,7 @@ ms.locfileid: "51031500"
 
 2.  측정 거리가 0이지만 승차 및 하차 위치가 다른 이동의 지리적 거리 계산을 통해 이 함수가 작동하는지 확인할 수 있습니다.
   
-    ```SQL
+    ```sql
         SELECT tipped, fare_amount, passenger_count,(trip_time_in_secs/60) as TripMinutes,
         trip_distance, pickup_datetime, dropoff_datetime,
         dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) AS direct_distance
@@ -127,4 +127,4 @@ ms.locfileid: "51031500"
 
 ## <a name="previous-lesson"></a>이전 단원
 
-[1 단원: 데이터 탐색 및 시각화는 R 및 저장된 프로시저를 사용 하 여](sqldev-explore-and-visualize-the-data.md)
+[1 단원: R 및 저장된 프로시저를 사용 하 여 데이터 탐색 및 시각화](sqldev-explore-and-visualize-the-data.md)

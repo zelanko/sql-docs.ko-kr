@@ -11,12 +11,12 @@ ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6e3eff042078ad7dde6352c3826103bc680da432
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: cf954178516cef633dbe34c1b8b01579c8f3e4ea
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068940"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374865"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>데이터 새로 고침 예약 및 Windows 인증을 지원하지 않는 데이터 원본(SharePoint용 PowerPivot)
   이 항목에서는 Windows 인증을 지원하지 **않는** 데이터 원본을 사용할 수 있는 SharePoint용 PowerPivot 데이터 새로 고침 예약 워크플로에 대해 설명합니다. 예를 들어 Oracle 또는 IDM DB2 데이터 원본의 경우입니다. 이 항목의 그림 및 단계는 Oracle 데이터 원본을 참조하지만 동일한 워크플로가 다른 데이터 원본에도 적용됩니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "48068940"
   
 -   **(2) OracleAuthentication:** Oracle 자격 증명으로 설정된 보안 저장소 대상 응용 프로그램 ID입니다.  
   
--   **(3)** PowerPivot 서비스 응용 프로그램은 **무인 데이터 새로 고침 계정**에 대해 대상 응용 프로그램 “PowerPivotDataRefresh”를 사용하도록 구성됩니다.  
+-   **(3)**  PowerPivot 서비스 응용 프로그램은 대상 응용 프로그램 "PowerPivotDataRefresh"를 사용 하도록 구성에 대 한 합니다 **무인 데이터 새로 고침 계정**합니다.  
   
 -   **(4)** PowerePivot 통합 문서는 Oracle 데이터를 사용합니다. 통합 문서 새로 고침 설정은 데이터 원본 연결 자격 증명에 대상 애플리케이션 **(2)** 를 사용하도록 지정합니다.  
   
@@ -55,9 +55,9 @@ ms.locfileid: "48068940"
   
 4.  **새 보안 저장소 대상 응용 프로그램 만들기** 페이지에서 다음 값을 구성합니다.  
   
-    -   **대상 응용 프로그램 ID:** PowerPivotDataRefresh  
+    -   **대상 응용 프로그램 ID:** PowerPivotDataRefresh를 입력합니다.  
   
-    -   **표시 이름:** PowerPivotDataRefresh  
+    -   **표시 이름:** PowerPivotDataRefresh를 입력합니다.  
   
     -   **담당자 메일:** ?  
   
@@ -115,13 +115,13 @@ ms.locfileid: "48068940"
   
 11. Oracle 사용자 ID 및 Oracle 암호를 입력한 다음 **확인**을 클릭합니다.  
   
- 자세한 내용은 SQL Server 인증에 대 한 대상 응용 프로그램을 만들려면"" 섹션에서 참조 하세요 [SQL Server 인증 (SharePoint Server 2013)를 사용 하 여 보안 저장소 사용](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx)합니다.  
+ 자세한 내용은 SQL Server 인증에 대 한 대상 응용 프로그램을 만들려면"" 섹션에서 참조 하세요 [SQL Server 인증 (SharePoint Server 2013)를 사용 하 여 보안 저장소 사용](https://technet.microsoft.com/library/gg298949.aspx) (https://technet.microsoft.com/library/gg298949.aspx)합니다.  
   
 ## <a name="to-configure-the-powerpivot-service-application"></a>PowerPivot 서비스 애플리케이션을 구성하려면  
   
 1.  SharePoint 중앙 관리에서 서비스 애플리케이션 관리를 클릭합니다.  
   
-2.  PowerPivot 서비스 애플리케이션 이름을 클릭합니다(예: 기본 PowerPivot 서비스 애플리케이션).  
+2.  예를 들어 "기본 PowerPivot 서비스 응용 프로그램" PowerPivot 서비스 응용 프로그램의 이름을 클릭 합니다.  
   
 3.  동작 섹션에서 **서비스 애플리케이션 설정 구성** 을 클릭합니다.  
   
@@ -166,8 +166,8 @@ ms.locfileid: "48068940"
   
 ## <a name="more-information"></a>추가 정보  
   
--   [SharePoint 2013에서 보안 저장소 서비스 구성](http://technet.microsoft.com/library/ee806866.aspx).  
+-   [SharePoint 2013에서 보안 저장소 서비스 구성](https://technet.microsoft.com/library/ee806866.aspx).  
   
--   [SharePoint 2013 및 SQL Server 2012 SP1으로 PowerPivot 데이터 새로 고침(Analysis Services)](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh)의 "예약된 데이터 새로 고침" 섹션을 참조하십시오.  
+-   "예약 된 데이터 새로 고침" 섹션을 참조 하세요 [SharePoint 2013 및 SQL Server 2012 SP1 (Analysis Services)를 사용 하 여 PowerPivot 데이터 새로 고침](https://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh)합니다.  
   
   

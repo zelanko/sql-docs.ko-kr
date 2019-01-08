@@ -17,12 +17,12 @@ ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cbcbf7f2e0a6423e9e2ea918d5bb561a9ec1c97c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e38ceb561c2b0d66cbf274e09d61fc327d8543f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076800"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372605"
 ---
 # <a name="unique-particle-attribution-constraint"></a>UNIQUE PARTICLE ATTRIBUTION 제약 조건
   XSD에서 복잡한 콘텐츠 모델은 UPA(Unique Particle Attribution) 제약 조건 규칙에 의해 제한됩니다. 이 규칙에서는 항목 문서의 각 요소가 해당 부모 콘텐츠 모델에 있는 정확히 하나의 `<xsd:element>` 또는 `<xsd:any>` 파티클과 분명하게 일치해야 합니다. 잠재적으로 모호한 콘텐츠 모델이 있는 유형이 포함되는 스키마는 모두 거부됩니다.  
@@ -80,13 +80,13 @@ ms.locfileid: "48076800"
 ## <a name="finding-more-information"></a>추가 정보 찾기  
  다음 문서는 W3C(World Wide Web Consortium)에서 발행했으며 UNIQUE PARTICLE ATTRIBUTION 제약 조건에 대한 기술적인 설명이 포함되어 있습니다.  
   
- "XML 스키마 1부: 구조 제2판, W3C 제안 수정 추천":  
+ "XML Schema Part 1: 구조 제2판, W3C 제안 수정 추천:  
   
--   섹션 3.8.6: 모델 그룹 스키마 구성 요소의 제한 사항  
+-   Section 3.8.6: 모델 그룹 스키마 구성 요소의 제한 사항  
   
--   부록 H: Unique Particle Attribution 제약 조건 분석(비표준)  
+-   Appendix H: Unique Particle Attribution 제약 조건 분석(비표준)  
   
- 이 문서를 보려면 [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?linkid=48881)을 방문하세요.  
+ 이 문서를 보려면 [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881)을 방문하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [XML 스키마 컬렉션&#40;SQL Server&#41;](xml-schema-collections-sql-server.md)  

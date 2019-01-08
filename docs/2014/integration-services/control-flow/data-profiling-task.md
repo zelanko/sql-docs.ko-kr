@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.f1
@@ -17,12 +16,12 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4119b2ef17bcb735669d25662972ae4c79bbae31
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 546b52e8e0cc944e279e976bc4709d9fcee076f7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906413"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369965"
 ---
 # <a name="data-profiling-task"></a>데이터 프로파일링 태스크
   데이터 프로파일링 태스크는 사용자가 데이터 원본에 익숙해지고 데이터에서 해결해야 할 문제를 식별하는 데 도움이 되는 다양한 프로필을 계산합니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "48906413"
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 내에 있는 데이터 프로파일링 태스크를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 저장된 데이터를 프로파일링하고 잠재적인 데이터 품질 문제를 식별할 수 있습니다.  
   
 > [!NOTE]  
->  이 항목에만 기능 및 데이터 프로 파일링 태스크의 요구 사항을 설명합니다. 데이터 프로파일링 태스크 사용 방법에 대한 자세한 내용은 [데이터 프로파일링 태스크 및 뷰어](data-profiling-task-and-viewer.md)섹션을 참조하세요.  
+>  이 항목에서는 데이터 프로파일링 작업의 기능 및 요구 사항에 대해서만 설명합니다. 데이터 프로파일링 태스크 사용 방법에 대한 자세한 내용은 [데이터 프로파일링 태스크 및 뷰어](data-profiling-task-and-viewer.md)섹션을 참조하세요.  
   
 ## <a name="requirements-and-limitations"></a>요구 사항 및 제한 사항  
  데이터 프로파일링 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 저장된 데이터만 사용할 수 있습니다. 이 태스크는 타사 또는 파일 기반 데이터 원본에서는 작동하지 않습니다.  
@@ -117,7 +116,7 @@ ms.locfileid: "48906413"
 |**DataProfilingTaskTrace**|태스크 상태에 대한 설명 정보를 제공합니다. 메시지에는 다음 정보가 포함됩니다.<br /><br /> 처리 요청 시작<br /><br /> 쿼리 시작<br /><br /> 쿼리 끝<br /><br /> 계산 요청 마침|  
   
 ## <a name="output-and-its-schema"></a>출력 및 스키마  
- 데이터 프로파일링 태스크는 선택한 프로필을 DataProfile.xsd 스키마에 따라 구조화된 XML로 출력합니다. 이 XML을 파일 또는 패키지 변수에 저장하도록 지정할 수 있습니다. 이 스키마는 [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)에서 온라인으로 볼 수 있습니다. 웹 페이지에서 스키마를 로컬 복사본으로 저장할 수 있습니다. 그런 다음 Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 또는 다른 스키마 편집기, XML 편집기나 메모장과 같은 텍스트 편집기에서 스키마의 로컬 복사본을 볼 수 있습니다.  
+ 데이터 프로파일링 태스크는 선택한 프로필을 DataProfile.xsd 스키마에 따라 구조화된 XML로 출력합니다. 이 XML을 파일 또는 패키지 변수에 저장하도록 지정할 수 있습니다. 이 스키마는 [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)에서 온라인으로 볼 수 있습니다. 웹 페이지에서 스키마를 로컬 복사본으로 저장할 수 있습니다. 그런 다음 Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 또는 다른 스키마 편집기, XML 편집기나 메모장과 같은 텍스트 편집기에서 스키마의 로컬 복사본을 볼 수 있습니다.  
   
  데이터 품질 정보에 대한 이 스키마는 다음과 같은 경우 유용할 수 있습니다.  
   
@@ -125,7 +124,7 @@ ms.locfileid: "48906413"
   
 -   데이터 품질 정보를 사용하는 사용자 지정 도구 빌드  
   
- 대상 네임스페이스는 스키마에서 [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)로 식별됩니다.  
+ 대상 네임스페이스는 스키마에서 [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)로 식별됩니다.  
   
 ## <a name="output-in-the-conditional-workflow-of-a-package"></a>패키지 조건부 워크플로의 출력  
  데이터 프로파일링 구성 요소에는 데이터 프로파일링 태스크의 출력을 기반으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 워크플로에 조건부 논리를 구현하기 위한 기본 제공 기능이 없습니다. 그러나 이 논리는 스크립트 태스크를 사용하여 최소한의 프로그래밍 작업으로 손쉽게 추가할 수 있습니다. 이 코드는 XML 출력을 대상으로 XPath 쿼리를 수행한 다음 그 결과를 패키지 변수로 저장합니다. 스크립트 태스크를 후속 태스크에 연결하는 선행 제약 조건은 식을 사용하여 워크플로를 확인할 수 있습니다. 예를 들어 스크립트 태스크는 열에서 특정 임계값을 초과하는 null 값의 비율을 탐지합니다. 이 경우 패키지를 중단하면 문제가 계속되기 전에 해결할 수 있습니다.  

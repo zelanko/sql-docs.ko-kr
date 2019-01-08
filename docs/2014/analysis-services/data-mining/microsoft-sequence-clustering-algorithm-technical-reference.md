@@ -17,12 +17,12 @@ ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d0e9e49a61bef168af2703e83d027feec1d9daa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 176bbc3f3078619541e14e21d03271d90f4c4c19
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060433"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367765"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft 시퀀스 클러스터링 알고리즘 기술 참조
   Microsoft 시퀀스 클러스터링 알고리즘은 Markov 체인 분석을 사용하여 정렬된 시퀀스를 식별하고, 이 분석 결과를 클러스터링 기술과 결합하여 모델의 시퀀스 및 기타 특성에 따라 클러스터를 생성하는 하이브리드 알고리즘입니다. 이 항목에서는 알고리즘의 구현, 알고리즘을 사용자 지정하는 방법 및 시퀀스 클러스터링 모델에 대한 특수한 요구 사항을 설명합니다.  
@@ -113,7 +113,7 @@ ms.locfileid: "48060433"
  마이닝 구조 열에 적용됩니다.  
   
  MODEL_EXISTENCE_ONLY  
- 열 수 있는 방법을 두 가지 가능한 상태를 가진 것으로 처리 합니다. `Missing` 및 `Existing`합니다. Null로 처리 되는 `Missing` 값입니다.  
+ 열이 `Missing` 및 `Existing` 상태를 갖는 것으로 간주됩니다. Null은 `Missing` 값으로 처리됩니다.  
   
  마이닝 모델 열에 적용됩니다.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48060433"
 ## <a name="requirements"></a>요구 사항  
  사례 테이블에는 사례 ID 열이 있어야 합니다. 필요에 따라 사례에 대한 특성을 저장하는 다른 열도 사례 테이블에 포함될 수 있습니다.  
   
- Microsoft 시퀀스 클러스터링 알고리즘을 사용하려면 중첩 테이블로 저장된 시퀀스 정보가 필요합니다. 중첩 테이블에는 단일 Key Sequence 열이 있어야 합니다. `Key Sequence` 열 모든 종류의 정렬할 수 있는, 문자열 데이터 형식을 비롯 한 데이터를 포함할 수 있지만 열의 각 사례에 대해 고유한 값을 포함 해야 합니다. 또한 모델을 처리하기 전에 사례 테이블과 중첩 테이블이 모두 해당 테이블과 관련된 키를 기준으로 오름차순으로 정렬되도록 해야 합니다.  
+ Microsoft 시퀀스 클러스터링 알고리즘을 사용하려면 중첩 테이블로 저장된 시퀀스 정보가 필요합니다. 중첩 테이블에는 단일 Key Sequence 열이 있어야 합니다. `Key Sequence` 열에는 문자열 데이터 형식을 비롯하여 정렬 가능한 모든 형식의 데이터가 포함될 수 있지만 각 사례에 대해 고유한 값이 포함되어야 합니다. 또한 모델을 처리하기 전에 사례 테이블과 중첩 테이블이 모두 해당 테이블과 관련된 키를 기준으로 오름차순으로 정렬되도록 해야 합니다.  
   
 > [!NOTE]  
 >  Microsoft 시퀀스 알고리즘을 사용하는 모델을 만들면서 시퀀스 열은 사용하지 않을 경우 결과 모델은 시퀀스를 포함하지 않고 단지 모델에 포함된 다른 특성에 따라 사례를 클러스터링하기만 합니다.  
@@ -137,15 +137,15 @@ ms.locfileid: "48060433"
   
 ## <a name="remarks"></a>Remarks  
   
--   시퀀스 예측에 대한 [PredictSequence&#40;DMX&#41;](/sql/dmx/predictsequence-dmx) 함수를 사용합니다. 버전에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시퀀스 예측을 지원 하는 참조 하십시오 [SQL Server 2012 버전에서 지 원하는 기능](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)합니다.  
+-   시퀀스 예측에 대한 [PredictSequence&#40;DMX&#41;](/sql/dmx/predictsequence-dmx) 함수를 사용합니다. 버전에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시퀀스 예측을 지원 하는 참조 하십시오 [SQL Server 2012 버전에서 지 원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)합니다.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘에서는 PMML(Predictive Model Markup Language)을 사용하여 마이닝 모델을 만들 수 없습니다.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘에서는 드릴스루, OLAP 마이닝 모델 사용 및 데이터 마이닝 차원 사용을 지원합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [Microsoft 시퀀스 클러스터링 알고리즘](microsoft-sequence-clustering-algorithm.md)   
+## <a name="see-also"></a>관련 항목:  
+ [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
  [시퀀스 클러스터링 모델 쿼리 예제](clustering-model-query-examples.md)   
- [마이닝 모델 콘텐츠 시퀀스 클러스터링 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [시퀀스 클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

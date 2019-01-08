@@ -11,24 +11,24 @@ ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 8b86ef40b0a796c1d340a1d7ccadcc68fcdbed74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b44064191e56dc16e212fb79794918b3023e3dc8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151943"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370595"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>축 간격 지정(보고서 작성기 및 SSRS)
   축 간격은 축에 있는 레이블 및 해당 눈금 표시의 수를 정의합니다. 값 축에서 축 간격은 차트의 데이터 요소를 일정하게 측정할 수 있도록 합니다. 그러나 범주 축에서는 이 기능 때문에 범주가 축 레이블 없이 표시될 수 있습니다. 축 Interval 속성에서 원하는 간격 수를 지정할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 결과 집합의 데이터를 기반으로 런타임에 간격 수를 계산합니다. 축 간격을 계산하는 방법에 대한 자세한 내용은 [차트의 축 레이블 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)을 참조하세요.  
   
- 이 항목은 범주 축의 날짜 또는 시간 값에는 적용되지 않습니다. 기본적으로 `DateTime` 값은 일로 표시 합니다. 월 또는 시간 간격과 같은 다른 날짜 또는 시간 간격을 지정하려면 축 레이블의 서식을 지정하고 `DateTime` 형식 대신 `String` 형식의 인스턴스를 표시하도록 축을 설정해야 합니다. 또한 Interval 속성을 설정해야 합니다. 자세한 내용은 [축 레이블의 서식을 날짜 또는 통화로 지정&#40;보고서 작성기 및 SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)을 참조하세요.  
+ 이 항목은 범주 축의 날짜 또는 시간 값에는 적용되지 않습니다. 기본적으로 `DateTime` 값은 일로 표시됩니다. 월 또는 시간 간격과 같은 다른 날짜 또는 시간 간격을 지정하려면 축 레이블의 서식을 지정하고 `DateTime` 형식 대신 `String` 형식의 인스턴스를 표시하도록 축을 설정해야 합니다. 또한 Interval 속성을 설정해야 합니다. 자세한 내용은 [축 레이블의 서식을 날짜 또는 통화로 지정&#40;보고서 작성기 및 SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)을 참조하세요.  
   
  이 항목은 축이 없는 원형, 도넛형, 깔때기형 또는 피라미드형 차트에는 적용되지 않습니다.  
   
 > [!NOTE]  
 >  일반적으로 범주 축은 가로 축 또는 x축이지만 가로 막대형 차트에서는 범주 축이 세로 축 또는 y축입니다.  
   
- 다른 축 간격을 지정하는 차트의 예는 예제 보고서로 제공됩니다. 이 샘플 보고서 및 기타 보고서를 다운로드하는 방법은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][보고서 작성기 및 보고서 디자이너 샘플 보고서](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ 다른 축 간격을 지정하는 차트의 예는 예제 보고서로 제공됩니다. 이 샘플 보고서 및 기타 보고서를 다운로드하는 방법은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][보고서 작성기 및 보고서 디자이너 샘플 보고서](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -54,7 +54,7 @@ ms.locfileid: "48151943"
   
 ## <a name="see-also"></a>관련 항목  
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [차트의 데이터 요소에 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [차트의 데이터 요소에 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [데이터 영역의 데이터 정렬&#40;보고서 작성기 및 SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [축 속성 대화 상자, 축 옵션&#40;보고서 작성기 및 SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
  [로그 눈금 간격 지정&#40;보고서 작성기 및 SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)   

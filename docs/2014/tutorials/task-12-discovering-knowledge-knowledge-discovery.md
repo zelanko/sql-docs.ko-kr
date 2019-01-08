@@ -13,17 +13,17 @@ ms.assetid: dd80a8e6-1e41-4c49-9898-02b1d2505a10
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d38af78e59a88e05fe874e4b4748b1f6f8b5049c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf933017b77bf8f0c1980c00f8f669d92483a1c6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167703"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367185"
 ---
 # <a name="task-12-discovering-knowledge-knowledge-discovery"></a>태스크 12: 지식 검색(기술 자료 검색)
   수행한이 태스크에서는 합니다 **기술 자료 검색** 활동을 **Supplier ID** 하 고 **Supplier Name** 도메인. 이 시나리오에서 기술 자료 검색 프로세스는 주로 이러한 두 도메인의 값을 가져옵니다.  
   
- 이 자습서에서는 기술 자료 구축을 처음부터 새로 시작했습니다. 기술 자료 검색 작업을 수행하여 기술 자료 만들기를 시작할 수도 있습니다. 클릭 하면 **기술 자료를 만듭니다** 기본 페이지에서 DQS 클라이언트 안내 하는 페이지로 **도메인 관리** 작업에 대해 선택한 작업입니다. 변경할 수 있습니다 합니다 **활동** 하 **기술 자료 검색** 후 다음 페이지에서 만들 수 있습니다 도메인 기술 자료 검색 프로세스의 일부로. 참조 [Perform Knowledge Discovery](http://msdn.microsoft.com/library/hh510398.aspx) 대 한 자세한 내용은 합니다.  
+ 이 자습서에서는 기술 자료 구축을 처음부터 새로 시작했습니다. 기술 자료 검색 작업을 수행하여 기술 자료 만들기를 시작할 수도 있습니다. 클릭 하면 **기술 자료를 만듭니다** 기본 페이지에서 DQS 클라이언트 안내 하는 페이지로 **도메인 관리** 작업에 대해 선택한 작업입니다. 변경할 수 있습니다 합니다 **활동** 하 **기술 자료 검색** 후 다음 페이지에서 만들 수 있습니다 도메인 기술 자료 검색 프로세스의 일부로. 참조 [Perform Knowledge Discovery](https://msdn.microsoft.com/library/hh510398.aspx) 대 한 자세한 내용은 합니다.  
   
 1.  DQS 클라이언트의 기본 페이지에서에 **최근 기술 자료** 섹션에서 **오른쪽 화살표** 옆에 **공급 업체** 기술 자료 및 클릭 **기술 검색**합니다. 을 클릭할 수 있습니다 **기술 자료 열기**를 선택 **공급 업체** 에서 합니다 **기술 자료 목록이**선택, **기술 자료 검색**으로 **활동** 을 클릭 **다음**합니다.  
   
@@ -70,6 +70,6 @@ ms.locfileid: "48167703"
      이 자습서의 첫 번째 단원이 완료되었습니다.  
   
 ## <a name="next-step"></a>다음 단계  
- [2단원: 공급자 기술 자료를 사용하여 공급자 데이터 정리](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)  
+ [2단원: Suppliers 기술 자료를 사용 하 여 공급자 데이터 정리](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)  
   
   

@@ -10,18 +10,18 @@ ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ad93f867eb10768806d3384c05596f7d4f008dce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa8a92b3727bf4c06a5b5a85c8359f96b592cd44
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209153"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359755"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저의 성능 모니터링
   이 항목에서는 고유하게 컴파일된 저장 프로시저의 성능을 모니터링하는 방법에 대해 설명합니다.  
   
 ## <a name="using-extended-events"></a>확장 이벤트 사용  
- 사용 된 `sp_statement_completed` 확장된 이벤트를 쿼리 실행을 추적 합니다. 이 이벤트로 확장 이벤트 세션을 만들면(필요에 따라 고유하게 컴파일된 특정 저장 프로시저의 object_id에 대해 필터 사용) 각 쿼리 실행 후에 확장 이벤트가 발생합니다. 확장 이벤트에 의해 보고되는 CPU 시간 및 기간은 쿼리에 사용된 CPU 양과 실행 시간을 나타냅니다. 많은 CPU 시간을 사용하는 고유하게 컴파일된 저장 프로시저에는 성능 문제가 있을 수 있습니다.  
+ `sp_statement_completed` 확장 이벤트를 사용하여 쿼리 실행을 추적할 수 있습니다. 이 이벤트로 확장 이벤트 세션을 만들면(필요에 따라 고유하게 컴파일된 특정 저장 프로시저의 object_id에 대해 필터 사용) 각 쿼리 실행 후에 확장 이벤트가 발생합니다. 확장 이벤트에 의해 보고되는 CPU 시간 및 기간은 쿼리에 사용된 CPU 양과 실행 시간을 나타냅니다. 많은 CPU 시간을 사용하는 고유하게 컴파일된 저장 프로시저에는 성능 문제가 있을 수 있습니다.  
   
  확장 이벤트의 `line_number`와 함께 `object_id`를 사용하여 쿼리를 조사할 수 있습니다. 다음 쿼리를 사용하여 프로시저 정의를 검색할 수 있습니다. 줄 번호를 사용하여 정의 내에서 쿼리를 식별할 수 있습니다.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "48209153"
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
- 에 대 한 자세한 내용은 합니다 `sp_statement_completed` 확장 이벤트를 참조 하세요 [이벤트를 발생 시킨 문을 검색 하는 방법을](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)합니다.  
+ 에 대 한 자세한 내용은 합니다 `sp_statement_completed` 확장 이벤트를 참조 하세요 [이벤트를 발생 시킨 문을 검색 하는 방법을](https://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)합니다.  
   
 ## <a name="using-data-management-views"></a>데이터 관리 뷰 사용  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 프로시저 수준 및 쿼리 수준 모두에서 고유하게 컴파일된 저장 프로시저에 대한 실행 통계 수집을 지원합니다. 실행 통계 수집은 성능에 미치는 영향 때문에 기본적으로 설정되지 않습니다.  

@@ -1,5 +1,5 @@
 ---
-title: '1단원: 병합 복제를 사용하여 데이터 게시 | Microsoft 문서'
+title: '1단원: 병합 복제를 사용 하 여 데이터 게시 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 65debc2ad15045984f43e05d0afcf3011c50f2b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2160f4e2a204f1e1e6b90da9949bd356bc9b7cf5
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112913"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589267"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>1단원: 병합 복제를 사용하여 데이터 게시
   이 단원에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 병합 게시를 만들어 **샘플 데이터베이스에**Employee **,** SalesOrderHeader **및** SalesOrderDetail [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 테이블의 하위 집합을 게시합니다. 이러한 테이블은 각 구독에 고유한 데이터 파티션이 포함되도록 매개 변수가 있는 행 필터로 필터링됩니다. 또한 병합 에이전트에 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 PAL(게시 액세스 목록)에 추가합니다. 이 자습서를 사용하려면 이전 자습서인 [복제용 서버 준비](tutorial-preparing-the-server-for-replication.md)를 완료해야 합니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "48112913"
   
 21. **즉시 스냅숏 만들기**를 선택하고 **스냅숏 에이전트 실행 시간 예약**을 선택 취소한 후 **다음**을 클릭합니다.  
   
-22. 에이전트 보안 페이지에서 **보안 설정**을 클릭하고 **프로세스 계정** 상자에 \<*Machine_Name>***\repl_snapshot**을 입력한 다음 이 계정에 대한 암호를 입력하고 **확인**을 클릭합니다. **마침**을 클릭합니다.  
+22. 에이전트 보안 페이지에서 **보안 설정**을 클릭하고 **프로세스 계정** 상자에 \<_Machine_Name>_**\repl_snapshot**을 입력한 다음 이 계정에 대한 암호를 입력하고 **확인**을 클릭합니다. **마침**을 클릭합니다.  
   
 23. 마법사 완료 페이지에서 **게시 이름** 상자에 **AdvWorksSalesOrdersMerge** 를 입력하고 **마침**을 클릭합니다.  
   
@@ -108,12 +108,12 @@ ms.locfileid: "48112913"
   
 3.  **게시 액세스 목록** 페이지를 선택하고 **추가**를 클릭합니다.  
   
-4.  게시 액세스 추가 대화 상자에서 *<Machine_Name>***\repl_merge**를 선택한 다음 **확인**을 클릭합니다. **확인**을 클릭합니다.  
+4.  게시 액세스 추가 대화 상자에서 _<Machine_Name>_**\repl_merge**를 선택한 다음 **확인**을 클릭합니다. **확인**을 클릭합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 병합 게시를 성공적으로 만들었습니다. 다음 단원에서는 이 게시를 구독합니다. [2단원: 병합 게시에 대한 구독 만들기](lesson-2-creating-a-subscription-to-the-merge-publication.md)를 참조하세요.  
+ 병합 게시를 성공적으로 만들었습니다. 다음 단원에서는 이 게시를 구독합니다. 참조 [2 단원: 병합 게시에 대 한 구독 만들기](lesson-2-creating-a-subscription-to-the-merge-publication.md)합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [게시된 데이터 필터링](publish/filter-published-data.md)   
  [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
  [아티클 정의](publish/define-an-article.md)  

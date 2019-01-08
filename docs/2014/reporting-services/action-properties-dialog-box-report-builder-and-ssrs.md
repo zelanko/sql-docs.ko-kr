@@ -34,12 +34,12 @@ ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ee4a1e9c6430cedb3d8bf34b2978e29c860685d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f68471e05ea1fd8e3b2680e81bd3e8512a2c79bf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093633"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370655"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>동작 속성 대화 상자(보고서 작성기 및 SSRS)
   **동작** 대화 상자를 사용하여 링크를 지원하는 차트, 계기 및 지도 요소에 대한 하이퍼링크 옵션을 활성화할 수 있습니다. 사용자가 보고서를 클릭하여 URL로 이동하거나, 동일한 보고서 서버 또는 보고서 서버와 통합된 SharePoint 사이트에 있는 다른 보고서로 이동하거나, 동일한 보고서 내의 다른 위치로 이동할 수 있는 동작을 정의합니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "48093633"
   
  SharePoint 통합 모드로 구성된 보고서 서버에 게시된 보고서의 경우 파일 이름 확장명(.rdl)을 포함하여 정규화된 URL을 사용합니다(예: 예를 들어, http://*\<SharePointservername > /\<사이트 >*/Documents/Report1.rdl 합니다. 상대 경로는 지원되지 않습니다.  
   
- 자세한 내용은 msdn.microsoft.com의 [보고서 작성기 설명서](http://go.microsoft.com/fwlink/?LinkId=154494)에서 [외부 항목에 대한 경로 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)을 참조하세요.  
+ 자세한 내용은 msdn.microsoft.com의 [보고서 작성기 설명서](https://go.microsoft.com/fwlink/?LinkId=154494)에서 [외부 항목에 대한 경로 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)을 참조하세요.  
   
  **이러한 매개 변수를 사용 하 여 보고서를 실행 합니다.**  
  드릴스루 보고서에 전달할 매개 변수 목록을 추가합니다. 매개 변수 이름은 대상 보고서에 대해 정의된 매개 변수와 일치해야 합니다. **추가** 단추와 **삭제** 단추를 사용하여 매개 변수를 추가 및 제거하고 위쪽 화살표와 아래쪽 화살표를 사용하여 매개 변수 목록의 순서를 지정합니다.  
@@ -101,11 +101,11 @@ ms.locfileid: "48093633"
  **URL 선택**  
  항목의 URL을 입력합니다. 기본 모드로 구성된 보고서 서버에 게시된 항목의 경우 전체 경로나 상대 경로를 사용합니다. 예를 들어, http://*\<서버 이름 >*  /images/image1.jpg입니다. SharePoint 통합 모드로 구성 된 보고서 서버에 게시 하는 항목에 대 한 정규화 된 URL을 사용 하 여 (예를 들어, http://*\<SharePointservername > /\<사이트 >* 문서/이미지 / / image1.jpg)입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [차트&#40;보고서 작성기 및 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [하위 보고서 및 매개 변수 추가&#40;보고서 작성기 및 SSRS&#41;](report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
- [대화형 정렬, 문서 구조 및 링크 &#40;보고서 작성기 및 SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
+ [대화형 정렬, 문서 구조 및 링크&#40;보고서 작성기 및 SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
   
   

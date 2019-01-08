@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -19,12 +17,12 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f2b36eef7c358fde58316bafc06697c992f3918b
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: a702321888ad49a9ca5e3bea90abdde6924c8dc8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461034"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360105"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성
   스크립트 구성 요소에서 사용자 지정 코드를 작성하려면, 먼저 만들려는 데이터 흐름 구성 요소의 유형(원본, 변환 또는 대상)을 선택한 다음, **스크립트 변환 편집기**에서 구성 요소의 메타데이터 및 속성을 구성해야 합니다.  
@@ -86,9 +84,9 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 > [!NOTE]  
 >  경우는 **스크립트 변환 편집기** 설정 첫 번째 출력을 만드는 `SynchronousInputID` 출력 속성은 `ID` 구성 요소의 입력 합니다. 그러나 이후 출력을 만들 때는 이러한 출력의 `SynchronousInputID` 속성을 0으로 설정합니다.  
 >   
->  동기 출력을 사용하는 구성 요소를 만드는 경우 각 출력의 `SynchronousInputID` 속성은 구성 요소의 입력에 대한 `ID`로 설정되어야 합니다. 따라서 편집기에서 첫 번째 출력 이후에 만든 각 출력의 `SynchronousInputID` 값은 0에서 구성 요소의 입력에 대한 `ID`로 변경되어야 합니다.  
+>  동기 출력을 사용 하 여 구성 요소를 만드는 경우 각 출력 있어야 해당 `SynchronousInputID` 속성이로 설정 된 `ID` 구성 요소의 입력 합니다. 따라서 편집기에서 첫 번째 출력 이후에 만든 각 출력의 `SynchronousInputID` 값은 0에서 구성 요소의 입력에 대한 `ID`로 변경되어야 합니다.  
 >   
->  비동기 출력을 사용하는 구성 요소를 만드는 경우 각 출력의 `SynchronousInputID` 속성은 0으로 설정되어야 합니다. 따라서 첫 번째 출력의 `SynchronousInputID` 값은 구성 요소의 입력에 대한 `ID`에서 0으로 변경되어야 합니다.  
+>  비동기 출력을 사용하는 구성 요소를 만드는 경우 각 출력의 `SynchronousInputID` 속성은 0으로 설정되어야 합니다. 따라서 첫 번째 출력 있어야 해당 `SynchronousInputID` 값에서 변경는 `ID` 0으로 구성 요소의 입력 합니다.  
   
  스크립트 구성 요소에서 두 개의 동기 출력 중 하나에 행을 보내는 예제는 [스크립트 구성 요소를 사용하여 동기 변환 만들기](../../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)를 참조하세요.  
   
@@ -128,7 +126,7 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
   
  자세한 내용은 [스크립트 구성 요소에서 데이터 원본에 연결](connecting-to-data-sources-in-the-script-component.md)을 참조하세요.  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [스크립트 구성 요소 코딩 및 디버깅](coding-and-debugging-the-script-component.md)  

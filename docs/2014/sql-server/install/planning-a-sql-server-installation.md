@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, planning
@@ -13,12 +12,12 @@ ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2bf9656564422d76e8d18795fc72e48856eca7e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b1baf29a88ff25eb278271719680d1979940c590
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161633"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367908"
 ---
 # <a name="planning-a-sql-server-installation"></a>SQL Server 설치 계획
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하려면 다음 단계를 수행하십시오.  
@@ -31,7 +30,7 @@ ms.locfileid: "48161633"
   
  소프트웨어 사용이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 볼륨 라이선스 계약 또는 공급 업체와의 ISV  또는 OEM  계약과 같은 별도의 계약에 의해 관리되지 않는 한 설치 방법에 상관없이 개인 또는 업체 대표로서 소프트웨어 사용 조건에 대한 동의를 확인해야 합니다.  
   
- 사용 조건은 검토 및 동의를 위해 설치 프로그램 사용자 인터페이스에 표시됩니다. /Q 또는 /QS 매개 변수를 사용한 무인 설치는 /IAcceptSQLServerLicenseTerms 매개 변수를 포함해야 합니다. [Microsoft  소프트웨어 사용권 계약(Microsoft  Software  License  Terms)](http://go.microsoft.com/fwlink/?LinkID=148209)에서 사용 조건을 별도로 검토할 수 있습니다.  
+ 사용 조건은 검토 및 동의를 위해 설치 프로그램 사용자 인터페이스에 표시됩니다. /Q 또는 /QS 매개 변수를 사용한 무인 설치는 /IAcceptSQLServerLicenseTerms 매개 변수를 포함해야 합니다. [Microsoft  소프트웨어 사용권 계약(Microsoft  Software  License  Terms)](https://go.microsoft.com/fwlink/?LinkID=148209)에서 사용 조건을 별도로 검토할 수 있습니다.  
   
 > [!NOTE]  
 >  소프트웨어의 수령 방법(예: [!INCLUDE[msCoName](../../includes/msconame-md.md)] 볼륨 라이선스를 통해 수령)에 따라 사용자의 소프트웨어 사용에 추가 조건이 적용될 수 있습니다.  
@@ -74,7 +73,7 @@ ms.locfileid: "48161633"
  [SQL Server 장애 조치(Failover) 클러스터 설치](../failover-clusters/install/sql-server-failover-cluster-installation.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 설명서 중 이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터를 설치 및 구성하는 방법에 대해 설명합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [빠른 시작의 SQL Server 2014 설치](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)   
  [명령 프롬프트에서 SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [고가용성 솔루션&#40;SQL Server&#41;](../failover-clusters/high-availability-solutions-sql-server.md)   

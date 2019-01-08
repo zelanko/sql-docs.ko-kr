@@ -11,12 +11,12 @@ ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4543c518d1fbc845793e994682df7df1bccc26dc
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: HT
+ms.openlocfilehash: 739723a42580c404d0529a6d84d907cf665f8270
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145228"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368515"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Analysis Services 연결에 사용되는 데이터 공급자
   Analysis Services는 서버 및 데이터 액세스를 위해 세 가지 데이터 공급자를 제공합니다. Analysis Services에 연결하는 모든 애플리케이션은 이러한 공급자 중 하나를 사용하여 서버 및 데이터 액세스를 수행합니다. 그중에서 ADOMD.NET 및 AMO(Analysis Services Management Objects) 공급자는 관리되는 데이터 공급자이며, Analysis Services OLE DB 공급자(MSOLAP DLL)는 네이티브 데이터 공급자입니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "50145228"
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 최초 릴리스에 대한 주 빌드 번호는 12.0.2000.9입니다.  
   
- 버전 및 빌드 정보를 얻는 방법은 [SQL Server 및 해당 구성 요소의 버전 및 에디션을 확인하는 방법](http://support.microsoft.com/kb/321185)을 참조하십시오.  
+ 버전 및 빌드 정보를 얻는 방법은 [SQL Server 및 해당 구성 요소의 버전 및 에디션을 확인하는 방법](https://support.microsoft.com/kb/321185)을 참조하십시오.  
   
 ##  <a name="bkmk_LibUpdate"></a> Analysis Services 데이터 공급자의 버전을 확인하는 방법  
  데이터 공급자는 Analysis Services와 함께 설치될 뿐 아니라 Excel과 같은 Analysis Services 데이터베이스에 정기적으로 연결하는 클라이언트 애플리케이션에 의해서도 설치됩니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "50145228"
   
 #### <a name="find-the-data-providers-on-the-download-site"></a>다운로드 사이트에서 데이터 공급자 찾기  
   
-1.  [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/p/?LinkID=296473)로 이동합니다.  
+1.  [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/p/?LinkID=296473)로 이동합니다.  
   
 2.  **설치 지침**을 확장합니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "50145228"
   
  MSOLAP130.dll은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 기본 제공되는 Analysis Services OLE DB 공급자 버전입니다. 기타 이전 최신 버전에는 MSOLAP10.dll(SQL Server 2008 및 2008 R2의 경우) 및 MSOLAP90.dll(SQL Server 2005의 경우)이 포함됩니다.  
   
- OLE DB 공급자는 종종 연결 문자열에 지정됩니다. Analysis Services 연결 문자열을 다른 명명법을 사용 하 여 OLE DB 공급자에 게 참조: MSOLAP. \<버전 >.dll  
+ OLE DB 공급자는 종종 연결 문자열에 지정됩니다. Analysis Services 연결 문자열은 다른 명명법을 사용하여 OLE DB 공급자를 참조합니다. MSOLAP입니다. \<버전 >.dll  
   
  MSOLAP.5.dll은 Excel 2013과 함께 설치된 최신 Analysis Services OLE DB 공급자입니다. MSOLAP.4.dll 또는 MSOLAP.3.dll과 같은 이전 버전은 이전 버전의 Excel을 실행하는 워크스테이션에서 흔히 발견됩니다. PowerPivot 추가 기능과 같은 일부 Analysis Services 기능에는 특정 버전의 OLE DB 공급자가 필요합니다. 자세한 내용은 [연결 문자열 속성&#40;Analysis Services&#41;](connection-string-properties-analysis-services.md)을 참조하세요.  
   

@@ -11,24 +11,24 @@ ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 0e040fe0b31f9cead8843987199164e45767db82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: dc149e8d8af6b2b5f08d849f3fda261849ff9d8f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224703"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361095"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Microsoft Word로 내보내기(보고서 작성기 및 SSRS)
-  Word 렌더링 확장 프로그램의 네이티브 형식으로 보고서 렌더링 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 합니다. 형식은 Office Open XML입니다.  
+  Word 렌더링 확장 프로그램은 보고서를 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010의 네이티브 형식으로 렌더링합니다. 형식은 Office Open XML입니다.  
   
- Word 렌더러는 Word, Excel 및 PowerPoint용 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 호환 기능 팩이 설치된 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003뿐만 아니라 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2007-2010과도 호환됩니다. 호환 기능 팩에 대한 자세한 내용은 [Word, Excel 및 PowerPoint용 Microsoft Office 호환 기능 팩](http://go.microsoft.com/fwlink/?LinkID=205622)을 참조하십시오.  
+ Word 렌더러는 Word, Excel 및 PowerPoint용 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 호환 기능 팩이 설치된 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003뿐만 아니라 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2007-2010과도 호환됩니다. 호환 기능 팩에 대한 자세한 내용은 [Word, Excel 및 PowerPoint용 Microsoft Office 호환 기능 팩](https://go.microsoft.com/fwlink/?LinkID=205622)을 참조하십시오.  
   
  이 렌더러를 통해 생성되는 파일의 내용 유형은 **application/vnd.openxmlformats-officedocument.wordprocessingml.document** 이고 파일 확장명은 .docx입니다.  
   
  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003과 호환되는 이전 버전의 Word 렌더링 확장 프로그램은 Word 2003으로 이름이 변경되었습니다. 기본적으로 Word 렌더링 확장 프로그램만 사용할 수 있습니다. Word 2003 렌더링 확장 프로그램을 사용할 수 있도록 하려면 Reporting Services 구성 파일을 업데이트해야 합니다. Word 2003을 통해 생성되는 파일의 내용 유형은 **application/vnd.ms-word** 이고 파일 확장명은 .doc입니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 렌더링 확장 프로그램은 사용 되지 않습니다. 자세한 내용은 [SQL Server 2014에서 SQL Server Reporting Services에서 사용 되지 않는 기능](../deprecated-features-in-sql-server-reporting-services-ssrs.md)합니다.  
+>  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 렌더링 확장 프로그램은 더 이상 사용되지 않습니다. 자세한 내용은 [SQL Server 2014에서 SQL Server Reporting Services에서 사용 되지 않는 기능](../deprecated-features-in-sql-server-reporting-services-ssrs.md)합니다.  
   
  보고서를 Word 문서로 내보낸 후에는 보고서의 내용을 변경하고 우편물 레이블, 구매 주문서 또는 편지 양식과 같은 문서 스타일의 보고서를 디자인할 수 있습니다.  
   
@@ -77,9 +77,9 @@ ms.locfileid: "48224703"
   
  이는 Word 렌더러가 **PageNumber** 및 **TotalPages** 등의 페이지 매김과 관련된 필드에 대해 보고서를 구문 분석하며, 함수를 호출하는 것이 아니라 단순 참조만 처리하기 때문입니다. 이 경우 식에서는 **ToString** 함수를 호출합니다. 다음 두 식은 동일하며, 보고서를 보고서 작성기 또는 보고서 디자이너에서 미리 보거나 게시된 보고서를 보고서 관리자 또는 SharePoint 라이브러리에서 렌더링할 때 두 식 모두 올바르게 렌더링합니다. 그러나 Word 렌더러는 두 번째 식만 올바르게 구문 분석하여 올바른 페이지 번호를 렌더링합니다.  
   
--   **복합 식:**  식은 `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   **복잡 한 식:**  식 `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **텍스트 실행을 사용하는 식:** 텍스트, **평균 판매**와 식,  `=Avg(Fields!YTDPurchase.Value, "Sales)`및 텍스트, **페이지 번호**와 식 `=Globals!PageNumber`  
+-   **텍스트를 포함 하는 식:** 텍스트 **평균 판매**, 및 식 `=Avg(Fields!YTDPurchase.Value, "Sales)`, 및 텍스트 **페이지 번호**, 및 식 `=Globals!PageNumber`  
   
  이러한 문제를 방지하려면 머리글 및 바닥글에서 식을 사용할 때 하나의 복합 식 대신 여러 텍스트를 사용해 실행하세요. 다음은 이와 동등한 두 가지 식입니다. 첫 번째 식은 복합식이고 두 번째 식은 텍스트 실행을 사용합니다. Word 렌더러는 두 번째 식만 성공적으로 구문 분석합니다.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "48224703"
 -   텍스트를 Word로 내보내면 특정 글꼴로 글꼴 장식이 되어 있는 텍스트로 인해 렌더링된 보고서에 예기치 않은 문자가 생기거나 문자가 누락될 수 있습니다.  
   
 ##  <a name="WordBenefits"></a> Word 렌더러 사용 이점  
- 새로운 기능 외에도 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 내보낸를 사용할 수 있는 보고서를 *.docx 파일로 내보낼 경우 크기 작은 경우가 많습니다. Word 렌더러를 사용하여 내보낸 보고서는 일반적으로 동일한 보고서를 Word 2003 렌더러를 사용하여 내보낼 때보다 매우 작습니다.  
+ [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010의 새로운 기능을 내보낸 보고서에서 사용할 수 있을 뿐만 아니라 보고서를 *.docx 파일로 내보낼 경우 크기를 줄일 수 있습니다. Word 렌더러를 사용하여 내보낸 보고서는 일반적으로 동일한 보고서를 Word 2003 렌더러를 사용하여 내보낼 때보다 매우 작습니다.  
   
 ## <a name="backward-compatibility-of-exported-reports"></a>내보낸 보고서의 이전 버전 호환성  
  Word 호환성 모드를 선택하고 호환성 옵션을 설정할 수 있습니다. Word 렌더러에서는 호환성 모드가 설정된 상태로 문서를 만듭니다. 호환성 모드를 해제한 상태로 문서를 다시 저장하면 문서의 레이아웃에 영향을 줄 수 있습니다.  
@@ -152,11 +152,11 @@ ms.locfileid: "48224703"
  호환성 모드를 해제하고 보고서를 다시 저장할 경우 보고서 레이아웃이 예기치 않게 변경될 수 있습니다.  
   
 ##  <a name="AvailabilityWord"></a> Word 2003 렌더러 사용 가능  
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 기본 Word 렌더러는 버전의 네이티브 형식으로 렌더링 하는 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 합니다. 이 옵션은 보고서 관리자 및 SharePoint의 **내보내기** 메뉴에 나열되는 **Word** 옵션입니다. [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003과만 호환되는 이전 버전은 이제 이름이 Word 2003으로 지정되며 이 이름으로 메뉴에 나열됩니다. **Word 2003** 메뉴 옵션은 기본적으로 표시되지 않지만 관리자가 RSReportServer 구성 파일을 업데이트하여 표시할 수 있습니다. Word 2003 렌더러를 사용하여 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 보고서를 내보내려면 RSReportDesigner 구성 파일을 업데이트합니다. 하지만 일부 경우에는 Word 2003 렌더러를 표시할 수 없습니다. RSReportServer 구성 파일이 보고서 서버에 존재하기 때문에 구성 파일을 읽으려면 보고서를 내보내는 위치의 도구 또는 제품이 보고서 서버에 연결되어 있어야 합니다. 연결되어 있지 않거나 로컬 모드에 있는 도구 또는 제품을 사용할 경우 Word 2003 렌더러가 표시되도록 해도 효과가 없습니다. **Word 2003** 메뉴 옵션은 사용할 수 없는 상태로 유지됩니다. RSReportDesigner 구성 파일에서 Word 2003 렌더러를 표시하도록 설정하면 **보고서 미리 보기에서** Word 2003 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 메뉴 옵션을 항상 사용할 수 있습니다.  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 기본 Word 렌더러는 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010의 네이티브 형식으로 렌더링하는 버전입니다. 이 옵션은 보고서 관리자 및 SharePoint의 **내보내기** 메뉴에 나열되는 **Word** 옵션입니다. [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003과만 호환되는 이전 버전은 이제 이름이 Word 2003으로 지정되며 이 이름으로 메뉴에 나열됩니다. **Word 2003** 메뉴 옵션은 기본적으로 표시되지 않지만 관리자가 RSReportServer 구성 파일을 업데이트하여 표시할 수 있습니다. Word 2003 렌더러를 사용하여 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 보고서를 내보내려면 RSReportDesigner 구성 파일을 업데이트합니다. 하지만 일부 경우에는 Word 2003 렌더러를 표시할 수 없습니다. RSReportServer 구성 파일이 보고서 서버에 존재하기 때문에 구성 파일을 읽으려면 보고서를 내보내는 위치의 도구 또는 제품이 보고서 서버에 연결되어 있어야 합니다. 연결되어 있지 않거나 로컬 모드에 있는 도구 또는 제품을 사용할 경우 Word 2003 렌더러가 표시되도록 해도 효과가 없습니다. **Word 2003** 메뉴 옵션은 사용할 수 없는 상태로 유지됩니다. RSReportDesigner 구성 파일에서 Word 2003 렌더러를 표시하도록 설정하면 **보고서 미리 보기에서** Word 2003 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 메뉴 옵션을 항상 사용할 수 있습니다.  
   
  다음과 같은 시나리오에서는 **Word 2003의** 메뉴 옵션이 표시되지 않습니다.  
   
--   보고서 작성기가 연결되지 않은 모드이고 보고서 작성기에서 보고서를 미리 보는 경우. 이 둘 다에서 발생 된 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 및 보고서 작성기의 독립 실행형 버전입니다.  
+-   보고서 작성기가 연결되지 않은 모드이고 보고서 작성기에서 보고서를 미리 보는 경우. 이 경우는 보고서 작성기의 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 및 독립 실행형 버전에 모두 해당됩니다.  
   
 -   보고서 뷰어 웹 파트가 로컬 모드이고 SharePoint 팜이 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버와 통합되지 않은 경우. 자세한 내용은 [보고서 뷰어의 로컬 모드와 보고서 뷰어의 연결 모드 보고서&#40;SharePoint 모드의 Reporting Services&#41;](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   
@@ -168,7 +168,7 @@ ms.locfileid: "48224703"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 및 보고서 미리 보기  
   
--   보고서 작성기가 보고서 서버에 연결된 경우. 이 수는 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 또는 보고서 작성기의 독립 실행형 버전입니다.  
+-   보고서 작성기가 보고서 서버에 연결된 경우. 보고서 작성기의 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 또는 독립 실행형 버전 모두 가능합니다.  
   
 -   보고서 뷰어 웹 파트가 원격 모드인 경우  
   
@@ -178,7 +178,7 @@ ms.locfileid: "48224703"
   
  `<Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>`  
   
- WORDOPENXML 확장은 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010에 대한 Word 렌더러를 정의합니다. WORD 확장은 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 버전을 정의합니다. `Visible = “false”` 는 Word 2003 렌더러가 숨겨져 있음을 나타냅니다. 자세한 내용은 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) 하 고 [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)합니다.  
+ WORDOPENXML 확장은 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010에 대한 Word 렌더러를 정의합니다. WORD 확장은 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 버전을 정의합니다. `Visible = "false"` 는 Word 2003 렌더러가 숨겨져 있음을 나타냅니다. 자세한 내용은 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) 및 [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)를 참조하세요.  
   
 ##  <a name="Differences"></a> Word와 Word 2003 렌더러의 차이점  
  Word 또는 Word 2003 렌더러를 사용하여 렌더링된 보고서는 대개 시각적으로는 구분되지 않습니다. 그러나 Word 형식과 Word 2003 형식에는 약간의 차이점이 있습니다.  
@@ -189,7 +189,7 @@ ms.locfileid: "48224703"
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [여러 보고서 렌더링 확장 프로그램의 대화형 기능 &#40;보고서 작성기 및 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [보고서 항목 렌더링&#40;보고서 작성기 및 SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

@@ -14,12 +14,12 @@ ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9ab17646913b217b877c09070affe65be49bf880
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 0ead368dece8a0c1effd8f8ddc7ff5e5793e8350
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088953"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355521"
 ---
 # <a name="availability-replica-is-disconnected"></a>가용성 복제본 연결 해제됨
     
@@ -36,7 +36,7 @@ ms.locfileid: "48088953"
  이 정책은 가용성 복제본 간의 연결 상태를 확인합니다. 가용성 복제본의 연결 상태가 DISCONNECTED인 경우 정책은 비정상 상태에 있습니다. 그렇지 않으면 정책은 정상 상태입니다.  
   
 > [!NOTE]  
->  이 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]릴리스의 경우 가능한 원인 및 해결 방법에 대한 자세한 내용은 TechNet Wiki의 [가용성 복제본의 연결이 끊어짐](http://go.microsoft.com/fwlink/p/?LinkId=220857) 을 참조하세요.  
+>  이 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]릴리스의 경우 가능한 원인 및 해결 방법에 대한 자세한 내용은 TechNet Wiki의 [가용성 복제본의 연결이 끊어짐](https://go.microsoft.com/fwlink/p/?LinkId=220857) 을 참조하세요.  
   
 ## <a name="possible-causes"></a>가능한 원인  
  보조 복제본이 주 복제본에 연결되어 있지 않습니다. 연결 상태가 DISCONNECTED입니다. 이 문제는 다음에 의해 발생할 수 있습니다.  

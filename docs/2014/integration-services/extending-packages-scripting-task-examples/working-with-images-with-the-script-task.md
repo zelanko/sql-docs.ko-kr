@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -25,24 +23,24 @@ ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4529ded6049327261ac92a76cc9861b7cec7dd61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1fc2e587f38f13730f8455b04d0542079158da9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204583"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354629"
 ---
 # <a name="working-with-images-with-the-script-task"></a>스크립트 태스크를 사용한 이미지 작업
   제품 또는 사용자 데이터베이스에는 텍스트 및 숫자 데이터 외에 이미지도 포함되는 경우가 많습니다. Microsoft .NET Framework의 `System.Drawing` 네임스페이스에서는 이미지 조작을 위한 클래스를 제공합니다.  
   
- [예 1: JPEG 형식으로 이미지 변환](#example1)  
+ [예제 1: 이미지를 JPEG 형식으로 변환](#example1)  
   
- [예 2: 썸네일 이미지 만들기 및 저장](#example2)  
+ [예제 2: 썸네일 이미지 만들기 및 저장](#example2)  
   
 > [!NOTE]  
 >  여러 패키지에서 쉽게 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  
   
-##  <a name="example1"></a>예 1 설명: JPEG 형식으로 이미지 변환  
+##  <a name="example1"></a> 예 1 설명: JPEG 형식으로 이미지 변환  
  다음 예에서는 변수로 지정된 이미지 파일을 열고 인코더를 사용하여 이 파일을 압축된 JPEG 파일로 저장합니다. 인코더 정보를 검색하는 코드는 전용 함수에 캡슐화되어 있습니다.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>이 스크립트 태스크 예를 단일 이미지 파일에 사용할 수 있도록 구성하려면  
@@ -151,7 +149,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a> 예 2 설명: 썸네일 이미지 만들기 및 저장  
+##  <a name="example2"></a> 예 2 설명: 축소판 이미지 만들기 및 저장  
  다음 예에서는 변수로 지정된 이미지 파일을 열고, 가로 세로 비율을 일정하게 유지하면서 이미지의 축소판 그림을 만들고, 이 축소판 그림을 수정된 파일 이름으로 저장합니다. 가로 세로 비율을 일정하게 유지하면서 축소판 그림의 높이와 너비를 계산하는 코드는 전용 서브루틴에 캡슐화되어 있습니다.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>이 스크립트 태스크 예를 단일 이미지 파일에 사용할 수 있도록 구성하려면  
@@ -291,6 +289,6 @@ bool ThumbnailCallback()
   
 ```  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
   

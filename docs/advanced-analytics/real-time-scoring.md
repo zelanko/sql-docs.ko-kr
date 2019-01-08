@@ -1,5 +1,5 @@
 ---
-title: SQL Server machine learning에서 실시간 점수 매기기 | Microsoft Docs
+title: 실시간 sp_rxPredict 저장 프로시저-SQL Server Machine Learning Services를 사용 하 여 점수 매기기
 description: Sp_rxPredict, SQL Server에서 R로 작성 된 미리 학습 된 모델에 대해 입력 데이터 점수 매기기를 사용 하 여 예측을 생성 합니다.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: dce0928c0675172c503e6783aa25d6cbcaec9b5f
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: def60a6de7d5a6f3641a6de88410543e9e592ba4
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713516"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645162"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>SQL Server machine learning에서 sp_rxPredict으로 실시간 점수 매기기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -177,7 +177,7 @@ Sp 호출\_rxPredict 것은 다른 저장 프로시저입니다. 현재 릴리�
 
 PREDICT 함수에서 사용 되는 동일한 이진 형식 이므로 앞의 예제에서 모델 및 데이터 테이블을 사용할 수 있습니다.
 
-```SQL
+```sql
 DECLARE @irismodel varbinary(max)
 SELECT @irismodel = [native_model_object] from [ml_models]
 WHERE model_name = 'iris.dtree' 

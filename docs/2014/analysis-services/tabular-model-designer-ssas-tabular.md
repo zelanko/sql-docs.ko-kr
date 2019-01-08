@@ -13,12 +13,12 @@ ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 779236a22eee429f6574a202e07eeccffc6b8d1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 091f6d49c4cccbcba47d50bbde3b395d8ce9d260
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074913"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364275"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>테이블 형식 모델 디자이너(SSAS 테이블 형식)
   테이블 형식 모델 디자이너는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 일부로 Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 이상 환경과 통합되어 있으며, 전문적인 테이블 형식의 모델 솔루션을 개발하기 위한 추가 프로젝트 형식 템플릿이 함께 제공됩니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "48074913"
 ##  <a name="bkmk_benefits"></a> 이점  
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]를 설치하면 테이블 형식의 모델을 만들기 위한 새 프로젝트 템플릿이 사용 가능한 프로젝트 형식에 추가됩니다. 이 템플릿 중 하나를 사용하여 테이블 형식의 새 모델 프로젝트를 만든 다음 테이블 형식 모델 디자이너 도구와 마법사를 사용하여 모델 제작을 시작할 수 있습니다.  
   
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 환경에서는 전문적인 다차원 및 테이블 형식 모델 솔루션 제작을 위한 새로운 템플릿과 도구뿐만 아니라 디버깅 및 프로젝트 수명 주기 기능을 제공하여 조직에 맞는 가장 강력한 BI 솔루션을 개발할 수 있습니다. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]에 대한 자세한 내용은 [Visual Studio 시작](http://go.microsoft.com/fwlink/?LinkId=206389)을 참조하십시오.  
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 환경에서는 전문적인 다차원 및 테이블 형식 모델 솔루션 제작을 위한 새로운 템플릿과 도구뿐만 아니라 디버깅 및 프로젝트 수명 주기 기능을 제공하여 조직에 맞는 가장 강력한 BI 솔루션을 개발할 수 있습니다. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]에 대한 자세한 내용은 [Visual Studio 시작](https://go.microsoft.com/fwlink/?LinkId=206389)을 참조하십시오.  
   
 ##  <a name="bkmk_proj_temp"></a> 프로젝트 템플릿  
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]를 설치하면 다음과 같은 테이블 형식 모델 프로젝트 템플릿이 비즈니스 인텔리전스 프로젝트 형식에 추가됩니다.  
@@ -117,7 +117,7 @@ ms.locfileid: "48074913"
   
 ##  <a name="bkmk_vsint"></a> Visual Studio 통합  
  **원본 제어**  
- Analysis Services 프로젝트는 선택한 원본 제어 플러그 인과 통합됩니다. 원본 제어를 사용하도록 Visual Studio를 구성하면 솔루션 탐색기에서 체크 인/체크 아웃을 사용할 수 있습니다. Team Foundation Server를 사용하도록 구성하려면 [Team Foundation 버전 제어로 Visual Studio 구성](http://msdn.microsoft.com/library/ms253064.aspx)을 참조하십시오. 그 외 다양한 타사 원본 제어 플러그 인도 지원합니다.  
+ Analysis Services 프로젝트는 선택한 원본 제어 플러그 인과 통합됩니다. 원본 제어를 사용하도록 Visual Studio를 구성하면 솔루션 탐색기에서 체크 인/체크 아웃을 사용할 수 있습니다. Team Foundation Server를 사용하도록 구성하려면 [Team Foundation 버전 제어로 Visual Studio 구성](https://msdn.microsoft.com/library/ms253064.aspx)을 참조하십시오. 그 외 다양한 타사 원본 제어 플러그 인도 지원합니다.  
   
  **글꼴**  
  테이블 형식 모델은 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 환경의 글꼴을 사용하여 표시되는 글꼴을 제어합니다. 기본 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 글꼴을 사용하여 해당 언어의 유니코드 문자를 모두 표시할 수 없을 경우 이 글꼴을 변경해야 할 수 있습니다. 글꼴을 변경하려면 **도구** 메뉴를 클릭하고 **옵션**을 클릭한 다음 **글꼴 및 색**을 클릭합니다.  
@@ -126,7 +126,7 @@ ms.locfileid: "48074913"
  도구->옵션->키보드 대화 상자를 통해 Analysis Services 키보드 바로 가기를 구성하거나 다시 매핑할 수 있습니다. 빌드, 저장, 디버그, 새 프로젝트 등과 같은 전역 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 바로 가기가 테이블 형식 모델 디자이너 컨텍스트에서 지원됩니다. 그 외 테이블 형식 모델 디자이너용 바로 가기 키는 Analysis Services 컨텍스트에서 지원됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블 형식 모델 프로젝트 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)   
- [속성 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/properties-ssas-tabular.md)  
+ [테이블 형식 모델 프로젝트&#40;SSAS 테이블 형식&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)   
+ [속성&#40;SSAS 테이블 형식&#41;](tabular-models/properties-ssas-tabular.md)  
   
   

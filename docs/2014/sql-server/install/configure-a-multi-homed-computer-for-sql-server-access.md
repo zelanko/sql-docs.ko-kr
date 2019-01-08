@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], multi-homed computer
@@ -15,12 +14,12 @@ ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4460b94a758a60abe27d8e9f3a90567ecbcbaa13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92c67289441ab0b6baed4509bdce8dcc0b082395
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163513"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785625"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>SQL Server 액세스를 허용하도록 다중 홈 컴퓨터 구성
   한 서버에서 두 개 이상의 네트워크 또는 네트워크 서브넷으로의 연결을 제공해야 할 경우 다중 홈 컴퓨터를 사용하는 것이 일반적인 시나리오입니다. 이 컴퓨터는 경계 네트워크(DMZ(완충 영역) 또는 스크린된 서브넷이라고도 함)에 있는 경우가 많습니다. 이 항목에서는 다중 홈 환경에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 네트워크 연결을 제공하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 고급 보안이 포함된 Windows 방화벽을 구성하는 방법에 대해 설명합니다.  
@@ -58,7 +57,7 @@ ms.locfileid: "48163513"
   
 1.  컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 클릭 설치 **시작**, 클릭 **실행**, 형식 `cmd` 차례로 [!INCLUDE[clickOK](../../includes/clickok-md.md)]합니다.  
   
-2.  명령 프롬프트 창에서 입력 `ipconfig,` enter 키를 눌러이 컴퓨터에서 사용 가능한 IP 주소를 나열 합니다.  
+2.  명령 프롬프트 창에 `ipconfig,`을 입력한 다음 Enter 키를 누르면 해당 컴퓨터에서 사용할 수 있는 IP 주소가 나열됩니다.  
   
     > [!NOTE]  
     >  **ipconfig** 명령은 끊긴 연결까지 포함하여 사용 가능한 많은 연결을 나열하는 경우가 있습니다. **ipconfig** 명령을 사용하여 IPv4와 IPv6 주소 모두를 확인할 수 있습니다.  
@@ -100,7 +99,7 @@ ms.locfileid: "48163513"
   
 8.  **프로토콜 및 포트** 페이지에서 **TCP**를 선택합니다.  
   
-9. **지정된 로컬 포트**를 선택합니다. 포트 번호를 쉼표로 구분하여 입력한 후 **다음**을 클릭합니다. 이 예제에서는 기본 포트; 구성 따라서 입력 `1433`합니다.  
+9. **지정된 로컬 포트**를 선택합니다. 포트 번호를 쉼표로 구분하여 입력한 후 **다음**을 클릭합니다. 이 예에서는 기본 포트를 구성하므로 `1433`을 입력합니다.  
   
 10. **동작** 페이지에서 옵션을 검토합니다. 이 예에서는 방화벽을 사용하여 보안 연결을 적용하지 않습니다. 따라서 **연결 허용**을 클릭한 후 **다음**을 클릭합니다.  
   
@@ -139,7 +138,7 @@ ms.locfileid: "48163513"
   
 9. 다중 홈 컴퓨터의 IP 주소를 구성하려면 다른 IP 주소와 다른 규칙을 사용하여 이 절차를 반복합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Browser 서비스&#40;데이터베이스 엔진 및 SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
  [프록시 서버를 통해 SQL Server에 연결&#40;SQL Server 구성 관리자&#41;](../../relational-databases/sql-server-configuration-manager.md)  
   

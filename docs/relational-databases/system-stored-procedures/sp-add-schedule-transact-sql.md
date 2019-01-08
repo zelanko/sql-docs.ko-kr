@@ -18,12 +18,12 @@ ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2d4f057351f6d3c4713c616c90748c2c6e43524f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fc52fd7af36d2238c53d8cbd877b7a6d43cd1dd
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837761"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591487"
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@schedule_name =** ] **'***schedule_name***'**  
+ [  **@schedule_name =** ] **'**_schedule_name_**'**  
  일정의 이름입니다. *schedule_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@enabled =** ] *사용 하도록 설정*  
@@ -98,7 +98,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**0x8**|시간|  
   
  [ **@freq_subday_interval =** ] *freq_subday_interval*  
- 수가 *freq_subday_type* 각 작업 실행 간에 발생 하는 기간. *freq_subday_interval* 됩니다 **int**, 기본값은 **0**합니다. 참고: 간격은 10 초 이상 이어야 합니다. *freq_subday_interval* 이러한 경우에는 무시 됩니다. 여기서 *freq_subday_type* 값과 같음 **1**합니다.  
+ 수가 *freq_subday_type* 각 작업 실행 간에 발생 하는 기간. *freq_subday_interval* 됩니다 **int**, 기본값은 **0**합니다. 참고: 간격은 10초보다 길어야 합니다. *freq_subday_interval* 이러한 경우에는 무시 됩니다. 여기서 *freq_subday_type* 값과 같음 **1**합니다.  
   
  [ **@freq_relative_interval =** ] *freq_relative_interval*  
  작업의 발생 *freq_interval* 각 월의 경우 *freq_interval* 이 32 (매월 상대적)입니다. *freq_relative_interval* 됩니다 **int**, 기본값은 **0**, 이며 다음이 값 중 하나일 수 있습니다. *freq_relative_interval* 이러한 경우에는 무시 됩니다. 여기서 *freq_type* 32와 같지 않습니다.  
@@ -106,7 +106,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |값|설명(단위)|  
 |-----------|--------------------------|  
 |**1**|첫째|  
-|**2**|둘째|  
+|**2**|Second|  
 |**4**|셋째|  
 |**8**|넷째|  
 |**16**|마지막|  
@@ -130,13 +130,13 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [ **@active_end_time =** ] *active_end_time*  
  사이의 임의의 날짜에서 시간 *active_start_date* 하 고 *active_end_date* 작업의 실행을 종료 합니다. *active_end_time* 됩니다 **int**, 기본값은 **235959**를 오후 11시 59분: 59를 나타내는 이때 시간은 HHMMSS 형식으로 입력해야 합니다.  
   
- [ **@owner_login_name**= ] **'***owner_login_name***'**  
+ [ **@owner_login_name**=] **'**_owner_login_name_**'**  
  일정을 소유하는 서버 보안 주체의 이름입니다. *owner_login_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 일정은 작성자에 의해 소유를 나타냅니다.  
   
- [ **@schedule_uid**=] *schedule_uid * 출력**  
+ [ **@schedule_uid**=] _schedule_uid_**출력**  
  일정의 고유 식별자입니다. *schedule_uid* 형식의 변수가 **uniqueidentifier**합니다.  
   
- [ **@schedule_id**= ] *schedule_id***OUTPUT**  
+ [ **@schedule_id**=] _schedule_id_**출력**  
  일정에 대한 식별자입니다. *schedule_id* 형식의 변수가 **int**합니다.  
   
  [ **@originating_server**= ] *server_name*  

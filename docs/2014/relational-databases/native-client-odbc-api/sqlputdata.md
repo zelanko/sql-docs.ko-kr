@@ -14,12 +14,12 @@ ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3226e759ab1a92cdfa3a251c1803a54ed9ed010a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e15353cd9f4c4a837fe5978d00259ad5460d50d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140783"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358555"
 ---
 # <a name="sqlputdata"></a>SQLPutData
   SQLPutData를 사용 하 여 65,535 바이트 이상의 데이터를 전송 하는 경우 다음 제한 사항이 적용 (에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 4.21a) 또는 400KB sql_longvarchar (SQL Server 버전 6.0 이상)에 대 한 데이터 (`text`), SQL_WLONGVARCHAR (`ntext`) 또는 SQL_LONGVARBINARY (`image`) 열:  
@@ -51,7 +51,7 @@ ms.locfileid: "48140783"
   
  합니다 *DataPtr* 매개 변수는 무시 되지만 NULL이 아닌 값으로 설정 해야 합니다. 변수 TVP 행 바인딩에 대 한 자세한 내용은 섹션을 참조 [바인딩 및 Data Transfer of Table-Valued 매개 변수 및 열 값](../native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)합니다.  
   
- 경우 *StrLen_Or_Ind* SQL_DEFAULT_PARAM 또는 0과 SQL_PARAMSET_SIZE 사이의 숫자 이외의 모든 값 (즉, 합니다 *ColumnSize* SQLBindParameter의 매개 변수), 오류가 발생 합니다. 이 오류가 발생 하면 SQLPutData에서 sql_error: SQLSTATE HY090, = "잘못 된 문자열 또는 버퍼 길이"입니다.  
+ 경우 *StrLen_Or_Ind* SQL_DEFAULT_PARAM 또는 0과 SQL_PARAMSET_SIZE 사이의 숫자 이외의 모든 값 (즉, 합니다 *ColumnSize* SQLBindParameter의 매개 변수), 오류가 발생 합니다. 이 오류가 발생하면 SQLPutData에서 SQL_ERROR: SQLSTATE=HY090, "잘못된 문자열 또는 버퍼 길이입니다."가 반환됩니다.  
   
  테이블 반환 매개 변수에 대 한 자세한 내용은 참조 하세요. [테이블 반환 매개 변수 &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)합니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48140783"
  `SQLPutData`는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [Large CLR User-Defined 형식 &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLPutData 함수](http://go.microsoft.com/fwlink/?LinkId=59365)   
+ [SQLPutData 함수](https://go.microsoft.com/fwlink/?LinkId=59365)   
  [ODBC API 구현 정보](odbc-api-implementation-details.md)  
   
   

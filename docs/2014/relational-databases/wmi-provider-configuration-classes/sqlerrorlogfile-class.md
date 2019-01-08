@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: wmi
 ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1cd24b1717bca086bf1419a2df3b44b57104d1f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c5c6f1998cffc268a57318e0124f74d3411a3b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226613"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370445"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile 클래스
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일에 대한 정보를 보기 위한 속성을 제공합니다.  
@@ -42,11 +40,11 @@ class SQLErrorLogFile
   
 |||  
 |-|-|  
-|ArchiveNumber|데이터 형식: `uint32`<br /><br /> 액세스 형식: 읽기 전용<br /><br /> <br /><br /> 로그 파일에 대한 보관 파일 번호입니다.|  
-|InstanceName|데이터 형식: `string`<br /><br /> 액세스 형식: 읽기 전용<br /><br /> 한정자: Key<br /><br /> <br /><br /> 로그 파일이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|  
-|LastModified|데이터 형식: `datetime`<br /><br /> 액세스 형식: 읽기 전용<br /><br /> <br /><br /> 로그 파일이 마지막으로 수정된 날짜입니다.|  
-|LogFileSize|데이터 형식: `uint32`<br /><br /> 액세스 형식: 읽기 전용<br /><br /> <br /><br /> 로그 파일의 크기(바이트)입니다.|  
-|이름|데이터 형식: `string`<br /><br /> 액세스 형식: 읽기 전용<br /><br /> 한정자: Key<br /><br /> <br /><br /> 로그 파일의 이름입니다.|  
+|ArchiveNumber|데이터 형식: `uint32`<br /><br /> 액세스 유형: 읽기 전용<br /><br /> <br /><br /> 로그 파일에 대한 보관 파일 번호입니다.|  
+|InstanceName|데이터 형식: `string`<br /><br /> 액세스 유형: 읽기 전용<br /><br /> 한정자: Key<br /><br /> <br /><br /> 로그 파일이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|  
+|LastModified|데이터 형식: `datetime`<br /><br /> 액세스 유형: 읽기 전용<br /><br /> <br /><br /> 로그 파일이 마지막으로 수정된 날짜입니다.|  
+|LogFileSize|데이터 형식: `uint32`<br /><br /> 액세스 유형: 읽기 전용<br /><br /> <br /><br /> 로그 파일의 크기(바이트)입니다.|  
+|이름|데이터 형식: `string`<br /><br /> 액세스 유형: 읽기 전용<br /><br /> 한정자: Key<br /><br /> <br /><br /> 로그 파일의 이름입니다.|  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -95,7 +93,7 @@ Next
   
      **\<Drive>:\Program Files\Microsoft SQL Server\MSSQL11** **.\<InstanceName>\MSSQL\Log**  
   
- 방화벽을 통해 연결하는 경우 방화벽에 원격 대상 컴퓨터의 WMI에 대한 예외가 설정되어 있는지 확인합니다. 자세한 내용은 [WMI Remotely Starting with Windows Vista 연결할](http://go.microsoft.com/fwlink/?LinkId=178848)합니다.  
+ 방화벽을 통해 연결하는 경우 방화벽에 원격 대상 컴퓨터의 WMI에 대한 예외가 설정되어 있는지 확인합니다. 자세한 내용은 [WMI Remotely Starting with Windows Vista 연결할](https://go.microsoft.com/fwlink/?LinkId=178848)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SqlErrorLogEvent 클래스](sqlerrorlogevent-class.md)   

@@ -11,12 +11,12 @@ ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e9c5505aaed0fba7ff5097c059f11cd0af8f50f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 67e1fe559e8bbb4c9c484671737223766c4a0554
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117493"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358155"
 ---
 # <a name="report-builder-ssrs"></a>보고서 작성기(SSRS)
   보고서 작성기는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Microsoft Office 환경에서 작업하는 것을 선호하는 비즈니스 사용자를 위한 보고서 제작 환경입니다. 보고서를 작성할 때는 데이터를 가져올 위치, 가져올 데이터 및 데이터를 표시할 방법을 정의해야 합니다. 보고서를 실행하면 보고서 처리기에서 사용자가 지정한 모든 정보를 사용하여 데이터를 검색하고 이를 보고서 레이아웃에 따라 정렬하여 보고서를 생성합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "48117493"
   
 -   보고서 및 관련 항목을 SharePoint 라이브러리, 보고서 서버 또는 로컬 컴퓨터에 저장합니다.  
   
- 보고서 작성기와 보고서 디자이너는 많은 기능을 공유합니다. 보고서 작성기에 대한 자세한 내용은 msdn.microsoft.com에서 [보고서 작성기 설명서](http://go.microsoft.com/fwlink/?LinkId=154494) 를 참조하십시오.  
+ 보고서 작성기와 보고서 디자이너는 많은 기능을 공유합니다. 보고서 작성기에 대한 자세한 내용은 msdn.microsoft.com에서 [보고서 작성기 설명서](https://go.microsoft.com/fwlink/?LinkId=154494) 를 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 작성기 액세스 구성](../report-server/configure-report-builder-access.md)   

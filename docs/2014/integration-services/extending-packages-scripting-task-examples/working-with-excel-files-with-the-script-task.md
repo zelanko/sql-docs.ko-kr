@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,12 +16,12 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78dec0807ebcfc025d997b995c7b2c083a1baf02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dbd4f546a6e09d771577cd5d297e6f1a58175469
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049553"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369915"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>스크립트 태스크를 사용한 Excel 파일 작업
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 파일 형식으로 스프레드시트에 저장된 데이터를 작업하기 위한 Excel 연결 관리자, Excel 원본 및 Excel 대상을 제공합니다. 이 항목에서는 스크립트 태스크를 사용하여 사용 가능한 Excel 데이터베이스(통합 문서 파일) 및 테이블(워크시트 및 명명된 범위)에 대한 정보를 가져오는 기술을 설명합니다. 이러한 예제는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB 공급자가 지원하는 다른 파일 기반 데이터 원본에도 사용할 수 있도록 쉽게 수정할 수 있습니다.  
@@ -32,9 +30,9 @@ ms.locfileid: "48049553"
   
  [예 1: Excel 파일의 존재 여부 확인](#example1)  
   
- [예 2: Excel 테이블의 존재 여부 확인](#example2)  
+ [예제 2: Excel 테이블의 존재 여부 확인](#example2)  
   
- [예 3: 폴더의 Excel 파일 목록 가져오기](#example3)  
+ [예제 3: 폴더의 Excel 파일 목록 가져오기](#example3)  
   
  [예 4: Excel 파일의 테이블 목록 가져오기](#example4)  
   
@@ -266,7 +264,7 @@ public class ScriptMain
   
          -또는-  
   
-    -   속성 필드 옆의 줄임표(**…**) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelFolder 변수를 선택합니다.  
+    -   속성 필드 옆의 줄임표(**...**) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelFolder 변수를 선택합니다.  
   
 3.  **ReadWriteVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
@@ -274,7 +272,7 @@ public class ScriptMain
   
          -또는-  
   
-    -   속성 필드 옆의 줄임표(**…**) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelFiles 변수를 선택합니다.  
+    -   속성 필드 옆의 줄임표(**...**) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelFiles 변수를 선택합니다.  
   
 4.  **스크립트 편집**을 클릭하여 스크립트 편집기를 엽니다.  
   
@@ -341,7 +339,7 @@ public class ScriptMain
   
          -또는-  
   
-    -   속성 필드 옆의 줄임표(**…**) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelFile 변수를 선택합니다.  
+    -   속성 필드 옆의 줄임표(**...**) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelFile 변수를 선택합니다.  
   
 3.  **ReadWriteVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
@@ -349,7 +347,7 @@ public class ScriptMain
   
          -또는-  
   
-    -   속성 필드 옆의 줄임표(**…**) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelTablesvariable 변수를 선택합니다.  
+    -   속성 필드 옆의 줄임표(**...**) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelTablesvariable 변수를 선택합니다.  
   
 4.  **스크립트 편집**을 클릭하여 스크립트 편집기를 엽니다.  
   
@@ -454,7 +452,7 @@ public class ScriptMain
   
          -또는-  
   
-    -   속성 필드 옆의 줄임표(**…**) 단추를 클릭하고 **변수 선택** 대화 상자에서 해당 변수를 선택합니다.  
+    -   속성 필드 옆의 줄임표(**...**) 단추를 클릭하고 **변수 선택** 대화 상자에서 해당 변수를 선택합니다.  
   
 5.  **스크립트 편집**을 클릭하여 스크립트 편집기를 엽니다.  
   
@@ -543,7 +541,7 @@ public class ScriptMain
 }  
 ```  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [Excel 연결 관리자](../connection-manager/excel-connection-manager.md)   

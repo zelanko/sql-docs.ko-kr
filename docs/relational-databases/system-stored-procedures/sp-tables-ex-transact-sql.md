@@ -18,12 +18,12 @@ ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 44ffbbfdac8e1976df99be35ecbed7dd94e3ee61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f034b1247f9865b83077ed11f644d6fdbbc4cecd
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745441"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589388"
 ---
 # <a name="sptablesex-transact-sql"></a>sp_tables_ex(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,19 +45,19 @@ sp_tables_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@table_server=** ] **'***table_server***'**  
+ [  **@table_server=** ] **'**_table_server_**'**  
  테이블 정보가 반환될 연결된 서버의 이름입니다. *table_server* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **하십시오** [  **@table_name=** ] **'***table_name***'**]  
+ [ **하십시오** [  **@table_name=** ] **'**_table_name_**'**]  
  데이터 형식 정보가 반환될 테이블의 이름입니다. *table_name*됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@table_schema=** ] **'***table_schema***'**]  
+ [  **@table_schema=** ] **'**_table_schema_**'**]  
  테이블 스키마입니다. *table_schema*됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@table_catalog=** ] **'***table_catalog***'**  
+ [  **@table_catalog=** ] **'**_table_catalog_**'**  
  데이터베이스의 이름이 지정 된 *table_name* 상주 합니다. *table_catalog* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@table_type=** ] **'***table_type***'**  
+ [  **@table_type=** ] **'**_table_type_**'**  
  반환할 테이블의 유형입니다. *table_type* 됩니다 **sysname**, 기본값은 NULL 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
@@ -71,7 +71,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE**|사용자 테이블 이름입니다.|  
 |**VIEW**|뷰 이름입니다.|  
   
- [  **@fUsePattern=** ] **'***fUsePattern***'**  
+ [  **@fUsePattern=** ] **'**_fUsePattern_**'**  
  확인 여부를 문자 **_**, **%** 를 **[**, 및 **]** 와일드 카드 문자로 해석 됩니다. 유효한 값은 0(패턴 일치 해제)과 1(패턴 일치 설정)입니다. *fUsePattern* 됩니다 **비트**, 기본값은 1입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -81,7 +81,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|테이블 한정자 이름입니다. 다양 한 DBMS 제품에서는 테이블에 대해 세 부분으로 이루어진 이름 (*한정자 ***.*** 소유자 ***.*** 이름*). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 다른 제품에서는 테이블이 있는 데이터베이스 환경의 서버 이름을 나타냅니다. 이 필드는 NULL이 될 수 있습니다.|  
+|**TABLE_CAT**|**sysname**|테이블 한정자 이름입니다. 다양 한 DBMS 제품에서는 테이블에 대해 세 부분으로 이루어진 이름 (_한정자_**.** _소유자_**.** _이름을_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 다른 제품에서는 테이블이 있는 데이터베이스 환경의 서버 이름을 나타냅니다. 이 필드는 NULL이 될 수 있습니다.|  
 |**TABLE_SCHEM 순**|**sysname**|테이블 소유자 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 테이블을 만든 데이터베이스 사용자의 이름을 나타냅니다. 이 필드는 항상 값을 반환합니다.|  
 |**TABLE_NAME**|**sysname**|테이블 이름입니다. 이 필드는 항상 값을 반환합니다.|  
 |**TABLE_TYPE**|**varchar(32)**|테이블, 시스템 테이블 또는 뷰입니다.|  

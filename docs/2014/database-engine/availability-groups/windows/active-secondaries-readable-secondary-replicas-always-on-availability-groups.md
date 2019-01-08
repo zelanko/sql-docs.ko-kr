@@ -1,5 +1,5 @@
 ---
-title: '활성 보조: 읽기 가능한 보조 복제본 (Always On 가용성 그룹) | Microsoft Docs'
+title: '활성 보조 복제본: 읽기 가능한 보조 복제본 (Always On 가용성 그룹) | Microsoft Docs'
 ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b35f34499100e8331f968d6f9297280451885290
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 2ac104808f5d4e0b2b612c8f3ebbd17f34fc6493
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169613"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53358585"
 ---
-# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>활성 보조: 읽기 가능한 보조 복제본(Always On 가용성 그룹)
+# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>활성 보조 복제본: 읽기 가능한 보조 복제본 (Always On 가용성 그룹)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 활성 보조 기능에는 하나 이상의 보조 복제본(*읽기 가능한 보조 복제본*)에 대한 읽기 전용 액세스 지원이 포함됩니다. 읽기 가능한 보조 복제본은 해당 보조 데이터베이스 모두에 대한 읽기 전용 액세스를 허용합니다. 하지만 읽기 가능한 보조 데이터베이스는 읽기 전용으로 설정되지 않습니다. 이러한 데이터베이스는 동적입니다. 해당 주 데이터베이스에서 변경 내용이 발생하면 보조 데이터베이스도 변경됩니다. 일반적인 보조 복제본의 경우 보조 데이터베이스의 내구성이 있는 메모리 액세스에 최적화된 테이블을 포함한 데이터는 거의 실시간 데이터입니다. 또한 전체 텍스트 인덱스는 보조 데이터베이스와 동기화됩니다. 대부분의 경우 주 데이터베이스와 해당하는 보조 데이터베이스 간의 데이터 대기 시간은 몇 초 이내입니다.  
   
  주 데이터베이스에서 적용되는 보안 설정은 보조 데이터베이스에서도 유지됩니다. 여기에는 사용자, 데이터베이스 역할 및 애플리케이션 역할과 함께 각각의 사용 권한이 포함되며 주 데이터베이스에 TDE(투명한 데이터 암호화)가 설정되어 있는 경우 TDE도 포함됩니다.  
@@ -238,7 +238,7 @@ GO
     SELECT * FROM t_hk WITH (UPDLOCK)  
     ```  
   
--   크로스 컨테이너 트랜잭션의 경우 메모리 최적화 테이블에 액세스하는 세션 격리 수준 "스냅숏"의 트랜잭션은 지원되지 않습니다. 예:  
+-   크로스 컨테이너 트랜잭션에 대 한 세션 격리 수준의 트랜잭션에서 "스냅숏" 액세스 하는 메모리 최적화 테이블은 지원 되지 않습니다. 예:  
   
     ```tsql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT  
@@ -292,7 +292,7 @@ GO
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>관련 항목  
  [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

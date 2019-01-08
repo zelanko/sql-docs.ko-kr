@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b80ec93ef671f2f9a564c81ae2ebb10c19c43dfd
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 5b4eb865c8c0498e72943c128ff0106638005166
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018338"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980049"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -117,22 +117,22 @@ fn_get_audit_file ( file_pattern,
 |user_defined_event_id|**smallint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 사용자 정의 이벤트 id를 인수로 전달 **sp_audit_write**합니다. **NULL** 시스템 이벤트 (기본값) 및 0이 아닌 사용자 정의 이벤트에 대 한 합니다. 자세한 내용은 [sp_audit_write &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)합니다.|  
 |user_defined_information|**nvarchar(4000)**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 사용자에 기록 하려는 추가 정보를 기록 하는 데 사용 |사용 하 여 감사 로그를 **sp_audit_write** 저장 프로시저입니다.|  
 |audit_schema_version |**int** | |  
-|sequence_group_id |**varbinary** | **적용할**: SQL Server만 (2016부터 시작) |  
-|transaction_id |**bigint** | **적용할**: SQL Server만 (2016부터 시작) |  
-|client_ip |**nvarchar(128)** | **적용할**: Azure SQL DB + SQL 서버 (2017부터 시작) |  
-|application_name |**nvarchar(128)** | **적용할**: Azure SQL DB + SQL 서버 (2017부터 시작) |  
-|duration_milliseconds |**bigint** | **적용할**: Azure SQL DB에만 |  
-|response_rows |**bigint** | **적용할**: Azure SQL DB에만 |  
-|affected_rows |**bigint** | **적용할**: Azure SQL DB에만 |  
-|connection_id |GUID | **적용할**: Azure SQL DB에만 |
-|data_sensitivity_information |nvarchar(4000) | **적용할**: Azure SQL DB에만 |
+|sequence_group_id |**varbinary** | **적용 대상**: SQL Server만 (2016부터 시작) |  
+|transaction_id |**bigint** | **적용 대상**: SQL Server만 (2016부터 시작) |  
+|client_ip |**nvarchar(128)** | **적용 대상**: Azure SQL DB + SQL 서버 (2017부터 시작) |  
+|application_name |**nvarchar(128)** | **적용 대상**: Azure SQL DB + SQL 서버 (2017부터 시작) |  
+|duration_milliseconds |**bigint** | **적용 대상**: Azure SQL DB에만 |  
+|response_rows |**bigint** | **적용 대상**: Azure SQL DB에만 |  
+|affected_rows |**bigint** | **적용 대상**: Azure SQL DB에만 |  
+|connection_id |GUID | **적용 대상**: Azure SQL DB에만 |
+|data_sensitivity_information |nvarchar(4000) | **적용 대상**: Azure SQL DB에만 |
   
 ## <a name="remarks"></a>Remarks  
  경우는 *file_pattern* 에 전달 된 인수 **fn_get_audit_file** 경로 또는 존재 하지 않는 파일을 참조 하거나 파일이 감사 파일이 없으면는 **MSG_INVALID_AUDIT_FILE**오류 메시지가 반환 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
- - **SQL Server**: 필요 합니다 **CONTROL SERVER** 권한.  
- - **Azure SQL DB**: 필요 합니다 **CONTROL DATABASE** 권한.     
+ - **SQL Server**: **CONTROL SERVER** 권한이 필요합니다.  
+ - **Azure SQL DB**: 필요 합니다 **제어 데이터베이스** 권한.     
     - 서버 관리자는 서버의 모든 데이터베이스의 감사 로그를 액세스할 수 있습니다.
     - 만 아닌 서버 관리자는 현재 데이터베이스에서 감사 로그를 액세스할 수 있습니다.
     - 앞의 조건을 충족 하지 않는 blob 건너뜁니다 (건너뛴된 blob 목록에에서 나타납니다 쿼리 출력 메시지)를 함수 액세스 허용 되는 blob 에서만에서 로그를 반환 합니다.  
@@ -141,10 +141,10 @@ fn_get_audit_file ( file_pattern,
 
 - **SQL Server**
 
-  다음 예에서는 이름이 `\\serverName\Audit\HIPPA_AUDIT.sqlaudit`인 파일에서 읽습니다.  
+  다음 예에서는 이름이 `\\serverName\Audit\HIPAA_AUDIT.sqlaudit`인 파일에서 읽습니다.  
   
   ```  
-  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPPA_AUDIT.sqlaudit',default,default);  
+  SELECT * FROM sys.fn_get_audit_file ('\\serverName\Audit\HIPAA_AUDIT.sqlaudit',default,default);  
   GO  
   ```  
 

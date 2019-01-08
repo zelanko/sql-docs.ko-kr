@@ -15,12 +15,12 @@ ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b271d597f9941e83e9ad8ce6993831a738108e7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: HT
+ms.openlocfilehash: 48bb00cba9a01029da31146f9e98e2ef8b3627d6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147878"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362615"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>ReadOnly 모드와 ReadWrite 모드 간 Analysis Services 데이터베이스 전환
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA(데이터베이스 관리자)가 테이블 형식 또는 다차원 데이터베이스의 읽기/쓰기 모드를 변경해야 하는 경우가 종종 있습니다. 대개 사용자 경험 개선을 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버의 풀에서 데이터베이스를 공유하는 것과 같은 비즈니스 요구 사항에 따라 데이터베이스의 읽기/쓰기 모드를 변경합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "50147878"
     > [!IMPORTANT]  
     >  데이터베이스를 분리하면 즉시 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하여 데이터베이스 위치를 찾을 수 없게 됩니다.  
   
-3.  데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **분리...** 를 선택합니다.  
+3.  데이터베이스를 마우스 오른쪽 단추로 클릭 하 고 선택 **분리 하는 중...**  
   
 4.  분리되는 데이터베이스에 암호를 할당한 후 **확인** 을 클릭하여 분리 명령을 실행합니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "50147878"
   
 6.  마우스 오른쪽 단추로 클릭 합니다 **데이터베이스** 선택한 폴더 **연결 하는 중...**  
   
-7.  **폴더** 입력란에 데이터베이스 폴더의 원래 위치를 입력합니다. 또는 찾아보기 단추 (**…**)를 사용하여 데이터베이스 폴더를 찾을 수 있습니다.  
+7.  **폴더** 입력란에 데이터베이스 폴더의 원래 위치를 입력합니다. 또는 찾아보기 단추를 사용할 수 있습니다 (**...** ) 데이터베이스 폴더를 찾습니다.  
   
 8.  데이터베이스의 읽기/쓰기 모드를 선택합니다.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "50147878"
   
 4.  다음 XMLA 스크립트 템플릿을 복사합니다.  
   
- `<Detach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Detach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Object>`  
   
@@ -155,11 +155,11 @@ ms.locfileid: "50147878"
   
 3.  다음 XMLA 스크립트 템플릿을 새 XMLA 탭에 복사합니다.  
   
- `<Attach xmlns="http://schemas.microsoft.com/analysisservices/2003` `/engine` `">`  
+ `<Attach xmlns="https://schemas.microsoft.com/analysisservices/2003` `/engine` `">`  
   
  `<Folder>%dbFolder%</Folder>`  
   
- `<ReadWriteMode xmlns="http://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
+ `<ReadWriteMode xmlns="https://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
   
  `</Attach>`  
   

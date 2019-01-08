@@ -1,5 +1,5 @@
 ---
-title: 단원 1 탐색 하 고 Python 및 T-SQL (SQL Server Machine Learning)를 사용 하 여 데이터 시각화 | Microsoft Docs
+title: 단원 1 탐색 하 고 Python 및 T-SQL-SQL Server Machine Learning을 사용 하 여 데이터 시각화
 description: 포함 하는 방법을 보여 주는 자습서 SQL Server에서 Python 저장 프로시저 및 T-SQL 함수
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cf14409cdb321d2f52196e0793ea092ab9ba2430
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: e92b2e1a5d4d5e1ad6990ffafa1a1cfcfbb9d806
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030983"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645342"
 ---
 # <a name="explore-and-visualize-the-data"></a>데이터 탐색 및 시각화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -77,7 +77,7 @@ Serialize 된 Python을 반환 하는 저장된 프로시저 `figure` 스트림 
     - Python 스크립트는 간단 합니다. **matplotlib** `figure` 개체 히스토그램 및 산 점도 할 때 사용 되 고 이러한 개체는 사용 하 여 serialize 한 다음는 `pickle` 라이브러리.
     - Python 그래픽 개체가 serialize 되는 **pandas** 데이터 프레임 출력.
   
-    ```SQL
+    ```sql
     DROP PROCEDURE IF EXISTS PyPlotMatplotlib;
     GO
 
@@ -135,13 +135,13 @@ Serialize 된 Python을 반환 하는 저장된 프로시저 `figure` 스트림 
 
 2. 이제 입력 쿼리로 하드 코드 된 데이터에서 플롯을 생성 하려면 인수 없이 저장된 프로시저를 실행 합니다.
 
-    ```
+    ```sql
     EXEC [dbo].[PyPlotMatplotlib]
     ```
 
 3. 결과 다음과 같이 해야 합니다.
   
-    ```
+    ```sql
     plot
     0xFFD8FFE000104A4649...
     0xFFD8FFE000104A4649...

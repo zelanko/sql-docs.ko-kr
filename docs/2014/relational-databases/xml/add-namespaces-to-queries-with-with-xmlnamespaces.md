@@ -21,12 +21,12 @@ ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b9689a0e46abbcba53e7c9765e9d327df4ef220a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04b4696f52566d0217e0d0a26c8a0b0f30308b7f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172473"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359515"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가
   [WITH XMLNAMESPACES(Transact-SQL)](/sql/t-sql/xml/with-xmlnamespaces) 는 다음과 같은 방식으로 네임스페이스 URI를 지원합니다.  
@@ -206,14 +206,14 @@ go
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
-declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
     <Product   
         ProductModelID= "{ sql:column("ProductModelID") }"   
         />  
 ') AS Result  
 FROM Production.ProductModel  
 WHERE CatalogDescription.exist('  
-    declare namespace  pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+    declare namespace  pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      /pd:ProductDescription[(pd:Specifications)]'  
     ) = 1  
 ```  
@@ -221,13 +221,13 @@ WHERE CatalogDescription.exist('
  이전 쿼리에서 **query()** 및 **exist()** 메서드는 모두 해당 프롤로그에서 같은 네임스페이스를 선언합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
-declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
 ```  
   
  또는 WITH XMLNAMESPACES를 먼저 선언하고 쿼리에 있는 네임스페이스 접두사를 사용할 수 있습니다. 이 경우 **query()** 및 **exist()** 메서드는 해당 프롤로그에 네임스페이스 선언을 포함시킬 필요가 없습니다.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
 SELECT ProductModelID, CatalogDescription.query('  
     <Product   
         ProductModelID= "{ sql:column("ProductModelID") }"   
@@ -242,7 +242,7 @@ Go
   
  XQuery 프롤로그에 있는 명시적 선언은 네임스페이스 접두사와 WITH 절에 정의된 기본 요소 네임스페이스를 무시합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [xml 데이터 형식 메서드](/sql/t-sql/xml/xml-data-type-methods)   
  [XQuery 언어 참조&#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server)   
  [WITH XMLNAMESPACES&#40;Transact-SQL&#41;](/sql/t-sql/xml/with-xmlnamespaces)   

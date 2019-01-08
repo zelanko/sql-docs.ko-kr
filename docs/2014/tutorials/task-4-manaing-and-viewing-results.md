@@ -13,19 +13,19 @@ ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb0cc2f091ce6365e91dd285e553498cc595c76e
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 5062f24c679d2d85da09a1dc81d9c487d6536f1f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119877"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377535"
 ---
-# <a name="task-4-manaing-and-viewing-results"></a>태스크 4: 결과 관리 및 보기
-  이 작업에서는 컴퓨터 기반 정리 결과를 검토하고 공급자 데이터에서 대화형 정리를 수행할 수도 있습니다. 참조 [대화형 정리 단계](http://msdn.microsoft.com/library/hh213061.aspx#Interactive) 대 한 자세한 내용은 합니다.  
+# <a name="task-4-manaing-and-viewing-results"></a>작업 4: 결과 관리 및 보기
+  이 작업에서는 컴퓨터 기반 정리 결과를 검토하고 공급자 데이터에서 대화형 정리를 수행할 수도 있습니다. 참조 [대화형 정리 단계](https://msdn.microsoft.com/library/hh213061.aspx#Interactive) 대 한 자세한 내용은 합니다.  
   
 1.  선택 **Contact Email** 도메인 목록에서 도메인입니다.  
   
-2.  으로 전환 합니다 **잘못 된** 오른쪽 창에서 탭 합니다. 두 개의 전자 메일 주소의 마지막에 's' 문자가 누락된 것을 확인할 수 있습니다. 모든 전자 메일 주소를 사용 하 여 종료 해야 하는 도메인 규칙에 의해 무효화 되도록 발견 된 이러한 두 전자 메일 **@adventure-works.com** (사용 하 여의 '). DQS는 정리 중 도메인 규칙을 사용해서 전자 메일이 올바른지 여부를 확인합니다. 이 탭에는 기술 자료에서 잘못된 것으로 표시되었거나 도메인 규칙에 위배되는 도메인 값이 표시됩니다. 여기에서 이 값들은 도메인 규칙(전자 메일 유효성 검사)에 위배됩니다.  
+2.  으로 전환 합니다 **잘못 된** 오른쪽 창에서 탭 합니다. 두 개의 메일 주소를 알림 문자가 누락 된 ' 끝입니다. 모든 전자 메일 주소를 사용 하 여 종료 해야 하는 도메인 규칙에 의해 무효화 되도록 발견 된 이러한 두 전자 메일 **@adventure-works.com** (사용 하 여의 '). DQS는 정리 중 도메인 규칙을 사용해서 전자 메일이 올바른지 여부를 확인합니다. 이 탭에는 기술 자료에서 잘못된 것으로 표시되었거나 도메인 규칙에 위배되는 도메인 값이 표시됩니다. 여기에서 이 값들은 도메인 규칙(전자 메일 유효성 검사)에 위배됩니다.  
   
 3.  에 **수정** 열, 형식 올바른 전자 메일 주소 끝나는 **@adventure-works.com** (사용 하 여의 ').  
   
@@ -71,7 +71,7 @@ ms.locfileid: "49119877"
   
 18. 선택 된 **Address Validation** 도메인 목록에서 복합 도메인입니다.  
   
-19. 오른쪽 창에서 전환 하는 **올바름** 탭 합니다. 올바른 것으로 발견 되는 주소를 표시 합니다 **Melissa Data – Address Check** DQS 서비스로 합니다 **Azure Marketplace**합니다.  
+19. 오른쪽 창에서 전환 하는 **올바름** 탭 합니다. 올바른 것으로 발견 되는 주소를 표시 합니다 **Melissa Data-Address Check** DQS 서비스로 합니다 **Azure Marketplace**합니다.  
   
 20. 으로 전환 합니다 **수정 됨** 탭 합니다.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "49119877"
   
 22. 다음에 유의 합니다 **승인** 라디오 단추는 목록에서이 항목에 대해 이미 선택 합니다. 이 항목에 대 한 기본 동작을 **수정 됨** 탭 합니다.  
   
-23. 으로 전환 합니다 **제안** 탭 합니다. 제안한 변경 내용을 검토 합니다 **Melissa Data – Address Check** 서비스입니다.  
+23. 으로 전환 합니다 **제안** 탭 합니다. 제안한 변경 내용을 검토 합니다 **Melissa Data-Address Check** 서비스입니다.  
   
 24. **모든 용어 승인 클릭** 도구 모음 단추를 클릭 **확인** 에 **확인** 메시지 상자입니다.  
   
@@ -90,6 +90,6 @@ ms.locfileid: "49119877"
 25. **다음** 을 클릭하여 **내보내기** 페이지로 전환합니다.  
   
 ## <a name="next-step"></a>다음 단계  
- [태스크 5: 정리 결과를 Excel 파일로 내보내기](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
+ [작업 5: 정리 결과 Excel 파일로 내보내기](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
   
   

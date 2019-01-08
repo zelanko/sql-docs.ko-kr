@@ -19,12 +19,12 @@ ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2bcf7cb620a97578b921ca09d565ff2ef2fe77a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b18efaacb7ab891402e84b851735870c4c47e883
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080975"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360515"
 ---
 # <a name="analysis-services"></a>Analysis Services
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 의사 결정 지원 및 BI(비즈니스 인텔리전스) 솔루션에서 사용되는 온라인 분석 데이터 엔진으로, Excel, Reporting Services 보고서, 타사 BI 도구와 같은 클라이언트 응용 프로그램 및 비즈니스 보고서에 대해 분석 데이터를 제공합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 일반적인 워크플로에는 OLAP 또는 표 형식 데이터 모델 작성, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 데이터베이스로 모델 배포, 데이터베이스를 처리하여 데이터와 함께 로드, 데이터 액세스 허용 권한 할당이 포함됩니다. 이 다목적 데이터 모델은 준비가 되면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 데이터 원본으로 지원하는 클라이언트 응용 프로그램에서 액세스할 수 있습니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "48080975"
  [Analysis Services 자습서 &#40;SSAS&#41;](analysis-services-tutorials-ssas.md)   
  [SQL Server 2014 설치](../database-engine/install-windows/installation-for-sql-server.md)   
  [개발자 가이드 &#40;Analysis Services&#41;](analysis-services-developer-documentation.md)   
- [SQL Server 리소스 센터](http://go.microsoft.com/fwlink/?linkID=219676)   
- [SQLCat.com](http://go.microsoft.com/fwlink/?linkID=220963)  
+ [SQL Server 리소스 센터](https://go.microsoft.com/fwlink/?linkID=219676)   
+ [SQLCat.com](https://go.microsoft.com/fwlink/?linkID=220963)  
   
   

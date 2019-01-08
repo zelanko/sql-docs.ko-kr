@@ -11,12 +11,12 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0d570104b705c55c926d3cf8e4c15af4111be29b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: a68fb27df3c1a00ca5b4cf615963d7d9ce4bf2d3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094453"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357158"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 개념(SSRS)
   이 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 개념에 대해 간략하게 설명합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "48094453"
  SharePoint 사이트에서 SharePoint 사이트 관리자 페이지를 사용하여 보고서 및 보고서 관련 사이트 콘텐츠에 대한 액세스 권한을 관리할 수 있습니다.  
   
  **일정**  
- 기본 보고서 서버에서 보고서 관리자에서 보고서, 공유 데이터 세트 및 구독을 특정 시간이나 사용량이 적은 시간에 데이터를 검색하고 보고서 및 데이터 세트 쿼리를 배달하도록 예약할 수 있습니다. 일정은 한 번 실행하거나 시간, 일, 주 또는 월 간격으로 계속 실행할 수 있습니다. 자세한 내용은 [일정](subscriptions/schedules.md)합니다.  
+ 기본 보고서 서버에서 보고서 관리자에서 보고서, 공유 데이터 세트 및 구독을 특정 시간이나 사용량이 적은 시간에 데이터를 검색하고 보고서 및 데이터 세트 쿼리를 배달하도록 예약할 수 있습니다. 일정은 한 번 실행하거나 시간, 일, 주 또는 월 간격으로 계속 실행할 수 있습니다. 자세한 내용은 [Schedules](subscriptions/schedules.md)을(를) 참조하세요.  
   
  **구독 및 배달**  
  구독은 특정 시간이나 이벤트에 대한 응답으로 구독에서 지정하는 애플리케이션 파일 형식으로 보고서를 배달하라는 요청입니다. 요청 시 보고서를 실행하는 대신 구독할 수 있습니다. 요청 시 실행 보고서는 볼 때마다 사용자가 보고서를 선택해야 합니다. 반면 구독을 사용하면 일정을 예약한 다음 보고서 배달을 자동화할 수 있습니다. 전자 메일 받은 편지함이나 파일 공유 위치에 보고서를 배달할 수 있습니다. 자세한 내용은 [구독 및 배달&#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)을 참조하세요.  
@@ -67,7 +67,7 @@ ms.locfileid: "48094453"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 보고서 솔루션을 사용자 지정하는 데 사용할 수 있는 확장형 아키텍처를 제공합니다. 보고서 서버는 사용자 지정 인증 확장 프로그램, 데이터 처리 확장 프로그램, 보고서 처리 확장 프로그램, 렌더링 확장 프로그램, 배달 확장 프로그램 및 RSReportServer.config 구성 파일에서 사용자가 구성할 수 있는 확장 프로그램을 지원합니다. 예를 들어, 보고서 뷰어에서 사용할 수 있는 내보내기 형식을 제한할 수 있습니다. 배달 및 보고서 처리 확장 프로그램은 선택적이지만 보고서 배포 또는 사용자 지정 컨트롤을 지원하려는 경우에는 반드시 필요합니다. 자세한 내용은 [확장&#40;SSRS&#41;](extensions-ssrs.md)을 참조하세요.  
   
  **보고서 액세스**  
- 요청 시 액세스 방법을 사용할 경우 보고서 보기 도구에서 보고서를 선택할 수 있습니다. 보고서 서버 구성에 따라 보고서 관리자를 사용할 수는 [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0 웹 파트, SharePoint 라이브러리 때 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 통합된 모드, 포함된 된 ReportViewer 컨트롤 또는 URL을 사용 하 여 브라우저에 설치 된 액세스 합니다. 요청 시 보고서 액세스에 대한 자세한 내용은 [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)를 참조하세요.  
+ 요청 시 액세스 방법을 사용할 경우 보고서 보기 도구에서 보고서를 선택할 수 있습니다. 보고서 서버 구성에 따라 보고서 관리자, [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0 웹 파트, SharePoint 라이브러리(SharePoint 통합 모드에서 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 가 설치된 경우), 포함된 ReportViewer 컨트롤, URL 액세스를 사용한 브라우저 등을 사용할 수 있습니다. 요청 시 보고서 액세스에 대한 자세한 내용은 [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)를 참조하세요.  
   
  요청 시 보고서를 실행하는 대신 구독할 수 있습니다. 자세한 내용은 [구독 및 배달&#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)을 참조하세요.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48094453"
  **보고서 및 보고서 정의**  
  **RDL입니다.** 보고서 정의는 RDL(Report Definition Language)이라는 XML 문법에 맞는 XML 파일입니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 보고서 작성기나 보고서 디자이너와 같은 도구에서 보고서 정의를 만듭니다. 이 파일은 데이터 원본 연결을 정의하는 요소, 데이터 검색에 사용되는 쿼리, 식, 매개 변수, 이미지, 입력란, 테이블 및 기타 디자인 타임 레이아웃을 제공합니다. 자세한 내용은 [RDL(Report Definition Language)&#40;SSRS&#41;](reports/report-definition-language-ssrs.md)을 참조하세요.  
   
- **RDLX입니다.** RDLX로 된 보고서 정의는 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 시각화 환경을 활성화하는 내부 확장 프로그램을 사용한 RDL 파일입니다. 자세한 내용은 [Power View 개요](http://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx)(영문)를 참조하세요.  
+ **RDLX입니다.** RDLX로 된 보고서 정의는 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 시각화 환경을 활성화하는 내부 확장 프로그램을 사용한 RDL 파일입니다. 자세한 내용은 [Power View 개요](https://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx)(영문)를 참조하세요.  
   
  **RDLC 합니다.** Visual Studio 보고서 디자이너는 ReportViewer 컨트롤에 사용할 XML 형식의 클라이언트 보고서 정의 파일(.rdlc)을 생성합니다.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "48094453"
  내보낸 보고서는 특정 파일 형식으로 저장되고 완전히 페이지 매김된 보고서입니다. 내보내기 형식은 설치된 렌더링 확장 프로그램에 따라 다르며 사용자 지정할 수 있습니다. 기본적으로 내보내기 형식은 Excel, Word, XML, PDF, TIFF 및 CSV입니다. 자세한 내용은 [보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Reporting Services 기능 및 태스크 &#40;SSRS&#41;](reporting-services-features-and-tasks-ssrs.md)   
+ [Reporting Services 기능 및 태스크&#40;SSRS&#41;](reporting-services-features-and-tasks-ssrs.md)   
  [기술 참조&#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)   
  [Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   

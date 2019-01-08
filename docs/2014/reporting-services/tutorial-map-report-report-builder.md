@@ -1,5 +1,5 @@
 ---
-title: '자습서: 맵 보고서(보고서 작성기) | Microsoft Docs'
+title: '자습서: 지도 보고서 (보고서 작성기) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2218fdb184fb4fe67d110b95c42f10f761ef3975
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 43135554b1340b92f4801a0f08e002142b443981
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098853"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359865"
 ---
 # <a name="tutorial-map-report-report-builder"></a>자습서: 지도 보고서(보고서 작성기)
   이 자습서는 지리적 배경에 대한 보고서 데이터를 표시하는 데 사용할 수 있는 지도 기능을 이해하는 데 도움을 주기 위해 작성되었습니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "48098853"
 10. [보고서 저장](#Save)  
   
 > [!NOTE]  
->  이 자습서에서 마법사의 단계는 두 개의 절차로 통합됩니다. 하나는 데이터 세트를 만드는 절차이고 다른 하나는 테이블을 만드는 절차입니다. 보고서 서버를 찾고, 데이터 원본을 선택하고, 데이터 집합을 만들고, 마법사를 실행하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)를 참조하세요.  
+>  이 자습서에서 마법사의 단계는 두 개의 절차로 통합됩니다. 하나는 데이터 세트를 만드는 절차이고 다른 하나는 테이블을 만드는 절차입니다. 보고서 서버를 찾고, 데이터 원본을 선택하고, 데이터 집합을 만들고, 마법사를 실행하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기 &#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)합니다.  
   
  이 자습서에 소요되는 예상 시간: 30분  
   
@@ -194,7 +194,7 @@ ms.locfileid: "48098853"
   
 9. 쿼리 디자이너 도구 모음에서 **실행** (**!**)을 클릭합니다.  
   
-     결과 집합에 일곱 개의 열이 표시 됩니다: StoreKey, StoreName, SellingArea, City, County, Sales 및 SpatialLocation 합니다. 이 데이터는 소비재를 판매하는 뉴욕 주의 상점 집합을 나타냅니다. 결과 집합의 각 행에는 상점 식별자, 상점 이름, 제품 전시 구역, 상점이 있는 도시와 군, 판매량 합계, 경도와 위도로 나타낸 공간 위치 등이 포함됩니다. 전시 구역의 범위는 455제곱피트(42제곱미터)부터 1125제곱피트(105제곱미터)까지입니다.  
+     결과 집합에 일곱 개의 열, StoreKey, StoreName, SellingArea, City, County, Sales 및 SpatialLocation이 표시됩니다. 이 데이터는 소비재를 판매하는 뉴욕 주의 상점 집합을 나타냅니다. 결과 집합의 각 행에는 상점 식별자, 상점 이름, 제품 전시 구역, 상점이 있는 도시와 군, 판매량 합계, 경도와 위도로 나타낸 공간 위치 등이 포함됩니다. 전시 구역의 범위는 455제곱피트(42제곱미터)부터 1125제곱피트(105제곱미터)까지입니다.  
   
 10. **다음**을 클릭합니다.  
   
@@ -581,7 +581,7 @@ ms.locfileid: "48098853"
 ## <a name="next-steps"></a>다음 단계  
  보고서에 지도를 추가하는 방법에 대한 연습을 완료했습니다.  
   
- 자세한 내용은 [맵 &#40;보고서 작성기 및 SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md) 및 블로그 [지도 조정의 공간 데이터를 SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=152771) blogs.msdn.com에서.  
+ 자세한 내용은 [맵 &#40;보고서 작성기 및 SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md) 및 블로그 [지도 조정의 공간 데이터를 SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=152771) blogs.msdn.com에서.  
   
  다른 자습서를 참조 하세요 [자습서 &#40;보고서 작성기&#41;](report-builder-tutorials.md)합니다.  
   

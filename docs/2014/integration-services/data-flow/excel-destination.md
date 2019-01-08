@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exceldest.f1
@@ -16,12 +15,12 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43bd1337b811472cca53d4f89d51d668d3799a1a
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
-ms.translationtype: HT
+ms.openlocfilehash: 62d9e4fa02be43f28db09228b8c9a70cccc54396
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905247"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375605"
 ---
 # <a name="excel-destination"></a>Excel 대상
   Excel 대상은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 통합 문서의 워크시트 또는 범위로 데이터를 로드합니다.  
@@ -41,13 +40,13 @@ ms.locfileid: "48905247"
 ## <a name="usage-considerations"></a>사용 시 고려 사항  
  Excel 연결 관리자는 Jet 4.0용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider와 공급자에서 지원하는 Excel ISAM(Indexed Sequential Access Method) 드라이버를 사용하여 Excel 데이터 원본에 연결하고 데이터를 읽고 씁니다.  
   
- 이 공급자와 드라이버의 동작에 대해 다루는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 기술 자료 문서가 많이 있습니다. 이러한 문서가 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 또는 이전 기능인 데이터 변환 서비스와 반드시 관련된 것은 아니지만 예기치 않은 결과를 발생시킬 수 있는 특정 동작에 대해 살펴보는 것이 좋습니다. Excel 드라이버의 사용 방법과 동작에 대한 일반 정보는 [Visual Basic 또는 VBA에서 Excel 데이터에 ADO를 사용하는 방법](http://support.microsoft.com/kb/257819)을 참조하십시오.  
+ 이 공급자와 드라이버의 동작에 대해 다루는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 기술 자료 문서가 많이 있습니다. 이러한 문서가 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 또는 이전 기능인 데이터 변환 서비스와 반드시 관련된 것은 아니지만 예기치 않은 결과를 발생시킬 수 있는 특정 동작에 대해 살펴보는 것이 좋습니다. Excel 드라이버의 동작 사용에 대 한 일반적인 내용은 참조 하세요. [방법: ADO를 사용 하 여 Visual Basic 또는 VBA에서 Excel 데이터를 사용 하 여](https://support.microsoft.com/kb/257819)입니다.  
   
  Excel 드라이버에 포함된 Jet 공급자의 다음 동작은 데이터를 Excel 대상에 저장할 때 예기치 않은 결과를 초래할 수 있습니다.  
   
 -   **텍스트 데이터 저장**. Excel 드라이버가 텍스트 데이터 값을 Excel 대상에 저장하면 드라이버는 각 셀에서 작은따옴표(')가 있는 텍스트 앞에 오므로 저장된 값이 텍스트 값으로 해석됩니다. 저장된 데이터를 읽거나 처리하는 다른 애플리케이션을 갖고 있거나 개발한 경우 각 텍스트 값을 처리하는 작은따옴표에 대한 특별한 처리 방식을 포함해야 합니다.  
   
-     작은따옴표가 포함되지 않도록 하는 방법에 대한 내용은 msdn.com의 블로그 게시물 중 [SSIS 패키지에서 Excel 대상 데이터 흐름 구성 요소를 사용하여 Excel로 데이터를 변환할 때 모든 문자열에 추가되는 작은따옴표](http://go.microsoft.com/fwlink/?LinkId=400876)(영문)를 참조하세요.  
+     작은따옴표가 포함되지 않도록 하는 방법에 대한 내용은 msdn.com의 블로그 게시물 중 [SSIS 패키지에서 Excel 대상 데이터 흐름 구성 요소를 사용하여 Excel로 데이터를 변환할 때 모든 문자열에 추가되는 작은따옴표](https://go.microsoft.com/fwlink/?LinkId=400876)(영문)를 참조하세요.  
   
 -   **메모(ntext) 데이터 저장**. 255자보다 긴 문자열을 Excel 열에 저장하려면 드라이버에서 대상 열의 데이터 형식을 **string** 이 아닌 **memo**로 인식해야 합니다. 대상 테이블에 이미 데이터 행이 포함된 경우 드라이버에서 샘플링하는 처음 몇 개 행의 메모 열에 값이 255자보다 긴 인스턴스가 하나 이상 들어 있어야 합니다. 패키지 디자인 타임 또는 런타임에 대상 테이블이 만들어지면 다음 CREATE TABLE 문을 사용 해야 합니다 LONGTEXT (또는 해당 동의어 중 하나) 메모 열의 데이터 형식으로.  
   
@@ -106,13 +105,13 @@ ms.locfileid: "48905247"
   
 ## <a name="related-content"></a>관련 내용  
   
--   dougbert.com의 블로그 항목 - [Integration Services의 Excel, 3부 중 1부: 연결 및 구성 요소](http://go.microsoft.com/fwlink/?LinkId=217674)  
+-   블로그 항목, [Integration Services의 Excel, 3 1 부: 연결 및 구성 요소](https://go.microsoft.com/fwlink/?LinkId=217674), dougbert.com  
   
--   dougbert.com의 블로그 항목 - [Integration Services의 Excel, 3부 중 2부: 표 및 데이터 형식](http://go.microsoft.com/fwlink/?LinkId=217675)  
+-   블로그 항목, [Integration Services의 Excel, 2 / 3 부: 테이블 및 데이터 형식](https://go.microsoft.com/fwlink/?LinkId=217675), dougbert.com 합니다.  
   
--   dougbert.com의 블로그 항목 - [Integration Services의 Excel, 3부 중 3부: 문제 및 대안](http://go.microsoft.com/fwlink/?LinkId=217676)  
+-   블로그 항목, [Integration Services의 Excel, 3 부 중 3 부: 문제 및 대안](https://go.microsoft.com/fwlink/?LinkId=217676), dougbert.com 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Excel 원본](excel-source.md)   
  [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md)   
  [데이터 흐름](data-flow.md)   

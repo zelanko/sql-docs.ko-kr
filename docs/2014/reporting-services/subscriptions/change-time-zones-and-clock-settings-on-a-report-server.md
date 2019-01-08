@@ -16,12 +16,12 @@ ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b02c018f48f2198e0dc2398ab1cfea7323995df5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 79df62b8215c242c7f2af2032bdb7671281178fd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108753"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362335"
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>보고서 서버에서 표준 시간대 및 시계 설정 변경
   보고서 서버는 항상 설치된 컴퓨터의 현지 시간을 사용합니다. 다른 표준 시간대를 사용하도록 구성할 수 없습니다. 클라이언트 애플리케이션이 다른 표준 시간대의 보고서 서버를 가리키는 경우 해당 보고서 서버의 표준 시간대를 사용하여 예약된 작업을 실행합니다. 보고서 관리자 및 SharePoint 관리 페이지에서 표준 시간대가 각 일정 페이지에 표시되므로 예약된 작업이 언제 수행되는지 정확히 알 수 있습니다. 예를 들어 사용자 지정 일정을 만들기 위한 페이지에 "시간은 (UTC-08: 00) 태평양 표준시(미국 및 캐나다)로 표시됩니다."라고 나타납니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "48108753"
  폴더나 링크된 보고서 항목이 생성되는 시간과 같은 속성 타임스탬프 값은 새 표준 시간대 설정으로 동기화되지 않습니다. 6월 25일 오전 9시에 항목을 만들고 표준 시간대나 시계를 다시 설정해도 해당 타임스탬프는 6월 25일 오전 9시로 유지됩니다.  
   
 ## <a name="changing-the-time-zone-sharepoint-mode"></a>표준 시간대(SharePoint 모드) 변경  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드를 위한 표준 시간대 구성은 SharePoint 국가별 설정의 일부로 관리됩니다. 자세한 내용은 [국가별 설정(SharePoint Server 2010 (http://technet.microsoft.com/library/cc824907.aspx)](http://technet.microsoft.com/library/cc824907.aspx)를 참조하십시오.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드를 위한 표준 시간대 구성은 SharePoint 국가별 설정의 일부로 관리됩니다. 자세한 내용은 [국가별 설정(SharePoint Server 2010 (https://technet.microsoft.com/library/cc824907.aspx)](https://technet.microsoft.com/library/cc824907.aspx)를 참조하십시오.  
   
 ## <a name="changing-the-clock-settings"></a>시계 설정 변경  
  컴퓨터 시계를 변경해도 기존 타임스탬프 값에는 영향이 없습니다. 예를 들어 시계를 1시간 앞으로 이동해도 보고서 기록 스냅숏의 타임스탬프는 변경되지 않습니다. 10초 정도 경과 후 일정 예약 및 배달 프로세스에 새 설정이 사용됩니다. 구성 파일의 폴링 간격 설정을 수정한 경우 실제 지연 시간이 다를 수 있습니다.  

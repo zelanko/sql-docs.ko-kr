@@ -1,6 +1,6 @@
 ---
-title: SQL Server Machine Learning Services의 Python 확장 | Microsoft Docs
-description: Python 코드 실행 및 SQL Server의 기본 제공 Python 라이브러리에 알아봅니다.
+title: Python 프로그래밍 언어 확장-SQL Server Machine Learning
+description: Python 코드 실행 및 SQL Server 2017의 Machine Learning Services의 기본 제공 Python 라이브러리에 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/05/2018
@@ -8,17 +8,17 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 24d34ee2ca9220ca1569ea83bcb092030d1ef692
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 6bbce3d58f016b26618413ef0647995d0914a237
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892912"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432329"
 ---
-# <a name="python-extension-in-sql-server"></a>SQL Server의 Python 확장
+# <a name="python-language-extension-in-sql-server"></a>SQL Server의 Python 언어 확장
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Python 확장에는 SQL Server Machine Learning Services 추가 기능을 관계형 데이터베이스 엔진의 일부입니다. Python 실행 환경에 Python 3.5 런타임 및 인터프리터, 표준 라이브러리 및 도구 및 Microsoft 제품 라이브러리를 사용 하 여 Python에 대 한 Anaconda 배포에 추가 합니다. [revoscalepy](../python/what-is-revoscalepy.md) 눈금과 분석에대한[microsoftml](../using-the-microsoftml-package.md) 컴퓨터 학습 알고리즘입니다. 
+Python 확장에는 SQL Server Machine Learning Services 추가 기능을 관계형 데이터베이스 엔진의 일부입니다. Python 실행 환경에 Python 3.5 런타임 및 인터프리터, 표준 라이브러리 및 도구 및 Microsoft 제품 라이브러리를 사용 하 여 Python에 대 한 Anaconda 배포에 추가 합니다. [revoscalepy](../python/ref-py-revoscalepy.md) 눈금과 분석에대한[microsoftml](../python/ref-py-microsoftml.md) 컴퓨터 학습 알고리즘입니다. 
 
 Python 통합으로 설치 됩니다 [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)합니다.
 
@@ -28,7 +28,7 @@ Python 통합으로 설치 됩니다 [SQL Server Machine Learning Services](../w
 
 SQL Server는 오픈 소스와 독점 패키지가 포함 되어 있습니다. 설치 된 Python 런타임은 Anaconda Python 3.5는 4.2 경우 Python 런타임이 SQL 도구와 독립적으로 설치 되 고 확장성 프레임 워크의 핵심 엔진 프로세스 외부에서 실행 됩니다. Python 사용 하 여 Machine Learning 서비스 설치의 일부로, GNU Public License의 조건에 동의 해야 합니다. 
 
-SQL Server Python 실행 파일을 수정 하지 않습니다 하지만 해당 버전은 소유 패키지를 빌드하고 테스트 하기 때문에 설치 된 Python 버전을 사용 해야 합니다. Anaconda 배포에서 지원 되는 패키지 목록을 Continuum analytics 사이트를 참조 하세요. [Anaconda 패키지 목록](https://docs.continuum.io/anaconda/pkg-docs)합니다.
+SQL Server Python 실행 파일을 수정 하지 않습니다 하지만 해당 버전은 소유 패키지를 빌드하고 테스트 하기 때문에 설치 된 Python 버전을 사용 해야 합니다. Anaconda 배포에서 지원 되는 패키지 목록을 Continuum analytics 사이트를 참조 하세요. [Anaconda 패키지 목록](https://docs.continuum.io/anaconda/packages/pkg-docs)합니다.
 
 특정 데이터베이스 엔진 인스턴스와 연결 된 Anaconda 배포는 인스턴스와 연결 된 폴더에서 찾을 수 있습니다. Machine Learning 서비스 및 Python을 사용 하 여 기본 인스턴스에 SQL Server 2017 데이터베이스 엔진을 설치한 경우 아래에서 확인 하는 예를 들어 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`합니다.
 
@@ -36,8 +36,8 @@ Microsoft에서 병렬 및 분산 워크 로드에 대 한 추가 Python 패키�
 
 | 라이브러리 | Description |
 |---------|-------------|
-| [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 데이터 원본 개체 및 데이터 탐색, 조작, 변환 및 시각화를 지원합니다. 와 같은 원격 계산 컨텍스트 뿐만 아니라 다양 한 확장성 있는 기계 학습 모델을 만드는 지 원하는 **rxLinMod**합니다. 한 것과 동일 합니다 [ **RevoScaleR** ](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) Microsoft r 패키지 |
-| [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 속도 및 정확성을 위해 최적화 된 뿐만 아니라 줄 텍스트 및 이미지 작업에 대 한 변환 하는 기계 학습 알고리즘을 포함 합니다. 자세한 내용은 [MicrosoftML 패키지를 사용 하 여 SQL Server를 사용 하 여](https://docs.microsoft.com/sql/advanced-analytics/using-the-microsoftml-package)입니다. |
+| [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 데이터 원본 개체 및 데이터 탐색, 조작, 변환 및 시각화를 지원합니다. 와 같은 원격 계산 컨텍스트 뿐만 아니라 다양 한 확장성 있는 기계 학습 모델을 만드는 지 원하는 **rxLinMod**합니다. 자세한 내용은 [SQL Server를 사용 하 여 revoscalepy 모듈](../python/ref-py-revoscalepy.md)합니다.  |
+| [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 속도 및 정확성을 위해 최적화 된 뿐만 아니라 줄 텍스트 및 이미지 작업에 대 한 변환 하는 기계 학습 알고리즘을 포함 합니다. 자세한 내용은 [SQL Server를 사용 하 여 microsoftml 모듈](../python/ref-py-microsoftml.md)합니다. |
 
 Microsoftml 및 revoscalepy는 밀접 하 게 됩니다. microsoftml의 사용 된 데이터 원본의 revoscalepy 개체로 정의 됩니다. Microsoftml revoscalepy 전송의 상황에 맞는 제한을 계산 합니다. 즉, 모든 기능이 로컬 작업에 사용할 수 있지만 RxInSqlServer 원격 계산 컨텍스트를 전환 해야 합니다.
 
@@ -76,7 +76,7 @@ Microsoftml 및 revoscalepy는 밀접 하 게 됩니다. microsoftml의 사용 �
 랩톱 등의 원격 컴퓨터에서 Python 스크립트를 실행 하 고 이러한 조건이 충족 될 경우 SQl Server 컴퓨터의 컨텍스트에서 실행 되도록 할 수 있습니다.
 
 + 스크립트를 적절 하 게 디자인
-+ 원격 컴퓨터에 Machine Learning 서비스에서 사용 되는 확장성 라이브러리를 설치 합니다. 합니다 [revoscalepy](../python/what-is-revoscalepy.md) 패키지는 원격 계산 컨텍스트를 사용 해야 합니다.
++ 원격 컴퓨터에 Machine Learning 서비스에서 사용 되는 확장성 라이브러리를 설치 합니다. 합니다 [revoscalepy](../python/ref-py-revoscalepy.md) 패키지는 원격 계산 컨텍스트를 사용 해야 합니다.
 
 다음 다이어그램은 원격 컴퓨터에서 스크립트를 보낼 경우 전체 워크플로 요약 합니다.
 
@@ -94,6 +94,7 @@ Microsoftml 및 revoscalepy는 밀접 하 게 됩니다. microsoftml의 사용 �
 
 ## <a name="see-also"></a>참고자료
 
-+ [Revoscalepy 란](../python/what-is-revoscalepy.md) 
++ [SQL Server에서 revoscalepy 모듈](../python/ref-py-revoscalepy.md)
++ [revoscalepy 함수 참조](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 
 + [SQL Server의 확장성 프레임 워크](extensibility-framework.md)
 + [R 및 SQL Server에서 확장을 학습 하는 컴퓨터](extension-r.md)

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
@@ -13,12 +12,12 @@ ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 872d886f8e38d408b39387329f13c120d1dc5744
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: d9b405ee057e843f734310dbf134465d03575efc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152193"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364025"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-cache-connection-manager"></a>캐시 연결 관리자 변환을 사용하여 전체 캐시 모드에서 조회 변환 구현
   전체 캐시 모드와 캐시 연결 관리자를 사용하도록 조회 변환을 구성할 수 있습니다. 전체 캐시 모드에서 조회 변환이 실행되기 전에 참조 데이터 세트가 캐시에 로드됩니다.  
@@ -62,7 +61,7 @@ ms.locfileid: "48152193"
   
 -   [시퀀스 컨테이너](../control-flow/sequence-container.md)  
   
- 캐시 연결 관리자를 사용하여 전체 캐시 모드에서 조회 변환을 구현하는 방법을 보여 주는 비디오는 [방법: 전체 캐시 모드에서 조회 변환 구현(SQL Server 비디오)](http://go.microsoft.com/fwlink/?LinkId=131031)을 참조하세요.  
+ 캐시 연결 관리자를 사용 하 여 전체 캐시 모드로 조회 변환을 구현 하는 방법을 보여 주는 동영상을 참조 하세요. [방법: A Lookup Transformation in Full Cache Mode (SQL Server 비디오) 구현](https://go.microsoft.com/fwlink/?LinkId=131031)합니다.  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>데이터 흐름의 데이터 원본과 캐시 연결 관리자를 사용하여 조회 변환을 한 개의 패키지에서 전체 캐시 모드로 구현하려면  
   

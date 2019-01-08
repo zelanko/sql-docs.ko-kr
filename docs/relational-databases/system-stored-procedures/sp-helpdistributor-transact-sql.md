@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_helpdistributor_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a73e458f6ecdab249ea0aae1301dd2d5ee0e6c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63441a20a5ac4f6faed366c06fc55638073b09f4
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790272"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591397"
 ---
 # <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,43 +50,43 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@distributor=**] **'***배포자***'** 출력  
+ [  **@distributor=**] **'**_배포자_**'** 출력  
  배포자의 이름입니다. 배포자가 **sysname**, 기본값은 **%**, 결과 집합을 반환 하는 유일한 값입니다.  
   
- [  **@distribdb=**] **'***distribdb***'** 출력  
+ [  **@distribdb=**] **'**_distribdb_**'** 출력  
  배포 데이터베이스의 이름입니다. *distribdb* 은 **sysname**, 기본값은 **%**, 결과 집합을 반환 하는 유일한 값입니다.  
   
- [  **@directory=**] **'***디렉터리***'** 출력  
+ [  **@directory=**] **'**_디렉터리_**'** 출력  
  작업 디렉터리입니다. *디렉터리* 은 **nvarchar(255)**, 기본값은 **%**, 결과 집합을 반환 하는 유일한 값입니다.  
   
- [  **@account=**] **'***계정***' 출력**  
+ [  **@account=**] **'**_계정_**' 출력**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 계정입니다. *계정*은 **nvarchar(255)**, 기본값은 **%**, 결과 집합을 반환 하는 유일한 값입니다.  
   
- [  **@min_distretention=**] *min_distretention * 출력**  
+ [  **@min_distretention=**] _min_distretention_**출력**  
  최소 배포 보존 기간(시간)입니다. *min_distretention* 됩니다 **int**, 기본값은 **-1**합니다.  
   
- [  **@max_distretention=**] *max_distretention * 출력**  
+ [  **@max_distretention=**] _max_distretention_**출력**  
  최대 배포 보존 기간(시간)입니다. *max_distretention* 됩니다 **int**, 기본값은 **-1**합니다.  
   
- [  **@history_retention=**] *history_retention * 출력**  
+ [  **@history_retention=**] _history_retention_**출력**  
  기록 보존 기간(시간)입니다. *history_retention* 됩니다 **int**, 기본값은 **-1**합니다.  
   
- [  **@history_cleanupagent=**] **'***history_cleanupagent***' 출력**  
+ [  **@history_cleanupagent=**] **'**_history_cleanupagent_**' 출력**  
  기록 정리 에이전트의 이름입니다. *history_cleanupagent* 은 **nvarchar(100)**, 기본값은 **%**, 결과 집합을 반환 하는 유일한 값입니다.  
   
- [  **@distrib_cleanupagent =**] **'***distrib_cleanupagent***' 출력**  
+ [  **@distrib_cleanupagent =**] **'**_distrib_cleanupagent_**' 출력**  
  배포 정리 에이전트의 이름입니다. *distrib_cleanupagent* 은 **nvarchar(100)**, 기본값은 **%**, 결과 집합을 반환 하는 유일한 값입니다.  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_게시자_**'**  
  게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@local=**] **'***로컬***'**  
+ [  **@local=**] **'**_로컬_**'**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 로컬 서버 값을 가져야 하는지 여부입니다. *로컬* 됩니다 **nvarchar(5)**, 기본값은 NULL입니다.  
   
- [  **@rpcsrvname=**] **'***rpcsrvname***' 출력**  
+ [  **@rpcsrvname=**] **'**_rpcsrvname_**' 출력**  
  원격 프로시저 호출을 실행하는 서버의 이름입니다. *rpcsrvname* 은 **sysname**, 기본값은 **%**, 결과 집합을 반환 하는 유일한 값입니다.  
   
- [ **@publisher_type**=] **'***publisher_type***' 출력**  
+ [ **@publisher_type**=] **'**_publisher_type_**' 출력**  
  게시자의 게시자 유형입니다. *publisher_type* 은 **sysname**, 기본값은 **%**, 결과 집합을 반환 하는 유일한 값입니다.  
   
 ## <a name="result-sets"></a>결과 집합  
@@ -141,7 +140,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |rpc server name|**@rpcsrvname**|  
 |publisher type|**@publisher_type**|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [배포자 및 게시자 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  

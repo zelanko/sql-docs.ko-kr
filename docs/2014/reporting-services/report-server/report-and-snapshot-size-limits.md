@@ -18,12 +18,12 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6e60abee965bd78dd25c5db053bfbb679b153e4d
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
-ms.translationtype: HT
+ms.openlocfilehash: 73e2eae28d1c906e065b205e5964081e52da6ac9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119329"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374125"
 ---
 # <a name="report-and-snapshot-size-limits"></a>보고서 및 스냅숏 크기 제한
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 배포를 관리하는 관리자는 이 항목의 정보를 통해 보고서가 보고서 서버에 게시되고, 런타임에 렌더링되고, 파일 시스템에 저장될 때 적용되는 보고서 크기 제한을 이해할 수 있습니다. 이 항목에서는 보고서 서버 데이터베이스의 크기를 측정하는 방법에 대한 지침을 제공하고 스냅숏 크기가 서버 성능에 미치는 영향에 대해 설명합니다.  
@@ -53,14 +53,14 @@ ms.locfileid: "49119329"
  Excel 형식으로 렌더링할 때만 보고서 크기가 엄격하게 제한됩니다. 워크시트의 행과 열은 각각 65536개와 256개를 초과할 수 없습니다. 다른 렌더링 형식은 이러한 제한이 없으므로 서버에 있는 리소스 양에 의해서만 크기가 제한됩니다. Excel 파일 제한에 대 한 자세한 내용은 참조 하세요. [다른 파일 형식으로 보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)합니다.  
   
 > [!NOTE]  
->  보고서 처리 및 렌더링은 메모리에서 수행됩니다. 보고서가 크거나 사용자 수가 많은 경우에는 보고서 서버 배포가 사용자에게 만족스러운 수준에서 수행될 수 있도록 용량 계획을 세워야 합니다. 도구 및 지침에 대한 자세한 내용은 MSDN의 [Reporting Services의 확장성 및 성능 계획](http://go.microsoft.com/fwlink/?LinkID=70650) 및 [Visual Studio 2005를 사용한 SQL Server 2005 Reporting Services 보고서 서버의 부하 테스트 수행](http://go.microsoft.com/fwlink/?LinkID=77519)을 참조하십시오.  
+>  보고서 처리 및 렌더링은 메모리에서 수행됩니다. 보고서가 크거나 사용자 수가 많은 경우에는 보고서 서버 배포가 사용자에게 만족스러운 수준에서 수행될 수 있도록 용량 계획을 세워야 합니다. 도구 및 지침에 대한 자세한 내용은 MSDN의 [Reporting Services planning for Scalability and Performance](https://go.microsoft.com/fwlink/?LinkID=70650) 하 고 [Visual Studio 2005를 사용 하 여 SQL Server 2005 Reporting Services 보고서 서버에 부하 테스트를 수행할](https://go.microsoft.com/fwlink/?LinkID=77519)합니다.  
   
 ## <a name="measuring-snapshot-storage"></a>스냅숏 저장소 측정  
  특정 스냅숏의 크기는 보고서에 있는 데이터 양에 비례합니다. 스냅숏은 일반적으로 보고서 서버에 저장된 다른 항목보다 훨씬 큽니다. 스냅숏 크기는 몇 MB에서 수십 MB에 이르기까지 다양합니다. 보고서가 아주 큰 경우 스냅숏은 훨씬 더 커집니다. 스냅숏 사용 빈도와 보고서 기록 구성 방법에 따라 보고서 서버 데이터베이스에 필요한 디스크 공간 크기가 짧은 기간 동안에 빠르게 늘어날 수 있습니다.  
   
  기본적으로 **reportserver** 및 **reportservertempdb** 데이터베이스는 모두 자동 증가로 설정되어 있습니다. 데이터베이스 크기는 자동으로 늘어날 수는 있지만 자동으로 줄어들지는 않습니다. 스냅숏을 삭제했기 때문에 **reportserver** 데이터베이스 크기가 너무 큰 경우에는 이 데이터베이스 크기를 직접 줄여서 디스크 공간을 복구해야 합니다. 마찬가지로 **reportservertempdb** 가 크기가 아주 큰 대화형 보고 기능을 사용할 수 있을 만큼 커진 경우에는 사용자가 크기를 줄일 때까지 이 설정으로 디스크 공간 할당이 유지됩니다.  
   
- 보고서 서버 데이터베이스의 크기를 측정하려면 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 실행합니다. 정기적으로 총 데이터베이스 크기를 계산하면 시간에 따른 보고서 서버 데이터베이스의 공간 할당량을 적절히 예측하는 데 도움이 됩니다. 다음 문은 현재 사용 되는 공간의 크기를 측정 (문을 기본 데이터베이스 이름을 사용 한다고 가정 하는 데 사용):  
+ 보고서 서버 데이터베이스의 크기를 측정하려면 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 실행합니다. 정기적으로 총 데이터베이스 크기를 계산하면 시간에 따른 보고서 서버 데이터베이스의 공간 할당량을 적절히 예측하는 데 도움이 됩니다. 다음 문은 현재 사용하고 있는 공간 양을 측정합니다. 이 문에서는 사용자가 기본 데이터베이스 이름을 사용하고 있다고 가정합니다.  
   
 ```  
 USE ReportServer  

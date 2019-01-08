@@ -10,12 +10,12 @@ ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ea86d548e509650f0ec237bb77097e3fb4b267ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143795"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368004"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>데이터 액세스 애플리케이션에서 고유하게 컴파일된 저장 프로시저 호출
   이 항목에서는 데이터 액세스 애플리케이션에서 고유하게 컴파일된 저장 프로시저를 호출하는 방법에 대한 지침을 설명합니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "48143795"
   
  다음은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 ODBC 드라이버를 사용하여 고유하게 컴파일된 저장 프로시저를 호출할 때 적용되는 권장 사항입니다.  
   
- 저장된 프로시저를 한 번 호출 하는 가장 효율적인 방법은 사용 하 여 직접 RPC 호출을 발급 하는 것 `SQLExecDirect` 및 ODBC CALL 절. 사용 하지 않는 합니다 [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` 문입니다. 저장 프로시저를 두 번 이상 호출하는 경우에는 준비된 실행이 더 효율적입니다.  
+ 저장 프로시저를 한 번 호출하는 가장 효율적인 방법은 `SQLExecDirect` 및 ODBC CALL 절을 사용하여 직접 RPC 호출을 실행하는 것입니다. 사용 하지 않는 합니다 [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` 문입니다. 저장 프로시저를 두 번 이상 호출하는 경우에는 준비된 실행이 더 효율적입니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 저장 프로시저를 두 번 이상 호출하는 가장 효율적인 방법은 준비된 RPC 프로시저 호출을 사용하는 것입니다. 다음은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 ODBC 드라이버를 사용하여 준비된 RPC 호출을 수행하는 방법입니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48143795"
   
 -   `SQLBindParameter`를 사용하여 매개 변수를 바인딩합니다.  
   
--   사용 하 여 프로시저 호출을 준비 `SQLPrepare.`  
+-   `SQLPrepare.`을 사용하여 프로시저 호출을 준비합니다.  
   
 -   `SQLExecute`를 사용하여 저장 프로시저를 여러 번 실행합니다.  
   
@@ -61,7 +61,7 @@ if (returnCode != SQL_SUCCESS && returnCode != SQL_SUCCESS_WITH_INFO) {
 }  
   
 // 2, 3, 4 - ItemNo, ProdCode, Qty  
-…  
+...  
   
 // Prepare stored procedure  
 returnCode = SQLPrepare(hstmt, (SQLTCHAR *) _T("{call ItemInsert(?, ?, ?, ?)}"),SQL_NTS);  
@@ -87,7 +87,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
   
 1.  메모리 최적화 데이터 파일 그룹이 포함된 예제 데이터베이스를 만듭니다. 메모리 최적화 데이터 파일 그룹이 있는 데이터베이스를 만드는 방법은 [메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저 만들기](creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)를 참조하세요.  
   
-2.  데이터베이스를 가리키는 PrepExecSample이라는 ODBC 데이터 원본을 만듭니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 드라이버를 사용합니다. 예제를 수정하고 [Microsoft ODBC Driver for SQL Server](http://msdn.microsoft.com/library/jj730314.aspx)를 사용할 수도 있습니다.  
+2.  데이터베이스를 가리키는 PrepExecSample이라는 ODBC 데이터 원본을 만듭니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 드라이버를 사용합니다. 예제를 수정하고 [Microsoft ODBC Driver for SQL Server](https://msdn.microsoft.com/library/jj730314.aspx)를 사용할 수도 있습니다.  
   
 3.  샘플 데이터베이스에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트(아래)를 실행합니다.  
   

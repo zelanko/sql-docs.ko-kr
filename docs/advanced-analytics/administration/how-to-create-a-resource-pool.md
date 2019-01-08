@@ -1,5 +1,6 @@
 ---
-title: SQL Server Machine Learning에 대 한 리소스 풀을 만드는 방법 | Microsoft Docs
+title: R 및 Python-SQL Server Machine Learning Services에 대 한 리소스 풀을 만드는 방법
+description: SQL Server 2016 또는 SQL Server 2017 데이터베이스 엔진 인스턴스에 R 또는 Python 프로세스에 대 한 SQL Server 리소스 풀을 정의 합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 12b21a37e66351cb84b6de246f3b398a1d20bfd3
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
-ms.translationtype: HT
+ms.openlocfilehash: c0fcc673e61f2ee188b169a2d46f1da6a4ffd2df
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100565"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596864"
 ---
 # <a name="how-to-create-a-resource-pool-for-machine-learning-in-sql-server"></a>SQL Server에서 기계 학습에 대 한 리소스 풀을 만드는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,8 +27,6 @@ ms.locfileid: "49100565"
 3.  외부 프로세스에 대 한 새 리소스 풀을 만듭니다.
 4.  외부 스크립트 요청을 식별 하는 분류 함수를 만듭니다.
 5.  새 외부 리소스 풀을 지정 된 클라이언트 또는 계정에서 R 또는 Python 작업을 캡처하는 것을 확인 합니다.
-
-**적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] ~ [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ##  <a name="bkmk_ReviewStatus"></a> 기존 리소스 풀의 상태 검토
   

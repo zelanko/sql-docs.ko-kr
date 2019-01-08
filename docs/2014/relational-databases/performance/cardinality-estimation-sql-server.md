@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 11/24/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - cardinality estimator
@@ -15,21 +14,21 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 393c4f88f9ab60f3a25ddaab5bb091fb298e1e02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200613"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363795"
 ---
 # <a name="cardinality-estimation-sql-server"></a>카디널리티 추정(SQL Server)
-  카디널리티 평가기 라고 하는 카디널리티 추정 논리가에서 다시 디자인 되었습니다 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 쿼리 계획의 품질을 향상 시키는 있어 쿼리 성능을 향상 시킵니다. 새로운 카디널리티 평가기는 최신 OLTP 및 데이터 웨어하우징 작업에서 제대로 작동하는 가정 및 알고리즘을 통합합니다. 이 평가기는 최신 작업에 대한 자세한 카디널리티 추정 연구와 SQL Server 카디널리티 평가기를 향상시키기 위해 과거 15년 동안 학습한 지식을 기반으로 합니다. 고객의 의견은 대부분의 쿼리가 변경을 통해 이점을 얻거나 변경되지 않은 채로 유지되는 반면 소수의 쿼리는 이전 카디널리티 평가기와 비교했을 때 회귀를 보여줄 수도 있음을 나타냅니다.  
+  카디널리티 평가기라고 하는 카디널리티 추정 논리가 쿼리 계획의 품질을 개선하여 쿼리 성능을 향상시키도록 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서 다시 디자인되었습니다. 새로운 카디널리티 평가기는 최신 OLTP 및 데이터 웨어하우징 작업에서 제대로 작동하는 가정 및 알고리즘을 통합합니다. 이 평가기는 최신 작업에 대한 자세한 카디널리티 추정 연구와 SQL Server 카디널리티 평가기를 향상시키기 위해 과거 15년 동안 학습한 지식을 기반으로 합니다. 고객의 의견은 대부분의 쿼리가 변경을 통해 이점을 얻거나 변경되지 않은 채로 유지되는 반면 소수의 쿼리는 이전 카디널리티 평가기와 비교했을 때 회귀를 보여줄 수도 있음을 나타냅니다.  
   
 > [!NOTE]  
 >  카디널리티 예상치는 쿼리 결과에 있는 행 수의 예측치입니다. 쿼리 최적화 프로그램은 이러한 예상치를 사용하여 쿼리 실행 계획을 선택합니다. 쿼리 계획의 품질은 쿼리 성능 향상에 직접적인 영향을 줍니다.  
   
 ## <a name="performance-testing-and-tuning-recommendations"></a>성능 테스트 및 튜닝 권장 구성  
- 새로운 카디널리티 평가기는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 만든 모든 새로운 데이터베이스에 대해 설정됩니다. 그러나 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]로 업그레이드하면 기존 데이터베이스에 대해 새 카디널리티 평가기가 사용되지 않습니다.  
+ 새로운 카디널리티 평가기는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 만든 모든 새로운 데이터베이스에 대해 설정됩니다. 그러나 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 로 업그레이드하면 기존 데이터베이스에 대해 새 카디널리티 평가기가 사용되지 않습니다.  
   
  최고의 쿼리 성능을 위해서는 프로덕션 시스템에서 새 카디널리티 평가기를 설정하기 전에 이러한 권장 구성을 사용하여 새 카디널리티 평가기로 작업을 테스트하십시오  
   
@@ -37,11 +36,11 @@ ms.locfileid: "48200613"
   
 2.  새 카디널리티 평가기로 테스트 작업을 실행한 다음 현재 성능 문제를 해결하는 방식과 동일한 방식으로 새로운 성능 문제를 해결합니다.  
   
-3.  사용자의 작업이 새 카디널리티 평가기 (데이터베이스 호환성 수준 120 (SQL Server 2014))를 사용 하 여 실행 하 고 특정 쿼리가 회귀 된 추적 플래그 9481 에서사용하여카디널리티평가기의버전을사용하여쿼리를실행할수있습니다[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]및 이전 버전입니다. 추적 플래그로 쿼리를 실행하려면 기술 자료 문서 [특정 쿼리 수준에서 여러 다른 추적 플래그를 통해 제어할 수 있는 계획에 영향을 주는 SQL Server 쿼리 최적화 프로그램 동작 설정](http://support.microsoft.com/kb/2801413)을 참조하십시오.  
+3.  사용자의 작업이 새 카디널리티 평가기로 실행 중이고(데이터베이스 호환성 수준 120(SQL Server 2014)) 특정 쿼리가 회귀한 경우 추적 플래그 9481로 쿼리를 실행하여 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에서와 그 이전에 사용한 카디널리티 평가기 버전을 사용할 수 있습니다. 추적 플래그로 쿼리를 실행하려면 기술 자료 문서 [특정 쿼리 수준에서 여러 다른 추적 플래그를 통해 제어할 수 있는 계획에 영향을 주는 SQL Server 쿼리 최적화 프로그램 동작 설정](https://support.microsoft.com/kb/2801413)을 참조하십시오.  
   
 4.  모든 새 카디널리티 평가기를 사용 하는 한 번에 데이터베이스를 변경할 수 없는 경우에 사용할 수 이전 카디널리티 평가기 모든 데이터베이스에 대해 사용 하 여 [ALTER DATABASE 호환성 수준 &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) 하려면 데이터베이스 호환성 수준을 110으로 설정 합니다.  
   
-5.  사용자의 작업이 데이터베이스 호환성 수준 110으로 실행 중이고 새 카디널리티 평가기로 특정 쿼리를 테스트 또는 실행하려는 경우 추적 플래그 2312로 쿼리를 실행하여 카디널리티 평가기의 SQL Server 2014 버전을 사용할 수 있습니다.  추적 플래그로 쿼리를 실행하려면 기술 자료 문서 [특정 쿼리 수준에서 여러 다른 추적 플래그를 통해 제어할 수 있는 계획에 영향을 주는 SQL Server 쿼리 최적화 프로그램 동작 설정](http://support.microsoft.com/kb/2801413)을 참조하십시오.  
+5.  사용자의 작업이 데이터베이스 호환성 수준 110으로 실행 중이고 새 카디널리티 평가기로 특정 쿼리를 테스트 또는 실행하려는 경우 추적 플래그 2312로 쿼리를 실행하여 카디널리티 평가기의 SQL Server 2014 버전을 사용할 수 있습니다.  추적 플래그로 쿼리를 실행하려면 기술 자료 문서 [특정 쿼리 수준에서 여러 다른 추적 플래그를 통해 제어할 수 있는 계획에 영향을 주는 SQL Server 쿼리 최적화 프로그램 동작 설정](https://support.microsoft.com/kb/2801413)을 참조하십시오.  
   
 ## <a name="new-xevents"></a>새로운 XEvent  
  새 쿼리 계획을 지원하는 두 개의 새로운 query_optimizer_estimate_cardinality XEvent가 있습니다.  

@@ -11,12 +11,12 @@ ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c18860cf43c31096b984d45b18fba7828de6ea90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 8dda4ea693774fabcc88e261ccd61f71350a6a79
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065663"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367775"
 ---
 # <a name="check-files-in-use"></a>사용 중인 파일 확인
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트를 설치한 후 Windows가 다시 시작되지 않도록 하려면 사용 중인 파일 검사 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트 설치 프로그램에 필요한 파일을 사용 중인 프로세스를 확인합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "48065663"
   
  설치 후 컴퓨터를 다시 시작하지 않아도 되도록 하기 위해 파일을 사용 중인 프로세스의 목록이 설치 프로그램을 통해 표시됩니다. 목록에 나와 있는 프로세스와 애플리케이션을 중지하거나 종료합니다. 그런 다음 **검사 새로 고침** 을 클릭하여 검사를 다시 실행합니다. 실행 중인 검사를 끝내려면 **검사 중지** 를 클릭합니다. 잠겨 있는 파일이 없으면 테이블에 아무 것도 표시되지 않습니다. 잠긴 프로세스를 모두 닫거나 중지했으면 **다음** 을 클릭하여 작업을 계속 진행합니다.  
   
- 설치 과정에서 로그 파일에 정보가 기록됩니다. 로그 파일을 보는 방법은 [SQL Server 설치 로그 파일 보기 및 읽기](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md) 및 [방법: SQL Server 설치 로그 파일 읽기](http://go.microsoft.com/fwlink/?LinkID=134490)를 참조하세요.  
+ 설치 과정에서 로그 파일에 정보가 기록됩니다. 로그 파일을 보는 방법에 대 한 자세한 내용은 참조 하세요. [뷰와 Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md) 고 [방법: SQL Server 설치 로그 파일 읽기](https://go.microsoft.com/fwlink/?LinkID=134490)합니다.  
   
  로그 파일에는 다음 정보가 포함됩니다.  
   

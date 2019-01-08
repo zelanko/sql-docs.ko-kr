@@ -11,19 +11,19 @@ ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 1f113778433e13e68b8847e5f54f1d9ae2bdc6e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: b22f958a0b4bb78e297e23665db36b8c16fe74e4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074476"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363145"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>보고서에 다중 값 매개 변수 추가
   사용자가 매개 변수에 둘 이상의 값을 선택할 수 있는 보고서에 매개 변수를 추가할 수 있습니다.  
   
- 여러 매개 변수 값을 보고서 URL 내의 보고서에 전달할 수 있습니다. 다중 값 매개 변수를 포함 하는 URL 예제를 참조 하세요 [는 Report Parameter Within a URL 전달](../pass-a-report-parameter-within-a-url.md)합니다.  
+ 여러 매개 변수 값을 보고서 URL 내의 보고서에 전달할 수 있습니다. 다중 값 매개 변수를 포함하는 URL 예제는 [URL에 보고서 매개 변수 전달](../pass-a-report-parameter-within-a-url.md)을 참조하세요.  
   
- 여러 매개 변수 값을 저장 프로시저에 전달하는 방법에 대한 자세한 내용은 mssqltips.com의 [SSRS 보고서에 다중 선택 매개 변수로 작업](http://go.microsoft.com/fwlink/?LinkId=321529) 을 참조하세요.  
+ 여러 매개 변수 값을 저장 프로시저에 전달하는 방법에 대한 자세한 내용은 mssqltips.com의 [SSRS 보고서에 다중 선택 매개 변수로 작업](https://go.microsoft.com/fwlink/?LinkId=321529) 을 참조하세요.  
   
 ### <a name="to-add-a-multi-value-parameter"></a>다중 값 매개 변수를 추가하려면  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48074476"
     ```  
   
     > [!IMPORTANT]  
-    >  위와 같아 변수 주위에 괄호를 포함하지 않는 경우 보고서에서 렌더링할 수 없고 "스칼라 변수를 선언해야 합니다."라는 오류가 표시됩니다.  
+    >  위와 같이 변수 주위에 괄호를 포함 하지 않으면, 보고서 렌더링에 실패 하 고 "스칼라 변수를 선언 해야 합니다" 라는 오류가 표시 됩니다.  
   
      포함된 데이터 세트나 공유 데이터 세트에 대한 데이터 세트 매개 변수는 쿼리 변수에 대해 자동으로 만들어집니다. 데이터 세트 매개 변수에 대해 보고서 매개 변수가 자동으로 만들어집니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48074476"
     ```  
   
     > [!IMPORTANT]  
-    >  위와 같아 변수 주위에 괄호를 포함하지 않는 경우 보고서에서 렌더링할 수 없고 "스칼라 변수를 선언해야 합니다."라는 오류가 표시됩니다.  
+    >  위와 같이 변수 주위에 괄호를 포함 하지 않으면, 보고서 렌더링에 실패 하 고 "스칼라 변수를 선언 해야 합니다" 라는 오류가 표시 됩니다.  
   
      포함된 데이터 세트나 공유 데이터 세트에 대한 데이터 세트 매개 변수는 쿼리 변수에 대해 자동으로 만들어집니다. 데이터 세트 매개 변수에 대해 보고서 매개 변수가 자동으로 만들어집니다.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48074476"
      자세한 내용은 [보고서 매개 변수의 사용 가능한 값 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서에 연계 매개 변수를 추가 &#40;보고서 작성기 및 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [추가, 변경 또는 Delete a Report Parameter &#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
+ [보고서에 연계 매개 변수 추가&#40;보고서 작성기 및 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [보고서 매개 변수 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   
   

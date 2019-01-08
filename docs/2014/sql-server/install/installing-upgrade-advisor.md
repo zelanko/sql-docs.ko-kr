@@ -15,12 +15,12 @@ ms.assetid: 1b7d6eca-1df1-47df-bbba-0fc485706a95
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 95bcdfca34b618043515c27030bc74104e4da590
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 82db1c6f36d8b03d2a603c0a616090ec9d3544af
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078073"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353995"
 ---
 # <a name="installing-upgrade-advisor"></a>업그레이드 관리자 설치
   SQL Server 2014 업그레이드 관리자 설치 위치는 분석 대상에 따라 달라집니다. 업그레이드 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 제외하고 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소의 원격 분석을 지원합니다. 인스턴스를 검색 하지 않는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 연결할 수 있는 모든 컴퓨터에 업그레이드 관리자를 설치할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 충족 하는 합니다 [업그레이드 관리자 필수 구성 요소](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 인스턴스를 검색하는 경우에는 보고서 서버에 업그레이드 관리자를 설치해야 합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "48078073"
   
 -   에 **redist** 의 폴더를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품 미디어입니다.  
   
--   일부로 합니다 [SQL 2014 기능 팩 다운로드](http://www.microsoft.com/download/details.aspx?id=42295)합니다.  
+-   일부로 합니다 [SQL 2014 기능 팩 다운로드](https://www.microsoft.com/download/details.aspx?id=42295)합니다.  
   
 ## <a name="uninstalling-upgrade-advisor"></a>업그레이드 관리자 제거  
  사용 하 여 업그레이드 관리자를 제거할 수 있습니다 **프로그램 추가 / 제거**합니다. 명령 프롬프트 구문도 제거/설치 제거를 지원합니다.  

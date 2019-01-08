@@ -17,21 +17,21 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7aca52e23bf392c411063ab48ddd3e4ce9b6ae41
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
-ms.translationtype: HT
+ms.openlocfilehash: a5560379c07e3f6a5ff21ca2db19dbe0e8a420a1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809819"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798375"
 ---
 # <a name="validate-a-dac-package"></a>DAC 패키지 유효성 검사
   DAC 패키지를 프로덕션 환경에 배포하기 전에 내용을 검토하고 기존 DAC를 업그레이드하기 전에 업그레이드 동작의 유효성을 검사하는 것이 좋습니다. 사용자의 조직에서 개발되지 않은 패키지를 배포하는 경우에는 더욱 그렇습니다.  
   
-1.  **시작하기 전에:**  [필수 구성 요소](#Prerequisites)  
+1.  **시작하기 전 주의 사항:**  [필수 구성 요소](#Prerequisites)  
   
-2.  **DAC를 업그레이드하려면**  [DAC 내용 보기](#ViewDACContents), [데이터베이스 변경 내용 보기](#ViewDBChanges), [업그레이드 동작 보기](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
+2.  **DAC를 업그레이드 하려면 사용 합니다.**  [DAC의 내용을 볼](#ViewDACContents)하십시오 [데이터베이스 변경 내용 보기](#ViewDBChanges), [업그레이드 동작 보기](#ViewUpgradeActions), [Dac 비교](#CompareDACs)  
   
-##  <a name="Prerequisites"></a> 사전 요구 사항  
+##  <a name="Prerequisites"></a> 필수 구성 요소  
  출처를 알 수 없거나 신뢰할 수 없는 DAC 패키지는 배포하지 않는 것이 좋습니다. 이러한 DAC에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마를 수정하여 오류가 발생할 수 있습니다. 출처를 알 수 없거나 신뢰할 수 없는 DAC를 사용하기 전에 격리된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 테스트 인스턴스에 이를 배포하고, 해당 데이터베이스에 대해 [DBCC CHECKDB&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)를 실행하며, 저장 프로시저 또는 다른 사용자 정의 코드 같은 데이터베이스의 코드도 검사하세요.  
   
 ##  <a name="ViewDACContents"></a> DAC 내용 보기  
@@ -39,7 +39,7 @@ ms.locfileid: "43809819"
   
  **SQL Server Developer Tools에서 DAC 보기**  
   
-1.  **파일** 메뉴를 열고 **새로 만들기**를 선택한 다음 **프로젝트...** 를 선택합니다.  
+1.  **파일** 메뉴를 열고 **새로 만들기**를 선택한 다음, **프로젝트...** 를 선택합니다.  
   
 2.  **SQL Server** 프로젝트 템플릿을 선택하고 **이름**, **위치**및 **솔루션 이름**을 지정합니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "43809819"
   
 4.  **프로젝트 설정** 탭의 **출력 유형** 섹션에서 **데이터 계층 응용 프로그램(.dacpac 파일)** 확인란을 선택한 다음 속성 대화 상자를 닫습니다.  
   
-5.  **솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **데이터 계층 응용 프로그램 가져오기...** 를 선택합니다.  
+5.  **솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **데이터 계층 애플리케이션 가져오기...** 를 선택합니다.  
   
 6.  **솔루션 탐색기** 를 사용하여 서버 선택 정책과 배포 이전 및 배포 이후 스크립트와 같은 DAC의 모든 파일을 열 수 있습니다.  
   
@@ -78,11 +78,11 @@ ms.locfileid: "43809819"
   
 1.  SMO Server 개체를 만든 다음 보려는 DAC를 포함하는 인스턴스로 설정합니다.  
   
-2.  열기는 `ServerConnection` 개체와 동일한 인스턴스에 연결 합니다.  
+2.  `ServerConnection` 개체를 열고 동일한 인스턴스에 연결합니다.  
   
 3.  DAC 이름을 변수로 지정합니다.  
   
-4.  사용 하 여는 `GetDatabaseChanges()` 검색 하는 메서드를 `ChangeResults` 개체 및 개체의 간단한 보고서를 새로 생성 하는 텍스트 파일에 파이핑하여 삭제 및 변경 된 개체입니다.  
+4.  `GetDatabaseChanges()` 메서드를 사용하여 `ChangeResults` 개체를 검색하고 개체를 텍스트 파일에 파이핑하여 새 개체, 삭제된 개체 및 변경된 개체에 대한 간단한 보고서를 생성합니다.  
   
 ### <a name="view-database-changes-example-powershell"></a>데이터베이스 변경 내용 보기 예(PowerShell)  
  **데이터베이스 변경 내용 보기 예(PowerShell)**  
@@ -123,13 +123,13 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 1.  SMO Server 개체를 만든 다음 배포된 DAC를 포함하는 인스턴스로 설정합니다.  
   
-2.  열기는 `ServerConnection` 개체와 동일한 인스턴스에 연결 합니다.  
+2.  `ServerConnection` 개체를 열고 동일한 인스턴스에 연결합니다.  
   
-3.  사용 하 여 `System.IO.File` DAC 패키지 파일을 로드 합니다.  
+3.  `System.IO.File`을 사용하여 DAC 패키지 파일을 로드합니다.  
   
 4.  DAC 이름을 변수로 지정합니다.  
   
-5.  사용 된 `GetIncrementalUpgradeScript()` 업그레이드 TRANSACT-SQL 문 목록을 가져오기 위한 메서드는 실행 하 고 목록을 텍스트 파일에 파이핑 합니다.  
+5.  `GetIncrementalUpgradeScript()` 메서드를 사용하여 업그레이드를 실행할 Transact-SQL 문 목록을 가져온 다음 목록을 텍스트 파일에 파이핑합니다.  
   
 6.  DAC 패키지 파일을 읽는 데 사용되는 파일 스트림을 닫습니다.  
   

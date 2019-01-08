@@ -9,14 +9,14 @@ ms.assetid: 2b0b5ab7-4e08-431a-bd59-360177c4565c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1de233ed0f659438c46cab69cec79119fc5291c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d3b7652cf67fff68b1a9e6d87e02c2776317af19
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113635"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365242"
 ---
-# <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>사례 연구: 확장성과 성능을 위해 Microsoft Dynamics ERP와 SQL Server 2014 Replication을 사용하여 엔터프라이즈 에코시스템 구축
+# <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>사례 연구: Microsoft Dynamics ERP와 SQL Server 2014 Replication for Scalability and Performance를 사용 하 여 엔터프라이즈 에코 시스템 구축
   **요약:** 이 문서에서는 다음 시나리오를 다룹니다.  
 SQL Server 2014의 트랜잭션 복제를 사용 하 여 Dynamics AX 클라이언트의 트랜잭션을 여러 노드에 분산 하는 방법. 데이터가 전체 노드에서 실시간으로 유지 관리되므로 트랜잭션 복제에서 데이터 중복성을 제공하여 데이터 가용성을 늘리고 더 효율적인 성능 분석에 사용할 수 있는 데이터를 포함합니다.  
 Microsoft Dynamics ERP에서 트래잭션 복제를 활용하여 확장성이 뛰어난 엔터프라이즈 에코시스템을 구축할 때 관련된 세부 사항을 이해하는 방법. AX의 기본 기능을 사용자 지정하지 않고도 고성능과 확장성을 제공합니다.  
@@ -34,6 +34,6 @@ Microsoft Dynamics ERP에서 트래잭션 복제를 활용하여 확장성이 �
  **적용 대상:** SQL Server 2008, SQL Server 2012 및 SQL Server 2014  
   
  문서를 검토 하려면 다운로드 하시기를  
-        [사례 연구: 확장성과 성능을 위해 Microsoft Dynamics ERP와 SQL Server 2014 복제를 사용 하 여 엔터프라이즈 에코 시스템 구축](http://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/A%20Case%20Study%20Using%20Replication%20to%20Build%20an%20Enterprise%20Ecosystem%20in%20Microsoft%20Dynamics%20ERP%20for%20Scalability%20and%20Performance.docx) Word 문서입니다.  
+        [사례 연구: 확장성 및 성능에 대 한 Microsoft Dynamics ERP와 SQL Server 2014 복제를 사용 하 여 엔터프라이즈 에코 시스템 구축](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/A%20Case%20Study%20Using%20Replication%20to%20Build%20an%20Enterprise%20Ecosystem%20in%20Microsoft%20Dynamics%20ERP%20for%20Scalability%20and%20Performance.docx) Word 문서입니다.  
   
   

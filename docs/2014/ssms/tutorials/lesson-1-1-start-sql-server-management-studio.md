@@ -10,12 +10,12 @@ ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91b962fd3691aff2986db40f187557f54247b897
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 94466dc6c069ced5b2743cbd8a14d98271303477
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159703"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373635"
 ---
 # <a name="start-sql-server-management-studio"></a>SQL Server Management Studio 시작
   이 자습서를 시작하기 전에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 간단히 살펴봅니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "48159703"
 1.  에 **시작** 메뉴에서 **모든 프로그램**를 가리킨 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]를 클릭 하 고 **SQL Server Management Studio**.  
   
     > [!NOTE]  
-    >  기본적으로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 설치되지 않습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용할 수 없으면 설치 프로그램을 실행하여 설치합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]에서 사용할 수 없습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express에서 무료로 다운로드할 수는 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409), 되었지만 다른 사용자 인터페이스가이 자습서에 설명 된 것입니다.  
+    >  기본적으로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 설치되지 않습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용할 수 없으면 설치 프로그램을 실행하여 설치합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]에서 사용할 수 없습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express에서 무료로 다운로드할 수는 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409), 되었지만 다른 사용자 인터페이스가이 자습서에 설명 된 것입니다.  
   
 2.  **서버에 연결** 대화 상자에서 기본 설정을 확인한 다음 **연결**을 클릭합니다. 연결할를 **서버 이름** 상자는 컴퓨터의 이름을 포함 해야 합니다 여기서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 됩니다. 경우는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 명명 된 인스턴스인 합니다 **서버 이름** 상자도 형식으로 인스턴스 이름이 있어야 \< *computer_name* > \\ < *instance_name*>.  
   

@@ -11,12 +11,12 @@ ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ebe649261a1f97093f40ad2aa3f20f96306fd1b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fcf32b558d34340d727a357136884b8d6530887b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219123"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363765"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>다차원 데이터베이스의 호환성 수준 설정(Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 데이터베이스 호환성 수준 속성은 데이터베이스의 기능 수준을 결정합니다. 호환성 수준은 각 모델 유형에 고유합니다. 예를 들어, 호환성 수준이 `1100` 다차원 또는 테이블 형식 데이터베이스 인지에 따라 의미가 다릅니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "48219123"
  이 항목에서는 다차원 데이터베이스의 호환성 수준에 대해서만 설명합니다. 테이블 형식 솔루션에 대 한 자세한 내용은 참조 하세요. [호환성 &#40;SSAS 테이블 형식 SP1&#41;](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)합니다.  
   
 > [!NOTE]  
->  테이블 형식 모델은 다차원 모델에 적용되지 않는 추가 데이터베이스 호환성 수준이 있습니다. 호환성 수준 `1103` 다차원 모델에 존재 하지 않습니다. 참조 [SQL Server 2012 SP1 및 호환성 수준의 테이블 형식 모델에 대 한 새로운 기능](http://go.microsoft.com/fwlink/?LinkId=301727) 에 대 한 자세한 내용은 `1103` 테이블 형식 솔루션에 대 한 합니다.  
+>  테이블 형식 모델은 다차원 모델에 적용되지 않는 추가 데이터베이스 호환성 수준이 있습니다. 호환성 수준 `1103`은 다차원 모델에 없습니다. 참조 [SQL Server 2012 SP1 및 호환성 수준의 테이블 형식 모델에 대 한 새로운 기능](https://go.microsoft.com/fwlink/?LinkId=301727) 에 대 한 자세한 내용은 `1103` 테이블 형식 솔루션에 대 한 합니다.  
   
  **다차원 데이터베이스의 호환성 수준**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48219123"
 ## <a name="determine-the-existing-database-compatibility-level-for-a-multidimensional-database"></a>다차원 데이터베이스에 대한 기존 데이터베이스 호환성 수준을 결정합니다.  
  데이터베이스 호환성 수준은 XMLA를 통해서만 보거나 수정할 수 있습니다. SQL Server Management Studio에서 데이터베이스를 지정하는 XMLA 스크립트를 보거나 수정할 수 있습니다.  
   
- 속성에 대 한 데이터베이스의 XMLA 정의 검색 하는 경우 `CompatibilityLevel` 존재 하지 않는, 데이터베이스가 있을 가능성이 가장 높습니다는 `1050` 수준입니다.  
+ `CompatibilityLevel` 속성에 대한 데이터베이스의 XMLA 정의를 검색했지만 그 결과가 없는 경우 `1050` 수준의 데이터베이스가 있을 가능성이 가장 높습니다.  
   
  XMLA 스크립트 보기 및 수정에 대한 지침은 다음 섹션에서 제공됩니다.  
   
@@ -90,9 +90,9 @@ ms.locfileid: "48219123"
 3.  서버 동기화는 동일한 버전과 데이터베이스 호환성 수준을 공유하는 서버에 대해서만 지원됩니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 데이터베이스 호환성 수준을 높인 후 설정할 수 있습니다 합니다 `StringStoresCompatibilityLevel` 속성에서 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]합니다. 그러면 측정값 및 차원에 대한 문자열 저장소가 증가합니다. 이 기능에 대한 자세한 내용은 [차원 및 파티션에 대한 문자열 저장소 구성](configure-string-storage-for-dimensions-and-partitions.md)을 참조하세요.  
+ 데이터베이스 호환성 수준을 높인 후 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 `StringStoresCompatibilityLevel` 속성을 설정할 수 있습니다. 그러면 측정값 및 차원에 대한 문자열 저장소가 증가합니다. 이 기능에 대한 자세한 내용은 [차원 및 파티션에 대한 문자열 저장소 구성](configure-string-storage-for-dimensions-and-partitions.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [백업, 복원 및 데이터베이스를 동기화 할 &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
+## <a name="see-also"></a>관련 항목:  
+ [데이터베이스 백업, 복원 및 동기화&#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

@@ -18,12 +18,12 @@ ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e52684ee8c73c976e42c29ca54079ac716527a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4411cb68c86bbea92429a983449e77985d3d236d
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834491"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591587"
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@job_id=** ] *job_id*  
  일정을 추가할 작업의 작업 ID 번호입니다. *job_id* 됩니다 **uniqueidentifier**, 기본값은 없습니다.  
   
- [ **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **'**_job_name_**'**  
  일정을 추가할 작업의 이름입니다. *job_name* 됩니다 **nvarchar (128)**, 기본값은 없습니다.  
   
 > [!NOTE]  
 >  어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [ **@name=** ] **'***name***'**  
+ [  **@name=** ] **'**_이름_**'**  
  일정 이름입니다. *이름을* 됩니다 **nvarchar (128)**, 기본값은 없습니다.  
   
  [ **@enabled=** ] *enabled_flag*  
@@ -113,7 +113,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |값|설명(단위)|  
 |-----------|--------------------------|  
 |**1**|첫째|  
-|**2**|둘째|  
+|**2**|Second|  
 |**4**|셋째|  
 |**8**|넷째|  
 |**16**|마지막|  
@@ -134,13 +134,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@active_start_time=** ] *active_start_time*  
  사이의 임의의 날짜에서 시간 *active_start_date* 하 고 *active_end_date* 작업 실행을 시작 합니다. *active_start_time* 됩니다 **int**, 기본값은 없습니다. 시간 형식은 HHMMSS이며 24시간제를 사용합니다.  
   
- [ **@active_end_time=***active_end_time*  
+ [  **@active_end_time=**_active_end_time_  
  사이의 임의의 날짜에서 시간 *active_start_date* 하 고 *active_end_date* 작업 실행을 종료 합니다. *active_end_time* 됩니다 **int**, 기본값은 없습니다. 시간 형식은 HHMMSS이며 24시간제를 사용합니다.  
   
- [ **@schedule_id=***schedule_id***OUTPUT**  
+ [  **@schedule_id=**_schedule_id_**출력**  
  일정을 성공적으로 만든 경우 일정에 할당되는 일정 ID 번호입니다. *schedule_id* 는 형식의 출력 변수 **int**, 기본값은 없습니다.  
   
- [ **@schedule_uid**=] *schedule_uid * 출력**  
+ [ **@schedule_uid**=] _schedule_uid_**출력**  
  일정의 고유 식별자입니다. *schedule_uid* 형식의 변수가 **uniqueidentifier**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

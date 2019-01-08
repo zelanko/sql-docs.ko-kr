@@ -16,12 +16,12 @@ ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a9a9a8db6c84bfde40ec7c71012d4cc528d57efd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ceeb9a6d964dadd35c725a7ae4cd9e6db7c8d090
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163543"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363645"
 ---
 # <a name="upgrade-full-text-search"></a>전체 텍스트 검색 업그레이드
   설치 프로그램을 실행하거나 데이터베이스 복사 마법사를 사용하여 이전 버전의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 만든 데이터베이스 파일 및 전체 텍스트 카탈로그를 연결, 복원 또는 복사하면 전체 텍스트 검색이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 업그레이드됩니다.  
@@ -126,7 +126,7 @@ ms.locfileid: "48163543"
 ## <a name="backup-and-imported-full-text-catalogs"></a>전체 텍스트 카탈로그 백업 및 가져오기  
  업그레이드 도중 다시 작성되거나 다시 설정된 전체 텍스트 카탈로그 및 새로 작성된 전체 텍스트 카탈로그는 논리적인 개념이며 파일 그룹에 존재하지 않습니다. 따라서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 전체 텍스트 카탈로그를 백업하려면 카탈로그의 전체 텍스트 인덱스가 들어 있는 파일 그룹을 모두 확인하여 하나씩 백업해야 합니다. 자세한 내용은 [전체 텍스트 카탈로그와 인덱스 백업 및 복원](back-up-and-restore-full-text-catalogs-and-indexes.md)을 참조하세요.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 가져온 전체 텍스트 카탈로그는 여전히 자체 파일 그룹의 데이터베이스 파일입니다. 전체 텍스트 카탈로그에 대한 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 의 백업 프로세스가 여전히 적용되지만 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에는 MSFTESQL 서비스가 없습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 프로세스에 대한 자세한 내용은 SQL Server 2005 온라인 설명서에서 [전체 텍스트 카탈로그 백업 및 복원](http://go.microsoft.com/fwlink/?LinkId=209154) 을 참조하세요.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 가져온 전체 텍스트 카탈로그는 여전히 자체 파일 그룹의 데이터베이스 파일입니다. 전체 텍스트 카탈로그에 대한 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 의 백업 프로세스가 여전히 적용되지만 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에는 MSFTESQL 서비스가 없습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 프로세스에 대한 자세한 내용은 SQL Server 2005 온라인 설명서에서 [전체 텍스트 카탈로그 백업 및 복원](https://go.microsoft.com/fwlink/?LinkId=209154) 을 참조하세요.  
   
 ##  <a name="Upgrade_Db"></a> 데이터베이스를 업그레이드할 때 전체 텍스트 인덱스 마이그레이션 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  데이터베이스 연결, 복원 또는 복사 마법사를 사용하여 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 만든 데이터베이스 파일 및 전체 텍스트 카탈로그를 기존 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 서버 인스턴스로 업그레이드할 수 있습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 전체 텍스트 인덱스(있는 경우)는 가져오거나 다시 설정하거나 다시 작성할 수 있습니다. **upgrade_option** 서버 속성은 이러한 데이터베이스 업그레이드 도중 서버 인스턴스에서 사용할 전체 텍스트 업그레이드 옵션을 제어합니다.  
@@ -135,9 +135,9 @@ ms.locfileid: "48163543"
   
  **서버 인스턴스의 전체 텍스트 업그레이드 동작을 변경하려면**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]: [sp\_fulltext\_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)의 **upgrade\_option** 동작을 사용합니다.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]: 사용 된 **업그레이드\_옵션** 동작 [sp\_fulltext\_서비스](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** **서버 속성** 대화 상자의 **전체 텍스트 업그레이드 옵션** 을 사용합니다. 자세한 내용은 [서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링](manage-and-monitor-full-text-search-for-a-server-instance.md)을 참조하세요.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** 사용 된 **전체 텍스트 업그레이드 옵션** 의 합니다 **서버 속성** 대화 상자. 자세한 내용은 [서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링](manage-and-monitor-full-text-search-for-a-server-instance.md)을 참조하세요.  
   
 ##  <a name="Considerations_for_Restore"></a>[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 전체 텍스트 카탈로그를 다음으로 복원 시 고려 사항: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스의 전체 텍스트 데이터를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 로 업그레이드하는 방법 중 하나는 전체 데이터베이스 백업을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 복원하는 것입니다.  
@@ -148,7 +148,7 @@ ms.locfileid: "48163543"
   
 -   전체 텍스트 카탈로그가 오프라인 상태이면 백업이 실패합니다.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 전체 텍스트 카탈로그 백업 및 복원에 대한 자세한 내용은 온라인 설명서에서 [전체 텍스트 카탈로그 백업 및 복원](http://go.microsoft.com/fwlink/?LinkId=121052) 및 [파일 백업과 복원 및 전체 텍스트 카탈로그](http://go.microsoft.com/fwlink/?LinkId=121053)[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 를 참조하세요.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 전체 텍스트 카탈로그 백업 및 복원에 대한 자세한 내용은 온라인 설명서에서 [전체 텍스트 카탈로그 백업 및 복원](https://go.microsoft.com/fwlink/?LinkId=121052) 및 [파일 백업과 복원 및 전체 텍스트 카탈로그](https://go.microsoft.com/fwlink/?LinkId=121053)[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 를 참조하세요.  
   
  데이터베이스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 복원하면 전체 텍스트 카탈로그에 대한 새 데이터베이스 파일이 만들어집니다. 이 파일의 기본 이름은 ftrow_*catalog-name*.ndf입니다. 예를 들어 *catalog-name* 이 `cat1`이면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스 파일의 기본 이름은 `ftrow_cat1.ndf`입니다. 대상 디렉터리에서 이 기본 이름이 이미 사용되고 있으면 새 데이터베이스 파일의 이름이 `ftrow_`*catalog-name*`{`*GUID*`}.ndf`로 지정됩니다. 여기에서 *GUID* 는 새 파일의 전역 고유 식별자입니다.  
   

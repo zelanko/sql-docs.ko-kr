@@ -11,12 +11,12 @@ ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b29f10762f421c76dd7adbbd341038771f135a04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 1219998db8ec07de6e03aa14b3aefaee6515e235
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086623"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366175"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>URL에 하이퍼링크 추가(보고서 작성기 및 SSRS)
   사용자가 보고서의 링크를 클릭하여 지정 URL에 대한 브라우저를 열 수 있게 하기 위해 보고서 항목에 하이퍼링크를 추가할 수 있습니다. 하이퍼링크는 정적 URL 및 URL을 반환하는 식이 될 수 있습니다. URL을 포함하는 데이터베이스에 필드가 있는 경우 식에 해당 필드가 포함될 수 있으므로 보고서에 하이퍼링크의 동적 목록이 생깁니다. 입력란, 이미지, 차트 및 계기에 하이퍼링크를 추가할 수 있습니다. 이때 사용자가 제공 URL에 액세스할 수 있는 권한이 있는지 확인해야 합니다.  
@@ -24,14 +24,14 @@ ms.locfileid: "48086623"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- 보고서 서버에 대한 URL 요청을 사용하여 본인과 사용자에게 볼 수 있는 권한이 있는 보고서 서버의 보고서에 대해 URL을 지정할 수도 있습니다. 예를 들어 보고서를 지정한 다음 사용자가 처음으로 해당 보고서를 볼 때 문서 구조를 숨길 수 있습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 [Reporting Services 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에서 [URL 액세스&#40;SSRS&#41;](../url-access-ssrs.md)를 참조하세요.  
+ 보고서 서버에 대한 URL 요청을 사용하여 본인과 사용자에게 볼 수 있는 권한이 있는 보고서 서버의 보고서에 대해 URL을 지정할 수도 있습니다. 예를 들어 보고서를 지정한 다음 사용자가 처음으로 해당 보고서를 볼 때 문서 구조를 숨길 수 있습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 [Reporting Services 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에서 [URL 액세스&#40;SSRS&#41;](../url-access-ssrs.md)를 참조하세요.  
   
  입력란, 이미지 또는 차트의 계산된 계열과 같이 **동작** 속성이 있는 모든 항목의 URL에 하이퍼링크를 추가할 수 있습니다. 정의한 동작은 사용자가 해당 보고서 항목을 클릭할 때 발생합니다. 자세한 내용은 [동작 속성 대화 상자&#40;보고서 작성기 및 SSRS&#41;](../action-properties-dialog-box-report-builder-and-ssrs.md) 및 [외부 항목에 대한 경로 지정&#40;보고서 작성기 및 SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)을 참조하세요.  
   
- 빠르게 시작하려면 [자습서: 텍스트 서식 지정&#40;보고서 작성기&#41;](../tutorial-format-text-report-builder.md)을 참조하세요.  
+ 빠르게 시작 하려면 참조 [자습서: 텍스트 서식 지정 &#40;보고서 작성기&#41;](../tutorial-format-text-report-builder.md)합니다.  
   
 > [!NOTE]  
->  데이터 세트 필드에 바인딩된 링크는 악의적 의도를 가진 사용자가 임의로 변경할 수도 있습니다. 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][온라인 설명서](http://go.microsoft.com/fwlink/?LinkId=154888)에서 [보고서 및 리소스 보안](../security/secure-reports-and-resources.md)을 참조하세요.  
+>  데이터 세트 필드에 바인딩된 링크는 악의적 의도를 가진 사용자가 임의로 변경할 수도 있습니다. 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][온라인 설명서](https://go.microsoft.com/fwlink/?LinkId=154888)에서 [보고서 및 리소스 보안](../security/secure-reports-and-resources.md)을 참조하세요.  
   
 ### <a name="to-add-a-hyperlink"></a>하이퍼링크를 추가하려면  
   

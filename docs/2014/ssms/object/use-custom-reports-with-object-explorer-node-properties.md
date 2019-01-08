@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
@@ -12,18 +12,18 @@ ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7198118f9eadbf58bab83727ed45899f5fd2a0df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09f3cf66d28a70eecd82adde490d02b521fd80ed
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167673"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374405"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>개체 탐색기 노드 속성과 함께 사용자 지정 보고서 사용
   사용자 지정 보고서가 선택한 개체 탐색기 노드의 보고서 매개 변수를 참조하면 사용자 지정 보고서를 해당 노드의 컨텍스트에서 실행할 수 있습니다. 이렇게 하면 사용자 지정 보고서가 현재 컨텍스트(예: 현재 데이터베이스)나 데이터베이스 또는 서버 개체를 사용할 수 있습니다.  
   
 ## <a name="report-samples"></a>보고서 예제  
- [보고서 샘플](http://go.microsoft.com/fwlink/?LinkId=81792)을 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서 만든 표준 보고서와 함께 다운로드할 수 있습니다. 이러한 예제는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 수정할 수 있습니다.  
+ [보고서 샘플](https://go.microsoft.com/fwlink/?LinkId=81792)을 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서 만든 표준 보고서와 함께 다운로드할 수 있습니다. 이러한 예제는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 수정할 수 있습니다.  
   
 ## <a name="object-explorer-node-report-parameters"></a>개체 탐색기 노드 보고서 매개 변수  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48167673"
   
  `<?xml version="1.0" encoding="utf-8"?>`  
   
- `<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">`  
+ `<Report xmlns="https://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="https://schemas.microsoft.com/SQLServer/reporting/reportdesigner">`  
   
  `<ReportParameters>`  
   
@@ -1000,7 +1000,7 @@ ms.locfileid: "48167673"
   
  `</Report>`  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Management Studio의 사용자 지정 보고서](custom-reports-in-management-studio.md)   
  [Management Studio에 사용자 지정 보고서 추가](add-a-custom-report-to-management-studio.md)   
  [사용자 지정 보고서 실행 경고 표시](unsuppress-run-custom-report-warnings.md)  

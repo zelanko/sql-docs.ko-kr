@@ -13,19 +13,19 @@ ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d616312ffec682ad7c37da62c23c4ada1eb98f00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140993"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359275"
 ---
 # <a name="memory-optimization-advisor"></a>메모리 최적화 관리자
   트랜잭션 성능 보고서 도구( [메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)참조)는 메모리 내 OLTP를 사용하도록 변환할 경우 효과를 얻을 수 있는 데이터베이스 테이블을 알려 줍니다. 메모리 내 OLTP를 사용하도록 포팅할 테이블을 식별한 후 메모리 최적화 관리자를 사용하여 디스크 기반 데이터베이스 테이블을 메모리 내 OLTP로 마이그레이션할 수 있습니다.  
   
  먼저 디스크 기반 데이터베이스 테이블이 포함된 인스턴스에 연결합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 인스턴스에 연결할 수 있습니다. 하지만 메모리 최적화 관리자를 사용하여 마이그레이션 작업을 수행하려는 경우에는 메모리 내 OLTP 기능을 사용할 수 있는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 인스턴스에 연결해야 합니다. 메모리 내 OLTP 요구 사항에 대한 자세한 내용은 [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md)을 참조하십시오.  
   
- 마이그레이션 방법에 대한 자세한 내용은 [메모리 내 OLTP – 일반적인 작업 패턴 및 마이그레이션 고려 사항](http://msdn.microsoft.com/library/dn673538.aspx)을 참조하십시오.  
+ 마이그레이션 방법에 대한 자세한 내용은 [메모리 내 OLTP – 일반적인 작업 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)을 참조하세요.  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>메모리 최적화 관리자 사용 연습  
  **개체 탐색기**에서 변환할 테이블을 마우스 오른쪽 단추로 클릭하고 **메모리 최적화 관리자**를 선택합니다. **테이블 메모리 최적화 관리자**시작 페이지가 표시됩니다.  

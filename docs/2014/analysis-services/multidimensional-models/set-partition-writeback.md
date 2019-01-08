@@ -16,19 +16,19 @@ ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 07c13662da9a558c6c9406a7659c5529114236d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 54e2a0f5de93ee9f0d760adfd5a95551d19cc782
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157393"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364235"
 ---
 # <a name="set-partition-writeback"></a>파티션 쓰기 저장(writeback) 설정
   측정값을 쓰기 가능하게 설정하면 최종 사용자가 큐브 데이터를 검색하는 동안 변경할 수 있으며, 변경 내용은 큐브 데이터 또는 원본 데이터가 아닌 쓰기 저장 테이블이라는 별도의 테이블에 저장됩니다. 쓰기 가능한 파티션을 검색하는 최종 사용자에게 해당 파티션에 대한 쓰기 저장 테이블의 모든 변경 내용에 대한 최종 결과가 표시됩니다.  
   
  쓰기 저장 데이터를 찾아보거나 삭제할 수 있으며 쓰기 저장 데이터를 파티션으로 변환할 수도 있습니다. 쓰기 가능한 파티션의 경우 큐브 역할을 사용하여 사용자 및 사용자 그룹에 읽기/쓰기 권한을 부여하고 파티션의 특정 셀 또는 셀 그룹에 대한 액세스를 제한할 수 있습니다.  
   
- 쓰기 저장에 대한 간략한 비디오 지침은 [Analysis Services에 대한 Excel 2010 쓰기 저장](http://go.microsoft.com/fwlink/p/?LinkId=394951)을 참조하십시오. 이 기능에 대한 자세한 내용은 블로그 포스트 시리즈인 [Building a Writeback Application with Analysis Services (blog)](http://go.microsoft.com/fwlink/?LinkId=394977)(Analysis Services를 사용하여 쓰기 저장 애플리케이션 빌드(블로그))를 참조하세요.  
+ 쓰기 저장에 대한 간략한 비디오 지침은 [Analysis Services에 대한 Excel 2010 쓰기 저장](https://go.microsoft.com/fwlink/p/?LinkId=394951)을 참조하십시오. 이 기능에 대한 자세한 내용은 블로그 포스트 시리즈인 [Building a Writeback Application with Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977)(Analysis Services를 사용하여 쓰기 저장 애플리케이션 빌드(블로그))를 참조하세요.  
   
 > [!NOTE]  
 >  쓰기 저장은 SQL Server 관계형 데이터베이스 및 데이터 마트, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다차원 모델에 대해서만 지원됩니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "48157393"
   
 ## <a name="see-also"></a>관련 항목  
  [쓰기 가능 파티션](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Excel 2010의 셀 수준에서 OLAP 큐브에 쓰기 저장 활성화](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [Analysis Services 쓰기 저장으로 데이터 엔트리 활성화 및 보안](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [Excel 2010의 셀 수준에서 OLAP 큐브에 쓰기 저장 활성화](https://go.microsoft.com/fwlink/p/?LinkId=394952)   
+ [Analysis Services 쓰기 저장으로 데이터 엔트리 활성화 및 보안](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

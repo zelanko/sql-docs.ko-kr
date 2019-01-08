@@ -13,12 +13,12 @@ ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b809b633bb040755ac3d211b33804fd469fcb0a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 1742c706d4a89999c28c5cb29d260eed2c0d0334
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104593"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362405"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Reporting Services 자습서(SSRS)
   이 섹션에서는 대 한 자습서 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]합니다.  
@@ -39,9 +39,9 @@ ms.locfileid: "48104593"
  이 자습서의 단계를 따라 ReportViewer 컨트롤을 사용하여 매개 변수 및 필터가 있는 드릴스루 보고서를 만드는 방법을 배울 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQL Server 2012 용 adventure Works](http://go.microsoft.com/fwlink/?LinkId=245471)   
- [(CodePlex의 reporting Services 샘플 http://go.microsoft.com/fwlink/?LinkId=198283)](http://go.microsoft.com/fwlink/?LinkId=198283)   
- [TechNet WIKI: SQL Server 2012 예제 (http://go.microsoft.com/fwlink/?linkID=220734)](http://go.microsoft.com/fwlink/?linkID=220734)   
- [Picnic 데이터 집합 (예제 데이터) (http://go.microsoft.com/fwlink/?linkID=219108)](http://go.microsoft.com/fwlink/?linkID=219108)  
+ [SQL Server 2012 용 adventure Works](https://go.microsoft.com/fwlink/?LinkId=245471)   
+ [(CodePlex의 reporting Services 샘플 https://go.microsoft.com/fwlink/?LinkId=198283)](https://go.microsoft.com/fwlink/?LinkId=198283)   
+ [TechNet WIKI: SQL Server 2012 예제 (https://go.microsoft.com/fwlink/?linkID=220734)](https://go.microsoft.com/fwlink/?linkID=220734)   
+ [Picnic 데이터 집합 (예제 데이터) (https://go.microsoft.com/fwlink/?linkID=219108)](https://go.microsoft.com/fwlink/?linkID=219108)  
   
   

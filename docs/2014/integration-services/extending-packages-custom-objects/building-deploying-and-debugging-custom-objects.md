@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 helpviewer_keywords:
 - custom objects [Integration Services]
@@ -14,12 +12,12 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7257973db070b0f06cc48d217f232be2f81efeb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22b7d07752c6a9df5f0b100c0d16b78a86125f04
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159713"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362855"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>사용자 지정 개체 빌드, 배포 및 디버깅
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 사용자 지정 개체에 대한 코드를 작성한 후에는 어셈블리를 빌드하여 배포하고 패키지에서 사용할 수 있도록 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에 통합한 다음 테스트 및 디버깅을 수행해야 합니다.  
@@ -61,7 +59,7 @@ ms.locfileid: "48159713"
 ##  <a name="building"></a> 어셈블리 빌드  
  프로젝트를 서명한 후에는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 **빌드** 메뉴에서 사용할 수 있는 명령을 사용하여 프로젝트 또는 솔루션을 빌드하거나 다시 빌드해야 합니다. 솔루션에 사용자 지정 사용자 인터페이스를 위한 별도의 프로젝트가 포함된 경우 이 프로젝트도 강력한 이름으로 서명해야 하며 이 프로젝트를 솔루션과 동시에 빌드할 수 있습니다.  
   
- 어셈블리를 배포하고 전역 어셈블리 캐시에 설치하는 다음 두 단계를 수행하는 데 가장 편리한 방법은 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 이러한 단계를 빌드 후 이벤트로 스크립팅하는 것입니다. 빌드 이벤트는 [프로젝트 속성]의 **컴파일** 페이지([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 프로젝트의 경우) 또는 **빌드 이벤트** 페이지(C# 프로젝트의 경우)에서 사용할 수 있습니다. **gacutil.exe**와 같은 명령 프롬프트 유틸리티에는 전체 경로가 필요합니다. 공백이 포함된 경로와 공백이 포함된 경로로 확장되는 $(TargetPath) 등의 매크로는 모두 따옴표로 묶어야 합니다.  
+ 어셈블리를 배포하고 글로벌 어셈블리 캐시에 설치하는 다음 두 단계를 수행하는 데 가장 편리한 방법은 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 이러한 단계를 빌드 후 이벤트로 스크립팅하는 것입니다. 빌드 이벤트는 [프로젝트 속성]의 **컴파일** 페이지([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 프로젝트의 경우) 또는 **빌드 이벤트** 페이지(C# 프로젝트의 경우)에서 사용할 수 있습니다. **gacutil.exe**와 같은 명령 프롬프트 유틸리티에는 전체 경로가 필요합니다. 공백이 포함된 경로와 공백이 포함된 경로로 확장되는 $(TargetPath) 등의 매크로는 모두 따옴표로 묶어야 합니다.  
   
  다음은 사용자 지정 로그 공급자에 대한 빌드 후 이벤트 명령줄의 예입니다.  
   
@@ -153,9 +151,9 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 3.  일시 중지된 패키지로 돌아가서 중단점을 지나 계속하거나 **확인**을 클릭하여 스크립트 태스크에서 발생한 메시지 상자를 닫고 패키지 실행 및 디버깅을 계속합니다.  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 사용자 지정 개체 개발](developing-custom-objects-for-integration-services.md)   
  [사용자 지정 개체 지속](persisting-custom-objects.md)   
  [패키지 배포 문제 해결 도구](../troubleshooting/troubleshooting-tools-for-package-development.md)  

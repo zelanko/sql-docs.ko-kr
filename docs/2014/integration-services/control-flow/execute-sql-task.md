@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.f1
@@ -18,12 +17,12 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe677e6b2fb13c3a158c78e0416142b7b15ce975
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 64e3a60d767c100ad66a293f1e588369a140d1e8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204823"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367315"
 ---
 # <a name="execute-sql-task"></a>SQL 실행 태스크
   SQL 실행 태스크는 패키지에서 SQL 문이나 저장 프로시저를 실행합니다. 이 태스크는 단일 SQL 문 또는 순서대로 실행되는 여러 SQL 문을 포함할 수 있습니다. SQL 실행 태스크는 다음 용도로 사용할 수 있습니다.  
@@ -63,7 +62,7 @@ ms.locfileid: "48204823"
 >  SQL 실행 태스크 외부에서 작성된 SQL 문은 유효하더라도 SQL 실행 태스크에서 성공적으로 구문 분석되지 않을 수도 있습니다.  
   
 > [!NOTE]  
->  SQL 실행 태스크는 `RecognizeAll` ParseMode 열거형 값을 사용합니다. 자세한 내용은 [ManagedBatchParser 네임스페이스](http://go.microsoft.com/fwlink/?LinkId=223617)를 참조하십시오.  
+>  SQL 실행 태스크는 `RecognizeAll` ParseMode 열거형 값을 사용합니다. 자세한 내용은 [ManagedBatchParser 네임스페이스](https://go.microsoft.com/fwlink/?LinkId=223617)를 참조하십시오.  
   
 ## <a name="sending-multiple-statements-in-a-batch"></a>여러 개의 문을 일괄 처리로 전송  
  SQL 실행 태스크에 여러 개의 문이 포함된 경우 문을 그룹화하여 일괄 처리로 실행할 수 있습니다. 일괄 처리의 마지막을 알리려면 GO 명령을 사용합니다. 두 GO 명령 사이의 모든 SQL 문은 일괄 처리로 실행되도록 OLE DB Provider에 전송됩니다. SQL 명령은 GO 명령으로 구분된 여러 개의 일괄 처리를 포함할 수 있습니다.  
@@ -81,7 +80,7 @@ ms.locfileid: "48204823"
 -   태스크에 매개 변수 바인딩이 사용되는 경우 일괄 처리의 모든 쿼리에 동일한 수와 유형의 매개 변수를 사용해야 합니다.  
   
 ## <a name="running-parameterized-sql-commands"></a>매개 변수가 있는 SQL 명령 실행  
- SQL 문과 저장 프로시저는 일반적으로 입력 매개 변수, 출력 매개 변수 및 반환 코드를 사용합니다. SQL 실행 태스크를 지원 합니다 `Input`, `Output`, 및 `ReturnValue` 매개 변수 형식입니다. 사용할를 `Input` 입력된 매개 변수의 형식을 `Output` 출력 매개 변수에 대 한 및 `ReturnValue` 에 대 한 코드를 반환 합니다.  
+ SQL 문과 저장 프로시저는 일반적으로 입력 매개 변수, 출력 매개 변수 및 반환 코드를 사용합니다. SQL 실행 태스크는 `Input`, `Output` 및 `ReturnValue` 매개 변수 유형을 지원합니다. 입력 매개 변수에는 `Input` 유형, 출력 매개 변수에는 `Output` 유형, 반환 코드에는 `ReturnValue` 유형을 사용합니다.  
   
 > [!NOTE]  
 >  데이터 공급자가 지원하는 경우에만 SQL 실행 태스크에 매개 변수를 사용할 수 있습니다.  
@@ -96,7 +95,7 @@ ms.locfileid: "48204823"
 ## <a name="troubleshooting-the-execute-sql-task"></a>SQL 실행 태스크 문제 해결  
  SQL 실행 태스크가 외부 데이터 공급자에 대해 수행하는 호출을 기록할 수 있습니다. 이 로깅 기능을 사용하여 SQL 실행 태스크가 실행하는 SQL 명령의 문제를 해결할 수 있습니다. SQL 실행 태스크가 외부 데이터 공급자에 대해 수행하는 호출을 기록하려면 패키지 로깅을 사용하도록 설정하고 패키지 수준에서 **Diagnostic** 이벤트를 선택합니다. 자세한 내용은 [패키지 실행 문제 해결 도구](../troubleshooting/troubleshooting-tools-for-package-execution.md)를 참조하세요.  
   
- 경우에 따라 SQL 명령 또는 저장 프로시저는 여러 결과 집합을 반환합니다. 이러한 결과 집합의 결과 나타내는 행 집합 뿐만 아니라 포함 `SELECT` 오류 결과인 단일 값도 쿼리 `RAISERROR` 또는 `PRINT` 문입니다. 이 태스크에서 첫 번째 결과 집합 후에 발생하는 결과 집합의 오류를 무시할지 여부는 사용되는 연결 관리자의 유형에 따라 달라집니다.  
+ 경우에 따라 SQL 명령 또는 저장 프로시저는 여러 결과 집합을 반환합니다. 이러한 결과 집합에는 `SELECT` 쿼리의 결과인 행 집합뿐만 아니라 `RAISERROR` 또는 `PRINT` 문에 대한 오류 결과인 단일 값도 포함됩니다. 이 태스크에서 첫 번째 결과 집합 후에 발생하는 결과 집합의 오류를 무시할지 여부는 사용되는 연결 관리자의 유형에 따라 달라집니다.  
   
 -   OLE DB 및 ADO 연결 관리자를 사용하는 경우 태스크에서 첫 번째 결과 집합 후에 발생하는 결과 집합을 무시합니다. 따라서 이러한 연결 관리자를 사용하는 경우에는 오류가 첫 번째 결과 집합의 일부가 아니면 태스크에서 SQL 명령 또는 저장 프로시저가 반환하는 오류를 무시합니다.  
   
@@ -122,7 +121,7 @@ ms.locfileid: "48204823"
   
 -   태스크에서 SQL 문의 준비 단계를 건너뛸지를 나타냅니다.  
   
--   ADO 연결 형식을 사용하는 경우 SQL 문이 저장 프로시저인지 여부를 나타내야 합니다. 다른 연결 유형에 대해이 속성은 읽기 전용 이며 해당 값은 항상 `false`합니다.  
+-   ADO 연결 형식을 사용하는 경우 SQL 문이 저장 프로시저인지 여부를 나타내야 합니다. 다른 연결 유형에서 이 속성은 읽기 전용이며 항상 `false` 값을 갖습니다.  
   
  프로그래밍 방식을 통해 또는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하여 속성을 설정할 수 있습니다.  
   
@@ -159,6 +158,6 @@ ms.locfileid: "48204823"
   
 -   [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](/sql/t-sql/language-reference)  
   
--   mssqltips.com의 블로그 항목 - [SQL Server 2012에서의 새로운 날짜 및 시간 함수](http://go.microsoft.com/fwlink/?LinkId=239783)  
+-   mssqltips.com의 블로그 항목 - [SQL Server 2012에서의 새로운 날짜 및 시간 함수](https://go.microsoft.com/fwlink/?LinkId=239783)  
   
   

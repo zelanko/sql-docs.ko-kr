@@ -11,12 +11,12 @@ ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0522e8e4df8d6e2cbb1a386b89f933c2f7075a53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 5ec3264095ebdb34730f8112389b50aa6839836f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168563"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365356"
 ---
 # <a name="powerpivot-server-administration-and-configuration-in-central-administration"></a>중앙 관리에서 PowerPivot 서버 관리 및 구성
   PowerPivot 서버 관리 및 구성은 SharePoint 서비스 애플리케이션 관리자에 의해 SharePoint Server 관리를 통해 수행됩니다.  
@@ -69,6 +69,6 @@ ms.locfileid: "48168563"
 ## <a name="see-also"></a>관련 항목  
  [PowerPivot for SharePoint 2010 설치](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
  [구성 설정 참조 &#40;SharePoint 용 PowerPivot&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)   
- [SharePoint 용 powerpivot 재해 복구](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
+ [SharePoint 용 powerpivot 재해 복구](https://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

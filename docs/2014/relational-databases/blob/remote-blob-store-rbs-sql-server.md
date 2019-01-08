@@ -13,12 +13,12 @@ ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e0b80a483032b1be28780297bacc998a2be0b51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 2d9711b5b9d079df0396ba9874b203a89f26344f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181477"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373019"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>RBS(Remote Blob Store)(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RBS(Remote BLOB Store)는 데이터베이스 관리자가 기본 데이터베이스 서버에 직접 저장하지 않고 상용 저장소 솔루션에 BLOB(Binary Large Object)를 저장할 수 있도록 해 주는 선택적 추가 기능 구성 요소입니다.  
@@ -50,22 +50,22 @@ ms.locfileid: "48181477"
 ## <a name="rbs-requirements"></a>RBS 요구 사항  
  RBS를 사용하려면 BLOB 메타데이터가 저장된 기본 데이터베이스 서버용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise가 필요합니다. 그러나 제공된 FILESTREAM 공급자를 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard에 BLOB 자체를 저장할 수 있습니다.  
   
- RBS에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 RBS가 BLOB을 저장할 수 있는 FILESTREAM 공급자가 포함되어 있습니다. 다른 저장소 솔루션에 RBS를 사용하여 BLOB을 저장하려면 해당 저장소 솔루션을 위해 개발된 타사 RBS 공급자를 사용하거나 RBS API를 사용하여 사용자 지정 RBS 공급자를 개발해야 합니다. NTFS 파일 시스템에 BLOB을 저장하는 예제 공급자는 [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190)에서 학습 리소스로 사용할 수 있습니다.  
+ RBS에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 RBS가 BLOB을 저장할 수 있는 FILESTREAM 공급자가 포함되어 있습니다. 다른 저장소 솔루션에 RBS를 사용하여 BLOB을 저장하려면 해당 저장소 솔루션을 위해 개발된 타사 RBS 공급자를 사용하거나 RBS API를 사용하여 사용자 지정 RBS 공급자를 개발해야 합니다. NTFS 파일 시스템에 BLOB을 저장하는 예제 공급자는 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190)에서 학습 리소스로 사용할 수 있습니다.  
   
 ## <a name="rbs-security"></a>RBS 보안  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 외부에서 사용자 지정 공급자를 사용하여 BLOB를 저장하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 시스템을 우회하는 다른 프로세스에 사용할 수 있습니다. 사용자 지정 공급자가 사용하는 저장소 미디어에 적합한 권한과 암호화 옵션을 사용하여 저장된 BLOB를 보호해야 합니다.  
   
 ##  <a name="rbsresources"></a> RBS 리소스  
  **RBS 설명서**  
- RBS 설명서는 Windows 설치 관리자 패키지에 포함되어 있습니다. RBS를 설치하지 않고 RBS 설명서를 검토하고 싶으면 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] MSDN Library에서 온라인으로 [설명서의](http://go.microsoft.com/fwlink/?LinkId=210192)버전을 볼 수 있습니다.  
+ RBS 설명서는 Windows 설치 관리자 패키지에 포함되어 있습니다. RBS를 설치하지 않고 RBS 설명서를 검토하고 싶으면 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] MSDN Library에서 온라인으로 [설명서의](https://go.microsoft.com/fwlink/?LinkId=210192)버전을 볼 수 있습니다.  
   
  **RBS 백서**  
- Microsoft Word 문서로 다운로드할 수 있는 백서 "[Remote BLOB Storage](http://go.microsoft.com/fwlink/?LinkId=210422)"는 RBS 설치와 구성에 대한 자세한 내용을 제공합니다.  
+ Microsoft Word 문서로 다운로드할 수 있는 백서 "[Remote BLOB Storage](https://go.microsoft.com/fwlink/?LinkId=210422)"는 RBS 설치와 구성에 대한 자세한 내용을 제공합니다.  
   
  **RBS 예제**  
- [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190) 에서 제공하는 RBS 샘플은 RBS 응용 프로그램을 개발하는 방법과 사용자 지정 RBS 공급자를 설치하고 사용자 지정하는 방법을 보여 줍니다.  
+ [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) 에서 제공하는 RBS 샘플은 RBS 애플리케이션을 개발하는 방법과 사용자 지정 RBS 공급자를 설치하고 사용자 지정하는 방법을 보여 줍니다.  
   
  **RBS 블로그**  
- [RBS 블로그](http://go.microsoft.com/fwlink/?LinkId=210315) 는 RBS를 이해하고 배포하고 유지하는 데 도움이 되는 추가 정보를 제공합니다.  
+ [RBS 블로그](https://go.microsoft.com/fwlink/?LinkId=210315) 는 RBS를 이해하고 배포하고 유지하는 데 도움이 되는 추가 정보를 제공합니다.  
   
   

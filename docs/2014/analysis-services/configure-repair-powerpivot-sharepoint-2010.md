@@ -11,12 +11,12 @@ ms.assetid: d61f49c5-efaa-4455-98f2-8c293fa50046
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f59c5a1e4666c2cd1d0603298af62d75c43398f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: a80e362c97df74773d303a4b022d376fff40fb70
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112903"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360345"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>SharePoint 2010용 PowerPivot 구성 또는 복구(PowerPivot 구성 도구)
   SharePoint 2010용 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot 설치를 구성하거나 복구하려면 PowerPivot 구성 도구를 사용합니다. 구성 도구는 시스템 검색으로 시작한 다음 설치를 완료하거나 복구하는 데 필요한 동작 목록을 반환합니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 설치 마법사는 SharePoint 2010용 PowerPivot 구성 도구뿐만 아니라 SharePoint 2013용 PowerPivot 구성 도구를 설치합니다. 이 항목에서는 SharePoint 2010용 PowerPivot 구성 도구에 대해 설명합니다. SharePoint 2010에 대 한 자세한 내용은 참조 하세요. [PowerPivot 구성 또는 복구 SharePoint 2013 용 &#40;PowerPivot 구성 도구&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "48112903"
 ##  <a name="bkmk_before"></a> 시작하기 전 주의 사항  
  SharePoint 2010용 PowerPivot 구성 도구는 프로그램 파일, 레지스트리 설정 및 사용 가능한 포트를 검색합니다. 이 도구를 최대한 이용하려면 다음 정보를 검토하십시오.  
   
--   구성 도구를 실행 하는 위한 일반 요구 사항 [PowerPivot 구성 도구](power-pivot-sharepoint/power-pivot-configuration-tools.md)합니다.  
+-   구성 도구, [PowerPivot Configuration Tools](power-pivot-sharepoint/power-pivot-configuration-tools.md)실행을 위한 일반 요구 사항.  
   
 -   SharePoint 2010용 PowerPivot에는 클래식 모드 인증에 대해 구성된 웹 애플리케이션이 필요합니다. SharePoint 2010용 PowerPivot 구성 도구에서 애플리케이션을 만드는 경우 해당 애플리케이션은 클래식 모드에 대해 구성됩니다.  
   
@@ -53,13 +53,13 @@ ms.locfileid: "48112903"
 ##  <a name="bkmk_steps"></a> 구성 단계  
  구성 도구 링크는 SharePoint 2010용 PowerPivot이 로컬 서버에 설치된 경우에만 표시됩니다.  
   
-1.  에 **시작** 메뉴에서 **프로그램도**, 클릭 [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], 클릭 **구성 도구**, 클릭 하 고 **PowerPivot 구성 도구** .  
+1.  **시작** 메뉴에서 **모든 프로그램**을 가리키고 [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], **구성 도구**, **PowerPivot 구성 도구**를 차례로 클릭합니다.  
   
 2.  **SharePoint용 PowerPivot 구성 또는 복구**를 클릭합니다.  
   
 3.  창을 전체 크기로 확장합니다. 창 아래쪽에 **유효성 검사**, **실행**및 **끝내기** 명령이 포함된 단추 모음이 표시됩니다.  
   
-4.  **기본 계정:** 매개 변수 탭에 **기본 계정 사용자 이름**에 대한 도메인 사용자 계정을 입력합니다. 이 계정은 PowerPivot 서비스 애플리케이션 풀을 포함한 필수 서비스를 프로비전하는 데 사용됩니다. 네트워크 서비스, 로컬 시스템 등의 기본 제공 계정을 지정하지 마십시오. 이 도구는 기본 제공 계정을 지정하는 구성을 차단합니다.  
+4.  **기본 계정:** 매개 변수 탭에 대 한 도메인 사용자 계정을 입력 합니다 **기본 계정 사용자 이름**합니다. 이 계정은 PowerPivot 서비스 애플리케이션 풀을 포함한 필수 서비스를 프로비전하는 데 사용됩니다. 네트워크 서비스, 로컬 시스템 등의 기본 제공 계정을 지정하지 마십시오. 이 도구는 기본 제공 계정을 지정하는 구성을 차단합니다.  
   
      **암호:** 암호를 입력합니다. 새 SharePoint 팜인 경우 새 서버 또는 애플리케이션을 SharePoint 팜에 추가할 때마다 암호가 사용됩니다. 기존 팜인 경우 서버 애플리케이션을 팜에 추가할 수 있는 암호를 입력합니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48112903"
   
 10. **실행** 을 클릭하여 태스크 목록에 있는 모든 동작을 처리합니다. **실행** 단추는 작업의 유효성을 검사 한 후 사용할 수 있습니다. **실행** 이 활성화되지 않으면 먼저 **유효성 검사** 를 클릭합니다.  
   
-11. [Verify a PowerPivot for SharePoint 설치](instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md)합니다.  
+11. [Verify a PowerPivot for SharePoint Installation](instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md)입니다.  
   
 ##  <a name="bkmk_input"></a> 서버를 구성하는 데 사용된 입력 값  
  PowerPivot 구성 도구는 사용자가 입력하는 입력 값과 도구에서 검색하거나 자동으로 사용하는 기본값의 조합을 사용합니다.  
@@ -114,7 +114,7 @@ ms.locfileid: "48112903"
 ||사이트 URL|필요한 경우 기본값|이 도구는 SharePoint와 동일한 URL 명명 규칙을 사용하여 사이트 URL을 만듭니다.|  
 ||SiteTitle|필요한 경우 기본값|이 도구는 **PowerPivot 사이트** 를 기본 제목으로 추가합니다.|  
 |**사이트 모음에서 PowerPivot 기능 활성화**|사이트 URL||PowerPivot 기능을 활성화할 사이트 모음의 URL입니다.|  
-||이 사이트에 대한 고급 기능을 사용합니다.||SharePoint 사이트 기능 "PremiumSite"을 사용합니다.|  
+||이 사이트에 대한 고급 기능을 사용합니다.||SharePoint 사이트 기능 "premiumsite"을 사용을 사용 하도록 설정 합니다.|  
 |**Secure Store Service 응용 프로그램 만들기**|서비스 애플리케이션 이름||Secure Store Service 애플리케이션의 이름을 입력합니다.|  
 ||데이터베이스 서버||Secure Store Service 애플리케이션에 사용할 데이터베이스 서버의 이름을 입력합니다.|  
 |**Secure Store Service 응용 프로그램 프록시 만들기**|서비스 애플리케이션 이름||Secure Store Service 애플리케이션의 이름을 입력합니다.|  
@@ -125,7 +125,7 @@ ms.locfileid: "48112903"
 ||대상 애플리케이션의 이름|||  
 ||무인 계정 사용자 이름 및 암호||대상 애플리케이션에 의해 사용되고 무인 데이터 새로 고침을 실행하는 데 사용하는 Windows 사용자 계정의 자격 증명을 입력합니다.|  
 ||사이트 URL||대상 애플리케이션과 연결된 사이트 모음의 사이트 URL을 입력합니다. 사이트 모음을 추가로 연결하려면 SharePoint 중앙 관리를 사용합니다.|  
-|**Excel Services 서비스 응용 프로그램 만들기**|서비스 애플리케이션 이름||서비스 애플리케이션 이름을 입력합니다. SharePoint 팜의 데이터베이스 서버에 동일한 이름의 서비스 애플리케이션 데이터베이스가 만들어집니다.|  
+|**Excel Services 서비스 응용 프로그램 만들기**|서비스 애플리케이션 이름||서비스 애플리케이션 이름을 입력합니다. 동일한 이름의 서비스 응용 프로그램 데이터베이스를 SharePoint 팜의 데이터베이스 서버에 만들어집니다.|  
 |**MSOLAP.5를 신뢰할 수 있는 공급자로 추가**|서비스 애플리케이션 이름||SharePoint 2010의 Excel Services는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] OLE DB 공급자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터에 연결합니다. 이 단계에서는 SharePoint용 PowerPivot으로 설치된 OLE DB 공급자의 버전을 Excel Services에 대한 신뢰할 수 있는 공급자로 추가합니다.|  
 ||PowerPivot 서버 이름|||  
 |||||  
@@ -163,7 +163,7 @@ ms.locfileid: "48112903"
 ### <a name="install-adonet-data-services-35-sp1"></a>ADO.NET Data Services 3.5 SP1 설치  
  SharePoint 목록의 데이터 피드 내보내기를 수행하려면 ADO.NET Data Services가 필요합니다. 이 구성 요소는 SharePoint 2010의 PrerequisiteInstaller 프로그램에 포함되어 있지 않으므로 수동으로 설치해야 합니다.  
   
-1.  SharePoint 2010의 하드웨어 및 소프트웨어 요구 사항 설명서 [하드웨어 및 소프트웨어 요구 사항 확인(SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734)으로 이동합니다.  
+1.  SharePoint 2010의 하드웨어 및 소프트웨어 요구 사항 설명서 [하드웨어 및 소프트웨어 요구 사항 확인(SharePoint 2010)](https://go.microsoft.com/fwlink/?LinkId=169734)으로 이동합니다.  
   
 2.  소프트웨어 필수 구성 요소 설치에서 현재 사용 중인 운영 체제에 맞는 ADO.NET Data Services 3.5의 링크를 찾습니다.  
   

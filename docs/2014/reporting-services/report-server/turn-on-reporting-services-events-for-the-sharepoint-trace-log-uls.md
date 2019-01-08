@@ -11,12 +11,12 @@ ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9170643f3d0a96facb68709ad59bc4c8e90dc9a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 2f4f0217fd3941e236e132487041020f0c1ec3f2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117253"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371345"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정(ULS)
   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]부터 SharePoint 모드의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서버는 SharePoint ULS(통합 로깅 서비스) 추적 로그에 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 이벤트를 기록할 수 있습니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 관련 범주는 SharePoint 중앙 관리의 모니터링 페이지에서 사용할 수 있습니다.  
@@ -87,9 +87,9 @@ Get-SPDiagnosticConfig
   
 1.  **제품: SQL Server Reporting Services**  
   
-2.  **범주:** 서버 관련 이벤트는 이름의 시작 부분에 "Report Server"라는 문자가 있습니다. 예: “Report Server Alerting Runtime” 이러한 이벤트는 보고서 서버 로그 파일에도 기록됩니다.  
+2.  **범주:** 서버와 관련 된 이벤트 이름 시작 부분에 "Report Server" 라는 문자가 있습니다. 예: "Report Server Alerting Runtime" 이러한 이벤트는 보고서 서버 로그 파일에도 기록됩니다.  
   
-3.  **범주:** 웹 프런트 엔드 구성 요소와 관련된 이벤트나 웹 프런트 엔드 구성 요소로부터 전달되는 이벤트에는 “Report Server”가 포함되지 않습니다. 예: “Service Application Proxy” Report Server Alerting Runtime” WFE 항목은 CorrelationID를 포함하지만 서버 항목은 CorrelationID를 포함하지 않습니다.  
+3.  **범주:** 이벤트와 관련 된 나 웹 프런트 엔드 구성 요소 로부터 전달 되는 "Report Server"를 포함 되지 않습니다. 예 "Service Application Proxy" Report Server Alerting Runtime" WFE 항목은 CorrelationID를 포함하지만 서버 항목은 CorrelationID를 포함하지 않습니다.  
   
 ##  <a name="bkmk_list"></a> SQL Server Reporting Services 이벤트 목록  
  다음 표에는 SQL Server Reporting Services 범주의 이벤트 목록이 나와 있습니다.  
@@ -102,7 +102,7 @@ Get-SPDiagnosticConfig
 |로컬 모드 렌더링||  
 |SOAP 클라이언트 프록시||  
 |UI 페이지||  
-|파워 뷰|**LogClientTraceEvents** API에 쓴 로그 항목입니다. 이러한 항목은 포함 하 여 클라이언트 응용 프로그램에서 제공 됩니다 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]의 기능 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 추가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> LogClientTraceEvents API의 모든 로그 항목은 "SQL Server Reporting Services" 및 "파워 뷰" **영역** 의 **범주** 에 기록됩니다.<br /><br /> "파워 뷰" 영역으로 기록된 항목의 내용은 클라이언트 애플리케이션에 의해 결정됩니다.|  
+|파워 뷰|**LogClientTraceEvents** API에 쓴 로그 항목입니다. 다음 항목의 출처는 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]Enterprise Edition용 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 추가 기능의 기능인 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 을 포함하는 클라이언트 애플리케이션입니다.<br /><br /> LogClientTraceEvents API의 모든 로그 항목은 "SQL Server Reporting Services" 및 "파워 뷰" **영역**의 **범주**에 기록됩니다.<br /><br /> "파워 뷰" 영역으로 기록된 항목의 내용은 클라이언트 애플리케이션에 의해 결정됩니다.|  
 |보고서 서버 경고 런타임||  
 |보고서 서버 응용 프로그램 도메인 관리자||  
 |보고서 서버 버퍼링 응답||  
@@ -126,7 +126,7 @@ Get-SPDiagnosticConfig
 |보고서 서버 공급자||  
 |보고서 서버 렌더링||  
 |보고서 서버 보고서 미리 보기||  
-|보고서 서버 리소스 유틸리티|샘플 항목:<br /><br /> MediumReporting 서비스 시작 SKU: 평가<br /><br /> MediumEvaluation 복사: 180일 남음|  
+|보고서 서버 리소스 유틸리티|샘플 항목:<br /><br /> MediumReporting 서비스 시작 SKU: Evaluation<br /><br /> MediumEvaluation 복사: 180일 남음|  
 |보고서 서버 실행 작업||  
 |보고서 서버 실행 요청||  
 |보고서 서버 예약||  
@@ -143,16 +143,16 @@ Get-SPDiagnosticConfig
  ![PowerShell 관련 내용](../media/rs-powershellicon.jpg "PowerShell 관련 내용")PowerShell을 사용하여 ULS 로그 파일에서 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 관련 이벤트 목록을 반환할 수 있습니다. ULS 로그 파일 UESQL11SPOINT-20110606-1530.log 파일에서 "**sql server reporting services**"가 포함된 필터링된 행 목록을 반환하려면 SharePoint 2010 관리 셸에서 다음 명령을 입력합니다.  
   
 ```  
-Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services”  
+Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services"  
 ```  
   
  ULS 로그를 읽는 데 사용할 수 있는 다운로드 가능한 많은 도구가 있습니다. 예를 들어 [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com/) 또는 [SharePoint ULS 로그 뷰어](http://ulsviewer.codeplex.com/workitem/list/basic)를 다운로드할 수 있습니다. 이 두 도구는 Codeplex에서 다운로드할 수 있습니다.  
   
- PowerShell을 사용하여 로그 데이터를 보는 방법에 대한 자세한 내용은 [진단 로그 보기(SharePoint Server 2010)](http://technet.microsoft.com/library/ff463595.aspx)를 참조하세요.  
+ PowerShell을 사용하여 로그 데이터를 보는 방법에 대한 자세한 내용은 [진단 로그 보기(SharePoint Server 2010)](https://technet.microsoft.com/library/ff463595.aspx)를 참조하세요.  
   
 ##  <a name="bkmk_trace"></a> 추적 로그 위치  
  추적 로그 파일은 일반적으로 **c:\Program Files\Common files\Microsoft Shared\Web Server Extensions\14\logs** 폴더에 있지만 SharePoint 중앙 관리의 **진단 로깅** 페이지에서 경로를 확인하거나 변경할 수 있습니다.  
   
- SharePoint 2010 중앙 관리에서 SharePoint 서버에 대해 진단 로깅을 구성하는 방법 및 단계는 [진단 로깅 설정 구성(Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423)을 참조하세요.  
+ SharePoint 2010 중앙 관리에서 SharePoint 서버에 대해 진단 로깅을 구성하는 방법 및 단계는 [진단 로깅 설정 구성(Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkID=114423)을 참조하세요.  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtrans.f1
@@ -26,18 +25,18 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8f0b1fc213fb1916421b1c9b0f02bb82b5553770
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0108e55f6038b234d78f3fd66d9bae243af28a9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123009"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357351"
 ---
 # <a name="fuzzy-grouping-transformation"></a>유사 항목 그룹화 변환
   유사 항목 그룹화 변환에서는 중복되기 쉬운 데이터 행을 식별하고 데이터 표준화에 사용할 데이터의 중복 행을 선택하여 데이터 정리 태스크를 수행합니다.  
   
 > [!NOTE]  
->  성능 및 메모리 제한 사항을 포함하여 유사 항목 그룹화 변환에 대한 자세한 내용은 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)(SQL Server Integration Services 2005에서 유사 항목 조회 및 유사 항목 그룹화) 백서를 참조하세요.  
+>  성능 및 메모리 제한 사항을 포함하여 유사 항목 그룹화 변환에 대한 자세한 내용은 [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)(SQL Server Integration Services 2005에서 유사 항목 조회 및 유사 항목 그룹화) 백서를 참조하세요.  
   
  유사 항목 그룹화 변환에는 변환 알고리즘이 작업을 수행하는 데 필요한 임시 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블을 만들기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결이 필요합니다. 연결은 데이터베이스에 테이블을 만드는 권한을 가진 사용자로 확인되어야 합니다.  
   
@@ -84,11 +83,11 @@ ms.locfileid: "48123009"
   
  **유사 항목 그룹화 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [유사 항목 그룹화 변환 편집기 &#40;연결 관리자 탭&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
+-   [유사 항목 그룹화 변환 편집기&#40;연결 관리자 탭&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
--   [유사 항목 그룹화 변환 편집기 &#40;열 탭&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
+-   [유사 항목 그룹화 변환 편집기&#40;열 탭&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
   
--   [유사 항목 그룹화 변환 편집기 &#40;고급 탭&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
+-   [유사 항목 그룹화 변환 편집기&#40;고급 탭&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
   
  **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
@@ -103,7 +102,7 @@ ms.locfileid: "48123009"
   
 -   [데이터 흐름 구성 요소의 속성 설정](../set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [유사 항목 조회 변환](lookup-transformation.md)   
  [Integration Services 변환](integration-services-transformations.md)  
   

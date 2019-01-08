@@ -15,12 +15,12 @@ ms.assetid: 968c316d-db83-4c24-8ea6-9f18736842f7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f3851ebeb72cc76ce6466d4456772ec13de48a38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67633bcfad7c18679dae93de6e5541f3000a1ccc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065323"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363555"
 ---
 # <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
   Windows PowerShell의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자 및 cmdlet 사용에 대한 정보를 얻을 수 있는 몇 가지 도움말이 있습니다. 여기서는 Windows PowerShell 환경에서 사용 가능한 도움말에 대해 알아봅니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "48065323"
 ### <a name="help-in-the-windows-powershell-environment"></a>Windows PowerShell 환경의 도움말  
  Windows PowerShell 환경에서 **Get-Help** cmdlet을 사용하여 도움말을 볼 수 있습니다. **Get-Help** 는 Windows PowerShell에서 제공되는 다양한 cmdlet 및 공급자와 Windows PowerShell 언어에 대한 기본적인 도움말을 제공합니다.  
   
- **Get-Help**를 사용할 수 있는 방법은 [Get-Help: 도움말 보기](http://go.microsoft.com/fwlink/?LinkId=102136)를 참조하세요.  
+ 사용할 수는 방법에 대 한 자세한 내용은 **Get-help**를 참조 하세요 [Get-help: 도움말](https://go.microsoft.com/fwlink/?LinkId=102136)합니다.  
   
 ### <a name="sql-server-powershell-provider-help"></a>SQL Server PowerShell 공급자 도움말  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 공급자는 SQLSERVER 가상 드라이브에서 여러 폴더(예: SQLSERVER:\SQL 및 SQLSERVER:\DAC 폴더)를 구현합니다. 각 폴더는 SQL Server 관리 효율성 개체 모델 중 하나에 연결됩니다. SQL Server 경로에 각 노드에 연결된 메서드 및 속성을 나열할 수 있지만 PowerShell 환경에서 해당 메서드와 속성에 대한 도움말을 볼 수 없습니다. 연결된 프로그래밍 참조에 대한 링크를 제공하는 폴더 테이블은 [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)를 참조하십시오.  
@@ -62,16 +62,16 @@ ms.locfileid: "48065323"
 Get-Help Invoke-Sqlcmd  
   
 ## Get the full help.  
-Get-Help Invoke-Sqlcmd –Full  
+Get-Help Invoke-Sqlcmd -Full  
   
 ## Get the parameter descriptions.  
 Get-Help Invoke-Sqlcmd -Parameter *  
   
 ## Get the code examples.  
-Get-Help Invoke-Sqlcmd –Examples  
+Get-Help Invoke-Sqlcmd -Examples  
   
 ## Get the syntax diagram.  
-Get-Help Invoke-Sqlcmd –Syntax  
+Get-Help Invoke-Sqlcmd -Syntax  
 ```  
   
 ## <a name="get-a-list-of-providers"></a>공급자 목록 가져오기  
@@ -79,7 +79,7 @@ Get-Help Invoke-Sqlcmd –Syntax
   
 1.  공급자 범주를 지정하여 Get-Help를 실행합니다.  
   
- Windows PowerShell에서 공급자 도움말을 보는 방법은 [드라이브 및 공급자(Drives and Providers)](http://go.microsoft.com/fwlink/?LinkId=102137)를 참조하십시오.  
+ Windows PowerShell에서 공급자 도움말을 보는 방법은 [드라이브 및 공급자(Drives and Providers)](https://go.microsoft.com/fwlink/?LinkId=102137)를 참조하십시오.  
   
 ### <a name="example-get-a-list-of-providers"></a>예: 공급자 목록 가져오기  
  다음 코드는 Windows PowerShell 세션에서 현재 사용 가능한 공급자의 목록을 반환합니다.  
@@ -105,7 +105,7 @@ Get-Help SQLServer
   
 1.  CD 명령으로 SQL Server 경로의 노드로 이동하거나 해당 위치로 설정된 변수를 만듭니다.  
   
-2.  –Type 매개 변수를 메서드 또는 속성으로 설정하여 **Get-Member** cmdlet을 실행합니다.  
+2.  실행 합니다 **Get-member** cmdlet 메서드 또는 속성으로 설정-형식 매개 변수를 사용 하 여  
   
 ### <a name="examples-listing-methods-and-properties"></a>예: 메서드 및 속성 나열  
  이 예에서는 Databases 노드에 지원되는 메서드를 나열합니다.  

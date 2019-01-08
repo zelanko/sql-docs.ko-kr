@@ -13,12 +13,12 @@ ms.assetid: 0209055e-cb6b-4a07-909e-836596727a2c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f51d2f6f48263e764d73eb9fcd8ee0dcd27b26da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb79a52e8ce910425de44b5cf475400daa3f40aa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071763"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356547"
 ---
 # <a name="task-6-adding-excel-source-to-the-data-flow"></a>태스크 6: 데이터 흐름에 Excel 원본 추가
   이 작업에서는 데이터 흐름에 Excel 원본을 추가하여 원본 Excel 파일에서 공급자 데이터를 읽습니다. Excel 원본은 Microsoft Excel 통합 문서의 워크시트 또는 범위에서 데이터를 추출합니다. 자세한 내용은 [Excel 원본](../integration-services/data-flow/excel-source.md) 항목을 참조하십시오.  
@@ -45,9 +45,9 @@ ms.locfileid: "48071763"
   
 9. **확인** 을 클릭하여 대화 상자를 닫습니다.  
   
-10. **SSIS 도구 상자** 의 **기타 변환** 에서 **Excel 파일에서 공급자 데이터 읽기** 아래의 **데이터 흐름** 탭으로 **DQS 정리**를 끌어 놓습니다. DQS 정리 변환에서 기술 자료의 승인된 규칙을 사용하여 DQS(Data Quality Services)로 데이터를 수정합니다. 이 변환은 런타임에 DQS 서버에 DQS 정리 프로젝트를 만듭니다. 자세한 내용은 [DQS 정리 변환](http://msdn.microsoft.com/library/ee677619.aspx) 항목을 참조하십시오.  
+10. **SSIS 도구 상자** 의 **기타 변환** 에서 **Excel 파일에서 공급자 데이터 읽기** 아래의 **데이터 흐름** 탭으로 **DQS 정리**를 끌어 놓습니다. DQS 정리 변환에서 기술 자료의 승인된 규칙을 사용하여 DQS(Data Quality Services)로 데이터를 수정합니다. 이 변환은 런타임에 DQS 서버에 DQS 정리 프로젝트를 만듭니다. 자세한 내용은 [DQS 정리 변환](https://msdn.microsoft.com/library/ee677619.aspx) 항목을 참조하십시오.  
   
 ## <a name="next-step"></a>다음 단계  
- [태스크 7: 데이터 흐름에 DQS 정리 변환 추가](../integration-services/data-flow/data-flow.md)  
+ [태스크 7: 데이터 흐름에 추가 DQS 정리 변환](../integration-services/data-flow/data-flow.md)  
   
   

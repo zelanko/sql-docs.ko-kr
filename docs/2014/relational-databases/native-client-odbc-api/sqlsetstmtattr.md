@@ -14,12 +14,12 @@ ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: edd96f9927a5fe698dd47489beffc738b5456708
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31493eb8c685fbb31fa21691794740eb2b61219c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208530"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361292"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 혼합(키 집합/동적) 커서 모델을 지원하지 않습니다. SQL_ATTR_KEYSET_SIZE를 사용하여 키 집합 크기를 0이 아닌 값으로 설정하려고 하면 오류가 발생합니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "48208530"
   
 |*ValuePtr* 값|Description|  
 |----------------------|-----------------|  
-|SQL_DP_ON|기본. 호출한 후 [SQLPrepare 함수](http://go.microsoft.com/fwlink/?LinkId=59360)를 때까지 문 준비가 지연 됩니다 **SQLExecute** 가 호출 되거나 메타 속성 작업 (**SQLDescribeCol** 또는**SQLDescribeParam**) 실행 됩니다.|  
+|SQL_DP_ON|기본. 호출한 후 [SQLPrepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360)를 때까지 문 준비가 지연 됩니다 **SQLExecute** 가 호출 되거나 메타 속성 작업 (**SQLDescribeCol** 또는**SQLDescribeParam**) 실행 됩니다.|  
 |SQL_DP_OFF|문을 준비할 즉시 **SQLPrepare** 실행 됩니다.|  
   
 ### <a name="sqlsoptssregionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -122,7 +122,7 @@ ms.locfileid: "48208530"
   
  SQL_SOPT_SS_PARAM_FOCUS의 형식은 SQLULEN입니다.  
   
- 기본값은 0이며 이는 이러한 호출이 SQL 문의 매개 변수 표식에 해당하는 매개 변수의 주소를 지정한다는 의미입니다. 테이블 반환 매개 변수의 매개 변수 번호로 설정하면 이러한 호출이 해당 테이블 반환 매개 변수 열의 주소를 지정합니다. 테이블 반환 매개 변수의 매개 변수 번호가 아닌 값으로 설정하면 이러한 호출이 오류 IM020: "매개 변수 포커스가 테이블 반환 매개 변수를 참조하지 않습니다"를 반환합니다.  
+ 기본값은 0이며 이는 이러한 호출이 SQL 문의 매개 변수 표식에 해당하는 매개 변수의 주소를 지정한다는 의미입니다. 테이블 반환 매개 변수의 매개 변수 번호로 설정하면 이러한 호출이 해당 테이블 반환 매개 변수 열의 주소를 지정합니다. 테이블 반환 매개 변수의 매개 변수 번호가 아닌 값으로 설정하면 해당 호출에서 IM020 오류 "매개 변수 포커스가 테이블 반환 매개 변수를 참조하지 않습니다"를 반환합니다.  
   
 ### <a name="sqlsoptssnamescope"></a>SQL_SOPT_SS_NAME_SCOPE  
  SQL_SOPT_SS_NAME_SCOPE 특성은 후속 카탈로그 함수 호출의 이름 범위를 지정합니다. SQLColumns 반환한 결과 집합은 SQL_SOPT_SS_NAME_SCOPE의 설정에 따라 달라 집니다.  
@@ -146,7 +146,7 @@ ms.locfileid: "48208530"
  SQL_SOPT_SS_NAME_SCOPE의 이외의 값이 호출 됩니다 SQLTables, SQLColumns, 또는 SQLPrimaryKeys 카탈로그 함수가 다른 경우 SQL_SS_NAME_SCOPE_TABLE 면 SQL_ERROR가 반환 됩니다. SQLSTATE HY010 및 "함수 시퀀스 오류입니다(SQL_SOPT_SS_NAME_SCOPE가 SQL_SS_NAME_SCOPE_TABLE로 설정되지 않았습니다)" 메시지가 표시되고 진단 레코드가 생성됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLGetStmtAttr 함수](http://go.microsoft.com/fwlink/?LinkId=59355)   
+ [SQLGetStmtAttr 함수](https://go.microsoft.com/fwlink/?LinkId=59355)   
  [ODBC API 구현 정보](odbc-api-implementation-details.md)  
   
   

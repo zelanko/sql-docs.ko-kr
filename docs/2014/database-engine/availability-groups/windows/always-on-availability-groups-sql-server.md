@@ -16,12 +16,12 @@ ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5e560cae97a647b484bc75936db31434dc08864a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: f1e86eec76a94a3858ede48fc0fb1b0703de4508
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177013"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356251"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Always On 가용성 그룹(SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능은 데이터베이스 미러링에 대한 엔터프라이즈 수준의 대안을 제공하는 고가용성 및 재해 복구 솔루션입니다. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에 도입된 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 엔터프라이즈 사용자 데이터베이스 집합의 가용성을 극대화합니다. *가용성 그룹* 은 함께 장애 조치(Failover)되는 사용자 데이터베이스( *가용성 데이터베이스*라고 함)의 불연속 집합에 대한 장애 조치(Failover) 환경을 지원합니다. 가용성 그룹은 읽기/쓰기 주 데이터베이스 집합과 1~8개의 해당 보조 데이터베이스 집합을 지원합니다. 필요한 경우 보조 데이터베이스에 대해 읽기 전용 액세스를 설정하거나 일부 백업 작업에 사용되도록 설정할 수 있습니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "48177013"
   
     -   읽기 전용 연결 액세스. 복제본이 보조 복제본으로 실행되는 경우 복제본에 읽기 전용으로 연결하여 해당 데이터베이스에 액세스하고 데이터베이스를 읽을 수 있습니다. 자세한 내용은 참조 하세요. [활성 보조: 읽기 가능한 보조 복제본입니다. Always On 가용성 그룹](https://msdn.microsoft.com/library/ff878253.aspx)).  
   
-    -   복제본이 보조 복제본으로 실행되는 경우 해당 데이터베이스에서 백업 작업 수행. 자세한 내용은 [활성 보조: 보조 복제본에 백업](https://msdn.microsoft.com/library/ff878253.aspx)).  
+    -   복제본이 보조 복제본으로 실행되는 경우 해당 데이터베이스에서 백업 작업 수행. 자세한 내용은 참조 하세요. [활성 보조: 보조 복제본에 백업](https://msdn.microsoft.com/library/ff878253.aspx)).  
   
      활성 보조 기능을 사용하면 IT 효율성을 향상시키고 보다 효율적인 보조 하드웨어 리소스 활용을 통해 비용을 절감할 수 있습니다. 또한 읽기 전용 애플리케이션 및 백업 작업을 보조 복제본으로 오프로드하면 주 복제본의 성능이 향상될 수 있습니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48177013"
   
         -   [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]는 가용성 그룹에 대한 수동 장애 조치(Failover)를 시작합니다. 장애 조치(Failover) 대상으로 지정하는 보조 복제본의 구성과 상태에 따라 마법사에서 계획된 수동 장애 조치(Failover) 또는 강제 수동 장애 조치(Failover)를 수행할 수 있습니다. 자세한 내용은 참조 하세요. [실패를 통해 가용성 그룹 마법사 사용; SQL Server Management Studio; ](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
   
-    -   [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)] AlwaysOn 가용성 그룹, 가용성 복제본 및 가용성 데이터베이스를 모니터링 하 고 AlwaysOn 정책에 대 한 결과 평가 합니다. 자세한 내용은 참조 하세요. [; AlwaysOn 대시보드 사용 SQL Server Management Studio; ](use-the-always-on-dashboard-sql-server-management-studio.md).  
+    -   [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)] 에서는 AlwaysOn 가용성 그룹, 가용성 복제본 및 가용성 데이터베이스를 모니터링하고 AlwaysOn 정책에 대한 결과를 평가합니다. 자세한 내용은 참조 하세요. [; AlwaysOn 대시보드 사용 SQL Server Management Studio; ](use-the-always-on-dashboard-sql-server-management-studio.md).  
   
     -   개체 탐색기 정보 창에 기존 가용성 그룹에 대한 기본 정보가 표시됩니다. 자세한 내용은 참조 하세요. [모니터 가용성 그룹에 개체 탐색기 정보를 사용 하 여 SQL Server Management Studio; ](use-object-explorer-details-to-monitor-availability-groups.md).  
   
@@ -143,7 +143,7 @@ ms.locfileid: "48177013"
 > [!WARNING]  
 >  제한 사항 및 사용 하 여 다른 기능을 사용 하는 것에 대 한 제한 사항에 대 한 자세한 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]를 참조 하세요 [Always On 가용성 그룹: 상호 운용성; SQL Server; ](always-on-availability-groups-interoperability-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [시작 Always On 가용성 그룹입니다. SQL Server;](getting-started-with-always-on-availability-groups-sql-server.md)  
   
@@ -151,19 +151,19 @@ ms.locfileid: "48177013"
   
 -   **블로그:**  
   
-     [SQL Server Always On 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](http://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server Always On 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [CSS SQL Server 엔지니어 블로그](http://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server 엔지니어 블로그](https://blogs.msdn.com/b/psssql/)  
   
 -   **비디오:**  
   
-     [Microsoft SQL Server 코드 이름 "Denali" Always On 시리즈, 1부: 차세대 고가용성 솔루션 소개](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server 코드 이름된 "Denali" Always On 시리즈, 1 부: 차세대 고가용성 솔루션 소개](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server 코드 이름된 "Denali" Always On 시리즈, 파트 2: AlwaysOn을 사용 하 여 중요 업무용 고가용성 솔루션 빌드](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server 코드 이름된 "Denali" Always On 시리즈, 2 부: AlwaysOn을 사용 하 여 중요 업무용 고가용성 솔루션 빌드](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **백서:**  
   
-     [고가용성 및 재해 복구를 위한 Microsoft SQL Server Always On 솔루션 가이드](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [고가용성 및 재해 복구를 위한 Microsoft SQL Server Always On 솔루션 가이드](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
   
   

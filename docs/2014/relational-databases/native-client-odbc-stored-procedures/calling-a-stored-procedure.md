@@ -18,18 +18,18 @@ ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 02109baf2edfe26280ad773d90426181ccf4ffc6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04b6717a2bab3d8a370ed50cacdce935526cb628
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052543"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354965"
 ---
 # <a name="calling-a-stored-procedure"></a>저장 프로시저 호출
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 모두 ODBC CALL 이스케이프 시퀀스를 지원 하며 [!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql) 문을 실행 하기 위한 저장 프로시저는 ODBC CALL 이스케이프 시퀀스는 기본 방법입니다. ODBC 구문을 사용하면 응용 프로그램에서는 저장 프로시저의 반환 코드를 검색할 수 있고 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 컴퓨터 간 RPC(원격 프로시저 호출) 전송을 위해 원래 개발된 프로토콜을 사용하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버가 최적화됩니다. 이 RPC 프로토콜은 서버에서 수행되는 매개 변수 처리와 문 구문 분석의 대부분을 제거하여 성능을 향상시킵니다.  
   
 > [!NOTE]  
->  호출할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저는 ODBC로 명명 된 매개 변수를 사용 하 여 (자세한 내용은 참조 하십시오 [Binding Parameters by Name (Named Parameters)](http://go.microsoft.com/fwlink/?LinkID=209721)), 매개 변수 이름을 사용 하 여 시작 해야 합니다는 '\@' 문자입니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에만 적용되는 제한 사항입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 MDAC(Microsoft Data Access Components)보다 이 제한 사항을 더욱 엄격하게 적용합니다.  
+>  호출할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저는 ODBC로 명명 된 매개 변수를 사용 하 여 (자세한 내용은 참조 하십시오 [Binding Parameters by Name (Named Parameters)](https://go.microsoft.com/fwlink/?LinkID=209721)), 매개 변수 이름을 사용 하 여 시작 해야 합니다는 '\@' 문자입니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에만 적용되는 제한 사항입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 MDAC(Microsoft Data Access Components)보다 이 제한 사항을 더욱 엄격하게 적용합니다.  
   
  프로시저를 호출하는 ODBC CALL 이스케이프 시퀀스는 다음과 같습니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48052543"
 {call InsertOrder(, 10, ?, ?, ?)}  
 ```  
   
- 매개 변수를 생략하더라도 다른 매개 변수와 구분하는 쉼표는 생략하면 안 됩니다. 입력 또는 입/출력 매개 변수를 생략할 경우 프로시저는 매개 변수의 기본값을 사용합니다. 매개 변수에 바인딩된 길이/표시기 버퍼의 값을 SQL_DEFAULT_PARAM으로 설정하거나, DEFAULT 키워드를 사용하여 입력 또는 입/출력 매개 변수의 기본값을 지정할 수도 있습니다.  
+ 매개 변수를 생략하더라도 다른 매개 변수와 구분하는 쉼표는 생략하면 안 됩니다. 입력 또는 입/출력 매개 변수를 생략 하면 프로시저는 매개 변수의 기본값을 사용 합니다. 매개 변수에 바인딩된 길이/표시기 버퍼의 값을 SQL_DEFAULT_PARAM으로 설정하거나, DEFAULT 키워드를 사용하여 입력 또는 입/출력 매개 변수의 기본값을 지정할 수도 있습니다.  
   
  입/출력 매개 변수를 생략하거나, 매개 변수에 리터럴을 제공하면 드라이버는 출력 값을 삭제합니다. 마찬가지로 프로시저의 반환 값에 대한 매개 변수 표식을 생략하면 드라이버는 반환 값을 삭제합니다. 마지막으로, 응용 프로그램에서 값을 반환하지 않는 프로시저에 대해 반환 값 매개 변수를 지정하면 드라이버는 매개 변수에 바인딩된 길이/표시기 버퍼의 값을 SQL_NULL_DATA로 설정합니다.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48052543"
 { CALL [MyDB].[MyOwner].[My.Table] }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [저장 프로시저 실행](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
   
   

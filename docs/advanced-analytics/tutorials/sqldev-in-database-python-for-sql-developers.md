@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 내 Python 분석 SQL 개발자를 위한 | Microsoft Docs
+title: SQL Server Machine Learning-SQL 개발자를 위한 데이터베이스 내 Python 분석에 대 한 자습서
 description: SQL Server 저장 프로시저 및 T-SQL 함수에서 Python 코드를 포함 하는 방법에 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 728ab56a844a6c7a14f5de7e39abc5d38146c85a
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: be4ac6b7f7c156ebeda843e8aa987ab45ef4057d
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560385"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596684"
 ---
-# <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>SQL 개발자를 위한 자습서: 데이터베이스 내 Python 분석
+# <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>자습서: SQL 개발자를 위한 데이터베이스 내 Python 분석
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL 프로그래머를 위한이 자습서에서는 알아봅니다 Python 통합에 대 한 빌드 및 사용 하 여 솔루션을 학습 하는 Python 기반 컴퓨터를 배포 하 여는 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) SQL Server 데이터베이스에 있습니다. 
@@ -38,17 +38,17 @@ Machine learning 솔루션을 구축 하는 과정이 포함 될 수 있는 여�
 
 Python 또는 SQL로 새 Python 개발자를 새 SQL 프로그래머 라면 여부를이 다중 파트 자습서에서는 Python과 SQL Server를 사용 하 여 데이터베이스 내 분석을 수행 하기 위한 일반적인 과정을 소개 합니다. 
 
-+ [1 단원: 데이터 탐색 및 시각화를 Python을 사용 하 여](sqldev-py3-explore-and-visualize-the-data.md)
++ [1 단원: Python을 사용 하 여 데이터 탐색 및 시각화](sqldev-py3-explore-and-visualize-the-data.md)
 
-+ [2 단원: 사용자 지정 SQL 함수를 사용 하 여 데이터 기능 만들기](sqldev-py4-create-data-features-using-t-sql.md)
++ [2단원: 사용자 지정 SQL 함수를 사용 하 여 데이터 기능 만들기](sqldev-py4-create-data-features-using-t-sql.md)
 
-+ [3 단원: 학습 및 T-SQL을 사용 하 여 Python 모델 저장](sqldev-py5-train-and-save-a-model-using-t-sql.md)
++ [3 단원: 학습 및 T-SQL을 사용 하 여 Python 모델을 저장 합니다.](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-+ [저장된 프로시저에서 Python 모델을 사용 하 여 잠재적인 결과 예측 하는 4 단원:](sqldev-py6-operationalize-the-model.md)
++ [4 단원: 저장된 프로시저에서 Python 모델을 사용 하 여 잠재적인 결과 예측](sqldev-py6-operationalize-the-model.md)
 
 모델 데이터베이스에 저장 된 후의 예측에 대 한 모델을 호출할 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장된 프로시저를 사용 하 여 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 + [Python 사용 하 여 SQL Server 2017 Machine Learning 서비스](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 

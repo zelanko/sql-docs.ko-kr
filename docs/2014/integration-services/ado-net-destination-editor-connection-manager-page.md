@@ -13,12 +13,12 @@ ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 887f881ad6a4cefec80620ebedb2ac210692ce5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cdb70467f5844c2d2dba623c340209f495002cdd
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090103"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357261"
 ---
 # <a name="ado-net-destination-editor-connection-manager-page"></a>ADO NET 대상 편집기(연결 관리자 페이지)
   **ADO NET 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 대상에 대한 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결을 선택할 수 있습니다. 이 페이지를 사용하면 데이터베이스에서 테이블이나 뷰를 선택할 수도 있습니다.  
@@ -57,21 +57,21 @@ ms.locfileid: "48090103"
   
  <xref:System.Data.SqlClient.SqlConnection> 개체를 반환하는 ADO.NET 공급자만 <xref:System.Data.SqlClient.SqlBulkCopy> 인터페이스의 사용을 지원합니다. .NET Data Provider for SQL Server(SqlClient)는 <xref:System.Data.SqlClient.SqlConnection> 개체를 반환하고, 사용자 지정 공급자는 <xref:System.Data.SqlClient.SqlConnection> 개체를 반환할 수 있습니다.  
   
- SQL Server (SqlClient)에 대 한.NET 데이터 공급자를 사용 하 여 연결할 수 있습니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]합니다.  
+ .NET Data Provider for SQL Server(SqlClient)를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]에 연결할 수 있습니다.  
   
  **사용 가능한 경우 대량 삽입 사용**을 선택하고 **오류** 옵션을 **행 리디렉션**으로 설정하면 대상에서 오류 출력으로 리디렉션하는 일괄 처리 데이터에 올바른 행이 포함될 수 있습니다. 대량 작업에서 오류 처리에 대한 자세한 내용은 [데이터 오류 처리](data-flow/error-handling-in-data.md)를 참조하세요. **오류** 옵션에 대한 자세한 내용은 [ADO NET 대상 편집기&#40;오류 출력 페이지&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)를 참조하세요.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 또는 Sybase 원본 테이블에 ID 열이 포함되어 있으면 SQL 실행 태스크를 사용하여 ADO NET 대상 전과 후에 SET IDENTITY_INSERT 문을 실행해야 합니다. ID 열 속성은 열에 대한 증분 값을 지정합니다. SET IDENTITY_INSERT 문을 사용하면 ID 열에 명시적 값을 삽입할 수 있습니다. 같은 데이터베이스 연결에서 CREATE TABLE 및 SET IDENTITY 문을 실행 하려면 설정 합니다 `RetainSameConnection` 의 속성을 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자를 `True`. 또한 SQL 실행 태스크와 ADO NET 대상에 같은 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자를 사용하십시오.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 또는 Sybase 원본 테이블에 ID 열이 포함되어 있으면 SQL 실행 태스크를 사용하여 ADO NET 대상 전과 후에 SET IDENTITY_INSERT 문을 실행해야 합니다. ID 열 속성은 열에 대한 증분 값을 지정합니다. SET IDENTITY_INSERT 문을 사용하면 ID 열에 명시적 값을 삽입할 수 있습니다. 같은 데이터베이스 연결에서 CREATE TABLE 및 SET IDENTITY 문을 실행하려면 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자의 `RetainSameConnection` 속성을 `True`로 설정하십시오. 또한 SQL 실행 태스크와 ADO NET 대상에 같은 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자를 사용하십시오.  
 >   
 >  자세한 내용은 [SET IDENTITY_INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-identity-insert-transact-sql) 및 [IDENTITY&#40;속성&#41;&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)를 참조하세요.  
   
 ## <a name="external-resources"></a>외부 리소스  
- sqlcat.com의 기술 문서 - [Windows Azure SQL Database에 빨리 데이터 로드](http://go.microsoft.com/fwlink/?LinkId=244333)  
+ sqlcat.com의 기술 문서 - [Windows Azure SQL Database에 빨리 데이터 로드](https://go.microsoft.com/fwlink/?LinkId=244333)  
   
 ## <a name="see-also"></a>관련 항목  
- [ADO NET 대상 편집기 &#40;매핑 페이지&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   
- [ADO NET 대상 편집기 &#40;오류 출력 페이지&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)   
+ [ADO NET 대상 편집기&#40;매핑 페이지&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   
+ [ADO NET 대상 편집기&#40;오류 출력 페이지&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)   
  [ADO.NET 연결 관리자](connection-manager/ado-net-connection-manager.md)   
  [SQL 실행 태스크](control-flow/execute-sql-task.md)  
   

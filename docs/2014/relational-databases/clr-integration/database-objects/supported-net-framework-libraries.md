@@ -13,18 +13,18 @@ ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 60e530c4d15b3c17412a7125d73cb5cc9e01d4cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2518404830577839bce3e84c4eac9b76c850cd3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228139"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367968"
 ---
 # <a name="supported-net-framework-libraries"></a>지원되는 .NET Framework 라이브러리
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 호스팅된 CLR(공용 언어 런타임)을 사용하면 관리되는 코드로 저장 프로시저, 트리거, 사용자 정의 함수, 사용자 정의 형식 및 사용자 정의 집계를 작성할 수 있습니다. .NET Framework 클래스 라이브러리에 있는 기능을 사용하면 문자열 조작, 고급 수학 연산, 파일 액세스, 암호화 등에 대한 기능을 제공하는 미리 작성된 클래스에 액세스할 수 있습니다. 임의의 관리되는 저장 프로시저, 사용자 정의 형식, 트리거, 사용자 정의 함수 또는 사용자 정의 집계에서 이러한 클래스에 액세스할 수 있습니다.  
   
 > [!NOTE]  
->  서비스 또는 전역 어셈블리 캐시 (GAC)에 지원 되지 않는 어셈블리를 업그레이드 하는 경우에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]입니다. 어셈블리에 모두 포함 되어 있는 경우는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR 통합 합니다. 지원되지 않는 .NET Framework 어셈블리를 비롯하여 데이터베이스에도 등록된 GAC의 어셈블리를 서비스 또는 업그레이드하는 경우 `ALTER ASSEMBLY` 문을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스 내의 어셈블리 복사본도 서비스 또는 업그레이드해야 합니다. 자세한 내용은 [기술 자료 문서 949080](http://support.microsoft.com/kb/949080)합니다.  
+>  서비스 또는 전역 어셈블리 캐시 (GAC)에 지원 되지 않는 어셈블리를 업그레이드 하는 경우에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]입니다. 어셈블리에 모두 포함 되어 있는 경우는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR 통합 합니다. 지원되지 않는 .NET Framework 어셈블리를 비롯하여 데이터베이스에도 등록된 GAC의 어셈블리를 서비스 또는 업그레이드하는 경우 `ALTER ASSEMBLY` 문을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스 내의 어셈블리 복사본도 서비스 또는 업그레이드해야 합니다. 자세한 내용은 [기술 자료 문서 949080](https://support.microsoft.com/kb/949080)을 참조하십시오.  
   
 ## <a name="supported-libraries"></a>지원되는 라이브러리  
  부터는 [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] 상호 작용에 대 한 안정성 및 보안 표준을 충족 하는지 확인 테스트는 지원 되는.NET Framework 라이브러리 목록이 포함 된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 직접에서 전역 어셈블리 캐시 (GAC)를 로드 합니다.  

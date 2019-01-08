@@ -16,21 +16,21 @@ ms.assetid: ca4aa11f-1048-411f-9c6c-3d0a8e319f2f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc4cab3fac4a49535b2178332b6e355ed95647b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d5d9ff66bb078be30fcd6e7d4b43b5e94069be0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064903"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591617"
 ---
-# <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>호환성 모드 90 이상에서는 외부 조인 연산자 *= 및 =* 가 지원되지 않습니다.
-  업그레이드 관리자 외부 조인 연산자의 사용을 발견 했습니다. * = 및 =\*합니다. 호환성 모드가 90 이상일 때는 이러한 연산자가 지원되지 않습니다. 업그레이드할 때 사용자 데이터베이스는 호환성 모드를 유지합니다. 이러한 연산자를 사용하는 문은 실패합니다.  
+# <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>호환성 모드 90 이상에서는 외부 조인 연산자 \*= 및 =\*가 지원되지 않습니다.
+  업그레이드 관리자 외부 조인 연산자의 사용을 발견 했습니다. \*= 및 =\*합니다. 호환성 모드가 90 이상일 때는 이러한 연산자가 지원되지 않습니다. 업그레이드할 때 사용자 데이터베이스는 호환성 모드를 유지합니다. 이러한 연산자를 사용하는 문은 실패합니다.  
   
 ## <a name="component"></a>구성 요소  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="corrective-action"></a>수정 동작  
- 외부 조인 연산자를 사용 하는 문을 수정 하는 데이터베이스 호환성 모드가 90 이상으로 변경 하기 전에 * = 및 =\* 동일한 OUTER JOIN 키워드를 사용 하도록 합니다. 다음 예에서는 `*=` 연산자를 사용하는 쿼리와 `LEFT OUTER JOIN` 키워드를 사용하는 동일한 쿼리를 보여 줍니다.  
+ 데이터베이스 호환성 모드가 90 이상으로 변경 하기 전에 외부 조인 연산자를 사용 하는 문을 수정 \*= 및 =\* 동일한 OUTER JOIN 키워드를 사용 하도록 합니다. 다음 예에서는 `\*=` 연산자를 사용하는 쿼리와 `LEFT OUTER JOIN` 키워드를 사용하는 동일한 쿼리를 보여 줍니다.  
   
 ```  
 -- This query uses an old-style outer join operator.  

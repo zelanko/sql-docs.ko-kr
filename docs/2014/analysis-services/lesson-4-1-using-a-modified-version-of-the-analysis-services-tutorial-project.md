@@ -11,12 +11,12 @@ ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 70b4a8bedc86023c9eaf1304e61573c4840a62bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 763b1170ad0201c737e06e19c3dac8d58c6712ee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194713"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368885"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Analysis Services Tutorial 프로젝트의 수정된 버전 사용
   이 자습서의 나머지 단원은 처음 세 단원에서 완료한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트의 향상된 버전을 기반으로 합니다. 추가 테이블과 명명된 계산이 **Adventure Works DW 2012** 데이터 원본 뷰에 추가되고 추가 차원이 프로젝트에 추가되었으며 이러한 새 차원이 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 추가되었습니다. 또한 두 번째 팩트 테이블에서 가져온 측정값을 포함하는 두 번째 측정값 그룹이 추가되었습니다. 이 향상된 프로젝트를 사용하면 이미 배운 기술을 반복하지 않아도 비즈니스 인텔리전스 애플리케이션에 기능을 추가하는 방법을 계속 익힐 수 있습니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "48194713"
   
 ## <a name="downloading-and-extracting-the-project-file"></a>프로젝트 파일 다운로드 및 압축 풀기  
   
-1.  이 자습서와 함께 제공되는 샘플 프로젝트를 제공하는 다운로드 페이지로 이동하려면[여기를 클릭](http://go.microsoft.com/fwlink/?LinkID=221866) 하세요. 자습서 프로젝트는 **Analysis Services Tutorial SQL Server 2012** 다운로드에 포함되어 있습니다.  
+1.  이 자습서와 함께 제공되는 샘플 프로젝트를 제공하는 다운로드 페이지로 이동하려면 [여기를 클릭](https://go.microsoft.com/fwlink/?LinkID=221866)하세요. 자습서 프로젝트는 **Analysis Services Tutorial SQL Server 2012** 다운로드에 포함되어 있습니다.  
   
 2.  **Analysis Services Tutorial SQL Server 2012** 를 클릭하여 이 자습서에 사용할 프로젝트가 포함되어 있는 패키지를 다운로드합니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48194713"
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>향상된 프로젝트 로드 및 처리  
   
-1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]의 **파일** 메뉴에서 **솔루션 닫기** 를 클릭하여 사용하지 않을 파일을 닫습니다.  
+1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에 **파일** 메뉴에서 클릭 **솔루션 닫기** 사용 하지 않을 파일을 닫아야 합니다.  
   
 2.  **파일** 메뉴에서 **열기**를 가리킨 다음 **프로젝트/솔루션**을 클릭합니다.  
   

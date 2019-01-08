@@ -14,12 +14,12 @@ ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3bea7e5bac71c3e4fdd90253f30a503dc44f44d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: cba973be9b4dc2ec0da286b2d01b636f0ca4e2b4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209003"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364695"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
   `SQLBindParameter` 데이터 변환에 대 한 데이터를 제공 하는 데 사용 하는 경우의 부담을 제거할 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에 응용 프로그램의 클라이언트 및 서버 구성 요소에 대 한 성능이 크게 향상 합니다. 이 외에도 근사치 데이터 형식을 삽입하거나 업데이트할 경우의 전체 자릿수 손실을 줄일 수 있습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "48209003"
 ## <a name="sqlbindparameter-and-table-valued-parameters"></a>SQLBindParameter와 테이블 반환 매개 변수  
  다른 매개 변수 유형과 마찬가지로 테이블 반환 매개 변수 SQLBindParameter 적용 됩니다.  
   
- 테이블 반환 매개 변수가 바인딩된 후에는 해당 열도 바인딩됩니다. 호출 하면 열을 바인딩하려면 [SQLSetStmtAttr](sqlsetstmtattr.md) 테이블 반환 매개 변수의 서 수에 SQL_SOPT_SS_PARAM_FOCUS를 설정할 수 있습니다. 그런 다음, 테이블 반환 매개 변수의 각 열에 대 한 SQLBindParameter을 호출 합니다. SQL_SOPT_SS_PARAM_FOCUS를 0으로 설정하면 최상위 매개 변수 바인딩으로 돌아갈 수 있습니다.  
+ 테이블 반환 매개 변수가 바인딩된 후에는 해당 열도 바인딩됩니다. 열을 바인딩하려면 [SQLSetStmtAttr](sqlsetstmtattr.md) 을 호출하여 테이블 반환 매개 변수의 서수에 SQL_SOPT_SS_PARAM_FOCUS를 설정합니다. 그런 다음, 테이블 반환 매개 변수의 각 열에 대 한 SQLBindParameter을 호출 합니다. SQL_SOPT_SS_PARAM_FOCUS를 0으로 설정하면 최상위 매개 변수 바인딩으로 돌아갈 수 있습니다.  
   
  테이블 반환 매개 변수 설명자 필드에 매핑 매개 변수에 대 한 자세한 내용은 참조 하세요. [바인딩 및 Data Transfer of Table-Valued 매개 변수 및 열 값](../native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)합니다.  
   
@@ -57,6 +57,6 @@ ms.locfileid: "48209003"
   
 ## <a name="see-also"></a>관련 항목  
  [ODBC API 구현 정보](odbc-api-implementation-details.md)   
- [SQLBindParameter 함수](http://go.microsoft.com/fwlink/?LinkId=59328)  
+ [SQLBindParameter 함수](https://go.microsoft.com/fwlink/?LinkId=59328)  
   
   

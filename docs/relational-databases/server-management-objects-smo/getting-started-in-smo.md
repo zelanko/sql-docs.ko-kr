@@ -15,19 +15,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da9dc2db66bd61bc89796d85cd7c83bb4fd035d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89f43904c528c37963a397de450271d1e581e507
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716001"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209935"
 ---
 # <a name="getting-started-in-smo"></a>SMO 시작
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 이 페이지에서는 수 있도록 하는 항목의 링크를 SQL Server Management Objects (SMO)를 사용 하 여 시작 합니다. 항목 나열 덮개를 SMO 개체 계층 구조, SMO, SMO 및 다양 한 프로그래밍 언어, 프로그래밍 작업을 특정 프로그램을 작성 합니다.  
  
-##<a name="installing-smo"></a>SMO 설치
+## <a name="installing-smo"></a>SMO 설치
 [SMO 설치](installing-smo.md) 설치 및 SMO 어셈블리 참조에 대 한 지침을 제공 합니다.
 
 ## <a name="object-model"></a>개체 모델  

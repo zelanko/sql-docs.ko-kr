@@ -1,5 +1,5 @@
 ---
-title: '작업 3: 공급자 기술 자료에 대해 데이터 정리 | Microsoft Docs'
+title: '태스크 3: Suppliers 기술 자료에 대해 데이터 정리 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 647c924a-9b91-4294-8d96-e81416e4e90e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8dfcf89c2130426e0c1cfb3c86f88f5f9d74cead
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5aca49b5260fc68f899a012aadaac7609fdb7062
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106113"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360335"
 ---
 # <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>태스크 3: 공급자 기술 자료에 대한 데이터 정리
-  이 작업에서는 컴퓨터 기반 정리 프로세스를 실행합니다. DQS에서는 지정된 임계값을 기반으로 고급 알고리즘 및 신뢰도 수준을 사용하여 선택한 기술 자료에 대해 데이터를 분석한 다음 데이터를 정리합니다. 자세한 내용은 [DQS(내부) 기술 자료를 사용하여 데이터 정리](http://msdn.microsoft.com/library/hh213061.aspx) 를 참조하십시오.  
+  이 작업에서는 컴퓨터 기반 정리 프로세스를 실행합니다. DQS에서는 지정된 임계값을 기반으로 고급 알고리즘 및 신뢰도 수준을 사용하여 선택한 기술 자료에 대해 데이터를 분석한 다음 데이터를 정리합니다. 자세한 내용은 [DQS(내부) 기술 자료를 사용하여 데이터 정리](https://msdn.microsoft.com/library/hh213061.aspx) 를 참조하십시오.  
   
 1.  **시작** 을 클릭하여 컴퓨터 기반 정리 프로세스를 시작합니다.  
   

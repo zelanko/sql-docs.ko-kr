@@ -14,12 +14,12 @@ ms.assetid: 77b6c15c-9cf7-4019-b3f0-3d27d23ef656
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 90ae76e10c4f9ceab4f7185de6448f6add944b5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8209bf586e5a0b288b4975869ee8903a73a27f06
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111494"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357405"
 ---
 # <a name="sqltables"></a>SQLTables
   SQLTables는 정적 서버 커서에 대해 실행할 수 있습니다. SQLTables 업데이트 가능한 (동적 또는 키 집합) 커서에서 실행 하려고 커서 유형이 변경 되었음을 나타내는 sql_success_with_info가 반환 됩니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "48111494"
   
  사용 가능한 카탈로그, 스키마 및 테이블 형식 보고서를 SQLTables는 특수 한 빈 문자열 (길이가 0 인 바이트 포인터) 사용 합니다. 빈 문자열은 기본값(NULL 포인터)이 아닙니다.  
   
- 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에 대 한 두 부분으로 된 이름을 그대로 사용 하 여 연결 된 서버의 테이블에 대 한 보고 정보를 지원 합니다 *CatalogName* 매개 변수: *Linked_Server_Name.Catalog_Name*.  
+ 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에 대 한 두 부분으로 된 이름을 그대로 사용 하 여 연결 된 서버의 테이블에 대 한 보고 정보를 지원 합니다 *CatalogName* 매개 변수: *Linked_Server_Name.Catalog_Name*합니다.  
   
  SQLTables 반환에 대 한 정보가 테이블 이름이 일치 *TableName* 고 현재 사용자가 소유 합니다.  
   
@@ -54,7 +54,7 @@ SQLTables(hstmt, (SQLCHAR*) "%", SQL_NTS, (SQLCHAR*)"", 0, (SQLCHAR*)"",
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLTables 함수](http://go.microsoft.com/fwlink/?LinkId=59374)   
+ [SQLTables 함수](https://go.microsoft.com/fwlink/?LinkId=59374)   
  [ODBC API 구현 정보](odbc-api-implementation-details.md)  
   
   

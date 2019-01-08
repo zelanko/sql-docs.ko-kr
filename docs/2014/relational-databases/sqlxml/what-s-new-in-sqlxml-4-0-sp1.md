@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - registry keys [SQLXML]
@@ -21,12 +19,12 @@ ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52ac84652bf5f1141ab40b2bcf1b3091a3dcf7de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8804132c280642ab4d79ee05417395c7ef9b5a76
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204123"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371235"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>새로운&#39;의 SQLXML 4.0 SP1
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 SP1에는 다양한 업데이트와 향상된 기능이 포함되어 있습니다. 이 항목에서는 업데이트를 요약하고 사용 가능한 경우 자세한 정보 링크를 제공합니다. SQLXML 4.0 SP1에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서 도입된 새로운 데이터 형식을 지원하기 위한 향상된 기능을 추가로 제공합니다. 이 항목은 다음과 같은 주제로 이루어져 있습니다.  
@@ -50,7 +48,7 @@ ms.locfileid: "48204123"
 -   마이그레이션 문제  
   
 ## <a name="installing-sqlxml-40-sp1"></a>SQLXML 4.0 SP1 설치  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전에 SQLXML 4.0은 SQL Server와 함께 제공되었으며 SQL Server Express를 제외한 모든 버전의 SQL Server에 기본적으로 함께 설치되었습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터는 최신 버전의 SQLXML(SQLXML 4.0 SP1)이 더 이상 SQL Server에 포함되지 않습니다. SQLXML 4.0 SP1을 설치 하려면 사이트에서 다운로드할 [SQLXML 4.0 SP1 설치 위치](http://www.microsoft.com/download/details.aspx?id=30403)합니다.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전에 SQLXML 4.0은 SQL Server와 함께 제공되었으며 SQL Server Express를 제외한 모든 버전의 SQL Server에 기본적으로 함께 설치되었습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터는 최신 버전의 SQLXML(SQLXML 4.0 SP1)이 더 이상 SQL Server에 포함되지 않습니다. SQLXML 4.0 SP1을 설치 하려면 사이트에서 다운로드할 [SQLXML 4.0 SP1 설치 위치](https://www.microsoft.com/download/details.aspx?id=30403)합니다.  
   
  SQLXML 4.0 SP1 파일은 다음 위치에 설치됩니다.  
   
@@ -88,7 +86,7 @@ ms.locfileid: "48204123"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에 처음 도입된 데이터 액세스 기술입니다. 이 기술은 SQLOLEDB 공급자와 SQLODBC 드라이버를 하나의 네이티브 DLL(동적 링크 라이브러리)로 조합한 것이며 MDAC(Microsoft Data Access Components)와는 분리된 고유한 새 기능을 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용하여 새 응용 프로그램을 만들 수도 있고 MDAC 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows의 SQLOLEDB 및 SQLODBC에서 지원하지 않지만 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에 도입된 기능을 활용해야 하는 기존 응용 프로그램을 향상시킬 수도 있습니다. 예를 들어 FOR XML 같은 클라이언트 쪽 SQLXML 기능에 `xml` 데이터 형식을 사용하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client가 필요합니다. 자세한 내용은 [클라이언트 쪽 XML 서식 지정 &#40;SQLXML 4.0&#41;](formatting/client-side-xml-formatting-sqlxml-4-0.md)를 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](using-ado-to-execute-sqlxml-4-0-queries.md), 및 [SQL Server Native Client 프로그래밍](../native-client/sql-server-native-client-programming.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용하여 새 응용 프로그램을 만들 수도 있고 MDAC 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows의 SQLOLEDB 및 SQLODBC에서 지원하지 않지만 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에 도입된 기능을 활용해야 하는 기존 응용 프로그램을 향상시킬 수도 있습니다. 예를 들어 FOR XML 같은 클라이언트 쪽 SQLXML 기능에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 사용하려면 `xml` Native Client가 필요합니다. 자세한 내용은 [클라이언트 쪽 XML 서식 지정 &#40;SQLXML 4.0&#41;](formatting/client-side-xml-formatting-sqlxml-4-0.md)를 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](using-ado-to-execute-sqlxml-4-0-queries.md), 및 [SQL Server Native Client 프로그래밍](../native-client/sql-server-native-client-programming.md).  
   
 > [!NOTE]  
 >  SQLXML 4.0은 SQLXML 3.0과 완전히 호환되지 않습니다. 일부 버그 수정 및 기타 기능 변경, 특히 SQLXML ISAPI 지원 제거로 인해 SQLXML 4.0에서는 IIS 가상 디렉터리를 사용할 수 없습니다. 대부분의 응용 프로그램은 약간만 수정해도 실행되지만 SQLXML 4.0과 함께 프로덕션에 배치하기 전에 테스트해야 합니다.  
@@ -201,7 +199,7 @@ ms.locfileid: "48204123"
 ### <a name="supportability-for-sqlxml-30-isapi-and-data-types-introduced-in-sql-server-2005"></a>SQL Server 2005에서 도입된 데이터 형식 및 SQLXML 3.0 ISAPI 지원 가능성  
  에 도입 된 기능은 ISAPI 지원 솔루션의 향상 된 데이터 입력을 요구 하는 경우 SQLXML 4.0에서 제거 되었으므로 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 와 같은 합니다 [xml 데이터 형식](/sql/t-sql/xml/xml-transact-sql) 또는 [사용자 정의 데이터 형식 (Udt)](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)와 같은 다른 솔루션을 사용 하도록 해야 웹 기반 액세스 [SQLXML 관리 되는 클래스](../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md) 또는 다른 유형의 SQL Server 2005 용 네이티브 XML 웹 서비스와 같은 HTTP 처리기입니다.  
   
- 또는 이러한 형식 확장에 필요 하지 않은 경우 할 수 있습니다 SQLXML 3.0을 사용 하 여 연결할 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 고 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 설치 합니다. SQLXML 3.0 ISAPI 지원은 이러한 이후 버전에서 작동하지만 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입된 `xml` 데이터 형식 또는 UDT 유형 지원을 지원하거나 인식하지 않습니다.  
+ 또는 이러한 형식 확장에 필요 하지 않은 경우 할 수 있습니다 SQLXML 3.0을 사용 하 여 연결할 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 고 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 설치 합니다. SQLXML 3.0 ISAPI 지원은 이러한 이후 버전에서 작동하지만 `xml`에서 도입된 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터 형식 또는 UDT 유형 지원을 지원하거나 인식하지 않습니다.  
   
 ### <a name="xml-bulk-load-security-changes-for-temporary-files"></a>임시 파일에 대한 XML 대량 로드 보안 변경  
  SQLXML 4.0 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 XML 대량 로드 파일 권한이 대량 로드 작업을 실행하는 사용자에게 부여됩니다. 읽기 및 쓰기 권한은 파일 시스템에서 상속됩니다. SQLXML 및 SQL Server의 이전 버전에서는 SQLXML 하의 XML 대량 로드 시 보안이 유지되지 않고 모든 사용자가 읽을 수 있는 임시 파일이 만들어졌습니다.  

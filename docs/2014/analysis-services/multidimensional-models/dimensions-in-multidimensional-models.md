@@ -15,12 +15,12 @@ ms.assetid: 2b62b05c-00fd-4e60-b77f-f707ba83a19b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6fb601bdbf190c84401c64f5f469bc6b5b6956ef
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: ffa8ddeeb208be956fc072d45f10edacf97b52be
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148268"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365688"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>다차원 모델의 차원
   데이터베이스 차원은 하나 이상의 큐브 내 팩트 데이터에 대한 정보를 제공하는 데 사용할 수 있는 특성이라는 관련 개체의 모음입니다. 예를 들어 제품 차원의 일반적인 특성은 제품 이름, 제품 범주, 제품 라인, 제품 크기 및 제품 가격이 될 수 있습니다. 이러한 개체는 데이터 원본 뷰에 있는 하나 이상의 테이블의 하나 이상의 열에 바인딩됩니다. 기본적으로 이러한 특성은 특성 계층으로 표시되며 큐브의 팩트 데이터를 확인하는 데 사용할 수 있습니다. 특성은 큐브의 데이터를 검색할 때 사용자를 지원할 탐색 경로를 제공하는 사용자 정의 계층으로 구성될 수 있습니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "50148268"
  큐브에는 사용자가 팩트 데이터 분석을 기반으로 사용하는 모든 차원이 들어 있습니다. 큐브의 데이터베이스 차원 인스턴스를 큐브 차원이라고 하며 이 인스턴스는 큐브에 있는 하나 이상의 측정값 그룹과 관련되어 있습니다. 데이터베이스 차원은 큐브에서 여러 번 사용될 수 있습니다. 예를 들어 팩트 테이블에 여러 개의 시간 관련 팩트가 있을 수 있고 각 시간 관련 팩트 분석을 지원하기 위해 별도의 큐브 차원을 정의할 수 있습니다. 그러나 시간 관련 데이터베이스 차원은 한 개만 있어야 하므로 여러 개의 시간 기반 큐브 차원을 지원하는 시간 관련 관계형 데이터베이스 테이블도 한 개만 있어야 합니다.  
   
 > [!NOTE]  
->  차원 디자인과 관련된 성능 문제에 대한 자세한 내용은 [SQL Server 2008 R2 Analysis Services Performance Guide](http://go.microsoft.com/fwlink/?LinkId=306717)(SQL Server 2008 R2 Analysis Services 성능 가이드)를 참조하세요.  
+>  차원 디자인과 관련된 성능 문제에 대한 자세한 내용은 [SQL Server 2008 R2 Analysis Services Performance Guide](https://go.microsoft.com/fwlink/?LinkId=306717)(SQL Server 2008 R2 Analysis Services 성능 가이드)를 참조하세요.  
   
 ## <a name="defining-dimensions-attributes-and-hierarchies"></a>차원, 특성 및 계층 정의  
  데이터베이스 및 큐브 차원, 특성 및 계층을 정의하는 가장 간단한 방법은 큐브 마법사를 사용하여 큐브를 정의할 때 이러한 차원을 만드는 것입니다. 큐브 마법사는 마법사가 식별하거나 사용자가 큐브에서 사용하도록 지정한 데이터 원본 뷰의 차원 테이블을 기반으로 차원을 만듭니다. 그러면 마법사를 통해 만든 데이터베이스 차원이 새 큐브에 추가되어 큐브 차원이 됩니다.  

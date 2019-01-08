@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - error numbers [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3ae4c2b4742365bc2022e602d15f00a3b37b96c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: edcc54e1915e0fe78ace560c0d7db7d52509e2c5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106733"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372525"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 오류 및 메시지 참조
   다음 표에서는 각 범주별로 미리 정의된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류, 경고 및 정보 메시지를 숫자 코드 및 심볼 이름과 함께 오름차순으로 나열합니다. 이러한 각 오류는 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 네임스페이스에 있는 <xref:Microsoft.SqlServer.Dts.Runtime> 클래스의 필드로 정의됩니다.  
@@ -45,7 +44,7 @@ ms.locfileid: "48106733"
 -   [데이터 흐름 구성 요소 오류 메시지(DTSBC_E_*)](#msgPipeline)  
   
 ##  <a name="msgError"></a> 오류 메시지  
- 심볼 이름은 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 메시지 시작 `DTS_E_`합니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 메시지의 심볼 이름은 `DTS_E_`로 시작합니다.  
   
 |16진수 코드|10진수 코드|심볼 이름|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -1114,7 +1113,7 @@ ms.locfileid: "48106733"
 |0xC00470F4|-1073450764|DTS_E_EXPREVALINVALIDNULLSCALE|값 %1!d!이(가) 유효한 액세스 모드로 인식되지 벗어났습니다. 소수 자릿수는 %3!d!에서 %4!d! 사이의 범위 내에 있어야 합니다. 소수 자릿수는 전체 자릿수를 초과할 수 없으며 음수가 아니어야 합니다.|  
 |0xC00470F5|-1073450763|DTS_E_EXPREVALINVALIDNULLLENGTH|값 %1!d!이(가) 유효한 액세스 모드로 인식되지 잘못되었습니다. 길이는 양수여야 합니다.|  
 |0xC00470F6|-1073450762|DTS_E_NEGATIVESNOTALLOWED|%1에 음수 값을 할당할 수 없습니다.|  
-|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|"%2"에 대한 "%1" 사용자 지정 속성을 true로 설정할 수 없습니다.  열 데이터 형식은 DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2 또는 DT_FILETIME 중 하나여야 합니다.|  
+|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|"%2"에 대한 "%1" 사용자 지정 속성을 true로 설정할 수 없습니다.  열 데이터 형식은  DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2 또는 DT_FILETIME 중 하나여야 합니다.|  
 |0xC00470F8|-1073450760|DTS_E_CANNOTREATTACHPATH|"%1"을(를) 다시 연결할 수 없습니다. 경로를 삭제하고 새로 추가한 다음 연결하십시오.|  
 |0xC00470F9|-1073450759|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSPLURALSINGULAR|함수 "%1"에는 %3!d!개의 매개 변수가 아니라 %2!d!개의 매개 변수가 필요합니다. 함수 이름이 인식되었지만 매개 변수 수가 잘못되었습니다.|  
 |0xC00470FA|-1073450758|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSSINGULARPLURAL|함수 "%1"에는 %3!d!개의 매개 변수가 아니라 %2!d!개의 매개 변수가 필요합니다. 함수 이름이 인식되었지만 매개 변수 수가 잘못되었습니다.|  
@@ -2013,7 +2012,7 @@ ms.locfileid: "48106733"
 |0xC0209318|-1071607016|DTS_E_XMLDATATYPECHANGED|요소 "%2"에서 "%1"에 대한 XML 스키마 데이터 형식 정보가 변경되었습니다.  이 구성 요소의 메타데이터를 다시 초기화하고 열 매핑을 검토하십시오.|  
 |0xC0209319|-1071607015|DTS_E_TXLOOKUP_UNUSEDINPUTCOLUMN|%1이(가) 조인 또는 복사에 사용되지 않았습니다. 입력 열 목록에서 사용하지 않은 열을 제거하십시오.|  
 |0xC020931A|-1071607014|DTS_E_SORTSTACKOVERFLOW|들어오는 버퍼를 정렬하는 동안 스택 오버플로로 인해 정렬이 실패했습니다.  데이터 흐름 태스크의 DefaultBufferMaxRows 속성을 줄이십시오.|  
-|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|연결 문자열에서 PROVIDER를 %1(으)로 변경하거나 http://www.microsoft.com/downloads를 방문하여 %2에 대한 지원을 찾아 설치합니다.|  
+|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|연결 문자열에서 PROVIDER를 %1(으)로 변경하거나 https://www.microsoft.com/downloads를 방문하여 %2에 대한 지원을 찾아 설치합니다.|  
 |||DTS_E_INITTASKOBJECTFAILED|0x%3!8.8X! "%4!s!" 오류로 인해 태스크 "%1!s!", 유형 "%2!s!"에 대한 태스크 개체를 초기화하지 없습니다.|  
 |||DTS_E_GETCATMANAGERFAILED|0x%1!8.8X! "%2!s!" 오류로 인해 COM 구성 요소 범주 관리자를 만들지 못했습니다.|  
 |||DTS_E_COMPONENTINITFAILED|0x%2!8.8X! " %3!s!" 오류로 인해 %1!s! 구성 요소를 초기화하지 반환되었습니다|  
@@ -2264,7 +2263,7 @@ ms.locfileid: "48106733"
 |0x4020F42C|1075901484|DTS_I_OLEDBDESTZEROMAXCOMMITSIZE|OLE DB 대상 "%1"의 최대 삽입 커밋 크기 속성이 0으로 설정되어 있습니다. 이 속성 설정으로 인해 실행 중인 패키지의 작동이 중지될 수 있습니다. 자세한 내용은 F1 도움말 항목의 OLE DB 대상 편집기(연결 관리자 페이지)를 참조하십시오.|  
   
 ##  <a name="msgGeneral"></a> 일반 및 이벤트 메시지  
- 심볼 이름은 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 메시지 시작 `DTS_MSG_`합니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 메시지의 심볼 이름은 `DTS_MSG_`로 시작합니다.  
   
 |16진수 코드|10진수 코드|심볼 이름|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2303,7 +2302,7 @@ ms.locfileid: "48106733"
 |0x4010310E|1074802958|DTS_MSG_EVENTLOGENTRY_INFORMATION|이벤트 이름: %1<br /><br /> 메시지: %9<br /><br /> 연산자: %2<br /><br /> 원본 이름: %3<br /><br /> 원본 ID: %4<br /><br /> 실행 ID: %5<br /><br /> 시작 시간: %6<br /><br /> 종료 시간: %7<br /><br /> 데이터 코드: %8|  
   
 ##  <a name="msgSuccess"></a> Success Messages  
- 심볼 이름은 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 성공 메시지 시작 `DTS_S_`합니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 성공 메시지의 심볼 이름은 `DTS_S_`로 시작합니다.  
   
 |16진수 코드|10진수 코드|심볼 이름|Description|  
 |----------------------|------------------|-------------------|-----------------|  

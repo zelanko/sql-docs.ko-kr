@@ -14,12 +14,12 @@ ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 90b8f11b303c72eedbf116ae4154ce9d611a401c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1d563b4cefc2e074c437fa0ab3b66bfea9796fb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164863"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372225"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services 개인 설정 확장 프로그램
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램은 플러그 인 아키텍처 구현 개념의 토대입니다. 플러그 인 아키텍처에서는 동적으로 새 큐브 개체 및 기능을 개발하여 다른 개발자와 손쉽게 공유할 수 있습니다. 이와 같이 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다음 목표를 달성할 수 있도록 하는 기능을 제공 하는 개인 설정 확장 프로그램:  
@@ -43,7 +43,7 @@ ms.locfileid: "48164863"
  서비스를 시작할 때 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 필요한 어셈블리를 로드 하 고 가진 클래스를 확인 합니다 <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> 사용자 지정 특성입니다.  
   
 > [!NOTE]  
->  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]는 사용자 지정 특성을 정의하여 코드를 설명하고 런타임 동작에 영향을 미칩니다. 자세한 내용은 항목을 참조 하세요. "[특성 개요](http://go.microsoft.com/fwlink/?LinkId=82929),"에 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] MSDN의 개발자 가이드.  
+>  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]는 사용자 지정 특성을 정의하여 코드를 설명하고 런타임 동작에 영향을 미칩니다. 자세한 내용은 항목을 참조 하세요. "[특성 개요](https://go.microsoft.com/fwlink/?LinkId=82929),"에 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] MSDN의 개발자 가이드.  
   
  있는 모든 클래스는 <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> 사용자 지정 특성 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 의 기본 생성자를 호출 합니다. 모든 사용자 활동의 관계 및 새 개체를 구성 하는 일반적인 위치를 제공 시작 시 모든 생성자를 호출 합니다.  
   
@@ -117,13 +117,13 @@ ms.locfileid: "48164863"
 #### <a name="adomdcommand-class"></a>AdomdCommand 클래스  
  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> 클래스는 이제 다음 MDX 명령을 지원합니다.  
   
--   [CREATE MEMBER 문 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
+-   [CREATE MEMBER 문&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
   
 -   [UPDATE MEMBER 문은 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-update-member)  
   
 -   [DROP MEMBER 문 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-member)  
   
--   [CREATE SET 문 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)  
+-   [CREATE SET 문&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)  
   
 -   [DROP SET 문 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-set)  
   
@@ -141,10 +141,10 @@ ms.locfileid: "48164863"
  CREATE KPI 및 DROP KPI 명령이 MDX 구문에 추가되었습니다. KPI는 모든 MDX 스크립트에서 동적으로 만들어질 수 있습니다.  
   
 ### <a name="schema-rowsets-extensions"></a>스키마 행 집합 확장  
- MDSCHEMA_MEMBERS에 *범위* 열이 추가 됩니다. 범위 값은 다음과 같습니다: MDMEMBER_SCOPE_GLOBAL = 1, MDMEMBER_SCOPE_SESSION = 2입니다.  
+ MDSCHEMA_MEMBERS에 *범위* 열이 추가 됩니다. 범위 값은 MDMEMBER_SCOPE_GLOBAL=1, MDMEMBER_SCOPE_SESSION=2입니다.  
   
- Mdschema_sets *set_evaluation_context* 열이 추가 됩니다. 집합 계산 컨텍스트 값은 다음과 같습니다: MDSET_RESOLUTION_STATIC = 1, MDSET_RESOLUTION_DYNAMIC = 2입니다.  
+ Mdschema_sets *set_evaluation_context* 열이 추가 됩니다. 집합 계산 컨텍스트 값은 MDSET_RESOLUTION_STATIC = 1, MDSET_RESOLUTION_DYNAMIC = 2입니다.  
   
- MDSCHEMA_KPIS에 scope 열이 추가되었습니다. 범위 값은 다음과 같습니다: MDKPI_SCOPE_GLOBAL = 1, MDKPI_SCOPE_SESSION = 2입니다.  
+ MDSCHEMA_KPIS에 scope 열이 추가되었습니다. 범위 값은 MDKPI_SCOPE_GLOBAL=1, MDKPI_SCOPE_SESSION=2입니다.  
   
   

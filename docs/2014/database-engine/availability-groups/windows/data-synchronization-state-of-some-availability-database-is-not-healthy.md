@@ -14,12 +14,12 @@ ms.assetid: 89f95d15-33c6-4768-bccd-9dbf8c4f49a9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dc9f7dadf5a395c8b0973566e03d4868f82b4863
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45f1479d96838ce69a7bde35cd2a2fbd9c7e684d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087929"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373865"
 ---
 # <a name="data-synchronization-state-of-some-availability-database-is-not-healthy"></a>일부 가용성 데이터베이스의 데이터 동기화 상태가 정상이 아님
     
@@ -36,7 +36,7 @@ ms.locfileid: "48087929"
  이 정책은 가용성 데이터베이스("데이터베이스 복제본"이라고도 함)의 데이터 동기화 상태를 확인합니다. 데이터 동기화 상태가 NOT SYNCHRONIZING이거나 동기 커밋 데이터베이스 복제본에 대한 상태가 SYNCHRONIZED 상태가 아닌 경우 정책은 비정상 상태에 있습니다.  
   
 > [!NOTE]  
->  이 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]릴리스의 경우 가능한 원인 및 해결 방법은 TechNet Wiki의 [가용성 데이터베이스의 데이터 동기화 상태가 정상이 아님](http://go.microsoft.com/fwlink/p/?LinkId=220863) 을 참조하세요.  
+>  이 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]릴리스의 경우 가능한 원인 및 해결 방법은 TechNet Wiki의 [가용성 데이터베이스의 데이터 동기화 상태가 정상이 아님](https://go.microsoft.com/fwlink/p/?LinkId=220863) 을 참조하세요.  
   
 ## <a name="possible-causes"></a>가능한 원인  
  복제본의 가용성 데이터베이스 중 하나 이상의 상태가 비정상 데이터 동기화 상태입니다. 비동기 커밋 가용성 복제본인 경우 모든 가용성 데이터베이스를 SYNCHRONIZING 상태로 설정해야 합니다. 이 복제본이 동기 커밋 가용성 복제본이면 모든 가용성 데이터베이스가 SYNCHRONIZED 상태에 있어야 합니다. 이 문제는 다음에 의해 발생할 수 있습니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "48087929"
 ## <a name="possible-solution"></a>가능한 해결 방법  
  모든 연결 또는 데이터 이동 일시 중지 문제를 해결합니다. SQL Server Management Studio를 사용하여 이벤트에서 이 문제를 확인하고 데이터베이스 오류를 찾습니다. 특정 오류에 대한 문제 해결 단계를 따릅니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 대시보드 사용&#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   

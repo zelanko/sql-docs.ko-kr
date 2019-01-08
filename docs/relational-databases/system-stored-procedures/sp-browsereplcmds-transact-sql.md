@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_browsereplcmds_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e3884ba1d35a488319ee9ba32e584450b300eda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5356ebc173e435595315badf9a3c2abe224d186b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670481"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802385"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +45,19 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@xact_seqno_start =**] **'***xact_seqno_start***'**  
+ [  **@xact_seqno_start =**] **'**_xact_seqno_start_**'**  
  반환할 가장 낮은 값의 정확한 시퀀스 번호를 지정합니다. *xact_seqno_start* 됩니다 **nchar(22)**, 기본값은 0x00000000000000000000입니다.  
   
- [  **@xact_seqno_end =**] **'***xact_seqno_end***'**  
+ [  **@xact_seqno_end =**] **'**_xact_seqno_end_**'**  
  반환할 가장 높은 값의 정확한 시퀀스 번호를 지정합니다. *xact_seqno_end* 됩니다 **nchar(22)**, 기본값은 0xFFFFFFFFFFFFFFFFFFFF입니다.  
   
- [  **@originator_id =**] **'***originator_id***'**  
+ [  **@originator_id =**] **'**_originator_id_**'**  
  지정 된 명령을 *originator_id* 반환 됩니다. *originator_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [  **@publisher_database_id =**] **'***publisher_database_id***'**  
+ [  **@publisher_database_id =**] **'**_publisher_database_id_**'**  
  지정 된 명령을 *publisher_database_id* 반환 됩니다. *publisher_database_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [  **@article_id =**] **'***article_id***'**  
+ [  **@article_id =**] **'**_article_id_**'**  
  지정 된 명령을 *article_id* 반환 됩니다. *article_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
  [  **@command_id =**] *command_id*  
@@ -98,7 +97,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ## <a name="permissions"></a>사용 권한  
  멤버만 합니다 **sysadmin** 고정 서버 역할의 멤버는 **db_owner** 하거나 **replmonitor** 배포 데이터베이스의 고정된 데이터베이스 역할 실행할수있습니다**sp_browsereplcmds**합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [sp_replcmds&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_replshowcmds &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

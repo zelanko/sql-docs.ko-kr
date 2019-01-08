@@ -15,12 +15,12 @@ ms.assetid: cb242081-54f8-4273-a8ef-52f3751c25ef
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1a4078161203f335c295a660e7bd4e8e3e18ea0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8db9bcef48b28594187aab34fb0049689d907a47
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150443"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376235"
 ---
 # <a name="after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers"></a>업그레이드 후 새 예약 키워드는 식별자로 사용할 수 없습니다.
   업그레이드 관리자가 예약 키워드 사용을 감지했습니다. 예약 키워드는 구분 기호로 구분하지 않는 한 식별자나 개체 이름으로 사용될 수 없습니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "48150443"
   
  [MERGE&#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql)  
   
- [구분된 식별자 (데이터베이스 엔진)](http://go.microsoft.com/fwlink/?LinkId=112509)  
+ [구분된 식별자 (데이터베이스 엔진)](https://go.microsoft.com/fwlink/?LinkId=112509)  
   
  [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   

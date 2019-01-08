@@ -17,12 +17,12 @@ ms.assetid: 20b0248f-36da-4fc3-97d2-3789fcf6e084
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e79e83263ab498a86a82fcdc65d56f6f8910d497
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: f16cadbb06d1d25000aefada172a783a5a19c79c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222968"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368105"
 ---
 # <a name="allowing-partially-trusted-callers"></a>부분적으로 신뢰할 수 있는 호출자 허용
   코드 라이브러리 공유는 CLR(공용 언어 런타임) 통합에서의 일반적인 시나리오입니다. 이 경우 사용자 정의 형식, 저장 프로시저, 사용자 정의 함수, 사용자 정의 집계, 트리거 또는 유틸리티 클래스가 포함된 어셈블리를 다른 어셈블리나 응용 프로그램에서 액세스하는 경우가 많습니다. 여러 응용 프로그램에서 공유할 코드 라이브러리는 강력한 이름으로 서명되어야 합니다.  
@@ -62,7 +62,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
  이 예제는 "부분적으로 신뢰하는 호출자 허용" 특성을 사용하여 결과 집합 어셈블리가 다른 어셈블리에서 안전하게 호출될 수 있는 라이브러리임을 나타내는 방법도 보여 줍니다. 이 방법은 안전하지 않은 권한을 사용하여 호출 어셈블리를 등록하는 것보다 좀 더 복잡하지만 훨씬 안전합니다. 호출 어셈블리를 안전한 어셈블리로 등록하면 호출 어셈블리가 서버의 리소스에 영향을 주지 않도록 제한하고 서버의 무결성에 손상을 주지 않도록 하므로 더 안전합니다.  
   
- 이 예제에 대한 작성 지침에서는 원본 코드 파일이 c:\samples라는 디렉터리에 있다고 가정합니다.  다른 디렉터리를 사용하는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 수정해야 합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에는 AdventureWorks 데이터베이스도 필요 합니다. AdventureWorks 샘플 데이터베이스를 다운로드할 수 있습니다 합니다 [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지입니다.  
+ 이 예제에 대한 작성 지침에서는 원본 코드 파일이 c:\samples라는 디렉터리에 있다고 가정합니다.  다른 디렉터리를 사용하는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 수정해야 합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에는 AdventureWorks 데이터베이스도 필요 합니다. AdventureWorks 샘플 데이터베이스를 다운로드할 수 있습니다 합니다 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지입니다.  
   
  예제를 빌드하고 실행하려면 첫 번째 코드 목록을 ResultSet.cs라는 파일에 붙여 넣고 csc /target:library ResultSet.cs를 사용하여 컴파일합니다.  
   

@@ -15,12 +15,12 @@ ms.assetid: 7e288eee-2d37-485e-a6a0-dbba5e041e26
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 26c645a134d962daff989e7f7a88b7ae9dcd67bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 7cb1fad6ffa7fcb8dcf1330079b12aa77f06705d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071463"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362765"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface-report-builder"></a>Analysis Services MDX 쿼리 디자이너 사용자 인터페이스(보고서 작성기)
   보고서 작성기는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 원본에 대한 MDX(Multidimensional Expression) 쿼리를 작성할 수 있는 그래픽 쿼리 디자이너를 제공합니다. MDX 그래픽 쿼리 디자이너에는 디자인 모드와 쿼리 모드의 두 가지 모드가 있습니다. 각 모드는 메타데이터 창을 제공합니다. 이 창에서는 선택한 큐브에서 멤버를 끌어서 보고서 처리 시에 데이터를 검색하는 MDX 쿼리를 작성할 수 있습니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "48071463"
  사용자 고유의 추가 속성을 지정하려면 쿼리 모드에서 MDX 쿼리를 직접 편집해야 합니다.  
   
 > [!NOTE]  
->  MDX에 대한 자세한 내용 및 MDX 쿼리 디자이너에 대한 일반 정보는 [SQL Server 온라인 설명서](http://go.microsoft.com/fwlink/?linkid=98335)의 "MDX 쿼리 편집기(Analysis Services - 다차원 데이터)"를 참조하십시오. 그러나 MDX 쿼리의 데이터를 보고서에 표시하려면 보고서 작성기와 함께 제공된 MDX 쿼리 디자이너를 사용하여 쿼리를 작성해야 합니다. 파일에서 .mdx 쿼리를 가져올 수는 없습니다.  
+>  MDX에 대한 자세한 내용 및 MDX 쿼리 디자이너에 대한 일반 정보는 [SQL Server 온라인 설명서](https://go.microsoft.com/fwlink/?linkid=98335)의 "MDX 쿼리 편집기(Analysis Services - 다차원 데이터)"를 참조하십시오. 그러나 MDX 쿼리의 데이터를 보고서에 표시하려면 보고서 작성기와 함께 제공된 MDX 쿼리 디자이너를 사용하여 쿼리를 작성해야 합니다. 파일에서 .mdx 쿼리를 가져올 수는 없습니다.  
   
 ### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>디자인 모드의 그래픽 MDX 쿼리 디자이너 도구 모음  
  쿼리 디자이너 도구 모음은 그래픽 인터페이스를 사용하여 MDX 쿼리를 디자인하는 데 도움이 되는 단추를 제공합니다. 다음 표에서는 단추와 해당 기능을 나열합니다.  
@@ -69,11 +69,11 @@ ms.locfileid: "48071463"
 |**가져오기**|파일 시스템의 보고서 정의 파일(.rdl)에서 기존 쿼리를 가져옵니다.|  
 |![MDX 쿼리 뷰로 변경](../analysis-services/media/rsqdicon-commandtypemdx.gif "MDX 쿼리 뷰로 변경")|MDX 명령 유형으로 전환합니다.|  
 |![결과 데이터 새로 고침](../analysis-services/media/rsqdicon-refresh.gif "결과 데이터 새로 고침")|데이터 원본의 메타데이터를 새로 고칩니다.|  
-|![계산된 멤버 추가](../analysis-services/media/rsqdicon-addcalculatedmember.gif "계산된 멤버 추가")|**계산 멤버 작성기** 대화 상자를 표시합니다.|  
+|![Add calculated member](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|**계산 멤버 작성기** 대화 상자를 표시합니다.|  
 |![빈 셀 표시 설정/해제](../analysis-services/media/rsqdicon-showemptycells.gif "빈 셀 표시 설정/해제")|데이터 창에서 빈 셀을 표시하거나 표시하지 않는 기능 사이를 전환합니다. 이것은 MDX에 NON EMPTY 절을 사용하는 것과 동일합니다.|  
 |![쿼리 자동 실행](../analysis-services/media/rsqdicon-autoexecute.gif "쿼리 자동 실행")|변경이 수행될 때마다 쿼리를 자동으로 실행하고 결과를 표시합니다. 결과는 데이터 창에 표시됩니다.|  
 |![집계 표시 단추](../analysis-services/media/rsqdicon-showaggregations.gif "집계 표시 단추")|데이터 창에서 집계를 표시합니다.|  
-|![삭제할](../analysis-services/media/rsqdicon-delete.gif "삭제")|데이터 창의 선택된 열을 쿼리에서 삭제합니다.|  
+|![삭제](../analysis-services/media/rsqdicon-delete.gif "삭제")|데이터 창의 선택된 열을 쿼리에서 삭제합니다.|  
 |![쿼리 매개 변수 대화 상자 아이콘](../analysis-services/media/iconqueryparameter.gif "쿼리 매개 변수 대화 상자 아이콘")|**쿼리 매개 변수** 대화 상자를 표시합니다. 쿼리 매개 변수의 값을 지정하면 같은 이름의 보고서 매개 변수가 자동으로 만들어집니다. 쿼리 매개 변수의 값은 보고서 매개 변수를 참조하는 식으로 설정됩니다.|  
 |![쿼리 준비 단추](../analysis-services/media/rsqdicon-preparequery.gif "쿼리 준비 단추")|쿼리를 준비합니다.|  
 |![쿼리 실행](../analysis-services/media/rsqdicon-run.gif "쿼리 실행")|쿼리를 실행하고 데이터 창에 결과를 표시합니다.|  
@@ -107,7 +107,7 @@ ms.locfileid: "48071463"
   
 -   **텍스트로 편집**  
   
--   **Add Calculated Member** (![추가 계산된 멤버](../analysis-services/media/rsqdicon-addcalculatedmember.gif "계산된 멤버 추가"))  
+-   **계산 멤버 추가** (![Add calculated member](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
 -   **빈 셀 표시**(![빈 셀 표시 설정/해제](../analysis-services/media/rsqdicon-showemptycells.gif "빈 셀 표시 설정/해제"))  
   

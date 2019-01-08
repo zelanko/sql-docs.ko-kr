@@ -1,22 +1,22 @@
 ---
-title: SQL에서 Java를 호출 하는 방법 | Microsoft Docs
+title: SQL-SQL Server Machine Learning Services에서에서 Java를 호출 하는 방법
 description: 이 Java 프로그래밍 언어 확장에 SQL Server 2019를 사용 하 여 SQL Server 저장 프로시저에서 Java 클래스를 호출 하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 08af5a18b827c783515ecd3b4ba4a802c3472f93
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 438c1096a933932e08c5cbf21722ba75874bb1dc
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715431"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53644762"
 ---
-# <a name="how-to-call-java-from-sql-server-2019"></a>SQL Server 2019에서 Java를 호출 하는 방법
+# <a name="how-to-call-java-from-sql-server-2019-preview"></a>SQL Server 2019 미리 보기에서 Java를 호출 하는 방법
 
 사용 하는 경우는 [Java 언어 확장](extension-java.md)서 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 시스템 저장된 프로시저는 Java 런타임을 호출 하는 인터페이스입니다. 데이터베이스에 대 한 권한을 Java 코드 실행에 적용 됩니다.
 
@@ -33,7 +33,7 @@ ms.locfileid: "46715431"
 * "매개 변수"는 매개 변수는 Java 클래스를 전달 하는 데 사용 됩니다. 인수를 필요로 하는 메서드를 호출 지원 되지 않습니다, 매개 변수를 메서드로 인수 값을 전달 하는 유일한 방법은 수 있습니다. 
 
 > [!Note]
-> 이 이는 CTP 2.0에서 Java 관련 된 지원 되거나 지원 되지 않는 작업을 다시 작성 합니다.
+> 이 CTP에서 Java 관련 된 지원 되거나 지원 되지 않는 작업을 다시 작성 2.x입니다.
 > * 저장된 프로시저에 입력된 매개 변수가 지원 됩니다. 출력 매개 변수는 없습니다.
 > * Sp_execute_external_script 매개 변수를 사용 하 여 스트리밍을 **@r_rowsPerRead** 지원 되지 않습니다.
 > * 사용 하 여 분할 **@input_data_1_partition_by_columns** 지원 되지 않습니다.
@@ -41,7 +41,7 @@ ms.locfileid: "46715431"
 
 ## <a name="call-spexecuteexternalscript"></a>Sp_execute_external_script 호출
 
-합니다 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 시스템 저장된 프로시저는 Java 런타임을 호출 하는 인터페이스입니다. 다음 예제에서는 Java 확장 및 매개 변수를 사용 하 여 경로, 스크립트 및 사용자 지정 코드를 지정 하는 데는 sp_execute_external_script를 보여 줍니다.
+Windows 및 Linux 모두에 적용 된 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 시스템 저장된 프로시저는 Java 런타임을 호출 하는 인터페이스입니다. 다음 예제에서는 Java 확장 및 매개 변수를 사용 하 여 경로, 스크립트 및 사용자 지정 코드를 지정 하는 데는 sp_execute_external_script를 보여 줍니다.
 
 ```sql
 DECLARE @myClassPath nvarchar(30)
@@ -65,14 +65,14 @@ EXEC sp_execute_external_script
 
 Java 클래스 또는 클래스 컴파일된 하 고 Java 클래스 경로에.class 파일 또는.jar 파일에 배치 했으면, SQL Server Java 확장 하도록 클래스 경로 제공 하는 데는 두 가지 옵션이 있습니다.
 
-**옵션 1: 매개 변수로 전달**
+**옵션 1: 매개 변수로 전달 합니다.**
 
 Sp_execute_external_script 프로시저 입력된 매개 변수로 클래스 경로 설정 하 여 컴파일된 코드 경로 지정 하는 한 가지 방법이 됩니다. 합니다 [Java 샘플](java-first-sample.md#call-method) 이 기술을 보여 줍니다. 이 방법을 선택 하 고 여러 경로가 있는 경우 기본 운영 체제에 대 한 유효한 경로 구분 기호를 사용 해야 합니다.
 
 * Linux에서 콜론을 사용 하 여 클래스 경로에서 경로 구분 ":".
 * 세미콜론을 사용 하 여 별도 클래스 경로에서 경로 Windows에서 ";"
 
-**옵션 2: 등록 하는 시스템 변수**
+**옵션 2: 시스템 변수를 등록 합니다.**
 
 JDK 실행 파일에 대 한 시스템 변수를 만든 것 처럼 코드 경로 대 한 시스템 변수를 만들 수 있습니다. 이렇게 하려면 "CLASSPATH" 이라는 시스템 환경 변수를 생성 합니다.
 
@@ -152,6 +152,8 @@ Null 맵 확장에서 어떤 값이 null을 나타내기 위해 사용 됩니다
 ```java
 public static boolean[][] outputNullMap
 ```
+<a name="create-external-library"></a>
+
 
 ## <a name="next-steps"></a>다음 단계
 

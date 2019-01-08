@@ -10,19 +10,19 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e7881400c3e4696426b1999229e917630cf905d0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 474cc691a8adc0e022e10e52c766368e9f655d8a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657513"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979409"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>AdventureWorks 설치 및 구성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 AdventureWorks 링크와 설치 지침은 다운로드 합니다. 
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 - [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) 나 [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)합니다. 샘플의 전체 버전의 경우 SQL Server 평가/개발자/Enterprise Edition을 사용 합니다.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). 최상의 결과 사용 하 여 2016 년 6 월 릴리스 이상.
@@ -102,5 +102,5 @@ SQL Server 데이터베이스 복원에 대 한 자세한 내용은 참조 하�
 
 
 ## <a name="see-also"></a>참고자료
-[SQL Server Management Studio에 대 한 자습서](../ssms/tutorials/tutorial-sql-server-management-studio.md)
+[SQL Server Management Studio에 대 한 자습서](../ssms/tutorials/tutorial-sql-server-management-studio.md)   
 [SQL Server 데이터베이스 엔진에 대 한 자습서](../relational-databases/database-engine-tutorials.md)

@@ -16,12 +16,12 @@ ms.assetid: a1e9122c-aa0b-45de-b536-4f1202875ab1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7885f486ef19b0fa5424857bc03146f5d0b1c8bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f87046df4e41f40bc5de5f2a720247738841ff24
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220773"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376345"
 ---
 # <a name="implementing-the-isubscriptionbaseuiusercontrol-interface-for-a-delivery-extension"></a>배달 확장 프로그램에 대한 ISubscriptionBaseUIUserControl 인터페이스 구현
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 배달 확장 프로그램에는 보고서 관리자에서 확장 프로그램 관련 정보를 수집하기 위한 구독 UI(사용자 인터페이스) 구현이 포함될 수 있습니다. 이 UI는 사용자가 새 구독을 만들거나 기존 구독을 수정할 때 호출됩니다. 새 구독을 만드는 경우 UI에 적절한 기본값이 표시되고 이를 통해 사용자가 배달 공급자와 상호 작용할 수 있습니다. 구독을 수정하는 경우에는 UI에 현재 구독 정보가 미리 채워집니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48220773"
   
  <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> 인터페이스는 <xref:Microsoft.ReportingServices.Interfaces.IExtension>을 확장합니다. <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl>을 구현하는 사용자 컨트롤도 **System.Web.UI.WebControls.WebControl**에서 상속되어야 합니다. **WebControl** 클래스에 대한 자세한 내용은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 개발자 가이드를 참조하세요.  
   
- <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> 인터페이스 사용 방법에 대한 예는 [SQL Server Reporting Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.  
+ <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> 인터페이스 사용 방법에 대한 예는 [SQL Server Reporting Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [배달 확장 프로그램 구현](implementing-a-delivery-extension.md)   

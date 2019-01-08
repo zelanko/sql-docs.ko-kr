@@ -11,21 +11,21 @@ ms.assetid: 97bc2ce7-af04-4372-ad79-c96b8c3417ab
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a80e3134fc734f962fa9b082374dc3f9c4a74ba2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 471bfe1a93e76630e6699a2ff07fcf5c6bddc913
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147253"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368605"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>SharePoint용 PowerPivot 설치 문제 해결
   예상한 페이지 및 기능 대신 오류가 발생할 경우 다음을 수행합니다.  
   
 -   알려진 설치 문제에 대한 해결 방법은 SharePoint 및 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에 대한 릴리스 정보를 참조하십시오. 릴리스 정보는 소프트웨어를 다운로드한 Microsoft 사이트나 설치 미디어에 제공됩니다.  
   
-    -   [SQL Server 2014 릴리스 정보](http://technet.microsoft.com/library/dn169381\(v=sql.15\).aspx)  
+    -   [SQL Server 2014 릴리스 정보](https://technet.microsoft.com/library/dn169381\(v=sql.15\).aspx)  
   
--   Technet wiki 항목인 [PowerPivot 및 기타 추가 기능의 설치 문제 해결](http://social.technet.microsoft.com/wiki/contents/articles/13737.troubleshooting-installations-of-powerpivot-and-other-add-ins.aspx)을 참조하십시오.  
+-   Technet wiki 항목인 [PowerPivot 및 기타 추가 기능의 설치 문제 해결](https://social.technet.microsoft.com/wiki/contents/articles/13737.troubleshooting-installations-of-powerpivot-and-other-add-ins.aspx)을 참조하십시오.  
   
 ## <a name="issues"></a>문제  
   
@@ -40,6 +40,6 @@ ms.locfileid: "48147253"
   
 4.  **사이트 모음에 대한 PowerPivot 기능 통합** 이 **활성**상태인지 확인합니다.  
   
- 참고이 문제의 추가 원인은 [PowerPivot 갤러리 아이콘에 빨간색 x가 표시 됩니다](http://support.microsoft.com/kb/2361559) (http://support.microsoft.com/kb/2361559)합니다.  
+ 참고이 문제의 추가 원인은 [PowerPivot 갤러리 아이콘에 빨간색 x가 표시 됩니다](https://support.microsoft.com/kb/2361559) (https://support.microsoft.com/kb/2361559)합니다.  
   
   

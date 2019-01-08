@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- integration-services
+ms.technology: integration-services
 ms.topic: reference
 dev_langs:
 - VB
@@ -16,17 +14,17 @@ ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 855278c35de37f2b02e1bb7b194e174c66c643d2
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 73016278ce8455a57af78229703e2330bbbd0edf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460668"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370525"
 ---
 # <a name="understanding-the-script-component-object-model"></a>스크립트 구성 요소 개체 모델 이해
   [코딩 and Debugging the Script Component]에 설명 된 대로 (... / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md, 스크립트 구성 요소 프로젝트에 세 개의 프로젝트 항목이 있습니다.  
   
-1.  `ScriptMain` 항목: 코드를 작성할 `ScriptMain` 클래스가 들어 있습니다. `ScriptMain` 클래스는 `UserComponent` 클래스에서 상속됩니다.  
+1.  `ScriptMain` 항목: 코드를 작성할 `ScriptMain` 클래스가 들어 있습니다. `ScriptMain` 클래스는 `UserComponent` 클래스에서 상속합니다.  
   
 2.  `ComponentWrapper` 항목: 데이터를 처리하고 패키지와 상호 작용하는 데 사용할 메서드 및 속성이 포함된 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>의 인스턴스인 `UserComponent` 클래스가 들어 있습니다. `ComponentWrapper` 항목에는 `Connections` 및 `Variables` 컬렉션 클래스도 들어 있습니다.  
   
@@ -130,7 +128,7 @@ public override void PreExecute()
   
 -   **\<inputbuffer>_ProcessInput** 메서드의 재정의 가능한 구현 - 이 기본 구현은 단순히 각 입력 행을 반복하며 **\<inputbuffer>_ProcessInputRow**를 호출합니다.  
   
--   **\<inputbuffer>_ProcessInputRow** 메서드의 재정의 가능한 구현 - 기본 구현은 비어 있습니다. 이 메서드는 일반적으로 사용자 지정 데이터 처리 코드를 작성하기 위해 재정의하는 메서드입니다.  
+-   **\<inputbuffer>_ProcessInputRow** 메서드의 재정의 가능한 구현 - 기본 구현에서는 비어 있습니다. 이 메서드는 일반적으로 사용자 지정 데이터 처리 코드를 작성하기 위해 재정의하는 메서드입니다.  
   
 #### <a name="what-your-custom-code-should-do"></a>사용자 지정 코드로 수행하는 작업  
  `ScriptMain` 클래스에서 다음 메서드를 사용하여 입력을 처리할 수 있습니다.  
@@ -162,7 +160,7 @@ public override void PreExecute()
   
 -   `PrimeOutput` 메서드의 재정의된 구현. 데이터 흐름 엔진에서는 런타임에 이 메서드를 `ProcessInput`보다 먼저 호출하며 이 메서드는 한 번만 호출됩니다. `PrimeOutput`은 `CreateNewOutputRows` 메서드로 처리를 넘깁니다. 그런 다음 구성 요소가 원본인 경우, 즉 구성 요소에 입력이 없는 경우 `PrimeOutput`은 재정의 가능한 `FinishOutputs` 메서드와 전용 `MarkOutputsAsFinished` 메서드를 호출합니다. `MarkOutputsAsFinished` 메서드는 마지막 출력 버퍼에서 `SetEndOfRowset`을 호출합니다.  
   
--   `CreateNewOutputRows` 메서드의 재정의 가능한 구현. 기본 구현은 비어 있습니다. 이 메서드는 일반적으로 사용자 지정 데이터 처리 코드를 작성하기 위해 재정의하는 메서드입니다.  
+-   `CreateNewOutputRows` 메서드의 재정의 가능한 구현. 기본 구현에서는 비어 있습니다. 이 메서드는 일반적으로 사용자 지정 데이터 처리 코드를 작성하기 위해 재정의하는 메서드입니다.  
   
 #### <a name="what-your-custom-code-should-do"></a>사용자 지정 코드로 수행하는 작업  
  `ScriptMain` 클래스에서 다음 메서드를 사용하여 출력을 처리할 수 있습니다.  
@@ -203,9 +201,9 @@ public override void ReleaseConnections()
 }  
 ```  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](configuring-the-script-component-in-the-script-component-editor.md)   
  [코딩 and Debugging the Script Component] (.. /extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md  
   

@@ -15,12 +15,12 @@ ms.assetid: 063fc40d-ff81-490d-9c9b-2faefb729f37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d3d25e94926e3b87dab198c567c1f813732a2f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1517e17a7b0ecaf9137e3af21e076dacc2fd98f3
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180273"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376995"
 ---
 # <a name="executing-statements-odbc"></a>문 실행(ODBC)
   합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에서 SQL 문을 실행 하는 다양 한 방법을 제공을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스:  
@@ -29,7 +29,7 @@ ms.locfileid: "48180273"
   
 -   준비된 실행  
   
- 직접 실행에서는 포함 하는 문자 문자열을 작성을 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문과 사용 하 여 실행에 대 한 제출 합니다 **SQLExecDirect** 함수. 준비된 실행에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문이 포함된 문자열을 작성한 다음 두 가지 단계로 실행합니다. 첫 번째 단계에서 사용 하는 [SQLPrepare 함수](http://go.microsoft.com/fwlink/?LinkId=59360) 함수를 구문 분석에서 문의 실행 계획을 컴파일하는 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]합니다. 두 번째 단계에서 사용 하 여 **SQLExecute** 이전에 준비 된 실행 계획을 실행 하는 함수입니다. 이렇게 하면 각각의 실행에서 구문 분석 및 컴파일 오버헤드를 줄일 수 있습니다. 준비된 실행은 응용 프로그램에서 매개 변수가 있는 동일한 SQL 문을 반복적으로 실행하는 데 많이 사용됩니다.  
+ 직접 실행에서는 포함 하는 문자 문자열을 작성을 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문과 사용 하 여 실행에 대 한 제출 합니다 **SQLExecDirect** 함수. 준비된 실행에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문이 포함된 문자열을 작성한 다음 두 가지 단계로 실행합니다. 첫 번째 단계에서 사용 하는 [SQLPrepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360) 함수를 구문 분석에서 문의 실행 계획을 컴파일하는 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]합니다. 두 번째 단계에서 사용 하 여 **SQLExecute** 이전에 준비 된 실행 계획을 실행 하는 함수입니다. 이렇게 하면 각각의 실행에서 구문 분석 및 컴파일 오버헤드를 줄일 수 있습니다. 준비된 실행은 응용 프로그램에서 매개 변수가 있는 동일한 SQL 문을 반복적으로 실행하는 데 많이 사용됩니다.  
   
  직접 실행과 준비된 실행에서 모두 단일 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문이나 SQL 문의 일괄 처리를 실행하거나 저장 프로시저를 호출할 수 있습니다.  
   

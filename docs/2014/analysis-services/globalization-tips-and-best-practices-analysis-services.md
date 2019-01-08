@@ -17,12 +17,12 @@ ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 026c1bf822a6493c6605128582f7142178ad6776
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 8713ed58df138efbaacd8f6ff4b5d31ef0708d85
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188263"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357307"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>세계화 팁과 모범 사례(Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  다차원 전용  
@@ -50,7 +50,7 @@ ms.locfileid: "48188263"
   
  공백 문자는 유니코드에서 싱글바이트(SBCS)나 더블바이트 문자 집합(DBCS)으로 표현될 수 있으므로 '특별한 경우'입니다. 관계형 엔진에서 공백으로 구분되는 두 개의 복합 문자열(SBCS를 사용하는 문자열과 DBCS 문자열)은 동일한 것으로 간주됩니다. Analysis Services에서는 처리하는 동안 동일한 두 개의 복합 문자열이 동일하지 않고 두 번째 인스턴스는 중복으로 표시됩니다.  
   
- 자세한 내용과 권장 해결 방법에 대해 알려면 [유니코드 문자열의 공백에 데이터 정렬을 기반으로 한 서로 다른 처리 결과가 있는 경우](http://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx)(영문)를 참조하세요.  
+ 자세한 내용과 권장 해결 방법에 대해 알려면 [유니코드 문자열의 공백에 데이터 정렬을 기반으로 한 서로 다른 처리 결과가 있는 경우](https://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx)(영문)를 참조하세요.  
   
 ##  <a name="bkmk_recos"></a> 일반적인 데이터 정렬 권장 사항  
  Analysis Services에서는 항상 모든 사용 가능한 언어 및 데이터 정렬의 전체 목록을 제공하며, 선택된 언어에 따라 데이터 정렬을 필터링하지 않습니다. 실행 가능한 조합을 선택해야 합니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "48188263"
   
 |언어 스크립트|대/소문자 구분|  
 |---------------------|----------------------|  
-|**기본 라틴어 알파벳**|라틴어 스크립트(26개의 영어 대문자 또는 소문자 중 사용)로 표현되는 개체 식별자는 데이터 정렬과 상관없이 대/소문자를 구분하는 것으로 처리됩니다. 예를 들어, 개체 ID 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**는 같다고 간주됩니다. 내부적으로 Analysis Services에서는 문자열의 문자들을 모두 대문자인 것처럼 처리한 다음 언어에 상관없는 간단한 바이트 비교를 수행합니다.<br /><br /> 26개 문자에만 적용됩니다. 서부 유럽 언어에 스칸디나비아어 문자가 사용되면 추가 문자는 대문자로 처리되지 않습니다.|  
+|**기본 라틴어 알파벳**|라틴어 스크립트(26개의 영어 대문자 또는 소문자 중 사용)로 표현되는 개체 식별자는 데이터 정렬과 상관없이 대/소문자를 구분하는 것으로 처리됩니다. 예를 들어, 개체 ID 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**합니다. 내부적으로 Analysis Services에서는 문자열의 문자들을 모두 대문자인 것처럼 처리한 다음 언어에 상관없는 간단한 바이트 비교를 수행합니다.<br /><br /> 26개 문자에만 적용됩니다. 서부 유럽 언어에 스칸디나비아어 문자가 사용되면 추가 문자는 대문자로 처리되지 않습니다.|  
 |**키릴자모, 그리스어, 콥트어, 아르메니아어**|키릴자모와 같은 비라틴 bicameral 스크립트의 개체 식별자는 항상 대/소문자 구분입니다. 예를 들어, Измерение 및 измерение은 유일한 차이점이 첫 글자의 대소문자 여부임에도 불구하고 두 개의 서로 다른 값으로 간주됩니다.|  
   
  **개체 식별자에 대한 대/소문자 구분의 의미**  
@@ -140,7 +140,7 @@ ms.locfileid: "48188263"
   
 3.  **일반적인 날짜 및 시간 정보를 위한 ISO 날짜 형식 사용**  
   
-     한 [Analysis Services 전문가](http://geekswithblogs.net/darrengosbell/Default.aspx) 는 다음과 같이 추천합니다. "저는 SQL 또는 MDX 쿼리에 전달하는 날짜 문자열에 대해 항상 ISO 날짜 형식인 yyyy-mm-dd를 사용합니다. 이 형식은 명확하고 클라이언트나 서버의 국가별 설정과 관계없이 작동하기 때문입니다. 모호한 날짜 형식을 구문 분석할 때 서버는 국가별 설정을 따라야 한다는 데 동의하겠지만 또한 선택할 수 있다면 선택에 따라 해석이 달라지지 않는 것이 좋다고 생각합니다."  
+     하나의 [Analysis Services 전문가](http://geekswithblogs.net/darrengosbell/Default.aspx) 에이 권장 사항: "저는 SQL 또는 MDX 쿼리에 전달하는 날짜 문자열에 대해 항상 ISO 날짜 형식인 yyyy-mm-dd를 사용합니다. 이 형식은 명확하고 클라이언트나 서버의 국가별 설정에 관계없이 작동하기 때문입니다. 모호한 날짜 형식을 구문 분석할 때 서버는 국가별 설정을 따라야 한다는 데 동의하겠지만 또한 선택할 수 있다면 선택에 따라 해석이 달라지지 않는 것이 좋다고 생각합니다."  
   
 4.  `Use the Format function to enforce a specific format, regardless of regional language settings`  
   

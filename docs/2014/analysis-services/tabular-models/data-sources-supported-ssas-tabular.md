@@ -11,12 +11,12 @@ ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 606d597bd539da9e50b1c0452d9126e2f4671731
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 52aae6defa5817236c4298d7c8e4cb44361a8284
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054373"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371315"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>지원되는 데이터 원본 (SSAS 테이블 형식)
   이 항목에서는 테이블 형식 모델에서 사용할 수 있는 데이터 원본의 유형에 대해 설명합니다.  
@@ -53,9 +53,9 @@ ms.locfileid: "48054373"
   
  <sup>1</sup> ODBC 용 OLE DB Provider를 사용할 수도 있습니다.  
   
- <sup>2</sup> SQL Azure 대 한 자세한 내용은 웹 사이트를 참조 하세요. [SQL Azure](http://go.microsoft.com/fwlink/?LinkID=157856)합니다.  
+ <sup>2</sup> SQL Azure 대 한 자세한 내용은 웹 사이트를 참조 하세요. [SQL Azure](https://go.microsoft.com/fwlink/?LinkID=157856)합니다.  
   
- <sup>3</sup> SQL Server PDW에 대 한 자세한 내용은 웹 사이트를 참조 하세요. [SQL Server 2008 R2 병렬 데이터 웨어하우스](http://go.microsoft.com/fwlink/?LinkId=150895)합니다.  
+ <sup>3</sup> SQL Server PDW에 대 한 자세한 내용은 웹 사이트를 참조 하세요. [SQL Server 2008 R2 병렬 데이터 웨어하우스](https://go.microsoft.com/fwlink/?LinkId=150895)합니다.  
   
  <sup>4</sup> 일부 경우에 특히 최신 버전의 Oracle 사용 하 여 연결 오류가 발생할 수 있습니다 MSDAORA OLE DB 공급자를 사용 하 여 합니다. 오류가 발생할 경우 Oracle용으로 제시된 다른 공급자 중 하나를 사용해 보세요.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48054373"
 4.  OLE DB 공급자는 경우에 따라 대량 데이터를 위해 더욱 빠른 성능을 제공할 수도 있습니다. 동일한 데이터 원본에 대해 여러 공급자 중에서 하나를 선택하는 경우 OLE DB 공급자를 먼저 사용해 보는 것이 좋습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 원본 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../data-sources-ssas-tabular.md)   
- [데이터 가져오기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../import-data-ssas-tabular.md)  
+ [데이터 원본&#40;SSAS 테이블 형식&#41;](../data-sources-ssas-tabular.md)   
+ [데이터 가져오기&#40;SSAS 테이블 형식&#41;](../import-data-ssas-tabular.md)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ee420b28442909af74a17a196ffac653b6089eb5
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
-ms.translationtype: HT
+ms.openlocfilehash: a0f004a2d145356e38816b65fc2cd5c2a1972074
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072327"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362915"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>지도 마법사 및 지도 계층 마법사(보고서 작성기 및 SSRS)
   지도 마법사 및 지도 계층 마법사는 지도를 만들거나 지도 계층을 추가하거나 기존 계층의 지도 계층 옵션을 변경하는 태스크를 자동화합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "49072327"
   
 -   **공간 데이터 원본.** 공간 데이터를 포함하는 데이터베이스 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름 또는 ESRI(Environmental Systems Research Institute, Inc.) 셰이프 파일의 이름과 같은 공간 데이터를 제공하는 원본에 대한 위치 또는 연결입니다.  
   
--   **공간 데이터 또는 ESRI 셰이프 파일인 공간 데이터를 제공하는 타사 사이트** 공간 데이터 원본에 있는 필드로, 위치를 지정하는 좌표 집합을 포함합니다.  
+-   **Spatial data.** 공간 데이터 원본에 있는 필드로, 위치를 지정하는 좌표 집합을 포함합니다.  
   
 -   **분석 데이터.** 연간 상점 판매량과 같이 지도를 다양하게 표시하는 데 사용할 분석 데이터입니다.  
   
@@ -81,9 +81,9 @@ ms.locfileid: "49072327"
   
     -   **지도 시각화 선택: 다각형**  
   
-    -   **지도 시각화 선택: 선**  
+    -   **지도 시각화 선택: 줄**  
   
-    -   **지도 시각화 선택: 점**  
+    -   **지도 시각화 선택: 지점**  
   
 4.  **데이터 원본에 대한 연결 선택**. 데이터 원본 연결을 선택하거나 지도에 표시할 분석 데이터가 포함된 외부 데이터 원본에 대한 연결을 만듭니다.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "49072327"
   
  지도 또는 지도 계층을 추가하고 보고서를 미리 본 후 마법사에서 설정하는 지도 및 지도 계층 옵션을 변경할 수 있습니다. 자세한 내용은 [지도 또는 지도 계층의 데이터 및 표시 사용자 지정&#40;보고서 작성기 및 SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)을 참조하세요.  
   
- 지도에 대한 자세한 내용은 [지도&#40;보고서 작성기 및 SSRS&#41;](maps-report-builder-and-ssrs.md)를 클릭합니다. 보고서에 지도를 추가하는 방법에 대한 단계별 지침은 [자습서: 지도 보고서&#40;보고서 작성기&#41;](../tutorial-map-report-report-builder.md)를 참조하세요.  
+ 지도에 대한 자세한 내용은 [지도&#40;보고서 작성기 및 SSRS&#41;](maps-report-builder-and-ssrs.md)를 클릭합니다. 보고서에 지도 추가 하는 단계별 지침은 참조 하세요. [자습서: 지도 보고서 &#40;보고서 작성기&#41;](../tutorial-map-report-report-builder.md)합니다.  
   
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
@@ -139,7 +139,7 @@ ms.locfileid: "49072327"
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에서 .shp 파일과 .dbf 파일을 보고서 프로젝트에 추가한 다음 공간 데이터 원본으로 .shp 파일의 이름을 지정합니다.  
   
 ###  <a name="GetShapefiles"></a> ESRI 셰이프 파일은 어떻게 구할 수 있습니까?  
- ESRI 셰이프 파일은 웹에서 이용할 수 있습니다. 자세한 내용은 [Finding ESRI Shapefiles for a Map](http://go.microsoft.com/fwlink/?linkid=178814)을 참조하십시오.  
+ ESRI 셰이프 파일은 웹에서 이용할 수 있습니다. 자세한 내용은 [Finding ESRI Shapefiles for a Map](https://go.microsoft.com/fwlink/?linkid=178814)을 참조하십시오.  
   
 ###  <a name="SqlServerSpatial"></a> SQL Server 공간 쿼리란?  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 공간 쿼리는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관계형 데이터베이스의 SQLGeometry 또는 SQLGeography 데이터 형식인 데이터를 지정하는 데이터 집합 쿼리입니다.  
@@ -149,7 +149,7 @@ ms.locfileid: "49072327"
   
  쿼리 디자이너에서 쿼리를 실행하면 결과 집합에 텍스트로 나타나는 공간 데이터가 포함된 열이 표시됩니다. 예를 들어 한 행에 한 점인 공간 데이터가 포함되고 다음 행에 점 집합을 정의하는 공간 데이터가 포함될 수 있습니다. 각 행은 하나의 지도 요소가 됩니다. 각 지도 요소의 표시를 나눌 수 없는 단위로 변경할 수 있습니다.  
   
- 자세한 내용은 [SQL Server 온라인 설명서](http://go.microsoft.com/fwlink/?linkid=120955)에서 "공간 데이터 형식"을 참조하십시오.  
+ 자세한 내용은 [SQL Server 온라인 설명서](https://go.microsoft.com/fwlink/?linkid=120955)에서 "공간 데이터 형식"을 참조하십시오.  
   
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
@@ -196,9 +196,9 @@ ms.locfileid: "49072327"
   
 -   **혼합.** **도로** 및 **항공** 보기의 조합을 표시합니다.  
   
- 타일에 대한 자세한 내용은 [Bing Maps 타일 시스템(Bing Maps Tiles System)](http://go.microsoft.com/fwlink/?LinkId=147315)을 참조하십시오. 보고서에서 Bing 지도 타일을 사용하는 방법은 [추가 사용 조건(Additional Terms of Use)](http://go.microsoft.com/fwlink/?LinkId=151371) 및 [개인 정보 취급 방침](http://go.microsoft.com/fwlink/?LinkId=151372)을 참조하십시오.  
+ 타일에 대한 자세한 내용은 [Bing Maps 타일 시스템(Bing Maps Tiles System)](https://go.microsoft.com/fwlink/?LinkId=147315)을 참조하십시오. 보고서에서 Bing 지도 타일을 사용하는 방법은 [추가 사용 조건(Additional Terms of Use)](https://go.microsoft.com/fwlink/?LinkId=151371) 및 [개인 정보 취급 방침](https://go.microsoft.com/fwlink/?LinkId=151372)을 참조하십시오.  
   
- 디자인 뷰에서 타일 배경을 보려면 인터넷에 액세스할 수 있어야 합니다. 보고서 서버에 있는 보고서의 타일 배경을 미리 보기에서 보려면 보고서 서버가 Bing Map 타일을 지원하도록 구성되어 있어야 합니다. 자세한 내용은 참조 하세요. [보고서 문제해결: 지도 보고서 &#40;보고서 작성기 및 SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) 및 "지도 계획"에서 [Reporting Services 설명서](http://go.microsoft.com/fwlink/?linkid=121312) SQL Server 온라인 설명서의 합니다.  
+ 디자인 뷰에서 타일 배경을 보려면 인터넷에 액세스할 수 있어야 합니다. 보고서 서버에 있는 보고서의 타일 배경을 미리 보기에서 보려면 보고서 서버가 Bing Map 타일을 지원하도록 구성되어 있어야 합니다. 자세한 내용은 참조 하세요. [보고서 문제 해결: 지도 보고서 &#40;보고서 작성기 및 SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) 하 고 "지도 계획"에 [Reporting Services 설명서](https://go.microsoft.com/fwlink/?linkid=121312) SQL Server 온라인 설명서의 합니다.  
   
  타일 계층을 사용자 지정하는 다른 방법에 대한 자세한 내용은 [지도 또는 지도 계층 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -271,7 +271,7 @@ ms.locfileid: "49072327"
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 문제해결: 지도 보고서&#40;보고서 작성기 및 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [보고서 문제 해결: 지도 보고서 &#40;보고서 작성기 및 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [지도 보고서 계획&#40;보고서 작성기 및 SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)   
  [지도&#40;보고서 작성기 및 SSRS&#41;](maps-report-builder-and-ssrs.md)  
   

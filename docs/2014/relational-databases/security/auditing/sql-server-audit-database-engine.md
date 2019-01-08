@@ -15,12 +15,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 36aeb6f1b8b2b90dce737e3e815b3385429e84f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 8286c918c224b92e1f391931569030a7218252f1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175353"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373525"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit(데이터베이스 엔진)
   *인스턴스 또는 개별 데이터베이스를* 감사 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 할 때는 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]에서 발생하는 이벤트를 추적 및 기록합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit에서는 서버 수준 이벤트에 대한 서버 감사 사양과 데이터베이스 수준 이벤트에 대한 데이터베이스 감사 사양을 포함하는 서버 감사를 생성할 수 있습니다. 감사된 이벤트는 이벤트 로그 또는 감사 파일에 쓸 수 있습니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "48175353"
 > [!IMPORTANT]  
 >  허가 받은 사용자는 Windows 애플리케이션 이벤트 로그에 대해 읽기/쓰기 작업이 가능합니다. 애플리케이션 이벤트 로그는 Windows 보안 이벤트 로그보다 낮은 권한을 요구하므로 Windows 보안 이벤트 로그보다 보안 수준이 낮습니다.  
   
- Windows 보안 로그에 대한 쓰기 작업을 수행하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정을 **보안 감사 생성** 정책에 추가해야 합니다. 기본적으로 이 정책에는 로컬 시스템, 로컬 서비스 및 네트워크 서비스 등이 포함됩니다. 이 설정은 보안 정책 스냅인(secpol.msc)을 사용하여 구성할 수 있습니다. 또한 **성공** 및 **실패** 모두에 대한 **감사 개체 액세스**보안 정책을 설정해야 합니다. 이 설정은 보안 정책 스냅인(secpol.msc)을 사용하여 구성할 수 있습니다. [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 또는 Windows Server 2008을 설정할 수 있습니다 보다 세부적인 **생성 된 응용 프로그램** 감사 정책 프로그램을 사용 하 여 명령줄에서 정책 (`AuditPol.exe)`합니다. Windows 보안 로그의 쓰기를 설정하는 단계에 대한 자세한 내용은 [보안 로그에 SQL Server 감사 이벤트 쓰기](write-sql-server-audit-events-to-the-security-log.md)를 참조하세요. Auditpol.exe 프로그램에 대한 자세한 내용은 기술 자료 문서 921469, [그룹 정책을 사용하여 세부 보안 감사를 구성하는 방법](http://support.microsoft.com/kb/921469/)을 참조하세요. Windows 이벤트 로그는 Windows 운영 체제에 전반적으로 적용됩니다. Windows 이벤트 로그에 대한 자세한 내용은 [이벤트 뷰어 개요(Event Viewer Overview)](http://go.microsoft.com/fwlink/?LinkId=101455)를 참조하십시오. 감사에 대해 보다 정확한 권한이 필요하다면 이진 파일 대상을 사용하십시오.  
+ Windows 보안 로그에 대한 쓰기 작업을 수행하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정을 **보안 감사 생성** 정책에 추가해야 합니다. 기본적으로 이 정책에는 로컬 시스템, 로컬 서비스 및 네트워크 서비스 등이 포함됩니다. 이 설정은 보안 정책 스냅인(secpol.msc)을 사용하여 구성할 수 있습니다. 또한 **성공** 및 **실패** 모두에 대한 **감사 개체 액세스**보안 정책을 설정해야 합니다. 이 설정은 보안 정책 스냅인(secpol.msc)을 사용하여 구성할 수 있습니다. [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 또는 Windows Server 2008을 설정할 수 있습니다 보다 세부적인 **생성 된 응용 프로그램** 감사 정책 프로그램을 사용 하 여 명령줄에서 정책 (`AuditPol.exe)`합니다. Windows 보안 로그의 쓰기를 설정하는 단계에 대한 자세한 내용은 [보안 로그에 SQL Server 감사 이벤트 쓰기](write-sql-server-audit-events-to-the-security-log.md)를 참조하세요. Auditpol.exe 프로그램에 대한 자세한 내용은 기술 자료 문서 921469, [그룹 정책을 사용하여 세부 보안 감사를 구성하는 방법](https://support.microsoft.com/kb/921469/)을 참조하세요. Windows 이벤트 로그는 Windows 운영 체제에 전반적으로 적용됩니다. Windows 이벤트 로그에 대한 자세한 내용은 [이벤트 뷰어 개요(Event Viewer Overview)](https://go.microsoft.com/fwlink/?LinkId=101455)를 참조하십시오. 감사에 대해 보다 정확한 권한이 필요하다면 이진 파일 대상을 사용하십시오.  
   
  감사 정보를 파일에 저장할 때 변조를 방지하기 위해 다음과 같은 방법으로 파일 위치에 대한 액세스를 제한할 수 있습니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48175353"
   
  Audit Administrator가 보관 등의 목적으로 파일을 다른 위치에 복사한 경우에는 새 위치에 대한 ACL을 다음과 같은 권한으로 축소해야 합니다.  
   
--   Audit Administrator - 읽기 / 쓰기  
+-   Audit Administrator - 읽기/쓰기  
   
 -   Audit Reader - 읽기  
   
@@ -105,9 +105,9 @@ ms.locfileid: "48175353"
  자세한 내용은 [서버 감사 및 서버 감사 사양 만들기](create-a-server-audit-and-server-audit-specification.md) 및 [서버 감사 및 데이터베이스 감사 사양 만들기](create-a-server-audit-and-database-audit-specification.md)를 참조하세요.  
   
 ## <a name="considerations"></a>고려 사항  
- 감사 시작 도중에 오류가 발생하면 서버가 시작되지 않습니다. 이 경우 명령줄에서 **–f** 옵션을 사용하면 서버를 시작할 수 있습니다.  
+ 감사 시작 도중에 오류가 발생하면 서버가 시작되지 않습니다. 이 경우 명령줄에서 **–f** 옵션을 사용하여 서버를 시작할 수 있습니다.  
   
- 감사에 대해 ON_FAILURE=SHUTDOWN이 지정되어 있어 감사 오류 발생 시 서버가 종료되거나 시작되지 않으면 MSG_AUDIT_FORCED_SHUTDOWN 이벤트가 로그에 기록됩니다. 종료는 이 설정을 처음 발견할 때 발생하므로 이벤트는 한 번만 기록됩니다. 이 이벤트는 종료를 발생시킨 감사 오류 메시지 이후에 기록됩니다. 관리자는 단일 사용자 모드에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] –m **플래그를 사용하여** 를 시작함으로써 감사로 인한 종료를 무시할 수 있습니다. 단일 사용자 모드에서 시작하면 ON_FAILURE=SHUTDOWN이 지정된 모든 감사를 해당 세션에서 ON_FAILURE=CONTINUE로 실행되도록 다운그레이드할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] –m **플래그를 사용하여** 를 시작하면 MSG_AUDIT_SHUTDOWN_BYPASSED 메시지가 오류 로그에 기록됩니다.  
+ 감사에 대해 ON_FAILURE=SHUTDOWN이 지정되어 있어 감사 오류 발생 시 서버가 종료되거나 시작되지 않으면 MSG_AUDIT_FORCED_SHUTDOWN 이벤트가 로그에 기록됩니다. 종료는 이 설정을 처음 발견할 때 발생하므로 이벤트는 한 번만 기록됩니다. 이 이벤트는 종료를 발생시킨 감사 오류 메시지 이후에 기록됩니다. 관리자는 단일 사용자 모드에서 **-m** 플래그를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 시작함으로써 감사로 인한 종료를 무시할 수 있습니다. 단일 사용자 모드에서 시작하면 ON_FAILURE=SHUTDOWN이 지정된 모든 감사를 해당 세션에서 ON_FAILURE=CONTINUE로 실행되도록 다운그레이드할 수 있습니다. **-m** 플래그를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 시작하면 MSG_AUDIT_SHUTDOWN_BYPASSED 메시지가 오류 로그에 기록됩니다.  
   
  서비스 시작 옵션에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](../../../database-engine/configure-windows/database-engine-service-startup-options.md)을 참조하세요.  
   
@@ -213,7 +213,7 @@ ms.locfileid: "48175353"
  [DDL 트리거](../../triggers/ddl-triggers.md)  
  DDL(데이터 정의 언어) 트리거를 사용하여 데이터베이스 변경 내용을 추적할 수 있는 방법에 대해 설명합니다.  
   
- [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005 보안 및 보호](http://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005 보안 및 보호](https://go.microsoft.com/fwlink/?LinkId=101152)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보안에 대한 최신 정보를 제공합니다.  
   
 ## <a name="see-also"></a>관련 항목  

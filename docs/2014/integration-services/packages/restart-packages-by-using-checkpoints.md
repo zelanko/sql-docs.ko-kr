@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - checkpoints [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 703514e884ede08db13fbb70f5fa27247e75503b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 945bb384f522aa483c490fccd92768078a2d315a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133383"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365061"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>검사점을 사용하여 패키지 다시 시작
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 전체 패키지를 다시 실행하지 않고 오류 발생 시점에서 실패한 패키지를 다시 시작할 수 있습니다. 패키지가 검사점을 사용하도록 구성된 경우 패키지 실행에 대한 정보는 검사점 파일에 기록됩니다. 실패한 패키지가 다시 실행될 때 검사점 파일은 오류 발생 지점에서 패키지를 다시 시작하는 데 사용됩니다. 패키지가 성공적으로 실행된 경우 검사점 파일은 삭제되고 다음에 패키지가 실행될 때 다시 만들어집니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "48133383"
   
 -   반복적인 값 집계를 피할 수 있습니다. 예를 들어 각 집계를 수행하기 위해 별도의 데이터 흐름 태스크를 사용하여 평균 및 합계와 같은 많은 집계를 계산하는 패키지의 경우 특정 집계 계산이 실패하면 패키지를 다시 시작할 수 있으며 해당 집계만 다시 계산됩니다.  
   
- 패키지가 검사점을 사용하도록 구성된 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 검사점 파일에서 다시 시작 지점을 캡처합니다. 실패한 컨테이너 유형 및 트랜잭션과 같은 기능의 구현은 검사점 파일에 기록된 다시 시작 지점에 영향을 미칩니다. 변수의 현재 값도 검사점 파일에 캡처됩니다. 그러나 변수 값이 없는 `Object` 기원후 검사점 파일에 저장 되지 않습니다.  
+ 패키지가 검사점을 사용하도록 구성된 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 검사점 파일에서 다시 시작 지점을 캡처합니다. 실패한 컨테이너 유형 및 트랜잭션과 같은 기능의 구현은 검사점 파일에 기록된 다시 시작 지점에 영향을 미칩니다. 변수의 현재 값도 검사점 파일에 캡처됩니다. 그러나 `Object` 데이터 형식의 변수 값은 검사점 파일에 저장되지 않습니다.  
   
 ## <a name="defining-restart-points"></a>다시 시작 지점 정의  
  단일 태스크를 캡슐화하는 태스크 호스트 컨테이너는 다시 시작할 수 있는 가장 작은 단위입니다. 또한 Foreach Loop 컨테이너 및 트랜잭션이 적용된 컨테이너도 작업의 최소 단위로 간주됩니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "48133383"
 > [!NOTE]  
 >  같은 패키지에서 검사점 및 트랜잭션을 사용하면 예기치 않은 결과가 발생할 수 있습니다. 예를 들어 패키지가 실패하고 검사점에서 다시 시작되면 패키지에서 이미 성공적으로 커밋한 트랜잭션을 반복할 수 있습니다.  
   
- For Loop 및 Foreach Loop 컨테이너에 대한 검사점 데이터는 저장되지 않습니다. 패키지를 다시 시작할 때 For Loop 및 Foreach Loop 컨테이너와 그 자식 컨테이너는 다시 실행됩니다. 루프에 있는 자식 컨테이너가 성공적으로 실행되면 검사점 파일에 기록되지 않고 다시 실행됩니다. 자세한 내용 및 해결 방법은 [SSIS 검사점이 For Loop 또는 Foreach Loop 컨테이너 항목에 대해 허용되지 않습니다.](http://go.microsoft.com/fwlink/?LinkId=241633)를 참조하십시오.  
+ For Loop 및 Foreach Loop 컨테이너에 대한 검사점 데이터는 저장되지 않습니다. 패키지를 다시 시작할 때 For Loop 및 Foreach Loop 컨테이너와 그 자식 컨테이너는 다시 실행됩니다. 루프에 있는 자식 컨테이너가 성공적으로 실행되면 검사점 파일에 기록되지 않고 다시 실행됩니다. 자세한 내용 및 해결 방법은 [SSIS 검사점이 For Loop 또는 Foreach Loop 컨테이너 항목에 대해 허용되지 않습니다.](https://go.microsoft.com/fwlink/?LinkId=241633)를 참조하십시오.  
   
  패키지를 다시 시작하면 패키지는 구성을 다시 로드하는 대신 검사점 파일에 기록된 구성 정보를 사용합니다. 이렇게 하면 패키지가 실패한 시점과 동일한 구성으로 다시 실행될 수 있습니다.  
   
@@ -85,9 +84,9 @@ ms.locfileid: "48133383"
   
 ## <a name="external-resources"></a>외부 리소스  
   
--   social.technet.microsoft.com의 기술 문서 - [장애 조치(Failover) 또는 실패 이후 SSIS 패키지 자동 다시 시작](http://go.microsoft.com/fwlink/?LinkId=200407)  
+-   social.technet.microsoft.com의 기술 문서 - [장애 조치(Failover) 또는 실패 이후 SSIS 패키지 자동 다시 시작](https://go.microsoft.com/fwlink/?LinkId=200407)  
   
--   support.microsoft.com의 고객 지원 문서 - [SSIS 검사점이 For Loop 또는 Foreach Loop 컨테이너 항목에 대해 허용되지 않습니다.](http://go.microsoft.com/fwlink/?LinkId=241633)  
+-   support.microsoft.com의 고객 지원 문서 - [SSIS 검사점이 For Loop 또는 Foreach Loop 컨테이너 항목에 대해 허용되지 않습니다.](https://go.microsoft.com/fwlink/?LinkId=241633)  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server Integration Services](../sql-server-integration-services.md)  

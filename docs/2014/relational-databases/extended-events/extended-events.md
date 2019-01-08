@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server]
@@ -14,17 +13,17 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e436ba6a981ac03ca5f4b194e9dc257a22aba7a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221663"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354049"
 ---
 # <a name="extended-events"></a>확장 이벤트
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트는 확장성이 높고 다양하게 구성 가능한 인프라를 갖추고 있으므로 사용자는 이를 통해 문제를 해결하거나 성능 문제를 파악하는 데 필요한 만큼의 정보만 수집할 수 있습니다.  
   
- 확장 이벤트에 대한 자세한 내용은 [SQL Server 확장 이벤트](http://blogs.msdn.com/b/extended_events/)에서 찾을 수 있습니다.  
+ 확장 이벤트에 대한 자세한 내용은 [SQL Server 확장 이벤트](https://blogs.msdn.com/b/extended_events/)에서 찾을 수 있습니다.  
   
 ## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트의 이점  
  확장 이벤트는 성능 리소스를 적게 사용하는 간단한 성능 모니터링 시스템입니다. 확장 이벤트에서는**새 세션 마법사** 와 **새 세션**이라는 두 가지 그래픽 사용자 인터페이스가 제공되므로 세션 데이터를 작성, 수정, 표시 및 분석할 수 있습니다.  

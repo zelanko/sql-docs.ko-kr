@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.webconfigpg.f1
@@ -13,12 +12,12 @@ ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ebab5de453d383b20e55e52ec3d57b10cfaebcf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: f45eef12a81ada02a26a0f4c2318523de31cbf0d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200871"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357771"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>웹 구성 페이지(Master Data Services 구성 마법사)
   **웹 구성** 페이지를 사용하여 새 웹 사이트를 만들거나 새 웹 사이트 또는 웹 응용 프로그램을 만들 수 있습니다. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을 선택한 후 해당 응용 프로그램의 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 지정하고 Data Quality Services를 사용하도록 설정할 수 있습니다.  
@@ -48,7 +47,7 @@ ms.locfileid: "48200871"
 ## <a name="see-also"></a>관련 항목  
  [Master Data Services에 대 한 데이터베이스 및 웹 사이트 설정](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
  [웹 응용 프로그램 요구 사항 &#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
- [마스터 데이터 관리자 웹 응용 프로그램 만들기 &#40;Master Data Services&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
- [MDS 2014 및 "서비스를 사용할 수 없음" 오류](http://blogs.msdn.com/b/womeninanalytics/archive/2015/08/19/mds-2014-and-service-unavailable-error.aspx)  
+ [마스터 데이터 관리자 웹 애플리케이션 만들기&amp;#40;Master Data Services&amp;#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
+ [MDS 2014 및 "서비스를 사용할 수 없음" 오류](https://blogs.msdn.com/b/womeninanalytics/archive/2015/08/19/mds-2014-and-service-unavailable-error.aspx)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, upgrading
@@ -16,12 +15,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b6abc8e9e025bc24b4f456b58e0e9625e66b4b71
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
-ms.translationtype: HT
+ms.openlocfilehash: d1e40954a5a5eb7a69ba4f70b798356f38175fed
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072027"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365395"
 ---
 # <a name="upgrade-integration-services"></a>Integration Services 업그레이드
   [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 또는 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]가 현재 컴퓨터에 설치되어 있으면 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]로 업그레이드할 수 있습니다.  
@@ -36,16 +35,16 @@ ms.locfileid: "49072027"
 ## <a name="before-upgrading-integration-services"></a>Integration Services를 업그레이드하기 전에  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하기 전에 먼저 업그레이드 관리자를 실행하는 것이 좋습니다. 업그레이드 관리자는 기존 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 사용되는 새로운 패키지 형식으로 마이그레이션하는 경우 발생할 수 있는 문제를 보고합니다. 자세한 내용은 [Use Upgrade Advisor to Prepare for Upgrades](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)을 참조하세요.  
   
-> [!NOTE]  
+> [!NOTE]
 >  마이그레이션 또는 실행 Data Transformation Services (dts)도 지원 되지 않습니다 현재 릴리스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]합니다. 다음 DTS 기능이 더 이상 사용되지 않습니다.  
->   
+> 
 >  -   DTS 런타임  
 > -   DTS API  
 > -   DTS 패키지를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
 > -   다음 DTS 패키지 유지 관리 지원: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 > -   DTS 2000 패키지 실행 태스크  
 > -   DTS 패키지의 업그레이드 관리자 검색입니다.  
->   
+> 
 >  지원 되지 않는 다른 기능에 대 한 정보를 참조 하세요 [SQL Server 2014에서는 Integration Services 기능 지원 되지 않는](../discontinued-integration-services-functionality-in-sql-server-2014.md)합니다.  
   
 ## <a name="upgrading-integration-services"></a>Integration Services 업그레이드  
@@ -145,6 +144,6 @@ ms.locfileid: "49072027"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 컴퓨터의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 에이전트 작업을 사용하여 업그레이드된 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 인스턴스에 저장된 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 또는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 패키지를 실행할 수 없습니다.  
   
 ## <a name="external-resources"></a>외부 리소스  
- blogs.msdn.com의 블로그 항목 - [기존 사용자 지정 SSIS 확장 프로그램 및 애플리케이션을 Denali에서 사용되도록 설정](http://go.microsoft.com/fwlink/?LinkId=238157)  
+ blogs.msdn.com의 블로그 항목 - [기존 사용자 지정 SSIS 확장 프로그램 및 애플리케이션을 Denali에서 사용되도록 설정](https://go.microsoft.com/fwlink/?LinkId=238157)  
   
   

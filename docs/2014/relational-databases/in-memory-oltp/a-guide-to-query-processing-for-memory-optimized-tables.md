@@ -10,12 +10,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c0372c07edc32be23034a4c221e2480bd2047be
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2393792341fdbc28bbc0f74657aa2f3cf54ee4d1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213083"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374825"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 쿼리 처리 가이드
   메모리 내 OLTP는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저를 도입합니다. 이 문서에서는 메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저 모두의 쿼리 처리에 대한 개요를 제공합니다.  
@@ -60,7 +60,7 @@ CREATE INDEX IX_OrderDate ON dbo.[Order](OrderDate)
 GO  
 ```  
   
- 이 문서에 표시된 쿼리 계획을 생성하기 위해 두 테이블에는 Northwind 샘플 데이터베이스의 샘플 데이터가 입력되었습니다. 이 데이터베이스는 [SQL Server 2000의 Northwind 및 pubs 샘플 데이터베이스](http://www.microsoft.com/download/details.aspx?id=23654)에서 다운로드할 수 있습니다.  
+ 이 문서에 표시된 쿼리 계획을 생성하기 위해 두 테이블에는 Northwind 샘플 데이터베이스의 샘플 데이터가 입력되었습니다. 이 데이터베이스는 [SQL Server 2000의 Northwind 및 pubs 샘플 데이터베이스](https://www.microsoft.com/download/details.aspx?id=23654)에서 다운로드할 수 있습니다.  
   
  다음 쿼리를 살펴보십시오. 이 쿼리는 Customer 및 Order 테이블을 조인하고 주문 ID와 연관된 고객 정보를 반환합니다.  
   
@@ -79,7 +79,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
 -   Order 테이블의 데이터는 CustomerID 열에 있는 비클러스터형 인덱스를 사용해서 검색됩니다. 이 인덱스에는 조인에 사용되는 CustomerID 열과 사용자에게 반환되는 기본 키 열인 OrderID가 모두 포함됩니다. Order 테이블에서 추가 열을 반환하려면 Order 테이블에 대한 클러스터형 인덱스에서 조회가 필요합니다.  
   
--   논리 연산자 `Inner Join`은 물리 연산자 `Merge Join`에 의해 구현됩니다. 다른 물리적 조인 유형은 `Nested Loops` 및 `Hash Join`입니다. `Merge Join` 연산자는 두 인덱스가 모두 조인 열 CustomerID에 정렬 되어 있다는 사실 활용 합니다.  
+-   논리 연산자 `Inner Join`은 물리 연산자 `Merge Join`에 의해 구현됩니다. 다른 물리적 조인 유형은 `Nested Loops` 및 `Hash Join`입니다. `Merge Join` 연산자는 두 인덱스가 모두 조인 열 CustomerID에 정렬되어 있다는 사실을 활용합니다.  
   
  이제 이 쿼리를 약간 변형하여 OrderID만 아니라 Order 테이블의 모든 행을 반환합니다.  
   
@@ -92,7 +92,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
  ![디스크 기반 테이블의 해시 조인을 위한 쿼리 계획.](../../database-engine/media/hekaton-query-plan-2.gif "디스크 기반 테이블의 해시 조인을 위한 쿼리 계획.")  
 디스크 기반 테이블의 해시 조인을 위한 쿼리 계획.  
   
- 이 쿼리에서 Order 테이블의 행은 클러스터형 인덱스를 사용해서 검색됩니다. 합니다 `Hash Match` 물리 연산자는 이제는 `Inner Join`합니다. 순서에 클러스터형된 인덱스가 customerid로 정렬 되지 않으므로 `Merge Join` 성능에 영향을 줄 것을 sort 연산자가 필요 합니다. 이전 예에서 `Hash Match` 연산자의 비용(46%)에 대비해서 `Merge Join` 연산자의 상대적 비용(75%)에 주의하십시오. 최적화 프로그램이 고려할 수도 합니다 `Hash Match` 연산자도 이전 예에서 겠지만는 `Merge Join` 연산자가 더 나은 성능을 제공 합니다.  
+ 이 쿼리에서 Order 테이블의 행은 클러스터형 인덱스를 사용해서 검색됩니다. `Hash Match` 물리 연산자는 이제 `Inner Join`에 사용됩니다. Order에 대한 클러스터형 인덱스가 CustomerID로 정렬되지 않았으므로 `Merge Join`을 위해 sort 연산자가 필요하지만, 이는 성능에 영향을 줄 수 있습니다. 이전 예에서 `Hash Match` 연산자의 비용(46%)에 대비해서 `Merge Join` 연산자의 상대적 비용(75%)에 주의하십시오. 이전 예에서 최적화 프로그램에는 `Hash Match` 연산자도 고려되었겠지만 `Merge Join` 연산자가 더 나은 성능을 제공하는 것으로 결정되었습니다.  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 디스크 기반 테이블에 대한 쿼리 처리  
  다음 다이어그램에서는 임시 쿼리를 위한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 쿼리 처리 흐름을 간단히 보여줍니다.  
@@ -170,7 +170,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
     -   클러스터형 인덱스는 메모리 최적화 테이블에서 지원되지 않습니다. 대신 메모리 최적화 모든 테이블에 적어도 하나 이상의 비클러스터형 인덱스가 있어야 하고 메모리 최적화 테이블의 모든 인덱스는 인덱스에 행을 저장하거나 클러스터형 인덱스를 참조할 필요 없이 테이블의 모든 열에 효율적으로 액세스할 수 있습니다.  
   
--   이 계획에는 `Hash Match`이 아니라 `Merge Join`가 포함됩니다. Order 및 Customer 테이블에 모두 있는 인덱스는 해시 인덱스이므로 정렬되지 않습니다. `Merge Join` 성능 저하가 발생 하는 sort 연산자가 필요 합니다.  
+-   이 계획에는 `Hash Match`이 아니라 `Merge Join`가 포함됩니다. Order 및 Customer 테이블에 모두 있는 인덱스는 해시 인덱스이므로 정렬되지 않습니다. `Merge Join`을 사용하기 위해서는 성능 저하가 발생하는 sort 연산자가 필요합니다.  
   
 ## <a name="natively-compiled-stored-procedures"></a>Natively Compiled Stored Procedures  
  고유하게 컴파일된 저장 프로시저는 쿼리 실행 엔진에서 해석되지 않고 기계어 코드로 컴파일된 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 저장 프로시저입니다. 다음 스크립트는 예제 쿼리(예제 쿼리 섹션 참조)를 실행하는 기본적으로 컴파일되는 저장 프로시저를 만듭니다.  
@@ -195,7 +195,7 @@ END
 |-|-----------------------|-----------------|  
 |초기 컴파일|생성 시|처음 실행 시|  
 |자동 다시 컴파일|데이터베이스나 서버를 다시 시작한 후 프로시저를 처음 실행할 때|서버를 다시 시작할 때 또는 일반적으로 스키마 또는 통계 변경이나 메모리 압력에 따라 계획 캐시에서 계획이 제거될 때|  
-|수동 다시 컴파일|지원되지 않습니다. 해결을 위해서는 저장 프로시저를 삭제하고 다시 만들어야 합니다.|대신 `sp_recompile`를 캐시에서 계획을 수동으로 제거할 수 있습니다(예: DBCC FREEPROCCACHE 사용). 또한 WITH RECOMPILE로 저장 프로시저를 만들면 실행할 때마다 저장 프로시저가 다시 컴파일됩니다.|  
+|수동 다시 컴파일|지원되지 않습니다. 해결을 위해서는 저장 프로시저를 삭제하고 다시 만들어야 합니다.|`sp_recompile`을 사용하세요. 캐시에서 계획을 수동으로 제거할 수 있습니다(예: DBCC FREEPROCCACHE 사용). 또한 WITH RECOMPILE로 저장 프로시저를 만들면 실행할 때마다 저장 프로시저가 다시 컴파일됩니다.|  
   
 ### <a name="compilation-and-query-processing"></a>컴파일 및 쿼리 처리  
  다음 다이어그램은 고유하게 컴파일된 저장 프로시저의 컴파일 프로세스를 보여줍니다.  
@@ -205,7 +205,7 @@ END
   
  프로세스에 대한 설명은 다음과 같습니다.  
   
-1.  사용자는 `CREATE PROCEDURE` 문을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+1.  사용자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대해 `CREATE PROCEDURE` 문을 실행합니다.  
   
 2.  파서 및 algebrizer가 프로시저에 대한 처리 흐름과 저장 프로시저에 있는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리에 대한 쿼리 트리를 만듭니다.  
   
@@ -226,7 +226,7 @@ END
   
 2.  파서가 이름 및 저장 프로시저 매개 변수를 추출합니다.  
   
-     예를 들어 사용 하 여 문을 준비 되었으면 `sp_prep_exec`, 파서가 프로시저 이름과 실행 시 매개 변수를 추출할 필요가 없습니다.  
+     `sp_prep_exec` 등을 사용해서 문이 준비되었으면 파서가 실행 시에 프로시저 이름과 매개 변수를 추출할 필요가 없습니다.  
   
 3.  메모리 내 OLTP 런타임이 저장 프로시저에 대한 DLL 진입점을 찾습니다.  
   
@@ -236,7 +236,7 @@ END
   
  생성 시에 컴파일되는 고유하게 컴파일된 저장 프로시저와 달리 해석된 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 저장 프로시저는 첫 실행 시 컴파일됩니다. 호출 시에 해석된 저장 프로시저가 컴파일될 때 이 호출을 위해 제공된 매개 변수의 값은 최적화 프로그램이 실행 계획을 생성할 때 사용됩니다. 이렇게 컴파일 중 매개 변수의 사용을 매개 변수 스니핑이라고 부릅니다.  
   
- 고유하게 컴파일된 저장 프로시저를 컴파일하는 데에는 매개 변수 스니핑이 사용되지 않습니다. 이 저장 프로시저에 대한 모든 매개 변수는 UNKNOWN 값을 갖는 것으로 간주됩니다. 같은 해석 된 저장된 프로시저를 고유 하 게 컴파일된 저장된 프로시저도 지원 합니다 `OPTIMIZE FOR` 힌트입니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)를 참조하세요.  
+ 고유하게 컴파일된 저장 프로시저를 컴파일하는 데에는 매개 변수 스니핑이 사용되지 않습니다. 이 저장 프로시저에 대한 모든 매개 변수는 UNKNOWN 값을 갖는 것으로 간주됩니다. 해석된 저장 프로시저처럼 고유하게 컴파일된 저장 프로시저도 `OPTIMIZE FOR` 힌트를 지원합니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)를 참조하세요.  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저에 대한 쿼리 실행 검색  
  고유하게 컴파일된 저장 프로시저에 대한 쿼리 실행 계획은 **에서** 예상 실행 계획 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]을 사용하거나 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 SHOWPLAN_XML 옵션을 사용하여 검색할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
@@ -263,13 +263,13 @@ GO
 |Delete|`DELETE dbo.Customer WHERE CustomerID='abc'`|  
 |Compute Scalar|이 연산자는 내장 함수 및 형식 변환에 모두 사용됩니다. 고유하게 컴파일된 저장 프로시저 내에서 모든 함수 및 형식 변환이 지원되는 것은 아닙니다.<br /><br /> `SELECT OrderID+1 FROM dbo.[Order]`|  
 |중첩 루프 조인|Nested Loops는 고유하게 컴파일된 저장 프로시저에서 지원되는 유일한 조인 연산자입니다. 해석된 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 로 실행된 것과 동일한 쿼리에 대한 계획에 해시 또는 병합 조인이 포함되더라도 조인을 포함하는 모든 계획에는 Nested Loops 연산자가 사용됩니다.<br /><br /> `SELECT o.OrderID, c.CustomerID`  <br /> `FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|  
-|Sort|`SELECT ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
+|정렬|`SELECT ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
 |TOP|`SELECT TOP 10 ContactName FROM dbo.Customer`|  
 |Top-sort|`TOP` 식(반환할 행의 수)은 8,000행을 초과할 수 없습니다. 쿼리에 조인 및 집계 연산자도 있을 경우 이보다 적습니다. 일반적으로 조인과 집계는 기본 테이블의 행 개수와 비교할 때 정렬될 행 수를 줄입니다.<br /><br /> `SELECT TOP 10 ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
 |Stream Aggregate|Hash Match 연산자는 집계가 지원되지 않습니다. 따라서 해석된 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 의 동일 쿼리에 대한 계획에 Hash Match 연산자가 사용되더라도 고유하게 컴파일된 저장 프로시저의 모든 집계에는 Stream Aggregate 연산자가 사용됩니다.<br /><br /> `SELECT count(CustomerID) FROM dbo.Customer`|  
   
 ## <a name="column-statistics-and-joins"></a>열 통계 및 조인  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 index scan 및 index seek와 같은 특정 작업의 비용을 예측할 수 있도록 인덱스 키 열에 값 통계를 유지 관리합니다. (인덱스가 아닌 키 열을 사용자가 명시적으로 만들거나 쿼리 최적화 프로그램에서 조건자가 있는 쿼리에 대한 응답으로 만드는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 그에 대한 통계도 만듭니다.) 비용 예측의 기본 메트릭은 단일 연산자에서 처리되는 행 수입니다. 디스크 기반 테이블의 경우에는 특정 연산자에서 액세스되는 페이지 수가 비용 예측에서 중요한 요소입니다. 하지만 메모리 최적화 테이블의 경우에는 페이지 수가 항상 0이므로 중요하지 않습니다. 이 문서에서는 행 수에 대해 중점적으로 설명합니다. 예측은 계획에서 index seek 및 scan 연산자로 시작해서 조인 연산자와 같은 다른 연산자를 포함하도록 확장됩니다. 조인 연산자에서 처리될 것으로 예상되는 행 수는 기본 index, seek 및 scan 연산자의 예측을 기반으로 결정됩니다. 메모리 최적화 테이블에 대한 해석된 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 액세스의 경우 실제 실행 계획을 관찰하면 계획에서 연산자에 대한 예측 및 실제 행 수 간의 차이를 볼 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 index scan 및 index seek와 같은 특정 작업의 비용을 예측할 수 있도록 인덱스 키 열에 값 통계를 유지 관리합니다. ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 통계도 만듭니다 인덱스가 아닌 키 열에 명시적으로 만들 경우 쿼리 최적화 프로그램에 대 한 응답 하는 조건자를 사용 하 여 쿼리를 만들어 메시지를 표시 합니다.) 비용 예측의 기본 메트릭은 단일 연산자에서 처리되는 행 수입니다. 디스크 기반 테이블의 경우에는 특정 연산자에서 액세스되는 페이지 수가 비용 예측에서 중요한 요소입니다. 하지만 메모리 최적화 테이블의 경우에는 페이지 수가 항상 0이므로 중요하지 않습니다. 이 문서에서는 행 수에 대해 중점적으로 설명합니다. 예측은 계획에서 index seek 및 scan 연산자로 시작해서 조인 연산자와 같은 다른 연산자를 포함하도록 확장됩니다. 조인 연산자에서 처리될 것으로 예상되는 행 수는 기본 index, seek 및 scan 연산자의 예측을 기반으로 결정됩니다. 메모리 최적화 테이블에 대한 해석된 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 액세스의 경우 실제 실행 계획을 관찰하면 계획에서 연산자에 대한 예측 및 실제 행 수 간의 차이를 볼 수 있습니다.  
   
  그림 1 예의 경우,  
   
@@ -300,7 +300,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 -   IX_CustomerID에 대한 전체 인덱스 검색은 index seek로 바뀌었습니다. 그 결과 전체 인덱스 검색에 필요한 830개 행 대신 5개 행이 검색되었습니다.  
   
 ### <a name="statistics-and-cardinality-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 통계 및 카디널리티  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 메모리 최적화 테이블에 대 한 열 수준 통계를 유지 관리합니다. 또한 테이블의 실제 행 개수도 유지 관리합니다. 그러나 디스크 기반 테이블과 달리 메모리 최적화 테이블에 대한 통계는 자동으로 업데이트되지 않습니다. 따라서 테이블이 크게 변경된 후 통계를 수동으로 업데이트해야 합니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블에 대한 통계](memory-optimized-tables.md)를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 메모리 최적화 테이블에 대해 열 수준의 통계를 유지 관리합니다. 또한 테이블의 실제 행 개수도 유지 관리합니다. 그러나 디스크 기반 테이블과 달리 메모리 최적화 테이블에 대한 통계는 자동으로 업데이트되지 않습니다. 따라서 테이블이 크게 변경된 후 통계를 수동으로 업데이트해야 합니다. 자세한 내용은 [Statistics for Memory-Optimized Tables](memory-optimized-tables.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [메모리 액세스에 최적화된 테이블](memory-optimized-tables.md)  

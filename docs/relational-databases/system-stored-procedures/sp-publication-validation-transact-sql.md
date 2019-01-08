@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_publication_validation
@@ -17,12 +16,12 @@ ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f90e172030193cf3ae1209829aa58512cf56fd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8612b3713113435461ca59845710b9f7284f1a78
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608681"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591407"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [**@publication=**] **' * * * 게시 '*  
+ [**@publication=**] **'**_게시 '_  
  게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [**@rowcount_only=**] *rowcount_only*  
@@ -51,9 +50,9 @@ sp_publication_validation [ @publication = ] 'publication'
   
 |값|Description|  
 |-----------|-----------------|  
-|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 호환 체크섬을 수행합니다.<br /><br /> 참고: 아티클을 행 필터링 하 고, 행 개수 작업을 체크섬 작업을 대신 수행 됩니다.|  
+|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 호환 체크섬을 수행합니다.<br /><br /> 참고: 아티클이 행 필터링되면 체크섬 작업 대신 행 개수 작업이 수행됩니다.|  
 |**1** (기본값)|행 개수 검사만 수행합니다.|  
-|**2**|행 개수와 이진 체크섬을 수행합니다.<br /><br /> : 참고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 7.0 구독자에서 행 개수 유효성 검사만 수행 됩니다.|  
+|**2**|행 개수와 이진 체크섬을 수행합니다.<br /><br /> 참고: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 7.0 구독자에 대해서는 행 개수 유효성 검사만 수행합니다.|  
   
  [**@full_or_fast=**] *full_or_fast*  
  행 개수를 계산하는 데 사용하는 방법입니다. *full_or_fast* 됩니다 **tinyint** 이며 다음 값 중 하나일 수 있습니다.  
@@ -67,8 +66,8 @@ sp_publication_validation [ @publication = ] 'publication'
  [  **@shutdown_agent=**] *shutdown_agent*  
  유효성 검사가 종료되면 배포 에이전트가 즉시 종료되어야 하는지 여부입니다. *shutdown_agent* 됩니다 **비트**, 기본값은 **0**합니다. 하는 경우 **0**, 복제 에이전트가 종료 되지 않습니다. 하는 경우 **1**, 마지막 아티클의 유효성을 검사 한 후 복제 에이전트가 종료 되었습니다.  
   
- [ **@publisher** = ] **'***publisher***'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외의 게시자를 지정합니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+ [ **@publisher** =] **'**_게시자_**'**  
+ 지정 된 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *게시자* 해서는 안에서 유효성 검사를 요청할 때를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  

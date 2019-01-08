@@ -18,17 +18,17 @@ ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: cfa444356e2fbefe0e6fad2333b8e565257b3992
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 2195c4efcec60b5a350475ab2600b42ef5c93b36
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192523"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359565"
 ---
 # <a name="securing-sql-server"></a>SQL Server 보안 설정
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안은 플랫폼, 인증, 개체(데이터 포함) 및 시스템에 액세스하는 응용 프로그램의 네 가지 영역과 관련된 일련의 단계로 볼 수 있습니다. 다음 항목에서는 효과적인 보안 계획을 만들고 구현하는 방법을 설명합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server [웹 사이트에서](http://go.microsoft.com/fwlink/?LinkID=31629) 보안에 대한 자세한 정보를 확인할 수 있습니다. 여기에는 최선의 구현 방법 안내와 보안 검사 목록도 포함되어 있습니다. 이 사이트에는 최신 서비스 팩 정보 및 다운로드도 포함되어 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server [웹 사이트에서](https://go.microsoft.com/fwlink/?LinkID=31629) 보안에 대한 자세한 정보를 확인할 수 있습니다. 여기에는 최선의 구현 방법 안내와 보안 검사 목록도 포함되어 있습니다. 이 사이트에는 최신 서비스 팩 정보 및 다운로드도 포함되어 있습니다.  
   
 ## <a name="platform-and-network-security"></a>플랫폼 및 네트워크 보안  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 플랫폼에는 클라이언트를 데이터베이스 서버에 연결하는 물리적 하드웨어와 네트워킹 시스템 및 데이터베이스 요청을 처리하는 데 사용되는 이진 파일이 포함되어 있습니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "48192523"
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로그램 파일|[SQL Server 기본 인스턴스 및 명명된 인스턴스의 파일 위치](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 팩 및 업그레이드는 향상된 보안 기능을 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용할 수 있는 최신 서비스 팩을 확인하려면 [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) 웹 사이트를 참조하십시오.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 팩 및 업그레이드는 향상된 보안 기능을 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용할 수 있는 최신 서비스 팩을 확인하려면 [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) 웹 사이트를 참조하십시오.  
   
  다음 스크립트를 사용하여 시스템에 설치된 서비스 팩을 확인할 수 있습니다.  
   
@@ -86,7 +86,7 @@ GO
 ```  
   
 ## <a name="principals-and-database-object-security"></a>보안 주체 및 데이터베이스 개체 보안  
- 보안 주체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 액세스 권한을 부여 받은 개인, 그룹 및 프로세스입니다. “보안 개체”는 서버, 데이터베이스 및 데이터베이스에 포함된 개체입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 노출 영역이 감소되도록 각 보안 개체의 사용 권한 집합을 구성할 수 있습니다. 다음 표에서는 보안 주체 및 보안 개체에 대한 자세한 정보를 제공합니다.  
+ 보안 주체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 액세스 권한을 부여 받은 개인, 그룹 및 프로세스입니다. "보안 개체"는 서버, 데이터베이스 및 데이터베이스에 포함된 개체입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 노출 영역이 감소되도록 각 보안 개체의 사용 권한 집합을 구성할 수 있습니다. 다음 표에서는 보안 주체 및 보안 개체에 대한 자세한 정보를 제공합니다.  
   
 |내용|참조 항목|  
 |---------------------------|---------|  

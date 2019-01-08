@@ -11,12 +11,12 @@ ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8eb5d5f003076a9a883363f5da4bb7d2bf501577
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: af69191452137761cfaa49d6add0ad39ad3ccdde
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084763"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363665"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>SAP NetWeaver BI 연결 형식(SSRS)
   보고서에 SAP NetWeaver® Business Intelligence 외부 데이터 원본의 데이터를 포함하려면 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]유형의 보고서 데이터 원본에 기초하는 데이터 세트가 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Data Provider 1.0 for [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]의 확장 프로그램을 기반으로 합니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "48084763"
   
  이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결이 나 데이터 원본 추가 및 확인 &#40;보고서 작성기 및 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)합니다.  
   
-##  <a name="support"></a> 지원 되는 버전  
+##  <a name="support"></a> Supported Versions  
  이 데이터 공급자는 SAP BW 3.5 및 7.0에 대해 개발되고 테스트되었습니다.  
   
 -   SAP BW 3.5 및 7.0에 대한 지원 패키지 20  
@@ -72,17 +72,17 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
   
 ##  <a name="Extended"></a> 확장 필드 속성  
- [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] 데이터 원본은 확장 필드 속성을 지원합니다. 확장된 필드 속성은 속성 외에 `Value` 및 `IsMissing` 데이터 처리 확장 프로그램에서 데이터 집합 필드에 대해 정의 되어 있습니다. 확장 속성에는 미리 정의된 속성과 사용자 지정 속성이 포함됩니다. 미리 정의된 속성은 여러 데이터 원본에 공통된 속성이고 사용자 지정 속성은 각 데이터 원본에 고유한 속성입니다.  
+ [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] 데이터 원본은 확장 필드 속성을 지원합니다. 확장 필드 속성은 `Value` 및 `IsMissing` 외에 데이터 처리 확장 프로그램에서 데이터 집합 필드에 대해 정의한 속성입니다. 확장 속성에는 미리 정의된 속성과 사용자 지정 속성이 포함됩니다. 미리 정의된 속성은 여러 데이터 원본에 공통된 속성이고 사용자 지정 속성은 각 데이터 원본에 고유한 속성입니다.  
   
 ### <a name="working-with-field-properties"></a>필드 속성 사용  
- 확장 필드 속성은 보고서 데이터 창에 보고서 레이아웃으로 끌 수 있는 항목으로 나타나지 않습니다. 대신 속성의 부모 필드에 보고서로 끈 다음 기본 속성을 변경 `Value` 사용 하려는 속성입니다. 예를 들어 MDX 쿼리 디자이너에서 메타데이터 창의 수준을 쿼리 창으로 끌어 **Calendar Year/Month Level 01** 이라는 필드를 만든 경우에는 식에서 다음 구문을 사용하여 사용자 지정 확장 속성 **Long Name** 을 참조합니다.  
+ 확장 필드 속성은 보고서 데이터 창에 보고서 레이아웃으로 끌 수 있는 항목으로 나타나지 않습니다. 대신 속성의 부모 필드를 보고서로 끈 다음 기본 속성 `Value`를 사용하려는 속성으로 변경합니다. 예를 들어 MDX 쿼리 디자이너에서 메타데이터 창의 수준을 쿼리 창으로 끌어 **Calendar Year/Month Level 01** 이라는 필드를 만든 경우에는 식에서 다음 구문을 사용하여 사용자 지정 확장 속성 **Long Name** 을 참조합니다.  
   
  `=Fields!Calendar_Year_Month_Level_01("Long Name")`  
   
- 메타데이터 창에서 필드를 가리키면 확장 필드 속성 이름이 도구 설명에 표시됩니다. 기본 데이터를 탐색할 때 사용할 수 있는 쿼리 디자이너에 대 한 자세한 내용은 참조 [SAP NetWeaver BI 쿼리 디자이너 사용자 인터페이스](sap-netweaver-bi-query-designer-user-interface.md)합니다.  
+ 메타데이터 창에서 필드를 가리키면 확장 필드 속성 이름이 도구 설명에 표시됩니다. 기본 데이터를 탐색할 때 사용할 수 있는 쿼리 디자이너에 대한 자세한 내용은 [SAP NetWeaver BI Query Designer User Interface](sap-netweaver-bi-query-designer-user-interface.md)를 참조하세요.  
   
 > [!NOTE]  
->  보고서가 실행되어 해당 데이터 세트에 대한 데이터를 검색할 때 데이터 원본에서 확장 필드 속성에 대한 값을 제공하는 경우에만 이러한 속성에 대한 값이 있습니다. 참조할 수 있습니다 `Field` 아래에 설명 된 구문을 사용 하 여 모든 식에서 속성 값입니다. 그러나 이러한 필드는 해당 데이터 공급자와만 관련이 있고 보고서 정의 언어에는 포함되지 않으므로 이러한 값을 변경해도 보고서 정의에는 변경된 값이 저장되지 않습니다.  
+>  보고서가 실행되어 해당 데이터 세트에 대한 데이터를 검색할 때 데이터 원본에서 확장 필드 속성에 대한 값을 제공하는 경우에만 이러한 속성에 대한 값이 있습니다. 그러면 아래 설명하는 구문을 사용하여 식에서 해당 `Field` 속성 값을 참조할 수 있습니다. 그러나 이러한 필드는 해당 데이터 공급자와만 관련이 있고 보고서 정의 언어에는 포함되지 않으므로 이러한 값을 변경해도 보고서 정의에는 변경된 값이 저장되지 않습니다.  
   
  식에서 미리 정의된 확장 속성을 참조하려면 다음 구문 중 하나를 사용합니다.  
   
@@ -118,7 +118,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 ##  <a name="Remarks"></a> 주의  
  이 데이터 공급자는 일부 보고서 배달 모드만 지원합니다. 이 데이터 처리 확장 프로그램에서는 데이터 기반 구독을 통한 보고서 배달이 지원되지 않습니다. 자세한 내용은 [구독자 데이터에 외부 데이터 원본 사용&#40;데이터 기반 구독&#41;](../subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)을 참조하세요.  
   
- 자세한 내용은 [SAP NetWeaver Business Intelligence와 함께 SQL Server 2008 Reporting Services 사용](http://go.microsoft.com/fwlink/?LinkId=167352)을 참조하세요.  
+ 자세한 내용은 [SAP NetWeaver Business Intelligence와 함께 SQL Server 2008 Reporting Services 사용](https://go.microsoft.com/fwlink/?LinkId=167352)을 참조하세요.  
   
   
   
@@ -148,7 +148,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  쿼리에 의해 생성되는 데이터 세트 필드 컬렉션에 대한 정보를 제공합니다.  
   
- [Reporting Services에서 지 원하는 데이터 원본 &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
  각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.  
   
  

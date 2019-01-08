@@ -11,12 +11,12 @@ ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ef55fa4a5715ba58ed1ecd426533ef161034dc7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: af3216db3e2e281448a0fd371d67b475fafd5af0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141798"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371982"
 ---
 # <a name="oracle-connection-type-ssrs"></a>Oracle 연결 형식(SSRS)
   보고서에서 Oracle 데이터베이스의 데이터를 사용하려면 Oracle 유형의 보고서 데이터 원본을 기반으로 하는 데이터 세트가 있어야 합니다. 이 기본 제공 데이터 원본 유형은 .NET Framework Managed Provider for Oracle을 기반으로 하며 Oracle 클라이언트 소프트웨어 구성 요소를 필요로 합니다.  
@@ -58,11 +58,11 @@ Data Source="Oracle9"; Unicode="True"
   
  자세한 내용은 다음 항목을 참조하세요.  
   
--   msdn.microsoft.com의[.NET Framework Data Provider for Oracle 사용](http://go.microsoft.com/fwlink/?LinkId=112314)   
+-   msdn.microsoft.com의[.NET Framework Data Provider for Oracle 사용](https://go.microsoft.com/fwlink/?LinkId=112314)   
   
--   [Reporting Services를 사용한 Oracle 데이터 원본 구성 및 액세스 방법](http://support.microsoft.com/kb/834305)  
+-   [Reporting Services를 사용한 Oracle 데이터 원본 구성 및 액세스 방법](https://support.microsoft.com/kb/834305)  
   
--   [NETWORK SERVICE 보안 주체에 대한 사용 권한을 추가하는 방법](http://support.microsoft.com/kb/870668)  
+-   [NETWORK SERVICE 보안 주체에 대한 사용 권한을 추가하는 방법](https://support.microsoft.com/kb/870668)  
   
 ###### <a name="alternate-data-extensions"></a>대체 데이터 확장 프로그램  
  OLE DB 데이터 원본 유형을 사용하여 Oracle 데이터베이스에서 데이터를 검색할 수도 있습니다. 자세한 내용은 [OLE DB 연결 형식&#40;SSRS&#41;](ole-db-connection-type-ssrs.md)을 참조하세요.  
@@ -71,7 +71,7 @@ Data Source="Oracle9"; Unicode="True"
  Oracle 데이터베이스를 기반으로 모델을 만들 수도 있습니다.  
   
 ###### <a name="platform-and-version-information"></a>플랫폼 및 버전 정보  
- 플랫폼 및 버전 지원에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서에서 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ 플랫폼 및 버전 지원에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서에서 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
 
   
@@ -101,7 +101,7 @@ Data Source="Oracle9"; Unicode="True"
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  쿼리에 의해 생성되는 데이터 세트 필드 컬렉션에 대한 정보를 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
  각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.  
   
 

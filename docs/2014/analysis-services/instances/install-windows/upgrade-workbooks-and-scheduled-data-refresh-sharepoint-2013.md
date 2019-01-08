@@ -11,18 +11,18 @@ ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2f321f4851a5257ebaacccbc05ecec46ba1baae4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 3ed3fc8546ef7bd85934d8b127ff124acc095e29
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190263"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373952"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>통합 문서 업그레이드 및 예약된 데이터 새로 고침(SharePoint 2013)
-  이 항목은 이전 PowerPivot 환경에서 사용자의 통합 문서 환경과 이 릴리스에 새로 도입된 기능을 이용할 수 있도록 PowerPivot 통합 문서를 업그레이드 하는 방법에 대해 설명합니다. 새 기능에 대한 자세한 내용은 [PowerPivot의 새로운 기능](http://go.microsoft.com/fwlink/?LinkID=203917)을 참조하십시오.  
+  이 항목은 이전 PowerPivot 환경에서 사용자의 통합 문서 환경과 이 릴리스에 새로 도입된 기능을 이용할 수 있도록 PowerPivot 통합 문서를 업그레이드 하는 방법에 대해 설명합니다. 새 기능에 대 한 자세한 내용은 참조 하세요 [PowerPivot의 새로운](https://go.microsoft.com/fwlink/?LinkID=203917)합니다.  
   
 > [!WARNING]  
->  서버에서 자동으로 업그레이드된 통합 문서에 대한 업그레이드를 롤백할 수는 없습니다. 업그레이드된 통합 문서는 업그레이드된 상태로 유지됩니다. 이전 버전을 사용하려면 이전 통합 문서를 SharePoint에 다시 게시하거나 이전 버전을 복원하거나 통합 문서를 재활용합니다. SharePoint에서 문서를 복원하거나 재활용하는 방법은 [휴지통 및 버전 관리를 사용한 콘텐츠 보호 계획](http://go.microsoft.com/fwlink/?LinkId=238669)을 참조하세요.  
+>  서버에서 자동으로 업그레이드된 통합 문서에 대한 업그레이드를 롤백할 수는 없습니다. 업그레이드된 통합 문서는 업그레이드된 상태로 유지됩니다. 이전 버전을 사용하려면 이전 통합 문서를 SharePoint에 다시 게시하거나 이전 버전을 복원하거나 통합 문서를 재활용합니다. SharePoint에서 문서를 복원하거나 재활용하는 방법은 [휴지통 및 버전 관리를 사용한 콘텐츠 보호 계획](https://go.microsoft.com/fwlink/?LinkId=238669)을 참조하세요.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48190263"
 |통합 문서 작성 환경|\<|지원 및 동작|>|  
 |----------------|--------|--------------------------|--------|  
 ||**2008 R2 PowerPivot for SharePoint 2010**|**SharePoint 2010 용 2012 PowerPivot**|**2012 SP1 SharePoint 2013 용 PowerPivot**|  
-|**2008 R2 PowerPivot for Excel 2010**|모든 기능|**환경:** 사용자가 브라우저에서 통합 문서와 상호 작용하고 이를 다른 솔루션의 데이터 원본으로 사용할 수 있습니다.<br /><br /> **업그레이드:** SharePoint 팜에서 PowerPivot 시스템 서비스에 대해 자동 업그레이드가 사용되는 경우 통합 문서가 문서 라이브러리에서 자동으로 업그레이드됩니다.<br /><br /> **데이터 새로 고침 예약:** 지원되지 않습니다. 통합 문서를 업그레이드해야 합니다.|**환경:** 사용자가 통합 문서와 상호 작용하고 이를 다른 솔루션의 데이터 원본으로 사용할 수 있습니다.<br /><br /> **업그레이드:** 자동 업그레이드를 사용할 수 없습니다. 사용자가 2008 R2 통합 문서를 2012 버전이나 office 2013 버전으로 직접 업그레이드해야 합니다.<br /><br /> **데이터 새로 고침 예약:** 지원되지 않습니다. 통합 문서를 업그레이드해야 합니다.|  
+|**2008 R2 PowerPivot for Excel 2010**|모든 기능|**환경:** 사용자가 브라우저에서 통합 문서와 상호 작용하고 이를 다른 솔루션의 데이터 원본으로 사용할 수 있습니다.<br /><br /> **업그레이드:** SharePoint 팜에서 PowerPivot 시스템 서비스에 대해 자동 업그레이드가 사용되는 경우 통합 문서가 문서 라이브러리에서 자동으로 업그레이드됩니다.<br /><br /> **데이터 새로 고침을 예약 합니다.** 지원되지 않습니다. 통합 문서를 업그레이드해야 합니다.|**환경:** 사용자가 통합 문서와 상호 작용하고 이를 다른 솔루션의 데이터 원본으로 사용할 수 있습니다.<br /><br /> **업그레이드:** 자동 업그레이드를 사용할 수 없습니다. 사용자가 2008 R2 통합 문서를 2012 버전이나 office 2013 버전으로 직접 업그레이드해야 합니다.<br /><br /> **데이터 새로 고침을 예약 합니다.** 지원되지 않습니다. 통합 문서를 업그레이드해야 합니다.|  
 |**2012 PowerPivot for Excel**|지원되지 않음|모든 기능|**환경:** 사용자가 브라우저에서 통합 문서와 상호 작용하고 이를 다른 솔루션의 데이터 원본으로 사용할 수 있습니다. 데이터 새로 고침 예약을 사용할 수 있습니다.<br /><br /> **업그레이드:** 자동 업그레이드는 지원되지 않습니다. 사용자가 통합 문서를 Office 2013 버전으로 직접 업그레이드할 수 있습니다.<br /><br /> **데이터 새로고침 예약:** 을 지원합니다.|  
 |**Excel 2013**|지원되지 않음|지원되지 않음|모든 기능|  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48190263"
   
  2008 R2 통합 문서는 SharePoint 2013용 PowerPivot에서 열리지만 예약된 데이터 새로 고침은 작동하지 않습니다. 새로 고침 기록을 검토하면 다음과 유사한 오류 메시지가 표시됩니다.  
   
- "통합 문서에 지원되지 않는 PowerPivot 모델이 포함되어 있습니다. 통합 문서에서 PowerPivot 모델은 SQL Server 2008 R2 PowerPivot for Excel 2010 형식으로 되어 있습니다. 지원되는 PowerPivot 모델은 다음과 같습니다.  
+ "통합 문서는 지원 되지 않는 PowerPivot 모델이 포함 하는 데 사용 합니다. 통합 문서에서 PowerPivot 모델은 SQL Server 2008 R2 PowerPivot for Excel 2010 형식으로 되어 있습니다. 지원되는 PowerPivot 모델은 다음과 같습니다.  
   
 -   SQL Server 2012 PowerPivot for Excel 2010.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48190263"
   
  통합 문서를 업그레이드하면 이전 버전의 통합 문서에서 예약한 데이터 새로 고침을 시도할 때 발생하는 다음 오류를 해결할 수 있습니다.  
   
- “이전 PowerPivot 버전을 사용하여 작성된 통합 문서에 대해서는 새로 고침 작업을 사용할 수 없습니다.” 오류가 해결됩니다.  
+ "이전 버전의 PowerPivot 사용 하 여 만든 통합 문서에 대 한 새로 고침 작업은 사용할 수 있습니다."  
   
  **통합 문서 업그레이드 방법**  
   
@@ -110,15 +110,15 @@ ms.locfileid: "48190263"
   
  통합 문서를 업그레이드하면 이전 버전의 통합 문서에서 예약한 데이터 새로 고침을 시도할 때 발생하는 다음 오류를 해결할 수 있습니다.  
   
- “이전 PowerPivot 버전을 사용하여 작성된 통합 문서에 대해서는 새로 고침 작업을 사용할 수 없습니다.” 오류가 해결됩니다.  
+ "이전 버전의 PowerPivot 사용 하 여 만든 통합 문서에 대 한 새로 고침 작업은 사용할 수 있습니다."  
   
  **통합 문서 업그레이드 방법**  
   
  업그레이드할 때 다음과 같은 두 가지 방법을 사용할 수 있습니다.  
   
-1.  각 통합 문서를 있는 컴퓨터에서 Excel에서 열어 수동으로 업그레이드는 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 버전의 PowerPivot for Excel 하 고 다음 서버에 게시 합니다. 추가 기능의 새 버전에서 통합 문서를 열면 내부 작업이 수행됩니다. 즉 통합 문서 데이터 연결 문자열에서 데이터 공급자가 MSOLAP.5로 업데이트되고 메타데이터가 업데이트되며 새 구현에 맞게 관계가 다시 만들어집니다.  
+1.  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 버전의 PowerPivot for Excel이 있는 컴퓨터의 Excel에서 통합 문서를 각각 열어 수동으로 업그레이드한 다음 서버에 다시 게시합니다. 추가 기능의 새 버전에서 통합 문서를 열면 내부 작업이 수행됩니다. 즉 통합 문서 데이터 연결 문자열에서 데이터 공급자가 MSOLAP.5로 업데이트되고 메타데이터가 업데이트되며 새 구현에 맞게 관계가 다시 만들어집니다.  
   
-2.  SharePoint 관리자가 자동으로 업그레이드 하는 SharePoint 팜에서 PowerPivot 시스템 서비스에 대 한 자동 업그레이드 기능을 사용할 수는 또는 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] PowerPivot 통합 문서 데이터 새로 고침 예약 (만 있는 통합 문서를 실행 하는 경우 예약 된 데이터 새로 고침 업그레이드에 대 한 구성).  
+2.  또는 예약 데이터 새로 고침을 실행할 때 SharePoint 팜의 PowerPivot 시스템 서비스가 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] PowerPivot 통합 문서로 자동으로 업그레이드되는 자동 업그레이드 기능을 SharePoint 관리자가 사용하도록 설정할 수 있습니다(예약된 데이터 새로 고침에 대해 구성된 통합 문서만 업그레이드됨).  
   
     > [!NOTE]  
     >  자동 업그레이드는 서버 구성 기능이며 특정 통합 문서, 라이브러리 또는 사이트 모음에 대해 활성화하거나 비활성화할 수 없습니다.  
@@ -133,12 +133,12 @@ ms.locfileid: "48190263"
 PS C:\Windows\system32> Get-PowerPivotSystemService  
 ```  
   
- Get-PowerPivotSystemService의 출력은 속성 및 해당 값의 목록입니다. 표시 `WorkbookUpgradeOnDataRefresh` 속성 목록에 있습니다. 자동 업그레이드를 사용하는 경우 **true** 로 설정됩니다. **false**인 경우 다음 단계를 계속하여 자동 통합 문서 업그레이드를 활성화합니다.  
+ Get-PowerPivotSystemService의 출력은 속성 및 해당 값의 목록입니다. 속성 목록에 `WorkbookUpgradeOnDataRefresh`가 있어야 합니다. 자동 업그레이드를 사용하는 경우 **true** 로 설정됩니다. **false**인 경우 다음 단계를 계속하여 자동 통합 문서 업그레이드를 활성화합니다.  
   
  자동 통합 문서 업그레이드를 활성화하려면 다음 명령을 실행합니다.  
   
 ```  
-PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefresh:$true –Confirm:$false  
+PS C:\Windows\system32> Set-PowerPivotSystemService -WorkbookUpgradeOnDataRefresh:$true -Confirm:$false  
 ```  
   
  통합 문서를 업그레이드한 후에 PowerPivot for Excel 추가 기능에서 예약된 데이터 새로 고침과 새 기능을 사용할 수 있습니다.  

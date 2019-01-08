@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.summary.new.custom.report.f1
@@ -14,12 +14,12 @@ ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a1a1f66753b1ff002a43f59fb065134967e15254
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3417b4905fd43734fb058d05db81f7318d87539d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208900"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354683"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio의 사용자 지정 보고서
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 많은 개체 탐색기 노드에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서 만든 표준 보고서 집합이 표시됩니다. 이러한 보고서는 일반적으로 요청되는 서버 정보를 요약합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서비스 팩 2부터 관리자는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 사용하여 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 만든 사용자 지정 보고서를 실행할 수 있습니다.  
@@ -71,9 +71,9 @@ ms.locfileid: "48208900"
 >  유효한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 보고서에 포함할 수 있으며 실행할 수도 있습니다. 권한이 높은 사용자 계정에서 보고서를 실행하면 포함된 모든 명령을 문제 없이 실행할 수 있습니다.  
   
 ## <a name="report-samples"></a>보고서 예제  
- [보고서 예제](http://go.microsoft.com/fwlink/?LinkId=81792)에서 만든 표준 보고서와 함께 [!INCLUDE[msCoName](../../includes/msconame-md.md)]를 다운로드할 수 있습니다. 이러한 예제는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 수정할 수 있습니다.  
+ [보고서 예제](https://go.microsoft.com/fwlink/?LinkId=81792)에서 만든 표준 보고서와 함께 [!INCLUDE[msCoName](../../includes/msconame-md.md)]를 다운로드할 수 있습니다. 이러한 예제는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 수정할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Management Studio에 사용자 지정 보고서 추가](add-a-custom-report-to-management-studio.md)   
  [사용자 지정 보고서 실행된 경으십시오](unsuppress-run-custom-report-warnings.md)   
  [개체 탐색기 노드 속성과 함께 사용자 지정 보고서 사용](use-custom-reports-with-object-explorer-node-properties.md)  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MERGE statement [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7ee44b0524dffb85892f016581f9c6a7f480a5e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cffe029abd6774262e7aad12ad7aade07717bc80
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075833"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359285"
 ---
 # <a name="merge-in-integration-services-packages"></a>Integration Services 패키지의 MERGE
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 현재 릴리스에서 SQL 실행 태스크의 SQL 문은 MERGE 문을 포함할 수 있습니다. 이 MERGE 문을 사용하면 하나의 문에서 여러 INSERT, UPDATE 및 DELETE 작업을 수행할 수 있습니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "48075833"
   
  이 항목의 나머지 부분에서는 MERGE 문의 몇 가지 다른 사용 방식에 대해 설명합니다.  
   
- MERGE 문 사용을 지원하는 예제 대상 구성 요소는 CodePlex 커뮤니티 예제 [MERGE 대상(MERGE Destination)](http://go.microsoft.com/fwlink/?LinkId=141215)을 참조하세요.  
+ MERGE 문 사용을 지원하는 예제 대상 구성 요소는 CodePlex 커뮤니티 예제 [MERGE 대상(MERGE Destination)](https://go.microsoft.com/fwlink/?LinkId=141215)을 참조하세요.  
   
 ## <a name="using-merge"></a>MERGE 사용  
  일반적으로 삽입, 업데이트 및 삭제가 포함된 한 테이블의 변경을 다른 테이블에 적용하려는 경우 MERGE 문을 사용합니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]전에는 이 프로세스에 조회 변환과 여러 OLE DB 명령 변환이 모두 필요했습니다. 조회 변환은 행 단위로 조회를 수행하여 각 행이 새로운 행인지 변경된 행인지를 판단했습니다. 그러면 OLE DB 명령 변환이 필요한 INSERT, UPDATE 및 DELETE 작업을 수행했습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]이상에서는 하나의 MERGE 문이 조회 변환과 이에 해당하는 OLE DB 명령 변환을 대체합니다.  
@@ -58,7 +57,7 @@ ms.locfileid: "48075833"
  매주 데이터베이스는 해당 주의 가격 변동과 주 동안 추가된 새 책을 포함하는 WeeklyChanges 테이블을 생성합니다. 하나의 MERGE 문을 사용하여 WeeklyChanges 테이블의 변경 사항을 DimBook 테이블에 적용할 수 있습니다. MERGE 문은 새로 추가된 책에 대해 새 행을 삽입하고, 가격이 변경된 기존 책의 행에 대한 IsCurrent 열을 0으로 업데이트합니다. 또한 MERGE 문은 가격이 변경된 책에 대해 새 행을 삽입하고, 삽입된 새 행에 대해 IsCurrent 열의 값을 1로 설정합니다.  
   
 ### <a name="merge-a-table-with-new-data-against-the-old-table"></a>새 데이터가 있는 테이블을 기존 테이블에 병합  
- 데이터베이스는 “개방형 스키마”, 즉 각 속성에 대한 이름-값 쌍을 포함하는 테이블을 사용하여 개체의 속성을 모델링합니다. 속성 테이블에는 EntityID, PropertyID 및 Value의 3개 열이 있습니다. 이 테이블의 새로운 버전인 NewProperties 테이블은 Properties 테이블과 동기화되어야 합니다. 이 두 테이블을 동기화하려면 하나의 MERGE 문을 사용하여 다음 작업을 수행하면 됩니다.  
+ 데이터베이스는 "개방형 스키마", 즉 각 속성에 대한 이름-값 쌍을 포함하는 테이블을 사용하여 개체의 속성을 모델링합니다. Properties 테이블에는 EntityID, PropertyID 및 Value라는 3개의 열이 있습니다. 이 테이블의 새로운 버전인 NewProperties 테이블은 Properties 테이블과 동기화되어야 합니다. 이 두 테이블을 동기화하려면 하나의 MERGE 문을 사용하여 다음 작업을 수행하면 됩니다.  
   
 -   NewProperties 테이블에 없는 속성을 Properties 테이블에서 삭제합니다.  
   

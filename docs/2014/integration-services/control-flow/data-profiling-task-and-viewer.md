@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], about data profiling
@@ -15,12 +14,12 @@ ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9a20b4b2ddaee99a9ce6f2f9efa5ffc5dbbc206a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: f656d900051a70998ba00ed54e3e5a2fb545716a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119920"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367095"
 ---
 # <a name="data-profiling-task-and-viewer"></a>데이터 프로파일링 태스크 및 뷰어
   데이터 프로파일링 태스크는 데이터 추출, 변환 및 로드 프로세스 내에서 데이터 프로파일링 기능을 제공합니다. 데이터 프로파일링 태스크를 사용하면 다음과 같은 이점이 있습니다.  
@@ -49,27 +48,27 @@ ms.locfileid: "48119920"
   
 -   City 열의 값 분포  
   
--   State 열의 Zip 열에 대한 함수 종속성 수준(시/도는 지정된 우편 번호 값에 대해 항상 같아야 함)  
+-   State 열의 Zip 열에 대한 함수 종속성 수준(즉, 시/도는 지정된 우편 번호 값에 대해 항상 같아야 함)입니다.  
   
  데이터 프로필이 제공하는 통계를 통해 원본 데이터를 사용하여 발생할 수 있는 품질 문제를 효과적으로 최소화하기 위해 필요한 정보를 얻을 수 있습니다.  
   
 ## <a name="integration-services-and-data-profiling"></a>Integration Services 및 데이터 프로파일링  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 데이터 프로파일링 프로세스는 다음 단계로 구성됩니다.  
   
- **1단계: 데이터 프로파일링 태스크 설정**  
+ **1 단계: 데이터 프로 파일링 태스크 설정**  
  데이터 프로파일링 태스크는 계산하려는 프로필을 구성하기 위해 사용하는 태스크입니다. 데이터 프로파일링 태스크를 포함하는 패키지를 실행하여 프로필을 계산합니다. 이 태스크는 프로필 출력을 XML 형식으로 파일이나 패키지 변수에 저장합니다.  
   
- **자세한 내용:** [데이터 프로파일링 태스크 설정](data-profiling-task.md)  
+ **자세한 내용은 다음을 참조하세요.** [데이터 프로파일링 태스크 설정](data-profiling-task.md)  
   
- **2단계: 데이터 프로파일링 태스크가 계산하는 프로필 검토**  
+ **2단계: 데이터 프로 파일링 태스크가 계산 하는 프로필 검토**  
  데이터 프로파일링 태스크가 계산하는 데이터 프로필을 보려면 출력을 파일로 보낸 다음 데이터 프로필 뷰어를 사용합니다. 이 뷰어는 선택적 드릴다운 기능과 함께 요약 및 세부 정보 형식으로 프로필 출력을 표시하는 독립 실행형 유틸리티입니다.  
   
- **자세한 내용:** [데이터 프로필 뷰어](data-profile-viewer.md)  
+ **자세한 내용은 다음을 참조하세요.** [데이터 프로필 뷰어](data-profile-viewer.md)  
   
 ### <a name="addition-of-conditional-logic-to-the-data-profiling-workflow"></a>데이터 프로파일링 워크플로에 조건부 논리 추가  
  데이터 프로파일링 태스크에는 조건부 논리를 사용하여 프로필 출력에 따라 해당 태스크를 다운스트림 태스크에 연결할 수 있는 기본 제공 기능이 없습니다. 그러나 스크립트 태스크에서 약간의 프로그래밍 작업을 수행하여 이 논리를 손쉽게 추가할 수 있습니다. 예를 들어 스크립트 태스크는 데이터 프로파일링 태스크의 출력 파일에 대해 XPath 쿼리를 수행할 수 있습니다. 이 쿼리에서는 특정 열의 Null 값 비율이 특정 임계값을 초과하는지 여부를 확인할 수 있습니다. 해당 비율이 임계값을 초과하는 경우 패키지를 중단하고 원본 데이터에서 문제를 해결한 다음 계속할 수 있습니다. 자세한 내용은 [패키지 워크플로에 데이터 프로파일링 태스크 포함](incorporate-a-data-profiling-task-in-package-workflow.md)을 참조하세요.  
   
 ## <a name="related-content"></a>관련 내용  
- [데이터 프로파일러 스키마](http://go.microsoft.com/fwlink/?LinkId=251524)  
+ [데이터 프로파일러 스키마](https://go.microsoft.com/fwlink/?LinkId=251524)  
   
   

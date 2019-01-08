@@ -14,19 +14,19 @@ ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 29af878e4e0173b6c926ae2bbbb29fe39ee2ca55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: b729d5fb711a855c0edbdac14101e1e04c3bc83f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074813"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362535"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>스파크라인 및 데이터 막대(보고서 작성기 및 SSRS)
   스파크라인과 데이터 막대는 작은 공간에 많은 정보가 포함되어 있는 작고 간단한 차트로, 보통 텍스트와 인라인으로 표시됩니다. 스파크라인과 데이터 막대는 보통 테이블이나 행렬에 사용됩니다. 스파크라인과 데이터 막대는 여러 개를 함께 표시할 수 있어 하나씩 보는 대신 서로 빠르게 비교할 수 있기 때문에 유용합니다. 이렇게 하면 이상값(다른 행처럼 작동하지 않는 행)을 쉽게 확인할 수 있습니다. 스파크라인은 크기는 작지만 각각 시간에 따라 여러 데이터 요소를 표시하는 경우가 많습니다. 데이터 막대도 여러 데이터 요소를 표시할 수는 있지만 일반적으로는 하나만 표시합니다. 각 스파크라인은 보통 단일 계열을 제공합니다. 스파크라인은 집계된 데이터를 표시하므로 테이블의 세부 그룹에는 추가할 수 없으며 그룹과 연결된 셀에 배치해야 합니다. 스파크라인 및 데이터 막대에는 동일한 기본 차트 요소(범주, 계열 및 값)가 있지만 범례, 축 선, 레이블 또는 눈금 표시는 없습니다.  
   
  ![rs_SparklineExample](../media/rs-sparklineexample.gif "rs_SparklineExample")  
   
- 스파크라인을 빠르게 시작하려면 [자습서: 보고서에 스파크라인 추가&#40;보고서 작성기&#41;](../tutorial-add-a-sparkline-to-your-report-report-builder.md)와 비디오 [방법: 테이블에서 스파크라인 만들기](http://go.microsoft.com/fwlink/?LinkId=197092) 및 [보고서 작성기의 스파크라인, 막대형 차트 및 표시기](http://technet.microsoft.com/bi/video/ff877165)를 참조하세요.  
+ 빠르게 시작 하려면 스파크 라인을 사용 하 여 참조 [자습서: 보고서에 스파크 라인 추가 &#40;보고서 작성기&#41; ](../tutorial-add-a-sparkline-to-your-report-report-builder.md) 및 비디오 [방법: 테이블에서 스파크 라인 만들기](https://go.microsoft.com/fwlink/?LinkId=197092) 하 고 [스파크 라인, 가로 막대형 차트 및 보고서 작성기에서 표시기](https://technet.microsoft.com/bi/video/ff877165) 합니다.  
   
 > [!NOTE]  
 >  스파크라인과 부모 테이블이나 행렬, 목록과 함께 데이터 막대를 보고서와는 별도로 보고서 파트로 게시할 수 있습니다. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -37,15 +37,15 @@ ms.locfileid: "48074813"
 ##  <a name="KindsofSparklines"></a> 스파크라인 유형  
  일반 차트와 같이 다양한 유형의 스파크라인을 만들 수 있습니다. 그러나 보통 3D 스파크라인은 만들지 않습니다. 다음과 같은 전체 차트의 스파크라인 버전을 만들 수 있습니다.  
   
--   [세로 막대형 차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md): 기본, 누적형 및 100% 기준 누적 세로 막대형 차트  
+-   [세로 막대형 차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md): 기본, 누적형 및 100% 기준 누적 세로 막대형 차트  
   
--   [꺾은선형 차트&#40;보고서 작성기 및 SSRS&#41;](line-charts-report-builder-and-ssrs.md): 3D 꺾은선형 차트를 제외한 모든 차트  
+-   [꺾은선형 차트 &#40;보고서 작성기 및 SSRS&#41;](line-charts-report-builder-and-ssrs.md): 3D 꺾은선형 차트를 제외한 모든 차트  
   
--   [영역형 차트&#40;보고서 작성기 및 SSRS&#41;](area-charts-report-builder-and-ssrs.md): 3D 영역형 차트를 제외한 모든 차트  
+-   [영역형 차트 &#40;보고서 작성기 및 SSRS&#41;](area-charts-report-builder-and-ssrs.md): 3D 영역형 차트를 제외한 모든 차트  
   
--   [원형 차트&#40;보고서 작성기 및 SSRS&#41;](pie-charts-report-builder-and-ssrs.md): 도넛형 차트(평면형/3D), 깔때기형과 피라미드형 차트 등의 다른 모양은 아님  
+-   [원형 차트 &#40;보고서 작성기 및 SSRS&#41;](pie-charts-report-builder-and-ssrs.md): 도넛형 차트(평면형/3D). 깔때기형, 피라미드형 차트 등의 다른 모양은 만들 수 없습니다.  
   
--   [범위형 차트&#40;보고서 작성기 및 SSRS&#41;](range-charts-report-builder-and-ssrs.md): 주식형, 원통형, 오차 막대 및 상자 그림 차트  
+-   [범위 형 차트 &#40;보고서 작성기 및 SSRS&#41;](range-charts-report-builder-and-ssrs.md): 주식형, 원통형, 오차 막대 및 상자 그림 차트  
   
 ##  <a name="DataBars"></a> 데이터 막대  
  데이터 막대는 보통 단일 데이터 요소를 나타내지만 일반 가로 막대형 차트처럼 여러 데이터 요소를 나타낼 수도 있습니다. 데이터 막대에는 보통 범주가 없는 여러 계열 또는 계열 그룹화가 포함됩니다.  
@@ -56,9 +56,9 @@ ms.locfileid: "48074813"
   
  다음과 같은 전체 차트의 데이터 막대 버전을 만들 수 있습니다.  
   
--   [막대형 차트&#40;보고서 작성기 및 SSRS&#41;](bar-charts-report-builder-and-ssrs.md): 기본, 누적형 및 100% 기준 누적 막대형 차트  
+-   [가로 막대형 차트 &#40;보고서 작성기 및 SSRS&#41;](bar-charts-report-builder-and-ssrs.md): 기본, 누적형 및 100% 누적형 가로 막대형 차트  
   
--   [세로 막대형 차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md): 기본, 누적형 및 100% 기준 누적 세로 막대형 차트 세로 막대형 차트는 스파크라인 또는 데이터 막대일 수 있습니다.  
+-   [세로 막대형 차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md): 기본, 누적형 및 100% 누적형 세로 막대형 차트. 세로 막대형 차트는 스파크라인 또는 데이터 막대일 수 있습니다.  
   
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
@@ -85,35 +85,35 @@ ms.locfileid: "48074813"
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="HowTo"></a> 방법 도움말 항목  
- [스파크 라인 및 데이터 막대 추가 &#40;보고서 작성기 및 SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)  
+ [스파크라인 및 데이터 막대 추가&#40;보고서 작성기 및 SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
- [테이블 또는 행렬에서 차트의 데이터 정렬 &#40;보고서 작성기 및 SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [테이블 또는 행렬에서 차트의 데이터 정렬&#40;보고서 작성기 및 SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
   
 ### <a name="other-how-to-topics-for-charts"></a>기타 차트 관련 방법 도움말 항목  
  스파크라인 및 데이터 막대도 일종의 차트이므로, 다음의 차트 관련 방법 도움말 항목에서 유용한 관련 정보를 확인할 수 있습니다.  
   
- [보고서에 차트 추가 &#40;보고서 작성기 및 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [보고서에 차트 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
  [차트에 빈 요소 추가 &#40;보고서 작성기 및 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)  
   
- [여백 추가 또는 제거 차트에서 &#40;보고서 작성기 및 SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [차트에서 여백 추가 또는 제거&#40;보고서 작성기 및 SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
- [차트 종류 변경 &#40;보고서 작성기 및 SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)  
+ [차트 종류 변경&#40;보고서 작성기 및 SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)  
   
- [색 색상표를 사용 하 여 차트에서 &#40;보고서 작성기 및 SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
+ [색상표를 사용하여 차트에 대한 색 정의&#40;보고서 작성기 및 SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
  [계열에 도구 설명 표시&#40;보고서 작성기 및 SSRS&#41;](show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   
- [눈금 간격 지정 &#40;보고서 작성기 및 SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
+ [로그 눈금 간격 지정&#40;보고서 작성기 및 SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
- [축 간격 지정 &#40;보고서 작성기 및 SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
+ [축 간격 지정&#40;보고서 작성기 및 SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
  [여러 셰이프 차트에 일관된 색 지정&#40;보고서 작성기 및 SSRS&#41;](shape-charts-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [자습서: 보고서에 스파크 라인 추가 &#40;보고서 작성기&#41;](../tutorial-add-a-sparkline-to-your-report-report-builder.md)   
- [스파크 라인, 가로 막대형 차트 및 보고서 작성기 (비디오) 지표](http://technet.microsoft.com/bi/video/ff877165)   
- [방법: 테이블 (비디오)의 스파크 라인 만들기](http://go.microsoft.com/fwlink/?LinkId=197092)  
+ [스파크 라인, 가로 막대형 차트 및 보고서 작성기 (비디오) 지표](https://technet.microsoft.com/bi/video/ff877165)   
+ [방법: (비디오) 테이블에 스파크 라인 만들기](https://go.microsoft.com/fwlink/?LinkId=197092)  
   
   

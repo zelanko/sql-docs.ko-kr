@@ -1,22 +1,21 @@
 ---
-title: '2단계: 손상된 파일 만들기 | Microsoft Docs'
+title: '2단계: 손상된 된 파일 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f4134a1bc773a27c71eda472cb502e26cd22b152
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96690ca99a03c8e6d5cd8c6fefb9760ed3f6e71e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226603"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366815"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>2단계: 손상된 파일 만들기
   변환 오류의 구성 및 처리를 보여 주기 위해 처리 시 구성 요소의 실패를 야기하는 예제 플랫 파일을 만들어야 합니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "48226603"
   
      예제 데이터는 SSIS 단원 패키지에 포함되어 있습니다. 예제 데이터 및 단원 패키지를 다운로드하려면 다음을 수행합니다.  
   
-    1.  [Integration Services 제품 예제](http://go.microsoft.com/fwlink/?LinkID=267527)로 이동합니다.  
+    1.  [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkID=267527)로 이동합니다.  
   
     2.  **DOWNLOADS** 탭을 클릭합니다.  
   
@@ -62,6 +61,6 @@ ms.locfileid: "48226603"
     >  27은 구성 요소의 ID입니다. 이 값은 데이터 흐름을 작성할 때 할당되며 패키지 값과 다를 수 있습니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- [3단계: 오류 흐름 리디렉션 추가](lesson-4-3-adding-error-flow-redirection.md)  
+ [3 단계: 오류 흐름 리디렉션 추가](lesson-4-3-adding-error-flow-redirection.md)  
   
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - page compression [Database Engine]
@@ -22,15 +22,15 @@ ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b200fc8b534fad9e33f0b01d97d46d0bece4c988
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204943"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364185"
 ---
 # <a name="data-compression"></a>Data Compression
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] rowstore 테이블 및 인덱스에 대 한 행 및 페이지 압축을 지원 하 고 columnstore 테이블 및 인덱스에 대 한 columnstore 및 columnstore 보관 압축을 지원 합니다.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]는 rowstore 테이블 및 인덱스를 위해 행 및 페이지 압축을 지원하며 columnstore 테이블 및 인덱스를 위해 columnstore 및 columnstore 보관 압축을 지원합니다.  
   
  rowstore 테이블 및 인덱스의 경우 데이터베이스 크기를 줄이려면 데이터 압축 기능을 사용하십시오. 데이터를 압축하면 공간을 절약할 수 있을 뿐만 아니라 데이터가 보다 적은 수의 페이지에 저장되어 쿼리가 디스크에서 읽어야 하는 페이지가 적어지므로 I/O가 많은 작업의 성능을 향상시킬 수 있습니다. 그러나 데이터를 애플리케이션과 교환하는 동안 데이터를 압축하고 압축 해제하기 위해 데이터베이스 서버에 추가 CPU 리소스가 필요합니다. 다음 데이터베이스 개체에 대해 행 및 페이지 압축을 구성할 수 있습니다.  
   
@@ -108,12 +108,12 @@ ms.locfileid: "48204943"
   
 ||  
 |-|  
-|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 ### <a name="basics"></a>기본 사항  
  Columnstore 테이블 및 인덱스는 항상 columnstore 압축으로 저장됩니다. 보관 압축이라고 하는 추가 압축을 구성하여 columnstore 데이터 크기를 더 줄일 수 있습니다.  보관 압축을 수행하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터에 대해 Microsoft XPRESS 압축 알고리즘을 실행합니다. 다음 데이터 압축 유형을 사용하여 보관 압축을 추가하거나 제거합니다.  
   
--   사용 하 여 `COLUMNSTORE_ARCHIVE` 데이터 압축 보관 압축으로 columnstore 데이터를 압축 합니다.  
+-   보관 압축으로 columnstore 데이터를 압축하려면 `COLUMNSTORE_ARCHIVE` 데이터 압축을 사용하십시오.  
   
 -   보관 압축을 풀려면 **COLUMNSTORE** 데이터 압축을 사용하십시오. 결과 데이터는 columnstore 압축으로 계속해서 압축됩니다.  
   
@@ -169,7 +169,7 @@ REBUILD PARTITION = ALL WITH (
   
 -   [sys.indexes &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) - `type` 하 고 `type_desc` 열에는 CLUSTERED COLUMNSTORE 및 NONCLUSTERED COLUMNSTORE 포함 합니다.  
   
--   [sys.partitions &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) – `data_compression` 하 고 `data_compression_desc` 열에는 COLUMNSTORE 및 columnstore_archive가 포함 됩니다.  
+-   [sys.partitions &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) - `data_compression` 하 고 `data_compression_desc` 열에는 COLUMNSTORE 및 columnstore_archive가 포함 됩니다.  
   
  [sp_estimate_data_compression_savings&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) 프로시저는 columnstore 인덱스에 적용되지 않습니다.  
   

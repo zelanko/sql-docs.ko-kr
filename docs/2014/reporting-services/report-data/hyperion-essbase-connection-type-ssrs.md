@@ -11,12 +11,12 @@ ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a551b7be49ebcb38221973657658000c38d369a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: f77a0163c40d29dd06f49fc61a816c92d9484e80
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223943"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53374905"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase 연결 형식(SSRS)
   보고서에 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 외부 데이터 원본의 데이터를 포함하려면 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 유형의 보고서 데이터 원본에 기초하는 데이터 세트가 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]외부 데이터 원본에서 다차원 데이터를 검색할 수 있게 하는 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 에 대한 데이터 확장 프로그램을 기반으로 합니다.  
@@ -66,18 +66,18 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ##  <a name="Extended"></a> 확장 필드 속성  
- [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 데이터 처리 확장 프로그램은 확장 필드 속성을 지원합니다. 확장된 필드 속성은 속성 외에 `Value` 및 `IsMissing` 데이터 처리 확장 프로그램에서 데이터 집합 필드에 대해 정의 되어 있습니다. 확장 속성에는 미리 정의된 속성과 사용자 지정 속성이 포함됩니다. 미리 정의된 속성은 여러 데이터 원본에 공통된 속성이고 사용자 지정 속성은 각 데이터 원본에 고유한 속성입니다.  
+ [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 데이터 처리 확장 프로그램은 확장 필드 속성을 지원합니다. 확장 필드 속성은 `Value` 및 `IsMissing` 외에 데이터 처리 확장 프로그램에서 데이터 집합 필드에 대해 정의한 속성입니다. 확장 속성에는 미리 정의된 속성과 사용자 지정 속성이 포함됩니다. 미리 정의된 속성은 여러 데이터 원본에 공통된 속성이고 사용자 지정 속성은 각 데이터 원본에 고유한 속성입니다.  
   
- 확장 필드 속성은 보고서 데이터 창에 보고서 레이아웃으로 끌 수 있는 항목으로 나타나지 않습니다. 대신 속성의 부모 필드에 보고서로 끈 다음 기본 속성을 변경 `Value` 사용 하려는 속성입니다.  
+ 확장 필드 속성은 보고서 데이터 창에 보고서 레이아웃으로 끌 수 있는 항목으로 나타나지 않습니다. 대신 속성의 부모 필드를 보고서로 끈 다음 기본 속성 `Value`를 사용하려는 속성으로 변경합니다.  
   
- 확장 필드 속성의 이름은 쿼리 디자이너의 메타데이터 창에서 필드 위에 마우스를 놓으면 도구 설명에 나타납니다. 기본 데이터를 탐색할 때 사용할 수 있는 쿼리 디자이너에 대 한 자세한 내용은 참조 [Hyperion Essbase Query Designer User Interface](hyperion-essbase-query-designer-user-interface.md)합니다.  
+ 확장 필드 속성의 이름은 쿼리 디자이너의 메타데이터 창에서 필드 위에 마우스를 놓으면 도구 설명에 나타납니다. 기본 데이터를 탐색할 때 사용할 수 있는 쿼리 디자이너에 대한 자세한 내용은 [Hyperion Essbase Query Designer User Interface](hyperion-essbase-query-designer-user-interface.md)를 참조하십시오.  
   
 > [!NOTE]  
 >  MDX 식에 포함되어 있고 보고서가 실행되어 해당 데이터 세트에 대한 데이터를 검색할 때 데이터 원본에서 확장 필드 속성 값을 제공하는 경우에만 이러한 속성에 대한 값이 있습니다. 그러면 다음 섹션에 설명된 구문을 사용하여 모든 식에서 해당 `Field` 속성 값을 참조할 수 있습니다. 그러나 이러한 필드는 해당 데이터 공급자와만 관련이 있고 보고서 정의 언어에는 포함되지 않으므로 이러한 값을 변경해도 보고서 정의에는 변경된 값이 저장되지 않습니다.  
   
   
 ### <a name="predefined-field-properties"></a>미리 정의된 필드 속성  
- 일반적으로 여러 데이터 공급자에 의해 지원되며 보고서 데이터 세트에 대한 기본 MDX 쿼리에 나타나는 미리 정의된 필드 속성. MEMBER_UNIQUE_NAME은 미리 정의 된 보고서 데이터 집합 필드 속성을 매핑할 MDX 차원 속성 예를 들어 `UniqueName`합니다. 입력란에 고유한 이름 값을 포함하려면 `=Fields!`*\<FieldName>*`.UniqueName` 식을 사용합니다.  
+ 일반적으로 여러 데이터 공급자에 의해 지원되며 보고서 데이터 세트에 대한 기본 MDX 쿼리에 나타나는 미리 정의된 필드 속성. 예를 들어 MDX 차원 속성 MEMBER_UNIQUE_NAME은 미리 정의된 보고서 데이터 집합 필드 속성 `UniqueName`에 매핑됩니다. 입력란에 고유한 이름 값을 포함하려면 `=Fields!`*\<FieldName>*`.UniqueName` 식을 사용합니다.  
   
  다음 표에서는 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 데이터 원본에 사용할 수 있는 미리 정의된 필드 속성 목록을 제공합니다.  
   
@@ -108,9 +108,9 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ##  <a name="Remarks"></a> 주의  
- 이 데이터 공급자는 일부 보고서 배달 모드만 지원합니다. 이 데이터 처리 확장 프로그램에서는 데이터 기반 구독을 통한 보고서 배달이 지원되지 않습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서에서 [구독자 데이터에 외부 데이터 원본 사용&#40;데이터 기반 구독&#41;](../subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)을 참조하세요.  
+ 이 데이터 공급자는 일부 보고서 배달 모드만 지원합니다. 이 데이터 처리 확장 프로그램에서는 데이터 기반 구독을 통한 보고서 배달이 지원되지 않습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서에서 [구독자 데이터에 외부 데이터 원본 사용&#40;데이터 기반 구독&#41;](../subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)을 참조하세요.  
   
- 자세한 내용은 [Hyperion Essbase와 함께 SQL Server 2005 Reporting Services 사용(Using SQL Server 2005 Reporting Services with Hyperion Essbase)](http://go.microsoft.com/fwlink/?LinkId=81970)을 참조하십시오.  
+ 자세한 내용은 [Hyperion Essbase와 함께 SQL Server 2005 Reporting Services 사용(Using SQL Server 2005 Reporting Services with Hyperion Essbase)](https://go.microsoft.com/fwlink/?LinkId=81970)을 참조하십시오.  
   
   
 ##  <a name="HowTo"></a> 방법 도움말 항목  
@@ -138,10 +138,10 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  데이터 세트 쿼리에 의해 생성되는 필드 컬렉션에 대한 정보를 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
  각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.  
   
- [Hyperion Essbase와 함께 SQL Server 2005 Reporting Services 사용(Using SQL Server 2005 Reporting Services with Hyperion Essbase)](http://go.microsoft.com/fwlink/?LinkId=81970)  
+ [Hyperion Essbase와 함께 SQL Server 2005 Reporting Services 사용(Using SQL Server 2005 Reporting Services with Hyperion Essbase)](https://go.microsoft.com/fwlink/?LinkId=81970)  
  이 데이터 확장 프로그램을 사용하는 방법에 대한 자세한 정보를 제공합니다.  
   
   

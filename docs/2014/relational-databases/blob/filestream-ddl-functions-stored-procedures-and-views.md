@@ -10,12 +10,12 @@ ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7ec7d554c8dedd2fb48d1af8a44dbee550e376ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b69cb7d47c70b6c34015c90252875c81c231d0a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189853"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356011"
 ---
 # <a name="filestream-ddl-functions-stored-procedures-and-views"></a>FILESTREAM DDL, 함수, 저장 프로시저 및 뷰
   FILESTREAM을 지원하는 Transact-SQL 문 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 개체를 나열합니다.  
@@ -62,6 +62,6 @@ ms.locfileid: "48189853"
   
 -   [OpenSqlFilestream을 사용하여 FILESTREAM 데이터 액세스](access-filestream-data-with-opensqlfilestream.md)  
   
--   [관리되는 API - SqlFileStream 클래스](http://go.microsoft.com/fwlink/?LinkId=220875)  
+-   [관리되는 API - SqlFileStream 클래스](https://go.microsoft.com/fwlink/?LinkId=220875)  
   
   

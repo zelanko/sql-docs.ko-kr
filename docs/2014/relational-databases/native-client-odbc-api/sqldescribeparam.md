@@ -14,19 +14,19 @@ ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cde0718a387fa197e7aeb7d157ecb9b0a0aa4ae6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d52d68cc0cd31e9dbb3da25c46901e126252607
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135152"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359495"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
   SQL 문의 매개 변수를 설명 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 작성 하 고 실행을 [!INCLUDE[tsql](../../includes/tsql-md.md)] SQLDescribeParam 준비 된 ODBC 문 핸들에서 호출 되 면 SELECT 문의 합니다. 결과 집합의 메타데이터에 따라 준비된 문의 매개 변수 특징이 결정됩니다. SQLDescribeParam은 SQLExecute 또는 SQLExecDirect를 반환할 수 있는 오류 코드를 반환할 수 있습니다.  
   
  부터 데이터베이스 엔진의 개선 사항 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SQLDescribeParam 예상된 결과 대 한 보다 정확한 설명의 얻을를 허용 합니다. 이전 버전의 SQLDescribeParam 반환한 값에서 다를 수 있습니다 이러한 보다 정확한 결과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 자세한 내용은 [메타데이터 검색](../native-client/features/metadata-discovery.md)을 참조하세요.  
   
- 새로운 기능 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]하십시오 *ParameterSizePtr* 이제에 정의 된 열 또는 식의 해당 매개 변수 표식 문자 크기에 대 한 정의 사용 하 여 정렬 되는 값을 반환 합니다 [ODBC 사양](http://go.microsoft.com/fwlink/?LinkId=207044)합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client *ParameterSizePtr* 의 해당 값 수 `SQL_DESC_OCTET_LENGTH` 형식 또는 값 형식에 대 한 SQLBindParameter에 제공 된 관련이 없는 열 크기 값에 대 한 무시 해야 하는 중 (`SQL_INTEGER`예를 들어).  
+ 새로운 기능 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]하십시오 *ParameterSizePtr* 이제에 정의 된 열 또는 식의 해당 매개 변수 표식 문자 크기에 대 한 정의 사용 하 여 정렬 되는 값을 반환 합니다 [ODBC 사양](https://go.microsoft.com/fwlink/?LinkId=207044)합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client *ParameterSizePtr* 의 해당 값 수 `SQL_DESC_OCTET_LENGTH` 형식 또는 값 형식에 대 한 SQLBindParameter에 제공 된 관련이 없는 열 크기 값에 대 한 무시 해야 하는 중 (`SQL_INTEGER`예를 들어).  
   
  드라이버는 다음과 같은 상황에서 호출 SQLDescribeParam를 지원 하지 않습니다.  
   
@@ -77,7 +77,7 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
 |-|-------------------|------------------------|------------------------|  
 |DATETIME|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
-|날짜|SQL_TYPE_DATE|10|0|  
+|date|SQL_TYPE_DATE|10|0|  
 |Time|SQL_SS_TIME2|8, 10..16|0..7|  
 |Datetime2|SQL_TYPE_TIMESTAMP|19, 21..27|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|26, 28..34|0..7|  
@@ -87,8 +87,8 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
 ## <a name="sqldescribeparam-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLDescribeParam 지원  
  `SQLDescribeParam`는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [Large CLR User-Defined 형식 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [SQLDescribeParam 함수](http://go.microsoft.com/fwlink/?LinkId=59339)   
+## <a name="see-also"></a>관련 항목:  
+ [SQLDescribeParam 함수](https://go.microsoft.com/fwlink/?LinkId=59339)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -11,37 +11,37 @@ ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 04cc82d92c1b2fecb79bbe044408c90295ac1226
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
-ms.translationtype: HT
+ms.openlocfilehash: 4382ecd50979efb6877d8eb19e8aff7dc340d847
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851928"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355662"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Reporting Services 인증에 대한 확장된 보호
   확장된 보호는 최신 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 운영 체제에서 향상된 기능 집합입니다. 확장된 보호는 애플리케이션에서 자격 증명과 인증을 보호하는 방법을 개선합니다. 이 기능 자체는 자격 증명 전달과 같은 특정 공격에 대해 직접적인 보호 기능을 제공하지 않지만 인증에 대해 확장된 보호를 적용할 수 있는 인프라를 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 와 같은 애플리케이션에 제공합니다.  
   
- 확장된 보호에서 주로 향상된 인증 기능은 서비스 바인딩과 채널 바인딩입니다. 채널 바인딩은 CBT(채널 바인딩 토큰)를 사용하여 두 끝점 간에 설정된 채널이 손상되지 않았는지 확인합니다. 서비스 바인딩은 SPN(서비스 사용자 이름)을 사용하여 인증 토큰의 대상이 유효한지 검사합니다. 확장된 보호에 대한 자세한 내용은 [확장된 보호를 사용하는 Windows 통합 인증(Integrated Windows Authentication with Extended Protection)](http://go.microsoft.com/fwlink/?LinkId=179922)을 참조하십시오.  
+ 확장된 보호에서 주로 향상된 인증 기능은 서비스 바인딩과 채널 바인딩입니다. 채널 바인딩은 CBT(채널 바인딩 토큰)를 사용하여 두 끝점 간에 설정된 채널이 손상되지 않았는지 확인합니다. 서비스 바인딩은 SPN(서비스 사용자 이름)을 사용하여 인증 토큰의 대상이 유효한지 검사합니다. 확장된 보호에 대한 자세한 내용은 [확장된 보호를 사용하는 Windows 통합 인증(Integrated Windows Authentication with Extended Protection)](https://go.microsoft.com/fwlink/?LinkId=179922)을 참조하십시오.  
   
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 는 운영 체제에서 사용하도록 설정되고 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 는 기본적으로 Negotiate 또는 NTLM 인증을 지정하는 요청을 수락하므로 운영 체제의 확장된 보호 지원 및 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 확장된 보호 기능을 활용할 수 있습니다.  
   
 > [!IMPORTANT]  
->  Windows에서는 기본적으로 확장된 보호를 사용할 수 없습니다. Windows에서 확장된 보호를 사용하는 방법은 [인증에 대한 확장된 보호](http://go.microsoft.com/fwlink/?LinkID=178431)를 참조하십시오. 운영 체제 및 클라이언트 인증 스택 모두 확장된 보호를 지원해야 인증이 성공합니다. 이전 운영 체제의 경우 확장된 보호를 사용할 수 있도록 컴퓨터가 완전하게 준비되려면 업데이트를 여러 개 설치해야 할 수도 있습니다. 확장된 보호와 관련된 최신 개발 내용은 [확장된 보호에 대한 업데이트된 정보](http://go.microsoft.com/fwlink/?LinkId=183362)를 참조하십시오.  
+>  Windows에서는 기본적으로 확장된 보호를 사용할 수 없습니다. Windows에서 확장된 보호를 사용하는 방법은 [인증에 대한 확장된 보호](https://go.microsoft.com/fwlink/?LinkID=178431)를 참조하십시오. 운영 체제 및 클라이언트 인증 스택 모두 확장된 보호를 지원해야 인증이 성공합니다. 이전 운영 체제의 경우 확장된 보호를 사용할 수 있도록 컴퓨터가 완전하게 준비되려면 업데이트를 여러 개 설치해야 할 수도 있습니다. 확장된 보호와 관련된 최신 개발 내용은 [확장된 보호에 대한 업데이트된 정보](https://go.microsoft.com/fwlink/?LinkId=183362)를 참조하십시오.  
   
 ## <a name="reporting-services-extended-protection-overview"></a>Reporting Services 확장된 보호 개요  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 는 운영 체제에서 사용하도록 설정된 확장된 보호를 지원하고 적용합니다. 운영 체제에서 확장된 보호를 지원하지 않거나 해당 기능을 사용하지 않을 경우 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 확장된 보호 기능으로 인해 인증이 실패합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 확장된 보호를 사용하려면 SSL 인증서가 필요합니다. 자세한 내용은 [기본 모드 보고서 서버에서 SSL 연결 구성](configure-ssl-connections-on-a-native-mode-report-server.md)을 참조하세요.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 에서는 기본적으로 확장된 보호를 사용할 수 없습니다. `rsreportserver.config` 구성 파일을 수정하거나 WMI API를 사용하여 구성 파일을 업데이트하면 이 기능을 사용할 수 있습니다. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 확장 된 보호 설정을 수정 하거나 볼 수 있는 사용자 인터페이스를 제공 하지 않습니다. 자세한 내용은 이 항목의 [구성 설정](#ConfigurationSettings) 섹션을 참조하십시오.  
   
  확장된 보호 설정의 변경이나 잘못 구성된 설정으로 인해 발생하는 일반적인 문제는 명확한 오류 메시지나 대화 상자 창을 통해 표시되지 않습니다. 확장된 보호 구성 및 호환성과 관련된 문제가 있으면 인증이 실패하고 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 추적 로그에 오류가 기록됩니다.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  일부 데이터 액세스 기술은 확장된 보호를 지원하지 않을 수 있습니다. 데이터 액세스 기술은 SQL Server 데이터 원본 및 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 카탈로그 데이터베이스에 연결하는 데 사용됩니다. 데이터 액세스 기술이 확장된 보호를 지원하지 않는 경우 다음과 같이 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 에 영향을 미칩니다.  
->   
+> 
 >  -   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 카탈로그 데이터베이스를 실행하는 SQL Server에서 확장된 보호를 사용할 수 없습니다. 사용할 경우 보고서 서버에서 카탈로그 데이터베이스에 연결되지 않고 인증 오류가 반환됩니다.  
 > -   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 데이터 원본으로 사용되는 SQL Server에서 확장된 보호를 사용할 수 없습니다. 사용할 경우 보고서 서버에서 보고서 데이터 원본에 연결하려는 시도가 실패하고 인증 오류가 반환됩니다.  
->   
+> 
 >  데이터 액세스 기술에 대한 설명서에서 확장된 보호 지원에 대한 정보를 참조할 수 있습니다.  
   
 ### <a name="upgrade"></a>업그레이드  
@@ -98,7 +98,7 @@ ms.locfileid: "48851928"
   
 |시나리오|시나리오 다이어그램|보안 설정 방법|  
 |--------------|----------------------|-------------------|  
-|간접 및 직접 액세스 클라이언트에서 클라이언트 프록시 또는 보고서 서버 연결에는 클라이언트에서 SSL 사용 하지 않고 보고서 서버 서비스입니다.|1) 클라이언트 애플리케이션<br /><br /> 2) 보고서 서버<br /><br /> 3) 프록시<br /><br /> 4) 클라이언트 애플리케이션|클라이언트에서 보고서 서버로의 서비스 바인딩이 적용될 수 있습니다.<br /><br /> 보고서 서버에서 프록시 이름을 알 수 있어야 하므로 보고서 서버 관리자는 호스트 헤더를 사용하여 프록시에 대한 URL 예약을 만들거나 Windows 레지스트리 항목 `BackConnectionHostNames`에서 프록시 이름을 구성해야 합니다.<br /><br /> `RSWindowsExtendedProtectionLevel`을 `Allow` 또는 `Require`로 설정합니다.<br /><br /> `RSWindowsExtendedProtectionScenario`를 `Any`로 설정합니다.|  
+|클라이언트가 보고서 서버 서비스에 간접 및 직접 액세스(클라이언트에서 프록시로의 연결 또는 클라이언트에서 보고서 서버로의 연결에 SSL이 사용되지 않음)|1) 클라이언트 애플리케이션<br /><br /> 2) 보고서 서버<br /><br /> 3) 프록시<br /><br /> 4) 클라이언트 애플리케이션|클라이언트에서 보고서 서버로의 서비스 바인딩이 적용될 수 있습니다.<br /><br /> 보고서 서버에서 프록시 이름을 알 수 있어야 하므로 보고서 서버 관리자는 호스트 헤더를 사용하여 프록시에 대한 URL 예약을 만들거나 Windows 레지스트리 항목 `BackConnectionHostNames`에서 프록시 이름을 구성해야 합니다.<br /><br /> `RSWindowsExtendedProtectionLevel`을 `Allow` 또는 `Require`로 설정합니다.<br /><br /> `RSWindowsExtendedProtectionScenario`를 `Any`로 설정합니다.|  
 |클라이언트가 보고서 서버에 간접 및 직접 액세스(클라이언트가 프록시 또는 보고서 서버에 대한 SSL 연결 설정)|![RS_ExtendedProtection_CombinationSSL](../media/rs-extendedprotection-combinationssl.gif "RS_ExtendedProtection_CombinationSSL")<br /><br /> 1) 클라이언트 애플리케이션<br /><br /> 2) 보고서 서버<br /><br /> 3) 프록시<br /><br /> 4) 클라이언트 애플리케이션|채널 바인딩이 사용될 수 있습니다.<br /><br /> 보고서 서버에서 프록시 이름을 알 수 있어야 하므로 보고서 서버 관리자가 호스트 헤더를 사용하여 프록시에 대한 URL 예약을 만들거나 Windows 레지스트리 항목 `BackConnectionHostNames`에서 프록시 이름을 구성해야 합니다.<br /><br /> `RSWindowsExtendedProtectionLevel`을 `Allow` 또는 `Require`로 설정합니다.<br /><br /> `RSWindowsExtendedProtectionScenario`를 `Proxy`로 설정합니다.|  
   
 ## <a name="configuring-reporting-rervices-extended-protection"></a>Reporting Services 확장된 보호 구성  
@@ -114,7 +114,7 @@ ms.locfileid: "48851928"
 |설정|Description|  
 |-------------|-----------------|  
 |`RSWindowsExtendedProtectionLevel`|확장된 보호를 적용하는 수준을 지정합니다. 유효한 값은 `Off`, `Allow` 및 `Require`입니다.<br /><br /> 기본값은 `Off`입니다.<br /><br /> `Off`는 채널 바인딩이나 서비스 바인딩을 확인하지 않도록 지정합니다.<br /><br /> `Allow`는 확장된 보호를 지원하지만 반드시 사용하도록 요구하지는 않습니다. Allow가 지정하는 내용은 다음과 같습니다.<br /><br /> 확장된 보호를 지원하는 운영 체제에서 실행되는 클라이언트 애플리케이션에 대해 확장된 보호가 적용됩니다. 보호 적용 방법은 `RsWindowsExtendedProtectionScenario` 설정에 따라 결정됩니다.<br /><br /> 확장된 보호를 지원하지 않는 운영 체제에서 실행되는 애플리케이션에 대해 인증이 허용됩니다.<br /><br /> 값 `Require`가 지정하는 내용은 다음과 같습니다.<br /><br /> 확장된 보호를 지원하는 운영 체제에서 실행되는 클라이언트 애플리케이션에 대해 확장된 보호가 적용됩니다.<br /><br /> 확장된 보호를 지원하지 않는 운영 체제에서 실행되는 애플리케이션에 대해 인증이 허용되지 **않습니다.**|  
-|`RsWindowsExtendedProtectionScenario`|유효성을 검사할 확장된 보호의 형식(채널 바인딩, 서비스 바인딩, 둘 다)을 지정합니다. 유효한 값은 `Any`, `Proxy` 및 `Direct`입니다.<br /><br /> 기본값은 `Proxy`입니다.<br /><br /> 값 `Any`가 지정하는 내용은 다음과 같습니다.<br /><br /> -Windows NTLM, Kerberos 및 협상 인증이 지정되며 채널 바인딩은 필요하지 않습니다.<br /><br /> -서비스 바인딩이 적용됩니다.<br /><br /> 값 `Proxy`가 지정하는 내용은 다음과 같습니다.<br /><br /> -채널 바인딩 토큰이 있으면 Windows NTLM, Kerberos 및 협상 인증이 지정됩니다.<br /><br /> -서비스 바인딩이 적용됩니다.<br /><br /> 값 `Direct`가 지정하는 내용은 다음과 같습니다.<br /><br /> --CBT가 있고, 현재 서비스로의 SSL 연결이 있으며, SSL 연결의 CBT가 NTLM/Kerberos/협상 토큰의 CBT와 일치하면 Windows NTLM, Kerberos 및 협상 인증이 지정됩니다.<br /><br /> -서비스 바인딩이 적용되지 않습니다.<br /><br /> <br /><br /> 참고: 하는 경우이 설정은 무시 됩니다 `RsWindowsExtendedProtectionLevel` 로 설정 된 `OFF`합니다.|  
+|`RsWindowsExtendedProtectionScenario`|유효성을 검사할 확장된 보호의 형태, 즉 채널 바인딩, 서비스 바인딩 또는 둘 모두를 지정합니다. 유효한 값은 `Any`, `Proxy` 및 `Direct`입니다.<br /><br /> 기본값은 `Proxy`입니다.<br /><br /> 값 `Any`가 지정하는 내용은 다음과 같습니다.<br /><br /> -Windows NTLM, Kerberos 및 협상 인증이 지정되며 채널 바인딩은 필요하지 않습니다.<br /><br /> -서비스 바인딩이 적용됩니다.<br /><br /> 값 `Proxy`가 지정하는 내용은 다음과 같습니다.<br /><br /> -채널 바인딩 토큰이 있으면 Windows NTLM, Kerberos 및 협상 인증이 지정됩니다.<br /><br /> -서비스 바인딩이 적용됩니다.<br /><br /> 값 `Direct`가 지정하는 내용은 다음과 같습니다.<br /><br /> --CBT가 있고, 현재 서비스로의 SSL 연결이 있으며, SSL 연결의 CBT가 NTLM/Kerberos/협상 토큰의 CBT와 일치하면 Windows NTLM, Kerberos 및 협상 인증이 지정됩니다.<br /><br /> -서비스 바인딩이 적용되지 않습니다.<br /><br /> <br /><br /> 참고: `RsWindowsExtendedProtectionLevel`이 `OFF`로 설정되어 있으면 이 설정이 무시됩니다.|  
   
  `rsreportserver.config` 구성 파일의 항목 예:  
   
@@ -164,9 +164,9 @@ ms.locfileid: "48851928"
   
 ## <a name="see-also"></a>관련 항목  
  [확장된 보호를 사용하여 데이터베이스 엔진에 연결](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
- [인증에 대한 확장된 보호 개요](http://go.microsoft.com/fwlink/?LinkID=177943)   
- [확장된 보호를 사용하는 Windows 통합 인증(Integrated Windows Authentication with Extended Protection)](http://go.microsoft.com/fwlink/?LinkId=179922)   
- [Microsoft 보안 공지: 인증에 대한 확장된 보호](http://go.microsoft.com/fwlink/?LinkId=179923)   
+ [인증에 대한 확장된 보호 개요](https://go.microsoft.com/fwlink/?LinkID=177943)   
+ [확장된 보호를 사용하는 Windows 통합 인증(Integrated Windows Authentication with Extended Protection)](https://go.microsoft.com/fwlink/?LinkId=179922)   
+ [Microsoft 보안 권고: 인증에 대 한 확장 된 보호](https://go.microsoft.com/fwlink/?LinkId=179923)   
  [보고서 서버 서비스 추적 로그](../report-server/report-server-service-trace-log.md)   
  [RSReportServer 구성 파일](../report-server/rsreportserver-config-configuration-file.md)   
  [SetExtendedProtectionSettings 메서드&#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  

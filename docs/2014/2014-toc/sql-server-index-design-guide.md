@@ -10,17 +10,17 @@ ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 3d939e8d1576e31de3ba42eaa7deba59a2801bb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 9af1d66612485f3a790de1ebc8149b7a9e374103
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178263"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360415"
 ---
 # <a name="sql-server-index-design-guide"></a>SQL Server 인덱스 디자인 가이드
   데이터베이스 애플리케이션 병목 상태는 주로 잘못 디자인된 인덱스와 인덱스의 부족으로 인해 나타납니다. 최적의 데이터베이스와 최상의 애플리케이션 성능을 위해서는 효율적인 인덱스를 디자인하는 것이 가장 중요합니다. 이 SQL Server 인덱스 디자인 가이드에서는 애플리케이션 요구 사항을 충족하는 효율적인 인덱스를 디자인하는 데 도움이 되는 정보와 최선의 구현 방법을 제공합니다.  
   
-**적용 대상**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 를 통해 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 설명이 없는 한 합니다.  
+**적용 대상**: 별도로 언급하지 않는 한 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 부터 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 까지  
   
  이 가이드에서는 사용자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 인덱스 유형에 대한 기본적인 지식이 있다고 가정합니다. 인덱스 형식에 대한 일반적인 설명은 [인덱스 유형](../relational-databases/indexes/indexes.md)을 참조하십시오.  
   
@@ -389,7 +389,7 @@ INCLUDE (FileName);
   
     -   열의 Null 허용 여부를 NOT NULL에서 NULL로 변경합니다.  
   
-    -   길이 늘립니다 `varchar`하십시오 `nvarchar`, 또는 `varbinary` 열입니다.  
+    -   `varchar`, `nvarchar` 또는 `varbinary` 열의 길이를 늘립니다.  
   
         > [!NOTE]  
         >  이러한 열 수정 제한도 인덱스 키 열에 적용됩니다.  
@@ -595,7 +595,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
  ![맨 위 링크와 함께 사용 되는 화살표 아이콘](media/uparrow16x16.gif "맨 위 링크와 함께 사용 되는 화살표 아이콘") [이 가이드의](#Top)  
   
 ##  <a name="Additional_Reading"></a> 더 보기  
- [SQL Server 2008 인덱싱된 뷰를 통해 성능 향상](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+ [SQL Server 2008 인덱싱된 뷰를 통해 성능 향상](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
   
  [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   

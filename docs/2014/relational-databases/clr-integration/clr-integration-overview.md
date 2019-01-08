@@ -18,12 +18,12 @@ ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 762c644690cb556ba316705f1e22e3673e811bf1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ffa3e3508fef50491f20b47e13c12865cb5432d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077713"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363405"
 ---
 # <a name="overview-of-clr-integration"></a>CLR 통합 개요
   CLR(공용 언어 런타임)은 Microsoft .NET Framework의 핵심으로, 모든 .NET Framework 코드의 실행 환경을 제공합니다. CLR 내에서 실행되는 코드를 관리 코드라고 합니다. CLR은 JIT(Just-In-Time) 컴파일, 메모리 할당 및 관리, 형식 안전성 적용, 예외 처리, 스레드 관리, 보안을 비롯하여 프로그램 실행에 필요한 다양한 기능과 서비스를 제공합니다.  자세한 내용은 .NET Framework SDK를 참조하십시오.  
@@ -56,7 +56,7 @@ ms.locfileid: "48077713"
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 저장 프로시저로는 수행할 수 없는 기능을 수행하도록 확장 저장 프로시저를 작성할 수 있습니다. 하지만 형식 안전성이 확인된 관리 코드와 달리 확장 저장 프로시저는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로세스의 무결성을 손상시킬 수 있습니다. 또한 메모리 관리, 스레드 및 파이버 예약, 동기화 서비스 등이 CLR의 관리 코드와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 간에 보다 강력하게 통합되어 있습니다. CLR 통합을 사용하면 확장 저장 프로시저보다 안전한 방식으로 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 불가능한 태스크를 수행하는 데 필요한 저장 프로시저를 작성할 수 있습니다. CLR 통합 및 확장된 저장된 프로시저에 대 한 자세한 내용은 참조 하세요. [CLR 통합의 성능을](clr-integration-architecture-performance.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [.NET Framework 설치](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [.NET Framework 설치](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [CLR 통합 아키텍처](../../database-engine/dev-guide/architecture-of-clr-integration.md)   
  [CLR 데이터베이스 개체에서 데이터 액세스](data-access/data-access-from-clr-database-objects.md)   
  [CLR 통합 시작](database-objects/getting-started-with-clr-integration.md)  

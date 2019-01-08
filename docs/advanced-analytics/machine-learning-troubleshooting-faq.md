@@ -1,5 +1,5 @@
 ---
-title: 문제 해결 및 SQL Server의 machine learning에 대 한 FAQ | Microsoft Docs
+title: 문제 해결 및 기계 학습-SQL Server Machine Learning 서비스에 대 한 FAQ
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
@@ -7,19 +7,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: dc04f74c4db5c05840795caea87efb9b0001171c
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: 8cc89ee500e9240ef1fff085a34d9c1792c3e80c
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48877926"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432116"
 ---
 # <a name="troubleshoot-machine-learning-in-sql-server"></a>SQL Server에서 기계 학습 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 알려진된 문제를 통해 작업에 대 한 시작 지점으로이 페이지를 사용 합니다.
 
-**적용 대상:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (R 및 Python)
+**적용 대상:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning 서비스 (R 및 Python)
 
 ## <a name="known-issues"></a>알려진 문제
 

@@ -14,12 +14,12 @@ ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70877cb9fd10a02f0d8f7f3bd954a8334a3d028b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4a17b9b6599a57275524308608ac6ef18a8e18e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112201"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354869"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
   테이블에서 반환 된 값을 보여 줍니다 **SQLGetInfo**합니다. 값은 연결된 서버의 버전 번호에 따라 다를 수 있습니다.  
@@ -208,7 +208,7 @@ ms.locfileid: "48112201"
 |SQL_USER_NAME|현재 사용자 이름입니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLGetInfo 함수](http://go.microsoft.com/fwlink/?LinkId=59354)   
+ [SQLGetInfo 함수](https://go.microsoft.com/fwlink/?LinkId=59354)   
  [ODBC API 구현 정보](odbc-api-implementation-details.md)  
   
   

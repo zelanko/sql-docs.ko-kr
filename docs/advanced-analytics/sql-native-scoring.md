@@ -1,5 +1,5 @@
 ---
-title: SQL Server machine learning에서 네이티브 점수 매기기 | Microsoft Docs
+title: 예측 T-SQL 문-SQL Server Machine Learning Services를 사용 하 여 네이티브 점수 매기기
 description: SQL Server에서 R 또는 Python에서 작성 하는 미리 학습 된 모델에 대해 dta 입력 점수 매기기, 예측 T-SQL 함수를 사용 하 여 예측을 생성 합니다.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 372c81310fea86094543319f21e409142810de97
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: a14a4b188aa27acdef0bc836e939a7df0021e522
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713155"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645132"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>예측 T-SQL 함수를 사용 하 여 네이티브 점수 매기기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ MicrosoftML 또는 microsoftml에서 모델을 사용 하는 경우 사용할 [s
 
 샘플 데이터베이스 및 필요한 테이블을 만들려면 다음 코드를 실행 합니다.
 
-```SQL
+```sql
 CREATE DATABASE NativeScoringTest;
 GO
 USE NativeScoringTest;
@@ -95,7 +95,7 @@ GO
 
 데이터를 사용 하 여 데이터 테이블을 구성 하려면 다음 문을 사용 합니다 **아이리스** 데이터 집합입니다.
 
-```SQL
+```sql
 INSERT INTO iris_rx_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width" , "Species")
 EXECUTE sp_execute_external_script
   @language = N'R'
@@ -107,7 +107,7 @@ GO
 
 이제 모델을 저장 하는 것에 대 한 테이블을 만듭니다.
 
-```SQL
+```sql
 DROP TABLE IF EXISTS ml_models;
 GO
 CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
@@ -118,7 +118,7 @@ GO
 
 다음 코드를 기반으로 모델을 만듭니다는 **iris** 데이터 집합 이라는 테이블에 저장 **모델**합니다.
 
-```SQL
+```sql
 DECLARE @model varbinary(max);
 EXECUTE sp_execute_external_script
   @language = N'R'
@@ -138,7 +138,7 @@ EXECUTE sp_execute_external_script
 
 이진 형식으로 저장 된 모델을 보려면 다음을과 같은 문은 실행할 수 있습니다.
 
-```SQL
+```sql
 SELECT *, datalength(native_model_object)/1024. as model_size_kb
 FROM ml_models;
 ```
@@ -147,7 +147,7 @@ FROM ml_models;
 
 다음 간단한 예측 문을 사용 하 여 의사 결정 트리 모델에서 분류를 가져옵니다 합니다 **네이티브 점수 매기기** 함수입니다. 사용자가 제공한 특성, 꽃잎 길이 너비에 따라 붓 꽃 종류를 예측 합니다.
 
-```SQL
+```sql
 DECLARE @model varbinary(max) = (
   SELECT native_model_object
   FROM ml_models

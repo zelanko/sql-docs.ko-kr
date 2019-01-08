@@ -13,22 +13,22 @@ ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 635a5428685feff5887b0800388a41f95a108c1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 999f0b922705e210e6761d7b534490387c8fef74
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209233"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363235"
 ---
 # <a name="schedule-properties-reports-page"></a>일정 속성(보고서 페이지)
   이 페이지를 사용하여 이 공유 일정을 사용하는 모든 보고서 목록을 볼 수 있습니다. 일정을 사용하여 보고서 스냅숏을 새로 고치거나, 보고서 기록을 생성하거나, 구독을 트리거하거나, 보고서의 캐시된 복사본을 만료시킬 수 있습니다. 일정 사용 방법을 확인하려면 보고서의 속성 및 구독 정보를 확인하십시오.  
   
  이 페이지는 공유 일정을 사용하는 각 보고서를 표시하지만 단일 보고서 내에서 공유 일정이 사용된 횟수는 나타나지 않습니다. 예를 들어 Company Sales 보고서에 대한 20명의 구독자가 모두 동일한 공유 일정을 사용하여 구독 처리를 트리거한다고 가정해 보십시오. 이 경우 Company Sales 보고서에는 20개의 공유 일정에 대한 참조가 있지만 보고서는 이 목록에 한 번만 나타납니다.  
   
- 이 페이지를 열려면 시작 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 열고 보고서 서버에 연결 합니다 **공유 일정** 폴더, 공유 일정을 마우스 오른쪽 단추로 클릭을 선택 합니다 **속성**를 클릭 하 고 **보고서** .  
+ 이 페이지를 열려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 시작하고 보고서 서버에 연결한 다음 **공유 일정** 폴더를 열고 공유 일정을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택한 후 **보고서**를 클릭합니다.  
   
 > [!NOTE]  
->  이 기능은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2012 버전에서 지원하는 기능](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)을 참조하세요.  
+>  이 기능은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2012 버전에서 지원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)을 참조하세요.  
   
 ## <a name="options"></a>변수  
  **Folder**  

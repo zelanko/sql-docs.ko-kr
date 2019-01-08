@@ -1,5 +1,5 @@
 ---
-title: R 및 Python을 사용 하 여 Azure 가상 머신에 SQL Server Machine Learning Services 설치 | Microsoft Docs
+title: Azure 가상 컴퓨터-SQL Server Machine Learning Services에서 R 언어 및 Python 기능을 설치 합니다.
 description: R 및 Python 데이터 과학 및 기계 학습 솔루션은 Azure 클라우드에서 SQL Server 가상 머신에서 실행 합니다.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e416b99c3d4597cb2fe9346819184be43cd98402
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 6216142708a201a1ad720ab4e1e659c507744195
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512698"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432306"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>R 및 Python을 사용 하 여 Azure 가상 머신에 SQL Server Machine Learning Services 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

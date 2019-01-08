@@ -14,12 +14,12 @@ ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: a13deff4d15d38286c943ce080faf6bf7ce1ca55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 42ec76542ffdf382c10c48cd107765d312ed1781
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111243"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375785"
 ---
 # <a name="extensible-key-management-ekm"></a>EKM(확장 가능 키 관리)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 암호화 및 키 생성용 MSCAPI( *Microsoft Cryptographic API* ) 공급자를 사용하여 EKM( *Extensible Key Management* )과 함께 데이터 암호화 기능을 제공합니다. 데이터 및 키 암호화를 위한 암호화 키는 임시 키 컨테이너에서 생성되며 데이터베이스에 저장되기 전에 공급자로부터 내보내져야 합니다. 이 방법을 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 암호화 키 계층 및 키 백업을 포함한 키 관리를 처리할 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "48111243"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 확장 가능 키 관리를 사용하면 타사 EKM/HSM 공급업체가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 해당 모듈을 등록할 수 있습니다. EKM 모듈이 등록되면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 이러한 모듈에 저장된 암호화 키를 사용할 수 있고, 이를 통해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 이러한 모듈이 지원하는 대량 암호화 및 암호 해독 같은 고급 암호화 기능과 키 에이징 및 키 회전 같은 키 관리 함수에 액세스할 수 있습니다.  
   
- Azure VM에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 실행할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 [Azure 키 자격 증명 모음](http://go.microsoft.com/fwlink/?LinkId=521401)에 저장된 키를 사용할 수 있습니다. 자세한 내용은 [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리&#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)에서 암호화 키 계층 및 키 백업을 포함한 키 관리를 처리할 수 있습니다.  
+ Azure VM에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 실행할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 [Azure 키 자격 증명 모음](https://go.microsoft.com/fwlink/?LinkId=521401)에 저장된 키를 사용할 수 있습니다. 자세한 내용은 [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리&#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)에서 암호화 키 계층 및 키 백업을 포함한 키 관리를 처리할 수 있습니다.  
   
 ## <a name="ekm-configuration"></a>EKM 구성  
  일부 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]버전에서는 확장 가능 키 관리를 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
@@ -105,8 +105,8 @@ GO
 |-------------------------|---------------|  
 |대칭 키 암호화|[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
 |비대칭 키 암호화|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
-|EncryptByKey(key_guid, 'cleartext', …)|[ENCRYPTBYKEY&#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbykey-transact-sql)|  
-|DecryptByKey(ciphertext, …)|[DECRYPTBYKEY&#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbykey-transact-sql)|  
+|EncryptByKey(key_guid, 'cleartext', ...)|[ENCRYPTBYKEY&#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbykey-transact-sql)|  
+|DecryptByKey(ciphertext, ...)|[DECRYPTBYKEY&#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbykey-transact-sql)|  
 |EncryptByAsmKey(key_guid, 'cleartext')|[ENCRYPTBYASYMKEY&#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbyasymkey-transact-sql)|  
 |DecryptByAsmKey(ciphertext)|[DECRYPTBYASYMKEY&#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbyasymkey-transact-sql)|  
   

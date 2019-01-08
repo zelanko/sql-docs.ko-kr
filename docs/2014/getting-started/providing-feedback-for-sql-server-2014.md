@@ -22,12 +22,12 @@ ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32068cf03a971cd6b8010618d7b74d1a613ec856
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109905"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376745"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>SQL Server 2014에 대한 사용자 의견 제공
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 할애해 시간 개선을 위해을 내어 주셔서 감사는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 제품과 설명서. 제품 기능과 사용자 인터페이스에 대한 제안 사항 및 버그 보고서를 제공하거나 설명서 사용자 의견을 제출하거나 분석을 위해 오류 보고서와 사용자 데이터를 자동으로 [!INCLUDE[msCoName](../includes/msconame-md.md)]에 보낼 수 있습니다. 다음 항목에서는 이러한 세 가지 사용자 의견 옵션 각각에 대해 설명합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "48109905"
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용자 의견 페이지는 다음과 같은 여러 가지 방법으로 찾을 수 있습니다.  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용자 의견 [웹 페이지](http://go.microsoft.com/fwlink/?linkid=34178)로 이동합니다.  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용자 의견 [웹 페이지](https://go.microsoft.com/fwlink/?linkid=34178)로 이동합니다.  
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 도움말 도구 모음에 있는 **사용자 의견 보내기** 단추를 클릭하거나 **커뮤니티/사용자 의견 보내기** 명령을 선택합니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48109905"
   
 -   유틸리티에서 도움말에 액세스합니다.  
   
--   **도구/사용자 지정...** 명령의 **도구 모음** 탭에서 **도움말** 확인란을 선택합니다.  
+-   선택는 **도움말** 확인란 합니다 **도구 모음** 탭을 **도구/사용자 지정...**  명령입니다.  
   
 ## <a name="automatic-error-and-usage-reporting"></a>자동 오류 및 사용 보고  
  자동으로 오류를 보고하고 사용자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 소프트웨어 및 서비스를 사용하는 방법에 대한 데이터를 보내는 기능을 설정할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)]에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 향상시키는 데 이 정보를 사용하며 모든 데이터는 기밀로 유지됩니다.  

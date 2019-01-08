@@ -1,32 +1,75 @@
 ---
-title: R 모델을 만들고 SQL Server에 저장하기 | Microsoft Docs
+title: R 모델을 작성 하 고 SQL Server (연습)-SQL Server Machine Learning에 저장
+description: SQL Server 데이터베이스 내 분석에 사용 되는 R 언어 모델을 빌드하는 방법을 보여 주는 자습서입니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/26/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c580cc3a6e5fefd7882d4fc58f6eacd6d9999f71
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b02b1e0298af6fbb96ba5ddd8d5a18dc8e154598
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31204155"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645482"
 ---
-# <a name="build-an-r-model-and-save-to-sql-server"></a>R 모델을 만들고 SQL Server에 저장하기
+# <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>R 모델을 작성 하 고 SQL Server (연습)에 저장
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 단계에서는 기계 학습 모델을 만들고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 그 모델을 저장하는 방법에 대해 알아보겠습니다.
+이 단계에서는 기계 학습 모델을 빌드하고 모델을 저장 하는 방법을 알아봅니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 모델을 저장 하면에서 직접 호출할 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 시스템 저장 프로시저를 사용 하 여 코드 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 또는 [(T-SQL) PREDICT 함수](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)합니다.
+
+## <a name="prerequisites"></a>사전 요구 사항
+
+이 단계에서는이 연습의 이전 단계에 따라 진행 중인 R 세션을 가정 합니다. 이러한 단계에서 만든 연결 문자열 및 데이터 원본 개체를 사용 합니다. 스크립트를 실행 하려면 다음 도구 및 패키지 사용 됩니다.
+
++ Rgui.exe R 명령을 실행 하려면
++ T-SQL을 실행 하기 위해 management Studio
++ ROCR 패키지
++ RODBC 패키지
+
+### <a name="create-a-stored-procedure-to-save-models"></a>모델을 저장 하려면 저장된 프로시저 만들기
+
+이 단계는 SQL Server에 학습 된 모델을 저장 하려면 저장된 프로시저를 사용 합니다. 태스크를 쉽게이 작업을 수행 하려면 저장된 프로시저를 만들고 있습니다.
+
+저장된 프로시저를 만들려면 Management Studio를 쿼리 창에서 다음 T-SQL 코드를 실행 합니다.
+
+```sql
+USE [NYCTaxi_Sample]
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'PersistModel')
+  DROP PROCEDURE PersistModel
+GO
+
+CREATE PROCEDURE [dbo].[PersistModel] @m nvarchar(max)
+AS
+BEGIN
+    -- SET NOCOUNT ON added to prevent extra result sets from
+    -- interfering with SELECT statements.
+    SET NOCOUNT ON;
+    insert into nyc_taxi_models (model) values (convert(varbinary(max),@m,2))
+END
+GO
+```
+
+> [!NOTE]
+> 오류가 발생 하는 경우에 로그인 개체를 만들 수 있는 권한이 있는지 확인 합니다. 다음과 같은 T-SQL 문을 실행 하 여 개체를 만들 수 있는 명시적 권한을 부여할 수 있습니다: `exec sp_addrolemember 'db_owner', '<user_name>'`합니다.
 
 ## <a name="create-a-classification-model-using-rxlogit"></a>rxLogit을 사용해서 분류모델(classification model) 만들기
 
-이번에 만들 모델은 이진분류기(binary classifier)로서, 택시운전사가 승객의 목적지에 도착한 후 승객으로부터 팁을 받을 수 있는지를 예측하는 모델입니다. 지난 과정(lesson)에서 만들었던 데이터 소스(data source)를  사용하여 이 팁 예측 모델을 학습하고, 이때 로지스틱 회귀(logistic regression)를 사용합니다.
+모델은 택시 기사가 특정 여정에서 팁을 받을 가능성이 있는지 여부를 예측 하는 이진 분류자 됩니다. 지난 과정(lesson)에서 만들었던 데이터 소스(data source)를  사용하여 이 팁 예측 모델을 학습하고, 이때 로지스틱 회귀(logistic regression)를 사용합니다.
 
 1. [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) 패키지에 들어있는 **rxLogit** 함수를 호출하여 로지스틱 회귀 모델을 만들어 봅시다.  
 
     ```R
-    system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = sql_feature_ds));
+    system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = featureDataSource));
     ```
 
     모델을 빌드하는 호출은 system.time 함수 내에 포함되어 있습니다. 이것으로 모델을 빌드하는 데 필요한 시간을 구할 수 있습니다.
@@ -37,31 +80,35 @@ ms.locfileid: "31204155"
     summary(logitObj);
     ```
 
-     *결과*
-
-     *Logistic Regression Results for: tipped ~ passenger_count + trip_distance + trip_time_in_secs +* direct_distance*   <br/>*Data: featureDataSource (RxSqlServerData Data Source)*
-     <br/>*Dependent variable(s): tipped*
-     <br/>*Total independent variables: 5*
-     <br/>*Number of valid observations: 17068*
-     <br/>*Number of missing observations: 0*
-     <br/>*-2\*LogLikelihood: 23540.0602 (Residual deviance on 17063 degrees of freedom)*
-     <br/>*Coefficients:*
-     <br/>*Estimate Std. Error z value Pr (> | z |)*
-     <br/>*(Intercept)       -2.509e-03  3.223e-02  -0.078  0.93793*
-     <br/>*passenger_count   -5.753e-02  1.088e-02  -5.289 1.23e-07 \*\*\**
-     <br/>*trip_distance     -3.896e-02  1.466e-02  -2.658  0.00786 \*\**
-     <br/>*trip_time_in_secs  2.115e-04  4.336e-05   4.878 1.07e-06 \*\*\**
-     <br/>*direct_distance    6.156e-02  2.076e-02   2.966  0.00302 \*\**
-     <br/>*---*
-     <br/>*Signif. codes:  0 ‘\*\*\*’ 0.001 ‘\*\*’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1*
-     <br/>*Condition number of final variance-covariance matrix: 48.3933*
-     <br/>*Number of iterations: 4*
+    **결과**
+    
+    ```R
+     *Logistic Regression Results for: tipped ~ passenger_count + trip_distance + trip_time_in_secs +*
+     direct_distance* 
+     *Data: featureDataSource (RxSqlServerData Data Source)*
+     *Dependent variable(s): tipped*
+     *Total independent variables: 5*
+     *Number of valid observations: 17068*
+     *Number of missing observations: 0*
+     *-2\*LogLikelihood: 23540.0602 (Residual deviance on 17063 degrees of freedom)*
+     *Coefficients:*
+     *Estimate Std. Error z value Pr(>|z|)*
+     *(Intercept)       -2.509e-03  3.223e-02  -0.078  0.93793*
+     *passenger_count   -5.753e-02  1.088e-02  -5.289 1.23e-07 \*\*\**
+     *trip_distance     -3.896e-02  1.466e-02  -2.658  0.00786 \*\**
+     *trip_time_in_secs  2.115e-04  4.336e-05   4.878 1.07e-06 \*\*\**
+     *direct_distance    6.156e-02  2.076e-02   2.966  0.00302 \*\**
+     *---*
+     *Signif. codes:  0 ‘\*\*\*’ 0.001 ‘\*\*’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1*
+     *Condition number of final variance-covariance matrix: 48.3933*
+     *Number of iterations: 4*
+   ```
 
 ## <a name="use-the-logistic-regression-model-for-scoring"></a>로지스틱 회귀 모델을 사용하여 채점하기
 
 이제 모델이 작성되었으므로 모델을 사용하여 기사가 특정 여정에서 팁을 받을 가능성이 있는지 여부를 예측할 수 있습니다.
 
-1. 우선 [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) 함수를 사용해서 점수 결과를 저장하기 위한 데이터 저장 객체를 정의합니다.
+1. 먼저 사용 합니다 [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) 점수 매기기 결과 저장 하는 것에 대 한 데이터 원본 개체를 정의 하는 함수입니다.
 
     ```R
     scoredOutput <- RxSqlServerData(
@@ -79,18 +126,18 @@ ms.locfileid: "31204155"
 
     ```R
     rxPredict(modelObject = logitObj,
-        data = sql_feature_ds,
+        data = featureDataSource,
         outData = scoredOutput,
         predVarNames = "Score",
         type = "response",
         writeModelVars = TRUE, overwrite = TRUE)
     ```
     
-    문은 성공 하는 경우 실행 하는 데 약간의 시간이 취해야 합니다. 완료 되 면 SQL Server Management Studio를 열고 테이블을 만든 및 예상 출력은 점수 열 오류 코드 및 기타 포함 되어 있는지 확인 하십시오.
+    문이 성공 하면 경우에 다소 시간이 걸립니다. 완료 되 면 SQL Server Management Studio를 열고 테이블을 만든를 예상 된 출력 점수 열 및 기타 포함 되어 있는지 확인 하십시오.
 
 ## <a name="plot-model-accuracy"></a>모델 정확도 그리기
 
-모델의 정확도 파악 하려면 사용할 수 있습니다는 [rxRoc](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc) 함수 수신기 운영 곡선을 그립니다. RxRoc RevoScaleR 패키지에서 제공 하는 새 기능 중 하나 이므로 원격 계산 컨텍스트를 지 원하는, 두 가지 옵션이 있습니다.
+모델의 정확도 파악 하려면 사용 합니다 [rxRoc](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc) 수신기 운영 곡선을 그릴 함수입니다. RxRoc RevoScaleR 패키지에서 제공 하는 새 함수 중 하나 이므로 원격 계산 컨텍스트를 지 원하는, 두 가지 옵션이 있습니다.
 
 + rxRoc 함수를 사용하여 원격 계산 컨텍스트에서 플롯을 실행한 다음 로컬 클라이언트에 플롯을 반환합니다.
 
@@ -109,7 +156,7 @@ ms.locfileid: "31204155"
 
     이 호출은 ROC 차트를 계산할 때 사용되는 값을 반환합니다. 라벨(Label) 열은 _tipped_ 이고 예측하려는 실제 결과를 가지고 있으며 _Score_ 열에는 예측이 들어 있습니다. 
 
-2. 실제로 차트를 그리기 위해서는 ROC 개체를 저장한 다음에 `plot` 함수로 그릴 수 있습니다. 그래프는 원격 계산 컨텍스트에 생성되고 R 환경에 반환됩니다.
+2. 그릴 실제로 차트 ROC 개체를 저장할 수 있으며 다음 그리기 함수를 사용 하 여 그릴 수 있습니다. 그래프는 원격 계산 컨텍스트에 생성되고 R 환경에 반환됩니다.
 
     ```R
     scoredOutput = rxImport(scoredOutput);
@@ -122,6 +169,8 @@ ms.locfileid: "31204155"
     ![모델에 대한 ROC 그림](media/rsql-e2e-rocplot.png "모델에 대한 ROC 그림")
 
 ### <a name="create-the-plots-in-the-local-compute-context-using-data-from-sql-server"></a>SQL Server의 데이터를 사용하여 로컬 계산 컨텍스트에서 플롯 만들기
+
+실행 하 여 계산 컨텍스트는 로컬을 확인할 수 있습니다 `rxGetComputeContext()` 명령 프롬프트에서. 반환 값은 "RxLocalSeq 계산 컨텍스트" 이어야 합니다.
 
 1. 로컬 계산 컨텍스트에 대해서도 절차는 거의 동일합니다. [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) 함수를 사용해서 로컬 R 환경에 지정된 데이터를 가져옵니다.
 
@@ -153,21 +202,17 @@ ms.locfileid: "31204155"
 
 ## <a name="deploy-the-model"></a>모델 배포
 
-모델을 작성하고 잘 수행되는 것을 확인한 후 그 모델을 사용하거나 혹은 정기적으로 재교육과 재조정하는 조직의 사용자나 사람들이 있는 사이트로 배포하길 원할 것입니다. 이러한 절차를 때때로 *operationalizing a model* 이라고 합니다.
+모델을 작성하고 잘 수행되는 것을 확인한 후 그 모델을 사용하거나 혹은 정기적으로 재교육과 재조정하는 조직의 사용자나 사람들이 있는 사이트로 배포하길 원할 것입니다. 이러한 절차를 때때로 *operationalizing a model* 이라고 합니다. SQL Server 운영 화 저장된 프로시저에서 R 코드를 포함 하 여 수행 됩니다. 코드를 프로시저에 있으므로 SQL Server에 연결할 수 있는 모든 응용 프로그램에서 호출할 수 있습니다.
 
-[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 사용하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 사용해서 R 모델을 호출할 수 있으므로 클라이언트 응용 프로그램에서 R을 쉽게 사용할 수 있습니다. 
+외부 응용 프로그램에서 모델을 호출할 수 있습니다, 전에 모델을 프로덕션에 사용 되는 데이터베이스에 저장 해야 합니다. 학습 된 모델 유형의 단일 열에 이진 형식으로 저장 됩니다 **varbinary (max)** 합니다.
 
-그러나 외부 응용 프로그램에서 모델을 호출하려면 프로덕션에서 사용되는 데이터베이스에 모델을 저장해야 합니다. [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]에서는 학습된 모델이 **varbinary(max)** 형식의 단일 열에 이진 형식으로 저장됩니다.
+일반적인 배포 워크플로 다음 단계로 구성 됩니다.
 
-따라서 학습된 모델을 R에서 SQL Server로 이동하는 단계는 다음과 같습니다.
+1. 16 진수 문자열로 모델 직렬화
+2. 데이터베이스에 serialize 된 개체를 전송 합니다.
+3. Varbinary (max) 열에 모델을 저장 합니다.
 
-+ 모델을 16진수 문자열로 직렬화
-
-+ 직렬화된 개체를 데이터베이스로 전송
-
-+ varbinary(max) 열에 모델 저장
-
-이번 절에서는 모델을 유지하는 방법과 예측을 수행하기 위해 모델을 호출하는 방법을 배웁니다.
+이 섹션에서는 모델을 유지 하 고 예측에 사용할 수 있도록 하려면 저장된 프로시저를 사용 하는 방법에 알아봅니다. 이 섹션에 사용 되는 저장된 프로시저를 PersistModel입니다. PersistModel의 정의가 [필수 구성 요소](#prerequisites)합니다.
 
 1. 로컬 R 환경으로 다시 전환하고(사용하지 않고 있다면) 모델을 직렬화하고 변수에 저장합니다.
 
@@ -177,53 +222,27 @@ ms.locfileid: "31204155"
     modelbinstr=paste(modelbin, collapse="");
     ```
 
-2. **RODBC**를 사용하여 ODBC 연결을 엽니다.
+2. **RODBC**를 사용하여 ODBC 연결을 엽니다. 패키지를 이미 로드한 경우 RODBC 호출을 생략할 수 있습니다.
 
     ```R
     library(RODBC);
     conn <- odbcDriverConnect(connStr);
     ```
 
-    패키지를 이미 로드한 경우 RODBC 호출을 생략할 수 있습니다.
-
-3. PowerShell 스크립트로 만든 저장된 프로시저를 호출하여 모델의 이진 표현을 데이터베이스의 열에 저장합니다.
+3. 호출 PersistModel 저장 프로시저를 SQL Server에서 transmite에 직렬화 된 개체는 데이터베이스를 하 고 모델의 이진 열에 저장 합니다. 
 
     ```R
     q <- paste("EXEC PersistModel @m='", modelbinstr,"'", sep="");
     sqlQuery (conn, q);
     ```
 
-    테이블에 모델을 저장하는 경우 INSERT 문만 있으면 됩니다. 그러나 저장된 프로시저에서와 같은 줄이 바뀔 때 보다 쉽게는 _PersistModel_합니다.
+4. 모델을 확인 하려면 Management Studio를 사용 하 여 존재 합니다. 개체 탐색기에서 마우스 오른쪽 단추로 클릭 합니다 **nyc_taxi_models** 클릭 **상위 1000 개의 행 선택**합니다. 결과에서 이진 표현을 표시 되어야 합니다 **모델** 열입니다.
 
-    > [!NOTE]
-    > 만일 "PersistModel 개체에 EXECUTE 권한이 거부되었습니다" 같은 오류가 발생하는 경우 로그인에 권한이 있는지 확인하세요. `GRANT EXECUTE ON [dbo].[PersistModel] TO <user_name>` 같은 T-SQL 문을 실행하여 저장 프로시저에 명시적으로 권한을 줄 수 있습니다
+테이블에 모델을 저장하는 경우 INSERT 문만 있으면 됩니다. 그러나 쉽습니다 때와 같은 저장된 프로시저에서 래핑된 *PersistModel*합니다.
 
-4. 모델을 만들고 데이터베이스에 저장한 후에는 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 시스템 저장 프로시저를 사용해서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드로부터 모델을 직접 호출할 수 있습니다.
+## <a name="next-steps"></a>다음 단계
 
-    그러나 자주 사용 하는 모든 모델을 사용자 지정 저장된 프로시저에서 입력된 쿼리 및 기타 매개 변수를 모델에 대 한 호출을 래핑하는 것이 쉽습니다.
+다음 및 최종 단원에서는 사용 하 여 저장 된 모델에 대 한 점수 매기기를 수행 하는 방법에 알아봅니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]합니다.
 
-    다음은 그러한 저장 프로시저의 전체 코드입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 R 모델을 보다 쉽게 관리하고 업데이트할 수 있도록 이와 같은 저장된 프로시저를 만드는 것이 좋습니다.
-
-    ```tsql
-    CREATE PROCEDURE [dbo].[PersistModel]  @m nvarchar(max)
-    AS
-    BEGIN
-      SET NOCOUNT ON;
-      INSERT INTO nyc_taxi_models (model) values (convert(varbinary(max),@m,2))
-    END
-    ```
-
-  > [!NOTE]
-  > **SET NOCOUNT ON** 절을 사용하여 SELECT 문의 추가 결과 집합을 방지합니다. (역주. SELECT 결과 외 추가로 반환되는 메시지를 제거하는 목적임).
-
-
-다음 및 최종 단원에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 저장된 모델을 대상으로 채점을 수행하는 방법을 배웁니다.
-
-## <a name="next-lesson"></a>다음 단원
-
-[R 모델을 배포하고 SQL에서 사용하기](walkthrough-deploy-and-use-the-model.md)
-
-## <a name="previous-lesson"></a>이전 단원
-
-[R과 SQL을 사용하여 데이터 특성 만들기](walkthrough-create-data-features.md)
-
+> [!div class="nextstepaction"]
+> [R 모델을 배포하고 SQL에서 사용하기](walkthrough-deploy-and-use-the-model.md)

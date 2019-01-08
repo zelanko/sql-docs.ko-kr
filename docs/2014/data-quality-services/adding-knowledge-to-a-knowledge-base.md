@@ -10,12 +10,12 @@ ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 19adfe90d99e0d40408951e09ce9de6893382897
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 8b845336b032d377b113508f6d53b9602675435b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030170"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372385"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>기술 자료에 정보 추가
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에 정보를 추가할 수 있는 방법에 대해 설명합니다. 데이터 품질 작업을 수행하려면 먼저 데이터에 대한 정보가 있어야 합니다. 데이터 품질 기술 자료를 만들고 유지 관리하며 여기에 특정 유형의 데이터 원본과 관련된 정보를 추가하는 방식으로 이러한 정보를 얻을 수 있습니다. 기술 자료는 데이터 관련 지식의 리포지토리로서 데이터를 이해하고 데이터의 무결성을 유지하는 데 사용됩니다.  
@@ -41,14 +41,14 @@ ms.locfileid: "51030170"
   
 -   자세한 내용은 설명서에서 [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md)을 참조하십시오.  
   
--   기술 자료 검색을 수행하는 방법에 대한 데모 비디오를 보려면 [여기](http://msdn.microsoft.com/sqlserver/hh323825.aspx)를 클릭하십시오.  
+-   기술 자료 검색을 수행하는 방법에 대한 데모 비디오를 보려면 [여기](https://msdn.microsoft.com/sqlserver/hh323825.aspx)를 클릭하십시오.  
   
 ##  <a name="ManageDomain"></a> 도메인의 데이터 값 관리  
  DQS에서는 컴퓨터 기반 기술 자료 검색 작업으로 생성된 메타데이터를 대화형으로 변경 및 보강할 수 있습니다. 이 작업은 도메인 관리 작업에서 수행할 수 있으며, 특정 데이터 값에 변경 내용을 적용할 수 있습니다.  
   
 -   자세한 내용은 설명서에서 [Change Domain Values](../../2014/data-quality-services/change-domain-values.md)을 참조하십시오.  
   
--   도메인 관리를 수행하는 방법에 대한 데모 비디오를 보려면 [여기](http://msdn.microsoft.com/sqlserver/hh323825.aspx)를 클릭하십시오. 이 비디오에서는 기술 자료 검색 마법사의 도메인 값 관리 페이지에서 도메인 값을 변경합니다. 또한 도메인 관리 작업의 도메인 값 페이지에서 이러한 단계를 수행할 수도 있습니다.  
+-   도메인 관리를 수행하는 방법에 대한 데모 비디오를 보려면 [여기](https://msdn.microsoft.com/sqlserver/hh323825.aspx)를 클릭하십시오. 이 비디오에서는 기술 자료 검색 마법사의 도메인 값 관리 페이지에서 도메인 값을 변경합니다. 또한 도메인 관리 작업의 도메인 값 페이지에서 이러한 단계를 수행할 수도 있습니다.  
   
 ##  <a name="DQSFile"></a> .dqs 파일에서 정보 가져오기  
  .dqs 데이터 파일에서 기존 기술 자료로 도메인을 가져오거나 .dqs에서 새 기술 자료로 전체 기술 자료를 가져올 수 있습니다. 이렇게 하려면 먼저 기존 도메인 또는 기술 자료를 .dqs 파일로 내보내야 합니다. 도메인이 포함된 .dqs 파일은 모든 도메인 파일을 포함하고, 기술 자료가 포함된 .dqs 파일은 도메인 및 일치 정책을 비롯하여 모든 기술 자료 정보를 포함합니다.  

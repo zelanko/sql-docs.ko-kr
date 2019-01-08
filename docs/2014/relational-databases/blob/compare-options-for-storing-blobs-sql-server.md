@@ -10,12 +10,12 @@ ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 48a46b3f35b8ce19382996bf8c0667b6222dc5c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: c90dd764a04b3eb470f0cf76d29e2ee2002d6b97
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059733"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364714"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>BLOB 저장 옵션 비교(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 파일 및 문서를 저장하는 데 사용할 수 있는 옵션을 설명하고 비교합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "48059733"
 |**파일 특성에 대한 관계형 액세스**|아니요|아니요|**예**|  
   
 ##  <a name="CompareRBS"></a> FILESTREAM 및 RBS(Remote BLOB Store) 비교  
- 이러한 두 기능에 대한 비교 내용은 RBS 팀의 블로그 게시물 [SQL Server 원격 BLOB 저장소 및 FILESTREAM 기능 비교](http://go.microsoft.com/fwlink/?LinkId=210317)를 참조하세요.  
+ 이러한 두 기능에 대한 비교 내용은 RBS 팀의 블로그 게시물 [SQL Server Remote BLOB Store 및 FILESTREAM 기능 비교](https://go.microsoft.com/fwlink/?LinkId=210317)합니다.  
   
 ##  <a name="more"></a> 자세한 정보  
  [FILESTREAM&#40;SQL Server&#41;](filestream-sql-server.md)  

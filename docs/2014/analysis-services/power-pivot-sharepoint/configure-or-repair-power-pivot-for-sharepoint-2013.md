@@ -11,12 +11,12 @@ ms.assetid: 616877e3-464a-4c97-bc74-1fa6f4faa756
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1fc6556929b26cb7de683794a670ea592ff35461
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: fa6db168e9bcaf6fa16def53a35fc2626d6a24fb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073033"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363915"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2013-powerpivot-configuration-tool"></a>SharePoint 2013용 PowerPivot 구성 또는 복구(PowerPivot 구성 도구)
   SharePoint 2013용 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 의 설치를 구성하거나 복구하려면 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 사용합니다. 구성 도구는 시스템 검색으로 시작한 다음 설치를 완료하거나 복구하는 데 필요한 동작 목록을 반환합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사는 SharePoint 2013용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구뿐만 아니라 SharePoint 2010용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 설치합니다. 이 항목에서는 SharePoint 2013용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구에 대해 설명합니다. SharePoint 2010에 대 한 자세한 내용은 참조 하세요. [PowerPivot 구성 또는 복구 SharePoint 2010 용 &#40;PowerPivot 구성 도구&#41;](../configure-repair-powerpivot-sharepoint-2010.md)합니다.  
@@ -38,9 +38,9 @@ ms.locfileid: "48073033"
 ##  <a name="bkmk_before"></a> 시작하기 전 주의 사항  
  SharePoint 2013용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구는 프로그램 파일, 레지스트리 설정 및 사용 가능한 포트를 검색합니다. 이 도구를 최대한 이용하려면 다음 정보를 검토하십시오.  
   
--   구성 도구를 실행 하는 위한 일반 요구 사항 [PowerPivot 구성 도구](power-pivot-configuration-tools.md)합니다.  
+-   구성 도구, [PowerPivot Configuration Tools](power-pivot-configuration-tools.md)실행을 위한 일반 요구 사항.  
   
--   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 은 클레임 기반 인증에 대해 구성된 웹 응용 프로그램을 선호합니다. SharePoint 2013용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구에서 애플리케이션을 만드는 경우 클레임 기반의 Windows 인증을 사용하도록 애플리케이션이 구성됩니다. 인증 요구 사항에 대 한 자세한 내용은 참조 하세요. [PowerPivot Authentication and Authorization](power-pivot-authentication-and-authorization.md)합니다.  
+-   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 은 클레임 기반 인증에 대해 구성된 웹 응용 프로그램을 선호합니다. SharePoint 2013용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구에서 애플리케이션을 만드는 경우 클레임 기반의 Windows 인증을 사용하도록 애플리케이션이 구성됩니다. 인증 요구 사항에 대한 자세한 내용은 [PowerPivot Authentication and Authorization](power-pivot-authentication-and-authorization.md)를 참조하십시오.  
   
 -   SharePoint 2013용[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구에서 웹 애플리케이션을 만드는 데 포트 80을 사용할 수 있어야 합니다.  
   
@@ -71,13 +71,13 @@ ms.locfileid: "48073033"
 ##  <a name="bkmk_steps"></a> 구성 단계  
  구성 도구 링크는 SharePoint 2013용 PowerPivot이 로컬 서버에 설치된 경우에만 표시됩니다.  
   
-1.  에 **시작** 메뉴에서 **프로그램도**, 클릭 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], 클릭 **구성 도구**, 클릭 하 고 **SharePoint 2013 용 PowerPivot 구성**합니다.  
+1.  **시작** 메뉴에서 **모든 프로그램**을 가리키고 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**및 **SharePoint 2013용 PowerPivot 구성**을 차례로 클릭합니다.  
   
 2.  **SharePoint용 PowerPivot 구성 또는 복구**를 클릭합니다.  
   
 3.  창을 전체 크기로 확장합니다. 창 아래쪽에 **유효성 검사**, **실행**및 **끝내기** 명령이 포함된 단추 모음이 표시됩니다.  
   
-4.  **기본 계정:** 매개 변수 탭에서 **기본 계정 사용자 이름**에 대한 도메인 사용자 계정을 입력합니다. 이 계정은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 애플리케이션 풀을 포함한 필수 서비스를 프로비전하는 데 사용됩니다. 네트워크 서비스, 로컬 시스템 등의 기본 제공 계정을 지정하지 마세요. 이 도구는 기본 제공 계정을 지정하는 구성을 차단합니다.  
+4.  **기본 계정:** 매개 변수 탭에 대 한 도메인 사용자 계정을 입력 합니다 **기본 계정 사용자 이름**합니다. 이 계정은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 애플리케이션 풀을 포함한 필수 서비스를 프로비전하는 데 사용됩니다. 네트워크 서비스, 로컬 시스템 등의 기본 제공 계정을 지정하지 마세요. 이 도구는 기본 제공 계정을 지정하는 구성을 차단합니다.  
   
      **암호:** 암호를 입력합니다. 새 SharePoint 팜인 경우 새 서버 또는 애플리케이션을 SharePoint 팜에 추가할 때마다 암호가 사용됩니다. 팜이 있는 경우 서버 애플리케이션을 팜에 추가할 수 있는 암호를 입력합니다.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48073033"
     Cannot connect to the database server instance  
     ```  
   
-11. [Verify a PowerPivot for SharePoint 설치](../instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md)합니다.  
+11. [Verify a PowerPivot for SharePoint Installation](../instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md)입니다.  
   
 ##  <a name="bkmk_input"></a> 서버를 구성하는 데 사용된 입력 값  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구는 사용자가 입력하는 입력 값과 도구에서 검색하거나 자동으로 사용하는 기본값의 조합을 사용합니다.  
@@ -114,7 +114,7 @@ ms.locfileid: "48073033"
 ||데이터베이스 서버|사용 가능한 경우 로컬 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 명명된 인스턴스|데이터베이스 엔진 인스턴스가 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 명명된 인스턴스로 설치되는 경우 이 도구는 데이터베이스 서버 필드를 이 인스턴스 이름으로 채웁니다. 데이터베이스 엔진을 설치하지 않은 경우 이 필드는 비어 있습니다.<br /><br /> **데이터베이스 서버**  는 필수 매개 변수입니다. 인스턴스는 SharePoint 팜에 대해 지원되는 모든 버전 또는 에디션의 SQL Server일 수 있습니다.|  
 ||암호|사용자 입력|새 팜을 만드는 경우 사용자가 입력하는 암호는 팜의 암호가 됩니다. 기존 팜에 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 추가하는 경우 기존 팜 암호를 입력합니다.|  
 ||SharePoint 중앙 관리 포트|필요한 경우 기본값|팜이 구성되지 않은 경우 이 도구는 중앙 관리에 대한 HTTP 엔드포인트 만들기를 포함하여 팜을 만들 수 있는 옵션을 제공합니다. 이 도구는 사용 중이 아닌 임의로 생성된 포트 번호를 선택합니다.|  
-||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Excel Services([ServerName]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|사용자 입력|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버가 Excel services에서 핵심 PowerPivot 기능을 사용 하도록 설정 하려면 필요 합니다. 이 페이지에 입력하는 서버 이름은 **PowerPivot 서버 구성** 페이지의 목록에도 추가됩니다.|  
+||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Excel Services([ServerName]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|사용자 입력|Excel Services에서 핵심 PowerPivot 기능을 사용하려면 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버가 필요합니다. 이 페이지에 입력하는 서버 이름은 **PowerPivot 서버 구성** 페이지의 목록에도 추가됩니다.|  
 |**새 팜 구성**|데이터베이스 서버<br /><br /> 팜 계정<br /><br /> 암호<br /><br /> SharePoint 중앙 관리 포트|필요한 경우 기본값|메인 페이지에 입력한 내용을 기본 설정으로 사용합니다.|  
 |**PowerPivot 서비스 응용 프로그램 만들기**|서비스 애플리케이션 이름|Default|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 기본 이름은 서비스 응용 프로그램 이름 **기본 PowerPivot 서비스 응용 프로그램**합니다. 도구에서 다른 값을 바꿀 수 있습니다.|  
 ||데이터베이스 서버|Default|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 데이터베이스를 호스팅할 데이터베이스 서버입니다. 기본 서버 이름은 팜에 사용되는 데이터베이스 서버와 같습니다. 기본 서버 이름이 아닌 다른 값으로 바꿀 수 있습니다.|  
@@ -132,7 +132,7 @@ ms.locfileid: "48073033"
 ||사이트 URL|필요한 경우 기본값|이 도구는 SharePoint와 동일한 URL 명명 규칙을 사용하여 사이트 URL을 만듭니다.|  
 ||SiteTitle|필요한 경우 기본값|이 도구는 **PowerPivot 사이트** 를 기본 제목으로 추가합니다.|  
 |**사이트 모음에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 기능 활성화**|사이트 URL||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 기능을 활성화할 사이트 모음의 URL입니다.|  
-||이 사이트에 대한 고급 기능을 사용합니다.||SharePoint 사이트 기능 "PremiumSite"을 사용합니다.|  
+||이 사이트에 대한 고급 기능을 사용합니다.||SharePoint 사이트 기능 "premiumsite"을 사용을 사용 하도록 설정 합니다.|  
 |**Secure Store Service 응용 프로그램 만들기**|서비스 애플리케이션 이름|필요한 경우 기본값|Secure Store Service 애플리케이션의 이름을 입력합니다.|  
 ||데이터베이스 서버|사용자 입력|Secure Store Service 애플리케이션에 사용할 데이터베이스 서버의 이름을 입력합니다.|  
 |**Secure Store Service 응용 프로그램 프록시 만들기**|서비스 애플리케이션 이름|필요한 경우 기본값|이전 페이지에서 입력한 Secure Store Service 애플리케이션의 이름을 입력합니다.|  
@@ -141,9 +141,9 @@ ms.locfileid: "48073033"
 ||암호|사용자 입력|데이터 암호화에 사용되는 마스터 키입니다. 기본적으로 키 생성에 사용되는 암호는 팜에서 새 서버를 프로비전하는 데 사용되는 암호와 같습니다. 기본 암호를 고유한 암호로 바꿀 수 있습니다.|  
 |**DataRefresh 무인 계정 만들기**|대상 애플리케이션 ID|필요한 경우 기본값|무인 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 새로 고침용 자격 증명을 저장할 대상 애플리케이션을 만듭니다.<br /><br /> 애플리케이션 ID는 설명 텍스트일 수 있습니다.|  
 ||대상 애플리케이션의 이름|필요한 경우 기본값||  
-||무인 계정 사용자 이름 및 암호|필요한 경우 기본값|대상 애플리케이션에서 무인 데이터 새로 고침을 실행하는 데 사용하는 Windows 사용자 계정의 자격 증명을 입력합니다. 자세한 내용은 [SharePoint Server 2013에서 무인된 서비스 계정을 사용 하 여 Excel Services 구성 데이터 새로 고침](http://technet.microsoft.com/library/hh525344\(office.15\).aspx) (http://technet.microsoft.com/library/hh525344(office.15).aspx)합니다.|  
+||무인 계정 사용자 이름 및 암호|필요한 경우 기본값|대상 애플리케이션에서 무인 데이터 새로 고침을 실행하는 데 사용하는 Windows 사용자 계정의 자격 증명을 입력합니다. 자세한 내용은 [SharePoint Server 2013에서 무인된 서비스 계정을 사용 하 여 Excel Services 구성 데이터 새로 고침](https://technet.microsoft.com/library/hh525344\(office.15\).aspx) (https://technet.microsoft.com/library/hh525344(office.15).aspx)합니다.|  
 ||사이트 URL|필요한 경우 기본값|대상 애플리케이션과 연결된 사이트 모음의 사이트 URL을 입력합니다. 사이트 모음을 추가로 연결하려면 SharePoint 중앙 관리를 사용합니다.|  
-|**Excel Services 서비스 응용 프로그램 만들기**|서비스 애플리케이션 이름|필요한 경우 기본값|서비스 애플리케이션 이름을 입력합니다. SharePoint 팜의 데이터베이스 서버에 동일한 이름의 서비스 애플리케이션 데이터베이스가 만들어집니다.|  
+|**Excel Services 서비스 응용 프로그램 만들기**|서비스 애플리케이션 이름|필요한 경우 기본값|서비스 애플리케이션 이름을 입력합니다. 동일한 이름의 서비스 응용 프로그램 데이터베이스를 SharePoint 팜의 데이터베이스 서버에 만들어집니다.|  
 |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 구성**|서비스 애플리케이션 이름|필요한 경우 기본값|이전 페이지에서 입력한 서비스 애플리케이션 이름입니다.|  
 ||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 이름||등록된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버의 목록입니다.<br /><br /> 주 페이지에서 입력한 서버 이름이 이 페이지에 자동으로 추가됩니다.|  
 |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 추가 기능을 Excel Services 사용 추적기로 등록**|서비스 애플리케이션 이름||이전 페이지에서 입력한 서비스 애플리케이션 이름입니다.|  
@@ -207,6 +207,6 @@ ms.locfileid: "48073033"
  [설치 하거나 SharePoint 추가 기능에 대 한 PowerPivot을 제거할 &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
  [PowerPivot 구성 도구](power-pivot-configuration-tools.md)   
  [중앙 관리에서 PowerPivot 서버 관리 및 구성](power-pivot-server-administration-and-configuration-in-central-administration.md)   
- [예약 된 데이터 새로 고침 및 통합 문서 업그레이드 &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
+ [통합 문서 업그레이드 및 예약된 데이터 새로 고침&#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   

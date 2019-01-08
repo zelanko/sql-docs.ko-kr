@@ -42,19 +42,19 @@ ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 416540095fe08c5777b453db5875212fbea80989
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f79b36232ef099ee211a9f718668d02cb7992ab
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064885"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355109"
 ---
 # <a name="getting-sql-server-assistance"></a>SQL Server 지원 받기
-  [!INCLUDE[msCoName](../includes/msconame-md.md)]는 다음과 같은 세 가지 주요 정보원을 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대한 정보를 제공합니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] 는 다음과 같은 세 가지 주요 정보원을 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대한 정보를 제공합니다.  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서의 로컬 컬렉션으로 설치된 설명서  
   
--   MSDN([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Network) 및 TechNet의 [!INCLUDE[msCoName](../includes/msconame-md.md)] 사이트  
+-   MSDN( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Network) 및 TechNet의 [!INCLUDE[msCoName](../includes/msconame-md.md)] 사이트  
   
 -   그 외 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 웹 사이트의 [!INCLUDE[msCoName](../includes/msconame-md.md)] 정보  
   
@@ -80,21 +80,21 @@ ms.locfileid: "48064885"
   
 |리소스|사용자|  
 |--------------|--------------|  
-|[SQL Server 개발자 센터](http://msdn.microsoft.com/sqlserver/)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스, 보고 시스템 및 비즈니스 인텔리전스 솔루션을 구축하고 응용 프로그램 및 웹 사이트에서 이 시스템을 사용하도록 하는 개발자|  
-|[XML 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=42458)|데이터 저장 및 조작에 XML을 사용하는 웹 사이트 및 응용 프로그램의 웹 사이트 제작자 및 응용 프로그램 개발자|  
-|[SQL Server TechNet 사이트](http://technet.microsoft.com/sqlserver/dn135309)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 사용하는 시스템을 계획, 배포, 관리 및 지원하는 관리자 및 운영자|  
+|[SQL Server 개발자 센터](https://msdn.microsoft.com/sqlserver/)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스, 보고 시스템 및 비즈니스 인텔리전스 솔루션을 구축하고 응용 프로그램 및 웹 사이트에서 이 시스템을 사용하도록 하는 개발자|  
+|[XML 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=42458)|데이터 저장 및 조작에 XML을 사용하는 웹 사이트 및 응용 프로그램의 웹 사이트 제작자 및 응용 프로그램 개발자|  
+|[SQL Server TechNet 사이트](https://technet.microsoft.com/sqlserver/dn135309)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 사용하는 시스템을 계획, 배포, 관리 및 지원하는 관리자 및 운영자|  
   
 ## <a name="additional-online-information"></a>추가적인 온라인 정보  
  추가적인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 정보는 다음 [!INCLUDE[msCoName](../includes/msconame-md.md)] 웹 사이트에서 이용할 수 있습니다.  
   
 |리소스|Description|  
 |--------------|-----------------|  
-|[Microsoft SQL Server](http://go.microsoft.com/fwlink/?linkid=8504)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 데이터 저장 및 비즈니스 인텔리전스 도구로 평가하는 사전 영업 정보를 제공합니다.|  
-|[Microsoft 기술 자료](http://go.microsoft.com/fwlink/?LinkId=42461)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기술 지원 서비스에서 제공하는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 문서를 검색할 수 있는 저장소입니다.|    
+|[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 데이터 저장 및 비즈니스 인텔리전스 도구로 평가하는 사전 영업 정보를 제공합니다.|  
+|[Microsoft 기술 자료](https://go.microsoft.com/fwlink/?LinkId=42461)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기술 지원 서비스에서 제공하는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 문서를 검색할 수 있는 저장소입니다.|    
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] 제품에는 각 릴리스에 대한 지원이 얼마 동안 제공되는지를 정의하는 지원 기간이 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 기술 지원 사이트에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 지원 기간을 정의하는 페이지가 있습니다. 이 페이지에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 제품에 대한 지원 가능 여부를 지정하는 다른 페이지에 대한 링크가 있습니다. 자세한 내용은 [Microsoft 지원 라이프 사이클](http://go.microsoft.com/fwlink/?LinkId=98306)합니다.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 제품에는 각 릴리스에 대한 지원이 얼마 동안 제공되는지를 정의하는 지원 기간이 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 기술 지원 사이트에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 지원 기간을 정의하는 페이지가 있습니다. 이 페이지에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 제품에 대한 지원 가능 여부를 지정하는 다른 페이지에 대한 링크가 있습니다. 자세한 내용은 [Microsoft 지원 라이프 사이클](https://go.microsoft.com/fwlink/?LinkId=98306)합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 제품 설명서 사용](../2014-toc/books-online-for-sql-server-2014.md)  
   
   

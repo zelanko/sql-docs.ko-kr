@@ -11,18 +11,18 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3be9c588865596315839226492cce06c769aa4d1
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
-ms.translationtype: HT
+ms.openlocfilehash: 6e3d145290ac0fb416df91c99337d0e5dc2e30a5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018678"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53373225"
 ---
 # <a name="spatial-indexes-overview"></a>공간 인덱스 개요
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 공간 데이터 및 공간 인덱스를 지원합니다. *공간 인덱스* 는 공간 열을 인덱싱할 수 있는 확장된 인덱스의 유형입니다. 공간 열은 `geometry` 또는 `geography`와 같은 공간 데이터 형식의 데이터를 포함하는 테이블 열입니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입된 공간 기능에 대한 자세한 설명 및 예와 공간 인덱스에 영향을 주는 기능에 대한 정보를 보려면 [SQL Server 2012의 새로운 공간 기능](http://go.microsoft.com/fwlink/?LinkId=226407)백서를 다운로드하세요.  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입된 공간 기능에 대한 자세한 설명 및 예와 공간 인덱스에 영향을 주는 기능에 대한 정보를 보려면 [SQL Server 2012의 새로운 공간 기능](https://go.microsoft.com/fwlink/?LinkId=226407)백서를 다운로드하세요.  
   
 ##  <a name="about"></a> 공간 인덱스 정보  
   
@@ -179,7 +179,7 @@ ms.locfileid: "51018678"
 ##  <a name="methods"></a> 공간 인덱스에서 지원되는 메서드  
   
 ###  <a name="geometry"></a> 공간 인덱스에서 지원되는 기하 도형 메서드  
- 공간 인덱스는 특정 조건에서 STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() 및 STWithin()과 같은 집합 지향 geometry 메서드를 지원합니다. 공간 인덱스의 지원을 받기 위해 이러한 메서드는 쿼리의 WHERE 또는 JOIN ON 절 내에 사용해야 하며 다음 일반 형식의 조건자 내에서 발생해야 합니다.  
+ 공간 인덱스는 특정 조건에서 Stcontains (), stdistance (), stequals (), stintersects (), stoverlaps (), Sttouches 및 stwithin (). 공간 인덱스의 지원을 받기 위해 이러한 메서드는 쿼리의 WHERE 또는 JOIN ON 절 내에 사용해야 하며 다음 일반 형식의 조건자 내에서 발생해야 합니다.  
   
  *geometry1*.*method_name*(*geometry2*)*comparison_operator**valid_number*  
   
@@ -204,7 +204,7 @@ ms.locfileid: "51018678"
 -   *geometry1*.[STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*geometry2*)= 1  
   
 ###  <a name="geography"></a> 공간 인덱스에서 지원되는 지리 메서드  
- 특정 조건에서 공간 인덱스는 STIntersects(),STEquals() 및 STDistance()와 같은 집합 지향 지리 메서드를 지원합니다. 공간 인덱스의 지원을 받기 위해 이러한 메서드는 쿼리의 WHERE 절 내에 사용해야 하며 다음 일반 형식의 조건자 내에서 발생해야 합니다.  
+ 특정 조건에서 공간 인덱스는 집합 지향 지리 메서드인 STIntersects(),STEquals(), 및 stdistance ()입니다. 공간 인덱스의 지원을 받기 위해 이러한 메서드는 쿼리의 WHERE 절 내에 사용해야 하며 다음 일반 형식의 조건자 내에서 발생해야 합니다.  
   
  *geography1*.*method_name*(*geography2*)*comparison_operator**valid_number*  
   

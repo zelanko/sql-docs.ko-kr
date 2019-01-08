@@ -11,12 +11,12 @@ ms.assetid: 0ddb3b7a-7464-4d04-8659-11cb2e4cf3c3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ac80f4187bc57c86736f09a19200d408e83eb57d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 6e8425b3d6fdb461b369c2311ba415dd8f032293
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213800"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354969"
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Analysis Services에서 사용되는 도구 및 애플리케이션
   Analysis Services 모델을 개발하고 Analysis Services 인스턴스에서 연결된 데이터베이스를 관리하기 위해 필요한 도구 및 애플리케이션을 찾으세요.  
@@ -27,14 +27,14 @@ ms.locfileid: "48213800"
 ### <a name="download-sql-server-data-tools-for-business-intelligence-ssdt-bi"></a>SQL Server Data Tools for Business Intelligence(SSDT-BI) 다운로드  
  이전에는 BIDS(Business Intelligence Development Studio)라고 하던 SSDT-BI([!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] for Business Intelligence)는 Analysis Services 모델, Reporting Services 보고서 및 Integration Services 패키지를 만드는 데 사용됩니다. 다음 위치에서 SSDT-BI를 다운로드할 수 있습니다.  
   
--   [Visual Studio 2013 용 SSDT-BI 다운로드](http://go.microsoft.com/fwlink/p/?LinkId=396526)  
+-   [Visual Studio 2013 용 SSDT-BI 다운로드](https://go.microsoft.com/fwlink/p/?LinkId=396526)  
   
--   [Visual Studio 2012 용 SSDT-BI 다운로드](http://go.microsoft.com/fwlink/p/?LinkID=273673)  
+-   [Visual Studio 2012 용 SSDT-BI 다운로드](https://go.microsoft.com/fwlink/p/?LinkID=273673)  
   
  이전 버전의 SSDT-BI 또는 BIDS가 컴퓨터에 설치되어 있는 경우 최신 버전이 이전 버전과 함께 설치됩니다. 특정 버전의 서버에 연결된 프로젝트 및 솔루션을 수정할 수 있도록 하기 위해 최신 및 이전 버전의 디자인 도구를 단일 워크스테이션에서 실행하는 것이 일반적입니다.  
   
 > [!NOTE]  
->  Visual Studio 2012 및 Visual Studio 2013 버전의 SSDT를 다운로드할 수 있는 몇몇 사이트가 있습니다. 대부분의 다운로드에는 BI 프로젝트 템플릿이 포함되어 있지 않습니다. 위의 링크를 사용하면 올바른 버전을 얻을 수 있습니다. 비즈니스 인텔리전스 프로젝트 템플릿 폴더가 표시되는 경우 올바른 버전의 SSDT-BI가 설치되어 있는 것입니다. 이 폴더에는 Analysis Services, Reporting Services 및 Integration Services의 프로젝트 템플릿이 포함되어 있습니다. SSDT-BI를 설치한 방법에 따라 SQL Server 데이터베이스의 추가 프로젝트 템플릿이 표시될 수도 있습니다.  
+>  Visual Studio 2012 및 Visual Studio 2013 버전의 SSDT를 다운로드할 수 있는 몇몇 사이트가 있습니다. 대부분의 다운로드에는 BI 프로젝트 템플릿이 포함되어 있지 않습니다. 위의 링크를 사용하면 올바른 버전을 얻을 수 있습니다. Business Intelligence 프로젝트 템플릿 폴더가 보이면 올바른 버전의 SSDT BI 있는지 알 수 있습니다. 이 폴더에는 Analysis Services, Reporting Services 및 Integration Services의 프로젝트 템플릿이 포함되어 있습니다. SSDT-BI를 설치한 방법에 따라 SQL Server 데이터베이스의 추가 프로젝트 템플릿이 표시될 수도 있습니다.  
   
  ![SSDT의 새 프로젝트 템플릿](media/ssdt-biprojects.png "SSDT의 새 프로젝트 템플릿")  
   

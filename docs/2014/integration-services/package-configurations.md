@@ -22,15 +22,15 @@ ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 832cd038151c3816decbc17542c805ed7e161465
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a44b923f98a5e54f8907953d38bf42c37ca0968b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200923"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369505"
 ---
 # <a name="package-configurations"></a>패키지 구성
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 런타임에 속성 값을 업데이트 하는 데 사용할 수 있는 패키지 구성을 제공 합니다.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 런타임에 속성 값을 업데이트하는 데 사용할 수 있는 패키지 구성을 제공합니다.  
   
 > [!NOTE]  
 >  구성은 패키지 배포 모델에 사용할 수 있습니다. 매개 변수는 프로젝트 배포 모델에 대한 구성 대신 사용됩니다. 프로젝트 배포 모델을 사용하면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하십시오.  
@@ -45,7 +45,7 @@ ms.locfileid: "48200923"
   
 -   구성은 패키지를 좀 더 융통성 있게 만듭니다. 예를 들어 구성으로 속성 식에서 사용되는 변수의 값을 업데이트할 수 있습니다.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 여러 가지 XML 파일과 같은 패키지 구성 저장 방식을 지원, 테이블에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 및 환경 변수와 패키지 있습니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 XML 파일, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 테이블, 환경 변수 및 패키지 변수와 같은 여러 가지 패키지 구성 저장 방식을 지원합니다.  
   
  각 구성은 한 개의 속성/값 쌍입니다. XML 구성 파일 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 유형은 여러 구성을 포함할 수 있습니다.  
   
@@ -122,9 +122,9 @@ ms.locfileid: "48200923"
 ```  
   
 ### <a name="registry-entry"></a>레지스트리 항목  
- 레지스트리 항목을 사용하여 구성을 저장하려면 기존 키를 사용하거나 HKEY_CURRENT_USER에서 새 키를 만들 수 있습니다. 레지스트리 키를 사용 하면 명명 된 값이 있어야 합니다. `Value`합니다. 값은 DWORD 또는 문자열이 될 수 있습니다.  
+ 레지스트리 항목을 사용하여 구성을 저장하려면 기존 키를 사용하거나 HKEY_CURRENT_USER에서 새 키를 만들 수 있습니다. `Value` 값이 있는 레지스트리 키를 사용해야 합니다. 값은 DWORD 또는 문자열이 될 수 있습니다.  
   
- **레지스트리 항목** 구성 유형을 선택할 경우 레지스트리 항목 상자에 레지스트리 키의 이름을 입력합니다. 형식은 \<레지스트리 키>입니다. HKEY_CURRENT_USER의 루트에 없는 레지스트리 키를 사용하려면 \<레지스트리 키\레지스트리 키\\...> 형식을 사용하여 키를 식별합니다. 예를 들어 SSISPackages에 있는 MyPackage 키를 사용 하려면 입력 `SSISPackages\MyPackage`합니다.  
+ **레지스트리 항목** 구성 유형을 선택할 경우 레지스트리 항목 상자에 레지스트리 키의 이름을 입력합니다. 형식은 \<레지스트리 키>입니다. HKEY_CURRENT_USER의 루트에 없는 레지스트리 키를 사용하려면 \<레지스트리 키\레지스트리 키\\...> 형식을 사용하여 키를 식별합니다. 예를 들어 SSISPackages에 있는 MyPackage 키를 사용하려면 `SSISPackages\MyPackage`를 입력합니다.  
   
 ### <a name="sql-server"></a>SQL Server  
  **SQL Server** 구성 유형을 선택한 경우 구성을 저장할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스에 대한 연결을 지정하십시오. 기존 테이블에 구성을 저장하거나 지정한 데이터베이스에 새 테이블을 만들 수 있습니다.  
@@ -145,7 +145,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  구성에 지정한 이름은 **ConfigurationFilter** 열에 저장된 값입니다.  
   
 ## <a name="direct-and-indirect-configurations"></a>직접 및 간접 구성  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 직접 및 간접 구성을 제공합니다. 구성을 직접으로 지정한 경우 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 구성 항목 및 패키지 개체 속성 간에 직접 연결을 만듭니다. 직접 구성은 원본의 위치가 변경되지 않는 경우에 적합합니다. 예를 들어 패키지의 모든 배포가 동일한 파일 경로를 사용하는 경우 XML 구성 파일을 지정할 수 있습니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 직접 및 간접 구성을 제공합니다. 구성을 직접으로 지정한 경우 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 구성 항목 및 패키지 개체 속성 간에 직접 연결을 만듭니다. 직접 구성은 원본의 위치가 변경되지 않는 경우에 적합합니다. 예를 들어 패키지의 모든 배포가 동일한 파일 경로를 사용하는 경우 XML 구성 파일을 지정할 수 있습니다.  
   
  간접 구성은 환경 변수를 사용합니다. 구성 설정을 직접 지정하는 대신 구성이 구성 값을 포함하는 환경 변수를 가리킵니다. 간접 구성은 각 패키지의 배포에 대해 구성 위치가 변경될 수 있는 경우에 적합합니다.  
   
@@ -154,10 +154,10 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 ## <a name="related-content"></a>관련 내용  
   
--   msdn.microsoft.com의 기술 문서 - [Integration Services 패키지 구성 이해](http://go.microsoft.com/fwlink/?LinkId=165643)   
+-   msdn.microsoft.com의 기술 문서 - [Integration Services 패키지 구성 이해](https://go.microsoft.com/fwlink/?LinkId=165643)   
   
--   www.sqlis.com의 블로그 항목, [코드에 패키지 만들기 – 패키지 구성](http://go.microsoft.com/fwlink/?LinkId=217663)  
+-   블로그 항목 [패키지 구성을 코드에서 패키지를 만드는](https://go.microsoft.com/fwlink/?LinkId=217663), www.sqlis.com에 있습니다.  
   
--   blogs.msdn.com의 블로그 항목 - [API 예제 – 구성 파일을 패키지에 프로그래밍 방식으로 추가](http://go.microsoft.com/fwlink/?LinkId=217664)  
+-   블로그 항목 [API 샘플-패키지 구성 파일을 프로그래밍 방식으로 추가](https://go.microsoft.com/fwlink/?LinkId=217664)을 보려면 blogs.msdn.com에서.  
   
   

@@ -12,17 +12,17 @@ ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 61018db803a8459f10fc6cb0bf49c89dd9c685ed
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 8061cf30107a5bdfff6d8af53e70affb93ff9469
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100325"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372665"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery 모드에서의 DAX 수식 호환성(SSAS 2014)
 Data Analysis Expression 언어 (DAX) Analysis Services 테이블 형식 모델에서 측정값 및 사용에 대 한 다른 사용자 지정 수식을 만드는 데 사용할 수 있습니다 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Excel 통합 문서에서 데이터 모델 및 Power BI Desktop 데이터 모델입니다. 대부분의 측면에서 이러한 환경에서 사용자가 만드는 모델은 동일 하 고 동일한 측정값, 관계 및 Kpi를 사용할 수 등입니다. 그러나 Analysis Services 테이블 형식 모델을 작성 하 고 DirectQuery 모드로 배포 하는 경우 일부의 제한이 있습니다 사용할 수 있는 수식입니다. 이 항목에서는 이러한 차이점의 개요를 제공, 1100 또는 1103 호환성 수준에서 SQL Server 2014 Analysis Services tabulars 모델 및 DirectQuery 모드에서 지원 되지 않는 함수를 나열 하 고 지원 되는 함수를 나열 하지만 수 있습니다. 다른 결과 반환 합니다.  
   
-이 항목에서 사용 하 여 용어 *메모리 내 모델에서는* 호스트 테이블 형식 모드에서 실행 되는 Analysis Services 서버의 메모리에 캐시 된 데이터를 완벽 하 게 되는 테이블 형식 모델을 가리킵니다. 사용 하 여 *DirectQuery 모델* 작성 하거나 DirectQuery 모드로 배포 된 테이블 형식 모델을 가리킵니다. DirectQuery 모드에 대 한 자세한 내용은 [DirectQuery 모드 (SSAS 테이블 형식)](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)합니다.  
+이 항목에서 사용 하 여 용어 *메모리 내 모델에서는* 호스트 테이블 형식 모드에서 실행 되는 Analysis Services 서버의 메모리에 캐시 된 데이터를 완벽 하 게 되는 테이블 형식 모델을 가리킵니다. 사용 하 여 *DirectQuery 모델* 작성 하거나 DirectQuery 모드로 배포 된 테이블 형식 모델을 가리킵니다. DirectQuery 모드에 대 한 자세한 내용은 [DirectQuery 모드 (SSAS 테이블 형식)](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)합니다.  
   
   
 ## <a name="bkmk_SemanticDifferences"></a>메모리 내 모드와 DirectQuery 모드 간의 차이점  
@@ -51,16 +51,16 @@ DirectQuery 모드로 배포된 모델에 대한 쿼리에서는 동일한 모�
 일반적으로 메모리 내 모델에서 DAX는 데이터 형식 불일치에 보다 관대하며, 이 섹션에 설명된 것과 같이 최대 두 번까지 값을 암시적으로 캐스팅하려고 합니다. 그러나 DirectQuery 모드에서 관계형 데이터 저장소로 보내진 수식은 관계형 엔진의 규칙에 따라 더 엄격하게 평가되므로 실패할 가능성이 더 높습니다.  
   
 **문자열과 숫자 비교**  
-예: `“2” < 3`  
+예: `"2" < 3`  
   
 이 수식은 텍스트 문자열과 숫자를 비교합니다. 이 식은 DirectQuery 모드와 메모리 내 모델 모두에서 **true** 가 됩니다.  
   
 메모리 내 모델에서는 문자열로 표현된 숫자가 다른 숫자와의 비교를 위해 숫자 데이터 형식으로 암시적으로 캐스팅되므로 결과가 **true** 가 됩니다. SQL에서도 텍스트 숫자를 숫자 데이터 형식과 비교하기 위해 암시적으로 숫자로 캐스팅합니다.  
   
-이는 첫 번째 버전의 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]에서 변경된 동작으로, 이 버전에서는 텍스트 "2"가 항상 모든 숫자보다 큰 것으로 간주되기 때문에 **false**가 반환되었습니다.  
+첫 번째 버전의 동작 변경에에서이 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]를 반환 합니다 **false**텍스트 "2" 항상 것은 모든 숫자 보다 큰 때문입니다.  
   
 **텍스트와 부울 비교**  
-예: `“VERDADERO” = TRUE`  
+예: `"VERDADERO" = TRUE`  
   
 이 식은 텍스트 문자열을 부울 값과 비교합니다. 일반적으로 DirectQuery 또는 메모리 내 모델에서는 문자열 값을 부울 값과 비교하면 오류가 발생합니다. 이 규칙의 유일한 예외는 문자열에 **true** 또는 **false**라는 단어가 포함된 경우입니다. 문자열에 true 또는 false 값이 포함되어 있으면 부울로 변환 후 비교가 수행되어 논리적 결과가 반환됩니다.  
   
@@ -80,7 +80,7 @@ DAX에는 일반적인 의미의 캐스팅 함수는 없지만 많은 비교 및
 -   비교에 사용될 때와 EXACT, AND, OR, &amp;&amp;또는 ||와 함께 사용될 때 부울 값은 항상 논리적 값으로 처리됩니다.  
   
 **문자열에서 부울로 캐스팅**  
-메모리 내 모델과 DirectQuery 모델에서는 **“”** (빈 문자열), **“true”** 및 **“false”** 문자열만 부울 값으로 캐스팅할 수 있습니다. 빈 문자열은 false 값으로 캐스팅됩니다.  
+메모리 내 모델과 DirectQuery 모델으로 캐스팅할 수 있습니다 부울 값 문자열만에서: **""** (빈 문자열), **"true"** 합니다 **"false"** 경우 빈 문자열; false 값으로 캐스팅 합니다.  
   
 다른 문자열을 부울 데이터 형식으로 캐스팅하면 오류가 발생합니다.  
   
@@ -92,10 +92,10 @@ DirectQuery 모드에서 날짜 및 시간의 문자열 표현을 실제 **datet
 메모리 내 데이터 저장소를 사용하는 모델에서 지원되는 텍스트 형식 날짜의 범위는 SQL Server에서 지원되는 문자열 형식 날짜의 범위보다 제한적입니다. 그러나 DAX에서는 사용자 지정 날짜 및 시간 형식이 지원됩니다.  
   
 **문자열에서 부울이 아닌 다른 값으로 캐스팅**  
-문자열에서 부울이 아닌 값으로 캐스팅할 때 DirectQuery 모드는 SQL Server와 동일하게 작동합니다. 자세한 내용은 [CAST 및 CONVERT(Transact-SQL)](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8)를 참조하세요.  
+문자열에서 부울이 아닌 값으로 캐스팅할 때 DirectQuery 모드는 SQL Server와 동일하게 작동합니다. 자세한 내용은 [CAST 및 CONVERT(Transact-SQL)](https://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8)를 참조하세요.  
   
 **숫자에서 문자열로의 캐스팅이 허용되지 않음**  
-예: `CONCATENATE(102,”,345”)`  
+예: `CONCATENATE(102,",345")`  
   
 SQL Server에서는 숫자에서 문자열로의 캐스팅이 허용되지 않습니다.  
   
@@ -104,7 +104,7 @@ SQL Server에서는 숫자에서 문자열로의 캐스팅이 허용되지 않�
 **DirectQuery에서 2번의 캐스팅 시도가 지원되지 않음**  
 메모리 내 모델에서는 대개 첫 번째 캐스팅 시도가 실패하면 두 번째 캐스팅을 시도합니다. DirectQuery 모드에서는 두 번째 시도가 수행되지 않습니다.  
   
-예: `TODAY() + “13:14:15”`  
+예: `TODAY() + "13:14:15"`  
   
 이 식에서 첫 번째 매개 변수는 **datetime** 형식이고 두 번째 매개 변수는 **string**형식입니다. 그러나 피연산자를 결합할 때 캐스팅은 다르게 처리됩니다. DAX에서는 **string** 에서 **double**로의 암시적 캐스팅을 수행합니다. 메모리 내 모델에서는 수식 엔진이 **double**로 직접 캐스팅하려고 시도하고, 이 시도가 실패하면 문자열을 **datetime**으로 캐스팅하려고 시도합니다.  
   
@@ -129,7 +129,7 @@ Transact-SQL에서 숫자 오버플로를 발생시키는 연산을 수행하면
 그러나 동일한 수식을 메모리 내 모델에서 사용할 경우에는 8바이트 정수가 반환됩니다. 이는 수식 엔진이 숫자 오버플로에 대한 검사를 수행하지 않기 때문입니다.  
   
 **빈 값을 사용하는 LOG 함수에서 다른 결과가 반환됨**  
-SQL Server에서는 Null과 빈 값을 xVelocity 엔진과는 다르게 처리합니다. 따라서 다음 수식은 DirectQuery 모드에서 오류를 반환하지만 메모리 내 모드에서는 무한대(–inf)를 반환합니다.  
+SQL Server에서는 Null과 빈 값을 xVelocity 엔진과는 다르게 처리합니다. 다음 수식은 DirectQuery 모드에서는 하지만 반환 무한대에서 오류를 반환 하는 결과적으로 (-inf) 메모리 내 모드에서.  
   
 `EXAMPLE: LOG(blank())`  
   
@@ -165,7 +165,7 @@ Excel 및 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 모델에서도 0으�
   
 일반적으로 Excel과 SQL Server에서는 허용되는 날짜 범위가 다르므로 날짜가 다음 날짜를 포함하여 일반적인 날짜 범위 내에 있는 경우에만 결과가 일치할 수 있습니다.  
   
--   가장 빠른 날짜: 1990년 3월 1일  
+-   가장 빠른 날짜: March 1, 1990  
   
 -   가장 늦은 날짜: 9999년 12월 31일  
   
@@ -259,18 +259,18 @@ DirectQuery 모드에서는 산술 연산의 결과가 **Currency**형식일 경
 또한 SQL Server에서 일부 텍스트 함수는 Excel에서 제공되지 않는 추가 인수를 지원합니다. 누락된 인수가 필요한 수식의 경우 메모리 내 모델에서는 다른 결과가 반환되거나 오류가 발생할 수 있습니다.  
   
 **LEFT, RIGHT 등을 사용하여 문자를 반환하는 연산에서는 올바르지만 대/소문자가 다른 형태의 문자가 반환되거나 결과가 반환되지 않을 수 있습니다.**  
-예: `LEFT([“text”], 2)`  
+예: `LEFT(["text"], 2)`  
   
 DirectQuery 모드에서는 반환되는 문자의 대/소문자가 항상 데이터베이스에 저장된 문자와 정확히 동일합니다. 그러나 xVelocity 엔진에서는 성능 향상을 위해 값 압축 및 인덱싱에 다른 알고리즘을 사용합니다.  
   
 기본적으로는 대/소문자를 구분하지 않지만 악센트는 구분하는 Latin1_General 데이터 정렬이 사용됩니다. 따라서 소문자, 대문자 또는 대/소문자로 된 텍스트 문자열 인스턴스가 여러 개 있는 경우 모든 인스턴스가 동일한 문자열로 간주되어 첫 번째 문자열 인스턴스만 인덱스에 저장됩니다. 저장된 문자열에 대해 작동하는 모든 텍스트 함수는 인덱싱된 형태의 지정된 부분을 검색합니다. 따라서 위의 수식 예에서는 전체 열에 대해 첫 번째 인스턴스를 입력으로 사용하여 동일한 값이 반환됩니다.  
   
-[테이블 형식 모델의 문자열 저장소 및 데이터 정렬](http://msdn.microsoft.com/8516f0ad-32ee-4688-a304-e705143642ca)  
+[테이블 형식 모델의 문자열 저장소 및 데이터 정렬](https://msdn.microsoft.com/8516f0ad-32ee-4688-a304-e705143642ca)  
   
 이 동작은 RIGHT, MID 등의 다른 텍스트 함수에도 적용됩니다.  
   
 **문자열 길이가 결과에 영향을 줌**  
-예: `SEARCH(“within string”, “sample target  text”, 1, 1)`  
+예: `SEARCH("within string", "sample target  text", 1, 1)`  
   
 SEARCH 함수를 사용하여 문자열을 검색할 경우 대상 문자열이 within string보다 길면 DirectQuery 모드에서 오류가 발생합니다.  
   
@@ -283,21 +283,21 @@ SEARCH 함수를 사용하여 문자열을 검색할 경우 대상 문자열이 
 메모리 내 모델의 경우 이 수식은 원본 문자열과 바꿀 문자열을 연결하는 Excel의 동작을 따라 CACalifornia를 반환합니다.  
   
 **문자열 중간에서 암시적 TRIM**  
-예: `TRIM(“ A sample sentence with leading white space”)`  
+예: `TRIM(" A sample sentence with leading white space")`  
   
 DirectQuery 모드에서는 DAX TRIM 함수를 SQL 문 `LTRIM(RTRIM(<column>))`으로 변환합니다. 따라서 선행 및 후행 공백만 제거됩니다.  
   
 반면, 메모리 내 모델에서는 동일한 수식이 Excel의 동작을 따라 문자열 내의 공백을 제거합니다.  
   
 **LEN 함수 사용 시 암시적 RTRIM**  
-예: `LEN(‘string_column’)`  
+예: `LEN('string_column')`  
   
 SQL Server와 마찬가지로, DirectQuery 모드에서는 문자열 열의 끝에서 공백을 제거합니다. 즉, 암시적 RTRIM을 수행합니다. 따라서 문자열에 후행 공백이 있는 경우 LEN 함수를 사용하는 수식에서 다른 값이 반환될 수 있습니다.  
   
 **메모리 내 모드에서는 SUBSTITUTE에 대한 추가 매개 변수를 지원함**  
-예: `SUBSTITUTE([Title],”Doctor”,”Dr.”)`  
+예: `SUBSTITUTE([Title],"Doctor","Dr.")`  
   
-예: `SUBSTITUTE([Title],”Doctor”,”Dr.”, 2)`  
+예: `SUBSTITUTE([Title],"Doctor","Dr.", 2)`  
   
 DirectQuery 모드에서는 세 개의 매개 변수, 즉 열에 대한 참조, 이전 텍스트 및 새 텍스트만 사용하는 이 버전의 함수만 사용할 수 있습니다. 두 번째 수식을 사용하면 오류가 발생 합니다.  
   
@@ -506,6 +506,6 @@ LASTDATE
 DATEADD  
   
 ## <a name="see-also"></a>참고자료  
-[DirectQuery 모드(SSAS 테이블 형식)](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[DirectQuery 모드(SSAS 테이블 형식)](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [Integration Services]
@@ -16,12 +15,12 @@ ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: da8e353f9ebd79f0b2934f697cb720f9cc62e3de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe378671c1cb9b93ae8262869742c0b01a6d9cac
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225943"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369935"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>패키지에 대한 SQL Server 에이전트 작업
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 실행을 자동화하고 예약할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템에 저장된 패키지를 예약할 수 있습니다.  
@@ -55,14 +54,14 @@ ms.locfileid: "48225943"
   
  자세한 내용은 [SQL Server 에이전트를 사용하여 패키지 예약](../schedule-a-package-by-using-sql-server-agent.md)을 참조하세요.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 패키지를 실행하는 방법을 보여 주는 비디오는 MSDN Library의 비디오 홈 페이지에서 [방법: SQL Server 에이전트를 사용하여 패키지 실행 자동화(SQL Server 비디오)](http://go.microsoft.com/fwlink/?LinkId=141771)를 참조하세요.  
+ 사용 하는 방법을 보여 주는 비디오 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 패키지를 실행 하는 에이전트의 비디오 홈 페이지를 참조 하세요. [방법: SQL Server 에이전트 (SQL Server 비디오)를 사용 하 여 패키지 실행 자동화](https://go.microsoft.com/fwlink/?LinkId=141771), MSDN Library에서.  
   
 ##  <a name="trouble"></a> 문제 해결  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 커맨드 라인에서 패키지가 성공적으로 실행되더라도 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에이전트 작업 단계를 시작하지 못할 수 있습니다. 이 문제에 대한 몇 가지 일반적인 이유와 권장 솔루션이 있습니다. 자세한 내용은 다음 리소스를 참조하십시오.  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 기술 자료 문서 - [SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행되지 않는다](http://support.microsoft.com/kb/918760)  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 기술 자료 문서 - [SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행되지 않는다](https://support.microsoft.com/kb/918760)  
   
--   MSDN Library의 비디오 - [문제 해결: SQL Server 에이전트를 사용하여 패키지 실행(SQL Server 비디오)](http://go.microsoft.com/fwlink/?LinkId=141772)  
+-   비디오에서는 [문제 해결: SQL Server 에이전트 (SQL Server 비디오)를 사용 하 여 실행 패키지](https://go.microsoft.com/fwlink/?LinkId=141772), MSDN Library에서.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서 패키지를 시작한 후에 패키지 실행이 실패하거나 패키지가 성공적으로 실행되더라도 예기치 않은 결과가 발생할 수 있습니다. 이 문제를 해결하려면 다음 도구를 사용합니다.  
   
@@ -94,16 +93,16 @@ ms.locfileid: "48225943"
   
 ## <a name="external-resources"></a>외부 리소스  
   
--   [웹 사이트의 기술 자료 문서 -](http://support.microsoft.com/kb/918760)SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행되지 않는다 [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
+-   [웹 사이트의 기술 자료 문서 -](https://support.microsoft.com/kb/918760)SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행되지 않는다 [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
--   MSDN Library의 비디오 - [문제 해결: SQL Server 에이전트를 사용하여 패키지 실행(SQL Server 비디오)](http://go.microsoft.com/fwlink/?LinkId=141772)  
+-   비디오에서는 [문제 해결: SQL Server 에이전트 (SQL Server 비디오)를 사용 하 여 실행 패키지](https://go.microsoft.com/fwlink/?LinkId=141772), MSDN Library에서  
   
--   MSDN Library의 비디오 - [방법: SQL Server 에이전트를 사용하여 패키지 실행 자동화(SQL Server 비디오)](http://go.microsoft.com/fwlink/?LinkId=141771)  
+-   비디오에서는 [방법: SQL Server 에이전트 (SQL Server 비디오)를 사용 하 여 패키지 실행 자동화](https://go.microsoft.com/fwlink/?LinkId=141771), MSDN Library에서  
   
--   mssqltips.com의 기술 문서 - [Windows PowerShell을 사용하여 SQL Server 에이전트 작업 확인(Checking SQL Server Agent jobs using Windows PowerShell)](http://go.microsoft.com/fwlink/?LinkId=165675)  
+-   mssqltips.com의 기술 문서 - [Windows PowerShell을 사용하여 SQL Server 에이전트 작업 확인(Checking SQL Server Agent jobs using Windows PowerShell)](https://go.microsoft.com/fwlink/?LinkId=165675)  
   
--   mssqltips.com의 기술 문서 - [SQL 에이전트 작업 설정 또는 해제 시 자동 경고](http://go.microsoft.com/fwlink/?LinkId=165676)  
+-   mssqltips.com의 기술 문서 - [SQL 에이전트 작업 설정 또는 해제 시 자동 경고](https://go.microsoft.com/fwlink/?LinkId=165676)  
   
--   mssqltips.com의 블로그 항목 - [Windows 이벤트 로그에 쓰도록 SQL 에이전트 작업 구성](http://go.microsoft.com/fwlink/?LinkId=220745)  
+-   mssqltips.com의 블로그 항목 - [Windows 이벤트 로그에 쓰도록 SQL 에이전트 작업 구성](https://go.microsoft.com/fwlink/?LinkId=220745)  
   
   
