@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.f1
@@ -13,12 +12,12 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4bf104479ab03525ed648d73911931263206d07b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af2f56c92947cd8e210b8532cb6899c52486707e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063093"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349817"
 ---
 # <a name="cdc-source"></a>CDC 원본
   CDC 원본은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 변경 테이블에서 특정 범위의 변경 데이터를 읽고 변경 내용을 다른 SSIS 다운스트림 구성 요소로 배달합니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "48063093"
   
  CDC 원본은 다음과 같은 구성을 사용합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 데이터베이스에 액세스하기 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ADO.NET 연결 관리자 CDC 원본 연결을 구성 하는 방법에 대 한 자세한 내용은 참조 하세요. [CDC 원본 편집기 &#40;연결 관리자 페이지&#41;](../cdc-source-editor-connection-manager-page.md)합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 데이터베이스에 액세스하기 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ADO.NET 연결 관리자 CDC 원본 연결 구성에 대한 자세한 내용은 [CDC 원본 편집기&#40;연결 관리자 페이지&#41;](../cdc-source-editor-connection-manager-page.md)를 참조하세요.  
   
 -   CDC용으로 설정된 테이블  
   
@@ -46,13 +45,13 @@ ms.locfileid: "48063093"
 ## <a name="error-handling"></a>오류 처리  
  CDC 원본에는 하나의 오류 출력이 있습니다. 구성 요소 오류 출력에 다음과 같은 출력 열이 포함됩니다.  
   
--   **오류 코드**: 값은 항상 -1입니다.  
+-   **오류 코드**: 값은 항상-1입니다.  
   
 -   **오류 열**: 오류의 원인이 되는 원본 열입니다(변환 오류의 경우).  
   
 -   **오류 행 열**: 오류의 원인이 되는 레코드 데이터입니다.  
   
- 오류 동작 설정에 따라 CDC 원본은 추출 프로세스 중 발생하는 오류(데이터 변환, 잘림)를 오류 출력에 반환하는 작업을 지원합니다. 자세한 내용은 [CDC 원본 편집기 &#40;오류 출력 페이지&#41;](../cdc-source-editor-error-output-page.md)합니다.  
+ 오류 동작 설정에 따라 CDC 원본은 추출 프로세스 중 발생하는 오류(데이터 변환, 잘림)를 오류 출력에 반환하는 작업을 지원합니다. 자세한 내용은 [CDC 원본 편집기&#40;오류 출력 페이지&#41;](../cdc-source-editor-error-output-page.md)를 참조하세요.  
   
 ## <a name="data-type-support"></a>데이터 형식 지원  
  Microsoft용 CDC 원본 구성 요소는 올바른 SSIS 데이터 형식에 매핑되는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원합니다.  
@@ -98,11 +97,11 @@ use <cdc-enabled-database-name>
   
  자세한 내용은 다음 항목 중 하나를 참조하십시오.  
   
--   [CDC 원본 편집기 &#40;연결 관리자 페이지&#41;](../cdc-source-editor-connection-manager-page.md)  
+-   [CDC 원본 편집기&#40;연결 관리자 페이지&#41;](../cdc-source-editor-connection-manager-page.md)  
   
--   [CDC 원본 편집기 &#40;열 페이지&#41;](../cdc-source-editor-columns-page.md)  
+-   [CDC 원본 편집기&#40;열 페이지&#41;](../cdc-source-editor-columns-page.md)  
   
--   [CDC 원본 편집기 &#40;오류 출력 페이지&#41;](../cdc-source-editor-error-output-page.md)  
+-   [CDC 원본 편집기&#40;오류 출력 페이지&#41;](../cdc-source-editor-error-output-page.md)  
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 포함됩니다.  
   
@@ -114,18 +113,18 @@ use <cdc-enabled-database-name>
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [CDC 원본 편집기 &#40;연결 관리자 페이지&#41;](../cdc-source-editor-connection-manager-page.md)  
+-   [CDC 원본 편집기&#40;연결 관리자 페이지&#41;](../cdc-source-editor-connection-manager-page.md)  
   
--   [CDC 원본 편집기 &#40;열 페이지&#41;](../cdc-source-editor-columns-page.md)  
+-   [CDC 원본 편집기&#40;열 페이지&#41;](../cdc-source-editor-columns-page.md)  
   
--   [CDC 원본 편집기 &#40;오류 출력 페이지&#41;](../cdc-source-editor-error-output-page.md)  
+-   [CDC 원본 편집기&#40;오류 출력 페이지&#41;](../cdc-source-editor-error-output-page.md)  
   
--   [CDC 원본 사용자 지정 속성](cdc-source-custom-properties.md)  
+-   [CDC Source Custom Properties](cdc-source-custom-properties.md)  
   
 -   [CDC 원본을 사용하여 변경 데이터 추출](cdc-source.md)  
   
 ## <a name="related-content"></a>관련 내용  
   
--   mattmasson.com의 블로그 항목 - [CDC 원본 처리 모드](http://go.microsoft.com/fwlink/?LinkId=242541)  
+-   mattmasson.com의 블로그 항목 - [CDC 원본 처리 모드](https://go.microsoft.com/fwlink/?LinkId=242541)  
   
   

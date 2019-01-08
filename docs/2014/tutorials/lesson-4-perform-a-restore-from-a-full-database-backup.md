@@ -1,5 +1,5 @@
 ---
-title: '4 단원: 전체 데이터베이스 백업에서 복원을 수행 | Microsoft Docs'
+title: '4단원: 전체 데이터베이스 백업에서 복원을 수행 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: 580f76e6-9802-4abc-9043-db6de592c733
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: e239526f0a5e77ad57122e8e9ddbaa163f040827
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3af76a0ec664a10d5457dc3d106de3727740ce19
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162923"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523665"
 ---
 # <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>4단원: 전체 데이터베이스 백업에서 복원 수행
   이 단원에서는 이전 단원에서 만든 전체 데이터베이스 백업에서 복원을 수행하는 tsql 문을 사용하는 방법을 보여 줍니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "48162923"
     RESTORE DATABASE AdventureWorks2012   
     FROM URL = 'https://mystorageaccount.blob.core.windows.net/privatecontainertest/AdventureWorks2012.bak'   
     WITH CREDENTIAL = 'mycredential';  
-    , STATS = 5 – use this to see monitor the progress  
+    , STATS = 5 - use this to see monitor the progress  
     GO  
   
     ```  

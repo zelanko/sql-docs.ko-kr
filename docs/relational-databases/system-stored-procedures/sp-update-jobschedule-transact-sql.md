@@ -18,12 +18,12 @@ ms.assetid: 4df02594-4cd1-49a9-8d97-37c44e4d5423
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d6604a2fb40effa3fd419068ca2e604de4dde3c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcfbe46b428f3e1dc954b63ab4c5b5b423ded6ef
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774411"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213482"
 ---
 # <a name="spupdatejobschedule-transact-sql"></a>sp_update_jobschedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47774411"
   
  **sp_update_jobschedule** 이전 버전과 호환성만 제공 됩니다.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  이전 버전의 Microsoft SQL Server에 사용 된 구문에 대 한 자세한 내용은 TRANSACT-SQL Referencefor Microsoft SQL Server 2000을 참조 하세요.*합니다.*  
   
 ## <a name="remarks"></a>Remarks  
@@ -51,7 +51,7 @@ ms.locfileid: "47774411"
   
  멤버만 **sysadmin** 다른 사용자가 소유한 작업 일정을 업데이트 하려면이 저장된 프로시저를 사용할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 에이전트 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_update_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)  
   

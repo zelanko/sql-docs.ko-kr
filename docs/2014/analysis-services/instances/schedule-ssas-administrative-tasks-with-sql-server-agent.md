@@ -11,12 +11,12 @@ ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b76142fe806e7a294eb67e5e3d43cbf56713760
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cea836d49b46bd7931d7230d3d22824af9506961
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080353"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350877"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>SQL Server 에이전트를 사용하여 SSAS 관리 태스크 예약
   SQL Server 에이전트 서비스를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리 작업을 예약하여 필요한 순서 및 시간에 실행할 수 있습니다. 예약된 태스크를 사용하면 정기적으로 또는 예측 가능한 주기에 따라 프로세스가 자동으로 실행되도록 할 수 있습니다. 비즈니스 활동을 수행하지 않는 시간 동안 큐브 처리 등의 관리 태스크가 실행되도록 예약할 수 있습니다. 또한 SQL Server 에이전트 작업 내에 작업 단계를 만들어 태스크 실행 순서를 지정할 수 있습니다. 예를 들어 큐브를 처리한 다음 큐브 백업을 수행할 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "48080353"
   
  또한 작업에 사용할 테스트 데이터베이스가 있어야 합니다. AdventureWorks 다차원 예제 데이터베이스나 Analysis Services 다차원 자습서에 있는 프로젝트를 배포하여 이 연습에서 사용할 수 있습니다. 자세한 내용은 [Analysis Services 다차원 모델링 자습서에 사용할 예제 데이터 및 프로젝트 설치](../install-sample-data-and-projects.md)을(를) 참조하세요.  
   
-## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>예제 1: 예약된 태스크에서 차원 처리  
+## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>예 1: 예약된 태스크에서 차원 처리  
  이 예에서는 차원을 처리하는 작업을 만들고 예약하는 방법을 보여 줍니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 예약된 태스크는 SQL Server 에이전트 작업에 포함되는 XMLA 스크립트입니다. 이 작업은 원하는 시간 또는 빈도로 실행하도록 예약됩니다. SQL Server 에이전트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 일부이므로 데이터베이스 엔진 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 관리 태스크를 만들고 예약할 수 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "48080353"
      이 단계에서 XMLA 스크립트를 Windows 클립보드에 복사합니다. XMLA 스크립트를 클립보드에 남겨 두거나 메모장 또는 다른 텍스트 편집기에 붙여 넣을 수 있습니다. 다음은 XMLA 스크립트의 예입니다.  
   
     ```  
-    <Batch xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <Batch xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
      <Parallel>  
       <Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
         <Object>  
@@ -106,7 +106,7 @@ ms.locfileid: "48080353"
   
 15. 작업이 끝나면 **닫기**를 클릭합니다.  
   
-## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>예제 2: 예약된 태스크에서 차원 및 파티션 일괄 처리  
+## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>예 2: 예약된 태스크에서 차원 및 파티션 일괄 처리  
  이 예의 절차는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 차원을 일괄 처리하는 작업을 만들고 예약하는 동시에 집계를 위해 차원에 종속되는 큐브 파티션을 처리하는 방법을 보여 줍니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 일괄 처리에 대한 자세한 내용은 [일괄 처리&#40;Analysis Services&#41;](../multidimensional-models/batch-processing-analysis-services.md)를 참조하세요.  
   
 ###  <a name="bkmk_BatchProcess"></a> SQL Server 에이전트 작업에서 차원 및 파티션 일괄 처리를 위한 스크립트 만들기  
@@ -156,7 +156,7 @@ ms.locfileid: "48080353"
      다음 예에서는 수정된 XMLA 스크립트를 보여 줍니다.  
   
     ```  
-    <Batch xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <Batch xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
      <Parallel>  
       <Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
         <Object>  
@@ -223,7 +223,7 @@ ms.locfileid: "48080353"
 16. 작업이 끝나면 **닫기**를 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [처리 옵션 및 설정 &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [처리 옵션 및 설정&#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
  [Analysis Services의 스크립트 관리 태스크](../script-administrative-tasks-in-analysis-services.md)  
   
   

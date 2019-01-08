@@ -21,12 +21,12 @@ ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d731c5fbb7a90e69b7e1b1502411f57e80219892
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae0d84ba18a350adb47ca9a9aeeaf966a90af2a8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687231"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52409580"
 ---
 # <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47687231"
 ## <a name="syntax"></a>구문  
   
 ```sql  
-managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)  
+managed_backup.fn_backup_db_config ('database_name' | '' | NULL)  
 ```  
   
 ##  <a name="Arguments"></a> 인수  
@@ -60,7 +60,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
 |is_managed_backup_enabled|INT|이 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 현재 사용하도록 설정되었는지 여부를 나타냅니다. 값 1은 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 현재 사용하도록 설정되었음을 나타내고 값 0은 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 이 데이터베이스에 대해 사용하도록 설정되지 않았음을 나타냅니다.|  
 |storage_url|NVARCHAR(1024)|저장소 계정의 URL입니다.|  
 |Encryption_algorithm|NCHAR(20)|백업을 암호화할 때 사용할 현재 암호화 알고리즘을 반환합니다.|  
-|Encryptor_type|NCHAR(15)|암호기 설정인: 인증서 또는 비대칭 키입니다.|  
+|Encryptor_type|NCHAR(15)|암호기 설정인 인증서 또는 비대칭 키를 반환합니다.|  
 |Encryptor_name|NCHAR(max_length_of_cert/asymm_key_name)|인증서 또는 비대칭 키의 이름입니다.|  
   
 ## <a name="security"></a>보안  
@@ -69,7 +69,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
  멤버 자격이 필요 합니다 **db_backupoperator** 데이터베이스 역할과 **ALTER ANY CREDENTIAL** 권한. 사용자를 거부 되어서는 안 **VIEW ANY DEFINITION** 권한.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 'TestDB'에 대한 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 구성을 반환합니다.  
+ 다음 예제에서는 반환 된 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 'TestDB'에 대 한 구성  
   
  각 코드 조각에 대해 언어 특성 필드에서 'tsql'을 선택합니다.  
   

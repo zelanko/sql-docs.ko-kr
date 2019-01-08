@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], configuring
@@ -13,12 +12,12 @@ ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3a84224e68be8b5d4c5ad9fcd3f2be1ddce78fdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057463"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804451"
 ---
 # <a name="configure-an-oracle-publisher"></a>Oracle 게시자 구성
   Oracle 게시자에서의 게시는 일반 스냅숏 및 트랜잭션 게시가 만들어지는 것과 같은 방식으로 만들어지지만 Oracle 게시자에서 게시를 만들려면 먼저 다음 단계(1, 3, 4단계는 이 항목에서 자세히 설명)를 수행해야 합니다.  
@@ -123,7 +122,7 @@ ms.locfileid: "48057463"
 > [!NOTE]  
 >  Oracle 게시자는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자 또는 동일한 배포자를 사용하는 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 게시자와 같은 이름을 가질 수 없습니다.  
   
- Oracle 데이터베이스를 게시자로 식별하는 경우 Oracle 게시 옵션인 Complete 또는 Oracle Gateway 중 하나를 선택해야 합니다. 게시자를 식별한 다음에 이 옵션을 변경하려면 해당 게시자를 삭제하고 다시 구성해야 합니다. Oracle Complete 옵션은 Oracle 게시에 대해 지원되는 전체 기능 집합과 함께 스냅숏 및 트랜잭션 게시를 제공하도록 디자인되었습니다. Oracle Gateway 옵션은 복제가 시스템 간 게이트웨이 역할을 하는 경우 성능을 향상시킬 수 있도록 특정 디자인 최적화를 제공합니다.  
+ Oracle 데이터베이스를 게시자로 식별하는 경우 Oracle 게시 옵션인 Oracle Complete 또는 Oracle Gateway 중 하나를 선택해야 합니다. 게시자를 식별한 다음에 이 옵션을 변경하려면 해당 게시자를 삭제하고 다시 구성해야 합니다. Oracle Complete 옵션은 Oracle 게시에 대해 지원되는 전체 기능 집합과 함께 스냅숏 및 트랜잭션 게시를 제공하도록 디자인되었습니다. Oracle Gateway 옵션은 복제가 시스템 간 게이트웨이 역할을 하는 경우 성능을 향상시킬 수 있도록 특정 디자인 최적화를 제공합니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에서 Oracle 게시자를 식별한 다음 복제는 Oracle 데이터베이스의 TNS 서비스 이름과 같은 이름으로 연결된 서버를 만듭니다. 이 연결된 서버는 복제에서만 사용할 수 있습니다. 연결된 서버 연결을 통해 Oracle 게시자에 연결하려면 다른 TNS 서비스 이름을 만든 다음 이 이름을 사용하여 [sp_addlinkedserver&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)를 호출합니다.  
   

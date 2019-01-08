@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSlogreader_history_TSQL
@@ -19,12 +18,12 @@ ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ebf9155848d8acd515eea5dad10318c87f54a912
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8229d107a84dad47ca0cf83703a8cfb5dd3b5501
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645191"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807855"
 ---
 # <a name="mslogreaderhistory-transact-sql"></a>MSlogreader_history(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "47645191"
 |**delivered_commands**|**int**|세션 중에 전달된 총 명령 수입니다.|  
 |**average_commands**|**int**|세션 중에 전달된 평균 명령 수입니다.|  
 |**delivery_rate**|**float**|초당 전달된 평균 명령 수입니다.|  
-|**delivery_latency**|**int**|게시된 데이터베이스에 입력한 명령이 배포 데이터베이스에 입력될 때까지의 대기 시간입니다. 단위는 밀리초입니다.|  
+|**delivery_latency**|**int**|게시된 데이터베이스에 입력한 명령이 배포 데이터베이스에 입력될 때까지의 대기 시간입니다. 밀리초.|  
 |**error_id**|**int**|오류 메시지의 ID를 **MSrepl_error** 시스템 테이블입니다.|  
 |**timestamp**|**timestamp**|이 테이블의 타임스탬프 열입니다.|  
 |**updateable_row**|**bit**|로 **1** 기록 행을 덮어쓸 수 있는 경우.|  

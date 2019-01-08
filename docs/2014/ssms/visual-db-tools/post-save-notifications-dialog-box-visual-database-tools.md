@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65546
@@ -14,12 +14,12 @@ ms.assetid: 195dda61-308a-4c94-8f57-1fd01ab1e521
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0e60eaa2ba818d0f22836182acef96f0dfe1dd87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e4ce89c0a1333a0a9a7a4ee9a801a2969c32a2e6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127600"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810737"
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>사후 저장 알림 대화 상자(Visual Database Tools)
   이 대화 상자는 테이블에 대한 변경 내용을 저장하려 할 때 오류가 발생하면 나타납니다. 이 대화 상자에는 데이터베이스에 성공적으로 저장된 개체와 저장되지 않은 개체 및 발생한 오류가 표시됩니다.  

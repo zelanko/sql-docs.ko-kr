@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data changes [SQL Server]
@@ -17,12 +16,12 @@ ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 23abfb7b5de5f319a15d8d255705929cc4d7293d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220293"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787055"
 ---
 # <a name="about-change-tracking-sql-server"></a>변경 내용 추적 정보(SQL Server)
   변경 내용 추적은 애플리케이션에 대한 효과적인 변경 내용 추적 메커니즘을 제공하는 간단한 솔루션입니다. 일반적으로 애플리케이션에서 데이터베이스의 데이터에 대한 변경 내용을 쿼리하고 이 변경 내용과 관련된 정보에 액세스하도록 하려면 애플리케이션 개발자가 사용자 지정 변경 내용 추적 메커니즘을 구현해야 했습니다. 이러한 메커니즘을 만드는 데는 일반적으로 많은 작업 및 트리거 조합을 사용 하는 경우가 많았습니다 `timestamp` 열, 추적 정보 및 사용자 지정 정리 프로세스를 저장 하기 위한 새 테이블입니다.  

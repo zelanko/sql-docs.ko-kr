@@ -7,24 +7,23 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.ToolsOptionsPages.Text_Editor.XML.Formatting
 ms.assetid: 97373178-d288-4127-af37-d9f5fe1b8607
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: bc45797c7978e1b851078b1644c4a14e31d04bbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c792bc2b37bbaae5161b856a7423adb4b707228
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154242"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328664"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>옵션(텍스트 편집기 - XML - 서식 페이지)
-  이 대화 상자를 사용하여 XML 편집기의 서식 설정을 지정할 수 있습니다. **옵션** 대화 상자는 **도구** 메뉴에서 액세스할 수 있습니다.  
+
+이 대화 상자를 사용하여 XML 편집기의 서식 설정을 지정할 수 있습니다. **옵션** 대화 상자는 **도구** 메뉴에서 액세스할 수 있습니다.  
   
 > [!NOTE]  
->  이러한 설정은 **옵션** 대화 상자에서 **텍스트 편집기** 폴더,**XML** 폴더, **서식** 옵션을 차례로 선택할 때 사용할 수 있습니다.  
+> 이러한 설정은 **옵션** 대화 상자에서 **텍스트 편집기** 폴더,**XML** 폴더, **서식** 옵션을 차례로 선택할 때 사용할 수 있습니다.  
   
 ## <a name="attributes"></a>특성  
  **특성 수동 서식 유지**  
@@ -66,5 +65,3 @@ ms.locfileid: "48154242"
   
 ## <a name="see-also"></a>관련 항목  
  [XML 편집기&#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  
-  
-  

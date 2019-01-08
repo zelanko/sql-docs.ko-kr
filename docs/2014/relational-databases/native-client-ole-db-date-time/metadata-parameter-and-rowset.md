@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: native-client
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [OLE DB]
@@ -12,12 +12,12 @@ ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cad0bb44160908a01e298c8f8f1476c67dbc8905
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 2b96876a050f9ba46363792eec22d76640ee6fc2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110873"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818139"
 ---
 # <a name="parameter-and-rowset-metadata"></a>매개 변수 및 행 집합 메타데이터
   이 항목에서는 향상된 OLE DB 날짜 및 시간 기능과 관련하여 다음과 같은 형식 및 형식 멤버에 대한 정보를 제공합니다.  

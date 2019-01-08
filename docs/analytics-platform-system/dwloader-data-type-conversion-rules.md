@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 1553c02c7d7ff7c1095d4c7217bc628339168a77
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 46d092ee5d3b981c60d7bd5bde49f9994dab4b08
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703981"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519580"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>데이터 형식 변환 규칙 dwloader-병렬 데이터 웨어하우스
 입력된 데이터 형식 및 암시적 데이터 형식 변환에 설명 하는 [dwloader 명령줄 로더](dwloader.md) PDW에 데이터를 로드할 때를 지원 합니다. 암시적 데이터 변환이 입력된 데이터를 SQL Server PDW 대상 테이블의 데이터 형식이 일치 하지 않는 경우 발생 합니다. SQL Server PDW로 성공적으로 로드 데이터를 확인 하기 위한 로드 프로세스를 디자인 하는 경우이 정보를 사용 합니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "51703981"
 ### <a name="DateFormats"></a>날짜/시간 형식  
 Dwloader는 SQL Server PDW에 로드 하는 입력된 데이터에 대 한 다음 데이터 형식을 지원 합니다. 자세한 내용은 표 다음에 나열 됩니다.  
   
-|DATETIME|smalldatetime|날짜|Datetime2|datetimeoffset|  
+|DATETIME|smalldatetime|date|Datetime2|datetimeoffset|  
 |------------|-----------------|--------|-------------|------------------|  
 |[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fff]|[M[M]]M-[d]d-[yy]yy HH:mm[:00]|[M[M]]M-[d]d-[yy]yy|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff]|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff] zzz|  
 |[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm[:00][tt]||[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt] zzz|  
@@ -103,7 +103,7 @@ Dwloader는 SQL Server PDW에 로드 하는 입력된 데이터에 대 한 다�
   
 상세 정보:  
   
--   월, 일 및 연도 값을 구분 하는 경우, 사용할 수 있습니다 '-', '/' 또는 '. '. 간단히 하기 위해 테이 표에서는 '-' 구분 기호만 사용합니다.  
+-   월, 일 및 연도 값을 구분 하는 경우, 사용할 수 있습니다 '-', '/' 또는 '. '. 간단히 하기 위해 테이블에서는 '-' 구분 기호만 사용합니다.  
   
 -   텍스트로 월 지정 하려면 3 자 이상의 문자를 사용 합니다. 1 또는 2 개의 문자를 사용 하 여 개월 수로 해석 됩니다.  
   
@@ -126,7 +126,7 @@ Dwloader는 SQL Server PDW에 로드 하는 입력된 데이터에 대 한 다�
 |문자열 리터럴로 **정수** 형식|' '<br /><br />예: '1' 또는 '321'|리터럴 문자열로 서식이 지정 된 정수 값에 음수 값을 포함할 수 없습니다. 예를 들어, '-' 123 값 오류가 발생 합니다.<br /><br />1 보다 큰 값을 1로 변환 됩니다. 예를 들어, '123' 값은 1로 변환 됩니다.|  
 |문자열 리터럴|'TRUE' 또는 'f a L'<br /><br />예: ' true'|'TRUE' 값이 1로 변환 됩니다. 'FALSE' 값은 0으로 변환 됩니다.|  
 |정수 리터럴|fffffffn<br /><br />예: 1 또는 321|0 보다 작거나 1 보다 큰 값을 1로 변환 됩니다. 예를 들어,-123 및 123 값을 1로 변환 됩니다.|  
-|10 진수 리터럴|fffnn.fffn<br /><br />예제: 1234.5678|0 보다 작거나 1 보다 큰 값을 1로 변환 됩니다. 예를 들어 123.45 및-123.45 값 1로 변환 됩니다.|  
+|10 진수 리터럴|fffnn.fffn<br /><br />예: 1234.5678|0 보다 작거나 1 보다 큰 값을 1로 변환 됩니다. 예를 들어 123.45 및-123.45 값 1로 변환 됩니다.|  
   
 ### <a name="decimal-data-type"></a>Decimal 데이터 형식  
 다음 표에서 리터럴 값 형식의 열에 로드 하기 위한 규칙을 정의 **10 진수** (*p, s*). 데이터 변환 규칙은 SQL Server에서와 동일 합니다. 자세한 내용은 [데이터 형식 변환 (데이터베이스 엔진)](https://go.microsoft.com/fwlink/?LinkId=202128) MSDN에 있습니다.  
@@ -172,8 +172,8 @@ Dwloader는 SQL Server PDW에 로드 하는 입력된 데이터에 대 한 다�
 |---------------|-------------------|----------------------------------|  
 |문자열 리터럴|형식: ' 문자열 '<br /><br />예: ' abc'| NA |  
 |유니코드 문자열 리터럴|형식: N'character 문자열 '<br /><br />예: 갖게 '| NA |  
-|정수 리터럴|형식: ffffffffffn<br /><br />예제: 321312313123| NA |  
-|10 진수 리터럴|형식: ffffff.fffffff<br /><br />예제: 12344.34455| NA |  
+|정수 리터럴|형식: ffffffffffn<br /><br />예: 321312313123| NA |  
+|10 진수 리터럴|형식: ffffff.fffffff<br /><br />예: 12344.34455| NA |  
 |Money 리터럴|형식: $ffffff.fffnn<br /><br />예: $ 123456.99|선택적인 통화 기호 값이 삽입 되지 않습니다. 통화 기호를 삽입 하려면 값을 문자열 리터럴로 삽입 합니다. 이 형식의 모든 리터럴 문자열 리터럴로 취급 로더를 일치 됩니다.<br /><br />쉼표는 허용 되지 않습니다.<br /><br />소수점 자릿수 2를 초과 하는 경우 값을 가장 가까운 값으로 반올림 됩니다. 예를 들어 값 123.946789 123.95로 삽입 됩니다.<br /><br />Money 리터럴을 삽입할 CONVERT 함수를 사용 하는 경우 기본 스타일 0 (쉼표를 사용 하지 및 소수점 뒤 두 자리)만 허용 됩니다.|  
   
 ### <a name="general-remarks"></a>일반적인 주의 사항  

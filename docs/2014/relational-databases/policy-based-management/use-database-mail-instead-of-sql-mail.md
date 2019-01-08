@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
@@ -12,12 +12,12 @@ ms.assetid: b08df7be-d8be-4184-a661-38ec0ac85cd1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d12c2f7d6c39530c420dea6cf67d32dfeea76ecc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: cfce3fb95ddae03525b7f63f09d109c6dc80b47c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117483"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807495"
 ---
 # <a name="use-database-mail-instead-of-sql-mail"></a>SQL 메일 대신 데이터베이스 메일 사용
   이 규칙은 sys.configurations 카탈로그 뷰에서 SQL Mail XPs 서버 차원 구성 옵션이 ON으로 설정되었는지 검사합니다.  

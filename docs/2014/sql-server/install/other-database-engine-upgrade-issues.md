@@ -13,12 +13,12 @@ ms.assetid: 78a1d8e8-fa97-476f-8777-84617d145340
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5cbaa1d648b3de2cdd0b16d233db93bf52635b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4fe890744f546e02c91630c5bb0115f5b5c8cb9a
+ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176063"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321639"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>기타 데이터베이스 엔진 업그레이드 문제
   다음은 최신 업그레이드 관리자 버전에서 감지할 수 없는 업그레이드 문제입니다. 아래에 나와 있는 문제를 검토하여 이러한 문제가 시스템에 줄 수 있는 잠재적 영향을 평가하십시오.  
@@ -64,7 +64,7 @@ ms.locfileid: "48176063"
 -   HierarchyID  
   
 ## <a name="target-table-of-the-output-into-clause-cannot-have-any-defined-triggers"></a>OUTPUT INTO 절의 대상 테이블에는 정의된 트리거를 사용할 수 없음  
- OUTPUT INTO 절의 대상 테이블에서 트리거를 활성화할 수 없습니다.  
+ 출력 테이블에 대해서는 트리거가 활성화 하는 경우 대상 테이블에 지원 되지 않습니다.  
   
 ## <a name="compile-time-error-for-udfs-when-the-target-of-an-output-into-clause-is-a-table"></a>OUTPUT INTO 절의 대상이 테이블일 경우 UDF를 컴파일할 때 오류가 발생함  
  UDF(사용자 정의 함수)를 사용하여 데이터베이스 상태 수정 동작을 수행할 수 없습니다. 예를 들어 UDF는 테이블 변수를 제외한 모든 개체에 대해 DDL(CREATE/ALTER/DROP) 또는 DML(INSERT/UPDATE/DELETE) 동작을 수행할 수 없습니다.  

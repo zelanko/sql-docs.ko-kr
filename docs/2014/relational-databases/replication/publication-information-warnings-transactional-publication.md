@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publicationinfo.warningsandagents.tran.f1
@@ -13,12 +12,12 @@ ms.assetid: 4d4baf1d-d0a1-4d09-bec7-137811f43f09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 219993c5ae5bec7ba55c6c25084fa7d10aa948c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a1b2e0f26c543b177d1098440a04a28aa5f9ca32
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093423"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794425"
 ---
 # <a name="publication-information-warnings-transactional-publication-sql-server-2005-and-later"></a>게시 정보, 경고(트랜잭션 게시, SQL Server 2005 이상)
   **경고** 탭은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전을 실행하는 배포자에서 사용할 수 있습니다. **경고** 탭을 사용하면 선택한 게시에 대해 다음 태스크를 수행할 수 있습니다.  
@@ -48,7 +47,7 @@ ms.locfileid: "48093423"
   
     -   나쁨  
   
-    -   심각  
+    -   위험  
   
  경고를 설정할 때는 임계값도 설정해야 합니다. 예를 들어 경고 **대기 시간이 임계값을 초과하는 경우 경고**를 설정하면 게시자에서 커밋 중인 트랜잭션과 구독자에서 커밋 중인 트랜잭션 간에 허용 가능한 시간을 선택해야 합니다.  
   
@@ -81,6 +80,6 @@ ms.locfileid: "48093423"
  [게시에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
  [복제 모니터로 성능 모니터링](monitor/monitor-performance-with-replication-monitor.md)   
  [복제 모니터링](monitoring-replication.md)   
- [복제 모니터에 임계값 및 경고 설정](monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Set Thresholds and Warnings in Replication Monitor](monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

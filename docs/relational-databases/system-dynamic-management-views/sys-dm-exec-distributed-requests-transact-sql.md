@@ -23,21 +23,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c02ea165ceec8af546d092d955e9275dcc96b240
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 78604c723c4c19e68a6c29fd3113de3d69d36d44
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661192"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532792"
 ---
 # <a name="sysdmexecdistributedrequests-transact-sql"></a>sys.dm_exec_distributed_requests (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   현재 또는 최근에 활성 PolyBase 쿼리에서 모든 요청에 대 한 정보를 보유합니다. 요청/쿼리 당 하나의 행을 나열합니다.  
   
- 요청 ID, 사용자를 검색할 수도 있습니다 실행할 – sys.dm_exec_distributed_requests를 통해 생성 된 실제 분산된 요청 및 세션 기반 합니다. 예를 들어 일반 SQL 및 외부 SQL 테이블을 포함 하는 쿼리에서 다양 한 계산 노드에서 실행 하는 다양 한 문을/요청으로 분해할 수 됩니다. 모든 계산 노드 간에 분산된 하는 단계를 추적 하려면 각각 하나의 특정 요청 및 연산자와 관련 된 계산 노드에서 모든 작업을 추적 하는 '전역' 실행 ID를 소개 하겠습니다.  
+ 요청 ID, 사용자를 검색할 수도 있습니다 실행할-sys.dm_exec_distributed_requests를 통해 생성 된 실제 분산된 요청 및 세션 기반 합니다. 예를 들어 일반 SQL 및 외부 SQL 테이블을 포함 하는 쿼리에서 다양 한 계산 노드에서 실행 하는 다양 한 문을/요청으로 분해할 수 됩니다. 모든 계산 노드 간에 분산된 하는 단계를 추적 하려면 각각 하나의 특정 요청 및 연산자와 관련 된 계산 노드에서 모든 작업을 추적 하는 '전역' 실행 ID를 소개 하겠습니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |sql_handle|**varbinary(64)**|이 보기에 대 한 키입니다. 요청과 연결 된 고유 숫자 id입니다.|시스템의 모든 요청에서 고유 합니다.|  
 |execution_id|**nvarchar(32**|이 쿼리를 실행 하는 세션에 연결 된 고유 숫자 id입니다.||  

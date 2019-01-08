@@ -8,12 +8,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.date: 10/24/2018
-ms.openlocfilehash: a1d8d4c96ec6008b66e8b1be65767e413b0a4db7
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
-ms.translationtype: HT
+ms.technology: install
+ms.openlocfilehash: 44805d6fd7512a5180a2b62e2c8808b890901705
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051145"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808355"
 ---
 # <a name="install-sql-server-2014-bi-features"></a>SQL Server 2014 BI 기능 설치
 

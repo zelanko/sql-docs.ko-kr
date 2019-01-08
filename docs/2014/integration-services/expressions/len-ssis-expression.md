@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - LEN function
@@ -14,12 +13,12 @@ ms.assetid: d961398b-e4d0-4936-be17-8f4c5882a640
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4bb672601f964e259e22f0fda2f28aed6365242f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f04ce15704920ce8ac110946019883f153c57b05
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111583"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799865"
 ---
 # <a name="len-ssis-expression"></a>LEN(SSIS 식)
   문자 식에 포함된 문자의 수를 반환합니다. 문자열에 선행 및 후행 공백이 포함되어 있으면 공백도 개수에 포함됩니다. LEN은 싱글바이트 및 더블바이트 문자의 동일한 문자열에 대해 같은 값을 반환합니다.  
@@ -67,6 +66,6 @@ LEN(@MachineName)
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [함수 &#40;SSIS 식&#41;](functions-ssis-expression.md)  
+ [함수&#40;SSIS 식&#41;](functions-ssis-expression.md)  
   
   

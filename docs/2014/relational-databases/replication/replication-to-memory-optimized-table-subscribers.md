@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f1ec48661147c78449e7767e87bafd475bb7819
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2409c993aad299551dcaf97e11c99fe032a96f1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128653"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800665"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>메모리 액세스에 최적화된 테이블 구독자로 복제
   피어 투 피어 트랜잭션 복제를 제외하고 트랜잭션 복제 구독자 역할을 수행하는 테이블은 메모리 최적화 테이블로 구성할 수 있습니다. 다른 복제 구성은 메모리 최적화 테이블과 호환되지 않습니다.  
@@ -242,7 +241,7 @@ ms.locfileid: "48128653"
     GO  
     ```  
   
-6.  구독자의 데이터베이스에 스키마를 적용하고 나중에 사용할 수 있도록 스키마를 저장합니다.  
+6.  구독자의 데이터베이스에 스키마를 적용 하 고 나중에 사용할 스키마를 저장 합니다.  
   
 7.  구독자에 대해 게시자(원본) 데이터를 로드합니다. 구독을 추가할 때까지는 게시자에서 데이터가 변경되지 않아야 합니다.  아래 표시된 것처럼 BCP를 사용할 수 있습니다.  
   
@@ -302,7 +301,7 @@ GO
   
 -   구독자에서 메모리 최적화 테이블에 복제하는 테이블의 기본 키는 업데이트하는 데 제한 사항이 있습니다. 자세한 내용은 [기본 키에 변경 내용 복제](#PrimaryKey)합니다.  
   
--   외래 키, 고유 제약 조건, 트리거, 스키마 수정, ROWGUIDCOL, 계산 열, 데이터 압축, 별칭 데이터 형식, 버전 관리 및 잠금은 메모리 최적화 테이블에서 지원되지 않습니다. 참조 [TRANSACT-SQL에서 메모리 내 OLTP에서 지원 되지 않는 구문](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) 정보에 대 한 합니다.  
+-   외래 키, 고유 제약 조건, 트리거, 스키마 수정, ROWGUIDCOL, 계산 열, 데이터 압축, 별칭 데이터 형식, 버전 관리 및 잠금은 메모리 최적화 테이블에서 지원되지 않습니다. 자세한 내용은 [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) 을 참조하십시오.  
   
 ##  <a name="Schema"></a> 스키마 파일 수정  
   

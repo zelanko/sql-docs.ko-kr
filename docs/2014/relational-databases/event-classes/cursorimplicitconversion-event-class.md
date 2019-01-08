@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4bb7b67ebbe95181b1b25797051e639fb1b3e4b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: efc615e9aa873a322ef9a31b2c293e6c5c4793da
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187503"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795056"
 ---
 # <a name="cursorimplicitconversion-event-class"></a>CursorImplicitConversion 이벤트 클래스
   **CursorImplicitConversion** 이벤트 클래스는 API(응용 프로그래밍 인터페이스) 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 커서에서 발생하는 커서 암시적 변환 이벤트를 의미합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이 요청된 유형의 서버 커서에서 지원되지 않는 Transact-SQL 문을 실행할 때 커서 암시적 변환 이벤트가 발생합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 커서 유형이 변경되었음을 나타내는 오류를 반환합니다.  

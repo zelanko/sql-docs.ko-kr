@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], viewing traces
@@ -20,12 +19,12 @@ ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e6739f427642151bec0fd193c26d40a16af51e94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fd9b95821ee673e259273f880aefe8606fe81d71
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213433"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797025"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>SQL Server Profiler를 사용하여 추적 보기 및 분석
   추적에서 캡처한 이벤트를 보려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 정의된 추적 속성을 기반으로 데이터를 표시합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 분석하는 한 가지 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 같은 다른 프로그램으로 데이터를 복사하는 것입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자는 **Text** 데이터 열이 추적에 포함되어 있는 경우 SQL 일괄 처리와 RPC(원격 프로시저 호출) 이벤트가 있는 추적 파일을 사용할 수 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자에 사용할 수 있도록 올바른 이벤트와 열이 캡처되었는지 확인하려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서 제공되는 사전 정의된 튜닝 템플릿을 사용합니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "48213433"
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적을 열 때 추적 파일이 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 또는 SQL 추적 시스템 저장 프로시저로 생성된 경우 추적 파일에 .trc 파일 확장명이 없어도 됩니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 SQL 추적 .log 파일 및 일반 SQL 스크립트 파일도 읽을 수 있습니다. trace.txt와 같이 .log 파일 확장명을 가지지 않은 SQL 추적 .log 파일을 열 때는 **SQLTrace_Log** 를 파일 형식으로 지정하세요.  
+>  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 SQL 추적 .log 파일 및 일반 SQL 스크립트 파일도 읽을 수 있습니다. trace.txt와 같이 .log 파일 확장명을 가지지 않은 SQL 추적 .log 파일을 열 때는 **SQLTrace_Log** 를 파일 형식으로 지정하세요.  
   
  추적 분석에 유용한 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 날짜 및 시간 표시 형식을 구성하여 추적 분석을 도울 수 있습니다.  
   
@@ -70,7 +69,7 @@ AND     CPU < (Duration * 1000)
   
 2.  대상 이벤트를 찾습니다.  
   
-    -   추적 파일이나 테이블을 열고 **Deadlock Chain**과 같은 원하는 이벤트 클래스의 노드를 확장하십시오. 자세한 내용은 [추적 파일 열기&#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) 또는 [추적 테이블 열기&#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md)를 참조하세요.  
+    -   추적 파일이나 테이블을 열고 **Deadlock Chain**과 같은 원하는 이벤트 클래스의 노드를 확장하십시오. 자세한 내용은 [추적 파일 열기&#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) 또는 [추적 테이블 열기&#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md)에서 제공되는 사전 정의된 튜닝 템플릿을 사용합니다.  
   
     -   확인할 이벤트를 찾을 때까지 추적 데이터를 검색합니다. **에서** 편집 **메뉴의** 찾기 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 명령을 사용하면 추적에서 값을 찾는데 도움이 됩니다. 추적하는 이벤트의 **ClientProcessID** 및 **Start Time** 데이터 열 값을 메모하십시오.  
   

@@ -1,20 +1,22 @@
 ---
-title: SQL Server 빅 데이터를 배포 하는 방법에서 kubernetes 클러스터 | Microsoft Docs
+title: 배포 하는 방법
+titleSuffix: SQL Server 2019 big data clusters
 description: Kubernetes에서 SQL Server 2019 빅 데이터 클러스터 (미리 보기)를 배포 하는 방법에 알아봅니다.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 70d8b07caf618cb5f1629fc80f0ca1db8b73ad3c
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.custom: seodec18
+ms.openlocfilehash: 9c1f2fbb750dcdf8e5d78ddcfd5004a32c0cc209
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269866"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246752"
 ---
-# <a name="how-to-deploy-sql-server-big-data-cluster-on-kubernetes"></a>SQL Server 빅 데이터에서 kubernetes 클러스터를 배포 하는 방법
+# <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 배포 하는 방법
 
 Kubernetes 클러스터에 docker 컨테이너로 SQL Server 빅 데이터 클러스터를 배포할 수 있습니다. 설치 및 구성 단계 개요는 다음과 같습니다.
 
@@ -26,7 +28,7 @@ Kubernetes 클러스터에 docker 컨테이너로 SQL Server 빅 데이터 클�
 
 ## <a id="prereqs"></a> Kubernetes 클러스터 필수 구성 요소
 
-SQL Server 빅 데이터 클러스터는 Kubernetes에 대 한, 서버 및 클라이언트에 대 한 최소 v1.10 버전이 필요합니다. 특정 버전의 kubectl 클라이언트를 설치 하려면 참조 [curl을 통해 이진 kubectl 설치](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)합니다. 최신 버전의 minikube 및 AKS는 1.10 이상. 사용 해야 AKS 용 `--kubernetes-version` 기본값과 다른 버전을 지정 하려면 매개 변수입니다.
+SQL Server 빅 데이터 클러스터의 Kubernetes 버전을 이상이 필요 v1.10 서버 및 클라이언트 (kubectl)에 대 한 합니다.
 
 > [!NOTE]
 > 클라이언트와 서버가 Kubernetes 버전 + 1 또는-1 부 버전 되도록 참고 합니다. 자세한 내용은 [지원 되는 버전 및 구성 요소 기울이기 Kubernetes](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)합니다.
@@ -37,20 +39,22 @@ SQL Server 빅 데이터 클러스터는 Kubernetes에 대 한, 서버 및 클�
 
 세 가지 방법 중 하나로 Kubernetes 배포를 선택할 수 있습니다.
 
-| Kubernetes에 배포 합니다. | Description |
-|---|---|
-| **Minikube** | VM에서 단일 노드 Kubernetes 클러스터입니다. |
-| **Azure Kubernetes 서비스 (AKS)** | Azure의 관리 되는 Kubernetes 컨테이너 서비스입니다. |
-| **여러 컴퓨터** | 물리적 컴퓨터 또는 가상 컴퓨터를 사용 하 여 배포 된 Kubernetes 클러스터의 **kubeadm** |
-
-를 SQL Server 빅 데이터 클러스터에 대 한 이러한 Kubernetes 클러스터 옵션 중 하나를 구성에 대 한 다음 문서 중 하나를 참조 하세요.
-
-   - [Minikube를 구성 합니다.](deploy-on-minikube.md)
-   - [Azure Kubernetes Service에서 Kubernetes 구성](deploy-on-aks.md)
-   - [Kubeadm 사용 하 여 여러 컴퓨터에서 Kubernetes 구성](deploy-with-kubeadm.md)
-   
+| Kubernetes에 배포 합니다. | Description | 링크 |
+|---|---|---|
+| **Minikube** | VM에서 단일 노드 Kubernetes 클러스터입니다. | [지침](deploy-on-minikube.md) |
+| **Azure Kubernetes 서비스 (AKS)** | Azure의 관리 되는 Kubernetes 컨테이너 서비스입니다. | [지침](deploy-on-aks.md) |
+| **여러 컴퓨터** | 물리적 컴퓨터 또는 가상 컴퓨터를 사용 하 여 배포 된 Kubernetes 클러스터의 **kubeadm** | [지침](deploy-with-kubeadm.md) |
+  
 > [!TIP]
 > AKS와 SQL Server 빅 데이터 클러스터를 배포 하는 샘플 python 스크립트를 참조 하세요 [빅 데이터 클러스터 Azure Kubernetes Service (AKS)에서 SQL Server 배포](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks)합니다.
+
+## <a name="deploy-sql-server-2019-big-data-tools"></a>SQL Server 2019 빅 데이터 도구 배포
+
+먼저 SQL Server 2019 빅 데이터 클러스터를 배포 하기 전에 [big data tools 설치](deploy-big-data-tools.md):
+- **mssqlctl**
+- **Kubectl**
+- **Azure Data Studio**
+- **SQL Server 2019 확장**
 
 ## <a id="deploy"></a> SQL Server 빅 데이터 클러스터를 배포 합니다.
 
@@ -61,9 +65,9 @@ Kubernetes 클러스터를 구성한 후에 SQL Server 빅 데이터 클러스�
 
 개발/테스트 환경에 대 한 모든 기본 구성 사용 하 여 Azure에서 빅 데이터 클러스터를 배포 하려면이 문서의 지침을 따릅니다.
 
-[빠른 시작: SQL Server 빅 데이터 클러스터의 kubernetes 배포](quickstart-big-data-cluster-deploy.md)
+[빠른 시작: Kubernetes에서 SQL Server 빅 데이터 클러스터를 배포 합니다.](quickstart-big-data-cluster-deploy.md)
 
-워크 로드 요구 사항에 따라 빅 데이터 클러스터 구성을 사용자 지정 하려는 경우 다음 일련의 지침을 따릅니다.
+빅 데이터 클러스터 워크 로드에 따라 배포를 사용자 지정 하려는 경우 요구,이 문서의 나머지 부분에 지침을 따릅니다.
 
 ## <a name="verify-kubernetes-configuration"></a>Kubernetes 구성 확인
 
@@ -72,52 +76,6 @@ Kubernetes 클러스터를 구성한 후에 SQL Server 빅 데이터 클러스�
 ```bash
 kubectl config view
 ```
-
-## <a id="mssqlctl"></a> Mssqlctl 설치
-
-**mssqlctl** 하면 클러스터 관리자가 부트스트랩 REST Api를 통해 빅 데이터 클러스터를 관리 하는 Python으로 작성 된 명령줄 유틸리티입니다. 필요한 최소 Python 버전 v3.5 됩니다. 또한 있어야 `pip` 다운로드 및 설치 하는 데 사용 되는 **mssqlctl** 도구입니다. 
-
-> [!IMPORTANT]
-> 이전 릴리스를 설치한 경우 클러스터를 삭제 해야 합니다 *하기 전에* 업그레이드 **mssqlctl** 및 새 릴리스를 설치 합니다. 자세한 내용은 [새 릴리스로 업그레이드](deployment-guidance.md#upgrade)합니다.
-
-### <a name="windows-mssqlctl-installation"></a>Windows mssqlctl 설치
-
-1. Windows 클라이언트에 필요한 Python 패키지를 다운로드 [ https://www.python.org/downloads/ ](https://www.python.org/downloads/)합니다. Python3.5.3 이상에서는 Python을 설치할 때는 pip3도 설치 됩니다. 
-
-   > [!TIP] 
-   > Python3을 설치할 때 경로에 Python을 추가 하려면 선택 합니다. 그렇지 않으면 나중에 pip3 위치한를 찾을 수 있으며 경로에 수동으로 추가할 수 있습니다.
-
-1. 최신 있어야 **요청** 패키지 있습니다.
-
-   ```cmd
-   python -m pip install requests
-   python -m pip install requests --upgrade
-   ```
-
-1. 설치할 **mssqlctl** 다음 명령을 사용 하 여:
-
-   ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
-   ```
-
-### <a name="linux-mssqlctl-installation"></a>Linux mssqlctl 설치
-
-Linux에 설치 해야 합니다 **python3** 하 고 **python3-pip** 패키지 한 다음 실행 `sudo pip3 install --upgrade pip`. 3.5 최신 Python 및 pip 설치 됩니다. 다음 예제에서는 ubuntu의 경우 이러한 명령은 작동 하는 방법을 보여 줍니다 (다른 플랫폼을 사용 하는 경우 명령을 수정 하는 패키지 관리자 용):
-
-1. 필요한 Python 패키지를 설치 합니다.
-
-   ```bash
-   sudo apt-get update && /
-   sudo apt-get install -y python3 && /
-   sudo apt-get install -y python3-pip && /
-   sudo -H pip3 install --upgrade pip
-   ```
-
-1. 설치할 **mssqlctl** 다음 명령을 사용 하 여:
-
-   ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
-   ```
 
 ## <a name="define-environment-variables"></a>환경 변수를 정의 합니다.
 
@@ -128,7 +86,7 @@ Linux에 설치 해야 합니다 **python3** 하 고 **python3-pip** 패키지 �
 | **ACCEPT_EULA** | 사용자 계정 컨트롤 | 해당 사항 없음 | SQL Server 사용권 계약 (예: ' Y')에 동의 합니다.  |
 | **CLUSTER_NAME** | 사용자 계정 컨트롤 | 해당 사항 없음 | 빅 데이터 클러스터에 sql Server를 배포 하려면 Kubernetes 네임 스페이스의 이름입니다. |
 | **CLUSTER_PLATFORM** | 사용자 계정 컨트롤 | 해당 사항 없음 | Kubernetes 클러스터가 배포 된 플랫폼입니다. 일 수 있습니다 `aks`, `minikube`, `kubernetes`|
-| **CLUSTER_COMPUTE_POOL_REPLICAS** | 아니요 | 1 | 빌드할 계산 풀 복제본의 수입니다. CTP2.0 반환만 허용 되는 1입니다. |
+| **CLUSTER_COMPUTE_POOL_REPLICAS** | 아니요 | 1 | 빌드할 계산 풀 복제본의 수입니다. Ctp 2.2 반환만 허용 되는 1입니다. |
 | **CLUSTER_DATA_POOL_REPLICAS** | 아니요 | 2 | 풀 구축 하는 복제본에서 데이터의 수입니다. |
 | **CLUSTER_STORAGE_POOL_REPLICAS** | 아니요 | 2 | 저장소 풀 복제본의 수입니다. |
 | **DOCKER_REGISTRY** | 사용자 계정 컨트롤 | TBD | 클러스터를 배포 하는 데 사용 되는 이미지가 저장 된 개인 레지스트리입니다. |
@@ -137,7 +95,7 @@ Linux에 설치 해야 합니다 **python3** 하 고 **python3-pip** 패키지 �
 | **DOCKER_PASSWORD** | 사용자 계정 컨트롤 | 해당 사항 없음 | 위의 개인 리포지토리에 액세스 하기 위한 암호입니다. 것 필요한 것은 제어 된 체크 인된 공개 미리 보기 기간에 대 한 합니다.|
 | **DOCKER_EMAIL** | 사용자 계정 컨트롤 | 해당 사항 없음 | 위의 개인 리포지토리와 연결 된 전자 메일입니다. 것 필요한 것은 제어 된 체크 인된 비공개 미리 보기 기간에 대 한 합니다. |
 | **DOCKER_IMAGE_TAG** | 아니요 | 최신 | 이미지 태그를 지정 하는 데 사용 되는 레이블. |
-| **DOCKER_IMAGE_POLICY** | 아니요 | 항상 | 이미지 끌어오기를 항상 강제로 적용 합니다.  |
+| **DOCKER_IMAGE_POLICY** | 아니요 | Always | 이미지 끌어오기를 항상 강제로 적용 합니다.  |
 | **DOCKER_PRIVATE_REGISTRY** | 사용자 계정 컨트롤 | 1 | 제어 된 체크 인된 공개 미리 보기 기간에 대 한이 값을 1로 설정 해야 합니다. |
 | **CONTROLLER_USERNAME** | 사용자 계정 컨트롤 | 해당 사항 없음 | 클러스터 관리자의 사용자 이름입니다. |
 | **CONTROLLER_PASSWORD** | 사용자 계정 컨트롤 | 해당 사항 없음 | 클러스터 관리자의 암호입니다. |
@@ -153,7 +111,7 @@ Linux에 설치 해야 합니다 **python3** 하 고 **python3-pip** 패키지 �
 > [!IMPORTANT]
 >1. 제한 된 비공개 미리 보기 기간에 대 한 개인 Docker 레지스트리에 대 한 자격 증명은 시 제공 해야 할 심사 하 [EAP 등록](https://aka.ms/eapsignup)합니다.
 >1. 온-프레미스 클러스터를 사용 하 여 작성에 대 한 **kubeadm**, 환경 변수에 대해 값 `CLUSTER_PLATFORM` 는 `kubernetes`합니다. 또한 때 `USE_PERSISTENT_VOLUME=true`, Kubernetes 저장소 클래스를 사전 프로 비전 하 고 사용 하 여 전달 해야 합니다는 `STORAGE_CLASS_NAME`합니다.
->1. 모든 특수 문자를 포함 하는 경우 큰따옴표로 암호를 배치 해야 합니다. 원하는 MSSQL_SA_PASSWORD를 설정할 수 있습니다 하지만 해야 충분히 복잡 하지 사용 하는 `!`, `&` 또는 `‘` 문자입니다. 큰따옴표로 구분 기호에만 작동 하는 bash 명령입니다.
+>1. 모든 특수 문자를 포함 하는 경우 큰따옴표로 암호를 배치 해야 합니다. 원하는 MSSQL_SA_PASSWORD를 설정할 수 있습니다 하지만 해야 충분히 복잡 하지 사용 하는 `!`, `&` 또는 `'` 문자입니다. 큰따옴표로 구분 기호에만 작동 하는 bash 명령입니다.
 >1. 클러스터의 이름에는 소문자 영숫자 문자만 공백 없이 이어야 합니다. 클러스터와 동일한 이름 가진 네임 스페이스의 클러스터에 대 한 모든 Kubernetes 아티팩트 (컨테이너, pod, 상태 집합, 서비스)를 만들 수는 지정 된 이름입니다.
 >1. 합니다 **SA** 계정은 설치 중에 생성 되는 SQL Server Master 인스턴스의 시스템 관리자입니다. 실행 하 여 검색할 수는 SQL Server 컨테이너를 지정한 MSSQL_SA_PASSWORD 환경 변수 만들기 후 컨테이너에서 $MSSQL_SA_PASSWORD 에코 합니다. 보안상의 이유로 설명 된 모범 사례에 따라 SA 암호를 변경 [여기](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password)합니다.
 
@@ -169,9 +127,9 @@ Windows 또는 Linux 클라이언트를 사용 하는 여부에 따라 다른 �
 SET ACCEPT_EULA=Y
 SET CLUSTER_PLATFORM=<minikube or aks or kubernetes>
 
-SET CONTROLLER_USERNAME=<controller_admin_name – can be anything>
-SET CONTROLLER_PASSWORD=<controller_admin_password – can be anything, password complexity compliant>
-SET KNOX_PASSWORD=<knox_password – can be anything, password complexity compliant>
+SET CONTROLLER_USERNAME=<controller_admin_name - can be anything>
+SET CONTROLLER_PASSWORD=<controller_admin_password - can be anything, password complexity compliant>
+SET KNOX_PASSWORD=<knox_password - can be anything, password complexity compliant>
 SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
 
 SET DOCKER_REGISTRY=private-repo.microsoft.com
@@ -190,9 +148,9 @@ SET DOCKER_PRIVATE_REGISTRY="1"
 export ACCEPT_EULA=Y
 export CLUSTER_PLATFORM=<minikube or aks or kubernetes>
 
-export CONTROLLER_USERNAME="<controller_admin_name – can be anything>"
-export CONTROLLER_PASSWORD="<controller_admin_password – can be anything, password complexity compliant>"
-export KNOX_PASSWORD="<knox_password – can be anything, password complexity compliant>"
+export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
+export CONTROLLER_PASSWORD="<controller_admin_password - can be anything, password complexity compliant>"
+export KNOX_PASSWORD="<knox_password - can be anything, password complexity compliant>"
 export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
 
 export DOCKER_REGISTRY="private-repo.microsoft.com"
@@ -230,36 +188,44 @@ Kubernetes 저장소 클래스를 사전 프로 비전 하 고 사용 하 여 �
 클러스터 만들기 API Kubernetes 네임 스페이스를 초기화 하 고 네임 스페이스에 모든 응용 프로그램 pod를 배포에 사용 됩니다. Kubernetes 클러스터에서 SQL Server 빅 데이터 클러스터를 배포 하려면 다음 명령을 실행 합니다.
 
 ```bash
-mssqlctl create cluster <name of your cluster>
+mssqlctl create cluster <your-cluster-name>
 ```
 
-클러스터 부트스트랩 하는 동안 클라이언트 명령 창에는 배포 상태를 출력 합니다. 또한 다른 cmd 창에서 다음이 명령을 실행 하 여 배포 상태를 확인할 수 있습니다.
+클러스터 부트스트랩 하는 동안 클라이언트 명령 창에는 배포 상태를 출력 합니다. 배포 과정에서 컨트롤러 pod에 대 한 기다리고 있는 일련의 메시지를 표시 됩니다.
 
-```bash
-kubectl get all -n <name of your cluster>
-kubectl get pods -n <name of your cluster>
-kubectl get svc -n <name of your cluster>
+```output
+2018-11-15 15:42:02.0209 UTC | INFO | Waiting for controller pod to be up...
 ```
 
-보다 세부적인 상태 및 각 pod에 대 한 구성을 실행 하 여 확인할 수 있습니다.
-```bash
-kubectl describe pod <pod name> -n <name of your cluster>
+10 ~ 20 분 후 있습니다 알려야 컨트롤러 pod가 실행 중인지:
+
+```output
+2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
 ```
 
-컨트롤러 pod가 실행 되 면 배포를 모니터링 하려면 클러스터 관리 포털에서 배포 탭을 활용할 수 있습니다.
+> [!IMPORTANT]
+> 전체 배포는 빅 데이터 클러스터의 구성 요소에 대 한 컨테이너 이미지를 다운로드 하는 데 필요한 시간 때문에 시간이 걸릴 수 있습니다. 그러나 하지 몇 시간이 걸립니다. 배포 문제가 발생 하는 경우 참조를 [문제 해결](#troubleshoot) 모니터링 및 배포를 검사 하는 방법을 알아보려면이 문서의 섹션입니다.
+
+배포가 완료 되 면 출력 성공 하면 알립니다.
+
+```output
+2018-11-15 16:10:25.0583 UTC | INFO | Cluster state: Ready
+2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
+```
 
 ## <a id="masterip"></a> SQL Server 마스터 인스턴스와 SQL Server 빅 데이터 클러스터 IP 주소 가져오기
 
-배포 스크립트를 성공적으로 완료 된 후에 아래 설명 된 단계를 사용 하 여 SQL Server 마스터 인스턴스의 IP 주소를 얻을 수 있습니다. 이 IP 주소와 포트 번호 31433를 사용 하 여 SQL Server 마스터 인스턴스에 연결할 됩니다 (예:  **\<ip 주소\>31433,**). 마찬가지로, SQL Server의 빅 데이터에 대 한 클러스터 IP입니다. 모든 클러스터 끝점은 클러스터 관리 포털에서 서비스 끝점 탭에 나와 있습니다. 배포를 모니터링 하려면 클러스터 관리 포털을 사용할 수 있습니다. 외부 IP 주소 및 포트 번호를 사용 하 여 포털에 액세스할 수 있습니다 합니다 `service-proxy-lb` (예: **https://\<ip 주소\>: 30777**). 값은 관리 포털 액세스에 대 한 자격 증명 `CONTROLLER_USERNAME` 고 `CONTROLLER_PASSWORD` 위에 제공 된 환경 변수입니다.
+배포 스크립트를 성공적으로 완료 된 후에 아래 설명 된 단계를 사용 하 여 SQL Server 마스터 인스턴스의 IP 주소를 얻을 수 있습니다. 이 IP 주소와 포트 번호 31433를 사용 하 여 SQL Server 마스터 인스턴스에 연결할 됩니다 (예:  **\<ip 주소\>31433,**). 마찬가지로, SQL Server의 빅 데이터에 대 한 클러스터 IP입니다. 모든 클러스터 끝점은 클러스터 관리 포털에서 서비스 끝점 탭에 나와 있습니다. 배포를 모니터링 하려면 클러스터 관리 포털을 사용할 수 있습니다. 외부 IP 주소 및 포트 번호를 사용 하 여 포털에 액세스할 수 있습니다 합니다 `service-proxy-lb` (예: **https://\<ip 주소\>: 30777/포털**). 값은 관리 포털 액세스에 대 한 자격 증명 `CONTROLLER_USERNAME` 고 `CONTROLLER_PASSWORD` 위에 제공 된 환경 변수입니다.
 
 ### <a name="aks"></a>AKS
 
 AKS를 사용 하는 경우 Azure는 Azure 부하 분산 장치 서비스를 제공 합니다. 다음 명령을 실행 합니다.
 
 ```bash
-kubectl get svc service-master-pool-lb -n <name of your cluster>
-kubectl get svc service-security-lb -n <name of your cluster>
-kubectl get svc service-proxy-lb -n <name of your cluster>
+kubectl get svc endpoint-master-pool -n <your-cluster-name>
+kubectl get svc service-security-lb -n <your-cluster-name>
+kubectl get svc service-proxy-lb -n <your-cluster-name>
 ```
 
 검색할 합니다 **EXTERNAL-IP** 서비스에 할당 되는 값입니다. 그런 다음 포트 31433에서 IP 주소를 사용 하 여 SQL Server 마스터 인스턴스에 연결 (예:  **\<ip 주소\>31433,**) 및 SQL Server에 대 한 외부 IP를 사용 하는 빅 데이터 클러스터 끝점에 `service-security-lb` 서비스입니다. 
@@ -274,7 +240,7 @@ minikube ip
 
 플랫폼에 관계 없이 실행 하는 Kubernetes 클러스터에서 클러스터에 대해 실행 명령 다음에 배포 된 모든 서비스 끝점을 가져오려면:
 ```bash
-kubectl get svc -n <name of your cluster>
+kubectl get svc -n <your-cluster-name>
 ```
 
 ## <a id="upgrade"></a> 새 릴리스로 업그레이드
@@ -292,7 +258,7 @@ kubectl get svc -n <name of your cluster>
 1. 최신 버전의 설치 **mssqlctl**합니다.
    
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
    ```
 
    > [!IMPORTANT]
@@ -300,6 +266,62 @@ kubectl get svc -n <name of your cluster>
 
 1. 지침을 사용 하 여 최신 릴리스를 설치 합니다 [배포 섹션](#deploy) 이 문서의. 
 
+## <a id="troubleshoot"></a> 모니터링 및 문제 해결
+
+를 모니터링 하거나 배포 문제 해결 **kubectl** 클러스터의 상태를 검사 하 고 잠재적인 문제를 찾아내는 합니다. 배포 중 언제 든 다음 테스트를 실행 하려면 다른 명령 창을 열면 됩니다.
+
+1. 클러스터의 pod의 상태를 검사 합니다.
+
+   ```cmd
+   kubectl get pods -n <your-cluster-name>
+   ```
+
+   배포 하는 동안 사용 하 여 포드를 **상태** 의 **ContainerCreating** 여전히 발생 됩니다. 배포에 어떤 이유로 중지 되는 경우이 수 알 수 있습니다 위치 문제일 수 있습니다. 살펴볼 수도 합니다 **준비** 열입니다. 그러면 pod에 얼마나 많은 컨테이너가 시작 합니다. Note는 배포 구성 및 네트워크에 따라 30 분 이상 걸릴 수 있습니다. 다양 한 구성 요소에 대 한 컨테이너 이미지를 다운로드 하는 데 소요 된이 시간의 대부분입니다. 다음 표에서 배포 중 두 개의 컨테이너의 출력을 편집 하는 예를 보여 줍니다.
+
+   ```output
+   PS C:\> kubectl get pods -n sbdc8
+   NAME                                     READY   STATUS              RESTARTS   AGE
+   mssql-controller-h79ft                   4/4     Running             0          13m
+   mssql-storage-pool-default-0             0/7     ContainerCreating   0          6m
+   ```
+
+1. 자세한 내용은 개별 포드를 설명 합니다. 다음 명령은 검사는 `mssql-storage-pool-default-0` pod입니다.
+
+   ```cmd
+   kubectl describe pod mssql-storage-pool-default-0 -n <your-cluster-name>
+   ```
+
+   이 최근 이벤트를 포함 하 여 pod에 대 한 자세한 정보를 출력 합니다. 오류가 발생 하는 경우 때로는 여기서 오류를 찾을 수 있습니다.
+
+1. Pod에서 실행 중인 컨테이너에 대 한 로그를 검색 합니다. 다음 명령은 명명 된 pod에서 실행 중인 모든 컨테이너에 대 한 로그 검색 `mssql-storage-pool-default-0` 파일 이름으로 출력 `pod-logs.txt`:
+
+   ```cmd
+   kubectl logs mssql-storage-pool-default-0 --all-containers=true -n <your-cluster-name> > pod-logs.txt
+   ```
+
+1. 다음 명령 사용 하 여 배포 전후 동안 클러스터 서비스를 검토 합니다.
+
+   ```cmd
+   kubectl get svc -n <your-cluster-name>
+   ```
+
+   이러한 서비스는 빅 데이터 클러스터에 대 한 내부 및 외부 연결을 지원합니다. 외부 연결을 위해 다음 서비스가 사용 됩니다.
+
+   | 서비스 | Description |
+   |---|---|
+   | **마스터-풀 끝점** | 마스터 인스턴스에 대 한 액세스를 제공합니다.<br/>(**EXTERNAL-IP 31433** 하며 **SA** 사용자) |
+   | **서비스-mssql-컨트롤러-lb**<br/>**mssql 컨트롤러 nodeport 서비스** | 도구 및 클러스터를 관리 하는 클라이언트를 지원 합니다. |
+   | **lb-프록시 서비스-**<br/>**서비스-프록시-nodeport** | 에 대 한 액세스를 제공 합니다 [클러스터 관리 포털](cluster-admin-portal.md)합니다.<br/>(https://**EXTERNAL-IP**: 30777/포털)|
+   | **서비스-보안-lb**<br/>**서비스-보안-nodeport** | HDFS/Spark gateway에 대 한 액세스를 제공합니다.<br/>(**EXTERNAL-IP** 하며 **루트** 사용자) |
+
+   > [!NOTE]
+   > 서비스 이름은 Kubernetes 환경에 따라 달라질 수 있습니다. 서비스 이름을 사용 하 여 종료 Azure Kubernetes Service (AKS)를 배포할 때는 **-lb**합니다. 서비스 이름은 끝나야 minikube 및 kubeadm 배포용 **-nodeport**합니다.
+
+1. 사용 하 여는 [클러스터 관리 포털](cluster-admin-portal.md) 에서 배포를 모니터링 하는 **배포** 탭 합니다. 기다릴 필요가 합니다 **lb-프록시 서비스-** 서비스를 배포의 시작 부분에 사용할 수 없게 되므로이 포털에 액세스 하기 전에 시작 합니다.
+
+> [!TIP]
+> 클러스터 문제 해결에 대 한 자세한 내용은 참조 하세요. [모니터링 및 SQL Server 빅 데이터 클러스터 문제 해결에 대 한 Kubectl 명령을](cluster-troubleshooting-commands.md)합니다.
+
 ## <a name="next-steps"></a>다음 단계
 
-빅 데이터 클러스터 Kubernetes의 경우 SQL Server를 성공적으로 배포한 [빅 데이터 도구를 설치](deploy-big-data-tools.md) 새로운 기능 중 일부를 사용 하 고 알아봅니다 [SQL Server 2019 미리 보기에서 notebook을 사용 하는 방법을](notebooks-guidance.md)합니다.
+배우고 새 기능 중 일부를 사용해 보세요 [SQL Server 2019 미리 보기에서 notebook을 사용 하는 방법을](notebooks-guidance.md)합니다.

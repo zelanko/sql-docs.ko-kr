@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: 1a4de41f-f38d-40ea-ba1b-6c0ef67ea52a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0ae900ea29dba0217a9e186007476c12fa15c92e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ac9e0cfe4b8e7d0250f6da7acea276f64dfb622f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098583"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790735"
 ---
 # <a name="column-length-distribution-profile-request-options-data-profiling-task"></a>열 길이 분포 프로필 요청 옵션(데이터 프로파일링 태스크)
   **프로필 요청** 페이지의 **요청 속성** 창을 사용하여 요청 창에서 선택한 **열 길이 분포 프로필 요청** 의 옵션을 설정할 수 있습니다. 열 길이 분포 프로필은 선택한 열에 있는 문자열 값의 모든 고유 길이 및 각 길이가 나타내는 테이블 내 행의 비율을 보고합니다. 이 프로필을 사용하면 잘못된 값과 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 두 개의 문자로 구성된 미국 주 코드 열을 프로파일링하는 중 3자 이상의 값이 검색될 수 있습니다.  
@@ -80,7 +79,7 @@ ms.locfileid: "48098583"
  프로필에서 문자열 값을 비교할 때 후행 공백을 무시해야 하는지 여부를 나타냅니다. 이 옵션의 기본값은 **True**입니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 프로 파일링 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)   
+ [데이터 프로파일링 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)   
  [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

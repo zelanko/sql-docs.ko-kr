@@ -1,5 +1,5 @@
 ---
-title: 데이터 마이닝 속성 | Microsoft Docs
+title: Analysis Services 데이터 마이닝 속성 | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9a5825df52bf839e604545acf56fa9650053e4a6
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.openlocfilehash: bd1440e5ce0649d31f0ae6c0577c61e9e081a800
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238803"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072030"
 ---
 # <a name="data-mining-properties"></a>데이터 마이닝 속성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 표에 나열된 데이터 마이닝 서버 속성을 지원합니다. 추가 서버 속성 및 해당 속성 설정 방법에 대한 자세한 내용은 [Analysis Services의 서버 속성](../../analysis-services/server-properties/server-properties-in-analysis-services.md)을 참조하세요.  
   
- **적용 대상:** 다차원 서버 모드에만  
+ **적용 대상:** 다차원 서버 모드에만 적용됩니다.  
   
 ## <a name="non-specific-category"></a>일반 범주  
  **AllowSessionMiningModels**  
@@ -71,7 +71,7 @@ ms.locfileid: "35238803"
 > [!NOTE]  
 >  서버에서 사용할 수 있는 데이터 마이닝 서비스를 정의하는 속성 외에 특정 알고리즘의 동작을 정의하는 데이터 마이닝 속성도 있습니다. 이러한 속성은 서버 수준에서 데이터 마이닝 모델을 만들 때가 아니라 개별 데이터 마이닝 모델을 만들 때 구성합니다. 자세한 내용은 [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [물리적 아키텍처&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
  [Analysis Services의 서버 속성](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Analysis Services 인스턴스의 서버 모드 확인](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  

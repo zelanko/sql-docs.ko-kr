@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -17,12 +16,12 @@ ms.assetid: a7c0cd60-3bec-42be-ad5e-473bd26a06d9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83e8c1bdbfca318ab0f0caec00faa3830a141700
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 101badf320f72887d6eb9669224d24fff5b9a299
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229509"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807405"
 ---
 # <a name="clr-event-category"></a>CLR 이벤트 범주
   **CLR** 이벤트 범주에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임) 개체를 실행하여 만들어지는 이벤트 클래스가 포함됩니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "48229509"
 |[Assembly Load 이벤트 클래스](../../database-engine/assembly-load-event-class.md)|어셈블리 로드 요청이 실행되었음을 나타냅니다.|  
 |[Assembly Load 이벤트 클래스](../../database-engine/assembly-load-event-class.md)|어셈블리 로드 요청을 실행할 때 발생합니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [확장 이벤트](../extended-events/extended-events.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.percentagesamplingtrans.f1
@@ -21,12 +20,12 @@ ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 58d94751d4be5349cc1d904493d46e1a4f135dbd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0b7f433313392c826babcbeb7eeaf9033b046b64
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172495"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805515"
 ---
 # <a name="percentage-sampling-transformation"></a>비율 샘플링 변환
   비율 샘플링 변환은 변환 입력 행의 비율을 선택하여 샘플 데이터 집합을 만듭니다. 샘플 데이터 집합은 입력을 대표하는 결과 샘플을 만들기 위해 변환 입력에서 임의로 선택한 행입니다.  

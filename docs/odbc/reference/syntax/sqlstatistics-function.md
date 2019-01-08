@@ -20,16 +20,16 @@ ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 02bc4c6d30fc6f8fa9d77e3da5f10664fd5a2704
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cd0503b9f0169a19179bcee545132279903ea10
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693901"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207552"
 ---
 # <a name="sqlstatistics-function"></a>SQLStatistics 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLStatistics** 단일 테이블 및 테이블에 연결 된 인덱스에 대 한 통계 목록을 검색 합니다. 드라이버 정보 결과 집합으로 반환 합니다.  
@@ -148,7 +148,7 @@ SQLRETURN SQLStatistics(
 |형식 (ODBC 1.0)|7|NULL이 아닌 Smallint|반환 되는 정보의 유형:<br /><br /> SQL_TABLE_STAT (카디널리티 또는 페이지 열)의 테이블에 대 한 통계를 나타냅니다.<br /><br /> SQL_INDEX_BTREE B-트리 인덱스를 나타냅니다.<br /><br /> SQL_INDEX_CLUSTERED 클러스터형된 인덱스를 나타냅니다.<br /><br /> SQL_INDEX_CONTENT 콘텐츠 인덱스를 나타냅니다.<br /><br /> SQL_INDEX_HASHED 해시 인덱스를 나타냅니다.<br /><br /> SQL_INDEX_OTHER 또 다른 유형의 인덱스를 나타냅니다.|  
 |ORDINAL_POSITION (ODBC 1.0)|8|Smallint|(1부터 시작); 인덱스의 열 시퀀스 번호 형식이 SQL_TABLE_STAT 이면 NULL이 반환 됩니다.|  
 |COLUMN_NAME (ODBC 1.0)|9|Varchar|열 이름입니다. 식 기반 열 경우 급여 + 혜택, 같은 식이 반환 됩니다. 식을 확인할 수 없는 경우 빈 문자열이 반환 됩니다. 형식이 SQL_TABLE_STAT 이면 NULL이 반환 됩니다.|  
-|ASC_OR_DESC (ODBC 1.0)|10|char(1)|열의 순서 정렬: "A" 오름차순을 선택 합니다. "D" 내림차순; 형식이 SQL_TABLE_STAT 인지 또는 데이터 원본에서 열 정렬 순서를 지원 하지 않는 경우 NULL이 반환 됩니다.|  
+|ASC_OR_DESC (ODBC 1.0)|10|char(1)|열의 정렬 순서: "A" 오름차순을 선택 합니다. "D" 내림차순; 형식이 SQL_TABLE_STAT 인지 또는 데이터 원본에서 열 정렬 순서를 지원 하지 않는 경우 NULL이 반환 됩니다.|  
 |카디널리티 (ODBC 1.0)|11|정수|테이블 또는 인덱스 카디널리티입니다. 형식은 SQL_TABLE_STAT; 경우 테이블의 행 수 형식이 지원 되지 않으면 SQL_TABLE_STAT; 인덱스의 고유 값 수 데이터 원본에서 값을 사용할 수 없는 경우 NULL이 반환 됩니다.|  
 |페이지 (ODBC 1.0)|12|정수|인덱스 또는 테이블을 저장 하는 데 사용 되는 페이지 수 형식은 SQL_TABLE_STAT; 경우 테이블에 대 한 페이지 수 형식이 지원 되지 않으면 SQL_TABLE_STAT; 인덱스에 대 한 페이지 수 데이터 원본에서 값을 사용할 수 없는 경우 또는 데이터 원본에 해당 하지 않는 경우 NULL이 반환 됩니다.|  
 |FILTER_CONDITION (ODBC 2.0)|13|Varchar|이 급여와 같은 필터 조건을 인덱스 필터링 된 인덱스인 경우 > 30000; 필터 조건을 확인할 수 없는 경우 빈 문자열입니다.<br /><br /> 인덱스가 필터링된 된 인덱스가 없는 경우 NULL를 확인할 수 없는 형식 SQL_TABLE_STAT 중인지 여부는 필터링 된 인덱스입니다.|  

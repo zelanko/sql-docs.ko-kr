@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Database Tools [SQL Server], Table Designer
@@ -13,12 +13,12 @@ ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53a8c63ab09a28083d564262183b975c6dbdb167
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: becfebbfe57e00b9abcc3cec29364f6b65fb1dfc
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136250"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801785"
 ---
 # <a name="design-tables-visual-database-tools"></a>테이블 디자인(Visual Database Tools)
   테이블 디자이너의 전체 창은 개별 테이블을 디자인하는 데 사용됩니다. 이 단원의 항목에서는 테이블 디자이너를 사용하여 데이터베이스 테이블을 만들고 수정하는 방법에 대해 설명합니다.  

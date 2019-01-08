@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - solutions [SQL Server Management Studio], creating
@@ -12,12 +12,12 @@ ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1638c2d0696ebaac0b9bfebe7f6349080a8332ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8edec14b380a4df9868c97e9b4d9db4feefc4dd0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168633"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815705"
 ---
 # <a name="create-a-new-solution"></a>새 솔루션 만들기
   프로젝트를 만들 경우 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 해당 프로젝트를 포함하는 솔루션을 만듭니다. 공간 인덱스는 한 번에 하나씩만 만들 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 프로젝트 내에서 폴더를 만드는 것이 허용되지 않습니다. 작업을 구성하려면 여러 프로젝트를 만듭니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "48168633"
   
 6.  **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [솔루션 탐색기](solution-explorer.md)   
  [원본 제어에서 솔루션 열기](../../database-engine/open-solutions-from-source-control.md)  
   

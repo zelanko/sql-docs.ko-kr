@@ -20,16 +20,16 @@ ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2e376d10f21fa00c6bbe86fc692b0185f3c8d8d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb490b475c5795125d11915729693eb630934eb8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642851"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201462"
 ---
 # <a name="sqlvaliddsn-function"></a>SQLValidDSN 함수
 **규칙**  
- ODBC 2.0 버전에 도입 되었습니다.  
+ 도입 된 버전: ODBC 2.0  
   
  **요약**  
  **SQLValidDSN** 이름을 시스템 정보에 추가 되기 전에 길이 데이터 원본 이름의 유효성을 검사 합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "47642851"
 ```  
   
 BOOL SQLValidDSN(  
-     LPCSTR    lpszDSN);  
+     LPCSTR    lpszDSN);  
 ```  
   
 ## <a name="arguments"></a>인수  

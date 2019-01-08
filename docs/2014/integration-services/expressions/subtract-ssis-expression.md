@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - '- (subtract)'
@@ -14,12 +13,12 @@ ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82d268ed8f61085a2a829821ee3d68931f31e680
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d23203fece79af9b52c363bc51b9e7442d82158
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161833"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810415"
 ---
 # <a name="--subtract-ssis-expression"></a>-(빼기)(SSIS 식)
   첫 번째 숫자 식에서 두 번째 식을 뺍니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "48161833"
   
 ```  
   
-numeric_expression1 – numeric_expression2  
+numeric_expression1 - numeric_expression2  
   
 ```  
   
@@ -65,7 +64,7 @@ ListPrice - (ListPrice * @[Discount%])
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [연산자 우선순위 및 결합성](operator-precedence-and-associativity.md)   
- [연산자 &#40;SSIS 식&#41;](operators-ssis-expression.md)  
+ [연산자 우선 순위 및 계산 방향](operator-precedence-and-associativity.md)   
+ [연산자&#40;SSIS 식&#41;](operators-ssis-expression.md)  
   
   

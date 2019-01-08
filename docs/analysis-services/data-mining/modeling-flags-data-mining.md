@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 32a7241fcea41af44e3e336d02c857f51d133208
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: f644f882d1a252f678d868d3492b4aed4e11006f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017420"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531906"
 ---
 # <a name="modeling-flags-data-mining"></a>모델링 플래그(데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "34017420"
  특성 열 값이 Null 값을 포함할 수 없음을 나타냅니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 모델 학습 프로세스 중 이 특성 열에 Null 값이 있는 경우에는 오류가 발생합니다.  
   
  **MODEL_EXISTENCE_ONLY**  
- 열이 **없음** 및 **있음**상태로 처리됨을 나타냅니다. 값이 **NULL**인 경우 Missing으로 간주됩니다 MODEL_EXISTENCE_ONLY 플래그는 예측 가능한 특성에 적용되며 대부분의 알고리즘에서 지원됩니다.  
+ 열이 **누락** 하 고 **기존**합니다. 값이 **NULL**인 경우 Missing으로 간주됩니다 MODEL_EXISTENCE_ONLY 플래그는 예측 가능한 특성에 적용되며 대부분의 알고리즘에서 지원됩니다.  
   
- 실제로 MODEL_EXISTENCE_ONLY 플래그를 **True** 로 설정하면 **없음** 과 **있음**의 두 가지 상태만 있도록 값의 표현이 변경됩니다. 누락 이외의 상태는 모두 단일 **있음** 값으로 결합됩니다.  
+ 실제로 MODEL_EXISTENCE_ONLY 플래그 설정 **True** 가지 두 상태만 있도록 값의 표현을 변경: **누락** 하 고 **기존**합니다. 누락 이외의 상태는 모두 단일 **있음** 값으로 결합됩니다.  
   
  이 모델링 플래그는 일반적으로 **NULL** 상태가 암시적인 의미를 갖는 특성을 나타내는 데 사용됩니다. 따라서 **NOT NULL** 상태의 명시적 값은 열이 값을 갖는다는 사실만큼이나 중요하지 않습니다. 예를 들어 [DateContractSigned] 열은 서명되지 않은 계약의 경우 **NULL** 이고 서명된 계약의 경우 **NOT NULL** 일 수 있습니다. 따라서 모델의 목적이 계약에 서명할지 여부를 예측하는 것이라면 MODEL_EXISTENCE_ONLY 플래그를 사용하여 **NOT NULL** 사례의 정확한 날짜 값은 무시하고 계약이 **없음** 또는 **있음**인 사례만 구별할 수 있습니다.  
   
@@ -57,7 +57,7 @@ WHERE STRUCTURE_NAME = '<structure name>'
   
  데이터 마이닝 디자이너를 사용하거나 연관된 열의 속성을 편집하여 모델에 사용된 모델링 플래그를 추가하거나 변경할 수 있습니다. 이러한 변경 사항을 적용하려면 구조 또는 모델을 다시 처리해야 합니다.  
   
- DMX를 사용하거나 AMO 또는 XMLA 스크립트를 사용하여 새 마이닝 구조 또는 마이닝 모델에서 모델링 플래그를 지정할 수 있습니다. 그러나 기존 마이닝 모델과 구조에 사용된 모델링 플래그는 DMX를 사용하여 변경할 수 없습니다. `ALTER MINING STRUCTURE….ADD MINING MODEL`구문을 사용하여 새 마이닝 모델을 만들어야 합니다.  
+ DMX를 사용하거나 AMO 또는 XMLA 스크립트를 사용하여 새 마이닝 구조 또는 마이닝 모델에서 모델링 플래그를 지정할 수 있습니다. 그러나 기존 마이닝 모델과 구조에 사용된 모델링 플래그는 DMX를 사용하여 변경할 수 없습니다. `ALTER MINING STRUCTURE....ADD MINING MODEL`구문을 사용하여 새 마이닝 모델을 만들어야 합니다.  
   
 ##  <a name="bkmk_UseRegressors"></a> REGRESSOR 모델링 플래그 사용  
  열에 REGRESSOR 모델링 플래그를 설정하면 해당 열에 잠재적인 회귀 변수가 포함되어 있다는 사실이 알고리즘에 전달됩니다. 모델에 사용되는 실제 회귀 변수는 알고리즘에 따라 결정됩니다. 잠재적인 회귀 변수가 예측 가능한 특성을 모델링하지 않는 경우 이를 무시할 수 있습니다.  

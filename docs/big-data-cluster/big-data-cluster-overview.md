@@ -1,18 +1,20 @@
 ---
-title: SQL Server 2019 빅 데이터 클러스터는 무엇 인가요? | Microsoft Docs
+title: 빅 데이터 클러스터는 무엇 인가요?
+titleSuffix: SQL Server 2019 big data clusters
 description: Kubernetes에서 실행 하 고 관계형 둘 다에 대 한 확장 옵션 및 HDFS 데이터를 제공 하는 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에 대해 알아봅니다.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/06/2018
 ms.topic: overview
 ms.prod: sql
-ms.openlocfilehash: e8cdfff0efe8164df7487b3ba2a5bee6cbf0b940
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: 5a44fe9001b7a3bffb67cb3f213bed2ac1065970
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221709"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030047"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>SQL Server 2019 빅 데이터 클러스터는 무엇 인가요?
 
@@ -75,13 +77,13 @@ Kubernetes는 오픈 소스 컨테이너 오 케 스트레이 터를 필요에 �
 |--|--|
 | **Cluster** | Kubernetes 클러스터는 노드 라는 컴퓨터 집합입니다. 하나의 노드 클러스터를 제어 하 고 지정 된 마스터 노드 나머지 노드는 작업자 노드입니다. Kubernetes 마스터는 작업자 간 작업 분산 및 클러스터의 상태를 모니터링 합니다. |
 | **Node** | 노드는 컨테이너 화 된 응용 프로그램을 실행 합니다. 물리적 컴퓨터 또는 가상 컴퓨터 수 있습니다. Kubernetes 클러스터는 혼합 물리적 컴퓨터와 가상 컴퓨터 노드를 포함할 수 있습니다. |
-| **Pod** | Pod는 Kubernetes의 원자성 배포 단위입니다. Pod는 하나 이상의 컨테이너의 논리적 그룹-리소스를 연결 하 고-응용 프로그램을 실행 하는 데 필요한 합니다. 각 pod; 노드에서 실행 됩니다. 노드는 하나 이상의 pod를 실행할 수 있습니다. Kubernetes 마스터를 클러스터의 노드에 pod를 자동으로 할당합니다. |
+| **Pod** | Pod는 Kubernetes의 원자성 배포 단위입니다. Pod는 하나 이상의 컨테이너의 논리적 그룹-및 관련 응용 프로그램을 실행 하려면 리소스가 필요 합니다. 각 pod; 노드에서 실행 됩니다. 노드는 하나 이상의 pod를 실행할 수 있습니다. Kubernetes 마스터를 클러스터의 노드에 pod를 자동으로 할당합니다. |
 
 SQL Server 빅 데이터 클러스터에 Kubernetes는 SQL Server 빅 데이터 클러스터;의 상태 Kubernetes 빌드 및 클러스터 노드를 구성 노드에 pod를 할당 하 고 클러스터의 상태를 모니터링 합니다.
 
 ### <a name="big-data-clusters-architecture"></a>빅 데이터 클러스터 아키텍처
 
-클러스터의 노드는 세 개의 논리 평면으로 정렬 됩니다: 제어 평면, 계산 창 및 데이터 평면입니다. 각 평면은 클러스터의 다른 책임이 있습니다. SQL Server 빅 데이터 클러스터의 모든 Kubernetes 노드는 구성 요소에 대 한 하나 이상의 평면의 pod 호스팅입니다.
+클러스터의 노드는 세 개의 논리 평면으로 정렬 됩니다: 제어 평면, 계산 평면 및 데이터 평면입니다. 각 평면은 클러스터의 다른 책임이 있습니다. SQL Server 빅 데이터 클러스터의 모든 Kubernetes 노드는 구성 요소에 대 한 하나 이상의 평면의 pod 호스팅입니다.
 
 ![아키텍처 개요](media/big-data-cluster-overview/architecture-diagram-planes.png)
 
@@ -91,7 +93,7 @@ SQL Server 빅 데이터 클러스터에 Kubernetes는 SQL Server 빅 데이터 
 
 ### <a id="computeplane"></a> 평면 계산
 
-계산 평면 클러스터에 계산 리소스를 제공합니다. SQL Server Linux pod를 실행 하는 노드를 포함 합니다. 계산 영역에서 pod 나뉩니다 *풀 계산* 특정 태스크를 처리 합니다. 계산 풀 역할을 할 수는 [PolyBase](../relational-databases/polybase/polybase-guide.md) 다른 데이터 원본에 대 한 분산된 쿼리를 위한 스케일 아웃 그룹, HDFS, Oracle, MongoDB, Teradata 등.
+계산 평면 클러스터에 계산 리소스를 제공합니다. SQL Server Linux pod를 실행 하는 노드를 포함 합니다. 계산 영역에서 pod 나뉩니다 *풀 계산* 특정 태스크를 처리 합니다. 계산 풀 역할을 할 수는 [PolyBase](../relational-databases/polybase/polybase-guide.md) HDFS, Oracle, MongoDB, 또는 Teradata 원본 등 다양 한 데이터에 대해 분산된 쿼리를 위한 스케일 아웃 그룹입니다.
 
 ### <a id="dataplane"></a> 데이터 평면
 

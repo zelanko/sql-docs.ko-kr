@@ -15,12 +15,12 @@ ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e52ab35b0f75f80a6117995a353b66c320a5294
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7e727451fb0f9dc7a3d0726a2cb0fa2d6adf997
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085593"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513487"
 ---
 # <a name="delete-views"></a>뷰 삭제
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 다음을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 뷰를 삭제할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]  
@@ -51,7 +51,7 @@ ms.locfileid: "48085593"
 3.  **개체 삭제** 대화 상자에서 **확인**을 클릭합니다.  
   
     > [!IMPORTANT]  
-    >  **개체 삭제** 대화 상자에서 **종속성 표시** 를 클릭하여 *view_name***종속성** 대화 상자를 엽니다. 이 대화 상자에는 해당 뷰에 종속된 모든 개체와 해당 뷰가 종속된 모든 개체가 표시됩니다.  
+    >  **개체 삭제** 대화 상자에서 **종속성 표시** 를 클릭하여 _view_name_**종속성** 대화 상자를 엽니다. 이 대화 상자에는 해당 뷰에 종속된 모든 개체와 해당 뷰가 종속된 모든 개체가 표시됩니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

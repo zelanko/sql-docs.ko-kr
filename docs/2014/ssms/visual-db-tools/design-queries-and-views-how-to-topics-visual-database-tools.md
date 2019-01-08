@@ -4,10 +4,10 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
-- • vs.solutionexplorer.file.query
+- vs.solutionexplorer.file.query
 helpviewer_keywords:
 - queries [Visual Database Tools]
 - View Designer, about View Designer
@@ -20,12 +20,12 @@ ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1652e8a15b973e46a6692fcc2f79bc56cc2fdff8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: ca92258bb764014b6f985ea08aa1a2606037a019
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108363"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328383"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>쿼리 및 뷰 디자인 방법 도움말 항목(Visual Database Tools)
   쿼리 및 뷰 디자이너를 사용하면 애플리케이션의 데이터 검색 및 데이터 조작 부분을 쉽게 만들고 유지 관리할 수 있습니다.  
@@ -61,5 +61,3 @@ ms.locfileid: "48108363"
 ## <a name="related-sections"></a>관련 섹션  
  [테이블 디자인&#40;Visual Database Tools&#41;](design-tables-visual-database-tools.md)  
  테이블, 열, 키, 인덱스, 저장 프로시저 등을 통해 데이터베이스 구조를 디자인하고 유지 관리하는 단계를 자세히 설명합니다.  
-  
-  

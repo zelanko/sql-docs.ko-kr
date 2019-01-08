@@ -14,12 +14,12 @@ ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7e6cf79410e521490a7a2deadd02f5d1181b51fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd33fa4ddfe9f90d7041cf5f6d5b0a47da757a59
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063153"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350767"
 ---
 # <a name="format-a-reporting-services-script-file"></a>Reporting Services 스크립트 파일 형식 지정
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 스크립트는 WSDL(Web Service Description Language)을 기반으로 하는 프록시에 대해 작성된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 코드 파일로, Reporting Services SOAP API를 정의합니다. 스크립트 파일은 확장명이 .rss인 유니코드 또는 UTF-8 텍스트 파일로 저장됩니다.  
@@ -47,13 +47,13 @@ End Sub
 ```  
   
 > [!IMPORTANT]  
->  사용자 자격 증명은 스크립트 환경에서 관리되며 RS.exe를 사용하여 명령 프롬프트 인수를 통해 전달됩니다. *rs* 변수를 사용하여 웹 서비스의 인증을 설정할 수도 있지만 스크립트 환경을 사용하는 것이 좋습니다. 스크립트 파일 자체에서 웹 서비스를 인증하지 않아도 됩니다. 스크립트 환경을 인증 하는 방법에 대 한 자세한 내용은 참조 하세요. [RS.exe 유틸리티 &#40;SSRS&#41;](rs-exe-utility-ssrs.md)합니다.  
+>  사용자 자격 증명은 스크립트 환경에서 관리되며 RS.exe를 사용하여 명령 프롬프트 인수를 통해 전달됩니다. *rs* 변수를 사용하여 웹 서비스의 인증을 설정할 수도 있지만 스크립트 환경을 사용하는 것이 좋습니다. 스크립트 파일 자체에서 웹 서비스를 인증하지 않아도 됩니다. 스크립트 환경 인증에 대한 자세한 내용은 [RS.exe 유틸리티&#40;SSRS&#41;](rs-exe-utility-ssrs.md)를 참조하세요.  
   
- 스크립트 파일 내에서는 네임스페이스를 선언하지 않습니다. 스크립팅 환경에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] namespaces available to you: **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**, and **System.IO**.  
+ 스크립트 파일 내에서는 네임스페이스를 선언하지 않습니다. 스크립팅 환경에서는 유용한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 네임 스페이스를 사용할 수 있습니다. **System.Web.Services**, **System.Web.Services.Protocols**합니다 **System.Xml**, 및 **System.IO**합니다.  
   
- 스크립트 예제는 [SQL Server Reporting Services 제품 예제(SQL Server Reporting Services Product Samples)](http://go.microsoft.com/fwlink/?LinkId=177889)를 참조하십시오.  
+ 스크립트 예제는 [SQL Server Reporting Services 제품 예제(SQL Server Reporting Services Product Samples)](https://go.microsoft.com/fwlink/?LinkId=177889)를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [보고서 서버 웹 서비스](../report-server-web-service/report-server-web-service.md)   
  [기술 참조&#40;SSRS&#41;](../technical-reference-ssrs.md)   
  [RS.exe 유틸리티&#40;SSRS&#41;](rs-exe-utility-ssrs.md)  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, described
@@ -15,12 +14,12 @@ ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 975cd41f544f38a5ded070396fce5df644e6048c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107213"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798935"
 ---
 # <a name="use-sparse-columns"></a>스파스 열 사용
   스파스 열은 Null 값에 대해 최적화된 저장소가 있는 일반 열입니다. 스파스 열을 사용하면 Null 값에 대한 공간 요구 사항이 줄어드는 반면 Null이 아닌 값을 검색하는 데 더 많은 오버헤드가 발생합니다. 최소 20%에서 40% 사이의 공간이 절약되는 경우에는 스파스 열을 사용하십시오. 스파스 열 및 열 집합은 [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) 또는 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) 문을 사용하여 정의합니다.  
@@ -44,7 +43,7 @@ ms.locfileid: "48107213"
   
 -   스파스 열을 포함하는 테이블에 대한 카탈로그 뷰는 일반적인 테이블에 대한 카탈로그 뷰와 동일합니다. sys.columns 카탈로그 뷰는 테이블의 각 열에 대한 행을 포함하고 열 집합(정의된 경우)을 포함합니다.  
   
--   스파스 열은 논리적 테이블이 아닌 저장소 계층의 속성입니다. 따라서 SELECT…INTO 문은 스파스 열 속성을 새 테이블에 복사하지 않습니다.  
+-   스파스 열은 논리적 테이블이 아닌 저장소 계층의 속성입니다. 따라서 SELECT...INTO 문은 스파스 열 속성을 새 테이블에 복사하지 않습니다.  
   
 -   COLUMNS_UPDATED 함수는 `varbinary` 값을 반환하여 DML 동작을 수행하는 동안 업데이트된 모든 열을 나타냅니다. COLUMNS_UPDATED 함수에 의해 반환된 비트는 다음과 같습니다.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "48107213"
 |`uniqueidentifier`|16|20|43%|  
 |`date`|3|7|69%|  
   
- **전체 자릿수 종속 길이 데이터 형식**  
+ **Precision-Dependent-Length 데이터 형식**  
   
 |데이터 형식|비-스파스 바이트|스파스 바이트|NULL 백분율|  
 |---------------|---------------------|------------------|---------------------|  
@@ -100,7 +99,7 @@ ms.locfileid: "48107213"
 |`decimal/numeric(38,s)`|17|21|42%|  
 |`vardecimal(p,s)`|`decimal` 형식을 일반적인 예상치로 사용|||  
   
- **데이터 종속 길이 데이터 형식**  
+ **Data-Dependent-Length 데이터 형식**  
   
 |데이터 형식|비-스파스 바이트|스파스 바이트|NULL 백분율|  
 |---------------|---------------------|------------------|---------------------|  
@@ -116,12 +115,12 @@ ms.locfileid: "48107213"
 ## <a name="in-memory-overhead-required-for-updates-to-sparse-columns"></a>스파스 열을 업데이트하려면 메모리 내 오버헤드가 필요함  
  스파스 열을 사용하여 테이블을 디자인하는 경우 행이 업데이트될 때 테이블에서 null이 아닌 스파스 열 각각에 대해 2바이트의 추가 오버헤드가 필요함에 유의해야 합니다. 이러한 추가 메모리 요구 사항으로 인해 이 메모리 오버헤드를 포함한 총 행 크기가 8019를 초과하여 열을 행에 밀어넣을 수 없으므로 예기치 않게 576 오류가 발생하여 업데이트가 실패할 수 있습니다.  
   
- bigint 형식의 600개 스파스 열을 가진 테이블의 예를 살펴 보십시오. 571개의 null이 아닌 열이 있는 경우 디스크의 총 크기는 571 * 12 = 6852바이트입니다. 추가 행 오버로드와 스파스 열 머리글을 포함하면 약 6895바이트로 증가합니다. 페이지에는 여전히 디스크에서 사용 가능한 1124바이트가 있습니다. 그러면 추가 열을 업데이트할 수 있는 것처럼 보일 수 있습니다. 하지만 업데이트 중에 메모리에 2\*(null이 아닌 스파스 열의 수)에 해당하는 추가 오버헤드가 발생합니다. 이 예에서 추가 오버헤드(2 \* 571 = 1142바이트)를 포함하면 디스크의 행 크기가 약 8037바이트로 증가합니다. 이는 최대 허용 크기인 8019바이트를 초과합니다. 모든 열은 고정 길이 데이터 형식이므로 행에 밀어넣을 수 없습니다. 따라서 576 오류가 발생하여 업데이트가 실패합니다.  
+ bigint 형식의 600개 스파스 열을 가진 테이블의 예를 살펴 보십시오. 571개의 null이 아닌 열이 있는 경우 디스크의 총 크기는 571 * 12 = 6852바이트입니다. 추가 행 오버로드와 스파스 열 머리글을 포함하면 약 6895바이트로 증가합니다. 페이지에는 여전히 디스크에서 사용 가능한 1124바이트가 있습니다. 그러면 추가 열을 업데이트할 수 있는 것처럼 보일 수 있습니다. 하지만 업데이트 중에 메모리에 2\*(null이 아닌 스파스 열의 수)에 해당하는 추가 오버헤드가 발생합니다. 이 예제에서 추가 오버헤드(2 \* 571 = 1142바이트)를 포함하면 디스크의 행 크기가 약 8037바이트로 증가합니다. 이는 최대 허용 크기인 8019바이트를 초과합니다. 모든 열은 고정 길이 데이터 형식이므로 행에 밀어넣을 수 없습니다. 따라서 576 오류가 발생하여 업데이트가 실패합니다.  
   
 ## <a name="restrictions-for-using-sparse-columns"></a>스파스 열 사용에 대한 제한 사항  
  스파스 열은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 사용할 수 있으며 다른 모든 열처럼 작동하지만 다음과 같은 제한 사항의 적용을 받습니다.  
   
--   스파스 열은 Null을 허용해야 하며 ROWGUIDCOL 또는 IDENTITY 속성을 사용할 수 없습니다. 데이터 형식은의 스파스 열 수 없습니다: `text`, `ntext`를 `image`를 `timestamp`, 사용자 정의 데이터 형식 `geometry`, 또는 `geography`; FILESTREAM 특성을 가질 합니다.  
+-   스파스 열은 Null을 허용해야 하며 ROWGUIDCOL 또는 IDENTITY 속성을 사용할 수 없습니다. 스파스 열의 데이터 형식은 `text`, `ntext`, `image`, `timestamp`, 사용자 정의 데이터 형식, `geometry` 또는 `geography`일 수 없으며, 스파스 열에 FILESTREAM 특성을 가질 수 없습니다.  
   
 -   스파스 열은 기본값을 사용할 수 없습니다.  
   

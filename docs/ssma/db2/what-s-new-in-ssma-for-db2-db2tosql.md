@@ -10,12 +10,12 @@ ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: deaaaf4141c363606abfc86720ba4ed043426af6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8b72d53f001654a085b8d2b5d01e203fd1b29ebe
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723811"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400326"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>DB2 용 SSMA의 새로운 기능 (DB2ToSQL)
 이 문서에서는 DB2 각 릴리스의 변경 내용에 대 한 SSMA를 나열 합니다.  

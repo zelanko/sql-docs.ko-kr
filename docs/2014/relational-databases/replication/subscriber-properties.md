@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configdistwizard.subscribers.f1
@@ -15,12 +14,12 @@ ms.assetid: 32aa0347-64e4-4aa4-ac57-6bd3e5d52070
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b48e20c2dd1838ae01447c12d8f65a8929b9d5c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e35b5020eef6b7a884a0490d882c82e2775c8952
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075503"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805785"
 ---
 # <a name="subscriber-properties"></a>구독자 속성
   **구독자 속성** 대화 상자에는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행 중인 구독자와 관련된 정보가 포함되어 있습니다.  
@@ -39,7 +38,7 @@ ms.locfileid: "48075503"
  **기타**  
  구독자 및 구독자 유형에 대한 정보를 포함합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [배포자 및 게시자 속성 보기 및 수정](view-and-modify-distributor-and-publisher-properties.md)   
  [속성 참조&#40;복제&#41;](properties-reference-replication.md)   
  [게시 구독](subscribe-to-publications.md)  

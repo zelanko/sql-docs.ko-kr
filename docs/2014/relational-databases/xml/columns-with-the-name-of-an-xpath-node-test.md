@@ -13,15 +13,15 @@ ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c6d2ed88feef80027a7c52c89b3fe891d8f589c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2ac7154d80a33907cb27bf191dcb41bca866894
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096143"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783925"
 ---
 # <a name="columns-with-the-name-of-an-xpath-node-test"></a>이름이 XPath 노드 테스트인 열
-  열 이름이 XPath 노드 테스트 중 하나일 경우 다음 표에서와 같이 내용이 매핑됩니다. 열 이름이 XPath 노드 테스트이면 내용이 해당 노드로 매핑됩니다. 열의 SQL 형식이 `xml`, 오류가 반환 됩니다.  
+  열 이름이 XPath 노드 테스트 중 하나일 경우 다음 표에서와 같이 내용이 매핑됩니다. 열 이름이 XPath 노드 테스트이면 내용이 해당 노드로 매핑됩니다. 열의 SQL 유형이 `xml`이면 오류가 반환됩니다.  
   
 |열 이름|동작|  
 |-----------------|--------------|  
@@ -71,7 +71,7 @@ FOR XML PATH;
   
  `<First>Ken</First>`  
   
- `<Last>Sánchez</Last>`  
+ `<Last>S??nchez</Last>`  
   
  `</EmpName>`  
   
@@ -85,7 +85,7 @@ FOR XML PATH;
   
  `</row>`  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [FOR XML에서 PATH 모드 사용](use-path-mode-with-for-xml.md)  
   
   

@@ -11,15 +11,15 @@ ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 0748fd29a116ee426f17c3cf12ce67ebcd0c519a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 702e5778825ed5b521db4357508e45427af6b56e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098044"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53349949"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Reporting Services의 페이지 매김(보고서 작성기 및 SSRS)
-  페이지 매김이란 보고서 내의 페이지 수와 이러한 페이지에 보고서 항목이 정렬되는 방식을 의미합니다. 페이지 매김 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보기 및 보고서 배달에 사용할 렌더링 확장 프로그램에 따라 달라 집니다. 보고서 서버에서 보고서를 실행하는 경우 보고서에는 HTML 렌더러가 사용됩니다. HTML은 페이지 매김과 관련하여 일련의 특별한 규칙을 따릅니다. 예를 들어 동일한 보고서를 PDF로 내보내면 PDF 렌더러가 사용되고 다른 규칙 집합이 적용되므로 보고서의 페이지가 다른 방식으로 매겨집니다. 페이지 매김을 제어 하는 데 사용 하는 규칙을 이해 해야 성공적으로 사용 하 여 보고서를 배달 하려고 하는 렌더러에 대해 최적화 된 사용자에 대 한 읽기 쉬운 보고서를 디자인 하려면 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]합니다.  
+  페이지 매김이란 보고서 내의 페이지 수와 이러한 페이지에 보고서 항목이 정렬되는 방식을 의미합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 에서의 페이지 매김은 보고서를 보거나 배달하는 데 사용하는 렌더링 확장 프로그램에 따라 다릅니다. 보고서 서버에서 보고서를 실행하는 경우 보고서에는 HTML 렌더러가 사용됩니다. HTML은 페이지 매김과 관련하여 일련의 특별한 규칙을 따릅니다. 예를 들어 동일한 보고서를 PDF로 내보내면 PDF 렌더러가 사용되고 다른 규칙 집합이 적용되므로 보고서의 페이지가 다른 방식으로 매겨집니다. 보고서를 배달하는 데 사용할 렌더러에 최적화되고 사용자가 쉽게 읽을 수 있는 보고서를 성공적으로 디자인하려면 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 페이지 매김을 제어하는 데 사용되는 규칙을 이해할 필요가 있습니다.  
   
  이 항목에서는 하드 페이지 나누기 렌더러를 통해 보고서를 렌더링하는 방식에 물리적 페이지 크기와 보고서 레이아웃이 미치는 영향을 설명합니다. **보고서 속성** 창, **속성** 창 또는 **페이지 설정** 대화 상자를 통해 속성을 설정하여 물리적 페이지 크기 및 여백을 수정하고 보고서의 구획을 나눌 수 있습니다. 보고서 본문 외부의 파란색 영역을 클릭하여 **보고서 속성** 창에 액세스할 수 있습니다. 홈 탭에서 **실행** 을 클릭한 다음 실행 탭에서 **페이지 설정** 을 클릭하여 **페이지 설정** 대화 상자에 액세스할 수 있습니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48098044"
   
  페이지 크기는 기본적으로 8.5 x 11인치이지만 **보고서 속성** 창, **페이지 설정** 대화 상자를 사용하거나 **속성** 창에서 PageHeight 및 PageWidth 속성을 변경하여 이 크기를 변경할 수 있습니다. 페이지 크기는 보고서 본문의 내용을 수용하는 데 필요한 정도로 확대 또는 축소되지 않습니다. 보고서를 한 페이지에 표시하려면 보고서 본문의 모든 내용이 물리적 페이지 크기에 맞아야 합니다. 보고서 본문 내용이 물리적 페이지 크기에 맞지 않을 경우 하드 페이지 나누기 형식을 사용하려면 보고서에 페이지가 추가로 필요합니다. 보고서 본문이 너무 커서 물리적 페이지의 오른쪽 가장자리를 벗어나면 가로 방향으로 페이지 나누기가 삽입됩니다. 보고서 본문이 너무 커서 물리적 페이지의 아래쪽 가장자리를 벗어나면 세로 방향으로 페이지 나누기가 삽입됩니다.  
   
- 보고서에 정의된 물리적 페이지 크기를 다시 정의하려면 보고서를 내보내는 데 사용하려는 특정 렌더러의 디바이스 정보 설정을 사용하여 물리적 페이지 크기를 지정합니다. 자세한 내용은 [Reporting Services 디바이스 정보 설정(Reporting Services Device Information Settings)](http://go.microsoft.com/fwlink/?LinkId=102515)을 참조하십시오.  
+ 보고서에 정의된 물리적 페이지 크기를 다시 정의하려면 보고서를 내보내는 데 사용하려는 특정 렌더러의 디바이스 정보 설정을 사용하여 물리적 페이지 크기를 지정합니다. 자세한 내용은 [Reporting Services 디바이스 정보 설정(Reporting Services Device Information Settings)](https://go.microsoft.com/fwlink/?LinkId=102515)을 참조하십시오.  
   
 ### <a name="margins"></a>여백  
  여백은 물리적 페이지 치수의 가장자리에서 시작하여 지정된 여백 설정만큼 안쪽으로 들어간 지점까지의 공간을 차지합니다. 보고서 항목이 여백 영역까지 확장된 경우에는 여백 영역으로 넘어온 부분이 잘리고 그 중첩 영역이 렌더링되지 않습니다. 페이지의 가로 또는 세로 너비가 0이 되도록 여백 크기를 지정하면 오히려 여백 설정이 0으로 기본 지정됩니다. 여백을 지정하려면 **보고서 속성** 창, **페이지 설정** 대화 상자를 사용하거나 **속성** 창에서 TopMargin, BottomMargin, LeftMargin 및 RightMargin 속성을 변경합니다. 보고서에 정의된 여백 크기를 다시 정의하려면 보고서를 내보내는 데 사용하려는 특정 렌더러의 디바이스 정보 설정을 사용하여 여백 크기를 지정합니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "48098044"
   
  상수 및 단순한 식이나 복잡한 식을 사용하여 Disabled 및 ResetPageNumber 속성의 값을 설정할 수 있습니다. 그러나 BreakLocation 속성에는 식을 사용할 수 없습니다. 식을 작성하고 사용하는 방법은 [식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)를 참조하세요.  
   
- 보고서에서 사용 하 여 현재 페이지 이름 또는 페이지 번호를 참조 하는 식을 작성할 수 있습니다는 `Globals` 컬렉션입니다. 자세한 내용은 [기본 제공 Globals 및 Users 참조&#40;보고서 작성기 및 SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md)를 참조하세요.  
+ 보고서에서 `Globals` 컬렉션을 사용하여 현재 페이지 이름 또는 페이지 번호를 참조하는 식을 작성할 수 있습니다. 자세한 내용은 [기본 제공 Globals 및 Users 참조&#40;보고서 작성기 및 SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md)를 참조하세요.  
   
 ### <a name="naming-excel-worksheet-tabs"></a>Excel 워크시트 탭 이름 지정  
  이러한 속성은 보고서를 Excel 통합 문서로 내보낼 때 유용합니다. InitialPage 속성을 사용하여 보고서를 내보낼 때 기본 워크시트 탭 이름을 지정하고, 페이지 나누기 및 PageName 속성을 사용하여 각 워크시트에 대해 다른 이름을 제공합니다. 그러면 페이지 나누기로 정의되는 각각의 새 보고서 페이지를 PageName 속성 값으로 이름이 지정된 서로 다른 워크시트로 내보냅니다. PageName은 비어 있지만 보고서에 초기 페이지 이름이 있으면 Excel 통합 문서의 모든 워크시트가 같은 이름(초기 페이지 이름)을 사용합니다.  
@@ -84,6 +84,6 @@ ms.locfileid: "48098044"
  보고서를 Excel로 내보낼 때 이러한 속성이 작동하는 방법은 [Microsoft Excel로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [페이지 레이아웃 및 렌더링 &#40;보고서 작성기 및 SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [페이지 레이아웃 및 렌더링&#40;보고서 작성기 및 SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

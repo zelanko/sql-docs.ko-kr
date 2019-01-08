@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 3e0394bc-6ea8-4533-845c-76782bec73c2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 76ad8d1326a4f574e90335148028f65c846e5a81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 1834a4d3044dc8c444486d727274d6fa72a56a2b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120823"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807985"
 ---
 # <a name="lockdeadlock-event-class"></a>Lock:Deadlock 이벤트 클래스
   Lock:Deadlock 이벤트 클래스는 잠금을 얻으려고 시도하는 동안 교착 상태가 발생하여 이 시도가 취소될 때 생성됩니다.  

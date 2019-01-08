@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 9801afda1a876f486e7b7042d3dad082c70c99fa
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: ceca358e47a2cabbe01e64498d61603717a0d370
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643821"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419254"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Data Migration Assistant에 대 한 설정 구성
 
@@ -40,7 +40,7 @@ Data Migration Assistant 데스크톱 응용 프로그램 및 명령줄 유틸�
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>병렬로 평가 하는 데이터베이스 수
 
-Data Migration Assistant는 동시에 여러 데이터베이스를 평가합니다. 평가 하는 동안 Data Migration Assistant 추출 데이터 계층 응용 프로그램 (dacpac) 데이터베이스 스키마를 이해 합니다. 이 작업 동일한 서버의 여러 데이터베이스 병렬로 평가 되는 경우 시간 초과 될 수 있습니다. 
+Data Migration Assistant는 동시에 여러 데이터베이스를 평가합니다. 평가 하는 동안 Data Migration Assistant 추출 데이터 계층 응용 프로그램 (dacpac) 데이터베이스 스키마를 이해 합니다. 이 작업 동일한 서버의 여러 데이터베이스 병렬로 평가 되는 경우 시간 초과 될 수 있습니다. 
 
 Data Migration Assistant v2.0부터이 제어할 수 있습니다는 parallelDatabases 구성 값을 설정 하 여 합니다. 기본값은 8입니다.
 
@@ -70,7 +70,7 @@ Data Migration Assistant 마이그레이션합니다 동시에 여러 데이터�
 
 <workflowSettings>
 
-<migration parallelDatabases=”8″ />
+<migration parallelDatabases="8″ />
 
 </workflowSettings>
 
@@ -87,22 +87,22 @@ Data Migration Assistant 마이그레이션합니다 동시에 여러 데이터�
 
 - commandTimeout
 
-   이 매개 변수 집합에 IDbCommand.CommandTimeout 속성 *초*합니다. (기본값 = 60)
+   이 매개 변수 집합에 IDbCommand.CommandTimeout 속성 *초*합니다. (기본값 = 60)
 
 - databaseLockTimeout
 
-   이 매개 변수는 [잠금을 설정\_제한 시간 초과\_기간](../t-sql/statements/set-lock-timeout-transact-sql.md) 에서 *밀리초*합니다. (기본값 = 5000)
+   이 매개 변수는 [잠금을 설정\_제한 시간 초과\_기간](../t-sql/statements/set-lock-timeout-transact-sql.md) 에서 *밀리초*합니다. (기본값 = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-  이 매개 변수를 사용 하도록 SQL 연결 풀 연결 수를 설정 합니다. (기본값 = 8)
+  이 매개 변수를 사용 하도록 SQL 연결 풀 연결 수를 설정 합니다. (기본값 = 8)
 
 ```
 <advisorGroup>
 
 <advisorSettings>
 
-<dacFx  commandTimeout="60" databaseLockTimeout="5000"
+<dacFx  commandTimeout="60" databaseLockTimeout="5000"
 maxDataReaderDegreeOfParallelism="8"/>
 
 </advisorSettings>
@@ -110,7 +110,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 </advisorGroup>
 ```
 
-## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: 권장 임계값
+## <a name="stretch-database-recommendation-threshold"></a>Stretch Database 경우: 권장 임계값
 
 사용 하 여 [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database), 웜 및 콜드 트랜잭션 데이터를 Microsoft SQL Server 2016에서 Azure로 동적으로 확장할 수 있습니다. Stretch Database 트랜잭션 데이터베이스를 대용량의 콜드 데이터가 있습니다. 저장소 기능 권장 사항에서 Stretch Database 권장 사항에는 먼저 테이블을 식별 것으로 생각 하는 것이 좋고에서이 기능 및이 기능에 대 한 테이블을 사용 하도록 설정 되어야 하는 변경 내용을 식별 합니다.
 
@@ -121,7 +121,7 @@ Data Migration Assistant v2.0부터 recommendedNumberOfRows 구성 값을 사용
 
 <advisorSettings>
 
-<stretchDBAdvisor  recommendedNumberOfRows="100000" />
+<stretchDBAdvisor  recommendedNumberOfRows="100000" />
 
 </advisorSettings>
 
@@ -136,7 +136,7 @@ Data Migration Assistant v2.0부터 recommendedNumberOfRows 구성 값을 사용
 ```
 <appSettings>
 
-<add key="ConnectionTimeout" value="15" />
+<add key="ConnectionTimeout" value="15" />
 
 </appSettings>
 ```

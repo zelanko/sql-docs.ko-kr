@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 9e6d2a0e-919d-4fe2-a306-b20b8d41c197
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d997265cd0e6ac0f471376c68bc7525c7ce7a5ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b95db663ea56f8dd43ed1091169f8117292033c4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198573"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797095"
 ---
 # <a name="background-job-error-event-class"></a>Background Job Error 이벤트 클래스
   **Background Job Error** 이벤트 클래스는 백그라운드 작업이 비정상적으로 종료되었을 때 발생합니다. 이 경우 시스템 관리자의 조치가 필요할 수 있습니다.  

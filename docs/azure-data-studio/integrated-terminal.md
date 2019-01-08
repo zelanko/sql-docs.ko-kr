@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio에서 통합된 터미널 | Microsoft Docs
+title: 통합된 터미널
+titleSuffix: Azure Data Studio
 description: Azure Data Studio에서 통합된 터미널에 알아봅니다.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 91adc56e93a7dc1b065b77169ad18fd977231d9f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 6677119a35d1d51ac8b6563d9bd9b9f32668c273
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355984"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030437"
 ---
 # <a name="integrated-terminal"></a>통합된 터미널
 
@@ -89,7 +90,7 @@ ms.locfileid: "49355984"
 
 ## <a id="key-bindings"></a>터미널 키 바인딩
 
-합니다 **보기: 토글 통합 터미널** 명령에 바인딩된 **Ctrl +'** 신속 하 게 보기 내부 및 외부 통합된 터미널 패널을 전환 하려면.
+**보기: 통합 터미널을 설정/해제** 명령에 바인딩된 **Ctrl +'** 신속 하 게 보기 내부 및 외부 통합된 터미널 패널을 전환 하려면.
 
 통합된 터미널 내에서 빠르게 탐색할 키보드 바로 가기는 다음과 같습니다.
 
@@ -107,7 +108,7 @@ Key|Command
 
 다른 터미널 명령을 제공 되며 기본 바로 가기에 바인딩할 수 있습니다.
 
-반환할 수 있습니다.
+다음 창이 여기에 포함됩니다.
 
 * `workbench.action.terminal.focus`: 터미널을 집중 합니다. 설정/해제와 같은 이지만 표시 된 경우 숨기 거 나, 대신 터미널 중점을 둡니다.
 * `workbench.action.terminal.focusNext`: 다음 터미널 인스턴스 중점을 둡니다.
@@ -118,7 +119,7 @@ Key|Command
 
 ### <a name="run-selected-text"></a>선택한 텍스트를 실행 합니다.
 
-사용 하는 `runSelectedText` 명령, 편집기에서 텍스트를 선택 하 고 명령을 실행 **터미널: 활성 터미널에서 선택한 텍스트 실행** 를 통해 합니다 **명령 팔레트** (**Ctrl + Shift + P**). 터미널에서 선택한 텍스트를 실행 하려고 합니다.
+사용 하는 `runSelectedText` 명령, 편집기에서 텍스트를 선택 하 고 명령을 실행 **터미널. 활성 터미널에서 선택한 텍스트 실행** 를 통해 합니다 **명령 팔레트** (**Ctrl + Shift + P**). 터미널에서 선택한 텍스트를 실행 하려고 합니다.
 
 ![선택한 텍스트를 실행 합니다.](media/integrated-terminal/terminal_run_selected.png)
 
@@ -145,7 +146,7 @@ Key|Command
 
 ### <a name="rename-terminal-sessions"></a>터미널 세션 이름 바꾸기
 
-통합된 터미널 세션 이제 이름을 바꿀 수 있습니다 사용 하는 **터미널: 이름 바꾸기** (`workbench.action.terminal.rename`) 명령입니다. 새 이름이 터미널 선택 드롭다운 목록에에서 표시 됩니다.
+통합된 터미널 세션 이제 이름을 바꿀 수 있습니다 사용 하 여 **터미널. 이름 바꾸기** (`workbench.action.terminal.rename`) 명령입니다. 새 이름이 터미널 선택 드롭다운 목록에에서 표시 됩니다.
 
 ### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>키 바인딩 터미널을 통과 하도록 강제 적용
 

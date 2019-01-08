@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7d6c1b5e8ca611abf821f81761d862a6b0ddde20
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 79366c8f07728f0063fa5841f8fc5e0c8e3cc236
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027030"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52983904"
 ---
 # <a name="power-pivot-data-access"></a>파워 피벗 데이터 액세스
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34027030"
  SharePoint 팜에서는 Excel Services가 로컬 MSOLAP OLE DB Provider를 사용하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터에 연결합니다. 공급자는 팜의 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버에 연결 요청을 보냅니다. 서버는 데이터를 로드하고 쿼리를 실행한 다음 결과 집합을 반환합니다.  
   
 ##  <a name="queryproc"></a> SharePoint에서 파워 피벗 데이터 쿼리  
- SharePoint 라이브러리에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 볼 때 통합 문서 내에 있는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터는 팜 내의 Analysis Services 서버 인스턴스에서 별도로 검색, 추출 및 처리됩니다. 반면 Excel Services는 표시 계층을 렌더링합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 추가 기능이 있는 Excel 2010 데스크톱 응용 프로그램 또는 브라우저 창에서 완전히 처리된 통합 문서를 볼 수 있습니다.  
+ SharePoint 라이브러리에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 볼 때 통합 문서 내에 있는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터는 팜 내의 Analysis Services 서버 인스턴스에서 별도로 검색, 추출 및 처리됩니다. 반면 Excel Services는 표시 계층을 렌더링합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 추가 기능이 있는 Excel 2010 데스크톱 애플리케이션 또는 브라우저 창에서 완전히 처리된 통합 문서를 볼 수 있습니다.  
   
  다음 다이어그램에서는 쿼리 처리에 대한 요청이 팜을 통해 이동하는 방법을 보여 줍니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터는 Excel 2010 통합 문서의 일부이므로 사용자가 SharePoint 라이브러리에서 Excel 통합 문서를 열고 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 포함된 피벗 테이블이나 피벗 차트와 상호 작용하면 쿼리 처리 요청이 발생합니다.  
   
@@ -39,8 +39,8 @@ ms.locfileid: "34027030"
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서의 모든 데이터가 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서 처리되는 것은 아닙니다. Excel 서비스는 워크시트의 테이블 및 셀 데이터를 처리합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 사용하는 피벗 테이블, 피벗 차트 및 슬라이서만 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서 처리됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Analysis Services에 연결](../../analysis-services/instances/connect-to-analysis-services.md)   
- [테이블 형식 모델 데이터 액세스](../../analysis-services/tabular-models/tabular-model-data-access.md)  
+
   
   

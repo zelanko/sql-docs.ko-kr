@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, resource pool delete
@@ -14,19 +13,19 @@ ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5a84b9416371690601b79f6f429b6476ffc85675
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e2e9582e8a279be37e05e9ee13a858abb431987
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160303"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800194"
 ---
 # <a name="delete-a-resource-pool"></a>리소스 풀 삭제
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 Transact-SQL을 사용하여 리소스 풀을 삭제할 수 있습니다.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **시작하기 전 주의 사항:**  [제한 사항 및 제한 사항](#LimitationsRestrictions), [권한](#Permissions)  
   
--   **리소스 풀을 삭제하려면:** [SQL Server Management Studio](#DelRPSSMS), [Transact-SQL](#DelRPTSQL)  
+-   **리소스를 삭제 하려면 풀을 사용 하 여:** [SQL Server Management Studio](#DelRPSSMS), [TRANSACT-SQL](#DelRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  작업 그룹이 들어 있는 리소스 풀은 삭제할 수 없습니다.  

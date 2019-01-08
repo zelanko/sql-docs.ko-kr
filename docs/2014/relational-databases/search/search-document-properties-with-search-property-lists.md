@@ -18,12 +18,12 @@ ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 90f0d34d522f27fd29c0c1103076632c3cb4bbee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 77cb1127b7dbb7b2a49e3bafcd0b3eccc45b92ed
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086843"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800383"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>검색 속성 목록을 사용하여 문서 속성 검색
   이전에는 문서 속성의 내용을 문서 본문의 내용과 구분할 수 없었으므로 전체 문서에서 일반 검색에 대해 전체 텍스트 쿼리를 수행할 수 없었습니다. 그러나 이제 `varbinary`, `varbinary(max)`(`FILESTREAM` 포함) 또는 `image` 이진 데이터 열의 지원되는 문서 유형의 경우 Author 및 Title과 같은 특정 속성에 대한 속성 범위 검색을 지원하도록 전체 텍스트 인덱스를 구성할 수 있습니다. 이러한 형태의 검색을 *속성 검색*이라고 합니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "48086843"
 ##  <a name="impact"></a> 속성 검색 사용의 영향  
  하나 이상의 속성에 대한 검색을 지원하도록 전체 텍스트 인덱스를 구성하면 검색 속성 목록에 지정한 속성 수와 각 속성의 내용에 따라 인덱스 크기가 어느 정도 커집니다.  
   
- 일반적인 Microsoft Word 인덱싱하도록 테스트<sup>®</sup>, Excel<sup>®</sup>, 및 PowerPoint<sup>®</sup> 문서는 전체 텍스트 인덱스에 대 한 일반적인 검색 속성을 구성 했습니다. 이러한 속성을 인덱싱하면 전체 텍스트 인덱스 크기가 약 5% 커집니다. 대부분의 문서 모음에서는 대략 이 정도로 인덱스 크기가 증가할 것으로 예상됩니다. 하지만 궁극적으로 인덱스 크기는 전체 데이터 크기에 상대적인 지정된 문서 모음에 있는 속성 데이터 크기에 따라 증가할 것입니다.  
+ 일반적인 Microsoft Word 인덱싱하도록 테스트<sup>?? </sup>, Excel<sup>?? </sup>, 및 PowerPoint<sup>??</sup> 문서, 전체 텍스트 인덱스에 대 한 일반적인 검색 속성을 구성 했습니다. 이러한 속성을 인덱싱하면 전체 텍스트 인덱스 크기가 약 5% 커집니다. 대부분의 문서 모음에서는 대략 이 정도로 인덱스 크기가 증가할 것으로 예상됩니다. 하지만 궁극적으로 인덱스 크기는 전체 데이터 크기에 상대적인 지정된 문서 모음에 있는 속성 데이터 크기에 따라 증가할 것입니다.  
   
   
   
@@ -115,7 +115,7 @@ ms.locfileid: "48086843"
   
      속성 이름은 다음 중 하나일 수 있습니다.  
   
-    -   속성의 Windows 정식 이름 같은 `System.Author` 또는 `System.Contact.HomeAddress`합니다.  
+    -   속성의 Windows 정식 이름(예: `System.Author` 또는 `System.Contact.HomeAddress`)  
   
     -   사용자가 기억하기 쉬운 이름. 일부 속성은 잘 알려진 이름(예: "Author" 또는 "Home Address")과 연결되어 있지만 사용자에게 가장 적합한 임의의 이름을 지정할 수 있습니다.  
   
@@ -239,7 +239,7 @@ GO
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [검색 속성의 속성 집합 GUID 및 속성 정수 ID찾기](find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
  [검색 필터 구성 및 관리](configure-and-manage-filters-for-search.md)  
   

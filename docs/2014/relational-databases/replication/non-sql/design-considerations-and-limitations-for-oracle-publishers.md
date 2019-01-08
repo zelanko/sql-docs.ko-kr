@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], design considerations and limitations
@@ -13,12 +12,12 @@ ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: db5225c9432f0ea86a90b299e9ff1ede70147e8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 8f9d7183d6e94f5808434090dd8fc998b946ed0f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191473"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810895"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle 게시자에 대한 디자인 고려 사항 및 제한 사항
   Oracle 데이터베이스에서의 게시 작업은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에서의 게시 작업과 거의 동일합니다. 그러나 Oracle 데이터베이스에서의 게시 작업에 대한 다음과 같은 제한 사항 및 문제점을 알고 있어야 합니다.  
@@ -104,7 +103,7 @@ ms.locfileid: "48191473"
   
  또한 다음 문제를 고려해야 합니다.  
   
--   Oracle 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 은 NULL을 다르게 처리합니다.Oracle은 NULL을 허용하고 UNIQUE 제약 조건 또는 고유 인덱스에 포함된 열에 대해 NULL 값을 갖는 행을 여러 개 허용합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 동일한 열에 대해 NULL 값을 갖는 행을 하나만 허용하여 고유성을 갖도록 합니다. 게시된 테이블에 인덱스 또는 제약 조건에 포함된 열에 대해 NULL 값을 갖는 행이 여러 개 포함된 경우 구독자에서 제약 조건 위반이 발생하므로 NULL을 허용하는 UNIQUE 제약 조건이나 고유 인덱스를 게시할 수 없습니다.  
+-   Oracle 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 NULL을 다르게 처리합니다. Oracle은 NULL을 허용하고 UNIQUE 제약 조건 또는 고유 인덱스에 포함된 열에 대해 NULL 값을 갖는 행을 여러 개 허용합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 동일한 열에 대해 NULL 값을 갖는 행을 하나만 허용하여 고유성을 갖도록 합니다. 게시된 테이블에 인덱스 또는 제약 조건에 포함된 열에 대해 NULL 값을 갖는 행이 여러 개 포함된 경우 구독자에서 제약 조건 위반이 발생하므로 NULL을 허용하는 UNIQUE 제약 조건이나 고유 인덱스를 게시할 수 없습니다.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 고유성을 테스트할 때 필드의 후행 공백을 무시하지만 Oracle에서는 무시하지 않습니다.  
   

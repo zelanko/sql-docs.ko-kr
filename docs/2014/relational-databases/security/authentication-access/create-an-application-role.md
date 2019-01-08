@@ -14,12 +14,12 @@ ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9a46c83c497c8eaeba3873bafef399f924506916
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 032c371fd37bb66392761fff24bd30efb2bd5b37
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076263"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532445"
 ---
 # <a name="create-an-application-role"></a>애플리케이션 역할 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 애플리케이션 역할을 만드는 방법에 대해 설명합니다. 애플리케이션 역할은 특정 애플리케이션을 통한 경우를 제외하고 데이터베이스에 대한 사용자 액세스를 제한합니다. 애플리케이션 역할에 사용자가 없으므로 **애플리케이션 역할** 을 선택하면 **역할 멤버** 목록이 표시되지 않습니다.  
@@ -56,9 +56,9 @@ ms.locfileid: "48076263"
   
 3.  **역할** 폴더를 확장합니다.  
   
-4.  **응용 프로그램 역할** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 응용 프로그램 역할...** 을 선택합니다.  
+4.  **애플리케이션 역할** 폴더를 마우스 오른쪽 단추로 클릭한 다음, **새 애플리케이션 역할...** 을 선택합니다.  
   
-5.  **응용 프로그램 역할 – 신규** 대화 상자의 **일반 페이지**에서 **역할 이름** 상자의 새 응용 프로그램 역할의 새 이름을 입력합니다.  
+5.  **애플리케이션 역할 – 신규** 대화 상자의 **일반 페이지**에서 **역할 이름** 상자에 새 애플리케이션 역할의 새 이름을 입력합니다.  
   
 6.  **기본 스키마** 상자에 개체 이름을 입력하여 이 역할로 만든 개체를 소유할 스키마를 지정합니다. 또는 줄임표 **(…)** 를 클릭하여 **스키마 찾기** 대화 상자를 엽니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48076263"
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>추가 옵션  
- **응용 프로그램 역할 – 신규** 대화 상자는 또한 두 개의 추가 페이지인 **보안 개체** 및 **확장 속성**을 제공합니다.  
+ 합니다 **응용 프로그램 역할-새** 대화 상자는 또한 두 개의 추가 페이지인 옵션을 제공 합니다. **보안 개체** 하 고 **확장 속성**합니다.  
   
 -   **보안 개체** 페이지에는 사용 가능한 모든 보안 개체와 이러한 보안 개체에서 로그인에 부여할 수 있는 권한이 나열됩니다.  
   

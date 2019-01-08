@@ -15,12 +15,12 @@ ms.assetid: f09ba8aa-950e-4c0d-961e-970de13200be
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a01d130cc37faa29e2aebe8612fc5e02fef10c78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 965022adeeee40ca7f8fd45a722b22fa6aa64931
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099623"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350616"
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 명명된 쿼리 정의(Analysis Services)
   명명된 쿼리는 테이블로 표현된 SQL 식입니다. 명명된 쿼리에 SQL 식을 지정하여 하나 이상의 데이터 원본에 있는 하나 이상의 테이블에서 반환된 행 및 열을 선택할 수 있습니다. 식을 기반으로 한다는 점을 제외하면 명명된 쿼리는 관계 및 행이 있는 데이터 원본 뷰(DSV)의 다른 테이블과 같습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "48099623"
   
  SQL 쿼리에서 참조되는 테이블 및 열은 한정되어서는 안 되며 한정할 경우 테이블 이름으로만 한정해야 합니다. 예를 들어 테이블의 SaleAmount 열을 참조하려면 `SaleAmount` 나 `Sales.SaleAmount` 는 유효하지만 `dbo.Sales.SaleAmount` 는 오류를 생성합니다.  
   
- **참고**   [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 데이터 원본을 쿼리하는 명명된 쿼리를 정의할 때 상관 하위 쿼리 및 GROUP BY 절을 포함하는 명명된 쿼리는 실패합니다. 자세한 내용은 [기술 문서에서](http://support.microsoft.com/kb/274729) 버그: 상관 하위 쿼리 및 GROUP BY를 포함하는 SELECT 문의 내부 오류(BUG: Internal Error with SELECT Statement Containing Correlated Subquery and GROUP BY) [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 참조하십시오.  
+ **참고**   [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 데이터 원본을 쿼리하는 명명된 쿼리를 정의할 때 상관 하위 쿼리 및 GROUP BY 절을 포함하는 명명된 쿼리는 실패합니다. 자세한 내용은 [기술 문서에서](https://support.microsoft.com/kb/274729) 버그: 상관 하위 쿼리 및 GROUP BY를 포함하는 SELECT 문의 내부 오류(BUG: Internal Error with SELECT Statement Containing Correlated Subquery and GROUP BY) [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 참조하십시오.  
   
 ## <a name="add-or-edit-a-named-query"></a>명명된 쿼리 추가 또는 편집  
   
@@ -61,8 +61,8 @@ ms.locfileid: "48099623"
   
 5.  **확인**을 클릭합니다. 테이블이 명명된 쿼리로 바뀌었음을 나타내기 위해 겹치는 두 개의 테이블을 표시하는 아이콘이 테이블 머리글에 나타납니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [다차원 모델의 데이터 원본 뷰](data-source-views-in-multidimensional-models.md)   
- [데이터 원본 뷰에서 명명 된 계산 정의 &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [데이터 원본 뷰에서 명명된 계산 정의&#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

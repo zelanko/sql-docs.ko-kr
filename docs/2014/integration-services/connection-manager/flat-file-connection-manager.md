@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], Flat File
@@ -18,12 +17,12 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a87cf5f7f9f6b81a989b67b2a68484280498aba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65cebbe74b1be5cc0d625a70c8c5b87e8f515150
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147170"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815295"
 ---
 # <a name="flat-file-connection-manager"></a>Flat File Connection Manager
   플랫 파일 연결 관리자를 사용하면 패키지에서 플랫 파일의 데이터에 액세스할 수 있습니다. 예를 들어 플랫 파일 원본 및 대상은 플랫 파일 연결 관리자를 사용하여 데이터를 추출 및 로드할 수 있습니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "48147170"
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>플랫 파일 연결 관리자 구성  
  패키지에 플랫 파일 연결 관리자를 추가 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 연결, 런타임에 플랫 파일 연결으로 확인 됩니다 하 고, 플랫 파일 연결 속성을 설정 하 고, 플랫 파일 연결 관리자를 추가 하는 관리자를 만들고 합니다 `Connections` 패키지의 컬렉션입니다.  
   
- 합니다 `ConnectionManagerType` 연결 관리자의 속성이 `FLATFILE`합니다.  
+ 연결 관리자의 `ConnectionManagerType` 속성이 `FLATFILE`로 설정됩니다.  
   
  기본적으로 플랫 파일 연결 관리자는 따옴표로 표시되지 않은 데이터에서 항상 행 구분자를 검사하고 행 구분자를 찾으면 새 행을 시작합니다. 그러면 연결 관리자가 열 필드가 누락된 행을 사용하여 파일을 올바르게 구문 분석할 수 있습니다.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "48147170"
   
 -   텍스트 한정자 문자를 지정합니다. 텍스트 한정자를 인식하도록 각 열을 구성할 수 있습니다.  
   
-     한정자 문자를 사용하여 한정된 문자열에 한정자 문자를 포함하는 기능이 이제 지원됩니다. 텍스트 한정자가 두 번 나올 경우 해당 문자열이 한 번 나온 것처럼 리터럴로 해석됩니다. 예를 들어 텍스트 한정자가 작은따옴표이고 입력 데이터가 ‘abc’, ‘def’, ‘g’hi’인 경우 출력 데이터는 abc, def, g’hi입니다.  
+     한정자 문자를 사용하여 한정된 문자열에 한정자 문자를 포함하는 기능이 이제 지원됩니다. 텍스트 한정자가 두 번 나올 경우 해당 문자열이 한 번 나온 것처럼 리터럴로 해석됩니다. 예를 들어 텍스트 한정자가 작은따옴표이고 입력 데이터가 'abc', 'def', 'g'hi'인 경우 출력 데이터는 abc, def, g'hi입니다.  
   
 -   개별 열에 대해 이름, 데이터 형식 및 최대 너비와 같은 속성을 설정합니다.  
   
@@ -80,6 +79,6 @@ ms.locfileid: "48147170"
   
 -   [플랫 파일 연결 관리자 편집기&#40;미리 보기 페이지&#41;](../flat-file-connection-manager-editor-preview-page.md)  
   
- 연결 관리자를 프로그래밍 방식으로 구성 하는 방법에 대 한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 하 고 [프로그래밍 방식으로 연결 추가](../building-packages-programmatically/adding-connections-programmatically.md)합니다.  
+ 연결 관리자를 프로그래밍 방식으로 구성하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../building-packages-programmatically/adding-connections-programmatically.md)로 설정됩니다.  
   
   

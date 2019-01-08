@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - element does not map [SQLXML]
@@ -20,15 +18,15 @@ ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 28c95cabd8b2c47aa3d05f51526b3eb0921e4701
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 03e2d3d672d0bfa407a3fb553a1139d30696971e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137303"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793475"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>sql:is-constant를 사용하여 상수 요소 만들기(SQLXML 4.0)
-  상수 요소, 즉 데이터베이스 테이블 또는 열에 매핑되지 않는 XSD 스키마 요소를 지정하려면 `sql:is-constant` 주석을 사용할 수 있습니다. 이 주석은 부울 값(0=false, 1=true)을 사용합니다. 허용되는 값은 0, 1, true 및 false입니다. `sql:is-constant` 주석은 특성이 없는 요소에 지정할 수 있습니다. 값이 true(또는 1)인 요소에 이 주석을 지정하면 해당 요소는 데이터베이스에 매핑되지 않지만 XML 문서에 계속 표시됩니다.  
+  상수 요소를 지정 하려면-데이터베이스 테이블 또는 열에 매핑되지 않는 XSD 스키마에서 요소 즉,-사용할 수는 `sql:is-constant` 주석. 이 주석은 부울 값(0=false, 1=true)을 사용합니다. 허용되는 값은 0, 1, true 및 false입니다. `sql:is-constant` 주석은 특성이 없는 요소에 지정할 수 있습니다. 값이 true(또는 1)인 요소에 이 주석을 지정하면 해당 요소는 데이터베이스에 매핑되지 않지만 XML 문서에 계속 표시됩니다.  
   
  `sql:is-constant` 주석은 다음과 같은 용도로 사용할 수 있습니다.  
   

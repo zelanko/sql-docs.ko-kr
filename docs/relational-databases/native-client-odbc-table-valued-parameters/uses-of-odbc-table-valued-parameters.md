@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 25c8da6552446f7c34cd6deb050b2074da67443c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5421467aaf516ca3f1f153979916be01f9160d05
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673112"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517640"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>ODBC 테이블 반환 매개 변수 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,14 +58,14 @@ ms.locfileid: "51673112"
   
  테이블 반환 매개 변수와 해당 열은 완전히 바인딩된 여러 행 버퍼를 사용하는 테이블 반환 매개 변수 섹션에서 설명한 대로 바인딩되지만 테이블 반환 매개 변수 자체의 길이 표시기는 SQL_DATA_AT_EXEC로 설정됩니다. 실행 시 데이터 매개 변수에 대 한 일반적인 방법으로 SQLExecute 또는 SQLExecuteDirect에 응답 하는 드라이버-, 즉 SQL_NEED_DATA를 반환 하 여 합니다. SQLParamData의 값을 반환 드라이버가 테이블 반환 매개 변수에 대 한 데이터를 허용 하도록 준비 되 면 *ParameterValuePtr* SQLBindParameter에서.  
   
- 응용 프로그램 테이블 반환 매개 변수에 대 한 SQLPutData를 사용 하 여 테이블 반환 매개 변수 구성 열의 데이터의 가용성을 나타냅니다. 테이블 반환 매개 변수에 대 한 SQLPutData 호출 될 때 *DataPtr* 항상 null 이어야 하 고 *StrLen_or_Ind* 작아야 0 또는 숫자 보다 작거나 배열 크기에 대해 지정 된 테이블 반환 매개 변수 버퍼 (합니다 *ColumnSize* SQLBindParameter의 매개 변수). 0은 테이블 반환 매개 변수에 대한 행이 더 이상 없어 드라이버가 다음 실제 프로시저 매개 변수를 처리하게 됨을 나타냅니다. 때 *StrLen_or_Ind* 는 0이 아닌 경우는 드라이버는 테이블 반환 매개 변수 구성 열의 동일한 방식으로 처리 되지 않은 테이블 반환 매개 변수가 바인딩 매개 변수: 각 테이블 반환 매개 변수 열의 실제 데이터를 지정할 수 있습니다 길이, SQL_NULL_DATA, 해당 길이/표시기 버퍼를 통해 실행 시 데이터를 지정할 수 있습니다. 문자나 이진 값을 나누어에서 전달할 때 SQLPutData 호출을 일반적인 방식으로 반복 하는 테이블 반환 매개 변수 열 값으로 전달 될 수 있습니다.  
+ 응용 프로그램 테이블 반환 매개 변수에 대 한 SQLPutData를 사용 하 여 테이블 반환 매개 변수 구성 열의 데이터의 가용성을 나타냅니다. 테이블 반환 매개 변수에 대 한 SQLPutData 호출 될 때 *DataPtr* 항상 null 이어야 하 고 *StrLen_or_Ind* 작아야 0 또는 숫자 보다 작거나 배열 크기에 대해 지정 된 테이블 반환 매개 변수 버퍼 (합니다 *ColumnSize* SQLBindParameter의 매개 변수). 0은 테이블 반환 매개 변수에 대한 행이 더 이상 없어 드라이버가 다음 실제 프로시저 매개 변수를 처리하게 됨을 나타냅니다. 때 *StrLen_or_Ind* 는 0이 아닌는 드라이버는 테이블 반환 매개 변수 구성 열의 동일한 방식으로 처리 되지 않은 테이블 반환 매개 변수 바인딩 매개 변수: 각 테이블 반환 매개 변수 열은 SQL_NULL_DATA에 자신의 실제 데이터 길이를 지정하거나 해당 길이/표시기 버퍼를 통해 실행 시 데이터를 지정할 수 있습니다. 문자나 이진 값을 나누어에서 전달할 때 SQLPutData 호출을 일반적인 방식으로 반복 하는 테이블 반환 매개 변수 열 값으로 전달 될 수 있습니다.  
   
  테이블 반환 매개 변수 열이 모두 처리되면 드라이버가 다시 테이블 반환 매개 변수로 돌아와서 테이블 반환 매개 변수 데이터의 행을 추가로 처리하기 시작합니다. 따라서 실행 시 데이터 테이블 반환 매개 변수의 경우 드라이버가 바인딩된 매개 변수를 순차적으로 검색하는 일반적인 방식을 따르지 않습니다. SQLPutData를 사용 하 여 호출할 때까지 바인딩된 테이블 반환 매개 변수는 폴링 *StrLen_Or_IndPtr* 0, 이때 드라이버가 테이블 반환 매개 변수 열을 건너뛰고 다음 실제 프로시저 매개 변수를 이동 합니다.  1 보다 크거나 SQLPutData 표시기 값을 통과 하면 드라이버가 테이블 반환 매개 변수 열 및 행 순차적으로 처리 모든 바인딩된 행 및 열에 대 한 값이 될 때까지. 그런 다음 드라이버는 테이블 반환 매개 변수로 돌아갑니다. SQLParamData에서 테이블 반환 매개 변수 토큰을 받고 테이블 반환 매개 변수에 대 한 SQLPutData (hstmt, NULL, n)를 호출 하 고 간에 응용 프로그램 설정 해야 테이블 반환 매개 변수 구성 열 데이터와 표시기 버퍼 내용을 합니다 다음 행에 서버로 전달할 수 있습니다.  
   
  이 시나리오에 대 한 예제 코드는 루틴 `demo_variable_TVP_binding` 에 [테이블 반환 매개 변수 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)합니다.  
   
 ## <a name="retrieving-table-valued-parameter-metadata-from-the-system-catalog"></a>시스템 카탈로그에서 테이블 반환 매개 변수 메타데이터 검색  
- 응용 프로그램 SQLProcedureColumns 매개 변수 테이블 반환 매개 변수가 있는 프로시저를 호출 하면 DATA_TYPE SQL_SS_TABLE TYPE_NAME은 테이블 반환 매개 변수에 대 한 테이블 형식의 이름으로 반환 됩니다. 두 개의 추가 열 SQLProcedureColumns 반환한 결과 집합에 추가 됩니다: SS_TYPE_CATALOG_NAME 여기서 테이블 반환 매개 변수의 테이블 형식이 정의 하 고 ss_type_schema_name은 스키마의 이름을 반환 합니다. 카탈로그의 이름을 반환 합니다. 여기서는 여기서 테이블 반환 매개 변수의 테이블 형식이 정의 됩니다. ODBC 사양에 따라 SS_TYPE_CATALOG_NAME 및 SS_TYPE_SCHEMA_NAME은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 추가된 모든 드라이버 관련 열 앞에, 그리고 ODBC 자체에서 위임한 모든 열 뒤에 표시됩니다.  
+ 응용 프로그램 SQLProcedureColumns 매개 변수 테이블 반환 매개 변수가 있는 프로시저를 호출 하면 DATA_TYPE SQL_SS_TABLE TYPE_NAME은 테이블 반환 매개 변수에 대 한 테이블 형식의 이름으로 반환 됩니다. 두 개의 추가 열 SQLProcedureColumns 반환한 결과 집합에 추가 됩니다. 그 중 SS_TYPE_CATALOG_NAME은 테이블 반환 매개 변수의 테이블 형식이 정의되는 카탈로그의 이름을 반환하고 SS_TYPE_SCHEMA_NAME은 테이블 반환 매개 변수의 테이블 형식이 정의되는 스키마의 이름을 반환합니다. ODBC 사양에 따라 SS_TYPE_CATALOG_NAME 및 SS_TYPE_SCHEMA_NAME은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 추가된 모든 드라이버 관련 열 앞에, 그리고 ODBC 자체에서 위임한 모든 열 뒤에 표시됩니다.  
   
  새 열은 테이블 반환 매개 변수뿐만 아니라 CLR 사용자 정의 형식 매개 변수에 대해서도 채워집니다. UDT 매개 변수의 기존 스키마와 카탈로그 열도 채워지지만 스키마와 카탈로그 열이 필요한 데이터 형식에 공용 스키마 및 카탈로그 열을 사용함으로써 이후 응용 프로그램 개발 과정이 간단해집니다. XML 스키마 컬렉션은 다소 다르며 이 변경 사항이 적용되지 않습니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "51673112"
   
  이 사용 사례에 대 한 예제 코드는 루틴 `demo_metadata_from_prepared_statement` 에 [테이블 반환 매개 변수 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [테이블 반환 매개 변수 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

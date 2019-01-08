@@ -1,5 +1,5 @@
 ---
-title: 계층 만들기 및 관리 | Microsoft Docs
+title: Analysis Services 테이블 형식 모델에서 계층 만들기 및 관리 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c9282c3b28ca5998cc21d2906f06d50f862e49a9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5e9e5fc942aa7b03cd4cb9a15d8b474a12f12a8d
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044837"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072600"
 ---
 # <a name="create-and-manage-hierarchies"></a>계층 만들기 및 관리 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34044837"
   
 2.  계층의 이름을 입력합니다.  
   
- 이 계층의 부모 수준으로 추가 열을 끌어 열을 끌 수 있습니다. 열이 복사됩니다. 끈 열을 계층에서 해당 열을 표시하려는 위치의 자식 수준에 놓습니다.  
+ 열을 복사 하는 계층의 부모 수준에 추가 열을 끌 수 있습니다. 끈 열을 계층에서 해당 열을 표시하려는 위치의 자식 수준에 놓습니다.  
   
 > [!NOTE]  
 >  하나 이상의 열과 함께 측정값을 여러 개 선택하거나 여러 테이블의 열을 선택할 경우 계층 만들기 명령이 비활성화됩니다.  
@@ -93,7 +93,7 @@ ms.locfileid: "34044837"
   
 -   또는 부모 계층 수준을 클릭하고 Delete 키를 누릅니다. 이 경우 모든 자식 수준도 제거됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [테이블 형식 모델 디자이너 ](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
  [계층 구조](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
  [측정값](../../analysis-services/tabular-models/measures-ssas-tabular.md)  

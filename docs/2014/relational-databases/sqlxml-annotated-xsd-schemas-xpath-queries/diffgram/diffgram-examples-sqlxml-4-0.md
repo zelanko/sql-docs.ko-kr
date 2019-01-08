@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - DiffGrams [SQLXML], examples
@@ -17,12 +15,12 @@ ms.assetid: fc148583-dfd3-4efb-a413-f47b150b0975
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73b134d4b2bb59373551129d1af62231d3401a5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed354e6b72f66908c12e1254738df75008659f8d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220623"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804535"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>DiffGram 예(SQLXML 4.0)
   이 항목에서 설명하는 예는 데이터베이스에 대한 삽입, 업데이트 및 삭제 작업을 수행하는 DiffGram으로 구성되어 있습니다. 예를 사용하기 전에 다음 사항을 확인하십시오.  
@@ -128,7 +126,7 @@ ms.locfileid: "48220623"
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
          (N'ANATR', N'Ana Trujillo Emparedados y helados', N'Ana Trujillo')  
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
-         (N'ANTON', N'Antonio Moreno Taquería', N'Antonio Moreno')  
+         (N'ANTON', N'Antonio Moreno Taquer??a', N'Antonio Moreno')  
   
     INSERT INTO Ord(OrderID, CustomerID) VALUES(1, N'ALFKI')  
     INSERT INTO Ord(OrderID, CustomerID) VALUES(2, N'ANATR')  
@@ -195,7 +193,7 @@ ms.locfileid: "48220623"
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
          (N'ANATR', N'Ana Trujillo Emparedados y helados', N'Ana Trujillo')  
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
-         (N'ANTON', N'Antonio Moreno Taquería', N'Antonio Moreno')  
+         (N'ANTON', N'Antonio Moreno Taquer??a', N'Antonio Moreno')  
   
     INSERT INTO Ord(OrderID, CustomerID) VALUES(1, N'ALFKI')  
     INSERT INTO Ord(OrderID, CustomerID) VALUES(2, N'ANATR')  
@@ -267,7 +265,7 @@ ms.locfileid: "48220623"
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
          (N'ANATR', N'Ana Trujillo Emparedados y helados', N'Ana Trujillo')  
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
-         (N'ANTON', N'Antonio Moreno Taquería', N'Antonio Moreno')  
+         (N'ANTON', N'Antonio Moreno Taquer??a', N'Antonio Moreno')  
   
     INSERT INTO Ord(OrderID, CustomerID) VALUES(1, N'ALFKI')  
     INSERT INTO Ord(OrderID, CustomerID) VALUES(2, N'ANATR')  
@@ -376,7 +374,7 @@ ms.locfileid: "48220623"
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
          (N'ANATR', N'Ana Trujillo Emparedados y helados', N'Ana Trujillo')  
     INSERT INTO Cust(CustomerID, CompanyName, ContactName) VALUES  
-         (N'ANTON', N'Antonio Moreno Taquería', N'Antonio Moreno')  
+         (N'ANTON', N'Antonio Moreno Taquer??a', N'Antonio Moreno')  
   
     INSERT INTO Ord(OrderID, CustomerID) VALUES(1, N'ALFKI')  
     INSERT INTO Ord(OrderID, CustomerID) VALUES(2, N'ANATR')  

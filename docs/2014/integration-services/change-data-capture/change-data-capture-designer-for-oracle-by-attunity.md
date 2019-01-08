@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - desCons
@@ -13,12 +12,12 @@ ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b0647b34ba0ec79e1dacb90220424228588a201d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4db1c097f53f46f027e81f7b1591eafc56c9393d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065593"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804623"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Change Data Capture Designer for Oracle by Attunity
   CDC Designer 콘솔은 Oracle CDC 인스턴스를 개발하고 유지 관리하는 데 사용됩니다. CDC Designer 콘솔은 다음 요소를 포함하는 Microsoft 관리 콘솔 스냅인입니다.  

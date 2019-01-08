@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.categoriesproperties
@@ -12,12 +12,12 @@ ms.assetid: d0f4d53a-cc13-48cf-ae90-a2937b548c45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 71ff1db4687a779c35d062e978afed28a2618c64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d6748956dcfe0b880ffe3b384e49a8ccc00ebf12
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143596"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806725"
 ---
 # <a name="job-categories-properties-and-new-job-category"></a>작업 범주 속성 및 새 작업 범주
   하나의 작업 범주 또는 모든 작업 범주에 속해 있는 작업이 나열되며 새 작업 범주를 추가할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "48143596"
  **작업**  
  작업의 이름을 표시합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [작업 만들기](create-jobs.md)  
   
   

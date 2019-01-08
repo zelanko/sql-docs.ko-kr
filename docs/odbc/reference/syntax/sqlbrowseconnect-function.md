@@ -20,16 +20,16 @@ ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d86f2aa373b120d2ecf1ea47b021b327fc57dc21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe1b9c7d3d93604e2f19de754ff25517ef23cb07
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651971"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211713"
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수: ODBC  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. ODBC  
   
  **요약**  
  **SQLBrowseConnect** 검색 하 고 특성 및 데이터 원본에 연결 하는 데 필요한 특성 값을 열거 하는 반복적인 방법을 지원 합니다. 호출할 때마다 **SQLBrowseConnect** 연속 수준의 특성 및 특성 값을 반환 합니다. 모든 수준 열거 된, 데이터 원본에 연결을 완료 된 후 전체 연결 문자열을 반환한 **SQLBrowseConnect**합니다. SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO 반환 코드는 모든 연결 정보를 지정 하 고 응용 프로그램은 이제 데이터 원본에 연결을 나타냅니다.  

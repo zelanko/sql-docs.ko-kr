@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - authorization [SQL Server replication]
@@ -17,12 +16,12 @@ ms.assetid: 27828fe4-3b54-4c33-886e-08e8279e34b5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3414833d7a188f71a944aace1cea85c1e6fe517b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d38985bc4df194b73e75c80d7b0f77763b17efa0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157251"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815445"
 ---
 # <a name="security-overview-replication"></a>보안 개요(복제)
   기본적으로 복제 환경의 보안을 유지하려면 인증 및 권한 부여 옵션을 이해하고, 복제 필터링 기능의 적절한 사용 방법을 이해하고, 복제 환경의 각 부분에 대해 보안을 유지하는 데 구체적인 방법을 배워야 합니다. 복제 환경에는 배포자, 게시자, 구독자 및 스냅숏 폴더가 포함됩니다. 이 항목에서는 복제 보안을 다루지만 복제 보안은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보안 및 Windows 보안을 기반으로 하므로 복제 보안의 세부 사항과 이러한 기반을 함께 이해해야 합니다. 보안에 대한 자세한 내용은 [SQL Server 설치에 대한 보안 고려 사항](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md)을 참조하세요. Oracle 게시의 보안 고려 사항에 대한 자세한 내용은 [Design Considerations and Limitations for Oracle Publishers](../non-sql/design-considerations-and-limitations-for-oracle-publishers.md)항목의 "복제 보안 모델" 섹션을 참조하십시오.  

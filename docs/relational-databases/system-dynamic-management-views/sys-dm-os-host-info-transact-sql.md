@@ -20,21 +20,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55291c5cc30b9fe16d7bd259bab03677f6df45db
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 32ef1fff3b5309da587aacc2fca14099e6bf2cac
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672952"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209552"
 ---
 # <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 운영 체제 버전 정보를 표시 하는 행을 반환 합니다.  
   
-|열 이름 |데이터 형식 |설명 |  
+|열 이름 |데이터 형식 |Description |  
 |-----------------|---------------|-----------------|  
-|**host_platform** |**nvarchar(256)** |운영 체제의 종류: Windows 또는 Linux |
+|**host_platform** |**nvarchar(256)** |운영 체제의 유형: Windows 또는 Linux |
 |**host_distribution** |**nvarchar(256)** |운영 체제의 설명입니다. |
 |**host_release**|**nvarchar(256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 운영 체제 릴리스(버전 번호)입니다. 값 및 설명의 목록을 참조 하세요 [운영 체제 버전 (Windows)](/windows/desktop/SysInfo/operating-system-version)합니다. <br> Linux의 경우 빈 문자열을 반환 합니다. |  
 |**host_service_pack_level**|**nvarchar(256)**|Windows 운영 체제의 서비스 팩 수준입니다. <br> Linux의 경우 빈 문자열을 반환 합니다. |  
@@ -49,7 +49,7 @@ ms.locfileid: "51672952"
 ### <a name="permissions"></a>사용 권한  
 합니다 `SELECT` 에 대 한 권한이 `sys.dm_os_host_info` 에 부여 되는 `public` 기본적으로 역할 합니다. 해지 하는 경우 필요 `VIEW SERVER STATE` 서버에 대 한 권한이 있습니다.   
  
->  [!CAUTION]
+> [!CAUTION]
 >  버전 부터는 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.3 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 버전 17 필요 `SELECT` 에 대 한 권한이 `sys.dm_os_host_info` 에 연결 하기 위해 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]합니다. 경우 `SELECT` 에서 사용 권한을 취소할 `public`를 사용 하 여 로그인만 `VIEW SERVER STATE` 권한 최신 버전의 SSMS 사용 하 여 연결할 수 있습니다. (같은 다른 도구 `sqlcmd.exe` 없이 연결할 수 있습니다 `SELECT` 에 대 한 권한이 `sys.dm_os_host_info`.)
 
   
@@ -75,7 +75,7 @@ Linux에서 설정 하는 예제 결과 다음과 같습니다.
  |Linux |Ubuntu |16.04  |   |NULL   |1033 |  
 
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [sys.dm_os_windows_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  
  

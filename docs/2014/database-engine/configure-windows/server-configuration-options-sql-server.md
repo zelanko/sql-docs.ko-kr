@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 02/29/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - surface area configuration [SQL Server], sp_configure
@@ -28,12 +27,12 @@ ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a903a3246b8a91a8ff0b42862b7bbf4046497c3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 645aee1374f7dbf3c290500bb35ca47115983670
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088713"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640554"
 ---
 # <a name="server-configuration-options-sql-server"></a>서버 구성 옵션(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 sp_configure 시스템 저장 프로시저를 사용하면 구성 옵션을 통해 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 리소스를 관리하고 최적화할 수 있습니다. 자주 사용하는 서버 구성 옵션은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 통해 사용할 수 있으며 모든 구성 옵션에 액세스하려면 sp_configure를 사용해야 합니다. 이러한 옵션을 변경하기 전에 시스템에 주는 영향을 신중히 고려해야 합니다. 자세한 내용은 [서버 속성 보기 또는 변경&#40;SQL Server&#41;](view-or-change-server-properties-sql-server.md)을 참조하세요.  
@@ -138,7 +137,7 @@ ms.locfileid: "48088713"
     |[user options](configure-the-user-options-server-configuration-option.md)|0|32767|0|  
     |[xp_cmdshell](xp-cmdshell-server-configuration-option.md) (A)|0|1|0|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [RECONFIGURE&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)  
   

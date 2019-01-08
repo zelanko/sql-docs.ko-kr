@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - editTabProps
@@ -13,12 +12,12 @@ ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: de312eefac0c9eaa61374bbf79a628dd3ed9cd36
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca7f7a34989719565950153c53932f36dc92d2ab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105533"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804815"
 ---
 # <a name="edit-the-table-properties"></a>테이블 속성 편집
   이 대화 상자를 사용하여 변경을 캡처 중인 선택된 테이블에서 특정 열을 편집할 수 있습니다. 또한 **보안 역할** 및 **캡처 인스턴스** 정보를 편집할 수 있습니다.  
@@ -41,18 +40,18 @@ ms.locfileid: "48105533"
   
 2.  캡처 인스턴스를 다음 중 하나로 저장합니다.  
   
-    -   **새 캡처 인스턴스**: 이 경우 새 캡처 인스턴스는 저장되지만, 이전 캡처 인스턴스는 삭제되지 않습니다.  
+    -   **새 캡처 인스턴스**: 이 경우 새 캡처 인스턴스는 저장되지만 이전 캡처 인스턴스는 삭제되지 않습니다.  
   
          **참고**: 캡처 인스턴스는 테이블당 두 개를 초과할 수 없습니다. 이미 두 개의 캡처 인스턴스가 있는 경우에는 이 옵션을 사용할 수 없습니다.  
   
     -   **기존 항목 바꾸기**: 이 경우 현재 캡처 인스턴스가 삭제되고 사용자가 만든 캡처 인스턴스로 대체됩니다. 이 테이블에 대해 두 개의 캡처 인스턴스가 정의되어 있는 경우 하나를 선택하여 바꾸어야 합니다.  
   
- **참고**: **테이블** 탭의 테이블 목록에서 캡처 인스턴스를 제거할 수 있습니다.  
+ **참고**: 테이블 목록에서 캡처 인스턴스를 제거할 수는 **테이블** 탭 합니다.  
   
  이 대화 상자에 정보를 입력한 후 **확인** 을 클릭하여 변경 내용을 적용할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [CDC 인스턴스 속성을 편집 하는 방법](how-to-edit-the-cdc-instance-properties.md)   
+## <a name="see-also"></a>관련 항목:  
+ [CDC 인스턴스 속성을 편집하는 방법](how-to-edit-the-cdc-instance-properties.md)   
  [변경 캡처를 위해 선택된 테이블 변경](make-changes-to-the-tables-selected-for-capturing-changes.md)  
   
   

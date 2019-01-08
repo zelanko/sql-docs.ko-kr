@@ -21,12 +21,12 @@ ms.assetid: 512f9cee-ffad-439b-b612-b49c34c32658
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9b83edd4ce5bfafcd8413683abad50918cc47d3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d82fde382bf3ed92f400dbbe234790ccd510cc93
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782681"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512465"
 ---
 # <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>ODBC 함수 및 Visual FoxPro ODBC 드라이버
 이 섹션의에서 항목에서는 간략 한 ODBC API 함수 및 Visual FoxPro 관련 세부 정보를 제공합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "47782681"
 > [!NOTE]  
 >  ODBC 함수에 대 한 일반적인 정보를 참조 하세요 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md) "ODBC Programmer's Guide"에서 합니다.  
   
- ODBC API 함수를 세 가지 주요 범주로 나뉘어 있습니다: 핵심 수준 API 함수, 수준 1 API 함수 및 수준 2 API 함수입니다.  
+ ODBC API 함수를 세 가지 주요 범주로 나뉘어 있습니다. 핵심 수준 API 함수, 수준 1 API 함수 및 수준 2 API 함수입니다.  
   
 > [!NOTE]  
 >  데이터 소스 디렉터리에 대 한 연결으로 정의 되었는지 여부에 따라 다르게 동작할 함수 중 몇 [테이블 무료](../../odbc/microsoft/visual-foxpro-terminology.md) (.dbf 파일) 또는 Visual FoxPro [데이터베이스](../../odbc/microsoft/visual-foxpro-terminology.md) (.dbc 파일). 특정 작업은 데이터베이스 연결에 대해서만 지원 됩니다.  

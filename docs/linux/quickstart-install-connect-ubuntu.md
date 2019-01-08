@@ -1,5 +1,6 @@
 ---
-title: Ubuntu의 SQL Server 시작 | Microsoft Docs
+title: Ubuntu의 SQL Server 시작
+titleSuffix: SQL Server
 description: 이 빠른 시작에는 SQL Server 2017 또는 SQL Server 2019 Ubuntu에 설치 로컬 폴더를 만들고 sqlcmd 사용 하 여 데이터베이스를 쿼리 하는 방법을 보여 줍니다.
 author: rothja
 ms.author: jroth
@@ -7,17 +8,17 @@ manager: craigg
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 917e43dd6a9c78e5199967df58a2d46c4843cf13
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 83f5cdf3f02ffc9a51dfa954347cc57f78e004dd
+ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677958"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160551"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>SQL Server를 설치 하는 빠른 시작: Ubuntu에서 데이터베이스를 만들고
+# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>빠른 시작: SQL Server를 설치 하 고 Ubuntu에서 데이터베이스 만들기
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -37,7 +38,7 @@ ms.locfileid: "51677958"
 > [!TIP]
 > 이 자습서에는 사용자 입력 및 인터넷 연결이 필요합니다. 만약 [무인](sql-server-linux-setup.md#unattended) 또는 [오프라인](sql-server-linux-setup.md#offline) 설치 절차에 관심이 있는 경우는, [SQL Server on Linux 설치 지침](sql-server-linux-setup.md)을 참조합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 사용 하 여 Ubuntu 16.04 컴퓨터가 있어야 **2GB 이상의** 메모리입니다.
 
@@ -88,7 +89,7 @@ Ubuntu에 SQL Server를 구성하려면, **mssql 서버** 패키지를 설치하
    ```
 
    > [!TIP]
-   > 다음 SQL Server 2017 버전은 무료로 사용이 허가: Evaluation, Developer 및 Express입니다.
+   > 다음 SQL Server 2017 버전 자유롭게 사용이 허가 됩니다. Evaluation, Developer 및 Express입니다.
 
    > [!NOTE]
    > SA 계정에 대한 강력한 암호를 지정해야 합니다(최소 길이가 8자, 대문자와 소문자를 포함, 10 진수 및/또는 영숫자가 아닌 기호).

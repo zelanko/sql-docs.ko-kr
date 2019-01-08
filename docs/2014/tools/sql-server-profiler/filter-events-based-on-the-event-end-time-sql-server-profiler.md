@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - event end times [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: 74628f9e-2d39-496a-a443-0a3887db223d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23c9ca00077d64fe72f775d343640a15dfc38f50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 48f0ada8740735e64fe57c35bc17553f59aa444c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194383"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823847"
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>이벤트 종료 시간 기반의 이벤트 필터링(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 이벤트 종료 시간을 기반으로 추적 이벤트를 필터링하는 방법을 설명합니다.  
@@ -45,7 +44,7 @@ ms.locfileid: "48194383"
   
 6.  확장 **보다 큰** 또는 **미만**를 입력 하 고는 `datetime`비교 연산자 아래 나타나는 필드의 값.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 프로파일러](sql-server-profiler.md)   
  [SQL Server 프로파일러](sql-server-profiler.md)  
   

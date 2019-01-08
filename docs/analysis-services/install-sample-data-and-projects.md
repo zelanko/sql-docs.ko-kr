@@ -1,5 +1,5 @@
 ---
-title: 샘플 데이터 및 프로젝트 설치 | Microsoft Docs
+title: Analysis Services 예제 데이터 및 프로젝트 설치 | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0ec266a98e3a27dd277ccd9f790ae73d1793ec38
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: df7311aad9c356376fffafc8a4882af8e29e746b
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057971"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072730"
 ---
 # <a name="install-sample-data-and-multidimensional-projects"></a>샘플 데이터 및 다차원 프로젝트 설치 
 [!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
 
 Analysis Services 자습서에 사용 되는 데이터 및 프로젝트 파일을 설치 하려면이 문서에 제공 된 링크와 지침을 사용 합니다. 
   
-## <a name="step-1-install-prerequisites"></a>1 단계: 필수 구성 요소 설치 
+## <a name="step-1-install-prerequisites"></a>1단계: 필수 구성 요소 설치 
 이 자습서의 단원에서는 다음 소프트웨어가 설치되어 있다고 가정합니다. 단일 컴퓨터의 모든 기능을 설치할 수 있습니다. 이러한 기능을 설치하려면 SQL Server 설치 프로그램을 실행하고 기능 선택 페이지에서 해당 기능을 선택합니다.  
   
 -   SQL Server 데이터베이스 엔진  
@@ -32,7 +32,7 @@ Analysis Services 자습서에 사용 되는 데이터 및 프로젝트 파일�
   
     기본적으로 Analysis Services 2016 이상 설치 마법사의 구성 페이지는 서버에서 다차원 서버 모드를 선택 하 여 재정의할 수 있는 테이블 형식 인스턴스로 설치 됩니다.
   
-## <a name="step-2-download-and-install-developer-and-management-tools"></a>2 단계: 다운로드 하 여 개발자 및 관리 도구 설치
+## <a name="step-2-download-and-install-developer-and-management-tools"></a>2단계: 개발자 및 관리 도구 다운로드 및 설치
 SQL Server 데이터 도구 (SSDT) Visual Studio 용 다운로드 되어 다른 SQL Server 기능과에서 별도로 설치 됩니다. 또는 Visual Studio 2015에 대 한 디자이너 및 BI 모델 및 보고서를 만드는 데 사용 되는 프로젝트 템플릿이 SSDT에 포함 된 [Nuget 패키지](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects) Visual Studio 2017에 대 한 합니다.  
   
 [SQL Server Data Tools 다운로드](http://go.microsoft.com/fwlink/?LinkID=827542).   
@@ -45,10 +45,10 @@ SQL Server Management Studio (SSMS) 다운로드 되어 다른 SQL Server 기능
   
 또는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에 기본 제공되는 MDX 쿼리 디자이너를 사용하여 데이터를 검색할 수 있습니다. 쿼리 디자이너는 데이터가 플랫 행 집합으로 제공된다는 점을 제외하면 동일한 데이터를 반환합니다.  
   
-## <a name="step-3-install-databases"></a>3 단계: 설치 데이터베이스  
+## <a name="step-3-install-databases"></a>3단계: 데이터베이스 설치  
 Analysis Services 다차원 모델에서는 관계형 데이터베이스 관리 시스템에서 가져오는 트랜잭션 데이터를 사용합니다. 이 자습서에서는 데이터 원본으로 관계형 데이터베이스를 사용합니다.  
   
--   **AdventureWorksDW2012 이상** – 데이터베이스 엔진 인스턴스에서 실행 되는 관계형 데이터 웨어하우스입니다. Analysis Services 데이터베이스 및 빌드하고 자습서 전체에서 배포 하는 프로젝트에서 사용 된 원래 데이터를 제공 합니다. 이 자습서에서는 AdventureWorksDW2012를 사용 하는, 있지만 이후 버전 작동 수행 가정 합니다.
+-   **AdventureWorksDW2012 이상** -데이터베이스 엔진 인스턴스에서 실행 되는 관계형 데이터 웨어하우스입니다. Analysis Services 데이터베이스 및 빌드하고 자습서 전체에서 배포 하는 프로젝트에서 사용 된 원래 데이터를 제공 합니다. 이 자습서에서는 AdventureWorksDW2012를 사용 하는, 있지만 이후 버전 작동 수행 가정 합니다.
   
     이 예제 데이터베이스를 사용할 수 있습니다 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 이상. 일반에서 데이터베이스 엔진 버전을 일치 하는 샘플 데이터베이스 버전을 사용 해야 합니다.
   
@@ -62,7 +62,7 @@ Analysis Services 다차원 모델에서는 관계형 데이터베이스 관리 
   
 4.  데이터베이스를 복원합니다.  
   
-## <a name="step-4-grant-database-permissions"></a>4 단계: Grant 데이터베이스 사용 권한  
+## <a name="step-4-grant-database-permissions"></a>4단계: Grant 데이터베이스 사용 권한  
 예제 프로젝트에서는 데이터를 가져오거나 처리하는 데 사용되는 보안 컨텍스트를 지정하는 데이터 원본 가장을 사용합니다. 기본적으로 가장 설정은 데이터 액세스에 사용할 Analysis Services 서비스 계정을 지정합니다. Analysis Services가 실행 되는 서비스 계정에 데이터 판독기 사용 권한을 확인 해야이 기본 설정을 사용 하 여 **AdventureWorksDW** 데이터베이스입니다.  
   
 > [!NOTE]  
@@ -80,7 +80,7 @@ Analysis Services 다차원 모델에서는 관계형 데이터베이스 관리 
   
 6.  옆의 확인란을 선택 합니다 **AdventureWorksDW** 데이터베이스입니다. 역할 멤버 자격에 **db_datareader** 및 **public**이 자동으로 포함됩니다. **확인** 을 클릭하여 기본값을 적용합니다.  
   
-## <a name="step-5-install-projects"></a>5 단계: 설치 프로젝트  
+## <a name="step-5-install-projects"></a>5단계: 프로젝트 설치  
 
 이 자습서에는 작업 결과를 완료된 프로젝트와 비교하거나 시퀀스에서 더 많이 진행된 단원을 시작할 수 있도록 예제 프로젝트가 포함되어 있습니다.  
   
@@ -88,7 +88,7 @@ Analysis Services 다차원 모델에서는 관계형 데이터베이스 관리 
   
     자습서 프로젝트에 대 한 작업 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 이상.  
   
-2.  .zip 파일을 루트 드라이브 바로 아래 폴더(예: C:\Tutorial)로 이동합니다. 이 단계를 수행하면 Downloads 폴더에 파일 압축을 풀 경우 가끔 발생하는 "경로가 너무 길다"는 의미의 오류가 줄어듭니다.  
+2.  .zip 파일을 루트 드라이브 바로 아래 폴더(예: C:\Tutorial)로 이동합니다. 이 단계는 다운로드 폴더에 파일의 압축을 하면 경우에 따라 발생 하는 "경로가 너무 깁니다." 오류를 완화 합니다.  
   
 3.  이 파일을 마우스 오른쪽 단추로 클릭하고 **압축 풀기**를 선택하여 샘플 프로젝트의 압축을 풉니다. 단원 1, 2, 3, 5, 6, 7, 8, 9, 폴더의 파일을 추출한 후 해야 10 완료 및 Lesson 4 Start 합니다. 
   

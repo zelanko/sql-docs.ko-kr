@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio를 사용 하 여 데이터베이스를 백업 및 복원 | Microsoft Docs
+title: 데이터베이스 백업 및 복원
+titleSuffix: Azure Data Studio
 description: Azure Data Studio를 사용 하 여 데이터베이스를 백업 및 복원 하는 방법을 알아봅니다
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,20 +11,20 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2d9b4cbee5ab4da44961927809bf1fb4c771cc1
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
-ms.translationtype: HT
+ms.openlocfilehash: 0e6025c59206f48fe6cf5cd5bf5182ea73090bbf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355914"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207132"
 ---
-# <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 백업 및 복원
+# <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>데이터베이스 백업 및 복원을 사용 하 여 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 이 자습서에서 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 사용법을 알아봅니다.
 > [!div class="checklist"]
 > * 데이터베이스 백업 
 > * 백업 상태를 보려면
-> * 백업하는 데 사용되는 스크립트를 생성합니다.
+> * 백업하는 데 사용되는 스크립트를 생성하는 방법.
 > * 데이터베이스 복원
 > * 복원 작업의 상태를 보려면
 
@@ -33,10 +34,11 @@ ms.locfileid: "49355914"
 
 - [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]를 사용하여 SQL Server에 연결 및 쿼리](quickstart-sql-server.md)
 
+이 자습서에서는 SQL Server 데이터베이스에 연결 합니다. Azure SQL Database에 자동화 된 백업, Azure Data Studio Azure SQL Database 백업을 수행 하지 않으며 복원 하도록 합니다. 자세한 내용은 참조 하세요 [자동 SQL Database 백업에 알아보기](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups)합니다.
 
 ## <a name="backup-a-database"></a>데이터베이스 백업
 
-1. TutorialDB 데이터베이스 대시보드를 열고(**서버** 사이드바(**CTRL + G**)), **데이터베이스**를 확장하고, **TutorialDB**에서 마우스 오른쪽 단추로 클릭한 뒤, **관리**를 선택합니다. 
+1. TutorialDB 데이터베이스 대시보드를 열고(**서버** 사이드바(**CTRL + G**)), **데이터베이스**를 확장하고, **TutorialDB**에서 마우스 오른쪽 단추로 클릭한 뒤, **관리**를 선택합니다.
 
 2. **Backup database** 대화 상자를 엽니다(**작업** 위젯에서 **백업** 클릭).
 
@@ -83,7 +85,7 @@ ms.locfileid: "49355914"
 > [!div class="checklist"]
 > * 데이터베이스 백업 
 > * 백업 상태를 보려면
-> * 백업하는 데 사용되는 스크립트를 생성합니다.
+> * 백업하는 데 사용되는 스크립트를 생성하는 방법.
 > * 데이터베이스 복원
 > * 복원 작업의 상태를 보려면
 

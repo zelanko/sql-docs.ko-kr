@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], default locations
@@ -14,12 +13,12 @@ ms.assetid: 27c5d9ad-a915-4c59-a8b7-82e3af61ac4d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc9734cb3da7c61da7c15ce108cd86f09be8ea1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd41dabe1554bc3f80adc4fdb6d8433f8aac9e7f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148843"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807335"
 ---
 # <a name="specify-the-default-snapshot-location-sql-server-management-studio"></a>기본 스냅숏 위치 지정(SQL Server Management Studio)
   배포 구성 마법사의 **스냅숏 폴더** 페이지에서 기본 스냅숏 위치를 지정합니다. 이 마법사 사용에 대한 자세한 내용은 [게시 및 배포 구성](configure-publishing-and-distribution.md)을 참조하세요. 배포자로 구성되어 있지 않은 서버에서 게시를 만드는 경우 새 게시 마법사의 **스냅숏 폴더** 페이지에서 기본 스냅숏 위치를 지정합니다. 이 마법사를 사용하는 방법에 대한 자세한 내용은 [게시 만들기](publish/create-a-publication.md)를 참조하세요.  
@@ -28,7 +27,7 @@ ms.locfileid: "48148843"
   
 ### <a name="to-modify-the-default-snapshot-location"></a>기본 스냅숏 위치를 수정하려면  
   
-1.  **배포자 속성 - \<Distributor>** 대화 상자의 **게시자** 페이지에서 기본 스냅숏 위치를 변경할 게시자의 속성 단추(**…**)를 클릭합니다.  
+1.  **배포자 속성 - \<Distributor>** 대화 상자의 **게시자** 페이지에서 기본 스냅숏 위치를 변경하려는 게시자의 속성 단추(**...**)를 클릭합니다.  
   
 2.  **게시자 속성 - \<Publisher>** 대화 상자에서 **기본 스냅숏 폴더** 속성에 대한 값을 입력합니다.  
   

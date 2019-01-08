@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d59601d0706b65186ed5f260128c3c44a134d60e
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 24dd1bce8d7433f55ba64eecb1e7a08396b9e548
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906403"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52984104"
 ---
 # <a name="dynamic-management-views-dmvs"></a>동적 관리 뷰(DMV) 
 
@@ -93,7 +93,7 @@ WHERE TABLE_TYPE = 'SCHEMA'
 ORDER BY TABLE_NAME ASC  
 ```  
   
-DMV를 지정된 된 행 집합에 대해 사용할 수 없는 경우 서버 오류를 반환 합니다: `The <schemarowset> request type was not recognized by the server.` 다른 모든 오류 구문 사용 하 여 문제를 나타냅니다.  
+DMV는 지정 된 행 집합에 대해 사용할 수 없는 경우 서버 오류가 반환 됩니다. `The <schemarowset> request type was not recognized by the server.` 다른 모든 오류는 구문 문제를 나타냅니다.  
 
 스키마 행 집합은 두 개의 SQL Server Analysis Services 프로토콜에서 설명 되어 있습니다.   
 
@@ -101,7 +101,7 @@ DMV를 지정된 된 행 집합에 대해 사용할 수 없는 경우 서버 오
 
 [[MS-SSAS]: SQL Server Analysis Services 프로토콜](https://msdn.microsoft.com/library/ee320606) -1100 및 1103 호환성 수준 테이블 형식 모델과 다차원 모델에 대 한 스키마 행 집합에 설명 합니다.
 
-### <a name="rowsets-described-in-the-ms-ssas-t-sql-server-analysis-services-tabular-protocol"></a>행 집합 [MS-SSAS-T]에 설명 된: SQL Server Analysis Services 테이블 형식 프로토콜
+### <a name="rowsets-described-in-the-ms-ssas-t-sql-server-analysis-services-tabular-protocol"></a>행 집합 [MS-SSAS-T]에서 설명 합니다. SQL Server Analysis Services 테이블 형식 프로토콜
 
 |행 집합  |Description  |
 |---------|---------|
@@ -134,7 +134,7 @@ DMV를 지정된 된 행 집합에 대해 사용할 수 없는 경우 서버 오
 |[TMSCHEMA_TABLES](https://msdn.microsoft.com/library/mt719250)     |   모델에서 테이블 개체에 대 한 정보를 제공합니다.      |
 |[TMSCHEMA_VARIATIONS](https://msdn.microsoft.com/library/mt825008)|각 열에 있는 변형 개체에 대 한 정보를 제공합니다.|
 
-### <a name="rowsets-described-in-the-ms-ssas-sql-server-analysis-services-protocol"></a>행 집합 [MS-SSAS]에 설명 된: SQL Server Analysis Services 프로토콜
+### <a name="rowsets-described-in-the-ms-ssas-sql-server-analysis-services-protocol"></a>행 집합 [MS-SSAS]에서 설명 합니다. SQL Server Analysis Services 프로토콜
 
 |행 집합|Description|  
 |------------|-----------------|  
@@ -172,7 +172,7 @@ DMV를 지정된 된 행 집합에 대해 사용할 수 없는 경우 서버 오
 |[DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS](https://msdn.microsoft.com/library/ee320710)|메모리 내 테이블에 대 한 데이터를 저장 하는 데 사용 되는 열 세그먼트에 대 한 정보를 반환 합니다.|  
 |[DISCOVER_STORAGE_TABLE_COLUMNS](https://msdn.microsoft.com/library/ee302101)|메모리 내 테이블의 열을 나타내는 사용 되는 열에 대 한 정보를 포함 합니다.|  
 |[DISCOVER_STORAGE_TABLES](https://msdn.microsoft.com/library/ee302014)|서버에 사용할 수 있는 메모리 내 테이블에 대 한 통계를 반환합니다.|  
-|[DISCOVER_TRACE_COLUMNS]()||  
+|[DISCOVER_TRACE_COLUMNS](https://msdn.microsoft.com/library/ee301342)||  
 |[DISCOVER_TRACE_DEFINITION_PROVIDERINFO](https://msdn.microsoft.com/library/ee301342)|DISCOVER_TRACE_COLUMNS 스키마 행 집합을 포함합니다.|  
 |[DISCOVER_TRACE_EVENT_CATEGORIES](https://msdn.microsoft.com/library/ee320442)|DISCOVER_TRACE_EVENT_CATEGORIES 스키마 행 집합을 포함합니다.|  
 |[DISCOVER_TRACES](https://msdn.microsoft.com/library/ee301643)|DISCOVER_TRACES 스키마 행 집합을 포함합니다.|  

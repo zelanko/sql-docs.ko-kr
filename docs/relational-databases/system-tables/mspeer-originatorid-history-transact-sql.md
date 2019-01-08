@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSpeer_originatorid_history_TSQL
@@ -19,12 +18,12 @@ ms.assetid: c1f53d0f-4080-43ff-be38-2b10395c68c9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb967b8598f2477ccfd8ab48b977b7d4d9a5a1f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3dff36fb672d7d94d9716f0c8eaefbb6132f9536
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631121"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810505"
 ---
 # <a name="mspeeroriginatoridhistory-transact-sql"></a>MSpeer_originatorid_history(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "47631121"
 |originator_version|**int**|게시자의 버전 번호를 식별합니다.|  
 |inserted_date|**datetime**|송신자 ID의 행이 이 테이블에 삽입된 날짜와 시간입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

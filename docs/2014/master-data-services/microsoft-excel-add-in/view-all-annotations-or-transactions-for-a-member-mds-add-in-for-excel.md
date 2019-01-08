@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: de90c81c-9e7f-4997-bf96-e22b97b2862c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: daedd18baf4e4da709b09328826d44722bec04ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 552069daa158ad3c3289cdf03bb3b563beaa9c56
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062683"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800955"
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>멤버에 대한 모든 주석 또는 트랜잭션 보기(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 시간별 데이터 업데이트를 보려는 경우 데이터(멤버) 행에 대한 주석(설명) 및 트랜잭션을 확인합니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "48062683"
   
 3.  **트랜잭션 보기** 대화 상자에 트랜잭션 목록이 표시됩니다. 트랜잭션과 연결된 모든 주석을 보려면 표에서 행을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터 게시 &#40;MDS 추가 기능에 Excel 용&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

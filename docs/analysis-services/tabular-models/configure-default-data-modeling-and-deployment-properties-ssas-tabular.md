@@ -1,5 +1,5 @@
 ---
-title: 기본 데이터 모델링 및 배포 속성 구성 | Microsoft Docs
+title: Analysis Services 기본 데이터 모델링 및 배포 속성 구성 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 926cb59f263b5dfbfb4178d4d512b07511cdc0cc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 938ef21a83a6e08336c9e9c53a95e3886ab24dab
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044067"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072580"
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties"></a>기본 데이터 모델링 및 배포 속성 구성 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  이 문서에서는 기본 호환성 모드를 구성 하는 방법을 설명, 배포 및 각각의 새 테이블 형식 모델 프로젝트에 대 한 미리 정의 될 수 있는 작업 영역 데이터베이스 속성 설정에서 만드는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]합니다. 새 프로젝트를 만든 후 특정 요구 사항에 따라 이러한 속성을 변경할 수 있습니다.  
+  이 문서에서는 기본 호환성 수준을 구성 하는 방법 설명, 배포 및 각각의 새 테이블 형식 모델 프로젝트에 대 한 미리 정의 될 수 있는 작업 영역 데이터베이스 속성 설정을 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]합니다. 새 프로젝트를 만든 후 특정 요구 사항에 따라 이러한 속성을 변경할 수 있습니다.  
   
 #### <a name="to-configure-the-default-compatibility-level-property-setting-for-new-model-projects"></a>새 모델 프로젝트의 기본 호환성 수준 속성 설정을 구성하려면  
   
@@ -65,7 +65,7 @@ ms.locfileid: "34044067"
 > [!NOTE]  
 >  기본 모델 속성을 변경해도 변경 전에 만들어진 기존 모델의 속성은 영향을 받지 않습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [프로젝트 속성](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)   
  [모델 속성](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)   
  [호환성 수준](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  

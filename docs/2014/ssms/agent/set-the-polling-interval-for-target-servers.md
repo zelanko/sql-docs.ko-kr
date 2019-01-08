@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - interval for polling [SQL Server]
@@ -14,19 +14,19 @@ ms.assetid: 4ffbbefa-77fb-442e-a77c-cb8c6cab9f3c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12f35342d6303559ab41546dc9154a06f9a30eda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1578bbefc9ae17baae56799d943e5ae6186628ea
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091333"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818685"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>대상 서버의 폴링 간격 설정
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 마스터 서버에서 대상 서버로 정보를 새로 고치는 빈도를 설정하는 방법에 대해 설명합니다. 작업은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 수행하도록 지정된 일련의 동작입니다. 다중 서버 작업은 마스터 서버가 하나 이상의 대상 서버에서 실행하는 작업입니다.  
   
 -   **시작하기 전 주의 사항:**  [보안](#Security)  
   
--   **사용 하 여 대상 서버에 대 한 폴링 간격을 설정 하려면:**[SQL Server Management Studio](#SSMS), [TRANSACT-SQL  ](#TSQL)  
+-   **사용 하 여 대상 서버에 대 한 폴링 간격을 설정 합니다.**  [SQL Server Management Studio](#SSMS), [TRANSACT-SQL](#TSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  각 대상 서버는 같은 작업의 한 인스턴스를 동시에 실행할 수 있습니다. 각 대상 서버는 주기적으로 마스터 서버를 폴링하여 해당 대상 서버에 새로 할당된 작업의 복사본을 다운로드한 다음 연결을 끊습니다. 대상 서버는 로컬에서 작업을 실행한 다음 마스터 서버에 다시 연결하여 작업 결과 상태를 업로드합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48091333"
 >  대상 서버에서 작업 상태 업로드를 시도할 때 마스터 서버가 액세스 가능하지 않은 경우 작업 상태는 마스터 서버가 액세스 가능해질 때까지 스풀링됩니다.  
   
 ###  <a name="Security"></a> 보안  
- 자세한 내용은 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) 및 [다중 서버 환경에 적합한 SQL Server 에이전트 서비스 계정 선택](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)을 참조하세요.  
+ 자세한 내용은 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) 및 [Choose the Right SQL Server Agent Service Account for Multiserver Environments](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)을 참조하세요.  
   
 ##  <a name="SSMS"></a> SQL Server Management Studio 사용  
  **대상 서버의 폴링 간격을 설정하려면**  

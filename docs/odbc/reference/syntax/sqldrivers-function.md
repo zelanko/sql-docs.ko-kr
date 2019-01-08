@@ -20,16 +20,16 @@ ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a0815a5d0597fabb6b4f5e942d2bbb92b7ae57e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bac7f88dcbd9895cfd0d07a5993ab9e38a4608d0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727541"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214734"
 ---
 # <a name="sqldrivers-function"></a>SQLDrivers 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 2.0 표준 준수: ODBC  
+ 도입 된 버전: ODBC 2.0 표준 준수 합니다. ODBC  
   
  **요약**  
  **SQLDrivers** 드라이버 설명 하 고 드라이버 특성 키워드를 나열 합니다. 이 함수에만 드라이버 관리자에 의해 구현 됩니다.  
@@ -86,7 +86,7 @@ SQLRETURN SQLDrivers(
   
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
-|01000|일반 경고|(DM) 드라이버 관리자 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
+|01000|일반 경고|(DM) 드라이버 관리자 별 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|(DM) 버퍼 \* *DriverDescription* 전체 드라이버 설명을 반환 하는 충분히 큰 수 없습니다. 따라서 설명을 잘렸습니다. 전체 드라이버 설명의 길이에 반환 됩니다 \* *DescriptionLengthPtr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)<br /><br /> (DM) 버퍼 \* *DriverAttributes* 충분히 특성 값 쌍의 전체 목록을 반환할 수 없습니다. 따라서 목록이 잘렸습니다. 특성 값 쌍의 잘리지 않은 목록의 길이에서 **AttributesLengthPtr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |HY000|일반 오류|오류가 없는 관련 SQLSTATE 했습니다는 및 없습니다 구현 별 SQLSTATE 정의 되었습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*MessageText* 버퍼 오류 및 해당 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류|(DM)의 드라이버 관리자 지원 함수 완료 또는 실행 하는 데 필요한 메모리를 할당할 수 없습니다.|  
@@ -122,6 +122,6 @@ FileUsage=1\0FileExtns=*.dbf\0\0
 |데이터 원본 이름 반환|[SQLDataSources 함수](../../../odbc/reference/syntax/sqldatasources-function.md)|  
 |연결 문자열 또는 대화 상자를 사용 하 여 데이터 원본에 연결|[SQLDriverConnect 함수](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

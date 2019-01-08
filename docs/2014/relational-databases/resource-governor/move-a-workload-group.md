@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.rg.properties_moveworkloadgroup.f1
@@ -16,19 +15,19 @@ ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7dd9fada1ffac50b11c4384f6ede19eac4ea069a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c1fedfc0c21d78e73f38b5bfdf084eb37e5311d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112883"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799679"
 ---
 # <a name="move-a-workload-group"></a>작업 그룹 이동
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 Transact-SQL을 사용하여 리소스 관리자 작업 그룹을 다른 리소스 풀로 이동할 수 있습니다.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **시작하기 전 주의 사항:**  [제한 사항 및 제한 사항](#LimitationsRestrictions), [권한](#Permissions)  
   
--   **To move a workload group, using:**  [SQL Server Management Studio](#MoveWGSSMS), [Transact-SQL](#MoveWGTSQL)  
+-   **워크 로드를 이동 하려면 그룹을 사용 하 여:**  [SQL Server Management Studio](#MoveWGSSMS), [TRANSACT-SQL](#MoveWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  보류 중인 리소스 관리자 구성 작업이 있으면 작업 그룹을 이동할 수 없습니다.  

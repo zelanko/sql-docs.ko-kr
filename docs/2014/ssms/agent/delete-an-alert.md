@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, alerts
@@ -18,12 +18,12 @@ ms.assetid: c982b208-e2d1-4d34-8cee-940b9baf6586
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d3f7434c7af3a4e8465bbaab1d0134bd956892c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9f6da8b7376e03ff5c0ab516aeaef0e6ac538b48
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080153"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762885"
 ---
 # <a name="delete-an-alert"></a>Delete an Alert
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고를 삭제하는 방법에 대해 설명합니다.  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
@@ -22,12 +22,12 @@ ms.assetid: 6309a1bc-a628-4141-8bb5-b35924bd19f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4fd1a4c2e8cb5eeb644b2ead8ec1c493251b3f39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 87bfaef1ad5dc4c9b1f907c27955ca3f156038a8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152683"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791325"
 ---
 # <a name="results-pane-visual-database-tools"></a>결과 창(Visual Database Tools)
   결과 창은 가장 최근에 실행한 SELECT 쿼리의 결과를 보여 줍니다. 다른 쿼리 형식의 결과는 메시지 상자에 표시됩니다. 결과 창을 열려면 쿼리를 열거나 만듭니다. 테이블의 데이터를 반환해도 결과 창이 나타납니다. 결과 창이 기본적으로 표시되지 않으면 **쿼리 디자이너** 메뉴에서 **창**을 가리킨 다음 **결과**를 클릭합니다.  

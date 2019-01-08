@@ -1,5 +1,5 @@
 ---
-title: 측정값 | Microsoft Docs
+title: Analysis Services 테이블 형식 모델에 측정값 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cbd53d9d49c937967e88cefa95750dca41631876
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 508558f4458496ab4d376ec8906544f6656a25a5
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38045331"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072200"
 ---
 # <a name="measures"></a>측정값 그룹
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -50,13 +50,13 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |**총합계**|**$4,691,673,731.53**|  
   
 ##  <a name="bkmk_def_mg"></a> Defining measures by using the measure grid  
- 측정값은 모델 디자이너에서 측정값 표를 사용하여 디자인 타임에 생성됩니다. 각 테이블에 측정값 표가 포함됩니다. 기본적으로 측정값 표는 모델 디자이너에서 각 테이블 아래에 표시됩니다. 또한 특정 테이블에 대해 측정값 표를 표시하지 않도록 선택할 수 있습니다. 테이블의 측정값 표 표시를 전환하려면 **테이블** 메뉴를 클릭한 다음 **측정값 표 표시**를 클릭합니다.  
+ 측정값은 모델 디자이너에서 측정값 표를 사용하여 디자인 타임에 생성됩니다. 각 테이블에 측정값 표가 포함됩니다. 기본적으로 측정값 표는 모델 디자이너에서 각 테이블 아래에 표시됩니다. 또한 특정 테이블에 대해 측정값 표를 표시하지 않도록 선택할 수 있습니다. 테이블의 측정값 표 표시를 전환 하려면 합니다 **테이블** 메뉴에서를 클릭 한 다음 **측정값 표 표시**합니다.  
   
  측정값 표에서 다음과 같은 방법으로 측정값을 만들 수 있습니다.  
   
 -   측정값 표에서 빈 셀을 클릭하고 수식 입력줄에서 DAX 수식을 입력합니다. ENTER를 클릭하여 수식을 완성하면 측정값이 측정값 표의 셀에 나타납니다.  
   
--   열을 클릭하고 도구 모음에서 자동 합계 단추(∑)를 클릭한 다음 표준 집계 함수를 클릭하여 표준 집계 함수를 이용해 측정값을 만듭니다. 표준 집계로는 Sum, Average, Count, DistinctCount, Max 및 Min이 있습니다. 측정값은 항상 측정값 표의 해당 열 바로 아래에 나타납니다.  
+-   열을 클릭하고 도구 모음에서 자동 합계 단추(∑)를 클릭한 다음 표준 집계 함수를 클릭하여 표준 집계 함수를 이용해 측정값을 만듭니다. 표준 집계: 자동 합계 단추를 사용하여 만든 Sum, Average, Count, DistinctCount, Max 및 Min 측정값은 항상 측정값 표의 해당 열 바로 아래에 나타납니다.  
   
  기본적으로 자동 합계를 사용하면 관련 열의 이름, 콜론, 수식이 차례로 연결된 형태로 측정값의 이름이 정의됩니다. 이 이름은 수식 입력줄 또는 속성 창의 **측정값 이름** 속성 설정에서 변경할 수 있습니다. 사용자 지정 수식을 사용하여 측정값을 만들 경우 수식 입력줄에 이름, 콜론, 수식을 차례로 입력하거나 속성 창의 **측정값 이름** 속성 설정에 이름을 입력할 수 있습니다.  
   
@@ -65,7 +65,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 > [!TIP]  
 >  빈 테이블을 만들고 이동하여 여러 테이블에서 한 테이블로 측정값을 그룹화하거나 빈 테이블에서 새 측정값을 만들 수 있습니다. 다른 테이블에서 열을 참조할 때 DAX 수식에 테이블 이름을 포함시켜야 할 수 있습니다.  
   
- 큐브 뷰가 모델에 대해 정의된 경우 측정값이 해당 큐브 뷰에 자동으로 추가되지 않습니다. 큐브 뷰 대화 상자를 사용하여 측정값을 큐브 뷰에 수동으로 추가해야 합니다. 자세한 내용은 참조 하세요 [큐브 뷰](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)합니다.  
+ 큐브 뷰가 모델에 대해 정의된 경우 측정값이 해당 큐브 뷰에 자동으로 추가되지 않습니다. 큐브 뷰 대화 상자를 사용하여 측정값을 큐브 뷰에 수동으로 추가해야 합니다. 자세한 내용은 [큐브 뷰](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)를 참조하세요.  
   
 ##  <a name="bkmk_properties"></a> 측정값 속성  
  각 측정값에는 측정값을 정의하는 속성이 있습니다. 속성 창에서 측정값 속성을 관련 열 속성과 함께 편집할 수 있습니다. 측정값의 속성은 다음과 같습니다.  

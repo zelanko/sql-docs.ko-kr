@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.selectsourcetablesandviews.f1
@@ -13,12 +12,12 @@ ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2f99b94c133ba2a8bfd8bbe6d7b78bd455061409
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 074fb9aff14a2d173658c0a8ed8e31740e957a37
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050139"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760315"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>원본 테이블 및 뷰 선택(SQL Server 가져오기 및 내보내기 마법사)
   사용 합니다 **원본 테이블 및 뷰 선택** 페이지 테이블 및 대상에 데이터 원본에서 복사할 뷰를 지정 합니다.  
@@ -40,7 +39,7 @@ ms.locfileid: "48050139"
  목록에서 각 원본 테이블에 대한 대상 테이블을 선택합니다.  
   
 > [!NOTE]  
->  이 시점에서 대상 테이블을 만들기 위해 마법사에서 일시 중지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용 하 여 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 다른 도구에서 새 테이블이 즉시 사용 가능한 대상 테이블의 목록에 표시 되지는 않습니다. 또는 합니다. 단계를 대상 테이블 목록을 새로 고치려면 두 페이지를 다시 합니다 **대상 선택** 페이지에서 대상 데이터베이스를 다시 선택한 다음 다시 앞 합니다 **원본 테이블 및 뷰 선택**합니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]나 다른 도구를 사용하여 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 대상 테이블을 만들기 위해 마법사의 이 지점에서 일시 중지할 경우 사용 가능한 대상 테이블의 목록에 새 테이블이 즉시 표시되지는 않습니다. 단계를 대상 테이블 목록을 새로 고치려면 두 페이지를 다시 합니다 **대상 선택** 페이지에서 대상 데이터베이스를 다시 선택한 다음 다시 앞 합니다 **원본 테이블 및 뷰 선택**합니다.  
   
 ### <a name="other-options"></a>다른 옵션  
  **매핑 편집**  

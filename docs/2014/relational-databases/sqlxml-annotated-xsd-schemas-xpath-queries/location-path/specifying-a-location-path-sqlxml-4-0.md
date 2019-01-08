@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - absolute location path
@@ -18,12 +16,12 @@ ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 699f40750ef8f444de6b7115d34cfc33f834468a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c814d1b486a7ba7736cf19119a66ab0845d33c6b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107383"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807235"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>위치 경로 지정(SQLXML 4.0)
   XPath 쿼리는 식 형식으로 지정합니다. 식에는 다양한 종류가 있습니다. 위치 경로는 컨텍스트 노드에 상대적인 노드 집합을 선택하는 식이고 위치 경로에 대한 평가 결과는 노드 집합입니다.  

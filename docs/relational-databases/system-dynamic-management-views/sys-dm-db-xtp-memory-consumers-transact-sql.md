@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f1a3a5403c4549205c226f25d6c925ef81d4b10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 768fb39cdf26b01d55ffaf175ec07e181d265b52
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856521"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522755"
 ---
 # <a name="sysdmdbxtpmemoryconsumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "47856521"
 |-----------------|---------------|-----------------|  
 |memory_consumer_id|**bigint**|메모리 소비자의 ID(내부)입니다.|  
 |memory_consumer_type|**int**|메모리 소비자 유형입니다.<br /><br /> 0=Aggregation. (둘 이상 소비자의 메모리 사용량을 집계합니다. 표시되어서는 안 됩니다.)<br /><br /> 2=VARHEAP(가변 길이 힙에 대한 메모리 소비량을 추적합니다.)<br /><br /> 3=HASH(인덱스에 대한 메모리 소비를 추적합니다.)<br /><br /> 5=DB 페이지 풀(런타임 작업에 사용되는 데이터베이스 페이지 풀에 대한 메모리 소비량을 추적합니다. 예를 들어 테이블 변수 및 일부 순차 가능 검색입니다. 데이터베이스당 이 유형의 메모리 소비자는 하나뿐입니다.)|  
-|memory_consumer_type_desc|**nvarchar(64)**|메모리 소비자 유형입니다: VARHEAP, 해시 또는 PGPOOL입니다.<br /><br /> 0 – (표시되어서는 안 됩니다.)<br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
-|memory_consumer_desc|**nvarchar(64)**|메모리 소비자 인스턴스에 대한 설명입니다.<br /><br /> VARHEAP: <br />데이터베이스 힙입니다. 데이터베이스에 대한 사용자 데이터(행)를 할당하는 데 사용됩니다.<br />데이터베이스 시스템 힙입니다. 메모리 덤프에 포함되고 사용자 데이터를 포함하지 않는 데이터베이스 데이터를 할당하는 데 사용됩니다.<br />범위 인덱스 힙입니다. BW 페이지를 할당하기 위해 범위 인덱스에서 사용되는 개인 힙입니다.<br /><br /> 해시: object_id 나타내므로 설명이 없습니다 테이블과 index_id가 해시 인덱스 자체를 나타냅니다.<br /><br /> PGPOOL: 데이터베이스의 경우 하나의 페이지 풀 데이터베이스 64k 페이지 풀|  
+|memory_consumer_type_desc|**nvarchar(64)**|메모리 소비자의 유형으로, VARHEAP, HASH 또는 PGPOOL입니다.<br /><br /> 0-(해당 하지 나타납니다.)<br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
+|memory_consumer_desc|**nvarchar(64)**|메모리 소비자 인스턴스에 대한 설명입니다.<br /><br /> VARHEAP: <br />데이터베이스 힙입니다. 데이터베이스에 대한 사용자 데이터(행)를 할당하는 데 사용됩니다.<br />데이터베이스 시스템 힙입니다. 메모리 덤프에 포함되고 사용자 데이터를 포함하지 않는 데이터베이스 데이터를 할당하는 데 사용됩니다.<br />범위 인덱스 힙입니다. BW 페이지를 할당하기 위해 범위 인덱스에서 사용되는 개인 힙입니다.<br /><br /> 해시: object_id가 테이블을 나타내고 index_id가 해시 인덱스 자체를 나타내므로 설명이 없습니다.<br /><br /> PGPOOL: 데이터베이스의 경우 페이지 풀 데이터베이스 64K 페이지 풀 하나만 있습니다.|  
 |object_id|**bigint**|할당된 메모리가 속하는 개체 ID입니다. 시스템 개체에 대한 음수 값입니다.|  
 |xtp_object_id|**bigint**|메모리 최적화 테이블에 대 한 개체 ID입니다.|  
 |index_id|**int**|소비자의 인덱스 ID입니다(해당하는 경우). 기본 테이블의 경우 NULL입니다.|  
@@ -51,7 +51,7 @@ ms.locfileid: "47856521"
 |sizeclass_count|**int**|내부적으로만 사용됩니다.|  
 |min_sizeclass|**int**|내부적으로만 사용됩니다.|  
 |max_sizeclass|**int**|내부적으로만 사용됩니다.|  
-|memory_consumer_address|**varbinary**|소비자의 내부 주소입니다. 내부용으로만 사용할 수 있습니다.|  
+|memory_consumer_address|**varbinary**|소비자의 내부 주소입니다. 내부 전용입니다.|  
 |xtp_object_id|**bigint**|메모리 최적화 테이블에 해당 하는 메모리 내 OLTP 개체 ID입니다.|  
   
 ## <a name="remarks"></a>Remarks  

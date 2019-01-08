@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting subscription views [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3601916dd2ff9692283d393ff6a1c7dd28d18217
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e01209b78acb778d39d376172192ca7ee0f1a9e7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057473"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796815"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>구독 뷰 삭제(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 구독 뷰가 더 이상 필요하지 않으면 삭제할 수 있습니다. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 에서 구독 뷰를 삭제하면 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 해당 뷰가 제거됩니다.  

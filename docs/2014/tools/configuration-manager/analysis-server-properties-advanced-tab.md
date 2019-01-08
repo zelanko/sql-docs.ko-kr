@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: f4415e35-8f50-4cb7-813e-bdfafbdee275
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b3566a7e4903c441d58fd50569d69372d7a4a52b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92485676ba8340163c9fc1251be45f89336acf93
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192494"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52807565"
 ---
 # <a name="analysis-server-properties-advanced-tab"></a>분석 서버 속성(고급 탭)
   이 서비스는 Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]입니다. 사용자 지정 속성을 정의한 경우 속성이 해당 값과 함께 이 탭에 나타납니다.  

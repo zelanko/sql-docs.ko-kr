@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changesubscriber
@@ -17,12 +16,12 @@ ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af971732866142104b3f674fbf20f6f774db9e39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 466b2c0316cb5de9b38200fd643d0302c5b1ae93
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818533"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203102"
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  옵션을 변경할 대상이 되는 구독자의 이름입니다. *구독자* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@type=**] *형식*  
- 구독자 유형입니다. *형식* 됩니다 **tinyint**, 기본값은 NULL입니다. **0** 나타냅니다는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자입니다. **1** 이외[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 기타 ODBC 데이터 원본 서버 구독자입니다.  
+ 구독자 유형입니다. *형식* 됩니다 **tinyint**, 기본값은 NULL입니다. **0** 나타냅니다는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자입니다. **1** 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 기타 ODBC 데이터 원본 서버 구독자입니다.  
   
  [  **@login=**] **'***로그인***'**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인 ID입니다. *login*은 **sysname**이며 기본값은 NULL입니다.  
@@ -102,7 +101,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|첫째|  
-|**2**|둘째|  
+|**2**|Second|  
 |**4**|셋째|  
 |**8**|넷째|  
 |**16**|마지막|  
@@ -116,7 +115,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|둘째|  
+|**2**|Second|  
 |**4**|Minute|  
 |**8**|Hour|  
   
@@ -147,7 +146,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**1**|Windows 인증|  
   
  [ **@publisher**=] **'***게시자***'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외의 게시자를 지정합니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+ 지정 된 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *게시자* 해서는 안에서 아티클 속성을 변경 하는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  

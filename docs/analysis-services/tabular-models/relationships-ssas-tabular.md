@@ -1,5 +1,5 @@
 ---
-title: 관계 | Microsoft Docs
+title: Analysis Services 테이블 형식 모델의 관계 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b704b7e2fdc299006d77e08314d2b16ffd750a0a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6314331be3a844b86ff8790c8c38abb4c0d3758e
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045307"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072530"
 ---
 # <a name="relationships"></a>관계 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -33,35 +33,35 @@ ms.locfileid: "34045307"
   
 |CustomerID|이름|EMail|DiscountRate|OrderID|OrderDate|Product|수량|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
-|1.|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
-|1.|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
+|1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
+|1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
 |2|Jaworski|michal.jaworski@contoso.com|.10|254|2010-01-03|Budget Movie-Maker|27|  
   
- 이 접근 방법도 나쁘지 않지만 이 경우 각 주문에 대해 고객의 전자 메일 주소와 같은 중복 데이터가 다량 저장될 수 있습니다. 저장 비용은 저렴하지만 전자 메일 주소가 변경될 경우 해당 고객에 대한 모든 행을 업데이트해야 합니다. 데이터를 여러 테이블로 분할하고 해당 테이블 간에 관계를 정의하면 이러한 문제를 해결할 수 있습니다. 사용 하는 방법 이것이 *관계형 데이터베이스* SQL server. 예를 들어 모델로 가져온 데이터베이스에서 다음과 같은 세 개의 관련 테이블을 사용하여 주문 데이터를 나타낼 수 있습니다.  
+ 이 접근 방법도 나쁘지 않지만 이 경우 각 주문에 대해 고객의 전자 메일 주소와 같은 중복 데이터가 다량 저장될 수 있습니다. 저장 비용은 저렴하지만 전자 메일 주소가 변경될 경우 해당 고객에 대한 모든 행을 업데이트해야 합니다. 데이터를 여러 테이블로 분할하고 해당 테이블 간에 관계를 정의하면 이러한 문제를 해결할 수 있습니다. 이에서 사용 하는 방법 *관계형 데이터베이스* SQL Server 등. 예를 들어 모델로 가져온 데이터베이스에서 다음과 같은 세 개의 관련 테이블을 사용하여 주문 데이터를 나타낼 수 있습니다.  
   
-### <a name="customers"></a>Customers  
+### <a name="customers"></a>고객  
   
 |[CustomerID]|이름|EMail|  
 |--------------------|----------|-----------|  
-|1.|Ashton|chris.ashton@contoso.com|  
+|1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
   
 ### <a name="customerdiscounts"></a>CustomerDiscounts  
   
 |[CustomerID]|DiscountRate|  
 |--------------------|------------------|  
-|1.|.05|  
+|1|.05|  
 |2|.10|  
   
 ### <a name="orders"></a>Orders  
   
 |[CustomerID]|OrderID|OrderDate|Product|수량|  
 |--------------------|-------------|---------------|-------------|--------------|  
-|1.|256|2010-01-07|Compact Digital|11|  
-|1.|255|2010-01-03|SLR Camera|15|  
+|1|256|2010-01-07|Compact Digital|11|  
+|1|255|2010-01-03|SLR Camera|15|  
 |2|254|2010-01-03|Budget Movie-Maker|27|  
   
- 이러한 테이블을 동일한 데이터베이스에서 가져오는 경우, 테이블 가져오기 마법사에서는 [대괄호] 안에 있는 열을 기준으로 테이블 간의 관계를 검색하여 모델 디자이너에서 이러한 관계를 재현할 수 있습니다. 자세한 내용은 이 항목의 [관계 자동 검색 및 유추](#detection) 를 참조하십시오. 여러 원본에서 테이블을 가져오는 경우 수동으로 만들 수 있습니다 관계에 설명 된 대로 [테이블 두 간의 관계를 만들](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)합니다.  
+ 이러한 테이블을 동일한 데이터베이스에서 가져오는 경우, 테이블 가져오기 마법사에서는 [대괄호] 안에 있는 열을 기준으로 테이블 간의 관계를 검색하여 모델 디자이너에서 이러한 관계를 재현할 수 있습니다. 자세한 내용은 이 항목의 [관계 자동 검색 및 유추](#detection) 를 참조하십시오. 여러 원본에서 테이블을 가져오는 경우 수동으로 만들면 관계에 설명 된 대로 [는 두 테이블 간에 관계 만들기](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)합니다.  
   
 ### <a name="columns-and-keys"></a>열 및 키  
  관계는 동일한 데이터가 포함된 각 테이블의 열에 기반을 둡니다. 예를 들어 Customers 테이블과 Orders 테이블은 둘 모두 고객 ID가 저장된 열을 포함하기 때문에 서로 관련시킬 수 있습니다. 이 항목의 예에서는 열 이름이 같지만 반드시 같아야 할 필요는 없습니다. 한 열은 이름이 CustomerID이고 다른 열은 이름이 CustomerNumber일 수 있습니다. Orders 테이블의 모든 행에 Customers 테이블에 저장되어 있는 ID만 있으면 됩니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "34045307"
   
  다음 표에서는 세 테이블 간의 관계를 보여 줍니다.  
   
-|관계|형식|조회 열|열|  
+|관계|형식|조회 열|Column|  
 |------------------|----------|-------------------|------------|  
 |Customers-CustomerDiscounts|일 대 일|Customers.CustomerID|CustomerDiscounts.CustomerID|  
 |Customers-Orders|일 대 다|Customers.CustomerID|Orders.CustomerID|  
@@ -95,9 +95,9 @@ ms.locfileid: "34045307"
  모델 디자이너에서 관계를 만들 때 따라야 할 몇 가지 요구 사항이 있습니다.  
   
 ### <a name="single-active-relationship-between-tables"></a>테이블 간 단일 활성 관계  
- 관계가 여러 개 있으면 테이블 간의 종속성이 모호해질 수 있습니다. 정확한 계산을 만들려면 한 테이블에서 다음 테이블로 연결되는 단일 경로가 필요합니다. 따라서 각 테이블 쌍 사이에는 하나의 활성 관계만 있을 수 있습니다. 예를 들어 AdventureWorks DW 2012에서 DimDate 테이블에는 FactInternetSales 테이블의 세 가지 다른 열인 OrderDate, DueDate 및 ShipDate와 관련된 DateKey 열이 포함되어 있습니다. 이러한 테이블을 가져오려는 경우 첫 번째 관계는 성공적으로 만들어지지만 같은 열에 적용되는 연속된 관계에 대해 다음 오류가 나타나게 됩니다.  
+ 관계가 여러 개 있으면 테이블 간의 종속성이 모호해질 수 있습니다. 정확한 계산을 만들려면 한 테이블에서 다음 테이블로 연결되는 단일 경로가 필요합니다. 따라서 각 테이블 쌍 사이에는 하나의 활성 관계만 있을 수 있습니다. 예를 들어 AdventureWorks DW 2012에서 DimDate 테이블에는 FactInternetSales 테이블에서 세 개의 다른 열과 관련 된 DateKey 열을 포함: OrderDate, DueDate 및 ShipDate와 관련된 DateKey 열이 포함되어 있습니다. 이러한 테이블을 가져오려는 경우 첫 번째 관계는 성공적으로 만들어지지만 같은 열에 적용되는 연속된 관계에 대해 다음 오류가 나타나게 됩니다.  
   
- \* 관계: 테이블 [열 1]-> 테이블 [열 2]-상태: 오류-이유: 테이블 간에 관계를 만들 수 없습니다 \<표 1 > 및 \<표 2 >. 두 테이블 간에는 하나의 직접 또는 간접 관계만 존재합니다.  
+ \* 관계: 테이블 [열 1]-> 테이블 [열 2]-상태: 오류-이유: 테이블 간의 관계를 만들 수 없습니다 \<표 1 > 및 \<표 2 >. 두 테이블 간에는 하나의 직접 또는 간접 관계만 존재합니다.  
   
  테이블이 두 개 있고 이 테이블 간에 여러 관계가 있는 경우 조회 열을 포함하는 테이블의 여러 복사본을 가져와서 각 테이블 쌍 간에 하나의 관계를 만들어야 합니다.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "34045307"
 ### <a name="one-relationship-for-each-source-column"></a>각 원본 열에 하나의 관계 사용  
  원본 열은 여러 관계에 참여할 수 없습니다. 특정 열을 한 관계의 원본 열로 이미 사용했지만 해당 열을 사용하여 다른 테이블의 다른 관련 조회 열에 연결하려는 경우 열의 복사본을 만든 다음 해당 열을 새 관계에 사용할 수 있습니다.  
   
- 계산 열에 DAX 수식을 사용하면 동일한 값을 가진 열의 복사본을 쉽게 만들 수 있습니다. 자세한 내용은 참조 [계산 열 만들기](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md)합니다.  
+ 계산 열에 DAX 수식을 사용하면 동일한 값을 가진 열의 복사본을 쉽게 만들 수 있습니다. 자세한 내용은 [계산 열 만들기](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md)합니다.  
   
 ### <a name="unique-identifier-for-each-table"></a>각 테이블의 고유 식별자  
  각 테이블에는 해당 테이블의 각 행을 고유하게 식별하는 단일 열이 있어야 합니다. 이 열을 대개 기본 키라고 합니다.  
@@ -115,7 +115,7 @@ ms.locfileid: "34045307"
  조회 열의 데이터 값은 고유해야 합니다. 즉, 열에 중복된 값이 있으면 안 됩니다. 테이블 형식 모델에서 null 및 빈 문자열은 공백과 동일하며 이는 고유 데이터 값입니다. 이는 조회 열에 Null 값을 여러 개 포함할 수 없음을 의미합니다.  
   
 ### <a name="compatible-data-types"></a>호환되는 데이터 형식  
- 원본 열과 조회 열의 데이터 형식이 호환되어야 합니다. 데이터 형식에 대 한 자세한 내용은 참조 [지원 되는 데이터 형식](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)합니다.  
+ 원본 열과 조회 열의 데이터 형식이 호환되어야 합니다. 데이터 형식에 대 한 자세한 내용은 참조 하세요. [데이터 형식 지원](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)합니다.  
   
 ### <a name="composite-keys-and-lookup-columns"></a>복합 키 및 조회 열  
  테이블 형식 모델에서는 복합 키를 사용할 수 없습니다. 즉, 테이블의 각 행을 고유하게 식별하는 열이 항상 하나여야 합니다. 복합 키를 기반으로 하는 기존 관계를 가진 테이블을 가져오는 경우 테이블 가져오기 마법사는 해당 관계를 테이블 형식 모델에서 만들 수 없으므로 이 관계를 무시합니다.  
@@ -125,7 +125,7 @@ ms.locfileid: "34045307"
 ###  <a name="bkmk_many_to_many"></a> Many-to-Many relationships  
  테이블 형식 모델에서는 다 대 다 관계를 지원하지 않으므로 모델 디자이너에서 *접합 테이블* 을 추가할 수 없습니다. 하지만 DAX 함수를 사용하여 다 대 다 관계를 모델링할 수 있습니다.  
   
- 또한 동일한 목적을 달성하는 경우 양방향 교차 필터 설정을 시도할 수 있습니다. 경우에 따라 여러 테이블 관계 간에 필터 컨텍스트를 유지 하는 필터 간을 통해 다 대 다 관계의 요구 사항이 충족 될 수입니다. 자세한 내용은 [SQL Server 2016 Analysis Services의 테이블 형식 모델에 대한 양방향 교차 필터](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) 를 참조하세요.  
+ 또한 동일한 목적을 달성하는 경우 양방향 교차 필터 설정을 시도할 수 있습니다. 경우에 따라 여러 테이블 관계 간에 필터 컨텍스트를 유지 하는 필터 간을 통해 다 대 다 관계의 요구 사항이 처리할 수 있습니다. 자세한 내용은 [SQL Server 2016 Analysis Services의 테이블 형식 모델에 대한 양방향 교차 필터](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) 를 참조하세요.  
   
 ### <a name="self-joins-and-loops"></a>자체 조인 및 루프  
  자체 조인은 테이블 형식 모델 테이블에서 허용되지 않습니다. 자체 조인은 테이블 자체의 재귀적 관계입니다. 자체 조인은 주로 부모-자식 계층을 정의하는 데 사용됩니다. 예를 들어 Employees 테이블을 자체에 조인하여 기업의 관리 체인을 보여 주는 계층을 만들 수 있습니다.  
@@ -159,7 +159,7 @@ ms.locfileid: "34045307"
   
  모델에 있는 데이터의 원본이 여러 개인 경우 수동으로 관계를 만들어야 할 가능성이 많습니다. 예를 들어 관계형 데이터 원본에서 Customers, CustomerDiscounts 및 Orders 테이블을 가져올 수 있습니다. 원본의 이러한 테이블 간에 있는 관계는 자동으로 모델에 만들어집니다. 그런 다음 다른 원본의 다른 테이블을 추가할 수 있습니다. 예를 들어 icrosoft Excel 통합 문서의 Geography 테이블에서 영역 데이터를 가져올 수 있습니다. 그런 다음 Customers 테이블의 열과 Geography 테이블 간 관계를 수동으로 만들 수 있습니다.  
   
- 다이어그램 뷰의 모델 디자이너나 관계 관리 대화 상자를 사용하여 테이블 형식 모델에 관계를 수동으로 만들 수 있습니다. 다이어그램 뷰는 테이블을 그래픽 형식의 관계도와 함께 표시합니다. 한 테이블의 열을 클릭한 다음 다른 테이블로 커서를 끌어 테이블 간에 올바른 순서로 쉽게 관계를 만들 수 있습니다. 관계 관리 대화 상자에는 간단한 테이블 형식으로 테이블 간의 관계가 표시됩니다. 수동으로 관계를 만드는 방법을 알아보려면 참조 [테이블 두 간의 관계를 만들](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)합니다.  
+ 다이어그램 뷰의 모델 디자이너나 관계 관리 대화 상자를 사용하여 테이블 형식 모델에 관계를 수동으로 만들 수 있습니다. 다이어그램 뷰는 테이블을 그래픽 형식의 관계도와 함께 표시합니다. 한 테이블의 열을 클릭한 다음 다른 테이블로 커서를 끌어 테이블 간에 올바른 순서로 쉽게 관계를 만들 수 있습니다. 관계 관리 대화 상자에는 간단한 테이블 형식으로 테이블 간의 관계가 표시됩니다. 수동으로 관계를 만드는 방법에 알아보려면 참조 [는 두 테이블 간에 관계 만들기](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)합니다.  
   
 ##  <a name="bkmk_dupl_errors"></a> Duplicate values and other errors  
  관계에 사용할 수 없는 열을 선택하면 열 옆에 빨간색 X가 나타납니다. 오류 아이콘 위에 커서를 두면 문제에 대한 자세한 정보를 제공하는 메시지가 표시됩니다. 다음과 같은 문제로 인해 선택된 열 간에 관계를 만들지 못할 수 있습니다.  
@@ -177,7 +177,7 @@ ms.locfileid: "34045307"
 |[관계 삭제](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)|관계를 삭제하는 방법과 관계를 삭제할 경우에 발생하는 결과를 설명합니다.|  
 |[SQL Server 2016 Analysis Services의 테이블 형식 모델에 대한 양방향 교차 필터](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md)|관련된 테이블에 대한 양방향 교차 필터링을 설명합니다. 한 테이블 관계의 필터 컨텍스트는 테이블이 관련되고 양방향 교차 필터가 정의되는 경우 두 번째 테이블 관계를 통해 쿼리할 때 사용할 수 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [테이블 및 열](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
  [데이터 가져오기](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)  
   

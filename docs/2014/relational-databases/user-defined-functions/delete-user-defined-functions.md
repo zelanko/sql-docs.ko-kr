@@ -10,12 +10,12 @@ ms.assetid: db1d668a-23b7-4757-a9c5-1bd848ba7f6d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 65c45ab0696792268cc6268503054a894161114a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f6c2580e17c204b534ec4c8ebadec3a1e992a4d6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162753"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529274"
 ---
 # <a name="delete-user-defined-functions"></a>사용자 정의 함수 삭제
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 다음을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 사용자 정의 함수를 삭제할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]  
@@ -68,7 +68,7 @@ ms.locfileid: "48162753"
 5.  **개체 삭제** 대화 상자에서 **확인**을 클릭합니다.  
   
     > [!IMPORTANT]  
-    >  **개체 삭제** 대화 상자에서 **종속성 표시**를 클릭하여 *function_name***종속성** 대화 상자를 엽니다. 이 대화 상자에는 해당 함수에 종속된 모든 개체와 해당 함수가 종속된 모든 개체가 표시됩니다.  
+    >  **개체 삭제** 대화 상자에서 **종속성 표시** 를 클릭하여 _function_name_**종속성** 대화 상자를 엽니다. 이 대화 상자에는 해당 함수에 종속된 모든 개체와 해당 함수가 종속된 모든 개체가 표시됩니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48162753"
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
     ```  
-    -- creates function called “Sales.ufn_SalesByStore”  
+    -- creates function called "Sales.ufn_SalesByStore"  
     USE AdventureWorks2012;  
     GO  
     CREATE FUNCTION Sales.ufn_SalesByStore (@storeid int)  

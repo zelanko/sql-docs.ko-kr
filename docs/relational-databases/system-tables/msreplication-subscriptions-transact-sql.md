@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSreplication_subscriptions
@@ -19,12 +18,12 @@ ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f195247e3daf764903028e8ba10ca0d7dd24a426
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0fa68012f419939c3f77980020795f23c4ca4672
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800841"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794535"
 ---
 # <a name="msreplicationsubscriptions-transact-sql"></a>MSreplication_subscriptions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "47800841"
 |**subid**|**binary(16)**|익명 구독에 관한 전역 식별자입니다.|  
 |**immediate_sync**|**bit**|스냅숏 에이전트가 실행될 때마다 동기화 파일을 만들거나 다시 만들지 여부를 나타냅니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_helpsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  

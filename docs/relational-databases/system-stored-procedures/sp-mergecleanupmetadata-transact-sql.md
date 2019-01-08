@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_mergecleanupmetadata_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 994f24e0b19dac70e6987a0c23d45d5446548689
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d3ae8edeff1792cf3a1c70d4e80dea638402e30d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670607"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210962"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_update_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +51,10 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>Remarks  
  **sp_mergecleanupmetadata** 버전을 실행 하는 서버가 포함 된 복제 토폴로지에서 사용 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전에 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서비스 팩 1입니다. [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서비스 팩 1 이상 버전만 포함하는 토폴로지는 자동 보존 기반 메타데이터 정리를 사용해야 합니다. 이 저장 프로시저를 실행할 때는 저장 프로시저가 실행되는 컴퓨터에서 로그 파일이 크게 증가할 가능성이 있다는 점에 주의해야 합니다.  
   
-> [!CAUTION]  
+> [!CAUTION]
 >  이후에 **sp_mergecleanupmetadata** 메타 데이터에 저장 된 게시의 구독자에서 모든 구독이 기본적으로 실행 됩니다 **MSmerge_genhistory**, **MSmerge_contents**  하 고 **MSmerge_tombstone** 표시 된 구독자에서 보류 중인 변경 내용을 다시 초기화에 대 한 손실 되 고 현재 스냅숏을 obsolete로 표시 되어 있습니다.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  데이터베이스에 게시가 여러 개 및 해당 게시 중 하나가 무한 게시 보존 기간을 사용 하는 경우 (**@retention**=**0**)에서 실행 되며,  **sp_mergecleanupmetadata** 의 병합 복제 변경 추적 데이터베이스에 대 한 메타 데이터 정리 하지 않습니다. 그러므로 무한 게시 보존은 신중히 사용하십시오.  
   
  이 저장 프로시저 실행 시에 설정 하 여 구독자를 다시 초기화할 지 여부를 선택할 수 있습니다 합니다 **@reinitialize_subscriber** 매개 변수를 **TRUE** (기본값) 또는 **FALSE**. 하는 경우 **sp_mergecleanupmetadata** 실행 되는 **@reinitialize_subscriber** 매개 변수 설정 **TRUE**, 구독 된 경우에 구독자에서 스냅숏을 다시 적용 됩니다 초기 스냅숏 (예를 들어 경우 스냅숏 데이터 및 스키마를 수동으로 적용 되었거나 이미 구독자 됩니다) 없이 만들어집니다. 매개 변수 설정 **FALSE** 게시가 다시 초기화 되지 않습니다 하는 경우 게시자와 구독자에서 데이터가 동기화 확인 해야 하기 때문에 주의 사용 하 여 사용 해야 합니다.  
@@ -66,7 +65,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 1.  필수는 아니지만 게시 및 구독 데이터베이스에 대한 모든 업데이트를 중지하는 것이 좋습니다. 업데이트가 계속될 경우 게시를 다시 초기화할 때 마지막 병합 이후 구독자에 업데이트된 내용이 모두 손실되지만 데이터 일치성은 유지됩니다.  
   
-2.  병합 에이전트를 실행하여 병합을 실행합니다. 사용 하는 것이 좋습니다 합니다 **– 유효성 검사** 병합 에이전트를 실행할 때 각 구독자에서 에이전트 명령줄 옵션입니다. 연속 모드 병합을 실행 하는 경우 참조 *연속 모드 병합에 대 한 특별 고려 사항* 이 섹션의 뒷부분에 나오는.  
+2.  병합 에이전트를 실행하여 병합을 실행합니다. 사용 하는 것이 좋습니다 합니다 **-유효성 검사** 병합 에이전트를 실행할 때 각 구독자에서 에이전트 명령줄 옵션입니다. 연속 모드 병합을 실행 하는 경우 참조 *연속 모드 병합에 대 한 특별 고려 사항* 이 섹션의 뒷부분에 나오는.  
   
 3.  모든 병합을 완료 한 후 실행 **sp_mergecleanupmetadata**합니다.  
   
@@ -82,7 +81,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 1.  중지 **모든** 게시 및 구독 데이터베이스를 업데이트 합니다.  
   
-2.  병합 에이전트를 실행하여 병합을 실행합니다. 사용 하는 것이 좋습니다 합니다 **– 유효성 검사** 병합 에이전트를 실행할 때 각 구독자에서 에이전트 명령줄 옵션입니다. 연속 모드 병합을 실행 하는 경우 참조 *연속 모드 병합에 대 한 특별 고려 사항* 이 섹션의 뒷부분에 나오는.  
+2.  병합 에이전트를 실행하여 병합을 실행합니다. 사용 하는 것이 좋습니다 합니다 **-유효성 검사** 병합 에이전트를 실행할 때 각 구독자에서 에이전트 명령줄 옵션입니다. 연속 모드 병합을 실행 하는 경우 참조 *연속 모드 병합에 대 한 특별 고려 사항* 이 섹션의 뒷부분에 나오는.  
   
 3.  모든 병합을 완료 한 후 실행 **sp_mergecleanupmetadata**합니다.  
   

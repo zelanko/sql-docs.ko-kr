@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a01af53372a8be1fce6ffa2e4ee8d4cddce8d057
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98844917c047e2e52018e9ed8b050f708617ae2f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135343"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799105"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>데이터 유효성 검사(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 데이터를 게시할 때 두 가지 종류의 유효성 검사가 수행됩니다.  
@@ -49,13 +48,13 @@ ms.locfileid: "48135343"
 |Error|행에 있는 하나 이상의 값이 길이 또는 데이터 형식 같은 시스템 요구 사항을 충족하지 않습니다. MDS 저장소에서 값이 업데이트되지 않습니다.|  
 |새 행|행의 값이 아직 MDS 저장소에 게시되지 않았습니다.|  
 |읽기 전용|로그인한 사용자에게 행에 있는 하나 이상의 값에 대한 읽기 전용 권한이 있으며 값을 업데이트할 수 없습니다.|  
-|변경 안 됨|워크시트에서 행의 어떤 값도 변경되지 않았습니다. 저장소에서 값이 변경되지 않았다는 의미는 아닙니다. 시트의 최신 데이터를 가져오려면 **연결 및 로드** 그룹에서 **로드 또는 새로 고침**을 클릭합니다.<br /><br /> 이는 각 행의 기본 설정입니다.|  
+|Unchanged|워크시트에서 행의 어떤 값도 변경되지 않았습니다. 저장소에서 값이 변경되지 않았다는 의미는 아닙니다. 시트의 최신 데이터를 가져오려면 **연결 및 로드** 그룹에서 **로드 또는 새로 고침**을 클릭합니다.<br /><br /> 이는 각 행의 기본 설정입니다.|  
   
 ## <a name="related-tasks"></a>관련 작업  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|정의된 비즈니스 규칙을 통과하지 못한 값을 확인합니다.|[비즈니스 규칙 적용 &#40;MDS 추가 기능에 Excel 용&#41;](apply-business-rules-mds-add-in-for-excel.md)|  
+|정의된 비즈니스 규칙을 통과하지 못한 값을 확인합니다.|[비즈니스 규칙 적용&#40;Excel용 MDS 추가 기능&#41;](apply-business-rules-mds-add-in-for-excel.md)|  
 |유효성 검사 오류를 수정하고 멤버에 대해 수행된 모든 트랜잭션을 봅니다.|[멤버에 대한 모든 주석 또는 트랜잭션 보기&#40;Excel용 MDS 추가 기능&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>관련 내용  

@@ -1,11 +1,10 @@
 ---
-title: '? :(조건부)(SSIS 식) | Microsoft Docs'
+title: '? : (조건부) (SSIS 식) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - conditional operator (?:)
@@ -14,12 +13,12 @@ ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4d1713e75acf4ad8e76cfdf309ede46523690b4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f644dc95d5c137c8ee1cdb5ecf8b0e2659e28e40
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197263"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811195"
 ---
 # <a name="--conditional-ssis-expression"></a>? : (조건부)(SSIS 식)
   부울 식의 계산에 따라 두 식 중 하나를 반환합니다. 부울 식이 TRUE이면 첫 번째 식이 계산되고 반환 결과는 식의 결과입니다. 부울 식이 FALSE이면 두 번째 식이 계산되고 반환 결과는 식의 결과입니다.  
@@ -58,9 +57,9 @@ boolean_expression?expression1:expression2
   
 -   **Numeric**   *expression1* 및 *expression2* 모두 숫자 데이터 형식이어야 합니다. 데이터 형식의 교집합은 식 계산기가 수행하는 암시적 숫자 변환에 대한 규칙에 지정된 대로 숫자 데이터 형식이어야 합니다. 두 숫자 데이터 형식의 교집합은 Null일 수 없습니다. 자세한 내용은 [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md)을 참조하세요.  
   
--   **String** *expression1* 및 *expression2* 모두 문자열 데이터 형식(DT_STR 또는 DT_WSTR)이어야 합니다. 두 식이 서로 다른 문자열 데이터 형식으로 계산될 수 있습니다. 결과는 DT_WSTR 데이터 형식으로 둘 중에서 긴 인수의 길이입니다.  
+-   **문자열** 둘 다 *expression1* 하 고 *expression2* 문자열 데이터 형식 이어야 합니다. DT_STR 또는 DT_WSTR여야 합니다. 두 식이 서로 다른 문자열 데이터 형식으로 계산될 수 있습니다. 결과는 DT_WSTR 데이터 형식으로 둘 중에서 긴 인수의 길이입니다.  
   
--   **Date, Time 또는 Date/Time** *expression1* 및 *expression2* 모두는 DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET 또는 DT_FILETIME 데이터 형식 중 하나로 계산되어야 합니다.  
+-   **날짜, 시간 또는 날짜/시간** 둘 다 *expression1* 하 고 *expression2* 다음 데이터 형식 중 하나로 계산 되어야 합니다. DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET, DT_FILETIME 데이터 형식 중 하나로 계산되어야 합니다.  
   
     > [!NOTE]  
     >  시간 데이터 형식으로 계산되는 식과 날짜 또는 날짜/시간 데이터 형식 중 하나로 계산되는 식 사이의 비교는 지원되지 않습니다. 시스템에서 오류가 발생합니다.  
@@ -99,7 +98,7 @@ ListPrice < 350.00 ? ListPrice * .2 : ListPrice * .1
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [연산자 우선순위 및 결합성](operator-precedence-and-associativity.md)   
- [연산자 &#40;SSIS 식&#41;](operators-ssis-expression.md)  
+ [연산자 우선 순위 및 계산 방향](operator-precedence-and-associativity.md)   
+ [연산자&#40;SSIS 식&#41;](operators-ssis-expression.md)  
   
   

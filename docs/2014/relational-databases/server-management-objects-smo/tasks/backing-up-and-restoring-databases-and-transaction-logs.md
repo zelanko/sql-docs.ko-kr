@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - restoring databases [SMO]
@@ -21,12 +19,12 @@ ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb3452b587bd455488d391656eae9801e642391f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 1fc7ff4dc3142fa6f6cd18fc7b00e691d3bf29df
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092943"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805541"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>데이터베이스 및 트랜잭션 로그 백업 및 복원
   SMO에서 <xref:Microsoft.SqlServer.Management.Smo.Backup> 클래스와 <xref:Microsoft.SqlServer.Management.Smo.Restore> 클래스는 특정 백업 및 복원 태스크를 수행하는 도구를 제공하는 유틸리티 클래스입니다. A <xref:Microsoft.SqlServer.Management.Smo.Backup> 개체가 나타내는 대신 필요한 특정 백업 작업은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개체는 서버 인스턴스.  

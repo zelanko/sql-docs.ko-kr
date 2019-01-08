@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - concatenation [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 809586f89288a930a672e2f6daa45fafe7901ec6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00886e865600da44f5b1e92adf175f975d446996
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146243"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811815"
 ---
 # <a name="-concatenate-ssis-expression"></a>+(연결)(SSIS 식)
   두 식을 하나의 식으로 연결합니다.  
@@ -49,7 +48,7 @@ character_expression1 + character_expression2
   
  두 식이 모두 동일한 데이터 형식으로 되어 있거나 식 하나가 암시적으로 또 다른 식의 데이터 형식으로 변환될 수 있어야 합니다. 예를 들어 "Order date is " 문자열과 **OrderDate** 열을 연결하면 **OrderDate** 값이 암시적으로 문자열 데이터 형식으로 변환됩니다. 두 개의 숫자 값을 연결하려면 두 숫자 값을 모두 명시적으로 문자열 데이터 형식으로 캐스팅해야 합니다.  
   
- 연결은 BLOB 데이터 형식인 DT_TEXT, DT_NTEXT 또는 DT_IMAGE 중 하나만 사용할 수 있습니다.  
+ 연결은 BLOB 데이터 형식인 DT_TEXT, DT_NTEXT 또는 DT_IMAGE로 계산되어야 합니다.  
   
  두 요소 중 하나가 Null이면 결과도 Null입니다.  
   
@@ -68,8 +67,8 @@ FirstName + ' ' + LastName
 @ZIPCcode + "-" + @[ZipCode+4]  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [연산자 우선순위 및 결합성](operator-precedence-and-associativity.md)   
- [연산자 &#40;SSIS 식&#41;](operators-ssis-expression.md)  
+## <a name="see-also"></a>관련 항목:  
+ [연산자 우선 순위 및 계산 방향](operator-precedence-and-associativity.md)   
+ [연산자&#40;SSIS 식&#41;](operators-ssis-expression.md)  
   
   

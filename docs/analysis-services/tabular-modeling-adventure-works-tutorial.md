@@ -1,5 +1,5 @@
 ---
-title: 테이블 형식 모델링 (1200 호환성 수준) | Microsoft Docs
+title: Analysis Services 테이블 형식 모델링 (1200 호환성 수준) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b0b8d60c6c365d48f8eccc46cbc9a3b0f5222ff5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 43ef5c290e1234af4482f09f2ec7f01e2edbca99
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054690"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072180"
 ---
 # <a name="tabular-modeling-1200-compatibility-level"></a>테이블 형식 모델링 (1200 호환성 수준)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -75,19 +75,19 @@ SQL Server 2017 또는 Azure Analysis Services를 사용 하는 경우 모델에
   
 |단원|소요되는 예상 시간|  
 |----------|------------------------------|  
-|[1단원: 새 테이블 형식 모델 프로젝트를 만들기](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)|10분|  
+|[1 단원: 새 테이블 형식 모델 프로젝트 만들기](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)|10분|  
 |[2단원: 데이터 추가](../analysis-services/lesson-2-add-data.md)|20분|  
-|[3단원: 날짜 테이블로 표시](../analysis-services/lesson-3-mark-as-date-table.md)|3분|  
+|[3 단원: 날짜 테이블로 표시](../analysis-services/lesson-3-mark-as-date-table.md)|3분|  
 |[4 단원: 관계 만들기](../analysis-services/lesson-4-create-relationships.md)|10분|  
 |[5 단원: 계산된 열 만들기](../analysis-services/lesson-5-create-calculated-columns.md)|15분|
 |[6 단원: 측정값 만들기](../analysis-services/lesson-6-create-measures.md)|30분|  
-|[7단원: 핵심 성과 지표 만들기](../analysis-services/lesson-7-create-key-performance-indicators.md)|15분|  
+|[7 단원: 핵심 성과 지표 만들기](../analysis-services/lesson-7-create-key-performance-indicators.md)|15분|  
 |[8 단원: 큐브 뷰 만들기](../analysis-services/lesson-8-create-perspectives.md)|5분|  
 |[9 단원: 계층 만들기](../analysis-services/lesson-9-create-hierarchies.md)|20분|  
-|[단원 10: 파티션 만들기](../analysis-services/lesson-10-create-partitions.md)|15분|  
-|[단원 11: 역할 만들기](../analysis-services/lesson-11-create-roles.md)|15분|  
-|[12단원: Excel에서 분석](../analysis-services/lesson-12-analyze-in-excel.md)|20분| 
-|[13단원: 배포](../analysis-services/lesson-13-deploy.md)|5분|  
+|[10 단원: 파티션 만들기](../analysis-services/lesson-10-create-partitions.md)|15분|  
+|[11 단원: 역할 만들기](../analysis-services/lesson-11-create-roles.md)|15분|  
+|[12 단원: Excel에서 분석](../analysis-services/lesson-12-analyze-in-excel.md)|20분| 
+|[단원 13: 배포](../analysis-services/lesson-13-deploy.md)|5분|  
   
 ## <a name="supplemental-lessons"></a>추가 단원  
 이 자습서에는 [추가 단원](http://msdn.microsoft.com/library/2018456f-b4a6-496c-89fb-043c62d8b82e)도 포함되어 있습니다. 이 섹션의 항목은 자습서를 완료하기 위한 필수 항목은 아니지만 고급 테이블 형식 모델 제작 기능을 더 잘 이해하는 데 유용할 수 있습니다.  
@@ -98,7 +98,7 @@ SQL Server 2017 또는 Azure Analysis Services를 사용 하는 경우 모델에
 
   
 ## <a name="next-step"></a>다음 단계  
-자습서를 시작하려면 첫 번째 단원인 [1단원: 새 테이블 형식 모델 프로젝트를 만들기](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)로 이동하세요.  
+자습서를 시작하려면 첫 번째 단원으로 이동하십시오. [1 단원: 새 테이블 형식 모델 프로젝트를 만들](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)합니다.  
   
   
   

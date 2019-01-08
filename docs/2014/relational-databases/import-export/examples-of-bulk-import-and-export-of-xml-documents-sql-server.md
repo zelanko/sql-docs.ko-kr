@@ -18,12 +18,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 12201091caba40e145e6848fe25eef3b02b6b06a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9d573faebbbfcaf8a501a80aa093584af7fa0307
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221043"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515849"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>XML 문서 대량 가져오기 및 내보내기 예(SQL Server)
     
@@ -37,7 +37,7 @@ ms.locfileid: "48221043"
   
 -   BULK INSERT  
   
--   INSERT ... 로 기본 값 사용  
+-   INSERT ... SELECT * FROM OPENROWSET(BULK...)  
   
  자세한 내용은 [bcp 유틸리티를 사용 하 여 대량 데이터 내보내기 및 가져오기 &#40;SQL Server&#41; ](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md) 하 고 [BULK INSERT 또는 OPENROWSET 대량 데이터 가져오기&#40;대량... &#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)합니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48221043"
 -   5. [XML 데이터 대량 내보내기](#bulk_export_xml_data)  
   
 ###  <a name="binary_byte_stream"></a> 1. XML 데이터를 이진 바이트 스트림으로 대량 가져오기  
- 적용할 인코딩 선언이 있는 파일에서 XML 데이터를 대량으로 가져오는 경우 OPENROWSET(BULK…) 절에 SINGLE_BLOB 옵션을 지정합니다. SINGLE_BLOB 옵션은 했는지의 XML 파서가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 선언에 지정 된 인코딩 체계에 따라 데이터를 가져옵니다.  
+ 적용할 인코딩 선언이 있는 파일에서 XML 데이터를 대량으로 가져오는 경우 OPENROWSET(BULK…) 절에 SINGLE_BLOB 옵션을 지정합니다. SINGLE_BLOB 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 XML 파서가 XML 선언에 지정된 인코딩 체계에 따라 데이터를 가져오도록 합니다.  
   
 #### <a name="sample-table"></a>예제 테이블  
  예 1을 테스트하려면 `T`예제 테이블을 만들어야 합니다.  
@@ -151,7 +151,7 @@ GO
   
  이 문제를 해결하려면 `OPENROWSET(BULK...)` 함수를 사용한 다음, 명령의 `CONVERT` 절에 `SELECT` 옵션을 지정하여 DTD가 포함된 데이터 파일에서 XML 데이터를 가져올 수 있습니다. 명령의 기본 구문은 다음과 같습니다.  
   
- `INSERT ... SELECT CONVERT(…) FROM OPENROWSET(BULK...)`  
+ `INSERT ... SELECT CONVERT(...) FROM OPENROWSET(BULK...)`  
   
 #### <a name="sample-data-file"></a>예제 데이터 파일  
  이 대량 가져오기 예를 테스트하려면 먼저 다음 예제 인스턴스를 포함하는 파일(`C:\temp\Dtdfile.xml`)을 만들어야 합니다.  

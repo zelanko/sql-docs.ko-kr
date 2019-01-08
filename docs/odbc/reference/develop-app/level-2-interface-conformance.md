@@ -15,12 +15,12 @@ ms.assetid: 2dc87840-f2fe-43dd-9d7b-bd95523081d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f3828129c2a0ed4183bbefce8daf68cee1d95f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bff3de6a9b9ec57f1ea96d6db17b9b30c5a22996
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668301"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515313"
 ---
 # <a name="level-2-interface-conformance"></a>수준 2 인터페이스 적합성
 수준 2 인터페이스 적합성 수준 수준 1 인터페이스 적합성 수준 기능 및 다음 기능을 포함 합니다.  

@@ -1,7 +1,8 @@
 ---
-title: '자습서: Azure Data Studio에서 테이블 공간 사용량 샘플 정보 위젯을 사용 | Microsoft Docs'
+title: '자습서: 테이블 공간 사용량 샘플 정보 위젯 사용'
+titleSuffix: Azure Data Studio
 description: 이 자습서는 Azure Data Studio 데이터베이스 대시보드의 테이블 공간 사용량 샘플 정보 위젯을 사용 하도록 설정 하는 방법을 보여 줍니다.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 55d6c96cc328f21d1b51ce7186c8396ab278ee6f
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: ebd3b1af1bc9b342ad6b2d33596e69b487888ced
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355994"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030357"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>자습서: 테이블 공간 사용량 정보 위젯 사용한 샘플 사용 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>자습서: 테이블 공간 사용량 정보 위젯 사용한 샘플을 사용 하도록 설정 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 이 자습서는 데이터베이스의 모든 테이블에 대 한 공간 사용량에 대 한에 요약 뷰를 제공, 데이터베이스 대시보드의 정보 위젯을 사용 하도록 설정 하는 방법에 설명 합니다. 이 자습에서 배울 내용:
 
@@ -30,15 +31,15 @@ ms.locfileid: "49355994"
 
 이 자습서에서는 SQL Server 또는 Azure SQL Database의 *TutorialDB*가 필요합니다. *TutorialDB* 데이터베이스를 만들려면, 다음 빠른 시작 중 하나를 수행합니다.
 
-- [연결 및 SQL Server를 사용 하 여 쿼리 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [연결 및 Azure SQL Database를 사용 하 여 쿼리 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)를 사용하여 SQL Server에 연결 및 쿼리
+- [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)를 사용하여 Azure SQL Database에 연결 및 쿼리
 
 
 ## <a name="turn-on-a-management-insight-on-includename-sosincludesname-sos-shortmds-database-dashboard"></a>관리 정보를 설정 [!INCLUDE[name-sos](../includes/name-sos-short.md)]의 데이터베이스 대시보드
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 데이터베이스의 테이블에서 사용 된 공간을 모니터링 하는 기본 제공 샘플 위젯 했습니다.
 
 1. 엽니다 *사용자 설정* 키를 눌러 **Ctrl + Shift + P** 열려는 합니다 *명령 팔레트*합니다.
-2. 형식 *설정을* 검색 상자에 선택 **기본 설정: 사용자 설정 열기**합니다.
+2. 형식 *설정을* 검색 상자에 선택 **기본 설정: 사용자 설정을 엽니다**합니다.
 2. 형식 *대시보드* 찾아서 설정 검색에서 입력 상자 **dashboard.database.widgets**합니다.
 
 3. 사용자 지정 하는 **dashboard.database.widgets** 편집 하는 데 필요한 설정을 **dashboard.database.widgets** 항목에는 **사용자 설정** 섹션 (열은 오른쪽에 있음)입니다. 없는 경우 없습니다 **dashboard.database.widgets** 에 **사용자 설정** 섹션을 마우스로 합니다 **dashboard.database.widgets** 클릭 및 기본 설정 열에 텍스트 클릭 확인 하 고 텍스트의 왼쪽에 나타나는 연필 아이콘 **설정 복사할**합니다. 팝업에 표시 되 면 **설정에서 대체**를 클릭 하지 않음. 로 이동 합니다 **사용자 설정** 오른쪽에 열을 찾아서를 **dashboard.database.widgets** 섹션 및 다음 단계로 이동 합니다.
@@ -82,7 +83,7 @@ ms.locfileid: "49355994"
 
 
 ## <a name="next-steps"></a>다음 단계
-이 자습서에서는 학습 하는 방법.
+이 자습서에서는 다음과 같은 방법을 학습했습니다.
 > [!div class="checklist"]
 > * 기본 제공 정보 위젯 샘플을 사용 하는 정보 위젯 신속 하 게 설정 합니다.
 > * 테이블 공간 사용량의 세부 정보를 봅니다.

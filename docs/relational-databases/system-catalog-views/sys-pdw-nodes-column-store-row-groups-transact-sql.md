@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b3c09c2a1771f1fad8640031ea1c1327921f8c82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7332f9e4196c901777e0c35a349f55207e7608dc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698241"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520360"
 ---
 # <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47698241"
 |**row_group_id**|**int**|이 행 그룹의 ID입니다. 이 번호는 파티션 내에서 고유합니다.|  
 |**dellta_store_hobt_id**|**bigint**|델타 행 그룹은 hobt_id, 행 그룹 유형이 델타가 아니면 NULL입니다. 델타 행 그룹이란 새 레코드를 수락하는 읽기/쓰기 행 그룹입니다. 델타 행 그룹에는 **열고** 상태입니다. 델타 행 그룹은 columnstore 형식으로 압축되지 않았고 여전히 rowstore 형식입니다.|  
 |**state**|**tinyint**|state_description과 연결된 ID 번호입니다.<br /><br /> 1 = 열기<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
-|**state_desccription**|**nvarchar(60)**|행 그룹의 영구 상태 설명:<br /><br /> OPEN – 새 레코드를 수락하는 읽기/쓰기 행 그룹입니다. 열린 행 그룹은 columnstore 형식으로 압축되지 않았고 여전히 rowstore 형식입니다.<br /><br /> CLOSED – 값은 채워졌지만 아직 tuple mover 프로세스에 의해 압축되지 않은 행 그룹입니다.<br /><br /> COMPRESSED – 값이 채워지고 압축된 행 그룹입니다.|  
+|**state_desccription**|**nvarchar(60)**|행 그룹의 영구 상태 설명:<br /><br /> 열림-새 레코드를 수락 하는 읽기/쓰기 행 그룹입니다. 열린 행 그룹은 columnstore 형식으로 압축되지 않았고 여전히 rowstore 형식입니다.<br /><br /> 닫힘-가득 차면 되었지만 아직 tuple mover 프로세스에 의해 압축 행 그룹입니다.<br /><br /> 압축-채워지고 압축 된 행 그룹.|  
 |**total_rows**|**bigint**|행 그룹에 물리적으로 저장된 총 행 수입니다. 일부는 삭제되었을 수도 있지만 그대로 저장되어 있습니다. 행 그룹의 최대 행 수는 1,048,576개(16진수 FFFFF)입니다.|  
 |**deleted_rows**|**bigint**|삭제 표시 된 행 그룹에 물리적으로 저장 하는 행 수입니다.<br /><br /> 항상 0을 델타 행 그룹입니다.|  
 |**size_in_bytes**|**int**|이 행 그룹의 모든 페이지를 바이트 단위로 결합 된 크기입니다. 이 크기는 메타 데이터 또는 공유 사전 제외를 저장 하는 데 필요한 크기로 포함 되지 않습니다.|  

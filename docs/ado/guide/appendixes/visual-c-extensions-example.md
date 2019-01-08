@@ -16,12 +16,12 @@ ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 10e0b4a5206116d90340633b8904e78352f77882
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 809a6706ccf75a66ec7b6bf7eefed969221b9624
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350337"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214561"
 ---
 # <a name="visual-c-extensions-example"></a>Visual C++ 확장 예제
 이 프로그램에는 값 필드에서 검색 되 고 C/c + + 변수를 변환 하는 방법을 보여 줍니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "51350337"
 IADORecordBinding   *picRs = NULL;  
 ...  
 TESTHR(pRs->QueryInterface(  
-          __uuidof(IADORecordBinding), (LPVOID*)&picRs));  
+          __uuidof(IADORecordBinding), (LPVOID*)&picRs));  
 ...  
 if (picRs) picRs->Release();  
 ```  
@@ -110,6 +110,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Visual c + + 확장을 사용 하 여](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
  [Visual C++ 확장 헤더](../../../ado/guide/appendixes/visual-c-extensions-header.md)

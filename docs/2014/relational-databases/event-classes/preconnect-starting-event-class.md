@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: d43ed0ad-3dbd-42e0-9cef-8320b8d87497
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8ee98c099d13c0d77a239c22739704e5d51cc5e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0986e654430a47cc494bf1646c222b4888fc105b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048763"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52803715"
 ---
 # <a name="preconnectstarting-event-class"></a>PreConnect:Starting 이벤트 클래스
   PreConnect:Starting 이벤트 클래스는 LOGON 트리거나 리소스 관리자 분류자 함수가 언제 실행을 시작하는지 표시합니다.  
@@ -39,6 +38,6 @@ ms.locfileid: "48048763"
 ## <a name="see-also"></a>관련 항목  
  [확장 이벤트](../extended-events/extended-events.md)   
  [PreConnect:Completed 이벤트 클래스](preconnect-completed-event-class.md)   
- [Resource Governor](../resource-governor/resource-governor.md)  
+ [리소스 관리자](../resource-governor/resource-governor.md)  
   
   

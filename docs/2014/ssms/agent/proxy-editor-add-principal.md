@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.proxy.editor.f1
@@ -12,12 +12,12 @@ ms.assetid: 9d33749f-9653-4691-9a0f-06ed7dd6166f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a762598c699f647e6ec41107076d51939733c64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c16001cf0b96c42ed2f14c3d63dc0ecd7c456988
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110723"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797605"
 ---
 # <a name="proxy-editor-and--add-principal"></a>프록시 편집기 및 보안 주체 추가
   이 페이지를 사용하여 서버 보안 주체에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정에 대한 액세스 권한을 부여할 수 있습니다.  

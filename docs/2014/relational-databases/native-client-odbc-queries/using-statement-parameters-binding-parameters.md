@@ -20,12 +20,12 @@ ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 071ef09e796f5b44076c4b6d00b780f2822e7168
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9dfe88f11cc26d4a9711b7f21caf4c4475ec954b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227913"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351318"
 ---
 # <a name="binding-parameters"></a>매개 변수 바인딩
   SQL 문을 실행하려면 먼저 SQL 문의 각 매개 변수 표식을 응용 프로그램의 변수에 연결하거나 바인딩해야 합니다. 이렇게 호출 하 여 해당 [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) 함수입니다. **SQLBindParameter** 드라이버 프로그램 변수 (예: 주소, C 데이터 형식 및 등)를 설명 합니다. 또한 매개 변수 표식의 서수 값을 나타낸 후 해당 표식이 나타내는 SQL 개체의 특성(SQL 데이터 형식, 전체 자릿수 등)을 설명하여 매개 변수 표식을 식별합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "48227913"
   
  명명 된 매개 변수는 사용할 때에 지원 되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] `EXECUTE` 문이나 ODBC CALL 이스케이프 시퀀스를 저장된 프로시저를 실행 합니다.  
   
- 저장 프로시저 매개 변수에 `SQL_DESC_NAME`을 설정할 경우 쿼리의 모든 저장 프로시저 매개 변수도 `SQL_DESC_NAME`을 설정해야 합니다.  리터럴이 사용 될 경우 저장된 프로시저 호출에서 매개 변수에 `SQL_DESC_NAME` 으로 설정 된 리터럴 형식을 사용 해야 *' 이름*=*값*' 여기서 *이름* 은 저장된 프로시저 매개 변수 이름 (예를 들어 @p1). 자세한 내용은 [이름 (명명 된 매개 변수)에 의해 매개 변수 바인딩](http://go.microsoft.com/fwlink/?LinkId=167215).  
+ 저장 프로시저 매개 변수에 `SQL_DESC_NAME`을 설정할 경우 쿼리의 모든 저장 프로시저 매개 변수도 `SQL_DESC_NAME`을 설정해야 합니다.  리터럴이 사용 될 경우 저장된 프로시저 호출에서 매개 변수에 `SQL_DESC_NAME` 으로 설정 된 리터럴 형식을 사용 해야 *' 이름*=*값*' 여기서 *이름* 은 저장된 프로시저 매개 변수 이름 (예를 들어 @p1). 자세한 내용은 [이름 (명명 된 매개 변수)에 의해 매개 변수 바인딩](https://go.microsoft.com/fwlink/?LinkId=167215).  
   
 ## <a name="see-also"></a>관련 항목  
  [문 매개 변수 사용](using-statement-parameters.md)  

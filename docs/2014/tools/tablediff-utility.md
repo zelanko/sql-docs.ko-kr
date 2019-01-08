@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - comparing data
@@ -19,12 +18,12 @@ ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 321bcbc0c07d4de2d5e9a7f930cb21c0995ce79b
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169403"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791915"
 ---
 # <a name="tablediff-utility"></a>tablediff 유틸리티
   **tablediff** 유틸리티는 두 테이블에 포함된 데이터의 불일치 여부를 비교하는 데 사용되며, 복제 토폴로지의 데이터 불일치 문제를 해결하는 데 특히 유용합니다. 명령 프롬프트나 배치 파일에서 이 유틸리티를 사용하여 다음 태스크를 수행할 수 있습니다.  
@@ -178,7 +177,7 @@ ms.locfileid: "49169403"
   
 |원본 데이터 형식|대상 데이터 형식|  
 |----------------------|---------------------------|  
-|`tinyint`|`smallint`, `int` 또는 `bigint`|  
+|`tinyint`|`smallint`, `int`또는 `bigint`|  
 |`smallint`|`int` 또는 `bigint`|  
 |`int`|`bigint`|  
 |`timestamp`|`varbinary`|  
@@ -220,7 +219,7 @@ ms.locfileid: "49169403"
   
  **-o** 또는 **-f** 옵션을 사용하려면 지정된 파일 디렉터리 위치에 대한 쓰기 권한이 있어야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제된 테이블의 차이점 비교&#40;복제 프로그래밍&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   

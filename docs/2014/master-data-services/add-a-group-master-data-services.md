@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - groups [Master Data Services], adding
@@ -14,15 +13,15 @@ ms.assetid: c7a88381-3b2c-4af7-9cf7-3a930c1abdee
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d78b69946ebb068933a7691d454a792ad8f1ed07
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1245b637eeb31ab8dee9bf498a6d076925d1dae3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056793"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814215"
 ---
 # <a name="add-a-group-master-data-services"></a>그룹 추가(Master Data Services)
-  **의** 그룹 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 목록에 그룹을 추가하여 웹 응용 프로그램에 사용 권한을 할당하는 프로세스를 시작합니다. 그룹의 사용자가 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에 액세스할 수 있게 하려면 하나 이상의 기능 영역과 모델 개체에 그룹 권한을 부여해야 합니다.  
+  **의** 그룹 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 목록에 그룹을 추가하여 웹 애플리케이션에 사용 권한을 할당하는 프로세스를 시작합니다. 그룹의 사용자가 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에 액세스할 수 있게 하려면 하나 이상의 기능 영역과 모델 개체에 그룹 권한을 부여해야 합니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
@@ -48,7 +47,7 @@ ms.locfileid: "48056793"
   
 ## <a name="next-steps"></a>다음 단계  
   
--   [기능 영역 권한 할당 &#40;Master Data Services&#41;](assign-functional-area-permissions-master-data-services.md)  
+-   [기능 영역 권한 할당&#40;Master Data Services&#41;](assign-functional-area-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [보안&#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  

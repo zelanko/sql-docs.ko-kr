@@ -1,5 +1,5 @@
 ---
-title: 마이닝 모델에서 열의 분할 변경 | Microsoft Docs
+title: 마이닝 모델에서 열의 불연속화 변경 | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e9d6b2c75becad147e196534bb4d366dff01a13d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8a85b645562ce39f19c15191b6b1d3ba4a7fb332
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015620"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538829"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>마이닝 모델에서 열의 분할 변경
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 특정 시나리오에서 값을 자동으로 불연속화합니다. 즉, 숫자 열의 데이터가 범주화됩니다. 예를 들어 데이터에 연속 숫자 데이터가 포함되고 있고 의사 결정 트리 모델을 만드는 경우 데이터의 배포에 따라 연속 데이터의 각 열이 자동으로 범주화됩니다. 데이터가 불연속화되는 방법을 제어하려면 모델에서 데이터가 사용되는 방법을 제어하는 마이닝 구조 열의 속성을 변경해야 합니다.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 값을 자동으로 불연속화-데이터 열에서 숫자를 범주화 즉, 특정 시나리오입니다. 예를 들어 데이터에 연속 숫자 데이터가 포함되고 있고 의사 결정 트리 모델을 만드는 경우 데이터의 배포에 따라 연속 데이터의 각 열이 자동으로 범주화됩니다. 데이터가 불연속화되는 방법을 제어하려면 모델에서 데이터가 사용되는 방법을 제어하는 마이닝 구조 열의 속성을 변경해야 합니다.  
   
  마이닝 모델의 속성을 설정하는 방법에 대한 일반적인 내용은 [마이닝 모델 열](../../analysis-services/data-mining/mining-model-columns.md)을 참조하세요.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "34015620"
   
      이제 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 및 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 속성을 사용할 수 있습니다.  
   
-2.  데이터 마이닝 디자이너의 **속성** 창에서 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 옆에 있는 입력란을 클릭하고 **Automatic**, **EqualAreas**또는 **Cluster**을 참조하세요.  
+2.  에 **속성** 창에서 텍스트 상자 옆에 클릭 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 다음 값 중 하나를 선택: **자동**하십시오 **EqualAreas**, 또는 **클러스터**합니다.  
   
     > [!NOTE]  
     >  열 사용법이 **Ignore**로 설정되어 있을 경우 해당 열의 **속성** 창은 비어 있습니다.  

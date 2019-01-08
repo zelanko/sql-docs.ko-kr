@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - cycling SQL Server error log
@@ -18,12 +17,12 @@ ms.assetid: 6908c21a-65e3-458f-a272-fee256d86448
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f1c12f38d67b27280eda42115524f5b7d1ec4d4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88c5b77b4ac0f2d0f8ed579f2ff32eae8c263610
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212893"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794095"
 ---
 # <a name="viewing-the-sql-server-error-log"></a>SQL Server 오류 로그 보기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그를 보면 프로세스(예: 백업 및 복원 작업, 일괄 처리 명령, 다른 스크립트 및 프로세스)가 성공적으로 완료되었는지 확인할 수 있습니다. 이것은 자동 복구 메시지(특히 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 중지되었다가 다시 시작된 경우), 커널 메시지 또는 기타 서버 수준 오류 메시지 등의 현재 또는 잠재적 문제 영역을 찾아내는 데 유용합니다.  

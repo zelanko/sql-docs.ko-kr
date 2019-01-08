@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f26ffdf21519a1b5aa2ce26060a2c6d36a53d6ff
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 65374ec0499d6dbb549a14af239c03c06dca4062
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145928"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545418"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +59,7 @@ USING <algorithm> [(<parameter list>)]
 >  현재 공급자가 지 원하는 알고리즘의 목록을 사용 하 여 검색할 수 있습니다 [DMSCHEMA_MINING_SERVICES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)합니다. 현재 인스턴스에서 지 원하는 알고리즘을 보려는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 참조 하세요 [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md)합니다.  
   
  *매개 변수 목록*  
- 선택 사항입니다. 알고리즘에 대해 공급자가 정의한 매개 변수의 쉼표로 구분된 목록입니다.  
+ (선택 사항) 알고리즘에 대해 공급자가 정의한 매개 변수의 쉼표로 구분된 목록입니다.  
   
  *필터 조건*  
  사례 테이블의 열에 적용되는 필터 식입니다.  
@@ -112,7 +112,7 @@ USING <algorithm> [(<parameter list>)]
 |||  
 |-|-|  
 |용어|정의|  
-|**REGRESSOR**|회귀 알고리즘의 회귀 수식에 지정된 열을 사용할 수 있음을 나타냅니다.|  
+|**회귀 변수**|회귀 알고리즘의 회귀 수식에 지정된 열을 사용할 수 있음을 나타냅니다.|  
 |**MODEL_EXISTENCE_ONLY**|특성의 존재 여부가 특성 열의 값보다 더 중요함을 나타냅니다.|  
   
  열 하나에 대해 여러 개의 모델링 플래그를 정의할 수 있습니다. 모델링 플래그를 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오 [모델링 플래그 &#40;DMX&#41;](../dmx/modeling-flags-dmx.md)합니다.  
@@ -128,7 +128,7 @@ USING <algorithm> [(<parameter list>)]
 ## <a name="filter-criteria-expressions"></a>필터 조건 식  
  마이닝 모델에 사용되는 사례를 제한하는 필터를 정의할 수 있습니다. 필터는 사례 테이블의 열 또는 중첩 테이블의 행에 적용하거나 둘 다에 적용할 수 있습니다.  
   
- 필터 조건 식은 간단한 DMX 조건자로서 WHERE 절과 비슷합니다. 필터 식은 기본 수치 연산자, 스칼라 및 열 이름을 사용하는 수식으로 제한됩니다. 단, EXISTS 연산자는 예외입니다. 이 연산자는 하위 쿼리에 대해 반환되는 행이 한 개 이상일 경우 True로 평가됩니다. 일반적인 논리 연산자를 사용 하 여 조건자를 결합할 수 있습니다:를 OR 및 NOT입니다.  
+ 필터 조건 식은 간단한 DMX 조건자로서 WHERE 절과 비슷합니다. 필터 식은 기본 수치 연산자, 스칼라 및 열 이름을 사용하는 수식으로 제한됩니다. 단, EXISTS 연산자는 예외입니다. 이 연산자는 하위 쿼리에 대해 반환되는 행이 한 개 이상일 경우 True로 평가됩니다. 조건자는 일반 논리 연산자(AND, OR 및 NOT)를 사용하여 결합할 수 있습니다.  
   
  마이닝 모델을 사용 하는 필터에 대 한 자세한 내용은 참조 하세요. [마이닝 모델에 대 한 필터 &#40;Analysis Services-데이터 마이닝&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)합니다.  
   
@@ -143,10 +143,10 @@ USING <algorithm> [(<parameter list>)]
  매개 변수 목록의 구문은 다음과 같습니다.  
   
 ```  
-[<parameter> = <value>, <parameter> = <value>,…]  
+[<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
-## <a name="example-1-add-a-model-to-a-structure"></a>예제 1: 구조에 모델 추가  
+## <a name="example-1-add-a-model-to-a-structure"></a>예 1: 구조에 모델 추가  
  다음 예에서는 Naive Bayes 마이닝 모델을 추가 합니다 **New Mailing** 마이닝 구조 및 한도 최대 특성 상태 수를 50입니다.  
   
 ```  
@@ -161,7 +161,7 @@ ADD MINING MODEL [Naive Bayes]
 USING Microsoft_Naive_Bayes (MAXIMUM_STATES = 50)  
 ```  
   
-## <a name="example-2-add-a-filtered-model-to-a-structure"></a>예제 2: 구조에 필터링된 된 모델 추가  
+## <a name="example-2-add-a-filtered-model-to-a-structure"></a>예 2: 구조에 필터링된 모델 추가  
  다음 예에서는 마이닝 모델을 추가 `Naive Bayes Women`를 **New Mailing** 마이닝 구조입니다. 새 모델의 기본 구조는 예 1에서 추가한 마이닝 모델과 같지만 이 모델에서는 마이닝 구조의 사례를 51세 이상의 여성 고객으로 제한합니다.  
   
 ```  
@@ -177,7 +177,7 @@ USING Microsoft_Naive_Bayes
 WITH FILTER([Gender] = 'F' AND [Age] >50)  
 ```  
   
-## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>예제 3: 중첩된 테이블이 포함 된 구조에 필터링된 된 모델 추가  
+## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>예 3: 중첩 테이블이 포함된 구조에 필터링된 모델 추가  
  다음 예에서는 시장 바구니 마이닝 구조의 수정된 버전에 마이닝 모델을 추가합니다. 예제에서 사용 되는 마이닝 구조에 추가할 수정한를 **지역** 고객 지역에 대 한 특성을 포함 하는 열 및 **Income Group** 를 사용 하 여 고객의 소득을 분류 하는 열 값 **높은**하십시오 **보통**, 또는 **낮은**.  
   
  이 마이닝 구조에는 고객이 구매한 항목을 나열하는 중첩 테이블도 포함되어 있습니다.  

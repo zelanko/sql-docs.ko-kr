@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment packages [Master Data Services], creating
@@ -15,12 +14,12 @@ ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 40eb14cb2cc0b09a461ba621d29d636e2a2b9c91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96e5ef33776e1b8d7e78bec22b6cc46dee6055d9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108203"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797692"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>마법사를 사용하여 모델 배포 패키지 만들기
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 모델 배포 마법사를 사용하여 모델 개체로만 패키지를 만들 수 있습니다. 패키지에 데이터를 포함해야 하는 경우 [MDSModelDeploy를 사용하여 모델 배포 패키지 만들기](../../2014/master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)를 참조하세요.  
@@ -28,7 +27,7 @@ ms.locfileid: "48108203"
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
--   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에서는 사용자에게 **시스템 관리** 기능 영역에 대한 액세스 권한이 있어야 합니다.  
+-   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션에서는 사용자에게 **시스템 관리** 기능 영역에 대한 액세스 권한이 있어야 합니다.  
   
 -   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](administrators-master-data-services.md)를 참조하세요.  
   
@@ -57,6 +56,6 @@ ms.locfileid: "48108203"
 -   [마법사를 사용하여 모델 배포 패키지 배포](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [모델 배포 &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
+ [모델 배포&#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.variables.f1
@@ -15,22 +14,22 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a2be1625093dfd89e59cef4731e61411f2c7e4b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0b8541b0e590fe0fa6de9d577e69b7068fb2843d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158183"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206206"
 ---
 # <a name="variables-window"></a>변수 창
   **변수** 창을 사용하여 사용자 정의 변수를 생성 및 수정하고 시스템 변수를 볼 수 있습니다.  
   
- 기본적으로는 **변수** 창은 **의 SSID 디자이너에 있는** 연결 관리자 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]영역 아래에 있습니다. **변수** 창이 표시되지 않는 경우 **SSIS** 메뉴에서 **변수** 를 클릭하여 창을 표시합니다.  
+ 기본적으로는 **변수** 창은 **의 SSID 디자이너에 있는** 연결 관리자 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]영역 아래에 있습니다. **변수** 창이 표시되지 않는 경우 **SSIS** 메뉴에서 **변수**를 클릭하여 창을 표시합니다.  
   
  **옵션** 대화 상자의 **키보드** 페이지에서 필요에 따라 선택한 키 조합에 View.Variables 명령을 매핑하여 **변수** 창을 표시할 수 있습니다.  
   
-> [!NOTE]  
->  값을 `Name` 및 `Namespace` 속성은 Unicode Standard 2.0 또는 밑줄 (_)에 정의 된 대로 영문자를 사용 하 여 시작 해야 합니다. 후속 문자는 Unicode Standard 2.0에 정의된 문자 또는 숫자이거나 밑줄(\_)일 수 있습니다.  
+> [!NOTE]
+>  `Name` 및 `Namespace` 속성 값은 Unicode Standard 2.0에 정의된 대로 영문자 또는 밑줄(_)로 시작해야 합니다. 후속 문자는 Unicode Standard 2.0에 정의된 문자 또는 숫자이거나 밑줄(\_)일 수 있습니다.  
   
 ## <a name="options"></a>변수  
  **변수 추가**  
@@ -39,7 +38,7 @@ ms.locfileid: "48158183"
  **변수 이동**  
  목록에서 변수를 클릭하고 **변수 이동** 을 클릭하여 변수 범위를 변경합니다. **새 범위 선택** 대화 상자에서 변수 범위를 변경할 패키지나 패키지에 들어 있는 컨테이너, 태스크 또는 이벤트 처리기를 선택합니다.  
   
- 변수 범위에 대 한 자세한 내용은 참조 하세요. [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)합니다.  
+ 변수 범위에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)영역 아래에 있습니다.  
   
  **변수 삭제**  
  목록에서 변수를 선택한 다음 **변수 삭제**를 클릭합니다.  
@@ -79,7 +78,7 @@ ms.locfileid: "48158183"
  변수에 식을 할당할 경우 해당 변수 옆에 특수 아이콘 표식이 표시됩니다. 이 특수 아이콘 표식은 식이 설정되어 있는 연결 관리자 및 태스크 옆에도 표시됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)   
+ [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)   
  [패키지에서 변수 사용](../../2014/integration-services/use-variables-in-packages.md)   
  [Integration Services&#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md)   
  [패키지 실행을 위한 덤프 파일 생성](troubleshooting/generating-dump-files-for-package-execution.md)  

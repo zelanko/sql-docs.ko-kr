@@ -20,16 +20,16 @@ ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99d7f84f2153f57cc9bc392c22d79739deaf6b1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e769949c8c57bbec56055c58c9002494fc6d37be
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599621"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211992"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수: ODBC  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. ODBC  
   
  **요약**  
  **SQLSetPos** 행 집합의 커서 위치를 설정 하 고 행 집합에서 데이터 새로 고침 결과 집합에서 데이터를 삭제 또는 업데이트 하려면 응용 프로그램을 허용 합니다.  
@@ -59,7 +59,7 @@ SQLRETURN SQLSetPos(
   
  SQL_POSITION SQL_REFRESH SQL_UPDATE SQL_DELETE  
   
-> [!NOTE]  
+> [!NOTE]
 >  SQL_ADD 값을 *작업이* ODBC 3에 대 한 인수를 더 이상 사용 되지 되었습니다 *.x*합니다. ODBC 3입니다. *x* 드라이버 SQL_ADD 이전 버전과 호환성에 대 한 지원 해야 합니다. 호출 하 여이 기능을 바뀌었습니다 **SQLBulkOperations** 사용 하 여는 *작업* SQL_ADD입니다. 때 ODBC 3. *x* 는 ODBC 2를 사용 하 여 응용 프로그램이 작동 합니다. *x* 드라이버를 드라이버 관리자에 대 한 호출 매핑합니다 **SQLBulkOperations** 와 *작업* 에 SQL_ADD의 **SQLSetPos** 사용 하 여는  *작업* SQL_ADD입니다.  
   
  자세한 내용은 "설명입니다."을 참조 하세요.  
@@ -108,7 +108,7 @@ SQLRETURN SQLSetPos(
 |HY010|함수 시퀀스 오류입니다.|(DM)를 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한 합니다 *StatementHandle*합니다. 이 비동기 함수 SQLSetPos 함수가 호출 되었을 때 계속 실행 합니다.<br /><br /> (DM) 지정 된 *StatementHandle* 실행 상태가 없습니다. 이 함수가 먼저 호출 하지 않고 호출 **SQLExecDirect**를 **SQLExecute**, 또는 카탈로그 함수입니다.<br /><br /> (DM)를 비동기적으로 실행 중인 함수 (없습니다이 하나)에 대해 호출 된 합니다 *StatementHandle* 이 함수가 호출 되었을 때 계속 실행 하 고 있습니다.<br /><br /> (DM) **SQLExecute**를 **SQLExecDirect**를 **SQLBulkOperations**, 또는 **SQLSetPos** 에 대해 호출 된는  *StatementHandle* SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 전송 하기 전에 호출 되었습니다.<br /><br /> (DM) 드라이버는 ODBC 2 되었습니다. *x* 드라이버 및 **SQLSetPos** 에 대해 호출 된를 *StatementHandle* 후 **SQLFetch** 호출 되었습니다.|  
 |HY011|특성을 지금 설정할 수 없습니다.|(DM) 드라이버는 ODBC 2 되었습니다. *x* 드라이버;는 SQL_ATTR_ROW_STATUS_PTR 문 특성 설정 된 다음 **SQLSetPos** 하기 전에 호출 되었습니다 **SQLFetch**, **SQLFetchScroll**, 또는 **SQLExtendedFetch** 호출 되었습니다.|  
 |HY013|메모리 관리 오류|기본 메모리 개체에 액세스할 수 없습니다, 가능한 경우 메모리 부족으로 인해 함수 호출을 처리할 수 없습니다.|  
-|HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|*작업* 인수가 SQL_UPDATE, 데이터 값이 null 포인터, 및 열 길이 값이 아닙니다 SQL_DATA_AT_EXEC SQL_COLUMN_IGNORE, SQL_NULL_DATA, 0 또는 SQL_LEN_DATA_AT_EXEC_OFFSET 작거나 합니다.<br /><br /> 합니다 *작업* 인수 SQL_UPDATE; 데이터 값이 null 포인터; C 데이터 형식 SQL_C_BINARY 되었거나 SQL_C_CHAR; 되어 열 길이 값이 0 보다 작은 되었지만 SQL_DATA_AT_EXEC SQL_COLUMN_IGNORE 다음과 같지 않은 경우 SQL_NTS 또는 SQL_NULL_DATA에 SQL_LEN_DATA_AT_EXEC_OFFSET 보다 작거나 합니다.<br /><br /> 길이/표시기 버퍼의 값이 SQL_DATA_AT_EXEC; SQL 형식 된 SQL_LONGVARCHAR, SQL_LONGVARBINARY, 또는 long 데이터 소스 관련 데이터 형식이; SQL_NEED_LONG_DATA_LEN 정보 입력 **SQLGetInfo** "Y" 되었습니다.|  
+|HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|*작업* 인수가 SQL_UPDATE, 데이터 값이 null 포인터, 및 열 길이 값이 아닙니다 SQL_DATA_AT_EXEC SQL_COLUMN_IGNORE, SQL_NULL_DATA, 0 또는 SQL_LEN_DATA_AT_EXEC_OFFSET 작거나 합니다.<br /><br /> 합니다 *작업* 인수 SQL_UPDATE; 데이터 값이 null 포인터; C 데이터 형식 SQL_C_BINARY 되었거나 SQL_C_CHAR; 되어 열 길이 값이 0 보다 작은 되었지만 SQL_DATA_AT_EXEC SQL_COLUMN_IGNORE 다음과 같지 않은 경우 SQL_NTS 또는 SQL_NULL_DATA에 SQL_LEN_DATA_AT_EXEC_OFFSET 보다 작거나 합니다.<br /><br /> 길이/표시기 버퍼의 값이 SQL_DATA_AT_EXEC; SQL 형식 되었거나 SQL_LONGVARCHAR, SQL_LONGVARBINARY에는 긴 데이터 소스 특정 데이터 형식 SQL_NEED_LONG_DATA_LEN 정보 입력 **SQLGetInfo** "Y" 되었습니다.|  
 |HY092|잘못 된 특성 식별자|(DM)에 대 한 지정 된 값을 *작업* 인수가 잘못 되었습니다.<br /><br /> (DM)에 대 한 지정 된 값을 *LockType* 인수가 잘못 되었습니다.<br /><br /> 합니다 *작업* 인수 SQL_UPDATE 되었거나 SQL_DELETE, 및 문 특성 SQL_ATTR_CONCURRENCY SQL_ATTR_CONCUR_READ_ONLY 되었습니다.|  
 |HY107|행 값 범위를 벗어났습니다.|인수에 지정 된 값 *RowNumber* 행 집합의 행 수보다 큽니다.|  
 |HY109|잘못 된 커서 위치|연관 된 커서를 *StatementHandle* 행 집합 내에서 커서를 배치 될 수 있으므로 정방향 전용으로 정의 되었습니다. SQL_ATTR_CURSOR_TYPE 특성에 대 한 설명을 참조 하세요 **SQLSetStmtAttr**합니다.<br /><br /> 합니다 *작업* 인수가 SQL_UPDATE, SQL_DELETE, 또는 SQL_REFRESH, 및 행 구분 합니다 *RowNumber* 인수 삭제 또는 페치 하지 했습니다.<br /><br /> (DM)는 *RowNumber* 인수가 0, 및 *작업* 인수가 SQL_POSITION 합니다.<br /><br /> **SQLSetPos** 후 호출 되었습니다 **SQLBulkOperations** 호출한 전과 **SQLFetchScroll** 하거나 **SQLFetch** 호출 되었습니다.|  
@@ -122,7 +122,7 @@ SQLRETURN SQLSetPos(
   
 ## <a name="comments"></a>주석  
   
-> [!CAUTION]  
+> [!CAUTION]
 >  문에 대 한 정보는 상태에 대 한 **SQLSetPos** 호출할 수 있습니다 및 ODBC 2를 사용 하 여 호환성을 위해 수행 해야 할 *.x* 응용 프로그램 참조 [블록 커서, 스크롤 가능 커서 및 이전 버전과 호환성](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)합니다.  
   
 ## <a name="rownumber-argument"></a>RowNumber 인수  
@@ -245,7 +245,7 @@ SQLRETURN SQLSetPos(
     > [!NOTE]  
     >  실행 시 데이터 열이 있는 데이터를 보낼 사용 하 여 행 집합의 열 **SQLPutData** 사용 하 여 행이 업데이트 하는 경우 **SQLSetPos**합니다. 사용 하 여 바인딩된 **SQLBindCol**합니다. 반환한 값 **SQLParamData** 행의 주소는 **TargetValuePtr* 처리 중인 버퍼입니다.  
   
-4.  호출 **SQLPutData** 한 번 이상 열에 대 한 데이터를 보내도록 합니다. 번 이상 호출 하는 경우 데이터 값이 모두 반환 될 수 없습니다는  *\*TargetValuePtr* 에 지정 된 버퍼 **SQLPutData**;에 대 한 여러 호출은 **SQLPutData** 문자, 이진 또는 데이터 소스 관련 데이터 형식의 열에 문자 데이터를 전송 하는 경우에 또는 문자를 이진 열에 이진 C 데이터를 보낼 때 동일한 열 수 또는 데이터 소스 관련 데이터 형식에 대 한 합니다.  
+4.  호출 **SQLPutData** 한 번 이상 열에 대 한 데이터를 보내도록 합니다. 번 이상 호출 하는 경우 데이터 값이 모두 반환 될 수 없습니다는  *\*TargetValuePtr* 에 지정 된 버퍼 **SQLPutData**;에 대 한 여러 호출은 **SQLPutData** 문자, 이진 또는 데이터 소스 특정 데이터 형식의 열에 문자 데이터를 전송 하는 경우에 또는 문자를 이진 열에 이진 C 데이터를 보낼 때 동일한 열 수 또는 데이터 소스 특정 데이터 형식에 대 한 합니다.  
   
 5.  호출 **SQLParamData** 열에 대 한 모든 데이터를 보냈는지는 신호를 다시 합니다.  
   
@@ -379,6 +379,6 @@ while ((retcode == SQLFetchScroll(hstmtS, SQL_FETCH_NEXT, 0)) != SQL_ERROR) {
 |설명자의 여러 필드를 설정합니다.|[SQLSetDescRec 함수](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
 |문 특성 설정|[SQLSetStmtAttr 함수](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

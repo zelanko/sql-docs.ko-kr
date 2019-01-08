@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], about business rules
@@ -14,12 +13,12 @@ ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f32495e2e12ab56ac2adb8ad5686a669714b81dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 211434d182a0c3fd6da777b8834380a67c4d58c8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074343"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814595"
 ---
 # <a name="business-rules-master-data-services"></a>비즈니스 규칙(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 비즈니스 규칙은 마스터 데이터의 품질과 정확성을 유지하는 데 사용되는 규칙입니다. 비즈니스 규칙을 사용하여 자동으로 데이터를 업데이트하거나, 전자 메일을 보내거나, 비즈니스 프로세스 또는 워크플로를 시작할 수 있습니다.  
@@ -69,13 +68,13 @@ ms.locfileid: "48074343"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|새 비즈니스 규칙을 만들어 게시합니다.|[비즈니스 규칙 만들기 및 게시 &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
+|새 비즈니스 규칙을 만들어 게시합니다.|[비즈니스 규칙 만들기 및 게시&#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)|  
 |비즈니스 규칙에 여러 조건을 추가합니다.|[비즈니스 규칙에 여러 조건 추가&#40;Master Data Services&#41;](../../2014/master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
 |특성에 값이 필요한 비즈니스 규칙을 만듭니다.|[특성 값 요구&#40;Master Data Services&#41;](../../2014/master-data-services/require-attribute-values-master-data-services.md)|  
-|특성 값 변경 사항을 기반으로 동작을 수행하는 비즈니스 규칙을 만듭니다.|[특성 값 변경 기반 동작 시작 &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|특성 값 변경 사항을 기반으로 동작을 수행하는 비즈니스 규칙을 만듭니다.|[특성 값 변경 기반 동작 시작&#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
 |기존 비즈니스 규칙의 이름을 변경합니다.|[비즈니스 규칙 이름 변경&#40;Master Data Services&#41;](../../2014/master-data-services/change-a-business-rule-name-master-data-services.md)|  
-|비즈니스 규칙이 적용될 때 알림을 보내도록 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 를 구성합니다.|[알림을 보내도록 비즈니스 규칙 구성 &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
-|특정 멤버에 비즈니스 규칙을 적용합니다.|[비즈니스 규칙에 대해 특정 멤버 유효성 검사 &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
+|비즈니스 규칙이 적용될 때 알림을 보내도록 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 를 구성합니다.|[알림을 보내도록 비즈니스 규칙 구성&#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
+|특정 멤버에 비즈니스 규칙을 적용합니다.|[비즈니스 규칙에 대해 특정 멤버 유효성 검사&#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
 |비즈니스 규칙을 사용하지 않도록 제외합니다.|[비즈니스 규칙 제외&#40;Master Data Services&#41;](../../2014/master-data-services/exclude-a-business-rule-master-data-services.md)|  
 |기존 비즈니스 규칙을 삭제합니다.|[비즈니스 규칙 삭제&#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-business-rule-master-data-services.md)|  
   
@@ -83,9 +82,9 @@ ms.locfileid: "48074343"
   
 -   [Master Data Services 개요](master-data-services-overview-mds.md)  
   
--   [버전 &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
+-   [버전&#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
--   [유효성 검사 &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
+-   [유효성 검사&#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
   
 -   [변경 내용 추적&#40;Master Data Services&#41;](change-tracking-master-data-services.md)  
   

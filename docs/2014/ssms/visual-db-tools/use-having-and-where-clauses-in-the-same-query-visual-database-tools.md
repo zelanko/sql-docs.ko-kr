@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], excluding rows
@@ -20,12 +20,12 @@ ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57b266d8b5e825e784a74e25e5801b7bd9f0cc22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7aafcd72eff1d21dfe02c8957496398d327cf38
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221923"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806575"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>동일한 쿼리에서 HAVING 및 WHERE 절 사용(Visual Database Tools)
   경우에 따라서는 HAVING 절을 사용하여 그룹 전체에 조건을 적용하기 전에 WHERE 절을 사용하여 그룹에서 개별 행을 제외해야 할 수도 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "48221923"
   
 -   그런 다음 결과 집합의 행에 HAVING 절이 적용됩니다. HAVING 조건에 맞는 그룹만 쿼리 출력에 표시됩니다. 집계 함수나 GROUP BY 절에도 나타나는 열에만 HAVING 절을 적용할 수 있습니다.  
   
- 예를 들어 `titles` 및 `publishers` 테이블을 조인하여 여러 출판사의 평균 도서 가격을 표시하는 쿼리를 만드는 경우를 생각해 볼 수 있습니다. 캘리포니아 주에 있는 출판사 등과 같이 특정 출판사 집합에 대해서만 평균 가격을 표시하고, 그 중에서도 평균 가격이 $10.00 이상인 경우로만 결과를 제한하려고 합니다.  
+ 예를 들어 `titles` 및 `publishers` 테이블을 조인하여 여러 출판사의 평균 도서 가격을 표시하는 쿼리를 만드는 경우를 생각해 볼 수 있습니다. 캘리포니아 주에 있는 출판사 등과 같이 특정 출판사 세트에 대해서만 평균 가격을 표시하려는 경우 그 중에서도 평균 가격이 $10.00 이상인 경우로만 결과를 제한하려고 합니다.  
   
  평균 가격을 계산하기 전에 캘리포니아에 있지 않은 출판사는 모두 제외하도록 WHERE 절을 사용하여 첫 번째 조건을 설정할 수 있습니다. 두 번째 조건은 데이터를 그룹화하고 요약한 결과를 기반으로 해야 하므로 이 조건에는 HAVING 절이 필요합니다. 결과 SQL 문은 다음과 같습니다.  
   

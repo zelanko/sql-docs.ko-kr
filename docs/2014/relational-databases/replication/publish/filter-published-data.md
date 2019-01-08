@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication]
@@ -21,12 +20,12 @@ ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac56fd795f819fe308dee9980e12883e73b0172d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222633"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810645"
 ---
 # <a name="filter-published-data"></a>게시된 데이터 필터링
   테이블 아티클을 필터링하여 게시할 데이터 파티션을 만들 수 있습니다. 게시된 데이터를 필터링하여 다음 작업을 수행할 수 있습니다.  
@@ -130,7 +129,7 @@ ms.locfileid: "48222633"
   
 -   트랜잭션 복제를 사용하면 인덱싱된 뷰를 뷰나 테이블로 복제할 수 있습니다. 뷰를 테이블로 복제하면 테이블의 열을 필터링할 수 없습니다.  
   
- 행 필터는 데이터베이스에서 작동하도록 설계되지 않았습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의도적으로의 실행을 제한 `sp_replcmds` (필터 실행 대상)는 데이터베이스 소유자 (`dbo`). `dbo` 데이터베이스 간 권한이 없습니다. `sp_replcmds` 논리는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]에 CDC(변경 데이터 캡처)를 추가하여 변경 내용 추적 테이블을 사용자가 반환하고 쿼리할 수 있는 정보로 채웁니다. 보안상의 이유로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이 논리의 실행을 제한 하도록 악성 `dbo` 이 실행 경로 가로채지 합니다. 예를 들어, 악성 `dbo`는 `sp_replcmds`를 호출하는 사용자의 컨텍스트에서 실행될 수 있는 트리거를 CDC 테이블에 추가할 수 있으며, 이 경우 logreader 에이전트입니다.  에이전트가 실행 중인 계정의 권한이 더 높은 경우 악성 `dbo`가 자신의 권한을 에스컬레이션할 수 있습니다.  
+ 행 필터는 데이터베이스에서 작동하도록 설계되지 않았습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 `sp_replcmds` 실행(필터 실행 대상)을 의도적으로 데이터베이스 소유자(`dbo`)로 제한합니다. `dbo`에는 데이터베이스 간 권한이 없습니다. `sp_replcmds` 논리는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]에 CDC(변경 데이터 캡처)를 추가하여 변경 내용 추적 테이블을 사용자가 반환하고 쿼리할 수 있는 정보로 채웁니다. 보안상의 이유로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이 논리의 실행을 제한 하도록 악성 `dbo` 이 실행 경로 가로채지 합니다. 예를 들어, 악성 `dbo`는 `sp_replcmds`를 호출하는 사용자의 컨텍스트에서 실행될 수 있는 트리거를 CDC 테이블에 추가할 수 있으며, 이 경우 logreader 에이전트입니다.  에이전트가 실행 중인 계정의 권한이 더 높은 경우 악성 `dbo`가 자신의 권한을 에스컬레이션할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 및 데이터베이스 개체 게시](publish-data-and-database-objects.md)  

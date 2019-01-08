@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a06dfa03442cfbcff2f8815f9c946afbd9ff771c
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 127f39075a1b84b1250a27003efeb28083d1adbd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269676"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513195"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Linux에는 MSDTC Microsoft Distributed Transaction Coordinator ()를 구성 하는 방법
 
@@ -101,7 +101,7 @@ sudo firewall-cmd --reload
 
 ## <a name="configure-port-routing"></a>포트 라우팅 구성
 
-RPC 통신 포트 135에서 SQL Server로 리디렉션되도록 Linux server 라우팅 테이블을 구성할 **network.rpcport**합니다. 다음 명령을 다시 부팅 한 후 규칙을 복원 하기 위한 지침을 제공 하므로 iptable 규칙 재부팅 하는 동안 유지 되지 않습니다 수 있습니다.
+RPC 통신 포트 135에서 SQL Server로 리디렉션되도록 Linux server 라우팅 테이블을 구성할 **network.rpcport**합니다. 다른 배포에 전달 하는 포트에 대 한 구성 메커니즘은 달라질 수 있습니다. Firewalld 서비스를 사용 하지 않는 배포판에서는 iptable 규칙에는이 작업을 수행 하는 효율적인 메커니즘입니다. 이러한 distrubution의 예는 Ubuntu 16.04 및 SUSE Enterprise Linux v12입니다. 다음 명령을 다시 부팅 한 후 규칙을 복원 하기 위한 지침을 제공 하므로 iptable 규칙 재부팅 하는 동안 유지 되지 않습니다 수 있습니다.
 
 1. 포트 135에 대 한 라우팅 규칙을 만듭니다. 다음 예제에서는 포트 135는 이전 섹션에 정의 된 RPC 포트 13500에 전달 됩니다. 대체 `<ipaddress>` 서버의 IP 주소를 사용 하 여 합니다.
 
@@ -132,10 +132,16 @@ RPC 통신 포트 135에서 SQL Server로 리디렉션되도록 Linux server 라
    iptables-restore < /etc/iptables.conf
    ```
 
-**iptables 저장** 하 고 **iptables 복원은** 명령을 저장 하 고 iptables 항목을 복원 하는 기본 메커니즘을 제공 합니다. Linux 배포에 따라 있습니다 수 더 고급 또는 사용할 수 있는 옵션을 자동화 합니다. 예를 들어, Ubuntu 대안은 합니다 **iptables 영구** 패키지 항목을 지속 되도록 할 것입니다. Red Hat Enterprise Linux에 대 한 firewalld 서비스를 사용 하는 일을 할 수 (-를 사용 하 여 방화벽 cmd 구성 유틸리티를 통해 추가-앞으로-포트 또는 비슷한 옵션이) 영구 포트 전달 iptables를 사용 하는 대신 규칙을 만들려고 합니다.
+**iptables 저장** 하 고 **iptables 복원은** 명령을 저장 하 고 iptables 항목을 복원 하는 기본 메커니즘을 제공 합니다. Linux 배포에 따라 있습니다 수 더 고급 또는 사용할 수 있는 옵션을 자동화 합니다. 예를 들어, Ubuntu 대안은 합니다 **iptables 영구** 패키지 항목을 지속 되도록 할 것입니다. 
+
+Firewalld 서비스를 사용 하는 배포에서 동일한 서비스가 내부 포트 전달을 확인 하 고 서버에서 포트를 열기 위한 사용할 수 있습니다. 예를 들어, Red Hat Enterprise Linux에서 사용 해야 firewalld 서비스 (-를 사용 하 여 방화벽 cmd 구성 유틸리티를 통해 추가-앞으로-포트 또는 비슷한 옵션이)를 만들고 영구 포트 전달 iptables를 사용 하는 대신 규칙을 관리 합니다.
+
+```bash
+firewall-cmd --permanent --add-forward-port=port=135:proto=tcp:toport=13500
+```
 
 > [!IMPORTANT]
-> 이전 단계에는 고정된 IP 주소를 가정합니다. SQL Server 인스턴스에 대 한 IP 주소 (수동 또는 DHCP)으로 인해 변경 되 면 제거 하 고 라우팅 규칙을 다시 만들어야 합니다. 이전을 제거 하려면 다음 명령을 다시 작성 하거나 기존 라우팅 규칙을 삭제 해야 하는 경우 사용할 수 있습니다 `RpcEndPointMapper` 규칙:
+> 이전 단계에는 고정된 IP 주소를 가정합니다. SQL Server 인스턴스에 대 한 IP 주소 (수동 또는 DHCP)으로 인해 변경 되 면 제거 하 고 iptables를 사용 하 여 만들어진 경우 라우팅 규칙을 다시 만들어야 합니다. 이전을 제거 하려면 다음 명령을 다시 작성 하거나 기존 라우팅 규칙을 삭제 해야 하는 경우 사용할 수 있습니다 `RpcEndPointMapper` 규칙:
 > 
 > ```bash
 > iptables -S -t nat | grep "RpcEndPointMapper" | sed 's/^-A //' | while read rule; do iptables -t nat -D $rule; done

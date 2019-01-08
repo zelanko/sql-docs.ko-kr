@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Reosurce Pool Stats object
@@ -13,12 +13,12 @@ ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a1360399717819cfe82f02979de06b9f933fca4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5fdf00d1291180197f66cd6cb23cf27f10659c68
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229233"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791225"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQLServer, Resource Pool Stats 개체
   SQLServer:Resource Pool Stats 개체는 리소스 관리자 리소스 풀 통계에 대한 정보를 보고하는 성능 카운터를 포함합니다.  
@@ -50,9 +50,9 @@ ms.locfileid: "48229233"
 |Disk Write Bytes/sec|마지막 1초 동안 디스크에 쓴 바이트 수입니다.|  
 |Avg Disk Write IO (ms)|디스크에 쓰기 작업의 평균 시간(밀리초)입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](monitor-resource-usage-system-monitor.md)   
  [SQL Server, Workload Group Stats 개체](sql-server-workload-group-stats-object.md)   
- [Resource Governor](../resource-governor/resource-governor.md)  
+ [리소스 관리자](../resource-governor/resource-governor.md)  
   
   

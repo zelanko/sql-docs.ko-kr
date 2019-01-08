@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [SQL Server], startup options
@@ -17,17 +16,17 @@ ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07fc15bf088cf48e0a1b9a30cd68d5c10254d345
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 91a48d4acd771c19617bac26c1393f30334768e8
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072108"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639491"
 ---
 # <a name="configure-server-startup-options-sql-server-configuration-manager"></a>서버 시작 옵션 구성(SQL Server 구성 관리자)
-  이 항목에서는 사용할 때마다 시작 옵션을 구성 하는 방법에 설명 합니다 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 시작 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. 시작 옵션 목록에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](database-engine-service-startup-options.md)을 참조하세요.  
+  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 시작될 때마다 사용할 시작 옵션을 구성하는 방법에 대해 설명합니다. 시작 옵션 목록에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](database-engine-service-startup-options.md)을 참조하세요.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ### <a name="limitations-and-restrictions"></a>제한 사항  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 시작 매개 변수를 레지스트리에 씁니다. 이러한 매개 변수는 다음에 [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 시작할 때 적용됩니다.  

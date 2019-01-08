@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], owners
@@ -14,17 +14,17 @@ ms.assetid: 2ded5e9c-4251-4fb1-a047-99f13d150b61
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5245bd58ab52af1383cf056ac583729968d79162
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f22d153d55674d5dd615ab50848e4a7fd85a6dcb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203103"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800235"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업의 소유권을 다른 사용자에게 다시 할당하는 방법에 대해 설명합니다.  
   
--   **시작하기 전 주의 사항:**  [제한 사항](#Restrictions), [보안](#Security)  
+-   **시작하기 전 주의 사항:**  [제한 사항 및 제한 사항](#Restrictions), [보안](#Security)  
   
 -   **작업의 소유권을 다른 사용자에게 제공하려면:**  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48203103"
   
 2.  도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  쿼리 창에서 사용 하는 다음 문을 입력 합니다 [sp_manage_jobs_by_login &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) 시스템 저장 프로시저입니다. 다음 예에서는 `danw` 의 모든 작업을 `françoisa`에 다시 할당합니다.  
+3.  쿼리 창에서 사용 하는 다음 문을 입력 합니다 [sp_manage_jobs_by_login &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) 시스템 저장 프로시저입니다. 다음 예에서는 `danw` 의 모든 작업을 `fran??oisa`에 다시 할당합니다.  
   
     ```  
     USE msdb ;  
@@ -79,14 +79,14 @@ ms.locfileid: "48203103"
     EXEC dbo.sp_manage_jobs_by_login  
         @action = N'REASSIGN',  
         @current_owner_login_name = N'danw',  
-        @new_owner_login_name = N'françoisa' ;  
+        @new_owner_login_name = N'fran??oisa' ;  
     GO  
     ```  
   
 ##  <a name="SMOProc2"></a> SQL Server 관리 개체를 사용 하 여  
  **작업의 소유권을 다른 사람에게 주려면**  
   
-1.  호출 된 `Job` Visual Basic, Visual C# 또는 PowerShell 등 선택한 프로그래밍 언어를 사용 하 여 클래스입니다. 예제 코드를 보려면 [SQL Server 에이전트에서 자동 관리 태스크 예약](sql-server-agent.md)을 참조하세요.  
+1.  Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `Job` 클래스를 호출합니다. 예제 코드를 보려면 [SQL Server 에이전트에서 자동 관리 태스크 예약](sql-server-agent.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [작업 구현](implement-jobs.md)   

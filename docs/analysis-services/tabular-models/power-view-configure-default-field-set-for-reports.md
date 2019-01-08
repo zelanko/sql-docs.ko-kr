@@ -1,5 +1,5 @@
 ---
-title: Power View 보고서에 대 한 기본 필드 집합 구성 | Microsoft Docs
+title: Analysis Services의 Power View 보고서에 대 한 기본 필드 집합 구성 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 32d8d9c4acbc1c5eae47e90709c4ffdedd269f11
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4b8549a384b8eb0e7625d354ccf4d5c4e8b5e664
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041857"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072060"
 ---
-# <a name="power-view---configure-default-field-set-for-reports"></a>Power View-보고서에 대 한 기본 필드 집합 구성
+# <a name="power-view---configure-default-field-set-for-reports"></a>파워 뷰-보고서에 대 한 기본 필드 집합 구성
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   기본 필드 집합은 보고서 필드 목록에서 테이블을 선택할 때 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서 캔버스에 자동으로 추가되는 미리 정의된 열 및 측정값 목록입니다. 테이블 형식 모델 작성자는 보고서에 모델을 사용하는 보고서 작성자를 위해 기본 필드 집합을 만들어 중복된 단계를 제거할 수 있습니다. 예를 들어, 고객 연락처 정보를 사용하는 대부분의 보고서 작성자가 항상 연락처 이름, 기본 전화 번호, 전자 메일 주소 및 회사 이름을 보려고 하는 것으로 파악되는 경우 해당 열을 미리 선택하여 작성자가 Customer Contact 테이블을 클릭할 때 보고서 캔버스에 이러한 정보가 항상 추가되도록 할 수 있습니다.  
   
@@ -41,6 +41,6 @@ ms.locfileid: "34041857"
 6.  통합 문서의 다른 테이블에 대해 이러한 단계를 반복합니다.  
   
 ## <a name="next-step"></a>다음 단계  
- 기본 필드 집합을 만든 후에는 기본 레이블, 기본 이미지, 기본 그룹 동작 또는 같은 값의 여러 행이 한 행에 함께 그룹화되는지 아니면 따로 나열되는지 지정하여 보고서 디자인 환경을 더 자세히 사용자 지정합니다. 자세한 내용은 참조 [Power View 보고서의 테이블 동작 속성 구성](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)합니다.  
+ 기본 필드 집합을 만든 후에는 기본 레이블, 기본 이미지, 기본 그룹 동작 또는 같은 값의 여러 행이 한 행에 함께 그룹화되는지 아니면 따로 나열되는지 지정하여 보고서 디자인 환경을 더 자세히 사용자 지정합니다. 자세한 내용은 [파워 뷰 보고서의 테이블 동작 속성 구성](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)합니다.  
   
   

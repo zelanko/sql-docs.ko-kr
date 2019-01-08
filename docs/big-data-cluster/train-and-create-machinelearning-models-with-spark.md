@@ -1,25 +1,27 @@
 ---
-title: 학습 및 Spark를 사용 하 여 기계 학습 모델 만들기
-description: PySpark를 사용 하 여 학습 및 Spark를 사용 하 여 기계 학습 모델 만들기 | SQL Server
-services: SQL Server 2019 Big Data Cluster Spark
-ms.service: SQL Server 2019 Big Data Cluster Spark
+title: Spark 사용 하 여 학습/만들기 ML 모델
+titleSuffix: SQL Server 2019 big data clusters
+description: PySpark를 사용 하 여 학습 하 고 SQL Server 빅 데이터 클러스터 (미리 보기)에서 Spark를 사용 하 여 기계 학습 모델을 만듭니다.
 author: lgongmsft
 ms.author: shivprashant
+ms.manager: craigg
 ms.reviewer: jroth
-ms.custom: ''
+ms.date: 12/06/2018
 ms.topic: conceptual
-ms.date: 10/10/2018
-ms.openlocfilehash: fceced831ba7b100f29e2fc70811f50c95b1b715
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.prod: sql
+ms.custom: seodec18
+ms.openlocfilehash: c1a23ebb390c2276d1ce47c2936b8fe682a4e9b7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753490"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213102"
 ---
 # <a name="train-and-create-machine-learning-models-with-spark"></a>학습 및 Spark를 사용 하 여 기계 학습 모델 만들기
+
 SQL Server 빅 데이터 클러스터에서 Spark를 통해 AI 및 기계 학습 수 있습니다. 이 예제에서는 어떻게 기계 학습 모델을 학습에 데이터를 사용 하 여 Spark (PySpark)에서 Python을 사용 하 여 HDFS에 저장 하는 방법을 보여 줍니다. 
 
-예제에는 한 번에 각 셀 실행된 한 단계는 Azure 데이터 Studio Notebook에서 사용할 수 있는 코드 조각 사용 하 여 단계별 가이드입니다. Notebook에서 Spark를 사용 하 여 연결 하는 방법에 대 한 자세한 내용은 참조 [여기] (노트북 guidance.md)
+예제에는 한 번에 각 셀 실행된 한 단계는 Azure 데이터 Studio Notebook에서 사용할 수 있는 코드 조각 사용 하 여 단계별 가이드입니다. Notebook에서 Spark를 사용 하 여 연결 하는 방법에 대 한 자세한 내용은 참조 [여기](notebooks-guidance.md)
 
 예제:
 
@@ -33,11 +35,9 @@ SQL Server 빅 데이터 클러스터에서 Spark를 통해 AI 및 기계 학습
 
 E2E machine learning에는 몇 가지 추가 단계, 예, 데이터 탐색, 기능 선택 및 사용자 구성 요소 분석, 모델 선택 해야합니다. 이러한 단계의 대부분 여기에 간단히 나타내기 위해 무시 됩니다.
 
-
 ## <a name="step-1---understanding-the-data-and-prediction-desired"></a>1 단계-데이터 및 원하는 예측 이해
 
 이 예제에서는 성인 인구 조사 소득 데이터로 [여기]( https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv )합니다. `AdultCensusIncome.csv`, 각 행이 나타내는 수입 범위 및 기타 특성 등 기간, 주당 시간, 교육, 직업 등 특정된 성인에 대 한 합니다. 하는 경우 예측할 수 있는 모델 작성 수입 범위입니다. 모델 사용 기간 및 기능으로 주당 시간 되며 수입 하는 경우 예측할 > 50k 또는 < 50 11. 
-
 
 ## <a name="step-2---upload-the-data-to-hdfs-and-basic-explorations-on-data"></a>2 단계-데이터의 기본 탐색 하 고 HDFS에 데이터 업로드
 Azure Data Studio에서 HDFS/Spark 게이트웨이로 연결 하 고 라는 디렉터리를 만듭니다 `spark_ml` HDFS에서. 다운로드 [AdultCensusIncome.csv]( https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv ) 로컬 시스템 및 HDFS에 업로드 합니다. 업로드 `AdultCensusIncome.csv` 사용자가 만든 폴더에 있습니다.
@@ -85,7 +85,6 @@ data = data_all.select(select_cols)
 
 ```
 
-
 ## <a name="step-4---split-as-training-and-test-set"></a>4 단계-학습 및 테스트 집합으로 분할
 
 행의 75%를 사용 하 여 나머지 25% 모델을 평가 하 고 모델을 학습 합니다. 또한 학습을 유지 하 고 HDFS 저장소에 데이터 집합을 테스트 합니다. 단계는 필요 하 긴 하지만 보여 주기 위해 표시 된 저장 및 ORC 형식으로 로드 합니다. 예를 들어, 다른 형식으로 `Parquet `사용할 수도 있습니다.
@@ -109,9 +108,8 @@ print("train and test datasets saved to {} and {}".format(train_data_path, test_
 
 ```
 
-
 ## <a name="step-5---put-together-a-pipeline-and-build-a-model"></a>5 단계-파이프라인에 결합 하 고, 모델 작성
-[Spark ML 파이프라인] ( https://spark.apache.org/docs/2.3.1/ml-pipeline.html ) 워크플로로 모든 단계를 시퀀스 하 고 쉽게 다양 한 알고리즘 및 매개 변수를 사용 하 여 실험을 허용 합니다. 다음 코드는 먼저 단계를 생성 하 고이 단계를 함께 Ml 파이프라인에 놓입니다.  LogisticRegression 모델을 만드는 사용 됩니다.
+[Spark ML 파이프라인](https://spark.apache.org/docs/2.3.1/ml-pipeline.html) 워크플로로 모든 단계를 시퀀스 하 고 쉽게 다양 한 알고리즘 및 매개 변수를 사용 하 여 실험을 허용 합니다. 다음 코드는 먼저 단계를 생성 하 고이 단계를 함께 Ml 파이프라인에 놓입니다.  LogisticRegression 모델을 만드는 사용 됩니다.
 
 ```python
 from pyspark.ml import Pipeline, PipelineModel
@@ -211,6 +209,6 @@ assert str(model2) == str(model)
 print("loaded model from {}".format(model_fs))
 ```
 
-## <a name="references"></a>참조
-1. PySpark를 사용 하 여 시작 하는 것에 대 한 전자 필기장 참조 [여기 있습니다.](notebooks-guidance.md)
+## <a name="next-steps"></a>다음 단계
 
+PySpark notebook을 사용 하 여 시작 하는 방법에 대 한 자세한 내용은 참조 하세요. [notebook을 사용 하는 방법을](notebooks-guidance.md)합니다.

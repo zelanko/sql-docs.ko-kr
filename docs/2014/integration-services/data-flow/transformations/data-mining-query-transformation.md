@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingquerytrans.f1
@@ -16,12 +15,12 @@ ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1be2f23cbcf39b1b3775ef0a8de592ed71240a45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 00b8b6e5004878c3d6c7174ed375f68a2c4d7b4c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058603"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796110"
 ---
 # <a name="data-mining-query-transformation"></a>데이터 마이닝 쿼리 변환
   데이터 마이닝 쿼리 변환은 데이터 마이닝 모델과 비교해서 예측 쿼리를 수행합니다. 이 변환에는 DMX(Data Mining Extensions) 쿼리를 만들기 위한 쿼리 작성기가 포함되어 있습니다. 쿼리 작성기를 사용하면 DMX 언어를 사용하는 기존 마이닝 모델과 비교해서 변환 입력 데이터를 평가하는 사용자 지정 문을 만들 수 있습니다. 자세한 내용은 [DMX&#40;Data Mining Extensions&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)를 참조하세요.  
@@ -37,9 +36,9 @@ ms.locfileid: "48058603"
   
  **데이터 마이닝 쿼리 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [데이터 마이닝 쿼리 변환 편집기 &#40;마이닝 모델 탭&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [데이터 마이닝 쿼리 변환 편집기&#40;마이닝 모델 탭&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
--   [데이터 마이닝 쿼리 변환 편집기 &#40;마이닝 모델 탭&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [데이터 마이닝 쿼리 변환 편집기&#40;마이닝 모델 탭&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   

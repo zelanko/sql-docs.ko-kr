@@ -15,12 +15,12 @@ ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 32da4424359a7b27ebef6f48c988f9e20c6f4d71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d349947ed06ec406dad4f928cdbbc97838aec409
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090233"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538674"
 ---
 # <a name="web-service-task-editor-general-page"></a>웹 서비스 태스크 편집기(일반 페이지)
   **웹 서비스 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 HTTP 연결 관리자를 지정하고, 웹 서비스 태스크에 사용하는 WSDL(웹 서비스 기술 언어) 파일의 위치를 지정하고, 웹 서비스 태스크를 설명하고, WSDL 파일을 다운로드할 수 있습니다.  
@@ -34,10 +34,10 @@ ms.locfileid: "48090233"
 > [!IMPORTANT]  
 >  HTTP 연결 관리자는 익명 인증과 기본 인증만 지원하며 Windows 인증은 지원하지 않습니다.  
   
- **관련 항목:** [HTTP 연결 관리자](connection-manager/http-connection-manager.md), [HTTP 연결 관리자 편집기&#40;서버 페이지&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ **관련된 항목:**  [HTTP 연결 관리자](connection-manager/http-connection-manager.md)하십시오 [HTTP 연결 관리자 편집기 &#40;서버 페이지&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
- 컴퓨터에 로컬인 WSDL 파일의 정규화된 경로를 입력하거나 찾아보기 단추 **(…)** 를 클릭하여 이 파일을 찾습니다.  
+ 컴퓨터에 로컬인 WSDL 파일의 정규화된 경로를 입력하거나 찾아보기 단추 **(...)** 를 클릭하여 이 파일을 찾습니다.  
   
  WSDL 파일을 컴퓨터에 이미 수동으로 다운로드한 경우에는 이 파일을 선택하고, WSDL 파일을 아직 다운로드하지 않은 경우에는 다음 단계를 수행합니다.  
   
@@ -73,8 +73,8 @@ ms.locfileid: "48090233"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [웹 서비스 태스크 편집기 &#40;페이지를 입력 합니다.&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
- [웹 서비스 태스크 편집기 &#40;페이지를 출력 합니다.&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [웹 서비스 태스크 편집기&#40;입력 페이지&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
+ [웹 서비스 태스크 편집기&#40;출력 페이지&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [식 페이지](expressions/expressions-page.md)  
   
   

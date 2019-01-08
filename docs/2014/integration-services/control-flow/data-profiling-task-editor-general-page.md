@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e6bf10248bb3d8f280a24191634392df3b4ff5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7bef22daeb42b0c08e7668dec533e663057f1a8b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084833"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805035"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>데이터 프로파일링 태스크 편집기(일반 페이지)
   **데이터 프로파일링 태스크 편집기** 의 **일반** 페이지를 사용하여 다음 옵션을 구성할 수 있습니다.  
@@ -53,10 +52,10 @@ ms.locfileid: "48084833"
   
 |값|Description|  
 |-----------|-----------------|  
-|**FileConnection**|파일 연결 관리자에서 지정한 위치에 있는 파일에 프로필 출력을 저장합니다.<br /><br /> 참고: **Destination** 옵션에서 사용할 파일 연결 관리자를 지정합니다.|  
-|**변수**|프로필 출력을 패키지 변수에 저장합니다.<br /><br /> 참고: **Destination** 옵션에서 사용할 패키지 변수를 지정합니다.|  
+|**FileConnection**|파일 연결 관리자에서 지정한 위치에 있는 파일에 프로필 출력을 저장합니다.<br /><br /> 참고: 사용 하는 파일 연결 관리자를 지정 합니다 **대상** 옵션입니다.|  
+|**변수**|프로필 출력을 패키지 변수에 저장합니다.<br /><br /> 참고: 사용 하는 패키지 변수를 지정 합니다 **대상** 옵션입니다.|  
   
- **Destination**  
+ **대상**  
  데이터 프로필 출력을 포함할 파일 연결 관리자 또는 패키지 변수를 지정합니다.  
   
 -   **DestinationType** 옵션이 **FileConnection**으로 설정된 경우 **Destination** 옵션에 사용 가능한 파일 연결 관리자가 표시됩니다. 이러한 연결 관리자 중 하나를 선택하거나 \<새 파일 연결>을 선택하여 새 파일 연결 관리자를 만듭니다.  
@@ -79,8 +78,8 @@ ms.locfileid: "48084833"
 > [!NOTE]  
 >  또한 *\<드라이브>*:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 폴더에서 DataProfileViewer.exe를 실행하여 데이터 프로필 뷰어를 열 수도 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [단일 테이블 빠른 프로필 형식 &#40;데이터 프로 파일링 태스크&#41;](single-table-quick-profile-form-data-profiling-task.md)   
+## <a name="see-also"></a>관련 항목:  
+ [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](single-table-quick-profile-form-data-profiling-task.md)   
  [데이터 프로파일링 태스크 편집기&#40;프로필 요청 페이지&#41;](data-profiling-task-editor-profile-requests-page.md)  
   
   

@@ -1,7 +1,8 @@
 ---
-title: '자습서: 가장 느린 쿼리 5 사용 샘플 위젯-Azure Data Studio | Microsoft Docs'
+title: '자습서: 5 개의 가장 느린 쿼리 샘플 위젯 사용'
+titleSuffix: Azure Data Studio
 description: 이 자습서에는 5 개의 가장 느린 쿼리 샘플 위젯을 데이터베이스 대시보드에서 사용할 수 있도록 하는 방법을 보여 줍니다.
-ms.custom: tools|sos
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75886c26b7ceff9df9e2fc96f76038e8d6e70dd0
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 491e66ecc8b0dfb3024a2beb59cfefd3f8e0d28f
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356244"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030787"
 ---
-# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>자습서: *5개의 가장 느린 쿼리* 샘플 위젯을 데이터베이스 대시보드에 추가하기
+# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>자습서: 추가 된 *느린 쿼리 5* 데이터베이스 대시보드 위젯의 샘플
 
 이 자습서는 데이터베이스의 가장 느린 5개 쿼리를 빠르게 보기 위해 *데이터베이스 대시보드*에 [!INCLUDE[name-sos](../includes/name-sos-short.md)]에서 기본 제공되는 샘플 widget 중 하나를 추가하는 과정을 보여줍니다. 또한 [!INCLUDE[name-sos](../includes/name-sos-short.md)]의 기능을 사용해서 느린 쿼리의 세부 정보와 쿼리 계획을 보는 방법을 배웁니다. 이 자습에서 배울 내용:
 
@@ -33,8 +34,8 @@ ms.locfileid: "49356244"
 
 이 자습서에서는 SQL Server 또는 Azure SQL Database의 *TutorialDB*가 필요합니다. *TutorialDB* 데이터베이스를 만들려면, 다음 빠른 시작 중 하나를 수행합니다.
 
-- [연결 및 SQL Server를 사용 하 여 쿼리 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [연결 및 Azure SQL Database를 사용 하 여 쿼리 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)를 사용하여 SQL Server에 연결 및 쿼리
+- [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)를 사용하여 Azure SQL Database에 연결 및 쿼리
 
 
 
@@ -54,7 +55,7 @@ ms.locfileid: "49356244"
 추가할 합니다 *느린 쿼리 위젯* 대시보드를 편집 합니다 *dashboard.database.widgets* 에서 설정에 *사용자 설정* 파일.
 
 1. 엽니다 *사용자 설정* 키를 눌러 **Ctrl + Shift + P** 열려는 합니다 *명령 팔레트*합니다.
-2. 형식 *설정을* 검색 상자에 선택 **기본 설정: 사용자 설정 열기**합니다.
+2. 형식 *설정을* 검색 상자에 선택 **기본 설정: 사용자 설정을 엽니다**합니다.
 
    ![미해결 사용자 설정 명령](./media/tutorial-qds-sql-server/open-user-settings.png)
 
@@ -171,7 +172,7 @@ ms.locfileid: "49356244"
 
 
 ## <a name="next-steps"></a>다음 단계
-이 자습서에서는 학습 하는 방법.
+이 자습서에서는 다음과 같은 방법을 학습했습니다.
 > [!div class="checklist"]
 > * 데이터베이스에서 쿼리 저장소를 사용하도록 설정
 > * 데이터베이스 대시보드 정보 위젯 추가

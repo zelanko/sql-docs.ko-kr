@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_schemafilter_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02e384763a6415f1de27415bf63f3159bddc394e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3018d23247a8f4d127d09878cb20c5f48f76c4ff
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756061"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206952"
 ---
 # <a name="spschemafilter-transact-sql"></a>sp_schemafilter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>인수  
  [**@publisher** =] **'***게시자***'**  
- 비-의 이름인[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
+ 비-의 이름인 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [**@schema** =] **'***스키마***'**  
  스키마 이름입니다. *스키마* 됩니다 **sysname**, 기본값은 NULL입니다.  
@@ -71,7 +70,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할의 배포자에서 실행할 수 있습니다 **sp_schemafilter**합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

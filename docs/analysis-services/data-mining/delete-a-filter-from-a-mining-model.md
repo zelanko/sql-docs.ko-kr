@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fb3897d851c398b9703bf9514fc36cf30922727d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 66293cf1be2ced3106e2966a930639c12330a660
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014401"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545658"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>마이닝 모델에서 필터 삭제
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -56,9 +56,9 @@ ms.locfileid: "34014401"
   
 3.  백스페이스 또는 Delete 키를 누릅니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마이닝 모델에서 사례 데이터로 드릴스루](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)   
  [마이닝 모델 태스크 및 방법](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [마이닝 모델 & #40;에 대 한 필터 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [마이닝 모델에 대한 필터&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

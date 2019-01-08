@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4661c13dd33b8b0c329f93297475fc4185fcbe0a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: 18013587c8c6eb23989f8f22150b8980d0e5afc1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019550"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513777"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>시계열 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34019550"
   
  다음 다이어그램에는 혼합 모델을 만들기 위해 기본 설정을 사용하여 만든 시계열 데이터 마이닝 모델의 예가 나와 있습니다. 두 모델 간의 차이를 보다 쉽게 비교할 수 있도록 여기서 ARTXP 모델은 다이어그램의 왼쪽에 있고 ARIMA 모델은 다이어그램의 오른쪽에 있습니다.  ARTXP가 더 작은 분기로 분할되는 트리와 같은 구조인데 반하여 ARIMA 알고리즘으로 만든 구조는 더 작은 구성 요소를 기반으로 작성된 피라미드와 같습니다.  
   
- ![시계열 모델에 대 한 모델 콘텐츠의 구조](../../analysis-services/data-mining/media/modelcontentstructure-ts.gif "한 시계열 모델에 대 한 모델 콘텐츠 구조")  
+ ![시계열 모델에 대 한 모델 콘텐츠 구조](../../analysis-services/data-mining/media/modelcontentstructure-ts.gif "한 시계열 모델에 대 한 모델 콘텐츠 구조")  
   
  이때 ARIMA 및 ARTXP 트리 내에서 정보가 완전히 다른 방법으로 정렬된다는 사실을 기억해야 합니다. 두 트리는 루트 노드에서만 관련되어 있습니다. 이러한 두 표현은 편의상 한 모델로 제공되지만 두 개의 독립적인 모델로 처리해야 합니다. ARTXP는 실제 트리 구조를 나타내지만 ARIMA는 그렇지 않습니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "34019550"
 >  수식을 보려는 경우 완전한 회귀 수식을 리프 노드 수준에서 찾을 수 있지만 중간 또는 루트 노드에서는 찾을 수 없습니다.  
   
 ### <a name="structure-of-an-arima-model"></a>ARIMA 모델의 구조  
- ARIMA 알고리즘은 데이터 계열(예: **[Region]**) 및 예측 가능한 특성(예: **[Sales Amount]**)의 각 조합에 대해 단일 정보를 만들며 이 정보는 예측 가능한 특성의 시간에 따른 변경을 설명하는 수식입니다.  
+ ARIMA 알고리즘은 단일 데이터 계열의 각 조합에 대 한 정보를 만듭니다 (같은 **[Region]**) 및 예측 가능한 특성 (같은 **[Sales Amount]**)-설명 하는 수식 합니다 시간이 지남에 따라 예측 가능한 특성을 변경 합니다.  
   
  각 계열에 대한 수식은 데이터에서 발견되는 각 주기 구조에 대해 하나씩 여러 구성 요소에서 파생됩니다. 예를 들어 매월 수집되는 판매 데이터가 있는 경우 알고리즘은 월별, 분기별 또는 연도별 주기 구조를 검색할 수 있습니다.  
   
@@ -153,23 +153,23 @@ ms.locfileid: "34019550"
  NODE_DESCRIPTION  
  현재 노드의 규칙, 분할 또는 수식에 대한 텍스트 설명입니다.  
   
- **ARTXP:** 자세한 내용은 [ARTXP 트리 이해](#bkmk_ARTXP_1)를 참조하세요.  
+ **ARTXP:** 자세한 내용은 [ARTXP 트리 이해](#bkmk_ARTXP_1)합니다.  
   
- **ARIMA:** 자세한 내용은 [ARIMA 트리 이해](#bkmk_ARIMA_1)를 참조하세요.  
+ **ARIMA:** 자세한 내용은 [ARIMA 트리 이해](#bkmk_ARIMA_1)합니다.  
   
  NODE_RULE  
  현재 노드의 규칙, 분할 또는 수식에 대한 XML 설명입니다.  
   
  **ARTXP:** NODE_RULE은 일반적으로 NODE_CAPTION에 해당합니다.  
   
- **ARIMA:** 자세한 내용은 [ARIMA 트리 이해](#bkmk_ARIMA_1)를 참조하세요.  
+ **ARIMA:** 자세한 내용은 [ARIMA 트리 이해](#bkmk_ARIMA_1)합니다.  
   
  MARGINAL_RULE  
  해당 노드와 관련된 분할 또는 콘텐츠에 대한 XML 설명입니다.  
   
  **ARTXP:** MARGINAL_RULE은 일반적으로 NODE_DESCRIPTION에 해당합니다.  
   
- **ARIMA:** 항상 비어 있습니다. 대신 NODE_RULE을 사용하세요.  
+ **ARIMA:** 항상 비어 있습니다. 대신 NODE_RULE을 사용합니다.  
   
  NODE_PROBABILITY  
  **ARTXP:** 트리 노드의 경우 항상 1입니다. 리프 노드의 경우 모델 루트 노드에서 해당 노드에 도달할 확률입니다.  
@@ -193,7 +193,7 @@ ms.locfileid: "34019550"
  NODE_SUPPORT  
  이 노드를 지지하는 사례 수입니다.  
   
- **ARTXP:** **(All)** 노드의 경우 분기에 포함된 총 시간 조각 수를 나타냅니다.  
+ **ARTXP:** 에 대 한 합니다 **(All)** 노드의 경우 분기에 포함 하는 시간 조각의 총 수를 나타냅니다.  
   
  터미널 노드의 경우 NODE_CAPTION에 설명된 범위에 포함된 시간 조각 수를 나타냅니다. 터미널 노드의 시간 조각 수는 항상 분기 **(All)** 노드의 NODE_SUPPORT 값에 대한 합계입니다.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "34019550"
   
  이러한 점수 매기기 방법은 [기능 선택&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)을 참조하세요.  
   
- **ARIMA:** ARIMA 모델의 BIC(Bayesian Information Criterion) 점수입니다. 수식과 관련된 모든 ARIMA 노드에서 동일한 점수가 설정됩니다.  
+ **ARIMA:**  ARIMA 모델의 BIC(Bayesian Information Criterion) 점수입니다. 수식과 관련된 모든 ARIMA 노드에서 동일한 점수가 설정됩니다.  
   
  MSOLAP_NODE_SHORT_CAPTION  
  **ARTXP:**  NODE_DESCRIPTION과 동일한 정보입니다.  
@@ -247,7 +247,7 @@ ms.locfileid: "34019550"
  다음 섹션에서는 예제 수식을 제공하고 기본 항에 대해 설명합니다.  
   
 #### <a name="mining-legend-for-an-artxp-formula"></a>ARTXP 수식의 마이닝 범례  
- 다음 예에서는 **마이닝 범례**에 표시된 대로 모델의 한 부분에 대한 ARTXP 수식을 보여 줍니다. 이 수식을 보려면 기본 데이터 마이닝 자습서에서 만든 [Forecasting] 모델을 Microsoft 시계열 뷰어에서 열고 **모델** 탭을 클릭한 다음 R250: Europe 데이터 계열에 대한 트리를 선택합니다.  
+ 다음 예에서는 **마이닝 범례**에 표시된 대로 모델의 한 부분에 대한 ARTXP 수식을 보여 줍니다. 이 수식을 보려면 Microsoft 시계열 뷰어에서 기본 데이터 마이닝 자습서에서 만든 [Forecasting] 모델 열을 클릭 합니다 **모델** 탭을 선택한 다음 R250에 대 한 트리를 선택 합니다. 선택합니다.  
   
  이 예에 사용된 수식을 보려면 2003년 5월 7일 또는 이날 이후의 날짜 계열을 나타내는 노드를 클릭합니다.  
   
@@ -372,25 +372,25 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
  이 섹션에서는 예제 수식을 제공하고 기본 항에 대해 설명합니다.  
   
 ####  <a name="bkmk_ARIMA_2"></a> ARIMA 수식의 마이닝 범례  
- 다음 예에서는 마이닝 범례에 표시된 대로 모델의 한 부분에 대한 ARIMA 수식을 보여 줍니다. 이 수식을 보려면 **Microsoft 시계열 뷰어** 를 사용하여 **Forecasting**모델을 열고 **모델** 탭을 클릭한 다음 **R250: Europe** 데이터 계열에 대한 트리를 선택합니다. 그런 다음 2003년 7월 5일 또는 이날 이후의 데이터 계열을 나타내는 노드를 클릭합니다. 마이닝 범례는 다음 예와 같이 읽을 수 있는 형식으로 모든 상수를 작성합니다.  
+ 다음 예에서는 마이닝 범례에 표시된 대로 모델의 한 부분에 대한 ARIMA 수식을 보여 줍니다. 이 수식을 보려면 엽니다는 **Forecasting** 를 사용 하 여 모델을 **Microsoft 시계열 뷰어**, 클릭를 **모델** 탭에 대 한 트리를 선택 합니다는 **R250: 유럽** 데이터 계열 다음 2003 년 7 월 5 이후인 날짜 계열을 나타내는 노드를 클릭 합니다. 마이닝 범례는 다음 예와 같이 읽을 수 있는 형식으로 모든 상수를 작성합니다.  
   
  ARIMA 수식:  
   
 `ARIMA ({1,1},0,{1,1.49791920964142,1.10640053499397,0.888873034670339,-5.05429403071953E-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}) Intercept:56.8888888888889`  
   
- 이 수식은 계수 및 절편의 값을 포함하는 긴 ARIMA 형식입니다. 이 수식의 약식 표현이 것 {1,0,7}, 여기서 1은 시간 조각 수로 기간, 0은 항 차수를 나타냅니다. 및 7 계수 수를 나타냅니다.  
+ 이 수식은 계수 및 절편의 값을 포함하는 긴 ARIMA 형식입니다. 이 수식의 약식 {1,0,7}, 여기서 1 개의 시간 조각 수로 기간을 나타내는, 0은 항 차수를 및 7은 계수 수를 나타냅니다.  
   
 > [!NOTE]  
 >  상수는 Analysis Services에서 분산 계산을 위해 계산되지만 상수 자체는 사용자 인터페이스에 표시되지 않습니다. 그러나 **차트** 뷰에서 **편차 표시** 를 선택할 경우 계열의 임의 지점에 대한 분산을 이 상수의 함수로 볼 수 있습니다. 각 데이터 계열에 대한 도구 설명에는 예측된 특정 지점에 대한 분산이 표시됩니다.  
   
 #### <a name="model-content-for-arima-formula"></a>ARIMA 수식에 대한 모델 콘텐츠  
- ARIMA 모델은 다른 유형의 노드에 다른 정보가 포함되는 표준 구조를 따릅니다. ARIMA 모델에 대한 모델 콘텐츠를 보려면 뷰어를 **Microsoft 일반 콘텐츠 트리 뷰어**로 변경한 다음 특성 이름이 **R250 Europe: Quantity**인 노드를 확장합니다.  
+ ARIMA 모델은 다른 유형의 노드에 다른 정보가 포함되는 표준 구조를 따릅니다. ARIMA 모델에 대 한 모델 콘텐츠를 보려면 뷰어를 변경 합니다 **Microsoft 일반 콘텐츠 트리 뷰어**, 다음 특성 이름이 있는 노드를 확장 하 고 **R250 Europe: 수량**합니다.  
   
  데이터 계열에 대한 ARIMA 모델은 애플리케이션에 따라 선택할 수 있는 네 개의 서로 다른 형식으로 된 기본 주기 수식을 포함합니다.  
   
- **NODE_CAPTION:** 수식을 약식으로 표시합니다. 약식 표현을 통해 표시되는 주기 구조 수 및 이러한 주기 구조에 있는 계수 수를 알 수 있습니다. 예를 들어 수식의 약식 표현이 `{4,0,6}`인 경우 노드는 계수가 6개인 하나의 주기 구조를 나타냅니다. 약식 표현이 `{2,0,8} x {1,0,0}(4)`와 같은 경우 노드는 두 개의 주기 구조를 포함합니다.  
+ **NODE_CAPTION:** 수식의 약식 표현을 표시합니다. 약식 표현을 통해 표시되는 주기 구조 수 및 이러한 주기 구조에 있는 계수 수를 알 수 있습니다. 예를 들어 수식의 약식 표현이 `{4,0,6}`인 경우 노드는 계수가 6개인 하나의 주기 구조를 나타냅니다. 약식 표현이 `{2,0,8} x {1,0,0}(4)`와 같은 경우 노드는 두 개의 주기 구조를 포함합니다.  
   
- **NODE DESCRIPTION:** **마이닝 범례**에 표시되는 수식의 형태이기도 한 긴 수식 형식을 표시합니다. 긴 형태의 수식은 실제 계수 값이 계산되는 대신 표시된다는 점을 제외하고 약식 표현과 비슷합니다.  
+ **노드 설명:** 수식에 표시 되는 수식의 형태 이기도 한 긴 형식을 표시 합니다 **마이닝 범례**합니다. 긴 형태의 수식은 실제 계수 값이 계산되는 대신 표시된다는 점을 제외하고 약식 표현과 비슷합니다.  
   
  **NODE_RULE:** 수식의 XML 표현을 표시합니다. 노드 유형에 따라 XML 표현은 하나 또는 여러 개의 주기 구조를 포함할 수 있습니다. 다음 표에서는 XML 노드가 ARIMA 모델의 상위 수준으로 롤업되는 방법을 보여 줍니다.  
   
@@ -403,12 +403,12 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  **NODE_DISTRIBUTION:** 특정 항을 가져오기 위해 쿼리할 수 있는 중첩 테이블의 수식 항을 표시합니다. 노드 배포 테이블은 XML 규칙과 동일한 계층 구조를 따릅니다. 즉, ARIMA 계열의 루트 노드(NODE_TYPE = 27)는 여러 주기성을 포함할 수 있는 완전한 수식에 대한 절편 값 및 주기성을 포함하는데 반해 자식 노드는 특정 주기 구조 또는 해당 주기 구조의 자식 노드에 대한 정보만 포함합니다.  
   
-|노드 유형|Attribute|값 유형|  
+|노드 유형|attribute|값 유형|  
 |---------------|---------------|----------------|  
 |27(ARIMA 루트)|가로채기<br /><br /> 주기성|11|  
 |28(ARIMA 주기 구조)|주기성<br /><br /> 자동 회귀 차수<br /><br /> 차수<br /><br /> 이동 평균 순서|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  
 |29(ARIMA 자동 회귀)|계수<br /><br /> (계수의 보수)|7|  
-|30(ARIMA 이동 평균)|t의 값<br /><br /> t-1의 값<br /><br /> …<br /><br /> t-n의 값|7|  
+|30(ARIMA 이동 평균)|t의 값<br /><br /> t-1의 값<br /><br /> ...<br /><br /> t-n의 값|7|  
   
  *이동 평균 차수* 의 값은 계열의 이동 평균 수를 나타냅니다. 계열에 `n-1` 개의 항이 있는 경우 일반적으로 이동 평균은 `n` 번 계산되지만 계산이 보다 쉽도록 해당 숫자를 줄일 수 있습니다.  
   
@@ -429,10 +429,10 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
 -   XML 표현: XML 쿼리를 사용합니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
  각 분할에 대한 정보가 트리 내의 서로 다른 위치에 있으므로 ARTXP 트리의 정보를 검색하기 어려울 수 있습니다. 따라서 ARTXP 모델을 사용할 경우 모든 부분을 가져온 다음 완전한 수식을 다시 구성하기 위해 약간의 처리 작업을 수행해야 합니다. ARIMA 모델에서 수식을 검색할 경우에는 트리 전체에서 수식을 사용할 수 있으므로 검색 작업이 보다 쉽습니다. 쿼리를 만들어 이 정보를 검색하는 방법은 [시계열 모델 쿼리 예제](../../analysis-services/data-mining/time-series-model-query-examples.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마이닝 모델 콘텐츠 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft 시계열 알고리즘](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [시계열 모델 쿼리 예제](../../analysis-services/data-mining/time-series-model-query-examples.md)   

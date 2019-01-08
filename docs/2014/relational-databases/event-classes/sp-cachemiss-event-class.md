@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 82229233-f772-4558-95a0-d54584d1b1ae
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f5596801574815bea45762df5e91bbce9047841
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 5f3d74cad3f462d9bd8d2d57cc3b6e37c4739598
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141053"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801145"
 ---
 # <a name="spcachemiss-event-class"></a>SP:CacheMiss 이벤트 클래스
   SP:CacheMiss 이벤트 클래스는 캐시에 프로시저가 없음을 나타냅니다. SP:CacheMiss 이벤트가 자주 발생하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용 가능한 메모리를 더 확보하여 프로시저 캐시 크기를 늘려야 합니다.  

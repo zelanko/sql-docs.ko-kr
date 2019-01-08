@@ -21,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1336533eb3a7ffb8b3e30e252a1335012b7c373
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 634fbc4ddd96fd407aa124c98ae2b55897edaa71
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812981"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52391228"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47812981"
 |**start_date**|**datetime**|인증서가 유효하게 되는 날짜입니다.|  
 |**지문**|**varbinary(32)**|인증서의 SHA-1 해시입니다. SHA-1 해시는 전역적으로 고유합니다.|  
 |**attested_by**|**nvarchar(260)**|시스템에서만 사용됩니다.|  
-|pvt_key_last_backup_date|**datetime**|인증서의 개인 키를 마지막으로 내보낸 날짜 및 시간입니다.|  
+|pvt_key_last_backup_date|**datetime**|날짜 및 시간을 마지막으로 내보낸 인증서의 개인 키입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.performingoperation.f1
@@ -13,12 +12,12 @@ ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 954fcc8806a290ffc171bde9db4af883c30ec9a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a4e1bfd6fffcb9360f92b6b270718edc03da8bb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120103"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801715"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>작업을 수행하는 중(SQL Server 가져오기 및 내보내기 마법사)
   **작업을 수행하는 중** 페이지를 사용하여 가져오기/내보내기 작업의 진행률 및 결과를 보고 필요한 경우 작업을 중단할 수 있습니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - hexadecimal data
@@ -14,12 +13,12 @@ ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6892dd643958aed567893dbe873617a0b4128112
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0f0db458cb94993d36f0d565a7fae64f18f7876e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198823"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805165"
 ---
 # <a name="hex-ssis-expression"></a>HEX(SSIS 식)
   정수의 16진수 값을 나타내는 문자열을 반환합니다.  
@@ -77,6 +76,6 @@ HEX(@LocaleID)
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [함수 &#40;SSIS 식&#41;](functions-ssis-expression.md)  
+ [함수&#40;SSIS 식&#41;](functions-ssis-expression.md)  
   
   
