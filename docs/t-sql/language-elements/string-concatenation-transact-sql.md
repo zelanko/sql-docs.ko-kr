@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e15f069c14131f6e75c1062e981b04aa6ef93a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a23f24cc0ad15ab217f328a1a2dd42737e7c6b57
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835924"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991796"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+(문자열 연결)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ expression + expression
   
  이진 문자열 사이에 문자가 있는 형태의 연결에서는 문자 데이터로의 명시적 변환이 필요합니다. 다음 예에서는 이진 연결에 `CONVERT` 또는 `CAST`가 필요한 경우와 `CONVERT` 또는 `CAST`를 사용하지 않아야 하는 보여 줍니다.  
   
-```  
+```sql
 DECLARE @mybin1 varbinary(5), @mybin2 varbinary(5)  
 SET @mybin1 = 0xFF  
 SET @mybin2 = 0xA5  
@@ -78,7 +78,7 @@ SELECT CAST(@mybin1 AS varchar(5)) + ' '
 ### <a name="a-using-string-concatenation"></a>1. 문자열 연결 사용  
  다음 예에서는 여러 문자 열에서 사람의 성, 쉼표, 공백 및 사람의 이름을 사용하여 `Name`이라는 열 머리글의 단일 열을 만듭니다. 결과 집합에서 성과 이름이 사전 오름차순으로 정렬됩니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ', ' + FirstName) AS Name  
@@ -89,7 +89,7 @@ ORDER BY LastName ASC, FirstName ASC;
 ### <a name="b-combining-numeric-and-date-data-types"></a>2. numeric 및 date 데이터 형식의 결합  
  다음 예에서는 `CONVERT` 함수를 사용하여 **numeric** 및 **date** 데이터 형식을 연결합니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT 'The order is due on ' + CONVERT(varchar(12), DueDate, 101)  
@@ -109,7 +109,7 @@ GO
 ### <a name="c-using-multiple-string-concatenation"></a>3. 여러 문자열의 연결  
  다음 예에서는 여러 개의 문자열을 하나의 긴 문자열로 연결하여 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]에 부사장들의 성과 첫 번째 이니셜을 표시합니다. 성 뒤에는 쉼표, 그리고 첫 번째 이니셜 뒤에는 마침표가 추가됩니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ',' + SPACE(1) + SUBSTRING(FirstName, 1, 1) + '.') AS Name, e.JobTitle  
@@ -133,10 +133,10 @@ GO
  (3 row(s) affected)
  ```  
  
-### <a name="d-using-large-strings-in-concatenation"></a>4. 연결에서 대형 문자열 사용
+### <a name="d-using-large-strings-in-concatenation"></a>D. 연결에서 대형 문자열 사용
 다음 예제에서는 여러 문자열을 연결하여 하나의 긴 문자열을 만든 다음, 최종 문자열의 길이를 계산합니다. 식 평가가 왼쪽부터 시작되어 @x + @z + @y => (@x + @z) + @y이 되므로 결과 집합의 최종 길이는 16000이 됩니다. 이 경우 결과(@x + @z)는 8000바이트에서 잘린 다음 @y가 결과 집합에 추가되어 최종 문자열 길이가 16000이 됩니다. @y는 대규모 값 형식 문자열이므로 잘림이 발생하지 않습니다.
 
-```
+```sql
 DECLARE @x varchar(8000) = replicate('x', 8000)
 DECLARE @y varchar(max) = replicate('y', 8000)
 DECLARE @z varchar(8000) = replicate('z',8000)
@@ -156,10 +156,10 @@ GO
  ```  
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-multiple-string-concatenation"></a>5. 여러 문자열의 연결  
+### <a name="e-using-multiple-string-concatenation"></a>E. 여러 문자열의 연결  
  다음 예에서는 샘플 데이터베이스 내에서 여러 개의 문자열을 하나의 긴 문자열로 연결하여 부사장들의 성과 첫 번째 이니셜을 표시합니다. 성 뒤에는 쉼표, 그리고 첫 번째 이니셜 뒤에는 마침표가 추가됩니다.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ', ' + SUBSTRING(FirstName, 1, 1) + '.') AS Name, Title  
@@ -180,7 +180,7 @@ Welcker, B.        Vice President of Sales
   
 ## <a name="see-also"></a>참고 항목  
  [+= &#40;문자열 연결 대입&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)   
- [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [데이터 형식 변환&#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

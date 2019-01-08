@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - TSQL
 helpviewer_keywords:
-- converting int ACSII code to character
+- converting int ASCII code to character
 - control characters
 - tab
 - ASCII conversions
@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4603333bce62f363a70c82936dfdbb28478f6a0d
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6900fc7741cba1ec444ab745dd8ea63e3ec3b29c
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701941"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979619"
 ---
 # <a name="char-transact-sql"></a>CHAR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -147,7 +147,7 @@ CHAR(49) AS [49], CHAR(50) AS [50];
 A    B    a    b    1    2  
 ```
   
-### <a name="d-using-char-to-insert-a-control-character"></a>4. CHAR를 사용하여 제어 문자 삽입  
+### <a name="d-using-char-to-insert-a-control-character"></a>D. CHAR를 사용하여 제어 문자 삽입  
 이 예에서는 쿼리가 결과를 텍스트로 반환할 때 `CHAR(13)`을 사용하여 데이터베이스에 대한 정보를 다른 줄에 반환합니다.
   
 ```sql
@@ -166,7 +166,7 @@ tempdb                    was created on  2014-01-10 17:24:24.023   tempdb      
 AdventureWorksPDW2012     was created on  2014-05-07 09:05:07.083   AdventureWorksPDW2012   is currently  ONLINE 
 ```
 
-### <a name="e-using-char-to-return-single-byte-characters"></a>5. CHAR를 사용하여 싱글바이트 문자 반환  
+### <a name="e-using-char-to-return-single-byte-characters"></a>E. CHAR를 사용하여 싱글바이트 문자 반환  
 이 예제에서는 ASCII에 대해 유효한 범위의 정수 및 16진수 값을 사용합니다. CHAR 함수는 싱글바이트 일본어 문자를 출력할 수 있습니다.
   
 ```sql
@@ -183,7 +183,7 @@ single_byte_representing_complete_character single_byte_representing_complete_ch
 ｼ                                           ｼ                                         
 ```
 
-### <a name="f-using-char-to-return-multibyte-characters"></a>6. CHAR를 사용하여 멀티바이트 문자 반환  
+### <a name="f-using-char-to-return-multibyte-characters"></a>F. CHAR를 사용하여 멀티바이트 문자 반환  
 이 예제에서는 ASCII에 대해 유효한 범위의 정수 및 16진수 값을 사용합니다. 그러나 매개 변수가 멀티바이트 문자의 첫 번째 바이트만 나타내기 때문에 CHAR 함수는 NULL을 반환합니다.
   
 ```sql

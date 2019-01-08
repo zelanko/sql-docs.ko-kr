@@ -23,12 +23,12 @@ ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6eeaf835671b624b61f7c542760a00b0acb45ff0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2c9e95ee5fd9b337c9efddf6a3708373ef061f32
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507582"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980501"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -114,12 +114,12 @@ CREATE SPATIAL INDEX index_name
   
 <named_bb_coordinate> ::= { XMIN = xmin | YMIN = ymin | XMAX = xmax | YMAX=ymax }  
   
-<tesselation_grid> ::=  
+<tessellation_grid> ::=  
 {   
     GRIDS = ( { <grid_level> [ ,...n ] | <grid_size>, <grid_size>, <grid_size>, <grid_size>  }   
         )  
 }  
-<tesseallation_cells_per_object> ::=  
+<tessellation_cells_per_object> ::=  
 {   
    CELLS_PER_OBJECT = n   
 }  
@@ -496,7 +496,7 @@ MAXDOP =*max_degree_of_parallelism*
   
  자세한 내용은 [병렬 인덱스 작업 구성](../../relational-databases/indexes/configure-parallel-index-operations.md)을 참조하세요.  
   
-> [!NOTE]  
+> [!NOTE]
 > 병렬 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
 DATA_COMPRESSION = {NONE | ROW | PAGE}  
@@ -590,7 +590,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col3
     GRIDS = ( LEVEL_4 = HIGH, LEVEL_3 = MEDIUM ) );  
 ```  
   
-### <a name="d-changing-an-option-that-is-specific-to-spatial-indexes"></a>4. 공간 인덱스와 관련된 옵션 변경  
+### <a name="d-changing-an-option-that-is-specific-to-spatial-indexes"></a>D. 공간 인덱스와 관련된 옵션 변경  
  다음 예에서는 새 `SIndx_SpatialTable_geography_col3` 밀도를 지정하고 DROP_EXISTING을 ON으로 설정하여 이전 예에서 만든 공간 인덱스 `LEVEL_3`을 다시 작성합니다.  
   
 ```sql  
@@ -601,7 +601,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
         DROP_EXISTING = ON );  
 ```  
   
-### <a name="e-creating-a-spatial-index-on-a-geography-column"></a>5. geography 열에 공간 인덱스 만들기  
+### <a name="e-creating-a-spatial-index-on-a-geography-column"></a>E. geography 열에 공간 인덱스 만들기  
  다음 예에서는 **geography** 형식 열 `geography_col`을 포함하는 `SpatialTable2` 테이블을 만듭니다. 그런 다음 `SIndx_SpatialTable_geography_col1`에 공간 인덱스 `geography_col`을 만듭니다. 이 예에서는 GEOGRAPHY_AUTO_GRID 공간 분할 구성표의 기본 매개 변수 값을 사용합니다.  
   
 ```sql  
@@ -613,7 +613,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col1
 > [!NOTE]  
 >  geography 표 인덱스에는 경계 상자를 지정할 수 없습니다.  
   
-### <a name="f-creating-a-spatial-index-on-a-geography-column"></a>6. geography 열에 공간 인덱스 만들기  
+### <a name="f-creating-a-spatial-index-on-a-geography-column"></a>F. geography 열에 공간 인덱스 만들기  
  다음 예에서는 `SIndx_SpatialTable_geography_col2` 테이블의 `geography_col`에 두 번째 공간 인덱스 `SpatialTable2`를 만듭니다. 이 예에서는 `GEOGRAPHY_GRID`를 공간 분할 구성표로 지정합니다. 또한 수준마다 다른 표 밀도를 지정하고 개체당 64셀을 지정합니다. 인덱스 패딩은 `ON`으로 설정합니다.  
   
 ```sql  
@@ -626,7 +626,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col2
     PAD_INDEX  = ON );  
 ```  
   
-### <a name="g-creating-a-spatial-index-on-a-geography-column"></a>7. geography 열에 공간 인덱스 만들기  
+### <a name="g-creating-a-spatial-index-on-a-geography-column"></a>G. geography 열에 공간 인덱스 만들기  
  다음 예에서는 `SIndx_SpatialTable_geography_col3` 테이블의 `geography_col`에 세 번째 공간 인덱스 `SpatialTable2`을 만듭니다. 이 예에서는 기본 공간 분할 구성표인 GEOGRAPHY_GRID와 기본 CELLS_PER_OBJECT 값(16)을 사용합니다.  
   
 ```sql  
