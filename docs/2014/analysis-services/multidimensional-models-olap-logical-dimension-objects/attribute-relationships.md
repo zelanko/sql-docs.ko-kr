@@ -26,12 +26,12 @@ ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45ade4f79f2433d6f5841605cbbb8112e6a9b63f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4401eea7e5c5b42c1706095e4c14aee348298bc5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081608"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512779"
 ---
 # <a name="attribute-relationships"></a>의 차원 디자이너에 있는 차원 구조 뷰의
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 차원 내의 특성은 항상 직접 또는 간접적으로 관련 키 특성입니다. 모든 차원 특성이 동일한 관계형 테이블에서 파생되는 별모양 스키마를 기반으로 차원을 정의할 경우 차원의 키 특성과 각각의 키가 아닌 특성 간에 특성 관계가 자동으로 정의됩니다. 그러나 차원 특성이 관련된 여러 테이블에서 파생되는 눈송이 스키마를 기반으로 차원을 정의하면 다음 사이에서 특성 관계가 자동으로 정의됩니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "48081608"
   
 -   Gender  
   
--   Email  
+-   메일  
   
 -   City  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48081608"
   
 -   Customer 특성에 대한 특성 관계로 City 특성 추가  
   
- 큐브의 데이터를 탐색 하려는 만들 수도 있습니다 데이터의 자연 계층을 나타내지 않는 사용자 정의 계층을 (호출 되는 *임시* 또는 *reporting* 계층). 예를 들어 `{Age, Gender}`를 기반으로 사용자 정의 계층을 만들 수 있습니다. 자연 계층을 사용할 경우 사용자가 볼 수 없는 원본 데이터의 자연 관계를 설명하는 구조를 집계 및 인덱싱할 수 있다는 장점이 있지만 사용자는 이 두 계층의 동작 방식 간 차이를 여전히 알 수 없습니다.  
+ 큐브의 데이터를 탐색 하려는 만들 수도 있습니다 데이터의 자연 계층을 나타내지 않는 사용자 정의 계층을 (호출 되는 *임시* 또는 *reporting* 계층). 예를 들어 `{Age, Gender}`를 기반으로 사용자 정의 계층을 만들 수 있습니다. 사용자가 표시 되지 않으면 두 계층의 동작 방식 간 차이 자연 계층 집계 및 인덱싱-사용자 로부터 숨겨진-구조체의 혜택이 있지만 해당 계정에 원본 데이터의 자연 관계입니다.  
   
  수준 차원의 `SourceAttribute` 속성은 수준을 설명하는 데 사용되는 특성을 결정합니다. 특성에 대한 `KeyColumns` 속성은 멤버를 공급하는 데이터 원본 뷰의 열을 지정합니다. 특성에 대한 `NameColumn` 속성은 멤버에 대해 다른 이름 열을 지정할 수 있습니다.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48081608"
 ## <a name="attribute-relationship-queries"></a>특성 관계 쿼리  
  MDX 쿼리에 MDX `PROPERTIES` 문의 `SELECT` 키워드를 사용하여 특성 관계에서 멤버 속성 형식으로 데이터를 검색할 수 있습니다. MDX를 사용 하 여 멤버 속성을 검색 하는 방법에 대 한 자세한 내용은 참조 하세요. [멤버 속성 사용 &#40;MDX&#41;](../multidimensional-models/mdx/mdx-member-properties.md)합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [특성 및 특성 계층](attributes-and-attribute-hierarchies.md)   
  [차원 특성 속성 참조](../multidimensional-models/dimension-attribute-properties-reference.md)   
  [사용자 계층](user-hierarchies.md)   

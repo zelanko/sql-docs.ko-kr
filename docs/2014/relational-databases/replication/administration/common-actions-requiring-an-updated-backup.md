@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - recovery [SQL Server replication], actions requiring a backup
@@ -15,12 +14,12 @@ ms.assetid: a5975bf4-183e-42e3-b7d1-ad02f89d2e1d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9dbf22b46121afe6301082a31d750f18f710e87f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 184bda56568cfcedbc07183bd2be7fdde7a789e4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061213"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773235"
 ---
 # <a name="common-actions-requiring-an-updated-backup"></a>업데이트된 백업이 필요한 일반 동작
   정기적인 로그 백업을 수행할 경우 모든 복제 관련 변경 내용은 로그 백업에 캡처됩니다. 로그 백업을 수행하지 않는 경우 복제 스키마 또는 토폴로지에 변경 작업을 수행한 후 게시, 배포, 구독, **msdb**및 **master** 데이터베이스 백업을 수행합니다.  
@@ -106,7 +105,7 @@ ms.locfileid: "48061213"
   
 -   게시자 및 배포자의 배포 게시자에서 게시자 활성화 또는 비활성화  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 데이터베이스 백업 및 복원](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [복제된 데이터베이스 백업 및 복원](back-up-and-restore-replicated-databases.md)  
   

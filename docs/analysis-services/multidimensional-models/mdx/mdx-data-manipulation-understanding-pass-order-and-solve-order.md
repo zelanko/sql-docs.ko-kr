@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b4b865293cb9c76fb46e8fe12befb2a000d21907
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: 6a578537f5221fef314a4a732f00f99d82311bbe
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025960"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545401"
 ---
-# <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>MDX 데이터 조작-이해 패스 순서 및 계산 순서
+# <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>MDX 데이터 조작-패스 이해 순서 및 계산 순서
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   MDX 스크립트 결과로 계산될 때 큐브는 사용되는 여러 계산 관련 기능에 따라 여러 계산 단계를 거칠 수 있습니다. 이러한 각 단계를 계산 패스라고 합니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "34025960"
 > [!NOTE]  
 >  Adventure Works 예제 다차원 데이터베이스에 대해 이러한 MDX 쿼리를 실행할 수 있습니다. codeplex 사이트에서 [AdventureWorks 다차원 모델 SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) 예제를 다운로드할 수 있습니다.  
   
-### <a name="query-1differences-in-income-and-expenses"></a>쿼리 1 - 수입과 비용 차이  
+### <a name="query-1-differences-in-income-and-expenses"></a>쿼리 1-수입과 비용 차이  
  첫 번째 MDX 쿼리에서는 다음 예와 비슷한 간단한 MDX 쿼리를 구성하여 각 해의 판매액 및 비용 차이를 계산합니다.  
   
 ```  
@@ -86,7 +86,7 @@ FROM [Adventure Works]
 |**CY 2008**|$9,770,899.74|$5,721,205.24|  
 |**Year Difference**|($20,160.56)|$2,878.06|  
   
-### <a name="query-2percentage-of-income-after-expenses"></a>쿼리 2 - 비용에 따른 수입 백분율  
+### <a name="query-2-percentage-of-income-after-expenses"></a>쿼리 2-비용에 따른 수입 백분율  
  두 번째 쿼리에서는 다음 MDX 쿼리를 사용하여 각 해의 비용에 따른 수입 백분율을 계산합니다.  
   
 ```  
@@ -114,7 +114,7 @@ FROM [Adventure Works]
   
  결과 집합에서 첫 번째 쿼리와 두 번째 쿼리의 차이는 계산 멤버의 배치 차이로 인해 비롯됩니다. 첫 번째 쿼리에서 계산 멤버는 두 번째 쿼리에 표시된 COLUMNS 축이 아니라 ROWS 축의 일부입니다. 이러한 배치 차이는 두 계산 멤버를 단일 MDX 쿼리로 조합하는 다음 쿼리에서 중요해집니다.  
   
-### <a name="query-3combined-year-difference-and-net-income-calculations"></a>쿼리 3 - 조합된 연간 차이 및 순수입 계산  
+### <a name="query-3-combined-year-difference-and-net-income-calculations"></a>쿼리 3-결합 된 연간 차이 및 순수입 계산  
  이 마지막 쿼리에서는 이전 예에서의 두 쿼리를 단일 MDX 쿼리로 조합하며 열과 행 모두에 대한 계산 때문에 계산 순서가 중요해집니다. 올바른 순서로 계산되도록 보장하기 위해 **SOLVE_ORDER** 키워드를 사용하여 계산이 발생하는 순서를 정의합니다.  
   
  **SOLVE_ORDER** 키워드는 MDX 쿼리 또는 **CREATE MEMBER** 명령의 계산 멤버에 대한 계산 순서를 지정합니다. **SOLVE_ORDER** 키워드에 사용된 정수 값은 상대적이며 0부터 시작할 필요가 없으며 연속적일 필요도 없습니다. 이 값은 MDX에서 단순히 더 큰 값의 멤버 계산으로부터 파생된 값에 따라 멤버를 계산하도록 지정합니다. 계산 멤버가 **SOLVE_ORDER** 키워드 없이 정의된 경우 해당 계산 멤버의 기본값은 0입니다.  
@@ -141,7 +141,7 @@ ON ROWS
 FROM [Adventure Works]  
 ```  
   
- 이 조합된 MDX 쿼리 예에서 `Profit Margin` 은 계산 순서가 가장 높기 때문에 두 식이 교차할 때 우선 순위를 갖습니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]는 `Profit Margin` 수식을 사용하여 문제의 셀을 계산합니다. 이 중첩된 계산의 결과는 다음 표에 표시된 것과 같습니다.  
+ 이 조합된 MDX 쿼리 예에서 `Profit Margin` 은 계산 순서가 가장 높기 때문에 두 식이 교차할 때 우선 순위를 갖습니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 `Profit Margin` 수식을 사용하여 문제의 셀을 계산합니다. 이 중첩된 계산의 결과는 다음 표에 표시된 것과 같습니다.  
   
 ||Internet Sales Amount|Internet Total Product Cost|이익률|  
 |-|---------------------------|---------------------------------|-------------------|  
@@ -155,7 +155,7 @@ FROM [Adventure Works]
 ((9,770,899.74 - 9,791,060.30) - (5,721,205.24 - 5,718,327.17)) / (9,770,899.74 - 9,791,060.30) = 1.14275744   
 ```  
   
- 또는  
+ 로 구분하거나 여러  
   
 ```  
 (23,038.63) / (20,160.56) = 114.28%  
@@ -204,7 +204,7 @@ FROM [Adventure Works]
 ## <a name="additional-considerations"></a>기타 고려 사항  
  계산 멤버, 사용자 지정 롤업 수식 또는 계산 셀이 포함된 차원 수가 높은 큐브에서는 특히 계산 순서를 다루기가 매우 복잡할 수 있습니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서 MDX 쿼리를 계산할 때 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 MDX 쿼리에 지정된 큐브의 차원을 비롯하여 지정된 패스 내에 관련된 모든 사항에 대한 계산 순서 값을 고려합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [CalculationCurrentPass & #40; Mdx& #41;](../../../mdx/calculationcurrentpass-mdx.md)   
  [CalculationPassValue & #40; Mdx& #41;](../../../mdx/calculationpassvalue-mdx.md)   
  [MEMBER 문 & #40; 만들기 Mdx& #41;](../../../mdx/mdx-data-definition-create-member.md)   

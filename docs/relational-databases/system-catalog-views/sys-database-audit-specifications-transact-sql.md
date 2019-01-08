@@ -20,12 +20,12 @@ ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8b91e302c48917454ba29210a2557caf558940a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf5f584a556db9e32fcaf1f53b907adcb8d08e25
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604912"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522978"
 ---
 # <a name="sysdatabaseauditspecifications-transact-sql"></a>sys.database_audit_specifications(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47604912"
 |database_specification_id|**int**|데이터베이스 사양의 ID입니다.|  
 |create_date|**datetime**|감사 사양을 만든 날짜입니다.|  
 |modified_date|**datetime**|감사 사양을 마지막으로 수정한 날짜입니다.|  
-|is_state_enabled|**bit**|감사 사양 상태:<br /><br /> 0 - 사용 안 함<br /><br /> 1 – 사용|  
+|is_state_enabled|**bit**|감사 사양 상태:<br /><br /> 0-사용 안 함<br /><br /> 1-사용 하도록 설정|  
 |audit_GUID|**uniqueidentifer**|이 사양을 포함하는 감사의 GUID입니다. 데이터베이스 연결/시작 시 멤버 데이터베이스 감사 사양을 열거하는 동안 사용됩니다.|  
   
 ## <a name="remarks"></a>Remarks  
@@ -49,7 +49,7 @@ ms.locfileid: "47604912"
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 을 참조하세요. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

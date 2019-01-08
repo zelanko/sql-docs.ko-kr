@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.options.f1
@@ -13,12 +12,12 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54c7a5361a411ff68456504962bbf62298f4ba9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4420aaf7b11eccecf0b04bb67a55386215f1fc9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062633"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774425"
 ---
 # <a name="database-properties-options-page"></a>데이터베이스 속성(옵션 탭)
   이 페이지를 사용하여 선택한 데이터베이스의 옵션을 확인하거나 수정할 수 있습니다. 이 페이지에서 사용할 수 있는 옵션에 대 한 자세한 내용은 참조 하세요. [ALTER DATABASE SET 옵션 &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)합니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "48062633"
  목록에서 선택하여 데이터베이스의 데이터 정렬을 지정합니다. 자세한 내용은 [Set or Change the Database Collation](../collations/set-or-change-the-database-collation.md)을 참조하세요.  
   
  **복구 모델**  
- 데이터베이스 복구 모델을 **전체**, **대량 로그**또는 **단순**중에서 하나 지정합니다. 복구 모델에 대한 자세한 내용은 [복구 모델&#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)을 참조하세요.  
+ 데이터베이스 복구 모델을 **전체**, **Bulk-logged**, 또는 **단순**합니다. 복구 모델에 대한 자세한 내용은 [복구 모델&#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)을 참조하세요.  
   
  **호환성 수준**  
  데이터베이스에서 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 최신 버전을 지정합니다. 가능한 값은  **SQL Server 2014(120)**,  **SQL Server 2012(110)** 및 **SQL Server 2008(100)** 입니다. SQL Server 2005 데이터베이스를 SQL Server 2014로 업그레이드하는 경우 데이터베이스의 호환성 수준이 90에서 100으로 변경됩니다.  SQL Server 2014에서는 호환성 수준 90이 지원되지 않습니다. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)을 참조하세요.  
@@ -82,7 +81,7 @@ ms.locfileid: "48062633"
   
  예를 들어, 기본 설정이 2049이면 '49/3/14'로 입력된 날짜는 2049년 3월 14일로 해석되고 '50/3/14'로 입력된 날짜는 1950년 3월 14일로 해석되는 것을 나타냅니다. 자세한 내용은 [두 자리 연도 구분 구성 서버 구성 옵션](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)을 참조하세요.  
   
-## <a name="cursor"></a>커서  
+## <a name="cursor"></a>Cursor  
  **커밋 시 커서 닫기 설정**  
  커서를 여는 트랜잭션이 커밋된 후 커서가 닫히는지 여부를 지정합니다. 가능한 값은 `True` 및 `False`입니다. `True`로 설정된 경우 트랜잭션이 커밋되거나 롤백될 때 열려 있던 모든 커서가 모두 닫힙니다. `False`로 설정된 경우 트랜잭션이 커밋될 때 이러한 커서가 열린 상태로 남게 됩니다. `False`로 설정된 경우 트랜잭션을 롤백하면 INSENSITIVE 또는 STATIC으로 정의된 커서를 제외하고 모든 커서가 닫힙니다. 자세한 내용은 [SET CURSOR_CLOSE_ON_COMMIT&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-cursor-close-on-commit-transact-sql)을 참조하세요.  
   
@@ -94,11 +93,11 @@ ms.locfileid: "48062633"
  선택한 데이터베이스에 연결된 FILESTREAM 데이터에 대한 디렉터리 이름을 지정합니다.  
   
  **FILESTREAM 비트랜잭션 액세스**  
- 파일 시스템을 통해 FileTable에 저장된 FILESTREAM 데이터에 비트랜잭션 방식으로 액세스하기 위한 옵션을 **OFF**, **READ_ONLY**또는 **FULL**중 하나로 지정합니다. 서버에 FILESTREAM이 사용하도록 설정되어 있지 않은 경우에는 이 값이 OFF로 설정되고 사용할 수 없는 상태로 표시됩니다. 자세한 내용은 [FileTables&#40;SQL Server&#41;](../blob/filetables-sql-server.md)를 참조하세요.  
+ 파일 시스템을 통해 FileTable에 저장된 FILESTREAM 데이터에 비트랜잭션 방식으로 액세스하기 위한 옵션을 **해제**하십시오 **READ_ONLY**, 또는 **전체**합니다. 서버에 FILESTREAM이 사용하도록 설정되어 있지 않은 경우에는 이 값이 OFF로 설정되고 사용할 수 없는 상태로 표시됩니다. 자세한 내용은 [FileTables&#40;SQL Server&#41;](../blob/filetables-sql-server.md)를 참조하세요.  
   
 ## <a name="miscellaneous"></a>기타  
  **ANSI Null 기본값**  
- 모든 사용자 정의 데이터 형식 또는 열을 명시적으로 정의 되어 있지 않은 null 값 허용 `NOT NULL` 중는 `CREATE TABLE` 또는 `ALTER TABLE` 문 (기본 상태)을 실행 합니다. 자세한 내용은 [SET ANSI_NULL_DFLT_ON&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-on-transact-sql) 및 [SET ANSI_NULL_DFLT_OFF&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-off-transact-sql)를 참조하세요.  
+ `NOT NULL` 또는 `CREATE TABLE`(기본 상태)을 실행하는 동안 `ALTER TABLE`로 명시적으로 정의되지 않은 모든 사용자 정의 데이터 형식 또는 열에서 Null 값을 허용합니다. 자세한 내용은 [SET ANSI_NULL_DFLT_ON&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-on-transact-sql) 및 [SET ANSI_NULL_DFLT_OFF&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-off-transact-sql)를 참조하세요.  
   
  **ANSI Null 설정**  
  Null 값과 함께 사용할 때 같음(`=`)과 같지 않음(`<>`) 비교 연산자의 동작을 지정합니다. 가능한 값은 `True` (설정) 및 `False` (해제) 합니다. `True`로 설정된 경우 Null 값에 대한 모든 비교가 UNKNOWN으로 평가됩니다. 때 `False`, 유니코드가 아닌 값에 null 값을 비교한 결과 `True` 두 값이 null 인 경우. 자세한 내용은 [SET ANSI_NULLS&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)를 참조하세요.  
@@ -146,7 +145,7 @@ ms.locfileid: "48062633"
   
  신뢰는 데이터베이스가 서버에 연결될 때마다 `False`로 설정됩니다.  
   
- 권장 되는 방법은 가장 컨텍스트로 데이터베이스 외부 리소스에 액세스할 때는 인증서와 서명을 사용 하 여 `Trustworthy` 옵션입니다.  
+ 가장 컨텍스트로 데이터베이스 외부의 리소스에 액세스할 때는 `Trustworthy` 옵션과 함께 인증서와 서명을 사용하는 것이 좋습니다.  
   
  이 속성을 설정하려면 ALTER DATABASE 문을 사용합니다.  
   
@@ -185,7 +184,7 @@ ms.locfileid: "48062633"
  **암호화 사용**  
  때 `True`, 데이터베이스 암호화에 대 한이 데이터베이스를 사용할 수 있습니다. 데이터베이스 암호화 키는 암호화에 필요합니다. 자세한 내용은 [TDE&#40;투명한 데이터 암호화&#41;](../security/encryption/transparent-data-encryption.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   

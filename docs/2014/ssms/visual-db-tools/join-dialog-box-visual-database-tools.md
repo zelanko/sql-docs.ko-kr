@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdt.ppg.joinline
@@ -13,15 +13,15 @@ ms.assetid: 0d9516bb-4ad3-4fcf-bb77-93474dea698f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8314b283bbb28752e98e5c7e34e2f1625cf8827b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e266d398debd65a8a03f73d7f8726899c97b7e13
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087063"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781635"
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>조인 대화 상자(Visual Database Tools)
-  이 대화 상자를 사용하면 테이블을 조인하기 위한 옵션을 지정할 수 있습니다. 이 대화 상자에 액세스하려면 **디자인** 창에서 조인 선을 선택합니다. 그런 다음 **속성** 창에서 **조인 조건 및 형식**을 클릭하고 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다.  
+  이 대화 상자를 사용하면 테이블을 조인하기 위한 옵션을 지정할 수 있습니다. 이 대화 상자에 액세스하려면 **디자인** 창에서 조인 선을 선택합니다. 그런 다음, **속성** 창에서 **조인 조건 및 형식**을 클릭하고 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다.  
   
  기본적으로 관련 테이블은 조인 열의 일치하는 정보를 포함하는 행에 기반하여 결과 집합을 만드는 내부 조인을 사용하여 조인됩니다. **조인** 대화 상자에서 옵션을 설정하여 다른 연산자를 기반으로 하는 조인을 지정하거나 외부 조인을 지정할 수 있습니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48087063"
 > [!NOTE]  
 >  "왼쪽"과 "오른쪽"이라는 말이 반드시 다이어그램 창의 테이블 위치를 의미하지는 않습니다. "왼쪽"은 SQL 문에서 JOIN 키워드의 왼쪽에 이름이 나타나는 테이블을 말하고 "오른쪽"은 JOIN 키워드의 오른쪽에 이름이 나타나는 테이블을 말합니다. **다이어그램** 창에서 테이블의 위치를 바꾸어도 여기에서 언급하는 왼쪽과 오른쪽이 바뀌는 것은 아닙니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [조인을 사용한 쿼리 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

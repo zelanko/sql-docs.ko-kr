@@ -4,33 +4,32 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e87aa1b7fd49681594220f81e447abbadc6716d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 460d66b7e2d4f314db65213819fca1800af2da4f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204243"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798205"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>SQL Server 에이전트에서 Windows PowerShell 작업 단계 실행
   SQL Server 에이전트를 사용하여 일정에 따라 SQL Server PowerShell 스크립트를 실행할 수 있습니다.  
   
-1.  **시작하기 전에:**  [제한 사항](#LimitationsRestrictions)  
+1.  **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions)  
   
-2.  **에서 SQL Server 에이전트에서 PowerShell을 실행하려면**  [PowerShell 작업 단계](#PShellJob), [명령 프롬프트 작업 단계](#CmdExecJob)  
+2.  **사용 하 여 SQL Server 에이전트에서 PowerShell을 실행 합니다.**  [PowerShell 작업 단계](#PShellJob), [명령 프롬프트 작업 단계](#CmdExecJob)  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 작업 단계 유형은 여러 가지가 있습니다. 각 유형은 복제 에이전트나 명령 프롬프트 환경과 같은 특정 환경을 구현하는 하위 시스템과 관련되어 있습니다. Windows PowerShell 스크립트를 코딩한 다음 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트를 사용하여 예약된 시간에 실행되거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이벤트에 대한 응답으로 실행되는 스크립트를 작업에 포함할 수 있습니다. 명령 프롬프트 작업 단계 또는 PowerShell 작업 단계를 사용하여 Windows PowerShell 스크립트를 실행할 수 있습니다.  
   
 1.  PowerShell 작업 단계를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 하위 시스템에서 `sqlps` 유틸리티를 실행하도록 합니다. 이 유틸리티는 PowerShell 2.0을 시작하고 `sqlps` 모듈을 가져옵니다.  
   
-2.  PowerShell.exe를 실행 하려면 명령 프롬프트 작업 단계를 사용 하 고 가져오는 스크립트를 지정 된 `sqlps` 모듈입니다.  
+2.  명령 프롬프트 작업 단계를 사용하여 PowerShell.exe를 실행하고, `sqlps` 모듈을 가져오는 스크립트를 지정합니다.  
   
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
   

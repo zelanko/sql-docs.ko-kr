@@ -16,12 +16,12 @@ ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 606b5273619e0f88503abeadaf6d463f6f16d3c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ba10d54fb2c18e29a6cc41d74e8d79bc6355e63e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188403"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539746"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>필드 및 행 종결자 지정(SQL Server)
   문자 데이터 필드의 경우 데이터 파일의 각 필드 끝은 *필드 종결자* 를, 그리고 각 행의 끝은 필요에 따라 *행 종결자*를 사용해 표시할 수 있습니다. 종결 문자는 프로그램이 한 개의 필드 또는 행이 끝나고 다른 필드 또는 행이 시작되는 부분을 읽도록 나타내는 한 가지 방법입니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "48188403"
 |백슬래시<sup>1</sup>|\\\|  
 |Null 종결자 (표시 되지 않는 종결자)<sup>2</sup>|\0|  
 |인쇄 가능한 모든 문자(Null, 탭, 줄 바꿈, 캐리지 리턴을 제외한 모든 제어 문자는 인쇄되지 않음)|(*, A, t, l 등)|  
-|앞에서 나열된 종결 문자 중 일부 또는 전체를 포함한 최고 10개까지의 출력 가능한 문자열|(**\t\*\*, end, !!!!!!!!!!, \t—\n 등)|  
+|앞에서 나열된 종결 문자 중 일부 또는 전체를 포함한 최고 10개까지의 출력 가능한 문자열|(**\t\*\*, end, !!!!!!!!!!, \t-\n 등)|  
   
  <sup>1</sup> t, n, r, 0 및 '\0' 문자만 백슬래시 이스케이프 문자와 제어 문자를 사용 합니다.  
   
@@ -76,13 +76,13 @@ ms.locfileid: "48188403"
   
          `Enter field terminator [none]:`  
   
-         일반적으로 기본값을 사용하면 적합합니다. 그러나 `char` 또는 `nchar` 데이터 필드의 경우 다음 하위 섹션인 "종결자 사용 지침입니다."를 참조 하세요. 컨텍스트에서 이 메시지가 표시되는 예제를 보려면 [bcp를 사용하여 데이터 형식을 호환 가능하도록 지정&#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)을 참조하세요.  
+         일반적으로 기본값을 사용하면 적합합니다. 하지만 `char` 또는 `nchar` 데이터 필드의 경우 다음 하위 섹션인 "종결자 사용 지침"을 참조하십시오. 컨텍스트에서 이 메시지가 표시되는 예제를 보려면 [bcp를 사용하여 데이터 형식을 호환 가능하도록 지정&#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)을 참조하세요.  
   
         > [!NOTE]  
         >  **bcp** 명령의 모든 필드를 대화형으로 지정하면 명령에서 비 XML 서식 파일의 각 필드에 대한 응답을 저장하라는 메시지를 표시합니다. 비 XML 서식 파일에 대한 자세한 내용은 [비 XML 서식 파일&#40;SQL Server&#41;](xml-format-files-sql-server.md)을 참조하세요.  
   
 ### <a name="guidelines-for-using-terminators"></a>종결자 사용 지침  
- 경우에 따라 종결자는 적합 한 `char` 또는 `nchar` 데이터 필드입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 상황에 따라 종결자는 `char` 또는 `nchar` 데이터 필드에 유용합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 -   접두사 길이 정보를 인식하지 못하는 프로그램으로 가져올 데이터 파일에서 Null 값을 포함하는 데이터 열  
   
@@ -132,7 +132,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      자세한 내용은 [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)를 참조하세요.  
   
--   INSERT ... 로 기본 값 사용  
+-   INSERT ... SELECT * FROM OPENROWSET(BULK...)  
   
      OPENROWSET 대량 행 집합 공급자의 경우 종결자는 서식 파일에서만 지정할 수 있습니다(큰 개체 데이터 형식 이외의 형식에 필요). 문자 데이터 파일이 기본 종결자 이외의 종결자를 사용하면 이를 서식 파일에 정의해야 합니다. 자세한 내용은 [서식 파일 만들기&#40;SQL Server&#41;](create-a-format-file-sql-server.md) 및 [서식 파일을 사용하여 데이터 대량 가져오기&#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)를 참조하세요.  
   
@@ -187,7 +187,7 @@ BULK INSERT myDepartment FROM 'C:\myDepartment-c-t.txt'
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   

@@ -17,12 +17,12 @@ ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e77ba9379ebf482d8ed2f587ea175706458bd275
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a24e5e554af43cd95a65c6d392106217af9ab2cd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193413"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532179"
 ---
 # <a name="save-a-copy-of-a-package"></a>패키지의 복사본 저장
   이 절차에서는 파일 시스템, 패키지 저장소 또는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 **msdb** 데이터베이스에 패키지 복사본을 저장하는 방법을 설명합니다. 패키지 복사본의 저장 위치를 지정할 때 패키지 이름을 업데이트할 수도 있습니다.  
@@ -64,8 +64,8 @@ ms.locfileid: "48193413"
   
 9. **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [Integration Services &#40;SSIS&#41; 패키지](../../2014/integration-services/integration-services-ssis-packages.md)   
+## <a name="see-also"></a>관련 항목:  
+ [Integration Services&#40;SSIS&#41; 패키지](../../2014/integration-services/integration-services-ssis-packages.md)   
  [서비스 서비스를 통합 구성 &#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)  
   
   

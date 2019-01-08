@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - annotated XSD schemas, filtering values
@@ -20,12 +18,12 @@ ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 37e724d36094ceac2cb05b059a83de2a415e9476
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df5907c3d61de7e3d1ce552c65fb5188f1ab33f9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224167"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804465"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field와 sql:limit-value를 사용하여 값 필터링(SQLXML 4.0)
   데이터베이스 쿼리를 통해 반환되는 행을 어떤 제한 값을 기준으로 제한할 수 있습니다. `sql:limit-field` 및 `sql:limit-value` 주석은 제한 값이 포함된 데이터베이스 열을 식별하고 반환되는 데이터를 필터링하는 데 사용할 특정 제한 값을 지정하는 데 사용됩니다.  
@@ -121,7 +119,7 @@ ms.locfileid: "48224167"
     INSERT INTO Addresses values  
                (1, 'Obere Str. 57 Berlin', 'billing')  
     INSERT INTO Addresses values  
-               (1, 'Avda. de la Constitución 2222 México D.F.', 'shipping')  
+               (1, 'Avda. de la Constituci??n 2222 M??xico D.F.', 'shipping')  
     INSERT INTO Addresses values  
                (2, '120 Hanover Sq., London', 'billing')  
     INSERT INTO Addresses values  
@@ -156,7 +154,7 @@ ms.locfileid: "48224167"
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">   
   <Customer CustomerID="1" CompanyName="Company A">   
      <BillTo>Obere Str. 57 Berlin</BillTo>   
-     <ShipTo>Avda. de la Constitución 2222 México D.F.</ShipTo>   
+     <ShipTo>Avda. de la Constituci??n 2222 M??xico D.F.</ShipTo>   
   </Customer>   
   <Customer CustomerID="2" CompanyName="Company B">   
      <BillTo>120 Hanover Sq., London</BillTo>   

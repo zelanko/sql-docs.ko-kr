@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG014157 error
@@ -13,12 +12,12 @@ ms.assetid: 1a0890cf-d977-43e0-a2ba-9c5ff1a8f856
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c3c2c479d23c85ccf66b7fbbf9575c5576b0ea10
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26befe89debb6fd890abeee9ea258e53a028b50c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202543"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52776785"
 ---
 # <a name="mssqleng014157"></a>MSSQL_ENG014157
     

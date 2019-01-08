@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - articles [SQL Server replication], dropping
@@ -17,17 +16,17 @@ ms.assetid: d5a3e536-62d2-4473-a178-877ba52f7d7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b41b9c0d37437e3faeec733ff3ce390dc4ae15a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3301be2f0af9960a48602a1b540fa2cac2f39914
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056643"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761375"
 ---
 # <a name="add-articles-to-and-drop-articles-from-a-publication-sql-server-management-studio"></a>게시에 대한 아티클 추가 및 삭제(SQL Server Management Studio)
   새 게시 마법사에서 게시를 만들 때 처음으로 게시에 아티클을 추가합니다. 이 마법사를 사용하는 방법에 대한 자세한 내용은 [게시 만들기](create-a-publication.md)를 참조하세요.  
   
- 게시를 만든 후 **게시 속성 - \<Publication>** 대화 상자의 **아티클** 페이지에서 아티클을 추가 및 삭제합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요. 아티클을 추가 및 삭제할 때 고려할 사항은 [기존 게시에 대한 아티클 추가 및 삭제](add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
+ 게시를 만든 후 **게시 속성 - \<Publication>** 대화 상자의 **아티클** 페이지에서 아티클을 추가 및 삭제합니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Publication Properties](view-and-modify-publication-properties.md)을 참조하세요. 아티클을 추가 및 삭제할 때 고려할 사항은 [기존 게시에 대한 아티클 추가 및 삭제](add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
   
 ### <a name="to-add-an-article-after-a-publication-is-created"></a>게시를 만든 후 아티클을 추가하려면  
   

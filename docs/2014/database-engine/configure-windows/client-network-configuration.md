@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - client configuration [SQL Server], connections
@@ -19,12 +18,12 @@ ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 15e016802fd57a1c9363ceba0dfa22b33ac30126
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 862c13e61513b46b44ce55df9e66170bbb1ac219
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131163"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641054"
 ---
 # <a name="client-network-configuration"></a>클라이언트 네트워크 구성
   클라이언트 소프트웨어를 사용하면 클라이언트 컴퓨터를 네트워크상에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 있습니다. "클라이언트"는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]과 같은 서버에서 제공하는 서비스를 사용하는 프런트 엔드 애플리케이션입니다. 이 애플리케이션을 호스팅하는 컴퓨터를 *클라이언트 컴퓨터*라고 합니다.  

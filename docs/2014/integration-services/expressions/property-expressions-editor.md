@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.propertyexpressionseditor.f1
@@ -15,12 +14,12 @@ ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ed4ac80517bcee8b672a42f8019223c692b83e17
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b1735499424ffa426babd81d4914ff35dfa69717
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052855"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784816"
 ---
 # <a name="property-expressions-editor"></a>속성 식 편집기
   **속성 식 편집기** 대화 상자를 사용하여 속성 값을 업데이트하는 속성 식을 생성, 편집 또는 삭제할 수 있습니다.  
@@ -41,9 +40,9 @@ ms.locfileid: "48052855"
  **Delete**  
  속성을 선택한 다음 **삭제**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [식 페이지](expressions-page.md)   
- [Integration Services &#40;SSIS&#41; 변수](../integration-services-ssis-variables.md)   
+ [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md)   
  [시스템 변수](../system-variables.md)   
  [Integration Services&#40;SSIS&#41; 식](integration-services-ssis-expressions.md)   
  [패키지에서 속성 식 사용](use-property-expressions-in-packages.md)  

@@ -18,12 +18,12 @@ ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 43cf13284789fa599c3f2f7b8841d7fe54e3b2e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7b07ccf7641f0529d03b2b37650e2ac8afbc9d2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732129"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538849"
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ sp_cursorfetch cursor
 |-----------|----------|-----------------|  
 |0x0001|FIRST|첫 번째 버퍼를 인출 *nrows* 행. 하는 경우 *nrows* 0 커서는 결과 집합 앞에 배치 하 고 아무 행도 반환 합니다.|  
 |0x0002|NEXT|다음 버퍼를 인출 *nrows* 행.|  
-|0x0004|PREV|이전 버퍼를 인출 *nrows* 행.<br /><br /> 참고: FORWARD_ONLY 커서에 대해 PREV를 사용 하 여 FORWARD_ONLY는 한 방향 스크롤만 지원 하므로 오류 메시지를 반환 합니다.|  
-|0x0008|LAST|마지막 버퍼를 인출 *nrows* 행. 하는 경우 *nrows* 0 이면 커서가 결과 집합 후 아무 행도 반환 합니다.<br /><br /> 참고: FORWARD_ONLY는 한 방향 스크롤만 지원 하므로 오류 메시지가 반환 FORWARD_ONLY 커서에 대해 LAST를 사용 합니다.|  
-|0x10|ABSOLUTE|버퍼를 인출 *nrows* 사용 하 여 시작 하는 행의 *rownum* 행입니다.<br /><br /> 참고: FORWARD_ONLY는 한 방향 스크롤만 지원 하므로 오류 메시지가 반환 동적 커서 또는 FORWARD_ONLY 커서에 대해 ABSOLUTE를 사용 합니다.|  
-|0x20|RELATIVE|버퍼를 인출 합니다 *nrows* 으로 지정 된 행부터 행을 *rownum* 현재 블록의 첫 번째 행의 행 값입니다. 이 예에서 *rownum* 음수가 될 수 있습니다.<br /><br /> 참고: FORWARD_ONLY는 한 방향 스크롤만 지원 하므로 오류 메시지가 반환 FORWARD_ONLY 커서에 대해 RELATIVE를 사용 합니다.|  
+|0x0004|PREV|이전 버퍼를 인출 *nrows* 행.<br /><br /> 참고: FORWARD_ONLY는 한 방향 스크롤만 지원하므로 FORWARD_ONLY 커서에 대해 PREV를 사용하면 오류 메시지가 반환됩니다.|  
+|0x0008|LAST|마지막 버퍼를 인출 *nrows* 행. 하는 경우 *nrows* 0 이면 커서가 결과 집합 후 아무 행도 반환 합니다.<br /><br /> 참고: FORWARD_ONLY는 한 방향 스크롤만 지원하므로 FORWARD_ONLY 커서에 대해 LAST를 사용하면 오류 메시지가 반환됩니다.|  
+|0x10|ABSOLUTE|버퍼를 인출 *nrows* 사용 하 여 시작 하는 행의 *rownum* 행입니다.<br /><br /> 참고: FORWARD_ONLY는 한 방향 스크롤만 지원하므로 DYNAMIC 커서 또는 FORWARD_ONLY 커서에 대해 ABSOLUTE를 사용하면 오류 메시지가 반환됩니다.|  
+|0x20|RELATIVE|버퍼를 인출 합니다 *nrows* 으로 지정 된 행부터 행을 *rownum* 현재 블록의 첫 번째 행의 행 값입니다. 이 예에서 *rownum* 음수가 될 수 있습니다.<br /><br /> 참고: FORWARD_ONLY는 한 방향 스크롤만 지원하므로 FORWARD_ONLY 커서에 대해 RELATIVE를 사용하면 오류 메시지가 반환됩니다.|  
 |0x80|REFRESH|기본 테이블의 버퍼를 다시 채웁니다.|  
 |0x100|INFO|커서에 대한 정보를 검색합니다. 이 정보를 사용 하 여 반환 되는 *rownum* 하 고 *nrows* 매개 변수. 따라서 정보 지정 되 면 *rownum* 하 고 *nrows* 출력 매개 변수가 됩니다.|  
 |0x200|PREV_NOADJUST|PREV와 같이 사용되지만 결과 집합 맨 위가 중간에 나오면 결과가 달라질 수 있습니다.|  
@@ -80,7 +80,7 @@ sp_cursorfetch cursor
  비트 값 INFO를 지정할 때 반환될 수 있는 값이 다음 표에 나와 있습니다.  
   
 > [!NOTE]  
->  : 반환 되는 경우 버퍼의 내용이 그대로 유지 됩니다.  
+>  :   행이 반환되지 않는 경우 버퍼의 내용이 그대로 유지됩니다.  
   
 |*\<rownum >*|설정 값|  
 |------------------|------------|  
@@ -89,12 +89,12 @@ sp_cursorfetch cursor
 |결과 집합 뒤에 배치되는 경우|-1|  
 |KEYSET 및 STATIC 커서의 경우|결과 집합에서 현재 위치에서 절대 행 수|  
 |DYNAMIC 커서의 경우|1|  
-|ABSOLUTE의 경우|-1은 집합의 마지막 행을 반환합니다.<br /><br /> -2는 집합의 마지막에서 두 번째 행 등을 반환합니다.<br /><br /> 참고: 둘 이상의 행이 경우 가져올 요청 된 경우 결과 집합의 마지막 두 행 반환 됩니다.|  
+|ABSOLUTE의 경우|-1은 집합의 마지막 행을 반환합니다.<br /><br /> -2는 집합의 마지막에서 두 번째 행 등을 반환합니다.<br /><br /> 참고: 이 경우 여러 행을 인출하도록 요청하면 결과 집합의 마지막 두 행이 반환됩니다.|  
   
 |*\<nrows >*|설정 값|  
 |-----------------|------------|  
 |열리지 않는 경우|0|  
-|KEYSET 및 STATIC 커서의 경우|일반적으로는 현재 키 집합 크기입니다.<br /><br /> **– m** 커서가 비동기 만들기 상태에 있는 경우 *m* 이 지점에 있는 행이 있습니다.|  
+|KEYSET 및 STATIC 커서의 경우|일반적으로는 현재 키 집합 크기입니다.<br /><br /> **-m** 커서가 비동기 만들기 상태에 있는 경우 *m* 이 지점에 있는 행이 있습니다.|  
 |DYNAMIC 커서의 경우|-1|  
   
 ## <a name="remarks"></a>Remarks  
@@ -141,7 +141,7 @@ sp_cursorfetch cursor
 |0x0002|논리적으로는 인출이 결과 앞에 와야 하지만 음의 방향 인출로 인해 커서 위치가 결과 집합 시작 부분으로 설정되었습니다.|  
 |0x10|빠른 정방향 커서가 자동으로 닫혔습니다.|  
   
- 행이 일반적인 결과 집합, 즉 열 형식(0x2a), 행(0xd1), 완료(0xfd) 순으로 반환됩니다. 메타 데이터 토큰 즉, sp_cursoropen에 대해 지정 된 대로 동일한 형식으로 전송 됩니다. 0x81, 0xa5 및 0xa4 SQL Server 7.0 사용자 등에 대 한 합니다. 행 상태 표시기는 BROWSE 모드와 비슷하게 각 행 끝에 숨겨진 열로 전송됩니다. 열 이름은 rowstat이고 데이터 형식은 INT4입니다. 이 rowstat 열은 다음 표에 있는 값 중 하나를 포함할 수 있습니다.  
+ 행이 일반적인 결과 집합, 즉 열 형식(0x2a), 행(0xd1), 완료(0xfd) 순으로 반환됩니다. 메타데이터 토큰은 sp_cursoropen에 대해 지정된 것과 같은 형식으로 전송됩니다. 예를 들면 SQL Server 7.0 사용자의 경우 0x81, 0xa5, 0xa4 등입니다. 행 상태 표시기는 BROWSE 모드와 비슷하게 각 행 끝에 숨겨진 열로 전송됩니다. 열 이름은 rowstat이고 데이터 형식은 INT4입니다. 이 rowstat 열은 다음 표에 있는 값 중 하나를 포함할 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  

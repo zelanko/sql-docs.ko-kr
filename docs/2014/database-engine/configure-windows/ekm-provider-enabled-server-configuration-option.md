@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - external encryption provider
@@ -15,15 +14,15 @@ ms.assetid: da58ed50-3a13-4172-9065-960559d8f383
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8318a8ff485f11f44a2a327fc8ae585b9fabe478
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 136056f848c85c2fbe8c572a5866c4e23b3a85b5
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051123"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641294"
 ---
 # <a name="ekm-provider-enabled-server-configuration-option"></a>EKM provider enabled 서버 구성 옵션
-  `EKM provider enabled` 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 Extensible Key Management 장치 지원을 제어합니다. 기본적으로 이 옵션은 해제되어 있습니다.  
+  `EKM provider enabled` 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 Extensible Key Management 디바이스 지원을 제어합니다. 기본적으로 이 옵션은 해제되어 있습니다.  
   
  이 기능을 사용하거나 사용하지 않도록 설정하려면 다음 `sp_configure` 명령 중 하나를 실행하십시오.  
   

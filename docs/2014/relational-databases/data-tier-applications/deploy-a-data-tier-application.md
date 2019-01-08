@@ -22,19 +22,19 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad76099b7cc6386e20b8c46f300298a13492f32b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: ded740286ac86deee92d6822aaa5b3130f796849
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104933"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529543"
 ---
 # <a name="deploy-a-data-tier-application"></a>데이터 계층 애플리케이션 배포
   마법사 또는 PowerShell 스크립트를 사용하여 DAC 패키지의 DAC(데이터 계층 애플리케이션)를 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 또는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 기존 인스턴스에 배포할 수 있습니다. 배포 프로세스에서는 **msdb** 시스템 데이터베이스(**의** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)])에 DAC 정의를 저장하여 DAC 인스턴스를 등록하고 데이터베이스를 만든 다음 DAC에 정의된 모든 데이터베이스 개체로 데이터베이스를 채웁니다.  
   
--   **시작하기 전 주의 사항:**  [SQL Server 유틸리티](#SQLUtility), [데이터베이스 옵션 및 설정](#DBOptSettings), [제한 사항](#LimitationsRestrictions), [필수 구성 요소](#Prerequisites), [보안](#Security), [사용 권한](#Permissions)  
+-   **시작하기 전 주의 사항:**  [SQL Server 유틸리티](#SQLUtility), [데이터베이스 옵션 및 설정](#DBOptSettings)를 [제한 사항 및 제한 사항](#LimitationsRestrictions)를 [필수 구성 요소](#Prerequisites), [보안](#Security), [권한](#Permissions)  
   
--   **DAC를 배포하려면:**  [데이터 계층 응용 프로그램 배포 마법사](#UsingDeployDACWizard), [PowerShell](#DeployDACPowerShell)  
+-   **DAC를 배포를 사용 하 여:**  [데이터 계층 응용 프로그램 배포 마법사](#UsingDeployDACWizard), [PowerShell](#DeployDACPowerShell)  
   
 ##  <a name="BeforeBegin"></a> 시작하기 전에  
  동일한 DAC 패키지를 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 단일 인스턴스에 여러 번 배포할 수 있지만 배포를 한 번에 하나씩만 실행해야 합니다. 지정된 DAC 인스턴스 이름은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스 내에서 각 배포마다 고유해야 합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "48104933"
   
 1.  **개체 탐색기**에서 DAC를 배포할 인스턴스에 대한 노드를 확장합니다.  
   
-2.   **데이터베이스** 노드를 마우스 오른쪽 단추로 클릭한 다음 **데이터 계층 응용 프로그램 배포…** 를 선택합니다.  
+2.  **데이터베이스** 노드를 마우스 오른쪽 단추로 클릭한 다음, **데이터 계층 애플리케이션 배포…** 를 선택합니다.  
   
 3.  마법사 대화 상자를 완료합니다.  
   
@@ -189,13 +189,13 @@ ms.locfileid: "48104933"
   
 1.  SMO Server 개체를 만든 다음 DAC를 배포할 인스턴스로 설정합니다.  
   
-2.  열기는 `ServerConnection` 개체와 동일한 인스턴스에 연결 합니다.  
+2.  `ServerConnection` 개체를 열고 동일한 인스턴스에 연결합니다.  
   
-3.  사용 하 여 `System.IO.File` DAC 패키지 파일을 로드 합니다.  
+3.  `System.IO.File`을 사용하여 DAC 패키지 파일을 로드합니다.  
   
 4.  `add_DacActionStarted` 및 `add_DacActionFinished`를 사용하여 DAC 배포 이벤트에 등록합니다.  
   
-5.  설정 된 `DatabaseDeploymentProperties`합니다.  
+5.  `DatabaseDeploymentProperties`를 설정합니다.  
   
 6.  `DacStore.Install` 메서드를 사용하여 DAC를 배포합니다.  
   

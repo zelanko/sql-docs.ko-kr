@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f70f0a6f6c4dc8ba4e72b30918c882c103c9410f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9d88d2084533904dcbb47aad0d629b1aa8171e8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669111"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544238"
 ---
 # <a name="sysdmcolumnstoreobjectpool-transact-sql"></a>sys.dm_column_store_object_pool (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47669111"
 |`column_id`|`int`|Columnstore 열의 ID입니다. 이것이 DELETE_BITMAP에 대해 NULL입니다.| 
 |`row_group_id`|`int`|행 그룹의 ID입니다.|
 |`object_type`|`smallint`|1 = COLUMN_SEGMENT<br /><br /> 2 = COLUMN_SEGMENT_PRIMARY_DICTIONARY<br /><br /> 3 = COLUMN_SEGMENT_SECONDARY_DICTIONARY<br /><br /> 4 = COLUMN_SEGMENT_BULKINSERT_DICTIONARY<br /><br /> 5 = COLUMN_SEGMENT_DELETE_BITMAP|  
-|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT – 열 세그먼트입니다. `object_id` 세그먼트 ID입니다. 세그먼트 내의 행 그룹이 하나 이상의 열에 대 한 모든 값을 저장합니다. 예를 들어 테이블에 있는 경우 10 개의 열, 그룹당 10 열 세그먼트는 합니다. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY – 테이블의 열 세그먼트의 모든 조회 정보를 포함 하는 전역 사전입니다.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY-하나의 열과 관련 된 로컬 사전입니다.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY – 전역 사전의 다른 표현 합니다. 이 역 조회 dictionary_id 값을 제공합니다. 튜플 이동 기 또는 대량 로드의 일환으로 압축 된 세그먼트를 만드는 데 사용 합니다.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP – 세그먼트를 추적 하는 비트맵을 삭제 합니다. 파티션당 하나의 삭제 비트맵이 있습니다.|  
+|`object_type_desc`|`nvarchar(60)`|COLUMN_SEGMENT-열 세그먼트입니다. `object_id` 세그먼트 ID입니다. 세그먼트 내의 행 그룹이 하나 이상의 열에 대 한 모든 값을 저장합니다. 예를 들어 테이블에 있는 경우 10 개의 열, 그룹당 10 열 세그먼트는 합니다. <br /><br /> COLUMN_SEGMENT_PRIMARY_DICTIONARY-모든 테이블의 열 세그먼트의 조회 정보를 포함 하는 전역 사전입니다.<br /><br /> COLUMN_SEGMENT_SECONDARY_DICTIONARY-하나의 열과 관련 된 로컬 사전입니다.<br /><br /> COLUMN_SEGMENT_BULKINSERT_DICTIONARY-전역 사전의 다른 표현 합니다. 이 역 조회 dictionary_id 값을 제공합니다. 튜플 이동 기 또는 대량 로드의 일환으로 압축 된 세그먼트를 만드는 데 사용 합니다.<br /><br /> COLUMN_SEGMENT_DELETE_BITMAP-세그먼트를 추적 하는 비트맵을 삭제 합니다. 파티션당 하나의 삭제 비트맵이 있습니다.|  
 |`access_count`|`int`|읽기 또는이 개체에 액세스를 쓸 수입니다.|  
 |`memory_used_in_bytes`|`bigint`|개체 풀에서이 개체에서 사용 하는 메모리입니다.|  
 |`object_load_time`|`datetime`|Object_id 개체 풀에 되돌렸습니다. 경우에 대 한 클럭 시간입니다.|  

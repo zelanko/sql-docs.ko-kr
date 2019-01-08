@@ -12,12 +12,12 @@ ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c97466b6c216c83b133c666fa8c4134ca35005b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9671447a2fba1cd57b021266f29de7af741f0de6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115115"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520509"
 ---
 # <a name="bcpsetbulkmode"></a>bcp_setbulkmode
   bcp_setbulkmode를 사용 하면 단일 함수 호출에서 모든 열 특성을 설정 하는 대량 복사 작업에서 열 형식을 지정할 수 있습니다.  
@@ -52,7 +52,7 @@ cbRow
  *hdbc*  
  대량 복사가 가능한 ODBC 연결 핸들입니다.  
   
- *property*  
+ *속성*  
  BYTE 유형의 상수입니다. 상수 목록은 주의 섹션의 표를 참조하십시오.  
   
  *pField*  
@@ -79,10 +79,10 @@ cbRow
   
 |property|Description|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|문자 출력 모드를 지정합니다.<br /><br /> BCP의 – c 옵션에 해당합니다. EXE를 사용 하 여 bcp_setcolfmt `BCP_FMT_TYPE` 속성이 설정 `SQLCHARACTER`합니다.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|유니코드 출력 모드를 지정합니다.<br /><br /> BCP의 – w 옵션에 해당합니다. EXE 및 사용 하 여 bcp_setcolfmt `BCP_FMT_TYPE` 속성이 설정 `SQLNCHAR`합니다.|  
-|BCP_OUT_NATIVE_TEXT_MODE|비문자 유형의 경우 네이티브 유형을 지정하고 문자 유형의 경우 유니코드를 지정합니다.<br /><br /> BCP의 – N 옵션에 해당합니다. EXE 및 사용 하 여 bcp_setcolfmt `BCP_FMT_TYPE` 속성이 설정 `SQLNCHAR` 열 유형이 문자열인 경우 (기본, 문자열이 아닌 경우).|  
-|BCP_OUT_NATIVE_MODE|네이티브 데이터베이스 유형을 지정합니다.<br /><br /> BCP의 – n 옵션에 해당합니다. EXE 및 사용 하 여 bcp_setcolfmt `BCP_FMT_TYPE` 속성이 기본값으로 설정 합니다.|  
+|BCP_OUT_CHARACTER_MODE|문자 출력 모드를 지정합니다.<br /><br /> BCP의-c 옵션에 해당합니다. EXE를 사용 하 여 bcp_setcolfmt `BCP_FMT_TYPE` 속성이 설정 `SQLCHARACTER`합니다.|  
+|BCP_OUT_WIDE_CHARACTER_MODE|유니코드 출력 모드를 지정합니다.<br /><br /> BCP의-w 옵션에 해당합니다. EXE 및 사용 하 여 bcp_setcolfmt `BCP_FMT_TYPE` 속성이 설정 `SQLNCHAR`합니다.|  
+|BCP_OUT_NATIVE_TEXT_MODE|비문자 유형의 경우 네이티브 유형을 지정하고 문자 유형의 경우 유니코드를 지정합니다.<br /><br /> BCP의-N 옵션에 해당합니다. EXE 및 사용 하 여 bcp_setcolfmt `BCP_FMT_TYPE` 속성이 설정 `SQLNCHAR` 열 유형이 문자열인 경우 (기본, 문자열이 아닌 경우).|  
+|BCP_OUT_NATIVE_MODE|네이티브 데이터베이스 유형을 지정합니다.<br /><br /> BCP의-n 옵션에 해당합니다. EXE 및 사용 하 여 bcp_setcolfmt `BCP_FMT_TYPE` 속성이 기본값으로 설정 합니다.|  
   
  Bcp_setbulkmode bcp_setcolfmt, bcp_control, 및 bcp_readfmt를 포함 하는 함수 호출의 시퀀스를 사용 하 여 사용 하지 않아야 합니다. 예를 들어 bcp_control(BCPTEXTFILE) 및 bcp_setbulkmode 호출 하지 않아야 합니다.  
   
@@ -95,30 +95,30 @@ cbRow
  호출 시퀀스  
   
 ```  
-bcp_init(“table”, DB_IN);  
+bcp_init("table", DB_IN);  
 bcp_setbulkmode();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_setbulkmode();  
 bcp_readfmt();  
 ```  
   
 ```  
 bcp_init(NULL, DB_OUT);  
-bcp_control(BCPHINTS, “select …”);  
+bcp_control(BCPHINTS, "select ...");  
 bcp_setbulkmode();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_setbulkmode();  
 bcp_setcolfmt();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_readfmt();  
 bcp_setcolfmt();  
@@ -128,18 +128,18 @@ bcp_setcolfmt();
 bcp_init(NULL, DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_setbulkmode();  
-bcp_control(BCPHINTS, “select …”);  
+bcp_control(BCPHINTS, "select ...");  
 bcp_readfmt();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_columns();  
 ```  
   
 ```  
-bcp_init(“table”, DB_OUT);  
+bcp_init("table", DB_OUT);  
 bcp_control(BCPDELAYREADFMT, true);  
 bcp_setcolfmt();  
 ```  

@@ -1,5 +1,5 @@
 ---
-title: 데이터와 메타 데이터의 큐브를 찾아보기 | Microsoft Docs
+title: 데이터 및 큐브 메타 데이터 찾아보기 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7bd1940a21407375015e6b732ab129653bff01e6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: fda788cecbad21a73186b96a6c360ceeae3948e3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022610"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537285"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>큐브에서 데이터 및 메타데이터 찾아보기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34022610"
   
  큐브를 찾아보려면 먼저 큐브를 처리하고 다시 연결해야 합니다. 큐브를 처리한 후 큐브 디자이너의 **브라우저** 탭을 엽니다. 도구 모음에서 다시 연결 단추를 클릭하여 연결을 새로 고칩니다.  
   
- **브라우저** 탭에는 메타데이터, 필터 및 데이터라는 3가지 창이 있습니다. 메타데이터 창에서는 트리 형식으로 큐브의 구조를 검토할 수 있습니다. **브라우저** 탭 상단의 필터 창에서는 찾아볼 하위 큐브를 정의할 수 있습니다. 데이터 창에서는 결과 집합을 보고 차원 계층을 통해 드릴다운할 수 있습니다.  
+ 합니다 **브라우저** 탭에는 세 개의 창-메타 데이터 창, 필터 창 및 데이터 창에 있습니다. 메타데이터 창에서는 트리 형식으로 큐브의 구조를 검토할 수 있습니다. **브라우저** 탭 상단의 필터 창에서는 찾아볼 하위 큐브를 정의할 수 있습니다. 데이터 창에서는 결과 집합을 보고 차원 계층을 통해 드릴다운할 수 있습니다.  
   
 ## <a name="setting-up-the-browser"></a>브라우저 설정  
  큐브를 찾아보기 전 준비 단계로 먼저 사용할 큐브 뷰 또는 번역을 지정할 수 있습니다. 데이터 창에 측정값과 차원을 추가한 후 필터 창에서 적용할 필터를 지정합니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "34022610"
   
      \- 또는-  
   
--   에 **차원** 의 열은 **필터** 창에서 클릭  **\<차원 선택 >** 목록에서 차원을 선택한 다음 클릭  **\<계층 선택 >** 에 **계층** 목록에서 계층을 선택 합니다.  
+-   에 **차원** 열의 합니다 **필터** 창 클릭  **\<차원 선택 >** 목록에서 차원을 선택한 다음 클릭  **\<계층 선택 >** 에 **계층** 목록에서 계층을 선택 합니다.  
   
  계층을 지정한 후 연산자와 필터 식을 지정합니다. 다음 표에 연산자와 필터 식에 대한 설명이 나와 있습니다.  
   

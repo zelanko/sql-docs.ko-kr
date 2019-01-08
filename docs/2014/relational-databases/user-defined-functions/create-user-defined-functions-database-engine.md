@@ -16,15 +16,15 @@ ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d1db5b5dcf8e1bf5c06882971d3bf3cd2e5a0309
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37a6846d8c185549bd6c54f32cb5ab02eb564d1d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124903"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531579"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>사용자 정의 함수 만들기(데이터베이스 엔진)
-  이 항목에서 사용자 정의 함수를 만드는 방법에 설명 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용 하 여 [!INCLUDE[tsql](../../includes/tsql-md.md)]입니다.  
+  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 사용자 정의 함수를 만드는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48124903"
   
 -   사용자 정의 함수는 여러 결과 집합을 반환할 수 없습니다. 여러 결과 집합을 반환해야 하는 경우 저장 프로시저를 사용하세요.  
   
--   오류 처리는 사용자 정의 함수에서 제한됩니다. UDF는 TRY…CATCH, @ERROR 또는 RAISERROR를 지원하지 않습니다.  
+-   오류 처리는 사용자 정의 함수에서 제한됩니다. UDF는 시도 지원 하지 않습니다... CATCH @ERROR 또는 RAISERROR입니다.  
   
 -   사용자 정의 함수는 저장 프로시저를 호출할 수 없지만 확장 저장 프로시저는 호출할 수 있습니다.  
   

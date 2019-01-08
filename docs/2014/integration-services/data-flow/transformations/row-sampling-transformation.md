@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rowsamplingtrans.f1
@@ -21,12 +20,12 @@ ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3979599737f436f7f2e34439af79f66d870adcff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: b49cd9482fb54a3d292842cd174904078e3b1ab1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052443"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805465"
 ---
 # <a name="row-sampling-transformation"></a>행 샘플링 변환
   행 샘플링 변환은 임의로 선택된 입력 데이터 세트의 하위 세트를 얻는 데 사용합니다. 출력 샘플의 정확한 크기와 난수 생성기의 초기값을 지정할 수 있습니다.  

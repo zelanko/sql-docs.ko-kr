@@ -13,12 +13,12 @@ ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8aab52401c438dc9428e082ab66307d3961a8f0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 491c0a0084e334cabe7b0eb7648b50aed46a3abc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122023"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545568"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>FOR XML 쿼리와 중첩 FOR XML 쿼리 비교
   이 항목에서는 단일 수준 FOR XML 쿼리를 중첩 FOR XML 쿼리와 비교합니다. 중첩 FOR XML 쿼리를 사용할 때의 이점 중 하나는 쿼리 결과에 특성 중심 및 요소 중심의 XML을 조합하여 지정할 수 있다는 점입니다. 다음 예에서는 이러한 이점을 보여 줍니다.  
@@ -193,9 +193,9 @@ FOR XML AUTO, TYPE
                 ProductName="Mountain-100 Silver, 42" Color="Silver" />  
       <Production.Product ProductID="773"   
                 ProductName="Mountain-100 Silver, 44" Color="Silver" />  
-        …  
+        ...  
     </ProductModel>  
-     …  
+     ...  
 ```  
   
  제품 하위 범주를 생성하는 중첩된 `ELEMENTS` 쿼리에서 `FOR XML` 지시어를 제거하면 전체 결과가 특성 중심이 됩니다. 그런 다음 중첩 없이 이 쿼리를 작성할 수 있습니다. `ELEMENTS` 를 추가하면 부분적으로 특성 중심이고 요소 중심이기도 한 XML이 생성됩니다. 이 결과는 단일 수준의 FOR XML 쿼리에 의해 생성될 수 없습니다.  

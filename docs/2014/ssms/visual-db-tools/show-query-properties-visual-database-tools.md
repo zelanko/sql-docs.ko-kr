@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing query properties
@@ -15,12 +15,12 @@ ms.assetid: 4a7a8fa9-2e25-40a0-a7b6-377d04a03e5e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4cc4da3ae392636c3207fbcb918e3fb6d9ec3307
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 35092821d2407e90e550a4351f186de6a585cd64
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138783"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791385"
 ---
 # <a name="show-query-properties-visual-database-tools"></a>쿼리 속성 표시(Visual Database Tools)
   쿼리 및 뷰 디자이너의 속성 창에서 쿼리의 속성을 표시할 수 있습니다.  

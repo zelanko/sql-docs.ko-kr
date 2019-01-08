@@ -10,12 +10,12 @@ ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e324435b6b67574a111f9cd95671f5b2aa6824d
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 79f3ac8efa0e629ddfd82d5945973c86a661fe75
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032430"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52576792"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Export and Import DQS Knowledge Bases Using DQSInstaller.exe
   기존 DQS 설치의 경우 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 의 모든 기술 자료를 한 번에 DQS 백업 파일(.dqsb)로 내보낸 다음 나중에 명령 프롬프트에서 DQSInstaller.exe 파일을 실행하여 .dqsb 파일을 통해 다른 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 로 모든 기술 자료를 한 번에 가져올 수 있습니다. 명령 프롬프트에서 DQSInstaller.exe를 실행하는 방법은 [명령 프롬프트에서 DQSInstaller.exe 실행](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#CommandPrompt)에서 [DQSInstaller.exe를 실행하여 Data Quality 서버 설치 완료](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)을 참조하십시오.  
@@ -28,7 +28,7 @@ ms.locfileid: "51032430"
 -   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 의 모든 기술 자료를 DQS 백업 파일(.dqsb)로 내보내려면 기술 자료를 내보낼 전체 경로 및 파일 이름과 함께 명령 프롬프트에서 `exportkbs` 매개 변수를 사용하여 DQSInstaller.exe를 실행합니다. 예를 들어 C: 드라이브의 DQSBackup.dqsb 파일로 모든 기술 자료를 내보내려면:  
   
     ```  
-    dqsinstaller.exe –exportkbs c:\DQSBackup.dqsb  
+    dqsinstaller.exe -exportkbs c:\DQSBackup.dqsb  
     ```  
   
     > [!NOTE]  
@@ -37,7 +37,7 @@ ms.locfileid: "51032430"
 -   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]를 제거하는 동안 모든 기술 자료를 DQS 백업 파일로 내보내려면 기술 자료를 내보낼 전체 경로 및 파일 이름과 함께 명령 프롬프트에서 `uninstall` 매개 변수를 사용하여 DQSInstaller.exe를 실행합니다. 예를 들어 C: 드라이브의 DQSBackup.dqsb 파일로 모든 기술 자료를 내보내고 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]의 설치를 해제하려면:  
   
     ```  
-    dqsinstaller.exe –uninstall c:\DQSBackup.dqsb  
+    dqsinstaller.exe -uninstall c:\DQSBackup.dqsb  
     ```  
   
     > [!NOTE]  
@@ -49,7 +49,7 @@ ms.locfileid: "51032430"
  기술 자료를 가져올 전체 경로 및 파일 이름과 함께 명령 프롬프트에서 `importkbs` 매개 변수를 사용하여 DQSInstaller.exe 파일을 실행합니다. 예를 들어 C: 드라이브의 DQSBackup.dqsb 파일에서 모든 기술 자료를 가져오려면:  
   
 ```  
-dqsinstaller.exe –importkbs c:\DQSBackup.dqsb  
+dqsinstaller.exe -importkbs c:\DQSBackup.dqsb  
 ```  
   
  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 에 가져오려는 기술 자료와 이름이 같은 기술 자료가 이미 있는 경우 가져온 기술 자료의 이름에 밑줄(_)과 함께 1부터 시작되는 정수 값이 추가됩니다. 예를 들어 "CompanyName" 도메인이 중복된 경우 가져온 도메인 이름은 "CompanyName_1"이 됩니다.  

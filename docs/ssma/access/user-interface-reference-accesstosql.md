@@ -13,19 +13,19 @@ ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 18eef13d999826bb54f9900feed52f41ce614ea9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d35db315cebcc6292ca11b1e31f81015238fbcb9
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675692"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617483"
 ---
 # <a name="user-interface-reference-accesstosql"></a>사용자 인터페이스 참조 (AccessToSQL)
 이 섹션에 대 한 도움말 항목이 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) 액세스에 대 한 합니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
   
-|항목|설명|  
+|항목|Description|  
 |---------|---------------|  
 |[고급 개체 선택 &#40;AccessToSQL&#41;](../../ssma/access/advanced-object-selection-accesstosql.md)|사용 된 **고급 개체 선택** 대화 상자의 필터 조건을 사용 하 여 데이터베이스 개체를 찾으려면 다음 선택 하거나 해당 개체의 선택을 취소 합니다.|  
 |[평가 보고서 &#40;AccessToSQL&#41;](../../ssma/access/assessment-report-accesstosql.md)|사용 된 **평가 보고서** Access 데이터베이스 개체를 변환 하는 분석 하 고 마이그레이션 소요 될 예상 대화 상자.|  
@@ -48,7 +48,7 @@ ms.locfileid: "51675692"
 |[프로젝트 설정(마이그레이션)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)|마이그레이션 페이지를 사용 합니다 **프로젝트 설정** 마이그레이션 일괄 처리 크기, 테이블 잠금, 제약 조건 검사, 삽입 트리거 실행, id 및 처리 하는 null 값을 지정 하려면 대화 상자 및 개 있는 날짜를 처리 하는 방법의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 범위입니다.|  
 |[프로젝트 설정(형식 매핑)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)|형식 매핑 페이지를 사용 합니다 **프로젝트 설정** SSMA 프로젝트의 모든 데이터베이스 및 데이터베이스 개체에 대 한 기본 형식 매핑 지정 대화 상자.|  
 |[프로젝트 설정 (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)|SQL Azure 페이지를 사용 합니다 **프로젝트 설정** 데이터베이스 접미사 및 하트 비트 제한 시간 간격을 지정 하려면 대화 상자.|  
-|[메타 데이터 저장 &#40;AcessToSQL&#41;](../../ssma/access/save-metadata-acesstosql.md)|합니다 **메타 데이터 저장** 메타 데이터 누락 된 프로젝트를 저장 하는 경우 대화 상자가 나타납니다.|  
+|[메타 데이터 저장 &#40;AccessToSQL&#41;](../../ssma/access/save-metadata-accesstosql.md)|합니다 **메타 데이터 저장** 메타 데이터 누락 된 프로젝트를 저장 하는 경우 대화 상자가 나타납니다.|  
   
 ## <a name="see-also"></a>참고자료  
 [액세스에 대 한 SQL Server Migration Assistant를 사용 하 여 시작 &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  

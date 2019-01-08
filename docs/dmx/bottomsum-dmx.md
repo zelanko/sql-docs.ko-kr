@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5c4a4cfd4919218233d1c8ce2f41f4569c7f7302
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9879f2b4ce405ac59568876cd22e381c0dfad2bd
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602793"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528485"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -93,8 +93,8 @@ NATURAL PREDICTION JOIN
   
 |Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
-|Road Bottle Cage|1195|0.08…|0.07…|  
-|Mountain Bottle Cage|1367|0.09…|0.08…|  
+|Road Bottle Cage|1195|0.08...|0.07...|  
+|Mountain Bottle Cage|1367|0.09...|0.08...|  
   
  **참고** 이 예제만 제공 됩니다 BottomSum의 사용법을 보여 줍니다. 데이터 집합의 크기에 따라 이 쿼리를 실행하는 데 시간이 오래 걸릴 수 있습니다.  
   

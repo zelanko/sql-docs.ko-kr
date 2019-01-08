@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], expiration
@@ -16,12 +15,12 @@ ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc35e6e4f0fe4befe6db2ba93f990b9a7b8c6434
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7045454dfd2d05e37e18cdc57f53090cf8b9e76
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220845"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778355"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>구독에 대한 만료 기간 설정
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 구독 만료 기간을 설정하는 방법에 대해 설명합니다. 구독 만료 기간은 구독이 만료되어 제거되기 전까지 유효한 기간을 나타냅니다. 자세한 내용은 [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)을 참조하세요.  
@@ -51,7 +50,7 @@ ms.locfileid: "48220845"
     -   구독이 만료되지 않도록 지정할 수 있지만 이 경우 메타데이터를 정리할 수 없으므로 이 값은 사용하지 않도록 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- **게시 속성 - \<Publication>** 대화 상자의 **일반** 페이지에서 구독의 만료 기간을 설정합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요.  
+ **게시 속성 - \<Publication>** 대화 상자의 **일반** 페이지에서 구독의 만료 기간을 설정합니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Publication Properties](view-and-modify-publication-properties.md)을 참조하세요.  
   
 #### <a name="to-set-the-expiration-period-for-subscriptions"></a>구독에 대한 만료 기간을 설정하려면  
   
@@ -98,7 +97,7 @@ ms.locfileid: "48220845"
   
 3.  (옵션) 게시자에서 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 실행합니다. 이때 **retention_period_unit** 에 **@property** 을 지정하고 **@value**에서 구독 만료 기간을 설정하는 방법에 대해 설명합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)  
   

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - parameter queries [SQL Server]
@@ -12,12 +12,12 @@ ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 53d38505a07fe30ef22145f4ec8197092e7bc6d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a3ea199f6e2e86f5dc2e51199386f31b93e9377
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098643"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815745"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>매개 변수 쿼리(Visual Database Tools)
   경우에 따라 매번 다른 값으로 여러 번 사용할 수 있는 쿼리를 만들 필요가 있습니다. 예를 들어, 한 명의 저자가 저술한 책의 `title_ids` 를 모두 찾기 위해 쿼리하는 경우가 종종 있습니다. 각 요청에 대해 매번 저자의 ID 또는 이름만 다른 동일한 쿼리를 실행할 수 있습니다.  

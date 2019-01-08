@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.stepadvanced.f1
@@ -12,14 +12,14 @@ ms.assetid: bdecfd4f-bcd8-4ba2-8ada-fbb636314f40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1197d23dda2ecd96adaa6cc49625db25851410c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0bc24411ebceb0601f00ca659452b55596d869c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176543"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767215"
 ---
-# <a name="job-step-properties-new-job-step-advanced-page"></a>작업 단계 속성: 새 작업 단계(고급 페이지)
+# <a name="job-step-properties-new-job-step-advanced-page"></a>작업 단계 속성: 새 작업 단계 (고급 페이지)
   이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계의 속성을 확인하고 변경할 수 있습니다.  
   
 ## <a name="options"></a>변수  

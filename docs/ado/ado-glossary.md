@@ -13,12 +13,12 @@ ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 66389b5b2d171a5d006fcddcf28523790a411d68
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: c02447379b713a7d3b1c6dd72af8c3860098a68c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291769"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528025"
 ---
 # <a name="ado-glossary-terms"></a>ADO 용어
 이 항목에서는 ADO와 관련 된 용어를 정의합니다.
@@ -32,7 +32,7 @@ ms.locfileid: "51291769"
 
  집계 함수를 쿼리, COUNT, AVG 또는 모든 행을 사용 하 여 테이블의 열에 값을 계산 하는 STDEV와 같은 함수입니다. 식 작성 및 프로그래밍에서는 다양 한 통계를 확인 하려면 SQL 집계 함수 (위에 나열 된 3 포함) 및 도메인 집계 함수를 사용할 수 있습니다.
 
- 별칭 대체 이름 열 또는 SQL SELECT 문에서 자주 보다 짧거나 의미 있는 식에 부여 합니다. 예를 들어 BobSales은 다음 SELECT 문에서 별칭: "SalesDB에서 BobSales로 쓰기 매출을 선택 합니다."입니다. DataControl 개체에 바인딩 컨트롤에 열을 동적으로 할당 하는 별칭을 사용할 수 있습니다.
+ 별칭 대체 이름 열 또는 SQL SELECT 문에서 자주 보다 짧거나 의미 있는 식에 부여 합니다. 예를 들어 BobSales은 다음 SELECT 문에서 별칭: "SalesDB에서 BobSales로 쓰기 Sales를 선택" 합니다. DataControl 개체에 바인딩 컨트롤에 열을 동적으로 할당 하는 별칭을 사용할 수 있습니다.
 
  아파트 스레드는 COM 스레딩 모델이 개체에 대 한 모든 호출 스레드에서 발생 합니다. COM은 아파트 스레딩 동기화 하 고 호출을 마샬링합니다. 참고 항목 *COMmddefcom*합니다.
 
@@ -74,7 +74,7 @@ ms.locfileid: "51291769"
 
  COM (구성 요소 개체 모델)는 이진 표준 개체 또는 존재 하는 컴퓨터에서 개발 된 언어에 관계 없이 네트워크 환경에서 상호 운용 될 수 있도록 합니다. COM 기반 기술에는 ActiveX 컨트롤, 자동화 및 개체 (OLE) 연결과 포함 됩니다. COM을 이용하면 개체의 기능을 다른 구성요소나 응용 프로그램 호스팅으로 노출이 가능합니다. 이는 객체 자신을 노출시키는 것과 프로세스 및 네트워크를 통한 노출 작동 방식 모두를 정의 합니다. 또한 COM은 개체의 수명 주기를 정의합니다.
 
- COM 구성 요소 이진 파일 등 일부.exe 파일과.dll,.ocx, 등-개체를 제공 하는 것에 대 한 COM 표준을 지 원하는 합니다. 이러한 파일 등에 대 한 하나 이상의 클래스 팩터리, COM 클래스, 레지스트리 항목 메커니즘, 로딩 코드는 코드를 포함합니다.
+ .Dll,.ocx, 일부.exe 파일-등 COM 구성 요소 이진 파일-표준을 지 원하는 COM 개체를 제공 합니다. 이러한 파일 등에 대 한 하나 이상의 클래스 팩터리, COM 클래스, 레지스트리 항목 메커니즘, 로딩 코드는 코드를 포함합니다.
 
  비교 연산자는 두 식을 비교 하는 부울 값을 반환 합니다.
 

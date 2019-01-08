@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: security
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.managepolicies.general.f1
@@ -12,12 +12,12 @@ ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6150d7b819c6cd31dbc8d09fa43d1ed66de0f8c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40ce89f518dfdbf4d1c782121dc5ec0e935752ab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145090"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814995"
 ---
 # <a name="view-policies-dialog-box"></a>정책 보기 대화 상자
   이 대화 상자를 사용하여 이 대상에 적용되는 정책을 볼 수 있습니다. 이 대화 상자에는 관련 정책, 해당 정책 범주 및 정책에 대한 정보가 표시됩니다.  

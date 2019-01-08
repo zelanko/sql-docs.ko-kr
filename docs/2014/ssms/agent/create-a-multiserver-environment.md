@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, multiserver environments
@@ -15,12 +15,12 @@ ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bacf87c25d7949580eb3d366467e1dae9381e8a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115593"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795620"
 ---
 # <a name="create-a-multiserver-environment"></a>다중 서버 환경 만들기
   다중 서버 관리를 위해서는 마스터 서버(MSX)와 하나 이상의 대상 서버(TSX)를 설치해야 합니다. 모든 대상 서버에서 처리되는 작업은 먼저 마스터 서버에서 정의된 다음 대상 서버로 다운로드됩니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "48115593"
 |마스터 서버에서 여러 대상 서버를 제거하는 방법에 대해 설명합니다.|[마스터 서버에서 여러 대상 서버 제거](defect-multiple-target-servers-from-a-master-server.md)|  
 |대상 서버의 상태를 확인하는 방법에 대해 설명합니다.|[sp_help_targetserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [프록시를 사용하는 다중 서버 작업 문제 해결](troubleshoot-multiserver-jobs-that-use-proxies.md)  
   
   

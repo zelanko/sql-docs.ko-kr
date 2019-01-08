@@ -11,12 +11,12 @@ ms.assetid: 6a586659-5c2b-453b-8f40-a3a469277b17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 36eb4d030933594900d4f73c180fd92cc0323d66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 533514facc1b34d9a8fa03a71d983ed2f01d2137
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145779"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532401"
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>보고서 및 기타 항목 검색(보고서 작성기 및 SSRS)
   보고서 관리자를 사용하여 보고서 서버에서 이름이나 설명을 기준으로 특정 항목을 검색할 수 있습니다. 게시된 보고서, 보고서 모델, 폴더, 공유 데이터 원본 및 리소스를 검색할 수 있습니다. 일정, 소유자, 역할 할당, 보고서 기록의 특정 스냅숏 또는 구독은 검색할 수 없습니다. 검색은 항목이 저장되는 보고서 서버 데이터베이스에서 수행됩니다.  

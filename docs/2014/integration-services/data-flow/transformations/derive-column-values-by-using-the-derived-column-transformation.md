@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - columns [Integration Services]
@@ -16,17 +15,17 @@ ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1809f90f170c0305713d4d054a48bd4a8b0b7048
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 4d0a6a918c2b4a41272b4c09b87d64b925fbf028
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460298"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52785155"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>파생 열 변환을 사용하여 열 값 파생
   파생 열 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 하나의 원본이 이미 들어 있어야 합니다.  
   
- 파생 열 변환은 식을 사용하여 기존 열의 값을 업데이트하거나 새 열에 값을 추가합니다. 새 열에 값을 추가하는 경우 **파생 열 변환 편집기** 대화 상자에서 식을 계산하고 열의 메타데이터를 적절히 정의합니다. 예를 들어 각각 DT_WSTR 데이터 형식이며 길이가 50인 두 개의 열을 식에서 두 열 값 사이에 공백을 두고 연결할 경우 새 열은 데이터 형식이 DT_WSTR이고 길이는 101이 됩니다. 새 열의 데이터 형식을 업데이트할 수 있습니다. 유일한 요구 사항은 데이터 형식이 삽입된 데이터와 호환되어야 한다는 것입니다. 예를 들어 정수 데이터 형식이 있는 열에 데이터 값을 할당할 경우 **파생 열 변환 편집기** 대화 상자에서 유효성 검사 오류가 발생합니다. 선택한 데이터 형식에 따라 열의 길이, 전체 자릿수, 소수 자릿수 및 코드 페이지를 지정할 수 있습니다.  
+ 파생 열 변환은 식을 사용하여 기존 열의 값을 업데이트하거나 새 열에 값을 추가합니다. 새 열에 값을 추가하는 경우 **파생 열 변환 편집기** 대화 상자에서 식을 계산하고 열의 메타데이터를 적절히 정의합니다. 예를 들어 식에서 각각 데이터 형식이 DT_WSTR이고 길이가 50인 두 개의 열을 해당 두 열 값 사이의 공백으로 연결할 경우 새 열은 데이터 형식이 DT_WSTR이고 길이는 101이 됩니다. 새 열의 데이터 형식을 업데이트할 수 있습니다. 유일한 요구 사항은 데이터 형식이 삽입된 데이터와 호환되어야 한다는 것입니다. 예를 들어 정수 데이터 형식이 있는 열에 데이터 값을 할당할 경우 **파생 열 변환 편집기** 대화 상자에서 유효성 검사 오류가 발생합니다. 선택한 데이터 형식에 따라 열의 길이, 전체 자릿수, 소수 자릿수 및 코드 페이지를 지정할 수 있습니다.  
   
 ### <a name="to-derive-column-values"></a>열 값을 파생하려면  
   
@@ -59,7 +58,7 @@ ms.locfileid: "49460298"
   
 12. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Derived Column Transformation](derived-column-transformation.md)   
  [Integration Services 데이터 형식](../integration-services-data-types.md)   
  [Integration Services 변환](integration-services-transformations.md)   

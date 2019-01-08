@@ -11,12 +11,12 @@ ms.assetid: bc5bcd87-663f-41d9-bb7b-b3e083cd63df
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 04c0170d33b07ea39b8c08ee194eb0cd63b4e64e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 276d37b97cfe0a2a4194aa8aed713834a20c8674
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128313"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522848"
 ---
 # <a name="import-the-policies-to-a-single-instance"></a>단일 인스턴스로 정책 가져오기
   이 태스크에서는 단일 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에서 예약할 최선의 구현 방법 정책을 정책 기반 관리로 가져옵니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "48128313"
   
 3.  **정책**을 마우스 오른쪽 단추로 클릭한 다음 **정책 가져오기**를 클릭합니다.  
   
-4.  **가져오기** 대화 상자에서 **가져올 파일** 상자 옆의 줄임표(**…**) 단추를 클릭합니다.  
+4.  에 **가져올** 대화 상자에서 다음을 **가져올 파일** 상자에서 줄임표를 클릭 (**...** ) 단추입니다.  
   
 5.  **찾는 위치** 목록에서 최선의 구현 방법 정책이 포함된 다음 폴더를 찾습니다.  
   

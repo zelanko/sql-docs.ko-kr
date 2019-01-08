@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 18277b6db2a59c502c4aafbec98974385a4a053d
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 852fb3c6cee7c65f8799102bbd65ab368cd0d9e2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168801"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538578"
 ---
 # <a name="create-an-aps-domain-administrator"></a>APS 도메인 관리자 만들기
 일부 작업에는 분석 플랫폼 시스템 도메인 관리자 권한이 필요합니다. 추가 어플라이언스 도메인 관리자를 만드는 방법을 설명 합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "49168801"
   
 3.  에 **Active Directory 사용자 및 컴퓨터** 프로그램을 마우스 오른쪽 단추로 클릭 **사용자**를 가리킵니다 **새로 만들기**를 클릭 하 고 **사용자**.  
   
-4.  에 **새 개체 – 사용자** 대화 상자에서 새 사용자에 대 한 설명은 완료 하 고 클릭 **다음**합니다.  
+4.  에 **새 개체-사용자** 대화 상자에서 새 사용자에 대 한 설명은 완료 하 고 클릭 **다음**합니다.  
   
     암호 대화 상자를 완료 하 고 클릭 **다음**합니다.  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- replication
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - replication [SQL Server], planning
@@ -16,12 +14,12 @@ ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 11ea6b99818a1f1ffaf4b38019a234aa54294d2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 3d66c7950a5d610a50ca6bce84f4b973c4ec9983
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186933"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789007"
 ---
 # <a name="replication-programming-concepts"></a>복제 프로그래밍 개념
   복제 기능을 사용하는 애플리케이션을 개발하려면 먼저 다음과 같은 일반적인 계획 단계를 따르는 것이 좋습니다.  

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f8103e48da5c0059cfc977f862ebd8fc0839fb9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8827614f494702d4e738d336e96cd96b92f949d1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661062"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514310"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -81,12 +81,12 @@ sys.dm_db_index_operational_stats (
     
 ## <a name="table-returned"></a>반환된 테이블    
     
-|열 이름|데이터 형식|설명|    
+|열 이름|데이터 형식|Description|    
 |-----------------|---------------|-----------------|    
 |**database_id**|**smallint**|데이터베이스 ID입니다.|    
 |**object_id**|**int**|테이블 또는 뷰의 ID입니다.|    
 |**index_id**|**int**|인덱스 또는 힙의 ID입니다.<br /><br /> 0 = 힙|    
-|**hobt_id**|**bigint**|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 데이터 힙 또는 columnstore 인덱스에 대 한 내부 데이터를 추적 하는 B-트리 행 집합 ID입니다.<br /><br /> NULL – 내부 columnstore 행 집합을이 아닙니다.<br /><br /> 자세한 내용은 참조 하세요. [sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
+|**hobt_id**|**bigint**|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 데이터 힙 또는 columnstore 인덱스에 대 한 내부 데이터를 추적 하는 B-트리 행 집합 ID입니다.<br /><br /> NULL-내부 columnstore 행 집합을이 아닙니다.<br /><br /> 자세한 내용은 참조 하세요. [sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
 |**partition_number**|**int**|인덱스 또는 힙 내의 1부터 시작하는 파티션 번호입니다.|    
 |**leaf_insert_count**|**bigint**|리프 수준 삽입의 누적 횟수입니다.|    
 |**leaf_delete_count**|**bigint**|리프 수준 삭제의 누적 횟수입니다. 삭제 된 레코드를 먼저 삭제할 변수로 표시 되지 않는 leaf_delete_count만 증가 됩니다. 먼저 고스팅는 삭제 된 레코드에 대 한 **leaf_ghost_count** 대신 증분됩니다.|    

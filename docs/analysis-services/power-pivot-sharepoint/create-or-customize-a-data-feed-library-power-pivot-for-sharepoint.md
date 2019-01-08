@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 71c051d64a40f38a6514301ca3353e7627c67aaf
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: 7586527bcd2f79b6a9a54725fcbd376bd2720096
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021257"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519104"
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>데이터 피드 라이브러리 만들기 또는 사용자 지정(SharePoint용 Power Pivot)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34021257"
   
 -   중앙 위치에서 데이터 서비스 문서 공유 및 관리  
   
--   동일한 라이브러리에 저장 된 다른 문서에서 서비스 문서를 쉽게 구분할 수 있도록 아이콘을 사용 하 여 데이터 서비스 문서를 시각적으로 식별: ![GMNI_IconDataFeed](../../analysis-services/power-pivot-sharepoint/media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
+-   서비스 문서를 동일한 라이브러리에 저장된 다른 문서와 쉽게 구별할 수 있도록 아이콘을 사용하여 데이터 서비스 문서를 시각적으로 식별합니다. ![GMNI_IconDataFeed](../../analysis-services/power-pivot-sharepoint/media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
   
  데이터 피드 라이브러리에는 항상 데이터 서비스 문서(.atomsvc) 파일이 포함되어 있고 데이터 피드 자체는 포함되어 있지 않습니다. 정적 XML 데이터로 구성되는 데이터 피드와 달리 데이터 서비스 문서는 반복 가능한 가져오기 작업에 재사용 가능한 연결 정보를 제공하여 요청에 따라 피드를 생성하는 서비스 또는 애플리케이션에 대한 URL을 지정합니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "34021257"
   
 1.  페이지 왼쪽 위 모퉁이에 있는 **사이트 작업** 을 클릭합니다.  
   
-2.  **기타 옵션...** 을 클릭합니다.  
+2.  클릭 **더 많은 옵션**...  
   
 3.  라이브러리에서 **데이터 피드 라이브러리**를 클릭합니다.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "34021257"
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 피드 사용&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)   
- [파워 피벗 데이터 피드 라이브러리 삭제](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)   
+ [Power Pivot 데이터 피드 라이브러리 삭제](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)   
  [중앙 관리에서 파워 피벗 서버 관리 및 구성](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Power Pivot 데이터 피드](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   

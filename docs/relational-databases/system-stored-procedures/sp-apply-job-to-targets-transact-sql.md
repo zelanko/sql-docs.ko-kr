@@ -18,12 +18,12 @@ ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 192747d920f92681617d0dc19cc562e52e9c310e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1583f6de4938451b03eabfb7c9425120fa37f2fc
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641725"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537831"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +46,19 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  [ **@job_id =**] *job_id*  
  지정한 대상 서버 또는 대상 서버 그룹에 적용할 작업의 ID입니다. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
   
- [ **@job_name =**] **'***job_name***'**  
+ [  **@job_name =**] **'**_job_name_**'**  
  지정된 연결 대상 서버 또는 대상 서버 그룹에 적용할 작업의 이름입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [ **@target_server_groups =**]  **'***target_server_groups***'**  
+ [  **@target_server_groups =**] **'**_target_server_groups_**'**  
  지정된 작업을 적용할 대상 서버 그룹의 쉼표로 구분된 목록입니다. *target_server_groups* 됩니다 **nvarchar(2048)**, 기본값은 NULL입니다.  
   
- [ **@target_servers=** ] **'***target_servers***'**  
+ [  **@target_servers=** ] **'**_target_servers_**'**  
  지정된 작업을 적용할 대상 서버의 쉼표로 구분된 목록입니다. *target_servers*됩니다 **nvarchar(2048)**, 기본값은 NULL입니다.  
   
- [  **@operation=** ] **'***작업***'**  
+ [  **@operation=** ] **'**_작업이_**'**  
  지정된 대상 서버 또는 대상 서버 그룹에서 지정된 작업을 적용할지 아니면 제거할지 여부를 나타냅니다. *작업이*됩니다 **varchar(7)**, 기본값은 APPLY 사용 하 여 합니다. 유효한 연산은 **적용** 하 고 **제거**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

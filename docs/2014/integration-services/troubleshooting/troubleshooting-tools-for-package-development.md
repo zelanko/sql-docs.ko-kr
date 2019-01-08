@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
@@ -17,12 +16,12 @@ ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8dc02c97daa09091c2f7ca4063c32325e0a39a3b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 4e1935b7ffa0acc22183f91cf5c7fe3896c9e1a3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176693"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792104"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>패키지 배포 문제 해결 도구
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지를 개발하면서 패키지의 문제를 해결하는 데 사용할 수 있는 기능 및 도구를 제공합니다.  
@@ -44,9 +43,9 @@ ms.locfileid: "48176693"
   
 -   **데이터 원본을 사용할 수 없을 때 오프라인으로 작업하도록 모든 패키지와 모든 연결을 설정합니다**. **SSIS** 메뉴에서 **오프라인으로 작업** 을 사용하도록 설정할 수 있습니다. 달리 합니다 `DelayValidation` 속성을 **오프 라인으로 작업** 옵션은 패키지를 열기 전에 사용할 수. 또한 **오프라인으로 작업** 을 설정하여 디자이너에서의 작업 속도를 높이고, 패키지의 유효성을 검사하려는 경우에만 이 옵션을 해제할 수도 있습니다.  
   
--   **런타임까지 유효하지 않은 패키지 요소에 대해 DelayValidation 속성을 구성합니다**. 디자인 타임에는 구성이 유효하지 않은 패키지 요소의 `DelayValidation`을 `True`로 설정하여 유효성 검사 오류를 방지할 수 있습니다. 예를 들어 런타임에 SQL 실행 작업을 통해 테이블이 만들어지기 전까지는 존재하지 않는 대상 테이블을 사용하는 데이터 흐름 태스크가 있을 수 있습니다. `DelayValidation` 패키지 수준 또는 개별 태스크와 패키지를 포함 하는 컨테이너 수준의 속성을 설정할 수 있습니다. 일반적으로이 속성을 설정 두어야 `True` 런타임에 동일한 유효성 검사 오류를 방지 하기 위해 패키지를 배포할 때는 동일한 패키지 요소에서.  
+-   **런타임까지 유효하지 않은 패키지 요소에 대해 DelayValidation 속성을 구성합니다**. 디자인 타임에는 구성이 유효하지 않은 패키지 요소의 `DelayValidation`을 `True`로 설정하여 유효성 검사 오류를 방지할 수 있습니다. 예를 들어 런타임에 SQL 실행 작업을 통해 테이블이 만들어지기 전까지는 존재하지 않는 대상 테이블을 사용하는 데이터 흐름 태스크가 있을 수 있습니다. `DelayValidation` 속성은 패키지 수준 또는 패키지에 포함된 개별 태스크 및 컨테이너 수준에서 설정할 수 있습니다. 일반적으로 패키지를 배포할 때는 동일한 패키지 요소에서 이 속성을 `True`로 설정해야 런타임에 동일한 유효성 검사 오류를 방지할 수 있습니다.  
   
-     `DelayValidation` 속성은 데이터 흐름 태스크에 개별 데이터에는 없지만 흐름 구성 요소입니다. 개별 데이터 흐름 구성 요소의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 속성을 `false`로 설정하면 비슷한 효과를 얻을 수 있습니다. 그러나이 속성의 값이 `false`, 구성 요소는 외부 데이터 원본의 메타 데이터 변경 내용을 인식 하지 못합니다.  
+     `DelayValidation` 속성은 데이터 흐름 태스크에만 설정할 수 있고 개별 데이터 흐름 구성 요소에는 설정할 수 없습니다. 개별 데이터 흐름 구성 요소의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 속성을 `false`로 설정하면 비슷한 효과를 얻을 수 있습니다. 그러나 이 속성 값이 `false`이면 구성 요소에서 외부 데이터 원본의 메타데이터에 대한 변경 내용을 인식하지 못하게 됩니다.  
   
  유효성 검사가 발생할 때 패키지에서 사용하는 데이터베이스 개체가 잠기면 유효성 검사 프로세스가 응답하지 않을 수 있습니다. 이 경우 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너도 응답하지 않습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 연관된 세션을 닫으면 유효성 검사를 다시 시작할 수 있습니다. 또한 이 섹션에서 설명하는 설정을 사용하면 이러한 문제를 방지할 수 있습니다.  
   

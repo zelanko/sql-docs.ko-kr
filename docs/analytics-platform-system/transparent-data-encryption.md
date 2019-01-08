@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c29383e02746ac3abb60a15d2d0368483d2ee13e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ea15a8fc5eaf066b5a64cf73192f64dd0078434e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699458"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534087"
 ---
 # <a name="transparent-data-encryption"></a>Transparent Data Encryption
 보안 시스템 디자인, 중요한 자산 암호화 및 데이터베이스 서버에 대한 방화벽 구축과 같은 데이터베이스의 보안을 설정하기 위해 여러 가지 예방 조치를 취할 수 있습니다. 그러나 물리적 미디어 (예: 드라이브 또는 백업 테이프)가 도난 된 경우 악의적인 사용자만 복원 또는 데이터베이스를 연결 하 고 수 데이터를 찾아볼 합니다. 한 가지 해결 방법은 데이터베이스의 중요한 데이터를 암호화하고 인증서와 함께 데이터를 암호화하는 데 사용된 키를 보호하는 것입니다. 이 경우 키가 없으면 누구도 데이터를 사용할 수 없지만 이러한 보호 방법은 사전에 계획해야 합니다.  
@@ -56,7 +56,7 @@ TDE를 사용하려면 다음 단계를 수행합니다. TDE를 지원 하려면
   
 다음 예제에서는 암호화 된 `AdventureWorksPDW2012` 이라는 인증서를 사용 하 여 데이터베이스 `MyServerCert`SQL Server PDW에서 생성 합니다.  
   
-**: 첫 번째 SQL Server PDW에서 TDE를 사용 합니다.** 이 작업은 한 번만 필요 합니다.  
+**첫 번째: SQL Server PDW에서 TDE를 사용 하도록 설정 합니다.** 이 작업은 한 번만 필요 합니다.  
   
 ```sql  
 USE master;  
@@ -93,7 +93,7 @@ BACKUP CERTIFICATE MyServerCert
 GO  
 ```  
   
-**마지막: DEK 만들기 및 사용자 데이터베이스를 암호화 하려면 ALTER DATABASE를 사용 합니다.** 이 작업은 TDE로 보호 되는 각 데이터베이스에 대해 반복 됩니다.  
+**마지막: DEK를 만들고 ALTER DATABASE를 사용 하 여 사용자 데이터베이스를 암호화 합니다.** 이 작업은 TDE로 보호 되는 각 데이터베이스에 대해 반복 됩니다.  
   
 ```sql  
 USE AdventureWorksPDW2012;  
@@ -238,11 +238,11 @@ DMK를 업그레이드 또는 대체 VM 수행한 어플라이언스에서 있�
   
 업그레이드 동작의 예입니다. 대체 `**********` DMK 암호를 사용 하 여 합니다.  
   
-`setup.exe /Action=ProvisionUpgrade … DMKPassword='**********'  `  
+`setup.exe /Action=ProvisionUpgrade ... DMKPassword='**********'  `  
   
 가상 컴퓨터를 교체할 수 작업의 예입니다.  
   
-`setup.exe /Action=ReplaceVM … DMKPassword='**********'  `  
+`setup.exe /Action=ReplaceVM ... DMKPassword='**********'  `  
   
 DB 사용자는 암호화 되 고 DMK 암호를 지정 하지 않은 경우에 업그레이드 하는 동안 업그레이드 작업이 실패 합니다. 바꾸기를 하는 동안 DMK 있으면 올바른 암호를 제공 하지 않으면 작업이 건너뜁니다 DMK 복구 단계입니다. 작업에는 추가 단계가 필요한 지를 나타내기 위해 끝에 오류가 보고 됩니다 있지만 바꾸기 VM 작업 끝에 다른 단계를 모두 완료 됩니다. 설치 로그에서 (에 있는 **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\< 타임 스탬프 > \Detail-Setup**), 후반부에 다음 경고가 표시 됩니다.  
   
@@ -277,7 +277,7 @@ TDE의 성능 영향을 해야 하는 데이터, 저장 하는 방법 및 SQL Se
 -   [SQL Server 및 데이터베이스 암호화 키](../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
 
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
 [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
 [마스터 키 만들기](../t-sql/statements/create-master-key-transact-sql.md)  
 [CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)  

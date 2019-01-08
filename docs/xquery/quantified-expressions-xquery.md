@@ -23,12 +23,12 @@ ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 761e0c000666fc413c060bf4f01ea24b307d3fbd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 413a9519cbfcb036c5e7242889c4eaf4ec89d413
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665402"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515391"
 ---
 # <a name="quantified-expressions-xquery"></a>정량화된 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51665402"
  XQuery는 다음 형식의 정량화된 식을 지원합니다.  
   
 ```  
-( some | every ) <variable> in <Expression> (,…) satisfies <Expression>  
+( some | every ) <variable> in <Expression> (,...) satisfies <Expression>  
 ```  
   
  쿼리에 이러한 식을 사용하여 하나 이상의 시퀀스에서 존재 또는 범용 정량화를 명시적으로 식에 적용할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 `satisfies` 절에 있는 식의 결과가 노드 시퀀스, 빈 시퀀스 또는 부울 값 중 하나여야 합니다. 식의 결과에 알맞은 부울 값이 정량화에 사용됩니다. 사용 하는 존재 정량화 **일부** 식에서 결과가 True 수량자로 바인딩된 값 중 하나 이상 있으면 True를 반환 합니다. 사용 하는 범용 정량화 **마다** 수량자로 바인딩된 모든 값에 대해 True 여야 합니다.  

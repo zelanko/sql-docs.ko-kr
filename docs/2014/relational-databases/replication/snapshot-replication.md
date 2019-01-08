@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshot replication [SQL Server], about snapshot replication
@@ -14,12 +13,12 @@ ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: decf1ba66c13e5f0e68dd8e7f897287ec2c1d4b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: ffc03bf3f50c629dc53913959dc01b0a6443edef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062243"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787565"
 ---
 # <a name="snapshot-replication"></a>스냅숏 복제
   스냅숏 복제는 특정 시간에 나타나는 그대로 데이터를 배포하고 데이터 업데이트를 모니터링하지 않습니다. 동기화가 일어나면 전체 스냅숏이 생성되어 구독자에게 전송됩니다.  

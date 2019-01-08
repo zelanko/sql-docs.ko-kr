@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configdistwizard.pubproperties.subscribers.f1
@@ -15,12 +14,12 @@ ms.assetid: 552d2bd6-13f9-4876-b8f1-89adb242ef70
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2f217aee1d3453a1672114c4899d07202ca16db1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a55876343edf409a82cbe2ff4b48c21e26e48839
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130223"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786165"
 ---
 # <a name="publisher-properties---publisher-subscribers"></a>게시자 속성 - 게시자, 구독자
   **게시자 속성** 대화 상자의 **구독자** 페이지는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 실행하는 게시자에 사용됩니다. 이 페이지를 사용하여 구독자가 이 게시자의 게시에서 데이터를 받도록 설정할 수 있습니다. 구독자가 이 게시자에서 데이터를 받도록 설정해도 이 게시자의 게시에 대한 구독이 생성되지 않습니다. 구독을 만들려면 새 구독 마법사를 사용해야 합니다.  

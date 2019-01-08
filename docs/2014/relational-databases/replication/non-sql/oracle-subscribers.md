@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [SQL Server replication], non-SQL Server Subscribers
@@ -17,12 +16,12 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8a11cdbd373a173fd2709b07ccb860484c0f59eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145153"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786372"
 ---
 # <a name="oracle-subscribers"></a>Oracle 구독자
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 Oracle에서 제공하는 Oracle OLE DB 공급자를 통해 Oracle에 밀어넣기 구독을 지원합니다.  
@@ -86,7 +85,7 @@ ms.locfileid: "48145153"
   
     -   빈 문자열이 게시된 테이블에 열 값으로 삽입되지 않았는지 확인합니다.  
   
-    -   오류에 대한 알림을 배포 에이전트 기록 로그에 받은 다음 계속 처리할 수 있으면 배포 에이전트에 **–SkipErrors** 매개 변수를 사용합니다. Oracle 오류 코드 1400(**-SkipErrors1400**)을 지정합니다.  
+    -   오류에 대한 알림을 배포 에이전트 기록 로그에 받은 다음, 계속 처리하도록 허용되는 경우 배포 에이전트에 **–SkipErrors** 매개 변수를 사용합니다. Oracle 오류 코드 1400(**-SkipErrors1400**)을 지정합니다.  
   
     -   빈 문자열과 연결된 가능성이 있는 모든 문자 열에서 NOT NULL 특성을 제거하여 생성된 테이블 생성 스크립트를 수정하고 @creation_script sp_addarticle [의](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)매개 변수를 사용하여 수정된 스크립트를 아티클에 대한 사용자 지정 생성 스크립트로 제공합니다.  
   

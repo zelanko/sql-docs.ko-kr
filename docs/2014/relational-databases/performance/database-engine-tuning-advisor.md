@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 f1_keywords:
 - sql12.dta.general.f1
@@ -13,14 +12,14 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8325e326ebcbf23a57e2362aa792b3076ec23922
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: b021cb21df1b3c27e7f43c3ef92650eda4c2cf86
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991176"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797485"
 ---
-# <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
+# <a name="database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] DTA(데이터베이스 엔진 튜닝 관리자)는 데이터베이스를 분석하고 쿼리 성능을 최적화하는 데 필요한 사항을 권장합니다. 데이터베이스 엔진 튜닝 관리자를 사용하면 데이터베이스 구조나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 내부 구조를 전문적으로 파악하지 못해도 인덱스, 인덱싱된 뷰 또는 테이블 파티션의 최적 집합을 선택 및 작성할 수 있습니다. DTA를 사용하여 다음과 같은 태스크를 수행할 수 있습니다.  
   
 -   특정 문제 쿼리의 성능 문제 해결  
@@ -65,7 +64,7 @@ ms.locfileid: "49991176"
  작업을 지정하고 다양한 튜닝 옵션을 선택할 수 있는 사용하기 쉬운 인터페이스입니다.  
   
  **dta** 유틸리티  
- 데이터베이스 엔진 튜닝 관리자의 명령 프롬프트 버전입니다. **dta** 유틸리티를 통해 응용 프로그램과 스크립트에서 데이터베이스 엔진 튜닝 관리자의 기능을 사용할 수 있습니다.  
+ 데이터베이스 엔진 튜닝 관리자의 명령 프롬프트 버전입니다. **dta** 유틸리티를 통해 애플리케이션과 스크립트에서 데이터베이스 엔진 튜닝 관리자의 기능을 사용할 수 있습니다.  
   
  작업  
  튜닝할 데이터베이스의 대표적인 작업이 포함된 Transact-SQL 스크립트 파일, 추적 파일 또는 추적 테이블입니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]이상에서는 계획 캐시를 작업으로 지정할 수 있습니다.  

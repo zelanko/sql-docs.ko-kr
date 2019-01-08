@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exportcolumntrans.f1
@@ -20,12 +19,12 @@ ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cc32abc07dd76137e735692a4ed1e1f392e9ae29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 790e7b0aeb6ec7ec73c6eed8f3dc8dd67e0b28ce
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205126"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767505"
 ---
 # <a name="export-column-transformation"></a>열 내보내기 변환
   열 내보내기 변환은 데이터 흐름에서 데이터를 읽어 파일에 삽입합니다. 예를 들어 데이터 흐름에 각 제품 사진과 같은 제품 정보가 포함되어 있으면 열 내보내기 변환을 사용하여 이미지를 파일에 저장할 수 있습니다.  
@@ -56,7 +55,7 @@ ms.locfileid: "48205126"
     > [!NOTE]  
     >  기존 파일에 데이터를 추가하지 않으며 데이터 형식이 DT_NTEXT인 경우에만 BOM이 기록됩니다.  
   
- 이 변환은 입력 열의 쌍을 사용합니다. 그 중 하나에는 파일 이름이 있고 다른 하나에는 데이터가 있습니다. 데이터 집합의 각 행에서 서로 다른 파일을 지정할 수 있습니다. 변환이 행을 처리하면 지정한 파일에 데이터가 삽입됩니다. 런타임 시 파일이 존재하지 않을 경우 이 변환은 새로 파일을 만든 후 데이터를 해당 파일에 씁니다. 기록될 데이터 형식은 DT_TEXT, DT_NTEXT 또는 DT_IMAGE여야 합니다. 자세한 내용은 [Integration Services Data Types](../integration-services-data-types.md)을 참조하세요.  
+ 이 변환은 입력 열의 쌍을 사용합니다. 두 열 중 하나에는 파일 이름이 있고 다른 열에는 데이터가 포함되어 있습니다. 데이터 집합의 각 행에서 서로 다른 파일을 지정할 수 있습니다. 변환이 행을 처리하면 지정한 파일에 데이터가 삽입됩니다. 런타임 시 파일이 존재하지 않을 경우 이 변환은 새로 파일을 만든 후 데이터를 해당 파일에 씁니다. 기록될 데이터 형식은 DT_TEXT, DT_NTEXT 또는 DT_IMAGE여야 합니다. 자세한 내용은 [Integration Services Data Types](../integration-services-data-types.md)을 참조하세요.  
   
  이 변환에는 하나의 입력, 하나의 출력 및 하나의 오류 출력이 있습니다.  
   

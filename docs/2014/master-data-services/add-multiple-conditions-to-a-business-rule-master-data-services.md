@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], multiple conditions
@@ -13,12 +12,12 @@ ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ef62942c8dd9e2bf47522b4fa17f9ecfd3011561
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2f9f8114186aa3593f2218037add9a0611a8fe23
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228549"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792957"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>비즈니스 규칙에 여러 조건 추가(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 더 복잡한 규칙을 원할 경우 여러 **AND** 또는 **OR** 조건을 비즈니스 규칙에 추가합니다.  
@@ -73,8 +72,8 @@ ms.locfileid: "48228549"
     >  조건을 삭제 하 고 조건의 이름을 클릭 합니다 **조건 편집** 창 클릭 **삭제 항목**합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [비즈니스 규칙 &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
+ [비즈니스 규칙&#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
  [비즈니스 규칙 이름 변경&#40;Master Data Services&#41;](../../2014/master-data-services/change-a-business-rule-name-master-data-services.md)   
- [알림을 보내도록 비즈니스 규칙 구성 &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
+ [알림을 보내도록 비즈니스 규칙 구성&#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
   
   

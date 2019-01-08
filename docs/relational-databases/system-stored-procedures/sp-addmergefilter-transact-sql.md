@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergefilter
@@ -17,12 +16,12 @@ ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72d29fca659426075f4c7ee07f82ac6507fc0709
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31ada2bfb184e24011ee91dde82fc9abfb319320
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595212"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777915"
 ---
 # <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +46,16 @@ sp_addmergefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=** ] **'***게시***'**  
+ [  **@publication=** ] **'**_게시_**'**  
  병합 필터가 추가될 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@article=** ] **'***문서***'**  
+ [  **@article=** ] **'**_문서_**'**  
  병합 필터가 추가될 아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@filtername=** ] **'***filtername***'**  
+ [  **@filtername=** ] **'**_filtername_**'**  
  필터의 이름입니다. *filtername* 필수 매개 변수입니다. *filtername*됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@join_articlename=** ] **'***join_articlename***'**  
+ [  **@join_articlename=** ] **'**_join_articlename_**'**  
  자식 문서를 지정 하는 부모 아티클입니다 *문서*에서 지정한 조인 절을 사용 하 여 가입 되어 있어야 *join_filterclause*충족 하는 자식 아티클의 행을 결정 하기 위해 병합 필터의 필터 조건입니다. *join_articlename* 됩니다 **sysname**, 기본값은 없습니다. 이 문서에 지정 된 게시에 있어야 *게시*합니다.  
   
  [  **@join_filterclause=** ] *join_filterclause*  
@@ -117,7 +116,7 @@ sp_addmergefilter [ @publication = ] 'publication'
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_addmergefilter**합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [병합 아티클 사이에서 조인 필터 정의 및 수정](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [Join Filters](../../relational-databases/replication/merge/join-filters.md)   

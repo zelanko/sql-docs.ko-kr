@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d8159af8ac4b3c9bf21dcdc68a0cfb30c46e33e5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8e061269ebf864a93d6dde50455627cf8e2ea780
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040311"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514247"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +50,7 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
   
 -   y = 학습 사례 수를 기반으로 하는 사례의 로그 유사도로 계산되는 한계 사례가 나타날 가능성  
   
--   Z = Exp( log(x) – Log(Y))  
+-   Z Exp (log(x)-Log(Y)) =  
   
  정규화 = (z / (1 + z))  
   
@@ -81,7 +81,7 @@ NATURAL PREDICTION JOIN
  이러한 결과 간의 차이는 정규화의 효과를 보여 줍니다. 원시 값입니다 **CaseLikelihood** 제안 사례의 확률이 20%는; 그러나 결과 정규화 하는 경우이 드러납니다 사례의 가능성이 매우 낮습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  

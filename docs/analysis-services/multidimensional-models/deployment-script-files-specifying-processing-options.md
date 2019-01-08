@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 945332a0d0e5138ad3422a3db1b88dfb21e85f2f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 37ca9200dc142f1a1bb2f673b3b772644385d8ba
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002215"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537359"
 ---
 # <a name="deployment-script-files---specifying-processing-options"></a>배포 스크립트 파일-처리 옵션 지정
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "38002215"
   
     -   전체 처리  
   
-    -   InclusionThresholdSetting  
+    -   없음  
   
 -   **쓰기 저장(writeback) 테이블 옵션** 쓰기 저장(writeback)이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 설정된 경우 이 설정은 쓰기 저장(writeback)의 처리 방법을 정의합니다. 3가지 쓰기 저장(writeback) 테이블 옵션은 다음과 같습니다.  
   
@@ -55,15 +55,15 @@ ms.locfileid: "38002215"
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사를 대화형으로 실행합니다. **처리 옵션** 페이지에서 배포할 프로젝트의 처리 옵션을 지정합니다.  
   
-     —또는—  
+     -또는-  
   
 -   명령 프롬프트에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사를 실행하여 응답 파일 모드에서 마법사를 실행하도록 설정합니다. 응답 파일 모드에 대한 자세한 내용은 [Running the Analysis Services Deployment Wizard](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md)을 참조하십시오.  
   
-     —또는—  
+     -또는-  
   
 -   수정 된 \< *프로젝트 이름*> 텍스트 편집기를 사용 하 여.deploymentoptions 파일입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [설치 대상 지정](../../analysis-services/multidimensional-models/deployment-script-files-specifying-the-installation-target.md)   
  [파티션 및 역할 배포 옵션 지정](../../analysis-services/multidimensional-models/deployment-script-files-partition-and-role-deployment-options.md)   
  [솔루션 배포를 위한 구성 설정 지정](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  

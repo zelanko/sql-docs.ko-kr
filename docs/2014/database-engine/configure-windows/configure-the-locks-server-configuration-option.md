@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - locks option [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b99e5ef3ac5065695d23f5a3c627c32328e293b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 7ede6cfa244f703143ae0ad265982c014cf5d7a8
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060323"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639984"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>locks 서버 구성 옵션 구성
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] locks [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **locks** 옵션은 사용 가능한 최대 잠금 수를 설정하여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 잠금에 사용하는 메모리 용량을 제한합니다. 기본 설정은 0이며 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 시스템 요구 사항의 변화를 기준으로 동적으로 잠금 구조를 할당하거나 할당 취소할 수 있습니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "48060323"
   
 -   **후속 작업:**  [잠금 옵션을 구성한 후](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
@@ -98,7 +97,7 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 잠금 옵션을 구성한 후  
+##  <a name="FollowUp"></a> 후속편: 잠금 옵션을 구성한 후  
  설정을 적용하려면 서버를 다시 시작해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  

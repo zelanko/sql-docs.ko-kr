@@ -10,12 +10,12 @@ ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d5b17e7b054552c96c6fb3ff861c22b4e87e394f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b927d9116424f1b471dc675189548e3c6a459569
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674831"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531765"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>MySQL용 SSMA의 새로운 기능(MySQLToSql)
 이 문서에서는 SSMA MySQL 각 릴리스의 변경 내용 나열 합니다. 
@@ -189,7 +189,7 @@ MySQL 용 SSMA의 2010 년 7 월 릴리스에서 다음과 같은 기능이 포�
   
 4.  **개체 변환 기능 개선:**  
   
-    -   MySQL 메타 베이스 개체 – 절차, 함수, 뷰, 트리거 및 문을 변환 합니다.  
+    -   프로시저, 함수, 뷰, 트리거 및 문을 MySQL 메타 베이스 개체의 변환입니다.  
     -   테이블의 공간 데이터 형식에 대 한 제한적으로 지원 합니다.  
     -   SQL Server 저장 프로시저에 MySQL 함수를 변환 하는 옵션  
     -   개체 변환 하는 동안 SQL 모드 및 문자 집합 매핑을 적용 하는 옵션  
@@ -210,4 +210,4 @@ MySQL 용 SSMA의 2010 년 1 월 릴리스에서 초기 릴리스가 였습니�
   
 -   둘 다로 마이그레이션에 대 한 지원이 추가 되었습니다 온-프레미스 SQL Server 및 Azure SQL입니다.  
   
--   **기능 스냅숏:** 스키마 및 데이터 마이그레이션의 MySQL 테이블/인덱스/제약 조건입니다.
+-   **스냅숏 기능:** 스키마 및 데이터 마이그레이션의 MySQL 테이블/인덱스/제약 조건입니다.

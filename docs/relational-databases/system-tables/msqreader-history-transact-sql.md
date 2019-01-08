@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - MSqreader_history
@@ -19,12 +18,12 @@ ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 44751a831439c2443cf46da02c99363394a12b96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1d179cbef19e652472714b8010edcaeb12ebcc6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831387"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779695"
 ---
 # <a name="msqreaderhistory-transact-sql"></a>MSqreader_history(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47831387"
 |**error_id**|**int**|0이 아닌 경우 숫자 나타내는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 메시지입니다.|  
 |**timestamp**|**timestamp**|테이블의 타임스탬프 열입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

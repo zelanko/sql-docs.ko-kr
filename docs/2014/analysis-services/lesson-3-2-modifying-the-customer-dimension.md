@@ -11,12 +11,12 @@ ms.assetid: 5b5aed99-1760-4bc7-b248-52ecb0b97ebc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eb2d3f6ead3482a9f36807883f685eaed4225f29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 55bf692e1b24bb0184f9b126a0bde5c0ee7e0657
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178123"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513273"
 ---
 # <a name="modifying-the-customer-dimension"></a>Customer 차원 수정
   다양한 방법을 통해 큐브에서 차원의 유용성과 기능을 향상시킬 수 있습니다. 이 항목의 태스크에서는 Customer 차원을 수정합니다.  
@@ -106,7 +106,7 @@ ms.locfileid: "48178123"
   
 4.  에 **이름을** 속성 필드에 입력 `Full Name`합니다.  
   
-5.  아래쪽의 **NameColumn** 속성 필드를 클릭한 다음 찾아보기(**…**) 단추를 클릭하여 **이름 열** 대화 상자를 엽니다.  
+5.  클릭 합니다 **NameColumn** 속성 아래에 필드 및 클릭 한 다음 (**...** ) 버튼을 클릭 하 여 **이름 열** 대화 상자.  
   
 6.  선택 `FullName` 맨 아래에 **원본 열** 목록을 연 다음 클릭 **확인**합니다.  
   
@@ -269,6 +269,6 @@ ms.locfileid: "48178123"
  [차원 특성 속성 참조](multidimensional-models/dimension-attribute-properties-reference.md)   
  [차원에서 특성 제거](multidimensional-models/attribute-properties-remove-an-attribute-from-a-dimension.md)   
  [특성 이름을 바꾸려면](multidimensional-models/attribute-properties-rename-an-attribute.md)   
- [데이터 원본 뷰에서 명명 된 계산 정의 &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [데이터 원본 뷰에서 명명된 계산 정의&#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: a1a03ef9-b6e8-4127-bad0-eae261251472
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: cd158f652f198c26ba0a1a489c113a36589fc495
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7fb88b22ae3c1a1ebdee9dc0167169e2cdbc4b3c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700191"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520209"
 ---
 # <a name="managing-backups-oracletosql"></a>백업 관리(OracleToSQL)
 Oracle 백업 관리에서는 백업 및 복원 하기 전에 또는 테스트를 실행 한 후 데이터를 테이블 수 있습니다. 또한 백업 내용을 관리 대화 상자를 사용 하 여 백업 콘텐츠를 관리할 수 있습니다.  

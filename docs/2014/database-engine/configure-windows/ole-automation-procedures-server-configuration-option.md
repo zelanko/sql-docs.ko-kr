@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - Ole Automation Procedures option
@@ -13,17 +12,17 @@ ms.assetid: e8982e05-4984-4406-9760-285e8c028ddf
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d8a01c5bf886006e2f4eb6a352ea7f2a7b43ac29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f00c238dfb32089261c51936b3937b0657c58b08
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056003"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641404"
 ---
 # <a name="ole-automation-procedures-server-configuration-option"></a>Ole Automation Procedures 서버 구성 옵션
   `Ole Automation Procedures` 옵션을 사용하여 OLE Automation 개체가 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 내에서 인스턴스화될 수 있는지 여부를 지정할 수 있습니다. 이 옵션은 정책 기반 관리 또는 **sp_configure** 저장 프로시저를 사용하여 구성할 수도 있습니다. 자세한 내용은 [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)을 참조하세요.  
   
- `Ole Automation Procedures` 옵션은 다음 값으로 설정할 수 있습니다.  
+ `Ole Automation Procedures` 옵션을 다음 값으로 설정할 수 있습니다.  
   
  0  
  OLE Automation Procedures가 해제되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 새 인스턴스에 대한 기본값입니다.  
@@ -59,7 +58,7 @@ GO
 ## <a name="see-also"></a>관련 항목  
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [RECONFIGURE&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
- [노출 영역 구성](../../relational-databases/security/surface-area-configuration.md)   
+ [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)   
  [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

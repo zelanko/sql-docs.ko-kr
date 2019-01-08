@@ -18,12 +18,12 @@ ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 50600dcb20df520dc462ed64fcd11333a53d3a66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3128828bd26e6d2755f30748c23873538b8a7649
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066843"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527720"
 ---
 # <a name="create-statistics"></a>통계 만들기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 테이블 또는 인덱싱된 뷰의 하나 이상의 열에 대한 쿼리 최적화 통계를 만들 수 있습니다. 대부분의 쿼리에서 쿼리 최적화 프로그램은 고품질의 쿼리 계획에 필요한 통계를 이미 생성하므로 경우에 따라서 추가 통계를 만들어야 합니다.  

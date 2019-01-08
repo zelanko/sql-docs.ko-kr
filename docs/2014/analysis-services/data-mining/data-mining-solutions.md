@@ -14,12 +14,12 @@ ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8d37ee863bbc14bbaa3c73a2c5781e080e81ee63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50e6eeb4c2f2a8ba5b1ce6430111586e6e3b8207
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161773"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516548"
 ---
 # <a name="data-mining-solutions"></a>데이터 마이닝 솔루션
   데이터 마이닝 솔루션은 하나 이상의 데이터 마이닝 프로젝트가 포함된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 솔루션입니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48161773"
  [솔루션 연습](#bkmk_Walkthru)  
   
 ##  <a name="bkmk_RelMD"></a> 관계형 마이닝 모델과 다차원 솔루션  
- 데이터 마이닝 솔루션은 다차원 데이터(즉, 기존 큐브)나 순수 관계형 데이터(예: 데이터 웨어하우스의 테이블 및 뷰) 또는 텍스트 파일, Excel 통합 문서 또는 기타 외부 데이터 원본을 기반으로 할 수 있습니다.  
+ 데이터 마이닝 솔루션을 수 다차원 데이터 기반으로-즉, 기존 큐브-테이블 및 뷰는 데이터 웨어하우스에서 같은 순수 관계형 데이터 또는 텍스트 파일에서 Excel 통합 문서 또는 다른 외부 데이터 원본 또는 합니다.  
   
 -   기존 다차원 데이터베이스 솔루션 내에 데이터 마이닝 개체를 만들 수 있습니다.  
   
@@ -79,13 +79,13 @@ ms.locfileid: "48161773"
   
 |태스크|항목|  
 |-----------|------------|  
-|만든 모델을 테스트하고, 학습 데이터의 품질에 대한 유효성을 검사하고, 데이터 마이닝 모델의 정확도를 나타내는 차트를 만듭니다.|[테스트 및 유효성 검사 &#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md)|  
+|만든 모델을 테스트하고, 학습 데이터의 품질에 대한 유효성을 검사하고, 데이터 마이닝 모델의 정확도를 나타내는 차트를 만듭니다.|[테스트 및 유효성 검사&#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md)|  
 |구조 및 관련 모델을 데이터로 채워 모델을 학습합니다. 모델을 새 데이터로 업데이트 및 확장합니다.|[데이터 마이닝 개체 처리](processing-data-mining-objects.md)|  
 |학습 데이터에 필터를 적용하거나, 다른 알고리즘을 선택하거나, 고급 알고리즘 매개 변수를 설정하여 마이닝 모델을 사용자 지정합니다.|[마이닝 모델 및 구조 사용자 지정](customize-mining-models-and-structure.md)|  
-|모델을 학습하는 데 사용되는 데이터에 필터를 적용하여 마이닝 모델을 사용자 지정합니다.|[구조에 마이닝 모델 추가 &#40;Analysis Services-데이터 마이닝&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|모델을 학습하는 데 사용되는 데이터에 필터를 적용하여 마이닝 모델을 사용자 지정합니다.|[구조에 마이닝 모델 추가&#40;Analysis Services - 데이터 마이닝&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |데이터 마이닝 솔루션을 업데이트하고 관리합니다.|Link TBD|  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 자습서 &#40;Analysis Services&#41;](../data-mining-tutorials-analysis-services.md)  
+ [데이터 마이닝 자습서&#40;Analysis Services&#41;](../data-mining-tutorials-analysis-services.md)  
   
   

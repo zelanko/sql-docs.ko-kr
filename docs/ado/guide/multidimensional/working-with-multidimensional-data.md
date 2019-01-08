@@ -13,12 +13,12 @@ ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb1f29a3037cafdddc14973f77d7bb3d8c52f296
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: a284254c058eae0362fe23860e1b406a97f0bf49
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350277"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507255"
 ---
 # <a name="working-with-multidimensional-data"></a>다차원 데이터 작업
 A *cellset* 다차원 데이터에 대 한 쿼리의 결과입니다. 축, 일반적으로 최대 네 개의 축 및 일반적으로 2 또는 3의 컬렉션인 이루어져 있습니다. *축* 찾기 또는 큐브의 특정 값을 필터링 하는 데 사용 되는 하나 이상의 차원에서 멤버의 컬렉션입니다.  
@@ -50,19 +50,19 @@ A *cellset* 다차원 데이터에 대 한 쿼리의 결과입니다. 축, 일�
   
  이 셀 집합의 특징은 다음과 같습니다.  
   
--   축 차원의: 분기, 영업 Geography  
+-   축 크기: 분기를 영업 지역  
   
--   차원을 필터링: 측정값, 년 제품  
+-   차원을 필터: 측정값을 년 제품  
   
--   두 개의 축: 열 (x, 또는 축 0) 및 행 (y, 또는 축 1)  
+-   두 개의 축: (X, 또는 축 0) 하는 열 및 행 (y, 또는 축 1)  
   
 -   x 축: 두 중첩 된 판매 직원 및 지리 차원  
   
 -   y 축: 분기 차원  
   
- X 축에는 두 개의 중첩 된 차원에: 영업 사원 및 지리적 위치입니다. Geography에서 네 가지 멤버 선택: 시애틀, 보스턴, 미국 남부 및 일본입니다. 판매 직원에서 두 명의 멤버 선택: 여덟 합니다. 총 8 개 위치 (2 * 8 = 4)이이 축에 대해 같은 결과가 산출 됩니다.  
+ X 축에는 두 중첩 된 차원에 있습니다. 판매 직원 및 지리입니다. Geography에서 네 가지 멤버 선택 되어 있습니다. 시애틀, 보스턴, 미국 남부 및 일본입니다. 두 멤버는 판매 직원에서 선택 되어 있습니다. 발렌타인 데이 고 Nash 합니다. 총 8 개 위치 (2 * 8 = 4)이이 축에 대해 같은 결과가 산출 됩니다.  
   
- 각 좌표 두 멤버가 포함 된 위치로 표시 됩니다-영업 직원 차원과 Geography 차원에서 다른에서:  
+ 각 좌표는 멤버가 두-영업 직원 차원에서 및 Geography 차원에서 다른 위치로 표시 됩니다.  
   
 ```console
 (Valentine, Seattle), (Valentine, Boston), (Valentine, USA_North),  
@@ -76,7 +76,7 @@ A *cellset* 다차원 데이터에 대 한 쿼리의 결과입니다. 축, 일�
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   
- 셀, 셀, 축 및 위치는 모두 표시 ADO MD에서 해당 개체에서: [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [셀](../../../ado/reference/ado-md-api/cell-object-ado-md.md)를 [축](../../../ado/reference/ado-md-api/axis-object-ado-md.md), 및 [위치](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
+ 셀, 셀, 축 및 위치는 모두 표시 ADO MD에서 해당 개체에서: [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [셀](../../../ado/reference/ado-md-api/cell-object-ado-md.md)를 [축](../../../ado/reference/ado-md-api/axis-object-ado-md.md), 및 [위치](../../../ado/reference/ado-md-api/position-object-ado-md.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [ADO MD 개체 모델](../../../ado/reference/ado-md-api/ado-md-object-model.md)   

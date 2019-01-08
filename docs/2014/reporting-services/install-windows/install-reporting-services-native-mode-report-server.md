@@ -15,12 +15,12 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9bfbae24063bfa3daa7fbafd1004125e826f6886
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
-ms.translationtype: HT
+ms.openlocfilehash: 39f3b68f816594d275f48723865c7497f5352fbb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851868"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527718"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Reporting Services 기본 모드 보고서 서버 설치
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 보고서 서버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사 또는 명령줄에서 설치할 수 있습니다. 설치 마법사에서 1) 파일을 설치하고 기본 설정을 사용하여 서버를 구성하거나 2) 파일을 설치하고 설치 마법사에서 서버가 구성되지 않도록 선택할 수 있습니다. 이 항목에서는 설치 프로그램이 보고서 서버 인스턴스를 설치하고 구성하는 *기본 모드용 기본 구성* 을 검토합니다. 설치가 완료되면 보고서 서버가 실행되어 사용할 수 있는 상태가 됩니다. 기본 모드 보고서 서버는 독립 실행형 애플리케이션 서버로 실행됩니다. 기본 모드가 기본 서버 모드입니다.  
@@ -121,7 +121,7 @@ ms.locfileid: "48851868"
   
     -   **Reporting Services - 기본**  
   
-    -   **관리 도구 - 기본**. 관리 도구는 필수 항목이 아니지만 다른 관리 도구를 설치하지 않은 경우 선택하는 것이 좋습니다. 기본 구성 옵션은 작동 하는 보고서 서버 되지만 나중에 구성 옵션을 변경 하는 것이 좋습니다. '내 보고서'와 같은 일부 옵션은 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 통해 관리됩니다.  
+    -   **관리 도구-기본**입니다. 관리 도구는 필수 항목이 아니지만 다른 관리 도구를 설치하지 않은 경우 선택하는 것이 좋습니다. 기본 구성 옵션은 작동 하는 보고서 서버 되지만 나중에 구성 옵션을 변경 하는 것이 좋습니다. ' 내 보고서 '와 같은 일부 옵션을 통해 관리 됩니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
   
      ![기능 선택에서 SSRS 기본 모드 선택](../../../2014/sql-server/install/media/rs-setupfeatureselection-native-withcircles.gif "기능 선택에서 SSRS 기본 모드 선택")  
   

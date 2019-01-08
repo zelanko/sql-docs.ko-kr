@@ -16,12 +16,12 @@ ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16ece0ae1eee2ed1cc944504af87a74609cba0fe
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 25a076118df9f85ff2449c35dc0273db8a499fac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350447"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538165"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft Active Directory 서비스용 Microsoft OLE DB 공급자
 서비스 인터페이스 ADSI (Active Directory) 공급자에는 ADO를 ADSI 통해 다른 유형의 디렉터리 서비스에 연결할 수 있습니다. 그러면 ADO 응용 프로그램 읽기 전용 액세스에는 Microsoft Windows NT 4.0 및 Microsoft Windows 2000 디렉터리 서비스, 모든 LDAP 호환 디렉터리 서비스 및 Novell Directory Services 외에도 있습니다. ADSI 자체는 다른 디렉터리에 새 공급자 제공 액세스의 경우 ADO 응용 프로그램에서 원활 하 게 액세스할 수 있게 됩니다. 공급자 모델에 기반 합니다. ADSI 공급자는 자유 스레드된 및 유니코드를 사용할 수 있습니다.  
@@ -60,12 +60,12 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |*Root*|나타냅니다 합니다 **ADsPath** 검색 (즉, 검색의 루트)를 시작 하는 개체입니다.|  
 |*Assert*|RFC 1960 형식의 검색 필터를 나타냅니다.|  
 |*특성*|쉼표로 구분 된 목록이 반환 될 특성을 나타냅니다.|  
-|*범위*|선택 사항입니다. A **문자열** 검색의 범위를 지정 하는 합니다. 다음 중 하나일 수 있습니다.<br /><br /> -기본-기본 개체 (검색의 루트)를 검색 합니다.<br />-OneLevel-수준이 하나만 검색 합니다.<br />-하위 트리-전체 하위 트리를 검색 합니다.|  
+|*범위*|(선택 사항) A **문자열** 검색의 범위를 지정 하는 합니다. 다음 중 하나일 수 있습니다.<br /><br /> -기본-기본 개체 (검색의 루트)만 검색할 수 있습니다.<br />-OneLevel-수준이 하나만 검색 합니다.<br />-하위 트리-전체 하위 트리를 검색 합니다.|  
   
  이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
@@ -121,20 +121,20 @@ objectClass='user' AND objectCategory='Person'"
 |[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|아니요|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|아니요|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|아니요|  
-|[복제](../../../ado/reference/ado-api/clone-method-ado.md)|예|  
-|[닫기](../../../ado/reference/ado-api/close-method-ado.md)|예|  
+|[복제](../../../ado/reference/ado-api/clone-method-ado.md)|사용자 계정 컨트롤|  
+|[닫기](../../../ado/reference/ado-api/close-method-ado.md)|사용자 계정 컨트롤|  
 |[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|아니요|  
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|예|  
-|[이동](../../../ado/reference/ado-api/move-method-ado.md)|예|  
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|  
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|  
-|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|  
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|  
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|예|  
-|[파일](../../../ado/reference/ado-api/open-method-ado-recordset.md)|예|  
-|[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|예|  
-|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|예|  
-|[지원](../../../ado/reference/ado-api/supports-method.md)|예|  
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|사용자 계정 컨트롤|  
+|[이동](../../../ado/reference/ado-api/move-method-ado.md)|사용자 계정 컨트롤|  
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|사용자 계정 컨트롤|  
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|사용자 계정 컨트롤|  
+|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|사용자 계정 컨트롤|  
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|사용자 계정 컨트롤|  
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|사용자 계정 컨트롤|  
+|[파일](../../../ado/reference/ado-api/open-method-ado-recordset.md)|사용자 계정 컨트롤|  
+|[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|사용자 계정 컨트롤|  
+|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|사용자 계정 컨트롤|  
+|[지원](../../../ado/reference/ado-api/supports-method.md)|사용자 계정 컨트롤|  
 |[Update](../../../ado/reference/ado-api/update-method.md)|아니요|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|아니요|  
   

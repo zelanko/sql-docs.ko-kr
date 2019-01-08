@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80aa9ae1fd19f9f7ed0e90436604095f091ca781
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a03e78298bc2bea8d0c6bf33484dbda28a2d5319
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618337"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511144"
 ---
 # <a name="using-annotations-in-xsd-schemas-sqlxml-40"></a>XSD 스키마에 주석 사용(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47618337"
   
  주석을 지정하지 않으면 기본 매핑이 수행됩니다. 기본적으로 복합 유형의 XSD 요소는 지정된 데이터베이스의 테이블(뷰) 이름에 매핑되며 단순 유형의 요소 또는 특성은 같은 이름의 열에 매핑됩니다.  
   
- XSD 스키마는 간단히 말해 관계형 데이터의 XML 뷰이므로 이러한 주석을 사용하면 XML의 계층 관계를 지정하여 데이터베이스의 관계를 나타낼 수 있습니다.  
+ 또한 이러한 주석은 XSD 스키마는 관계형 데이터의 XML 뷰 단순히에서 XML-따라서는 데이터베이스의 관계를 나타내는 계층 관계를 지정 하려면 사용할 수 있습니다.  
   
  이 섹션에서는 XSD 스키마에서 사용할 수 있는 주석에 대해 설명하고 사용 예를 제공합니다.  
   

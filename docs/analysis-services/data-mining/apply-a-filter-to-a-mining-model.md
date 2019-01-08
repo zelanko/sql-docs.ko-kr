@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a3e192718ed0e1c3597f4e0f76c951a96530c6c7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5430aa0125e621a574d8fb9cc6b28f6b73794b46
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014600"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519257"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>마이닝 모델에 필터 적용
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -81,7 +81,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 ### <a name="to-add-a-filter-on-the-nested-table-in-a-mining-model"></a>마이닝 모델의 중첩 테이블에 필터를 추가하려면  
   
-1.  에  **\<이름 > 모델 필터** 대화 상자에서 아래 표의 빈 행을 클릭 **마이닝 구조 열**합니다.  
+1.  에  **\<이름 > 모델 필터** 대화 상자에서 아래 표의 빈 행 **마이닝 구조 열**합니다.  
   
 2.  드롭다운 목록에서 중첩 테이블 이름을 선택합니다.  
   
@@ -91,9 +91,9 @@ WHERE [Model] <> 'Water Bottle' )
   
      사례 테이블에서 중첩 테이블의 특정 값을 포함하는 사례만 허용하도록 지정했으므로 이러한 조건만 **모델 필터** 대화 상자의 중첩 테이블에서 사용할 수 있습니다. 다음 단계에서는 중첩 테이블의 조건에 대한 값을 설정합니다.  
   
-4.  **값** 상자를 클릭한 다음 **(…)** 단추를 클릭하여 식을 작성합니다.  
+4.  클릭 합니다 **값** 상자를 선택한 다음 클릭는 **(...)**  식을 작성 하려면 식 단추입니다.  
   
-     **\<이름 > 필터** 대화 상자가 열립니다. 이 대화 상자에서는 현재 테이블의 조건만 설정할 수 있습니다. 이 사례에서 현재 테이블은 중첩 테이블입니다.  
+     합니다  **\<이름 > 필터** 대화 상자가 열립니다. 이 대화 상자에서는 현재 테이블의 조건만 설정할 수 있습니다. 이 사례에서 현재 테이블은 중첩 테이블입니다.  
   
 5.  **마이닝 구조 열** 상자를 클릭하고 중첩 테이블 열의 드롭다운 목록에서 열 이름을 선택합니다.  
   
@@ -120,7 +120,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
     >  필터 식의 임의 부분을 수동으로 변경하면 표가 비활성화되어 텍스트 편집 모드에서만 필터 식 작업을 수행할 수 있습니다. 표 편집 모드를 복원하려면 해당 필터 식을 지우고 다시 시작해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [마이닝 모델 & #40;에 대 한 필터 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [마이닝 모델에 대한 필터&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
  [마이닝 모델 태스크 및 방법](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [마이닝 모델에서 필터 삭제](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   

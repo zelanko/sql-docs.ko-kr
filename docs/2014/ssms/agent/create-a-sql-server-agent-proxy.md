@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - proxies [SQL Server Agent], creating
@@ -12,12 +12,12 @@ ms.assetid: 142e0c55-a8b9-4669-be49-b9dc602d5988
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef4a623dca8ecdc92753b80438682f12521bfe8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfaba668e4f2328610656db6a61f01960814bff0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108813"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784425"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>SQL Server 에이전트 프록시 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 SQL Server 에이전트 프록시를 만드는 방법에 대해 설명합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "48108813"
   
 ####  <a name="Permissions"></a> Permissions  
   
--   **sysadmin** 고정 서버 역할의 멤버만 프록시 계정을 생성, 수정 또는 삭제할 수 있는 권한을 가집니다. 프록시를 사용하려면 **sysadmin** 고정 서버 역할의 멤버가 아닌 사용자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의** 에이전트 고정 데이터베이스 역할 **SQLAgentUserRole**, **SQLAgentReaderRole**또는 **SQLAgentOperatorRole**중 하나에 추가해야 합니다.  
+-   **sysadmin** 고정 서버 역할의 멤버만 프록시 계정을 생성, 수정 또는 삭제할 수 있는 권한을 가집니다. 멤버가 아닌 사용자의 합니다 **sysadmin** 고정된 서버 역할 중 하나에 추가 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 고정 데이터베이스 역할은 **msdb** 프록시를 사용 하는 데이터베이스: **SQLAgentUserRole**하십시오 **SQLAgentReaderRole**, 또는 **SQLAgentOperatorRole**합니다.  
   
 -   프록시와 자격 증명을 만드는 경우 `ALTER ANY CREDENTIAL` 권한이 필요합니다.  
   

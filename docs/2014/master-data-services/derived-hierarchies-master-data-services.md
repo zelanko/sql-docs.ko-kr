@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - derived hierarchies
@@ -15,12 +14,12 @@ ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c7c8b41b996845d7a0850af989320496ceea6f51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 786c075fa30819c84827bf57ea33a91213ced856
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176483"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801056"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>파생 계층(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 파생 계층은 모델의 엔터티 간에 이미 있는 도메인 기반 특성 관계에서 파생됩니다.  
@@ -71,22 +70,22 @@ ms.locfileid: "48176483"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|새 파생 계층을 만듭니다.|[파생된 계층을 만들려면 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
-|기존 파생 계층의 수준을 숨기거나 삭제합니다.|[파생된 계층의 수준 숨기기 또는 삭제 &#40;Master Data Services&#41;](../../2014/master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
-|기존 파생 계층의 이름을 변경합니다.|[파생된 계층 이름 변경 &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
-|기존 파생 계층을 삭제합니다.|[파생된 계층 삭제 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
+|새 파생 계층을 만듭니다.|[파생 계층 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
+|기존 파생 계층의 수준을 숨기거나 삭제합니다.|[파생 계층의 수준 숨기기 또는 삭제&#40;Master Data Services&#41;](../../2014/master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
+|기존 파생 계층의 이름을 변경합니다.|[파생 계층 이름 변경&#40;Master Data Services&#41;](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
+|기존 파생 계층을 삭제합니다.|[파생 계층 삭제&#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
 |||  
   
 ## <a name="related-content"></a>관련 내용  
   
--   [도메인 기반 특성 &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
+-   [도메인 기반 특성&#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [명시적 계층 &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
+-   [명시적 계층&#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [재귀 계층 구조 &#40;Master Data Services&#41;](../../2014/master-data-services/recursive-hierarchies-master-data-services.md)  
+-   [재귀 계층 구조&#40;Master Data Services&#41;](../../2014/master-data-services/recursive-hierarchies-master-data-services.md)  
   
--   [명시적 캡이 포함 된 파생 계층 &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
+-   [명시적 캡이 포함된 파생 계층&#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
   
--   [컬렉션 &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
+-   [컬렉션&#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
   

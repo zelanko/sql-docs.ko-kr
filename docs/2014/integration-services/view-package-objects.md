@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, properties
@@ -20,12 +19,12 @@ ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 568773a255c6a1d264544ef540d88fa6afa0d277
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28d082c78aeaff76d314d90351851f745a3cddd8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163253"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786705"
 ---
 # <a name="view-package-objects"></a>패키지 개체 보기
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 **패키지 탐색기** 탭은 패키지에 대한 탐색기 뷰를 제공합니다. 이 뷰에는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 아키텍처의 컨테이너 계층이 표시됩니다. 패키지 컨테이너는 최상위 계층에 있으며, 패키지를 확장하면 패키지에 있는 연결, 실행 개체, 이벤트 처리기, 로그 공급자, 선행 제약 조건 및 변수를 볼 수 있습니다.  
@@ -48,7 +47,7 @@ ms.locfileid: "48163253"
  [Integration Services 태스크](control-flow/integration-services-tasks.md)   
  [Integration Services 컨테이너](control-flow/integration-services-containers.md)   
  [선행 제약 조건](control-flow/precedence-constraints.md)   
- [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)   
+ [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)   
  [Integration Services&#40;SSIS&#41; 이벤트 처리기](integration-services-ssis-event-handlers.md)   
  [Integration Services&#40;SSIS&#41; 로깅](performance/integration-services-ssis-logging.md)  
   

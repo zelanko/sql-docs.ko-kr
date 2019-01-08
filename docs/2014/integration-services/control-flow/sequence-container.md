@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sequencecontainer.f1
@@ -18,17 +17,17 @@ ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: daaec371cae5f224201c7e4660574ec5734c90fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d7c66b78b6e6e8af245b71994c92d505b3f85ef9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183283"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772975"
 ---
 # <a name="sequence-container"></a>시퀀스 컨테이너
   시퀀스 컨테이너는 패키지 제어 흐름의 하위 집합인 제어 흐름을 정의합니다. 시퀀스 컨테이너는 패키지를 여러 개의 별도 제어 흐름으로 그룹화하며, 각 제어 흐름에는 전체 패키지 제어 흐름 내에서 실행되는 하나 이상의 태스크 및 컨테이너가 포함됩니다.  
   
- 시퀀스 컨테이너에는 여러 태스크 외에도 다른 컨테이너를 포함시킬 수 있습니다. 시퀀스 컨테이너에 태스크 및 컨테이너를 추가하는 방법은 패키지에 추가하는 방법과 비슷하며, 태스크 및 컨테이너를 패키지 컨테이너가 아닌 시퀀스 컨테이너로 끌어 온다는 점만 다릅니다. 시퀀스 컨테이너에 두 개 이상의 태스크 또는 컨테이너가 포함된 경우 패키지에서와 같은 방식으로 선행 제약 조건을 사용하여 이를 연결할 수 있습니다. 자세한 내용은 [Precedence Constraints](precedence-constraints.md)을(를) 참조하세요.  
+ 시퀀스 컨테이너에는 여러 태스크 외에도 다른 컨테이너를 포함시킬 수 있습니다. 시퀀스 컨테이너에 태스크 및 컨테이너를 추가하는 방법은 패키지에 추가하는 방법과 비슷하며, 태스크 및 컨테이너를 패키지 컨테이너가 아닌 시퀀스 컨테이너로 끌어 온다는 점만 다릅니다. 시퀀스 컨테이너에 두 개 이상의 태스크 또는 컨테이너가 포함된 경우 패키지에서와 같은 방식으로 선행 제약 조건을 사용하여 이를 연결할 수 있습니다. 자세한 내용은 [Precedence Constraints](precedence-constraints.md)을 참조하세요.  
   
  시퀀스 컨테이너를 사용할 경우 다음과 같은 많은 이점이 있습니다.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "48183283"
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 구성 요소의 속성을 설정하는 방법에 대한 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](../set-the-properties-of-a-task-or-container.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [태스크 또는 컨테이너 제어 흐름에 추가 또는 삭제](add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+ [제어 흐름에서 태스크 또는 컨테이너 추가 또는 삭제](add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [기본 선행 제약 조건을 사용하여 태스크 및 컨테이너 연결](../connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Integration Services 컨테이너](integration-services-containers.md)  
   

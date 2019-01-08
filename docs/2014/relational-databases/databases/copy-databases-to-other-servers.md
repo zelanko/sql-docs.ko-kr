@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
 - servers [SQL Server], copying databases between
@@ -19,12 +18,12 @@ ms.assetid: 978406d6-a3c8-4902-b1f4-4ced75234be5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 21ddb25cf33e450044cd8f058937a1db80426441
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d40c76281b3368505caee55af3def9f7f61f1696
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208930"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789725"
 ---
 # <a name="copy-databases-to-other-servers"></a>데이터베이스를 다른 서버로 복사
   데이터베이스를 한 컴퓨터에서 다른 컴퓨터로 복사하는 기능은 경우에 따라 유용하게 사용됩니다(예: 테스트, 일관성 검사, 소프트웨어 개발, 보고서 실행, 미러 데이터베이스 만들기 또는 원격 분기 작업에서 사용할 수 있도록 데이터베이스 설정 등).  
@@ -40,7 +39,7 @@ ms.locfileid: "48208930"
      전체 데이터베이스를 복사하려면 BACKUP 및 RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용합니다. 일반적으로 데이터베이스의 전체 백업 복원은 여러 가지 이유로 데이터베이스를 한 컴퓨터에서 다른 컴퓨터로 복사하는 데 사용됩니다. 백업 및 복원을 사용하여 데이터베이스를 복사하는 방법은 [백업 및 복원으로 데이터베이스 복사](copy-databases-with-backup-and-restore.md)를 참조하세요.  
   
     > [!NOTE]  
-    >  데이터베이스 미러링에 사용할 미러 데이터베이스를 설정하려면 RESTORE DATABASE *<database_name>* WITH NORECOVERY를 사용하여 데이터베이스를 미러 서버로 복원해야 합니다. 자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)을 사용합니다.  
+    >  데이터베이스 미러링에 사용할 미러 데이터베이스를 설정하려면 RESTORE DATABASE *<database_name>* WITH NORECOVERY를 사용하여 데이터베이스를 미러 서버로 복원해야 합니다. 자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)의 몇 가지 기능에 대한 백업 및 복원 고려 사항에 대해 설명합니다.  
   
 -   스크립트 생성 마법사를 사용하여 데이터베이스 게시  
   

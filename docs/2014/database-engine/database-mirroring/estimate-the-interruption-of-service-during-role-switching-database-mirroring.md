@@ -17,12 +17,12 @@ ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e474e9f8a933fb00a2d06062668ad3af7f64ccfe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4104fd32688abaf379db30a6ecf604a35c557778
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156473"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528229"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>역할 전환 중 서비스 중단 예측(데이터베이스 미러링)
   역할 전환 중에 데이터베이스 미러링의 서비스가 중단되는 시간은 역할 전환의 유형 및 원인에 따라 달라집니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "48156473"
  장애 조치 시간은 주로 이전 미러 서버에서 Redo Queue에 남아 있는 로그를 롤포워드해야 하는 시간과 짧은 추가 시간으로 구성됩니다. 미러 서버에서 로그 레코드를 처리하는 방법은 [데이터베이스 미러링&#40;SQL Server&#41;](database-mirroring-sql-server.md)을 참조하세요. 장애 조치 시간을 계산하는 방법은 이 항목의 뒷부분에서 장애 조치 다시 실행 속도 계산을 참조하십시오.  
   
 > [!IMPORTANT]  
->  인덱스 또는 테이블을 만든 후 변경하는 트랜잭션 중에 장애 조치를 수행하면 평소보다 시간이 오래 걸릴 수 있습니다.  예를 들어 테이블에 대한 BEGIN TRANSACTION, CREATE INDEX 및 SELECT INTO 작업 중에 장애 조치를 수행하면 장애 조치 시간이 늘어날 수 있습니다. 이러한 트랜잭션 중에 증가한 장애 조치 시간은 COMMIT TRANSACTION 또는 ROLLBACK TRANSACTION 문으로 트랜잭션이 완료될 때까지 유지됩니다.  
+>  인덱스 또는 테이블을 만든 후 변경하는 트랜잭션 중에 장애 조치를 수행하면 평소보다 시간이 오래 걸릴 수 있습니다.  예를 들어  테이블에 대한 BEGIN TRANSACTION, CREATE INDEX 및 SELECT INTO 작업 중에 장애 조치를 수행하면 장애 조치 시간이 늘어날 수 있습니다. 이러한 트랜잭션 중에 증가한 장애 조치 시간은 COMMIT TRANSACTION 또는 ROLLBACK TRANSACTION 문으로 트랜잭션이 완료될 때까지 유지됩니다.  
   
 ### <a name="the-redo-queue"></a>Redo Queue  
  데이터베이스를 롤포워드하는 것은 현재 미러 서버에 있는 Redo Queue의 모든 로그 레코드를 적용하는 것입니다. *Redo Queue* 는 미러 서버의 디스크에 기록되었지만 미러 데이터베이스에서 롤포워드되지 않은 로그 레코드로 구성됩니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "48156473"
  데이터베이스의 장애 조치 시간은 미러 서버에서 Redo Queue의 로그를 롤포워드할 수 있는 속도에 따라 달라지며 이 속도는 주로 시스템 하드웨어와 현재 작업에 의해 결정됩니다. 주 데이터베이스의 사용량이 많으므로 주 서버는 미러 서버에서 로그를 롤포워드할 수 있는 시간보다 훨씬 빠르게 로그를 미러 서버로 전달할 수도 있습니다. 이 경우 미러 서버에서 Redo Queue의 로그를 롤포워드하는 동안 장애 조치에 오랜 시간이 걸릴 수 있습니다. Redo Queue의 현재 크기를 확인하려면 데이터베이스 미러링 성능 개체의 **Redo Queue** 카운터를 사용합니다. 자세한 내용은 [SQL Server, Database Mirroring Object](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md)을(를) 참조하세요.  
   
 ### <a name="estimating-the-failover-redo-rate"></a>장애 조치 다시 실행 속도 예측  
- 프로덕션 데이터베이스의 테스트 복사본을 사용하여 로그 레코드를 롤포워드하는 데 필요한 시간( *다시 실행 속도*)을 측정할 수 있습니다.  
+ 프로덕션 데이터베이스의 테스트 복사본을 사용하여 로그 레코드를 롤포워드하는 데 필요한 시간(*다시 실행 속도*)을 측정할 수 있습니다.  
   
  장애 조치 중에 롤포워드 시간을 측정하는 방법은 다시 실행 단계 중에 미러 서버가 사용하는 스레드 수에 따라 결정됩니다. 스레드 수는 다음 경우에 따라 달라집니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48156473"
   
  ![오류 검색 및 장애 조치 시간](../media/dbm-failovauto-time.gif "오류 검색 및 장애 조치 시간")  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터베이스 미러링 운영 모드](database-mirroring-operating-modes.md)   
  [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [데이터베이스 미러링 모니터링&#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)  

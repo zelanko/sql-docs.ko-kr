@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: f683fdc6-0d4c-4793-8143-567616cb2094
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7bb964c435a641afb1fb5ac288d1f341ba45d716
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c8ef9f6a2bcc4fb9b5f78bbc968693d348319e0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147023"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793345"
 ---
 # <a name="data-quality-matching-columns-mds-add-in-for-excel"></a>데이터 품질 일치 열(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 데이터를 일치시킨 후 리본의 **데이터 품질** 그룹에서 **자세한 정보 표시** 를 클릭하여 일치하는 자세한 정보를 제공하는 열을 표시할 수 있습니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "48147023"
 |**SCORE**|그룹의 레코드가 피벗 레코드와 어느 정도나 유사한지를 나타냅니다. 이 점수는 DQS에서 결정합니다. 레코드가 다른 레코드의 피벗 레코드이거나 일치 항목을 찾을 수 없으면 점수가 표시되지 않습니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 품질 일치 MDS 추가 기능에서 Excel에 대 한](data-quality-matching-in-the-mds-add-in-for-excel.md)   
+ [Excel용 MDS 추가 기능의 데이터 품질 일치](data-quality-matching-in-the-mds-add-in-for-excel.md)   
  [유사한 데이터 일치&#40;Excel용 MDS 추가 기능&#41;](match-similar-data-mds-add-in-for-excel.md)   
  [데이터 일치](../../data-quality-services/data-matching.md)  
   

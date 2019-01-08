@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [SQL Server], size
@@ -16,12 +15,12 @@ ms.assetid: 14f4206d-3afa-4ba9-9849-23e81d63306d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7cd528c27ed34c91a076f79e0bfe8b0d1719a4a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 02a34ba1e0f441b665c239d60f6398afa4247102
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069422"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808995"
 ---
 # <a name="increase-the-size-of-a-database"></a>데이터베이스의 크기 늘리기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 데이터베이스 크기를 늘리는 방법에 대해 설명합니다. 기존 데이터 또는 로그 파일의 크기를 늘리거나 데이터베이스에 새 파일을 추가하여 데이터베이스를 확장할 수 있습니다.  
@@ -63,7 +62,7 @@ ms.locfileid: "48069422"
   
 4.  기존 파일의 크기를 늘리려면 파일의 **처음 크기(MB)** 열의 값을 늘립니다. 데이터베이스 크기는 최소 1MB 단위로 늘려야 합니다.  
   
-5.  새 파일을 추가하여 데이터베이스 크기를 늘리려면 **추가** 를 클릭한 다음 새 파일에 대한 값을 입력합니다. 자세한 내용은 [Add Data or Log Files to a Database](add-data-or-log-files-to-a-database.md)을 참조하세요.  
+5.  새 파일을 추가하여 데이터베이스 크기를 늘리려면 **추가** 를 클릭한 다음 새 파일에 대한 값을 입력합니다. 자세한 내용은 [데이터베이스에 데이터 또는 로그 파일 추가](add-data-or-log-files-to-a-database.md)을 참조하세요.  
   
 6.  **확인**을 클릭합니다.  
   
@@ -81,8 +80,8 @@ ms.locfileid: "48069422"
   
  더 많은 예제를 보려면 [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [Add Data or Log Files to a Database](add-data-or-log-files-to-a-database.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터베이스에 데이터 또는 로그 파일 추가](add-data-or-log-files-to-a-database.md)   
  [데이터베이스 축소](shrink-a-database.md)  
   
   

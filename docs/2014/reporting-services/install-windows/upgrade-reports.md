@@ -20,17 +20,17 @@ ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1caf710a55ee548f7939ec65ead6397ccd4092d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b80d5a5fcdc5b95b7d82ce1e5f5deebd4de5f7d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179323"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538337"
 ---
 # <a name="upgrade-reports"></a>Upgrade Reports
   보고서 정의 파일(.rdl)은 다음과 같은 방법으로 자동 업그레이드됩니다.  
   
--   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에서 보고서를 열면 보고서 정의가 현재 지원되는 RDL 스키마로 업그레이드됩니다. 지정 하는 경우는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 프로젝트 속성에서 보고서 서버에 보고서 정의 대상 서버와 호환 되는 스키마에 저장 됩니다.  
+-   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에서 보고서를 열면 보고서 정의가 현재 지원되는 RDL 스키마로 업그레이드됩니다. 프로젝트 속성에 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 보고서 서버를 지정하면 보고서 정의는 대상 서버와 호환되는 스키마에 저장됩니다.  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 설치로 업그레이드한 경우 보고서 서버에 게시된 기존 보고서 및 스냅숏은 처음 처리되는 시점에서 새 스키마로 컴파일되고 자동으로 업그레이드됩니다. 자동으로 업그레이드할 수 없는 보고서는 이전 버전 호환 모드를 사용하여 처리됩니다. 보고서 정의는 원래 스키마에 유지됩니다.  
   
@@ -98,11 +98,11 @@ ms.locfileid: "48179323"
   
 -   주 보고서와 모든 하위 보고서를 성공적으로 업그레이드할 수 있습니다. 이러한 보고서는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 처리기를 사용하여 처리됩니다.  
   
--   주 보고서와 모든 하위 보고서를 업그레이드할 수 없습니다. 에 의해 처리 된 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 처리기입니다.  
+-   주 보고서와 모든 하위 보고서를 업그레이드할 수 없습니다. 이러한 보고서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 처리기를 사용하여 처리됩니다.  
   
--   주 보고서는 업그레이드할 수 있지만 하나 이상의 하위 보고서를 업그레이드할 수 없습니다. 주 보고서는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 처리기를 사용하여 처리되지만 렌더링된 보고서의 경우에는 업그레이드할 수 없는 하위 보고서가 표시될 위치에 "오류: 하위 보고서를 처리할 수 없습니다"라는 메시지가 나타납니다.  
+-   주 보고서는 업그레이드할 수 있지만 하나 이상의 하위 보고서를 업그레이드할 수 없습니다. 주 보고서에서 처리 되는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 처리기를 되지만 렌더링된 된 보고서 메시지를 보여 줍니다. "오류: 업그레이드할 수 없는 하위 보고서가 표시될 위치에 "오류: 하위 보고서를 처리할 수 없습니다"라는 메시지가 나타납니다.  
   
--   주 보고서를 업그레이드할 수 없지만 하나 이상의 하위 보고서는 업그레이드할 수 있습니다. 주 보고서는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 처리기를 사용하여 처리되지만 렌더링된 보고서의 경우에는 하위 보고서가 나타나는 위치에 "오류: 하위 보고서를 처리할 수 없습니다"라는 메시지를 표시합니다.  
+-   주 보고서를 업그레이드할 수 없지만 하나 이상의 하위 보고서는 업그레이드할 수 있습니다. 주 보고서에서 처리 되는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 처리기를 되지만 렌더링된 된 보고서 메시지를 보여 줍니다. "오류: 하위 보고서가 나타나는 위치에 "오류: 하위 보고서를 처리할 수 없습니다"라는 메시지를 표시합니다.  
   
  "오류: 하위 보고서를 처리할 수 없습니다"라는 메시지가 나타나면 동일한 버전의 보고서 처리기를 사용하여 보고서를 처리할 수 있도록 주 보고서 또는 하위 보고서의 정의를 변경해야 합니다.  
   
@@ -111,9 +111,9 @@ ms.locfileid: "48179323"
 ##  <a name="bkmk_CRIs"></a> 사용자 지정 보고서 항목이 있는 보고서 업그레이드  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서에는 타사 소프트웨어 공급업체에서 제공하고 보고서 작성 컴퓨터 및 보고서 서버의 시스템 관리자가 설치한 CRI(사용자 지정 보고서 항목)가 포함될 수 있습니다. CRI가 포함된 보고서는 다음과 같은 방법으로 업그레이드할 수 있습니다.  
   
--   A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버를 업그레이드 한 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 서버. 보고서 서버에 게시된 보고서는 처음 사용할 때 자동으로 업그레이드됩니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 서버로 업그레이드됩니다. 보고서 서버에 게시된 보고서는 처음 사용할 때 자동으로 업그레이드됩니다.  
   
--   A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서에 업로드 되는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 서버. 보고서는 처음 사용할 때 자동으로 업그레이드됩니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 서버로 업로드됩니다. 보고서는 처음 사용할 때 자동으로 업그레이드됩니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에서 엽니다. 원본 보고서의 백업 복사본이 만들어집니다. 다음 두 가지 경우 중 하나가 발생합니다.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "48179323"
  보고서 서버, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 또는 보고서의 현재 RDL 네임스페이스를 확인하는 방법은 [보고서 정의 스키마 버전 찾기&#40;SSRS&#41;](../reports/find-the-report-definition-schema-version-ssrs.md)를 참조하세요.  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>보고서 서버에서 보고서 업그레이드  
- 처음으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 업그레이드 된 보고서 서버의 보고서가 실행 되는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 서버에 보고서를 보고서 서버에서 지 원하는 현재 보고서 정의 네임 스페이스로 자동 업그레이드 됩니다. 보고서는 업그레이드 전의 보고서 서버에 있었을 수도 있고 또는 보고서 보고서 관리자를 통해 업로드 하거나의 보고서 디자이너에서 보고서 서버에 게시 된 수도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보고서 서버로 업그레이드된 보고서 서버에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 2005 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서를 처음으로 실행하면 보고서가 자동으로 보고서 서버에서 지원하는 현재 보고서 정의 네임스페이스로 업그레이드됩니다. 보고서는 업그레이드 전의 보고서 서버에 있을 수 있습니다. 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 보고서 디자이너에서 보고서 서버로 게시되거나 보고서 관리자를 통해 업로드될 수 있습니다.  
   
  다음 표에서는 보고서 서버에서 보고서에 있는 특정 유형의 CRI에 대해 수행하는 업그레이드 동작을 보여 줍니다.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "48179323"
 |--------------|----------------------------------|  
 |타사 CRI|업그레이드가 수행되지 않습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 처리기를 사용하여 처리됩니다.|  
 |지원되지 않는 기능이 없는 Dundas 2005 Chart CRI|최신 RDL 스키마로 업그레이드됩니다. 모든 Dundas 2005 Chart CRI가 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]와 호환되는 차트 데이터 영역으로 변환됩니다.<br /><br /> [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 처리기를 사용하여 처리됩니다.|  
-|지원되지 않는 기능이 없는 Dundas 2005 Gauge CRI|최신 RDL 스키마로 업그레이드됩니다. 모든 Dundas 2005 Gauge cri가 호환 되는 게이지 데이터 영역으로 변환 됩니다. [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]<br /><br /> [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 처리기를 사용하여 처리됩니다.|  
+|지원되지 않는 기능이 없는 Dundas 2005 Gauge CRI|최신 RDL 스키마로 업그레이드됩니다. 모든 Dundas 2005 Gauge CRI가 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]와 호환되는 게이지 데이터 영역으로 변환됩니다.<br /><br /> [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 처리기를 사용하여 처리됩니다.|  
 |지원되지 않는 기능이 있는 Dundas 2005 Chart CRI|업그레이드가 수행되지 않습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 처리기를 사용하여 처리됩니다.|  
 |지원되지 않는 기능이 있는 Dundas 2005 Gauge CRI|업그레이드가 수행되지 않습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 처리기를 사용하여 처리됩니다.|  
   
@@ -173,7 +173,7 @@ ms.locfileid: "48179323"
         ```  
         <CustomProperty>  
          <Name>CUSTOM_CODE_CS</Name>  
-         <Value>dXNpWERwegfdfgiobxxl3bmc… </Value>  
+         <Value>dXNpWERwegfdfgiobxxl3bmc... </Value>  
         </CustomProperty>  
         ```  
   
@@ -190,11 +190,11 @@ ms.locfileid: "48179323"
  이 보고서에는 지원되지 않는 기능이 있는 CRI(사용자 지정 보고서 항목)가 포함되어 있습니다. CRI는 보고서에 데이터를 표시하는 사용자 지정 개체를 지원하는 RDL(Report Definition Language)에 대한 확장입니다. CRI에는 타사 소프트웨어 공급업체에서 제공하는 디자인 타임 및 런타임 구성 요소가 포함되어 있습니다.  
   
 > [!NOTE]  
->  보고서 서버에서 사용자 지정 항목을 지원하도록 선택하는 것은 시스템 관리자가 결정할 일입니다. 보고서에서 CRI를 보려는 경우 보고서를 미리 보려면 보고서 제작 클라이언트에 CRI 구성 요소를 설치해야 하고 게시 또는 업로드된 보고서를 보려면 보고서 서버에 CRI 구성 요소를 설치해야 합니다. 자세한 내용은 [사용자 지정 보고서 항목](../custom-report-items/custom-report-items.md) 및 타사 소프트웨어 공급 업체의 설명서를 합니다.  
+>  보고서 서버에서 사용자 지정 항목을 지원하도록 선택하는 것은 시스템 관리자가 결정할 일입니다. 보고서에서 CRI를 보려는 경우 보고서를 미리 보려면 보고서 제작 클라이언트에 CRI 구성 요소를 설치해야 하고 게시 또는 업로드된 보고서를 보려면 보고서 서버에 CRI 구성 요소를 설치해야 합니다. 자세한 내용은 [사용자 지정 보고서 항목](../custom-report-items/custom-report-items.md) 및 타사 소프트웨어 공급업체의 설명서를 참조하세요.  
   
- 일부 CRI를 새 보고서 정의 형식의 보고서 항목으로 변환할 수 있습니다. 변환 될 수 있는 Cri 목록은 참조 하세요 [Upgrading Reports](upgrade-reports.md)합니다. 다음 목록을 사용하여 이 보고서에서 CRI를 변환할지 여부를 결정할 수 있습니다.  
+ 일부 CRI를 새 보고서 정의 형식의 보고서 항목으로 변환할 수 있습니다. 변환할 수 있는 CRI 목록은 [Upgrading Reports](upgrade-reports.md)를 참조하세요. 다음 목록을 사용하여 이 보고서에서 CRI를 변환할지 여부를 결정할 수 있습니다.  
   
--   **예** 가능한 경우 보고서의 모든 CRI를 변환하려면 **예** 를 선택합니다. CRI에서 지원하지 않는 기능은 업그레이드할 수 없으며 보고서 정의 파일에서 제거됩니다. 지원 되지 않는 기능의 목록은 참조 하세요 [Upgrading Reports](upgrade-reports.md)합니다. 보고서를 볼 때 CRI가 보고서에 다른 방식으로 표시될 수 있습니다.  
+-   **예** 가능한 경우 보고서의 모든 CRI를 변환하려면 **예** 를 선택합니다. CRI에서 지원하지 않는 기능은 업그레이드할 수 없으며 보고서 정의 파일에서 제거됩니다. 지원하지 않는 기능 목록은 [Upgrading Reports](upgrade-reports.md)를 참조하세요. 보고서를 볼 때 CRI가 보고서에 다른 방식으로 표시될 수 있습니다.  
   
 -   **아니요** 보고서에서 CRI를 변환하지 않으려면 **아니요** 를 선택합니다. 이러한 CRI는 현재 버전의 보고서 처리기에서는 표시할 수 없습니다. 시스템 관리자가 새 보고서 정의 형식과 호환되는 타사 소프트웨어 공급업체가 제공하는 새 버전의 CRI를 설치하려는 경우에는 **아니요**를 선택해야 합니다. 새 버전을 사용할 수 있을 때까지 보고서에 CRI가 빨간색 X가 있는 비어 있는 입력란으로 표시됩니다.  
   

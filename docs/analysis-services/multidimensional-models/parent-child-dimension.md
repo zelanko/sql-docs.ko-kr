@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a9f9cda883822d093db624a4580a94093120ba41
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6f9990103da1de5107ceaf3432f4da2a9a4486c4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021430"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510209"
 ---
 # <a name="parent-child-dimension"></a>부모-자식 차원
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34021430"
   
  그러나 부모-자식 차원은 차원 주 테이블에 포함된 데이터를 검사하여 부모-자식 계층을 구성한 다음 테이블에 있는 레코드 간의 부모-자식 관계를 평가합니다. 부모-자식 계층에 대한 자세한 내용은 [사용자 계층](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)을 참조하세요.  
   
- 부모-자식 계층에서는 계층의 수준 이름이 계층을 만드는 데 사용되는 특성에서 파생되지 않습니다. 대신 이러한 차원은 명명 템플릿을 사용하여 자동으로 수준 이름을 만듭니다. 명명 템플릿은 특성이 특성 계층을 생성하는 방법을 제어하는 부모 특성의 수준에서 지정할 수 있는 문자열 식입니다. 부모 특성의 명명 템플릿을 설정하는 방법에 대한 자세한 내용은 [특성 및 특성 계층](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)을 참조하세요.  
+ 부모-자식 계층에서는 계층의 수준 이름이 계층을 만드는 데 사용되는 특성에서 파생되지 않습니다. 이러한 차원 수준 이름을 만듭니다 하는 대신 자동으로 명명 템플릿 문자열 식으로 지정할 수 있습니다 특성이 특성 계층을 생성 하는 방법을 제어 하는 부모 특성의 수준입니다. 부모 특성의 명명 템플릿을 설정하는 방법에 대한 자세한 내용은 [특성 및 특성 계층](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)을 참조하세요.  
   
 ## <a name="data-members"></a>데이터 멤버  
  일반적으로 차원의 리프 멤버는 기본 데이터 원본에서 직접 파생된 데이터를 포함하는 반면 리프가 아닌 멤버는 자식 멤버에 대해 수행된 집계에서 파생된 데이터를 포함합니다.  

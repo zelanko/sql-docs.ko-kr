@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 99d3317f25af947f042d43fdd64e4cad334ca51f
-ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
+ms.openlocfilehash: aaf90124cc7877b633a997a2c4f170057b965028
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37891004"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510928"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>병렬 데이터 웨어하우스 구성 요소-Analytics Platform System
 이 문서는 어플라이언스 소프트웨어 및 Analytics Platform System의 비 어플라이언스 소프트웨어 구성 요소를 설명합니다.  
@@ -153,7 +153,7 @@ sqlcmd는 Transact 실행에 대 한 SQL Server 명령줄 도구\-SQL 문 및 �
   
 <!-- MISSING LINKS
 
-If you don’t have SQL Server, you can download this as a standalone package. For more information, see [Install sqlcmd Command-Line Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sqlcmd-command-line-client-sql-server-pdw.md) 
+If you don't have SQL Server, you can download this as a standalone package. For more information, see [Install sqlcmd Command-Line Client &#40;SQL Server PDW&#41;](../sqlpdw/install-sqlcmd-command-line-client-sql-server-pdw.md) 
 --> 
   
 ### <a name="integration-services"></a>Integration Services  

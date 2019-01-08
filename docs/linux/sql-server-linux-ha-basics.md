@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 880ccf036a12d5cc8e7e2bd56aa3bbcc58a2984f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 85ea90343ebf1cac9ba04a4b9252a6dd9fb748bf
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665680"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533077"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 배포에 대 한 SQL Server 가용성 기본 사항
 
@@ -40,15 +40,15 @@ Linux에서 많은 명령을 여러 가지를 관리자 권한으로 Windows Ser
 
 몇 가지 일반적인 명령에는 다양 한 스위치 및 옵션을 각각 온라인에서 확인할 수 있습니다.
 -   `cd` -디렉터리 변경
--   `chmod` – 파일 또는 디렉터리의 사용 권한 변경
--   `chown` – 파일 또는 디렉터리의 소유권을 변경
--   `ls` – 디렉터리의 내용을 표시 합니다.
--   `mkdir` – 드라이브에 폴더 (디렉터리)를 만듭니다.
--   `mv` – 한 위치에서 파일 이동
--   `ps` – 작업 프로세스 모두 표시
--   `rm` – 서버에서 로컬로 파일 삭제
+-   `chmod` -파일 또는 디렉터리의 사용 권한 변경
+-   `chown` -파일 또는 디렉터리의 소유권을 변경
+-   `ls` -디렉터리의 내용을 표시 합니다.
+-   `mkdir` -드라이브에 폴더 (디렉터리)를 만듭니다.
+-   `mv` -한 위치에서 파일 이동
+-   `ps` -작업 프로세스 모두 표시
+-   `rm` -서버에서 로컬로 파일 삭제
 -   `rmdir` -폴더 (디렉터리)를 삭제 합니다.
--   `systemctl` – 시작, 중지 또는 서비스를 사용 하도록 설정
+-   `systemctl` -시작, 중지 또는 서비스를 사용 하도록 설정
 -   텍스트 편집기 명령입니다. Linux에서 다양 한 텍스트 편집기 옵션, emacs 및 vi 같은 있습니다.
 
 ## <a name="common-tasks-for-availability-configurations-of-includessnoversion-mdincludesssnoversion-mdmd-on-linux"></a>가용성 구성에 대 한 일반적인 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] linux
@@ -68,7 +68,7 @@ Linux 에서도 Windows 기반 설치 사용 권한 문제 등 존재할 수 있
 scp MyAGCert.cer username@servername:/folder/subfolder
 ```
 
-다른 서버에서 지정 된 폴더에 MyAGCert.cer 파일을 복사 합니다. 참고-사용 권한 및 소유권 – 파일을 복사 하 고, 따라서 있어야는 `chown` 복사 하기 전에 사용 해야 할 수도 있습니다. 마찬가지로 받는 쪽에서 올바른 사용자 파일을 조작에 대 한 액세스를 해야 합니다. 예를 들어, 해당 인증서 파일을 복원 하는 `mssql` 사용자가 액세스할 수 있어야 합니다.
+다른 서버에서 지정 된 폴더에 MyAGCert.cer 파일을 복사 합니다. 사용 권한-및-따라서 복사한 파일의 소유권 있어야 하는 참고 `chown` 복사 하기 전에 사용 해야 할 수도 있습니다. 마찬가지로 받는 쪽에서 올바른 사용자 파일을 조작에 대 한 액세스를 해야 합니다. 예를 들어, 해당 인증서 파일을 복원 하는 `mssql` 사용자가 액세스할 수 있어야 합니다.
 
 SMB (서버 메시지 블록) Linux 변형을 인 samba 공유와 같은 UNC 경로 의해 액세스를 만들 사용할 수도 있습니다 `\\SERVERNAME\SHARE`합니다. Samba를 구성 하는 방법에 대 한 자세한 내용은 각 배포에 대 한 다음 링크에서 정보를 참조 하세요.
 -   [RHEL](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Managing_Confined_Services/chap-Managing_Confined_Services-Samba.html)
@@ -84,29 +84,29 @@ Windows 기반 SMB 공유를 사용할 수도 있습니다. SMB 공유를 호스
 ### <a name="configure-the-firewall"></a>방화벽 구성
 Windows와 마찬가지로 Linux 배포는 기본 제공 방화벽입니다. 회사 외부 방화벽 서버를 사용 하는 경우에 Linux에서 방화벽을 사용 하지 않도록 설정 허용 될 수 있습니다. 그러나는 방화벽이 사용 되는 위치에 관계 없이 열려는 포트 해야 합니다. 다음 표에서 문서에 필요한 공통 포트 항상 사용 가능한 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Linux에 배포 합니다.
 
-| 포트 번호 | 형식     | 설명                                                                                                                 |
+| 포트 번호 | 형식     | Description                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| 111         | TCP/UDP  | NFS – `rpcbind/sunrpc`                                                                                                    |
-| 135         | TCP      | (사용) 하는 경우 samba – 끝점 매퍼                                                                                          |
+| 111         | TCP/UDP  | NFS- `rpcbind/sunrpc`                                                                                                    |
+| 135         | TCP      | (사용) 하는 경우 samba-끝점 매퍼                                                                                          |
 | 137         | UDP      | (사용) 하는 경우 samba-NetBIOS 이름 서비스                                                                                      |
-| 138         | UDP      | (사용) 하는 경우 samba – NetBIOS 데이터 그램                                                                                          |
-| 139         | TCP      | (사용) 하는 경우 samba – NetBIOS 세션                                                                                           |
-| 445         | TCP      | (사용) 하는 경우 samba – TCP 통한 SMB                                                                                              |
-| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] – 기본 포트입니다. 원하는 경우 변경 수 있습니다. `mssql-conf set network.tcpport <portnumber>`                       |
+| 138         | UDP      | (사용) 하는 경우 samba-NetBIOS 데이터 그램                                                                                          |
+| 139         | TCP      | (사용) 하는 경우 samba-NetBIOS 세션                                                                                           |
+| 445         | TCP      | (사용) 하는 경우 samba-TCP 통한 SMB                                                                                              |
+| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -기본 포트입니다. 원하는 경우 변경 수 있습니다. `mssql-conf set network.tcpport <portnumber>`                       |
 | 2049        | TCP, UDP | NFS (사용) 하는 경우                                                                                                               |
 | 2224        | TCP      | Pacemaker-사용 `pcsd`                                                                                                |
-| 3121        | TCP      | Pacemaker-Pacemaker 원격 노드 많은 경우 필요 합니다.                                                                    |
-| 3260        | TCP      | iSCSI 초기자 (사용) 하는 경우 – 변경 될 수 있습니다 `/etc/iscsi/iscsid.config` (RHEL), iscsi 대상 포트와 일치 해야 하지만 |
+| 3121        | TCP      | Pacemaker-Pacemaker 원격 노드 필수                                                                    |
+| 3260        | TCP      | iSCSI 초기자 (사용) 하는 경우-변경 될 수 있습니다 `/etc/iscsi/iscsid.config` (RHEL), iscsi 대상 포트와 일치 해야 하지만 |
 | 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -기본 AG 끝점에 사용 되는 포트 끝점을 만들 때에 변경할 수 있습니다.                                |
 | 5403        | TCP      | Pacemaker                                                                                                                   |
-| 5404        | UDP      | Pacemaker-멀티 캐스트 UDP를 사용 하는 경우 Corosync에 필요한                                                                     |
+| 5404        | UDP      | 멀티 캐스트 UDP를 사용 하는 경우 필요한 Corosync는 pacemaker-                                                                     |
 | 5405        | UDP      | Pacemaker-Corosync에 필요한                                                                                            |
 | 21064       | TCP      | Pacemaker-DLM을 사용 하 여 리소스에 필요한                                                                                 |
 | 변수    | TCP      | AG 끝점 포트 기본값은 5022                                                                                           |
-| 변수    | TCP      | NFS – 포트 `LOCKD_TCPPORT` (있는 `/etc/sysconfig/nfs` RHEL에서)                                              |
-| 변수    | UDP      | NFS – 포트 `LOCKD_UDPPORT` (있는 `/etc/sysconfig/nfs` RHEL에서)                                              |
-| 변수    | TCP/UDP  | NFS – 포트 `MOUNTD_PORT` (있는 `/etc/sysconfig/nfs` RHEL에서)                                                |
-| 변수    | TCP/UDP  | NFS – 포트 `STATD_PORT` (있는 `/etc/sysconfig/nfs` RHEL에서)                                                 |
+| 변수    | TCP      | NFS-포트 `LOCKD_TCPPORT` (있는 `/etc/sysconfig/nfs` RHEL에서)                                              |
+| 변수    | UDP      | NFS-포트 `LOCKD_UDPPORT` (있는 `/etc/sysconfig/nfs` RHEL에서)                                              |
+| 변수    | TCP/UDP  | NFS-포트 `MOUNTD_PORT` (있는 `/etc/sysconfig/nfs` RHEL에서)                                                |
+| 변수    | TCP/UDP  | NFS-포트 `STATD_PORT` (있는 `/etc/sysconfig/nfs` RHEL에서)                                                 |
 
 Samba에서 사용할 수 있는 추가 포트를 참조 하세요 [Samba 포트 사용](https://wiki.samba.org/index.php/Samba_Port_Usage)합니다.
 
@@ -121,7 +121,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>설치 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 가용성에 대 한 패키지
-Windows 기반 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 설치 반면 일부는 기본 엔진을 설치 하 고에 일부 구성 요소가 설치 됩니다. Linux에는 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 엔진 설치 프로세스의 일부로 설치 됩니다. 나머지는 선택 사항입니다. 에 대 한 고가용성 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Linux에서 인스턴스를 사용 하 여 두 패키지 설치 해야 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]: [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 에이전트 (*mssql server 에이전트*) 및 고가용성 (HA) 패키지 ( *mssql-서버-ha*). 하는 동안 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 에이전트는 기술적으로 선택적 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]작업에 대 한 스케줄러의 있으며 로그 전달 되므로 설치를 사용 하는 것이 좋습니다. Windows 기반 설치에 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 에이전트는 선택 사항이 아닙니다.
+Windows 기반 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 설치 반면 일부는 기본 엔진을 설치 하 고에 일부 구성 요소가 설치 됩니다. Linux에는 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 엔진 설치 프로세스의 일부로 설치 됩니다. 나머지는 선택 사항입니다. 에 대 한 고가용성 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Linux에서 인스턴스를 사용 하 여 두 패키지 설치 해야 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]: [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 에이전트 (*mssql server 에이전트*) 및 고가용성 (HA) 패키지 (*mssql-서버-ha*). 하는 동안 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 에이전트는 기술적으로 선택적 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]작업에 대 한 스케줄러의 있으며 로그 전달 되므로 설치를 사용 하는 것이 좋습니다. Windows 기반 설치에 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 에이전트는 선택 사항이 아닙니다.
 
 >[!NOTE]
 >처음 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 에이전트는 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]의 기본 제공 작업 스케줄러입니다. 백업 및 기타 등의 작업을 예약 하는 Dba 위한 일반적인 방법은 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 유지 관리 합니다. Windows 기반 설치와 달리 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 위치 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 에이전트는 linux에서 완전히 다른 서비스 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 에이전트의 컨텍스트에서 실행 됩니다 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 자체입니다.
@@ -134,12 +134,12 @@ Windows 기반 구성에서 Ag 또는 Fci를 구성 하면 클러스터를 인�
 이전 듯이 Ag에 Fci Microsoft에서 현재 지 원하는 유일한 클러스터링 메커니즘은 corosync는 Pacemaker 합니다. 이 섹션에서는 계획에 대 한 배포 하는 방법 뿐만 아니라 솔루션을 이해 하려면 기본 정보를 다룹니다. [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 구성 합니다.
 
 ### <a name="ha-add-onextension-basics"></a>HA 추가 시/확장 기본 사항
-현재 지원 되는 배포의 모든 고가용성 추가-시/확장명을 스택 클러스터링 Pacemaker를 기반으로 하는 제공 됩니다. 이 스택이 두 가지 주요 구성 요소를 통합 합니다: Pacemaker 및 Corosync 합니다. 스택의 모든 구성 요소는:
+현재 지원 되는 배포의 모든 고가용성 추가-시/확장명을 스택 클러스터링 Pacemaker를 기반으로 하는 제공 됩니다. 이 스택이 두 가지 주요 구성 요소를 통합합니다. Pacemaker 및 Corosync 합니다. 스택의 모든 구성 요소는:
 -   Pacemaker-클러스터 된 컴퓨터에서 좌표와 같은 작업을 수행 하는 구성 요소를 클러스터링 하는 핵심입니다.
--   Corosync – 프레임 워크 및 쿼럼, 다시 시작 하지 못했습니다 프로세스 및 등 기능 등을 제공 하는 Api 집합입니다.
--   libQB – 제공 등 로깅.
--   리소스 에이전트 – 응용 프로그램은 Pacemaker와 통합할 수 있도록 제공 하는 특정 기능입니다.
--   에이전트 – 노드를 격리 하는 데 도움이 되는 문제가 있는 경우 해당 처리 스크립트/기능 울타리 합니다.
+-   Corosync-프레임 워크 및 쿼럼, 다시 시작 하지 못했습니다 프로세스 및 등 기능 등을 제공 하는 Api 집합입니다.
+-   libQB-로깅 등을 제공 합니다.
+-   리소스 에이전트-응용 프로그램은 Pacemaker와 통합할 수 있도록 제공 하는 특정 기능입니다.
+-   에이전트-노드를 격리 하는 데 도움이 되는 문제가 있는 경우 해당 처리 스크립트/기능 울타리 합니다.
     
 > [!NOTE]
 > 클러스터 스택의 일반적으로 Linux 분야에서 Pacemaker 라고 합니다.
@@ -169,7 +169,7 @@ WSFC와 Pacemaker 클러스터 리소스의 개념이 있습니다. 리소스는
 
 Pacemaker에 리소스가 표준 및 복제 합니다. 복제 리소스는 모든 노드에서 동시에 실행 되는 것입니다. 예제 IP 주소 부하 분산 목적으로 여러 노드에서 실행 되는 것입니다. Fci에 대 한 생성 되는 모든 리소스는 하나의 노드만 언제 든 지 FCI를 호스팅할 수 있으므로 표준 리소스를 사용 합니다.
 
-AG 만들어질 때 특수 한 형태의 다중 상태 리소스 라고 하는 복제 리소스 필요 합니다. AG에 주 복제본이 하나 있는 경우 하는 동안 자체 AG를 실행 하는 모든 노드에서 작동 하도록 구성 하 고 읽기 전용 액세스 등을 허용할 수 있습니다. 노드를 사용 하는 "라이브" 이기 때문에 리소스 개념이 두 가지 상태: 마스터 및 슬레이브 합니다. 자세한 내용은 [다중 상태 리소스: 여러 모드에 있는 리소스](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html)합니다.
+AG 만들어질 때 특수 한 형태의 다중 상태 리소스 라고 하는 복제 리소스 필요 합니다. AG에 주 복제본이 하나 있는 경우 하는 동안 자체 AG를 실행 하는 모든 노드에서 작동 하도록 구성 하 고 읽기 전용 액세스 등을 허용할 수 있습니다. 노드를 사용 하는 "라이브" 이기 때문에 리소스 개념이 두 가지 상태: 마스터 및 슬레이브 합니다. 자세한 내용은 참조 하세요. [다중 상태 리소스: 여러 모드에 있는 리소스](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html)합니다.
 
 #### <a name="resource-groupssets"></a>리소스 그룹/설정
 WSFC의 역할에는 마찬가지로 Pacemaker 클러스터에 리소스 그룹 개념이 있습니다. (SLES에서 집합 이라고 함) 리소스 그룹은 함께 작동 하 고 하나의 단위로 다른 노드로 장애 조치할 수 있는 리소스의 컬렉션입니다. 리소스 그룹에는 마스터/슬레이브;으로 구성 된 리소스에 포함할 수 없습니다. 따라서 Ag에 대해 사용할 수 없습니다. Fci에 대 한 리소스 그룹을 사용할 수 있지만,이 일반적으로 권장된 구성이 아닙니다.
@@ -214,7 +214,7 @@ Pacemaker 클러스터에 대 한 로그 위치 분포에 따라 다릅니다.
 
 자세한 내용은 참조 하세요.
 -   Hyper-v가 설치 설명서- [고가용성을 위한 게스트 클러스터링을 사용 하 여](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
--   (용으로 작성 된 Windows 기반 배포 하지만 여전히 개념이 대부분 적용) – 백서 [고가용성 계획, VMware vsphere 업무상 중요 한 SQL Server 배포](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
+-   백서 (용으로 작성 된 Windows 기반 배포 하지만 여전히 개념이 대부분 적용)- [고가용성 계획, VMware vsphere 업무상 중요 한 SQL Server 배포](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
 
 >[!NOTE]
 >STONITH 사용 하 여 RHEL Pacemaker 클러스터를 사용 하 여 Hyper-v에서 아직 지원 되지 않습니다. 자세한 내용 및 업데이트 하는 지원 될 때까지 참조 하세요 [RHEL 높은 가용성 클러스터에 대 한 지원 정책을](https://access.redhat.com/articles/29440#3physical_host_mixing)합니다.

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ecfed53ebcecf38bbd46a6d3b15d1a8a8c741fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30e46515fda5bf03a96e9f1168b470f635698d07
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156023"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769515"
 ---
 # <a name="eventstring-element-dta"></a>EventString 요소(DTA)
   XML 입력 파일에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 작업을 직접 지정합니다.  
@@ -40,21 +39,21 @@ ms.locfileid: "48156023"
   
 |attribute|Description|  
 |---------------|-----------------|  
-|`Weight`|(선택 사항) 지정한 이벤트에 대한 쿼리 가중치 요인(중요도 요인)을 지정합니다. 사용 된 `float` 가중치를 지정 하는 데이터 형식입니다. `Weight`="100.01"). `Weight`에 지정할 수 있는 최소값은 "0"입니다.|  
+|`Weight`|(선택 사항) 지정한 이벤트에 대한 쿼리 가중치 요인(중요도 요인)을 지정합니다. `float` 데이터 형식을 사용하여 가중치를 지정할 수 있습니다(예: `Weight`="100.01"). `Weight`에 지정할 수 있는 최소값은 "0"입니다.|  
   
 ## <a name="element-characteristics"></a>요소 특징  
   
 |특징|Description|  
 |--------------------|-----------------|  
-|**데이터 형식 및 길이**|`string`길이 제한 되지 않습니다.|  
+|**데이터 형식 및 길이**|`string`, 길이 제한 없음|  
 |**기본값**|없음|  
-|**발생 빈도**|다른 작업 유형이 지정되지 않은 경우 한 번만 지정해야 합니다. 지정 해야 합니다는 `EventString`, `File`, 또는 `Database` 자식 요소는 `Workload` 부모 하지만 한 유형만 사용할 수 있습니다. 예를 들어, 사용 하 여 작업을 지정 하는 경우는 `EventString` 요소를 사용 하 여 작업을 지정할 수 없습니다는 `File` 동일한 XML 입력된 파일의 요소입니다.|  
+|**발생 빈도**|다른 작업 유형이 지정되지 않은 경우 한 번만 지정해야 합니다. `EventString` 부모에 대해 `File`, `Database` 또는 `Workload` 자식 요소를 지정해야 하지만 한 유형만 사용할 수 있습니다. 예를 들어 `EventString` 요소로 작업을 지정할 경우 동일한 XML 입력 파일에서 `File` 요소로 작업을 지정할 수 없습니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
 |관계|요소|  
 |------------------|--------------|  
-|**부모 요소**|[Workload 요소 &#40;DTA&#41;](workload-element-dta.md)|  
+|**부모 요소**|[Workload 요소&#40;DTA&#41;](workload-element-dta.md)|  
 |**자식 요소**|없음|  
   
 ## <a name="example"></a>예제  

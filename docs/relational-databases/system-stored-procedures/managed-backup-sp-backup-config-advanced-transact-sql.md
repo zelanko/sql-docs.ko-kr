@@ -21,12 +21,12 @@ ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c3f19fed072e693de6bbebb53354eae8c0bfaa0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86db5a13ab1bdac2b35c6d5128ba1b2234bc24b7
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827911"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536399"
 ---
 # <a name="managedbackupspbackupconfigadvanced-transact-sql"></a>managed_backup.sp_backup_config_advanced (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ EXEC managed_backup.sp_backup_config_advanced
  특정 데이터베이스에 대 한 managed backup을 사용 하도록 설정 하는 것에 대 한 데이터베이스 이름입니다. Null 인 경우 또는 *, 관리 되는 backup이 서버의 모든 데이터베이스에 적용 됩니다.  
   
  @encryption_algorithm  
- 백업 중에 백업 파일을 암호화하는 데 사용되는 암호화 알고리즘의 이름입니다. 합니다 @encryption_algorithm 됩니다 **SYSNAME**합니다. 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 처음으로 구성할 경우 필수 매개 변수입니다. 지정할 **NO_ENCRYPTION** 백업 파일을 암호화 하 고 싶지 않은 경우. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 구성 설정을 변경하는 경우 이 매개 변수는 선택 사항이며 매개 변수가 지정되지 않는 경우 기존 구성 값이 유지됩니다. 이 매개 변수의 허용되는 값은 다음과 같습니다.  
+ 백업 중에 백업 파일을 암호화하는 데 사용되는 암호화 알고리즘의 이름입니다. 합니다 @encryption_algorithm 됩니다 **SYSNAME**합니다. 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 처음으로 구성할 경우 필수 매개 변수입니다. 지정할 **NO_ENCRYPTION** 백업 파일을 암호화 하 고 싶지 않은 경우. 변경 하는 경우는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 구성 설정에이 매개 변수는 선택 사항-기존 구성 값은 그대로 유지 한 다음 매개 변수를 지정 하지 않으면. 이 매개 변수의 허용되는 값은 다음과 같습니다.  
   
 -   AES_128  
   

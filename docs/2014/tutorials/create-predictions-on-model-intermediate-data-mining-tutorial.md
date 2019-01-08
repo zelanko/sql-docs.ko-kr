@@ -11,12 +11,12 @@ ms.assetid: 94a8d4f9-a76a-49c5-9785-917010359511
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26a0aae710b18350c9ef62166e004f702eb88c7e
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 0b67ad103cee685ebcbc5455340df9e4d7890e15
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146557"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529226"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>시퀀스 클러스터링 모델에서 예측 만들기(중급 데이터 마이닝 자습서)
   시퀀스 뷰어에서 이동 하 여 클러스터링 되는 더 나은 모델을 이해 한 이후에 예측 쿼리 작성기를 사용 하 여 예측 쿼리를 만들 수 있습니다 합니다 **마이닝 모델 예측** 데이터 마이닝 디자이너의 탭 합니다. 예측을 만들려면 먼저 시퀀스 클러스터링 모델을 선택한 다음 입력 데이터를 선택합니다. 입력의 경우 외부 데이터 원본을 사용하거나 단일 쿼리를 작성하고 대화 상자에 값을 제공할 수 있습니다.  
@@ -196,11 +196,11 @@ NATURAL PREDICTION JOIN
  시퀀스 클러스터링 모델에 대한 자습서를 완료했습니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 모든 단원을 완료 한 경우는 [중급 데이터 마이닝 자습서 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md), 다음 단계 Data Mining Extensions (DMX) 문을 사용 하 여 모델을 작성 하는 방법을 배울 수 있습니다 및 예측을 생성 합니다. 자세한 내용은 [만들기 및 쿼리 데이터 마이닝 모델 DMX 사용 하 여: 자습서 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)합니다.  
+ 모든 단원을 완료 한 경우는 [중급 데이터 마이닝 자습서 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md), 다음 단계 Data Mining Extensions (DMX) 문을 사용 하 여 모델을 작성 하는 방법을 배울 수 있습니다 및 예측을 생성 합니다. 자세한 내용은 참조 하세요. [만들기 및 쿼리 데이터 마이닝 모델 DMX 사용 하 여: 자습서 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)합니다.  
   
  프로그래밍 개념에 익숙한 경우 AMO(Analysis Management Objects)를 사용하여 프로그래밍 방식으로 데이터 마이닝 개체를 사용할 수도 있습니다. 자세한 내용은 [AMO 데이터 마이닝 클래스](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [시퀀스 클러스터링 모델 쿼리 예제](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
  [시퀀스 클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   

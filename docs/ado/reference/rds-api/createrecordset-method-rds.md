@@ -20,12 +20,12 @@ ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b376924dfb1833165a1f40ecfd1487c49eb2dcb
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: HT
+ms.openlocfilehash: a8646fba41809fe3ed6a062e7a066ed0dce5c007
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604623"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516725"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 메서드(RDS)
 빈 만듭니다 연결 끊김 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
@@ -62,7 +62,7 @@ object.CreateRecordset(ColumnInfos)
   
  다음 표에서 [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) 에서 지원 되는 값을 **CreateRecordset** 메서드. 나열 된 번호 필드를 정의 하는 데 대 한 참조입니다.  
   
- 각 데이터 형식에는 고정된 길이 또는 가변 길이입니다. 고정 길이 형식 크기가 미리 지정 된 크기 정의 여전히 필요 하기 때문에-1로의 크기를 사용 하 여 정의 되어야 합니다. 가변 길이 데이터 형식에는 1에서 32767 사이의 크기를 허용합니다.  
+ 각 데이터 형식에는 고정된 길이 또는 가변 길이입니다. 고정 길이 형식 크기가 미리 지정 된 크기 정의 여전히 필요 하기 때문에-1의 크기를 사용 하 여 정의 되어야 합니다. 가변 길이 데이터 형식에는 1에서 32767 사이의 크기를 허용합니다.  
   
  변수 데이터 형식 중 일부에 대 한 형식은 대체 열에 명시 된 형식으로 강제 변환할 수 있습니다. 표시 되지 것입니다 후 될 때까지 대체는 **레코드 집합** 만들어지고 채워집니다. 그런 다음 필요한 경우 실제 데이터 형식에 대해 확인할 수 있습니다.  
   

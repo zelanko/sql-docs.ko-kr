@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - server alias
@@ -16,12 +15,12 @@ ms.assetid: b687e376-ee33-470d-b65a-87246bfefe6f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3927bc1b414a30bb86148fa6c00c3e0bcb2316a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 20c8ef211fe32d1459704c963c525a6cc9235d4a
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213152"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640229"
 ---
 # <a name="create-or-delete-a-server-alias-for-use-by-a-client-sql-server-configuration-manager"></a>클라이언트에서 사용할 서버 별칭 만들기 또는 삭제(SQL Server 구성 관리자)
   이 항목에서는 SQL Server 구성 관리자를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 서버 별칭을 만들거나 삭제하는 방법에 대해 설명합니다. 별칭은 연결 설정에 사용할 수 있는 대체 이름입니다. 별칭은 연결 문자열의 필수 요소를 캡슐화하고 사용자가 선택한 이름으로 나타납니다. 별칭은 모든 클라이언트 애플리케이션에서 사용할 수 있습니다. 서버 별칭을 만들면 서버별로 프로토콜과 연결 정보를 지정하지 않아도 클라이언트 컴퓨터가 각기 다른 네트워크 프로토콜을 사용하여 여러 대의 서버에 연결할 수 있습니다. 또한 여러 네트워크 프로토콜을 자주 사용하지 않더라도 이러한 프로토콜을 항상 사용 가능한 상태로 설정할 수 있습니다. 기본값이 아닌 포트 번호나 명명된 파이프에서 수신하도록 서버를 구성하고 SQL Server Browser 서비스를 사용하지 않도록 설정한 경우 새로운 포트 번호나 명명된 파이프를 지정하는 별칭을 만드십시오.  

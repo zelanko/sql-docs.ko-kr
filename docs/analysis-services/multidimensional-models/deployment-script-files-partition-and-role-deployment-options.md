@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 64a8eeff0447b6a62e7e1f8e21bf48ae3a6b99a3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8bd62cc5fef3ef13dede85c06b28b0501a83de2f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981043"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513914"
 ---
-# <a name="deployment-script-files---partition-and-role-deployment-options"></a>배포 스크립트 파일-파티션 및 역할 배포 옵션
+# <a name="deployment-script-files---partition-and-role-deployment-options"></a>배포 스크립트 파일 - 파티션 및 역할 배포 옵션
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  합니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사에서 파티션 및 역할 배포 옵션을 읽습니다 합니다 \< *프로젝트 이름을*>.deploymentoptions 파일입니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 작성할 때 이 파일을 만듭니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 때 사용 하 여 파티션 및 역할 배포 옵션을 현재 프로젝트를 \< *프로젝트 이름*>.deploymentoptions 파일이 생성 됩니다. 이러한 구성 설정에 대한 자세한 내용은 [Understanding the Input Files Used to Create the Deployment Script](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md)를 참조하십시오.  
+  합니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사에서 파티션 및 역할 배포 옵션을 읽습니다 합니다 \< *프로젝트 이름을*>.deploymentoptions 파일입니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 작성할 때 이 파일을 만듭니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 때 사용 하 여 파티션 및 역할 배포 옵션을 현재 프로젝트를 \< *프로젝트 이름*>.deploymentoptions 파일이 생성 됩니다. 이러한 구성 설정에 대한 자세한 내용은 [배포 스크립트를 만드는 데 사용하는 입력 파일 이해](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md)를 참조하십시오.  
   
 ## <a name="reviewing-the-partition-and-role-deployment-options"></a>파티션 및 역할 배포 옵션 검토  
  배포 옵션에 \< *프로젝트 이름*>.deploymentoptions 파일은 다음과 같습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "37981043"
   
 -   대상 데이터베이스의 기존 역할 및 역할 멤버가 유지되고 새 역할이 배포되지 않습니다.  
   
--   **참고** 기존 역할과 멤버가 보존되는 경우 해당 역할과 관련된 권한은 없음으로 다시 설정됩니다. 보안 권한은 관련된 보안 역할이 아닌 보안을 설정하는 개체에 포함됩니다. Analysis Service 배포 마법사를 사용하여 이 동작과 작업하는 방법은 Microsoft 기술 자료 문서인 '역할 및 멤버 유지(Retain Roles and Members)'를 참조하십시오.  
+-   **참고** 기존 역할과 멤버가 보존되는 경우 해당 역할과 관련된 권한은 없음으로 다시 설정됩니다. 보안 권한은 관련된 보안 역할이 아닌 보안을 설정하는 개체에 포함됩니다. Analysis Service 배포 마법사를 사용 하 여이 동작을 사용 하는 방법에 대 한 자세한 내용은 참조 'Retain Roles and 멤버' Microsoft 기술 자료에서 합니다.  
   
 ## <a name="modifying-the-partition-and-role-deployment-options"></a>파티션 및 역할 배포 옵션 수정  
  배포 해야 합니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 저장 된 것과 다른 파티션 및 역할 옵션을 사용 하 여 프로젝트를 \< *프로젝트 이름*>.deploymentoptions 파일. 예를 들어 기존 파티션, 역할 및 역할 멤버에 표시 된 대로 모든 기존 파티션, 역할 및 멤버를 교체 하는 대신 유지 하려면 수는 \< *프로젝트 이름*>.deploymentoptions 파일입니다.  
@@ -50,17 +50,17 @@ ms.locfileid: "37981043"
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사를 대화식으로 실행하고 **파티션 및 역할 배포 옵션** 페이지에서 파티션 및 역할에 대한 새 배포 옵션을 지정합니다.  
   
-     —또는—  
+     -또는-  
   
 -   명령 프롬프트에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사를 실행하여 응답 파일 모드에서 마법사를 실행하도록 설정합니다. 응답 파일 모드에 대한 자세한 내용은 [Analysis Services 배포 마법사 실행](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md)을 참조하세요.  
   
-     —또는—  
+     -또는-  
   
 -   엽니다는 \< *프로젝트 이름*>.deploymentoptions 임의의 텍스트 편집기에서 이동 하 고 수동으로 옵션을 변경 합니다. PartitionDeployment 옵션은 DeployPartitions, RetainPartitions 합니다. RoleDeployment에 대 한 옵션은 DeployRolesAndMembers, DeployRolesRetainMembers RetainRoles 합니다.
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [설치 대상 지정](../../analysis-services/multidimensional-models/deployment-script-files-specifying-the-installation-target.md)   
- [솔루션 배포에 대 한 구성 설정 지정](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)   
+ [솔루션 배포를 위한 구성 설정 지정](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)   
  [처리 옵션 지정](../../analysis-services/multidimensional-models/deployment-script-files-specifying-processing-options.md)  
   
   

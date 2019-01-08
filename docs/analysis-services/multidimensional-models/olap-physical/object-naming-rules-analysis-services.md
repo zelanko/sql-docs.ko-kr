@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8777a346fe95f8399d14651fb00517fe0f599496
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: HT
+ms.openlocfilehash: 7267097b1a06cb44c801ed20cbfd206c330328ff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147960"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509469"
 ---
 # <a name="object-naming-rules-analysis-services"></a>개체 명명 규칙(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "50147960"
   
  다음 규칙은 **Name** 및 **ID** 속성에 적용됩니다.  
   
--   이름은 대/소문자를 구분하지 않습니다. 같은 데이터베이스에 이름이 “sales”와 “Sales”인 큐브가 동시에 있을 수 없습니다.  
+-   이름은 대/소문자를 구분하지 않습니다. "Sales" 라는 큐브를 사용할 수 없습니다 및 동일한 데이터베이스에 대 한 "Sales" 라는 다른 합니다.  
   
 -   이름 내에 공백을 포함할 수 있더라도 개체 이름에 선행 또는 후행 공백을 사용할 수 없습니다. 선행 공백과 후행 공백은 암시적으로 잘립니다. 이는 개체의 **Name** 및 **ID** 에 모두 적용됩니다.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "50147960"
 |MOLAP(모든 버전)|아니요|  
 |테이블 형식 - 1050|아니요|  
 |테이블 형식 - 1100|아니요|  
-|테이블 형식 – 1130 이상|사용자 계정 컨트롤|  
+|테이블 형식-1130 이상|사용자 계정 컨트롤|  
   
  데이터베이스 기본 ModelType을 가질 수 있습니다. 기본값은 다차원과 같으므로 열 이름에 예약 문자를 사용할 수 없습니다.  
   

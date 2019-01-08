@@ -15,12 +15,12 @@ ms.assetid: 182b115e-0fe2-4717-8dff-183f9eb6e397
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f0e98d0653bf73c96448291d4c25654cdf5ea753
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7a971b96de66cf766541b741c48f5477cf9db65
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177478"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350435"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>디지털 인증서를 사용하여 패키지 서명
   이 항목에서는 디지털 인증서를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에 서명하는 방법을 설명합니다. 디지털 서명을 다른 설정과 함께 사용하여 잘못된 패키지를 로드하거나 실행하지 못하게 할 수 있습니다.  
@@ -33,11 +33,11 @@ ms.locfileid: "48177478"
   
     -   인증서를 발급하는 상업적 공용 인증 기관에서 인증서를 가져옵니다.  
   
-    -   조직에서 내부적으로 인증서를 발급할 수 있도록 인증서 서버에서 인증서를 가져옵니다. 인증서에 서명하는 데 사용하는 루트 인증서를 **신뢰할 수 있는 루트 인증 기관** 저장소에 추가해야 합니다. 루트 인증서를 추가하려면 MMC( [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console)에 대한 인증서 스냅인을 사용할 수 있습니다. 자세한 내용은 MSDN Library에서 "[Certificate Services](http://go.microsoft.com/fwlink/?LinkId=100755)" 항목을 참조하십시오.  
+    -   조직에서 내부적으로 인증서를 발급할 수 있도록 인증서 서버에서 인증서를 가져옵니다. 인증서에 서명하는 데 사용하는 루트 인증서를 **신뢰할 수 있는 루트 인증 기관** 저장소에 추가해야 합니다. 루트 인증서를 추가하려면 MMC( [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console)에 대한 인증서 스냅인을 사용할 수 있습니다. 자세한 내용은 MSDN Library에서 "[Certificate Services](https://go.microsoft.com/fwlink/?LinkId=100755)" 항목을 참조하십시오.  
   
-    -   테스트용으로만 사용할 자체의 인증서를 만듭니다. 인증서 작성 도구(Makecert.exe)를 사용하면 테스트용 X.509 인증서를 생성할 수 있습니다. 자세한 내용은 MSDN Library에서 "[인증서 작성 도구(Makecert.exe)](http://go.microsoft.com/fwlink/?LinkId=100756)" 항목을 참조하세요.  
+    -   테스트용으로만 사용할 자체의 인증서를 만듭니다. 인증서 작성 도구(Makecert.exe)를 사용하면 테스트용 X.509 인증서를 생성할 수 있습니다. 자세한 내용은 MSDN Library에서 "[인증서 작성 도구(Makecert.exe)](https://go.microsoft.com/fwlink/?LinkId=100756)" 항목을 참조하세요.  
   
-     인증서에 대한 자세한 내용은 인증서 스냅인의 온라인 도움말을 참조하십시오. 디지털 자산에 서명하는 방법에 대한 자세한 내용은 MSDN Library에서 "[Signing and Checking Code with Authenticode](http://go.microsoft.com/fwlink/?LinkId=78100)" 항목을 참조하십시오.  
+     인증서에 대한 자세한 내용은 인증서 스냅인의 온라인 도움말을 참조하십시오. 디지털 자산에 서명하는 방법에 대한 자세한 내용은 MSDN Library에서 "[Signing and Checking Code with Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100)" 항목을 참조하십시오.  
   
 -   인증서를 코드 서명에 사용할 수 있는지 확인합니다. 코드 서명에 인증서를 사용할 수 있는지 여부를 확인하려면 인증서 스냅인에서 인증서 속성을 검토합니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48177478"
   
      패키지에 서명했더라도 패키지를 로드하기 전에 디지털 서명을 확인하도록 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 를 구성해야 합니다. 자세한 내용은 [디지털 서명을 사용하여 패키지 원본 확인](security/identify-the-source-of-packages-with-digital-signatures.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [보안 개요 &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
+## <a name="see-also"></a>관련 항목:  
+ [보안 개요&#40;Integration Services&#41;](security/security-overview-integration-services.md)  
   
   

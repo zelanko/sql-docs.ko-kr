@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], creating
@@ -14,12 +13,12 @@ ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1fdca5fb5b8600664d22aabb0b87f458a84f0937
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3974ef5155c5fac96b193096b9b2391714ceace6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129563"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52809912"
 ---
 # <a name="create-an-entity-master-data-services"></a>엔터티 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 멤버와 해당 특성을 포함할 엔터티를 만듭니다.  
@@ -62,16 +61,16 @@ ms.locfileid: "48129563"
   
 ## <a name="next-steps"></a>다음 단계  
   
--   [텍스트 특성 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)  
+-   [텍스트 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)  
   
--   [도메인 기반 특성 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+-   [도메인 기반 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
--   [파일 특성 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
+-   [파일 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [엔터티 &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
- [명시적 계층 &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
+ [엔터티&#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
+ [명시적 계층&#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
  [엔터티 이름 변경 &#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)   
- [엔터티 삭제 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)  
+ [엔터티 삭제&#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)  
   
   

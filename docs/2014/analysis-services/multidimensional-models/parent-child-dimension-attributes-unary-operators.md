@@ -15,12 +15,12 @@ ms.assetid: b8ef549c-5458-458a-bf1a-fd743a1417fd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e69e7f66b633a218ad5a2fb77cd44047c9810ca8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3ecd203bfce80ffe4c64dcf0ca274f7e50f6ff1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131616"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544389"
 ---
 # <a name="unary-operators-in-parent-child-dimensions"></a>부모-자식 차원의 단항 연산자
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 부모-자식 관계가 포함된 차원에서 부모 특성의 모든 계산되지 않은 멤버에 대한 사용자 지정 롤업을 결정하는 단항(또는 사용자 지정 롤업) 연산자 열을 지정하세요. 그러면 부모 멤버의 값이 계산될 때마다 멤버에 단항 연산자가 적용됩니다. 부모 특성( **Usage** =Parent)에서**UnaryOperatorColumn**은 데이터 원본 뷰에서 단항 연산자가 있는 테이블 열을 지정합니다. 이 열에 저장되어 있는 사용자 지정 롤업 연산자 값이 특성의 각 멤버에 적용됩니다.  

@@ -11,12 +11,12 @@ ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e73545b8417b92abf57747441b49531736ecdd48
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 52a7ceaa177c223363f4c14313cf14f70a0e52f3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120819"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508677"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>SAP BW 연결 관리자 편집기
   **SAP BW 연결 관리자 편집기** 를 사용하여 SAP Netweaver BW 버전 7 시스템에 연결하는 데 사용할 속성을 지정할 수 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "48120819"
   
     -   SAP BW 연결 관리자를 두 번 클릭합니다.  
   
-         —또는—  
+         -또는-  
   
     -   SAP BW 연결 관리자를 마우스 오른쪽 단추로 클릭한 다음 **편집**을 선택합니다.  
   

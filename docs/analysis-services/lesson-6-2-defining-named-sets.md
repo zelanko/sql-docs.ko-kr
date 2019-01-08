@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 705c263d425985d23c823eee9cdd550b5a44db1f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: 19bdb9c165b5bfa6c8021fe596d9591e68d517ce
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018230"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507658"
 ---
-# <a name="lesson-6-2---defining-named-sets"></a>단원 2-6-명명 된 집합 정의
+# <a name="lesson-6-2---defining-named-sets"></a>단원 6-2-명명 된 집합 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 명명된 집합은 차원 멤버 집합을 반환하는 MDX(Multidimensional Expressions) 식입니다. 명명된 집합을 정의한 후 큐브 정의의 일부로 저장할 수 있습니다. 또한 클라이언트 애플리케이션에서도 명명된 집합을 만들 수 있습니다. 큐브 데이터, 산술 연산자, 숫자 및 함수를 조합하여 명명된 집합을 만들 수 있습니다. 명명된 집합을 클라이언트 애플리케이션의 MDX 쿼리에서 사용할 수 있으며 하위 큐브의 집합을 정의하는 데도 사용할 수 있습니다. 하위 큐브는 큐브 공간을 후속 문에 대해 정의된 하위 공간으로 제한하는 크로스 조인된 집합 컬렉션입니다. 제한된 큐브 공간을 정의하는 것은 MDX 스크립팅에 대한 기본 개념에 해당합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "34018230"
     Exists([Reseller].[Reseller Name].[Reseller Name].Members)  
     ```  
   
-    이제 Exists 집합 식에 대한 첫 번째 집합을 정의했으므로 직원 수가 가장 많은 대리점 차원의 멤버 집합을 추가할 수 있습니다.  
+    이제 정의한 첫 번째 집합 Exists 집합 식에는 직원의 최대 수를 포함 하는 Reseller 차원의 멤버 집합의 두 번째 집합에 추가할 수 있습니다.  
   
 7.  **계산 도구** 창의 **메타데이터** 탭에서 Reseller 차원의 **Number of Employees** 를 확장한 후 **Members**, **All Resellers**를 차례로 확장합니다.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "34018230"
   
 9. 속성 창에서 **DiscretizationMethod** 속성을 **Automatic**으로 변경하고 **DiscretizationBucketCount** 속성을 **5**로 변경합니다. 자세한 내용은 [특성 멤버 그룹화&#40;불연속화&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)를 참조하세요.  
   
-10. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 **빌드** 메뉴에서 **Analysis Services Tutorial 배포**를 클릭합니다.  
+10. **의** 빌드 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]메뉴에서 **Analysis Services Tutorial 배포**를 클릭합니다.  
   
 11. 배포가 성공적으로 완료되면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 대한 큐브 디자이너로 전환한 후 **계산** 탭의 도구 모음에서 **다시 연결** 을 클릭합니다.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "34018230"
   
     **Category** 특성의 **Bike** 멤버와 **Bike** 하위 범주의 멤버만 큐브에 그대로 남아 있습니다. **Core Products** 명명된 집합이 하위 큐브를 정의하는 데 사용되기 때문입니다. 다음 그림에 표시된 것처럼 이 하위 큐브는 하위 큐브 내의 **Product** 차원에 포함된 **Category** 특성의 멤버를 **Core Product** 명명된 집합의 멤버로 제한합니다.  
   
-    ![멤버의 핵심 제품 명명 된 집합](../analysis-services/media/l6-named-set-04.gif "멤버의 핵심 제품 명명 된 집합")  
+    ![멤버의 핵심 제품 명명 된 집합](../analysis-services/media/l6-named-set-04.gif "멤버인 핵심 제품 명명 된 집합")  
   
 7.  **메타데이터** 창에서 **Reseller**를 확장하고 필터 영역에 **Large Resellers** 를 추가합니다.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "34018230"
     ![설정 하는 두 개의 명명 된 포함 된 필터 창](../analysis-services/media/l6-named-set-05.gif "설정 하는 두 개의 명명 된 포함 된 필터 창")  
   
 ## <a name="next-lesson"></a>다음 단원  
-[7 단원: 핵심 성과 지표 & #40; 정의 Kpi & #41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[7 단원: 핵심 성과 지표를 정의 합니다. &#40;Kpi&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>관련 항목:  
 [새 명명된 집합](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  

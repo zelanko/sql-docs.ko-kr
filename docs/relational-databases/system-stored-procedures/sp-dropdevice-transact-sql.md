@@ -19,12 +19,12 @@ ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 10b3eb7107af97e8c67491117a8e5542118ef00b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee0703a0dca2c6ba958f52dee0f8850ea2c8244e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598271"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52536389"
 ---
 # <a name="spdropdevice-transact-sql"></a>sp_dropdevice(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sp_dropdevice [ @logicalname = ] 'device'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@logicalname=** ] **'***장치***'**  
+ [  **@logicalname=** ] **'**_장치_**'**  
  에 나열 된 데이터베이스 장치 또는 백업 장치의 논리적 이름입니다 **master.dbo.sysdevices.name**합니다. *장치* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@delfile=** ] **'***delfile***'**  
+ [  **@delfile=** ] **'**_delfile_**'**  
  물리적 백업 장치 파일의 삭제 여부를 지정합니다. *delfile* 됩니다 **varchar(7)** 합니다. 로 지정 하는 경우 **DELFILE**, 물리적 백업 장치 디스크 파일이 삭제 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

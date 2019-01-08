@@ -21,12 +21,12 @@ ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 74f44195e0c365b46794fdd03ff296a1fa4040dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e857682f5bb03256b129521840f8969e797e1a5f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640481"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535745"
 ---
 # <a name="sysdmhadrinstancenodemap-transact-sql"></a>sys.dm_hadr_instance_node_map(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47640481"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**ag_resource_id**|**nvarchar(256)**|가용성 그룹의 고유 ID를 WSFC 클러스터의 리소스로 나타낸 것입니다.|  
-|**instance_name**|**nvarchar(256)**|이름 —*server*/*인스턴스*-가용성 그룹의 복제본을 호스팅하는 서버 인스턴스.|  
+|**instance_name**|**nvarchar(256)**|이름-*server*/*인스턴스*-가용성 그룹의 복제본을 호스팅하는 서버 인스턴스.|  
 |**node_name**|**nvarchar(256)**|WSFC 클러스터 노드의 이름입니다.|  
   
 ## <a name="permissions"></a>사용 권한  

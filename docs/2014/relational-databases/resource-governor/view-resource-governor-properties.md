@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.rg.properties.f1
@@ -15,19 +14,19 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a3e2caa3c2b89ead6ee109ea13fa6783cc61dab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1093297892ea2e03cb9583a1e5c40a1c2a85b19
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116413"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781266"
 ---
 # <a name="view-resource-governor-properties"></a>리소스 관리자 속성 보기
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 리소스 관리자 속성 페이지를 사용하여 리소스 풀, 작업 그룹과 같은 리소스 관리자 엔터티를 만들거나 구성할 수 있습니다.  
   
-1.  **시작하기 전에:**  [사용 권한](#Permissions)  
+1.  **시작하기 전 주의 사항:**  [Permissions](#Permissions)  
   
-2.  **리소스 관리자 속성을 보려면**  [리소스 관리자 속성 페이지를 사용합니다.](#ViewRGProp)  
+2.  **리소스 관리자 속성을 보려면:**  [Resource Governor 속성 페이지](#ViewRGProp)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  리소스 관리자 엔터티 속성을 보는 것 이외에도, **리소스 관리자 속성** 페이지를 사용하여 몇 가지 구성 작업을 수행할 수 있습니다. 자세한 내용은 다음 항목을 참조하세요.  
@@ -126,7 +125,7 @@ ms.locfileid: "48116413"
   
 2.  Resource Governor 엔터티의 현재 구성을 보려면 [Resource Governor 관련 동적 관리 뷰&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql)를 사용하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [리소스 관리자](resource-governor.md)   
  [리소스 관리자 사용](enable-resource-governor.md)   
  [리소스 관리자 리소스 풀](resource-governor-resource-pool.md)   

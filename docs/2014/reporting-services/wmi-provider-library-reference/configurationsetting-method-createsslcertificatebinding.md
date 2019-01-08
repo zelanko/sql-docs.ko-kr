@@ -13,12 +13,12 @@ ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: da18ee258d12a667280c601526f0433c1a5b0600
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 93914da7f225fca03a5a078d1dd1d5b2c7890546
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070493"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514375"
 ---
 # <a name="createsslcertificatebinding-method-wmi-msreportserverconfigurationsetting"></a>CreateSSLCertificateBinding 메서드(WMI MSReportServer_ConfigurationSetting)
   SSL 인증서 바인딩을 만듭니다.  
@@ -74,7 +74,7 @@ public void CreateSSLCertificateBinding(string application,
   
 2.  지정한 IPAddress가 이 컴퓨터의 IPAddress와 일치하지 않는 경우  
   
-3.  지정한 IPAddress가 DHCP IPAddress(정기적으로 변경됨)인 경우 - 대신 와일드카드 IP 주소 사용(0.0.0.0)  
+3.  지정한 IPAddress가 DHCP IPAddress(정기적으로 변경됨)인 경우 대신 와일드카드 IP 주소(0.0.0.0)를 사용합니다.  
   
 4.  지정한 IPAddress가 URL 예약의 IP 주소와 일치하지 않고 와일드카드 또는 호스트 이름 URL 예약이 모두 없는 경우  
   

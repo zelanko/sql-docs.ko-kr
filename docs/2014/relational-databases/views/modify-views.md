@@ -15,12 +15,12 @@ ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f29dc88bf6298aebea60591034f0c7abc6765185
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3d2581f2f086f8db5f9408502185c132a5866af
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167013"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513221"
 ---
 # <a name="modify-views"></a>뷰 수정
   뷰를 정의한 후 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 해당 뷰를 삭제하고 다시 만들지 않고 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 해당 정의를 수정할 수 있습니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "48167013"
   
     1.  추가하거나 제거할 요소의 확인란을 선택하거나 선택을 취소합니다.  
   
-    2.  다이어그램 창 내부를 마우스 오른쪽 단추로 클릭하고 **테이블 추가...** 를 선택한 다음 **테이블 추가** 대화 상자에서 뷰에 추가할 열을 선택합니다.  
+    2.  다이어그램 창 내부를 마우스 오른쪽 단추로 클릭하고 **테이블 추가...** 를 선택한 다음, **테이블 추가** 대화 상자에서 뷰에 추가할 열을 선택합니다.  
   
     3.  제거할 테이블의 제목 표시줄을 마우스 오른쪽 단추로 클릭하고 **제거**를 선택합니다.  
   

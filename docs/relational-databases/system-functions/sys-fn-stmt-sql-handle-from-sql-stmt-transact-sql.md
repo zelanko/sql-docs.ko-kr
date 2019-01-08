@@ -14,12 +14,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f9eddf5cb58b18651acd77afe44758a47b1fd8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 049fb28c9d49dcfe359363e0be8d78ba8a4bca8d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602852"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537891"
 ---
 # <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,15 +45,15 @@ sys.fn_stmt_sql_handle_from_sql_stmt
  *query_param_type*  
  쿼리 매개 변수 형식이입니다. *query_param_type* 되는 **tinyint**합니다. 가능한 값은  
   
--   NULL – 기본값은 0  
+-   기본값은 0 NULL  
   
--   0 – 없음  
+-   0-없음  
   
 -   1-사용자  
   
--   2 – 단순  
+-   2-간단한  
   
--   3 – 강제  
+-   3-강제  
   
 ## <a name="columns-returned"></a>반환되는 열  
  다음 표에서 열이 나열 되어 해당 sys.fn_stmt_sql_handle_from_sql_stmt 반환 합니다.  
@@ -93,7 +93,7 @@ JOIN sys.dm_exec_query_stats AS qs
     ON fn_handle_from_stmt.statement_sql_handle = qs.statement_sql_handle;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [sp_query_store_force_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
  [sp_query_store_remove_plan &#40;TRANSCT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
  [sp_query_store_unforce_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   

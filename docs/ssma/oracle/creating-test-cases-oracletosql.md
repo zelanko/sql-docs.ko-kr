@@ -12,18 +12,18 @@ ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 07b52a71d3f12455bacdd2e9789aadb5ed5967db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2c1bd3fea167a784d86f7e323566f73c3a01f86
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604681"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512955"
 ---
 # <a name="creating-test-cases-oracletosql"></a>테스트 사례 만들기(OracleToSQL)
 테스트를 만드는 테스트 사례 마법사를 사용 합니다. 이 마법사를 사용 하면 테스트 매개 변수를 지정 하 고 테스트 하 고 개체를 확인을 선택 하 여 테스트 사례를 만들 수 있습니다.  
   
 ## <a name="starting-the-test-case-wizard"></a>테스트 사례 마법사 시작  
-테스트 사례 마법사를 시작 하려면 **새 테스트 사례는 중...** **테스터** 메뉴.  
+테스트 사례 마법사를 시작 하려면 **새 테스트 사례는 중...**  에서 합니다 **테스터** 메뉴.  
   
 시작 되 면 마법사는 원본 Oracle 서버의 SSMATESTER_ORACLE 스키마를 찾습니다. 보조 개체를 저장 하는 데 사용 되는 테스터 확장 스키마 이며 테스트 사례 마법사 SSMATESTER_ORACLE를 찾을 수 없는 경우에 스키마를 만들려면 다음을 제안 하는 대화 상자 창이 표시 됩니다. (이 경우 일반적으로 발생 SSMA 테스터의 첫 번째 실행 중입니다.)  
   

@@ -11,12 +11,12 @@ ms.assetid: b614ebdb-07ca-44af-a0ff-893364bd4b71
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f575a51d34bfaa6b8a4ca1a6200cf60f9d89a870
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a45d0bf0878b472e4979c00a5a38e8b01974a22
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122743"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544335"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>고급 시계열 예측(중급 데이터 마이닝 자습서)
   예측 모델 탐색을 통해 대부분 지역의 판매는 유사한 패턴을 따르지만 태평양 지역의 M200 모델과 같이 특정 지역 및 모델은 서로 매우 다른 추세를 보여 준다는 사실을 알았습니다. 이는 놀라운 일이 아니고 알려진 바와 같이 지역 간 차이는 일반적인 것이며 마케팅 홍보, 정확하지 않은 보고 또는 지정학적 사건과 같은 많은 요인으로 인해 발생할 수 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "48122743"
 ##  <a name="bkmk_newExtendData"></a> 새로운 확장된 판매 데이터 만들기  
  판매 데이터를 업데이트하려면 최신 판매 수치가 필요합니다. 신규 매장에 대한 관심을 불러일으키고 해당 제품의 인지도를 높이기 위해 지역 판매 홍보를 실시한 태평양 지역 내 데이터는 특히 중요합니다.  
   
- 이 시나리오에서는 두 군데 지역에 대한 3개월 동안의 신규 데이터가 들어 있는 Excel 통합 문서에서 데이터를 가져온 것으로 가정합니다. Transact-SQL 스크립트를 사용하는 데이터용 테이블을 만든 다음 예측에 사용할 데이터 원본 뷰를 정의합니다.  
+ 이 시나리오에서는 방금 3 개월 동안의 신규 데이터가 두 군데 지역에 대 한 포함 된 Excel 통합 문서에서 데이터를 가져왔는지 가정 합니다. Transact SQL 스크립트를 사용 하는 데이터용 테이블을 만들고 예측에 사용할 데이터 원본 뷰를 정의 합니다.  
   
 #### <a name="create-the-table-with-new-sales-data"></a>새 판매 데이터가 있는 테이블 만들기  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48122743"
     ```  
   
     > [!WARNING]  
-    >  쉼표 구분 기호 및 통화 기호 사용 시 발생하는 문제를 방지하기 위해 따옴표가 통화 값에 사용됩니다. 또한이 서식에 통화 값에 전달할 수 있습니다. `130170.22`  
+    >  쉼표 구분 기호 및 통화 기호 사용 시 발생하는 문제를 방지하기 위해 따옴표가 통화 값에 사용됩니다. 또한 다음과 같은 서식에 통화 값을 전달할 수 있습니다. `130170.22`  
     >   
     >  예제 데이터베이스에 사용된 날짜가 이 릴리스에 맞게 변경되었습니다. 이전 버전의 AdventureWorks를 사용하는 경우에는 이에 따라 삽입된 날짜를 조정해야 할 수 있습니다.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48122743"
   
      **데이터 원본**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **테이블 및 뷰 선택**: NewSalesData 만들어지면 방금 테이블을 선택 합니다.  
+     **테이블 및 뷰 선택**: NewSalesData 테이블에 방금 만든 선택 합니다.  
   
 3.  **마침**을 클릭합니다.  
   
@@ -122,9 +122,9 @@ ms.locfileid: "48122743"
   
 2.  마법사 시작 페이지에서 **다음**을 클릭합니다.  
   
-3.  에 **데이터 원본 선택** 페이지에서 선택 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]를 클릭 하 고 **다음**합니다.  
+3.  **데이터 원본 선택** 페이지에서 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]를 선택한 후 **다음**을 클릭합니다.  
   
-4.  **테이블 및 뷰 선택**페이지에서 테이블을 추가하지 않고 **다음**을 클릭합니다.  
+4.  페이지에서 **테이블 및 뷰 선택**, 모든 테이블 단지 클릭을 추가 하지 마세요 **다음**합니다.  
   
 5.  페이지의 **마법사 완료**, 이름을 입력 합니다 `AllRegions`를 클릭 하 고 **마침**합니다.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "48122743"
   
      **이름**: `T1000 Pacific Region`  
   
-     **설명을**: **필터`vTimeSeries`지역과 모델 별로**  
+     **설명**: **필터`vTimeSeries`지역과 모델 별로**  
   
 5.  텍스트 창에 다음 쿼리를 입력한 다음 확인을 클릭합니다.  
   

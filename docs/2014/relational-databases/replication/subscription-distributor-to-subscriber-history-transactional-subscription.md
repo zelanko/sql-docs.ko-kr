@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.subscription.disttosub.f1
@@ -13,12 +12,12 @@ ms.assetid: 1aad5b82-592e-4907-92f7-b90794175be5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 790401fb1ef6bbdf62bccbe7c4f3d04bbf999348
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4daea476dd9d533d8a16365a5260905f9fb22d29
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215523"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804305"
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>구독, 배포자에서 구독자로의 연결 기록(트랜잭션 구독)
   **배포자에서 구독자로의 연결 기록** 탭은 상태, 기록, 정보 메시지, 모든 오류 메시지 등 배포 에이전트에 대한 자세한 정보를 표시합니다.  
@@ -61,7 +60,7 @@ ms.locfileid: "48215523"
  **선택한 세션에 대한 오류 정보 또는 메시지**  
  선택한 세션의 **상태** 열에 **오류** 값이 표시되는 경우에만 표시됩니다. 이 텍스트 영역은 오류 발생 시 시도한 명령과 자세한 오류 정보를 표시합니다. 오류와 관련된 추가 내용으로 연결되는 링크도 포함되어 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 모니터 시작](monitor/start-the-replication-monitor.md)   
  [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
  [복제 모니터링](monitoring-replication.md)   

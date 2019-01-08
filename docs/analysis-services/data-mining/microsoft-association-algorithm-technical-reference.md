@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b6b3d44410e4d3cf889bc99e7057b6c420f37d7a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 21f779f1e0b1764fd35d6399aa220e244574d576
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145908"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545589"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft 연결 알고리즘 기술 참조
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "50145908"
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 데이터 마이닝 디자이너를 사용하여 언제든지 마이닝 모델의 매개 변수를 변경할 수 있습니다. 사용 하 여 매개 변수를 프로그래밍 방식으로 변경할 수도 있습니다는 <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> 또는 AMO를 사용 하 여 컬렉션을 [MiningModels 요소 &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) XMLA의 합니다. 다음 표에서는 각 매개 변수에 대해 설명합니다.  
   
 > [!NOTE]  
->  DMX 문을 사용하여 기존 모델의 매개 변수를 변경할 수 없습니다. 따라서 모델을 만들 때 DMX CREATE MODEL 또는 ALTER STRUCTURE… ADD MODEL에 매개 변수를 지정해야 합니다.  
+>  DMX 문에;를 사용 하 여 기존 모델의 매개 변수를 변경할 수 없습니다. DMX CREATE MODEL 또는 ALTER STRUCTURE 매개 변수를 지정 해야 하는 중... ADD MODEL에 매개 변수를 지정해야 합니다.  
   
  *MAXIMUM_ITEMSET_COUNT*  
  생성할 최대 항목 집합 수를 지정합니다. 값을 지정하지 않으면 기본값이 사용됩니다.  
@@ -133,7 +133,7 @@ ms.locfileid: "50145908"
  마이닝 구조 열에 적용됩니다.  
   
  MODEL_EXISTENCE_ONLY  
- 열이 **Missing** 및 **Existing**상태를 갖는 것으로 간주됩니다. Null은 누락 값입니다.  
+ 열이 두 가지 가능한 상태인 **누락** 하 고 **기존**합니다. Null은 누락 값입니다.  
   
  마이닝 모델 열에 적용됩니다.  
   
@@ -151,9 +151,9 @@ ms.locfileid: "50145908"
 > [!NOTE]  
 >  Cyclical  및 Ordered  내용 유형이 지원되기는 하지만 알고리즘은 해당 유형을 불연속 값으로 처리하고 특수한 처리를 수행하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Microsoft 연결 알고리즘](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [연결 모델 쿼리 예제](../../analysis-services/data-mining/association-model-query-examples.md)   
- [연결 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [연결 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

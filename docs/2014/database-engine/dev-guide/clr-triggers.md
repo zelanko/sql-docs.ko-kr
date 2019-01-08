@@ -27,12 +27,12 @@ ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a2827d98dda93a59b3e599f1db07ebb3fadd234d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c755b605b834d5c31a7017358fb6e714cfde7964
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226703"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52522889"
 ---
 # <a name="clr-triggers"></a>CLR 트리거
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR(공용 언어 런타임)과의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 통합으로 인해 모든 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 언어를 사용하여 CLR 트리거를 만들 수 있습니다. 이 섹션에서는 CLR 통합을 사용하여 구현된 트리거와 관련된 정보를 제공합니다. 에 대 한 전체 설명은 트리거를 참조 하세요 [DDL 트리거](../../relational-databases/triggers/ddl-triggers.md)합니다.  
@@ -500,7 +500,7 @@ EXTERNAL NAME SQLCLRTest.CLRTriggers.EmailAudit
 ```  
 Msg 6549, Level 16, State 1, Procedure trig_InsertValidator, Line 0  
 A .NET Framework error occurred during execution of user defined routine or aggregate 'trig_InsertValidator':   
-System.Data.SqlClient.SqlException: Transaction is not allowed to roll back inside a user defined routine, trigger or aggregate because the transaction is not started in that CLR level. Change application logic to enforce strict transaction nesting… User transaction, if any, will be rolled back.  
+System.Data.SqlClient.SqlException: Transaction is not allowed to roll back inside a user defined routine, trigger or aggregate because the transaction is not started in that CLR level. Change application logic to enforce strict transaction nesting... User transaction, if any, will be rolled back.  
 ```  
   
  이 예외는 예상된 것이며, 코드 실행을 계속하려면 try/catch 블록이 필요합니다. 트리거 코드 실행이 완료되면 다른 예외가 발생합니다.  

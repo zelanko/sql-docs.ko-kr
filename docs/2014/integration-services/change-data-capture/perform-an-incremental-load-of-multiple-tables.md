@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],multiple tables
@@ -13,12 +12,12 @@ ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cab69f68fe040600722d22c31ea8a356610e61c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef1b57d9c772618bb302baa50fd7f5deb793f1cf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204683"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773005"
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>여러 테이블의 증분 로드 수행
   [변경 데이터 캡처를 사용하여 증분 로드 개선](change-data-capture-ssis.md)항목의 다이어그램에서는 한 테이블에서만 증분 로드를 수행하는 기본 패키지를 보여 줍니다. 그러나 한 테이블을 로드하는 작업은 여러 테이블을 증분 로드하는 작업만큼 일반적이지 않습니다.  

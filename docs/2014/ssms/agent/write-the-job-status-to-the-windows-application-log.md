@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - status information [SQL Server], jobs
@@ -16,12 +16,12 @@ ms.assetid: 3b813702-8f61-40ec-bf3b-ce9deb7e68be
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec23171d809252bc7ebb669db1da020dd1a9862f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 526e95490644b4fddae3e02e9ee73b57c00797c1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223033"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786725"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Windows 애플리케이션 로그에 작업 상태 쓰기
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 SQL Server 관리 개체를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 작업 상태를 Windows 응용 프로그램 이벤트 로그에 기록하도록 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 구성하는 방법에 대해 설명합니다.  

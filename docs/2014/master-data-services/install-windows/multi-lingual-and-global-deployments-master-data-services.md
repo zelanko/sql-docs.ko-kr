@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: c3d485f8-867c-4aa2-a90d-f38fda192534
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 76dfb63f8a18a8193b6764f938491591626659f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 30275afa9281b1eeb6a0f4f4bea77bda9b671094
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107353"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784315"
 ---
 # <a name="multi-lingual-and-global-deployments-master-data-services"></a>다국어 및 글로벌 배포(Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원되는 모든 언어 구성 요소 및 도구 배포를 지원합니다. 자세한 내용은 [Local Language Versions in SQL Server](../../sql-server/install/local-language-versions-in-sql-server.md)을 참조하세요.  

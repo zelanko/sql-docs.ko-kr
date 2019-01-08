@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65538
@@ -17,12 +16,12 @@ ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a07b83aa6c7556cc8404dab6ff5e26e75800e340
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50e6886e9ef69842432a0759095f11335cfbb494
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130633"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797665"
 ---
 # <a name="modify-foreign-key-relationships"></a>외래 키 관계 수정
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 관계의 외래 키 측을 수정할 수 있습니다. 테이블의 외래 키를 수정하면 주 키 테이블의 열과 관련된 열이 변경됩니다.  

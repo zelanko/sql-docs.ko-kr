@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - group collapsing [SQL Server]
@@ -14,17 +14,17 @@ ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2f6b11b045e729e0f567bb4714b9a551706f7057
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7f6cbc6b4150f2f951befcb70c1b09108de3b51
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182893"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788125"
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>행 그룹 축소(Visual Database Tools)
   쿼리 결과의 각 결과 행이 원본 데이터의 전체 행 그룹에 대응하는 쿼리 결과를 만들 수 있습니다. 행을 축소하는 경우 다음 사항에 유의해야 합니다.  
   
--   **중복 행을 제거할 수 있습니다.** 일부 쿼리의 경우 동일한 행이 여러 개 나타나는 결과 집합을 만들 수 있습니다. 예를 들어, 각 행에 저자가 있는 도시의 이름과 주 이름이 있는 결과 집합을 만들 수 있습니다. 그러나 한 도시에 저자가 여러 명인 경우 똑같은 행이 여러 개 생깁니다. 결과 SQL은 다음과 같습니다.  
+-   **중복 행을 제거할 수 있습니다.** 일부 쿼리의 경우 동일한 행이 여러 개 나타나는 결과 집합을 만들 수 있습니다. 예를 들어 각 행에 저자가 있는 도시의 이름과 주 이름이 있는 결과 집합을 만들 수 있습니다. 그러나 한 도시에 저자가 여러 명인 경우 똑같은 행이 여러 개 생깁니다. 결과 SQL은 다음과 같습니다.  
   
     ```  
     SELECT city, state  

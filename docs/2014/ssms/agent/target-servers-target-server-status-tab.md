@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.target.status.f1
@@ -12,12 +12,12 @@ ms.assetid: 010a4cab-d878-4889-8ac8-7d91db6345d6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d74ed50a5ded73dfa990efcfcce55418f64eee58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0fc22cd7489294e8623596c1ce1e4f38c90706aa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112703"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768415"
 ---
 # <a name="target-servers-target-server-status-tab"></a>대상 서버(대상 서버 상태 탭)
   이 페이지를 사용하여 이 마스터 서버와 관련된 대상 서버의 상태를 확인할 수 있습니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "48112703"
  **새로 고침 간격**  
  페이지의 정보를 새로 고치는 주기를 지정합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [기업 내 관리 자동화](automated-administration-across-an-enterprise.md)  
   
   

@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f12cc39f6d3c3b507734d1c7750491aba15ea20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e105db14e9b22b34439050ae6e08d5094f397b17
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640411"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52514585"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ HRESULT Abort(
  *eOperation*[in]  
  중단할 작업입니다. 값은 다음과 같아야 합니다.  
   
- DBASYNCHOP_OPEN - 취소 요청이 행 집합의 비동기 열기 또는 채우기나 데이터 원본 개체의 비동기 초기화에 적용됩니다.  
+ DBASYNCHOP_OPEN-요청을 취소 하는 비동기 열기 또는 행 집합의 채우기 또는 데이터 원본 개체의 비동기 초기화에 적용 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  S_OK  

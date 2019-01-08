@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -15,12 +14,12 @@ ms.assetid: 73dce835-9a80-4aef-8e0f-9dcf07dd5b80
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d74a576ea8d966d5c1a2c802eb42049c33a94b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5279500939d0499c8ef7bd247b92e052b522970b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097713"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787485"
 ---
 # <a name="file-element-dta"></a>File 요소(DTA)
   작업 파일을 지정합니다. 작업은 튜닝하려는 데이터베이스에 대해 실행되는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. 작업 파일은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트(.sql) 또는 추적 파일(.trc)이 될 수 있습니다. 자세한 내용은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요.  
@@ -48,7 +47,7 @@ ms.locfileid: "48097713"
   
 |관계|요소|  
 |------------------|--------------|  
-|**부모 요소**|[Workload 요소 &#40;DTA&#41;](workload-element-dta.md)|  
+|**부모 요소**|[Workload 요소&#40;DTA&#41;](workload-element-dta.md)|  
 |**자식 요소**|없음|  
   
 ## <a name="example"></a>예제  

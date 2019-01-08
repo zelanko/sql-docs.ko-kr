@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c6ede109d13c21686400c0f9ce99c22f1118eda9
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: HT
+ms.openlocfilehash: e1ae8fc032a1f728372e9b4e764281ea8df8ddaa
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147918"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525885"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>ReadOnly 모드와 ReadWrite 모드 간 Analysis Services 데이터베이스 전환
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "50147918"
   
      위치를 확인합니다. 빈 데이터베이스 저장소 위치는 데이터베이스 폴더가 서버 데이터 폴더에 있음을 나타냅니다.  
   
-2.  데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **분리...** 를 선택합니다.  
+2.  데이터베이스를 마우스 오른쪽 단추로 클릭 하 고 선택 **분리 하는 중...**  
   
 3.  분리되는 데이터베이스에 암호를 할당한 후 **확인** 을 클릭하여 분리 명령을 실행합니다.  
   
-4.  개체 탐색기에서 **데이터베이스** 폴더를 마우스 오른쪽 단추로 클릭하고 **연결...** 을 선택합니다.  
+4.  개체 탐색기에서 마우스 오른쪽 단추로 클릭 합니다 **데이터베이스** 선택한 폴더 **연결 하는 중...**  
   
-5.  **폴더** 입력란에 데이터베이스 폴더의 원래 위치를 입력합니다. 또는 찾아보기 단추 (**…**)를 사용하여 데이터베이스 폴더를 찾을 수 있습니다.  
+5.  **폴더** 입력란에 데이터베이스 폴더의 원래 위치를 입력합니다. 또는 찾아보기 단추를 사용할 수 있습니다 (**...** ) 데이터베이스 폴더를 찾습니다.  
   
 6.  데이터베이스의 읽기/쓰기 모드를 선택합니다.  
   
@@ -93,7 +93,7 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
   
      위치를 확인합니다. 빈 데이터베이스 저장소 위치는 데이터베이스 폴더가 서버 데이터 폴더에 있음을 나타냅니다.  
   
-2.  데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **분리...** 를 선택합니다.  
+2.  데이터베이스를 마우스 오른쪽 단추로 클릭 하 고 선택 **분리 하는 중...**  
   
 3.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 새 XMLA 탭을 엽니다.  
   

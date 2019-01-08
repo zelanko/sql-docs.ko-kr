@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 57d8dac4999f5b788b1114e6e7aa4156b6cd6419
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 01d143bf8cdfd22a33ef065805930f93d00e7546
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015390"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519121"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>리프트 차트, 수익 차트 또는 분류표 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "34015390"
   
     -   마이닝 구조 홀드아웃 데이터 집합의 일부로 정의된 전체 테스트 사례 집합을 사용하려면 **마이닝 구조 테스트 사례 사용**옵션을 선택합니다.  
   
-    -   외부 데이터를 사용하려는 경우 **다른 데이터 집합 지정**옵션을 선택합니다.  데이터 집합을 데이터 원본 뷰로 사용할 수 있어야 합니다.   찾아보기(**…**) 단추를 클릭하여 정확도 차트에 사용할 데이터 테이블을 선택합니다. 자세한 내용은 [Choose and Map Model Testing Data](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)을 참조하세요.  
+    -   외부 데이터를 사용하려는 경우 **다른 데이터 집합 지정**옵션을 선택합니다.  데이터 집합을 데이터 원본 뷰로 사용할 수 있어야 합니다.   찾아보기 (**...** ) 단추를 정확도 차트에 사용할 데이터 테이블을 선택 합니다. 자세한 내용은 [Choose and Map Model Testing Data](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)을 참조하세요.  
   
          외부 데이터 집합을 사용하고 있는 경우 선택적으로 입력 데이터 집합을 필터링할 수 있습니다. 자세한 내용은 [모델 테스트 데이터에 필터 적용](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)을 참조하세요.  
   
@@ -108,8 +108,8 @@ ms.locfileid: "34015390"
      **개인별 수익**  
      성공적인 각 판매와 관련된 수익입니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [리프트 차트 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
+## <a name="see-also"></a>관련 항목  
+ [리프트 차트&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
  [분류표&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   
   

@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: eeed58e54510748969b1111e09c3791a9320d23c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de2cd6746b23ebec2b51e124ba7b5d2e22fb91e4
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732777"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520856"
 ---
 # <a name="syspdwnodescolumnstoredictionaries-transact-sql"></a>sys.pdw_nodes_column_store_dictionaries (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47732777"
 |**column_id**|**int**|Columnstore 열의 ID입니다.|  
 |**dictionary_id**|**int**|사전의 ID입니다.|  
 |**version**|**int**|사전 형식의 버전입니다.|  
-|**type**|**int**|사전 종류입니다.<br /><br /> 1-포함 하는 해시 사전 **int** 값<br /><br /> 2 – 사용되지 않음<br /><br /> 3 – 문자열 값을 포함하는 해시 사전<br /><br /> 4-해시 들어 있는 사전을 **float** 값|  
+|**type**|**int**|사전 종류입니다.<br /><br /> 1-포함 하는 해시 사전 **int** 값<br /><br /> 2-사용<br /><br /> 3-문자열 값을 포함 하는 해시 사전<br /><br /> 4-해시 들어 있는 사전을 **float** 값|  
 |**last_id**|**int**|사전의 마지막 데이터 ID입니다.|  
 |**entry_count**|**bigint**|사전에 있는 항목의 개수입니다.|  
 |**on_disc_size**|**bigint**|사전의 크기(바이트)입니다.|  
@@ -41,7 +41,7 @@ ms.locfileid: "47732777"
 ## <a name="permissions"></a>사용 권한  
  VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [COLUMNSTORE 인덱스를 만들 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [sys.pdw_nodes_column_store_segments &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   

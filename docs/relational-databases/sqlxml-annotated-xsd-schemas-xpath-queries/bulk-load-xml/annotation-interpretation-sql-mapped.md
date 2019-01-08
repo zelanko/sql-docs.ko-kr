@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 59c9af7037c51490e93352849957ec57bc7e4eb3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0f6af7eecb4a77adb4d53440753da1c9b6ef6e1d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662302"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509825"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>주석 해석 - sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML 대량 로드 프로세스를 **sql: 매핑된** 예상 대로 XSD 스키마에서 주석-즉, 매핑 스키마 지정 하는 경우 **sql: 매핑된 = "false"** 임의의 요소 또는 특성에 대 한 XML 대량 로드 하지 않습니다 해당 열에 연결 된 데이터를 저장 하려고 시도 합니다.  
+  XML 대량 로드 프로세스를 **sql: 매핑된** 예상 있는 XSD 스키마에서 주석 인 매핑 스키마 지정 하는 경우 **sql: 매핑된 = "false"** 임의의 요소 또는 특성에 대 한 XML 대량 로드 하지 않습니다 해당 열에 연결 된 데이터를 저장 하려고 시도 합니다.  
   
  XML 대량 로드는 매핑되지 않은 요소 및 특성을 무시 (스키마에 설명 되지 않은 또는 사용 하 여 XSD 스키마에 주석이 지정 되어 **sql: 매핑된 = "false"**). 이러한 열은 사용 하 여 지정 된 경우 오버플로 열에 매핑되지 않은 모든 데이터 이동 **sql:overflow-필드**합니다.  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -16,15 +14,15 @@ ms.assetid: db0a9022-9549-43e5-b6b3-deb236f05fb8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee308c9cb55fc851809a713f1cf052b69206c8d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 534379a9ae5ea7150348bb345c59083c3392155f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160293"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799565"
 ---
 # <a name="using-synonyms"></a>동의어 사용
-  동의어는 스키마 범위 개체의 다른 이름입니다. SMO에서 동의어는으로 표시 됩니다는 <xref:Microsoft.SqlServer.Management.Smo.Synonym> 개체입니다. <xref:Microsoft.SqlServer.Management.Smo.Synonym> 개체는 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체의 자식입니다. 이는 동의어가 정의된 데이터베이스 범위 내에서만 유효함을 의미합니다. 그러나 동의어가 다른 데이터베이스 또는 원격 인스턴스의 개체를 참조할 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  동의어는 스키마 범위 개체의 다른 이름입니다. SMO에서 동의어는 <xref:Microsoft.SqlServer.Management.Smo.Synonym> 개체로 표시됩니다. <xref:Microsoft.SqlServer.Management.Smo.Synonym> 개체는 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체의 자식입니다. 이는 동의어가 정의된 데이터베이스 범위 내에서만 유효함을 의미합니다. 그러나 동의어가 다른 데이터베이스 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 원격 인스턴스의 개체를 참조할 수 있습니다.  
   
  대체 이름이 주어지는 개체를 기준 개체라고 합니다. <xref:Microsoft.SqlServer.Management.Smo.Synonym> 개체의 이름 속성이 기준 개체에 부여되는 대체 이름입니다.  
   

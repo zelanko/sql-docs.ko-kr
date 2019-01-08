@@ -15,12 +15,12 @@ ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 866e84844c563f1289a23a598cbd980d9b3bc432
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a87863d3046de695e489e83ec46eb073a7f4761c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169597"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531590"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 **bcp** 를 사용하면 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-V [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]스위치를 통해 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , **또는** 에서 원시 및 문자 형식 데이터를 가져올 수 있습니다. **-V[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스위치를 사용하면** 에서 지정된 이전 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 데이터 형식이 사용되며, 데이터 파일 형식은 해당 이전 버전의 형식과 동일합니다.  
@@ -51,8 +51,8 @@ ms.locfileid: "48169597"
   
  <sup>1</sup> UDT는 사용자 정의 형식을 나타냅니다.  
   
-## <a name="exporting-using-v-80"></a>–V 80을 사용하여 내보내기  
- 사용 하 여 내보내기 데이터를 대량 경우 합니다 **– V80** 스위치 `nvarchar(max)`, `varchar(max)`, `varbinary(max)`, XML 및 기본 모드에서 UDT 데이터와 같은 4 바이트 접두사를 사용 하 여 저장 됩니다 `text`, `image`, 및 `ntext`데이터에 대 한 기본 8 바이트 접두사를 사용 하 여는 대신 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상.  
+## <a name="exporting-using--v-80"></a>–V 80을 사용하여 내보내기  
+ 사용 하 여 내보내기 데이터를 대량 경우 합니다 **-V80** 스위치 `nvarchar(max)`, `varchar(max)`, `varbinary(max)`, XML 및 기본 모드에서 UDT 데이터와 같은 4 바이트 접두사를 사용 하 여 저장 됩니다 `text`, `image`, 및 `ntext`데이터에 대 한 기본 8 바이트 접두사를 사용 하 여는 대신 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상.  
   
 ## <a name="copying-date-values"></a>날짜 값 복사  
  **bcp** 는 ODBC 대량 복사 API를 사용합니다. 따라서 데이터 값을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 가져오기 위해 **bcp** 는 ODBC 날짜 형식(*yyyy-mm-dd hh:mm:ss*[*.f...*])을 사용합니다.  
@@ -60,9 +60,9 @@ ms.locfileid: "48169597"
  합니다 **bcp** 명령에 대해 ODBC 기본 형식을 사용 하 여 문자 형식 데이터 파일을 내보냅니다 `datetime` 고 `smalldatetime` 값입니다. 예를 들어 `12 Aug 1998`이라는 날짜가 포함된 `datetime` 열은 `1998-08-12 00:00:00.000` 문자열로 데이터 파일에 대량 복사됩니다.  
   
 > [!IMPORTANT]  
->  데이터를 가져올 때를 `smalldatetime` 를 사용 하 여 필드 **bcp**, 초 값이 00.000 인지. 그렇지 않으면 작업이 실패 해야 합니다. `smalldatetime` 만 데이터 형식은 가장 근접 한 분 값을 갖습니다. 이 경우 BULK INSERT 및 INSERT ... SELECT * FROM OPENROWSET(BULK...)는 이 경우 실패하지 않지만 초 값이 잘립니다.  
+>  데이터를 가져올 때를 `smalldatetime` 를 사용 하 여 필드 **bcp**, 초 값이 00.000 인지. 그렇지 않으면 작업이 실패 해야 합니다. `smalldatetime` 데이터 형식은 가장 근접한 분 값만 갖습니다. 이 경우 BULK INSERT 및 INSERT ... SELECT * FROM OPENROWSET(BULK...)는 이 경우 실패하지 않지만 초 값이 잘립니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **대량 가져오기 또는 대량 내보내기를 위한 데이터 형식을 사용하려면**  
   
 -   [문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
@@ -75,7 +75,7 @@ ms.locfileid: "48169597"
   
  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   

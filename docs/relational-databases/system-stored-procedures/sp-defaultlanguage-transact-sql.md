@@ -18,12 +18,12 @@ ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ab8c72a9b3b4dc3771705a1bccc89bb44a3905c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46b99e16505cf6f7a08503a98f37ced7bedcdb12
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641754"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520809"
 ---
 # <a name="spdefaultlanguage-transact-sql"></a>sp_defaultlanguage(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@loginame =** ] **'***login***'**  
+ [  **@loginame =** ] **'**_로그인_**'**  
  로그인 이름입니다. *로그인* 됩니다 **sysname**, 기본값은 없습니다. *로그인* 기존 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이나 Windows 사용자 또는 그룹.  
   
- [  **@language =** ] **'***언어***'**  
+ [  **@language =** ] **'**_언어_**'**  
  로그인의 기본 언어입니다. *언어* 됩니다 **sysname**, 기본값은 NULL입니다. *언어* 서버의 유효한 언어 여야 합니다. 하는 경우 *언어* 지정 하지 않으면 *언어* 서버의 기본 언어;로 설정 된 기본 언어에 의해 정의 됩니다는 **sp_configure** 구성 변수 **기본 언어**합니다. 서버의 기본 언어를 변경해도 기존 로그인의 기본 언어는 변경되지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

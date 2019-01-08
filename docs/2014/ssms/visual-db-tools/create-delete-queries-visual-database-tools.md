@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - row removal [SQL Server], Delete query
@@ -19,12 +19,12 @@ ms.assetid: 0db3af43-1ec4-48c8-b769-2bb9c76d3434
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a497ea82cb62a1f9d0397977500af70919ca33c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f1103e1715c01cfc868c59af17ee0f95fa7cedff
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081763"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806645"
 ---
 # <a name="create-delete-queries-visual-database-tools"></a>삭제 쿼리 만들기(Visual Database Tools)
   삭제 쿼리를 사용하면 테이블에서 모든 행을 삭제할 수 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "48081763"
   
  삭제 쿼리를 실행해도 [결과 창](results-pane-visual-database-tools.md)에는 결과가 보고되지 않습니다. 대신, 삭제한 행의 수를 나타내는 메시지가 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [지원 되는 쿼리 유형 &#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
  [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

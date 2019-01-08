@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - xe
@@ -14,12 +13,12 @@ ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 68957668604e746f8f3a7d3392f934c66332523e
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: 44bb482d1385ad9b22900bb74015a779ea6750d7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991126"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795326"
 ---
 # <a name="monitor-system-activity-using-extended-events"></a>확장 이벤트를 사용하여 시스템 작업 모니터링
   이 절차는 확장 이벤트를 ETW(Windows용 이벤트 추적)와 함께 사용하여 시스템 작업을 모니터링하는 방법을 설명합니다. 또한 CREATE EVENT SESSION, ALTER EVENT SESSION 및 DROP EVENT SESSION 문을 사용하는 방법도 보여 줍니다.  
@@ -116,7 +115,7 @@ ms.locfileid: "49991126"
     go  
     ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [CREATE EVENT SESSION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)   
  [DROP EVENT SESSION&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-event-session-transact-sql)   

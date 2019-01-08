@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], firewall systems
@@ -15,12 +14,12 @@ ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bc7f87e7e648e81b4af7411a9f9474b6cc9818da
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 6e0eafd8a8eb1d9d73f71ab069dc8bf0795a87bc
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905920"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640054"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성
   이 항목에서는 SQL Server 구성 관리자를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 데이터베이스 엔진 액세스에 대한 Windows 방화벽을 구성하는 방법에 대해 설명합니다. 방화벽 시스템은 컴퓨터 리소스에 대한 무단 액세스를 방지합니다. 방화벽을 통해 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스에 액세스하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 실행하는 컴퓨터에서 액세스를 허용하도록 방화벽을 구성해야 합니다.  
@@ -47,7 +46,7 @@ ms.locfileid: "48905920"
   
      [보안](#Security)  
   
--   **데이터베이스 엔진 액세스에 대 한 Windows 방화벽을 구성 하려면 사용 합니다.**  
+-   **데이터베이스 엔진 액세스에 대한 Windows 방화벽을 구성하려면:**  
   
      [SQL Server 구성 관리자](#SSMSProcedure)  
   

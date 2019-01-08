@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8f427312-4c09-4c8b-b9f9-8b235557a74b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 655980ec11c3e8865219b1429e412068348a36b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28afdb4a07177f9ba34b946c4c9c4e1e12e672c0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122583"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797935"
 ---
 # <a name="connect-to-an-mds-repository-mds-add-in-for-excel"></a>MDS 저장소에 연결(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 데이터를 로드하거나 게시하기 전에 MDS 리포지토리에 연결해야 합니다.  
@@ -36,10 +35,10 @@ ms.locfileid: "48122583"
   
 4.  **새 연결 추가** 대화 상자의 **설명** 필드에서 연결에 대한 설명을 입력합니다. 이 연결은 사용자가 도구 모음에서 **연결** 단추 아래의 화살표를 클릭할 때 표시됩니다.  
   
-5.  **MDS 서버 주소** 상자에 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램의 URL(예: http://contoso/mds)을 입력합니다.  
+5.  **MDS 서버 주소** 상자에 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션의 URL(예: http://contoso/mds)을 입력합니다.  
   
     > [!NOTE]  
-    >  컴퓨터 이름을 사용해야 합니다. “localhost”는 사용하지 마십시오.  
+    >  컴퓨터 이름을 사용해야 합니다. "localhost"는 사용하지 마십시오.  
   
 6.  **확인**을 클릭합니다. 이 이름은 **기존 연결** 섹션에 표시됩니다.  
   

@@ -20,12 +20,12 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e3048de737d923ba962a31d789fc390d1b038b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e296632c0444ba634f87755266efc442038c073d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846611"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535305"
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|키워드(keyword)|**varbinary(128)**|단어 분리기에서 반환된 특정 키워드의 16진수 표현입니다. 이러한 표현은 키워드를 전체 텍스트 인덱스에 저장하는 데 사용됩니다. 이 값은 사용자가 읽을 수 없습니다. 하지만 같은 전체 텍스트 인덱스의 콘텐츠를 반환 하는 다른 동적 관리 뷰에서 반환 되는 출력에 지정된 된 키워드와 관련 된 유용 [sys.dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) 고 [ sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)합니다.<br /><br /> **참고:** OxFF는 파일 또는 데이터 집합의 끝을 나타내는 특수 문자를 나타냅니다.|  
+|키워드(keyword)|**varbinary(128)**|단어 분리기에서 반환된 특정 키워드의 16진수 표현입니다. 이러한 표현은 키워드를 전체 텍스트 인덱스에 저장하는 데 사용됩니다. 이 값은 사용자가 읽을 수 없습니다. 하지만 같은 전체 텍스트 인덱스의 콘텐츠를 반환 하는 다른 동적 관리 뷰에서 반환 되는 출력에 지정된 된 키워드와 관련 된 유용 [sys.dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) 고 [ sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)합니다.<br /><br /> **참고:** OxFF는 파일 또는 데이터 집합의 끝을 나타내는 특수 문자입니다.|  
 |group_id|**int**|지정된 용어가 생성된 논리 그룹을 차별화하는 데 유용한 정수 값을 포함합니다. 예를 들어 '`Server AND DB OR FORMSOF(THESAURUS, DB)"`'는 다음 group_id 값을 영어로 생성합니다.<br /><br /> 1: 서버<br />2: DB<br />3: DB|  
 |phrase_id|**int**|단어 분리기에서 full-text와 같은 복합 단어의 대체 형태가 실행되는 경우를 차별화하는 데 유용한 정수 값을 포함합니다. 경우에 따라 복합 단어('multi-million')가 있으면 단어 분리기에서 대체 형태가 실행되기도 하는데, 이러한 대체 형태(구)는 차별화해야 하는 경우가 있습니다.<br /><br /> 예를 들어 '`multi-million`'은 다음 phrase_id 값을 영어로 생성합니다.<br /><br /> 에 대 한 1 `multi`<br />에 대 한 1 `million`<br />에 대 한 2 `multimillion`|  
 |occurrence|**int**|구문 분석 결과에 있는 각 용어의 순서를 나타냅니다. 예를 들어 "`SQL Server query processor`" 구의 경우 occurrence에 이 구의 용어에 대해 다음 occurrence 값이 영어로 포함될 수 있습니다.<br /><br /> 에 대 한 1 `SQL`<br />에 대 한 2 `Server`<br />에 대 한 3 `query`<br />에 대 한 4 `processor`|  
@@ -162,7 +162,7 @@ SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis"  OR " MS re
 SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [전체 텍스트 검색 및 의미 체계 검색 동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [전체 텍스트 검색](../../relational-databases/search/full-text-search.md)   
  [검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   

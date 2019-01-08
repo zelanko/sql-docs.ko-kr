@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], about SQL Server Profiler
@@ -14,12 +13,12 @@ ms.assetid: 6d00378a-5d74-463b-9ed6-a2685306a9d2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0871006afc74e7295646db928ec5ace0030170cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d7e92758707217a42afbd41649720907adfeaa3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175753"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796165"
 ---
 # <a name="sql-server-profiler-templates-and-permissions"></a>SQL Server Profiler 템플릿 및 권한
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 내부적으로 쿼리를 해결하는 방법을 보여 줍니다. 이를 통해 관리자는 어떤 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 다차원 식이 서버에 전송되고 해당 서버에서 어떻게 데이터베이스 또는 큐브에 액세스하여 결과 집합을 반환하는지를 정확히 파악할 수 있습니다.  
@@ -57,8 +56,8 @@ ms.locfileid: "48175753"
 |[SQL Server Profiler로 추적 필터링](filter-traces-with-sql-server-profiler.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적 출력을 필터링하도록 데이터 열에 필터를 설정하는 방법에 대한 정보가 포함됩니다.|  
 |[추적 재생](replay-traces.md)|추적 재생의 의미와 추적 재생에 필요한 사항을 설명하는 정보가 포함됩니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server 프로파일러](sql-server-profiler.md)   
+## <a name="see-also"></a>관련 항목:  
+ [SQL Server Profiler](sql-server-profiler.md)   
  [SQL Server Profiler 시작](start-sql-server-profiler.md)  
   
   

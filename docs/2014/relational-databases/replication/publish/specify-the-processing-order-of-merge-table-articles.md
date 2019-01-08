@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -16,12 +15,12 @@ ms.assetid: 9fe576a2-f5fb-4fdf-bd7d-cb322021b669
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c017a7e5dbc2d2eec535765c8889c68a16aad25b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fbc61994e251063fe6d23450582d44c77616a662
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146383"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795575"
 ---
 # <a name="specify-the-processing-order-of-merge-table-articles-replication-transact-sql-programming"></a>병합 테이블 아티클에 대한 처리 순서 지정(복제 Transact-SQL 프로그래밍)
   병합 복제를 사용하면 동기화 프로세스 중에 병합 에이전트에서 아티클을 처리하는 순서를 지정할 수 있습니다. 아티클을 작성할 때 복제 저장 프로시저를 사용하여 각 아티클 순서를 프로그래밍 방식으로 할당할 수 있습니다. 아티클은 최하위에서 최상위의 순서로 처리됩니다. 두 아티클의 값이 같으면 동시에 처리됩니다. 자세한 내용은 [병합 아티클의 처리 순서 지정](../merge/specify-the-processing-order-of-merge-articles.md)을 참조하세요.  

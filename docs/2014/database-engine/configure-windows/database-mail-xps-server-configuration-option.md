@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Mail XPs option
@@ -14,12 +13,12 @@ ms.assetid: e22c4e63-1792-473b-af11-14a7931ca9ed
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9be979999553bb5fc930ddab573ec96f7ff17a4d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e916fe3b76abfa8773a757cf2779e7d5cbf26b86
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064753"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640784"
 ---
 # <a name="database-mail-xps-server-configuration-option"></a>Database Mail XPs 서버 구성 옵션
   **DatabaseMail XPs** 옵션을 사용하여 서버에서 데이터베이스 메일을 활성화할 수 있습니다. 가능한 값은 아래와 같습니다.  
@@ -50,7 +49,7 @@ RECONFIGURE
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)  
   
   

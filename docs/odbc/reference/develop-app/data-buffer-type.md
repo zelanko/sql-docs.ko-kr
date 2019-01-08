@@ -16,15 +16,15 @@ ms.assetid: 58bea3e9-d552-447f-b3ad-ce1dab213b72
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a54054387a57d59470bae6d982b5ce700362f483
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e02d42d6d63608ccb70dc984e05ae11578d3160
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635391"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52528859"
 ---
 # <a name="data-buffer-type"></a>데이터 버퍼 형식
-응용 프로그램에서 버퍼의 C 데이터 형식 지정 됩니다. 단일 변수를 사용 하 여이 경우 응용 프로그램 변수를 할당 합니다. 일반적인 메모리를 사용 하 여, 메모리, void 형식의 포인터에서 가리키는-이 응용 프로그램 메모리를 특정 형식으로 캐스팅 하는 경우에 발생 합니다. 드라이버에는이 이와 같은 두 가지 방법으로 검색합니다.  
+응용 프로그램에서 버퍼의 C 데이터 형식 지정 됩니다. 단일 변수를 사용 하 여이 경우 응용 프로그램 변수를 할당 합니다. 제네릭 메모리-,-void 형식의 포인터가 가리키는 메모리 경우가이 응용 프로그램 메모리를 특정 형식으로 캐스팅 합니다. 드라이버에는이 이와 같은 두 가지 방법으로 검색합니다.  
   
 -   **데이터 버퍼 형식 인수입니다.** 사용 하 여 바인딩된 버퍼와 같은 매개 변수 값 및 결과 집합 데이터를 전송 하는 데 사용 되는 버퍼 *TargetValuePtr* 에 **SQLBindCol**, 같은 연결 된 형식 인수를가지고  *TargetType* 에 인수 **SQLBindCol**합니다. 이 인수를 응용 프로그램 버퍼 형식에 해당 하는 C 형식 식별자를 전달 합니다. 예를 들어, 다음에서에 호출할 **SQLBindCol**, SQL_C_TYPE_DATE 값 드라이버 지시 하는 합니다 *날짜* 버퍼가 SQL_DATE_STRUCT를:  
   

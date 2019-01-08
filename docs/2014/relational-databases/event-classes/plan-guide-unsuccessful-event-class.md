@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: ef9759f8-5613-4884-9257-86b609313f69
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f5355fc73acb76a65d81c142d57a826535b05ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: f6ce753ceaa0cc0ee16b395918390a4402cf5f39
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075723"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788771"
 ---
 # <a name="plan-guide-unsuccessful-event-class"></a>Plan Guide Unsuccessful 이벤트 클래스
   Plan Guide Unsuccessful 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 계획 지침이 포함된 쿼리 또는 일괄 처리에 대한 실행 계획을 만들지 못했음을 나타냅니다. 이 경우 계획 지침을 사용하지 않은 채 계획이 컴파일됩니다. 다음과 같은 경우 이 이벤트가 발생합니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "48075723"
 |EventClass|`int`|이벤트 유형 = 218|27|아니요|  
 |EventSequence|`int`|요청 내의 특정 이벤트 시퀀스입니다.|51|아니요|  
 |HostName|`nvarchar`|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공할 경우 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|사용자 계정 컨트롤|  
-|IsSystem|`int`|이벤트가 시스템 프로세스에서 발생했는지, 아니면 사용자 프로세스에서 발생했는지를 나타냅니다(1 = 시스템, 0 = 사용자).|60|사용자 계정 컨트롤|  
+|IsSystem|`int`|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다. 1 = 시스템, 0 = 사용자|60|사용자 계정 컨트롤|  
 |LoginName|`nvarchar`|사용자 로그인 이름이며 DOMAIN [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] username [!INCLUDE[msCoName](../../includes/msconame-md.md)] 형식의\\*Windows 로그인 자격 증명 또는*보안 로그인입니다.|11|사용자 계정 컨트롤|  
 |LoginSid|`image`|로그인한 사용자의 SID(보안 ID)입니다. 이 정보는 [sys.server_principals](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql) 또는 [sys.sql_logins](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql) 카탈로그 뷰에 있습니다. 각 SID는 서버의 각 로그인마다 고유합니다.|41|사용자 계정 컨트롤|  
 |NTDomainName|`nvarchar`|사용자가 속한 Windows 도메인입니다.|7|사용자 계정 컨트롤|  

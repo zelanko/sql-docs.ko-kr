@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b86f926c4f62d934515f58bd61608016edb6880a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 426f5044087fdf39732626ee8461b0d8c47f3a39
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085523"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791005"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>함수 종속성 프로필 요청 옵션(데이터 프로파일링 태스크)
   **프로필 요청** 페이지의 **요청 속성** 창을 사용하여 요청 창에서 선택한 **함수 종속성 프로필 요청** 의 옵션을 설정할 수 있습니다. 함수 종속성 프로필은 한 열(종속 열)의 값이 다른 열 또는 열 집합(결정 열)의 값에 종속되는 범위를 보고합니다. 또한 이 프로필을 사용하면 잘못된 값과 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 Zip Code/Postal Code 열과 US State 열 간 종속성을 프로파일링하는 중 같은 우편 번호는 항상 같은 주여야 하는데 이 프로필이 종속성 위반을 검색할 수 있습니다.  
@@ -88,7 +87,7 @@ ms.locfileid: "48085523"
 |값|Description|  
 |-----------|-----------------|  
 |**Default**|원본 테이블에서 열의 데이터 정렬을 기준으로 데이터를 정렬 및 비교합니다.|  
-|**BinarySort**|각 문자에 대해 정의된 비트 패턴을 기준으로 데이터를 정렬 및 비교합니다. 이진 정렬 순서는 대/소문자와 악센트를 구분합니다.  이진은 가장 빠른 정렬 순서입니다.|  
+|**BinarySort**|각 문자에 대해 정의된 비트 패턴을 기준으로 데이터를 정렬 및 비교합니다. 이진 정렬 순서는 대/소문자와 악센트를 구분합니다. 이진은 가장 빠른 정렬 순서입니다.|  
 |**DictionarySort**|관련된 언어 또는 알파벳에 대해 사전에 정의된 정렬 및 비교 규칙에 따라 데이터를 정렬 및 비교합니다.|  
   
  **DictionarySort**를 선택하는 경우 다음 테이블에 나열된 옵션 조합을 선택할 수도 있습니다. 이러한 추가 옵션은 기본적으로 선택되어 있지 않습니다.  
@@ -120,8 +119,8 @@ ms.locfileid: "48085523"
  **MaxNumberOfViolations**  
  출력에 보고할 최대 함수 종속성 위반 수를 지정합니다. 이 속성의 기본값은 100입니다. **Exact** 가 **ThresholdSetting**으로 선택된 경우 이 옵션을 사용할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 프로 파일링 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)   
+## <a name="see-also"></a>관련 항목:  
+ [데이터 프로파일링 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)   
  [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

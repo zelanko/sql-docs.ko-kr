@@ -11,12 +11,12 @@ ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8bc8f0d48b2f439b421f205187343b5ca0e2f010
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 2883427b45cb408323db91935ebbccee0792825f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080193"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526657"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>PowerPivot 서비스 계정 구성
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 설치에는 서버 작업을 지원하는 두 서비스가 포함됩니다. **SQL Server Analysis Services(PowerPivot)** 서비스는 응용 프로그램 서버에서 PowerPivot 데이터 처리 및 쿼리 지원을 제공하는 Windows 서비스입니다. 이 서비스의 로그인 계정은 항상 SQL Server 설치 중 SharePoint 통합 모드의 Analysis Services를 설치할 때 지정됩니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "48080193"
   
  [문제 해결: 수동으로 관리 권한 부여](#updatemanually)  
   
- [문제 해결: 중앙 관리 또는 SharePoint Foundation 웹 응용 프로그램 서비스의 암호 만료로 인해 발생한 HTTP 503 오류 해결](#expired)  
+ [문제 해결: 확인할 HTTP 503 오류 중앙 관리 또는 SharePoint Foundation에 대 한 암호 만료로 인해 웹 응용 프로그램 서비스](#expired)  
   
 ##  <a name="bkmk_passwordssas"></a> SQL Server Analysis Services (PowerPivot) 인스턴스에 대해 만료 된 암호 업데이트  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48080193"
   
 |요구 사항|Description|  
 |-----------------|-----------------|  
-|프로비전 요구 사항|PowerPivot 시스템 서비스는 서비스 애플리케이션을 만들 때 사용할 수 있는 팜의 공유 리소스입니다. 서비스 애플리케이션을 만들 때 서비스 애플리케이션 풀을 지정해야 합니다. 이 풀은 PowerPivot 구성 도구를 사용하거나 PowerShell 명령 등의 두 가지 방법으로 지정할 수 있습니다.<br /><br /> 고유 계정으로 실행되도록 애플리케이션 풀 ID를 구성했을 수 있습니다. 그렇지 않은 경우 다른 계정으로 실행되도록 지금 변경하는 것이 좋습니다.|  
+|프로비전 요구 사항|PowerPivot 시스템 서비스는 서비스 애플리케이션을 만들 때 사용할 수 있는 팜의 공유 리소스입니다. 서비스 애플리케이션을 만들 때 서비스 애플리케이션 풀을 지정해야 합니다. 이 풀은 PowerPivot 구성 도구를 사용하거나 PowerShell 명령 등의 두 가지 방법으로 지정할 수 있습니다.<br /><br /> 고유 계정으로 실행되도록 애플리케이션 풀 ID를 구성했을 수 있습니다. 하지만 그렇지 않은 경우 다른 계정으로 실행 되도록 지금 변경 합니다.|  
 |도메인 사용자 계정 요구 사항|애플리케이션 풀 ID는 Windows 도메인 사용자 계정이어야 합니다. 기본 제공 컴퓨터 계정(예: 네트워크 서비스 또는 로컬 서비스)은 사용할 수 없습니다.|  
 |사용 권한 요구 사항|이 계정에는 컴퓨터에 대한 로컬 시스템 관리자 권한이 필요하지 않습니다. 그러나 이 계정에는 동일한 컴퓨터에 설치된 로컬 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 에 대한 Analysis Services 시스템 관리자 권한이 있어야 합니다. 이러한 권한은 SQL Server 설치 프로그램을 실행하거나 중앙 관리에서 애플리케이션 풀 ID를 설정 또는 변경할 때 자동으로 부여됩니다.<br /><br /> [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]로 쿼리를 전달하려면 관리 권한이 필요합니다. 상태를 모니터링하고 비활성 세션을 종료하며 추적 이벤트를 수신 대기할 때도 관리 권한이 필요합니다.<br /><br /> 계정에는 PowerPivot 서비스 애플리케이션 데이터베이스에 대한 연결, 읽기 및 쓰기 권한이 있어야 합니다. 이러한 권한은 애플리케이션을 만들 때 자동으로 부여되며 중앙 관리에서 계정이나 암호를 변경할 때 자동으로 업데이트됩니다.<br /><br /> PowerPivot 서비스 애플리케이션은 파일을 검색하기 전에 SharePoint 사용자가 데이터를 볼 권한이 있는지를 확인하지만 사용자를 가장하지는 않습니다. 가장에 대한 사용 권한 요구 사항은 없습니다.|  
 |확장 요구 사항|없음|  
@@ -160,7 +160,7 @@ ms.locfileid: "48080193"
   
     1.  애플리케이션 풀 이름을 마우스 오른쪽 단추로 클릭하고 **고급 설정**을 선택합니다.  
   
-    2.  **ID** 를 선택하고 ... 버튼을 클릭하여 애플리케이션 풀 ID 대화 상자를 엽니다.  
+    2.  선택 **Identity** 클릭를... 단추 응용 프로그램 풀 Id 대화 상자를 엽니다.  
   
     3.  **설정**을 클릭합니다.  
   

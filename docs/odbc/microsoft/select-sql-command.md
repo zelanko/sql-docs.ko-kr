@@ -13,12 +13,12 @@ ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1f44eb85e80135f81d0e2ca1f37657818843a237
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c2d991afa179fdfbb536853e302b33de8bf12e1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710061"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540239"
 ---
 # <a name="select---sql-command"></a>SELECT - SQL 명령
 하나 이상의 테이블에서 데이터를 검색합니다.  
@@ -35,7 +35,7 @@ SELECT [ALL | DISTINCT]
 FROM [DatabaseName!]Table [Local_Alias]  
    [, [DatabaseName!]Table [Local_Alias] ...]   
 [WHERE JoinCondition [AND JoinCondition  
-…]  
+...]  
    [AND | OR FilterCondition [AND | OR FilterCondition ...]]]  
 [GROUP BY GroupColumn [, GroupColumn ...]]  
 [HAVING FilterCondition]  
@@ -88,7 +88,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
 -   MIN (*Select_Item*)-의 가장 작은 값을 결정 *Select_Item* 열에서입니다.  
   
--   최대 (*Select_Item*) 등의 가장 큰 값을 결정 *Select_Item* 열에서입니다.  
+-   최대 (*Select_Item*)-의 가장 큰 값을 결정 *Select_Item* 열에서입니다.  
   
 -   SUM (*Select_Item*)-숫자 데이터 열의 합계를 계산 합니다.  
   
@@ -126,7 +126,7 @@ FROM [DatabaseName!]Table [Local_Alias]
 |--------------|----------------|  
 |=|같음|  
 |==|정확 하 게 일치|  
-|LIKE|같은 SQL|  
+|Like|같은 SQL|  
 |<>, !=, #|같지 않음|  
 |>|두 개|  
 |>=|보다 크거나 같음|  

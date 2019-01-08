@@ -15,12 +15,12 @@ ms.assetid: 193630f4-93de-4950-8f36-68702531f925
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1cc6cd025c2e9c55d731e82c37040df512350620
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed0338f921b3d143c5b7a42bc73ae22db4148c7c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077523"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524149"
 ---
 # <a name="associate-file-extensions-to-a-code-editor"></a>파일 확장명을 코드 편집기에 연결
   파일 확장명을 특정 코드 편집기에 연결하면 Windows 탐색기에서 파일을 두 번 클릭하여 해당 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 코드 편집기에서 파일을 열 수 있습니다. .sql 및 .mdx와 같이 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 많이 사용되는 확장명은 설치 중에 연결됩니다. 새 파일 확장명은 파일 시스템에서 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에 연결해야 합니다. 이 기능을 사용하여 다른 편집기로 만든 파일을 열거나 .sql 파일의 백업인 .bak 파일과 같이 이름이 바뀐 파일을 열 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "48077523"
   
 5.  **등록된 파일 형식** 상자에서 새 확장명을 클릭하고 **변경**을 클릭합니다.  
   
-6.  **연결 프로그램** 대화 상자에서 **SSMS - SQL Server Management Studio**를 클릭한 다음 **확인**을 클릭합니다.  
+6.  **연결 프로그램** 대화 상자에서 **SSMS - SQL Server Management Studio**를 클릭한 다음, **확인**을 클릭합니다.  
   
 7.  **닫기** 를 클릭하여 **폴더 옵션** 대화 상자를 닫은 다음 Windows 탐색기를 닫습니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48077523"
   
 4.  **편집기** 상자에서 이 파일 형식을 열 때 사용할 코드 편집기를 클릭하고 **추가**를 클릭한 다음 **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Ssms 유틸리티](../../ssms/ssms-utility.md)  
   
   

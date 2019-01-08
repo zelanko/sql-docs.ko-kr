@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - self-documenting packages
@@ -15,12 +14,12 @@ ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 948850ca0b7e0849b846f1f33fa00ab01d9e1c7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef481e450bb6d2204e7d3a4a043e5bb464eada9f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103643"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792105"
 ---
 # <a name="use-annotations-in-packages"></a>패키지에서 주석 사용
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너는 패키지에 대한 설명을 제공하고 이해 및 유지 관리를 쉽게 하기 위해 사용할 수 있는 주석을 제공합니다. 주석은 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너의 제어 흐름, 데이터 흐름 및 이벤트 처리기에 추가할 수 있습니다. 주석에는 모든 종류의 텍스트가 포함될 수 있으며 패키지에 레이블, 설명 및 기타 설명 정보를 추가하는 데 유용합니다. 주석은 디자인 타임 전용 기능입니다. 예를 들어 주석은 로그에 기록되지 않습니다.  

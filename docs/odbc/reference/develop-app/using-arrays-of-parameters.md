@@ -14,12 +14,12 @@ ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d7990c1c8524063c16b44464828900450d5241ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ff4a76c38f04c7b9b12842ef800bc8a26a27ed9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777881"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529326"
 ---
 # <a name="using-arrays-of-parameters"></a>매개 변수 배열 사용
 응용 프로그램이 호출 매개 변수의 배열을 사용 하 **SQLSetStmtAttr** 사용 하 여는 *특성* 인수의 SQL_ATTR_PARAMSET_SIZE 매개 변수 집합의 수를 지정 합니다. 호출한 **SQLSetStmtAttr** 사용 하 여는 *특성* 드라이버 수를 처리 하는 매개 변수 집합의 수를 반환 하는 변수의 주소를 지정 하는 SQL_ATTR_PARAMS_PROCESSED_PTR 인수 포함 하 여 오류를 설정합니다. 호출한 **SQLSetStmtAttr** 사용 하 여는 *특성* 매개 변수 값의 각 행에 대 한 상태 정보를 반환 하는 배열을를 가리키도록 SQL_ATTR_PARAM_STATUS_PTR의 인수입니다. 드라이버는 이러한 주소 문에 대 한 유지 관리 구조에 저장 합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "47777881"
   
 -   런타임에 매개 변수 배열에 대 한 지원 확인 합니다. 드라이버는 SQL_ATTR_PARAMSET_SIZE 문 특성을 1 보다 큰 값으로 설정할 수 있으면 매개 변수 배열을 지원 합니다. 일반 응용 프로그램 및 수직 응용 프로그램을 일반적으로 매개 변수 배열에 대 한 지원 런타임에 검사 합니다.  
   
- 호출 하 여 행 개수 및 매개 변수가 있는 실행의 결과 집합의 가용성을 확인할 수 있습니다 **SQLGetInfo** SQL_PARAM_ARRAY_ROW_COUNTS 및 SQL_PARAM_ARRAY_SELECTS 옵션을 사용 하 여 합니다. 에 대 한 **삽입**하십시오 **업데이트**, 및 **삭제** 문을 SQL_PARAM_ARRAY_ROW_COUNTS 옵션은 개별 행 개수 (각 매개 변수 집합에 대해 하나) 되는지 여부를 나타냅니다 사용할 수 있습니다 (SQL_PARC_BATCH) 또는 행 개수 여부 (SQL_PARC_NO_BATCH) 하나에 롤업 됩니다. 에 대 한 **선택** 하나만 결과 집합의 사용 가능한 (SQL_PAS_NO_BATCH) 인지 또는 결과 집합을 각 매개 변수 (SQL_PAS_BATCH) 집합에 사용할 수 있는 인지 문을 SQL_PARAM_ARRAY_SELECTS 옵션을 나타냅니다. 드라이버는 결과 집합 – 생성 문 매개 변수 배열을 사용 하 여 실행을 허용 하지 않으면 SQL_PARAM_ARRAY_SELECTS SQL_PAS_NO_SELECT를 반환 합니다. 이러한 문에서 매개 변수 사용 데이터 소스 관련 되 고 ODBC SQL 문법 검사를 수행 하지는 때문에 특히, 매개 변수 배열을 다른 유형의 문 사용할 수 있는지 여부를 데이터 소스 관련 것입니다.  
+ 호출 하 여 행 개수 및 매개 변수가 있는 실행의 결과 집합의 가용성을 확인할 수 있습니다 **SQLGetInfo** SQL_PARAM_ARRAY_ROW_COUNTS 및 SQL_PARAM_ARRAY_SELECTS 옵션을 사용 하 여 합니다. 에 대 한 **삽입**하십시오 **업데이트**, 및 **삭제** 문을 SQL_PARAM_ARRAY_ROW_COUNTS 옵션은 개별 행 개수 (각 매개 변수 집합에 대해 하나) 되는지 여부를 나타냅니다 사용할 수 있습니다 (SQL_PARC_BATCH) 또는 행 개수 여부 (SQL_PARC_NO_BATCH) 하나에 롤업 됩니다. 에 대 한 **선택** 하나만 결과 집합의 사용 가능한 (SQL_PAS_NO_BATCH) 인지 또는 결과 집합을 각 매개 변수 (SQL_PAS_BATCH) 집합에 사용할 수 있는 인지 문을 SQL_PARAM_ARRAY_SELECTS 옵션을 나타냅니다. 드라이버는 결과 집합 생성 문 매개 변수 배열을 사용 하 여 실행을 허용 하지 않으면 SQL_PARAM_ARRAY_SELECTS SQL_PAS_NO_SELECT를 반환 합니다. 매개 변수 배열을 사용할 수 다른 유형의 문 사용 하 여 이러한 문의 매개 변수에 사용 데이터 소스 관련 되 고 ODBC SQL 문법에 따르지는 때문에 특히 여부를 데이터 소스 관련 것입니다.  
   
  SQL_ATTR_PARAM_OPERATION_PTR 문 특성에서 가리키는 배열 매개 변수는 행을 무시 하 사용할 수 있습니다. 배열 요소의 SQL_PARAM_IGNORE로 해당 요소에 해당 하는 매개 변수 집합에서 제외 됩니다 합니다 **SQLExecute** 하거나 **SQLExecDirect** 호출 합니다. SQL_ATTR_PARAM_OPERATION_PTR 특성에서 가리키는 배열 할당 되 및 응용 프로그램에서 입력 되 고 드라이버에서 읽기. 인출된 된 행을 입력된 매개 변수로 사용 하는 경우 행 상태 배열 값 매개 변수 작업 배열에서 사용할 수 있습니다.  
   

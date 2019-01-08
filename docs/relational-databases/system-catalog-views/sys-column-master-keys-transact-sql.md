@@ -26,12 +26,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af9802fbf1568e7ce9d15882a29b96bbe0ad1762
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cb1740bdb0ae26d91e2a9ad9e2becb69d3b2810
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711011"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518712"
 ---
 # <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "47711011"
 |**column_master_key_id**|**int**|열 마스터 키의 ID입니다.|  
 |**create_date**|**datetime**|열 마스터 키를 만든 날짜입니다.|  
 |**modify_date**|**datetime**|열 마스터 키를 마지막으로 수정한 날짜입니다.|  
-|**key_store_provider_name**|**sysname**|CMK를 포함 하는 열 마스터 키 저장소에 대 한 공급자의 이름입니다. 허용된 값은<br /><br /> MSSQL_CERTIFICATE_STORE – 열 마스터 키 저장소는 인증서 저장소입니다.<br /><br /> 사용자 정의 값, 열 마스터 키 저장소를 사용자 지정 형식인 경우.|  
+|**key_store_provider_name**|**sysname**|CMK를 포함 하는 열 마스터 키 저장소에 대 한 공급자의 이름입니다. 허용된 값은<br /><br /> MSSQL_CERTIFICATE_STORE-열 마스터 키 저장소는 인증서 저장소입니다.<br /><br /> 사용자 정의 값, 열 마스터 키 저장소를 사용자 지정 형식인 경우.|  
 |**key_path**|**nvarchar(4000)**|키의 열 마스터 키 저장소 관련 경로입니다. 경로의 형식이 열 마스터 키 저장소 형식에 따라 달라 집니다. 예:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> 개발자는 사용자 지정 열 마스터 키 저장소에 대 한 정의 어떤 키 경로 사용자 지정 열 마스터 키 저장소입니다.|  
-|**allow_enclave_computations**|**bit**|열 마스터 키가 enclave-사용 (서버 쪽 보안 enclaves 내에서 계산을 위해이 마스터 키로 암호화 된 열 암호화 키를 사용할 수 있음) 인지 여부를 나타냅니다. 자세한 내용은 [안전한 enclaves와 함께 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)합니다.|  
+|**allow_enclave_computations**|**bit**|열 마스터 키가 enclave-사용 (서버 쪽 보안 enclaves 내에서 계산을 위해이 마스터 키로 암호화 된 열 암호화 키를 사용할 수 있음) 인지 여부를 나타냅니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.|  
 |**signature**|**varbinary(max)**|디지털 서명을 **key_path** 하 고 **allow_enclave_computations**열 마스터 키를 사용 하 여 생성, 참조 **key_path**합니다.|
 
 
@@ -56,7 +56,7 @@ ms.locfileid: "47711011"
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [CREATE COLUMN MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [보안 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [상시 암호화&#40;데이터베이스 엔진&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   

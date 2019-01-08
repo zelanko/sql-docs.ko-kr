@@ -16,12 +16,12 @@ ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 136e42463049a557098224f0ce7be19da0399ae0
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: HT
+ms.openlocfilehash: 7450e2e64d7054749aa4b980e1e36b7cf09ff022
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602044"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542981"
 ---
 # <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>ExecuteOptions 및 FetchOptions 속성 예제(VBScript)
 > [!IMPORTANT]

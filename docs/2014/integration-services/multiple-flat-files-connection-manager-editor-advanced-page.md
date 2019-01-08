@@ -15,12 +15,12 @@ ms.assetid: fc883131-c03d-4ab3-8220-b51cbe243a82
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dda5cb294536354ed4bcc5003983d36f61167007
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83e6aae7d4383440f148a8de1480cb8f1658e89c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143333"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542742"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>다중 플랫 파일 연결 관리자 편집기(고급 페이지)
   **다중 플랫 파일 연결 관리자 편집기** 대화 상자의 **고급** 페이지를 사용하여 플랫 파일 연결 관리자에서 연결하는 텍스트 파일에 있는 각 열의 데이터 형식 및 구분 기호와 같은 속성을 설정할 수 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "48143333"
 |**TextQualified**|텍스트 한정자를 사용하여 텍스트 데이터를 한정할지 여부를 나타냅니다. 유효한 값은<br /><br /> **True**: 플랫 파일의 텍스트 데이터가 한정됩니다.<br /><br /> **False**: 플랫 파일의 텍스트 데이터가 한정되지 않습니다.|  
 |**이름**|열 이름을 지정합니다. 기본값은 열 번호 매기기 목록이지만 설명이 포함된 고유 이름을 임의로 선택할 수 있습니다.|  
 |**DataScale**|숫자 데이터의 소수 자릿수를 지정합니다. 소수 자릿수란 소수점 이하 자릿수를 말합니다. 자세한 내용은 [Integration Services Data Types](data-flow/integration-services-data-types.md)을 참조하세요.|  
-|**ColumnDelimiter**|사용 가능한 열 구분 기호의 목록에서 선택합니다. 텍스트에 거의 사용되지 않는 구분 기호를 선택합니다. 고정 폭 열에 대해서는 이 값이 무시됩니다.<br /><br /> **{CR}{LF}** – 열이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.<br /><br /> **{CR}** – 열이 캐리지 리턴으로 구분됩니다.<br /><br /> **{LF}** – 열이 줄 바꿈으로 구분됩니다.<br /><br /> **세미콜론 {;}** – 열이 세미콜론으로 구분됩니다.<br /><br /> **콜론 {:}** – 열이 콜론으로 구분됩니다.<br /><br /> **쉼표 {,}** – 열이 쉼표로 구분됩니다.<br /><br /> **탭 {t}** – 열이 탭으로 구분됩니다.<br /><br /> **세로 막대 {&#124;}** – 열이 세로 막대로 구분됩니다.|  
+|**ColumnDelimiter**|사용 가능한 열 구분 기호의 목록에서 선택합니다. 텍스트에 거의 사용되지 않는 구분 기호를 선택합니다. 고정 폭 열에 대해서는 이 값이 무시됩니다.<br /><br /> **{CR}{LF}** – 열이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.<br /><br /> **{CR}** – 열이 캐리지 리턴으로 구분됩니다.<br /><br /> **{LF}** – 열이 줄 바꿈으로 구분됩니다.<br /><br /> **세미콜론{;}** – 열이 세미콜론으로 구분됩니다.<br /><br /> **콜론{:}** – 열이 콜론으로 구분됩니다.<br /><br /> **쉼표 {,}** – 열이 쉼표로 구분됩니다.<br /><br /> **탭{t}** – 열이 탭으로 구분됩니다.<br /><br /> **세로 막대{&#124;}** – 열이 세로 막대로 구분됩니다.|  
 |**DataPrecision**|숫자 데이터의 전체 자릿수를 지정합니다. 전체 자릿수란 숫자의 자릿수를 말합니다. 자세한 내용은 [Integration Services Data Types](data-flow/integration-services-data-types.md)을 참조하세요.|  
 |**InputColumnWidth**|저장할 값을 바이트 수로 지정합니다. 유니코드 파일의 경우 문자 수로 표시됩니다. 구분 기호로 분리된 열에 대해서는 이 값이 무시됩니다.<br /><br /> **참고** 개체 모델에서 이 속성의 이름은 ColumnWidth입니다.|  
   
@@ -66,10 +66,10 @@ ms.locfileid: "48143333"
  **유형 제안**  
  **열 유형 제안** 대화 상자를 사용하여 첫 번째로 선택한 파일에 있는 샘플 데이터를 평가하고 각 열의 데이터 형식과 길이에 대한 제안을 가져올 수 있습니다. 자세한 내용은 [열 유형 제안 대화 상자 UI 참조](connection-manager/suggest-column-types-dialog-box-ui-reference.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [다중 플랫 파일 연결 관리자 편집기 &#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
- [다중 플랫 파일 연결 관리자 편집기 &#40;열 페이지&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
- [다중 플랫 파일 연결 관리자 편집기 &#40;페이지를 미리 보기&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [다중 플랫 파일 연결 관리자 편집기&#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
+ [다중 플랫 파일 연결 관리자 편집기&#40;열 페이지&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
+ [다중 플랫 파일 연결 관리자 편집기&#40;미리 보기 페이지&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

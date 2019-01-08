@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.addexistingproject
@@ -16,12 +16,12 @@ ms.assetid: 7b0c8ac0-5941-4ac6-b960-87d9830d00de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7603d1de37f5a2e858d4c72c14c407200aedfbfc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84ee67faf36668a297cdfd801a84147ed236ce50
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134643"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795535"
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>솔루션에 기존 프로젝트 추가
   기존 솔루션에 하나 이상의 프로젝트를 추가할 수 있습니다. 프로젝트는 둘 이상의 솔루션과 연관될 수 있습니다.  

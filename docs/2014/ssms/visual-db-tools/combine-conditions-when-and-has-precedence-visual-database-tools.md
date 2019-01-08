@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - search conditions [SQL Server], combining
@@ -16,12 +16,12 @@ ms.assetid: 450eb2eb-6ea3-405b-8dd2-1ff926c016e7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9da1317b17f7808f95596f98c6d7a18bf9558fe3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4d0a0bcb7115255c3c6b3750cd930e7d06b9e2df
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169943"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769480"
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>AND에 우선 순위가 있는 조건 조합(Visual Database Tools)
   AND를 사용하여 조건을 조합하려면 각 조건에 한 번씩, 즉 쿼리에 열을 두 번 추가합니다. 조건을 OR와 조합하려면 첫째 조건은 필터 열에 지정하고 추가 조건은 **또는...** 열에 지정합니다.  

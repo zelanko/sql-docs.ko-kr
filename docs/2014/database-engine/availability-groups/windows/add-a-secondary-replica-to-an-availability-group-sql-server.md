@@ -13,12 +13,12 @@ ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6a60675d4d934c91be3ae8150cd865f404443d27
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7605f4e5fd2fd6601cf1d132b438187edeeb29fb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219965"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525846"
 ---
 # <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>가용성 그룹에 보조 복제본 추가(SQL Server)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 PowerShell을 사용하여 기존 AlwaysOn 가용성 그룹에 보조 복제본을 추가하는 방법에 대해 설명합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "48219965"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **후속 작업:**  [복제본을 추가한 후](#FollowUp)  
+-   **후속 작업:**  [보조 복제본을 추가한 후](#FollowUp)  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  가용성 그룹을 처음 만들어 보는 경우 이 섹션을 먼저 읽는 것이 좋습니다.  
@@ -115,13 +115,13 @@ ms.locfileid: "48219965"
     ```  
   
     > [!NOTE]  
-    >  Cmdlet의 구문을 보려면 사용 하 여는 `Get-Help` cmdlet은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경입니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
+    >  cmdlet의 구문을 보려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경에서 `Get-Help` cmdlet을 사용합니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
   
  **SQL Server PowerShell 공급자를 설정하고 사용하려면**  
   
 -   [SQL Server PowerShell 공급자](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 후속 작업: 보조 복제본을 추가한 후  
+##  <a name="FollowUp"></a> 후속편: 복제본을 추가한 후  
  기존 가용성 그룹에 대한 복제본을 추가하려면 다음 단계를 수행해야 합니다.  
   
 1.  새 보조 복제본을 호스팅할 서버 인스턴스에 연결합니다.  
@@ -132,7 +132,7 @@ ms.locfileid: "48219965"
   
 4.  각각의 새로운 보조 데이터베이스를 가용성 그룹에 조인합니다. 자세한 내용은 [가용성 그룹에 보조 데이터베이스 조인&#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **가용성 복제본을 관리하려면**  
   
 -   [가용성 그룹에 보조 복제본 조인&#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  

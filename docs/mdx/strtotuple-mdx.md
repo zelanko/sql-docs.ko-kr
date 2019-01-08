@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 35cd9cf849ce35bf82c839f0bbeeb657a75e990c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 054786440afaf2b7ab458b4704bd5f8e2e26c135
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743232"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524532"
 ---
 # <a name="strtotuple-mdx"></a>StrToTuple(MDX)
 
 
-  MDX(Multidimensional Expressions) 형식 문자열에 의해 지정된 튜플을 반환합니다.  
+  MDX 형식 문자열에 의해 지정 된 튜플을 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,9 +33,9 @@ StrToTuple(Tuple_Specification [,CONSTRAINED] )
  직접 또는 간접적으로 튜플을 지정하는 유효한 문자열 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
- **StrToTuple** 함수는 지정 된 집합을 반환 합니다. **StrToTuple** 함수는 대개에 MDX 문에 다시 외부 함수의 튜플 사양을 반환 사용자 정의 함수와 함께 사용 됩니다.  
+ 합니다 **StrToTuple** 함수는 지정 된 집합을 반환 합니다. 합니다 **StrToTuple** 함수는 일반적으로 돌아가려면는 튜플 사양에는 외부 함수의 MDX 문을 사용자 정의 함수와 함께 사용 됩니다.  
   
--   CONSTRAINED 플래그를 사용할 경우 튜플 사양에는 정규화되거나 정규화되지 않은 멤버 이름을 포함해야 합니다. 이 플래그를 사용하면 지정한 문자열을 통한 삽입 공격 위험을 줄일 수 있습니다. 다음 오류가 표시 됩니다는 문자열이 직접 확인할 수 없는 정규화 되거나 정규화 되지 않은 멤버 이름이 아닌 경우 이면: "CONSTRAINED 설정한 제한을 STRTOTUPLE 함수에서 플래그 위반 했습니다."  
+-   CONSTRAINED 플래그를 사용할 경우 튜플 사양에는 정규화되거나 정규화되지 않은 멤버 이름을 포함해야 합니다. 이 플래그를 사용하면 지정한 문자열을 통한 삽입 공격 위험을 줄일 수 있습니다. 정규화되거나 정규화되지 않은 멤버 이름으로 직접 확인할 수 없는 문자열을 지정하면 "STRTOTUPLE 함수에서 CONSTRAINED 플래그로 설정한 제한을 위반했습니다"라는 오류가 나타납니다.  
   
 -   CONSTRAINED 플래그를 사용하지 않을 경우 지정한 튜플은 튜플을 반환하는 유효한 MDX 식으로 확인될 수 있습니다.  
   
@@ -75,7 +75,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>관련 항목:  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

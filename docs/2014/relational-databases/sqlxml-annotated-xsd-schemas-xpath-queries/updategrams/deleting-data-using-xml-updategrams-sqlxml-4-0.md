@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - <after> block
@@ -18,12 +16,12 @@ ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d16d27583854988a6e937c0859239875e15616f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 808cac0491d7a62ef6a7616745dfb56874299f6a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220303"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788995"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 삭제(SQLXML 4.0)
   레코드 인스턴스가 표시 되는 경우는 updategram 삭제 작업을 나타냅니다는  **\<전에 >** 블록에 해당 레코드가 없는  **\<후 >** 블록입니다. updategram에서 레코드를 삭제 하는 경우에  **\<전에 >** 데이터베이스에서 차단 합니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - max text repl size option
@@ -13,15 +12,15 @@ ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 97016ac7279bfc00bd617e6318067561d82cddda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b5e89ca1fc43c140a4c6fa9aa8f610f5b86d7ef9
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073745"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640444"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>max text repl size 서버 구성 옵션 구성
-  이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 최대 텍스트 복제 크기 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **최대 텍스트 복제 크기** 옵션의 최대 크기 (메가바이트 단위)를 지정 `text`, `ntext`, `varchar(max)`를 `nvarchar(max)`, `varbinary(max)`를 `xml`, 및 `image` 에 추가할 수 있는 데이터 복제 된 열 또는 단일 INSERT, UPDATE, WRITETEXT 또는 UPDATETEXT 문에서 캡처된 열입니다. 기본값은 65536바이트입니다. 값이 -1이면 데이터 형식에서 요구하는 한도 이외의 크기 제한이 없음을 나타냅니다.  
+  이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 최대 텍스트 복제 크기 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **최대 텍스트 복제 크기** 옵션의 최대 크기 (메가바이트 단위)를 지정 `text`, `ntext`, `varchar(max)`를 `nvarchar(max)`, `varbinary(max)`를 `xml`, 및 `image` 에 추가할 수 있는 데이터 복제 된 열 또는 단일 INSERT, UPDATE, WRITETEXT 또는 UPDATETEXT 문에서 캡처된 열입니다. 기본값은 65536 바이트입니다. 값이 -1이면 데이터 형식에서 요구하는 한도 이외의 크기 제한이 없음을 나타냅니다.  
   
  **항목 내용**  
   
@@ -37,7 +36,7 @@ ms.locfileid: "48073745"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **후속 작업:**  [최대 텍스트 복제 크기 옵션을 구성한 후](#FollowUp)  
+-   **후속 작업:**  [Max text repl size 옵션을 구성한 후](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -85,10 +84,10 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 최대 텍스트 복제 크기 옵션을 구성한 후  
+##  <a name="FollowUp"></a> 후속편: 최대 텍스트 복제 크기 옵션을 구성한 후  
  이 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 기능 및 태스크](../../relational-databases/replication/replication-features-and-tasks.md)   
  [INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
  [RECONFIGURE&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   

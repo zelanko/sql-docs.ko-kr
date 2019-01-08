@@ -13,12 +13,12 @@ ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 67399a724001cbd1f04a24f0558f2618aafd155a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e183c1e25aa81b05c897674fc5c9f4a2dd8d0c5b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069433"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52529362"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>리프트 차트, 수익 차트 또는 분류표 만들기
   다음과 같은 기본적인 다섯 단계로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝 모델에 대한 정확도 차트를 만들 수 있습니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "48069433"
   
     -   마이닝 구조 홀드아웃 데이터 집합의 일부로 정의된 전체 테스트 사례 집합을 사용하려면 **마이닝 구조 테스트 사례 사용**옵션을 선택합니다.  
   
-    -   외부 데이터를 사용하려는 경우 **다른 데이터 집합 지정**옵션을 선택합니다.  데이터 집합을 데이터 원본 뷰로 사용할 수 있어야 합니다.   찾아보기(**…**) 단추를 클릭하여 정확도 차트에 사용할 데이터 테이블을 선택합니다. 자세한 내용은 [Choose and Map Model Testing Data](choose-and-map-model-testing-data.md)을 참조하세요.  
+    -   외부 데이터를 사용하려는 경우 **다른 데이터 집합 지정**옵션을 선택합니다.  데이터 집합을 데이터 원본 뷰로 사용할 수 있어야 합니다.   찾아보기 (**...** ) 단추를 정확도 차트에 사용할 데이터 테이블을 선택 합니다. 자세한 내용은 [Choose and Map Model Testing Data](choose-and-map-model-testing-data.md)을 참조하세요.  
   
          외부 데이터 집합을 사용하고 있는 경우 선택적으로 입력 데이터 집합을 필터링할 수 있습니다. 자세한 내용은 [모델 테스트 데이터에 필터 적용](apply-filters-to-model-testing-data.md)을 참조하세요.  
   
@@ -111,8 +111,8 @@ ms.locfileid: "48069433"
      **개인별 수익**  
      성공적인 각 판매와 관련된 수익입니다.  
   
-## <a name="see-also"></a>관련 항목  
- [리프트 차트 &#40;Analysis Services-데이터 마이닝&#41;](lift-chart-analysis-services-data-mining.md)   
- [분류 행렬 &#40;Analysis Services-데이터 마이닝&#41;](classification-matrix-analysis-services-data-mining.md)  
+## <a name="see-also"></a>관련 항목:  
+ [리프트 차트&#40;Analysis Services - 데이터 마이닝&#41;](lift-chart-analysis-services-data-mining.md)   
+ [분류표&#40;Analysis Services - 데이터 마이닝&#41;](classification-matrix-analysis-services-data-mining.md)  
   
   

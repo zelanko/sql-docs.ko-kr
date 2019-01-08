@@ -21,19 +21,19 @@ ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: acf3974a9406e974f6d294584cb732c12b0718e7
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
-ms.translationtype: HT
+ms.openlocfilehash: 7fc0aab989eb46b64ef6b9919f999ba13c4ef74f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815639"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527191"
 ---
 # <a name="extract-a-dac-from-a-database"></a>데이터베이스에서 DAC 추출
   **데이터 계층 응용 프로그램 추출 마법사** 나 Windows PowerShell 스크립트를 사용하여 기존 SQL Server 데이터베이스에서 DAC(데이터 계층 응용 프로그램) 패키지를 추출할 수 있습니다. 추출이 끝나면 데이터베이스 개체의 정의 및 이와 관련된 인스턴스 수준 요소를 포함하는 DAC 패키지 파일이 생성됩니다. 예를 들어 DAC 패키지 파일에는 데이터베이스 테이블, 저장 프로시저, 뷰, 사용자, 그리고 데이터베이스 사용자에 매핑되는 로그인이 포함됩니다.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **시작하기 전 주의 사항:**  [제한 사항 및 제한 사항](#LimitationsRestrictions), [권한](#Permissions)  
   
--   **DAC를 추출 하는를 사용 하 여:**[데이터 계층 응용 프로그램 추출 마법사](#UsingDACExtractWizard), [PowerShell  ](#ExtractDACPowerShell)  
+-   **DAC를 추출 하려면 사용 합니다.**  [데이터 계층 응용 프로그램 추출 마법사](#UsingDACExtractWizard), [PowerShell](#ExtractDACPowerShell)  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]또는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서비스 팩 4 이상의 인스턴스에 있는 데이터베이스에서 DAC를 추출할 수 있습니다. DAC에서 배포된 데이터베이스에 대해 추출 프로세스를 실행하는 경우 데이터베이스에서 개체 정의만 추출됩니다. 프로세스에 등록 된 DAC는 참조 하지 않습니다 `msdb` (**마스터** 에서 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). 추출 프로세스에서는 데이터베이스 엔진의 현재 인스턴스에 DAC 정의를 등록하지 않습니다. DAC를 등록하는 방법은 [Register a Database As a DAC](register-a-database-as-a-dac.md)을 참조하세요.  
@@ -51,7 +51,7 @@ ms.locfileid: "43815639"
   
 2.  **데이터베이스** 노드를 확장합니다.  
   
-3.  DAC를 추출할 데이터베이스에 대한 노드를 마우스 오른쪽 단추로 클릭하고 **태스크**를 가리킨 다음 **데이터 계층 애플리케이션 추출…** 을 선택합니다.  
+3.  DAC를 추출할 데이터베이스에 대한 노드를 마우스 오른쪽 단추로 클릭하고 **태스크**를 가리킨 다음, **데이터 계층 애플리케이션 추출...** 을 선택합니다.  
   
 4.  마법사 대화 상자를 완료합니다.  
   

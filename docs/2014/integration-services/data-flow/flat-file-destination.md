@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfiledest.f1
@@ -18,12 +17,12 @@ ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d9cc425ca170a8b6619bead023f76b163e698aab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed4cb484f89d44ed31b4c82a9e1349dfab925dac
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058793"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761755"
 ---
 # <a name="flat-file-destination"></a>플랫 파일 대상
   플랫 파일 대상은 데이터를 텍스트 파일에 기록합니다. 텍스트 파일은 구분 기호로 분리된 형식, 고정 폭 형식, 행 구분 기호가 있는 고정 폭 형식 또는 왼쪽 정렬 형식일 수 있습니다.  
@@ -45,13 +44,13 @@ ms.locfileid: "48058793"
   
  **플랫 파일 원본 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [플랫 파일 대상 편집기 &#40;연결 관리자 페이지&#41;](../flat-file-destination-editor-connection-manager-page.md)  
+-   [플랫 파일 대상 편집기&#40;연결 관리자 페이지&#41;](../flat-file-destination-editor-connection-manager-page.md)  
   
--   [플랫 파일 대상 편집기 &#40;매핑 페이지&#41;](../flat-file-destination-editor-mappings-page.md)  
+-   [플랫 파일 대상 편집기&#40;매핑 페이지&#41;](../flat-file-destination-editor-mappings-page.md)  
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [Common Properties](../common-properties.md)  
+-   [공용 속성](../common-properties.md)  
   
 -   [플랫 파일 사용자 지정 속성](flat-file-custom-properties.md)  
   

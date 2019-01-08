@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publicationinfo.tracertokens.f1
@@ -13,12 +12,12 @@ ms.assetid: a115ba95-17ae-45df-91bd-5a1a35f3745f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 901905ad17d5788bf0ca6a222083ebef17211656
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 287d565947a13621fd3ba39cff6437ff76894c03
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072813"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792102"
 ---
 # <a name="publication-information-tracer-tokens-transactional-publication-sql-server-2005-and-later"></a>게시 정보, 추적 프로그램 토큰(트랜잭션 게시, SQL Server 2005 이상)
   **추적 프로그램 토큰** 탭을 사용하여 연결 유효성을 검사하고 트랜잭션 복제를 사용하는 시스템의 대기 시간을 측정할 수 있습니다. 토큰(적은 양의 데이터)은 게시 데이터베이스의 트랜잭션 로그에 기록되고, 일반적인 복제된 트랜잭션인 것처럼 표시되고, 시스템을 통해 전달되며 다음을 계산할 수 있습니다.  
@@ -36,11 +35,11 @@ ms.locfileid: "48072813"
 ## <a name="options"></a>변수  
  표에서 데이터를 표시하는 방식을 변경하려면 표를 마우스 오른쪽 단추로 클릭한 후 다음 옵션 중 하나를 클릭합니다.  
   
--   **정렬**: **열 정렬** 대화 상자에서 한 개 이상의 열에 대해 정렬합니다.  
+-   **정렬**: 하나 이상의 열에 정렬 된 **정렬 열** 대화 상자.  
   
--   **표시할 열 선택**: **열 선택** 대화 상자에서 표시할 열 및 해당 열이 표시되는 순서를 선택합니다.  
+-   **표시할 열 선택**: 열을 표시 및 표시 되는 순서를 선택 합니다 **열 선택** 대화 상자.  
   
--   **필터**: **필터 설정** 대화 상자의 열 값에 따라 표의 행을 필터링합니다.  
+-   **필터**: 열 값에 따라 표의 행을 필터링 합니다 **필터 설정** 대화 상자.  
   
 -   **필터 지우기**: 표에 대한 모든 필터 설정을 지웁니다.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "48072813"
  **총 대기 시간**  
  게시자에서 트랜잭션이 커밋되는 시점과 구독자에서 해당 트랜잭션이 커밋되는 시점 간에 경과한 시간입니다. 이 시간은 현재 이 구독자에 대한 복제 시스템의 종단 간 대기 시간을 나타냅니다. 값 **보류 중** 은 토큰이 구독자에 아직 도달하지 않았음을 나타냅니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 에이전트 시작 및 중지&#40;SQL Server Management Studio&#41;](agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
  [복제 모니터 시작](monitor/start-the-replication-monitor.md)   
  [트랜잭션 복제에 대한 대기 시간 측정 및 연결 유효성 검사](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - OPENROWSET function, ad hoc distributed queries option
@@ -18,12 +17,12 @@ ms.assetid: 5b982015-e196-44c3-83b8-275fb9d769b2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: edd15d3d18b7b4d4d7a03689548186829389889f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04c2ea76808c2fa98e933021af93481c829baa21
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093299"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641170"
 ---
 # <a name="ad-hoc-distributed-queries-server-configuration-option"></a>임시 분산 쿼리 서버 구성 옵션
   기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 OPENROWSET 및 OPENDATASOURCE를 사용하는 임시 분산 쿼리를 허용하지 않습니다. 이 옵션을 1로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 임시 액세스가 허용됩니다. 이 옵션을 설정하지 않거나 0로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 임시 액세스가 허용되지 않습니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "48093299"
 >  임시 이름 사용을 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 모든 인증된 로그인에서 공급자에 액세스할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자는 모든 로컬 로그인에서 액세스해도 안전한 공급자에 대해 이 기능을 설정해야 합니다.  
   
 ## <a name="remarks"></a>Remarks  
- **임시 분산 쿼리** 가 설정되지 않은 임시 연결을 만들려고 하면 Msg 7415, Level 16, State 1, Line 1 오류가 발생합니다.  
+ 임시 연결을 확인 하려고 **Ad Hoc Distributed Queries** 설정 되지 않은 오류가 발생 합니다. 메시지 하면 7415, Level 16, State 1, 줄 1  
   
  OLE DB 공급자 'Microsoft.ACE.OLEDB.12.0'에 대한 임의 액세스가 거부되었습니다. 연결된 서버를 통해 이 공급자에 액세스해야 합니다.  
   

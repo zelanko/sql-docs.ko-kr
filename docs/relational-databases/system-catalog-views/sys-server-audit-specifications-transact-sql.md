@@ -20,12 +20,12 @@ ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0b8b642797808b023e200f1f59ae162f09cea514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 061636210c76bace7ae483e277c624bb291cdeb8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780321"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510005"
 ---
 # <a name="sysserverauditspecifications-transact-sql"></a>sys.server_audit_specifications(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47780321"
 |**server_specification_id**|**정수**|ID를 **server_specification**합니다.|  
 |**create_date**|**날짜/시간**|서버 감사 사양을 만든 날짜입니다.|  
 |**modified_date**|**날짜/시간**|서버 감사 사양을 마지막으로 수정한 날짜입니다.|  
-|**is_state_enabled**|**tinyint**|감사 사양 상태:<br /><br /> 0 - 사용 안 함<br /><br /> 1 – 사용|  
+|**is_state_enabled**|**tinyint**|감사 사양 상태:<br /><br /> 0-사용 안 함<br /><br /> 1-사용 하도록 설정|  
 |**audit_GUID**|**uniqueidentifier**|이 사양을 포함하는 감사의 GUID입니다. 서버 시작 시 멤버 서버 감사 사양을 열거하는 동안 사용됩니다.|  
   
 ## <a name="permissions"></a>사용 권한  

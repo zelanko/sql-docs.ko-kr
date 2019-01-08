@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ce5905026d2a64df3180828e5ee2983f88a5aa06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f86645a542e4c215a3675d7a0cbf9cfbd45cc2e9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056083"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783945"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>특성 유형 변경(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 관리자는 허용되는 문자 개수 또는 데이터 형식이 잘못된 경우 특성 유형을 변경할 수 있습니다.  
@@ -52,7 +51,7 @@ ms.locfileid: "48056083"
   
 -   특성의 데이터 형식을 변경합니다.  
   
--   "_old" 접미사를 사용해서 아무 값도 포함되지 않는 특성의 복사본을 생성합니다. 이 호출 되는 **사용 되지 않는** 특성입니다.  
+-   모든 값을 포함 하지 않는 "_old" 접미사를 사용 하 여 특성의 복사본을 생성 합니다. 이 호출 되는 **사용 되지 않는** 특성입니다.  
   
  하지만 원래 특성의 모든 기존 종속성은 변경된 특성이 아닌 더 이상 사용되지 않는 특성을 가리킵니다.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "48056083"
 >  기존 데이터 및 관련 항목이 포함된 MDS 특성의 데이터 형식을 변경하는 것은 번거로운 일일 수 있습니다. 특히 엔터티에 종속된 비즈니스 규칙 또는 구독 뷰가 선언되었다면 더욱 그렇습니다. 가장 좋은 방법은 필요한 값을 저장하기에 충분히 유연한 데이터 형식으로 시작하는 것입니다. 예를 들어 문자열을 작은 크기로 시작할 수 있지만 시간이 지남에 따라 길이를 늘려야 할 수 있으므로, 최악의 시나리오를 고려하는 것입니다. 텍스트 문자열 길이가 너무 길면 부담이 될 수 있으므로(예를 들어 GUI 텍스트 상자가 너무 넓으면 화면에 맞게 표시하기 어려울 수 있음), 너무 긴 문자열 길이는 피하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
- [특성 &#40;Master Data Services&#41;](../attributes-master-data-services.md)   
+ [특성&#40;Master Data Services&#41;](../attributes-master-data-services.md)   
  [모델 작성&#40;Excel용 MDS 추가 기능&#41;](building-a-model-mds-add-in-for-excel.md)  
   
   

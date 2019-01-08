@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - two digit year cutoff option
@@ -14,12 +13,12 @@ ms.assetid: d94e81b6-f2e6-47ef-b497-ec3d827a1646
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b009cea047e04002a0d1a06af377e36639b13fb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da1bf028421855ee08584abae78bd66f75058e6e
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208902"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641454"
 ---
 # <a name="configure-the-two-digit-year-cutoff-server-configuration-option"></a>two digit year cutoff 서버 구성 옵션 구성
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 두 자리 연도 구분 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **두 자리 연도 구분** 옵션은 두 자리 연도를 네 자리 연도로 해석할 구분 연도를 1753부터 9999까지의 정수 중에서 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 기본 시간 범위는 1950-2049입니다. 즉, 구분 연도가 2049년임을 나타냅니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 두 자리 숫자 49를 2049년으로, 두 자리 숫자 50을 1950년으로, 두 자리 숫자 99를 1999년으로 해석합니다. 이전 버전과의 호환성을 위해 기본값 설정을 그대로 두세요.  
@@ -46,7 +45,7 @@ ms.locfileid: "48208902"
   
 -   이 옵션은 고급 옵션으로, 숙련된 데이터베이스 관리자나 공인된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기술 지원 담당자만 변경해야 합니다.  
   
--   OLE 자동화 개체는 2030을 두 자리 구분 연도로 사용합니다. **두 자리 연도 구분** 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 클라이언트 응용 프로그램 간 날짜 값의 일관성을 유지할 수 있습니다. 그러나 날짜를 명확하게 구분하려면 데이터에 네 자리 연도를 사용하세요.  
+-   OLE 자동화 개체는 2030을 두 자리 구분 연도로 사용합니다. **두 자리 연도 구분** 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 클라이언트 애플리케이션 간 날짜 값의 일관성을 유지할 수 있습니다. 그러나 날짜를 명확하게 구분하려면 데이터에 네 자리 연도를 사용하세요.  
   
 ###  <a name="Security"></a> 보안  
   
@@ -89,10 +88,10 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 두 자리 연도 구분 옵션을 구성한 후  
+##  <a name="FollowUp"></a> 후속편: 두 자리 연도 구분 옵션을 구성한 후  
  이 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [RECONFIGURE&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)  

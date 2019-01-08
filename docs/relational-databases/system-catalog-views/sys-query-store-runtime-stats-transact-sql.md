@@ -1,7 +1,7 @@
 ---
 title: sys.query_store_runtime_stats (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/29/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,15 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48e9993ecacc1365f961255b99c24eb7f456e0d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b53020f747b84c824ae8cd816c3b7ba1975df80b
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710851"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52712434"
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>sys.query_store_runtime_stats (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   쿼리에 대 한 런타임 실행 통계 정보에 대 한 정보를 포함합니다.  
   
@@ -39,8 +39,8 @@ ms.locfileid: "47710851"
 |**runtime_stats_id**|**bigint**|에 대 한 런타임 실행 통계를 나타내는 행의 식별자를 **plan_id**를 **execution_type** 하 고 **runtime_stats_interval_id**합니다. 이 지난 런타임 통계 간격 동안만 고유 합니다. 현재 활성 간격에 대 한 있을 수 있습니다 여러 행에서 참조 하는 계획에 대 한 런타임 통계를 나타내는 **plan_id**를 나타내는 실행 형식과 **execution_type**합니다. 일반적으로 행이 하나씩 나타냅니다 플러시되는 런타임 통계를 디스크에 다른 (s) 메모리 내 상태를 나타냅니다. 따라서 간격에 대 한 실제 상태를 가져오려는 해야 집계 메트릭을 그룹화 **plan_id**를 **execution_type** 하 고 **runtime_stats_interval_id**합니다. |  
 |**plan_id**|**bigint**|외래 키입니다. 에 조인 [sys.query_store_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)합니다.|  
 |**runtime_stats_interval_id**|**bigint**|외래 키입니다. 에 조인 [sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)합니다.|  
-|**execution_type**|**tinyint**|쿼리 실행의 유형을 결정 합니다.<br /><br /> 0 – 일반 실행 (완료)<br /><br /> 3-클라이언트에서 시작한 실행을 중단 했습니다.<br /><br /> 4-예외 실행이 중단 됨|  
-|**execution_type_desc**|**nvarchar(128)**|실행 형식 필드의 텍스트 설명:<br /><br /> 0 – 일반<br /><br /> 3 – 중단<br /><br /> 4-예외|  
+|**execution_type**|**tinyint**|쿼리 실행의 유형을 결정 합니다.<br /><br /> 0-일반 실행 (완료)<br /><br /> 3-클라이언트에서 시작한 실행을 중단 했습니다.<br /><br /> 4-예외 실행이 중단 됨|  
+|**execution_type_desc**|**nvarchar(128)**|실행 형식 필드의 텍스트 설명:<br /><br /> 0-일반<br /><br /> 3-중단<br /><br /> 4-예외|  
 |**first_execution_time**|**datetimeoffset**|집계 간격 내에서 쿼리 계획에 대 한 첫 번째 실행 시간입니다.|  
 |**last_execution_time**|**datetimeoffset**|집계 간격 내에서 쿼리에 대해 마지막 실행 시간을 계획 합니다.|  
 |**count_executions**|**bigint**|집계 간격 내에서 쿼리 계획에 대 한 실행의 총 수입니다.|  
@@ -98,7 +98,7 @@ ms.locfileid: "47710851"
 ## <a name="permissions"></a>사용 권한  
  필요 합니다 **VIEW DATABASE STATE** 권한.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [sys.database_query_store_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [sys.query_context_settings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
  [sys.query_store_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   

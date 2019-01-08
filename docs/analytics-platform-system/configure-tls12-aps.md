@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 10/29/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 15bee3f68bf922ec9220c9ac570e5bd372f47483
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 24e93c91c916272f71f137dd10bf402d693bbcd8
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697861"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52615983"
 ---
 # <a name="configure-tls-12-in-aps"></a>AP에서 TLS 1.2를 구성 합니다.
 

@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_changemergesubscription_TSQL
@@ -17,12 +16,12 @@ ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57e581985a4fcc5b7d1055748f87aed40c06a5a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ac79494bfb0d08503be6e138bce748596eb8165
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629631"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819074"
 ---
 # <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,19 +43,19 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_게시_**'**  
  변경할 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 NULL입니다. 게시는 이미 존재하고 있어야 하며 식별자에 적용되는 규칙을 준수해야 합니다.  
   
- [  **@subscriber=**] **'***구독자***'**  
+ [  **@subscriber=**] **'**_구독자_**'**  
  구독자의 이름입니다. *구독자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@subscriber_db=**] **'***subscriber_db***'**  
+ [  **@subscriber_db=**] **'**_subscriber_db_**'**  
  구독 데이터베이스의 이름입니다. *subscriber_db*됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@property=**] **'***속성***'**  
+ [  **@property=**] **'**_속성_**'**  
  지정된 게시에 대해 변경할 속성입니다. *속성* 됩니다 **sysname**, 테이블의 값 중 하나일 수 있습니다.  
   
- [  **@value=**] **'***값***'**  
+ [  **@value=**] **'**_값_**'**  
  지정 된 새 값입니다 *속성*합니다. *값* 됩니다 **nvarchar(255)**, 테이블의 값 중 하나일 수 있습니다.  
   
 |속성|값|Description|  

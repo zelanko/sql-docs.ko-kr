@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - logical records [SQL Server replication]
@@ -14,12 +13,12 @@ ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 97678edeeaf9ff749b3dd7a1da9d25044d106ae1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 379357c8598fbdfddedfaa6b3cc5952e2a9119c1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144613"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786075"
 ---
 # <a name="detecting-and-resolving-conflicts-in-logical-records"></a>논리적 레코드에서 충돌 감지 및 해결
   이 항목에서는 논리적 레코드에서 충돌을 감지하고 해결하는 다양한 방법을 설명합니다. 두 개 이상의 노드에서 동일한 데이터를 변경할 때 병합 복제에서 충돌이 발생하거나 병합 복제에서 변경 내용을 복제할 때 제약 조건 위반과 같은 특정 오류 유형이 발생합니다. 충돌 감지 및 해결에 대한 자세한 내용은 [고급 병합 복제 충돌 감지 및 해결](advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하십시오.  

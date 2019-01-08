@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - FINDSTRING function
@@ -13,12 +12,12 @@ ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6b2ea62bd49073d7da87fd0e8218b656ded7f96f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc77f0d87be4595e672cec61b43d041f0b89a22a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105679"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782535"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING(SSIS 식)
   문자 식에서 지정한 문자열 발생 위치를 반환합니다. 반환 결과는 항목의 인덱스(1부터 시작)입니다. 문자열 매개 변수는 문자 식으로 계산되고 발생 빈도 매개 변수는 정수여야 합니다. 문자열을 찾을 수 없는 경우 반환 값은 0입니다. 문자열이 발생 인수에 지정된 횟수보다 적게 발생하는 경우에도 반환 값이 0입니다.  
@@ -77,8 +76,8 @@ FINDSTRING(Name,"n", 2)
 FINDSTRING(Name,Size,1)   
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [대체 &#40;SSIS 식&#41;](replace-ssis-expression.md)   
- [함수 &#40;SSIS 식&#41;](functions-ssis-expression.md)  
+## <a name="see-also"></a>관련 항목:  
+ [REPLACE&#40;SSIS 식&#41;](replace-ssis-expression.md)   
+ [함수&#40;SSIS 식&#41;](functions-ssis-expression.md)  
   
   

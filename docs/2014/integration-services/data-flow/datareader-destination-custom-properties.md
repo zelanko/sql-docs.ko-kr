@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bdbfcd41afdfe7fd27651efbabf0983a56c786e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7117115e461d0e33a3c62100a3e914128003b96
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187443"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790355"
 ---
 # <a name="datareader-destination-custom-properties"></a>DataReader 대상 사용자 지정 속성
   DataReader 대상에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
- 다음 표에서는 DataReader 대상의 사용자 지정 속성을 설명합니다. 모든 속성을 제외 하 고 `DataReader` 읽기/쓰기입니다.  
+ 다음 표에서는 DataReader 대상의 사용자 지정 속성을 설명합니다. `DataReader`를 제외한 모든 속성은 읽기/쓰기가 가능합니다.  
   
 |속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
@@ -34,6 +33,6 @@ ms.locfileid: "48187443"
  자세한 내용은 [DataReader Destination](datareader-destination.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [Common Properties](../common-properties.md)  
+ [공용 속성](../common-properties.md)  
   
   

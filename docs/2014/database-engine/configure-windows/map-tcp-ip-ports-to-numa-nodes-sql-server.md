@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - NUMA
@@ -21,12 +20,12 @@ ms.assetid: 07727642-0266-4cbc-8c55-3c367e4458ca
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d8b4b63ffb3ee47ed72e0dfe3190fe4231eca5d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 138e5743e18ba6e39aa55aaec6931413dd21175b
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184673"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640174"
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>NUMA 노드에 TCP IP 포트 매핑(SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 TCP/IP 포트를 NUMA(Non-Uniform Memory Access) 노드로 매핑하는 방법에 대해 설명합니다. 시작할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 오류 로그에 노드 정보를 씁니다.  
@@ -53,7 +52,7 @@ ms.locfileid: "48184673"
   
 2.  세부 정보 창에서 **TCP/IP**를 두 번 클릭합니다.  
   
-3.  **IP 주소** 탭을 선택하여 구성할 IP 주소에 해당하는 섹션의 **TCP 포트** 입력란에서 포트 번호 뒤에 NUMA 노드 식별자를 대괄호 안에 추가합니다. 예를 들어 TCP 포트 1500과 노드 0, 2 및 5를 사용 하 여 `1500[37]`, 또는 `1500[0x25]`합니다.  
+3.  **IP 주소** 탭을 선택하여 구성할 IP 주소에 해당하는 섹션의 **TCP 포트** 입력란에서 포트 번호 뒤에 NUMA 노드 식별자를 대괄호 안에 추가합니다. 예를 들어 TCP 포트 1500과 노드 0, 2, 5의 경우 `1500[37]` 또는 `1500[0x25]`를 사용합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [소프트 NUMA를 사용 하도록 SQL Server 구성 &#40;SQL Server&#41;](soft-numa-sql-server.md)  

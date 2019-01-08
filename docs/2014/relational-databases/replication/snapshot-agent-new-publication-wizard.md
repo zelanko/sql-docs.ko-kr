@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.configuresnapshotagent.f1
@@ -13,12 +12,12 @@ ms.assetid: 0257d4ee-1f7b-49fd-b4ef-65bfc1ef6951
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ede30c7586e3a613a5ce96dee8d824e2d88e14fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 20e4e015064dcf0e472c2f3c56ecabf4100e6fe7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109113"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815565"
 ---
 # <a name="snapshot-agent-new-publication-wizard"></a>스냅숏 에이전트(새 게시 마법사)
   스냅숏 에이전트는 새 구독을 초기화하는 데 사용되는 게시 스키마와 데이터가 포함된 파일을 만듭니다. 기본적으로 스냅숏 에이전트는 새 게시 마법사에서 게시가 생성된 후 즉시 실행됩니다. 이후에는 사용자가 지정한 일정에 따라 에이전트가 실행됩니다. 에이전트가 실행될 때마다 새 스냅숏 파일을 만들지 여부는 선택한 복제 유형 및 옵션에 따라 결정됩니다. 자세한 내용은 [스냅숏 만들기 및 적용](create-and-apply-the-snapshot.md)을 참조하세요.  

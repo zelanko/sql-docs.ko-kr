@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - conflict resolution [SQL Server replication], queued updating subscriptions
@@ -15,12 +14,12 @@ ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a4a2f9a8927b5cf6a1a93f66f075a2600c3f98e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76f5e18a6555f4facf068dbd68429a770ebd9676
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052953"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797445"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>트랜잭션 게시의 데이터 충돌 확인(SQL Server Management Studio)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 복제 충돌 뷰어에서 피어 투 피어 트랜잭션 복제와 지연 업데이트 구독이 포함된 트랜잭션 복제의 충돌을 볼 수 있습니다. 충돌 감지 및 해결 방법은 [피어 투 피어 복제에서 충돌 검색](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md) 및 [지연 업데이트 충돌 해결 옵션 설정&#40;SQL Server Management Studio&#41;](publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)을 참조하세요.  
@@ -57,7 +56,7 @@ ms.locfileid: "48052953"
   
     -   상단 표에서 행을 하나 이상 선택한 다음 **제거**를 클릭하여 충돌 메타데이터 테이블에서 행을 제거합니다.  
   
-    -   속성 단추 (**...**)를 클릭하여 충돌과 관련된 열에 대한 자세한 정보를 확인합니다.  
+    -   속성 단추(**...**)를 클릭하여 충돌과 관련된 열에 대한 자세한 정보를 확인합니다.  
   
     -   **이 충돌 정보 기록** 을 선택하여 충돌 데이터를 파일에 기록합니다. 파일의 위치를 지정하려면 **보기** 메뉴를 가리킨 다음 **옵션**을 클릭합니다. 값을 입력하거나 찾아보기 단추 (**...**)를 클릭한 다음 해당 파일을 검색합니다. **확인** 을 클릭하여 **옵션** 대화 상자를 닫습니다.  
   

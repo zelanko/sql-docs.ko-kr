@@ -17,12 +17,12 @@ ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6e46075e55aa14784e967b3620de5855a47c4bd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 2d835e7d541f69c6a84129d3d6c1c8128f748a23
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676621"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541915"
 ---
 # <a name="types-of-applications"></a>애플리케이션 형식
 ODBC 응용 프로그램은 다음과 같이 분류할 수 있습니다.  
@@ -42,7 +42,7 @@ ODBC 응용 프로그램은 다음과 같이 분류할 수 있습니다.
 -   **순수 ODBC 2입니다.**  
      ***x* 유니코드 응용 프로그램** 순수 ODBC 2. *x* 유니코드 규격이 고 SQL_WCHAR 데이터 형식을 사용 하는 응용 프로그램을 다시 컴파일됩니다.  
   
--   **순수 Open Group 및 ISO**–**호환 ODBC 응용 프로그램** 32 비트 응용 프로그램입니다.  
+-   **순수 Open Group 및 ISO**-**호환 ODBC 응용 프로그램** 32 비트 응용 프로그램입니다.  
   
     -   Open Group 또는 ISO CLI 표준에 정의 된 함수를 호출 합니다. (이러한 함수에 사용 되지 않는 3.0 함수를 포함할 수 있습니다.)  
   

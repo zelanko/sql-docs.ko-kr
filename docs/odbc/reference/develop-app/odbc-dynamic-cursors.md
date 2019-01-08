@@ -14,12 +14,12 @@ ms.assetid: de709fd3-9eb2-44e1-a2f0-786e2b9602a6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82df10e6b8effeb040b362dcf466eb173dfce4f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64215cff750e39dc78ad1a695bbe553d900f4120
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629681"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541870"
 ---
 # <a name="odbc-dynamic-cursors"></a>ODBC 동적 커서
 동적 커서는: 동적입니다. 멤버 자격, 순서 및 커서가 열린 후에 결과 집합의 값에 대 한 변경 내용을 감지할 수 있습니다. 예를 들어 두 개의 행을 인출 하는 동적 커서 및 다른 응용 프로그램에서 그런 다음 이러한 행 중 하나를 업데이트 하 고 다른를 삭제 합니다. 동적 커서 해당 행을 다시 인출 하려고 시도 삭제 된 행을 찾지 못합니다 있지만 업데이트 된 행에 대 한 새 값이 반환 됩니다.  
@@ -41,6 +41,6 @@ SELECT * FROM Customers WHERE (Name > ?) AND (CustID > ?)
    ORDER BY Name, CustID  
 ```  
   
- 이 문은 두 번째 결과 집합의 첫 번째 행은 원래 결과 집합의 다음 행 집합을 만듭니다-여기서는 Customers 테이블의 행 집합입니다. 커서는 응용 프로그램에이 행 집합을 반환합니다.  
+ 이 문은 Customers 테이블의 두 번째 결과 집합의 원래 결과 집합-의 다음 행 집합을이 경우에 첫 번째 행, 행 집합을 만듭니다. 커서는 응용 프로그램에이 행 집합을 반환합니다.  
   
  이 원래 결과 집합에 변경 내용을 검색할 수 있도록이 방식으로 구현 되는 동적 커서에 실제로 여러 결과 집합을 만듭니다 흥미롭습니다. 이러한 보조 결과 집합이 존재 하지 응용 프로그램 학습 단순히 커서를 원래 결과 집합에 변경 내용을 검색 하는 일을 할 것 처럼 표시 됩니다.

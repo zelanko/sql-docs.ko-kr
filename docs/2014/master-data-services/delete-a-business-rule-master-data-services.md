@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting business rules [Master Data Services]
@@ -14,12 +13,12 @@ ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: de5fc5202b7a2b463fb80e51fcc37623c7d65528
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 652b301a91adc3c6c417e23ff2f192712c5f4a04
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161903"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784415"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>비즈니스 규칙 삭제(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 비즈니스 규칙이 더 이상 필요하지 않으면 삭제할 수 있습니다.  
@@ -59,8 +58,8 @@ ms.locfileid: "48161903"
 11. 확인 대화 상자에서 **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [비즈니스 규칙 제외 &#40;Master Data Services&#41;](exclude-a-business-rule-master-data-services.md)   
+ [비즈니스 규칙 제외&#40;Master Data Services&#41;](exclude-a-business-rule-master-data-services.md)   
  [비즈니스 규칙 만들기 및 게시&#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
- [비즈니스 규칙 &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+ [비즈니스 규칙&#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

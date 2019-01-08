@@ -15,15 +15,15 @@ ms.assetid: fecbf093-65ea-4e1b-b637-f04876f1cb0f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9a023065ad0e2a72036fe5fbdebd72682ceb6546
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b3121646cbcfee823be71b575349b814fbf36c1a
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121476"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512487"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>MDX 작성기( Analysis Services - 다차원 데이터)
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 또는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 **MDX 작성기** 대화 상자를 사용하여 MDX(Multidimensional Expression) 식을 작성할 수 있습니다. **역할 디자이너** 의 **셀 데이터** 페이지에서**큐브 내용을 읽을 수 있습니다**옵션, **셀 보안 설정에 따라 셀 내용을 읽을 수 있습니다** 옵션 또는 **큐브 내용을 읽고 쓸 수 있습니다** 옵션에 대한 **MDX 편집** 줄임표 단추 ( **…** )를 클릭하여 **MDX 작성기**대화 상자를 표시할 수 있습니다.  
+  **또는** 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] MDX 작성기 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 MDX(Multidimensional Expression) 식을 작성할 수 있습니다. 표시할 수 있습니다 합니다 **MDX 작성기** 를 클릭 하 여 대화 상자를 **MDX 편집** 줄임표 단추 (**...** )에 대 한는 **큐브 내용 읽을 수 있습니다** 옵션을 **셀 보안에 따라 셀 내용의 읽을 허용** 옵션을 또는 **읽을 수 있습니다 및 큐브 내용을 작성** 옵션을 **셀 데이터** 페이지 **역할 디자이너**합니다.  
   
 ## <a name="options"></a>변수  
   

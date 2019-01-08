@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fb280c856b6e7231c078bf830be4a10f9ecc4723
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f839b7e108f6398f96c302016cfc45c82a110c6d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018930"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526500"
 ---
 # <a name="time-series-model-query-examples"></a>시계열 모델 쿼리 예제
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -88,16 +88,16 @@ WHERE NODE_NAME = 'TA00000007'
   
  예제 결과:  
   
-|약식 수식|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
+|약식 수식|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
 |--------------------|-----------------------|------------------------|  
-|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24….|  
-|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|1.|  
+|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24...|  
+|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|1|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|12|  
   
  이 정보를 해석하는 방법은 [시계열 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)를 참조하세요.  
   
   
-###  <a name="bkmk_Query3"></a> 예제 쿼리 3: ARTxp 모델에 대한 수식 검색  
+###  <a name="bkmk_Query3"></a> 예제 쿼리 3: ARTXP 모델에 대한 수식 검색  
  ARTxp 모델의 경우 트리의 각 수준에 다른 정보가 저장됩니다. ARTxp 모델의 구조에 대한 자세한 내용과 수식에서 정보를 해석하는 방법은 [시계열 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)를 참조하세요.  
   
  다음 DMX 문은 유럽에서 R250 모델의 판매 수량을 나타내는 ARTxp 트리의 일부에 대한 정보를 검색합니다.  
@@ -128,13 +128,13 @@ AND NODE_TYPE = 15
 ###  <a name="bkmk_ReplaceExtend"></a> 바꾸기 및 확장 작업의 동작 이해  
  시계열 모델에 새 데이터를 추가할 때 학습 데이터를 확장할지 또는 대체할지 지정할 수 있습니다.  
   
--   **확장:** 데이터 계열을 확장하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 기존 학습 데이터의 끝에 새 데이터를 추가합니다. 학습 사례의 수도 증가합니다.  
+-   **확장:** 데이터 계열을 확장하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 기존 학습 데이터의 끝에 새 데이터를 추가합니다. 학습 사례의 수도 증가합니다.  
   
      모델 사례 확장은 새 데이터로 계속해서 모델을 업데이트하는 경우 유용합니다. 예를 들어 시간이 지남에 따라 학습 집합이 증가하도록 하려는 경우 모델을 확장하면 됩니다.  
   
      데이터를 확장하려면 시계열 모델에 **PREDICTION JOIN** 을 만들고 새 데이터의 원본을 지정하고 **EXTEND_MODEL_CASES** 인수를 사용합니다.  
   
--   **바꾸기:** 데이터 계열에서 데이터를 바꾸는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 학습된 모델은 유지하지만 새 데이터 값을 사용하여 기존 학습 사례의 일부 또는 전체를 바꿉니다. 따라서 학습 데이터의 크기는 바뀌지 않지만 사례 자체는 더 새로운 데이터로 계속해서 대체됩니다. 새 데이터를 충분히 제공하면 완전히 새로운 계열로 학습 데이터를 대체할 수 있습니다.  
+-   **으로 바꿉니다.** 데이터 계열에서 데이터를 바꾸는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 학습된 된 모델을 유지 하지만 새 데이터 값을 사용 하 여 일부 또는 기존 학습 사례의 전체를 바꿉니다. 따라서 학습 데이터의 크기는 바뀌지 않지만 사례 자체는 더 새로운 데이터로 계속해서 대체됩니다. 새 데이터를 충분히 제공하면 완전히 새로운 계열로 학습 데이터를 대체할 수 있습니다.  
   
      모델 사례 대체는 하나의 사례 집합을 학습시킨 다음 이 모델을 다른 데이터 계열에 적용하려는 경우 유용합니다.  
   
@@ -177,7 +177,7 @@ AND NODE_TYPE = 15
   
  **REPLACE_MODEL_CASES** 인수를 사용하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 사례 집합의 끝에 새 사례를 계속해서 추가하고 해당되는 수만큼을 사례 집합의 시작부터 삭제합니다. 원래의 학습 집합에서보다 더 많은 수의 새 데이터를 추가할 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 가장 앞선 데이터를 버립니다. 새 값을 충분히 제공하면 예측은 완전히 새로운 데이터를 기반으로 할 수 있습니다.  
   
- 예를 들어 1000개의 행을 포함하는 사례 데이터 집합에서 모델을 학습시켰습니다. 그 후 100개 행의 새 데이터를 추가합니다. 그 후 100개 행의 새 데이터를 추가합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 총 1000개의 행이 되도록 학습 집합에서 처음 100개의 행을 삭제하고 집합의 끝에 100개 행의 새 데이터를 추가합니다. 1100개 행의 새 데이터를 추가할 경우 최근 순서대로 1000개 행만 사용됩니다.  
+ 예를 들어 1000개의 행을 포함하는 사례 데이터 집합에서 모델을 학습시켰습니다. 그 후 100개 행의 새 데이터를 추가합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 총 1000개의 행이 되도록 학습 집합에서 처음 100개의 행을 삭제하고 집합의 끝에 100개 행의 새 데이터를 추가합니다. 1100개 행의 새 데이터를 추가할 경우 최근 순서대로 1000개 행만 사용됩니다.  
   
  다른 예를 살펴보겠습니다. 3개월 분량의 새 데이터를 추가하고 3개의 새로운 예측을 수행하려면 다음과 같이 합니다.  
   
@@ -197,7 +197,7 @@ AND NODE_TYPE = 15
   
   
 ###  <a name="bkmk_MissingValues"></a> 시계열 모델의 누락된 값 대체  
- **PREDICTION JOIN** 문을 사용하여 시계열 모델에 새 데이터를 추가하는 경우 새 데이터 집합에는 누락되는 값이 있을 수 없습니다. 완전하지 않은 계열이 있는 경우 모델은 null, 숫자 평균, 특정 숫자 평균 또는 예측된 값 중 하나를 사용하여 누락된 값을 제공해야 합니다. **EXTEND_MODEL_CASES**를 지정하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 원래 모델 기반의 예측으로 누락된 값을 대체합니다. **REPLACE_MODEL_CASES**를 사용하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 *MISSING_VALUE_SUBSTITUTION* 매개 변수에 지정한 값으로 누락된 값을 대체합니다.  
+ **PREDICTION JOIN** 문을 사용하여 시계열 모델에 새 데이터를 추가하는 경우 새 데이터 세트에는 누락되는 값이 있을 수 없습니다. 완전하지 않은 계열이 있는 경우 모델은 null, 숫자 평균, 특정 숫자 평균 또는 예측된 값 중 하나를 사용하여 누락된 값을 제공해야 합니다. **EXTEND_MODEL_CASES**를 지정하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 원래 모델 기반의 예측으로 누락된 값을 대체합니다. **REPLACE_MODEL_CASES**를 사용하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 *MISSING_VALUE_SUBSTITUTION* 매개 변수에 지정한 값으로 누락된 값을 대체합니다.  
   
 ## <a name="list-of-prediction-functions"></a>예측 함수 목록  
  모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘은 공통 함수 집합을 지원합니다. 그러나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 다음 표에 나열된 함수를 추가로 지원합니다.  
@@ -205,19 +205,19 @@ AND NODE_TYPE = 15
 |||  
 |-|-|  
 |예측 함수|사용법|  
-|[Lag & #40; DMX & #41;](../../dmx/lag-dmx.md)|현재 사례의 날짜와 학습 집합의 마지막 날짜 간의 시간 조각을 여러 개 반환합니다.<br /><br /> 이 함수는 일반적으로 최근 학습 사례를 식별하여 해당 사례에 대한 자세한 데이터를 검색하는 데 사용됩니다.|  
+|[Lag&#40;DMX&#41;](../../dmx/lag-dmx.md)|현재 사례의 날짜와 학습 집합의 마지막 날짜 간의 시간 조각을 여러 개 반환합니다.<br /><br /> 이 함수는 일반적으로 최근 학습 사례를 식별하여 해당 사례에 대한 자세한 데이터를 검색하는 데 사용됩니다.|  
 |[PredictNodeId & #40; DMX & #41;](../../dmx/predictnodeid-dmx.md)|지정된 예측 가능한 열의 노드 ID를 반환합니다.<br /><br /> 이 함수는 일반적으로 특정 예측 값을 생성한 노드를 식별하여 노드와 관련된 사례를 검토하거나 수식 및 다른 세부 정보를 검색하는데 사용됩니다.|  
 |[PredictStdev & #40; DMX & #41;](../../dmx/predictstdev-dmx.md)|지정된 예측 가능한 열에서 예측의 표준 편차를 반환합니다.<br /><br /> 이 함수는 시계열 모델을 지원하지 않는 INCLUDE_STATISTICS 인수를 대체합니다.|  
 |[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|지정된 예측 가능한 열에 대한 예측의 분산을 반환합니다.<br /><br /> 이 함수는 시계열 모델을 지원하지 않는 INCLUDE_STATISTICS 인수를 대체합니다.|  
-|[PredictTimeSeries & #40; DMX & #41;](../../dmx/predicttimeseries-dmx.md)|시계열에 대한 예상 기록 값 또는 미래 예상 값을 반환합니다.<br /><br /> 일반 예측 함수인 [Predict&#40;DMX&#41;](../../dmx/predict-dmx.md)를 사용하여 시계열 모델을 쿼리할 수도 있습니다.|  
+|[PredictTimeSeries&#40;DMX&#41;](../../dmx/predicttimeseries-dmx.md)|시계열에 대한 예상 기록 값 또는 미래 예상 값을 반환합니다.<br /><br /> 일반 예측 함수인 [Predict&#40;DMX&#41;](../../dmx/predict-dmx.md)를 사용하여 시계열 모델을 쿼리할 수도 있습니다.|  
   
  모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘에 공통된 함수 목록은 [일반 예측 함수&#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)를 참조하세요. 특정 함수의 구문은 [DMX&#40;Data Mining Extensions&#41; 함수 참조](../../dmx/data-mining-extensions-dmx-function-reference.md)를 참조하세요.  
   
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 시계열 알고리즘](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Microsoft 시계열 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [시계열 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [시계열 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

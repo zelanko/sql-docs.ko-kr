@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.security.SSA.f1
@@ -15,12 +14,12 @@ ms.assetid: 64e84c67-acc6-4906-98d4-3451767363fe
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 476ca2bc3c82e7551472cf61fe0cb5138b91b545
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a3125ef66a88b8d7c47324e67b1a263581a925d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130053"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52788725"
 ---
 # <a name="snapshot-agent-security"></a>스냅숏 에이전트 보안
   **스냅숏 에이전트 보안** 대화 상자를 사용하여 다음을 지정할 수 있습니다.  
@@ -55,7 +54,7 @@ ms.locfileid: "48130053"
   
  연결에 사용되는 Windows 계정이나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정은 적어도 게시 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제의 로그인 및 암호 관리](security/manage-logins-and-passwords-in-replication.md)   
  [복제 에이전트 보안 모델](security/replication-agent-security-model.md)   
  [복제 에이전트 개요](agents/replication-agents-overview.md)   

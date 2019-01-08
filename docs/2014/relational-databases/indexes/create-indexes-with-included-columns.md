@@ -20,12 +20,12 @@ ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c2168e339fb6485035a2a1249dbf109a1560889a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a593812709e62a02645cdd0ce1ee2fa53461b4d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168815"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540839"
 ---
 # <a name="create-indexes-with-included-columns"></a>포괄 열을 사용하여 인덱스 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 비클러스터형 인덱스의 기능을 확장하도록 포괄 열 또는 키가 아닌 열을 추가하는 방법에 대해 설명합니다. 키가 아닌 열을 포함하여 여러 쿼리를 처리하는 비클러스터형 인덱스를 만들 수 있습니다. 이는 키가 아닌 열에 다음과 같은 장점이 있기 때문입니다.  
@@ -67,19 +67,19 @@ ms.locfileid: "48168815"
   
 -   키가 아닌 열은 비클러스터형 인덱스에 대해서만 정의할 수 있습니다.  
   
--   제외한 모든 데이터 형식을 `text`, `ntext`, 및 `image` 키가 아닌 열으로 사용할 수 있습니다.  
+-   `text`, `ntext` 및 `image`를 제외한 모든 데이터 형식을 키가 아닌 열로 사용할 수 있습니다.  
   
 -   결정적이면서 정확하거나 정확하지 않은 계산 열은 키가 아닌 열이 될 수 있습니다. 자세한 내용은 [Indexes on Computed Columns](indexes-on-computed-columns.md)을 참조하세요.  
   
 -   `image`, `ntext` 및 `text` 데이터 형식에서 파생된 계산 열은 계산 열 데이터 형식이 키가 아닌 인덱스 열로 허용되는 한 키가 아닌 열이 될 수 있습니다.  
   
--   테이블의 인덱스를 먼저 삭제하지 않으면 키가 아닌 열을 테이블에서 삭제할 수 없습니다.  
+-   해당 테이블의 인덱스를 먼저 삭제하지 않는 경우 키가 아닌 열을 테이블에서 삭제할 수 없습니다.  
   
 -   다음 경우를 제외하고 키가 아닌 열은 변경할 수 없습니다.  
   
     -   열의 Null 허용 여부를 NOT NULL에서 NULL로 변경합니다.  
   
-    -   길이 늘립니다 `varchar`하십시오 `nvarchar`, 또는 `varbinary` 열입니다.  
+    -   `varchar`, `nvarchar` 또는 `varbinary` 열의 길이를 늘립니다.  
   
 ###  <a name="Security"></a> 보안  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48168815"
   
 3.  더하기 기호를 클릭하여 키가 아닌 열이 있는 인덱스를 만들 테이블을 확장합니다.  
   
-4.  **인덱스** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 인덱스**를 가리킨 다음 **비클러스터형 인덱스...** 를 선택합니다.  
+4.  **인덱스** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 인덱스**를 가리킨 다음, **비클러스터형 인덱스...** 를 선택합니다.  
   
 5.  **새 인덱스** 대화 상자의 **일반** 페이지에서 **인덱스 이름** 상자에 새 인덱스의 이름을 입력합니다.  
   

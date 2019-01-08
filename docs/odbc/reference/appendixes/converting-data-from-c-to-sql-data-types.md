@@ -21,12 +21,12 @@ ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f68b53dd77305163aa2595c60a1994a13bb9964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 168fa55d89488277cd17f4bdca3105f7d879c8f8
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793811"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509404"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>데이터를 C에서 SQL 데이터 형식으로 변환
 응용 프로그램을 호출할 때 **SQLExecute** 하거나 **SQLExecDirect**, 드라이버를 사용 하 여 바인딩된 매개 변수 데이터를 검색 합니다 **SQLBindParameter** 의 저장소 위치에서 응용 프로그램입니다. 응용 프로그램을 호출할 때 **SQLSetPos**, 드라이버 업데이트에 대 한 데이터를 검색 하거나 추가 작업을 사용 하 여 바인딩된 열에서 **SQLBindCol**합니다. 응용 프로그램 실행 시 데이터 매개 변수를 사용 하 여 매개 변수 데이터를 보냅니다 **SQLPutData**합니다. 필요한 드라이버 변환 데이터에 지정 된 데이터 형식에서 합니다 *ValueType* 에서 인수 **SQLBindParameter** 에서 지정한 데이터 형식으로는 *ParameterType*에 인수 **SQLBindParameter**, 한 다음 데이터 원본에 데이터를 보냅니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "47793811"
   
  변환 된 데이터의 형식은 Windows® 국가 설정에 의해 영향을 받지 않습니다.  
   
- ![변환 지원: ODBC C에서 SQL 데이터 형식](../../../odbc/reference/appendixes/media/apd1b.gif "apd1b")  
+ ![지원 되는 변환: ODBC C에서 SQL 데이터 형식](../../../odbc/reference/appendixes/media/apd1b.gif "apd1b")  
   
  다음 섹션의 표에서 드라이버나 데이터 원본; 데이터 원본에 전송 되는 데이터 변환 하는 방법 설명 드라이버는 모든 ODBC C 데이터 형식에서 지원 되는 ODBC SQL 데이터 형식으로의 변환을 지원 해야 합니다. 테이블의 첫 번째 열을 지정된 된 ODBC C 데이터 형식에 대 한 유효한 입력된 값을 나열 합니다는 *ParameterType* 에서 인수 **SQLBindParameter**합니다. 두 번째 열의 데이터를 변환할 수 있는 경우 확인을 수행 하는 드라이버는 테스트의 결과 나열 합니다. 세 번째 열을 나열 하 여 각 결과 대 한 반환 된 SQLSTATE **SQLExecDirect**, **SQLExecute**하십시오 **SQLBulkOperations**, **SQLSetPos**, 또는 **SQLPutData**합니다. 데이터는 SQL_SUCCESS가 반환 하는 경우에 데이터 원본에 전송 됩니다.  
   
@@ -45,16 +45,16 @@ ms.locfileid: "47793811"
   
  다음 용어는 테이블에 사용 됩니다.  
   
--   **데이터의 바이트 길이** -데이터 원본에 전송 되기 전에 데이터가 잘릴 수 있는지 여부는 데이터 원본에 보낼 수 있는 SQL 데이터의 바이트 수입니다. 문자열 데이터에 대 한이 null 종료 문자에 대 한 공간이 포함 되지 않습니다.  
+-   **데이터의 바이트 길이** 번호-데이터 원본에 보낼 수 있는 SQL 데이터의 바이트를 여부는 데이터가 잘릴 수 데이터 원본에 전송 되기 전에 합니다. 문자열 데이터에 대 한이 null 종료 문자에 대 한 공간이 포함 되지 않습니다.  
   
 -   **열의 바이트 길이** -데이터 소스에서 데이터를 저장 하는 데 필요한 바이트 수입니다.  
   
--   **문자 바이트 길이** -문자 형식에서 데이터를 표시 하는 데 필요한 바이트의 최대 수입니다. 이 각 SQL 데이터 형식에 대해 정의 된 대로 [표시 크기](../../../odbc/reference/appendixes/display-size.md)표시 크기 문자에서는 문자 바이트 길이 (바이트)는 제외 하 고 있습니다.  
+-   **문자 바이트 길이** 최대-문자 형식에서 데이터를 표시 하는 데 필요한 바이트 수입니다. 이 각 SQL 데이터 형식에 대해 정의 된 대로 [표시 크기](../../../odbc/reference/appendixes/display-size.md)표시 크기 문자에서는 문자 바이트 길이 (바이트)는 제외 하 고 있습니다.  
   
--   **자릿수** -빼기 기호, 소수점 및 지 수 (필요한 경우)를 포함 한 숫자를 나타내는 데 사용 되는 문자의 수입니다.  
+-   **자릿수** -번호 문자의 수를 나타내는 데 등 빼기 기호, 소수점 지 수 (필요한 경우).  
   
 -   **단어**   
-     ***기울임꼴*** -SQL 문법 요소입니다. 문법 요소의 구문에 대 한 참조 [부록 c: SQL 문법](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)합니다.  
+     ***기울임꼴*** -SQL 문법 요소입니다. 문법 요소의 구문에 대 한 참조 [부록 c: SQL 문법을](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "47793811"
   
 -   [C에서 SQL로: 비트](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
   
--   [C에서 SQL로: 이진](../../../odbc/reference/appendixes/c-to-sql-binary.md)  
+-   [C에서 SQL로: 이진 파일](../../../odbc/reference/appendixes/c-to-sql-binary.md)  
   
 -   [C에서 SQL로: 날짜](../../../odbc/reference/appendixes/c-to-sql-date.md)  
   
@@ -72,9 +72,9 @@ ms.locfileid: "47793811"
   
 -   [C에서 SQL로: 시간](../../../odbc/reference/appendixes/c-to-sql-time.md)  
   
--   [C에서 SQL로: 타임스탬프](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
+-   [C에서 SQL로: 타임 스탬프](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
   
--   [C에서 SQL로: 연-월 간격](../../../odbc/reference/appendixes/c-to-sql-year-month-intervals.md)  
+-   [C에서 SQL로: 연도-월 간격](../../../odbc/reference/appendixes/c-to-sql-year-month-intervals.md)  
   
 -   [C에서 SQL로: 날짜-시간 간격](../../../odbc/reference/appendixes/c-to-sql-day-time-intervals.md)  
   

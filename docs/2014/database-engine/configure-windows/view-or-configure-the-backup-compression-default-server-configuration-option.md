@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], backup compression default option
@@ -14,12 +13,12 @@ ms.assetid: 23029395-3e93-4c29-b7d6-e5a47a3526ff
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f3bafe77bc1b7a31827c9db1c5eb65ac4af125b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 7907a8e1187169c8c7581e3ad5f81eef2dde15b2
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059273"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640734"
 ---
 # <a name="view-or-configure-the-backup-compression-default-server-configuration-option"></a>backup compression default 서버 구성 옵션 보기 또는 구성
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 백업 압축 기본값 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다. **백업 압축 기본값** 옵션은 서버 인스턴스가 기본적으로 압축된 백업을 만드는지 여부를 결정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이(가) 설치되면 **백업 압축 기본값** 옵션이 해제됩니다.  
@@ -116,7 +115,7 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 백업 압축 기본값 옵션을 구성한 후  
+##  <a name="FollowUp"></a> 후속편: 백업 압축 기본값 옵션을 구성한 후  
  이 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
 ## <a name="see-also"></a>관련 항목  

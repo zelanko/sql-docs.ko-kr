@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 23f30c2cebf7e048a8fb515edf370f4ab858bbff
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: HT
+ms.openlocfilehash: f8874a442897bd5dd887d7e9903777f81824cb46
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147458"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543528"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>다차원 모델용 파워 뷰 이해
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "50147458"
  ![파워 뷰 필드 목록의 측정값 그룹과](../../analysis-services/multidimensional-models/media/daxmd-fieldlist-group.gif "Power View 필드 목록의 측정값 그룹")  
   
 ### <a name="measures-as-variants"></a>variant로서의 측정값  
- 다차원 모델의 측정값은 variant입니다. 즉, 이 측정값은 강력한 형식이 아니며 다른 데이터 형식일 수 있습니다. 예를 들어 아래 이미지에서 Financial Reporting 테이블의 Amount 측정값은 기본적으로 통화 데이터 형식이지만, 문자열 데이터 형식인 "Statistical Accounts"의 부분합에 대해 문자열 값 "NA"도 가집니다. 파워 뷰에서는 일부 측정값을 variant로 인식하고 다른 시각화 유형으로 올바른 값 및 서식을 표시합니다.  
+ 다차원 모델의 측정값은 variant입니다. 즉, 이 측정값은 강력한 형식이 아니며 다른 데이터 형식일 수 있습니다. 예를 들어 아래 이미지에서 기본적으로 Financial Reporting 테이블의 Amount 측정값 통화 데이터 형식 이지만 "Statistical Accounts"를 문자열 데이터 형식인의 부분합에 대 한 문자열 값 "NA"도 있습니다. 파워 뷰에서는 일부 측정값을 variant로 인식하고 다른 시각화 유형으로 올바른 값 및 서식을 표시합니다.  
   
  **variant로서의 측정값**  
   
@@ -97,7 +97,7 @@ ms.locfileid: "50147458"
  테이블 형식 모델에서는 사용자가 필드에 count, sum 또는 average와 같은 *암시적* 측정값을 만들 수 있습니다. 다차원 모델에 대 한 암시적 측정값을 쿼리 차원 특성 데이터가 다르게 저장 되기 때문에 시간이 오래 걸릴 수 있습니다. 따라서 Powe View에서는 암시적 측정값을 사용할 수 없습니다.  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>차원, 특성 및 계층  
- 큐브 차원은 테이블 형식 메타데이터에서 테이블로 표시됩니다. 파워 뷰 필드 목록에서 차원 특성은 표시 폴더 내에 열로 표시됩니다.  Customer 차원의 Birth Date 특성과 같이 AttributeHierarchyEnabled 속성이 false로 설정된 차원 특성이나 AttributeHierarchyVisible 속성이 false로 설정된 차원 특성은 파워 뷰 필드 목록에 표시되지 않습니다. 여러 수준 계층 또는 사용자 계층(예: Customer 차원의 Customer Geography)은 파워 뷰 필드 목록에서 계층으로 표시됩니다. 차원 특성의 숨겨진 UnknownMember는 DAX 쿼리와 파워 뷰에서는 표시됩니다.  
+ 큐브 차원은 테이블 형식 메타데이터에서 테이블로 표시됩니다. 파워 뷰 필드 목록에서 차원 특성은 표시 폴더 내에 열로 표시됩니다.  AttributeHierarchyEnabled 속성이 false로 설정된 차원 특성(예: Customer 차원의 Birth Date 특성)이나 AttributeHierarchyVisible 속성이 false로 설정된 차원 특성은 Power View 필드 목록에 나타나지 않습니다. 여러 수준 계층 또는 사용자 계층(예: Customer 차원의 Customer Geography)은 파워 뷰 필드 목록에서 계층으로 표시됩니다. 차원 특성의 숨겨진 UnknownMember는 DAX 쿼리와 파워 뷰에서는 표시됩니다.  
   
  **SSDT(SQL Server Data Tools) 및 파워 뷰 필드 목록의 차원, 특성 및 계층**  
   
@@ -121,7 +121,7 @@ ms.locfileid: "50147458"
   
  사용자 계층의 계산 멤버는 파워 뷰에서 표시되지만, 최종 사용자는 여전히 사용자 계층의 계산 멤버를 포함하는 큐브에 연결할 수 있습니다.  
   
- 아래 이미지에서는 Date 차원의 "Fiscal Date Calculations" 차원 특성에 대한 시간 인텔리전스 계산 멤버를 포함하는 큐브에 대해 파워 뷰 보고서를 보여 줍니다.  
+ 아래 이미지에는 Date 차원의 "Fiscal Date Calculations" 차원 특성의 시간 인텔리전스 계산된 멤버를 포함 하는 큐브에 대 한 Power View 보고서를 보여 줍니다.  
   
  **계산 멤버가 있는 파워 뷰 보고서**  
   
@@ -136,7 +136,7 @@ ms.locfileid: "50147458"
  다차원 모델에서는 역할을 통해 차원 및 셀 수준 보안을 지원합니다. 파워 뷰를 사용하여 큐브에 연결하는 사용자는 인증 후 적절한 사용 권한이 있는지 여부가 평가됩니다. 차원 보안이 적용된 경우에는 해당 차원 멤버가 파워 뷰에서 사용자에게 표시되지 않고, 사용자에게 일부 셀이 제한된 셀 보안 사용 권한이 정의된 경우에는 해당 사용자가 파워 뷰를 사용하여 큐브에 연결할 수 없습니다. 집계 데이터의 일부가 보안 데이터에서 계산된 경우 사용자가 집계 데이터를 볼 수 있는 경우도 있습니다.  
   
 ### <a name="non-aggregatable-attributeshierarchies"></a>집계할 수 없는 특성/계층  
- 다차원 모델에서는 차원의 특성에 대해 IsAggregatable 속성이 false로 설정될 수 있습니다. 이는 클라이언트 애플리케이션에서 데이터를 쿼리할 때 계층 간에 데이터를 집계하지 않도록 모델 작성자가 지정했음을 의미합니다. 파워 뷰에서 이 차원 특성은 부분합을 사용할 수 없는 열로 표시됩니다. 아래 이미지에서는 집계할 수 없는 계층의 예인 Accounts를 확인할 수 있습니다. Accounts 부모-자식 계층의 최상위 수준은 집계할 수 없는 반면 다른 수준은 집계할 수 있습니다. Accounts 계층의 행렬 시각화(처음 두 수준)에서는 Account Level 02에 대한 부분합이 표시되지만 최상위 수준인 Account Level 01에 대한 부분합은 표시되지 않습니다.  
+ 다차원 모델에서는 차원의 특성에 대해 IsAggregatable 속성이 false로 설정될 수 있습니다. 이는 클라이언트 애플리케이션에서 데이터를 쿼리할 때 계층 간에 데이터를 집계하지 않도록 모델 작성자가 지정했음을 의미합니다. 파워 뷰에서 이 차원 특성은 부분합을 사용할 수 없는 열로 표시됩니다. 아래 이미지에서는 집계할 수 없는 계층의 예, 즉 Accounts를 볼 수 있습니다. Accounts 부모-자식 계층의 최상위 수준은 집계할 수 없는 반면 다른 수준은 집계할 수 있습니다. Accounts 계층의 행렬 시각화(처음 두 수준)에서는 Account Level 02에 대한 부분합이 표시되지만 최상위 수준인 Account Level 01에 대한 부분합은 표시되지 않습니다.  
   
  **파워 뷰의 집계할 수 없는 계층**  
   
@@ -157,11 +157,11 @@ ms.locfileid: "50147458"
  ![부모-자식 계층](../../analysis-services/multidimensional-models/media/daxmd-ssdt-hierarchies.gif "부모-자식 계층")  
   
 ## <a name="perspectives-and-translations"></a>큐브 뷰 및 번역  
- 큐브 뷰는 일부 차원 또는 측정값 그룹만 클라이언트 도구에 표시되는 큐브의 뷰입니다. 큐브 뷰의 이름은 큐브 연결 문자열 속성에 대한 값으로 지정할 수 있습니다. 예를 들어 다음 연결 문자열에서 'Direct Sales'는 다차원 모델의 큐브 뷰입니다.  
+ 큐브 뷰는 일부 차원 또는 측정값 그룹만 클라이언트 도구에 표시되는 큐브의 뷰입니다. 큐브 뷰의 이름은 큐브 연결 문자열 속성에 대한 값으로 지정할 수 있습니다. 예를 들어 다음 연결 문자열에 ' 직접 판매 '는 다차원 모델의 큐브 뷰:  
   
  `Data Source=localost;Initial Catalog=AdventureWorksDW-MD;Cube='Direct Sales'`  
   
- 큐브에서는 모델 내의 다양한 언어에 대해 메타데이터 및 데이터 번역이 지정될 수 있습니다. 번역(데이터 및 메타데이터)을 보려면 아래와 같이 RSDS 파일에서 연결 문자열에 선택적 "로캘 ID" 속성을 추가해야 합니다.  
+ 큐브에서는 모델 내의 다양한 언어에 대해 메타데이터 및 데이터 번역이 지정될 수 있습니다. 번역 (데이터 및 메타 데이터)를 확인 하기 위해 아래와 같이 RSDS 파일에서 연결 문자열에 선택적 "로캘 식별자" 속성을 추가 해야 합니다.  
   
  `Data Source=localost;Initial Catalog=AdventureWorksDW-MD;Cube='Adventure Works'; Locale Identifier=3084`  
   
@@ -177,7 +177,7 @@ ms.locfileid: "50147458"
  ![필터 고정](../../analysis-services/multidimensional-models/media/daxmd-pinnedfilterinpowerview.gif "필터 고정")  
   
 ## <a name="unsupported-features"></a>지원되지 않는 기능  
- **Excel 2013의 파워 뷰** - 다차원 모델에 연결하거나 다차원 모델에 대한 보고서를 만들 수 없습니다. 그러나 **Excel 2016의 파워 뷰** 에서는 다차원 모델에 연결하거나 다차원 모델용 보고서를 만들 수 없습니다. 자세한 내용을 확인하려면 [Excel 2016의 파워 뷰 및 OLAP](https://support.office.com/en-us/article/power-view-and-olap-in-excel-2016-ea5ff7a5-ea5f-48d4-aeb0-98c89ab738ac)를 참조하세요.  
+ **Excel 2013의 power View** -에 연결 및 다차원 모델에 대 한 보고서 만들기를 지원 하지 않습니다. 그러나 **Excel 2016의 파워 뷰** 에서는 다차원 모델에 연결하거나 다차원 모델용 보고서를 만들 수 없습니다. 자세한 내용을 확인하려면 [Excel 2016의 파워 뷰 및 OLAP](https://support.office.com/en-us/article/power-view-and-olap-in-excel-2016-ea5ff7a5-ea5f-48d4-aeb0-98c89ab738ac)를 참조하세요.  
   
  **동작** - 다차원 모델에 대한 파워 뷰 보고서나 DAX 쿼리에서는 지원되지 않습니다.  
   
@@ -186,7 +186,7 @@ ms.locfileid: "50147458"
 > [!NOTE]  
 >  동작과 명명된 집합이 지원되지 않더라도 사용자는 파워 뷰를 사용하여 다차원 모델에 연결하고 이를 탐색할 수 있습니다.  
   
- **셀 수준 보안** - 파워 뷰 보고서에서는 지원되지 않습니다.  
+ **셀 수준 보안** -Power View 보고서에서 지원 되지 않습니다.  
   
 ## <a name="csdlbi-annotations"></a>CSDLBI 주석  
  다차원 큐브 메타데이터는 CSDLBI(비즈니스 인텔리전스 포함 개념 스키마 정의 언어) 주석을 사용하여 EDM(엔터티 데이터 모델) 기반 개념 모델로 표시됩니다.  
@@ -196,13 +196,13 @@ ms.locfileid: "50147458"
  **DISCOVER_CSDL_METADATA 요청 예제**  
   
 ```  
-<Envelopexmlns=”http://schemas.xmlsoap.org/soap/envelope/”>  
+<Envelopexmlns="http://schemas.xmlsoap.org/soap/envelope/">  
    <Body>  
-      <Discoverxmlns=”urn:schemas-microsoft-com:xml-analysis”>  
+      <Discoverxmlns="urn:schemas-microsoft-com:xml-analysis">  
          <RequestType>DISCOVER_CSDL_METADATA</RequestType>  
          <Restrictions>  
             <RestrictionList>  
-              <CATALOG_NAME>”catalogname”<CATALOG_NAME>  
+              <CATALOG_NAME>"catalogname"<CATALOG_NAME>  
             </RestrictionList>  
          </Restrictions>  
          <Properties>  
@@ -225,7 +225,7 @@ ms.locfileid: "50147458"
   
  반환되는 CSDL 출력 문서에서는 모델을 네임스페이스, 포함 엔터티, 연결 및 속성으로 나타냅니다.  
   
- 테이블 형식 모델의 CSDLBI 주석에 대한 자세한 내용은 MSDN의 [CSDL용 BI 주석에 대한 기술 참조](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) 및 [\[MS-CSDLBI\]: 비즈니스 인텔리전스 주석을 사용하는 개념 스키마 정의 파일 형식](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)을 참조하세요.  
+ 테이블 형식 모델의 CSDLBI 주석에 대 한 정보를 자세한 [csdl 용 BI 주석에 대 한 기술 참조](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) MSDN의 및 [ \[MS-CSDLBI\]: 개념 스키마 정의 파일 형식으로 비즈니스 인텔리전스 주석 사용](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)합니다.  
   
 ## <a name="client-help-on-officecom"></a>Office.com의 클라이언트 도움말  
  Office.com에서 제공되는 다음 문서는 파워 뷰에서 다차원 모델 개체가 나타나는 방식과 예제 보고서를 만드는 방법을 배우는 데 유용합니다.  

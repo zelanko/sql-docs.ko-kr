@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ea75578bdd1cfd67255ab8c76149920452d1245
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e6d813848a45326ee9a74ea38616ceef9dd02cd5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670802"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524049"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "51670802"
  에 대 한 합니다 **xml** 데이터 형식으로는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 column_size 무제한 크기를 표시 하는 SQL_SS_LENGTH_UNLIMITED를 보고 합니다.  
   
 ## <a name="sqlgettypeinfo-and-table-valued-parameters"></a>SQLGetTypeInfo 및 테이블 반환 매개 변수  
- 테이블 반환 매개 변수의 테이블 형식은 실제적으로 메타 형식 즉, 다른 형식을 정의하는 데 사용되는 형식입니다. 따라서 SQLGetTypeInfo를 통해 노출 될 필요가 없습니다. 응용 프로그램 테이블 반환 매개 변수를 사용 하는 테이블 형식에 대 한 메타 데이터를 검색할 SQLGetTypeInfo, 대신 SQLTables를 사용 해야 합니다.  
+ 테이블 반환 매개 변수에 대 한 테이블 형식은를 메타-유형-형식임을 다른 형식을 정의 하는 데 효과적으로입니다. 따라서 SQLGetTypeInfo를 통해 노출 될 필요가 없습니다. 응용 프로그램 테이블 반환 매개 변수를 사용 하는 테이블 형식에 대 한 메타 데이터를 검색할 SQLGetTypeInfo, 대신 SQLTables를 사용 해야 합니다.  
   
  테이블 반환 매개 변수의 메타 데이터를 검색 하는 방법에 대 한 자세한 내용은 참조 [문 특성 Affect Table-Valued 매개 변수는](../../relational-databases/native-client-odbc-table-valued-parameters/statement-attributes-that-affect-table-valued-parameters.md)합니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "51670802"
 ## <a name="sqlgettypeinfo-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLGetTypeInfo 지원  
  **SQLGetTypeInfo** 큰 CLR 사용자 정의 형식 (Udt)를 지원 합니다. 자세한 내용은 [Large CLR User-Defined 형식 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQLGetTypeInfo 함수](https://go.microsoft.com/fwlink/?LinkId=59356)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

@@ -18,17 +18,17 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 86ddad2fe62bcd84c55cd97d3765dc898db8e39f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3647937630b259d60670cc470bbd1014dd288404
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108253"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513337"
 ---
 # <a name="use-the-sqlcmd-utility"></a>sqlcmd 유틸리티 사용
   `sqlcmd` 유틸리티는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 스크립트의 임시 대화형 실행과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립팅 태스크의 자동화를 위한 명령줄 유틸리티입니다. `sqlcmd`를 대화형으로 사용하거나 `sqlcmd`를 사용하여 실행할 스크립트 파일을 작성하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 이해해야 합니다. 일반적으로 `sqlcmd` 유틸리티는 다음과 같은 방법으로 사용됩니다.  
   
--   명령 프롬프트에서와 비슷한 방법으로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 대화형으로 입력합니다. 결과는 명령 프롬프트에 표시됩니다. 명령 프롬프트 창을 열려면 **시작**, **모든 프로그램**을 차례로 클릭하고 **보조프로그램**을 가리킨 다음 **명령 프롬프트**를 클릭합니다. 명령 프롬프트에서 입력 `sqlcmd` 뒤에 원하는 옵션 목록입니다. 지원 되는 옵션의 전체 목록은 `sqlcmd`를 참조 하세요 [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)합니다.  
+-   명령 프롬프트에서와 비슷한 방법으로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 대화형으로 입력합니다. 결과는 명령 프롬프트에 표시됩니다. 명령 프롬프트 창을 열려면 **시작**, **모든 프로그램**을 차례로 클릭하고 **보조프로그램**을 가리킨 다음 **명령 프롬프트**를 클릭합니다. 명령 프롬프트에서 `sqlcmd`를 입력한 뒤 원하는 옵션을 입력합니다. 지원 되는 옵션의 전체 목록은 `sqlcmd`를 참조 하세요 [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)합니다.  
   
 -   실행할 단일 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 지정하거나 실행할 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 포함된 텍스트 파일을 유틸리티에 알려 `sqlcmd` 작업을 제출합니다. 결과는 일반적으로 텍스트 파일로 전송되지만 명령 프롬프트에 표시될 수도 있습니다.  
   
@@ -110,9 +110,9 @@ ms.locfileid: "48108253"
   
  입력 파일이나 쿼리 없이 명령을 실행하면 `sqlcmd`가 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하고 `1>`과 그 뒤에 밑줄이 깜박이는 새 줄을 표시합니다. 이를 `sqlcmd` 프롬프트라고 합니다. `1`은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 첫 번째 줄임을 의미하고 `sqlcmd` 프롬프트는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 입력할 때 문이 시작되는 지점입니다.  
   
- `sqlcmd` 프롬프트에서는 `sqlcmd`, `GO` 등과 같이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 `EXIT` 명령을 모두 입력할 수 있습니다. 각 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 문 캐시를 호출한 버퍼에 저장됩니다. 이러한 문은 보내집니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 입력 한 후의 `GO` 명령 및 ENTER 키를 누릅니다. 종료 `sqlcmd`, 형식 `EXIT` 또는 `QUIT` 새 줄의 시작 부분에 있습니다.  
+ `sqlcmd` 프롬프트에서는 `sqlcmd`, `GO` 등과 같이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 `EXIT` 명령을 모두 입력할 수 있습니다. 각 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 문 캐시를 호출한 버퍼에 저장됩니다. 이러한 문은 `GO` 명령을 입력하고 Enter 키를 누르면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 전송됩니다. 종료 `sqlcmd`, 형식 `EXIT` 또는 `QUIT` 새 줄의 시작 부분에 있습니다.  
   
- 문 캐시를 지우려면 입력 `:RESET`합니다. 입력 `^C` 하면 `sqlcmd` 를 종료 합니다. `^C`는 `GO` 명령을 실행한 후 문 캐시의 실행을 중지하는 데 사용할 수도 있습니다.  
+ 문 캐시를 지우려면 `:RESET`을 입력합니다. 입력 `^C` 하면 `sqlcmd` 를 종료 합니다. `^C`는 `GO` 명령을 실행한 후 문 캐시의 실행을 중지하는 데 사용할 수도 있습니다.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 대화형 세션 중에서 입력 된 문을 입력 하 여 편집할 수는 **: ED** 명령 및 `sqlcmd` 프롬프트. 그렇게 하면 편집기가 열리며 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 편집한 후 편집기를 닫으면 수정된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 명령 창에 나타납니다. 입력 `GO` 실행을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "48108253"
   
  이는 `C:\` 폴더가 현재 폴더이며 파일 이름을 지정하면 Windows가 해당 폴더에서 파일을 찾을 것이라는 의미입니다.  
   
- 형식 `sqlcmd` 의 기본 인스턴스에 연결 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로컬 컴퓨터에 명령 프롬프트의 내용을 창에 나타나지 것입니다.  
+ `sqlcmd`를 입력하여 로컬 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하면 명령 프롬프트 창에 다음과 같은 내용이 나타납니다.  
   
  `C:\>sqlcmd`  
   
@@ -511,21 +511,21 @@ ms.locfileid: "48108253"
  Windows 자격 증명을 사용한 연결 및 통신 암호화:  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  Windows 자격 증명을 사용한 연결 및 서버 인증서 신뢰:  
   
 ```  
-SQLCMD –E –C  
+SQLCMD -E -C  
   
 ```  
   
  Windows 자격 증명을 사용한 연결, 통신 암호화 및 서버 인증서 신뢰:  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   
@@ -534,28 +534,28 @@ SQLCMD –E –N –C
  Windows 자격 증명을 사용한 연결, 통신 암호화 및 서버 인증서 신뢰:  
   
 ```  
-SQLCMD –E  
+SQLCMD -E  
   
 ```  
   
  Windows 자격 증명을 사용한 연결, 통신 암호화 및 서버 인증서 신뢰:  
   
 ```  
-SQLCMD –E –N  
+SQLCMD -E -N  
   
 ```  
   
  Windows 자격 증명을 사용한 연결, 통신 암호화 및 서버 인증서 신뢰:  
   
 ```  
-SQLCMD –E –T  
+SQLCMD -E -T  
   
 ```  
   
  Windows 자격 증명을 사용한 연결, 통신 암호화 및 서버 인증서 신뢰:  
   
 ```  
-SQLCMD –E –N –C  
+SQLCMD -E -N -C  
   
 ```  
   

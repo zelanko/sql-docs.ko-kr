@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [SQL Server]
@@ -20,12 +20,12 @@ ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dabe5913b62231b7d75862b720c632c7d3bbfdf4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 773ceb4aedddd6a39df6487bd36b47b83f7fa9a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182803"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781695"
 ---
 # <a name="visual-database-tool-designers"></a>Visual Database Tools 디자이너
   Visual Database Tools는 데이터 원본 작업을 수행하는 데 사용할 수 있는 여러 가지 디자인 도구 모음입니다. 이러한 도구를 사용하여 쿼리를 만들고, 데이터베이스 구조를 디자인하거나 수정하고, 데이터를 업데이트할 수 있습니다. 여기에 포함된 도구는 데이터베이스 다이어그램 디자이너, 테이블 디자이너, 쿼리 및 뷰 디자이너입니다.  

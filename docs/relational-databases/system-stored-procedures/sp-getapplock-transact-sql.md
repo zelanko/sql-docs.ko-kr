@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32303301fb01e381fee0e28cfedb2cd299658c88
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: c79a3e34ea6ca1bbebfa35a77020b81618514133
+ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851888"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52617583"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  응용 프로그램 잠금을 획득한 후에는 처음 32자만 일반 텍스트로 검색되고 나머지는 해시됩니다.  
   
  [ @LockMode=] '*lock_mode*'  
- 특정 리소스에 대해 획득할 잠금 모드입니다. *lock_mode*는 **nvarchar(32)** 이며 기본값은 없습니다. 값 중 하나일 수 있습니다: **공유**, **업데이트**, **IntentShared**, **IntentExclusive**, 또는 **전용** .  
+ 특정 리소스에 대해 획득할 잠금 모드입니다. *lock_mode*는 **nvarchar(32)** 이며 기본값은 없습니다. 값은 다음 중 하나일 수 있습니다. **공유**, **업데이트**를 **IntentShared**를 **IntentExclusive**, 또는 **단독**합니다.  
   
  [ @LockOwner=] '*lock_owner*'  
  잠금의 소유자이며 잠금이 요청되었을 때의 *lock_owner* 값입니다. *lock_owner*은 **nvarchar(32)** 입니다. 값은 **Transaction**(기본값) 또는 **Session**일 수 있습니다. 경우는 *lock_owner* 값이 **트랜잭션**, 기본 또는 명시적으로 지정 sp_getapplock에서 실행 되어야 합니다 트랜잭션 내에서.  
@@ -92,7 +92,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
  @DbPrincipal 매개 변수에 지정한 데이터베이스 보안 주체의 멤버만이 해당 보안 주체를 지정하는 응용 프로그램 잠금을 획득할 수 있습니다. dbo 및 db_owner 역할의 멤버는 암시적으로 모든 역할의 멤버로 간주됩니다.  
   
- sp_releaseapplock을 사용하여 명시적으로 잠금을 해제할 수 있습니다. 응용 프로그램이 동일한 잠금 리소스에 대해 sp_getapplock을 여러 번 호출한 경우에는 잠금을 해제하는 데도 동일한 횟수만큼 sp_releaseapplock을 호출해야 합니다.  
+ sp_releaseapplock을 사용하여 명시적으로 잠금을 해제할 수 있습니다. 응용 프로그램이 동일한 잠금 리소스에 대해 sp_getapplock을 여러 번 호출한 경우에는 잠금을 해제하는 데도 동일한 횟수만큼 sp_releaseapplock을 호출해야 합니다.  잠금을 사용 하 여 열릴 때를 `Transaction` 잠금 소유자, 트랜잭션이 커밋되거나 롤백될 때 잠금이 해제 되도록 합니다.
   
  동일 잠금 리소스에 대해 sp_getapplock을 여러 번 호출하되 요청 중 하나에서 기존 모드와 다른 잠금 모드를 지정한 경우 리소스에 두 잠금 모드를 합친 것만큼의 영향을 미칩니다. 즉, 대부분의 경우에 잠금 모드가 기존 모드 또는 새로 요청된 모드 중에서 보다 강력한 잠금 모드 수준으로 올라갑니다. 이 더욱 강력한 잠금 모드는 이전에 잠금 해제 호출이 발생한 경우에도 잠금이 궁극적으로 해제될 때까지 유지됩니다. 예를 들어 다음과 같은 호출 시퀀스에서 리소스는 `Exclusive` 모드가 아니라 `Shared` 모드에서 유지됩니다.  
   

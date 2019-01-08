@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_configure_peerconflictdetection_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4d2952862abcb00d40593b8acfe6448232b2afb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0a3ac1096ff14577ba72157118dcef4e1b03e70
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669421"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773705"
 ---
 # <a name="spconfigurepeerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

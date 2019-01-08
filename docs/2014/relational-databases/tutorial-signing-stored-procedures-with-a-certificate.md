@@ -1,11 +1,10 @@
 ---
-title: '자습서: 인증서로 저장 프로시저 서명 | Microsoft 문서'
+title: '자습서: 인증서를 사용 하 여 저장된 프로시저에 서명 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - signing stored procedures tutorial [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0259beabfba9334b8d7f659e4b201c0c3b8c878c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: daf80492cd6a0d8040d1497e71600c798e7ef96c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170885"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794792"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>자습서: 인증서로 저장 프로시저 서명
   이 자습서에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 생성한 인증서를 사용하여 저장 프로시저에 서명하는 방법에 대해 설명합니다.  

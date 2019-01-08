@@ -14,12 +14,12 @@ ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ce5c4b0a789572e58db7068911a9abae7475fcb
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
-ms.translationtype: HT
+ms.openlocfilehash: b499f06254a482deea2c90f2fc570b8bb7c9d43e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557861"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516750"
 ---
 # <a name="customization-file-userlist-section"></a>사용자 지정 파일 UserList 섹션
 **userlist** 관련 된 섹션의 **연결** 의 동일한 영역 *식별자* 매개 변수입니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "51557861"
 |*userName*|합니다 *사용자 이름* 이 연결을 사용 하는 사용자입니다. IIS를 사용 하 여 올바른 사용자 이름이 설정 됩니다 **Service Manager** 대화 합니다.|  
 |***accessRights***|다음 액세스 권한 중 하나입니다.<br /><br /> -   **액세스 권한 없음** -사용자 데이터 원본에 액세스할 수 없습니다.<br />-   **읽기 전용** -사용자는 데이터 소스를 읽을 수 있습니다.<br />-   **ReadWrite** -사용자 읽기 또는 데이터 원본에 쓸 수 있습니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [사용자 지정 파일 연결 섹션](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [사용자 지정 파일 로그 섹션](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [사용자 지정 파일 SQL 섹션](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   

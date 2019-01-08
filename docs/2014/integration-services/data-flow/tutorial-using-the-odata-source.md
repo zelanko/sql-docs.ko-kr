@@ -1,24 +1,23 @@
 ---
-title: '자습서: OData 원본 [SSIS] 사용 | Microsoft Docs'
+title: '자습서: OData 원본 [SSIS]를 사용 하 여 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 32d4e2f651fe4a080c1b75c4bd8c00ded7940bae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 693eb9b33c753f1d87b4b5635e47de82ca7e4b59
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155003"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805155"
 ---
-# <a name="tutorial-using-the-odata-source-ssis"></a>자습서: OData 원본 [SSIS] 사용
+# <a name="tutorial-using-the-odata-source-ssis"></a>자습서: OData 원본 사용 [SSIS]
   이 자습서에서는 샘플 **Northwind** OData 서비스(http://services.odata.org/V3/Northwind/Northwind.svc/)에서 **Employees** 컬렉션을 추출한 다음, 플랫 파일로 로드하는 프로세스를 안내합니다.  
   
 ## <a name="1-create-an-integration-services-project"></a>1. Integration Services 프로젝트 만들기  
@@ -43,7 +42,7 @@ ms.locfileid: "48155003"
   
 4.  **OData 원본** 구성 요소를 두 번 클릭해서 **OData 원본 편집기** 대화 상자를 실행합니다.  
   
-5.  연결에 대해 **새로 만들기...** 를 클릭해서 새 OData 연결 관리자를 추가합니다.  
+5.  **새로 만들기...** 를 클릭하여 새 OData 연결 관리자를 추가합니다.  
   
 6.  **서비스 문서 위치**에 대해 OData 서비스 URL을 입력합니다. 이 URL은 서비스 문서나 특정 피드 또는 엔터티에 대한 URL일 수 있습니다. 이 자습서에서는 입력 [ http://services.odata.org/V3/Northwind/Northwind.svc/ ](http://services.odata.org/V3/Northwind/Northwind.svc/)합니다.  
   

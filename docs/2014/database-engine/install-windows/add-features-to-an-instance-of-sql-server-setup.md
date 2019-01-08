@@ -14,12 +14,12 @@ ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 526eb1e020a7e2a2e1228b55062013088355bcb2
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
-ms.translationtype: HT
+ms.openlocfilehash: 147fe717919035c365ef2e3507e46a4323694570
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018348"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542157"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-2014-setup"></a>SQL Server 2014 인스턴스에 기능 추가(설치 프로그램)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스에 기능을 추가하기 위한 단계별 절차에 대해 설명합니다. 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소 또는 서비스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 특정 인스턴스에 고유합니다. 이를 인스턴스 인식 구성 요소 또는 서비스라고도 합니다. 인스턴스 인식 구성 요소 또는 서비스는 자신을 호스팅하는 인스턴스와 같은 버전을 공유하고 해당 인스턴스에만 독점적으로 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 공유 구성 요소(아직 설치되지 않은 경우)와 함께 인스턴스 인식 구성 요소를 추가할 수 있습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "51018348"
   
 12. **서버 구성 - 데이터 정렬** 탭을 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 기본이 아닌 데이터 정렬을 지정합니다. 자세한 내용은 [서버 구성 - 데이터 정렬](../../sql-server/install/server-configuration-collation.md)을 참조하세요.  
   
-13. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 – 계정 프로비전 페이지를 사용하여 다음을 지정합니다.  
+13. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 - 계정 프로비전 페이지를 사용하여 다음을 지정합니다.  
   
     -   보안 모드 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 인증(Windows 인증 또는 혼합 모드 인증)을 선택합니다. 혼합 모드 인증을 선택할 경우 기본 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자 계정에 강력한 암호를 제공해야 합니다.  
   
@@ -85,20 +85,20 @@ ms.locfileid: "51018348"
   
      목록 편집을 마쳤으면 **확인**을 클릭합니다. 구성 대화 상자에서 관리자 목록을 확인합니다. 목록 구성을 완료했으면 **다음**을 클릭합니다.  
   
-14. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 – 데이터 디렉터리 페이지를 사용하여 기본이 아닌 설치 디렉터리를 지정합니다. 기본 디렉터리에 설치하려면 **다음**을 클릭합니다.  
+14. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 - 데이터 디렉터리 페이지를 사용하여 기본이 아닌 설치 디렉터리를 지정합니다. 기본 디렉터리에 설치하려면 **다음**을 클릭합니다.  
   
     > [!IMPORTANT]  
     >  기본이 아닌 설치 디렉터리를 지정하는 경우 설치 폴더가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대해 고유한지 확인해야 합니다. 이 대화 상자의 어떠한 디렉터리도 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 디렉터리와 공유되지 않아야 합니다.  
   
      자세한 내용은 [데이터베이스 엔진 구성 - 데이터 디렉터리](../../sql-server/install/database-engine-configuration-data-directories.md)를 참조하세요.  
   
-15. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 - FILESTREAM 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 FILESTREAM을 설정합니다. FILESTREAM에 대한 자세한 내용은 [데이터베이스 엔진 구성 - Filestream](../../sql-server/install/database-engine-configuration-filestream.md)을 참조하세요. 계속하려면 다음을 클릭합니다.  
+15. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 - FILESTREAM 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 FILESTREAM을 설정합니다. FILESTREAM에 대한 자세한 내용은 [데이터베이스 엔진 구성 - Filestream](../../sql-server/install/database-engine-configuration-filestream.md)을 참조하세요. 계속하려면 다음을 클릭합니다.  
   
 16. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 구성 - 계정 프로비전 페이지를 사용하여 서버 모드와 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 관리자 권한을 갖는 사용자 또는 계정을 지정합니다. 서버 모드에 따라 해당 서버에서 사용되는 메모리 및 저장소 하위 시스템이 결정됩니다. 각 솔루션 유형은 서로 다른 서버 모드로 실행됩니다. 서버에서 다차원 큐브 데이터베이스를 실행하려면 기본 옵션인 다차원 및 데이터 마이닝 서버 모드를 선택합니다. 관리자 권한의 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 시스템 관리자를 한 명 이상 지정해야 합니다. SQL Server 설치 프로그램을 실행하는 계정을 추가하려면 **현재 사용자 추가(Add Current User)** 를 클릭합니다. 시스템 관리자 목록에 계정을 추가하거나 목록의 계정을 제거하려면 **추가** 또는 **제거**를 클릭한 다음 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 관리자 권한을 가질 사용자, 그룹 또는 컴퓨터 목록을 편집합니다. 서버 모드 및 관리자 권한에 대한 자세한 내용은 [Analysis Services 구성 - 계정 프로비전](../../sql-server/install/analysis-services-configuration-account-provisioning.md)을 참조하세요.  
   
      목록 편집을 마쳤으면 **확인**을 클릭합니다. 구성 대화 상자에서 관리자 목록을 확인합니다. 목록 구성을 완료했으면 **다음**을 클릭합니다.  
   
-17. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 구성 – 데이터 디렉터리 페이지를 사용하여 기본이 아닌 설치 디렉터리를 지정합니다. 기본 디렉터리에 설치하려면 **다음**을 클릭합니다.  
+17. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 구성 - 데이터 디렉터리 페이지를 사용하여 기본이 아닌 설치 디렉터리를 지정합니다. 기본 디렉터리에 설치하려면 **다음**을 클릭합니다.  
   
     > [!IMPORTANT]  
     >  기본이 아닌 설치 디렉터리를 지정하는 경우 설치 폴더가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대해 고유한지 확인해야 합니다. 이 대화 상자의 어떠한 디렉터리도 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 디렉터리와 공유되지 않아야 합니다.  

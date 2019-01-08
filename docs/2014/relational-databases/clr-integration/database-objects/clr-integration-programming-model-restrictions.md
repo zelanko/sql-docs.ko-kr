@@ -15,12 +15,12 @@ ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a7b7dfcbd9d7cc7407ed33cc0ea00e93df839b93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9b51e0fc192c94b32b4d496523dbf3c9216efd6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187943"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509905"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 통합 프로그래밍 모델 제한 사항
   관리 되는 저장 프로시저나 다른 관리 되는 데이터베이스 개체를 작성할 때 가지 특정 코드 검사를 수행한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 처음 등록 될 때 관리 코드 어셈블리에서 검사를 사용 하 여는 `CREATE ASSEMBLY` 문 및 런타임에도 합니다. 실제로 런타임에 접근할 수 없는 코드 경로가 어셈블리에 있을 수 있으므로 관리 코드는 런타임에도 검사됩니다.  따라서 특히 클라이언트 환경에서 실행되는 '안전하지 않은' 코드가 있는 경우 어셈블리가 차단되지 않고 호스팅된 CLR에서 실행되지 않도록 유연성 있게 타사 어셈블리를 등록할 수 있습니다. 관리 코드가 충족 해야 하는 요구 사항으로 어셈블리를 등록 하는 여부에 따라 달라 집니다 `SAFE`, `EXTERNAL_ACCESS`, 또는 `UNSAFE`, `SAFE` 가 가장 엄격 함 및 아래에 나열 되어 있습니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "48187943"
  런타임에 코드 어셈블리에서 다음 조건이 검사됩니다. 이러한 조건 중 하나가 발견되면 관리 코드를 실행할 수 없으며 예외가 throw됩니다.  
   
 ### <a name="unsafe"></a>UNSAFE  
- 명시적으로 바이트 배열에서 `System.Reflection.Assembly.Load()` 메서드를 호출하거나 암시적으로 `Reflection.Emit` 네임스페이스를 사용하여 어셈블리를 로드할 수 없습니다.  
+ 어셈블리를 호출 하 여 명시적으로 로드 합니다 `System.Reflection.Assembly.Load()` 메서드를 사용 하 여 암시적으로 바이트 배열에서 또는 `Reflection.Emit` 네임 스페이스-허용 되지 않습니다.  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  모든 `UNSAFE` 조건이 검사됩니다.  
@@ -116,7 +116,7 @@ ms.locfileid: "48187943"
 ### <a name="safe"></a>SAFE  
  모든 `EXTERNAL_ACCESS` 조건이 검사됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [지원 되는.NET Framework 라이브러리](supported-net-framework-libraries.md)   
  [CLR 통합 코드 액세스 보안](../security/clr-integration-code-access-security.md)   
  [호스트 보호 특성 및 CLR 통합 프로그래밍](../../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   

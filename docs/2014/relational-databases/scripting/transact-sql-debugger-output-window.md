@@ -7,8 +7,6 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- vs.output
 helpviewer_keywords:
 - Output Window [Transact-SQL]
 - Output Window [SQL Server Management Studio]
@@ -16,12 +14,12 @@ ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c3b5ec44bf875701a029423bd19aa1467a9a7f95
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30c92ad13360d6c675ba95d45c9684cf25e7eba8
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204203"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328583"
 ---
 # <a name="output-window"></a>출력 창
   이 창에는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 다양한 기능에 대한 상태 메시지가 표시됩니다. **디버거, 외부 도구 기능 또는 디버거** 명령 창 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 실행되는 명령의 출력은 **출력**창의 특수 창으로 전달됩니다 일반적으로 명령 프롬프트 창에 표시되는 .bat 파일이나 .com 파일과 같은 외부 도구의 출력도 확인할 수 있습니다.  
@@ -37,7 +35,5 @@ ms.locfileid: "48204203"
  **출력 창**  
  **출력 창 목록**에서 선택한 창의 출력을 표시합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Transact-SQL 디버거](transact-sql-debugger.md)  
-  
-  

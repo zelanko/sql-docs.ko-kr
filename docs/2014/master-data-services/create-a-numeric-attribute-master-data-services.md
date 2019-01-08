@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], creating number attributes
@@ -14,12 +13,12 @@ ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a3aee9b1bbe939c3790d2849c829a706425aa1b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: adc2a5156c84545c90a9ae904749f96a729c251a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072633"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794985"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>숫자 특성 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 사용자가 숫자를 특성 값으로 입력할 수 있도록 하려면 숫자 특성을 만듭니다.  
@@ -68,16 +67,16 @@ ms.locfileid: "48072633"
   
 12. **입력 마스크** 목록에서 음수의 형식을 선택 합니다.  
   
-13. 또는 특성 그룹의 변경 내용을 추적하려면 **변경 내용 추적 설정** 을 선택합니다. 자세한 내용은 [Add Attributes to a Change Tracking Group &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) 를 참조하세요.  
+13. 또는 특성 그룹의 변경 내용을 추적하려면 **변경 내용 추적 설정** 을 선택합니다. 자세한 내용은 [변경 내용 추적 그룹에 특성 추가&#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) 를 참조하세요.  
   
 14. **특성 저장**을 클릭합니다.  
   
 15. **엔터티 유지 관리** 페이지에서 **엔터티 저장**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [특성 &#40;Master Data Services&#41;](attributes-master-data-services.md)   
+## <a name="see-also"></a>관련 항목:  
+ [특성&#40;Master Data Services&#41;](attributes-master-data-services.md)   
  [특성 이름 변경 &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
  [도메인 기반 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [파일 특성 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
+ [파일 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

@@ -14,15 +14,15 @@ ms.assetid: d9efe145-3306-4d61-bd77-e2af43e19c34
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 433d67076130747fe0baa3ba1b01592bbb9f5dc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 880546e50479de28c8b3aa98bb0439e54bd594b9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131553"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524555"
 ---
 # <a name="database-engine-features-and-tasks"></a>데이터베이스 엔진 기능 및 태스크
-  디자이너, 개발자, 분석가 또는 관리자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스를 작성하는 데 필요한 정보를 찾을 수 있습니다.  
+  해당 누구나-디자이너, 개발자, 분석가 또는 관리자 정보를 찾을-작성 하는 데 필요한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [데이터베이스 엔진 인스턴스&#40;SQL Server&#41;](configure-windows/database-engine-instances-sql-server.md)  

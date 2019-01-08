@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
@@ -13,12 +12,12 @@ ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 19d3d28ac65625fd3141089f5c99a59b72225f2e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04d5c60c925fd97c3b8b823ec42c2e065a3d0596
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135671"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790745"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>열 Null 비율 프로필 요청 옵션(데이터 프로파일링 태스크)
   **프로필 요청** 페이지의 **요청 속성** 창을 사용하여 요청 창에서 선택한 **열 Null 비율 프로필 요청** 의 옵션을 설정할 수 있습니다. 열 Null 비율 프로필은 선택한 열에 있는 Null 값의 비율을 보고합니다. 이 프로필을 사용하면 예기치 않게 높은 열 내 Null 값의 비율과 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 열 Null 비율 프로필은 ZIP Code/Postal Code 열을 프로파일링하는 중 허용 불가능한 수준으로 높은 누락된 코드 비율을 검색할 수 있습니다.  
@@ -71,7 +70,7 @@ ms.locfileid: "48135671"
  이 프로필 요청을 식별할 설명이 포함된 이름을 입력합니다. 일반적으로 자동 생성된 값은 변경하지 않아도 됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 프로 파일링 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)   
+ [데이터 프로파일링 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)   
  [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

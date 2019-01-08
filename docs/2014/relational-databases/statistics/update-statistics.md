@@ -13,12 +13,12 @@ ms.assetid: 4b97c0b4-03ff-4cfb-9c3f-3b33290b7a2c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d83dcaf8ea6f674ae1086d2d02f9423a3bb98358
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 872b0ffa2cc08c90430ec703cea984ad7d274339
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053428"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527976"
 ---
 # <a name="update-statistics"></a>통계 업데이트
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 테이블 또는 인덱싱된 뷰에 대한 쿼리 최적화 통계를 업데이트할 수 있습니다. 기본적으로 쿼리 최적화 프로그램은 필요할 때 통계를 업데이트하여 쿼리 계획을 향상시킵니다. 하지만 경우에 따라 사용자가 UPDATE STATISTICS 또는 `sp_updatestats` 저장 프로시저를 사용하여 기본 업데이트 주기보다 자주 통계를 업데이트하여 쿼리 성능을 향상시킬 수 있습니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "48053428"
   
 5.  업데이트하려는 통계 개체를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-6.  **통계 속성 –***statistics_name* 대화 상자에서 **이 열에 대한 통계 업데이트** 확인란을 선택한 다음 **확인**을 클릭합니다.  
+6.  **통계 속성-* * * statistics_name* 대화 상자를 선택 합니다 **이러한 열에 대 한 통계를 업데이트** 확인란을 클릭 한 다음 **확인**합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

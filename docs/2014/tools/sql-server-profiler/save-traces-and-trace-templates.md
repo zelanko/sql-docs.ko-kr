@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - saving traces
@@ -20,12 +19,12 @@ ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 80781d3b32ef33fa844c5df96f837aaa14ba06c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4baca63080a3f67c1f9e54a8a0aa955a27029df
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159604"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796985"
 ---
 # <a name="save-traces-and-trace-templates"></a>추적 및 추적 템플릿 저장
   추적 파일의 저장과 추적 템플릿의 저장을 구분하는 것은 중요합니다. 추적 파일 저장은 캡처된 데이터를 지정한 장소로 저장하는 것이며 추적 템플릿 저장은 지정한 데이터 열, 이벤트 클래스 또는 필터 등의 추적 정의를 저장하는 것입니다.  
@@ -63,8 +62,8 @@ ms.locfileid: "48159604"
  [sp_trace_create&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-create-transact-sql)  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블에 추적 결과 저장 &#40;SQL Server Profiler&#41;](save-trace-results-to-a-table-sql-server-profiler.md)   
- [추적 템플릿 만들기 &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
+ [테이블에 추적 결과 저장&#40;SQL Server Profiler&#41;](save-trace-results-to-a-table-sql-server-profiler.md)   
+ [추적 템플릿 만들기&#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
  [실행 중인 추적으로부터 템플릿 파생&#40;SQL Server Profiler&#41;](derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [추적 파일 또는 추적 테이블에서 템플릿 파생&#40;SQL Server Profiler&#41;](derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [추적 템플릿 내보내기&#40;SQL Server Profiler&#41;](export-a-trace-template-sql-server-profiler.md)   

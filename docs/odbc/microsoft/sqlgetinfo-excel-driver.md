@@ -14,12 +14,12 @@ ms.assetid: fed4aea2-6d3d-4199-a5db-3d033eb63927
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee95aa0b47e18ac1409858da03d5972baa7ec951
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2524c51f1b4b9297b6e3483a27fd78e6c1836e9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802361"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541840"
 ---
 # <a name="sqlgetinfo-excel-driver"></a>SQLGetInfo(Excel 드라이버)
 > [!NOTE]  

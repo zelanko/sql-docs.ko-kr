@@ -12,12 +12,12 @@ ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c2c0ed3a548ffb67557a9ffb7bdbe932c2187ebc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 8ab7963d83937c3572363ea921724cefb8b4adff
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205783"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507694"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable과 기타 SQL Server 기능 간 호환성
   FileTable이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 기능과 함께 작동하는 방식에 대해 설명합니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "48205783"
   
 -   이러한 영향 이외에도 FileTable의 트리거는 두 가지 동작을 더 처리해야 합니다.  
   
-    -   파일 시스템을 통해 FileTable에 대한 비트랜잭션 업데이트 작업을 수행하는 경우 FILESTREAM 내용이 다른 Win32 작업에 의해 배타적으로 잠겨 트리거 본문을 통한 읽기/쓰기 액세스가 허용되지 않을 수 있습니다. 이 경우 트리거 본문에서 FILESTREAM 내용에 액세스하려고 하면 "공유 위반 오류"가 발생할 수 있습니다. 이러한 오류를 적절히 처리하도록 트리거를 디자인해야 합니다.  
+    -   파일 시스템을 통해 FileTable에 대한 비트랜잭션 업데이트 작업을 수행하는 경우 FILESTREAM 내용이 다른 Win32 작업에 의해 배타적으로 잠겨 트리거 본문을 통한 읽기/쓰기 액세스가 허용되지 않을 수 있습니다. 이 경우 트리거 본문 내의 FILESTREAM 내용에 액세스하려고 하면 "공유 위반 오류"가 발생할 수 있습니다. 이러한 오류를 적절히 처리하도록 트리거를 디자인해야 합니다.  
   
     -   일부 경우에는 파일 시스템 액세스에 공유 모드가 허용되어 있어서 다른 비트랜잭션 업데이트 작업에서 동시에 쓰기 작업을 수행할 수 있으므로 FILESTREAM의 AFTER 이미지는 안정적이지 않을 수 있습니다.  
   
@@ -85,11 +85,11 @@ ms.locfileid: "48205783"
   
 -   뷰에는 FileTable 의미 체계가 없습니다. 즉, 파일 특성 열을 비롯한 뷰의 열은 특별한 의미 체계가 없는 일반적인 뷰 열처럼 동작하며, 이는 파일/디렉터리를 나타내는 행에도 동일하게 적용됩니다.  
   
--   "업데이트 가능한 뷰" 의미 체계를 기반으로 뷰를 업데이트할 수 있지만 테이블에서와 마찬가지로 내부 테이블 제약 조건에 따라 업데이트가 거부될 수 있습니다.  
+-   "업데이트 가능한 뷰" 의미 체계에 따라 뷰를 업데이트할 수 있지만 테이블에서와 마찬가지로 기본 테이블 제약 조건에 따라 업데이트가 거부될 수 있습니다.  
   
 -   파일의 경로를 뷰의 명시적 열로 추가하여 뷰에 시각화할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
-     `CREATE VIEW MP3FILES AS SELECT column1, column2, …, GetFileNamespacePath() AS PATH, column3,…  FROM Documents`  
+     `CREATE VIEW MP3FILES AS SELECT column1, column2, ..., GetFileNamespacePath() AS PATH, column3,...  FROM Documents`  
   
  **인덱싱된 뷰**  
  현재 인덱싱된 뷰에는 FILESTREAM 열이나 FILESTREAM 열에 종속된 계산/지속형 계산 열이 포함될 수 없습니다. 이 동작은 FileTable에 정의된 뷰에도 그대로 적용됩니다.  

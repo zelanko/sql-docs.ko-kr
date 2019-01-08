@@ -5,8 +5,7 @@ ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addpushsubscription_agent_TSQL
@@ -17,12 +16,12 @@ ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f037d88ed536cf3fecc0b658dcba3f62d1e1bd47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e438e8584312964d3d16651cb5551a4fb949597d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832321"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209809"
 ---
 # <a name="spaddpushsubscriptionagent-transact-sql"></a>sp_addpushsubscription_agent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -133,7 +132,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**1** (기본값)|첫째|  
-|**2**|둘째|  
+|**2**|Second|  
 |**4**|셋째|  
 |**8**|넷째|  
 |**16**|마지막|  
@@ -147,7 +146,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|둘째|  
+|**2**|Second|  
 |**4** (기본값)|Minute|  
 |**8**|Hour|  
   
@@ -188,19 +187,19 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
  [  **@subscriber_provider=** ] **'***subscriber_provider***'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 데이터 원본용 OLE DB 공급자를 등록할 때 사용하는 고유 PROGID(프로그래밍 식별자)입니다. *subscriber_provider* 됩니다 **sysname**, 기본값은 NULL입니다. *subscriber_provider* 배포자에 설치 된 OLE DB 공급자에 대해 고유 해야 합니다. *subscriber_provider* 에서만 지원 됩니다 이외[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자입니다.  
+ 있는 고유 프로그래밍 id (PROGID) 이외에 대 한 OLE DB 공급자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본을 등록 합니다. *subscriber_provider* 됩니다 **sysname**, 기본값은 NULL입니다. *subscriber_provider* 배포자에 설치 된 OLE DB 공급자에 대해 고유 해야 합니다. *subscriber_provider* 에서만 지원 됩니다 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자입니다.  
   
  [  **@subscriber_datasrc=** ] **'***subscriber_datasrc***'**  
- OLE DB 공급자가 이해하는 데이터 원본의 이름입니다. *subscriber_datasrc* 됩니다 **nvarchar(4000)**, 기본값은 NULL입니다. *subscriber_datasrc* OLE DB 공급자를 초기화 하는 DBPROP_INIT_DATASOURCE 속성으로 전달 됩니다. *subscriber_datasrc* 에서만 지원 됩니다 이외[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자입니다.  
+ OLE DB 공급자가 이해하는 데이터 원본의 이름입니다. *subscriber_datasrc* 됩니다 **nvarchar(4000)**, 기본값은 NULL입니다. *subscriber_datasrc* OLE DB 공급자를 초기화 하는 DBPROP_INIT_DATASOURCE 속성으로 전달 됩니다. *subscriber_datasrc* 에서만 지원 됩니다 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자입니다.  
   
  [  **@subscriber_location=** ] **'***subscriber_location***'**  
- OLE DB 공급자가 이해하는 데이터베이스의 위치입니다. *subscriber_location* 됩니다 **nvarchar(4000)**, 기본값은 NULL입니다. *subscriber_location* OLE DB 공급자를 초기화 DBPROP_INIT_LOCATION 속성으로 전달 됩니다. *subscriber_location* 에서만 지원 됩니다 이외[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자입니다.  
+ OLE DB 공급자가 이해하는 데이터베이스의 위치입니다. *subscriber_location* 됩니다 **nvarchar(4000)**, 기본값은 NULL입니다. *subscriber_location* OLE DB 공급자를 초기화 DBPROP_INIT_LOCATION 속성으로 전달 됩니다. *subscriber_location* 에서만 지원 됩니다 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자입니다.  
   
  [  **@subscriber_provider_string=** ] **'***subscriber_provider_string***'**  
- 데이터 원본을 식별하는 OLE DB 공급자별 연결 문자열입니다. *subscriber_provider_string* 됩니다 **nvarchar(4000)**, 기본값은 NULL입니다. *subscriber_provider_string* IDataInitialize 전달 되거나 DBPROP_INIT_PROVIDERSTRING 속성으로 설정 되어 OLE DB 공급자를 초기화 됩니다. *subscriber_provider_string* 에서만 지원 됩니다 이외[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자입니다.  
+ 데이터 원본을 식별하는 OLE DB 공급자별 연결 문자열입니다. *subscriber_provider_string* 됩니다 **nvarchar(4000)**, 기본값은 NULL입니다. *subscriber_provider_string* IDataInitialize 전달 되거나 DBPROP_INIT_PROVIDERSTRING 속성으로 설정 되어 OLE DB 공급자를 초기화 됩니다. *subscriber_provider_string* 에서만 지원 됩니다 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자입니다.  
   
  [  **@subscriber_catalog=** ] **'***subscriber_catalog***'**  
- OLE DB 공급자에 연결할 때 사용할 카탈로그입니다. *subscriber_catalog* 됩니다 **sysname**, 기본값은 NULL입니다. *subscriber_catalog* OLE DB 공급자를 초기화 DBPROP_INIT_CATALOG 속성으로 전달 됩니다. *subscriber_catalog* 에서만 지원 됩니다 이외[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자입니다.  
+ OLE DB 공급자에 연결할 때 사용할 카탈로그입니다. *subscriber_catalog* 됩니다 **sysname**, 기본값은 NULL입니다. *subscriber_catalog* OLE DB 공급자를 초기화 DBPROP_INIT_CATALOG 속성으로 전달 됩니다. *subscriber_catalog* 에서만 지원 됩니다 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

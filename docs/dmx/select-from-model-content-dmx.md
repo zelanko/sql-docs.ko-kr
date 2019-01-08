@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e00a7f272362a103e94d8cac686201ce79c06322
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3498e841b70ca7a19d9353d277221a88b9cbf86f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040351"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512251"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;모델&gt;합니다. 콘텐츠 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  *식 목록*  
  Content 스키마 행 집합에서 파생된 열의 쉼표로 구분된 목록입니다.  
   
- *모델*  
+ *model*  
  모델 식별자입니다.  
   
  *조건 식*  
@@ -47,7 +47,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  (선택 사항) 스칼라 값을 반환하는 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 합니다 **SELECT FROM**  *\<모델 > * * * 합니다. 콘텐츠** 문은 각 알고리즘에 관련 된 내용을 반환 합니다. 예를 들어 사용자 지정 응용 프로그램에서 연결 규칙 모델의 모든 규칙 설명을 사용하려는 경우 사용할 수는 **SELECT FROM \<모델 >. 콘텐츠** 문을 모델의 NODE_RULE 열 값을 반환 합니다.  
+ 합니다 **SELECT FROM**  _\<모델 >_**합니다. 콘텐츠** 문은 각 알고리즘에 관련 된 내용을 반환 합니다. 예를 들어 사용자 지정 응용 프로그램에서 연결 규칙 모델의 모든 규칙 설명을 사용하려는 경우 사용할 수는 **SELECT FROM \<모델 >. 콘텐츠** 문을 모델의 NODE_RULE 열 값을 반환 합니다.  
   
  다음 표에서는 마이닝 모델 콘텐츠에 포함된 열을 나열합니다.  
   
@@ -62,7 +62,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |ATTRIBUTE_NAME|노드에 해당하는 특성 이름입니다.|  
 |NODE_NAME|노드 이름입니다.|  
 |NODE_UNIQUE_NAME|모델 내에서 노드의 고유한 이름입니다.|  
-|NODE_TYPE|노드 유형을 나타내는 정수입니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.|  
+|NODE_TYPE|노드 유형을 나타내는 정수입니다. .|  
 |NODE_GUID|노드 GUID입니다. GUID가 없는 경우 NULL입니다.|  
 |NODE_CAPTION|노드에 연결된 레이블 또는 캡션이며 주로 표시 목적으로 사용됩니다. 캡션이 없는 경우 NODE_NAME이 반환됩니다.|  
 |CHILDREN_CARDINALITY|노드에 있는 자식 수입니다.|  
@@ -121,7 +121,7 @@ WHERE NODE_TYPE = 26
   
 |MODEL_NAME|NODE_DISTRIBUTION.ATTRIBUTE_NAME|NODE_DISTRIBUTION.ATTRIBUTE_VALUE|NODE_DISTRIBUTION.SUPPORT|NODE_DISTRIBUTION.PROBABILITY|NODE_DISTRIBUTION.VARIANCE|NODE_DISTRIBUTION.VALUETYPE|  
 |-----------------|----------------------------------------|-----------------------------------------|--------------------------------|------------------------------------|---------------------------------|----------------------------------|  
-|TM_NaiveBayes|Bike Buyer|Missing|0|0|0|1|  
+|TM_NaiveBayes|Bike Buyer|Missing|0|0|0|1.|  
 |TM_NaiveBayes|Bike Buyer|0|6556|0.506685215240745|0||  
 |TM_NaiveBayes|Bike Buyer|1|6383|0.493314784759255|0||  
   

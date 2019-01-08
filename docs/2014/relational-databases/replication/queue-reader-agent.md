@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.queuereaderagent.f1
@@ -15,12 +14,12 @@ ms.assetid: f02d24b6-dcb5-4126-b56e-fab41cfe4337
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8bb7f1790918ceff5579eefeea35bf574d23edd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 401d36c399c88088475a989a355a9430ce6e3818
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163601"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777945"
 ---
 # <a name="queue-reader-agent"></a>큐 판독기 에이전트
   **큐 판독기 에이전트** 대화 상자에서는 상태, 기록, 정보 메시지 및 모든 오류 메시지를 포함한 큐 판독기 에이전트에 대한 자세한 정보를 표시합니다.  
@@ -63,7 +62,7 @@ ms.locfileid: "48163601"
  **선택한 세션에 대한 오류 정보 또는 메시지**  
  선택한 세션의 **상태** 열에 **오류** 값이 표시되는 경우에만 표시됩니다. 이 텍스트 영역은 오류 발생 시 시도한 명령과 자세한 오류 정보를 표시합니다. 오류와 관련된 추가 내용으로 연결되는 링크도 포함되어 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 모니터 시작](monitor/start-the-replication-monitor.md)   
  [게시 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [복제 모니터링](monitoring-replication.md)   

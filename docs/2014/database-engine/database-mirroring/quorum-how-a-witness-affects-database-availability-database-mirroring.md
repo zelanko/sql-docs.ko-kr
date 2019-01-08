@@ -1,5 +1,5 @@
 ---
-title: '쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향(데이터베이스 미러링) | Microsoft Docs'
+title: '쿼럼: 미러링 모니터 서버가 데이터베이스 가용성 (데이터베이스 미러링)에 미치는 영향 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,12 +21,12 @@ ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3dd9b33de1ca429afbae8a8fe6ccdc7a41583a44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26abcc214c4f4304019bbc855379b56cab7cfc96
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067553"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525035"
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향(데이터베이스 미러링)
   데이터베이스 미러링 세션에 대해 미러링 모니터 서버를 설정할 때마다 *쿼럼* 이 필요합니다. 쿼럼은 데이터베이스 미러링 세션에서 둘 이상의 서버 인스턴스가 서로 연결될 때 존재하는 관계입니다. 일반적으로 쿼럼은 3개의 상호 연결된 서버 인스턴스를 포함합니다. 미러링 모니터 서버가 설정된 경우 쿼럼이 있어야만 데이터베이스를 사용할 수 있습니다. 쿼럼은 자동 장애 조치(Failover)를 지원하는 보안 우선 모드를 위해 디자인되었으므로 한 번에 하나의 파트너만 데이터베이스를 소유할 수 있습니다.  
@@ -101,10 +101,10 @@ ms.locfileid: "48067553"
   
  시나리오 2에서 미러링 모니터 서버는 쿼럼을 상실하지만 파트너인 **Partner_A** 와 **Partner_B**는 서로 쿼럼을 유지하고 데이터베이스가 온라인 상태로 남아 있습니다. 그런 다음 파트너도 해당 쿼럼을 상실하고 데이터베이스는 오프라인 상태가 됩니다. 나중에 주 서버 **Partner_A**는 쿼럼을 다시 얻은 미러링 모니터 서버에 다시 연결됩니다. 미러링 모니터 서버는 **Partner_A** 가 여전히 주 역할을 소유하며 **Partner_A** 가 해당 데이터베이스를 다시 온라인 상태로 만드는지 확인합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터베이스 미러링 운영 모드](database-mirroring-operating-modes.md)   
  [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
- [데이터베이스 미러링 모니터 서버](database-mirroring-witness.md)   
+ [Database Mirroring Witness](database-mirroring-witness.md)   
  [데이터베이스 미러링 중에 발생 가능한 오류](possible-failures-during-database-mirroring.md)   
  [미러링 상태&#40;SQL Server&#41;](mirroring-states-sql-server.md)  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7b0bb058db269dd052410b9326eeec10de5aa7d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9b1175d43e0c4afcfb1b8d166f6ab7854d8c7c10
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052399"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773103"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>SAP BW 대상 편집기(매핑 페이지)
   **SAP BW 대상 편집기** 의 **매핑** 페이지를 사용하여 입력 열을 대상 열에 매핑할 수 있습니다.  
@@ -77,8 +76,8 @@ ms.locfileid: "48052399"
  **대상 열**  
  열의 매핑 여부에 관계없이 사용 가능한 각 대상 열을 표시합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [SAP BW 대상 편집기 &#40;연결 관리자 페이지&#41;](sap-bw-destination-editor-connection-manager-page.md)   
+## <a name="see-also"></a>관련 항목:  
+ [SAP BW 대상 편집기&#40;연결 관리자 페이지&#41;](sap-bw-destination-editor-connection-manager-page.md)   
  [SAP BW 대상 편집기&#40;오류 출력 페이지&#41;](sap-bw-destination-editor-error-output-page.md)   
  [SAP BW 대상 편집기&#40;고급 페이지&#41;](sap-bw-destination-editor-advanced-page.md)   
  [Microsoft Connector 1.1 for SAP BW F1 도움말](../microsoft-connector-for-sap-bw-f1-help.md)  

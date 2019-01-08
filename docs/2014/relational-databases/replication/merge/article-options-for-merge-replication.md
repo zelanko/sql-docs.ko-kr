@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication [SQL Server replication], article options
@@ -14,12 +13,12 @@ ms.assetid: 670abd41-d204-4cd7-a371-7664e603a0ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 05d601d02067125a2da7219850c52cc49a0898a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: f58b96f2b8d95f31eeb89c9e0796b39a221b0a66
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076783"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786125"
 ---
 # <a name="article-options-for-merge-replication"></a>병합 복제를 위한 아티클 옵션
   애플리케이션의 요구에 맞게 복제 동작을 사용자 지정할 수 있는 여러 가지 병합 테이블 아티클 옵션이 있습니다. 병합 복제를 사용하여 다음을 수행할 수 있습니다.  

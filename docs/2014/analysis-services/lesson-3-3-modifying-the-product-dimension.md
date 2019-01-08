@@ -11,12 +11,12 @@ ms.assetid: 8e3ffecd-7f40-41a8-8735-bc9858a310cb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3a7851a9da990c36b813d5281cfbf6c174f3086f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 430ac56191fcfc2c601c50f9f31de128d5d58368
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081543"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523334"
 ---
 # <a name="modifying-the-product-dimension"></a>Product 차원 수정
   이 항목의 태스크에서는 명명된 계산을 사용하여 제품 라인에 대해 보다 설명적인 이름을 제공하고 Product 차원에 계층을 정의하고 계층에 대해 (All) 멤버 이름을 지정합니다. 또한 특성을 표시 폴더로 그룹화합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "48081543"
   
 2.  **차원 구조** 탭의 **특성** 창에서 **Product Line**을 선택합니다.  
   
-3.  화면 오른쪽에 있는 속성 창의 맨 아래에서 **NameColumn** 속성 필드를 클릭한 다음 찾아보기(**…**) 단추를 클릭하여 **이름 열** 대화 상자를 엽니다. 화면 오른쪽의 **속성** 탭을 클릭하여 속성 창을 열어야 할 수도 있습니다.  
+3.  화면의 오른쪽 속성 창에서 클릭 합니다 **NameColumn** 속성 창 맨 아래에 필드 및 클릭 한 다음 (**...** ) 버튼을 클릭 하 여 **이름 열** 대화 상자. 화면 오른쪽의 **속성** 탭을 클릭하여 속성 창을 열어야 할 수도 있습니다.  
   
 4.  선택 `ProductLineName` 맨 아래에 **원본 열** 목록을 연 다음 클릭 **확인**합니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48081543"
   
 5.  **차원 구조** 탭의 **특성** 창에서 **Product Key**를 선택합니다.  
   
-6.  속성 창에서 **NameColumn** 속성 필드를 클릭한 다음 줄임표(**…**) 단추를 클릭하여 **이름 열** 대화 상자를 엽니다.  
+6.  속성 창에서 클릭 합니다 **NameColumn** 속성, 필드 및 줄임표를 클릭 한 다음 (**...** ) 버튼을 클릭 하 여 **이름 열** 대화 상자.  
   
 7.  **원본 열** 목록에서 **EnglishProductName** 을 선택하고 **확인**을 클릭합니다.  
   
@@ -183,8 +183,8 @@ ms.locfileid: "48081543"
  [Date 차원 수정](lesson-3-4-modifying-the-date-dimension.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 원본 뷰에서 명명 된 계산 정의 &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
+ [데이터 원본 뷰에서 명명된 계산 정의&#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [사용자 정의 계층 만들기](multidimensional-models/user-defined-hierarchies-create.md)   
- [구성 된 &#40;모든&#41; 특성 계층의 수준](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [특성 계층에 대해 &#40;All&#41; 수준 구성](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

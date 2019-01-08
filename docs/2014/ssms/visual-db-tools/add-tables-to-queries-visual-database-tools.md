@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - inserting tables
@@ -14,12 +14,12 @@ ms.assetid: 6551aa7e-31a1-4636-852a-819bc53d658b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a58a2514009eab620f484afd8552fbb34a568857
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ba3957eb5b0c88396376d615033107b13d0621ae
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170873"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781565"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>쿼리에 테이블 추가(Visual Database Tools)
   쿼리를 만들 때는 뷰와 특정 사용자 정의 함수 같은 테이블 구조의 다른 개체나 테이블에서 데이터를 검색합니다. 쿼리에서 이러한 개체를 사용하여 작업하려면 필요한 개체를 **다이어그램 창**에 추가합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "48170873"
   
 3.  기존 쿼리에 대해 쿼리 디자이너를 엽니다. 이제 두 개의 쿼리 디자이너가 열려 있는 상태입니다.  
   
-4.  새로운 외부 쿼리에 포함하려는 기존의 내부 쿼리에 대해 **SQL 창** 을 표시합니다.  
+4.  새로운 외부 쿼리에 포함하려는 기존의 내부 쿼리에 대해 **SQL 창**을 표시합니다.  
   
 5.  **SQL 창**에서 텍스트 전체를 선택하여 클립보드에 복사합니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48170873"
   
 7.  **SQL 창**에서 닫는 괄호 뒤에 별칭을 추가합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [테이블 별칭 만들기 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [쿼리에서 테이블 제거 &#40;Visual Database Tools&#41;](remove-tables-from-queries-visual-database-tools.md)   
  [검색 조건 지정 &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   

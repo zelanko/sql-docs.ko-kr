@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1716b3b6e5794d8dbb8d9ee0195ed642db6df054
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 37c313484b2ee7ff87668cbfdd0b87ed52cdaf98
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981105"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52523969"
 ---
-# <a name="import-data-by-using-a-native-query"></a>기본 쿼리를 사용 하 여 데이터 가져오기
+# <a name="import-data-by-using-a-native-query"></a>원시 쿼리를 사용하여 데이터 가져오기
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 테이블 형식 1400 모델에 대 한 Visual Studio의 Analysis Services 프로젝트에서 새로운 데이터 가져오기 환경을 제공 하면 매시업 때 엄청난 유연성 데이터 가져오는 동안 합니다. 이 문서에서는 데이터 원본에 대 한 연결을 만들고 다음 데이터 가져오기 지정할 원시 SQL 쿼리를 만들어 설명 합니다.
 
@@ -38,7 +38,7 @@ ms.locfileid: "37981105"
 2. **쿼리 편집기**, 클릭 **쿼리의** > **새 쿼리** > **빈 쿼리**
 3. 수식 입력줄에 입력
     ```
-    = Value.NativeQuery(#"DATA SOURCE NAME", "SELECT * FROM …")
+    = Value.NativeQuery(#"DATA SOURCE NAME", "SELECT * FROM ...")
     ```
 4. 에 테이블을 만들려면 **쿼리에**쿼리를 마우스 오른쪽 단추로 클릭 한 다음 선택 **새 테이블 만들기**합니다. 새 테이블 쿼리와 동일한 이름을 갖습니다.
 

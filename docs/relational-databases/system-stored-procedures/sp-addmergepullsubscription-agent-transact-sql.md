@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_addmergepullsubscription_agent
@@ -17,12 +16,12 @@ ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: abd4893368069217003ca9fa5a6f4dca9e4229de
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ba75dc83e8fb4ce5a9ad31876b2b2592b22b7197
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681371"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791785"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -169,7 +168,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_type =** ] *frequency_type*  
  병합 에이전트를 예약하는 빈도입니다. *frequency_type* 됩니다 **int**, 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
 |**2**|요청 시|  
@@ -182,12 +181,12 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |NULL(기본값)||  
   
 > [!NOTE]  
->  값을 지정 **64** 하면 병합 에이전트가 연속 모드로 실행 합니다. 이 설정에 해당 하는 **-연속** 에이전트에 대 한 매개 변수입니다. 자세한 내용은 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)을(를) 참조하세요.  
+>  값을 지정 **64** 하면 병합 에이전트가 연속 모드로 실행 합니다. 이 설정에 해당 하는 **-연속** 에이전트에 대 한 매개 변수입니다. 자세한 내용은 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)을 참조하세요.  
   
  [  **@frequency_interval =** ] *frequency_interval*  
  병합 에이전트가 실행되는 요일입니다. *frequency_interval* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**1**|일요일|  
 |**2**|월요일|  
@@ -204,10 +203,10 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
  병합 에이전트의 날짜입니다. 이 매개 변수를 사용 하면 *frequency_type* 로 설정 된 **32** (매월 상대적)입니다. *frequency_relative_interval* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**1**|첫째|  
-|**2**|둘째|  
+|**2**|Second|  
 |**4**|셋째|  
 |**8**|넷째|  
 |**16**|마지막|  
@@ -219,10 +218,10 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@frequency_subday =** ] *frequency_subday*  
  정의된 기간 동안 다시 예약하는 빈도입니다. *frequency_subday* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|둘째|  
+|**2**|Second|  
 |**4**|Minute|  
 |**8**|Hour|  
 |NULL(기본값)||  
@@ -294,7 +293,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  기존 에이전트 작업의 이름입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다. 이 매개 변수는 새로 만든 작업(기본값) 대신 기존 작업을 사용하여 구독이 동기화될 경우에만 지정됩니다. 구성원이 아닌 경우는 **sysadmin** 고정 서버 역할을 지정 해야 *job_login* 하 고 *job_password* 지정 하는 경우 *job_name*.  
   
  [  **@dynamic_snapshot_location =** ] **'***dynamic_snapshot_location***'** ]  
- 필터링된 데이터 스냅숏을 사용하는 경우에 스냅숏 파일을 읽을 대상 폴더 경로입니다. *dynamic_snapshot_location* 됩니다 **nvarchar(260)**, 기본값은 NULL입니다. 자세한 내용은 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하세요.  
+ 필터링된 데이터 스냅숏을 사용하는 경우에 스냅숏 파일을 읽을 대상 폴더 경로입니다. *dynamic_snapshot_location* 됩니다 **nvarchar(260)**, 기본값은 NULL입니다. 자세한 내용은 [매개 변수가 있는 행 필터](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
   
  [  **@use_web_sync =** ] *use_web_sync*  
  웹 동기화를 사용할 수 있음을 나타냅니다. *use_web_sync* 됩니다 **비트**, 기본값은 0입니다. **1** HTTP를 사용해 인터넷으로 끌어오기 구독을 동기화 할 수 있음을 지정 합니다.  
@@ -314,13 +313,13 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@internet_security_mode =** ] *internet_security_mode*  
  HTTPS를 사용하여 웹 동기화 동안 웹 서버에 연결할 때 병합 에이전트에서 사용하는 인증 방법입니다. *internet_security_mode* 됩니다 **int** 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**0**|기본 인증이 사용됩니다.|  
 |**1** (기본값)|Windows 통합 인증이 사용됩니다.|  
   
 > [!NOTE]  
->  웹 동기화에는 기본 인증을 사용하는 것이 좋습니다. 웹 동기화를 사용하려면 웹 서버에 SSL 연결을 해야 합니다. 자세한 내용은 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)을 참조하세요.  
+>  웹 동기화에는 기본 인증을 사용하는 것이 좋습니다. 웹 동기화를 사용하려면 웹 서버에 SSL 연결을 해야 합니다. 자세한 내용은 [웹 동기화 구성](../../relational-databases/replication/configure-web-synchronization.md)을 참조하세요.  
   
  [  **@internet_timeout =** ] *internet_timeout*  
  웹 동기화 요청이 만료되기 전까지의 시간(초)입니다. *internet_timeout* 됩니다 **int**, 기본값은 **300** 시간 (초)입니다.  
@@ -351,7 +350,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_addmergepullsubscription_agent**합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   

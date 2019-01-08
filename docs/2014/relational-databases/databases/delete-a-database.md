@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - database removal [SQL Server], SQL Server Management Studio
@@ -18,12 +17,12 @@ ms.assetid: 1fd8c0f5-03e1-449a-af45-b8cacb479d9c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a98ae854f2608eead7820418eb918fc1ba713aa9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d0abed3b23b563c6b2620ad93d3f59d58bebd67
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061033"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52789046"
 ---
 # <a name="delete-a-database"></a>데이터베이스 삭제
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 사용자 정의 데이터베이스를 삭제하는 방법을 설명합니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "48061033"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Follow Up:**  [After deleting a database](#FollowUp)  
+-   **후속 작업:**  [데이터베이스를 삭제 한 후](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -54,7 +53,7 @@ ms.locfileid: "48061033"
   
 -   시스템 데이터베이스는 삭제할 수 없습니다.  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
   
 -   데이터베이스에 있는 모든 데이터베이스 스냅숏을 삭제합니다. 자세한 내용은 [데이터베이스 스냅숏 삭제&#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)를 참조하세요.  
   
@@ -98,7 +97,7 @@ DROP DATABASE Sales, NewSales ;
 GO  
 ```  
   
-##  <a name="FollowUp"></a> 후속 작업: 데이터베이스를 삭제한 후  
+##  <a name="FollowUp"></a> 후속편: 데이터베이스를 삭제한 후  
  **master** 데이터베이스를 백업합니다. **master** 를 복원해야 할 경우 마지막 **master** 백업 이후 삭제된 모든 데이터베이스의 참조가 시스템 카탈로그 뷰에 아직 있어서 오류 메시지가 발생할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  

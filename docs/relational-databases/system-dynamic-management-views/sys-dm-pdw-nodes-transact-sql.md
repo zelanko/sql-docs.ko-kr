@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ff3f6c31389622dc424c42e06bfa78477c70cde2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b2a17f1fd57b70dbee056e66a76c0416b0a25c1
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769371"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533567"
 ---
 # <a name="sysdmpdwnodes-transact-sql"></a>sys.dm_pdw_nodes (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,10 +31,10 @@ ms.locfileid: "47769371"
 |유형|**nvarchar(32)**|노드의 형식입니다.|' 계산 ', 'CONTROL', '관리'|  
 |NAME|**nvarchar(32)**|노드의 논리적 이름입니다.|적절 한 길이의 문자열입니다.|  
 |address|**nvarchar(32)**|이 노드의 IP 주소입니다.|형식 [0-255]입니다. [0-255]입니다. [0-255]입니다. [0-255]입니다.|  
-|is_passive|**int**|노드를 실행 하는 가상 컴퓨터는 할당 된 서버에서 실행 되 고 예비 서버로 장애 조치에 하는지 여부를 나타냅니다.|0 – 노드 VM은 원본 서버에서 실행 됩니다.<br /><br /> 1-노드 VM가 서버에서 실행 됩니다.|  
+|is_passive|**int**|노드를 실행 하는 가상 컴퓨터는 할당 된 서버에서 실행 되 고 예비 서버로 장애 조치에 하는지 여부를 나타냅니다.|0-노드 VM은 원본 서버에서 실행 됩니다.<br /><br /> 1-노드 VM가 서버에서 실행 됩니다.|  
 |영역(region)|**nvarchar(32)**|노드가 실행 되 고 있는 지역입니다.|' PDW', 'HDINSIGHT'|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

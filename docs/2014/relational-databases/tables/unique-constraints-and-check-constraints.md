@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - constraints [SQL Server], Visual Database Tools
@@ -14,12 +13,12 @@ ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8800491b0c4cb576b7255c1be0648b87daebfcc6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082313"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772285"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>UNIQUE 제약 조건 및 CHECK 제약 조건
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 데이터 무결성을 강제 적용하는 데 사용할 수 있는 두 가지 유형의 제약 조건으로 UNIQUE 제약 조건과 CHECK 제약 조건이 있습니다. 이들 키는 중요한 데이터베이스 개체입니다.  

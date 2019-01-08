@@ -12,12 +12,12 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0e26b2a9b172b477094de5f624b5e1948b3673a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: debec2f4cf7e62552d82ee7a0f87a2a359f4aa34
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188583"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542931"
 ---
 # <a name="database-mirroring-operating-modes"></a>데이터베이스 미러링 운영 모드
   이 항목에서는 데이터베이스 미러링 세션의 동기 운영 모드 및 비동기 운영 모드에 대해 설명합니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "48188583"
 -   주 서버가 손실된 경우 미러 서버에 서비스를 강제하려면 미러 서버가 미러링 모니터 서버에 연결되어야 합니다.  
   
 > [!NOTE]  
->  쿼럼 유형에 대한 자세한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.  
+>  쿼럼 유형에 대 한 정보를 참조 하세요. [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향 &#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)합니다.  
   
 ###  <a name="WhenPrincipalFails"></a> 주 서버 실패에 대한 응답  
  주 서버에 장애가 발생하면 데이터베이스 소유자가 선택할 수 있는 응답은 다음과 같습니다.  
@@ -146,7 +146,7 @@ ms.locfileid: "48188583"
   
  미러링 모니터 서버는 두 파트너와는 달리 데이터베이스를 제공하지 않습니다. 미러링 모니터 서버는 주 서버가 작동하는지 여부만 확인하여 자동 장애 조치를 지원합니다. 미러 서버는 미러 서버 및 미러링 모니터 서버가 주 서버와 연결이 끊어진 후에도 서로 연결되어 있는 경우에만 자동 장애 조치를 시작합니다.  
   
- 미러링 모니터 서버를 설정하면 세션에 *쿼럼*이 필요합니다. 쿼럼은 데이터베이스를 사용할 수 있도록 만드는 두 개 이상 서버 인스턴스 간의 관계입니다. 자세한 내용은 [데이터베이스 미러링 모니터 서버](database-mirroring-witness.md) 및 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.  
+ 미러링 모니터 서버를 설정하면 세션에 *쿼럼*이 필요합니다. 쿼럼은 데이터베이스를 사용할 수 있도록 만드는 두 개 이상 서버 인스턴스 간의 관계입니다. 자세한 내용은 [Database Mirroring Witness](database-mirroring-witness.md) 고 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향 &#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)합니다.  
   
  자동 장애 조치(Failover)에는 다음 조건이 필요합니다.  
   
@@ -208,7 +208,7 @@ ms.locfileid: "48188583"
   
 -   미러링 모니터가 있지만 파트너에 연결되어 있지 않으면 미러링 모니터는 해당 파트너에 대해 UNKOWN 또는 DISCONNECTED 상태가 됩니다. 이 경우 미러링 모니터와 이 파트너 간에는 쿼럼이 없으며 파트너가 서로 연결되어 있지 않으면 데이터베이스를 사용할 수 없게 됩니다.  
   
- 쿼럼에 대한 자세한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.  
+ 쿼럼에 대 한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향 &#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)합니다.  
   
  서버 인스턴스에서 각 미러링 모니터의 상태는 **sys.database_mirroring** 카탈로그 뷰의 **mirroring_witness_state** 및 **mirroring_witness_state_desc** 열에 기록됩니다. 자세한 내용은 [sys.database_mirroring&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql)을 참조하세요.  
   
@@ -222,7 +222,7 @@ ms.locfileid: "48188583"
   
  <sup>1</sup> 미러링 모니터 서버 연결이 끊어질 경우 미러링 모니터 서버 인스턴스 사용 가능할 때까지 witness 속성을 OFF 설정 하는 것이 좋습니다.  
   
- <sup>2</sup> 미러링 모니터 서버를 성능 우선 모드에 있을 경우 미러링 모니터 서버 세션에 참여 하지 않습니다. 그러나 데이터베이스를 사용하려면 최소 두 개의 서버 인스턴스가 연결되어 있어야 합니다. 따라서 성능 우선 모드 세션에서는 WITNESS 속성을 OFF로 설정된 상태로 유지하는 것이 좋습니다. 자세한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.  
+ <sup>2</sup> 미러링 모니터 서버를 성능 우선 모드에 있을 경우 미러링 모니터 서버 세션에 참여 하지 않습니다. 그러나 데이터베이스를 사용하려면 최소 두 개의 서버 인스턴스가 연결되어 있어야 합니다. 따라서 성능 우선 모드 세션에서는 WITNESS 속성을 OFF로 설정된 상태로 유지하는 것이 좋습니다. 자세한 내용은 참조 하세요. [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향 &#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)합니다.  
   
 ###  <a name="ViewWitness"></a> 보안 설정 및 미러링 모니터 상태 보기  
  데이터베이스의 보안 설정 및 미러링 모니터 상태를 보려면 **sys.database_mirroring** 카탈로그 뷰를 사용합니다. 관련된 열은 다음과 같습니다.  
@@ -251,7 +251,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
 |OFF|SUSPENDED 또는 DISCONNECTED|NULL(미러링 모니터 없음)|미러 서버로 서비스가 강제됩니다(데이터가 손실될 수 있음).|  
 |FULL|SYNCHRONIZING 또는 SUSPENDED|NULL(미러링 모니터 없음)|미러 서버로 서비스가 강제됩니다(데이터가 손실될 수 있음).|  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [데이터베이스 미러링 모니터 서버 추가 또는 바꾸기&#40;SQL Server Management Studio&#41;](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   

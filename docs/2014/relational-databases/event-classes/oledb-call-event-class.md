@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 954ba93ab5c32a9fa957133a6b8b10682ed7d019
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 2250847ee35210c63a4ac9ed5e1e41bab33a08ab
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133411"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52793295"
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call 이벤트 클래스
   **OLEDB Call** 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 분산 쿼리 및 원격 저장 프로시저를 위해 OLE DB 공급자를 호출할 때 발생합니다.  
@@ -52,7 +51,7 @@ ms.locfileid: "48133411"
 |NTUserName|`nvarchar`|Windows 사용자 이름입니다.|6|사용자 계정 컨트롤|  
 |ProviderName|`nvarchar`|OLE DB Provider의 이름입니다.|46|사용자 계정 컨트롤|  
 |RequestID|`Int`|문을 포함하는 요청의 ID입니다.|49|사용자 계정 컨트롤|  
-|SessionLoginName|`nvarchar`|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어, 연결 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1을 사용 하 여 고 고 Login2로 문을 `SessionLoginName` 은 Login1을 표시 하 고 `LoginName` 은 Login2를 표시 합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|사용자 계정 컨트롤|  
+|SessionLoginName|`nvarchar`|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하고 Login2로 문을 실행할 경우 `SessionLoginName`은 Login1을 표시하고 `LoginName`은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|사용자 계정 컨트롤|  
 |SPID|`Int`|이벤트가 발생한 세션의 ID입니다.|12|사용자 계정 컨트롤|  
 |StartTime|`datetime`|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|사용자 계정 컨트롤|  
 |TextData|`nvarchar`|OLE DB 호출에서 주고 받는 매개 변수입니다.|1|아니요|  

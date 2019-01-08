@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - languages [full-text search]
@@ -14,15 +13,15 @@ ms.assetid: 0fa8785b-0830-4a52-aff5-fcf8268b72fc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 575acd7d4fb264ebb8cba218c1e37b45e9af5a33
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80827416661c613393bbf3657bf2bb9d4cd25ec3
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062963"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52639411"
 ---
 # <a name="configure-the-default-full-text-language-server-configuration-option"></a>default full-text language 서버 구성 옵션 구성
-  이 항목에서는 구성 하는 방법에 설명 합니다 `default full-text language` 서버 구성 옵션에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용 하 여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]합니다. `default full-text language` 옵션 전체 텍스트 인덱스에 대 한 기본 언어 값을 지정 합니다. 언어 분석은 전체 텍스트 인덱싱된 모든 데이터에 대해 수행되고 해당 데이터 언어에 따라 달라집니다. 이 옵션의 기본값은 서버의 언어입니다. 지역화 된 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 집합을 설치 합니다 `default full-text language` 적절 한 일치 하는 경우 서버의 언어 옵션입니다. 지역화 되지 않은 버전용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `default full-text language` 옵션이 영어입니다.  
+  이 항목에서는 구성 하는 방법에 설명 합니다 `default full-text language` 서버 구성 옵션에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용 하 여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]합니다. `default full-text language` 옵션 전체 텍스트 인덱스에 대 한 기본 언어 값을 지정 합니다. 언어 분석은 전체 텍스트 인덱싱된 모든 데이터에 대해 수행되고 해당 데이터 언어에 따라 달라집니다. 이 옵션의 기본값은 서버의 언어입니다. 지역화 된 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 집합을 설치 합니다 `default full-text language` 적절 한 일치 하는 경우 서버의 언어 옵션입니다. 지역화되지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전의 경우 `default full-text language` 옵션이 영어입니다.  
   
  **항목 내용**  
   
@@ -93,9 +92,9 @@ GO
   
 ```  
   
- 자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)서버 구성 옵션을 구성하는 방법을 설명합니다.  
+ 자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 기본 전체 텍스트 언어 옵션을 구성한 후  
+##  <a name="FollowUp"></a> 후속편: 기본 전체 텍스트 언어 옵션을 구성한 후  
  이 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
 ## <a name="see-also"></a>관련 항목  

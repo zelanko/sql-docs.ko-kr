@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: bb1dc446-5e6c-43d6-9db8-78c76cc2e01f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: facea3ca200d2b4ecb6a7230e8b49f85772a27fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 398b24ddbb9d128446012d36f4b691596433054c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125163"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782905"
 ---
 # <a name="showplan-all-for-query-compile-event-class"></a>Showplan All for Query Compile 이벤트 클래스
   Showplan All for Query Compile 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 SQL 문을 컴파일할 때 발생합니다. 실행 계획 연산자를 식별하려면 이 이벤트 클래스를 포함합니다. 여기서 설명하는 내용은 Showplan XML For Query Compile 이벤트 클래스에서 사용할 수 있는 정보의 일부입니다.  

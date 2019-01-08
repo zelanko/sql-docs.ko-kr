@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], what's new
@@ -14,12 +13,12 @@ ms.assetid: 449a2f57-fcbd-4478-8f21-2c646d801699
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fbde5c55b4ef069d72dba9e01711b06d7172590f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: cd0b8c5e1957a6cf803fbb741d6b9bad5bbb9613
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182683"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792135"
 ---
 # <a name="breaking-changes-in-sql-server-replication"></a>SQL Server 복제의 주요 변경 내용
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제의 주요 변경 내용에 대해 설명합니다. 이러한 변경 내용에 따라 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 기반을 둔 애플리케이션, 스크립트 또는 기능을 사용하지 못할 수도 있습니다. 이러한 문제는 업그레이드할 때 발생할 수 있습니다. 자세한 내용은 [Use Upgrade Advisor to Prepare for Upgrades](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)을 참조하세요.  

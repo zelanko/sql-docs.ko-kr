@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], subqueries
@@ -14,12 +14,12 @@ ms.assetid: 34f6b9b4-ca3a-4a4f-9594-36e513f1c547
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bed294d5568f4d7218c24d029781284c6bde0bfb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e68809c7551e3c6711fadd9973c472dcb4e90307
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221683"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772195"
 ---
 # <a name="create-subqueries-visual-database-tools"></a>하위 쿼리 만들기(Visual Database Tools)
   한 쿼리의 결과를 다른 쿼리의 입력 항목으로 사용할 수 있습니다. 하위 쿼리의 결과를 IN( ) 함수, EXISTS 연산자 또는 FROM 절을 사용하는 문으로 사용할 수 있습니다.  

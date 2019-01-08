@@ -14,12 +14,12 @@ ms.assetid: f29fff2e-3d09-4a8c-a2f9-2059062cbebf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6aa0875017c4b7a099af8da1c6f8eca105006aca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ad31d9fd07e0b9f7bdf633f8ed546331880787c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682951"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527729"
 ---
 # <a name="sqlstates"></a>SQLSTATE
 Sqlstate는 경고 또는 오류의 원인에 대 한 자세한 정보를 제공합니다. 이 설명서에서 Sqlstate에 기반한 ISO/IEF CLI 사양에 있는 ODBC IM로 시작 하는 이러한 SQLSTATEs 관련이 있지만.  
@@ -48,4 +48,4 @@ Sqlstate는 경고 또는 오류의 원인에 대 한 자세한 정보를 제공
   
  SQLSTATE HYC00 (선택적 기능이 구현 되지 않음)가 있는 응용 프로그램 드라이버가 특정 문 또는 연결 특성을 지원 하는지 여부를 확인할 수는 유일한 방법은 않으므로 특히 중요 합니다.  
   
- Sqlstate 및 돌려보낼 기능 목록은 참조 하세요 [부록 a: ODBC 오류 코드](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)합니다. 각 함수는 특정 SQLSTATE를 반환할 수 있습니다 조건의 자세한 내용은 해당 함수를 참조 하세요.
+ Sqlstate 및 돌려보낼 기능 목록은 참조 하세요. [부록 a: ODBC 오류 코드](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)합니다. 각 함수는 특정 SQLSTATE를 반환할 수 있습니다 조건의 자세한 내용은 해당 함수를 참조 하세요.

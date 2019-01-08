@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0035994dbcc1e0f4aebf01b6dbc4b69dcb7bfb6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 2e38b572535011737f33ba1e4c438540ecdd6849
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157953"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640744"
 ---
 # <a name="database-engine-instances-sql-server"></a>데이터베이스 엔진 인스턴스(SQL Server)
-  인스턴스를 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 복사본이 `sqlservr.exe` 는 운영 체제 서비스로 실행 되는 실행 파일입니다. 각 인스턴스는 여러 시스템 데이터베이스와 하나 이상의 사용자 데이터베이스를 관리합니다. 각 컴퓨터에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 여러 인스턴스를 실행할 수 있습니다. 애플리케이션은 인스턴스가 관리하는 데이터베이스에서 작업을 수행하기 위해 인스턴스에 연결합니다.  
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스는 운영 체제 서비스로 실행되는 `sqlservr.exe` 실행 파일의 복사본입니다. 각 인스턴스는 여러 시스템 데이터베이스와 하나 이상의 사용자 데이터베이스를 관리합니다. 각 컴퓨터에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 여러 인스턴스를 실행할 수 있습니다. 애플리케이션은 인스턴스가 관리하는 데이터베이스에서 작업을 수행하기 위해 인스턴스에 연결합니다.  
   
 ## <a name="instances"></a>인스턴스  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스는 해당 인스턴스에서 관리하는 데이터베이스에 있는 데이터에 대한 응용 프로그램의 모든 작업 요청을 처리하는 서비스로 작동되며, 애플리케이션에서 보내는 연결 요청 (로그인)의 대상이 됩니다. 애플리케이션과 인스턴스가 개별 컴퓨터에 있는 경우 연결은 네트워크 연결을 통해 실행됩니다. 애플리케이션과 인스턴스가 동일한 컴퓨터에 있는 경우 SQL Server 연결은 네트워크 연결 또는 메모리 내 연결로 실행될 수 있습니다. 연결이 완료되면 애플리케이션은 해당 연결을 통해 인스턴스에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 보냅니다. 인스턴스는 데이터베이스의 데이터 및 개체를 기준으로 작업에 대한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 확인한 후 로그인 자격 증명에 필요한 권한이 부여되어 있는 경우 작업을 수행합니다. 모든 검색된 데이터는 오류 메시지 등과 함께 애플리케이션에 반환됩니다.  

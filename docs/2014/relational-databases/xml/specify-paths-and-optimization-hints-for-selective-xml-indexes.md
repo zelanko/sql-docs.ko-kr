@@ -10,12 +10,12 @@ ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73cfcc602ee7a7ef273da39126dbd4da596b6594
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8d5493c63b48c627dbc2cb192d8e10f8bfc4a43
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133523"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533995"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>선택적 XML 인덱스에 대한 경로 및 최적화 힌트 지정
   이 항목에서는 선택적 XML 인덱스를 만들거나 변경할 때 인덱싱할 노드 경로 및 인덱싱에 대한 최적화 힌트를 지정합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "48133523"
  선택적 XML 인덱스에 대한 자세한 내용은 [SXI&#40;선택적 XML 인덱스&#41;](../xml/selective-xml-indexes-sxi.md)를 참조하세요.  
   
 ##  <a name="untyped"></a> 형식화된 XML의 XQuery 및 SQL Server 유형 이해  
- 선택적 XML 인덱스는 XQuery 유형 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유형의 두 가지 유형 시스템을 지원합니다. 인덱싱된 경로는 XQuery 식을 일치시키거나 XML 데이터 형식의 value() 메서드에 대한 반환 형식을 일치시키는 데 사용할 수 있습니다.  
+ 선택적 XML 인덱스는 두 가지 유형 시스템, XQuery 유형 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유형을 지원합니다. 인덱싱된 경로는 XQuery 식을 일치시키거나 XML 데이터 형식의 value() 메서드에 대한 반환 형식을 일치시키는 데 사용할 수 있습니다.  
   
 -   인덱싱할 경로에 주석이 지정되어 있지 않거나 XQUERY 키워드로 주석이 지정된 경우 해당 경로는 XQuery 식과 일치합니다. XQUERY로 주석이 지정된 노드 경로에는 다음과 같은 두 가지 변형이 있습니다.  
   
@@ -101,8 +101,8 @@ mypath= '/a/b' as XQUERY 'node()',
 pathX = '/a/b/c' as XQUERY 'xs:double' SINGLETON,  
 pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON  
 )  
--- mypath – Only the node value is needed; storage is saved.  
--- pathX – Performance is improved; secondary indexes are possible.  
+-- mypath - Only the node value is needed; storage is saved.  
+-- pathX - Performance is improved; secondary indexes are possible.  
 -- pathY - Performance is improved; secondary indexes are possible; storage is saved.  
 ```  
   
@@ -110,7 +110,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유형은 value() 메서드의 반환 값과 일치합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유형은 SINGLETON의 최적화 힌트를 지원합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유형은 SINGLETON 최적화 힌트를 지원합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유형을 반환하는 경로에는 유형을 반드시 지정해야 합니다. 이 경우 value() 메서드에서 사용하는 것과 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유형을 지정해야 합니다.  
   

@@ -11,12 +11,12 @@ ms.assetid: 64479cdc-661a-4e32-a381-8f8b5a238337
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f9d81920e9e14dc745813795bcf98eb1d9ebdf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 3f83e13aa6ed85293bf20b006ad6c5c8e9a9a62f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051406"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545376"
 ---
 # <a name="install-distributed-replay-setup"></a>Distributed Replay 설치(설치)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Distributed Replay 기능을 설치합니다. 기능 설치 위치를 계획할 때는 다음 사항을 고려하십시오.  
@@ -87,7 +87,7 @@ ms.locfileid: "48051406"
   
     -   클라이언트 서비스를 설치하려면 **Distributed Replay Client**를 선택합니다.  
   
-     **중요**: Distributed Replay Controller를 구성할 때 Distributed Replay Client 서비스를 실행하는 데 사용할 사용자 계정을 하나 이상 지정할 수 있습니다. 다음은 지원되는 계정 목록입니다.  
+     **중요 한**: Distributed Replay Controller를 구성할 때 Distributed Replay Client 서비스를 실행하는 데 사용할 사용자 계정을 하나 이상 지정할 수 있습니다. 다음은 지원되는 계정 목록입니다.  
   
     -   도메인 사용자 계정  
   
@@ -134,7 +134,7 @@ ms.locfileid: "48051406"
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 2014 버전에서 지 원하는 기능](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay 요구 사항](../../tools/sql-server-profiler/replay-requirements.md)   
+ [Distributed Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)   
  [관리 도구 명령줄 옵션&#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Distributed Replay 구성](../../tools/distributed-replay/configure-distributed-replay.md)  
   

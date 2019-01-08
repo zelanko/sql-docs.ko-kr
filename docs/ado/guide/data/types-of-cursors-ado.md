@@ -13,15 +13,15 @@ ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ecf079c86362aeae78b7c9ceaad640b0ad1519c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db77de95e83e596a8a301fa65885ee640c742a71
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786961"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52543559"
 ---
 # <a name="types-of-cursors-ado"></a>커서 형식(ADO)
-일반적으로 응용 프로그램에서는 필요한 데이터 액세스를 제공 하는 가장 간단한 커서를 사용 해야 합니다. 각 추가 커서 특징 (정방향 전용, 읽기 전용, 정적, 스크롤, 버퍼링) 향상 된 기능에 가격-클라이언트 메모리, 네트워크 부하 또는 성능입니다. 대부분의 경우 기본 커서 옵션 응용 프로그램에 실제로 필요한 것 보다 더 복잡 한 커서를 생성 합니다.  
+일반적으로 응용 프로그램에서는 필요한 데이터 액세스를 제공 하는 가장 간단한 커서를 사용 해야 합니다. 향상 된 기능 (정방향 전용, 읽기 전용, 정적, 스크롤, 버퍼링 되지 않은) 각 추가 커서 특징을 가격-클라이언트 메모리, 네트워크 부하 또는 성능을 있습니다. 대부분의 경우 기본 커서 옵션 응용 프로그램에 실제로 필요한 것 보다 더 복잡 한 커서를 생성 합니다.  
   
  커서 유형 선택에 따라 달라 집니다 응용 프로그램에서 결과 집합을 사용 하는 방법 또한 결과 집합 사용 될 데이터의 비율, 데이터 변경 및 응용 프로그램 성능에 대 한 민감도의 크기를 비롯 한 여러 디자인 고려 사항, 요구 사항입니다.  
   

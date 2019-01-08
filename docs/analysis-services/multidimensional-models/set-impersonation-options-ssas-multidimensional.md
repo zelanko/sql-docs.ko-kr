@@ -1,5 +1,5 @@
 ---
-title: 가장 옵션 설정 (SSAS-다차원) | Microsoft Docs
+title: (SSAS-다차원) 가장 옵션 설정 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6c11064ecc87744999c31080e6a4d57a3849f5d2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 279aff4acd671318b75988919d7625591f17812f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026160"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52533808"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>가장 옵션 설정(SSAS - 다차원)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34026160"
  대화 상자에서 모든 옵션을 사용할 수는 있지만 일부 경우에는 일부 옵션이 적절하지 않을 수 있습니다. 다음 정보를 사용하여 상황에 가장 적합한 옵션을 선택하십시오.  
   
  **특정 사용자 이름 및 암호 사용**  
- 이 옵션을 선택는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 이 형식에 지정 된 Windows 사용자 계정의 보안 자격 증명을 사용 하는 개체:  *\<도메인 이름 >***\\***\<사용자 계정 이름 >* 합니다.  
+ 다음 형식으로 지정된 Windows 사용자 계정의 보안 자격 증명을 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체에 사용하려면 이 옵션을 선택합니다. *\<도메인 이름 >***\\***\<사용자 계정 이름 >* 합니다.  
   
  데이터 액세스용으로 특별히 만든 전용, 최소 권한 Windows 사용자 ID를 사용하려면 이 옵션을 선택합니다. 예를 들어 보고서에 사용되는 데이터를 검색하기 위한 일반 용도의 계정을 정기적으로 만들 경우 여기에서 해당 계정을 지정할 수 있습니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34026160"
  DMX OPENQUERY 문, 로컬 큐브 및 마이닝 모델의 경우 서비스 계정 옵션을 선택하는 경우에도 현재 사용자의 자격 증명이 사용됩니다. 아웃오브 라인 바인딩에 대해서는 서비스 계정 옵션이 지원되지 않습니다.  
   
 > [!NOTE]  
->  서비스 계정에 Analysis Services 인스턴스에 대한 관리자 권한이 없는 경우 큐브에서 데이터 마이닝 모델을 처리할 때 오류가 발생할 수 있습니다. 자세한 내용은 [마이닝 구조: 데이터 원본이 OLAP 큐브인 경우 처리 중 문제](http://go.microsoft.com/fwlink/?LinkId=251610)를 참조하세요.  
+>  서비스 계정에 Analysis Services 인스턴스에 대한 관리자 권한이 없는 경우 큐브에서 데이터 마이닝 모델을 처리할 때 오류가 발생할 수 있습니다. 자세한 내용은 참조 하세요. [마이닝 구조: 데이터 원본이 OLAP 큐브인 경우 처리 중 문제](http://go.microsoft.com/fwlink/?LinkId=251610)합니다.  
   
  **현재 사용자의 자격 증명 사용**  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체에서 아웃오브 라인 바인딩, DMX OPENQUERY, 로컬 큐브 및 마이닝 모델에 대해 현재 사용자의 보안 자격 증명을 사용하려면 이 옵션을 선택합니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "34026160"
  **기본값** 또는 **상속**  
  대화 상자에서는 데이터베이스 수준에서 설정된 가장 옵션의 경우 **기본값** 을 사용하고, 데이터 원본 수준에서 설정된 가장 옵션의 경우 **상속** 을 사용합니다.  
   
- **데이터 원본 - 상속 옵션**  
+ **데이터 원본-상속 옵션**  
   
  데이터 원본 수준에서 **상속** 은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 부모 개체의 가장 옵션을 사용하도록 지정합니다. 다차원 모델에서 부모 개체는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스입니다. **상속** 옵션을 선택하면 이 데이터 원본 및 동일한 데이터베이스의 일부인 다른 데이터 원본의 가장 설정을 중앙에서 관리할 수 있습니다. 이 옵션이 의미 있는 옵션이 되려면 데이터베이스 수준에서 특정 Windows 사용자 이름 및 암호를 선택하십시오. 그렇지 않으면 데이터 원본의 **상속** 과 데이터베이스의 **기본값** 의 조합이 서비스 계정 옵션을 사용하는 것과 동일하게 됩니다.  
   
@@ -90,13 +90,13 @@ ms.locfileid: "34026160"
   
  데이터베이스 수준의 기본 설정에 대한 자세한 내용은 [다차원 데이터베이스 속성 설정&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/set-multidimensional-database-properties-analysis-services.md)을 참조하세요.  
   
- **데이터베이스 - 기본 옵션**  
+ **데이터베이스-기본 옵션**  
 
  다차원 데이터베이스의 경우 **기본값** 은 서비스 계정을 사용하고 데이터 마이닝 작업에 현재 사용자를 사용함을 의미합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 원본 만들기&#40;SSAS 다차원&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [데이터 원본 속성 설정 & #40; SSAS 다차원 & #41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
+ [데이터 원본 속성 설정&#40;SSAS 다차원&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
 
   
   

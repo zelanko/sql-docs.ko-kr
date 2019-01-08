@@ -5,8 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: language-reference
 f1_keywords:
 - sp_dropmergepublication
@@ -17,12 +16,12 @@ ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3af5f792b7305ba9f35ba278f45d07cf8f74f655
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74aa782a7dcf6abdc71ca82dc104406948f21989
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687192"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802305"
 ---
 # <a name="spdropmergepublication-transact-sql"></a>sp_dropmergepublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_dropmergepublication**합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [게시 삭제](../../relational-databases/replication/publish/delete-a-publication.md)   
  [sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   

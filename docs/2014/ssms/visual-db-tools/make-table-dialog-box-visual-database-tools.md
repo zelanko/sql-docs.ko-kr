@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:69650
@@ -13,12 +13,12 @@ ms.assetid: 5eb28dc3-828e-486c-9348-596bb5a04c85
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 247a248339da19f0f2934d3f97a461ae5bbb1c14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b9873268608072ed7f2d6cdb4d0026ba62e5d090
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196553"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810695"
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>테이블 만들기 대화 상자(Visual Database Tools)
   이 대화 상자를 사용하면 행을 복사하려는 대상 테이블을 만들고 이름을 지정할 수 있습니다. 이 대화 상자는 쿼리 형식을 MAKE TABLE 쿼리로 변경하면 나타납니다. 쿼리 형식을 변경하려면 **쿼리 디자이너** 메뉴에서 **형식 변경**을 가리킨 다음 **테이블 만들기**를 클릭합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "48196553"
 > [!NOTE]  
 >  만들 테이블의 속성을 변경하려는 경우 쿼리를 실행하기 전에 **속성** 창에서 이러한 테이블의 속성을 변경할 수 있습니다. 자세한 내용은 [쿼리 속성&#40;Visual Database Tools&#41;](visual-database-tools.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [테이블 만들기 쿼리 만들기 &#40;Visual Database Tools&#41;](create-make-table-queries-visual-database-tools.md)   
  [쿼리 형식&#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)  
   

@@ -14,24 +14,24 @@ ms.assetid: c0b3f4c2-b77c-4485-be77-cec5fd382c86
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be4bab2d37570dab0bc3e6048b999330ddebb7f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 61871299c35df0495932f1b149fe99ab858edaa5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142803"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524869"
 ---
 # <a name="integration-services-features-and-tasks"></a>Integration Services 기능 및 태스크
-  누구 든 지 정보를 찾을-디자이너, 개발자, 분석가 또는 관리자-만들고 개발 하는 데 필요한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지 있습니다. 그런 다음 이러한 패키지를 애플리케이션 및 웹 사이트에 통합하는 방법에 대해 설명합니다.  
+  해당 누구나-디자이너, 개발자, 분석가 또는 관리자 정보를 찾을-만들고 개발 하는 데 필요한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지 있습니다. 그런 다음 이러한 패키지를 애플리케이션 및 웹 사이트에 통합하는 방법에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [Integration Services &#40;SSIS&#41; 및 Studio 환경](integration-services-ssis-development-and-management-tools.md)  
   
  [Integration Services&#40;SSIS&#41; 패키지](../../2014/integration-services/integration-services-ssis-packages.md)  
   
- [Integration Services &#40;SSIS&#41; 연결](connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services&#40;SSIS&#41; 연결](connection-manager/integration-services-ssis-connections.md)  
   
- [Integration Services &#40;SSIS&#41; 프로젝트](integration-services-ssis-projects-and-solutions.md)  
+ [Integration Services&#40;SSIS&#41; 프로젝트](integration-services-ssis-projects-and-solutions.md)  
   
  [Integration Services &#40;SSIS&#41; 매개 변수](integration-services-ssis-package-and-project-parameters.md)  
   
@@ -39,9 +39,9 @@ ms.locfileid: "48142803"
   
  [Integration Services&#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md)  
   
- [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)  
+ [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)  
   
- [Integration Services &#40;SSIS&#41; 이벤트 처리기](integration-services-ssis-event-handlers.md)  
+ [Integration Services&#40;SSIS&#41; 이벤트 처리기](integration-services-ssis-event-handlers.md)  
   
  [Integration Services 서비스&#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48142803"
   
  [패키지 실행 및 기타 작업 모니터링](performance/monitor-running-packages-and-other-operations.md)  
   
- [보안 개요 &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
+ [보안 개요&#40;Integration Services&#41;](security/security-overview-integration-services.md)  
   
  [Azure 기능 팩](azure-feature-pack-for-integration-services-ssis.md)  
   

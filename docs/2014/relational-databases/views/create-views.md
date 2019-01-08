@@ -12,12 +12,12 @@ ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 550f4dbc3e733c3dee9fb200d85789931722e4f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5eaa6c702c02a3258ac66ec55081965d25a12a55
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215003"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52541818"
 ---
 # <a name="create-views"></a>뷰 만들기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 뷰를 만들 수 있습니다. 뷰는 다음과 같은 용도로 사용할 수 있습니다.  
@@ -60,9 +60,9 @@ ms.locfileid: "48215003"
   
 1.  **개체 탐색기**에서 새 뷰를 만들 데이터베이스를 확장합니다.  
   
-2.  **뷰** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 뷰...** 를 클릭합니다.  
+2.  **뷰** 폴더를 마우스 오른쪽 단추로 클릭한 다음, **새 뷰...** 를 클릭합니다.  
   
-3.  **테이블 추가** 대화 상자의 테이블, 뷰, 함수 및 동의어 탭 중 하나에서 새 뷰에 포함할 요소를 선택합니다.  
+3.  에 **테이블 추가** 대화 상자는 다음 탭 중 하나에서 새 뷰에 포함할 요소를 선택 합니다. 새 뷰에 포함할 요소를 선택합니다.  
   
 4.  **추가**를 클릭한 다음 **닫기**를 클릭합니다.  
   

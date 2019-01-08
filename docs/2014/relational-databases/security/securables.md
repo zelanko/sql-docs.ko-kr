@@ -18,12 +18,12 @@ ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fa9af5a2542581cad1b3a5f4be956cce9651d4f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 7c4a82cfa4d8a82db1e01c49899c3c49c2e01ee9
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170183"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52532472"
 ---
 # <a name="securables"></a>보안 개체
   보안 개체는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인증 시스템이 액세스를 조정하는 리소스입니다. 예를 들어, 테이블은 보안 개체입니다. 스스로 보호할 수 있는 "범위"라는 중첩된 계층을 만들면 일부 보안 개체를 다른 보안 개체에 포함시킬 수 있습니다. 보안 개체 범위는 **서버**, **데이터베이스**및 **스키마**입니다.  

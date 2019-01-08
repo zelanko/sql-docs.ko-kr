@@ -13,12 +13,12 @@ ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7fc5177fda3562efe4561f9d165629419f8a629b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c83a7de609d200da2957a65b9325d031eda49780
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850930"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520180"
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC 프로그래머&#39;참조
 합니다 *ODBC 프로그래머 참조* 다음 섹션이 포함 되어 있습니다.  
@@ -66,41 +66,41 @@ ms.locfileid: "47850930"
 ## <a name="recommended-reading"></a>권장 참조 항목  
  SQL에 대 한 자세한 내용은 다음 표준을 사용할 수 있습니다.  
   
--   데이터베이스 언어-SQL 무결성 향상 된 기능, ANSI, 1989 ANSI X3.135 1989를 사용 하 여 합니다.  
+-   언어-무결성 향상 된 기능, ANSI, 1989 ANSI X3.135 1989를 사용 하 여 SQL 데이터베이스입니다.  
   
--   데이터베이스 언어-SQL: X3H2 ANSI 및 ISO/IEC JTC1/SC21/WG3 9075:1992 (SQL-92).  
+-   언어-SQL 데이터베이스: X3H2 ANSI 및 ISO/IEC JTC1/SC21/WG3 9075:1992 (SQL-92).  
   
 -   Open Group 데이터 관리: 구조적된 쿼리 언어 (SQL), 버전 2 (Open Group, 1996).  
   
  표준 및 공급 업체별 SQL 지침 외에도 많은 책 설명 SQL을 포함 합니다.  
   
--   날짜, Darwen, Hugh 사용 하 여 3. J.: *SQL 표준에 대 한 지침* (Addison-wesley, 1993).  
+-   날짜, C. J., Darwen, Hugh 사용 하 여: *SQL 표준에 대 한 지침* (Addison-wesley, 1993).  
   
--   Emerson "," Sandra L. "," Darnovsky "," Marcy, "및" 사, Judith S.: *실용적인 SQL Handbook* (Addison-wesley, 1989).  
+-   Emerson, Sandra L., Darnovsky, Marcy, 및 사, Judith S.: *실제 SQL Handbook* (Addison-wesley, 1989).  
   
--   Groff, James R. 및 Weinberg, Paul N.: *SQL을 사용 하 여* (Osborne Mcgraw-hill, 1990).  
+-   Groff, James R. 및 Weinberg, Paul 명사. *SQL을 사용 하 여* (Osborne Mcgraw-hill, 1990).  
   
--   Gruber, Martin: *이해 SQL* (Sybex, 1990).  
+-   Gruber, Martin: *SQL 이해* (Sybex, 1990).  
   
--   Hursch, Jack L. 및 진 J.: *SQL, 구조적된 쿼리 언어* (탭 책, 1988).  
+-   Jack L. 및 진 J. Hursch: *SQL, 구조적된 쿼리 언어* (탭 책, 1988).  
   
 -   Melton, Jim 및 Simon, Alan R.: *새 SQL 이해: 완전 한 가이드* (Morgan Kaufmann 게시자, 1993).  
   
--   Pascal, Fabian: *SQL 및 관계형 기본 사항* (& T 책, 1990).  
+-   Fabian Pascal: *SQL 및 관계형 기본 사항* (& T 책, 1990).  
   
--   Trimble, J. Harvey, 박사 및 David Chappell 합니다: *SQL에 대 한 시각적 소개* (Wiley, 1989).  
+-   Trimble, J. Harvey, 박사 및 David Chappell 합니다. *SQL에 대 한 시각적 소개* (Wiley, 1989).  
   
--   Van der Lan, Rick F.: *SQL 소개* (Addison-wesley, 1988).  
+-   Van der Lan, Rick 6.: *SQL 소개* (Addison-wesley, 1988).  
   
--   Vang, Soren: *SQL 및 관계형 데이터베이스* (Microtrend 책, 1990).  
+-   Vang Soren: *SQL 및 관계형 데이터베이스* (Microtrend 책, 1990).  
   
 -   Viescas, John: *SQL 빠른 참조 가이드* (Microsoft Corp., 1989).  
   
  트랜잭션 처리에 대 한 자세한 내용은 다음을 참조 하세요.  
   
--   회색, J. 명사. Reuter, Andreas: *트랜잭션 처리: 개념 및 기술을* (Morgan Kaufmann 게시자, 1993).  
+-   회색, J. 명사. 및 Reuter, Andreas: *트랜잭션 처리: 개념 및 기술을* (Morgan Kaufmann 게시자, 1993).  
   
--   Hackathorn, Richard D.: *엔터프라이즈 데이터베이스 연결* (Wiley & 아들과, 1993).  
+-   Hackathorn, Richard 4.: *엔터프라이즈 데이터베이스 연결* (Wiley & 아들과, 1993).  
   
  호출 수준 인터페이스에 대 한 자세한 내용은 다음 표준을 사용할 수 있습니다.  
   
@@ -116,10 +116,10 @@ ms.locfileid: "47850930"
   
 -   Johnston, Tom 및 Osborne를 표시 합니다. *ODBC 개발자 가이드* (Howard W. Sams & 1994 회사인).  
   
--   북쪽, Ken: *Windows 다중 DBMS 프로그래밍: c + +, Visual Basic, ODBC, OLE 2 및 도구를 사용 하 여 DBMS 프로젝트용* (Wiley John 및 아들과, Inc., 1995).  
+-   박 단은 북부: *Windows 다중 DBMS 프로그래밍: C + +, Visual Basic, ODBC, OLE 2 및 도구를 사용 하 여 DBMS 프로젝트용* (Wiley John 및 아들과, Inc., 1995).  
   
 -   Stegman, Michael O., Signore, Robert, 및 Creamer, John: *분산 환경에서 Open Database Connectivity을 ODBC 솔루션* (Mcgraw-hill, 1995).  
   
--   Welch, Keith: *ODBC 2를 사용 하 여* (Que, 1994).  
+-   Welch, Keith. *ODBC 2를 사용 하 여* (Que, 1994).  
   
--   Whiting, Bill: *ODBC 21 개의 일 Teach Yourself* (Howard W. Sams & 1994 회사인).
+-   Whiting를 청구 합니다. *ODBC 21 개의 일 teach Yourself* (Howard W. Sams & 1994 회사인).

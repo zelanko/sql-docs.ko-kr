@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 835a032c-e37c-4f35-8ab0-5e4ae25c2e9b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b5a04d8e28889c0187eb3a79753d6627c42d732b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b29e1e971222d609b3f2364f92f262182b88f001
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090883"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782385"
 ---
 # <a name="change-the-order-of-attributes"></a>특성 순서 변경
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 특성의 순서를 변경할 수 있습니다.  
@@ -45,6 +44,6 @@ ms.locfileid: "48090883"
 7.  **엔터티 저장**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [특성 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+ [특성&#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

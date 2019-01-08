@@ -15,12 +15,12 @@ ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eeb95d0fb8d1e89fe5c2dc66362641c96f2230af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 967de27eb9bc1f191b138e8b5962b04c145fe191
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114443"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510755"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>모델 테스트 데이터에 필터 적용
   모델을 테스트하는 데 사용할 외부 데이터 원본을 지정할 경우 필요에 따라 입력 데이터를 제한하기 위한 필터를 적용할 수 있습니다. 예를 들어 특별히 특정 수입 범위 내의 고객에 대해 예측하기 위해 모델을 테스트하려고 할 수 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "48114443"
   
  결과에 영향을 줄 수 있는 미리 정의된 필터가 모델에 포함되어 있는지 확인하려면 **속성** 창에서 **Filter** 속성을 확인하거나 데이터 마이닝 스키마 행 집합을 사용하여 모델을 쿼리합니다. 예를 들어 다음 쿼리는 지정된 모델에 대한 필터 텍스트를 반환합니다.  
   
- `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model’`  
+ `SELECT [FILTER] FROM $system.DMSCHEMA_MINING_MODELS WHERE MODEL_NAME = 'name of model'`  
   
 > [!WARNING]  
 >  기존 마이닝 모델에서 필터를 제거하거나 필터 조건을 변경하려는 경우에는 마이닝 모델을 다시 처리해야 합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "48114443"
   
 3.  **입력 선택** 탭의 **정확도 차트에 사용할 데이터 집합을 선택하십시오.** 에서 **다른 데이터 집합 지정**옵션을 선택합니다.  
   
-4.  찾아보기 단추 **(…)** 를 클릭하여 대화 상자를 열고 외부 데이터 집합을 선택합니다.  
+4.  찾아보기 단추를 클릭 **(...)**  대화 상자를 열고 외부 데이터 집합을 선택 합니다.  
   
 5.  사례 테이블을 선택하고, 필요한 경우 중첩된 테이블을 추가합니다. 필요한 경우 모델의 열을 외부 데이터 집합의 열에 매핑합니다. **열 매핑 지정** 대화 상자를 닫아 원본 테이블 정의를 저장합니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48114443"
   
 9. **및/또는** 입력란을 클릭하고 논리 연산자를 선택하여 여러 조건이 결합되는 방법을 정의합니다.  
   
-10. 필요에 따라 **값** 텍스트 상자의 오른쪽에 있는 찾아보기 단추 **(…)** 를 클릭하여 **필터** 대화 상자를 열고 중첩 테이블 또는 개별 사례 테이블 열에 대한 조건을 설정합니다.  
+10. 필요에 따라 찾아보기 단추를 클릭 **(...)**  의 오른쪽에는 **값** 텍스트 상자를 엽니다는 **필터** 대화 상자 및 개별 사례 테이블 열 또는 중첩된 테이블에 대 한 조건을 설정 합니다.  
   
 11. **식** 창의 텍스트를 읽어 전체 필터 조건이 올바른지 확인합니다.  
   
@@ -90,9 +90,9 @@ ms.locfileid: "48114443"
   
      필터 조건은 정확도 차트를 만들 때 데이터 원본에 적용됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [모델 테스트 데이터 선택 및 매핑](choose-and-map-model-testing-data.md)   
- [정확도 차트에 대 한 입력으로 테이블 데이터를 중첩 사용](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
+ [정확도 차트에 대한 입력으로 중첩 테이블 데이터 사용](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
  [정확도 차트 유형 선택 및 차트 옵션 설정](choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

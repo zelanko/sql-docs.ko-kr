@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rowcounttrans.f1
@@ -19,12 +18,12 @@ ms.assetid: b68293b9-a68c-40be-9d81-77342da1be29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a5dffaac9a849ca5a73adf2228a0c8ab5e932c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 53f14b78dcf3c8f0ee986b8ef0fde14b58254f07
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217343"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784975"
 ---
 # <a name="row-count-transformation"></a>행 개수 변환
   행 개수 변환은 행이 데이터 흐름을 통과할 때 행 수를 세어 최종 개수를 변수에 저장합니다.  
@@ -48,7 +47,7 @@ ms.locfileid: "48217343"
  이 구성 요소의 속성을 설정하는 방법에 대한 자세한 내용은 [데이터 흐름 구성 요소의 속성 설정](../set-the-properties-of-a-data-flow-component.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [Integration Services &#40;SSIS&#41; 변수](../../integration-services-ssis-variables.md)   
+ [Integration Services&#40;SSIS&#41; 변수](../../integration-services-ssis-variables.md)   
  [데이터 흐름](../data-flow.md)   
  [Integration Services 변환](integration-services-transformations.md)  
   

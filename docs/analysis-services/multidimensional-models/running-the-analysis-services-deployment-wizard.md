@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f7362e216213bc27efab0fd49f3ded2f15c37bdb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d459bafe395a10af75f8c0a721f0a8a08f39b3c6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050791"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52509681"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Analysis Services 배포 마법사 실행
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "38050791"
 -   **명령 프롬프트에서** 명령 프롬프트에서 실행 하는 경우는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사는 마법사를 실행 하는 데 사용 하는 스위치를 기반으로 배포 스크립트를 생성 합니다. 이 경우 마법사가 사용자 입력이 필요한 메시지를 표시하고 해당 입력 내용을 기반으로 입력 파일을 수정하거나 현재 입력 파일을 그대로 사용하여 자동 무인 배포를 실행하거나 나중에 사용할 수 있는 배포 스크립트를 만들 수 있습니다.  
   
 ## <a name="running-the-analysis-services-deployment-wizard-interactively"></a>대화형으로 Analysis Services 배포 마법사 실행  
- 대화형으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사를 실행하면 마법사가 입력 파일의 값을 읽고 사용자에게 이 정보를 표시합니다. 사용자는 배포 대상, 구성 설정, 배포 옵션 및 연결 문자열 암호 등의 입력 값을 수정하거나 그대로 둘 수 있습니다. 모든 입력된 값을 변경 하는 경우 배포 스크립트를 생성할 때 이러한 변경 내용을 사용 됩니다. 그러나 마법사가 입력 파일의 값을 변경하지는 않습니다.  
+ 대화형으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사를 실행하면 마법사가 입력 파일의 값을 읽고 사용자에게 이 정보를 표시합니다. 배포 대상, 구성 설정, 배포 옵션 및 연결 문자열 암호 등 값이이 입력을 수정할 수 있습니다-하거나 그대로 둡니다. 모든 입력된 값을 변경 하는 경우 배포 스크립트를 생성할 때 이러한 변경 내용을 사용 됩니다. 그러나 마법사가 입력 파일의 값을 변경하지는 않습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사가 입력 값을 수정하게 하려면 명령 프롬프트에서 마법사를 실행하고 응답 파일 모드로 실행되도록 마법사를 설정합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "38050791"
   
 -   클릭 **시작** > **Microsoft SQL Server** > **배포 마법사**합니다.  
   
-     —또는—  
+     -또는-  
   
 -   에 **프로젝트** 의 폴더를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 두 번 클릭 합니다 \<프로젝트 이름 >.asdatabase 파일.
     > [!NOTE]  

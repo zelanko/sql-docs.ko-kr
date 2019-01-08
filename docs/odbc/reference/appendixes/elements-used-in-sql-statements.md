@@ -15,12 +15,12 @@ ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23eef4c33afbbfd287bb9be083cfe0990a6dd6a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e33beff29463172a26d53953dd5f563fe1f3f5c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729033"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512190"
 ---
 # <a name="elements-used-in-sql-statements"></a>SQL 문에 사용되는 요소
 다음 요소는 이전에 나열 된 SQL 문에서 사용 됩니다.  
@@ -52,9 +52,9 @@ ms.locfileid: "47729033"
   
  *동적 매개 변수* :: =?  
   
- *식을* :: 용어 = &#124; 식 {+&#124;–} 용어  
+ *식을* :: 용어 = &#124; 식 {+&#124;-} 용어  
   
- *계수* :: = [*+*&#124;*–*]*주*  
+ *계수* :: = [*+*&#124;*-*]*주*  
   
  *삽입 값* :: =  
   

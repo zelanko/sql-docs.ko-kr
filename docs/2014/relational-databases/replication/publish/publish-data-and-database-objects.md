@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined types [SQL Server replication]
@@ -42,12 +41,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e50f1c65133a0e33c142962af8e768d1daa5bef8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8cdc2ee8c14e62106775438f932957c69c7c0daa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227113"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777135"
 ---
 # <a name="publish-data-and-database-objects"></a>데이터 및 데이터베이스 개체 게시
   게시를 만들 때 게시할 테이블 및 다른 데이터베이스 개체를 선택할 수 있습니다. 복제를 사용하여 다음 데이터베이스 개체를 게시할 수 있습니다.  
@@ -57,10 +56,10 @@ ms.locfileid: "48227113"
 |테이블|X|X|  
 |분할된 테이블|X|X|  
 |저장 프로시저 - 정의([!INCLUDE[tsql](../../../includes/tsql-md.md)] 및 CLR)|X|X|  
-|저장 프로시저 - 실행([!INCLUDE[tsql](../../../includes/tsql-md.md)] 및 CLR)|X|아니요|  
+|저장 프로시저 - 실행([!INCLUDE[tsql](../../../includes/tsql-md.md)] 및 CLR)|X|no|  
 |뷰|X|X|  
 |인덱싱된 뷰|X|X|  
-|인덱싱된 뷰(테이블 형식)|X|아니요|  
+|인덱싱된 뷰(테이블 형식)|X|no|  
 |사용자 정의 형식(CLR)|X|X|  
 |사용자 정의 함수([!INCLUDE[tsql](../../../includes/tsql-md.md)] 및 CLR)|X|X|  
 |별칭 데이터 형식|X|X|  

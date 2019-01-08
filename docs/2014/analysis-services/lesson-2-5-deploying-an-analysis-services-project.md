@@ -11,12 +11,12 @@ ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 611b4cf87158be48cae3bc37ef7311de64c77ddf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d7f04f586511140b9e21c8eca80ec19b43fa90eb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126223"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52510379"
 ---
 # <a name="deploying-an-analysis-services-project"></a>Analysis Services 프로젝트 배포
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 있는 개체에 대한 큐브 및 차원 데이터를 보려면 지정한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 이 프로젝트를 배포한 다음 큐브와 큐브 차원을 처리해야 합니다. *프로젝트를* 배포 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 정의된 개체가 만들어집니다. *인스턴스의 개체를* 처리 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 하면 데이터가 기본 데이터 원본에서 큐브 개체로 복사됩니다. 자세한 내용은 [Analysis Services 프로젝트 배포&#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md) 및 [Analysis Services 프로젝트 속성 구성&#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)을 참조하세요.  
@@ -45,11 +45,11 @@ ms.locfileid: "48126223"
     > [!NOTE]  
     >  배포 중에 오류가 발생하는 경우 SQL Server Management Studio를 사용하여 데이터베이스 사용 권한을 확인하십시오. 데이터 원본 연결에 대해 지정한 계정에는 SQL Server 인스턴스에서 로그인이 있어야 합니다. 로그인을 두 번 클릭하면 사용자 매핑 속성을 볼 수 있습니다. 계정에는 **AdventureWorksDW2012** 데이터베이스에 대한 db_datareader 사용 권한이 있어야 합니다.  
   
-     [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트를 빌드한 다음 배포 스크립트를 사용하여 지정된 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 배포합니다. 배포 과정 중에 **출력** 창과 **배포 진행률 - Analysis Services Tutorial** 창이 표시됩니다.  
+     [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트를 빌드한 다음 배포 스크립트를 사용하여 지정된 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 배포합니다. 두 창에 배포 진행률이 표시 됩니다: 합니다 **출력** 창 및 **배포 진행률-Analysis Services Tutorial** 창입니다.  
   
-     필요한 경우 **보기** 메뉴에서 **출력** 을 클릭하여 출력 창을 엽니다. **출력** 창에는 전체적인 배포 진행률이 표시됩니다. **배포 진행률 - Analysis Services Tutorial** 창에는 배포 진행 단계가 자세히 표시됩니다. 자세한 내용은 [Analysis Services 프로젝트 빌드&#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md) 및 [Analysis Services 프로젝트 배포&#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)를 참조하세요.  
+     필요한 경우 **보기** 메뉴에서 **출력** 을 클릭하여 출력 창을 엽니다. **출력** 창에는 전체적인 배포 진행률이 표시됩니다. 합니다 **배포 진행률-Analysis Services Tutorial** 창에는 배포 진행 단계가 자세히 표시 됩니다. 자세한 내용은 [Analysis Services 프로젝트 빌드&#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md) 및 [Analysis Services 프로젝트 배포&#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)를 참조하세요.  
   
-5.  **출력** 창과 **배포 진행률 - Analysis Services Tutorial** 창의 내용을 확인하면 큐브의 생성, 배포 및 처리가 오류 없이 진행되었는지 확인할 수 있습니다.  
+5.  내용을 검토 합니다 **출력** 창 및 **배포 진행률-Analysis Services Tutorial** 창 큐브에 작성 된 확인, 배포 및 처리가 오류 없이 합니다.  
   
 6.  **배포 진행률 - Analysis Services Tutorial** 창을 숨기려면 창 도구 모음에서 **자동 숨기기** 아이콘(압정 모양)을 클릭합니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48126223"
  [큐브 찾아보기](lesson-2-6-browsing-the-cube.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 프로젝트 배포 &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
- [Analysis Services 프로젝트 속성 구성 &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
+ [Analysis Services 프로젝트 & #40; 배포 SSDT & #41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
+ [Analysis Services 프로젝트 속성 구성&#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - leading blanks
@@ -14,12 +13,12 @@ ms.assetid: d082f42a-d7e7-49f5-a503-ac44ba630832
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9477429dd90f8fd9e21f8dfa1d255c3b472e69a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a01a5bddddff027f3cff180992057736c19a716c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189163"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52805105"
 ---
 # <a name="ltrim-ssis-expression"></a>LTRIM(SSIS 식)
   선행 공백을 제거하고 문자 식을 반환합니다.  
@@ -66,8 +65,8 @@ LTRIM(@FirstName)
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [RTRIM &#40;SSIS 식&#41;](trim-ssis-expression.md)   
+ [RTRIM&#40;SSIS 식&#41;](trim-ssis-expression.md)   
  [TRIM&#40;SSIS 식&#41;](trim-ssis-expression.md)   
- [함수 &#40;SSIS 식&#41;](functions-ssis-expression.md)  
+ [함수&#40;SSIS 식&#41;](functions-ssis-expression.md)  
   
   

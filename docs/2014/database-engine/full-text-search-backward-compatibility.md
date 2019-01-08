@@ -14,17 +14,17 @@ ms.assetid: 1b5a9bbc-beb8-44fd-ab03-4c14908c604c
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 99a9efee9d104c2f45eea728dc7b0ae30913e3ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 5a749bb4da4511f30a231f6ab2dd05a35ebdb11d
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066223"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544594"
 ---
 # <a name="full-text-search-backward-compatibility"></a>전체 텍스트 검색의 이전 버전과의 호환성
   이전 버전과의 호환성 섹션의 항목에서는 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 와 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]간 전체 텍스트 검색 동작의 차이에 대해 설명합니다.  
   
-|참고|항목 내용|  
+|참고|에 대 한 항목에 대 한 중...|  
 |----------|-----------------------|  
 |[SQL Server 2014에서 사용되지 않는 전체 텍스트 검색 기능](../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)|이 릴리스에서 사용되지 않는 기능|  
 |[SQL Server 2014에서 지원되지 않는 전체 텍스트 검색 기능](../../2014/database-engine/discontinued-full-text-search-features-in-sql-server-2014.md)|이 릴리스에서 지원되지 않는 기능|  

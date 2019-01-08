@@ -14,12 +14,12 @@ ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4d515496ec264e4b6331021d385a8d42a981fbbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 373cee8bf85815db18c50eb2919600ffec258f0b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058363"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52516499"
 ---
 # <a name="create-alter-and-drop-filetables"></a>FileTable 만들기, 변경 및 삭제
   새 FileTable을 만들거나 기존 FileTable을 변경 또는 삭제하는 방법에 대해 설명합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48058363"
   
 -   자동으로 만들어지는 UNIQUE 제약 조건 및 세 가지 기본 키에 사용할 이름  
   
-###  <a name="HowToCreate"></a> 방법: FileTable 만들기  
+###  <a name="HowToCreate"></a> 어떻게: FileTable 만들기  
  **Transact-SQL을 사용하여 FileTable 만들기**  
  **AS FileTable** 옵션이 포함된 [CREATE TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) 문을 호출하여 FileTable을 만듭니다. FileTable에는 고정 스키마가 있으므로 열 목록을 지정할 필요가 없습니다. 새 FileTable에 대해 다음 설정을 지정할 수 있습니다.  
   
@@ -96,7 +96,7 @@ GO
   
 -   FileTable에는 FILESTREAM 열이 포함되어 있으므로 FileTable에는 유효한 FILESTREAM 파일 그룹이 있어야 합니다. 필요에 따라 **CREATE TABLE** 명령의 일부로 유효한 FILESTREAM 파일 그룹을 지정하여 FileTable을 만들 수 있습니다. 파일 그룹을 지정하지 않으면 FileTable에는 데이터베이스의 기본 FILESTREAM 파일 그룹이 사용됩니다. 데이터베이스에 FILESTREAM 파일 그룹이 없으면 오류가 발생합니다.  
   
--   **TABLE…AS FILETABLE CREATE** 문의 일부로 테이블 제약 조건을 만들 수 없습니다. 그러나 **ALTER TABLE** 문을 사용하여 나중에 제약 조건을 추가할 수 있습니다.  
+-   **CREATE TABLE...AS FILETABLE** 문의 일부로 테이블 제약 조건을 만들 수 없습니다. 그러나 **ALTER TABLE** 문을 사용하여 나중에 제약 조건을 추가할 수 있습니다.  
   
 -   **tempdb** 데이터베이스나 다른 시스템 데이터베이스에는 FileTable을 만들 수 없습니다.  
   
@@ -107,7 +107,7 @@ GO
   
  시스템 정의 제약 조건을 포함하여 ALTER TABLE 문을 사용하여 FileTable 네임스페이스를 사용하거나 사용하지 않도록 설정하는 방법은 [FileTable 관리](manage-filetables.md)를 참조하세요.  
   
-###  <a name="HowToChange"></a> 방법: FileTable의 디렉터리 변경  
+###  <a name="HowToChange"></a> 어떻게: FileTable의 디렉터리 변경  
  **Transact-SQL을 사용하여 FileTable의 디렉터리 변경**  
  ALTER TABLE 문을 호출하고 **FILETABLE_DIRECTORY** SET 옵션에 유효한 새 값을 제공합니다.  
   

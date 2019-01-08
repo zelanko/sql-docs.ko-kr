@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], multiple
@@ -19,12 +18,12 @@ ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6a43cfd2b692bb897950be25e29aa7932d32f780
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d5195e3c1d7e3b7164eba42ec142adb76a66fc1
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212463"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640124"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성
   이 항목에서는 SQL Server 구성 관리자를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 여러 TCP 포트로 수신하도록 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 구성하는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 TCP/IP가 설정된 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 IP 주소와 TCP 포트 번호로 구성된 연결 지점에서 들어오는 연결을 수신합니다. 다음 절차에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 추가 TCP 포트에서 수신할 수 있도록 TDS(Tabular Data Stream) 엔드포인트를 만듭니다.  
@@ -102,10 +101,10 @@ ms.locfileid: "48212463"
     sqlcmd -SACCT,1500  
     ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [CREATE ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   
  [DROP ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-endpoint-transact-sql)   
- [GRANT 엔드포인트 사용 권한&amp;#40;Transact-SQL&amp;#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
+ [GRANT 엔드포인트 사용 권한 &#40;Transact-SQL &#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
  [NUMA 노드에 TCP IP 포트 매핑&#40;SQL Server&#41;](map-tcp-ip-ports-to-numa-nodes-sql-server.md)  
   
   

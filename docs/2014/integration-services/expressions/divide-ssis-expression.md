@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - / (divide)
@@ -14,12 +13,12 @@ ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c5739fc30656871c23b3a3c2b6e8ae9953b63c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf72606d04d02cda0ec656509f56fc636ee1f6e5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203763"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810195"
 ---
 # <a name="divide-ssis-expression"></a>Divide (SSIS Expression)
   첫 번째 숫자 식을 두 번째 숫자 식으로 나눕니다.  
@@ -66,8 +65,8 @@ dividend / divisor
 ListPrice / StandardCost  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [연산자 우선순위 및 결합성](operator-precedence-and-associativity.md)   
- [연산자 &#40;SSIS 식&#41;](operators-ssis-expression.md)  
+## <a name="see-also"></a>관련 항목:  
+ [연산자 우선 순위 및 계산 방향](operator-precedence-and-associativity.md)   
+ [연산자&#40;SSIS 식&#41;](operators-ssis-expression.md)  
   
   

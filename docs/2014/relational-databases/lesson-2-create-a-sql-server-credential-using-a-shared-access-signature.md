@@ -1,5 +1,5 @@
 ---
-title: '3 단원: SQL Server 자격 증명 만들기 | Microsoft Docs'
+title: '3단원: SQL Server 자격 증명 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7178e1fb1e405dd013387ef97a6a670a0a5c3474
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb40218b2547f14634c060f2c242318101d0ea7b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211583"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524918"
 ---
 # <a name="lesson-3-create-a-sql-server-credential"></a>3단원: SQL Server 자격 증명 만들기
   이 단원에서는 Windows Azure 저장소 계정에 액세스하는 데 사용하는 보안 정보를 저장하는 자격 증명을 만듭니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "48211583"
  자격 증명에 대 한 일반적인 정보를 참조 하세요 [자격 증명 &#40;데이터베이스 엔진&#41;](security/authentication-access/credentials-database-engine.md)합니다.  
   
 > [!IMPORTANT]  
->  아래에 설명 된 SQL Server 자격 증명을 만들기 위한 요구 사항은 합니다 [Windows Azure의 SQL Server 데이터 파일](databases/sql-server-data-files-in-microsoft-azure.md) 기능입니다. Azure storage에 백업 프로세스에 대 한 자격 증명을 만드는 방법에 대 한 정보를 참조 하세요 [단원 2: Create a SQL Server Credential](../tutorials/lesson-2-create-a-sql-server-credential.md)합니다.  
+>  아래에 설명 된 SQL Server 자격 증명을 만들기 위한 요구 사항은 합니다 [Windows Azure의 SQL Server 데이터 파일](databases/sql-server-data-files-in-microsoft-azure.md) 기능입니다. Azure storage에 백업 프로세스에 대 한 자격 증명을 만드는 방법에 대 한 정보를 참조 하세요. [단원 2: SQL Server 자격 증명 만들기](../tutorials/lesson-2-create-a-sql-server-credential.md)합니다.  
   
  SQL Server 자격 증명을 만들려면 다음 단계를 수행합니다.  
   
@@ -36,14 +36,14 @@ ms.locfileid: "48211583"
   
 3.  표준 도구 모음에서 새 쿼리를 클릭합니다.  
   
-4.  다음 예를 복사하여 쿼리 창에 붙여 넣고 필요한 대로 수정합니다. 다음 문은 저장소 컨테이너의 공유 액세스 인증서를 저장하기 위해 SQL Server 자격 증명을 만듭니다.  
+4.  다음 예를 복사하여 쿼리 창에 붙여 넣고 필요한 대로 수정합니다. 다음 문은 저장소 컨테이너의 공유 액세스 인증서를 저장할 SQL Server 자격 증명을 만듭니다.  
   
     ```tsql  
   
     USE master  
-    CREATE CREDENTIAL credentialname – this name should match the container path and it must start with https.   
+    CREATE CREDENTIAL credentialname - this name should match the container path and it must start with https.   
        WITH IDENTITY='SHARED ACCESS SIGNATURE', -- this is a mandatory string and do not change it.   
-       SECRET = 'sharedaccesssignature' –- this is the shared access signature key that you obtained in Lesson 2.   
+       SECRET = 'sharedaccesssignature' -- this is the shared access signature key that you obtained in Lesson 2.   
     GO  
   
     ```  
@@ -60,6 +60,6 @@ ms.locfileid: "48211583"
   
  **다음 단원:**  
   
- [4단원: Windows Azure Storage에서 데이터베이스 만들기](lesson-3-database-backup-to-url.md)  
+ [4 단원: Windows Azure Storage에서 데이터베이스 만들기](lesson-3-database-backup-to-url.md)  
   
   

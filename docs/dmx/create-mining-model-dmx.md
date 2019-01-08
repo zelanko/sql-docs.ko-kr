@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2ea71a918ab9ceb1afba41e5af0148212f33044b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0e7ca6765ee44201badc54d15fb2a20aa9a863a5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607143"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521192"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 >  현재 공급자가 지 원하는 알고리즘의 목록을 사용 하 여 검색할 수 있습니다 [DMSCHEMA_MINING_SERVICES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)합니다. 현재 인스턴스에서 지 원하는 알고리즘을 보려는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 참조 하세요 [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md)합니다.  
   
  *매개 변수 목록*  
- 선택 사항입니다. 알고리즘에 대해 공급자가 정의한 매개 변수의 쉼표로 구분된 목록입니다.  
+ (선택 사항) 알고리즘에 대해 공급자가 정의한 매개 변수의 쉼표로 구분된 목록입니다.  
   
  *XML 문자열*  
  고급 사용자만 사용해야 합니다. XML 인코딩 모델(PMML)이며 문자열을 작은따옴표(')로 묶어야 합니다.  
@@ -110,7 +110,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  예측 절을 사용하여 예측 열의 사용 방법을 설명합니다. 다음 표에서는 사용 가능한 두 가지 절을 설명합니다.  
   
-|\<예측 > 절|설명|  
+|\<예측 > 절|Description|  
 |---------------------------|-----------------|  
 |**PREDICT**|이 열은 모델에 의해 예측될 수 있으며 다른 예측 가능 열 값을 예측하기 위해 입력 사례에 제공될 수 있습니다.|  
 |**PREDICT_ONLY**|이 열은 모델에 의해 예측될 수 있지만 이 열의 값을 입력 사례에 사용하여 다른 예측 가능 열 값을 예측할 수는 없습니다.|  
@@ -119,7 +119,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  매개 변수 목록을 사용하여 마이닝 모델의 성능과 기능을 조정할 수 있습니다. 매개 변수 목록의 구문은 다음과 같습니다.  
   
 ```  
-[<parameter> = <value>, <parameter> = <value>,…]  
+[<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
  각 알고리즘에 연관 된 매개 변수 목록을 참조 하세요 [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)합니다.  

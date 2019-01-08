@@ -11,12 +11,12 @@ ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3940f7c214ab3f9d5d48e83acef5ed2237ceeac3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0001b04a93c1aacfbf2e7701faada815cb6316ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206533"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515451"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>예측 만들기(기본 데이터 마이닝 자습서)
   예측 쿼리 작성기를 사용 하 여 예측을 생성 한 다음 수 마이닝 모델의 정확도 테스트 하 고 결과 만족 했으면, 후 합니다 **마이닝 모델 예측** 데이터 마이닝에서 탭 디자이너입니다.  
@@ -157,7 +157,7 @@ ms.locfileid: "48206533"
   
         2.  쿼리 결과를 포함할 테이블의 이름을 입력합니다.  
   
-        3.  옵션을 사용 하 여 **DSV에 추가**테이블 만들기 및 기존 데이터 원본 뷰에 추가할로 합니다. 이는 학습 데이터, 예측 원본 데이터, 쿼리 결과와 같은 모델에 대한 모든 관련 테이블을 동일한 데이터 원본 뷰에 유지하려는 경우에 유용합니다.  
+        3.  옵션을 사용 하 여 **DSV에 추가**테이블 만들기 및 기존 데이터 원본 뷰에 추가할로 합니다. 에 대 한 모든 관련된 테이블을 유지 하려는 경우는 모델 같은 학습 데이터, 예측 원본 데이터 및 쿼리 결과-동일한 데이터 소스 뷰에서 유용 합니다.  
   
         4.  옵션을 사용 하 여 **덮어쓰기 존재**최신 결과 사용 하 여 기존 테이블을 업데이트 합니다.  
   

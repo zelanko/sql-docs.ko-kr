@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: table-view-index
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.managepartition.getstart.f1
@@ -23,12 +23,12 @@ ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e706a867c9192f4b447badc70db46dc4b0abc338
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6a19bfa830b8f57d8df891fb2cfea9435c2716b4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130673"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781005"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>파티션 관리 마법사 F1 도움말
   **파티션 관리 마법사** 를 사용하여 파티션 전환이나 슬라이딩 윈도우(Sliding Window) 시나리오의 구현을 통해 기존 파티션 테이블을 관리하고 수정할 수 있습니다. 이 마법사는 파티션 관리를 용이하게 하고 테이블로 또는 테이블로부터의 정기적인 데이터 마이그레이션을 단순화합니다.  
@@ -247,7 +247,7 @@ ms.locfileid: "48130673"
 ### <a name="one-time-schedule-types-options"></a>일회 일정 유형 옵션  
  작업을 한 번 실행하도록 예약할 경우 미래의 날짜와 시간을 선택해야 합니다.  
   
- **날짜**  
+ **Date**  
  작업을 실행할 날짜를 선택합니다.  
   
  **Time**  
@@ -302,7 +302,7 @@ ms.locfileid: "48130673"
   
  ![맨 위로 이동 링크에 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위로 이동 링크에 사용되는 화살표 아이콘") [섹션 내용](#Top)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Partitioned Tables and Indexes](partitioned-tables-and-indexes.md)  
   
   

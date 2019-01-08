@@ -1,5 +1,5 @@
 ---
-title: '5 단원: 차원 및 측정값 그룹 간의 관계를 정의 합니다. | Microsoft Docs'
+title: '5단원: 차원과 측정값 그룹 간의 관계를 정의 합니다. | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 551959168ab52b0806876ce1a6b6a1fbdd11bfaa
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f9aa0ca58517dd8eb069024fb6a9acf9080481b3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016110"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52524791"
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>5단원: 차원과 측정값 그룹의 관계 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34016110"
 이 단원에서는 다음 태스크를 다룹니다.  
   
 [참조 관계 정의](../analysis-services/lesson-5-1-defining-a-referenced-relationship.md)  
-이 태스크에서는 기본 키-외래 키 관계를 통해 직접 연결된 차원을 사용해 차원을 팩트 테이블에 간접 연결하는 방법에 대해 알아봅니다.  
+이 태스크에서는 차원의 기본 키-외래 키 관계를 통해 직접 연결 된 차원을 통해 간접적으로 팩트 테이블에 연결할 배웁니다.  
   
 [팩트 관계 정의](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
 이 태스크에서는 팩트 테이블의 데이터를 기반으로 차원을 정의하고 차원 관계를 팩트 관계로 정의하는 방법에 대해 알아봅니다.  
@@ -43,9 +43,9 @@ ms.locfileid: "34016110"
 ## <a name="next-lesson"></a>다음 단원  
 [6 단원: 계산 정의](../analysis-services/lesson-6-defining-calculations.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [Analysis Services Tutorial 시나리오](../analysis-services/analysis-services-tutorial-scenario.md)  
-[다차원 모델링 & #40; Adventure Works 자습서 & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[다차원 모델링&#40;Adventure Works 자습서&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [차원 관계](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   
   

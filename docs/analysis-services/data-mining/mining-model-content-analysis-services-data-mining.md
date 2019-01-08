@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 64aeaec2c78360fa082f98db33ebd47a91171348
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 5fe10a98910f54e4317d0191753d40b9b6b0b94f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146228"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52508539"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "50146228"
 |3|내부|트리의 내부 분할 노드입니다. 의사 결정 트리 모델에 적용됩니다.|  
 |4|배포|트리의 터미널 노드입니다. 의사 결정 트리 모델에 적용됩니다.|  
 |5|클러스터|알고리즘을 통해 검색되는 클러스터입니다. 클러스터링 모델 및 시퀀스 클러스터링 모델에 적용됩니다.|  
-|6|Unknown|알 수 없는 노드 유형입니다.|  
+|6|알 수 없음|알 수 없는 노드 유형입니다.|  
 |7|항목 집합|알고리즘을 통해 검색되는 항목 집합입니다. 연결 모델 및 시퀀스 클러스터링 모델에 적용됩니다.|  
 |8|AssociationRule|알고리즘을 통해 검색되는 연결 규칙입니다. 연결 모델 및 시퀀스 클러스터링 모델에 적용됩니다.|  
 |9|PredictableAttribute|예측 가능한 특성입니다. 모든 모델 유형에 적용됩니다.|  
@@ -160,7 +160,7 @@ ms.locfileid: "50146228"
   
  예를 들어 분류 트리에서 지지도 값은 위에 설명된 특성 조합이 있는 사례 수를 나타냅니다.  
   
- 의사 결정 트리에서는 각 트리 수준의 지지도 합계는 부모 노드의 지지도에 대한 합계입니다. 예를 들어 1200개의 사례가 있는 모델을 성별로 균등하게 나눈 다음 노드 (2)의 자식 노드인 노드 (4), (5), (6) 즉, 세 가지 소득 값인 낮음, 보통, 높음으로 균등하게 세분화하면 항상 노드 (2)와 동일한 사례 수가 합계로 구해집니다.  
+ 의사 결정 트리에서는 각 트리 수준의 지지도 합계는 부모 노드의 지지도에 대한 합계입니다. 예를 들어 1200 개의 사례가 있는 모델을 성별로 균등 하 게 나눈 이며 다음 수입-낮음, 보통 및 높음의 자식 노드인 노드 (2)의 노드 (4), (5)에 대 한 세 가지 값 균등 하 게 세분화 및 (6), 항상 노드 (2)와 동일한 사례 수입니다.  
   
 |노드 ID 및 노드 특성|지지도 개수|  
 |---------------------------------|-------------------|  
@@ -208,7 +208,7 @@ ms.locfileid: "50146228"
 |3|연속|특성 값이 연속 숫자 값이며 분산 및 표준 편차와 함께 평균으로 표시할 수 있음을 나타냅니다.|  
 |4|불연속|불연속 값으로 처리되는 숫자 또는 텍스트 값을 나타냅니다.<br /><br /> **참고** 불연속 값도 누락될 수 있지만 누락된 불연속 값은 계산을 수행할 때 다르게 처리됩니다. 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)을 참조하세요.|  
 |5|불연속화됨|특성에 불연속화 숫자 값이 포함되어 있음을 나타냅니다. 이러한 값은 불연속화 버킷을 나타내는 서식 있는 문자열이 됩니다.|  
-|6|기존|특성에 연속 숫자 값이 포함되어 있고 이러한 값이 누락 또는 유추된 데이터 및 값에 제공되었음을 나타냅니다.|  
+|6|Existing|특성에 연속 숫자 값이 포함되어 있고 이러한 값이 누락 또는 유추된 데이터 및 값에 제공되었음을 나타냅니다.|  
 |7|계수|계수를 나타내는 숫자 값을 가리킵니다.<br /><br /> 계수는 종속 변수의 값을 계산할 때 적용되는 값입니다. 예를 들어 모델에서 나이를 기반으로 소득을 예측하는 회귀 수식을 만들면 나이와 소득을 연결하는 수식에 계수가 사용됩니다.|  
 |8|득점|특성의 득점을 나타내는 숫자 값을 가리킵니다.|  
 |9|통계|회귀 변수의 통계를 나타내는 숫자 값을 가리킵니다.|  
@@ -238,7 +238,7 @@ ms.locfileid: "50146228"
   
 -   **노드 확률** 은 항상 **한계 확률**보다 작거나 같습니다.  
   
- 예를 들어 의사 결정 트리에 있는 모든 고객의 모집단을 누락된 값 없이 성별로 균등하게 나누면 자식 노드의 확률은 .5가 되어야 합니다. 그러나 각 성별 노드가 소득에 따라 균등하게 높음, 보통, 낮음으로 나뉘어졌다고 가정할 경우 각 자식 노드의 MARGINAL_PROBABILITY 점수는 항상 .33이어야 하지만 NODE_PROBABILTY 값이 해당 노드를 가리키는 모든 확률의 곱한 값이 되어 항상 MARGINAL_PROBABILITY 값보다 작습니다.  
+ 예를 들어 의사 결정 트리에 있는 모든 고객의 모집단을 누락된 값 없이 성별로 균등하게 나누면 자식 노드의 확률은 .5가 되어야 합니다. 그러나는 각 성별 노드가 동일 하 게 나뉩니다 소득 수준에서 가정-높음, 중간 및 낮음. 각 자식 노드의 MARGINAL_PROBABILITY 점수는 항상 .33이어야 하지만 NODE_PROBABILTY 값이 해당 노드를 가리키는 모든 확률의 곱한 값이 되어 항상 MARGINAL_PROBABILITY 값보다 작습니다.  
   
 |노드 수준/특성 및 값|한계 확률|노드 확률|  
 |----------------------------------------|--------------------------|----------------------|  
@@ -263,14 +263,14 @@ ms.locfileid: "50146228"
 |알고리즘 또는 모델 유형|모델 콘텐츠|마이닝 모델 쿼리|  
 |-----------------------------|-------------------|----------------------------|  
 |연결 규칙 모델|[연결 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)|[연결 모델 쿼리 예제](../../analysis-services/data-mining/association-model-query-examples.md)|  
-|클러스터링 모델|[의사 결정 트리 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[클러스터링 모델 쿼리 예제](../../analysis-services/data-mining/clustering-model-query-examples.md)|  
-|의사 결정 트리 모델|[의사 결정 트리 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[의사 결정 트리 모델 쿼리 예제](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|  
+|클러스터링 모델|[의사 결정 트리 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[클러스터링 모델 쿼리 예제](../../analysis-services/data-mining/clustering-model-query-examples.md)|  
+|의사 결정 트리 모델|[의사 결정 트리 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[의사 결정 트리 모델 쿼리 예제](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|  
 |선형 회귀 모델|[선형 회귀 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[선형 회귀 모델 쿼리 예제](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
 |로지스틱 회귀 모델|[로지스틱 회귀 분석 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)|[선형 회귀 모델 쿼리 예제](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
-|Naïve Bayes 모델|[Naive Bayes 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Naive Bayes 모델 쿼리 예제](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)|  
+|Naïve Bayes 모델|[Naive Bayes 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Naive Bayes 모델 쿼리 예제](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)|  
 |신경망 모델|[신경망 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[신경망 모델 쿼리 예제](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
 |시퀀스 클러스터링|[시퀀스 클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)|[시퀀스 클러스터링 모델 쿼리 예제](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
-|시계열 모델|[시계열 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[시계열 모델 쿼리 예제](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
+|시계열 모델|[시계열 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[시계열 모델 쿼리 예제](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
   
 ##  <a name="bkmk_Viewing"></a> 마이닝 모델 콘텐츠를 보기 위한 도구  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 모델을 찾아볼 경우 **및**에서 사용할 수 있는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Microsoft 일반 콘텐츠 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]트리 뷰어에서 정보를 볼 수 있습니다.  

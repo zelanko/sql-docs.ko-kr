@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, monitoring
@@ -20,12 +20,12 @@ ms.assetid: 830b843a-6b2a-4620-a51b-98358e9fc54b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e934557924dba81604d064d95804b8fd5fb5986d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ccba43aa28cadef1995fab001f66e1f4bebacde
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128463"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787085"
 ---
 # <a name="use-performance-objects"></a>성능 개체 사용
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에는 서비스 수행 방법을 모니터링하는 성능 개체와 카운터가 포함됩니다. 이러한 성능 개체를 사용하면 Windows 도구인 성능 모니터를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 백그라운드에서 수행하는 작업을 식별할 수 있습니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 현재 실행 중인 활성 작업 수를 확인하여 차단된 작업을 식별할 수 있습니다.  

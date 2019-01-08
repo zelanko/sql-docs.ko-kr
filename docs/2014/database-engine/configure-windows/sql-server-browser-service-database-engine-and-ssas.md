@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - services [SQL Server], security
@@ -16,12 +15,12 @@ ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 18a09a4c2183eb96b97d42b928bce0e5c34b6625
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 258ec0640a5281152fcce6faa771272c3f94de64
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075001"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641534"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>SQL Server Browser 서비스(데이터베이스 엔진 및 SSAS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser 프로그램은 Windows 서비스로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에 대해 들어오는 요청을 수신하고 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 정보를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser를 사용할 수 있습니다.  

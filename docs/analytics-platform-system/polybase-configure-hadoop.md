@@ -9,25 +9,25 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b0a49925ec0d0592adfd131e0ab994e5e8356f95
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 94c8d399f7b6ba36b48b4c5aa7f35bbd67ce6909
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236939"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527808"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Hadoop의 외부 데이터에 액세스하도록 PolyBase 구성
 
 이 문서는 PolyBase를 사용 하 여 Hadoop에서 외부 데이터를 쿼리 하는 APS 어플라이언스 방법을 설명 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 PolyBase는 HDP(Hortonworks Data Platform) 및 CDH(Cloudera Distributed Hadoop)의 두 가지 Hadoop 공급자를 지원합니다. Hadoop은 새 릴리스의 "Major.Minor.Version" 패턴을 따르며, 지원되는 주/부 릴리스 내의 모든 버전이 지원됩니다. 다음 Hadoop 공급자가 지원됩니다.
  - Linux/Windows Server에서 Hortonworks HDP 1.3  
- - Linux에서 Hortonworks HDP 2.1 - 2.6
+ - Linux에서 Hortonworks HDP 2.1-2.6
  - Windows Server에서 Hortonworks HDP 2.1 - 2.3  
  - Linux에서 Cloudera CDH 4.3  
- - Linux에서 Cloudera CDH 5.1 – 5.5, 5.9 - 5.13
+ - Cloudera CDH 5.1 5.5, 5.9-5.13 linux
 
 ### <a name="configure-hadoop-connectivity"></a>Hadoop 연결 구성
 

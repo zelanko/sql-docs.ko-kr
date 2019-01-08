@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: ccb25672-f71d-4135-b548-f50eb45d8fa5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bc66fdf7eff698cf89a02fd194d1b5affe8ed397
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: c6d507a2471b363cd55eea75e20128ef18f354dd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220123"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784275"
 ---
 # <a name="associate-a-master-data-services-database-and-web-application"></a>Master Data Services 데이터베이스와 웹 애플리케이션 연결
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스와 연결하여 웹 작업에 사용할 데이터베이스를 지정할 수 있습니다.  

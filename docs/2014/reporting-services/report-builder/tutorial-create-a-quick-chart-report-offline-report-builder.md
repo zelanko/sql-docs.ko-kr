@@ -1,5 +1,5 @@
 ---
-title: '자습서: 오프라인에서 빠른 차트 보고서 만들기(보고서 작성기) | Microsoft Docs'
+title: '자습서: 빠른 차트 보고서 만들기 오프 라인 (보고서 작성기) | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: da0f35362a329974f8044da21b125d545c7bb323
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 677469c2110bee76870e9f30ed470f894200d2ad
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091373"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52526998"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>자습서: 오프라인에서 빠른 차트 보고서 만들기(보고서 작성기)
-  이 자습서에서는 마법사를 사용하여 원형 차트를 만든 다음 차트를 어떤 식으로 수정할 수 있는지 보여 주기 위해 차트를 조금 수정합니다. 이 자습서는 다음 두 가지 방법으로 진행할 수 있습니다. 두 방법 모두 결과가 같습니다. 즉, 아래 그림의 원형 차트와 동일한 원형 차트가 만들어집니다.  
+  이 자습서에서는 마법사를 사용하여 원형 차트를 만든 다음 차트를 어떤 식으로 수정할 수 있는지 보여 주기 위해 차트를 조금 수정합니다. 이 자습서는 다음 두 가지 방법으로 진행할 수 있습니다. 두 방법 모두 동일한 결과를 원형 차트는 다음 그림과에서 같은:  
   
  !["내 첫 번째 원형 차트" 실행에서 볼](../media/rs-my1stpierunview.gif "실행 보기에서 내 첫 번째 원형 차트")  
   
@@ -42,11 +42,11 @@ ms.locfileid: "48091373"
  [XML 데이터로 원형 차트 만들기](#CreatePieChartXML)  
   
 ### <a name="using-a-transact-sql-query-that-contains-data-for-this-tutorial"></a>이 자습서에서 데이터가 포함된 Transact-SQL 쿼리 사용  
- 이 항목에서 데이터가 포함된 쿼리를 복사하여 마법사에 붙여 넣을 수 있습니다. 인스턴스의 이름이 필요 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 및 모든 데이터베이스에 대 한 읽기 전용 액세스에 대 한 충분 한 자격 증명입니다. 자습서의 데이터 세트 쿼리에서는 리터럴 데이터를 사용하지만 쿼리를 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 인스턴스에서 처리해야 보고서 데이터 세트에 필요한 메타데이터가 반환됩니다.  
+ 이 항목에서 데이터가 포함된 쿼리를 복사하여 마법사에 붙여 넣을 수 있습니다. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 인스턴스 이름과 모든 데이터베이스에 대한 읽기 전용 액세스 권한이 있는 자격 증명이 있어야 합니다. 자습서의 데이터 세트 쿼리에서는 리터럴 데이터를 사용하지만 쿼리를 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 인스턴스에서 처리해야 보고서 데이터 세트에 필요한 메타데이터가 반환됩니다.  
   
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리를 사용하는 경우 좋은 점은, 다른 모든 보고서 작성기 자습서에서도 같은 방법을 사용하므로 다른 자습서를 사용할 때 수행할 작업을 미리 알게 된다는 것입니다.  
   
- [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리는 다른 몇 가지 필수 구성 요소가 필요 합니다. 자세한 내용은 [자습서의 사전 요구 사항 &#40;보고서 작성기&#41;](../report-builder-tutorials.md)를 참조하세요.  
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리를 사용하려면 몇 가지 다른 필수 구성 요소가 있어야 합니다. 자세한 내용은 [자습서의 사전 요구 사항 &#40;보고서 작성기&#41;](../report-builder-tutorials.md)를 참조하세요.  
   
  [데이터를 포함하는 Transact-SQL 쿼리로 원형 차트 만들기](#CreatePieQueryData)  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48091373"
   
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#TwoWays)  
   
-##  <a name="CreatePieQueryData"></a> 원형 차트 만들기는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리  
+##  <a name="CreatePieQueryData"></a>[!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리로 원형 차트 만들기  
   
 #### <a name="to-create-the-pie-chart-with-a-includetsqlincludestsql-mdmd-query-that-contains-data"></a>데이터를 포함하는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리로 원형 차트를 만들려면  
   
@@ -203,7 +203,7 @@ ms.locfileid: "48091373"
   
 3.  형식 `#PERCENT{P0}` 에 대 한 합니다 **레이블 데이터** 옵션입니다.  
   
-     `{P0}` 소수 자릿수 없이 백분율을 제공 합니다. 만 입력 `#PERCENT`, 숫자가 두 소수 자릿수를 갖습니다. `#PERCENT` ;으로 계산 이나 기능을 수행 하는 키워드 도 많은 키워드가 있습니다.  
+     `{P0}`을 추가하면 백분율이 소수 자릿수 없이 표시됩니다. `#PERCENT`만 입력하면 숫자가 소수점 두 자리까지 표시됩니다. `#PERCENT`는 자동으로 계산이나 기능을 수행하는 키워드이며 이외에도 많은 키워드가 있습니다.  
   
  차트 레이블 및 범례를 사용자 지정하는 방법에 대한 자세한 내용은 [원형 차트에서 백분율 값 표시 &#40;보고서 작성기 및 SSRS&#41;](../report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) 및 [범례 항목의 텍스트 변경 #40;보고서 작성기 및 SSRS&#41;](../report-design/chart-legend-change-item-text-report-builder.md)를 참조하세요.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "48091373"
 ##  <a name="WhatsNext"></a> 다음 단계  
  보고서 작성기에서 첫 번째 보고서를 만들었으므로 이제 다른 자습서를 수행하고 고유의 데이터로 보고서를 만들 수 있습니다. 보고서 작성기를 실행 하려면 사용 하 여 데이터베이스와 같은 데이터 원본에 액세스할 수 있는 권한이 필요는 *연결 문자열*, 실제로 데이터 원본에 연결 하는 합니다. 시스템 관리자가 연결 문자열 정보를 가지고 있으며 사용자에 대해 데이터 원본 연결을 설정할 수 있습니다.  
   
- 다른 자습서를 진행 하려면 인스턴스의 이름을 알아야 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 및 모든 데이터베이스에 대 한 읽기 전용 액세스에 대 한 충분 한 자격 증명입니다. 데이터베이스 액세스 권한은 시스템 관리자가 대신 설정할 수 있습니다.  
+ 다른 자습서를 진행하려면 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 인스턴스 이름과 모든 데이터베이스에 대한 읽기 전용 액세스 권한이 있는 자격 증명만 있으면 됩니다. 데이터베이스 액세스 권한은 시스템 관리자가 대신 설정할 수 있습니다.  
   
  마지막으로, 보고서를 보고서 서버나 보고서 서버와 통합된 SharePoint 사이트에 저장하려면 URL 및 해당 권한이 있어야 합니다. 만든 보고서를 사용자의 컴퓨터에서 직접 실행할 수도 있지만 보고서 서버나 SharePoint 사이트에서 실행하면 더 많은 기능을 사용할 수 있습니다. 자신이 만든 보고서나 다른 사용자의 보고서를 보고서가 게시된 보고서 서버나 SharePoint 사이트에서 실행할 수 있는 권한이 있어야 합니다. 시스템 관리자에게 액세스 권한을 요청하십시오.  
   

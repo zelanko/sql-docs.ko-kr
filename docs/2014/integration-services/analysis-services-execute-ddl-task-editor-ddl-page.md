@@ -15,12 +15,12 @@ ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e8f07c94b986c697721188a50e2ec5d478ac0b1b
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: a4ebac7cac4a62dde5c89aa3e37146c78eb79d19
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146859"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52535429"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Analysis Services DDL 실행 태스크 편집기(DDL 페이지)
   **Analysis Services DDL 실행 태스크 편집기** 대화 상자의 **DDL** 페이지를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트 또는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에 대한 연결을 지정하고 DDL(데이터 정의 언어) 문의 원본에 대한 정보를 제공할 수 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "50146859"
  **대량 삽입 태스크 편집기**  
  목록에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트 또는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭한 다음 **Analysis Services 연결 관리자 추가** 대화 상자를 사용하여 새 연결을 만듭니다.  
   
- **관련 항목:** [Analysis Services 연결 관리자 추가 대화 상자 UI 참조](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Analysis Services 연결 관리자](connection-manager/analysis-services-connection-manager.md)  
+ **관련된 항목:** [Analysis Services 연결 관리자 대화 상자 UI 참조 추가](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Analysis Services 연결 관리자](connection-manager/analysis-services-connection-manager.md)  
   
  **SourceType**  
  DDL 문의 원본 유형을 지정합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
@@ -46,19 +46,19 @@ ms.locfileid: "50146859"
   
 ### <a name="sourcetype--direct-input"></a>SourceType = 직접 입력  
  **원본**  
- DDL 문을 입력하거나 줄임표 **(…)** 를 클릭한 다음 **DDL 문** 대화 상자에 문을 입력합니다.  
+ DDL 문을 입력하거나 줄임표 **(...)** 를 클릭한 다음, **DDL 문** 대화 상자에 명령문을 입력합니다.  
   
 ### <a name="sourcetype--file-connection"></a>SourceType = 파일 연결  
  **원본**  
  목록에서 파일 연결을 선택하거나 \<**새 연결...**>을 클릭한 다음 **파일 연결 관리자** 대화 상자를 사용하여 새 연결을 만듭니다.  
   
- **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md)  
+ **관련된 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md)  
   
 ### <a name="sourcetype--variable"></a>SourceType = 변수  
  **원본**  
  목록에서 변수를 선택하거나 \<**새 변수...**>를 클릭한 다음 **변수 추가** 대화 상자를 사용하여 새 변수를 만듭니다.  
   
- **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)  
+ **관련된 항목:** [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   

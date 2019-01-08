@@ -10,12 +10,12 @@ ms.assetid: 98c36715-4195-482e-a4a3-d93ff65b75f1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 63fe1debc88ef1ce66571bc048cd104f93871aa1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ae1c272603e410a45e9e6c4d51dab23d34c46a0
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226123"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52517389"
 ---
 # <a name="full-text-search-ddl-functions-stored-procedures-and-views"></a>전체 텍스트 검색 DDL, 함수, 저장 프로시저 및 뷰
   속성 검색 기능을 포함하여 전체 텍스트 검색을 지원하는 Transact-SQL 문 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 개체를 나열합니다.  

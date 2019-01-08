@@ -15,12 +15,12 @@ ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a792063b76beebfba4d0d7179e5bc5ed394d3f6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9fa024e9e744fd955e4ccc323919cb22a97b7dd3
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207753"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52519870"
 ---
 # <a name="create-a-new-plan-guide"></a>새 계획 지침 만들기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 계획 지침을 만들 수 있습니다. 계획 지침은 쿼리 힌트나 정해진 쿼리 계획을 쿼리에 연결하여 쿼리 최적화에 영향을 미칩니다. 계획 지침에서 최적화하려는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 지정하고 사용할 쿼리 힌트가 들어 있는 OPTION 절이나 쿼리를 최적화하는 데 사용할 특정 쿼리 계획을 지정합니다. 쿼리가 실행하면 쿼리 최적화 프로그램이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 계획 지침과 비교하여 런타임에 쿼리에 OPTION 절을 추가하거나 지정된 쿼리 계획을 사용합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "48207753"
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
--   sp_create_plan_guide 인수는 표시된 순서대로 제공해야 합니다. 매개 변수 값을 제공 하는 경우 `sp_create_plan_guide`, 이름을 명시적으로 지정 해야 하는 모든 매개 변수 또는 전혀 나타나지 않습니다. 예를 들어 `@name =`을 지정한 경우 `@stmt =`, `@type =` 등도 지정해야 합니다. 마찬가지로, 경우 `@name =` 을 생략 하 고 유일한 매개 변수 값을 제공한 경우 나머지 매개 변수 이름도 생략 해야, 하 고 해당 값만 제공 합니다. 인수 이름은 구문 이해를 위한 설명 용도로만 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 지정된 매개 변수 이름과 해당 이름이 사용된 위치의 매개 변수 이름이 일치하는지 확인하지 않습니다.  
+-   sp_create_plan_guide 인수는 표시된 순서대로 제공해야 합니다. `sp_create_plan_guide` 매개 변수 값을 제공하는 경우 모든 매개 변수 이름을 명시적으로 지정하거나 모두 지정하지 않아야 합니다. 예를 들어 `@name =`을 지정한 경우 `@stmt =`, `@type =` 등도 지정해야 합니다. 마찬가지로 `@name =`을 생략하고 매개 변수 값만 제공한 경우 나머지 매개 변수 이름도 생략하고 해당 값만 제공해야 합니다. 인수 이름은 구문 이해를 위한 설명 용도로만 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 지정된 매개 변수 이름과 해당 이름이 사용된 위치의 매개 변수 이름이 일치하는지 확인하지 않습니다.  
   
 -   같은 쿼리 및 일괄 처리나 모듈에 대해 두 개 이상의 OBJECT 또는 SQL 계획 지침을 만들 수 있습니다. 그러나 지정된 시간에 한 개의 계획 지침만 사용할 수 있습니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48207753"
   
 1.  더하기 기호를 클릭하여 계획 지침을 만들 데이터베이스를 확장한 다음 더하기 기호를 클릭하여 **프로그래밍 기능** 폴더를 확장합니다.  
   
-2.  **계획 지침** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 계획 지침...** 을 선택합니다.  
+2.  마우스 오른쪽 단추로 클릭 합니다 **계획 지침** 선택한 폴더 **새 계획 지침...** .  
   
 3.  **새 계획 지침** 대화 상자의 **이름** 입력란에 계획 지침 이름을 입력합니다.  
   

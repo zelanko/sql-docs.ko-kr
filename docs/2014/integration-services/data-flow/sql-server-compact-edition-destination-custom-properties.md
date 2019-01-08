@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b66e93fe-ce62-401b-a31f-619c7b8b1f3e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff10a1fe85ec1a524fa51d46693451791ec989ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a09731977a66e72060ea7e76cf0730e094be20ed
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134763"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790795"
 ---
 # <a name="sql-server-compact-edition-destination-custom-properties"></a>SQL Server Compact Edition 대상 사용자 지정 속성
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 대상에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
@@ -32,6 +31,6 @@ ms.locfileid: "48134763"
  자세한 내용은 [SQL Server Compact Edition 대상](sql-server-compact-edition-destination.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [Common Properties](../common-properties.md)  
+ [공용 속성](../common-properties.md)  
   
   

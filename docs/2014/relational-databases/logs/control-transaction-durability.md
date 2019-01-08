@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 05/19/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - delayed durability
@@ -13,12 +13,12 @@ ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1ff62ed93210521c9bc5499c5518edae7cf7d2ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 7e217aedd1c6d3b2c58d946ed455bf9398cd7798
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147171"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818355"
 ---
 # <a name="control-transaction-durability"></a>트랜잭션 내구성 제어
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션 커밋은 완전 내구성( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본값)이 있거나 지연된 내구성(느린 커밋이라고도 함)이 있습니다.  
@@ -91,14 +91,14 @@ ms.locfileid: "48147171"
  DBA는 다음 문을 사용하여 사용자가 데이터베이스에서 지연된 트랜잭션 내구성을 사용할 수 있는지 여부를 제어할 수 있습니다. ALTER DATABASE를 사용하여 지연된 내구성 설정을 지정해야 합니다.  
   
 ```tsql  
-ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
+ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
 ```  
   
  `DISABLED`  
  [기본값] 이 설정을 사용하면 커밋 수준 설정(DELAYED_DURABILITY=[ON | OFF])에 상관없이 데이터베이스에 커밋된 모든 트랜잭션이 완전 내구성을 가집니다. 저장 프로시저를 변경하고 다시 컴파일할 필요가 없습니다. 따라서 지연된 내구성으로 인해 데이터가 위험에 노출되지 않습니다.  
   
  `ALLOWED`  
- 이 설정을 사용하면 각 트랜잭션의 내구성이 트랜잭션 수준에서 결정됩니다. 즉, DELAYED_DURABILITY = { *OFF* | ON }에 의해 결정됩니다. 자세한 내용은 [Atomic 블록 수준 제어 – 고유하게 컴파일된 저장 프로시저](control-transaction-durability.md#compiledproccontrol) 및 [COMMIT 수준 제어 – Transact-SQL](control-transaction-durability.md#bkmk_t-sqlcontrol) 을 참조하세요.  
+ 이 설정을 사용하면 각 트랜잭션의 내구성이 트랜잭션 수준에서 결정됩니다. 즉, DELAYED_DURABILITY = { *OFF* | ON }에 의해 결정됩니다. 자세한 내용은 [Atomic 블록 수준 제어 – 고유하게 컴파일된 저장 프로시저](control-transaction-durability.md#compiledproccontrol) 및 [COMMIT 수준 제어 – Transact-SQL](control-transaction-durability.md#bkmk_t-sqlcontrol)을 참조하세요.  
   
  `FORCED`  
  이 설정을 사용하면 데이터베이스에 커밋되는 모든 트랜잭션이 지연된 내구성을 가집니다. 트랜잭션이 완전 내구성(DELAYED_DURABILITY = OFF)을 지정하는지 여부에 상관없이 트랜잭션은 지연된 내구성이 있습니다. 이 설정은 지연된 트랜잭션 내구성이 데이터베이스에 유용하고 애플리케이션 코드를 변경하지 않으려는 경우에 유용합니다.  
@@ -119,19 +119,19 @@ DELAYED_DURABILITY = { OFF | ON }
  **코드 예:**  
   
 ```tsql  
-CREATE PROCEDURE <procedureName> …  
+CREATE PROCEDURE <procedureName> ...  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
 (  
     DELAYED_DURABILITY = ON,  
     TRANSACTION ISOLATION LEVEL = SNAPSHOT,  
     LANGUAGE = N'English'  
-    …  
+    ...  
 )  
 END  
 ```  
   
-### <a name="table-1-durability-in-atomic-blocks"></a>테이블 1; ATOMIC 블록의 내구성  
+### <a name="table-1-durability-in-atomic-blocks"></a>테이블 1: ATOMIC 블록의 내구성  
   
 |ATOMIC 블록 내구성 옵션|기존 트랜잭션 없음|처리 중인 트랜잭션(완전 또는 지연된 내구성이 있음)|  
 |------------------------------------|-----------------------------|---------------------------------------------------------|  
@@ -159,8 +159,8 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 |--------------------------------------|-------------------------------------|------------------------------------|-----------------------------------|  
 |`DELAYED_DURABILITY = OFF` 데이터베이스 수준 트랜잭션|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 지연된 내구성을 가집니다.|  
 |`DELAYED_DURABILITY = ON` 데이터베이스 수준 트랜잭션|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 지연된 내구성을 가집니다.|트랜잭션이 지연된 내구성을 가집니다.|  
-|`DELAYED_DURABILITY = OFF` 데이터베이스 간 트랜잭션 또는 분산된 트랜잭션.|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|  
-|`DELAYED_DURABILITY = ON` 데이터베이스 간 트랜잭션 또는 분산된 트랜잭션.|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|  
+|`DELAYED_DURABILITY = OFF` 데이터베이스 간 트랜잭션 또는 분산 트랜잭션|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|  
+|`DELAYED_DURABILITY = ON` 데이터베이스 간 트랜잭션 또는 분산 트랜잭션|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|트랜잭션이 완전 내구성을 가집니다.|  
   
 ## <a name="how-to-force-a-transaction-log-flush"></a>트랜잭션 로그를 강제로 플러시하는 방법  
  디스크에 트랜잭션 로그를 강제로 플러시하는 두 가지 방법이 있습니다.  

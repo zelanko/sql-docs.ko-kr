@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
@@ -20,12 +19,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2dd079ec5abc9ef0ef8600f882236d44dd45b1b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c84d808b84a70ae9d70eff308351ff1e7f3df8e0
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086493"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815575"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>복제 모니터로 성능 모니터링
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터를 사용하여 다음 방법으로 트랜잭션 복제 및 병합 복제의 성능을 모니터링할 수 있습니다.  
@@ -74,9 +73,9 @@ ms.locfileid: "48086493"
   
 -   트랜잭션 복제의 경우 성능 품질은 대기 시간 임계값으로 결정됩니다. 임계값을 설정하지 않으면 값이 표시되지 않습니다. 다음 표에서는 임계값과 성능 품질 값의 상관 관계를 나타냅니다. 예를 들어 임계값이 60초로 설정되고 실제 대기 시간이 30초이면 대기 시간은 임계값의 50%이므로 값은 좋음이 됩니다.  
   
-    |최고|좋음|보통|나쁨|심각|  
+    |최고|좋음|보통|나쁨|위험|  
     |---------------|----------|----------|----------|--------------|  
-    |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
+    |0 - 34%|35 - 59%|60 - 84%|85 - 99%|100% +|  
   
 -   병합 복제의 경우 성능 품질은 임계값과 관련이 없습니다. 행 처리 임계값은 **성능 심각** 값이 **상태** 열에 표시되는지 여부를 확인합니다. 성능 품질은 개별 구독 성능과 게시에 대한 구독(연결 유형이 전화 접속 또는 LAN 등으로 동일한 구독)의 평균 기록 성능을 비교하여 결정됩니다. 복제 모니터는 같은 유형의 연결별로 50개 이상의 변경 사항을 5번 동기화한 후에 값을 표시합니다. 50개 이상 변경 내용이 포함된 동기화가 5회 미만이거나 최신 동기화의 변경 내용 수가 50개 미만이면 복제 모니터에서 값을 표시하지 않습니다.  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48086493"
   
     |최고|좋음|보통|나쁨|  
     |---------------|----------|----------|----------|  
-    |151+%|76 – 150%|26 – 75%|0 – 25%|  
+    |151+%|76 - 150%|26 - 75%|0 - 25%|  
   
  구독 정보를 표시하는 방법에 대한 자세한 내용은 [구독에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)을 참조하세요.  
   
@@ -97,8 +96,8 @@ ms.locfileid: "48086493"
 ## <a name="view-transactions-and-delivery-time-for-transactional-replication"></a>트랜잭션 복제에 대한 트랜잭션 및 배달 시간 보기  
  트랜잭션 복제의 경우 복제 모니터는 구독자로 아직 배포되지 않은 배포 데이터베이스의 트랜잭션 수와 이러한 트랜잭션에 대한 예상 배포 시간에 대한 정보를 표시합니다. 자세한 내용은 [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](view-information-and-perform-tasks-for-subscription-agents.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 모니터링](../monitoring-replication.md)   
- [복제 모니터에 임계값 및 경고 설정](set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)  
   
   
