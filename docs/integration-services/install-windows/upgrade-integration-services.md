@@ -16,12 +16,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: e831a5adc9142a339ee633592ccb98c8ff9f1462
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d07d683b217b4f4eff6c9cfd1c6275ab4a9e5ca1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642360"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214892"
 ---
 # <a name="upgrade-integration-services"></a>Integration Services 업그레이드
   [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 이상이 현재 컴퓨터에 설치되어 있으면 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]로 업그레이드할 수 있습니다.  
@@ -36,16 +36,16 @@ ms.locfileid: "51642360"
 ## <a name="before-upgrading-integration-services"></a>Integration Services를 업그레이드하기 전에  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하기 전에 먼저 업그레이드 관리자를 실행하는 것이 좋습니다. 업그레이드 관리자는 기존 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 사용되는 새로운 패키지 형식으로 마이그레이션하는 경우 발생할 수 있는 문제를 보고합니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  DTS(데이터 변환 서비스) 패키지의 마이그레이션 또는 실행을 지원하는 기능은 SQL Server 2012에서 더 이상 사용되지 않습니다. 다음 DTS 기능이 더 이상 사용되지 않습니다.  
->   
+> 
 >  -   DTS 런타임  
 > -   DTS API  
 > -   DTS 패키지를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
 > -   다음 DTS 패키지 유지 관리 지원: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 > -   DTS 2000 패키지 실행 태스크  
 > -   DTS 패키지의 업그레이드 관리자 검색입니다.  
->   
+> 
 >  지원되지 않는 다른 기능에 대한 자세한 내용은 [SQL Server 2016에서 지원되지 않는 Integration Services 기능](https://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7)을 참조하세요.  
   
 ## <a name="upgrading-integration-services"></a>Integration Services 업그레이드  

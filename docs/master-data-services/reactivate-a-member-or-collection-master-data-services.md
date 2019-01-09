@@ -5,8 +5,7 @@ ms.date: 04/01/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services], reactivating
@@ -19,12 +18,12 @@ ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 00453cc3aacdaf644f1009c1564745c0b4a9f402
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 85653036f4e5348e7bb9d53959b0d6957564f18a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412450"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783055"
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>멤버 또는 컬렉션 다시 활성화(Master Data Services)
 
@@ -36,7 +35,7 @@ ms.locfileid: "52412450"
   
 -   MDS [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]에서 삭제된 멤버  
   
--   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에서 삭제된 멤버  
+-   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션에서 삭제된 멤버  
   
  멤버를 다시 활성화하면 계층 및 컬렉션에서 해당 특성 및 멤버 자격이 복원됩니다.  
   

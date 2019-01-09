@@ -1,7 +1,7 @@
 ---
 title: 데이터베이스 마스터 키 만들기 | Microsoft 문서
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: vanto
@@ -14,45 +14,35 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e7e908f096b923deb54dc39c7ef73c3a78740b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3034dc76a64e25b614b1871247369214199c36b
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650520"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997495"
 ---
 # <a name="create-a-database-master-key"></a>데이터베이스 마스터 키 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 데이터베이스 마스터 키를 만드는 방법에 대해 설명합니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 데이터베이스 마스터 키를 만드는 방법에 대해 설명합니다.
   
- **항목 내용**  
+## <a name="security"></a>보안  
   
--   **시작하기 전 주의 사항:**  
+### <a name="permissions"></a>Permissions  
+데이터베이스에 대한 CONTROL 권한이 필요합니다.  
   
-     [보안](#Security)  
+## <a name="using-transact-sql"></a>Transact-SQL 사용  
   
--   [Transact-SQL을 사용하여 데이터베이스 마스터 키를 만들려면](#TsqlProcedure)  
+### <a name="to-create-a-database-master-key"></a>데이터베이스 마스터 키를 만들려면  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+1. 데이터베이스에 저장되는 마스터 키의 복사본을 암호화하기 위한 암호를 선택합니다.  
   
-###  <a name="Security"></a> 보안  
+2. **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-####  <a name="Permissions"></a> Permissions  
- 데이터베이스에 대한 CONTROL 권한이 필요합니다.  
+3. 표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+4. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
-#### <a name="to-create-a-database-master-key"></a>데이터베이스 마스터 키를 만들려면  
-  
-1.  데이터베이스에 저장되는 마스터 키의 복사본을 암호화하기 위한 암호를 선택합니다.  
-  
-2.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
-  
-3.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
-  
-4.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
-  
-    ```  
+    ```sql
     -- Creates a database master key for the "AdventureWorks2012" database.   
     -- The key is encrypted using the password "23987hxJ#KL95234nl0zBe."  
     USE AdventureWorks2012;  
@@ -62,5 +52,3 @@ ms.locfileid: "47650520"
     ```  
   
  자세한 내용은 [CREATE MASTER KEY&#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)를 참조하세요.  
-  
-  

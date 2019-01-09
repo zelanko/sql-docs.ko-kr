@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: dc23d80e-9778-44a8-a54e-e81c2ab6e96a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ab99ab902a45eb8c07b9fd7f8ae22aa3e38e4f57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29b82e87efd64265a22ef6a016640f8e723fb8f5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808481"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52769525"
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>버전 관리 기능 영역(마스터 데이터 관리자)
 
@@ -53,6 +52,6 @@ ms.locfileid: "47808481"
  [트랜잭션 되돌리기&#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [마스터 데이터 관리자 웹 응용 프로그램](../master-data-services/master-data-manager-web-application.md)  
+ [마스터 데이터 관리자 웹 애플리케이션](../master-data-services/master-data-manager-web-application.md)  
   
   

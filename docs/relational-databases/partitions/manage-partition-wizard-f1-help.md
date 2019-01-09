@@ -21,15 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - wizards [SQL Server Management Studio] See Manage Partition Wizard
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 61cf0d2acb9dbe2e2f5a9ec68be92cecf16ce22b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0bcc98052bf076515ff3d961fee24e6550830118
+ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731681"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414168"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>파티션 관리 마법사 F1 도움말
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ ms.locfileid: "47731681"
 ##  <a name="NewJob"></a> 새 작업 일정 페이지  
  **새 작업 일정** 페이지를 사용하여 일정 속성을 확인하고 변경할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업에 대해 원하는 일정 유형을 선택합니다.  
   
  **이름**  
@@ -249,7 +249,7 @@ ms.locfileid: "47731681"
 ### <a name="one-time-schedule-types-options"></a>일회 일정 유형 옵션  
  작업을 한 번 실행하도록 예약할 경우 미래의 날짜와 시간을 선택해야 합니다.  
   
- **날짜**  
+ **Date**  
  작업을 실행할 날짜를 선택합니다.  
   
  **Time**  
@@ -269,7 +269,7 @@ ms.locfileid: "47731681"
 ##  <a name="Progress"></a> 진행률 페이지  
  **진행률** 페이지를 사용하여 **파티션 관리 마법사**의 동작에 대한 상태 정보를 모니터링할 수 있습니다. 마법사에서 선택한 옵션에 따라 **진행률** 페이지에 하나 이상의 동작이 포함될 수 있습니다. 맨 위에 있는 상자에는 전반적인 마법사 상태와 수신된 상태, 오류 및 경고 메시지의 수가 표시됩니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **세부 정보**  
  동작, 상태 및 마법사가 수행한 동작의 결과로 반환된 모든 메시지를 제공합니다.  
   

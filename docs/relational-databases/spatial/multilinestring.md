@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5190e1b6fdcd83719b84142bee49dff55c824c55
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 04fdc9eb5b22a9c3f88ab635c456e3fa81cf88e4
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018238"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979538"
 ---
 # <a name="multilinestring"></a>MultiLineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,29 +47,29 @@ ms.locfileid: "51018238"
 ### <a name="accepted-instances"></a>허용되는 인스턴스  
  **MultiLineString** 인스턴스는 비어 있거나 허용되는 **LineString** 인스턴스로만 구성되어 있어야 허용됩니다. 허용되는 **LineString** 인스턴스에 대한 자세한 내용은 [LineString](../../relational-databases/spatial/linestring.md)을 참조하십시오. 다음은 허용되는 **MultiLineString** 인스턴스의 예입니다.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
 DECLARE @g2 geometry = 'MULTILINESTRING((1 1, 3 5), (-5 3, -8 -2))';  
 DECLARE @g3 geometry = 'MULTILINESTRING((1 1, 5 5), (1 3, 3 1))';  
 DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';  
 ```  
   
- 다음 예제에서는 두 번째 `System.FormatException` LineString **인스턴스가 유효하지 않으므로** 이 발생합니다.  
+다음 예제에서는 두 번째 `System.FormatException` LineString **인스턴스가 유효하지 않으므로** 이 발생합니다.  
   
-```  
+```sql  
 DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';  
 ```  
   
 ### <a name="valid-instances"></a>유효한 인스턴스  
- **MultiLineString** 인스턴스는 다음 조건을 충족해야 유효합니다.  
+**MultiLineString** 인스턴스는 다음 조건을 충족해야 유효합니다.  
   
 1.  **MultiLineString** 인스턴스를 구성하는 모든 인스턴스가 유효한 **LineString** 인스턴스여야 합니다.  
   
 2.  **LineString** 인스턴스를 구성하는 두 **MultiLineString** 인스턴스가 일정 간격으로 겹치면 안 됩니다. **LineString** 인스턴스는 제한된 수의 점에서 자체적으로 또는 다른 **LineString** 인스턴스와 교차하는 것만 가능합니다.  
   
- 다음 예에서는 유효한 **MultiLineString** 인스턴스 세 개와 유효하지 않은 **MultiLineString** 인스턴스 하나를 보여 줍니다.  
+다음 예에서는 유효한 **MultiLineString** 인스턴스 세 개와 유효하지 않은 **MultiLineString** 인스턴스 하나를 보여 줍니다.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
 DECLARE @g2 geometry = 'MULTILINESTRING((1 1, 3 5), (-5 3, -8 -2))';  
 DECLARE @g3 geometry = 'MULTILINESTRING((1 1, 5 5), (1 3, 3 1))';  
@@ -77,19 +77,19 @@ DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- `@g4` 는 두 번째 **LineString** 인스턴스가 일정 간격으로 첫 번째 **LineString** 인스턴스와 겹치므로 유효하지 않습니다. 즉, 이 두 인스턴스는 무한한 점에서 접합니다.  
+`@g4` 는 두 번째 **LineString** 인스턴스가 일정 간격으로 첫 번째 **LineString** 인스턴스와 겹치므로 유효하지 않습니다. 즉, 이 두 인스턴스는 무한한 점에서 접합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 SRID 0으로 두 개의 `geometry``MultiLineString` 요소를 포함하는 단순한 `LineString` 인스턴스를 만듭니다.  
+다음 예제에서는 SRID 0으로 두 개의 `geometry``MultiLineString` 요소를 포함하는 단순한 `LineString` 인스턴스를 만듭니다.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');  
 ```  
   
- 다른 SRID로 이 인스턴스를 인스턴스화하려면 `STGeomFromText()` 또는 `STMLineStringFromText()`를 사용합니다. 또는 다음 예와 같이 `Parse()` 를 사용한 다음 SRID를 수정할 수도 있습니다.  
+다른 SRID로 이 인스턴스를 인스턴스화하려면 `STGeomFromText()` 또는 `STMLineStringFromText()`를 사용합니다. 또는 다음 예와 같이 `Parse()` 를 사용한 다음 SRID를 수정할 수도 있습니다.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');  
 SET @g.STSrid = 13;  

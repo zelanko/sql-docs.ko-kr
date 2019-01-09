@@ -18,12 +18,12 @@ ms.assetid: a70e2ee6-59b0-4543-b883-e9cbae6199be
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 86d21ac71916d492e058cfd3f1193b0e6b9d8979
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20bcf2732ddc71ad218f97715266cc70b77df6f2
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780001"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589177"
 ---
 # <a name="grant-asymmetric-key-permissions-transact-sql"></a>GRANT 비대칭 키 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ GRANT { permission  [ ,...n ] }
  *permission*  
  비대칭 키에 부여할 수 있는 사용 권한을 지정합니다. 아래와 같습니다.  
   
- ON ASYMMETRIC KEY **::***asymmetric_key_name*  
+ ON ASYMMETRIC KEY **::**_asymmetric_key_name_  
  사용 권한을 부여할 비대칭 키를 지정합니다. 범위 한정자 "::"이 필요합니다.  
   
  *database_principal*  

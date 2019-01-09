@@ -14,20 +14,20 @@ ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 48483caed9b6056fb87183210af0c2ba3014067f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0cc8fb9f921c80d77094f19c561d9d428520199a
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667472"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046443"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>오류 및 이벤트 참조(데이터베이스 엔진)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   이 섹션에는 추가 설명이 필요한 선택된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 오류 메시지가 포함되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [데이터베이스 엔진 이벤트 및 오류](../../relational-databases/errors-events/database-engine-events-and-errors.md)  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] 오류 메시지의 형식을 설명하고 오류 메시지를 보는 방법 및 오류 메시지를 응용 프로그램으로 반환하는 방법에 대해 설명합니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 오류 메시지의 형식을 설명하고 오류 메시지를 보는 방법 및 오류 메시지를 애플리케이션으로 반환하는 방법에 대해 설명합니다.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 오류 메시지, 가능한 원인, 문제 해결을 위해 수행할 수 있는 동작에 대해 설명합니다.  
   

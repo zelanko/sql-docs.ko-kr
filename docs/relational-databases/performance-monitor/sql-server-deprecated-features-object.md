@@ -5,7 +5,7 @@ ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 07fe67c8d52f69f018acb68f64782be4af0c6c00
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9fcb107c5ae7a22fa2705fda0580e0284940f694
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523339"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380694"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, Deprecated Features 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |CREATE TRIGGER WITH APPEND|WITH APPEND 절이 포함된 CREATE TRIGGER 문이 발견되었습니다. 대신 전체 트리거를 다시 만들어야 합니다. DDL 문에서 사용할 때마다 한 번씩 발생합니다.|  
 |CREATE_DROP_DEFAULT|CREATE DEFAULT 또는 DROP DEFAULT 구문이 발견되었습니다. CREATE TABLE 또는 ALTER TABLE에 DEFAULT 옵션을 사용하여 명령을 다시 작성해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |CREATE_DROP_RULE|CREATE RULE 구문이 발견되었습니다. 제약 조건을 사용하여 명령을 다시 작성해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
-|데이터 형식: text, ntext 또는 image|**text**, **ntext**또는 **image** 데이터 형식이 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text**, **ntext**및 **image** 데이터 형식 구문을 제거하도록 응용 프로그램을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
+|데이터 형식: text, ntext 또는 image|**text**, **ntext**또는 **image** 데이터 형식이 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text**, **ntext**및 **image** 데이터 형식 구문을 제거하도록 애플리케이션을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 ||데이터베이스가 호환성 수준 80으로 변경된 총 횟수입니다. 다음 릴리스 전에 데이터베이스 및 애플리케이션을 업그레이드하도록 계획합니다. 또한 호환성 수준이 80인 데이터베이스가 시작될 때도 발생합니다.|  
 |데이터베이스 호환성 수준 100, 110 120|데이터베이스 호환성 수준이 변경된 총 횟수입니다. 이후 릴리스로 데이터베이스 및 애플리케이션을 업그레이드하도록 계획합니다. 또한 사용되지 않는 호환성 수준의 데이터베이스가 시작될 때도 발생합니다.|  
 |DATABASE_MIRRORING|데이터베이스 미러링 기능에 대한 참조가 발견되었습니다. Always On 가용성 그룹으로 업그레이드하도록 계획하거나 Always On 가용성 그룹을 지원하지 않는 SQL Server 버전을 실행 중인 경우 로그 전달로 마이그레이션하도록 계획하세요.|  
@@ -129,11 +129,11 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|사용되지 않는 sys.numbered_procedure_parameters에 대한 참조가 발견되었습니다. 사용하지 마십시오. 컴파일마다 한 번씩 발생합니다.|  
 |numbered_procedures|사용되지 않는 sys.numbered_procedures에 대한 참조가 발견되었습니다. 사용하지 마십시오. 컴파일마다 한 번씩 발생합니다.|  
-|이전 스타일의 RAISEERROR|더 이상 사용되지 않는 RAISERROR(형식: RAISERROR 정수 문자열) 구문이 발견되었습니다. 현재 RAISERROR 구문을 사용하여 문을 다시 작성해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
+|이전 스타일의 RAISEERROR|사용되지 않는 RAISERROR(형식: RAISERROR 정수 문자열) 구문이 발견되었습니다. 현재 RAISERROR 구문을 사용하여 문을 다시 작성해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |임시 연결에 대한 OLEDB|SQLOLEDB는 지원되지 않는 공급자입니다. 임시 연결에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용해야 합니다.|  
 |PERMISSIONS|PERMISSIONS 내장 함수에 대한 참조가 발견되었습니다. 대신 sys.fn_my_permissions를 쿼리해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |ProcNums|사용되지 않는 ProcNums 구문이 발견되었습니다. 문을 다시 작성하여 참조를 제거해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
-|READTEXT|READTEXT 구문이 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text** 데이터 형식 구문을 제거하도록 응용 프로그램을 다시 작성하세요. 쿼리마다 한 번씩 발생합니다.|  
+|READTEXT|READTEXT 구문이 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text** 데이터 형식 구문을 제거하도록 애플리케이션을 다시 작성하세요. 쿼리마다 한 번씩 발생합니다.|  
 |RESTORE DATABASE 또는 LOG WITH DBO_ONLY|RESTORE ... … WITH DBO_ONLY 구문이 발견되었습니다. RESTORE 사용 ... RESTRICTED_USER를 사용하십시오.|  
 |RESTORE DATABASE 또는 LOG WITH MEDIAPASSWORD|RESTORE ... WITH MEDIAPASSWORD 구문이 발견되었습니다. WITH MEDIAPASSWORD는 약한 보안 기능을 제공하므로 제거되어야 합니다.|  
 |RESTORE DATABASE 또는 LOG WITH PASSWORD|RESTORE ... WITH PASSWORD 구문이 발견되었습니다. WITH PASSWORD는 약한 보안 기능을 제공하므로 제거되어야 합니다.|  
@@ -266,10 +266,10 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sysusers|sysusers에 대한 참조가 발견되었습니다. 대신 sys.database_principals를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |WITH가 없는 테이블 힌트|WITH 키워드 없이 테이블 힌트를 사용한 문이 발견되었습니다. WITH 단어를 포함하도록 문을 수정해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |Text in row 테이블 옵션|'text in row' 테이블 옵션에 대한 참조가 발견되었습니다. 대신 sp_tableoption 'large value types out of row'를 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
-|TEXTPTR|TEXTPTR 함수에 대한 참조가 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text**, **ntext**및 **image** 데이터 형식 구문을 제거하도록 응용 프로그램을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
-|TEXTVALID|TEXTVALID 함수에 대한 참조가 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text**, **ntext**및 **image** 데이터 형식 구문을 제거하도록 응용 프로그램을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
+|TEXTPTR|TEXTPTR 함수에 대한 참조가 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text**, **ntext**및 **image** 데이터 형식 구문을 제거하도록 애플리케이션을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
+|TEXTVALID|TEXTVALID 함수에 대한 참조가 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text**, **ntext**및 **image** 데이터 형식 구문을 제거하도록 애플리케이션을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |timestamp|사용되지 않는 **timestamp** 데이터 형식이 DDL 문에서 발견된 총 횟수입니다. 대신 **rowversion** 데이터 형식을 사용해야 합니다.|  
-|UPDATETEXT 또는 WRITETEXT|UPDATETEXT 또는 WRITETEXT 문이 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text**, **ntext**및 **image** 데이터 형식 구문을 제거하도록 응용 프로그램을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
+|UPDATETEXT 또는 WRITETEXT|UPDATETEXT 또는 WRITETEXT 문이 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text**, **ntext**및 **image** 데이터 형식 구문을 제거하도록 애플리케이션을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |USER_ID|USER_ID 함수에 대한 참조가 발견되었습니다. 대신 DATABASE_PRINCIPAL_ID 함수를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |연결된 서버에 OLEDB 사용||  
 |VarDecimal 저장소 형식|**vardecimal** 저장소 형식이 사용되었습니다. 대신 데이터 압축을 사용해야 합니다.|  

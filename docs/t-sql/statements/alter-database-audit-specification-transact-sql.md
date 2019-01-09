@@ -20,12 +20,12 @@ ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 56fbd27b9e5e4d4e760743d94948540f0f6d87ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 622e6be1e798569de5184333144ff53e3e7d80a6
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667131"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979589"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DATABASE AUDIT SPECIFICATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,11 +93,11 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
  만들어진 데이터베이스 감사 사양은 CONTROL SERVER, ALTER ANY DATABASE AUDIT 권한이 있는 보안 주체, sysadmin 계정 또는 해당 감사에 대한 명시적 액세스 권한이 있는 보안 주체가 볼 수 있습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `HIPPA_Audit_DB_Specification`라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit에 대해 `SELECT` 사용자의 `dbo` 문을 감사하는 `HIPPA_Audit`이라는 데이터베이스 감사 사양을 변경합니다.  
+ 다음 예에서는 `HIPAA_Audit_DB_Specification`라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit에 대해 `SELECT` 사용자의 `dbo` 문을 감사하는 `HIPAA_Audit`이라는 데이터베이스 감사 사양을 변경합니다.  
   
 ```  
-ALTER DATABASE AUDIT SPECIFICATION HIPPA_Audit_DB_Specification  
-FOR SERVER AUDIT HIPPA_Audit  
+ALTER DATABASE AUDIT SPECIFICATION HIPAA_Audit_DB_Specification  
+FOR SERVER AUDIT HIPAA_Audit  
     ADD (SELECT  
          ON OBJECT::dbo.Table1  
          BY dbo)  

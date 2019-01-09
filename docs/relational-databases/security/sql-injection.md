@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e4fad8c85b620b817439529bfabd65361ed0207
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e8521fb6bb67f79ae88e026a3231d733490c5719
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536133"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626347"
 ---
 # <a name="sql-injection"></a>SQL 인젝션
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "52536133"
   
  다음 스크립트에서는 간단한 SQL 삽입을 보여 줍니다. 이 스크립트는 하드 코딩된 문자열과 사용자가 입력한 문자열을 연결하여 SQL 쿼리를 만듭니다.  
   
-```  
+```csharp
 var Shipcity;  
 ShipCity = Request.form ("ShipCity");  
 var sql = "select * from OrdersTable where ShipCity = '" + ShipCity + "'";  
@@ -40,19 +40,19 @@ var sql = "select * from OrdersTable where ShipCity = '" + ShipCity + "'";
   
  사용자에게 도시 이름의 입력을 요청하는 프롬프트가 표시됩니다. `Redmond`를 입력할 경우 이 쿼리는 다음과 유사한 스크립트로 조합됩니다.  
   
-```  
+```sql
 SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond'  
 ```  
   
  그러나 사용자가 다음을 입력했다고 가정해 봅니다.  
   
-```  
+```sql
 Redmond'; drop table OrdersTable--  
 ```  
   
  이 경우 스크립트로 조합된 쿼리는 다음과 같습니다.  
   
-```  
+```sql
 SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'  
 ```  
   
@@ -86,7 +86,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
   
 -   유효성 검사를 수행하지 않은 사용자 입력을 연결하지 않습니다. 문자열 연결은 스크립트 삽입이 발생하는 주요 진입점입니다.  
   
--   파일 이름이 생성될 수도 있는 필드에는 AUX, CLOCK$, COM1~COM8, CON, CONFIG$, LPT1~LPT8, NUL, PRN과 같은 문자열을 허용하지 않습니다.  
+-   파일 이름이 생성될 수도 있는 필드에는 AUX, CLOCK$, COM1부터 COM8, CON, CONFIG$, LPT1부터 LPT8, NUL, PRN과 같은 문자열을 허용하지 않습니다.  
   
  가능한 경우 다음 문자가 포함된 입력을 거부합니다.  
   
@@ -101,7 +101,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 ### <a name="use-type-safe-sql-parameters"></a>형식 안정적 SQL 매개 변수 사용  
  **의** Parameters [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컬렉션은 형식 검사와 길이 유효성 검사를 제공합니다. **Parameters** 컬렉션을 사용할 경우 입력은 실행 코드가 아닌 리터럴 값으로 처리됩니다. 또한 **Parameters** 컬렉션을 사용하면 형식 및 길이 검사도 강제 실행할 수 있다는 장점이 있습니다. 범위 밖의 값에 대해서는 예외가 발생합니다. 다음 코드 조각에서는 **Parameters** 컬렉션을 사용하는 방법을 보여 줍니다.  
   
-```  
+```csharp
 SqlDataAdapter myCommand = new SqlDataAdapter("AuthorLogin", conn);  
 myCommand.SelectCommand.CommandType = CommandType.StoredProcedure;  
 SqlParameter parm = myCommand.SelectCommand.Parameters.Add("@au_id",  
@@ -114,7 +114,7 @@ parm.Value = Login.Text;
 ### <a name="use-parameterized-input-with-stored-procedures"></a>저장 프로시저에서 매개 변수가 있는 입력 사용  
  저장 프로시저가 필터링되지 않은 입력을 사용할 경우 SQL 삽입에 노출되기 쉽습니다. 예를 들면 다음 코드는 취약성이 있습니다.  
   
-```  
+```csharp
 SqlDataAdapter myCommand =   
 new SqlDataAdapter("LoginStoredProcedure '" +   
                                Login.Text + "'", conn);  
@@ -125,7 +125,7 @@ new SqlDataAdapter("LoginStoredProcedure '" +
 ### <a name="use-the-parameters-collection-with-dynamic-sql"></a>동적 SQL에서 Parameters 컬렉션 사용  
  저장 프로시저를 사용할 수 없는 경우에도 다음 코드 예와 같이 매개 변수를 사용할 수 있습니다.  
   
-```  
+```csharp
 SqlDataAdapter myCommand = new SqlDataAdapter(  
 "SELECT au_lname, au_fname FROM Authors WHERE au_id = @au_id", conn);  
 SQLParameter parm = myCommand.SelectCommand.Parameters.Add("@au_id",   
@@ -136,7 +136,7 @@ Parm.Value = Login.Text;
 ### <a name="filtering-input"></a>필터링 입력  
  필터링 입력은 이스케이프 문자를 제거하므로 SQL 삽입으로부터 시스템을 보호할 수는 있지만 문자 수가 너무 많아 문제를 일으킬 수 있으므로 신뢰할 수 있는 방어책은 아닙니다. 다음 예에서는 문자열 구분 기호를 검색합니다.  
   
-```  
+```csharp
 private string SafeSqlLiteral(string inputSQL)  
 {  
   return inputSQL.Replace("'", "''");  
@@ -146,7 +146,7 @@ private string SafeSqlLiteral(string inputSQL)
 ### <a name="like-clauses"></a>LIKE 절  
  `LIKE` 절을 사용할 경우에도 와일드카드 문자를 이스케이프 처리해야 합니다.  
   
-```  
+```csharp
 s = s.Replace("[", "[[]");  
 s = s.Replace("%", "[%]");  
 s = s.Replace("_", "[_]");  
@@ -155,7 +155,7 @@ s = s.Replace("_", "[_]");
 ## <a name="reviewing-code-for-sql-injection"></a>SQL 삽입에 대한 코드 검토  
  `EXECUTE`, `EXEC`또는 `sp_executesql`을 호출 하는 모든 코드를 검토해야 합니다. 다음과 유사한 쿼리를 사용하여 이러한 문을 포함하는 프로시저를 식별할 수 있습니다. 이 쿼리는 `EXECUTE` 또는 `EXEC`단어 뒤에 오는 1, 2, 3, 4개의 공백을 검사합니다.  
   
-```  
+```sql
 SELECT object_Name(id) FROM syscomments  
 WHERE UPPER(text) LIKE '%EXECUTE (%'  
 OR UPPER(text) LIKE '%EXECUTE  (%'  
@@ -179,12 +179,12 @@ OR UPPER(text) LIKE '%SP_EXECUTESQL%';
   
  이 방법을 사용하는 경우 SET 문을 다음과 같이 수정할 수 있습니다.  
   
-```  
---Before:  
+```sql
+-- Before:  
 SET @temp = N'SELECT * FROM authors WHERE au_lname ='''   
  + @au_lname + N'''';  
   
---After:  
+-- After:  
 SET @temp = N'SELECT * FROM authors WHERE au_lname = '''   
  + REPLACE(@au_lname,'''','''''') + N'''';  
 ```  
@@ -192,7 +192,7 @@ SET @temp = N'SELECT * FROM authors WHERE au_lname = '''
 ### <a name="injection-enabled-by-data-truncation"></a>데이터 잘림으로 활성화되는 삽입  
  변수에 할당되는 모든 동적 [!INCLUDE[tsql](../../includes/tsql-md.md)] 은 해당 변수에 할당된 버퍼보다 클 경우 잘립니다. 문 잘림을 수행할 수 있는 공격자는 예기치 않게 긴 문자열을 저장 프로시저에 전달하여 결과를 조작할 수 있습니다. 예를 들어 다음 스크립트로 만든 저장 프로시저는 잘림으로 활성화되는 삽입에 취약합니다.  
   
-```  
+```sql
 CREATE PROCEDURE sp_MySetPassword  
 @loginname sysname,  
 @old sysname,  
@@ -222,7 +222,7 @@ GO
   
  공격자는 128자 버퍼에 154자를 전달하여 이전 암호를 몰라도 sa에 새 암호를 설정할 수 있습니다.  
   
-```  
+```sql
 EXEC sp_MySetPassword 'sa', 'dummy',   
 '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012'''''''''''''''''''''''''''''''''''''''''''''''''''   
 ```  
@@ -232,7 +232,7 @@ EXEC sp_MySetPassword 'sa', 'dummy',
 ### <a name="truncation-when-quotenamevariable--and-replace-are-used"></a>QUOTENAME(@variable, '''') 및 REPLACE() 사용 시 잘림  
  QUOTENAME() 및 REPLACE()에 의해 반환되는 문자열은 할당된 공간을 초과할 경우 자동으로 잘립니다. 다음 예에서 만든 저장 프로시저는 발생할 수 있는 동작을 보여 줍니다.  
   
-```  
+```sql
 CREATE PROCEDURE sp_MySetPassword  
     @loginname sysname,  
     @old sysname,  
@@ -269,13 +269,13 @@ GO
   
  따라서 다음 문은 모든 사용자의 암호를 이전 코드에서 전달된 값으로 설정합니다.  
   
-```  
+```sql
 EXEC sp_MyProc '--', 'dummy', '12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678'  
 ```  
   
  REPLACE()를 사용하는 경우 할당된 버퍼 공간을 초과하여 문자열 잘림을 수행할 수 있습니다. 다음 예에서 만든 저장 프로시저는 발생할 수 있는 동작을 보여 줍니다.  
   
-```  
+```sql
 CREATE PROCEDURE sp_MySetPassword  
     @loginname sysname,  
     @old sysname,  
@@ -314,7 +314,7 @@ GO
   
  다음 계산은 모든 경우에 적용됩니다.  
   
-```  
+```sql
 WHILE LEN(@find_string) > 0, required buffer size =  
 ROUND(LEN(@input)/LEN(@find_string),0) * LEN(@new_string)   
  + (LEN(@input) % LEN(@find_string))  
@@ -323,7 +323,7 @@ ROUND(LEN(@input)/LEN(@find_string),0) * LEN(@new_string)
 ### <a name="truncation-when-quotenamevariable--is-used"></a>QUOTENAME(@variable, ']')을 사용할 때 잘림  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 개체의 이름이 `QUOTENAME(@variable, ']')`형식을 사용하는 문에 전달되는 경우 잘릴 수 있습니다. 다음 예에서는 이러한 방법을 보여 줍니다.  
   
-```  
+```sql
 CREATE PROCEDURE sp_MyProc  
     @schemaname sysname,  
     @tablename sysname,  

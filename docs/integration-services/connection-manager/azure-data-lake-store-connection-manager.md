@@ -14,12 +14,12 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: 3e9caa6e272e4b1e2479f0abf10547e52721049c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5db5df2a209cf9f291c37f960cdd9b2947966061
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719271"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531108"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 연결 관리자
 SSIS(SQL Server Integration Services) 패키지는 Azure Data Lake Store 연결 관리자를 사용하여 다음 두 가지 인증 유형 중 하나로 Azure Data Lake Storage Gen1 계정에 연결할 수 있습니다.
@@ -28,7 +28,7 @@ SSIS(SQL Server Integration Services) 패키지는 Azure Data Lake Store 연결 
 
 Azure Data Lake Store 연결 관리자는 [Azure용 SSIS(SQL Server Integration Services) 기능 팩](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)의 구성 요소입니다.
 
->   [!NOTE]
+> [!NOTE]
 > Azure Data Lake Store 연결 관리자와 이 연결 관리자를 사용하는 구성 요소(즉, Data Lake Storage Gen1 원본과 Data Lake Storage Gen1 대상)를 서비스에 연결하려면 [여기](https://www.microsoft.com/download/details.aspx?id=49492)에서 최신 버전의 Azure 기능 팩을 다운로드하세요. 
  
 ## <a name="configure-the-azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 연결 관리자 구성
@@ -44,7 +44,7 @@ Azure Data Lake Store 연결 관리자는 [Azure용 SSIS(SQL Server Integration 
     
         2. 연결을 테스트하려면 **연결 테스트**를 선택합니다. 사용자 또는 테넌트 관리자가 SSIS를 Data Lake Storage Gen1 데이터에 액세스할 수 있도록 이전에 동의하지 않은 경우 메시지가 표시되면 **동의**를 선택합니다. 이 동의 환경에 대한 자세한 내용은 [Azure Active Directory와 애플리케이션 통합](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application)을 참조하세요.
     
-        >   [!NOTE] 
+        > [!NOTE] 
         > **Azure AD 사용자 ID** 인증 옵션을 선택하는 경우 다단계 인증과 Microsoft 계정 인증이 지원되지 않습니다.
     
     2. **Azure AD 서비스 ID** 인증 옵션을 선택한 경우 다음을 수행합니다.

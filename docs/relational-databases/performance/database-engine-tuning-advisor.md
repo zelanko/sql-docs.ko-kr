@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dta.general.f1
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 18f025f4ba212849d3823466d6555733f305ac91
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: c2f2cf71f30848c60a000eaaeefcc1447f2a5a6d
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302696"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328789"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "52302696"
  작업을 지정하고 다양한 튜닝 옵션을 선택할 수 있는 사용하기 쉬운 인터페이스입니다.  
   
  **dta** 유틸리티  
- 데이터베이스 엔진 튜닝 관리자의 명령 프롬프트 버전입니다. **dta** 유틸리티를 통해 응용 프로그램과 스크립트에서 데이터베이스 엔진 튜닝 관리자의 기능을 사용할 수 있습니다.  
+ 데이터베이스 엔진 튜닝 관리자의 명령 프롬프트 버전입니다. **dta** 유틸리티를 통해 애플리케이션과 스크립트에서 데이터베이스 엔진 튜닝 관리자의 기능을 사용할 수 있습니다.  
   
  **작업**  
  튜닝할 데이터베이스의 대표적인 작업이 포함된 Transact-SQL 스크립트 파일, 추적 파일 또는 추적 테이블입니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]이상에서는 계획 캐시를 작업으로 지정할 수 있습니다.  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [쿼리 저장소를 워크로드로 지정](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)할 수 있습니다. 

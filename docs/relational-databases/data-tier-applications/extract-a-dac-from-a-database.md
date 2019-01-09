@@ -20,16 +20,16 @@ ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f8073ee3b527602d8d9d750923547b8fc5259d75
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a056ecc18ed933b1f1fe18e3da0c62d239ea0a4e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514098"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589877"
 ---
 # <a name="extract-a-dac-from-a-database"></a>데이터베이스에서 DAC 추출
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **데이터 계층 응용 프로그램 추출 마법사** 나 Windows PowerShell 스크립트를 사용하여 기존 SQL Server 데이터베이스에서 DAC(데이터 계층 응용 프로그램) 패키지를 추출할 수 있습니다. 추출이 끝나면 데이터베이스 개체의 정의 및 이와 관련된 인스턴스 수준 요소를 포함하는 DAC 패키지 파일이 생성됩니다. 예를 들어 DAC 패키지 파일에는 데이터베이스 테이블, 저장 프로시저, 뷰, 사용자, 그리고 데이터베이스 사용자에 매핑되는 로그인이 포함됩니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  **데이터 계층 애플리케이션 추출 마법사** 나 Windows PowerShell 스크립트를 사용하여 기존 SQL Server 데이터베이스에서 DAC(데이터 계층 애플리케이션) 패키지를 추출할 수 있습니다. 추출이 끝나면 데이터베이스 개체의 정의 및 이와 관련된 인스턴스 수준 요소를 포함하는 DAC 패키지 파일이 생성됩니다. 예를 들어 DAC 패키지 파일에는 데이터베이스 테이블, 저장 프로시저, 뷰, 사용자, 그리고 데이터베이스 사용자에 매핑되는 로그인이 포함됩니다.  
   
  
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
@@ -41,7 +41,7 @@ ms.locfileid: "52514098"
 ##  <a name="Permissions"></a> Permissions  
  DAC를 추출하려면 **sys.sql_expression_dependencies**에 대한 SELECT 권한뿐만 아니라 최소한 ALTER ANY LOGIN 및 데이터베이스 범위 VIEW DEFINITION 권한이 있어야 합니다. DAC를 추출하려면 securityadmin 고정 서버 역할의 멤버이면서 DAC를 추출하는 데이터베이스의 database_owner 고정 데이터베이스 역할의 멤버여야 합니다. sysadmin 고정 서버 역할의 멤버 또는 기본 제공 SQL Server 시스템 관리자 계정인 **sa** 도 DAC를 추출할 수 있습니다.  
   
-##  <a name="UsingDACExtractWizard"></a> 데이터 계층 응용 프로그램 추출 마법사 사용  
+##  <a name="UsingDACExtractWizard"></a> 데이터 계층 애플리케이션 추출 마법사 사용  
  **마법사를 사용하여 DAC를 추출하려면**  
   
 1.  **개체 탐색기**에서 DAC를 추출할 데이터베이스가 포함된 인스턴스에 대한 노드를 확장합니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "52514098"
   
  **다음 >** - **방법 선택** 페이지로 진행합니다.  
   
- **취소** - 데이터 계층 응용 프로그램을 데이터베이스에서 추출하지 않고 마법사를 종료합니다.  
+ **취소** - 데이터 계층 애플리케이션을 데이터베이스에서 추출하지 않고 마법사를 종료합니다.  
   
  [&#91;추출 마법사&#93;](#UsingDACExtractWizard)  
   

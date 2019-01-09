@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 43fe7c85f87c0022db14cb7553d4771385017096
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1b904d0040645beb3abc625ab9c9ccb46cc7d80b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699072"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211592"
 ---
 # <a name="manage-job-steps"></a>작업 단계 관리
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ sysadmin 고정 서버 역할의 멤버인 사용자가 실행한 작업 단계�
   
 -   명령이 성공한 경우 반환되는 프로세스 종료 코드를 지정합니다.  
   
--   실행할 명령입니다. 운영 체제 명령을 실행하려면 명령 자체를 지정하면 되고 외부 프로그램을 실행하려면 프로그램 이름과 프로그램 인수를 지정합니다(예: **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**).  
+-   실행할 명령입니다. 운영 체제 명령을 실행하려면 명령 자체를 지정하면 되고 외부 프로그램을 실행하려면 프로그램 이름과 프로그램 인수를 지정합니다. 예를 들면 다음과 같습니다. **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
   
     > [!NOTE]  
     > 실행 파일이 시스템 경로나 작업 단계가 실행되는 계정의 사용자 경로에 지정된 디렉터리에 있지 않은 경우 실행 파일의 전체 경로를 지정해야 합니다.  
@@ -112,7 +112,7 @@ PowerShell 스크립트 작업 단계를 만들 때 다음 둘 중 하나를 단
   
 ## <a name="activex-scripting-job-steps"></a>ActiveX 스크립팅 작업 단계  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 이후 버전에서는 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에이전트에서 ActiveX 스크립팅 작업 단계가 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.  
   
 ActiveX 스크립팅 작업 단계를 만들 때는 다음을 수행해야 합니다.  

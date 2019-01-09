@@ -24,19 +24,19 @@ ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b4bbf698ed48d63d4e94a697cd91069efa3b98d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29345e463715bf787b7b7ada9d96c97aa42f38ed
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757441"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204452"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   기존 **text**, **ntext** 또는 **image** 열의 최소 로깅 대화형 업데이트를 허용합니다. WRITETEXT는 영향을 받는 열에 있는 모든 기존 데이터를 덮어씁니다. WRITETEXT는 뷰 내의 **text**, **ntext** 및 **image** 열에서 사용할 수 없습니다.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 큰 값 데이터 형식 및 [UPDATE](../../t-sql/queries/update-transact-sql.md) 문의 **.** WRITE 절을 사용합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

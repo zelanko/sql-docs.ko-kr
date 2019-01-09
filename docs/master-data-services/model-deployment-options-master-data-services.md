@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cf1b17b4-47d5-4eba-83f9-fb0555806867
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4e09058b71b920a109bccc05c1ee480dc82036c5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 86c556fb4365df12d573294b0c937c36d91dffb3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415030"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813335"
 ---
 # <a name="model-deployment-options-master-data-services"></a>모델 배포 옵션(Master Data Services)
 
@@ -32,7 +31,7 @@ ms.locfileid: "52415030"
   
 -   모델의 패키지를 만들고 동일한 환경에 새 모델로 배포합니다. 이 경우 모델에 새 이름을 지정해야 합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  MDS 데이터베이스의 각 모델 개체에는 고유 ID(식별자)가 있습니다. 이러한 ID는 모델 배포 패키지에 포함됩니다. 패키지를 배포할 때 이러한 ID를 어떻게 처리할지 선택해야 합니다.  
   
  다음 표에는 시스템 관리의 모델 배포 마법사나 MDSModelDeploy 도구를 사용하여 모델을 배포할 때 선택할 옵션을 결정하는 데 도움이 되는 정보가 나와 있습니다.  

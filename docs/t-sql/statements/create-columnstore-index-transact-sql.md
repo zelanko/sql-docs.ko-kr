@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7f9c78dc06da0cbb12e34483d3bdd7b469a8f78
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c6c384df7810cce06f3e10003ec85771b2bcea58
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398055"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215652"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -215,7 +215,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
     저장할 열을 지정합니다. 비클러스터형 columnstore 인덱스는 1024개 열로 제한됩니다.  
    각 열은 columnstore 인덱스에 대해 지원되는 데이터 형식이어야 합니다. 지원되는 데이터 형식 목록은 [제한 사항](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest)을 참조하세요.  
 
-ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
+ON [*database_name*. [*schema_name* ] . |  *schema_name* . ] *table_name*  
    인덱스를 포함할 테이블의 1, 2 또는 3 부분 이름을 지정합니다.  
 
 #### <a name="with-options"></a>WITH 옵션
@@ -234,7 +234,7 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
   
    자세한 내용은 [병렬 인덱스 작업 구성](../../relational-databases/indexes/configure-parallel-index-operations.md)을 참조하세요.  
   
-> [!NOTE]  
+> [!NOTE]
 >  병렬 인덱스 작업은 일부 [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
 ###### <a name="online--on--off"></a>ONLINE = [ON | OFF]   
@@ -474,7 +474,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci_simple ON SimpleTable;
 GO  
 ```  
   
-### <a name="d-convert-a-large-fact-table-from-rowstore-to-columnstore"></a>4. rowstore에서 columnstore로 큰 팩트 테이블 변환  
+### <a name="d-convert-a-large-fact-table-from-rowstore-to-columnstore"></a>D. rowstore에서 columnstore로 큰 팩트 테이블 변환  
  이 예에서는 큰 팩트 테이블을 rowstore 테이블에서 columnstore 테이블로 변환하는 방법을 설명합니다.  
   
  rowstore 테이블을 columnstore 테이블로 변환하려면:  
@@ -548,7 +548,7 @@ GO
     WITH DROP_EXISTING = ON;  
     ```  
   
-### <a name="e-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index"></a>5. columnstore 테이블을 클러스터형 인덱스가 있는 rowstore 테이블로 변환  
+### <a name="e-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index"></a>E. columnstore 테이블을 클러스터형 인덱스가 있는 rowstore 테이블로 변환  
  columnstore 테이블을 클러스터형 인덱스가 있는 rowstore 테이블로 변환하려면 CREATE INDEX 문을 DROP_EXISTING 옵션과 함께 사용합니다.  
   
 ```sql  
@@ -557,7 +557,7 @@ ON MyFactTable
 WITH ( DROP EXISTING = ON );  
 ```  
   
-### <a name="f-convert-a-columnstore-table-to-a-rowstore-heap"></a>6. columnstore 테이블을 rowstore 힙으로 변환  
+### <a name="f-convert-a-columnstore-table-to-a-rowstore-heap"></a>F. columnstore 테이블을 rowstore 힙으로 변환  
  columnstore 테이블을 rowstore 힙으로 변환하려면 간단히 클러스터형 columnstore 인덱스를 삭제하면 됩니다.  
   
 ```sql  
@@ -566,7 +566,7 @@ ON MyFactTable;
 ```  
   
 
-### <a name="g-defragment-by-rebuilding-the-entire-clustered-columnstore-index"></a>7. 전체 클러스터형 columnstore 인덱스를 다시 빌드하여 조각 모음  
+### <a name="g-defragment-by-rebuilding-the-entire-clustered-columnstore-index"></a>G. 전체 클러스터형 columnstore 인덱스를 다시 빌드하여 조각 모음  
    적용 대상: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
  두 가지 방법으로 전체 클러스터형 columnstore 인덱스를 다시 작성할 수 있습니다. CREATE CLUSTERED COLUMNSTORE INDEX 또는 [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)와 REBUILD 옵션을 사용할 수 있습니다. 두 방법 모두 동일한 결과를 얻을 수 있습니다.  
@@ -722,7 +722,7 @@ ON xdimProduct
 WITH ( DROP_EXISTING = OFF );  
 ```  
   
-### <a name="d-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index"></a>4. columnstore 테이블을 클러스터형 인덱스가 있는 rowstore 테이블로 변환  
+### <a name="d-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index"></a>D. columnstore 테이블을 클러스터형 인덱스가 있는 rowstore 테이블로 변환  
  클러스터형 columnstore 인덱스를 삭제하고 클러스터형 인덱스를 만들고자 하는 상황이 있을 수도 있습니다. 이렇게 하면 테이블을 rowstore 형식으로 저장합니다. 이 예에서는 columnstore 테이블을 클러스터형 인덱스가 있는 같은 이름의 rowstore 테이블로 변환합니다. 데이터가 손실되지 않습니다. 모든 데이터는 rowstore 테이블로 이동하고 나열된 열은 클러스터형 인덱스에서 키 열이 됩니다.  
   
 ```sql  
@@ -734,7 +734,7 @@ ON xdimProduct (ProductKey, ProductAlternateKey, ProductSubcategoryKey, WeightUn
 WITH ( DROP_EXISTING = ON);  
 ```  
   
-### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>5. columnstore 테이블을 rowstore 힙으로 변환  
+### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>E. columnstore 테이블을 rowstore 힙으로 변환  
  클러스터형 columnstore 인덱스를 삭제하고 테이블을 rowstore 힙으로 변환하려면 [DROP INDEX(SQL Server PDW)](https://msdn.microsoft.com/f59cab43-9f40-41b4-bfdb-d90e80e9bf32)를 사용합니다. 이 예에서는 cci_xDimProduct 테이블을 rowstore 힙으로 변환합니다. 테이블은 계속 배포되지만 힙으로 저장됩니다.  
   
 ```sql  

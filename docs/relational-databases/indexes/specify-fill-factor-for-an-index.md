@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a80d893cd942e7d8c1e9bb12b6fa21a3247d7e52
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba81029a195bcee0e747bfe517fa5d6b27e4ead1
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401628"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588390"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>인덱스의 채우기 비율 지정
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "52401628"
   
 7.  **닫기**를 클릭합니다.  
   
-8.  **파일** 메뉴에서 **Save***table_name*을 선택합니다.  
+8.  **파일** 메뉴에서 _table_name_ **저장**을 선택합니다.  
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>개체 탐색기를 사용하여 인덱스의 채우기 비율을 지정하려면  
   

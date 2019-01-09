@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Stretch Database, enabling table
 - enabling table for Stretch Database
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2101d73b7e76cbc842277980b22c239dc826233c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4fdb8995798b408e0418e2170631f3b331acff0
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824221"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596694"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47824221"
   
  **사용 권한**. 데이터베이스 또는 테이블에 대해 스트레치 데이터베이스를 사용하도록 설정하려면 db_owner 권한이 필요합니다. 또한, 테이블에서 Stretch Database를 사용하려면 테이블에 대한 ALTER 권한이 필요합니다.  
 
- >   [!NOTE]
+ > [!NOTE]
  > 나중에 Stretch Database를 사용하지 않도록 설정하려는 경우 테이블 또는 데이터베이스에서 Stretch Database를 사용하지 않도록 설정하면 원격 개체가 삭제되지 않습니다. 원격 테이블 또는 원격 데이터베이스를 삭제하려면 Azure 관리 포털을 사용하여 삭제해야 합니다. 원격 개체는 수동으로 삭제할 때까지 Azure 비용이 계속해서 발생합니다.
  
 ##  <a name="EnableWizardTable"></a> 마법사를 사용하여 테이블에서 스트레치 데이터베이스 활성화  
@@ -65,13 +65,13 @@ ms.locfileid: "47824221"
 ##  <a name="EnableTSQLTable"></a> Transact-SQL을 사용하여 테이블에서 스트레치 데이터베이스 활성화  
  또한, Transact-SQL을 사용하여 기존 테이블에서 스트레치 데이터베이스를 사용하거나 활성화된 스트레치 데이터베이스로 새 테이블을 만들 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  CREATE TABLE 또는 ALTER TABLE을 실행하여 테이블에서 스트레치 데이터베이스를 사용하는 경우 다음 옵션을 사용합니다.  
   
 -   선택 사항으로, 테이블에 핫 및 콜드 데이터가 모두 포함된 경우 `FILTER_PREDICATE = <function>` 절을 사용하여 함수를 지정해 마이그레이션할 행을 선택할 수 있습니다. 조건자는 인라인 테이블 반환 함수를 호출해야 합니다. 자세한 내용은 [필터 함수를 사용하여 마이그레이션할 행 선택](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)을 참조하세요. 필터 함수를 지정하지 않으면 전체 테이블이 마이그레이션됩니다.  
   
     > [!IMPORTANT]  
-    >  제대로 수행되지 않는 필터 함수를 제공하면 데이터 마이그레이션 성능도 저하됩니다. 스트레치 데이터베이스는 CROSS APPLY 연산자를 사용하여 테이블에 필터 함수를 적용합니다.  
+    > 제대로 수행되지 않는 필터 함수를 제공하면 데이터 마이그레이션 성능도 저하됩니다. 스트레치 데이터베이스는 CROSS APPLY 연산자를 사용하여 테이블에 필터 함수를 적용합니다.  
   
 -   `MIGRATION_STATE = OUTBOUND` 을(를) 지정하여 즉시 마이그레이션을 시작하거나  `MIGRATION_STATE = PAUSED` 을(를) 지정하여 데이터 마이그레이션의 시작을 연기합니다.  
   

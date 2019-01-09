@@ -11,12 +11,12 @@ ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e2a96184600b2601fcb75159b4a76c2255deacb3
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 6133e753364cda914bda7106f74d42cc5d48b781
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617103"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210149"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
 
@@ -25,7 +25,7 @@ ms.locfileid: "52617103"
   이 섹션에서는 백업/복원 또는 분리/연결과 같이 DQS 데이터베이스에서 수행할 수 있는 데이터베이스 관리 작업에 대한 정보를 제공합니다.  
   
 ##  <a name="BackupRestore"></a> DQS 데이터베이스 백업 및 복원  
- SQL Server 데이터베이스 백업 및 복원은 데이터베이스 관리자가 재해 복구 시 백업 데이터베이스에서 데이터를 복구하여 데이터 손실을 방지하기 위해 수행하는 일반적인 작업입니다. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 은(는) 크게 DQS_MAIN과 DQS_PROJECTS라는 두 개의 SQL Server 데이터베이스로 구현됩니다. DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ) 데이터베이스의 백업 및 복원 절차는 다른 SQL Server 데이터베이스의 경우와 비슷합니다. DQS 데이터베이스의 백업 및 복원을 수행할 때는 다음과 같은 세 가지 점에 주의해야 합니다.  
+ SQL Server 데이터베이스 백업 및 복원은 데이터베이스 관리자가 재해 복구 시 백업 데이터베이스에서 데이터를 복구하여 데이터 손실을 방지하기 위해 수행하는 일반적인 작업입니다. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]는 크게 DQS_MAIN과 DQS_PROJECTS라는 두 개의 SQL Server 데이터베이스로 구현됩니다. DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ) 데이터베이스의 백업 및 복원 절차는 다른 SQL Server 데이터베이스의 경우와 비슷합니다. DQS 데이터베이스의 백업 및 복원을 수행할 때는 다음과 같은 세 가지 점에 주의해야 합니다.  
   
 -   DQS 데이터베이스의 백업 및 복원 작업이 동기화되어야 합니다. 그렇지 않으면 복원된 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 가 작동하지 않습니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "52617103"
   
 -   DQS 데이터베이스의 기본 복구 모델은 **단순**으로 설정됩니다. 단순 복구 모델에서 트랜잭션은 최소한으로 기록되며, 로그 잘림은 트랜잭션 로그(.ldf 파일)에서 공간을 확보하기 위해 트랜잭션이 완료된 후에 자동으로 발생합니다. 단순 복구 모델에 대한 자세한 내용은 [전체 데이터베이스 백업&#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md)을 참조하세요.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  -   단순 복구 모델에서는 오랜 시간 동안 로그 레코드가 활성 상태로 유지되는 경우(예: 길고 시간이 많이 소요되는 트랜잭션) 로그 잘림이 지연될 수 있으므로 트랜잭션 로그가 가득 찰 수 있습니다. 또한 로그 잘림을 수행하더라도 물리적 로그 파일(.ldf 파일)의 크기는 줄어들지 않습니다. 물리적 로그 파일의 크기를 줄이려면 로그 파일을 축소해야 합니다. 트랜잭션 로그와 관련된 문제를 해결하는 방법에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?LinkId=237446](https://go.microsoft.com/fwlink/?LinkId=237446)의 [트랜잭션 로그&#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) 또는 Microsoft 지원 아티클을 참조하세요.  
 > -   데이터에 대해 지정 시간 복구를 수행하려면 DQS 데이터베이스에 대해 전체 백업 또는 차등 백업을 정기적으로 수행하고 트랜잭션 로그도 백업해야 합니다. 자세한 내용은 [전체 데이터베이스 백업&#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md) 및 [트랜잭션 로그 백업&#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)을 참조하세요.  
   

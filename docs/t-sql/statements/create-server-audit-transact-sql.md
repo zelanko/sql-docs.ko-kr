@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: fb561e2001940fef59429236dd85d376a1c3c27f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 624e20f25deda3e226cf060f0793c33022289b1c
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834761"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979949"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -160,7 +160,7 @@ SHUTDOWN
 ## <a name="examples"></a>예  
   
 ### <a name="a-creating-a-server-audit-with-a-file-target"></a>1. 파일 대상을 사용하여 서버 감사 만들기  
- 다음 예에서는 이진 파일을 대상으로 사용하고 옵션 없이 `HIPPA_Audit`라는 서버 감사를 만듭니다.  
+ 다음 예에서는 이진 파일을 대상으로 사용하고 옵션 없이 `HIPAA_Audit`라는 서버 감사를 만듭니다.  
   
 ```sql  
 CREATE SERVER AUDIT HIPAA_Audit  
@@ -168,7 +168,7 @@ CREATE SERVER AUDIT HIPAA_Audit
 ```  
   
 ### <a name="b-creating-a-server-audit-with-a-windows-application-log-target-with-options"></a>2. Windows 응용 프로그램 로그 대상과 옵션을 사용하여 서버 감사 만들기  
- 다음 예에서는 Windows 응용 프로그램 로그에 대한 대상 집합을 사용하여 `HIPPA_Audit`라는 서버 감사를 만듭니다. 큐가 1초마다 기록되고 실패 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔진을 종료합니다.  
+ 다음 예에서는 Windows 응용 프로그램 로그에 대한 대상 집합을 사용하여 `HIPAA_Audit`라는 서버 감사를 만듭니다. 큐가 1초마다 기록되고 실패 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔진을 종료합니다.  
   
 ```sql  
 CREATE SERVER AUDIT HIPAA_Audit  

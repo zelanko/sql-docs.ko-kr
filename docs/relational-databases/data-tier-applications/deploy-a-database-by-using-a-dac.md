@@ -20,15 +20,15 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ff2967c06b32540b92f40007f66ebe346eedca40
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d9cdb5c17a74b600b640872d7b153f715da8e15a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540390"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590237"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>DAC를 사용 하여 데이터베이스 배포
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **SQL Azure에 데이터베이스 배포** 마법사를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스와 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 서버 간에 또는 두 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]서버 간에 데이터베이스를 배포합니다.  
   
 ##  <a name="BeforeBegin"></a> 시작하기 전에  
@@ -125,7 +125,7 @@ ms.locfileid: "52540390"
  **마침** 을 클릭하여 마법사를 닫습니다.  
   
 ## <a name="using-a-net-framework-application"></a>.Net Framework 애플리케이션 사용  
- **.Net Framework 응용 프로그램에서 DacStoreExport() 및 Import() 메서드를 사용하여 데이터베이스를 배포합니다.**  
+ **.Net Framework 애플리케이션에서 DacStoreExport() 및 Import() 메서드를 사용하여 데이터베이스를 배포합니다.**  
   
  코드 예제를 보려면 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)에서 DAC 샘플 애플리케이션을 다운로드합니다.  
   
@@ -142,8 +142,8 @@ ms.locfileid: "52540390"
 6.  **Import** 형식의 **Microsoft.SqlServer.Management.Dac.DacStore** 메서드를 사용하여 BACPAC를 가져옵니다. 내보내기에 의해 생성되는 BACPAC 파일을 지정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 계층 응용 프로그램](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [데이터 계층 응용 프로그램 내보내기](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
+ [데이터 계층 애플리케이션](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+ [데이터 계층 애플리케이션 내보내기](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
  [BACPAC 파일을 가져와 새 사용자 데이터베이스 만들기](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)  
   
   

@@ -5,21 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Locks object
 - SQLServer:Locks
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: fec76c03d097e83de03cd98cfe6cbbd9f1130a69
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: d8d1871e4057673d9a7169c4cfa13f4672b07d9f
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158861"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380204"
 ---
 # <a name="sql-server-locks-object"></a>SQL Server, Locks 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "52158861"
 |----------|-----------------|  
 |**_Total**|모든 잠금 정보입니다.|  
 |**AllocUnit**|할당 단위에 대한 잠금입니다.|  
-|**응용 프로그램**|애플리케이션이 지정한 리소스에 대한 잠금입니다.|  
+|**애플리케이션**|애플리케이션이 지정한 리소스에 대한 잠금입니다.|  
 |**데이터베이스 백업**|데이터베이스의 모든 개체를 포함한 데이터베이스에 대한 잠금입니다.|  
 |**Extent**|연결된 8페이지 그룹에 대한 잠금입니다.|  
 |**최근에 사용한 파일**|데이터베이스 파일에 대한 잠금입니다.|  

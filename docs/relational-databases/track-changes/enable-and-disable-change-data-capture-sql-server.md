@@ -1,6 +1,6 @@
 ---
 title: 변경 데이터 캡처 설정 및 해제(SQL Server) | Microsoft 문서
-ms.date: 03/06/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,15 +15,15 @@ ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 01dd23b4c7143280c54137b0e1474eb59fdcd0d3
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 61ca34394e2cab5cf16862f6ddae20573c4e17a0
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558795"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991836"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>변경 데이터 캡처 설정 및 해제(SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   이 항목에서는 데이터베이스 및 테이블에서 변경 데이터 캡처를 사용하거나 사용하지 않도록 설정하는 방법에 대해 설명합니다.  
   
 ## <a name="enable-change-data-capture-for-a-database"></a>데이터베이스에 변경 데이터 캡처 설정  
@@ -142,7 +142,7 @@ EXEC sys.sp_cdc_enable_table
 GO  
 ```  
   
-> [!NOTE]  
+> [!NOTE]
 >  기존 기본 키가 있는 테이블에 변경 데이터 캡처가 설정되어 있고 *@index_name* 매개 변수를 사용하여 대체 고유 인덱스를 식별하지 않는 경우 변경 데이터 캡처 기능에 기본 키가 사용됩니다. 기본 키에 대한 후속 변경 내용을 허용하려면 먼저 테이블의 변경 데이터 캡처를 해제해야 합니다. 이는 변경 데이터 캡처를 구성할 때 순 변경 쿼리에 대한 지원을 요청했는지 여부와 관계없이 적용됩니다. 테이블에 변경 데이터 캡처를 설정할 당시 기본 키가 없는 경우에는 기본 키에 대한 후속 추가 사항이 변경 데이터 캡처에 의해 무시됩니다. 변경 데이터 캡처는 테이블에 이 기능이 설정된 이후에 생성되는 기본 키를 사용하지 않으므로 키와 키 열을 제한 없이 제거할 수 있습니다.  
   
 ## <a name="disable-change-data-capture-for-a-table"></a>테이블의 변경 데이터 캡처 해제  

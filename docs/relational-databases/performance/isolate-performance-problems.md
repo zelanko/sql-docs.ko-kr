@@ -16,26 +16,26 @@ helpviewer_keywords:
 - database performance [SQL Server], isolating problems
 - server performance [SQL Server], isolating problems
 ms.assetid: 2eb425cb-9166-4027-ae08-c8fc2d236f44
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95e50d74dc99c0231cde4eca216266250dcd2ba0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c34186b0e10c66f6729933e5cc8d6b171d053fc1
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707127"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376765"
 ---
 # <a name="isolate-performance-problems"></a>성능 문제 격리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   도구를 하나씩 사용하는 것보다는 여러 개의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 나 Microsoft Windows 도구를 함께 사용하여 데이터베이스 성능 문제를 격리하는 것이 효과적입니다. 예를 들어 실행 계획이라고도 하는 그래픽 실행 계획 기능을 사용하여 쿼리 하나에 발생한 교착 상태를 즉시 인식할 수 있습니다 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 Windows의 모니터링 기능을 함께 사용하면 다른 성능 문제도 쉽게 인식할 수 있습니다.  
   
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하면 Transact-SQL 및 응용 프로그램 관련 문제를 모니터링하고 해결할 수 있습니다. 시스템 모니터를 사용하면 하드웨어와 그 밖의 시스템 관련 문제를 모니터링할 수 있습니다.  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하면 Transact-SQL 및 애플리케이션 관련 문제를 모니터링하고 해결할 수 있습니다. 시스템 모니터를 사용하면 하드웨어와 그 밖의 시스템 관련 문제를 모니터링할 수 있습니다.  
   
  문제를 해결하려면 다음 영역을 모니터링하십시오.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저 또는 사용자 응용 프로그램이 제출한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 일괄 처리  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저 또는 사용자 애플리케이션이 제출한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 일괄 처리  
   
 -   차단 잠금이나 교착 상태와 같은 사용자 동작  
   

@@ -1,7 +1,7 @@
 ---
 title: 스크립트 구성 요소를 사용하여 오류 출력 향상 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2017
+ms.date: 01/04/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 68973d2d0464372b070667a5d59dcc4327b211bf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4ffc8c50b44285279b88d73e8fd68e34b0aab3ec
+ms.sourcegitcommit: 15b780aa5abe3f42cd70b6edf7d5a645e990b618
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527949"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069059"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>스크립트 구성 요소를 사용하여 오류 출력 향상
   기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 오류 출력의 추가 열인 ErrorCode 및 ErrorColumn에는 오류 번호를 나타내는 숫자 코드와 오류가 발생한 열의 ID만 포함됩니다. 이러한 숫자 값은 해당 오류 설명과 열 이름이 없으므로 사용이 제한될 수 있습니다.  
@@ -63,44 +63,55 @@ ms.locfileid: "52527949"
 10. 스크립트 구성 요소의 출력을 적절한 대상에 연결합니다. 임시 테스트용으로 구성하는 데는 플랫 파일 대상이 가장 쉽습니다.  
   
 11. 패키지를 실행합니다.  
-  
-```vb  
-Public Class ScriptMain  
-    Inherits UserComponent  
-    Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)  
-  
-      Row.ErrorDescription = _  
-        Me.ComponentMetaData.GetErrorDescription(Row.ErrorCode)  
-  
-      Dim componentMetaData130 = TryCast(Me.ComponentMetaData, IDTSComponentMetaData130)  
-      If componentMetaData130 IsNot Nothing Then  
-        Row.ColumnName = componentMetaData130.GetIdentificationStringByID(Row.ErrorColumn)  
-         End If  
-  
-    End Sub  
-End Class  
-```  
-  
-```csharp  
-public class ScriptMain:  
-    UserComponent  
-{  
-    public override void Input0_ProcessInputRow(Input0Buffer Row)  
-    {  
-  
-      Row.ErrorDescription = this.ComponentMetaData.GetErrorDescription(Row.ErrorCode);  
-  
-      var componentMetaData130 = this.ComponentMetaData as IDTSComponentMetaData130;  
-      if (componentMetaData130 != null)  
-        {  
-            Row.ColumnName = componentMetaData130.GetIdentificationStringByID(Row.ErrorColumn);  
-        }  
-  
-    }  
-}  
-  
-```  
-  
+
+```vb
+Public Class ScriptMain      ' VB
+    Inherits UserComponent
+    Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)
+
+        Row.ErrorDescription = _
+            Me.ComponentMetaData.GetErrorDescription(Row.ErrorCode)
+
+        Dim componentMetaData130 = TryCast(Me.ComponentMetaData, IDTSComponentMetaData130)
+
+        If componentMetaData130 IsNot Nothing Then
+
+            If 0 = Row.ErrorColumn Then
+                ' 0 means no specific column is identified by ErrorColumn, this time.
+                Row.ColumnName = "Check the row for a violation of a foreign key constraint."
+            Else
+                Row.ColumnName = componentMetaData130.GetIdentificationStringByID(Row.ErrorColumn)
+            End If
+        End If
+    End Sub
+End Class
+```
+
+```csharp
+public class ScriptMain:      // C#
+    UserComponent
+{
+    public override void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+        Row.ErrorDescription = this.ComponentMetaData.GetErrorDescription(Row.ErrorCode);
+
+        var componentMetaData130 = this.ComponentMetaData as IDTSComponentMetaData130;
+        if (componentMetaData130 != null)
+        {
+            // 0 means no specific column is identified by ErrorColumn, this time.
+            if (Row.ErrorColumn == 0)
+            {
+                Row.ColumnName = "Check the row for a violation of a foreign key constraint.";
+            }
+            else
+            {
+                Row.ColumnName = componentMetaData130.GetIdentificationStringByID(Row.ErrorColumn);
+            }
+        }
+    }
+}
+```
+
 ## <a name="see-also"></a>참고 항목  
  [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)   
  [데이터 흐름 구성 요소에서 오류 출력 사용](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)   

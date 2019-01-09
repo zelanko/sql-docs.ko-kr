@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2638e15f21d21563d639b2597ad30b6597f9ecd1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 912f0473db120c9874e231334d1d393e18518c71
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509525"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202492"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>URL 구성(SSRS 구성 관리자)
-  [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 또는 보고서 서버 웹 서비스를 사용하려면 먼저 각 응용 프로그램에 대한 URL을 한 개 이상 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 "파일만" 모드(즉, 설치 마법사의 보고서 서버 설치 옵션 페이지에서 **서버 구성 없이 설치** 옵션을 선택한 경우)에서 설치한 경우에는 URL을 반드시 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 기본 구성으로 설치한 경우 각 응용 프로그램에 대해 URL이 이미 구성되어 있습니다.  
+  [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 또는 보고서 서버 웹 서비스를 사용하려면 먼저 각 애플리케이션에 대한 URL을 한 개 이상 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 "파일만" 모드(즉, 설치 마법사의 보고서 서버 설치 옵션 페이지에서 **서버 구성 없이 설치** 옵션을 선택한 경우)에서 설치한 경우에는 URL을 반드시 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 기본 구성으로 설치한 경우 각 애플리케이션에 대해 URL이 이미 구성되어 있습니다.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하면 URL을 구성할 수 있습니다. URL의 모든 부분이 이 도구에 정의되어 있습니다. 이전 릴리스와는 달리 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이상 버전에서는 IIS(인터넷 정보 서비스) 웹 사이트에서 더 이상 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 애플리케이션에 액세스할 수 없습니다.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 다른 웹 서비스와 응용 프로그램을 함께 배포하는 경우를 비롯한 대부분의 배포 시나리오에서 잘 작동하는 기본값을 제공합니다. 기본 URL은 인스턴스 이름을 통합함으로써 같은 컴퓨터에서 보고서 서버 인스턴스를 여러 개 실행하는 경우 URL이 충돌할 위험을 최소화합니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 다른 웹 서비스와 애플리케이션을 함께 배포하는 경우를 비롯한 대부분의 배포 시나리오에서 잘 작동하는 기본값을 제공합니다. 기본 URL은 인스턴스 이름을 통합함으로써 같은 컴퓨터에서 보고서 서버 인스턴스를 여러 개 실행하는 경우 URL이 충돌할 위험을 최소화합니다.  
   
  이 항목에서는 다음 태스크에 대한 지침을 제공합니다.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "52509525"
   
 4.  네트워크에서 보고서 서버 컴퓨터를 고유하게 식별하는 IP 주소를 지정합니다. 호스트 헤더를 지정하거나 같은 애플리케이션 인스턴스에 대한 URL을 추가로 정의하려는 경우 **고급**을 클릭해야 합니다. 고급 URL 속성을 설정하는 방법은 이 항목의 뒷부분에 나오는 지침을 참조하십시오. 또는 **웹 서비스 URL** 페이지에서 다음 값 중 하나를 선택합니다.  
   
-    -   **모두 할당됨** - 컴퓨터에 할당된 모든 IP 주소를 보고서 서버 응용 프로그램을 가리키는 URL에 사용할 수 있도록 지정합니다. 또한 이 값은 도메인 이름 서버에서 확인할 수 있는 호스트 이름(예: 컴퓨터 이름)부터 컴퓨터에 할당된 IP 주소까지 포함합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL에 대한 기본값입니다.  
+    -   **모두 할당됨** - 컴퓨터에 할당된 모든 IP 주소를 보고서 서버 애플리케이션을 가리키는 URL에 사용할 수 있도록 지정합니다. 또한 이 값은 도메인 이름 서버에서 확인할 수 있는 호스트 이름(예: 컴퓨터 이름)부터 컴퓨터에 할당된 IP 주소까지 포함합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL에 대한 기본값입니다.  
   
-    -   **모두 할당되지 않음** - 다른 응용 프로그램에서 처리하지 않은 모든 요청을 보고서 서버에서 수신하도록 지정합니다. 이 옵션은 사용하지 않는 것이 좋습니다. 이 옵션을 선택하면 보다 강력한 URL 예약을 사용하는 다른 애플리케이션이 보고서 서버에서 처리해야 할 요청을 가로챌 수 있습니다.  
+    -   **모두 할당되지 않음** - 다른 애플리케이션에서 처리하지 않은 모든 요청을 보고서 서버에서 수신하도록 지정합니다. 이 옵션은 사용하지 않는 것이 좋습니다. 이 옵션을 선택하면 보다 강력한 URL 예약을 사용하는 다른 애플리케이션이 보고서 서버에서 처리해야 할 요청을 가로챌 수 있습니다.  
   
     -   **127.0.0.1** - localhost 액세스에 사용되는 IPv4 주소로서 보고서 서버 컴퓨터에 대한 로컬 관리를 지원합니다. 이 값만 선택할 경우 보고서 서버 컴퓨터에 로컬로 로그온한 사용자만 애플리케이션에 액세스할 수 있습니다.  
   
@@ -92,17 +92,17 @@ ms.locfileid: "52509525"
   
 10. 페이지의 **URL** 섹션에 있는 링크를 클릭하여 URL을 테스트합니다. URL을 테스트하려면 먼저 보고서 서버 데이터베이스를 만들어 구성해야 합니다. 자세한 내용은 [기본 모드 보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)를 참조하세요.  
 
-> [!NOTE]  
+> [!NOTE]
 >  기존 SSL 바인딩 및 URL 예약이 있는 상태에서 SSL 바인딩을 변경하려면(예: 다른 인증서 또는 호스트 헤더를 사용하는 경우) 다음 단계를 순서대로 수행하는 것이 좋습니다.  
->   
+> 
 >  1.  먼저 모든 URL 예약을 제거합니다.  
 > 2.  모든 SSL 바인딩을 제거합니다.  
 > 3.  그런 다음 URL 및 SSL 바인딩을 다시 만듭니다.  
->   
+> 
 >  이전 단계는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 완료할 수 있습니다.  
->   
+> 
 >  Microsoft Windows는 포트 조합에 대한 각 IP 주소에 대해 하나의 바인딩을 지원합니다. 특정 호스트 헤더 값을 사용하도록 보고서 서버를 구성하고 IP 주소 조합에 대한 포트의 인증서가 다른 호스트 헤더 값으로 발급되는 경우 인증서가 사용 중인 URL과 일치하지 않음을 나타내는 경고가 브라우저에 표시됩니다.  
->   
+> 
 >  이 문제를 해결하려면 모든 바인딩을 삭제하고 고유한 설정을 사용하여 새 바인딩을 만들거나 와일드카드를 사용하여 Reporting Services URL 등록을 구성합니다.
   
 ### <a name="to-create-a-url-reservation-for-the-includessrswebportalincludesssrswebportalmd"></a>다음에 대한 URL 예약을 만들려면 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]  

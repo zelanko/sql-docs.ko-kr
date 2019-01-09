@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - web configuration file [Master Data Services]
@@ -14,18 +13,18 @@ ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 847e0dd3546062f00a1feb939ec4fa469f693c06
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e5f87caf233c5b2a0f7bedc50f5ab9b9f6f392f5
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702711"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814255"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>웹 구성 참조(Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에서는 IIS(인터넷 정보 서비스)가 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램 및 웹 서비스를 호스트할 수 있도록 하는 구성 설정이 Web.config 파일에 포함됩니다. 이 Web.config 파일은 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 설치 경로의 WebApplication 폴더에 있습니다. 경로 및 사용 권한에 대한 자세한 내용은 [폴더 및 파일 사용 권한&#40;Master Data Services&#41;](../master-data-services/folder-and-file-permissions-master-data-services.md)을 참조하세요.  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에서는 IIS(인터넷 정보 서비스)가 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션 및 웹 서비스를 호스트할 수 있도록 하는 구성 설정이 Web.config 파일에 포함됩니다. 이 Web.config 파일은 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 설치 경로의 WebApplication 폴더에 있습니다. 경로 및 사용 권한에 대한 자세한 내용은 [폴더 및 파일 사용 권한&#40;Master Data Services&#41;](../master-data-services/folder-and-file-permissions-master-data-services.md)을 참조하세요.  
   
 ## <a name="webconfig-elements"></a>Web.Config 요소  
  Web.config 파일에는 표준 IIS, .NET Framework, ASP.NET 및 WCF(Windows Communication Foundation) 구성 요소 외에도 사용자 지정 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 요소인 **\<masterDataServices>** 가 포함되어 있습니다. 다음 표에서는 Web.config 파일에 포함된 요소에 대해 설명합니다.  
@@ -60,8 +59,8 @@ ms.locfileid: "51702711"
 |항목|설명|  
 |----------|-----------------|  
 |**instance**|자식 요소. 웹 서비스와 데이터베이스 연결 문자열에 대한 정보를 지정하는 특성을 포함합니다.|  
-|**virtualPath**|특성. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램 및 서비스의 가상 경로를 지정합니다. 이 값은 IIS ApplicationHost.config 파일에서 **\<site>** 요소 아래에 있는 **\<application>** 요소의 **path** 특성에 해당합니다.|  
-|**siteName**|특성. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램과 서비스를 호스트하는 사이트의 이름을 지정합니다. 이 값은 IIS ApplicationHost.config 파일에서 **\<sites>** 아래에 있는 **\<site>** 요소의 **name** 특성에 해당합니다.|  
+|**virtualPath**|특성. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션 및 서비스의 가상 경로를 지정합니다. 이 값은 IIS ApplicationHost.config 파일에서 **\<site>** 요소 아래에 있는 **\<application>** 요소의 **path** 특성에 해당합니다.|  
+|**siteName**|특성. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션과 서비스를 호스트하는 사이트의 이름을 지정합니다. 이 값은 IIS ApplicationHost.config 파일에서 **\<sites>** 아래에 있는 **\<site>** 요소의 **name** 특성에 해당합니다.|  
 |**connectionName**|특성. 사용할 연결 이름을 지정합니다. 이 값은 Web.config에서 **\<connectionStrings>** 요소 아래에 있는 **\<add>** 요소의 **name** 특성에 해당합니다.|  
 |**serviceName**|특성. 웹 서비스의 이름을 지정합니다. 이 값은 Web.config에서 **\<services>** 요소 아래에 있는 **\<service>** 요소의 **name** 특성에 해당합니다.|  
   

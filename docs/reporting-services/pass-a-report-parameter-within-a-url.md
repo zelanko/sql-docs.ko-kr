@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b0848b6c5d34470964bc363b827e82c466f78326
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a78727d3b0ab3ee1909f9e86032ab392642b5603
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390486"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211212"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>URL에 보고서 매개 변수 전달
   보고서 매개 변수를 보고서 URL에 포함시켜 보고서에 전달할 수 있습니다. 이러한 URL 매개 변수는 보고서 처리 엔진에 직접 전달되기 때문에 접두사가 붙지 않습니다.  
@@ -28,12 +28,12 @@ ms.locfileid: "52390486"
   
  모든 쿼리 매개 변수에는 해당하는 보고서 매개 변수가 있을 수 있습니다. 해당 보고서 매개 변수를 전달하여 보고서에 쿼리 매개 변수를 전달할 수 있습니다. 자세한 내용은 [관계형 쿼리 디자이너에서 쿼리 빌드&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)를 참조하세요.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  보고서 매개 변수는 대/소문자를 구분합니다.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  보고서 매개 변수는 대/소문자를 구분하고 다음과 같은 특수 문자를 사용합니다.  
->   
+> 
 >  -   URL 문자열에서 공백 문자는 URL 인코딩 표준에 따라 "%20" 문자로 바뀝니다.  
 > -   URL의 매개 변수 부분에서 공백 문자는 더하기 문자(+)로 대체됩니다.  
 > -   문자열의 모든 부분에서 세미콜론은 "%3A" 문자로 바뀝니다.  

@@ -9,17 +9,17 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 571b75284aeaf711245a2f96407df173e37a7649
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24320f6f60d336df54093dd761d2b8bc872e3cc9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780931"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211462"
 ---
 # <a name="pushdown-computations-in-polybase"></a>PolyBase의 푸시다운 계산
 
 
-##<a name="dmv"></a>DMV
+## <a name="dmv"></a>DMV
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

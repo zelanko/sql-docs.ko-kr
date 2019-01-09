@@ -102,8 +102,9 @@ items:
     href: execute-sql-server-agent-job-task.md
   - name: SQL 실행 태스크
     href: execute-sql-task.md
-  - name: Integration Services 패키지의 MERGE
-    href: merge-in-integration-services-packages.md
+    items:
+    - name: Integration Services 패키지의 MERGE
+      href: merge-in-integration-services-packages.md
   - name: T-SQL 문 실행 태스크
     href: execute-t-sql-statement-task.md
   - name: 식 태스크
@@ -173,9 +174,9 @@ items:
       href: validate-xml-with-the-xml-task.md
 - name: 선행 제약 조건
   href: precedence-constraints.md
-ms.openlocfilehash: 71692b371dbb280515e35e270e0e0c11aecf876d
-ms.sourcegitcommit: 54a8d9ef7a714043fc72a6c530a6866804414747
+ms.openlocfilehash: 22ac40c444fc52df8c0c29b9908b1d4d30fc4ee8
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45533956"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991856"

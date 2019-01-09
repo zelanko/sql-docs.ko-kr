@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 02053fed0f366945d08e0551d64aeb8a3ed6f33a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13678d9b3d522e65ff1f9e895020bb0fde020bef
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619541"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52751916"
 ---
 # <a name="security-master-data-services"></a>보안(Master Data Services)
 
@@ -29,7 +28,7 @@ ms.locfileid: "47619541"
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 보안은 로컬 또는 Active Directory 도메인 사용자 및 그룹을 기반으로 합니다. MDS 보안을 사용하면 사용자가 액세스할 수 있는 데이터를 결정할 때 세부 정보를 사용할 수 있습니다. 이러한 세분성 때문에 보안은 쉽게 복잡해질 수 있으므로 겹치는 사용자 및 그룹을 사용할 때는 주의해야 합니다. 자세한 내용은 [겹치는 사용자 및 그룹 권한&#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)을 참조하세요.  
   
- **웹 응용 프로그램의** 사용자 및 그룹 권한 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 기능 영역에서 또는 웹 서비스를 사용하여 보안 액세스를 할당할 수 있습니다.  
+ **웹 애플리케이션의** 사용자 및 그룹 권한 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 기능 영역에서 또는 웹 서비스를 사용하여 보안 액세스를 할당할 수 있습니다.  
   
 ## <a name="types-of-users"></a>사용자 유형  
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에는 두 가지 사용자 유형이 있습니다.  
@@ -50,7 +49,7 @@ ms.locfileid: "47619541"
  특성 및 멤버에 사용 권한을 할당할 때는 사용 권한 Intersect와 규칙에 따라 우선 적용되는 사용 권한이 결정됩니다. 자세한 내용은 [사용 권한이 결정되는 방식&#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)을 참조하세요.  
   
 ## <a name="security-in-the-add-in-for-excel"></a>Excel용 추가 기능의 보안  
- [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에서 설정된 보안이 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]에도 적용됩니다. 사용자는 해당 사용 권한을 가진 데이터만 보고 이를 사용할 수 있습니다. 관리자는 관리 태스크를 수행할 수 있습니다.  
+ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션에서 설정된 보안이 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]에도 적용됩니다. 사용자는 해당 사용 권한을 가진 데이터만 보고 이를 사용할 수 있습니다. 관리자는 관리 태스크를 수행할 수 있습니다.  
   
  유일한 문제는 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 에서 할당된 모든 보안이 20분의 간격이 지나야 Excel에서 효력이 발생한다는 것입니다. 이 간격은 web.config 파일의 *MdsMaximumUserInformationCacheInterval* 설정에서 정의됩니다. 간격을 변경하려면 설정을 변경하고 IIS를 다시 시작하면 됩니다.  
   
@@ -59,8 +58,8 @@ ms.locfileid: "47619541"
 |태스크 설명|항목|  
 |----------------------|-----------|  
 |모델에 대한 전체 권한이 있는 사용자를 만듭니다.|[모델 관리자 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에 Active Directory 그룹을 추가합니다. 이 작업은 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 웹 응용 프로그램에서 데이터 액세스 권한을 그룹에 부여할 때 첫 번째 단계입니다.|[그룹 추가&#40;Master Data Services&#41;](../master-data-services/add-a-group-master-data-services.md)|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 웹 응용 프로그램의 기능 영역에 사용 권한을 할당합니다.|[기능 영역 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에 Active Directory 그룹을 추가합니다. 이 작업은 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 웹 애플리케이션에서 데이터 액세스 권한을 그룹에 부여할 때 첫 번째 단계입니다.|[그룹 추가&#40;Master Data Services&#41;](../master-data-services/add-a-group-master-data-services.md)|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 웹 애플리케이션의 기능 영역에 사용 권한을 할당합니다.|[기능 영역 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)|  
 |모델 개체에 사용 권한을 할당하여 특성 값에 사용 권한을 할당합니다.|[모델 개체 사용 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
 |계층 노드에 사용 권한을 할당하여 멤버에 사용 권한을 할당합니다.|[계층 멤버 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
   

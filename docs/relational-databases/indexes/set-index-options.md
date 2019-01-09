@@ -25,12 +25,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0dbf0368c86b906a2f482010779407353f771db8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5f852bcf9a1cf195df6ebf05738cc63536ee4941
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392887"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588107"
 ---
 # <a name="set-index-options"></a>인덱스 옵션 설정
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "52392887"
   
 7.  **닫기**를 클릭합니다.  
   
-8.  **파일** 메뉴에서 **Save***table_name*을 선택합니다.  
+8.  **파일** 메뉴에서 _table_name_ **저장**을 선택합니다.  
   
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>개체 탐색기에서 인덱스 속성을 수정하려면  
   
@@ -100,7 +100,7 @@ ms.locfileid: "52392887"
   
 7.  속성의 설정을 변경하여 인덱스를 사용자 지정합니다.  
   
-8.  인덱스 열을 추가 또는 제거하거나 그 위치를 변경하려면 **인덱스 속성 -** **일반** *일반* 페이지를 선택합니다. 자세한 내용은 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)를 참조하세요.  
+8.  인덱스 열을 추가 또는 제거하거나 그 위치를 변경하려면 **인덱스 속성 -**  **일반** _일반_ 페이지를 선택합니다. 자세한 내용은 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)를 참조하세요.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

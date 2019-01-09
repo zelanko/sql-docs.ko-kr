@@ -6,8 +6,6 @@ ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- vs.output
 helpviewer_keywords:
 - Output Window [Transact-SQL]
 - Output Window [SQL Server Management Studio]
@@ -16,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 07720dbcb560c9f6cb7b4e2afb4d2daa2b752e35
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 5037e30631b98020bb793f76c3dcda98bc575fc4
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643993"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328683"
 ---
 # <a name="transact-sql-debugger---output-window"></a>Transact-SQL 디버거 - 출력 창
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +29,7 @@ ms.locfileid: "51643993"
   
 -   **보기** 메뉴에서 **다른 창**을 클릭한 다음 **출력**을 클릭합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **출력 창 목록**  
  확인할 출력 창 목록을 표시합니다. **출력** 창을 사용하여 사용자에게 정보를 전달하는 각 도구에 따라 여러 정보 창을 사용할 수 있습니다.  
   
@@ -40,5 +38,3 @@ ms.locfileid: "51643993"
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-SQL 디버거](../../relational-databases/scripting/transact-sql-debugger.md)  
-  
-  

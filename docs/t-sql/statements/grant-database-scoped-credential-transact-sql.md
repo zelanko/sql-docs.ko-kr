@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 10aad145473d2b47ad0f845def3f71da23c8430d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a30b96b42aabdd8511dcad542fed498c4ca26516
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725541"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589277"
 ---
 # <a name="grant-database-scoped-credential-permissions-transact-sql"></a>GRANT Database Scoped Credential Permissions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ GRANT permission  [ ,...n ]
  *permission*  
  데이터베이스 범위 자격 증명에 대해 부여할 수 있는 사용 권한을 지정합니다. 아래와 같습니다.  
   
- ON DATABASE SCOPED CREDENTIAL **::***credential_name*  
+ 데이터베이스 범위 자격 증명에서 **::**_credential_name_  
  사용 권한을 부여하는 데이터베이스 범위 자격 증명을 지정합니다. 범위 한정자 "::"이 필요합니다.  
   
  *database_principal*  

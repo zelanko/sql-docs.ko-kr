@@ -13,12 +13,12 @@ ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb31f067ceb052a165cd6e3830e778d6af15e875
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9e5b9b4d25c7fd6f0384c3390e09c4b427228ebb
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509357"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589617"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>공간 인덱스 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "52509357"
   
 공간 인덱스 만들기의 제한 사항에 대한 자세한 내용은 [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)를 참조하세요.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 **선택한 공간 인덱스**  
 기존 공간 인덱스의 목록을 표시합니다. 속성을 표시할 인덱스를 선택합니다. 이 목록이 비어 있으면 테이블에 정의된 공간 인덱스가 없는 것입니다.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "52509357"
 **페이지 잠금 허용**  
 현재 인덱스에 대해 페이지 수준의 잠금이 허용되는지 여부를 지정합니다. 페이지 수준의 잠금 허용 여부는 데이터베이스 성능에 영향을 줍니다.  
   
-**통계** **다시 계산**  
+**통계 다시 계산**  
 인덱스를 만들 때 새 통계를 계산할지 여부를 지정합니다. 통계를 다시 계산하면 인덱스 작성 속도가 느려지지만 일반적으로 쿼리 성능을 향상시킬 수 있습니다.  
   
 **행 잠금 허용**  

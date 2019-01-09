@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e91131cdd88d9439ad51432f18e7c88a65432e64
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: 7f0e93aaff4ed0f8eb02de0acb3e9362c1a390a1
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991246"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991916"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -181,7 +181,7 @@ OR ALTER
   
 -   뷰에서 수정하는 열은 테이블 열에 있는 기본 데이터를 직접 참조해야 합니다. 다음과 같은 기타 방법으로 열이 파생되면 안 됩니다.  
   
-    -   집계 함수(AVG, COUNT, SUM, MIN, MAX, GROUPING, STDEV, STDEVP, VAR, VARP)  
+    -   집계 함수: AVG, COUNT, SUM, MIN, MAX, GROUPING, STDEV, STDEVP, VAR 및 VARP  
   
     -   계산: 다른 열을 사용하는 식으로 열을 계산할 수 없습니다. 집합 연산자 UNION, UNION ALL, CROSSJOIN, EXCEPT 및 INTERSECT를 사용하여 구성한 열은 계산되지만 업데이트할 수 없습니다.  
   
@@ -406,7 +406,7 @@ WITH CHECK OPTION ;
 GO  
 ```  
   
-### <a name="d-using-built-in-functions-within-a-view"></a>4. 뷰에서 기본 제공 함수 사용  
+### <a name="d-using-built-in-functions-within-a-view"></a>D. 뷰에서 기본 제공 함수 사용  
  다음 예에서는 기본 제공 함수를 포함하는 뷰 정의를 보여 줍니다. 함수를 사용할 때는 파생 열의 열 이름을 지정해야 합니다.  
   
 ```  
@@ -420,7 +420,7 @@ GO
 
 ```  
   
-### <a name="e-using-partitioned-data"></a>5. 분할된 데이터 사용  
+### <a name="e-using-partitioned-data"></a>E. 분할된 데이터 사용  
  다음 예에서는 `SUPPLY1`, `SUPPLY2`, `SUPPLY3` 및 `SUPPLY4` 테이블을 사용합니다. 이러한 테이블은 서로 다른 국가/지역에 있는 4개 사무실의 공급자 테이블입니다.  
   
 ```  
@@ -458,7 +458,7 @@ UNION ALL
 SELECT supplyID, supplier  
   FROM dbo.SUPPLY4;  
 GO
-INSERT dbo.SUPPLY1 VALUES ('1', 'CaliforniaCorp'), ('5', 'BraziliaLtd')  
+INSERT dbo.all_supplier_view VALUES ('1', 'CaliforniaCorp'), ('5', 'BraziliaLtd')    
 , ('231', 'FarEast'), ('280', 'NZ')  
 , ('321', 'EuroGroup'), ('442', 'UKArchip')  
 , ('475', 'India'), ('521', 'Afrique');  
@@ -467,7 +467,7 @@ GO
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="f-creating-a-simple-view"></a>6. 간단한 뷰 만들기  
+### <a name="f-creating-a-simple-view"></a>F. 간단한 뷰 만들기  
  다음 예는 원본 테이블에서 일부 열만 선택하여 뷰를 만듭니다.  
   
 ```  
@@ -476,7 +476,7 @@ SELECT FirstName, LastName, BirthDate
 FROM DimEmployee;  
 ```  
   
-### <a name="g-create-a-view-by-joining-two-tables"></a>7. 두 테이블을 조인하여 뷰 만들기  
+### <a name="g-create-a-view-by-joining-two-tables"></a>G. 두 테이블을 조인하여 뷰 만들기  
  다음 예에서는 `OUTER JOIN`이 있는 `SELECT` 문을 사용하여 뷰를 만듭니다. 조인 쿼리의 결과가 뷰를 채웁니다.  
   
 ```  

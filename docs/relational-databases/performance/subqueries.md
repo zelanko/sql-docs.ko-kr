@@ -13,16 +13,16 @@ helpviewer_keywords:
 - subqueries [SQL Server], correlated
 - subqueries [SQL Server], types
 ms.assetid: bfc97432-c14c-4768-9dc5-a9c512f6b2bd
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 487397681b993bc4995a422730d84aef5423f8c0
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: a2ac6f2a1692d72eecbcd97dbc3536dcebd6f2ec
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033700"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356023"
 ---
 # <a name="subqueries-sql-server"></a>하위 쿼리(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -487,7 +487,7 @@ WHERE ProductSubcategoryID NOT IN
 GO
 ```
 
-이 문은 조인으로 변환할 수 없습니다. 이와 유사한 같지 않음 조인은 의미가 다릅니다. 즉 이 조인은 완성된 자전거 이외의 하위 범주에 있는 제품 이름을 찾습니다.      
+이 문은 조인으로 변환할 수 없습니다. 이와 유사한 같지 않음 조인은 다른 의미를 갖습니다. 이 조인은 완성된 자전거 이외의 하위 범주에 있는 제품 이름을 찾습니다.      
 
 ### <a name="upsert"></a> UPDATE, DELETE 및 INSERT 문의 하위 쿼리
 `UPDATE`, `DELETE`, `INSERT` 및 `SELECT ` DML(데이터 조작 언어) 문에 하위 쿼리가 중첩될 수 있습니다.    
