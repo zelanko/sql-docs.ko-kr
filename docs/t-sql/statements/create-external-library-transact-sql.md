@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/05/2018
+ms.date: 12/07/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -19,22 +19,20 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8c6b8ea4467ddc09a08d21a337b1b5c8c44f34e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bd47fd06404dad6e6896d377e95de677a08c5ae3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538779"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205163"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY(Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
-R 패키지를 지정된 바이트 스트림 또는 파일 경로에서 데이터베이스에 업로드합니다.
+R 패키지 파일을 지정된 바이트 스트림 또는 파일 경로의 데이터베이스에 업로드합니다. 이 명령문은 데이터베이스 관리자가 새 외부 언어 런타임(현재 R만 해당) 및 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]에서 지원되는 OS 플랫폼에 필요한 아티팩트를 업로드하기 위한 일반 메커니즘의 역할을 합니다. 
 
-이 명령문은 데이터베이스 관리자가 새 외부 언어 런타임(R, Python, Java 등) 및 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]에서 지원되는 OS 플랫폼에 필요한 아티팩트를 업로드하기 위한 일반 메커니즘의 역할을 합니다. 
-
-현재 R 언어 및 Windows 플랫폼만 지원됩니다. Python 및 Linux에 대한 지원은 후속 릴리스에서 계획되어 있습니다.
+SQL Server 2017 이상에서는 R 언어 및 Windows 플랫폼만 지원됩니다. Python 및 Linux에 대한 지원은 후속 릴리스에서 계획되어 있습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -94,7 +92,7 @@ WITH ( LANGUAGE = 'R' )
 
 라이브러리의 콘텐츠에 대한 플랫폼을 지정합니다. 값은 기본적으로 SQL Server가 실행 중인 호스트 플랫폼입니다. 그러므로 사용자는 값을 지정하지 않아도 됩니다. 이는 여러 플랫폼이 지원되거나 사용자가 다른 플랫폼을 지정해야 하는 경우에 필요합니다. 
 
-SQL Server 2017에서는 Windows 플랫폼만 지원됩니다.
+현재 Windows 플랫폼만 지원됩니다.
 
 ## <a name="remarks"></a>Remarks
 
@@ -190,7 +188,7 @@ CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE =
 > [!NOTE]
 > 이 코드 샘플은 구문만 보여줍니다. `CONTENT =`의 이진 값은 읽기 쉽도록 잘렸으며, 작업 중인 라이브러리를 생성하지 않습니다. 이진 변수의 실제 콘텐츠는 훨씬 더 깁니다.
 
-### <a name="d-change-an-existing-package-library"></a>4. 기존 패키지 라이브러리 변경
+### <a name="d-change-an-existing-package-library"></a>D. 기존 패키지 라이브러리 변경
 
 `ALTER EXTERNAL LIBRARY` DDL 문을 사용하여 새 라이브러리 콘텐츠를 추가하거나 기존 라이브러리 콘텐츠를 수정할 수 있습니다. 기존 라이브러리를 수정하려면 별도의 `ALTER ANY EXTERNAL LIBRARY` 권한이 필요합니다.
 

@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019의 새로운 기능 | Microsoft Docs
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.prod: sql-server-2018
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4cafa82c6c5dd7712daa930b9b9aaf4be2bf66fc
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 0d36e43d4015d0edf2271ee86ea0d2f7a761ce8d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711834"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207782"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>SQL Server 2019의 새로운 기능
 
@@ -27,72 +27,74 @@ ms.locfileid: "52711834"
 - [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) 및 [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)용 Linux에 설치
 - [Docker의 SQL Server 2019에서 실행](../linux/quickstart-install-connect-docker.md)
 
-## <a name="ctp-21"></a>CTP 2.1
+## <a name="ctp-22"></a>CTP 2.2
 
-CTP(Community Technology Preview) 2.1은 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 최신 공개 릴리스입니다. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.1용으로 추가되었거나 개선된 기능은 다음과 같습니다.
-
-- [빅 데이터 클러스터](#bigdatacluster)
-  - Python 및 R 앱 배포
-- [데이터베이스 엔진](#databaseengine)
-  - 지능형 쿼리 처리에 스칼라 UDF 인라인 처리 추가
-  - 테이블 및 열 이름 및 잘린 값을 포함하도록 잘림 오류 메시지 개선
-  - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설정에서 UTF-8 데이터 정렬 지원
-  - 그래프 일치 쿼리에서 파생 테이블 또는 뷰 별칭 사용
-  - 통계 차단에 대한 진단 데이터 개선
-  - 하이브리드 버퍼 풀
-  - 정적 데이터 마스킹
-- [Tools](#tools)
-  - Azure Data Studio
-
-## <a name="ctp-20"></a>CTP 2.0 
-
-CTP(Community Technology Preview) 2.0은 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 첫 번째 공개 릴리스입니다. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0용으로 추가되었거나 개선된 기능은 다음과 같습니다.
+CTP(Community Technology Preview) 2.2는 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 최신 공개 릴리스입니다. 이 릴리스에는 버그를 수정하고, 보안을 개선하고, 성능을 최적화하는 이전 CTP 릴리스의 개선 사항이 포함됩니다. 또한 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.2에서 추가되었거나 개선된 기능은 다음과 같습니다.
 
 - [빅 데이터 클러스터](#bigdatacluster)
-  - Kubernetes에서 SQL 및 Spark Linux 컨테이너를 사용하여 빅 데이터 클러스터 배포
-  - HDFS에서 빅 데이터에 액세스
-  - Spark에서 고급 분석 및 Machine Learning 실행
-  - Spark Streaming을 사용하여 SQL 데이터 풀에 데이터 스트리밍
-  - Azure Data Studio를 사용하여 노트 환경을 제공하는 쿼리 책 실행
+  - 빅 데이터 클러스터에 대해 Azure Data Studio의 SparkR 사용
 
 - [데이터베이스 엔진](#databaseengine)
-  - UTF-8 지원
-  - 다시 시작 가능한 온라인 인덱스 만들기를 통해 중단 후에 인덱스 만들기를 다시 시작할 수 있음
-  - 클러스터형 columnstore 온라인 인덱스 작성 및 다시 작성
-  - 보안 Enclave를 사용한 Always Encrypted
-  - 지능형 쿼리 처리
-  - Java 언어 프로그래밍 기능 확장
-  - SQL 그래프 기능
-  - 온라인 및 다시 시작 가능한 DDL 작업에 대한 데이터베이스 범위 구성 설정
-  - Always On 가용성 그룹 - 보조 복제본 연결 리디렉션
-  - 데이터 검색 및 분류 - SQL Server에 기본적으로 제공
-  - 영구 메모리 디바이스에 대한 확장 지원
-  - `DBCC CLONEDATABASE`에서 Columnstore 통계 지원
-  - `sp_estimate_data_compression_savings`에 새로 추가된 옵션
-  - SQL Server Machine Learning Services 장애 조치(Failover) 클러스터
-  - 간단한 쿼리 프로파일링 인프라가 기본적으로 사용 가능
-  - 새 PolyBase 커넥터
-  - 페이지 정보를 반환하는 새 `sys.dm_db_page_info` 시스템 함수
+  - SQL Server 복제에서 UTF-8 문자 인코딩 사용
+
+## <a name="previous-ctps"></a>이전 CTP
+
+이전 CTP 릴리스는 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]에 대해 다음 기능을 추가하거나 향상시켰습니다.
+
+- [빅 데이터 클러스터](#bigdatacluster) 
+  - Kubernetes에서 SQL 및 Spark Linux 컨테이너를 사용하여 빅 데이터 클러스터 배포(CTP 2.0)
+  - HDFS에서 빅 데이터에 액세스(CTP 2.0)
+  - Spark에서 고급 분석 및 Machine Learning 실행(CTP 2.0)
+  - Spark Streaming을 사용하여 SQL 데이터 풀에 데이터 스트리밍(CTP 2.0)
+  - Azure Data Studio를 사용하여 Notebook 환경을 제공하는 쿼리 책 실행(CTP 2.0)
+  - Python 및 R 앱 배포(CTP 2.1)
+
+- [데이터베이스 엔진](#databaseengine)
+  - UTF-8 지원(CTP 2.0)
+  - 다시 시작 가능한 온라인 인덱스 만들기를 통해 중단 후에 인덱스 만들기를 다시 시작 가능(CTP 2.0)
+  - 클러스터형 columnstore 온라인 인덱스 빌드 및 다시 빌드(CTP 2.0)
+  - 보안 Enclave를 사용한 Always Encrypted(CTP 2.0)
+  - 지능형 쿼리 처리(CTP 2.0)
+  - Java 언어 프로그래밍 기능 확장(CTP 2.0)
+  - SQL 그래프 기능(CTP 2.0)
+  - 온라인 및 다시 시작 가능한 DDL 작업에 대한 데이터베이스 범위 구성 설정(CTP 2.0)
+  - Always On 가용성 그룹 - 보조 복제본 연결 리디렉션(CTP 2.0)
+  - 데이터 검색 및 분류 - SQL Server에 기본적으로 제공(CTP 2.0)
+  - 영구 메모리 디바이스에 대한 확장 지원(CTP 2.0)
+  - `DBCC CLONEDATABASE`에서 Columnstore 통계 지원(CTP 2.0)
+  - `sp_estimate_data_compression_savings`에 새로 추가된 옵션(CTP 2.0)
+  - SQL Server Machine Learning Services 장애 조치(Failover) 클러스터(CTP 2.0)
+  - 간단한 쿼리 프로파일링 인프라가 기본적으로 사용 가능(CTP 2.0)
+  - 새 PolyBase 커넥터(CTP 2.0)
+  - 페이지 정보를 반환하는 새 `sys.dm_db_page_info` 시스템 함수(CTP 2.0)
+  - 지능형 쿼리 처리에 스칼라 UDF 인라인 처리 추가(CTP 2.1)
+  - 테이블 및 열 이름 및 잘린 값을 포함하도록 잘림 오류 메시지 개선(CTP 2.1)
+  - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설정에서 UTF-8 데이터 정렬 지원(CTP 2.1)
+  - 그래프 일치 쿼리에서 파생 테이블 또는 보기 별칭 사용(CTP 2.1)
+  - 통계 차단에 대한 진단 데이터 개선(CTP 2.1)
+  - 하이브리드 버퍼 풀(CTP 2.1)
+  - 정적 데이터 마스킹(CTP 2.1)
 
 - [Linux의 SQL Server](#sqllinux)
-  - 복제 지원
-  - MSDTC(Microsoft Distributed Transaction Coordinator) 지원
-  - Kubernetes를 사용하는 Docker 컨테이너의 Always On 가용성 그룹
-  - 타사 AD 공급자에 대한 OpenLDAP 지원
-  - Linux의 Machine Learning
-  - 새 컨테이너 레지스트리
-  - 새 RHEL 기반 컨테이너 이미지
-  - 메모리 부족 알림
+  - 복제 지원(CTP 2.0)
+  - MSDTC(Microsoft Distributed Transaction Coordinator) 지원(CTP 2.0)
+  - Kubernetes를 사용하는 Docker 컨테이너의 Always On 가용성 그룹(CTP 2.0)
+  - 타사 AD 공급 기업에 대한 OpenLDAP 지원(CTP 2.0)
+  - Linux의 Machine Learning(CTP 2.0)
+  - 새 컨테이너 레지스트리(CTP 2.0)
+  - 새 RHEL 기반 컨테이너 이미지(CTP 2.0)
+  - 메모리 부족 알림(CTP 2.0)
 
 - [MDS(Master Data Services)](#mds)
-  - Silverlight 컨트롤이 대체됨
+  - Silverlight 컨트롤이 대체됨(CTP 2.0)
 
 - [보안](#security)
-  - SQL Server 구성 관리자의 인증서 관리
+  - SQL Server 구성 관리자의 인증서 관리(CTP 2.0)
 
 - [Tools](#tools)
-  - SSMS(SQL Server Management Studio) 18.0(미리 보기)
-  - Azure Data Studio
+  - SSMS(SQL Server Management Studio) 18.0(미리 보기)(CTP 2.0)
+  - Azure Data Studio(CTP 2.0)
+  - Azure Data Studio(CTP 2.1)
 
 이러한 기능에 대한 자세한 내용을 보려면 계속 읽어보세요.
 
@@ -100,6 +102,7 @@ CTP(Community Technology Preview) 2.0은 [!INCLUDE[sql-server-2019](../includes/
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [빅 데이터 클러스터](../big-data-cluster/big-data-cluster-overview.md)는 다음을 비롯한 새로운 시나리오를 지원합니다.
 
+- 빅 데이터 클러스터에 대해 Azure Data Studio의 SparkR 사용 (CTP 2.2)
 - [Python 및 R 앱 배포](../big-data-cluster/big-data-cluster-create-apps.md) (CTP 2.1)
 - Kubernetes에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 Spark Linux 컨테이너를 사용하여 빅 데이터 클러스터 배포(CTP 2.0)
 - HDFS에서 빅 데이터에 액세스(CTP 2.0)
@@ -107,11 +110,11 @@ CTP(Community Technology Preview) 2.0은 [!INCLUDE[sql-server-2019](../includes/
 - Spark Streaming을 사용하여 SQL 데이터 풀에 데이터 스트리밍(CTP 2.0)
 - [**Azure Data Studio**](../sql-operations-studio/what-is.md)에서 노트 환경을 제공하는 쿼리 책 실행 (CTP 2.0)
  
-[!INCLUDE [Big Data Clusters preview](../includes/big-data-cluster-preview-note.md)]
+[!INCLUDE [Big data clusters preview](../includes/big-data-cluster-preview-note.md)]
 
 ## <a id="databaseengine"></a> 데이터베이스 엔진
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서는 다음과 같이 데이터베이스 엔진의 새로운 기능을 도입하거나 향상된 기능을 제공합니다.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 다음과 같은 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 새로운 기능을 도입하거나 향상된 기능을 제공합니다.
 
 ### <a name="scalar-udf-inlining-ctp-21"></a>스칼라 UDF 인라인 처리(CTP 2.1)
 
@@ -125,29 +128,25 @@ CTP(Community Technology Preview) 2.0은 [!INCLUDE[sql-server-2019](../includes/
 
 `String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
 
-새 오류 메시지 2628은 데이터 잘림 문제에 대한 자세한 컨텍스트를 제공하여 문제 해결 프로세스를 간소화합니다. CTP 2.1의 경우 이는 옵트인 오류 메시지이며 [추적 플래그](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460을 사용 하도록 설정해야 합니다.
-
-### <a name="utf-8-support-ctp-21"></a>UTF-8 지원(CTP 2.1)
-
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 설정 도중 UTF-8 데이터 정렬을 기본적으로 선택하도록 지원을 추가했습니다.
+새 오류 메시지 2628은 데이터 잘림 문제에 대한 자세한 컨텍스트를 제공하여 문제 해결 프로세스를 간소화합니다. CTP 2.1 및 CTP 2.2의 경우 이는 옵트인 오류 메시지이며 [추적 플래그](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460을 사용 하도록 설정해야 합니다.
 
 ### <a name="improved-diagnostic-data-for-stats-blocking-ctp-21"></a>통계 차단에 대한 진단 데이터 개선(CTP 2.1)
 
-SQL Server 2019 미리 보기는 동기 통계 업데이트 작업을 대기하는 장기 실행 쿼리를 위한 향상된 진단 데이터를 제공합니다. `SELECT`가 쿼리 실행을 계속하기 전에 동기 통계 업데이트 작업이 완료되도록 기다리고 있는 경우 동적 관리 뷰 `sys.dm_exec_requests` 열 `command`에서는 `SELECT (STATMAN)`가 나타납니다.  또한 새로운 대기 유형 `WAIT_ON_SYNC_STATISTICS_REFRESH`가 `sys.dm_os_wait_stats` 동적 관리 뷰에 표시됩니다. 동기 통계 새로 고침 작업에 소요된 누적된 인스턴스 수준 시간을 보여 줍니다.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 동기 통계 업데이트 작업을 대기하는 장기 실행 쿼리를 위한 향상된 진단 데이터를 제공합니다. `SELECT`가 쿼리 실행을 계속하기 전에 동기 통계 업데이트 작업이 완료되도록 기다리고 있는 경우 동적 관리 뷰 `sys.dm_exec_requests` 열 `command`에서는 `SELECT (STATMAN)`가 나타납니다.  또한 새로운 대기 유형 `WAIT_ON_SYNC_STATISTICS_REFRESH`가 `sys.dm_os_wait_stats` 동적 관리 뷰에 표시됩니다. 동기 통계 새로 고침 작업에 소요된 누적된 인스턴스 수준 시간을 보여 줍니다.
 
 ### <a name="static-data-masking-ctp-21"></a>정적 데이터 마스킹(CTP 2.1)
 
-SQL Server 2019 미리 보기에서는 정적 데이터 마스킹을 도입합니다. SQL Server 데이터베이스의 복사본에서 중요한 데이터를 삭제하는 정적 마스킹 데이터를 사용할 수 있습니다. 모든 중요한 정보가 프로덕션 외의 사용자와 복사본을 공유할 수 있는 방식으로 변경된 경우 정적 데이터 마스킹을 사용하면 정화된 데이터베이스 복사본을 만들 수 있습니다. 정적 데이터 마스킹은 개발, 테스트, 분석 및 비즈니스 보고, 규정 준수, 문제 해결 및 특정 데이터를 다른 환경에 복사할 수 없는 기타 시나리오에 사용할 수 있습니다.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 정적 데이터 마스킹을 제공합니다. SQL Server 데이터베이스의 복사본에서 중요한 데이터를 삭제하는 정적 마스킹 데이터를 사용할 수 있습니다. 모든 중요한 정보가 프로덕션 외의 사용자와 복사본을 공유할 수 있는 방식으로 변경된 경우 정적 데이터 마스킹을 사용하면 정화된 데이터베이스 복사본을 만들 수 있습니다. 정적 데이터 마스킹은 개발, 테스트, 분석 및 비즈니스 보고, 규정 준수, 문제 해결 및 특정 데이터를 다른 환경에 복사할 수 없는 기타 시나리오에 사용할 수 있습니다.
 
 정적 데이터 마스킹은 열 수준에서 작동합니다. 마스크할 열을 선택하고 선택한 각 열에 대해 마스킹 함수를 지정합니다. 정적 데이터 마스킹이 데이터베이스를 복사한 후 지정한 마스킹 함수를 열에 적용합니다.
 
 #### <a name="static-data-masking-vs-dynamic-data-masking"></a>정적 데이터 마스킹 및 동적 데이터 마스킹
 
-데이터 마스킹은 중요한 정보를 숨기기 위해 데이터베이스에 마스크를 적용하고 새 데이터나 삭제된 데이터로 대체하는 프로세스입니다. Microsoft는 정적 데이터 마스킹 및 동적 데이터 마스킹의 두 가지 마스킹 옵션을 제공합니다. 동적 데이터 마스킹은 SQL Server 2017에서 도입되었습니다. 다음 표에서는 이러한 두 솔루션을 비교합니다.
+데이터 마스킹은 중요한 정보를 숨기기 위해 데이터베이스에 마스크를 적용하고 새 데이터나 삭제된 데이터로 대체하는 프로세스입니다. Microsoft는 정적 데이터 마스킹 및 동적 데이터 마스킹의 두 가지 마스킹 옵션을 제공합니다. 동적 데이터 마스킹은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]에서 제공되었습니다. 다음 표에서는 이러한 두 솔루션을 비교합니다.
 
-|정적 데이터 마스킹 |동적 데이터 마스킹
-|:----|:----
-|데이터베이스 복사본에서 발생 <br/><br/>원본 데이터를 검색할 수 없음<br/><br/>마스크는 스토리지 수준에서 발생<br/><br/>모든 사용자가 동일한 마스크된 데이터에 액세스할 수 있음<br/><br/>지속적인 팀 전체 액세스를 위해 설계|원본 데이터베이스에서 발생<br/><br/>원본 데이터가 그대로 유지됨<br/><br/>마스크는 쿼리 시 즉석에서 발생<br/><br/>마스크는 사용자 권한에 따라 다름 <br/><br/>정확한 시간에 사용자 특정 액세스를 위해 설계
+|정적 데이터 마스킹 |동적 데이터 마스킹|
+|:----|:----|
+|데이터베이스 복사본에서 발생 <br/><br/>원본 데이터를 검색할 수 없음<br/><br/>마스크는 스토리지 수준에서 발생<br/><br/>모든 사용자가 동일한 마스크된 데이터에 액세스할 수 있음<br/><br/>지속적인 팀 전체 액세스를 위해 설계|원본 데이터베이스에서 발생<br/><br/>원본 데이터가 그대로 유지됨<br/><br/>마스크는 쿼리 시 즉석에서 발생<br/><br/>마스크는 사용자 권한에 따라 다름 <br/><br/>정확한 시간에 사용자 특정 액세스를 위해 설계|
 
 ### <a name="database-compatibility-level-ctp-20"></a>데이터베이스 호환성 수준(CTP 2.0)
 
@@ -157,13 +156,19 @@ SQL Server 2019 미리 보기에서는 정적 데이터 마스킹을 도입합�
    ALTER DATABASE database_name SET COMPATIBILITY_LEVEL =  150;
    ```
 
-### <a name="utf-8-support-ctp-20"></a>UTF-8 지원(CTP 2.0)
+### <a name="utf-8-support-ctp-22"></a>UTF-8 지원(CTP 2.2)
 
 가져오기 또는 내보내기 인코딩이나 텍스트 데이터의 데이터베이스 수준 또는 열 수준 데이터 정렬로 널리 사용되는 UTF-8 문자 인코딩이 완전히 지원됩니다. UTF-8은 `CHAR` 및 `VARCHAR` 데이터 형식에서 허용되며, `UTF8` 접미사를 사용하여 개체의 데이터 정렬을 만들거나 이 접미사를 갖는 데이터 정렬로 변경하여 설정합니다. 
 
-예를 들어 `LATIN1_GENERAL_100_CI_AS_SC`에서 `LATIN1_GENERAL_100_CI_AS_SC_UTF8`로 변경합니다. UTF-8은 SQL Server 2012에 도입된 보충 문자를 지원하는 Windows 데이터 정렬에서만 사용할 수 있습니다. `NCHAR` 및 `NVARCHAR`는 UTF-16 인코딩만 허용하며 변경되지 않고 유지됩니다.
+예를 들어 `LATIN1_GENERAL_100_CI_AS_SC`에서 `LATIN1_GENERAL_100_CI_AS_SC_UTF8`로 변경합니다. UTF-8은 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에 제공된 보충 문자를 지원하는 Windows 데이터 정렬에서만 사용할 수 있습니다. `NCHAR` 및 `NVARCHAR`는 UTF-16 인코딩만 허용하며 변경되지 않고 유지됩니다.
 
 이 기능은 사용 중인 문자 집합에 따라 저장소 비용을 크게 절감하는 효과를 제공할 수 있습니다. 예를 들어 Latin 문자열을 포함하는 기존 열 데이터 형식을 UTF-8 사용 데이터 정렬을 통해 `NCHAR(10)`에서 `CHAR(10)`으로 변경하면 스토리지 요구 수준이 50%로 감소합니다. 이러한 감소는 `NCHAR(10)`에는 스토리지로 20바이트가 필요하지만 `CHAR(10)`에는 동일한 유니코드 문자열에 대해 10바이트만 필요하기 때문입니다.
+
+자세한 내용은 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.
+
+CTP 2.1은 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 설정에서 UTF-8 데이터 정렬을 기본값으로 선택하도록 지원을 추가했습니다.
+
+CTP 2.2는 SQL Server 복제에서 UTF-8 문자 인코딩을 사용하도록 지원을 추가했습니다.
 
 ### <a name="resumable-online-index-create-ctp-20"></a>다시 시작 가능한 온라인 인덱스 만들기(CTP 2.0)
 
@@ -237,12 +242,11 @@ SQL Server 2019 미리 보기에서는 정적 데이터 마스킹을 도입합�
 
 ### <a id="programmability"></a> Java 언어 프로그래밍 기능 확장(CTP 2.0)
 
-- **Java 언어 확장(미리 보기)**: Java 언어 확장을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 Java 코드를 실행합니다. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서 이 확장은 SQL Server 인스턴스에 'Machine Learning Services(데이터베이스 내)' 기능을 추가할 때 설치됩니다.
+- **Java 언어 확장(미리 보기)**: Java 언어 확장을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 Java 코드를 실행합니다. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서 이 확장은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 'Machine Learning Services(데이터베이스 내)' 기능을 추가할 때 설치됩니다.
 
 ### <a id="sqlgraph"></a> SQL 그래프 기능
 
 - **그래프 일치 쿼리에서 파생 테이블 또는 뷰 별칭 사용(CTP 2.1)** SQL Server 2019 미리 보기의 그래프 쿼리는 `MATCH` 구문에서 뷰 및 파생 테이블 별칭을 사용하도록 지원합니다. 이러한 별칭을 `MATCH`에서 사용하려면 `UNION ALL` 연산자를 사용하여 노드 집합 또는 에지 테이블 집합에 대해 뷰 및 파생 테이블을 만들어야 합니다. 노드 또는 에지 테이블에는 필터가 있거나 없을 수 있습니다. `MATCH` 쿼리에서 파생 테이블과 뷰 별칭을 사용하는 기능은 그래프의 두 개 이상의 엔터티 간에 다른 유형의 엔터티 또는 다른 유형의 연결을 쿼리하려는 시나리오에서 매우 유용할 수 있습니다.
-
 
 - **`MERGE` DML의 일치 지원(CTP 2.0)** 을 통해 그래프 관계를 별도의 `INSERT`, `UPDATE` 또는 `DELETE` 문이 아닌 단일 문에 지정할 수 있습니다. `MERGE` 문에 `MATCH` 조건자를 사용하여 노드 또는 에지 테이블의 현재 그래프 데이터를 새 데이터와 병합합니다. 이 기능을 통해 에지 테이블의 `UPSERT` 시나리오가 지원됩니다. 이제 단일 병합 문을 사용하여 두 노드 간에 새 에지를 삽입하거나 기존 에지를 업데이트할 수 있습니다.
 
@@ -258,17 +262,17 @@ SQL Server 2019 미리 보기에서는 정적 데이터 마스킹을 도입합�
   - `WHEN_SUPPPORTED` 옵션을 사용하면 온라인 또는 다시 시작 가능한 지원되는 작업을 허용하고 지원되지 않는 인덱스 작업을 오프라인 또는 다시 시작 불가능 방식으로 실행할 수 있습니다.
   - `OFF` 옵션을 사용하면 DDL 문에 명시적으로 지정되지 않는 한, 모든 인덱스 작업을 오프라인 및 다시 시작 불가능 방식으로 실행하는 현재 동작이 허용됩니다.
 
-기본 설정을 재정의하려면 인덱스 만들기 및 다시 작성 명령에 온라인 또는 다시 시작 가능 옵션을 포함합니다.  
+기본 설정을 재정의하려면 인덱스 만들기 및 다시 작성 명령에 `ONLINE` 또는 `RESUMABLE` 가능 옵션을 포함합니다.  
 
 이 기능을 사용하지 않을 경우 인덱스 만들기 및 다시 작성과 같은 인덱스 DDL 문에서 직접 온라인 및 다시 시작 가능 옵션을 지정해야 합니다.
 
-추가 정보: 인덱스 다시 시작 가능 작업에 대한 자세한 내용은 [다시 시작 가능한 온라인 인덱스 만들기](https://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/)를 참조하세요.
+인덱스 다시 시작 가능 작업에 대한 자세한 내용은 [다시 시작 가능한 온라인 인덱스 만들기](https://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/)를 참조하세요.
 
 ### <a id="ha"></a>Always On 가용성 그룹 - 추가 동기 복제본(CTP 2.0)
 
 - **최대 5개의 동기 복제본**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서는 최대 동기 복제본의 수가 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]의 3개에서 5개로 증가되었습니다. 그룹 내에서 자동 장애 조치(Failover)가 수행되도록 이러한 5개 복제본으로 이루어진 그룹을 구성할 수 있습니다. 이러한 그룹은 주 복제본 1개와 동기 보조 복제본 4개로 구성됩니다.
 
-- **보조-주 복제본 연결 리디렉션**: 이 기능은 연결 문자열에 지정된 대상 서버에 관계없이, 클라이언트 응용 프로그램 연결이 주 복제본으로 전송되도록 합니다. 이 기능에서는 수신기 없는 연결 리디렉션이 허용됩니다. 다음과 같은 경우 보조-주 복제본 연결 리디렉션을 사용합니다.
+- **보조-주 복제본 연결 리디렉션**: 이 기능은 연결 문자열에 지정된 대상 서버에 관계없이 클라이언트 애플리케이션 연결이 주 복제본으로 전송되도록 합니다. 이 기능에서는 수신기 없는 연결 리디렉션이 허용됩니다. 다음과 같은 경우 보조-주 복제본 연결 리디렉션을 사용합니다.
 
   - 클러스터 기술이 수신기 기능을 제공하지 않습니다.
   - 리디렉션이 복잡한 다중 서브넷 구성을 사용하고 있습니다.
@@ -292,7 +296,7 @@ SQL Server 2019 미리 보기에서는 정적 데이터 마스킹을 도입합�
 
 ### <a name="expanded-support-for-persistent-memory-devices-ctp-20"></a>영구 메모리 디바이스에 대한 확장 지원(CTP 2.0)
 
-이제 영구 메모리 디바이스에 배치되는 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 파일은 *지원* 모드로 작동될 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 효율적인 memcpy 작업을 사용하여 운영 체제 저장소 스택을 우회하고 장치에 직접 액세스합니다. 이 모드는 이러한 디바이스에 대해 낮은 대기 시간의 입/출력을 허용하므로 성능을 향상시킵니다.
+이제 영구 메모리 디바이스에 배치되는 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 파일은 *지원* 모드로 작동될 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 효율적인 memcpy 작업을 사용하여 운영 체제 저장소 스택을 우회하고 디바이스에 직접 액세스합니다. 이 모드는 이러한 디바이스에 대해 낮은 대기 시간의 입/출력을 허용하므로 성능을 향상시킵니다.
     - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 파일의 예에는 다음이 포함됩니다.
         - 데이터베이스 파일
         - 트랜잭션 로그 파일
@@ -301,7 +305,7 @@ SQL Server 2019 미리 보기에서는 정적 데이터 마스킹을 도입합�
     - Microsoft 이외의 일부 웹 사이트에서는 경우에 따라 영구 메모리를 비공식적으로 *pmem*이라고도 합니다.
 
 > [!NOTE]
-> 이 미리 보기 릴리스에는 영구 메모리 디바이스의 파일을 Linux에서만 사용할 수 있습니다. Windows의 SQL Server는 SQL Server 2016부터 영구 메모리 디바이스를 지원합니다.
+> 이 미리 보기 릴리스에는 영구 메모리 디바이스의 파일을 Linux에서만 사용할 수 있습니다. Windows의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]부터 영구 메모리 디바이스를 지원합니다.
 
 ### <a name="hybrid-buffer-pool-ctp-21"></a>하이브리드 버퍼 풀(CTP 2.1)
 
@@ -311,11 +315,11 @@ SQL Server 2019 미리 보기에서는 정적 데이터 마스킹을 도입합�
 
 ### <a name="support-for-columnstore-statistics-in-dbcc-clonedatabase-ctp-20"></a>DBCC CLONEDATABASE에서 Columnstore 통계 지원(CTP 2.0)
 
-`DBCC CLONEDATABASE`는 데이터를 복사하지 않고 쿼리 성능 문제를 해결하는 데 필요한 모든 요소가 포함된 데이터베이스의 스키마 전용 복사본을 만듭니다.  이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 이 명령은 columnstore 인덱스 쿼리 문제를 정확히 해결하는 데 필요한 통계를 복사하지 않으므로 수동 단계를 통해 이 정보를 캡처해야 했습니다. 이제 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서 DBCC CLONEDATABASE는 columnstore 인덱스에 대한 통계 Blob을 자동으로 캡처하므로 수동 단계가 필요하지 않습니다.
+`DBCC CLONEDATABASE`는 데이터를 복사하지 않고 쿼리 성능 문제를 해결하는 데 필요한 모든 요소가 포함된 데이터베이스의 스키마 전용 복사본을 만듭니다.  이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 이 명령은 columnstore 인덱스 쿼리 문제를 정확히 해결하는 데 필요한 통계를 복사하지 않으므로 수동 단계를 통해 이 정보를 캡처해야 했습니다. 이제 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서 `DBCC CLONEDATABASE`는 columnstore 인덱스에 대한 통계 Blob을 자동으로 캡처하므로 수동 단계가 필요하지 않습니다.
 
 ### <a name="new-options-added-to-spestimatedatacompressionsavings-ctp-20"></a>sp_estimate_data_compression_savings에 새로 추가된 옵션(CTP 2.0)
 
-`sp_estimate_data_compression_savings`는 요청된 개체의 현재 크기를 반환하고 요청된 압축 상태에 대한 개체 크기를 예상합니다.  현재 이 프로시저는 `NONE`, `ROW` 및 `PAGE`의 세 가지 옵션을 지원합니다. SQL Server 2019는 두 가지 새 옵션인 `COLUMNSTORE` 및 `COLUMNSTORE_ARCHIVE`를 도입했습니다. 이러한 새 옵션을 사용하면 표준 또는 보관 columnstore 압축을 사용하여 테이블에서 columnstore 인덱스를 만들 경우의 예상되는 공간 절약을 추정할 수 있습니다.
+`sp_estimate_data_compression_savings`는 요청된 개체의 현재 크기를 반환하고 요청된 압축 상태에 대한 개체 크기를 예상합니다.  현재 이 프로시저는 `NONE`, `ROW` 및 `PAGE`의 세 가지 옵션을 지원합니다. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 `COLUMNSTORE` 및 `COLUMNSTORE_ARCHIVE`라는 두 가지 새 옵션을 제공합니다. 이러한 새 옵션을 사용하면 표준 또는 보관 columnstore 압축을 사용하여 테이블에서 columnstore 인덱스를 만들 경우의 예상되는 공간 절약을 추정할 수 있습니다.
 
 ### <a id="ml"></a> SQL Server Machine Learning Services 장애 조치(Failover) 클러스터 및 파티션 기반 모델링(CTP 2.0)
 
@@ -327,9 +331,9 @@ SQL Server 2019 미리 보기에서는 정적 데이터 마스킹을 도입합�
 
 ### <a name="lightweight-query-profiling-infrastructure-enabled-by-default-ctp-20"></a>간단한 쿼리 프로파일링 인프라가 기본적으로 사용 가능(CTP 2.0)
 
-LWP(간단한 쿼리 프로파일링 인프라)는 표준 프로파일링 기술보다 좀 더 효율적으로 쿼리 성능 데이터를 제공합니다. 간단한 프로파일링은 이제 기본적으로 사용되도록 설정됩니다. 이 기능은 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1에 도입되었습니다. 간단한 프로파일링은 표준 쿼리 프로파일링 메커니즘의 최대 75% CPU 오버헤드와 비교할 때 2% CPU 오버헤드가 예상되는 쿼리 실행 통계 수집 메커니즘을 제공합니다. 이전 버전에서 이 기능은 기본적으로 해제되었습니다. 데이터베이스 관리자는 [추적 플래그 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 사용하여 이 기능을 사용하도록 설정할 수 있습니다. 
+LWP(간단한 쿼리 프로파일링 인프라)는 표준 프로파일링 매커니즘보다 더 효율적으로 쿼리 성능 데이터를 제공합니다. 간단한 프로파일링은 이제 기본적으로 사용되도록 설정됩니다. 이 기능은 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1에 도입되었습니다. 간단한 프로파일링은 표준 쿼리 프로파일링 메커니즘의 최대 75% CPU 오버헤드와 비교할 때 2% CPU 오버헤드가 예상되는 쿼리 실행 통계 수집 메커니즘을 제공합니다. 이전 버전에서 이 기능은 기본적으로 해제되었습니다. 데이터베이스 관리자는 [추적 플래그 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 사용하여 이 기능을 사용하도록 설정할 수 있습니다. 
 
-간단한 프로파일링에 대한 자세한 내용은 [Developers Choice: Query progress – anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)(개발자 선택 사항: 쿼리 진행률 - 시간, 장소에 제한 없음)를 참조하세요.
+간단한 프로파일링에 대한 자세한 내용은 [쿼리 프로파일링 인프라](../relational-databases/performance/query-profiling-infrastructure.md)를 참조하세요.
 
 ### <a id="polybase"></a>새 PolyBase 커넥터
 
@@ -351,9 +355,7 @@ FROM sys.dm_exec_requests AS d
 
 ## <a id="sqllinux"></a> Linux의 SQL Server
 
-### <a name="ctp-20"></a>CTP 2.0 
-
-- **복제 지원**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 Linux에서 SQL Server 복제를 지원합니다. SQL 에이전트를 사용하는 Linux 가상 머신은 게시자, 배포자 또는 구독자일 수 있습니다. 
+- **복제 지원(CTP 2.0)**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 Linux에서 SQL Server 복제를 지원합니다. SQL 에이전트를 사용하는 Linux 가상 머신은 게시자, 배포자 또는 구독자일 수 있습니다. 
 
   다음 유형의 게시를 만듭니다.
   - 트랜잭션
@@ -362,26 +364,26 @@ FROM sys.dm_exec_requests AS d
 
   복제 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 구성하거나 [복제 저장 프로시저](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)를 만듭니다.
 
-- **MSDTC(Microsoft Distributed Transaction Coordinator) 지원**: Linux의 SQL Server 2019는 MSDTC(Microsoft Distributed Transaction Coordinator)를 지원합니다. 자세한 내용은 [Linux에서 MSDTC를 구성하는 방법](../linux/sql-server-linux-configure-msdtc.md)을 참조하세요.
+- **MSDTC(Microsoft Distributed Transaction Coordinator) 지원(CTP 2.0)**: Linux의 SQL Server 2019에서는 MSDTC(Microsoft Distributed Transaction Coordinator)를 지원합니다. 자세한 내용은 [Linux에서 MSDTC를 구성하는 방법](../linux/sql-server-linux-configure-msdtc.md)을 참조하세요.
 
-- **Kubernetes를 사용하는 Docker 컨테이너의 Always On 가용성 그룹**: Kubernetes는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컨테이너를 오케스트레이션하여 SQL Server Always On 가용성 그룹이 있는 고가용성 데이터베이스 집합을 제공할 수 있습니다. Kubernetes 연산자는 **mssql-server 컨테이너** 및 상태 모니터가 있는 컨테이너를 포함하는 StatefulSet을 배포합니다.
+- **Kubernetes를 사용하는 Docker 컨테이너의 Always On 가용성 그룹(CTP 2.2)**: Kubernetes는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컨테이너를 오케스트레이션하여 SQL Server Always On 가용성 그룹이 있는 일련의 고가용성 데이터베이스를 제공할 수 있습니다. Kubernetes 연산자는 **mssql-server 컨테이너** 및 상태 모니터가 있는 컨테이너를 포함하는 StatefulSet을 배포합니다.
 
-- **타사 AD 공급자에 대한 OpenLDAP 지원**: Linux의 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 타사 공급자가 Active Directory에 가입할 수 있도록 하는 OpenLDAP를 지원합니다.
+- **타사 AD 공급 기업에 대한 OpenLDAP 지원(CTP 2.0)**: Linux의 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 타사 공급 기업이 Active Directory에 가입할 수 있도록 하는 OpenLDAP를 지원합니다.
 
-- **Linux의 Machine Learning**: 이제 Linux에서 SQL Server 2019 Machine Learning Services(데이터베이스 내)가 지원됩니다. 지원에는 `sp_execute_external_script` 저장 프로시저가 포함됩니다. Linux에서 Machine Learning Services를 설치하는 방법에 대한 지침은 [Linux에서 SQL Server 2019 Machine Learning Services R 및 Python 지원 설치](../linux/sql-server-linux-setup-machine-learning.md)를 참조하세요.
+- **Linux의 Machine Learning(CTP 2.0)**: 이제 Linux에서 SQL Server 2019 Machine Learning Services(데이터베이스 내)가 지원됩니다. 지원에는 `sp_execute_external_script` 저장 프로시저가 포함됩니다. Linux에서 Machine Learning Services를 설치하는 방법에 대한 지침은 [Linux에서 SQL Server 2019 Machine Learning Services R 및 Python 지원 설치](../linux/sql-server-linux-setup-machine-learning.md)를 참조하세요.
 
-- **새 컨테이너 레지스트리**: 이제 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 뿐만 아니라 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]에 대한 모든 컨테이너 이미지가 Microsoft Container Registry에 있습니다. Microsoft Container Registry는 Microsoft 제품 컨테이너의 배포를 위한 공식 컨테이너 레지스트리입니다. 이제 인증된 RHEL 기반 이미지도 게시됩니다.
+- **새 컨테이너 레지스트리(CTP 2.1)**: 이제 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]뿐만 아니라 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]에 대한 모든 컨테이너 이미지가 Microsoft Container Registry에 있습니다. Microsoft Container Registry는 Microsoft 제품 컨테이너의 배포를 위한 공식 컨테이너 레지스트리입니다. 이제 인증된 RHEL 기반 이미지도 게시됩니다.
 
   - Microsoft Container Registry: `mcr.microsoft.com/mssql/server:vNext-CTP2.0`
   - 인증된 RHEL 기반 컨테이너 이미지: `mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0`
 
 ## <a id="mds"></a> Master Data Services(CTP 2.0) 
 
-- **HTML로 Silverlight 컨트롤이 대체됨**: MDS(Master Data Services) 포털은 더 이상 Silverlight에 의존하지 않습니다. 이전의 모든 Silverlight 구성 요소가 HTML 컨트롤로 바뀌었습니다.
+- **HTML로 Silverlight 컨트롤 대체**: MDS(Master Data Services) 포털은 더 이상 Silverlight를 사용하지 않습니다. 이전의 모든 Silverlight 구성 요소가 HTML 컨트롤로 바뀌었습니다.
 
 ## <a id="security"></a>보안(CTP 2.0)
 
-- **SQL Server 구성 관리자의 인증서 관리**: SSL/TLS 인증서는 SQL Server 인스턴스 액세스를 보호하기 위해 널리 사용됩니다. 이제 인증서 관리는 SQL Server 구성 관리자에 통합되어 다음과 같은 일반적인 작업을 간소화합니다.
+- **SQL Server 구성 관리자의 인증서 관리**: SSL/TLS 인증서는 SQL Server 인스턴스에 대한 액세스를 보호하기 위해 널리 사용됩니다. 이제 인증서 관리는 SQL Server 구성 관리자에 통합되어 다음과 같은 일반적인 작업을 간소화합니다.
 
   - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 설치된 인증서 보기 및 유효성 검사 
   - 만료가 가까워지는 인증서 보기
@@ -407,15 +409,15 @@ FROM sys.dm_exec_requests AS d
 
 - [**SSMS(SQL Server Management Studio) 18.0(미리 보기)**](../ssms/sql-server-management-studio-ssms.md)
 
-  - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에 대한 지원(CTP 2.0)
-  - 보안 Enclave를 사용한 Always Encrypted 지원(CTP 2.0)
-  - 작아진 다운로드 크기(CTP 2.0)
-  - Visual Studio 2017 격리 셸을 기준으로 하는 새로운 방식(CTP 2.0)
-  - 전체 목록을 보려면 [SSMS 변경 로그](../ssms/sql-server-management-studio-changelog-ssms.md)를 참조하세요.(CTP 2.0)
+  - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 지원 (CTP 2.0)
+  - 보안 Enclave를 사용한 Always Encrypted 지원 (CTP 2.0)
+  - 보다 작아진 다운로드 크기 (CTP 2.0)
+  - Visual Studio 2017 격리 셸을 기준으로 하는 새로운 방식 (CTP 2.0)
+  - 전체 목록을 보려면 [SSMS 변경 로그](../ssms/sql-server-management-studio-changelog-ssms.md)를 참조하세요. (CTP 2.0)
 
 ## <a name="other-services"></a>기타 서비스
 
-CTP 2.1의 경우 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서는 다음 서비스의 새 기능을 제공하지 않습니다.
+CTP 2.2의 경우 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서는 다음 서비스의 새 기능을 제공하지 않습니다.
 
 - SSAS([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services)
 - SSIS([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)])
