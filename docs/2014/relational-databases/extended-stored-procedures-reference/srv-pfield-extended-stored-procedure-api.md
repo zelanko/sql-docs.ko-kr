@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_pfield
@@ -22,12 +20,12 @@ ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6243ceb9d96c5cb3c681aea8832ba35f45e80703
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed4abfe8914c7f6b1dc3e22de7a321419b8d9cee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170093"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353851"
 ---
 # <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield(확장 저장 프로시저 API)
     
@@ -89,6 +87,6 @@ len
  SRV_PROC 구조에 지정된 필드에 대한 현재 값이 포함된 Null로 끝나는 문자열에 대한 포인터입니다. 필드가 비어 있으면 빈 문자열에 대한 올바른 포인터가 반환되고 *len*에 0이 포함됩니다. 필드가 알 수 없는 필드이면 NULL이 반환되고 *len*에 -1 값이 포함됩니다.  
   
 > [!IMPORTANT]  
->  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [보안 개발자 센터(Security Developer Center)](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)를 참조하세요.  
+>  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [보안 개발자 센터(Security Developer Center)](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)를 참조하세요.  
   
   

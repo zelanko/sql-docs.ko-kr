@@ -11,15 +11,17 @@ items:
     href: quickstart-big-data-cluster-deploy.md
 - name: 자습서
   items:
-  - name: 1_HDFS 데이터 쿼리
+  - name: 1_샘플 데이터 로드
+    href: tutorial-load-sample-data.md
+  - name: 2_HDFS 데이터 쿼리
     href: tutorial-query-hdfs-storage-pool.md
-  - name: 2_Oracle 데이터 쿼리
+  - name: 3_Oracle 데이터 쿼리
     href: tutorial-query-oracle.md
-  - name: 3_SQL을 사용하여 데이터 풀 로드
+  - name: 4_SQL을 사용하여 데이터 풀 로드
     href: tutorial-data-pool-ingest-sql.md
-  - name: 4_Spark를 사용하여 데이터 풀 로드
+  - name: 5_Spark를 사용하여 데이터 풀 로드
     href: tutorial-data-pool-ingest-spark.md
-  - name: 5_Spark Notebook 실행
+  - name: 6_Spark Notebook 실행
     href: tutorial-notebook-spark.md
 - name: 개념
   items:
@@ -41,20 +43,28 @@ items:
   items:
   - name: Install
     items:
-    - name: 배포 지침
-      href: deployment-guidance.md
-    - name: Minikube에 배포
-      href: deploy-on-minikube.md
-    - name: AKS에 배포
-      href: deploy-on-aks.md
-    - name: Kubeadm을 사용하여 배포
-      href: deploy-with-kubeadm.md
-    - name: Azure Data Studio와 연결
-      href: deploy-big-data-tools.md
+    - name: 빅 데이터 클러스터 배포
+      items:
+      - name: 배포 지침
+        href: deployment-guidance.md
+      - name: Minikube에 배포
+        href: deploy-on-minikube.md
+      - name: AKS에 배포
+        href: deploy-on-aks.md
+      - name: Kubeadm을 사용하여 배포
+        href: deploy-with-kubeadm.md
+    - name: 도구 설치
+      items:
+      - name: 빅 데이터 도구 설치
+        href: deploy-big-data-tools.md
+      - name: mssqlctl 설치
+        href: deploy-install-mssqlctl.md
   - name: 데이터 가상화
     items:
-    - name: 외부 데이터 가상화
+    - name: 관계형 데이터 가상화
       href: ../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
+    - name: CSV 데이터 가상화
+      href: ../relational-databases/polybase/data-virtualization-csv.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
   - name: 데이터 수집
     items:
     - name: curl을 사용하여 데이터 로드
@@ -73,6 +83,8 @@ items:
       href: export-model-with-spark-mleap.md
   - name: SQL Server 빅 데이터 클러스터 관리
     items:
+    - name: 빅 데이터 클러스터에 연결
+      href: connect-to-big-data-cluster.md
     - name: 클러스터 관리 포털
       href: cluster-admin-portal.md
     - name: Kubernetes 문제 해결
@@ -97,9 +109,9 @@ items:
     href: ../relational-databases/polybase/polybase-guide.md
   - name: 빅 데이터 클러스터 액세스 권한 요청
     href: https://aka.ms/eapsignup
-ms.openlocfilehash: fa4a5b29c4a4ebb3cb879de4a390effb76002ae9
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: 3580372dfac82485e6c64bbb3d5b517ee34ede4a
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221619"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53595804"

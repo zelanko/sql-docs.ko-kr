@@ -1,7 +1,7 @@
 ---
 title: Linux 및 macOS 기반 Microsoft ODBC Driver for SQL Server 설치 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 12/04/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 4293880c6301712876d3a76a88ad9090925296b9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: HT
+ms.openlocfilehash: 5f9392d0ba5b07a489caffdd2e496051e842b1c8
+ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600803"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52984064"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux 및 macOS 기반 Microsoft ODBC Driver for SQL Server 설치를 참조하세요
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -138,7 +138,8 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 > [!NOTE]
-> 드라이버 버전 17.2 이상이 Ubuntu 18.04 지원에 필요 합니다.
+> - 드라이버 버전 17.2 이상이 Ubuntu 18.04 지원에 필요 합니다.
+> - Unixodbc-dev 패키지 2.3.1 Ubuntu 14.04에서 사용할 수 없는 경우   
 
 ### <a name="os-x-1011-el-capitan-macos-1012-sierra-and-macos-1013-high-sierra"></a>OS X 10.11 (El Capitan), macOS 10.12(sierra), 및 macOS 10.13(high (High Sierra)
 
@@ -369,7 +370,7 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 - Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SuSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-이러한 각 패키지 가짐 자체 종속성이 있으며, 되었거나 시스템에 없을 수도 있습니다. 이 문제에 대 한 일반 솔루션을 배포의 패키지 관리자 설명서를 참조 하세요. [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)를 [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), 및 [SUSE](https://en.opensuse.org/Portal:Zypper)
+이러한 각 패키지 가짐 자체 종속성이 있으며, 되었거나 시스템에 없을 수도 있습니다. 이 문제에 대 한 일반 솔루션을 배포의 패키지 관리자 설명서를 참조 하세요. [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)하십시오 [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), 및 [SUSE](https://en.opensuse.org/Portal:Zypper)
 
 것도 일반적인 모든 종속 패키지를 수동으로 다운로드 및 설치 컴퓨터에 함께 배치 하 고 차례로 각 패키지를 수동으로 설치를 완료 합니다 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 패키지 있습니다.
 
@@ -424,7 +425,7 @@ ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
   
 4.  사용 가능한 설치 옵션 목록을 보려면 다음 명령을 실행합니다. **./install.sh**  
   
-5.  **odbcinst.ini**의 백업을 만듭니다. 드라이버 설치에서 **odbcinst.ini**를 업데이트합니다. odbcinst.ini에는 unixODBC 드라이버 관리자에 등록된 드라이버 목록이 있습니다. 컴퓨터에서 odbcinst.ini의 위치를 검색하려면 다음 명령을 실행합니다. ```odbc_config --odbcinstini```  
+5.  **odbcinst.ini**의 백업을 만듭니다. 드라이버 설치에서 **odbcinst.ini**를 업데이트합니다. odbcinst.ini에는 unixODBC 드라이버 관리자에 등록된 드라이버 목록이 있습니다. 컴퓨터에서 odbcinst.ini의 위치를 검색하려면 ```odbc_config --odbcinstini``` 명령을 실행합니다.  
   
 6.  드라이버를 설치하기 전에 `./install.sh verify` 명령을 실행합니다. `./install.sh verify` 출력은 컴퓨터가 Linux 기반 ODBC 드라이버를 지원하는 데 필요한 소프트웨어가 있는지 보고합니다.  
   

@@ -13,12 +13,12 @@ ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee0b1c221c3bdb18ec9b79339e9dd55cb4eed93e
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
-ms.translationtype: HT
+ms.openlocfilehash: d41c8a3dcc995849fa62ea9a06703d915298eeac
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071807"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201782"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>1단원: 데이터베이스 엔진 튜닝 관리자 기본 탐색
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "49071807"
 - [AdventureWorks2017 샘플 데이터베이스](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-2017)를 다운로드합니다.
 
 
-SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이스 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)을 참조하세요.
+SSMS에서 데이터베이스를 복원 하기 위한 지침은 여기 있습니다. [데이터베이스 복원.](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
 
   >[!NOTE]
   > 이 자습서는 기본적인 데이터베이스 관리 작업 및 SQL Server Management Studio를 사용 하 여 친숙 한 사용자에 대 한 것입니다. 
@@ -62,7 +62,7 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
   
 -   오른쪽 창에는 **일반** 탭과 **튜닝 옵션** 탭이 있습니다. 이 창에서는 데이터베이스 엔진 튜닝 세션을 정의할 수 있습니다. **일반** 탭에서는 튜닝 세션의 이름을 입력하고 사용할 작업 파일이나 테이블을 지정하며 이 세션에서 튜닝할 데이터베이스와 테이블을 선택합니다. 작업은 튜닝하려는 데이터베이스에 대해 실행되는 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. 데이터베이스 엔진 튜닝 관리자에서는 데이터베이스를 튜닝할 때 추적 파일, 추적 테이블, [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 또는 XML 파일을 작업 입력으로 사용합니다. **튜닝 옵션** 탭에서는 데이터베이스 엔진 튜닝 관리자에서 분석하는 동안 고려할 물리적 데이터베이스 디자인 구조(인덱스 또는 인덱싱된 뷰)와 분할 전략을 선택할 수 있습니다. 이 탭에서는 데이터베이스 엔진 튜닝 관리자에서 작업을 튜닝하는 데 걸리는 최대 시간을 튜닝할 수도 있습니다. 기본적으로 데이터베이스 엔진 튜닝 관리자에서는 한 시간 동안 작업을 튜닝합니다.  
   
-> [!NOTE]  
+> [!NOTE]
 > [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 스크립트를 가져올 때 데이터베이스 엔진 튜닝 관리자에서 XML 파일을 입력으로 사용할 수 있습니다. 자세한 내용은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 데이터베이스 엔진 튜닝 관리자 시작 및 사용 [의](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)쿼리 편집기에서 데이터베이스 엔진 튜닝 관리자 시작에 대한 섹션을 참조하세요.  
   
 ## <a name="configure-tool-options-and-layout"></a>도구 옵션 및 레이아웃을 구성 합니다. 
