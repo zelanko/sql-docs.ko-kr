@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3f9d827bbbcb50dc352ba8987cf04704a18e4ef0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 94fa4e719e99928a56694b748e11fff1ad16db9c
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025860"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534709"
 ---
 # <a name="define-database-dimensions"></a>데이터베이스 차원 정의
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 차원 디자이너를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트나 데이터베이스의 기존 데이터베이스 차원을 구성할 수 있습니다. 차원 디자이너를 사용하여 수행할 수 있는 작업은 다음과 같습니다.  
+   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 차원 디자이너를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트나 데이터베이스의 기존 데이터베이스 차원을 구성할 수 있습니다. 차원 디자이너를 사용하여 수행할 수 있는 작업은 다음과 같습니다.  
   
 -   차원 수준 속성 구성  
   
@@ -40,7 +40,7 @@ ms.locfileid: "34025860"
   
 |탭|Description|  
 |---------|-----------------|  
-|**차원 구조**|이 탭을 사용하여 차원의 데이터 원본 뷰 스키마를 검토하거나 만들고 특성 작업을 수행하고 사용자 정의 계층으로 특성을 구성하는 등의 차원 구조 작업을 수행할 수 있습니다.|  
+|**차원 구조**|이 탭에 차원 구조를 사용 하 여 작업을 검토 하거나 특성을 사용 하 여 작동 하 고 사용자 정의 계층의 특성을 구성 하는 차원에 대 한 데이터 원본 뷰 스키마를 만들고 사용 합니다.|  
 |**특성 관계**|이 탭을 사용하여 차원의 특성 관계를 만들거나 수정하거나 삭제할 수 있습니다.|  
 |**번역**|이 탭을 사용하여 여러 언어로 차원 메타데이터의 번역을 추가하고 편집할 수 있습니다.|  
 |**브라우저**|이 탭을 사용하여 처리된 차원의 멤버를 확인하고 차원 메타데이터의 번역을 검토할 수 있습니다.|  
@@ -56,7 +56,7 @@ ms.locfileid: "34025860"
  [특성 관계 정의](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
  특성 관계를 정의 및 구성하는 방법에 대해 설명합니다.  
   
- [비즈니스 인텔리전스 마법사를 사용 하 여 차원 향상](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  
+ [비즈니스 인텔리전스 마법사를 사용하여 차원 향상](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  
  비즈니스 인텔리전스 마법사를 사용하여 차원을 향상시키는 방법에 대해 설명합니다.  
   
   

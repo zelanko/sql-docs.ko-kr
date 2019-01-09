@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 66f39d9b-9ec2-48a7-8a9e-1b42931299c9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0106c8c08361b3017aceef03ed8f5f6bcd0e70d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: f1f87c3c612be25660b5949f57d3ba0745f23587
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210053"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804035"
 ---
 # <a name="audit-schema-object-take-ownership-event-class"></a>Audit Schema Object Take Ownership 이벤트 클래스
   **Audit Schema Object Take Ownership** 이벤트 클래스는 테이블, 프로시저 또는 함수와 같은 스키마 개체의 소유자 변경 권한이 확인된 경우 발생합니다. 이 이벤트 클래스는 ALTER AUTHORIZATION 문을 사용하여 개체에 소유자를 할당할 때 발생합니다.  

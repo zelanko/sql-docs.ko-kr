@@ -26,16 +26,16 @@ helpviewer_keywords:
 - database monitoring [SQL Server]
 - monitoring server performance [SQL Server], about monitoring server performance
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fbfda8b5768242980d61cce90f1ca16f5de6aa9f
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: 828e0c79d3d68cded07e3dc1204f92f409033e9c
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586266"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360725"
 ---
 # <a name="monitor-and-tune-for-performance"></a>성능 모니터링 및 튜닝
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "52586266"
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 실행할 때 모니터링하면 쿼리가 올바르게 작성되며 결과가 예상대로 나타나는지 여부를 확인할 수 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결을 시도하는 사용자를 모니터링하면 보안 설정이 적절한지 여부를 확인하고 응용 프로그램이나 개발 시스템을 테스트할 수 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결을 시도하는 사용자를 모니터링하면 보안 설정이 적절한지 여부를 확인하고 애플리케이션이나 개발 시스템을 테스트할 수 있습니다.  
   
 응답 시간이란 쿼리가 처리됨을 시각적 확인 형식으로 사용자에게 반환하기 위해 설정된 결과의 첫 행에 필요한 시간의 길이를 말합니다. 처리량이란 지정한 시간 동안 서버에서 처리한 총 쿼리 수를 말합니다.  
   

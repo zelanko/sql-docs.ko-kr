@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - non-SQL Server Subscribers, other types
@@ -13,12 +12,12 @@ ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 73bebade29a91f250f4c49e64d6817e876e1deca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 135d317d74a720d51c966ed92f1c305f8c04b838
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108013"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753935"
 ---
 # <a name="other-non-sql-server-subscribers"></a>다른 SQL Server 이외 구독자
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)]에서 지원하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자 목록은 [SQL Server 이외 구독자](non-sql-server-subscribers.md)를 참조하세요. 이 항목에는 ODBC 드라이버 및 OLE DB 공급자에 대한 요구 사항 정보가 포함되어 있습니다.  

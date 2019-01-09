@@ -15,12 +15,12 @@ ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 92641d34920b0ef7ea7a9e7ad929e6976d644ffe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 343ba03f20d059763f4b1122aac80e0af80fc2ae
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064199"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52415640"
 ---
 # <a name="view-statistics-properties"></a>통계 속성 보기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 테이블 또는 인덱싱된 뷰에 대한 현재 쿼리 최적화 통계를 표시할 수 있습니다. 통계 개체에는 통계에 대한 메타데이터가 있는 헤더, 통계 개체의 첫 번째 키 열에 있는 값의 분포에 대한 히스토그램, 그리고 열 간 상관 관계를 측정하는 밀도 벡터가 포함됩니다. 히스토그램 및 밀도 벡터에 대한 자세한 내용은 [DBCC SHOW_STATISTICS&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)를 참조하세요.  
@@ -58,9 +58,9 @@ ms.locfileid: "48064199"
   
 5.  속성을 보려는 통계 개체를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-6.  **통계 속성 -** *statistics_name* 대화 상자의 **페이지 선택** 창에서 **자세히**를 선택합니다.  
+6.   **통계 속성 -** *statistics_name* 대화 상자의 **페이지 선택** 창에서 **자세히**를 선택합니다.  
   
-     **통계 속성 -**  **statistics_name** *statistics_name* 페이지에 다음 속성이 표시됩니다.  
+      **통계 속성 -**  **statistics_name** *statistics_name* 페이지에 다음 속성이 표시됩니다.  
   
      **테이블 이름**  
      통계에서 설명하는 테이블 이름을 표시합니다.  
@@ -106,7 +106,7 @@ ms.locfileid: "48064199"
      다음 정보는 밀도 벡터의 결과 집합에 반환되는 열에 대한 설명입니다.  
   
      **모든 밀도**  
-     밀도는 1/ *고유 값*입니다. 결과에는 통계 개체에 있는 각 열 접두사의 밀도가 한 행씩 표시됩니다. 고유 값은 행별 및 열 접두사별 열 값의 고유한 목록입니다. 예를 들어 통계 개체가 키 열 (A, B, C)를 포함하는 경우 결과에서 밀도는 이러한 각 열 접두사의 고유 값 목록인 (A), (A,B) 및 (A, B, C)로 보고됩니다. 접두사 (A, B, C)를 사용하면 이러한 각 목록은 고유 값 목록 (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7)입니다. 접두사 (A, B)를 사용하면 동일한 열 값은 고유 값 목록 (3, 5), (4, 4) 및 (4, 5)입니다.  
+     밀도는 1/ *고유 값*입니다. 결과에는 통계 개체에 있는 각 열 접두사의 밀도가 한 행씩 표시됩니다. 고유 값은 행별 및 열 접두사별 열 값의 고유한 목록입니다. 예를 들어 통계 개체가 키 열 (A, B, C)를 포함하는 경우 결과에서 밀도는 이러한 각 열 접두사의 고유 값 목록인 (A), (A,B) 및 (A, B, C)로 보고됩니다. 접두사 (A, B, C)를 사용하면 이러한 각 목록은 다음과 같은 고유 값 목록입니다. (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). 접두사 (A, B)를 사용하면 동일한 열 값은 고유 값 목록 (3, 5), (4, 4) 및 (4, 5)입니다.  
   
      **평균 길이**  
      열 접두사의 열 값 목록을 저장하기 위한 평균 길이(바이트)입니다. 예를 들어 목록 (3, 5, 6)의 각 값에 4바이트가 필요한 경우 길이는 12바이트입니다.  

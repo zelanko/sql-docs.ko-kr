@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e7d27a648f91448cd6c53f34149851b255aa6aa2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 032756aefd5b84e030435152cc759a0b86c2fa18
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018690"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52507625"
 ---
-# <a name="lesson-5-1---defining-a-referenced-relationship"></a>Lesson 5-1-참조 관계 정의
+# <a name="lesson-5-1---defining-a-referenced-relationship"></a>단원 5-1-참조 관계 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 이 자습서의 이전 단원에서는 정의한 각 큐브 차원은 기본 키와 외래 키의 관계를 통해 측정값 그룹의 팩트 테이블에 직접 연결된 테이블을 기반으로 하였습니다. 이 항목의 태스크에서는 **Geography** 차원을 **참조 차원** 이라고 하는 *Reseller*차원을 통해 대리점 판매에 대한 팩트 테이블에 연결하는 방법을 설명합니다. 이를 통해 사용자는 지리별로 대리점 판매 차원을 구분할 수 있습니다. 자세한 내용은 [참조 관계 및 참조 관계 속성 정의](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)를 참조하세요.  
@@ -31,7 +31,7 @@ ms.locfileid: "34018690"
   
     **Reseller Sales-Sales Amount** 측정값은 **Regions** 계층의 **Country-Region** 특성 멤버별로 차원이 제대로 구분되지 않습니다. **Reseller Sales-Sales Amount** 에 대한 값이 각 **Country-Region** 특성 멤버에 대해 반복됩니다.  
   
-    ![Reseller Sales-sales Amount 측정값 차원이](../analysis-services/media/l5-referencedrelationship-1.gif "차원이 구분 된 Reseller Sales-sales Amount 측정값")  
+    ![Reseller Sales-sales Amount 측정값 차원이](../analysis-services/media/l5-referencedrelationship-1.gif "차원이 Reseller Sales-sales Amount 측정값")  
   
 4.  **Adventure Works DW 2012** 데이터 원본 뷰에 대한 데이터 원본 뷰 디자이너를 엽니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "34018690"
   
     현재 **Geography** 큐브 차원은 **Internet Sales** 측정값 그룹이나 **Reseller Sales** 측정값 그룹과 관계가 정의되어 있지 않습니다.  
   
-8.  **Customer**차원과 **Internet Sales** 측정값 그룹의 교집합에서 **Full Name** 셀의 줄임표 단추( **…** )를 클릭합니다.  
+8.  줄임표 단추 (**...** )에 **전체 이름** 의 교집합에서 셀을 **고객** 차원 및 **Internet Sales** 측정값 그룹입니다.  
   
     **관계 정의** 대화 상자에는 **DimCustomer** 차원 테이블과 **FactInternetSales** 측정값 그룹 테이블 각각의 **CustomerKey** 열을 기반으로 이러한 테이블 간 **일반** 관계가 정의되어 있습니다. 이 작업 이전에 이 자습서에서 정의한 모든 관계는 일반 관계입니다.  
   
@@ -55,9 +55,9 @@ ms.locfileid: "34018690"
   
     ![정의 관계 대화 상자](../analysis-services/media/l5-referencedrelationship-4.gif "관계 정의 대화 상자")  
   
-9. **취소**를 클릭합니다.  
+9. 클릭 **취소**합니다.  
   
-10. **Geography**차원과 **Reseller Sales** 측정값 그룹의 교집합에서 명명되지 않은 셀의 줄임표 단추( **…** )를 클릭합니다.  
+10. 줄임표 단추 (**...** )의 교집합에서 명명 되지 않은 셀에는 **지리** 차원 및 **Reseller Sales** 측정값 그룹입니다.  
   
     **관계 정의** 대화 상자에는 현재 Geography 큐브 차원과 Reseller Sales 측정값 그룹 간에 관계가 정의되어 있지 않습니다. Geography 차원의 차원 테이블과 Reseller Sales 측정값 그룹의 팩트 테이블 간 직접 관계가 없으므로 일반 관계를 정의할 수 없습니다.  
   
@@ -85,11 +85,11 @@ ms.locfileid: "34018690"
   
 2.  **Reseller** 차원에 **Geography Key** 특성을 추가하려면 **데이터 원본 뷰** 창의 **GeographyKey** 를 마우스 오른쪽 단추로 클릭하고 **열의 새 특성**을 클릭합니다.  
   
-3.  **특성** 창에서 **Geography Key**를 선택한 후 속성 창에서 **AttributeHierarchyOptimizedState** 속성을 **NotOptimized**로, **AttributeHierarchyOrdered** 속성을 **False**로, **AttributeHierarchyVisible** 속성을 **False**로 설정합니다.  
+3.   **특성** 창에서 **Geography Key**를 선택한 후 속성 창에서 **AttributeHierarchyOptimizedState** 속성을 **NotOptimized**로, **AttributeHierarchyOrdered** 속성을 **False**로, **AttributeHierarchyVisible** 속성을 **False**로 설정합니다.  
   
     Reseller 차원의 Geography Key 특성은 Geography 차원을 Reseller Sales 팩트 테이블에 연결하는 데만 사용됩니다. 이 특성은 찾아보기에는 사용되지 않으므로 이 특성 계층을 표시하도록 정의하는 값은 없습니다. 또한 특성 계층 정렬 및 최적화는 처리 성능에 부정적 영향만 미칩니다. 그러나 두 차원 간 링크로 기능하려면 해당 특성이 설정되어 있어야 합니다.  
   
-4.  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 대한 큐브 디자이너로 전환하고 **차원 용도** 탭을 클릭한 다음**Reseller Sales**측정값 그룹과 **Geography** 큐브 차원의 교집합에서 줄임표 단추( **…** )를 클릭합니다.  
+4.  에 대 한 큐브 디자이너로 전환 합니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 클릭 합니다 **차원 용도** 탭을 선택한 다음 줄임표 단추를 클릭 (**...** )의 교집합에서 합니다 **Reseller Sales** 측정값 그룹 및 **Geography** 큐브 차원입니다.  
   
 5.  **관계 유형 선택** 목록에서 **참조**를 선택합니다.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "34018690"
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [팩트 관계 정의](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [특성 관계](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
 [참조 관계 및 참조 관계 속성 정의](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
   

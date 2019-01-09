@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a60b3f18d6249f0fcce10b25521aa9652699c3a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181333"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52792835"
 ---
 # <a name="review-the-replay-results"></a>재생 결과 검토
    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 기능이 분산 재생을 완료하면 각 클라이언트에 대한 재생 작업을 캡처하여 각 클라이언트의 결과 추적 파일에 저장할 수 있습니다. 이 작업을 캡처하려면 **replay** 옵션을 사용하여 관리 도구를 실행할 때 **-o** 매개 변수를 사용해야 합니다. 재생 옵션에 대한 자세한 내용은 [재생 옵션&#40;Distributed Replay Administration Tool&#41;](replay-option-distributed-replay-administration-tool.md)을 참조하세요.  
@@ -51,7 +51,7 @@ ms.locfileid: "48181333"
 ## <a name="event-class-column-mapping"></a>이벤트 클래스 열 매핑  
  다음 표에서는 재생 중 캡처되는 각 이벤트 클래스 유형에 사용할 수 있는 결과 추적 열을 나열합니다.  
   
- ![이벤트 클래스 열 매핑](../../database-engine/media/eventclassmappings.gif "이벤트 클래스 열 매핑")  
+ ![Event class column mapping](../../database-engine/media/eventclassmappings.gif "Event class column mapping")  
   
 ## <a name="column-descriptions-for-result-trace"></a>결과 추적의 열에 대한 설명  
  다음 표에서는 결과 추적 데이터의 열에 대해 설명합니다.  
@@ -78,8 +78,8 @@ ms.locfileid: "48181333"
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
- [Distributed Replay 요구 사항](distributed-replay-requirements.md)   
- [관리 도구 명령줄 옵션 &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Distributed Replay Requirements](distributed-replay-requirements.md)   
+ [관리 도구 명령줄 옵션&#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [Distributed Replay 구성](configure-distributed-replay.md)  
   
   

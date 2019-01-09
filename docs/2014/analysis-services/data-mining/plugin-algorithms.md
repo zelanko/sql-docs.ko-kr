@@ -15,17 +15,17 @@ ms.assetid: fe364ddc-576e-42fc-9ced-baa399992f92
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eba304a7e525b9466787ad1314acd52c4368f9a2
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3112efa1b2eec2f25abe35315ecec13bedbf8871
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144808"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375485"
 ---
 # <a name="plugin-algorithms"></a>플러그 인 알고리즘
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 알고리즘 외에 여러 가지 알고리즘을 데이터 마이닝에 사용할 수 있습니다. 따라서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 타사에서 만든 알고리즘을 "연결"하는 메커니즘을 제공합니다. 특정 표준을 따르는 알고리즘은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 내에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘을 사용하듯이 사용할 수 있습니다. 플러그 인 알고리즘에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 알고리즘의 모든 기능이 포함되어 있습니다.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 알고리즘 외에 여러 가지 알고리즘을 데이터 마이닝에 사용할 수 있습니다. 따라서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 타사에서 만든 알고리즘을 "연결"하는 메커니즘을 제공합니다. 특정 표준을 따르는 알고리즘은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 내에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘을 사용하듯이 사용할 수 있습니다. 플러그 인 알고리즘에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 알고리즘의 모든 기능이 포함되어 있습니다.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 플러그 인 알고리즘과 통신하는 데 사용하는 인터페이스에 대한 전체 설명을 보려면 [CodePlex](http://go.microsoft.com/fwlink/?LinkID=87843) 웹 사이트에 게시된 사용자 지정 알고리즘 및 사용자 지정 모델 뷰어를 만드는 예제를 참조하십시오.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 플러그 인 알고리즘과 통신하는 데 사용하는 인터페이스에 대한 전체 설명을 보려면 [CodePlex](https://go.microsoft.com/fwlink/?LinkID=87843) 웹 사이트에 게시된 사용자 지정 알고리즘 및 사용자 지정 모델 뷰어를 만드는 예제를 참조하십시오.  
   
 ## <a name="algorithm-requirements"></a>알고리즘 요구 사항  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 알고리즘을 연결하려면 다음 COM 인터페이스를 구현해야 합니다.  

@@ -1,7 +1,7 @@
 ---
 title: sys.query_context_settings (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/22/2016
+ms.date: 11/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,15 +21,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de36098ec2c2792e45724cdb023897b1482ac9cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ccf638687f5022554abd6b3cf8e57445858ae4a
+ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638491"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710654"
 ---
 # <a name="sysquerycontextsettings-transact-sql"></a>sys.query_context_settings (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   쿼리와 관련 된 컨텍스트 설정에 영향을 주는 의미 체계에 대 한 정보를 포함 합니다. 사용할 수 있는 다양 한 상황에 맞는 설정 가지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (쿼리의 올바른 결과 정의) 쿼리 의미 체계에 영향을 하는 합니다. 다양 한 설정에서 컴파일된 동일한 쿼리 텍스트 (기본 데이터)에 따라 다른 결과 생성할 수 있습니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47638491"
 |**language_id**|**smallint**|언어의 id입니다. 자세한 내용은 [sys.syslanguages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)합니다.|  
 |**date_format**|**smallint**|날짜 형식입니다. 자세한 내용은 [SET DATEFORMAT&#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md)을 참조하세요.|  
 |**date_first**|**tinyint**|첫 번째 날짜 값입니다. 자세한 내용은 [SET DATEFIRST&#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md)를 참조하세요.|  
-|**상태**|**varbinary(2)**|쿼리 또는 쿼리가 실행 된 컨텍스트의 유형을 나타내는 비트 마스크 필드입니다. <br />열 값 (16 진수에서 표현) 여러 플래그의 조합 수 있습니다.<br /><br /> 0x0-일반 쿼리 (특정 플래그 없음)<br /><br /> 0x1-커서 Api 저장 프로시저 중 하나를 통해 실행 되는 쿼리<br /><br /> 0x2-알림에 대 한 쿼리<br /><br /> 0x4-내부 쿼리<br /><br /> 0x8-범용 매개 변수화 하지 않고 자동 매개 변수화 된 쿼리<br /><br /> 0x10-커서 인출 쿼리 새로 고침<br /><br /> 0x20-커서 업데이트 요청에 사용 되는 쿼리<br /><br /> 0x40-는 커서가 열릴 때 초기 결과 집합이 반환 됩니다 (자동 인출 커서)<br /><br /> 0x80 – 암호화 된 쿼리<br /><br /> 0x100 – 행 수준 보안 조건자의 컨텍스트에서 쿼리|  
+|**상태**|**varbinary(2)**|쿼리 또는 쿼리가 실행 된 컨텍스트의 유형을 나타내는 비트 마스크 필드입니다. <br />열 값 (16 진수에서 표현) 여러 플래그의 조합 수 있습니다.<br /><br /> 0x0-일반 쿼리 (특정 플래그 없음)<br /><br /> 0x1-커서 Api 저장 프로시저 중 하나를 통해 실행 되는 쿼리<br /><br /> 0x2-알림에 대 한 쿼리<br /><br /> 0x4-내부 쿼리<br /><br /> 0x8-범용 매개 변수화 하지 않고 자동 매개 변수화 된 쿼리<br /><br /> 0x10-커서 인출 쿼리 새로 고침<br /><br /> 0x20-커서 업데이트 요청에 사용 되는 쿼리<br /><br /> 0x40-는 커서가 열릴 때 초기 결과 집합이 반환 됩니다 (자동 인출 커서)<br /><br /> 0x80-암호화 된 쿼리<br /><br /> 0x100-행 수준 보안 조건자의 컨텍스트에서 쿼리|  
 |**required_cursor_options**|**int**|커서 유형과 같이 사용자가 지정한 커서 옵션입니다.|  
 |**acceptable_cursor_options**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 문의 실행을 지원하도록 암시적으로 변환될 수 있는 커서 옵션입니다.|  
 |**merge_action_type**|**smallint**|트리거 실행 계획의 결과로 사용할 유형의 **병합** 문입니다.<br /><br /> 0은 비 트리거 계획을 결과로 실행 되지 않는 트리거 계획을 **병합** 문이나의 결과로 실행 되는 트리거 계획을를 **병합** 만 를지정하는문을**삭제할** 작업 합니다.<br /><br /> 1는 **삽입** 결과로 실행 되는 트리거 계획을 **병합** 문입니다.<br /><br /> 2는 **업데이트** 결과로 실행 되는 트리거 계획을 **병합** 문입니다.<br /><br /> 3을 **삭제** 의 결과로 실행 되는 트리거 계획을 **병합** 해당 하는 포함 하는 문이 **삽입** 또는 **업데이트** 동작입니다.<br /><br /> <br /><br /> 연계 동작으로 실행 하는 중첩 트리거의 경우이 값은 작업을 **병합** 연계를 유발 하는 문입니다.|  

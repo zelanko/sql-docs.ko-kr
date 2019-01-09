@@ -11,12 +11,12 @@ ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e723602973828fe5a213bb211872e7ef8b2f1ebb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: c454dece75264c08d4f4bdc9f9549a1ef0f9b932
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067445"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418884"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX 컨트롤인 **RSClientPrint**, 브라우저에서 표시 되는 보고서에 대 한 클라이언트 쪽 인쇄를 제공 합니다. 이 컨트롤은 다른 인쇄 대화 상자에 공통적인 기능을 지원하는 사용자 지정 인쇄 대화 상자를 표시합니다. 인쇄 미리 보기, 특정 페이지와 범위 지정을 위한 페이지 선택, 페이지 여백 및 방향이 여기에 포함됩니다. 클라이언트 쪽 인쇄 기능은 기본적으로 설정되어 있지만 이 기능을 사용하지 않으려면 해제할 수 있습니다.  
@@ -90,7 +90,7 @@ Dim rs As New ReportingService()
         Dim props(0) As [Property]  
         Dim setProp As New [Property]  
         setProp.Name = "EnableClientPrinting"  
-        setProp.Value = “False”   
+        setProp.Value = "False"   
         props(0) = setProp  
         Try  
             rs.SetSystemProperties(props)  

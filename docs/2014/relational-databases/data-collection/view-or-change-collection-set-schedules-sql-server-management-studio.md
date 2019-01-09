@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dc.collectionsetprop.uploads.f1
@@ -19,12 +19,12 @@ ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0fd05b23f5ee1654af54450e59b9106dd50f5769
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 348a50b1f199fa28b9bc67718b47ee4819bdde87
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168093"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52774335"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>컬렉션 집합 일정 보기 또는 변경(SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 컬렉션 집합 일정을 보거나 변경할 수 있습니다.  

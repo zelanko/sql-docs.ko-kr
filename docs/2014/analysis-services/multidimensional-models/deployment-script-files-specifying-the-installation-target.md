@@ -18,12 +18,12 @@ ms.assetid: cb706817-6f63-4771-92c3-b70030bbce3d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9e8ecad7b3d9df0974d7f7548438f2464d75fd35
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d98c06131029f804476fe1f3779352a34ccd81e
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225073"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52537483"
 ---
 # <a name="specifying-the-installation-target"></a>설치 대상 지정
   합니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사에서 설치 대상 정보를 읽습니다.는 \< *프로젝트 이름을*>.deploymenttargets 파일입니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 작성할 때 이 파일을 만듭니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 데이터베이스 및에 지정 된 서버를 사용 합니다 **배포** 페이지의  *\<프로젝트 이름 >* **속성 페이지** 대화 상자를 \< *프로젝트 이름*>.targets 파일입니다.  
@@ -37,17 +37,17 @@ ms.locfileid: "48225073"
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사를 대화형으로 실행합니다. **설치 대상** 페이지에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 및 데이터베이스에 대한 새 대상을 지정합니다.  
   
-     —또는—  
+     -또는-  
   
 -   명령 프롬프트에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사를 실행하여 응답 파일 모드에서 마법사를 실행하도록 설정합니다. 응답 파일 모드에 대한 자세한 내용은 [Running the Analysis Services Deployment Wizard](running-the-analysis-services-deployment-wizard.md)을 참조하십시오.  
   
-     —또는—  
+     -또는-  
   
 -   수정 된 \< *프로젝트 이름*> 텍스트 편집기를 사용 하 여.deploymenttargets 파일입니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [파티션 및 역할 배포 옵션 지정](deployment-script-files-partition-and-role-deployment-options.md)   
- [솔루션 배포에 대 한 구성 설정 지정](deployment-script-files-solution-deployment-config-settings.md)   
+ [솔루션 배포를 위한 구성 설정 지정](deployment-script-files-solution-deployment-config-settings.md)   
  [처리 옵션 지정](deployment-script-files-specifying-processing-options.md)  
   
   

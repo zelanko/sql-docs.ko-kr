@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], troubleshooting
@@ -14,12 +13,12 @@ ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 680cb75aa3a302b8aa889f009a6fd080eb3cd1b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: c84bf2d98440ff9425cd26a4a71667abea2904e1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223523"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786695"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Oracle 게시자 문제 해결
   이 항목에서는 Oracle 게시자를 구성 및 사용할 때 발생할 수 있는 여러 가지 문제를 나열합니다.  
@@ -206,7 +205,7 @@ ms.locfileid: "48223523"
 ## <a name="oracle-error-ora-01555"></a>Oracle 오류 ORA-01555  
  다음 Oracle 데이터베이스 오류는 스냅숏 복제와는 관계가 없으며 Oracle에서 일관된 읽기를 수행할 수 있는 데이터 뷰를 생성하는 방식과 관련되어 있습니다.  
   
- "ORA-01555: 너무 오래된 스냅숏"  
+ "ORA-01555: Snapshot too old"  
   
  Oracle에서는 롤백 세그먼트라는 개체를 사용하여 SQL 문이 실행된 시점에서 일관된 읽기를 수행할 수 있는 데이터 뷰를 생성합니다. 다른 동시 세션에서 롤백 정보를 덮어쓰는 경우 "snapshot too old" 오류가 발생할 수 있습니다. Oracle 9i 이전에서는 이 오류의 발생 빈도를 줄이기 위해 롤백 세그먼트의 크기 및/또는 수를 늘리고 큰 트랜잭션을 특정 롤백 세그먼트에 할당하는 방법이 권장되었습니다.  
   

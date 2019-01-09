@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], creating
@@ -16,12 +15,12 @@ ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ce1f698224a7e1938ac30e94565033e3c32f5c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 142dd6544cafde4cea2839f955f23685a3a673f5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195573"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365972"
 ---
 # <a name="create-a-publication"></a>Create a Publication
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 게시를 만드는 방법에 대해 설명합니다.  
@@ -49,14 +48,14 @@ ms.locfileid: "48195573"
 -   게시 및 아티클 이름에는 %, \*, [, ], |, :, ", ? 등의 문자를 포함할 수 없습니다. ', \, /, \< , >. 이러한 문자를 포함하는 데이터베이스 개체를 복제하려면 마법사의 **아티클** 페이지에서 사용할 수 있는 **아티클 속성 - \<아티클>** 대화 상자에서 개체 이름과 다른 아티클 이름을 지정해야 합니다.  
   
 ###  <a name="Security"></a> 보안  
- 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](http://go.microsoft.com/fwlink/?LinkId=34733) 암호화 서비스 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 를 사용합니다.  
+ 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](https://go.microsoft.com/fwlink/?LinkId=34733) 암호화 서비스 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 를 사용합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  새 게시 마법사를 사용하여 게시를 만들고 아티클을 정의할 수 있습니다. 게시를 만든 후 **게시 속성 - \<게시>** 대화 상자에서 게시 속성을 보고 수정합니다. Oracle 데이터베이스에서 게시를 만드는 방법에 대한 자세한 내용은 [Oracle 데이터베이스에서 게시 만들기](create-a-publication-from-an-oracle-database.md)를 참조하세요.  
   
 #### <a name="to-create-a-publication-and-define-articles"></a>게시를 만들고 아티클을 정의하려면  
   
-1.  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결한 다음 해당 서버 노드를 확장합니다.  
+1.   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결한 다음 해당 서버 노드를 확장합니다.  
   
 2.  **복제** 폴더를 확장한 다음 **로컬 게시** 폴더를 마우스 오른쪽 단추로 클릭합니다.  
   
@@ -163,16 +162,16 @@ ms.locfileid: "48195573"
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 게시자 연결을 만듭니다.  
   
-2.  게시 데이터베이스에 대해 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 클래스의 인스턴스를 만들고, 1단계에서 만든 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 인스턴스에 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 속성을 설정한 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 하는 경우 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 반환 `false`, 데이터베이스가 있는지 확인 합니다.  
+2.  게시 데이터베이스에 대해 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 클래스의 인스턴스를 만들고, 1단계에서 만든 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 인스턴스에 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 속성을 설정한 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>에서 `false`가 반환되면 데이터베이스가 있는지 확인합니다.  
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> 속성이 `false`이면 `true`로 설정합니다.  
   
-4.  트랜잭션 게시에 대한 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentExists%2A> 속성의 값을 확인합니다. 이 속성이 `true`,이 데이터베이스에 대 한 로그 판독기 에이전트 작업이 이미 있습니다. 이 속성이 `false`, 다음을 수행 합니다.  
+4.  트랜잭션 게시에 대한 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentExists%2A> 속성의 값을 확인합니다. 이 속성이 `true`이면 이 데이터베이스에 대한 로그 판독기 에이전트 작업이 이미 존재하는 것입니다. 이 속성이 `false`이면 다음을 수행합니다.  
   
-    -   설정 합니다 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 및 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 또는 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> 필드 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> 에 대 한 자격 증명을 제공 합니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 로그 판독기 에이전트가 실행 되는 Windows 계정입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A>의 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 및 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> 또는 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> 필드를 설정하여 로드 판독기 에이전트가 실행되는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 계정에 대한 자격 증명을 제공합니다.  
   
         > [!NOTE]  
-        >  설정 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> 의 멤버가 게시를 만들 때는 필요 하지 않습니다는 `sysadmin` 고정된 서버 역할입니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [복제 에이전트 보안 모델](../security/replication-agent-security-model.md)을 참조하세요.  
+        >  `sysadmin` 고정 서버 역할의 멤버가 게시를 만들 경우에는 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A>를 설정하지 않아도 됩니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [복제 에이전트 보안 모델](../security/replication-agent-security-model.md)을 참조하세요.  
   
     -   (옵션) SQL Server 인증을 사용하여 게시자에 연결할 때 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 필드와 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 또는 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentPublisherSecurity%2A> 필드  
   
@@ -191,7 +190,7 @@ ms.locfileid: "48195573"
     -   스냅숏 에이전트가 실행되는 Windows 계정에 대한 자격 증명을 제공하기 위한 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>의 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 및 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 필드. 이 계정은 스냅숏 에이전트에서 로컬 배포자에 연결할 때 사용되며, Windows 인증이 사용되는 경우에는 모든 원격 연결에도 사용됩니다.  
   
         > [!NOTE]  
-        >  설정 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 의 멤버가 게시를 만들 때는 필요 하지 않습니다는 `sysadmin` 고정된 서버 역할입니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [복제 에이전트 보안 모델](../security/replication-agent-security-model.md)을 참조하세요.  
+        >  `sysadmin` 고정 서버 역할의 멤버가 게시를 만들 경우에는 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>를 설정하지 않아도 됩니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [복제 에이전트 보안 모델](../security/replication-agent-security-model.md)을 참조하세요.  
   
     -   (옵션) SQL Server 인증을 사용하여 게시자에 연결할 경우 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 및 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 또는 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentPublisherSecurity%2A> 필드  
   
@@ -210,9 +209,9 @@ ms.locfileid: "48195573"
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 게시자 연결을 만듭니다.  
   
-2.  게시 데이터베이스에 대해 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 클래스의 인스턴스를 만들고, 1단계에서 만든 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 인스턴스에 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 속성을 설정한 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 하는 경우 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 반환 `false`, 데이터베이스가 있는지 확인 합니다.  
+2.  게시 데이터베이스에 대해 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 클래스의 인스턴스를 만들고, 1단계에서 만든 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 인스턴스에 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 속성을 설정한 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>에서 `false`가 반환되면 데이터베이스가 있는지 확인합니다.  
   
-3.  경우 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> 속성은 `false`로 설정 `true`를 호출 하 고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>입니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> 속성이 `false`이면 `true`로 설정한 후 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>를 호출합니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만들고 이 개체에 대해 다음 속성을 설정합니다.  
   
@@ -225,7 +224,7 @@ ms.locfileid: "48195573"
     -   스냅숏 에이전트가 실행되는 Windows 계정에 대한 자격 증명을 제공하기 위한 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 의 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 필드. 이 계정은 스냅숏 에이전트에서 로컬 배포자에 연결할 때 사용되며, Windows 인증이 사용되는 경우에는 모든 원격 연결에도 사용됩니다.  
   
         > [!NOTE]  
-        >  설정 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 의 멤버가 게시를 만들 때는 필요 하지 않습니다는 `sysadmin` 고정된 서버 역할입니다. 자세한 내용은 [복제 에이전트 보안 모델](../security/replication-agent-security-model.md)을 참조하세요.  
+        >  `sysadmin` 고정 서버 역할의 멤버가 게시를 만들 경우에는 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>를 설정하지 않아도 됩니다. 자세한 내용은 [복제 에이전트 보안 모델](../security/replication-agent-security-model.md)을 참조하세요.  
   
     -   (옵션) 포함 논리적 OR 연산자(Visual C#의 `|` 및 Visual Basic의 `Or`) 및 배타적 논리적 OR 연산자(Visual C#의 `^` 및 Visual Basic의 `Xor`)를 사용하여 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 속성에 대해 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 값을 설정합니다.  
   
@@ -252,7 +251,7 @@ ms.locfileid: "48195573"
 ## <a name="see-also"></a>관련 항목  
  [스크립팅 변수와 함께 sqlcmd 사용](../../scripting/sqlcmd-use-with-scripting-variables.md)   
  [데이터 및 데이터베이스 개체 게시](publish-data-and-database-objects.md)   
- [Replication Management Objects Concepts](../concepts/replication-management-objects-concepts.md)   
+ [복제 관리 개체 개념](../concepts/replication-management-objects-concepts.md)   
  [Define an Article](define-an-article.md)   
  [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)   
  [배포 구성](../configure-distribution.md)   

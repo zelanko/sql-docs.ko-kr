@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - default SQL Server Profiler templates
@@ -18,12 +17,12 @@ ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7fe736aae767d9d3ec434c2f62deac4491e2126
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 5cac924e926d03dffb9116e5ce7194bb784d45fe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084653"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779595"
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler 템플릿
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 추적에 포함할 이벤트 클래스와 데이터 열을 정의하는 템플릿을 만들 수 있습니다. 템플릿을 정의하고 저장한 후 선택한 각 이벤트 클래스에 대한 데이터를 기록하는 추적을 실행할 수 있습니다. 하나의 템플릿을 많은 추적에 사용할 수 있지만 템플릿 자체는 실행되지 않습니다.  
@@ -61,7 +60,7 @@ ms.locfileid: "48084653"
 >  기본 템플릿은 지정된 서버 유형에만 사용할 수 있습니다. 한 가지 서버 유형의 기본값을 변경해도 다른 서버 유형의 기본 템플릿에는 영향을 미치지 않습니다. 특정 서버용 기본 템플릿을 설정하는 방법은 [추적 정의 기본값 설정&#40;SQL Server Profiler&#41;](set-trace-definition-defaults-sql-server-profiler.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [추적 템플릿 만들기 &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
+ [추적 템플릿 만들기&#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
  [추적 템플릿 수정&#40;SQL Server Profiler&#41;](../../database-engine/modify-a-trace-template-sql-server-profiler.md)   
  [추적 템플릿 내보내기&#40;SQL Server Profiler&#41;](export-a-trace-template-sql-server-profiler.md)   
  [추적 템플릿 가져오기&#40;SQL Server Profiler&#41;](import-a-trace-template-sql-server-profiler.md)  

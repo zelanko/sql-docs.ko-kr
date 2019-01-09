@@ -11,12 +11,12 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 73bcce5c157ad412fabb677302eeddbd40a8b54e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 096a0678ccb86c232d4eaca792aa143379710fea
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075853"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52399337"
 ---
 # <a name="tutorial-introducing-expressions"></a>자습서: 식 소개
   식은 강력하고 융통성 있는 보고서를 만드는 데 도움이 됩니다. 이 자습서에서는 일반 함수와 연산자를 사용하는 식을 만들고 구현하는 방법을 배웁니다. 사용 합니다 **식** 식을 연결 하는 이름 값 확인을 별도 데이터 집합에서 값을 쓸 대화 상자 등 고 필드 값에 따라 서로 다른 그림에 표시 합니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "48075853"
 >  이 자습서의 쿼리에는 데이터 값이 포함되어 있으므로 외부 데이터 원본이 필요하지 않습니다. 따라서 쿼리가 상당히 길어집니다. 비즈니스 환경에서는 쿼리에 데이터가 포함되지 않을 것입니다. 이 자습서의 쿼리는 학습용으로만 제공됩니다.  
   
 > [!NOTE]  
->  이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고, 데이터 원본을 선택하고, 데이터 집합을 만드는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)를 참조하세요.  
+>  이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고 데이터 원본을 선택하고 데이터 집합을 만드는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 다음 자습서를 참조하십시오. [자습서: 기본 테이블 보고서 만들기 &#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)합니다.  
   
 #### <a name="to-create-a-new-table-report"></a>새 테이블 보고서를 만들려면  
   
@@ -343,7 +343,7 @@ ms.locfileid: "48075853"
   
 #### <a name="to-look-up-values-in-the-countryregion-dataset"></a>CountryRegion 데이터 세트에서 값을 조회하려면  
   
-1.  **Country Region ID** 열 제목을 클릭하고 텍스트 ID를 삭제합니다.  
+1.  클릭 합니다 **Country Region ID** 열 제목 및 텍스트를 삭제 합니다. ID를 삭제합니다.  
   
 2.  **Country Region** 열의 데이터 셀을 마우스 오른쪽 단추로 클릭하고 **식**을 클릭합니다.  
   
@@ -372,7 +372,7 @@ ms.locfileid: "48075853"
 11. **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
 ##  <a name="Count"></a> 6. 마지막 구입 이후 일수 계산  
- 열을 추가한 다음 **Now** 함수 또는 `ExecutionTime` 기본 제공 전역 변수를 사용하여 사용자의 마지막 구매 이후 오늘까지의 일수를 계산합니다.  
+ 열을 추가 하 고 사용 하 여 합니다 **이제** 함수 또는 `ExecutionTime` 사용자의 마지막 이후 오늘 까지의 일 수를 계산 하는 기본 제공 전역 변수를 구입 합니다.  
   
 #### <a name="to-add-the-days-ago-column"></a>Days Ago 열을 추가하려면  
   
@@ -418,9 +418,9 @@ ms.locfileid: "48075853"
 17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="Indicator"></a> 7. 표시기를 사용하여 판매량 비교 표시  
- 새 열을 추가하고 표시기를 사용하여 사용자의 구매량 YTD(연간 누계)가 평균 구매량 YTD보다 크거나 작은지를 표시합니다. **Round** 함수는 값에서 소수를 제거합니다.  
+ 새 열을 추가 하 고 표시기를 사용 하 여 개인의 연간 누계 (YTD) 구매가 평균 구매량 YTD 보다 높거나 작은지를 표시 합니다. **Round** 함수는 값에서 소수를 제거합니다.  
   
- 표시기와 그 상태의 구성에는 많은 단계가 필요합니다. 원하는 경우 "표시기를 구성하려면" 절차에서 단계를 건너뛰고 이 자습서의 완성된 식을 복사하여 **식** 대화 상자에 붙여넣을 수 있습니다.  
+ 표시기와 그 상태의 구성에는 많은 단계가 필요합니다. "표시기를 구성 하려면" 절차에서, 원하는 경우 건너뛸 하 수에이 자습서에서 완성 된 식 복사/붙여넣기를 **식** 대화 상자.  
   
 #### <a name="to-add-the--or---avg-sales-column"></a>+ or - AVG Sales 열을 추가하려면  
   
@@ -522,7 +522,7 @@ ms.locfileid: "48075853"
   
 38. **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
-##  <a name="GreenBar"></a> 8입니다. 보고서를 "녹색 막대" 보고서로 만들기  
+##  <a name="GreenBar"></a> 8입니다. 보고서를 "녹색 막대" 보고서를 확인 합니다.  
  가로줄무늬가 있는 보고서로 만들기 위해 매개 변수를 사용하여 보고서의 행에 번갈아 적용할 색을 지정합니다.  
   
 #### <a name="to-add-a-parameter"></a>매개 변수를 추가하려면  
@@ -543,7 +543,7 @@ ms.locfileid: "48075853"
   
 7.  **추가**를 클릭합니다.  
   
-8.  **레이블** 상자에 **Yellow**를 입력합니다.  
+8.  에 **레이블** 상자에 입력 합니다. **노란색**  
   
 9.  **값** 상자에 **Yellow**를 입력합니다.  
   
@@ -601,7 +601,7 @@ ms.locfileid: "48075853"
   
 15. `Count(` 바로 뒤에 커서가 없으면 커서를 그곳에 둡니다.  
   
-16. 왼쪽 괄호를 삭제한 다음 **,“Expressions”)** 를 입력합니다.  
+16. 왼쪽된 괄호를 삭제 한 다음 입력 **, "Expressions")**  
   
     > [!NOTE]  
     >  식은 데이터 행 수를 셀 데이터 세트의 이름입니다.  
@@ -621,7 +621,7 @@ ms.locfileid: "48075853"
   
 22. `Parameters!RowColor.Value` 바로 뒤에 커서가 없으면 커서를 그곳에 둡니다.  
   
-23. **, “White”)** 를 입력합니다.  
+23. 입력 **, "White")**  
   
      완성된 식은 다음과 같습니다. `=IIf(RunningValue(Fields!FirstName.Value,Count, "Expressions") Mod 2 =0, Parameters!RowColor.Value, "White")`  
   
@@ -708,7 +708,7 @@ ms.locfileid: "48075853"
  [식&#40;보고서 작성기 및 SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [표시기 &#40;보고서 작성기 및 SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   
- [이미지, 입력란, 사각형 및 선 &#40;보고서 작성기 및 SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
+ [이미지, 입력란, 사각형 및 선&#40;보고서 작성기 및 SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
  [테이블&#40;보고서 작성기 및 SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
  [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-data/report-datasets-ssrs.md)  
   

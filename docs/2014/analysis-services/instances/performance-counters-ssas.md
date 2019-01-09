@@ -11,21 +11,21 @@ ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9db2bfec3a189fcad99d72821e1415e935b1368c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7d4e13542e8361fb9f4bf4fb05509ebe01669ad
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168583"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365795"
 ---
 # <a name="performance-counters-ssas"></a>성능 카운터(SSAS)
   성능 모니터를 사용하면 성능 카운터를 사용하여 Microsoft SQL SSAS(Server Analysis Services) 인스턴스의 성능을 모니터링할 수 있습니다.  
   
  성능 모니터는 리소스 사용을 추적하는 MMC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management  Control)  스냅인입니다. 이 MMC 스냅인은 명령 프롬프트에 **PerfMon** 을 입력하거나 제어판에서 **관리 도구**, **성능 모니터**를 차례로 클릭하여 시작할 수 있습니다. 성능 모니터를 사용하면 미리 정의한 개체 및 카운터를 사용하여 서버와 프로세스 성능 및 작업을 추적하고 사용자 정의 카운터를 사용하여 이벤트를 모니터링할 수 있습니다. 성능 모니터는 이벤트에 대한 데이터(예: 메모리 사용량, 활성 트랜잭션 수 또는 CPU 작업) 대신에 개수를 수집합니다. 특정 카운터에 대해 운영자에게 경고 메시지를 보내도록 임계값을 설정할 수도 있습니다.  
   
- 성능 모니터는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 원격 및 로컬 인스턴스를 모니터링할 수 있습니다. 자세한 내용은 [성능 모니터 사용](http://technet.microsoft.com/library/cc749115.aspx)을 참조하십시오.  
+ 성능 모니터는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 원격 및 로컬 인스턴스를 모니터링할 수 있습니다. 자세한 내용은 [성능 모니터 사용](https://technet.microsoft.com/library/cc749115.aspx)을 참조하십시오.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]와 함께 사용할 수 있는 카운터에 대한 설명을 보려면 성능에서 **카운터 추가** 대화 상자를 열고 성능 개체를 선택한 다음 **설명 표시**를 클릭하십시오. 가장 중요한 카운터는 CPU  사용량,  메모리 사용량,  디스크 IO  속도입니다. 이 중요한 카운터부터 사용해 보고 모니터링을 통해 향상될 수 있는 다른 사항에 대해 더 나은 생각이 떠오를 때 보다 세부적인 카운터를 시도하는 것이 좋습니다. 포함할 카운터에 대한 자세한 내용은 [SQL  Server  2008  R2작업 가이드](http://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]와 함께 사용할 수 있는 카운터에 대한 설명을 보려면 성능에서 **카운터 추가** 대화 상자를 열고 성능 개체를 선택한 다음 **설명 표시**를 클릭하십시오. 가장 중요한 카운터는 CPU  사용량,  메모리 사용량,  디스크 IO  속도입니다. 이 중요한 카운터부터 사용해 보고 모니터링을 통해 향상될 수 있는 다른 사항에 대해 더 나은 생각이 떠오를 때 보다 세부적인 카운터를 시도하는 것이 좋습니다. 포함할 카운터에 대한 자세한 내용은 [SQL  Server  2008  R2작업 가이드](https://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오.  
   
  카운터는 관련된 카운터를 더 쉽게 찾을 수 있도록 그룹화되어 있습니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48168583"
 |Rows/sec|데이터 마이닝 예측 쿼리 중에 처리되는 행 수입니다.|  
 |Queries/sec|처리된 데이터 마이닝 쿼리 수입니다.|  
 |Total  Queries|서버에서 받는 총 데이터 마이닝 쿼리 수입니다.|  
-|합계 행|데이터 마이닝 쿼리에서 반환되는 총 행 수입니다.|  
+|Total  Rows|데이터 마이닝 쿼리에서 반환되는 총 행 수입니다.|  
 |Total  Predictions|서버에서 받는 총 데이터 마이닝 예측 쿼리 수입니다.|  
   
 ###  <a name="bkmk_Locks"></a> 잠금  
@@ -160,7 +160,7 @@ ms.locfileid: "48168583"
 |-------------|-----------------|  
 |Page  Pool  64  Alloc  KB|시스템에서 빌려 온 메모리(KB)입니다.  이 메모리는 서버의 다른 부분에 제공됩니다.|  
 |Page  Pool  64  Lookaside  KB|64KB  할당 준비 목록에 있는 현재 메모리(KB)입니다.  메모리 페이지를 사용할 준비가 되었습니다.|  
-|Page  Pool  8  Alloc  KB|64KB 페이지 풀에서 빌려 온 메모리(KB)입니다.  이 메모리는 서버의 다른 부분에 제공됩니다.|  
+|Page  Pool  8  Alloc  KB|64KB  페이지 풀에서 빌려 온 메모리(KB)입니다.  이 메모리는 서버의 다른 부분에 제공됩니다.|  
 |Page Pool 8 Lookaside KB|8KB 할당 준비 목록에 있는 현재 메모리(KB)입니다.  메모리 페이지를 사용할 준비가 되었습니다.|  
 |Page Pool 1 Alloc KB|64KB  페이지 풀에서 빌려 온 메모리(KB)입니다.  이 메모리는 서버의 다른 부분에 제공됩니다.|  
 |Page Pool 1 Lookaside KB|8KB 할당 준비 목록에 있는 현재 메모리(KB)입니다.  메모리 페이지를 사용할 준비가 되었습니다.|  
@@ -307,7 +307,7 @@ ms.locfileid: "48168583"
 |Network round trips/sec|네트워크 왕복 비율입니다.  여기에는 모든 클라이언트/서버 통신이 포함됩니다.|  
 |Total network round trips|총 네트워크 왕복 수입니다.  여기에는 모든 클라이언트/서버 통신이 포함됩니다.|  
 |Flat cache lookups/sec|플랫 캐시 조회 비율입니다.  여기에는 전역,  세션 및 쿼리 범위 플랫 캐시가 포함됩니다.|  
-|Flat  cache  hits/sec|플랫 캐시 적중 비율입니다.  여기에는 전역, 세션 및 쿼리 범위 플랫 캐시가 포함됩니다.|  
+|Flat  cache  hits/sec|플랫 캐시 적중 비율입니다.  여기에는 전역,  세션 및 쿼리 범위 플랫 캐시가 포함됩니다.|  
 |Calculation  cache  lookups/sec|계산 캐시 조회 비율입니다.  여기에는 전역,  세션 및 쿼리 범위 계산 캐시가 포함됩니다.|  
 |Calculation  cache  hits/sec|계산 캐시 적중 비율입니다.  여기에는 전역,  세션 및 쿼리 범위 계산 캐시가 포함됩니다.|  
 |Persisted cache lookups/sec|지속형 캐시 조회 비율입니다.  지속형 캐시는 MDX  스크립트 CACHE  문으로 만들어집니다.|  

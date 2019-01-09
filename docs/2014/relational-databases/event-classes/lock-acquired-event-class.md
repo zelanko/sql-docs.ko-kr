@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: a6b1df2a-06ed-4fc3-8a84-f0becd5810d5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c68c5b325175c83057da83c4189cb6b83c7d685
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: a49ddbbbff88ca0ae33caf4230954df710f29365
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176823"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816635"
 ---
 # <a name="lockacquired-event-class"></a>Lock:Acquired 이벤트 클래스
   Lock:Acquiredevent 클래스는 데이터 페이지와 같은 리소스에 대한 잠금 획득이 이루어졌음을 나타냅니다.  

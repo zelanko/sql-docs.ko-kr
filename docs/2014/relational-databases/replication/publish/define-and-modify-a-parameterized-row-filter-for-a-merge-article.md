@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/02/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], defining
@@ -19,17 +18,17 @@ ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ef51e4b20fb96f76bbcfa8e9f5a2d4dccaa75d42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 86a96f938a036edf39b3602278f9b6b6d2d46719
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116394"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52771665"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정
   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 매개 변수가 있는 행 필터를 정의하고 수정하는 방법에 대해 설명합니다.  
   
- 테이블 아티클을 만들 때 매개 변수가 있는 행 필터를 사용할 수 있습니다. 이러한 필터에서는 게시할 해당 데이터를 선택하기 위해 [WHERE](/sql/t-sql/queries/where-transact-sql) 절을 사용합니다. 정적 행 필터와는 달리 해당 절에 리터럴 값을 지정하는 대신 [SUSER_SNAME](/sql/t-sql/functions/suser-sname-transact-sql) 및 [HOST_NAME](/sql/t-sql/functions/host-name-transact-sql)시스템 함수를 하나 또는 둘 모두 지정합니다. 자세한 내용은 [매개 변수가 있는 행 필터](../merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
+ 테이블 아티클을 만들 때 매개 변수가 있는 행 필터를 사용할 수 있습니다. 이러한 필터에서는 게시할 해당 데이터를 선택하기 위해 [WHERE](/sql/t-sql/queries/where-transact-sql) 절을 사용합니다. 정적 행 필터와는 달리 해당 절에 리터럴 값을 지정하는 대신 [SUSER_SNAME](/sql/t-sql/functions/suser-sname-transact-sql) 하 고 [HOST_NAME](/sql/t-sql/functions/host-name-transact-sql)합니다. 자세한 내용은 [매개 변수가 있는 행 필터](../merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
   
  
   
@@ -130,7 +129,7 @@ ms.locfileid: "48116394"
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubdynamic1.sql#sp_mergedynamicpub1)]  
   
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [병합 아티클 사이에서 조인 필터 정의 및 수정](define-and-modify-a-join-filter-between-merge-articles.md)   
  [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)   
  [Join Filters](../merge/join-filters.md)   

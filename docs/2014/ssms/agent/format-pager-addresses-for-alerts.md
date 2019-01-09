@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - pager addresses [SQL Server]
@@ -17,12 +17,12 @@ ms.assetid: a9797d01-1050-442c-9038-ed4bfee1e76a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f91d6b0bb9ff2eb5e849d8fb5cc1424fe25363d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 535ae5f92fea0222468ed64f567154495e329a61
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070483"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52768315"
 ---
 # <a name="format-pager-addresses-for-alerts"></a>Format Pager Addresses for Alerts
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고의 호출기 주소 형식을 지정하는 방법에 대해 설명합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "48070483"
   
 1.  **개체 탐색기**에서 더하기 기호를 클릭하여 호출기에 전송하려는 경고가 포함된 서버를 확장합니다.  
   
-2.  **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+2.   **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
 3.  **페이지 선택**아래에서 **경고 시스템**을 선택합니다.  
   

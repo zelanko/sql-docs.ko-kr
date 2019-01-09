@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - affinity I/O mask option
@@ -16,12 +15,12 @@ ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3a2a4e3c41e98be8f39a39e37aee968532e2d9d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65e412a3dfdfc71931e6af4d449c5be88ae351b7
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101553"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640094"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>선호도 입력-출력 마스크 서버 구성 옵션
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 및 Windows Server 2003에서는 멀티태스킹을 수행하기 위해 경우에 따라 여러 프로세서 사이에 프로세스 스레드를 이동하기도 합니다. 운영 체제 측면에서는 효율적이지만 각 프로세서 캐시에 데이터가 반복적으로 다시 로드되어 시스템 로드가 많은 경우 이로 인해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능이 저하될 수 있습니다. 프로세서를 특정 스레드에 할당하면 프로세서가 다시 로드되지 않으므로 이러한 조건에서도 성능을 향상시킬 수 있습니다. 스레드와 프로세서 간의 이러한 연결을 프로세서 선호도라고 합니다.  
@@ -49,7 +48,7 @@ ms.locfileid: "48101553"
   
  affinity I/O 패턴의 1비트는 해당 CPU가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디스크 I/O 작업을 수행하는 데 적합함을 나타내고 0비트는 해당 CPU에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디스크 I/O 작업이 예약되지 않음을 나타냅니다. 모든 비트가 0으로 설정되어 있거나 **affinity I/O mask** 가 지정되지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디스크 I/O는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스레드를 처리하는 데 적합한 모든 CPU에 대해 예약됩니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **affinity I/O mask** 옵션 설정은 특수 작업이므로 필요한 경우에만 사용해야 합니다. 대부분의 경우 Windows 2000 또는 Windows Server 2003 기본 선호도를 사용할 때 최상의 성능을 제공합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **affinity I/O mask** 옵션 설정은 특수 작업이므로 필요한 경우에만 사용해야 합니다. 대부분의 경우 Windows 2000 또는 Windows Server 2003 기본 선호도를 사용할 때 최상의 성능을 제공합니다.  
   
  **affinity I/O mask** 옵션을 지정할 때는 **affinity mask** 구성 옵션과 함께 사용해야 합니다. **affinity I/O mask** 스위치와 **affinity mask** 옵션에서 동일한 CPU를 사용하지 마세요. 각 CPU에 해당하는 비트는 다음 3가지 상태 중 하나여야 합니다.  
   

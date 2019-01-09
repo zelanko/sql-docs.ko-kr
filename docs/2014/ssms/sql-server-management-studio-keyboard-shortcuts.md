@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], shortcuts
@@ -21,12 +20,12 @@ ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20fe82c5ca0060d5a373f90fe72b8f4468240af8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085843"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794735"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio 바로 가기 키
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에는 두 개의 키보드 구성표가 있습니다. 기본적으로 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 구성표가 사용됩니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 에서는 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]의 표준 구성표와 유사한 키보드 구성표도 제공합니다. 키보드 구성표를 변경하거나 다른 바로 가기 키를 추가하려면 **도구** 메뉴에서 **옵션**을 클릭합니다. **환경**, **키보드** 페이지에서 원하는 키보드 구성표를 선택합니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "48085843"
   
 |작업|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 메뉴 모음으로 이동|Alt|Alt|  
+|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 메뉴 모음으로 이동|ALT|ALT|  
 |도구 구성 요소에 대한 메뉴 활성화|Alt+하이픈|Alt+하이픈|  
 |상황에 맞는 메뉴 표시|Shift+F10|Shift+F10|  
 |파일을 만들 수 있는 **새 파일** 대화 상자 표시|Ctrl+N|Ctrl+N|  
@@ -48,14 +47,14 @@ ms.locfileid: "48085843"
 |새 파일을 현재 프로젝트에 추가할 수 있는 **새 항목 추가** 대화 상자 표시|Ctrl+Shift+A|Ctrl+Shift+A|  
 |기존 파일을 현재 프로젝트에 추가할 수 있는 **기존 항목 추가** 대화 상자 표시|Shift+Alt+A|Shift+Alt+A|  
 |쿼리 디자이너 표시|Ctrl+Shift+Q|Ctrl+Shift+Q|  
-|메뉴나 대화 상자를 닫고 동작 취소|Esc|Esc|  
+|메뉴나 대화 상자를 닫고 동작 취소|Esc 키|Esc 키|  
   
 ## <a name="windows-management-and-toolbar-keyboard-shortcuts"></a>Windows 관리 및 도구 모음 바로 가기 키  
   
 |작업|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |현재 MDI 자식 창 닫기|Ctrl+F4|Ctrl+F4|  
-|메뉴 또는 대화 상자 닫기, 진행 중인 작업 취소, 현재 문서 창에 포커스 놓기|Esc|Esc|  
+|메뉴 또는 대화 상자 닫기, 진행 중인 작업 취소, 현재 문서 창에 포커스 놓기|Esc 키|Esc|  
 |인쇄|Ctrl+P|Ctrl+P|  
 |끝내기|Alt+F4|Alt+F4|  
 |전체 화면 모드 설정/해제|Shift+Alt+Enter|Shift+Alt+Enter|  
@@ -101,7 +100,7 @@ ms.locfileid: "48085843"
 |커서를 오른쪽으로 이동|오른쪽 화살표|오른쪽 화살표|  
 |커서를 위쪽으로 이동|위쪽 화살표|위쪽 화살표|  
 |커서를 아래쪽으로 이동|아래쪽 화살표|아래쪽 화살표|  
-|커서를 줄의 시작으로 이동|Home|Home|  
+|커서를 줄의 시작으로 이동|홈|Home|  
 |커서를 줄의 끝으로 이동|END|END|  
 |커서를 문서의 시작으로 이동|Ctrl+Home|Ctrl+Home|  
 |커서를 문서의 끝으로 이동|Ctrl+End|Ctrl+End|  
@@ -185,7 +184,7 @@ ms.locfileid: "48085843"
 |이전에 취소된 편집 복원|Ctrl+Shift+Z<br /><br /> 로 구분하거나 여러<br /><br /> Ctrl+Y<br /><br /> 로 구분하거나 여러<br /><br /> Alt+Shift+Backspace|Ctrl+Shift+Z<br /><br /> 로 구분하거나 여러<br /><br /> Ctrl+Y<br /><br /> 로 구분하거나 여러<br /><br /> Alt+Shift+Backspace|  
 |선택한 항목 저장|Ctrl+S|Ctrl+S|  
 |모두 저장|Ctrl+Shift+S|Ctrl+Shift+S|  
-|닫기|Ctrl+F4|Ctrl+F4|  
+|닫습니다|Ctrl+F4|Ctrl+F4|  
 |인쇄|Ctrl+P|Ctrl+P|  
 |끝내기|Alt+F4|Alt+F4|  
 |브라우저에서 현재 파일 열기|Ctrl+Shift+W|해당 키 없음|  
@@ -236,7 +235,7 @@ ms.locfileid: "48085843"
 |새 줄 삽입|Enter 또는 Shift+Enter|Enter 또는 Shift+Enter|  
 |커서 양쪽의 문자 바꾸기(SQL 편집기에는 적용되지 않음)|Ctrl+T|Ctrl+T|  
 |커서 오른쪽의 문자 하나 삭제|Delete|Delete|  
-|커서 왼쪽의 문자 하나 삭제|Backspace<br /><br /> 로 구분하거나 여러<br /><br /> Shift+<br /><br /> Backspace|Backspace<br /><br /> 로 구분하거나 여러<br /><br /> Shift+<br /><br /> Backspace|  
+|커서 왼쪽의 문자 하나 삭제|백스페이스<br /><br /> 로 구분하거나 여러<br /><br /> Shift+<br /><br /> 백스페이스|백스페이스<br /><br /> 로 구분하거나 여러<br /><br /> Shift+<br /><br /> 백스페이스|  
 |선택 항목의 공백을 삭제하거나, 선택 항목이 없는 경우 커서에 인접한 공백 삭제|Ctrl+K, C|해당 키 없음|  
 |편집기에 구성된 공백 수 삽입|Tab|Tab|  
 |커서 위에 빈 줄 삽입|Ctrl+Enter|Ctrl+Enter|  
@@ -246,7 +245,7 @@ ms.locfileid: "48085843"
 |삽입 모드와 겹쳐쓰기 모드 사이를 전환|INSERT|INSERT|  
 |선택한 줄을 탭 정지의 왼쪽으로 이동|Shift+Tab|Shift+Tab|  
 |커서 오른쪽의 단어 삭제|Ctrl+Delete|Ctrl+Delete|  
-|커서 왼쪽의 단어 삭제|Ctrl+Backspace|Ctrl+Backspace|  
+|커서 왼쪽의 단어 삭제|Ctrl+Backspace|Ctrl+백스페이스|  
 |커서 양쪽의 단어 바꾸기(SQL 편집기에는 적용되지 않음)|Ctrl+Shift+T|Ctrl+Shift+T|  
 |커서가 있는 줄을 다음 줄 아래로 이동|Shift+Alt+T|해당 키 없음|  
 |**옵션** 대화 상자의 **텍스트 편집기** 섹션에서 언어의 **서식** 창에 지정된 언어에 대한 들여쓰기 및 공백 서식 적용(편집기에서만 사용할 수 있음)|Ctrl+K, Ctrl+D|해당 키 없음|  
@@ -328,7 +327,7 @@ ms.locfileid: "48085843"
 |분할 창 보기에서 문서의 이전 창으로 이동|Shift+F6|Shift+F6|  
 |보기 기록에서 뒤로 이동하여 이전 페이지 표시|Alt+왼쪽 화살표|Alt+왼쪽 화살표|  
 |보기 기록에서 앞으로 이동하여 다음 페이지 표시|Alt+오른쪽 화살표|Alt+오른쪽 화살표|  
-|메뉴 또는 대화 상자 닫기, 진행 중인 작업 취소, 현재 창에 포커스 놓기|Esc|해당 키 없음|  
+|메뉴 또는 대화 상자 닫기, 진행 중인 작업 취소, 현재 창에 포커스 놓기|Esc 키|해당 키 없음|  
   
 ## <a name="solution-explorer-keyboard-shortcuts"></a>솔루션 탐색기 바로 가기 키  
   
@@ -372,10 +371,10 @@ ms.locfileid: "48085843"
 |현재 선택한 텍스트의 이전 위치 찾기|Ctrl+Shift+F3|Ctrl+Shift+F3|  
 |**파일에서 바꾸기** 대화 상자 표시|Ctrl+Shift+H|Ctrl+Shift+H|  
 |파일의 맨 아래에서 시작하여 맨 위로 검색하도록 증분 검색을 반대로 수행|Ctrl+Shift+I|Ctrl+Shift+I|  
-|**찾기 및 바꾸기** 에서 **위로 검색**옵션 선택 또는 선택 취소|Alt+F3, B|Alt+F3, B|  
+| **찾기 및 바꾸기** 에서 **위로 검색**옵션 선택 또는 선택 취소|Alt+F3, B|Alt+F3, B|  
 |**파일에서 찾기** 검색 중지|Alt+F3, S|Alt+F3, S|  
-|**찾기 및 바꾸기** 에서 **단어 단위로**옵션 선택 또는 선택 취소|Alt+F3, W|Alt+F3, W|  
-|**찾기 및 바꾸기** 에서 **와일드카드**옵션 선택 또는 선택 취소|Alt+F3, P|Alt+F3, P|  
+| **찾기 및 바꾸기** 에서 **단어 단위로**옵션 선택 또는 선택 취소|Alt+F3, W|Alt+F3, W|  
+| **찾기 및 바꾸기** 에서 **와일드카드**옵션 선택 또는 선택 취소|Alt+F3, P|Alt+F3, P|  
 |표준 도구 모음의 찾기/명령 상자에 캐럿 배치|Ctrl+/|해당 키 없음|  
   
 ## <a name="cut-and-paste-keyboard-shortcuts"></a>잘라내기 및 붙여넣기 바로 가기 키  
@@ -385,7 +384,7 @@ ms.locfileid: "48085843"
 |잘라내기(현재 선택한 항목을 삭제하여 클립보드에 넣기)|Ctrl+X<br /><br /> 로 구분하거나 여러<br /><br /> Shift+Delete|Ctrl+X<br /><br /> 로 구분하거나 여러<br /><br /> Shift+Delete|  
 |선택한 모든 줄을 잘라내거나, 선택한 줄이 없는 경우 현재 줄 잘라내기|Ctrl+L<br /><br /> 로 구분하거나 여러<br /><br /> Ctrl+Shift+L|해당 키 없음|  
 |클립보드에 복사|CTRL+C<br /><br /> 로 구분하거나 여러<br /><br /> Ctrl+Insert|CTRL+C<br /><br /> 로 구분하거나 여러<br /><br /> Ctrl+Insert|  
-|클립보드에서 삽입 지점에 붙여넣기|Ctrl+V<br /><br /> 로 구분하거나 여러<br /><br /> Shift+Insert|Ctrl+V<br /><br /> 로 구분하거나 여러<br /><br /> Shift+Insert|  
+|클립보드에서 삽입 지점에 붙여넣기|Ctrl+V<br /><br /> 로 구분하거나 여러<br /><br /> Shift+Insert|Ctrl+V<br /><br /> 로 구분하거나 여러<br /><br /> SHIFT + INSERT|  
 |클립보드 링의 항목을 삽입 지점에 붙여넣고 붙여넣은 항목을 자동으로 선택|Ctrl+Shift+V<br /><br /> 로 구분하거나 여러<br /><br /> Ctrl+Insert, Shift+Insert|해당 키 없음|  
   
 ## <a name="log-viewer-keyboard-shortcuts"></a>로그 뷰어 바로 가기 키  
@@ -406,7 +405,7 @@ ms.locfileid: "48085843"
 |------------|-----------------------------|---------------------------------|  
 |작업 모니터를 실행합니다.|Ctrl+Alt+A|Ctrl+Alt+A|  
 |작업 모니터를 닫습니다.|Ctrl+F4|Ctrl+F4|  
-|새로 고침|F5 |F5|  
+|새로 고침|F5|F5|  
 |모니터 표시 필터링|Ctrl+Shift+F|Ctrl+Shift+F|  
 |패널 순환|F6|F6|  
 |선택한 창 확장 또는 축소|Ctrl 및 + 또는 -|Ctrl 및 + 또는 -|  
@@ -420,8 +419,8 @@ ms.locfileid: "48085843"
   
 |작업|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|새로 고침|F5 |F5|  
-|표에서 세부 정보 창 열기|Enter|Enter|  
+|새로 고침|F5|F5|  
+|표에서 세부 정보 창 열기|Enter 키|Enter 키|  
   
 ## <a name="replication-conflict-viewer-keyboard-shortcuts"></a>복제 충돌 뷰어 바로 가기 키  
   
@@ -436,13 +435,13 @@ ms.locfileid: "48085843"
 |작업|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |현재 실행 중인 쿼리 취소 또는 중지|Ctrl+T|Ctrl+T|  
-|**쿼리 디자이너**의 다이어그램 창 표시|Ctrl+1|Ctrl+1|  
-|**쿼리 디자이너**의 조건 창 표시|Ctrl+2|Ctrl+2|  
-|**쿼리 디자이너**의 SQL 창 표시|Ctrl+3|Ctrl+3|  
-|**쿼리 디자이너**의 결과 창 표시|Ctrl+4|Ctrl+4|  
-|**쿼리 디자이너**에 지정된 쿼리 실행|Ctrl+R|Ctrl+R|  
+| **쿼리 디자이너**의 다이어그램 창 표시|Ctrl+1|Ctrl+1|  
+| **쿼리 디자이너**의 조건 창 표시|Ctrl+2|Ctrl+2|  
+| **쿼리 디자이너**의 SQL 창 표시|Ctrl+3|Ctrl+3|  
+| **쿼리 디자이너**의 결과 창 표시|Ctrl+4|Ctrl+4|  
+| **쿼리 디자이너**에 지정된 쿼리 실행|Ctrl+R|Ctrl+R|  
 |결과 창에 있는 경우 디자이너의 맨 아래에 도킹된 도구 모음으로 포커스 이동|Ctrl+G|Ctrl+G|  
-|**쿼리 디자이너**에서 JOIN 모드 사용|Ctrl+Shift+J|Ctrl+Shift+J|  
+| **쿼리 디자이너**에서 JOIN 모드 사용|Ctrl+Shift+J|Ctrl+Shift+J|  
   
 ## <a name="designer-keyboard-shortcuts"></a>디자이너 바로 가기 키  
   
@@ -460,7 +459,7 @@ ms.locfileid: "48085843"
 |페이지의 이전 컨트롤로 이동|Shift+Tab|해당 키 없음|  
 |디자인 화면에 표 표시|Enter|해당 키 없음|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [메뉴 및 바로 가기 키 사용자 지정](customize-menus-and-shortcut-keys.md)  
   
   

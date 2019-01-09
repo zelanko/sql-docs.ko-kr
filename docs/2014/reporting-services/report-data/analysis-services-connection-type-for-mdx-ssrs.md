@@ -11,12 +11,12 @@ ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2854a9742a7d864a73624a4676b6c0778ee182a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 66d64b8a96831adb0125d7f739095199e4ad3c6a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222743"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355090"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>MDX용 Analysis Services 연결 형식(SSRS)
   보고서에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 큐브의 데이터를 포함하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]유형의 보고서 데이터 원본을 기반으로 하는 데이터 집합이 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 확장 프로그램을 기반으로 합니다.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 큐브에서 보고서 데이터로 사용할 차원, 계층, 수준, KPI(핵심 성과 지표), 측정값 및 특성에 대한 메타데이터를 검색할 수 있습니다.  
@@ -49,7 +49,7 @@ data source=<server name>;initial catalog=<database name>
   
 -   사용자에게 자격 증명을 입력하도록 메시지 표시 이 옵션은 Windows 통합 보안만 지원합니다.  
   
--   자격 증명 필요 없음. 이 옵션을 사용하려면 보고서 서버에서 무인 실행 계정을 구성해야 합니다. 자세한 내용은 msdn.microsoft.com의 [Reporting Services 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에서 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.  
+-   자격 증명 필요 없음. 이 옵션을 사용하려면 보고서 서버에서 무인 실행 계정을 구성해야 합니다. 자세한 내용은 msdn.microsoft.com의 [Reporting Services 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에서 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.  
   
  자세한 내용은 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) 하거나 [보고서 작성기에 자격 증명 지정](../specify-credentials-in-report-builder.md)합니다.  
   
@@ -72,7 +72,7 @@ data source=<server name>;initial catalog=<database name>
   
  디자인 타임에 쿼리를 실행하여 결과 집합을 확인합니다. 쿼리 결과는 자동으로 일반 행 집합으로 검색됩니다. 쿼리 결과 집합의 열은 데이터 세트의 필드 컬렉션을 채웁니다. 쿼리를 작성한 후 메타데이터에서 생성되는 데이터 세트 필드 컬렉션을 보고서 데이터 창에서 확인합니다. 보고서를 실행하면 외부 데이터 원본에서 실제 데이터가 반환됩니다.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 처리 확장 프로그램은 확장 데이터 집합 필드 속성을 지원합니다. 이러한 속성은 외부 데이터 원본에서 사용할 수 있지만 보고서 데이터 창에 표시되지 않는 값입니다. 지 원하는 확장된 필드 속성을 사용할 수는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 기본 제공을 통해 보고서에 데이터 처리 확장 프로그램 `Fields` 컬렉션입니다. 데이터 원본에 값이 있는 속성의 경우 `FormattedValue`, `Color` 또는 `UniqueName`과 같은 미리 정의된 속성 값에 액세스할 수 있습니다. 자세한 내용은 [Analysis Services 데이터베이스에 대한 확장 필드 속성&#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md)을 참조하세요.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 처리 확장 프로그램은 확장 데이터 집합 필드 속성을 지원합니다. 이러한 속성은 외부 데이터 원본에서 사용할 수 있지만 보고서 데이터 창에 표시되지 않는 값입니다. 기본 제공 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 컬렉션을 통해 `Fields` 데이터 처리 확장 프로그램이 지원하는 확장 필드 속성을 보고서에 사용할 수 있습니다. 데이터 원본에 값이 있는 속성의 경우 `FormattedValue`, `Color` 또는 `UniqueName`과 같은 미리 정의된 속성 값에 액세스할 수 있습니다. 자세한 내용은 [Analysis Services 데이터베이스에 대한 확장 필드 속성&#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md)을 참조하세요.  
   
   
   
@@ -88,7 +88,7 @@ data source=<server name>;initial catalog=<database name>
   
  OLE DB 데이터 원본 유형에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 큐브의 데이터를 검색할 수도 있습니다. 자세한 내용은 [OLE DB 연결 형식&#40;SSRS&#41;](ole-db-connection-type-ssrs.md)을 참조하세요.  
   
- 버전 지원에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서에서 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ 버전 지원에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서에서 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
   
   
@@ -107,10 +107,10 @@ data source=<server name>;initial catalog=<database name>
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  쿼리에 의해 생성되는 데이터 세트 필드 컬렉션에 대한 정보를 제공합니다.  
   
- [Analysis Services 데이터베이스에 대 한 확장 필드 속성 &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md)  
+ [Analysis Services 데이터베이스에 대한 확장 필드 속성&#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md)  
  XMLA 데이터 공급자를 통해 사용할 수 있는 추가 필드에 대한 정보를 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
  각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.  
   
   

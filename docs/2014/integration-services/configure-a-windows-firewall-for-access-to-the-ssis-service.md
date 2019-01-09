@@ -19,12 +19,12 @@ ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 246441fba2e72c95004baa3cdb75320b32648e8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 7160e4622cea397f7b300a1221797349107d38d5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154743"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369995"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>SSIS 서비스 액세스에 대한 Windows 방화벽 구성
     
@@ -36,7 +36,7 @@ ms.locfileid: "48154743"
 > [!IMPORTANT]  
 >  원격 서버에 저장된 패키지를 관리하는 경우 해당 원격 서버에 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스 인스턴스에 연결할 필요가 없습니다. 대신 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 원격 서버에 저장된 패키지를 표시하도록 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 서비스에 대한 구성 파일을 편집합니다. 자세한 내용은 [Integration Services 서비스 구성&#40;SSIS 서비스&#41;](configuring-the-integration-services-service-ssis-service.md)을 참조하세요.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스에는 DCOM 프로토콜이 사용됩니다. 방화벽을 통한 DCOM 프로토콜 작동 방법은 MSDN Library에서 "[방화벽과 함께 분산 COM 사용(Using Distributed COM with Firewalls)](http://go.microsoft.com/fwlink/?LinkId=12490)" 문서를 참조하십시오.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스에는 DCOM 프로토콜이 사용됩니다. 방화벽을 통한 DCOM 프로토콜 작동 방법은 MSDN Library에서 "[방화벽과 함께 분산 COM 사용(Using Distributed COM with Firewalls)](https://go.microsoft.com/fwlink/?LinkId=12490)" 문서를 참조하십시오.  
   
  사용할 수 있는 방화벽 시스템은 여러 가지가 있습니다. Windows 방화벽 이외의 다른 방화벽을 사용하는 경우 사용 중인 시스템별 정보를 보려면 해당 방화벽 설명서를 참조하십시오.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48154743"
     >  Windows 방화벽을 구성하려면 이 절차에서 제어판의 **Windows 방화벽** 항목을 사용합니다. **Windows 방화벽** 항목은 현재 네트워크 위치 프로필에 대한 방화벽만 구성합니다. 그러나 **netsh** 명령줄 도구 또는 고급 보안이 설정된 Windows 방화벽 MMC( [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console) 스냅인을 사용하여 Windows 방화벽을 구성할 수도 있습니다. 이러한 도구에 대한 자세한 내용은 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [서비스 서비스를 통합 구성 &#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)   
+ [Integration Services 서비스 구성&#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)   
  [Integration Services 서비스&#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)  
   
   

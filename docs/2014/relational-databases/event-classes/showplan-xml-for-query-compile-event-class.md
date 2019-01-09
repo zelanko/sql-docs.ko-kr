@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,19 +14,19 @@ ms.assetid: 48919fcb-3a22-43ca-a63c-b210cf2c32d5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78b7f0027b92671328b835aa7ec2af6695eb3eea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 61ae582c2b35f96ccb21d16b19b0191017e05366
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081963"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369675"
 ---
 # <a name="showplan-xml-for-query-compile-event-class"></a>Showplan XML For Query Compile 이벤트 클래스
   Showplan XML For Query Compile 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 SQL 문을 컴파일할 때 발생합니다.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행 계획 연산자를 식별하려면 이 이벤트 클래스를 포함하세요.  
   
  Showplan XML For Query Compile 이벤트 클래스는 완전한 컴파일 시간 데이터를 표시하므로 이 이벤트 클래스가 포함된 추적은 상당한 성능 오버헤드를 초래할 수 있습니다. 이 문제를 최소화하려면 단기간 동안 특정 문제를 모니터링하는 추적에서만 이 이벤트 클래스를 사용하십시오.  
   
- Showplan XML 문서는 연관된 스키마를 갖습니다. 이 스키마는 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=41740)에서 찾을 수 있으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 시 생성됩니다.  
+ Showplan XML 문서는 연관된 스키마를 갖습니다. 이 스키마는 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=41740)에서 찾을 수 있으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 시 생성됩니다.  
   
 ## <a name="showplan-xml-for-query-compile-event-class-data-columns"></a>Showplan XML for Query Compile 이벤트 클래스 데이터 열  
   

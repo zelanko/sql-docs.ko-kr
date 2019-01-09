@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 84ababe0-166e-4b1e-903b-bee6c1f005e7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee4da71b8abc31faea0dfbeee0dd98f5a781b4e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 26726e29bf841bef603249dedec73075e02ebe10
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140620"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772725"
 ---
 # <a name="audit-statement-permission-event-class"></a>Audit Statement Permission 이벤트 클래스
   **Audit Statement Permission** 이벤트 클래스는 문 사용 권한(예: CREATE TABLE)이 사용될 때마다 발생합니다.  

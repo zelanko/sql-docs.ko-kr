@@ -11,12 +11,12 @@ ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: bdc0c39d8b475ed90eba778ad46981c5ff4a2875
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80287951be04d9d8381db0f05810e103c8bedfb8
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166643"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356629"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>기본 제공 Globals 및 Users 참조(보고서 작성기 및 SSRS)
   `Globals` 및 `User` 컬렉션을 모두 포함하는 기본 제공 필드 컬렉션은 보고서를 처리할 때 Reporting Services에서 제공하는 전역 값을 나타냅니다. `Globals` 컬렉션은 보고서의 이름, 보고서 처리가 시작된 시간, 보고서 머리글 또는 바닥글의 현재 페이지 번호와 같은 값을 제공합니다. `User` 컬렉션은 사용자 식별자 및 언어 설정을 제공합니다. 이러한 값을 식에 사용하여 보고서의 결과를 필터링할 수 있습니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "48166643"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-globals-collection"></a>전역 컬렉션 사용  
- `Globals` 컬렉션 보고서에 대 한 전역 변수를 포함 합니다. 디자인 화면에서 이러한 변수는 &(앰퍼샌드) 접두사가 붙은 상태로 표시됩니다(예: `[&ReportName]`). 다음 표에의 멤버는 `Globals` 컬렉션입니다.  
+ `Globals` 컬렉션에는 보고서의 전역 변수가 포함됩니다. 디자인 화면에서 이러한 변수는 &(앰퍼샌드) 접두사가 붙은 상태로 표시됩니다(예: `[&ReportName]`). 다음 표에서는 `Globals` 컬렉션의 멤버를 설명합니다.  
   
 |**멤버**|**형식**|**설명**|  
 |----------------|--------------|---------------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "48166643"
 |OverallTotalPages|`Integer`|전체 보고서의 총 페이지 수입니다. 이 값은 ResetPageNumber의 영향을 받지 않습니다.<br /><br /> OverallTotalPages는 페이지 머리글 또는 페이지 바닥글의 식에만 사용할 수 있습니다.|  
 |RenderFormat|`RenderFormat`|현재 렌더링 요청에 대한 정보입니다.<br /><br /> 자세한 내용은 다음 섹션의 "RenderFormat"을 참조하십시오.|  
   
- 멤버는 `Globals` 컬렉션은 variant를 반환 합니다. 특정 데이터 형식이 필요한 식에서 이 컬렉션의 멤버를 사용하려면 먼저 변수를 캐스팅해야 합니다. 예를 들어 실행 시간 variant를 날짜 형식으로 변환하려면 `=CDate(Globals!ExecutionTime)`를 사용합니다. 자세한 내용은 [식의 데이터 형식 &#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)합니다.  
+ `Globals` 컬렉션 멤버는 variant를 반환합니다. 특정 데이터 형식이 필요한 식에서 이 컬렉션의 멤버를 사용하려면 먼저 변수를 캐스팅해야 합니다. 예를 들어 실행 시간 variant를 날짜 형식으로 변환하려면 `=CDate(Globals!ExecutionTime)`를 사용합니다. 자세한 내용은 [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)).  
   
 ### <a name="renderformat"></a>RenderFormat  
  다음 표에서는 `RenderFormat`의 멤버에 대해 설명합니다.  
@@ -69,16 +69,16 @@ ms.locfileid: "48166643"
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
 ## <a name="using-the-user-collection"></a>User 컬렉션 사용  
- `User` 컬렉션 보고서를 실행 하는 사용자에 대 한 데이터가 포함 됩니다. 예를 들어 이 컬렉션을 사용하여 보고서에 나타나는 데이터를 필터링함으로써 현재 사용자의 데이터만 표시하거나 보고서 제목 등에 UserID를 표시할 수 있습니다. 디자인 화면에서 이러한 변수는 &(앰퍼샌드) 접두사가 붙은 상태로 표시됩니다(예: `[&UserID]`).  
+ `User` 컬렉션에는 보고서를 실행하는 사용자에 대한 데이터가 포함됩니다. 예를 들어 이 컬렉션을 사용하여 보고서에 나타나는 데이터를 필터링함으로써 현재 사용자의 데이터만 표시하거나 보고서 제목 등에 UserID를 표시할 수 있습니다. 디자인 화면에서 이러한 변수는 &(앰퍼샌드) 접두사가 붙은 상태로 표시됩니다(예: `[&UserID]`).  
   
- 다음 표에의 멤버는 `User` 컬렉션입니다.  
+ 다음 표에서는 `User` 컬렉션의 멤버를 설명합니다.  
   
 |**멤버**|**형식**|**설명**|  
 |----------------|--------------|---------------------|  
-|`Language`|`String`|보고서를 실행하는 사용자의 `en-US`) 을 입력합니다.|  
+|`Language`|`String`|보고서를 실행하는 사용자의  `en-US`) 을 입력합니다.|  
 |`UserID`|`String`|보고서를 실행하는 사용자의 ID입니다. Windows 인증을 사용하는 경우 이 값은 현재 사용자의 도메인 계정입니다. 값은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보안 확장 프로그램에 의해 결정되며 이 프로그램은 Windows 인증 또는 사용자 지정 인증을 사용할 수 있습니다.|  
   
- 보고서에서 여러 언어를 지원하는 방법에 대한 자세한 내용은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 온라인 설명서 [의](http://go.microsoft.com/fwlink/?LinkId=120955)설명서에서 "다국어 배포 또는 글로벌 배포를 위한 솔루션 디자인 고려 사항"을 참조하세요.  
+ 보고서에서 여러 언어를 지원하는 방법에 대한 자세한 내용은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 온라인 설명서 [의](https://go.microsoft.com/fwlink/?LinkId=120955)설명서에서 "다국어 배포 또는 글로벌 배포를 위한 솔루션 디자인 고려 사항"을 참조하세요.  
   
 ### <a name="using-locale-settings"></a>로캘 설정 사용  
  식을 사용하여 `User.Language` 값을 통해 클라이언트 컴퓨터의 로캘 설정을 참조하여 보고서가 사용자에게 표시되는 방식을 결정할 수 있습니다. 예를 들어 로캘 값에 따라 다른 쿼리 식을 사용하는 보고서를 만들 수 있습니다. 반환되는 언어에 따라 다양한 열에서 지역화된 정보를 검색하기 위해 쿼리가 변경될 수 있습니다. 또한 이 변수를 기반으로 하는 보고서나 보고서 항목의 언어 설정에 식을 사용할 수 있습니다.  
@@ -93,7 +93,7 @@ ms.locfileid: "48166643"
  [식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [식 대화 상자&#40;보고서 작성기&#41;](../expression-dialog-box-report-builder.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [숫자 및 날짜 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [숫자 및 날짜 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

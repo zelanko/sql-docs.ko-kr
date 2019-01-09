@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ab3e6eb8839b87f1145501cd0b30895bf181ec60
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: e2d15054f3d6ebbcd25627df42aab5b9248db1f6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984475"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207502"
 ---
 # <a name="power-pivot-configuration-tools"></a>Power Pivot Configuration Tools
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "38984475"
   
 -   Analysis Services 인스턴스의 서버 관리자여야 합니다(SharePoint 2010만 해당).  
   
--   팜 구성 데이터베이스에서 db_owner여야 합니다.  
+-   팜의 구성 데이터베이스에서 db_owner 여야 합니다.  
   
 -   구성 도구를 사용하기 위한 TCP/IP 포트 요구 사항은 없으므로 구성 도구를 수용하도록 방화벽을 구성할 필요가 없습니다. 구성 도구에는 웹 애플리케이션이 필요하며 공유 서비스는 SharePoint 플랫폼의 일부로 사용할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버에 대한 방화벽을 구성해야 할 수 있습니다. 자세한 내용은 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   
@@ -51,10 +51,10 @@ ms.locfileid: "38984475"
   
  이 도구는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 또는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]인스턴스에만 사용할 수 있습니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 설치에는 사용하지 마세요.  
   
-|속성|지원되는 SharePoint 버전|세부적인 구성|  
+|이름|지원되는 SharePoint 버전|세부적인 구성|  
 |----------|-------------------------------------|----------------------------|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성|SharePoint 2013|[SharePoint 2013용 파워 피벗 구성 또는 복구&#40;파워 피벗 구성 도구&#41;](../../analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구|SharePoint 2010|[구성 또는 복구 (파워 피벗 구성 도구) SharePoint 2010 용 파워 피벗](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구|SharePoint 2010|[SharePoint 2010용 파워 피벗 구성 또는 복구(파워 피벗 구성 도구)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)|  
   
 ###  <a name="bkmk_sum_differences_betweentools"></a> 두 구성 도구의 차이점  
  두 가지 버전의 구성 도구는 유사하지만 두 개의 도구를 실행하는 구성 단계에는 차이점이 있습니다. 이와 같이 구성 단계가 다른 이유는 SharePoint 2013에서 SharePoint 2010의 기능이 변경되었기 때문입니다. 또한 SQL Server 2012 SP1 버전의 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 및 이전 버전의 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 은 아키텍처도 서로 다르기 때문입니다.  
@@ -83,9 +83,9 @@ ms.locfileid: "38984475"
   
 -   [SharePoint용 파워 피벗에 대한 PowerShell 참조](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   
-> [!NOTE]  
+> [!NOTE]
 >  이 도구는 Reporting Services를 구성하지 않습니다. Reporting Services를 SharePoint 환경에 추가하는 경우 Reporting Services를 별도로 설치하고 구성해야 합니다. 자세한 내용은 다음 항목을 참조하세요.  
->   
+> 
 >  -   [SharePoint 모드에서 첫 번째 보고서 서버 설치](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md)  
 > -   [SharePoint 2010용 Reporting Services SharePoint 모드 설치](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)  
   
@@ -103,7 +103,7 @@ ms.locfileid: "38984475"
   
      ![두 개의 파워 피벗 구성 도구](../../analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "두 개의 파워 피벗 구성 도구")  
   
-     **참고:** 이 도구는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 이 로컬 서버에 설치된 경우에만 사용할 수 있습니다.  
+     **참고:** 이 도구는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]이 로컬 서버에 설치된 경우에만 사용할 수 있습니다.  
   
 2.  시작 시 구성 도구는 설치 상태를 확인하고 설치에 유효한 태스크를 제공합니다.  
   

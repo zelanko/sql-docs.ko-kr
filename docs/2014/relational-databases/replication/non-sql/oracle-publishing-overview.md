@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing [SQL Server replication], Oracle publishing
@@ -17,15 +16,15 @@ ms.assetid: 2e013259-0022-4897-a08d-5f8deb880fa8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ba97c517967b3a010379e82ee1f230af83c8a490
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 558ee09eeb4419bc354ff3ade9d6586877246b33
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214563"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762425"
 ---
 # <a name="oracle-publishing-overview"></a>Oracle Publishing Overview
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터는 복제 토폴로지에 Oracle 버전 9i 이상의 Oracle 게시자를 추가할 수 있습니다. 게시 서버는 모든 Oracle 지원 하드웨어 및 운영 체제에 배포할 수 있습니다. 이 기능은 잘 설정된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 스냅숏 복제 및 트랜잭션 복제의 토대 위에 구축되었으므로 비슷한 성능과 유용성을 제공합니다.  
+   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터는 복제 토폴로지에 Oracle 버전 9i 이상의 Oracle 게시자를 추가할 수 있습니다. 게시 서버는 모든 Oracle 지원 하드웨어 및 운영 체제에 배포할 수 있습니다. 이 기능은 잘 설정된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 스냅숏 복제 및 트랜잭션 복제의 토대 위에 구축되었으므로 비슷한 성능과 유용성을 제공합니다.  
   
  Oracle 게시는 지원되지 않습니다. SQL Server 이외의 구독자에 대한 다른 유형의 복제는 지원되지 않습니다. 데이터를 이동하려면 변경 데이터 캡처 및 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]를 사용하여 솔루션을 만듭니다.  
   
@@ -43,6 +42,6 @@ ms.locfileid: "48214563"
 ## <a name="see-also"></a>관련 항목  
  [Oracle 게시자 구성](configure-an-oracle-publisher.md)   
  [Oracle 게시를 위한 용어 설명](glossary-of-terms-for-oracle-publishing.md)   
- [다른 유형의 데이터베이스 복제](heterogeneous-database-replication.md)  
+ [Heterogeneous Database Replication](heterogeneous-database-replication.md)  
   
   

@@ -12,12 +12,12 @@ ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cc2ba0e196fa2440152fe1bd7415feeeb6f4e079
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bbbb50000f88e35b03f5a006c4a50708f10b05b7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079643"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366875"
 ---
 # <a name="hello-world-ready-sample"></a>Hello World Ready 예제
   Hello World Ready 예제는 간단한 World Ready CLR(공용 언어 런타임) 통합 기반 저장 프로시저 만들기, 배포 및 테스트와 관련된 기본 작업을 보여 줍니다. World Ready 구성 요소는 구성 요소의 원본 코드를 변경할 필요 없이 세계 곳곳의 다양한 시장에서 다양한 언어로 쉽게 지역화할 수 있습니다. 또한 이 예제에서는 저장 프로시저에 의해 동적으로 생성되고 클라이언트로 반환되는 레코드 및 출력 매개 변수를 통해 데이터를 반환하는 방법을 보여 줍니다. 이 예제는 Hello World 예제와 거의 동일하지만 훨씬 더 쉽고 안전하게 이 응용 프로그램을 지역화할 수 있습니다. 지역화된 텍스트를 변경하려면 다음을 수행해야 합니다.  
@@ -37,9 +37,9 @@ ms.locfileid: "48079643"
   
  이 프로젝트를 만들고 실행하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](http://go.microsoft.com/fwlink/?LinkId=31046)에서 무료로 구할 수 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://go.microsoft.com/fwlink/?LinkId=31046)에서 무료로 구할 수 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](http://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
+-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](https://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
   
 -   .NET Framework SDK 2.0 이상 또는 Microsoft Visual Studio 2005 이상. .NET Framework SDK는 무료로 구할 수 있습니다.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "48079643"
   
     -   아래와 같이 읽으려면  
   
-    -   `<value xml:space="preserve">` `ã“ã‚“ã«ã¡ã¯</value>`  
+    -   `<value xml:space="preserve">` `ã"ã‚"ã«ã¡ã¯</value>`  
   
 11. c:\MySample에서 `build.com` 파일을 만들고 예제 코드를 파일에 복사합니다.  
   

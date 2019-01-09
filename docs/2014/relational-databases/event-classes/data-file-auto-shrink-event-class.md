@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: ea02b01e-9f87-47ca-9117-afadc382fb45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72fc428e8749a5026c099d14ec012bb4cee6fa2e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: b65f0200dd91c3813be405d9186543732eea6741
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096823"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813625"
 ---
 # <a name="data-file-auto-shrink-event-class"></a>Data File Auto Shrink 이벤트 클래스
   **Data File Auto Shrink** 이벤트 클래스는 데이터 파일이 축소되었음을 나타냅니다. 이 이벤트는 ALTER DATABASE 문의 명시적인 실행으로 데이터 파일이 축소될 경우에는 트리거되지 않습니다. 데이터 파일 크기 변화를 모니터링하는 추적에 **Data File Auto Shrink** 이벤트 클래스를 포함시키십시오.  

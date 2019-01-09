@@ -1,5 +1,5 @@
 ---
-title: 날짜 테이블로 표시 지정 | Microsoft Docs
+title: Analysis Services 테이블 형식 모델에서 날짜 테이블로 표시 지정 | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f059292691904325e997f9089173ec8e39ffcf17
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: df4afbecebd3c076f80064dbd3d13f35ba2cbcf0
+ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099336"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53072441"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence"></a>시간 인텔리전스에 사용할 날짜 테이블로 표시 지정
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "50099336"
   
 1.  모델 디자이너에서 날짜 테이블을 클릭합니다.  
   
-2.  **테이블** 메뉴를 클릭한 다음 **날짜**, **Mark as 날짜 테이블**를 차례로 클릭합니다.  
+2.   **테이블** 메뉴를 클릭한 다음 **날짜**, **Mark as 날짜 테이블**를 차례로 클릭합니다.  
   
 3.  **날짜 테이블로 표시** 대화 상자의 **날짜** 목록 상자에서 고유 식별자로 사용할 열을 선택합니다. 이 열은 고유 값을 포함해야 하며 날짜 데이터 형식이어야 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   

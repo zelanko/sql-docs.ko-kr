@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.olapconnection.f1
@@ -15,15 +14,15 @@ ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5157d67fe96939c8942ff3dc0351cc09deb030f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c91547692c9a703b1d989015a0b56525e3e7c40f
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063255"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779075"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Analysis Services 연결 관리자 추가 대화 상자 UI 참조
-  **Analysis Services 연결 관리자 추가** 대화 상자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 실행하는 서버에 대한 연결을 만들거나 연결 속성을 편집할 수 있습니다.  
+   **Analysis Services 연결 관리자 추가** 대화 상자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 실행하는 서버에 대한 연결을 만들거나 연결 속성을 편집할 수 있습니다.  
   
  Analysis Services 연결 관리자에 대한 자세한 내용은 [Analysis Services Connection Manager](analysis-services-connection-manager.md)를 참조하십시오.  
   
@@ -43,8 +42,8 @@ ms.locfileid: "48063255"
  **Analysis Services 프로젝트**  
  목록에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../integration-services-error-and-message-reference.md)   
- [Integration Services &#40;SSIS&#41; 연결](integration-services-ssis-connections.md)  
+ [Integration Services&#40;SSIS&#41; 연결](integration-services-ssis-connections.md)  
   
   

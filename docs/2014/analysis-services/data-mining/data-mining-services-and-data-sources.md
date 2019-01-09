@@ -11,12 +11,12 @@ ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dd05bf3c19171229d806fa4f0f817255a4727c6c
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: HT
+ms.openlocfilehash: e5f21211b933bcf0327ba1dbf15703f354225550
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145898"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367755"
 ---
 # <a name="data-mining-services-and-data-sources"></a>데이터 마이닝 서비스 및 데이터 원본
   데이터 마이닝을 사용하려면 SQL Server Analysis Services 인스턴스에 대한 연결이 필요합니다. 큐브의 데이터는 데이터 마이닝에 필요하지 않으며 관계형 원본을 사용하는 것이 권장되지만 데이터 마이닝에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 엔진에서 제공하는 구성 요소를 사용합니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "50145898"
  서버를 튜닝하고 클라이언트 사용에 대한 보안을 제어하는 속성도 설정할 수 있습니다. 자세한 내용은 [Feature Properties](../server-properties/feature-properties.md)을 참조하세요.  
   
 > [!NOTE]  
->  버전에서 플러그 인 알고리즘 지원에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2012 버전에서 지 원하는 기능](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)합니다.  
+>  버전에서 플러그 인 알고리즘 지원에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2012 버전에서 지 원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)합니다.  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>데이터 마이닝 개체에 대한 프로그래밍 방식 액세스  
  다음 개체 모델을 사용하여 Analysis Services 데이터베이스에 대한 연결을 만들고 데이터 마이닝 개체 작업을 수행할 수 있습니다.  

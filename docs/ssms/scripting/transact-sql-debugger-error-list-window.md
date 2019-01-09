@@ -6,8 +6,6 @@ ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- VS.ErrorList
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -18,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5078fec6dd0661f42e4e1104257671672efb6403
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0218602b8f46d15f4d2d809df95e0500b51180ab
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643581"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328293"
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Transact-SQL 디버거 - 오류 목록 창
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **오류 목록** 은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 IntelliSense 코드에서 생성된 구문 및 의미 체계 오류를 표시합니다.  
+   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **오류 목록** 은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 IntelliSense 코드에서 생성된 구문 및 의미 체계 오류를 표시합니다.  
   
 ## <a name="features-of-the-error-list"></a>오류 목록의 기능  
  **오류 목록** 은 다음 기능을 제공합니다.  
@@ -91,5 +89,3 @@ ms.locfileid: "51643581"
   
  **프로젝트**  
  스크립트 파일이 포함된 프로젝트의 이름을 표시합니다.  
-  
-  

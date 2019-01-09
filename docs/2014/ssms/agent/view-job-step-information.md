@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying job step information
@@ -15,12 +15,12 @@ ms.assetid: e3f06492-dc86-4e06-b186-ea58aff6d591
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0b9b10fae03f35ae7ceb237304b35b80880d636f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8123a523a0fa5212b4c0ffc8d98c6a90aef3396c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222983"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786095"
 ---
 # <a name="view-job-step-information"></a>View Job Step Information
   이 항목에서는 작업 단계 속성 대화 상자에서 작업 단계의 세부 사항을 보는 방법에 대해 설명합니다. 또한 작업 단계 출력 보기에 대한 정보도 제공합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "48222983"
   
 #### <a name="to-view-job-step-information"></a>작업 단계 정보를 보려면  
   
-1.  **개체 탐색기** 에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.   **개체 탐색기** 에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
 2.  **SQL Server 에이전트**, **작업**을 차례로 확장한 다음 보려는 작업 단계가 포함된 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
   

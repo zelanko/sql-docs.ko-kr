@@ -1,5 +1,5 @@
 ---
-title: '2단원: 스냅숏 폴더 준비 | Microsoft 문서'
+title: '2단원: 스냅숏 폴더 준비 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: f286cde9-c0d0-43ef-b7ba-53c3cbb8906c
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 9ee7028a14cebadd6d49fac1a081e8db78ea7990
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: d15b08a5ff98392961c3f4fb01c397f220303e86
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157033"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591027"
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>2단원: 스냅숏 폴더 준비
   이 단원에서는 게시 스냅숏을 만들고 저장하는 데 사용되는 스냅숏 폴더를 구성하는 방법을 배웁니다.  
@@ -37,9 +37,9 @@ ms.locfileid: "48157033"
   
 6.  **보안** 탭에서 **편집**을 클릭합니다.  
   
-7.  **권한** 대화 상자에서 **추가**를 클릭합니다. **사용자, 컴퓨터, 서비스 계정 또는 그룹 선택** 입력란에 1단원에서 만든 스냅숏 에이전트 계정 이름을 \<*Machine_Name>***\repl_snapshot**으로 입력합니다. 여기서 \<* Machine_Name>*은 게시자의 이름입니다. **이름 확인**을 클릭한 다음 **확인**을 클릭합니다.  
+7.   **권한** 대화 상자에서 **추가**를 클릭합니다. **사용자, 컴퓨터, 서비스 계정 또는 그룹 선택** 입력란에 1단원에서 만든 스냅숏 에이전트 계정 이름을 \<_Machine_Name>_**\repl_snapshot**으로 입력합니다. 여기서 \<*Machine_Name>* 은 게시자의 이름입니다. **이름 확인**을 클릭한 다음 **확인**을 클릭합니다.  
   
-8.  이전 단계를 반복하여 배포 에이전트에 대한 사용 권한을 \<*Machine_Name>***\repl_distribution**으로, 병합 에이전트에 대한 사용 권한을 \<* Machine_Name>***\repl_merge**로 추가합니다.  
+8.  이전 단계를 반복하여 배포 에이전트에 대한 사용 권한을 \<_Machine_Name>_**\repl_distribution**으로, 병합 에이전트에 대한 사용 권한을 \<_Machine_Name>_**\repl_merge**로 추가합니다.  
   
 9. 다음 사용 권한이 허용되는지 확인합니다.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "48157033"
 10. **확인** 을 클릭하여 **repldata 속성** 대화 상자를 닫고 repldata 공유를 만듭니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 스냅숏 폴더에 대한 공유를 성공적으로 구성했습니다. 다음 단원에서는 배포를 구성합니다. [3단원: 배포 구성](lesson-3-configuring-distribution.md)을 참조하세요.  
+ 스냅숏 폴더에 대한 공유를 성공적으로 구성했습니다. 다음 단원에서는 배포를 구성합니다. 참조 [3 단원: 배포 구성](lesson-3-configuring-distribution.md)합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [스냅숏 폴더 보안 설정](security/secure-the-snapshot-folder.md)  
   
   

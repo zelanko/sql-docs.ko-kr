@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Help.Online
@@ -12,15 +12,15 @@ ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: efa0ae0d1c6bc60ef0201d1e7d289f71102157e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d40c0397b0a43f8cd17a53ee9be3f738bbe8500c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185237"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816875"
 ---
 # <a name="options-environment-help-online-page"></a>Options (Environment-Help-Online Page)
-  **옵션** 대화 상자를 사용하면 F1 도움말을 비롯하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 검색에 사용할 도움말 원본을 지정할 수 있습니다. **도구** 메뉴에서 **옵션**을 클릭하고 **환경** 폴더를 확장한 다음 **도움말**을 선택하고 **온라인**을 클릭합니다. **온라인** 페이지가 목록에 나타나지 않으면 **옵션** 대화 상자의 **모든 설정 표시** 확인란을 선택합니다.  
+   **옵션** 대화 상자를 사용하면 F1 도움말을 비롯하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 검색에 사용할 도움말 원본을 지정할 수 있습니다. **도구** 메뉴에서 **옵션**을 클릭하고 **환경** 폴더를 확장한 다음 **도움말**을 선택하고 **온라인**을 클릭합니다. **온라인** 페이지가 목록에 나타나지 않으면 **옵션** 대화 상자의 **모든 설정 표시** 확인란을 선택합니다.  
   
  **도움말 콘텐츠를 로드할 때**  
  F1 도움말에 사용할 도움말 원본과 도움말 원본을 사용하는 순서를 지정합니다.  

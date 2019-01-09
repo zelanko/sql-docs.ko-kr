@@ -14,12 +14,12 @@ ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 584dea7a48b316a4e78a46b0ef1b014b8cc7cf02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: b5f451a9948315a32710bdb1755bb95a5b8d3b98
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106910"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356646"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>원격 파티션 만들기 및 관리(Analysis Services)
   측정값 그룹을 분할할 때 원격 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 보조 데이터베이스를 파티션 저장소로 구성할 수 있습니다.  
@@ -57,36 +57,36 @@ ms.locfileid: "48106910"
   
 #### <a name="specify-valid-server-names-for-cube-deployment-in-ssdt"></a>SSDT의 큐브 배포에 대한 올바른 서버 이름 지정  
   
-1.  마스터 서버: 솔루션 탐색기에서 솔루션 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **속성** 대화 상자에서 **구성 속성**을 클릭한 다음 **배포**를 클릭하고 **서버** 를 클릭한 다음 마스터 서버 이름을 설정합니다.  
+1.  마스터 서버: 솔루션 탐색기에서 솔루션 이름을 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다. **속성** 대화 상자에서 **구성 속성**을 클릭한 다음 **배포**를 클릭하고 **서버** 를 클릭한 다음 마스터 서버 이름을 설정합니다.  
   
-2.  종속 서버: 솔루션 탐색기에서 솔루션 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **속성** 대화 상자에서 **구성 속성**을 클릭한 다음 **배포**를 클릭하고 **서버** 를 클릭한 다음 하위 서버 이름을 설정합니다.  
+2.  하위 서버: 솔루션 탐색기에서 솔루션 이름을 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다. **속성** 대화 상자에서 **구성 속성**을 클릭한 다음 **배포**를 클릭하고 **서버** 를 클릭한 다음 하위 서버 이름을 설정합니다.  
   
 #### <a name="create-and-deploy-a-secondary-database-in-ssdt"></a>SSDT의 보조 데이터베이스 만들기 및 배포  
   
-1.  종속 서버: 저장소 데이터베이스용으로 새 Analysis Services 프로젝트를 만듭니다.  
+1.  하위 서버: 저장소 데이터베이스에 대한 새 Analysis Services 프로젝트를 만듭니다.  
   
-2.  종속 서버: 솔루션 탐색기에서 큐브 데이터베이스 db-master를 가리키는 새 데이터 원본을 만듭니다. **네이티브 OLE DB\Microsoft OLE DB Provider for Analysis Services 11.0**공급자를 사용합니다.  
+2.  하위 서버: 솔루션 탐색기에서 큐브 데이터베이스(db 마스터)를 가리키는 새 데이터 원본을 만듭니다. **네이티브 OLE DB\Microsoft OLE DB Provider for Analysis Services 11.0**공급자를 사용합니다.  
   
-3.  종속 서버: 솔루션을 배포합니다.  
+3.  하위 서버: 솔루션을 배포합니다.  
   
 #### <a name="enable-features-in-ssms"></a>기능 활성화(SSMS)  
   
-1.  종속 서버: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 연결된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **Feature\LinkToOtherInstanceEnabled** 및 **Feature\LinkFromOtherInstanceEnabled** 를 **True**로 설정합니다.  
+1.  하위 서버: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 연결 된 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 선택한 개체 탐색기에서 인스턴스 **속성**합니다. **Feature\LinkToOtherInstanceEnabled** 및 **Feature\LinkFromOtherInstanceEnabled** 를 **True**로 설정합니다.  
   
-2.  종속 서버: 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭하고 **다시 시작**을 선택하여 서버를 다시 시작합니다.  
+2.  하위 서버: 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭 하 고 선택 하 여 서버를 다시 시작 **다시 시작**합니다.  
   
-3.  마스터 서버: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 연결된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **Feature\LinkToOtherInstanceEnabled** 및 **Feature\LinkFromOtherInstanceEnabled** 를 **True**로 설정합니다.  
+3.  마스터 서버: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 연결 된 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 선택한 개체 탐색기에서 인스턴스 **속성**합니다. **Feature\LinkToOtherInstanceEnabled** 및 **Feature\LinkFromOtherInstanceEnabled** 를 **True**로 설정합니다.  
   
-4.  마스터 서버: 서버를 다시 시작하려면 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭하고 **다시 시작**을 선택합니다.  
+4.  마스터 서버: 서버를 다시 시작 하려면 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭 하 고 선택 **다시 시작**합니다.  
   
 #### <a name="set-the-masterdatasourceid-database-property-on-the-remote-server-in-ssms"></a>원격 서버에서 MasterDataSourceID 데이터베이스 속성 설정(SSMS)  
   
-1.  종속 서버: 저장소 데이터베이스 db-storage를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 스크립팅** | **ALTER** | **새 쿼리 편집기 창**을 가리킵니다.  
+1.  하위 서버: 저장소를 마우스 오른쪽 단추로 클릭 데이터베이스, db 저장소를 가리키도록 **데이터베이스 스크립팅** | **Alter** | **새 쿼리 편집기 창**합니다.  
   
 2.  XMLA에 **MasterDataSourceID** 를 추가한 다음 큐브 데이터베이스(db 마스터) ID를 값으로 지정합니다. XMLA는 다음과 비슷해야 합니다.  
   
     ```  
-    <Alter ObjectExpansion="ExpandFull" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+    <Alter ObjectExpansion="ExpandFull" xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
     <Object>  
        <DatabaseID>DB-Storage</DatabaseID>  
     </Object>  
@@ -111,7 +111,7 @@ ms.locfileid: "48106910"
   
 #### <a name="set-up-the-remote-partition-in-ssdt"></a>원격 파티션 설정(SSDT)  
   
-1.  마스터 서버: 큐브 디자이너에서 큐브를 열고 **파티션** 탭을 클릭합니다. 측정값 그룹을 확장합니다. 측정값 그룹이 이미 여러 파티션에 맞게 구성되어 있는 경우 **새 파티션** 을 클릭하거나 원본 열에서 찾아보기(. 의 동일한 원격 인스턴스에 있는 경우 master 데이터베이스는 여러 보조 데이터베이스를 사용할 수 있습니다. ) 단추를 클릭하여 기존 파티션을 편집합니다.  
+1.  마스터 서버: 큐브 디자이너에서 큐브를 열고 클릭 **파티션을** 탭 합니다. 측정값 그룹을 확장합니다. 측정값 그룹이 이미 여러 파티션에 맞게 구성되어 있는 경우 **새 파티션** 을 클릭하거나 원본 열에서 찾아보기(. 의 동일한 원격 인스턴스에 있는 경우 master 데이터베이스는 여러 보조 데이터베이스를 사용할 수 있습니다. ) 단추를 클릭하여 기존 파티션을 편집합니다.  
   
 2.  파티션 마법사의 **원본 정보 지정**에서 원래 데이터 원본 뷰 및 팩트 테이블을 선택합니다.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48106910"
     > [!NOTE]  
     >  컬렉션에 데이터 원본이 없음을 나타내는 오류가 표시되면 저장소 데이터베이스(db 저장소)의 프로젝트를 열고 master 데이터베이스(db 마스터)를 가리키는 데이터 원본을 만듭니다.  
   
-5.  마스터 서버: 솔루션 탐색기에서 큐브 이름을 마우스 오른쪽 단추로 클릭하고 **처리** 를 선택하여 큐브를 전체 처리합니다.  
+5.  마스터 서버: 솔루션 탐색기에서 큐브 이름을 마우스 오른쪽 단추로 클릭 **프로세스** 고 완벽 하 게 큐브를 처리 합니다.  
   
 ## <a name="administering-remote-partitions"></a>원격 파티션 관리  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 원격 파티션의 병렬 및 순차적 처리를 지원합니다. 파티션이 정의된 master 데이터베이스는 큐브의 파티션 처리에 참여하는 모든 인스턴스 간의 트랜잭션을 조정합니다. 그런 다음 파티션을 처리한 모든 인스턴스에 처리 보고서가 전송됩니다.  
@@ -133,6 +133,6 @@ ms.locfileid: "48106910"
 >  원격 파티션 저장에 전용되는 데이터베이스는 스키마 행 집합에 노출되지 않지만, AMO(Analysis Management Objects)를 사용하는 애플리케이션은 Analysis Discover 명령에 대한 XML을 사용하여 전용 데이터베이스를 검색할 수 있습니다. TCP 또는 HTTP 클라이언트를 사용하여 전용 데이터베이스에 직접 전송되는 CREATE 또는 DELETE 명령은 성공하지만, 이 동작을 수행하면 면밀하게 관리되는 이 데이터베이스가 손상될 수 있음을 알리는 경고가 서버에서 반환됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [파티션 &#40;Analysis Services-다차원 데이터&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [파티션 & #40; Analysis Services-다차원 데이터 & #41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

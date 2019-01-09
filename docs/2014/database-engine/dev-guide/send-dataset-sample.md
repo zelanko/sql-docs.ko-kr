@@ -12,12 +12,12 @@ ms.assetid: d10dacbc-1b0f-4a4b-b53b-83eae2a6d809
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c736cbf5a5c6fd98f3635224c21c785468ce932d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e7f617c7a69925f4ddb4bf6a2c0ef34c2e43f03a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105703"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372795"
 ---
 # <a name="send-dataset-sample"></a>데이터 집합 보내기 예제
   `DataSet` 보내기 예제에서는 서버 쪽 CLR(공용 언어 런타임) 기반 저장 프로시저 내에서 ADO.NET 기반 `DataSet`을 결과 집합으로 클라이언트에 반환하는 방법을 보여 줍니다. 예를 들어 이러한 저장 프로시저가 쿼리 결과를 사용하여 `DataSet`을 채운 다음 이 `DataSet`에 있는 데이터를 조작하는 경우 이 예제가 유용합니다. 저장 프로시저가 `DataSet`을 처음부터 만들고 채우는 경우에도 이 예제가 유용합니다. 이 예제는 두 개의 클래스인 `DataSetUtilities`와 `TestSendDataSet`으로 구성됩니다. 일반적으로 `SendDataSet` 클래스의 `DataSetUtilities` 메서드가 `DataSet` 인스턴스의 내용을 클라이언트로 전송합니다. `DoTest` 클래스에 정의된 `TestSendDataSet` 메서드는 `SendDataSet`을 만들고 이 DataSet을 `DataSet` Transact-SQL 저장 프로시저의 데이터로 채움으로써 `uspGetTwoBOMTestData` 메서드가 작동하는지 확인합니다. `uspGetTwoBOMTestData`는 Transact-SQL 저장 프로시저인 `uspGetBillOfMaterials`를 두 번 실행하여 `usp_GetTwoBOMTestData` 저장 프로시저에 대한 매개 변수로 지정된 두 제품의 제품 구성 정보(BOM)를 재귀적으로 쿼리합니다. 일반적으로 데이터 집합을 채운 후에는 `SendDataSet`을 호출하여 데이터 집합 내의 데이터를 결과 집합으로 클라이언트에 배달하기 전에 데이터가 수정됩니다. 간단하게 하기 위해 이 예제에서는 데이터를 수정하지 않고 반환합니다.  
@@ -25,9 +25,9 @@ ms.locfileid: "48105703"
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 프로젝트를 만들고 실행하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](http://go.microsoft.com/fwlink/?LinkId=31046)에서 무료로 구할 수 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://go.microsoft.com/fwlink/?LinkId=31046)에서 무료로 구할 수 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](http://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
+-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](https://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
   
 -   .NET Framework SDK 2.0 이상 또는 Microsoft Visual Studio 2005 이상. .NET Framework SDK는 무료로 구할 수 있습니다.  
   

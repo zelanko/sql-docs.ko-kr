@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, running
@@ -19,12 +18,12 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7138207d6f612fa8ee9075b9994e9d8f4f63e552
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b54c533fd86c780f69583acc2a329d7f348502c7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158863"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52799005"
 ---
 # <a name="execution-of-projects-and-packages"></a>프로젝트 및 패키지 실행
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행하려면 해당 패키지가 저장된 위치에 따라 여러 도구 중 하나를 사용할 수 있습니다. 도구는 다음 표에 나열되어 있습니다.  
@@ -42,8 +41,8 @@ ms.locfileid: "48158863"
 |**dtexecui**<br /><br /> 자세한 내용은 [패키지 실행 유틸리티&#40;DtExecUI&#41; UI 참조](execute-package-utility-dtexecui-ui-reference.md)를 참조하세요.|아니요|예|사용자 계정 컨트롤|  
 |**SQL Server 에이전트**<br /><br /> 패키지를 예약하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 사용합니다.<br /><br /> 자세한 내용은 [SQL Server Agent Jobs for Packages](sql-server-agent-jobs-for-packages.md)을 참조하세요.|사용자 계정 컨트롤|예|사용자 계정 컨트롤|  
 |**기본 제공 저장 프로시저**<br /><br /> 자세한 내용은 [catalog.start_execution&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database)을 참조하세요.|사용자 계정 컨트롤|아니오|아니요|  
-|**<xref:Microsoft.SqlServer.Management.IntegrationServices> 네임스페이스의 형식 및 멤버를 사용하여 관리되는 API**|사용자 계정 컨트롤|아니오|아니요|  
-|**<xref:Microsoft.SqlServer.Dts.Runtime> 네임스페이스의 형식 및 멤버를 사용하여 관리되는 API**|현재는 아님|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+| **<xref:Microsoft.SqlServer.Management.IntegrationServices> 네임스페이스의 형식 및 멤버를 사용하여 관리되는 API**|사용자 계정 컨트롤|아니오|아니요|  
+| **<xref:Microsoft.SqlServer.Dts.Runtime> 네임스페이스의 형식 및 멤버를 사용하여 관리되는 API**|현재는 아님|사용자 계정 컨트롤|사용자 계정 컨트롤|  
   
 ## <a name="execution-and-logging"></a>실행 및 로깅  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에 대한 로깅을 활성화할 수 있으며 로그 파일에서 런타임 정보를 확인할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../performance/integration-services-ssis-logging.md)을 참조하세요.  

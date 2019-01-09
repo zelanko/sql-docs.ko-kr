@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0b2a6266f1a789c5475ac6551a2f52f1d0bd393f
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: HT
+ms.openlocfilehash: 7158c0c441c11f87c4cc4989ca66061318a60df4
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099934"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419704"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Power Pivot 관리 대시보드 및 사용 데이터
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -113,7 +113,7 @@ ms.locfileid: "50099934"
   
     7.  연결 이름을 입력하고 **다음**을 클릭합니다.  
   
-    8.  MDX 쿼리 지정에서 **디자인** 을 클릭하여 MDX 쿼리 디자이너를 열고 작업할 데이터를 조합합니다. “편집 모드 속성 이름의 형식이 잘못되었습니다.” **라는 오류 메시지가 나타나면** .ODC 파일을 편집합니다.  
+    8.  MDX 쿼리 지정에서 클릭 **디자인** 사용 하 여 작업할 데이터를 조합 MDX 쿼리 디자이너를 열려면 **오류 메시지를 표시 하는 경우** "편집 모드 속성 이름의 형식이 올바르게.", 확인 편집 합니다. ODC 파일입니다.  
   
     9. **확인** 을 클릭한 다음 **마침**을 클릭합니다.  
   

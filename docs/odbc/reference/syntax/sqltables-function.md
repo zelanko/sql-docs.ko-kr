@@ -20,16 +20,16 @@ ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0930f61ea43fb77e93b9b3ebcb9d20073f1950d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfe77cba535b78f387a786ddc56f65cf87172644
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708361"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212405"
 ---
 # <a name="sqltables-function"></a>SQLTables 함수
 **규칙**  
- 버전에 도입 된: ODBC 1.0 표준 준수: Open Group  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. 그룹 열기  
   
  **요약**  
  **SQLTables** 테이블, 카탈로그 또는 스키마 이름 및 특정 데이터 원본에 저장 된 테이블 형식 목록을 반환 합니다. 드라이버 정보 결과 집합으로 반환 합니다.  
@@ -156,7 +156,7 @@ SQLRETURN SQLTables(
 |TABLE_CAT (ODBC 1.0)|1|Varchar|카탈로그 이름입니다. 데이터 원본에 해당 하지 않는 경우 NULL입니다. 드라이버에서 지 원하는 경우 카탈로그 일부 테이블에 대해서만, 다른 Dbms에서 데이터를 검색 하는 드라이버, 빈 문자열을 반환 하는 등 ("") 카탈로그에 있지 않은 테이블에 대 한 합니다.|  
 |TABLE_SCHEM 순 (ODBC 1.0)|2|Varchar|스키마 이름입니다. 데이터 원본에 해당 하지 않는 경우 NULL입니다. 드라이버에서 지 원하는 경우 스키마 일부 테이블에 대해서만, 다른 Dbms에서 데이터를 검색 하는 드라이버, 빈 문자열을 반환 하는 등 ("") 스키마에 있지 않은 테이블에 대 한 합니다.|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar|테이블 이름입니다.|  
-|TABLE_TYPE (ODBC 1.0)|4|Varchar|테이블 형식 이름입니다. 다음 중 하나: "TABLE", "보기", "시스템 테이블", "전역 임시", "로컬 임시", "ALIAS", "동의어" 또는 데이터 소스 관련 형식 이름입니다.<br /><br /> "별칭" 및 "동의어"의 의미는 드라이버별 합니다.|  
+|TABLE_TYPE (ODBC 1.0)|4|Varchar|테이블 형식 이름입니다. 다음 중 하나입니다. "TABLE", "보기", "시스템 테이블", "전역 임시", "로컬 임시", "ALIAS", "동의어" 또는 데이터 소스 관련 형식 이름입니다.<br /><br /> "별칭" 및 "동의어"의 의미는 드라이버별 합니다.|  
 |설명 (ODBC 1.0)|5|Varchar|테이블의 설명입니다.|  
   
 ## <a name="example"></a>예제  

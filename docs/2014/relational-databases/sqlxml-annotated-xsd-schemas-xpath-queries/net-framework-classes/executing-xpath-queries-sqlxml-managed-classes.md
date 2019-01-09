@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], SQLXML Managed Classes
@@ -18,12 +16,12 @@ ms.assetid: 8bef4c4d-bf0e-4236-a875-fd7d3e058396
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 475234684af24072ba645e09a36405a8034f80a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: fee2ef2f2af40d3d053fb632dd0e4625fc35aefe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124253"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52810965"
 ---
 # <a name="executing-xpath-queries-sqlxml-managed-classes"></a>XPath 쿼리 실행(SQLXML 관리되는 클래스)
   이 예에서는 매핑 스키마에 대해 XPath 쿼리를 실행하는 방법을 보여 줍니다.  

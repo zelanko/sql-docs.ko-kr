@@ -13,12 +13,12 @@ ms.assetid: b06299ca-ed52-411a-b245-45eac4628c99
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0532f2b9ab931eccda5403501a6fe74b3603525c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2da978efd869a748bb48f6d494d59ae2f4cfb019
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165843"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52398956"
 ---
 # <a name="modify-statistics"></a>통계 수정
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 기존 통계를 수정할 수 있습니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "48165843"
   
 5.  수정하려는 통계 개체를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-6.  **통계 속성 -** *statistics_name* 대화 상자의 **일반** 페이지에서 **추가**, **제거**, **위로 이동**또는 **아래로 이동**또는 any combination, to alter the properties of the statistics. **통계 열** 표 안에 있는 열의 위치는 통계의 유용성에 큰 영향을 미칠 수 있습니다.  
+6.   **통계 속성 -** *statistics_name* 대화 상자의 **일반** 페이지에서 **추가**, **제거**, **위로 이동**또는 **아래로 이동**또는 any combination, to alter the properties of the statistics. **통계 열** 표 안에 있는 열의 위치는 통계의 유용성에 큰 영향을 미칠 수 있습니다.  
   
 7.  **확인**을 클릭합니다.  
   

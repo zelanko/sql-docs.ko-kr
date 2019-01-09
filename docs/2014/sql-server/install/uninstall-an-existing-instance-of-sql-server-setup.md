@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - removing instances of SQL Server
@@ -17,12 +16,12 @@ ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9961b074839559bca04d1860084d46fd94ce1b70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 484ef7dead58a6e8ae35639cdc6218d5c8223bd9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085913"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363825"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>SQL Server의 기존 인스턴스 제거(설치)
   이 문서에서는 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 제거하는 방법에 대해 설명합니다. 이 항목의 단계를 수행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 설치할 수 있도록 시스템을 준비할 수도 있습니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "48085913"
   
 -   필요한 최소한의 실제 메모리를 갖춘 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 제거하려면 먼저 페이지 파일 크기가 충분한지 확인해야 합니다. 페이지 파일 크기는 실제 메모리의 두 배여야 합니다. 가상 메모리가 부족하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 완전히 제거되지 않을 수도 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스가 여러 개인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 마지막 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스가 제거될 때 자동으로 제거됩니다.  
+-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스가 여러 개인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 마지막 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스가 제거될 때 자동으로 제거됩니다.  
   
      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 모든 구성 요소를 제거하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제어판 **의** 프로그램 및 기능 **에서**Browser 구성 요소를 수동으로 제거해야 합니다.  
   
@@ -99,7 +98,7 @@ ms.locfileid: "48085913"
   
 1.  제거 프로세스가 성공적으로 완료되지 않은 경우 제거 실패 원인이 된 문제를 해결하십시오. 다음 문서는 제거 실패의 원인을 파악하는 데 도움이 될 수 있습니다.  
   
-    -   [설치 로그 파일에서 SQL Server 2008 설치 문제를 확인하는 방법](http://support.microsoft.com/kb/955396/en-us)  
+    -   [설치 로그 파일에서 SQL Server 2008 설치 문제를 확인하는 방법](https://support.microsoft.com/kb/955396/en-us)  
   
     -   [SQL Server 설치 로그 파일 보기 및 읽기](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   

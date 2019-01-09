@@ -11,12 +11,12 @@ ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 083eff2195b0c8099ec4fdfb80e7224e1d42d135
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed99b26641b6d87fa6fe3bf07f47c21eacb96d89
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086903"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52405478"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>지원되는 데이터 형식(SSAS 테이블 형식)
   이 문서에서는 테이블 형식 모델에서 사용할 수 있는 데이터 형식에 대해 설명하고 DAX(Data Analysis Expressions) 수식에서 데이터를 계산하거나 사용할 때 암시적으로 수행되는 데이터 형식 변환에 대해 설명합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "48086903"
   
  <sup>2</sup> 매우 큰 숫자 값이 포함 된 데이터를 가져오려고 하면 다음 오류로 인해 가져오기가 실패할 수 있습니다.  
   
- 메모리 내 데이터베이스 오류:는 '\<열 이름 >'의 열은 '\<테이블 이름 >' 테이블에 값이 있는 ' 1.7976931348623157 e + 308'는 지원 되지 않습니다. 작업이 취소되었습니다.  
+ 메모리 내 데이터베이스 오류: '\<열 이름 >'의 열은 '\<테이블 이름 >' 테이블에 값이 있는 ' 1.7976931348623157 e + 308'는 지원 되지 않습니다. 작업이 취소되었습니다.  
   
  이 오류는 모델 디자이너에서 해당 값을 사용하여 null을 나타내기 때문에 발생합니다. 다음 목록의 값은 앞에서 말한 null 값과 동의어입니다.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48086903"
   
  인수로 지정하는 열의 데이터가 함수에 필요한 데이터 형식과 호환되지 않는 경우 대부분 오류가 반환됩니다. 그러나 가능한 경우 항상 DAX에서는 데이터를 필요한 데이터 형식으로 암시적으로 변환하려고 시도합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
--   숫자(예: "123")를 문자열로 입력할 수 있습니다. DAX에서 문자열을 구문 분석하여 숫자 데이터 형식으로 지정하려고 합니다.  
+-   예를 들어 "123", 숫자를 문자열로 입력할 수 있습니다. DAX에서 문자열을 구문 분석하여 숫자 데이터 형식으로 지정하려고 합니다.  
   
 -   TRUE + 1을 추가하여 2라는 결과를 얻을 수 있습니다. TRUE가 암시적으로 숫자 1로 변환되어 1+1 연산이 수행되기 때문입니다.  
   
@@ -149,11 +149,11 @@ ms.locfileid: "48086903"
   
  다음 DAX 식은 이 동작을 보여 줍니다.  
   
- `=IF(FALSE()>"true","Expression is true", "Expression is false")`를 반환 합니다 `"Expression is true"`  
+ `=IF(FALSE()>"true","Expression is true", "Expression is false")`는 `"Expression is true"`를 반환합니다.  
   
- `=IF("12">12,"Expression is true", "Expression is false")`를 반환 합니다 `"Expression is true"`  
+ `=IF("12">12,"Expression is true", "Expression is false")`는 `"Expression is true"`를 반환합니다.  
   
- `=IF("12"=12,"Expression is true", "Expression is false")`를 반환 합니다 `"Expression is false"`  
+ `=IF("12"=12,"Expression is true", "Expression is false")`는 `"Expression is false"`를 반환합니다.  
   
  숫자 또는 날짜/시간 형식에 대해서는 다음 표에서 설명한 대로 암시적으로 변환이 수행됩니다.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "48086903"
 ||||  
 |-|-|-|  
 |식|DAX|내보내기|  
-|BLANK + BLANK|공백|0(영)|  
+|BLANK + BLANK|공백|0 (영)|  
 |BLANK +5|5|5|  
 |BLANK * 5|공백|0(영)|  
 |5/BLANK|Infinity|Error|  
@@ -187,12 +187,12 @@ ms.locfileid: "48086903"
 |TRUE OR BLANK|TRUE|TRUE|  
 |TRUE AND BLANK|FALSE|TRUE|  
 |BLANK OR BLANK|공백|Error|  
-|BLANK AND BLANK|BLANK|Error|  
+|BLANK AND BLANK|공백|Error|  
   
  특정 함수 또는 연산자에서 공백을 처리하는 방법은 [DAX 함수 참조](https://msdn.microsoft.com/library/ee634396.aspx)섹션에서 각 DAX 함수에 대한 항목을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 원본 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../data-sources-ssas-tabular.md)   
- [데이터 가져오기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../import-data-ssas-tabular.md)  
+ [데이터 원본&#40;SSAS 테이블 형식&#41;](../data-sources-ssas-tabular.md)   
+ [데이터 가져오기&#40;SSAS 테이블 형식&#41;](../import-data-ssas-tabular.md)  
   
   

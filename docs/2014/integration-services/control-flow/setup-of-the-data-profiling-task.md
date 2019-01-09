@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], configuring
@@ -13,12 +12,12 @@ ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8309a4d66fbcf36aca4e5e4d817c2bb34722bc08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c6bc7964ee9ffaca02a81d52a50104089736e2ae
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072973"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376555"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>데이터 프로파일링 태스크 설정
   원본 데이터의 프로필을 검토하기 전에 수행해야 하는 첫 번째 단계는 데이터 프로파일링 태스크를 설정하고 실행하는 것입니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 내에서 이 태스크를 만듭니다. 데이터 프로파일링 태스크를 구성하려면 데이터 프로파일링 태스크 편집기를 사용합니다. 이 편집기를 사용하면 프로필을 출력할 위치와 계산할 프로필을 선택할 수 있습니다. 태스크를 설정한 후 패키지를 실행하여 데이터 프로필을 계산합니다.  
@@ -54,14 +53,14 @@ ms.locfileid: "48072973"
   
 |계산 대상|식별에 도움이 되는 값|사용할 프로필|  
 |----------------|-------------------------|----------------------|  
-|선택한 열에 있는 문자열 값의 모든 고유 길이 및 각 길이가 나타내는 테이블 내 행의 비율|**유효하지 않은 문자열 값**- 예를 들어 미국의 주 코드에 대해 두 개의 문자를 사용해야 하는 열을 프로파일링하는 중 두 문자보다 긴 값이 검색될 수 있습니다.|**열 길이 분포-** 다음 데이터 형식 중 하나가 지정 된 열에 대해 유효 합니다.<br /><br /> 문자 데이터 형식: `char`하십시오 `nchar`, `varchar`, 및 `nvarchar`|  
-|문자열 열에서 지정된 값의 비율을 포괄하는 정규식 집합<br /><br /> 또한 앞으로 새 값의 유효성 검사에 사용할 수 있는 정규식 검색을 위해|**유효하지 않거나 올바른 형식이 아닌 문자열 값** - 예를 들어 우편 번호 열의 패턴 프로필은 \d{5}-\d{4}, \d{5} 및 \d{9} 정규식을 생성할 수 있습니다. 출력에 다른 정규식이 포함된 경우 데이터에 유효하지 않거나 잘못된 형식의 값이 포함되어 있는 것입니다.|**열 패턴 프로필-** 다음 데이터 형식 중 하나가 지정 된 열에 대해 유효 합니다.<br /><br /> 문자 데이터 형식: `char`하십시오 `nchar`, `varchar`, 및 `nvarchar`|  
-|선택한 열 내 Null 값의 비율|**예기치 않게 높은 열 내 Null 값의 비율**- 예를 들어 미국 우편 번호를 포함해야 하는 열을 프로파일링하는 중 누락된 우편 번호의 비율이 예기치 않게 높음이 검색될 수 있습니다.|**열 Null 비율-** 이러한 데이터 형식의 열에 대해 유효 합니다.<br /><br /> 모든 데이터 형식. 여기에는 `image`, `text`, `xml`, 사용자 정의 형식 및 변형 유형이 포함됩니다.|  
-|숫자 열에 대한 최소값, 최대값, 평균값, 표준 편차 및 `datetime` 열에 대한 최소값/최대값과 같은 통계|**유효하지 않은 숫자 값 및 날짜**- 예를 들어 기록 날짜 열을 프로파일링하는 중 미래의 최대 날짜가 검색될 수 있습니다.|**열 통계 프로필-** 다음 데이터 형식 중 하나가 지정 된 열에 대해 유효 합니다.<br /><br /> 숫자 데이터 형식: 정수 형식(`bit` 제외), `money`, `smallmoney`, `decimal`, `float`, `real` 및 `numeric`<br /><br /> 날짜 및 시간 데이터 형식: `datetime`, `smalldatetime`, `timestamp`, `date`, `time`, `datetime2` 및 `datetimeoffset`<br />참고: 날짜 및 시간 데이터 형식이 포함된 열의 경우 프로필이 최소값 및 최대값만 계산합니다.|  
-|선택한 열에 있는 모든 고유 값 및 각 값이 나타내는 테이블 내 행의 비율 또는 테이블에서 지정된 비율을 초과하는 값|**열에 포함된 잘못된 수의 고유 값**- 예를 들어 미국의 주가 포함된 열을 프로파일링하는 중 50개를 초과하는 고유 값이 검색될 수 있습니다.|**열 값 분포-** 다음 데이터 형식 중 하나가 지정 된 열에 대해 유효 합니다.<br /><br /> 숫자 데이터 형식: 정수 형식(`bit` 제외), `money`, `smallmoney`, `decimal`, `float`, `real` 및 `numeric`<br /><br /> 문자 데이터 형식: `char`하십시오 `nchar`, `varchar`, 및 `nvarchar`<br /><br /> 날짜 및 시간 데이터 형식: `datetime`, `smalldatetime`, `timestamp`, `date`, `time`, `datetime2` 및 `datetimeoffset`|  
-|열 또는 열 집합이 선택한 테이블에 대해 키인지, 아니면 근사 키인지 여부|**잠재적 키 열의 중복 값**- 예를 들어 Customers 테이블의 Name 및 Address 열을 프로파일링하는 중 이름과 주소의 조합이 고유해야 하는데 중복 값이 검색될 수 있습니다.|**후보 키**- 열 또는 열 집합이 선택한 테이블에 대한 키 역할을 수행하기에 적합한지 여부를 보고하는 여러 열 프로필 다음 데이터 형식 중 하나가 지정된 열에 대해 유효합니다.<br /><br /> 정수 데이터 형식: `bit`, `tinyint`, `smallint`, `int` 및 `bigint`<br /><br /> 문자 데이터 형식: `char`하십시오 `nchar`, `varchar`, 및 `nvarchar`<br /><br /> 날짜 및 시간 데이터 형식: `datetime`, `smalldatetime`, `timestamp`, `date`, `time`, `datetime2` 및 `datetimeoffset`|  
-|한 열(종속 열)의 값이 다른 열 또는 열 집합(결정 열)의 값에 종속되는 범위|**종속 열에서 유효하지 않은 값**- 예를 들어 미국의 우편 번호가 포함된 열과 미국의 주가 포함된 열 간 종속성을 프로파일링하는 중 같은 우편 번호는 항상 같은 주여야 하는데 프로필이 종속성 위반을 검색할 수 있습니다.|**함수 종속성-** 이러한 데이터 형식 중 하나를 사용 하 여 열에 대해 유효 합니다.<br /><br /> 정수 데이터 형식: `bit`, `tinyint`, `smallint`, `int` 및 `bigint`<br /><br /> 문자 데이터 형식: `char`하십시오 `nchar`, `varchar`, 및 `nvarchar`<br /><br /> 날짜 및 시간 데이터 형식: `datetime`, `smalldatetime`, `timestamp`, `date`, `time`, `datetime2` 및 `datetimeoffset`|  
-|열 또는 열 집합이 선택한 테이블 간의 외래 키 역할을 수행하기에 적합한지 여부<br /><br /> 즉, 이 프로필은 두 개의 열 또는 열 집합 간에 겹치는 값을 보고합니다.|**유효하지 않은 값**- 예를 들어 Sales 테이블의 ProductID 열을 프로파일링하는 중 프로필이 Products 테이블의 ProductID 열에 없는 값이 열에 포함되어 있음을 검색할 수 있습니다.|**값 포함**- 다음 데이터 형식 중 하나가 지정된 열에 대해 유효합니다.<br /><br /> 정수 데이터 형식: `bit`, `tinyint`, `smallint`, `int` 및 `bigint`<br /><br /> 문자 데이터 형식: `char`, `nchar`, `varchar` 및 `nvarchar`<br /><br /> 날짜 및 시간 데이터 형식: `datetime`, `smalldatetime`, `timestamp`, `date`, `time`, `datetime2` 및 `datetimeoffset`|  
+|선택한 열에 있는 문자열 값의 모든 고유 길이 및 각 길이가 나타내는 테이블 내 행의 비율|**유효하지 않은 문자열 값** - 예를 들어 미국의 주 코드에 대해 두 개의 문자를 사용해야 하는 열을 프로파일링하는 중에 두 문자보다 긴 값을 검색할 수 있습니다.|**열 길이 분포-** 다음 데이터 형식 중 하나가 지정 된 열에 대해 유효 합니다.<br /><br /> 문자 데이터 형식: `char`하십시오 `nchar`, `varchar`, 및 `nvarchar`|  
+|문자열 열에서 지정된 값의 비율을 포괄하는 정규식 집합<br /><br /> 또한 앞으로 새 값의 유효성 검사에 사용할 수 있는 정규식 검색을 위해|**유효하지 않거나 올바른 형식이 아닌 문자열 값** - 예를 들어 우편 번호 열의 패턴 프로필은 \d{5}-\d{4}, \d{5} 및 \d{9} 같은 정규식을 생성할 수 있습니다. 출력에 다른 정규식이 포함된 경우 데이터에 유효하지 않거나 잘못된 형식의 값이 포함되어 있는 것입니다.|**열 패턴 프로필-** 다음 데이터 형식 중 하나가 지정 된 열에 대해 유효 합니다.<br /><br /> 문자 데이터 형식: `char`하십시오 `nchar`, `varchar`, 및 `nvarchar`|  
+|선택한 열 내 Null 값의 비율|**예기치 않게 높은 열 내 Null 값의 비율** - 예를 들어 미국 우편 번호를 포함해야 하는 열을 프로파일링하는 중 예기치 않게 높은 비율의 누락된 우편 번호를 검색할 수 있습니다.|**열 Null 비율-** 이러한 데이터 형식의 열에 대해 유효 합니다.<br /><br /> 모든 데이터 형식. 여기에는 `image`, `text`, `xml`, 사용자 정의 형식 및 변형 유형이 포함됩니다.|  
+|숫자 열에 대한 최소값, 최대값, 평균값, 표준 편차 및 `datetime` 열에 대한 최소값/최대값과 같은 통계|**유효하지 않은 숫자 값 및 날짜** - 예를 들어 기록 날짜 열을 프로파일링하는 중 미래의 최대 날짜를 검색할 수 있습니다.|**열 통계 프로필-** 다음 데이터 형식 중 하나가 지정 된 열에 대해 유효 합니다.<br /><br /> 숫자 데이터 형식: 정수 형식(`bit` 제외), `money`, `smallmoney`, `decimal`, `float`, `real` 및 `numeric`<br /><br /> 날짜 및 시간 데이터 형식: `datetime`, `smalldatetime`, `timestamp`, `date`, `time`, `datetime2` 및 `datetimeoffset`<br />참고: 날짜 및 시간 데이터 유형이 포함된 열의 경우 프로필이 최소값 및 최대값만 계산합니다.|  
+|선택한 열에 있는 모든 고유 값 및 각 값이 나타내는 테이블 내 행의 비율 또는 테이블에서 지정된 비율을 초과하는 값|**열에 포함된 잘못된 수의 고유 값** - 예를 들어 미국의 주가 포함된 열을 프로파일링하는 중 50개를 초과하는 고유 값을 검색할 수 있습니다.|**열 값 분포-** 다음 데이터 형식 중 하나가 지정 된 열에 대해 유효 합니다.<br /><br /> 숫자 데이터 형식: 정수 형식(`bit` 제외), `money`, `smallmoney`, `decimal`, `float`, `real` 및 `numeric`<br /><br /> 문자 데이터 형식: `char`하십시오 `nchar`, `varchar`, 및 `nvarchar`<br /><br /> 날짜 및 시간 데이터 형식: `datetime`, `smalldatetime`, `timestamp`, `date`, `time`, `datetime2` 및 `datetimeoffset`|  
+|열 또는 열 집합이 선택한 테이블에 대해 키인지, 아니면 근사 키인지 여부|**잠재적 키 열의 중복 값** - 예를 들어 Customers 테이블의 Name 및 Address 열을 프로파일링하는 중 이름과 주소의 조합이 고유해야 하는 중복 값을 검색할 수 있습니다.|**후보 키** - 열 또는 열 집합이 선택한 테이블에 대한 키 역할을 수행하기에 적합한지 여부를 보고하는 여러 열 프로필입니다. 다음 데이터 형식 중 하나가 지정된 열에 대해 유효합니다.<br /><br /> 정수 데이터 형식: `bit`, `tinyint`, `smallint`, `int` 및 `bigint`<br /><br /> 문자 데이터 형식: `char`하십시오 `nchar`, `varchar`, 및 `nvarchar`<br /><br /> 날짜 및 시간 데이터 형식: `datetime`, `smalldatetime`, `timestamp`, `date`, `time`, `datetime2` 및 `datetimeoffset`|  
+|한 열(종속 열)의 값이 다른 열 또는 열 집합(결정 열)의 값에 종속되는 범위|**종속 열에서 유효하지 않은 값** - 예를 들어 미국의 우편 번호가 포함된 열과 미국의 주가 포함된 열 간 종속성을 프로파일링하는 중 같은 우편 번호는 항상 같은 주여야 하는데 프로필이 종속성 위반을 검색할 수 있습니다.|**함수 종속성-** 이러한 데이터 형식 중 하나를 사용 하 여 열에 대해 유효 합니다.<br /><br /> 정수 데이터 형식: `bit`, `tinyint`, `smallint`, `int` 및 `bigint`<br /><br /> 문자 데이터 형식: `char`하십시오 `nchar`, `varchar`, 및 `nvarchar`<br /><br /> 날짜 및 시간 데이터 형식: `datetime`, `smalldatetime`, `timestamp`, `date`, `time`, `datetime2` 및 `datetimeoffset`|  
+|열 또는 열 집합이 선택한 테이블 간의 외래 키 역할을 수행하기에 적합한지 여부<br /><br /> 즉, 이 프로필은 두 개의 열 또는 열 집합 간에 겹치는 값을 보고합니다.|**유효하지 않은 값** - 예를 들어 Sales 테이블의 ProductID 열을 프로파일링하는 중 프로필이 Products 테이블의 ProductID 열에 없는 값이 열에 포함되어 있음을 검색할 수 있습니다.|**값 포함** - 다음 데이터 형식 중 하나가 포함된 열에 대해 유효합니다.<br /><br /> 정수 데이터 형식: `bit`, `tinyint`, `smallint`, `int` 및 `bigint`<br /><br /> 문자 데이터 형식: `char`, `nchar`, `varchar` 및 `nvarchar`<br /><br /> 날짜 및 시간 데이터 형식: `datetime`, `smalldatetime`, `timestamp`, `date`, `time`, `datetime2` 및 `datetimeoffset`|  
   
  계산할 프로필을 선택하려면 데이터 프로파일링 태스크 편집기의 **프로필 요청** 페이지를 사용합니다. 자세한 내용은 [데이터 프로파일링 태스크 편집기&#40;프로필 요청 페이지&#41;](data-profiling-task-editor-profile-requests-page.md)를 참조하세요.  
   
@@ -75,30 +74,30 @@ ms.locfileid: "48072973"
   
  사용 가능한 데이터 프로필 각각에는 고유한 구성 옵션이 있습니다. 이러한 옵션에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   [후보 키 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [후보 키 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [열 길이 분포 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [열 길이 분포 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [열 Null 비율 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [열 Null 비율 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [열 패턴 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [열 패턴 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [열 통계 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [열 통계 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [열 값 분포 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [열 값 분포 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [함수 종속성 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [함수 종속성 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [값 포함 프로필 요청 옵션 &#40;데이터 프로 파일링 태스크&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [값 포함 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
 ## <a name="execution-of-the-package-that-contains-the-data-profiling-task"></a>데이터 프로파일링 태스크가 포함된 패키지 실행  
- 데이터 프로파일링 태스크를 설정한 후 이 태스크를 실행할 수 있습니다. 그러면 이 태스크에서 데이터 프로필을 계산하여 이 정보를 XML 형식으로 파일 또는 패키지 변수에 출력합니다. 이 XML의 구조는 DataProfile.xsd 스키마를 따릅니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 또는 다른 스키마 편집기, XML 편집기, 메모장과 같은 텍스트 편집기에서 이 스키마를 열 수 있습니다. 데이터 품질 정보에 대한 이 스키마는 다음과 같은 용도로 사용할 경우 유용할 수 있습니다.  
+ 데이터 프로파일링 태스크를 설정한 후 이 태스크를 실행할 수 있습니다. 그러면 이 태스크에서 데이터 프로필을 계산하여 이 정보를 XML 형식으로 파일 또는 패키지 변수에 출력합니다. 이 XML의 구조는 DataProfile.xsd 스키마를 따릅니다.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 또는 다른 스키마 편집기, XML 편집기, 메모장과 같은 텍스트 편집기에서 이 스키마를 열 수 있습니다. 데이터 품질 정보에 대한 이 스키마는 다음과 같은 용도로 사용할 경우 유용할 수 있습니다.  
   
 -   조직 내부 또는 조직 간의 데이터 품질 정보 교환  
   
 -   데이터 품질 정보를 사용하는 사용자 지정 도구 빌드  
   
- 대상 네임스페이스는 스키마에서 [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)로 식별됩니다.  
+ 대상 네임스페이스는 스키마에서 [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)로 식별됩니다.  
   
 ## <a name="next-step"></a>다음 단계  
  [데이터 프로필 뷰어](data-profile-viewer.md)  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
@@ -22,12 +21,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ffc277e43bf48975da92e5463b4e157e266b55b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 465e43422616d5d0202bf31959fab5f56c4f35d8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138199"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806255"
 ---
 # <a name="enhance-general-replication-performance"></a>일반적인 복제 성능 향상
   이 항목에서 설명하는 지침을 따르면 애플리케이션 및 네트워크에서 모든 복제 유형의 일반적인 성능을 향상시킬 수 있습니다.  
@@ -81,7 +80,7 @@ ms.locfileid: "48138199"
   
 -   LOB(Large Object) 데이터 형식의 사용을 제한합니다.  
   
-     LOB은 다른 열 데이터 형식보다 많은 저장 공간과 처리 작업을 필요로 합니다. 애플리케이션에 필요한 경우가 아니면 이러한 열을 아티클에 포함하지 마십시오. 데이터 형식 `text`, `ntext`, 및 `image` 사용 되지 않습니다. Lob를 포함 시킬 경우 데이터 형식을 사용 하는 것이 좋습니다 `varchar(max)`하십시오 `nvarchar(max)`, `varbinary(max)`각각.  
+     LOB은 다른 열 데이터 형식보다 많은 저장 공간과 처리 작업을 필요로 합니다. 애플리케이션에 필요한 경우가 아니면 이러한 열을 아티클에 포함하지 마십시오. `text`, `ntext` 및 `image` 데이터 형식은 사용되지 않습니다. LOB를 포함시킬 경우 데이터 형식 `varchar(max)`, `nvarchar(max)`, `varbinary(max)`를 각각 사용하는 것이 좋습니다.  
   
      트랜잭션 복제의 경우 **OLEDB 스트리밍에 대한 배포 프로필**이라고 하는 배포 에이전트 프로필을 사용해 보십시오. 자세한 내용은 [Replication Agent Profiles](../agents/replication-agent-profiles.md)을(를) 참조하세요.  
   
@@ -155,9 +154,9 @@ ms.locfileid: "48138199"
   
      배포 에이전트 및 병합 에이전트의 **–HistoryVerboseLevel** 매개 변수 및 **–OutputVerboseLevel** 매개 변수를 줄입니다. 이렇게 하면 추적 에이전트 기록 및 출력에 삽입되는 새 행의 수가 줄어듭니다. 대신 상태가 같은 이전 기록 메시지는 새 기록 정보로 업데이트됩니다. 에이전트 작업에 대한 정보를 최대한 많이 가질 수 있도록 테스트, 모니터링 및 디버깅의 정보 표시 수준을 늘립니다.  
   
--   스냅숏 에이전트, 병합 에이전트 및 배포 에이전트의 **–MaxBCPThreads** 매개 변수를 사용합니다. 지정된 스레드 수는 컴퓨터의 프로세서 수를 초과할 수 없습니다. 이 매개 변수는 스냅숏이 생성되어 적용될 때 병렬로 수행할 수 있는 대량 복사 작업 수를 지정합니다.  
+-   스냅숏 에이전트, 병합 에이전트 및 배포 에이전트의 **–MaxBCPThreads** 매개 변수를 사용합니다(지정된 스레드 수는 컴퓨터의 프로세서 수를 초과할 수 없습니다). 이 매개 변수는 스냅숏이 생성되어 적용될 때 병렬로 수행할 수 있는 대량 복사 작업 수를 지정합니다.  
   
--   배포 에이전트와 병합 에이전트의 **–UseInprocLoader** 매개 변수를 사용합니다. 게시된 테이블에 XML 열이 있는 경우 이 매개 변수를 사용할 수 없습니다. 이 매개 변수를 사용할 경우 스냅숏이 적용되면 에이전트가 BULK INSERT 명령을 사용할 수 있습니다.  
+-   배포 에이전트와 병합 에이전트의 **–UseInprocLoader** 매개 변수를 사용합니다(게시된 테이블에 XML 열이 포함된 경우 이 매개 변수를 사용할 수 없습니다). 이 매개 변수를 사용할 경우 스냅숏이 적용되면 에이전트가 BULK INSERT 명령을 사용할 수 있습니다.  
   
  에이전트 프로필 및 명령줄에서 에이전트 매개 변수를 지정할 수 있습니다. 참조 항목:  
   

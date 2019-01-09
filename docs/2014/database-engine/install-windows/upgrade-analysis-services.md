@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: install
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
@@ -20,20 +20,20 @@ ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 author: Minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 88dfe4836cc84b7792639817a01c026f6d3f3283
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 8bbec3cd552434070d76913f72812b302440bcdb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018108"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363485"
 ---
 # <a name="upgrade-analysis-services"></a>Analysis Services 업그레이드
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 업그레이드할 수 있습니다. 업그레이드 하는 자세한 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SharePoint 모드에서는 참조 [SharePoint 용 PowerPivot 업그레이드](upgrade-power-pivot-for-sharepoint.md)합니다. 인스턴스는 기존 SQL Server를 업그레이드 하는 방법에 대 한 자세한 내용은 [설치 마법사를 사용 하 여 SQL Server 2014로 업그레이드 &#40;설치&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)합니다.  
   
 ## <a name="known-upgrade-issues"></a>알려진 업그레이드 문제  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]로 업그레이드하기 전에 다음을 검토하십시오.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]로 업그레이드하기 전에 다음을 검토하십시오.  
   
--   [SQL Server 2014 릴리스 정보](http://go.microsoft.com/fwlink/?LinkID=296445)  
+-   [SQL Server 2014 릴리스 정보](https://go.microsoft.com/fwlink/?LinkID=296445)  
   
 -   확인 하려면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 기능과 지원 되지 않는, 사용 되지 않거나 변경 된 참조 [Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md)합니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "51018108"
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [SQL Server 설치 계획](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Microsoft OLAP 아키텍처 이해](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)   

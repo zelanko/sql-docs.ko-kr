@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset destination
@@ -13,12 +12,12 @@ ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a4d3afbb967238cfef049b491f6ab871f830708b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04c63477a53de07777806aa8efb1fda78ef44264
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102463"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791105"
 ---
 # <a name="use-a-recordset-destination"></a>레코드 집합 대상 사용
   레코드 집합 대상은 외부 데이터 원본에 데이터를 저장하지 않습니다. 대신 `Object` 데이터 형식의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 변수에 저장된 레코드 집합의 데이터를 메모리에 저장합니다. 레코드 집합 대상이 데이터를 저장한 후에는 일반적으로 Foreach 루프 컨테이너를 Foreach ADO 열거자와 함께 사용하여 레코드 집합의 행을 한 번에 하나씩 처리합니다. Foreach ADO 열거자는 현재 행의 각 열 값을 개별 패키지 변수에 저장합니다. 그러면 Foreach 루프 컨테이너 내에 구성한 태스크가 변수에서 이러한 값을 읽어 와서 이를 가지고 몇 가지 동작을 수행합니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "48102463"
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 만들거나 엽니다.  
   
-2.  레코드 집합 대상이 메모리에 저장 한 레코드 집합을 포함 하며 변수의 종류를 설정 하는 변수를 만들 `Object`합니다.  
+2.  레코드 집합 대상이 메모리에 저장한 레코드 집합을 보유할 변수를 만든 다음 이 변수의 유형을 `Object`로 설정합니다.  
   
 3.  사용할 레코드 집합의 각 열 값을 보유할 적절한 유형의 추가 변수를 만듭니다.  
   
@@ -69,21 +68,21 @@ ms.locfileid: "48102463"
   
 3.  **변수** 창에서 다음과 같이 레코드 집합과 현재 행의 열 값을 보유할 변수를 만듭니다.  
   
-    1.  라는 변수를 만듭니다 `BonusRecordset`, 해당 형식으로 설정 하 고 `Object`입니다.  
+    1.  `BonusRecordset`이라는 변수를 만들고 이 변수의 유형을 `Object`로 설정합니다.  
   
-         `BonusRecordset` 변수는 레코드 집합을 보유 합니다.  
+         `BonusRecordset` 변수는 레코드 집합을 보유합니다.  
   
-    2.  라는 변수를 만듭니다 `EmailAddress`, 해당 형식으로 설정 하 고 `String`입니다.  
+    2.  `EmailAddress`이라는 변수를 만들고 이 변수의 유형을 `String`로 설정합니다.  
   
-         `EmailAddress` 변수는 판매 직원의 전자 메일 주소를 보유 합니다.  
+         `EmailAddress` 변수는 판매 직원의 전자 메일 메시지를 보유합니다.  
   
-    3.  라는 변수를 만듭니다 `FirstName`, 해당 형식으로 설정 하 고 `String`입니다.  
+    3.  `FirstName`이라는 변수를 만들고 이 변수의 유형을 `String`로 설정합니다.  
   
-         `FirstName` 변수는 판매 직원의 이름을 보유 합니다.  
+         `FirstName` 변수는 판매 직원의 이름을 보유합니다.  
   
-    4.  라는 변수를 만듭니다 `Bonus`, 해당 형식으로 설정 하 고 `Double`입니다.  
+    4.  `Bonus`이라는 변수를 만들고 이 변수의 유형을 `Double`로 설정합니다.  
   
-         `Bonus` 변수는 판매 직원의 보너스를 보유 합니다.  
+         `Bonus` 변수는 판매 직원의 보너스를 보유합니다.  
   
 #### <a name="to-configure-the-connection-managers"></a>연결 관리자를 구성하려면  
   
@@ -99,7 +98,7 @@ ms.locfileid: "48102463"
   
 1.  **디자이너의** 제어 흐름 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 탭에서 디자인 화면에 데이터 흐름 태스크를 추가합니다.  
   
-2.  **데이터 흐름** tab, add an OLE DB source to the 데이터 흐름 task, and then open the **OLE DB 원본 편집기**를 엽니다.  
+2.   **데이터 흐름** tab, add an OLE DB source to the 데이터 흐름 task, and then open the **OLE DB 원본 편집기**를 엽니다.  
   
 3.  OLE DB 원본 편집기의 **연결 관리자** 페이지에서 다음과 같이 원본을 구성합니다.  
   

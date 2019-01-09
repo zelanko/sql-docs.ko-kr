@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Master Data Services, system settings
@@ -14,12 +13,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4a03d530c5dc6ca964d35df5ee67a932ddea3a6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 6e8f239afa5d26ee4a3d6d97a24f58a46f1e3334
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175384"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370205"
 ---
 # <a name="system-settings-master-data-services"></a>시스템 설정(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스와 연결된 모든 웹 응용 프로그램 및 웹 서비스에 대해 시스템 설정을 구성할 수 있습니다.  
@@ -79,7 +78,7 @@ ms.locfileid: "48175384"
   
 |구성 관리자 설정|시스템 설정|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**계층의 기본 멤버 수**|**HierarchyChildNodeLimit**| [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **탐색기** 기능 영역에서 **…추가…** 가 표시되기 전에 각 계층 노드에 표시되는 최대 멤버 수입니다.(!!) 표시됩니다. 다음 멤버 그룹을 표시하려면 **…추가…** 를 클릭합니다. 기본값은 **50**입니다.|  
+|**계층의 기본 멤버 수**|**HierarchyChildNodeLimit**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **탐색기** 기능 영역에서 **...추가...** 가 표시되기 전에 각 계층에 표시되는 최대 멤버 수입니다. **...추가...** 를 클릭하여 다음 멤버 그룹을 표시할 수 있습니다. 기본값은 **50**입니다.|  
 |**기본적으로 계층에 이름 표시**|**ShowNamesInHierarchy**| [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **탐색기** 기능 영역에서 계층을 볼 때 선택되는 기본 설정을 결정합니다.<br /><br /> 기본값은 **예** 또는 **1**로, 각 멤버의 이름 및 코드가 표시됨을 나타냅니다. 코드만 표시하려면 **아니요** 또는 **2** 로 변경합니다.|  
 |**목록의 도메인 기반 특성 수**|**DBAListRowLimit**| [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **탐색기** 기능 영역에서 표의 도메인 기반 특성 값을 두 번 클릭할 때 목록에 표시되는 특성 수입니다. 기본값은 **50**입니다. 멤버 수가 50개보다 많으면 검색 가능한 대화 상자가 대신 표시됩니다.|  
 ||**GridFilterDefaultFuzzySimilarityLevel**| [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **탐색기** 기능 영역에서 **일치** 필터 조건을 사용할 때 사용되는 유사성 수준입니다. 기본값은 **0.3**입니다. 검색 조건과 보다 일치하는 항목을 반환하려면 **1** 에 가까운 값으로 설정합니다. 정확하게 일치하는 항목을 반환하려면 **1** 로 설정합니다.|  
@@ -107,8 +106,8 @@ ms.locfileid: "48175384"
 |**알림에 대한 마스터 데이터 관리자 URL**|**MDMRootURL**|메일 알림의 링크에 사용되는 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션의 URL(예: http://constoso/mds)입니다.|  
 |**전자 메일 알림 간격**|**NotificationInterval**|전자 메일 알림을 보내는 빈도(초)입니다. 기본값은 **120** 초(2분)입니다.|  
 |**단일 전자 메일의 알림 수**|**NotificationsPerEmail**|단일 알림 전자 메일에 나열될 유효성 검사 문제의 최대 개수입니다. 문제가 더 있더라도 전자 메일에는 포함되지 않지만 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서는 제공됩니다.|  
-|**기본 전자 메일 형식**|**EmailFormat**|모든 전자 메일 알림의 형식입니다. 기본값은 **HTML** 또는 **1**입니다. 데이터베이스 설정 **2** 는 **텍스트**를 나타냅니다.<br /><br /> 참고: 개별 사용자의 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]일반 **탭에서** 전자 메일 형식 **을 변경 및 저장하여** 에서 해당 사용자에 대한 이 설정을 재정의할 수 있습니다.|  
-|**전자 메일 주소에 대한 정규식**|**EmailRegExPattern**| [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **사용자 및 그룹 권한** 기능 영역에서 사용자의 **일반** 탭에 입력한 전자 메일 주소의 유효성을 검사하는 데 사용되는 정규식입니다. 정규식에 대한 자세한 내용은 MSDN Library의 [정규식 언어 요소](http://go.microsoft.com/fwlink/?LinkId=164401) 를 참조하십시오.|  
+|**기본 전자 메일 형식**|**EmailFormat**|모든 전자 메일 알림의 형식입니다. 기본값은 **HTML** 또는 **1**입니다. 데이터베이스 설정 **2** 는 **텍스트**를 나타냅니다.<br /><br /> 참고: 개별 사용자에 대 한이 재정의할 수 있습니다 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], 변경 및 저장 합니다 **전자 메일 형식** 사용자의 **일반** 탭 합니다.|  
+|**전자 메일 주소에 대한 정규식**|**EmailRegExPattern**| [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **사용자 및 그룹 권한** 기능 영역에서 사용자의 **일반** 탭에 입력한 전자 메일 주소의 유효성을 검사하는 데 사용되는 정규식입니다. 정규식에 대한 자세한 내용은 MSDN Library의 [정규식 언어 요소](https://go.microsoft.com/fwlink/?LinkId=164401) 를 참조하십시오.|  
 |**데이터베이스 메일 계정**|**EmailProfilePrincipalAccount**|전자 메일 알림을 보낼 때 사용할 데이터베이스 메일 계정을 표시합니다. 기본 프로필은 **mds_email_user**입니다.|  
 |**데이터베이스 메일 프로필**|**DatabaseMailProfile**|전자 메일 알림을 보낼 때 사용할 데이터베이스 메일 프로필입니다. 기본값은 공백입니다.|  
 ||**ValidationIssueHTML**|비즈니스 규칙이 유효성 검사를 통과하지 못할 경우 전자 메일 사용자에게 전달되는 HTML 형식의 텍스트입니다.|  
@@ -146,6 +145,6 @@ ms.locfileid: "48175384"
 -   **AttributeExplorerMarkAllActionMemberCount**  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터베이스 개체 보안 &#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)  
+ [데이터베이스 개체 보안&#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)  
   
   

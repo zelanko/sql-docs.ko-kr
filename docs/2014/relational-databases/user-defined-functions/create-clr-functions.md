@@ -13,15 +13,15 @@ ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 33aaebe7172ac637354527bb9777afe5eb9a0a5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a15690eb5aff48ec0f72df16e8342ed5c0522c9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173423"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370815"
 ---
 # <a name="create-clr-functions"></a>CLR 함수 만들기
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임)에 만들어진 어셈블리에 프로그래밍된 데이터베이스 개체를 만들 수 있습니다. CLR에서 제공하는 풍부한 프로그래밍 모델을 활용할 수 있는 데이터베이스 개체에는 집계 함수, 함수, 저장 프로시저, 트리거 및 형식이 있습니다.  
+   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임)에 만들어진 어셈블리에 프로그래밍된 데이터베이스 개체를 만들 수 있습니다. CLR에서 제공하는 풍부한 프로그래밍 모델을 활용할 수 있는 데이터베이스 개체에는 집계 함수, 함수, 저장 프로시저, 트리거 및 형식이 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 CLR 함수를 만드는 방법은 다음과 같습니다.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "48173423"
 -   [CREATE FUNCTION](/sql/t-sql/statements/create-function-transact-sql) 문을 사용하여 등록된 어셈블리를 참조하는 함수를 만듭니다.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 에서 SQL Server 프로젝트를 배포하면 해당 프로젝트에 대해 지정된 데이터베이스에 어셈블리가 등록됩니다. 또한 프로젝트를 배포하면 모든 메서드에 대해 `SqlFunction` 특성으로 주석 지정으로 지정하기 위해 데이터베이스에 CLR 함수를 만듭니다. 자세한 내용은 [Deploying CLR Database Objects](../clr-integration/deploying-clr-database-objects.md)을(를) 참조하세요.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 에서 SQL Server 프로젝트를 배포하면 해당 프로젝트에 대해 지정된 데이터베이스에 어셈블리가 등록됩니다. 또한 프로젝트를 배포하면 모든 메서드에 대해 `SqlFunction` 특성으로 주석 지정으로 지정하기 위해 데이터베이스에 CLR 함수를 만듭니다. 자세한 내용은 [Deploying CLR Database Objects](../clr-integration/deploying-clr-database-objects.md)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 CLR 코드 실행 기능은 기본적으로 해제되어 있습니다. 관리 코드 모듈을 참조하는 데이터베이스 개체를 만들고 변경하고 삭제할 수 있지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_configure(Transact-SQL) [를 사용하여](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) clr enabled 옵션 [을 설정하지 않는 한 이러한 참조는](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)에서 실행되지 않습니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "48173423"
 -   [CREATE FUNCTION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)  
   
 ## <a name="accessing-native-code"></a>네이티브 코드 액세스  
- CLR 함수를 사용하면 관리 코드에서 PInvoke를 사용하는 방법을 통해 C 또는 C++로 작성된 코드 등의 네이티브(비관리) 코드에 액세스할 수 있습니다. 자세한 내용은 [관리 코드에서 네이티브 함수 호출](http://go.microsoft.com/fwlink/?LinkID=181929) 을 참조하세요. 네이티브 코드에 액세스하면 레거시 코드를 CLR UDF로 다시 사용하거나 성능에 중요한 영향을 주는 UDF를 네이티브 코드로 작성할 수 있습니다. 이렇게 하려면 UNSAFE 어셈블리를 사용해야 합니다. UNSAFE 어셈블리 사용에 대한 주의 사항은 [CLR Integration Code Access Security](../clr-integration/security/clr-integration-code-access-security.md) 을 참조하십시오.  
+ CLR 함수를 사용하면 관리 코드에서 PInvoke를 사용하는 방법을 통해 C 또는 C++로 작성된 코드 등의 네이티브(비관리) 코드에 액세스할 수 있습니다. 자세한 내용은 [관리 코드에서 네이티브 함수 호출](https://go.microsoft.com/fwlink/?LinkID=181929) 을 참조하세요. 네이티브 코드에 액세스하면 레거시 코드를 CLR UDF로 다시 사용하거나 성능에 중요한 영향을 주는 UDF를 네이티브 코드로 작성할 수 있습니다. 이렇게 하려면 UNSAFE 어셈블리를 사용해야 합니다. UNSAFE 어셈블리 사용에 대한 주의 사항은 [CLR Integration Code Access Security](../clr-integration/security/clr-integration-code-access-security.md) 을 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
  [사용자 정의 함수 만들기&#40;데이터베이스 엔진&#41;](create-user-defined-functions-database-engine.md)   

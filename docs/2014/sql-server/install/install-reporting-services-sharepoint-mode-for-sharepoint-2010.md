@@ -11,12 +11,12 @@ ms.assetid: 47efa72e-1735-4387-8485-f8994fb08c8c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fc61d95716eabf90f22e76fa43dc1ea7f93a0c81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: cc0fe3bef02ebd50558c298ef8d9b3d8565744ee
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159453"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350896"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2010"></a>SharePoint 2010용 Reporting Services SharePoint 모드 설치
   이 항목의 절차에서는 SharePoint 모드에서 Reporting Services 보고서 서버의 단일 서버 설치하는 단계를 안내합니다. 이 단계에는 SharePoint 2010 중앙 관리를 사용하는 SQL Server 설치 마법사 및 추가 구성 태스크가 포합됩니다. 이 항목은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 만드는 등 기존 설치에 대한 개별 절차를 위해 사용할 수도 있습니다. 추가 하는 방법은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 하 여 기존 팜에 서버를 볼 [팜에 추가 보고서 서버를 추가 &#40;SSRS 확장&#41; ](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) 하 고 [추가 Reporting Services 웹 추가 팜에 프런트 엔드](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)합니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "48159453"
   
 5.  지원 파일이 설치를 끝내고 지원 규칙이 **통과** 상태를 나타내면 **다음**을 클릭합니다. 경고 또는 차단 문제를 검토합니다.  
   
-6.  **제품 키** 페이지에서 키를 입력하거나 'Enterprise Evaluation' 버전의 기본값을 적용합니다.  
+6.  에 **제품 키** 페이지에서 키를 입력 하거나 ' Enterprise Evaluation' 버전의 기본값을 적용 합니다.  
   
      **다음**을 클릭합니다.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "48159453"
   
     -   **SharePoint 2010 제품용 Reporting Services 추가 기능**. ![참고](../../../2014/reporting-services/media/rs-fyinote.png "참고")추가 기능을 설치 하는 것에 대 한 설치 마법사 옵션을 사용 하 여 새로운는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 릴리스 합니다.  
   
-    -   경우 이미 필요가 없습니다 SQL Server 인스턴스의 [!INCLUDE[ssDE](../../includes/ssde-md.md)]를 선택할 수도 있습니다 **데이터베이스 엔진 서비스** 및 **관리 도구 전체** 전체 환경에 대 한 합니다.  
+    -   아직 SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 인스턴스가 없는 경우 전체 환경에 대해 **데이터베이스 엔진 서비스** 및 **관리 도구 전체** 를 선택할 수 있습니다.  
   
      **다음**을 클릭합니다.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48159453"
 > [!NOTE]  
 >  기존 SharePoint 팜에 설치하는 경우에는 이 섹션의 단계를 완료할 **필요가 없습니다** . 이전 섹션에서 SQL Server 설치 마법사를 실행한 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 서비스가 이미 설치되어 시작되었습니다.  
   
- 필요한 파일이 SQL Server 설치 마법사의 일부로 설치되었지만 서비스를 SharePoint 팜에 등록해야 합니다. 합니다 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 릴리스에 대 한 PowerShell 지원이 도입 되었습니다 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드에서. 다음 단계에서는 SharePoint 관리 셸을 열고 cmdlet을 실행하는 절차를 안내합니다.  
+ 필요한 파일이 SQL Server 설치 마법사의 일부로 설치되었지만 서비스를 SharePoint 팜에 등록해야 합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 릴리스에는 SharePoint 모드의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 대한 PowerShell 지원이 도입되었습니다. 다음 단계에서는 SharePoint 관리 셸을 열고 cmdlet을 실행하는 절차를 안내합니다.  
   
 1.  **시작** 단추를 클릭합니다.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "48159453"
 3.  Reporting Services 서비스 상태가 **중지됨** 에서 **시작됨**으로 변경됩니다. Reporting Services 서비스가 목록에 없으면 PowerShell을 사용하여 서비스를 설치합니다.  
   
     > [!NOTE]  
-    >  Reporting Services 서비스가 **시작 중** 상태를 유지하고 **시작됨**으로 변경되지 않을 경우 'SharePoint 2010 관리' 서비스가 Windows Server Manager에서 시작되었는지 확인합니다.  
+    >  Reporting Services 서비스에서 유지 되는 경우는 **시작** 상태에 변경 되지 않습니다 **시작**, ' SharePoint 2010 관리 ' 서비스가 Windows Server Manager에서 시작 되었는지 확인 합니다.  
   
 
   
@@ -250,7 +250,7 @@ ms.locfileid: "48159453"
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services SharePoint 모드용 PowerShell cmdlet](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
- [SQL Server 2012 버전에서 지 원하는 기능](http://go.microsoft.com/fwlink/?linkid=232473)   
- [Reporting Services SharePoint Service 및 서비스 응용 프로그램](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)  
+ [SQL Server 2012 버전에서 지 원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473)   
+ [Reporting Services SharePoint Service 및 서비스 애플리케이션](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)  
   
   

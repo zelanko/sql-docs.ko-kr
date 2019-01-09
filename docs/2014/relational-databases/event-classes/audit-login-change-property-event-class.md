@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 47c8f045-37e5-471e-bf01-55d988ed47c1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b08d999cabc5fbe8e0db29241d70180b49dd9a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 890a61f8532d34b24676fae842676ff613d09c70
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188323"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52804015"
 ---
 # <a name="audit-login-change-property-event-class"></a>Audit Login Change Property 이벤트 클래스
   **Audit Login Change Property** 이벤트 클래스는 **sp_defaultdb** 저장 프로시저, **sp_defaultlanguage** 저장 프로시저 또는 ALTER LOGIN 문을 사용하여 로그인 속성을 수정할 때 발생합니다.  

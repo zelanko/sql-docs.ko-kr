@@ -12,12 +12,12 @@ ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5dc70e7c8dba2668ee2ef8bf73dbe7dfb9f26175
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1f39555217bf847b6b8f29b8c4de0b5c349ee5e4
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149863"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361375"
 ---
 # <a name="clr-transactions-sample"></a>CLR 트랜잭션 예제
   이 예제에서는 `System.Transactions` 네임스페이스에 있는 관리되는 API를 사용하여 트랜잭션을 제어하는 방법을 보여 줍니다. 특히 `System.Transactions.TransactionScope` 클래스는 요청을 처리할 재고가 충분하지 않는 경우 재고 수치를 조정하지 않고, 재고가 충분한 경우 한 위치에서 다른 위치로 재고를 원자 단위로 이동하도록 트랜잭션 경계를 설정하는 데 사용됩니다. 분산 트랜잭션에서의 자동 등록은 별도의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 저장된 감사 데이터베이스에 재고 변경 내용을 기록하여 표시됩니다.  
@@ -25,9 +25,9 @@ ms.locfileid: "48149863"
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 프로젝트를 만들고 실행하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](http://go.microsoft.com/fwlink/?LinkId=31046)에서 무료로 구할 수 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://go.microsoft.com/fwlink/?LinkId=31046)에서 무료로 구할 수 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](http://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
+-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](https://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
   
 -   .NET Framework SDK 2.0 이상 또는 Microsoft Visual Studio 2005 이상. .NET Framework SDK는 무료로 구할 수 있습니다.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48149863"
   
 8.  다음을 실행하여 감사 데이터베이스를 설치합니다.  
   
-    -   `Sqlcmd –S server_name [ \instance_name ] -E -I -i installDB.sql`  
+    -   `Sqlcmd -S server_name [ \instance_name ] -E -I -i installDB.sql`  
   
      인스턴스 및 서버의 적합한 값을 사용합니다.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48149863"
   
 12. 다음 명령으로 스크립트를 실행합니다.  
   
-    -   `Sqlcmd –S server_name [ \instance_name ] -E -I -i cleanup.sql`  
+    -   `Sqlcmd -S server_name [ \instance_name ] -E -I -i cleanup.sql`  
   
          인스턴스 및 서버의 적합한 값을 사용합니다.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48149863"
   
     -   `sqlcmd -E -I -i cleanup.sql`  
   
-## <a name="sample-code"></a>예제 코드  
+## <a name="sample-code"></a>샘플 코드  
  다음은 이 예제에 대한 코드 목록입니다.  
   
  C#  

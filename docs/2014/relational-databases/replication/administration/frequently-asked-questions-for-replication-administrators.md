@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - administering replication, frequently asked questions
@@ -14,12 +13,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 30058e297e22ed63a9e22a4755f22c4cc35ab213
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 6fa90f7732b504000696ad2977ae465b392ff565
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105163"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748728"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>복제 관리자를 위한 질문과 대답
   다음 질문과 대답은 복제 데이터베이스 관리자의 다양한 태스크에 대한 지침을 제공합니다.  
@@ -118,11 +117,11 @@ ms.locfileid: "48105163"
  아니요. DTS 패키지를 만들어 한 게시자에서 하나 이상의 구독자로 로그인과 암호를 전송할 수 있습니다.  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>스키마란 무엇이며 어떻게 복제됩니까?  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *스키마* 는 다음 두 가지 의미를 갖습니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *스키마* 는 다음 두 가지 의미를 갖습니다.  
   
 -   CREATE TABLE 문과 같은 개체의 정의입니다. 기본적으로 복제는 복제된 모든 개체의 정의를 구독자로 복사합니다.  
   
--   개체가 만들어진 네임스페이스 \<Database>.\<Schema>.\<Object>입니다. 스키마는 CREATE SCHEMA 문을 사용하여 정의됩니다.  
+-   개체가 만들어진 다음과 같은 네임스페이스입니다. \<데이터베이스 >. \<스키마 >. \<개체 >입니다. 스키마는 CREATE SCHEMA 문을 사용하여 정의됩니다.  
   
 -   복제는 새 게시 마법사에서 스키마 및 개체 소유권에 대해 기본적으로 다음과 같이 작동합니다.  
   
@@ -229,7 +228,7 @@ ms.locfileid: "48105163"
 ### <a name="does-replication-work-in-conjunction-with-clustering"></a>복제가 클러스터링과 함께 작동합니까?  
  예 모든 데이터가 클러스터의 한 디스크 세트에 저장되므로 특별히 고려해야 할 사항은 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [관리&#40;복제&#41;](administration-replication.md)   
  [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
   

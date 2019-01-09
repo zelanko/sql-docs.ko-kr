@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - pull subscriptions [SQL Server replication], creating
@@ -17,12 +16,12 @@ ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 18b53eaf464d0d11949e7dccbc5154debca733f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f8868957d7c479de3a51a599deed42c34d6676eb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206143"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753495"
 ---
 # <a name="create-a-pull-subscription"></a>끌어오기 구독 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 끌어오기 구독을 만드는 방법에 대해 설명합니다.  
@@ -57,7 +56,7 @@ ms.locfileid: "48206143"
   
 #### <a name="to-create-a-pull-subscription-from-the-publisher"></a>게시자에서 끌어오기 구독을 만들려면  
   
-1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결한 다음 해당 서버 노드를 확장합니다.  
+1.   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결한 다음 해당 서버 노드를 확장합니다.  
   
 2.  **복제** 폴더를 확장한 다음 **로컬 게시** 폴더를 확장합니다.  
   
@@ -119,7 +118,7 @@ ms.locfileid: "48206143"
   
 2.  구독자에서 [sp_addmergepullsubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)을 실행합니다. **@publisher**, **@publisher_db**, **@publication**과 다음 매개 변수를 지정합니다.  
   
-    -   **@subscriber_type** - 클라이언트 구독에 **local** 을 지정하고 서버 구독에 **global** 을 지정합니다.  
+    -   **@subscriber_type** - 클라이언트 구독에 **local**을 지정하고 서버 구독에 **global**을 지정합니다.  
   
     -   **@subscription_priority** - 구독의 우선 순위를 지정합니다(**0.00** ~ **99.99**). 이 지정은 서버 구독에만 필요합니다.  
   
@@ -164,9 +163,9 @@ ms.locfileid: "48206143"
   
 2.  1단계에서 만든 게시자 연결을 사용하여 <xref:Microsoft.SqlServer.Replication.TransPublication> 클래스의 인스턴스를 만듭니다. <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 및 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>를 지정합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 이 메서드가 반환 하는 경우 `false`, 2 단계에서 지정한 속성이 올바르지 않습니다. 또는 게시 서버에 존재 하지 않습니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 이 메서드가 `false`를 반환하는 경우 2단계에서 지정한 속성이 올바르지 않거나 서버에 게시가 없는 것입니다.  
   
-4.  비트 논리 AND를 수행 합니다. (`&` Visual C# 및 `And` Visual Basic의) 간에 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성 및 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>합니다. 결과가 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>이면 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>와 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 사이의 비트 논리 OR(Visual C#의 `|` 및 Visual Basic의 `Or`)의 결과에 대해 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>를 설정합니다. 그런 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 를 호출하여 끌어오기 구독을 설정합니다.  
+4.  <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성과 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull> 사이에서 비트 논리 AND(Visual C#의 `&` 및 Visual Basic의 `And`)를 수행합니다. 결과가 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>이면 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>와 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 사이의 비트 논리 OR(Visual C#의 `|` 및 Visual Basic의 `Or`)의 결과에 대해 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>를 설정합니다. 그런 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 를 호출하여 끌어오기 구독을 설정합니다.  
   
 5.  구독 데이터베이스가 없는 경우 <xref:Microsoft.SqlServer.Management.Smo.Database> 클래스를 사용하여 만듭니다. 자세한 내용은 [데이터베이스 생성, 변경 및 제거](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)를 참조하세요.  
   
@@ -184,7 +183,7 @@ ms.locfileid: "48206143"
   
     -   <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>에 대한 게시 이름  
   
-    -   합니다 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 및 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 또는 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> 의 필드 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> 에 대 한 자격 증명을 제공 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 배포 에이전트가 구독자에서 실행 되는 Windows 계정입니다. 이 계정은 Windows 인증을 사용하여 구독자에 대한 로컬 연결 및 원격 연결을 만드는 데 사용됩니다.  
+    -   구독자에서 배포 에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정에 대한 자격 증명을 제공하는 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A>의 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 필드와 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> 또는 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> 필드. 이 계정은 Windows 인증을 사용하여 구독자에 대한 로컬 연결 및 원격 연결을 만드는 데 사용됩니다.  
   
         > [!NOTE]  
         >  `sysadmin` 고정 서버 역할의 멤버가 구독을 만들 때 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>를 설정할 필요는 없지만 설정해 두는 것이 좋습니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [복제 에이전트 보안 모델](security/replication-agent-security-model.md)을 참조하세요.  
@@ -192,7 +191,7 @@ ms.locfileid: "48206143"
     -   (옵션) 구독을 동기화하는 데 사용되는 에이전트 작업을 만드는 <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A>에 `true` 값. `false`(기본값)를 지정한 경우 구독을 프로그래밍 방식으로만 동기화할 수 있으므로 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> 속성에서 이 개체에 액세스할 때 <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A>의 추가 속성을 지정해야 합니다. 자세한 내용은 [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md)을 참조하세요.  
   
         > [!NOTE]  
-        >  일부 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조하세요. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다. 값을 지정 하는 경우 `true` Express 구독자에 대 한 에이전트 작업은 만들어지지 않습니다. 그러나 중요한 구독 관련 메타데이터는 구독자에 저장됩니다.  
+        >  일부 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조하세요. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다. Express 구독자에 대해 `true` 값을 지정한 경우 에이전트 작업은 만들어지지 않습니다. 그러나 중요한 구독 관련 메타데이터는 구독자에 저장됩니다.  
   
     -   (옵션) SQL Server 인증을 사용하여 배포자에 연결할 때 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 필드와 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 또는 <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> 필드  
   
@@ -206,9 +205,9 @@ ms.locfileid: "48206143"
   
 2.  1단계에서 만든 게시자 연결을 사용하여 <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만듭니다. <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>및 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>를 지정합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 이 메서드가 반환 하는 경우 `false`, 2 단계에서 지정한 속성이 올바르지 않습니다. 또는 게시 서버에 존재 하지 않습니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 이 메서드가 `false`를 반환하는 경우 2단계에서 지정한 속성이 올바르지 않거나 서버에 게시가 없는 것입니다.  
   
-4.  비트 논리 AND를 수행 합니다. (`&` Visual C# 및 `And` Visual Basic의) 간에 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성 및 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>합니다. 결과가 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>이면 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>와 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 사이의 비트 논리 OR(Visual C#의 `|` 및 Visual Basic의 `Or`)의 결과에 대해 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>를 설정합니다. 그런 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 를 호출하여 끌어오기 구독을 설정합니다.  
+4.  <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성과 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull> 사이에서 비트 논리 AND(Visual C#의 `&` 및 Visual Basic의 `And`)를 수행합니다. 결과가 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>이면 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>와 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 사이의 비트 논리 OR(Visual C#의 `|` 및 Visual Basic의 `Or`)의 결과에 대해 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>를 설정합니다. 그런 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 를 호출하여 끌어오기 구독을 설정합니다.  
   
 5.  구독 데이터베이스가 없는 경우 <xref:Microsoft.SqlServer.Management.Smo.Database> 클래스를 사용하여 만듭니다. 자세한 내용은 [데이터베이스 생성, 변경 및 제거](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)를 참조하세요.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], packages
@@ -14,12 +13,12 @@ ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 95fd92b13584ec31d7a7a70a7e63caf7baf4a393
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141303"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52767415"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 확장 이벤트 패키지
   패키지는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 확장 이벤트 개체를 위한 컨테이너입니다. 확장 이벤트 패키지에는 다음과 같은 세 가지 종류가 있습니다.  
@@ -80,7 +79,7 @@ ms.locfileid: "48141303"
 |Admin|Admin 이벤트는 주로 최종 사용자, 관리자 및 지원 담당자를 대상으로 합니다. Admin 채널의 이벤트는 관리자가 대처할 수 있는 잘 정의된 솔루션이 마련된 문제를 나타냅니다. Admin 이벤트의 예로 애플리케이션에서 프린터를 연결하는 데 실패한 경우를 들 수 있습니다. 이러한 이벤트는 문제를 해결하기 위해 수행할 작업을 사용자에게 알려 주는 적절한 문서나 메시지와 연결됩니다.|  
 |Operational|Operational 이벤트는 문제 또는 발생을 분석 및 진단하는 데 사용되며 문제 또는 발생을 기반으로 도구 또는 태스크를 트리거하는 데 사용할 수 있습니다. Operational 이벤트의 예로는 시스템에서 프린터를 추가 또는 제거하는 경우를 들 수 있습니다.|  
 |Analytic|Analytic 이벤트는 고용량으로 게시됩니다. 이러한 이벤트는 프로그램 작업을 나타내며 일반적으로 성능 검사에 사용됩니다.|  
-|디버그|Debug 이벤트는 디버깅을 위해 문제를 진단하는 개발자에 의해서만 사용됩니다.<br /><br /> 참고: 디버그 채널의 이벤트는 내부 구현과 관련 된 상태 데이터를 반환합니다. 이벤트가 반환하는 스키마와 데이터는 변경되거나 이후 SQL Server 버전에서 유효하지 않게 될 수 있습니다. 따라서 이후 버전의 SQL Server에서는 예고 없이 디버그 채널의 이벤트가 변경되거나 제거될 수 있습니다.|  
+|디버그|Debug 이벤트는 디버깅을 위해 문제를 진단하는 개발자에 의해서만 사용됩니다.<br /><br /> 참고: 디버그 채널의 이벤트는 내부 구현과 관련된 상태 데이터를 반환합니다. 이벤트가 반환하는 스키마와 데이터는 변경되거나 이후 SQL Server 버전에서 유효하지 않게 될 수 있습니다. 따라서 이후 버전의 SQL Server에서는 예고 없이 디버그 채널의 이벤트가 변경되거나 제거될 수 있습니다.|  
   
  **키워드**  
   

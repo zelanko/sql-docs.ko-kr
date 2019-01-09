@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 28a76c12-e997-48bb-bb0e-9624237a188e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b53586ad213542db7b355167b3a4b7fb36f7bf7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 3c715711953f8913630a96aae7697adb00bfc0e6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213713"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786205"
 ---
 # <a name="audit-app-role-change-password-event-class"></a>Audit App Role Change Password 이벤트 클래스
   **Audit App Role Change Password** 이벤트 클래스는 응용 프로그램 역할에 대한 암호가 변경될 때마다 발생합니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "48213713"
 |**ClientProcessID**|**int**|클라이언트 애플리케이션이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|사용자 계정 컨트롤|  
 |**DatabaseID**|**int**|USE *database* 문에서 지정한 데이터베이스 ID이거나, 지정한 인스턴스에 대해 USE *database* 문을 실행하지 않은 경우 기본 데이터베이스입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ServerName **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면** 에 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|사용자 계정 컨트롤|  
 |**DatabaseName**|**nvarchar**|애플리케이션의 역할이 수정되는 데이터베이스 이름입니다.|35|사용자 계정 컨트롤|  
-|**DBUserName**|**nvarchar**|데이터베이스에서 발급자의 사용자 이름입니다.|40|사용자 계정 컨트롤|  
+|**DBUserName**|**nvarchar**|데이터베이스에 있는 발급자의 사용자 이름입니다.|40|사용자 계정 컨트롤|  
 |**EventClass**|**int**|이벤트 유형 = 112|27|아니요|  
 |**EventSequence**|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니요|  
 |**HostName**|**nvarchar**|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공할 경우 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|사용자 계정 컨트롤|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server]
@@ -28,12 +27,12 @@ ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9921e018b81d22097161d2ea93226e47b7880073
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1ba79898fe1f218e51b8eda10f2fb91784a8d7e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205863"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757355"
 ---
 # <a name="bcp-utility"></a>bcp 유틸리티
   합니다 **bcp** 의 인스턴스 간에 데이터를 대량 복사 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용자가 지정한 형식의 데이터 파일. **bcp** 유틸리티를 사용하여 많은 수의 새 행을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블로 가져오거나 테이블에서 데이터 파일로 데이터를 내보낼 수 있습니다. **queryout** 옵션과 함께 사용하는 경우를 제외하고 이 유틸리티를 사용하는 데에는 [!INCLUDE[tsql](../includes/tsql-md.md)]에 대한 지식이 필요하지 않습니다. 테이블로 데이터를 가져오려면 해당 테이블에 대해 만든 서식 파일을 사용하거나 이 테이블의 열에 적합한 테이블 구조와 데이터 형식을 알아야 합니다.  
@@ -89,9 +88,9 @@ ms.locfileid: "48205863"
  *database_name*  
  지정한 테이블 또는 뷰가 있는 데이터베이스의 이름입니다. 이 인수를 지정하지 않으면 사용자의 기본 데이터베이스를 사용합니다.  
   
- 사용 하 여 데이터베이스 이름을 명시적으로 지정할 수 있습니다 `d-`합니다.  
+ `d-`를 사용하여 데이터베이스 이름을 명시적으로 지정할 수도 있습니다.  
   
- **in** *data_file* | **out***data_file* | **queryout***data_file* | **format nul**  
+ **in** *data_file* | **out**_data_file_ | **queryout**_data_file_ | **format nul**  
  다음과 같이 대량 복사 방향을 지정합니다.  
   
 -   **in** 은 파일에서 데이터베이스 테이블 또는 뷰로 복사합니다.  
@@ -127,7 +126,7 @@ ms.locfileid: "48205863"
  와 함께에서이 옵션을 사용 하지 않으면 합니다 **-h "** ROWS_PER_BATCH  **= *`bb`*"** 옵션입니다.  
   
  `-c`  
- 문자 데이터 형식을 사용하여 작업을 수행합니다. 이 그러면 각 필드를 표시 하지 않습니다. 사용 하 여 `char` 접두사와 저장소 유형으로 **\t** (탭 문자) 필드 구분 기호로 사용 하 고 **\r\n** (줄 바꿈 문자)를 행 종결자로 합니다. `-c` 호환 되지 않습니다 `-w`합니다.  
+ 문자 데이터 형식을 사용하여 작업을 수행합니다. 이 그러면 각 필드를 표시 하지 않습니다. 사용 하 여 `char` 접두사와 저장소 유형으로 **\t** (탭 문자) 필드 구분 기호로 사용 하 고 **\r\n** (줄 바꿈 문자)를 행 종결자로 합니다. `-c`이 `-w`과 호환되지 않는 경우.  
   
  자세한 내용은 [문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)를 참조하세요.  
   
@@ -174,15 +173,15 @@ ms.locfileid: "48205863"
  **-F** *first_row*  
  테이블에서 내보내거나 데이터 파일에서 가져올 첫 번째 행 번호를 지정합니다. 이 매개 변수가 0 보다 크고 (>) 값이 필요 하지만 미만 (\<) 또는 등호 (=)는 총 행 수입니다. 이 매개 변수를 지정하지 않을 경우 기본값은 파일의 첫 번째 행입니다.  
   
- *first_row* 는 최대 2^63-1의 값을 갖는 양의 정수입니다. **-F * first_row* 는 1부터 시작 합니다.  
+ *first_row* 는 최대 2^63-1의 값을 갖는 양의 정수입니다. **-F**_first_row_는 1부터 시작합니다.  
   
  **-h"** *hint*[ **,**... *n*] **"**  
  데이터를 테이블 또는 뷰로 대량으로 가져올 때 사용할 힌트를 지정합니다.  
   
- 순서 **(* **열*[ASC | DESC] [**,**... *n*]**) * *  
+ ORDER **(**_column_[ASC | DESC] [**,**...*n*]**)**  
  데이터 파일에 있는 데이터의 정렬 순서입니다. 가져올 데이터를 테이블의 클러스터형 인덱스(있는 경우)에 따라 정렬하면 대량 가져오기 성능이 향상됩니다. 데이터 파일을 클러스터형 인덱스 키와 다른 순서로 정렬하거나 테이블에 클러스터형 인덱스가 없으면 ORDER 절이 무시됩니다. 지정한 열 이름은 대상 테이블에서 올바른 열 이름이어야 합니다. 기본적으로 **bcp** 는 데이터 파일이 정렬되지 않은 것으로 간주합니다. 대량 가져오기 작업을 최적화하기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 가져온 데이터가 정렬되어 있는지도 확인합니다.  
   
- ROWS_PER_BATCH **= * bb*  
+ ROWS_PER_BATCH **=**_bb_  
  일괄 처리당 데이터 행 수( *bb*)입니다. **-b** 를 지정하지 않은 경우에 사용되며 전체 데이터 파일을 단일 트랜잭션으로 서버에 보냅니다. 서버는 *bb*값에 따라 대량 로드를 최적화합니다. 기본적으로 ROWS_PER_BATCH는 알 수 없습니다.  
   
  KILOBYTES_PER_BATCH **=** *cc*  
@@ -219,7 +218,7 @@ ms.locfileid: "48205863"
  작업 시 삽입된 열에 기본값이 지정되지 않고 빈 열이 Null 값을 보유하도록 지정합니다. 자세한 내용은 [대량 가져오기 수행 중 Null 유지 또는 기본값 사용&#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)을 참조하세요.  
   
  **-K** *application_intent*  
- 서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. **ReadOnly**값만 사용할 수 있습니다. **-K**를 지정하지 않으면 bcp 유틸리티가 AlwaysOn 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [ 활성 보조: 읽기 가능한 보조 복제본 (AlwaysOn 가용성 그룹)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)합니다.  
+ 서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. **ReadOnly**값만 사용할 수 있습니다. **-K**를 지정하지 않으면 bcp 유틸리티가 AlwaysOn 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 참조 하세요. [ 활성 보조: 읽기 가능한 보조 복제본 (AlwaysOn 가용성 그룹)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)합니다.  
   
  **-L** *last_row*  
  테이블에서 내보내거나 데이터 파일에서 가져올 마지막 행 번호를 지정합니다. 이 매개 변수가 0 보다 크고 (>) 값이 필요 하지만 미만 (\<) 또는 등호 (=) 마지막 행의 수입니다. 이 매개 변수를 지정하지 않을 경우 기본값은 파일의 마지막 행입니다.  
@@ -282,8 +281,8 @@ ms.locfileid: "48205863"
  **-R**  
  클라이언트 컴퓨터의 로캘 설정에 정의된 국가별 형식을 사용하여 통화, 날짜 및 시간 데이터를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로 대량 복사하도록 지정합니다. 기본적으로 국가별 설정은 무시됩니다.  
   
- **-S** *server_name*[ **\\***instance_name*]  
- 연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 지정합니다. 서버를 지정하지 않으면 **bcp** 유틸리티가 로컬 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 기본 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터나 명명된 로컬 인스턴스에서 **bcp** 명령을 실행할 때 이 옵션을 지정해야 합니다. 서버에 있는 기본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하려면 *server_name*만 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 명명된 인스턴스에 연결하려면 *server_name***\\***instance_name*을 지정합니다.  
+ **-S** *server_name*[ **\\**_instance_name_]  
+ 연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 지정합니다. 서버를 지정하지 않으면 **bcp** 유틸리티가 로컬 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 기본 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터나 명명된 로컬 인스턴스에서 **bcp** 명령을 실행할 때 이 옵션을 지정해야 합니다. 서버에 있는 기본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하려면 *server_name*만 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 명명된 인스턴스에 연결하려면 *server_name**_\\_** instance_name*을 지정합니다.  
   
  `-t` *field_term*  
  필드 종결자를 지정합니다. 기본값은 **\t** (탭 문자)입니다. 기본 필드 종결자를 재정의하려면 이 매개 변수를 사용합니다. 자세한 내용은 [필드 및 행 종결자 지정&#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)을 참조하세요.  
@@ -293,7 +292,7 @@ ms.locfileid: "48205863"
  하는 경우 *field_term* 시작 하이픈 (-) 또는 슬래시 (/)를 포함 하지 마세요 사이 공백을 `-t` 하며 *field_term* 값입니다.  
   
  **-T**  
- **bcp** 유틸리티가 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로 연결되도록 지정합니다. 네트워크 사용자의 보안 자격 증명, *login_id*및 *password* 는 필요하지 않습니다. **–T** 를 지정하지 않은 경우 성공적으로 로그인하려면 **–U** 와 **–P** 를 지정해야 합니다.  
+ **bcp** 유틸리티가 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로 연결되도록 지정합니다. 네트워크 사용자의 보안 자격 증명, *login_id*및 *password* 는 필요하지 않습니다. **-T** 를 지정하지 않은 경우 성공적으로 로그인하려면 **-U** 와 **-P** 를 지정해야 합니다.  
   
  **-U** *login_id*  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 연결에 사용하는 로그인 ID를 지정합니다.  
@@ -320,12 +319,12 @@ ms.locfileid: "48205863"
  자세한 내용은 [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)를 참조하세요.  
   
  `-w`  
- 유니코드 문자를 사용하여 대량 복사 작업을 수행합니다. 이 그러면 각 필드를 표시 하지 않습니다. 사용 하 여 `nchar` 접두사가 없습니다 저장소 유형으로 **\t** (탭 문자)를 필드 구분 기호로 및 **\n** (줄 바꿈 문자)를 행 종결자로 합니다. `-w` 호환 되지 않습니다 `-c`합니다.  
+ 유니코드 문자를 사용하여 대량 복사 작업을 수행합니다. 이 그러면 각 필드를 표시 하지 않습니다. 사용 하 여 `nchar` 접두사가 없습니다 저장소 유형으로 **\t** (탭 문자)를 필드 구분 기호로 및 **\n** (줄 바꿈 문자)를 행 종결자로 합니다. `-w`이 `-c`과 호환되지 않는 경우.  
   
  자세한 내용은 [유니코드 문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)를 참조하세요.  
   
  **-x**  
- 사용 된 **형식** 및 **-f * format_file* 옵션, 기본 비 XML 서식 파일 대신 XML 기반 서식 파일을 생성 합니다. 데이터를 가져오거나 내보낼 때 **-x** 는 작동하지 않습니다. 함께 사용 하지 않으면 오류가 생성 **형식** 및 **-f * format_file*합니다.  
+ **format** 및 **-f**_format_file_ 옵션과 함께 사용되며 기본 비 XML 서식 파일 대신 XML 기반 서식 파일을 생성합니다. 데이터를 가져오거나 내보낼 때 **-x**는 작동하지 않습니다. **format** 및 **-f**_format_file_을 함께 사용하지 않으면 오류가 생성됩니다.  
   
 ## <a name="remarks"></a>Remarks  
  합니다 **bcp** 12.0 클라이언트를 설치할 때 설치 됩니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 도구입니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]와 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 둘 다에 대해 도구를 설치하면 PATH 환경 변수의 값에 따라 **bcp** 12.0 클라이언트 대신 이전 **bcp** 클라이언트를 사용할 수 있습니다. 이 환경 변수는 실행 파일을 검색하기 위해 Windows에서 사용하는 디렉터리 집합을 정의합니다. 사용 중인 버전을 확인하려면 Windows 명령 프롬프트에서 **bcp /v** 명령을 실행합니다. PATH 환경 변수에서 명령 경로를 설정하는 방법은 Windows 도움말을 참조하십시오.  
@@ -368,7 +367,7 @@ ms.locfileid: "48205863"
 ## <a name="data-validation"></a>데이터 유효성 검사  
  **bcp** 는 이제 데이터 유효성 검사 및 데이터 검사를 강제로 실행하므로 스크립트를 데이터 파일의 잘못된 데이터에 대해 실행할 경우 오류가 발생할 수 있습니다. 예를 들어 **bcp** 는 이제 다음을 확인합니다.  
   
--   네이티브 표현을 `float` 또는 `real` 데이터 형식을 사용할 수 있습니다.  
+-   `float` 또는 `real` 데이터 형식의 네이티브 표시가 유효한지 여부  
   
 -   유니코드 데이터의 길이가 짝수 바이트인지 여부  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - server management [SQL Server], remote servers
@@ -17,12 +16,12 @@ ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5e2c7a12c45a0732014a20a7471d664e808b5883
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: 7e400c24476df7d9e663f17c71425f11b5155058
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991166"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52641014"
 ---
 # <a name="remote-servers"></a>원격 서버
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이전 버전과의 호환성을 위해서만 원격 서버를 지원합니다. 새 애플리케이션은 그 대신 연결된 서버를 사용해야 합니다. 자세한 내용은 [연결된 서버&#40;데이터베이스 엔진&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)를 참조하세요.  

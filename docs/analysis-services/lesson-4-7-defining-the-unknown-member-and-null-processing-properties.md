@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e39ac2042304b927d8270da57a88c4452ef79337
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 08e05c68bf69bcb7ca54d2f0920ee041aae3ca99
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019580"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52525916"
 ---
 # <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>단원 4-7-알 수 없는 멤버 및 Null 처리 속성 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 차원을 처리하는 경우 데이터 원본 뷰의 뷰나 테이블의 기본 열에 있는 모든 고유 값이 차원의 특성을 채웁니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 처리 도중에 Null 값이 발생할 경우 기본적으로 이 Null은 숫자 열의 경우 0으로 변환되고 문자열 열의 경우 빈 문자열로 변환됩니다. 기본 관계형 데이터 웨어하우스의 추출, 변환 및 로드 프로세스(있을 경우)에서 이러한 기본 설정을 수정하거나 Null 값을 변환할 수 있습니다. 또한 3개의 속성을 구성하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 Null 값을 지정된 값으로 변환하도록 할 수 있습니다. 이러한 속성은 차원에 대한 **UnknownMember** 및 **UnknownMemberName** 속성과 차원의 키 특성에 대한 **NullProcessing** 속성입니다.  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 차원을 처리하는 경우 데이터 원본 뷰의 뷰나 테이블의 기본 열에 있는 모든 고유 값이 차원의 특성을 채웁니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 처리 도중에 Null 값이 발생할 경우 기본적으로 이 Null은 숫자 열의 경우 0으로 변환되고 문자열 열의 경우 빈 문자열로 변환됩니다. 기본 관계형 데이터 웨어하우스의 추출, 변환 및 로드 프로세스(있을 경우)에서 이러한 기본 설정을 수정하거나 Null 값을 변환할 수 있습니다. 또한 3개의 속성을 구성하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 Null 값을 지정된 값으로 변환하도록 할 수 있습니다. 이러한 속성은 차원에 대한 **UnknownMember** 및 **UnknownMemberName** 속성과 차원의 키 특성에 대한 **NullProcessing** 속성입니다.  
   
 차원 마법사와 큐브 마법사는 차원의 키 특성이 Null을 허용하는지 또는 눈송이 차원의 루트 특성이 Null 허용 열을 기반으로 하는지 여부에 따라서 이러한 속성을 설정합니다. 이러한 경우에 키 특성의 **NullProcessing** 속성은 **UnknownMember** 로 설정되고 **UnknownMember** 속성은 **Visible**로 설정됩니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "34019580"
   
     이 수준에는 다음 이미지에 표시된 것처럼 다른 구성 요소를 작업할 때 사용되는 어셈블리 구성 요소가 들어 있으며 **Adjustable Race** 제품으로 시작합니다.  
   
-    ![어셈블리 구성 요소가 다른 구성 요소를 작성 하는 데](../analysis-services/media/l4-productdimensionerrorconfig-2.gif "다른 구성 요소를 작성 하는 데 사용 되는 어셈블리 구성 요소")  
+    ![다른 구성 요소를 빌드하는 데 사용 되는 어셈블리 구성 요소](../analysis-services/media/l4-productdimensionerrorconfig-2.gif "다른 구성 요소를 빌드하는 데 사용 되는 어셈블리 구성 요소")  
   
 ## <a name="defining-attributes-from-snowflaked-tables-and-a-product-category-user-defined-hierarchy"></a>눈송이 테이블 및 제품 범주 사용자 정의 계층의 특성 정의  
   
@@ -90,7 +90,7 @@ ms.locfileid: "34019580"
   
 9. **특성** 창에서 이 새 특성의 이름을 **Category**로 변경합니다.  
   
-10. 속성 창에서 **NameColumn** 속성 필드를 클릭한 다음 찾아보기 단추(**…**)를 클릭하여 **이름 열** 대화 상자를 엽니다.  
+10. 속성 창에서 클릭 하 여 **NameColumn** 속성 필드를 클릭 한 다음 (**...** ) 버튼을 클릭 하 여 **이름 열** 대화 상자.  
   
 11. **원본 열** 목록에서 **EnglishProductCategoryName** 을 선택하고 **확인**을 클릭합니다.  
   
@@ -98,11 +98,11 @@ ms.locfileid: "34019580"
   
 13. **특성** 창에서 이 새 특성의 이름을 **Subcategory**로 변경합니다.  
   
-14. 속성 창에서 **NameColumn** 속성 필드를 클릭한 다음 찾아보기 단추( **…** )를 클릭하여 **이름 열** 대화 상자를 엽니다.  
+14. 속성 창에서 클릭 하 여 **NameColumn** 속성 필드를 클릭 한 다음 **(...)**  버튼을 클릭 하 여 **이름 열** 대화 상자.  
   
 15. **원본 열** 목록에서 **EnglishProductSubcategoryName** 을 선택하고 **확인**을 클릭합니다.  
   
-16. **Category** , **Subcategory**및 **Product Name**수준을 사용하여 위쪽에서 아래쪽 순서로 **Product Categories**라는 새 사용자 정의 계층 구조를 만듭니다.  
+16. 라는 새 사용자 정의 계층 만들기 **Product Categories** 위쪽에서 아래쪽 순서로 수준을 사용 하 여: **범주**, **Subcategory**, 및 **Product Name**합니다.  
   
 17. **All Products** 를 Product Categories 사용자 정의 계층 구조의 **AllMemberName** 속성에 대한 값으로 지정합니다.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "34019580"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  **특성** 창에서 **Subcategory**를 선택합니다.  
+7.   **특성** 창에서 **Subcategory**를 선택합니다.  
   
 8.  속성 창에서 **KeyColumns** 속성을 확장한 후 **DimProductSubcategory.ProductSubcategoryKey (Integer)** 속성을 확장합니다.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "34019580"
     ![어셈블리 구성 요소를 보여 주는 제품 이름 수준](../analysis-services/media/l4-assemblycomponents-1.gif "어셈블리 구성 요소를 보여 주는 제품 이름 수준")  
   
 ## <a name="next-lesson"></a>다음 단원  
-[5 단원: 차원 및 측정값 그룹 간의 관계를 정의합니다.](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+[5 단원: 차원과 측정값 그룹 간의 관계를 정의합니다.](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
   
   

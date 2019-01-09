@@ -7,8 +7,6 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.ErrorList
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -18,15 +16,15 @@ ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 08ba949c2cb835296c1442fcac4d5984a051bb30
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e8f120bfd20e2b912aaf5b045faa1e052ba4191
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216363"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328473"
 ---
 # <a name="error-list-window-management-studio"></a>오류 목록 창(Management Studio)
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **오류 목록** 은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 IntelliSense 코드에서 생성된 구문 및 의미 체계 오류를 표시합니다.  
+   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **오류 목록** 은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 IntelliSense 코드에서 생성된 구문 및 의미 체계 오류를 표시합니다.  
   
 ## <a name="features-of-the-error-list"></a>오류 목록의 기능  
  **오류 목록** 은 다음 기능을 제공합니다.  
@@ -90,5 +88,3 @@ ms.locfileid: "48216363"
   
  **프로젝트**  
  스크립트 파일이 포함된 프로젝트의 이름을 표시합니다.  
-  
-  

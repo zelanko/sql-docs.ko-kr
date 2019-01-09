@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 42c107f371b2cc1d8159c5eb94f3a51e864cf61d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: HT
+ms.openlocfilehash: 49cf92537bf0289765dca7b3a04c76fe0bf50fd8
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145308"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52418704"
 ---
 # <a name="mdx-cell-properties---using-cell-properties"></a>MDX 셀 속성-셀 속성 사용
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +62,7 @@ SELECT [<axis_specification>
 ||**CELL_UPDATE_ENABLED_WITH_UPDATE** (0x00000002)   update 문을 사용하여 셀을 업데이트할 수 있습니다. 쓰기가 허용되지 않은 리프 셀을 업데이트하면 업데이트에 실패할 수 있습니다.|  
 ||**CELL_UPDATE_NOT_ENABLED_FORMULA** (0x10000001)   셀이 셀 좌표를 따라 계산 멤버를 가지므로 업데이트할 수 없습니다. 셀이 where 절 내의 집합으로 검색되었습니다. 수식이 셀 값에 영향을 주거나 계산 셀이 셀 값(집계 경로상의 한 곳)에 있더라도 셀을 업데이트할 수 있습니다. 이 시나리오에서는 계산이 결과에 영향을 주므로 최종 셀 값은 업데이트된 값이 아닐 수 있습니다.|  
 ||**CELL_UPDATE_NOT_ENABLED_NONSUM_MEASURE** (0x10000002)   합계 유형이 아닌 측정값(카운트, 최소, 최대, 고유 카운트, 반가산적 측정값)은 업데이트할 수 없으므로 셀을 업데이트할 수 없습니다.|  
-||**CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE** (0x10000003)   셀이 측정값 및 측정값의 측정값 그룹과 관련이 없는 차원 멤버 간의 교집합에 위치하여 존재하지 않으므로 업데이트할 수 없습니다.|  
+||**CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE** (0x10000003) 셀에는 측정값의 교집합에서 및 측정값의 측정값 그룹과 관련이 없는 차원 멤버 없기 때문에 셀을 업데이트할 수 없습니다.|  
 ||**CELL_UPDATE_NOT_ENABLED_SECURE** (0x10000005)   셀에 보안이 설정되어 있으므로 셀을 업데이트할 수 없습니다.|  
 ||**CELL_UPDATE_NOT_ENABLED_CALCLEVEL** (0x10000006)   나중에 사용하도록 예약되어 있습니다.|  
 ||**CELL_UPDATE_NOT_ENABLED_CANNOTUPDATE** (0x10000007)   내부적인 이유로 인해 셀을 업데이트할 수 없습니다.|  

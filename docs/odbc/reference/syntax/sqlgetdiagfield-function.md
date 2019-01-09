@@ -20,16 +20,16 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22ccf063486df9a8afc810d4adeffeb96041a8b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 386b2352db8912c0af4a1571cbfc2d7e7f5384c6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826201"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203982"
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 함수(SQLGetDiagField Function)
 **규칙**  
- 버전에 도입 되었습니다: ODBC 3.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 3.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLGetDiagField** 오류, 경고 및 상태 정보가 포함 된 진단 데이터 구조 (지정된 된 핸들을 사용 하 여 연결 된) 레코드의 필드의 현재 값을 반환 합니다.  
@@ -100,13 +100,13 @@ SQLRETURN SQLGetDiagField(
 ## <a name="diagnostics"></a>진단  
  **SQLGetDiagField** 자체에 대 한 진단 레코드를 게시 하지 않습니다. 자체 실행의 결과 보고 하는 다음 반환 값을 사용 합니다.  
   
--   SQL_SUCCESS: 함수가 진단 정보를 성공적으로 반환 했습니다.  
+-   관계 없이 SQL_SUCCESS: 함수는 진단 정보를 반환 했습니다.  
   
--   : SQL_SUCCESS_WITH_INFO \* *DiagInfoPtr* 가 너무 작아서 요청 된 진단 필드를 저장할 수 있습니다. 따라서 진단 필드에 데이터가 잘렸습니다. 잘림이 발생을 응용 프로그램을 비교 해야 결정할 *BufferLength* 에 기록 되는 사용 가능한 바이트의 실제 수 **StringLengthPtr*합니다.  
+-   SQL_SUCCESS_WITH_INFO: \**DiagInfoPtr* 가 너무 작아서 요청 된 진단 필드를 저장할 수 있습니다. 따라서 진단 필드에 데이터가 잘렸습니다. 잘림이 발생을 응용 프로그램을 비교 해야 결정할 *BufferLength* 에 기록 되는 사용 가능한 바이트의 실제 수 **StringLengthPtr*합니다.  
   
 -   SQL_INVALID_HANDLE: 핸들에 나타난 *HandleType* 하 고 *처리* 는 유효한 핸들이 없습니다.  
   
--   SQL_ERROR 다음 중 하나가 발생 합니다.:  
+-   SQL_ERROR: 다음 중 하나에 다음이 발생 했습니다.  
   
     -   *DiagIdentifier* 인수가 유효한 값 중 하나 였습니다.  
   
@@ -118,7 +118,7 @@ SQLRETURN SQLGetDiagField(
   
     -   비동기 알림을 사용 하는 경우 핸들에 대해 비동기 작업이 완료 되지 않았습니다.  
   
--   Sql_no_data가: *RecNumber* 에 지정 된 핸들에 대해 존재 하는 진단 레코드 개수 보다 *처리 합니다.* 또한 함수 모든 양수 SQL_NO_DATA를 반환할 *RecNumber* 에 대 한 진단 레코드가 없는 경우 *처리*합니다.  
+-   SQL_NO_DATA: *RecNumber* 에 지정 된 핸들에 대해 존재 하는 진단 레코드 개수 보다 *처리 합니다.* 또한 함수 모든 양수 SQL_NO_DATA를 반환할 *RecNumber* 에 대 한 진단 레코드가 없는 경우 *처리*합니다.  
   
 ## <a name="comments"></a>주석  
  응용 프로그램에서 일반적으로 호출 **SQLGetDiagField** 세 가지 목표 중 하나를 수행 하려면:  
@@ -218,7 +218,7 @@ n-정의 *|"도메인 만들기"|SQL_DIAG_CREATE_DOMAIN|
 |*번역 정의*|"번역을 작성 합니다."|SQL_DIAG_CREATE_TRANSLATION|  
 |*update 문 배치*|"동적 업데이트 커서"|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
 |*업데이트-문-검색*|"WHERE 업데이트"|SQL_DIAG_UPDATE_WHERE|  
-|Unknown|*빈 문자열*|SQL_DIAG_UNKNOWN_STATEMENT|  
+|알 수 없음|*빈 문자열*|SQL_DIAG_UNKNOWN_STATEMENT|  
   
 ## <a name="sequence-of-status-records"></a>상태 레코드의 시퀀스  
  상태 레코드에 행 번호 및 진단의 형식을 기반으로 하는 순서로 배치 됩니다. 드라이버 관리자를 생성 하는 상태 레코드를 반환 하는 최종 순서를 결정 합니다. 드라이버 생성 하는 상태 레코드를 반환 하는 최종 순서를 결정 합니다.  
@@ -227,13 +227,13 @@ n-정의 *|"도메인 만들기"|SQL_DIAG_CREATE_DOMAIN|
   
  두 개 이상의 상태 레코드의 경우이 레코드의 시퀀스는 먼저 행 번호로 결정 됩니다. 행으로 진단 레코드의 시퀀스를 결정 하는 다음 규칙이 적용 됩니다.  
   
--   모든 행에 해당 하지 않는 레코드 SQL_NO_ROW_NUMBER – 1에 정의 되어 있으므로 특정 행에 해당 하는 레코드 앞에 표시 합니다.  
+-   모든 행에 해당 하지 않는 레코드 SQL_NO_ROW_NUMBER-1로 정의 되어 있으므로 특정 행에 해당 하는 레코드 앞에 표시 합니다.  
   
--   에 대 한 행 번호를 알 수 없는 레코드 SQL_ROW_NUMBER_UNKNOWN – 2 되도록 정의 되어 있으므로 다른 모든 레코드를 앞에 표시 합니다.  
+-   에 대 한 행 번호를 알 수 없는 레코드 SQL_ROW_NUMBER_UNKNOWN-2 되도록 정의 되어 있으므로 다른 모든 레코드를 앞에 표시 합니다.  
   
 -   특정 행에 관련 된 모든 레코드에 대 한 레코드 SQL_DIAG_ROW_NUMBER 필드의 값으로 정렬 됩니다. 나열 된 모든 오류 및 경고의 영향을 받는 첫 번째 행과 모든 오류 및 경고는 다음의 영향을 받지 등에 행 하는 다음.  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC 3 *.x* 드라이버 관리자 정렬 되지 않은 상태 레코드 진단 큐의 경우 SQLSTATE 01S01는 ODBC 2 (행의 오류)가 반환한 *.x* 드라이버 경우 SQLSTATE 01S01 ODBC 반환한 (행의 오류) 3 *.x* 드라이버 때 **SQLExtendedFetch** 라고 하거나 **SQLSetPos** 사용 하 여 배치 하는 커서에 라고 **SQLExtendedFetch** .  
   
  각 행 내에서 또는 해당 하는 행 번호를 알 수 없는, 또는 행에 해당 하지 않는 모든 레코드에 대 한 SQL_NO_ROW_NUMBER 같음 행 번호를 포함 하는 모든 레코드에 대 한, 나열 된 첫 번째 레코드 집합을 정렬 규칙을 사용 하 여 결정 됩니다. 첫 번째 레코드를 다음 행에 영향을 주는 다른 레코드의 순서가 정의 되지 않습니다. 응용 프로그램 오류 경고를 앞에 첫 번째 레코드 후 한다는 가정할 수 없습니다. 응용 프로그램에는 전체 진단 데이터 구조 함수에 대 한 실패 한 호출에 대 한 전체 정보를 검색 해야 합니다.  

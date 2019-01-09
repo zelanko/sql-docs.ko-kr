@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], snapshots
@@ -15,12 +14,12 @@ ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 10e8c84af197c600c9b89f850ab84fc27fd56e2d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 99aabef0bd8e7ba293c0e66428607fe7fb4642e6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217743"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361941"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>매개 변수가 있는 필터로 병합 게시에 대한 스냅숏 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 매개 변수가 있는 필터로 병합 게시에 대한 스냅숏을 만드는 방법에 대해 설명합니다.  
@@ -69,7 +68,7 @@ ms.locfileid: "48217743"
   
 3.  선택적으로 스냅숏을 새로 고칠 일정을 지정합니다.  
   
-    1.  **이 파티션에 대한 스냅숏 에이전트의 실행 시간을 다음 시간으로 예약**을 선택합니다.  
+    1.   **이 파티션에 대한 스냅숏 에이전트의 실행 시간을 다음 시간으로 예약**을 선택합니다.  
   
     2.  기본으로 제공되는 스냅숏 새로 고침 일정을 그대로 적용하거나 **변경** 을 클릭하여 다른 일정을 지정합니다.  
   
@@ -257,7 +256,7 @@ PAUSE
 >  병합 아티클을 만들 때 <xref:Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription>에 <xref:Microsoft.SqlServer.Replication.MergeArticle.PartitionOption%2A> 값을 지정하여 아티클을 필터링함으로써 구독별로 고유한 겹치지 않는 파티션을 생성하면 병합 에이전트를 실행할 때마다 메타데이터가 정리됩니다. 따라서 분할된 스냅숏은 더 빨리 만료됩니다. 이 옵션을 사용할 경우 구독자가 스냅숏 생성을 요청하도록 허용하는 것을 고려해야 합니다. 자세한 내용은 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)항목의 "적절한 필터링 옵션 사용" 섹션을 참조하세요.  
   
 > [!IMPORTANT]  
->  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](http://go.microsoft.com/fwlink/?LinkId=34733) 암호화 서비스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용합니다.  
+>  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](https://go.microsoft.com/fwlink/?LinkId=34733) 암호화 서비스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용합니다.  
   
 #### <a name="to-create-a-publication-that-allows-subscribers-to-initiate-snapshot-generation-and-delivery"></a>구독자가 스냅숏 생성 및 배달을 시작하도록 허용하는 게시를 만들려면  
   
@@ -265,7 +264,7 @@ PAUSE
   
 2.  게시 데이터베이스에 대해 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 클래스의 인스턴스를 만들고, 1단계에서 만든 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 인스턴스에 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 속성을 설정한 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>에서 `false`를 반환하면 데이터베이스가 있는지 확인합니다.  
   
-3.  하는 경우 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> 속성은 `false`, 설정 `true` 호출 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>합니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> 속성이 `false`이면 `true`로 설정한 후 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>를 호출합니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만들고 이 개체에 대해 다음 속성을 설정합니다.  
   
@@ -277,7 +276,7 @@ PAUSE
   
     -   <xref:Microsoft.SqlServer.Replication.MergePublication.MaxConcurrentDynamicSnapshots%2A>에 대해 실행할 최대 동적 스냅숏 작업 수. 구독자가 스냅숏 요청을 언제든지 시작할 수 있으므로 이 속성은 여러 구독자가 분할된 스냅숏을 동시에 요청할 경우 동시에 실행 가능한 스냅숏 에이전트 작업 수를 제한합니다. 최대 작업 수가 실행되고 있으면 새로 추가된 분할된 스냅숏 요청은 실행 중인 작업 중 하나가 완료될 때까지 지연됩니다.  
   
-    -   비트 논리 OR을 사용 하 여 (`|` Visual C# 및 `Or` Visual basic에서) 값을 추가 하는 연산자 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowSubscriberInitiatedSnapshot> 를 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
+    -   비트 논리 OR 연산자(Visual C#의 경우 `|`, Visual Basic의 경우 `Or`)를 사용하여 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowSubscriberInitiatedSnapshot>에 값 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>을 추가합니다.  
   
     -   스냅숏 에이전트가 실행되는 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> Windows 계정에 대한 자격 증명을 제공하는 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 의 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 필드.  
   
@@ -291,7 +290,7 @@ PAUSE
   
 6.  <xref:Microsoft.SqlServer.Replication.MergeArticle> 속성을 사용하여 게시에 아티클을 추가합니다. 매개 변수가 있는 필터를 정의하는 하나 이상의 아티클에 대해 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> 속성을 지정합니다. 필요한 경우 아티클 간 조인 필터를 정의하는 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> 개체를 만듭니다. 자세한 내용은 [아티클을 정의](publish/define-an-article.md)을 참조하세요.  
   
-7.  경우 값 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> 됩니다 `false`를 호출 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> 이 게시에 대 한 초기 스냅숏 에이전트 작업을 만듭니다.  
+7.  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> 값이 `false`이면 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>를 호출하여 이 게시에 대한 초기 스냅숏 에이전트 작업을 만듭니다.  
   
 8.  4단계에서 만든 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 개체의 <xref:Microsoft.SqlServer.Replication.MergePublication> 메서드를 호출합니다. 그러면 초기 스냅숏을 생성하는 에이전트 작업이 시작됩니다. 초기 스냅숏을 생성하고 스냅숏 에이전트에 대한 사용자 지정 일정을 정의하는 방법은 [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md)를 참조하세요.  
   
@@ -305,11 +304,11 @@ PAUSE
   
 2.  <xref:Microsoft.SqlServer.Replication.MergeArticle> 속성을 사용하여 게시에 아티클을 추가합니다. 매개 변수가 있는 필터를 정의하는 하나 이상의 아티클에 대해 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> 속성을 지정하고 아티클 간 조인 필터를 정의하는 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> 개체를 만듭니다. 자세한 내용은 [아티클을 정의](publish/define-an-article.md)을 참조하세요.  
   
-3.  경우 값 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> 됩니다 `false`를 호출 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> 이 게시에 대 한 스냅숏 에이전트 작업을 만듭니다.  
+3.  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>의 값이 `false`이면 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>를 호출하여 이 게시에 대한 스냅숏 에이전트 작업을 만듭니다.  
   
 4.  4단계에서 만든 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 개체의 <xref:Microsoft.SqlServer.Replication.MergePublication> 메서드를 호출합니다. 그러면 초기 스냅숏을 생성하는 에이전트 작업이 시작됩니다. 초기 스냅숏을 생성하고 스냅숏 에이전트에 대한 사용자 지정 일정을 정의하는 방법은 [초기 스냅숏 만들기 및 적용](create-and-apply-the-initial-snapshot.md)를 참조하십시오.  
   
-5.  값을 확인 `true` 에 대 한는 <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 속성을 초기 스냅숏을 사용할 준비가 되었는지 확인 합니다.  
+5.  <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 속성이 `true` 값인지 확인하여 초기 스냅숏을 사용할 준비가 되었는지 확인합니다.  
   
 6.  <xref:Microsoft.SqlServer.Replication.MergePartition> 클래스의 인스턴스를 만들고 다음 두 속성 중 하나 또는 모두를 사용하여 구독자에 대한 매개 변수가 있는 필터링 조건을 설정합니다.  
   

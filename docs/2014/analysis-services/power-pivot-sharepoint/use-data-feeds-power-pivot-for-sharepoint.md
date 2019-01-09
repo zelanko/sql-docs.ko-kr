@@ -11,12 +11,12 @@ ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f5e41f1dac0c9c0048b5751439209e17e289f4c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 354e1dce8bfb11f7eefc0f90df0868ebc01757e0
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178133"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365015"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>데이터 피드 사용(SharePoint용 PowerPivot)
   데이터 피드는 온라인 데이터 원본에서 생성되어 대상 문서 또는 애플리케이션으로 스트리밍되는 하나 이상의 데이터 스트림입니다. PowerPivot for Excel을 사용 중인 경우 데이터 피드를 통해 임의 데이터 원본의 기존 회사 또는 비즈니스 데이터를 Excel 2010 통합 문서의 PowerPivot 창으로 쉽게 가져올 수 있습니다. 통합 문서로 데이터 피드를 가져온 후 SharePoint 서버에서 예약한 데이터 새로 고침 작업에서 나중에 참조할 수 있습니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "48178133"
 ##  <a name="rsreport"></a> Reporting Services 보고서에서 데이터 피드 만들기  
  SQL Server 2008 R2 Reporting Services가 배포되어 있는 경우 새로운 Atom 렌더링 확장을 사용하여 기존 보고서에서 데이터 피드를 생성할 수 있습니다. 최상의 결과를 얻으려면 Excel 2010과 PowerPivot for Excel이 워크스테이션에 설치되어 있어야 합니다. 데이터 피드 내보내기에 응답하여 PowerPivot 클라이언트 응용 프로그램이 시작되고 테이블과 열이 스트리밍될 때 자동으로 이를 추가하고 연결합니다.  
   
- 보고서에서 데이터 피드를 내보내는 방법에 대한 자세한 내용은 [보고서 작성기 도움말 파일](http://go.microsoft.com/fwlink/?LinkId=154494)에서 [보고서에서 데이터 피드 생성&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)을 참조하세요.  
+ 보고서에서 데이터 피드를 내보내는 방법에 대한 자세한 내용은 [보고서 작성기 도움말 파일](https://go.microsoft.com/fwlink/?LinkId=154494)에서 [보고서에서 데이터 피드 생성&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)을 참조하세요.  
   
 > [!NOTE]  
 >  SharePoint 라이브러리에 게시되는 PowerPivot 통합 문서에 보고서 데이터를 다시 가져오는 데이터 새로 고침 되풀이 일정을 설정하려면 보고서 서버를 SharePoint 통합용으로 구성해야 합니다. PowerPivot for SharePoint 및 Reporting Services 함께 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [구성 및 보고서 서버 관리 &#40;Reporting Services SharePoint 모드&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md)합니다.  

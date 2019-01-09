@@ -1,24 +1,23 @@
 ---
-title: '1단계: 1단원 패키지 복사 | Microsoft Docs'
+title: '1단계: 1 단원 패키지 복사 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0237707fb5342b490806e3d0b8a2f32b3929ab38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 87b0564ddd3fada522b70858341da4ab08c5092e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118663"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376072"
 ---
-# <a name="step-1-copying-the-lesson-1-package"></a>1단계: 1단원 패키지 복사
+# <a name="step-1-copying-the-lesson-1-package"></a>1단계: 1 단원 패키지 복사
   이 태스크에서는 1단원에서 만든 Lesson 1.dtsx 패키지의 복사본을 만듭니다. 1단원을 완료하지 않은 경우에는 자습서에 포함되어 있는 완성된 1단원 패키지를 프로젝트에 추가한 다음 복사할 수도 있습니다. 2단원의 나머지 부분에서 이 새 복사본을 사용합니다.  
   
 ### <a name="to-create-the-lesson-2-package"></a>2단원 패키지를 만들려면  
@@ -49,11 +48,11 @@ ms.locfileid: "48118663"
   
 3.  **기존 패키지의 복사본 추가** 대화 상자의 **패키지 위치**에서 **파일 시스템**을 선택합니다.  
   
-4.  찾아보기 **(…)** 단추를 클릭하여 컴퓨터의 **Lesson 1.dtsx** 로 이동한 다음 **열기**를 클릭합니다.  
+4.  찾아보기 **(…)** 단추를 클릭하여 머신의 **Lesson 1.dtsx**로 이동한 다음, **열기**를 클릭합니다.  
   
      이 자습서에 대한 모든 단원 패키지를 다운로드하려면 다음을 수행합니다.  
   
-    1.  [Integration Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=275027)로 이동합니다.  
+    1.   [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=275027)로 이동합니다.  
   
     2.  **DOWNLOADS** 탭을 클릭합니다.  
   

@@ -12,12 +12,12 @@ ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c0dfc543659bdb8476d880bbe6021d0f3fd27bfd
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 3b0956c98b8e086fe8e44c69001e391d203d376b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032490"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520355"
 ---
 # <a name="domain-management-domain-list"></a>도메인 관리: 도메인 목록
   이 항목에서는 DQS( **)에서** 도메인 관리 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 페이지의 도메인 목록에 있는 각 컨트롤을 설명합니다. 이 창에서 관리 작업을 수행할 도메인을 선택할 수 있습니다. **도메인 관리** 페이지의 모든 탭 페이지에도 동일한 창이 사용됩니다.  

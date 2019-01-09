@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], FTP snapshots
@@ -15,12 +14,12 @@ ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9f5ae5a48b7ace7d0c8e9fffe1e5993bfd232da8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 2e3422e1fc41069bcb1f5f88c841212b5415cacd
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192583"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777565"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>FTP를 통해 스냅숏 배달
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 FTP를 통해 스냅숏을 배달하는 방법에 대해 설명합니다.  
@@ -47,7 +46,7 @@ ms.locfileid: "48192583"
   
 -   스냅숏 에이전트는 지정한 디렉터리에 대해 쓰기 권한이 있어야 하며 배포 에이전트 또는 병합 에이전트는 읽기 권한이 있어야 합니다. 끌어오기 구독을 사용하는 경우 공유 디렉터리를 \\\ftpserver\home\snapshots과 같이 UNC(Universal Naming Convention) 경로로 지정해야 합니다. 자세한 내용은 [스냅숏 폴더 보안 설정](../security/secure-the-snapshot-folder.md)을 참조하세요.  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
   
 -   FTP(파일 전송 프로토콜)를 사용하여 스냅숏 파일을 전송하려면 먼저 FTP 서버를 구성해야 합니다. 자세한 내용은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 인터넷 정보 서비스(IIS) 설명서를 참조하세요.  
   
@@ -59,13 +58,13 @@ ms.locfileid: "48192583"
  가능한 경우 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 스크립트 파일에 자격 증명을 저장하는 경우에는 이 파일에 보안을 설정해야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- FTP 서버를 구성한 후 **게시 속성 \<게시>** 대화 상자에서 이 서버에 대한 디렉터리 및 보안 정보를 지정합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요.  
+ FTP 서버를 구성한 후 **게시 속성 \<게시>** 대화 상자에서 이 서버에 대한 디렉터리 및 보안 정보를 지정합니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Publication Properties](view-and-modify-publication-properties.md)을 참조하세요.  
   
 #### <a name="to-specify-ftp-information"></a>FTP 정보를 지정하려면  
   
 1.  **게시 속성 - \<게시>** 대화 상자의 다음 두 페이지 중 하나에서 **구독자가 FTP(파일 전송 프로토콜)를 사용하여 스냅숏 파일을 다운로드하도록 허용**을 선택합니다.  
   
-    -   **FTP 스냅숏** 페이지 - [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]이전 버전을 실행하는 구독자에 대한 병합 게시와 스냅숏 및 트랜잭션 게시의 경우  
+    -    **FTP 스냅숏** 페이지 - [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]이전 버전을 실행하는 구독자에 대한 병합 게시와 스냅숏 및 트랜잭션 게시의 경우  
   
     -   **FTP 스냅숏 및 인터넷** 페이지 - [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이후 버전을 실행하는 게시자의 병합 게시의 경우  
   
@@ -140,11 +139,11 @@ ms.locfileid: "48192583"
   
 1.  게시 데이터베이스의 게시자에서 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)을 실행합니다. **@property**에 다음 중 한 가지 값을 지정하고, 이 설정의 새 값을 **@value**에 지정합니다.  
   
-    -   `ftp_address` -스냅숏을 배달 하는 데 사용 하는 FTP 서버의 주소입니다.  
+    -   `ftp_address` - 스냅숏을 배달하는 데 사용되는 FTP 서버의 주소입니다.  
   
-    -   `ftp_port` -FTP 서버에서 사용 되는 포트입니다.  
+    -   `ftp_port` - FTP 서버에서 사용되는 포트입니다.  
   
-    -   `ftp_subdirectory` -FTP 스냅숏에 사용 되는 기본 FTP 디렉터리의 하위 디렉터리입니다.  
+    -   `ftp_subdirectory` - FTP 스냅숏에 사용되는 기본 FTP 디렉터리의 하위 디렉터리입니다.  
   
     -   `ftp_login` - FTP 서버에 연결하는 데 사용되는 로그인입니다.  
   
@@ -158,11 +157,11 @@ ms.locfileid: "48192583"
   
 1.  게시 데이터베이스의 게시자에서 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 실행합니다. **@property**에 다음 중 한 가지 값을 지정하고, 이 설정의 새 값을 **@value**에 지정합니다.  
   
-    -   `ftp_address` -스냅숏을 배달 하는 데 사용 하는 FTP 서버의 주소입니다.  
+    -   `ftp_address` - 스냅숏을 배달하는 데 사용되는 FTP 서버의 주소입니다.  
   
-    -   `ftp_port` -FTP 서버에서 사용 되는 포트입니다.  
+    -   `ftp_port` - FTP 서버에서 사용되는 포트입니다.  
   
-    -   `ftp_subdirectory` -FTP 스냅숏에 사용 되는 기본 FTP 디렉터리의 하위 디렉터리입니다.  
+    -   `ftp_subdirectory` - FTP 스냅숏에 사용되는 기본 FTP 디렉터리의 하위 디렉터리입니다.  
   
     -   `ftp_login` - FTP 서버에 연결하는 데 사용되는 로그인입니다.  
   

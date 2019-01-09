@@ -16,12 +16,12 @@ ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1cd826013df93bff905134f18d58eb50ac962917
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b9c91e26c7c797bcde837d59c9447bc50d7d435
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143993"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376055"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>기본 제공 XML 스키마 컬렉션 참조(sys)
   사용자가 만드는 모든 데이터베이스의 **sys** 관계형 스키마에는 미리 정의된 **sys** XML 스키마 컬렉션이 있습니다. 이 스키마 컬렉션에는 이러한 미리 정의된 스키마가 포함되며 사용자가 만든 다른 XML 스키마 컬렉션으로부터 이러한 스키마를 액세스할 수 있습니다. 이러한 미리 정의된 스키마에 사용되는 접두사는 XQuery에서 의미를 갖습니다. 예약된 접두사는 **xml** 뿐입니다.  
@@ -31,17 +31,17 @@ xml = http://www.w3.org/XML/1998/namespace
 xs = http://www.w3.org/2001/XMLSchema  
 xsi = http://www.w3.org/2001/XMLSchema-instance  
 fn = http://www.w3.org/2004/07/xpath-functions  
-sqltypes = http://schemas.microsoft.com/sqlserver/2004/sqltypes  
+sqltypes = https://schemas.microsoft.com/sqlserver/2004/sqltypes  
 xdt = http://www.w3.org/2004/07/xpath-datatypes  
 (no prefix) = urn:schemas-microsoft-com:xml-sql  
-(no prefix) = http://schemas.microsoft.com/sqlserver/2004/SOAP  
+(no prefix) = https://schemas.microsoft.com/sqlserver/2004/SOAP  
 ```  
   
- **sqltypes** 네임스페이스에는 사용자가 만든 모든 XML 스키마 컬렉션에서 참조할 수 있는 구성 요소가 포함됩니다. **Microsoft 웹 사이트** 에서 [sqltypes](http://go.microsoft.com/fwlink/?linkid=31850)스키마를 다운로드할 수 있습니다. 기본 제공되는 구성 요소는 다음과 같습니다.  
+ **sqltypes** 네임스페이스에는 사용자가 만든 모든 XML 스키마 컬렉션에서 참조할 수 있는 구성 요소가 포함됩니다. **Microsoft 웹 사이트** 에서 [sqltypes](https://go.microsoft.com/fwlink/?linkid=31850)스키마를 다운로드할 수 있습니다. 기본 제공되는 구성 요소는 다음과 같습니다.  
   
 -   XSD 유형  
   
--   **lang**, **base**및 **space**XML 특성  
+-    **lang**, **base**및 **space**XML 특성  
   
 -   **sqltypes** 네임스페이스의 구성 요소  
   
@@ -65,9 +65,9 @@ CREATE XML SCHEMA COLLECTION SC AS '
    xmlns="http://www.w3.org/2001/XMLSchema"   
    targetNamespace="myNS"  
    xmlns:ns="myNS"  
-   xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
+   xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
    <import namespace="http://www.w3.org/XML/1998/namespace"/>  
-   <import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
+   <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
    <element name="root">  
       <complexType>  
           <sequence>  
@@ -98,7 +98,7 @@ GO
     CREATE XML SCHEMA COLLECTION SC AS '  
     <schema xmlns="http://www.w3.org/2001/XMLSchema"   
     targetNamespace    
-        ="http://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
+        ="https://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
           <element name="root" type="string"/>  
     </schema>'  
     GO  
@@ -123,9 +123,9 @@ GO
 CREATE XML SCHEMA COLLECTION SC AS '  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"   
         targetNamespace="myNS" xmlns:ns="myNS"  
-        xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes">  
+        xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
    <import     
-     namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
+     namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
       <simpleType name="myType">  
             <restriction base="s:varchar">  
                   <maxLength value="20"/>  
@@ -141,7 +141,7 @@ go
 ```  
 DECLARE @var XML(SC)  
 SET @var = '<root xmlns="myNS">My data</root>'  
-SELECT @var.query('declare namespace sqltypes = "http://schemas.microsoft.com/sqlserver/2004/sqltypes";  
+SELECT @var.query('declare namespace sqltypes = "https://schemas.microsoft.com/sqlserver/2004/sqltypes";  
 declare namespace ns="myNS";   
 data(/ns:root[1]) instance of sqltypes:varchar?')  
 GO  
@@ -149,7 +149,7 @@ GO
   
  `instance of sqltypes:varchar?` 식은 <`root`> 요소 값이 `@var` 변수와 연결된 스키마에 따라 **varchar**로부터 파생된 유형이기 때문에 TRUE를 반환합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [XML 스키마 컬렉션&#40;SQL Server&#41;](xml-schema-collections-sql-server.md)  
   
   

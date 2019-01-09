@@ -10,12 +10,12 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e05a241d81d4a051bd11dc8ce8b80858627afec0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 00db3d0ca027a0f188831281bb2c844b5bc8462d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514529"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202452"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>SQL Server 오프라인 도움말 및 도움말 뷰어
 
@@ -176,7 +176,7 @@ Visual Studio에서 설치된 도움말을 보려면:
 
 **SSMS 17.x에서 SQL Server 온라인 도움말을 보려면**
 
-- **도움말** 메뉴에서 **도움말 보기**를 클릭합니다. [https://docs.microsoft.com/sql/https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation)의 최신 SQL Server 2016/2017 설명서가 브라우저에 표시됩니다. 
+- **도움말** 메뉴에서 **도움말 보기**를 클릭합니다. [https://docs.microsoft.com/sql/ https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation)의 최신 SQL Server 2016/2017 설명서가 브라우저에 표시됩니다. 
 
    ![도움말 보기](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
@@ -207,7 +207,7 @@ SSMS 또는 VS의 대화 상자에서 F1 키를 누르거나 **도움말** 또�
 1. 도움말 메뉴에서 **도움말 기본 설정 지정**을 가리키고 **브라우저에서 시작** 또는 **도움말 뷰어에서 시작**을 선택합니다. 
 2. 표시되는 대화 상자에서 F1 키를 누르거나 **도움말** 또는 **?** 를 클릭하여 선택한 환경에서 상황에 맞는 온라인 항목을 봅니다.
 
->  [!NOTE]
+> [!NOTE]
 >  F1 도움말은 온라인 상태일 경우에만 작동합니다. F1 도움말에 대한 오프라인 소스는 없습니다. 
 
 ## <a name="systems-without-internet-access"></a>인터넷 액세스를 사용하지 않는 시스템

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - warnings [SQL Server]
@@ -17,12 +15,12 @@ ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 47c73cfe13a0fe611e2323694cca82738e618787
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d0343113b350c48cbc42ec5b79bbd0b849f2860
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120315"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749075"
 ---
 # <a name="creating-extended-stored-procedures"></a>확장 저장 프로시저 만들기
     
@@ -64,7 +62,7 @@ __declspec(dllexport) ULONG __GetXpVersion()
 > [!NOTE]  
 >  __declspec(dllexport)은 Microsoft 전용 컴파일러 확장입니다. 컴파일러에서 이 지시어를 지원하지 않으면 DEF 파일의 EXPORTS 섹션 아래에서 이 함수를 내보내야 합니다.  
   
- 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 추적을 사용 하 여 시작 플래그-T260 또는 시스템 관리자 권한이 있는 사용자는 DBCC TRACEON (260)를 실행 하는 경우 및 확장 저장 프로시저가 DLL __getxpversion (), 경고 메시지를 지원 하지 않습니다 (오류 8131: 확장 저장된 프로시저 DLL '%' 내보내지 않습니다 \__GetXpVersion().) 오류 로그에 출력 됩니다. (유의 \__GetXpVersion()에 밑줄 두 개를 사용 하 여 시작 합니다.)  
+ 추적 플래그 -T260으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 시작되었거나 시스템 관리자 권한이 있는 사용자가 DBCC TRACEON(260)을 실행하는데 확장 저장 프로시저 DLL이 __GetXpVersion()을 지원하지 않을 경우 경고 메시지 (오류 8131: 확장된 저장된 프로시저 DLL '%'을 내보내지 않습니다 \__GetXpVersion().) 오류 로그에 출력 됩니다. (유의 \__GetXpVersion()에 밑줄 두 개를 사용 하 여 시작 합니다.)  
   
  확장 저장 프로시저 DLL이 __GetXpVersion()을 내보내지만 함수에서 반환하는 버전이 서버에 필요한 버전보다 낮을 경우 함수에서 반환한 버전과 서버에 필요한 버전을 알리는 경고 메시지가 오류 로그에 출력됩니다. 잘못 된 값을 반환 하는이 메시지를 받게 되 면 \__GetXpVersion(), 또는 이전 버전 srv.h를 사용 하 여 컴파일하는 합니다.  
   

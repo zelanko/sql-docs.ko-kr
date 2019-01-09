@@ -7,26 +7,24 @@ ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.externaltools
 helpviewer_keywords:
 - External Tools dialog box
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c26b1be3e0a107978df25f5f66f9dbd6b330b618
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a69ead28479ba16df7439d6e551163be48737562
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783771"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328573"
 ---
 # <a name="external-tools"></a>외부 도구
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 이 대화 상자를 사용하여 SQL Server 구성 관리자 또는 메모장과 같은 외부 도구를 **도구** 메뉴에 추가할 수 있습니다. 외부 도구를 추가하면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 작업하는 동안 간편하게 다른 애플리케이션을 실행할 수 있습니다. 도구를 실행할 때 인수 및 작업 디렉터리를 지정할 수 있습니다. 또한 일부 도구의 출력을 출력 창에 표시할 수도 있습니다. **외부 도구** 대화 상자는 **도구** 메뉴에서 사용할 수 있습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 **메뉴 내용**  
 현재 **도구** 메뉴에 추가된 항목의 제목을 나열합니다. **위로 이동** 및 **아래로 이동** 화살표를 사용하여 메뉴에 나타나는 항목의 순서를 변경할 수 있습니다. **삭제** 단추를 사용하여 메뉴에서 항목을 제거할 수 있습니다.  
   
@@ -80,4 +78,3 @@ ms.locfileid: "47783771"
   
 > [!NOTE]  
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 시작 **메뉴에서** 바로 가기 속성을 보고 컴퓨터에 있는 파일의 위치를 확인합니다.  
-  

@@ -11,12 +11,12 @@ ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 825bc3d35a0080933c73853a05bf1a6dd9ed3df8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: f9a2172bdefebdbfd327d8d253e32cd63c254d8e
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069719"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52419875"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot 관리 대시보드 및 사용 데이터
   PowerPivot 관리 대시보드는 SharePoint 중앙 관리의 미리 정의된 보고서 및 웹 파트 컬렉션으로 이를 통해 SharePoint용 SQL Server PowerPivot 배포를 관리할 수 있습니다. 관리 대시보드는 서버 상태, 통합 문서 작업 및 데이터 새로 고침과 관련된 정보를 제공합니다. 대시보드는 SharePoint 사용 데이터 컬렉션의 데이터를 사용합니다.  
@@ -125,7 +125,7 @@ ms.locfileid: "48069719"
   
     7.  연결 이름을 입력하고 **다음**을 클릭합니다.  
   
-    8.  MDX 쿼리 지정에서 **디자인** 을 클릭하여 MDX 쿼리 디자이너를 열고 작업할 데이터를 조합합니다. “편집 모드 속성 이름의 형식이 잘못되었습니다.” **라는 오류 메시지가 나타나면** .ODC 파일을 편집합니다.  
+    8.  MDX 쿼리 지정에서 클릭 **디자인** 사용 하 여 작업할 데이터를 조합 MDX 쿼리 디자이너를 열려면 **오류 메시지를 표시 하는 경우** "편집 모드 속성 이름의 형식이 올바르게.", 확인 편집 합니다. ODC 파일입니다.  
   
     9. **확인** 을 클릭한 다음 **마침**을 클릭합니다.  
   

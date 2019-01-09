@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 08b0b5fe-298a-483f-b50a-73919a2513ce
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc3722060c17c64e61fc440b5b7525f29d00990d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: fa4a76f8452034175bd4033d8213372f2793e162
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057673"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775615"
 ---
 # <a name="audit-backup-and-restore-event-class"></a>감사 백업 및 이벤트 클래스 복원
   **Audit Backup/Restore** 이벤트 클래스는 백업 또는 복원 명령이 실행될 때마다 발생합니다.  

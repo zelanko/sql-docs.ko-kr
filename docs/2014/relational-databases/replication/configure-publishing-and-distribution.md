@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], distribution
@@ -15,12 +14,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c93dda12a8a100f78db3568620afdffacc1258bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 013e2234b33d9277cabb60d95bf2c8db783e93cf
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087043"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53350073"
 ---
 # <a name="configure-publishing-and-distribution"></a>게시 및 배포 구성
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 게시 및 배포를 구성하는 방법에 대해 설명합니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "48087043"
   
 #### <a name="to-configure-distribution"></a>배포를 구성하려면  
   
-1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 배포자가 될 서버에 연결한 다음 서버 노드를 확장합니다. 게시자와 배포자가 같은 서버인 경우가 많습니다.  
+1.   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 배포자가 될 서버에 연결한 다음 서버 노드를 확장합니다. 게시자와 배포자가 같은 서버인 경우가 많습니다.  
   
 2.  **복제** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **배포 구성**을 클릭합니다.  
   
@@ -131,7 +130,7 @@ ms.locfileid: "48087043"
 5.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 메서드를 호출하여 배포자를 설치합니다. 원격 배포자에 연결할 때 게시자에서 사용되는 보안 암호 및 3단계에서 만든 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 개체를 지정합니다. 자세한 내용은 [배포자 보안 설정](security/secure-the-distributor.md)을 참조하세요.  
   
     > [!IMPORTANT]  
-    >  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](http://go.microsoft.com/fwlink/?LinkId=34733) 암호화 서비스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용합니다.  
+    >  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](https://go.microsoft.com/fwlink/?LinkId=34733) 암호화 서비스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용합니다.  
   
 6.  <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 클래스의 인스턴스를 만듭니다.  
   
@@ -156,7 +155,7 @@ ms.locfileid: "48087043"
 11. <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 메서드를 호출합니다. 5단계에서 지정된 원격 배포자 이름 및 원격 배포자 암호를 전달합니다.  
   
     > [!IMPORTANT]  
-    >  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 Windows .NET Framework에서 제공하는 [암호화 서비스](http://go.microsoft.com/fwlink/?LinkId=34733) 를 사용합니다.  
+    >  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 Windows .NET Framework에서 제공하는 [암호화 서비스](https://go.microsoft.com/fwlink/?LinkId=34733) 를 사용합니다.  
   
 ###  <a name="PShellExample"></a> 예(RMO)  
  RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 복제 게시 및 배포를 구성할 수 있습니다.  
@@ -165,11 +164,11 @@ ms.locfileid: "48087043"
   
  [!code-vb[HowTo#rmo_vb_AddDistPub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_adddistpub)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [배포자 및 게시자 속성 보기 및 수정](view-and-modify-distributor-and-publisher-properties.md)   
  [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
  [배포 구성](configure-distribution.md)   
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
+ [복제 관리 개체 개념](concepts/replication-management-objects-concepts.md)   
  [AlwaysOn 가용성 그룹에 대 한 복제 구성 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) 
   
   

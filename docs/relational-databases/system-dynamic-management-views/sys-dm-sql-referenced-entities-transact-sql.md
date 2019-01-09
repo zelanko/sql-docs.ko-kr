@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e1ada8f652b88e0cb3570f1fada7f4f50d28e35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7494577b9af11f8000fd2676dd56ee3b8c960756
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756241"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213462"
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47756241"
   
 -   파티션 함수  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -97,7 +97,7 @@ sys.dm_sql_referenced_entities (
 |is_select_all|**bit**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = 개체가 SELECT * 절에서 사용됩니다(개체 수준만 해당).|  
 |is_all_columns_found|**bit**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = 개체에 대한 모든 열 종속성을 찾을 수 있습니다.<br /><br /> 0 = 개체에 대한 열 종속성을 찾을 수 없습니다.|
 |is_insert_all|**bit**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = 개체 (개체 수준에만 해당) 열 목록 없이 INSERT 문에서 사용 됩니다.|  
-|is_incomplete|**bit**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = 개체 또는 열에 바인딩 오류가 잘못 되었습니다.|
+|is_incomplete|**bit**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br /><br /> 1 = 개체 또는 열에 바인딩 오류가 잘못 되었습니다.|
   
 ## <a name="exceptions"></a>예외  
  다음과 같은 경우 빈 결과 집합을 반환합니다.  
@@ -266,7 +266,7 @@ GO
  ```
  
 ### <a name="f-returning-object-or-column-usage"></a>6. 개체 또는 열 사용법 반환  
- 다음 예에서는 저장 프로시저 `HumanResources.uspUpdateEmployeePersonalInfo`의 개체 및 열 종속성을 반환합니다. 이 절차는 열을 업데이트 `NationalIDNumber`, `BirthDate,``MaritalStatus`, 및 `Gender` 의 `Employee` 테이블 기준으로 지정 된 `BusinessEntityID` 값입니다. 다른 저장 프로시저인 `upsLogError`는 실행 오류를 캡처하는 TRY…CATCH 블록에 정의되어 있습니다. `is_selected`, `is_updated` 및 `is_select_all` 열은 참조하는 개체 내에 이러한 개체 및 열이 사용되는 방식에 대한 정보를 반환합니다. 수정된 테이블 및 열은 is_updated 열에서 1로 표시됩니다. `BusinessEntityID` 열만 선택되며 저장 프로시저 `uspLogError`는 선택되거나 수정되지 않습니다.  
+ 다음 예에서는 저장 프로시저 `HumanResources.uspUpdateEmployeePersonalInfo`의 개체 및 열 종속성을 반환합니다. 이 절차는 열을 업데이트 `NationalIDNumber`, `BirthDate,``MaritalStatus`, 및 `Gender` 의 `Employee` 테이블 기준으로 지정 된 `BusinessEntityID` 값입니다. 다른 저장된 프로시저 `upsLogError` 에 정의 된... 실행 오류를 캡처하려면 블록을 CATCH 합니다. `is_selected`, `is_updated` 및 `is_select_all` 열은 참조하는 개체 내에 이러한 개체 및 열이 사용되는 방식에 대한 정보를 반환합니다. 수정된 테이블 및 열은 is_updated 열에서 1로 표시됩니다. `BusinessEntityID` 열만 선택되며 저장 프로시저 `uspLogError`는 선택되거나 수정되지 않습니다.  
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   

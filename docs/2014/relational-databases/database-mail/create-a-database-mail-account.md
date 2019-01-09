@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Mail [SQL Server], accounts
@@ -14,25 +13,25 @@ ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d066f107460e9671d4f5840271d8c4a466eb968
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a286c7d4c0ff42389830713a6c42c89a7273f1d1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081390"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798365"
 ---
 # <a name="create-a-database-mail-account"></a>데이터베이스 메일 계정 만들기
   **데이터베이스 메일 구성 마법사** 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 데이터베이스 메일 계정을 만들 수 있습니다.  
   
 -   **시작하기 전 주의 사항:**  [필수 구성 요소](#Prerequisites)  
   
--   **데이터베이스 메일 계정을 만들려면:**  [데이터베이스 메일 구성 마법사](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **데이터베이스 메일 계정을 만들려면:**  [데이터베이스 메일 구성 마법사](#SSMSProcedure), [TRANSACT-SQL](#TsqlProcedure)  
   
--   **후속 작업:**  [데이터베이스 메일을 구성하기 위한 다음 단계](#FollowUp)  
+-   **후속 작업:**  [데이터베이스 메일을 구성 하려면 다음 단계](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
   
 -   전자 메일을 보내는 데 사용할 SMTP(Simple Mail Transfer Protocol) 서버의 이름과 포트 번호를 결정합니다. SMTP 서버에 인증이 필요한 경우 SMTP 서버의 사용자 이름과 암호를 결정합니다.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48081390"
   
 -   **프로필 및 계정 관리** 페이지에서 **새 계정 만들기** 를 선택하고 **다음**을 클릭합니다.  
   
--   **새 계정** 페이지에서 계정 이름, 설명, 메일 서버 정보 및 인증 유형을 지정합니다. **다음**을 클릭합니다.  
+-   **새 계정** 페이지에서 계정 이름, 설명, 메일 서버 정보 및 인증 유형을 지정합니다.  **다음**을 클릭합니다.  
   
 -   **마법사 완료** 페이지에서 수행할 동작을 검토하고 **마침** 을 클릭하여 새 계정 만들기를 완료합니다.  
   
@@ -85,7 +84,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-##  <a name="FollowUp"></a> 후속 작업: 데이터베이스 메일을 구성하기 위한 다음 단계  
+##  <a name="FollowUp"></a> 후속편: 데이터베이스 메일을 구성하기 위한 다음 단계  
   
 -   [데이터베이스 메일 프로필 만들기](create-a-database-mail-profile.md)  
   

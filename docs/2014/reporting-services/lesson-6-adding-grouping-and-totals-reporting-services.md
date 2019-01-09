@@ -1,5 +1,5 @@
 ---
-title: '6단원: 그룹화 및 합계 추가(Reporting Services) | Microsoft Docs'
+title: '6단원: 그룹화 및 합계 (Reporting Services) 추가 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5a372f230cfc2fc63e59787b8f9b674928f72368
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7565cf64d64197a261c36fb755e3f20a65f1fa27
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095301"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53356459"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>6단원: 그룹화 및 합계 추가(Reporting Services)
   보고서에 그룹화 및 합계를 추가하여 데이터를 구성하고 요약할 수 있습니다.  
   
- 보고서에 누계 추가 대 한 자세한 내용은 curah.microsoft.com의이 큐 레이이 션을 참조 하세요. [Reporting Services (SSRS) 보고서에 합계 추가](http://go.microsoft.com/fwlink/p/?LinkId=403698)합니다.  
+ 보고서에 누계 추가에 대한 자세한 내용은 curah.microsoft.com의 [Reporting Services (SSRS) 보고서에 합계 추가](https://go.microsoft.com/fwlink/p/?LinkId=403698)합니다.  
   
  **항목 내용**  
   
@@ -123,13 +123,13 @@ ms.locfileid: "48095301"
   
 3.  에 **TargetServerURL** 보고서 서버의 이름 이름의 예를 들어 입력 **http://\<서버 이름 > / reportserver**  
   
-4.  **확인**을 클릭합니다.  
+4.   **확인**을 클릭합니다.  
   
 5.  도구 모음에서 **빌드** 를 클릭한 후 **자습서 배포**를 클릭합니다.  
   
      출력 창에 다음과 비슷한 메시지가 표시되면 배포가 성공한 것입니다.  
   
-    > ------ 빌드 시작: 자습서, 구성: 디버그 ------'Sales Orders.rdl'을 건너 뛰는 중입니다. 항목은 최신 상태입니다. 빌드 완료--0 개 오류, 0 개 경고---배포 시작: 프로젝트: 자습서, 구성: 디버그--- http:// 배포\<서버 이름 > reportserverDeploying 보고서 ' 자습서/Sales Orders'. 배포 완료--0 개 오류, 0 개 경고 === 빌드: 1 성공 또는 최신, 0 개 실패, 0 개 건너뜀 === 배포: 1 개 성공, 실패 0, 0 개 건너뜀 ===  
+    > ------ 빌드 시작: 프로젝트: 자습서, 구성: 디버그 ------'Sales Orders.rdl'을 건너 뛰는 중입니다. 항목이 최신입니다. 빌드 완료 -- 0개 오류, 0개 경고------ 배포 시작: 프로젝트: 자습서, 구성: 디버그--- http:// 배포\<서버 이름 > reportserverDeploying 보고서 ' 자습서/Sales Orders'. 배포 완료--0 개 오류, 0 개 경고 === 빌드: 1개 성공 또는 최신, 0개 실패, 0개 생략 ==================== 배포: 1개 성공, 0개 실패, 0개 생략 ==========  
   
      다음과 비슷한 오류 메시지가 표시되면 보고서 서버에 대한 권한이 있는지 확인하고 관리자 권한으로 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 를 시작했는지 확인합니다.  
   
@@ -139,12 +139,12 @@ ms.locfileid: "48095301"
   
      보고서 관리자 URL로 이동합니다. 예: `http://<server name>/reports`  
   
-7.  보고서가 포함 된 폴더로 이동 하 고 보고서의 이름을 클릭 `Sales Orders` 브라우저에서 렌더링된 된 보고서를 볼 수 있습니다.  
+7.  보고서가 포함된 폴더로 이동하고 `Sales Orders` 보고서의 이름을 클릭하여 브라우저에서 렌더링된 보고서를 봅니다.  
   
 ## <a name="next-steps"></a>다음 단계  
  기본 테이블 보고서 만들기 자습서를 성공적으로 완료했습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [필터링, 그룹화 및 데이터 정렬 &#40;보고서 작성기 및 SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>관련 항목:  
+ [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: c6dbe5e5-b523-4b7c-94f0-eb1dfbce2056
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 265167b497b89befc87680270c2fd333f8fb4df6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 38c59357d402cd12d73fecc91c4f40a6ca0ec32b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056113"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795215"
 ---
 # <a name="audit-login-change-password-event-class"></a>Audit Login Change Password 이벤트 클래스
    **Audit Login Change Password** 이벤트 클래스는 사용자가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 암호를 변경할 때마다 발생합니다.  

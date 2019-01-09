@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/22/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
@@ -14,12 +13,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ac9a6a1b2d4107d420bab68659b6d05f25805a38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 0650d15ece36593139ae804f6535315eacbf9294
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067033"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371555"
 ---
 # <a name="what39s-new-database-engine"></a>새로운&#39;s (데이터베이스 엔진)
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 최신 릴리스에는 데이터 저장소 시스템을 디자인, 개발 및 유지 관리하는 설계자, 개발자 및 관리자의 작업 효율성과 생산성을 증대시키는 새로운 기능과 향상된 기능이 추가되었습니다. 다음은 [!INCLUDE[ssDE](../includes/ssde-md.md)]에서 향상된 기능에 대한 설명입니다.  
@@ -31,11 +30,11 @@ ms.locfileid: "48067033"
  
   
 ###  <a name="DataFiles"></a> Windows Azure에서 SQL Server 데이터 파일  
- [Windows Azure의 SQL Server 데이터 파일](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) 에 대 한 네이티브 지 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 파일을 Windows Azure Blob으로 저장 합니다. 이 기능을 통해 Microsoft Azure BLOB 저장소의 데이터에 대한 전용 저장소 위치와 함께 온-프레미스 또는 Microsoft Azure의 가상 머신에서 실행 중인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 데이터베이스를 만들 수 있습니다.  
+ [Windows Azure의 SQL Server 데이터 파일](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) 은 Windows Azure BLOB으로 저장된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 파일을 기본으로 지원할 수 있게 합니다. 이 기능을 통해 Microsoft Azure BLOB 저장소의 데이터에 대한 전용 저장소 위치와 함께 온-프레미스 또는 Microsoft Azure의 가상 머신에서 실행 중인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 데이터베이스를 만들 수 있습니다.  
   
   
 ###  <a name="AzureVM"></a> Windows의 SQL Server 데이터베이스를 호스팅할 Azure 가상 머신  
- 사용 된 [Windows Azure 가상 컴퓨터에 SQL Server 데이터베이스 배포](http://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) 인스턴스에서 데이터베이스를 호스트 하는 마법사를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Windows Azure 가상 컴퓨터에서.  
+ [Microsoft Azure 가상 머신에 SQL Server 데이터베이스 배포](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) 마법사를 사용하여 Microsoft Azure 가상 머신의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 데이터베이스를 호스팅합니다.  
   
   
 ###  <a name="Backup"></a> 백업 및 복원 향상  
@@ -43,19 +42,19 @@ ms.locfileid: "48067033"
   
 -   **URL에 대한 SQL Server 백업**  
   
-     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], PowerShell 및 SMO에서만 지원되는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP1 CU2에 [!INCLUDE[tsql](../includes/tsql-md.md)] URL 백업이 도입되었습니다. In [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 Windows Azure BLOB 저장소 서비스로 백업하거나 이 서비스에서 복원할 수 있습니다. 새로운 옵션은 백업 태스크와 유지 관리 계획에 사용할 수 있습니다. 자세한 내용은 [Using Backup Task in SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS)를 [SQL Server Backup to URL Using Maintenance Plan Wizard](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz), 및 [Windows Azure storage에서 복원를 사용 하 여 SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)합니다.  
+     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], PowerShell 및 SMO에서만 지원되는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP1 CU2에 [!INCLUDE[tsql](../includes/tsql-md.md)] URL 백업이 도입되었습니다. In [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 Windows Azure BLOB 저장소 서비스로 백업하거나 이 서비스에서 복원할 수 있습니다. 새로운 옵션은 백업 태스크와 유지 관리 계획에 사용할 수 있습니다. 자세한 내용은 [Using Backup Task in SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS), [SQL Server Backup to URL Using Maintenance Plan Wizard](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)및 [Restoring from Windows Azure storage Using SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)을 참조하세요.  
   
 -   **Windows Azure에 대한 SQL Server 관리되는 백업**  
   
-     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] URL 백업을 기반으로 하는 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]는 데이터베이스 및 로그 백업을 관리하고 예약하기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 제공하는 서비스입니다. 이 릴리스에서는 Windows Azure 저장소에 대한 백업만 지원됩니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 데이터베이스 수준뿐만 아니라 인스턴스 수준에서도 구성될 수 있으므로 데이터베이스 수준의 세부 제어와 인스턴스 수준의 자동화를 활용할 수 있도록 합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]는 온-프레미스로 실행되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스와 Windows Azure 가상 컴퓨터에서 실행되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 구성할 수 있지만, Windows Azure 가상 컴퓨터에서 실행되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 사용하는 것이 좋습니다. 자세한 내용은 [SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)합니다.  
+     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] URL 백업을 기반으로 하는 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]는 데이터베이스 및 로그 백업을 관리하고 예약하기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 제공하는 서비스입니다. 이 릴리스에서는 Windows Azure 저장소에 대한 백업만 지원됩니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 데이터베이스 수준뿐만 아니라 인스턴스 수준에서도 구성될 수 있으므로 데이터베이스 수준의 세부 제어와 인스턴스 수준의 자동화를 활용할 수 있도록 합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]는 온-프레미스로 실행되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스와 Windows Azure 가상 컴퓨터에서 실행되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 구성할 수 있지만, Windows Azure 가상 컴퓨터에서 실행되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 사용하는 것이 좋습니다. 자세한 내용은 [SQL Server Managed  Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)을 참조하세요.  
   
 -   **백업 위한 암호화**  
   
-     이제 백업 작업 중에 백업 파일을 암호화하도록 선택할 수 있습니다.  AES 128, AES 192, AES 256 및 Triple DES를 비롯한 몇 가지 암호화 알고리즘이 지원됩니다. 인증서나 비대칭 키를 사용하여 백업 중에 암호화를 수행해야 합니다. 자세한 내용은 [백업 암호화](../relational-databases/backup-restore/backup-encryption.md)합니다.  
+     이제 백업 작업 중에 백업 파일을 암호화하도록 선택할 수 있습니다.  AES 128, AES 192, AES 256 및 Triple DES를 비롯한 몇 가지 암호화 알고리즘이 지원됩니다. 인증서나 비대칭 키를 사용하여 백업 중에 암호화를 수행해야 합니다. 자세한 내용은 [백업 암호화](../relational-databases/backup-restore/backup-encryption.md)를 참조하십시오.  
   
   
 ###  <a name="CE"></a> 카디널리티 추정에 대 한 새로운 디자인  
- 카디널리티 평가기 라고 하는 카디널리티 추정 논리가에서 다시 디자인 되었습니다 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 쿼리 계획의 품질을 향상 시키는 있어 쿼리 성능을 향상 시킵니다. 새로운 카디널리티 평가기는 최신 OLTP 및 데이터 웨어하우징 작업에서 제대로 작동하는 가정 및 알고리즘을 통합합니다. 이 평가기는 최신 작업에 대한 자세한 카디널리티 추정 연구와 SQL Server 카디널리티 평가기를 향상시키기 위해 과거 15년 동안 학습한 지식을 기반으로 합니다. 고객의 의견은 대부분의 쿼리가 변경을 통해 이점을 얻거나 변경되지 않은 채로 유지되는 반면 소수의 쿼리는 이전 카디널리티 평가기와 비교했을 때 회귀를 보여줄 수도 있음을 나타냅니다. 성능 튜닝 및 권장 사항을 테스트에 대 한 참조 [카디널리티 추정 &#40;SQL Server&#41;](../relational-databases/performance/cardinality-estimation-sql-server.md)합니다.  
+ 카디널리티 평가기라고 하는 카디널리티 추정 논리가 쿼리 계획의 품질을 개선하여 쿼리 성능을 향상시키도록 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 에서 다시 디자인되었습니다. 새로운 카디널리티 평가기는 최신 OLTP 및 데이터 웨어하우징 작업에서 제대로 작동하는 가정 및 알고리즘을 통합합니다. 이 평가기는 최신 작업에 대한 자세한 카디널리티 추정 연구와 SQL Server 카디널리티 평가기를 향상시키기 위해 과거 15년 동안 학습한 지식을 기반으로 합니다. 고객의 의견은 대부분의 쿼리가 변경을 통해 이점을 얻거나 변경되지 않은 채로 유지되는 반면 소수의 쿼리는 이전 카디널리티 평가기와 비교했을 때 회귀를 보여줄 수도 있음을 나타냅니다. 성능 튜닝 및 권장 사항을 테스트에 대 한 참조 [카디널리티 추정 &#40;SQL Server&#41;](../relational-databases/performance/cardinality-estimation-sql-server.md)합니다.  
    
   
 ###  <a name="Durability"></a> 지연 된 내구성  
@@ -75,9 +74,9 @@ ms.locfileid: "48067033"
   
 -   FCI(장애 조치(Failover) 클러스터 인스턴스)는 이제 CSV(클러스터 공유 볼륨)를 클러스터 공유 디스크로 사용할 수 있습니다. 자세한 내용은 [Always On 장애 조치 클러스터 인스턴스](../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)합니다.  
   
--   새 시스템 함수인 [sys.fn_hadr_is_primary_replica](/sql/relational-databases/system-functions/sys-fn-hadr-is-primary-replica-transact-sql)와 새로운 DMV 인 [sys.dm_io_cluster_valid_path_names](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql), 사용할 수 있습니다.  
+-   새로운 시스템 함수인 [sys.fn_hadr_is_primary_replica](/sql/relational-databases/system-functions/sys-fn-hadr-is-primary-replica-transact-sql)와 새로운 DMV인 [sys.dm_io_cluster_valid_path_names](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql)를 사용할 수 있습니다.  
   
--   Dmv가 향상 되어 이제 FCI 정보를 반환 합니다. [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql)를 [sys.dm_hadr_cluster_members](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql), 및 [sys.dm_hadr_cluster_networks](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql)합니다.  
+-   [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql), [sys.dm_hadr_cluster_members](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql)및 [sys.dm_hadr_cluster_networks](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql)등의 DMV가 향상되어 이제 FCI 정보를 반환합니다.  
   
   
 ###  <a name="OIR"></a> 파티션 전환 및 인덱싱  
@@ -97,15 +96,15 @@ ms.locfileid: "48067033"
   
 -   **실행 계획**  
   
-     SHOWPLAN에서는 columnstore 인덱스 정보를 표시합니다. **EstimatedExecutionMode** 및 **ActualExecutionMode** 속성에 가능한 두 개의 값은 **Batch** 또는 **Row**입니다.  **Storage** 속성에 가능한 두 개의 값은 **RowStore** 및 **ColumnStore**입니다.  
+     SHOWPLAN에서는 columnstore 인덱스 정보를 표시합니다. 합니다 **EstimatedExecutionMode** 하 고 **ActualExecutionMode** 속성에 두 개의 가능한 값: **일괄 처리** 나 **행**합니다.  합니다 **저장소** 속성에 두 개의 가능한 값: **RowStore** 하 고 **ColumnStore**합니다.  
   
 -   **보관 데이터 압축**  
   
-     ALTER INDEX … REBUILD에는 columnstore 인덱스의 지정된 파티션을 추가로 압축하는 새로운 COLUMNSTORE_ARCHIVE 데이터 압축 옵션이 있습니다. 이 옵션을 보관 또는 데이터 저장소 크기를 줄여야 하는 기타 상황에 사용할 수 있으며 저장 및 검색에 더 많은 시간을 이용할 수 있습니다. 자세한 내용은 [ALTER INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)를 참조하세요.  
+     ALTER INDEX... REBUILD에는 columnstore 인덱스의 지정된 파티션을 추가로 압축하는 새로운 COLUMNSTORE_ARCHIVE 데이터 압축 옵션이 있습니다. 이 옵션을 보관 또는 데이터 저장소 크기를 줄여야 하는 기타 상황에 사용할 수 있으며 저장 및 검색에 더 많은 시간을 이용할 수 있습니다. 자세한 내용은 [ALTER INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)를 참조하세요.  
    
   
 ###  <a name="Buffer"></a> 버퍼 풀 확장  
- 합니다 [버퍼 풀 확장](configure-windows/buffer-pool-extension.md) 는 비휘발성 임의 액세스 메모리 (NvRAM) 확장으로 SSD (반도체 드라이브)의 원활한 통합을 제공 합니다 [!INCLUDE[ssDE](../includes/ssde-md.md)] 버퍼 풀 I/O 처리량을 크게 향상 합니다.  
+  [버퍼 풀 확장](configure-windows/buffer-pool-extension.md) 에서는 I/O 처리량을 크게 향상하기 위해 NvRAM(비휘발성 RAM) 확장인 SSD(반도체 드라이브)를 [!INCLUDE[ssDE](../includes/ssde-md.md)] 버퍼 풀에 원활하게 통합할 수 있는 기능을 제공합니다.  
    
   
 ###  <a name="Stats"></a> 증분 통계  
@@ -119,7 +118,7 @@ ms.locfileid: "48067033"
   
   
 ###  <a name="OnlineEvent"></a> Online Index Operation 이벤트 클래스  
- 이제 Progress Report: Online Index Operation 이벤트 클래스에 **PartitionId** 및 **PartitionNumber**라는 두 개의 새 데이터 열이 있습니다. 자세한 내용은 [Progress Report: Online Index Operation 이벤트 클래스](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md)합니다.  
+ 이제 Progress Report: Online Index Operation 이벤트 클래스에 **PartitionId** 하 고 **PartitionNumber**합니다. 자세한 내용은 참조 하세요. [Progress Report: Online Index Operation 이벤트 클래스](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md)합니다.  
   
   
 ###  <a name="Compat"></a> 데이터베이스 호환성 수준  
@@ -130,8 +129,8 @@ ms.locfileid: "48067033"
 ### <a name="inline-specification-of-clustered-and-nonclustered"></a>CLUSTERED 및 NONCLUSTERED의 인라인 사양  
  `CLUSTERED` 및 `NONCLUSTERED` 인덱스의 인라인 사양은 이제 디스크 기반 테이블에 허용됩니다. 인라인 인덱스를 사용하여 테이블을 만드는 것은 해당 `CREATE INDEX` 문 다음에 테이블 만들기를 실행하는 것과 같습니다. 포함된 열 및 필터 조건은 인라인 인덱스에서는 지원되지 않습니다.  
   
-### <a name="select--into"></a>SELECT … INTO  
- `SELECT … INTO` 문이 향상되어 이제 병렬로 실행될 수 있습니다. 데이터베이스 호환성 수준은 110 이상이어야 합니다.  
+### <a name="select--into"></a>선택... INTO  
+ `SELECT ... INTO` 문이 향상되어 이제 병렬로 실행될 수 있습니다. 데이터베이스 호환성 수준은 110 이상이어야 합니다.  
   
 ### <a name="includetsqlincludestsql-mdmd-enhancements-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 향상된 [!INCLUDE[tsql](../includes/tsql-md.md)] 기능  
  에 대 한 자세한 합니다 [!INCLUDE[tsql](../includes/tsql-md.md)] 메모리 내 OLTP를 지원 하기 위해 변경 내용 [메모리 내 OLTP에 대 한 TRANSACT-SQL 지원](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)합니다.  

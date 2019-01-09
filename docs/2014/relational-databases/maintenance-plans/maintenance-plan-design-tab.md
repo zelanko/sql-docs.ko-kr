@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.planeditor.f1
@@ -15,12 +14,12 @@ ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b50ff05de00f342c8a53bdb7286314014d54f6b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8f47fec03c992612f0139904bf869db549ec9b6
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073579"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763745"
 ---
 # <a name="maintenance-plan-design-tab"></a>유지 관리 계획(디자인 탭)
   **유지 관리 계획(디자인 탭)** 을 사용하여 유지 관리 계획 및 해당 하위 계획의 속성을 지정할 수 있습니다. 도구 상자에서 계획 디자이너로 태스크를 끌어다 놓은 다음 태스크 그룹을 마우스 오른쪽 단추로 클릭하여 분기 실행 경로를 만듭니다. 유지 관리 계획은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에이전트 작업으로 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 패키지로 저장됩니다.  
@@ -69,7 +68,7 @@ ms.locfileid: "48073579"
   
  디자인 화면에 유지 관리 태스크를 끌어다 놓은 후에는 필요에 따라 해당 속성을 편집할 수 있습니다. 예를 들어 데이터베이스 백업 태스크에서 백업할 특정 데이터베이스는 계획에 작업을 추가한 후에 지정합니다. 디자인 화면에서 제대로 구성되어 있지 않은 태스크에는 흰색 X 표시가 있는 빨간색 아이콘이 나타납니다.  
   
- 계획에 유지 관리 태스크를 추가하려면 **유지 관리 계획 태스크** 도구 상자에서 계획 디자인 화면으로 태스크 아이콘을 끌어다 놓거나 도구 상자에서 해당 태스크를 두 번 클릭합니다. 그러면 현재 활성화되어 있는 디자이너 화면에 해당 태스크가 추가됩니다. **유지 관리 계획 태스크** 도구 상자가 보이지 않으면 **의** 보기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **도구 상자** 를 선택합니다. 그런 다음 **도구 상자** 창에서 **유지 관리 계획 태스크** 노드를 확장합니다.  
+ 계획에 유지 관리 태스크를 추가하려면 **유지 관리 계획 태스크** 도구 상자에서 계획 디자인 화면으로 태스크 아이콘을 끌어다 놓거나 도구 상자에서 해당 태스크를 두 번 클릭합니다. 그러면 현재 활성화되어 있는 디자이너 화면에 해당 태스크가 추가됩니다.  **유지 관리 계획 태스크** 도구 상자가 보이지 않으면 **의** 보기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **도구 상자** 를 선택합니다. 그런 다음 **도구 상자** 창에서 **유지 관리 계획 태스크** 노드를 확장합니다.  
   
  계획에서 태스크를 제거하려면 디자이너 화면에서 태스크를 선택한 다음 **DELETE** 키를 누르거나 태스크를 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
   

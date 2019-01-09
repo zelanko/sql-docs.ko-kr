@@ -19,20 +19,20 @@ ms.assetid: a4cd47fe-2127-4930-b18f-3edd17ee9a65
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4121f988d8cdaa22d2249a76aeb542f80fbebd8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d69af9ad01e001394836449f97c48b4dae8dab7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086353"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53376935"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Microsoft Naive Bayes 알고리즘 기술 참조
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 예측 모델링용 분류 알고리즘입니다. 이 알고리즘은 입력 열과 예측 가능한 열 간의 조건부 확률을 계산하며 열이 서로 독립적이라고 가정합니다. 이와 같은 독립성 가정으로 인해 Naive Bayes라는 이름이 붙었습니다.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 예측 모델링용 분류 알고리즘입니다. 이 알고리즘은 입력 열과 예측 가능한 열 간의 조건부 확률을 계산하며 열이 서로 독립적이라고 가정합니다. 이와 같은 독립성 가정으로 인해 Naive Bayes라는 이름이 붙었습니다.  
   
 ## <a name="implementation-of-the-microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes 알고리즘 구현  
  이 알고리즘은 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘보다 계산 과정이 단순하여 입력 열과 예측 가능한 열 간의 관계를 검색하는 마이닝 모델을 신속하게 생성하는 데 유용합니다. 이 알고리즘은 입력 특성 값과 출력 특성 값의 각 쌍을 고려합니다.  
   
- 이 설명서에서는 Bayes 정리의 수학적 속성에 대해 설명하지 않습니다. 이에 대한 자세한 내용은 [Bayesian 네트워크 학습: 지식 및 통계 데이터의 조합](http://go.microsoft.com/fwlink/?LinkId=207029)이라는 제목의 Microsoft Research 자료를 참조하세요.  
+ Bayes 정리의 수학적 속성 설명은이 설명서;의 범위를 벗어납니다. 자세한 내용은 이라는 제목의 Microsoft research 백서를 참조 하세요. [Learning Bayesian Networks: 지식 및 통계 데이터의 조합](https://go.microsoft.com/fwlink/?LinkId=207029)합니다.  
   
  모든 모델의 확률이 잠재적인 누락 값을 설명하기 위해 조정되는 방식에 대한 설명은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](missing-values-analysis-services-data-mining.md)을 참조하세요.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48086353"
  기본값은 0.5입니다.  
   
  *MAXIMUM_STATES*  
- 알고리즘이 지원하는 최대 특성 상태 수를 지정합니다. 특성의 상태 수가 최대 상태 수보다 많으면 알고리즘은 가장 많이 사용되는 특성 상태를 사용하고 나머지 상태를 누락된 것으로 처리합니다.  
+ 알고리즘이 지원하는 최대 특성 상태 수를 지정합니다. 특성 상태 수가 최대 상태 수보다 크면 알고리즘은 특성의 가장 일반적인 상태 및 나머지 상태는 없는 것으로 처리 합니다.  
   
  기본값은 100입니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48086353"
   
 |모델링 플래그|Description|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|열이 누락 및 있음 상태를 갖는 것으로 간주됩니다. Null은 누락 값입니다.<br /><br /> 마이닝 모델 열에 적용됩니다.|  
+|MODEL_EXISTENCE_ONLY|열이 두 가지 가능한 상태인 Missing 및 Existing 상태를 갖는 것으로 처리됨을 의미합니다. Null은 누락 값입니다.<br /><br /> 마이닝 모델 열에 적용됩니다.|  
 |NOT  NULL|열에 null이 포함될 수 없음을 나타냅니다. 따라서 Analysis Services가 모델 학습 중 Null을 발견할 경우 오류가 발생합니다.<br /><br /> 마이닝 구조 열에 적용됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
@@ -99,9 +99,9 @@ ms.locfileid: "48086353"
 > [!NOTE]  
 >  Cyclical  및 Ordered  내용 유형이 지원되기는 하지만 알고리즘은 해당 유형을 불연속 값으로 처리하고 특수한 처리를 수행하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Microsoft Naive Bayes 알고리즘](microsoft-naive-bayes-algorithm.md)   
  [Naive Bayes 모델 쿼리 예제](naive-bayes-model-query-examples.md)   
- [마이닝 모델 콘텐츠 Naive Bayes 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Naive Bayes 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

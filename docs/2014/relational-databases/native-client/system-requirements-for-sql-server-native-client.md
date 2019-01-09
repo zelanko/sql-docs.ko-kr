@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: native-client
+ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
 - system requirements [SQL Server Native Client]
@@ -15,12 +15,12 @@ ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bba3322fdd55116cb872a8653a515ac449f5a112
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad87b38ade044414062eba03e94dee415c53fc7e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150998"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53365125"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>SQL Server Native Client의 시스템 요구 사항
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 MARS와 같은 데이터 액세스 기능을 사용하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "48150998"
   
 -   서버에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 설치  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에는 Windows Installer 3.0이 필요합니다. Windows Installer 3.0은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 운영 체제에는 기본적으로 설치되어 있으며, 그 외의 다른 플랫폼에는 이를 명시적으로 설치해야 합니다. 자세한 내용은 [Windows Installer 3.0 재배포 가능 패키지](http://go.microsoft.com/fwlink/?LinkId=46459)합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에는 Windows Installer 3.0이 필요합니다. Windows Installer 3.0은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 운영 체제에는 기본적으로 설치되어 있으며, 그 외의 다른 플랫폼에는 이를 명시적으로 설치해야 합니다. 자세한 내용은 [Windows Installer 3.0 재배포 가능 패키지](https://go.microsoft.com/fwlink/?LinkId=46459)합니다.  
   
 > [!NOTE]  
 >  이 소프트웨어를 설치하기 전에 관리자 권한으로 로그온했는지 확인하십시오.  
@@ -64,7 +64,7 @@ ms.locfileid: "48150998"
   
  IDBInfo::GetKeywords는 항상 해당 서버 버전에 연결 하 고 영향을 받지는 키워드 목록을 반환 `DataTypeCompatibility`합니다.  
   
-|데이터 형식|SQL Server Native Client <br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC 및<br /><br /> SQL Server Native Client OLE DB 응용 프로그램에서 DataTypeCompatibility=80 설정|  
+|데이터 형식| SQL Server Native Client <br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC 및<br /><br /> SQL Server Native Client OLE DB 응용 프로그램에서 DataTypeCompatibility=80 설정|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT(\<= 8Kb)|udt|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|image|  
@@ -72,12 +72,12 @@ ms.locfileid: "48150998"
 |nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  
 |xml|xml|xml|Ntext|  
 |CLR UDT (> 8Kb)|udt|varbinary|image|  
-|날짜|날짜|varchar|Varchar|  
+|date|date|varchar|Varchar|  
 |Datetime2|Datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  
 |Time|Time|varchar|Varchar|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Native Client 프로그래밍](sql-server-native-client-programming.md)   
  [SQL Server Native Client 설치](applications/installing-sql-server-native-client.md)  
   

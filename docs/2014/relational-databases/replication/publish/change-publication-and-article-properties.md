@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying article properties
@@ -17,12 +16,12 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9cdbbbedacd9f88133e0d17411f441aa5ed884a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: f9f106af7d3464ca1b0f2047fd86e2670389d821
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149403"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822597"
 ---
 # <a name="change-publication-and-article-properties"></a>게시 및 아티클 속성 변경
   게시 생성 후 대부분의 게시 및 아티클 속성을 변경할 수 있지만 일부 속성을 변경하려면 스냅숏을 다시 생성하거나 구독을 다시 초기화해야 합니다. 이 항목에서는 변경 시 이러한 두 가지 동작 중 하나 또는 모두가 필요한 모든 속성에 대한 정보를 제공합니다.  
@@ -72,9 +71,9 @@ ms.locfileid: "48149403"
 |조인 필터 또는 논리적 레코드를 추가합니다.|**sp_addmergefilter**|모든 매개 변수|새 스냅숏<br /><br /> 구독을 다시 초기화합니다.|  
 |조인 필터 또는 논리적 레코드를 삭제합니다.|**sp_dropmergefilter**|모든 매개 변수|새 스냅숏<br /><br /> 구독을 다시 초기화합니다.|  
 |조인 필터 또는 논리적 레코드를 변경합니다.|**sp_changemergefilter**|**@property**<br /><br /> **@value**|새 스냅숏<br /><br /> 구독을 다시 초기화합니다.|  
-|매개 변수가 있는 필터의 사용을 해제합니다. 매개 변수가 있는 필터 사용 시 특별한 조치는 필요하지 않습니다.|**sp_changemergepublication**|**false** 에 대한 **false**값|새 스냅숏<br /><br /> 구독을 다시 초기화합니다.|  
+|매개 변수가 있는 필터의 사용을 해제합니다. 매개 변수가 있는 필터 사용 시 특별한 조치는 필요하지 않습니다.|**sp_changemergepublication**| **false** 에 대한 **false**값|새 스냅숏<br /><br /> 구독을 다시 초기화합니다.|  
 |사전 계산 파티션 사용을 설정 또는 해제합니다.|**sp_changemergepublication**|**use_partition_groups**|새 스냅숏|  
-|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 파티션 최적화를 설정 또는 해제합니다.|**sp_changemergepublication**|**keep_partition_changes**|구독을 다시 초기화합니다.|  
+| [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 파티션 최적화를 설정 또는 해제합니다.|**sp_changemergepublication**|**keep_partition_changes**|구독을 다시 초기화합니다.|  
 |구독자 파티션 유효성 검사를 설정 또는 해제합니다.|**sp_changemergepublication**|**validate_subscriber_info**|구독을 다시 초기화합니다.|  
 |게시 호환성 수준을 80sp3 이하로 변경합니다.|**sp_changemergepublication**|**publication_compatibility_level**|새 스냅숏|  
   
@@ -88,9 +87,9 @@ ms.locfileid: "48149403"
 |이전에 게시되지 않은 열 필터를 포함합니다.|**sp_mergearticlecolumn**|**@column**<br /><br /> **@operation**|새 스냅숏<br /><br /> 구독을 다시 초기화합니다.|  
 |행 필터를 추가, 삭제 또는 변경합니다.|**sp_changemergearticle**|**subset_filterclause**|새 스냅숏<br /><br /> 구독을 다시 초기화합니다.<br /><br /> 매개 변수가 있는 필터를 추가, 삭제 또는 변경할 경우 다시 초기화를 진행하는 동안에는 보류 중인 구독자의 변경 내용을 게시자로 업로드할 수 없습니다. 보류 중인 변경 내용을 업로드하려면 필터를 변경하기 전에 모든 구독을 동기화하세요.<br /><br /> 아티클이 조인 필터에 포함되지 않은 경우 아티클을 삭제하고 이를 다른 행 필터로 다시 추가할 수 있습니다. 이 경우 전체 구독을 다시 초기화할 필요가 없습니다. 아티클을 추가 및 삭제하는 방법에 대한 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.|  
 |스키마 옵션을 변경합니다.|**sp_changemergearticle**|**schema_option**|새 스냅숏|  
-|열 수준 추적을 행 수준 추적을 변경합니다. 행 수준 추적에서 열 수준 추적으로 변경할 때는 특별한 조치가 필요하지 않습니다.|**sp_changemergearticle**|**false** 에 대한 **false**값|새 스냅숏<br /><br /> 구독을 다시 초기화합니다.|  
+|열 수준 추적을 행 수준 추적을 변경합니다. 행 수준 추적에서 열 수준 추적으로 변경할 때는 특별한 조치가 필요하지 않습니다.|**sp_changemergearticle**| **false** 에 대한 **false**값|새 스냅숏<br /><br /> 구독을 다시 초기화합니다.|  
 |구독자에서 작성된 문이 게시자에 적용되기 전에 사용 권한을 확인할지 여부를 변경합니다.|**sp_changemergearticle**|**check_permissions**|새 스냅숏<br /><br /> 구독을 다시 초기화합니다.|  
-|다운로드 전용 구독을 설정 또는 해제합니다. 다른 업로드 옵션 간에 변경할 때는 특별한 조치가 필요하지 않습니다.|**sp_changemergearticle**|**2** 에 대한 값 **2**를 변경|구독을 다시 초기화합니다.|  
+|다운로드 전용 구독을 설정 또는 해제합니다. 다른 업로드 옵션 간에 변경할 때는 특별한 조치가 필요하지 않습니다.|**sp_changemergearticle**| **2** 에 대한 값 **2**를 변경|구독을 다시 초기화합니다.|  
 |대상 테이블 소유자를 변경합니다.|**sp_changemergearticle**|**destination_owner**|새 스냅숏<br /><br /> 구독을 다시 초기화합니다.|  
   
 ## <a name="see-also"></a>관련 항목  

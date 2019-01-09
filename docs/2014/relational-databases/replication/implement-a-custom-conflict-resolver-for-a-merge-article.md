@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -17,12 +16,12 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 87a5abc4377007558787595a2d2368ca5e5c5bb6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7e8d3f735a096eeaf60ecdb376d02d046112a25
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149473"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375365"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>병합 아티클용 사용자 지정 충돌 해결 프로그램 구현
   이 항목에서는 [또는 COM 기반 사용자 지정 해결 프로그램](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md) [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 사용하여[!INCLUDE[tsql](../../includes/tsql-md.md)] 의 병합 아티클을 위한 사용자 지정 충돌 해결 프로그램을 구현하는 방법에 대해 설명합니다.  
@@ -119,11 +118,11 @@ ms.locfileid: "48149473"
   
 #### <a name="viewing-a-sample-custom-resolver"></a>예제 사용자 지정 해결 프로그램 보기  
   
-1.  예제는 SQL Server 2000 예제 파일에서 제공됩니다. **SQL Server 2000 서비스 팩 3의 업데이트된 예제**[에서 sql2000samples.cab](http://www.microsoft.com/download/details.aspx?id=8560)을 다운로드하세요. 그러면 크기가 6.9MB에 이르는 8개 파일이 다운로드됩니다.  
+1.  예제는 SQL Server 2000 예제 파일에서 제공됩니다. **SQL Server 2000 서비스 팩 3의 업데이트된 예제**[에서 sql2000samples.cab](https://www.microsoft.com/download/details.aspx?id=8560)을 다운로드하세요. 그러면 크기가 6.9MB에 이르는 8개 파일이 다운로드됩니다.  
   
 2.  다운로드한 압축 .cab 파일에서 파일의 압축을 풉니다.  
   
-3.  **setup.exe**를 실행합니다.  
+3.   **setup.exe**를 실행합니다.  
   
     > [!NOTE]  
     >  설치 옵션을 선택할 때 **복제** 예제만 설치하면 됩니다. (기본 설치 경로가 **C:\Program Files (x86) \Microsoft SQL Server 2000 Samples\1033\\**)  
@@ -135,9 +134,9 @@ ms.locfileid: "48149473"
     > [!NOTE]  
     >  샘플 컴퓨터 해결 프로그램은 (기본적으로) **C:\Program Files (x86)\Microsoft SQL Server 2000 Samples\1033\sqlrepl\resolver\subspres** 폴더에 설치됩니다.  
   
-6.  **subspres** 폴더에서 모든 원본 파일에 발생한 **#include sqlres.h** 를 찾고 **#import "replrec.dll" no_namespace, raw_interfaces_only**로 바꿉니다.  
+6.   **subspres** 폴더에서 모든 원본 파일에 발생한 **#include sqlres.h** 를 찾고 **#import "replrec.dll" no_namespace, raw_interfaces_only**로 바꿉니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [COM-Based Custom Resolvers](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
  [복제 보안을 위한 최선의 구현 방법](security/replication-security-best-practices.md)  

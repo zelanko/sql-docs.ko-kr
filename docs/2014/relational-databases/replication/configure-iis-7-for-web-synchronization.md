@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 09/12/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - IIS 7 server configuration [SQL Server replication]
@@ -14,12 +13,12 @@ ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7da91677755f2d7e808165bdc8361864e15ac2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 539b47ebbd8f4a2374849c0b1d5244d187cdd3df
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131753"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819335"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>웹 동기화를 위한 IIS 7 구성
   이 항목의 절차에서는 병합 복제를 위한 웹 동기화에서 사용할 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS(인터넷 정보 서비스) 버전 7 이상을 수동으로 구성하는 프로세스를 안내합니다. 
@@ -29,7 +28,7 @@ ms.locfileid: "48131753"
  전체 구성 프로세스에 대한 개요는 [웹 동기화 구성](configure-web-synchronization.md)을 참조하세요.  
   
 > [!IMPORTANT]  
->  애플리케이션에서 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 이상 버전을 사용해야 하며, 이전 버전의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 가 IIS 서버에 설치되어 있으면 안 됩니다. 이전 버전의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 가 있으면 다음과 같은 오류가 발생할 수 있습니다. "웹 동기화 중 메시지 형식이 잘못되었습니다. 웹 서버에서 복제 구성 요소가 올바르게 구성되었는지 확인하십시오."  
+>  애플리케이션에서 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 이상 버전을 사용해야 하며, 이전 버전의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 가 IIS 서버에 설치되어 있으면 안 됩니다. 이전 버전의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]가 있으면 다음과 같은 오류가 발생할 수 있습니다. "웹 동기화 중 메시지 형식이 잘못되었습니다. 웹 서버에서 복제 구성 요소가 올바르게 구성되었는지 확인하십시오."  
   
  웹 동기화를 사용하려면 다음 단계를 완료하여 IIS 7을 구성해야 합니다. 이 항목에서는 각 단계를 자세히 설명합니다.  
   

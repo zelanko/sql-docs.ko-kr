@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - workload groups [SQL Server], alter
@@ -14,19 +13,19 @@ ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4566d457d7ac84a8d57859e29f9874a8279b4778
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e2bcb3cfa20948e6bb0964d29331ca1d426b8916
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135813"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816786"
 ---
 # <a name="change-workload-group-settings"></a>작업 그룹 설정 변경
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용하여 작업 그룹 설정을 변경할 수 있습니다.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **시작하기 전 주의 사항:**  [제한 사항 및 제한 사항](#LimitationsRestrictions), [권한](#Permissions)  
   
--   **작업 그룹에 대한 설정을 변경하려면:**  [SQL Server Management Studio](#ChgWGProp), [Transact-SQL](#ChgWGTSQL)  
+-   **워크 로드에 대 한 설정을 변경 하려면 그룹을 사용 하 여:**  [SQL Server Management Studio](#ChgWGProp), [TRANSACT-SQL](#ChgWGTSQL)  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
   
@@ -53,7 +52,7 @@ ms.locfileid: "48135813"
   
 4.  변경할 행의 셀을 클릭 또는 두 번 클릭한 다음 새 값을 입력합니다.  
   
-5.  **확인**을 클릭하여 변경 내용을 저장합니다.  
+5.   **확인**을 클릭하여 변경 내용을 저장합니다.  
   
 ##  <a name="ChgWGTSQL"></a> Transact-SQL을 사용하여 작업 그룹 설정 변경  
  **Transact-SQL을 사용하여 작업 그룹 설정을 변경하려면**  

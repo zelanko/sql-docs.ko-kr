@@ -11,17 +11,17 @@ ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2d1807caf5b5ef2687121dd465e87eb55b9fd2df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 14be04840683999430fc4bd1fd65ce35ea13eb2a
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056213"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53355478"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>자습서의 사전 요구 사항(보고서 작성기)
   보고서 작성기 자습서에서는 사용자가 보고서 서버와 통합된 SharePoint 사이트 또는 보고서 서버에서 보고서를 보고 저장할 수 있는 것으로 간주합니다. 모든 자습서에서는 데이터에 대해 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]인스턴스에서 처리해야 하는 리터럴 쿼리를 사용합니다.  
   
- 보고서 서버, SharePoint 사이트 또는 데이터 원본에 대한 액세스 권한이 없는 경우에는 오프라인 보고서 작성을 통해 보고서 작성기에 대해 배울 수 있습니다. [자습서: 오프라인에서 빠른 차트 보고서 만들기&#40;보고서 작성기&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)를 참조하세요.  
+ 보고서 서버, SharePoint 사이트 또는 데이터 원본에 대한 액세스 권한이 없는 경우에는 오프라인 보고서 작성을 통해 보고서 작성기에 대해 배울 수 있습니다. 참조 [자습서: 오프 라인에서 빠른 차트 보고서 만들기 &#40;보고서 작성기&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  보고서 작성기 자습서를 완료하려면 다음이 필요합니다.  
@@ -36,9 +36,9 @@ ms.locfileid: "48056213"
   
 -   이름에 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 인스턴스 및 모든 데이터베이스에 대 한 읽기 전용 액세스에 대 한 충분 한 자격 증명입니다. 자습서의 데이터 세트 쿼리에서는 리터럴 데이터를 사용하지만 보고서 데이터 세트에 필요한 메타데이터가 반환되도록 하려면 각 쿼리를 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 인스턴스에서 처리해야 합니다. 예를 들어 연결 문자열 `data source=<servername>`은 서버만 지정합니다. 서버에 액세스할 수 있는 권한을 부여하는 시스템 관리자가 할당한 기본 데이터베이스에 대한 읽기 권한이 있어야 합니다. 연결 문자열 `data source=<servername>;initial catalog=<database>`에 표시된 것처럼 데이터베이스를 지정할 수도 있습니다.  
   
--   지도가 포함된 자습서의 경우 Bing Maps를 배경으로 지원하도록 보고서 서버를 구성해야 합니다. 자세한 내용은 [지도 보고서 지원 계획](plan-for-map-report-support.md) 에 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 설명서에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [온라인](http://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com 합니다.  
+-   지도가 포함된 자습서의 경우 Bing Maps를 배경으로 지원하도록 보고서 서버를 구성해야 합니다. 자세한 내용은 [지도 보고서 지원 계획](plan-for-map-report-support.md) 에 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 설명서에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [온라인](https://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com 합니다.  
   
--   자습서 [자습서: 만들기 드릴스루 보고서 및 주 보고서 &#40;보고서 작성기&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md), Contoso 비즈니스 인텔리전스 데모 데이터 집합을 사용 합니다. 이 데이터 집합은 ContosoDW 데이터 웨어하우스와 Contoso_Retail OLAP(온라인 분석 처리) 데이터베이스로 구성되어 있습니다. 이 자습서에서 만들 보고서는 Contoso Sales 큐브에서 보고서 데이터를 검색합니다. Contoso_Retail OLAP 데이터베이스는 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=191575)에서 다운로드할 수 있습니다. ContosoBIdemoABF.exe 파일만 다운로드하면 됩니다. 이 파일에 OLAP 데이터베이스가 포함되어 있습니다.  
+-   자습서 [자습서: 드릴스루 보고서 및 주 보고서 만들기 &#40;보고서 작성기&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md), Contoso 비즈니스 인텔리전스 데모 데이터 집합을 사용 합니다. 이 데이터 집합은 ContosoDW 데이터 웨어하우스와 Contoso_Retail OLAP(온라인 분석 처리) 데이터베이스로 구성되어 있습니다. 이 자습서에서 만들 보고서는 Contoso Sales 큐브에서 보고서 데이터를 검색합니다. Contoso_Retail OLAP 데이터베이스는 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=191575)에서 다운로드할 수 있습니다. ContosoBIdemoABF.exe 파일만 다운로드하면 됩니다. 이 파일에 OLAP 데이터베이스가 포함되어 있습니다.  
   
      다른 파일인 ContosoBIdemoBAK.exe는 ContosoDW 데이터 웨어하우스를 위한 것으로, 이 자습서에서는 사용되지 않습니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48056213"
   
      사용자는 OLAP 데이터베이스를 설치할 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 액세스할 수 있어야 합니다.  
   
- 구성할 보고서 서버 관리자가 보고서 서버에서 필요한 권한을 부여 해야 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 폴더 위치 및 보고서 작성기 기본 옵션을 구성 합니다. 자세한 내용은 [설치, 제거 및 보고서 작성기 지원](install-uninstall-and-report-builder-support.md)합니다.  
+ 보고서 서버 관리자는 보고서 서버에서 필요한 권한을 부여하고, [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 폴더 위치를 구성하고, 보고서 작성기 기본 옵션을 구성해야 합니다. 자세한 내용은 [설치, 제거 및 보고서 작성기 지원](install-uninstall-and-report-builder-support.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [자습서 &#40;보고서 작성기&#41;](report-builder-tutorials.md)  

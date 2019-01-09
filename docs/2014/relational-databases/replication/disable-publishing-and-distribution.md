@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - disabling publishing
@@ -19,12 +18,12 @@ ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0c21b53f55f0fe32c71e6d2e4f08d068f96431fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 46cdf7ad91de4eacae513399dc7b0c88ad9831fe
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111419"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765445"
 ---
 # <a name="disable-publishing-and-distribution"></a>게시 및 배포 해제
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 게시 및 배포를 해제하는 방법에 대해 설명합니다.  
@@ -53,7 +52,7 @@ ms.locfileid: "48111419"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
   
 -   게시 및 배포를 해제하려면 모든 배포 및 게시 데이터베이스가 온라인 상태여야 합니다. 배포 또는 게시 데이터베이스에 대한 *데이터베이스 스냅숏* 이 있는 경우 이 스냅숏을 먼저 삭제한 다음 게시 및 배포를 해제해야 합니다. 데이터베이스 스냅숏은 데이터베이스의 읽기 전용 오프라인 사본이며 복제 스냅숏과 연관되어 있지 않습니다. 자세한 내용은 [데이터베이스 스냅숏&#40;SQL Server&#41;](../databases/database-snapshots-sql-server.md)을 참조하세요.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "48111419"
   
 #### <a name="to-disable-publishing-and-distribution"></a>게시 및 배포를 해제하려면  
   
-1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 해제할 게시자나 배포자에 연결한 다음 해당 서버 노드를 확장합니다.  
+1.   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 해제할 게시자나 배포자에 연결한 다음 해당 서버 노드를 확장합니다.  
   
 2.  **복제** 폴더를 마우스 오른쪽 단추로 클릭한 다음, **게시 및 배포 해제**를 클릭합니다.  
   
@@ -111,7 +110,7 @@ ms.locfileid: "48111419"
   
 4.  <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 클래스의 인스턴스를 만듭니다. <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> 속성을 지정하고 3단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 전달합니다.  
   
-5.  필요에 따라 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 속성을 얻고 게시자가 있는지 확인합니다. 이 메서드가 반환 하는 경우 `false`, 4 단계에서 지정한 게시자 이름이 잘못 되었습니다. 또는이 배포자에서 게시자를 사용 되지 않습니다.  
+5.  필요에 따라 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 속성을 얻고 게시자가 있는지 확인합니다. 이 메서드가 `false`를 반환하면 4단계에서 지정한 게시자 이름이 올바르지 않거나 이 배포자에서 게시자를 사용하지 않는 것입니다.  
   
 6.  <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> 메서드를 호출합니다. 값을 전달 `true` 에 대 한 *강제로* 게시자 및 배포자가 다른 서버에 있으며 게시자에 게시가 더 이상 존재 하는 확인 하지 않고 배포자에서 제거 해야 하는 경우는 게시자입니다.  
   
@@ -132,8 +131,8 @@ ms.locfileid: "48111419"
   
  [!code-vb[HowTo#rmo_vb_DropDistPubForce](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropdistpubforce)]  
   
-## <a name="see-also"></a>관련 항목  
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
+## <a name="see-also"></a>관련 항목:  
+ [복제 관리 개체 개념](concepts/replication-management-objects-concepts.md)   
  [복제 시스템 저장 프로시저 개념](concepts/replication-system-stored-procedures-concepts.md)  
   
   

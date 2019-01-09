@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - command prompt utilities [SQL Server], sqlservr
@@ -23,12 +22,12 @@ ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2616e1ad8aa794f5aff14857b68b146e35dc04f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 23f45c0a2e47381b60fe8f6852f24fd8f5f200fc
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174643"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591867"
 ---
 # <a name="sqlservr-application"></a>sqlservr 애플리케이션
    **sqlservr** 응용 프로그램은 명령 프롬프트에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 시작, 중지, 일시 중지 및 계속합니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "48174643"
 ```  
   
 ## <a name="arguments"></a>인수  
- **-s** *instance_name*  
+ **-s** _instance_name_  
  연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 인스턴스를 지정합니다. 명명된 인스턴스를 지정하지 않으면 **sqlservr** 이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 기본 인스턴스를 시작합니다.  
   
 > [!IMPORTANT]  
@@ -55,16 +54,16 @@ ms.locfileid: "48174643"
 > [!NOTE]  
 >  이 옵션을 사용하는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스 관리자 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] net stop **명령을 사용하여** 를 중지할 수 없으며 컴퓨터에서 로그오프하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가 중지됩니다.  
   
- **-d** *master_path*  
+ **-d** _master_path_  
  **master** 데이터베이스 파일의 정규화된 경로를 나타냅니다. **-d** 와 *master_path*사이에 공백이 없어야 합니다. 이 옵션이 제공되지 않으면 기존의 레지스트리 매개 변수를 사용합니다.  
   
  **-f**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 최소 구성으로 시작합니다. 예를 들어 오버 커밋 메모리 같은 구성 값의 설정 때문에 서버를 시작할 수 없을 경우에 유용합니다.  
   
- **-e** *error_log_path*  
+ **-e** _error_log_path_  
  오류 로그 파일의 정규화된 경로를 나타냅니다. 이 옵션을 지정하지 않으면 기본 위치는 기본 인스턴스의 경우 *\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog이고 명명된 인스턴스의 경우 *\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog입니다. **-e** 와 *error_log_path*사이에 공백이 없어야 합니다.  
   
- **-l** *master_log_path*  
+ **-l** _master_log_path_  
  **master** 데이터베이스 트랜잭션 로그 파일의 정규화된 경로를 나타냅니다. **-l** 와 *master_log_path*사이에 공백이 없어야 합니다.  
   
  **-m**  
@@ -73,7 +72,7 @@ ms.locfileid: "48174643"
  **-n**  
  명명된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스를 시작할 수 있습니다. **-s** 매개 변수를 설정하지 않으면 기본 인스턴스가 시작됩니다. **sqlservr.exe**를 시작하기 전에 명령 프롬프트에서 해당 인스턴스에 적합한 BINN 디렉터리로 전환해야 합니다. 예를 들어 Instance1이 이진 파일에 대해 \mssql$Instance1을 사용할 경우, 사용자는 \mssql$Instance1\binn 디렉터리에서 **sqlservr.exe -s instance1**을 시작해야 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -n **옵션으로** 인스턴스를 시작하는 경우에는 **-e** 옵션을 함께 사용하는 것이 좋습니다. 이렇게 하지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이벤트가 기록되지 않습니다.  
   
- **-T** *trace#*  
+ **-T** _trace#_  
  지정된 추적 플래그( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] trace#*) 적용 시*인스턴스를 시작해야 함을 나타냅니다. 추적 플래그는 비표준 동작으로 서버를 시작하는 데 사용합니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)를 참조하세요.  
   
 > [!IMPORTANT]  
@@ -85,16 +84,16 @@ ms.locfileid: "48174643"
  **-x**  
  CPU 시간과 캐시 적중률 통계를 유지할 수 없도록 합니다. 최고의 성능을 허용합니다.  
   
- **-g** *memory_to_reserve*  
+ **-g** _memory_to_reserve_  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스 내, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 풀 외부의 메모리 할당에 사용할 수 있도록 남겨 두는 메모리 양(MB)을 정수로 지정합니다. 메모리 풀 외부의 메모리는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 확장 프로시저 `.dll` 파일, 분산 쿼리에서 참조하는 OLE DB 공급자 및 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에서 참조되는 자동화 개체 같은 항목을 로드하는 데 사용하는 영역입니다. 기본값은 256MB입니다.  
   
  이 옵션을 사용하면 메모리 할당을 튜닝에 도움이 될 수 있으나 실제 메모리가 운영 체제에서 애플리케이션에 사용할 수 있도록 구성된 가상 메모리 한계보다 큰 경우에만 사용할 수 있습니다. 이 옵션은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 메모리 사용 요청이 불규칙하고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스의 가상 주소 공간이 전부 사용되는 대량 메모리 구성에서 사용하는 것이 적합합니다. 이 옵션을 제대로 사용하지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 시작할 수 없거나 런타임 오류가 발생할 수도 있습니다.  
   
  **오류 로그에서 다음 경고가 표시되지 않으면** -g [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 매개 변수의 기본값을 사용해야 합니다.  
   
--   "실패한 가상 메모리 할당 바이트: FAIL_VIRTUAL_RESERVE \<크기>"  
+-   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_RESERVE \<크기 > "  
   
--   "실패한 가상 메모리 할당 바이트: FAIL_VIRTUAL_COMMIT \<크기>"  
+-   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT \<크기 > "  
   
  이 메시지에 따르면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 확장 저장 프로시저 dll 파일이나 OLE 자동화 개체 등의 항목에 필요한 공간을 찾기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 풀의 일부를 없애려고 합니다. 이 경우 **-g**``스위치로 예약되는 메모리 양을 늘려 보세요.  
   

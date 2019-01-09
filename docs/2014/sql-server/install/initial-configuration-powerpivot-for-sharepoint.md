@@ -11,12 +11,12 @@ ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6e236f2ccd1478fc98d712e89b1d6d0a781a8ac2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: dc6ab85f562aa4a2149e6471b13422e97d7fc7c5
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211353"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353420"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>초기 구성(SharePoint용 PowerPivot)
   이 항목의 단계에 따라 SharePoint용 PowerPivot의 초기 설치를 구성합니다. 초기 설치를 구성하는 가장 쉬운 방법은 PowerPivot 구성 도구를 사용하는 것입니다. 그러면 아래에 설명한 모든 구성 단계를 자동화할 수 있습니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "48211353"
 2.  첫 번째 cmdlet을 실행합니다.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
      이 cmdlet을 실행하면 솔루션의 이름, 솔루션 ID 및 Deployed=False가 반환됩니다. 다음 단계에서는 솔루션을 배포합니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "48211353"
 3.  두 번째 cmdlet을 실행하여 솔루션을 배포합니다.  
   
     ```  
-    Install-SPSolution –Identity PowerPivotFarm.wsp –GACDeployment -Force  
+    Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
  **웹 응용 프로그램 솔루션 배포**  
@@ -80,7 +80,7 @@ ms.locfileid: "48211353"
   
 7.  PowerPivot 데이터 액세스를 지원할 다른 SharePoint 웹 애플리케이션에 대해서도 반복합니다.  
   
-##  <a name="Geneva"></a> 2 단계: 서버에서 서비스를 시작 합니다.  
+##  <a name="Geneva"></a> 2 단계: 서버에서 서비스 시작  
  SharePoint용 PowerPivot을 배포하려면 팜에 Excel 계산 서비스, 보안 저장소 서비스 및 Windows 토큰 서비스에 대한 클레임이 포함되어야 합니다.  
   
  Excel 서비스와 SharePoint용 PowerPivot에는 Windows 토큰 서비스에 대한 클레임이 필요합니다. 이것은 현재 SharePoint 사용자의 Windows ID를 사용하여 외부 데이터 원본에 대한 연결을 설정하는 데 사용됩니다. 이 서비스는 Excel 서비스 또는 SharePoint용 PowerPivot이 사용되도록 설정되어 있는 모든 SharePoint 서버에서 실행되어야 합니다. 서비스가 아직 시작되지 않았으면 지금 시작하여 Excel 서비스에서 인증된 요청을 PowerPivot 시스템 서비스로 전달할 수 있도록 합니다.  
@@ -151,7 +151,7 @@ ms.locfileid: "48211353"
   
 14. **확인**을 클릭합니다.  
   
-##  <a name="SSS"></a> 5 단계: Secure Store Service 사용 및 데이터 새로 고침 구성  
+##  <a name="SSS"></a> 5 단계: 보안 저장소 서비스 설정 및 데이터 새로 고침 구성  
  데이터 새로 고침을 위해 무인 실행 계정 및 자격 증명을 저장하려면 SharePoint용 PowerPivot에 보안 저장소 서비스가 필요합니다. 서비스 애플리케이션 목록에 보안 저장소 서비스가 나타나는지 확인하여 보안 저장소 서비스가 이미 사용하도록 설정되어 있는지 확인할 수 있습니다.  
   
 > [!IMPORTANT]  
@@ -198,11 +198,11 @@ ms.locfileid: "48211353"
   
  무인된 PowerPivot 데이터를 만드는 방법에 대 한 지침은 새로 고침 계정 또는에서 사용 되는 기타 저장 된 자격 증명에 대 한 데이터 새로 고침,이 참조 하는 [PowerPivot 무인 데이터 새로 고침 계정 구성 &#40;&#41; ](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md) 하 고 [PowerPivot 데이터 새로 고침에 대 한 저장 된 자격 증명을 구성 &#40;SharePoint 용 PowerPivot&#41;](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)합니다.  
   
-##  <a name="Usage"></a> 6 단계: 사용 현황 데이터 수집  
+##  <a name="Usage"></a> 6 단계: 사용 데이터 컬렉션 사용  
  SharePoint용 PowerPivot은 SharePoint 사용 데이터 컬렉션 인프라를 사용해 팜 전체의 PowerPivot 사용에 대한 정보를 수집합니다. 사용 현황 데이터는 항상 SharePoint와 함께 설치되지만 우선 활성화해야 사용할 수 있습니다. 자세한 내용은 [에 대 한 사용 현황 데이터 수집 구성 &#40;SharePoint 용 PowerPivot](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)합니다.  
   
-##  <a name="Upload"></a> 7 단계: SharePoint 웹 응용 프로그램 및 Excel 서비스에 대 한 최대 업로드 크기 늘리기  
- PowerPivot 통합 문서는 대규모일 수 있으므로 최대 파일 크기를 늘려야 할 수 있습니다. 웹 애플리케이션에 대한 최대 업로드 크기와 Excel 서비스의 최대 통합 문서 크기 등 두 가지 파일 크기 설정을 구성할 수 있습니다. 최대 파일 크기는 두 애플리케이션에서 같은 값으로 설정해야 합니다. 자세한 내용은 [최대 파일 업로드 크기 구성 &#40;SharePoint 용 PowerPivot&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)합니다.  
+##  <a name="Upload"></a> 7 단계: SharePoint 웹 응용 프로그램 및 Excel 서비스의 최대 업로드 크기 늘리기  
+ PowerPivot 통합 문서는 대규모일 수 있으므로 최대 파일 크기를 늘려야 할 수 있습니다. 웹 응용 프로그램에 대한 최대 업로드 크기와 Excel 서비스의 최대 통합 문서 크기 등 두 가지 파일 크기 설정을 구성할 수 있습니다. 최대 파일 크기는 두 애플리케이션에서 같은 값으로 설정해야 합니다. 자세한 내용은 [최대 파일 업로드 크기 구성 &#40;SharePoint 용 PowerPivot&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)합니다.  
   
 ##  <a name="activatePP"></a> 8 단계: 사이트 모음에 대해 PowerPivot 기능 통합 활성화  
  사이트 컬렉션 수준에서 기능을 활성화하면 사이트에서 애플리케이션 페이지 및 템플릿을 사용할 수 있습니다. 여기에는 예약된 데이터 새로 고침에 대한 구성 페이지와 PowerPivot 갤러리 및 데이터 피드 라이브러리에 대한 애플리케이션 페이지가 포함됩니다.  
@@ -223,14 +223,14 @@ ms.locfileid: "48211353"
   
  자세한 내용은 [중앙 관리에서 사이트 모음에 대 한 PowerPivot 기능 통합 활성화](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)합니다.  
   
-##  <a name="bkmk_redist"></a> 9 단계: SQL Server 2012 PowerPivot for SharePoint 인스턴스에 SQL Server 2008 R2 버전의 OLE DB 공급자를 설치 합니다.  
+##  <a name="bkmk_redist"></a> 9 단계: SQL Server 2012 SharePoint용 PowerPivot 인스턴스에 SQL Server 2008 R2 버전의 OLE DB 공급자 설치  
  이전 버전과 새 버전의 PowerPivot  통합 문서를 동일 서버에서 함께 실행하려면 SQL  Server  2008  R2에서 제공되는 Analysis  Services  OLE  DB  공급자를 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SharePoint용 PowerPivot  서버에 설치해야 합니다.  
   
  공급자를 설치하면 데이터 연결 문자열에서 MSOLAP.4를 참조하는 통합 문서가 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot  서버에서 정상적으로 작동할 수 있습니다. 이전 버전의 PowerPivot for Excel에서 만든 통합 문서를 업그레이드하는 다른 방법으로는 SQL Server 2008 R2 OLE DB 공급자를 설치하는 방법이 있습니다.  
   
- 이 공급자는 [SQL Server 2008 R2 기능 팩 페이지](http://go.microsoft.com/fwlink/?LinkId=159570)에서 다운로드할 수 있습니다. 검색할 **Microsoft® Analysis Services OLE DB Provider for Microsoft® SQL Server® 2008 R2**를 x64 다운로드 패키지는 `SQLServer2008_ASOLEDB10.msi` 설치 프로그램입니다.  
+ 이 공급자는 [SQL Server 2008 R2 기능 팩 페이지](https://go.microsoft.com/fwlink/?LinkId=159570)에서 다운로드할 수 있습니다. 검색할 **Microsoft® Analysis Services OLE DB Provider for Microsoft® SQL Server® 2008 R2**를 x64 다운로드 패키지는 `SQLServer2008_ASOLEDB10.msi` 설치 프로그램입니다.  
   
- 확인 단계를 포함 하 여 공급자를 설치 하는 방법에 대 한 자세한 내용은 참조 [SharePoint 서버에서 Analysis Services OLE DB 공급자 설치](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)합니다.  
+ 확인 단계를 포함하여 공급자를 설치하는 방법은 [Install the Analysis Services OLE DB Provider on SharePoint Servers](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)를 참조하십시오.  
   
 ##  <a name="verifyinstall"></a> 10 단계: 설치 확인  
  사용자 또는 애플리케이션이 PowerPivot 데이터를 포함하는 Excel 통합 문서를 열면 팜에서 PowerPivot 쿼리 처리가 수행됩니다. 최소한 SharePoint 사이트에서 페이지를 검사하여 PowerPivot 기능이 사용 가능한지를 확인할 수는 있습니다. 그러나 설치를 전체적으로 확인하려면 SharePoint에 게시하여 라이브러리에서 액세스할 수 있는 PowerPivot 통합 문서가 있어야 합니다. 테스트를 위해 이미 PowerPivot 데이터가 포함된 예제 통합 문서를 게시하여 SharePoint 통합이 올바르게 구성되어 있는지 확인하는 데 사용할 수 있습니다.  
@@ -293,7 +293,7 @@ ms.locfileid: "48211353"
   
  이후에 데이터 저장소와 처리 능력이 추가로 필요하다고 판단되는 경우 팜에 두 번째 SharePoint용 PowerPivot 서버 인스턴스를 추가할 수 있습니다. 설치 프로세스는 첫 번째 서버를 추가할 때 수행한 단계와 거의 동일하며, 인스턴스 이름과 서비스 계정 정보를 지정하는 방법에 대한 요구 사항만 다릅니다. 자세한 내용은 [배포 검사 목록: SharePoint 2010 팜에 PowerPivot 서버를 추가 하 여 스케일 아웃](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 2014 버전에서 지 원하는 기능](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [PowerPivot 서비스 계정 구성](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
  [만들기 및 중앙 관리에서 PowerPivot 서비스 응용 프로그램 구성](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)   

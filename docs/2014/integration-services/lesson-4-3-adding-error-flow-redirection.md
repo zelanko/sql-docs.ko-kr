@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 217aa8a702d636b920be157974a5d90e695ad191
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ff729a43f1dbc414ba6a67a0c80e9f17e4d0cc4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051313"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747925"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>3단계: 오류 흐름 리디렉션 추가
   이전 태스크에서 설명한 대로 Lookup Currency Key 변환은 오류를 생성한 손상된 예제 플랫 파일을 처리할 때 일치하는 항목을 생성할 수 없습니다. 변환은 오류 출력에 대해 기본 설정을 사용하므로 오류가 발생하면 변환이 실패합니다. 변환이 실패하면 나머지 패키지도 실패합니다.  
@@ -53,7 +52,7 @@ ms.locfileid: "48051313"
   
 10. 에 **스크립트** 페이지에서 합니다 `LocaleID` 속성이 **영어 (미국.**  
   
-11. **스크립트 편집** 을 클릭하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications)를 엽니다. `Input0_ProcessInputRow` 메서드에 다음 코드를 입력하거나 붙여 넣습니다.  
+11.  **스크립트 편집** 을 클릭하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications)를 엽니다. `Input0_ProcessInputRow` 메서드에 다음 코드를 입력하거나 붙여 넣습니다.  
   
      [Visual Basic]  
   

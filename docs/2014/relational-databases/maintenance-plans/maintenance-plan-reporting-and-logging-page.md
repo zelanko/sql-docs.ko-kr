@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.reportinglogging.f1
@@ -13,19 +12,19 @@ ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c6c676e139560eaadf52ee1a98fe641579f5b9d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 623507b4d9e52da376d4c83e4ee5c4d51b15dc39
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155983"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52762835"
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>유지 관리 계획(보고 및 로깅 페이지)
   **보고 및 로깅** 대화 상자를 사용하여 유지 관리 계획이 실행될 때 생성되는 보고서와 로그를 구성할 수 있습니다.  
   
 ## <a name="options"></a>변수  
  **텍스트 파일 보고서 생성**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 텍스트 파일 보고서를 기록하도록 할지 여부를 지정합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 텍스트 파일 보고서를 기록하도록 할지 여부를 지정합니다.  
   
  **새 파일 만들기**  
  유지 관리 계획이 실행될 때마다 새 보고서 파일을 만듭니다. 기본적으로 보고서 파일은 해당 유지 관리 계획이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 호스팅하는 컴퓨터의 기본 로그 폴더에 기록됩니다. 기본 로그 폴더는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중 설정합니다. 다른 폴더를 지정하려면 **폴더** 입력란에 전체 폴더 경로를 입력하거나 찾아보기 단추(**...**)를 클릭하고 원하는 폴더를 탐색합니다.  

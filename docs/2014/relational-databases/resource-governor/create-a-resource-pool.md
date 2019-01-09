@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - resource pools [SQL Server], create
@@ -14,19 +13,19 @@ ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b62c0f104eb5e1d4afd8c495027544252cd180fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4d18ef352c3e5ab6342e573d16bc3deaed5db72
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051833"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753965"
 ---
 # <a name="create-a-resource-pool"></a>리소스 풀 만들기
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 리소스 풀을 만들 수 있습니다.  
   
--   **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions), [권한](#Permissions)  
+-   **시작하기 전 주의 사항:**  [제한 사항 및 제한 사항](#LimitationsRestrictions), [권한](#Permissions)  
   
--   **To create a resource pool, using:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
+-   **리소스를 만들 풀을 사용 하 여:**  [SQL Server Management Studio](#CreRPProp), [TRANSACT-SQL](#CreRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48051833"
   
 5.  변경할 행의 다른 셀을 클릭 또는 두 번 클릭한 다음 새 값을 입력합니다.  
   
-6.  **확인**을 클릭하여 변경 내용을 저장합니다.  
+6.   **확인**을 클릭하여 변경 내용을 저장합니다.  
   
 ##  <a name="CreRPTSQL"></a> Transact-SQL을 사용하여 리소스 풀 만들기  
  **다음을 사용하여 리소스 풀 만들기: [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
@@ -71,10 +70,10 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [리소스 관리자](resource-governor.md)   
  [리소스 관리자 사용](enable-resource-governor.md)   
- [리소스 관리자 리소스 풀](resource-governor-resource-pool.md)   
+ [Resource Governor Resource Pool](resource-governor-resource-pool.md)   
  [리소스 풀 설정 변경](change-resource-pool-settings.md)   
  [리소스 풀 삭제](delete-a-resource-pool.md)   
  [템플릿을 사용하여 리소스 관리자 구성](configure-resource-governor-using-a-template.md)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 11/21/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - startup service states [SQL Server]
@@ -51,12 +50,12 @@ ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bd420632e4cac09a6549f504d4037582c766d5b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d936af2ac530f397995d1a9dfcca9336ca042853
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110743"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353827"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows 서비스 계정 및 권한 구성
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 각 서비스는 Windows를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업의 인증을 관리하는 프로세스 또는 프로세스 집합을 나타냅니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이 릴리스에서 기본 서비스 구성과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 그리고 설치 후에 설정할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 구성 옵션에 대해 설명합니다.  
@@ -203,7 +202,7 @@ ms.locfileid: "48110743"
   
 ####  <a name="Changing_Accounts"></a> 계정 속성 변경  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  -   항상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 사용하여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스에 사용되는 계정을 변경하거나 계정의 암호를 변경할 수 있습니다. 계정 이름을 변경하는 것 외에도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 대한 서비스 마스터 키를 보호하는 Windows 로컬 보안 저장소 업데이트와 같은 추가 구성을 수행합니다. Windows 서비스 제어 관리자와 같은 다른 도구를 사용하면 계정 이름을 변경할 수 있지만 모든 필수 설정을 변경할 수 없습니다.  
 > -   SharePoint 팜에 배포한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 경우 항상 SharePoint 중앙 관리를 사용하여 [!INCLUDE[ssGeminiMTS](../../includes/ssgeminimts-md.md)] 애플리케이션 및 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]에 대한 서버 계정을 변경합니다. 관련 설정 및 사용 권한은 중앙 관리를 사용할 때 새로운 계정 정보를 사용할 수 있도록 업데이트됩니다.  
 > -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 옵션을 변경하려면 Reporting Services 구성 도구를 사용합니다.  
@@ -222,9 +221,9 @@ ms.locfileid: "48110743"
   
      그룹 관리 서비스 계정은 여러 서버의 MSA입니다. Windows는 서버 그룹에서 실행되는 서비스에 대한 서비스 계정을 관리합니다. Active Directory는 서비스를 다시 시작하지 않고 그룹 관리 서비스 계정 암호를 자동으로 업데이트합니다. 그룹 관리 서비스 계정 보안 주체를 사용하도록 SQL Server 서비스를 구성할 수 있습니다. SQL Server 2014부터 SQL Server은 Windows Server 2012 R2 이상에서 독립 실행형 인스턴스, 장애 조치 클러스터 인스턴스 및 가용성 그룹에 대한 그룹 관리 서비스 계정을 지원합니다.  
   
-    SQL Server 2014 이상에 대해 그룹 관리 서비스 계정을 사용하려면 운영 체제가 Windows Server 2012 R2 이상이어야 합니다. Windows Server 2012 R2를 실행하는 서버의 경우 암호 변경 후 중단 없이 즉시 서비스가 로그인할 수 있도록 [KB 2998082](http://support.microsoft.com/kb/2998082) 를 적용해야 합니다.  
+    SQL Server 2014 이상에 대해 그룹 관리 서비스 계정을 사용하려면 운영 체제가 Windows Server 2012 R2 이상이어야 합니다. Windows Server 2012 R2를 실행하는 서버의 경우 암호 변경 후 중단 없이 즉시 서비스가 로그인할 수 있도록 [KB 2998082](https://support.microsoft.com/kb/2998082) 를 적용해야 합니다.  
   
-    자세한 내용은 [그룹 관리 서비스 계정 개요](http://technet.microsoft.com/library/hh831782.aspx)를 참조하세요.  
+    자세한 내용은 [그룹 관리 서비스 계정 개요](https://technet.microsoft.com/library/hh831782.aspx)를 참조하세요.  
       
     > [!NOTE]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대해 그룹 관리 서비스 계정을 사용할 수 있으려면 먼저 도메인 관리자가 Active Directory에서 해당 계정을 만들어야 합니다. 
@@ -245,9 +244,9 @@ ms.locfileid: "48110743"
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스(기본 인스턴스: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|**NT SERVICE\SQLSERVERAGENT**|  
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PAYROLL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 이름이 지정된 **로 이름이 지정된**|**NT SERVICE\SQLAGENT$PAYROLL**|  
   
- 관리 서비스 계정 및 가상 계정에 대한 자세한 내용은 **서비스 계정 단계별 가이드** 의 [관리 서비스 계정 및 가상 계정 개념](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx) 섹션과 [관리 서비스 계정 FAQ(질문과 대답)](http://technet.microsoft.com/library/ff641729\(WS.10\).aspx)를 참조하세요.  
+ 관리 서비스 계정 및 가상 계정에 대한 자세한 내용은 **서비스 계정 단계별 가이드** 의 [관리 서비스 계정 및 가상 계정 개념](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx) 섹션과 [관리 서비스 계정 FAQ(질문과 대답)](https://technet.microsoft.com/library/ff641729\(WS.10\).aspx)를 참조하세요.  
   
- **보안 정보:** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] 가능하다면 [MSA](#MSA) 또는 [virtual account](#VA_Desc) 을 사용하세요. MSA 및 가상 계정을 사용할 수 없으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대해 공유 계정 대신 권한이 낮은 특정 사용자 계정 또는 도메인 계정을 사용하십시오. 서로 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대해서는 각각 별도의 계정을 사용하십시오. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정 또는 서비스 그룹에 추가 권한을 부여하지 마세요. 권한은 그룹 멤버 자격을 통해 부여되거나 서비스 SID에 직접 부여됩니다(서비스 SID가 지원되는 경우).  
+ **보안 정보:** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] 사용 된 [MSA](#MSA) 또는 [가상 계정](#VA_Desc) 가능한 경우. MSA 및 가상 계정을 사용할 수 없으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대해 공유 계정 대신 권한이 낮은 특정 사용자 계정 또는 도메인 계정을 사용하십시오. 서로 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대해서는 각각 별도의 계정을 사용하십시오. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정 또는 서비스 그룹에 추가 권한을 부여하지 마세요. 권한은 그룹 멤버 자격을 통해 부여되거나 서비스 SID에 직접 부여됩니다(서비스 SID가 지원되는 경우).  
   
 ###  <a name="Auto_Start"></a> 자동 시작  
  모든 서비스에는 사용자 계정 외에 다음과 같이 사용자가 제어할 수 있는 3가지 시작 상태가 있습니다.  
@@ -316,20 +315,20 @@ ms.locfileid: "48110743"
  서비스 구성에 따라 설치 또는 업그레이드 중 서비스 또는 서비스 SID에 대한 서비스 계정이 서비스 그룹의 멤버로 추가됩니다.  
   
 ###  <a name="Windows"></a> Windows 사용 권한 및 권한  
- 서비스를 시작하도록 할당된 계정은 해당 서비스에 대해 **시작, 중지 및 일시 중지 권한** 이 필요합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 이를 자동으로 할당합니다.  먼저 RSAT(원격 서버 관리 도구)를 설치하세요. [Windows 7 원격 서버 관리 도구](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d)를 참조하세요.  
+ 서비스를 시작하도록 할당된 계정은 해당 서비스에 대해 **시작, 중지 및 일시 중지 권한** 이 필요합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 이를 자동으로 할당합니다.  먼저 RSAT(원격 서버 관리 도구)를 설치하세요. [Windows 7 원격 서버 관리 도구](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d)를 참조하세요.  
   
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소에서 사용된 서비스별 SID 또는 Windows 그룹에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램이 요청하는 사용 권한을 보여 줍니다.  
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 부여된 사용 권한|  
 |---------------------------------------|------------------------------------------------------------|  
-|**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT SERVICE\MSSQLSERVER**. 명명된 인스턴스: **NT SERVICE\MSSQL$** InstanceName.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)<br /><br /> SQL 기록기를 시작할 수 있는 권한<br /><br /> 이벤트 로그 서비스를 읽을 수 있는 권한<br /><br /> 원격 프로시저 호출 서비스를 읽을 수 있는 권한|  
-|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트:** <sup>1</sup><br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT Service\SQLSERVERAGENT**. 명명된 인스턴스: **NT Service\SQLAGENT$***InstanceName*.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)|  
-|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (로컬 Windows 그룹에는 모든 권한이 부여됩니다. 기본 인스턴스: **SQLServerMSASUser$***ComputerName***$MSSQLSERVER**. 명명된 인스턴스: **SQLServerMSASUser$***ComputerName***$***InstanceName*. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 인스턴스: **SQLServerMSASUser$***ComputerName***$***PowerPivot*.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> 테이블 형식에만 해당:<br /><br /> **프로세스 작업 집합 향상** (SeIncreaseWorkingSetPrivilege)<br /><br /> **프로세스에 대한 메모리 할당량 조정** (SeIncreaseQuotaSizePrivilege)<br /><br /> **메모리의 페이지 잠금** (SeLockMemoryPrivilege) – 페이징이 전체적으로 해제된 경우에만 필요합니다.<br /><br /> 장애 조치(Failover) 클러스터 설치에만 해당:<br /><br /> **예약 우선 순위 증가** (SeIncreaseBasePriorityPrivilege)|  
-|**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT SERVICE\ReportServer**. 명명 된 인스턴스: **NT SERVICE\\$* InstanceName*.)|**서비스로 로그온** (SeServiceLogonRight)|  
-|**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스 및 명명된 인스턴스: **NT SERVICE\MsDtsServer120**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 명명된 인스턴스에 대한 개별 프로세스가 없습니다.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> 애플리케이션 이벤트 로그에 기록할 수 있는 권한<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **인증 후 클라이언트 가장** (SeImpersonatePrivilege)|  
-|**전체 텍스트 검색:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT Service\MSSQLFDLauncher**. 명명된 인스턴스: **NT Service\ MSSQLFDLauncher$***InstanceName*.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)|  
+|**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT SERVICE\MSSQLSERVER**합니다. 명명된 인스턴스: **NT SERVICE\MSSQL$** InstanceName.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)<br /><br /> SQL 기록기를 시작할 수 있는 권한<br /><br /> 이벤트 로그 서비스를 읽을 수 있는 권한<br /><br /> 원격 프로시저 호출 서비스를 읽을 수 있는 권한|  
+|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트:** <sup>1</sup><br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT Service\SQLSERVERAGENT**합니다. 명명된 인스턴스: **NT Service\SQLAGENT$***InstanceName*.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)|  
+|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (로컬 Windows 그룹에는 모든 권한이 부여됩니다. 기본 인스턴스: **SQLServerMSASUser$***ComputerName***$MSSQLSERVER**합니다. 명명된 인스턴스: **SQLServerMSASUser$***ComputerName***$***InstanceName*. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 인스턴스: **SQLServerMSASUser$***ComputerName***$***PowerPivot*.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> 테이블 형식에만 해당:<br /><br /> **프로세스 작업 집합 향상** (SeIncreaseWorkingSetPrivilege)<br /><br /> **프로세스에 대한 메모리 할당량 조정** (SeIncreaseQuotaSizePrivilege)<br /><br /> **메모리의 페이지 잠금**(SeLockMemoryPrivilege) – 페이징이 전체적으로 해제된 경우에만 필요합니다.<br /><br /> 장애 조치(Failover) 클러스터 설치에만 해당:<br /><br /> **예약 우선 순위 증가** (SeIncreaseBasePriorityPrivilege)|  
+|**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT SERVICE\ReportServer**합니다. 명명 된 인스턴스: **NT SERVICE\\$* InstanceName*.)|**서비스로 로그온** (SeServiceLogonRight)|  
+|**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스 및 명명된 인스턴스: **NT SERVICE\MsDtsServer120**합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 명명된 인스턴스에 대한 개별 프로세스가 없습니다.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> 애플리케이션 이벤트 로그에 기록할 수 있는 권한<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **인증 후 클라이언트 가장** (SeImpersonatePrivilege)|  
+|**전체 텍스트 검색:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT Service\MSSQLFDLauncher**합니다. 명명된 인스턴스: **NT Service\ MSSQLFDLauncher$***InstanceName*.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 브라우저:**<br /><br /> (로컬 Windows 그룹에는 모든 권한이 부여됩니다. 기본 또는 명명된 인스턴스: **SQLServer2005SQLBrowserUser***$ComputerName*. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser에는 명명된 인스턴스에 대한 개별 프로세스가 없습니다.)|**서비스로 로그온** (SeServiceLogonRight)|  
-|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS 기록기:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 또는 명명된 인스턴스: **NT Service\SQLWriter**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS 기록기에는 명명된 인스턴스에 대한 개별 프로세스가 없습니다.)|SQLWriter 기록기 서비스는 모든 필수 사용 권한이 있는 LOCAL SYSTEM 계정으로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 이 서비스에 대한 사용 권한을 검사하거나 부여하지 않습니다.|  
+|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS 기록기:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 또는 명명된 인스턴스: **NT Service\SQLWriter**합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS 기록기에는 명명된 인스턴스에 대한 개별 프로세스가 없습니다.)|SQLWriter 기록기 서비스는 모든 필수 사용 권한이 있는 LOCAL SYSTEM 계정으로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 이 서비스에 대한 사용 권한을 검사하거나 부여하지 않습니다.|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller:**|**서비스로 로그온** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client:**|**서비스로 로그온** (SeServiceLogonRight)|  
   
@@ -583,7 +582,7 @@ ms.locfileid: "48110743"
   
     -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 서비스별 SID는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 **sysadmin** 고정 서버 역할의 멤버로 프로비전됩니다.  
   
-    -   서비스별 SID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 장애 조치(Failover) 클러스터 인스턴스가 아닌 한 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 그룹에 추가됩니다.  
+    -   서비스별 SID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 장애 조치(Failover) 클러스터 인스턴스가 아닌 한 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 그룹에 추가됩니다.  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스는 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 그룹에 프로비전된 상태로 유지됩니다.  
   

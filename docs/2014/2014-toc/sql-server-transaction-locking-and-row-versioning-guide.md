@@ -10,17 +10,17 @@ ms.assetid: c7757153-9697-4f01-881c-800e254918c9
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8cec7bddf8f44036d98457cb080b66c2cacd40c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 538386a12c2f33038a3688f102140dd5fd4c1845
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117303"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53375595"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>SQL Server 트랜잭션 잠금 및 행 버전 관리 지침
   어느 데이터베이스에서든 트랜잭션을 제대로 관리하지 않으면 사용자가 많은 시스템에 경합 및 성능 문제가 발생할 수 있습니다. 데이터에 액세스하는 사용자 수가 늘어나면 응용 프로그램에서 트랜잭션을 효율적으로 사용하는 것이 중요합니다. 이 지침에서는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 각 트랜잭션의 물리적 무결성을 유지하는 데 사용하는 잠금 및 행 버전 관리 메커니즘과 응용 프로그램에서 트랜잭션을 효율적으로 제어할 수 있는 방법에 대해 설명합니다.  
   
-**적용 대상**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 를 통해 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 설명이 없는 한 합니다.  
+**적용 대상**: 별도로 언급하지 않는 한 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 부터 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 까지  
   
 ##  <a name="Top"></a> 이 가이드의  
  [트랜잭션 기본 사항](#Basics)  
@@ -48,7 +48,7 @@ ms.locfileid: "48117303"
  동시 트랜잭션에 의한 수정은 다른 동시 트랜잭션에 의한 수정과 격리되어야 합니다. 트랜잭션에서 다른 동시 트랜잭션이 수정하기 전 상태의 데이터를 보거나 두 번째 트랜잭션이 완료된 후의 데이터를 볼 수는 있지만 중간 상태는 볼 수 없습니다. 결과적으로 시작 데이터를 다시 로드하고 일련의 트랜잭션을 재생하여 원래 트랜잭션이 수행된 후의 상태로 데이터를 되돌릴 수 있는데 이를 순차성이라고 합니다.  
   
  영속성  
- 완전 내구성이 있는 트랜잭션이 완료되고 나면 그 영향이 영구적으로 시스템에 적용됩니다. 수정은 시스템에 오류가 발생한 경우에도 지속됩니다. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]및 지연 된 내구성이 있는 트랜잭션을 사용 하도록 설정 합니다. 지연된 영구적 트랜잭션은 트랜잭션 로그 레코드가 디스크에 유지되기 전에 커밋됩니다. 지연된 트랜잭션 내구성에 대한 자세한 내용은 [트랜잭션 내구성](../relational-databases/logs/control-transaction-durability.md) 항목을 참조하세요.  
+ 완전 내구성이 있는 트랜잭션이 완료되고 나면 그 영향이 영구적으로 시스템에 적용됩니다. 수정은 시스템에 오류가 발생한 경우에도 지속됩니다. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 이상은 지연된 영구적 트랜잭션을 사용하도록 설정합니다. 지연된 영구적 트랜잭션은 트랜잭션 로그 레코드가 디스크에 유지되기 전에 커밋됩니다. 지연된 트랜잭션 내구성에 대한 자세한 내용은 [트랜잭션 내구성](../relational-databases/logs/control-transaction-durability.md) 항목을 참조하세요.  
   
  SQL 프로그래머는 적시에 트랜잭션을 시작하고 끝내 데이터의 논리적 일관성을 유지하는 책임을 맡고 있습니다. 프로그래머는 조직의 업무 규칙과 관련하여 데이터를 일관된 상태로 유지할 수 있도록 데이터 수정 순서를 정의해야 합니다. 그런 다음 이러한 수정 문을 하나의 트랜잭션에 포함하여 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]가 트랜잭션의 물리적 무결성을 유지할 수 있게 해야 합니다.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "48117303"
 -   트랜잭션 원자성 및 일관성을 유지하는 트랜잭션 관리 기능. 트랜잭션이 일단 시작된 후에는 성공적으로 완료(커밋)되어야 합니다. 그렇지 않으면 [!INCLUDE[ssDE](../includes/ssde-md.md)]이 트랜잭션 시작 이후 만들어진 모든 데이터 수정 내용을 실행 취소합니다. 이 작업은 변경 전의 상태를 데이터에 반환하기 때문에 트랜잭션 롤백이라고도 합니다.  
   
 ### <a name="controlling-transactions"></a>트랜잭션 제어  
- 응용 프로그램은 주로 트랜잭션 시작 및 종료 시기를 지정하여 트랜잭션을 제어합니다. 트랜잭션 시작 및 종료 시기는 [!INCLUDE[tsql](../includes/tsql-md.md)] 문 또는 데이터베이스 API(응용 프로그래밍 인터페이스) 함수를 사용하여 지정할 수 있습니다. 시스템은 트랜잭션을 불완전하게 종료하는 오류를 올바르게 처리할 수도 있어야 합니다. 자세한 내용은 참조 하세요. [Transaction 문을 &#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/transactions-transact-sql), [ODBC의 트랜잭션](http://technet.microsoft.com/library/ms131281.aspx) 하 고 [트랜잭션을에서 SQL Server Native Client (OLEDB)](http://msdn.microsoft.com/library/ms130918.aspx).  
+ 응용 프로그램은 주로 트랜잭션 시작 및 종료 시기를 지정하여 트랜잭션을 제어합니다. 트랜잭션 시작 및 종료 시기는 [!INCLUDE[tsql](../includes/tsql-md.md)] 문 또는 데이터베이스 API(응용 프로그래밍 인터페이스) 함수를 사용하여 지정할 수 있습니다. 시스템은 트랜잭션을 불완전하게 종료하는 오류를 올바르게 처리할 수도 있어야 합니다. 자세한 내용은 참조 하세요. [Transaction 문을 &#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/transactions-transact-sql), [ODBC의 트랜잭션](https://technet.microsoft.com/library/ms131281.aspx) 하 고 [트랜잭션을에서 SQL Server Native Client (OLEDB)](https://msdn.microsoft.com/library/ms130918.aspx).  
   
- 기본적으로 트랜잭션은 연결 수준에서 관리됩니다. 한 연결에서 트랜잭션이 시작되면 트랜잭션이 끝날 때까지 해당 연결에서 실행되는 모든 [!INCLUDE[tsql](../includes/tsql-md.md)] 문은 트랜잭션의 일부가 됩니다. 그러나 MARS(Multiple Active Result Set) 세션에서는 [!INCLUDE[tsql](../includes/tsql-md.md)] 명시적 또는 암시적 트랜잭션이 일괄 처리 수준에서 관리되는 일괄 처리 범위의 트랜잭션이 됩니다. 일괄 처리가 완료될 때 일괄 처리 범위의 트랜잭션이 커밋되거나 롤백되지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 해당 트랜잭션을 자동으로 롤백합니다. 자세한 내용은 [결과 집합 MARS (Multiple Active) SQL Server에서](http://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx)합니다.  
+ 기본적으로 트랜잭션은 연결 수준에서 관리됩니다. 한 연결에서 트랜잭션이 시작되면 트랜잭션이 끝날 때까지 해당 연결에서 실행되는 모든 [!INCLUDE[tsql](../includes/tsql-md.md)] 문은 트랜잭션의 일부가 됩니다. 그러나 MARS(Multiple Active Result Set) 세션에서는 [!INCLUDE[tsql](../includes/tsql-md.md)] 명시적 또는 암시적 트랜잭션이 일괄 처리 수준에서 관리되는 일괄 처리 범위의 트랜잭션이 됩니다. 일괄 처리가 완료될 때 일괄 처리 범위의 트랜잭션이 커밋되거나 롤백되지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 해당 트랜잭션을 자동으로 롤백합니다. 자세한 내용은 [결과 집합 MARS (Multiple Active) SQL Server에서](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx)합니다.  
   
 #### <a name="starting-transactions"></a>트랜잭션 시작  
  API 함수와 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 사용하여 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스에서 명시적, 자동 커밋 또는 암시적 트랜잭션을 시작할 수 있습니다.  
@@ -134,7 +134,7 @@ ms.locfileid: "48117303"
   
  일괄 처리에서 제약 조건 위반 등 런타임 문 오류가 발생하면 [!INCLUDE[ssDE](../includes/ssde-md.md)]에서는 기본적으로 오류를 발생시킨 문만 롤백합니다. 이 동작은 SET XACT_ABORT 문을 사용하여 변경할 수 있습니다. SET XACT_ABORT ON이 실행된 후에는 모든 런타임 문 오류 발생 시 자동으로 현재 트랜잭션이 롤백됩니다. 구문 오류와 같은 컴파일 오류는 SET XACT_ABORT 옵션 설정으로 영향을 받지 않습니다. 자세한 내용은 [SET XACT_ABORT&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-xact-abort-transact-sql)를 참조하세요.  
   
- 오류가 발생하면 수정 동작(COMMIT 또는 ROLLBACK)을 응용 프로그램 코드에 포함해야 합니다. 트랜잭션 오류를 포함하여 오류를 효과적으로 처리할 수 있는 도구로는 [!INCLUDE[tsql](../includes/tsql-md.md)] TRY…CATCH 구문이 있습니다. 트랜잭션이 포함된 예를 보려면 [TRY...CATCH&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)를 참조하십시오. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 THROW 문을 사용하여 예외를 발생시키고 실행 영역을 TRY…CATCH 구문의 CATCH 블록으로 넘길 수 있습니다. 자세한 내용은 [THROW&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/throw-transact-sql)을 참조하세요.  
+ 오류가 발생하면 수정 동작(COMMIT 또는 ROLLBACK)을 응용 프로그램 코드에 포함해야 합니다. 트랜잭션을 포함 하 여 오류 처리에 대 한 효과적으로 도구로 [!INCLUDE[tsql](../includes/tsql-md.md)] 시도 하는 중... 구문을 파악할 수 있습니다. 트랜잭션이 포함된 예를 보려면 [TRY...CATCH&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)를 참조하십시오. 부터는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], THROW 문을 사용 하 여 예외 및 전송의 CATCH 블록으로 실행을 발생 시키는 중... 구문을 파악할 수 있습니다. 자세한 내용은 [THROW&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/throw-transact-sql)을 참조하세요.  
   
 ##### <a name="compile-and-run-time-errors-in-autocommit-mode"></a>자동 커밋 모드에서 컴파일 오류 및 런타임 오류  
  자동 커밋 모드에서는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스가 한 SQL 문이 아니라 전체 일괄 처리를 롤백하는 것처럼 보일 때가 있습니다. 이러한 상황은 런타임 오류가 아니라 컴파일 오류가 발생했을 때 나타납니다. 컴파일 오류가 발생하면 [!INCLUDE[ssDE](../includes/ssde-md.md)]에서 실행 계획을 작성할 수 없으므로 일괄 처리가 실행되지 않습니다. 오류를 생성한 문 이전의 모든 문이 롤백되는 것처럼 보이지만 오류가 발생하면 일괄 처리의 모든 문이 실행되지 않습니다. 다음 예에서는 컴파일 오류가 발생하여 세 번째 일괄 처리의 `INSERT` 문이 하나도 실행되지 않습니다. 처음 두 `INSERT` 문이 롤백되는 것처럼 보이지만 전혀 실행되지 않은 것입니다.  
@@ -303,7 +303,7 @@ GO
 |행 버전 관리 기반 격리|정의|  
 |------------------------------------|----------------|  
 |커밋된 스냅숏 읽기|READ_COMMITTED_SNAPSHOT 데이터베이스 옵션을 ON으로 설정하면 커밋된 읽기 격리가 행 버전 관리를 통해 문 수준의 읽기 일관성을 제공합니다. 읽기 작업에 SCH-S 테이블 수준 잠금만 필요하고 페이지 또는 행 잠금은 필요하지 않습니다. 즉, 데이터베이스 엔진은 행 버전 관리를 사용하여 문 시작 시와 트랜잭션별로 데이터의 일관성이 유지된 스냅숏을 각 문에 제공합니다. 다른 트랜잭션에 의한 데이터 업데이트 차단을 위해 잠금이 사용되지는 않습니다. 사용자 정의 함수는 UDF를 포함하는 구문 시간이 시작된 후에 커밋된 데이터를 반환할 수 있습니다.<br /><br /> READ_COMMITTED_SNAPSHOT 데이터베이스 옵션을 기본값인 OFF로 설정하면 커밋된 격리 읽기는 공유 잠금을 사용하여 현재 트랜잭션이 읽기 작업을 실행하는 동안 다른 트랜잭션이 행을 수정하지 못하도록 합니다. 또한 공유 잠금은 다른 트랜잭션이 완료될 때까지 해당 트랜잭션이 수정한 행을 문이 읽을 수 없도록 합니다. 두 구현 모두 커밋된 읽기 격리에 대한 ISO 정의를 충족합니다.|  
-|스냅숏|스냅숏 격리 수준은 행 버전 관리를 통해 트랜잭션 수준의 읽기 일관성을 제공합니다. 읽기 작업에 SCH-S 테이블 잠금만 필요하고 페이지 또는 행 잠금은 필요하지 않습니다. 다른 트랜잭션에서 수정한 행을 읽을 때 트랜잭션 시작 당시의 행 버전을 검색합니다. ALLOW_SNAPSHOT_ISOLATION 데이터베이스 옵션을 ON으로 설정하면 데이터베이스에 대해 스냅숏 격리만 사용할 수 있습니다. 기본적으로 사용자 데이터베이스에 대해서는 이 옵션이 OFF로 설정되어 있습니다.<br /><br /> **참고:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 메타데이터의 버전 관리를 지원하지 않습니다. 따라서 스냅숏 격리에서 실행하는 명시적 트랜잭션에서 수행할 수 있는 DDL 작업에 대한 제한 사항이 있습니다. ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME 또는 CLR(공용 언어 런타임) DDL 문과 같은 DDL 문은 BEGIN TRANSACTION 문 다음에 스냅숏 격리에서 허용되지 않습니다. 이러한 문은 암시적 트랜잭션 내에서 스냅숏 격리를 사용할 때 허용됩니다. 기본적으로 암시적 트랜잭션은 DDL 문에서도 스냅숏 격리의 의미 체계를 적용할 수 있게 하는 단일 문입니다. 이 원칙을 위반하면 오류 3961이 발생할 수 있습니다. "문에서 액세스한 개체가 이 트랜잭션이 시작된 후 다른 동시 트랜잭션의 DDL 문에 의해 수정되어 데이터베이스 '%.*ls'에서 스냅숏 격리 트랜잭션이 실패했습니다. 메타데이터에 버전이 지정되지 않았으므로 이 트랜잭션은 허용되지 않습니다. 스냅숏 격리를 함께 사용하여 메타데이터에 대해 동시 업데이트를 수행하면 일관되지 않은 결과가 발생할 수 있습니다."|  
+|스냅숏|스냅숏 격리 수준은 행 버전 관리를 통해 트랜잭션 수준의 읽기 일관성을 제공합니다. 읽기 작업에 SCH-S 테이블 잠금만 필요하고 페이지 또는 행 잠금은 필요하지 않습니다. 다른 트랜잭션에서 수정한 행을 읽을 때 트랜잭션 시작 당시의 행 버전을 검색합니다. ALLOW_SNAPSHOT_ISOLATION 데이터베이스 옵션을 ON으로 설정하면 데이터베이스에 대해 스냅숏 격리만 사용할 수 있습니다. 기본적으로 사용자 데이터베이스에 대해서는 이 옵션이 OFF로 설정되어 있습니다.<br /><br /> **참고:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 메타데이터의 버전 관리를 지원하지 않습니다. 따라서 스냅숏 격리에서 실행하는 명시적 트랜잭션에서 수행할 수 있는 DDL 작업에 대한 제한 사항이 있습니다. ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME 또는 CLR(공용 언어 런타임) DDL 문과 같은 DDL 문은 BEGIN TRANSACTION 문 다음에 스냅숏 격리에서 허용되지 않습니다. 이러한 문은 암시적 트랜잭션 내에서 스냅숏 격리를 사용할 때 허용됩니다. 기본적으로 암시적 트랜잭션은 DDL 문에서도 스냅숏 격리의 의미 체계를 적용할 수 있게 하는 단일 문입니다. 이 원칙을 위반하면 오류 3961이 발생할 수 있습니다. 오류 3961: "문에서 액세스한 개체가 이 트랜잭션이 시작된 후 다른 동시 트랜잭션의 DDL 문에 의해 수정되어 데이터베이스 '%.*ls'에서 스냅숏 격리 트랜잭션이 실패했습니다. 메타데이터에 버전이 지정되지 않았으므로 이 트랜잭션은 허용되지 않습니다. 스냅숏 격리를 함께 사용하여 메타데이터에 대해 동시 업데이트를 수행하면 일관되지 않은 결과가 발생할 수 있습니다."|  
   
  다음 표에서는 각 격리 수준에서 사용되는 동시성 부작용을 보여 줍니다.  
   
@@ -438,7 +438,7 @@ GO
 -   **TABLOCK** 힌트를 지정하거나 **sp_tableoption**을 사용하여 **table lock on bulk load** 테이블 옵션을 설정합니다.  
   
 > [!TIP]  
->  덜 제한적인 대량 업데이트 잠금을 보유하는 BULK INSERT 문과 달리 TABLOCK 힌트를 사용하는 INSERT INTO…SELECT는 테이블에 대해 배타적(X) 잠금을 보유합니다. 즉, 병렬 삽입 작업을 사용하여 행을 삽입할 수 없습니다.  
+>  덜 제한적인 대량 업데이트 잠금을 보유하는 BULK INSERT 문과 달리 TABLOCK 힌트를 사용하는 INSERT INTO...SELECT는 테이블에 대해 배타적(X) 잠금을 보유합니다. 즉, 병렬 삽입 작업을 사용하여 행을 삽입할 수 없습니다.  
   
 #### <a name="key-range-locks"></a>키 범위 잠금  
  키 범위 잠금은 직렬화 가능 트랜잭션 격리 수준을 사용하는 동안 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에서 읽는 레코드 집합에 포함된 행 범위를 암시적으로 보호합니다. 키 범위 잠금은 가상 읽기를 방지합니다. 행 간에 키 범위를 보호하면 트랜잭션이 액세스하는 레코드 집합에 대한 가상 삽입이나 가상 삭제도 방지됩니다.  
@@ -532,7 +532,7 @@ GO
   
 -   트랜잭션 격리 수준을 SERIALIZABLE로 설정해야 합니다.  
   
--   쿼리 프로세서가 인덱스를 사용하여 범위 필터 조건자를 구현해야 합니다. 예를 들어 SELECT 문의 WHERE 절은 다음 조건자를 사용하여 범위 조건을 설정할 수 있습니다. ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'**. 키 범위 잠금은 **ColumnX**가 인덱스 키 내에 있는 경우에만 얻을 수 있습니다.  
+-   쿼리 프로세서가 인덱스를 사용하여 범위 필터 조건자를 구현해야 합니다. 예를 들어 SELECT 문의 WHERE 절은 다음 조건자를 사용하여 범위 조건을 설정할 수 있습니다. ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'** 합니다. 키 범위 잠금은 **ColumnX**가 인덱스 키 내에 있는 경우에만 얻을 수 있습니다.  
   
 #### <a name="examples"></a>예  
  다음 테이블 및 인덱스는 이어지는 키 범위 잠금 예의 기준으로 사용됩니다.  
@@ -613,7 +613,7 @@ INSERT mytable VALUES ('Dan');
   
 -   트랜잭션 B가 1행에 대한 배타적 잠금을 요청하고 트랜잭션 A가 1행에 대해 소유하고 있는 공유 잠금을 종료 및 해제할 때까지 트랜잭션 B가 차단됩니다.  
   
- 트랜잭션 A는 트랜잭션 B가 완료 될 때까지 완료될 수 없지만 트랜잭션 B는 트랜잭션 A에 의해 차단됩니다. 이러한 상태를 순환 종속 관계라고 합니다. 트랜잭션 A는 트랜잭션 B에 종속되고 트랜잭션 B는 트랜잭션 A에 종속된 형태로 순환됩니다.  
+ 트랜잭션 B가 완료되어야 트랜잭션 A도 완료될 수 있지만 트랜잭션 B는 트랜잭션 A에 의해 차단된 상태입니다. 이러한 상태를 순환 종속 관계라고 합니다. 트랜잭션 A는 트랜잭션 B에 종속되고 트랜잭션 B는 트랜잭션 A에 종속된 형태로 순환됩니다.  
   
  교착 상태의 트랜잭션은 둘 다 외부 프로세스에서 교착 상태를 해제할 때까지 기다립니다. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 교착 상태 모니터는 교착 상태에 있는 태스크가 있는지 주기적으로 검사합니다. 순환 종속 관계가 발견되면 모니터는 두 작업 중 처리하지 않을 태스크를 하나 선택하고 해당 트랜잭션을 오류와 함께 종료합니다. 이렇게 하여 다른 태스크가 해당 트랜잭션을 완료할 수 있습니다. 오류와 함께 종료된 트랜잭션의 응용 프로그램은 해당 트랜잭션을 다시 시도하며 이 트랜잭션은 대개 교착 상태의 다른 트랜잭션이 완료된 후에 끝납니다.  
   
@@ -653,7 +653,7 @@ INSERT mytable VALUES ('Dan');
   
 -   **병렬 쿼리 실행 관련 리소스**. 교환 포트와 관련된 코디네이터, 제작자 및 소비자 스레드는 대개 병렬 쿼리에 속하지 않는 하나 이상의 다른 프로세스를 포함할 경우 서로 차단하여 교착 상태를 일으킵니다. 또한 병렬 쿼리 실행을 시작할 때 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 현재 작업을 기반으로 병렬 처리 수준, 즉 작업자 스레드 수를 결정합니다. 예를 들어 서버에서 새 쿼리 실행이 시작되거나 시스템에 작업자 스레드가 부족하여 시스템 작업이 예기치 않게 변경되면 교착 상태가 발생할 수 있습니다.  
   
--   **MARS(Multiple Active Result Sets) 리소스**. MARS 리소스는 MARS에서 여러 활성 요청의 인터리브를 제어하는 데 사용합니다. 자세한 내용은 [결과 집합 MARS (Multiple Active) SQL Server에서](http://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx)합니다.  
+-   **MARS(Multiple Active Result Sets) 리소스**. MARS 리소스는 MARS에서 여러 활성 요청의 인터리브를 제어하는 데 사용합니다. 자세한 내용은 [결과 집합 MARS (Multiple Active) SQL Server에서](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx)합니다.  
   
     -   **사용자 리소스**. 스레드가 사용자 응용 프로그램에서 제어하는 리소스를 대기할 때 해당 리소스는 외부 또는 사용자 리소스로 간주되고 잠금처럼 처리됩니다.  
   
@@ -1860,8 +1860,8 @@ GO
  ![맨 위 링크와 함께 사용 되는 화살표 아이콘](media/uparrow16x16.gif "맨 위 링크와 함께 사용 되는 화살표 아이콘") [이 가이드의](#Top)  
   
 ## <a name="see-also"></a>관련 항목  
- [SQL Server 2005 행 버전 관리 기반의 트랜잭션 격리](http://msdn.microsoft.com/library/ms345124(v=sql.90).aspx)   
- [행 버전 관리 오버헤드](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   
- [SQL Server 2008에서 자치 트랜잭션을 만드는 방법](http://blogs.msdn.com/b/sqlprogrammability/archive/2008/08/22/how-to-create-an-autonomous-transaction-in-sql-server-2008.aspx)  
+ [SQL Server 2005 행 버전 관리 기반의 트랜잭션 격리](https://msdn.microsoft.com/library/ms345124(v=sql.90).aspx)   
+ [행 버전 관리 오버헤드](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   
+ [SQL Server 2008에서 자치 트랜잭션을 만드는 방법](https://blogs.msdn.com/b/sqlprogrammability/archive/2008/08/22/how-to-create-an-autonomous-transaction-in-sql-server-2008.aspx)  
   
   

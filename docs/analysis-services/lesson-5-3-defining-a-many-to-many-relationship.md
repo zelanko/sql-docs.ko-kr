@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 487b61512e1dbd784b9b63eb0c3efdf1f98281ec
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c2541637af690395bb52c86a604ed7b37bd3fb00
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019630"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52518017"
 ---
-# <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Lesson 5-3-다 대 다 관계 정의
+# <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>단원 5-3-다 대 다 관계 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 차원을 정의할 경우 일반적으로 각 팩트는 하나의 차원 멤버에만 조인되지만 단일 차원 멤버는 여러 팩트와 연결될 수 있습니다. 예를 들어 각 고객은 여러 개의 주문을 가질 수 있지만 각 주문은 단일 컴퓨터에 속합니다. 관계형 데이터베이스 용어에서 이 관계를 *일 대 다 관계*라고 합니다. 그러나 단일 팩트가 여러 차원 멤버에 조인될 수도 있습니다. 관계형 데이터베이스 용어에서 이 관계를 *다 대 다 관계*라고 합니다. 예를 들어 고객이 구매하는 데는 여러 이유가 있고 구매 이유는 여러 구매와 연결될 수 있습니다. 조인 테이블을 사용하여 각 구매와 관련된 판매 이유를 정의합니다. 그러므로 이러한 관계에서 생성된 Sales Reason 차원에는 단일 판매 트랜잭션과 관련된 여러 멤버가 포함됩니다. 다 대 다 차원은 차원 모델을 표준 별모양 스키마 이상으로 확장하고 차원이 팩트 테이블에 직접 관련되지 않는 경우 복잡한 분석을 지원합니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "34019630"
 다 대 다 차원이 사용되면 값의 합계가 고유하게 계산됩니다. 이는 All 멤버에 대해 값이 두 번 이상 집계되지 않는다는 것을 의미합니다.  
   
 > [!NOTE]  
-> 다 대 다 차원 관계를 지원하려면 데이터 원본 뷰에서 관련되는 모든 테이블 간에 기본 키-외래 키 관계를 정의해야 합니다. 정의하지 않으면 큐브 디자이너의 **차원 용도** 탭에서 관계를 설정할 때 올바른 중간 측정값 그룹을 선택할 수 없습니다.  
+> 다 대 다 차원 관계를 지원 하기 위해 데이터 원본 뷰에서 관련 된 모든 테이블 간에 기본 키-외래 키 관계를 정의 합니다. 정의하지 않으면 큐브 디자이너의 **차원 용도** 탭에서 관계를 설정할 때 올바른 중간 측정값 그룹을 선택할 수 없습니다.  
   
 자세한 내용은 [차원 관계](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)와 [다 대 다 관계 및 다 대 다 관계 속성 정의](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)를 참조하세요.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "34019630"
   
 5.  **테이블 추가/제거** 대화 상자에서 **DimSalesReason** 테이블과 **FactInternetSalesReason** 테이블을 **포함된 개체** 목록에 추가한 다음 **확인**을 클릭합니다.  
   
-    관련된 테이블 간 기본 키-외래 키 관계가 기본 관계형 데이터베이스에 정의되어 있으므로 해당 관계가 자동으로 설정됩니다. 이러한 관계가 기본 관계형 데이터베이스에 정의되어 있지 않으면 해당 관계를 데이터 원본 뷰에서 정의해야 합니다.  
+    해당 관계가 기본 관계형 데이터베이스에 정의 되어 있으므로 관련 된 테이블 간에 기본 키-외래 키 관계는 자동으로 설정 하는 알 수 있습니다. 이러한 관계가 기본 관계형 데이터베이스에 정의되어 있지 않으면 해당 관계를 데이터 원본 뷰에서 정의해야 합니다.  
   
 6.  **서식** 메뉴에서 **자동 레이아웃**을 가리킨 다음 **다이어그램**을 클릭합니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "34019630"
   
     다음 이미지에서와 같이 각 주문에서 각 줄 번호의 키 값은 해당 줄 항목의 구매에 대한 판매 이유를 식별합니다.  
   
-    ![키 값을 구입에 대 한 판매 이유를 식별](../analysis-services/media/l5-many-to-many-1.gif "키 값을 구입에 대 한 판매 이유를 식별 합니다.")  
+    ![키 값을 구매에 대 한 판매 이유를 식별](../analysis-services/media/l5-many-to-many-1.gif "키 구매에 대 한 판매 이유를 식별 하는 값")  
   
 ## <a name="defining-the-intermediate-measure-group"></a>중간 측정값 그룹 정의  
   
@@ -80,7 +80,7 @@ ms.locfileid: "34019630"
   
 5.  **Internet Sales Reason Count** 를 선택하고 속성 창에서 이 측정값의 속성을 검토합니다.  
   
-    이 측정값의 **AggregateFunction** 속성은 **Sum** 이 아니라 **Count**로 정의됩니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]선택한 **Count** 기본 데이터 형식이 문자열 데이터 형식입니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 기본 팩트 테이블의 다른 두 열을 실제 측정값이 아니라 숫자 키로 검색하므로 해당 열은 측정값으로 선택되지 않습니다. 자세한 내용은 [반가산적 동작 정의](../analysis-services/multidimensional-models/define-semiadditive-behavior.md)를 참조하세요.  
+    이 측정값의 **AggregateFunction** 속성은 **Sum** 이 아니라 **Count**로 정의됩니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 기본 데이터 형식이 문자열 데이터 형식이므로 **Count** 를 선택했습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 기본 팩트 테이블의 다른 두 열을 실제 측정값이 아니라 숫자 키로 검색하므로 해당 열은 측정값으로 선택되지 않습니다. 자세한 내용은 [반가산적 동작 정의](../analysis-services/multidimensional-models/define-semiadditive-behavior.md)를 참조하세요.  
   
 6.  속성 창에서 **Internet Sales Reason Count** 측정값의 **Visible** 속성을 **False**로 변경합니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "34019630"
   
     다음 그림에서는 **Internet Sales Reason Count** 측정값의 속성을 보여 줍니다.  
   
-    ![Internet Sales Reason Count 측정값에 대 한 속성](../analysis-services/media/l5-many-to-many-2.gif "Internet Sales Reason Count 측정값에 대 한 속성")  
+    ![Internet Sales Reason Count 측정값에 대 한 속성](../analysis-services/media/l5-many-to-many-2.gif "Internet Sales Reason Count 측정값 속성")  
   
 ## <a name="defining-the-many-to-many-dimension"></a>다 대 다 차원 정의  
   
@@ -114,7 +114,7 @@ ms.locfileid: "34019630"
   
 11. **파일** 메뉴에서 **모두 저장**을 클릭합니다.  
   
-12. **특성** 차원에 대한 차원 디자이너의 **특성** 창에서 **특성 Key**를 선택한 후 속성 창의 **Name** 속성을 **특성.** 으로 변경합니다.  
+12.  **특성** 차원에 대한 차원 디자이너의 **특성** 창에서 **특성 Key**를 선택한 후 속성 창의 **Name** 속성을 **특성.** 으로 변경합니다.  
   
 13. 차원 디자이너의 **계층** 창에서 **Sales Reason Type** 수준과 **Sales Reason** 수준이 순서대로 포함된 **Sales Reasons** 사용자 계층을 만듭니다.  
   
@@ -174,7 +174,7 @@ ms.locfileid: "34019630"
 [측정값 그룹의 차원 세분성 정의](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## <a name="see-also"></a>관련 항목:  
-[데이터 원본 뷰 디자이너 & #40;에서 다이어그램 작업 Analysis Services & #41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+[데이터 원본 뷰 디자이너에서의 다이어그램 작업&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
 [차원 관계](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [다 대 다 관계 및 다 대 다 관계 속성 정의](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   

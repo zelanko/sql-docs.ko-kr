@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a2e30dcf1875b09630516be9d9deb3248a95481e
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: HT
+ms.openlocfilehash: e54aa6bb53e6ce9f34e6647927f29b7aadb97180
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146176"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206882"
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX 멤버 속성-기본 멤버 속성
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "50146176"
   
  차원 멤버 속성을 사용하고 보는 방법에 대한 개요를 보려면 [SSMS에서 MDX 쿼리 창에서 SSAS 멤버 속성 보기](http://go.microsoft.com/fwlink/?LinkId=317362)를 참조하십시오.  
   
-> [!NOTE]  
+> [!NOTE]
 >  1999년 3월자(2.6) OLE DB 사양의 OLAP 섹션을 준수하는 공급자로서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 이 항목에 나열된 기본 멤버 속성을 지원합니다.  
->   
+> 
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 이외의 공급자가 기본 멤버 속성을 추가로 지원할 수도 있습니다. 다른 공급자가 지원하는 기본 멤버 속성에 대한 자세한 내용은 해당 공급자가 제공하는 설명서를 참조하십시오.  
   
 ## <a name="types-of-member-properties"></a>멤버 속성의 유형  
@@ -61,7 +61,7 @@ ms.locfileid: "50146176"
 |--------------|-----------------|  
 |**ID**|내부적으로 유지 관리되는 멤버 ID입니다.|  
 |**Key**|원본 데이터 형식에서 멤버 키의 값입니다. MEMBER_KEY는 이전 버전과의 호환성을 위해 제공됩니다.  비복합 키의 경우 MEMBER_KEY 값이 KEY0과 동일하고 복합 키의 경우 MEMBER_KEY 속성이 Null입니다.|  
-|**KEYx**|멤버에 대한 키이며 x는 키의 서수 값(0부터 시작)입니다. KEY0은 복합 키와 비복합 키에 모두 사용할 수 있지만 주로 복합 키에 사용합니다.<br /><br /> KEY0, KEY1, KEY2 등이 모여 복합 키가 형성됩니다. 쿼리에서 각 키를 사용하여 복합 키의 해당 부분을 반환할 수 있습니다. 예를 들어 KEY0을 지정하면 복합 키의 첫 번째 부분이 반환되고 KEY1을 지정하면 복합 키의 다음 부분이 반환됩니다.<br /><br /> 복합 키가 아닌 경우 KEY0은 **Key**와 같습니다.<br /><br /> **KEYx** 는 컨텍스트 내에서는 물론 컨텍스트 없이도 사용할 수 있습니다. 이러한 이유로 이 키는 두 목록에 모두 나와 있습니다.<br /><br /> 이 멤버 속성을 사용하는 방법에 대한 예는 [간단한 MDX Tidbit: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364)를 참조하세요.|  
+|**KEYx**|멤버에 대한 키이며 x는 키의 서수 값(0부터 시작)입니다. KEY0은 복합 키와 비복합 키에 모두 사용할 수 있지만 주로 복합 키에 사용합니다.<br /><br /> KEY0, KEY1, KEY2 등이 모여 복합 키가 형성됩니다. 쿼리에서 각 키를 사용하여 복합 키의 해당 부분을 반환할 수 있습니다. 예를 들어 KEY0을 지정하면 복합 키의 첫 번째 부분이 반환되고 KEY1을 지정하면 복합 키의 다음 부분이 반환됩니다.<br /><br /> 복합 키가 아닌 경우 KEY0은 **Key**와 같습니다.<br /><br /> **KEYx** 는 컨텍스트 내에서는 물론 컨텍스트 없이도 사용할 수 있습니다. 이러한 이유로 이 키는 두 목록에 모두 나와 있습니다.<br /><br /> 이 멤버 속성을 사용 하는 방법의 예제를 참조 하세요. [간단한 MDX Tidbit: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364)합니다.|  
 |**이름**|멤버의 이름입니다.|  
   
 ### <a name="properties-syntax-for-context-sensitive-properties"></a>상황에 맞는 속성에 대한 PROPERTIES 구문  
@@ -98,7 +98,7 @@ ms.locfileid: "50146176"
 |**HIERARCHY_UNIQUE_NAME**|계층의 고유한 이름입니다. 멤버가 둘 이상의 계층에 속한 경우 멤버가 속한 각 계층마다 하나의 행이 있습니다. 자격에 따라 고유한 이름을 생성하는 공급자의 경우 이 이름의 각 구성 요소는 구분 기호로 분리됩니다.|  
 |**IS_DATAMEMBER**|멤버가 데이터 멤버인지 여부를 나타내는 부울입니다.|  
 |**IS_PLACEHOLDERMEMBER**|멤버가 자리 표시자인지 여부를 나타내는 부울입니다.|  
-|**KEYx**|멤버에 대한 키이며 x는 키의 서수 값(0부터 시작)입니다. KEY0은 복합 키와 비복합 키에 모두 사용할 수 있습니다.<br /><br /> 복합 키가 아닌 경우 KEY0은 **Key**와 같습니다.<br /><br /> KEY0, KEY1, KEY2 등이 모여 복합 키가 형성됩니다. 쿼리에서 각 키를 참조하여 복합 키의 해당 부분을 반환할 수 있습니다. 예를 들어 KEY0을 지정하면 복합 키의 첫 번째 부분이 반환되고 KEY1을 지정하면 복합 키의 다음 부분이 반환됩니다.<br /><br /> **KEYx** 는 컨텍스트 내에서는 물론 컨텍스트 없이도 사용할 수 있습니다. 이러한 이유로 이 키는 두 목록에 모두 나와 있습니다.<br /><br /> 이 멤버 속성을 사용하는 방법에 대한 예는 [간단한 MDX Tidbit: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364)를 참조하세요.|  
+|**KEYx**|멤버에 대한 키이며 x는 키의 서수 값(0부터 시작)입니다. KEY0은 복합 키와 비복합 키에 모두 사용할 수 있습니다.<br /><br /> 복합 키가 아닌 경우 KEY0은 **Key**와 같습니다.<br /><br /> KEY0, KEY1, KEY2 등이 모여 복합 키가 형성됩니다. 쿼리에서 각 키를 참조하여 복합 키의 해당 부분을 반환할 수 있습니다. 예를 들어 KEY0을 지정하면 복합 키의 첫 번째 부분이 반환되고 KEY1을 지정하면 복합 키의 다음 부분이 반환됩니다.<br /><br /> **KEYx** 는 컨텍스트 내에서는 물론 컨텍스트 없이도 사용할 수 있습니다. 이러한 이유로 이 키는 두 목록에 모두 나와 있습니다.<br /><br /> 이 멤버 속성을 사용 하는 방법의 예제를 참조 하세요. [간단한 MDX Tidbit: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364)합니다.|  
 |**LCID** *x*|로캘 ID 16진수 값으로 멤버 캡션을 변환한 값이며 *x* 는 로캘 ID 10진수 값(예: 영어-캐나다의 경우 LCID1009)입니다. 데이터 원본에 바인딩된 캡션 열이 변환에 있는 경우에만 이 값을 사용할 수 있습니다.|  
 |**LEVEL_NUMBER**|계층 루트에서 멤버까지의 거리입니다. 루트 수준은 0입니다.|  
 |**LEVEL_UNIQUE_NAME**|이 멤버가 속한 수준의 고유한 이름입니다. 자격에 따라 고유한 이름을 생성하는 공급자의 경우 이 이름의 각 구성 요소는 구분 기호로 분리됩니다.|  
@@ -149,7 +149,7 @@ SELECT
 FROM [Adventure Works]  
 ```  
   
- **예제 2: 상황에 맞지 않는 기본 속성**  
+ **예제 2: 상황에 맞는 중요 하지 않은 기본 속성**  
   
  다음 예는 상황에 맞지 않는 기본 속성의 전체 목록입니다. SSMS에서 쿼리를 실행한 후 개별 멤버를 클릭하여 멤버 속성 대화 상자에서 속성을 볼 수 있습니다.  
   

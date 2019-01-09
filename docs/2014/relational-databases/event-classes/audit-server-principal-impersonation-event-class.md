@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 6fee1a15-325a-4f09-a95d-deecf8af1b9f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2fc3241881c8c87c7ab2978820119e8bdabeee3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: decf18a42bc2f3f80d5c6099adc58a42869eec64
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079633"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778645"
 ---
 # <a name="audit-server-principal-impersonation-event-class"></a>Audit Server Principal Impersonation 이벤트 클래스
   **Audit Server Principal Impersonation** 이벤트 클래스는 EXECUTE AS \<*login*>과 같이 서버 범위 안에 가장이 있는 경우에 발생합니다.  

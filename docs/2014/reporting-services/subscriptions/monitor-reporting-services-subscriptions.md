@@ -17,12 +17,12 @@ ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f36432352d7b8351e7ae51840906c0d00ff67d78
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4959243f633702fb0f0afd9b2444ae65666ef680
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076303"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52506965"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Reporting Services 구독 모니터링
   사용자 인터페이스, Windows PowerShell 또는 로그 파일을 통해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 모니터링할 수 있습니다. 모니터링에 사용할 수 있는 옵션은 실행 중인 보고서 서버의 모드에 따라 달라집니다.  
@@ -62,9 +62,9 @@ ms.locfileid: "48076303"
 |\<filename>: \<message> 파일에 쓰지 못했습니다.|파일 공유 위치에 배달하지 못했음을 나타냅니다. 이 메시지는 파일 공유 배달 확장 프로그램에서 제공합니다.|  
 |\<custom status messages>|배달 확장 프로그램에서 제공하는 배달 성공 및 실패에 대한 상태 메시지입니다. 타사 또는 사용자 지정 배달 확장 프로그램을 사용할 경우 추가 상태 메시지가 제공될 수 있습니다.|  
   
- 또한, 보고서 서버 관리자는 현재 처리 중인 표준 구독을 모니터링할 수 있습니다. 데이터 기반 구독은 모니터링할 수 없습니다. 자세한 내용은 [실행 중인 프로세스 관리](manage-a-running-process.md)합니다.  
+ 또한, 보고서 서버 관리자는 현재 처리 중인 표준 구독을 모니터링할 수 있습니다. 데이터 기반 구독은 모니터링할 수 없습니다. 자세한 내용은 [실행 중인 프로세스 관리](manage-a-running-process.md)를 참조하세요.  
   
- 구독을 배달할 수 없는 경우(예: 메일 서버를 사용할 수 없는 경우) 배달 확장 프로그램에서 배달을 다시 시도합니다. 구성 설정에 따라 시도할 횟수가 지정됩니다. 기본값은 다시 시도 안 함입니다.  보고서가 데이터 없이 처리되는 경우(예: 데이터 원본이 오프라인 상태인 경우)도 있습니다. 이런 경우 해당 사실을 나타내는 텍스트가 메시지 본문에 제공됩니다.  
+ 구독을 배달할 수 없는 경우(예: 메일 서버를 사용할 수 없는 경우) 배달 확장 프로그램에서 배달을 다시 시도합니다. 구성 설정에 따라 시도할 횟수가 지정됩니다. 기본값은 다시 시도 안 함입니다. 보고서가 데이터 없이 처리되는 경우(예: 데이터 원본이 오프라인 상태인 경우)도 있습니다. 이런 경우 해당 사실을 나타내는 텍스트가 메시지 본문에 제공됩니다.  
   
 ### <a name="native-mode-log-files"></a>기본 모드 로그 파일  
  배달 중에 오류가 발생하면 보고서 서버 추적 로그에 항목이 하나 생성됩니다.  
@@ -79,9 +79,9 @@ ms.locfileid: "48076303"
   
  다음은 구독과 관련된 추적 로그 파일 예제 오류 메시지입니다.  
   
--   library!WindowsService_7!b60!05/20/2014-22:34:36:: i 정보: Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e 오류: **메일을 보내는 중 오류가 발생했습니다**. 예외: System.Net.Mail.SmtpException: SMTP 서버에 보안 연결이 필요하거나 클라이언트가 인증되지 않았습니다. 서버 응답: 5.7.1 System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, 문자열 응답)에서 클라이언트가 인증되지 않았습니다.  
+-   라이브러리! WindowsService_7! b60! 05/20/2014-22: 34:36:: i 정보: 서버 시스템 properties.emailextension에 지정 된 대로 EnableExecutionLogging to 'True' 초기화! WindowsService_7! b60! 05/20/2014-22: 34:41:: e 오류: **전자 메일 보내기 오류**합니다.  예외:  System.Net.Mail.SmtpException: SMTP 서버에 보안 연결이 필요하거나 클라이언트가 인증되지 않았습니다. 서버 응답: 5.7.1 System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, 문자열 응답)에서 클라이언트가 인증되지 않았습니다.  
   
- 로그 파일에는 보고서를 열었는지 여부 또는 배달이 실제로 성공했는지 여부에 대한 정보가 없습니다. 성공적인 배달은 일정 예약 및 배달 프로세서에서 오류가 발생하지 않고 보고서 서버가 메일 서버에 연결되었음을 의미합니다.  사용자의 사서함에 전자 메일을 배달할 수 없다는 메시지 오류가 표시될 경우 해당 정보는 로그 파일에 포함되지 않습니다. 로그 파일에 대한 자세한 내용은 [Reporting Services 로그 파일 및 소스](../report-server/reporting-services-log-files-and-sources.md)를 참조하세요.  
+ 로그 파일에는 보고서를 열었는지 여부 또는 배달이 실제로 성공했는지 여부에 대한 정보가 없습니다. 성공적인 배달은 일정 예약 및 배달 프로세서에서 오류가 발생하지 않고 보고서 서버가 메일 서버에 연결되었음을 의미합니다. 사용자의 사서함에 전자 메일을 배달할 수 없다는 메시지 오류가 표시될 경우 해당 정보는 로그 파일에 포함되지 않습니다. 로그 파일에 대한 자세한 내용은 [Reporting Services 로그 파일 및 소스](../report-server/reporting-services-log-files-and-sources.md)를 참조하세요.  
   
 ##  <a name="bkmk_sharepoint_mode"></a> SharePoint 모드  
  SharePoint 모드에서 구독 모니터링: 구독 상태는 **구독 관리** 페이지에서 모니터링할 수 있습니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "48076303"
   
 3.  확장된 메뉴 옵션을 선택합니다(**...**).  
   
-4.  **구독 관리**를 선택합니다.  
+4.   **구독 관리**를 선택합니다.  
   
 ### <a name="sharepoint-uls-log-files"></a>SharePoint ULS 로그 파일  
  구독 관련 정보는 SharePoint ULS 로그에 기록됩니다. ULS 로그에 대한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이벤트를 구성하는 방법에 대한 자세한 내용은 [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](../report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)를 참조하세요.  다음은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독과 관련된 ULS 로그 항목의 예입니다.  
@@ -100,7 +100,7 @@ ms.locfileid: "48076303"
 ||||||||  
 |-|-|-|-|-|-|-|  
 |Date|처리|영역|범주|Level|Correlation|메시지|  
-|5/21/2014 14:34:06:15|응용 프로그램 풀: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|보고서 서버 전자 메일 확장 프로그램|예기치 않은 오류|( 비어 있음)|**메일을 보내는 중 오류가 발생했습니다.** 예외: System.Net.Mail.SmtpException: 사서함을 사용할 수 없습니다. 서버 응답: 5.7.1 클라이언트가 Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification 알림)의 System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) at System.Net.Mail.SmtpClient.Send(MailMessage 메시지)의 System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, 문자열 serverResponse)에서 이 보낸 사람으로 보낼 수 있는 권한이 없습니다.|  
+|5/21/2014 14:34:06:15|응용 프로그램 풀: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|보고서 서버 전자 메일 확장 프로그램|예기치 않은 오류|( 비어 있음)|**메일을 보내는 중 오류가 발생했습니다.**  예외:  System.Net.Mail.SmtpException: 사서함을 사용할 수 없습니다. 서버 응답: 5.7.1 클라이언트가 Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification 알림)의 System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  at System.Net.Mail.SmtpClient.Send(MailMessage 메시지)의 System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, 문자열 serverResponse)에서 이 보낸 사람으로 보낼 수 있는 권한이 없습니다.|  
   
 ##  <a name="bkmk_use_powershell"></a> PowerShell을 사용한 구독 모니터링  
  기본 모드나 SharePoint 모드 구독의 상태를 확인하는 데 사용할 수 있는 PowerShell 스크립트 예가 필요하면 [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md)을 참조하세요.  
@@ -120,8 +120,8 @@ ms.locfileid: "48076303"
   
  여러 조건으로 인해 구독이 비활성화되면 보고서 서버가 구독을 실행할 때 해당 사실이 구독에 반영됩니다. 구독을 매주 금요일 오전 2시에 배달하도록 예약되어 있을 때 배달 확장 프로그램이 월요일 오전 9시에 제거되었다면 금요일 오전 2시까지는 구독에 비활성 상태가 반영되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [기본 모드 보고서 서버에 대 한 구독 만들기 및 관리](../create-manage-subscriptions-native-mode-report-servers.md)   
+## <a name="see-also"></a>관련 항목:  
+ [기본 모드 보고서 서버 구독 만들기 및 관리](../create-manage-subscriptions-native-mode-report-servers.md)   
  [구독 및 배달&#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)  
   
   

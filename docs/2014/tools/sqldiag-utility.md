@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - command prompt utilities [SQL Server], SQLdiag
@@ -30,12 +29,12 @@ ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 475c77650179648642aead8275040b894ccc4b40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: a024e2fc4cb7afaecdc6e84ae6dba4f3a2700d8b
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125323"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590257"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag Utility
   **SQLdiag** 유틸리티는 콘솔 응용 프로그램 또는 서비스로 실행할 수 있는 범용 진단 정보 수집 유틸리티입니다. **SQLdiag** 를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 기타 서버 유형에서 로그 및 데이터 파일을 수집할 수 있으며 이러한 파일을 사용하여 지속적으로 서버를 모니터링하거나 특정 서버 문제를 해결할 수 있습니다. **SQLdiag** 는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 고객 지원 서비스에서 진단 정보를 빠르고 간편하게 수집할 수 있도록 지원하는 유틸리티입니다.  
@@ -85,16 +84,16 @@ ms.locfileid: "48125323"
  **/?**  
  사용법 정보를 표시합니다.  
   
- **/I** *configuration_file*  
+ **/I** _configuration_file_  
  **SQLdiag** 에서 사용할 구성 파일을 설정합니다. 기본적으로 **/I** 는 SQLDiag.Xml로 설정되어 있습니다.  
   
- **/O** *output_folder_path*  
+ **/O** _output_folder_path_  
  **SQLdiag** 출력을 지정된 폴더로 리디렉션합니다. **/O** 옵션을 지정하지 않으면 **SQLdiag** 출력이 **SQLdiag** 시작 폴더의 SQLDIAG라는 하위 폴더에 기록됩니다. SQLDIAG 폴더가 없으면 **SQLdiag** 에서 이 폴더를 만듭니다.  
   
 > [!NOTE]  
 >  출력 폴더 위치는 **/P**로 지정할 수 있는 지원 폴더 위치에 대해 상대적입니다. 완전히 다른 출력 폴더 위치를 설정하려면 **/O**에 대해 전체 디렉터리 경로를 지정합니다.  
   
- **/P** *support_folder_path*  
+ **/P** _support_folder_path_  
  지원 폴더 경로를 설정합니다. 기본적으로 **/P** 는 **SQLdiag** 실행 파일이 있는 폴더로 설정됩니다. 지원 폴더에는 XML 구성 파일, Transact-SQL 스크립트 및 진단 정보를 수집하는 동안 유틸리티에서 사용하는 기타 파일을 비롯한 **SQLdiag** 지원 파일이 있습니다. 이 옵션을 사용하여 대체 지원 파일 경로를 지정하면 **SQLdiag** 는 지정한 폴더에 없는 경우 필요한 지원 파일을 자동으로 복사합니다.  
   
 > [!NOTE]  
@@ -102,7 +101,7 @@ ms.locfileid: "48125323"
 >   
 >  **SQLDIAG /P %cd%**  
   
- **/N** *output_folder_management_option*  
+ **/N** _output_folder_management_option_  
  **SQLdiag** 가 시작될 때 출력 폴더를 덮어쓸 것인지 또는 이름을 바꿀 것인지 설정합니다. 사용 가능한 옵션은 다음과 같습니다.  
   
  1 = 출력 폴더를 덮어씁니다(기본값).  
@@ -112,12 +111,12 @@ ms.locfileid: "48125323"
 > [!NOTE]  
 >  **SQLdiag** 는 시작할 때 현재 출력 폴더에 출력을 추가하지 않습니다. 대신 기본 출력 폴더를 덮어쓰거나(옵션 1) 폴더의 이름을 바꾼 다음(옵션 2) SQLDIAG라는 새 기본 출력 폴더에 출력을 씁니다.  
   
- **/M** *machine1* [ *machine2**machineN*] | *@machinelistfile*  
+ **/M** _machine1_ [ *machine2**machineN*] | *@machinelistfile*  
  구성 파일에 지정된 컴퓨터를 재정의합니다. 기본적으로 구성 파일은 SQLDiag.Xml이거나 **/I** 매개 변수를 사용하여 설정됩니다. 둘 이상의 컴퓨터를 지정할 경우 각 컴퓨터 이름을 공백으로 구분하십시오.  
   
  *@machinelistfile*을 사용하면 구성 파일에 저장할 컴퓨터 목록 파일 이름이 지정됩니다.  
   
- **/C** *file_compression_type*  
+ **/C** _file_compression_type_  
  **SQLdiag** 출력 폴더 파일에서 사용되는 파일 압축 유형을 설정합니다. 사용 가능한 옵션은 다음과 같습니다.  
   
  0 = 없음(기본값)  
@@ -152,7 +151,7 @@ ms.locfileid: "48125323"
   
  **SQLdiag** 는 유틸리티를 실행하는 컴퓨터의 현지 시간을 사용합니다.  
   
- **/A**  *SQLdiag_application_name*  
+ **/ A** _SQLdiag_application_name_  
  동일한 **인스턴스에 대해 여러** SQLdiag [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 인스턴스를 실행할 수 있도록 합니다.  
   
  각 *SQLdiag_application_name* 은 서로 다른 **SQLdiag**인스턴스를 식별합니다. *SQLdiag_application_name* 인스턴스와 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스 이름은 전혀 관계가 없습니다.  
@@ -161,11 +160,11 @@ ms.locfileid: "48125323"
   
  이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
- **SQLDIAG START /A**  *SQLdiag_application_name*  
+ **SQLDIAG START /A** _SQLdiag_application_name_  
   
  또한 **/R** 옵션과 함께 사용하여 특정 **SQLdiag** 인스턴스를 서비스로 등록할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
- **SQLDIAG /R /A** *SQLdiag_application_name*  
+ **SQLDIAG /R /A** _SQLdiag_application_name_  
   
 > [!NOTE]  
 >  **SQLdiag** 는 *SQLdiag_application_name*에 대해 지정한 인스턴스 이름 앞에 DIAG$를 자동으로 붙입니다. **SQLdiag** 를 서비스로 등록하는 경우 이를 통해 구분이 가능한 서비스 이름이 제공됩니다.  
@@ -201,7 +200,7 @@ ms.locfileid: "48125323"
   
  다음과 같이 **net start** 명령을 사용하여 서비스를 시작할 수도 있습니다.  
   
- **net**  **start SQLDIAG**  
+ **net 시작 SQLDIAG**  
   
  **/U**  
  서비스로 등록된 **SQLdiag** 의 등록을 취소합니다.  
@@ -228,7 +227,7 @@ ms.locfileid: "48125323"
   
  명명된 **SQLdiag** 인스턴스를 지정하는 **/A**인수만 **START**, **STOP**또는 **STOP_ABORT** 와 함께 사용하여 특정 **SQLdiag** 서비스 인스턴스를 제어할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
- **SQLDIAG START /A** *SQLdiag_application_name*  
+ **SQLDIAG START /A** _SQLdiag_application_name_  
   
 ## <a name="security-requirements"></a>보안 요구 사항  
   **SQLdiag** 명령줄 인수를 지정하여 일반 모드에서 **SQLdiag** 를 실행하지 않을 경우 **SQLdiag** 를 실행하는 사용자는 Windows **Administrators** 그룹의 멤버이면서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** 고정 서버 역할의 멤버여야 합니다. 기본적으로 **SQLdiag** 에서는 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 연결하지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증도 지원합니다.  
@@ -295,7 +294,7 @@ SQLDIAG STOP /A Instance1
 >  **SQLDiag STOP** 또는 **SQLDIAG STOP_ABORT** 를 사용하여 **SQLdiag** 서비스를 중지할 수 있습니다. **SQLdiag** 또는 기타 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스를 중지할 때는 Windows 서비스 콘솔을 사용하지 마세요.  
   
 ## <a name="automatically-starting-and-stopping-sqldiag"></a>SQLdiag 자동 시작 및 중지  
- 지정한 시간에 진단 데이터 수집을 자동으로 시작하고 중지하려면 24시간제 표시법을 사용하여 **/B***start_time* 및 **/E***stop_time* 인수를 사용합니다. 예를 들어 계속해서 02:00:00 경에 나타나는 문제를 해결하려면 01:00:00에 자동으로 진단 데이터 수집을 시작하여 03:00:00에 자동으로 중지하도록 **SQLdiag** 를 구성할 수 있습니다. 시작 시간과 중지 시간은 각각 **/B** 및 **/E** 인수를 사용하여 지정합니다. 24시간제 표시법을 사용하여 정확한 시작 및 중지 날짜와 시간을 YYYYMMDD_HH:MM:SS 형식으로 지정합니다. 현재를 기준으로 상대적인 시작 시간이나 중지 시간을 지정하려면 다음 예에서와 같이 시작 및 중지 시간 앞에 **+** 를 붙이고 날짜 부분(YYYYMMDD_)을 생략합니다. 그러면 **SQLdiag** 는 1시간 후부터 정보 수집을 시작하여 3시간 동안 정보를 수집한 다음 중지하고 종료합니다.  
+ 지정한 시간에 진단 데이터 수집을 자동으로 시작하고 중지하려면 24시간제 표시법을 사용하여 **/B**_start_time_ 및 **/E**_stop_time_ 인수를 사용합니다. 예를 들어 계속해서 02:00:00 경에 나타나는 문제를 해결하려면 01:00:00에 자동으로 진단 데이터 수집을 시작하여 03:00:00에 자동으로 중지하도록 **SQLdiag** 를 구성할 수 있습니다. 시작 시간과 중지 시간은 각각 **/B** 및 **/E** 인수를 사용하여 지정합니다. 24시간제 표시법을 사용하여 정확한 시작 및 중지 날짜와 시간을 YYYYMMDD_HH:MM:SS 형식으로 지정합니다. 현재를 기준으로 상대적인 시작 시간이나 중지 시간을 지정하려면 다음 예에서와 같이 시작 및 중지 시간 앞에 **+** 를 붙이고 날짜 부분(YYYYMMDD_)을 생략합니다. 그러면 **SQLdiag** 는 1시간 후부터 정보 수집을 시작하여 3시간 동안 정보를 수집한 다음 중지하고 종료합니다.  
   
 ```  
 sqldiag /B +01:00:00 /E +03:00:00  
@@ -356,7 +355,7 @@ SQLDIAG START /A Instance1
  **SQLdiag** 서비스를 일시 중지하는 작업은 지원되지 않습니다.  
   
 ## <a name="running-multiple-instances-of-sqldiag"></a>여러 SQLdiag 인스턴스 실행  
- 명령줄에서 **/A***SQLdiag_application_name*을 지정하여 동일한 컴퓨터에서 여러 **SQLdiag** 인스턴스를 실행할 수 있습니다. 이는 동일한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 동시에 다른 진단 정보 집합을 수집하는 데 유용합니다. 예를 들어 지속적으로 간단한 데이터 수집을 수행하도록 명명된 **SQLdiag** 인스턴스를 구성할 수 있습니다. 그런 다음 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 특정 문제가 발생하는 경우 기본 **SQLdiag** 인스턴스를 실행하여 해당 문제에 대한 진단 정보를 수집하거나 [!INCLUDE[msCoName](../includes/msconame-md.md)] 고객 지원 서비스에서 수집을 요청한 진단 정보 집합을 수집하여 문제를 진단할 수 있습니다.  
+ 명령줄에서 **/A** SQLdiag_application_name **을 지정하여 동일한 컴퓨터에서 여러**_SQLdiag_ 인스턴스를 실행할 수 있습니다. 이는 동일한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 동시에 다른 진단 정보 집합을 수집하는 데 유용합니다. 예를 들어 지속적으로 간단한 데이터 수집을 수행하도록 명명된 **SQLdiag** 인스턴스를 구성할 수 있습니다. 그런 다음 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 특정 문제가 발생하는 경우 기본 **SQLdiag** 인스턴스를 실행하여 해당 문제에 대한 진단 정보를 수집하거나 [!INCLUDE[msCoName](../includes/msconame-md.md)] 고객 지원 서비스에서 수집을 요청한 진단 정보 집합을 수집하여 문제를 진단할 수 있습니다.  
   
 ## <a name="collecting-diagnostic-data-from-clustered-sql-server-instances"></a>클러스터형 SQL Server 인스턴스에서 진단 데이터 수집  
  **SQLdiag** 에서는 클러스터형 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 진단 데이터를 수집할 수 있습니다. 클러스터형 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 진단 정보를 수집하려면 SQLDiag.Xml 구성 파일에서 **\<Machine>** 요소의 **name** 특성에 대해 **"."** 를 지정해야 하며 명령줄에서 **/G** 인수를 지정하면 안 됩니다. 기본적으로 구성 파일에서 **name** 특성에는 **"."** 가 지정되고 **/G** 인수는 해제되어 있습니다. 일반적으로 클러스터형 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 정보를 수집할 때는 구성 파일을 편집하거나 명령줄 인수를 변경할 필요가 없습니다.  

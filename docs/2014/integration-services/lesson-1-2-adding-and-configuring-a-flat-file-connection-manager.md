@@ -1,22 +1,21 @@
 ---
-title: '2단계: 플랫 파일 연결 관리자 추가 및 구성 | Microsoft Docs'
+title: '2단계: 추가 하 고 플랫 파일 연결 관리자 구성 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e2d22c652ce63bfc3069756251ff554a5d13c186
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88ee64782479e0ffed967485372dea8eae775430
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197353"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362665"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>2단계: 플랫 파일 연결 관리자 추가 및 구성
   이 태스크에서는 플랫 파일 연결 관리자를 방금 작성한 패키지에 추가합니다. 플랫 파일 연결 관리자를 통해 패키지가 플랫 파일에서 데이터를 추출할 수 있습니다. 플랫 파일 연결 관리자를 사용하여 패키지가 플랫 파일에서 데이터를 추출할 때 적용할 열 구분 기호를 포함한 파일 형식, 파일 이름과 위치 및 로캘과 코드 페이지를 지정할 수 있습니다. 또한 개별 열의 데이터 형식을 수동으로 지정하거나 **열 유형 제안** 대화 상자를 사용하여 추출된 데이터 열을 자동으로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 데이터 형식에 매핑할 수 있습니다.  
@@ -25,9 +24,9 @@ ms.locfileid: "48197353"
   
  이 자습서에서는 플랫 파일 연결 관리자에서 다음 속성을 구성하는 과정을 다룹니다.  
   
--   **열 이름:** 플랫 파일에는 열 이름이 없으므로 플랫 파일 연결 관리자가 기본 열 이름을 만듭니다. 이러한 기본 이름은 각 열이 나타내는 내용을 식별하는 데 유용하지 않습니다. 이러한 기본 이름을 보다 유용하게 만들려면 기본 이름을 플랫 파일 데이터가 로드될 팩트 테이블과 일치하는 이름으로 변경해야 합니다.  
+-   **열 이름:** 플랫 파일에 열 이름이 없으므로 플랫 파일 연결 관리자가 기본 열 이름을 만듭니다. 이러한 기본 이름은 각 열이 나타내는 내용을 식별하는 데 유용하지 않습니다. 이러한 기본 이름을 보다 유용하게 만들려면 기본 이름을 플랫 파일 데이터가 로드될 팩트 테이블과 일치하는 이름으로 변경해야 합니다.  
   
--   **데이터 매핑:** 플랫 파일 연결 관리자에서 지정하는 데이터 형식 매핑은 연결 관리자를 참조하는 모든 플랫 파일 데이터 원본 구성 요소에서 사용됩니다. 플랫 파일 연결 관리자를 사용하여 데이터 형식을 수동으로 매핑하거나 **열 유형 제안** 대화 상자를 사용할 수 있습니다. 이 자습서에서는 **열 유형 제안** 대화 상자에 제안된 매핑을 표시한 다음 **플랫 파일 연결 관리자 편집기** 대화 상자에서 필요한 매핑을 수동으로 만드는 과정을 다룹니다.  
+-   **데이터 매핑:** 플랫 파일 연결 관리자를 지정 하는 데이터 형식 매핑은 연결 관리자를 참조 하는 모든 플랫 파일 데이터 원본 구성 요소로 사용할 합니다. 플랫 파일 연결 관리자를 사용하여 데이터 형식을 수동으로 매핑하거나 **열 유형 제안** 대화 상자를 사용할 수 있습니다. 이 자습서에서는 **열 유형 제안** 대화 상자에 제안된 매핑을 표시한 다음 **플랫 파일 연결 관리자 편집기** 대화 상자에서 필요한 매핑을 수동으로 만드는 과정을 다룹니다.  
   
  플랫 파일 연결 관리자는 데이터 파일에 대한 로캘 정보를 제공합니다. 컴퓨터가 영어(미국) 국가별 옵션을 사용하도록 구성되지 않은 경우 **플랫 파일 연결 관리자 편집기** 대화 상자에서 추가 속성을 설정해야 합니다.  
   
@@ -43,7 +42,7 @@ ms.locfileid: "48197353"
   
      예제 데이터는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 단원 패키지에 포함되어 있습니다. 예제 데이터 및 단원 패키지를 다운로드하려면 다음을 수행합니다.  
   
-    1.  [Integration Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=275027)로 이동합니다.  
+    1.   [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=275027)로 이동합니다.  
   
     2.  **DOWNLOADS** 탭을 클릭합니다.  
   
@@ -88,7 +87,7 @@ ms.locfileid: "48197353"
     |----------------------|--------------------|------------------------|----------------------|  
     |AverageRate|float [DT_R4]|FactCurrency.AverageRate|FLOAT|  
     |CurrencyID|string [DT_STR]|DimCurrency.CurrencyAlternateKey|nchar(3)|  
-    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|날짜|  
+    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
     |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
      데이터 형식에 대 한 제안 된 `CurrencyID` 열 대상 테이블의 필드 데이터 형식과 호환 되지 않습니다. 데이터 형식 때문 `DimCurrency.CurrencyAlternateKey` nchar (3), `CurrencyID` 문자열 [DT_STR]에서 문자열 [DT_WSTR]로 변경 해야 합니다. 또한 필드 `DimDate.FullDateAlternateKey` 는 date 데이터 형식으로 정의 됩니다 따라서 `CurrencyDate` 날짜 [DT_Date]에서 데이터베이스 날짜 [DT_DBDATE]로 변경 해야 합니다.  
@@ -100,9 +99,9 @@ ms.locfileid: "48197353"
 4.  **확인**을 클릭합니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [3단계: OLE DB 연결 관리자 추가 및 구성](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+ [3 단계: 추가 하 고 OLE DB 연결 관리자 구성](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [플랫 파일 연결 관리자](connection-manager/file-connection-manager.md)   
  [Integration Services 데이터 형식](data-flow/integration-services-data-types.md)  
   

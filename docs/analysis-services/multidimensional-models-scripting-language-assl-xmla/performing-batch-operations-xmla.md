@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f34454f292e7efc92c960930b6a9218edae6a70f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 6c451d13016915c9218efb2963429f8f5a7709e2
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148318"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52544230"
 ---
 # <a name="performing-batch-operations-xmla"></a>일괄 작업 수행(XMLA)
   사용할 수는 [일괄 처리](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla) XMLA (XML for Analysis) 단일 XMLA를 사용 하는 여러 XMLA 명령을 실행할 명령을 [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) 메서드. 에 포함 된 여러 명령을 실행할 수 있습니다 합니다 **일괄 처리** 명령을 단일 트랜잭션으로 또는 각 명령에 대 한 개별 트랜잭션을, 직렬에서 또는 병렬입니다. 아웃오브 라인 바인딩 및 기타 속성을 지정할 수도 있습니다는 **일괄 처리** 여러 처리 명령을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체입니다.  
@@ -23,12 +23,12 @@ ms.locfileid: "50148318"
  합니다 **일괄 처리** 명령이 두 가지 방법 중 하나에서 명령을 실행 합니다.  
   
  **트랜잭션**  
- 경우는 **트랜잭션** 특성을 **일괄 처리** 명령 집합은 true로는 **일괄 처리** 명령이 실행 명령에 포함 된 명령의 모든는 **일괄처리** 단일 트랜잭션에서 명령을-를 *트랜잭션* 일괄 처리 합니다.  
+ 경우는 **트랜잭션** 특성을 **일괄 처리** 명령 집합은 true로는 **일괄 처리** 명령이 실행 명령에 포함 된 명령의 모든는 **일괄처리** 트랜잭션 a는 단일 명령을 *트랜잭션* 일괄 처리 합니다.  
   
  트랜잭션 일괄 처리에서 실패 한 명령이 있으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 모든 명령을 롤백한 합니다 **일괄 처리** 실패 한 명령 전에 실행 된 명령 및 **일괄 처리** 명령을 즉시 종료 합니다. 모든 명령에는 **일괄 처리** 아직 실행 되지 않은 명령 실행 되지 않습니다. 후 합니다 **일괄 처리** 명령이 종료 합니다 **일괄 처리** 명령에서는 실패 한 명령에 발생 한 모든 오류를 보고 합니다.  
   
  **비트랜잭션**  
- 경우는 **트랜잭션** 특성이 false로 설정 된 합니다 **일괄 처리** 명령은에 포함 된 각 명령을 실행 합니다 **일괄 처리** 별도 트랜잭션에서 명령을-를  *비트랜잭션* 일괄 처리 합니다. 비트랜잭션 일괄 처리에서 실패 한 명령이 있으면 합니다 **일괄 처리** 명령은 실패 한 명령 이후의 명령을 계속 합니다. 후는 **일괄 처리** 명령이 모든 명령을 실행 하려고 하는 **일괄 처리** 명령에 포함는 **일괄 처리** 명령을 발생 한 모든 오류를 보고 합니다.  
+ 경우는 **트랜잭션** 특성이 false로 설정 된를 **일괄 처리** 명령은에 포함 된 각 명령을 실행 합니다 **일괄 처리** 트랜잭션을 별도의 명령을  *비트랜잭션* 일괄 처리 합니다. 비트랜잭션 일괄 처리에서 실패 한 명령이 있으면 합니다 **일괄 처리** 명령은 실패 한 명령 이후의 명령을 계속 합니다. 후는 **일괄 처리** 명령이 모든 명령을 실행 하려고 하는 **일괄 처리** 명령에 포함는 **일괄 처리** 명령을 발생 한 모든 오류를 보고 합니다.  
   
  에 포함 된 명령을 사용 하 여 반환 된 모든 결과 **일괄 처리** 는 명령에 포함 된 동일한 순서로 반환 됩니다 합니다 **일괄 처리** 명령입니다. 반환한 결과 **일괄 처리** 명령 인지 여부에 따라 달라 집니다를 **일괄 처리** 트랜잭션인지 또는 비트랜잭션 명령입니다.  
   

@@ -15,20 +15,20 @@ ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 84c24494797a96670fc6abd5e8fd6fd409b0a705
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a951590c1284f39cb2dfea1f9e97c05a04a3e7ca
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226273"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52520367"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 데이터베이스 엔진 기능의 동작 변경 내용
   이 항목에서는 [!INCLUDE[ssDE](../includes/ssde-md.md)]의 동작 변경 내용에 대해 설명합니다. 동작 변경 내용은 이전 버전의 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 와 비교해서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 기능이 작동하고 상호 작용하는 방법에 영향을 줍니다.  
   
-## <a name="behavior-changes-in-includesssql14includessssql14-mdmd"></a>동작 변경 내용 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="behavior-changes-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]의 동작 변경 내용  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이전 버전에서 특정 길이(4,020자 초과) 이상의 문자열을 포함하는 XML 문서에 대한 쿼리는 잘못된 결과를 반환할 수 있습니다. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서는 이러한 쿼리가 올바른 결과를 반환합니다.  
   
-## <a name="behavior-changes-in-includesssql11includessssql11-mdmd"></a>동작 변경 내용 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="behavior-changes-in-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]의 동작 변경 내용  
   
 ### <a name="metadata-discovery"></a>메타데이터 검색  
  향상 된 기능을 [!INCLUDE[ssDE](../includes/ssde-md.md)] 부터는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SQLDescribeCol SQLDescribeCol의 이전 버전에서 반환 하는 것 보다 예상된 결과 대 한 한 보다 정확한 설명의 얻을에 허용 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 자세한 내용은 [메타데이터 검색](../relational-databases/native-client/features/metadata-discovery.md)을 참조하세요.  
@@ -85,7 +85,7 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
   
 |원본 XS 데이터 형식|대상 SQL Server 데이터 형식|  
 |-------------------------|--------------------------------------|  
-|byte<br /><br /> short<br /><br /> ssNoversion<br /><br /> integer<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|tinyint<br /><br /> SMALLINT<br /><br /> ssNoversion<br /><br /> BIGINT<br /><br /> Decimal<br /><br /> NUMERIC|  
+|byte<br /><br /> short<br /><br /> int<br /><br /> integer<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|tinyint<br /><br /> SMALLINT<br /><br /> int<br /><br /> BIGINT<br /><br /> Decimal<br /><br /> NUMERIC|  
 |Decimal|decimal<br /><br /> NUMERIC|  
 |FLOAT|REAL|  
 |double|FLOAT|  
@@ -99,10 +99,10 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  `Arithmetic overflow error converting expression to data type smallint.`  
   
 ### <a name="sqlcmdexe-behavior-change-in-xml-mode"></a>XML 모드에서의 sqlcmd.exe 동작 변경 내용  
- SELECT * from T FOR XML …을 실행할 때 XML 모드(:XML ON 명령)에서 sqlcmd.exe를 사용할 경우 동작 변경 내용이 있습니다.  
+ XML 모드를 사용 하 여 sqlcmd.exe를 사용 하는 경우 동작 변경 내용이 (: XML ON 명령) SELECT를 실행 하는 경우 * from T FOR XML...  
   
 ### <a name="dbcc-checkident-revised-message"></a>DBCC CHECKIDENT 수정 메시지  
- [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], reseed 사용는 경우에 DBCC CHECKIDENT 명령에서 반환 된 메시지가 변경 되었습니다. *new_reseed_value* 현재 id 값을 변경 합니다. 새 메시지는 "id 정보 확인: 현재 id 값 '\<현재 id 값 >'입니다. DBCC 실행이 완료되었습니다. DBCC에서 오류 메시지를 출력하면 시스템 관리자에게 문의하세요."  
+  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 DBCC CHECKIDENT 명령을 통해 반환되는 메시지는 해당 명령을 RESEED *new_reseed_value*  에 사용하는 경우에만 현재 ID 값을 변경하도록 변경되었습니다. 새 메시지는 "id 정보 확인: 현재 id 값 '\<현재 id 값 >'입니다. DBCC 실행이 완료되었습니다. DBCC에서 오류 메시지를 출력하면 시스템 관리자에게 문의하세요."  
   
  이전 버전의 메시지는 "id 정보 확인: 현재 id 값 '\<현재 id 값 >', 현재 열 값 '\<현재 열 값 >'입니다. DBCC 실행이 완료되었습니다. DBCC에서 오류 메시지를 출력하면 시스템 관리자에게 문의하세요." DBCC CHECKIDENT를 지정할 때 NORESEED를 사용하거나 두 번째 매개 변수를 사용하지 않거나 reseed 값을 사용하지 않으면 메시지가 변경되지 않습니다. 자세한 내용은 [DBCC CHECKIDENT&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)를 참조하세요.  
   

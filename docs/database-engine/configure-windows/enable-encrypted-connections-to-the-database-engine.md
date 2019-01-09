@@ -21,12 +21,12 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ed6454a6bce8f9f0942e5427910c2942bfa838e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 316becea16562fda0e1ba05623f09018367254af
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788501"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589297"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>데이터베이스 엔진에 암호화된 연결 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "47788501"
   
 5.  **인증서 스냅인** 대화 상자에서 **컴퓨터 계정**을 클릭한 다음 **마침**을 클릭합니다.  
   
-6.  **독립 실행형 스냅인 추가** 대화 상자에서 **닫기**를 클릭합니다.  
+6.   **독립 실행형 스냅인 추가** 대화 상자에서 **닫기**를 클릭합니다.  
   
 7.  **스냅인 추가/제거** 대화 상자에서 **확인**을 클릭합니다.  
   
@@ -77,9 +77,9 @@ ms.locfileid: "47788501"
   
 ##  <a name="ConfigureServerConnections"></a> 암호화된 연결을 강제하도록 서버를 구성하려면  
   
-1.  **SQL Server 구성 관리자**에서 **SQL Server 네트워크 구성**을 펼치고 *\<서버 인스턴스>***에 대한 프로토콜**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
+1.  **SQL Server 구성 관리자**에서 **SQL Server 네트워크 구성**을 펼치고 _\<서버 인스턴스>_**에 대한 프로토콜**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
-2.  *\<인스턴스 이름>***에 대한 프로토콜** **속성** 대화 상자에서 **인증서** 탭의 **인증서** 상자에 대한 드롭다운에서 원하는 인증서를 선택한 다음 **확인**을 클릭합니다.  
+2.  _\<인스턴스 이름>_**에 대한 프로토콜** **속성** 대화 상자에서 **인증서** 탭의 **인증서** 상자에 대한 드롭다운에서 원하는 인증서를 선택한 다음 **확인**을 클릭합니다.  
   
 3.  **플래그** 탭의 **ForceEncryption** 상자에서 **예**를 선택한 다음 **확인** 을 클릭하여 대화 상자를 닫습니다.  
   

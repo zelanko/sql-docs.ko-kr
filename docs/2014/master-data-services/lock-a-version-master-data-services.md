@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - versions [Master Data Services], locking
@@ -14,12 +13,12 @@ ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ad236e42b0556ddef4e316b1b6b24280615b7e9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23e705dd936383db09b0a9eda37eb6d925dbffbb
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140523"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750875"
 ---
 # <a name="lock-a-version-master-data-services"></a>버전 잠금(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델의 멤버 및 특성이 변경되지 않도록 모델의 버전을 잠급니다.  
@@ -48,12 +47,12 @@ ms.locfileid: "48140523"
   
 ## <a name="next-steps"></a>다음 단계  
   
--   [비즈니스 규칙에 대해 버전 유효성 검사 &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+-   [비즈니스 규칙에 대해 버전 유효성 검사&#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
--   [버전 커밋 &#40;Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)  
+-   [버전 커밋&#40;Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [버전 &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
- [버전 잠금 해제 &#40;Master Data Services&#41;](../../2014/master-data-services/unlock-a-version-master-data-services.md)  
+ [버전&#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
+ [버전 잠금 해제&#40;Master Data Services&#41;](../../2014/master-data-services/unlock-a-version-master-data-services.md)  
   
   

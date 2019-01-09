@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.msxwiz.complete.f1
@@ -21,12 +21,12 @@ ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14e3d90b8406dc5411c1325038afee184684b7b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca0e79c617db6cc2906ac9225efd92e156699951
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210573"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52752606"
 ---
 # <a name="make-a-master-server"></a>마스터 서버 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 마스터 서버 [!INCLUDE[tsql](../../includes/tsql-md.md)]를 만드는 방법에 대해 설명합니다.  
@@ -63,13 +63,13 @@ ms.locfileid: "48210573"
      이 오류를 해결하려면 프록시 계정이 작업 단계가 실행되는 마스터 서버 프록시 계정과 동일한 이름을 가진 대상 서버에 있는지 확인합니다.  
   
 ####  <a name="Permissions"></a> Permissions  
- 이 프로시저 기본의 멤버에 게 실행 권한을 `sysadmin` 고정된 서버 역할입니다.  
+ 이 프로시저를 실행할 수 있는 권한은 기본적으로 `sysadmin` 고정 서버 역할의 멤버로 설정됩니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-make-a-master-server"></a>마스터 서버를 만들려면  
   
-1.  **개체 탐색기** 에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.   **개체 탐색기** 에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
 2.  **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭하고 **다중 서버 관리**를 가리킨 다음 **마스터로 만들기**를 클릭합니다. **마스터 서버 마법사** 는 마스터 서버를 만들고 대상 서버를 추가하는 프로세스를 안내합니다.  
   

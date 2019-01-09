@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services, SSIS Designer
@@ -17,12 +16,12 @@ ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c307d7c31b3599a358346812279d79c37705b533
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89fdb4d112d37a61b377bbac768d94012a703664
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074163"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53362755"
 ---
 # <a name="integration-services-user-interface"></a>Integration Services 사용자 인터페이스
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너 탭의 디자인 화면 외에도 사용자 인터페이스를 사용하면 패키지에 기능을 추가하고 패키지 개체의 속성을 구성하기 위한 다음 창과 대화 상자에 액세스할 수 있습니다.  
@@ -56,11 +55,11 @@ ms.locfileid: "48074163"
   
  `- <SamplesSites>`  
   
- `<GettingStartedSamples>http://go.microsoft.com/fwlink/?LinkID=203147</GettingStartedSamples>`  
+ `<GettingStartedSamples>https://go.microsoft.com/fwlink/?LinkID=203147</GettingStartedSamples>`  
   
  `- <ToolboxSamples>`  
   
- `<Site>http://go.microsoft.com/fwlink/?LinkID=203286&query=SSIS%20{0}</Site>`  
+ `<Site>https://go.microsoft.com/fwlink/?LinkID=203286&query=SSIS%20{0}</Site>`  
   
  `</ToolboxSamples>`  
   
@@ -81,7 +80,7 @@ ms.locfileid: "48074163"
 |편집기 유형|액세스 권한|  
 |-----------------|------------|  
 |컨테이너. 자세한 내용은 [Integration Services 컨테이너](control-flow/integration-services-containers.md)를 참조하세요.|**제어 흐름** 탭의 디자인 화면에서 컨테이너를 두 번 클릭합니다.|  
-|태스크. 자세한 내용은 [Integration Services Tasks](control-flow/integration-services-tasks.md)을(를) 참조하세요.|**제어 흐름** 탭의 디자인 화면에서 태스크를 두 번 클릭합니다.|  
+|태스크. 자세한 내용은 [Integration Services Tasks](control-flow/integration-services-tasks.md)를 참조하세요.|**제어 흐름** 탭의 디자인 화면에서 태스크를 두 번 클릭합니다.|  
 |원본.|**데이터 흐름** 탭의 디자인 화면에서 원본을 두 번 클릭합니다.|  
 |변환. 자세한 내용은 [Integration Services Transformations](data-flow/transformations/integration-services-transformations.md)을 참조하세요.|**데이터 흐름** 탭의 디자인 화면에서 변환을 두 번 클릭합니다.|  
 |대상.|**데이터 흐름** 탭의 디자인 화면에서 대상을 두 번 클릭합니다.|  
@@ -115,7 +114,7 @@ ms.locfileid: "48074163"
  추가 창 및 메뉴에 대한 자세한 내용은 Visual Studio 설명서를 참조하십시오.  
   
 ## <a name="related-tasks"></a>관련 작업  
- [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 패키지를 만드는 방법은 [SQL Server Data Tools에서 패키지 만들기](create-packages-in-sql-server-data-tools.md)를 참조하세요.  
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 패키지를 만드는 방법은 [SQL Server Data Tools에서 패키지 만들기](create-packages-in-sql-server-data-tools.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [SSIS 디자이너](ssis-designer.md)  

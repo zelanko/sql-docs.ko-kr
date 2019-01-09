@@ -8,8 +8,6 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
-- vs.findresults1
-- findresultswindow
 - vs.findresults2
 helpviewer_keywords:
 - Find Results Windows dialog box
@@ -18,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: daeaef85b0fd00436afc3ccfd5f4f5dbc28acce2
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ffacc517013d64d8f12c9008f604febc50de819a
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51644042"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328193"
 ---
 # <a name="find-results-windows"></a>찾기 결과 창
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +72,7 @@ ms.locfileid: "51644042"
   
 -   전체 경로  
   
--   파일 이름   
+-    파일 이름   
   
 -   줄 번호  
   
@@ -99,5 +97,3 @@ ms.locfileid: "51644042"
  그리고 다음과 같은 통계 줄로 끝납니다.  
   
  `Total replaced: 57  Matching files: 23  Total files searched: 59`  
-  
-  

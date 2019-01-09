@@ -7,18 +7,16 @@ ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.lookin
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e8d7fac329ef0c12566c2479459749dd74a5934
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a799ff3a36ebf3c2381bdaf17c697f190ebf2fe
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835661"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328635"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>검색 폴더 선택 대화 상자(Visual Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +24,7 @@ ms.locfileid: "47835661"
   
 **선택한 폴더** 목록에 폴더를 추가하고 **폴더 집합** 필드에 이 폴더 집합의 이름을 입력한 다음 **적용** 을 클릭하여 저장합니다. 이러한 사용자 지정 검색 범위는 이후에 **파일에서 찾기** 및 **파일에서 바꾸기** 의 **찾는 위치**드롭다운 목록에서 이름으로 선택할 수 있습니다. 사용자 지정 폴더 집합을 **찾는 위치** 목록에서 제거하려면 **폴더 집합** 필드에서 해당 이름을 선택하고 **삭제**를 클릭합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 다음 컨트롤은 사용자의 명명된 검색 폴더 집합을 조합, 저장 및 수정하는 데 사용할 수 있습니다.  
   
 **폴더 집합**  
@@ -42,7 +40,7 @@ ms.locfileid: "47835661"
 **폴더 목록**을 채우려면 이 드롭다운 목록에서 드라이브나 폴더를 선택합니다.  
   
 **폴더 목록**  
-**사용 가능한 폴더** 드롭다운 목록에서 선택한 범위 내에서 사용할 수 있는 드라이브와 폴더를 나열합니다. 목록의 드라이브나 폴더를 확장하려면 두 번 클릭합니다. 폴더를 하나 선택하거나 Shift 키나 Ctrl 키를 누른 채 여러 폴더를 선택합니다. **Add (>)** 를 클릭하여 선택한 폴더를 **선택한 폴더** 목록에 포함합니다.  
+**사용 가능한 폴더** 드롭다운 목록에서 선택한 범위 내에서 사용할 수 있는 드라이브와 폴더를 나열합니다. 목록의 드라이브나 폴더를 확장하려면 두 번 클릭합니다. 폴더를 하나 선택하거나 Shift 키나 Ctrl 키를 누른 채 여러 폴더를 선택합니다.  **Add (>)** 를 클릭하여 선택한 폴더를 **선택한 폴더** 목록에 포함합니다.  
   
 **Parent**  
 **폴더 목록** 에서 선택한 항목을 폴더 계층 구조의 한 수준 위로 이동합니다.  
@@ -58,4 +56,3 @@ ms.locfileid: "47835661"
   
 **적용**  
 **선택한 폴더** 목록에 있는 검색 폴더 집합을 명명된 폴더 집합으로 저장합니다. 이렇게 하면 **찾기 및 바꾸기** 창의 모든 탭에 있는 **찾는 위치** 필드에서 이 폴더 집합을 선택할 수 있습니다. 이 옵션은 검색 폴더 선택 대화 상자를 닫습니다.  
-  

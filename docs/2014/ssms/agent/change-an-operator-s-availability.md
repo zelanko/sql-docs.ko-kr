@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
@@ -22,12 +22,12 @@ ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 79add9bcf43604b52a28eae6ab477489d23d8370
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: fbe4b5e5605964d027e496a56b4dbf0836baaae4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200440"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801775"
 ---
 # <a name="change-an-operator39s-availability"></a>운영자의 응답 가능 여부 변경
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 운영자의 경고 알림 수신 일정을 변경하는 방법에 대해 설명합니다.  
@@ -78,12 +78,12 @@ ms.locfileid: "48200440"
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
     ```  
-    -- disables the 'François Ajenstat' operator  
+    -- disables the 'Fran??ois Ajenstat' operator  
     USE msdb ;  
     GO  
   
     EXEC dbo.sp_update_operator   
-        @name = N'François Ajenstat',  
+        @name = N'Fran??ois Ajenstat',  
         @enabled = 0;  
     GO  
     ```  

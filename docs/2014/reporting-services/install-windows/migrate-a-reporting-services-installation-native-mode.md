@@ -9,12 +9,12 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.date: 08/10/2017
-ms.openlocfilehash: 2575f73102f1fbaa73a7606ceb8c070dcdd72b58
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: HT
+ms.openlocfilehash: 6993b1fa53bc6aa3d0b6de95ca9feff4eb34ad51
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604064"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351849"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Reporting Services 설치 마이그레이션(기본 모드)
 
@@ -26,7 +26,7 @@ ms.locfileid: "51604064"
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
--   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (더 많은 단계가 필요 참조 [SQL Server 2005 Report Server 2014 데이터베이스를 호스트에 사용할 수 없습니다](http://support.microsoft.com/kb/2796721)합니다.  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (더 많은 단계가 필요 참조 [SQL Server 2005 Report Server 2014 데이터베이스를 호스트에 사용할 수 없습니다](https://support.microsoft.com/kb/2796721)합니다.  
   
 ||  
 |-|  

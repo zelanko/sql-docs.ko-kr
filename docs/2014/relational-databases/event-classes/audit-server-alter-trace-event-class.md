@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 967586bf-d5f1-466c-82ab-8c461bfb6222
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fd2924d10460f548b676ef900870941a92e2732f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 10c3556edb5c58e281db2dcaf5c05e9a202a3091
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126563"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778665"
 ---
 # <a name="audit-server-alter-trace-event-class"></a>Audit Server Alter Trace 이벤트 클래스
   **Audit Server Alter Trace** 이벤트 클래스는 ALTER TRACE 권한을 확인하는 모든 문에 대해 발생합니다. ALTER TRACE를 확인하는 문에는 추적을 만들고 구성하거나 추적에 필터를 설정하는 데 사용되는 문이 들어 있습니다.  

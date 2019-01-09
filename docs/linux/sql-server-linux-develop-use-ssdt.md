@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: 2053e338bf14d11f25e6e12b3d6c5aee6b8e636e
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 874fd8948d4098e9003fb2c54e1feb8b5cbbe4e3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033580"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52750365"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio를 사용 하 여 Linux의 SQL Server에 대 한 데이터베이스를 만들려면
 
@@ -27,7 +27,7 @@ SQL Server Data Tools (SSDT)는 Linux의 SQL Server에 대 한 강력한 개발 
 
 1. Windows 컴퓨터에 Visual Studio를 이미 설치 되지 않은 경우 [다운로드 하 여 Visual Studio를 설치 합니다.]합니다. Visual Studio Community edition은 학생에 대 한 무료, 완전 한 기능의 IDE를 Visual Studio 라이선스가 없는 경우 오픈 소스 및 개인 개발자.
 
-2. Visual Studio 설치 중 선택 **사용자 지정** 에 대 한 합니다 **설치 유형을 선택** 옵션입니다. **다음**을 클릭합니다.
+2. Visual Studio 설치 중 선택 **사용자 지정** 에 대 한 합니다 **설치 유형을 선택** 옵션입니다.  **다음**을 클릭합니다.
 
 3. 선택 **Microsoft SQL Server Data Tools**하십시오 **Git에 대 한 Windows**, 및 **Visual Studio 용 GitHub 확장** 기능 선택 목록에서.
 
@@ -99,7 +99,7 @@ Linux의 SQL Server는 SSDT 버전 17.0 RC 이상에서 지원 됩니다.
 
 5. 게시 상태를 확인 합니다 **Data Tools 작업** 창입니다.
 
-6. 클릭 **보기 Reulst** 또는 **스크립트 보기** Linux에서 SQL Server에서 결과 게시 데이터베이스의 세부 정보를 확인 합니다.
+6. 클릭 **결과 보기** 하거나 **스크립트 보기** Linux에서 SQL Server에서 결과 게시 데이터베이스의 세부 정보를 확인 합니다.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 
@@ -107,12 +107,12 @@ Linux의 SQL Server 인스턴스에 새 데이터베이스를 생성 하 고 소
 
 ## <a name="next-steps"></a>다음 단계
 
-T-SQL을 처음 사용하는 경우 [자습서: Transact-SQL 문 작성](자습서: Transact-SQL 문 작성) 및 [TRANSACT-SQL 참조 (데이터베이스 엔진)](Transact-SQL 참조(데이터베이스 엔진))를 참조하세요.
+T-SQL을 처음 접하는 경우 [자습서: TRANSACT-SQL 문 작성] 하며 [TRANSACT-SQL 참조 (데이터베이스 엔진)]합니다.
 
 SQL Data Tools를 사용 하 여 데이터베이스를 개발 하는 방법에 대 한 자세한 내용은 참조 하세요. [SSDT MSDN 문서]
 
 [다운로드 하 여 Visual Studio를 설치 합니다.]:https://www.visualstudio.com/downloads/
-[Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
+[Download and Install SSDT]:https://aka.ms/ssdt-download
 [SSDT MSDN 문서]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[자습서: Transact-SQL 문 작성]:https://msdn.microsoft.com/library/ms365303.aspx
+[자습서: TRANSACT-SQL 문 작성]:https://msdn.microsoft.com/library/ms365303.aspx
 [TRANSACT-SQL 참조 (데이터베이스 엔진)]:https://msdn.microsoft.com/library/bb510741.aspx

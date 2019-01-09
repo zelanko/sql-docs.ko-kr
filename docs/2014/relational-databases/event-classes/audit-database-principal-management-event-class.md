@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 594eec78-677c-4500-ae9b-e400abf6f39c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b6ea537aa6d792e2c694e343dc5939cc0fd207d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 8dd06c632a20278f88403a0ec21d9a8b672c8b3e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072663"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775635"
 ---
 # <a name="audit-database-principal-management-event-class"></a>Audit Database Principal Management 이벤트 클래스
   **Audit Database Principal Management** 이벤트 클래스는 데이터베이스에서 사용자 같은 보안 주체를 만들고 변경하거나 삭제할 때 발생합니다.  

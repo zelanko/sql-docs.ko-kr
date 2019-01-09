@@ -10,12 +10,12 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a162bc882d65007a85032c234c37b769ee17b9ab
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: HT
+ms.openlocfilehash: 7c2c7059c5c6ff6a770c1658d260da04f2a042ab
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100414"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53363785"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>메모리 내 OLTP를 보여주기 위한 AdventureWorks 확장
     
@@ -35,15 +35,15 @@ ms.locfileid: "50100414"
   
 -    [AdventureWorks 기반의 메모리 내장 OLTP 샘플 설치](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)지침  
   
--   [예제 테이블 및 프로시저에 대한 설명](#Descriptionofthesampletablesandprocedures) – [!INCLUDE[hek_2](../includes/hek-2-md.md)] 샘플에서 AdventureWorks에 추가한 테이블 및 프로시저에 대한 설명과 원래 AdventureWorks 테이블을 메모리 최적화 테이블로 마이그레이션하기 위한 고려 사항이 포함되어 있습니다.  
+-   [예제 테이블 및 프로시저에 대 한 설명은](#Descriptionofthesampletablesandprocedures) -테이블 및 프로시저에서 AdventureWorks에 추가한에 대 한 설명은 여기에 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 마이그레이션하기 위한 고려 사항 뿐만 아니라 샘플에서는 일부 원래 AdventureWorks 테이블 메모리 최적화  
   
--   [데모 작업을 사용한 성능 측정](#PerformanceMeasurementsusingtheDemoWorkload) 을 수행하기 위한 지침 – 데모 작업 자체를 실행하기 위한 지침뿐만 아니라 작업을 추진하는 데 사용되는 도구인 ostress를 설치하고 실행하기 위한 지침이 포함되어 있습니다.  
+-   [데모 작업을 사용한 성능 측정](#PerformanceMeasurementsusingtheDemoWorkload)을 수행하기 위한 지침 – 데모 작업 자체를 실행하기 위한 지침뿐 아니라 작업을 추진하는 데 사용되는 도구인 ostress를 설치하고 실행하기 위한 지침이 포함되어 있습니다.  
   
 -   [샘플의 메모리 및 디스크 공간 사용률](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> 사전 요구 사항  
+##  <a name="Prerequisites"></a> 필수 구성 요소  
   
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM – Evaluation, Developer 또는 Enterprise Edition  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM-Evaluation, Developer 또는 Enterprise edition  
   
 -   성능 테스트에 사용할, 프로덕션 환경과 유사한 사양을 가진 서버 이 특정 샘플의 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 사용할 수 있는 메모리가 16GB 이상 있어야 합니다. 하드웨어에 대 한 일반 지침은 [!INCLUDE[hek_2](../includes/hek-2-md.md)], 다음 블로그 게시물을 참조 하세요.[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
@@ -87,13 +87,13 @@ ms.locfileid: "50100414"
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SQL Server 2014 RTM 메모리 내 OLTP 예제 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 에 있는 예제 스크립트 ‘ [RTM](http://go.microsoft.com/fwlink/?LinkID=396372) Sample.sql’을 로컬 폴더에 다운로드합니다.  
+5.  샘플 스크립트를 다운로드 합니다. '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql'에서 [SQL Server 2014 RTM 메모리 내 OLTP 샘플](https://go.microsoft.com/fwlink/?LinkID=396372) 로컬 폴더에 있습니다.  
   
-6.  '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' 스크립트의 ‘checkpoint_files_location’ 변수 값을 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 검사점 파일의 대상 위치를 가리키도록 변경합니다. 검사점 파일은 순차 IO 성능이 좋은 드라이브에 배치되어야 합니다.  
+6.  스크립트의 ' checkpoint_files_location' 변수 값을 업데이트 '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql', 대상 위치를 가리키도록 합니다 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 검사점 파일입니다. 검사점 파일은 순차 IO 성능이 좋은 드라이브에 배치되어야 합니다.  
   
      변수 'database_name'의 값을 업데이트하여 AdventureWorks2014 데이터베이스를 가리킵니다.  
   
-    1.  백슬래시 ‘\’를 경로 이름의 일부로 포함해야 합니다.  
+    1.  백슬래시를 포함 해야 합니다. '\' 경로 이름의 일부로  
   
     2.  예:  
   
@@ -108,18 +108,18 @@ ms.locfileid: "50100414"
     1.  sqlcmd 명령줄 유틸리티 사용. 예를 들어 명령줄 프롬프트에서 스크립트가 포함된 폴더에서 다음 명령을 실행합니다.  
   
         ```  
-        sqlcmd –S . –E –i "ssSQL14 RTM hek_2 Sample.sql"  
+        sqlcmd -S . -E -i "ssSQL14 RTM hek_2 Sample.sql"  
         ```  
   
     2.  Management Studio 사용:  
   
-        1.  쿼리 창에서 ‘[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql’ 스크립트를 엽니다.  
+        1.  스크립트를 열고 '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' 쿼리 창에서  
   
         2.  AdventureWorks2014 데이터베이스가 포함된 대상 서버에 연결합니다.  
   
-        3.  ‘쿼리 -> SQLCMD 모드’를 클릭하여 SQLCMD 모드를 사용하도록 설정합니다.  
+        3.  '쿼리-> SQLCMD 모드'를 클릭 하 여 SQLCMD 모드를 사용 하도록 설정  
   
-        4.  ‘실행’ 단추를 클릭하여 스크립트를 실행합니다.  
+        4.  스크립트를 실행 하려면 ' 실행' 단추를 클릭 합니다.  
   
 ##  <a name="Descriptionofthesampletablesandprocedures"></a> 예제 테이블 및 프로시저에 대한 설명  
  예제에서는 AdventureWorks의 기존 테이블을 기반으로 제품과 판매 주문에 대한 새 테이블을 만듭니다. 새 테이블의 스키마는 아래에 설명된 대로 몇 가지 차이점이 있지만 기존 테이블과 유사합니다.  
@@ -223,7 +223,7 @@ ms.locfileid: "50100414"
   
 -   *별칭 UDT* - 원래 테이블은 시스템 데이터 형식 bit와 동일한 사용자 정의 데이터 형식 dbo.Flag를 사용합니다. 마이그레이션된 테이블은 bit 데이터 형식을 대신 사용합니다.  
   
--   *BIN2 데이터 정렬* - Name 및 ProductNumber 열이 인덱스 키에 포함되어 있으므로 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서 BIN2 데이터 정렬을 사용해야 합니다. 여기에서는 응용 프로그램이 대/소문자 구분 안 함과 같은 데이터 정렬 사항에 의존하지 않는다고 가정합니다.  
+-   *BIN2 데이터 정렬을* -Name 및 ProductNumber 열을 인덱스 키에 포함 되어 있고 BIN2 데이터 정렬이 있어야 하므로 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]합니다. 여기에서는 응용 프로그램이 대/소문자 구분 안 함과 같은 데이터 정렬 사항에 의존하지 않는다고 가정합니다.  
   
 -   *Rowguid* - rowguid 열이 생략되었습니다. 자세한 내용은 SalesOrderHeader 테이블에 대한 설명을 참조하세요.  
   
@@ -263,7 +263,7 @@ ms.locfileid: "50100414"
   
  해시 인덱스를 사용하여 작업을 추가로 최적화할 수 있습니다. 해시 인덱스는 포인트 조회와 행 삽입에 대해 특히 최적화됩니다. 그러나 해시 인덱스가 범위 검색, 정렬된 검색 또는 선행 인덱스 키 열에 대한 검색을 지원하지 않는다는 점을 고려해야 합니다. 따라서 이러한 인덱스를 사용할 때는 주의를 기울여야 합니다. 또한 만들 때 bucket_count를 지정해야 합니다. bucket_count는 일반적으로 인덱스 키 값의 수와 그 두 배 사이에서 설정되어야 하지만 더 많이 추정해도 대개 문제가 되지 않습니다.  
   
- [인덱스 지침](http://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) 과 [올바른 bucket_count 선택](http://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx)지침에 대한 자세한 내용은 온라인 설명서를 참조하세요.  
+ [인덱스 지침](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) 과 [올바른 bucket_count 선택](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx)지침에 대한 자세한 내용은 온라인 설명서를 참조하세요.  
   
  마이그레이션된 테이블의 인덱스는 데모 판매 주문 처리 작업에 맞게 조정되었습니다. 작업은 Sales.SalesOrderHeader_inmem 및 Sales.SalesOrderDetail_inmem 테이블의 삽입 및 포인트 조회에 의존하며 Production.Product_inmem 및 Sales.SpecialOffer_inmem 테이블에서 기본 키 열에 대한 포인트 조회에도 의존합니다.  
   
@@ -271,7 +271,7 @@ ms.locfileid: "50100414"
   
 -   (SalesOrderID)의 해시 인덱스: 예상된 판매 주문 수가 1,000만 개이기 때문에 bucket_count의 크기는 1,000만(1,600만으로 반올림됨)으로 설정됩니다.  
   
--   (SalesPersonID)의 해시 인덱스: bucket_count가 100만입니다. 제공된 데이터 집합에는 많은 영업 사원이 없지만, 이후 성장을 허용할 수 있으며 bucket_count의 크기가 과도하게 설정된 경우 포인트 조회에 대한 성능 저하가 발생하지 않습니다.  
+-   (SalesPersonID)의 해시 인덱스: bucket_count가 100만입니다. 제공된 데이터 세트에는 많은 영업 사원이 없지만, 이후 성장을 허용할 수 있으며 bucket_count의 크기가 과도하게 설정된 경우 포인트 조회에 대한 성능 저하가 발생하지 않습니다.  
   
 -   (CustomerID)의 해시 인덱스: bucket_count가 100만입니다. 제공된 데이터 집합에는 많은 고객이 없지만 이후 성장을 허용할 수 있습니다.  
   
@@ -351,7 +351,7 @@ ms.locfileid: "50100414"
   
     -   지정된 판매 주문에 대한 배송 정보를 업데이트합니다. 또한 판매 주문의 모든 품목에 대한 배송 정보도 업데이트합니다.  
   
-    -   이 저장 프로시저는 동일한 주문을 업데이트하는 동시 트랜잭션과의 예기치 않은 잠재적 충돌을 처리하는 재시도 논리가 포함된 고유하게 컴파일된 저장 프로시저 Sales.usp_UpdateSalesOrderShipInfo_native의 래퍼 프로시저입니다. 재시도 논리에 대한 자세한 내용은 [여기](http://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx)에서 온라인 설명서 항목을 참조하세요.  
+    -   이 저장 프로시저는 동일한 주문을 업데이트하는 동시 트랜잭션과의 예기치 않은 잠재적 충돌을 처리하는 재시도 논리가 포함된 고유하게 컴파일된 저장 프로시저 Sales.usp_UpdateSalesOrderShipInfo_native의 래퍼 프로시저입니다. 재시도 논리에 대한 자세한 내용은 [여기](https://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx)에서 온라인 설명서 항목을 참조하세요.  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_native  
   
@@ -393,7 +393,7 @@ ms.locfileid: "50100414"
   
  설치 단계:  
   
-1.  다음 페이지에서 RML 유틸리티의 x64 설치 패키지를 다운로드하고 실행합니다. [http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
+1.  다음 페이지에서 RML 유틸리티의 x64 설치 패키지를 다운로드하고 실행합니다. [https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
   
 2.  특정 파일이 사용 중이라는 대화 상자가 나타나면 'Continue'를 클릭합니다.  
   
@@ -412,7 +412,7 @@ ms.locfileid: "50100414"
   
 -   -S 연결할 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스의 이름  
   
--   -E Windows 인증을 사용하여 연결(기본값). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하는 경우 –U 및 –P 옵션을 사용하여 사용자 이름과 암호를 각각 지정합니다.  
+-   -E (기본값)에 연결할 Windows 인증 사용 사용 하는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증 옵션을 사용 하 여-및-P 각각 사용자 이름과 암호를 지정 하려면  
   
 -   -d 데이터베이스의 이름. 이 예의 경우 AdventureWorks2014입니다.  
   
@@ -471,7 +471,7 @@ END
  복사 단추를 클릭하여 명령을 복사하고 RML 유틸리티 명령 프롬프트에 붙여 넣습니다.  
   
 ```  
-ostress.exe –n10 –r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n10 -r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  모든 것이 예상대로 작동하는 경우 명령 창은 다음과 유사합니다. 오류 메시지는 예상되지 않습니다.  
@@ -483,11 +483,11 @@ ostress.exe –n10 –r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @
  복사 단추를 클릭하여 명령을 복사하고 RML 유틸리티 명령 프롬프트에 붙여 넣습니다.  
   
 ```  
-ostress.exe –n10 –r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n10 -r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
 #### <a name="running-the-workload"></a>작업 실행  
- 최대 규모로 테스트하기 위해 100개의 연결을 사용하여 1,000만 개의 판매 주문을 삽입합니다. 이 테스트는 일반 서버(예: 물리적 코어 8개, 논리적 코어 16개)와 로그용 기본 SSD 저장소에서 문제 없이 실행됩니다. 테스트가 사용자의 하드웨어에서 제대로 실행되지 않는 경우 [느리게 실행되는 테스트 문제 해결](#Troubleshootingslow-runningtests)섹션을 참조하세요. 이 테스트에 대한 스트레스 수준을 줄이려면 '-n' 매개 변수를 변경하여 연결 수를 줄입니다. 예를 들어 연결 수를 40으로 줄이려면 ‘-n100’ 매개 변수를 ‘-n40’으로 변경합니다.  
+ 최대 규모로 테스트하기 위해 100개의 연결을 사용하여 1,000만 개의 판매 주문을 삽입합니다. 이 테스트는 일반 서버(예: 물리적 코어 8개, 논리적 코어 16개)와 로그용 기본 SSD 저장소에서 문제 없이 실행됩니다. 테스트가 사용자의 하드웨어에서 제대로 실행되지 않는 경우 [느리게 실행되는 테스트 문제 해결](#Troubleshootingslow-runningtests) 섹션을 참조하세요. 이 테스트에 대한 스트레스 수준을 줄이려면 '-n' 매개 변수를 변경하여 연결 수를 줄입니다. 예를 들어 연결 수를 40으로 줄이려면 ‘-n100’ 매개 변수를 ‘-n40’으로 변경합니다.  
   
  작업에 대한 성능 측정으로 작업을 실행한 후 ostress.exe에서 보고하는 경과 시간을 사용합니다.  
   
@@ -499,7 +499,7 @@ ostress.exe –n10 –r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @
  복사 단추를 클릭하여 명령을 복사하고 RML 유틸리티 명령 프롬프트에 붙여 넣습니다.  
   
 ```  
-ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_inmem, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_inmem @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  물리적 코어가 총 8개(논리적 코어 총 16개)인 테스트 서버에서 이 작업은 2분 5초가 소요되었고, 물리적 코어가 24개(논리적 코어 48개)인 두 번째 테스트 서버에서는 1분 0초가 소요되었습니다.  
@@ -514,12 +514,12 @@ ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 
  복사 단추를 클릭하여 명령을 복사하고 RML 유틸리티 명령 프롬프트에 붙여 넣습니다.  
   
 ```  
-ostress.exe –n100 –r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
+ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od Sales.SalesOrderDetailType_ondisk, @SalesOrderID int, @DueDate datetime2 = sysdatetime(), @CustomerID int = rand() * 8000, @BillToAddressID int = rand() * 10000, @ShipToAddressID int = rand() * 10000, @ShipMethodID int = (rand() * 5) + 1; INSERT INTO @od SELECT OrderQty, ProductID, SpecialOfferID FROM Demo.DemoSalesOrderDetailSeed WHERE OrderID= cast((rand()*106) + 1 as int); while (@i < 20) begin; EXEC Sales.usp_InsertSalesOrder_ondisk @SalesOrderID OUTPUT, @DueDate, @CustomerID, @BillToAddressID, @ShipToAddressID, @ShipMethodID, @od; set @i += 1 end"  
 ```  
   
  물리적 코어가 총 8개(논리적 코어 총 16개)인 테스트 서버에서 이 작업은 41분 25초가 소요되었고, 물리적 코어가 24개(논리적 코어 48개)인 두 번째 테스트 서버에서는 52분 16초가 소요되었습니다.  
   
- 이 테스트에서 메모리 최적화 테이블과 디스크 기반 테이블 간 성능 차이의 주요 요인은 디스크 기반 테이블을 사용하는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 CPU를 완전히 활용할 수 없다는 사실입니다. 그 이유는 래치 경합 때문입니다. 즉, 동시 트랜잭션이 동일한 데이터 페이지에 쓰려고 합니다. 래치는 한 번에 한 트랜잭션만 페이지에 쓸 수 있도록 하는 데 사용됩니다. [!INCLUDE[hek_2](../includes/hek-2-md.md)] 엔진은 래치를 사용하지 않으며 데이터 행이 페이지에 구성되지 않습니다. 따라서 동시 트랜잭션이 서로의 삽입을 차단하지 않기 때문에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 CPU를 완전히 활용할 수 있습니다.  
+ 이 테스트에서 메모리 최적화 테이블과 디스크 기반 테이블 간 성능 차이의 주요 요인은 디스크 기반 테이블을 사용하는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 CPU를 완전히 활용할 수 없다는 사실입니다. 그 이유는 래치 경합 때문입니다. 즉, 동시 트랜잭션이 동일한 데이터 페이지에 쓰려고 합니다. 래치는 한 번에 한 트랜잭션만 페이지에 쓸 수 있도록 하는 데 사용됩니다. [!INCLUDE[hek_2](../includes/hek-2-md.md)] 엔진은 래치를 사용하지 않으며 데이터 행이 페이지에 구성되지 않습니다. 따라서 동시 트랜잭션이 서로의 삽입 따라서 차단 하지 않기 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 완벽 하 게 CPU를 활용 합니다.  
   
  작업 관리자 등을 사용하여 작업이 실행되는 동안 CPU 사용률을 관찰할 수 있습니다. 디스크 기반 테이블을 사용하는 경우 CPU 사용률이 100%에 크게 못 미치는 것을 확인할 수 있습니다. 논리적 프로세서가 16개인 테스트 구성에서 사용률은 24% 정도입니다.  
   
@@ -539,7 +539,7 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="Troubleshootingslow-runningtests"></a> 느리게 실행되는 테스트 문제 해결  
  테스트 결과는 일반적으로 하드웨어와 테스트 실행에서 사용되는 동시성 수준에 따라 달라집니다. 결과가 예상과 다른 경우 확인할 몇 가지 사항은 다음과 같습니다.  
   
--   동시 트랜잭션 수: 단일 스레드에서 작업을 실행할 때 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 를 사용한 성능 이점은 두 배보다 적을 수 있습니다. 래치 경합은 동시성 수준이 높은 경우에만 큰 문제가 됩니다.  
+-   동시 트랜잭션 수: 단일 스레드에서 작업을 실행할 때 [!INCLUDE[hek_2](../includes/hek-2-md.md)]를 사용한 성능 이점은 두 배보다 적을 수 있습니다. 래치 경합은 동시성 수준이 높은 경우에만 큰 문제가 됩니다.  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 적은 코어 수: 즉, 동시에 실행되는 트랜잭션이 SQL에서 사용할 수 있는 코어 수만큼만 있을 수 있으므로 시스템에서 동시성 수준이 낮습니다.  
   

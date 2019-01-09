@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0b7f38bb378650fbd243441086df043295376581
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7d4938bc0eac0d3a5568f668b181af1b4169de27
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023130"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52539738"
 ---
-# <a name="parent-child-dimension-attributes---unary-operators"></a>부모-자식 차원 특성 단항 연산자
+# <a name="parent-child-dimension-attributes---unary-operators"></a>부모-자식 차원 특성 - 단항 연산자
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 부모-자식 관계가 포함된 차원에서 부모 특성의 모든 계산되지 않은 멤버에 대한 사용자 지정 롤업을 결정하는 단항(또는 사용자 지정 롤업) 연산자 열을 지정하세요. 그러면 부모 멤버의 값이 계산될 때마다 멤버에 단항 연산자가 적용됩니다. 부모 특성( **Usage** =Parent)에서**UnaryOperatorColumn**은 데이터 원본 뷰에서 단항 연산자가 있는 테이블 열을 지정합니다. 이 열에 저장되어 있는 사용자 지정 롤업 연산자 값이 특성의 각 멤버에 적용됩니다.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 부모-자식 관계가 포함된 차원에서 부모 특성의 모든 계산되지 않은 멤버에 대한 사용자 지정 롤업을 결정하는 단항(또는 사용자 지정 롤업) 연산자 열을 지정하세요. 그러면 부모 멤버의 값이 계산될 때마다 멤버에 단항 연산자가 적용됩니다. 부모 특성( **Usage** =Parent)에서**UnaryOperatorColumn**은 데이터 원본 뷰에서 단항 연산자가 있는 테이블 열을 지정합니다. 이 열에 저장되어 있는 사용자 지정 롤업 연산자 값이 특성의 각 멤버에 적용됩니다.  
   
  데이터 원본 뷰의 차원 테이블에서 명명된 계산을 만들고 단항 연산자 열로 지정할 수 있습니다. '+'와 같은 단순한 식은 모든 멤버에 동일한 연산자를 반환합니다. 그러나 모든 멤버에 연산자를 반환하기만 하면 어떤 식도 사용할 수 있습니다.  
   
@@ -43,6 +43,6 @@ ms.locfileid: "34023130"
 ## <a name="see-also"></a>관련 항목:  
  [차원 특성 속성 참조](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
  [부모-자식 차원의 사용자 지정 롤업 연산자](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-custom-rollup-operators.md)   
- [차원 디자이너에서 비즈니스 인텔리전스 마법사를 시작 합니다.](../../analysis-services/multidimensional-models/database-dimensions-bi-wizard-in-dimension-designer.md)  
+ [차원 디자이너에서 비즈니스 인텔리전스 마법사 시작](../../analysis-services/multidimensional-models/database-dimensions-bi-wizard-in-dimension-designer.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.processor.f1
@@ -13,12 +12,12 @@ ms.assetid: cc1581a2-492b-41f0-bda5-17909b65c4f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 069e826198810ea80374969f9f9b75f628d474c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aae800226a585f7a29334887829be2a09277a004
+ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192463"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52640004"
 ---
 # <a name="server-properties-processors-page"></a>서버 속성(프로세서 페이지)
   이 페이지를 사용하여 프로세서 옵션을 확인하거나 수정할 수 있습니다. 프로세서 선호도 설정은 프로세서가 두 개 이상 설치되어 있는 경우에만 활성화됩니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "48192463"
  특정 스레드에 프로세서를 할당하여 프로세서를 다시 로드해야 하는 필요성을 없애고 프로세스 간의 스레드 마이그레이션을 줄입니다. 자세한 내용은 [affinity mask 서버 구성 옵션](affinity-mask-server-configuration-option.md)을 참조하세요.  
   
  **I/O 선호도**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디스크 I/O를 지정된 CPU 하위 집합에 바인딩합니다. 자세한 내용은 [affinity Input-Output mask 서버 구성 옵션](affinity-input-output-mask-server-configuration-option.md)을 참조하세요.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디스크 I/O를 지정된 CPU 하위 집합에 바인딩합니다. 자세한 내용은 [affinity Input-Output mask 서버 구성 옵션](affinity-input-output-mask-server-configuration-option.md)을 참조하세요.  
   
  **모든 프로세서에 대해 자동으로 프로세서 선호도 마스크 설정**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 프로세서 선호도를 자동으로 설정하도록 합니다.  

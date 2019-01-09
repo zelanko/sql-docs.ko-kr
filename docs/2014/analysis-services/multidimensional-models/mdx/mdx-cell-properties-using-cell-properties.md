@@ -16,12 +16,12 @@ ms.assetid: a593c74d-8c5e-485e-bd92-08f9d22451d4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6b79e568f6dd8a3f0aac8e6f226f2b1719a41ff5
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: HT
+ms.openlocfilehash: 1a8b302391eb4e7384a54181b102f4ae8f3de522
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148252"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52417754"
 ---
 # <a name="using-cell-properties-mdx"></a>셀 속성 사용(MDX)
   MDX의 셀 속성은 큐브와 같은 다차원 데이터 원본의 셀 내용 및 형식에 대한 정보를 포함합니다.  

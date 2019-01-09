@@ -30,12 +30,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 159dd55d8573af5b23dcb71c3393539fa8a0ac37
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: af52376ae4749d42c8d746a64518632e6a047591
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160133"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367735"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>인덱스 다시 구성 및 다시 작성
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 조각난 인덱스를 다시 구성하거나 다시 작성하는 방법에 대해 설명합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서는 기본 데이터에 삽입, 업데이트 또는 삭제 작업을 수행할 때마다 인덱스를 자동으로 유지 관리합니다. 이러한 수정이 거듭되면 시간이 흐름에 따라 인덱스의 정보가 조각화되어 데이터베이스 내에 흩어지게 될 수 있습니다. 조각화는 키 값을 기준으로 하는 인덱스의 논리적 페이지 순서가 데이터 파일 내의 물리적 순서와 일치하지 않을 때 나타납니다. 심하게 조각화된 인덱스는 쿼리 성능을 저하시키고 애플리케이션의 응답을 늦출 수 있습니다.  
@@ -311,6 +311,6 @@ ms.locfileid: "48160133"
  자세한 내용은 [ALTER INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [Microsoft SQL Server 2000 인덱스 조각 모음 최상의 방법](http://technet.microsoft.com/library/cc966523.aspx)  
+ [Microsoft SQL Server 2000 인덱스 조각 모음 최상의 방법](https://technet.microsoft.com/library/cc966523.aspx)  
   
   

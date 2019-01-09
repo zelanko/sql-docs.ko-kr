@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 936a09c286b3732b6259d1ada9c8e720ab812074
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0f2773117b2578f22af63ed022a61f1eeb283295
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016880"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52511475"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>데이터 마이닝 마법사(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 데이터 마이닝 마법사는 데이터 마이닝 프로젝트에 새 마이닝 구조를 추가할 때마다 시작됩니다. 이 마법사를 사용하면 데이터 원본을 선택하고, 분석에 사용할 데이터를 정의하는 데이터 원본 뷰를 설정한 다음 초기 모델을 만들 수 있습니다.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 데이터 마이닝 마법사는 데이터 마이닝 프로젝트에 새 마이닝 구조를 추가할 때마다 시작됩니다. 이 마법사를 사용하면 데이터 원본을 선택하고, 분석에 사용할 데이터를 정의하는 데이터 원본 뷰를 설정한 다음 초기 모델을 만들 수 있습니다.  
   
  마법사의 마지막 단계에서는 원하는 경우 데이터를 학습 및 테스트 집합으로 나누고 드릴스루와 같은 기능을 사용하도록 설정할 수 있습니다.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34016880"
   
 -   예측에 사용할 열 또는 특성은 무엇입니까? 분석에 대한 입력으로 사용하기에 적합한 열 또는 특성은 무엇입니까?  
   
--   어떤 알고리즘을 사용해야 합니까? [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 제공되는 알고리즘은 모두 다른 특징을 가지고 있으며 생성되는 결과도 다릅니다. 각 데이터 집합에 대해 하나의 모델만 사용할 수 있는 것은 아니므로 원하는 대로 다양한 모델을 추가해 볼 수 있습니다.  
+-   어떤 알고리즘을 사용해야 합니까?  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 제공되는 알고리즘은 모두 다른 특징을 가지고 있으며 생성되는 결과도 다릅니다. 각 데이터 집합에 대해 하나의 모델만 사용할 수 있는 것은 아니므로 원하는 대로 다양한 모델을 추가해 볼 수 있습니다.  
   
 -   통합된 데이터 집합에서 모델을 테스트할 수 있어야 합니까? 그런 경우 일부 데이터를 테스트용으로 따로 떼어놓는 옵션을 사용하는 것이 좋습니다. 백분율을 선택할 수 있으며 원하는 경우 지정된 행 수로 상한을 정할 수 있습니다.  
   
@@ -46,10 +46,10 @@ ms.locfileid: "34016880"
   
  다음에는 마이닝 구조 및 이와 연결된 하나의 데이터 마이닝 모델을 만듭니다. 마이닝 구조만 만들고 모델은 나중에 추가할 수도 있지만 일반적으로 테스트 모델을 먼저 만드는 것이 더 편리합니다.  
   
-###  <a name="BKMK_Relational"></a>관계형 마이닝 모델과 OLAP 마이닝 모델 비교  
+###  <a name="BKMK_Relational"></a> 관계형 마이닝 모델과 OLAP 마이닝 모델 비교  
  다음으로는 관계형 데이터 원본을 사용할지 아니면 다차원(OLAP) 데이터를 기반으로 모델을 만들지 선택해야 합니다.  
   
- 이 시점에서 데이터 원본이 관계형인지, 아니면 큐브에 있는지에 따라 데이터 마이닝 마법사는 두 경로로 나뉩니다. 데이터 선택 과정 이외의 모든 과정(예: 알고리즘 선택, 홀드아웃 데이터 집합을 추가하는 기능 등)은 동일합니다. 하지만 큐브 데이터를 선택하는 과정은 관계형 데이터를 사용하는 경우보다 좀 더 복잡합니다. 큐브를 기반으로 모델을 만드는 경우 마지막에 몇 가지 옵션을 더 선택해야 합니다.  
+ 이 시점에서 데이터 원본이 관계형인지, 아니면 큐브에 있는지에 따라 데이터 마이닝 마법사는 두 경로로 나뉩니다. 데이터 선택 과정 이외의 모든 the 동일한 선택한 알고리즘이 홀드 아웃 데이터 집합을 추가할 수 이면 등 하지만 선택 하는 큐브 데이터는 관계형 데이터를 사용 하 여 보다 좀 더 복잡 합니다. 큐브를 기반으로 모델을 만드는 경우 마지막에 몇 가지 옵션을 더 선택해야 합니다.  
   
  각 옵션에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "34016880"
 ### <a name="choosing-an-algorithm"></a>알고리즘 선택  
  다음에는 데이터를 처리할 때 사용할 알고리즘을 결정해야 합니다. 이 결정은 내리기 어려운 결정일 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 각 알고리즘은 기능이 서로 다르며 서로 다른 결과를 생성하므로 사용자의 데이터와 비즈니스 문제에 가장 적합한 알고리즘을 결정하려면 여러 모델을 실험해 보는 것이 좋습니다. 알고리즘별로 가장 적합한 태스크에 대한 설명을 보려면 다음 항목을 참조하십시오.  
   
- [데이터 마이닝 알고리즘 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  다양한 알고리즘을 사용하여 여러 모델을 만들거나 알고리즘의 매개 변수를 변경하여 다양한 모델을 만들 수 있습니다. 선택한 알고리즘으로만 제한되는 것이 아니므로 하나의 데이터에 대해 여러 가지 다른 모델을 만드는 것이 좋습니다.  
   
@@ -77,11 +77,11 @@ ms.locfileid: "34016880"
 ### <a name="additional-features"></a>추가 기능  
  적절한 데이터를 선택하고 데이터 원본을 올바르게 구성할 수 있도록 데이터 마이닝 마법사는 다음과 같은 추가 기능을 제공합니다.  
   
--   **데이터 형식 자동 검색**: 마법사는 열 값의 고유성 및 분포를 검사한 다음 최적의 데이터 형식을 추천하고 데이터의 사용 유형을 제안합니다. 목록에서 값을 선택하여 이러한 제안을 무시할 수 있습니다.  
+-   **자동 데이터 형식 검색**: 마법사는 열 값의 고유성 및 분포를 검사한 다음 최적의 데이터 형식을 추천하고 데이터의 사용 유형을 제안합니다. 목록에서 값을 선택하여 이러한 제안을 무시할 수 있습니다.  
   
 -   **변수 제안**: 대화 상자를 클릭하여 현재까지의 모델 구성을 기준으로 모델에 포함된 열 사이의 상관 관계를 계산하고 결과 특성을 예측하는 요소가 될 수 있는 열을 결정하는 분석기를 시작할 수 있습니다. 다른 값을 입력하여 이러한 제안을 무시할 수 있습니다.  
   
--   **기능 선택**: 대부분의 알고리즘은 적절한 예측 요소가 될 수 있는 열을 자동으로 검색하여 이러한 열을 우선적으로 사용합니다. 값이 너무 많이 포함된 열의 경우 데이터 카디널리티를 줄이고 의미 있는 패턴을 찾는 기회를 늘리기 위해 *기능 선택* 이 적용됩니다. 모델 매개 변수를 사용하여 기능 선택 동작을 조정할 수 있습니다.  
+-   **기능 선택**: 대부분의 알고리즘은 좋은 예측 요소가 될 수 있는 열을 자동으로 검색하여 이러한 열을 우선적으로 사용합니다. 값이 너무 많이 포함된 열의 경우 데이터 카디널리티를 줄이고 의미 있는 패턴을 찾는 기회를 늘리기 위해 *기능 선택* 이 적용됩니다. 모델 매개 변수를 사용하여 기능 선택 동작을 조정할 수 있습니다.  
   
 -   **자동 큐브 조각화**: 마이닝 모델이 OLAP 데이터 원본을 기반으로 하는 경우 큐브 특성을 사용하여 모델을 조각화하는 기능이 자동으로 제공됩니다. 이 기능은 큐브 데이터의 하위 집합을 기반으로 모델을 만드는 데 유용합니다.  
   
@@ -101,15 +101,15 @@ ms.locfileid: "34016880"
   
  [데이터 마이닝 알고리즘 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [콘텐츠 형식 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/content-types-data-mining.md)  
+ [콘텐츠 형식&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/content-types-data-mining.md)  
   
- [데이터 형식 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/data-types-data-mining.md)  
+ [데이터 형식&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
   
- [기능 선택 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/feature-selection-data-mining.md)  
+ [기능 선택&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)  
   
- [누락 값 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)  
+ [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)  
   
- [마이닝 모델에서의 드릴스루](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
+ [마이닝 모델에 대한 드릴스루](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 도구](../../analysis-services/data-mining/data-mining-tools.md)   

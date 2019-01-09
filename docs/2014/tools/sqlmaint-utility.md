@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - database maintenance plans [SQL Server]
@@ -19,12 +18,12 @@ ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e8da941588b466aeaf690214dfee836718569a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 2e15dbb5b7cb21d29936fce5c9b0d1f215d244ac
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110065"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591678"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 유틸리티
   **sqlmaint** 유틸리티는 하나 이상의 데이터베이스에서 지정한 유지 관리 작업을 수행합니다. **sqlmaint** 를 사용하여 DBCC 검사를 실행하고 데이터베이스 및 트랜잭션 로그를 백업하고 통계를 업데이트하고 인덱스를 다시 만들 수 있습니다. 모든 데이터베이스 유지 관리 작업은 지정된 텍스트 파일, HTML 파일 또는 전자 메일 계정으로 보낼 수 있는 보고서를 만듭니다. **sqlmaint** 는 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로 만든 데이터베이스 유지 관리 계획을 실행합니다. 명령 프롬프트에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유지 관리 계획을 실행하려면 [dtexec 유틸리티](../integration-services/packages/dtexec-utility.md)를 사용합니다.  
@@ -80,31 +79,31 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  **sqlmaint** 에 대한 구문 다이어그램이 반환되도록 지정합니다. 이 매개 변수는 단독으로 사용해야 합니다.  
   
- **-S** *server_name*[ **\\***instance_name*]  
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 대상 인스턴스를 지정합니다. 해당 서버 컴퓨터에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스에 연결하려면 *server_name***\\***instance_name*을 지정합니다. 서버를 지정하지 않으면 **sqlmaint** 가 로컬 컴퓨터에 있는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 기본 인스턴스에 연결됩니다.  
+ **-S** _server_name_[ **\\**_instance_name_]  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 대상 인스턴스를 지정합니다. 해당 서버 컴퓨터에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 *인스턴스에 연결하려면**_\\_** server_name* instance_name [!INCLUDE[ssDE](../includes/ssde-md.md)] 을 지정합니다. 서버를 지정하지 않으면 **sqlmaint** 가 로컬 컴퓨터에 있는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 기본 인스턴스에 연결됩니다.  
   
- **-U** *login_ID*  
+ **-U** _login_ID_  
  서버에 연결할 때 사용할 로그인 ID를 지정합니다. 이 인수를 제공하지 않으면 **sqlmaint** 에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 인증을 사용합니다. *login_ID* 에 특수 문자가 포함된 경우 큰따옴표(")로 묶어야 합니다. 그렇지 않은 경우 큰따옴표는 선택 사항입니다.  
   
 > [!IMPORTANT]  
 >  가능하면 Windows 인증을 사용하세요.  
   
- **-P** *password*  
+ **-P** _password_  
  로그인 ID의 암호를 지정합니다. **-U** 매개 변수도 제공한 경우에만 유효합니다. *password* 에 특수 문자가 포함된 경우 큰따옴표(")로 묶어야 합니다. 그렇지 않은 경우 큰따옴표는 선택 사항입니다.  
   
 > [!IMPORTANT]  
 >  암호는 마스킹되지 않습니다. 가능하면 Windows 인증을 사용하세요.  
   
- **-D** *database_name*  
+ **-D** _database_name_  
  유지 관리 작업을 수행할 데이터베이스의 이름을 지정합니다. *database_name* 에 특수 문자가 포함된 경우 큰따옴표(")로 묶어야 합니다. 그렇지 않은 경우 큰따옴표는 선택 사항입니다.  
   
- **-PlanName** *name*  
+ **-PlanName** _name_  
  데이터베이스 유지 관리 계획 마법사를 사용하여 정의한 데이터베이스 유지 관리 계획의 이름을 지정합니다. **sqlmaint** 가 계획에서 사용하는 유일한 정보는 계획에 있는 데이터베이스 목록입니다. 다른 **sqlmaint** 매개 변수에서 지정한 모든 유지 관리 작업이 이 데이터베이스 목록에 적용됩니다.  
   
- **-PlanID** *guid*  
+ **-PlanID** _guid_  
  데이터베이스 유지 관리 계획 마법사를 사용하여 정의한 데이터베이스 유지 관리 계획의 GUID(Globally Unique Identifier)를 지정합니다. **sqlmaint** 가 계획에서 사용하는 유일한 정보는 계획에 있는 데이터베이스 목록입니다. 다른 **sqlmaint** 매개 변수에서 지정한 모든 유지 관리 작업이 이 데이터베이스 목록에 적용됩니다. 이 인수는 msdb.dbo.sysdbmaintplans의 plan_id 값과 일치해야 합니다.  
   
- **-Rpt** *text_file*  
+ **-Rpt** _text_file_  
  보고서를 생성할 파일의 전체 경로와 이름을 지정합니다. 이 보고서는 화면에도 생성됩니다. 보고서에서는 파일 이름에 날짜를 추가하여 버전 정보를 유지 관리합니다. 날짜는 _*yyyyMMddhhmm*형식으로 파일 이름 끝의 마침표 앞에 생성됩니다. *yyyy* = 연도, *MM* = 월, *dd* = 일, *hh* = 시, *mm* = 분입니다.  
   
  1996년 12월 1일 오전 10시 23분에 유틸리티를 실행하는 경우 *text_file* 값은 다음과 같습니다.  
@@ -121,10 +120,10 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
   
  *sqlmaint* 에서 원격 서버에 액세스할 때 **text_file** 에는 전체 UNC(범용 명명 규칙) 파일 이름이 필요합니다.  
   
- **-To**  *operator_name*  
+ **-에** _operator_name_  
  SQL 메일을 통해 생성된 보고서를 받는 운영자를 지정합니다.  
   
- **-HtmlRpt** *html_file*  
+ **-HtmlRpt** _html_file_  
  HTML 보고서를 생성할 파일의 전체 경로와 이름을 지정합니다. **sqlmaint** 에서는 *-Rpt* 매개 변수와 마찬가지로 _ **yyyyMMddhhmm** 형식의 문자열을 파일 이름에 더하여 파일 이름을 생성합니다.  
   
  *sqlmaint* 에서 원격 서버에 액세스할 때 **html_file** 에는 전체 UNC 파일 이름이 필요합니다.  
@@ -132,7 +131,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  **-DelHtmlRpt** \<*time_period*>  
  보고서 파일을 만든 후 시간 간격이 \<*time_period*>를 초과할 경우 보고서 디렉터리에 있는 HTML 보고서가 삭제되도록 지정합니다. **-DelHtmlRpt**는 *html_file* 매개 변수에서 생성된 패턴과 이름이 맞는 파일을 찾습니다. *html_file*이 c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm인 경우 **-DelHtmlRpt**는 **sqlmaint**에서 파일 이름이 C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm 패턴과 일치하고 지정된 \<*time_period*>보다 오래된 모든 파일을 삭제하도록 합니다.  
   
- **-RmUnusedSpace** *threshold_percent free_percent*  
+ **-RmUnusedSpace** _threshold_percent free_percent_  
  **-D**에 지정된 데이터베이스에서 사용하지 않는 공간을 제거하도록 지정합니다. 이 옵션은 자동으로 증가하도록 정의된 데이터베이스에서만 유용합니다. *Threshold_percent* 는 데이터베이스 크기가 몇 MB에 도달하면 **sqlmaint** 가 사용하지 않는 데이터 공간을 제거할지를 지정합니다. 데이터베이스가 *threshold_percent*보다 작으면 동작이 수행되지 않습니다. *Free_percent* 는 사용하지 않는 공간 중 데이터베이스에 유지해야 할 공간을 최종 데이터베이스 크기의 백분율로 지정합니다. 예를 들어 200MB의 데이터베이스에 100MB 데이터가 포함된 경우 *free_percent* 에 10을 지정하면 최종 데이터베이스 크기는 110MB가 됩니다. 데이터베이스가 *free_percent* 와 데이터베이스의 데이터 양을 더한 크기보다 작으면 데이터베이스가 확장되지 않습니다. 예를 들어 108MB의 데이터베이스에 100MB 데이터가 포함된 경우 *free_percent* 에 10을 지정하면 데이터베이스가 110MB로 확장되지 않고 108MB로 유지됩니다.  
   
  **-CkDB** | **-CkDBNoIdx**  
@@ -146,7 +145,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  **-CkCat**  
  **-D**에 지정된 데이터베이스에서 DBCC CHECKCATALOG(Transact-SQL) 문을 실행하도록 지정합니다. 자세한 내용은 [DBCC CHECKCATALOG&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkcatalog-transact-sql)를 참조하세요.  
   
- **-UpdOptiStats** *sample_percent*  
+ **-UpdOptiStats** _sample_percent_  
  데이터베이스의 각 테이블에서 다음 문을 실행하도록 지정합니다.  
   
 ```  
@@ -157,7 +156,7 @@ UPDATE STATISTICS table WITH SAMPLE sample_percent PERCENT;
   
  자세한 내용은 [UPDATE STATISTICS&#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)를 참조하세요.  
   
- **-RebldIdx** *free_space*  
+ **-RebldIdx** _free_space_  
  채우기 비율과 반대로 *free_space* 백분율 값을 사용하여 대상 데이터베이스에서 테이블의 인덱스를 다시 만들도록 지정합니다. 예를 들어 *free_space* 백분율이 30인 경우 사용되는 채우기 비율은 70입니다. *free_space* 백분율 값으로 100을 지정하면 원래 채우기 비율 값으로 인덱스가 다시 작성됩니다.  
   
  인덱스가 계산 열에 있을 경우 **-RebldIdx** 를 사용할 때 **-SupportComputedColumn**인수도 지정해야 합니다.  

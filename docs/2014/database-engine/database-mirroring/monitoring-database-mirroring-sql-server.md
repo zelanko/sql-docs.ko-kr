@@ -13,12 +13,12 @@ ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9c74d39a74529845cc5eaaf0d47536c4a3c39f3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136783"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542908"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>데이터베이스 미러링 모니터링(SQL Server)
   이 섹션에서는 데이터베이스 미러링 모니터 및 **sp_dbmmonitor** 시스템 저장 프로시저를 소개하고 **데이터베이스 미러링 모니터 작업**을 포함하는 데이터베이스 미러링 모니터링의 작동 방법에 대해 설명하며 데이터베이스 미러링 세션에 대한 모니터링 정보를 간단하게 설명합니다. 또한 이 섹션에서는 미리 정의된 데이터베이스 미러링 이벤트 집합에 대해 경고 임계값을 정의하는 방법과 데이터베이스 미러링 이벤트에 대해 경고를 설정하는 방법을 소개합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "48136783"
   
  데이터베이스 미러링 모니터링 작업인 **데이터베이스 미러링 모니터 작업**은 데이터베이스 미러링 모니터와 별개로 백그라운드에서 작동합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 기본적으로 1분마다 **데이터베이스 미러링 모니터 작업** 을 호출하고 작업에서는 미러링 상태를 업데이트하는 저장 프로시저를 호출합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 미러링 세션을 시작하는 경우 **데이터베이스 미러링 모니터 작업** 은 자동으로 생성됩니다. 그러나 ALTER DATABASE *<database_name>* SET PARTNER만 사용하여 미러링을 시작할 경우에는 저장 프로시저를 실행하여 작업을 만들어야 합니다.  
   
- **항목 내용:**  
+ **항목 내용**  
   
 -   [미러링 상태 모니터링](#MonitoringStatus)  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48136783"
   
      **상태** 페이지 메트릭에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "데이터베이스 미러링 모니터"에 표시되는 성능 메트릭을 참조하세요.  
   
--   **sp_dbmmonitorresults**사용  
+-    **sp_dbmmonitorresults**사용  
   
      시스템 관리자는 **sp_dbmmonitorresults** 시스템 저장 프로시저를 사용하여 상태 테이블을 볼 수 있으며 이전 15초 내에 업데이트되지 않은 경우 필요에 따라 업데이트할 수 있습니다. 이 프로시저는 **sp_dbmmonitorupdate** 프로시저를 호출한 다음 프로시저 호출에서 요청된 양에 따라 기록 행을 하나 이상 반환합니다. 결과 집합의 상태에 대한 자세한 내용은 [sp_dbmmonitorresults&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql)을 참조하세요.  
   
@@ -164,13 +164,13 @@ ms.locfileid: "48136783"
   
      가능한 상태는 다음과 같습니다.  
   
-    -   Unknown  
+    -   알 수 없음  
   
     -   동기화 중  
   
     -   동기화됨  
   
-    -   일시 중지됨  
+    -   Suspended  
   
     -   연결 끊김  
   
@@ -178,7 +178,7 @@ ms.locfileid: "48136783"
   
      미러링 모니터 서버의 연결 상태입니다. 가능한 상태는 다음과 같습니다.  
   
-    -   Unknown  
+    -   알 수 없음  
   
     -   연결됨  
   
@@ -301,7 +301,7 @@ ms.locfileid: "48136783"
   
      데이터베이스 미러링 전송 보안과 관련된 감사 메시지를 보고합니다. 자세한 내용은 [Audit Database Mirroring Login Event Class](../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [미러링 성능 메트릭에 대해 경고 임계값 및 경고 사용&#40;SQL Server&#41;](use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
   

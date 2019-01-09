@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - administering replication, best practices
@@ -14,15 +13,15 @@ ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4b234ec214aeca9993f885cc3b191c89db857d33
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd6f263e816d74f1fe3f09902c7e806709dd6993
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079283"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823312"
 ---
 # <a name="best-practices-for-replication-administration"></a>최선의 복제 관리 방법
-  복제를 구성한 후에는 복제 토폴로지 관리 방법을 이해하는 것이 중요합니다. 이 항목에서는 다양한 영역의 작업에 대한 기본적인 수행 방법과 각 영역에 대한 추가 정보를 제공하는 링크를 제공합니다. 이 항목에 제공된 [복제 관리자를 위한 질문과 대답](frequently-asked-questions-for-replication-administrators.md)의 모범 사례 지침 외에도 FAQ 항목을 읽고 일반적인 질문 사항과 문제점에 대해 숙지하세요.  
+  복제를 구성한 후에는 복제 토폴로지 관리 방법을 이해하는 것이 중요합니다. 이 항목에서는 다양한 영역의 작업에 대한 기본적인 수행 방법과 각 영역에 대한 추가 정보를 제공하는 링크를 제공합니다. 이 항목에 제공된 최상의 수행 방법 외에 다음의 FAQ 항목을 읽고 일반적인 질문 사항과 문제점에 대해 숙지하십시오. [복제 관리자를 위한 질문과 대답](frequently-asked-questions-for-replication-administrators.md)합니다.  
   
  최선의 수행 방법을 다음과 같은 두 가지 영역으로 나누면 이해가 쉽습니다.  
   

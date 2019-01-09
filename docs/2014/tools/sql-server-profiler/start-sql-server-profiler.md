@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], starting
@@ -15,12 +14,12 @@ ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d8d306be84e1c039122a462fdfa8b298bb451c1f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a3219168a070a9c264d4fb5457f9e5844734844a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084723"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52775565"
 ---
 # <a name="start-sql-server-profiler"></a>SQL Server Profiler 시작
   다양한 시나리오에서 추적 출력 수집을 지원하기 위해 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 여러 다른 방법으로 시작할 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 **시작** 메뉴, **튜닝 관리자의** 도구 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 메뉴 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 여러 위치에서 시작할 수 있습니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "48084723"
   
 #### <a name="to-start-sql-server-profiler-from-the-tools-menu"></a>도구 메뉴에서 SQL Server Profiler를 시작하려면  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **도구** 메뉴에서 **SQL Server Profiler**를 클릭합니다.  
+1.   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **도구** 메뉴에서 **SQL Server Profiler**를 클릭합니다.  
   
 #### <a name="to-start-sql-server-profiler-from-the-query-editor"></a>쿼리 편집기에서 SQL Server Profiler를 시작하려면  
   
@@ -67,7 +66,7 @@ ms.locfileid: "48084723"
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적을 수행하려면 또한 ALTER TRACE 권한이 있어야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 프로파일러](sql-server-profiler.md)   
  [SQL Server Management Studio 사용](../../database-engine/use-sql-server-management-studio.md)  
   

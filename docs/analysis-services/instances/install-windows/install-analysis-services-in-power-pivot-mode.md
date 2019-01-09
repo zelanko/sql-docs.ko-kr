@@ -1,5 +1,5 @@
 ---
-title: 파워 피벗 모드에서 Analysis Services를 설치 합니다. | Microsoft Docs
+title: 파워 피벗 모드에서 Analysis Services 설치 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 59d3f4dadc2de71f8fa4438ec48a2783164a485a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: e3e973c30ea178a544b9da3501d88f43cf9b1ddb
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019310"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52527748"
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>파워 피벗 모드에서 Analysis Services 설치
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -23,11 +23,11 @@ ms.locfileid: "34019310"
 ##  <a name="bkmk_background"></a> 배경  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] (SharePoint용)은 SharePoint 2016 또는 SharePoint 2013 팜에서 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터 액세스를 제공하는 중간 계층 및 백 엔드 서비스의 모음입니다.  
   
--   **백 엔드 서비스:** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel을 사용하여 분석 데이터가 포함된 통합 문서를 만드는 경우 서버 환경에서 이러한 데이터에 액세스하려면 SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 이 있어야 합니다. SharePoint Server가 설치된 컴퓨터 또는 SharePoint 소프트웨어가 설치되지 않은 다른 컴퓨터에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행할 수 있습니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 은(는) SharePoint에 대한 종속성이 없습니다.  
+-   **백 엔드 서비스:** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel을 사용하여 분석 데이터가 포함된 통합 문서를 만드는 경우 서버 환경에서 이러한 데이터에 액세스하려면 SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]이 있어야 합니다. SharePoint Server가 설치된 컴퓨터 또는 SharePoint 소프트웨어가 설치되지 않은 다른 컴퓨터에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행할 수 있습니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 은(는) SharePoint에 대한 종속성이 없습니다.  
   
-     **고:** 이 항목에서는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버와 백 엔드 서비스의 설치에 대해 설명합니다.  
+     **참고:** 이 항목에서는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버와 백 엔드 서비스의 설치에 대해 설명합니다.  
   
--   **중간 계층:** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 갤러리, 데이터 새로 고침 예약, 관리 대시보드 및 데이터 공급자를 포함한 SharePoint의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 환경 향상. 중간 계층 설치 및 구성에 대한 자세한 내용은 다음 항목을 참조하십시오.  
+-   **중간 계층:** 향상 된 기능을 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 포함 한 SharePoint 환경을 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 갤러리, 데이터 새로 고침 예약, 관리 대시보드 및 데이터 공급자입니다. 중간 계층 설치 및 구성에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
     -   [SharePoint용 Power Pivot 추가 기능 설치 또는 제거(SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)  
   
@@ -47,16 +47,16 @@ ms.locfileid: "34019310"
   
 4.  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 인스턴스 이름을 사용할 수 있어야 합니다. [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]모드에서 Analysis Services를 설치 중인 컴퓨터에 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 이라고 명명된 기존 인스턴스가 있어서는 안 됩니다.  
   
-     **참고:** 인스턴스 이름은 POWERPIVOT여야 합니다.  
+     **참고:** 인스턴스 이름은 POWERPIVOT 여야 합니다.  
   
 5.  [SharePoint 모드의 Analysis Services 서버 하드웨어 및 소프트웨어 요구 사항](http://msdn.microsoft.com/library/fb86ca0a-518c-4c61-ae78-7680c57fae1f)을 검토하세요.  
   
 6.  [SQL Server 2016 Release Notes](../../../sql-server/sql-server-2016-release-notes.md)의 릴리스 정보를 검토하십시오.  
   
 ###  <a name="bkmk_sqleditions"></a> SQL Server 버전 요구 사항  
- 비즈니스 인텔리전스 기능은 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 일부 버전에서만 사용할 수 있습니다. 자세한 내용은 참조 [Analysis Services에서 지 원하는 기능 SQL Server 2016 버전](../../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) 및 [버전 및 SQL Server 2016 구성 요소](../../../sql-server/editions-and-components-of-sql-server-2016.md)합니다.  
+ 비즈니스 인텔리전스 기능은 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 일부 버전에서만 사용할 수 있습니다. 세부 정보를 참조 하세요 [Analysis Services에서 지 원하는 기능을 SQL Server 2016 버전](../../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) 하 고 [버전 및 SQL Server 2016 구성 요소](../../../sql-server/editions-and-components-of-sql-server-2016.md)합니다.  
   
-##  <a name="InstallSQL"></a> 1단계: SharePoint용 Power Pivot 설치  
+##  <a name="InstallSQL"></a> 1 단계: SharePoint 용 Power Pivot 설치  
  이 단계에서는 SQL Server 설치 프로그램을 실행하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 모드에서 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서버를 설치합니다. 이후 단계에서는 통합 문서 데이터 모델에 이 서버를 사용하도록 Excel Services를 구성합니다.  
   
 1.  SQL Server 설치 마법사(Setup.exe)를 실행합니다.  
@@ -139,7 +139,7 @@ ms.locfileid: "34019310"
   
 3.  Analysis Services 인스턴스(예: **[서버 이름]\POWERPIVOT**)에 연결합니다. 인스턴스에 연결할 수 있는 경우 서비스가 실행 중인 것입니다.  
   
-##  <a name="bkmk_config"></a> 2단계: Basic Analysis Services SharePoint 통합 구성  
+##  <a name="bkmk_config"></a> 2 단계: Basic Analysis Services SharePoint 통합 구성  
  다음 단계에서는 SharePoint 문서 라이브러리에서 Excel 고급 데이터 모델과 상호 작용하는 데 필요한 구성 변경 내용에 대해 설명합니다. SharePoint 및 SQL Server Analysis Services를 설치한 후 이 단계를 수행합니다.  
   
 ### <a name="sharepoint-2016"></a>SharePoint 2016  
@@ -215,7 +215,7 @@ ms.locfileid: "34019310"
   
     ```  
   
-##  <a name="bkmk_verify"></a> 3단계 통합 확인  
+##  <a name="bkmk_verify"></a> 3 단계: 통합 확인  
  다음 단계에서는 새 통합 문서를 만들고 업로드하여 Analysis Services 통합을 확인하는 방법을 단계별로 설명합니다. 이들 단계를 완료하려면 SQL Server 데이터베이스가 필요합니다.  
   
 1.  **참고:** 슬라이서 또는 필터가 포함된 고급 통합 문서가 이미 있는 경우 이 통합 문서를 SharePoint 문서 라이브러리에 업로드하고 문서 라이브러리 뷰에서 슬라이서 및 필터와 상호 작용할 수 있는지 확인할 수 있습니다.  
@@ -261,8 +261,8 @@ ms.locfileid: "34019310"
 ##  <a name="bkmk_upgrade_workbook"></a> 통합 문서 업그레이드 및 예약된 데이터 새로 고침  
  이전 버전의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 에서 만든 통합 문서를 업그레이드 하는 데 필요한 단계는 통합 문서를 만든 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 의 버전에 따라 달라집니다. 자세한 내용은 [통합 문서 업그레이드 및 예약된 데이터 새로 고침&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)을 검토하세요.  
   
-##  <a name="bkmk_multiple_servers"></a> 단일 서버 설치 그 이상 – Microsoft SharePoint용 Power Pivot  
- **WFE(웹 프런트 엔드)** 또는 **중간 계층:** 더 큰 SharePoint 팜에 SharePoint 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버를 사용하고 팜에 추가 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 기능을 설치하려면 각 SharePoint 서버에서 설치 관리자 패키지 **spPowerPivot16.msi(SharePoint 2016) 또는 spPowerPivot.msi(SharePoint 2013)** 를 실행해야 합니다. spPowerPivot16.msi 또는 spPowerPivot.msi는 필요한 데이터 공급자와 SharePoint 2016 또는 2013용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구를 설치합니다.  
+##  <a name="bkmk_multiple_servers"></a> Microsoft SharePoint 용 Power Pivot-단일 서버 설치 그 이상  
+ **WFE (웹 프런트 엔드)** 나 **중간 계층:**: 사용 하는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 추가 설치를 더 큰 SharePoint 팜에 SharePoint 모드의 서버 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 설치 관리자 패키지를 실행 하는 기능을 팜에 **(SharePoint 2016) spPowerPivot16.msi 또는 spPowerPivot.msi (SharePoint 2013)** 각 SharePoint 서버에 있습니다. spPowerPivot16.msi 또는 spPowerPivot.msi는 필요한 데이터 공급자와 SharePoint 2016 또는 2013용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구를 설치합니다.  
   
  중간 계층 설치 및 구성에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
@@ -274,13 +274,13 @@ ms.locfileid: "34019310"
   
 -   [파워 피벗 구성 및 솔루션 배포&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)  
   
- **중복 및 서버 부하:** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 모드의 보조 또는 추가 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서버를 설치하면 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버 기능이 중복됩니다. 또한 서버 간에 부하가 분산됩니다. 자세한 내용은 다음 항목을 참조하세요.  
+ **중복 및 서버 부하:** 설치는 두 번째 이상의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 모드의 중복성을 제공 합니다는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버 기능입니다. 또한 서버 간에 부하가 분산됩니다. 자세한 내용은 다음 항목을 참조하세요.  
   
--   [Excel Services (SharePoint 2013)에서 데이터 모델 처리를 위한 Analysis Services 구성](http://technet.microsoft.com/library/jj614437(v=office.15))합니다.  
+-   [Excel Services (SharePoint 2013)에서 데이터 모델 처리를 위해 Analysis Services 구성](http://technet.microsoft.com/library/jj614437(v=office.15))합니다.  
   
--   [Excel Services 데이터 모델 설정 (SharePoint 2013)](http://technet.microsoft.com/library/jj219780(v=office.15))합니다.  
+-   [Excel Services 데이터 모델 설정 (SharePoint 2013) 관리](http://technet.microsoft.com/library/jj219780(v=office.15))합니다.  
   
- ![SharePoint 설정](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정") [SQL Server 피드백을 통해 사용자 의견 및 연락처 정보를 제출](https://feedback.azure.com/forums/908035-sql-server)합니다.  
+ ![SharePoint 설정](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정") [SQL Server 사용자 의견을 통해 사용자 의견 및 담당자 정보 제출](https://feedback.azure.com/forums/908035-sql-server)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [SharePoint 2013으로 파워 피벗 마이그레이션](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   

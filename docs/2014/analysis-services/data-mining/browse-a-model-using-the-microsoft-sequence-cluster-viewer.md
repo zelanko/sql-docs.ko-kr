@@ -21,15 +21,15 @@ ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5571c8bc684a8d57f8696b3a5630170679c1cf63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 870e0fb8cb24a62a2914281e58915c7749771213
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229473"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52521211"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Microsoft 시퀀스 클러스터 뷰어를 사용하여 모델 찾아보기
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 시퀀스 클러스터 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘을 사용하여 작성된 마이닝 모델을 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘은 경로, 즉 *시퀀스*를 따라 연결할 수 있는 이벤트가 포함된 데이터 탐색 시 사용되는 시퀀스 분석 알고리즘입니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft 시퀀스 클러스터링 알고리즘](microsoft-sequence-clustering-algorithm.md)을 참조하세요.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 시퀀스 클러스터 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘을 사용하여 작성된 마이닝 모델을 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘은 경로, 즉 *시퀀스*를 따라 연결할 수 있는 이벤트가 포함된 데이터 탐색 시 사용되는 시퀀스 분석 알고리즘입니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft 시퀀스 클러스터링 알고리즘](microsoft-sequence-clustering-algorithm.md)을 참조하세요.  
   
 > [!NOTE]  
 >  발견된 패턴 및 모델에 사용된 수식에 대한 자세한 정보를 보려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 일반 콘텐츠 트리 뷰어를 사용하십시오. 자세한 내용은 [Microsoft 일반 콘텐츠 트리 뷰어를 사용하여 모델 찾아보기](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) 또는 [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)를 참조하세요.  
@@ -53,7 +53,7 @@ ms.locfileid: "48229473"
 ###  <a name="BKMK_Diagram"></a> 클러스터 다이어그램  
  **시퀀스 클러스터 뷰어의** 클러스터 다이어그램 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 탭은 마이닝 모델에 있는 모든 클러스터를 표시합니다. 두 클러스터를 연결하는 선의 음영은 클러스터의 유사성 정도를 나타냅니다. 음영이 옅거나 없으면 두 클러스터가 그다지 유사하지 않은 것입니다. 선이 어두울수록 링크의 유사성은 더 강해집니다. 클러스터의 오른쪽에 있는 슬라이더를 조정하여 뷰어에 표시되는 선의 개수를 조정할 수 있습니다. 슬라이더를 내리면 강력한 링크만 표시됩니다.  
   
- 기본적으로 음영은 클러스터의 채우기를 나타냅니다. **음영****변수** 및 **상태** 옵션을 사용하여 음영이 나타내는 특성 및 상태 쌍을 선택할 수 있습니다. 음영이 어두울수록 특정 상태에 대한 특성 분포는 증가합니다. 음영이 밝을수록 분포는 감소합니다.  
+ 기본적으로 음영은 클러스터의 채우기를 나타냅니다. 사용 하 여 합니다 **음영 변수** 및 **상태** 옵션은 특성을 선택할 수 있습니다 및 상태 쌍의 음영을 나타냅니다. 음영이 어두울수록 특정 상태에 대한 특성 분포는 증가합니다. 음영이 밝을수록 분포는 감소합니다.  
   
  클러스터의 이름을 바꾸려면 해당 노드를 마우스 오른쪽 단추로 클릭한 다음 **클러스터 이름 바꾸기**를 선택합니다. 새 이름은 서버에 저장됩니다.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "48229473"
   
  [맨 위로 이동](#BKMK_ViewerTabs)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [마이닝 모델 뷰어 태스크 및 방법](mining-model-viewer-tasks-and-how-tos.md)   
  [마이닝 모델 뷰어 태스크 및 방법](mining-model-viewer-tasks-and-how-tos.md)   
  [Microsoft 시퀀스 클러스터링 알고리즘](microsoft-sequence-clustering-algorithm.md)   

@@ -23,15 +23,15 @@ ms.assetid: 591fe30b-d88f-4a71-94d4-4a3907fc275d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 185e9a154a7eb51ff15ce1b45bfd82dc2e36adf0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 78172be64641195f787e0e807149b4995c3b5805
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087773"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52530588"
 ---
 # <a name="browse-a-model-using-the-microsoft-cluster-viewer"></a>Microsoft 클러스터 뷰어를 사용하여 모델 찾아보기
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 클러스터 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘을 사용하여 작성된 마이닝 모델을 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 데이터를 탐색하여 데이터의 잘못된 부분을 식별하고 예측을 만드는 데 사용할 수 있는 세그먼트화 알고리즘입니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Clustering Algorithm](microsoft-clustering-algorithm.md)을(를) 참조하세요.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 클러스터 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘을 사용하여 작성된 마이닝 모델을 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 데이터를 탐색하여 데이터의 잘못된 부분을 식별하고 예측을 만드는 데 사용할 수 있는 세그먼트화 알고리즘입니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Clustering Algorithm](microsoft-clustering-algorithm.md)을(를) 참조하세요.  
   
 > [!NOTE]  
 >  발견된 패턴 및 모델에 사용된 수식에 대한 자세한 정보를 보려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 일반 콘텐츠 트리 뷰어를 사용하십시오. 자세한 내용은 [Microsoft 일반 콘텐츠 트리 뷰어를 사용하여 모델 찾아보기](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) 또는 [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)를 참조하세요.  
@@ -50,7 +50,7 @@ ms.locfileid: "48087773"
 ###  <a name="BKMK_Diagram"></a> 클러스터 다이어그램  
  **클러스터 뷰어의** 클러스터 다이어그램 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 탭에서는 마이닝 모델에 있는 모든 클러스터를 표시합니다. 두 클러스터를 연결하는 선의 음영은 클러스터의 유사성 정도를 나타냅니다. 음영이 옅거나 없으면 두 클러스터가 그다지 유사하지 않은 것입니다. 선이 어두울수록 링크의 유사성은 더 강해집니다. 클러스터의 오른쪽에 있는 슬라이더를 조정하여 뷰어에 표시되는 선의 개수를 조정할 수 있습니다. 슬라이더를 내리면 강력한 링크만 표시됩니다.  
   
- 기본적으로 음영은 클러스터의 채우기를 나타냅니다. **음영****변수** 및 **상태** 옵션을 사용하여 음영이 나타내는 특성 및 상태 쌍을 선택할 수 있습니다. 음영이 어두울수록 특정 상태에 대한 특성 분포는 증가합니다. 음영이 밝을수록 분포는 감소합니다.  
+ 기본적으로 음영은 클러스터의 채우기를 나타냅니다. 사용 하 여 합니다 **음영 변수** 및 **상태** 옵션은 특성을 선택할 수 있습니다 및 상태 쌍의 음영을 나타냅니다. 음영이 어두울수록 특정 상태에 대한 특성 분포는 증가합니다. 음영이 밝을수록 분포는 감소합니다.  
   
  클러스터의 이름을 바꾸려면 해당 노드를 마우스 오른쪽 단추로 클릭한 다음 **클러스터 이름 바꾸기**를 선택합니다. 새 이름은 서버에 저장됩니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48087773"
  [맨 위로 이동](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>관련 항목  
- [Microsoft 클러스터링 알고리즘](microsoft-clustering-algorithm.md)   
+ [Microsoft Clustering Algorithm](microsoft-clustering-algorithm.md)   
  [마이닝 모델 뷰어 태스크 및 방법](mining-model-viewer-tasks-and-how-tos.md)   
  [마이닝 모델 뷰어 태스크 및 방법](mining-model-viewer-tasks-and-how-tos.md)   
  [데이터 마이닝 도구](data-mining-tools.md)   

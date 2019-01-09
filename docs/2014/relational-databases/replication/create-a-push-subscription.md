@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - push subscriptions [SQL Server replication], creating
@@ -17,12 +16,12 @@ ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 993ef680dd4009b70dbcfc2ab193254e4bd47d20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: e723c42dd41c21abb2c11059b8706a098f7fcfd9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110615"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53353338"
 ---
 # <a name="create-a-push-subscription"></a>밀어넣기 구독 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 밀어넣기 구독을 만드는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자에 대해 밀어넣기 구독을 만드는 방법에 대한 자세한 내용은 [SQL Server 이외 구독자에 대한 구독 만들기](create-a-subscription-for-a-non-sql-server-subscriber.md)를 참조하세요.  
@@ -56,7 +55,7 @@ ms.locfileid: "48110615"
   
 #### <a name="to-create-a-push-subscription-from-the-publisher"></a>게시자에서 밀어넣기 구독을 만들려면  
   
-1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결한 다음 해당 서버 노드를 확장합니다.  
+1.   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결한 다음 해당 서버 노드를 확장합니다.  
   
 2.  **복제** 폴더를 확장한 다음 **로컬 게시** 폴더를 확장합니다.  
   
@@ -128,7 +127,7 @@ ms.locfileid: "48110615"
   
     -   **@subscription_priority**를 참조하세요. 서버 구독에 대해 구독의 우선 순위를 지정합니다(**0.00** ~ **99.99**).  
   
-         자세한 내용은 [고급 병합 복제 충돌 감지 및 해결](merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
+         자세한 내용은 [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)에서 병합 아티클 해결 프로그램을 지정하는 방법에 대해 설명합니다.  
   
 3.  게시 데이터베이스의 게시자에서 [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)를 실행합니다. 다음을 지정합니다.  
   
@@ -161,7 +160,7 @@ ms.locfileid: "48110615"
  RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 밀어넣기 구독을 만들 수 있습니다. _밀어넣기 구독을 만들 때 사용하는 RMO 클래스는 구독을 만드는 게시 유형에 따라 달라집니다.  
   
 > [!IMPORTANT]  
->  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](http://go.microsoft.com/fwlink/?LinkId=34733) 암호화 서비스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용합니다.  
+>  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](https://go.microsoft.com/fwlink/?LinkId=34733) 암호화 서비스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용합니다.  
   
 #### <a name="to-create-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 밀어넣기 구독을 만들려면  
   
@@ -171,7 +170,7 @@ ms.locfileid: "48110615"
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 이 메서드가 `false`를 반환하는 경우 2단계에서 지정한 속성이 올바르지 않거나 서버에 게시가 없습니다.  
   
-4.  비트 논리 AND를 수행 합니다. (`&` Visual C# 및 `And` Visual Basic의) 간에 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성 및 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>합니다. 결과가 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>이면 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>와 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 사이의 비트 논리 OR(Visual C#의 `|` 및 Visual Basic의 `Or`)의 결과에 대해 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>를 설정합니다. 그런 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 를 호출하여 밀어넣기 구독을 설정합니다.  
+4.  <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성과 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 사이에서 비트 논리 AND(Visual C#의 `&` 및 Visual Basic의 `And`)를 수행합니다. 결과가 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>이면 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>와 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 사이의 비트 논리 OR(Visual C#의 `|` 및 Visual Basic의 `Or`)의 결과에 대해 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>를 설정합니다. 그런 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 를 호출하여 밀어넣기 구독을 설정합니다.  
   
 5.  구독 데이터베이스가 없는 경우 <xref:Microsoft.SqlServer.Management.Smo.Database> 클래스를 사용하여 만듭니다. 자세한 내용은 [데이터베이스 생성, 변경 및 제거](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)를 참조하세요.  
   
@@ -211,7 +210,7 @@ ms.locfileid: "48110615"
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 이 메서드가 `false`를 반환하는 경우 2단계에서 지정한 속성이 올바르지 않거나 서버에 게시가 없습니다.  
   
-4.  비트 논리 AND를 수행 합니다. (`&` Visual C# 및 `And` Visual Basic의) 간에 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성 및 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>합니다. 결과가 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>이면 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>와 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 사이의 비트 논리 OR(Visual C#의 `|` 및 Visual Basic의 `Or`)의 결과에 대해 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>를 설정합니다. 그런 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 를 호출하여 밀어넣기 구독을 설정합니다.  
+4.  <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성과 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 사이에서 비트 논리 AND(Visual C#의 `&` 및 Visual Basic의 `And`)를 수행합니다. 결과가 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>이면 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>와 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 사이의 비트 논리 OR(Visual C#의 `|` 및 Visual Basic의 `Or`)의 결과에 대해 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>를 설정합니다. 그런 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 를 호출하여 밀어넣기 구독을 설정합니다.  
   
 5.  구독 데이터베이스가 없는 경우 <xref:Microsoft.SqlServer.Management.Smo.Database> 클래스를 사용하여 만듭니다. 자세한 내용은 [데이터베이스 생성, 변경 및 제거](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)를 참조하세요.  
   
@@ -229,7 +228,7 @@ ms.locfileid: "48110615"
   
     -   <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>에 대한 게시 이름  
   
-    -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 및 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 또는 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> 필드 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> 에 대 한 자격 증명을 제공 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 배포자에서 병합 에이전트가 실행 되는 Windows 계정입니다. 이 계정은 Windows 인증을 사용하여 배포자에 대한 로컬 연결 및 원격 연결을 만드는 데 사용됩니다.  
+    -   배포자에서 병합 에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정에 대한 자격 증명을 제공하는 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A>의 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 필드와 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> 또는 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> 필드. 이 계정은 Windows 인증을 사용하여 배포자에 대한 로컬 연결 및 원격 연결을 만드는 데 사용됩니다.  
   
         > [!NOTE]  
         >  `sysadmin` 고정 서버 역할의 멤버가 구독을 만들 때 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>를 설정할 필요는 없지만 설정해 두는 것이 좋습니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [복제 에이전트 보안 모델](security/replication-agent-security-model.md)을 참조하세요.  
@@ -262,7 +261,7 @@ ms.locfileid: "48110615"
  [밀어넣기 구독 속성 보기 및 수정](view-and-modify-push-subscription-properties.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [Create a Publication](publish/create-a-publication.md)   
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
+ [복제 관리 개체 개념](concepts/replication-management-objects-concepts.md)   
  [밀어넣기 구독 동기화](synchronize-a-push-subscription.md)   
  [Subscribe to Publications](subscribe-to-publications.md)   
  [스크립팅 변수와 함께 sqlcmd 사용](../scripting/sqlcmd-use-with-scripting-variables.md)  

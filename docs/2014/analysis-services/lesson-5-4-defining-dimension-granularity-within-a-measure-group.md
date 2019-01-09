@@ -11,12 +11,12 @@ ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8936d7c79538f4cb609f9208c6bd458369093076
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: e1d7b619cb711938f07ae7902dc1b9544adc5890
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460928"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52512287"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>측정값 그룹의 차원 세분성 정의
   사용자는 다양한 목적에 맞게 팩트 데이터의 차원을 세밀하게 또는 구체적으로 구분할 수 있습니다. 예를 들어 대리점이나 인터넷 판매의 판매 데이터는 매일 기록하고 판매 할당량 정보는 월별 또는 분기별로 기록할 수 있습니다. 이러한 시나리오에서 사용자는 서로 다른 팩트 테이블 각각에 대해 수준이 다양한 시간 차원을 사용할 수 있습니다. 새 데이터베이스 차원을 이러한 다른 수준을 가진 시간 차원으로 정의할 수 있지만 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 더 쉬운 방법이 있습니다.  
@@ -133,7 +133,7 @@ ms.locfileid: "49460928"
   
 6.  **중간 차원** 목록에서 **Employee**를 선택합니다.  
   
-7.  **참조 차원 특성** 목록에서 **Sales Territory Region**을 선택합니다.  
+7.   **참조 차원 특성** 목록에서 **Sales Territory Region**을 선택합니다.  
   
 8.  **중간 차원 특성** 목록에서 **Sales Territory Key**를 선택합니다. Sales Territory Region 특성의 키 열은 SalesTerritoryKey 열입니다.  
   
@@ -141,13 +141,13 @@ ms.locfileid: "49460928"
   
 10. **확인**을 클릭합니다.  
   
-11. **Sales Territory** 차원과 **Sales Quotas 1** 측정값 그룹의 교집합에서 셀을 클릭한 다음 찾아보기 단추(**…**)를 클릭합니다. **관계 정의** 대화 상자가 열립니다.  
+11. 교집합에서 셀을 클릭 합니다 **Sales Territory** 차원 및 **Sales Quotas 1&lt;/ui&gt** 측정값 그룹 및 찾아보기 단추를 클릭 (**...** ). **관계 정의** 대화 상자가 열립니다.  
   
 12. **관계 유형 선택** 목록에서 **참조**를 선택합니다.  
   
 13. **중간 차원** 목록에서 **Employee**를 선택합니다.  
   
-14. **참조 차원 특성** 목록에서 **Sales Territory Region**을 선택합니다.  
+14.  **참조 차원 특성** 목록에서 **Sales Territory Region**을 선택합니다.  
   
 15. **중간 차원 특성** 목록에서 **Sales Territory Key**를 선택합니다. Sales Territory Region 특성의 키 열은 SalesTerritoryKey 열입니다.  
   
@@ -221,7 +221,7 @@ ms.locfileid: "49460928"
      ![Sales Quota 측정값 그룹 차원이 올바르게 구분 되어](../../2014/tutorials/media/l5-granularity-7.gif "Sales Quota 측정값 그룹의 차원이 올바르게 구분 되어")  
   
 ## <a name="next-lesson"></a>다음 단원  
- [6단원: 계산 정의](lesson-6-defining-calculations.md)  
+ [6 단원: 계산 정의](lesson-6-defining-calculations.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [차원 관계](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

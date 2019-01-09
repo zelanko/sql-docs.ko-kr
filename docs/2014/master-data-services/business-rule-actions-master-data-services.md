@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c9350c34f457d2fc7b198e300f8dc849b380c4ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dca11c580ea8427ce04619720af659f16d6df9ea
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229963"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357725"
 ---
 # <a name="business-rule-actions-master-data-services"></a>비즈니스 규칙 동작(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 비즈니스 규칙 동작은 비즈니스 규칙 조건 평가의 결과입니다. 조건이 True이면 동작이 시작됩니다.  
@@ -50,8 +49,8 @@ ms.locfileid: "48229963"
 |---------------------|-----------------|  
 |**필수**|선택한 특성이 **필수**입니다. 즉, Null이거나 비어 있을 수 없습니다.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
 |**잘못됨**|선택한 특성이 **잘못되었습니다**.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
-|**패턴을 포함해야 함**|선택한 특성이 지정된 **패턴을 포함해야** 합니다. 패턴은 .NET Framework 정규식을 사용하여 지정할 수 있습니다.<br /><br /> 정규식에 대한 자세한 내용은 MSDN Library의 [정규식 언어 요소](http://go.microsoft.com/fwlink/?LinkId=164401) 를 참조하십시오.<br /><br /> 이 동작은 텍스트 및 링크 값에 유효합니다.|  
-|**고유해야 함**|선택한 특성이 정의된 특성에 대해 별도로 또는 특성과 조합하여 **고유해야** 합니다.<br /><br /> **최선의 구현 방법:** 이 동작을 필수 조건과 함께 사용하면 구독 시스템의 인덱스 필드 유효성을 확인할 수 있습니다.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
+|**패턴을 포함해야 함**|선택한 특성이 지정된 **패턴을 포함해야** 합니다. 패턴은 .NET Framework 정규식을 사용하여 지정할 수 있습니다.<br /><br /> 정규식에 대한 자세한 내용은 MSDN Library의 [정규식 언어 요소](https://go.microsoft.com/fwlink/?LinkId=164401) 를 참조하십시오.<br /><br /> 이 동작은 텍스트 및 링크 값에 유효합니다.|  
+|**고유해야 함**|선택한 특성이 정의된 특성에 대해 별도로 또는 특성과 조합하여 **고유해야** 합니다.<br /><br /> **최선의 구현 방법:** 이 동작을 필수 조건과 함께 사용하여 구독 시스템의 인덱스 필드 유효성을 유지합니다.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
 |**다음 값 중 하나가 있어야 함**|선택한 특성에 목록에 지정된 **값 중 하나가 있어야** 합니다.<br /><br /> 이 동작은 텍스트 값에 유효합니다.|  
 |**보다 커야 함**|선택한 특성이 특정 특성 또는 특정 특성 값 **보다 크거나** , 비어 있어야 합니다.<br /><br /> 이 동작은 텍스트, 숫자 및 날짜 값에 유효합니다.|  
 |**같아야 함**|선택한 특성이 정의된 특성 값 또는 다른 특성과 **같거나** , 비어 있어야 합니다.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
@@ -63,15 +62,15 @@ ms.locfileid: "48229963"
 |**최대 길이**|선택한 특성이 지정된 값의 **최대 길이** 여야 합니다.<br /><br /> 이 동작은 텍스트 및 링크 값에 유효합니다.|  
   
 ## <a name="external-action"></a>외부 동작  
- **외부** 동작은 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]외부 응용 프로그램과 상호 작용합니다.  
+ **외부** 동작은 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]외부 애플리케이션과 상호 작용합니다.  
   
 |동작 이름|Description|  
 |-----------------|-----------------|  
-|**워크플로 시작**|외부 워크플로를 시작합니다. 이 동작을 발생시킨 데이터가 워크플로로 전달됩니다. 자세한 내용은 [Master Data Services와 SharePoint 워크플로 통합](http://msdn.microsoft.com/library/gg690195.aspx)을 참조하십시오.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
+|**워크플로 시작**|외부 워크플로를 시작합니다. 이 동작을 발생시킨 데이터가 워크플로로 전달됩니다. 자세한 내용은 [Master Data Services와 SharePoint 워크플로 통합](https://msdn.microsoft.com/library/gg690195.aspx)을 참조하십시오.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [비즈니스 규칙 조건 &#40;Master Data Services&#41;](business-rule-conditions-master-data-services.md)   
- [비즈니스 규칙 &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
- [비즈니스 규칙 만들기 및 게시 &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
+ [비즈니스 규칙 조건&#40;Master Data Services&#41;](business-rule-conditions-master-data-services.md)   
+ [비즈니스 규칙&#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
+ [비즈니스 규칙 만들기 및 게시&#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
   

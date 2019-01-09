@@ -13,12 +13,12 @@ ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 818d24b62366e463b4b5e9eca15ce9af70336176
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 6114407d959a29944f01711b2446ce375f203b83
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098993"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366375"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>보고서 파트(보고서 작성기 및 SSRS)
   테이블, 행렬, 차트 및 이미지와 같은 보고서 항목은 *보고서 파트*로 게시할 수 있습니다. 보고서 파트는 보고서 서버에 별도로 게시된 보고서 항목으로, 다른 보고서에서 다시 사용할 수 있습니다. 보고서 파트는 .rsc 파일 확장명을 사용합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "48098993"
   
  보고서에 추가하는 보고서 파트는 고유한 ID를 통해 사이트나 서버에 있는 보고서 파트 인스턴스에 대한 관계를 유지합니다. 사이트 또는 서버의 보고서 파트를 보고서에 추가한 후에는 사이트 또는 서버의 원본 보고서 파트와 독립적으로 추가한 파트를 수정할 수 있습니다. 해당하는 권한이 있는 경우 다른 사람이 사이트 또는 서버에서 보고서 파트에 적용한 업데이트를 허용할 수 있으며, 다른 사람이 수정한 보고서 파트에 새 보고서 파트를 추가하거나 원본을 덮어쓰는 방법으로 사이트 또는 서버에 다시 저장할 수도 있습니다.  
   
- 보고서 파트 작업을 신속하게 시작하려면 [SQL Server 2008 R2의 보고서 작성기 3 보고서 파트](http://technet.microsoft.com/edge/Video/ff711300) 및 [작업 방법: SQL Server 보고서 작성기를 사용하여 재사용 가능한 보고서 파트 만들기](http://technet.microsoft.com/sqlserver/ff634166.aspx)비디오를 참조하십시오.  
+ 빠르게 시작 하려면 보고서 파트를 사용 하 여 비디오를 보려면 [SQL Server 2008 R2의 보고서 작성기 3 보고서 파트](https://technet.microsoft.com/edge/Video/ff711300) 고 [어떻게 할까요 SQL Server 보고서 작성기를 사용 하 여 재사용 가능한 보고서 파트 만들기](https://technet.microsoft.com/sqlserver/ff634166.aspx)합니다.  
   
 ##  <a name="ComponentWorkflow"></a> 보고서 파트 수명 주기  
  ![rs_ComponentCreation](media/rs-componentcreation.gif "rs_ComponentCreation")  
@@ -75,7 +75,7 @@ ms.locfileid: "48098993"
   
  일부 보고서 파트에는 다른 보고서 항목을 포함할 수 있습니다. 예를 들어 테이블에는 차트를, 사각형에는 행렬 및 차트를 포함할 수 있습니다. 다른 보고서 항목이 포함된 보고서 항목을 게시하면 함께 한 단위로 저장됩니다. 다른 보고서 항목은 컨테이너 보고서 파트에 포함된 상태로 저장됩니다. 이들을 별도로 업데이트할 수 없으며 컨테이너의 항목은 별도의 보고서 파트로 저장할 수 없습니다.  
   
- 보고서 파트 게시에 대 한 자세한 내용은 참조 하세요. [게시 및 보고서 파트 다시 게시 &#40;보고서 작성기 및 SSRS&#41;](report-parts-report-builder-and-ssrs.md)합니다.  
+ 보고서 파트 게시에 대한 자세한 내용은 [보고서 파트 게시 및 다시 게시&#40;보고서 작성기 및 SSRS&#41;](report-parts-report-builder-and-ssrs.md)로 게시할 수 있습니다.  
   
 ### <a name="modifying-report-part-metadata"></a>보고서 파트 메타데이터 수정  
  보고서 파트는 기본 설정으로 기본 위치에 게시할 수도 있고 각 보고서 파트를 다른 위치에 저장해 제목, 설명 등의 메타데이터를 수정할 수도 있습니다.  
@@ -94,10 +94,10 @@ ms.locfileid: "48098993"
 ### <a name="searching-for-report-parts"></a>보고서 파트 검색  
  보고서 파트 갤러리에서 보고서에 추가할 보고서 파트를 찾습니다. 보고서 파트 이름(전체 또는 일부분), 파트를 만든 사람, 마지막으로 수정한 사람, 마지막으로 수정한 시간, 저장 위치 또는 파트 유형으로 파트를 필터링할 수 있습니다. 예를 들어 지난 주에 동료 중 한 사람이 만든 모든 차트를 검색할 수 있습니다.  
   
- 검색 결과는 축소판 그림이나 목록으로 볼 수 있으며 이름, 만든 날짜/수정한 날짜 및 작성자로 정렬할 수 있습니다. 자세한 내용은 [보고서 파트 찾아보기 및 기본 폴더 설정 &#40;보고서 작성기 및 SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)합니다.  
+ 검색 결과는 축소판 그림이나 목록으로 볼 수 있으며 이름, 만든 날짜/수정한 날짜 및 작성자로 정렬할 수 있습니다. 자세한 내용은 [보고서 파트 찾아보기 및 기본 폴더 설정&#40;보고서 작성기 및 SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)로 게시할 수 있습니다.  
   
 ### <a name="what-comes-with-a-report-part"></a>보고서 파트와 함께 추가되는 내용  
- 보고서 파트를 보고서에 추가할 때는 해당 파트가 작동하는 데 필요한 모든 항목도 추가하게 됩니다. 예를 들어 데이터를 표시하는 모든 개체는 데이터 세트, 즉 쿼리와 데이터 원본에 대한 연결을 사용합니다. 또한 매개 변수도 하나 이상 있을 수 있습니다. 보고서 파트가 사용하는 모든 항목을 파트의 *종속성*이라고 하며, 이러한 모든 항목 또는 항목에 대한 포인터는 보고서 파트를 보고서에 추가할 때 함께 포함됩니다. 데이터 세트 및 매개 변수는 보고서의 보고서 데이터 창에 나열됩니다.  
+ 보고서 파트를 보고서에 추가할 때는 해당 파트가 작동하는 데 필요한 모든 항목도 추가하게 됩니다. 예를 들어 데이터를 표시하는 모든 개체는 데이터 세트, 즉 쿼리와 데이터 원본에 대한 연결에 따라 달라집니다. 또한 매개 변수도 하나 이상 있을 수 있습니다. 보고서 파트가 사용하는 모든 항목을 파트의 *종속성*이라고 하며, 이러한 모든 항목 또는 항목에 대한 포인터는 보고서 파트를 보고서에 추가할 때 함께 포함됩니다. 데이터 세트 및 매개 변수는 보고서의 보고서 데이터 창에 나열됩니다.  
   
  보고서 파트의 데이터 세트는 보고서 파트에 포함되어 있을 수도 있고 보고서 파트가 가리키는 별도의 공유 데이터 세트일 수도 있습니다. 보고서 파트에 포함된 데이터 집합은 수정할 수 있습니다. 공유 데이터 세트의 경우에는 별도의 개체이므로 해당 권한이 필요합니다. 자세한 내용에 대 한 공유 및 포함 된 데이터 집합을 참조 하세요 [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-data/report-datasets-ssrs.md)합니다.  
   
@@ -142,17 +142,17 @@ ms.locfileid: "48098993"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에서는 보고서 파트가 약간 다르게 작동합니다. 보고서 디자이너에서 게시는 단방향으로 수행됩니다. 즉, 보고서 디자이너에서 보고서 파트를 게시할 수는 있지만 보고서 디자이너에서 기존 보고서 파트를 다시 사용할 수는 없습니다. 자세한 내용은 [보고서 디자이너의 보고서 파트&#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md)를 참조하세요.  
   
 ##  <a name="HowTo"></a> 방법 도움말 항목  
- [게시 및 보고서 파트 다시 게시 &#40;보고서 작성기 및 SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
+ [보고서 파트 게시 및 다시 게시&#40;보고서 작성기 및 SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
- [보고서 파트 찾아보기 및 기본 폴더 설정 &#40;보고서 작성기 및 SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
+ [보고서 파트 찾아보기 및 기본 폴더 설정&#40;보고서 작성기 및 SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
  [업데이트 확인 또는 업데이트 &#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 파트 및 보고서 작성기에서 데이터 집합](report-data/report-parts-and-datasets-in-report-builder.md)   
+ [보고서 작성기의 보고서 파트 및 데이터 세트](report-data/report-parts-and-datasets-in-report-builder.md)   
  [보고서 파트 문제 해결 &#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [보고서 파트 관리](report-design/managing-report-parts.md)   
- [보고서 작성기 3 보고서 파트 (비디오) SQL Server 2008 R2에서](http://technet.microsoft.com/edge/Video/ff711300)   
- [SQL Server 보고서 작성기 (비디오)를 사용 하 여 만들기 재사용 가능한 보고서 파트 작업 방법:](http://technet.microsoft.com/sqlserver/ff634166.aspx)  
+ [보고서 작성기 3 보고서 파트 (비디오) SQL Server 2008 R2에서](https://technet.microsoft.com/edge/Video/ff711300)   
+ [어떻게 할까요 SQL Server 보고서 작성기 (비디오)를 사용 하 여 재사용 가능한 보고서 파트 만들기](https://technet.microsoft.com/sqlserver/ff634166.aspx)  
   
   

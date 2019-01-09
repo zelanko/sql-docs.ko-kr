@@ -1,6 +1,6 @@
 ---
-title: Analytics Platform System – 수평 확장 데이터 웨어하우스의에서 새로운 기능
-description: Microsoft® Analytics Platform System에서는 MPP SQL Server 병렬 데이터 웨어하우스를 호스트 하는 스케일 아웃 온-프레미스 어플라이언스의에서 새로운 기능을 참조 하세요.
+title: Analytics Platform System-수평 확장 데이터 웨어하우스의에서 새로운 기능
+description: Microsoft Analytics Platform System에서는 MPP SQL Server 병렬 데이터 웨어하우스를 호스트 하는 스케일 아웃 온-프레미스 어플라이언스의에서 새로운 기능을 참조 하세요.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,25 +9,41 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5ffad259ca0de75ad2eb4b7fc6f51614f1c4dea9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5467362b32733e6ef10036bf9b45d38fe3150a1e
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700362"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626357"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System에서는 스케일 아웃 MPP 데이터 웨어하우스의에서 새로운 기능
-최신 어플라이언스 업데이트에 대 한 Microsoft® Analytics Platform System (APS)의 새로운 기능을 참조 하세요. AP는 MPP SQL Server 병렬 데이터 웨어하우스를 호스트 하는 스케일 아웃 온-프레미스 어플라이언스입니다. 
+Microsoft Analytics Platform System (APS)에 대 한 최신 어플라이언스 업데이트의 새로운 기능을 참조 하세요. AP는 MPP SQL Server 병렬 데이터 웨어하우스를 호스트 하는 스케일 아웃 온-프레미스 어플라이언스입니다. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.3"></a>
+## <a name="aps-cu73"></a>AP CU7.3
+릴리스 날짜-2018 년 12 월
+
+### <a name="common-subexpression-elimination"></a>공용 부분식 제거
+AP CU7.3 SQL 쿼리 최적화 프로그램의 공용 부분식 제거를 사용 하 여 쿼리 성능을 향상 시킵니다. 향상 두 가지 방법으로 쿼리를 개선합니다. 첫 번째 이점은 식별 하 고 제거 하는 등 있다는 점입니다 식 SQL 컴파일 시간을 줄이는 데 도움이 됩니다. 두 번째 및 더 중요 한 장점은 쿼리가 더 빠르게 됩니다에 대 한 이러한 중복 하위 식에 대 한 데이터 이동 작업 실행 시간에 따라서 제거 됩니다. 자세한 설명은이 기능을 찾을 수 있습니다 [여기](common-sub-expression-elimination.md)합니다.
+
+### <a name="aps-informatica-connector-for-informatica-1020-published"></a>APS Informatica connector informatica 10.2.0 게시
+APS Informatica 10.2.0 버전을 사용 하 여 작동 하는 대 한 Informatica 커넥터의 새 버전을 릴리스 했습니다. 새 커넥터에서 다운로드할 수 있습니다 [다운로드 사이트](https://www.microsoft.com/download/details.aspx?id=57472)합니다.
+
+#### <a name="supported-versions"></a>Supported Versions
+| AP 버전 | Informatica PowerCenter | 드라이버 |
+|:---|:---|:---|
+| APS 2016 | 9.6.1 | SQL Server Native Client 11.x |
+| APS 2016 이상 | 10.2.0 | SQL Server Native Client 11.x |
+
 <a name="h2-aps-cu7.2"></a>
 ## <a name="aps-cu72"></a>APS CU7.2
 릴리스 날짜-2018 년 10 월
 
 ### <a name="support-for-tls-12"></a>TLS 1.2에 대 한 지원
-AP CU7.2 TLS 1.2를 지원합니다. 클라이언트 컴퓨터 AP AP를 노드 간 통신 설정할 수 있는 이제 TLS1.2를 통해서만 통신 합니다. SSDT, SSIS 및 TLS 1.2를 통해서만 통신 하도록 설정 된 클라이언트 컴퓨터에 설치 된 Dwloader와 같은 도구 이제 TLS 1.2를 사용 하 여 AP를 연결할 수 있습니다. 기본적으로 AP는 이전 버전과 호환성에 대 한 모든 TLS (1.0, 1.1 및 1.2) 버전을 지원 합니다. APS 어플라이언스를 설정 하려는 경우 stictly에 TLS 1.2를 사용 하 여, 레지스트리 설정을 변경 하 여 이렇게 수 있습니다. 
+AP CU7.2 TLS 1.2를 지원합니다. 클라이언트 컴퓨터 AP AP를 노드 간 통신 설정할 수 있는 이제 TLS1.2를 통해서만 통신 합니다. SSDT, SSIS 및 TLS 1.2를 통해서만 통신 하도록 설정 된 클라이언트 컴퓨터에 설치 된 Dwloader와 같은 도구 이제 TLS 1.2를 사용 하 여 AP를 연결할 수 있습니다. 기본적으로 AP는 이전 버전과 호환성에 대 한 모든 TLS (1.0, 1.1 및 1.2) 버전을 지원 합니다. APS 어플라이언스 엄격 하 게 TLS 1.2를 사용 하도록 설정 하려면 레지스트리 설정을 변경 하 여 할 수 있습니다. 
 
-참조 [TLS1.2 AP에 구성](configure-tls12-aps.md) 자세한 내용은 합니다.
+자세한 내용은 [TLS1.2 AP에 구성](configure-tls12-aps.md)합니다.
 
 ### <a name="hadoop-encryption-zone-support-for-polybase"></a>Polybase Hadoop 암호화 영역을 지원 합니다.
 PolyBase는 이제 Hadoop 암호화 영역 통신할 수 있습니다. 에 필요한 AP 구성 변경 내용을 확인할 [Hadoop 보안 구성](polybase-configure-hadoop-security.md#encryptionzone)합니다.
@@ -85,7 +101,7 @@ AP는 T-SQL의 하위 집합을 지원 [DBCC 명령을](https://docs.microsoft.c
 ### <a name="bug-fixes"></a>버그 수정
 AP CU7.1를 사용 하 여 SQL Server 2016 SP2 CU2를 업그레이드 했습니다. 업그레이드는 아래에 설명 된 몇 가지 문제를 해결 합니다.
 
-| Title | 설명 |
+| Title | Description |
 |:---|:---|
 | **튜플 이동 기 교착 상태가 발생할** |업그레이드는 분산 트랜잭션 및 튜플 이동 기 백그라운드 스레드에서 교착 상태를 오래 가능성을 해결합니다. CU7.1를 설치한 후 SQL Server 시작 매개 변수 또는 전역 추적 플래그가 튜플 이동 기를 중지 하려면 TF634를 사용한 고객 안전 하 게 제거할 수 있습니다. | 
 | **특정 lag/잠재 고객 쿼리 실패** |이 업그레이드를 사용 하 여 오류가 발생 하는 지연/잠재 고객의 중첩 된 함수를 사용 하 여 CCI 테이블에 대 한 특정 쿼리 고정 됩니다. | 
@@ -101,9 +117,9 @@ APS 2016은 AU7로 업그레이드 하는 필수 구성 요소입니다. 다음�
 AP AU7 만들고 기본적으로 통계를 자동으로 업데이트 합니다. 관리자 수의 새 기능 스위치 메뉴 항목을 사용 하는 데 통계 설정을 업데이트 하는 [Configuration Manager](appliance-configuration.md#CMTasks)합니다. 합니다 [기능 스위치가](appliance-feature-switch.md) auto-create, 자동 업데이트 및 통계의 비동기 업데이트 동작을 제어 합니다. 사용 하 여 통계 설정을 업데이트할 수도 있습니다는 [ALTER DATABASE (병렬 데이터 웨어하우스)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) 문입니다.
 
 ### <a name="t-sql"></a>T-SQL
-선택 @var 이제 지원 됩니다. 자세한 내용은 [지역 변수 선택]을 참조 하세요. (/ sql/t-sql/language-elements/select-local-variable-transact-sql) 
+선택 @var 이제 지원 됩니다. 자세한 내용은 참조 하세요. [지역 변수를 선택 합니다.](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
 
-해시 및 ORDER GROUP 쿼리 힌트는 이제 지원 됩니다. 자세한 내용은 [Hints(Transact-SQL)-쿼리]을 참조 하세요. (/ sql/t-sql/쿼리/힌트-transact-sql-쿼리)
+해시 및 ORDER GROUP 쿼리 힌트는 이제 지원 됩니다. 자세한 내용은 참조 하세요. [Hints(Transact-SQL)-쿼리 ](/sql/t-sql/queries/hints-transact-sql-query)
 
 ### <a name="feature-switch"></a>기능 스위치
 AP AU7 소개에서 기능 스위치 [Configuration Manager](launch-the-configuration-manager.md)합니다. AutoStatsEnabled DmsProcessStopMessageTimeoutInSeconds와 이제 관리자가 변경 될 수 있는 구성 가능한 옵션입니다.

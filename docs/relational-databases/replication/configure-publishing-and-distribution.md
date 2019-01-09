@@ -15,12 +15,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0ed641edd4ff8b979f7e753c9e83b38654082e61
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0d99aac35afb4d5e4cc9fc4c56c497a95641300e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660562"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210812"
 ---
 # <a name="configure-publishing-and-distribution"></a>게시 및 배포 구성
 [!INCLUDE[appliesto-ss-asdbmi-asdbmi-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "51660562"
 
 #### <a name="to-configure-distribution"></a>배포를 구성하려면 
 
-1. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 배포자가 될 서버에 연결한 다음 서버 노드를 확장합니다. 게시자와 배포자가 같은 서버인 경우가 많습니다.
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 배포자가 될 서버에 연결한 다음 서버 노드를 확장합니다. 게시자와 배포자가 같은 서버인 경우가 많습니다.
 
 2. **복제** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **배포 구성**을 클릭합니다.
 
@@ -96,7 +96,7 @@ ms.locfileid: "51660562"
 
 1. <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 서버 연결을 만듭니다.
 
-2. <xref:Microsoft.SqlServer.Replication.ReplicationServer> 클래스의 인스턴스를 만듭니다. 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>을 전달합니다.
+2. <xref:Microsoft.SqlServer.Replication.ReplicationServer> 클래스의 인스턴스를 만듭니다. 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 을 전달합니다.
 
 3. <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 클래스의 인스턴스를 만듭니다.
 
@@ -124,7 +124,7 @@ ms.locfileid: "51660562"
 
 1. <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 원격 배포자 서버에 대한 연결을 만듭니다.
 
-2. <xref:Microsoft.SqlServer.Replication.ReplicationServer> 클래스의 인스턴스를 만듭니다. 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>을 전달합니다.
+2. <xref:Microsoft.SqlServer.Replication.ReplicationServer> 클래스의 인스턴스를 만듭니다. 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 을 전달합니다.
 
 3. <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 클래스의 인스턴스를 만듭니다.
 
@@ -156,8 +156,8 @@ ms.locfileid: "51660562"
 
 11. <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 메서드를 호출합니다. 5단계에서 지정된 원격 배포자 이름 및 원격 배포자 암호를 전달합니다.
 
->[!IMPORTANT]
-가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 Windows .NET Framework에서 제공하는 [암호화 서비스](https://go.microsoft.com/fwlink/?LinkId=34733) 를 사용합니다.
+> [!IMPORTANT]
+> 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 Windows .NET Framework에서 제공하는 [암호화 서비스](https://go.microsoft.com/fwlink/?LinkId=34733) 를 사용합니다.
 
 ###  <a name="PShellExample"></a> 예(RMO) 
 RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 복제 게시 및 배포를 구성할 수 있습니다.

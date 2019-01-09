@@ -18,12 +18,12 @@ ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff7fe566c7547dc4e0755762d37764cd8b5bc50b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 027800860166b511b0a548313de30b3d237d9930
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069733"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52513798"
 ---
 # <a name="bcpbind"></a>bcp_bind
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 대량 복사를 수행하기 위해 프로그램 변수에서 테이블 열로 데이터를 바인딩합니다.  
@@ -138,7 +138,7 @@ bcp_bind(hdbc, szName, 0,
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SQLXML 및 SQLUDT 데이터 형식 토큰에 대 한 지원을 도입 합니다 *`eDataType`* 매개 변수입니다.  
   
  *idxServerCol*  
- 데이터 복사 대상인 데이터베이스 테이블 열의 서수 위치입니다. 테이블의 첫 번째 열은 열 1입니다. 열의 서 수 위치를 보고 [SQLColumns](../native-client-odbc-api/sqlcolumns.md)합니다.  
+ 데이터 복사 대상인 데이터베이스 테이블 열의 서수 위치입니다. 테이블의 첫 번째 열은 열 1입니다. 열의 서수 위치는 [SQLColumns](../native-client-odbc-api/sqlcolumns.md)를 사용하여 확인할 수 있습니다.  
   
 ## <a name="returns"></a>반환 값  
  SUCCEED 또는 FAIL  
@@ -146,7 +146,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="remarks"></a>Remarks  
  사용 하 여 **bcp_bind** 의 테이블에 프로그램 변수에서 데이터를 복사할 빠르고 효율적인 방법을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
- 호출 [bcp_init](bcp-init.md) 이 또는 다른 대량 복사 함수를 호출 하기 전에 합니다. 호출 **bcp_init** 설정 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사의 대상 테이블입니다. 호출할 때 **bcp_init** 사용에 대 한 **bcp_bind** 하 고 [bcp_sendrow](bcp-sendrow.md)서 **bcp_init** *szDataFile*매개 변수를 데이터 파일을 나타내는 NULL로 설정 됩니다 **bcp_init * eDirection* 매개 변수가 DB_IN으로 설정 됩니다.  
+ 호출 [bcp_init](bcp-init.md) 이 또는 다른 대량 복사 함수를 호출 하기 전에 합니다. 호출 **bcp_init** 설정 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사의 대상 테이블입니다. 호출할 때 **bcp_init** 사용에 대 한 **bcp_bind** 하 고 [bcp_sendrow](bcp-sendrow.md)서 **bcp_init** *szDataFile*매개 변수를 데이터 파일을 나타내는 NULL로 설정 됩니다 합니다 **bcp_init**_eDirection_ 매개 변수가 DB_IN으로 설정 됩니다.  
   
  개별적 **bcp_bind** 의 모든 열에 대 한 호출을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복사 하려는 테이블입니다. 필요한 **bcp_bind** 호출을 수행한 다음 호출 **bcp_sendrow** 하 여 프로그램 변수의 데이터 행을 보낼 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 열을 다시 바인딩하는 것은 지원되지 않습니다.  
   

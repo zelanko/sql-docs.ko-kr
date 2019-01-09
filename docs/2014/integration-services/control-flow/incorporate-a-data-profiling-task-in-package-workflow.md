@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], using output in workflow
@@ -13,15 +12,15 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 74e2ca64c47aaf1b0388fa0d58a3e76f2ec9d20e
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 54b106ab3f6609ab40acd8fd054d5f3369711665
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085519"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368695"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>패키지 워크플로에 데이터 프로파일링 태스크 포함
-  데이터 프로파일링과 정리는 초기 단계의 자동 처리 대상이 아닙니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 데이터 프로파일링 태스크의 출력을 통해 보고된 위반이 의미 있거나 과도한지 확인하려면 일반적으로 시각적 분석과 사람의 판단이 필요합니다. 데이터 품질 문제를 인지한 이후에도 정리를 위한 최선의 방법을 찾기 위한 신중한 계획이 필요합니다.  
+  데이터 프로파일링과 정리는 초기 단계의 자동 처리 대상이 아닙니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 데이터 프로파일링 태스크의 출력을 통해 보고된 위반이 의미 있거나 과도한지 확인하려면 일반적으로 시각적 분석과 사람의 판단이 필요합니다. 데이터 품질 문제를 인지한 이후에도 정리를 위한 최선의 방법을 찾기 위한 신중한 계획이 필요합니다.  
   
  일단 데이터 품질에 대한 조건을 정립하고 나면 데이터 원본에 대한 주기적인 분석과 정리를 자동화할 수 있습니다. 다음과 같은 시나리오를 고려해 보십시오.  
   
@@ -161,7 +160,7 @@ ms.locfileid: "49085519"
     Public Class ScriptMain  
   
       Private FILENAME As String = "C:\ TEMP\DataProfile1.xml"  
-      Private PROFILE_NAMESPACE_URI As String = "http://schemas.microsoft.com/DataDebugger/"  
+      Private PROFILE_NAMESPACE_URI As String = "https://schemas.microsoft.com/DataDebugger/"  
       Private NULLCOUNT_XPATH As String = _  
         "/default:DataProfile/default:DataProfileOutput/default:Profiles" & _  
         "/default:ColumnNullRatioProfile[default:Column[@Name='AddressLine2']]/default:NullCount/text()"  
@@ -216,7 +215,7 @@ ms.locfileid: "49085519"
     {  
   
       private string FILENAME = "C:\\ TEMP\\DataProfile1.xml";  
-      private string PROFILE_NAMESPACE_URI = "http://schemas.microsoft.com/DataDebugger/";  
+      private string PROFILE_NAMESPACE_URI = "https://schemas.microsoft.com/DataDebugger/";  
       private string NULLCOUNT_XPATH = "/default:DataProfile/default:DataProfileOutput/default:Profiles" + "/default:ColumnNullRatioProfile[default:Column[@Name='AddressLine2']]/default:NullCount/text()";  
       private string TABLE_XPATH = "/default:DataProfile/default:DataProfileOutput/default:Profiles" + "/default:ColumnNullRatioProfile[default:Column[@Name='AddressLine2']]/default:Table";  
   
@@ -264,8 +263,8 @@ ms.locfileid: "49085519"
   
 8.  스크립트 개발 환경과 스크립트 태스크 편집기를 차례로 닫습니다.  
   
-#### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>대체 코드 - 변수에서 프로필 출력 읽기  
- 이전 절차에는 파일에서 데이터 프로 파일링 태스크의 출력을 로드 하는 방법을 보여 줍니다. 대체 방법을 사용하여 패키지 변수에서 이 출력을 로드할 수 있습니다. 변수에서 출력을 로드하려면 예제 코드를 다음과 같이 변경해야 합니다.  
+#### <a name="alternative-code-reading-the-profile-output-from-a-variable"></a>대체 코드 - 변수에서 프로필 출력 읽기  
+ 앞의 절차는 파일에서 데이터 프로파일링 작업의 출력을 로드하는 방법을 보여 줍니다. 대체 방법을 사용하여 패키지 변수에서 이 출력을 로드할 수 있습니다. 변수에서 출력을 로드하려면 예제 코드를 다음과 같이 변경해야 합니다.  
   
 -   `LoadXml` 메서드 대신 `XmlDocument` 클래스의 `Load` 메서드를 호출합니다.  
   
@@ -328,7 +327,7 @@ ms.locfileid: "49085519"
   
 7.  워크플로의 다운스트림 분기에 스크립트 태스크를 연결하는 선행 제약 조건에서 변수의 값을 사용하여 워크플로를 제어하는 식을 작성합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터 프로파일링 태스크 설정](data-profiling-task.md)   
  [데이터 프로필 뷰어(Data Profile Viewer)](data-profile-viewer.md)  
   

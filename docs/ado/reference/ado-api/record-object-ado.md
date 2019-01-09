@@ -16,12 +16,12 @@ ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c3688bcd713eab1fed94efab0a5c88f41b7c529
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d719ebf47757a48b034d2a0cadd0ed68f51f0ee5
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758841"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52538762"
 ---
 # <a name="record-object-ado"></a>레코드 개체(ADO)
 행을 나타내며를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 데이터 공급자 또는 파일 또는 디렉터리와 같은 반 구조화 된 데이터 공급자를 반환 하는 개체입니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "47758841"
   
 -   현재 상태를 나타내는 합니다 **레코드** 사용 하 여 합니다 [상태](../../../ado/reference/ado-api/state-property-ado.md) 속성입니다.  
   
--   유형을 나타냅니다 **레코드** — *단순*, *컬렉션*, 또는 *구조화 된 문서* -사용 하 여를 [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)속성입니다.  
+-   유형을 나타냅니다 **레코드** - *단순*를 *컬렉션*, 또는 *구조화 된 문서* -는 [ RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)속성입니다.  
   
 -   사용 하 여 비동기 작업의 실행을 중지 합니다 [취소](../../../ado/reference/ado-api/cancel-method-ado.md) 메서드.  
   

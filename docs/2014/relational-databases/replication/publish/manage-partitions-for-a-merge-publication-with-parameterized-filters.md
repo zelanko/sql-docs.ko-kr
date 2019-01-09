@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - partitions [SQL Server replication]
@@ -15,12 +14,12 @@ ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 62675f5d2464bed9dd07b8a8477644d21ebbe828
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01d2ee847c87fdab013b19edde3c20c9a03c8499
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107893"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763185"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>매개 변수가 있는 필터로 병합 게시에 대한 파티션 관리
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 매개 변수가 있는 필터로 병합 게시에 대한 파티션을 관리하는 방법에 대해 설명합니다. 매개 변수가 있는 행 필터를 사용하여 겹치지 않는 파티션을 생성할 수 있습니다. 이러한 파티션을 제한하여 특정 파티션을 하나의 구독에서만 받도록 할 수 있습니다. 이러한 경우 구독자 수가 많으면 파티션 수가 많아지고 이에 따라 동일한 수의 분할된 스냅숏이 필요합니다. 자세한 내용은 [매개 변수가 있는 행 필터](../merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
@@ -48,7 +47,7 @@ ms.locfileid: "48107893"
 -   겹치지 않는 파티션과 함께 구독을 생성하는 매개 변수가 있는 필터가 게시에 사용된 경우 특정 구독이 손실되어 다시 만들어야 하면 구독된 파티션을 제거하고 구독을 다시 만든 다음 파티션을 다시 만듭니다. 자세한 내용은 [매개 변수가 있는 행 필터](../merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오. 복제에서는 게시 만들기 스크립트가 생성될 때 기존 구독자 파티션에 대한 만들기 스크립트를 생성합니다. 자세한 내용은 [Scripting Replication](../scripting-replication.md)을 참조하세요.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- **게시 속성 - \<Publication>** 대화 상자의 **데이터 파티션** 페이지에서 파티션을 관리합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요. 이 페이지에서는 파티션을 만들거나 삭제하고, 구독자가 스냅숏 생성 및 배달을 시작하도록 허용하고, 하나 이상의 파티션에 대한 스냅숏을 생성하고, 스냅숏을 정리할 수 있습니다.  
+ **게시 속성 - \<Publication>** 대화 상자의 **데이터 파티션** 페이지에서 파티션을 관리합니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Publication Properties](view-and-modify-publication-properties.md)을 참조하세요. 이 페이지에서는 파티션을 만들거나 삭제하고, 구독자가 스냅숏 생성 및 배달을 시작하도록 허용하고, 하나 이상의 파티션에 대한 스냅숏을 생성하고, 스냅숏을 정리할 수 있습니다.  
   
 #### <a name="to-create-a-partition"></a>파티션을 만들려면  
   
@@ -58,7 +57,7 @@ ms.locfileid: "48107893"
   
 3.  선택적으로 스냅숏을 새로 고칠 일정을 지정합니다.  
   
-    1.  **이 파티션에 대한 스냅숏 에이전트의 실행 시간을 다음 시간으로 예약**을 선택합니다.  
+    1.   **이 파티션에 대한 스냅숏 에이전트의 실행 시간을 다음 시간으로 예약**을 선택합니다.  
   
     2.  기본으로 제공되는 스냅숏 새로 고침 일정을 그대로 적용하거나 **변경** 을 클릭하여 다른 일정을 지정합니다.  
   
@@ -138,7 +137,7 @@ ms.locfileid: "48107893"
   
 2.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만듭니다. 게시의 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 속성을 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 으로 설정합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 반환 하는 경우 `false`, 2 단계에서 게시 속성이 올바르게 정의 되지 또는 게시가 없는 것입니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 `false`를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergePartitions%2A> 메서드를 호출하고 해당 결과를 <xref:Microsoft.SqlServer.Replication.MergePartition> 개체의 배열에 전달합니다.  
   
@@ -150,7 +149,7 @@ ms.locfileid: "48107893"
   
 2.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만듭니다. 게시의 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 속성을 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 으로 설정합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 반환 하는 경우 `false`, 2 단계에서 게시 속성이 올바르게 정의 되지 또는 게시가 없는 것입니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 `false`를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergePartitions%2A> 메서드를 호출하고 해당 결과를 <xref:Microsoft.SqlServer.Replication.MergePartition> 개체의 배열에 전달합니다.  
   

@@ -18,12 +18,12 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: be2f6f67182a9dd3dbc5866fa8690e5dcd018445
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: f9dc5d0ae36feb5801f026f0fca77683004e23b3
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189073"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400546"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>로컬 관리에 대해 기본 모드 보고서 서버 구성(SSRS)
   보고서 서버 인스턴스를 로컬로 관리하려는 경우 다음 운영 체제 중 하나에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버를 배포하려면 추가 구성 단계가 필요합니다. 이 항목에서는 로컬 관리를 위한 보고서 서버를 구성하는 방법을 설명합니다. 설치 아직 했거나 보고서 서버를 구성 하는 경우 참조 [설치 마법사에서 SQL Server 2014 설치 &#40;설치&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) 하 고 [Reporting Services 기본 모드 보고서 서버관리](manage-a-reporting-services-native-mode-report-server.md).  
@@ -119,7 +119,7 @@ ms.locfileid: "48189073"
 2.  홈 페이지의 위쪽 모퉁이에 있는 **사이트 설정** 을 클릭합니다.  
   
     > [!TIP]  
-    >  **참고:** **사이트 설정** 옵션이 표시되지 않으면 브라우저를 닫았다가 다시 열고 관리자 권한으로 보고서 관리자로 이동합니다.  
+    >  **참고:** 표시 되지 않으면 합니다 **사이트 설정** 옵션를 닫은 및 브라우저를 다시 열고 관리자 권한으로 보고서 관리자로 이동 합니다.  
   
 3.  **보안**을 클릭합니다.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "48189073"
 -   이 항목의 앞부분에 있는 [보고서 관리자 폴더 설정](#bkmk_configure_folder_settings) 및 [보고서 관리자 사이트 설정](#bkmk_configure_site_settings) 섹션을 참조하세요.  
   
 ##  <a name="bkmk_addiitonal_informaiton"></a> 추가 정보  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 관리와 관련된 일반적인 추가 구성 단계는 보고서 서버 컴퓨터에 대한 액세스를 허용하도록 Windows 방화벽에서 포트 80을 여는 것입니다. 자세한 내용은 [Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md)합니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 관리와 관련된 일반적인 추가 구성 단계는 보고서 서버 컴퓨터에 대한 액세스를 허용하도록 Windows 방화벽에서 포트 80을 여는 것입니다. 자세한 내용은 [Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services 기본 모드 보고서 서버 관리](manage-a-reporting-services-native-mode-report-server.md)  

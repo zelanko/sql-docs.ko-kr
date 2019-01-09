@@ -12,12 +12,12 @@ ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 82c52544bf808bee40097043871a4e4703c513d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96cac25e91c369b5069e4b91c72b99911f3e4d44
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108703"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361325"
 ---
 # <a name="calendar-aware-date-and-time-udt-sample"></a>달력 인식 날짜 및 시간 UDT 예제
   사용되는 달력 시스템에 대한 인식 부족으로 날짜의 의미를 잘 모르는 상태에서 날짜를 문자열로 저장하면 혼동될 수 있습니다. `CADatetime` 예제에서는 달력을 사용하여 날짜와 시간을 처리할 수 있는 두 개의 사용자 정의 데이터 형식(`CADatetime` 및 `CADate`)을 정의합니다.  
@@ -25,9 +25,9 @@ ms.locfileid: "48108703"
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 프로젝트를 만들고 실행하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](http://go.microsoft.com/fwlink/?LinkId=31046)에서 무료로 구할 수 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://go.microsoft.com/fwlink/?LinkId=31046)에서 무료로 구할 수 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](http://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
+-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](https://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
   
 -   .NET Framework SDK 2.0 이상 또는 Microsoft Visual Studio 2005 이상. .NET Framework SDK는 무료로 구할 수 있습니다.  
   
@@ -161,8 +161,8 @@ ms.locfileid: "48108703"
         // This type uses days == 0 as the way to designate a NULL value  
   
         const string CADateSchema =  
-            "<xs:schema targetNamespace=\"http://schemas.microsoft.com/sqlserver/2004/08/CADate\" " +  
-                "xmlns=\"http://schemas.microsoft.com/sqlserver/2004/07/CADate\" " +  
+            "<xs:schema targetNamespace=\"https://schemas.microsoft.com/sqlserver/2004/08/CADate\" " +  
+                "xmlns=\"https://schemas.microsoft.com/sqlserver/2004/07/CADate\" " +  
                 "elementFormDefault=\"qualified\"" +  
                 "xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" >" +  
                 "<xs:element name=\"CADate\" >" +  
@@ -611,7 +611,7 @@ ms.locfileid: "48108703"
   
             writer.WriteStartElement(  
                 "CADate",  
-                "http://schemas.microsoft.com/sqlserver/2004/08/CADate");  
+                "https://schemas.microsoft.com/sqlserver/2004/08/CADate");  
             writer.WriteAttributeString("IsNull", this.IsNull.ToString(CultureInfo.CurrentUICulture));  
             if (!this.IsNull)  
             {  
@@ -807,8 +807,8 @@ ms.locfileid: "48108703"
     public struct CADateTime : INullable, IXmlSerializable  
     {  
         const string CADateTimeSchema =  
-            "<xs:schema targetNamespace=\"http://schemas.microsoft.com/sqlserver/2004/08/CADateTime\" " +  
-                "xmlns=\"http://schemas.microsoft.com/sqlserver/2004/07/CADate\" " +  
+            "<xs:schema targetNamespace=\"https://schemas.microsoft.com/sqlserver/2004/08/CADateTime\" " +  
+                "xmlns=\"https://schemas.microsoft.com/sqlserver/2004/07/CADate\" " +  
                 "elementFormDefault=\"qualified\"" +  
                 "xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" >" +  
                 "<xs:element name=\"CADate\" >" +  
@@ -1336,7 +1336,7 @@ ms.locfileid: "48108703"
                 throw new ArgumentNullException("writer");  
             }  
   
-            writer.WriteStartElement("CADate", "http://schemas.microsoft.com/sqlserver/2004/08/CADate");  
+            writer.WriteStartElement("CADate", "https://schemas.microsoft.com/sqlserver/2004/08/CADate");  
             writer.WriteAttributeString("IsNull", this.IsNull.ToString());  
   
             if (!this.IsNull)  

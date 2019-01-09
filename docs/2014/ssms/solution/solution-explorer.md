@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], solutions
@@ -17,15 +17,15 @@ ms.assetid: 0df09843-0d4f-4925-bc6c-99265035a0c1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7961a7c40665004ec979d3a7ed361f93715d7b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8da0eccb7c8aee546c5e9265bc0cacb8fb49b7e7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194414"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52818735"
 ---
 # <a name="solution-explorer"></a>솔루션 탐색기
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 솔루션 탐색기 창은 데이터베이스 스크립트, 쿼리, 데이터 연결 및 파일을 관리하기 위해 프로젝트라는 컨테이너를 제공합니다. 서로 관련된 하나 이상의 프로젝트를 솔루션이라는 하나의 컨테이너에 결합할 수 있습니다.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 솔루션 탐색기 창은 데이터베이스 스크립트, 쿼리, 데이터 연결 및 파일을 관리하기 위해 프로젝트라는 컨테이너를 제공합니다. 서로 관련된 하나 이상의 프로젝트를 솔루션이라는 하나의 컨테이너에 결합할 수 있습니다.  
   
  솔루션은 하나 이상의 프로젝트와 솔루션을 전체적으로 정의할 수 있는 파일 및 메타데이터로 구성됩니다. 프로젝트는 파일 집합과 연결 정보 같은 관련 메타데이터로 구성됩니다. 솔루션과 프로젝트에는 데이터베이스 솔루션을 만드는 데 필요한 스크립트, 쿼리, 연결 정보 및 파일을 나타내는 항목이 있습니다.  
   

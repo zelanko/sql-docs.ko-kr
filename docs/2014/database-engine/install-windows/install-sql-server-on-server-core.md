@@ -10,25 +10,25 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: da0f4e6af97badffec0bb2018e0933cec282dd0f
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 29523dba8417a89261fed72da801898513796c17
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018758"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364035"
 ---
 # <a name="install-sql-server-2014-on-server-core"></a>Server Core에 SQL Server 2014 설치
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 또는 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]의 Server Core 설치에 설치할 수 있습니다. 이 항목에서는 Server  Core에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 설치하기 위한 설치 관련 세부 정보를 제공합니다.  
   
- [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 또는 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 운영 체제의 Server  Core  설치 옵션은 특정 서버 역할을 실행하기 위한 최소 환경을 제공합니다. 이렇게 하면 유지 관리 및 관리 요구 사항이 줄어들고 이러한 서버 역할에 대한 공격 노출 영역이 감소합니다. 구현 되는 Server Core에 대 한 자세한 내용은 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]를 참조 하세요 [Server Core에 대 한 Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkId=202439) (http://go.microsoft.com/fwlink/?LinkId=202439)합니다. [!INCLUDE[win8srv](../../includes/win8srv-md.md)]에서 구현되는 Server Core에 대한 자세한 내용은 [Windows Server 2012용 Server Core](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx)(http://msdn.microsoft.com/library/hh846323(VS.85).aspx)를 참조하세요.  
+ [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 또는 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 운영 체제의 Server  Core  설치 옵션은 특정 서버 역할을 실행하기 위한 최소 환경을 제공합니다. 이렇게 하면 유지 관리 및 관리 요구 사항이 줄어들고 이러한 서버 역할에 대한 공격 노출 영역이 감소합니다. 구현 되는 Server Core에 대 한 자세한 내용은 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]를 참조 하세요 [Server Core에 대 한 Windows Server 2008 R2](https://go.microsoft.com/fwlink/?LinkId=202439) (https://go.microsoft.com/fwlink/?LinkId=202439)합니다. [!INCLUDE[win8srv](../../includes/win8srv-md.md)]에서 구현되는 Server Core에 대한 자세한 내용은 [Windows Server 2012용 Server Core](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx)(https://msdn.microsoft.com/library/hh846323(VS.85).aspx)를 참조하세요.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
   
 |요구 사항|설치 방법|  
 |-----------------|--------------------|  
 |[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 SP2|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1  및 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]의 Server  Core  설치에 포함되어 있습니다. 활성화되어 있지 않은 경우 설치 프로그램이 기본적으로 활성화합니다.<br /><br /> 한 컴퓨터에서 2.0, 3.0, 3.5 버전을 함께 실행할 수는 없습니다. .NET  Framework  3.5  SP1을 설치하면 2.0  및 3.0  레이어가 자동으로 설치됩니다.|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 3.5  SP1  Full  Profile|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1의 Server  Core  설치에 포함되어 있습니다. 활성화되어 있지 않은 경우 설치 프로그램이 기본적으로 활성화합니다.<br /><br /> Windows 서버 운영 체제가 설치된 컴퓨터에서 .NET 3.5 SP1에 종속된 구성 요소를 설치하려면 설치 프로그램을 실행하기 전에 .NET Framework 3.5 SP1을 다운로드하고 설치해야 합니다.<br /><br /> 획득에서.NET Framework 3.5를 사용 하도록 설정 하는 방법에 대 한 권장 사항 및 지침 대 한 자세한 내용은 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]를 참조 하세요 [Microsoft.NET Framework 3.5 배포 고려 사항](http://msdn.microsoft.com/library/windows/hardware/hh975396) (http://msdn.microsoft.com/library/windows/hardware/hh975396)합니다.|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4  Server  Core  Profile|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 제외한 모든 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]버전의 경우,  설치 프로그램은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4  Server  Core  Profile을 필수 구성 요소로 설치합니다.<br /><br /> 에 대 한 [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]를 다운로드 합니다 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 에서 4 Server Core Profile [Server Core 용 Microsoft.NET Framework 4 (독립 실행형 설치 관리자)](http://go.microsoft.com/fwlink/?LinkId=220467) (http://go.microsoft.com/fwlink/?LinkId=220467), 하 고 설치를 진행 하기 전에 설치.|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 3.5  SP1  Full  Profile|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1의 Server  Core  설치에 포함되어 있습니다. 활성화되어 있지 않은 경우 설치 프로그램이 기본적으로 활성화합니다.<br /><br /> Windows 서버 운영 체제가 설치된 컴퓨터에서 .NET 3.5 SP1에 종속된 구성 요소를 설치하려면 설치 프로그램을 실행하기 전에 .NET Framework 3.5 SP1을 다운로드하고 설치해야 합니다.<br /><br /> 획득에서.NET Framework 3.5를 사용 하도록 설정 하는 방법에 대 한 권장 사항 및 지침 대 한 자세한 내용은 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]를 참조 하세요 [Microsoft.NET Framework 3.5 배포 고려 사항](https://msdn.microsoft.com/library/windows/hardware/hh975396) (https://msdn.microsoft.com/library/windows/hardware/hh975396)합니다.|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4  Server  Core  Profile|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 제외한 모든 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]버전의 경우,  설치 프로그램은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4  Server  Core  Profile을 필수 구성 요소로 설치합니다.<br /><br /> 에 대 한 [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]를 다운로드 합니다 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 에서 4 Server Core Profile [Server Core 용 Microsoft.NET Framework 4 (독립 실행형 설치 관리자)](https://go.microsoft.com/fwlink/?LinkId=220467) (https://go.microsoft.com/fwlink/?LinkId=220467), 하 고 설치를 진행 하기 전에 설치.|  
 |Windows  Installer  4.5|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1  및 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]의 Server  Core  설치와 함께 제공됩니다.|  
 |Windows  PowerShell  2.0|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1  및 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]의 Server  Core  설치와 함께 제공됩니다.|  
   
@@ -49,9 +49,9 @@ ms.locfileid: "51018758"
 |클라이언트 도구 SDK|아니요|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서|아니요|  
 |관리 도구 -  기본|원격 전용<sup>[2]</sup>|  
-|관리 도구 -  전체|원격 전용<sup>[2]</sup>|  
-|Distributed  Replay  Controller|아니요|  
-|Distributed  Replay  Client|원격 전용<sup>[2]</sup>|  
+|관리 도구 - 전체|원격 전용<sup>[2]</sup>|  
+|Distributed Replay Controller|아니요|  
+|Distributed Replay Client|원격 전용<sup>[2]</sup>|  
 |SQL  클라이언트 연결 SDK|사용자 계정 컨트롤|  
 |Microsoft  Sync  Framework|예<sup>[3]</sup>|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|아니요|  
@@ -61,7 +61,7 @@ ms.locfileid: "51018758"
   
  <sup>[2] </sup>설치가 Server Core에서 이러한 기능의 지원 되지 않습니다. 이러한 구성 요소는 Server Core에 설치된 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 서비스에 연결되어 있는 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core SP1 또는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Server Core 이외의 서버에 설치할 수 있습니다.  
   
- <sup>[3] </sup>Microsoft Sync Framework에 포함 되지 않습니다는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 패키지입니다. 이 적합 한 Sync Framework 버전을 다운로드할 수 있습니다 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkId=221788) (http://go.microsoft.com/fwlink/?LinkId=221788) 페이지 및의 Server Core 설치를 실행 하는 컴퓨터에 설치할 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 또는 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]합니다.  
+ <sup>[3] </sup>Microsoft Sync Framework에 포함 되지 않습니다는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 패키지입니다. 이 적합 한 Sync Framework 버전을 다운로드할 수 있습니다 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) 페이지 및의 Server Core 설치를 실행 하는 컴퓨터에 설치할 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 또는 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]합니다.  
   
 ## <a name="supported-scenario-matrix"></a>지원되는 시나리오 매트릭스  
  다음 표에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 및 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 의 Server Core 설치에 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]를 설치할 때 지원되는 시나리오 매트릭스를 보여 줍니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "51018758"
   
  소프트웨어 사용이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 볼륨 라이선스 계약 또는 공급 업체와의 ISV  또는 OEM  계약과 같은 별도의 계약에 의해 관리되지 않는 한 설치 방법에 상관없이 개인 또는 업체 대표로서 소프트웨어 사용 조건에 대한 동의를 확인해야 합니다.  
   
- 사용 조건은 검토 및 동의를 위해 설치 프로그램 사용자 인터페이스에 표시됩니다. /Q 또는 /QS 매개 변수를 사용하는 무인 설치는 /IACCEPTSQLSERVERLICENSETERMS 매개 변수를 포함해야 합니다. [Microsoft 소프트웨어 사용권 계약(Microsoft Software License Terms)](http://go.microsoft.com/fwlink/?LinkId=148209)에서 사용 조건을 별도로 검토할 수 있습니다.  
+ 사용 조건은 검토 및 동의를 위해 설치 프로그램 사용자 인터페이스에 표시됩니다. /Q 또는 /QS 매개 변수를 사용하는 무인 설치는 /IACCEPTSQLSERVERLICENSETERMS 매개 변수를 포함해야 합니다. [Microsoft 소프트웨어 사용권 계약(Microsoft Software License Terms)](https://go.microsoft.com/fwlink/?LinkId=148209)에서 사용 조건을 별도로 검토할 수 있습니다.  
   
 > [!NOTE]  
 >  소프트웨어의 수령 방법(예: [!INCLUDE[msCoName](../../includes/msconame-md.md)] 볼륨 라이선스를 통해 수령)에 따라 사용자의 소프트웨어 사용에 추가 조건이 적용될 수 있습니다.  
@@ -267,7 +267,7 @@ ms.locfileid: "51018758"
 ## <a name="configuring-remote-access-of-includessnoversionincludesssnoversion-mdmd-running-on-server-core"></a>Server Core에서 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 원격 액세스 구성  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 또는 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]의 Server Core 설치에서 실행되는 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 인스턴스의 원격 액세스를 구성하려면 아래에 설명된 작업을 수행합니다.  
   
-### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  원격 연결을 설정하려면 SQLCMD.exe를 로컬로 사용하고 Server Core 인스턴스에 대해 다음 문을 실행합니다.  
   
 -   `EXEC sys.sp_configure N'remote access', N'1'`  
@@ -290,7 +290,7 @@ ms.locfileid: "51018758"
 ### <a name="create-exceptions-in-windows-firewall"></a>Windows 방화벽에서 예외 생성  
  Windows 방화벽에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 액세스 관련 예외를 만들려면 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)에 지정된 단계를 참조하세요.  
   
-### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  TCP/IP 프로토콜은 Server Core에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 Windows PowerShell을 통해 설정할 수 있습니다. 다음 단계를 수행하십시오.  
   
 1.  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 또는 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core를 실행하는 컴퓨터에서 작업 관리자를 실행합니다.  
@@ -323,9 +323,9 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
   
  명명된 인스턴스를 제거하려면 앞서 설명한 예에서 "MSSQLSERVER"  대신 인스턴스 이름을 사용하십시오.  
   
-> [!WARNING]  
+> [!WARNING]
 >  실수로 명령 프롬프트를 닫은 경우 다음 단계에 따라 새 명령 프롬프트를 시작할 수 있습니다.  
->   
+> 
 >  1.  Ctrl+Shift+Esc를 눌러 작업 관리자를 표시합니다.  
 > 2.  **응용 프로그램** 탭에서 **새 작업**을 클릭합니다.  
 > 3.  **새 태스크 만들기** 대화 상자에서 **열기** 필드에 **cmd** 를 입력한 다음 [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
@@ -334,9 +334,9 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
  [Install SQL Server 2014 구성 파일을 사용 하 여](install-sql-server-using-a-configuration-file.md)   
  [명령 프롬프트에서 SQL Server 2014 설치](install-sql-server-from-the-command-prompt.md)   
  [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
- [Server Core 설치 옵션 시작 가이드](http://go.microsoft.com/fwlink/?LinkId=221422)   
- [Server Core 설치 구성: 개요](http://go.microsoft.com/fwlink/?LinkId=221423)   
- [태스크 기준으로 나열된 Windows PowerShell의 장애 조치(failover) 클러스터 Cmdlet](http://go.microsoft.com/fwlink/?LinkId=221419)   
- [Cluster.exe 명령을 장애 조치(failover) 클러스터용 Windows PowerShell Cmdlet에 매핑](http://go.microsoft.com/fwlink/?LinkId=221421)  
+ [Server Core 설치 옵션 시작 가이드](https://go.microsoft.com/fwlink/?LinkId=221422)   
+ [Server Core 설치 구성: 개요](https://go.microsoft.com/fwlink/?LinkId=221423)   
+ [태스크 기준으로 나열된 Windows PowerShell의 장애 조치(failover) 클러스터 Cmdlet](https://go.microsoft.com/fwlink/?LinkId=221419)   
+ [Cluster.exe 명령을 장애 조치(failover) 클러스터용 Windows PowerShell Cmdlet에 매핑](https://go.microsoft.com/fwlink/?LinkId=221421)  
   
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - mapping XDR types to XPath types [SQLXML]
@@ -29,12 +27,12 @@ ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78c7890449a68770d6c6a14a100af061b1394040
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b490a0f4876f911923ed0429f33d332b96768792
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054753"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796421"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 데이터 형식(SQLXML 4.0)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath 및 XSD(XML 스키마)의 데이터 형식은 각각 다릅니다. 예를 들어 XPath에는 정수나 날짜 데이터 형식이 없지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 XSD에는 이러한 데이터 형식이 많습니다. XSD는 시간 값에 나노초 정밀도를 사용하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 최대 1/300초의 정밀도를 사용합니다. 따라서 한 데이터 형식을 다른 데이터 형식에 매핑할 수 없는 경우도 있습니다. 매핑에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XSD 데이터 형식에 데이터 형식을 참조 하십시오. [데이터 형식 강제 변환 및 주석 sql:datatype &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
@@ -65,7 +63,7 @@ ms.locfileid: "48054753"
 |둘 모두 노드 집합이 아닙니다.|두 피연산자를 모두 `number`로 변환한 다음 비교합니다.|두 피연산자를 모두 일반 형식으로 변환한 다음 비교합니다. 둘 중 하나가 `boolean`이면 `boolean`으로 변환하고 둘 중 하나가 `number`이면 `number`로 변환하며 그 외의 경우에는 `string`으로 변환합니다.|  
   
 > [!NOTE]  
->  XPath 관계형 연산자는 항상 해당 피연산자를 `number`로 변환하므로 `string` 비교는 가능하지 않습니다. 날짜 비교를 포함 하려면 SQL Server 2000이이 변형 XPath 사양에는 제공: 관계형 연산자를 비교 하는 경우를 `string` 에 `string`, 노드 집합이 `string`, 또는 문자열 값 노드 집합을 문자열 값 노드 집합에는 `string` 비교 (하지는 `number` 비교)을 수행 합니다.  
+>  XPath 관계형 연산자는 항상 해당 피연산자를 `number`로 변환하므로 `string` 비교는 가능하지 않습니다. 날짜 비교를 포함하기 위해 SQL Server 2000에서는 XPath 사양에 대한 다음과 같은 변형을 제공합니다. 관계형 연산자가 `string`을 `string`과 비교하거나 노드 집합을 `string`과 비교하거나 문자열 값 노드 집합을 문자열 값 노드 집합과 비교하면 `string` 비교가 아닌 `number` 비교가 수행됩니다.  
   
 ## <a name="node-set-conversions"></a>노드 집합 변환  
  노드 집합 변환이 항상 직관적이지는 않습니다. 노드 집합은 집합에 있는 첫 번째 노드의 문자열 값만 사용하여 `string`으로 변환됩니다. 노드 집합은 노드 집합이 `number`으로 변환된 다음 이 `string`이 다시 `string`로 변환되는 방법으로 `number`로 변환됩니다. 노드 집합은 해당 노드 집합의 존재 여부가 테스트되는 방식을 통해 `boolean`으로 변환됩니다.  
@@ -73,7 +71,7 @@ ms.locfileid: "48054753"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 노드 집합에 대해 위치 선택을 수행하지 않습니다. 예를 들어 XPath 쿼리 `Customer[3]`는 세 번째 고객을 의미하는데 이러한 종류의 위치 선택이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 지원되지 않습니다. 따라서 XPath 사양에서 설명하는 노드 집합에서 `string`으로의 변환이나 노드 집합에서 `number`로의 변환이 구현되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 XPath 사양에 "첫 번째" 의미 체계가 지정된 경우 항상 "임의" 의미 체계를 사용합니다. 예를 들어, XPath 쿼리는 W3C XPath 사양에 따라 `Order[OrderDetail/@UnitPrice > 10.0]` 해당 주문을 선택 하는 첫 번째 **OrderDetail** 가 **단가** 10.0 보다 큰. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath 쿼리를 사용 하 여 해당 주문 선택 **OrderDetail** 에 **단가** 10.0 보다 큰.  
   
- `boolean`으로 변환될 때는 존재 테스트가 수행됩니다. 따라서 XPath 쿼리 `Products[@Discontinued=true()]`는 SQL 식 "Products.Discontinued = 1"이 아니라 SQL 식 "Products.Discontinued is not null"과 같습니다. 이 XPath 쿼리를 "Products.Discontinued = 1"과 같게 만들려면 먼저 노드 집합을 `boolean`와 같은 `number`이 아닌 형식으로 변환합니다. `Products[number(@Discontinued) = true()]`) 을 입력합니다.  
+ `boolean`으로 변환될 때는 존재 테스트가 수행됩니다. 따라서 XPath 쿼리 `Products[@Discontinued=true()]`는 SQL 식 "Products.Discontinued = 1"이 아니라 SQL 식 "Products.Discontinued is not null"과 같습니다. 이 XPath 쿼리를 "Products.Discontinued = 1"과 같게 만들려면 먼저 노드 집합을 `boolean`와 같은 `number`이 아닌 형식으로 변환합니다.  `Products[number(@Discontinued) = true()]`) 을 입력합니다.  
   
  대부분의 연산자는 노드 집합의 임의 노드 또는 특정 노드에 대해 TRUE이면 TRUE가 되도록 정의되어 있으므로 노드 집합이 비어 있으면 이러한 연산의 결과가 항상 FALSE입니다. 따라서 A가 비어 있으면 `A = B`와 `A != B`는 모두 FALSE이고 `not(A=B)`와 `not(A!=B)`는 TRUE입니다.  
   
@@ -94,7 +92,7 @@ ms.locfileid: "48054753"
 |number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|number|CONVERT(float(53), EmployeeID)|  
 |id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|string|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|해당 사항 없음(XPath에는 fixed14.4 XDR 데이터 형식에 해당하는 데이터 형식이 없음)|CONVERT(money, EmployeeID)|  
-|날짜|string|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
+|date|string|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
 |Time<br /><br /> time.tz|string|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
  날짜 및 시간 변환 값을 사용 하 여 데이터베이스에 저장 됩니다 있는지 여부를 작동 하도록 설계 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` 데이터 형식 또는 `string`합니다. 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` 데이터 형식을 사용 하지 `timezone` XML 보다 작은 정밀도 및 `time` 데이터 형식입니다. `timezone` 데이터 형식을 사용하거나 전체 자릿수를 늘리려면 `string` 형식을 사용하여 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장하십시오.  

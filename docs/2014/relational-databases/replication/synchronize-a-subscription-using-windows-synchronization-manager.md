@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - synchronization [SQL Server replication], Windows Synchronization Manager
@@ -14,17 +13,17 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d12b1cc5b4626ab9093639d69a7ee724f2cc745d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: eb3e20913a2a7232aeeb93132fb6a8d0bb69e532
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147433"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782795"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Windows 동기화 관리자를 사용하여 구독 동기화(Windows 동기화 관리자)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 가 동기화 관리자와 같은 컴퓨터에서 실행 중인 경우에는 구독을 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시와 동기화하는 데만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 동기화 관리자를 사용할 수 있습니다. 동기화 관리자를 사용하면 오프라인 파일과 웹 페이지를 동기화할 수도 있습니다. 동기화 관리자를 사용하려면 다음을 수행하십시오.  
   
-1.  **구독 속성 - \<Subscriber>:\<SubscriptionDatabase>** 대화 상자에서 Windows 동기화 관리자로 전체 구독의 동기화를 사용할 수 있습니다. 이 대화 상자에 액세스하는 방법은 [끌어오기 구독 속성 보기 및 수정](view-and-modify-pull-subscription-properties.md)을 참조하세요.  
+1.  Windows 동기화 관리자 사용 하 여 끌어오기 구독 동기화를 사용 하도록 설정 합니다 **구독 속성- \<구독자 >: \<SubscriptionDatabase >** 대화 상자. 이 대화 상자에 액세스하는 방법은 [끌어오기 구독 속성 보기 및 수정](view-and-modify-pull-subscription-properties.md)을 참조하세요.  
   
 2.  Windows의 **시작** 메뉴를 통해 동기화 관리자에 액세스합니다.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "48147433"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Windows 동기화 관리자를 통한 끌어오기 구독 동기화가 가능하도록 설정하려면  
   
-1.  **구독 속성-\<Subscriber>: \<SubscriptionDatabase>** 대화 상자의 **일반** 페이지에서 **Windows 동기화 관리자 사용** 옵션에 **사용** 값을 선택합니다.  
+1.  에 **일반적인** 페이지의 **구독 속성- \<구독자 >: \<SubscriptionDatabase >** 대화 상자에서 값을 선택 **활성화** 에 대 한 합니다 **Windows 동기화 관리자를 사용 하 여** 옵션입니다.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -47,7 +46,7 @@ ms.locfileid: "48147433"
   
     -   **시작**을 클릭하고 **프로그램** 또는 **모든 프로그램**, **보조프로그램**을 차례로 가리킨 다음 **동기화**를 클릭합니다.  
   
-    -   **시작**, **실행** 에 **실행** 대화 상자에서 `mobsync.exe` 에 **열기** 필드 및 클릭 **확인**합니다.  
+    -    **시작**, **실행** 에 **실행** 대화 상자에서 `mobsync.exe` 에 **열기** 필드 및 클릭 **확인**합니다.  
   
 2.  **동기화할 항목** 대화 상자에서 동기화할 구독을 선택합니다. 구독은 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 아래에 나열되어 있습니다.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "48147433"
 > [!NOTE]  
 >  편집을 수행한 경우에는 편집 내용이 해결을 위해 선택한 행의 일부인 경우에만 적용됩니다. 예를 들어 **게시자**에서 편집을 수행한 다음 **구독자 허용**을 클릭하면 편집 내용이 무시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [대화형 충돌 해결](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.columnproperties.general.f1
@@ -13,12 +12,12 @@ ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f73bbec32dc8f5d8d20e443428589a3aa45980ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 741c8633a9b7eed9fcd253918c34a27119e51ee4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109913"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52772265"
 ---
 # <a name="column-properties-general-page"></a>열 속성(일반 페이지)
   이 페이지를 사용하여 선택한 열의 속성을 볼 수 있습니다.  
@@ -54,7 +53,7 @@ ms.locfileid: "48109913"
  ID 열의 초기 행 값을 나타냅니다.  
   
  **ID 증가값**  
- **ID 증분** 속성은 새로 삽입되는 행의 ID 값을 생성할 때 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 기존의 가장 큰 행 ID 값에 추가하는 값을 지정합니다.  
+  **ID 증분** 속성은 새로 삽입되는 행의 ID 값을 생성할 때 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 기존의 가장 큰 행 ID 값에 추가하는 값을 지정합니다.  
   
  **기본 바인딩**  
  열에 바인딩된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본값입니다. 기본값이 바인딩되지 않은 경우에 이 옵션은 공백입니다.  

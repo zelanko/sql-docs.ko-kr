@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: f227c49a-ed46-4e0f-8992-83093456cf94
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 728f79c1856cf4447bf12333162fcd209583468e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f5cee5122ca28c8eb16f3b7b0b4d1b330f5777b4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395286"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823767"
 ---
 # <a name="changesets-master-data-services"></a>변경 집합(Master Data Services)
 
@@ -31,13 +30,13 @@ ms.locfileid: "52395286"
   
      다음 워크플로를 따릅니다.  
   
-    1.  변경 집합을 만듭니다. 변경 집합은 열림 상태입니다. [Create a Changeset &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)  
+    1.  변경 집합을 만듭니다. 변경 집합은 열림 상태입니다.  [Create a Changeset &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)  
   
-    2.  변경 집합을 적용하고 일부 변경 내용을 변경 집합에 추가합니다. [Apply and Update a Changeset &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
+    2.  변경 집합을 적용하고 일부 변경 내용을 변경 집합에 추가합니다.  [Apply and Update a Changeset &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
   
-    3.  승인을 위해 엔터티 관리자에게 변경 집합을 제출합니다. 변경 집합은 보류 중 상태입니다. [Commit or Submit a Changeset &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
+    3.  승인을 위해 엔터티 관리자에게 변경 집합을 제출합니다. 변경 집합은 보류 중 상태입니다.  [Commit or Submit a Changeset &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
-    4.  엔터티 관리자가 변경 집합이 승인 대기 중이라는 메일 알림을 받습니다. 엔터티 관리자가 변경 집합을 승인할 경우 변경 집합은 승인됨 상태입니다. [Approve or Reject a Changeset &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
+    4.  엔터티 관리자가 변경 집합이 승인 대기 중이라는 메일 알림을 받습니다. 엔터티 관리자가 변경 집합을 승인할 경우 변경 집합은 승인됨 상태입니다.  [Approve or Reject a Changeset &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   
     5.  승인된 변경 집합은 자동으로 커밋됩니다. 변경 내용이 성공적으로 커밋되면 변경 집합은 커밋됨 상태입니다.  
   
@@ -47,7 +46,7 @@ ms.locfileid: "52395286"
   
      다음 워크플로를 따릅니다.  
   
-    1.  변경 집합을 만듭니다. 변경 집합은 열림 상태입니다. [Create a Changeset &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)  
+    1.  변경 집합을 만듭니다. 변경 집합은 열림 상태입니다.  [Create a Changeset &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)  
   
     2.  변경 집합을 적용하고 일부 변경 내용을 변경 집합에 추가합니다. [변경 집합 적용 및 업데이트&#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)를 참조하세요.  
   

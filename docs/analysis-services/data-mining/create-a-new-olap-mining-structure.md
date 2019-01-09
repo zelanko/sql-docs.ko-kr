@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 672b94be0aad740ddcb2659b8cf82ef0cd7ab76e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d0a12d7fad2deb138d2dac445492ffce55f1493a
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015700"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52390717"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>새 OLAP 마이닝 구조 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 데이터 마이닝 마법사를 사용하여 다차원 모델의 데이터를 사용하는 마이닝 구조를 만들 수 있습니다. OLAP 큐브를 기반으로 하는 마이닝 모델은 팩트 테이블의 열과 값, 차원 및 측정값 그룹을 분석 특성으로 사용할 수 있습니다.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 데이터 마이닝 마법사를 사용하여 다차원 모델의 데이터를 사용하는 마이닝 구조를 만들 수 있습니다. OLAP 큐브를 기반으로 하는 마이닝 모델은 팩트 테이블의 열과 값, 차원 및 측정값 그룹을 분석 특성으로 사용할 수 있습니다.  
   
 ### <a name="to-create-a-new-olap-mining-structure"></a>새 OLAP 마이닝 구조를 만들려면  
   
@@ -66,9 +66,9 @@ ms.locfileid: "34015700"
   
      중첩된 데이터를 추가하는 경우 다음과 같은 두 개의 추가 열을 지정해야 합니다.  
   
-    -   중첩 테이블의 키: 이 열은 **중첩 테이블 키 선택**페이지에서 미리 선택되어야 합니다.  
+    -   중첩 테이블의 키: 이 페이지에서 미리 선택 되어야 합니다 **중첩 테이블 키 선택**합니다.  
   
-    -   분석에 사용할 특성: **중첩 테이블 열 선택**페이지에서 중첩 테이블 선택 항목의 특성 및 측정값 목록을 제공합니다.  
+    -   분석에 사용할 특성: 페이지 **중첩 테이블 열 선택**중첩된 테이블 선택 항목의 특성 및 측정값 목록을 제공 합니다.  
   
         -   모델에 포함하는 각 특성에 대해 왼쪽 열의 상자를 선택합니다.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "34015700"
   
         -   열을 모델의 예측 가능한 특성 중 하나로만 포함하려는 경우 **예측**을 선택합니다.  
   
-        -   구조에 포함하되 입력 또는 예측 가능한 특성으로 지정하지 않는 항목은 모두 **Ignore**플래그와 함께 구조에 추가됩니다. 이는 모델을 작성할 때 데이터가 처리되지만 해당 데이터는 분석에 사용되지 않으며 드릴스루용으로만 사용 가능함을 의미합니다. 따라서 이러한 기능은 고객 이름과 같은 세부 정보를 포함하되 분석에 사용하지는 않으려는 경우 유용할 수 있습니다.  
+        -   구조에 포함하되 입력 또는 예측 가능한 특성으로 지정하지 않는 항목은 모두 **Ignore**플래그와 함께 구조에 추가됩니다. 이는 모델을 작성할 때 데이터가 처리되지만 해당 데이터는 분석에 사용되지 않으며 드릴스루용으로만 사용 가능함을 의미합니다. 이 기능은 고객 이름과 같은 세부 정보를 포함 하려고 하지만 분석에서 사용 하지 않으려는 경우에 유용할 수 있습니다.  
   
      **마침** 를 클릭하여 중첩 테이블을 사용하는 마법사 부분을 닫습니다. 프로세스를 반복하여 여러 중첩 열을 추가할 수 있습니다.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "34015700"
   
     -   **차원**: 드롭다운 목록에서 관련된 차원을 선택합니다.  
   
-    -   **계층**: 필터를 적용하려는 차원 계층의 수준을 선택합니다. 예를 들어 [Geography] 차원을 기준으로 조각화하는 경우에는 [Region Country Name]과 같은 계층 수준을 선택합니다.  
+    -   **계층**:  필터를 적용하려는 차원 계층의 수준을 선택합니다. 예를 들어 [Geography] 차원을 기준으로 조각화하는 경우에는 [Region Country Name]과 같은 계층 수준을 선택합니다.  
   
     -   **연산자**: 목록에서 연산자를 선택합니다.  
   
@@ -123,9 +123,9 @@ ms.locfileid: "34015700"
   
      **마이닝 모델 차원 만들기**: 이 확인란을 선택하고 마이닝 모델 차원의 형식 이름을 제공합니다. 이 옵션을 사용하면 마이닝 구조를 작성하는 데 사용된 원본 큐브 내에 새 차원이 만들어집니다. 이 차원을 사용하여 드릴다운 및 추가 분석을 수행할 수 있습니다. 차원은 큐브 내에 있으므로 사례 데이터 차원에 자동으로 매핑됩니다.  
   
-     **마이닝 모델 차원을 사용하여 큐브 만들기**: 이 확인란을 선택하고 새 큐브의 이름을 제공합니다. 이 옵션을 사용하면 구조를 작성하는 데 사용된 기존 차원과 모델의 결과가 포함된 새 데이터 마이닝 차원이 모두 포함된 새 큐브가 만들어집니다.  
+     **마이닝 모델 차원을 사용 하 여 큐브 만들기**: 이 확인란을 선택하고 새 큐브의 이름을 제공합니다. 이 옵션을 사용하면 구조를 작성하는 데 사용된 기존 차원과 모델의 결과가 포함된 새 데이터 마이닝 차원이 모두 포함된 새 큐브가 만들어집니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마이닝 구조 태스크 및 방법](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

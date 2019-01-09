@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing replication properties
@@ -16,12 +15,12 @@ ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 84b8655494daca0f3c9203775304710591a4081e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 90eb7b166316533b68fdc128fb6ecc65e1820efb
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069723"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53361335"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>게시자 및 배포자 속성 보기 및 수정
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 배포자 및 게시자 속성을 보고 수정하는 방법에 대해 설명합니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "48069723"
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]이전 버전을 실행하는 게시자의 경우 **sysadmin** 고정 서버 역할의 사용자는 **구독자** 페이지에서 구독자를 등록할 수 있습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터는 더 이상 복제에 대해 구독자를 명시적으로 등록하지 않아도 됩니다.  
+-    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]이전 버전을 실행하는 게시자의 경우 **sysadmin** 고정 서버 역할의 사용자는 **구독자** 페이지에서 구독자를 등록할 수 있습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터는 더 이상 복제에 대해 구독자를 명시적으로 등록하지 않아도 됩니다.  
   
 ###  <a name="Security"></a> 보안  
  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다.  
@@ -65,7 +64,7 @@ ms.locfileid: "48069723"
   
     -   배포자와 관련된 게시자 속성을 보고 수정하려면 대화 상자의**게시자**페이지에서 해당 게시자에 대한 속성 단추 ( **...** )를 클릭합니다.  
   
-    -   복제 에이전트에 대한 프로필에 액세스하려면 대화 상자의 **일반** 페이지에서 **프로필 기본값** 단추를 클릭합니다. 자세한 내용은 [Replication Agent Profiles](agents/replication-agent-profiles.md)을(를) 참조하세요.  
+    -   복제 에이전트에 대한 프로필에 액세스하려면 대화 상자의 **일반** 페이지에서 **프로필 기본값** 단추를 클릭합니다. 자세한 내용은 [Replication Agent Profiles](agents/replication-agent-profiles.md)을 참조하세요.  
   
     -   관리 저장 프로시저가 게시자에서 실행되고 배포자에서 정보를 업데이트할 때 사용되는 계정의 암호를 변경하려면 대화 상자의 **게시자** 페이지에서 **암호** 및 **암호 확인** 상자에 새 암호를 입력합니다. 자세한 내용은 [배포자 보안 설정](security/secure-the-distributor.md)을 참조하세요.  
   
@@ -174,7 +173,7 @@ ms.locfileid: "48069723"
 5.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> 메서드를 호출합니다. *password* 매개 변수에 대해 새 암호 값을 전달합니다.  
   
     > [!IMPORTANT]  
-    >  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](http://go.microsoft.com/fwlink/?LinkId=34733) 암호화 서비스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용합니다.  
+    >  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](https://go.microsoft.com/fwlink/?LinkId=34733) 암호화 서비스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용합니다.  
   
 6.  (옵션) 다음 단계를 수행하여 이 배포자를 사용하는 각 원격 게시자에서 암호를 변경합니다.  
   
@@ -198,8 +197,8 @@ ms.locfileid: "48069723"
   
  [!code-vb[HowTo#rmo_vb_ChangeDistPub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changedistpub)]  
   
-## <a name="see-also"></a>관련 항목  
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
+## <a name="see-also"></a>관련 항목:  
+ [복제 관리 개체 개념](concepts/replication-management-objects-concepts.md)   
  [게시 및 배포 해제](disable-publishing-and-distribution.md)   
  [배포 구성](configure-distribution.md)   
  [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   

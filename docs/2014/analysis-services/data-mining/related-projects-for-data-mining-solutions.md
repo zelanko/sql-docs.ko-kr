@@ -11,12 +11,12 @@ ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8a99d28697a25e2b8fc6d1550765e03e52a8fdc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 92384d07e258423e08793b08afe45b6d14253cff
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106873"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52400657"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>데이터 마이닝 솔루션 관련 프로젝트
   데이터 마이닝 솔루션에 필요한 최소 사항은 데이터 원본, 데이터 원본 뷰, 마이닝 구조 및 마이닝 모델을 정의하는 데이터 마이닝 프로젝트입니다. 하지만 일상적인 의사 결정 과정에서 데이터 마이닝 모델을 사용하는 경우 데이터 마이닝이 예측 분석 솔루션의 다른 부분과 통합되어야 하는데 여기에는 다음과 같은 프로세스와 구성 요소가 포함될 수 있습니다.  
@@ -162,7 +162,7 @@ ms.locfileid: "48106873"
   
  자세한 내용은 [검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)를 참조하세요.  
   
- 전체 텍스트 인덱싱 후 저장되는 단어의 버전은 압축된 형식의 토큰입니다. 전체 텍스트 인덱스에 대한 후속 쿼리가 수행됨에 따라 가능성 있는 모든 일치 항목을 찾을 수 있도록 해당 언어의 규칙에 따라 특정 단어의 여러 굴절형이 생성됩니다. 예를 들어 저장된 토큰은 "run"이더라도 쿼리 엔진은 "run"이라는 어원에서 파생된 형태학상의 변형인 "running", "ran" 및 "runner"도 검색합니다.  
+ 전체 텍스트 인덱싱 후 저장되는 단어의 버전은 압축된 형식의 토큰입니다. 전체 텍스트 인덱스에 대한 후속 쿼리가 수행됨에 따라 가능성 있는 모든 일치 항목을 찾을 수 있도록 해당 언어의 규칙에 따라 특정 단어의 여러 굴절형이 생성됩니다. 예를 들어 저장 된 토큰 수 실행할 수 있지만"", 쿼리 엔진 훌륭하면서도 "running", "ran" 및 "runner"는 용어에 대 한 "run" 루트 단어의 파생 된 형태학 됩니다.  
   
  사용자 동의어 사전을 만들어 검색 결과를 향상시키거나 용어 범주화를 작성할 수도 있습니다. 전체 텍스트 데이터에 맞게 동의어 사전을 개발하면 해당 데이터에 대한 전체 텍스트 쿼리의 범위를 효과적으로 넓힐 수 있습니다. 자세한 내용은 [전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)를 참조하세요.  
   
@@ -202,7 +202,7 @@ ms.locfileid: "48106873"
 -   일부 전체 텍스트 언어는 의미 체계 인덱싱을 지원하지 않습니다. 지원되는 언어 목록을 보려면 [sys.fulltext_languages&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [다차원 모델 솔루션 &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [테이블 형식 모델 솔루션 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../tabular-model-solutions-ssas-tabular.md)  
+ [다차원 모델 솔루션&#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [테이블 형식 모델 솔루션&#40;SSAS 테이블 형식&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
   

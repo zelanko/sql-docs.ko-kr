@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - folders [Integration Services], connections
@@ -18,20 +17,20 @@ ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ea35467bd5b5209a2e625adc081774ef39492439
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a5d4113fbb2add2cc4dcd0073d714daa86419820
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119973"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52801638"
 ---
 # <a name="file-connection-manager"></a>파일 연결 관리자
-  파일 연결 관리자를 사용하면 패키지에서 기존 파일 또는 폴더를 참조하거나 런타임에 파일 또는 폴더를 만들 수 있습니다. 예를 들어 Excel 파일을 참조할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 일부 구성 요소는 파일에 있는 정보를 사용하여 작업을 수행합니다. 예를 들어 SQL 실행 태스크에서는 해당 태스크가 실행하는 SQL 문이 포함된 파일을 참조할 수 있습니다. 다른 구성 요소는 파일에 대한 작업을 수행합니다. 예를 들어 파일 시스템 태스크는 파일을 참조하여 새 위치로 복사할 수 있습니다.  
+  파일 연결 관리자를 사용하면 패키지에서 기존 파일 또는 폴더를 참조하거나 런타임에 파일 또는 폴더를 만들 수 있습니다. 예를 들어 Excel 파일을 참조할 수 있습니다.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 일부 구성 요소는 파일에 있는 정보를 사용하여 작업을 수행합니다. 예를 들어 SQL 실행 태스크에서는 해당 태스크가 실행하는 SQL 문이 포함된 파일을 참조할 수 있습니다. 다른 구성 요소는 파일에 대한 작업을 수행합니다. 예를 들어 파일 시스템 태스크는 파일을 참조하여 새 위치로 복사할 수 있습니다.  
   
 ## <a name="usage-types-of-the-file-connection-manager"></a>파일 연결 관리자의 사용 유형  
- `FileUsageType` 파일 연결 관리자의 속성 파일 연결을 사용 하는 방법을 지정 합니다. 파일 연결 관리자에서는 파일이나 폴더를 만들고 기존 파일 또는 기존 폴더를 사용할 수 있습니다.  
+ 파일 연결 관리자의 `FileUsageType` 속성은 파일 연결 사용 방법을 지정합니다. 파일 연결 관리자에서는 파일이나 폴더를 만들고 기존 파일 또는 기존 폴더를 사용할 수 있습니다.  
   
- 다음 표에서 값을 나열 `FileUsageType`합니다.  
+ 다음 표에서는 `FileUsageType` 값을 나열합니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -44,9 +43,9 @@ ms.locfileid: "48119973"
  파일 연결 관리자는 파일 또는 폴더를 하나만 참조할 수 있습니다. 파일이나 폴더를 여러 개 참조하려면 파일 연결 관리자 대신 다중 파일 연결 관리자를 사용하십시오. 자세한 내용은 [Multiple Files Connection Manager](multiple-files-connection-manager.md)을(를) 참조하세요.  
   
 ## <a name="configuration-of-the-file-connection-manager"></a>파일 연결 관리자 구성  
- 패키지에 파일 연결 관리자를 추가 하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 연결, 런타임에 파일 연결으로 확인 됩니다 하 고, 파일 연결 속성을 설정 하 고, 파일 연결을 추가 하는 관리자를 만들고는 `Connections` 패키지의 컬렉션입니다.  
+ 패키지에 파일 연결 관리자를 추가하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 런타임에 파일 연결로 확인되는 연결 관리자를 만들고, 파일 연결 속성을 설정하고, 파일 연결을 패키지의 `Connections` 컬렉션에 추가합니다.  
   
- 합니다 `ConnectionManagerType` 연결 관리자의 속성이 `FILE`합니다.  
+ 연결 관리자의 `ConnectionManagerType` 속성이 `FILE`로 설정됩니다.  
   
  다음과 같은 방법으로 파일 연결 관리자를 구성할 수 있습니다.  
   
@@ -60,6 +59,6 @@ ms.locfileid: "48119973"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용은 [파일 연결 관리자 편집기](../file-connection-manager-editor.md)를 참조하세요.  
   
- 연결 관리자를 프로그래밍 방식으로 구성 하는 방법에 대 한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 하 고 [프로그래밍 방식으로 연결 추가](../building-packages-programmatically/adding-connections-programmatically.md)합니다.  
+ 연결 관리자를 프로그래밍 방식으로 구성하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../building-packages-programmatically/adding-connections-programmatically.md)값을 나열합니다.  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 7894850c-91fe-47c0-a03c-baacbc10d29c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f40b905f3568c88555f40cfb95e0914d5434c7ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 392cd07148516c4c61ed39cba4b34d81bcf4c5c3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213853"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759765"
 ---
 # <a name="audit-server-principal-management-event-class"></a>Audit Server Principal Management 이벤트 클래스
   **Audit Server Principal Management** 이벤트 클래스는 서버 보안 주체가 생성, 변경 또는 삭제될 때 발생합니다.  

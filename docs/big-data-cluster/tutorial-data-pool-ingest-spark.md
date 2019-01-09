@@ -1,20 +1,22 @@
 ---
-title: Spark 작업을 사용 하 여 SQL Server 데이터 풀에 데이터를 수집 하는 방법 | Microsoft Docs
+title: Spark 작업을 사용 하 여 데이터를 수집 합니다.
+titleSuffix: SQL Server 2019 big data clusters
 description: 이 자습서에는 Spark 작업을 사용 하 여 Azure Data Studio에서 SQL Server 2019 빅 데이터 클러스터 (미리 보기)의 데이터 풀에 데이터를 수집 하는 방법을 보여 줍니다.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/06/2018
+ms.date: 12/07/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: 186de5e63663b9c5485cd0385ded816cafbc7c3d
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.custom: seodec18
+ms.openlocfilehash: d1780ae630231cd96e9424f4f541d921b1496e7d
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221479"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432366"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>자습서: Spark 작업을 사용 하 여 SQL Server 데이터 풀에 데이터 수집
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>자습서: Spark 작업을 사용 하 여 SQL Server 데이터 풀에 데이터를 수집 합니다.
 
 이 자습서에는 Spark 작업을 사용 하 여 데이터를 로드 하는 방법을 보여 줍니다.는 [데이터 풀](concept-data-pool.md) SQL Server 2019 빅 데이터 클러스터 (미리 보기). 
 
@@ -28,19 +30,19 @@ ms.locfileid: "51221479"
 > [!TIP]
 > 원한다 면 다운로드 하 고이 자습서의 명령에 대 한 스크립트를 실행할 수 있습니다. 지침은 합니다 [데이터 샘플 풀](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool) github입니다.
 
-## <a id="prereqs"></a> 사전 요구 사항
+## <a id="prereqs"></a> 필수 구성 요소
 
-* [Kubernetes에서 빅 데이터 클러스터를 배포](deployment-guidance.md)합니다.
-* [Azure Data Studio 및 SQL Server 2019 확장 설치](deploy-big-data-tools.md)합니다.
-* [클러스터에 샘플 데이터 로드](#sampledata)합니다.
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [빅 데이터 도구](deploy-big-data-tools.md)
+   - **Kubectl**
+   - **Azure Data Studio**
+   - **SQL Server 2019 확장**
+- [빅 데이터 클러스터에 샘플 데이터 로드](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>데이터 풀에서 외부 테이블 만들기
 
 다음 단계에서는 명명 된 데이터 풀의 외부 테이블을 만듭니다 **web_clickstreams_spark_results**합니다. 이 표에서 사용할 수 있습니다 다음 위치로 데이터를 수집 하는 방법에 대 한 빅 데이터 클러스터에.
 
-1. Azure Data Studio, 빅 데이터 클러스터의 마스터 SQL Server 인스턴스에 연결 합니다. 자세한 내용은 [SQL Server 마스터 인스턴스에 연결할](deploy-big-data-tools.md#master)합니다.
+1. Azure Data Studio, 빅 데이터 클러스터의 마스터 SQL Server 인스턴스에 연결 합니다. 자세한 내용은 [SQL Server 마스터 인스턴스에 연결할](connect-to-big-data-cluster.md#master)합니다.
 
 1. 연결을 두 번 클릭 합니다 **서버** 창 마스터 SQL Server 인스턴스에 대 한 서버 대시보드를 표시 합니다. 선택 **새 쿼리**합니다.
 
@@ -61,13 +63,13 @@ ms.locfileid: "51221479"
       );
    ```
   
-1. CTP 2.1에서 데이터 풀을 만드는 비동기 되었지만 아직 완료 될 때 확인 방법이 있습니다. 계속 하기 전에 데이터 풀 생성 되도록 하려면 2 분을 기다립니다.
+1. CTP 2.2에서 데이터 풀을 만드는 비동기 되었지만 아직 완료 될 때 확인 방법이 있습니다. 계속 하기 전에 데이터 풀 생성 되도록 하려면 2 분을 기다립니다.
 
 ## <a name="start-a-spark-streaming-job"></a>Spark 스트리밍 작업 시작
 
 다음 단계는 Spark 스트리밍 (HDFS) 저장소 풀에서 웹 클릭 동향 데이터를 로드 하는 작업을 만들려면 데이터 풀에서 만든 외부 테이블에입니다.
 
-1. Azure Data Studio, 빅 데이터 클러스터의 HDFS/Spark 게이트웨이에 연결 합니다. 자세한 내용은 [HDFS/Spark 게이트웨이에 연결할](deploy-big-data-tools.md#hdfs)합니다.
+1. Azure Data Studio에 연결 합니다 **HDFS/Spark 게이트웨이** 빅 데이터 클러스터. 자세한 내용은 [HDFS/Spark 게이트웨이에 연결할](connect-to-big-data-cluster.md#hdfs)합니다.
 
 1. HDFS/Spark 게이트웨이 연결을 두 번 클릭 합니다 **서버** 창입니다. 선택한 **새 Spark 작업**합니다.
 
@@ -81,10 +83,12 @@ ms.locfileid: "51221479"
    /jar/mssql-spark-lib-assembly-1.0.jar
    ```
 
+1. 에 **주 클래스** 필드에 입력 `FileStreaming`합니다.
+
 1. 에 **인수** 필드에서 마스터 SQL Server 인스턴스를 암호를 지정 하는 다음 텍스트를 입력 합니다는 `<your_password>` 자리 표시자입니다. 
 
    ```text
-   mssql-master-pool-0.service-master-pool 1433 sa <your_password> sales web_clickstreams_spark_results hdfs:///clickstream_data csv false
+   --server mssql-master-pool-0.service-master-pool --port 1433 --user sa --password <your_password> --database sales --table web_clickstreams_spark_results --source_dir hdfs:///clickstream_data --input_format csv --enable_checkpoint false --timeout 380000
    ```
 
    다음 표에서 각 인수를 설명합니다.
@@ -94,12 +98,13 @@ ms.locfileid: "51221479"
    | 서버 이름(server name) | 테이블 스키마를 읽는 SQL Server 사용 |
    | 포트 번호 | SQL Server 포트 (기본값 1433)에서 수신 대기 |
    | username | SQL Server 로그인 사용자 이름 |
-   | password | SQL Server 로그인 암호 |
+   | 암호 | SQL Server 로그인 암호 |
    | 데이터베이스 이름 | 대상 데이터베이스 |
    | 외부 테이블 이름 | 결과에 사용할 테이블 |
    | 스트리밍에 대 한 원본 디렉터리 | 와 같은 전체 URI 여야 합니다 "hdfs: / / / clickstream_data" |
    | 입력된 형식 | "Csv", "parquet" 또는 "json" 수 있습니다. |
    | 검사점을 사용 하도록 설정 | true 또는 false |
+   | timeout | 종료 하기 전에 밀리초에서에 대 한 작업을 실행 하는 시간 |
 
 1. 키를 눌러 **제출** 작업을 제출 합니다.
 
@@ -113,7 +118,7 @@ ms.locfileid: "51221479"
 
    ![Spark 작업 기록](media/tutorial-data-pool-ingest-spark/spark-task-history.png)
 
-1. 이 자습서의 시작 부분에 열리는 SQL Server 마스터 인스턴스 쿼리 창으로 돌아갑니다...
+1. 이 자습서의 시작 부분에 열리는 SQL Server 마스터 인스턴스 쿼리 창으로 돌아갑니다.
 
 1. 수집 된 데이터를 검사 하려면 다음 쿼리를 실행 합니다.
 

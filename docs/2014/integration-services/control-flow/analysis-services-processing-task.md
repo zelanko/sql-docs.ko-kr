@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asprocessingtask.f1
@@ -16,12 +15,12 @@ ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42b8ba863f4fbe8c5ce444cd253ea06aec0c7480
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c5b5d52b1f4b2c2c260854230b53ccbe99aa641
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050019"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766545"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 처리 태스크
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 처리 태스크는 테이블 형식 모델, 큐브, 차원 및 마이닝 모델과 같은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 처리합니다.  
@@ -58,7 +57,7 @@ ms.locfileid: "48050019"
   
  이 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 데이터를 로드하는 대량 삽입 태스크나 데이터를 테이블에 로드하는 데이터 흐름을 구현하는 데이터 흐름 태스크와 함께 자주 사용됩니다. 예를 들어 OLTP(온라인 트랜잭션 데이터베이스) 데이터베이스에서 데이터를 추출하여 데이터 웨어하우스의 팩트 테이블에 로드하는 데이터 흐름이 데이터 흐름 태스크에 포함될 수 있습니다. 그런 다음 데이터 웨어하우스에 작성된 큐브 처리를 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 처리 태스크가 호출됩니다.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 처리 태스크는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결 관리자를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 인스턴스에 연결합니다. 자세한 내용은 [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md)을 참조하세요.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 처리 태스크는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결 관리자를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 인스턴스에 연결합니다. 자세한 내용은 [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md)을 참조하세요.  
   
 ## <a name="error-handling"></a>오류 처리  
   
@@ -67,9 +66,9 @@ ms.locfileid: "48050019"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [Analysis Services 처리 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Analysis Services 처리 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Analysis Services 처리 태스크 편집기 &#40;Analysis Services 페이지&#41;](../analysis-services-processing-task-editor-analysis-services-page.md)  
+-   [Analysis Services 처리 태스크 편집기&#40;Analysis Services 페이지&#41;](../analysis-services-processing-task-editor-analysis-services-page.md)  
   
 -   [식 페이지](../expressions/expressions-page.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment tutorial [Integration Services]
@@ -21,12 +20,12 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 49aff131d55dbc38511fdae0dc930e161904a985
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f55b593bc172174002074de759f45b9b5f7d8243
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188973"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53368255"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>SSIS 자습서: 패키지 배포
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 패키지를 다른 컴퓨터에 쉽게 배포할 수 있게 하는 도구를 제공합니다. 또한 이러한 배포 도구는 패키지에 필요한 구성 및 파일과 같은 모든 종속 파일을 관리합니다. 이 자습서에서는 이러한 도구를 사용하여 패키지와 패키지의 종속 파일을 대상 컴퓨터에 설치하는 방법을 배웁니다.  
@@ -44,10 +43,10 @@ ms.locfileid: "48188973"
  발생할 수 있는 복잡한 실제 배포 문제를 시뮬레이션하는 것이 이 자습서의 목표입니다. 그러나 패키지를 다른 컴퓨터에 배포할 수 없는 경우에도 로컬 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에 있는 msdb 데이터베이스에 패키지를 설치한 다음 동일한 인스턴스에 있는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에서 패키지를 실행하여 이 자습서를 수행할 수 있습니다.  
   
 ## <a name="what-you-will-learn"></a>학습 내용  
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 사용할 수 있는 새 도구, 컨트롤 및 기능에 익숙해지는 가장 좋은 방법은 실제로 사용해 보는 것입니다. 이 자습서에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만든 다음 패키지 및 기타 필요한 파일을 프로젝트에 추가하는 단계를 진행합니다. 프로젝트가 완료된 후에 배포 번들을 만들고 번들을 대상 컴퓨터에 복사한 다음 패키지를 대상 컴퓨터에 설치합니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 사용할 수 있는 새 도구, 컨트롤 및 기능에 익숙해지는 가장 좋은 방법은 실제로 사용해 보는 것입니다. 이 자습서에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만든 다음 패키지 및 기타 필요한 파일을 프로젝트에 추가하는 단계를 진행합니다. 프로젝트가 완료된 후에 배포 번들을 만들고 번들을 대상 컴퓨터에 복사한 다음 패키지를 대상 컴퓨터에 설치합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- 이 자습서는 기본적인 파일 시스템 작업에는 익숙하지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 새 기능은 많이 접해 보지 못한 사용자를 위한 것입니다. 기본를 파악 하는 데 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 이 자습서에서 사용 되는 개념을 볼 수 있습니다이 먼저 다음을 완료 하는 데 유용 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 자습서: [SQL Server 가져오기 및 내보내기 마법사를 실행](import-export-data/start-the-sql-server-import-and-export-wizard.md) 하고[ SSIS 자습서: 간단한 ETL 패키지 만들기](../integration-services/ssis-how-to-create-an-etl-package.md)합니다.  
+ 이 자습서는 기본적인 파일 시스템 작업에는 익숙하지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 새 기능은 많이 접해 보지 못한 사용자를 위한 것입니다. 이 자습서에서 사용되는 기본 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개념을 더 쉽게 이해할 수 있도록 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 자습서인 [실행 SQL Server 가져오기 및 내보내기 마법사](import-export-data/start-the-sql-server-import-and-export-wizard.md) 고 [SSIS 자습서: 간단한 ETL 패키지 만들기](../integration-services/ssis-how-to-create-an-etl-package.md)합니다.  
   
  **원본 컴퓨터.** 배포 번들을 만들려는 컴퓨터에는 다음 구성 요소가 설치되어 있어야 합니다.  
   
@@ -65,7 +64,7 @@ ms.locfileid: "48188973"
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 을 참조하세요.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 참조하세요.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]입니다.  
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 패키지를 실행하려면 AdventureWorks에 테이블을 만들고 삭제할 수 있는 권한이 있어야 합니다.  
   
@@ -73,18 +72,18 @@ ms.locfileid: "48188973"
   
  배포 번들을 만든 컴퓨터에 패키지를 배포하려면 해당 컴퓨터는 원본 및 대상 컴퓨터에 대한 요구 사항을 모두 충족해야 합니다.  
   
- **이 자습서에 소요되는 예상 시간:** 2시간  
+ **이 자습서를 완료 하는 시간을 예상 합니다.** 2시간  
   
 ## <a name="lessons-in-this-tutorial"></a>이 자습서의 단원  
- [1단원: 배포 번들 작성 준비](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  
+ [1 단원: 배포 번들 작성 준비](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  
  이 단원에서는 새 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만들고 패키지 및 기타 필수 파일을 프로젝트에 추가하여 ETL 솔루션 배포를 준비합니다.  
   
  [2단원: 배포 번들 만들기](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
  이 단원에서는 배포 유틸리티를 작성하고 배포 번들에 필요한 파일이 포함되어 있는지 확인합니다.  
   
- [3단원: 패키지 설치](../integration-services/lesson-3-install-ssis-package.md)  
+ [3 단원: 패키지 설치](../integration-services/lesson-3-install-ssis-package.md)  
  이 단원에서는 배포 번들을 대상 컴퓨터에 복사하고 패키지를 설치한 다음 패키지를 실행합니다.  
   
-![Integration Services 아이콘 (작은)](media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정** <br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은)](media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
   

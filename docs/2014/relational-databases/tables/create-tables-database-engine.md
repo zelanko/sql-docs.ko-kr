@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
 - table creation [SQL Server], Visual Database Tools
@@ -13,18 +12,18 @@ ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 411599f503b13ed5f6000963da7b25cf73260e7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad54f13fbb939b9ac65f656f37bbba94560da829
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081053"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53377435"
 ---
 # <a name="create-tables-database-engine"></a>테이블 만들기(데이터베이스 엔진)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 새 테이블을 만들고, 테이블 이름을 지정하고, 이 테이블을 기존 데이터베이스에 추가할 수 있습니다.  
   
 > [!NOTE]  
->  SQL Azure 데이터베이스에 연결되어 있는 경우 새 테이블 옵션을 사용하면 테이블 만들기 템플릿 스크립트가 시작됩니다. 매개 변수를 편집한 다음 스크립트를 실행하여 새 테이블을 만듭니다. 자세한 내용은 [SQL Azure 개요(SQL Azure Overview)](http://go.microsoft.com/fwlink/?LinkId=163948)를 참조하세요.  
+>  SQL Azure 데이터베이스에 연결되어 있는 경우 새 테이블 옵션을 사용하면 테이블 만들기 템플릿 스크립트가 시작됩니다. 매개 변수를 편집한 다음 스크립트를 실행하여 새 테이블을 만듭니다. 자세한 내용은 [SQL Azure 개요(SQL Azure Overview)](https://go.microsoft.com/fwlink/?LinkId=163948)를 참조하세요.  
   
  **항목 내용**  
   
@@ -79,7 +78,7 @@ ms.locfileid: "48081053"
   
      스키마에 대한 자세한 내용은 [Create a Database Schema](../security/authentication-access/create-a-database-schema.md)를 참조하세요.  
   
-9. **파일** 메뉴에서 **저장** *table name*을 선택합니다.  
+9.  **파일** 메뉴에서 **저장** *table name*을 선택합니다.  
   
 10. **이름 선택** 대화 상자에서 테이블의 이름을 입력하고 **확인**을 클릭합니다.  
   

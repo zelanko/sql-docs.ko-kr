@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 1c099fa2-c857-4128-aca0-ed8cc3078a43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 79324c99ead473c2212a30def597d88e0e408a18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 052e685615f654ad333ba441bb0c5cf5773a758b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050446"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52784446"
 ---
 # <a name="audit-schema-object-access-event-class"></a>Audit Schema Object Access 이벤트 클래스
   **Audit Schema Object Access** 이벤트 클래스는 SELECT 등의 개체 사용 권한이 사용되는 경우에 발생합니다.  

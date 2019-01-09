@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9faa4c869591c6885a1856fca0ec63661af7799a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e047f955f9c4ecccc02404dc139d557935e0f090
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018820"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52542239"
 ---
-# <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Lesson 5-4-측정값 그룹 내에서 차원 세분성 정의
+# <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>단원 5-4-측정값 그룹 차원 세분성 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 사용자는 다양한 목적에 맞게 팩트 데이터의 차원을 세밀하게 또는 구체적으로 구분할 수 있습니다. 예를 들어 대리점이나 인터넷 판매의 판매 데이터는 매일 기록하고 판매 할당량 정보는 월별 또는 분기별로 기록할 수 있습니다. 이러한 시나리오에서 사용자는 서로 다른 팩트 테이블 각각에 대해 수준이 다양한 시간 차원을 사용할 수 있습니다. 새 데이터베이스 차원을 이러한 다른 수준을 가진 시간 차원으로 정의할 수 있지만 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 더 쉬운 방법이 있습니다.  
@@ -113,7 +113,7 @@ ms.locfileid: "34018820"
   
     다음 그림에서는 **Sales Amount Quota**의 값을 보여 줍니다.  
   
-    ![Sales에 대 한 값 해석 할당량](../analysis-services/media/l5-granularity-3.png "판매에 대 한 값 해석 할당량")  
+    ![값 Sales Amount 할당량](../analysis-services/media/l5-granularity-3.png "값 Sales Amount 할당량")  
   
 ## <a name="defining-dimension-usage-properties-for-the-sales-quotas-measure-group"></a>Sales Quotas 측정값 그룹의 차원 용도 속성 정의  
   
@@ -127,13 +127,13 @@ ms.locfileid: "34018820"
   
     **Employee** 및 **Date** 큐브 차원은 일반 관계를 통해 **Sales Quotas 및 Sales Quotas 1** 측정값 그룹에 연결되어 있습니다. **Sales Territory** 큐브 차원은 이러한 측정값 그룹에 연결되어 있지 않습니다.  
   
-4.  **Sales Territory** 차원과 **Sales Quotas** 측정값 그룹의 교집합에서 셀을 클릭한 다음 찾아보기 단추(**…**)를 클릭합니다. **관계 정의** 대화 상자가 열립니다.  
+4.  교집합에서 셀을 클릭 합니다 **Sales Territory** 차원 및 **Sales Quotas** 측정값 그룹 및 찾아보기 단추를 클릭 (**...** ). **관계 정의** 대화 상자가 열립니다.  
   
 5.  **관계 유형 선택** 목록에서 **참조**를 선택합니다.  
   
 6.  **중간 차원** 목록에서 **Employee**를 선택합니다.  
   
-7.  **참조 차원 특성** 목록에서 **Sales Territory Region**을 선택합니다.  
+7.   **참조 차원 특성** 목록에서 **Sales Territory Region**을 선택합니다.  
   
 8.  **중간 차원 특성** 목록에서 **Sales Territory Key**를 선택합니다. Sales Territory Region 특성의 키 열은 SalesTerritoryKey 열입니다.  
   
@@ -141,13 +141,13 @@ ms.locfileid: "34018820"
   
 10. **확인**을 클릭합니다.  
   
-11. **Sales Territory** 차원과 **Sales Quotas 1** 측정값 그룹의 교집합에서 셀을 클릭한 다음 찾아보기 단추(**…**)를 클릭합니다. **관계 정의** 대화 상자가 열립니다.  
+11. 교집합에서 셀을 클릭 합니다 **Sales Territory** 차원 및 **Sales Quotas 1&lt;/ui&gt** 측정값 그룹 및 찾아보기 단추를 클릭 (**...** ). **관계 정의** 대화 상자가 열립니다.  
   
 12. **관계 유형 선택** 목록에서 **참조**를 선택합니다.  
   
 13. **중간 차원** 목록에서 **Employee**를 선택합니다.  
   
-14. **참조 차원 특성** 목록에서 **Sales Territory Region**을 선택합니다.  
+14.  **참조 차원 특성** 목록에서 **Sales Territory Region**을 선택합니다.  
   
 15. **중간 차원 특성** 목록에서 **Sales Territory Key**를 선택합니다. Sales Territory Region 특성의 키 열은 SalesTerritoryKey 열입니다.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "34018820"
   
     **Order Date** 큐브 차원 이름을 **Date** 로 변경하면 사용자가 이 차원의 역할을 이 큐브의 주 날짜 차원으로 쉽게 이해할 수 있습니다.  
   
-20. **Sales Quotas**측정값 그룹과 **Date** 차원의 교집합에서 셀의 찾아보기 단추( **…** )를 클릭합니다.  
+20. 찾아보기 단추를 클릭 (**...** )의 교집합에서 셀에는 **Sales Quotas** 측정값 그룹 및 **날짜** 차원입니다.  
   
 21. **관계 정의** 대화 상자의 **관계 유형 선택** 목록에서 **일반** 을 선택합니다.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "34018820"
 ## <a name="next-lesson"></a>다음 단원  
 [6 단원: 계산 정의](../analysis-services/lesson-6-defining-calculations.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [차원 관계](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [일반 관계 및 일반 관계 속성 정의](../analysis-services/multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)  
 [데이터 원본 뷰 디자이너에서의 다이어그램 작업&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  

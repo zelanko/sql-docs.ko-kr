@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS, tutorials
@@ -18,12 +17,12 @@ ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b246e9d0badb30027d2971437ebdde5f0d1effde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 2a99169168eb21f0a7d42f133e7e882141c776e6
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066603"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357908"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>SSIS 자습서: 간단한 ETL 패키지 만들기
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS)는 고성능 데이터 통합 솔루션을 추출, 변환 및 데이터 웨어하우징을 위한 ETL (로드) 패키지를 포함 하 여 빌드하기 위한 플랫폼입니다. SSIS에는 패키지를 빌드하고 디버깅하기 위한 그래픽 도구 및 마법사, FTP 작업과 같은 워크플로 함수를 수행하고 SQL 문을 실행하며 전자 메일 메시지를 보내기 위한 태스크, 데이터 추출 및 로드를 위한 데이터 원본과 대상, 데이터 삭제, 집계, 병합 및 복사를 위한 변환, 패키지 실행 및 저장을 관리하기 위한 관리 서비스인 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체 모델 프로그래밍을 위한 API(애플리케이션 프로그래밍 인터페이스)가 포함됩니다.  
@@ -40,7 +39,7 @@ ms.locfileid: "48066603"
   
  이 자습서를 사용하려면 시스템에 다음 구성 요소가 설치되어 있어야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AdventureWorksDW2012 **데이터베이스가 있는** . 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다. **AdventureWorksDW2012** 데이터베이스를 다운로드하려면 [SQL Server 2012용 Adventure Works](http://go.microsoft.com/fwlink/?LinkId=275026)를 참조하십시오.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AdventureWorksDW2012 **데이터베이스가 있는** . 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다. **AdventureWorksDW2012** 데이터베이스를 다운로드하려면 [SQL Server 2012용 Adventure Works](https://go.microsoft.com/fwlink/?LinkId=275026)를 참조하십시오.  
   
     > [!IMPORTANT]  
     >  데이터베이스(\*.mdf 파일)에 연결할 때 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에서 기본적으로 .ldf 파일을 검색합니다. **데이터베이스 연결** 대화 상자에서 확인을 클릭하기 전에 .ldf 파일을 수동으로 제거해야 합니다.  
@@ -49,29 +48,29 @@ ms.locfileid: "48066603"
   
 -   데이터 샘플링 예제 데이터는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 단원 패키지에 포함되어 있습니다. 예제 데이터 및 단원 패키지를 다운로드하려면 다음을 수행합니다.  
   
-    1.   [Integration Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=275027)로 이동합니다.  
+    1.   [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=275027)로 이동합니다.  
   
     2.  **DOWNLOADS** 탭을 클릭합니다.  
   
     3.  SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 파일을 클릭합니다.  
   
 ## <a name="lessons-in-this-tutorial"></a>이 자습서의 단원  
- [1단원: 프로젝트 및 기본 패키지 만들기](lesson-1-create-a-project-and-basic-package-with-ssis.md)  
+ [1 단원: 프로젝트 및 기본 패키지 만들기](lesson-1-create-a-project-and-basic-package-with-ssis.md)  
  이 단원에서는 단일 플랫 파일에서 데이터를 추출하고, 조회 변환을 사용하여 데이터를 변환하고, 마지막으로 결과를 팩트 테이블 대상에 로드하는 간단한 ETL 패키지를 만듭니다.  
   
  [2단원: 루핑 추가](lesson-2-adding-looping-with-ssis.md)  
  이 단원에서는 1단원에서 만든 패키지를 확장하여 새 루핑 기능을 활용함으로써 여러 플랫 파일을 단일 데이터 흐름 프로세스로 추출합니다.  
   
- [3단원: 로깅 추가](lesson-3-add-logging-with-ssis.md)  
+ [3 단원: 로깅 추가](lesson-3-add-logging-with-ssis.md)  
  이 단원에서는 2단원에서 만든 패키지를 확장하여 새 로깅 기능을 활용합니다.  
   
- [4단원: 오류 흐름 리디렉션 추가](lesson-4-add-error-flow-redirection-with-ssis.md)  
+ [4 단원: 오류 흐름 리디렉션 추가](lesson-4-add-error-flow-redirection-with-ssis.md)  
  이 단원에서는 3단원에서 만든 패키지를 확장하여 새 오류 출력 구성을 활용합니다.  
   
- [5단원: 패키지 배포 모델을 위한 패키지 구성 추가](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+ [5 단원: 패키지 배포 모델을 위한 패키지 구성 추가](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
  이 단원에서는 4단원에서 만든 패키지를 확장하여 새 패키지 구성 옵션을 활용합니다.  
   
- [6단원: 프로젝트 배포 모델에 매개 변수 사용](lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+ [6 단원: 매개 변수를 사용 하 여 프로젝트 배포 모델을 사용 하 여](lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
  이 단원에서는 5단원에서 만든 패키지를 확장하여 프로젝트 배포 모델에서 새 매개 변수 사용을 활용할 수 있습니다.  
   
   

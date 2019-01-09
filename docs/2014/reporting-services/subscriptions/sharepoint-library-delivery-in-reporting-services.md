@@ -15,12 +15,12 @@ ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5b8624bd3d3628c5c7499dd32bfa26afe048225c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 5973d419bb87c4b53313afa3051865b4e746ef96
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061973"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211852"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services의 SharePoint 라이브러리 배달
   SharePoint 통합용으로 구성된 보고서 서버는 보고서를 SharePoint 라이브러리로 보내는 데 사용할 수 있는 배달 확장 프로그램이 포함되어 있습니다.  
@@ -72,10 +72,10 @@ ms.locfileid: "48061973"
  대상 라이브러리에 표시할 보고서의 파일 이름과 확장명을 지정합니다. 파일 확장명을 지정하지 않으면 보고서 서버에서 보고서 출력 형식을 기반으로 확장명을 만듭니다. 이 값은 필수 사항입니다. 파일 이름에 다음 문자는 포함하지 마세요. : \ / * ? " \< > | # { } %  
   
  Title  
- 선택적인 지정 `Title` 대상 라이브러리에서 보고서에 대 한 속성입니다. 이는 라이브러리에 저장된 모든 항목의 표준 속성입니다. 사용자는 SharePoint 사이트의 라이브러리 내용을 볼 때 이 속성을 표시할지 여부를 지정할 수 있습니다.  
+ 대상 라이브러리에 있는 보고서의 선택적 `Title` 속성을 지정합니다. 이는 라이브러리에 저장된 모든 항목의 표준 속성입니다. 사용자는 SharePoint 사이트의 라이브러리 내용을 볼 때 이 속성을 표시할지 여부를 지정할 수 있습니다.  
   
  경로  
- SharePoint 웹 애플리케이션 및 사이트를 포함하는 SharePoint 라이브러리에 대한 정규화된 URL을 지정합니다. 예를 들어: http://mySharePointWeb/MySite/MyDocLib; where "http://mySharePointWeb" 웹 응용 프로그램을 나타내는 "나타내고 MySite"는 SharePoint 사이트를 및 "MyDocLib"는 보고서가 배달 될 SharePoint 라이브러리입니다.  
+ SharePoint 웹 애플리케이션 및 사이트를 포함하는 SharePoint 라이브러리에 대한 정규화된 URL을 지정합니다. 예를 들어: <http://mySharePointWeb/MySite/MyDocLib>; where "<http://mySharePointWeb>" 웹 응용 프로그램을 나타내는 "나타내고 MySite"는 SharePoint 사이트를 및 "MyDocLib"는 보고서가 배달 될 SharePoint 라이브러리입니다.  
   
  페이지, 사이트 또는 목록은 지정할 수 없습니다. 대상 컨테이너는 동일한 사이트나 팜에 있는 라이브러리여야 합니다.  
   
@@ -86,8 +86,8 @@ ms.locfileid: "48061973"
  자동 복사 기능을 사용하여 파일의 최신 버전을 자동으로 여러 위치에 복사하는 경우 **덮어쓰기** 가 설정되어 있으면 파일이 복사됩니다. 사용 하는 경우 **Autoincrement** 하거나 **None**, 배달 되지 것입니다 및 `rsDeliveryError` 오류가 발생 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SharePoint 모드 보고서 서버에 대 한 구독 만들기 및 관리](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [구독 및 배달 &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [SharePoint 모드 보고서 서버 구독 만들기 및 관리](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [구독 및 배달&#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

@@ -15,20 +15,20 @@ ms.assetid: 6602edb6-d160-43fb-83c8-9df5dddfeb9c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: db5b4fcded48a711fc1c8e8c8ffdebdd36562282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12581756e6ffa7d77ba7dc3339c3f38c96962d4e
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150303"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372912"
 ---
 # <a name="basic-data-mining-tutorial"></a>기본 데이터 마이닝 자습서
-  시작 합니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 기본 데이터 마이닝 자습서입니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 마이닝 모델을 만들고 예측 하기 위한 통합된 환경을 제공 합니다. 이 자습서에서는 시스템 학습을 사용하여 고객 구매 행동을 분석하고 예측하는 타겟 메일링 캠페인 시나리오를 완료합니다. 이 자습서에서는 가장 중요한 세 가지 데이터 마이닝 알고리즘인 클러스터링, 의사 결정 트리 및 Naive Bayes를 사용하는 방법을 보여 줍니다. 또한 마이닝 모델 뷰어를 사용 하 여 결과 분석 및 예측과 정확도 차트에 포함 된 데이터 마이닝 도구를 사용 하 여를 만드는 방법을 배웁니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다. 모든 예에 가상 회사인 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]가 사용됩니다.  
+   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 기본 데이터 마이닝 자습서를 시작합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 마이닝 모델을 만들고 예측 하기 위한 통합된 환경을 제공 합니다. 이 자습서에서는 시스템 학습을 사용하여 고객 구매 행동을 분석하고 예측하는 타겟 메일링 캠페인 시나리오를 완료합니다. 이 자습서에서는 가장 중요한 세 가지 데이터 마이닝 알고리즘인 클러스터링, 의사 결정 트리 및 Naive Bayes를 사용하는 방법을 보여 줍니다. 또한 마이닝 모델 뷰어를 사용하여 결과를 분석하는 방법과 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에 포함된 데이터 마이닝 도구를 사용하여 예측과 정확도 차트를 만드는 방법도 알아봅니다. 모든 예에 가상 회사인 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]가 사용됩니다.  
   
  데이터 마이닝 도구를 사용 하 여 편리 하 게 되 면도 완료 하는 것이 좋습니다 합니다 [중급 데이터 마이닝 자습서 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)합니다. 해당 단원에서는 예측, 시장 바구니 분석, 시계열, 연결 모델, 중첩 테이블 및 시퀀스 클러스터링을 사용하는 방법을 보여 줍니다.  
   
 ## <a name="tutorial-scenario"></a>자습서 시나리오  
- 직원은이 자습서에서는 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 수행한 사용자가 구매 기록이 기반된으로 회사의 고객에 대해 자세히 알아보기 및 다음 해당 기록 데이터를 사용 하 여 마케팅에 사용할 수 있는 예측을 수행 합니다. 이 회사는 이전에 데이터 마이닝을 수행한 적이 없기 때문에 사용자는 특히 데이터 마이닝을 위한 새 데이터베이스를 만들고 여러 데이터 마이닝 모델을 설정해야 합니다.  
+ 이 자습서에서는 사용자가 구매 기록을 기반으로 회사의 고객에 대해 학습한 다음 해당 기록 데이터를 사용하여 마케팅에 사용할 수 있는 예측을 만드는 태스크를 수행하는 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 의 직원이라고 가정합니다. 이 회사는 이전에 데이터 마이닝을 수행한 적이 없기 때문에 사용자는 특히 데이터 마이닝을 위한 새 데이터베이스를 만들고 여러 데이터 마이닝 모델을 설정해야 합니다.  
   
 ## <a name="what-you-will-learn"></a>학습 내용  
  이 자습서에서는 여러 종류의 시스템 학습 방법을 만들고 작업하는 방법을 배웁니다. 또한 마이닝 모델의 복사본을 만들고 입력 데이터에 필터를 적용하여 여러 가지 결과를 얻는 방법도 알아봅니다. 이후에 리프트 차트를 사용하여 두 모델의 결과를 비교할 수 있습니다. 마지막으로 드릴스루를 사용하여 기본 마이닝 구조에서 추가 데이터를 검색합니다.  
@@ -46,10 +46,10 @@ ms.locfileid: "48150303"
  [1 단원: 데이터베이스 서비스는 분석을 준비 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial.md)  
  이 단원에서는 새 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스를 만들고 데이터 원본과 데이터 원본 뷰를 추가하며 데이터 마이닝에 사용할 새 데이터베이스를 준비하는 방법을 배웁니다.  
   
- [2 단원: 타겟된 메일링 구조 구축 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [2단원: 타겟된 메일링 구조 구축 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
  이 단원에서는 대상 메일 시나리오의 일부로 사용할 수 있는 마이닝 모델 구조를 만드는 방법을 배웁니다.  
   
- [3단원: 모델 추가 및 처리](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
+ [3 단원: 모델 추가 및 처리](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
  이 단원에서는 구조에 모델을 추가하는 방법을 배웁니다. 사용자가 만드는 모델은 다음 알고리즘을 사용하여 생성됩니다.  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] 의사 결정 트리  
@@ -76,7 +76,7 @@ ms.locfileid: "48150303"
   
 -   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 데이터베이스.  
   
- 보안을 위해 예제 데이터베이스는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]과 함께 설치되지 않습니다. 공식 데이터베이스를 설치 하려면 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 방문 합니다 [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) 페이지를 선택 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]합니다.  
+ 보안을 위해 예제 데이터베이스는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]과 함께 설치되지 않습니다.  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 공식 데이터베이스를 설치하려면 [Microsoft SQL 예제 데이터베이스](https://go.microsoft.com/fwlink/?LinkId=88417) 페이지에서 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]를 선택합니다.  
   
 > [!NOTE]  
 >  문서 뷰어 도구 모음에 **다음 항목** 단추 및 **이전 항목** 단추를 추가하면 단계의 앞뒤로 편리하게 이동할 수 있어 자습서를 더 쉽게 진행할 수 있습니다.  
@@ -84,6 +84,6 @@ ms.locfileid: "48150303"
 ## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 솔루션](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
  [마이닝 모델 태스크 및 방법](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [DMX 사용 하 여 데이터 마이닝 모델 만들기 및 쿼리: 자습서 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [만들기 및 DMX 사용 하 여 데이터 마이닝 모델을 쿼리 합니다. 자습서 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

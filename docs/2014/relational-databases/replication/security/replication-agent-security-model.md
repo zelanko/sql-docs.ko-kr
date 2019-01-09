@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/07/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, security
@@ -21,12 +20,12 @@ ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b17b7cccec50c9dc8d1eccc5cb6e1caacee47e2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f34b5accc278a55946546c149c00bffd3a02a693
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135670"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52811998"
 ---
 # <a name="replication-agent-security-model"></a>복제 에이전트 보안 모델
   복제 에이전트 보안 모델을 사용하여 복제 에이전트를 실행 및 연결하는 계정을 세밀하게 제어할 수 있습니다. 즉, 각 에이전트에 대해 다른 계정을 지정할 수 있습니다. 계정을 지정하는 방법은 [복제의 로그인 및 암호 관리](manage-logins-and-passwords-in-replication.md)를 참조하세요.  
@@ -36,11 +35,11 @@ ms.locfileid: "48135670"
   
  복제 에이전트는 모든 실행 파일처럼 Windows 계정의 컨텍스트에서 실행됩니다. 이 에이전트는 이 계정을 사용하여 Windows 통합 보안 연결을 설정합니다. 에이전트를 실행하는 계정은 에이전트를 시작하는 방법에 따라 달라집니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업에서 에이전트 시작(기본값): [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업을 사용하여 복제 에이전트를 시작하면 복제를 구성할 때 지정한 계정의 컨텍스트에서 에이전트가 실행됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 및 복제에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "SQL Server 에이전트의 에이전트 보안" 섹션을 참조하십시오. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트를 실행하는 계정에 필요한 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 구성](../../../ssms/agent/configure-sql-server-agent.md)을 참조하세요.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업에서 에이전트 시작(기본값) - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업을 사용하여 복제 에이전트를 시작하면 복제를 구성할 때 지정한 계정의 컨텍스트에서 에이전트가 실행됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 및 복제에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "SQL Server 에이전트의 에이전트 보안" 섹션을 참조하십시오. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트를 실행하는 계정에 필요한 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 구성](../../../ssms/agent/configure-sql-server-agent.md)을 참조하세요.  
   
--   MS-DOS 명령줄에서 직접 또는 스크립트를 통해 에이전트 시작: 명령줄에서 에이전트를 실행하는 사용자 계정의 컨텍스트에서 에이전트가 실행됩니다.  
+-   MS-DOS 명령줄에서 직접 또는 스크립트를 통해 시작 - 명령줄에서 에이전트를 실행하는 사용자 계정의 컨텍스트에서 에이전트가 실행됩니다.  
   
--   RMO(복제 관리 개체) 또는 ActiveX 컨트롤을 사용하는 애플리케이션에서 에이전트 시작: RMO 또는 ActiveX 컨트롤을 호출하는 애플리케이션의 컨텍스트에서 에이전트가 실행됩니다.  
+-   RMO(복제 관리 개체) 또는 ActiveX 컨트롤을 사용하는 응용 프로그램에서 에이전트 시작 - RMO 또는 ActiveX 컨트롤을 호출하는 응용 프로그램의 컨텍스트에서 에이전트가 실행됩니다.  
   
     > [!NOTE]  
     >  ActiveX 컨트롤은 더 이상 사용되지 않습니다.  
@@ -60,7 +59,7 @@ ms.locfileid: "48135670"
 |밀어넣기 구독에 대한 배포 에이전트|에이전트를 실행하는 Windows 계정을 사용하여 배포자에 연결합니다. 이 계정은 다음과 같아야 합니다.<br /><br /> -적어도 배포 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.<br /><br /> -PAL의 멤버여야 합니다.<br /><br /> -스냅숏 공유에 대해 읽기 권한이 있어야 합니다.<br /><br /> -SQL Server 이외 구독자에 대한 구독인 경우에는 구독자용 OLE DB 공급자의 설치 디렉터리에 대해 읽기 권한이 있어야 합니다.<br /><br /> -LOB 데이터를 복제할 때 배포 에이전트에는 복제 **C:\Program Files\Microsoft SQL Server\XX\COMfolder** 에 대한 쓰기 권한이 있어야 합니다. 여기서 XX는 인스턴스 ID를 나타냅니다.<br /><br /> <br /><br /> 구독자 연결에 사용되는 계정은 적어도 구독 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버이거나 SQL Server 이외 구독자에 대한 구독인 경우에는 동등한 권한이 있어야 합니다.<br /><br /> 참고: 사용 하는 경우 `-subscriptionstreams >= 2` 부여 해야 하는 배포 에이전트에는 `View Server State` 교착 상태를 검색할 구독자에 대 한 권한이 있습니다.|  
 |끌어오기 구독에 대한 배포 에이전트|에이전트를 실행하는 Windows 계정을 사용하여 구독자에 연결합니다. 이 계정은 적어도 구독 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다. 배포자 연결에 사용되는 계정은 다음과 같아야 합니다.<br /><br /> -PAL의 멤버여야 합니다.<br /><br /> -스냅숏 공유에 대해 읽기 권한이 있어야 합니다.<br /><br /> -LOB 데이터를 복제할 때 배포 에이전트에는 복제 **C:\Program Files\Microsoft SQL Server\XX\COMfolder** 에 대한 쓰기 권한이 있어야 합니다. 여기서 XX는 인스턴스 ID를 나타냅니다.<br /><br /> <br /><br /> 참고: 사용 하는 경우 `-subscriptionstreams >= 2` 부여 해야 하는 배포 에이전트에는 `View Server State` 교착 상태를 검색할 구독자에 대 한 권한이 있습니다.|  
 |밀어넣기 구독에 대한 병합 에이전트|에이전트를 실행하는 Windows 계정을 사용하여 게시자 및 배포자에 연결합니다. 이 계정은 다음과 같아야 합니다.<br /><br /> -적어도 배포 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.<br /><br /> -PAL의 멤버여야 합니다.<br /><br /> -게시 데이터베이스의 사용자와 연결된 로그인이어야 합니다.<br /><br /> -스냅숏 공유에 대해 읽기 권한이 있어야 합니다.<br /><br /> <br /><br /> 구독자 연결에 사용되는 계정은 적어도 구독 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.|  
-|끌어오기 구독에 대한 병합 에이전트|에이전트를 실행하는 Windows 계정을 사용하여 구독자에 연결합니다. 이 계정은 적어도 구독 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다. 게시자 및 배포자 연결에 사용되는 계정은 다음과 같아야 합니다.<br /><br /> -PAL의 멤버여야 합니다.<br /><br /> -게시 데이터베이스의 사용자와 연결된 로그인이어야 합니다.<br /><br /> -배포 데이터베이스의 사용자와 연결된 로그인이어야 합니다. 사용자 수는 `Guest` 사용자입니다.<br /><br /> -스냅숏 공유에 대해 읽기 권한이 있어야 합니다.|  
+|끌어오기 구독에 대한 병합 에이전트|에이전트를 실행하는 Windows 계정을 사용하여 구독자에 연결합니다. 이 계정은 적어도 구독 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다. 게시자 및 배포자 연결에 사용되는 계정은 다음과 같아야 합니다.<br /><br /> -PAL의 멤버여야 합니다.<br /><br /> -게시 데이터베이스의 사용자와 연결된 로그인이어야 합니다.<br /><br /> -배포 데이터베이스의 사용자와 연결된 로그인이어야 합니다. 이 사용자는 `Guest` 사용자일 수 있습니다.<br /><br /> -스냅숏 공유에 대해 읽기 권한이 있어야 합니다.|  
 |큐 판독기 에이전트|에이전트를 실행하는 Windows 계정을 사용하여 배포자에 연결합니다. 이 계정은 적어도 배포 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.<br /><br /> 게시자 연결에 사용되는 계정은 적어도 게시 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.<br /><br /> 구독자 연결에 사용되는 계정은 적어도 구독 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.|  
   
 ## <a name="agent-security-under-sql-server-agent"></a>SQL Server 에이전트의 에이전트 보안  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - Named Pipes [SQL Server], configuring
@@ -19,12 +18,12 @@ ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ab0d7678ec07f3819bf7dd6b9b949f4c2d11229d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 3545732db24865e47853b023233a127695ada894
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111693"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372415"
 ---
 # <a name="server-network-configuration"></a>서버 네트워크 구성
   서버 네트워크 구성 태스크에는 프로토콜 사용, 프로토콜에 사용되는 포트 또는 파이프 수정, 암호화 구성, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스 구성, 네트워크상에 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 표시 또는 숨기기, SPN(서버 보안 주체 이름) 등록 등이 있습니다. 대개 사용자는 서버 네트워크 구성을 변경할 필요가 없습니다. 특별한 네트워크 요구 사항이 있을 경우에만 서버 네트워크 프로토콜을 다시 구성합니다.  
@@ -49,7 +48,7 @@ ms.locfileid: "48111693"
  확장된 보호를 지원하는 운영 체제에서는 채널 바인딩 및 서비스 바인딩을 사용하여 인증에 대한 확장된 보호 지원 기능을 사용할 수 있습니다. 자세한 내용은 [확장된 보호를 사용하여 데이터베이스 엔진에 연결](connect-to-the-database-engine-using-extended-protection.md)을 참조하세요.  
   
 ## <a name="authenticating-by-using-kerberos"></a>Kerberos를 사용한 인증  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 은 Kerberos 인증을 지원합니다. 자세한 내용은 [Kerberos 연결의 서비스 사용자 이름 등록](register-a-service-principal-name-for-kerberos-connections.md) 및 [SQL Server용 Microsoft Kerberos 구성 관리자](http://www.microsoft.com/download/details.aspx?id=39046)를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 은 Kerberos 인증을 지원합니다. 자세한 내용은 [Kerberos 연결의 서비스 사용자 이름 등록](register-a-service-principal-name-for-kerberos-connections.md) 및 [SQL Server용 Microsoft Kerberos 구성 관리자](https://www.microsoft.com/download/details.aspx?id=39046)를 참조하세요.  
   
 ### <a name="registering-a-server-principal-name-spn"></a>SPN(서버 보안 주체 이름) 등록  
  Kerberos 인증 서비스는 SPN을 사용하여 서비스를 인증합니다. 자세한 내용은 [Kerberos 연결의 서비스 사용자 이름 등록](register-a-service-principal-name-for-kerberos-connections.md)을 참조하세요.  

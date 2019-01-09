@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e8897a78bc28aa549eb51f53b56e983e7cdec81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efb54bb64481dc29c50976cb58df813bad411f9c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134633"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819355"
 ---
 # <a name="replay-trace-data"></a>추적 데이터 재생
   입력 추적 데이터를 준비한 후 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 기능을 사용하여 분산 재생을 시작할 수 있습니다. 자세한 내용은 [입력 추적 데이터 준비](prepare-the-input-trace-data.md)를 참조하세요.  
@@ -31,7 +31,7 @@ ms.locfileid: "48134633"
   
 ### <a name="to-replay-the-trace"></a>추적을 재생하려면  
   
-1.  **(선택 사항) 재생 구성 설정 수정**: 시퀀스 모드 및 다양한 비율 값 등 재생 구성 설정을 수정하려면 XML 기반 재생 구성 파일인 `<ReplayOptions>` 의 `DReplay.exe.replay.config`요소를 수정해야 합니다. `<OutputOptions>` 요소를 수정하여 행 수를 기록할지 여부 등의 출력 설정을 지정할 수도 있습니다. 재생 구성 파일을 수정하는 경우 원래 파일 대신 복사본을 수정하는 것이 좋습니다. 설정을 수정하려면 다음 단계를 수행합니다.  
+1.  **(선택 사항) 재생 구성 설정을 수정**: 시퀀스 모드 및 다양 한 크기 조정 값 등 재생 구성 설정을 수정 하려는 경우 수정 해야 합니다 `<ReplayOptions>` XML 기반 재생 구성 파일의 요소 `DReplay.exe.replay.config`합니다. `<OutputOptions>` 요소를 수정하여 행 수를 기록할지 여부 등의 출력 설정을 지정할 수도 있습니다. 재생 구성 파일을 수정하는 경우 원래 파일 대신 복사본을 수정하는 것이 좋습니다. 설정을 수정하려면 다음 단계를 수행합니다.  
   
     1.  기본 재생 구성 파일인 `DReplay.exe.replay.config`를 복사한 후 복사한 파일의 이름을 바꿉니다. 기본 재생 구성 파일은 관리 도구 설치 폴더에 있습니다.  
   
@@ -41,9 +41,9 @@ ms.locfileid: "48134633"
   
      재생 구성 파일에 대한 자세한 내용은 [Distributed Replay 구성](configure-distributed-replay.md)을 참조하세요.  
   
-2.  **이벤트 재생 단계 시작**: Distributed Replay를 시작하려면 **replay** 옵션을 사용하여 관리 도구를 실행해야 합니다. 자세한 내용은 [재생 옵션&#40;Distributed Replay Administration Tool&#41;](replay-option-distributed-replay-administration-tool.md)을 참조하세요.  
+2.  **이벤트 재생 단계 시작**: Distributed replay를 시작 하려면 사용 하 여 관리 도구를 실행 해야 합니다 **재생** 옵션입니다. 자세한 내용은 [재생 옵션&#40;Distributed Replay Administration Tool&#41;](replay-option-distributed-replay-administration-tool.md)을 참조하세요.  
   
-    1.  Windows 명령 프롬프트 유틸리티를 열어 (`CMD.exe`), Distributed Replay administration tool의 설치 위치로 이동 (`DReplay.exe`).  
+    1.  Windows 명령 프롬프트 유틸리티(`CMD.exe`)를 열고 Distributed Replay Administration Tool의 설치 위치(`DReplay.exe`)로 이동합니다.  
   
     2.  (선택 사항) 컨트롤러 서비스가 관리 도구와 다른 컴퓨터에서 실행 중인 경우 *controller* 매개 변수 **-m**을 사용하여 컨트롤러를 지정합니다.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "48134633"
   
 3.  분산 재생이 완료되면 관리 도구에서 요약 정보가 반환됩니다. **-o** 옵션을 지정한 경우 재생 활동이 각 클라이언트의 결과 추적 파일에 저장됩니다. 결과 추적 파일에 대한 자세한 내용은 [재생 결과 검토](review-the-replay-results.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [Distributed Replay 요구 사항](distributed-replay-requirements.md)   
- [관리 도구 명령줄 옵션 &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+## <a name="see-also"></a>관련 항목:  
+ [Distributed Replay Requirements](distributed-replay-requirements.md)   
+ [관리 도구 명령줄 옵션&#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [Distributed Replay 구성](configure-distributed-replay.md)  
   
   

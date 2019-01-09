@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.lookin
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0010ab5333237eac6504986f0ac8a042d861e712
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c76fc0d5247d2a9f07fcf97677ac1f24b9635e5
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095153"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328613"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>검색 폴더 선택 대화 상자(Visual Studio)
   사용자의 명명된 검색 폴더 집합을 조합, 저장 및 수정할 수 있으며 폴더의 검색 순서를 지정할 수 있습니다. 이 대화 상자를 표시하려면 파일에서 찾기, 파일에서 바꾸기, 찾기 및 바꾸기 창의 **찾는 위치** 드롭다운 목록 옆의 **찾아보기(...)** 단추를 선택합니다.  
@@ -40,7 +38,7 @@ ms.locfileid: "48095153"
  **폴더 목록**을 채우려면 이 드롭다운 목록에서 드라이브나 폴더를 선택합니다.  
   
  **폴더 목록**  
- **사용 가능한 폴더** 드롭다운 목록에서 선택한 범위 내에서 사용할 수 있는 드라이브와 폴더를 나열합니다. 목록의 드라이브나 폴더를 확장하려면 두 번 클릭합니다. 폴더를 하나 선택하거나 Shift 키나 Ctrl 키를 누른 채 여러 폴더를 선택합니다. **Add (>)** 를 클릭하여 선택한 폴더를 **선택한 폴더** 목록에 포함합니다.  
+ **사용 가능한 폴더** 드롭다운 목록에서 선택한 범위 내에서 사용할 수 있는 드라이브와 폴더를 나열합니다. 목록의 드라이브나 폴더를 확장하려면 두 번 클릭합니다. 폴더를 하나 선택하거나 Shift 키나 Ctrl 키를 누른 채 여러 폴더를 선택합니다.  **Add (>)** 를 클릭하여 선택한 폴더를 **선택한 폴더** 목록에 포함합니다.  
   
  **Parent**  
  **폴더 목록** 에서 선택한 항목을 폴더 계층 구조의 한 수준 위로 이동합니다.  
@@ -56,5 +54,3 @@ ms.locfileid: "48095153"
   
  **적용**  
  **선택한 폴더** 목록에 있는 검색 폴더 집합을 명명된 폴더 집합으로 저장합니다. 이렇게 하면 **찾기 및 바꾸기** 창의 모든 탭에 있는 **찾는 위치** 필드에서 이 폴더 집합을 선택할 수 있습니다. 이 옵션은 검색 폴더 선택 대화 상자를 닫습니다.  
-  
-  

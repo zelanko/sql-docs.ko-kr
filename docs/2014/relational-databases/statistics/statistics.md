@@ -23,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f69e594b1359e3d569c624243c15de2354468be1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 9ce37ee013e8424079e9d2e526ccdbeacfb5544b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063753"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53367145"
 ---
 # <a name="statistics"></a>통계
   쿼리 최적화 프로그램에서는 통계를 사용하여 쿼리 성능을 향상시키는 쿼리 계획을 만듭니다. 대부분의 쿼리에서 쿼리 최적화 프로그램은 고품질의 쿼리 계획에 필요한 통계를 이미 생성하므로 경우에 따라서 최상의 결과를 위해 추가 통계를 만들거나 쿼리 설계를 수정해야 합니다. 이 항목에서는 통계 개념에 대해 설명하고 쿼리 최적화 통계를 효율적으로 사용하기 위한 지침을 제공합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "48063753"
  각 통계 개체는 하나 이상의 테이블 열 목록에 대해 작성되며 첫 번째 열의 값 분포를 나타내는 히스토그램을 포함합니다. 여러 열에 대한 통계 개체는 또한 열 사이의 값의 상관 관계에 대한 통계 정보도 저장합니다. 이러한 상관 관계 통계 또는 *밀도*는 열 값의 개별 행 수에서 생성됩니다. 통계 개체에 대한 자세한 내용은 [DBCC SHOW_STATISTICS&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)를 참조하세요.  
   
  필터링된 통계  
- 필터링된 통계는 잘 정의된 데이터의 하위 집합에서 선택하는 쿼리에 대한 쿼리 성능을 높일 수 있습니다. 또한 필터 조건자를 사용하여 통계에 포함되는 데이터의 하위 집합을 선택할 수 있습니다. 잘 디자인된 필터링된 통계는 전체 테이블 통계에 비해 쿼리 실행 계획을 향상시킬 수 있습니다. 필터 조건자에 대한 자세한 내용은 [CREATE STATISTICS&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)를 참조하세요. 필터링된 통계를 작성하는 시기에 대한 자세한 내용은 이 항목의 [통계 작성 시기](#UpdateStatistics) 섹션을 참조하십시오. 사례 연구를 보려면 SQLCAT 웹 사이트에서 [분할된 테이블에서 필터링된 통계 사용](http://go.microsoft.com/fwlink/?LinkId=178505)블로그 항목을 참조하십시오.  
+ 필터링된 통계는 잘 정의된 데이터의 하위 집합에서 선택하는 쿼리에 대한 쿼리 성능을 높일 수 있습니다. 또한 필터 조건자를 사용하여 통계에 포함되는 데이터의 하위 집합을 선택할 수 있습니다. 잘 디자인된 필터링된 통계는 전체 테이블 통계에 비해 쿼리 실행 계획을 향상시킬 수 있습니다. 필터 조건자에 대한 자세한 내용은 [CREATE STATISTICS&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)를 참조하세요. 필터링된 통계를 작성하는 시기에 대한 자세한 내용은 이 항목의 [통계 작성 시기](#UpdateStatistics) 섹션을 참조하십시오. 사례 연구를 보려면 SQLCAT 웹 사이트에서 [분할된 테이블에서 필터링된 통계 사용](https://go.microsoft.com/fwlink/?LinkId=178505)블로그 항목을 참조하십시오.  
   
  통계 옵션  
  통계가 작성되고 업데이트되는 시기 및 방법에 영향을 주는 다음 세 가지 옵션을 설정할 수 있습니다. 이러한 옵션은 데이터베이스 수준에서만 설정됩니다.  
@@ -154,7 +154,7 @@ GO
 ### <a name="query-selects-from-a-subset-of-data"></a>쿼리가 데이터 하위 집합에서 선택하는 경우  
  쿼리 최적화 프로그램에서 단일 열 및 인덱스에 대한 통계를 만들 때 모든 행의 값에 대해 통계를 작성합니다. 쿼리가 행의 하위 집합에서 선택하고 행의 해당 하위 집합에서 데이터 분포가 고유한 경우 필터링된 통계는 쿼리 계획을 향상시킬 수 있습니다. CREATE STATISTICS 문을 WHERE 절과 함께 사용하여 필터링된 통계를 만들어 필터 조건자 식을 정의할 수 있습니다.  
   
- 예를 들어 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]를 사용하면 Production.Product 테이블의 각 제품이 Production.ProductCategory 테이블의 4가지 범주인 Bikes, Components, Clothing 및 Accessories 중 하나에 속하게 됩니다. 각 범주의 데이터 배포는 서로 다른 가중치를 가집니다. 자전거 가중치는 13.77에서 30.0이고 구성 요소 가중치는 2.12에서 1050.00이면서 일부 NULL 값을 가지며 의류 가중치는 모두 NULL이고 액세서리 가중치 또한 NULL입니다.  
+ 예를 들어 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]를 사용하면 Production.Product 테이블의 각 제품이 Production.ProductCategory 테이블의 4가지 범주인 자전거, 구성 요소, 의류 및 액세서리 중 하나에 포함됩니다. 각 범주의 데이터 배포는 서로 다른 가중치를 가집니다. 자전거 가중치는 13.77에서 30.0이고 구성 요소 가중치는 2.12에서 1050.00이면서 일부 NULL 값을 가지며 의류 가중치는 모두 NULL이고 액세서리 가중치 또한 NULL입니다.  
   
  자전거를 예로 사용할 때 모든 자전거 가중치에 대한 필터링된 통계는 쿼리 최적화 프로그램에 보다 정확한 통계를 제공하므로 전체 테이블 통계 또는 Weight 열에 대한 존재하지 않는 통계에 비해 쿼리 계획의 품질을 향상시킬 수 있습니다. 자전거 가중치 열은 필터링된 통계의 경우에는 좋지만 가중치 조회 수가 상대적으로 적을 때 필터링된 인덱스의 경우에는 반드시 좋은 것은 아닙니다. 필터링된 인덱스에서 제공하는 조회 성능의 향상은 장점이지만 필터링된 인덱스를 데이터베이스에 추가하는 것으로 인한 추가 유지 관리 및 저장 비용은 부담이 될 수 있습니다.  
   
@@ -187,7 +187,7 @@ GO
   
 -   CREATE STATISTICS 문을 사용하여 누락된 통계를 작성합니다.  
   
- 읽기 전용 데이터베이스 또는 읽기 전용 스냅숏에 대 한 통계가 없거나 유효 하지 않을 경우 합니다 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 만들고에서 임시 통계를 유지 관리 `tempdb`합니다. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 에서 임시 통계를 만드는 경우 통계 이름에는 접미사 _readonly_database_statistic이 추가되므로 영구적 통계와 임시 통계를 구별할 수 있습니다. 접미사 _readonly_database_statistic은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 생성하는 통계용으로 예약되어 있습니다. 읽기/쓰기 데이터베이스에서 임시 통계에 대한 스크립트를 만들어 재현할 수 있습니다. 스크립팅된 경우 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서는 통계 이름의 접미사를 _readonly_database_statistic에서 _readonly_database_statistic_scripted로 변경합니다.  
+ 읽기 전용 데이터베이스 또는 읽기 전용 스냅숏에 대한 통계가 없거나 유효하지 않을 경우 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]은 `tempdb`에서 임시 통계를 만들어 유지 관리합니다. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 에서 임시 통계를 만드는 경우 통계 이름에는 접미사 _readonly_database_statistic이 추가되므로 영구적 통계와 임시 통계를 구별할 수 있습니다. 접미사 _readonly_database_statistic은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 생성하는 통계용으로 예약되어 있습니다. 읽기/쓰기 데이터베이스에서 임시 통계에 대한 스크립트를 만들어 재현할 수 있습니다. 스크립팅된 경우 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서는 통계 이름의 접미사를 _readonly_database_statistic에서 _readonly_database_statistic_scripted로 변경합니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서만 임시 통계를 만들고 업데이트할 수 있습니다. 그러나 임시 통계를 삭제하고 통계 속성을 모니터링하는 데는 영구적 통계에 사용하는 것과 동일한 도구를 사용할 수 있습니다.  
   

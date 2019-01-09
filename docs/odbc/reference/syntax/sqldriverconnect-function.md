@@ -20,16 +20,16 @@ ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d254fce8d7765c6248c6e060f2a225f595f804f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d80de6087997b6af0202dafae7576ba442514abf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597178"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212392"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 함수(SQLDriverConnect Function)
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수: ODBC  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. ODBC  
   
  **요약**  
  **SQLDriverConnect** 대안인 **SQLConnect**합니다. 에 세 가지 인수 보다 더 많은 연결 정보를 필요로 하는 데이터 원본을 지 원하는 **SQLConnect**, 모든 연결 정보 및 시스템에 정의 되어 있지 않은 데이터 원본에 대 한 사용자에 게 프롬프트 대화 상자 정보입니다.  
@@ -259,9 +259,9 @@ SQLRETURN SQLDriverConnect(
   
 -   SQL_DRIVER_PROMPT: 드라이버를 사용 하 여 연결 문자열 및 시스템 정보 값 (있는 경우) 초기 값으로는 대화 상자를 표시 합니다. 대화 상자를 종료 하는 사용자, 드라이버는 데이터 원본에 연결 합니다. 값에서 연결 문자열도 생성 합니다 **DSN** 또는 **드라이버** 키워드 \* *InConnectionString* 및에서 반환 된 정보는 대화 상자입니다. 이 연결 문자열을 사용 하 여 배치를 **OutConnectionString* 버퍼입니다.  
   
--   SQL_DRIVER_COMPLETE 또는 SQL_DRIVER_COMPLETE_REQUIRED: 연결 문자열에 충분 한 정보를 포함 하는 경우 해당 정보가 올바른지 드라이버에 연결할 데이터 원본 및 복사본 \* *InConnectionString*하 \* *OutConnectionString*합니다. 모든 정보가 누락 되었거나 잘못 된 경우 드라이버는 경우와 동일한 작업을 수행 하는 *DriverCompletion* 단 SQL_DRIVER_PROMPT 됩니다 *DriverCompletion* SQL_DRIVER_COMPLETE_는 필요한 드라이버 하지 데이터 원본에 연결 하는 데 필요한 모든 정보에 대 한 제어를 해제 합니다.  
+-   SQL_DRIVER_COMPLETE 또는 SQL_DRIVER_COMPLETE_REQUIRED: 연결 문자열에 충분 한 정보를 포함 하는 경우 해당 정보가 올바른지 드라이버에 연결할 데이터 원본 및 복사본 \* *InConnectionString* 하려면 \* *OutConnectionString* . 모든 정보가 누락 되었거나 잘못 된 경우 드라이버는 경우와 동일한 작업을 수행 하는 *DriverCompletion* 단 SQL_DRIVER_PROMPT 됩니다 *DriverCompletion* SQL_DRIVER_COMPLETE_는 필요한 드라이버 하지 데이터 원본에 연결 하는 데 필요한 모든 정보에 대 한 제어를 해제 합니다.  
   
--   SQL_DRIVER_NOPROMPT: 연결 문자열 정보가 충분히 포함 된, 드라이버 연결 데이터 원본 및 복사본 \* *InConnectionString* 하려면 \* *OutConnectionString*. 드라이버에 대 한 SQL_ERROR를 반환 하는 고, 그렇지 **SQLDriverConnect**합니다.  
+-   SQL_DRIVER_NOPROMPT: 충분 한 정보를 포함 하는 연결 문자열을 하는 경우 드라이버는 데이터 원본 및 복사본에 연결 \* *InConnectionString* 하려면 \* *OutConnectionString*합니다. 드라이버에 대 한 SQL_ERROR를 반환 하는 고, 그렇지 **SQLDriverConnect**합니다.  
   
  데이터 원본에 성공적으로 연결에서 드라이버 설정 \* *StringLength2Ptr* 에서 반환할 수 있는 출력 연결 문자열의 길이 **OutConnectionString*합니다.  
   
@@ -367,6 +367,6 @@ int main() {
 |핸들 해제|[SQLFreeHandle 함수](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
 |연결 특성을 설정합니다.|[SQLSetConnectAttr 함수](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

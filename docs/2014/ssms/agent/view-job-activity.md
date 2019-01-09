@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing job activity
@@ -15,17 +15,17 @@ ms.assetid: 5c284e5e-7775-435d-ac49-f3f12a27ddc7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d3e7e671ad307223135b02d237aa2d210057a255
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3fc6099fa9f523b351489ce4301596aeb90c1509
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053653"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782575"
 ---
 # <a name="view-job-activity"></a>작업 활동 보기
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]에이전트 작업의 런타임 상태를 보는 방법에 대해 설명합니다.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 시작할 때 새 세션이 만들어지고 **sysjobactivity** 데이터베이스의 **sysjobactivity** 테이블에 기존에 정의된 작업이 표시됩니다. 이 테이블은 현재 작업 활동과 상태를 기록합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 작업 활동 모니터를 사용하여 작업의 현재 상태를 볼 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 예기치 않게 종료되는 경우 **sysjobactivity** 테이블을 참조하여 서비스 종료 시 어떤 작업이 실행 중이었는지 확인할 수 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 시작할 때 새 세션이 만들어지고 **sysjobactivity** 데이터베이스의 **sysjobactivity** 테이블에 기존에 정의된 작업이 표시됩니다. 이 테이블은 현재 작업 활동과 상태를 기록합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 작업 활동 모니터를 사용하여 작업의 현재 상태를 볼 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 예기치 않게 종료되는 경우 **sysjobactivity** 테이블을 참조하여 서비스 종료 시 어떤 작업이 실행 중이었는지 확인할 수 있습니다.  
   
  **항목 내용**  
   

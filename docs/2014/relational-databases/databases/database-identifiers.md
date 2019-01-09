@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -21,15 +20,15 @@ ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1436ad20cf3fc22f8f070f2422904fca79c21595
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a492aee19d6b09cb7d227b34648f1ea35d1d95d9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133273"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52816265"
 ---
 # <a name="database-identifiers"></a>데이터베이스 식별자
-  데이터베이스 개체 이름을 그 개체의 식별자라고 합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 모든 개체에는 식별자가 있습니다. 서버, 데이터베이스 그리고 테이블, 뷰, 열, 인덱스, 트리거, 프로시저, 제약 조건, 규칙 등과 같은 데이터베이스 개체도 식별자를 가질 수 있습니다. 식별자는 대부분의 개체에서 필수 항목이지만 제약 조건과 같은 일부 개체에서는 옵션입니다.  
+  데이터베이스 개체 이름을 그 개체의 식별자라고 합니다.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 모든 개체에는 식별자가 있습니다. 서버, 데이터베이스 그리고 테이블, 뷰, 열, 인덱스, 트리거, 프로시저, 제약 조건, 규칙 등과 같은 데이터베이스 개체도 식별자를 가질 수 있습니다. 식별자는 대부분의 개체에서 필수 항목이지만 제약 조건과 같은 일부 개체에서는 옵션입니다.  
   
  개체의 식별자는 개체를 정의할 때 만들어집니다. 만들어진 식별자는 개체를 참조하는 데 사용됩니다. 예를 들어 다음 문은 식별자가 `TableX`인 테이블과 식별자가 `KeyCol` 및 `Description`인 두 열을 만듭니다.  
   

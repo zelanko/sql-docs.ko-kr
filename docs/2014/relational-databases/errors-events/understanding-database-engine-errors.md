@@ -15,12 +15,12 @@ ms.assetid: ddaca9d3-956f-46a5-8cd3-a7a15ec75878
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 759dd5aa8381669f2f17136406f144e23b1ec103
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 2f8f7264b63417d9dc337aec62ee5734dcf8ad98
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174723"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52534640"
 ---
 # <a name="understanding-database-engine-errors"></a>데이터베이스 엔진 오류 이해
    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 발생한 오류에는 다음 표에 설명된 것과 같은 특성이 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "48174723"
   
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **SQLClient** 네임스페이스, ADO(ActiveX Data Objects), OLE DB 및 ODBC(Open Database Connectivity)를 비롯한 모든 데이터베이스 API는 기본 오류 특성을 보고합니다. 이 정보에는 오류 번호와 메시지 문자열이 포함됩니다. 그러나 일부 API는 일부 오류 특성을 보고하지 않을 수 있습니다.  
   
- TRY...CATCH 구문의 TRY 블록 범위 내에서 발생하는 오류에 대한 정보는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드의 관련 CATCH 블록 범위 내에서 ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY 및 ERROR_STATE와 같은 함수를 사용하여 얻을 수 있습니다. 자세한 내용은 [TRY...CATCH&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)를 참조하세요.  
+ TRY...CATCH 구문의 TRY 블록 범위 내에서 발생하는 오류에 대한 정보는 관련 CATCH 블록 범위 내에서 ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY 및 ERROR_STATE와 같은 함수를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드에서 얻을 수 있습니다. 자세한 내용은 [TRY...CATCH&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)를 참조하세요.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 영문( `sys.messages` ) 텍스트가 포함된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 모든 시스템 및 사용자 정의 오류 메시지 목록을 반환하기 위해`1033`카탈로그 뷰를 쿼리합니다.  

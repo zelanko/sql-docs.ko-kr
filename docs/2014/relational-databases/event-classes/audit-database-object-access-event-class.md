@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 0294ba51-6085-4de2-a52d-dac1a87fbd4d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae0b4ead486206f19871144f85bf6ab7336792d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 62a6b3a1f92723d43fde32060c6d4ccbbfc14a98
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077213"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52798835"
 ---
 # <a name="audit-database-object-access-event-class"></a>Audit Database Object Access 이벤트 클래스
   **Audit Database Object Access** 이벤트 클래스는 스키마 등의 데이터베이스 개체에 액세스하면 발생합니다.  

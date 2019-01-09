@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - IDREFS relationships [SQLXML]
@@ -30,12 +28,12 @@ ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5ca0676d280a266561c45388beac938366d17ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ae1037a8b04ad1a16b8d42485105927015359a1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144913"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52814875"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>sql:relationship을 사용하여 관계 지정(SQLXML 4.0)
   XML 문서의 요소는 서로 관련될 수 있습니다. 이러한 요소는 계층적으로 중첩될 수 있으며 요소 간에 ID, IDREF 또는 IDREFS 관계가 지정될 수 있습니다.  
@@ -78,7 +76,7 @@ ms.locfileid: "48144913"
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
 ### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>1. 요소에 sql:relationship 주석 지정  
- 다음과 같은 주석이 추가 된 XSD 스키마에 포함 되어 있습니다  **\<고객 >** 하 고  **\<순서 >** 요소입니다. **\<순서 >** 요소는 자식 요소를  **\<고객 >** 요소입니다.  
+ 다음과 같은 주석이 추가 된 XSD 스키마에 포함 되어 있습니다  **\<고객 >** 하 고  **\<순서 >** 요소입니다.  **\<순서 >** 요소는 자식 요소를  **\<고객 >** 요소입니다.  
   
  스키마에는 `sql:relationship` 주석은에 지정 됩니다는  **\<순서 >** 자식 요소입니다. 에 정의 된 관계 자체를  **\<xsd: appinfo >** 요소입니다.  
   
@@ -200,9 +198,9 @@ ms.locfileid: "48144913"
   
  하나는 XML 문서에는 Sales.SalesOrderHeader 테이블의 각 주문에 대 한  **\<순서 >** 요소입니다. 및 각  **\<순서 >** 요소에는 목록이  **\<제품 >** 자식 요소를 순서 대로 요청 된 각 제품에 대 한 합니다.  
   
- 이 계층 구조를 생성 하는 XSD 스키마를 지정 하려면 두 개의 관계를 지정 해야 합니다: OrderOD와 ODProduct 합니다. OrderOD 관계는 Sales.SalesOrderHeader와 Sales.SalesOrderDetail 테이블 간의 부모-자식 관계를 지정합니다. ODProduct 관계는 Sales.SalesOrderDetail와 Production.Product 테이블 간의 관계를 지정합니다.  
+ 이 계층을 생성하는 XSD 스키마를 지정하려면 두 개의 관계, 즉 OrderOD와 ODProduct, 두 값을 지정합니다. OrderOD 관계는 Sales.SalesOrderHeader와 Sales.SalesOrderDetail 테이블 간의 부모-자식 관계를 지정합니다. ODProduct 관계는 Sales.SalesOrderDetail와 Production.Product 테이블 간의 관계를 지정합니다.  
   
- 다음 스키마에는 `msdata:relationship` 주석이 합니다  **\<제품 >** 두 값을 지정 하는 요소: OrderOD와 ODProduct. 이 두 값이 지정되는 순서가 중요합니다.  
+ 다음 스키마에는 `msdata:relationship` 주석이 합니다  **\<제품 >** 두 값을 지정 하는 요소: OrderOD와 ODProduct, 두 값을 지정합니다. 이 두 값이 지정되는 순서가 중요합니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -386,7 +384,7 @@ ms.locfileid: "48144913"
 ### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>4. 여러 요소에 대해 sql:relationship 지정  
  이 예제에서 주석이 추가 된 XSD 스키마를 포함 합니다  **\<고객 >** 합니다  **\<순서 >**, 및  **\<OrderDetail >** 요소입니다.  
   
- **\<순서 >** 요소는 자식 요소를  **\<고객 >** 요소입니다. **\<sql: relationship >** 에 지정 된  **\<순서 >** 자식 요소 고객에 게 속한 주문은의 자식 요소로 표시 되는 따라서  **\<고객 >**.  
+  **\<순서 >** 요소는 자식 요소를  **\<고객 >** 요소입니다. **\<sql: relationship >** 에 지정 된  **\<순서 >** 자식 요소 고객에 게 속한 주문은의 자식 요소로 표시 되는 따라서  **\<고객 >**.  
   
  합니다  **\<순서 >** 요소를 포함 합니다  **\<OrderDetail >** 자식 요소입니다. **\<sql: relationship >** 에 지정 됩니다  **\<OrderDetail >** 자식 요소를 주문에 속하는 주문 정보는 자식 요소로 표시 되도록 **\<순서 >** 요소입니다.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 526c8eae-a07b-4d0e-b91e-8e537835d77d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d92673f3b551076eea675e9a5d909acd5f293337
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: f9d894eb3f38248e1f7af2b1f693f87bdfebefa9
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060903"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52795677"
 ---
 # <a name="sprecompile-event-class"></a>SP:Recompile 이벤트 클래스
   SP:Recompile 이벤트 클래스는 저장 프로시저, 트리거 또는 사용자 정의 함수를 다시 컴파일했음을 나타냅니다. 이 이벤트 클래스가 보고하는 다시 컴파일은 문 수준에서 발생합니다.  

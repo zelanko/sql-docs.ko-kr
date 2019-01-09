@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.selectoraclepublisher.f1
@@ -13,15 +12,15 @@ ms.assetid: 019b7c49-dcca-445d-8969-5982a8ccbc1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b707eb53d4161927f7e20c435652c9b2559a6f81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: ad7a226b3c4e3fa9aa593e82e976ff94dd4fe557
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216093"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52753875"
 ---
 # <a name="oracle-publisher"></a>Oracle 게시자
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 스냅숏과 트랜잭션 복제를 사용하여 Oracle 데이터베이스에서 데이터를 게시할 수 있습니다. 자세한 내용은 [Oracle 게시 개요](non-sql/oracle-publishing-overview.md)를 참조하세요.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 스냅숏과 트랜잭션 복제를 사용하여 Oracle 데이터베이스에서 데이터를 게시할 수 있습니다. 자세한 내용은 [Oracle 게시 개요](non-sql/oracle-publishing-overview.md)를 참조하세요.  
   
  Oracle 게시자는 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 배포자를 사용해야 합니다. 이 마법사는 필요한 Oracle 네트워킹 소프트웨어를 설치 및 테스트한 후 해당 서버에서 실행해야 합니다. 자세한 내용은 [Oracle 게시자 구성](non-sql/configure-an-oracle-publisher.md)을 참조하세요.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "48216093"
 > [!NOTE]  
 >  마법사가 실행 중인 서버가 배포자로 구성되어 있지 않으면 지금 배포자로 구성하라는 메시지가 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Oracle 데이터베이스에서 게시 만들기](publish/create-a-publication-from-an-oracle-database.md)   
  [속성 참조&#40;복제&#41;](properties-reference-replication.md)  
   

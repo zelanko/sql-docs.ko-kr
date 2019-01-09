@@ -16,12 +16,12 @@ ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 28ac9304ac49a210cfeafc564332828da0680dc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ba210106a7a4045c3dae43db3590e69a7c2c5ea
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178823"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52515793"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>패키지 가져오기 및 내보내기(SSIS 서비스)
     
@@ -40,18 +40,18 @@ ms.locfileid: "48178823"
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb 데이터베이스  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 하면 패키지를 가져오고 내보낼 수 있으며 이렇게 하면 패키지의 위치 및 저장소 형식을 변경 합니다. 가져오기 및 내보내기 기능을 사용하여 파일 시스템, 패키지 저장소 또는 msdb 데이터베이스에 패키지를 추가할 수 있으며 하나의 저장소 형식에서 다른 저장소 형식으로 패키지를 복사할 수 있습니다. 예를 들어 msdb에 저장된 패키지를 파일 시스템으로 복사할 수 있으며 반대의 경우도 가능합니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 를 사용하면 패키지를 가져오고 내보낼 수 있으며 이렇게 하면 패키지의 위치 및 저장소 형식을 변경할 수 있습니다. 가져오기 및 내보내기 기능을 사용하여 파일 시스템, 패키지 저장소 또는 msdb 데이터베이스에 패키지를 추가할 수 있으며 하나의 저장소 형식에서 다른 저장소 형식으로 패키지를 복사할 수 있습니다. 예를 들어 msdb에 저장된 패키지를 파일 시스템으로 복사할 수 있으며 반대의 경우도 가능합니다.  
   
  **dtutil** 명령 프롬프트 유틸리티(dtutil.exe)를 사용하여 패키지를 다른 형식으로 복사할 수 있습니다. 자세한 내용은 [dtutil Utility](dtutil-utility.md)를 참조하세요.  
   
 ## <a name="to-import-or-export-a-package"></a>패키지를 가져오거나 내보내려면  
   
 > [!IMPORTANT]  
->  이 항목에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 일부인 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]서비스에 대해 설명합니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]와의 이전 버전 호환성을 위해 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 서비스를 지원합니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 패키지를 관리하는 방법은 [Integration Services&#40;SSIS&#41; 서버](catalog/integration-services-ssis-server-and-catalog.md)를 참조하세요.  
+>  이 항목에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 일부인 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]서비스에 대해 설명합니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 와의 이전 버전 호환성을 위해 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]서비스를 지원합니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 패키지를 관리하는 방법은 [Integration Services&#40;SSIS&#41; 서버](catalog/integration-services-ssis-server-and-catalog.md)를 참조하세요.  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지는 다음과 같은 위치에서 가져오거나 내보낼 수 있습니다.  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스, 파일 시스템 또는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소에 저장된 패키지를 가져올 수 있습니다. 가져온 패키지는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 나 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소의 폴더에 저장됩니다.  
+-    [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스, 파일 시스템 또는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소에 저장된 패키지를 가져올 수 있습니다. 가져온 패키지는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 나 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소의 폴더에 저장됩니다.  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스, 파일 시스템 또는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소에 저장된 패키지를 다른 저장소 형식 또는 위치로 내보낼 수 있습니다.  
   
@@ -83,15 +83,15 @@ ms.locfileid: "48178823"
   
     -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에서 가져오려면 **SQL Server** 옵션을 선택한 후 서버를 지정하고 인증 모드를 선택합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 선택한 경우 사용자 이름과 암호를 제공합니다.  
   
-         찾아보기 단추 **(…)** 를 클릭하고 가져올 패키지를 선택한 후 **확인**을 클릭합니다.  
+         찾아보기 단추 **(…)** 를 클릭하고 가져올 패키지를 선택한 후, **확인**을 클릭합니다.  
   
     -   파일 시스템에서 가져오려면 **파일 시스템** 옵션을 선택합니다.  
   
-         찾아보기 단추 **(…)** 를 클릭하고 가져올 패키지를 선택한 후 **열기**를 클릭합니다.  
+         찾아보기 단추 **(…)** 를 클릭하고 가져올 패키지를 선택한 후, **열기**를 클릭합니다.  
   
     -   [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소에서 가져오려면 **SSIS 패키지 저장소** 옵션을 선택하고 서버를 지정합니다.  
   
-         찾아보기 단추 **(…)** 를 클릭하고 가져올 패키지를 선택한 후 **확인**을 클릭합니다.  
+         찾아보기 단추 **(…)** 를 클릭하고 가져올 패키지를 선택한 후, **확인**을 클릭합니다.  
   
 7.  선택적으로 패키지 이름을 업데이트합니다.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "48178823"
   
     -   파일 시스템으로 내보내려면 **파일 시스템** 옵션을 선택합니다.  
   
-         찾아보기 단추 **(…)** 를 클릭하여 패키지를 내보내려는 폴더를 찾고, 패키지 파일의 이름을 입력한 후 **저장**을 클릭합니다.  
+         찾아보기 단추 **(…)** 를 클릭하여 패키지를 내보내려는 폴더를 찾고, 패키지 파일의 이름을 입력한 후, **저장**을 클릭합니다.  
   
     -   [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소로 내보내려면 **SSIS 패키지 저장소** 옵션을 선택하고 서버를 지정합니다.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48178823"
   
 8.  **확인** 을 클릭하여 내보내기를 완료합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [패키지 관리 &#40;SSIS 서비스&#41;](service/package-management-ssis-service.md)  
+## <a name="see-also"></a>관련 항목:  
+ [패키지 관리&#40;SSIS 서비스&#41;](service/package-management-ssis-service.md)  
   
   

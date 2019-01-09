@@ -24,12 +24,12 @@ ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c6bc03334003438fdefbe7feac1e321d9a2e9bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c8e9ea6b068f39e9e1e63bb5e9831f977619367f
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137493"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52545352"
 ---
 # <a name="populate-full-text-indexes"></a>전체 텍스트 인덱스 채우기
   전체 텍스트 인덱스를 만들고 유지 관리하려면 *채우기* ( *탐색*이라고도 함)라는 프로세스를 사용하여 인덱스를 채워야 합니다.  
@@ -48,9 +48,9 @@ ms.locfileid: "48137493"
  경우에 따라 초기 전체 채우기 후에 변경 내용 추적을 사용하여 전체 텍스트 인덱스를 유지 관리할 수도 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 마지막 채우기 후에 기본 테이블의 변경 내용을 추적하는 테이블을 유지 관리하기 때문에 변경 내용 추적을 사용할 경우 약간의 오버헤드가 발생합니다. 변경 내용 추적을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 업데이트, 삭제 또는 삽입에 의해 수정된 기본 테이블 또는 인덱싱된 뷰의 행 레코드를 유지 관리합니다. WRITETEXT 및 UPDATETEXT를 통한 데이터 변경 내용은 전체 텍스트 인덱스에 반영되지 않고 변경 내용 추적 시 선택되지도 않습니다.  
   
 > [!NOTE]  
->  포함 된 테이블에 대 한는 `timestamp` 열 증분 채우기를 사용할 수 있습니다.  
+>  `timestamp` 열이 포함된 테이블에 대해서는 증분 채우기를 사용할 수 있습니다.  
   
- 인덱스를 만드는 동안 변경 내용 추적을 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 새 전체 텍스트 인덱스를 만드는 즉시 완전히 채웁니다. 그 이후에는 변경 내용이 추적되고 전체 텍스트 인덱스로 전파됩니다. 변경 내용 추적에는 두 가지 유형, 자동(CHANGE_TRACKING AUTO 옵션)과 수동(CHANGE_TRACKING MANUAL 옵션)이 있습니다. 자동 변경 내용 추적이 기본 동작입니다.  
+ 인덱스를 만드는 동안 변경 내용 추적을 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 새 전체 텍스트 인덱스를 만드는 즉시 완전히 채웁니다. 그 이후에는 변경 내용이 추적되고 전체 텍스트 인덱스로 전파됩니다. 변경 내용 추적에는 두 가지 유형, 자동(CHANGE_TRACKING AUTO 옵션)과 수동(CHANGE_TRACKING MANUAL 옵션)이 있습니다. 자동 변경 내용 추적이 기본 동작입니다.  
   
  변경 내용 추적의 유형에 따라 전체 텍스트 인덱스가 채워지는 방법이 다음과 같이 결정됩니다.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "48137493"
   
      **자동 채우기를 사용 하 여 변경 내용 추적을 설정 하려면**  
   
-    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) … WITH CHANGE_TRACKING AUTO  
+    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... WITH CHANGE_TRACKING AUTO  
   
-    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) … SET CHANGE_TRACKING AUTO  
+    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ... SET CHANGE_TRACKING AUTO  
   
      자세한 내용은 이 항목의 뒷부분에 나오는 예 "5. 자동 변경 내용 추적을 사용하도록 전체 텍스트 인덱스 변경"을 참조하십시오.  
   
@@ -72,28 +72,28 @@ ms.locfileid: "48137493"
   
      **수동 채우기가 있는 변경 내용 추적을 시작하려면**  
   
-    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) … WITH CHANGE_TRACKING MANUAL  
+    -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... WITH CHANGE_TRACKING MANUAL  
   
-    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) … SET CHANGE_TRACKING MANUAL  
+    -   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ... SET CHANGE_TRACKING MANUAL  
   
      자세한 내용은 이 항목의 뒷부분에 나오는 예 "3. 수동 변경 내용 추적이 있는 전체 텍스트 인덱스 만들기" 및 "4. 수동 채우기 실행"을 참조하십시오.  
   
  **변경 내용 추적을 해제 하려면**  
   
--   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) … WITH CHANGE_TRACKING OFF  
+-   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... WITH CHANGE_TRACKING OFF  
   
--   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) … SET CHANGE_TRACKING OFF  
+-   [ALTER FULLTEXT INDEX](/sql/t-sql/statements/alter-fulltext-index-transact-sql) ... SET CHANGE_TRACKING OFF  
   
 
   
 ### <a name="incremental-timestamp-based-population"></a>증분 타임스탬프 기반 채우기  
  증분 채우기는 전체 텍스트 인덱스를 수동으로 채우는 대체 메커니즘으로, CHANGE_TRACKING이 MANUAL 또는 OFF로 설정된 전체 텍스트 인덱스에 대해 실행할 수 있습니다. 전체 텍스트 인덱스에 대해 처음으로 실행하는 채우기가 증분 채우기이면 모든 행이 인덱싱되므로 그 결과가 전체 채우기의 경우와 같습니다.  
   
- 증분 채우기를 인덱싱된 테이블의 열이 있어야 하는 `timestamp` 데이터 형식입니다. `timestamp` 열이 없으면 증분 채우기를 수행할 수 없습니다. 없는 테이블에 대해 증분 채우기 요청을 `timestamp` 열 전체 채우기 작업이 발생 합니다. 또한 테이블의 전체 텍스트 인덱스에 영향을 주는 메타데이터가 마지막 채우기 후에 변경된 경우 증분 채우기 요청은 전체 채우기로 구현됩니다. 여기에는 열, 인덱스 또는 전체 텍스트 인덱스 정의의 변경으로 인한 메타데이터 변경 내용이 포함됩니다.  
+ 증분 채우기를 사용하려면 인덱싱된 테이블에 `timestamp` 데이터 형식의 열이 있어야 합니다. `timestamp` 열이 없으면 증분 채우기를 수행할 수 없습니다. `timestamp` 열이 없는 테이블에 대해 증분 채우기를 요청하면 전체 채우기 작업이 수행됩니다. 또한 테이블의 전체 텍스트 인덱스에 영향을 주는 메타데이터가 마지막 채우기 후에 변경된 경우 증분 채우기 요청은 전체 채우기로 구현됩니다. 여기에는 열, 인덱스 또는 전체 텍스트 인덱스 정의의 변경으로 인한 메타데이터 변경 내용이 포함됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 `timestamp` 열을 사용하여 마지막 채우기 후에 변경된 행을 식별합니다. 그러면 증분 채우기는 마지막 채우기 후 또는 마지막 채우기를 진행 중인 동안 추가, 삭제 또는 수정된 행에 대해 전체 텍스트 인덱스를 업데이트합니다. 테이블에서 대량 삽입이 발생하는 경우 증분 채우기를 사용하는 것이 수동 채우기를 사용하는 것보다 효율적일 수 있습니다.  
   
- 채우기 완료 시 전체 텍스트 엔진은 새 `timestamp` 값을 기록합니다. 이 값은 가장 큰 `timestamp` SQL Gatherer에서 발생 한입니다. 이 값은 후속 증분 채우기가 시작될 때 사용됩니다.  
+ 채우기 완료 시 전체 텍스트 엔진은 새 `timestamp` 값을 기록합니다. 이 값은 SQL Gatherer에서 발생한 가장 큰 `timestamp` 값입니다. 이 값은 후속 증분 채우기가 시작될 때 사용됩니다.  
   
  증분 채우기를 실행하려면 START INCREMENTAL POPULATION 절을 사용하여 ALTER FULLTEXT INDEX 문을 실행합니다.  
   
@@ -184,7 +184,7 @@ GO
      이 페이지를 사용하여 전체 텍스트 인덱스의 기본 테이블 또는 인덱싱된 뷰에 대한 증분 테이블 채우기를 시작하는 SQL Server 에이전트 작업의 일정을 만들거나 관리할 수 있습니다.  
   
     > [!IMPORTANT]  
-    >  기본 테이블 또는 뷰 열의 없으면는 `timestamp` 데이터 형식, 전체 채우기가 수행 됩니다.  
+    >  기본 테이블이나 뷰에 `timestamp` 데이터 형식의 열이 포함되어 있지 않으면 전체 채우기가 수행됩니다.  
   
      다음과 같은 옵션이 있습니다.  
   

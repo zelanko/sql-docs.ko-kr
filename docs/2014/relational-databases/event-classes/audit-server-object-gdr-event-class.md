@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: 117fedca-c1c4-469a-929a-9ea332c83d25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af6d3b8a3544f701a10c53b2d07df0e4a1aec872
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 2a08a594694e9aac30620837f2a324da5a4d6fe4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141013"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52778745"
 ---
 # <a name="audit-server-object-gdr-event-class"></a>Audit Server Object GDR 이벤트 클래스
   **Audit Server Object GDR** 이벤트 클래스는 Microsoft SQL Server에서 사용자가 서버 개체 사용 권한에 대해 GRANT, REVOKE 또는 DENY를 실행할 때마다 발생합니다.  

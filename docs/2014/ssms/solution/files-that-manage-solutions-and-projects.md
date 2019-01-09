@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [SQL Server Management Studio], files
@@ -18,12 +18,12 @@ ms.assetid: e19d2859-0b97-4727-ac27-c4c226d86b2f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 037b8b76aed407e89a4d8cb0556bd3d8bbcff3ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e8481c1cce3e43287c04678ddae10ac1b0703af
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119863"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52763135"
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>솔루션 및 프로젝트 관리 파일
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 고유한 파일 형식에 대해 설명합니다. 기본적으로 모든 솔루션과 해당 프로젝트는 \My Documents\SQL Server Management Studio Projects에서 생성됩니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "48119863"
   
 |확장명|파일 유형|Description|만든 사람|  
 |---------------|---------------|-----------------|----------------|  
-|.ssmssln|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 솔루션 개체|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로젝트, 프로젝트 항목 및 솔루션의 디스크 위치에 대한 참조를 환경에 제공합니다.|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
+|.ssmssln|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 솔루션 개체| [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로젝트, 프로젝트 항목 및 솔루션의 디스크 위치에 대한 참조를 환경에 제공합니다.|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
   
 ## <a name="management-studio-project-files"></a>Management Studio 프로젝트 파일  
  솔루션의 개체를 관리하는 솔루션 파일을 솔루션이 포함하는 것과 같은 방식으로 프로젝트는 프로젝트 파일을 포함합니다. 프로젝트에 대해 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 가 만드는 프로젝트 파일의 형식은 프로젝트는 만드는 데 사용되는 템플릿에 따라 다릅니다. 다음 표에서는 각 프로젝트에 대해 작성되는 파일 유형을 설명합니다.  

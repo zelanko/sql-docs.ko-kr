@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.defrag.f1
@@ -15,12 +14,12 @@ ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5580534dac0249dd71f2ad2d0b5868a293a91d84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0f354280da857be236049a564a77716e93cd351
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101153"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747425"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>인덱스 다시 구성 태스크(유지 관리 계획)
   **인덱스 다시 구성 태스크** 대화 상자를 사용하여 인덱스 페이지를 보다 효율적인 검색 순서로 이동할 수 있습니다. `ALTER INDEX REORGANIZE` 데이터베이스의 경우 이 태스크를 수행하면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 문이 사용됩니다.  
@@ -80,10 +79,10 @@ ms.locfileid: "48101153"
  서버에 대한 인증 방법을 지정합니다.  
   
  **Windows NT 통합 보안 사용**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인스턴스에 연결합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인스턴스에 연결합니다.  
   
  **특정 사용자 이름 및 암호 사용**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
   
  **사용자 이름**  
  인증 시 사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 입력합니다. 이 옵션은 사용할 수 없습니다.  

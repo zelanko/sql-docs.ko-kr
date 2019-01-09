@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server]
@@ -15,12 +14,12 @@ ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0741d908dba86e84ac3ee4cdc526caa853b462bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 22fd00314105f4ef43a734697bdae86badc145a2
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196963"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369115"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 이후에는 지원되지 않는 데이터베이스 엔진 기능
   이 항목에서는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 에서 계속 제공되지만 더 이상 사용되지 않는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]기능에 대해 설명합니다. 이러한 기능은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이후 릴리스에서 제거될 예정입니다. 새 애플리케이션에는 이러한 기능을 사용하면 안 됩니다.  
@@ -48,7 +47,7 @@ ms.locfileid: "48196963"
   
 |범주|사용되지 않는 기능|대체 기능|기능 이름|기능 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
-|호환성 수준|sp_dbcmptlevel|ALTER DATABASE … SET COMPATIBILITY_LEVEL. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)을 참조하세요.|sp_dbcmptlevel|80|  
+|호환성 수준|sp_dbcmptlevel|ALTER DATABASE ... SET COMPATIBILITY_LEVEL. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)을 참조하세요.|sp_dbcmptlevel|80|  
 |호환성 수준|데이터베이스 호환성 수준 100|이후 릴리스로 데이터베이스 및 애플리케이션을 업그레이드하도록 계획합니다.|데이터베이스 호환성 수준 100|108|  
 |XML|인라인 XDR 스키마 생성|XMLDATA 지시어에 FOR XML 옵션은 더 이상 사용되지 않습니다. RAW 및 AUTO 모드의 경우 XSD 생성을 사용하세요. EXPLICT 모드의 XMLDATA 지시어의 경우에는 대체할 옵션이 없습니다.|XMLDATA|181|  
 |Backup 및 Restore 메서드|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE 또는 LOG TO TAPE|235|  
@@ -60,9 +59,9 @@ ms.locfileid: "48196963"
 |Configuration|SET ANSI_NULLS OFF 및 ANSI_NULLS OFF 데이터베이스 옵션<br /><br /> SET ANSI_PADDING OFF 및 ANSI_PADDING OFF 데이터베이스 옵션<br /><br /> SET CONCAT_NULL_YIELDS_NULL OFF 및 CONCAT_NULL_YIELDS_NULL OFF 데이터베이스 옵션<br /><br /> SET OFFSETS|없음<br /><br /> ANSI_NULLS, ANSI_PADDING 및 CONCAT_NULLS_YIELDS_NULL은 항상 ON으로 설정됩니다. SET OFFSETS는 사용할 수 없습니다.|SET ANSI_NULLS OFF<br /><br /> SET ANSI_PADDING OFF<br /><br /> SET CONCAT_NULL_YIELDS_NULL OFF<br /><br /> SET OFFSETS<br /><br /> ALTER DATABASE SET ANSI_NULLS OFF<br /><br /> ALTER DATABASE SET ANSI_PADDING OFF<br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF|111<br /><br /> 113<br /><br /> 112<br /><br /> 36<br /><br /> 111<br /><br /> 113<br /><br /> 112|  
 |데이터 형식|sp_addtype<br /><br /> sp_droptype|CREATE TYPE<br /><br /> DROP TYPE|sp_addtype<br /><br /> sp_droptype|62<br /><br /> 63|  
 |데이터 형식|`timestamp` 데이터 형식에 대한 `rowversion` 구문|`rowversion` 데이터 형식 구문|timestamp|158|  
-|데이터 형식|Null 값을 삽입 하는 기능 `timestamp` 열입니다.|대신 DEFAULT를 사용합니다.|TIMESTAMP 열에 대한 INSERT NULL|179|  
-|데이터 형식|'text in row' 테이블 옵션|사용 하 여 `varchar(max)`, `nvarchar(max)`, 및 `varbinary(max)` 데이터 형식입니다. 자세한 내용은 [sp_tableoption&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)을 참조하세요.|Text in row 테이블 옵션|9|  
-|데이터 형식|데이터 형식:<br /><br /> `text`<br /><br /> `ntext`<br /><br /> `image`|사용 하 여 `varchar(max)`, `nvarchar(max)`, 및 `varbinary(max)` 데이터 형식입니다.|데이터 형식: `text`, `ntext` 또는 `image`|4|  
+|데이터 형식|Null 값을 `timestamp` 열에 삽입하는 기능|대신 DEFAULT를 사용합니다.|TIMESTAMP 열에 대한 INSERT NULL|179|  
+|데이터 형식|'text in row' 테이블 옵션|`varchar(max)`, `nvarchar(max)` 및 `varbinary(max)` 데이터 형식을 사용합니다. 자세한 내용은 [sp_tableoption&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)을 참조하세요.|Text in row 테이블 옵션|9|  
+|데이터 형식|데이터 형식:<br /><br /> `text`<br /><br /> `ntext`<br /><br /> `image`|`varchar(max)`, `nvarchar(max)` 및 `varbinary(max)` 데이터 형식을 사용합니다.|데이터 형식: `text`, `ntext` 또는 `image`|4|  
 |데이터베이스 관리|sp_attach_db<br /><br /> sp_attach_single_file_db|FOR ATTACH 옵션을 사용하는 CREATE DATABASE 문. 하나 이상의 로그 파일에 새 위치가 있는 경우 여러 로그 파일을 다시 작성하려면 FOR ATTACH_REBUILD_LOG 옵션을 사용합니다.|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
 |데이터베이스 개체|CREATE DEFAULT<br /><br /> DROP DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|CREATE TABLE 및 ALTER TABLE의 DEFAULT 키워드|CREATE_DROP_DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|162<br /><br /> 64<br /><br /> 65|  
 |데이터베이스 개체|CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|CREATE TABLE 및 ALTER TABLE의 CHECK 키워드|CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|161<br /><br /> 66<br /><br /> 67|  
@@ -87,7 +86,7 @@ ms.locfileid: "48196963"
 |인덱스 옵션|옵션 주위에 괄호가 없는 CREATE TABLE, ALTER TABLE 또는 CREATE INDEX 구문|현재 구문을 사용하도록 문을 다시 작성해야 합니다.|INDEX_OPTION|33|  
 |인스턴스 옵션|sp_configure의 'allow updates' 옵션|시스템 테이블을 더 이상 업데이트할 수 없습니다. 설정이 아무런 영향을 미치지 않습니다.|sp_configure의 'allow updates'|173|  
 |인스턴스 옵션|sp_configure 옵션:<br /><br /> 'locks'<br /><br /> 'open objects'<br /><br /> 'set working set size'|이제 자동으로 구성됩니다. 설정이 아무런 영향을 미치지 않습니다.|sp_configure의 'locks'<br /><br /> sp_configure의 'open objects'<br /><br /> sp_configure의 'set working set size'|174<br /><br /> 175<br /><br /> 176|  
-|인스턴스 옵션|sp_configure의 'priority boost' 옵션|시스템 테이블을 더 이상 업데이트할 수 없습니다. 설정이 아무런 영향을 미치지 않습니다. 대신 Windows start /high ... program.exe 옵션을 사용하세요.|sp_configure의 'priority boost'|199|  
+|인스턴스 옵션|sp_configure의 'priority boost' 옵션|시스템 테이블을 더 이상 업데이트할 수 없습니다. 설정이 아무런 영향을 미치지 않습니다. 대신 Windows start /high ... program.exe 옵션을 사용합니다.|sp_configure의 'priority boost'|199|  
 |인스턴스 옵션|sp_configure의 'remote proc trans' 옵션|시스템 테이블을 더 이상 업데이트할 수 없습니다. 설정이 아무런 영향을 미치지 않습니다.|sp_configure의 'remote proc trans'|37|  
 |연결된 서버|연결된 서버에 대한 SQLOLEDB 공급자를 지정합니다.|SQL Server Native Client(SQLNCLI)|연결된 서버에 대한 SQLOLEDDB|19|  
 |잠금|sp_lock|sys.dm_tran_locks|sp_lock|99|  
@@ -107,7 +106,7 @@ ms.locfileid: "48196963"
 |보안|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  
 |보안|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|ALTER LOGIN DISABLE<br /><br /> CREATE LOGIN<br /><br /> DROP LOGIN|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|42<br /><br /> 41<br /><br /> 43|  
 |보안|USER_ID|DATABASE_PRINCIPAL_ID|USER_ID|16|  
-|보안|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|이 저장 프로시저가 반환하는 정보는 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]에서는 올바른 것이지만 출력에는 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]에서 구현된 사용 권한 계층에 대한 변경 내용이 반영되지 않습니다. 자세한 내용은 [고정 서버 역할의 권한](http://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx)을 참조하십시오.|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
+|보안|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|이 저장 프로시저가 반환하는 정보는 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]에서는 올바른 것이지만 출력에는 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]에서 구현된 사용 권한 계층에 대한 변경 내용이 반영되지 않습니다. 자세한 내용은 [고정 서버 역할의 권한](https://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx)을 참조하십시오.|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
 |보안|GRANT ALL<br /><br /> DENY ALL<br /><br /> REVOKE ALL|GRANT, DENY 및 REVOKE 관련 권한|ALL 권한|35|  
 |보안|PERMISSIONS 내장 함수|대신 sys.fn_my_permissions를 쿼리해야 합니다.|PERMISSIONS|170|  
 |보안|SETUSER|EXECUTE AS|SETUSER|165|  
@@ -116,7 +115,7 @@ ms.locfileid: "48196963"
 |서버 구성 옵션|c2 audit 옵션<br /><br /> default trace enabled 옵션|[common criteria compliance enabled 서버 구성 옵션](configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [확장 이벤트](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
 |SMO 클래스|`Microsoft.SQLServer.Management.Smo.Information` 클래스<br /><br /> `Microsoft.SQLServer.Management.Smo.Settings` 클래스<br /><br /> `Microsoft.SQLServer.Management.Smo.DatabaseOptions` 클래스<br /><br /> `Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication` 속성|`Microsoft.SqlServer.Management.Smo.Server` 클래스<br /><br /> `Microsoft.SqlServer.Management.Smo.Server` 클래스<br /><br /> `Microsoft.SqlServer.Management.Smo.Database` 클래스<br /><br /> 없음|없음|없음|  
 |SQL Server 에이전트|**Net Send** 알림<br /><br /> 호출기 알림<br /><br /> ActiveX 하위 시스템|전자 메일 알림<br /><br /> 전자 메일 알림<br /><br /> 명령 또는 PowerShell 스크립트|없음|없음|  
-|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]| [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]<br /><br /> 원본 제어 통합 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||없음|없음|  
+|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]| [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]<br /><br /> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]와 원본 제어 통합||없음|없음|  
 |시스템 저장 프로시저|sp_db_increased_partitions|없음 증가 파티션에 대한 지원은 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서 기본적으로 사용할 수 있습니다.|sp_db_increased_partitions|253|  
 |시스템 테이블|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|호환성 뷰입니다. 자세한 내용은 [호환성 뷰&#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql)를 참조하세요.<br /><br /> **\*\* 중요 \*\*** 호환성 뷰는 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]에서 도입된 기능의 메타데이터를 제공하지 않습니다. 애플리케이션에서 카탈로그 뷰를 사용하도록 업그레이드하는 것이 좋습니다. 자세한 내용은 [카탈로그 뷰&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)를 참조하세요.|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> 없음<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
 |시스템 테이블|sys.numbered_procedures<br /><br /> sys.numbered_procedure_parameters|없음|numbered_procedures<br /><br /> numbered_procedure_parameters|148<br /><br /> 149|  
@@ -147,13 +146,13 @@ ms.locfileid: "48196963"
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|뷰를 통해 다중 문 TVF(테이블 반환 함수)를 호출하는 테이블 힌트의 간접 적용|없음|간접 TVF 힌트|7|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ALTER DATABASE 구문:<br /><br /> MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|MODIFY FILEGROUP READ_ONLY<br /><br /> MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|195<br /><br /> 196|  
 |기타|DB-Library<br /><br /> C 언어용 Embedded SQL|[!INCLUDE[ssDE](../includes/ssde-md.md)] 이 DB-Library 및 Embedded SQL API를 사용한 기존 응용 프로그램과의 연결을 계속 지원하지만 이들 API를 사용하는 응용 프로그램에서 프로그래밍 작업을 수행하는 데 필요한 파일 또는 문서는 포함되지 않습니다. 이후 버전의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 에서는 DB-Library 또는 Embedded SQL 애플리케이션과의 연결이 더 이상 지원되지 않습니다. DB-Library 또는 Embedded SQL을 사용하여 새 애플리케이션을 개발하지 마십시오. 기존의 애플리케이션을 수정할 때 DB-Library 또는 Embedded SQL에 대한 모든 종속 관계를 제거하십시오. 이러한 API 대신 SQLClient 네임스페이스 또는 ODBC 등의 API를 사용하세요. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 에는 이러한 응용 프로그램을 실행하는 데 필요한 DB-Library DLL이 없습니다. DB-Library 또는 Embedded SQL 애플리케이션을 실행하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전 6.5, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7.0 또는 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]에서 사용 가능한 DB-Library DLL이 있어야 합니다.|없음|없음|  
-|Tools|추적 캡처용 SQL Server Profiler|SQL Server Management Studio에 포함된 확장 이벤트 프로파일러를 사용합니다.<br /><br /> 참고: Analysis Services 작업에 대 한 추적 캡처용 SQL Server Profiler를 사용 하 여 계속 합니다.|SQL Server 프로파일러|없음|  
-|Tools|추적 재생용 SQL Server Profiler|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)<br /><br /> 참고: Analysis Services 작업에 대 한 추적 재생용 SQL Server Profiler를 사용 하 여 계속 합니다.|SQL Server 프로파일러|없음|  
+|Tools|추적 캡처용 SQL Server Profiler|SQL Server Management Studio에 포함된 확장 이벤트 프로파일러를 사용합니다.<br /><br /> 참고: Analysis Services 작업에는 추적 캡처용 SQL Server Profiler를 계속 사용할 수 있습니다.|SQL Server 프로파일러|없음|  
+|Tools|추적 재생용 SQL Server Profiler|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)<br /><br /> 참고: Analysis Services 작업에는 추적 재생용 SQL Server Profiler를 계속 사용할 수 있습니다.|SQL Server 프로파일러|없음|  
 |Trace Management Objects|Microsoft.SqlServer.Management.Trace 네임 스페이스(SQL Server 추적 및 재생 개체용 API 포함)|추적 구성: <xref:Microsoft.SqlServer.Management.XEvent><br /><br /> 추적 읽기: <xref:Microsoft.SqlServer.XEvent.Linq><br /><br /> 추적 재생: 없음|||  
 |SQL 추적 저장 프로시저, 함수 및 카탈로그 뷰|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[확장 이벤트](../relational-databases/extended-events/extended-events.md)|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|  
   
 > [!NOTE]  
->  현재 `OUTPUT`에 대한 쿠키 `sp_setapprole` 매개 변수는 정확한 최대 길이인 `varbinary(8000)`로 정의되어 있습니다. 그러나 현재 구현은 `varbinary(50)`합니다. 개발자가 `varbinary(50)`를 할당할 경우 이후 릴리스에서 쿠키 반환 크기가 증가하면 응용 프로그램을 변경해야 할 수 있습니다. 이 문제는 사용 중지에 관한 문제는 아니지만 애플리케이션 조정이 유사하기 때문에 이 항목에서 다룹니다. 자세한 내용은 [sp_setapprole&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-setapprole-transact-sql)을 참조하세요.  
+>  현재 `OUTPUT`에 대한 쿠키 `sp_setapprole` 매개 변수는 정확한 최대 길이인 `varbinary(8000)`로 정의되어 있습니다. 그러나 현재 구현은 `varbinary(50)`입니다. 개발자가 `varbinary(50)`를 할당할 경우 이후 릴리스에서 쿠키 반환 크기가 증가하면 응용 프로그램을 변경해야 할 수 있습니다. 이 문제는 사용 중지에 관한 문제는 아니지만 애플리케이션 조정이 유사하기 때문에 이 항목에서 다룹니다. 자세한 내용은 [sp_setapprole&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-setapprole-transact-sql)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 2014에서 지원되지 않는 데이터베이스 엔진 기능](discontinued-database-engine-functionality-in-sql-server-2016.md)  

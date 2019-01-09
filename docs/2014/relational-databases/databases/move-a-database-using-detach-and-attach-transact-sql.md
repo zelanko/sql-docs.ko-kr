@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database attaching [SQL Server]
@@ -18,12 +17,12 @@ ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 44e9b8e44c7a7388fb8e4b2ec0bb36ecc27e125d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 872ab7a5b8b173ad2250542c96be2a22d916409c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152070"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52757525"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>분리 및 연결을 사용하여 데이터베이스 이동(Transact-SQL)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 분리된 데이터베이스를 다른 위치로 이동하고 동일한 서버 인스턴스나 다른 서버 인스턴스에 다시 연결하는 방법에 대해 설명합니다. 하지만 데이터베이스를 이동할 때는 분리 및 연결 작업 대신 계획된 ALTER DATABASE 재배치 프로시저를 사용하는 것이 좋습니다. 자세한 내용은 [Move User Databases](move-user-databases.md)을 참조하세요.  

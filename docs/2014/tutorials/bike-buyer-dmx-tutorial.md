@@ -17,12 +17,12 @@ ms.assetid: 4b634cc1-86dc-42ec-9804-a19292fe8448
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 25ca6a8a5769da023da506c25c858a012b7f7a7c
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
-ms.translationtype: HT
+ms.openlocfilehash: af20e220b4f1c2010606fec0d50e51025c73d31f
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462019"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53366725"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Bike Buyer DMX 자습서
   이 자습서에서는 DMX(Data Mining Extensions) 쿼리 언어를 사용하여 마이닝 모델을 만들고 학습하며 탐색하는 방법을 설명합니다. 이러한 마이닝 모델을 사용하여 고객이 자전거를 구입할 것인지 여부를 결정하는 예측을 만들 수 있습니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "49462019"
   
  DMX(Data Mining Extensions)는 마이닝 모델을 만들고 작업할 때 사용할 수 있는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 제공하는 쿼리 언어입니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 의사 결정 트리 알고리즘에서는 특정 고객이 자전거를 구입할 것인지 여부를 예측하는 데 사용할 수 있는 모델을 만듭니다. 결과 모델에서는 개인 고객이나 고객 테이블을 입력으로 사용할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 클러스터링 알고리즘에서는 공유 특징을 기반으로 고객을 그룹화할 수 있습니다. 이 자습서의 목표는 사용자 지정 애플리케이션에서 사용할 DMX 스크립트를 제공하는 것입니다.  
   
- **자세한 내용은:** [데이터 마이닝 솔루션](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
+ **자세한 내용은 다음을 참조하세요.** [데이터 마이닝 솔루션](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>마이닝 구조 및 마이닝 모델  
  DMX 문을 만들려면 먼저 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 마이닝 모델 생성 시 사용하는 주요 개체를 이해하는 것이 중요합니다. 마이닝 구조는 마이닝 모델이 생성된 데이터 도메인을 정의하는 데이터 구조입니다. 단일 마이닝 구조에 같은 도메인을 공유하는 여러 개의 마이닝 모델이 포함될 수 있습니다. 마이닝 모델은 마이닝 구조로 나타나는 데이터에 마이닝 모델 알고리즘을 적용합니다.  
@@ -80,19 +80,19 @@ ms.locfileid: "49462019"
 ## <a name="what-you-will-learn"></a>학습 내용  
  이 자습서는 다음 단원으로 이루어져 있습니다.  
   
- [1단원: Bike Buyer 마이닝 구조 만들기](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)  
+ [1 단원: Bike Buyer 마이닝 구조 만들기](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)  
  이 단원에서는 `CREATE` 문을 사용하여 마이닝 구조를 만드는 방법에 대해 설명합니다.  
   
  [2단원: Bike Buyer 마이닝 구조에 마이닝 모델 추가](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
  이 단원에서는 `ALTER` 문을 사용하여 마이닝 구조에 마이닝 모델을 추가하는 방법에 대해 설명합니다.  
   
- [3단원: Bike Buyer 마이닝 구조 처리](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
+ [3 단원: Bike Buyer 마이닝 구조 처리](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
  이 단원에서는 `INSERT INTO` 문을 사용하여 마이닝 구조 및 이에 연결된 마이닝 모델을 처리하는 방법에 대해 설명합니다.  
   
- [4단원: Bike Buyer 마이닝 모델 찾아보기](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
+ [4 단원: Bike Buyer 마이닝 모델 찾아보기](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
  이 단원에서는 `SELECT` 문을 사용하여 마이닝 모델의 내용을 탐색하는 방법에 대해 설명합니다.  
   
- [5단원: 예측 쿼리 실행](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
+ [5 단원: 예측 쿼리를 실행합니다.](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
  이 단원에서는 `PREDICTION JOIN` 문을 사용하여 마이닝 모델에 대한 예측을 만드는 방법에 대해 설명합니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -102,7 +102,7 @@ ms.locfileid: "49462019"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)]하십시오 [!INCLUDE[ssASversion10](../includes/ssasversion10-md.md)], [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)], 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 데이터베이스. 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다.  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 공식 예제 데이터베이스를 설치하려면 [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) 페이지에서 설치할 데이터베이스를 선택합니다.  
+-   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 데이터베이스. 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다.  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 공식 예제 데이터베이스를 설치하려면 [Microsoft SQL Sample Databases](https://go.microsoft.com/fwlink/?LinkId=88417) 페이지에서 설치할 데이터베이스를 선택합니다.  
   
 > [!NOTE]  
 >  자습서를 검토할 때는 문서 뷰어 도구 모음에 **다음 항목** 단추 및 **이전 항목** 단추를 추가하는 것이 좋습니다.  

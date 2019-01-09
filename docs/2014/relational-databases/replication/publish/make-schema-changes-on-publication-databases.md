@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], schema changes
@@ -18,15 +17,15 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd2ea10d145e52150d3a34a8f1b668152922ddb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203033"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52815435"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>게시 데이터베이스의 스키마 변경
-  복제는 게시된 개체에 대한 다양한 스키마 변경을 지원합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 게시자에 게시된 개체에 대해 다음 스키마 변경을 수행하면 기본적으로 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자에 변경 내용이 전파됩니다.  
+  복제는 게시된 개체에 대한 다양한 스키마 변경을 지원합니다.  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 게시자에 게시된 개체에 대해 다음 스키마 변경을 수행하면 기본적으로 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자에 변경 내용이 전파됩니다.  
   
 -   ALTER TABLE  
   
@@ -58,7 +57,7 @@ ms.locfileid: "48203033"
   
 -   스키마 변경에는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 설정한 제한 사항이 적용됩니다. 예를 들어 ALTER TABLE을 사용하여 기본 키 열을 변경할 수 없습니다.  
   
--   데이터 형식 매핑은 초기 스냅숏에 대해서만 수행됩니다. 스키마 변경은 이전 버전의 데이터 형식으로 매핑되지 않습니다. 예를 들어 경우 문이 `ALTER TABLE ADD datetime2 column` 에 사용 됩니다 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]로 데이터 형식 변환 되지 않습니다 `nvarchar` 에 대 한 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 구독자입니다. 게시자에서 스키마 변경이 차단되는 경우도 있습니다.  
+-   데이터 형식 매핑은 초기 스냅숏에 대해서만 수행됩니다. 스키마 변경은 이전 버전의 데이터 형식으로 매핑되지 않습니다. 예를 들어 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 `ALTER TABLE ADD datetime2 column` 문을 사용하는 경우 데이터 형식이 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 구독자에 대한 `nvarchar`로 변환되지 않습니다. 게시자에서 스키마 변경이 차단되는 경우도 있습니다.  
   
 -   게시에서 스키마 변경을 전파할 수 있도록 설정하면 게시의 아티클에 대해 관련 스키마 옵션이 어떻게 설정되었는지에 상관없이 스키마 변경이 전파됩니다. 예를 들어 테이블 아티클에 대해 FOREIGN KEY 제약 조건을 복제하지 않도록 선택하고 게시자의 테이블에 외래 키를 추가하는 ALTER TABLE 명령을 실행하면 구독자의 테이블에 외래 키가 추가됩니다. 이를 방지하려면 ALTER TABLE 명령을 실행하기 전에 스키마 변경 전파를 해제합니다.  
   
@@ -157,7 +156,7 @@ ms.locfileid: "48203033"
   
 -   병합 복제에서는 문제를 해결하는 동안 스키마 변경을 건너뛸 수 있는 저장 프로시저를 제공합니다. 자세한 내용은 [sp_markpendingschemachange&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql) 및 [sp_enumeratependingschemachanges&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [ALTER TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [ALTER VIEW&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-view-transact-sql)   
  [ALTER PROCEDURE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   

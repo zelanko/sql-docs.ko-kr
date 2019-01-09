@@ -12,12 +12,12 @@ ms.assetid: b5185c1e-56de-41a8-a9c3-eec663750cde
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 092bc63ac93c58d1a37f7fa52fde4fd9bf1d8486
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 20a59cf2ac94b060c917a4cea2bbbb69dd877120
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212413"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371355"
 ---
 # <a name="contact-creation-using-clr-and-xml"></a>CLR 및 XML을 사용한 연락처 만들기
   SQL Server의 연락처 예제는 기본 AdventureWorks2012 예제 데이터베이스의 맨 위에 추가 기능 계층을 형성하는 몇 가지 유용한 유틸리티를 제공합니다. 첫 번째 유틸리티는 AdventureWorks2012 데이터베이스와 관련이 있는 여러 부류의 사람에 대한 연락처 레코드를 만듭니다. 연락처 정보는 XML을 사용하여 지정하고 C# 기반 또는 VB 저장 프로시저로 전달되어 XML을 만들고 이 XML을 데이터베이스의 적합한 테이블에 배치합니다.  
@@ -25,9 +25,9 @@ ms.locfileid: "48212413"
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 프로젝트를 만들고 실행하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](http://go.microsoft.com/fwlink/?LinkId=31046)에서 무료로 구할 수 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://go.microsoft.com/fwlink/?LinkId=31046)에서 무료로 구할 수 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](http://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
+-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](https://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
   
 -   .NET Framework SDK 2.0 이상 또는 Microsoft Visual Studio 2005 이상. .NET Framework SDK는 무료로 구할 수 있습니다.  
   
@@ -1393,7 +1393,7 @@ GO
 DECLARE @contactID Int;  
 DECLARE @customerID Int;  
   
-EXEC dbo.usp_CreateContact N'<Contact xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Individual>  
+EXEC dbo.usp_CreateContact N'<Contact xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Individual>  
 <Title>Dr.</Title>  
 <FirstName>Kim</FirstName>  
 <LastName>Smith</LastName>  
@@ -1401,7 +1401,7 @@ EXEC dbo.usp_CreateContact N'<Contact xmlns="http://schemas.microsoft.com/sqlser
 <PasswordHash>F1AF7A6028F2FEA29292C09603F1C209BB84B518</PasswordHash>  
 <PasswordSalt>2Hdr7Jc=</PasswordSalt>  
 <Demographics>  
-<IndividualSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/IndividualSurvey">  
+<IndividualSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/IndividualSurvey">  
 <TotalChildren>2</TotalChildren>  
 <NumberChildrenAtHome>1</NumberChildrenAtHome>  
 </IndividualSurvey>  
@@ -1413,7 +1413,7 @@ PRINT 'Individual Contact ID = ' + CAST(@contactID as varchar(10));
 PRINT 'Individual Customer ID = ' + CAST(@customerID as varchar(10));  
   
 EXEC dbo.usp_CreateContact N'  
-<Contact xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Store>  
+<Contact xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Store>  
 <FirstName>Catherine</FirstName>  
 <LastName>Smith</LastName>  
 <EmailAddress>catherine@proseware.com</EmailAddress>  
@@ -1428,7 +1428,7 @@ PRINT 'Store Contact ID = ' + CAST(@contactID as varchar(10));
 PRINT 'Store Customer ID = ' + CAST(@customerID as varchar(10));  
   
 EXEC dbo.usp_CreateContact N'  
-<Contact xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Vendor>  
+<Contact xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Vendor>  
 <FirstName>Amy</FirstName>  
 <LastName>Smith</LastName>  
 <EmailAddress>amy@proseware.com</EmailAddress>  
@@ -1443,7 +1443,7 @@ PRINT 'Vendor Contact ID = ' + CAST(@contactID as varchar(10));
 PRINT 'Vendor Customer ID = ' + CAST(@customerID as varchar(10));  
   
 EXEC dbo.usp_CreateContact N'  
-<Contact xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Employee>  
+<Contact xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactData"><Employee>  
 <FirstName>Ramona</FirstName>  
 <LastName>Smith</LastName>  
 <EmailAddress>ramona@proseware.com</EmailAddress>  

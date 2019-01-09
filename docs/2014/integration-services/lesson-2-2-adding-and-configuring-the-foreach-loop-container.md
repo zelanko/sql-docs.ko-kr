@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9f4227b819597573d51b9720006fe6536f774103
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2aa42ac9ab25c9765aac2afa10abdd50f2df4cb7
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197983"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53360120"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>2단계: Foreach 루프 컨테이너 추가 및 구성
   이 태스크에서는 플랫 파일 폴더를 통해 루핑하고 1단원에서 사용한 것과 같은 데이터 흐름 변환을 각 플랫 파일에 적용합니다. 제어 흐름에 Foreach 루프 컨테이너를 추가하고 구성하여 이 작업을 수행합니다.  
@@ -25,9 +24,9 @@ ms.locfileid: "48197983"
   
  현재 1단원에서 만든 플랫 파일 연결 관리자는 특정 플랫 파일 하나에만 연결합니다. 폴더의 각 플랫 파일에 반복하여 연결하려면 다음과 같이 Foreach 루프 컨테이너와 플랫 파일 연결 관리자를 둘 다 구성해야 합니다.  
   
--   **Foreach 루프 컨테이너:** 컨테이너의 열거된 값을 사용자 정의 패키지 변수에 매핑합니다. 그러면 컨테이너가 이 사용자 정의 변수를 사용하여 플랫 파일 연결 관리자의 `ConnectionString` 속성을 수정하고 폴더의 각 플랫 파일에 반복하여 연결합니다.  
+-   **Foreach 루프 컨테이너:** 컨테이너의 열거 된 값을 사용자 정의 패키지 변수에 매핑합니다. 그러면 컨테이너가 이 사용자 정의 변수를 사용하여 플랫 파일 연결 관리자의 `ConnectionString` 속성을 수정하고 폴더의 각 플랫 파일에 반복하여 연결합니다.  
   
--   **플랫 파일 연결 관리자:** 채울 연결 관리자의 사용자 정의 변수를 사용 하 여 1 단원에서에서 만든 연결 관리자 수정 `ConnectionString` 속성입니다.  
+-   **플랫 파일 연결 관리자:** 연결 관리자를 채우는 데는 사용자 정의 변수를 사용 하 여 1 단원에서에서 만든 연결 관리자 수정 `ConnectionString` 속성입니다.  
   
  이 태스크의 절차에서는 Foreach 루프 컨테이너를 만들고 수정하여 사용자 정의 패키지 변수를 사용하고 루프에 데이터 흐름 작업을 추가하는 방법과 플랫 파일 연결 관리자를 수정하여 다음 태스크에서 사용자 정의 변수를 사용하는 방법에 대해 설명합니다.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "48197983"
   
      이 예제 데이터는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 단원 패키지에 포함되어 있습니다. 예제 데이터 및 단원 패키지를 다운로드하려면 다음을 수행합니다.  
   
-    1.  [Integration Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=275027)로 이동합니다.  
+    1.   [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=275027)로 이동합니다.  
   
     2.  **DOWNLOADS** 탭을 클릭합니다.  
   
@@ -90,7 +89,7 @@ ms.locfileid: "48197983"
 -   끌기 합니다 **Extract Sample Currency Data** 바뀐 Foreach 루프 컨테이너에 데이터 흐름 태스크 `Foreach File in Folder`합니다.  
   
 ## <a name="next-lesson-task"></a>다음 단원 태스크  
- [3단계: 플랫 파일 연결 관리자 수정](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+ [3 단계: 플랫 파일 연결 관리자 수정](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [Foreach 루프 컨테이너 구성](control-flow/foreach-loop-container.md)   

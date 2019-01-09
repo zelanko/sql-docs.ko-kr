@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b3d45b5f1e3dc47aa47a4478cb8408626ad73de3
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: HT
+ms.openlocfilehash: 7482b4a2ac81541cdd9f6317d7f76291e34aa162
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148148"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52420654"
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>IIS 8.0에서 Analysis Services에 대 한 HTTP 액세스 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,12 +91,12 @@ ms.locfileid: "50148148"
 > [!NOTE]  
 >  원격 Analysis Services 서버에 대한 클라이언트 연결을 허용하도록 Windows 방화벽에서 포트를 차단 해제해야 합니다. 자세한 내용은 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   
-##  <a name="bkmk_copy"></a> 1단계: 웹 서버의 폴더로 MSMDPUMP 파일 복사  
+##  <a name="bkmk_copy"></a> 1 단계: 웹 서버의 폴더로 MSMDPUMP 파일 복사  
  사용자가 만드는 각 HTTP 엔드포인트에는 고유 MSMDPUMP 파일 집합이 있어야 합니다. 이 단계에서는 Analysis Services 프로그램 폴더에서 새 가상 디렉터리 폴더(IIS를 실행하는 컴퓨터의 파일 시스템에 만드는 폴더)로 MSMDPUMP 실행 파일, 구성 파일 및 리소스 폴더를 복사합니다.  
   
  드라이브는 NTFS 파일 시스템용으로 포맷되어야 합니다. 사용자가 만든 폴더의 경로에 공백을 포함해서는 안 됩니다.  
   
-1.  다음 파일을 복사 \<드라이브 >: SQL Server \Program Files\Microsoft\\< 인스턴스\>\OLAP\bin\isapi: MSMDPUMP 합니다. DLL에서 MSMDPUMP입니다. INI, 파일과 Resources 폴더입니다.  
+1.  다음 파일을 복사 \<드라이브 >: SQL Server \Program Files\Microsoft\\< 인스턴스\>\OLAP\bin\isapi: MSMDPUMP.DLL, MSMDPUMP.INI 및 Resources 폴더가 있는지 확인합니다.  
   
      ![MSMDPUMP 파일의 폴더 구조](../../analysis-services/instances/media/ssas-httpaccess-msmdpumpfilecopy.PNG "MSMDPUMP 파일의 폴더 구조")  
   
@@ -112,7 +112,7 @@ ms.locfileid: "50148148"
   
     -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
-##  <a name="bkmk_appPool"></a> 2단계: IIS에 응용 프로그램 풀 및 가상 디렉터리 만들기  
+##  <a name="bkmk_appPool"></a> 2 단계: IIS에 애플리케이션 풀 및 가상 디렉터리 만들기  
  다음으로 애플리케이션 풀과 PUMP에 대한 엔드포인트를 만듭니다.  
   
 #### <a name="create-an-application-pool"></a>애플리케이션 풀 만들기  
@@ -148,7 +148,7 @@ ms.locfileid: "50148148"
 > [!NOTE]  
 >  이 지침의 이전 버전에는 가상 디렉터리를 만들기 위한 단계가 포함되어 있습니다. 이 단계 더 이상 필요하지 않습니다.  
   
-##  <a name="bkmk_auth"></a> 3단계: IIS 인증 구성 및 확장 추가  
+##  <a name="bkmk_auth"></a> 3 단계: IIS 인증 구성 및 확장 추가  
  이 단계에서는 방금 만든 SSAS 가상 디렉터리를 추가로 구성합니다. 인증 방법을 지정한 후 스크립트 맵을 추가합니다. HTTP를 통해 Analysis Services에 대해 지원되는 인증 방법은 다음과 같습니다.  
   
 -   Windows 인증(Kerberos 또는 NTLM)  
@@ -165,9 +165,9 @@ ms.locfileid: "50148148"
   
  **익명 인증** 은 구성의 용이성 때문에 Analysis Services에 대한 HTTP 연결의 유효성을 신속하게 검사할 수 있어 주로 초기 테스트 중에 사용됩니다. 몇 가지 단계만으로 고유 사용자 계정을 ID로 할당하고 Analysis Services에서 해당 계정 권한을 부여하고 계정을 사용하여 클라이언트 애플리케이션의 데이터 액세스를 확인한 다음 테스트가 완료되면 익명 인증을 사용하지 않도록 설정할 수 있습니다.  
   
- 사용자에게 Windows 사용자 계정이 없으면 프로덕션 환경에서 익명 인증을 사용할 수도 있지만, [익명 인증 사용(IIS 7)](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx)문서에서 설명하는 대로 호스트 시스템에서 권한을 잠그는 방식으로 모범 사례를 따르는 것이 좋습니다. 계정 액세스 수준을 더 줄이려면 상위 웹 사이트가 아닌 가상 디렉터리에 인증을 설정해야 합니다.  
+ 사용자가 Windows 사용자 계정을 가지고 있지 않은 경우 프로덕션 환경에서 익명 인증을 사용할 수도 있지만 [익명 인증 (IIS 7)을 사용 하도록 설정](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx)합니다. 계정 액세스 수준을 더 줄이려면 상위 웹 사이트가 아닌 가상 디렉터리에 인증을 설정해야 합니다.  
   
- 익명을 사용하도록 설정되어 있으면 HTTP 엔드포인트에 대한 사용자 연결이 익명 사용자로 연결하도록 허용됩니다. 개별 사용자 연결을 감사할 수 없으며 사용자 ID를 사용하여 모델에서 데이터를 선택할 수도 없습니다. 익명을 사용하면 모델 디자인에서 데이터 새로 고침 및 액세스에 이르기까지 모든 요소에 영향을 줍니다. 그러나 사용자가 시작할 수 있는 Windows 사용자 로그인을 가지고 있지 않으면 익명 계정을 사용할 수밖에 없습니다.  
+ 익명을 사용하도록 설정되어 있으면 HTTP 엔드포인트에 대한 사용자 연결이 익명 사용자로 연결하도록 허용됩니다. 사용자 id를 사용 하 여 모델에서 데이터를 선택 하거나 개별 사용자 연결을 감사할 수 없습니다. 익명을 사용하면 모델 디자인에서 데이터 새로 고침 및 액세스에 이르기까지 모든 요소에 영향을 줍니다. 그러나 사용자가 시작할 수 있는 Windows 사용자 로그인을 가지고 있지 않으면 익명 계정을 사용할 수밖에 없습니다.  
   
 #### <a name="set-the-authentication-type-and-add-a-script-map"></a>인증 유형 설정 및 스크립트 맵 추가  
   
@@ -188,7 +188,7 @@ ms.locfileid: "50148148"
   
 5.  Windows 인증 또는 기본 인증을 사용하는 경우 **익명 인증** 을 사용하지 않도록 설정합니다. 익명 인증을 사용하도록 설정한 경우, 다른 인증 방법도 사용하도록 설정했더라도 IIS는 항상 익명 인증을 가장 먼저 사용합니다.  
   
-     익명 인증에서 펌프(msmdpump.dll)는 익명 사용자에 대해 설정한 사용자 계정으로 실행됩니다. IIS에 연결하는 사용자와 Analysis Services에 연결하는 사용자 간에 차이가 없습니다. 기본적으로 IIS는 IUSR 계정을 사용하지만 이 계정을 네트워크 권한을 가진 도메인 사용자 계정으로 변경할 수 있습니다. IIS와 Analysis Services가 서로 다른 컴퓨터에 있는 경우 이 기능이 필요합니다.  
+     익명 인증에서 펌프(msmdpump.dll)는 익명 사용자에 대해 설정한 사용자 계정으로 실행됩니다. IIS에 연결하는 사용자와 Analysis Services에 연결하는 사용자 간에 차이가 없습니다. 기본적으로 IIS는 IUSR 계정을 사용하지만 이 계정을 네트워크 권한을 가진 도메인 사용자 계정으로 변경할 수 있습니다. IIS와 Analysis Services가 서로 다른 컴퓨터에 경우에이 기능을 필요 합니다.  
   
      익명 인증에 대한 자격 증명을 구성하는 방법에 대한 지침은 [익명 인증](http://www.iis.net/configreference/system.webserver/security/authentication/anonymousauthentication)을 참조하세요.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "50148148"
   
      ![ISAPI 확장을 추가 하려면 확인의 스크린 샷](../../analysis-services/instances/media/ssas-httpaccess-isapiprompt.png "ISAPI 확장을 추가 하려면 확인의 스크린 샷")  
   
-##  <a name="bkmk_edit"></a> 4단계: MSMDPUMP.INI 파일을 편집하여 대상 서버 설정  
+##  <a name="bkmk_edit"></a> 4 단계: MSMDPUMP.INI 파일을 편집하여 대상 서버 설정  
  MSMDPUMP.INI 파일은 MSMDPUMP.DLL이 연결하는 Analysis Services 인스턴스를 지정합니다. 이 인스턴스는 기본 인스턴스 또는 명명된 인스턴스로 로컬 또는 원격으로 설치할 수 있습니다.  
   
  C:\inetpub\wwwroot\OLAP 폴더에 있는 msmdpump.ini 파일을 열어 파일의 내용을 살펴봅니다. 이 파일은 다음과 같아야 합니다.  
@@ -242,7 +242,7 @@ ms.locfileid: "50148148"
   
  사용 권한 설정에 대한 자세한 내용은 [개체 및 작업에 대한 액세스 승인&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)(영문)을 참조하세요.  
   
-##  <a name="bkmk_test"></a> 6단계: 구성 테스트  
+##  <a name="bkmk_test"></a> 6 단계: 구성 테스트  
  MSMDPUMP의 연결 문자열 구문은 MSMDPUMP.dll 파일에 대한 URL입니다.  
   
  웹 응용 프로그램이 고정된 포트에서 수신 하는 경우 서버 이름 또는 IP 주소에 포트 번호를 추가 (예를 들어 `http://my-web-srv01:8080/OLAP/msmdpump.dll` 또는 `http://123.456.789.012:8080/OLAP/msmdpump.dll`합니다.  
@@ -251,7 +251,7 @@ ms.locfileid: "50148148"
   
  **Internet Explorer를 사용하여 연결 문제 해결**  
   
- 이 오류와 함께 종료 되는 연결 요청을 제공 하지 않을 수 있습니다 이동 하는 데는 크게: "연결 연결할 수 없습니다 '\<서버 이름 >', 또는 분석 서비스는 서버에서 실행 중 아님"입니다.  
+ 이 오류와 함께 종료 되는 연결 요청을 제공 하지 않을 수 있습니다 이동 하는 데는 크게:  "연결 연결할 수 없습니다 '\<서버 이름 >', 또는 분석 서비스는 서버에서 실행 중 아님"입니다.  
   
  더 자세한 오류 정보를 확인하려면 다음을 수행합니다.  
   

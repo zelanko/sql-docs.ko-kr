@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: profiler
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server], traces
@@ -15,12 +14,12 @@ ms.assetid: 0fd63573-3b35-4f67-9e1e-ed9aabee11a8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb6b2a2d579391fd5c8849e4251864da69e3b543
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 851fd1c1f3249a36af6de66aaa374088fab1c1ea
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097813"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52802065"
 ---
 # <a name="filter-events-in-a-trace-sql-server-profiler"></a>추적에서의 이벤트 필터링(SQL Server Profiler)
   필터가 설정되면 추적에서 수집하는 이벤트가 제한됩니다. 필터가 설정되어 있지 않으면 선택된 이벤트 클래스의 모든 이벤트가 추적 출력에서 반환됩니다. 반드시 추적에 대한 필터를 설정해야 하는 것은 아닙니다. 그러나 필터를 설정하면 추적하는 동안 발생하는 오버헤드가 최소화됩니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "48097813"
   
      **이벤트 선택** 탭에는 표 형태 컨트롤이 있습니다. 표 형태 컨트롤은 추적 가능한 각 이벤트 클래스가 들어 있는 테이블입니다. 테이블에는 각 이벤트 클래스에 대한 행이 하나씩 포함되어 있습니다. 이벤트 클래스는 사용자가 연결된 서버의 유형 및 버전에 따라 약간 다를 수 있습니다. 이벤트 클래스는 표의 **이벤트**열에서 식별되며 이벤트 범주별로 그룹화됩니다. 나머지 열은 각 이벤트 클래스에 대해 반환할 수 있는 데이터 열을 나열합니다.  
   
-2.  **열 필터**를 클릭합니다.  
+2.   **열 필터**를 클릭합니다.  
   
      **필터 편집**대화 상자가 나타납니다. **필터 편집**대화 상자에는 추적에서 이벤트를 필터링하는 데 사용할 수 있는 비교 연산자 목록이 있습니다.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48097813"
   
          -또는-  
   
-    -   **일반 옵션** 대화 상자에서 **날짜 및 시간 값 표시에 국가별 설정 사용** 이 선택되어 있어야 합니다. **일반 옵션** 대화 상자를 보려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **도구** 메뉴에서 **옵션**을 클릭합니다.  
+    -   **일반 옵션** 대화 상자에서 **날짜 및 시간 값 표시에 국가별 설정 사용** 이 선택되어 있어야 합니다.  **일반 옵션** 대화 상자를 보려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **도구** 메뉴에서 **옵션**을 클릭합니다.  
   
          -그리고-  
   

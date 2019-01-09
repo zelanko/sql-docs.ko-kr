@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0a1091e56ee505731fb9ce0d683975caa9c3d29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: a1dd2e117207f3737f54e2cd0269c51918a199f2
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193193"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823487"
 ---
 # <a name="sql-trace"></a>SQL 추적
   SQL 추적에서는 이벤트가 추적 정의에 나열된 이벤트 클래스의 인스턴스인 경우 수집됩니다. 이러한 이벤트는 추적 외부로 필터링하고 대상에 대해 쿼리할 수 있습니다. 대상은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 관리하는 애플리케이션의 추적 정보를 사용할 수 있는 파일 또는 SMO( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]관리 개체)일 수 있습니다.  
@@ -74,8 +73,8 @@ ms.locfileid: "48193193"
 |데이터 열|열 번호|Description|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName** <sup>1</sup>|10|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 이름이 아니라 애플리케이션에서 전달한 값으로 채워집니다.|  
-|**BigintData1**|52|값 (`bigint` 데이터 형식)를 추적에 지정 된 이벤트 클래스에 따라 다릅니다.|  
-|**BigintData2**|53|값 (`bigint` 데이터 형식)를 추적에 지정 된 이벤트 클래스에 따라 다릅니다.|  
+|**BigintData1**|52|추적에 지정된 이벤트 클래스에 따라 달라지는 값(`bigint` 데이터 형식)입니다.|  
+|**BigintData2**|53|추적에 지정된 이벤트 클래스에 따라 달라지는 값(`bigint` 데이터 형식)입니다.|  
 |**Binary Data**|2|추적에서 캡처된 이벤트 클래스에 따라 달라지는 이진 값입니다.|  
 |**ClientProcessID** <sup>1</sup>|9|클라이언트 애플리케이션이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|  
 |**ColumnPermissions**|44|열 사용 권한이 설정되어 있는지 나타냅니다. 문 텍스트를 구문 분석하여 어떤 권한이 어떤 열에 적용되었는지 알 수 있습니다.|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB, linked servers
@@ -20,12 +19,12 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa47617e59e750fba5ea3d985781ca5510eb455b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9be5a177978adfdfae364784ff8d6c5436f54b0d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193163"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819345"
 ---
 # <a name="linked-servers-database-engine"></a>연결된 서버(데이터베이스 엔진)
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스 외부의 OLE DB 데이터 원본에 대해 명령을 실행할 수 있도록 연결된 서버를 구성합니다. 일반적으로 연결된 서버는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 다른 인스턴스 또는 Oracle과 같은 다른 데이터베이스 제품에 있는 테이블이 포함된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]문을 실행할 수 있도록 구성됩니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Access 및 Excel을 포함한 많은 유형의 OLE DB 데이터 원본을 연결된 서버로 구성할 수 있습니다. 연결된 서버에는 다음과 같은 이점이 있습니다.  
@@ -47,7 +46,7 @@ ms.locfileid: "48193163"
   
  *OLE DB Provider* 는 특정 데이터 원본과 상호 작용하고 관리하는 DLL입니다. *OLE DB 데이터 원본* 은 OLE DB를 통해 액세스할 수 있는 특정 데이터베이스를 식별합니다. 연결된 서버 정의를 통해 쿼리되는 데이터 원본은 일반적으로 데이터베이스이지만 OLE DB Provider에는 여러 파일 및 파일 형식이 존재합니다. 여기에는 텍스트 파일, 스프레드시트 데이터 및 전체 텍스트 내용의 검색 결과가 포함됩니다.  
   
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자(PROGID: SQLNCLI11)는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 공식적인 OLE DB 공급자입니다.  
+ 합니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 (PROGID: SQLNCLI11)는 공식 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용 OLE DB Provider입니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 분산 쿼리는 필수 OLE DB 인터페이스를 구현하는 모든 OLE DB Provider에서 실행되도록 디자인되었습니다. 그러나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB Provider와 다른 특정 공급자에 대해서만 테스트되었습니다.  

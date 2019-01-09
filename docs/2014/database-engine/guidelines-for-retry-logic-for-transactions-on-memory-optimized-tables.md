@@ -10,12 +10,12 @@ ms.assetid: f2a35c37-4449-49ee-8bba-928028f1de66
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 663c9a407019028390a8595354087a0c07cafce0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f4c4244b2d4c9bd785202805312f64194c73b5b
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143594"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52531674"
 ---
 # <a name="guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 트랜잭션에 대한 재시도 논리 지침
   메모리 최적화 테이블에 액세스하는 트랜잭션에서 발생하는 오류 조건이 있습니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "48143594"
 CREATE PROCEDURE usp_my_procedure @param1 type1, @param2 type2, ...  
 AS  
 BEGIN  
-  -- number of retries – tune based on the workload  
+  -- number of retries - tune based on the workload  
   DECLARE @retry INT = 10  
   
   WHILE (@retry > 0)  
@@ -91,7 +91,7 @@ BEGIN
       --       or  
   
       -- BEGIN TRANSACTION  
-      --   …  
+      --   ...  
       -- COMMIT TRANSACTION  
   
       SET @retry = 0  
