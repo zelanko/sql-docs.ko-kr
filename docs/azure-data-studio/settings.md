@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio 사용자와 작업 영역 설정 | Microsoft Docs
-description: Azure Data Studio 사용자 및 작업 영역 설정을 수정 하는 방법입니다.
-ms.custom: tools|sos
+title: 사용자 및 작업 영역 설정
+titleSuffix: Azure Data Studio
+description: 사용자 및 작업 영역 설정을 수정 하 여 Azure Data Studio를 사용자 지정 하는 방법입니다.
+ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,14 +11,14 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 34eea8db6295903ccdd99d7d73b143fb6fed02ec
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 6bf09159c8b7384a835a06bfafe744ea2f90f0c2
+ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49355954"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53030507"
 ---
-# <a name="user-and-workspace-settings"></a>사용자 및 작업 영역 설정
+# <a name="modify-user-and-workspace-settings"></a>사용자 및 작업 영역 설정 수정
 
 구성 하는 것이 쉽습니다 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 설정을 통해 원하는 대로 합니다. 거의 모든 부분 [!INCLUDE[name-sos](../includes/name-sos-short.md)]의 편집기, 사용자 인터페이스 및 기능 동작 옵션이 수정할 수 있습니다.
 
@@ -30,7 +31,7 @@ ms.locfileid: "49355954"
 
 메뉴 명령 **파일** > **기본 설정** > **설정** (**코드**  >  **기본 설정** > **설정** Mac에서) 사용자 및 작업 영역 설정을 구성 하려면 진입점을 제공 합니다. 기본 설정 목록으로 제공 됩니다. 적절 한 변경 하려는 모든 설정을 복사 `settings.json` 파일입니다. 오른쪽에 있는 탭을 통해 사용자와 작업 영역 설정 파일 간에 빠르게 전환할 수 있습니다.
 
-사용자 및 작업 영역 설정을 열 수도 있습니다는 **명령 팔레트** (**Ctrl + Shift + P**) 사용 하 여 **기본 설정: 사용자 설정을 엽니다** 고  **기본 설정: 작업 영역 설정 열기** 바로 가기 키를 사용 하거나 (**Ctrl +,**).
+사용자 및 작업 영역 설정을 열 수도 있습니다는 **명령 팔레트** (**Ctrl + Shift + P**) 사용 하 여 **기본 설정: 사용자 설정 열기** 고 **기본 설정: 작업 영역 설정을 엽니다** 바로 가기 키를 사용 하거나 (**Ctrl +,**).
 
 다음 예제에서는 편집기에서 줄 번호를 사용 하지 않도록 설정 하 고 자동으로 들여쓰기 됩니다 코드 줄을 구성 합니다.
 
@@ -38,7 +39,7 @@ ms.locfileid: "49355954"
 
 설정 변경 하 여 다시 로드 됩니다 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 수정 된 후 `settings.json` 파일이 저장 됩니다.
 
->**참고:** 작업 영역 설정에서 팀 프로젝트 관련 설정을 공유 하는 데 유용 합니다.
+>**참고:** 작업 영역 설정을 팀에서 프로젝트 관련 설정을 공유 하는 데 유용 합니다.
 
 ## <a name="settings-file-locations"></a>설정 파일 위치
 

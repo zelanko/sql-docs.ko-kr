@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 01/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - SQL10.REP.CONFIGWEBSYNCWIZARD.SUBTYPE.F1
@@ -24,12 +23,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49f3c4a66c38b339c87b79a30d42bf643f03d730
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112753"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52782845"
 ---
 # <a name="configure-web-synchronization"></a>웹 동기화 구성
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 병합 복제를 위한 웹 동기화 옵션을 사용하면 인터넷에서 HTTPS 프로토콜을 사용하여 데이터를 복제할 수 있습니다. 웹 동기화를 사용하려면 먼저 다음 구성 동작을 수행해야 합니다.  
@@ -125,7 +124,7 @@ ms.locfileid: "48112753"
   
 -   많은 양의 데이터를 복제하는 경우 병합 에이전트 일괄 처리 크기를 조정해야 합니다.  
   
- 병합 복제를 위한 일괄 처리 크기는 아티클 단위의 변경 내용 컬렉션인 *세대*로 측정됩니다. 일괄 처리에서 생성의 수를 사용 하 여 지정 된-`DownloadGenerationsPerBatch` 및 –`UploadGenerationsPerBatch` 병합 에이전트의 매개 변수입니다. 자세한 내용은 [Replication Merge Agent](agents/replication-merge-agent.md)을(를) 참조하세요.  
+ 병합 복제를 위한 일괄 처리 크기는 아티클 단위의 변경 내용 컬렉션인 *세대*로 측정됩니다. 일괄 처리에서 생성의 수를 사용 하 여 지정 합니다`DownloadGenerationsPerBatch` 및-`UploadGenerationsPerBatch` 병합 에이전트의 매개 변수입니다. 자세한 내용은 [Replication Merge Agent](agents/replication-merge-agent.md)을 참조하세요.  
   
  데이터의 양이 많은 경우 각 일괄 처리 매개 변수에 작은 수를 지정하십시오. 10부터 시작한 다음 애플리케이션 요구 사항과 성능에 따라 조정하는 것이 좋습니다. 일반적으로 이러한 매개 변수는 에이전트 프로필에 지정됩니다. 프로필에 대한 자세한 내용은 [Replication Agent Profiles](agents/replication-agent-profiles.md)을 참조하십시오.  
   

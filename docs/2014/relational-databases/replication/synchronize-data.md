@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - synchronization [SQL Server replication], about synchronization
@@ -22,12 +21,12 @@ ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4c417fb90dd4467fe6fb79ea9bfaf812c414326d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: 6e367cc0a02e446bf915c01e5a3d846ba02dcc8b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128673"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781945"
 ---
 # <a name="synchronize-data"></a>데이터 동기화
   데이터 동기화란 초기 스냅숏이 구독자에 적용된 후 게시자와 구독자 간에 데이터 및 스키마 변경 내용이 전파되는 프로세스를 말합니다. 동기화는 다음과 같은 방식으로 발생할 수 있습니다.  
@@ -69,7 +68,7 @@ ms.locfileid: "48128673"
   
 -   비즈니스 논리 처리기는 병합 복제에 대해 지원됩니다. 비즈니스 논리 처리기 프레임워크를 사용하면 병합 동기화 과정 동안 호출되는 관리 코드 어셈블리를 작성할 수 있습니다. 이 어셈블리에는 동기화 중 데이터 변경, 충돌, 오류 등의 여러 상황에 응답할 수 있는 비즈니스 논리가 포함되어 있습니다. 자세한 내용은 [병합 동기화 중 비즈니스 논리 실행](merge/execute-business-logic-during-merge-synchronization.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [병합 복제 충돌 감지 및 해결](merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)  
   
   

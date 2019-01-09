@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], alternate folder locations
@@ -15,12 +14,12 @@ ms.assetid: 437553b0-19df-4522-8f27-06b5bc747c69
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: adcf3258d01d8c6a25a35ae5f802c0a475a6e7bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.openlocfilehash: ff65f1f4d5042e3b7c401a47e7c9df795dd681b4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133685"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777870"
 ---
 # <a name="alternate-snapshot-folder-locations"></a>대체 스냅숏 폴더 위치
   대체 스냅숏 위치를 사용하면 기본 위치가 아닌 위치(일반적으로 배포자에 위치)에 스냅숏 파일을 저장할 수 있습니다. 대체 위치는 다른 서버, 다른 네트워크 드라이브 또는 이동식 미디어(CD-ROM, 이동식 디스크)가 될 수 있습니다.  
@@ -39,9 +38,9 @@ ms.locfileid: "48133685"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [대체 스냅숏 폴더 위치 지정&#40;SQL Server Management Studio&#41;](publish/specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md) 
   
--   복제 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로그래밍: [스냅숏 속성 구성&#40;복제 TRANSACT-SQL 프로그래밍&#41;](publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
+-   복제 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로그래밍: [스냅숏 속성 구성&#40;복제 Transact-SQL 프로그래밍&#41;](publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [스냅숏으로 구독 초기화](initialize-a-subscription-with-a-snapshot.md)   
  [스냅숏 옵션](snapshot-options.md)  
   

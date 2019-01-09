@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - conflict resolution [SQL Server replication], queued updating subscriptions
@@ -17,12 +16,12 @@ ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46d54056a60b2059bed038ddb8de3c83941ff38c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1c07d35024358961b1d438d6a0b53cc764bbc479
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085644"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52781235"
 ---
 # <a name="queued-updating-conflict-detection-and-resolution"></a>Queued Updating Conflict Detection and Resolution
   지연 업데이트 구독으로 여러 위치에서 같은 데이터를 수정할 수 있기 때문에 데이터를 게시자에 동기화할 때 충돌이 발생할 수 있습니다. 복제는 변경 내용이 게시자와 동기화될 때 충돌을 감지하고 게시를 만들 때 선택한 해결 정책을 사용하여 이러한 충돌을 해결합니다. 다음과 같은 두 가지 충돌이 일어날 수 있습니다.  

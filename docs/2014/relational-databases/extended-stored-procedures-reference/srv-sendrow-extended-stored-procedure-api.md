@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_sendrow
@@ -22,12 +20,12 @@ ms.assetid: a08f608a-10e6-4bff-9b48-0d02e8026cdb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 02ef251faf8e19e725b586da85de1c09a1b46f6b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: f39355222b491be27cc1b914401dcc459151e4bc
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186790"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53371385"
 ---
 # <a name="srvsendrow-extended-stored-procedure-api"></a>srv_sendrow(확장 저장 프로시저 API)
     
@@ -62,7 +60,7 @@ srvproc
 >  확장 저장 프로시저 API를 통해서는 계산 행을 클라이언트로 보낼 수 없습니다. 또한 `ntext`, `text` 또는 `image` 데이터가 있는 행을 클라이언트로 보내는 경우 텍스트 포인터와 텍스트 타임스탬프는 제외됩니다.  
   
 > [!IMPORTANT]  
->  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)를 참조하십시오.  
+>  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)를 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
  [srv_describe(확장 저장 프로시저 API)](srv-describe-extended-stored-procedure-api.md)  
