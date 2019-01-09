@@ -1,6 +1,6 @@
 ---
-title: 단원 1 탐색 및 R 및 T-SQL (SQL Server Machine Learning)를 사용 하 여 데이터 시각화 | Microsoft Docs
-description: SQL Server에 R을 포함 하는 방법을 보여 주는 자습서 저장 프로시저 및 T-SQL 함수
+title: 단원 1 탐색 및 R 및 T-SQL-SQL Server Machine Learning을 사용 하 여 데이터 시각화
+description: 탐색 및 R 함수를 사용 하 여 SQL Server 데이터를 시각화 하는 방법을 보여주는 자습서입니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/29/2018
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f1ed29dec28ade852a58980eb236a251fd072afa
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 36a904eeb4c7cde7d3a5356aff2029698e91f059
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032220"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645502"
 ---
-# <a name="lesson-1-explore-and-visualize-the-data"></a>1 단원: 데이터 탐색 및 시각화를
+# <a name="lesson-1-explore-and-visualize-the-data"></a>1단원: 데이터 탐색 및 시각화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 SQL Server에서 R을 사용 하는 방법에 대 한 SQL 개발자를 위한 자습서의 일부입니다.
@@ -38,7 +38,7 @@ ms.locfileid: "51032220"
 
 **택시 식별자**
   
--   _medallion_ 열은 택시의 고유 ID 번호를 나타냅니다.
+-   합니다 _medallion_ 열 택시의 고유 id 번호를 나타냅니다.
   
 -   _heck\_license_ 열은 택시 운전면허 번호를 포함합니다(익명으로 처리).
   
@@ -48,7 +48,7 @@ ms.locfileid: "51032220"
   
 -   각 요금 레코드에는 지불 유형, 총 지불 금액, 팁 금액 등의 지불 정보가 포함됩니다.
   
--   마지막 세 열은 다양한 Machine Learning 작업에 사용할 수 있습니다. _tip\_amount_ 열은 연속적인 숫자 값을 포함하며 회귀 분석의 레이블 열로 사용할 수 있습니다.  _tipped_ 열은 예 / 아니오 값만 있고 이진 분류에 사용됩니다. _tip\_class_ 열은 여러 개의 **클래스** 레이블을 가지므로 다중 클래스 분류 작업의 레이블로 사용할 수 있습니다.
+-   마지막 세 열은 다양한 Machine Learning 작업에 사용할 수 있습니다. _tip\_amount_ 열은 연속적인 숫자 값을 포함하며 회귀 분석의 레이블 열로 사용할 수 있습니다.  _tipped_ 열은 예 / 아니오 값만 있고 이진 분류에 사용됩니다.  _tip\_class_ 열은 여러 개의 **클래스** 레이블을 가지므로 다중 클래스 분류 작업의 레이블로 사용할 수 있습니다.
   
     이 연습에서는 이진 분류 작업만 보여 주지만, 다른 두 가지 Machine Learning 작업인 회귀 및 다중 클래스 분류 모델도 구축해 보세요.
   
@@ -67,7 +67,7 @@ ms.locfileid: "51032220"
 
 2. 히스토그램을 표시 하는 저장된 프로시저를 만들려면 다음 스크립트를 붙여 넣습니다. 이 예제에서는 이름이 **RPlotRxHistogram*합니다.
 
-    ```SQL
+    ```sql
     CREATE PROCEDURE [dbo].[RxPlotHistogram]
     AS
     BEGIN
@@ -108,7 +108,7 @@ ms.locfileid: "51032220"
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 다음 문을 실행합니다.
   
-    ```SQL
+    ```sql
     EXEC [dbo].[RxPlotHistogram]
     ```
   
@@ -119,7 +119,7 @@ ms.locfileid: "51032220"
   
 2.  PowerShell 명령 프롬프트를 열고 적절 한 인스턴스 이름, 데이터베이스 이름, 사용자 이름 및 자격 증명을 인수로 제공 하 고 다음 명령을 실행 합니다. Windows id를 사용 하는 바꿀 수 있습니다 **-U** 하 고 **-P** 사용 하 여 **-T**합니다.
   
-     ```text
+     ```powershell
      bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
      ```
 
@@ -134,7 +134,7 @@ ms.locfileid: "51032220"
   
     -   나중에 다시 사용하기 위해 출력 매개 변수를 저장하려는 경우 **Y** 를 입력합니다.
   
-    ```
+    ```powershell
     Enter the file storage type of field plot [varbinary(max)]: 
     Enter prefix-length of field plot [8]: 0
     Enter length of field plot [0]:
@@ -146,7 +146,7 @@ ms.locfileid: "51032220"
   
     **결과**
     
-    ```
+    ```powershell
     Starting copy...
     1 rows copied.
     Network packet size (bytes): 4096
@@ -170,7 +170,7 @@ ms.locfileid: "51032220"
 
 2. 히스토그램을 표시 하는 저장된 프로시저를 만들려면 다음 스크립트를 붙여 넣습니다. 이 예제에서는 이름이 **RPlotHist** 합니다.
   
-    ```SQL
+    ```sql
     CREATE PROCEDURE [dbo].[RPlotHist]  
     AS  
     BEGIN  
@@ -244,13 +244,13 @@ ms.locfileid: "51032220"
 
 JPEG 및 PDF 파일 형식은 이진 그리려는 데이터를 내보내려면 다음 문을 실행 합니다.
 
-```SQL
+```sql
 EXEC RPlotHist
 ```
 
 **결과**
     
-```
+```sql
 STDOUT message(s) from external script:
 [1] Creating output plot files:[1] C:\temp\plots\rHistogram_Tipped_18887f6265d4.jpg[1] 
 
@@ -279,7 +279,7 @@ C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
 
 ## <a name="next-lesson"></a>다음 단원
 
-[2 단원: T-SQL을 사용 하 여 데이터 기능 만들기](sqldev-create-data-features-using-t-sql.md)
+[2단원: T-SQL을 사용 하 여 데이터 기능 만들기](sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>이전 단원
 

@@ -20,16 +20,16 @@ ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 146967ebc31d5e7d8176d37ee5b8b0b97b6c0674
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7b7e5141a465249c818b50466b34a8155adc1d6
+ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769497"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52540810"
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll 함수(SQLFetchScroll Function)
 **규칙**  
- 버전에 도입 되었습니다: ODBC 3.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 3.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLFetchScroll** 결과 집합에서 데이터의 지정 된 행 집합을 인출 하 고 모든 바인딩된 열에 대 한 데이터를 반환 합니다. 절대 또는 상대 위치 또는 책갈피 별로 행 집합을 지정할 수 있습니다.  
@@ -96,7 +96,7 @@ SQLRETURN SQLFetchScroll(
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버는 연결 된 데이터 원본 간의 통신 링크 하지 못했습니다.|  
 |22001|문자열 데이터 오른쪽 잘림|열에 대해 반환 된 가변 길이 책갈피가 잘렸습니다.|  
 |22002|지표 변수가 필요 하지만 제공 되지|NULL 데이터가 페치된 열을 갖는 *StrLen_or_IndPtr* 설정한 **SQLBindCol** (또는 설정한 SQL_DESC_INDICATOR_PTR **SQLSetDescField** 또는  **SQLSetDescRec**)가 null 포인터입니다.|  
-|22003|숫자 값 범위를 벗어났습니다.|하나 이상의 바인딩된 열에 대 한 숫자 값 (숫자 또는 문자열)으로 반환 되 었어야 하지만 (소수) 대신 전체 부분 숫자를 자를 수입니다.<br /><br /> 자세한 내용은 [SQL에서 C 데이터 형식 데이터 변환](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) 에 [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)합니다.|  
+|22003|숫자 값 범위를 벗어났습니다.|하나 이상의 바인딩된 열에 대 한 숫자 값 (숫자 또는 문자열)으로 반환 되 었어야 하지만 (소수) 대신 전체 부분 숫자를 자를 수입니다.<br /><br /> 자세한 내용은 [SQL에서 C 데이터 형식 데이터 변환](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) 에서 [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)합니다.|  
 |22007|잘못 된 날짜/시간 형식|결과 집합의 문자 열 된 날짜, 시간 또는 타임 스탬프 C 구조에 바인딩되며 열에 값을 각각는 잘못 된 날짜, 시간 또는 타임 스탬프입니다.|  
 |22012|0으로 나누기|산술 식에서 값을 반환한, 부서에서 발생 하는 0입니다.|  
 |22015|간격 필드 오버플로|정확한 수치 또는 간격 SQL 형식에서 C 간격 유형을 할당 선행 필드에 유효 자릿수 손실이 발생 합니다.<br /><br /> 간격 C 형식으로 데이터를 인출할 때 C 간격 유형으로 SQL 형식의 값 표현 방식이 없기 있었습니다.|  
@@ -122,7 +122,7 @@ SQLRETURN SQLFetchScroll(
 |IM018|**SQLCompleteAsync** 이 핸들에서 이전 비동기 작업을 완료 하려면 호출 되지 않았습니다.|핸들에 대해 이전 함수 호출이 SQL_STILL_EXECUTING을 반환 하 고 알림 모드를 설정 하는 경우 **SQLCompleteAsync** 사후 처리를 수행 하 고 작업 완료에 대 한 핸들에서 호출 해야 합니다.|  
   
 ## <a name="comments"></a>주석  
- **SQLFetchScroll** 결과 집합에서 지정 된 행 집합을 반환 합니다. 절대 또는 상대 위치 또는 책갈피 별로 행 집합을 지정할 수 있습니다. **SQLFetchScroll** 결과 집합이 존재 하는 동안에 호출할 수 있습니다-즉,을 호출한 후에 결과 집합을 만들고 커서 하기 전에 결과 집합을 통해 닫혀 있습니다. 모든 열에 바인딩되어 있는 경우 해당 열에 데이터를 반환 합니다. 응용 프로그램에서 행 상태 배열이 나 인출 하는 행의 수를 반환 하는 버퍼에 대 한 포인터를 지정한 경우 **SQLFetchScroll** 뿐만 아니라이 정보를 반환 합니다. 에 대 한 호출 **SQLFetchScroll** 를 호출 하 여 함께 사용할 수 있습니다 **SQLFetch** 호출 하 여 혼합할 수 없습니다 하지만 **SQLExtendedFetch**합니다.  
+ **SQLFetchScroll** 결과 집합에서 지정 된 행 집합을 반환 합니다. 절대 또는 상대 위치 또는 책갈피 별로 행 집합을 지정할 수 있습니다. **SQLFetchScroll** 결과 집합을 있기는-즉, 호출 결과 집합을 만든 후 커서 앞 결과 집합을 통해 닫혀만 호출할 수 있습니다. 모든 열에 바인딩되어 있는 경우 해당 열에 데이터를 반환 합니다. 응용 프로그램에서 행 상태 배열이 나 인출 하는 행의 수를 반환 하는 버퍼에 대 한 포인터를 지정한 경우 **SQLFetchScroll** 뿐만 아니라이 정보를 반환 합니다. 에 대 한 호출 **SQLFetchScroll** 를 호출 하 여 함께 사용할 수 있습니다 **SQLFetch** 호출 하 여 혼합할 수 없습니다 하지만 **SQLExtendedFetch**합니다.  
   
  자세한 내용은 [블록 커서를 사용 하 여](../../../odbc/reference/develop-app/using-block-cursors.md) 하 고 [스크롤 가능 커서를 사용 하 여](../../../odbc/reference/develop-app/using-scrollable-cursors.md)입니다.  
   
@@ -148,7 +148,7 @@ SQLRETURN SQLFetchScroll(
 ## <a name="cursor-positioning-rules"></a>커서 위치 지정을 규칙  
  다음 섹션에서는 FetchOrientation의 각 값에 대 한 정확한 규칙을 설명합니다. 이러한 규칙 다음 표기법을 사용합니다.  
   
-|표기법|의미|  
+|Notation|의미|  
 |--------------|-------------|  
 |*시작 하기 전에*|블록 커서 결과 집합을 시작 하기 전에 배치 됩니다. 결과 집합을 시작 하기 전에 새 행 집합의 첫 번째 행 이면 **SQLFetchScroll** SQL_NO_DATA를 반환 합니다.|  
 |*종료 후*|블록 커서는 결과의 끝을 설정한 후에 배치 됩니다. 결과 집합의 끝 뒤에 새 행 집합의 첫 번째 행 이면 **SQLFetchScroll** SQL_NO_DATA를 반환 합니다.|  
@@ -178,9 +178,9 @@ SQLRETURN SQLFetchScroll(
 |*시작 하기 전에*|*시작 하기 전에*|  
 |*CurrRowsetStart = 1*|*시작 하기 전에*|  
 |*1 < CurrRowsetStart < = RowsetSize* <sup>[2].</sup>|*1* <sup>[1]</sup>|  
-|*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart – RowsetSize* <sup>[2]</sup>|  
+|*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart-RowsetSize* <sup>[2]</sup>|  
 |*종료 및 LastResultRow 후 < RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
-|*종료 및 LastResultRow 후 > = RowsetSize* <sup>[2]</sup>|*LastResultRow – RowsetSize + 1* <sup>[2].</sup>|  
+|*종료 및 LastResultRow 후 > = RowsetSize* <sup>[2]</sup>|*LastResultRow-RowsetSize + 1* <sup>[2].</sup>|  
   
  [1] **SQLFetchScroll** SQLSTATE 01S06를 반환 합니다 (결과 집합은 첫 번째 행을 반환 하기 전에 반입 하려고 함) 및 SQL_SUCCESS_WITH_INFO 합니다.  
   
@@ -229,15 +229,15 @@ SQLRETURN SQLFetchScroll(
   
 |조건|새 행 집합의 첫 번째 행|  
 |---------------|-----------------------------|  
-|*모든*|*1.*|  
+|*모든*|*1*|  
   
 ## <a name="sqlfetchlast"></a>SQL_FETCH_LAST  
  다음 규칙이 적용 됩니다.  
   
 |조건|새 행 집합의 첫 번째 행|  
 |---------------|-----------------------------|  
-|*RowsetSize* <sup>[1]</sup> < LastResultRow =|*LastResultRow – RowsetSize + 1* <sup>[1]</sup>|  
-|*RowsetSize* <sup>[1]</sup> > LastResultRow|*1.*|  
+|*RowsetSize* <sup>[1]</sup> < LastResultRow =|*LastResultRow-RowsetSize + 1* <sup>[1]</sup>|  
+|*RowsetSize* <sup>[1]</sup> > LastResultRow|*1*|  
   
  [1] 행 집합 크기 행을 인출 이전 호출 이후 변경 된 경우 새 행 집합 크기입니다.  
   
@@ -271,7 +271,7 @@ SQLSetPos(hstmt, 3, SQL_REFRESH, SQL_LOCK_NO_CHANGE);
 SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);  
 ```  
   
- 때 **SQLFetchScroll** 현재 행 집합에 상대적인 위치에 있는 새 행 집합을 반환 합니다.-FetchOrientation 즉 SQL_FETCH_NEXT, SQL_FETCH_PRIOR를 또는 SQL_FETCH_RELATIVE-현재 행 집합에 변경 내용을 포함 하지 않습니다 새 행 집합의 시작 위치를 계산 합니다. 그러나를 감지 하 고 수 하는 경우 현재 행 집합 외부 변경 내용을 포함지 않습니다. 또한 때 **SQLFetchScroll** 현재 행 집합의 독립 된 위치에 있는 새 행 집합을 반환 합니다.-FetchOrientation 즉 SQL_FETCH_FIRST, SQL_FETCH_LAST, SQL_FETCH_ABSOLUTE, 또는 SQL_FETCH_BOOKMARK-것 현재 행 집합에 있을 경우에, 검색은 모든 변경 내용이 포함 되어 있습니다.  
+ 때 **SQLFetchScroll** 현재 행 집합-상대적인 위치에 있는 새 행 집합을 반환 합니다. 즉, FetchOrientation는 SQL_FETCH_NEXT, SQL_FETCH_PRIOR를 또는 SQL_FETCH_RELATIVE-현재 행 집합에 변경 내용을 포함 하지 않습니다 새 행 집합의 시작 위치를 계산 합니다. 그러나를 감지 하 고 수 하는 경우 현재 행 집합 외부 변경 내용을 포함지 않습니다. 또한 때 **SQLFetchScroll** 현재 행 집합-의 독립 된 위치에 있는 새 행 집합을 반환 FetchOrientation 즉 SQL_FETCH_FIRST, SQL_FETCH_LAST, SQL_FETCH_ABSOLUTE, 또는 SQL_FETCH_BOOKMARK-것 현재 행 집합에 있을 경우에, 검색은 모든 변경 내용이 포함 되어 있습니다.  
   
  마지막으로 된 유효한 행의 끝에 부분 행 집합 것으로 간주 됩니다을 내부 또는 외부 현재 행 집합의 새로 추가 된 행이 있는지 여부를 결정 하는 경우 즉, 마지막 행에는 행 상태가 SQL_ROW_NOROW입니다. 예를 들어, 커서를 새로 추가 된 행을 검색할 수 있으므로, 현재 행 집합에 부분 행 집합은, 응용 프로그램에 새 행 추가 및 커서 결과 집합의 끝에 이러한 행을 추가 합니다. 응용 프로그램을 호출 하는 경우 **SQLFetchScroll** FetchOrientation SQL_FETCH_NEXT로 설정 된 **SQLFetchScroll** 새로 추가 된 첫 번째 행부터 행 집합을 반환 합니다.  
   
@@ -327,7 +327,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
  각 그룹의 상태 레코드의 개별 행에 적용 되는 첫 번째 상태 레코드 SQLExtendedFetch 반환한 SQLSTATE 01S01 포함 해야 합니다 (행의 오류). **SQLFetchScroll** 이 SQLSTATE를 반환 하지 않습니다. SQLExtendedFetch 추가 Sqlstate를 반환할 수 없는 경우이 SQLSTATE 여전히 반환 해야 합니다.  
   
 ## <a name="sqlfetchscroll-and-optimistic-concurrency"></a>SQLFetchScroll 및 낙관적 동시성  
- 커서가 낙관적 동시성을 사용 하는 경우-즉, SQL_ATTR_CONCURRENCY 문 특성에 값이 SQL_CONCUR_VALUES 또는 SQL_CONCUR_ROWVER — **SQLFetchScroll** 데이터가 사용 하는 낙관적 동시성 값을 업데이트 행 변경 되었는지 여부를 검색할 원본입니다. 때마다 이런 **SQLFetchScroll** 현재 행 집합을 다시 해당 하는 경우를 포함 하 여 새 행 집합을 인출 합니다. (으로 호출 될 FetchOrientation SQL_FETCH_RELATIVE FetchOffset 0으로 설정으로 설정 합니다.)  
+ 낙관적 동시성을 사용 하 여 커서-즉, SQL_ATTR_CONCURRENCY 문 특성에 값이 SQL_CONCUR_VALUES 또는 SQL_CONCUR_ROWVER-하는 경우 **SQLFetchScroll** 데이터가 사용 하는 낙관적 동시성 값 업데이트 행 변경 되었는지 여부를 검색할 원본입니다. 때마다 이런 **SQLFetchScroll** 현재 행 집합을 다시 해당 하는 경우를 포함 하 여 새 행 집합을 인출 합니다. (으로 호출 될 FetchOrientation SQL_FETCH_RELATIVE FetchOffset 0으로 설정으로 설정 합니다.)  
   
 ## <a name="sqlfetchscroll-and-odbc-2x-drivers"></a>SQLFetchScroll 및 ODBC 2.x 드라이버  
  응용 프로그램을 호출할 때 **SQLFetchScroll** 드라이버 관리자는 ODBC 2.x 드라이버에서이 호출을 매핑합니다 **SQLExtendedFetch**합니다. 다음의 인수 값 전달 **SQLExtendedFetch**합니다.  
@@ -340,7 +340,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |RowCountPtr|SQL_ATTR_ROWS_FETCHED_PTR 문 특성에 지정 된 주소입니다.|  
 |RowStatusArray|SQL_ATTR_ROW_STATUS_PTR 문 특성에 지정 된 주소입니다.|  
   
- 자세한 내용은 [블록 커서, 스크롤 가능 커서 및 이전 버전과 호환성](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) 이전 버전과 호환성에 대 한 부록 g: 드라이버 지침입니다.  
+ 자세한 내용은 [블록 커서, 스크롤 가능 커서 및 이전 버전과 호환성](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) 부록 g:에서 이전 버전과 호환성에 대 한 드라이버 지침입니다.  
   
 ## <a name="descriptors-and-sqlfetchscroll"></a>설명자 및 SQLFetchScroll  
  **SQLFetchScroll** 설명자를 사용 하 여 동일한 방식으로 상호 작용 **SQLFetch**합니다. 자세한 내용은의 "설명자 및 SQLFetchScroll" 섹션을 참조 하세요 [SQLFetch 함수](../../../odbc/reference/syntax/sqlfetch-function.md)합니다.  

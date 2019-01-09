@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - backups [SQL Server replication], snapshot replication
@@ -21,12 +20,12 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 43f5005c9b03772e8e8e23c3b3e06ea912683362
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43be13027d1460ec407239140cd4306be76a445e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229993"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823518"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>스냅숏 및 트랜잭션 복제의 백업 및 복원을 위한 전략
   스냅숏 및 트랜잭션 복제에 대한 백업 및 복원 전략을 설계할 때 다음 세 가지 영역을 고려해야 합니다.  
@@ -183,7 +182,7 @@ ms.locfileid: "48229993"
   
          구독자에 이미 데이터가 있다고 지정하는 방법은 [Initialize a Subscription Manually](../initialize-a-subscription-manually.md)를 참조하십시오.  
   
-#### <a name="publication-database-peer-to-peer-transactional-replication"></a>게시 데이터베이스: 피어 투 피어 트랜잭션 복제  
+#### <a name="publication-database-peer-to-peer-transactional-replication"></a>게시 데이터베이스: @loopback_detection  
  다음 단계에서 게시 데이터베이스 **A**, **B**및 **C** 는 피어 투 피어 트랜잭션 복제 토폴로지에 있습니다. **A** 및 **C** 데이터베이스는 온라인 상태이며 제대로 작동하고 있습니다. **B** 데이터베이스는 복원될 데이터베이스입니다. 여기에서 설명하는 절차, 특히 7, 10 및 11단계는 피어 투 피어 토폴로지에 노드를 추가하는 데 필요한 절차와 매우 비슷합니다. 이러한 단계를 가장 간단하게 수행하려면 피어 투 피어 토폴로지 구성 마법사를 사용하면 되지만, 저장 프로시저를 사용할 수도 있습니다.  
   
 1.  배포 에이전트를 실행하여 **A** 및 **C** 데이터베이스의 구독을 동기화합니다. 2단계로 이동합니다.  
