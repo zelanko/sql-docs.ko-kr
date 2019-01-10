@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_paramlen
@@ -22,12 +20,12 @@ ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5d6e306b0537180f2b2fa230e819fbc72c9fe6e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 2c858d0fa8579aff288efd7026ab4b65035bad8d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069603"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53364712"
 ---
 # <a name="srvparamlen-extended-stored-procedure-api"></a>srv_paramlen(확장 저장 프로시저 API)
     
@@ -64,13 +62,13 @@ n
   
 |새 데이터 형식|입력 데이터 길이|  
 |--------------------|-----------------------|  
-|`BITN`|**NULL:** 1<br /><br /> **ZERO:** 1<br /><br /> **>=255:** 해당 사항 없음<br /><br /> **<255:** 해당 사항 없음|  
-|`BIGVARCHAR`|**NULL:** 0<br /><br /> **ZERO:** 1<br /><br /> **>=255:** 255<br /><br /> **<255:** 실제 *len*|  
-|`BIGCHAR`|**NULL:** 0<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|`BIGBINARY`|**NULL:** 0<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|`BIGVARBINARY`|**NULL:** 0<br /><br /> **ZERO:** 1<br /><br /> **>=255:** 255<br /><br /> **<255:** 실제 *len*|  
-|`NCHAR`|**NULL:** 0<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|`NVARCHAR`|**NULL:** 0<br /><br /> **ZERO:** 1<br /><br /> **>=255:** 255<br /><br /> **<255:** 실제 *len*|  
+|`BITN`|**NULL:** 1<br /><br /> **0:** 1<br /><br /> **> = 255:** 해당 사항 없음<br /><br /> **< 255:** 해당 사항 없음|  
+|`BIGVARCHAR`|**NULL:** 0<br /><br /> **0:** 1<br /><br /> **> = 255:** 255<br /><br /> **<255:** 실제 *len*|  
+|`BIGCHAR`|**NULL:** 0<br /><br /> **0:** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
+|`BIGBINARY`|**NULL:** 0<br /><br /> **0:** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
+|`BIGVARBINARY`|**NULL:** 0<br /><br /> **0:** 1<br /><br /> **> = 255:** 255<br /><br /> **<255:** 실제 *len*|  
+|`NCHAR`|**NULL:** 0<br /><br /> **0:** 255<br /><br /> **> = 255:** 255<br /><br /> **< 255:** 255|  
+|`NVARCHAR`|**NULL:** 0<br /><br /> **0:** 1<br /><br /> **> = 255:** 255<br /><br /> **<255:** 실제 *len*|  
 |`NTEXT`|**NULL:** -1<br /><br /> **ZERO:** -1<br /><br /> **>=255:** -1<br /><br /> **< 255:** -1|  
   
  \*   실제 *len* = 멀티바이트 문자열(cch)의 길이  
@@ -81,7 +79,7 @@ n
  매개 변수를 사용하여 원격 저장 프로시저를 호출하는 경우 매개 변수를 이름 또는 위치(이름 없음)로 전달할 수 있습니다. 일부 매개 변수는 이름으로 전달하고 일부 매개 변수는 위치로 전달하여 원격 저장 프로시저를 호출하면 오류가 발생합니다. 이 경우에도 SRV_RPC 핸들러는 호출되지만 매개 변수가 없는 것과 같이 처리되며 **srv_rpcparams**는 0을 반환합니다.  
   
 > [!IMPORTANT]  
->  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)를 참조하십시오.  
+>  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)를 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
  [srv_paraminfo(확장 저장 프로시저 API)](srv-paraminfo-extended-stored-procedure-api.md)   

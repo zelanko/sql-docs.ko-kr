@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: stored-procedures
 ms.topic: reference
 api_name:
 - srv_paramdata
@@ -22,12 +20,12 @@ ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 90ef2956d169cc9591102ab945b0545ab1b325b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0825b86cabf57df552063335a0870461cb8a5658
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151933"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53357563"
 ---
 # <a name="srvparamdata-extended-stored-procedure-api"></a>srv_paramdata(확장 저장 프로시저 API)
     
@@ -64,14 +62,14 @@ n
   
 |새 데이터 형식|입력 데이터 길이|  
 |--------------------|-----------------------|  
-|BITN|**NULL:** VP, NULL<br /><br /> **ZERO:** VP, NULL<br /><br /> **>=255:** 해당 사항 없음<br /><br /> **<255:** 해당 사항 없음|  
-|BIGVARCHAR|**NULL:** NULL, 해당 사항 없음<br /><br /> **ZERO:** VP, NULL<br /><br /> **>=255:** VP, 255자<br /><br /> **<255:** VP, 실제 데이터|  
-|BIGCHAR|**NULL:** NULL, 해당 사항 없음<br /><br /> **ZERO:** VP, 255개 공백<br /><br /> **>=255:** VP, 255자<br /><br /> **<255:** VP, 실제 데이터 + 패딩(최대 255)|  
-|BIGBINARY|**NULL:** NULL, 해당 사항 없음<br /><br /> **ZERO:** VP, 255 0x00<br /><br /> **>=255:** VP, 255바이트<br /><br /> **<255:** VP, 실제 데이터 + 패딩(최대 255)|  
-|BIGVARBINARY|**NULL:** NULL, 해당 사항 없음<br /><br /> **ZERO:** VP, 0x00<br /><br /> **>=255:** VP, 255바이트<br /><br /> **<255:** VP, 실제 데이터|  
-|NCHAR|**NULL:** NULL, 해당 사항 없음<br /><br /> **ZERO:** VP, 255개 공백<br /><br /> **>=255:** VP, 255자<br /><br /> **<255:** VP, 실제 데이터 + 패딩(최대 255)|  
-|NVARCHAR|**NULL:** NULL, 해당 사항 없음<br /><br /> **ZERO:** VP, NULL<br /><br /> **>=255:** VP, 255자<br /><br /> **<255:** VP, 실제 데이터|  
-|NTEXT|**NULL:** 해당 사항 없음<br /><br /> **ZERO:** 해당 사항 없음<br /><br /> **>=255:** 해당 사항 없음<br /><br /> **\<255:** 해당 사항 없음|  
+|BITN|**NULL:** VP, NULL<br /><br /> **0:** VP, NULL<br /><br /> **> = 255:** 해당 사항 없음<br /><br /> **< 255:** 해당 사항 없음|  
+|BIGVARCHAR|**NULL:** NULL, N/A<br /><br /> **0:** VP, NULL<br /><br /> **> = 255:** VP, 255자<br /><br /> **< 255:** VP, 실제 데이터|  
+|BIGCHAR|**NULL:** NULL, N/A<br /><br /> **0:** VP, 255개 공백<br /><br /> **> = 255:** VP, 255자<br /><br /> **< 255:** VP, 실제 데이터 + 패딩(최대 255)|  
+|BIGBINARY|**NULL:** NULL, N/A<br /><br /> **0:** VP, 255 0x00<br /><br /> **> = 255:** VP, 255바이트<br /><br /> **< 255:** VP, 실제 데이터 + 패딩(최대 255)|  
+|BIGVARBINARY|**NULL:** NULL, N/A<br /><br /> **0:** VP, 0x00<br /><br /> **> = 255:** VP, 255바이트<br /><br /> **< 255:** VP, 실제 데이터|  
+|NCHAR|**NULL:** NULL, N/A<br /><br /> **0:** VP, 255개 공백<br /><br /> **> = 255:** VP, 255자<br /><br /> **< 255:** VP, 실제 데이터 + 패딩(최대 255)|  
+|NVARCHAR|**NULL:** NULL, N/A<br /><br /> **0:** VP, NULL<br /><br /> **> = 255:** VP, 255자<br /><br /> **< 255:** VP, 실제 데이터|  
+|NTEXT|**NULL:** 해당 사항 없음<br /><br /> **0:** 해당 사항 없음<br /><br /> **> = 255:** 해당 사항 없음<br /><br /> **\<255:** 해당 사항 없음|  
   
  \*   데이터가 Null로 종결되지 않으면 255자보다 큰 데이터 잘림에 대한 경고가 표시되지 않습니다.  
   
@@ -81,7 +79,7 @@ n
  매개 변수를 사용하여 원격 저장 프로시저를 호출하는 경우 매개 변수를 이름 또는 위치(이름 없음)로 전달할 수 있습니다. 일부 매개 변수는 이름으로 전달하고 일부 매개 변수는 위치로 전달하여 원격 저장 프로시저를 호출하면 오류가 발생합니다. 오류가 발생해도 SRV_RPC 처리기는 계속 호출되지만 매개 변수가 없는 것과 같이 처리되며 **srv_rpcparams**는 0을 반환합니다.  
   
 > [!IMPORTANT]  
->  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)를 참조하십시오.  
+>  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)를 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
  [srv_rpcparams(확장 저장 프로시저 API)](srv-rpcparams-extended-stored-procedure-api.md)  

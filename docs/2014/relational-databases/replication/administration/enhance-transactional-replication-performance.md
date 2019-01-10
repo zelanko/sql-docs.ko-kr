@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
@@ -22,12 +21,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eaf1d549ecf5e40593c3602cc35b4f4ad5e39790
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.openlocfilehash: 1cb8d3e14d7963bdcbad9bdc273f2adfaf11c0ee
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085503"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52813655"
 ---
 # <a name="enhance-transactional-replication-performance"></a>트랜잭션 복제 성능 향상
   [일반적인 복제 성능 향상](enhance-general-replication-performance.md)에 설명된 일반 성능 팁을 살펴본 후에 트랜잭션 복제에 해당하는 이러한 추가 영역을 살펴보십시오.  
@@ -72,14 +71,14 @@ ms.locfileid: "48085503"
   
 -   의도치 않게 발생하는 일회성 병목 현상을 해결하려면 로그 판독기 에이전트에 **–MaxCmdsInTran** 매개 변수를 사용하세요.  
   
-     **–MaxCmdsInTran** 매개 변수는 로그 판독기가 배포 데이터베이스에 대해 명령을 쓸 때 트랜잭션으로 그룹화된 최대 문 개수를 지정합니다. 이 매개 변수를 사용하면 구독자에서 명령을 적용할 때 로그 판독기 에이전트와 배포 에이전트가 게시자에서 큰 트랜잭션(여러 명령으로 구성됨)을 여러 개의 작은 트랜잭션으로 나눌 수 있습니다. 이 매개 변수를 지정하면 배포자에서 경합을 줄일 수 있고 게시자와 구독자 간 대기 시간을 줄일 수 있습니다. 원래 트랜잭션이 작은 단위로 적용되므로 구독자는 엄격한 트랜잭션 원자성을 깨고 원래 트랜잭션이 끝나기 전에 큰 논리적 게시자 트랜잭션의 행에 액세스할 수 있습니다. 기본값은 **0**으로 게시자의 트랜잭션 경계를 유지합니다. 이 매개 변수는 Oracle 게시자에는 적용되지 않습니다.  
+     **–MaxCmdsInTran** 매개 변수는 로그 판독기가 배포 데이터베이스에 명령을 쓸 때 트랜잭션으로 그룹화된 최대 명령문 개수를 지정합니다. 이 매개 변수를 사용하면 구독자에서 명령을 적용할 때 로그 판독기 에이전트와 배포 에이전트가 게시자에서 큰 트랜잭션(여러 명령으로 구성됨)을 여러 개의 작은 트랜잭션으로 나눌 수 있습니다. 이 매개 변수를 지정하면 배포자에서 경합을 줄일 수 있고 게시자와 구독자 간 대기 시간을 줄일 수 있습니다. 원래 트랜잭션이 작은 단위로 적용되므로 구독자는 엄격한 트랜잭션 원자성을 깨고 원래 트랜잭션이 끝나기 전에 큰 논리적 게시자 트랜잭션의 행에 액세스할 수 있습니다. 기본값은 **0**으로 게시자의 트랜잭션 경계를 유지합니다. 이 매개 변수는 Oracle 게시자에는 적용되지 않습니다.  
   
     > [!WARNING]  
     >  `MaxCmdsInTran`은 항상 설정되도록 설계되지 않았습니다. 단일 트랜잭션에 많은 DML 작업을 실수로 수행한 경우의 문제(전체 트랜잭션이 배포 데이터베이스에 있고 잠금이 보유될 때까지 명령 배포에 지연 발생)를 해결하기 위한 것입니다. 정기적으로 이 상황이 발생하는 경우 애플리케이션을 검토하고 트랜잭션 크기를 줄일 수 있는 방법을 찾아야 합니다.  
   
--   배포 에이전트에 대해 **–SubscriptionStreams** 매개 변수를 사용합니다.  
+-   사용 된 **-SubscriptionStreams** 배포 에이전트에 대 한 매개 변수입니다.  
   
-     **–SubscriptionStreams** 매개 변수는 집계 복제 처리량을 크게 높일 수 있습니다. 이 매개 변수는 변경 내용의 일괄 처리를 병렬로 적용하기 위해 구독자에 여러 연결을 설정하도록 허용하지만 단일 스레드를 사용할 때 나타나는 여러 가지 트랜잭션 특징을 유지합니다. 여러 연결 중 하나가 실행 또는 커밋되지 않으면 모든 연결에서 현재 일괄 처리를 중지하고 에이전트가 단일 스트림을 사용하여 실패한 일괄 처리를 다시 시도합니다. 이러한 재시도 단계가 완료되기 전에는 구독자에 임시 트랜잭션 불일치가 발생할 수 있으며 실패한 일괄 처리가 성공적으로 커밋되면 구독자의 트랜잭션 일관성이 다시 유지됩니다.  
+     **–SubscriptionStreams** 매개 변수는 집계 복제 처리량을 상당히 개선할 수 있습니다. 이 매개 변수는 변경 내용의 일괄 처리를 병렬로 적용하기 위해 구독자에 여러 연결을 설정하도록 허용하지만 단일 스레드를 사용할 때 나타나는 여러 가지 트랜잭션 특징을 유지합니다. 여러 연결 중 하나가 실행 또는 커밋되지 않으면 모든 연결에서 현재 일괄 처리를 중지하고 에이전트가 단일 스트림을 사용하여 실패한 일괄 처리를 다시 시도합니다. 이러한 재시도 단계가 완료되기 전에는 구독자에 임시 트랜잭션 불일치가 발생할 수 있으며 실패한 일괄 처리가 성공적으로 커밋되면 구독자의 트랜잭션 일관성이 다시 유지됩니다.  
   
      [sp_addsubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)의 **@subscriptionstreams**를 사용하여 이 에이전트 매개 변수의 값을 지정할 수 있습니다.  
   
