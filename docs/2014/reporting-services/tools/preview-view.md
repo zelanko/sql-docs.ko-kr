@@ -15,18 +15,18 @@ ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 89bea23ea4add737dbd9edf9a02d147abb35adbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ac2aa3d352de78fae6c3d9613bef2df390e46fa
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206773"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53354036"
 ---
 # <a name="preview-view"></a>미리 보기 뷰
   **미리 보기** 뷰를 사용하여 렌더링된 보고서를 표시할 수 있습니다. 보고서를 미리 보는 경우 보고서 디자이너가 로컬 컴퓨터에서 보고서를 실행하여 미리 보기에 표시합니다. 미리 보기 모드에서는 보고서 전체를 처리합니다. 보고서에 복잡한 쿼리나 많은 양의 데이터가 있는 경우 처음 볼 때 미리 보기를 완료하는데 몇 분 정도 걸릴 수 있습니다. 보고서의 형식에만 영향을 미치는 후속 변경 내용의 경우 미리 보기 기능에서는 캐시된 데이터를 사용합니다.  
   
 > [!IMPORTANT]  
->  때 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 실행 RemoteApp로 보고서에 표시할 수 없는 **미리 보기** 뷰에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]합니다. RemoteApp 프로그램은 원격 데스크톱 서비스를 통해 원격으로 액세스되는 프로그램입니다. 자세한 내용은 [TS RemoteApp 단계별 가이드](http://technet.microsoft.com/library/cc730673\(WS.10\).aspx)합니다.  
+>  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 가 RemoteApp로 실행되면 보고서는 **** 에서 미리 보기 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]보기에 표시할 수 없습니다. RemoteApp 프로그램은 원격 데스크톱 서비스를 통해 원격으로 액세스되는 프로그램입니다. 자세한 내용은 [TS RemoteApp 단계별 가이드](https://technet.microsoft.com/library/cc730673\(WS.10\).aspx)합니다.  
   
 ## <a name="options"></a>변수  
  도구 모음을 사용하여 미리 보기 기능을 관리할 수 있습니다.  

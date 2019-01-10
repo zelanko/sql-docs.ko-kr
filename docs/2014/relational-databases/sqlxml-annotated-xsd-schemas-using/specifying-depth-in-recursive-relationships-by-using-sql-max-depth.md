@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
 - max-depth annotation
@@ -23,12 +21,12 @@ ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a815a5d5213d4069df6ceda490ee9f4b7e92b279
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 569bbbdec39a37ef7427a195529f26efc9d9b2a3
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189153"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52800835"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>sql:max-depth를 사용하여 재귀 관계의 깊이 지정
   관계형 데이터베이스에서 테이블이 자신과 관계를 맺고 있는 경우 재귀 관계라고 합니다. 예를 들어 supervisor-supervisee 관계에서 직원 레코드를 저장하는 테이블은 자신과 관계가 있습니다. 이 경우 employees 테이블은 관계의 한쪽에서는 supervisor 역할을 하고 다른 쪽에서는 supervisee 역할을 합니다.  
@@ -231,7 +229,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 ## <a name="sqlmax-depth-annotation"></a>sql:max-depth 주석  
  재귀 관계로 이루어진 스키마에서는 재귀 깊이를 명시적으로 지정해야 합니다. 요청된 결과를 반환하는 해당 FOR XML EXPLICIT 쿼리를 성공적으로 생성하려면 이 작업을 수행해야 합니다.  
   
- 스키마에서 `sql:max-depth` 주석을 사용하여 스키마에 설명된 재귀 관계의 재귀 깊이를 지정할 수 있습니다. 값을 `sql:max-depth` 주석은 재귀 횟수를 나타내는 양의 정수 (1 ~ 50): 값이 1는 요소에서 재귀가 중단 되는 `sql:max-depth` 주석이 지정 되지 않으면 값이 2에는 다음 수준에서 재귀가 중단 됩니다 삽입할 요소의 `sql:max-depth` 지정 되어 있으면 등에입니다.  
+ 스키마에서 `sql:max-depth` 주석을 사용하여 스키마에 설명된 재귀 관계의 재귀 깊이를 지정할 수 있습니다. `sql:max-depth` 주석 값은 재귀 횟수를 나타내는 1에서 50 사이의 양의 정수입니다.  예를 들어 값이 1이면 `sql:max-depth` 주석이 지정된 요소에서 재귀가 중단되고 2이면 `sql:max-depth`가 지정된 요소의 다음 수준에서 재귀가 중단됩니다.  
   
 > [!NOTE]  
 >  기본 구현에서는 매핑 스키마에 대해 지정된 XPath 쿼리가 SELECT ... FOR XML EXPLICIT 쿼리로 변환됩니다. 이 쿼리에서는 한정된 재귀 깊이를 지정해야 합니다. `sql:max-depth`에 지정하는 값이 높을수록 생성되는 FOR XML EXPLICIT 쿼리가 커집니다. 그러면 검색 시간이 느려질 수 있습니다.  

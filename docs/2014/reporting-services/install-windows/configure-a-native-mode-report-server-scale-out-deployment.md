@@ -15,12 +15,12 @@ ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: cbd26f431b71013400593858e6038fc4326f4d14
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 68951c637d0c0db1fc86bab6405868e73770aca2
+ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606853"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52395236"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>기본 모드 보고서 서버 확장 배포 구성(SSRS 구성 관리자)
 
@@ -111,7 +111,7 @@ ms.locfileid: "51606853"
 3.  스케일 아웃 배포 페이지에서 클릭 하 고 배포에 조인 되기를 기다리고 있는 보고서 서버 인스턴스를 선택 **서버 추가**합니다.  
   
     > [!NOTE]  
-    >  **문제:** Reporting Services 보고서 서버 인스턴스를 스케일 아웃 배포에 조인하려고 할 때 ‘액세스가 거부되었습니다.’와 유사한 오류 메시지가 표시될 수 있습니다.  
+    >  **문제점:** Reporting Services 보고서 서버 인스턴스를 스케일 아웃 배포에 조인 하려고 할 때 ' 액세스 거부 '와 유사한 오류 메시지가 발생할 수 있습니다.  
     >   
     >  **해결 방법:** 첫 번째 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 암호화 키를 백업하고 이 키를 두 번째 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 복원합니다. 그런 다음 두 번째 서버를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 스케일 아웃 배포에 조인합니다.  
   

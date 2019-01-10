@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6aabfe5664f5370cc1d5699403cde84c5108886b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5ab3d9e9e4178b1ee2e10e5be63f0ea9252fd4a4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098058"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52780123"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 속성(시작 매개 변수 탭)
   이 대화 상자를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 대한 시작 매개 변수를 추가하거나 제거할 수 있습니다. 시작 매개 변수는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 성능에 많은 영향을 미칠 수 있습니다. 시작 매개 변수를 추가하거나 변경하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 시작 옵션 사용" 항목을 참조하십시오.  
@@ -78,6 +77,6 @@ ms.locfileid: "48098058"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용되는 도메인 계정( [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 도메인 계정에서 실행하도록 구성된 경우)  
   
 ## <a name="books-online-references"></a>온라인 설명서 참조  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 매개 변수에 대한 자세한 내용은[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 "방법: 서버 시작 옵션 구성( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자)"을 참조하세요.  
+ 에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 매개 변수에 "방법: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 도움말에서 "방법: 서버 시작 옵션 구성([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자)"을 참조하십시오.  
   
   
