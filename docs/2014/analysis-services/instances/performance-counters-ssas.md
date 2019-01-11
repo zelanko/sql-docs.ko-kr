@@ -25,7 +25,7 @@ ms.locfileid: "53365795"
   
  성능 모니터는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 원격 및 로컬 인스턴스를 모니터링할 수 있습니다. 자세한 내용은 [성능 모니터 사용](https://technet.microsoft.com/library/cc749115.aspx)을 참조하십시오.  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]와 함께 사용할 수 있는 카운터에 대한 설명을 보려면 성능에서 **카운터 추가** 대화 상자를 열고 성능 개체를 선택한 다음 **설명 표시**를 클릭하십시오. 가장 중요한 카운터는 CPU  사용량,  메모리 사용량,  디스크 IO  속도입니다. 이 중요한 카운터부터 사용해 보고 모니터링을 통해 향상될 수 있는 다른 사항에 대해 더 나은 생각이 떠오를 때 보다 세부적인 카운터를 시도하는 것이 좋습니다. 포함할 카운터에 대한 자세한 내용은 [SQL  Server  2008  R2작업 가이드](https://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]와 함께 사용할 수 있는 카운터에 대한 설명을 보려면 성능에서 **카운터 추가** 대화 상자를 열고 성능 개체를 선택한 다음 **설명 표시**를 클릭하십시오. 가장 중요한 카운터는 CPU  사용량,  메모리 사용량,  디스크 IO  속도입니다. 이 중요한 카운터부터 사용해 보고 모니터링을 통해 향상될 수 있는 다른 사항에 대해 더 나은 생각이 떠오를 때 보다 세부적인 카운터를 시도하는 것이 좋습니다. 포함할 카운터에 대한 자세한 내용은 [SQL  Server  2008  R2작업 가이드](https://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오.  
   
  카운터는 관련된 카운터를 더 쉽게 찾을 수 있도록 그룹화되어 있습니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "53365795"
 |[집계 처리](#bkmk_ProcAggregations)|MOLAP  데이터 파일의 집계 처리와 관련된 통계입니다.|  
 |[인덱스 처리](#bkmk_ProcIndexes)|MOLAP  데이터 파일의 인덱스 처리와 관련된 통계입니다.|  
 |[처리](#bkmk_Processing)|데이터 처리와 관련된 통계입니다.|  
-|[저장소 엔진 쿼리](#bkmk_StorageEngineQuery)|Microsoft  Analysis  Services  저장소 엔진 쿼리와 관련된 통계입니다.|  
+|[저장소 엔진 쿼리](#bkmk_StorageEngineQuery)|Microsoft Analysis Services 스토리지 엔진 쿼리와 관련된 통계입니다.|  
 |[스레드](#bkmk_Threads)|Microsoft  Analysis  Services  스레드와 관련된 통계입니다.|  
   
 ###  <a name="bkmk_Cache"></a> 캐시  
@@ -127,15 +127,15 @@ ms.locfileid: "53365795"
 |-------------|-----------------|  
 |Number  of  calculation  covers|활성 노드 및 캐시된 노드를 포함하여 MDX  실행 계획으로 작성된 총 계산 노드 수입니다.|  
 |현재 계산 노드 수|활성 노드 및 캐시된 노드를 포함하여 MDX  실행 계획으로 작성된 현재 계산 노드 수(근사치)입니다.|  
-|Number  of  Storage  Engine  evaluation  nodes|MDX 실행 계획으로 작성된 총 저장소 엔진 계산 노드 수입니다.|  
+|스토리지 엔진 평가 노드 수|MDX 실행 계획으로 작성된 총 스토리지 엔진 평가 노드 수입니다.|  
 |Number  of  cell-by-cell  evaluation  nodes|MDX  실행 계획으로 작성된 총 셀별 계산 노드 수입니다.|  
 |대량 모드 계산 노드 수|MDX  실행 계획으로 작성된 총 대량 모드 계산 노드 수입니다.|  
 |한 셀에만 적용되는 계산 노드 수|한 셀에만 적용되는 MDX  실행 계획으로 작성된 총 계산 노드 수입니다.|  
 |Number  of  evaluation  nodes  with  calculations  at  the  same  granularity|계산이 계산 노드와 동일한 세분성에 있는 MDX  실행 계획으로 작성된 총 계산 노드 수입니다.|  
 |Current  number  of  cached  evaluation  nodes|MDX 실행 계획으로 작성된 현재 캐시된 계산 노드 수(근사치)입니다.|  
-|Number  of  cached  Storage  Engine  evaluation  nodes|MDX 실행 계획으로 작성된 총 캐시된 저장소 엔진 계산 노드 수입니다.|  
+|캐시된 스토리지 엔진 평가 노드 수|MDX 실행 계획으로 작성된 총 캐시된 스토리지 엔진 계산 노드 수입니다.|  
 |캐시된 대량 모드 계산 노드 수|MDX  실행 계획으로 작성된 총 캐시된 대량 모드 계산 노드 수입니다.|  
-|Number  of  cached  'other'  evaluation  nodes|저장소 엔진 또는 대량 모드가 아닌 MDX 실행 계획으로 작성된 총 캐시된 계산 노드 수입니다.|  
+|Number  of  cached  'other'  evaluation  nodes|스토리지 엔진 또는 대량 모드가 아닌 MDX 실행 계획으로 작성된 총 캐시된 계산 노드 수입니다.|  
 |Number  of  evictions  of  evaluation  nodes|충돌로 인한 계산 노드의 총 캐시 제거 수입니다.|  
 |Number  of  hash  index  hits  in  the  cache  of  evaluation  nodes|해시 인덱스에 의해 충족되는 계산 노드 캐시의 총 적중 수입니다.|  
 |Number  of  cell-by-cell  hits  in  the  cache  of  evaluation  nodes|계산 노드 캐시의 총 셀별 적중 수입니다.|  
@@ -277,7 +277,7 @@ ms.locfileid: "53365795"
 |Total  rows  written|처리하는 동안 쓴 행 수입니다.|  
   
 ###  <a name="bkmk_StorageEngineQuery"></a> 저장소 엔진 쿼리  
- Microsoft  Analysis  Services  저장소 엔진 쿼리와 관련된 통계입니다.  
+ Microsoft Analysis Services 스토리지 엔진 쿼리와 관련된 통계입니다.  
   
 |카운터|Description|  
 |-------------|-----------------|  

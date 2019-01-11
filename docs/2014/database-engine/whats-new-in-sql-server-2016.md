@@ -30,7 +30,7 @@ ms.locfileid: "53371555"
  
   
 ###  <a name="DataFiles"></a> Windows Azure에서 SQL Server 데이터 파일  
- [Windows Azure의 SQL Server 데이터 파일](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) 은 Windows Azure BLOB으로 저장된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 파일을 기본으로 지원할 수 있게 합니다. 이 기능을 통해 Microsoft Azure BLOB 저장소의 데이터에 대한 전용 저장소 위치와 함께 온-프레미스 또는 Microsoft Azure의 가상 머신에서 실행 중인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 데이터베이스를 만들 수 있습니다.  
+ [Windows Azure의 SQL Server 데이터 파일](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) 은 Windows Azure BLOB으로 저장된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 파일을 기본으로 지원할 수 있게 합니다. 이 기능을 통해 Microsoft Azure Blob Storage의 데이터에 대한 전용 스토리지 위치와 함께 온-프레미스 또는 Microsoft Azure의 가상 머신에서 실행 중인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 데이터베이스를 만들 수 있습니다.  
   
   
 ###  <a name="AzureVM"></a> Windows의 SQL Server 데이터베이스를 호스팅할 Azure 가상 머신  
@@ -46,7 +46,7 @@ ms.locfileid: "53371555"
   
 -   **Windows Azure에 대한 SQL Server 관리되는 백업**  
   
-     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] URL 백업을 기반으로 하는 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]는 데이터베이스 및 로그 백업을 관리하고 예약하기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 제공하는 서비스입니다. 이 릴리스에서는 Windows Azure 저장소에 대한 백업만 지원됩니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 데이터베이스 수준뿐만 아니라 인스턴스 수준에서도 구성될 수 있으므로 데이터베이스 수준의 세부 제어와 인스턴스 수준의 자동화를 활용할 수 있도록 합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]는 온-프레미스로 실행되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스와 Windows Azure 가상 컴퓨터에서 실행되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 구성할 수 있지만, Windows Azure 가상 컴퓨터에서 실행되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 사용하는 것이 좋습니다. 자세한 내용은 [SQL Server Managed  Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)을 참조하세요.  
+     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] URL 백업을 기반으로 하는 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]는 데이터베이스 및 로그 백업을 관리하고 예약하기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 제공하는 서비스입니다. 이 릴리스에서는 Windows Azure 스토리지에 대한 백업만 지원됩니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 데이터베이스 수준뿐만 아니라 인스턴스 수준에서도 구성될 수 있으므로 데이터베이스 수준의 세부 제어와 인스턴스 수준의 자동화를 활용할 수 있도록 합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]는 온-프레미스로 실행되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스와 Windows Azure 가상 컴퓨터에서 실행되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 구성할 수 있지만, Windows Azure 가상 컴퓨터에서 실행되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 사용하는 것이 좋습니다. 자세한 내용은 [SQL Server Managed  Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)을 참조하세요.  
   
 -   **백업 위한 암호화**  
   
@@ -100,11 +100,11 @@ ms.locfileid: "53371555"
   
 -   **보관 데이터 압축**  
   
-     ALTER INDEX... REBUILD에는 columnstore 인덱스의 지정된 파티션을 추가로 압축하는 새로운 COLUMNSTORE_ARCHIVE 데이터 압축 옵션이 있습니다. 이 옵션을 보관 또는 데이터 저장소 크기를 줄여야 하는 기타 상황에 사용할 수 있으며 저장 및 검색에 더 많은 시간을 이용할 수 있습니다. 자세한 내용은 [ALTER INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)를 참조하세요.  
+     ALTER INDEX... REBUILD에는 columnstore 인덱스의 지정된 파티션을 추가로 압축하는 새로운 COLUMNSTORE_ARCHIVE 데이터 압축 옵션이 있습니다. 이 옵션을 보관 또는 데이터 스토리지 크기를 줄여야 하는 기타 상황에 사용할 수 있으며 스토리지 및 검색에 더 많은 시간을 이용할 수 있습니다. 자세한 내용은 [ALTER INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)를 참조하세요.  
    
   
 ###  <a name="Buffer"></a> 버퍼 풀 확장  
-  [버퍼 풀 확장](configure-windows/buffer-pool-extension.md) 에서는 I/O 처리량을 크게 향상하기 위해 NvRAM(비휘발성 RAM) 확장인 SSD(반도체 드라이브)를 [!INCLUDE[ssDE](../includes/ssde-md.md)] 버퍼 풀에 원활하게 통합할 수 있는 기능을 제공합니다.  
+ [버퍼 풀 확장](configure-windows/buffer-pool-extension.md) 에서는 I/O 처리량을 크게 향상하기 위해 NvRAM(비휘발성 RAM) 확장인 SSD(반도체 드라이브)를 [!INCLUDE[ssDE](../includes/ssde-md.md)] 버퍼 풀에 원활하게 통합할 수 있는 기능을 제공합니다.  
    
   
 ###  <a name="Stats"></a> 증분 통계  

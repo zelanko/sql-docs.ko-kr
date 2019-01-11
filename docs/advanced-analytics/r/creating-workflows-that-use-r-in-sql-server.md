@@ -18,7 +18,7 @@ ms.locfileid: "53432736"
 # <a name="creating-bi-workflows-with-r"></a>R을 사용 하 여 BI 워크플로 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-관계형 데이터베이스는 데이터 쿼리, 저장소, 트랜잭션 처리에 사용되는 확장 가능한 솔루션을 제공하기 위한 고도로 최적화된 기술입니다.
+관계형 데이터베이스는 데이터 쿼리, 스토리지, 트랜잭션 처리에 사용되는 확장 가능한 솔루션을 제공하기 위한 고도로 최적화된 기술입니다.
 
 반면, 일반적으로 R 솔루션 일반적으로 의존 대개 CSV 형식으로 데이터 탐색 및 모델링 하는 데에 다양 한 원본에서 데이터 가져오기. 그러한 작업은 비효율적일 뿐만 아니라 안전하지 않습니다.
 
@@ -73,7 +73,7 @@ R로 차트와 흥미로운 시각화를 만들 수 있지만, 외부 데이터 
 
 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]을 사용하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 통해 R로 복잡한 작업을 실행할 수 있기 때문에, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 Power BI를 비롯한 다양한 엔터프라이즈 보고 도구에서 쉽게 사용할 수 있습니다.
 
-+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
++ 사용 하 여 R 스크립트에서 반환 된 그래픽 개체 시각화 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
 + Power BI에서 테이블 사용
 
 ### <a name="examples"></a>예

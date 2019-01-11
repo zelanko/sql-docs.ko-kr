@@ -20,14 +20,14 @@ ms.lasthandoff: 12/13/2018
 ms.locfileid: "53358935"
 ---
 # <a name="utf8-string-user-defined-data-type-udt"></a>UTF8 문자열 UDT(사용자 정의 데이터 형식)
-  SQL Server에 대한 UTF8String 예제는 사용자 정의 데이터 형식을 구현하는 방법을 보여 줍니다. UTF8로 인코딩된 값을 저장할 수 있도록 데이터베이스의 형식 시스템을 확장하는 UTF8 사용자 정의 데이터 형식의 구현 방법을 보여 줍니다. 이 형식은 유니코드 문자열과 UTF8 간의 상호 변환 코드도 구현합니다.  
+  SQL Server에 대한 UTF8String 예제는 사용자 정의 데이터 형식을 구현하는 방법을 보여 줍니다. UTF8로 인코딩된 값을 스토리지할 수 있도록 데이터베이스의 형식 시스템을 확장하는 UTF8 사용자 정의 데이터 형식의 구현 방법을 보여 줍니다. 이 형식은 유니코드 문자열과 UTF8 간의 상호 변환 코드도 구현합니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 프로젝트를 만들고 실행하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://go.microsoft.com/fwlink/?LinkId=31046)에서 무료로 구할 수 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://go.microsoft.com/fwlink/?LinkId=31046)에서 무료로 구할 수 있습니다.  
   
--    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](https://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](https://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
   
 -   .NET Framework SDK 2.0 이상 또는 Microsoft Visual Studio 2005 이상. .NET Framework SDK는 무료로 구할 수 있습니다.  
   
