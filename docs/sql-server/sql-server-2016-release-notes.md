@@ -114,7 +114,7 @@ SQL Server 2016 SP2에는 지원 가능성 및 진단 관련 개선 사항이 �
 |수동 변경 내용 추적 정리|새 저장 프로시저는 요청 시 변경 내용 추적 내부 테이블을 정리합니다.| [KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)|
 |로컬 임시 테이블에 대한 병렬 INSERT..SELECT 변경 내용|INSERT..SELECT 작업에서 새 병렬 INSERT|[SQL Server 고객 자문 팀](https://blogs.msdn.microsoft.com/sqlcat/2016/07/21/real-world-parallel-insert-what-else-you-need-to-know/)|
 |Showplan XML|권한 부여 경고 최대 메모리를 포함하는 확장된 진단은 쿼리, 활성화된 추적 플래그에 대해 활성화되었으며 다른 진단 정보를 제공합니다. | [KB 3190761](https://support.microsoft.com/help/3190761/update-to-improve-diagnostics-by-expose-data-type-of-the-parameters-fo)|
-|저장소 클래스 메모리|크기 순서대로 트랜잭션 커밋 시간을 가속화하는 기능을 발생시키는 Windows Server 2016에서 저장소 클래스 메모리를 사용하여 트랜잭션 처리를 증가시킵니다.|[SQL Server 데이터베이스 엔진 블로그](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)|
+|스토리지 클래스 메모리|크기 순서대로 트랜잭션 커밋 시간을 가속화하는 기능을 발생시키는 Windows Server 2016에서 스토리지 클래스 메모리를 사용하여 트랜잭션 처리를 증가시킵니다.|[SQL Server 데이터베이스 엔진 블로그](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)|
 |USE HINT|쿼리 옵션, `OPTION(USE HINT('<option>'))`을 사용하여 지원되는 쿼리 수준 힌트를 통해 쿼리 최적화 프로그램 동작을 변경합니다. QUERYTRACEON과 달리 USE HINT 옵션은 sysadmin 권한이 필요하지 않습니다.|[개발자 선택 사항: USE HINT 쿼리 힌트](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)|
 |XEvent 추가|새로운 Xevent 및 Perfmon 진단 기능은 대기 시간 문제 해결을 개선합니다.|[확장 이벤트](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)|
 
@@ -212,7 +212,7 @@ SQL Server 2016 SP1 설치는 설치 후에 다시 부팅해야 합니다. 모�
     
 -   **온라인 또는 로컬 도움말 선택** 옵션을 사용하고 "온라인 도움말 사용"을 적용하도록 도움말을 구성합니다.    
     
--   **온라인에서 콘텐츠 설치** 옵션을 사용하고 SQL Server 2014 콘텐츠를 다운로드합니다.    
+-    **온라인에서 콘텐츠 설치** 옵션을 사용하고 SQL Server 2014 콘텐츠를 다운로드합니다.    
 
  **F1 도움말:** 기본적으로 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 F1 키를 누르면 F1 도움말 문서의 온라인 버전이 브라우저에 표시됩니다. 문제는 로컬 도움말을 구성하고 설치한 경우에도 브라우저 기반 도움말입니다. 
 

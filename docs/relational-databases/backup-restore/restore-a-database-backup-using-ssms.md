@@ -45,7 +45,7 @@ ms.locfileid: "52302906"
     
 업그레이드 옵션을 **가져오기**로 설정하면 전체 텍스트 카탈로그를 사용할 수 없는 경우 관련된 전체 텍스트 인덱스가 다시 작성됩니다. **전체 텍스트 업그레이드 옵션** 속성 설정을 보거나 변경하는 방법은 [서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)을 참조하세요.    
 
-Microsoft Azure Blob 저장소 서비스에서 SQL Server 복원 방법에 대한 자세한 내용은 [Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.
+Microsoft Azure Blob Storage 서비스에서 SQL Server 복원 방법에 대한 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.
 
 ## <a name="examples"></a>예
     
@@ -81,7 +81,7 @@ Microsoft Azure Blob 저장소 서비스에서 SQL Server 복원 방법에 대�
             |**최근에 사용한 파일**|**백업 파일 찾기**|이 대화 상자에서는 트리에서 로컬 파일을 선택하거나 정규화된 UNC(Universal Naming Convention) 이름을 사용하여 원격 파일을 지정할 수 있습니다. 자세한 내용은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)인스턴스에서 가져온 경우에 필요합니다.|    
             |**장치**|**백업 장치 선택**|이 대화 상자에서는 서버 인스턴스에 정의된 논리적 백업 디바이스의 목록에서 디바이스를 선택할 수 있습니다.|    
             |**테이프**|**백업 테이프 선택**|이 대화 상자에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 실행하는 컴퓨터에 물리적으로 연결된 테이프 드라이브의 목록에서 백업 테이프를 선택할 수 있습니다.|    
-            |**URL**|**백업 파일 위치 선택**|이 대화 상자에서 기존 SQL Server 자격 증명/Azure Storage 컨테이너를 선택하거나, 공유 액세스 서명을 사용하여 새 Azure Storage 컨테이너를 추가하거나, 기존 저장소 컨테이너에 대한 공유 액세스 서명 및 SQL Server 자격 증명을 생성할 수 있습니다.   [Microsoft Azure 구독에 연결](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)을 참조하세요.|  
+            |**URL**|**백업 파일 위치 선택**|이 대화 상자에서 기존 SQL Server 자격 증명/Azure Storage 컨테이너를 선택하거나, 공유 액세스 서명을 사용하여 새 Azure Storage 컨테이너를 추가하거나, 기존 스토리지 컨테이너에 대한 공유 액세스 서명 및 SQL Server 자격 증명을 생성할 수 있습니다.   [Microsoft Azure 구독에 연결](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)을 참조하세요.|  
          
              **제거**    
              선택한 파일, 테이프 또는 논리적 백업 디바이스를 하나 이상 제거합니다.    
@@ -201,7 +201,7 @@ Microsoft Azure Blob 저장소 서비스에서 SQL Server 복원 방법에 대�
 ### <a name="e--restore-a-backup-from-the-microsoft-azure-storage-service"></a>5.  Microsoft Azure Storage 서비스에서 백업 복원
 
 #### <a name="common-steps"></a>공통 단계
-아래의 두 예제에서는 Microsoft Azure Storage 서비스에 있는 백업에서 `Sales` 복원을 수행합니다.  저장소 계정 이름은 `mystorageaccount`입니다.  컨테이너는 `myfirstcontainer`입니다.  간단히 말해 처음 6단계는 여기에 한 번 나열되며 모든 예제는 **7단계**에서 시작됩니다.
+아래의 두 예제에서는 Microsoft Azure Storage 서비스에 있는 백업에서 `Sales` 복원을 수행합니다.  스토리지 계정 이름은 `mystorageaccount`입니다.  컨테이너는 `myfirstcontainer`입니다.  간단히 말해 처음 6단계는 여기에 한 번 나열되며 모든 예제는 **7단계**에서 시작됩니다.
 1.  **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
 2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...** 을 선택합니다.
 3.  **일반** 페이지의 **원본** 섹션에서 **장치** 를 선택합니다.

@@ -18,7 +18,7 @@ ms.lasthandoff: 12/13/2018
 ms.locfileid: "53359295"
 ---
 # <a name="sql-server-backup-to-url"></a>URL에 대한 SQL Server 백업
-  이 항목에서는 Windows Azure Blob 저장소 서비스를 백업 대상으로 사용하는 데 필요한 개념, 요구 사항 및 구성 요소를 소개합니다. 백업 및 복원 기능은 디스크나 테이프를 사용하는 경우와 동일하거나 비슷하지만 몇 가지 차이점이 있습니다. 이러한 차이점과 주목할 만한 예외 및 몇 가지 코드 예가 이 항목에서 소개됩니다.  
+  이 항목에서는 Windows Azure Blob 스토리지 서비스를 백업 대상으로 사용하는 데 필요한 개념, 요구 사항 및 구성 요소를 소개합니다. 백업 및 복원 기능은 디스크나 테이프를 사용하는 경우와 동일하거나 비슷하지만 몇 가지 차이점이 있습니다. 이러한 차이점과 주목할 만한 예외 및 몇 가지 코드 예가 이 항목에서 소개됩니다.  
   
 ## <a name="requirements-components-and-concepts"></a>요구 사항, 구성 요소 및 개념  
  **섹션 내용**  
@@ -42,9 +42,9 @@ ms.locfileid: "53359295"
 -   [SQL Server Management Studio를 사용하여 Windows Azure Storage에서 복원](sql-server-backup-to-url.md#RestoreSSMS)  
   
 ###  <a name="security"></a> 보안  
- 다음은 Windows Azure Blob 저장소 서비스로 백업하거나 복원하는 경우 보안 고려 사항과 요구 사항입니다.  
+ 다음은 Windows Azure Blob 스토리지 서비스로 백업하거나 복원하는 경우 보안 고려 사항과 요구 사항입니다.  
   
--   Windows Azure BLOB 저장소 서비스의 컨테이너를 만들 때 액세스 권한을 **개인**으로 설정하는 것이 좋습니다. 액세스 권한을 개인으로 설정하면 사용자나 계정에 대한 액세스 시 필요한 정보를 제공해야 Windows Azure 계정 인증을 받을 수 있도록 제한됩니다.  
+-   Windows Azure BLOB 스토리지 서비스의 컨테이너를 만들 때 액세스 권한을 **개인**으로 설정하는 것이 좋습니다. 액세스 권한을 개인으로 설정하면 사용자나 계정에 대한 액세스 시 필요한 정보를 제공해야 Windows Azure 계정 인증을 받을 수 있도록 제한됩니다.  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명에 Windows Azure 계정 이름과 액세스 키 인증을 저장해야 합니다. 이 정보는 백업 또는 복원 작업을 수행할 때 Windows Azure 계정 인증을 받는 데 사용됩니다.  
@@ -52,34 +52,34 @@ ms.locfileid: "53359295"
 -   BACKUP 또는 RESTORE 명령을 실행하는 데 사용되는 사용자 계정은 **모든 자격 증명 변경** 권한이 있는 **db_backup operator** 데이터베이스 역할에 있어야 합니다.  
   
 ###  <a name="intorkeyconcepts"></a> 주요 구성 요소 및 개념 소개  
- 다음 두 섹션에서는 Windows Azure Blob 저장소 서비스와 Windows Azure Blob 저장소 서비스로 백업하거나 복원하는 데 사용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 소개합니다. 구성 요소와 Windows Azure Blob 저장소 서비스로 백업하거나 복원할 때 구성 요소 간의 상호 작용을 이해하는 것이 중요합니다.  
+ 다음 두 섹션에서는 Windows Azure Blob 스토리지 서비스와 Windows Azure Blob 스토리지 서비스로 백업하거나 복원하는 데 사용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 소개합니다. 구성 요소와 Windows Azure Blob 스토리지 서비스로 백업하거나 복원할 때 구성 요소 간의 상호 작용을 이해하는 것이 중요합니다.  
   
- 이 과정의 첫 단계는 Windows Azure 계정을 만드는 것입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하는 **Windows Azure 저장소 계정 이름** 및 해당 **액세스 키** 인증 및 작성 하 고 읽는 blob 저장소 서비스에는 값입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명은 이 인증 정보를 저장하며 백업 또는 복원 작업 중에 사용됩니다. 저장소 계정을 만들고 간단한 복원을 수행하는 전체 연습은 [SQL Server 백업 및 복원에 Windows Azure 저장소 서비스 사용 자습서](https://go.microsoft.com/fwlink/?LinkId=271615)를 참조하십시오.  
+ 이 과정의 첫 단계는 Windows Azure 계정을 만드는 것입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하는 **Windows Azure 저장소 계정 이름** 및 해당 **액세스 키** 인증 및 작성 하 고 읽는 blob 저장소 서비스에는 값입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명은 이 인증 정보를 저장하며 백업 또는 복원 작업 중에 사용됩니다. 스토리지 계정을 만들고 간단한 복원을 수행하는 전체 연습은 [SQL Server 백업 및 복원에 Windows Azure 스토리지 서비스 사용 자습서](https://go.microsoft.com/fwlink/?LinkId=271615)를 참조하십시오.  
   
  ![sql 자격 증명에 저장소 계정 매핑](../../tutorials/media/backuptocloud-storage-credential-mapping.gif "sql 자격 증명에 저장소 계정 매핑")  
   
 ###  <a name="Blob"></a> Windows Azure Blob Storage 서비스  
- **저장소 계정:** 저장소 계정은 모든 저장소 서비스의 시작 지점입니다. Windows Azure Blob 저장소 서비스에 액세스하려면 먼저 Windows Azure 저장소 계정을 만듭니다. Windows Azure Blob 저장소 서비스와 해당 구성 요소의 인증을 받으려면 **storage account name** 과 해당 **access key** 속성이 필요합니다.  
+ **저장소 계정:** 저장소 계정은 모든 저장소 서비스의 시작 지점입니다. Windows Azure Blob 스토리지 서비스에 액세스하려면 먼저 Windows Azure 스토리지 계정을 만듭니다. Windows Azure Blob 스토리지 서비스와 해당 구성 요소의 인증을 받으려면 **storage account name** 과 해당 **access key** 속성이 필요합니다.  
   
  **컨테이너:** 컨테이너에서는 그룹화된 blob 집합을 제공하며 blob을 무제한으로 저장할 수 있습니다. Microsoft Azure Blob service에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 쓰려면 적어도 루트 컨테이너가 만들어져 있어야 합니다.  
   
- **Blob:** 모든 형식과 크기의 파일입니다. Windows Azure Blob 저장소 서비스에는 블록 Blob과 페이지 Blob이라는 두 가지 유형의 Blob을 저장할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에서는 페이지 Blob을 Blob 유형으로 사용합니다. Blob은 다음 URL 형식을 사용 하 여 주소 지정 가능: https://\<저장소 계정 >.blob.core.windows.net/\<컨테이너 > /\<blob >  
+ **Blob:** 모든 형식과 크기의 파일입니다. Windows Azure Blob 스토리지 서비스에는 블록 Blob과 페이지 Blob이라는 두 가지 유형의 Blob을 저장할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에서는 페이지 Blob을 Blob 유형으로 사용합니다. Blob은 다음 URL 형식을 사용 하 여 주소 지정 가능: https://\<저장소 계정 >.blob.core.windows.net/\<컨테이너 > /\<blob >  
   
  ![Azure Blob Storage](../../database-engine/media/backuptocloud-blobarchitecture.gif "Azure Blob Storage")  
   
- Windows Azure Blob 저장소 서비스에 대한 자세한 내용은 [Windows Azure Blob 저장소 서비스 사용 방법](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)을 참조하십시오.  
+ Windows Azure Blob 스토리지 서비스에 대한 자세한 내용은 [Windows Azure Blob 스토리지 서비스 사용 방법](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)을 참조하십시오.  
   
  페이지 Blob에 대한 자세한 내용은 [블록 및 페이지 Blob 이해](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx)를 참조하십시오.  
   
 ###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components  
- **URL:** URL은 고유한 백업 파일에 대한 URI(Uniform Resource Identifier)를 지정합니다. URL은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 파일의 위치와 이름을 제공하는 데 사용됩니다. 이 구현에서는 Windows Azure 저장소 계정의 페이지 Blob을 가리키는 URL만 유효합니다. URL은 컨테이너가 아닌 실제 Blob을 가리켜야 합니다. Blob이 없으면 만들어집니다. 기존 Blob 인 경우 지정 된, 백업 실패 "WITH FORMAT" 옵션을 지정 하지 않으면  
+ **URL:** URL은 고유한 백업 파일에 대한 URI(Uniform Resource Identifier)를 지정합니다. URL은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 파일의 위치와 이름을 제공하는 데 사용됩니다. 이 구현에서는 Windows Azure 스토리지 계정의 페이지 Blob을 가리키는 URL만 유효합니다. URL은 컨테이너가 아닌 실제 Blob을 가리켜야 합니다. Blob이 없으면 만들어집니다. 기존 Blob 인 경우 지정 된, 백업 실패 "WITH FORMAT" 옵션을 지정 하지 않으면  
   
 > [!WARNING]  
->  백업 파일을 복사하고 Windows Azure Blob 저장소 서비스로 업로드하도록 선택하는 경우 페이지 Blob을 저장소 옵션으로 사용하십시오. 블록 Blob에서 복원은 지원되지 않습니다. 블록 Blob 유형에서 RESTORE는 오류와 함께 실패합니다.  
+>  백업 파일을 복사하고 Windows Azure Blob 스토리지 서비스로 업로드하도록 선택하는 경우 페이지 Blob을 스토리지 옵션으로 사용하십시오. 블록 Blob에서 복원은 지원되지 않습니다. 블록 Blob 유형에서 RESTORE는 오류와 함께 실패합니다.  
   
  샘플 URL 값은: http[s]://ACCOUNTNAME.Blob.core.windows.net/\<컨테이너 > /\<FILENAME.bak >. HTTPS는 필수 사항은 아니지만 권장 사항입니다.  
   
- **자격 증명:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명은 SQL Server 외부의 리소스에 연결하는 데 필요한 인증 정보를 저장하는 데 사용되는 개체입니다.  여기에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원 프로세스에서 자격 증명을 사용하여 Windows Azure Blob 저장소 서비스의 인증을 받습니다. 자격 증명에는 저장소 계정 이름과 저장소 계정 **액세스 키** 값이 저장됩니다. 만든 자격 증명은 BACKUP/RESTORE 문을 실행할 때 WITH CREDENTIAL 옵션에 지정해야 합니다. 보기, 복사 또는 저장소 계정을 다시 생성 하는 방법에 대 한 자세한 내용은 **액세스 키**를 참조 하십시오 [저장소 계정 액세스 키](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)합니다.  
+ **자격 증명:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명은 SQL Server 외부의 리소스에 연결하는 데 필요한 인증 정보를 저장하는 데 사용되는 개체입니다.  여기에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원 프로세스에서 자격 증명을 사용하여 Windows Azure Blob 스토리지 서비스의 인증을 받습니다. 자격 증명에는 스토리지 계정 이름과 스토리지 계정 **액세스 키** 값이 저장됩니다. 만든 자격 증명은 BACKUP/RESTORE 문을 실행할 때 WITH CREDENTIAL 옵션에 지정해야 합니다. 보기, 복사 또는 저장소 계정을 다시 생성 하는 방법에 대 한 자세한 내용은 **액세스 키**를 참조 하십시오 [저장소 계정 액세스 키](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)합니다.  
   
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명을 만드는 방법에 대한 단계별 지침은 이 항목 뒷부분의 [Create a Credential](#credential) 예제를 참조하십시오.  
   
@@ -89,11 +89,11 @@ ms.locfileid: "53359295"
   
 ###  <a name="limitations"></a> 제한 사항  
   
--   Premium 저장소로 백업은 지원 되지 않습니다.  
+-   Premium 스토리지로 백업은 지원 되지 않습니다.  
   
 -   지원되는 최대 백업 크기는 1TB입니다.  
   
--   TSQL, SMO 또는 PowerShell cmdlet을 사용하여 백업 또는 복원 문을 실행할 수 있습니다. 현재 SQL Server Management Studio 백업 또는 복원 마법사로 Windows Azure Blob 저장소 서비스로 백업하거나 복원할 수는 없습니다.  
+-   TSQL, SMO 또는 PowerShell cmdlet을 사용하여 백업 또는 복원 문을 실행할 수 있습니다. 현재 SQL Server Management Studio 백업 또는 복원 마법사로 Windows Azure Blob 스토리지 서비스로 백업하거나 복원할 수는 없습니다.  
   
 -   논리적 디바이스 이름을 만들 수 없습니다. 따라서 SQL Server Management Studio나 sp_dumpdevice를 사용하여 URL을 백업 디바이스로 추가할 수 없습니다.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "53359295"
 |TO (URL)|???|DISK 및 TAPE와 달리 URL은 논리적 이름 지정 및 작성을 지원하지 않습니다.|이 인수는 백업 파일에 대한 URL 경로를 지정하는 데 사용됩니다.|  
 |MIRROR TO|???|||  
 |**WITH 옵션:**||||  
-|CREDENTIAL|???||WITH CREDENTIAL은 BACKUP TO URL 옵션을 사용하여 Windows Azure Blob 저장소 서비스로 백업할 때만 지원됩니다.|  
+|CREDENTIAL|???||WITH CREDENTIAL은 BACKUP TO URL 옵션을 사용하여 Windows Azure Blob 스토리지 서비스로 백업할 때만 지원됩니다.|  
 |DIFFERENTIAL|???|||  
 |COPY_ONLY|???|||  
 |COMPRESSION&#124;NO_COMPRESSION|???|||  
@@ -181,7 +181,7 @@ ms.locfileid: "53359295"
 |LOG|???|||  
 |FROM (URL)|???||FROM URL 인수는 백업 파일에 대한 URL 경로를 지정하는 데 사용됩니다.|  
 |**WITH Options:**||||  
-|CREDENTIAL|???||WITH CREDENTIAL은 RESTORE FROM URL 옵션을 사용하여 Windows Azure Blob 저장소 서비스에서 복원할 때만 지원됩니다.|  
+|CREDENTIAL|???||WITH CREDENTIAL은 RESTORE FROM URL 옵션을 사용하여 Windows Azure Blob 스토리지 서비스에서 복원할 때만 지원됩니다.|  
 |PARTIAL|???|||  
 |RECOVERY &#124; NORECOVERY &#124; STANDBY|???|||  
 |LOADHISTORY|???|||  
@@ -210,13 +210,13 @@ ms.locfileid: "53359295"
  Restore 인수에 대한 자세한 내용은 [RESTORE 인수&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)를 참조하세요.  
   
 ##  <a name="BackupTaskSSMS"></a> SQL Server Management Studio에서 백업 태스크 사용  
- SQL Server Management Studio의 백업 태스크는 대상 옵션 중 하나로 URL을 포함하고 Windows Azure 저장소로 백업하는 데 필요한 다른 지원 개체(예: SQL 자격 증명)를 포함하도록 개선되었습니다.  
+ SQL Server Management Studio의 백업 태스크는 대상 옵션 중 하나로 URL을 포함하고 Windows Azure 스토리지로 백업하는 데 필요한 다른 지원 개체(예: SQL 자격 증명)를 포함하도록 개선되었습니다.  
   
- 다음 단계에서는 Windows Azure 저장소로 백업할 수 있도록 변경된 데이터베이스 백업 태스크에 대해 설명합니다.  
+ 다음 단계에서는 Windows Azure 스토리지로 백업할 수 있도록 변경된 데이터베이스 백업 태스크에 대해 설명합니다.  
   
 1.  SQL Server Management Studio를 시작하고 SQL Server 인스턴스에 연결합니다.  백업을 마우스 오른쪽 단추로 클릭 하려는 데이터베이스를 선택 **태스크**, 선택한 **백업...** . 데이터베이스 백업 대화 상자가 열립니다.  
   
-2.  일반 페이지에서 **URL** 옵션이 Windows Azure 저장소에 백업을 만드는 데 사용됩니다. 이 옵션을 선택하면 이 페이지에서 다음과 같은 옵션을 사용할 수 있습니다.  
+2.  일반 페이지에서 **URL** 옵션이 Windows Azure 스토리지에 백업을 만드는 데 사용됩니다. 이 옵션을 선택하면 이 페이지에서 다음과 같은 옵션을 사용할 수 있습니다.  
   
     1.  **파일 이름:** 백업 파일의 이름입니다.  
   
@@ -225,11 +225,11 @@ ms.locfileid: "53359295"
         > [!IMPORTANT]  
         >  **만들기** 를 클릭하면 열리는 대화 상자에서는 관리 인증서나 구독용 게시 프로필이 필요합니다. SQL Server는 현재 프로필 버전 2.0 게시를 지원합니다. 게시 프로필의 지원되는 버전을 다운로드하려면 [게시 프로필 2.0 다운로드](https://go.microsoft.com/fwlink/?LinkId=396421)를 참조하세요.  
         >   
-        >  관리 인증서나 게시 프로필에 액세스할 수 없는 경우 Transact-SQL이나 SQL Server Management Studio를 사용하여 저장소 계정 이름을 지정하고 키 정보에 액세스하여 SQL 자격 증명을 만들 수 있습니다. [자격 증명 만들기](#credential) 섹션의 예제 코드를 보고 Transact-SQL을 사용하여 자격 증명을 만듭니다. 또는 SQL Server Management Studio를 사용하여 데이터베이스 엔진 인스턴스에서 **보안**을 마우스 오른쪽 단추로 클릭하고 **새로 만들기**, **자격 증명**을 차례로 선택합니다. **ID** 에 대한 저장소 계정 이름을 지정하고 **암호** 필드에 액세스 키를 지정합니다.  
+        >  관리 인증서나 게시 프로필에 액세스할 수 없는 경우 Transact-SQL이나 SQL Server Management Studio를 사용하여 스토리지 계정 이름을 지정하고 키 정보에 액세스하여 SQL 자격 증명을 만들 수 있습니다. [자격 증명 만들기](#credential) 섹션의 예제 코드를 보고 Transact-SQL을 사용하여 자격 증명을 만듭니다. 또는 SQL Server Management Studio를 사용하여 데이터베이스 엔진 인스턴스에서 **보안**을 마우스 오른쪽 단추로 클릭하고 **새로 만들기**, **자격 증명**을 차례로 선택합니다. **ID** 에 대한 저장소 계정 이름을 지정하고 **암호** 필드에 액세스 키를 지정합니다.  
   
     3.  **Azure 저장소 컨테이너:** 백업 파일을 저장할 Windows Azure 저장소 컨테이너의 이름입니다.  
   
-    4.  **URL 접두사:** 이전 단계에서 설명하는 필드에서 지정된 정보를 사용하여 자동으로 만들어집니다. 이 값을 수동으로 편집하는 경우 이전에 제공한 다른 정보와 일치하는지 확인해야 합니다. 예를 들어 저장소 URL을 수정하는 경우 SQL 자격 증명이 동일한 저장소 계정에 인증하도록 설정되었는지 확인합니다.  
+    4.  **URL 접두사:** 이전 단계에서 설명하는 필드에서 지정된 정보를 사용하여 자동으로 만들어집니다. 이 값을 수동으로 편집하는 경우 이전에 제공한 다른 정보와 일치하는지 확인해야 합니다. 예를 들어 스토리지 URL을 수정하는 경우 SQL 자격 증명이 동일한 스토리지 계정에 인증하도록 설정되었는지 확인합니다.  
   
  URL을 대상으로 선택하는 경우 **미디어 옵션** 페이지의 특정 옵션을 사용할 수 없습니다.  다음 항목에서는 데이터베이스 백업 대화 상자에 대한 자세한 정보를 제공합니다.  
   
@@ -242,16 +242,16 @@ ms.locfileid: "53359295"
  [자격 증명 만들기 - Azure Storage 인증](create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a> 유지 관리 계획 마법사를 사용하여 URL로 SQL Server 백업  
- 이전에 설명한 백업 태스크와 마찬가지로, SQL Server Management Studio의 유지 관리 계획 마법사는 대상 옵션 중 하나로 **URL** 을 포함하고 Windows Azure 저장소로 백업하는 데 필요한 다른 지원 개체(예: SQL 자격 증명)를 포함하도록 개선되었습니다. 자세한 내용은 **Using Maintenance Plan Wizard** 의 [백업 태스크 정의](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)를 참조하세요.  
+ 이전에 설명한 백업 태스크와 마찬가지로, SQL Server Management Studio의 유지 관리 계획 마법사는 대상 옵션 중 하나로 **URL** 을 포함하고 Windows Azure 스토리지로 백업하는 데 필요한 다른 지원 개체(예: SQL 자격 증명)를 포함하도록 개선되었습니다. 자세한 내용은 **Using Maintenance Plan Wizard** 의 [백업 태스크 정의](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)를 참조하세요.  
   
 ##  <a name="RestoreSSMS"></a> Windows Azure storage Using SQL Server Management Studio에서 복원  
- 데이터베이스를 복원하는 경우 **URL** 이 복원할 원본 디바이스로 포함됩니다. 다음 단계에서는 Windows Azure 저장소에서 복원할 수 있도록 변경된 복원 태스크에 대해 설명합니다.  
+ 데이터베이스를 복원하는 경우 **URL** 이 복원할 원본 디바이스로 포함됩니다. 다음 단계에서는 Windows Azure 스토리지에서 복원할 수 있도록 변경된 복원 태스크에 대해 설명합니다.  
   
 1.  SQL Server Management Studio에 있는 복원 태스크의 **일반** 페이지에서 **디바이스** 를 선택하면 **URL** 이 백업 미디어 유형으로 포함된 **백업 디바이스 선택** 대화 상자가 표시됩니다.  
   
-2.  **URL** 을 선택하고 **추가**를 클릭하면 **Azure 저장소에 연결** 대화 상자가 열립니다. Windows Azure 저장소에 인증하기 위한 SQL 자격 증명 정보를 지정합니다.  
+2.  **URL** 을 선택하고 **추가**를 클릭하면 **Azure 저장소에 연결** 대화 상자가 열립니다. Windows Azure 스토리지에 인증하기 위한 SQL 자격 증명 정보를 지정합니다.  
   
-3.  이렇게 하면 SQL Server는 제공한 SQL 자격 증명 정보를 사용하여 Windows Azure 저장소에 연결하고 **Windows Azure에서 백업 파일 찾기** 대화 상자를 엽니다. 저장소에 있는 백업 파일이 이 페이지에 표시됩니다. 복원하는 데 사용할 파일을 선택하고 **확인**을 클릭합니다. **백업 장치 선택** 대화 상자가 표시됩니다. 이 대화 상자에서 **확인** 을 클릭하면 복원을 완료할 수 있는 기본 **복원** 대화 상자가 표시됩니다.  자세한 내용은 다음 항목을 참조하십시오.  
+3.  이렇게 하면 SQL Server는 제공한 SQL 자격 증명 정보를 사용하여 Windows Azure 스토리지에 연결하고 **Windows Azure에서 백업 파일 찾기** 대화 상자를 엽니다. 스토리지에 있는 백업 파일이 이 페이지에 표시됩니다. 복원하는 데 사용할 파일을 선택하고 **확인**을 클릭합니다. **백업 장치 선택** 대화 상자가 표시됩니다. 이 대화 상자에서 **확인** 을 클릭하면 복원을 완료할 수 있는 기본 **복원** 대화 상자가 표시됩니다.  자세한 내용은 다음 항목을 참조하십시오.  
   
      [데이터베이스 복원&#40;일반 페이지&#41;](restore-database-general-page.md)  
   
@@ -277,7 +277,7 @@ ms.locfileid: "53359295"
 -   [STOPAT를 사용하여 지정 시간으로 복원](#PITR)  
   
 ###  <a name="credential"></a> 자격 증명 만들기  
- 다음 예에서는 Windows Azure 저장소 인증 정보를 저장하는 자격 증명을 만듭니다.  
+ 다음 예에서는 Windows Azure 스토리지 인증 정보를 저장하는 자격 증명을 만듭니다.  
   
 1.  **tsql**  
   
@@ -322,7 +322,7 @@ ms.locfileid: "53359295"
     ```  
   
 ###  <a name="complete"></a> 전체 데이터베이스 백업  
- 다음 예에서는 Windows Azure Blob 저장소 서비스에 AdventureWorks2012 데이터베이스를 백업합니다.  
+ 다음 예에서는 Windows Azure Blob 스토리지 서비스에 AdventureWorks2012 데이터베이스를 백업합니다.  
   
 1.  **tsql**  
   

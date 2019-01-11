@@ -72,7 +72,7 @@ ms.locfileid: "53353420"
   
 3.  **powerpivotwebapp.wsp**를 클릭합니다.  
   
-4.   **솔루션 배포**를 클릭합니다.  
+4.  **솔루션 배포**를 클릭합니다.  
   
 5.  **배포 위치**에서 PowerPivot 기능 지원을 추가할 SharePoint 웹 응용 프로그램을 선택합니다.  
   
@@ -114,11 +114,11 @@ ms.locfileid: "53353420"
   
 8.  **데이터베이스 인증**에서 기본값은 Windows  인증입니다. **SQL  인증**을 선택하는 경우 SharePoint  배포에서 이 인증 유형을 사용하는 최선의 구현 방법을 SharePoint  관리자 설명서에서 참조하십시오.  
   
-9.  **기본 프록시 그룹에 이 PowerPivot 서비스 응용 프로그램의 프록시를 추가합니다.** 확인란을 선택합니다. 이렇게 하면 기본 서비스 연결 그룹에 서비스 애플리케이션 연결이 추가됩니다. 기본 연결 그룹에 PowerPivot 서비스 애플리케이션이 하나 이상 있어야 합니다.  
+9. **기본 프록시 그룹에 이 PowerPivot 서비스 응용 프로그램의 프록시를 추가합니다.** 확인란을 선택합니다. 이렇게 하면 기본 서비스 연결 그룹에 서비스 애플리케이션 연결이 추가됩니다. 기본 연결 그룹에 PowerPivot 서비스 애플리케이션이 하나 이상 있어야 합니다.  
   
      기본 연결 그룹에 PowerPivot 서비스 애플리케이션이 이미 나열되어 있는 경우에는 두 번째 서비스 애플리케이션을 해당 그룹에 추가하지 마십시오. 같은 유형의 서비스 애플리케이션 두 개를 기본 연결 그룹에 추가하는 구성은 지원되지 않습니다. 추가 서비스 응용 프로그램 연결 그룹을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [중앙 관리에서 SharePoint 웹 응용 프로그램에 PowerPivot 서비스 응용 프로그램 연결](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)합니다.  
   
-10.  **확인.** 을 클릭합니다. 서비스가 다른 관리 서비스와 함께 팜의 서비스 애플리케이션 목록에 표시됩니다.  
+10. **확인.** 을 클릭합니다. 서비스가 다른 관리 서비스와 함께 팜의 서비스 애플리케이션 목록에 표시됩니다.  
   
 ##  <a name="ExcelServ"></a> 4 단계: Excel 서비스 설정  
  팜에서 PowerPivot 데이터 액세스를 지원하려면 SharePoint용 PowerPivot에 Excel 서비스가 필요합니다. 중앙 관리의 서비스 애플리케이션 목록에 Excel 서비스 애플리케이션이 나타나는지 확인하여 Excel 서비스가 이미 사용하도록 설정되어 있는지 확인할 수 있습니다. 이 목록에 Excel 서비스가 없으면 아래 단계에 따라 서비스를 사용하도록 설정합니다.  
@@ -291,7 +291,7 @@ ms.locfileid: "53353420"
   
  PowerPivot 서비스 애플리케이션을 구성하는 방법에 따라서는 PowerPivot 시스템 서비스가 기본 연결 그룹에 추가되어 기본 연결을 사용하는 모든 웹 애플리케이션에 제공될 수도 있습니다. 그러나 사용자 지정 서비스 애플리케이션 연결 목록을 사용하도록 웹 애플리케이션을 구성한 경우에는 PowerPivot 데이터 처리를 사용하려는 각 SharePoint 웹 애플리케이션에 대해 PowerPivot 서비스 애플리케이션을 추가해야 합니다. 자세한 내용은 [중앙 관리에서 SharePoint 웹 응용 프로그램에 PowerPivot 서비스 응용 프로그램 연결](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)합니다.  
   
- 이후에 데이터 저장소와 처리 능력이 추가로 필요하다고 판단되는 경우 팜에 두 번째 SharePoint용 PowerPivot 서버 인스턴스를 추가할 수 있습니다. 설치 프로세스는 첫 번째 서버를 추가할 때 수행한 단계와 거의 동일하며, 인스턴스 이름과 서비스 계정 정보를 지정하는 방법에 대한 요구 사항만 다릅니다. 자세한 내용은 [배포 검사 목록: SharePoint 2010 팜에 PowerPivot 서버를 추가 하 여 스케일 아웃](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)합니다.  
+ 이후에 데이터 스토리지와 처리 능력이 추가로 필요하다고 판단되는 경우 팜에 두 번째 SharePoint용 PowerPivot 서버 인스턴스를 추가할 수 있습니다. 설치 프로세스는 첫 번째 서버를 추가할 때 수행한 단계와 거의 동일하며, 인스턴스 이름과 서비스 계정 정보를 지정하는 방법에 대한 요구 사항만 다릅니다. 자세한 내용은 [배포 검사 목록: SharePoint 2010 팜에 PowerPivot 서버를 추가 하 여 스케일 아웃](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [SQL Server 2014 버전에서 지 원하는 기능](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   

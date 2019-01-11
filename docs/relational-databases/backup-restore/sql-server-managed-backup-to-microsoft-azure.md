@@ -21,7 +21,7 @@ ms.locfileid: "52397056"
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure에 대한 SQL Server Managed Backup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 Microsoft Azure Blob 저장소에 대한 SQL Server 백업을 관리하고 자동화합니다. SQL Server에서 데이터베이스의 트랜잭션 작업에 따라 백업 일정을 결정하도록 선택할 수 있습니다. 또는 고급 옵션을 사용하여 일정을 정의할 수 있습니다. 보존 설정은 백업이 Azure Blob 저장소에 저장되는 기간을 결정합니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 지정한 보존 기간 동안 지정 시간 복원을 지원합니다.  
+  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 Microsoft Azure Blob 저장소에 대한 SQL Server 백업을 관리하고 자동화합니다. SQL Server에서 데이터베이스의 트랜잭션 작업에 따라 백업 일정을 결정하도록 선택할 수 있습니다. 또는 고급 옵션을 사용하여 일정을 정의할 수 있습니다. 보존 설정은 백업이 Azure Blob 스토리지에 저장되는 기간을 결정합니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 지정한 보존 기간 동안 지정 시간 복원을 지원합니다.  
   
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 의 프로시저 및 기본 동작이 변경되었습니다. 자세한 내용은 [Migrate SQL Server 2014 Managed Backup Settings to SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md)을 참조하세요.  
   
@@ -33,15 +33,15 @@ ms.locfileid: "52397056"
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 데이터베이스 수준 또는 SQL Server 인스턴스 수준에서 구성할 수 있습니다. 인스턴스 수준에서 구성할 경우 새로운 데이터베이스도 자동으로 백업됩니다. 데이터베이스 수준에서 설정을 사용하여 개별 사례에서 인스턴스 수준 기본값을 재정의할 수 있습니다.  
   
- 또한, 추가 보안에 대한 백업을 암호화하고, 사용자 지정 일정을 설정하여 백업 실행 시기를 관리할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 위한 Microsoft Azure Blob 저장소 서비스의 이점에 대한 자세한 내용은 [Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.  
+ 또한, 추가 보안에 대한 백업을 암호화하고, 사용자 지정 일정을 설정하여 백업 실행 시기를 관리할 수 있습니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 위한 Microsoft Azure Blob 저장소 서비스의 이점에 대한 자세한 내용은 [Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.  
   
 ##  <a name="Prereqs"></a> 필수 구성 요소  
- Microsoft Azure Storage는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 에서 백업 파일을 저장하는 데 사용합니다. 필요한 필수 구성 요소는 다음과 같습니다.  
+ Microsoft Azure Storage는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에서 백업 파일을 저장하는 데 사용합니다. 필요한 필수 구성 요소는 다음과 같습니다.  
   
 |사전 요구 사항|설명|  
 |------------------|-----------------|  
 |**Microsoft Azure 계정**|[무료 평가판](https://azure.microsoft.com/pricing/free-trial/) 으로 Azure를 시작한 후에 [구매 옵션](https://azure.microsoft.com/pricing/purchase-options/)을 살펴볼 수 있습니다.|  
-|**Azure Storage 계정**|백업은 Azure Storage 계정에 연결된 Azure Blob 저장소에 저장됩니다. 저장소 계정을 만드는 단계별 지침은 [Azure Storage 계정 정보](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)를 참조하세요.|  
+|**Azure Storage 계정**|백업은 Azure 스토리지 계정에 연결된 Azure Blob 스토리지에 저장됩니다. 스토리지 계정을 만드는 단계별 지침은 [Azure Storage 계정 정보](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)를 참조하세요.|  
 |**Blob 컨테이너**|Blob은 컨테이너에 구성됩니다. 백업 파일에 대한 대상 컨테이너를 지정합니다. [Azure 관리 포털](https://manage.windowsazure.com/)에서 컨테이너를 만들거나 **New-AzureStorageContainer**[Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) 명령을 사용할 수 있습니다.|  
 |**공유 액세스 서명(SAS)**|대상 컨테이너에 대한 액세스는 공유 액세스 서명(SAS)으로 제어됩니다. SAS에 대한 개요는 [공유 액세스 서명, 1부: SAS 모델 이해](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)를 참조하세요. 코드 또는 **New-AzureStorageContainerSASToken** PowerShell 명령으로 SAS 토큰을 만들 수 있습니다. 이 프로세스를 간소화하는 PowerShell 스크립트는 [Powershell 포함 Azure Storage에서 SAS(공유 액세스 서명) 토큰으로 SQL 자격 증명 만들기 간소화](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)를 참조하세요. SAS 토큰은 **에 사용할 수 있도록** SQL 자격 증명 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에 저장할 수 있습니다.|  
 |**SQL Server 에이전트**|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 이 작동하려면 SQL Server 에이전트가 실행되고 있어야 합니다. 자동으로 시작 옵션을 설정하는 것이 좋습니다.|  
@@ -72,7 +72,7 @@ ms.locfileid: "52397056"
 ## <a name="backup-strategy"></a>백업 전략  
   
 ### <a name="backup-scheduling"></a>백업 일정 예약  
- 시스템 저장 프로시저 [managed_backup.sp_backup_config_schedule&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)을 참조하세요. 사용자 지정 일정을 지정하지 않을 경우 예약된 백업 유형 및 백업 주기는 데이터베이스 작업을 기준으로 결정됩니다. 보존 기간 설정은 보존 기간 내 지정 시간에 데이터베이스를 복구하는 기능과 저장소에 보존할 백업 파일의 시간을 결정하는 데 사용됩니다.  
+ 시스템 저장 프로시저 [managed_backup.sp_backup_config_schedule&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)을 참조하세요. 사용자 지정 일정을 지정하지 않을 경우 예약된 백업 유형 및 백업 주기는 데이터베이스 작업을 기준으로 결정됩니다. 보존 기간 설정은 보존 기간 내 지정 시간에 데이터베이스를 복구하는 기능과 스토리지에 보존할 백업 파일의 시간을 결정하는 데 사용됩니다.  
   
 ### <a name="backup-file-naming-conventions"></a>백업 파일 명명 규칙  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 사용자가 지정하는 컨테이너를 사용하므로, 컨테이너 이름을 제어할 수 있습니다. 백업 파일의 경우 비-가용성 데이터베이스는 다음 규칙을 사용하여 명명됩니다. 데이터베이스 이름의 첫 40자, '-'를 제외한 데이터베이스 GUID 및 타임스탬프를 사용하여 이름이 만들어집니다. 밑줄 문자는 구분 기호로 세그먼트 사이에 삽입됩니다. **.bak** 파일 확장명은 전체 백업에 사용되고 **.log** 파일 확장명은 로그 백업에 사용됩니다. 가용성 그룹 데이터베이스의 경우 위에서 설명한 파일 명명 규칙 외에도 가용성 그룹 데이터베이스 GUID가 40자의 데이터베이스 이름 뒤에 추가됩니다. 가용성 그룹 데이터베이스 GUID 값은 sys.databases의 group_database_id 값입니다.  
@@ -122,7 +122,7 @@ ms.locfileid: "52397056"
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 에이전트는 데이터베이스 전체 및 로그 백업만 지원합니다. 파일 백업 자동화는 지원되지 않습니다.  
   
--   Microsoft Azure Blob 저장소 서비스는 유일하게 지원되는 백업 저장소 옵션입니다. 디스크 또는 테이프 백업은 지원되지 않습니다.  
+-   Microsoft Azure Blob Storage service는 유일하게 지원되는 백업 스토리지 옵션입니다. 디스크 또는 테이프 백업은 지원되지 않습니다.  
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 블록 Blob에 백업 기능을 사용합니다. 블록 Blob의 최대 크기는 200GB입니다. 그러나 스트라이프를 활용하여 개별 백업의 최대 크기를 최대 12TB가 될 수 있습니다. 백업 요구 사항이 이 크기를 초과하는 경우 압축을 사용해 보고 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 설정하기 전에 백업 파일 크기를 테스트하세요. 로컬 디스크에 백업하거나 **BACKUP TO URL** Transact-SQL 문을 사용하여 Microsoft Azure Storage에 수동으로 백업하여 테스트할 수 있습니다. 자세한 내용은 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.  
   

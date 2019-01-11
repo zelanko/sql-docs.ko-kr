@@ -27,13 +27,13 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48165813"
 ---
 # <a name="understanding-the-input-files-used-to-create-the-deployment-script"></a>배포 스크립트를 만드는 데 사용하는 입력 파일 이해
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 만들 때 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 프로젝트에 대한 XML 파일을 생성합니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 이러한 XML 파일의 출력 폴더에 저장 된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트입니다. 기본 결과는 \Bin 폴더에 출력됩니다. 다음 표에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 만드는 XML 파일을 나열합니다.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 만들 때 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 프로젝트에 대한 XML 파일을 생성합니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 이러한 XML 파일의 출력 폴더에 저장 된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트입니다. 기본 결과는 \Bin 폴더에 출력됩니다. 다음 표에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 만드는 XML 파일을 나열합니다.  
   
 |XMLA 파일|Description|  
 |---------------|-----------------|  
 |\<*프로젝트 이름을*>.asdatabase|프로젝트의 모든 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체에 대한 선언적 정의가 포함됩니다.|  
 |\<*프로젝트 이름을*>.deploymenttargets|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체가 생성되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 및 데이터베이스의 이름이 포함됩니다.|  
-|\<*프로젝트 이름을*>.configsettings|데이터 원본 연결 정보 및 개체 저장 위치와 같은 환경 관련 설정이 포함됩니다. 이 파일의 설정은의 설정을 재정의 합니다 \< *프로젝트 이름*>.asdatabase 파일입니다.|  
+|\<*프로젝트 이름을*>.configsettings|데이터 원본 연결 정보 및 개체 스토리지 위치와 같은 환경 관련 설정이 포함됩니다. 이 파일의 설정은의 설정을 재정의 합니다 \< *프로젝트 이름*>.asdatabase 파일입니다.|  
 |\<*프로젝트 이름을*>.deploymentoptions|배포가 트랜잭션인지 여부와 배포된 개체가 배포 후 처리되어야 하는지 여부와 같은 배포 옵션이 포함됩니다.|  
   
 > [!NOTE]  

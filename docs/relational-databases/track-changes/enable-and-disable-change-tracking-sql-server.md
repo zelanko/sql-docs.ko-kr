@@ -66,7 +66,7 @@ WITH (TRACK_COLUMNS_UPDATED = ON)
   
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 데이터베이스 속성&#40;변경 내용 추적 페이지&#41; [Database Properties &#40;ChangeTracking Page&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) 에 변경 내용을 설정할 수도 있습니다.  
   
- TRACK_COLUMNS_UPDATED 옵션이 ON으로 설정되면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서는 내부 변경 내용 추적 테이블에 업데이트된 열에 대한 추가 정보를 저장합니다. 열 추적을 사용하면 애플리케이션이 업데이트된 열만 동기화하도록 설정할 수 있습니다. 이로 인해 효율성과 성능이 향상될 수 있습니다. 그러나 열 추적 정보 유지 관리로 인해 저장소 오버헤드가 추가되기 때문에 이 옵션은 기본적으로 OFF로 설정됩니다.  
+ TRACK_COLUMNS_UPDATED 옵션이 ON으로 설정되면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서는 내부 변경 내용 추적 테이블에 업데이트된 열에 대한 추가 정보를 저장합니다. 열 추적을 사용하면 애플리케이션이 업데이트된 열만 동기화하도록 설정할 수 있습니다. 이로 인해 효율성과 성능이 향상될 수 있습니다. 그러나 열 추적 정보 유지 관리로 인해 스토리지 오버헤드가 추가되기 때문에 이 옵션은 기본적으로 OFF로 설정됩니다.  
   
 ## <a name="disable-change-tracking-for-a-database-or-table"></a>데이터베이스 또는 테이블에 변경 내용 추적을 사용하지 않도록 설정  
  우선 변경 내용 추적이 설정된 모든 테이블에 대해 변경 내용 추적을 해제해야 해당 데이터베이스에 대한 변경 내용 추적을 OFF로 설정할 수 있습니다. 데이터베이스에서 변경 내용 추적이 설정된 테이블을 확인하려면 [sys.change_tracking_tables](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md) 카탈로그 뷰를 사용합니다.  

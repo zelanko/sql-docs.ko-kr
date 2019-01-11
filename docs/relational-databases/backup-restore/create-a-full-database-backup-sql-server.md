@@ -43,7 +43,7 @@ ms.locfileid: "52530539"
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
--   데이터베이스가 커짐에 따라 전체 데이터베이스 백업은 마치는 데 시간이 오래 걸리고 저장 공간도 더 많이 필요하게 됩니다. 큰 데이터베이스의 경우 일련의 [차등 데이터베이스 백업](../../relational-databases/backup-restore/differential-backups-sql-server.md)으로 전체 데이터베이스 백업 보완을 고려합니다. 자세한 내용은 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.  
+-   데이터베이스가 커짐에 따라 전체 데이터베이스 백업은 마치는 데 시간이 오래 걸리고 스토리지 공간도 더 많이 필요하게 됩니다. 큰 데이터베이스의 경우 일련의 [차등 데이터베이스 백업](../../relational-databases/backup-restore/differential-backups-sql-server.md)으로 전체 데이터베이스 백업 보완을 고려합니다. 자세한 내용은 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.  
   
 -   [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 시스템 저장 프로시저를 사용하여 전체 데이터베이스 백업의 크기를 예측합니다.  
   
@@ -197,7 +197,7 @@ ms.locfileid: "52530539"
 
 #### <a name="d--back-up-to-the-azure-blob-storage-service"></a>**D.  Azure Blob Storage 서비스에 백업**
 #### <a name="common-steps"></a>**공통 단계**  
-아래 세 가지 예제에서는 Microsoft Azure Blob 저장소 서비스로 `Sales` 의 전체 데이터베이스 백업을 수행합니다.  저장소 계정 이름은 `mystorageaccount`입니다.  컨테이너는 `myfirstcontainer`입니다.  간단히 말해 처음 네 단계는 여기에 한 번 나열되며 모든 예제는 **5단계**에서 시작됩니다.
+아래 세 가지 예제에서는 Microsoft Azure Blob Storage 서비스로 `Sales`의 전체 데이터베이스 백업을 수행합니다.  스토리지 계정 이름은 `mystorageaccount`입니다.  컨테이너는 `myfirstcontainer`입니다.  간단히 말해 처음 네 단계는 여기에 한 번 나열되며 모든 예제는 **5단계**에서 시작됩니다.
 1.  **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
 
 2.  **데이터베이스**를 확장하고 `Sales`를 마우스 오른쪽 단추로 클릭한 다음 **태스크**를 가리키고 **백업...** 을 클릭합니다.

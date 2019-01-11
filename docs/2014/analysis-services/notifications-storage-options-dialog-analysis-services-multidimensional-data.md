@@ -20,17 +20,17 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/28/2018
 ms.locfileid: "52508902"
 ---
-# <a name="notifications-storage-options-dialog-box-analysis-services---multidimensional-data"></a>알림(저장소 옵션 대화 상자)(Analysis Services - 다차원 데이터)
+# <a name="notifications-storage-options-dialog-box-analysis-services---multidimensional-data"></a>알림(스토리지 옵션 대화 상자)(Analysis Services - 다차원 데이터)
   **에서** 저장소 옵션 **대화 상자의** 알림 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 탭을 사용하여 차원, 큐브, 측정값 그룹 또는 파티션에 대한 알림 방법 및 관련 설정을 설정할 수 있습니다.  
   
 > [!NOTE]  
->  이러한 설정을 수정하려면 저장소 모드와 자동 관리 캐싱 기능에 대해 잘 알고 있어야 합니다. 자세한 내용은 [자동 관리 캐싱&#40;파티션&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)을 참조하세요.  
+>  이러한 설정을 수정하려면 스토리지 모드와 자동 관리 캐싱 기능에 대해 잘 알고 있어야 합니다. 자세한 내용은 [자동 관리 캐싱&#40;파티션&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)을 참조하세요.  
   
 ## <a name="options"></a>변수  
   
 |용어|정의|  
 |----------|----------------|  
-|**저장소 모드**|개체에 사용할 저장소 모드를 선택합니다.<br /><br /> **MOLAP**<br /> 개체가 MOLAP(다차원 OLAP) 저장소를 사용합니다.<br /><br /> **HOLAP**<br /> 개체가 HOLAP(하이브리드 OLAP) 저장소를 사용합니다.<br /><br /> **ROLAP**<br /> 개체가 ROLAP(관계형 OLAP) 저장소를 사용합니다.|  
+|**저장소 모드**|개체에 사용할 스토리지 모드를 선택합니다.<br /><br /> **MOLAP**<br /> 개체가 MOLAP(다차원 OLAP) 스토리지를 사용합니다.<br /><br /> **HOLAP**<br /> 개체가 HOLAP(하이브리드 OLAP) 스토리지를 사용합니다.<br /><br /> **ROLAP**<br /> 개체가 ROLAP(관계형 OLAP) 스토리지를 사용합니다.|  
 |**자동 관리 캐싱 설정**|자동 관리 캐싱을 설정합니다.<br /><br /> 참고: 이 옵션을 선택 하지 않으면 모든 옵션을 제외한 **저장소 모드** 비활성화 됩니다.|  
 |**SQL Server**| [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 위해 특별히 제공되는 추적 메커니즘을 사용하여 개체의 기본 테이블에 대한 변경 내용을 식별합니다.|  
 |**추적 테이블 지정**|개체에 대해 추적할 기본 테이블을 지정한 다음 세미콜론(;)으로 구분된 테이블 목록을 입력하거나 줄임표 단추(**...**)를 클릭하여 **관계형 개체** 대화 상자를 열고 추적할 테이블을 선택합니다. 자세한 내용은 [관계형 개체 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](relational-objects-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.<br /><br /> 이 옵션을 선택하지 않으면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 특정 요구 사항이 만족되면 개체에 대해 추적할 기본 테이블 목록 확인을 시도합니다. 이러한 요구 사항에 대한 자세한 내용은 [자동 관리 캐싱&#40;파티션&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)을 참조하세요.|  

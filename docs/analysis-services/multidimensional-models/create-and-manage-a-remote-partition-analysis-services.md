@@ -18,7 +18,7 @@ ms.locfileid: "34024390"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>원격 파티션 만들기 및 관리(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  측정값 그룹을 분할할 때 원격 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 보조 데이터베이스를 파티션 저장소로 구성할 수 있습니다.  
+  측정값 그룹을 분할할 때 원격 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 보조 데이터베이스를 파티션 스토리지로 구성할 수 있습니다.  
   
  master 데이터베이스라는 큐브의 원격 파티션은 보조 데이터베이스라는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 원격 인스턴스에 있는 전용 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 저장됩니다.  
   
@@ -27,7 +27,7 @@ ms.locfileid: "34024390"
 ## <a name="prerequisites"></a>필수 구성 요소  
  원격 파티션을 만들기 전에 다음 조건이 충족되어야 합니다.  
   
--   파티션을 저장하려면 두 번째 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스와 전용 데이터베이스가 있어야 합니다. 보조 데이터베이스는 master 데이터베이스에 원격 파티션 저장소를 제공하는 한 가지 용도로 사용됩니다.  
+-   파티션을 저장하려면 두 번째 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스와 전용 데이터베이스가 있어야 합니다. 보조 데이터베이스는 master 데이터베이스에 원격 파티션 스토리지를 제공하는 한 가지 용도로 사용됩니다.  
   
 -   두 서버 인스턴스가 같은 버전이어야 합니다. 두 데이터베이스는 동일한 기능 수준이어야 합니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "34024390"
 ## <a name="configure-remote-partitions"></a>원격 파티션 구성  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 인스턴스를 실행하는 별도의 두 컴퓨터는 각각 한 컴퓨터는 마스터 서버로 지정하고 다른 컴퓨터는 하위 서버로 지정하는 원격 파티션 배열을 만드는 데 필요합니다.  
   
- 다음 절차에서는 마스터 서버에 배포된 큐브 데이터베이스가 있는 두 개의 서버 인스턴스가 있다고 가정합니다. 이 절차에서는 큐브 데이터베이스를 db 마스터라고 합니다. 원격 파티션을 포함하는 저장소 데이터베이스는 db 저장소라고 합니다.  
+ 다음 절차에서는 마스터 서버에 배포된 큐브 데이터베이스가 있는 두 개의 서버 인스턴스가 있다고 가정합니다. 이 절차에서는 큐브 데이터베이스를 db 마스터라고 합니다. 원격 파티션을 포함하는 스토리지 데이터베이스는 db 스토리지라고 합니다.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 사용하여 이 절차를 완료합니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "34024390"
   
 #### <a name="create-and-deploy-a-secondary-database-in-ssdt"></a>SSDT의 보조 데이터베이스 만들기 및 배포  
   
-1.  종속 서버: 저장소 데이터베이스용으로 새 Analysis Services 프로젝트를 만듭니다.  
+1.  종속 서버: 스토리지 데이터베이스용으로 새 Analysis Services 프로젝트를 만듭니다.  
   
 2.  종속 서버: 솔루션 탐색기에서 큐브 데이터베이스 db-master를 가리키는 새 데이터 원본을 만듭니다. **네이티브 OLE DB\Microsoft OLE DB Provider for Analysis Services 11.0**공급자를 사용합니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "34024390"
   
 #### <a name="set-the-masterdatasourceid-database-property-on-the-remote-server-in-ssms"></a>원격 서버에서 MasterDataSourceID 데이터베이스 속성 설정(SSMS)  
   
-1.  종속 서버: 저장소 데이터베이스 db-storage를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 스크립팅** | **ALTER** | **새 쿼리 편집기 창**을 가리킵니다.  
+1.  종속 서버: 스토리지 데이터베이스 db-storage를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 스크립팅** | **ALTER** | **새 쿼리 편집기 창**을 가리킵니다.  
   
 2.  XMLA에 **MasterDataSourceID** 를 추가한 다음 큐브 데이터베이스(db 마스터) ID를 값으로 지정합니다. XMLA는 다음과 비슷해야 합니다.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "34024390"
 4.  **처리 및 저장소 위치**의 **처리 위치**에서 **원격 Analysis Services 데이터 원본** 을 선택하고 **새로 만들기** 를 클릭하여 하위 데이터베이스(db 저장소)를 가리키는 새 데이터 원본을 만듭니다.  
   
     > [!NOTE]  
-    >  컬렉션에 데이터 원본이 없음을 나타내는 오류가 표시되면 저장소 데이터베이스(db 저장소)의 프로젝트를 열고 master 데이터베이스(db 마스터)를 가리키는 데이터 원본을 만듭니다.  
+    >  컬렉션에 데이터 원본이 없음을 나타내는 오류가 표시되면 스토리지 데이터베이스(db 스토리지)의 프로젝트를 열고 master 데이터베이스(db 마스터)를 가리키는 데이터 원본을 만듭니다.  
   
 5.  마스터 서버: 솔루션 탐색기에서 큐브 이름을 마우스 오른쪽 단추로 클릭하고 **처리** 를 선택하여 큐브를 전체 처리합니다.  
   

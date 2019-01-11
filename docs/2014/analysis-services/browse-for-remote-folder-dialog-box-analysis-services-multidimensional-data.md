@@ -21,9 +21,9 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48060057"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>원격 폴더 찾아보기 대화 상자(Analysis Services - 다차원 데이터)
-  **원격 폴더 찾아보기** 대화 상자는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 대해 정의된 사용 가능한 로그 및 데이터 폴더 목록을 표시합니다. 나열된 폴더 중 하나를 선택하거나 필요한 경우 다른 폴더를 지정할 수 있습니다. **원격 폴더 찾아보기** 대화 상자는 다음 단계 중 하나를 수행하면 표시됩니다.  
+   **원격 폴더 찾아보기** 대화 상자는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 대해 정의된 사용 가능한 로그 및 데이터 폴더 목록을 표시합니다. 나열된 폴더 중 하나를 선택하거나 필요한 경우 다른 폴더를 지정할 수 있습니다. **원격 폴더 찾아보기** 대화 상자는 다음 단계 중 하나를 수행하면 표시됩니다.  
   
--   파티션 마법사의 **처리 및 저장소 위치** 페이지에서 줄임표 단추(**...**)를 클릭합니다.  
+-   파티션 마법사의 **처리 및 스토리지 위치** 페이지에서 줄임표 단추(**...**)를 클릭합니다.  
   
 -   **데이터베이스 복원** 대화 상자에서 **파티션** 페이지의 **다른 위치 선택** 옵션, **대상 폴더** 열에서 줄임표 단추(**...**)를 클릭합니다.  
   

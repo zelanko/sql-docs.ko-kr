@@ -140,8 +140,8 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |시스템 테이블|sys.numbered_procedures<br /><br /> sys.numbered_procedure_parameters|없음|numbered_procedures<br /><br /> numbered_procedure_parameters|148<br /><br /> 149|  
 |시스템 함수|fn_virtualservernodes<br /><br /> fn_servershareddrives|sys.dm_os_cluster_nodes<br /><br /> sys.dm_io_cluster_shared_drives|fn_virtualservernodes<br /><br /> fn_servershareddrives|155<br /><br /> 156|  
 |시스템 뷰|sys.sql_dependencies|sys.sql_expression_dependencies|sys.sql_dependencies|198|  
-|테이블 압축|VarDecimal 저장소 형식의 사용|VarDecimal 저장소 형식은 더 이상 사용되지 않습니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 데이터 압축은 10진수 값 이외의 다른 데이터 형식도 압축합니다. VarDecimal 저장소 형식 대신 데이터 압축을 사용하는 것이 좋습니다.|VarDecimal 저장소 형식|200|  
-|테이블 압축|sp_db_vardecimal_storage_format 프로시저의 사용|VarDecimal 저장소 형식은 더 이상 사용되지 않습니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 데이터 압축은 10진수 값 이외의 다른 데이터 형식도 압축합니다. VarDecimal 저장소 형식 대신 데이터 압축을 사용하는 것이 좋습니다.|sp_db_vardecimal_storage_format|201|  
+|테이블 압축|VarDecimal 스토리지 형식의 사용|VarDecimal 스토리지 형식은 더 이상 사용되지 않습니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 데이터 압축은 10진수 값 이외의 다른 데이터 형식도 압축합니다. VarDecimal 스토리지 형식 대신 데이터 압축을 사용하는 것이 좋습니다.|VarDecimal 스토리지 형식|200|  
+|테이블 압축|sp_db_vardecimal_storage_format 프로시저의 사용|VarDecimal 스토리지 형식은 더 이상 사용되지 않습니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 데이터 압축은 10진수 값 이외의 다른 데이터 형식도 압축합니다. VarDecimal 스토리지 형식 대신 데이터 압축을 사용하는 것이 좋습니다.|sp_db_vardecimal_storage_format|201|  
 |테이블 압축|sp_estimated_rowsize_reduction_for_vardecimal 프로시저의 사용|대신 데이터 압축 및 sp_estimate_data_compression_savings 프로시저를 사용합니다.|sp_estimated_rowsize_reduction_for_vardecimal|202|  
 |테이블 힌트|UPDATE 또는 DELETE 문의 FROM 절에 NOLOCK 또는 READUNCOMMITTED 지정|FROM 절에서 NOLOCK 또는 READUNCOMMITTED 테이블 참고를 제거합니다.|UPDATE 또는 DELETE의 NOLOCK 또는 READUNCOMMITTED|1|  
 |테이블 힌트|WITH 키워드를 사용하지 않고 테이블 힌트 지정|WITH를 사용합니다.|WITH가 없는 테이블 힌트|8|  

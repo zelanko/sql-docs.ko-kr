@@ -85,7 +85,7 @@ ms.locfileid: "52519905"
   
 2.  **Reseller** 차원에 **Geography Key** 특성을 추가하려면 **데이터 원본 뷰** 창의 **GeographyKey** 를 마우스 오른쪽 단추로 클릭하고 **열의 새 특성**을 클릭합니다.  
   
-3.   **특성** 창에서 **Geography Key**를 선택한 후 속성 창에서 **AttributeHierarchyOptimizedState** 속성을 **NotOptimized**로, **AttributeHierarchyOrdered** 속성을 **False**로, **AttributeHierarchyVisible** 속성을 **False**로 설정합니다.  
+3.  **특성** 창에서 **Geography Key**를 선택한 후 속성 창에서 **AttributeHierarchyOptimizedState** 속성을 **NotOptimized**로, **AttributeHierarchyOrdered** 속성을 **False**로, **AttributeHierarchyVisible** 속성을 **False**로 설정합니다.  
   
      Reseller 차원의 Geography Key 특성은 Geography 차원을 Reseller Sales 팩트 테이블에 연결하는 데만 사용됩니다. 이 특성은 찾아보기에는 사용되지 않으므로 이 특성 계층을 표시하도록 정의하는 값은 없습니다. 또한 특성 계층 정렬 및 최적화는 처리 성능에 부정적 영향만 미칩니다. 그러나 두 차원 간 링크로 기능하려면 해당 특성이 설정되어 있어야 합니다.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "52519905"
   
 7.  **참조 차원 특성** 목록에서 **Geography Key**를 선택한 다음 **중간 차원 특성** 목록에서 **Geography Key** 를 선택합니다.  
   
-     **구체화** 확인란이 선택되어 있습니다. 이것은 MOLAP 차원의 기본 설정입니다. 차원의 MOLAP 구조에서 차원 특성 링크를 구체화하면 처리하는 동안 팩트 테이블과 각 행의 참조 차원 간 링크 값이 구체화되거나 저장됩니다. 이렇게 해도 처리 성능과 저장 요구 사항에는 거의 영향을 주지 않지만 쿼리 성능은 향상되며 때로 크게 향상되는 경우도 있습니다.  
+     **구체화** 확인란이 선택되어 있습니다. 이것은 MOLAP 차원의 기본 설정입니다. 차원의 MOLAP 구조에서 차원 특성 링크를 구체화하면 처리하는 동안 팩트 테이블과 각 행의 참조 차원 간 링크 값이 구체화되거나 저장됩니다. 이렇게 해도 처리 성능과 스토리지 요구 사항에는 거의 영향을 주지 않지만 쿼리 성능은 향상되며 때로 크게 향상되는 경우도 있습니다.  
   
 8.  **확인**을 클릭합니다.  
   

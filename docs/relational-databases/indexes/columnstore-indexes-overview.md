@@ -29,7 +29,7 @@ ms.locfileid: "47739181"
 # <a name="columnstore-indexes-overview"></a>Columnstore 인덱스: 개요
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Columnstore 인덱스는 대규모 데이터 웨어하우징 팩트 테이블을 저장하고 쿼리하는 표준입니다. 이 인덱스는 열 기반 데이터 저장소 및 쿼리 처리를 사용하여 데이터 웨어하우스에서 기존 행 기반 저장소보다 최대 **10배 높은 쿼리 성능**을 실현합니다. 또한 압축되지 않은 데이터 크기보다 최대 **10배 높은 데이터 압축**을 실현합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 columnstore 인덱스는 트랜잭션 워크로드에 고성능 실시간 분석을 실행하는 기능인 운영 분석을 지원합니다.  
+Columnstore 인덱스는 대규모 데이터 웨어하우징 팩트 테이블을 저장하고 쿼리하는 표준입니다. 이 인덱스는 열 기반 데이터 스토리지 및 쿼리 처리를 사용하여 데이터 웨어하우스에서 기존 행 기반 스토리지보다 최대 **10배 높은 쿼리 성능**을 실현합니다. 또한 압축되지 않은 데이터 크기보다 최대 **10배 높은 데이터 압축**을 실현합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 columnstore 인덱스는 트랜잭션 워크로드에 고성능 실시간 분석을 실행하는 기능인 운영 분석을 지원합니다.  
   
 관련 시나리오에 대한 자세한 정보:  
   
@@ -49,7 +49,7 @@ columnstore는 열과 행이 있는 테이블로 논리적으로 구성되는 �
 Rowstore는 열과 행이 있는 테이블로 논리적으로 구성되는 데이터로, 행 데이터 서식으로 물리적으로 저장됩니다. 이 서식은 관계형 테이블 데이터를 저장하는 기존 방식입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 rowstore는 기본 데이터 저장소 서식이 힙, 클러스터형 인덱스인 테이블 또는 메모리 최적화 테이블을 참조합니다.  
   
 > [!NOTE]  
-> Columnstore 인덱스에 대한 설명에서는 데이터 저장소에 대한 서식을 강조하기 위해 rowstore 및 columnstore라는 용어를 사용합니다.  
+> Columnstore 인덱스에 대한 설명에서는 데이터 스토리지에 대한 서식을 강조하기 위해 rowstore 및 columnstore라는 용어를 사용합니다.  
   
 #### <a name="rowgroup"></a>행 그룹
 행 그룹은 columnstore 서식으로 동시에 압축되는 행의 그룹입니다. 열 그룹에는 대개 1,048,576개(행 그룹당 최대 행 수)의 행이 포함됩니다.  
@@ -65,7 +65,7 @@ Columnstore 인덱스는 성능과 압축률을 높이기 위해 테이블을 �
 ![Column segment](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
   
 #### <a name="clustered-columnstore-index"></a>클러스터형 columnstore 인덱스
-클러스터형 columnstore 인덱스는 전체 테이블에 대한 실제 저장소입니다.    
+클러스터형 columnstore 인덱스는 전체 테이블에 대한 실제 스토리지입니다.    
   
 ![클러스터형 Columnstore 인덱스](../../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "클러스터형 Columnstore 인덱스")  
   
@@ -82,17 +82,17 @@ columnstore 인덱스에는 둘 이상의 델타 행 그룹이 포함될 수 있
 대규모 대량 로드 중에 대부분의 행은 deltastore를 통과하지 않고 columnstore로 곧바로 이동합니다. 대량 로드 끝부분의 일부 행은 수가 너무 적어서 행 그룹의 최소 크기(102,400개 행)에 맞지 않을 수 있습니다. 따라서 최종 행은 columnstore 대신 deltastore로 이동합니다. 행 수가 102,400개 미만인 소규모 대량 로드의 경우 모든 행이 deltastore로 곧바로 이동합니다.  
   
 #### <a name="nonclustered-columnstore-index"></a>비클러스터형 columnstore 인덱스
-비클러스터형 columnstore 인덱스와 클러스터형 columnstore 인덱스의 기능은 동일합니다. 차이점은 비클러스터형 인덱스는 rowstore 테이블에 만들어지는 보조 인덱스인 반면, 클러스터형 columnstore 인덱스는 전체 테이블에 대한 기본 저장소라는 점입니다.  
+비클러스터형 columnstore 인덱스와 클러스터형 columnstore 인덱스의 기능은 동일합니다. 차이점은 비클러스터형 인덱스는 rowstore 테이블에 만들어지는 보조 인덱스인 반면, 클러스터형 columnstore 인덱스는 전체 테이블에 대한 기본 스토리지라는 점입니다.  
   
 비클러스터형 인덱스는 기본 테이블에 있는 행과 열의 전체 또는 일부에 대한 복사본을 포함합니다. 이 인덱스는 테이블의 하나 이상의 열로 정의되며 행을 필터링하는 선택적 조건이 있습니다.  
   
 비클러스터형 columnstore 인덱스는 columnstore 인덱스에서 분석이 동시에 실행되는 동안 OLTP 워크로드에서 기본 클러스터형 인덱스를 사용하는 실시간 운영 분석을 지원합니다. 자세한 내용은 [실시간 운영 분석을 위한 columnstore 시작](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)을 참조하세요.  
   
 #### <a name="batch-mode-execution"></a>일괄 처리 모드 실행
-‘일괄 처리 모드 실행’은 여러 행을 함께 처리하는 쿼리 처리 방법입니다. 배치 모드 실행은 columnstore 저장소 형식과 긴밀히 통합되고 그에 맞게 최적화되어 있습니다. 일괄 처리 모드 실행을 ‘벡터 기반’ 또는 ‘벡터화된 실행’이라고도 합니다. Columnstore 인덱스에 대한 쿼리는 일반적으로 쿼리 성능을 2~4배 개선하는 일괄 처리 모드 실행을 사용합니다. 자세한 내용은 [쿼리 처리 아키텍처 가이드](../query-processing-architecture-guide.md#execution-modes)를 참조하세요. 
+‘일괄 처리 모드 실행’은 여러 행을 함께 처리하는 쿼리 처리 방법입니다. 배치 모드 실행은 columnstore 스토리지 형식과 긴밀히 통합되고 그에 맞게 최적화되어 있습니다. 일괄 처리 모드 실행을 ‘벡터 기반’ 또는 ‘벡터화된 실행’이라고도 합니다. Columnstore 인덱스에 대한 쿼리는 일반적으로 쿼리 성능을 2~4배 개선하는 일괄 처리 모드 실행을 사용합니다. 자세한 내용은 [쿼리 처리 아키텍처 가이드](../query-processing-architecture-guide.md#execution-modes)를 참조하세요. 
   
 ##  <a name="benefits"></a> Columnstore 인덱스를 사용해야 하는 이유  
-Columnstore 인덱스는 매우 높은 수준의 데이터 압축(일반적으로 10배)을 제공하여 데이터 웨어하우스 저장소 비용을 크게 줄일 수 있습니다. 분석을 위해 columnstore 인덱스는 btree 인덱스보다 몇 배 더 나은 성능을 제공합니다. Columnstore 인덱스는 데이터 웨어하우징 및 분석 작업에 대한 기본 설정된 데이터 저장소 형식입니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 운영 워크로드에 대한 실시간 분석에 columnstore 인덱스를 사용할 수 있습니다.  
+Columnstore 인덱스는 매우 높은 수준의 데이터 압축(일반적으로 10배)을 제공하여 데이터 웨어하우스 스토리지 비용을 크게 줄일 수 있습니다. 분석을 위해 columnstore 인덱스는 btree 인덱스보다 몇 배 더 나은 성능을 제공합니다. Columnstore 인덱스는 데이터 웨어하우징 및 분석 작업에 대한 기본 설정된 데이터 스토리지 형식입니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 운영 워크로드에 대한 실시간 분석에 columnstore 인덱스를 사용할 수 있습니다.  
   
 Columnstore 인덱스가 빠른 이유는 다음과 같습니다.  
   

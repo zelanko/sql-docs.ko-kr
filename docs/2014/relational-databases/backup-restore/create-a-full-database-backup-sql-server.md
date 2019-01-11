@@ -17,7 +17,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9e1daefbc5625aaf034a9be9218a59daf5286cc1
 ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48094029"
@@ -60,7 +60,7 @@ ms.locfileid: "48094029"
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
--   데이터베이스가 커짐에 따라 전체 데이터베이스 백업은 완료하는 데 시간이 오래 걸리고 저장 공간도 더 많이 필요하게 됩니다. 따라서 큰 데이터베이스의 경우 *차등 데이터베이스 백업*으로 전체 데이터베이스 백업을 보완할 수 있습니다. 자세한 내용은 [차등 백업&#40;SQL Server&#41;](differential-backups-sql-server.md)을 참조하세요.  
+-   데이터베이스가 커짐에 따라 전체 데이터베이스 백업은 완료하는 데 시간이 오래 걸리고 스토리지 공간도 더 많이 필요하게 됩니다. 따라서 큰 데이터베이스의 경우 *차등 데이터베이스 백업*으로 전체 데이터베이스 백업을 보완할 수 있습니다. 자세한 내용은 [차등 백업&#40;SQL Server&#41;](differential-backups-sql-server.md)을 참조하세요.  
   
 -   [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) 시스템 저장 프로시저를 사용하여 전체 데이터베이스 백업의 크기를 예측할 수 있습니다.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "48094029"
          이 옵션에는 **새 미디어 세트 이름** 입력란에 이름을 입력하고 필요에 따라 **새 미디어 세트 설명** 입력란에 미디어 세트에 대한 설명을 입력합니다.  
   
         > [!IMPORTANT]  
-        >  **일반** 페이지에서 **URL** 을 선택한 경우 이 옵션을 사용할 수 없습니다. 이러한 작업은 Windows Azure 저장소에 백업하는 경우 지원되지 않습니다.  
+        >  **일반** 페이지에서 **URL** 을 선택한 경우 이 옵션을 사용할 수 없습니다. 이러한 작업은 Windows Azure 스토리지에 백업하는 경우 지원되지 않습니다.  
   
 14. **안정성** 섹션에서 필요에 따라 다음을 선택합니다.  
   

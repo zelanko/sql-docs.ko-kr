@@ -20,7 +20,7 @@ ms.lasthandoff: 11/28/2018
 ms.locfileid: "52523629"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>관리되는 백업 구성(SQL Server Management Studio) 
-   **관리되는 백업** 대화에서는 인스턴스의 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 기본값을 구성할 수 있습니다. 이 항목에서는 이 대화를 사용하여인스턴스에 대한 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 기본값을 구성하는 방법과, 이 때 고려해야 할 옵션에 대해 설명합니다. 인스턴스에 대한 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 을 구성할 때 이 설정은 이후 생성되는 모든 새 데이터베이스에 적용됩니다.  
+  **관리되는 백업** 대화에서는 인스턴스의 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 기본값을 구성할 수 있습니다. 이 항목에서는 이 대화를 사용하여인스턴스에 대한 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 기본값을 구성하는 방법과, 이 때 고려해야 할 옵션에 대해 설명합니다. 인스턴스에 대한 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 을 구성할 때 이 설정은 이후 생성되는 모든 새 데이터베이스에 적용됩니다.  
   
  구성 하려는 경우 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 특정 데이터베이스에 대해서 [설정 및 구성 SQL Server Managed Backup to Windows Azure 데이터베이스에 대 한](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md#DatabaseConfigure)합니다.  
  
@@ -58,15 +58,15 @@ ms.locfileid: "52523629"
  `smart_admin.sp_set_instance_backup` 및 `smart_admin.sp_backup_master_switch`에서 `EXECUTE` 권한  
   
 ## <a name="configure-includesssmartbackupincludesss-smartbackup-mdmd-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 구성  
-  **개체 탐색기**에서 **관리** 노드를 확장하고 **관리되는 백업**을 마우스 오른쪽 단추로 클릭합니다. **구성**을 선택합니다. **관리되는 백업** 대화 상자가 열립니다.  
+ **개체 탐색기**에서 **관리** 노드를 확장하고 **관리되는 백업**을 마우스 오른쪽 단추로 클릭합니다. **구성**을 선택합니다. **관리되는 백업** 대화 상자가 열립니다.  
   
  **관리되는 백업 사용** 옵션을 선택하고 구성 값을 지정합니다.  
   
  **파일 보존** 기간은 일 단위로 지정하며 범위는 1~30입니다.  
   
- 선택한 **SQL 자격 증명** 은 저장소 계정과 일치해야 합니다. 현재 인증 정보를 저장하는 SQL 자격 증명이 없는 경우 **만들기**를 클릭하여 만들 수 있습니다. 또한 CREATE CREDENTIAL Transact-SQL 문을 사용해서 자격 증명을 만들고 SECRET 매개 변수의 ID와 액세스 키에 대해 저장소 계정 이름을 제공할 수 있습니다. 자세한 내용은 [Create a Credential](../relational-databases/backup-restore/sql-server-backup-to-url.md#credential)을 참조하세요.  
+ 선택한 **SQL 자격 증명** 은 스토리지 계정과 일치해야 합니다. 현재 인증 정보를 저장하는 SQL 자격 증명이 없는 경우 **만들기**를 클릭하여 만들 수 있습니다. 또한 CREATE CREDENTIAL Transact-SQL 문을 사용해서 자격 증명을 만들고 SECRET 매개 변수의 ID와 액세스 키에 대해 스토리지 계정 이름을 제공할 수 있습니다. 자세한 내용은 [Create a Credential](../relational-databases/backup-restore/sql-server-backup-to-url.md#credential)을 참조하세요.  
   
- Windows Azure 저장소 계정에 대한 **저장소 URL** , 이 저장소 계정의 인증 정보를 저장하는 SQL 자격 증명과 백업 파일의 보존 기간을 지정합니다.  
+ Windows Azure 스토리지 계정에 대한 **스토리지 URL** , 이 스토리지 계정의 인증 정보를 저장하는 SQL 자격 증명과 백업 파일의 보존 기간을 지정합니다.  
   
  저장소 URL 형식은: https://\<StorageAccount >.blob.core.windows.net/  
   

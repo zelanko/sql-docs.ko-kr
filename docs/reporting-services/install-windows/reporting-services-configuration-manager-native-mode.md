@@ -36,7 +36,7 @@ ms.locfileid: "50029022"
   
 -   URL 만들기 및 구성. 보고서 서버와 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 은(는) URL을 통해 액세스되는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 애플리케이션입니다. 보고서 서버 URL을 사용하면 보고서 서버의 SOAP 엔드포인트에 액세스할 수 있으며 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] URL은 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 을(를) 여는 데 사용됩니다. 각 응용 프로그램에 대해 URL을 한 개 또는 여러 개 구성할 수 있습니다.  
   
--   보고서 서버 데이터베이스 만들기 및 구성. 보고서 서버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 내부 저장소로 사용하는 상태 비저장 서버입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 보고서 서버 데이터베이스에 대한 연결을 만들고 구성할 수 있습니다. 사용하려는 내용이 이미 포함되어 있는 기존 보고서 서버 데이터베이스를 선택할 수도 있습니다.  
+-   보고서 서버 데이터베이스 만들기 및 구성. 보고서 서버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 내부 스토리지로 사용하는 상태 비저장 서버입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 보고서 서버 데이터베이스에 대한 연결을 만들고 구성할 수 있습니다. 사용하려는 내용이 이미 포함되어 있는 기존 보고서 서버 데이터베이스를 선택할 수도 있습니다.  
   
 -   기본 모드 스케일 아웃 배포를 구성합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 여러 개의 보고서 서버 인스턴스가 한 개의 공유 보고서 서버 데이터베이스를 사용하도록 허용하는 배포 토폴로지를 지원합니다. 보고서 서버 스케일 아웃 배포를 구현하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 각 보고서 서버를 공유 보고서 서버 데이터베이스에 연결해야 합니다.  
   

@@ -91,9 +91,9 @@ ms.locfileid: "52532081"
  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 데이터베이스의 sysssispackages 테이블 또는 파일 시스템에 패키지를 저장할 수 있습니다.  
   
- 패키지 저장소는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에서 모니터링 및 관리하는 논리 저장소이며 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스의 구성 파일에 지정된 msdb 데이터베이스 및 파일 시스템 폴더를 포함할 수 있습니다.  
+ 패키지 저장소는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에서 모니터링 및 관리하는 논리 스토리지이며 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스의 구성 파일에 지정된 msdb 데이터베이스 및 파일 시스템 폴더를 포함할 수 있습니다.  
   
- 다음 유형의 저장소 간에 패키지를 가져오고 내보낼 수 있습니다.  
+ 다음 유형의 스토리지 간에 패키지를 가져오고 내보낼 수 있습니다.  
   
 -   파일 시스템 내의 파일 시스템 폴더  
   
@@ -101,13 +101,13 @@ ms.locfileid: "52532081"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 데이터베이스  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 사용하면 패키지를 가져오고 내보낼 수 있으며 이렇게 하면 패키지의 위치 및 저장소 형식을 변경할 수 있습니다. 가져오기 및 내보내기 기능을 사용하여 파일 시스템, 패키지 저장소 또는 msdb 데이터베이스에 패키지를 추가할 수 있으며 하나의 저장소 형식에서 다른 저장소 형식으로 패키지를 복사할 수 있습니다. 예를 들어 msdb에 저장된 패키지를 파일 시스템으로 복사할 수 있으며 반대의 경우도 가능합니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 사용하면 패키지를 가져오고 내보낼 수 있으며 이렇게 하면 패키지의 위치 및 저장소 형식을 변경할 수 있습니다. 가져오기 및 내보내기 기능을 사용하여 파일 시스템, 패키지 저장소 또는 msdb 데이터베이스에 패키지를 추가할 수 있으며 하나의 스토리지 형식에서 다른 스토리지 형식으로 패키지를 복사할 수 있습니다. 예를 들어 msdb에 저장된 패키지를 파일 시스템으로 복사할 수 있으며 반대의 경우도 가능합니다.  
   
  **dtutil** 명령 프롬프트 유틸리티(dtutil.exe)를 사용하여 패키지를 다른 형식으로 복사할 수 있습니다. 자세한 내용은 [dtutil Utility](../../integration-services/dtutil-utility.md)를 참조하세요.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 다음과 같은 위치에서 가져오거나 내보낼 수 있습니다.  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스, 파일 시스템 또는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소에 저장된 패키지를 가져올 수 있습니다. 가져온 패키지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 나 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소의 폴더에 저장됩니다.  
+-    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스, 파일 시스템 또는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소에 저장된 패키지를 가져올 수 있습니다. 가져온 패키지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 나 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소의 폴더에 저장됩니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스, 파일 시스템 또는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소에 저장된 패키지를 다른 저장소 형식 또는 위치로 내보낼 수 있습니다.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "52532081"
   
 ### <a name="to-import-a-package-by-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 패키지 가져오려면  
   
-1.  **시작**을 클릭하고 **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 가리킨 다음 **SQL Server Management Studio**를 클릭합니다.  
+1.   **시작**을 클릭하고 **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 가리킨 다음 **SQL Server Management Studio**를 클릭합니다.  
   
 2.  **서버에 연결** 대화 상자에서 다음 옵션을 설정합니다.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "52532081"
   
 ### <a name="options"></a>Options  
  **패키지 위치**  
- 가져온 패키지를 저장할 저장소 위치 유형을 선택합니다. 사용할 수 있는 옵션은 다음과 같습니다.  
+ 가져온 패키지를 저장할 스토리지 위치 유형을 선택합니다. 사용할 수 있는 옵션은 다음과 같습니다.  
   
  **SQL Server**  
   
@@ -206,7 +206,7 @@ ms.locfileid: "52532081"
  서버 이름을 입력하거나 목록에서 서버를 선택합니다.  
   
  **인증**  
- Windows 인증 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 선택합니다. 이 옵션은 저장소 위치가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인 경우에만 사용할 수 있습니다.  
+ Windows 인증 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 선택합니다. 이 옵션은 스토리지 위치가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인 경우에만 사용할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  가능하면 Windows 인증을 사용하십시오.  
@@ -234,7 +234,7 @@ ms.locfileid: "52532081"
   
 ### <a name="options"></a>Options  
  **패키지 위치**  
- 패키지를 내보낼 저장소 유형을 선택합니다. 사용할 수 있는 옵션은 다음과 같습니다.  
+ 패키지를 내보낼 스토리지 유형을 선택합니다. 사용할 수 있는 옵션은 다음과 같습니다.  
   
  **SQL Server**  
   
@@ -246,7 +246,7 @@ ms.locfileid: "52532081"
  서버 이름을 입력하거나 목록에서 서버를 선택합니다.  
   
  **인증**  
- Windows 인증 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 선택합니다. 이 옵션은 저장소 위치가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인 경우에만 사용할 수 있습니다.  
+ Windows 인증 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 선택합니다. 이 옵션은 스토리지 위치가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인 경우에만 사용할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  가능하면 Windows 인증을 사용하십시오.  

@@ -49,13 +49,13 @@ ms.locfileid: "47700351"
   
  DBTYPE_IUNKNOWN으로 바인딩하면 ISequentialStream 스트림 기능이 사용됩니다. OLE DB Driver for SQL Server 큰 값 데이터 형식에 대해 DBTYPE_IUNKNOWN으로 바인딩 출력 매개 변수를 지원합니다. 저장된 프로시저는 클라이언트에 DBTYPE_IUNKNOWN으로 반환될지를 반환 값으로 이러한 데이터 형식을 반환 하는 시나리오를 지원 하기 위해서입니다.  
   
-## <a name="storage-object-limitations"></a>저장소 개체 제한 사항  
+## <a name="storage-object-limitations"></a>스토리지 개체 제한 사항  
   
--   OLE DB Driver for SQL Server에는 열려 있는 저장소 개체를 하나만 지원할 수 있습니다. 저장소 개체를 하나를 초과해 열려고 하면, 즉 하나를 초과하는 **ISequentialStream** 인터페이스 포인터에 대한 참조를 얻으려고 하면 DBSTATUS_E_CANTCREATE가 반환됩니다.  
+-   OLE DB Driver for SQL Server에는 열려 있는 저장소 개체를 하나만 지원할 수 있습니다. 스토리지 개체를 하나를 초과해 열려고 하면, 즉 하나를 초과하는 **ISequentialStream** 인터페이스 포인터에 대한 참조를 얻으려고 하면 DBSTATUS_E_CANTCREATE가 반환됩니다.  
   
--   SQL Server용 OLE DB 드라이버에서 DBPROP_BLOCKINGSTORAGEOBJECTS 읽기 전용 속성의 기본값은 VARIANT_TRUE입니다. 따라서 저장소 개체가 활성화되면 저장소 개체에 있는 메서드를 제외한 일부 메서드가 E_UNEXPECTED 오류와 함께 실패하게 됩니다.  
+-   SQL Server용 OLE DB 드라이버에서 DBPROP_BLOCKINGSTORAGEOBJECTS 읽기 전용 속성의 기본값은 VARIANT_TRUE입니다. 따라서 스토리지 개체가 활성화되면 스토리지 개체에 있는 메서드를 제외한 일부 메서드가 E_UNEXPECTED 오류와 함께 실패하게 됩니다.  
   
--   소비자가 구현한 저장소 개체에서 제공하는 데이터의 길이는 이 저장소 개체를 참조하는 행 접근자가 생성될 때 SQL Server용 OLE DB 드라이버에 알려져 있어야 합니다. 소비자는 접근자 생성에 사용되는 DBBINDING 구조에 길이 표시자를 바인딩해야 합니다.  
+-   소비자가 구현한 스토리지 개체에서 제공하는 데이터의 길이는 이 스토리지 개체를 참조하는 행 접근자가 생성될 때 SQL Server용 OLE DB 드라이버에 알려져 있어야 합니다. 소비자는 접근자 생성에 사용되는 DBBINDING 구조에 길이 표시자를 바인딩해야 합니다.  
   
 -   행에 하나를 초과하는 큰 데이터 값이 있고 DBPROP_ACCESSORDER가 DBPROPVAL_AO_RANDOM이 아닌 경우 소비자는 SQL Server용 OLE DB 드라이버 커서 지원 행 집합을 사용하여 행 데이터를 검색하거나 다른 행 값을 검색하기 전에 모든 큰 데이터 값을 처리해야 합니다. DBPROP_ACCESSORDER가 DBPROPVAL_AO_RANDOM인 경우 SQL Server용 OLE DB 드라이버는 임의의 순서로 액세스할 수 있도록 모든 XML 데이터 형식을 BLOB(Binary Large Object)으로 캐시합니다.  
   

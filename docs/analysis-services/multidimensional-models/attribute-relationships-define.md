@@ -18,7 +18,7 @@ ms.locfileid: "52983964"
 ---
 # <a name="attribute-relationships---define"></a>특성 관계 - 정의
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 특성은 차원의 기본 구성 요소입니다. 차원은 특성 관계를 기반으로 구성되는 특성 집합을 포함합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 특성은 차원의 기본 구성 요소입니다. 차원은 특성 관계를 기반으로 구성되는 특성 집합을 포함합니다.  
   
  차원에 포함된 테이블마다 테이블의 키 특성을 해당 테이블의 다른 특성과 연결하는 특성 관계가 있습니다. 이 관계는 차원을 만들 때 만들 수 있습니다.  
   
@@ -26,7 +26,7 @@ ms.locfileid: "52983964"
   
 -   차원 처리에 필요한 메모리 양이 줄어듭니다. 따라서 차원, 파티션 및 쿼리 처리가 빨라집니다.  
   
--   저장소 액세스가 보다 빨라지고 실행 계획이 보다 최적화되므로 쿼리 성능이 향상됩니다.  
+-   스토리지 액세스가 보다 빨라지고 실행 계획이 보다 최적화되므로 쿼리 성능이 향상됩니다.  
   
 -   사용자 정의 계층이 관계 경로에 정의된 경우 집계 디자인 알고리즘에 따라 보다 효율적인 집계를 선택할 수 있습니다.  
   

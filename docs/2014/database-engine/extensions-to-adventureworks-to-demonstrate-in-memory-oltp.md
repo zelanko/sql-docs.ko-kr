@@ -33,7 +33,7 @@ ms.locfileid: "53363785"
   
 -   샘플을 설치하고 데모 워크로드를 실행하기 위한[필수 조건](#Prerequisites)   
   
--    [AdventureWorks 기반의 메모리 내장 OLTP 샘플 설치](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)지침  
+-   [AdventureWorks 기반의 메모리 내장 OLTP 샘플 설치](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)지침  
   
 -   [예제 테이블 및 프로시저에 대 한 설명은](#Descriptionofthesampletablesandprocedures) -테이블 및 프로시저에서 AdventureWorks에 추가한에 대 한 설명은 여기에 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 마이그레이션하기 위한 고려 사항 뿐만 아니라 샘플에서는 일부 원래 AdventureWorks 테이블 메모리 최적화  
   
@@ -68,7 +68,7 @@ ms.locfileid: "53363785"
   
          'i:\DATA\AdventureWorks2014_log.ldf'  
   
-        1.  로그 파일은 데이터 파일과 다른 드라이브에 배치되어야 합니다. 최상의 성능을 위해 SSD 또는 PCIe 저장소와 같이 대기 시간이 적은 드라이브가 이상적입니다.  
+        1.  로그 파일은 데이터 파일과 다른 드라이브에 배치되어야 합니다. 최상의 성능을 위해 SSD 또는 PCIe 스토리지와 같이 대기 시간이 적은 드라이브가 이상적입니다.  
   
      T-SQL 스크립트 예:  
   
@@ -487,7 +487,7 @@ ostress.exe -n10 -r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od S
 ```  
   
 #### <a name="running-the-workload"></a>작업 실행  
- 최대 규모로 테스트하기 위해 100개의 연결을 사용하여 1,000만 개의 판매 주문을 삽입합니다. 이 테스트는 일반 서버(예: 물리적 코어 8개, 논리적 코어 16개)와 로그용 기본 SSD 저장소에서 문제 없이 실행됩니다. 테스트가 사용자의 하드웨어에서 제대로 실행되지 않는 경우 [느리게 실행되는 테스트 문제 해결](#Troubleshootingslow-runningtests) 섹션을 참조하세요. 이 테스트에 대한 스트레스 수준을 줄이려면 '-n' 매개 변수를 변경하여 연결 수를 줄입니다. 예를 들어 연결 수를 40으로 줄이려면 ‘-n100’ 매개 변수를 ‘-n40’으로 변경합니다.  
+ 최대 규모로 테스트하기 위해 100개의 연결을 사용하여 1,000만 개의 판매 주문을 삽입합니다. 이 테스트는 일반 서버(예: 물리적 코어 8개, 논리적 코어 16개)와 로그용 기본 SSD 스토리지에서 문제 없이 실행됩니다. 테스트가 사용자의 하드웨어에서 제대로 실행되지 않는 경우 [느리게 실행되는 테스트 문제 해결](#Troubleshootingslow-runningtests) 섹션을 참조하세요. 이 테스트에 대한 스트레스 수준을 줄이려면 '-n' 매개 변수를 변경하여 연결 수를 줄입니다. 예를 들어 연결 수를 40으로 줄이려면 ‘-n100’ 매개 변수를 ‘-n40’으로 변경합니다.  
   
  작업에 대한 성능 측정으로 작업을 실행한 후 ostress.exe에서 보고하는 경과 시간을 사용합니다.  
   

@@ -38,13 +38,13 @@ ms.locfileid: "52770816"
   
 -   구독자가 [!INCLUDE[ssEW](../../includes/ssew-md.md)]을 실행하는 경우 게시자. 충돌 데이터는 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 구독자에 저장할 수 없습니다.  
   
- 충돌 정보의 저장소는 **conflict_logging** 게시 속성에 의해 제어됩니다. 자세한 내용은 [sp_addmergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) 및 [sp_changemergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 참조하세요.  
+ 충돌 정보의 스토리지는 **conflict_logging** 게시 속성에 의해 제어됩니다. 자세한 내용은 [sp_addmergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) 및 [sp_changemergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 참조하세요.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 대화형 해결 프로그램을 사용하여 동기화하는 동안 대화형으로 충돌을 해결할 수도 있습니다. 대화형 해결 프로그램은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 동기화 관리자를 통해 사용할 수 있습니다. 자세한 내용은 [Windows 동기화 관리자를 사용하여 구독 동기화&#40;Windows 동기화 관리자&#41;](synchronize-a-subscription-using-windows-synchronization-manager.md)를 참조하세요.  
   
 ### <a name="to-view-and-resolve-conflicts-for-merge-publications"></a>병합 게시에 대한 충돌을 보고 해결하려면  
   
-1.   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자(또는 구독자)에 연결한 다음 서버 노드를 확장합니다.  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자(또는 구독자)에 연결한 다음 서버 노드를 확장합니다.  
   
 2.  **복제** 폴더를 확장한 다음 **로컬 게시** 폴더를 확장합니다.  
   
