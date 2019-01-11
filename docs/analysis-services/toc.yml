@@ -420,7 +420,7 @@ items:
         items:
         - name: Excel에서 테이블 형식 모델 분석
           href: ./tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md
-      - name: 테이블 형식 모델의 문자열 저장소 및 데이터 정렬
+      - name: 테이블 형식 모델의 문자열 스토리지 및 데이터 정렬
         href: ./tabular-models/string-storage-and-collation-in-tabular-models.md
     - name: 테이블 형식 모델 솔루션 배포
       href: ./tabular-models/tabular-model-solution-deployment-ssas-tabular.md
@@ -625,7 +625,7 @@ items:
           href: ./multidimensional-models/bi-wizard-define-the-ordering-for-a-dimension.md
         - name: BI 마법사 - 차원 쓰기 저장(writeback) 설정
           href: ./multidimensional-models/bi-wizard-enable-dimension-writeback.md
-        - name: 차원 및 파티션에 대한 문자열 저장소 구성
+        - name: 차원 및 파티션에 대한 문자열 스토리지 구성
           href: ./multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md
         - name: 연결된 차원 정의
           href: ./multidimensional-models/define-linked-dimensions.md
@@ -686,7 +686,7 @@ items:
           href: ./multidimensional-models/edit-or-delete-partitions-analyisis-services-multidimensional.md
         - name: 파티션 병합
           href: ./multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md
-        - name: 파티션 저장소 설정
+        - name: 파티션 스토리지 설정
           href: ./multidimensional-models/set-partition-storage-analysis-services-multidimensional.md
         - name: 파티션 조각 설정
           href: ./multidimensional-models/set-the-partition-slice-property-analysis-services.md
@@ -771,7 +771,7 @@ items:
       - name: 다차원 데이터베이스 속성 설정
         href: ./multidimensional-models/set-multidimensional-database-properties-analysis-services.md
         items:
-        - name: 데이터베이스 저장소 위치
+        - name: 데이터베이스 스토리지 위치
           href: ./multidimensional-models/database-storage-location.md
         - name: ReadWriteMode 데이터베이스
           href: ./multidimensional-models/database-readwritemodes.md

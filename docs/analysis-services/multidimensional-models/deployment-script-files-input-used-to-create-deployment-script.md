@@ -25,7 +25,7 @@ ms.locfileid: "38002195"
 |---------------|-----------------|  
 |\<*프로젝트 이름을*>.asdatabase|다차원 또는 1100/1103 테이블 형식 모델 프로젝트에 대 한 XMLA 파일 또는 테이블 형식 1200 및 더 높은 모델 프로젝트에 대 한 JSON 파일입니다. 프로젝트의 모든 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체에 대한 선언적 정의가 포함됩니다.|  
 |\<*프로젝트 이름을*>.deploymenttargets|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체가 생성되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 및 데이터베이스의 이름이 포함됩니다.|  
-|\<*프로젝트 이름을*>.configsettings|데이터 원본 연결 정보 및 개체 저장 위치와 같은 환경 관련 설정이 포함됩니다. 이 파일의 설정은의 설정을 재정의 합니다 \< *프로젝트 이름*>.asdatabase 파일입니다.|  
+|\<*프로젝트 이름을*>.configsettings|데이터 원본 연결 정보 및 개체 스토리지 위치와 같은 환경 관련 설정이 포함됩니다. 이 파일의 설정은의 설정을 재정의 합니다 \< *프로젝트 이름*>.asdatabase 파일입니다.|  
 |\<*프로젝트 이름을*>.deploymentoptions|배포가 트랜잭션인지 여부와 배포된 개체가 배포 후 처리되어야 하는지 여부와 같은 배포 옵션이 포함됩니다.|  
   
 > [!NOTE]  

@@ -1,5 +1,5 @@
 ---
-title: 디스크 기반 테이블 저장소와 메모리 액세스에 최적화된 테이블 저장소 비교 | Microsoft 문서
+title: 디스크 기반 테이블 스토리지와 메모리 액세스에 최적화된 테이블 스토리지 비교 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,7 +19,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47632921"
 ---
-# <a name="comparing-disk-based-table-storage-to-memory-optimized-table-storage"></a>디스크 기반 테이블 저장소와 메모리 액세스에 최적화된 테이블 저장소 비교
+# <a name="comparing-disk-based-table-storage-to-memory-optimized-table-storage"></a>디스크 기반 테이블 스토리지와 메모리 액세스에 최적화된 테이블 스토리지 비교
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   
   

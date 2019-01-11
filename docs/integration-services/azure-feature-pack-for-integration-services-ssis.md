@@ -83,7 +83,7 @@ Azure용 SSIS(SQL Server Integration Services) 기능 팩은 Azure 서비스에 
 ## <a name="scenario-processing-big-data"></a>시나리오: 빅 데이터 처리
  Azure 커넥터를 사용하여 다음과 같은 빅 데이터 처리 작업을 완료합니다.
 
-1.  Azure Blob 업로드 태스크를 사용하여 Azure Blob 저장소에 입력 데이터를 업로드합니다.
+1.  Azure Blob 업로드 태스크를 사용하여 Azure Blob Storage에 입력 데이터를 업로드합니다.
 
 2.  Azure HDInsight 클러스터 만들기 태스크를 사용하여 Azure HDInsight 클러스터를 만듭니다. 자체 클러스터를 사용하려는 경우 이 단계는 선택 사항입니다.
 
@@ -91,12 +91,12 @@ Azure용 SSIS(SQL Server Integration Services) 기능 팩은 Azure 서비스에 
 
 4.  2단계에서 주문형 HDInsight 클러스터를 만든 경우 Azure HDInsight 클러스터 삭제 태스크를 사용하여 사용한 HDInsight 클러스터를 삭제합니다.
 
-5.  Azure HDInsight Blob 다운로드 태스크를 사용하여 Azure Blob 저장소에서 Pig/Hive 출력 데이터를 다운로드합니다.
+5.  Azure HDInsight Blob 다운로드 태스크를 사용하여 Azure Blob Storage에서 Pig/Hive 출력 데이터를 다운로드합니다.
 
 ![SSIS-AzureConnector-BigDataScenario](../integration-services/media/ssis-azureconnector-bigdatascenario.png)
  
 ## <a name="scenario-managing-data-in-the-cloud"></a>시나리오: 클라우드의 데이터 관리
- SSIS 패키지의 Azure Blob 대상을 사용하여 Azure Blob 저장소에 출력 데이터를 쓰거나 Azure Blob 원본을 사용하여 Azure Blob 저장소에서 데이터를 읽습니다.
+ SSIS 패키지의 Azure Blob 대상을 사용하여 Azure Blob Storage에 출력 데이터를 쓰거나 Azure Blob 원본을 사용하여 Azure Blob Storage에서 데이터를 읽습니다.
 
 ![SSIS-AzureConnector-CloudArchive-1](../integration-services/media/ssis-azureconnector-cloudarchive-1.png)
  

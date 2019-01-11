@@ -27,7 +27,7 @@ ms.locfileid: "52523512"
   
 ## <a name="options"></a>Options  
  **패키지 위치**  
- 패키지를 복사할 저장소 위치 유형을 선택합니다.  
+ 패키지를 복사할 스토리지 위치 유형을 선택합니다.  
   
  **Server**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 또는 SSIS 패키지 저장소에서 복사하는 경우 서버 이름을 입력하거나 목록에서 서버를 선택합니다.  

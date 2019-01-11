@@ -33,7 +33,7 @@ ms.locfileid: "53376245"
  `geometry1.STIntersects(geometry2) = 1`  
   
 > [!NOTE]  
->  공간 참조 확인 시스템은 지도 제작, 측량 및 측지 데이터 저장을 위해 개발된 표준 집합인 [EPSG(European Petroleum Survey Group)](https://go.microsoft.com/fwlink/?LinkId=99349) 표준에 따라 정의됩니다. 이 표준은 OGP(Oil and Gas Producers) Surveying and Positioning Committee에서 소유하고 있습니다.  
+>  공간 참조 확인 시스템은 지도 제작, 측량 및 측지 데이터 스토리지를 위해 개발된 표준 집합인 [EPSG(European Petroleum Survey Group)](https://go.microsoft.com/fwlink/?LinkId=99349) 표준에 따라 정의됩니다. 이 표준은 OGP(Oil and Gas Producers) Surveying and Positioning Committee에서 소유하고 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [공간 데이터 형식 개요](spatial-data-types-overview.md)  

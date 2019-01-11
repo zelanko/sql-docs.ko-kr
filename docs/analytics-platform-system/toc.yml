@@ -20,7 +20,7 @@ items:
     href: hardware-components.md
   - name: 하드웨어 구성
     href: hardware-configurations.md
-  - name: 처리 및 저장소 용량
+  - name: 처리 및 스토리지 용량
     href: processing-and-storage-capacity-planning.md
   - name: 고가용성
     href: high-availability.md

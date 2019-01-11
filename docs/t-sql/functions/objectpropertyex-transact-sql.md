@@ -150,7 +150,7 @@ OBJECTPROPERTYEX ( id , property )
 |TableHasTimestamp|Table|테이블은 **timestamp** 열을 갖습니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
 |TableHasUniqueCnst|Table|테이블에 UNIQUE 제약 조건이 있습니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
 |TableHasUpdateTrigger|Table|개체에 Update 트리거가 있습니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
-|TableHasVarDecimalStorageFormat|Table|테이블을 **vardecimal** 저장소 형식에 사용할 수 있습니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasVarDecimalStorageFormat|Table|테이블을 **vardecimal** 스토리지 형식에 사용할 수 있습니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableInsertTrigger|Table|테이블에 INSERT 트리거가 있습니다.<br /><br /> >1 = 지정된 유형의 첫 번째 트리거 ID.<br /><br /> 기본 데이터 형식: **int**|  
 |TableInsertTriggerCount|Table|테이블에 지정된 개수의 INSERT 트리거가 있습니다.<br /><br /> >0 = INSERT 트리거의 수<br /><br /> 기본 데이터 형식: **int**|  
 |TableIsFake|Table|실제 테이블이 아닙니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 요청이 있을 때 내부적으로 구체화됩니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  

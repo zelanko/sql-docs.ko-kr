@@ -27,7 +27,7 @@ ms.locfileid: "52777525"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 데이터베이스 페이지를 읽고 쓸 때 실제 I/O를 모니터링하는 카운터  
   
--   SSD(솔리드 스테이트 드라이브)와 같은 빠른 비휘발성 저장소를 사용하여 버퍼 캐시를 확장하는 버퍼 풀 확장  
+-   SSD(솔리드 스테이트 드라이브)와 같은 빠른 비휘발성 스토리지를 사용하여 버퍼 캐시를 확장하는 버퍼 풀 확장  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용되는 메모리 및 카운터를 모니터링하면 다음 사항을 확인하는 데 도움이 됩니다.  
   

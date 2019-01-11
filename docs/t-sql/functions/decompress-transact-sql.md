@@ -57,7 +57,7 @@ FROM player;
 ```  
   
 ### <a name="b-display-compressed-data-using-computed-column"></a>2. 계산 열을 사용하여 압축된 데이터 표시   
-이 예에서는 압축 해제된 데이터 저장소에 대한 테이블을 만드는 방법을 보여줍니다.  
+이 예에서는 압축 해제된 데이터 스토리지에 대한 테이블을 만드는 방법을 보여줍니다.  
   
 ```  
 CREATE TABLE example_table (  

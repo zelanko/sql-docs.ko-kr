@@ -28,14 +28,14 @@ ms.locfileid: "47700311"
 ##  <a name="exists"></a> 패키지 또는 폴더가 있는지 확인    
  저장된 패키지가 있는지 여부를 프로그래밍 방식으로 확인하려면 해당 패키지를 로드 및 실행하기 전에 다음 메서드 중 하나를 호출합니다.    
     
-|저장소 위치|호출할 메서드|    
+|스토리지 위치|호출할 메서드|    
 |----------------------|--------------------|    
 |SSIS 패키지 저장소|<xref:Microsoft.SqlServer.Dts.Runtime.Application.ExistsOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.ExistsOnSqlServer%2A>|    
     
  폴더가 있는지 여부를 프로그래밍 방식으로 확인하려면 해당 폴더에 저장된 패키지를 나열하기 전에 다음 메서드 중 하나를 호출합니다.    
     
-|저장소 위치|호출할 메서드|    
+|스토리지 위치|호출할 메서드|    
 |----------------------|--------------------|    
 |SSIS 패키지 저장소|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnSqlServer%2A>|    
@@ -45,7 +45,7 @@ ms.locfileid: "47700311"
 ##  <a name="listing"></a> 사용 가능한 패키지 열거    
  저장된 패키지 목록을 프로그래밍 방식으로 가져오려면 다음 메서드 중 하나를 호출합니다.    
     
-|저장소 위치|호출할 메서드|    
+|스토리지 위치|호출할 메서드|    
 |----------------------|--------------------|    
 |SSIS 패키지 저장소|<xref:Microsoft.SqlServer.Dts.Runtime.Application.GetDtsServerPackageInfos%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A>|    
@@ -53,7 +53,7 @@ ms.locfileid: "47700311"
  다음 예제는 이러한 메서드의 사용 방법을 보여 주는 콘솔 애플리케이션입니다.    
     
 ###  <a name="listing_store"></a> 예(SSIS 패키지 저장소)    
- <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetDtsServerPackageInfos%2A> 메서드를 사용하면 SSIS 패키지 저장소에 저장된 패키지를 나열할 수 있습니다. SSIS 패키지 저장소에서 관리하는 기본 저장소 위치는 파일 시스템과 MSDB입니다. 이러한 위치에 논리적 폴더를 추가로 만들 수 있습니다.    
+ <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetDtsServerPackageInfos%2A> 메서드를 사용하면 SSIS 패키지 저장소에 저장된 패키지를 나열할 수 있습니다. SSIS 패키지 저장소에서 관리하는 기본 스토리지 위치는 파일 시스템과 MSDB입니다. 이러한 위치에 논리적 폴더를 추가로 만들 수 있습니다.    
     
 ```vb    
 Imports Microsoft.SqlServer.Dts.Runtime    

@@ -31,7 +31,7 @@ ms.locfileid: "52533403"
 
 메모리 내 OLTP는 올바른 워크로드에 대해 상당한 성능 향상을 제공할 수 있습니다. 한 고객은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]를 실행하는 단일 컴퓨터에서 메모리 내 OLTP를 사용하여 [초당 120만 요청을 달성](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)하려는 bwin입니다. 또 다른 고객은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 메모리 내 OLTP를 활용하여 [리소스 사용률을 70%로 줄이는 동시에](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database) 워크로드를 두 배로 늘리려는 Quorum입니다. 경우에 따라 고객이 최대 30배의 성능 향상을 얻기도 하지만 성능 향상 정도는 워크로드에 따라 다릅니다.
 
-그렇다면 이러한 성능 향상은 어디에서 이루어지는 것일까요? 기본적으로 메모리 내 OLTP는 데이터 액세스 및 트랜잭션 실행을 보다 효율적으로 만들고, 동시 실행 트랜잭션 간에 잠금 및 래치 경합을 제거하여 트랜잭션 처리 성능을 개선합니다. 한편으로는 메모리 내 작업이기 때문에 빠르지 않지만 다른 한편으로는 메모리 내 데이터를 중심으로 최적화되기 때문에 빠릅니다. 메모리 내 및 높은 동시성 컴퓨팅의 최신 개선 사항을 활용하기 위해 데이터 저장소, 액세스 및 처리 알고리즘이 처음부터 다시 설계되었습니다.
+그렇다면 이러한 성능 향상은 어디에서 이루어지는 것일까요? 기본적으로 메모리 내 OLTP는 데이터 액세스 및 트랜잭션 실행을 보다 효율적으로 만들고, 동시 실행 트랜잭션 간에 잠금 및 래치 경합을 제거하여 트랜잭션 처리 성능을 개선합니다. 한편으로는 메모리 내 작업이기 때문에 빠르지 않지만 다른 한편으로는 메모리 내 데이터를 중심으로 최적화되기 때문에 빠릅니다. 메모리 내 및 높은 동시성 컴퓨팅의 최신 개선 사항을 활용하기 위해 데이터 스토리지, 액세스 및 처리 알고리즘이 처음부터 다시 설계되었습니다.
 
 이제 데이터가 메모리 내에 있다는 것은 오류 시 손실되지 않음을 의미하는 것이 아닙니다. 기본적으로 모든 트랜잭션이 완전히 내구적입니다. 즉, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 테이블과 동일한 내구성이 보장됩니다. 트랜잭션 커밋의 일부로 모든 변경 내용이 디스크의 트랜잭션 로그에 기록됩니다. 트랜잭션 커밋 후 언제든 오류가 발생한 경우 데이터베이스가 다시 온라인 상태로 전환되면 데이터가 그대로 유지됩니다. 또한 메모리 내 OLTP는 AlwaysOn, 백업/복원 등 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 모든 고가용성 및 재해 복구 기능과 함께 작동합니다.
 
@@ -80,7 +80,7 @@ ms.locfileid: "52533403"
 
 #### <a name="implementation-considerations"></a>구현 고려 사항
 
-메모리 최적화 테이블을 데이터 수집에 사용합니다. 수집이 업데이트보다 주로 삽입으로 구성되고 메모리 내 OLTP 저장소의 데이터 공간이 중요한 경우 다음 중 하나를 수행합니다.
+메모리 최적화 테이블을 데이터 수집에 사용합니다. 수집이 업데이트보다 주로 삽입으로 구성되고 메모리 내 OLTP 스토리지의 데이터 공간이 중요한 경우 다음 중 하나를 수행합니다.
 
 - [을 수행하는 작업을 사용하여](../indexes/columnstore-indexes-overview.md)클러스터형 Columnstore 인덱스 `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`가 있는 디스크 기반 테이블에 데이터를 정기적으로 일괄 오프로드합니다.
 - [temporal 메모리 최적화 테이블](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)을 사용하여 기록 데이터를 관리합니다. 이 모드에서는 기록 데이터가 디스크에 있으며 데이터 이동이 시스템에서 관리됩니다.

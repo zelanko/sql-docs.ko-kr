@@ -29,7 +29,7 @@ ms.locfileid: "52396816"
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE(Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  외부 테이블을 만드는데 사용되는 외부 데이터 원본을 수정합니다. 외부 데이터 원본은 Hadoop 또는 Azure Blob 저장소(WASB)일 수 있습니다.
+  외부 테이블을 만드는데 사용되는 외부 데이터 원본을 수정합니다. 외부 데이터 원본은 Hadoop 또는 Azure Blob 스토리지(WASB)일 수 있습니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -65,7 +65,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 
 형식 = BLOB_STORAGE   
 **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]을 참조하세요.
-대량 작업의 경우에만 `LOCATION`은 Azure Blob 저장소의 URL에 유효해야 합니다. `LOCATION` URL 끝에 **/**, 파일 이름 또는 공유 액세스 서명 매개 변수를 두지 마십시오.
+대량 작업의 경우에만 `LOCATION`은 Azure Blob 스토리지의 URL에 유효해야 합니다. `LOCATION` URL 끝에 **/**, 파일 이름 또는 공유 액세스 서명 매개 변수를 두지 마십시오.
 사용되는 자격 증명은 `SHARED ACCESS SIGNATURE`을 ID로 사용하여 만들어져야 합니다. 공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)을 참조하세요.
 
   

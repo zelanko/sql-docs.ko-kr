@@ -42,10 +42,10 @@ ms.locfileid: "48104914"
   
  데이터가 검색되는 외부 데이터 원본의 원래 원본 테이블과 동일한 구조를 가진 데이터 원본 뷰의 테이블을 지정할 수 있습니다. 원본은 큐브 데이터베이스의 모든 데이터 원본 또는 데이터 원본 뷰에 있을 수 있습니다.  
   
-## <a name="storage-settings"></a>저장소 설정  
- 큐브 디자이너의 파티션 탭에서 **저장소 설정** 을 클릭하여 MOLAP, ROLAP 또는 HOLAP 저장소에 대한 표준 설정 중 하나를 선택하거나 저장소 모드 및 자동 관리 캐싱에 대한 사용자 지정 설정을 구성할 수 있습니다. MOLAP가 가장 빠른 쿼리 성능을 제공하기 때문에 기본값은 MOLAP입니다. 각 설정에 대한 자세한 내용은 [파티션 저장소 설정&#40;Analysis Services - 다차원&#41;](set-partition-storage-analysis-services-multidimensional.md)을 참조하세요.  
+## <a name="storage-settings"></a>스토리지 설정  
+ 큐브 디자이너의 파티션 탭에서 **스토리지 설정** 을 클릭하여 MOLAP, ROLAP 또는 HOLAP 스토리지에 대한 표준 설정 중 하나를 선택하거나 스토리지 모드 및 자동 관리 캐싱에 대한 사용자 지정 설정을 구성할 수 있습니다. MOLAP가 가장 빠른 쿼리 성능을 제공하기 때문에 기본값은 MOLAP입니다. 각 설정에 대한 자세한 내용은 [파티션 저장소 설정&#40;Analysis Services - 다차원&#41;](set-partition-storage-analysis-services-multidimensional.md)을 참조하세요.  
   
- 큐브에 있는 각 측정값 그룹의 각 파티션에 대해 저장소를 별도로 구성할 수 있습니다. 큐브 또는 측정값 그룹에 대한 기본 저장소 설정을 구성할 수도 있습니다. 저장소는 큐브 마법사의 **파티션** 탭에서 구성합니다.  
+ 큐브에 있는 각 측정값 그룹의 각 파티션에 대해 스토리지를 별도로 구성할 수 있습니다. 큐브 또는 측정값 그룹에 대한 기본 스토리지 설정을 구성할 수도 있습니다. 스토리지는 큐브 마법사의 **파티션** 탭에서 구성합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [로컬 파티션 만들기 및 관리 &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   

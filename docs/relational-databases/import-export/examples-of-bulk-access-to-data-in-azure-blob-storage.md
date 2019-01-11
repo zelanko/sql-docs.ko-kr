@@ -27,7 +27,7 @@ ms.locfileid: "53214102"
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Azure Blob Storage의 데이터에 대량 액세스 예제
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-`BULK INSERT` 및 `OPENROWSET` 문은 Azure Blob Storage의 파일에 직접 액세스할 수 있습니다. 다음 예제에서는 `newinvoices`라는 저장소 계정 및 `Week3`이라는 컨테이너에 저장된 `inv-2017-01-19.csv`라는 CSV(쉼표로 구분된 값) 파일의 데이터를 사용합니다. 서식 파일의 경로를 사용할 수 있지만 다음 예제에는 이러한 경로가 포함되어 있지 않습니다. 
+`BULK INSERT` 및 `OPENROWSET` 문은 Azure Blob Storage의 파일에 직접 액세스할 수 있습니다. 다음 예제에서는 `newinvoices`라는 스토리지 계정 및 `Week3`이라는 컨테이너에 저장된 `inv-2017-01-19.csv`라는 CSV(쉼표로 구분된 값) 파일의 데이터를 사용합니다. 서식 파일의 경로를 사용할 수 있지만 다음 예제에는 이러한 경로가 포함되어 있지 않습니다. 
 
 SQL Server에서 Azure Blob Storage에 대량 액세스하려면 적어도 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1이 필요합니다.
 
@@ -41,7 +41,7 @@ SQL Server에서 Azure Blob Storage에 대량 액세스하려면 적어도 [!INC
 아래 모든 예제에는 공유 액세스 서명을 참조하는 데이터베이스 범위 자격 증명이 필요합니다.   
 
 > [!IMPORTANT]
->  외부 데이터 원본은 `SHARED ACCESS SIGNATURE` ID를 사용하는 데이터베이스 범위 자격 증명으로 만들어야 합니다. 저장소 계정에 대한 공유 액세스 서명을 만들려면 Azure Portal에서 저장소 계정 속성 페이지의 **공유 액세스 서명** 속성을 참조하세요. 공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)을 참조하세요. 자격 증명에 대한 자세한 내용은 [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)을 참조하세요.  
+>  외부 데이터 원본은 `SHARED ACCESS SIGNATURE` ID를 사용하는 데이터베이스 범위 자격 증명으로 만들어야 합니다. 스토리지 계정에 대한 공유 액세스 서명을 만들려면 Azure Portal에서 스토리지 계정 속성 페이지의 **공유 액세스 서명** 속성을 참조하세요. 공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)을 참조하세요. 자격 증명에 대한 자세한 내용은 [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)을 참조하세요.  
  
 `SHARED ACCESS SIGNATURE`여야 하는 `IDENTITY`를 사용하여 데이터베이스 범위 자격 증명을 만듭니다. Azure Portal의 암호를 사용합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
 
@@ -53,7 +53,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 
 
 ## <a name="accessing-data-in-a-csv-file-referencing-an-azure-blob-storage-location"></a>Azure Blob Storage 위치를 참조하는 CSV 파일 데이터 액세스   
-다음 예제에서는 Azure 저장소 계정을 가리키는 `newinvoices`라는 외부 데이터 원본을 사용합니다.   
+다음 예제에서는 Azure 스토리지 계정을 가리키는 `newinvoices`라는 외부 데이터 원본을 사용합니다.   
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (
@@ -82,7 +82,7 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
 
 ## <a name="accessing-data-in-a-csv-file-referencing-a-container-in-an-azure-blob-storage-location"></a>Azure Blob Storage 위치의 컨테이너를 참조하는 CSV 파일 데이터 액세스   
 
-다음 예제에서는 Azure 저장소 계정의 컨테이너(`week3`)를 가리키는 외부 데이터 원본을 사용합니다.   
+다음 예제에서는 Azure 스토리지 계정의 컨테이너(`week3`)를 가리키는 외부 데이터 원본을 사용합니다.   
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoicesContainer
     WITH  (

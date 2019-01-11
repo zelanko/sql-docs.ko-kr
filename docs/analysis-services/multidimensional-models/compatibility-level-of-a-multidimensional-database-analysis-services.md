@@ -27,14 +27,14 @@ ms.locfileid: "34024230"
   
  **다차원 데이터베이스의 호환성 수준**  
   
- 현재 기능 수준에 따라 달라지는 다차원 데이터베이스 동작은 문자열 저장소 아키텍처뿐입니다. 데이터베이스 호환성 수준을 높여 측정값 및 차원의 문자열 저장소에 대한 4GB 최대 제한을 재정의할 수 있습니다.  
+ 현재 기능 수준에 따라 달라지는 다차원 데이터베이스 동작은 문자열 스토리지 아키텍처뿐입니다. 데이터베이스 호환성 수준을 높여 측정값 및 차원의 문자열 스토리지에 대한 4GB 최대 제한을 재정의할 수 있습니다.  
   
  다차원 데이터베이스에 대해 유효한 **CompatibilityLevel** 속성 값은 다음과 같습니다.  
   
 |설정|Description|  
 |-------------|-----------------|  
 |**1050**|이 값은 스크립트나 도구에 표시되지 않지만 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]또는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]에서 만든 데이터베이스에 해당됩니다. **CompatibilityLevel** 이 명시적으로 설정되지 않은 모든 데이터베이스는 **1050** 수준에서 암시적으로 실행됩니다.|  
-|**1100**|이 값은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 만드는 새 데이터베이스의 기본값입니다. 이 호환성 수준에서만 지원되는 기능(즉, 차원 특성의 증가된 문자열 저장소 또는 문자열 데이터가 포함된 고유 카운트 측정값)을 사용할 수 있도록 이전 버전의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 만든 데이터베이스에 대해 이 값을 지정할 수도 있습니다.<br /><br /> **CompatibilityLevel** 을 **1100** 으로 설정한 데이터베이스에서는 파티션 및 차원에 대한 대체 문자열 저장소를 선택할 수 있는 **StringStoresCompatibilityLevel**추가 속성을 가져옵니다.|  
+|**1100**|이 값은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 만드는 새 데이터베이스의 기본값입니다. 이 호환성 수준에서만 지원되는 기능(즉, 차원 특성의 증가된 문자열 스토리지 또는 문자열 데이터가 포함된 고유 카운트 측정값)을 사용할 수 있도록 이전 버전의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 만든 데이터베이스에 대해 이 값을 지정할 수도 있습니다.<br /><br /> **CompatibilityLevel** 을 **1100** 으로 설정한 데이터베이스에서는 파티션 및 차원에 대한 대체 문자열 저장소를 선택할 수 있는 **StringStoresCompatibilityLevel**추가 속성을 가져옵니다.|  
   
 > [!WARNING]  
 >  데이터베이스 호환성 수준을 더 높여서 설정하는 경우 되돌릴 수 없습니다. 호환성 수준을 **1100**으로 높인 후에는 계속하여 최신 서버에서 데이터베이스를 실행해야 합니다. **1050**으로 롤백할 수 없습니다. **또는** 미만의 서버 버전에서는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 1100 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]데이터베이스를 연결하거나 복원할 수 없습니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "34024230"
 3.  서버 동기화는 동일한 버전과 데이터베이스 호환성 수준을 공유하는 서버에 대해서만 지원됩니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 데이터베이스 호환성 수준을 높인 후 **에서** StringStoresCompatibilityLevel [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]속성을 설정할 수 있습니다. 그러면 측정값 및 차원에 대한 문자열 저장소가 증가합니다. 이 기능에 대한 자세한 내용은 [차원 및 파티션에 대한 문자열 저장소 구성](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)을 참조하세요.  
+ 데이터베이스 호환성 수준을 높인 후 **에서** StringStoresCompatibilityLevel [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]속성을 설정할 수 있습니다. 그러면 측정값 및 차원에 대한 문자열 스토리지가 증가합니다. 이 기능에 대한 자세한 내용은 [차원 및 파티션에 대한 문자열 스토리지 구성](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터베이스 백업, 복원 및 동기화&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  

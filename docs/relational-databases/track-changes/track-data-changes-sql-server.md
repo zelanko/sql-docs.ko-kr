@@ -168,7 +168,7 @@ ms.locfileid: "51666414"
 |변경 데이터 캡처 소비자에게 제공되는 변경 데이터를 사용하는 방법에 대해 설명합니다. 이 항목에서는 유효성 검사 LSN 경계, 쿼리 함수 및 쿼리 함수 시나리오를 다룹니다.|[변경 데이터 작업&#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)|  
 |변경 캡처의 개요를 제공합니다.|[변경 내용 추적 정보&#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)|  
 |데이터베이스 또는 테이블에서 변경 내용 추적을 사용하도록 설정하거나 사용하지 않도록 설정하는 방법에 대해 설명합니다.|[변경 내용 추적 설정 및 해제&#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)|  
-|변경 추적을 관리하고, 보안을 구성하고 변경 추적이 사용된 경우 저장소 및 성능에 미치는 영향을 확인하는 방법을 설명합니다.|[변경 내용 추적 관리&#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)|  
+|변경 추적을 관리하고, 보안을 구성하고 변경 추적이 사용된 경우 스토리지 및 성능에 미치는 영향을 확인하는 방법을 설명합니다.|[변경 내용 추적 관리&#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)|  
 |변경 추적을 사용하는 애플리케이션이 추적된 변경 내용을 가져와서 이러한 변경 내용을 다른 데이터 저장소에 적용하고 원본 데이터베이스를 업데이트하는 방법을 설명합니다. 이 항목에서는 장애 조치(failover)가 발생하여 백업에서 데이터베이스를 복원해야 할 때 변경 내용 추적이 수행하는 역할에 대해 설명합니다.|[변경 내용 추적 사용&#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)|  
   
 ## <a name="see-also"></a>참고 항목  

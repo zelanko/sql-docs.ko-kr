@@ -38,7 +38,7 @@ ms.locfileid: "53368055"
   
 |속성|Default|Description|  
 |--------------|-------------|-----------------|  
-|`ManagedCodeEnabled`|1|CLR 저장소 프로시저가 설정되어 있는지 여부를 나타내는 부울 속성입니다.|  
+|`ManagedCodeEnabled`|1|CLR 스토리지 프로시저가 설정되어 있는지 여부를 나타내는 부울 속성입니다.|  
 |`LinkInsideInstanceEnabled`|1|연결된 개체를 동일 서버 인스턴스 내에 만들 수 있는지 여부를 나타내는 부울 속성입니다.|  
 |`LinkToOtherInstanceEnabled`|0|원격 서버의 개체를 연결할 수 있는지 여부를 나타내는 부울 속성입니다.|  
 |`LinkFromOtherInstanceEnabled`|0|개체를 다른 서버 인스턴스로부터 연결할 수 있는지 여부를 나타내는 부울 속성입니다.|  

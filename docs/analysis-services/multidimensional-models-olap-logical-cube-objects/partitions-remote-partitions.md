@@ -28,12 +28,12 @@ ms.locfileid: "53208365"
 > [!NOTE]  
 >  원격 파티션을 포함하는 큐브는 쓰기 가능 차원을 포함할 수 있지만 이로 인해 큐브 성능이 저하될 수 있습니다. 쓰기 가능 차원에 대 한 자세한 내용은 참조 하세요. [쓰기 가능한 차원](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)합니다.  
   
-## <a name="storage-modes-for-remote-partitions"></a>원격 파티션에 대한 저장소 모드  
+## <a name="storage-modes-for-remote-partitions"></a>원격 파티션에 대한 스토리지 모드  
  원격 파티션에서는 로컬 파티션에 사용되는 MOLAP(다차원 OLAP), HOLAP(하이브리드 OLAP) 또는 ROLAP(관계형 OLAP) 등의 저장소 유형을 모두 사용할 수 있습니다. 원격 파티션에서 자동 관리 캐싱을 사용할 수도 있습니다. 원격 파티션의 저장소 모드에 따라 원격 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 저장되는 데이터가 다음과 같이 달라집니다.  
   
 |||  
 |-|-|  
-|저장소 유형|data|  
+|스토리지 유형|data|  
 |MOLAP|파티션의 집계 및 파티션의 원본 데이터에 대한 복사본|  
 |HOLAP|파티션 집계|  
 |ROLAP|파티션 데이터가 저장되지 않음|  

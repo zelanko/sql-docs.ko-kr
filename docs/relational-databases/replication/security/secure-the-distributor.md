@@ -23,7 +23,7 @@ ms.locfileid: "47801181"
 ---
 # <a name="secure-the-distributor"></a>배포자 보안 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  배포자에 연결하는 병합 에이전트에는 로그 판독기 에이전트, 스냅숏 에이전트, 큐 판독기 에이전트, 배포 에이전트 및 병합 에이전트가 있습니다. 필요한 최소 권한만 부여하는 원칙을 따르고 모든 암호 저장소를 보호하면서 이러한 에이전트에 적절한 로그인을 제공하는 것이 중요합니다.  
+  배포자에 연결하는 병합 에이전트에는 로그 판독기 에이전트, 스냅숏 에이전트, 큐 판독기 에이전트, 배포 에이전트 및 병합 에이전트가 있습니다. 필요한 최소 권한만 부여하는 원칙을 따르고 모든 암호 스토리지를 보호하면서 이러한 에이전트에 적절한 로그인을 제공하는 것이 중요합니다.  
   
 -   로그인 및 암호 관리에 대한 자세한 내용은 [복제의 로그인 및 암호 관리](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)를 참조하세요.  
   

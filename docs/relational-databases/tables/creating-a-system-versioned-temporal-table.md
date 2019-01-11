@@ -97,7 +97,7 @@ WITH
 -   **HISTORY_TABLE** 매개 변수에 의해 지정한 테이블이 이미 있는 경우 [스키마 일관성 및 임시 데이터 일관성](https://msdn.microsoft.com/library/dn935015.aspx)측면에서 새로 생성된 temporal 테이블에 대해 유효성이 검사됩니다. 잘못된 기록 테이블을 지정하면 **CREATE TABLE** 문이 실패합니다.  
   
 ## <a name="creating-a-temporal-table-with-a-user-defined-history-table"></a>사용자 정의 기록 테이블이 포함된 temporal 테이블 만들기  
- 사용자 정의 기록 테이블이 포함된 temporal 테이블 만들기는 특정 저장소 옵션 및 추가 인덱스를 가진 기록 테이블을 지정하려는 경우에 편리한 옵션입니다. 아래 예제에서는 생성될 temporal 테이블과 정렬된 스키마를 가진 사용자 정의 기록 테이블을 만듭니다. 이 사용자 정의 기록 테이블에 대해 포인트 조회를 위해 클러스터형 columnstore 인덱스 및 추가 비클러스터형 rowstore(Btree) 인덱스를 만듭니다. 이 사용자 정의 기록 테이블이 생성된 후 사용자 정의 기록 테이블을 기본 기록 테이블로 지정하는 시스템 버전 temporal 테이블이 생성됩니다.  
+ 사용자 정의 기록 테이블이 포함된 temporal 테이블 만들기는 특정 스토리지 옵션 및 추가 인덱스를 가진 기록 테이블을 지정하려는 경우에 편리한 옵션입니다. 아래 예제에서는 생성될 temporal 테이블과 정렬된 스키마를 가진 사용자 정의 기록 테이블을 만듭니다. 이 사용자 정의 기록 테이블에 대해 포인트 조회를 위해 클러스터형 columnstore 인덱스 및 추가 비클러스터형 rowstore(Btree) 인덱스를 만듭니다. 이 사용자 정의 기록 테이블이 생성된 후 사용자 정의 기록 테이블을 기본 기록 테이블로 지정하는 시스템 버전 temporal 테이블이 생성됩니다.  
   
 ```  
 CREATE TABLE DepartmentHistory   

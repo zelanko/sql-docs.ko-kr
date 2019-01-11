@@ -49,9 +49,9 @@ ms.locfileid: "47742301"
   
  DBTYPE_IUNKNOWN으로 바인딩하면 ISequentialStream 스트림 기능이 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 저장된 프로시저를 이러한 데이터를 반환 하는 시나리오를 용이 하 게 큰 값 데이터 형식에 대해 DBTYPE_IUNKNOWN 형식을 반환 값으로 노출 될 DBTYPE_IUNKNOWN으로 바인딩 출력 매개 변수 지원 클라이언트입니다.  
   
-## <a name="storage-object-limitations"></a>저장소 개체 제한 사항  
+## <a name="storage-object-limitations"></a>스토리지 개체 제한 사항  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 열려 있는 저장소 개체를 지원할 수 있습니다. 저장소 개체를 하나를 초과해 열려고 하면, 즉 하나를 초과하는 **ISequentialStream** 인터페이스 포인터에 대한 참조를 얻으려고 하면 DBSTATUS_E_CANTCREATE가 반환됩니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 열려 있는 저장소 개체를 지원할 수 있습니다. 스토리지 개체를 하나를 초과해 열려고 하면, 즉 하나를 초과하는 **ISequentialStream** 인터페이스 포인터에 대한 참조를 얻으려고 하면 DBSTATUS_E_CANTCREATE가 반환됩니다.  
   
 -   에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에서 DBPROP_BLOCKINGSTORAGEOBJECTS 읽기 전용 속성의 기본값은 VARIANT_TRUE입니다. 이는 저장소 개체가 활성화되면 저장소 개체에 있는 메서드를 제외한 일부 메서드가 E_UNEXPECTED 오류와 함께 실패한다는 것을 의미합니다.  
   

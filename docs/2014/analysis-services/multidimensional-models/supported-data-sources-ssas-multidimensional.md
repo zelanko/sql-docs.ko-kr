@@ -53,7 +53,7 @@ ms.locfileid: "53349742"
   
  <sup>4</sup> 일부 경우에 특히 최신 버전의 Oracle 사용 하 여 연결 오류가 발생할 수 있습니다 MSDAORA OLE DB 공급자를 사용 하 여 합니다. 오류가 발생할 경우 Oracle용으로 제시된 다른 공급자 중 하나를 사용해 보세요.  
   
- <sup>5</sup> 일부 기능 온-프레미스를 실행 하는 SQL Server 관계형 데이터베이스에 필요 합니다. 특히 쓰기 저장 및 ROLAP 저장소를 사용하려면 기본 데이터 원본이 SQL Server 관계형 데이터베이스여야 합니다.  
+ <sup>5</sup> 일부 기능 온-프레미스를 실행 하는 SQL Server 관계형 데이터베이스에 필요 합니다. 특히 쓰기 저장 및 ROLAP 스토리지를 사용하려면 기본 데이터 원본이 SQL Server 관계형 데이터베이스여야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [지원되는 데이터 원본&#40;SSAS 테이블 형식&#41;](../tabular-models/data-sources-supported-ssas-tabular.md)   

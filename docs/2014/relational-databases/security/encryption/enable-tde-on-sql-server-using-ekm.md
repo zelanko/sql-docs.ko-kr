@@ -25,7 +25,7 @@ ms.locfileid: "48125083"
 # <a name="enable-tde-using-ekm"></a>EKM을 사용하여 TDE 설정
   이 항목에서는 EKM(확장 가능 키 관리) 모듈에 저장된 비대칭 키를 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에 사용하여 데이터베이스 암호화 키를 보호하기 위해 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 TDE(투명한 데이터 암호화)를 사용하도록 설정하는 방법에 대해 설명합니다.  
   
- TDE는 데이터베이스 암호화 키라는 대칭 키를 사용하여 전체 데이터베이스의 저장소를 암호화합니다. 또한 master 데이터베이스의 데이터베이스 마스터 키로 보호되는 인증서를 사용하여 데이터베이스 암호화 키를 보호할 수도 있습니다. 데이터베이스 마스터 키를 사용하여 데이터베이스 암호화 키를 보호하는 방법은 [TDE&#40;투명한 데이터 암호화&#41;](transparent-data-encryption.md)를 참조하세요. Azure VM에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]이 실행 중인 경우 TDE 구성 방법은 [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리&#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)를 참조하세요.  
+ TDE는 데이터베이스 암호화 키라는 대칭 키를 사용하여 전체 데이터베이스의 스토리지를 암호화합니다. 또한 master 데이터베이스의 데이터베이스 마스터 키로 보호되는 인증서를 사용하여 데이터베이스 암호화 키를 보호할 수도 있습니다. 데이터베이스 마스터 키를 사용하여 데이터베이스 암호화 키를 보호하는 방법은 [TDE&#40;투명한 데이터 암호화&#41;](transparent-data-encryption.md)를 참조하세요. Azure VM에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]이 실행 중인 경우 TDE 구성 방법은 [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리&#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)를 참조하세요.  
   
  **항목 내용**  
   

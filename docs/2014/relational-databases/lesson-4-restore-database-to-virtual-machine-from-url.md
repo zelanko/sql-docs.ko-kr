@@ -23,9 +23,9 @@ ms.locfileid: "48193283"
   
  이 단원에서는 다음 단계를 이미 완료했다고 가정합니다.  
   
--   Windows Azure 저장소 계정이 있습니다.  
+-   Microsoft Azure Storage 계정이 있습니다.  
   
--   Windows Azure 저장소 계정에서 컨테이너를 만들었습니다.  
+-   Microsoft Azure Storage 계정에서 컨테이너를 만들었습니다.  
   
 -   읽기, 쓰기 및 나열 권한이 있는 컨테이너에 정책을 만들었습니다. SAS 키도 생성했습니다.  
   

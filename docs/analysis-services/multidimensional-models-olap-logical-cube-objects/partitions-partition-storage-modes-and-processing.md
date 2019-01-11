@@ -16,7 +16,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/28/2018
 ms.locfileid: "52545650"
 ---
-# <a name="partitions---partition-storage-modes-and-processing"></a>파티션 - 파티션 저장소 모드 및 처리
+# <a name="partitions---partition-storage-modes-and-processing"></a>파티션 - 파티션 스토리지 모드 및 처리
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   파티션의 저장소 모드는 파티션과 해당 부모 측정값 그룹 및 큐브의 쿼리 및 처리 성능, 저장소 요구 사항, 저장소 위치 등에 영향을 줍니다. 선택한 저장소 모드는 처리 선택 사항에도 영향을 줍니다.  
   

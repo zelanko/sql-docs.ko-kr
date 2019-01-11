@@ -83,7 +83,7 @@ ms.locfileid: "47631811"
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/replicate-data-in-encryp_2.sql)]  
   
 ## <a name="example"></a>예제  
- 이 예에서는 첫 번째 예의 ALGORITHM, KEY_SOURCE 및 IDENTITY_VALUE에 동일한 값을 사용하여 구독 데이터베이스에서 같은 대칭 키를 다시 만듭니다. 암호화된 열을 복제하기 위해 AdvWorksSalesOrdersMerge 게시에 대한 구독을 이미 초기화했다고 가정합니다. 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 스크립트 파일에 자격 증명을 저장해야 하는 경우에는 저장 및 전송 중에 무단으로 액세스하지 못하도록 파일에 보안을 설정해야 합니다.  
+ 이 예에서는 첫 번째 예의 ALGORITHM, KEY_SOURCE 및 IDENTITY_VALUE에 동일한 값을 사용하여 구독 데이터베이스에서 같은 대칭 키를 다시 만듭니다. 암호화된 열을 복제하기 위해 AdvWorksSalesOrdersMerge 게시에 대한 구독을 이미 초기화했다고 가정합니다. 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 스크립트 파일에 자격 증명을 저장해야 하는 경우에는 스토리지 및 전송 중에 무단으로 액세스하지 못하도록 파일에 보안을 설정해야 합니다.  
   
  [!code-sql[HowTo#sp_SubscriberEncryptedColumn](../../../relational-databases/replication/codesnippet/tsql/replicate-data-in-encryp_3.sql)]  
   

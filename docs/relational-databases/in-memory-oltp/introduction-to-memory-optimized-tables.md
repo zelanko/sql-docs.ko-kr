@@ -28,7 +28,7 @@ ms.locfileid: "52399276"
  
 SQL Server 2016부터 Azure SQL Database에는 메모리 내 OLTP에 한정되는 [데이터 정렬 또는 코드 페이지](../../relational-databases/collations/collation-and-unicode-support.md) 에 대한 제한이 없습니다.
   
- 메모리 최적화 테이블에 대한 기본 저장소는 주 메모리입니다. 테이블의 행은 메모리에서 읽고 메모리에 기록합니다. 테이블 데이터의 보조 복사본이 디스크에서 유지 관리되는데, 이는 내구성 목적입니다. 내구성이 있는 테이블에 대한 자세한 내용은 [메모리 액세스에 최적화된 개체의 저장소 만들기 및 관리](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md) 를 참조하세요. 메모리 최적화 테이블의 데이터는 데이터베이스 복구 중에 디스크에서만 읽습니다(예: 서버를 다시 시작한 후).  
+ 메모리 최적화 테이블에 대한 기본 스토리지는 주 메모리입니다. 테이블의 행은 메모리에서 읽고 메모리에 기록합니다. 테이블 데이터의 보조 복사본이 디스크에서 유지 관리되는데, 이는 내구성 목적입니다. 내구성이 있는 테이블에 대한 자세한 내용은 [메모리 액세스에 최적화된 개체의 스토리지 만들기 및 관리](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md) 를 참조하세요. 메모리 최적화 테이블의 데이터는 데이터베이스 복구 중에 디스크에서만 읽습니다(예: 서버를 다시 시작한 후).  
   
  보다 큰 성능 향상을 위해 메모리 내 OLTP는 트랜잭션 내구성이 지연된 영구 테이블을 지원합니다. 지연된 지속적 트랜잭션은 트랜잭션이 커밋되고 제어를 클라이언트에 반환한 후 곧바로 디스크에 저장됩니다. 성능이 향상되는 대신 디스크에 저장되지 않은 커밋된 트랜잭션이 서버 충돌 또는 장애 조치(Failover)에서 손실됩니다.  
   

@@ -48,10 +48,10 @@ ms.locfileid: "53360705"
  이 자습서에서는 알려진 문제에 대해 [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스를 분석하는 데 사용할 수 있는 정책을 만드는 방법을 설명합니다.  
   
  [자습서: Windows Azure Blob Storage Service로 SQL Server 백업 및 복원](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
- 이 자습서에서는 SQL Server 백업 및 Windows Azure BLOB 저장소 서비스로 복원하는 방법에 대해 설명합니다.  
+ 이 자습서에서는 SQL Server 백업 및 Windows Azure BLOB 스토리지 서비스로 복원하는 방법에 대해 설명합니다.  
   
  [자습서: Windows Azure Storage 서비스에서 SQL Server 데이터 파일](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
- 이 자습서는 Windows Azure BLOB 저장소 서비스에서 SQL Server 데이터 파일을 저장하는 방법을 이해하도록 도와 줍니다.  
+ 이 자습서는 Windows Azure BLOB 스토리지 서비스에서 SQL Server 데이터 파일을 저장하는 방법을 이해하도록 도와 줍니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 2014 자습서](../tutorials/tutorials-for-sql-server-2014.md)   

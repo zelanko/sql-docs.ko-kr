@@ -20,7 +20,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48099424"
 ---
-# <a name="storage-options-dialog-box-analysis-services---multidimensional-data"></a>저장소 옵션 대화 상자(Analysis Services - 다차원 데이터)
+# <a name="storage-options-dialog-box-analysis-services---multidimensional-data"></a>스토리지 옵션 대화 상자(Analysis Services - 다차원 데이터)
   **의** 저장소 옵션 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 차원, 큐브, 측정값 그룹 및 파티션에 대해 사용자 지정 저장소 모드, 자동 관리 캐싱 및 알림 옵션을 지정할 수 있습니다. **저장소 설정** 대화 상자의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 옵션 **을 클릭하여** 의 **저장소 옵션** 대화 상자를 표시할 수 있습니다. **저장소 설정** 대화 상자에 대한 자세한 내용은 [저장소 설정 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](storage-settings-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.  
   
  **저장소 옵션** 대화 상자에는 다음 표에 나열된 탭이 들어 있습니다.  

@@ -106,7 +106,7 @@ ms.locfileid: "53359385"
   
      이 페이지 아래 있는 필드를 사용하여 공유 구성 요소의 사용자 지정 디렉터리를 지정할 수 있습니다. 공유 구성 요소의 설치 경로를 변경하려면 대화 상자의 맨 아래에 있는 필드에서 경로를 업데이트하거나 줄임표 단추를 클릭하고 설치 디렉터리를 찾습니다. 기본 설치 경로는 C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] \\입니다.  
   
-     [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 SMB(서버 메시지 블록) 파일 공유에서의 시스템 데이터베이스(Master, Model, MSDB 및 TempDB)와 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 사용자 데이터베이스의 설치도 지원합니다. 저장소로 SMB 파일 공유를 사용하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치에 대한 자세한 내용은 [SMB 파일 공유를 저장소 옵션으로 사용하여 SQL Server 설치](../../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)를 참조하세요.  
+     [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 SMB(서버 메시지 블록) 파일 공유에서의 시스템 데이터베이스(Master, Model, MSDB 및 TempDB)와 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 사용자 데이터베이스의 설치도 지원합니다. 스토리지로 SMB 파일 공유를 사용하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치에 대한 자세한 내용은 [SMB fileshare 기능이 있는 SQL Server를 스토리지 옵션으로 설치](../../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)를 참조하세요.  
   
      공유 구성 요소에 대해 절대 경로를 지정해야 합니다. 폴더는 압축하거나 암호화해서는 안 됩니다. 매핑된 드라이브는 지원되지 않습니다. 64비트 운영 체제에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치하는 경우 다음 옵션이 표시됩니다.  
   

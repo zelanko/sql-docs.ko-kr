@@ -255,7 +255,7 @@ ms.locfileid: "52763945"
 |UPDATETEXT 또는 WRITETEXT|UPDATETEXT 또는 WRITETEXT 문이 발견되었습니다. `varchar(max)` 데이터 형식을 사용하고 `text`, `ntext` 및 `image` 데이터 형식 구문을 제거하도록 응용 프로그램을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |USER_ID|USER_ID 함수에 대한 참조가 발견되었습니다. 대신 DATABASE_PRINCIPAL_ID 함수를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |연결된 서버에 OLEDB 사용||  
-|VarDecimal 저장소 형식|`vardecimal` 저장소 형식이 사용되었습니다. 대신 데이터 압축을 사용해야 합니다.|  
+|VarDecimal 스토리지 형식|`vardecimal` 저장소 형식이 사용되었습니다. 대신 데이터 압축을 사용해야 합니다.|  
 |XMLDATA|FOR XML 구문이 발견되었습니다. RAW 및 AUTO 모드의 경우 XSD 생성을 사용해야 합니다. EXPLICIT 모드의 경우에는 대체할 옵션이 없습니다. 컴파일마다 한 번씩 발생합니다.|  
 |XP_API|확장 저장 프로시저 문이 발견되었습니다. 사용하지 마십시오.|  
 |xp_grantlogin|xp_grantlogin 프로시저가 발견되었습니다. 대신 CREATE LOGIN을 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  

@@ -112,7 +112,7 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
   
 ## <a name="report-server-database"></a>보고서 서버 데이터베이스
 
- 보고서 서버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 모든 속성, 개체 및 메타데이터를 저장하는 상태 비저장 서버입니다. 저장되는 데이터로는 게시된 보고서, 컴파일된 보고서, 보고서 모델 및 보고서 서버가 관리하는 모든 항목에 대한 주소를 지정하는 폴더 계층 구조가 있습니다. 보고서 서버 데이터베이스는 단일 Reporting Services 설치 또는 스케일 아웃 배포에 속하는 여러 보고서 서버를 위한 내부 저장소를 제공할 수 있습니다. SharePoint 제품 또는 기술의 대규모 배포에서 실행되도록 보고서 서버를 구성한 경우 보고서 서버는 보고서 서버 데이터베이스 이외에도 SharePoint 데이터베이스를 사용합니다. Reporting Services 설치에 사용되는 데이터 저장소에 대한 자세한 내용은 [보고서 서버 데이터베이스&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)를 참조하세요.  
+ 보고서 서버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 모든 속성, 개체 및 메타데이터를 저장하는 상태 비저장 서버입니다. 저장되는 데이터로는 게시된 보고서, 컴파일된 보고서, 보고서 모델 및 보고서 서버가 관리하는 모든 항목에 대한 주소를 지정하는 폴더 계층 구조가 있습니다. 보고서 서버 데이터베이스는 단일 Reporting Services 설치 또는 스케일 아웃 배포에 속하는 여러 보고서 서버를 위한 내부 스토리지를 제공할 수 있습니다. SharePoint 제품 또는 기술의 대규모 배포에서 실행되도록 보고서 서버를 구성한 경우 보고서 서버는 보고서 서버 데이터베이스 이외에도 SharePoint 데이터베이스를 사용합니다. Reporting Services 설치에 사용되는 데이터 저장소에 대한 자세한 내용은 [보고서 서버 데이터베이스&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)를 참조하세요.  
   
 ## <a name="authentication-rendering-data-and-delivery-extensions"></a>인증, 렌더링, 데이터 및 배달 확장 프로그램
 

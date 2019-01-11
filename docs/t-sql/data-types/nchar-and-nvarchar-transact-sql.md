@@ -31,10 +31,10 @@ ms.locfileid: "51696732"
   
 ## <a name="arguments"></a>인수  
 **nchar** [ ( n ) ]  
-고정 길이 문자열 데이터입니다. *n*은 바이트 쌍으로 문자열 길이를 정의하며 1에서 4,000 사이의 값이어야 합니다. 저장소 크기는 *n*바이트의 두 배입니다. [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 인코딩의 경우 저장소 크기는 *n*바이트의 두 배이고 저장할 수 있는 문자 수도 *n*입니다. UTF-16 인코딩의 경우 저장소 크기는 여전히 *n*바이트의 두 배이지만, 보조 문자가 2바이트 쌍([서로게이트 쌍](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)이라고도 함)을 사용하기 때문에 저장할 수 있는 문자 수는 *n*보다 작을 수 있습니다. **nchar**의 ISO 동의어는 **national char**와 **national character**입니다.
+고정 길이 문자열 데이터입니다. *n*은 바이트 쌍으로 문자열 길이를 정의하며 1에서 4,000 사이의 값이어야 합니다. 스토리지 크기는 *n*바이트의 두 배입니다. [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 인코딩의 경우 저장소 크기는 *n*바이트의 두 배이고 저장할 수 있는 문자 수도 *n*입니다. UTF-16 인코딩의 경우 스토리지 크기는 여전히 *n*바이트의 두 배이지만, 보조 문자가 2바이트 쌍([서로게이트 쌍](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)이라고도 함)을 사용하기 때문에 저장할 수 있는 문자 수는 *n*보다 작을 수 있습니다. **nchar**의 ISO 동의어는 **national char**와 **national character**입니다.
   
 **nvarchar** [ ( n | **max** ) ]  
-가변 길이 문자열 데이터입니다. *n*은 바이트 쌍으로 문자열 길이를 정의하며 1에서 4,000 사이의 값이 될 수 있습니다. **max**는 최대 저장소 크기가 2^30-1자(2GB)임을 나타냅니다. 저장소 크기는 *n*바이트 + 2바이트의 두 배입니다. [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 인코딩의 경우 저장소 크기는 *n*바이트 + 2바이트의 두 배이고 저장할 수 있는 문자 수도 *n*입니다. UTF-16 인코딩의 경우 저장소 크기는 여전히 *n*바이트 +2바이트의 두 배이지만, 보조 문자가 2바이트 쌍([서로게이트 쌍](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)이라고도 함)을 사용하기 때문에 저장할 수 있는 문자 수는 *n*보다 작을 수 있습니다. **nvarchar**의 ISO 동의어는 **national char varying** 및 **national character varying**로 다양합니다.
+가변 길이 문자열 데이터입니다. *n*은 바이트 쌍으로 문자열 길이를 정의하며 1에서 4,000 사이의 값이 될 수 있습니다. **max**는 최대 저장소 크기가 2^30-1자(2GB)임을 나타냅니다. 스토리지 크기는 *n*바이트 + 2바이트의 두 배입니다. [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 인코딩의 경우 저장소 크기는 *n*바이트 + 2바이트의 두 배이고 저장할 수 있는 문자 수도 *n*입니다. UTF-16 인코딩의 경우 스토리지 크기는 여전히 *n*바이트 +2바이트의 두 배이지만, 보조 문자가 2바이트 쌍([서로게이트 쌍](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)이라고도 함)을 사용하기 때문에 저장할 수 있는 문자 수는 *n*보다 작을 수 있습니다. **nvarchar**의 ISO 동의어는 **national char varying** 및 **national character varying**로 다양합니다.
   
 ## <a name="remarks"></a>Remarks  
 데이터 정의나 변수 선언문에서 *n*을 지정하지 않으면 기본 길이 1이 사용됩니다. CAST 함수에 *n*을 지정하지 않으면 기본 길이 30이 사용됩니다.

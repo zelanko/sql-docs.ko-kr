@@ -25,7 +25,7 @@ ms.locfileid: "53205422"
 
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-PolyBase를 사용하는 독립 실행형 SQL Server 인스턴스는 Hadoop 또는 Azure Blob Storage에서 대규모 데이터 집합을 처리하는 경우 성능상의 병목 지점이 될 수 있습니다. PolyBase 그룹 기능을 사용하면 SQL Server 인스턴스 클러스터를 만들어 Hadoop 또는 Azure Blob 저장소와 같은 외부 데이터 원본에서 쿼리 성능을 향상하기 위해 스케일 아웃 방식으로 대규모 데이터를 처리할 수 있습니다. 이제 워크로드의 성능 요구에 맞게 SQL Server 계산을 확장할 수 있습니다. SQL Server 인스턴스 그룹인 PolyBase 스케일 아웃 그룹을 사용하여 병렬 처리 아키텍처에서 대규모 외부 데이터 집합을 처리할 수 있습니다. 그룹에 더 많은 SQL Server 인스턴스를 추가하면 데이터 부하 및 쿼리 성능이 비례해서 증가할 수 있습니다. 
+PolyBase를 사용하는 독립 실행형 SQL Server 인스턴스는 Hadoop 또는 Azure Blob 스토리지에서 대규모 데이터 집합을 처리하는 경우 성능상의 병목 지점이 될 수 있습니다. PolyBase 그룹 기능을 사용하면 SQL Server 인스턴스 클러스터를 만들어 Hadoop 또는 Azure Blob Storage와 같은 외부 데이터 원본에서 쿼리 성능을 향상하기 위해 스케일 아웃 방식으로 대규모 데이터를 처리할 수 있습니다. 이제 워크로드의 성능 요구에 맞게 SQL Server 계산을 확장할 수 있습니다. SQL Server 인스턴스 그룹인 PolyBase 스케일 아웃 그룹을 사용하여 병렬 처리 아키텍처에서 대규모 외부 데이터 집합을 처리할 수 있습니다. 그룹에 더 많은 SQL Server 인스턴스를 추가하면 데이터 부하 및 쿼리 성능이 비례해서 증가할 수 있습니다. 
   
 [PolyBase 시작](../../relational-databases/polybase/get-started-with-polybase.md) 및 [PolyBase 가이드](../../relational-databases/polybase/polybase-guide.md)를 참조하세요.
   

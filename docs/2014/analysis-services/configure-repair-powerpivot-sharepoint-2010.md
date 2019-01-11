@@ -179,7 +179,7 @@ ms.locfileid: "53360345"
  신뢰할 수 있는 사이트를 Excel 서비스에 추가하여 Excel 통합 문서 및 PowerPivot 데이터를 제공하는 사이트에 대한 권한 및 구성 설정을 다양하게 구성할 수 있습니다. 자세한 내용은 [Create a trusted location for PowerPivot sites in Central Administration](power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)을 참조하세요.  
   
 ### <a name="add-servers-or-applications"></a>서버 또는 애플리케이션 추가  
- 이후에 데이터 저장소와 처리 능력이 추가로 필요하다고 판단되는 경우 팜에 두 번째 SharePoint용 PowerPivot 서버 인스턴스를 추가할 수 있습니다. 자세한 내용은 [배포 검사 목록: SharePoint 2010 팜에 PowerPivot 서버를 추가 하 여 스케일 아웃](../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)합니다.  
+ 이후에 데이터 스토리지와 처리 능력이 추가로 필요하다고 판단되는 경우 팜에 두 번째 SharePoint용 PowerPivot 서버 인스턴스를 추가할 수 있습니다. 자세한 내용은 [배포 검사 목록: SharePoint 2010 팜에 PowerPivot 서버를 추가 하 여 스케일 아웃](../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)합니다.  
   
 ## <a name="additional-resources"></a>추가 리소스  
  ![SharePoint 설정](media/as-sharepoint2013-settings-gear.gif "SharePoint 설정") [Microsoft SQL Server Connect를 통해 사용자 의견 및 담당자 정보 제출](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback)합니다.  

@@ -184,7 +184,7 @@ SqlPackage.exe 게시 작업은 원본 데이터베이스의 구조와 일치하
 |**/p:**|IgnoreFileAndLogFilePath (BOOLEAN ' True') =|데이터베이스에 게시할 때 파일 및 로그 파일에 대한 경로의 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IgnoreFilegroupPlacement (BOOLEAN ' True') =|데이터베이스에 게시할 때 FILEGROUP에서의 개체 배치에 대한 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IgnoreFileSize (BOOLEAN ' True') =|데이터베이스에 게시할 때 파일 크기의 차이를 무시할지 또는 경고를 발생하도록 할지를 지정합니다.|
-|**/p:**|IgnoreFillFactor (BOOLEAN ' True') =|데이터베이스에 게시할 때 인덱스 저장소의 채우기 비율에 대한 차이를 무시할지 또는 경고를 발생하도록 할지를 지정합니다.|
+|**/p:**|IgnoreFillFactor (BOOLEAN ' True') =|데이터베이스에 게시할 때 인덱스 스토리지의 채우기 비율에 대한 차이를 무시할지 또는 경고를 발생하도록 할지를 지정합니다.|
 |**/p:**|IgnoreFullTextCatalogFilePath (BOOLEAN ' True') =|데이터베이스에 게시할 때 인덱스 저장소의 채우기 비율에 대한 차이를 무시할지 또는 경고를 발생하도록 할지를 지정합니다.|
 |**/p:**|IgnoreIdentitySeed=(BOOLEAN)|데이터베이스에 게시할 때 ID 열의 시드에 대한 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IgnoreIncrement=(BOOLEAN)|데이터베이스에 게시할 때 ID 열의 증가값에 대한 차이를 무시할지 또는 업데이트할지를 지정합니다.|
@@ -219,7 +219,7 @@ SqlPackage.exe 게시 작업은 원본 데이터베이스의 구조와 일치하
 |**/p:**|ScriptFileSize=(BOOLEAN)|파일 그룹에 파일을 추가할 때 크기를 지정하는지 여부를 제어합니다.|
 |**/p:**|ScriptNewConstraintValidation (BOOLEAN ' True') =|모든 at 끝 게시 된 제약 조건과 check 또는 foreign key 제약 조건을 게시 중에 발생 하는 데이터 오류를 방지 하는 하나의 집합으로 확인 됩니다. False로 설정하면 해당 데이터를 확인하지 않고 제약 조건이 게시됩니다.|
 |**/p:**|ScriptRefreshModule (BOOLEAN ' True') =|게시 스크립트의 끝에 새로 고침 문을 포함합니다.|
-|**/p:**|저장소 = ({파일&#124;메모리})|데이터베이스 모델을 생성할 때 요소의 저장 방법을 지정합니다. 성능상의 이유로 기본값은 InMemory입니다. 큰 데이터베이스의 경우 파일 지원 저장소가 필요합니다.|
+|**/p:**|저장소 = ({파일&#124;메모리})|데이터베이스 모델을 생성할 때 요소의 저장 방법을 지정합니다. 성능상의 이유로 기본값은 InMemory입니다. 큰 데이터베이스의 경우 파일 지원 스토리지가 필요합니다.|
 |**/p:**|TreatVerificationErrorsAsWarnings=(BOOLEAN)|확인을 경고로 처리해야 하는 동안 발생한 오류를 게시하는지 여부를 지정합니다. 생성된 배포 계획을 대상 데이터베이스에 대해 실행하기 전에 해당 계획에 대한 확인이 수행됩니다. 계획 확인에서 대상 전용 개체(예: 인덱스)가 없는 등의 문제가 발견되면 해당 계획을 삭제하여 변경해야 합니다. 또한 복합 프로젝트에 대한 참조로 인한 종속성(예: 테이블, 뷰)이 존재하지만 대상 데이터베이스에는 존재하지 않는 상황도 확인됩니다. 첫 번째 오류 발생 시 중지 게시 작업을 하는 대신, 모든 문제의 전체 목록을 가져오려면이 작업을 수행 하도록 선택할 수 있습니다.|**/p:**|UnmodifiableObjectWarnings (BOOLEAN ' True') =|개체에서 수정할 수 없는 차이가 발견될 경우(예: 파일 경로 또는 파일 크기가 특정 파일에서 다른 경우) 경고를 생성할지 여부를 지정합니다.|
 |**/p:**|VerifyCollationCompatibility (BOOLEAN ' True') =|데이터 정렬 호환성이 확인되는지 여부를 지정합니다.|
 |**/p:**|VerifyDeployment (BOOLEAN ' True') =|성공적인 게시를 차단할 수 있는 문제가 존재할 경우 게시 작업을 중단하는 검사를 게시 전에 수행할지 여부를 지정합니다. 예를 들어 데이터베이스 프로젝트에 존재하지 않고 게시할 때 오류를 일으키는 외래 키를 대상 데이터베이스에 설정한 경우 게시 작업이 중단될 수 있습니다.|
@@ -307,7 +307,7 @@ SqlPackage.exe Import 작업은 BACPAC 패키지(.bacpac 파일)의 스키마 �
 |**/p:**|DatabaseServiceObjective=(STRING)|“P0” 또는 “S1”과 같은 Azure SQL Database의 성능 수준을 정의합니다.|
 |**/p:**|ImportContributorArguments=(STRING)|배포 기여자에 대한 배포 기여자 인수를 지정합니다. 세미콜론으로 구분된 값의 목록이어야 합니다.|
 |**/p:**|ImportContributors=(STRING)|bacpac를 가져올 때 실행되어야 하는 배포 기여자를 지정합니다. 세미콜론으로 구분된 정규화된 빌드 참가자 이름 또는 ID의 목록이어야 합니다.|
-|**/p:**|저장소 = ({파일&#124;메모리})|데이터베이스 모델을 생성할 때 요소의 저장 방법을 지정합니다. 성능상의 이유로 기본값은 InMemory입니다. 큰 데이터베이스의 경우 파일 지원 저장소가 필요합니다.|
+|**/p:**|저장소 = ({파일&#124;메모리})|데이터베이스 모델을 생성할 때 요소의 저장 방법을 지정합니다. 성능상의 이유로 기본값은 InMemory입니다. 큰 데이터베이스의 경우 파일 지원 스토리지가 필요합니다.|
   
 ## <a name="deployreport-parameters-and-properties"></a>DeployReport 매개 변수 및 속성
 
@@ -400,7 +400,7 @@ SqlPackage.exe Import 작업은 BACPAC 패키지(.bacpac 파일)의 스키마 �
 |**/p:**|IgnoreFileAndLogFilePath (BOOLEAN ' True') =|데이터베이스에 게시할 때 파일 및 로그 파일에 대한 경로의 차이를 무시할지 또는 업데이트할지를 지정합니다. |
 |**/p:**|IgnoreFilegroupPlacement (BOOLEAN ' True') =|데이터베이스에 게시할 때 FILEGROUP에서의 개체 배치에 대한 차이를 무시할지 또는 업데이트할지를 지정합니다.| 
 |**/p:**|IgnoreFileSize (BOOLEAN ' True') =|데이터베이스에 게시할 때 파일 크기의 차이를 무시할지 또는 경고를 발생하도록 할지를 지정합니다. |
-|**/p:**|IgnoreFillFactor (BOOLEAN ' True') =|데이터베이스에 게시할 때 인덱스 저장소의 채우기 비율에 대한 차이를 무시할지 또는 경고를 발생하도록 할지를 지정합니다.|
+|**/p:**|IgnoreFillFactor (BOOLEAN ' True') =|데이터베이스에 게시할 때 인덱스 스토리지의 채우기 비율에 대한 차이를 무시할지 또는 경고를 발생하도록 할지를 지정합니다.|
 |**/p:**|IgnoreFullTextCatalogFilePath (BOOLEAN ' True') =|데이터베이스에 게시할 때 인덱스 저장소의 채우기 비율에 대한 차이를 무시할지 또는 경고를 발생하도록 할지를 지정합니다.| 
 |**/p:**|IgnoreIdentitySeed=(BOOLEAN)|데이터베이스에 게시할 때 ID 열의 시드에 대한 차이를 무시할지 또는 업데이트할지를 지정합니다. |
 |**/p:**|IgnoreIncrement=(BOOLEAN)|데이터베이스에 게시할 때 ID 열의 증가값에 대한 차이를 무시할지 또는 업데이트할지를 지정합니다. |
@@ -435,7 +435,7 @@ SqlPackage.exe Import 작업은 BACPAC 패키지(.bacpac 파일)의 스키마 �
 |**/p:**|ScriptFileSize=(BOOLEAN)|파일 그룹에 파일을 추가할 때 크기를 지정하는지 여부를 제어합니다. |
 |**/p:**|ScriptNewConstraintValidation (BOOLEAN ' True') =|모든 at 끝 게시 된 제약 조건과 check 또는 foreign key 제약 조건을 게시 중에 발생 하는 데이터 오류를 방지 하는 하나의 집합으로 확인 됩니다. False로 설정하면 해당 데이터를 확인하지 않고 제약 조건이 게시됩니다.|
 |**/p:**|ScriptRefreshModule (BOOLEAN ' True') =|게시 스크립트의 끝에 새로 고침 문을 포함합니다.|
-|**/p:**|저장소 = ({파일&#124;메모리})|데이터베이스 모델을 생성할 때 요소의 저장 방법을 지정합니다. 성능상의 이유로 기본값은 InMemory입니다. 큰 데이터베이스의 경우 파일 지원 저장소가 필요합니다.|
+|**/p:**|저장소 = ({파일&#124;메모리})|데이터베이스 모델을 생성할 때 요소의 저장 방법을 지정합니다. 성능상의 이유로 기본값은 InMemory입니다. 큰 데이터베이스의 경우 파일 지원 스토리지가 필요합니다.|
 |**/p:**|TreatVerificationErrorsAsWarnings=(BOOLEAN)|확인을 경고로 처리해야 하는 동안 발생한 오류를 게시하는지 여부를 지정합니다. 생성된 배포 계획을 대상 데이터베이스에 대해 실행하기 전에 해당 계획에 대한 확인이 수행됩니다. 계획 확인에서 대상 전용 개체(예: 인덱스)가 없는 등의 문제가 발견되면 해당 계획을 삭제하여 변경해야 합니다. 또한 복합 프로젝트에 대한 참조로 인한 종속성(예: 테이블, 뷰)이 존재하지만 대상 데이터베이스에는 존재하지 않는 상황도 확인됩니다. 첫 번째 오류 발생 시 중지 게시 작업을 하는 대신, 모든 문제의 전체 목록을 가져오려면이 작업을 수행 하도록 선택할 수 있습니다. |
 |**/p:**|UnmodifiableObjectWarnings (BOOLEAN ' True') =|개체에서 수정할 수 없는 차이가 발견될 경우(예: 파일 경로 또는 파일 크기가 특정 파일에서 다른 경우) 경고를 생성할지 여부를 지정합니다.| 
 |**/p:**|VerifyCollationCompatibility (BOOLEAN ' True') =|데이터 정렬 호환성이 확인되는지 여부를 지정합니다.| 
@@ -561,7 +561,7 @@ SqlPackage.exe Import 작업은 BACPAC 패키지(.bacpac 파일)의 스키마 �
 |**/p:**|IgnoreFileAndLogFilePath (BOOLEAN ' True') =|데이터베이스에 게시할 때 파일 및 로그 파일에 대한 경로의 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IgnoreFilegroupPlacement (BOOLEAN ' True') =|데이터베이스에 게시할 때 FILEGROUP에서의 개체 배치에 대한 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IgnoreFileSize (BOOLEAN ' True') =|데이터베이스에 게시할 때 파일 크기의 차이를 무시할지 또는 경고를 발생하도록 할지를 지정합니다.|
-|**/p:**|IgnoreFillFactor (BOOLEAN ' True') =|데이터베이스에 게시할 때 인덱스 저장소의 채우기 비율에 대한 차이를 무시할지 또는 경고를 발생하도록 할지를 지정합니다.|
+|**/p:**|IgnoreFillFactor (BOOLEAN ' True') =|데이터베이스에 게시할 때 인덱스 스토리지의 채우기 비율에 대한 차이를 무시할지 또는 경고를 발생하도록 할지를 지정합니다.|
 |**/p:**|IgnoreFullTextCatalogFilePath (BOOLEAN ' True') =|데이터베이스에 게시할 때 전체 텍스트의 파일 경로의 차이를 무시할지 또는 경고를 발생하도록 할지를 지정합니다.|
 |**/p:**|IgnoreIdentitySeed=(BOOLEAN)|데이터베이스에 게시할 때 ID 열의 시드에 대한 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IgnoreIncrement=(BOOLEAN)|데이터베이스에 게시할 때 ID 열의 증가값에 대한 차이를 무시할지 또는 업데이트할지를 지정합니다.|
@@ -596,7 +596,7 @@ SqlPackage.exe Import 작업은 BACPAC 패키지(.bacpac 파일)의 스키마 �
 |**/p:**|ScriptFileSize=(BOOLEAN)|파일 그룹에 파일을 추가할 때 크기를 지정하는지 여부를 제어합니다.|
 |**/p:**|ScriptNewConstraintValidation (BOOLEAN ' True') =|모든 at 끝 게시 된 제약 조건과 check 또는 foreign key 제약 조건을 게시 중에 발생 하는 데이터 오류를 방지 하는 하나의 집합으로 확인 됩니다. False로 설정하면 해당 데이터를 확인하지 않고 제약 조건이 게시됩니다.|
 |**/p:**|ScriptRefreshModule (BOOLEAN ' True') =|게시 스크립트의 끝에 새로 고침 문을 포함합니다.|
-|**/p:**|저장소 = ({파일&#124;메모리})|데이터베이스 모델을 생성할 때 요소의 저장 방법을 지정합니다. 성능상의 이유로 기본값은 InMemory입니다. 큰 데이터베이스의 경우 파일 지원 저장소가 필요합니다.|
+|**/p:**|저장소 = ({파일&#124;메모리})|데이터베이스 모델을 생성할 때 요소의 저장 방법을 지정합니다. 성능상의 이유로 기본값은 InMemory입니다. 큰 데이터베이스의 경우 파일 지원 스토리지가 필요합니다.|
 |**/p:**|TreatVerificationErrorsAsWarnings=(BOOLEAN)|확인을 경고로 처리해야 하는 동안 발생한 오류를 게시하는지 여부를 지정합니다. 생성된 배포 계획을 대상 데이터베이스에 대해 실행하기 전에 해당 계획에 대한 확인이 수행됩니다. 계획 확인에서 대상 전용 개체(예: 인덱스)가 없는 등의 문제가 발견되면 해당 계획을 삭제하여 변경해야 합니다. 또한 복합 프로젝트에 대한 참조로 인한 종속성(예: 테이블, 뷰)이 존재하지만 대상 데이터베이스에는 존재하지 않는 상황도 확인됩니다. 첫 번째 오류 발생 시 중지 게시 작업을 하는 대신, 모든 문제의 전체 목록을 가져오려면이 작업을 수행 하도록 선택할 수 있습니다.|
 |**/p:**|UnmodifiableObjectWarnings (BOOLEAN ' True') =|개체에서 수정할 수 없는 차이가 발견될 경우(예: 파일 경로 또는 파일 크기가 특정 파일에서 다른 경우) 경고를 생성할지 여부를 지정합니다.|
 |**/p:**|VerifyCollationCompatibility (BOOLEAN ' True') =|데이터 정렬 호환성이 확인되는지 여부를 지정합니다.

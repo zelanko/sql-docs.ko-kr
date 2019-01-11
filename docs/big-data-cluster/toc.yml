@@ -31,7 +31,7 @@ items:
     href: concept-master-instance.md
   - name: 데이터 풀
     href: concept-data-pool.md
-  - name: 저장소 풀
+  - name: 스토리지 풀
     href: concept-storage-pool.md
   - name: 풀 계산
     href: concept-compute-pool.md

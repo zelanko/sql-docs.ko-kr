@@ -189,7 +189,7 @@ ms.locfileid: "51659372"
  이 속성을 설정하려면 ALTER DATABASE 문을 사용합니다.  
   
  **VarDecimal 저장소 형식 사용**  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 이 옵션은 읽기 전용입니다. **True**인 경우 이 데이터베이스에 VarDecimal 저장소 형식을 사용할 수 있습니다. 데이터베이스의 테이블 중 VarDecimal 저장소 형식을 사용하는 테이블이 있으면 이 형식을 해제할 수 없습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서는 모든 데이터베이스에 VarDecimal 저장소 형식을 사용할 수 있습니다. 이 옵션은 [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)을 사용합니다.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 이 옵션은 읽기 전용입니다. **True**인 경우 이 데이터베이스에 VarDecimal 저장소 형식을 사용할 수 있습니다. 데이터베이스의 테이블 중 VarDecimal 스토리지 형식을 사용하는 테이블이 있으면 이 형식을 해제할 수 없습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서는 모든 데이터베이스에 VarDecimal 저장소 형식을 사용할 수 있습니다. 이 옵션은 [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)을 사용합니다.  
   
 ## <a name="recovery"></a>복구  
  **페이지 확인**  

@@ -74,8 +74,8 @@ ms.locfileid: "48188393"
 ## <a name="restoring-from-an-encrypted-backup"></a>암호화된 백업에서 복원  
  복원하려면 원래 백업을 만드는 데 사용된 인증서 또는 비대칭 키가 사용자가 복원 중인 인스턴스에서 사용 가능해야 합니다. 복원을 수행 하는 계정 있어야 `VIEW DEFINITIONS` 인증서 또는 비대칭 키에 있습니다. 백업을 암호화하는 데 사용된 인증서는 갱신되거나 업데이트되지 않아야 합니다.  
   
-## <a name="restoring-from-windows-azure-storage"></a>Windows Azure 저장소에서 복원  
- Windows Azure 저장소에 저장된 백업을 복원하는 경우 복원 UI에는 새로운 백업 디바이스 옵션이 있습니다. **백업 장치 선택** 대화 상자의 **URL** . **추가**를 클릭하면 저장소 계정에 인증하기 위한 SQL 자격 증명 정보를 지정할 수 있는 **Windows Azure에 연결** 대화 상자가 표시됩니다.  저장소 계정에 연결되면 백업 파일이 복원에 사용할 파일을 선택할 수 있는 **Windows Azure에서 백업 파일 찾기** 대화 상자에 표시됩니다.  
+## <a name="restoring-from-windows-azure-storage"></a>Windows Azure Storage에서 복원  
+ Windows Azure 저장소에 저장된 백업을 복원하는 경우 복원 UI에는 새로운 백업 디바이스 옵션이 있습니다. **백업 장치 선택** 대화 상자의 **URL** . **추가**를 클릭하면 저장소 계정에 인증하기 위한 SQL 자격 증명 정보를 지정할 수 있는 **Windows Azure에 연결** 대화 상자가 표시됩니다.  스토리지 계정에 연결되면 백업 파일이 복원에 사용할 파일을 선택할 수 있는 **Windows Azure에서 백업 파일 찾기** 대화 상자에 표시됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [백업 장치&#40;SQL Server&#41;](backup-devices-sql-server.md)   

@@ -88,7 +88,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 Windows에서 지원되는 테이프 장치에 테이프 백업을 지원합니다. Windows에서 지원되는 테이프 장치에 관한 자세한 내용은 Windows의 하드웨어 호환성 목록을 참조하십시오. 컴퓨터에서 사용 가능한 테이프 장치를 보려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하십시오.  
   
- 드라이브 제조업체가 권장하는 특정 테이프 드라이브에 대해서는 권장되는 테이프만 사용하십시오. DAT(디지털 오디오 테이프) 드라이브를 사용하는 경우 컴퓨터 등급 DAT 테이프(DDS: 디지털 데이터 저장소)를 사용하십시오.  
+ 드라이브 제조업체가 권장하는 특정 테이프 드라이브에 대해서는 권장되는 테이프만 사용하십시오. DAT(디지털 오디오 테이프) 드라이브를 사용하는 경우 컴퓨터 등급 DAT 테이프(DDS: 디지털 데이터 스토리지)를 사용하십시오.  
   
  **sp_addumpdevice** 트랜잭션 내에서 실행할 수 없습니다.  
   

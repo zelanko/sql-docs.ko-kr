@@ -34,7 +34,7 @@ ms.locfileid: "47630381"
 |메시지 텍스트|테이블 오류: 개체 ID O_ID, 인덱스 ID I_ID, 파티션 ID PN_ID의 FileStream 디렉터리 ID F_ID이(가) 파일 그룹 FG_ID1에 있지만 파일 그룹 FG_ID2에 있어야 합니다.|  
   
 ## <a name="explanation"></a>설명  
-DBCC CHECKDB를 실행하는 동안 잘못된 파일 그룹에서 지정된 개체에 대한 FileStream 저장소가 감지되었습니다. 개체의 메타데이터가 손상되어 이 오류가 발생했을 수 있습니다.  
+DBCC CHECKDB를 실행하는 동안 잘못된 파일 그룹에서 지정된 개체에 대한 FileStream 스토리지가 감지되었습니다. 개체의 메타데이터가 손상되어 이 오류가 발생했을 수 있습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
   

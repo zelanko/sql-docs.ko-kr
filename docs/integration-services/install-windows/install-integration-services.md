@@ -106,7 +106,7 @@ ETL(추출, 변환 및 로드) 프로세스에 전용 서버를 사용하려면 
 
     -   SQL Server 가져오기 및 내보내기 마법사.
 
--   **Azure용 integration Services 기능 팩**. 기능 팩을 다운로드하여 설치하려면 [Azure용 Microsoft SQL Server 2017 Integration Services 기능 팩](https://www.microsoft.com/download/details.aspx?id=54798)을 참조하세요. 기능 팩을 설치하면 패키지에서 다음 서비스를 포함한 Azure 클라우드의 저장소 및 분석 서비스에 연결할 수 있습니다.
+-   **Azure용 integration Services 기능 팩**. 기능 팩을 다운로드하여 설치하려면 [Azure용 Microsoft SQL Server 2017 Integration Services 기능 팩](https://www.microsoft.com/download/details.aspx?id=54798)을 참조하세요. 기능 팩을 설치하면 패키지에서 다음 서비스를 포함한 Azure 클라우드의 스토리지 및 분석 서비스에 연결할 수 있습니다.
 
     -   Azure Blob Storage.
 

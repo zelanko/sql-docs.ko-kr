@@ -22,7 +22,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48090263"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>기본 모드 보고서 서버 데이터베이스 만들기(SSRS 구성 관리자)
-  기본 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 내부 저장소로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 사용합니다. 이 데이터베이스는 필수 항목이며 게시된 보고서, 모델, 공유 데이터 원본, 세션 데이터, 리소스 및 서버 메타데이터를 저장하는 데 사용됩니다.  
+  기본 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 내부 스토리지로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 사용합니다. 이 데이터베이스는 필수 항목이며 게시된 보고서, 모델, 공유 데이터 원본, 세션 데이터, 리소스 및 서버 메타데이터를 저장하는 데 사용됩니다.  
   
  보고서 서버 데이터베이스를 만들거나 연결 문자열 또는 자격 증명을 변경하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자의 데이터베이스 페이지에 있는 옵션을 사용하십시오.  
   

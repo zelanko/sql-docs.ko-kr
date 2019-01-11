@@ -19,9 +19,9 @@ ms.lasthandoff: 11/28/2018
 ms.locfileid: "52524918"
 ---
 # <a name="lesson-3-create-a-sql-server-credential"></a>3단원: SQL Server 자격 증명 만들기
-  이 단원에서는 Windows Azure 저장소 계정에 액세스하는 데 사용하는 보안 정보를 저장하는 자격 증명을 만듭니다.  
+  이 단원에서는 Windows Azure 스토리지 계정에 액세스하는 데 사용하는 보안 정보를 저장하는 자격 증명을 만듭니다.  
   
- SQL Server 자격 증명은 SQL Server 외부의 리소스에 연결하는 데 필요한 인증 정보를 저장하는 데 사용되는 개체입니다. 자격 증명에는 저장소 컨테이너의 URI 경로와 공유 액세스 서명 키 값이 저장됩니다. 데이터 또는 로그 파일에서 사용하는 각 저장소 컨테이너에 대해 컨테이너 경로와 일치하는 이름의 SQL Server 자격 증명을 만들어야 합니다.  
+ SQL Server 자격 증명은 SQL Server 외부의 리소스에 연결하는 데 필요한 인증 정보를 저장하는 데 사용되는 개체입니다. 자격 증명에는 스토리지 컨테이너의 URI 경로와 공유 액세스 서명 키 값이 저장됩니다. 데이터 또는 로그 파일에서 사용하는 각 스토리지 컨테이너에 대해 컨테이너 경로와 일치하는 이름의 SQL Server 자격 증명을 만들어야 합니다.  
   
  자격 증명에 대 한 일반적인 정보를 참조 하세요 [자격 증명 &#40;데이터베이스 엔진&#41;](security/authentication-access/credentials-database-engine.md)합니다.  
   

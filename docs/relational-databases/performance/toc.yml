@@ -3,7 +3,7 @@ items:
   href: performance-center-for-sql-server-database-engine-and-azure-sql-database.md
 - name: 자동 튜닝
   href: ../automatic-tuning/automatic-tuning.md
-- name: NVDIMM-N 쓰기 저장 캐시를 사용하여 저장소 공간 구성
+- name: NVDIMM-N 쓰기 저장 캐시를 사용하여 스토리지 공간 구성
   href: configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md
 - name: 실행 계획
   href: execution-plans.md

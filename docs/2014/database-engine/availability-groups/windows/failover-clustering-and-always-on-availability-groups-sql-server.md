@@ -54,7 +54,7 @@ ms.locfileid: "53352316"
 ##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI(장애 조치(failover) 클러스터 인스턴스) 및 가용성 그룹  
  WSFC 클러스터와 함께 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터링을 구현하여 서버 인스턴스 수준에서 장애 조치(Failover)의 두 번째 계층을 설정할 수 있습니다. 가용성 복제본은 독립 실행형 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 또는 FCI 인스턴스에서 호스팅할 수 있습니다. 지정된 가용성 그룹의 복제본은 하나의 FCI 파트너에서만 호스팅할 수 있습니다. 가용성 복제본이 FCI에서 실행 중인 경우 가용성 그룹에 대한 가능한 소유자 목록에는 활성 FCI 노드만 포함됩니다.  
   
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 어떤 형태의 공유 저장소에도 종속되지 않습니다. 하지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI(장애 조치(Failover) 클러스터 인스턴스)를 사용하여 하나 이상의 가용성 복제본을 호스팅하는 경우 각 FCI에는 표준 SQL Server 장애 조치(Failover) 클러스터 인스턴스 설치와 같이 공유 저장소가 있어야 합니다.  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 어떤 형태의 공유 저장소에도 종속되지 않습니다. 하지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI(장애 조치(Failover) 클러스터 인스턴스)를 사용하여 하나 이상의 가용성 복제본을 호스팅하는 경우 각 FCI에는 표준 SQL Server 장애 조치(Failover) 클러스터 인스턴스 설치와 같이 공유 스토리지가 있어야 합니다.  
   
  필수 조건에 대한 자세한 내용은 [AlwaysOn 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)의 "가용성 복제본을 호스트하기 위해 SQL Server FCI(장애 조치(failover) 클러스터 인스턴스) 사용에 대한 필수 조건 및 제한 사항" 섹션을 참조하세요.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "53352316"
 |-|-------------------------|-------------------------------------------|  
 |**WSFC 클러스터 사용**|사용자 계정 컨트롤|사용자 계정 컨트롤|  
 |**보호 수준**|인스턴스|데이터베이스|  
-|**저장소 유형**|Shared|공유되지 않음<br /><br /> 가용성 그룹의 복제본은 저장소를 공유하지 않는 반면 FCI가 호스트하는 복제본은 해당 FCI가 요구하는 대로 공유 저장소 솔루션을 사용합니다. 저장소 솔루션은 FCI 내 노드에 의해서만 공유되고 가용성 그룹의 복제본 사이에서는 공유되지 않습니다.|  
+|**저장소 유형**|Shared|공유되지 않음<br /><br /> 가용성 그룹의 복제본은 스토리지를 공유하지 않는 반면 FCI가 호스트하는 복제본은 해당 FCI가 요구하는 대로 공유 스토리지 솔루션을 사용합니다. 스토리지 솔루션은 FCI 내 노드에 의해서만 공유되고 가용성 그룹의 복제본 사이에서는 공유되지 않습니다.|  
 |**저장소 솔루션**|직접 연결됨, SAN, 탑재 지점, SMB|노드 유형에 따라 다름|  
 |**읽기 가능한 보조 복제본**|아니요*|사용자 계정 컨트롤|  
 |**적용할 수 있는 장애 조치(Failover) 정책 설정**|WSFC 쿼럼<br /><br /> FCI별<br /><br /> 가용성 그룹 설정**|WSFC 쿼럼<br /><br /> 가용성 그룹 설정|  

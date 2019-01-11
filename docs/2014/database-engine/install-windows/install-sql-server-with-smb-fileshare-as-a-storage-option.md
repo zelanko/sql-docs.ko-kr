@@ -1,5 +1,5 @@
 ---
-title: 저장소 옵션으로 SMB 공유를 사용하여 SQL Server 설치 | Microsoft Docs
+title: SMB fileshare 기능이 있는 SQL Server를 스토리지 옵션으로 설치 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5113730b1920fb1cd6ecf305e03614e3de894a8e
 ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/13/2018
 ms.locfileid: "53366855"
 ---
-# <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>SMB 파일 공유와 함께 저장소로 SQL Server 설치 옵션
+# <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>SMB fileshare 기능이 있는 SQL Server를 스토리지 옵션으로 설치
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시스템 데이터베이스(Master, Model, MSDB 및 TempDB) 및 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 사용자 데이터베이스를 SMB(서버 메시지 블록) 파일 서버와 함께 저장소 옵션으로 설치할 수 있습니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 독립 실행형 설치와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FCI(장애 조치(Failover) 클러스터 설치) 모두에 적용됩니다.  
   
 > [!NOTE]  
@@ -110,7 +110,7 @@ ms.locfileid: "53366855"
   
 ## <a name="known-issues"></a>알려진 문제  
   
--   네트워크로 연결된 저장소에 있는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스를 분리한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 다시 연결하려고 시도하는 동안 데이터베이스 권한 문제가 발생할 수 있습니다. 이 문제는 [이 KB 아티클](https://go.microsoft.com/fwlink/?LinkId=237321)(https://go.microsoft.com/fwlink/?LinkId=237321)에 정의되어 있습니다. 이 문제를 해결하려면 KB 문서의 **자세한 정보** 섹션을 참조하십시오.  
+-   네트워크로 연결된 스토리지에 있는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스를 분리한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 다시 연결하려고 시도하는 동안 데이터베이스 권한 문제가 발생할 수 있습니다. 이 문제는 [이 KB 아티클](https://go.microsoft.com/fwlink/?LinkId=237321)(https://go.microsoft.com/fwlink/?LinkId=237321)에 정의되어 있습니다. 이 문제를 해결하려면 KB 문서의 **자세한 정보** 섹션을 참조하십시오.  
   
 -   NetApp 디바이스와 같은 일부 타사 제품은 모든 SQL Server API 호출을 지원하지는 않습니다. 이러한 표시 될 수 있습니다.   
     2015-06-04 경우 spid9s Error: 17053, 심각도: 16, 상태: 1.  
@@ -118,7 +118,7 @@ ms.locfileid: "53366855"
   
      NTFS의 경우 이 오류는 무시해도 됩니다.  하지만 ReFS의 경우에는 심각한 성능 저하를 발생할 수 있습니다.  
   
--   SMB 파일 공유가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 클러스터형 인스턴스에 대한 저장소 옵션으로 사용되는 경우, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 DLL에는 파일 공유에 대한 읽기/쓰기 권한이 부족하기 때문에 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 진단 로그에서 파일 공유에 쓸 수 없습니다. 이 문제를 해결하려면 다음 방법 중 하나를 사용하십시오.  
+-   SMB 파일 공유가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 클러스터형 인스턴스에 대한 스토리지 옵션으로 사용되는 경우, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 DLL에는 파일 공유에 대한 읽기/쓰기 권한이 부족하기 때문에 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 진단 로그에서 파일 공유에 쓸 수 없습니다. 이 문제를 해결하려면 다음 방법 중 하나를 사용하십시오.  
   
     1.  클러스터의 모든 컴퓨터 개체에 파일 공유에 대한 읽기/쓰기 권한을 부여합니다.  
   

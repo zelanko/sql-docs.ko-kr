@@ -38,13 +38,13 @@ ms.locfileid: "51638100"
 |-|-|  
 |**필드**|**설명**|  
 |AzureResourceManagerConnection|기존 Azure Resource Manager 연결 관리자를 선택하거나 HDInsight 클러스터를 만드는 데 사용할 새 연결 관리자를 만듭니다.|  
-|AzureStorageConnection|기존 Azure 저장소 연결 관리자를 선택하거나 HDInsight 클러스터에 연결할 Azure 저장소 계정을 참조하는 저장소 연결 관리자를 새로 만듭니다.|
+|AzureStorageConnection|기존 Azure 스토리지 연결 관리자를 선택하거나 HDInsight 클러스터에 연결할 Azure 스토리지 계정을 참조하는 스토리지 연결 관리자를 새로 만듭니다.|
 |SubscriptionId|HDInsight 클러스터가 만들어질 구독 ID를 지정합니다.|
 |ResourceGroup|HDInsight 클러스터가 만들어질 Azure 리소스 그룹을 지정합니다.|
 |위치|HDInsight 클러스터의 위치를 지정합니다. Azure Storage 계정과 동일한 위치에 클러스터를 만들어야 합니다.|  
 |ClusterName|만들 HDInsight 클러스터의 이름을 지정합니다.|  
 |ClusterSize|클러스터에 만들 노드의 수를 지정합니다.|  
-|BlobContainer|HDInsight 클러스터와 연결될 기본 저장소 컨테이너의 이름을 지정합니다.|  
+|BlobContainer|HDInsight 클러스터와 연결될 기본 스토리지 컨테이너의 이름을 지정합니다.|  
 |UserName|HDInsight 클러스터에 연결하는 데 사용할 사용자 이름을 지정합니다.|  
 |암호|HDInsight 클러스터에 연결하는 데 사용할 암호를 지정합니다.|
 |SshUserName|SSH를 사용하여 HDInsight 클러스터에 원격으로 액세스하는 데 사용할 사용자 이름을 지정합니다.|

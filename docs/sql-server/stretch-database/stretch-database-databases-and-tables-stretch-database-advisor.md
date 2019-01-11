@@ -48,14 +48,14 @@ ms.locfileid: "53597144"
 
 ## <a name="review-the-results"></a>결과 검토  
   
-1.  분석이 완료되면 **결과 검토** 페이지(3단계)에서 **기능 권장 사항** 옵션을 선택한 다음 **저장소** 탭을 선택합니다.
+1.  분석이 완료되면 **결과 검토** 페이지(3단계)에서 **기능 권장 사항** 옵션을 선택한 다음 **스토리지** 탭을 선택합니다.
 
 2.  Stretch Database와 관련된 권장 사항을 검토합니다. 각 권장 사항에는 잠재적인 차단 문제와 함께 Stretch Database가 적절할 수 있는 테이블이 나열됩니다.
 
 ## <a name="historical-note"></a>기록 참고
 Stretch Database Advisor는 이전의 SQL Server 2016 업그레이드 관리자 구성 요소였습니다. 이때는 Stretch Database Advisor를 별도의 작업으로 선택하고 실행해야 했습니다.
 
-업그레이드 관리자를 대체하고 확장하는 Data Migration Assistant 릴리스로 Stretch Database Advisor의 기능이 이 새로운 도구에 통합됩니다. Stretch Database와 관련된 권장 사항을 얻기 위해 옵션을 선택할 필요가 없습니다. Data Migration Assistant에서 평가를 실행하면 Stretch Database와 관련된 결과가 **기능 권장 사항**의 **저장소** 탭에 나타납니다.
+업그레이드 관리자를 대체하고 확장하는 Data Migration Assistant 릴리스로 Stretch Database Advisor의 기능이 이 새로운 도구에 통합됩니다. Stretch Database와 관련된 권장 사항을 얻기 위해 옵션을 선택할 필요가 없습니다. Data Migration Assistant에서 평가를 실행하면 Stretch Database와 관련된 결과가 **기능 권장 사항**의 **스토리지** 탭에 나타납니다.
   
 ## <a name="next-step"></a>다음 단계  
  스트레치 데이터베이스를 사용하도록 설정합니다.  

@@ -146,7 +146,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>4. SAS 토큰을 사용하여 자격 증명 만들기  
  **적용 대상**: [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)을 통한 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]입니다.  
   
- 다음 예제에서는 SAS 토큰을 사용하여 공유 액세스 서명 자격 증명을 만듭니다.  Azure 컨테이너에 저장된 액세스 정책과 공유 액세스 서명을 만든 다음, 공유 액세스 서명을 사용하여 자격 증명을 만드는 방법에 대한 자습서는 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 저장소 서비스 사용하기](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)를 참조합니다.  
+ 다음 예제에서는 SAS 토큰을 사용하여 공유 액세스 서명 자격 증명을 만듭니다.  Azure 컨테이너에 저장된 액세스 정책과 공유 액세스 서명을 만든 다음, 공유 액세스 서명을 사용하여 자격 증명을 만드는 방법에 대한 자습서는 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob Storage 서비스 사용하기](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)를 참조합니다.  
   
 > [!IMPORTANT]  
 >  **CREDENTIAL NAME** 인수는 이름이 컨테이너 경로와 일치하고 https로 시작하고 후행 슬래시를 포함하지 않을 것을 요구합니다. **IDENTITY** 인수는 이름, *공유 액세스 서명*을 요구합니다. **SECRET** 인수는 공유 액세스 서명 토큰을 요구합니다.  

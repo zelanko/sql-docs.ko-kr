@@ -221,7 +221,7 @@ ms.locfileid: "53355610"
 ||사전 요구 사항|링크|  
 |-|------------------|----------|  
 |![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|FCI를 사용하여 가용성 복제본을 호스팅하기 전에 시스템 관리자가 기술 자료 문서 KB 976097에 설명된 Windows Server 2008 핫픽스를 설치했는지 확인합니다. 이 핫픽스는 WSFC 노드 중 일부에 대해서만 사용할 수 있는 비대칭 저장소 공유 디스크를 지원 하기 위해 장애 조치 클러스터 관리 Microsoft Management Console (MMC) 스냅인 사용 하도록 설정 합니다.|KB 976097:  [Windows Server 2008 또는 Windows Server 2008 R2를 실행 하는 장애 조치 클러스터에 대 한 장애 조치 클러스터 관리 MMC 스냅인에 비대칭 저장소에 대 한 지원을 추가 하는 핫픽스](https://support.microsoft.com/kb/976097)|  
-|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|각 SQL Server FCI(장애 조치(Failover) 클러스터 인스턴스)에 SQL Server FCI(장애 조치(Failover) 클러스터 인스턴스 설치별로 필요한 공유 저장소가 있는지 확인합니다.||  
+|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|각 SQL Server FCI(장애 조치(Failover) 클러스터 인스턴스)에 SQL Server FCI(장애 조치(Failover) 클러스터 인스턴스 설치별로 필요한 공유 스토리지가 있는지 확인합니다.||  
   
 ###  <a name="RelatedTasksFCIs"></a> 관련 태스크(FCI)  
   

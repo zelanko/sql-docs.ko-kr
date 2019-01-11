@@ -38,7 +38,7 @@ ms.locfileid: "47856831"
   
  SQL Server 백업 및 복원 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 저장된 중요한 데이터를 보호하기 위한 필수 보호 방법을 제공합니다. 치명적인 데이터 손실 위험을 최소화하기 위해서는 데이터베이스를 정기적으로 백업하여 수정된 데이터를 유지해야 합니다. 백업 및 복원 전략을 적절하게 계획하면 다양한 오류로 인해 데이터베이스의 데이터가 손실되는 것을 방지할 수 있습니다. 일련의 백업 복원과 데이터베이스 복구를 통해 전략을 테스트하여 재해에 효과적으로 대처할 수 있습니다.
   
- 백업을 저장하기 위한 로컬 저장소 외에도 SQL Server는 Microsoft Azure Blob Storage Service에 대한 백업과 복원도 지원합니다. 자세한 내용은 [Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. Microsoft Azure Blob 저장소 서비스를 사용하여 저장된 데이터베이스 파일의 경우 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 은(는) 거의 즉시 백업 및 빠른 복원에 Azure 스냅숏을 사용하는 옵션을 제공합니다. 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
+ 백업을 저장하기 위한 로컬 스토리지 외에도 SQL Server는 Windows Azure Blob 스토리지 서비스에 대한 백업과 복원도 지원합니다. 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. Microsoft Azure Blob Storage 서비스를 사용하여 스토리지된 데이터베이스 파일의 경우 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 은(는) 거의 즉시 백업 및 빠른 복원에 Azure 스냅숏을 사용하는 옵션을 제공합니다. 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
   
 ##  <a name="why-back-up"></a>백업 이유  
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 백업하고 백업에 대한 테스트 복원 절차를 실행한 다음 안전한 오프 사이트 위치에 백업을 저장하여 치명적인 데이터 손실을 방지할 수 있습니다. **백업은 데이터를 보호하는 유일한 방법입니다.**
@@ -48,7 +48,7 @@ ms.locfileid: "47856831"
     -   미디어 오류    
     -   사용자 오류(예: 실수로 테이블 삭제)    
     -   하드웨어 오류(예: 손상된 디스크 드라이브 또는 서버의 영구적 손실)    
-    -   자연 재해 Windows Azure Blob 저장소 서비스로 SQL Server 백업을 사용하면 온-프레미스 위치에 영향을 미치는 자연 재해가 발생할 경우에 사용할 오프사이트 백업을 온-프레미스 위치와 다른 영역에 만들 수 있습니다.  
+    -   자연 재해 Microsoft Azure Blob Storage Service로 SQL Server 백업을 사용하면 온-프레미스 위치에 영향을 미치는 자연 재해가 발생할 경우에 사용할 오프사이트 백업을 온-프레미스 위치와 다른 영역에 만들 수 있습니다.  
   
 -   또한 데이터베이스 백업은 서버 간 데이터베이스 복사, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 또는 데이터베이스 미러링 설정, 보관 등의 일상적인 관리 용도로 유용하게 사용할 수 있습니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "47856831"
  오류가 발생한 이후에 데이터를 복원 및 복구하는 데 사용할 수 있는 데이터 복사본입니다. 데이터베이스 백업을 사용하여 데이터베이스 복사본을 새 위치에 복원할 수도 있습니다.  
   
 **백업** 장치  
- SQL Server 백업이 기록되는 대상이자 백업을 복원하는 원본이 되는 디스크 또는 테이프 디바이스입니다. SQL Server 백업은 Windows Azure Blob 저장소 서비스에 기록할 수도 있으며 백업 파일의 대상과 이름을 지정하기 위해 **URL** 형식이 사용됩니다. 자세한 내용은 [Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.  
+ SQL Server 백업이 기록되는 대상이자 백업을 복원하는 원본이 되는 디스크 또는 테이프 디바이스입니다. SQL Server 백업은 Windows Azure Blob 스토리지 서비스에 기록할 수도 있으며 백업 파일의 대상과 이름을 지정하기 위해 **URL** 형식이 사용됩니다. 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.  
   
 **백업 미디어**  
  하나 이상의 백업이 기록된 하나 이상의 테이프 또는 디스크 파일입니다.  

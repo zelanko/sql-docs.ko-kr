@@ -26,7 +26,7 @@ ms.locfileid: "51662942"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  ODBC 드라이버 관리자는 모든 **SQLDrivers** 특성 사양 문자열을 반환합니다. 특성 문자열 및 값 정의에 대한 자세한 내용은 온라인에서 [데이터 액세스 및 저장소 개발자 센터(Data Access and Storage Developer Center)](https://go.microsoft.com/fwlink/?LinkId=4173)또는 [ODBC 프로그래머 참조(ODBC Programmer's Reference)](https://go.microsoft.com/fwlink/?LinkId=45250) 를 참조하십시오.  
+  ODBC 드라이버 관리자는 모든 **SQLDrivers** 특성 사양 문자열을 반환합니다. 특성 문자열 및 값 정의에 대한 자세한 내용은 온라인에서 [데이터 액세스 및 스토리지 개발자 센터(Data Access and Storage Developer Center)](https://go.microsoft.com/fwlink/?LinkId=4173)또는 [ODBC 프로그래머 참조(ODBC Programmer's Reference)](https://go.microsoft.com/fwlink/?LinkId=45250) 를 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQLDrivers](https://go.microsoft.com/fwlink/?LinkId=59341)   

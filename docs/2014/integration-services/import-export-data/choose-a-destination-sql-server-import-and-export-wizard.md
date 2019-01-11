@@ -28,7 +28,7 @@ ms.locfileid: "53360894"
   
 ## <a name="static-options"></a>정적 옵션  
  **대상**  
- 대상의 데이터 저장 형식과 일치하는 데이터 공급자를 선택합니다. 데이터 원본에 사용할 수 있는 공급자가 여러 개 있을 수 있습니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, .Net Framework Data Provider for SQL Server 또는 Microsoft OLE DB Provider for SQL Server를 사용할 수 있습니다.  
+ 대상의 데이터 스토리지 형식과 일치하는 데이터 공급자를 선택합니다. 데이터 원본에 사용할 수 있는 공급자가 여러 개 있을 수 있습니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, .Net Framework Data Provider for SQL Server 또는 Microsoft OLE DB Provider for SQL Server를 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  ODBC 대상에 데이터를 저장하려면 .NET Framework Data Provider for ODBC를 선택합니다.  

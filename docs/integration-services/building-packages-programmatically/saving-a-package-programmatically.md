@@ -29,7 +29,7 @@ ms.locfileid: "47650921"
 ## <a name="saving-a-package-programmatically"></a>프로그래밍 방식으로 패키지 저장  
  프로그래밍 방식으로 패키지를 저장하려면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] <xref:Microsoft.SqlServer.Dts.Runtime.Application> 클래스의 다음 메서드 중 하나를 호출합니다.  
   
-|저장소 위치|호출할 메서드|  
+|스토리지 위치|호출할 메서드|  
 |----------------------|--------------------|  
 |파일|<xref:Microsoft.SqlServer.Dts.Runtime.Application.SaveToXml%2A>|  
 |SSIS 패키지 저장소|<xref:Microsoft.SqlServer.Dts.Runtime.Application.SaveToDtsServer%2A>|  

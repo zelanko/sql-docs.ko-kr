@@ -72,7 +72,7 @@ FROM sys.dm_db_column_store_row_group_physical_stats
  ![일괄 처리 로드를 위한 행 그룹 및 deltastore](../../relational-databases/indexes/media/sql-server-pdw-columnstore-batchload.gif "일괄 처리 로드를 위한 행 그룹 및 deltastore")  
   
 ## <a name="use-a-staging-table-to-improve-performance"></a>준비 테이블을 사용하여 성능 향상
-추가 변환을 실행하기 전의 준비 과정으로만 데이터를 로드하는 경우 힙 테이블에 테이블을 로드하는 것이 클러스터형 columnstore 테이블에 데이터를 로드하는 것보다 훨씬 더 빠릅니다. 또한 [임시 테이블][Temporary]에 데이터를 로드하는 것이 영구 저장소에 테이블을 로드하는 것보다 훨씬 더 빠르게 로드됩니다.  
+추가 변환을 실행하기 전의 준비 과정으로만 데이터를 로드하는 경우 힙 테이블에 테이블을 로드하는 것이 클러스터형 columnstore 테이블에 데이터를 로드하는 것보다 훨씬 더 빠릅니다. 또한 [임시 테이블][Temporary]에 데이터를 로드하는 것이 영구 스토리지에 테이블을 로드하는 것보다 훨씬 더 빠르게 로드됩니다.  
 
  데이터 로드에 대한 일반적인 패턴은 데이터를 준비 테이블로 로드하고 일부 변형을 수행한 후 다음 명령을 사용하여 대상 테이블로 로드하는 것입니다.  
   
@@ -111,7 +111,7 @@ INSERT INTO <table-name> VALUES (<set of values>)
 ALTER INDEX <index-name> on <table-name> REORGANIZE  
 ```  
   
- 델타 행 그룹에 닫힘 및 압축을 강제 적용하려는 경우 다음 명령을 실행할 수 있습니다. 행 로드를 완료하고 새로운 행을 원하지 않을 경우 이 명령을 실행할 수 있습니다. 델타 행 그룹을 명시적으로 닫고 압축하면 저장 공간을 추가로 절약하고 분석 쿼리 성능을 개선할 수 있습니다. 새 행의 삽입을 원하지 않는 경우 이 명령을 호출하는 것이 가장 좋은 방법입니다.  
+ 델타 행 그룹에 닫힘 및 압축을 강제 적용하려는 경우 다음 명령을 실행할 수 있습니다. 행 로드를 완료하고 새로운 행을 원하지 않을 경우 이 명령을 실행할 수 있습니다. 델타 행 그룹을 명시적으로 닫고 압축하면 저장 스토리지를 추가로 절약하고 분석 쿼리 성능을 개선할 수 있습니다. 새 행의 삽입을 원하지 않는 경우 이 명령을 호출하는 것이 가장 좋은 방법입니다.  
   
 ```sql  
 ALTER INDEX <index-name> on <table-name> REORGANIZE with (COMPRESS_ALL_ROW_GROUPS = ON)  

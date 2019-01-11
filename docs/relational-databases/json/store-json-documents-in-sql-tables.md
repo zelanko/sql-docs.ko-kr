@@ -101,13 +101,13 @@ create table WebSite.Logs (
 );
 ```
 
-CLUSTERED COLUMNSTORE 인덱스는 최대 25배의 높은 데이터 압축률을 제공하므로 저장소 공간 요구 사항을 크게 줄이고 저장소 비용을 낮추며 워크로드의 I/O 성능을 높일 수 있습니다. 또한 CLUSTERED COLUMNSTORE 인덱스는 JSON 문서의 테이블 스캔 및 분석에 최적화되어 있으므로 이 형식의 인덱스는 로그 분석에 가장 적합한 옵션이 될 수 있습니다.
+CLUSTERED COLUMNSTORE 인덱스는 최대 25배의 높은 데이터 압축률을 제공하므로 스토리지 공간 요구 사항을 크게 줄이고 스토리지 비용을 낮추며 워크로드의 I/O 성능을 높일 수 있습니다. 또한 CLUSTERED COLUMNSTORE 인덱스는 JSON 문서의 테이블 스캔 및 분석에 최적화되어 있으므로 이 형식의 인덱스는 로그 분석에 가장 적합한 옵션이 될 수 있습니다.
 
 앞의 예에서는 시퀀스 개체를 사용하여 `_id` 열에 값을 할당합니다. 시퀀스 및 ID 모두 이 ID 열에 대해 유효한 옵션입니다.
 
 ## <a name="frequently-changing-documents--memory-optimized-tables"></a>자주 변경되는 문서 및 메모리 최적화 테이블
 
-컬렉션에서 많은 업데이트, 삽입 및 삭제 작업이 실행되도록 하려면 JSON 문서를 메모리 최적화 테이블에 저장할 수 있습니다. 메모리 최적화 JSON 컬렉션은 항상 데이터를 메모리에 저장하기 때문에 저장소 I/O 오버헤드가 없습니다. 또한 메모리 최적화 JSON 컬렉션은 완전히 잠금 해제되어 있습니다. 즉, 문서 작업이 다른 작업을 방해하지 않습니다.
+컬렉션에서 많은 업데이트, 삽입 및 삭제 작업이 실행되도록 하려면 JSON 문서를 메모리 최적화 테이블에 저장할 수 있습니다. 메모리 최적화 JSON 컬렉션은 항상 데이터를 메모리에 저장하기 때문에 스토리지 I/O 오버헤드가 없습니다. 또한 메모리 최적화 JSON 컬렉션은 완전히 잠금 해제되어 있습니다. 즉, 문서 작업이 다른 작업을 방해하지 않습니다.
 
 클래식 컬렉션을 메모리 최적화 컬렉션으로 변환해야 하는 유일한 경우는 다음 예제와 같이 테이블 정의 뒤에 **with(memory_optimized=on)** 옵션을 지정하는 것입니다. 그러면 JSON 컬렉션의 메모리 최적화 버전이 생깁니다.
 
@@ -156,7 +156,7 @@ END
 
 ## <a name="conclusion"></a>결론
 
-SQL Server 및 SQL Database의 기본 JSON 기능을 사용하면 NoSQL 데이터베이스처럼 JSON 문서를 처리할 수 있습니다. 모든 데이터베이스(관계형 또는 NoSQL)에는 JSON 데이터 처리에 대한 장단점이 있습니다. JSON 문서를 SQL Server 또는 SQL Database에 저장하는 주요 이점은 완전한 SQL 언어 지원입니다. 다양한 Transact-SQL 언어를 사용하여 데이터를 처리하고 다양한 저장 옵션을 구성할 수 있습니다(압축률이 높고 빠른 분석을 위한 columnstore 인덱스부터 잠금 해제 처리를 위한 메모리 최적화 테이블까지). 동시에 NoSQL 시나리오에서 쉽게 재사용할 수 있는 성숙한 보안 및 국제화 기능의 이점을 누릴 수 있습니다. 이 문서에서 설명한 이유로 인해 SQL Server 또는 SQL Database에 JSON 문서를 저장하는 것이 좋습니다.
+SQL Server 및 SQL Database의 기본 JSON 기능을 사용하면 NoSQL 데이터베이스처럼 JSON 문서를 처리할 수 있습니다. 모든 데이터베이스(관계형 또는 NoSQL)에는 JSON 데이터 처리에 대한 장단점이 있습니다. JSON 문서를 SQL Server 또는 SQL Database에 저장하는 주요 이점은 완전한 SQL 언어 지원입니다. 다양한 Transact-SQL 언어를 사용하여 데이터를 처리하고 다양한 스토리지 옵션을 구성할 수 있습니다(압축률이 높고 빠른 분석을 위한 columnstore 인덱스부터 잠금 해제 처리를 위한 메모리 최적화 테이블까지). 동시에 NoSQL 시나리오에서 쉽게 재사용할 수 있는 성숙한 보안 및 국제화 기능의 이점을 누릴 수 있습니다. 이 문서에서 설명한 이유로 인해 SQL Server 또는 SQL Database에 JSON 문서를 저장하는 것이 좋습니다.
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database에서 JSON에 대한 자세한 정보  
   

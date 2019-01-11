@@ -27,7 +27,7 @@ ms.locfileid: "51511978"
 ## <a name="best-practices-recommendations"></a>최선의 구현 방법 권장 사항  
  lightweightpooling 옵션은 철저한 테스트를 수행하고 다른 모든 성능 튜닝 방법을 평가한 후에, 현재 환경에서 컨텍스트 전환이 알려진 문제인 경우에만 설정해야 합니다.  
   
- 파이버 모드를 사용하면 컨텍스트 전환을 활용하지 못해 성능이 저하될 수 있고, TLS(스레드 로컬 저장소) 또는 스레드 소유 개체(예: 뮤텍스 - Win32 커널 개체 유형)를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 일부 구성 요소가 파이버 모드에서 제대로 작동하지 않으므로 일상적인 작업에는 파이버 모드 일정을 사용하지 않는 것이 좋습니다.  
+ 파이버 모드를 사용하면 컨텍스트 전환을 활용하지 못해 성능이 저하될 수 있고, TLS(스레드 로컬 스토리지) 또는 스레드 소유 개체(예: 뮤텍스 - Win32 커널 개체 유형)를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 일부 구성 요소가 파이버 모드에서 제대로 작동하지 않으므로 일상적인 작업에는 파이버 모드 일정을 사용하지 않는 것이 좋습니다.  
   
  경량 풀링을 제거하려면 다음 문을 실행한 다음 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 다시 시작합니다.  
   

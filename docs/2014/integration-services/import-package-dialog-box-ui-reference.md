@@ -27,7 +27,7 @@ ms.locfileid: "52506791"
   
 ## <a name="options"></a>변수  
  **패키지 위치**  
- 가져온 패키지를 저장할 저장소 위치 유형을 선택합니다. 사용할 수 있는 옵션은 다음과 같습니다.  
+ 가져온 패키지를 저장할 스토리지 위치 유형을 선택합니다. 사용할 수 있는 옵션은 다음과 같습니다.  
   
  **SQL Server**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "52506791"
  서버 이름을 입력하거나 목록에서 서버를 선택합니다.  
   
  **인증**  
- Windows 인증 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 선택합니다. 이 옵션은 저장소 위치가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인 경우에만 사용할 수 있습니다.  
+ Windows 인증 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 선택합니다. 이 옵션은 스토리지 위치가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인 경우에만 사용할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  가능하면 Windows 인증을 사용하십시오.  

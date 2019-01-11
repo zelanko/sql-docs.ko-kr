@@ -20,7 +20,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1f41868f4ffa8a542475ef7c4be304d8636f87d4
 ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/03/2018
 ms.locfileid: "52802145"
@@ -59,7 +59,7 @@ ms.locfileid: "52802145"
 |**missing_col_count**|**int**|누락된 열의 수입니다.|  
 |**missing_cols**|**varbinary(128)**|누락된 열의 비트맵입니다.|  
 |**columns**|**varbinary(128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**resolver_info**|**nvarchar(255)**|사용자 지정 충돌 해결 프로그램에 필요한 추가 정보의 저장소입니다.|  
+|**resolver_info**|**nvarchar(255)**|사용자 지정 충돌 해결 프로그램에 필요한 추가 정보의 스토리지입니다.|  
 |**view_sel_proc**|**nvarchar(290)**|병합 에이전트가 동적으로 필터링된 게시에 처음으로 아티클을 채우고 필터링된 모든 게시에 변경된 행을 열거하는 데 사용하는 저장 프로시저의 이름입니다.|  
 |**gen_cur**|**int**|아티클의 기본 테이블에 대한 로컬 변경 사항의 생성 번호입니다.|  
 |**excluded_cols**|**varbinary(128)**|구독자로 보낼 때 아티클에서 제외되는 열의 비트맵입니다.|  

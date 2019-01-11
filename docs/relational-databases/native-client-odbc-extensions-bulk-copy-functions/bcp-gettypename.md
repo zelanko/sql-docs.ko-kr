@@ -110,7 +110,7 @@ RETCODE bcp_gettypename (
 |**SQLUDT**|모두|**udt**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 bcp_gettypename 지원  
- 날짜/시간 형식에 대 한 토큰 매개 변수 값에서 테이블의 "sqlncli.h의 유형" 열에 나와 [향상 된 날짜 및 시간 형식에 대 한 대량 복사 변경 사항 &#40;OLE DB 및 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)합니다. 반환 값은 "파일 저장소 유형" 열의 해당 행에 있습니다.  
+ 날짜/시간 형식에 대 한 토큰 매개 변수 값에서 테이블의 "sqlncli.h의 유형" 열에 나와 [향상 된 날짜 및 시간 형식에 대 한 대량 복사 변경 사항 &#40;OLE DB 및 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)합니다. 반환 값은 "파일 스토리지 유형" 열의 해당 행에 있습니다.  
   
  자세한 내용은 [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  
   

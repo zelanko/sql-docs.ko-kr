@@ -86,7 +86,7 @@ ms.locfileid: "48049403"
  **백업 미디어 용어 및 정의**  
   
  [백업 장치](backup-devices-sql-server.md)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업이 기록되는 대상이자 백업을 복원하는 원본이 되는 디스크 또는 테이프 장치입니다. SQL Server 백업은 Windows Azure Blob 저장소 서비스에 기록할 수도 있으며 백업 파일의 대상과 이름을 지정하기 위해 **URL** 형식이 사용됩니다. 자세한 내용은 [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업이 기록되는 대상이자 백업을 복원하는 원본이 되는 디스크 또는 테이프 장치입니다. SQL Server 백업은 Windows Azure Blob 스토리지 서비스에 기록할 수도 있으며 백업 파일의 대상과 이름을 지정하기 위해 **URL** 형식이 사용됩니다. 자세한 내용은 [Windows Azure Blob Storage 서비스로 SQL Server 백업 및 복원](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.  
   
  [백업 미디어](media-sets-media-families-and-backup-sets-sql-server.md)  
  하나 이상의 백업이 기록된 하나 이상의 테이프 또는 디스크 파일입니다.  

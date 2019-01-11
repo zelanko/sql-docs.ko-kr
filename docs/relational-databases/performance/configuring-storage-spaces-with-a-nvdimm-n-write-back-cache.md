@@ -1,5 +1,5 @@
 ---
-title: NVDIMM-N 쓰기 저장 캐시를 사용하여 저장소 공간 구성 | Microsoft 문서
+title: NVDIMM-N 쓰기 저장 캐시를 사용하여 스토리지 공간 구성 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/13/2018
 ms.locfileid: "53328274"
 ---
-# <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>NVDIMM-N 쓰기 저장 캐시를 사용하여 저장소 공간 구성
+# <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>NVDIMM-N 쓰기 저장 캐시를 사용하여 스토리지 공간 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Windows Server 2016은 매우 빠르게 I/O(입출력) 작업을 수행할 수 있는 NVDIMM-N 디바이스를 지원합니다. 이러한 디바이스를 사용하는 좋은 방법 중 하나는 쓰기 대기 시간을 짧게 하는 쓰기 저장 캐시입니다. 이 항목에서는 SQL Server 트랜잭션 로그를 저장할 가상 드라이브로 미러된 NVDIMM-N 쓰기 저장 캐시를 사용하여 미러된 저장소 공간을 설정하는 방법을 설명합니다. 또한 데이터 테이블 또는 기타 데이터를 저장하는 데 사용하려는 경우 저장소 풀에 더 많은 디스크를 포함하거나 격리가 중요한 경우 여러 풀을 만들 수 있습니다.  
+  Windows Server 2016은 매우 빠르게 I/O(입출력) 작업을 수행할 수 있는 NVDIMM-N 디바이스를 지원합니다. 이러한 디바이스를 사용하는 좋은 방법 중 하나는 쓰기 대기 시간을 짧게 하는 쓰기 저장 캐시입니다. 이 항목에서는 SQL Server 트랜잭션 로그를 저장할 가상 드라이브로 미러된 NVDIMM-N 쓰기 저장 캐시를 사용하여 미러된 스토리지 공간을 설정하는 방법을 설명합니다. 또한 데이터 테이블 또는 기타 데이터를 저장하는 데 사용하려는 경우 스토리지 풀에 더 많은 디스크를 포함하거나 격리가 중요한 경우 여러 풀을 만들 수 있습니다.  
   
- 이 기술을 사용하는 Channel 9 비디오를 보려면 [Using Non-volatile Memory (NVDIMM-N) as Block Storage in Windows Server 2016](https://channel9.msdn.com/Events/Build/2016/P466)(Windows Server 2016에서 블록 저장소로 비휘발성 메모리(NVDIMM-N) 사용)을 참조하세요.  
+ 이 기술을 사용하는 Channel 9 비디오를 보려면 [Using Non-volatile Memory (NVDIMM-N) as Block Storage in Windows Server 2016](https://channel9.msdn.com/Events/Build/2016/P466)(Windows Server 2016에서 블록 스토리지로 비휘발성 메모리(NVDIMM-N) 사용)를 참조하세요.  
   
 ## <a name="identifying-the-right-disks"></a>올바른 디스크 식별  
- Windows Server 2016에서 저장소 공간 설정, 특히 쓰기 저장 캐시와 같은 고급 기능을 사용한 설정은 PowerShell을 통해 가장 쉽게 수행됩니다. 첫 번째 단계는 가상 디스크가 생성될 저장소 공간 풀이 있어야 하는 디스크를 식별하는 것입니다. NVDIMM-N에는 SCM(저장소 클래스 메모리)의 버스 유형 및 미디어 유형이 있는데 Get-PhysicalDisk PowerShell cmdlet을 통해 쿼리할 수 있습니다.  
+ Windows Server 2016에서 스토리지 공간 설정, 특히 쓰기 저장 캐시와 같은 고급 기능을 사용한 설정은 PowerShell을 통해 가장 쉽게 수행됩니다. 첫 번째 단계는 가상 디스크가 생성될 스토리지 공간 풀이 있어야 하는 디스크를 식별하는 것입니다. NVDIMM-N에는 SCM(스토리지 클래스 메모리)의 버스 유형 및 미디어 유형이 있는데 Get-PhysicalDisk PowerShell cmdlet을 통해 쿼리할 수 있습니다.  
   
 ```  
 Get-PhysicalDisk | Select FriendlyName, MediaType, BusType  
@@ -49,8 +49,8 @@ $pd | Select FriendlyName, MediaType, BusType
   
  ![FriendlyName 선택](../../relational-databases/performance/media/select-friendlyname.png "FriendlyName 선택")  
   
-## <a name="creating-the-storage-pool"></a>저장소 풀 만들기  
- PhysicalDisks를 포함하는 $pd 변수를 사용하면 New-StoragePool PowerShell cmdlet을 사용하여 저장소 풀을 쉽게 빌드할 수 있습니다.  
+## <a name="creating-the-storage-pool"></a>스토리지 풀 만들기  
+ PhysicalDisks를 포함하는 $pd 변수를 사용하면 New-StoragePool PowerShell cmdlet을 사용하여 스토리지 풀을 쉽게 빌드할 수 있습니다.  
   
 ```  
 New-StoragePool -StorageSubSystemFriendlyName "Windows Storage*" -FriendlyName NVDIMM_Pool -PhysicalDisks $pd  

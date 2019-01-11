@@ -26,7 +26,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48073883"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>보고서 서버 데이터베이스(SSRS 기본 모드)
-  보고서 서버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 사용하여 메타데이터와 개체 정의를 저장하는 상태 비저장 서버입니다. 기본 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치는 두 개의 데이터베이스를 사용하여 임시 저장소와는 별도로 영구 데이터 저장소를 제공합니다. 데이터베이스는 함께 생성되며 이름별로 바인딩됩니다. 기본적으로 데이터베이스 이름은 각각 **reportserver** 와 **reportservertempdb**입니다.  
+  보고서 서버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 사용하여 메타데이터와 개체 정의를 저장하는 상태 비저장 서버입니다. 기본 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치는 두 개의 데이터베이스를 사용하여 임시 스토리지와는 별도로 영구 데이터 스토리지를 제공합니다. 데이터베이스는 함께 생성되며 이름별로 바인딩됩니다. 기본적으로 데이터베이스 이름은 각각 **reportserver** 와 **reportservertempdb**입니다.  
   
  SharePoint 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치도 데이터 경고 기능에 대한 데이터베이스를 만듭니다. SharePoint 모드에 있는 3개의 데이터베이스는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션과 연결되어 있습니다. 자세한 내용은 [Reporting Services SharePoint 서비스 애플리케이션 관리](../manage-a-reporting-services-sharepoint-service-application.md)를 참조하세요.  
   

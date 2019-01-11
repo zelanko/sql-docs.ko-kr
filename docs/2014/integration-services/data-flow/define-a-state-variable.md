@@ -82,7 +82,7 @@ ms.locfileid: "52811635"
   
  **자동 상태 지속**과 함께 CDC 제어 태스크를 사용하려는 경우 CDC 상태 변수는 사용자가 지정하는 데이터베이스 상태 테이블에서 읽히고 해당 값이 변경될 때 동일한 테이블로 다시 업데이트됩니다. 상태 테이블에 대한 자세한 내용은 [CDC Control Task](../control-flow/cdc-control-task.md)및 [CDC Control Task Editor](../cdc-control-task-editor.md)를 참조하십시오.  
   
- 자동 상태 지속과 함께 CDC 제어 태스크를 사용하지 않는 경우에는 패키지가 마지막으로 실행되었을 때 변수 값이 저장된 영구 저장소에서 해당 값을 로드하고 현재 처리 범위에 대한 처리가 완료될 때 영구 저장소에 다시 써야 합니다.  
+ 자동 상태 지속과 함께 CDC 제어 태스크를 사용하지 않는 경우에는 패키지가 마지막으로 실행되었을 때 변수 값이 저장된 영구 스토리지에서 해당 값을 로드하고 현재 처리 범위에 대한 처리가 완료될 때 영구 스토리지에 다시 써야 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [CDC Control Task](../control-flow/cdc-control-task.md)   

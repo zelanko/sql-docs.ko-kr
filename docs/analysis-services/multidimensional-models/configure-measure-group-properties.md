@@ -25,7 +25,7 @@ ms.locfileid: "34023902"
   
 |속성|정의|  
 |--------------|----------------|  
-|**AggregationPrefix**|ROLAP 저장소에 적용됩니다. SQL Server에서 이 측정값 그룹과 연관된 파티션에 대한 집계를 저장하는 데 사용되는 인덱싱된 뷰에 공통 접두사를 할당합니다.|  
+|**AggregationPrefix**|ROLAP 스토리지에 적용됩니다. SQL Server에서 이 측정값 그룹과 연관된 파티션에 대한 집계를 저장하는 데 사용되는 인덱싱된 뷰에 공통 접두사를 할당합니다.|  
 |**DataAggregation**|이 속성은 나중에 사용하도록 예약되어 있으며 현재 영향을 주지 않습니다. 따라서 이 설정을 수정하지 않는 것이 좋습니다.|  
 |**설명**|이 속성을 사용하여 측정값 그룹을 문서화할 수 있습니다.|  
 |**ErrorConfiguration**|중복 키, 알 수 없는 키, Null 키, 오류 제한, 오류 감지 시 수행 동작 및 오류 로그 파일을 처리할 때 구성 가능한 오류 처리 설정을 제공합니다. [큐브, 파티션 및 차원 처리에 대한 오류 구성&#40;SSAS - 다차원&#41;](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)을 참조하세요.|  
@@ -37,8 +37,8 @@ ms.locfileid: "34023902"
 |**ProactiveCaching**|중복 키, 알 수 없는 키, Null 키, 오류 제한, 오류 감지 시 수행 동작 및 오류 로그 파일을 처리할 때 구성 가능한 오류 처리 설정을 제공합니다.|  
 |**ProcessingMode**|인덱싱 및 집계를 처리 중에 수행할지 아니면 처리 후에 수행할지를 나타냅니다. 사용할 수 있는 옵션은 Regular와 LazyAggregations입니다. LazyAggregations를 사용하여 집계를 백그라운드 작업으로 실행할 수 있습니다.|  
 |**ProcessingPriority**|지연 집계 및 지연 인덱싱과 같이 백그라운드 작업 중의 큐브 처리 우선 순위를 결정합니다. 기본값은 **0**입니다.|  
-|**StorageLocation**|측정값 그룹의 파일 시스템 저장소 위치입니다. 지정하지 않으면 측정값 그룹을 포함하는 큐브에서 위치가 상속됩니다.|  
-|**StorageMode**|측정값 그룹에 대한 저장소 모드입니다. 사용 가능한 값은 MOLAP, ROLAP 또는 HOLAP입니다.|  
+|**StorageLocation**|측정값 그룹의 파일 시스템 스토리지 위치입니다. 지정하지 않으면 측정값 그룹을 포함하는 큐브에서 위치가 상속됩니다.|  
+|**StorageMode**|측정값 그룹에 대한 스토리지 모드입니다. 사용 가능한 값은 MOLAP, ROLAP 또는 HOLAP입니다.|  
 |**형식**|측정값 그룹의 유형을 지정합니다.|  
   
   

@@ -94,9 +94,9 @@ ms.locfileid: "52522529"
   
     -   **저장소 계정 연결 오류:**  
   
-         event_type = XstoreError인 FileRetentionAdminXEvent에서 저장소 예외가 보고됩니다. 이 오류에 대한 자세한 내용은 해당 이벤트의 error_message 및 stack_trace를 참조하십시오.  
+         event_type = XstoreError인 FileRetentionAdminXEvent에서 스토리지 예외가 보고됩니다. 이 오류에 대한 자세한 내용은 해당 이벤트의 error_message 및 stack_trace를 참조하십시오.  
   
-         SQL Server 관리되는 백업이 URL에 대한 백업 기술을 기반으로 하므로 저장소 연결과 관련된 오류는 두 기능에 모두 적용됩니다. 문제 해결 단계에 대 한 자세한 내용은 참조 하세요. **문제 해결 섹션** 의 합니다 [SQL Server Backup to URL Best Practices and Troubleshooting](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md) 문서.  
+         SQL Server 관리되는 백업이 URL에 대한 백업 기술을 기반으로 하므로 스토리지 연결과 관련된 오류는 두 기능에 모두 적용됩니다. 문제 해결 단계에 대 한 자세한 내용은 참조 하세요. **문제 해결 섹션** 의 합니다 [SQL Server Backup to URL Best Practices and Troubleshooting](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md) 문서.  
   
 ### <a name="troubleshooting-system-issues"></a>시스템 문제 해결  
  시스템(SQL Server, SQL Server 에이전트)에 문제가 있는 몇 가지 시나리오와 해당 문제가 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]에 미치는 영향은 다음과 같습니다.  

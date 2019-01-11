@@ -37,7 +37,7 @@ ms.locfileid: "48101473"
 |**처리 모드**|차원에 사용할 처리 모드를 선택합니다. 이 속성의 값에 대 한 자세한 내용은 참조 하세요. <xref:Microsoft.AnalysisServices.Dimension.ProcessingMode%2A>합니다.|  
 |**State**|차원의 처리 상태를 표시합니다. 이 속성의 값에 대 한 자세한 내용은 참조 하세요. <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>합니다.|  
 |**마지막으로 처리**|차원을 마지막으로 처리한 날짜와 시간을 표시합니다.|  
-|**현재 저장소 모드**|차원의 현재 저장소 모드를 표시합니다. 이 속성의 값에 대 한 자세한 내용은 참조 하세요. <xref:Microsoft.AnalysisServices.Dimension.CurrentStorageMode%2A>합니다.|  
+|**현재 저장소 모드**|차원의 현재 스토리지 모드를 표시합니다. 이 속성의 값에 대 한 자세한 내용은 참조 하세요. <xref:Microsoft.AnalysisServices.Dimension.CurrentStorageMode%2A>합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

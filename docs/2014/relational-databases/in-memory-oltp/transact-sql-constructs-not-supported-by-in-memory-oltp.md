@@ -52,7 +52,7 @@ ms.locfileid: "52541233"
 |데이터 형식|*데이터 형식 이름*|표시된 데이터 형식이 지원되지 않습니다. 지원되는 데이터 형식 중 하나로 형식을 바꿉니다. 자세한 내용은 [Supported Data Types](supported-data-types-for-in-memory-oltp.md)합니다.|  
 |기능|계산 열|계산된 열은 메모리 최적화 테이블에서 지원되지 않습니다. `CREATE TABLE` 문에서 계산된 열을 제거합니다.|  
 |기능|복제|복제는 메모리 최적화 테이블에서 지원되지 않습니다.|  
-|기능|FILESTREAM|FILESTREAM 저장소는 메모리 최적화 테이블의 열에 지원되지 않습니다. 열 정의에서 `FILESTREAM` 키워드를 제거합니다.|  
+|기능|FILESTREAM|FILESTREAM 스토리지는 메모리 최적화 테이블의 열에 지원되지 않습니다. 열 정의에서 `FILESTREAM` 키워드를 제거합니다.|  
 |기능|SPARSE|메모리 최적화 테이블의 열을 SPARSE로 정의할 수 없습니다. 열 정의에서 `SPARSE` 키워드를 제거합니다.|  
 |기능|ROWGUIDCOL|ROWGUIDCOL 옵션은 메모리 최적화 테이블의 열에서 지원되지 않습니다. 열 정의에서 `ROWGUIDCOL` 키워드를 제거합니다.|  
 |기능|FOREIGN KEY|FOREIGN KEY 제약 조건은 메모리 최적화 테이블에서 지원되지 않습니다. 테이블 정의에서 제약 조건을 제거합니다.<br /><br /> 제약 조건에 대 한 지원 부족을 완화 하는 방법에 대 한 자세한 내용은 [마이그레이션 확인 및 Foreign Key 제약 조건](../../database-engine/migrating-check-and-foreign-key-constraints.md)합니다.|  

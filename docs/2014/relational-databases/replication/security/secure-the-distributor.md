@@ -15,13 +15,13 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 51618b0103a168ab72cab676fdf76ec1da8c3a7c
 ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/03/2018
 ms.locfileid: "52788605"
 ---
 # <a name="secure-the-distributor"></a>배포자 보안 설정
-  배포자에 연결하는 병합 에이전트에는 로그 판독기 에이전트, 스냅숏 에이전트, 큐 판독기 에이전트, 배포 에이전트 및 병합 에이전트가 있습니다. 필요한 최소 권한만 부여하는 원칙을 따르고 모든 암호 저장소를 보호하면서 이러한 에이전트에 적절한 로그인을 제공하는 것이 중요합니다.  
+  배포자에 연결하는 병합 에이전트에는 로그 판독기 에이전트, 스냅숏 에이전트, 큐 판독기 에이전트, 배포 에이전트 및 병합 에이전트가 있습니다. 필요한 최소 권한만 부여하는 원칙을 따르고 모든 암호 스토리지를 보호하면서 이러한 에이전트에 적절한 로그인을 제공하는 것이 중요합니다.  
   
 -   로그인 및 암호 관리에 대한 자세한 내용은 [복제의 로그인 및 암호 관리](manage-logins-and-passwords-in-replication.md)를 참조하세요.  
   

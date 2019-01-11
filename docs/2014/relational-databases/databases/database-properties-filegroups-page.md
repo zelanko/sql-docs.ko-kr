@@ -22,7 +22,7 @@ ms.locfileid: "52799415"
 # <a name="database-properties-filegroups-page"></a>데이터베이스 속성(파일 그룹 페이지)
   이 페이지를 사용하여 파일 그룹을 확인하거나 선택한 데이터베이스에 새 파일 그룹을 추가할 수 있습니다. 파일 그룹 유형은 *행* 파일 그룹, FILESTREAM 데이터 및 메모리 최적화 파일 그룹으로 구분됩니다.  
   
- 행 파일 그룹에는 일반 데이터 파일 및 로그 파일이 있고, FILESTREAM 데이터 파일 그룹에는 FILESTREAM 데이터 파일이 있습니다. 이러한 데이터 파일은 FILESTREAM 저장소를 사용할 경우 BLOB(Binary Large Object) 데이터가 파일 시스템에 저장되는 방식에 대한 정보를 저장합니다. 옵션은 두 가지 파일 그룹 유형에서 동일합니다.  
+ 행 파일 그룹에는 일반 데이터 파일 및 로그 파일이 있고, FILESTREAM 데이터 파일 그룹에는 FILESTREAM 데이터 파일이 있습니다. 이러한 데이터 파일은 FILESTREAM 스토리지를 사용할 경우 BLOB(Binary Large Object) 데이터가 파일 시스템에 저장되는 방식에 대한 정보를 저장합니다. 옵션은 두 가지 파일 그룹 유형에서 동일합니다.  
   
  FILESTREAM이 설정되지 않은 경우 **Filestream** 섹션은 사용할 수 없습니다. [서버 속성(고급 페이지)](../../database-engine/configure-windows/server-properties-advanced-page.md)을 사용하여 FILESTREAM 저장소를 설정할 수 있습니다.  
   

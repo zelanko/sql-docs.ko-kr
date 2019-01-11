@@ -97,7 +97,7 @@ ALTER RESOURCE GOVERNOR
  MAX_OUTSTANDING_IO_PER_VOLUME = *value*  
  **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
- 디스크 볼륨당 최대 지연 I/O 작업을 설정합니다. 모든 크기의 읽기 또는 쓰기가 여기에 해당합니다.  MAX_OUTSTANDING_IO_PER_VOLUME의 최대값은 100입니다. 비율이 아닙니다. 이 설정은 디스크 볼륨의 IO 특성에 맞게 IO 리소스 관리를 튜닝하도록 디자인되었습니다. 여러 가지 값을 설정해 보고 IOMeter, [DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223),     또는 SQLIO(사용되지 않음)와 같은 보정 도구를 사용하여 저장소 하위 시스템의 최댓값을 식별하는 것이 좋습니다. 이 설정은 다른 풀의 MAX_IOPS_PER_VOLUME이 무제한으로 설정되어 있는 경우에도 SQL Server에서 리소스 풀의 최소 IOPS를 충족할 수 있도록 시스템 수준 안전 검사를 제공합니다. MAX_IOPS_PER_VOLUME에 대한 자세한 내용은 [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md)을 참조하세요.  
+ 디스크 볼륨당 최대 지연 I/O 작업을 설정합니다. 모든 크기의 읽기 또는 쓰기가 여기에 해당합니다.  MAX_OUTSTANDING_IO_PER_VOLUME의 최대값은 100입니다. 비율이 아닙니다. 이 설정은 디스크 볼륨의 IO 특성에 맞게 IO 리소스 관리를 튜닝하도록 디자인되었습니다. 여러 가지 값을 설정해 보고 IOMeter, [DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223),     또는 SQLIO(사용되지 않음)와 같은 보정 도구를 사용하여 스토리지 하위 시스템의 최댓값을 식별하는 것이 좋습니다. 이 설정은 다른 풀의 MAX_IOPS_PER_VOLUME이 무제한으로 설정되어 있는 경우에도 SQL Server에서 리소스 풀의 최소 IOPS를 충족할 수 있도록 시스템 수준 안전 검사를 제공합니다. MAX_IOPS_PER_VOLUME에 대한 자세한 내용은 [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md)을 참조하세요.  
   
 ## <a name="remarks"></a>Remarks  
  사용자 트랜잭션 내에서는 ALTER RESOURCE GOVERNOR DISABLE, ALTER RESOURCE GOVERNOR RECONFIGURE 및 ALTER RESOURCE GOVERNOR RESET STATISTICS를 사용할 수 없습니다.  

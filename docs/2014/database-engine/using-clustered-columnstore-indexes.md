@@ -139,7 +139,7 @@ SELECT * FROM sys.column_store_row_groups
   
 -   리소스 사용량이 많은 DML 작업 후 파티션을 다시 작성합니다.  
   
-     파티션을 다시 작성하면 파티션을 조각 모음하여 디스크 저장소를 줄일 수 있습니다. 다시 작성 시 columnstore에서 삭제 표시된 모든 행이 삭제되고 deltastore의 모든 행이 columnstore로 이동됩니다.  
+     파티션을 다시 작성하면 파티션을 조각 모음하여 디스크 스토리지를 줄일 수 있습니다. 다시 작성 시 columnstore에서 삭제 표시된 모든 행이 삭제되고 deltastore의 모든 행이 columnstore로 이동됩니다.  
   
 -   데이터를 로드한 후 파티션을 다시 작성합니다.  
   

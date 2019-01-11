@@ -130,9 +130,9 @@ ORDER BY TABLE_NAME ASC
 |[DISCOVER_PROPERTIES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-properties-rowset)|지정한 데이터 원본에 대해 XMLA에서 지원하는 속성에 대한 정보를 반환합니다.|  
 |[DISCOVER_SCHEMA_ROWSETS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-schema-rowsets-rowset)|XMLA에서 지원하는 모든 열거 값에 대한 이름, 제한, 설명 및 기타 정보를 반환합니다.|  
 |[DISCOVER_SESSIONS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-sessions-rowset)|세션 사용자 및 기간을 포함하여 활성 세션에 대해 보고합니다.|  
-|[DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-storage-table-column-segments-rowset)|테이블 형식 또는 SharePoint 모드로 실행되는 Analysis Services 데이터베이스에서 사용하는 저장소 테이블에 대한 열 및 세그먼트 수준 정보를 제공합니다.|  
-|[DISCOVER_STORAGE_TABLE_COLUMNS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-storage-table-columns-rowset)|클라이언트가 테이블 형식 또는 SharePoint 모드로 실행되는 Analysis Services 데이터베이스에서 사용하는 저장소 테이블에 대한 열 할당을 확인할 수 있도록 합니다.|  
-|[DISCOVER_STORAGE_TABLES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-storage-tables-rowset)|테이블 형식 모델 데이터베이스에서 모델 저장소로 사용되는 테이블에 대한 정보를 반환합니다.|  
+|[DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-storage-table-column-segments-rowset)|테이블 형식 또는 SharePoint 모드로 실행되는 Analysis Services 데이터베이스에서 사용하는 스토리지 테이블에 대한 열 및 세그먼트 수준 정보를 제공합니다.|  
+|[DISCOVER_STORAGE_TABLE_COLUMNS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-storage-table-columns-rowset)|클라이언트가 테이블 형식 또는 SharePoint 모드로 실행되는 Analysis Services 데이터베이스에서 사용하는 스토리지 테이블에 대한 열 할당을 확인할 수 있도록 합니다.|  
+|[DISCOVER_STORAGE_TABLES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-storage-tables-rowset)|테이블 형식 모델 데이터베이스에서 모델 스토리지로 사용되는 테이블에 대한 정보를 반환합니다.|  
 |[DISCOVER_TRACE_COLUMNS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-trace-columns-rowset)|추적에 사용할 수 있는 열에 대한 XML 설명을 반환합니다.|  
 |[DISCOVER_TRACE_DEFINITION_PROVIDERINFO 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-trace-definition-providerinfo-rowset)|공급자의 이름 및 버전 정보를 반환합니다.|  
 |[DISCOVER_TRACE_EVENT_CATEGORIES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-trace-event-categories-rowset)|사용 가능한 범주 목록을 반환합니다.|  

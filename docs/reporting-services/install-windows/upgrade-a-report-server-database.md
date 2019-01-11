@@ -20,7 +20,7 @@ ms.locfileid: "50027532"
 ---
 # <a name="upgrade-a-report-server-database"></a>보고서 서버 데이터베이스 업그레이드
 
-보고서 서버 데이터베이스는 하나 이상의 보고서 서버 인스턴스를 위한 저장소를 제공합니다. 보고서 서버 데이터베이스 스키마는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 새 릴리스마다 변경될 수 있으므로 데이터베이스 버전과 사용하는 보고서 서버 인스턴스 버전이 일치해야 합니다. 대부분의 경우 보고서 서버 데이터베이스는 사용자가 특별한 동작을 수행하지 않고도 자동으로 업그레이드할 수 있습니다.  
+보고서 서버 데이터베이스는 하나 이상의 보고서 서버 인스턴스를 위한 스토리지를 제공합니다. 보고서 서버 데이터베이스 스키마는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 새 릴리스마다 변경될 수 있으므로 데이터베이스 버전과 사용하는 보고서 서버 인스턴스 버전이 일치해야 합니다. 대부분의 경우 보고서 서버 데이터베이스는 사용자가 특별한 동작을 수행하지 않고도 자동으로 업그레이드할 수 있습니다.  
   
  **기본 모드:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드에서는 보고서 서버 데이터베이스가 실제로 기본 이름이 ReportServer 및 ReportServerTempDB인 두 개의 데이터베이스로 구성됩니다.  
   

@@ -42,9 +42,9 @@ ms.locfileid: "52401026"
   
 |값|Description|  
 |-----------|-----------------|  
-|0|이것은 기본값입니다. 이 설정은 MOLAP, HOLAP 및 ROLAP 저장소를 사용하는 다차원 데이터베이스와 데이터 마이닝 모델에 서비스를 제공하는 데 사용되는 다차원 모드를 지정합니다.|  
+|0|이것은 기본값입니다. 이 설정은 MOLAP, HOLAP 및 ROLAP 스토리지를 사용하는 다차원 데이터베이스와 데이터 마이닝 모델에 서비스를 제공하는 데 사용되는 다차원 모드를 지정합니다.|  
 |1|SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 배포의 일부로 설치된 Analysis Services 인스턴스를 지정합니다. SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 설치의 일부인 Analysis Services 인스턴스의 배포 모드 속성은 변경하지 마십시오. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 서버에서 더 이상 실행되지 않습니다.|  
-|2|메모리 내 저장소나 DirectQuery 저장소를 사용하는 테이블 형식 model 데이터베이스를 호스팅하는 데 사용되는 테이블 형식 모드를 지정합니다.|  
+|2|메모리 내 스토리지나 DirectQuery 스토리지를 사용하는 테이블 형식 model 데이터베이스를 호스팅하는 데 사용되는 테이블 형식 모드를 지정합니다.|  
   
  각 모드는 다른 모드와 함께 사용할 수 없습니다. 테이블 형식 모드용으로 구성된 서버는 큐브 및 차원이 포함된 기본 Analysis Services 데이터베이스를 실행할 수 없습니다. 기본 컴퓨터 하드웨어에서 지원하는 경우 같은 컴퓨터에 Analysis Services 인스턴스를 여러 개 설치하고 각 인스턴스가 다른 배포 모드를 사용하도록 구성할 수 있습니다. Analysis Services는 리소스를 많이 사용하는 애플리케이션이므로 고성능 서버인 경우에만 한 시스템에 여러 개의 인스턴스를 배포하는 것이 좋습니다.  
   

@@ -45,7 +45,7 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  변경할 데이터베이스 범위 자격 증명의 이름을 지정합니다.  
   
  IDENTITY **='***identity_name***'**  
- 서버 외부에 연결할 때 사용할 계정의 이름을 지정합니다. Azure Blob 저장소에서 파일을 가져오려면 ID 이름이 `SHARED ACCESS SIGNATURE`여야 합니다.  공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)을 참조하세요.  
+ 서버 외부에 연결할 때 사용할 계정의 이름을 지정합니다. Azure Blob 스토리지에서 파일을 가져오려면 ID 이름이 `SHARED ACCESS SIGNATURE`여야 합니다.  공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)을 참조하세요.  
     
   
  SECRET **='***secret***'**  

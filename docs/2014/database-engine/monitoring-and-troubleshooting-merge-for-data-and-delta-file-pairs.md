@@ -22,7 +22,7 @@ ms.locfileid: "48075283"
   
  다음과 같이 데이터 및 델타 파일 쌍을 모니터링할 수 있습니다.  
   
--   메모리 내 저장소의 크기와 저장소의 전체 크기를 비교합니다. 저장소가 지나치게 크면 병합이 트리거되지 않고 있을 가능성이 높습니다. 자세한 내용은  
+-   메모리 내 스토리지의 크기와 스토리지의 전체 크기를 비교합니다. 스토리지가 지나치게 크면 병합이 트리거되지 않고 있을 가능성이 높습니다. 자세한 내용은  
   
 -   사용 하 여 데이터 및 델타 파일에서 사용 되는 공간 확인 [sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) 경우 병합이 트리거되지 말아야 할 때를 확인 합니다.  
   

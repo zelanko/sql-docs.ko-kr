@@ -27,7 +27,7 @@ ms.locfileid: "52399666"
 |단계|링크|  
 |----------|----------|  
 |보고서 서버 배포에 사용되는 계정을 만들거나 식별합니다. 보고서 서버 서비스용 서비스 계정과 보고서 서버 데이터베이스에 연결하기 위한 자격 증명이 있어야 합니다.||  
-|보고서 서버 데이터베이스를 호스팅할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 결정합니다. 로컬 또는 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 사용할 수 있습니다. 보고서에 맞는 저장 용량을 가진 컴퓨터에 있는 인스턴스를 선택해야 합니다.||  
+|보고서 서버 데이터베이스를 호스팅할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 결정합니다. 로컬 또는 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 사용할 수 있습니다. 보고서에 맞는 스토리지 용량을 가진 컴퓨터에 있는 인스턴스를 선택해야 합니다.||  
 |구독에 보고서 서버 전자 메일을 사용하려면 조직에 전자 메일 서비스를 제공하는 SMTP 서버 또는 게이트웨이의 이름을 찾습니다(옵션).|[전자 메일 배달을 위한 보고서 서버 구성 &#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)|  
 |참고: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]의 이전 CTP 릴리스에서 컴퓨터를 업그레이드하는 경우 구성 파일에 사용자 지정 변경 내용을 적용한 적이 있다면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 업그레이드한 후 구성 파일에 동일한 변경 내용을 적용해야 합니다. 관련이 있는 파일은 **web.config** 및 **client.config**입니다.||  
   

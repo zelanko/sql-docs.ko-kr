@@ -20,8 +20,8 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48198623"
 ---
-# <a name="processing-and-storage-locations-partition-wizard"></a>처리 및 저장소 위치(파티션 마법사)
-  **처리 및 저장소 위치** 페이지를 사용하여 파티션에 대한 데이터를 저장하는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스뿐만 아니라 해당 파티션을 소유하는 큐브의 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스도 지정할 수 있습니다. 원격 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스 또는 기본 저장소 위치 이외의 저장소 위치를 지정하여 파티션을 원격 파티션으로 정의할 수 있습니다. 원격 파티션에 대한 자세한 내용은 [원격 파티션](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)을 참조하세요.  
+# <a name="processing-and-storage-locations-partition-wizard"></a>처리 및 스토리지 위치(파티션 마법사)
+  **처리 및 저장소 위치** 페이지를 사용하여 파티션에 대한 데이터를 저장하는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스뿐만 아니라 해당 파티션을 소유하는 큐브의 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스도 지정할 수 있습니다. 원격 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스 또는 기본 스토리지 위치 이외의 스토리지 위치를 지정하여 파티션을 원격 파티션으로 정의할 수 있습니다. 원격 파티션에 대한 자세한 내용은 [원격 파티션](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)을 참조하세요.  
   
 ## <a name="processing-location-options"></a>처리 위치 옵션  
  **현재 서버 인스턴스**  
@@ -38,12 +38,12 @@ ms.locfileid: "48198623"
  **새로 만들기**  
  파티션을 처리할 원격 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스를 나타내는 새 데이터 원본을 만듭니다.  
   
-## <a name="storage-location-options"></a>저장소 위치 옵션  
+## <a name="storage-location-options"></a>스토리지 위치 옵션  
  **기본 서버 위치**  
- 현재 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스의 데이터 폴더를 파티션에 대한 집계 및 인덱싱 데이터의 저장소 위치로 지정합니다.  
+ 현재 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스의 데이터 폴더를 파티션에 대한 집계 및 인덱싱 데이터의 스토리지 위치로 지정합니다.  
   
  **지정 된 폴더**  
- 파티션에 대한 집계 및 인덱싱 데이터의 저장소 위치를 지정합니다.  
+ 파티션에 대한 집계 및 인덱싱 데이터의 스토리지 위치를 지정합니다.  
   
  **...**  
  **지정한 폴더** 에 대한 폴더를 선택할 수 있는 **원격 폴더 찾아보기**대화 상자를 표시합니다.  

@@ -125,7 +125,7 @@ DOCUMENT
  XML 스키마 컬렉션과의 연결을 위해 **xml** 데이터 형식에만 적용됩니다. 스키마에 **xml** 열을 입력하기 전에 먼저 [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)을 사용하여 데이터베이스에 해당 스키마를 만들어야 합니다.  
   
 FILESTREAM  
- 선택적으로 **varbinary(max)** 의 *type_name*인 열에 대해 FILESTREAM 저장소 특성을 지정합니다.  
+ 선택적으로 **varbinary(max)** 의 *type_name*인 열에 대해 FILESTREAM 스토리지 특성을 지정합니다.  
   
  열에 대해 FILESTREAM이 지정된 경우 ROWGUIDCOL 특성을 갖는 **uniqueidentifier** 데이터 형식의 열도 테이블에 있어야 합니다. 이 열은 Null 값을 허용하지 않으며 UNIQUE 또는 PRIMARY KEY 단일 열 제약 조건을 가져야 합니다. 열의 GUID 값은 응용 프로그램(데이터가 삽입되는 경우)에 의해 또는 NEWID () 함수를 사용하는 DEFAULT 제약 조건에 의해 제공되어야 합니다.  
   

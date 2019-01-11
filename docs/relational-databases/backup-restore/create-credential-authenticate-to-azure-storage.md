@@ -20,11 +20,11 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/28/2018
 ms.locfileid: "52518849"
 ---
-# <a name="create-credential---authenticate-to-azure-storage"></a>자격 증명 만들기 - Azure Storage 인증
+# <a name="create-credential---authenticate-to-azure-storage"></a>자격 증명 만들기 - Azure 스토리지 인증
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **URL로 백업 - 자격 증명 만들기** 대화 상자를 사용하여 새 SQL 자격 증명을 만듭니다.  
   
- 이 대화 상자를 사용하여 자격 증명을 만들 때 로컬 인증서 저장소에 추가된 Windows Azure 관리 인증서 또는 컴퓨터에 다운로드된 게시 프로필을 제공하여 구독 및 저장소 계정 정보의 유효성을 검사해야 합니다.  
+ 이 대화 상자를 사용하여 자격 증명을 만들 때 로컬 인증서 저장소에 추가된 Windows Azure 관리 인증서 또는 컴퓨터에 다운로드된 게시 프로필을 제공하여 구독 및 스토리지 계정 정보의 유효성을 검사해야 합니다.  
   
  **SQL 자격 증명**  
  만들려는 SQL 자격 증명의 이름을 지정합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "52518849"
 > [!CAUTION]  
 >  SQL Server는 현재 프로필 버전 2.0 게시를 지원합니다. 게시 프로필의 지원되는 버전을 다운로드하려면 [게시 프로필 2.0 다운로드](https://go.microsoft.com/fwlink/?LinkId=396421)를 참조하세요.  
   
-## <a name="storage-account"></a>저장소 계정  
- 백업 파일을 저장하는 데 사용할 저장소 계정을 선택합니다.  
+## <a name="storage-account"></a>스토리지 계정  
+ 백업 파일을 저장하는 데 사용할 스토리지 계정을 선택합니다.  
   
   

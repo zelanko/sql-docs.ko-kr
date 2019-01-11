@@ -22,7 +22,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48156943"
 ---
 # <a name="catalog-properties-dialog-box"></a>카탈로그 속성 대화 상자
-  카탈로그 속성 대화 상자를 사용하여 SSISDB 카탈로그를 구성할 수 있습니다. 카탈로그 속성은 중요한 데이터가 암호화되는 방법, 작업 및 프로젝트 버전 관리 데이터가 보존되는 방법 및 유효성 검사 작업의 제한 시간을 정의합니다. SSISDB 카탈로그는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트, 패키지, 매개 변수 및 환경에 대한 중앙 저장소 및 관리 지점 역할을 합니다.  
+  카탈로그 속성 대화 상자를 사용하여 SSISDB 카탈로그를 구성할 수 있습니다. 카탈로그 속성은 중요한 데이터가 암호화되는 방법, 작업 및 프로젝트 버전 관리 데이터가 보존되는 방법 및 유효성 검사 작업의 제한 시간을 정의합니다. SSISDB 카탈로그는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트, 패키지, 매개 변수 및 환경에 대한 중앙 스토리지 및 관리 지점 역할을 합니다.  
   
  또한 catalog.catalog_property 뷰에서 카탈로그 속성을 보고 catalog.configure_catalog 저장 프로시저를 사용하여 속성을 설정할 수 있습니다. 자세한 내용은 [catalog.catalog_properties&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) 및 [catalog.configure_catalog&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database)를 참조하세요.  
   

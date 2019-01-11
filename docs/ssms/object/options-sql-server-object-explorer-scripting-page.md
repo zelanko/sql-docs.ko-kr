@@ -47,7 +47,7 @@ ms.locfileid: "47662501"
 스크립트를 개체별 섹션으로 구분하여 스크립트에 설명을 추가합니다. 기본값은 True입니다. 자세한 내용은 [/*...*/ (Comment)(Transact-SQL)](https://msdn.microsoft.com/4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c)를 참조하세요.  
   
 **Vardecimal 압축 사용 설정 포함**  
-VarDecimal 저장소 옵션을 포함합니다. 기본값은 False입니다. 자세한 내용은 [sp_db_vardecimal_storage_format(Transact-SQL)](https://msdn.microsoft.com/9920b2f7-b802-4003-913c-978c17ae4542)을 참조하세요.  
+VarDecimal 스토리지 옵션을 포함합니다. 기본값은 False입니다. 자세한 내용은 [sp_db_vardecimal_storage_format(Transact-SQL)](https://msdn.microsoft.com/9920b2f7-b802-4003-913c-978c17ae4542)을 참조하세요.  
   
 **변경 내용 추적 스크립팅**  
 스크립트에 변경 내용 추적 정보를 포함합니다.  

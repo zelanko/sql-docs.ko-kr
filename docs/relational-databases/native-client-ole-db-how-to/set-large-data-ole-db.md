@@ -27,7 +27,7 @@ ms.locfileid: "51667542"
 
   이 예제에서는 BLOB 데이터를 설정하고 테이블을 만들어 예제 레코드를 추가한 다음 행 집합에서 해당 레코드를 인출하고 BLOB 필드의 값을 설정하는 방법을 보여 줍니다. 이 예제는 IA64에서 지원되지 않습니다.  
   
- 자체의 저장소 개체에 대한 포인터를 전달하기 위해 소비자는 BLOB 열의 값을 바인딩하는 접근자를 만든 다음 **IRowsetChange::SetData** 또는 **IRowsetChange::InsertRow** 메서드를 호출합니다.  
+ 자체의 스토리지 개체에 대한 포인터를 전달하기 위해 소비자는 BLOB 열의 값을 바인딩하는 접근자를 만든 다음 **IRowsetChange::SetData** 또는 **IRowsetChange::InsertRow** 메서드를 호출합니다.  
   
  이 예제에는 [Microsoft SQL Server 예제 및 커뮤니티 프로젝트(Microsoft SQL Server Samples and Community Projects)](https://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지에서 다운로드할 수 있는 AdventureWorks 예제 데이터베이스가 필요합니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "51667542"
   
 5.  **GetNextRows** 를 호출하여 다음 행을 행 집합으로 인출합니다. **GetData** 를 호출하여 행 집합에서 데이터를 읽습니다.  
   
-6.  데이터를 설정하려면 데이터 및 길이 표시기가 포함된 저장소 개체를 만든 다음 해당 BLOB 열을 바인딩하는 접근자를 사용하여 **IRowsetChange::SetData** (또는 **IRowsetChange::InsertRow**)를 호출합니다.  
+6.  데이터를 설정하려면 데이터 및 길이 표시기가 포함된 스토리지 개체를 만든 다음 해당 BLOB 열을 바인딩하는 접근자를 사용하여 **IRowsetChange::SetData** (또는 **IRowsetChange::InsertRow**)를 호출합니다.  
   
 ## <a name="example"></a>예제  
   

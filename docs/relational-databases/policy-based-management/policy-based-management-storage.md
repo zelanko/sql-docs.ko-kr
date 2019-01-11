@@ -1,5 +1,5 @@
 ---
-title: 정책 기반 관리 저장소 | Microsoft 문서
+title: 정책 기반 관리 스토리지 | Microsoft 문서
 ms.custom: ''
 ms.date: 08/09/2017
 ms.prod: sql
@@ -20,7 +20,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/10/2018
 ms.locfileid: "51512328"
 ---
-# <a name="policy-based-management-storage"></a>정책 기반 관리 저장소
+# <a name="policy-based-management-storage"></a>정책 기반 관리 스토리지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   정책은 msdb 데이터베이스에 저장됩니다. 정책 또는 조건이 변경되면 msdb를 백업해야 합니다. 자세한 내용은 [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)를 참조하세요.  
   

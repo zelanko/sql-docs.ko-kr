@@ -22,7 +22,7 @@ ms.lasthandoff: 10/01/2018
 ms.locfileid: "47742351"
 ---
 # <a name="azure-blob-upload-task"></a>Azure Blob 업로드 태스크
-SSIS 패키지는 **Azure Blob 업로드 태스크** 를 통해 Azure Blob Storage에 파일을 업로드할 수 있습니다.
+SSIS 패키지는 **Azure Blob 업로드 태스크**를 통해 Azure Blob Storage에 파일을 업로드할 수 있습니다.
     
 **Azure Blob 업로드 태스크**를 추가하려면 해당 태스크를 SSIS 디자이너로 끌어서 놓고 두 번 클릭하거나 마우스 오른쪽 단추를 클릭하고 **편집** 을 클릭하여 다음과 같은 **Azure Blob 업로드 태스크 편집기** 대화 상자를 표시합니다.  
   
@@ -33,7 +33,7 @@ SSIS 패키지는 **Azure Blob 업로드 태스크** 를 통해 Azure Blob Stora
 |||  
 |-|-|  
 |**필드**|**설명**|  
-|AzureStorageConnection|기존 Azure 저장소 연결 관리자를 지정하거나 Blob 파일이 호스트되는 위치를 가리키는 Azure 저장소 계정을 참조하는 저장소 연결 관리자를 새로 만듭니다.|  
+|AzureStorageConnection|기존 Azure Storage 연결 관리자를 지정하거나 Blob 파일이 호스트되는 위치를 가리키는 Azure Storage 계정을 참조하는 스토리지 연결 관리자를 새로 만듭니다.|  
 |BlobContainer|blob으로 업로드된 파일을 포함하는 blob 컨테이너의 이름을 지정합니다.|  
 |BlobDirectory|업로드한 파일이 블록 blob으로 저장되는 blob 디렉터리를 지정합니다. Blob 디렉터리는 가상 계층 구조입니다. 이미 있는 Blob은 업로드한 Blob으로 바뀝니다.|  
 |LocalDirectory|업로드할 파일이 포함된 로컬 디렉터리를 지정합니다.|  

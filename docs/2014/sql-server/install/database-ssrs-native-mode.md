@@ -21,7 +21,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48102493"
 ---
 # <a name="database-ssrs-native-mode"></a>데이터베이스(SSRS 기본 모드)
-  데이터베이스 페이지에서는 하나 이상의 보고서 서버 인스턴스에 내부 저장소를 제공하는 보고서 서버 데이터베이스를 만들어 구성할 수 있습니다. 원격 보고서 서버 데이터베이스를 사용 하도록 보고서 서버를 구성 하는 경우 사용 해야는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager 데이터베이스를 만들려고 합니다.  
+  데이터베이스 페이지에서는 하나 이상의 보고서 서버 인스턴스에 내부 스토리지를 제공하는 보고서 서버 데이터베이스를 만들어 구성할 수 있습니다. 원격 보고서 서버 데이터베이스를 사용 하도록 보고서 서버를 구성 하는 경우 사용 해야는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager 데이터베이스를 만들려고 합니다.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
   

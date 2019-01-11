@@ -66,7 +66,7 @@ ms.locfileid: "47742371"
 > [!NOTE]  
 >  문자열을 DT_DATE가 아닌 다른 날짜 데이터 형식으로 변환하려면 [Integration Services 데이터 형식](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
- 코드 페이지가 멀티바이트 문자 코드 페이지이면 바이트 수와 문자 수가 다를 수 있습니다. 동일한 *charcount* 값을 사용하여 DT_WSTR에서 DT_STR로 캐스팅하면 변환된 문자열의 마지막 문자가 잘릴 수 있습니다. 대상 테이블의 열에 사용 가능한 저장 공간이 충분한 경우 멀티바이트 코드 페이지에 필요한 바이트 수를 반영하여 *charcount* 매개 변수의 값을 설정합니다. 예를 들어 936 코드 페이지를 사용하여 문자 데이터를 DT_STR 데이터 형식으로 캐스팅하는 경우 *charcount* 를 데이터에 포함될 예상 문자 수보다 최대 2배의 값으로 설정해야 합니다. UTF-8 코드 페이지를 사용하여 문자 데이터를 캐스팅하는 경우에는 *charcount* 를 최대 4배의 값으로 설정해야 합니다.  
+ 코드 페이지가 멀티바이트 문자 코드 페이지이면 바이트 수와 문자 수가 다를 수 있습니다. 동일한 *charcount* 값을 사용하여 DT_WSTR에서 DT_STR로 캐스팅하면 변환된 문자열의 마지막 문자가 잘릴 수 있습니다. 대상 테이블의 열에 사용 가능한 스토리지 공간이 충분한 경우 멀티바이트 코드 페이지에 필요한 바이트 수를 반영하여 *charcount* 매개 변수의 값을 설정합니다. 예를 들어 936 코드 페이지를 사용하여 문자 데이터를 DT_STR 데이터 형식으로 캐스팅하는 경우 *charcount* 를 데이터에 포함될 예상 문자 수보다 최대 2배의 값으로 설정해야 합니다. UTF-8 코드 페이지를 사용하여 문자 데이터를 캐스팅하는 경우에는 *charcount* 를 최대 4배의 값으로 설정해야 합니다.  
   
  날짜 데이터 형식의 구조에 대한 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하십시오.  
   

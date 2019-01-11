@@ -36,7 +36,7 @@ ms.locfileid: "48214653"
   
      ![Analysis Services 구성 옵션을 사용 하 여 설치 페이지](../../../sql-server/install/media/ssas-setupasconfig.gif "Analysis Services 구성 옵션을 사용 하 여 설정 페이지")  
   
- 테이블 형식 모드는 xVelocity 메모리 내 분석 엔진(VertiPaq)을 사용합니다. 이 엔진은 Analysis Services에 배포하는 테이블 형식 모델에 대한 기본 저장소입니다. 테이블 형식 모델 솔루션을 서버에 배포한 이후에 테이블 형식 솔루션을 선택적으로 구성하여 메모리 집중형 저장소 대신에 DirectQuery 디스크 저장소를 사용할 수 있습니다.  
+ 테이블 형식 모드는 xVelocity 메모리 내 분석 엔진(VertiPaq)을 사용합니다. 이 엔진은 Analysis Services에 배포하는 테이블 형식 모델에 대한 기본 스토리지입니다. 테이블 형식 모델 솔루션을 서버에 배포한 이후에 테이블 형식 솔루션을 선택적으로 구성하여 메모리 집중형 스토리지 대신에 DirectQuery 디스크 스토리지를 사용할 수 있습니다.  
   
 ## <a name="command-line-setup"></a>명령줄 설치  
  SQL Server 설치에는 서버 모드를 지정하는 새로운 매개 변수(`ASSERVERMODE`)가 포함됩니다. 다음 예에서는 테이블 형식 서버 모드에 Analysis Services를 설치하는 명령줄 설치를 보여 줍니다.  

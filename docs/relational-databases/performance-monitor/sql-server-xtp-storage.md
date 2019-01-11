@@ -1,5 +1,5 @@
 ---
-title: SQL Server XTP 저장소 | Microsoft 문서
+title: SQL Server XTP 스토리지 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/14/2018
 ms.locfileid: "53379744"
 ---
-# <a name="sql-server-xtp-storage"></a>SQL Server XTP 저장소
+# <a name="sql-server-xtp-storage"></a>SQL Server XTP 스토리지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  SQL Server XTP 저장소 성능 개체에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 메모리 내 OLTP에 대한 디스크에 있는 저장소와 관련된 카운터가 포함됩니다.  
+  SQL Server XTP 스토리지 성능 개체에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 메모리 내 OLTP에 대한 디스크에 있는 스토리지와 관련된 카운터가 포함됩니다.  
   
- 이 표에서는 **SQL Server XTP 저장소** 카운터에 대해 설명합니다.  
+ 이 표에서는 **SQL Server XTP 스토리지** 카운터에 대해 설명합니다.  
   
 |카운터|설명|  
 |-------------|-----------------|  

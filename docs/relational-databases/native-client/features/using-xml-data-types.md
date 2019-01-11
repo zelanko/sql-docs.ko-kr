@@ -214,13 +214,13 @@ ms.locfileid: "52395437"
  DBTYPE_IUNKNOWN에 바인딩된 XML 값을 반환할 때 공급자는 `sizeof (IUnknown *)`의 크기 값을 보고합니다. 이는 열이 DBTYPE_IUnknown 또는 DBTYPE_IDISPATCH로 바인딩되어 있는데 정확한 열 크기를 확인할 수 없는 경우 DBTYPE_IUNKNOWN/ISequentialStream이 취하는 방법과 같습니다.  
   
 #### <a name="the-irowsetchange-interface"></a>IRowsetChange 인터페이스  
- 소비자는 두 가지 방법으로 열의 XML 인스턴스를 업데이트할 수 있습니다. 하나는 공급자가 만든 저장소 개체 **ISequentialStream**을 사용하는 것입니다. 소비자는 **ISequentialStream::Write** 메서드를 호출하여 공급자가 반환한 XML 인스턴스를 직접 업데이트할 수 있습니다.  
+ 소비자는 두 가지 방법으로 열의 XML 인스턴스를 업데이트할 수 있습니다. 하나는 공급자가 만든 스토리지 개체 **ISequentialStream**을 사용하는 것입니다. 소비자는 **ISequentialStream::Write** 메서드를 호출하여 공급자가 반환한 XML 인스턴스를 직접 업데이트할 수 있습니다.  
   
  다른 하나는 **IRowsetChange::SetData** 또는 **IRowsetChange::InsertRow** 메서드를 사용하는 것입니다. 이 방법에서는 소비자 버퍼의 XML 인스턴스를 DBTYPE_BSTR, DBTYPE_WSTR, DBTYPE_VARIANT, DBTYPE_XML 또는 DBTYPE_IUNKNOWN 유형의 바인딩에 지정할 수 있습니다.  
   
  DBTYPE_BSTR, DBTYPE_WSTR 또는 DBTYPE_VARIANT의 경우 공급자가 소비자 버퍼의 XML 인스턴스를 적절한 열에 저장합니다.  
   
- DBTYPE_IUNKNOWN/ISequentialStream의 경우 소비자 저장소 개체를 지정 하지 않는 경우 소비자 만들어야 합니다는 **ISequentialStream** 미리 개체, 바인딩 개체를 사용 하 여 XML 문서 및 다음 개체를 전달 통해 공급자에는 **irowsetchange:: Setdata** 메서드. 소비자는 저장소 개체를 만들고 pObject 인수를 IID_ISequentialStream으로 설정하고 **ISequentialStream** 개체를 만든 다음, 이 **ISequentialStream** 개체를 **IRowsetChange::SetData** 메서드에 전달할 수도 있습니다. 두 경우 모두 공급자는 **ISequentialStream** 개체를 통해 XML 개체를 검색하여 적절한 열에 삽입할 수 있습니다.  
+ DBTYPE_IUNKNOWN/ISequentialStream의 경우 소비자 저장소 개체를 지정 하지 않는 경우 소비자 만들어야 합니다는 **ISequentialStream** 미리 개체, 바인딩 개체를 사용 하 여 XML 문서 및 다음 개체를 전달 통해 공급자에는 **irowsetchange:: Setdata** 메서드. 소비자는 스토리지 개체를 만들고 pObject 인수를 IID_ISequentialStream으로 설정하고 **ISequentialStream** 개체를 만든 다음, 이 **ISequentialStream** 개체를 **IRowsetChange::SetData** 메서드에 전달할 수도 있습니다. 두 경우 모두 공급자는 **ISequentialStream** 개체를 통해 XML 개체를 검색하여 적절한 열에 삽입할 수 있습니다.  
   
 #### <a name="the-irowsetupdate-interface"></a>IRowsetUpdate 인터페이스  
  **IRowsetUpdate** 인터페이스는 지연된 업데이트에 사용할 수 있는 기능을 제공합니다. 행 집합에서 사용할 수 있는 데이터는 사용할 수 없습니다 다른 트랜잭션에서 소비자 호출할 때까지 합니다 **irowsetupdate: Update** 메서드.  

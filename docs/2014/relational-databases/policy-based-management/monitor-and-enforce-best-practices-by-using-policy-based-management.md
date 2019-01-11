@@ -64,7 +64,7 @@ ms.locfileid: "52758015"
 |Windows 이벤트 로그 I/O 지연 경고|[디스크 입/출력 하위 시스템에서 IO 지연 문제 확인](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
 |Windows 이벤트 로그 하드 페이지 폴트 중 I/O 오류 발생 오류|[입력 및 출력 오류 하드 페이지 폴트 중](input-and-output-error-during-hard-page-fault.md)|  
 |Windows 이벤트 로그 읽기 다시 시도 오류|[읽기 다시 시도 문제에 대한 디스크 입력 출력 하위 시스템 검사](check-disk-input-output-subsystem-for-read-retry-problems.md)|  
-|Windows 이벤트 로그 저장 시스템 I/O 제한 시간 오류|[저장소 시스템 입/출력 시간 초과](storage-system-input-output-time-out.md)|  
+|Windows 이벤트 로그 스토리지 시스템 I/O 제한 시간 오류|[저장소 시스템 입/출력 시간 초과](storage-system-input-output-time-out.md)|  
 |Windows 이벤트 로그 시스템 실패 오류|[예기치 않은 시스템 오류](unexpected-system-failures.md)|  
   
 ## <a name="see-also"></a>참고 항목  

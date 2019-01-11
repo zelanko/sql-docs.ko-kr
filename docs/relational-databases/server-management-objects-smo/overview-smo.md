@@ -44,13 +44,13 @@ ms.locfileid: "47763211"
   
  SMO는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입된 많은 기능과 구성 요소를 새 개체 또는 속성으로 나타냅니다. 이러한 새 기능과 구성 요소는 다음과 같습니다.  
   
--   파티션 구성표에 데이터를 저장하기 위한 테이블 및 인덱스 분할. 자세한 내용은 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)을 참조하세요.  
+-   파티션 구성표에 데이터를 스토리지하기 위한 테이블 및 인덱스 분할. 자세한 내용은 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)을 참조하세요.  
   
 -   SOAP 요청을 관리하기 위한 HTTP 엔드포인트. 자세한 내용은 [Implementing Endpoints](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)합니다.  
   
 -   동시성 향상을 위한 스냅숏 격리 및 행 수준 버전 관리. 자세한 내용은 [스냅숏 격리 사용](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)을 참조하세요.  
   
--   XML 스키마 컬렉션, XML 인덱스 및 XML 데이터 형식으로 XML 데이터의 유효성 검사와 저장 기능 제공. 자세한 내용은 [XML 스키마 컬렉션 &#40;SQL Server&#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md) 하 고 [Using XML Schemas](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
+-   XML 스키마 컬렉션, XML 인덱스 및 XML 데이터 형식으로 XML 데이터의 유효성 검사와 스토리지 기능 제공. 자세한 내용은 [XML 스키마 컬렉션 &#40;SQL Server&#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md) 하 고 [Using XML Schemas](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
   
 -   데이터베이스의 읽기 전용 복사본을 만들기 위한 스냅숏 데이터베이스  
   

@@ -70,7 +70,7 @@ items:
     href: sql-server-filetable-object.md
   - name: SQL Server, General Statistics 개체
     href: sql-server-general-statistics-object.md
-  - name: SQL Server, HTTP 저장소
+  - name: SQL Server, HTTP 스토리지
     href: sql-server-http-storage-object.md
   - name: SQL Server, Latches 개체
     href: sql-server-latches-object.md
@@ -115,7 +115,7 @@ items:
     href: sql-server-xtp-io-governor.md
   - name: SQL Server XTP 가상 프로세서
     href: sql-server-xtp-phantom-processor.md
-  - name: SQL Server XTP 저장소
+  - name: SQL Server XTP 스토리지
     href: sql-server-xtp-storage.md
   - name: SQL Server XTP 트랜잭션 로그
     href: sql-server-xtp-transaction-log.md

@@ -34,7 +34,7 @@ Microsoft에서 병렬 및 분산 워크 로드에 대 한 추가 R 패키지는
 
 | 라이브러리 | Description |
 |---------|-------------|
-| [**RevoScaleR**](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 데이터 원본 개체 및 데이터 탐색, 조작, 변환 및 시각화를 지원합니다. 와 같은 원격 계산 컨텍스트 뿐만 아니라 다양 한 확장성 있는 기계 학습 모델을 만드는 지 원하는 **rxLinMod**합니다. API는 너무 커서 메모리에 맞출 수 없는 데이터 집합을 분석하고 여러 코어 또는 프로세서에 분배되는 계산을 수행하도록 최적화되었습니다. RevoScaleR 패키지는 더 빠른 이동 및 분석을 위해 사용 되는 데이터 저장소에 대 한 XDF 파일 형식으로 지원 합니다. XDF 형식은 열 형식 저장소를 사용하고, 이식 가능하고, 텍스트, SPSS 또는 ODBC 연결과 같은 다양한 원본에서 데이터를 로드하고 나서 조작하는 데 사용될 수 있습니다. |
+| [**RevoScaleR**](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 데이터 원본 개체 및 데이터 탐색, 조작, 변환 및 시각화를 지원합니다. 와 같은 원격 계산 컨텍스트 뿐만 아니라 다양 한 확장성 있는 기계 학습 모델을 만드는 지 원하는 **rxLinMod**합니다. API는 너무 커서 메모리에 맞출 수 없는 데이터 집합을 분석하고 여러 코어 또는 프로세서에 분배되는 계산을 수행하도록 최적화되었습니다. RevoScaleR 패키지는 더 빠른 이동 및 분석을 위해 사용 되는 데이터 저장소에 대 한 XDF 파일 형식으로 지원 합니다. XDF 형식은 열 형식 스토리지를 사용하고, 이식 가능하고, 텍스트, SPSS 또는 ODBC 연결과 같은 다양한 원본에서 데이터를 로드하고 나서 조작하는 데 사용될 수 있습니다. |
 | [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | 속도 및 정확성을 위해 최적화 된 뿐만 아니라 줄 텍스트 및 이미지 작업에 대 한 변환 하는 기계 학습 알고리즘을 포함 합니다. 자세한 내용은 [SQL Server에서 MicrosoftML](../r/ref-r-microsoftml.md)합니다. | 
 
 ## <a name="using-r-in-sql-server"></a>SQL Server에서 R 사용

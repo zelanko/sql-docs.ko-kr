@@ -210,7 +210,7 @@ GO
 ```  
   
 ### <a name="e-import-from-an-external-table-created-with-polybase"></a>5. PolyBase를 사용하여 만든 외부 테이블에서 가져오기  
- Hadoop 또는 Azure Storage의 데이터를 영구적으로 저장하기 위해 SQL Server로 가져옵니다. `SELECT INTO`를 사용하여 SQL Server의 영구 저장소에 대한 외부 테이블에서 참조하는 데이터를 가져옵니다. 먼저 대략적인 관계형 테이블을 만든 다음 두 번째 단계에서 테이블 위에 columnstore 인덱스를 만듭니다.  
+ Hadoop 또는 Azure Storage의 데이터를 영구적으로 스토리지하기 위해 SQL Server로 가져옵니다. `SELECT INTO`를 사용하여 SQL Server의 영구 저장소에 대한 외부 테이블에서 참조하는 데이터를 가져옵니다. 먼저 대략적인 관계형 테이블을 만든 다음 두 번째 단계에서 테이블 위에 columnstore 인덱스를 만듭니다.  
   
  **적용 대상:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 참조하세요.  
   

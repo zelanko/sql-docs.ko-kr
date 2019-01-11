@@ -42,7 +42,7 @@ ms.locfileid: "52506371"
 ## <a name="loading-a-package-programmatically"></a>프로그래밍 방식으로 패키지 로드  
  로컬 컴퓨터에서 프로그래밍 방식으로 패키지를 로드하려면 패키지가 로컬 위치에 저장되어 있든 원격 위치에 저장되어 있든 관계없이 다음 메서드 중 하나를 호출합니다.  
   
-|저장소 위치|호출할 메서드|  
+|스토리지 위치|호출할 메서드|  
 |----------------------|--------------------|  
 |파일|<xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A>|  
 |SSIS 패키지 저장소|<xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A>|  

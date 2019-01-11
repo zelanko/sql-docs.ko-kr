@@ -31,7 +31,7 @@ Windows Azure 계정에 대해 다음 정보를 지정한 후 **다음** 을 클
 1.  **저장소 계정** - 저장소 계정 이름을 지정합니다.
 
    >[!NOTE]
-   > [범용 저장소 계정](https://docs.microsoft.com/azure/storage/storage-introduction#introducing-the-azure-storage-services)에만 연결할 수 있습니다. 다른 유형의 저장소 계정에 연결하면 다음과 유사한 오류 메시지가 발생할 수 있습니다.
+   > [범용 저장소 계정](https://docs.microsoft.com/azure/storage/storage-introduction#introducing-the-azure-storage-services)에만 연결할 수 있습니다. 다른 유형의 스토리지 계정에 연결하면 다음과 유사한 오류 메시지가 발생할 수 있습니다.
    >
    >  HTTP 헤더 중 하나에 대한 값 형식이 올바르지 않습니다. (Microsoft.SqlServer.StorageClient).
    >

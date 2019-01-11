@@ -22,15 +22,15 @@ ms.locfileid: "51675702"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   ![Azure의 데이터 파일](../../relational-databases/databases/media/data-files-on-azure.png "Data files on Azure")  
   
- Microsoft Azure에서 SQL Server 데이터 파일을 통해 Microsoft Azure Blob으로 저장된 SQL Server 데이터베이스 파일이 기본적으로 지원됩니다. 이 기능을 사용하면 온-프레미스로 실행 중인 SQL Server에서 또는 Microsoft Azure Blob 저장소에서 사용자의 데이터에 대한 전용 저장소 위치를 갖는 Microsoft Azure의 가상 머신에서 데이터베이스를 만들 수 있습니다. 특히, 이 향상된 기능은 분리 및 연결 작업을 사용하여 컴퓨터 간의 데이터 이동을 간소화합니다. 또한 Microsoft Azure Storage를 원본 또는 대상으로 복원하도록 허용하여 데이터베이스 백업 파일에 대한 대체 저장소 위치를 제공합니다. 따라서 데이터 가상화, 데이터 이동, 보안 및 가용성, 고가용성 및 탄력적인 크기 조정을 위한 쉽고 저렴한 비용 및 유지 관리 등 여러 가지 이점을 제공하여 다양한 하이브리드 솔루션을 사용할 수 있도록 지원합니다.
+ Microsoft Azure에서 SQL Server 데이터 파일을 통해 Microsoft Azure Blob으로 저장된 SQL Server 데이터베이스 파일이 기본적으로 지원됩니다. 이 기능을 사용하면 온-프레미스로 실행 중인 SQL Server에서 또는 Microsoft Azure Blob Storage에서 사용자의 데이터에 대한 전용 스토리지 위치를 갖는 Microsoft Azure의 가상 머신에서 데이터베이스를 만들 수 있습니다. 특히, 이 향상된 기능은 분리 및 연결 작업을 사용하여 컴퓨터 간의 데이터 이동을 간소화합니다. 또한 Microsoft Azure 스토리지를 원본 또는 대상으로 복원하도록 허용하여 데이터베이스 백업 파일에 대한 대체 스토리지 위치를 제공합니다. 따라서 데이터 가상화, 데이터 이동, 보안 및 가용성, 고가용성 및 탄력적인 크기 조정을 위한 쉽고 저렴한 비용 및 유지 관리 등 여러 가지 이점을 제공하여 다양한 하이브리드 솔루션을 사용할 수 있도록 지원합니다.
  
 > [!IMPORTANT]  
 >  시스템 데이터베이스를 Azure Blob Storage에 저장하는 것은 좋지 않으며 지원되지 않습니다. 
 
   
- 이 항목에서는 SQL Server 데이터 파일을 Microsoft Azure Storage 서비스에 저장하는 데 중요한 개념 및 고려 사항에 대해 설명합니다.  
+ 이 항목에서는 SQL Server 데이터 파일을 Microsoft Azure 스토리지 서비스에 저장하는 데 중요한 개념 및 고려 사항에 대해 설명합니다.  
   
- 이 새 기능을 사용하는 방법을 실제로 실습하려면 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 저장소 서비스 사용 ](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)을 참조하세요.  
+ 이 새 기능을 사용하는 방법을 실제로 실습하려면 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob Storage 서비스 사용](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)을 참조하세요.  
   
 ## <a name="why-use-sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure에서 SQL Server 데이터 파일을 사용하는 이유는 무엇인가요? 
   
@@ -40,19 +40,19 @@ ms.locfileid: "51675702"
   
 -   **고가용성 및 재해 복구 이점:** Microsoft Azure의 SQL Server 데이터 파일 기능을 사용하면 고가용성 및 재해 복구 솔루션을 간소화할 수 있습니다. 예를 들어 Microsoft Azure의 가상 머신 또는 SQL Server 인스턴스가 충돌할 경우 Microsoft Azure BLOB에 대한 링크를 다시 설정하여 새 SQL Server 인스턴스에 데이터베이스를 다시 만들 수 있습니다.  
   
--   **보안 이점:** 이 새로운 향상된 기능을 사용하여 계산 인스턴스를 저장소 인스턴스와 구분할 수 있습니다. 저장소 인스턴스가 아닌 계산 인스턴스에서만 암호 해독이 포함된 완전히 암호화된 데이터베이스를 설정할 수 있습니다. 즉, 이 새로운 향상된 기능을 사용하면 데이터와 물리적으로 구분되는 TDE(투명한 데이터 암호화) 인증서로 공용 클라우드의 모든 데이터를 암호화할 수 있습니다. TDE 키를 master 데이터베이스에 저장한 다음 이 master 데이터베이스를 물리적으로 안전한 온-프레미스 컴퓨터에 로컬로 저장하고 로컬로 백업할 수 있습니다. 이러한 로컬 키를 사용하여 Microsoft Azure Storage에 있는 데이터를 암호화할 수 있습니다. 클라우드 스토리지 계정 자격 증명을 도난 당한 경우에도 TDE 인증서가 항상 온-프레미스에 있으므로 데이터는 여전히 안전합니다.  
+-   **보안 이점:** 이 새로운 향상된 기능을 사용하여 계산 인스턴스를 저장소 인스턴스와 구분할 수 있습니다. 스토리지 인스턴스가 아닌 계산 인스턴스에서만 암호 해독이 포함된 완전히 암호화된 데이터베이스를 설정할 수 있습니다. 즉, 이 새로운 향상된 기능을 사용하면 데이터와 물리적으로 구분되는 TDE(투명한 데이터 암호화) 인증서로 공용 클라우드의 모든 데이터를 암호화할 수 있습니다. TDE 키를 master 데이터베이스에 저장한 다음 이 master 데이터베이스를 물리적으로 안전한 온-프레미스 컴퓨터에 로컬로 저장하고 로컬로 백업할 수 있습니다. 이러한 로컬 키를 사용하여 Microsoft Azure 스토리지에 있는 데이터를 암호화할 수 있습니다. 클라우드 스토리지 계정 자격 증명을 도난 당한 경우에도 TDE 인증서가 항상 온-프레미스에 있으므로 데이터는 여전히 안전합니다.  
   
 -   **스냅숏 백업:**  이 기능은 Azure 스냅숏을 사용하여 Azure Blob 저장소 서비스를 통해 저장된 데이터베이스 파일에 대한 거의 즉시 백업 및 보다 신속한 복원을 제공합니다. 이 기능을 사용하면 백업 및 복원 정책을 간소화할 수 있습니다. 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
   
 ## <a name="concepts-and-requirements"></a>개념 및 요구 사항  
   
 ### <a name="azure-storage-concepts"></a>Azure Storage 개념  
- Windows Azure의 SQL Server 데이터 파일 기능을 사용할 경우 Windows Azure에서 저장소 계정과 컨테이너를 만들어야 합니다. 그런 다음 컨테이너에 액세스하는 데 필요한 공유 액세스 서명과 컨테이너 정책에 대한 정보가 들어 있는 SQL Server 자격 증명을 만들어야 합니다.  
+ Windows Azure의 SQL Server 데이터 파일 기능을 사용할 경우 Windows Azure에서 스토리지 계정과 컨테이너를 만들어야 합니다. 그런 다음 컨테이너에 액세스하는 데 필요한 공유 액세스 서명과 컨테이너 정책에 대한 정보가 들어 있는 SQL Server 자격 증명을 만들어야 합니다.  
   
- [Microsoft Azure](https://azure.microsoft.com)에서 [Azure Storage](https://azure.microsoft.com/services/storage/) 계정은 BLOB에 액세스하는 데 필요한 가장 높은 수준의 네임스페이스를 나타냅니다. 저장소 계정에 포함될 수 있는 컨테이너의 개수 제한은 없지만 총 크기가 저장소 용량 한도 미만이어야 합니다. 저장소 제한에 대한 최신 정보는 [Azure 구독 및 서비스 제한, 할당량 및 제약 조건](https://docs.microsoft.com/azure/azure-subscription-service-limits)(영문)을 참조하세요. 컨테이너는 [BLOB](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage)집합을 그룹화합니다. 모든 BLOB은 컨테이너에 있어야 합니다. 계정에 포함될 수 있는 컨테이너의 개수 제한은 없습니다. 마찬가지로 컨테이너에 저장될 수 있는 BLOB의 개수도 제한되지 않습니다. Azure Blob Storage 서비스에는 블록 Blob과 페이지 Blob이라는 두 가지 유형의 Blob을 저장할 수 있습니다. 이 새로운 기능은 페이지 Blob을 사용하며, 파일의 바이트 범위가 자주 수정될 때 더 효율적입니다. `https://storageaccount.blob.core.windows.net/<container>/<blob>`URL 형식을 사용하여 BLOB에 액세스할 수 있습니다.  
+ [Microsoft Azure](https://azure.microsoft.com)에서 [Azure Storage](https://azure.microsoft.com/services/storage/) 계정은 BLOB에 액세스하는 데 필요한 가장 높은 수준의 네임스페이스를 나타냅니다. 스토리지 계정에 포함될 수 있는 컨테이너의 개수 제한은 없지만 총 크기가 스토리지 용량 한도 미만이어야 합니다. 스토리지 제한에 대한 최신 정보는 [Azure 구독 및 서비스 제한, 할당량 및 제약 조건](https://docs.microsoft.com/azure/azure-subscription-service-limits)(영문)을 참조하세요. 컨테이너는 [BLOB](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage)집합을 그룹화합니다. 모든 BLOB은 컨테이너에 있어야 합니다. 계정에 포함될 수 있는 컨테이너의 개수 제한은 없습니다. 마찬가지로 컨테이너에 저장될 수 있는 BLOB의 개수도 제한되지 않습니다. Azure Blob Storage 서비스에는 블록 Blob과 페이지 Blob이라는 두 가지 유형의 Blob을 저장할 수 있습니다. 이 새로운 기능은 페이지 Blob을 사용하며, 파일의 바이트 범위가 자주 수정될 때 더 효율적입니다. `https://storageaccount.blob.core.windows.net/<container>/<blob>`URL 형식을 사용하여 BLOB에 액세스할 수 있습니다.  
   
 ### <a name="azure-billing-considerations"></a>Azure 청구 고려 사항  
- 의사 결정 및 계획 과정에서 Azure 서비스 사용 비용에 대한 예측은 중요한 사항입니다. Azure Storage에 SQL Server 데이터 파일을 저장할 경우 저장소 및 트랜잭션과 관련된 비용을 지불해야 합니다. 또한 Azure Storage의 SQL Server 데이터 파일 기능을 구현하려면 45-60초마다 BLOB 임대를 암시적으로 갱신해야 합니다. 또한 데이터베이스 파일(예: .mdf 또는 .ldf)당 트랜잭션 비용이 발생합니다. Azure Storage 및 Azure Virtual Machines의 사용과 관련한 월별 비용을 예측하려면 [Azure 가격 책정](https://azure.microsoft.com/pricing/) 페이지의 정보를 사용하세요.  
+ 의사 결정 및 계획 과정에서 Azure 서비스 사용 비용에 대한 예측은 중요한 사항입니다. Azure Storage에 SQL Server 데이터 파일을 저장할 경우 스토리지 및 트랜잭션과 관련된 비용을 지불해야 합니다. 또한 Azure Storage의 SQL Server 데이터 파일 기능을 구현하려면 45-60초마다 BLOB 임대를 암시적으로 갱신해야 합니다. 또한 데이터베이스 파일(예: .mdf 또는 .ldf)당 트랜잭션 비용이 발생합니다. Azure Storage 및 Azure Virtual Machines의 사용과 관련한 월별 비용을 예측하려면 [Azure 가격 책정](https://azure.microsoft.com/pricing/) 페이지의 정보를 사용하세요.  
   
 ### <a name="sql-server-concepts"></a>SQL Server 개념  
  이 새로운 향상된 기능을 사용할 경우 다음을 수행해야 합니다.  
@@ -86,7 +86,7 @@ ON
   
 -   Azure Blob Storage 서비스의 컨테이너를 만들 때 액세스 권한을 개인으로 설정하는 것이 좋습니다. 액세스 형식을 개인으로 설정하면 Azure 계정 소유자만 컨테이너 및 BLOB 데이터를 읽을 수 있습니다.  
   
--   Azure Storage에 SQL Server 데이터베이스 파일을 저장할 경우 컨테이너, BLOB, 큐 및 테이블에 대한 제한된 액세스 권한을 부여하는 URI인 공유 액세스 서명을 사용해야 합니다. 공유 액세스 서명을 사용하면 Azure Storage 계정 키를 공유하지 않고 SQL Server에서 저장소 계정의 리소스에 액세스할 수 있습니다.  
+-   Azure Storage에 SQL Server 데이터베이스 파일을 저장할 경우 컨테이너, BLOB, 큐 및 테이블에 대한 제한된 액세스 권한을 부여하는 URI인 공유 액세스 서명을 사용해야 합니다. 공유 액세스 서명을 사용하면 Azure Storage 계정 키를 공유하지 않고 SQL Server에서 스토리지 계정의 리소스에 액세스할 수 있습니다.  
   
 -   또한 데이터베이스에 대한 기존 온-프레미스 보안 방법을 계속 구현하는 것이 좋습니다.  
   
@@ -106,7 +106,7 @@ ON
   
 -   .mdf, .ldf 및 .ndf 파일만 Azure의 SQL Server 데이터 파일 기능을 사용하여 Azure Storage에 저장할 수 있습니다.  
   
--   Azure의 SQL Server 데이터 파일 기능을 사용할 경우 저장소 계정에 대한 지리적 복제는 지원되지 않습니다. 저장소 계정이 지리적으로 복제되는 동안 지리적 장애 조치(failover)가 발생할 경우 데이터베이스가 손상될 수 있습니다.  
+-   Azure의 SQL Server 데이터 파일 기능을 사용할 경우 스토리지 계정에 대한 지리적 복제는 지원되지 않습니다. 스토리지 계정이 지리적으로 복제되는 동안 지리적 장애 조치(failover)가 발생할 경우 데이터베이스가 손상될 수 있습니다.  
   
 -   용량 제한은 [Blob Storage 소개](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)를 참조하세요.  
   
@@ -116,7 +116,7 @@ ON
   
 -   **Always On 가용성 그룹**은 주 데이터베이스에 새 데이터베이스 파일을 추가하지 않는 한 지원됩니다. 데이터베이스 작업 중에 주 데이터베이스에서 새 파일을 만들어야 하는 경우 먼저 보조 노드에서 Always On 가용성 그룹을 사용하지 않도록 설정합니다. 그런 다음 기본 데이터베이스에서 데이터베이스 작업을 수행하고 기본 노드에 데이터베이스를 백업합니다. 그런 다음 데이터베이스를 보조 노드에 복원하고 보조 노드에서 Always On 가용성 그룹을 사용하도록 설정합니다. Azure의 SQL Server 데이터 파일 기능을 사용할 경우 Always On 장애 조치(failover) 클러스터 인스턴스는 지원되지 않습니다.  
   
--   정상적인 작업 중에 SQL Server는 임시 임대를 사용하여 저장소에 대한 BLOB을 예약하고 45-60초마다 각 BLOB 임대를 갱신합니다. 서버가 충돌하는 상태에서 동일한 BLOB을 사용하도록 구성된 SQL Server의 다른 인스턴스가 시작될 경우 새 인스턴스는 BLOB의 기존 임대가 만료될 때까지 최대 60초 동안 기다립니다. 데이터베이스를 다른 인스턴스에 첨부하고 60초 내에 임대가 만료되도록 기다릴 수 없는 경우 BLOB에서 임대를 명시적으로 해제하여 첨부 작업의 오류를 방지할 수 있습니다.  
+-   정상적인 작업 중에 SQL Server는 임시 임대를 사용하여 스토리지에 대한 BLOB을 예약하고 45-60초마다 각 BLOB 임대를 갱신합니다. 서버가 충돌하는 상태에서 동일한 BLOB을 사용하도록 구성된 SQL Server의 다른 인스턴스가 시작될 경우 새 인스턴스는 BLOB의 기존 임대가 만료될 때까지 최대 60초 동안 기다립니다. 데이터베이스를 다른 인스턴스에 첨부하고 60초 내에 임대가 만료되도록 기다릴 수 없는 경우 BLOB에서 임대를 명시적으로 해제하여 첨부 작업의 오류를 방지할 수 있습니다.  
   
 ## <a name="tools-and-programming-reference-support"></a>도구 및 프로그래밍 참조 지원  
  이 섹션에서는 Azure Storage에 SQL Server 데이터 파일을 저장할 때 사용할 수 있는 도구 및 프로그래밍 참조 라이브러리에 대해 설명합니다.  
@@ -125,7 +125,7 @@ ON
  PowerShell cmdlet을 통해 파일 경로 대신 Blob Storage URL을 참조하여 Azure Blob Storage 서비스에 SQL Server 데이터 파일을 저장합니다. 다음 URL 형식을 사용하여 BLOB에 액세스합니다. `https://storageaccount.blob.core.windows.net/<container>/<blob>`  
   
 ### <a name="sql-server-object-and-performance-counters-support"></a>SQL Server 개체 및 성능 카운터 지원  
- SQL Server 2014 이상에서는 Azure Storage의 SQL Server 데이터 파일 기능에 사용할 새로운 SQL Server 개체를 추가했습니다. 이 새 SQL Server 개체를 [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) 라고 하며, SQL Server를 Microsoft Azure Storage와 함께 실행할 때 시스템 모니터에서 활동을 모니터링하는 데 사용할 수 있습니다.  
+ SQL Server 2014 이상에서는 Azure Storage의 SQL Server 데이터 파일 기능에 사용할 새로운 SQL Server 개체를 추가했습니다. 이 새 SQL Server 개체를 [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md)라고 하며, SQL Server를 Microsoft Azure Storage와 함께 실행할 때 시스템 모니터에서 활동을 모니터링하는 데 사용할 수 있습니다.  
   
 ### <a name="sql-server-management-studio-support"></a>SQL Server Management Studio 지원  
  SQL Server Management Studio에서 다양한 대화 상자 창을 통해 이 기능을 사용할 수 있습니다. 예를 들어 저장소 컨테이너의 URL 경로를 입력합니다(예: > https://teststorageaccnt.blob.core.windows.net/testcontainer/).
@@ -158,7 +158,7 @@ ON
   
  **임대 BLOB 오류:**  
   
--   동일한 BLOB 파일을 사용하는 다른 인스턴스가 충돌한 후 SQL Server를 시작하려고 하면 오류가 발생합니다. 해결 방법: 정상적인 작업 중에 SQL Server는 임시 임대를 사용하여 저장소에 대한 BLOB을 예약하고 45-60초마다 각 BLOB 임대를 갱신합니다. 서버가 충돌하는 상태에서 동일한 BLOB을 사용하도록 구성된 SQL Server의 다른 인스턴스가 시작될 경우 새 인스턴스는 BLOB의 기존 임대가 만료될 때까지 최대 60초 동안 기다립니다. 데이터베이스를 다른 인스턴스에 첨부하고 60초 내에 임대가 만료되도록 기다릴 수 없는 경우 BLOB에서 임대를 명시적으로 해제하여 첨부 작업의 오류를 방지할 수 있습니다.  
+-   동일한 BLOB 파일을 사용하는 다른 인스턴스가 충돌한 후 SQL Server를 시작하려고 하면 오류가 발생합니다. 해결 방법: 정상적인 작업 중에 SQL Server는 임시 임대를 사용하여 스토리지에 대한 BLOB을 예약하고 45-60초마다 각 BLOB 임대를 갱신합니다. 서버가 충돌하는 상태에서 동일한 BLOB을 사용하도록 구성된 SQL Server의 다른 인스턴스가 시작될 경우 새 인스턴스는 BLOB의 기존 임대가 만료될 때까지 최대 60초 동안 기다립니다. 데이터베이스를 다른 인스턴스에 첨부하고 60초 내에 임대가 만료되도록 기다릴 수 없는 경우 BLOB에서 임대를 명시적으로 해제하여 첨부 작업의 오류를 방지할 수 있습니다.  
   
  **데이터베이스 오류**  
   

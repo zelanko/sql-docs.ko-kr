@@ -36,6 +36,6 @@ ms.locfileid: "48104493"
 |**최종 스키마 업데이트**|테이블에 대한 메타데이터를 마지막으로 업데이트한 날짜와 시간을 표시합니다.|  
 |**State**|테이블의 처리 상태를 표시합니다. 이 속성의 값에 대 한 자세한 내용은 참조 하세요. <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>합니다.|  
 |**마지막으로 처리**|테이블을 마지막으로 처리한 날짜와 시간을 표시합니다.|  
-|**현재 저장소 모드**|테이블의 현재 저장소 모드를 표시합니다. 저장소 모드는 데이터베이스 수준에서 설정되며 모든 테이블에 상속됩니다. 테이블 수준에서 서로 다른 저장소 모드를 사용할 수는 없습니다. 유효한 값은 InMemory(기본값), InMemoryWithDirectQuery, DirectQuery, DirectQueryWithinMemory입니다.|  
+|**현재 저장소 모드**|테이블의 현재 스토리지 모드를 표시합니다. 스토리지 모드는 데이터베이스 수준에서 설정되며 모든 테이블에 상속됩니다. 테이블 수준에서 서로 다른 스토리지 모드를 사용할 수는 없습니다. 유효한 값은 InMemory(기본값), InMemoryWithDirectQuery, DirectQuery, DirectQueryWithinMemory입니다.|  
   
   

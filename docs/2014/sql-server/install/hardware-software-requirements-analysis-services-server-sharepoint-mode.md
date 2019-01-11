@@ -58,7 +58,7 @@ ms.locfileid: "53371426"
 |---------------|-------------|-----------------|  
 |프로세서|64비트 듀얼 코어 프로세서, 3GHz|코어 16개|  
 |RAM|8GB의 RAM|64GB의 RAM|  
-|저장소|80GB 저장소|80GB 이상|  
+|스토리지|80GB 저장소|80GB 이상|  
   
  SharePoint 팜 서버에 SharePoint 모드의 Analysis Services 서버를 설치할 경우 다음 링크에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]와 SharePoint Server에 대한 최소 시스템 요구 사항을 검토하십시오.  
   

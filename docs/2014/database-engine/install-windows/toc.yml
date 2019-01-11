@@ -49,7 +49,7 @@ items:
     href: install-sql-server-powershell.md
   - name: Server Core에 SQL Server 2014 설치
     href: install-sql-server-on-server-core.md
-  - name: SMB 파일 공유와 함께 저장소로 SQL Server 설치 옵션
+  - name: SMB fileshare 기능이 있는 SQL Server를 스토리지 옵션으로 설치
     href: install-sql-server-with-smb-fileshare-as-a-storage-option.md
   - name: SysPrep을 사용하여 SQL Server 설치 시 고려 사항
     href: considerations-for-installing-sql-server-using-sysprep.md

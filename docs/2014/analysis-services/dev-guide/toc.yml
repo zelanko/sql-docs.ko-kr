@@ -35,7 +35,7 @@ items:
       items:
       - name: 차원 소개
         href: ../multidimensional-models-olap-logical-dimension-objects/introduction-to-dimensions-analysis-services-multidimensional-data.md
-      - name: 차원 저장소
+      - name: 차원 스토리지
         href: ../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md
     - name: 특성 및 특성 계층
       href: ../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md
@@ -70,7 +70,7 @@ items:
     - name: 파티션
       href: ../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md
       items:
-      - name: 파티션 저장소 모드 및 처리
+      - name: 파티션 스토리지 모드 및 처리
         href: ../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md
       - name: 자동 관리 캐싱(파티션)
         href: ../multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md
@@ -84,7 +84,7 @@ items:
       href: ../multidimensional-models-olap-logical-cube-objects/cube-translations.md
     - name: 큐브 셀
       href: ../multidimensional-models-olap-logical-cube-objects/cube-cells-analysis-services-multidimensional-data.md
-    - name: 큐브 저장소
+    - name: 큐브 스토리지
       href: ../multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md
     - name: Aggregations and Aggregation Designs
       href: ../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md

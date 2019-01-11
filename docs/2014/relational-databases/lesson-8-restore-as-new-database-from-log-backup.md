@@ -27,9 +27,9 @@ ms.locfileid: "48207923"
   
 -   (.Bak) 데이터베이스의 백업에서에서 만든 Windows Azure Storage를 사용 하 여 합니다 [Windows Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 기능입니다. 이 단계에서는 또 다른 SQL Server 자격 증명을 만들어야 합니다. 이 자격 증명은 저장소 계정 키를 사용합니다.  
   
--   Windows Azure 저장소 계정이 있습니다.  
+-   Microsoft Azure Storage 계정이 있습니다.  
   
--   Windows Azure 저장소 계정에서 컨테이너를 만들었습니다.  
+-   Microsoft Azure Storage 계정에서 컨테이너를 만들었습니다.  
   
 -   읽기, 쓰기 및 나열 권한이 있는 컨테이너에 정책을 만들었습니다. SAS 키도 생성했습니다.  
   

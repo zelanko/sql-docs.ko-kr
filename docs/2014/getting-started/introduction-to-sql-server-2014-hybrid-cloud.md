@@ -45,17 +45,17 @@ ms.locfileid: "53358455"
  
  Azure Storage를 사용 하 여 SQL Server의 백업 및 복원 기능을 사용 하 여 백업 대상으로의 주요 이점은 다음과 같습니다. 
  
--  무제한 저비용 저장소 
+-  무제한 저비용 스토리지 
  
--  고가용성 저장소(데이터 손실을 방지하기 위해 지리적으로 복제됨) 
+-  고가용성 스토리지(데이터 손실을 방지하기 위해 지리적으로 복제됨) 
  
--  재해 복구 및 규정 준수 요구 사항을 지원할 수 있는 오프사이트 저장소 
+-  재해 복구 및 규정 준수 요구 사항을 지원할 수 있는 오프사이트 스토리지 
  
 -  단순화된 원격 백업 및 복원 프로세스 
  
  다음은 클라우드 및 온-프레미스 시나리오에 대한 SQL Server의 백업 및 복원 기능 목록입니다. 
  
--  합니다 [SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) 기능을 사용 하면 백업 대상으로 URL을 지정 하 여 Azure Storage에 백업할 수 있습니다. 이 기능을 사용하여 로컬 저장소나 다른 오프사이트 옵션의 경우처럼 수동 백업을 수행하거나 자체 백업 전략을 구성할 수 있습니다. 
+-  합니다 [SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) 기능을 사용 하면 백업 대상으로 URL을 지정 하 여 Azure Storage에 백업할 수 있습니다. 이 기능을 사용하여 로컬 스토리지나 다른 오프사이트 옵션의 경우처럼 수동 백업을 수행하거나 자체 백업 전략을 구성할 수 있습니다. 
  
 -  합니다 [백업 암호화](../relational-databases/backup-restore/backup-encryption.md) 기능을 사용 하면 저장소 대상에 대 한 백업을 만드는 동안 데이터를 암호화할 수 있습니다: 온-프레미스 및 Azure Storage. 
  

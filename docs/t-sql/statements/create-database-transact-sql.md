@@ -272,7 +272,7 @@ CREATE DATABASE database_snapshot_name
   
 -   **PERSISTENT_LOG_BUFFER=ON ( DIRECTORY_NAME='' )**
 
-     이 옵션을 지정하면 트랜잭션 로그 버퍼는 저장소 클래스 메모리(NVDIMM-N 비휘발성 저장소)로 지원되는 디스크 디바이스에 있는 볼륨에서 생성되며 영구적 로그 버퍼라고도 합니다. 자세한 내용은 [저장소 클래스 메모리를 사용하는 트랜잭션 커밋 대기 시간 가속화](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/) 를 참조하세요. **적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 이상.
+     이 옵션을 지정하면 트랜잭션 로그 버퍼는 저장소 클래스 메모리(NVDIMM-N 비휘발성 저장소)로 지원되는 디스크 디바이스에 있는 볼륨에서 생성되며 영구적 로그 버퍼라고도 합니다. 자세한 내용은 [스토리지 클래스 메모리를 사용하는 트랜잭션 커밋 대기 시간 가속화](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/) 를 참조하세요. **적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 이상.
   
  FOR ATTACH [ WITH \< attach_database_option > ] 기존 운영 체제 파일 집합을 [연결](../../relational-databases/databases/database-detach-and-attach-sql-server.md)하여 데이터베이스를 만들도록 지정합니다. 여기에는 주 파일을 지정하는 \<filespec> 항목이 반드시 필요합니다. 또한 데이터베이스를 처음 만들었거나 마지막으로 연결했을 때 경로가 다른 파일에 대한 \<filespec> 항목이 필요합니다. 이러한 파일에는 반드시 \<filespec> 항목을 지정해야 합니다.  
   
@@ -962,7 +962,7 @@ MAXSIZE
 데이터베이스의 최대 크기를 지정합니다. MAXSIZE는 지정된 EDITION(서비스 계층)에 대해 유효해야 합니다. 지원되는 MAXSIZE 값 및 서비스 계층의 기본값(D)은 다음과 같습니다.
 
 > [!NOTE]
-> **MAXSIZE** 인수는 하이퍼스케일 서비스 계층의 단일 데이터베이스에 적용되지 않습니다. 하이퍼스케일 계층 데이터베이스는 필요에 따라 100TB까지 증가합니다. SQL Database 서비스는 저장소를 자동으로 추가하므로 최대 크기를 설정할 필요가 없습니다.
+> **MAXSIZE** 인수는 하이퍼스케일 서비스 계층의 단일 데이터베이스에 적용되지 않습니다. 하이퍼스케일 계층 데이터베이스는 필요에 따라 100TB까지 증가합니다. SQL Database 서비스는 스토리지를 자동으로 추가하므로 최대 크기를 설정할 필요가 없습니다.
 
 **논리 서버의 단일 및 풀링된 데이터베이스에 대한 DTU 기반 모델입니다.**
 
@@ -990,7 +990,7 @@ MAXSIZE
 |1024GB|해당 사항 없음|해당 사항 없음|√|√|√ (D)|
 |1024GB에서 최대 4096GB(256 GB*로 증분) |해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|√|√|  
   
-\* P11과 P15는 기본 크기인 1024를 사용하여 MAXSIZE를 최대 4TB까지 허용합니다.  P11 및 P15는 추가 비용없이 최대 4TB가 포함된 저장소를 사용할 수 있습니다. 프리미엄 계층에서 1TB 초과의 MAXSIZE는 현재 미국 동부2, 미국 서부, 미국 버지니아 주 정부, 서부 유럽, 독일 중앙, 동남 아시아, 일본 동부, 오스트레일리아 동부, 캐나다 중앙 및 캐나다 동부에서 사용할 수 있습니다. DTU 기반 모델에 대한 리소스 제한에 대한 자세한 내용은 [DTU 기반 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요.  
+\* P11과 P15는 기본 크기인 1024를 사용하여 MAXSIZE를 최대 4TB까지 허용합니다.  P11 및 P15는 추가 비용 없이 최대 4TB가 포함된 스토리지를 사용할 수 있습니다. 프리미엄 계층에서 1TB 초과의 MAXSIZE는 현재 미국 동부2, 미국 서부, 미국 버지니아 주 정부, 서부 유럽, 독일 중앙, 동남 아시아, 일본 동부, 오스트레일리아 동부, 캐나다 중앙 및 캐나다 동부에서 사용할 수 있습니다. DTU 기반 모델에 대한 리소스 제한에 대한 자세한 내용은 [DTU 기반 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요.  
 
 DTU 기반 모델에 대한 MAXSIZE 값은 지정된 경우 지정된 서비스 계층에 대한 위의 표에 표시된 유효한 값이어야 합니다.
  
@@ -1411,7 +1411,7 @@ WITH (
  AUTOGROW = ON | **OFF**  
  이 데이터베이스에 대한 *replicated_size*, *distributed_size* 및 *log_size* 매개 변수가 지정된 크기를 넘어 필요에 따라 자동으로 증가하는지 여부를 지정합니다. 기본값은 **OFF**입니다.  
   
- AUTOGROW가 ON인 경우 *replicated_size*, *distributed_size* 및 *log_size*가 각 데이터 삽입, 업데이트 또는 이미 할당된 것보다 더 많은 저장 용량이 필요한 기타 작업의 필요에 따라(지정된 초기 크기의 블록에서가 아니라) 성장하게 됩니다.  
+ AUTOGROW가 ON인 경우 *replicated_size*, *distributed_size* 및 *log_size*가 각 데이터 삽입, 업데이트 또는 이미 할당된 것보다 더 많은 스토리지 용량이 필요한 기타 작업의 필요에 따라(지정된 초기 크기의 블록에서가 아니라) 성장하게 됩니다.  
   
  AUTOGROW가 OFF이면 크기가 자동으로 증가하지 않습니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]은 *replicated_size*, *distributed_size* 또는 *log_size*가 지정된 값을 초과하여 성장할 것을 요구하는 작업을 시도할 경우 오류를 반환합니다.  
   
@@ -1477,7 +1477,7 @@ GO
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
   
 ### <a name="a-basic-database-creation-examples"></a>1. 기본 데이터베이스 만들기 예제  
- 다음 예제에서는 복제된 테이블에 대해 계산 노드당 100GB, 분산된 테이블에 대해 어플라이언스당 500GB, 트랜잭션 로그에 대해 어플라이언스당 100GB의 저장 용량이 있는 `mytest` 데이터베이스를 만듭니다. 이 예제에서는 AUTOGROW가 기본으로 Off로 설정돼 있습니다.  
+ 다음 예제에서는 복제된 테이블에 대해 계산 노드당 100GB, 분산된 테이블에 대해 어플라이언스당 500GB, 트랜잭션 로그에 대해 어플라이언스당 100GB의 스토리지 용량이 있는 `mytest` 데이터베이스를 만듭니다. 이 예제에서는 AUTOGROW가 기본으로 Off로 설정돼 있습니다.  
   
 ```  
 CREATE DATABASE mytest  
@@ -1499,7 +1499,7 @@ CREATE DATABASE mytest
 ```  
   
 ### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>2. 부분 기가바이트 크기를 사용하여 데이터베이스 만들기  
- 다음 예제에서는 복제된 테이블에 대해 계산 노드당 1.5GB, 분산된 테이블에 대해 어플라이언스당 5.25GB, 트랜잭션 로그에 대해 어플라이언스당 10GB의 저장 용량을 가진 그리고 AUTOGROW가 Off로 설정된 `mytest` 데이터베이스를 만듭니다.  
+ 다음 예제에서는 복제된 테이블에 대해 계산 노드당 1.5GB, 분산된 테이블에 대해 어플라이언스당 5.25GB, 트랜잭션 로그에 대해 어플라이언스당 10GB의 스토리지 용량을 가진 그리고 AUTOGROW가 Off로 설정된 `mytest` 데이터베이스를 만듭니다.  
   
 ```  
 CREATE DATABASE mytest  

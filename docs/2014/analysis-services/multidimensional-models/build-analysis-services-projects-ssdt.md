@@ -47,7 +47,7 @@ ms.locfileid: "50147678"
 |*Projectname*.asdatabase|배포 스크립트 파일에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트의 개체에 대한 메타데이터를 정의하는 ASSL 요소를 포함합니다. 배포 엔진은 이 파일을 사용하여 해당 개체를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 배포합니다.|  
 |*Projectname*.configsettings|배포 중에 사용되며 직접 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사에서 수정할 수 있는 구성 설정을 포함합니다(예: 데이터 원본에 대한 연결 문자열).|  
 |*Projectname*.deploymenttargets|배포 중에 사용되며 직접 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사에서 수정할 수 있는 대상 설정을 포함합니다(예: 서버 및 데이터베이스 이름).|  
-|*Projectname*.deploymentoptions|배포 중에 사용되며 직접 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사에서 수정할 수 있는 다양한 옵션 설정을 포함합니다(예: 저장소 위치).|  
+|*Projectname*.deploymentoptions|배포 중에 사용되며 직접 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사에서 수정할 수 있는 다양한 옵션 설정을 포함합니다(예: 스토리지 위치).|  
 |*Assemblyname*/*dllname.* dll|참조된 각 어셈블리에 대한 개별 폴더입니다. 각 폴더에는 어셈블리에 대한 DLL, 참조된 모든 어셈블리 및 출력 디버그 정보를 위한 연결된 모든 .pdb 파일이 들어 있습니다.|  
   
 |파일(obj 폴더)|Description|  

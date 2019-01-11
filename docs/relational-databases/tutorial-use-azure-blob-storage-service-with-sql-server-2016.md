@@ -28,7 +28,7 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 2016 사용 자습서를
   
 Microsoft Azure Blob Storage 서비스에 대한 SQL Server 통합 지원은 SQL Server 2012 서비스 팩 1 CU2 향상된 기능으로 시작되었으며, SQL Server 2014 및 SQL Server 2016에서 더욱 개선되었습니다. 이 기능에 대한 개요 및 사용할 경우의 이점은 [Microsoft Azure의 SQL Server 데이터 파일](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)을 참조하세요. 라이브 데모는 [지정 시간 복원 데모](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)를 참조하세요.  
 
-이 자습서에서는 여러 섹션을 통해 Microsoft Azure Blob Storage 서비스에서 SQL Server 데이터 파일을 사용하는 방법을 보여 줍니다. 각 섹션은 특정 작업을 중심으로 하며, 섹션을 순서대로 완료해야 합니다. 먼저 저장된 액세스 정책과 공유 액세스 서명을 사용하여 Blob Storage에 새 컨테이너를 만드는 방법을 알아봅니다. 그런 다음 SQL Server 자격 증명을 만들어 Azure Blob Storage에 SQL Server를 통합하는 방법을 살펴봅니다. 데이터베이스를 Blob 저장소에 백업하고 Azure 가상 머신에 복원합니다. SQL Server 2016 파일-스냅숏 트랜잭션 로그 백업을 사용하여 특정 시점 및 새 데이터베이스로 복원합니다. 최종적으로, 이 자습서에서는 파일-스냅숏 백업 이해와 작업에 도움이 되도록 메타데이터 시스템 저장 프로시저 및 함수를 사용하는 방법을 보여 줍니다.
+이 자습서에서는 여러 섹션을 통해 Microsoft Azure Blob Storage 서비스에서 SQL Server 데이터 파일을 사용하는 방법을 보여 줍니다. 각 섹션은 특정 작업을 중심으로 하며, 섹션을 순서대로 완료해야 합니다. 먼저 저장된 액세스 정책과 공유 액세스 서명을 사용하여 Blob Storage에 새 컨테이너를 만드는 방법을 알아봅니다. 그런 다음 SQL Server 자격 증명을 만들어 Azure Blob Storage에 SQL Server를 통합하는 방법을 살펴봅니다. 데이터베이스를 Blob 스토리지에 백업하고 Azure 가상 머신에 복원합니다. SQL Server 2016 파일-스냅숏 트랜잭션 로그 백업을 사용하여 특정 시점 및 새 데이터베이스로 복원합니다. 최종적으로, 이 자습서에서는 파일-스냅숏 백업 이해와 작업에 도움이 되도록 메타데이터 시스템 저장 프로시저 및 함수를 사용하는 방법을 보여 줍니다.
   
 ## <a name="prerequisites"></a>사전 요구 사항  
 이 자습서를 완료하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 백업 및 복원 개념과 T-SQL 구문에 대해 잘 알고 있어야 합니다. 이 자습서를 사용하려면 Azure Storage 계정, SSMS(SQL Server Management Studio), SQL Server 온-프레미스의 인스턴스에 대한 액세스, SQL Server 2016을 실행하는 Azure VM(가상 머신)에 대한 액세스 및 AdventureWorks2016 데이터베이스가 필요합니다. 또한 BACKUP 및 RESTORE 명령을 실행하는 데 사용하는 계정은 **모든 자격 증명 변경** 권한이 있는 **db_backup operator** 데이터베이스 역할에 있어야 합니다. 
@@ -41,7 +41,7 @@ Microsoft Azure Blob Storage 서비스에 대한 SQL Server 통합 지원은 SQL
 - [AdventureWorks2016 샘플 데이터베이스](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)를 다운로드합니다.
 - 사용자 계정에 [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) 역할을 할당하고 [모든 자격 증명 변경](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) 권한을 부여합니다. 
  
-## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1 - 저장된 액세스 정책 및 공유 액세스 저장소 만들기
+## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1 - 저장된 액세스 정책 및 공유 액세스 스토리지 만들기
 이 섹션에서는 [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) 스크립트를 사용하여 저장된 액세스 정책을 통해 Azure Blob 컨테이너에 공유 액세스 서명을 만듭니다.  
   
 > [!NOTE]  
@@ -52,7 +52,7 @@ Microsoft Azure Blob Storage 서비스에 대한 SQL Server 통합 지원은 SQL
 Azure PowerShell, Azure Storage SDK, Azure REST API 또는 타사 유틸리티를 사용하여 저장된 액세스 정책과 공유 액세스 서명을 만들 수 있습니다. 이 자습서에서는 Azure PowerShell 스크립트를 사용하여 이 작업을 완료하는 방법을 보여 줍니다. 스크립트는 리소스 관리자 배포 모델을 사용하며 다음과 같은 새 리소스를 만듭니다.  
   
 -   리소스 그룹   
--   저장소 계정  
+-   스토리지 계정  
 -   Azure Blob 컨테이너   
 -   SAS 정책    
 
@@ -131,7 +131,7 @@ Azure PowerShell, Azure Storage SDK, Azure REST API 또는 타사 유틸리티�
 ## <a name="2---create-a-sql-server-credential-using-a-shared-access-signature"></a>2 - 공유 액세스 서명을 사용하여 SQL Server 자격 증명 만들기
 이 섹션에서는 SQL Server가 이전 단계에서 만든 Azure 컨테이너에 쓰고 읽을 때 사용할 보안 정보를 저장하기 위한 자격 증명을 만듭니다.  
   
-SQL Server 자격 증명은 SQL Server 외부의 리소스에 연결하는 데 필요한 인증 정보를 저장하는 데 사용되는 개체입니다. 자격 증명에는 저장소 컨테이너의 URI 경로와 이 컨테이너에 대한 공유 액세스 서명이 저장됩니다.  
+SQL Server 자격 증명은 SQL Server 외부의 리소스에 연결하는 데 필요한 인증 정보를 저장하는 데 사용되는 개체입니다. 자격 증명에는 스토리지 컨테이너의 URI 경로와 이 컨테이너에 대한 공유 액세스 서명이 저장됩니다.  
 
 SQL Server 자격 증명을 만들려면 다음 단계를 수행합니다.  
   
@@ -178,7 +178,7 @@ Blob Storage에 데이터베이스를 백업하려면 다음 단계를 따르세
   
 1.  SQL Server Management Studio에 연결합니다.  
 2.  새 쿼리 창을 열고 Azure 가상 머신에 있는 데이터베이스 엔진의 SQL Server 2016 인스턴스에 연결합니다.  
-3.  다음 Transact-SQL 스크립트를 복사하여 쿼리 창에 붙여넣습니다. 섹션 1에서 지정한 컨테이너 및 저장소 계정 이름에 맞게 URL을 수정한 다음, 이 스크립트를 실행합니다.  
+3.  다음 Transact-SQL 스크립트를 복사하여 쿼리 창에 붙여넣습니다. 섹션 1에서 지정한 컨테이너 및 스토리지 계정 이름에 맞게 URL을 수정한 다음, 이 스크립트를 실행합니다.  
   
     ```sql  
   
@@ -193,7 +193,7 @@ Blob Storage에 데이터베이스를 백업하려면 다음 단계를 따르세
   
     ```  
   
-4.  개체 탐색기를 열고 저장소 계정 및 계정 키를 사용하여 Azure Storage에 연결합니다. 
+4.  개체 탐색기를 열고 스토리지 계정 및 계정 키를 사용하여 Azure Storage에 연결합니다. 
     1.  컨테이너를 확장하고 섹션 1에서 만든 컨테이너를 확장한 다음, 위 3단계의 백업이 이 컨테이너에 표시되는지 확인합니다.  
   
    ![Azure Storage 계정에 연결](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/connect-to-azure-storage.png)
@@ -205,11 +205,11 @@ Blob Storage에 데이터베이스를 백업하려면 다음 단계를 따르세
 > [!NOTE]  
 > 이 자습서에서는 간단한 설명을 위해 데이터베이스 백업에 사용한 것과 동일한 컨테이너를 데이터 및 로그 파일에 사용합니다. 프로덕션 환경에서는 여러 컨테이너를 사용할 가능성이 크며, 여러 데이터 파일을 사용하는 경우도 많습니다. SQL Server 2016에서는 큰 데이터베이스를 백업할 때 백업 성능을 향상시키기 위해 여러 blob에 백업을 스트라이핑할 수도 있습니다.  
   
-Azure Blob 저장소에서 Azure 가상 머신의 SQL Server 2016 인스턴스로 AdventureWorks2016 데이터베이스를 복원하려면 다음 단계를 따르세요.  
+Azure Blob 스토리지에서 Azure 가상 머신의 SQL Server 2016 인스턴스로 AdventureWorks2016 데이터베이스를 복원하려면 다음 단계를 따르세요.  
   
 1.  SQL Server Management Studio에 연결합니다.   
 2.  새 쿼리 창을 열고 Azure 가상 머신에 있는 데이터베이스 엔진의 SQL Server 2016 인스턴스에 연결합니다.   
-3.  다음 Transact-SQL 스크립트를 복사하여 쿼리 창에 붙여넣습니다. 섹션 1에서 지정한 컨테이너 및 저장소 계정 이름에 맞게 URL을 수정한 다음, 이 스크립트를 실행합니다.  
+3.  다음 Transact-SQL 스크립트를 복사하여 쿼리 창에 붙여넣습니다. 섹션 1에서 지정한 컨테이너 및 스토리지 계정 이름에 맞게 URL을 수정한 다음, 이 스크립트를 실행합니다.  
   
     ```sql  
     -- Restore AdventureWorks2016 from URL to SQL Server instance using Azure blob storage for database files  
@@ -249,7 +249,7 @@ Azure Blob 저장소에서 Azure 가상 머신의 SQL Server 2016 인스턴스�
     SELECT * FROM sys.fn_db_backup_file_snapshots ('AdventureWorks2016');  
     ```  
   
-4.  다음 Transact-SQL 스크립트를 복사하여 쿼리 창에 붙여넣습니다. 섹션 1에서 지정한 컨테이너 및 저장소 계정 이름에 맞게 URL을 수정한 다음, 이 스크립트를 실행합니다. 이 백업이 얼마나 빨리 수행되는지 확인합니다.  
+4.  다음 Transact-SQL 스크립트를 복사하여 쿼리 창에 붙여넣습니다. 섹션 1에서 지정한 컨테이너 및 스토리지 계정 이름에 맞게 URL을 수정한 다음, 이 스크립트를 실행합니다. 이 백업이 얼마나 빨리 수행되는지 확인합니다.  
   
     ```sql  
     -- Backup the AdventureWorks2016 database with FILE_SNAPSHOT  
@@ -288,7 +288,7 @@ AdventureWorks2016 데이터베이스에 작업을 생성하고 파일-스냅숏
     SELECT COUNT (*) from AdventureWorks2016.Production.Location;    
     ```  
   
-4.  다음 Transact-SQL 스크립트 두 개를 복사하여 두 개의 개별 쿼리 창에 붙여넣습니다. 섹션 1에서 지정한 컨테이너 및 저장소 계정 이름에 맞게 URL을 수정한 다음, 개별 쿼리 창에서 두 스크립트를 동시에 실행합니다. 두 스크립트를 완료하는 데 약 7분 정도 걸립니다.  
+4.  다음 Transact-SQL 스크립트 두 개를 복사하여 두 개의 개별 쿼리 창에 붙여넣습니다. 섹션 1에서 지정한 컨테이너 및 스토리지 계정 이름에 맞게 URL을 수정한 다음, 개별 쿼리 창에서 두 스크립트를 동시에 실행합니다. 두 스크립트를 완료하는 데 약 7분 정도 걸립니다.  
   
     ```sql  
     -- Insert 30,000 new rows into the Production.Location table in the AdventureWorks2014 database in batches of 75  
@@ -357,7 +357,7 @@ AdventureWorks2016 데이터베이스에 작업을 생성하고 파일-스냅숏
   
     ![행 수 29,939가 표시됨](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/29-thousand-rows.png) 
   
-4.  다음 Transact-SQL 스크립트를 복사하여 쿼리 창에 붙여넣습니다. 인접한 두 개의 로그 백업 파일을 선택하고 파일 이름을 이 스크립트에 필요한 날짜 및 시간으로 변환합니다. 섹션 1에서 지정한 컨테이너 및 저장소 계정 이름에 맞게 URL을 수정하고 첫 번째 및 두 번째 백업 파일 이름을 제공한 다음, “June 26, 2018 01:48 PM”의 형식으로 STOPAT 시간을 제공하고 이 스크립트를 실행합니다. 이 스크립트를 완료하려면 몇 분 정도 걸립니다.  
+4.  다음 Transact-SQL 스크립트를 복사하여 쿼리 창에 붙여넣습니다. 인접한 두 개의 로그 백업 파일을 선택하고 파일 이름을 이 스크립트에 필요한 날짜 및 시간으로 변환합니다. 섹션 1에서 지정한 컨테이너 및 스토리지 계정 이름에 맞게 URL을 수정하고 첫 번째 및 두 번째 백업 파일 이름을 제공한 다음, “June 26, 2018 01:48 PM”의 형식으로 STOPAT 시간을 제공하고 이 스크립트를 실행합니다. 이 스크립트를 완료하려면 몇 분 정도 걸립니다.  
   
     ```sql  
     -- restore and recover to a point in time between the times of two transaction log backups, and then verify the row count  
@@ -390,9 +390,9 @@ AdventureWorks2016 데이터베이스에 작업을 생성하고 파일-스냅숏
 2.  새 쿼리 창을 열고 Azure 가상 머신에 있는 데이터베이스 엔진의 SQL Server 2016 인스턴스에 연결합니다.  
   
     > [!NOTE]  
-    > 이전 섹션에 사용한 것과 다른 Azure 가상 머신인 경우 [2 - 공유 액세스 서명을 사용하여 SQL Server 자격 증명 만들기](#2---create-a-sql-server-credential-using-a-shared-access-signature)의 단계를 수행한 상태여야 합니다. 다른 컨테이너로 복원하려면 새 컨테이너에 대해 [1 - 저장된 액세스 정책 및 공유 액세스 저장소 만들기](#1---create-stored-access-policy-and-shared-access-storage)를 수행하세요.  
+    > 이전 섹션에 사용한 것과 다른 Azure 가상 머신인 경우 [2 - 공유 액세스 서명을 사용하여 SQL Server 자격 증명 만들기](#2---create-a-sql-server-credential-using-a-shared-access-signature)의 단계를 수행한 상태여야 합니다. 다른 컨테이너로 복원하려면 새 컨테이너에 대해 [1 - 저장된 액세스 정책 및 공유 액세스 스토리지 만들기](#1---create-stored-access-policy-and-shared-access-storage)를 수행하세요.  
   
-3.  다음 Transact-SQL 스크립트를 복사하여 쿼리 창에 붙여넣습니다. 사용할 로그 백업 파일을 선택합니다. 섹션 1에서 지정한 컨테이너 및 저장소 계정 이름에 맞게 URL을 수정하고 로그 백업 파일 이름을 제공한 다음, 이 스크립트를 실행합니다.  
+3.  다음 Transact-SQL 스크립트를 복사하여 쿼리 창에 붙여넣습니다. 사용할 로그 백업 파일을 선택합니다. 섹션 1에서 지정한 컨테이너 및 스토리지 계정 이름에 맞게 URL을 수정하고 로그 백업 파일 이름을 제공한 다음, 이 스크립트를 실행합니다.  
   
     ```sql  
     -- restore as a new database from a transaction log backup file  
@@ -420,7 +420,7 @@ AdventureWorks2016 데이터베이스에 작업을 생성하고 파일-스냅숏
   
 1.  SQL Server Management Studio에 연결합니다.  
 2.  새 쿼리 창을 열고 Azure 가상 머신에 있는 데이터베이스 엔진의 SQL Server 2016 인스턴스(또는 이 컨테이너에 대한 읽기 및 쓰기 권한이 있는 모든 SQL Server 2016 인스턴스)에 연결합니다.   
-3.  다음 Transact-SQL 스크립트를 복사하여 쿼리 창에 붙여넣습니다. 연결된 파일 스냅숏과 함께 삭제할 로그 백업을 선택합니다. 섹션 1에서 지정한 컨테이너 및 저장소 계정 이름에 맞게 URL을 수정하고 로그 백업 파일 이름을 제공한 다음, 이 스크립트를 실행합니다.  
+3.  다음 Transact-SQL 스크립트를 복사하여 쿼리 창에 붙여넣습니다. 연결된 파일 스냅숏과 함께 삭제할 로그 백업을 선택합니다. 섹션 1에서 지정한 컨테이너 및 스토리지 계정 이름에 맞게 URL을 수정하고 로그 백업 파일 이름을 제공한 다음, 이 스크립트를 실행합니다.  
   
   ```sql
   sys.sp_delete_backup 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/tutorial-21764-20181003205236.bak';  

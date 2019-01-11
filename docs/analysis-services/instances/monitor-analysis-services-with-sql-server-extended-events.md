@@ -65,7 +65,7 @@ ms.locfileid: "52544406"
   
  이벤트 필드 탭의 구성에서 **TextData** 를 선택하면 이벤트 옆에 서버에서 실행 중인 쿼리 등의 반환 값을 보여주는 이 필드가 표시됩니다.  
   
- 원하는 이벤트 및 데이터 저장소에 대한 세션을 구성한 후 스크립트 단추를 클릭하면 파일, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 새 쿼리 및 클립보드 등 지원되는 대상 중 하나로 구성을 전송할 수 있습니다.  
+ 원하는 이벤트 및 데이터 스토리지에 대한 세션을 구성한 후 스크립트 단추를 클릭하면 파일, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 새 쿼리 및 클립보드 등 지원되는 대상 중 하나로 구성을 전송할 수 있습니다.  
   
  **세션 새로 고침**  
   

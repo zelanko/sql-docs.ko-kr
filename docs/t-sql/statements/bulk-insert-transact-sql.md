@@ -177,7 +177,7 @@ WITH ( CODEPAGE=65001 ); -- UTF-8 encoding
 
 'errorfile_data_source_name'   
 **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
-가져오는 동안 발견된 오류를 포함할 오류 파일의 Azure Blob 저장소 위치를 가리키는 명명된 외부 데이터 원본입니다. 외부 데이터 원본은 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1에서 추가된 `TYPE = BLOB_STORAGE` 옵션을 사용하여 만들어야 합니다. 자세한 내용은 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)를 참조하세요.
+가져오는 동안 발견된 오류를 포함할 오류 파일의 Azure Blob 스토리지 위치를 가리키는 명명된 외부 데이터 원본입니다. 외부 데이터 원본은 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1에서 추가된 `TYPE = BLOB_STORAGE` 옵션을 사용하여 만들어야 합니다. 자세한 내용은 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)를 참조하세요.
  
  FIRSTROW **=***first_row*  
  로드할 첫 번째 행의 번호를 지정합니다. 기본값은 지정한 데이터 파일의 첫 번째 행입니다. FIRSTROW는 1부터 시작합니다.  

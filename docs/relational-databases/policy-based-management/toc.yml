@@ -3,7 +3,7 @@ items:
   href: administer-servers-by-using-policy-based-management.md
 - name: 정책 기반 관리
   items:
-  - name: 정책 기반 관리 저장소
+  - name: 정책 기반 관리 스토리지
     href: policy-based-management-storage.md
   - name: 정책 기반 관리의 일반 속성 구성
     href: configure-the-general-properties-of-policy-based-management.md
@@ -99,7 +99,7 @@ items:
       href: sql-server-login-password-expiration.md
     - name: SQL Server 로그인 암호 강도
       href: sql-server-login-password-strength.md
-    - name: 저장소 시스템 입/출력 시간 초과
+    - name: 스토리지 시스템 입/출력 시간 초과
       href: storage-system-input-output-time-out.md
     - name: 시스템 데이터베이스의 대칭 키
       href: symmetric-keys-on-system-databases.md

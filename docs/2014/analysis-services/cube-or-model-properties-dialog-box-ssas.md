@@ -42,7 +42,7 @@ ms.locfileid: "48153503"
 |**최종 스키마 업데이트**|큐브 또는 모델에 대한 메타데이터를 마지막으로 업데이트한 날짜와 시간을 표시합니다.|  
 |**스크립트 캐시 처리 모드**|큐브 또는 모델의 스크립트 캐시에 사용할 처리 모드를 선택합니다. 이 속성의 값에 대 한 자세한 내용은 참조 하세요. <xref:Microsoft.AnalysisServices.Cube.ScriptCacheProcessingMode%2A>합니다.|  
 |**처리 모드**|큐브 또는 모델에 사용할 처리 모드를 선택합니다. 이 속성의 값에 대 한 자세한 내용은 참조 하세요. <xref:Microsoft.AnalysisServices.Cube.ProcessingMode%2A>합니다.|  
-|**저장소 위치**|큐브 또는 모델과 연결된 측정값 그룹 및 파티션의 기본 저장소 위치로 사용할 폴더를 입력하거나 줄임표 단추 (**...**)를 클릭하여 **원격 폴더 찾아보기** 대화 상자를 표시하고 폴더를 선택합니다. **원격 폴더 찾아보기** 대화 상자에 대한 자세한 내용은 [원격 폴더 찾아보기 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.<br /><br /> 이 속성의 값에 대 한 자세한 내용은 참조 하세요. <xref:Microsoft.AnalysisServices.Cube.StorageLocation%2A>합니다.|  
+|**저장소 위치**|큐브 또는 모델과 연결된 측정값 그룹 및 파티션의 기본 스토리지 위치로 사용할 폴더를 입력하거나 줄임표 단추 (**...**)를 클릭하여 **원격 폴더 찾아보기** 대화 상자를 표시하고 폴더를 선택합니다. **원격 폴더 찾아보기** 대화 상자에 대한 자세한 내용은 [원격 폴더 찾아보기 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.<br /><br /> 이 속성의 값에 대 한 자세한 내용은 참조 하세요. <xref:Microsoft.AnalysisServices.Cube.StorageLocation%2A>합니다.|  
 |**State**|큐브 또는 모델의 처리 상태를 표시합니다. 이 속성의 값에 대 한 자세한 내용은 참조 하세요. <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>합니다.|  
 |**LastProcessed**|큐브 또는 모델을 마지막으로 처리한 날짜와 시간을 표시합니다.|  
   

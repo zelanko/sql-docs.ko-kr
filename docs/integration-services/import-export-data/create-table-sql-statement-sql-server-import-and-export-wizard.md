@@ -48,7 +48,7 @@ CREATE TABLE 문과 구문에 대한 자세한 내용은 [CREATE TABLE&#40;Trans
   
 ## <a name="create-a-table-that-includes-a-filestream-column"></a>FILESTREAM 열을 포함하는 테이블 만들기  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사는 연결된 데이터 원본에 따라 기본 CREATE TABLE 문을 생성합니다. 이 기본 CREATE TABLE 문은 원본 테이블에 FILESTREAM 열이 있는 경우에도 FILESTREAM 특성을 포함하지 않습니다.
- 1.  마법사를 사용하여 FILESTREAM 열을 복사하려면 먼저 대상 데이터베이스에서 FILESTREAM 저장소를 구현합니다.
+ 1.  마법사를 사용하여 FILESTREAM 열을 복사하려면 먼저 대상 데이터베이스에서 FILESTREAM 스토리지를 구현합니다.
  2.  그런 다음 **테이블 생성 SQL 문** 대화 상자에서 FILESTREAM 특성을 CREATE TABLE 문에 수동으로 추가합니다.  
 
 구문에 대한 자세한 내용은 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)을 참조하세요. FILESTREAM에 대한 자세한 내용은 [Blob&#40;Binary Large Object&#41; 데이터&#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)를 참조하세요.  

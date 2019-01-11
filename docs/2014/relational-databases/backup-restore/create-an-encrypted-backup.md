@@ -23,7 +23,7 @@ ms.locfileid: "52531847"
 ## <a name="backup-to-disk-with-encryption"></a>암호화하여 디스크에 백업  
  **사전 요구 사항:**  
   
--   데이터베이스의 백업을 만드는 데 적합한 공간이 있는 로컬 디스크나 저장소에 대한 액세스 권한  
+-   데이터베이스의 백업을 만드는 데 적합한 공간이 있는 로컬 디스크나 스토리지에 대한 액세스 권한  
   
 -   master 데이터베이스의 데이터베이스 마스터 키 및 SQL Server 인스턴스에서 사용할 수 있는 인증서 또는 비대칭 키. 암호화 요구 사항과 사용 권한에 대한 자세한 내용은 [Backup Encryption](backup-encryption.md)를 참조하십시오.  
   
@@ -71,12 +71,12 @@ ms.locfileid: "52531847"
   
  EKM에 의해 보호되는 백업을 암호화하는 예제를 보려면 [Azure 키 자격 증명 모음을 사용한 확장 가능 키 관리&#40;SQL Server&#41;](../security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)를 참조하세요.  
   
-### <a name="backup-to-windows-azure-storage-with-encryption"></a>암호화하여 Windows Azure 저장소에 백업  
+### <a name="backup-to-windows-azure-storage-with-encryption"></a>암호화하여 Microsoft Azure Storage에 백업  
  **URL에 대한 SQL Server 백업** 옵션을 사용하여 Windows Azure 저장소에 백업을 만드는 경우 암호화 단계는 동일하지만 URL을 대상으로 사용하고 SQL 자격 증명을 사용하여 Windows Azure 저장소에 인증해야 합니다. 구성 하려는 경우 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 암호화 옵션을 사용 하 여 참조 [SQL Server Managed Backup to Windows Azure 설정](enable-sql-server-managed-backup-to-microsoft-azure.md) 고 [가용성그룹에대한SQLServerManagedBackuptoWindowsAzure설정](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
   
  **사전 요구 사항:**  
   
--   Windows 저장소 계정 및 컨테이너. 자세한 내용은 [1 단원: Windows Azure 저장소 개체 만들기](../../tutorials/lesson-1-create-windows-azure-storage-objects.md)합니다.  
+-   Windows 스토리지 계정 및 컨테이너. 자세한 내용은 [1 단원: Windows Azure 저장소 개체 만들기](../../tutorials/lesson-1-create-windows-azure-storage-objects.md)합니다.  
   
 -   master 데이터베이스의 데이터베이스 마스터 키 및 SQL Server 인스턴스에 대한 인증서 또는 비대칭 키. 암호화 요구 사항과 사용 권한에 대한 자세한 내용은 [Backup Encryption](backup-encryption.md)를 참조하십시오.  
   

@@ -29,7 +29,7 @@ ms.locfileid: "52758045"
 |||  
 |-|-|  
 |**필드**|**설명**|  
-|AzureStorageConnection|기존 Azure 저장소 연결 관리자를 지정하거나 Blob 파일이 호스트되는 위치를 가리키는 Azure 저장소 계정을 참조하는 저장소 연결 관리자를 새로 만듭니다.|  
+|AzureStorageConnection|기존 Azure Storage 연결 관리자를 지정하거나 Blob 파일이 호스트되는 위치를 가리키는 Azure Storage 계정을 참조하는 스토리지 연결 관리자를 새로 만듭니다.|  
 |BlobContainer|blob으로 업로드된 파일이 저장되는 blob 컨테이너의 이름을 지정합니다.|  
 |BlobDirectory|업로드한 파일이 블록 blob으로 저장되는 blob 디렉터리를 지정합니다. Blob 디렉터리는 가상 계층 구조입니다. 이미 있는 Blob은 업로드한 Blob으로 바뀝니다.|  
 |LocalDirectory|업로드할 파일이 포함된 로컬 디렉터리를 지정합니다.|  

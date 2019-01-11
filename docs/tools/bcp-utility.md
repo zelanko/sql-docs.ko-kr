@@ -152,7 +152,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  이 옵션을 **-h"** ROWS_PER_BATCH **=**_bb_**"** 옵션과 함께 사용하지 마세요.  
  
  **-c**<a name="c"></a>  
- 문자 데이터 형식을 사용하여 작업을 수행합니다. 이 옵션은 각 필드에 대한 정보를 요청하지 않습니다. 이 옵션은 **char** 을 저장소 유형으로 사용하고 접두사를 사용하지 않으며 **\t** (탭 문자)를 필드 구분 기호로 사용하고 **\r\n** (줄 바꿈 문자)을 행 종결자로 사용합니다. **-c**는 **-w**와 호환되지 않습니다.  
+ 문자 데이터 형식을 사용하여 작업을 수행합니다. 이 옵션은 각 필드에 대한 정보를 요청하지 않습니다. 이 옵션은 **char**을 스토리지 유형으로 사용하고 접두사를 사용하지 않으며 **\t**(탭 문자)를 필드 구분 기호로 사용하고 **\r\n**(줄 바꿈 문자)을 행 종결자로 사용합니다. **-c**는 **-w**와 호환되지 않습니다.  
   
  자세한 내용은 [문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)를 참조하세요.  
   
@@ -419,7 +419,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  자세한 내용은 [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)를 참조하세요.  
   
  **-w**<a name="w"></a>  
- 유니코드 문자를 사용하여 대량 복사 작업을 수행합니다. 이 옵션은 각 필드에 대한 정보를 요청하지 않습니다. 이 옵션은 **nchar** 을 저장소 유형으로 사용하고 접두사를 사용하지 않으며 **\t** (탭 문자)를 필드 구분 기호로 사용하고 **\n** (줄 바꿈 문자)을 행 종결자로 사용합니다. **-w**는 **-c**와 호환되지 않습니다.  
+ 유니코드 문자를 사용하여 대량 복사 작업을 수행합니다. 이 옵션은 각 필드에 대한 정보를 요청하지 않습니다. 이 옵션은 **nchar** 을 스토리지 유형으로 사용하고 접두사를 사용하지 않으며 **\t** (탭 문자)를 필드 구분 기호로 사용하고 **\n** (줄 바꿈 문자)을 행 종결자로 사용합니다. **-w**는 **-c**와 호환되지 않습니다.  
   
  자세한 내용은 [유니코드 문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)를 참조하세요.  
   

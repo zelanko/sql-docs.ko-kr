@@ -17,12 +17,12 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/13/2018
 ms.locfileid: "53353143"
 ---
-# <a name="sql-server-backup-and-restore-with-windows-azure-blob-storage-service"></a>SQL Server Backup and Restore with Windows Azure Blob Storage Service
+# <a name="sql-server-backup-and-restore-with-windows-azure-blob-storage-service"></a>Windows Azure Blob Storage 서비스로 SQL Server 백업 및 복원
   이 항목에서는 소개 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원에서 합니다 [Windows Azure Blob 저장소 서비스](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)합니다. Microsoft Azure Blob service를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 저장할 경우의 이점에 대해서도 간략하게 설명합니다.  
   
  SQL Server는 다음과 같은 방식으로 Windows Azure Blob 저장소 서비스에 백업을 저장하는 것을 지원합니다.  
   
--   **Windows Azure에 대 한 백업 관리:** 디스크와 테이프에 백업하는 데 사용되는 동일한 방법을 사용하여, 이제 URL을 백업 대상으로 지정함으로써 Windows Azure 저장소에 백업할 수 있습니다.  이 기능을 사용하여 로컬 저장소나 다른 오프사이트 옵션의 경우처럼 수동으로 백업하거나 자체 백업 전략을 구성할 수 있습니다. 이 기능을 **URL에 대한 SQL Server 백업**이라고도 합니다. 자세한 내용은 [SQL Server Backup to URL](sql-server-backup-to-url.md)을 참조하세요. 이 기능은 SQL Server 2012 SP1 CU2 이상에서 사용할 수 있습니다.  
+-   **Windows Azure에 대 한 백업 관리:** 디스크와 테이프에 백업하는 데 사용되는 동일한 방법을 사용하여, 이제 URL을 백업 대상으로 지정함으로써 Windows Azure 저장소에 백업할 수 있습니다.  이 기능을 사용하여 로컬 스토리지나 다른 오프사이트 옵션의 경우처럼 수동으로 백업하거나 자체 백업 전략을 구성할 수 있습니다. 이 기능을 **URL에 대한 SQL Server 백업**이라고도 합니다. 자세한 내용은 [SQL Server Backup to URL](sql-server-backup-to-url.md)을 참조하세요. 이 기능은 SQL Server 2012 SP1 CU2 이상에서 사용할 수 있습니다.  
   
     > [!NOTE]  
     >  SQL Server 2014 이전의 SQL Server 버전의 경우 추가 기능인 Microsoft Azure에 대한 SQL Server 백업 도구를 사용하여 빠르고 쉽게 Microsoft Azure Storage에 백업을 만들 수 있습니다. 자세한 내용은 [다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=324399)를 참조하십시오.  
@@ -31,9 +31,9 @@ ms.locfileid: "53353143"
   
 ## <a name="benefits-of-using-the-windows-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에 Microsoft Azure Blob service를 사용할 경우의 이점  
   
--   유연하고 안정적인 무제한 오프사이트 저장소: Microsoft Azure Blob service에 백업 저장은 편리하고 유연하며 쉽게 액세스할 수 있는 오프사이트 옵션입니다. 기존 스크립트/작업을 수정하는 것처럼 쉽게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에 사용할 오프사이트 저장소를 만들 수 있습니다. 오프사이트 저장소는 대개 오프사이트 및 프로덕션 데이터베이스 위치 모두에 영향을 줄 수 있는 재해 방지를 위해 프로덕션 데이터베이스 위치로부터 충분히 멀리 있어야 합니다. Blob 저장소 지리적 복제를 선택하여 전체 지역에 영향을 줄 수 있는 재해 발생에 대비한 추가 보호막을 만듭니다. 또한 언제 어디서나 백업을 사용할 수 있으며 복원을 위해 백업에 쉽게 액세스할 수 있습니다.  
+-   유연하고 안정적인 무제한 오프사이트 저장소: Microsoft Azure Blob service에 백업 저장은 편리하고 유연하며 쉽게 액세스할 수 있는 오프사이트 옵션입니다. 기존 스크립트/작업을 수정하는 것처럼 쉽게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에 사용할 오프사이트 스토리지를 만들 수 있습니다. 오프사이트 스토리지는 대개 오프사이트 및 프로덕션 데이터베이스 위치 모두에 영향을 줄 수 있는 재해 방지를 위해 프로덕션 데이터베이스 위치로부터 충분히 멀리 있어야 합니다. Blob 스토리지 지리적 복제를 선택하여 전체 지역에 영향을 줄 수 있는 재해 발생에 대비한 추가 보호막을 만듭니다. 또한 언제 어디서나 백업을 사용할 수 있으며 복원을 위해 백업에 쉽게 액세스할 수 있습니다.  
   
--   백업 보관: Microsoft Azure Blob Storage는 백업 보관에 자주 사용하는 테이프 옵션보다 더 효율적입니다. 테이프 저장소를 사용하려면 오프사이트 시설로 물리적 이동과 미디어 보호 조치가 필요합니다. Microsoft Azure Blob Storage에 백업을 저장하면 빠르고 지속적이며 항상 사용 가능한 보관 옵션을 사용할 수 있습니다.  
+-   백업 보관: Microsoft Azure Blob Storage는 백업 보관에 자주 사용하는 테이프 옵션보다 더 효율적입니다. 테이프 스토리지를 사용하려면 오프사이트 시설로 물리적 이동과 미디어 보호 조치가 필요합니다. Microsoft Azure Blob Storage에 백업을 저장하면 빠르고 지속적이며 항상 사용 가능한 보관 옵션을 사용할 수 있습니다.  
   
 -   Windows Azure 서비스를 사용하면 하드웨어 관리에 따른 오버헤드가 없습니다. Windows Azure 서비스는 하드웨어를 관리하며 하드웨어 오류에 대비한 중복과 보호를 위해 지리적 복제를 제공합니다.  
   

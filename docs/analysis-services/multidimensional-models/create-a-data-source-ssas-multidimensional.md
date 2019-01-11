@@ -85,7 +85,7 @@ ms.locfileid: "52410320"
         > [!IMPORTANT]  
         >  SQL Server 인증을 사용하는 연결의 경우 연결 관리자에 **암호 저장** 확인란이 포함됩니다. 이 확인란은 항상 표시되지만 항상 사용되지는 않습니다.  
         >   
-        >  활성 Analysis Services 데이터베이스에 사용되는 SQL Server 관계형 데이터를 새로 고치거나 처리하는 경우에는 Analysis Services에서 이 확인란이 사용되지 않습니다. **암호 저장**의 선택 여부에 관계없이 Analysis Services에서는 항상 암호를 암호화하여 저장합니다. 암호는 .abf 파일과 데이터 파일에 암호화되어 저장됩니다. 이는 Analysis Services에서 서버의 세션 기반 암호 저장소를 지원하지 않기 때문입니다.  
+        >  활성 Analysis Services 데이터베이스에 사용되는 SQL Server 관계형 데이터를 새로 고치거나 처리하는 경우에는 Analysis Services에서 이 확인란이 사용되지 않습니다. **암호 저장**의 선택 여부에 관계없이 Analysis Services에서는 항상 암호를 암호화하여 저장합니다. 암호는 .abf 파일과 데이터 파일에 암호화되어 저장됩니다. 이는 Analysis Services에서 서버의 세션 기반 암호 스토리지를 지원하지 않기 때문입니다.  
         >   
         >  이 동작은 Analysis Services 서버 인스턴스에 보관되는 데이터베이스와 SQL Server 인증을 사용하여 관계형 데이터를 새로 고치거나 처리하는 데이터베이스에만 적용됩니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 설정되었으며 세션 기간 중에만 사용되는 데이터 원본 연결에는 적용되지 않습니다. 이미 저장된 암호는 제거할 수 없지만 다른 자격 증명 또는 Windows 인증을 사용하여 현재 데이터베이스와 함께 저장된 사용자 정보를 덮어쓸 수는 있습니다.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "52410320"
   
 -   솔루션의 기존 데이터 원본을 사용하여 데이터 원본을 만들면 기존 데이터 원본과 동기화되는 데이터 원본을 정의할 수 있습니다. 이 새 데이터 원본이 포함된 프로젝트가 작성되면 기본 데이터 원본의 데이터 원본 설정이 사용됩니다.  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 사용하여 데이터 원본을 만들면 현재 프로젝트에서 솔루션의 다른 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 참조할 수 있습니다. 새 데이터 원본은 선택한 프로젝트의 **Data Source** 및 **Initial Catalog** 속성에서 얻은 **TargetServer** 속성 및 **TargetDatabase** 속성으로 MSOLAP 공급자를 사용합니다. 원본 및 대상 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에는 원격 파티션 저장 및 처리 지원을 위해 상호 데이터 원본이 필요하므로 이 기능은 여러 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 사용하여 원격 파티션을 관리하는 솔루션에 유용합니다.  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 사용하여 데이터 원본을 만들면 현재 프로젝트에서 솔루션의 다른 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 참조할 수 있습니다. 새 데이터 원본은 선택한 프로젝트의 **Data Source** 및 **Initial Catalog** 속성에서 얻은 **TargetServer** 속성 및 **TargetDatabase** 속성으로 MSOLAP 공급자를 사용합니다. 원본 및 대상 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에는 원격 파티션 스토리지 및 처리 지원을 위해 상호 데이터 원본이 필요하므로 이 기능은 여러 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 사용하여 원격 파티션을 관리하는 솔루션에 유용합니다.  
   
  데이터 원본 개체를 참조하는 경우 참조된 개체나 프로젝트에서만 해당 개체를 편집할 수 있습니다. 참조가 포함된 데이터 원본 개체의 연결 정보는 편집할 수 없습니다. 참조된 개체나 프로젝트의 연결 정보를 변경하면 작성되는 새 데이터 원본에도 변경 내용이 나타납니다. 프로젝트의 데이터 원본 파일(.ds)에 나타나는 연결 문자열 정보는 프로젝트를 빌드하거나 데이터 원본 디자이너에서 해당 참조를 지울 때 동기화됩니다.  
   

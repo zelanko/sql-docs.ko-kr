@@ -63,7 +63,7 @@ ORDER BY SensorData.Speed DESC
 
 ## <a name="import-data"></a>데이터 가져오기
 
-Hadoop 또는 Azure Storage의 데이터를 영구적으로 저장하기 위해 SQL Server로 가져옵니다. SELECT INTO를 사용하여 외부 테이블이 참조하는 데이터를 SQL Server에 영구적으로 저장하기 위해 가져옵니다. 먼저 대략적인 관계형 테이블을 만든 다음 두 번째 단계에서 테이블 위에 columnstore 인덱스를 만듭니다.
+Hadoop 또는 Azure Storage의 데이터를 영구적으로 스토리지하기 위해 SQL Server로 가져옵니다. SELECT INTO를 사용하여 외부 테이블이 참조하는 데이터를 SQL Server에 영구적으로 스토리지하기 위해 가져옵니다. 먼저 대략적인 관계형 테이블을 만든 다음 두 번째 단계에서 테이블 위에 columnstore 인덱스를 만듭니다.
 
 ```sql
 -- PolyBase scenario - import external data into SQL Server
@@ -85,7 +85,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;
 
 ## <a name="export-data"></a>데이터 내보내기
 
-SQL Server에서 Hadoop 또는 Azure Storage로 데이터를 내보냅니다. 
+SQL Server에서 Hadoop 또는 Azure 스토리지로 데이터를 내보냅니다. 
 
 먼저, ‘PolyBase 내보내기 허용’의 `sp_configure` 값을 1로 설정하여 내보내기 기능을 사용하도록 설정합니다. 그런 다음 대상 디렉터리를 가리키는 외부 테이블을 만듭니다. 대상 디렉터리가 아직 없는 경우 CREATE EXTERNAL TABLE 문은 대상 디렉터리를 만듭니다. 그런 다음, INSERT INTO를 사용하여 로컬 SQL Server 테이블에서 외부 데이터 원본으로 데이터를 내보냅니다. 
 

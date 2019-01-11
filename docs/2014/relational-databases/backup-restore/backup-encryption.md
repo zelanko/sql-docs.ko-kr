@@ -22,7 +22,7 @@ ms.locfileid: "48055833"
   
   
 ##  <a name="Overview"></a> 개요  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 SQL Server에는 백업을 만드는 동안 데이터를 암호화하는 기능이 포함됩니다. 백업을 만들 때 암호화 알고리즘과 암호기(인증서 또는 비대칭 키)를 지정하여 암호화된 백업 파일을 만들 수 있습니다. 모든 저장소 대상, 즉 온-프레미스 및 Window Azure Storage가 지원됩니다. 또한 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 에서 도입된 새로운 기능인 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]작업에 대해 암호화 옵션을 구성할 수 있습니다.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 SQL Server에는 백업을 만드는 동안 데이터를 암호화하는 기능이 포함됩니다. 백업을 만들 때 암호화 알고리즘과 암호기(인증서 또는 비대칭 키)를 지정하여 암호화된 백업 파일을 만들 수 있습니다. 모든 스토리지 대상, 즉 온-프레미스 및 Window Azure Storage가 지원됩니다. 또한 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 에서 도입된 새로운 기능인 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]작업에 대해 암호화 옵션을 구성할 수 있습니다.  
   
  백업 중에 암호화하려면 암호화 키를 보호할 암호기와 암호화 알고리즘을 지정해야 합니다. 지원되는 암호화 옵션은 다음과 같습니다.  
   

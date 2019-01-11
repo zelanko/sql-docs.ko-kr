@@ -76,7 +76,7 @@ ms.locfileid: "47729971"
  복원하려면 원래 백업을 만드는 데 사용된 인증서 또는 비대칭 키가 사용자가 복원 중인 인스턴스에서 사용 가능해야 합니다. 복원을 수행하는 계정에는 인증서나 비대칭 키에 대한 **VIEW DEFINITIONS** 권한이 있어야 합니다. 백업을 암호화하는 데 사용된 인증서는 갱신되거나 업데이트되지 않아야 합니다.  
   
 ## <a name="restoring-from-microsoft-azure-storage"></a>Microsoft Azure Storage에서 복원  
-**백업 장치 선택** 대화 상자의 **백업 미디어 유형:** 드롭다운 목록에서 **URL** 을 선택합니다.  그런 다음 **추가** 를 클릭하여 **백업 파일 위치 선택** 대화 상자를 엽니다. 여기서 기존 SQL Server 자격 증명/Azure Storage 컨테이너를 선택하거나, 공유 액세스 서명을 사용하여 새 Azure Storage 컨테이너를 추가하거나, 기존 저장소 컨테이너에 대한 공유 액세스 서명 및 SQL Server 자격 증명을 생성할 수 있습니다. 저장소 계정에 연결되면 백업 파일이 복원에 사용할 파일을 선택할 수 있는 **Microsoft Azure에서 백업 파일 찾기** 대화 상자에 표시됩니다.  [Microsoft Azure 구독에 연결](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)을 참조하세요.
+**백업 장치 선택** 대화 상자의 **백업 미디어 유형:** 드롭다운 목록에서 **URL** 을 선택합니다.  그런 다음 **추가** 를 클릭하여 **백업 파일 위치 선택** 대화 상자를 엽니다. 여기서 기존 SQL Server 자격 증명/Azure Storage 컨테이너를 선택하거나, 공유 액세스 서명을 사용하여 새 Azure Storage 컨테이너를 추가하거나, 기존 스토리지 컨테이너에 대한 공유 액세스 서명 및 SQL Server 자격 증명을 생성할 수 있습니다. 스토리지 계정에 연결되면 백업 파일이 복원에 사용할 파일을 선택할 수 있는 **Microsoft Azure에서 백업 파일 찾기** 대화 상자에 표시됩니다.  [Microsoft Azure 구독에 연결](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)을 참조하세요.
   
 ## <a name="see-also"></a>참고 항목  
  [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   

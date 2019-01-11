@@ -21,7 +21,7 @@ ms.locfileid: "52616684"
 # <a name="sql-data-developer"></a>SQL 데이터 개발자
 모바일 장치 및 데스크톱 웹 서버, 엔터프라이즈 서버 및 클라우드 전반에서 데이터 중심 솔루션을 만드는 데 사용 하 여 Microsoft SQL 데이터 플랫폼입니다.  
 
-## <a name="sql-data-storage"></a>SQL 데이터 저장소
+## <a name="sql-data-storage"></a>SQL 데이터 스토리지
 * [SQL Server 데이터베이스 엔진](../database-engine/configure-windows/sql-server-database-engine.md): 온라인 트랜잭션 처리 작업 또는 온라인 분석 처리 데이터에 대 한 관계형 데이터베이스를 만들려면 SQL Server 데이터베이스 엔진을 사용 합니다. 
 * [SQL Azure](https://docs.microsoft.com/azure/sql-database/): 사용 하 여 SQL Azure 데이터베이스를 클라우드로 이동 하려면 
 * [SQL Compact](https://www.microsoft.com/download/details.aspx?id=17876): SQL Server Compact를 독립 실행형 및 데스크톱, 모바일 장치에 간헐적으로 연결된 응용 프로그램을 빌드하고 웹 클라이언트입니다.

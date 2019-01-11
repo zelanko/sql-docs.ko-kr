@@ -53,7 +53,7 @@ ms.locfileid: "52520143"
   
 ##  <a name="TermsAndDefinitions"></a> 용어 및 정의  
  백업 디스크  
- 백업 파일이 하나 이상 포함된 하드 디스크나 다른 디스크 저장 미디어입니다. 백업 파일은 일반적인 운영 체제 파일입니다.  
+ 백업 파일이 하나 이상 포함된 하드 디스크나 다른 디스크 스토리지 미디어입니다. 백업 파일은 일반적인 운영 체제 파일입니다.  
   
  미디어 세트(media set)  
  고정된 유형과 개수의 백업 디바이스를 사용하는 백업 미디어, 테이프 또는 디스크 파일을 정렬하여 모아 놓은 것입니다. 미디어 세트에 대한 자세한 내용은 [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)를 참조하세요.  
@@ -61,7 +61,7 @@ ms.locfileid: "52520143"
  물리적 백업 디바이스  
  운영 체제에서 제공하는 테이프 드라이브나 디스크 파일입니다. 백업은 1개에서 64개까지의 백업 디바이스에 기록될 수 있습니다. 백업에 여러 개의 백업 디바이스가 필요한 경우 모든 디바이스 유형은 디스크 또는 테이프 중 하나로 일치해야 합니다.  
   
- 디스크나 테이프뿐 아니라 Microsoft Azure Blob Storage Service에도 SQL Server 백업을 작성할 수 있습니다.  
+ 디스크나 테이프뿐 아니라 Windows Azure Blob 스토리지 서비스에도 SQL Server 백업을 작성할 수 있습니다.  
   
 ##  <a name="DiskBackups"></a> 디스크 백업 장치 사용  
  **섹션 내용**  
@@ -209,8 +209,8 @@ GO
   
  테이프를 실수로 열어 놓은 경우 테이프를 해제하는 가장 빠른 방법은 RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_합니다. 자세한 내용은 [RESTORE REWINDONLY&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql)를 참조하세요.  
   
-## <a name="using-the-windows-azure-blob-storage-service"></a>Microsoft Azure Blob Storage Service 사용  
- Windows Azure Blob 저장소 서비스에 SQL Server 백업을 작성할 수 있습니다.  Windows Azure Blob 저장소 서비스를 백업에 사용하는 방법에 대한 자세한 내용은 [Windows Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하십시오.  
+## <a name="using-the-windows-azure-blob-storage-service"></a>Windows Azure Blob 스토리지 서비스 사용  
+ Windows Azure Blob Storage Service에 SQL Server 백업을 작성할 수 있습니다.  Windows Azure Blob 저장소 서비스를 백업에 사용하는 방법에 대한 자세한 내용은 [Windows Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하십시오.  
   
 ##  <a name="LogicalBackupDevice"></a> 논리적 백업 장치를 사용 하 여  
  *논리적 백업 장치* 는 특정 물리적 백업 장치(디스크 파일 또는 테이프 드라이브)를 가리키는 선택적인 사용자 정의 이름입니다. 논리적 백업 디바이스를 사용하면 해당 물리적 백업 디바이스를 참조할 때 간접 참조를 사용할 수 있습니다.  
@@ -245,7 +245,7 @@ GO
 >  미러된 백업 미디어 세트는 [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] 이상 버전에서만 지원됩니다.  
   
 ##  <a name="Archiving"></a> SQL Server 백업 보관  
- 파일 시스템 백업 유틸리티를 사용하여 디스크 백업을 보관하고 오프사이트에 보관 파일을 저장하는 것이 좋습니다. 디스크를 사용할 경우 보관된 백업을 네트워크를 통해 오프사이트 디스크에 쓸 수 있다는 장점이 있습니다. Windows Azure Blob 저장소 서비스를 오프 사이트 보관 옵션으로 사용할 수 있습니다.  Windows Azure Blob 저장소 서비스에 디스크 백업을 업로드하거나 백업을 직접 작성할 수 있습니다.  
+ 파일 시스템 백업 유틸리티를 사용하여 디스크 백업을 보관하고 오프사이트에 보관 파일을 저장하는 것이 좋습니다. 디스크를 사용할 경우 보관된 백업을 네트워크를 통해 오프사이트 디스크에 쓸 수 있다는 장점이 있습니다. Windows Azure Blob 스토리지 서비스를 오프 사이트 보관 옵션으로 사용할 수 있습니다.  Windows Azure Blob 스토리지 서비스에 디스크 백업을 업로드하거나 백업을 직접 작성할 수 있습니다.  
   
  다른 일반적인 보관 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 로컬 백업 디스크에 쓰고 테이프에 보관한 다음 오프사이트에 테이프를 저장하는 것입니다.  
   

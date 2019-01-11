@@ -21,7 +21,7 @@ ms.lasthandoff: 12/03/2018
 ms.locfileid: "52756025"
 ---
 # <a name="unicode-compression-implementation"></a>유니코드 압축 구현
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 SCSU(Standard Compression Scheme for Unicode) 알고리즘 구현을 사용하여 행 또는 페이지 압축 개체에 저장된 유니코드 값을 압축합니다. 이러한 압축 개체의 경우 `nchar(n)` 및 `nvarchar(n)` 열에 유니코드 압축이 자동으로 설정됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 로캘에 관계없이 유니코드 데이터가 2바이트로 저장됩니다. 이 방식을 UCS-2 인코딩이라고 합니다. 일부 로캘의 경우 SQL Server에서 SCSU 압축을 구현하면 저장 공간을 최대 50% 절약할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 SCSU(Standard Compression Scheme for Unicode) 알고리즘 구현을 사용하여 행 또는 페이지 압축 개체에 저장된 유니코드 값을 압축합니다. 이러한 압축 개체의 경우 `nchar(n)` 및 `nvarchar(n)` 열에 유니코드 압축이 자동으로 설정됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 로캘에 관계없이 유니코드 데이터가 2바이트로 저장됩니다. 이 방식을 UCS-2 인코딩이라고 합니다. 일부 로캘의 경우 SQL Server에서 SCSU 압축을 구현하면 스토리지 공간을 최대 50% 절약할 수 있습니다.  
   
 ## <a name="supported-data-types"></a>지원되는 데이터 형식  
  유니코드 압축은 고정 길이의 `nchar(n)` 및 `nvarchar(n)` 데이터 형식을 지원합니다. 행 외부 또는 `nvarchar(max)` 열에 저장된 데이터 값은 압축되지 않습니다.  
@@ -41,10 +41,10 @@ ms.locfileid: "52756025"
     > [!NOTE]  
     >  유니코드 압축의 장점을 모두 활용하려면 페이지 또는 행 압축을 사용하여 개체를 다시 작성해야 합니다.  
   
-## <a name="how-unicode-compression-affects-data-storage"></a>유니코드 압축이 데이터 저장소에 주는 영향  
+## <a name="how-unicode-compression-affects-data-storage"></a>유니코드 압축이 데이터 스토리지에 주는 영향  
  인덱스를 만들거나 다시 작성하는 경우 또는 행/페이지 압축을 사용하여 압축된 테이블에서 값을 변경하는 경우 영향을 받는 인덱스나 값은 압축된 크기가 현재 크기보다 작은 경우에만 압축 형식으로 저장됩니다. 이렇게 되면 유니코드 압축 때문에 테이블의 행 또는 인덱스의 크기가 증가하지 않습니다.  
   
- 압축을 통해 절약할 수 있는 저장 공간은 압축하고 있는 데이터의 특성과 데이터 로캘에 따라 다릅니다. 다음 표에서는 로캘별로 절약할 수 있는 저장 공간을 보여 줍니다.  
+ 압축을 통해 절약할 수 있는 스토리지 공간은 압축하고 있는 데이터의 특성과 데이터 로캘에 따라 다릅니다. 다음 표에서는 로캘별로 절약할 수 있는 저장 공간을 보여 줍니다.  
   
 |로캘|압축률|  
 |------------|-------------------------|  

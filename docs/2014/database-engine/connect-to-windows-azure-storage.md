@@ -19,7 +19,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/28/2018
 ms.locfileid: "52530794"
 ---
-# <a name="connect-to-windows-azure-storage"></a>Microsoft Azure Storage에 연결
+# <a name="connect-to-windows-azure-storage"></a>Windows Azure 스토리지에 연결
   **Windows Azure 저장소 연결** 대화 상자를 사용하여 저장소 계정을 지정하고 Windows Azure 연결의 유효성을 검사할 수 있습니다.  
   
 ## <a name="options"></a>변수  

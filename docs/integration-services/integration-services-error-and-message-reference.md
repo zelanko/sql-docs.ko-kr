@@ -215,7 +215,7 @@ ms.locfileid: "51642410"
 |0xC001405E|-1073659810|DTS_E_PACKAGEPASSWORDEMPTY|패키지 보호 수준에 암호가 필요하지만 PackagePassword 속성이 비어 있습니다.|  
 |0xC001405F|-1073659809|DTS_E_DECRYPTXML_PASSWORD|암호가 지정되지 않았거나 올바르지 않기 때문에 암호화된 XML 노드를 해독하지 못했습니다. 암호화된 정보 없이 패키지 로드가 계속 시도됩니다.|  
 |0xC0014060|-1073659808|DTS_E_DECRYPTPACKAGE_USERKEY|사용자 키를 사용하여 암호화된 패키지를 해독하지 못했습니다. 현재 사용자가 이 패키지를 암호화한 사용자가 아니거나 사용 중인 컴퓨터가 이 패키지를 저장하는 데 사용된 컴퓨터가 아닙니다.|  
-|0xC0014061|-1073659807|DTS_E_SERVERSTORAGEDISALLOWED|이 대상에 저장할 때 보호 수준 ServerStorage를 사용할 수 없습니다. 시스템에서 대상이 보안 저장소 기능을 지원하는지 확인하지 못했습니다.|  
+|0xC0014061|-1073659807|DTS_E_SERVERSTORAGEDISALLOWED|이 대상에 저장할 때 보호 수준 ServerStorage를 사용할 수 없습니다. 시스템에서 대상이 보안 스토리지 기능을 지원하는지 확인하지 못했습니다.|  
 |0xC0014062|-1073659806|DTS_E_LOADFROMSQLSERVER|LoadFromSQLServer 메서드가 실패했습니다.|  
 |0xC0014063|-1073659805|DTS_E_SIGNATUREPOLICYVIOLATION|디지털 서명의 상태가 서명 정책을 위반하므로 패키지를 로드할 수 없습니다. 오류 0x%1!8.8X! "%2"|  
 |0xC0014064|-1073659804|DTS_E_SIGNATURENOTPRESENT|패키지가 서명되지 않았습니다.|  
@@ -443,7 +443,7 @@ ms.locfileid: "51642410"
 |0xC002913A|-1073573574|DTS_E_EXEC2000PKGTASK_PACKAGE_VERSIONGUID_NOT_SPECIFIED|패키지 버전 GUID를 지정하지 않았습니다.|  
 |0xC002913B|-1073573573|DTS_E_EXEC2000PKGTASK_SQLSERVER_NOT_SPECIFIED|SQL Server를 지정하지 않았습니다.|  
 |0xC002913C|-1073573572|DTS_E_EXEC2000PKGTASK_SQL_USERNAME_NOT_SPECIFIED|SQL Server 사용자 이름을 지정하지 않았습니다.|  
-|0xC002913D|-1073573571|DTS_E_EXEC2000PKGTASK_FILE_NAME_NOT_SPECIFIED|저장소 파일 이름을 지정하지 않았습니다.|  
+|0xC002913D|-1073573571|DTS_E_EXEC2000PKGTASK_FILE_NAME_NOT_SPECIFIED|스토리지 파일 이름을 지정하지 않았습니다.|  
 |0xC002913E|-1073573570|DTS_E_EXEC2000PKGTASK_DTS2000CANTBEEMPTY|DTS 2000 패키지 속성이 비어 있습니다.|  
 |0xC002913F|-1073573569|DTS_E_EXEC2000PKGTASK_ERROR_IN_PACKAGE_EXECUTE|DTS 2000 패키지를 실행하는 동안 오류가 발생했습니다.|  
 |0xC0029140|-1073573568|DTS_E_EXEC2000PKGTASK_SQLSERVER_NOT_AVAILABLE_NETWORK|네트워크에서 사용 가능한 SQL Server를 로드할 수 없습니다. 네트워크 연결을 확인합니다.|  
@@ -960,7 +960,7 @@ ms.locfileid: "51642410"
 |0xC0047043|-1073450941|DTS_E_CANTCREATECOMPONENTVIEW|다른 구성 요소 뷰가 이미 있기 때문에 구성 요소 뷰를 만들 수 없습니다. 한 번에 하나의 구성 요소 뷰만 존재할 수 있습니다.|  
 |0xC0047046|-1073450938|DTS_E_LAYOUTCANTSETUSAGETYPE|입력 "%1"(%2!d!)에서 가상 입력 열 컬렉션은 계보 ID가 %3!d!인 가상 입력 열을 포함하지 않습니다.|  
 |0xC0047047|-1073450937|DTS_E_WRONGOBJECTTYPE|요청된 개체에 잘못된 개체 유형이 있습니다.|  
-|0xC0047048|-1073450936|DTS_E_CANTCREATESPOOLFILE|버퍼 관리자가 BufferTempStoragePath 속성의 임의 경로에서 임시 저장소 파일을 만들 수 없습니다. 파일 이름이 잘못되었거나 권한이 없거나 경로가 꽉 찼습니다.|  
+|0xC0047048|-1073450936|DTS_E_CANTCREATESPOOLFILE|버퍼 관리자가 BufferTempStoragePath 속성의 임의 경로에서 임시 스토리지 파일을 만들 수 없습니다. 파일 이름이 잘못되었거나 권한이 없거나 경로가 꽉 찼습니다.|  
 |0xC0047049|-1073450935|DTS_E_SEEKFAILED|버퍼 관리자가 파일 "%2"에서 오프셋 %1!d!을(를) 찾을 수 없습니다. 파일이 손상되었습니다.|  
 |0xC004704A|-1073450934|DTS_E_EXTENDFAILED|버퍼 관리자가 파일 "%1"의 길이를 %2!lu!바이트로 바이트입니다.  디스크 공간이 부족합니다.|  
 |0xC004704B|-1073450933|DTS_E_FILEWRITEFAILED|버퍼 관리자가 파일 "%2"에 %1!d!바이트를 쓸 수 없습니다. 디스크 공간이나 할당량이 부족합니다.|  
@@ -1140,7 +1140,7 @@ ms.locfileid: "51642410"
 |0xC004800F|-1073446897|DTS_E_GETRTINTERFACEFAILED|구성 요소 "%1"(%2!d!)이(가) IDTSRuntimeComponent100 인터페이스를 제공할 수 없습니다.|  
 |0xC0048011|-1073446895|DTS_E_CANTGIVEAWAYBUFFER|데이터 흐름 태스크 엔진이 다른 스레드를 할당하기 위해 버퍼를 복사하려고 했지만 실패했습니다.|  
 |0xC0048012|-1073446894|DTS_E_CANTCREATEVIEWBUFFER|데이터 흐름 태스크 엔진이 버퍼 %3!d에 대해 %2!d! 유형 대신에 %1!d! 유형의 뷰 버퍼를 만들지 못했습니다.|  
-|0xC0048013|-1073446893|DTS_E_UNUSABLETEMPORARYPATH|버퍼 관리자가 경로 "%1"에서 임시 파일을 만들 수 없습니다. 이 경로는 임시 저장소용으로 다시 사용되지 않습니다.|  
+|0xC0048013|-1073446893|DTS_E_UNUSABLETEMPORARYPATH|버퍼 관리자가 경로 "%1"에서 임시 파일을 만들 수 없습니다. 이 경로는 임시 스토리지용으로 다시 사용되지 않습니다.|  
 |0xC0048014|-1073446892|DTS_E_DIRECTTONONERROROUTPUT|버퍼 관리자가 오류 출력으로 등록되지 않은 출력에 오류 행을 밀어넣으려고 했습니다. IsErrorOut 속성이 TRUE로 설정되지 않은 출력에서 DirectErrorRow가 호출되었습니다.|  
 |0xC0048015|-1073446891|DTS_E_BUFFERISPRIVATE|전용 버퍼에서 버퍼 메서드가 호출되었지만 전용 버퍼는 이 작업을 지원하지 않습니다.|  
 |0xC0048016|-1073446890|DTS_E_BUFFERISFLAT|전용 모드 버퍼는 이 작업을 지원하지 않습니다.|  
@@ -2124,7 +2124,7 @@ ms.locfileid: "51642410"
 |0x800470EB|-2147192597|DTS_W_EXPREVALUNREFERENCEDINPUTCOLUMN|"%2"의 "%1"은(는) 사용 유형이 READONLY이지만 식에서 참조하지 않습니다. 사용 가능한 입력 열 목록에서 해당 열을 제거하거나 식에서 참조하십시오.|  
 |0x8004801E|-2147188706|DTS_W_COULDNOTFINDCURRENTVERSION|구성 요소 %2에 대한 "%1" 값을 찾을 수 없습니다. 이 구성 요소에 대한 CurrentVersion 값을 찾을 수 없습니다. 이 오류는 DTSInfo 섹션에 CurrentVersion 값을 포함하도록 구성 요소가 해당 레지스트리 정보를 설정하지 않을 때 발생합니다. 이 메시지는 특정 구성 요소를 개발 중이거나 구성 요소가 패키지에서 사용될 때, 해당 구성 요소가 올바르게 등록되지 않은 경우에 발생합니다.|  
 |0x80049300|-2147183872|DTS_W_BUFFERGETTEMPFILENAME|버퍼 관리자가 임시 파일 이름을 가져올 수 없습니다.|  
-|0x80049301|-2147183871|DTS_W_UNUSABLETEMPORARYPATH|버퍼 관리자가 경로 "%1"에서 임시 파일을 만들 수 없습니다. 이 경로는 임시 저장소용으로 다시 사용되지 않습니다.|  
+|0x80049301|-2147183871|DTS_W_UNUSABLETEMPORARYPATH|버퍼 관리자가 경로 "%1"에서 임시 파일을 만들 수 없습니다. 이 경로는 임시 스토리지용으로 다시 사용되지 않습니다.|  
 |0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|경고: 성능 DLL로 통신하기 위해 전역 공유 메모리를 열 수 없으므로 데이터 흐름 성능 카운터를 사용할 수 없습니다.  이 문제를 해결하려면 관리자 권한으로 또는 시스템의 콘솔에서 이 패키지를 실행하십시오.|  
 |0x8020200F|-2145378289|DTS_W_PARTIALROWFOUNDATENDOFFILE|파일의 끝에 부분 행이 있습니다.|  
 |0x8020202B|-2145378261|DTS_W_ENDOFFILEREACHWHILEREADINGHEADERROWS|머리글 행을 읽는 동안 데이터 파일의 끝에 도달했습니다. 머리글 행 구분 기호와 건너뛸 머리글 행 수가 올바른지 확인하십시오.|  

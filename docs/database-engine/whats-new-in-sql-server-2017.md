@@ -64,7 +64,7 @@ ms.locfileid: "52541396"
 - 새 문자열 함수 [CONCAT_WS](../t-sql/functions/concat-ws-transact-sql.md), [TRANSLATE](../t-sql/functions/translate-transact-sql.md)및 [TRIM](../t-sql/functions/trim-transact-sql.md) 이 추가되었습니다.   
 - `WITHIN GROUP` STRING_AGG [함수에 대해 이제](../t-sql/functions/string-agg-transact-sql.md) 절이 지원됩니다.
 - 이 새로운 두 일본어 데이터 정렬 패밀리(Japanese_Bushu_Kakusu_140 및 Japanese_XJIS_140)가 추가되었고, 데이터 정렬 옵션 Variation-selector-sensitive(_VSS)가 일본어 데이터 정렬에서 사용을 위해 추가되었습니다. 또한 모든 새 데이터 정렬은 _SC 옵션을 지정하지 않고도 보조 문자를 자동으로 지원합니다. 자세한 내용은 [데이터 정렬 및 유니코드 지원](../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.   
-- 새로운 대량 액세스 옵션([BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) 및 [OPENROWSET(BULK...)](../t-sql/functions/openrowset-transact-sql.md))을 사용하면 CSV 형식으로 지정된 파일과 Azure Blob 저장소에 저장된 파일에서 [EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)의 새로운 `BLOB_STORAGE` 옵션을 통해 데이터에 직접 액세스할 수 있습니다.
+- 새로운 대량 액세스 옵션([BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) 및 [OPENROWSET(BULK...)](../t-sql/functions/openrowset-transact-sql.md))을 사용하면 CSV 형식으로 지정된 파일과 Azure Blob 스토리지에 저장된 파일에서 [EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)의 새로운 `BLOB_STORAGE` 옵션을 통해 데이터에 직접 액세스할 수 있습니다.
 - 데이터베이스 **COMPATIBILITY_LEVEL** 140이 추가되었습니다.   이 수준에서 실행하는 고객에게는 최신 언어 기능 및 쿼리 최적화 프로그램 동작이 제공됩니다. 여기에는 Microsoft에서 릴리스하는 각 시험판 버전의 변경 내용이 포함됩니다.
 - 증분 통계 업데이트 임계값을 계산하는 방식이 향상되었습니다(140 호환성 모드 필요).
 - [sys.dm_exec_query_statistics_xml](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) 이 추가되었습니다.

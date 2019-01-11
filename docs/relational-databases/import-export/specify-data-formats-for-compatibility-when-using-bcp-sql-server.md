@@ -36,13 +36,13 @@ ms.locfileid: "47620147"
 ##  <a name="bcpDataFormatAttr"></a> bcp 데이터 형식 특성  
  **bcp** 명령을 사용하면 데이터 파일 내 각 필드의 구조를 다음 데이터 형식 특성에 따라 지정할 수 있습니다.  
   
--   파일 저장 유형  
+-   파일 스토리지 유형  
   
      *파일 저장 유형* 은 데이터 파일에서 데이터가 저장되는 방법을 설명합니다. 데이터는 데이터베이스 테이블 형식(네이티브 형식), 문자 표시(문자 형식) 또는 암시적 변환을 지원하는 모든 데이터 형식의 데이터 파일로 내보낼 수 있습니다. 예를 들어 **smallint** 를 **int**로 복사할 수 있습니다. 사용자 정의 데이터 형식은 해당 기본 형식으로 내보내집니다. 자세한 내용은 [bcp를 사용하여 파일 저장 유형 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)을 참조하세요.  
   
 -   접두사 길이  
   
-     원시 형식의 데이터를 데이터 파일에 대량으로 내보내는 작업에서 파일 저장소를 가장 적게 사용하도록 하기 위해 **bcp** 명령은 각 필드의 이름 앞에 필드 길이를 나타내는 문자를 하나 이상 추가합니다. 이러한 문자를 *길이 접두사 문자*라고 합니다. 자세한 내용은 [bcp를 사용하여 데이터 파일에 접두사 길이 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)을 참조하세요.  
+     원시 형식의 데이터를 데이터 파일에 대량으로 내보내는 작업에서 파일 스토리지를 가장 적게 사용하도록 하기 위해 **bcp** 명령은 각 필드의 이름 앞에 필드 길이를 나타내는 문자를 하나 이상 추가합니다. 이러한 문자를 *길이 접두사 문자*라고 합니다. 자세한 내용은 [bcp를 사용하여 데이터 파일에 접두사 길이 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)을 참조하세요.  
   
 -   필드 길이  
   
@@ -65,7 +65,7 @@ ms.locfileid: "47620147"
 bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T  
 ```  
   
- 각 열에 대해 bcp는 필드별 값을 묻는 프롬프트를 표시합니다. 다음 예는 테이블의 `EmployeeID` 및 `Name` 열에 대한 필드별 프롬프트를 보여 주며 각 열에 대한 기본 파일 저장 유형(네이티브 형식)을 제안합니다. `EmployeeID` 및 `Name` 열의 접두사 길이는 각각 0, 2입니다. 사용자는 각 필드의 종결자로 쉼표(`,`)를 지정합니다.  
+ 각 열에 대해 bcp는 필드별 값을 묻는 프롬프트를 표시합니다. 다음 예는 테이블의 `EmployeeID` 및 `Name` 열에 대한 필드별 프롬프트를 보여 주며 각 열에 대한 기본 파일 스토리지 유형(네이티브 형식)을 제안합니다. `EmployeeID` 및 `Name` 열의 접두사 길이는 각각 0, 2입니다. 사용자는 각 필드의 종결자로 쉼표(`,`)를 지정합니다.  
   
  `Enter the file storage type of field EmployeeID [smallint]:`  
   

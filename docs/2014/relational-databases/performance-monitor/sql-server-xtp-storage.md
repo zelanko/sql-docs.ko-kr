@@ -17,10 +17,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/03/2018
 ms.locfileid: "52803435"
 ---
-# <a name="xtp-storage"></a>XTP 저장소
-  XTP 저장소 성능 개체에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 XTP 저장소와 관련된 카운터가 포함되어 있습니다.  
+# <a name="xtp-storage"></a>XTP 스토리지
+  XTP 스토리지 성능 개체에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 XTP 스토리지와 관련된 카운터가 포함되어 있습니다.  
   
- 이 표에서는 **XTP 저장소** 카운터에 대해 설명합니다.  
+ 이 표에서는 **XTP 스토리지** 카운터에 대해 설명합니다.  
   
 |카운터|Description|  
 |-------------|-----------------|  

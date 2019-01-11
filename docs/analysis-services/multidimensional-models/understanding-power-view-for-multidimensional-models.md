@@ -20,7 +20,7 @@ ms.locfileid: "52543528"
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   이 문서에서는 SQL Server의 다차원 모델용 파워 뷰 기능에 대해 설명하고, 조직에서 다차원 모델용 파워 뷰를 구현하려는 BI 전문가 및 관리자에게 중요한 정보를 제공합니다.  
   
- 다차원 모델은 업계 최고의 OLAP 데이터 모델링, 저장소 및 분석 솔루션을 제공합니다. SQL Server의 다차원 모델에서는 Microsoft 파워 뷰를 사용하여 임시 데이터 분석, 탐색 및 시각화를 수행할 수 있습니다.  
+ 다차원 모델은 업계 최고의 OLAP 데이터 모델링, 스토리지 및 분석 솔루션을 제공합니다. SQL Server의 다차원 모델에서는 Microsoft 파워 뷰를 사용하여 임시 데이터 분석, 탐색 및 시각화를 수행할 수 있습니다.  
   
  파워 뷰는 SharePoint 라이브러리의 공유 보고서 데이터 원본 파일(.rsds)로부터 브라우저에서 실행되는 씬 웹 클라이언트입니다. 보고서 데이터 원본은 클라이언트와 백 엔드 데이터 원본 간을 연결하는 역할을 합니다. 백 엔드 데이터 원본은 SharePoint의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서, 테이블 형식 모드에서 실행되는 Analysis Services 서버의 테이블 형식 모델 또는 다차원 모드에서 실행되는 Analysis Services 서버의 다차원 모델일 수 있습니다. 파워 뷰 보고서는 SharePoint 라이브러리 또는 갤러리에 저장할 수 있으며 조직의 다른 구성원과 공유할 수 있습니다.  
   

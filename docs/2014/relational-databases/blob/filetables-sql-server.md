@@ -38,13 +38,13 @@ ms.locfileid: "48188205"
   
     -   디렉터리 및 파일의 계층 네임스페이스가 제공됩니다.  
   
-    -   파일을 만든 날짜와 수정한 날짜 같은 파일 특성의 저장소가 제공됩니다.  
+    -   파일을 만든 날짜와 수정한 날짜 같은 파일 특성의 스토리지가 제공됩니다.  
   
     -   Windows 파일 및 디렉터리 관리 API가 지원됩니다.  
   
 -   FILESTREAM 및 파일 특성 데이터를 통해 관리 도구, 서비스 및 관계형 쿼리 기능을 비롯한 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능과의 호환성이 제공됩니다.  
   
- 파일 서버에 현재 파일로 존재하는 구조화되지 않은 데이터를 저장하고 관리하는 데 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하려면 여러 가지 문제를 해결해야 했지만 FileTable을 사용하면 이러한 문제가 상당히 해결됩니다. 기업에서는 파일 서버의 데이터를 FileTable로 이동하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제공하는 통합된 관리 기능 및 서비스를 이용할 수 있습니다. 동시에 해당 데이터를 파일 시스템의 파일로 표시하는 기존의 Windows 애플리케이션을 위해 Windows 애플리케이션 호환성을 유지할 수 있습니다.  
+ 파일 서버에 현재 파일로 존재하는 구조화되지 않은 데이터를 스토리지하고 관리하는 데 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하려면 여러 가지 문제를 해결해야 했지만 FileTable을 사용하면 이러한 문제가 상당히 해결됩니다. 기업에서는 파일 서버의 데이터를 FileTable로 이동하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제공하는 통합된 관리 기능 및 서비스를 이용할 수 있습니다. 동시에 해당 데이터를 파일 시스템의 파일로 표시하는 기존의 Windows 애플리케이션을 위해 Windows 애플리케이션 호환성을 유지할 수 있습니다.  
     
 ##  <a name="Description"></a> FileTable 정의  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 파일 및 디렉터리를 저장해야 하며 Windows API 호환성과 비트랜잭션 액세스가 필요한 응용 프로그램을 위해 **FileTable**이라는 특수한 **파일 테이블**을 제공합니다. FileTable은 미리 정의된 스키마를 사용하여 파일 및 디렉터리 계층 구조 정보와 파일 특성은 물론 FILESTREAM 데이터도 저장하는 특수한 사용자 테이블입니다.  

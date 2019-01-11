@@ -14,7 +14,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f9d7183d6e94f5808434090dd8fc998b946ed0f
 ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/03/2018
 ms.locfileid: "52810895"
@@ -26,7 +26,7 @@ ms.locfileid: "52810895"
   
 -   복제에서 테이블, 인덱스 및 구체화된 뷰를 게시할 수 있습니다. 다른 개체는 복제되지 않습니다.  
   
--   Oracle 데이터베이스와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스 간의 일부 데이터 저장 및 처리 방법 차이로 인해 복제가 영향을 받습니다.  
+-   Oracle 데이터베이스와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스 간의 일부 데이터 스토리지 및 처리 방법 차이로 인해 복제가 영향을 받습니다.  
   
 -   Oracle 게시자 사용 시 트랜잭션 복제 기능이 지원되는 방식이 매우 다릅니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "52810895"
   
 -   외래 키  
   
--   저장소 옵션(예: 테이블스페이스, 클러스터 등)  
+-   스토리지 옵션(예: 테이블스페이스, 클러스터 등)  
   
  다음 개체는 복제할 수 없습니다.  
   

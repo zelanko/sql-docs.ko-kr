@@ -779,7 +779,7 @@ GO
 ```  
   
 #### <a name="p-inserting-into-an-external-table-created-using-polybase"></a>16. PolyBase를 사용하여 만든 외부 테이블에 삽입  
- SQL Server에서 Hadoop 또는 Azure Storage로 데이터를 내보냅니다. 먼저 대상 파일이나 디렉터리를 가리키는 외부 테이블을 만듭니다. 그런 다음 INSERT INTO를 사용하여 로컬 SQL Server 테이블에서 외부 데이터 원본으로 데이터를 내보냅니다. INSERT INTO 문은 대상 파일이나 디렉터리가 없으면 만듭니다. SELECT 문의 결과는 지정된 파일 형식으로 생성되어 지정한 위치로 내보내집니다.  자세한 내용은 [PolyBase 시작](../../relational-databases/polybase/get-started-with-polybase.md)을 참조하세요.  
+ SQL Server에서 Hadoop 또는 Azure 스토리지로 데이터를 내보냅니다. 먼저 대상 파일이나 디렉터리를 가리키는 외부 테이블을 만듭니다. 그런 다음 INSERT INTO를 사용하여 로컬 SQL Server 테이블에서 외부 데이터 원본으로 데이터를 내보냅니다. INSERT INTO 문은 대상 파일이나 디렉터리가 없으면 만듭니다. SELECT 문의 결과는 지정된 파일 형식으로 생성되어 지정한 위치로 내보내집니다.  자세한 내용은 [PolyBase 시작](../../relational-databases/polybase/get-started-with-polybase.md)을 참조하세요.  
   
 **적용 대상**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

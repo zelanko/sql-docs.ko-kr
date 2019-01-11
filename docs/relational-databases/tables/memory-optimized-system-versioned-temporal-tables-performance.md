@@ -33,7 +33,7 @@ ms.locfileid: "52397236"
   
 -   데이터 플러시 태스크의 활성화 기간은 구성할 수 없지만, [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md)로 설정한 상태로 데이터를 여러 번의 일괄 처리로 삭제하고 각 일괄 처리 사이에 수동으로 호출한 데이터 플러시를 수행하는 것이 좋습니다.  
   
--   특히 집계 함수나 기간 이동 함수를 사용하는 분석 쿼리를 기록 데이터에 대해 실행하려는 경우에는 디스크 기반 기록 테이블용 저장소 옵션으로 클러스터형 columnstore를 사용하는 것이 좋습니다. 클러스터형 columnstore는 효율적인 데이터 압축 기능을 제공하며 기록 데이터가 생성되는 방식에 적합한 삽입 중심 방식으로 동작하므로 이러한 경우 기록 테이블에 사용하면 효율적인 옵션입니다.  
+-   특히 집계 함수나 기간 이동 함수를 사용하는 분석 쿼리를 기록 데이터에 대해 실행하려는 경우에는 디스크 기반 기록 테이블용 스토리지 옵션으로 클러스터형 columnstore를 사용하는 것이 좋습니다. 클러스터형 columnstore는 효율적인 데이터 압축 기능을 제공하며 기록 데이터가 생성되는 방식에 적합한 삽입 중심 방식으로 동작하므로 이러한 경우 기록 테이블에 사용하면 효율적인 옵션입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [메모리 액세스에 최적화된 테이블을 포함한 시스템 버전 임시 테이블](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   

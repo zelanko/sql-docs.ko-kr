@@ -36,7 +36,7 @@ FILESTREAM은 파일 데이터를 캐시하기 위해 NT 시스템 캐시를 사
 
 ## <a name="when-to-use-filestream"></a>FILESTREAM을 사용하는 경우
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 BLOB은 테이블에 데이터를 저장하는 표준 **varbinary(max)** 데이터 또는 파일 시스템에 데이터를 저장하는 FILESTREAM **varbinary(max)** 개체가 될 수 있습니다. 데이터베이스 저장소를 사용해야 할지 또는 파일 시스템 저장소를 사용해야 할지 여부는 데이터의 크기와 사용으로 결정됩니다. 다음 조건에 해당될 경우 FILESTREAM을 사용해야 합니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 BLOB은 테이블에 데이터를 저장하는 표준 **varbinary(max)** 데이터 또는 파일 시스템에 데이터를 저장하는 FILESTREAM **varbinary(max)** 개체가 될 수 있습니다. 데이터베이스 스토리지를 사용해야 할지 또는 파일 시스템 스토리지를 사용해야 할지 여부는 데이터의 크기와 사용으로 결정됩니다. 다음 조건에 해당될 경우 FILESTREAM을 사용해야 합니다.  
 
 - 저장되는 개체가 평균적으로 1MB를 초과할 경우  
 - 신속한 읽기 액세스가 중요할 경우
@@ -44,15 +44,15 @@ FILESTREAM은 파일 데이터를 캐시하기 위해 NT 시스템 캐시를 사
 
 크기가 작은 개체의 경우 데이터베이스에 **varbinary(max)** BLOB을 저장하면 스트리밍 성능이 더 좋아집니다.  
 
-## <a name="filestream-storage"></a>FILESTREAM 저장소
+## <a name="filestream-storage"></a>FILESTREAM 스토리지
 
-FILESTREAM 저장소는 데이터가 파일 시스템에 BLOB으로 저장된 **varbinary(max)** 열로 구현됩니다. BLOB의 크기는 파일 시스템의 볼륨 크기로만 제한됩니다. 표준 **varbinary(max)** 제한은 2GB의 파일 크기로 파일 시스템에 저장된 BLOB에 적용되지 않습니다.  
+FILESTREAM 스토리지는 데이터가 파일 시스템에 BLOB으로 저장된 **varbinary(max)** 열로 구현됩니다. BLOB의 크기는 파일 시스템의 볼륨 크기로만 제한됩니다. 표준 **varbinary(max)** 제한은 2GB의 파일 크기로 파일 시스템에 저장된 BLOB에 적용되지 않습니다.  
   
 파일 시스템에 열의 데이터를 저장하도록 지정하려면 **varbinary(max)** 열에 FILESTREAM 특성을 지정합니다. 이렇게 하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 해당 열의 모든 데이터를 데이터베이스 파일이 아닌 파일 시스템에 저장하게 됩니다.  
   
-FILESTREAM 데이터는 FILESTREAM 파일 그룹에 저장되어야 합니다. FILESTREAM 파일 그룹은 파일 자체가 아닌 파일 시스템 디렉터리를 포함하는 특수한 파일 그룹입니다. 이러한 파일 시스템 디렉터리를 *데이터 컨테이너*라고 합니다. 데이터 컨테이너는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 저장소와 파일 시스템 저장소 사이의 인터페이스입니다. 
+FILESTREAM 데이터는 FILESTREAM 파일 그룹에 저장되어야 합니다. FILESTREAM 파일 그룹은 파일 자체가 아닌 파일 시스템 디렉터리를 포함하는 특수한 파일 그룹입니다. 이러한 파일 시스템 디렉터리를 *데이터 컨테이너*라고 합니다. 데이터 컨테이너는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 스토리지와 파일 시스템 스토리지 사이의 인터페이스입니다. 
 
-FILESTREAM 저장소를 사용할 때 다음 사항을 고려하십시오.  
+FILESTREAM 스토리지를 사용할 때 다음 사항을 고려하십시오.  
 
 - 테이블에 FILESTREAM 열이 있을 경우 각 행에는 Null이 아닌 고유한 행 ID가 있어야 합니다.  
 - FILESTREAM 파일 그룹에는 여러 개의 데이터 컨테이너를 추가할 수 있습니다.  

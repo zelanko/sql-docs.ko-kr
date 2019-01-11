@@ -259,7 +259,7 @@ ms.locfileid: "53361395"
  **Azure Blob 열거자**를 사용하면 SSIS 패키지에서 지정된 Blob 위치에 있는 Blob 파일을 열거할 수 있습니다. 열거된 Blob 파일의 이름을 변수에 저장하여 Foreach 루프 컨테이너 내의 작업에서 사용할 수 있습니다.  
   
  **Azure Storage 연결 관리자**  
- 기존 Azure 저장소 연결 관리자를 선택하거나 Azure 저장소 계정을 참조하는 연결 관리자 하나를 새로 만듭니다.  
+ 기존 Azure Storage 연결 관리자를 선택하거나 Azure Storage 계정을 참조하는 연결 관리자 하나를 새로 만듭니다.  
   
  관련 항목: [Azure Storage 연결 관리자](connection-manager/azure-storage-connection-manager.md)합니다.  
   

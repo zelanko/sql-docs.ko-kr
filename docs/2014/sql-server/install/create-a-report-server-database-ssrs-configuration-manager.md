@@ -23,7 +23,7 @@ ms.lasthandoff: 11/27/2018
 ms.locfileid: "52403322"
 ---
 # <a name="create-a-report-server-database--ssrs-configuration-manager"></a>보고서 서버 데이터베이스 만들기(SSRS 구성 관리자)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **기본 모드** 에서는 보고서 서버 메타데이터 및 개체를 저장하기 위해 두 개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스를 사용합니다. 한 데이터베이스는 주 저장소로 사용되고 다른 데이터베이스는 임시 데이터를 저장하는 데 사용됩니다. 데이터베이스는 함께 생성되며 이름별로 바인딩됩니다. 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 데이터베이스의 이름은 `reportserver` 및 `reportservertempdb`입니다. 이 두 데이터베이스는 "보고서 서버 데이터베이스" 또는 "보고서 서버 카탈로그"로 통칭됩니다.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **기본 모드** 에서는 보고서 서버 메타데이터 및 개체를 저장하기 위해 두 개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스를 사용합니다. 한 데이터베이스는 주 스토리지로 사용되고 다른 데이터베이스는 임시 데이터를 저장하는 데 사용됩니다. 데이터베이스는 함께 생성되며 이름별로 바인딩됩니다. 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 데이터베이스의 이름은 `reportserver` 및 `reportservertempdb`입니다. 이 두 데이터베이스는 "보고서 서버 데이터베이스" 또는 "보고서 서버 카탈로그"로 통칭됩니다.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **SharePoint 모드** 에는 데이터 경고 메타데이터에 사용되는 세 번째 데이터베이스를 포함합니다. 세 개의 데이터베이스가 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 대해 만들어지고 데이터베이스 이름에는 기본적으로 서비스 애플리케이션을 나타내는 GUID가 포함됩니다. 다음은 세 가지 SharePoint 모드 데이터베이스의 이름 예입니다.  
   

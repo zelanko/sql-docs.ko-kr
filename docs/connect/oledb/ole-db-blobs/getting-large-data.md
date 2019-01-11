@@ -28,7 +28,7 @@ ms.locfileid: "47773781"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  일반적으로 소비자는 SQL Server용 OLE DB 드라이버 저장소 개체를 만드는 코드를 **ISequentialStream** 인터페이스 포인터를 통해 참조되지 않는 데이터를 처리하는 다른 코드와 구분해야 합니다.  
+  일반적으로 소비자는 SQL Server용 OLE DB 드라이버 스토리지 개체를 만드는 코드를 **ISequentialStream** 인터페이스 포인터를 통해 참조되지 않는 데이터를 처리하는 다른 코드와 구분해야 합니다.  
   
  이 문서에서는 다음 함수와 함께 사용할 수 있는 기능에 대해 설명합니다.  
   

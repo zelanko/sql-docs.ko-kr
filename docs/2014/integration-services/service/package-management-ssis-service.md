@@ -36,7 +36,7 @@ ms.locfileid: "52761293"
   
 -   실행 중인 패키지 모니터링  
   
--   패키지 저장소 관리  
+-   패키지 스토리지 관리  
   
 -   패키지 가져오기 및 내보내기  
   
@@ -67,13 +67,13 @@ ms.locfileid: "52761293"
   
  **실행 중인 패키지** 폴더에서 패키지를 마우스 오른쪽 단추로 클릭한 다음 **중지**를 클릭하여 실행 중인 패키지를 중지할 수 있습니다.  
   
-## <a name="managing-package-storage"></a>패키지 저장소 관리  
+## <a name="managing-package-storage"></a>패키지 스토리지 관리  
  패키지 구성을 위해 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스의 구성 파일에 나열되는 루트 패키지 저장 폴더에 사용자 지정 폴더를 추가할 수 있습니다. 기본적으로 루트 폴더는 **파일 시스템** 및 **MSDB** 폴더입니다. 예를 들어 데이터 정리에 사용된 모든 패키지를 포함하는 **데이터 정리** 폴더를 **파일 시스템** 폴더에 추가할 수 있습니다. 또한 필요에 따라 사용자 지정 폴더 내에 또 다른 사용자 지정 폴더를 추가한 중첩된 폴더 계층을 만들 수도 있습니다. 사용자 지정 폴더는 삭제하거나 이름을 바꿀 수 있지만 구성 파일이 지정하는 루트 폴더의 이름은 바꾸거나 삭제할 수 없습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 가 나열하는 루트 폴더를 업데이트하려면 구성 파일을 업데이트해야 합니다.  
   
  자세한 내용은 [Integration Services 서비스 구성&#40;SSIS 서비스&#41;](../configuring-the-integration-services-service-ssis-service.md)버전과의 호환성을 위한 서비스를 지원합니다.  
   
 ## <a name="importing-and-exporting-packages"></a>패키지 가져오기 및 내보내기  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 msdb 데이터베이스 또는 파일 시스템에 저장할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 가 제공하는 가져오기 또는 내보내기 기능을 사용하여 패키지를 한 유형의 저장소에서 다른 유형의 저장소로 복사할 수 있습니다. 또한 같은 유형의 저장소에서 패키지를 가져오기 하여 다른 이름을 지정하면 패키지의 복사본을 만들 수 있습니다. 패키지 가져오기 및 내보내기는 **dtutil** 명령 프롬프트 유틸리티(dtutil.exe)로도 수행할 수 있습니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 msdb 데이터베이스 또는 파일 시스템에 저장할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 가 제공하는 가져오기 또는 내보내기 기능을 사용하여 패키지를 한 유형의 저장소에서 다른 유형의 저장소로 복사할 수 있습니다. 또한 같은 유형의 스토리지에서 패키지를 가져오기 하여 다른 이름을 지정하면 패키지의 복사본을 만들 수 있습니다. 패키지 가져오기 및 내보내기는 **dtutil** 명령 프롬프트 유틸리티(dtutil.exe)로도 수행할 수 있습니다.  
   
  자세한 내용은 [dtutil Utility](../dtutil-utility.md)를 참조하세요.  
   

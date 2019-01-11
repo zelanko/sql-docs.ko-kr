@@ -96,10 +96,10 @@ items:
     href: restore-a-database-and-bind-it-to-a-resource-pool.md
   - name: 메모리 내 OLTP 가비지 수집
     href: in-memory-oltp-garbage-collection.md
-- name: 메모리 액세스에 최적화된 개체의 저장소 만들기 및 관리
+- name: 메모리 액세스에 최적화된 개체의 스토리지 만들기 및 관리
   href: creating-and-managing-storage-for-memory-optimized-objects.md
   items:
-  - name: 메모리 액세스에 최적화된 테이블 저장소 구성
+  - name: 메모리 액세스에 최적화된 테이블 스토리지 구성
     href: configuring-storage-for-memory-optimized-tables.md
   - name: 메모리 액세스에 최적화된 파일 그룹
     href: the-memory-optimized-filegroup.md
@@ -109,7 +109,7 @@ items:
     href: checkpoint-operation-for-memory-optimized-tables.md
   - name: 메모리 액세스에 최적화된 개체에 대한 내구성 정의
     href: defining-durability-for-memory-optimized-objects.md
-  - name: 디스크 기반 테이블 저장소와 메모리 액세스에 최적화된 테이블 저장소 비교
+  - name: 디스크 기반 테이블 스토리지와 메모리 액세스에 최적화된 테이블 스토리지 비교
     href: comparing-disk-based-table-storage-to-memory-optimized-table-storage.md
   - name: 데이터 및 델타 파일 쌍에 대한 병합 모니터링 및 문제 해결
     href: ../../database-engine/monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs.md

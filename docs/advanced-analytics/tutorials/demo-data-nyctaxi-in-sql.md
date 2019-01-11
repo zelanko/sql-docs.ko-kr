@@ -57,7 +57,7 @@ ms.locfileid: "53645034"
 
 |**개체 이름**|**개체 유형**|**설명**|
 |----------|------------------------|---------------|
-|**NYCTaxi_Sample** | database | 데이터베이스와 다음 두 개의 테이블을 만듭니다.<br /><br />dbo.nyctaxi_sample 테이블: 주 NYC Taxi 데이터 집합을 포함합니다. 저장소 및 쿼리 성능 향상을 위해 클러스터형 columnstore 인덱스가 테이블에 추가됩니다. NYC Taxi 데이터 집합의 1% 샘플이이 테이블에 삽입 됩니다.<br /><br />dbo.nyc_taxi_models 테이블: 고급 분석 학습 된 모델을 유지 하는 데 사용 합니다.|
+|**NYCTaxi_Sample** | database | 데이터베이스와 다음 두 개의 테이블을 만듭니다.<br /><br />dbo.nyctaxi_sample 테이블: 주 NYC Taxi 데이터 집합을 포함합니다. 스토리지 및 쿼리 성능 향상을 위해 클러스터형 columnstore 인덱스가 테이블에 추가됩니다. NYC Taxi 데이터 집합의 1% 샘플이이 테이블에 삽입 됩니다.<br /><br />dbo.nyc_taxi_models 테이블: 고급 분석 학습 된 모델을 유지 하는 데 사용 합니다.|
 |**fnCalculateDistance** |스칼라 반환 함수(scalar-valued function) | 승차 및 하 차 위치 사이의 직접 거리를 계산합니다. 이 함수는 [데이터 기능 만들기](sqldev-create-data-features-using-t-sql.md), [학습 모델을 저장 하 고](sqldev-train-and-save-a-model-using-t-sql.md) 하 고 [R 모델 운영 화](sqldev-operationalize-the-model.md)합니다.|
 |**fnEngineerFeatures** |테이블 반환 함수(table-valued function) | 모델 학습을 위한 새로운 데이터 기능을 만듭니다. 이 함수는 [데이터 기능 만들기](sqldev-create-data-features-using-t-sql.md) 하 고 [R 모델 운영 화](sqldev-operationalize-the-model.md)합니다.|
 

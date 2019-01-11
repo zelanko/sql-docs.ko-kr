@@ -60,7 +60,7 @@ ms.locfileid: "52513768"
   
 ### <a name="complete-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-unattended"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 완료(무인)  
   
-1. 사용 가능한 저장소 그룹을 소유한 노드에서 **/ACTION=CompleteFailoverCluster** 를 사용하여 setup.exe를 실행합니다.  
+1. 사용 가능한 스토리지 그룹을 소유한 노드에서 **/ACTION=CompleteFailoverCluster** 를 사용하여 setup.exe를 실행합니다.  
   
     ```  
     setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName=<InstanceName>  /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'>:" /FAILOVERCLUSTERNETWORKNAME="<Insert FOI Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /INSTALLSQLDATADIR="<Drive>:\<Path>\MSSQLSERVER" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSYSADMINACCOUNTS="<DomainName\UserName>"  

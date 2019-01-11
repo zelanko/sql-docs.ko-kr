@@ -49,7 +49,7 @@ ms.locfileid: "52640744"
 |표준 연결이 불가능할 때 프로덕션 데이터베이스 관리자가 인스턴스에 대한 진단 연결을 설정하는 방법에 대해 설명합니다.|[데이터베이스 관리자를 위한 진단 연결](diagnostic-connection-for-database-administrators.md)|  
 |사용되지 않는 원격 서버 기능을 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 한 인스턴스에서 다른 인스턴스로 액세스하는 방법에 대해 설명합니다. 이 기능에 대한 기본 메커니즘은 연결된 서버입니다.|[원격 서버](remote-servers.md)|  
 |메시징 및 큐 애플리케이션에 대한 Service Broker의 기능에 대해 설명하고 Service Broker 설명서에 대한 포인터를 제공합니다.|[Service Broker](sql-server-service-broker.md)|  
-|버퍼 풀 확장을 사용하여 I/O 처리량을 크게 향상하기 위해 비휘발성 임의 액세스 저장소(솔리드 스테이트 드라이브)를 데이터베이스 엔진 버퍼 풀에 빈틈없이 통합하는 방법을 설명합니다.|[버퍼 풀 확장 파일](buffer-pool-extension.md)|  
+|버퍼 풀 확장을 사용하여 I/O 처리량을 크게 향상하기 위해 비휘발성 임의 액세스 스토리지(솔리드 스테이트 드라이브)를 데이터베이스 엔진 버퍼 풀에 빈틈없이 통합하는 방법을 설명합니다.|[버퍼 풀 확장 파일](buffer-pool-extension.md)|  
   
 ## <a name="see-also"></a>관련 항목  
  [sqlservr 응용 프로그램](../../tools/sqlservr-application.md)   

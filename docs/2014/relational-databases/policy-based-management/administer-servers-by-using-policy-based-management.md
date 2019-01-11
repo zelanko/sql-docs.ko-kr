@@ -121,7 +121,7 @@ ms.locfileid: "53377485"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|정책 기반 관리 정책을 저장하는 방법에 대해 설명합니다.|정책 기반 관리 저장소|  
+|정책 기반 관리 정책을 저장하는 방법에 대해 설명합니다.|정책 기반 관리 스토리지|  
 |정책 관리자에게 정책 실패를 알리도록 경고를 구성하는 방법에 대해 설명합니다.|[정책 관리자에서 정책 실패를 알리도록 경고 구성](configure-alerts-to-notify-policy-administrators-of-policy-failures.md)|  
 |정책 기반 관리 조건 만들기, 보기, 수정 및 삭제 방법에 대해 설명합니다.|[새로운 정책 기반 관리 조건 만들기](create-a-new-policy-based-management-condition.md)<br /><br /> [정책 기반 관리 조건 삭제](delete-a-policy-based-management-condition.md)<br /><br /> [정책 기반 관리 조건의 속성 보기 또는 수정](view-or-modify-the-properties-of-a-policy-based-management-condition.md)|  
 |정책 기반 관리 정책 만들기, 보기, 수정 및 삭제 방법에 대해 설명합니다.|[정책 기반 관리 정책 만들기](create-a-policy-based-management-policy.md)<br /><br /> [정책 기반 관리 정책 삭제](delete-a-policy-based-management-policy.md)<br /><br /> [정책 기반 관리 정책의 속성 보기 또는 수정](view-or-modify-the-properties-of-a-policy-based-management-policy.md)|  

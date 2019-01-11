@@ -79,7 +79,7 @@ ms.locfileid: "53355790"
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치하는 동안 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네트워크 리소스 이름에 대한 컴퓨터 개체(Active Directory 컴퓨터 계정)가 생성됩니다. [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 클러스터에서 클러스터 이름 계정(클러스터 자체의 컴퓨터 계정)에 컴퓨터 개체를 생성할 수 있는 권한이 있어야 합니다. 자세한 내용은 [장애 조치 클러스터 단계별 가이드: Active Directory에서 계정 구성](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx)을 참조하십시오.  
   
-    -   저장소 옵션으로 SMB 파일 공유를 사용 중인 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 계정에는 파일 서버에 대한 SeSecurityPrivilege가 있어야 합니다. 이렇게 하려면 파일 서버의 로컬 보안 정책 콘솔을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 계정을 **감사 및 보안 로그 관리** 권한에 추가합니다.  
+    -   스토리지 옵션으로 SMB 파일 공유를 사용 중인 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 계정에는 파일 서버에 대한 SeSecurityPrivilege가 있어야 합니다. 이렇게 하려면 파일 서버의 로컬 보안 정책 콘솔을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 계정을 **감사 및 보안 로그 관리** 권한에 추가합니다.  
   
  
   
@@ -93,12 +93,12 @@ ms.locfileid: "53355790"
   
 -   SAN 구성은 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 및 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Advanced Server 및 Datacenter Server 버전에서도 지원됩니다. Windows 카탈로그 및 하드웨어 호환성 목록 범주인 "클러스터/다중 클러스터 디바이스"에는 다중 WSFC 클러스터가 연결된 SAN 저장 디바이스로 지원되며 테스트를 마친 SAN 사용 가능 저장 디바이스 집합이 나열되어 있습니다. 인증된 구성 요소를 찾은 후 클러스터 유효성 검사를 실행하십시오.  
   
--   데이터 파일 설치에는 SMB 파일 공유도 지원됩니다. 자세한 내용은 [Storage Types for Data Files](../../install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)을 참조하세요.  
+-   데이터 파일 설치에는 SMB 파일 공유도 지원됩니다. 자세한 내용은 [Storage Types for Data Files](../../install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)를 참조하세요.  
   
     > [!WARNING]  
-    >  SMB 파일 공유 저장소로 Windows 파일 서버를 사용 중인 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 계정에는 파일 서버에 대한 SeSecurityPrivilege가 있어야 합니다. 이렇게 하려면 파일 서버의 로컬 보안 정책 콘솔을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 계정을 **감사 및 보안 로그 관리** 권한에 추가합니다.  
+    >  SMB 파일 공유 스토리지로 Windows 파일 서버를 사용 중인 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 계정에는 파일 서버에 대한 SeSecurityPrivilege가 있어야 합니다. 이렇게 하려면 파일 서버의 로컬 보안 정책 콘솔을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 계정을 **감사 및 보안 로그 관리** 권한에 추가합니다.  
     >   
-    >  Windows 파일 서버 외의 SMB 파일 공유 저장소를 사용 중인 경우 저장소 공급업체에 파일 서버 쪽의 해당 설정에 대해 문의하십시오.  
+    >  Windows 파일 서버 외의 SMB 파일 공유 스토리지를 사용 중인 경우 스토리지 공급업체에 파일 서버 쪽의 해당 설정에 대해 문의하십시오.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 탑재 지점을 지원합니다.  
   
@@ -113,11 +113,11 @@ ms.locfileid: "53355790"
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 클러스터형 설치는 사용 가능한 드라이브 문자의 수로 제한됩니다. 운영 체제에서 하나의 드라이브 문자만 사용하고 모든 다른 드라이브 문자를 일반 클러스터 드라이브 또는 클러스터 드라이브 호스팅 탑재 지점에 사용할 수 있다고 가정할 경우 장애 조치(Failover) 클러스터당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 최대 25개로 제한됩니다.  
   
         > [!TIP]  
-        >  25개의 인스턴스 제한은 SMB 파일 공유 옵션을 사용하여 확장할 수 있습니다. 저장소 옵션으로 SMB 파일 공유를 사용할 경우 최대 50개까지 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스를 설치할 수 있습니다.  
+        >  25개의 인스턴스 제한은 SMB 파일 공유 옵션을 사용하여 확장할 수 있습니다. 스토리지 옵션으로 SMB 파일 공유를 사용할 경우 최대 50개까지 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스를 설치할 수 있습니다.  
   
     -   추가 드라이브를 마운트한 후에는 드라이브를 포맷할 수 없습니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 설치에서는 tempdb 파일 설치에 대해서만 로컬 디스크를 지원합니다. tempdb 데이터 및 로그 파일에 대해 지정된 경로가 모든 클러스터 노드에서 올바른지 확인하십시오. 장애 조치(failover) 중에 장애 조치 대상 노드에서 tempdb 디렉터리를 사용할 수 없으면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스가 온라인이 될 수 없습니다. 자세한 내용은 [데이터 파일 저장소 유형](../../install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) 및 [데이터베이스 엔진 구성 - 데이터 디렉터리](../../install/database-engine-configuration-data-directories.md)를 참조하세요.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 설치에서는 tempdb 파일 설치에 대해서만 로컬 디스크를 지원합니다. tempdb 데이터 및 로그 파일에 대해 지정된 경로가 모든 클러스터 노드에서 올바른지 확인하십시오. 장애 조치(failover) 중에 장애 조치 대상 노드에서 tempdb 디렉터리를 사용할 수 없으면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스가 온라인이 될 수 없습니다. 자세한 내용은 [Storage Types for Data Files](../../install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) 및 [Database Engine Configuration - Data Directories](../../install/database-engine-configuration-data-directories.md)를 참조하세요.  
   
 -   iSCSI 기술 구성 요소에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 배포하는 경우 각별히 주의해야 합니다. 자세한 내용은 [iSCSI 기술 구성 요소의 SQL Server에 대한 지원](https://go.microsoft.com/fwlink/?LinkId=116960)을 참조하십시오.  
   

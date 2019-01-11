@@ -28,7 +28,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48145513"
 ---
-# <a name="assigning-storage"></a>저장소 할당
+# <a name="assigning-storage"></a>스토리지 할당
   응용 프로그램에서 SQL 문 실행 전이나 후에 결과의 저장소를 할당할 수 있습니다. 응용 프로그램에서 먼저 SQL 문을 준비하거나 실행하는 경우 결과의 저장소를 할당하기 전에 결과 집합을 조회할 수 있습니다. 예를 들어 결과 집합을 알 수 없는 경우 응용 프로그램에서는 결과의 저장소를 할당하기 전에 열의 수를 검색해야 합니다.  
   
  데이터의 열에 대 한 저장소에 연결 하려면 응용 프로그램 호출 [SQLBindCol](../native-client-odbc-api/sqlbindcol.md)전달 합니다.  

@@ -21,7 +21,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48077474"
 ---
 # <a name="partitions-cube-designer-analysis-services---multidimensional-data"></a>파티션(큐브 디자이너)(Analysis Services - 다차원 데이터)
-  큐브 디자이너의 **파티션** 탭을 사용하여 큐브의 각 측정값 그룹에 대한 저장소, 자동 관리 캐싱 및 쓰기 저장(writeback) 설정을 포함하여 파티션을 생성 및 수정할 수 있습니다.  
+  큐브 디자이너의 **파티션** 탭을 사용하여 큐브의 각 측정값 그룹에 대한 스토리지, 자동 관리 캐싱 및 쓰기 저장(writeback) 설정을 포함하여 파티션을 생성 및 수정할 수 있습니다.  
   
  **파티션** 탭에는 다음 창이 있습니다.  
   

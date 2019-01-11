@@ -21,7 +21,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 82452c5e0d4ddff21870ff341673da6d11b18f40
 ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/03/2018
 ms.locfileid: "52772025"
@@ -51,7 +51,7 @@ ms.locfileid: "52772025"
   
 -   적절한 게시 보존 설정을 사용합니다.  
   
-     구독이 동기화되기 전까지의 최대 시간을 나타내는 게시 보존 기간은 추적 메타데이터가 저장되는 기간을 결정합니다. 값이 높으면 저장소 및 처리 성능에 영향을 줄 수 있습니다. 게시 보존 기간을 설정하는 방법은 [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)를 참조하십시오.  
+     구독이 동기화되기 전까지의 최대 시간을 나타내는 게시 보존 기간은 추적 메타데이터가 저장되는 기간을 결정합니다. 값이 높으면 스토리지 및 처리 성능에 영향을 줄 수 있습니다. 게시 보존 기간을 설정하는 방법은 [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)를 참조하십시오.  
   
 -   게시자에서만 변경되는 테이블의 다운로드 전용 아티클을 사용합니다. 자세한 내용은 [다운로드 전용 아티클로 병합 복제 성능 최적화](../merge/optimize-merge-replication-performance-with-download-only-articles.md)를 참조하세요.  
   

@@ -39,7 +39,7 @@ ms.locfileid: "53205672"
   
  XML 스키마 컬렉션은 데이터베이스에 있는 테이블과 같은 메타데이터 엔터티입니다. 스키마 컬렉션은 생성, 수정 및 삭제할 수 있습니다. [CREATE XML SCHEMA COLLECTION(Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 문에 지정된 스키마는 새로 만든 XML 스키마 컬렉션 개체에 자동으로 가져와집니다. [ALTER XML SCHEMA COLLECTION(Transact-SQL)](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md) 문을 사용하여 추가 스키마 또는 스키마 구성 요소를 데이터베이스에 있는 기존 컬렉션 개체로 가져올 수 있습니다.  
   
- [형식화된 XML과 형식화되지 않은 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md) 항목에 설명된 것과 같이 스키마가 연결된 열 또는 변수에 저장된 XML은 스키마가 인스턴스 데이터에 대해 필요한 데이터 형식 정보를 제공하기 때문에 **형식화된** XML이라고 부릅니다. SQL Server는 이 유형 정보를 사용하여 데이터 저장소를 최적화합니다.  
+ [형식화된 XML과 형식화되지 않은 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md) 항목에 설명된 것과 같이 스키마가 연결된 열 또는 변수에 저장된 XML은 스키마가 인스턴스 데이터에 대해 필요한 데이터 형식 정보를 제공하기 때문에 **형식화된** XML이라고 부릅니다. SQL Server는 이 유형 정보를 사용하여 데이터 스토리지를 최적화합니다.  
   
  쿼리 프로세싱 엔진은 또한 유형 검사 및 쿼리와 데이터 수정 최적화를 위해 스키마를 사용합니다.  
   

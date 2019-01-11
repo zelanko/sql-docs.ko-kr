@@ -30,7 +30,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47696782"
 ---
-# <a name="assigning-storage"></a>저장소 할당
+# <a name="assigning-storage"></a>스토리지 할당
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 

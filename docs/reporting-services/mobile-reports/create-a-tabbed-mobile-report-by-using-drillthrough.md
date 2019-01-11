@@ -33,7 +33,7 @@ ms.locfileid: "48906179"
     * Sales
     * 운송
     * 연료
-    * 저장소
+    * 스토리지
     * 기타 비용
 
    ![01-판매-모바일-보고서-게시자](../../reporting-services/mobile-reports/media/01-sales-mobile-report-publisher.png)
@@ -50,7 +50,7 @@ ms.locfileid: "48906179"
 
     * 운송
     * 연료
-    * 저장소
+    * 스토리지
     * 기타 비용
 
 3. [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서 서버에 저장합니다.
@@ -83,7 +83,7 @@ ms.locfileid: "48906179"
 
 2. 계속 운송 보고서에서 운송 계기의 **강조**를 보고서의 나머지 부분과 대비되도록 **켜기**로 설정합니다.
 
-3. 연료, 저장소 및 기타 비용 보고서에 대해 이러한 단계를 반복합니다. 
+3. 연료, 스토리지 및 기타 비용 보고서에 대해 이러한 단계를 반복합니다. 
 
 ## <a name="view-the-report-in-the-web-portal"></a>웹 포털에서 보고서 보기
 

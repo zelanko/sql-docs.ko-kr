@@ -25,12 +25,12 @@ ms.locfileid: "53072210"
  이 문서 작성 했으며 DirectQuery 액세스를 설정 하 고 연결 문자열 업데이트에 필요 하 고 호환성 수준 1200 이상에서 메모리 내 테이블 형식 모델을 유효성 검사를 가정 합니다. 낮은 호환성 수준에서 시작하는 경우 먼저 수동으로 업그레이드해야 합니다. 단계는 [Analysis Services 업그레이드](../../database-engine/install-windows/upgrade-analysis-services.md) 를 참조하세요.  
   
 > [!IMPORTANT]  
->  데이터 저장소 모드를 전환하기 위해 Management Studio 대신 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 를 사용하는 것이 좋습니다. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 를 사용하여 모델을 변경한 다음 서버 배포로 후속 작업을 할 경우 해당 모델과 데이터베이스는 동기화를 유지합니다. 또한 모델의 저장소 모드를 변경하면 발생하는 유효성 검사 오류를 검토할 수 있습니다. 이 문서의 설명대로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용할 경우 유효성 검사 오류는 보고되지 않습니다.  
+>  데이터 스토리지 모드를 전환하기 위해 Management Studio 대신 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]를 사용하는 것이 좋습니다. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 를 사용하여 모델을 변경한 다음 서버 배포로 후속 작업을 할 경우 해당 모델과 데이터베이스는 동기화를 유지합니다. 또한 모델의 스토리지 모드를 변경하면 발생하는 유효성 검사 오류를 검토할 수 있습니다. 이 문서의 설명대로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용할 경우 유효성 검사 오류는 보고되지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  테이블 형식 모델에서 DirectQuery 모드를 사용하도록 설정하는 작업은 다단계 프로세스입니다.  
   
--   모델에 DirectQuery 모드에서 유효성 검사 오류를 일으킬 수 있는 기능이 없는지 확인한 다음, 모델에 대한 데이터 저장소 모드를 메모리 내에서 DirectQuery로 변경합니다.  
+-   모델에 DirectQuery 모드에서 유효성 검사 오류를 일으킬 수 있는 기능이 없는지 확인한 다음, 모델에 대한 데이터 스토리지 모드를 메모리 내에서 DirectQuery로 변경합니다.  
   
      기능 제한 사항 목록은 된다 [DirectQuery 모드](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)합니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "53072210"
   
      값은 **SQL Server 2016(1200)** 또는 **SQL Server 2012 SP1 이상(1103)** 과 같은 이전 수준입니다. 다음 단계에서는 호환성 수준에 적용되는 지침을 따릅니다.  
   
- 테이블 형식 모델을 DirectQuery 모드로 변경하면 새 데이터 저장소 모드가 즉시 적용됩니다.  
+ 테이블 형식 모델을 DirectQuery 모드로 변경하면 새 데이터 스토리지 모드가 즉시 적용됩니다.  
   
 ## <a name="step-2a-switch-a-tabular-1200-database-to-directquery-mode"></a>2a 단계: 테이블 형식 1200 데이터베이스를 DirectQuery 모드로 전환  
   

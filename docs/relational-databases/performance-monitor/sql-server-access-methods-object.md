@@ -71,7 +71,7 @@ ms.locfileid: "53380644"
 |**InSysXact waits/sec**|InSysXact 비트가 설정되어 있어 판독기가 페이지를 기다려야 하는 횟수입니다.|  
 |**LobHandle Create Count**|생성된 임시 LOB 수입니다.|  
 |**LobHandle Destroy Count**|소멸된 임시 LOB 수입니다.|  
-|**LobSS Provider Create Count**|생성된 LobSSP(LOB 저장소 서비스 공급자) 수입니다. LobSSP당 하나의 작업 테이블이 생성되었습니다.|  
+|**LobSS Provider Create Count**|생성된 LobSSP(LOB 스토리지 서비스 공급자) 수입니다. LobSSP당 하나의 작업 테이블이 생성되었습니다.|  
 |**LobSS Provider Destroy Count**|소멸된 LobSSP 수입니다.|  
 |**LobSS Provider Truncation Count**|잘린 LobSSP 수입니다.|  
 |**Mixed Page Allocations/sec**|혼합된 익스텐트에서 초당 할당된 페이지 수입니다. 할당 단위에 할당된 IAM 페이지와 첫 8페이지를 저장하기 위해 사용됩니다.|  

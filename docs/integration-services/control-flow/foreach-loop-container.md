@@ -61,7 +61,7 @@ ms.locfileid: "52505935"
   
 -   지정된 HDFS 위치에 있는 HDFS 파일을 열거하는 Foreach HDFS 파일 열거자입니다.  
   
--   Azure 저장소의 blob 컨테이너에 blob를 열거하는 Foreach Azure Blob 열거자입니다.  
+-   Azure Storage의 blob 컨테이너에 blob를 열거하는 Foreach Azure Blob 열거자입니다.  
 
 -   Azure Data Lake Store의 디렉터리에 파일을 열거하는 Foreach ADLS 파일 열거자입니다.
   
@@ -456,9 +456,9 @@ ms.locfileid: "52505935"
  **Azure Blob 열거자** 는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에 대해 제공되는 Azure용 SSIS(SQL Server Integration Services) 기능 팩의 구성 요소입니다. [여기](https://go.microsoft.com/fwlink/?LinkID=626967)서 기능 팩을 다운로드하세요.  
   
  **Azure Storage 연결 관리자**  
- 기존 Azure 저장소 연결 관리자를 선택하거나 Azure 저장소 계정을 참조하는 연결 관리자 하나를 새로 만듭니다.  
+ 기존 Azure Storage 연결 관리자를 선택하거나 Azure Storage 계정을 참조하는 연결 관리자 하나를 새로 만듭니다.  
   
- 관련 항목: [Azure Storage 연결 관리자](../../integration-services/connection-manager/azure-storage-connection-manager.md)  
+ 관련 항목: [Azure Storage Connection Manager](../../integration-services/connection-manager/azure-storage-connection-manager.md).  
   
  **Blob 컨테이너 이름**  
  열거할 Blob 파일을 포함하는 Blob 컨테이너의 이름을 지정합니다.

@@ -18,7 +18,7 @@ ms.locfileid: "53072490"
 ---
 # <a name="processing-a-multidimensional-model-analysis-services"></a>다차원 모델 처리(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  처리는 Analysis Services가 관계형 데이터 원본의 데이터를 다차원 모델에 로드하는 단계 또는 일련의 단계입니다. MOLAP 저장소를 사용하는 개체의 경우 데이터가 데이터베이스 파일 폴더의 디스크에 지정됩니다. ROLAP 저장소의 경우 처리는 개체에 대한 MDX 쿼리의 응답으로 요청 시 발생합니다. ROLAP 저장소를 사용하는 개체의 경우 처리는 쿼리 결과를 반환하기 전 캐시를 업데이트하는 과정을 의미합니다.  
+  처리는 Analysis Services가 관계형 데이터 원본의 데이터를 다차원 모델에 로드하는 단계 또는 일련의 단계입니다. MOLAP 스토리지를 사용하는 개체의 경우 데이터가 데이터베이스 파일 폴더의 디스크에 지정됩니다. ROLAP 스토리지의 경우 처리는 개체에 대한 MDX 쿼리의 응답으로 요청 시 발생합니다. ROLAP 스토리지를 사용하는 개체의 경우 처리는 쿼리 결과를 반환하기 전 캐시를 업데이트하는 과정을 의미합니다.  
   
  기본적으로 처리는 서버에 솔루션을 배포할 때 수행됩니다. 또한 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]와 같은 도구를 사용하여 솔루션의 전체 또는 일부를 임시로 처리하거나 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 및 SQL Server 에이전트를 사용하여 예약을 통해 처리할 수 있습니다. 차원을 제거하거나 해당 호환성 수준을 변경하는 등 모델을 구조적으로 변경할 경우 모델의 물리적 및 논리적 특성을 동기화하도록 다시 처리해야 합니다.  
   

@@ -29,7 +29,7 @@ ms.locfileid: "47618481"
 # <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 현재 사용자 데이터베이스에 대한 로그인 및 방화벽 규칙 정보가 포함된 데이터베이스 인증 캐시를 비웁니다. master 데이터베이스는 로그인 및 방화벽 규칙 정보에 대한 물리적 저장소를 포함하기 때문에 이 명령문은 논리 master 데이터베이스에 적용되지 않습니다. 명령문을 실행하는 사용자 또는 현재 연결된 다른 사용자는 연결된 상태로 유지됩니다. (DBCC FLUSHAUTHCACHE는 현재 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]에 지원되지 않습니다.)
+[!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 현재 사용자 데이터베이스에 대한 로그인 및 방화벽 규칙 정보가 포함된 데이터베이스 인증 캐시를 비웁니다. master 데이터베이스는 로그인 및 방화벽 규칙 정보에 대한 물리적 스토리지를 포함하기 때문에 이 명령문은 논리 master 데이터베이스에 적용되지 않습니다. 명령문을 실행하는 사용자 또는 현재 연결된 다른 사용자는 연결된 상태로 유지됩니다. (DBCC FLUSHAUTHCACHE는 현재 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]에 지원되지 않습니다.)
  
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   

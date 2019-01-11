@@ -20,7 +20,7 @@ ms.lasthandoff: 11/30/2018
 ms.locfileid: "52641314"
 ---
 # <a name="configure-the-fill-factor-server-configuration-option"></a>fill factor 서버 구성 옵션 구성
-  이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 채우기 비율 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. 채우기 비율은 미세 조정 인덱스 데이터 저장소와 성능을 위해 제공됩니다. 인덱스를 만들거나 다시 작성할 때 채우기 비율에 따라 각 리프 수준 페이지에서 데이터로 채울 공간의 비율이 결정되므로 나머지 부분을 이후 인덱스 증가에 대비한 여유 공간으로 확보할 수 있습니다. 자세한 내용은 [인덱스의 채우기 비율 지정](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)을 참조하세요.  
+  이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 채우기 비율 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. 채우기 비율은 미세 조정 인덱스 데이터 스토리지와 성능을 위해 제공됩니다. 인덱스를 만들거나 다시 작성할 때 채우기 비율에 따라 각 리프 수준 페이지에서 데이터로 채울 공간의 비율이 결정되므로 나머지 부분을 이후 인덱스 증가에 대비한 여유 공간으로 확보할 수 있습니다. 자세한 내용은 [인덱스의 채우기 비율 지정](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)을 참조하세요.  
   
  **항목 내용**  
   

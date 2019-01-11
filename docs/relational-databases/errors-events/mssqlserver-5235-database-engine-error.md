@@ -42,7 +42,7 @@ ms.locfileid: "47840521"
 |---------------|--------------|  
 |상태 1|메타데이터가 손상되어 문이 종료되었습니다. 이 메시지는 하나 이상의 오류 8930과 함께 표시됩니다.|  
 |상태 2|내부 검사에 실패하여 문이 종료되었습니다. 이 메시지는 하나 이상의 오류 8967과 함께 표시됩니다.|  
-|상태 3|핵심 저장소 엔진 시스템 테이블에 대한 기본 시스템 테이블 검사가 실패했습니다. 이 메시지는 하나 이상의 오류 [7984](../../relational-databases/errors-events/mssqlserver-7984-database-engine-error.md), 7985, [7986](~/relational-databases/errors-events/mssqlserver-7986-database-engine-error.md), [7987](~/relational-databases/errors-events/mssqlserver-7987-database-engine-error.md) 또는 [7988](~/relational-databases/errors-events/mssqlserver-7988-database-engine-error.md)과 함께 표시됩니다.|  
+|상태 3|핵심 스토리지 엔진 시스템 테이블에 대한 기본 시스템 테이블 검사가 실패했습니다. 이 메시지는 하나 이상의 오류 [7984](../../relational-databases/errors-events/mssqlserver-7984-database-engine-error.md), 7985, [7986](~/relational-databases/errors-events/mssqlserver-7986-database-engine-error.md), [7987](~/relational-databases/errors-events/mssqlserver-7987-database-engine-error.md) 또는 [7988](~/relational-databases/errors-events/mssqlserver-7988-database-engine-error.md)과 함께 표시됩니다.|  
 |상태 4|트랜잭션 로그를 다시 작성한 후 데이터베이스를 시작할 수 없어 DBCC 응급 모드 복구가 실패했습니다. 이 메시지는 오류 7909와 함께 표시됩니다.|  
 |상태 5|명령을 실행하는 동안 어설션 오류나 액세스 위반이 발생했습니다.|  
 |상태 6|알 수 없는 오류가 발생하여 DBCC 명령이 예기치 않게 종료되었습니다.|  

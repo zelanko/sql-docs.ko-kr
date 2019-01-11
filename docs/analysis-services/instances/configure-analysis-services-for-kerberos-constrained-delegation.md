@@ -54,7 +54,7 @@ ms.locfileid: "52408480"
  Analysis  Services에 대한 위임 시나리오는 **DirectQuery** 모드에 대해 구성된 테이블 형식 모델로 제한됩니다. Analysis  Services에서 다른 서비스로 위임된 자격 증명을 전달할 수 있는 시나리오는 이 경우뿐입니다. 이전 섹션에서 언급한 SharePoint 시나리오처럼, 다른 모든 시나리오에서 Analysis Services는 위임 체인의 수신측에 있습니다. DirectQuery에 대 한 자세한 내용은 참조 하세요. [DirectQuery 모드](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)합니다.  
   
 > [!NOTE]  
->  ROLAP 저장소, 처리 작업 또는 원격 파티션에 대한 액세스는 제한된 위임이 필요하다고 잘못 생각하는 경우가 흔하지만 그렇지 않습니다. 이러한 작업은 모두 서비스 계정(처리 계정)에서 직접 실행됩니다. 이러한 작업에 대한 권한을 서비스 계정으로 직접 제공하는 경우(예: 서비스에서 데이터를 처리할 수 있도록 관계형 데이터베이스의 granting db_datareader 권한 부여), Analysis Services에서 이러한 작업에 대해 위임이 필요하지 않습니다. 서버 작업 및 사용 권한에 대한 자세한 내용은 [서비스 계정 구성&#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)을 참조하세요.  
+>  ROLAP 스토리지, 처리 작업 또는 원격 파티션에 대한 액세스는 제한된 위임이 필요하다고 잘못 생각하는 경우가 흔하지만 그렇지 않습니다. 이러한 작업은 모두 서비스 계정(처리 계정)에서 직접 실행됩니다. 이러한 작업에 대한 권한을 서비스 계정으로 직접 제공하는 경우(예: 서비스에서 데이터를 처리할 수 있도록 관계형 데이터베이스의 granting db_datareader 권한 부여), Analysis Services에서 이러한 작업에 대해 위임이 필요하지 않습니다. 서버 작업 및 사용 권한에 대한 자세한 내용은 [서비스 계정 구성&#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)을 참조하세요.  
   
  이 섹션에서는 트러스트된 위임에 대해 Analysis  Services를 설정하는 방법에 대해 설명합니다. 이 작업을 완료한 후 테이블 형식 솔루션에서 사용되는 DirectQuery 모드를 지원하여, Analysis Services는 위임된 자격 증명을 SQL Server로 전달할 수 있습니다.  
   

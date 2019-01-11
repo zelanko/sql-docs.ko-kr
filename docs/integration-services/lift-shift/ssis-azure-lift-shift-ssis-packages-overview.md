@@ -30,9 +30,9 @@ ms.locfileid: "47829680"
 ## <a name="architecture-of-ssis-on-azure"></a>Azure의 SSIS 아키텍처
 다음 표에서는 온-프레미스 SSIS와 Azure SSIS의 차이점을 보여 줍니다.
 
-가장 중요한 차이점은 저장소와 런타임의 분리입니다. Azure Data Factory는 Azure에서 SSIS 패키지의 런타임 엔진을 호스팅합니다. 런타임 엔진은 Azure-SSIS IR(Azure SSIS Integration Runtime)이라고 합니다. 자세한 내용은 [Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime)을 참조하세요.
+가장 중요한 차이점은 스토리지와 런타임의 분리입니다. Azure Data Factory는 Azure에서 SSIS 패키지의 런타임 엔진을 호스팅합니다. 런타임 엔진은 Azure-SSIS IR(Azure SSIS Integration Runtime)이라고 합니다. 자세한 내용은 [Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime)을 참조하세요.
 
-| 위치 | 저장소 | 런타임 | 확장성 |
+| 위치 | 스토리지 | 런타임 | 확장성 |
 |---|---|---|---|
 | 온-프레미스 | SQL Server | SQL Server에서 호스팅하는 SSIS 런타임 | SSIS Scale Out(SQL Server 2017 이상)<br/><br/>사용자 지정 솔루션(이전 버전의 SQL Server) |
 | Azure | SQL Database 또는 SQL Database Managed Instance | Azure Data Factory의 구성 요소인 Azure SSIS Integration Runtime | Azure-SSIS Integration Runtime의 옵션 크기 조정 |

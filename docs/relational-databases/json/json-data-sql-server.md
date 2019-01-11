@@ -230,7 +230,7 @@ Transact-SQL 언어의 모든 기능을 사용하여 JSON 파일로 저장된 �
 
 ### <a name="store-semi-structured-iot-data"></a>반구조화된 IoT 데이터 저장
 
-IoT 데이터의 실시간 분석이 필요할 때 들어오는 데이터를 저장소 위치에 준비하는 대신 데이터베이스에 직접 로드합니다.
+IoT 데이터의 실시간 분석이 필요할 때 들어오는 데이터를 스토리지 위치에 준비하는 대신 데이터베이스에 직접 로드합니다.
 
 ### <a name="simplify-rest-api-development"></a>REST API 개발 간소화
 

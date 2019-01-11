@@ -92,7 +92,7 @@ ms.locfileid: "52711594"
   
 > [!NOTE]
 > 로그 잘림을 수행해도 물리적 로그 파일의 크기는 줄어들지 않습니다. 실제 로그 파일의 크기를 줄이려면 로그 파일을 축소해야 합니다. 물리적 로그 파일의 크기를 축소하는 방법은 [트랜잭션 로그 파일의 크기 관리](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)를 참조하십시오.  
-> 하지만 [로그 잘림을 지연시킬 수 있는 요소](#FactorsThatDelayTruncation)를 염두에 두세요. 로그 축소 후 저장소 공간이 다시 필요하면 트랜잭션 로그가 다시 커지고 로그 확장 작업 중에 성능 오버헤드가 발생합니다.
+> 하지만 [로그 잘림을 지연시킬 수 있는 요소](#FactorsThatDelayTruncation)를 염두에 두세요. 로그 축소 후 스토리지 공간이 다시 필요하면 트랜잭션 로그가 다시 커지고 로그 확장 작업 중에 성능 오버헤드가 발생합니다.
   
 ##  <a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
  지금까지 설명했듯이 오랜 시간 동안 로그 레코드가 활성 상태로 유지되는 경우 트랜잭션 로그 잘림이 지연되고 트랜잭션 로그가 가득 찰 수 있습니다.  

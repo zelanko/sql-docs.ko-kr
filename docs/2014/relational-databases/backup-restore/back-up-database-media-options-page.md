@@ -38,7 +38,7 @@ ms.locfileid: "48125529"
 ## <a name="options"></a>변수  
   
 ### <a name="overwrite-media"></a>미디어 덮어쓰기  
- **미디어 덮어쓰기** 패널의 옵션은 백업이 미디어에 쓰여지는 방법을 제어합니다. URL(Windows Azure Storage)을 데이터베이스 백업 대화 상자의 일반 페이지에 있는 백업 대상으로 선택한 경우 미디어 덮어쓰기 섹션의 옵션을 사용할 수 없습니다. `BACKUP TO URL.. WITH FORMAT` Transact-SQL 문을 사용하여 백업을 덮어쓸 수 있습니다. 자세한 내용은 [SQL Server Backup to URL](sql-server-backup-to-url.md)을 참조하세요.  
+ **미디어 덮어쓰기** 패널의 옵션은 백업이 미디어에 쓰여지는 방법을 제어합니다. URL(Microsoft Azure Storage)을 데이터베이스 백업 대화 상자의 일반 페이지에 있는 백업 대상으로 선택한 경우 미디어 덮어쓰기 섹션의 옵션을 사용할 수 없습니다. `BACKUP TO URL.. WITH FORMAT` Transact-SQL 문을 사용하여 백업을 덮어쓸 수 있습니다. 자세한 내용은 [SQL Server Backup to URL](sql-server-backup-to-url.md)을 참조하세요.  
   
  **새 미디어에 백업하고 기존 백업 세트 모두 지우기** 옵션만 암호화 옵션과 함께 지원됩니다. **기존 미디어에 백업** 섹션의 옵션을 선택하는 경우 **백업 옵션** 페이지의 암호화 옵션을 사용할 수 없게 됩니다.  
   

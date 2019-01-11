@@ -53,7 +53,7 @@ ms.locfileid: "51672642"
 > [!NOTE]
 > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 Standard 및 Express Edition은 메모리 내 OLTP를 지원하지만 지정된 데이터베이스의 메모리 최적화 테이블에 사용할 수 있는 메모리의 양에 할당량을 적용합니다. Standard edition에서는 데이터베이스당 32GB이고, Express edition에서는 데이터베이스당 352MB입니다. 
   
--   메모리 최적화 테이블로 하나 이상의 데이터베이스를 만들 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 시작 계정에 *SE_MANAGE_VOLUME_NAME* 사용자 권한을 부여하여 인스턴트 파일 초기화(IFI)를 사용해야 합니다. IFI를 사용하지 않을 경우 메모리 최적화 저장소 파일(데이터 및 델타 파일)이 생성될 때 초기화되므로 작업 성능이 저하될 수 있습니다. IFI 및 사용 방법에 대한 자세한 내용은 [데이터베이스 즉시 파일 초기화](../../relational-databases/databases/database-instant-file-initialization.md)를 참조하세요.
+-   메모리 최적화 테이블로 하나 이상의 데이터베이스를 만들 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 시작 계정에 *SE_MANAGE_VOLUME_NAME* 사용자 권한을 부여하여 인스턴트 파일 초기화(IFI)를 사용해야 합니다. IFI를 사용하지 않을 경우 메모리 최적화 스토리지 파일(데이터 및 델타 파일)이 생성될 때 초기화되므로 작업 성능이 저하될 수 있습니다. IFI 및 사용 방법에 대한 자세한 내용은 [데이터베이스 즉시 파일 초기화](../../relational-databases/databases/database-instant-file-initialization.md)를 참조하세요.
   
 ## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

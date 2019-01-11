@@ -30,12 +30,12 @@ ms.locfileid: "52525657"
   
 -   **키 오류 로그 파일** 이 설정은 데이터베이스에 있는 각 큐브, 측정값 그룹, 파티션 및 차원에 대한 키 오류 로그 파일의 파일 이름과 경로를 지정합니다.  
   
--   **저장소 위치** 이 설정은 데이터베이스에 있는 각 큐브, 측정값 그룹 및 파티션에 대한 저장소 위치를 지정합니다. 개체에 값이 제공되지 않은 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사는 개체에 대한 기본 위치를 사용합니다. 예를 들어 파티션은 측정값 그룹의 위치를 사용하고, 측정값 그룹은 큐브의 위치를 사용하고, 큐브는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 있는 개체의 기본 위치를 사용합니다. 저장소 위치는 로컬이거나 UNC(Universal Naming Convention) 경로일 수 있습니다.  
+-   **저장소 위치** 이 설정은 데이터베이스에 있는 각 큐브, 측정값 그룹 및 파티션에 대한 저장소 위치를 지정합니다. 개체에 값이 제공되지 않은 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사는 개체에 대한 기본 위치를 사용합니다. 예를 들어 파티션은 측정값 그룹의 위치를 사용하고, 측정값 그룹은 큐브의 위치를 사용하고, 큐브는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 있는 개체의 기본 위치를 사용합니다. 스토리지 위치는 로컬이거나 UNC(Universal Naming Convention) 경로일 수 있습니다.  
   
 -   **보고서 서버** 이 설정은 보고서 서버 및 데이터베이스에 있는 각 큐브에 정의된 각 보고서 동작의 폴더 위치를 지정합니다.  
   
 ## <a name="modifying-the-configuration-settings-for-deployment"></a>배포를 위한 구성 설정 수정  
- 일부 경우에 배포 해야 합니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 저장 된 것과 다른 구성 설정을 사용 하 여 프로젝트를 \< *프로젝트 이름을*>.configsettings 파일입니다. 예를 들어 하나 이상의 데이터 원본에 대한 연결 문자열을 변경하거나 특정 파티션 또는 측정값 그룹에 대한 저장소 위치를 지정해야 할 수 있습니다.  
+ 일부 경우에 배포 해야 합니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 저장 된 것과 다른 구성 설정을 사용 하 여 프로젝트를 \< *프로젝트 이름을*>.configsettings 파일입니다. 예를 들어 하나 이상의 데이터 원본에 대한 연결 문자열을 변경하거나 특정 파티션 또는 측정값 그룹에 대한 스토리지 위치를 지정해야 할 수 있습니다.  
   
  파티션 및 역할 배포를 수정 하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 내에서이 정보를 변경 해야 합니다 \< *프로젝트 이름*> 아래 절차에 설명 된 대로.configsettings 파일. 때문에 프로젝트 내에서 파티션 및 역할 설정을 변경할 수 없습니다는  *\<프로젝트 이름 >* **속성 페이지** 대화 상자 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 이러한 옵션이 표시 되지 않습니다.  
   

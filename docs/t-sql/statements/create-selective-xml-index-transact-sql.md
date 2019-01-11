@@ -119,7 +119,7 @@ identifier
  WITH *\<index_options>* 인덱스 옵션에 대한 자세한 내용은 [CREATE XML INDEX&#40;선택적 XML 인덱스&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)를 참조하세요.  
   
 ## <a name="best-practices"></a>최선의 구현 방법  
- 대부분의 경우 더 나은 성능과 더 효율적인 저장소를 위해 일반 XML 인덱스 대신 선택적 XML 인덱스를 만듭니다. 그러나 다음 조건 중 하나에 해당하는 경우에는 선택적 XML 인덱스가 권장되지 않습니다.  
+ 대부분의 경우 더 나은 성능과 더 효율적인 스토리지를 위해 일반 XML 인덱스 대신 선택적 XML 인덱스를 만듭니다. 그러나 다음 조건 중 하나에 해당하는 경우에는 선택적 XML 인덱스가 권장되지 않습니다.  
   
 -   많은 수의 노드 경로를 매핑해야 하는 경우  
   

@@ -36,8 +36,8 @@ ms.locfileid: "51665428"
 |Hadoop으로 데이터 내보내기  |예|아니오|아니오| 예|
 |Azure HDInsight 쿼리, Azure HDInsight에서 가져오기, Azure HDInsight로 내보내기 |아니오|아니오|아니오|아니오
 |Hadoop으로 쿼리 계산 푸시다운|예|아니오|아니오|예|  
-|Azure Blob 저장소에서 데이터 가져오기|예|아니오|예|예| 
-|Azure Blob 저장소로 데이터 내보내기|예|아니오|예|예|  
+|Azure Blob 스토리지에서 데이터 가져오기|예|아니오|예|예| 
+|Azure Blob 스토리지로 데이터 내보내기|예|아니오|예|예|  
 |Azure Data Lake Store에서 데이터 가져오기|아니오|아니오|예|아니오|    
 |Azure Data Lake Store에서 데이터 내보내기|아니오|아니오|예|아니오|
 |Microsoft BI 도구에서 PolyBase 쿼리 실행|예|아니오|예|예|   

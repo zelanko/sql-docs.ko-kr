@@ -57,7 +57,7 @@ ms.locfileid: "52807145"
   
 -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]패키지 업그레이드 마법사를 실행하면 자동으로 원래 패키지와 업그레이드된 패키지가 파일 시스템의 같은 폴더에 저장됩니다.  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 또는 명령 프롬프트에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 패키지 업그레이드 마법사를 실행하면 원래 패키지와 업그레이드된 패키지에 대해 다른 저장 위치를 지정할 수 있습니다. 원래 패키지를 백업하려면 원본 패키지와 업그레이드된 패키지가 파일 시스템의 같은 폴더에 저장되도록 지정해야 합니다. 다른 저장 옵션을 지정하면 마법사는 원래 패키지를 백업할 수 없게 됩니다.  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 또는 명령 프롬프트에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 패키지 업그레이드 마법사를 실행하면 원래 패키지와 업그레이드된 패키지에 대해 다른 저장 위치를 지정할 수 있습니다. 원래 패키지를 백업하려면 원본 패키지와 업그레이드된 패키지가 파일 시스템의 같은 폴더에 저장되도록 지정해야 합니다. 다른 스토리지 옵션을 지정하면 마법사는 원래 패키지를 백업할 수 없게 됩니다.  
   
  마법사는 원래 패키지를 백업할 때 **SSISBackupFolder** 폴더에 원래 패키지의 복사본을 저장합니다. 마법사는 원래 패키지 및 업그레이드된 패키지가 포함된 폴더에 하위 폴더로 이 **SSISBackupFolder** 폴더를 만듭니다.  
   

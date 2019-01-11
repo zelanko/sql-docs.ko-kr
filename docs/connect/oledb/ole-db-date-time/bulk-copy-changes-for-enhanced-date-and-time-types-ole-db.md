@@ -30,7 +30,7 @@ ms.locfileid: "52416252"
 ## <a name="format-files"></a>서식 파일  
  서식 파일을 대화형으로 빌드할 경우 다음 표에서는 날짜/시간 형식을 지정하는 데 사용되는 입력 및 해당되는 호스트 파일 데이터 형식 이름을 보여 줍니다.  
   
-|파일 저장 유형|호스트 파일 데이터 형식|메시지: "< field_name > 필드의 파일 저장 유형 입력 [\<기본 >]:"|  
+|파일 스토리지 유형|호스트 파일 데이터 형식|메시지: "< field_name > 필드의 파일 저장 유형 입력 [\<기본 >]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|d|  
@@ -67,11 +67,11 @@ ms.locfileid: "52416252"
 ## <a name="character-data-files"></a>문자 데이터 파일  
  문자 데이터 파일의 날짜 및 시간 값의 "데이터 형식:: 문자열 및 리터럴" 섹션에 설명 된 대로 표시 됩니다 [OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) OLE DB에 대 한 합니다.  
   
- 네이티브 데이터 파일의 경우 네 가지 새로운 형식의 날짜 및 시간 값은 해당되는 TDS 표현으로 표시되며 소수 자릿수는 7입니다. 소수 자릿수가 7인 이유는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 지원하는 최댓값이 7이고 bcp 데이터 파일에는 이러한 열의 소수 자릿수가 저장되지 않기 때문입니다. 기존의 **datetime** 및 **smalldatetime** 형식의 저장 방식 또는 이러한 형식의 TDS(Tabular Data Stream) 표현에는 변경 사항이 없습니다.  
+ 네이티브 데이터 파일의 경우 네 가지 새로운 형식의 날짜 및 시간 값은 해당되는 TDS 표현으로 표시되며 소수 자릿수는 7입니다. 소수 자릿수가 7인 이유는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 지원하는 최댓값이 7이고 bcp 데이터 파일에는 이러한 열의 소수 자릿수가 저장되지 않기 때문입니다. 기존의 **datetime** 및 **smalldatetime** 형식의 스토리지 방식 또는 이러한 형식의 TDS(Tabular Data Stream) 표현에는 변경 사항이 없습니다.  
   
- OLE DB의 경우 파일 저장 유형에 따른 저장 크기는 다음과 같습니다.  
+ OLE DB의 경우 파일 스토리지 유형에 따른 스토리지 크기는 다음과 같습니다.  
   
-|파일 저장 유형|저장 크기(바이트)|  
+|파일 스토리지 유형|스토리지 크기(바이트)|  
 |-----------------------|---------------------------|  
 |DATETIME|8|  
 |smalldatetime|4|  
@@ -84,7 +84,7 @@ ms.locfileid: "52416252"
 ## <a name="bcp-types-in-msoledbsqlh"></a>Msoledbsql.h의 BCP 형식  
  형식은은 msoledbsql.h에 정의 됩니다. 이러한 형식을 사용 하 여 전달 되는 *eUserDataType* ibcpsession:: Bcpcolfmt OLE DB에서의 매개 변수입니다.  
   
-|파일 저장 유형|호스트 파일 데이터 형식|Ibcpsession:: Bcpcolfmt 사용 msoledbsql.h 입력|값|  
+|파일 스토리지 유형|호스트 파일 데이터 형식|Ibcpsession:: Bcpcolfmt 사용 msoledbsql.h 입력|값|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |DATETIME|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIM4|0x3a|  

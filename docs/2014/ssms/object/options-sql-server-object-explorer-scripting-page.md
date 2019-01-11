@@ -45,7 +45,7 @@ ms.locfileid: "52764405"
  스크립트를 개체별 섹션으로 구분하여 스크립트에 설명을 추가합니다. 기본값은 True입니다. 자세한 내용은 [주석 &#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/comment-transact-sql)합니다.  
   
  **VarDecimal 옵션 포함**  
- VarDecimal 저장소 옵션을 포함합니다. 기본값은 False입니다. 자세한 내용은 참조 하 고 [sp_db_vardecimal_storage_format &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql)합니다.  
+ VarDecimal 스토리지 옵션을 포함합니다. 기본값은 False입니다. 자세한 내용은 참조 하 고 [sp_db_vardecimal_storage_format &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql)합니다.  
   
  **변경 내용 추적 스크립팅**  
  스크립트에 변경 내용 추적 정보를 포함합니다.  

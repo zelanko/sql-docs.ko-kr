@@ -32,7 +32,7 @@ ms.locfileid: "47708271"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>관리 데이터 웨어하우스 구성(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 데이터 수집기를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 단일 인스턴스 또는 여러 인스턴스에서 데이터 저장소를 지원하도록 관리 데이터 웨어하우스를 구성하는 방법에 대해 설명합니다. 이러한 인스턴스는 같은 서버에 있거나 다른 서버에 있을 수 있습니다. 그리고 [데이터 관리 웨어하우스 구성 마법사](#Wizard) 대화 상자의 사용자 인터페이스에 대해서도 설명합니다. 데이터 수집기 구성에 대한 자세한 내용은 [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md)을 참조하세요.  
+  이 항목에서는 데이터 수집기를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 단일 인스턴스 또는 여러 인스턴스에서 데이터 스토리지를 지원하도록 관리 데이터 웨어하우스를 구성하는 방법에 대해 설명합니다. 이러한 인스턴스는 같은 서버에 있거나 다른 서버에 있을 수 있습니다. 그리고 [데이터 관리 웨어하우스 구성 마법사](#Wizard) 대화 상자의 사용자 인터페이스에 대해서도 설명합니다. 데이터 수집기 구성에 대한 자세한 내용은 [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 시스템 서비스 계정(로컬 시스템, 네트워크 서비스 또는 로컬 서비스) 중 하나를 사용하여 실행되도록 구성되고 관리 데이터 웨어하우스는 데이터 수집기와 다른 인스턴스에서 생성될 경우 관리 데이터 웨어하우스에 데이터를 업로드하는 데 프록시를 사용하도록 컬렉션 집합을 구성해야 합니다.  

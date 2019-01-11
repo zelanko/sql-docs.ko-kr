@@ -1,3 +1,4 @@
+items:
 - name: Aggregations and Aggregation Designs
   href: aggregations-and-aggregation-designs.md
 - name: 새 명명된 집합
@@ -8,13 +9,13 @@
   href: cube-objects-analysis-services-multidimensional-data.md
 - name: 큐브 속성 - 다차원 모델 프로그래밍
   href: cube-properties-multidimensional-model-programming.md
-- name: 큐브 저장소(Analysis Services - 다차원 데이터)
+- name: 큐브 스토리지(Analysis Services - 다차원 데이터)
   href: cube-storage-analysis-services-multidimensional-data.md
 - name: 큐브 번역
   href: cube-translations.md
 - name: 차원 관계
   href: dimension-relationships.md
-- name: 파티션 - 파티션 저장소 모드 및 처리
+- name: 파티션 - 파티션 스토리지 모드 및 처리
   href: partitions-partition-storage-modes-and-processing.md
 - name: 파티션 - 자동 관리 캐싱
   href: partitions-proactive-caching.md
@@ -26,3 +27,9 @@
   href: partitions-analysis-services-multidimensional-data.md
 - name: 큐브 뷰
   href: perspectives.md
+ms.openlocfilehash: dd5065c68c84b477588b79cfd5bd2340009f0306
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39315136"

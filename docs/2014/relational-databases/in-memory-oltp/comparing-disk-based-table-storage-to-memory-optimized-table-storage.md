@@ -1,5 +1,5 @@
 ---
-title: 디스크 기반 테이블 저장소와 메모리 액세스에 최적화된 테이블 저장소 비교 | Microsoft 문서
+title: 디스크 기반 테이블 스토리지와 메모리 액세스에 최적화된 테이블 스토리지 비교 | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,7 +17,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48152105"
 ---
-# <a name="comparing-disk-based-table-storage-to-memory-optimized-table-storage"></a>디스크 기반 테이블 저장소와 메모리 액세스에 최적화된 테이블 저장소 비교
+# <a name="comparing-disk-based-table-storage-to-memory-optimized-table-storage"></a>디스크 기반 테이블 스토리지와 메모리 액세스에 최적화된 테이블 스토리지 비교
   
   
 |범주|디스크 기반 테이블|메모리 액세스에 최적화된 내구성이 있는 테이블|  

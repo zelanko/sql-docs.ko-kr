@@ -26,7 +26,7 @@ ms.locfileid: "34037254"
 ##  <a name="usagearch"></a> 사용 데이터 수집 및 보고 아키텍처  
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 저장 및 SharePoint 인프라와 Powerpivot 서버 구성 요소 요소의 기능 조합을 사용 하 여 관리 사용 현황 데이터 수집 됩니다. SharePoint 인프라는 중앙 집중식 사용 서비스 및 기본 제공 타이머 작업을 제공합니다. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 은 SharePoint 중앙 관리에 표시되는 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 사용 데이터 및 보고서에 대한 장기 저장소를 추가합니다.  
   
- 사용 데이터 수집 시스템에서 이벤트 정보는 애플리케이션 서버나 웹 프런트 엔드의 사용 수집 시스템에 입력됩니다. 사용 데이터는 물리적 서버의 임시 데이터 파일에서 데이터베이스 서버의 영구 저장소로 데이터를 이동하게 하는 타이머 작업에 응답하여 시스템을 통해 이동됩니다. 다음 다이어그램은 데이터 컬렉션 및 보고 시스템을 통해 사용 데이터를 이동하는 구성 요소와 프로세스를 보여 줍니다.  
+ 사용 데이터 수집 시스템에서 이벤트 정보는 애플리케이션 서버나 웹 프런트 엔드의 사용 수집 시스템에 입력됩니다. 사용 데이터는 물리적 서버의 임시 데이터 파일에서 데이터베이스 서버의 영구 스토리지로 데이터를 이동하게 하는 타이머 작업에 응답하여 시스템을 통해 이동됩니다. 다음 다이어그램은 데이터 컬렉션 및 보고 시스템을 통해 사용 데이터를 이동하는 구성 요소와 프로세스를 보여 줍니다.  
   
  **참고:** 사용 데이터 컬렉션이 설정되었는지 확인합니다. 확인하려면 SharePoint 중앙 관리에서 **모니터링** 으로 이동합니다. 자세한 내용은 [사용 현황 데이터 수집 구성&#40;SharePoint용 파워 피벗](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)을 참조하세요.  
   

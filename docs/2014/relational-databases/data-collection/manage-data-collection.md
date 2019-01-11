@@ -151,7 +151,7 @@ ms.locfileid: "52768295"
 |프로시저 이름|Description|  
 |--------------------|-----------------|  
 |[sp_syscollector_set_cache_window&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql)|데이터 업로드 다시 시도 횟수를 구성합니다.|  
-|[sp_syscollector_set_cache_directory&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql)|업로드 다시 시도 사이에 데이터를 저장할 임시 저장소를 지정합니다.|  
+|[sp_syscollector_set_cache_directory&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql)|업로드 다시 시도 사이에 데이터를 저장할 임시 스토리지를 지정합니다.|  
   
  **데이터 컬렉션 실행 로그 작업**  
   

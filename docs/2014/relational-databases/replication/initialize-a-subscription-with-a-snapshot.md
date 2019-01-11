@@ -15,7 +15,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 71c0b884fea0ceab1da3beba770414e1af14b74a
 ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/03/2018
 ms.locfileid: "52776445"
@@ -41,7 +41,7 @@ ms.locfileid: "52776445"
   
 -   기본 스냅숏 폴더 위치 대신 또는 기본 스냅숏 폴더 위치에 추가로 대체 스냅숏 폴더 위치를 지정합니다. 자세한 내용은 [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md)을 참조하세요.  
   
--   이동식 미디어에 저장하거나 느린 네트워크를 통해 전송하기 위해 스냅숏을 압축합니다. 자세한 내용은 [Compressed Snapshots](compressed-snapshots.md)을 참조하세요.  
+-   이동식 미디어에 스토리지하거나 느린 네트워크를 통해 전송하기 위해 스냅숏을 압축합니다. 자세한 내용은 [Compressed Snapshots](compressed-snapshots.md)을 참조하세요.  
   
 -   스냅숏 적용 전후에 Transact-SQL 스크립트를 실행합니다. 자세한 내용은 [스냅숏 적용 전후에 스크립트 실행](execute-scripts-before-and-after-the-snapshot-is-applied.md)을 참조하세요.  
   

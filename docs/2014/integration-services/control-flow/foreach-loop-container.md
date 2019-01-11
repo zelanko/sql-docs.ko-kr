@@ -45,7 +45,7 @@ ms.locfileid: "53355709"
   
 -   Foreach SMO 열거자는 SMO([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Object) 개체를 열거합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스의 뷰 목록을 열거하고 가져올 수 있습니다.  
   
--   Azure 저장소의 blob 컨테이너에 blob를 열거하는 Foreach Azure Blob 열거자입니다.  
+-   Azure 스토리지의 blob 컨테이너에 blob를 열거하는 Foreach Azure Blob 열거자입니다.  
   
 -   Foreach ADLS File 열거자는 ADLS 디렉터리의 파일을 열거 합니다.
   

@@ -19,21 +19,21 @@ ms.lasthandoff: 12/13/2018
 ms.locfileid: "53355331"
 ---
 # <a name="lesson-7-move-your-data-files-to-windows-azure-storage"></a>7단원: Microsoft Azure Storage에 데이터 파일 이동
-  이 단원에서는 Windows Azure 저장소로 데이터 파일을 이동하는 방법을 배웁니다(SQL Server 인스턴스로는 이동하지 않음). 이 단원을 수행하기 위해 4, 5, 6단원을 완료할 필요는 없습니다.  
+  이 단원에서는 Microsoft Azure Storage로 데이터 파일을 이동하는 방법을 배웁니다(SQL Server 인스턴스로는 이동하지 않음). 이 단원을 수행하기 위해 4, 5, 6단원을 완료할 필요는 없습니다.  
   
  Microsoft Azure Storage로 데이터 파일을 이동하려면 데이터 파일의 위치를 변경하는 데 유용한 `ALTER DATABASE` 문을 사용합니다.  
   
  이 단원에서는 다음 단계를 이미 완료했다고 가정합니다.  
   
--   Windows Azure 저장소 계정이 있습니다.  
+-   Microsoft Azure Storage 계정이 있습니다.  
   
--   Windows Azure 저장소 계정에서 컨테이너를 만들었습니다.  
+-   Microsoft Azure Storage 계정에서 컨테이너를 만들었습니다.  
   
 -   읽기, 쓰기 및 나열 권한이 있는 컨테이너에 정책을 만들었습니다. SAS 키도 생성했습니다.  
   
 -   원본 컴퓨터에서 SQL Server 자격 증명을 만들었습니다.  
   
- 다음 단계를 사용하여 Windows Azure 저장소로 데이터 파일을 이동합니다.  
+ 다음 단계를 사용하여 Microsoft Azure Storage로 데이터 파일을 이동합니다.  
   
 1.  먼저 원본 컴퓨터에서 테스트 데이터베이스를 만들고 일부 데이터를 추가합니다.  
   

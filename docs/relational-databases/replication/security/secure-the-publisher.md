@@ -37,7 +37,7 @@ ms.locfileid: "53589717"
   
 -   병합 에이전트  
   
- 이러한 에이전트에 적절한 로그인을 제공하고 필요한 최소 권한만 부여하는 원칙을 따르며 모든 암호 저장소를 보호하는 것이 좋습니다. 각 에이전트에 필요한 사용 권한에 대한 자세한 내용은 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하십시오.  
+ 이러한 에이전트에 적절한 로그인을 제공하고 필요한 최소 권한만 부여하는 원칙을 따르며 모든 암호 스토리지를 보호하는 것이 좋습니다. 각 에이전트에 필요한 사용 권한에 대한 자세한 내용은 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하십시오.  
   
  로그인과 암호를 적절하게 관리하는 것 외에도 PAL(게시 액세스 목록)의 역할을 이해해야 합니다. PAL은 게시자에서 데이터베이스에 대한 임의 액세스를 제한하면서 로그인에 게시 데이터에 대한 액세스 권한을 설정하는 데 사용됩니다.  
   

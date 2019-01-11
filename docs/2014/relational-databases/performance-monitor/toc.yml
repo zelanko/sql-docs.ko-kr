@@ -1,103 +1,110 @@
+items:
 - name: 리소스 사용 모니터링(시스템 모니터)
   href: monitor-resource-usage-system-monitor.md
   items:
-    - name: 시스템 모니터 실행
-      href: run-system-monitor.md
-    - name: 디스크 사용량 모니터링
-      href: monitor-disk-usage.md
-    - name: CPU 사용량 모니터링
-      href: monitor-cpu-usage.md
-    - name: 메모리 사용량 모니터링
-      href: monitor-memory-usage.md
+  - name: 시스템 모니터 실행
+    href: run-system-monitor.md
+  - name: 디스크 사용량 모니터링
+    href: monitor-disk-usage.md
+  - name: CPU 사용량 모니터링
+    href: monitor-cpu-usage.md
+  - name: 메모리 사용량 모니터링
+    href: monitor-memory-usage.md
 - name: SQL Server 데이터베이스 경고 만들기
   href: create-a-sql-server-database-alert.md
-- name: '차트, 경고, 로그 및 보고서 만들기'
+- name: 차트, 경고, 로그 및 보고서 만들기
   href: create-charts-alerts-logs-and-reports.md
 - name: SQL Server 개체 사용
   href: use-sql-server-objects.md
   items:
-    - name: 'SQL Server 에이전트, Alerts 개체'
-      href: sql-server-agent-alerts-object.md
-    - name: 'SQL Server 에이전트, Jobs 개체'
-      href: sql-server-agent-jobs-object.md
-    - name: 'SQL Server 에이전트, JobSteps 개체'
-      href: sql-server-agent-jobsteps-object.md
-    - name: 'SQL Server 에이전트, Statistics 개체'
-      href: sql-server-agent-statistics-object.md
-    - name: 'SQL Server, Access Methods 개체'
-      href: sql-server-access-methods-object.md
-    - name: 'SQL Server, 가용성 복제본'
-      href: sql-server-availability-replica.md
-    - name: 'SQL Server, Backup Device 개체'
-      href: sql-server-backup-device-object.md
-    - name: 'SQL Server, Broker 활성화 개체'
-      href: sql-server-broker-activation-object.md
-    - name: 'SQL Server, Broker Statistics 개체'
-      href: sql-server-broker-statistics-object.md
-    - name: 'SQL Server, Broker TO Statistics 개체'
-      href: sql-server-broker-to-statistics-object.md
-    - name: 'SQL Server, Broker 및 DBM Transport 개체'
-      href: sql-server-broker-dbm-transport-object.md
-    - name: 'SQL Server, Buffer Manager 개체'
-      href: sql-server-buffer-manager-object.md
-    - name: 'SQL Server, Buffer Node 개체'
-      href: sql-server-buffer-node.md
-    - name: 'SQL Server, CLR 개체'
-      href: sql-server-clr-object.md
-    - name: 'SQL Server, Cursor Manager by Type 개체'
-      href: sql-server-cursor-manager-by-type-object.md
-    - name: 'SQL Server, Cursor Manager Total 개체'
-      href: sql-server-cursor-manager-total-object.md
-    - name: 'SQL Server, Database Mirroring 개체'
-      href: sql-server-database-mirroring-object.md
-    - name: 'SQL Server, 데이터베이스 복제본'
-      href: sql-server-database-replica.md
-    - name: 'SQL Server, Databases 개체'
-      href: sql-server-databases-object.md
-    - name: 'SQL Server, Deprecated Features 개체'
-      href: sql-server-deprecated-features-object.md
-    - name: 'SQL Server, ExecStatistics 개체'
-      href: sql-server-execstatistics-object.md
-    - name: 'SQL Server, General Statistics 개체'
-      href: sql-server-general-statistics-object.md
-    - name: 'SQL Server, HTTP_STORAGE_OBJECT'
-      href: sql-server-http-storage-object.md
-    - name: 'SQL Server, Latches 개체'
-      href: sql-server-latches-object.md
-    - name: 'SQL Server, Locks 개체'
-      href: sql-server-locks-object.md
-    - name: 'SQL Server, Memory Manager 개체'
-      href: sql-server-memory-manager-object.md
-    - name: 'SQL Server, Memory Node'
-      href: sql-server-memory-node.md
-    - name: 'SQL Server, Plan Cache 개체'
-      href: sql-server-plan-cache-object.md
-    - name: 'SQLServer, Resource Pool Stats 개체'
-      href: sql-server-resource-pool-stats-object.md
-    - name: 'SQL Server, SQL Errors 개체'
-      href: sql-server-sql-errors-object.md
-    - name: 'SQL Server, SQL Statistics 개체'
-      href: sql-server-sql-statistics-object.md
-    - name: 'SQL Server, Transactions 개체'
-      href: sql-server-transactions-object.md
-    - name: 'SQL Server, User Settable 개체'
-      href: sql-server-user-settable-object.md
-    - name: 'SQL Server, Wait Statistics 개체'
-      href: sql-server-wait-statistics-object.md
-    - name: 'SQL Server, Workload Group Stats 개체'
-      href: sql-server-workload-group-stats-object.md
+  - name: SQL Server 에이전트, Alerts 개체
+    href: sql-server-agent-alerts-object.md
+  - name: SQL Server 에이전트, Jobs 개체
+    href: sql-server-agent-jobs-object.md
+  - name: SQL Server 에이전트, JobSteps 개체
+    href: sql-server-agent-jobsteps-object.md
+  - name: SQL Server 에이전트, Statistics 개체
+    href: sql-server-agent-statistics-object.md
+  - name: SQL Server, Access Methods 개체
+    href: sql-server-access-methods-object.md
+  - name: SQL Server, 가용성 복제본
+    href: sql-server-availability-replica.md
+  - name: SQL Server, Backup Device 개체
+    href: sql-server-backup-device-object.md
+  - name: SQL Server, Broker 활성화 개체
+    href: sql-server-broker-activation-object.md
+  - name: SQL Server, Broker Statistics 개체
+    href: sql-server-broker-statistics-object.md
+  - name: SQL Server, Broker TO Statistics 개체
+    href: sql-server-broker-to-statistics-object.md
+  - name: SQL Server, Broker 및 DBM Transport 개체
+    href: sql-server-broker-dbm-transport-object.md
+  - name: SQL Server, Buffer Manager 개체
+    href: sql-server-buffer-manager-object.md
+  - name: SQL Server, Buffer Node 개체
+    href: sql-server-buffer-node.md
+  - name: SQL Server, CLR 개체
+    href: sql-server-clr-object.md
+  - name: SQL Server, Cursor Manager by Type 개체
+    href: sql-server-cursor-manager-by-type-object.md
+  - name: SQL Server, Cursor Manager Total 개체
+    href: sql-server-cursor-manager-total-object.md
+  - name: SQL Server, Database Mirroring 개체
+    href: sql-server-database-mirroring-object.md
+  - name: SQL Server, 데이터베이스 복제본
+    href: sql-server-database-replica.md
+  - name: SQL Server, Databases 개체
+    href: sql-server-databases-object.md
+  - name: SQL Server, Deprecated Features 개체
+    href: sql-server-deprecated-features-object.md
+  - name: SQL Server, ExecStatistics 개체
+    href: sql-server-execstatistics-object.md
+  - name: SQL Server, General Statistics 개체
+    href: sql-server-general-statistics-object.md
+  - name: SQL Server, HTTP_STORAGE_OBJECT
+    href: sql-server-http-storage-object.md
+  - name: SQL Server, Latches 개체
+    href: sql-server-latches-object.md
+  - name: SQL Server, Locks 개체
+    href: sql-server-locks-object.md
+  - name: SQL Server, Memory Manager 개체
+    href: sql-server-memory-manager-object.md
+  - name: SQL Server, Memory Node
+    href: sql-server-memory-node.md
+  - name: SQL Server, Plan Cache 개체
+    href: sql-server-plan-cache-object.md
+  - name: SQLServer, Resource Pool Stats 개체
+    href: sql-server-resource-pool-stats-object.md
+  - name: SQL Server, SQL Errors 개체
+    href: sql-server-sql-errors-object.md
+  - name: SQL Server, SQL Statistics 개체
+    href: sql-server-sql-statistics-object.md
+  - name: SQL Server, Transactions 개체
+    href: sql-server-transactions-object.md
+  - name: SQL Server, User Settable 개체
+    href: sql-server-user-settable-object.md
+  - name: SQL Server, Wait Statistics 개체
+    href: sql-server-wait-statistics-object.md
+  - name: SQL Server, Workload Group Stats 개체
+    href: sql-server-workload-group-stats-object.md
 - name: XTP(메모리 내 OLTP) 성능 카운터
   href: sql-server-xtp-in-memory-oltp-performance-counters.md
   items:
-    - name: XTP 커서
-      href: sql-server-xtp-cursors.md
-    - name: XTP 가비지 수집
-      href: sql-server-xtp-garbage-collection.md
-    - name: XTP 가상 프로세서
-      href: sql-server-xtp-phantom-processor.md
-    - name: XTP 저장소
-      href: sql-server-xtp-storage.md
-    - name: XTP 트랜잭션 로그
-      href: sql-server-xtp-transaction-log.md
-    - name: XTP 트랜잭션
-      href: sql-server-xtp-transactions.md
+  - name: XTP 커서
+    href: sql-server-xtp-cursors.md
+  - name: XTP 가비지 수집
+    href: sql-server-xtp-garbage-collection.md
+  - name: XTP 가상 프로세서
+    href: sql-server-xtp-phantom-processor.md
+  - name: XTP 스토리지
+    href: sql-server-xtp-storage.md
+  - name: XTP 트랜잭션 로그
+    href: sql-server-xtp-transaction-log.md
+  - name: XTP 트랜잭션
+    href: sql-server-xtp-transactions.md
+ms.openlocfilehash: 07855958600fb5db7d12dbdd8164cb4c1cd107d1
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39315264"

@@ -35,7 +35,7 @@ ms.locfileid: "52509923"
  FCI는 [가용성 그룹](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)을 활용하여 데이터베이스 수준에서 원격 재해 복구 기능을 제공할 수 있습니다. 자세한 내용은 [장애 조치(Failover) 클러스터링 및 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)을 참조하세요.  
  
  > [!NOTE]  
- > Windows Server 2016 Datacenter Edition에서는 S2D(저장소 공간 다이렉트) 지원이 도입되었습니다. SQL Server 장애 조치(Failover) 클러스터 인스턴스는 클러스터 저장소 리소스에 대해 S2D를 지원합니다. 자세한 내용은 [Windows Server 2016의 저장소 공간 다이렉트](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)를 참조하세요.
+ > Windows Server 2016 Datacenter Edition에서는 S2D(스토리지 공간 다이렉트) 지원이 도입되었습니다. SQL Server 장애 조치(Failover) 클러스터 인스턴스는 클러스터 스토리지 리소스에 대해 S2D를 지원합니다. 자세한 내용은 [Windows Server 2016의 스토리지 공간 다이렉트](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)를 참조하세요.
  > 
  >장애 조치(failover) 클러스터 인스턴스는 CSV(클러스터 공유 볼륨)도 지원합니다. 자세한 내용은 [장애 조치(Failover) 클러스터에서 클러스터 공유 볼륨 이해](https://technet.microsoft.com/library/dd759255.aspx)을 참조하세요. 
    
@@ -63,7 +63,7 @@ ms.locfileid: "52509923"
     > [!IMPORTANT]  
     >  가용성 그룹에서는 FCI에서 해당 가용성 그룹 내의 다른 노드로의 자동 장애 조치(failover)가 지원되지 않습니다. 즉, 고가용성 솔루션에서 자동 장애 조치(failover)가 중요한 구성 요소일 경우 하나의 가용성 그룹 내에 FCI와 독립형 노드를 함께 연결해서는 안됩니다. 그러나 *재해 복구* 솔루션에 대해서는 이러한 연결이 가능합니다.  
   
--   WSFC 클러스터 디스크(iSCSI, 파이버 채널 등) 및 SMB(서버 메시지 블록) 파일 공유와 같은 다양한 저장소 솔루션 지원  
+-   WSFC 클러스터 디스크(iSCSI, 파이버 채널 등) 및 SMB(서버 메시지 블록) 파일 공유와 같은 다양한 스토리지 솔루션 지원  
   
 -   다중 서브넷 FCI를 사용하거나 가용성 그룹 내에서 FCI가 호스트하는 데이터베이스를 실행하는 재해 복구 솔루션. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]의 새로운 다중 서브넷 지원 덕분에 다중 서브넷 FCI에는 더 이상 가상 LAN이 필요하지 않으며 다중 서브넷 FCI에 대한 관리 및 보안 성능이 향상되었습니다.  
   
@@ -134,8 +134,8 @@ ms.locfileid: "52509923"
  SQL Server 바이너리  
  제품 바이너리는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 독립형 설치와 비슷하게 FCI의 각 노드에 로컬로 설치됩니다. 하지만 노드를 시작할 때 서비스가 자동으로 시작되지는 않으며, WSFC에서 관리됩니다.  
   
- 저장소  
- 가용성 그룹과 달리 FCI는 데이터베이스 및 로그 저장을 위해 FCI의 모든 노드 간에 공유 저장소를 사용해야 합니다. 공유 저장소는 WSFC 클러스터 디스크, SAN 디스크, S2D(저장소 공간 다이렉트) 또는 SMB의 파일 공유 형식일 수 있습니다. 이러한 방식으로 장애 조치(failover)가 발생할 때마다 FCI의 모든 노드가 동일한 인스턴스 데이터를 사용할 수 있습니다. 하지만 잠재적으로 공유 저장소가 단일 장애 지점이 될 가능성은 없으며, FCI는 기본 저장소 솔루션을 사용하여 데이터 보호를 보장합니다.  
+ 스토리지  
+ 가용성 그룹과 달리 FCI는 데이터베이스 및 로그 스토리지를 위해 FCI의 모든 노드 간에 공유 스토리지를 사용해야 합니다. 공유 스토리지는 WSFC 클러스터 디스크, SAN 디스크, S2D(스토리지 공간 다이렉트) 또는 SMB의 파일 공유 형식일 수 있습니다. 이러한 방식으로 장애 조치(failover)가 발생할 때마다 FCI의 모든 노드가 동일한 인스턴스 데이터를 사용할 수 있습니다. 하지만 잠재적으로 공유 스토리지가 단일 장애 지점이 될 가능성은 없으며, FCI는 기본 스토리지 솔루션을 사용하여 데이터 보호를 보장합니다.  
   
  네트워크 이름  
  FCI의 VNN은 FCI에 대한 통합 연결 지점을 제공합니다. 따라서 현재 노드가 무엇인지 확인할 필요 없이 애플리케이션이 VNN에 연결할 수 있습니다. 장애 조치(failover)가 발생하면 새 현재 노드가 시작된 후 이 노드에 VNN이 등록됩니다. 이 프로세스는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 연결하는 클라이언트나 애플리케이션에 투명하게 수행되며, 오류 중 애플리케이션이나 클라이언트에 발생하는 작동 중단 시간을 최소화합니다.  

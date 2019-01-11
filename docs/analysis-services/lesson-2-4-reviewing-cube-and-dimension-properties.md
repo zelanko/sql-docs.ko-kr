@@ -45,7 +45,7 @@ ms.locfileid: "34017560"
   
 7.  **파티션** 탭을 클릭합니다.  
   
-    큐브 마법사에서 집계가 없는 다차원 온라인 분석 처리 저장소 모드를 사용하여 큐브에 대해 단일 파티션을 정의합니다. MOLAP을 사용하면 최대 성능을 위해 모든 리프 수준 데이터와 모든 집계가 해당 큐브 내에 저장됩니다. 집계는 질문이 이루어지기 전에 응답을 준비 상태로 만들어 쿼리 응답 시간을 빠르게 하기 위해 미리 계산된 데이터 요약입니다. **파티션** 탭에서 추가로 파티션, 저장소 설정 및 쓰기 저장(writeback) 설정을 정의할 수 있습니다. 자세한 내용은 [파티션&#40;Analysis Services - 다차원 데이터&#41;](../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md), [집계 및 집계 디자인](../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)을 참조하세요.  
+    큐브 마법사에서 집계가 없는 다차원 온라인 분석 처리 스토리지 모드를 사용하여 큐브에 대해 단일 파티션을 정의합니다. MOLAP을 사용하면 최대 성능을 위해 모든 리프 수준 데이터와 모든 집계가 해당 큐브 내에 저장됩니다. 집계는 질문이 이루어지기 전에 응답을 준비 상태로 만들어 쿼리 응답 시간을 빠르게 하기 위해 미리 계산된 데이터 요약입니다. **파티션** 탭에서 추가로 파티션, 저장소 설정 및 쓰기 저장(writeback) 설정을 정의할 수 있습니다. 자세한 내용은 [파티션&#40;Analysis Services - 다차원 데이터&#41;](../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md), [집계 및 집계 디자인](../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)을 참조하세요.  
   
 8.  **브라우저** 탭을 클릭합니다.  
   

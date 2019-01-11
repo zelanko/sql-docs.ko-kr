@@ -55,7 +55,7 @@ items:
   items:
   - name: 결과 집합의 특징 확인(ODBC)
     href: ../../native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md
-  - name: 저장소 할당
+  - name: 스토리지 할당
     href: ../../native-client-odbc-results/assigning-storage.md
   - name: 결과 데이터 인출
     href: ../../native-client-odbc-results/fetching-result-data.md

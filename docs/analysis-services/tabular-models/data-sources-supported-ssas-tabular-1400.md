@@ -33,7 +33,7 @@ Azure Analysis Services에 대 한 참조 [Azure Analysis Services에서 지 원
 |---------|---------|---------|
 |Azure SQL 데이터베이스     |   예      |    예      |
 |Azure SQL 데이터 웨어하우스     |   예      |   예       |
-|Azure BLOB 저장소     |   예       |    아니요      |
+|Azure Blob Storage     |   예       |    아니요      |
 |Azure Table Storage    |   예       |    아니요      |
 |Azure Cosmos DB      |  예        |  아니요        |
 |Azure Data Lake Store     |   예       |    아니요      |

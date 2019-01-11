@@ -40,7 +40,7 @@ ms.locfileid: "52804995"
 |error|0|1|Oracle CDC 인스턴스가 실행되고 있지 않습니다. ERROR 상태는 CDC 인스턴스가 ACTIVE 상태이지만 복구할 수 없는 오류가 발생하여 사용하지 않도록 설정되었음을 나타냅니다. ERROR 상태는 다음과 같은 하위 상태 코드를 포함합니다.<br /><br /> MISCONFIGURED: 복구할 수 없는 구성 오류가 감지되었습니다.<br /><br /> PASSWORD-REQUIRED: Attunity Oracle CDC Designer에 대해 설정된 암호가 없거나 구성된 암호가 잘못되었습니다. 서비스 비대칭 키 암호 변경이 원인일 수 있습니다.|  
 |RUNNING|1|0|CDC 인스턴스가 실행 중이며 변경 레코드를 처리하고 있습니다. RUNNING 상태는 다음과 같은 하위 상태 코드를 포함합니다.<br /><br /> IDLE: 모든 변경 레코드가 처리 되어 대상 컨트롤에 저장 된 (**_CT**) 테이블입니다. 제어 테이블이 있는 활성 트랜잭션이 없습니다.<br /><br /> PROCESSING: 컨트롤에 아직 기록 되지 않은 처리 중인 변경 레코드가 있습니다 (**_CT**) 테이블입니다.|  
 |STOPPED|0|0|CDC 인스턴스가 실행되고 있지 않습니다. STOP 하위 상태는 CDC 인스턴스가 ACTIVE 상태에서 올바르게 중지되었음을 나타냅니다.|  
-|SUSPENDED|1|1|CDC 인스턴스가 실행되고 있지만 복구할 수 있는 오류로 인해 처리가 일시 중지되었습니다. SUSPENDED 상태는 다음과 같은 하위 상태 코드를 포함합니다.<br /><br /> DISCONNECTED: 원본 Oracle 데이터베이스에 연결할 수 없습니다. 연결이 복원되면 처리가 다시 시작됩니다.<br /><br /> STORAGE: 저장소가 꽉 찼습니다. 저장소를 사용할 수 있게 되면 처리가 다시 시작됩니다. 경우에 따라 상태 테이블을 업데이트할 수 없기 때문에 이 상태가 나타나지 않을 수 있습니다.<br /><br /> LOGGER: 로거가 Oracle에 연결되어 있지만 일시적인 문제로 인해 Oracle 트랜잭션 로그를 읽을 수 없습니다.|  
+|SUSPENDED|1|1|CDC 인스턴스가 실행되고 있지만 복구할 수 있는 오류로 인해 처리가 일시 중지되었습니다. SUSPENDED 상태는 다음과 같은 하위 상태 코드를 포함합니다.<br /><br /> DISCONNECTED: 원본 Oracle 데이터베이스에 연결할 수 없습니다. 연결이 복원되면 처리가 다시 시작됩니다.<br /><br /> STORAGE: 저장소가 꽉 찼습니다. 스토리지를 사용할 수 있게 되면 처리가 다시 시작됩니다. 경우에 따라 상태 테이블을 업데이트할 수 없기 때문에 이 상태가 나타나지 않을 수 있습니다.<br /><br /> LOGGER: 로거가 Oracle에 연결되어 있지만 일시적인 문제로 인해 Oracle 트랜잭션 로그를 읽을 수 없습니다.|  
 |DATAERROR|x|x|이 상태 코드는 **xdbcdc_trace** 테이블에 대해서만 사용됩니다. **xdbcdc_state** 테이블에는 이 상태가 나타나지 않습니다. 추적 레코드에 이 상태가 있으면 Oracle 로그 레코드에 문제가 있는 것입니다. 잘못된 로그 레코드가 **data** 열에 BLOB으로 저장됩니다. DATAERROR 상태는 다음과 같은 하위 상태 코드를 포함합니다.<br /><br /> BADRECORD: 연결된 로그 레코드를 구문 분석할 수 없습니다.<br /><br /> CONVERT-ERROR: 일부 열의 데이터를 캡처 테이블의 대상 열로 변환할 수 없습니다. 이 상태는 변환 오류가 발생하면 추적 레코드를 생성하도록 구성에 지정된 경우에만 나타날 수 있습니다.|  
   
  Oracle CDC Service 상태는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장되므로 데이터베이스의 상태 값에 서비스의 실제 상태가 반영되지 않는 경우도 있습니다. 가장 일반적인 시나리오로는 서비스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결이 끊어져서 서비스를 다시 시작할 수 없는 경우가 있습니다. 이 경우 **cdc.xdbcdc_state** 에 이전 상태가 저장되어 있습니다. 마지막 업데이트 타임스탬프(UTC)가 1분을 초과하는 경우 상태가 오래되었을 수 있습니다. 이 경우 Windows 이벤트 뷰어를 사용하여 서비스 상태에 대한 추가 정보를 확인하십시오.  
@@ -101,7 +101,7 @@ ms.locfileid: "52804995"
   
  일시적인 오류 및 예기치 못한 오류의 경우 작업이 여러 번 다시 시도되고 오류가 오래 동안 지속될 경우 CDC Service에서 CDC 인스턴스 하위 프로세스를 중지하고 초기 연결 시도로 돌아갑니다. 이 때 다른 시스템의 Oracle CDC Service에서 명명된 CDC Service를 이미 제어하고 있을 수 있습니다.  
   
-### <a name="handling-target-sql-server-storage-full-errors"></a>대상 SQL Server 저장소 꽉 참 오류 처리  
+### <a name="handling-target-sql-server-storage-full-errors"></a>대상 SQL Server 스토리지 꽉 참 오류 처리  
  Oracle CDC Service는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 데이터베이스에 새 변경 데이터를 삽입할 수 없을 경우 이벤트 로그에 경고를 기록하고 추적 레코드 삽입을 다시 시도합니다. 그렇지만 이 시도도 동일한 이유로 실패할 수 있습니다. 그런 다음 작업이 성공할 때까지 특정 간격으로 작업을 다시 시도합니다.  
   
 ### <a name="handling-oracle-cdc-errors"></a>Oracle CDC 오류 처리  

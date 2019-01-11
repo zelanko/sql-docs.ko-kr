@@ -476,7 +476,7 @@ TRANSACT-SQL을 통해 사용할 수 있는 네이티브 컴파일 모듈 형식
   - SQL Server Management Studio의 트랜잭션 성능 분석 보고서를 사용하면 메모리 내 OLTP로 데이터베이스 애플리케이션의 성능이 향상될지 평가할 수 있습니다.  
   - [메모리 최적화 관리자](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) 를 사용하여 디스크 기반 데이터베이스 테이블을 메모리 내 OLTP로 마이그레이션 지원   
 - [메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
-  - 메모리 최적화 테이블에서 사용하는 저장소는 메모리의 해당 크기보다 훨씬 클 수 있으며, 이는 데이터베이스 백업의 크기에 영향을 미칩니다.  
+  - 메모리 최적화 테이블에서 사용하는 스토리지는 메모리의 해당 크기보다 훨씬 클 수 있으며, 이는 데이터베이스 백업의 크기에 영향을 미칩니다.  
 - [메모리 액세스에 최적화된 테이블의 트랜잭션](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)  
   - 메모리 최적화 테이블의 트랜잭션과 관련해서 T-SQL의 재시도 논리에 대한 정보를 포함합니다.  
 - [메모리 내 OLTP에 대한 Transact-SQL 지원](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  

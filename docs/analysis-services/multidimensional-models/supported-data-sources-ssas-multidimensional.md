@@ -40,7 +40,7 @@ ms.locfileid: "34025380"
   
  \* ODBC 데이터 원본은 다차원 솔루션에서 지원되지 않습니다. Analysis Services 자체는 연결을 처리하지만 솔루션을 빌드하는 데 사용되는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 의 디자이너는 MSDASQL 드라이버를 사용하는 경우에도 ODBC 데이터 원본에 연결할 수 없습니다. 비즈니스 요구 사항에 ODBC 데이터 원본이 포함되는 경우 테이블 형식 솔루션을 대신 빌드해 보세요.  
   
- ** 일부 기능의 경우 온-프레미스로 실행되는 SQL Server 관계형 데이터베이스가 필요합니다. 특히 쓰기 저장 및 ROLAP 저장소를 사용하려면 기본 데이터 원본이 SQL Server 관계형 데이터베이스여야 합니다.  
+ ** 일부 기능의 경우 온-프레미스로 실행되는 SQL Server 관계형 데이터베이스가 필요합니다. 특히 쓰기 저장 및 ROLAP 스토리지를 사용하려면 기본 데이터 원본이 SQL Server 관계형 데이터베이스여야 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [지원 되는 데이터 원본](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   

@@ -89,7 +89,7 @@ ms.locfileid: "52416397"
 #### <a name="backup-strategy"></a>백업 전략  
  **백업 전략에서 사용 하는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]:**  
   
- 예약된 백업 유형 및 백업 주기는 데이터베이스 작업을 기준으로 결정됩니다. 보존 기간 설정은 보존 기간 내 지정 시간에 데이터베이스를 복구하는 기능과 저장소에 보존할 백업 파일의 시간을 결정하는 데 사용됩니다.  
+ 예약된 백업 유형 및 백업 주기는 데이터베이스 작업을 기준으로 결정됩니다. 보존 기간 설정은 보존 기간 내 지정 시간에 데이터베이스를 복구하는 기능과 스토리지에 보존할 백업 파일의 시간을 결정하는 데 사용됩니다.  
   
  **백업 컨테이너 및 파일 명명 규칙:**  
   
@@ -138,7 +138,7 @@ ms.locfileid: "52416397"
   
 -   시스템 데이터베이스는 지원되지 않습니다.  
   
--   Microsoft Azure Blob Storage service는 유일하게 지원되는 백업 저장소 옵션입니다. 디스크 또는 테이프 백업은 지원되지 않습니다.  
+-   Microsoft Azure Blob Storage service는 유일하게 지원되는 백업 스토리지 옵션입니다. 디스크 또는 테이프 백업은 지원되지 않습니다.  
   
 -   현재 Microsoft Azure Storage에서 페이지 BLOB에 허용되는 최대 파일 크기는 1TB입니다. 1TB보다 큰 백업 파일은 실패합니다. 이러한 상황을 방지하려면 데이터베이스 크기가 큰 경우 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 설정하기 전에 압축을 사용하고 백업 파일 크기를 테스트하는 것이 좋습니다. 로컬 디스크에 백업하거나 `BACKUP TO URL` Transact-SQL 문을 사용하여 Windows Azure 저장소에 수동으로 백업하여 테스트할 수 있습니다. 자세한 내용은 [SQL Server Backup to URL](sql-server-backup-to-url.md)을 참조하세요.  
   

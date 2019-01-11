@@ -61,7 +61,7 @@ expression. 자세한 내용은 [식 &#40;Transact-SQL&#41;](../../t-sql/languag
 ## <a name="remarks"></a>Remarks  
 압축된 데이터를 인덱싱할 수 없습니다.
   
-`COMPRESS` 함수는 입력된 식 데이터를 압축합니다. 압축하려면 각 데이터 섹션에 대해 이 함수를 호출해야 합니다. 행 또는 페이지 레벨에서 저장 중 자동 데이터 압축에 대한 자세한 정보는 [데이터 압축](../../relational-databases/data-compression/data-compression.md)을 참조하세요.
+`COMPRESS` 함수는 입력된 식 데이터를 압축합니다. 압축하려면 각 데이터 섹션에 대해 이 함수를 호출해야 합니다. 행 또는 페이지 레벨에서 스토리지 중 자동 데이터 압축에 대한 자세한 정보는 [데이터 압축](../../relational-databases/data-compression/data-compression.md)을 참조하세요.
   
 ## <a name="examples"></a>예  
   

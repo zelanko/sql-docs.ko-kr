@@ -23,14 +23,14 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/03/2018
 ms.locfileid: "52797645"
 ---
-# <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>xs:dateTime, xs:date 및 xs:time 형식의 저장소 형식에 대한 변경 내용입니다.
+# <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>xs:dateTime, xs:date 및 xs:time 형식의 스토리지 형식에 대한 변경 내용입니다.
   XMLDATETIME 규칙은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드한 후 사용할 수 없는 형식화된 XML 데이터가 데이터베이스에 포함되어 있는지 여부를 식별합니다.  
   
 ## <a name="component"></a>구성 요소  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Description  
- xs:dateTime, xs:date 및 xs:time 형식에 대한 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 저장소 형식이 표준 시간대 정보가 있거나 없는 값을 지원하고 표준 시간대를 유지하도록 변경되었습니다.  
+ xs:dateTime, xs:date 및 xs:time 형식에 대한 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 스토리지 형식이 표준 시간대 정보가 있거나 없는 값을 지원하고 표준 시간대를 유지하도록 변경되었습니다.  
   
  XML 스키마 컬렉션이 이러한 형식 중 하나를 참조하는 경우 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드한 이후에 해당 컬렉션에 연결된 모든 열의 XML 인덱스가 비활성화됩니다. SELECT 및/또는 XQUERIES를 사용하면 쿼리할 수 있지만 이러한 XML 인덱스는 사용되지 않습니다. 음수 연도 값이 발견되면 런타임 오류가 발생합니다.  
   

@@ -83,11 +83,11 @@ PolyBase를 사용할 경우 SQL Server에서 다음 시나리오가 가능합�
 
 - **SQL Server 또는 PDW에서 Hadoop에 저장된 데이터 쿼리.** 사용자는 Hadoop과 같이 비용 효율적으로 분산되고 확장 가능한 시스템에 데이터 집합을 저장하고 있습니다. PolyBase를 사용하면 쉽게 T-SQL을 사용하여 데이터를 쿼리할 수 있습니다.
 
-- **Azure Blob Storage에 저장된 데이터 쿼리.** Azure blob 저장소는 Azure 서비스에서 사용 하기 위해 데이터를 저장하는 편리한 장소입니다.  PolyBase는 T-SQL을 사용하여 쉽게 데이터에 액세스할 수 있습니다.
+- **Azure Blob Storage에 저장된 데이터 쿼리.** Azure blob 스토리지는 Azure 서비스에서 사용 하기 위해 데이터를 저장하는 편리한 장소입니다.  PolyBase는 T-SQL을 사용하여 쉽게 데이터에 액세스할 수 있습니다.
 
 - **Hadoop, Azure Blob Storage 또는 Azure Data Lake Store에서 데이터 가져오기** Hadoop, Azure Blob Storage 또는 Azure Data Lake Store에서 가져온 데이터를 관계형 테이블로 가져와 Microsoft SQLss columnstore 기술 및 분석 기능의 속도를 활용합니다. 별도 ETL 또는 가져오기 도구에 대한 요구 사항이 없습니다.
 
-- **Hadoop, Azure Blob Storage 또는 Azure Data Lake Store로 데이터 내보내기** Hadoop, Azure Blob Storage 또는 Azure Data Lake Store에 데이터를 보관하여 비용 효율적인 저장소를 구현하고 손쉽게 액세스할 수 있도록 온라인 상태로 유지합니다.
+- **Hadoop, Azure Blob Storage 또는 Azure Data Lake Store로 데이터 내보내기** Hadoop, Azure Blob Storage 또는 Azure Data Lake Store에 데이터를 보관하여 비용 효율적인 스토리지를 구현하고 손쉽게 액세스할 수 있도록 온라인 상태로 유지합니다.
 
 - **BI 도구와 통합.** Microsoft의 비즈니스 인텔리전스 및 분석 스택과 함께 PolyBase를 사용하거나 SQL Server와 호환되는 타사 도구를 사용합니다.
 

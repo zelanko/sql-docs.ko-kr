@@ -209,7 +209,7 @@ SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);
   
  새 간격 값은 `sys.database_query_store_options` 뷰를 통해 노출됩니다.  
   
- 쿼리 저장소 저장 공간이 꽉 차는 경우 다음 문을 사용하여 저장소를 확장합니다.  
+ 쿼리 스토리지 저장 공간이 꽉 차는 경우 다음 문을 사용하여 스토리지를 확장합니다.  
   
 ```  
 ALTER DATABASE <database_name>   

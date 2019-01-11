@@ -44,7 +44,7 @@ ms.locfileid: "53359825"
 |`ProcessingMode`|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 인덱싱 및 집계를 처리 중에 수행할지 아니면 처리 후에 수행할지를 나타냅니다.|  
 |`ProcessingPriority`|지연 집계, 인덱싱 또는 클러스터링과 같은 백그라운드 작업을 수행하는 동안 차원의 처리 우선 순위를 결정합니다.|  
 |`Source`|차원이 바인딩되는 데이터 원본 뷰를 식별합니다.|  
-|`StorageMode`|차원의 저장소 모드를 결정합니다.|  
+|`StorageMode`|차원의 스토리지 모드를 결정합니다.|  
 |`Type`|차원의 유형을 지정합니다.|  
 |`UnknownMember`|알 수 없는 멤버의 표시 여부를 나타냅니다.|  
 |`UnknownMemberName`|차원의 알 수 없는 멤버에 대한 캡션을 차원의 기본 언어로 지정합니다.|  

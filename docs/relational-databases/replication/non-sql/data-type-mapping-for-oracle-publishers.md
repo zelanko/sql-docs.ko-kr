@@ -86,7 +86,7 @@ ms.locfileid: "47739191"
  Oracle에서는 NUMBER(4,5)처럼 전체 자릿수보다 큰 소수 자릿수로 숫자를 정의할 수 있지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 전체 자릿수가 소수 자릿수보다 크거나 같아야 합니다. 데이터가 잘리지 않도록 하기 위해 Oracle 게시자에서 소수 자릿수가 전체 자릿수보다 클 경우 데이터 형식이 매핑될 때 전체 자릿수가 소수 자릿수와 동일하게 설정됩니다.NUMBER(4,5)는 NUMERIC(5,5)로 매핑됩니다.  
   
 > [!NOTE]  
->  NUMBER에 대한 소수 자릿수와 전체 자릿수를 지정하지 않으면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 기본적으로 최대 소수 자릿수(8)와 최대 전체 자릿수(38)를 사용합니다. 데이터를 복제할 때 더 나은 저장소를 사용하고 성능을 높이려면 Oracle에서 특정 소수 자릿수와 전체 자릿수를 설정하는 것이 좋습니다.  
+>  NUMBER에 대한 소수 자릿수와 전체 자릿수를 지정하지 않으면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 기본적으로 최대 소수 자릿수(8)와 최대 전체 자릿수(38)를 사용합니다. 데이터를 복제할 때 더 나은 스토리지를 사용하고 성능을 높이려면 Oracle에서 특정 소수 자릿수와 전체 자릿수를 설정하는 것이 좋습니다.  
   
 ### <a name="large-object-types"></a>큰 개체 유형  
  Oracle에서는 최대 4GB를 지원하지만 SQL Server에서는 최대 2GB를 지원합니다. 2GB 이상으로 복제된 데이터는 잘립니다.  

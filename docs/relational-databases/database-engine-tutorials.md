@@ -48,10 +48,10 @@ ms.locfileid: "51669332"
 이 자습서에서는 사이트 관리 표준을 강화하는 정책을 만드는 방법에 대해 설명합니다.  
   
 [자습서: Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
-이 자습서에서는 SQL Server 백업 및 Windows Azure BLOB 저장소 서비스로 복원하는 방법에 대해 설명합니다.  
+이 자습서에서는 SQL Server 백업 및 Windows Azure BLOB 스토리지 서비스로 복원하는 방법에 대해 설명합니다.  
   
 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 저장소 서비스 사용 ](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
-이 자습서는 Windows Azure BLOB 저장소 서비스에서 SQL Server 데이터 파일을 저장하는 방법을 이해하도록 도와 줍니다.  
+이 자습서는 Windows Azure BLOB 스토리지 서비스에서 SQL Server 데이터 파일을 저장하는 방법을 이해하도록 도와 줍니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server 2016 자습서](../sql-server/tutorials-for-sql-server-2016.md)  

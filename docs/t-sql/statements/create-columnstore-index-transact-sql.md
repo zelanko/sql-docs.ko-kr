@@ -172,7 +172,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ##### <a name="datacompression--columnstore--columnstorearchive"></a>DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
    지정된 테이블, 파티션 번호 또는 파티션 범위에 대한 데이터 압축 옵션을 지정합니다. 다음과 같은 옵션이 있습니다.   
 - `COLUMNSTORE`는 기본값이고 성능이 가장 우수한 columnstore 압축으로 압축하도록 지정합니다. 이는 일반적인 선택입니다.  
-- `COLUMNSTORE_ARCHIVE`는 테이블 또는 파티션을 보다 작은 크기로 더욱 압축합니다. 이 옵션을 저장소 크기를 줄여야 하고 저장 및 검색에 더 많은 시간을 이용할 수 있는 보관 상황에 사용합니다.  
+- `COLUMNSTORE_ARCHIVE`는 테이블 또는 파티션을 보다 작은 크기로 더욱 압축합니다. 이 옵션을 스토리지 크기를 줄여야 하고 스토리지 및 검색에 더 많은 시간을 이용할 수 있는 보관 상황에 사용합니다.  
   
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
@@ -246,7 +246,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 ```
 
 ##### <a name="compressiondelay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
-   압축된 rowgroup으로 마이그레이션할 수 있기 전에 행이 델타 rowgroup에 얼마나 남아 있어야 하는지 하한을 지정합니다. 예를 들어, 고객은 한 행이 120분 동안 변경되지 않은 경우 열 형식 저장소 형식으로 압축하기에 적합하다고 말할 수 있습니다. 디스크 기반 테이블의 columnstore 인덱스인 경우 행을 삽입하거나 업데이트할 때 시간을 추적하지 않고, 델타 rowgroup 닫힌 시간을 행에 대한 프록시로 대신 사용합니다. 기본 기간은 0분입니다. 델타 rowgroup에 백만 개의 행이 누적되면 행이 열 형식 저장소에 마이그레이션되고 닫힌 것으로 표시됩니다.  
+   압축된 rowgroup으로 마이그레이션할 수 있기 전에 행이 델타 rowgroup에 얼마나 남아 있어야 하는지 하한을 지정합니다. 예를 들어, 고객은 한 행이 120분 동안 변경되지 않은 경우 열 형식 스토리지 형식으로 압축하기에 적합하다고 말할 수 있습니다. 디스크 기반 테이블의 columnstore 인덱스인 경우 행을 삽입하거나 업데이트할 때 시간을 추적하지 않고, 델타 rowgroup 닫힌 시간을 행에 대한 프록시로 대신 사용합니다. 기본 기간은 0분입니다. 델타 rowgroup에 백만 개의 행이 누적되면 행이 열 형식 스토리지에 마이그레이션되고 닫힌 것으로 표시됩니다.  
   
 ###### <a name="datacompression"></a>DATA_COMPRESSION  
    지정된 테이블, 파티션 번호 또는 파티션 범위에 대한 데이터 압축 옵션을 지정합니다. 클러스터형 columnstore 인덱스 및 비클러스터형 columnstore 인덱스를 모두 포함하는 columnstore 인덱스에만 적용됩니다. 다음과 같은 옵션이 있습니다.
@@ -382,7 +382,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 
  **columnstore 인덱스는 다음 기능과 함께 사용할 수 없습니다.**  
 -   계산 열 SQL Server 2017부터는 클러스터형 columnstore 인덱스에 비지속형 계산 열을 포함할 수 있습니다. 그러나 SQL Server 2017에서는 클러스터형 columnstore 인덱스에 지속형 계산 열을 포함할 수 없으며 계산 열에 비클러스터형 인덱스를 만들 수 없습니다. 
--   페이지 및 행 압축과 **vardecimal** 저장소 형식(columnstore 인덱스가 이미 다른 형식으로 압축되어 있음)  
+-   페이지 및 행 압축과 **vardecimal** 스토리지 형식(columnstore 인덱스가 이미 다른 형식으로 압축되어 있음)  
 -   복제  
 -   Filestream
 

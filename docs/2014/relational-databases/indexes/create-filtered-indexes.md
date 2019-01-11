@@ -18,13 +18,13 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 529d83451c897359152520aecbece856ef7e6ded
 ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/28/2018
 ms.locfileid: "52538200"
 ---
 # <a name="create-filtered-indexes"></a>필터링된 인덱스 만들기
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 필터링된 인덱스를 만드는 방법에 대해 설명합니다. 필터링된 인덱스는 특히 데이터의 잘 정의된 하위 집합에서 선택하는 쿼리를 처리하는 데 적합한 최적화된 비클러스터형 인덱스입니다. 이 인덱스에서는 필터 조건자를 사용하여 테이블의 일부 행을 인덱싱합니다. 잘 디자인된 필터링된 인덱스는 전체 테이블 인덱스에 비해 쿼리 성능을 개선하고 인덱스 유지 관리 및 저장소 비용을 줄일 수 있습니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 필터링된 인덱스를 만드는 방법에 대해 설명합니다. 필터링된 인덱스는 특히 데이터의 잘 정의된 하위 집합에서 선택하는 쿼리를 처리하는 데 적합한 최적화된 비클러스터형 인덱스입니다. 이 인덱스에서는 필터 조건자를 사용하여 테이블의 일부 행을 인덱싱합니다. 잘 디자인된 필터링된 인덱스는 전체 테이블 인덱스에 비해 쿼리 성능을 개선하고 인덱스 유지 관리 및 스토리지 비용을 줄일 수 있습니다.  
   
  필터링된 인덱스는 전체 테이블 인덱스에 비해 다음과 같은 이점이 있습니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "52538200"
   
 -   **줄어든 인덱스 저장소 비용**  
   
-     필터링된 인덱스를 만들면 전체 테이블 인덱스가 필요하지 않은 경우 비클러스터형 인덱스의 디스크 저장소를 줄일 수 있습니다. 저장소 요구 사항을 크게 증가시키지 않고 전체 테이블 비클러스터형 인덱스를 여러 필터링된 인덱스로 바꿀 수 있습니다.  
+     필터링된 인덱스를 만들면 전체 테이블 인덱스가 필요하지 않은 경우 비클러스터형 인덱스의 디스크 스토리지를 줄일 수 있습니다. 스토리지 요구 사항을 크게 증가시키지 않고 전체 테이블 비클러스터형 인덱스를 여러 필터링된 인덱스로 바꿀 수 있습니다.  
   
  **항목 내용**  
   

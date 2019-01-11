@@ -32,7 +32,7 @@ ms.locfileid: "51674852"
 로그 파일의 현재 크기 및 최대 크기, 파일의 자동 증가 옵션에 대한 정보를 보기 위해 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)에서 해당 로그 파일의 **size**, **max_size** 및 **growth** 열을 사용할 수도 있습니다.  
   
 > [!IMPORTANT]
-> 로그 디스크가 오버로드되지 않도록 하세요. 로그 저장소가 트랜잭션 로드에 대한 [IOPS](https://wikipedia.org/wiki/IOPS) 및 지연 시간 요구 사항을 견딜 수 있는지 확인하세요. 
+> 로그 디스크가 오버로드되지 않도록 하세요. 로그 스토리지가 트랜잭션 로드에 대한 [IOPS](https://wikipedia.org/wiki/IOPS) 및 지연 시간 요구 사항을 견딜 수 있는지 확인하세요. 
   
 ##  <a name="ShrinkSize"></a> 로그 파일 크기 축소  
  실제 로그 파일의 크기를 줄이려면 로그 파일을 축소해야 합니다. 이는 트랜잭션 로그 파일에 사용되지 않은 공간이 포함되어 있는 경우에 유용합니다. 데이터베이스가 온라인 상태이고 하나 이상의 [가상 로그 파일(VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)에 여유 공간이 있는 경우에만 로그 파일을 축소할 수 있습니다. 경우에 따라 다음에 로그가 잘릴 때까지 로그를 축소하지 못할 수도 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "51674852"
 로그 파일을 축소하면 논리 로그 부분이 포함되지 않은 하나 이상의 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)(*비활성 VLF*)가 제거됩니다. 트랜잭션 로그 파일을 축소하면 비활성 VLF가 로그 파일의 끝에서 제거되어 로그가 대략적인 대상 크기로 줍니다. 
 
 > [!IMPORTANT]
-> 트랜잭션 로그를 줄이기 전에 [로그 잘림을 지연시킬 수 있는 요소](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)를 염두에 두세요. 로그 축소 후 저장소 공간이 다시 필요하면 트랜잭션 로그가 다시 커지고 로그 확장 작업 중에 성능 오버헤드가 발생합니다. 자세한 내용은 이 항목의 [권장 사항](#Recommendations)을 참조하세요.
+> 트랜잭션 로그를 줄이기 전에 [로그 잘림을 지연시킬 수 있는 요소](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)를 염두에 두세요. 로그 축소 후 스토리지 공간이 다시 필요하면 트랜잭션 로그가 다시 커지고 로그 확장 작업 중에 성능 오버헤드가 발생합니다. 자세한 내용은 이 항목의 [권장 사항](#Recommendations)을 참조하세요.
   
  **로그 파일 축소(데이터베이스 파일의 축소 없이)**  
   

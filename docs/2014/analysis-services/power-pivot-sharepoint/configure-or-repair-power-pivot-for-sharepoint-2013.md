@@ -198,7 +198,7 @@ ms.locfileid: "53363915"
 -   [Excel 2013 추가 기능에서 PowerPivot을 시작](http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110) (http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110)합니다.  
   
 ### <a name="add-additional-analysis-services-servers-in-sharepoint-mode"></a>SharePoint 모드의 Analysis Services 서버 추가  
- 이후에 데이터 저장소와 처리 능력이 추가로 필요하다고 판단되는 경우 팜에 SharePoint 모드의 Analysis Services를 실행하는 서버를 더 추가할 수 있습니다. SharePoint 2013용 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 의 경우 SharePoint 모드에서 새 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버를 설치하고 Excel Services를 구성합니다. 자세한 내용은의 "그 이상 단일 서버 설치" 섹션을 참조 하세요. [SharePoint 용 PowerPivot 2013 설치](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)합니다.  
+ 이후에 데이터 스토리지와 처리 능력이 추가로 필요하다고 판단되는 경우 팜에 SharePoint 모드의 Analysis Services를 실행하는 서버를 더 추가할 수 있습니다. SharePoint 2013용 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 의 경우 SharePoint 모드에서 새 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버를 설치하고 Excel Services를 구성합니다. 자세한 내용은의 "그 이상 단일 서버 설치" 섹션을 참조 하세요. [SharePoint 용 PowerPivot 2013 설치](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)합니다.  
   
 ## <a name="additional-resources"></a>추가 리소스  
  ![SharePoint 설정](../media/as-sharepoint2013-settings-gear.gif "SharePoint 설정") [Microsoft SQL Server Connect를 통해 사용자 의견 및 담당자 정보 제출](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback)합니다.  

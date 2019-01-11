@@ -35,7 +35,7 @@ ms.locfileid: "48185523"
  즉, 파일 및 문서를 FileTable이라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 특수 테이블에 저장할 수 있지만, Windows 애플리케이션에서 해당 파일 및 문서에 액세스할 때는 파일 시스템에 저장된 파일 및 문서에 액세스할 때와 같은 방식으로 처리됩니다. 클라이언트 애플리케이션을 변경할 필요는 없습니다.  
   
  [RBS&#40;Remote Blob Store&#41;&#40;SQL Server&#41;](remote-blob-store-rbs-sql-server.md)  
- 데이터베이스 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 용 RBS(Remote BLOB Store)를 사용하여 BLOB(Binary Large Object)를 서버에 직접 저장하지 않고 상용 저장소 솔루션에 저장할 수 있습니다. 이렇게 하면 용량을 크게 절약할 수 있고 고가의 서버 하드웨어 리소스 낭비를 방지할 수 있습니다. RBS는 애플리케이션이 BLOB 데이터에 액세스하기 위한 표준화된 모델을 정의하는 API 라이브러리 집합을 제공합니다. RBS는 원격 BLOB 데이터 관리를 돕기 위해 가비지 수집 등의 유지 관리 도구도 제공합니다.  
+ 데이터베이스 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 용 RBS(Remote BLOB Store)를 사용하여 BLOB(Binary Large Object)를 서버에 직접 저장하지 않고 상용 스토리지 솔루션에 저장할 수 있습니다. 이렇게 하면 용량을 크게 절약할 수 있고 고가의 서버 하드웨어 리소스 낭비를 방지할 수 있습니다. RBS는 애플리케이션이 BLOB 데이터에 액세스하기 위한 표준화된 모델을 정의하는 API 라이브러리 집합을 제공합니다. RBS는 원격 BLOB 데이터 관리를 돕기 위해 가비지 수집 등의 유지 관리 도구도 제공합니다.  
   
  RBS는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 미디어에 포함되어 있지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에 의해 설치되지 않습니다.  
   

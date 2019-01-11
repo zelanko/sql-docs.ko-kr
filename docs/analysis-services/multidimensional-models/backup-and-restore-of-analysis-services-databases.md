@@ -22,7 +22,7 @@ ms.locfileid: "52984004"
   
  백업 및 복원 명령은 배포된 Analysis Services 데이터베이스에서 수행됩니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 프로젝트 및 솔루션에 대해 원본 제어를 사용하여 특정 버전의 원본 파일을 복구한 다음 사용하고 있는 원본 제어 시스템의 리포지토리에 대한 데이터 복구 계획을 만들어야 합니다.  
   
- 원본 데이터를 포함하는 전체 백업의 경우 세부 데이터가 포함된 데이터베이스를 백업해야 합니다. 특히 ROLAP 또는 DirectQuery 데이터베이스 저장소를 사용하는 경우 Analysis Services 데이터베이스와 별개의 외부 SQL Server 관계형 데이터베이스에 세부 데이터가 저장됩니다. 그렇지 않으면 모든 개체가 테이블 형식 개체 또는 다차원 개체인 경우 Analysis Services 백업에 메타데이터와 원본 데이터 모두가 포함됩니다.  
+ 원본 데이터를 포함하는 전체 백업의 경우 세부 데이터가 포함된 데이터베이스를 백업해야 합니다. 특히 ROLAP 또는 DirectQuery 데이터베이스 스토리지를 사용하는 경우 Analysis Services 데이터베이스와 별개의 외부 SQL Server 관계형 데이터베이스에 세부 데이터가 저장됩니다. 그렇지 않으면 모든 개체가 테이블 형식 개체 또는 다차원 개체인 경우 Analysis Services 백업에 메타데이터와 원본 데이터 모두가 포함됩니다.  
   
  백업을 자동화하면 지정한 자동 백업 빈도만큼 데이터 스냅숏이 항상 최신 상태로 유지된다는 장점이 있습니다. 자동화된 스케줄러를 사용하면 백업을 잊지 않고 수행할 수 있습니다. 또한 데이터베이스 복원을 자동화할 수 있으며 이러한 자동화 역시 데이터를 복제하는 좋은 방법이 될 수 있으나 이때 복제의 대상 위치가 되는 인스턴스의 암호화 키 파일을 반드시 백업해야 합니다. 동기화 기능은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 복제 전용이며 최신이 아닌 데이터에 대해서만 사용할 수 있습니다. 여기에 언급된 모든 기능은 XML/A 명령을 사용하거나 AMO를 통해 프로그래밍 방식으로 실행하여 사용자 인터페이스를 통해 구현할 수 있습니다.
   
@@ -60,13 +60,13 @@ ms.locfileid: "52984004"
   
  **원격 파티션**  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 원격 파티션이 포함된 경우 원격 파티션도 백업해야 합니다. 원격 파티션이 있는 데이터베이스를 백업하는 경우 각 원격 서버에 있는 모든 원격 파티션이 각 해당 원격 서버의 단일 파일에 따로 백업됩니다. 그러므로 해당 호스트 컴퓨터 외부에 원격 백업을 만들려면 지정한 저장소 영역에 해당 파일을 직접 복사해야 합니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 원격 파티션이 포함된 경우 원격 파티션도 백업해야 합니다. 원격 파티션이 있는 데이터베이스를 백업하는 경우 각 원격 서버에 있는 모든 원격 파티션이 각 해당 원격 서버의 단일 파일에 따로 백업됩니다. 그러므로 해당 호스트 컴퓨터 외부에 원격 백업을 만들려면 지정한 스토리지 영역에 해당 파일을 직접 복사해야 합니다.  
   
  **백업 파일의 내용**  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 백업하면 데이터베이스 개체에 사용되는 저장소 모드에 따라 내용이 달라지는 백업 파일이 생성됩니다. 이러한 백업 내용상의 차이는 각 저장소 모드로 인해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 내에 서로 다른 정보 집합이 저장되기 때문에 발생합니다. 예를 들어 다차원 HOLAP(하이브리드 OLAP) 파티션 및 차원은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 집계 및 메타데이터를 저장하는 반면 ROLAP(관계형 OLAP) 파티션 및 차원은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 메타데이터만 저장합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 실제 내용이 각 파티션의 저장소 모드에 따라 달라지기 때문에 백업 파일의 내용도 달라집니다. 다음 표에서는 개체에 사용되는 저장소 모드에 따른 백업 파일의 내용을 보여 줍니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 백업하면 데이터베이스 개체에 사용되는 저장소 모드에 따라 내용이 달라지는 백업 파일이 생성됩니다. 이러한 백업 내용상의 차이는 각 스토리지 모드로 인해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 내에 서로 다른 정보 집합이 저장되기 때문에 발생합니다. 예를 들어 다차원 HOLAP(하이브리드 OLAP) 파티션 및 차원은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 집계 및 메타데이터를 저장하는 반면 ROLAP(관계형 OLAP) 파티션 및 차원은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 메타데이터만 저장합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 실제 내용이 각 파티션의 저장소 모드에 따라 달라지기 때문에 백업 파일의 내용도 달라집니다. 다음 표에서는 개체에 사용되는 스토리지 모드에 따른 백업 파일의 내용을 보여 줍니다.  
   
-|저장소 모드|백업 파일의 내용|  
+|스토리지 모드|백업 파일의 내용|  
 |------------------|-----------------------------|  
 |다차원 MOLAP 파티션 및 차원|메타데이터, 원본 데이터 및 집계|  
 |다차원 HOLAP 파티션 및 차원|메타데이터 및 집계|  

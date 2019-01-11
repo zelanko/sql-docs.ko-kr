@@ -32,7 +32,7 @@ ms.locfileid: "52392696"
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Azure SQL Database의 CPU 사용량 및 저장소 데이터를 반환합니다. 데이터는 5분 간격 이내로 수집 및 집계됩니다. 각 사용자 데이터베이스에 대해 5-분 간격 보고 창은 변경 될 리소스 소비량에서에 대해 한 행씩이 있습니다. 반환 되는 데이터는 CPU 사용량, 저장소 크기 변경 및 데이터베이스 SKU 수정 포함 되어 있습니다. 변경 하지 않고 유휴 데이터베이스 5 분 간격에 대 한 행을 가질 수 없습니다. 기록 데이터는 약 14일 동안 보존됩니다.  
+  Azure SQL Database의 CPU 사용량 및 스토리지 데이터를 반환합니다. 데이터는 5분 간격 이내로 수집 및 집계됩니다. 각 사용자 데이터베이스에 대해 5-분 간격 보고 창은 변경 될 리소스 소비량에서에 대해 한 행씩이 있습니다. 반환 되는 데이터는 CPU 사용량, 저장소 크기 변경 및 데이터베이스 SKU 수정 포함 되어 있습니다. 변경 하지 않고 유휴 데이터베이스 5 분 간격에 대 한 행을 가질 수 없습니다. 기록 데이터는 약 14일 동안 보존됩니다.  
   
  합니다 **sys.resource_stats** 보기에는 데이터베이스와 연결 된 Azure SQL Database 서버 버전에 따라 다른 정의가 포함 됩니다. 이러한 차이점과 새 서버 버전으로 업그레이드할 경우 응용 프로그램에 필요한 모든 수정 사항을 고려하세요.  
   

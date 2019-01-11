@@ -32,7 +32,7 @@ ms.locfileid: "53351651"
   
 -   데이터베이스 파일 사용  
   
--   저장소 볼륨 공간 사용  
+-   스토리지 볼륨 공간 사용  
   
 -   컴퓨터에 대한 CPU 사용  
   
@@ -66,7 +66,7 @@ ms.locfileid: "53351651"
   
 -   데이터베이스 파일 사용  
   
--   저장소 볼륨 공간 사용  
+-   스토리지 볼륨 공간 사용  
   
 -   컴퓨터에 대한 CPU 사용  
   
@@ -82,7 +82,7 @@ ms.locfileid: "53351651"
   
  각 상태 매개 변수에 대한 자세한 상태는 슬라이딩 표시기에 나열됩니다. 슬라이딩 표시기의 오른쪽 부분에는 각 상태 범주에 얼마나 많은 데이터 계층 애플리케이션이 해당되는지 표시됩니다. 개별 데이터 계층 응용 프로그램의 상태를 보는 방법과 정책 구성 설정을 보거나 변경하는 방법은 [배포된 데이터 계층 응용 프로그램 세부 정보&#40;SQL Server 유틸리티&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)를 참조하세요.  
   
- 유틸리티 저장소 사용 기록  
+ 유틸리티 스토리지 사용 기록  
  사용 기록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 대시보드 아래쪽의 시간 그래프에 표시됩니다. 시간 데이터는 datetime 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간을 보여 줍니다. 자세한 내용은 SQL Server 온라인 설명서의 [datetime(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 SQL Server 온라인 설명서의 [datetimeoffset(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 을 참조하세요.  
   
  표시 영역 왼쪽에 있는 라디오 단추를 사용하여 그래프의 보고 기간을 변경할 수 있습니다.  
@@ -99,8 +99,8 @@ ms.locfileid: "53351651"
   
  보고 간격을 변경하면 자동으로 데이터가 새로 고쳐집니다.  
   
- 유틸리티 저장소 사용  
- 대시보드 오른쪽 아래에 있는 저장소 사용 원형 차트는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 관리되는 인스턴스를 포함하는 컴퓨터의 볼륨에서 사용된 공간과 사용 가능한 공간의 비율을 표시합니다. 여기에 표시되는 데이터는 15분마다 새로 고쳐집니다.  
+ 유틸리티 스토리지 사용  
+ 대시보드 오른쪽 아래에 있는 스토리지 사용 원형 차트는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 관리되는 인스턴스를 포함하는 컴퓨터의 볼륨에서 사용된 공간과 사용 가능한 공간의 비율을 표시합니다. 여기에 표시되는 데이터는 15분마다 새로 고쳐집니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [유틸리티 탐색기를 사용하여 SQL Server 유틸리티 관리](../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   

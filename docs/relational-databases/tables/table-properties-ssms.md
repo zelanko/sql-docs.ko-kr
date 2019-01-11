@@ -113,7 +113,7 @@ ms.locfileid: "51676072"
  **True**값은 해당 테이블이 FileTable임을 나타냅니다. 이 값을 **False**로 변경하면 FileTable이 일반적인 사용자 테이블로 변경됩니다. 나중에 테이블을 다시 FileTable로 변경할 경우 테이블이 FileTable 일관성 검사를 통과해야 변환이 성공합니다.  
   
 ##  <a name="Storage"></a> 저장소 페이지  
- 선택한 테이블의 저장소 관련 속성을 표시합니다.  
+ 선택한 테이블의 스토리지 관련 속성을 표시합니다.  
   
 ### <a name="compression"></a>압축  
  **압축 유형**  
@@ -145,7 +145,7 @@ ms.locfileid: "51676072"
   
 ### <a name="general"></a>일반  
  **VarDecimal 저장소 형식을 사용합니다.**  
- **True**이면 이 읽기 전용 값은 **decimal** 및 **numeric** 데이터 형식이 VarDecimal 저장소 형식을 사용하여 저장됨을 나타냅니다. 이 옵션을 변경하려면 **sp_tableoption** 의 [VarDecimal 저장소 형식](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)옵션을 사용합니다. VarDecimal 저장소 형식은 더 이상 사용되지 않습니다. 대신 ROW 압축을 사용하세요.  
+ **True**이면 이 읽기 전용 값은 **decimal** 및 **numeric** 데이터 형식이 VarDecimal 저장소 형식을 사용하여 저장됨을 나타냅니다. 이 옵션을 변경하려면 **sp_tableoption** 의 [VarDecimal 스토리지 형식](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)옵션을 사용합니다. VarDecimal 스토리지 형식은 더 이상 사용되지 않습니다. 대신 ROW 압축을 사용하세요.  
   
  **인덱스 공간**  
  테이블의 인덱스가 차지하는 공간의 크기(MB)입니다. 이 값에 테이블에 대한 XML 인덱스 공간 사용량은 포함되지 않습니다. XML 인덱스가 해당 테이블에 속할 경우 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 를 대신 사용하세요.  

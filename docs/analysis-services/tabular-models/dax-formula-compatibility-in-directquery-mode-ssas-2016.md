@@ -53,7 +53,7 @@ ms.locfileid: "53072720"
 
  
 ## <a name="differences-between-in-memory-and-directquery-mode"></a>메모리 내 모드와 DirectQuery 모드 간의 차이점  
-DirectQuery 모드로 배포된 모델에 대한 쿼리에서는 동일한 모델이 메모리 내 모드로 배포되었을 때와 다른 결과를 반환할 수 있습니다. 이는 DirectQuery를 사용할 경우 데이터가 관계형 데이터 저장소에서 직접 쿼리되고, 수식에 필요한 집계가 저장 및 계산용 xVelocity 메모리 내 분석 엔진 대신 관련된 관계형 엔진(SQL, Oracle, Teradata)을 사용하여 수행되기 때문입니다.  
+DirectQuery 모드로 배포된 모델에 대한 쿼리에서는 동일한 모델이 메모리 내 모드로 배포되었을 때와 다른 결과를 반환할 수 있습니다. 이는 DirectQuery를 사용할 경우 데이터가 관계형 데이터 저장소에서 직접 쿼리되고, 수식에 필요한 집계가 스토리지 및 계산용 xVelocity 메모리 내 분석 엔진 대신 관련된 관계형 엔진(SQL, Oracle, Teradata)을 사용하여 수행되기 때문입니다.  
   
 예를 들어 일부 관계형 데이터 저장소는 숫자 값, 날짜, Null 등을 처리하는 방식에 차이점이 있습니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: Azure Blob Storage의 외부 데이터에 액세스하도록 PolyBase 구성 | Microsoft Docs
+title: Azure Blob Storage의 외부 데이터에 액세스하도록 PolyBase 구성 | Microsoft 문서
 ms.custom: ''
 ms.date: 09/24/2018
 ms.prod: sql

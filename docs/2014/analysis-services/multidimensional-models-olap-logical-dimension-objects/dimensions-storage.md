@@ -28,7 +28,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/02/2018
 ms.locfileid: "48218873"
 ---
-# <a name="dimension-storage"></a>차원 저장소
+# <a name="dimension-storage"></a>차원 스토리지
   차원을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 두 저장소 모드를 지원 합니다.  
   
 -   ROLAP(관계형 OLAP)  

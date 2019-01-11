@@ -59,7 +59,7 @@ Linux Pacemaker 클러스터에서 각 SQL Server FCI에는 자체 고유 IP 주
 DNS에서 FCI의 이름을 Pacemaker 클러스터에서 생성 되는 FCI 리소스의 이름과 동일 해야 합니다.
 이름 및 IP 주소가 모두 DNS에 등록 되어야 합니다.
 
-## <a name="shared-storage"></a>공유 저장소
+## <a name="shared-storage"></a>공유 스토리지
 Linux 또는 Windows Server에서 되었든 관계 없이 모든 Fci는 일종의 공유 저장소에 필요 합니다. 이 저장소는 FCI를 호스팅할 수 있는 수 있는 모든 서버에 표시 됩니다 있지만 단일 서버에서 언제 든 지 FCI에 대 한 저장소를 사용할 수 있습니다. Linux에서 공유 저장소에 사용 가능한 옵션은 같습니다.
 
 - iSCSI

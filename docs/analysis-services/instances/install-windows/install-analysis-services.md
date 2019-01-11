@@ -50,7 +50,7 @@ ms.locfileid: "34708081"
   
 
   
- 기본이 아닌 저장소 모드를 사용하는 경우 성능을 향상하기 위해 메모리 관리 및 IO 설정을 조정할 수 있습니다. 자세한 내용은 [Analysis Services의 서버 속성](../../../analysis-services/server-properties/server-properties-in-analysis-services.md) 을 참조하세요.  
+ 기본이 아닌 스토리지 모드를 사용하는 경우 성능을 향상하기 위해 메모리 관리 및 IO 설정을 조정할 수 있습니다. 자세한 내용은 [Analysis Services의 서버 속성](../../../analysis-services/server-properties/server-properties-in-analysis-services.md) 을 참조하세요.  
   
 ## <a name="command-line-setup"></a>명령줄 설치  
  SQL Server 설치에는 서버 모드를 지정하는 매개 변수(**ASSERVERMODE**)가 포함됩니다. 다음 예에서는 테이블 형식 서버 모드에 Analysis Services를 설치하는 명령줄 설치를 보여 줍니다.  
