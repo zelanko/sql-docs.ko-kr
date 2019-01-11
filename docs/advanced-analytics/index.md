@@ -3,21 +3,24 @@ title: R 및 Python 기계 학습 및 프로그래밍 확장 설명서 - SQL Ser
 description: 대규모 엔터프라이즈 데이터 분석을 위한 기본 제공 데이터 과학 모델링 및 Machine Learning 알고리즘이 포함된 SQL Server의 R 및 Python
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/10/2018
+ms.date: 01/09/2019
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 498a73df26b516856fefe411f5d29bdac8076139
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 7eb5083f17ab08f19b689b3550f979f88495f604
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596544"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206249"
 ---
+# <a name="sql-server-machine-learning"></a>SQL Server Machine Learning
+
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-# <a name="sql-server-machine-learning-and-programming-extensions-documentation"></a>SQL Server Machine Learning 및 프로그래밍 확장 설명서
+
+## <a name="sql-server-machine-learning-and-programming-extensions-documentation"></a>SQL Server Machine Learning 및 프로그래밍 확장 설명서
 
 빠른 시작, 자습서 및 방법 문서를 사용하여 상주하는 관계형 데이터에 R 및 Python 외부 라이브러리와 언어를 사용하는 방법을 알아봅니다. [SQL Server Machine Learning](what-is-sql-server-machine-learning.md)의 R 및 Python 라이브러리에는 네트워크를 통해 데이터를 전송할 필요없이 대규모로 고성능 분석을 수행하기 위한 기본 배포, 데이터 과학 모델, Machine Learning 알고리즘 및 함수가 포함되어 있습니다. 
 
@@ -31,7 +34,8 @@ SQL Server 2019에서 Java 코드 실행은 R 및 Python과 동일한 확장성 
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sql-server-2017"
-# <a name="sql-server-machine-learning-r-and-python-documentation"></a>SQL Server Machine Learning R 및 Python 설명서
+
+## <a name="sql-server-machine-learning-r-and-python-documentation"></a>SQL Server Machine Learning R 및 Python 설명서
 
 빠른 시작, 자습서 및 방법 문서를 사용하여 상주하는 관계형 데이터에 R 및 Python 외부 라이브러리와 언어를 사용하는 방법을 알아봅니다. [SQL Server Machine Learning](what-is-sql-server-machine-learning.md)의 R 및 Python 라이브러리에는 네트워크를 통해 데이터를 전송할 필요없이 대규모로 고성능 분석을 수행하기 위한 기본 배포, 데이터 과학 모델, Machine Learning 알고리즘 및 함수가 포함되어 있습니다. 
 
