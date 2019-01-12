@@ -8,13 +8,14 @@ manager: craigg
 ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4d4e39da3176223305fe02a8931ff9d2c34a64c4
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
-ms.translationtype: HT
+ms.openlocfilehash: 12ec074501e93af586a5d495bd7984ad62f3fd88
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206357"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242144"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 배포 하는 방법
 

@@ -8,13 +8,14 @@ manager: craigg
 ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 46d2565ac90bfd007bbe0f3c9e8a2382ca5eeb74
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b8f50b74f733647e8a24b58b04147937be58ba98
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215539"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241574"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>클러스터 관리 포털을 사용 하 여 SQL Server 빅 데이터 클러스터를 모니터링 하는 방법
 

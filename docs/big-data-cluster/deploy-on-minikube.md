@@ -8,13 +8,14 @@ manager: craigg
 ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 02c0eb930cddbe3ff1a9d5529f640474b5bf2af4
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
-ms.translationtype: HT
+ms.openlocfilehash: 66a0e955c77d98e7c3a311047fa3b93dd299ce76
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206209"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241165"
 ---
 # <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>SQL Server 2019 빅 데이터 클러스터 배포용 minikube를 구성 합니다.
 

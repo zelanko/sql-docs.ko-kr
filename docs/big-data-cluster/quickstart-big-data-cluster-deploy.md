@@ -8,13 +8,14 @@ manager: craigg
 ms.date: 12/17/2018
 ms.topic: quickstart
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 29dda6e0f3849d22568c3e7893dc0926f28144a6
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
-ms.translationtype: HT
+ms.openlocfilehash: 39c79c39c04d64656b83004425d476896cbc75db
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206289"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241704"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>빠른 시작: Azure Kubernetes Service (AKS)에서 SQL Server 빅 데이터 클러스터를 배포 합니다.
 

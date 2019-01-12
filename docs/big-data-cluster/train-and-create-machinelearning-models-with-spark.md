@@ -9,13 +9,14 @@ ms.reviewer: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c1a23ebb390c2276d1ce47c2936b8fe682a4e9b7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c9bcc5ba99736a6bb65bde4aff20e220d70303d4
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213102"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242024"
 ---
 # <a name="train-and-create-machine-learning-models-with-spark"></a>학습 및 Spark를 사용 하 여 기계 학습 모델 만들기
 
