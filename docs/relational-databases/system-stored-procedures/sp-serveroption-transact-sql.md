@@ -19,12 +19,12 @@ ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57bc3a40cfaa600c27c0bded34d62a1f68060390
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d947f319c56c29c0d3dbe4ce88c38055c59dfc5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607331"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124113"
 ---
 # <a name="spserveroption-transact-sql"></a>sp_serveroption(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ sp_serveroption [@server = ] 'server'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@server =** ] **'***server***'**  
+ [  **@server =** ] **'**_server_**'**  
  옵션을 설정할 서버의 이름입니다. *server* 은 **sysname**이며 기본값은 없습니다.  
   
- [  **@optname =** ] **'***option_name***'**  
+ [  **@optname =** ] **'**_option_name_**'**  
  지정한 서버에 설정할 옵션입니다. *option_name* 됩니다 **varchar (** 35 **)**, 기본값은 없습니다. *option_name* 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
@@ -66,7 +66,7 @@ sp_serveroption [@server = ] 'server'
 |**원격 데이터 정렬 사용**|원격 열의 데이터 정렬을 사용할지 로컬 서버의 데이터 정렬을 사용할지 결정합니다.<br /><br /> 하는 경우 **true**, 원격 열의 데이터 정렬이 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본 및 데이터 정렬에서 지정 된 **데이터 정렬 이름** 는 비-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본입니다.<br /><br /> 하는 경우 **false**, 분산된 쿼리에서 항상 로컬 서버의 기본 데이터 정렬을 사용 하는 동안 **데이터 정렬 이름** 원격 열의 데이터 정렬은 무시 됩니다. 기본값은 **false**입니다. (합니다 **false** 값에 사용 되는 데이터 정렬 의미 체계와 호환 되 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0입니다.)|  
 |**원격 프로시저 트랜잭션 승격**|이 옵션을 사용하여 MS DTC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator) 트랜잭션을 통해 서버 간 프로시저 동작을 보호할 수 있습니다. 이 옵션이 TRUE 인 경우 (또는) 분산된 트랜잭션을 시작 하 고 MS DTC를 사용해이 트랜잭션을 참여 시킵니다 원격 저장된 프로시저를 호출 합니다. 원격 저장 프로시저를 호출하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 트랜잭션 주관자이며 트랜잭션의 완료를 제어합니다. 이후 연결에 대해 COMMIT TRANSACTION 또는 ROLLBACK TRANSACTION 문을 실행하면 제어 인스턴스는 MS DTC에서 관련 컴퓨터 간의 분산 트랜잭션 완료를 관리하도록 요청합니다.<br /><br /> [!INCLUDE[tsql](../../includes/tsql-md.md)] 분산 트랜잭션이 시작되면 연결된 서버로 정의된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 인스턴스에 대해 원격 저장 프로시저를 호출할 수 있습니다. 연결된 서버를 모두 [!INCLUDE[tsql](../../includes/tsql-md.md)] 분산 트랜잭션에 참여시키고 MS DTC는 각 연결된 서버에 대해 트랜잭션이 완료되도록 합니다.<br /><br /> 이 옵션을 FALSE(또는 OFF)로 설정하면 연결된 서버에서 원격 프로시저를 호출하는 동안에는 로컬 트랜잭션이 분산 트랜잭션으로 승격되지 않습니다.<br /><br /> 서버 간 프로시저 호출을 수행하기 전에 트랜잭션이 이미 분산 트랜잭션인 경우 이 옵션은 영향을 주지 않습니다. 연결된 서버에 대한 프로시저 호출은 동일 분산 트랜잭션에서 실행됩니다.<br /><br /> 서버 간 프로시저 호출을 수행하기 전에 연결에 활성 상태인 트랜잭션이 없는 경우 이 옵션은 영향을 주지 않습니다. 그런 다음 활성 상태의 트랜잭션 없이 연결된 서버에 대해 프로시저가 실행됩니다.<br /><br /> 이 옵션의 기본값은 TRUE(또는 ON)입니다.|  
   
- [  **@optvalue =**] **'***option_value***'**  
+ [  **@optvalue =**] **'**_option_value_**'**  
  지정 여부는 *option_name* 사용할지 (**TRUE** 또는 **에서**) 또는 사용 안 함 (**FALSE** 또는 **해제**). *option_value* 됩니다 **varchar (** 10 **)**, 기본값은 없습니다.  
   
  *option_value* 음수가 아닌 정수를 수 있습니다 합니다 **연결 시간 제한** 하 고 **쿼리 제한 시간** 옵션입니다. 에 대 한 합니다 **데이터 정렬 이름** 옵션인 *option_value* 데이터 정렬 이름 또는 NULL 일 수 있습니다.  

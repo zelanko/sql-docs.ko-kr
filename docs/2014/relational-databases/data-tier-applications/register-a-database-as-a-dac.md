@@ -20,12 +20,12 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0411281173339c46eb629dc6aad757337b3c41c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1b33e0d78dfe308c537ea5297b55415bce304474
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761455"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129421"
 ---
 # <a name="register-a-database-as-a-dac"></a>DAC로 데이터베이스 등록
   하나를 사용 합니다 **데이터 계층 응용 프로그램 등록 마법사** 또는 Windows PowerShell 및 합니다 DAC정의등록하는기존데이터베이스의개체를설명하는데이터계층응용프로그램(DAC)정의스크립팅`msdb` 시스템 데이터베이스 (**마스터** 에서 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
@@ -101,7 +101,7 @@ ms.locfileid: "52761455"
  **취소** - DAC를 등록하지 않고 마법사를 종료합니다.  
   
 ### <a name="validating-objects"></a>개체 유효성 확인  
- **.**  *.* **를 실행할 수 없습니다.** *ObjectName* **를 실행할 수 없습니다.** - 마법사가 검색된 개체의 종속성을 확인하고 모두 DAC에 유효한 개체인지 확인할 때 진행률 표시줄을 표시합니다. *SchemaName ***.*** ObjectName*은 현재 확인 중인 개체가 무엇인지 식별합니다.  
+ **.**  _._ **를 실행할 수 없습니다.** _ObjectName_ **를 실행할 수 없습니다.** - 마법사가 검색된 개체의 종속성을 확인하고 모두 DAC에 유효한 개체인지 확인할 때 진행률 표시줄을 표시합니다. _SchemaName_**.**_ObjectName_ 은 현재 확인 중인 개체가 무엇인지 식별합니다.  
   
  **\< 이전** -반환 하는 **속성 설정** 페이지 항목을 변경 하려면.  
   

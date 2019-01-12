@@ -23,12 +23,12 @@ ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 13466b4d9d5cc497830906f144e95f044442e318
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 101ac93ba885ebcd571387785aa814ddef873619
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197313"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129893"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>미디어 세트, 미디어 패밀리 및 백업 세트(SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 처음 접하는 사용자를 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원의 기본적인 백업 미디어 관련 용어를 소개합니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 백업 미디어를 사용하는 형식, 백업 미디어와 백업 디바이스 간의 관계, 백업 미디어에서의 백업 구성, 미디어 세트 및 미디어 패밀리에 대한 몇 가지 고려 사항에 대해 설명합니다. 이 항목에서는 백업 미디어를 처음 사용하기 전에 초기화하거나 포맷하는 방법과 기존 미디어 세트를 새로운 미디어 세트로 교체하는 방법, 미디어 세트의 기존 백업 세트를 덮어쓰는 방법 및 미디어 세트에 새로운 백업 세트를 추가하는 방법에 대해서도 설명합니다.  
@@ -106,7 +106,7 @@ ms.locfileid: "48197313"
 ### <a name="backup-sets"></a>백업 세트  
  백업 작업에 성공하면 미디어 세트에 *백업 세트* 하나가 추가됩니다. 백업 세트는 백업이 속해 있는 미디어 세트와 관련해서 설명됩니다. 백업 미디어에 미디어 패밀리가 하나뿐이면 해당 패밀리에 전체 백업 세트가 포함됩니다. 백업 미디어에 미디어 패밀리가 여러 개 있으면 백업 세트가 여러 패밀리에 분산됩니다. 각 미디어에서 백업 세트를 설명하는 헤더가 백업 세트에 포함됩니다.  
   
- 에서는 다음 예제는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 이라는 미디어 세트를 만드는 문 `MyAdvWorks_MediaSet_1` 에 대 한는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 3 개의 테이프 드라이브일 백업 장치로 사용 하 여 데이터베이스:  
+ 다음 예에서는 테이프 드라이브 세 개를 백업 디바이스로 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스에 대해 `MyAdvWorks_MediaSet_1` 이라는 미디어 세트를 만드는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 문을 보여 줍니다.  
   
 ```  
 BACKUP DATABASE AdventureWorks2012  
@@ -140,7 +140,7 @@ WITH
   
  ![3개의 미디어 세트 테이프에 분산되어 있는 두 번째 백업 세트](../../database-engine/media/bnr-mediaset-appendedto.gif "3개의 미디어 세트 테이프에 분산되어 있는 두 번째 백업 세트")  
   
- 백업을 복원할 때 FILE 옵션을 사용하여 사용할 백업을 지정할 수 있습니다. 다음 예제에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 전체 데이터베이스 백업을 복원한 후 동일한 미디어 세트에서 차등 데이터베이스 백업을 복원하는 경우 FILE **=***backup_set_file_number* 절을 사용하는 방법을 보여줍니다. 미디어 세트는 `\\.\tape0`, `tape1`및 `tape2`의 테이프 드라이브에 있는 세 개의 백업 테이프를 사용합니다.  
+ 백업을 복원할 때 FILE 옵션을 사용하여 사용할 백업을 지정할 수 있습니다. 다음 예제에서는 **=**_데이터베이스의 전체 데이터베이스 백업을 복원한 후 동일한 미디어 세트에서 차등 데이터베이스 백업을 복원하는 경우 FILE_ backup_set_file_number [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 절의 사용을 보여 줍니다. 미디어 세트는 `\\.\tape0`, `tape1`및 `tape2`의 테이프 드라이브에 있는 세 개의 백업 테이프를 사용합니다.  
   
 ```  
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  
@@ -219,7 +219,7 @@ GO
  테이프 헤더는 현재 위치에 두어도 됩니다. 디스크 백업 미디어의 경우 백업 작업에서 지정하여 백업 디바이스에서 사용하는 파일만 덮어쓰므로 디스크의 다른 파일에는 영향을 주지 않습니다. 백업을 덮어쓸 때 기존의 미디어 헤더는 모두 보존되며 새 백업은 백업 디바이스의 첫 번째 백업으로 생성됩니다. 기존에 미디어 헤더가 없으면 관련된 미디어 이름과 미디어 설명이 있는 유효한 미디어 헤더가 자동으로 작성됩니다. 기존의 미디어 헤더가 잘못되었으면 백업 작업이 종료됩니다. 미디어가 비어 있으면 지정된 MEDIANAME, MEDIAPASSWORD 및 MEDIADESCRIPTION(있는 경우)으로 새 미디어 헤더가 생성됩니다.  
   
 > [!IMPORTANT]  
->  부터는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], MEDIAPASSWORD 옵션은 백업을 만드는 데 중단 됩니다. 하지만 암호를 사용하여 만든 백업은 계속 복원할 수 있습니다.  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 MEDIAPASSWORD 옵션은 백업을 만드는 데 더 이상 사용되지 않습니다. 하지만 암호를 사용하여 만든 백업은 계속 복원할 수 있습니다.  
   
  백업 미디어가 다음 조건 중 하나를 만족하면 덮어쓰지 않습니다.  
   

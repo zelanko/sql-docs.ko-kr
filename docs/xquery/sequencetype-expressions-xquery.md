@@ -18,12 +18,12 @@ ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5f3f2dbe576fe95f89588354785b64bf444eb27b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 542cf5a0960e967d2bebb3889af0f03656004472
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661852"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124563"
 ---
 # <a name="sequencetype-expressions-xquery"></a>SequenceType 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Expression instance of SequenceType[Occurrence indicator]
   
  경우는 **?** 발생 표시를 지정 하지 않으면 `sequence of` 경우에만 True를 반환 합니다는 `Expression` 일치 항목을 입력 합니다 `Type` 지정 및 `Expression` 단일 반환 합니다.  
   
- **참고** 더하기 기호 (**+**)와 별표 (**\***) 발생 표시가 지원 되지 않습니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다.  
+ **참고** 더하기 기호 (**+**)와 별표 (**&#42;**) 발생 표시가 지원 되지 않습니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  다음 예제에서는 사용을 보여 합니다**인스턴스의** XQuery 연산자입니다.  
   
@@ -139,7 +139,7 @@ where ProductModelID=19
  쿼리에서 True를 반환합니다.  
   
 ### <a name="example-c"></a>예 3  
- 공용 구조체 유형을 사용 하는 경우는 `instance of` 식을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 제한이: 특히 요소나 특성 유형의 경우 구조체 형식 `instance of` 정확 하 게 형식을 확인할 수 있습니다. 따라서 SequenceType에 사용된 원자성 유형이 simpleType 계층에서 실제 식 유형의 최상위 부모가 아닐 경우 쿼리에서 False를 반환합니다. 즉, SequenceType에 지정된 원자성 유형은 anySimpleType의 직계 자식이어야 합니다. 형식 계층 구조에 대 한 자세한 내용은 참조 하세요. [XQuery의 형식 캐스트 규칙](../xquery/type-casting-rules-in-xquery.md)합니다.  
+ 공용 구조체 유형을 사용할 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 `instance of` 식에 제한 사항이 있습니다. 특히 요소나 특성의 유형이 공용 구조체 유형이면 `instance of`가 정확한 유형을 확인하지 못할 수도 있습니다. 따라서 SequenceType에 사용된 원자성 유형이 simpleType 계층에서 실제 식 유형의 최상위 부모가 아닐 경우 쿼리에서 False를 반환합니다. 즉, SequenceType에 지정된 원자성 유형은 anySimpleType의 직계 자식이어야 합니다. 형식 계층 구조에 대 한 자세한 내용은 참조 하세요. [XQuery의 형식 캐스트 규칙](../xquery/type-casting-rules-in-xquery.md)합니다.  
   
  다음 쿼리 예에서는 아래의 작업을 수행합니다.  
   

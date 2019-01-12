@@ -16,12 +16,12 @@ ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 059e47206d0d2dd3a1668c754539c4e93e47ad78
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7de6c03b133746156f414687fd661f70b40e842e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822067"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128120"
 ---
 # <a name="spdropmergefilter-transact-sql"></a>sp_dropmergefilter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +40,13 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_게시_**'**  
  게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@article=**] **'***문서***'**  
+ [  **@article=**] **'**_문서_**'**  
  아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@filtername=**] **'***filtername***'**  
+ [  **@filtername=**] **'**_filtername_**'**  
  삭제할 필터의 이름입니다. *filtername* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [  **@force_invalidate_snapshot=** ] *force_invalidate_snapshot*  

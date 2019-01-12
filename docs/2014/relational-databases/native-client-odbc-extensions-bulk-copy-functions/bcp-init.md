@@ -18,12 +18,12 @@ ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13bafcd55e2e6cf95dec92e5ad2feeda20dde8f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d482ac020aaaf5ac8f029306441c3e9979f4379
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125473"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131173"
 ---
 # <a name="bcpinit"></a>bcp_init
   대량 복사 작업을 초기화합니다.  
@@ -60,7 +60,7 @@ eDirection
   
  하는 경우 *eDirection* DB_OUT 이면 됩니다 *szTable* 데이터베이스 뷰의 이름일 수도 있습니다.  
   
- 하는 경우 *eDirection* 이 DB_OUT이 고 SELECT 문을 사용 하 여 지정 됩니다 [bcp_control](bcp-control.md) 하기 전에 [bcp_exec](bcp-exec.md) 이라고 합니다 **bcp_init * szTable*NULL로 설정 해야 합니다.  
+ 하는 경우 *eDirection* 이 DB_OUT이 고 SELECT 문을 사용 하 여 지정 됩니다 [bcp_control](bcp-control.md) 하기 전에 [bcp_exec](bcp-exec.md) 가 호출 **bcp_init** _szTable_ NULL로 설정 해야 합니다.  
   
  *szDataFile*  
  복사의 원본 또는 대상이 될 사용자 파일의 이름입니다. 데이터를 사용 하 여 변수에서 직접 복사 되는 경우 [bcp_sendrow](bcp-sendrow.md)설정 *szDataFile* NULL로 합니다.  

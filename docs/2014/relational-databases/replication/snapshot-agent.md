@@ -14,12 +14,12 @@ ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a5f9f869c076365a4c1f10a9ffacbf4a3cbae009
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7cccde764edca2b5552fb22490d971fe095c707e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777555"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126873"
 ---
 # <a name="snapshot-agent"></a>스냅숏 에이전트
   **스냅숏 에이전트** 대화 상자는 상태, 기록, 정보 메시지, 모든 오류 메시지 등 스냅숏 에이전트에 대한 자세한 정보를 표시합니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "52777555"
   
 ## <a name="see-also"></a>관련 항목  
  [복제 모니터 시작](monitor/start-the-replication-monitor.md)   
- [게시 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md)   
+ [정보 및 복제 모니터를 사용 하 여 수행할 작업 보기](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [복제 모니터링](monitoring-replication.md)   
  [복제 에이전트 개요](agents/replication-agents-overview.md)  
   

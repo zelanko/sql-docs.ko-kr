@@ -12,12 +12,12 @@ ms.assetid: 17ac0e99-8490-46b0-8515-e5012bc9e0cf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 41927fa4008731c1ff047189735a5e8a50d6165a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 15011717f0f2d5ece6666c30aef72eade0faabb3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751215"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127183"
 ---
 # <a name="add-objects"></a>개체 추가
   원하는 개체 유형만 개체 선택 대화 상자에 표시되도록 제한합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "52751215"
  **선택한 유형의 모든 개체**  
  기본 목록에 포함할 개체 유형을 지정할 수 있는 **개체 유형 선택** 대화 상자를 엽니다.  
   
- **서버***\<서버 이름 >*  
+ **서버**_\<서버 이름 >_  
  지정한 서버의 해당 개체를 모두 추가합니다. **로그인 - 신규** 대화 상자와 같은 서버 범위 대화 상자에서 여는 경우에만 나타납니다.  
   
  **스키마에 속하는 모든 개체**  

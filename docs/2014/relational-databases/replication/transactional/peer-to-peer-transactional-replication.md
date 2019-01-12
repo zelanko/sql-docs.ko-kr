@@ -16,12 +16,12 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9513e58afc764fe8df5719ad03ac575a2632da6b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 133d44d233abdcffe7893ce29be5b462f4b16524
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770085"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127198"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>@loopback_detection
   피어 투 피어 복제는 *노드*라고도 하는 여러 서버 인스턴스에 걸쳐 데이터 복사본을 유지 관리함으로써 확장성 및 고가용성 솔루션을 제공합니다. 트랜잭션 복제를 기반으로 구축된 피어 투 피어 복제는 트랜잭션 측면에서 일관적인 변경 내용을 거의 실시간으로 전파합니다. 따라서 읽기 작업을 확장해야 하는 애플리케이션은 클라이언트의 읽기 작업을 여러 노드에 배포할 수 있습니다. 여러 노드의 데이터가 거의 실시간으로 유지 관리되므로 피어 투 피어 복제는 데이터 중복을 제공하며 이러한 중복은 데이터의 가용성을 높여 줍니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "52770085"
  피어 투 피어 복제에는 피어 투 피어 토폴로지에서 충돌을 검색할 수 있는 옵션이 포함됩니다. 이 옵션을 사용하면 일관성 없는 애플리케이션 동작, 업데이트 손실과 같은 검색되지 않는 충돌로 인해 발생하는 문제를 방지할 수 있습니다. 이 옵션을 설정하면 기본적으로 충돌을 일으키는 변경이 배포 에이전트 오류를 유발하는 치명적 오류로 취급됩니다. 충돌이 발생하면 충돌이 수동으로 해결되고 데이터가 토폴로지 전체에서 일관성을 가질 때까지 토폴로지가 일관성 없는 상태로 유지됩니다. 자세한 내용은 [Conflict Detection in Peer-to-Peer Replication](peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)을(를) 참조하세요.  
   
 > [!NOTE]  
->  데이터 불일치의 가능성을 배제하려면 충돌 검색이 설정되어 있는 경우라도 피어 투 피어 토폴로지에서 충돌이 발생하지 않도록 해야 합니다. 특정 행에 대한 쓰기 작업이 하나의 노드에서만 수행되도록 하려면 데이터에 액세스하여 변경하는 애플리케이션에서 삽입, 업데이트 및 삭제 작업을 분할해야 합니다. 이렇게 분할하면 한 노드에서 발생한 지정된 행에 대한 수정이 다른 노드에서 해당 행을 수정하기 전에 토폴로지의 모든 노드와 동기화됩니다. 애플리케이션에 정교한 충돌 검색 및 해결 기능이 필요한 경우 병합 복제를 사용하세요. 자세한 내용은 [병합 복제](../merge/merge-replication.md) 및 [병합 복제 충돌 감지 및 해결](../merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)을 참조하세요.  
+>  데이터 불일치의 가능성을 배제하려면 충돌 검색이 설정되어 있는 경우라도 피어 투 피어 토폴로지에서 충돌이 발생하지 않도록 해야 합니다. 특정 행에 대한 쓰기 작업이 하나의 노드에서만 수행되도록 하려면 데이터에 액세스하여 변경하는 애플리케이션에서 삽입, 업데이트 및 삭제 작업을 분할해야 합니다. 이렇게 분할하면 한 노드에서 발생한 지정된 행에 대한 수정이 다른 노드에서 해당 행을 수정하기 전에 토폴로지의 모든 노드와 동기화됩니다. 애플리케이션에 정교한 충돌 검색 및 해결 기능이 필요한 경우 병합 복제를 사용하세요. 자세한 내용은 [병합 복제](../merge/merge-replication.md) 및 [병합 복제 충돌 감지 및 해결](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
   
 ## <a name="peer-to-peer-topologies"></a>피어 투 피어 토폴로지  
  다음 시나리오에서는 피어 투 피어 복제의 일반적 사용을 설명합니다.  
@@ -171,6 +171,6 @@ ms.locfileid: "52770085"
 ## <a name="see-also"></a>관련 항목  
  [피어 투 피어 토폴로지 관리&#40;복제 Transact-SQL 프로그래밍&#41;](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [스냅숏 및 트랜잭션 복제의 백업 및 복원을 위한 전략](../administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
- [트랜잭션 복제에 대한 게시 유형](publication-types-for-transactional-replication.md)  
+ [트랜잭션 복제에 대한 게시 유형](transactional-replication.md)  
   
   

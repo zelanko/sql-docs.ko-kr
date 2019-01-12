@@ -13,12 +13,12 @@ ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 71c0b884fea0ceab1da3beba770414e1af14b74a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 23ad4cd92d186f43fb1a9dd81e1dbb0727170367
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776445"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131113"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>스냅숏으로 구독 초기화
   게시가 생성된 후 일반적으로 초기 스냅숏이 생성되어 스냅숏 폴더로 복사됩니다. 이 작업은 새 게시 마법사에서 만든 병합 게시에 대해 기본적으로 수행됩니다. 스냅숏은 그런 다음 구독의 초기 동기화 중 배포 에이전트(트랜잭션 및 스냅숏 게시의 경우) 또는 병합 에이전트(병합 게시의 경우)에 의해 구독자에 적용됩니다. 스냅숏 프로세스는 게시 유형에 따라 달라집니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "52776445"
   
 -   이동식 미디어에 스토리지하거나 느린 네트워크를 통해 전송하기 위해 스냅숏을 압축합니다. 자세한 내용은 [Compressed Snapshots](compressed-snapshots.md)을 참조하세요.  
   
--   스냅숏 적용 전후에 Transact-SQL 스크립트를 실행합니다. 자세한 내용은 [스냅숏 적용 전후에 스크립트 실행](execute-scripts-before-and-after-the-snapshot-is-applied.md)을 참조하세요.  
+-   스냅숏 적용 전후에 Transact-SQL 스크립트를 실행합니다. 자세한 내용은 [스냅숏 적용 전후에 스크립트 실행](snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)을 참조하세요.  
   
 -   FTP(파일 전송 프로토콜)를 사용하여 스냅숏 파일을 전송합니다. 자세한 내용은 [FTP를 통해 스냅숏 전송](transfer-snapshots-through-ftp.md)을 참조하세요.  
   

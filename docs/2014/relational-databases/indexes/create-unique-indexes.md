@@ -17,12 +17,12 @@ ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 52f677c99b72de5a4342d534bddcd216027e4e0d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cf786e48e6e76ca6a16a0a50a954a2a07d3f7a66
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540916"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127233"
 ---
 # <a name="create-unique-indexes"></a>고유 인덱스 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 테이블에 고유 인덱스를 만드는 방법에 대해 설명합니다. 고유 인덱스는 인덱스 키에 중복 값을 포함할 수 없으므로 테이블의 모든 행이 고유합니다. UNIQUE 제약 조건을 만드는 것과 제약 조건의 영향을 받지 않는 고유 인덱스를 만드는 것에는 큰 차이가 없습니다. 데이터 유효성 검사는 이와 동일한 방식으로 수행됩니다. 쿼리 최적화 프로그램에서는 제약 조건에 따라 생성된 고유 인덱스와 수동으로 만든 고유 인덱스를 동일하게 취급합니다. 하지만 열에 UNIQUE 제약 조건을 만들면 인덱스의 목표가 명확해집니다. UNIQUE 제약 조건에 대한 자세한 내용은 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)을 참조하세요.  
@@ -124,7 +124,7 @@ ms.locfileid: "52540916"
   
 13. **닫기**를 클릭합니다.  
   
-14. **파일** 메뉴에서 **Save***table_name*을 클릭합니다.  
+14. **파일** 메뉴에서 _table name_ **저장**을 클릭합니다.  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>개체 탐색기를 사용하여 고유 인덱스 만들기  
   
@@ -142,7 +142,7 @@ ms.locfileid: "52540916"
   
 7.  **인덱스 키 열** 아래에서 **추가...** 를 클릭합니다.  
   
-8.  *****table_name에서 열 선택* 대화 상자에서 고유 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
+8.  **table_name**_에서 열 선택_ 대화 상자에서 고유 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
   
 9. **확인**을 클릭합니다.  
   

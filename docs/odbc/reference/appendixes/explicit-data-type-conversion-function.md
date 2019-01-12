@@ -15,12 +15,12 @@ ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc229e2bef69069ba1fc5f8cb3077e592d959a55
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 77cb69877324b36120b3a277688bb1ad737f5c4d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521926"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129823"
 ---
 # <a name="explicit-data-type-conversion-function"></a>명시적 데이터 형식 변환 함수
 명시적 데이터 형식 변환이 SQL 데이터 형식 정의 기준으로 지정 됩니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "52521926"
   
  형식의 합니다 **변환** 함수는:  
   
- **변환 (** *value_exp*하십시오 _data_type_**)**  
+ **변환 (** _value_exp_하십시오 _data_type_**)**  
   
  함수에 지정 된 값을 반환 합니다. *value_exp* 지정 된 변환 *data_type*여기서 *data_type* 다음 키워드 중 하나입니다.  
   

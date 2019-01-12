@@ -16,12 +16,12 @@ ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dcbe4835a333e6b1b1c0881ccd1833c4e5606639
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5def842b7b65523d207433680ebd017536b7f2aa
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370415"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130953"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Kerberos 연결의 서비스 사용자 이름 등록
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 Kerberos 인증을 사용하려면 다음 조건 중 하나에 해당해야 합니다.  
@@ -71,7 +71,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **명명된 인스턴스**  
   
--   *MSSQLSvc/FQDN*: [*포트***|*** instancename*] 여기서:  
+-   *MSSQLSvc/FQDN*:[_port_**|**_instancename_], 여기서:  
   
     -   *MSSQLSvc* 는 등록할 서비스입니다.  
   
@@ -83,7 +83,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **기본 인스턴스**  
   
--   *MSSQLSvc/FQDN*:*포트***|*** MSSQLSvc/FQDN*여기서:  
+-   *MSSQLSvc/FQDN*:_port_**|**_MSSQLSvc/FQDN_, 여기서:  
   
     -   *MSSQLSvc* 는 등록할 서비스입니다.  
   

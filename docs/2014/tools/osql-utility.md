@@ -23,12 +23,12 @@ ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33b7d8f60bfef89aef49733cf193f8aad2678ee7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ebcb8171ef63411fface757d2e6000e95eec6822
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808875"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126753"
 ---
 # <a name="osql-utility"></a>osql 유틸리티
   **osql** 유틸리티를 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 문, 시스템 프로시저 및 스크립트 파일을 입력할 수 있습니다. 이 유틸리티에서는 ODBC를 사용하여 서버와 통신합니다.  
@@ -67,10 +67,10 @@ ms.locfileid: "52808875"
 > [!NOTE]  
 >  네트워크에서 브로드캐스팅의 특성으로 인해 **osql** 은 모든 서버로부터 때맞춰 응답을 받지 못할 수 있습니다. 그러므로 반환되는 서버 목록은 이 옵션을 호출할 때마다 다를 수 있습니다.  
   
- **-U** *login_id*  
+ **-U** _login_id_  
  사용자 로그인 ID입니다. 로그인 ID는 대/소문자를 구분합니다.  
   
- **-P** *password*  
+ **-P** _password_  
  사용자가 지정하는 암호입니다. **-P** 옵션을 사용하지 않으면 **osql** 은 암호를 묻는 메시지를 표시합니다. 암호를 입력하지 않고 명령 프롬프트의 마지막에 **-P** 옵션을 사용하면 **osql** 은 기본 암호인 NULL을 사용합니다.  
   
 > [!IMPORTANT]  
@@ -93,31 +93,31 @@ C:\>osql
  **-E**  
  암호를 요구하지 않고 트러스트된 연결을 사용합니다.  
   
- **-S** *server_name*[ **\\***instance_name*]  
- 연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 인스턴스를 지정합니다. 해당 서버 컴퓨터에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하려면 *server_name***\\***instance_name*을 지정합니다. 서버를 지정하지 않으면 **osql** 은 로컬 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 기본 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터에서 **osql** 을 실행할 때 이 옵션이 필요합니다.  
+ **-S** _server_name_[ **\\**_instance_name_]  
+ 연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 인스턴스를 지정합니다. 해당 서버 컴퓨터에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 _인스턴스에 연결하려면_**\\**_server_name_ instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 지정합니다. 서버를 지정하지 않으면 **osql** 은 로컬 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 기본 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터에서 **osql** 을 실행할 때 이 옵션이 필요합니다.  
   
- **-H** *wksta_name*  
+ **-H** _wksta_name_  
  워크스테이션 이름입니다. 워크스테이션 이름은 **sysprocesses.hostname** 에 저장되고 **sp_who**에 의해 표시됩니다. 이 옵션을 지정하지 않으면 현재 컴퓨터 이름이 사용됩니다.  
   
- **-d** *db_name*  
+ **-d** _db_name_  
  *osql* 을 시작할 때 USE **db_name**문을 실행합니다.  
   
- **-l** *time_out*  
+ **-l** _time_out_  
  **osql** 로그인 제한 시간(초)을 지정합니다. 기본 **osql** 로그인 제한 시간은 8초입니다.  
   
- **-t** *time_out*  
+ **-t** _time_out_  
  명령 제한 시간(초)을 지정합니다. *time_out* 값을 지정하지 않으면 명령이 무기한 실행됩니다.  
   
- **-h** *headers*  
+ **-h** _headers_  
  열 머리글 사이에 출력할 행의 수를 지정합니다. 기본적으로 각 쿼리 결과 집합마다 머리글을 한 번 출력합니다. 머리글을 출력하지 않으려면 -1을 사용합니다. -1을 사용하는 경우는 **-h -1**이 아니라 **-h-1**과 같이 매개 변수와 설정 사이에 공백이 없어야 합니다.  
   
- **-s** *col_separator*  
+ **-s** _col_separator_  
  열 구분 기호 문자를 지정합니다. 기본값은 공백입니다. 운영 체제에 대 한 특별 한 의미가 있는 문자를 사용 하려면 (예를 들어 |; & \< >), 큰따옴표 (")로 묶으십시오.  
   
- **-w** *column_width*  
+ **-w** _column_width_  
  출력에 사용할 화면의 너비를 설정할 수 있습니다. 기본값은 80자입니다. 출력 줄이 최대 화면 너비에 도달하면 여러 줄로 나뉘어집니다.  
   
- **-a** *packet_size*  
+ **-a** _packet_size_  
  다른 크기의 패킷을 요청할 수 있습니다. 유효한 *packet_size* 값은 512에서 65535까지입니다. 기본값 **osql** 은 서버 기본값입니다. 패킷 크기를 늘리면 GO 명령 사이에 SQL 문이 많은 크기가 큰 스크립트를 실행할 때 성능이 향상됩니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 의 테스트 결과에 의하면 일반적으로 8192를 설정했을 때 대량 복사 작업이 가장 빨리 수행됩니다. 더 큰 패킷 크기를 요청할 수 있지만 요청한 크기를 허용하지 않으면 **osql** 이 서버 기본값을 사용합니다.  
   
  **-e**  
@@ -126,16 +126,16 @@ C:\>osql
  **-I**  
  QUOTED_IDENTIFIER 연결 옵션을 설정합니다.  
   
- **-D** *data_source_name*  
+ **-D** _data_source_name_  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]용 ODBC 드라이버를 사용하여 정의한 ODBC 데이터 원본에 연결합니다. **osql** 연결은 데이터 원본에 지정한 옵션을 사용합니다.  
   
 > [!NOTE]  
 >  다른 드라이버에서 정의한 데이터 원본에서는 이 옵션이 적용되지 않습니다.  
   
- **-c** *cmd_end*  
+ **-c** _cmd_end_  
  명령 종료 문자를 지정합니다. 기본적으로 줄에 GO만 단독으로 입력하면 명령이 종료되어 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로 보내집니다. 명령 종료 문자를 다시 설정할 때는 앞에 백슬래시를 지정하는지 여부에 상관없이 [!INCLUDE[tsql](../includes/tsql-md.md)] 예약어 또는 운영 체제와 연관된 특별한 의미를 가진 문자를 사용하지 마십시오.  
   
- **-q "** *query* **"**  
+ **-q "** _query_ **"**  
  **osql** 이 시작될 때 쿼리를 실행하지만 쿼리가 완료되더라도 **osql** 을 끝내지 않습니다. 쿼리 문에는 GO를 포함할 수 없습니다. 일괄 처리에서 쿼리를 실행하면 %변수 또는 환경 %변수%를 사용할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 ```  
@@ -145,22 +145,22 @@ osql -E -q "select name, object_id from %table%"
   
  쿼리는 큰따옴표로 묶고 쿼리 안에 포함되는 모든 것은 작은따옴표로 묶습니다.  
   
- **-Q"** *query* **"**  
+ **-Q"** _query_ **"**  
  쿼리를 실행하고 바로 **osql**을 끝냅니다. 쿼리는 큰따옴표로 묶고 쿼리 안에 포함되는 모든 것은 작은따옴표로 묶습니다.  
   
  **-n**  
  입력 줄에서 번호 및 프롬프트 기호(>)를 제거합니다.  
   
- **-m** *error_level*  
+ **-m** _error_level_  
  오류 메시지 표시를 사용자 지정합니다. 지정한 심각도 이상의 오류에 대한 메시지 번호, 상태 및 오류 수준이 표시됩니다. 지정한 수준보다 낮은 심각도의 오류에 대해서는 표시되지 않습니다. **-1** 을 사용하여 모든 머리글을 메시지(정보 메시지도 포함)와 함께 반환합니다. **-1**을 사용하는 경우에는 **-m -1**이 아니라 **-m-1**과 같이 매개 변수와 설정 사이에 공백이 없어야 합니다.  
   
  **-r** { **0**| **1**}  
  메시지 출력을 화면으로 리디렉션합니다(**stderr**). 매개 변수를 지정하지 않거나 **0**을 지정하면 심각도가 11 이상인 오류 메시지만 리디렉션됩니다. **1**을 지정하면 "print"를 포함하는 모든 메시지 출력이 리디렉션됩니다.  
   
- **-i** *input_file*  
+ **-i** _input_file_  
  SQL 문 또는 저장 프로시저의 일괄 처리가 포함된 파일을 나타냅니다. **\<**-i **대신 보다 작음(**) 비교 연산자를 사용할 수 있습니다.  
   
- **-o** *output_file*  
+ **-o** _output_file_  
  **osql**에서 출력을 받는 파일을 나타냅니다. **>**-o **대신 보다 큼(**) 비교 연산자를 사용할 수 있습니다.  
   
  *input_file* 이 유니코드가 아니고 **-u** 가 지정되지 않은 경우 *output_file* 이 OEM 형식으로 지정됩니다. *input_file* 이 유니코드이거나 **-u** 가 지정된 경우에는 *output_file* 이 유니코드 형식으로 지정됩니다.  
@@ -253,7 +253,7 @@ osql -E -i titles.qry -o titles.res
 > [!IMPORTANT]  
 >  가능하면 **-E**옵션(신뢰할 수 있는 연결)을 사용합니다.  
   
- **osql**을 대화형으로 사용하면 **:r***file_name*을 지정하여 운영 체제 파일을 명령 버퍼로 읽을 수 있습니다. 그러면 *file_name* 의 SQL 스크립트가 직접 서버에 한 번의 일괄 처리로 보내집니다.  
+ **osql** 을 대화형으로 사용하면 **:r**_file_name_을 지정하여 운영 체제 파일을 명령 버퍼로 읽을 수 있습니다. 그러면 *file_name* 의 SQL 스크립트가 직접 서버에 한 번의 일괄 처리로 보내집니다.  
   
 > [!NOTE]  
 >  **osql**을 사용할 때 일괄 처리 구분 기호 GO가 SQL 스크립트 파일에 나타나면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 이를 구문 오류로 처리합니다.  

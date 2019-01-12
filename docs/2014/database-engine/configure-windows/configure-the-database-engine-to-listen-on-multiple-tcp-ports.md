@@ -18,12 +18,12 @@ ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5d5195e3c1d7e3b7164eba42ec142adb76a66fc1
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: c5f3c354a36f5a3a62120ecc40a815420393648c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640124"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124193"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성
   이 항목에서는 SQL Server 구성 관리자를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 여러 TCP 포트로 수신하도록 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 구성하는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 TCP/IP가 설정된 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 IP 주소와 TCP 포트 번호로 구성된 연결 지점에서 들어오는 연결을 수신합니다. 다음 절차에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 추가 TCP 포트에서 수신할 수 있도록 TDS(Tabular Data Stream) 엔드포인트를 만듭니다.  
@@ -74,9 +74,9 @@ ms.locfileid: "52640124"
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>추가 TCP 포트로 수신하도록 SQL Server 데이터베이스 엔진을 구성하려면  
   
-1.  SQL Server 구성 관리자에서 **SQL Server 네트워크 구성**을 확장한 다음, *****<instance_name>에 대한 프로토콜*을 클릭합니다.  
+1.  SQL Server 구성 관리자에서 **SQL Server 네트워크 구성**을 확장한 다음 _<instance_name>_**에 대한 프로토콜**을 클릭합니다.  
   
-2.  *****<instance_name>에 대한 프로토콜*을 확장한 다음, **TCP/IP**를 클릭합니다.  
+2.  _<instance_name>_**에 대한 프로토콜**을 확장한 다음 **TCP/IP**를 클릭합니다.  
   
 3.  오른쪽 창에서 설정하려는 해제된 각 IP 주소를 마우스 오른쪽 단추로 클릭한 다음 **설정**을 클릭합니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "52640124"
   
 6.  왼쪽 창에서 **SQL Server 서비스**를 클릭하고  
   
-7.  오른쪽 창에서 *SQL Server***<instance_name>* 을 마우스 오른쪽 단추로 클릭한 다음, **다시 시작**을 클릭합니다.  
+7.  오른쪽 창에서 **SQL Server**_<instance_name>_ 을 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 클릭합니다.  
   
      [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 다시 시작하면 오류 로그에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 수신 중인 포트 목록이 표시됩니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "52640124"
     sqlcmd -SACCT,1500  
     ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [CREATE ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   
  [DROP ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-endpoint-transact-sql)   
  [GRANT 엔드포인트 사용 권한 &#40;Transact-SQL &#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   

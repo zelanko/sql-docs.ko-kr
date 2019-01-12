@@ -12,26 +12,21 @@ ms.assetid: 0dc485a0-5a50-41eb-a29d-f2b2fb920174
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 19faa0690069d6c16be7591547f4a242ac2469fc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f294ad3868670783d3010498dd0ba89e1e6a48be
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805588"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128393"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>복제 유지 관리 작업 실행(SQL Server Management Studio)
   복제는 다음 유지 관리 작업을 사용합니다.  
   
--   **데이터 유효성 검사에 실패한 구독 다시 초기화**  
-  
--   **에이전트 기록 정리: 배포**  
-  
--   **배포에 대한 복제 모니터링 리프레셔**  
-  
--   **복제 에이전트 점검**  
-  
--   **배포 기록 정리: 배포**  
-  
+-   **데이터 유효성 검사에 실패한 구독 다시 초기화**
+-   **에이전트 기록 정리: 배포**
+-   **배포에 대한 복제 모니터링 리프레셔**
+-   **복제 에이전트 점검**
+-   **배포 기록 정리: 배포**
 -   **만료된 구독 정리**  
   
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]의 **Jobs** 폴더와 복제 모니터의 **에이전트** 탭에서 이러한 작업을 시작하고 중지합니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](../monitor/start-the-replication-monitor.md)을 참조하세요. 동일한 폴더와 탭에서 사용 가능한 **작업 속성 - \<Job>** 대화 상자에서 각 작업의 속성을 보고 수정합니다.  
@@ -74,7 +69,7 @@ ms.locfileid: "52805588"
   
 ## <a name="see-also"></a>관련 항목  
  [복제 에이전트 시작 및 중지&#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
- [게시자에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [정보 및 복제 모니터를 사용 하 여 수행할 작업 보기](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [복제 에이전트 관리](../agents/replication-agent-administration.md)  
   
   

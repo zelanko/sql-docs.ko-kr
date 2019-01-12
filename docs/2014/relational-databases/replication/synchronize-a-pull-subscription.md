@@ -14,12 +14,12 @@ ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d64d1d589d00222c7c48b4a5516dba8bd1185406
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c8a7a607221599d599438352eab5add1cc94e5d7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752645"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125024"
 ---
 # <a name="synchronize-a-pull-subscription"></a>끌어오기 구독 동기화
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]복제 에이전트 [또는 RMO(복제 관리 개체)를 사용하여](agents/replication-agents-overview.md)에서 끌어오기 구독을 동기화하는 방법에 대해 설명합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "52752645"
 5.  **닫기**를 클릭합니다.  
   
 ##  <a name="ReplProg"></a> Replication Agents  
- 끌어오기 구독은 명령 프롬프트에서 적합한 복제 에이전트 실행 파일을 호출하여 프로그래밍 방식으로 요청 시 동기화할 수 있습니다. 호출한 복제 에이전트 실행 파일은 끌어오기 구독이 속한 게시 유형에 따라 달라집니다. 자세한 내용은 [Replication Agents](agents/replication-agents.md)을 참조하세요.  
+ 끌어오기 구독은 명령 프롬프트에서 적합한 복제 에이전트 실행 파일을 호출하여 프로그래밍 방식으로 요청 시 동기화할 수 있습니다. 호출한 복제 에이전트 실행 파일은 끌어오기 구독이 속한 게시 유형에 따라 달라집니다. 자세한 내용은 [Replication Agents](agents/replication-agents-overview.md)을 참조하세요.  
   
 > [!NOTE]  
 >  복제 에이전트는 명령 프롬프트에서 에이전트를 시작한 사용자의 Windows 인증 자격 증명을 사용하여 로컬 서버에 연결합니다. 이러한 자격 증명은 Windows 통합 인증을 사용하여 원격 서버에 연결할 때도 사용됩니다.  

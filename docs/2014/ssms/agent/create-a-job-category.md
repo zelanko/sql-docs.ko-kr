@@ -14,12 +14,12 @@ ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3254ae226a0ac955f2cf5b2f39077853ebf3e057
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d904f82c793acf6135f600e1ed5392bda96e1bb8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762785"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130853"
 ---
 # <a name="create-a-job-category"></a>작업 범주 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 관리 개체를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 작업 범주를 만드는 방법에 대해 설명합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "52762785"
   
 3.  **작업** 폴더를 마우스 오른쪽 단추로 클릭하고 **작업 범주 관리**를 선택합니다.  
   
-4.  **작업 범주 관리***server_name* 대화 상자에서 **추가**를 클릭합니다.  
+4.  **작업 범주 관리**_server_name_ 대화 상자에서 **추가**를 클릭합니다.  
   
 5.  새 대화 상자의 **이름** 상자에서 새 작업 범주의 이름을 입력합니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52762785"
   
 7.  **확인**을 클릭합니다.  
   
-8.  **작업 범주 관리***server_name* 대화 상자에서 **새로 고침**을 클릭하여 새 작업 범주가 활성 상태인지 확인합니다. 모든 항목이 예상대로 되어 있으면 이 대화 상자를 닫습니다.  
+8.  **작업 범주 관리**_server_name_ 대화 상자에서 **새로 고침** 을 클릭하여 새 작업 범주가 활성 상태인지 확인합니다. 모든 항목이 예상대로 되어 있으면 이 대화 상자를 닫습니다.  
   
  이러한 대화 상자에 대 한 자세한 내용은 참조 하세요. [작업 범주: 작업 범주 관리](job-categories-manage-job-categories.md) 하 고 [작업 범주 속성 및 새 작업 범주](job-categories-properties-new-job-category.md)합니다.  
   

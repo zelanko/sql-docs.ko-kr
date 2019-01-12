@@ -11,12 +11,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6e3d145290ac0fb416df91c99337d0e5dc2e30a5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 229674b624913c08b35637a106d9ced7e88e855d
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373225"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100888"
 ---
 # <a name="spatial-indexes-overview"></a>공간 인덱스 개요
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 공간 데이터 및 공간 인덱스를 지원합니다. *공간 인덱스* 는 공간 열을 인덱싱할 수 있는 확장된 인덱스의 유형입니다. 공간 열은 `geometry` 또는 `geography`와 같은 공간 데이터 형식의 데이터를 포함하는 테이블 열입니다.  
@@ -127,7 +127,7 @@ ms.locfileid: "53373225"
 >  [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 문의 USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 절을 사용하여 이 공간 분할(tessellation) 구성표를 명시적으로 지정할 수 있습니다.  
   
 ##### <a name="the-bounding-box"></a>경계 상자  
- 기하학적 데이터는 무한할 수 있는 평면을 차지합니다. 그러나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 공간 인덱스는 제한된 공간을 필요로 합니다. 분해를 위한 제한된 공간을 설정하려면 기하 도형 표 공간 분할 구성표에는 사각형 *경계 상자*가 필요합니다. 경계 상자 4 개의 좌표로 정의 되며 `(` *x-m ***,*** y-min은* `)` 하 고 `(` *x 최대값 ***,*** y 최대값*  `)`, 공간 인덱스의 속성으로 저장 됩니다. 이러한 좌표는 다음을 나타냅니다.  
+ 기하학적 데이터는 무한할 수 있는 평면을 차지합니다. 그러나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 공간 인덱스는 제한된 공간을 필요로 합니다. 분해를 위한 제한된 공간을 설정하려면 기하 도형 표 공간 분할 구성표에는 사각형 *경계 상자*가 필요합니다. 경계 상자 4 개의 좌표로 정의 되며 `(` _x-m_**를**_y-min은_ `)` 하 고 `(` _x 최대값_ **,**_y 최대값_`)`, 공간 인덱스의 속성으로 저장 됩니다. 이러한 좌표는 다음을 나타냅니다.  
   
 -   *x-min* 은 경계 상자의 왼쪽 아래 모퉁이의 X 좌표입니다.  
   
@@ -140,11 +140,11 @@ ms.locfileid: "53373225"
 > [!NOTE]  
 >  이러한 좌표는 [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 문의 BOUNDING_BOX 절에서 지정됩니다.  
   
- 합니다 `(` *x-min ***,*** y-min* `)` 하 고 `(` *x-max***를***y-max* `)` 배치 및 차원이 경계 상자 좌표에 따라 결정 됩니다. 경계 상자 외부의 공간은 번호가 0으로 매겨진 단일 셀로 처리됩니다.  
+ `(` _x-min_**를**_y-min_ `)` 하 고 `(` _x-max_**를** _y 최대값_ `)` 배치 및 차원이 경계 상자 좌표를 결정 합니다. 경계 상자 외부의 공간은 번호가 0으로 매겨진 단일 셀로 처리됩니다.  
   
  공간 인덱스는 경계 상자 내부의 공간을 분해합니다. 표 계층 구조 수준-1 표가 경계 상자를 채웁니다. 표 계층 구조에서 기하학적 개체를 배치하기 위해 공간 인덱스에서는 개체 좌표와 경계 상자 좌표를 비교합니다.  
   
- 다음 그림에 정의 되는 지점을 보여 줍니다 합니다 `(` *x-m ***,*** y-min은* `)` 하 고 `(` *x 최대값 ***,*** y 최대값* `)` 경계 상자 좌표입니다. 표 계층 구조의 최상위 수준이 4x4 표로 표시됩니다. 이해하기 쉽도록 하위 수준은 생략되었습니다. 경계 상자 외부의 공간은 0으로 표시됩니다. 'A' 개체는 부분적으로 상자 밖으로 뻗어 있고 'B' 개체는 완전히 셀 0의 상자 바깥쪽에 있습니다.  
+ 다음 그림에 정의 되는 지점을 보여 줍니다 합니다 `(` _x-m_**를**_y-min은_ `)` 하 고 `(` _x 최대값_  **하십시오**_y 최대값_ `)` 경계 상자 좌표입니다. 표 계층 구조의 최상위 수준이 4x4 표로 표시됩니다. 이해하기 쉽도록 하위 수준은 생략되었습니다. 경계 상자 외부의 공간은 0으로 표시됩니다. 'A' 개체는 부분적으로 상자 밖으로 뻗어 있고 'B' 개체는 완전히 셀 0의 상자 바깥쪽에 있습니다.  
   
  ![좌표 및 셀 0을 보여 주는 경계 상자](../../database-engine/media/spndx-bb-4x4-objects.gif "Bounding box showing coordinates and cell 0.")  
   

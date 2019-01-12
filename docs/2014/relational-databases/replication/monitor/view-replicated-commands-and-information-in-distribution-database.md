@@ -17,12 +17,12 @@ ms.assetid: 9c20acec-8fab-4483-b9c1-dfe3768f85dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 87cb1034499afe331f78278b43986528a78d9674
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2bff82764256eebb02141bf2e1fafd86dce026e4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758075"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125773"
 ---
 # <a name="view-replicated-commands-and-other-information-in-the-distribution-database-replication-transact-sql-programming"></a>배포 데이터베이스의 복제된 명령 및 기타 정보 보기(복제 Transact-SQL 프로그래밍)
   트랜잭션 복제를 사용하는 경우 트랜잭션 명령은 배포 에이전트에서 해당 명령을 모든 구독자에 전파하거나 구독자의 배포 에이전트에서 변경 내용을 끌어올 때까지 배포 데이터베이스에 저장됩니다. 이와 같이 배포 데이터베이스에서 보류 중인 명령은 복제 저장 프로시저를 사용하여 프로그래밍 방식으로 볼 수 있습니다. 자세한 내용은 [복제 저장 프로시저&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql)를 참조하세요.  
@@ -37,7 +37,7 @@ ms.locfileid: "52758075"
   
 2.  배포 데이터베이스의 배포자에서 [sp_browsereplcmds](/sql/relational-databases/system-stored-procedures/sp-browsemergesnapshotfolder-transact-sql)를 실행합니다. (옵션) **@article_id**을 참조하세요. (옵션) **@publisher_database_id**에 게시 데이터베이스의 ID를 지정합니다. 이 ID는 **sys.databases** 카탈로그 뷰의 [database_id](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 열에서 얻을 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [프로그래밍 방식으로 복제 모니터링](monitoring-replication-overview.md)  
+## <a name="see-also"></a>관련 항목  
+ [프로그래밍 방식으로 복제 모니터링](../monitoring-replication.md)  
   
   

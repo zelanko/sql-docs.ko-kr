@@ -13,12 +13,12 @@ ms.assetid: b324a80f-4319-4cb2-847b-1910c49d90e0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dea87fd8144863d8098c88ee9e038cebda0b0060
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 52eed41a8b44147c13ed8dbc63dbda46ed625f51
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816655"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129813"
 ---
 # <a name="security-role-requirements-for-replication"></a>Security Role Requirements for Replication
   복제는 사용자의 로그인이 매핑된 역할에 따라 해당 사용자가 수행할 수 있는 동작을 제한합니다. 복제는 **sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할 및 PAL(게시 액세스 목록)에 있는 로그인에 대해 특정 사용 권한을 허가합니다.  
@@ -49,8 +49,8 @@ ms.locfileid: "52816655"
 |복제 에이전트 유지 관리|해당 데이터베이스에 대한**db_owner** 데이터베이스 역할 또는 해당 서버에 대한 **sysadmin** 서버 역할<br /><br /> 에이전트가 **sysadmin** 역할의 사용자에 의해 생성되고 에이전트에 대해 프록시 계정을 지정하지 않은 경우 에이전트는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 계정의 컨텍스트에서 실행됩니다. 이 경우 **db_owner** 역할의 사용자는 에이전트와 연결된 작업을 수정할 수 없습니다.|  
 |복제 에이전트 시작 또는 중지|에이전트 작업의 소유자 또는 해당 서버에 대한 **sysadmin** 서버 역할|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [보안 및 보호&#40;복제&#41;](security-and-protection-replication.md)  
+ [SQL Server 복제 보안](view-and-modify-replication-security-settings.md)  
   
   

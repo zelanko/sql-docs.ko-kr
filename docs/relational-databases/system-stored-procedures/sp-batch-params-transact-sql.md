@@ -18,12 +18,12 @@ ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a670dcf5d011bf30f7196d04b3338d05d6095ee5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a759490fdd2306d7fecfd34484708e5c24970217
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661102"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126843"
 ---
 # <a name="spbatchparams-transact-sql"></a>sp_batch_params(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@tsqlbatch =**] **'***tsqlbatch***'**  
+ [  **@tsqlbatch =**] **'**_tsqlbatch_**'**  
  포함 하는 유니코드 문자열을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리 매개 변수 정보는 것입니다. *tsqlbatch* 됩니다 **nvarchar (max)** 또는 암시적으로 변환할 **nvarchar (max)** 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -48,7 +48,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**PARAMETER_NAME**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 일괄 처리에서 찾은 매개 변수의 이름입니다.|  
 |**COLUMN_TYPE**|**smallint**|이 필드는 다음 값 중 하나를 반환합니다.<br /><br /> 0 = SQL_PARAM_TYPE_UNKNOWN<br /><br /> 1 = SQL_PARAM_TYPE_INPUT<br /><br /> 2 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 3 = SQL_RESULT_COL<br /><br /> 4 = SQL_PARAM_OUTPUT<br /><br /> 5 = SQL_RETURN_VALUE<br /><br /> 이 열은 항상 0입니다.|  

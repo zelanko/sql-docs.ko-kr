@@ -13,12 +13,12 @@ ms.assetid: 7e97197b-ed4d-40d1-9a52-9ab1d92401d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2982dc2825b621248da9f9c29e4aad8ddfc51bd5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c0b0b8236187698917dddd3ca98830add6c3fde9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764395"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129023"
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>WMI를 구성하여 SQL Server 도구에 서버 상태 표시
   이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 SQL Server 도구에 서버 상태를 표시하기 위해 WMI를 구성하는 방법에 대해 설명합니다. 서버에 연결할 때 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]구성 관리자와 함께 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 등록된 서버와 개체 탐색기 구성 요소는 WMI(Windows Management Instrumentation)를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (MSSQLSERVER) 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 서비스의 상태를 확인할 수 있습니다. 서비스의 상태를 표시하려면 사용자가 WMI 개체에 원격으로 액세스할 수 있는 권한이 있어야 합니다. 서버에는 이 사용 권한을 구성할 수 있도록 WMI가 설치되어 있어야 합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "52764395"
   
 6.  **그룹 또는 사용자 이름** 상자에 그룹 또는 사용자를 추가하고 해당 이름을 선택합니다.  
   
-7.  에 **에 대 한 권한을 * * *\<그룹 또는 사용자 >* 상자에서를 **허용** 열에 대 한 합니다 **원격 으로부터 사용 가능** 하려는 원격 사용자에 대 한 권한을 서비스 상태를 검색 합니다.  
+7.  에 **에 대 한 권한을**_\<사용자나 그룹 >_ 상자에서를 **허용** 열에 대 한를 **원격 으로부터 사용 가능** 권한 서비스 상태를 검색 하는 원격으로 하려는 사용자에 대 한 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 에이전트 서비스 시작, 중지 또는 일시 중지](agent/start-stop-or-pause-the-sql-server-agent-service.md)  

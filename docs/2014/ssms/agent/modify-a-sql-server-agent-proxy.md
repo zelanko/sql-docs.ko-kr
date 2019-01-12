@@ -13,12 +13,12 @@ ms.assetid: 6e1dfbaa-8089-4813-940c-d5a2e13d8552
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc2bf4573408606c38f368e58b3a245dfdea4ece
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 349e3313a194aa45ae26a106b1f61d7df7ac1f46
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806855"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131214"
 ---
 # <a name="modify-a-sql-server-agent-proxy"></a>Modify a SQL Server Agent Proxy
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시를 수정하는 방법에 대해 설명합니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "52806855"
   
 5.  수정하려는 프록시 계정을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-6.  *proxy_name***프록시 계정 속성** 대화 상자에서 필요에 따라 프록시 계정을 변경합니다. 이 대화 상자의 옵션에 대한 자세한 내용은 [SQL Server 에이전트 프록시 만들기](create-a-sql-server-agent-proxy.md)를 참조하세요.  
+6.  _proxy_name_**프록시 계정 속성** 대화 상자에서 필요에 따라 프록시 계정을 변경합니다. 이 대화 상자의 옵션에 대한 자세한 내용은 [SQL Server 에이전트 프록시 만들기](create-a-sql-server-agent-proxy.md)를 참조하세요.  
   
 7.  완료되었으면 **확인**을 클릭합니다.  
   

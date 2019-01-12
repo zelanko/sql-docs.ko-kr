@@ -17,12 +17,12 @@ ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa2f5528bb223081e7334a7fbd477368d1f7c447
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 201b1496444888b207a1a72be640b9705ff1059d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810615"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127036"
 ---
 # <a name="secure-the-publisher"></a>게시자 보안 설정
   게시자에 연결하는 복제 에이전트는 다음과 같습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "52810615"
  PAL은 게시자의 게시 보안을 유지하는 기본 메커니즘입니다. PAL 기능은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 액세스 제어 목록과 유사하게 작동합니다. 게시를 만들면 복제에서 게시에 대한 PAL을 만듭니다. 게시에 대한 액세스 권한이 부여된 로그인 및 그룹 목록을 포함하도록 PAL을 구성할 수 있습니다. 에이전트가 게시자나 배포자에 연결한 다음 게시에 대한 액세스를 요청하면 PAL의 인증 정보가 에이전트에서 제공한 게시자 로그인과 비교됩니다. 이 프로세스는 클라이언트 도구가 게시자에서 직접 수정 작업을 수행하는 데 게시자 및 배포자 로그인을 사용하지 못하도록 방지하여 게시자에 대한 보안을 강화합니다.  
   
 > [!NOTE]  
->  복제는 각 게시의 게시자에 PAL 멤버 자격을 적용할 역할을 만듭니다. 역할 이름은 병합 복제의 경우 *Msmerge_***\<PublicationID>* 형식으로 지정되고 트랜잭션 및 스냅숏 복제의 경우 **MSReplPAL_***\<PublicationDatabaseID>***_***\<PublicationID>* 형식으로 지정됩니다.  
+>  복제는 각 게시의 게시자에 PAL 멤버 자격을 적용할 역할을 만듭니다. 역할 이름은 병합 복제의 경우 **Msmerge_**_\<PublicationID>_ 형식으로 지정되고 트랜잭션 및 스냅숏 복제의 경우 **MSReplPAL_**_\<PublicationDatabaseID>_**_**_\<PublicationID>_ 형식으로 지정됩니다.  
   
  기본적으로 PAL에는 게시 생성 시의 **sysadmin** 고정 서버 역할의 멤버와 게시를 만드는 데 사용된 로그인이 포함됩니다. 기본적으로 게시 데이터베이스에서 **sysadmin** 고정 서버 역할이나 **db_owner** 고정 데이터베이스 역할의 멤버인 모든 로그인은 PAL에 명시적으로 추가하지 않아도 게시를 구독할 수 있습니다.  
   
@@ -74,6 +74,6 @@ ms.locfileid: "52810615"
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [보안 및 보호&#40;복제&#41;](security-and-protection-replication.md)  
+ [SQL Server 복제 보안](view-and-modify-replication-security-settings.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 410a852ed1535a219208a62b7d0b45849333cb49
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e4612c7b20e448eecbd6c83a3d09d0796dcff542
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818995"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126263"
 ---
 # <a name="spdropdynamicsnapshotjob-transact-sql"></a>sp_dropdynamicsnapshot_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_게시_**'**  
  필터링된 데이터 스냅숏 작업을 제거할 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@dynamic_snapshot_jobname**=] **'***dynamic_snapshot_jobname***'**  
+ [ **@dynamic_snapshot_jobname**=] **'**_dynamic_snapshot_jobname_**'**  
  제거할 필터링된 데이터 스냅숏 작업의 이름입니다. *dynamic_snapshot_jobname*은 sysname 이며 제공 된 기본값이 없는 경우 작업은 연결 된 이름 *dynamic_snapshot_jobid*합니다.  
   
- [ **@dynamic_snapshot_jobid**=] **'***dynamic_snapshot_jobid***'**  
+ [ **@dynamic_snapshot_jobid**=] **'**_dynamic_snapshot_jobid_**'**  
  제거할 필터링된 데이터 스냅숏 작업에 대한 식별자입니다. *dynamic_snapshot_jobid*됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
   
 > [!IMPORTANT]  

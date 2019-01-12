@@ -22,12 +22,12 @@ ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7e5a6e7745f6ccb66f4aa4674216566d935df06
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c86699a87a04762162ce527d9f66c9fda55a1bb1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760205"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129333"
 ---
 # <a name="spcheckjoinfilter-transact-sql"></a>sp_check_join_filter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@filtered_table**=] **'***filtered_table***'**  
+ [ **@filtered_table**=] **'**_filtered_table_**'**  
  필터링된 테이블의 이름입니다. *filtered_table* 됩니다 **nvarchar(400)**, 기본값은 없습니다.  
   
- [ **@join_table**=] **'***join_table***'**  
+ [ **@join_table**=] **'**_join_table_**'**  
  조인 되는 테이블의 이름인 *filtered_table*합니다. *join_table* 됩니다 **nvarchar(400)**, 기본값은 없습니다.  
   
- [ **@join_filterclause** =] **'***join_filterclause***'**  
+ [ **@join_filterclause** =] **'**_join_filterclause_**'**  
  테스트할 조인 필터 절입니다. *join_filterclause* 됩니다 **nvarchar(1000)**, 기본값은 없습니다.  
   
 ## <a name="result-sets"></a>결과 집합  

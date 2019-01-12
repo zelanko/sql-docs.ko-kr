@@ -13,12 +13,12 @@ ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 01027aaa813cb3859dfd6d8459b7138a071c0f2d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9c2e9c5b1a0bf136e6b21f5b3ad6f12107d1f9b9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352967"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126073"
 ---
 # <a name="sql-server-replication"></a>SQL  Server  복제
   복제는 한 데이터베이스에서 다른 데이터베이스로 데이터와 데이터베이스 개체를 복사 및 배포한 다음 데이터베이스 간에 동기화를 수행하여 일관성을 유지하는 일련의 기술입니다. 복제를 사용하면 LAN 및 WAN, 전화 접속 연결, 무선 연결 및 인터넷을 통해 데이터를 여러 다른 위치로 배포하고 원격 또는 모바일 사용자에게 배포할 수 있습니다.  
@@ -27,13 +27,112 @@ ms.locfileid: "53352967"
   
  복제 대신 Microsoft Sync Framework를 사용하여 데이터베이스를 동기화할 수도 있습니다. Sync Framework에는 구성 요소뿐 아니라 SQL Server, SQL Server Express, SQL Server Compact, SQL Azure 데이터베이스 간의 동기화를 용이하게 하는 유연하고 직관적인 API를 포함하고 있습니다. 또한 Sync Framework는 SQL Server 데이터베이스와 ADO.NET 호환 기타 데이터베이스 간에 동기화하도록 조정할 수 있는 클래스를 포함합니다. Sync Framework 데이터베이스 동기화 구성 요소에 대한 자세한 설명서는 [데이터베이스 동기화](https://go.microsoft.com/fwlink/?LinkId=209079)를 참조하십시오. Sync Framework에 대한 개요는 [Microsoft Sync Framework 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=209078)를 참조하십시오. Sync Framework와 병합 복제 간의 비교는 [데이터베이스 동기화 개요](https://msdn.microsoft.com/library/bb902818\(SQL.110\).aspx)를 참조하십시오.  
   
- **영역별 내용 찾아보기**  
- ![작은 파일 폴더 아이콘](../../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [새로운 기능](what-s-new-replication.md)  
+
+## <a name="whats-new"></a>새로운 기능 
+- SQL Server 2017에 SQL Server 복제로 중요 한 새로운 기능을 도입 하지 않았습니다. 
+- SQL Server 2016에 SQL Server 복제로 중요 한 새로운 기능을 도입 하지 않았습니다. 
+
+이전 버전과 호환성 내용은 [복제 이전 버전과 호환성](replication-backward-compatibility.md) 
+
+
+ ## <a name="replication-security"></a>복제 보안
   
- ![작은 파일 폴더 아이콘](../../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [이전 버전과 호환성](replication-backward-compatibility.md)  
+-   [복제 보안 설정 보기 및 수정](security/view-and-modify-replication-security-settings.md)  
+-   [게시 액세스 목록에서 로그인 관리](security/manage-logins-in-the-publication-access-list.md)  
   
- ![작은 파일 폴더 아이콘](../../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [복제 기능 및 태스크](replication-features-and-tasks.md)  
+## <a name="publishing-and-distribution"></a>게시 및 배포  
   
- ![작은 파일 폴더 아이콘](../../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [기술 참조](technical-reference-replication.md)  
+-   [게시 및 배포 구성](configure-publishing-and-distribution.md)   
+-   [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)   
+-   [게시 및 배포 해제](disable-publishing-and-distribution.md)  
   
+## <a name="publications-and-articles"></a>게시 및 아티클 
+  
+-   [Create a Publication](publish/create-a-publication.md)    
+-   [아티클 정의](publish/define-an-article.md)   
+-   [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)   
+-   [아티클 속성 보기 및 수정](publish/view-and-modify-article-properties.md)    
+-   [게시 삭제](publish/delete-a-publication.md)   
+-   [아티클 삭제](publish/delete-an-article.md)    
+-   [Oracle 데이터베이스에서 게시 만들기](publish/create-a-publication-from-an-oracle-database.md)   
+-   [구독에 대한 만료 기간 설정](publish/set-the-expiration-period-for-subscriptions.md)  
+-   [스키마 옵션 지정](publish/specify-schema-options.md)  
+-   [스키마 변경 내용 복제](publish/replicate-schema-changes.md)    
+-   [ID 열 관리](publish/manage-identity-columns.md)   
+-   [병합 게시에 대한 호환성 수준 설정](publish/set-the-compatibility-level-for-merge-publications.md)  
+  
+### <a name="snapshot-options"></a>스냅숏 옵션  
+  
+-   [스냅숏 속성 구성](publish/configure-snapshot-properties-replication-transact-sql-programming.md)    
+-   [FTP를 통해 스냅숏 배달](publish/deliver-a-snapshot-through-ftp.md) 
+  
+### <a name="filter-data"></a>데이터 필터링  
+  
+-   [열 필터 정의 및 수정](publish/define-and-modify-a-column-filter.md)    
+-   [정적 행 필터 정의 및 수정](publish/define-and-modify-a-static-row-filter.md)    
+-   [Define and Modify a Parameterized Row Filter for a Merge Article](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
+-   [매개 변수가 있는 행 필터 최적화](publish/optimize-parameterized-row-filters.md)    
+-   [병합 아티클 사이에서 조인 필터 정의 및 수정](publish/define-and-modify-a-join-filter-between-merge-articles.md)  
+  
+### <a name="transactional-replication-options"></a>트랜잭션 복제 옵션  
+  
+-   [트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법 설정](publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)    
+-   [트랜잭션 게시에 대해 업데이트할 수 있는 구독 설정](publish/enable-updating-subscriptions-for-transactional-publications.md)  
+  
+### <a name="merge-replication-options"></a>병합 복제 옵션  
+  
+-   [병합 테이블 아티클 간의 논리적 레코드 관계 정의](publish/define-a-logical-record-relationship-between-merge-table-articles.md)    
+-   [병합 복제 속성 지정](publish/specify-merge-replication-properties.md)    
+-   [병합 아티클 해결 프로그램 지정](publish/specify-a-merge-article-resolver.md)    
+
+  
+## <a name="manage-subscriptions"></a>구독 관리  
+  
+-   [끌어오기 구독 만들기](create-a-pull-subscription.md)    
+-   [끌어오기 구독 속성 보기 및 수정](view-and-modify-pull-subscription-properties.md)    
+-   [끌어오기 구독 삭제](delete-a-pull-subscription.md)    
+-   [밀어넣기 구독 만들기](create-a-push-subscription.md)   
+-   [밀어넣기 구독 속성 보기 및 수정](view-and-modify-push-subscription-properties.md)   
+-   [밀어넣기 구독 삭제](delete-a-push-subscription.md)   
+-   [동기화 일정 지정](specify-synchronization-schedules.md)    
+-   [트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
+-   [SQL Server 이외 구독자에 대한 구독 만들기](create-a-subscription-for-a-non-sql-server-subscriber.md)  
+  
+## <a name="synchronize-subscriptions"></a>구독 동기화  
+  
+-   [초기 스냅숏 만들기 및 적용](create-and-apply-the-initial-snapshot.md)   
+-   [매개 변수가 있는 필터로 병합 게시에 대한 스냅숏 만들기](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)    
+-   [백업에서 트랜잭션 구독 초기화](initialize-a-transactional-subscription-from-a-backup.md)    
+-   [수동 구독 초기화](initialize-a-subscription-manually.md)    
+-   [끌어오기 구독 동기화](synchronize-a-pull-subscription.md)    
+-   [밀어넣기 구독 동기화](synchronize-a-push-subscription.md)   
+-   [구독 다시 초기화](reinitialize-a-subscription.md)    
+-   [동기화 중 스크립트 실행](execute-scripts-during-synchronization-replication-transact-sql-programming.md)    
+-   [병합 아티클에 대한 비즈니스 논리 처리기 구현](implement-a-business-logic-handler-for-a-merge-article.md)  
+-   [비즈니스 논리 처리기 디버깅&#40;복제 프로그래밍&#41;](debug-a-business-logic-handler-replication-programming.md)    
+-   [동기화 하는 동안 트리거 및 제약 조건 동작 제어](control-behavior-of-triggers-and-constraints-in-synchronization.md)    
+-   [병합 아티클용 사용자 지정 충돌 해결 프로그램 구현](implement-a-custom-conflict-resolver-for-a-merge-article.md)  
+  
+## <a name="administeration"></a>Administeration 
+  
+-   [복제 에이전트 프로필 작업](agents/work-with-replication-agent-profiles.md)   
+-   [구독자에서 데이터 유효성 검사](validate-data-at-the-subscriber.md)    
+-   [매개 변수가 있는 필터로 병합 게시에 대한 파티션 관리](publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)    
+-   [병합 게시의 테이블로 데이터 대량 로드](bulk-load-data-into-tables-in-a-merge-publication.md)    
+-   [병합 메타 데이터 정리](administration/clean-up-merge-metadata-replication-transact-sql-programming.md)    
+-   [병합 아티클에 대해 더미 업데이트 수행](administration/perform-a-dummy-update-for-a-merge-article-replication-transact-sql-programming.md)    
+-   [복제 된 명령 및 배포 데이터베이스의 기타 정보 보기](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
+-   [트랜잭션 복제에 대해 통합된 백업 사용](administration/enable-coordinated-backups-for-transactional-replication.md)   
+-   [피어 투 피어 토폴로지 관리](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)    
+-   [복제 토폴로지 정지](administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)    
+-   [Oracle 게시자에 대 한 트랜잭션 집합 작업 구성](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
+-   [복제 스크립트 업그레이드 ](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
+  
+## <a name="monitor"></a>모니터
+  
+-   [비관리자의 복제 모니터 사용 허용](monitor/allow-non-administrators-to-use-replication-monitor.md)    
+-   [프로그래밍 방식으로 복제 모니터링](monitor/programmatically-monitor-replication.md)    
+-   [복제 된 명령 및 배포 데이터베이스의 기타 정보 보기 ](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
+-   [병합 게시에 대 한 충돌 정보 보기 ](view-conflict-information-for-merge-publications.md) 
+-   [트랜잭션 복제에 대한 대기 시간 측정 및 연결 유효성 검사](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

@@ -14,12 +14,12 @@ ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9a95d55aa0d2722719f799af9f69f6a3b3c14689
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3bada5fc49dc344510164260330699b60a3288cc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805855"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127573"
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>병합 구독자의 파티션 정보 유효성 검사
   병합 게시에 대해 매개 변수가 있는 행 필터를 정의할 때는 구독자의 로그인 이름과 같이 구독자 정보를 참조하는 기능을 사용합니다. 기본적으로 복제는 각 동기화 전과 스냅숏이 구독자에 적용될 때마다 이러한 기능에 기반하여 구독자 정보의 유효성을 검사합니다. 유효성 검사 프로세스는 데이터가 각 구독자에 대해 올바르게 분할되었는지 확인합니다. 유효성 검사 동작은 **validate_subscriber_info** 게시 속성으로 제어할 수 있으며 이 속성은 [sp_changemergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 사용하거나 **게시 속성** 대화 상자의 **구독 옵션** 페이지에서 변경할 수 있습니다. 게시 속성 변경 방법은 [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)을 참조하십시오.  
@@ -34,9 +34,9 @@ ms.locfileid: "52805855"
  병합 에이전트가 파티션의 유효성을 검사할 때 필터링 식에 사용된 함수에서 반환한 값에 대해 파티션의 유효성을 검사하는 것 외에도 에이전트는 메타데이터 정리 작업 또는 스키마 변경과 같이 스냅숏을 무효화한 변경 작업 이전에 스냅숏이 생성되었는지 여부도 확인합니다. 분할된 스냅숏이 너무 오래된 경우 병합 에이전트는 오류를 표시하고 이로 인해 현재 일반 스냅숏에 기반하여 해당 구독자에 대해 분할된 스냅숏을 다시 생성해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [관리&#40;복제&#41;](administration/administration-replication.md)   
+ [복제 관리 FAQ](administration/frequently-asked-questions-for-replication-administrators.md)   
  [복제 관리에 대한 모범 사례](administration/best-practices-for-replication-administration.md)   
  [구독 다시 초기화](reinitialize-subscriptions.md)   
- [복제된 데이터의 유효성 검사](validate-replicated-data.md)  
+ [복제된 데이터의 유효성 검사](validate-data-at-the-subscriber.md)  
   
   

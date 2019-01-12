@@ -16,12 +16,12 @@ ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 214d58fd64649b23f632b393d6b9b0a2b71a2359
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
-ms.translationtype: HT
+ms.openlocfilehash: 7b6be38afc2c95d6cfce80bcefa6ad0b3ab954fe
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362835"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125503"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>서비스 계정 구성(Analysis Services)
   제품 전체의 계정 프로비전은 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)에 자세히 설명되어 있으며, 이 항목에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 비롯한 모든 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]서비스에 대한 포괄적인 서비스 계정 정보를 제공합니다. 올바른 계정 유형, 설치 프로그램에서 할당한 Windows 권한, 파일 시스템 권한, 레지스트리 권한 등에 대한 자세한 내용은 이 항목을 참조하세요.  
@@ -39,7 +39,7 @@ ms.locfileid: "53362835"
 ## <a name="logon-account-recommendations"></a>로그온 계정 권장 사항  
  장애 조치(failover) 클러스터에서 Analysis Services의 모든 인스턴스는 Windows 도메인 사용자 계정을 사용하도록 구성되어야 합니다. 모든 인스턴스에 동일한 계정을 할당합니다. 자세한 내용은 [Analysis Services를 클러스터링하는 방법](https://msdn.microsoft.com/library/dn736073.aspx) 을 참조하세요.  
   
- 독립 실행형 인스턴스는 기본 가상 계정을 사용 해야 **NT Service\MSSQLServerOLAPService** 기본 인스턴스의 경우 또는 **NT Service\MSOLAP$ * * *-n* 명명 된 인스턴스에 대 한 합니다. 이 권장 사항은 운영 체제가 Windows Server 2008 R2 이상이고 SQL Server 2012 이상의 Analysis Services가 실행된다고 가정할 때 모든 서버 모드의 Analysis Services 인스턴스에 적용됩니다.  
+ 독립 실행형 인스턴스는 기본 가상 계정 **NT Service\MSSQLServerOLAPService** (기본 인스턴스의 경우) 또는 **NT Service\MSOLAP$**_instance-name_ (명명된 인스턴스의 경우)을 사용해야 합니다. 이 권장 사항은 운영 체제가 Windows Server 2008 R2 이상이고 SQL Server 2012 이상의 Analysis Services가 실행된다고 가정할 때 모든 서버 모드의 Analysis Services 인스턴스에 적용됩니다.  
   
 ## <a name="granting-permissions-to-analysis-services"></a>Analysis Services에 권한 부여  
  이 섹션에서는 Analysis Services에서 로컬 내부 작업(예: 실행 파일 시작, 구성 파일 읽기, 데이터 디렉터리에서 데이터베이스 로드)을 수행하는 데 필요한 권한에 대해 설명합니다. 외부 데이터 액세스를 위한 권한 설정 방법과 다른 서비스 및 애플리케이션과의 상호 운용성에 대한 지침은 이 항목의 뒤에 나오는 [특정 서버 작업에 대한 추가 권한 부여](#bkmk_tasks) 를 참조하세요.  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: replication
 ms.topic: reference
 helpviewer_keywords:
 - replication [SQL Server], planning
@@ -14,12 +14,12 @@ ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3d66c7950a5d610a50ca6bce84f4b973c4ec9983
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bf393a3e0f117098dc4a85bae3e6c68728f43a64
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789007"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129143"
 ---
 # <a name="replication-programming-concepts"></a>복제 프로그래밍 개념
   복제 기능을 사용하는 애플리케이션을 개발하려면 먼저 다음과 같은 일반적인 계획 단계를 따르는 것이 좋습니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "52789007"
   
  다음 항목에서는 보안에 대한 정보를 제공합니다.  
   
--   [보안 및 보호&#40;복제&#41;](../security/security-and-protection-replication.md)  
+-   [SQL Server 복제 보안](../security/view-and-modify-replication-security-settings.md)  
   
 -   [SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터](../../security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   

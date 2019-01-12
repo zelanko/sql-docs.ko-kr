@@ -17,12 +17,12 @@ ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a93abdc2c20b2aabc9da09ce875817ab92789b8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 88629dc1457d148b4a8e01537e35f2f5ccfbbdb3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350858"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128619"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>전체 텍스트 인덱스 성능 향상
   전체 텍스트 인덱싱 및 전체 텍스트 쿼리의 성능은 메모리, 디스크 속도, CPU 속도 및 컴퓨터 아키텍처와 같은 하드웨어 리소스의 영향을 받습니다.  
@@ -128,10 +128,10 @@ ms.locfileid: "53350858"
   
 |플랫폼|MB-fdhost.exe 메모리 요구 사항을 추정*F*<sup>1</sup>|최대 서버 메모리-계산 수식*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|*F* **=** *Number of crawl ranges* **\*** 50|*M* **최소값 = (** *T* **하십시오** 2000 **)-*`F`* -**  500|  
-|x64|*F* **=** *Number of crawl ranges* **\*** 10 **\*** 8|*M* **=** *T* **-** *F* **-** 500|  
+|x86|_F_ **=** _탐색 범위 수가_ **&#42;** 50|_M_ **최소값 = (** _T_ **하십시오** 2000 **)-*`F`* -**  500|  
+|x64|_F_ **=** _탐색 범위 수가_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
   
- <sup>1</sup> 여러 전체 채우기가 진행에서 하는 경우에 각각 한 fdhost.exe 메모리 요구 사항을 계산 개별적으로 *F1*하십시오 *F2*등입니다. 그런 다음 계산 *M* 으로 *T * * *-** 시그마 **(* **F*있나요**) * * 합니다.  
+ <sup>1</sup> 여러 전체 채우기가 진행에서 하는 경우에 각각 한 fdhost.exe 메모리 요구 사항을 계산 개별적으로 *F1*하십시오 *F2*등입니다. 그런 다음, *M*을 _T_**-** sigma **(**_F_i **)** 로 계산합니다.  
   
  <sup>2</sup> 500MB는 시스템의 다른 프로세스에 필요한 메모리를 예상 합니다. 시스템이 추가 작업을 수행 중인 경우 그에 따라 이 값을 늘리십시오.  
   

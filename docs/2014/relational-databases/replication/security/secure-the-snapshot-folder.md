@@ -12,12 +12,12 @@ ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb3aa18f17219f46bc5ce6f3d25af7d4bd29c4d9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: f3612a8b2006978a8098a406a6557d6c9f0f1f7f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753955"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127804"
 ---
 # <a name="secure-the-snapshot-folder"></a>스냅숏 폴더 보안 설정
   스냅숏 폴더는 스냅숏 파일을 저장하는 디렉터리입니다. 스냅숏 스토리지 전용 디렉터리를 지정하는 것이 좋습니다. 스냅숏 에이전트에 폴더에 대한 쓰기 권한을 부여하고 병합 에이전트 또는 배포 에이전트가 폴더에 액세스할 때 사용하는 Windows 계정에만 읽기 권한을 부여합니다. 에이전트에 연결된 Windows 계정은 원격 컴퓨터에 있는 스냅숏 폴더에 액세스할 수 있는 도메인 계정이어야 합니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "52753955"
  [대체 스냅숏 폴더 위치](../alternate-snapshot-folder-locations.md)   
  [스냅숏으로 구독 초기화](../initialize-a-subscription-with-a-snapshot.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [보안 및 보호&#40;복제&#41;](security-and-protection-replication.md)   
+ [SQL Server 복제 보안](view-and-modify-replication-security-settings.md)   
  [FTP를 통해 스냅숏 전송](../transfer-snapshots-through-ftp.md)  
   
   

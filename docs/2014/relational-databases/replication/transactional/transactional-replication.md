@@ -13,41 +13,25 @@ ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cd024310b00338749147b56e3b63a09fbd515de
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9a6099a43713ebbcfdc65aec43aabcca95fe5e0b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814015"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127683"
 ---
 # <a name="transactional-replication"></a>트랜잭션 복제
   트랜잭션 복제는 일반적으로 게시 데이터베이스 개체 및 데이터의 스냅숏으로 시작됩니다. 일반적으로 초기 스냅숏이 사용되자마자 게시자에서의 후속 데이터 변경 내용 및 스키마 수정 내용이 구독자로 배달됩니다. 이러한 작업은 거의 실시간으로 수행됩니다. 데이터 변경 내용은 게시자에서 발생한 것과 같은 순서 및 같은 트랜잭션 경계 내에서 구독자에 적용되므로 게시 내에서는 트랜잭션 일관성이 보장됩니다.  
   
  트랜잭션 복제는 일반적으로 서버 간 환경에 사용되며 다음과 같은 경우에 적합합니다.  
   
--   증분 변경 내용을 발생과 동시에 구독자로 전파하려고 합니다.  
-  
--   애플리케이션이 게시자에서 변경이 수행된 시점과 해당 변경 내용이 구독자에 도달한 시점 간의 짧은 대기 시간이 필요합니다.  
-  
--   애플리케이션이 중간 데이터 상태에 액세스해야 합니다. 예를 들어 한 행이 5번 변경될 경우 트랜잭션 복제를 사용하면 애플리케이션은 행의 실질적인 데이터 변경만이 아닌 모든 변경(예: 트리거 실행)에 응답할 수 있습니다.  
-  
--   게시자가 많은 양의 삽입, 업데이트 및 삭제 작업을 수행합니다.  
-  
+-   증분 변경 내용을 발생과 동시에 구독자로 전파하려고 합니다.    
+-   애플리케이션이 게시자에서 변경이 수행된 시점과 해당 변경 내용이 구독자에 도달한 시점 간의 짧은 대기 시간이 필요합니다.    
+-   애플리케이션이 중간 데이터 상태에 액세스해야 합니다. 예를 들어 한 행이 5번 변경될 경우 트랜잭션 복제를 사용하면 애플리케이션은 행의 실질적인 데이터 변경만이 아닌 모든 변경(예: 트리거 실행)에 응답할 수 있습니다.    
+-   게시자가 많은 양의 삽입, 업데이트 및 삭제 작업을 수행합니다.    
 -   게시자 또는 구독자가 Oracle과 같은[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외의 데이터베이스입니다.  
   
  기본적으로 변경 내용은 게시자로 다시 전파되지 않기 때문에 트랜잭션 게시에 대한 구독자는 읽기 전용으로 취급됩니다. 그러나 트랜잭션 복제는 구독자의 업데이트를 허용하는 다양한 옵션을 제공합니다.  
-  
- **항목 내용**  
-  
- [트랜잭션 복제 작동 방법](#HowWorks)  
-  
- [초기 데이터 집합](#Dataset)  
-  
- [스냅숏 에이전트](#SnapshotAgent)  
-  
- [로그 판독기 에이전트](#LogReaderAgent)  
-  
- [배포 에이전트](#DistributionAgent)  
   
 ##  <a name="HowWorks"></a> 트랜잭션 복제 작동 방법  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 스냅숏 에이전트, 로그 판독기 에이전트 및 배포 에이전트가 트랜잭션 복제를 구현합니다. 스냅숏 에이전트는 게시된 테이블과 데이터베이스 개체의 스키마 및 데이터를 포함하는 스냅숏 파일을 준비하여 스냅숏 폴더에 저장하고 배포자의 배포 데이터베이스에 동기화 작업을 기록합니다.  
@@ -82,5 +66,17 @@ ms.locfileid: "52814015"
   
 ##  <a name="DistributionAgent"></a> 배포 에이전트  
  배포 에이전트는 밀어넣기 구독을 위한 배포자 또는 끌어오기 구독을 위한 구독자에서 실행됩니다. 이 에이전트는 트랜잭션을 배포 데이터베이스에서 구독자로 이동합니다. 구독이 유효성 검사용으로 표시된 경우에 배포 에이전트는 게시자와 구독자의 데이터가 일치하는지 확인하는 작업도 수행합니다.  
+
+## <a name="publication-types"></a>게시 유형
+
+  
+트랜잭션 복제는 네 가지 게시 유형을 제공 합니다.  
+  
+|게시 유형|Description|  
+|----------------------|-----------------|  
+|표준 트랜잭션 게시|구독자의 모든 데이터가 읽기 전용인 토폴로지에 적합합니다. 트랜잭션 복제는 구독자의 모든 데이터를 읽기 전용으로 변경하지 않습니다.<br /><br /> 표준 트랜잭션 게시는 Transact-SQL 또는 RMO(복제 관리 개체)를 사용하는 경우 기본적으로 생성됩니다. 새 게시 마법사를 사용하는 경우에는 **게시 유형** 페이지에서 **트랜잭션 게시** 를 선택하면 해당 게시가 생성됩니다.<br /><br /> 게시를 만드는 방법은 [데이터 및 데이터베이스 개체 게시](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)를 참조하세요.|  
+|업데이트할 수 있는 구독이 있는 트랜잭션 게시|이 게시 유형의 특성은 다음과 같습니다.<br /><br /> -각 위치가 동일한 데이터를 하나의 게시자와 하나의 가입자에 <br /> 구독자에서 행을 업데이트 하는-이 가능<br /> -이 토폴로지는 고가용성이 필요한 서버 환경에 가장 적합 및 읽기 확장성.<br /><br />자세한 내용은 [업데이트할 수 있는 구독](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)합니다.|  
+|피어 투 피어 토폴로지|이 게시 유형의 특성은 다음과 같습니다.<br /> -각 위치가 동일한 데이터 며 게시자와 구독자 모두로 작동 합니다.<br /> -같은 행은 한 번에 한 위치 에서만 변경할 수 있습니다.<br /> -지원 [충돌 검색](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)  <br />-이 토폴로지는 고가용성이 필요한 서버 환경에 가장 적합 및 읽기 확장성.<br /><br />자세한 내용은 [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)을 참조하세요.|  
+|양방향 트랜잭션 복제|이 게시 유형의 특성은 다음과 같습니다.<br />그러나 양방향 복제 피어 투 피어 복제에 비슷합니다., 충돌 해결을 제공 하지 않습니다. 또한 양방향 복제 서버 2로 제한 됩니다. <br /><br /> 자세한 내용은 참조 하세요. [양방향 트랜잭션 복제](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md) |  
   
   

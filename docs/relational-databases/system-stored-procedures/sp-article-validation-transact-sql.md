@@ -16,12 +16,12 @@ ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8f0d205f22e00916c53f5557458694d939bf1766
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 849564fcda37c022413d9e0758abe50279497a0b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210912"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125113"
 ---
 # <a name="sparticlevalidation-transact-sql"></a>sp_article_validation(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ sp_article_validation [ @publication = ] 'publication'
  사용자 유효성을 검사할 문서 실행 수에 대 한 원본 테이블에 대 한 모든 권한을 선택만 **sp_article_validation**합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [복제 된 데이터 유효성 검사](../../relational-databases/replication/validate-replicated-data.md)   
+ [복제 된 데이터 유효성 검사](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [sp_marksubscriptionvalidation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
  [sp_publication_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
  [sp_table_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   

@@ -10,12 +10,12 @@ ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 39f81a2e2d1762ac60ba34490844b123d3ae8fbe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c5e44910c72e5162b9acb74ebbf74cd19d7ce1bc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376695"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124573"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 구성 세부 정보는 Distributed Replay 컨트롤러, 클라이언트 및 관리 도구가 설치되는 위치의 XML 파일에서 지정됩니다. 이러한 파일은 다음과 같습니다.  
@@ -121,7 +121,7 @@ ms.locfileid: "53376695"
   
 |설정|XML 요소|Description|허용되는 값|필수|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스(테스트 서버)|`<Server>`|연결할 서버 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정합니다.|*server_name*[\\*instance_name*]<br /><br /> "`localhost`" 또는 "`.`"을 사용하여 로컬 호스트를 나타낼 수 없습니다.|아니요(관리 도구의 **재생**옵션에 **-s***target server* 매개 변수를 사용하여 서버 이름이 이미 지정된 경우)|  
+|대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스(테스트 서버)|`<Server>`|연결할 서버 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정합니다.|*server_name*[\\*instance_name*]<br /><br /> "`localhost`" 또는 "`.`"을 사용하여 로컬 호스트를 나타낼 수 없습니다.|아니요(관리 도구의 **다시 재생**_옵션에_ -s **target server** 매개 변수를 사용하여 서버 이름이 이미 지정된 경우)|  
 |시퀀스 모드|`<SequencingMode>`|이벤트 예약에 사용되는 모드를 지정합니다.|`synchronization` &#124; `stress`|아니요. 기본값은 `stress`입니다.|  
 |스트레스 규모 세분성|`<StressScaleGranularity>`|스트레스 모드에서 SPID(Service Profile Identifier)에 대한 모든 연결의 배율을 함께 조정(SPID)해야 하는지 개별적으로 조정(연결)해야 하는지를 지정합니다.|SPID &#124; Connection|예 기본값은 `SPID`입니다.|  
 |연결 시간 조절|`<ConnectTimeScale>`|스트레스 모드에서 연결 시간을 조절하는 데 사용됩니다.|`1` 에서 `100`사이의 정수입니다.|아니요. 기본값은 `100`입니다.|  
@@ -163,7 +163,7 @@ ms.locfileid: "53376695"
 </Options>  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [관리 도구 명령줄 옵션&#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [SQL Server Distributed Replay 포럼](https://social.technet.microsoft.com/Forums/sl/sqldru/)   

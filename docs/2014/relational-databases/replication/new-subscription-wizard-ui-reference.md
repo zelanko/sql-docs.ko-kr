@@ -12,12 +12,12 @@ ms.assetid: fd201921-7c96-4fcc-85fe-61d91396429b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 945dfd47f82f0c11dcb104d283cf61346f27903d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ace6059545a4c46e3af279ad7c6104456478801c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814695"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125203"
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>새 구독 마법사(UI 참조)
   이 섹션에서는 새 구독 마법사의 다음 페이지에 대한 정보를 제공합니다.  
@@ -42,10 +42,10 @@ ms.locfileid: "52814695"
   
 -   [HOST_NAME 값](host-name-values.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Create a Pull Subscription](create-a-pull-subscription.md)   
  [ssSDSFull](create-a-push-subscription.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
- [속성 참조&#40;복제&#41;](properties-reference-replication.md)  
+ [게시 구독](subscribe-to-publications.md)   
+
   
   

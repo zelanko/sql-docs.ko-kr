@@ -16,12 +16,12 @@ ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c872cbafb3cb0a3a54c34e489242d9f69339b68f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c199af62d7cd5cb95c382b412182bb24c957bf89
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748225"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127083"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,19 +44,19 @@ sp_changemergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=** ] **'***게시***'**  
+ [  **@publication=** ] **'**_게시_**'**  
  게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@article=** ] **'***문서***'**  
+ [  **@article=** ] **'**_문서_**'**  
  아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@filtername=** ] **'***filtername***'**  
+ [  **@filtername=** ] **'**_filtername_**'**  
  필터의 현재 이름입니다. *filtername* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@property=** ] **'***속성***'**  
+ [  **@property=** ] **'**_속성_**'**  
  변경할 속성의 이름입니다. *속성* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@value=**] **'***값***'**  
+ [  **@value=**] **'**_값_**'**  
  지정한 속성의 새 값입니다. *값*됩니다 **nvarchar(1000)**, 기본값은 없습니다.  
   
  다음 표에서는 아티클의 속성 및 해당 속성의 값을 설명합니다.  

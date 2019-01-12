@@ -21,12 +21,12 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 95fbb61460c23ca0fedf0baec71aa21acaa50398
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786745"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123933"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>복제 모니터에서 게시 및 구독 상태 보기
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터에는 게시와 구독에 대한 상태 정보가 표시됩니다.  
@@ -53,11 +53,8 @@ ms.locfileid: "52786745"
   
  **게시 및 구독 상태를 보려면**  
   
--   복제 모니터: [정보 보기 및 게시에 대 한 작업을 수행 &#40;복제 모니터&#41; ](view-information-and-perform-tasks-for-a-publication-replication-monitor.md) 하 고 [정보 보기 및 구독에 대 한 작업을 수행할 &#40;복제 모니터&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
+-   복제 모니터: [정보 및 복제 모니터를 사용 하 여 수행할 작업을 보려면](view-information-and-perform-tasks-replication-monitor.md)합니다.
   
- **에이전트에 대한 자세한 정보를 보려면**  
-  
--   복제 모니터: [정보 보기 및 게시 관련 에이전트에 대 한 작업을 수행 &#40;복제 모니터&#41; ](view-information-and-perform-tasks-for-publication-agents.md) 하 고 [정보를 확인 하 고 구독 관련 에이전트에 대 한 작업을 수행할 &#40;복제 모니터&#41;](view-information-and-perform-tasks-for-subscription-agents.md)합니다.  
   
 ## <a name="publication-status-values"></a>게시 상태 값  
  다음 표에서는 게시 상태 값과 해당 아이콘을 우선 순위순으로 보여 줍니다.  
@@ -110,7 +107,7 @@ ms.locfileid: "52786745"
 |동기화 중|![UI 아이콘: 복제 에이전트 실행 중](../media/repl-icon-running.gif "UI icon: replication agent running")|  
 |비동기화 중|![UI 아이콘: 복제 에이전트 중지됨](../media/repl-icon-stopped.gif "UI icon: replication agent stopped")|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [복제 모니터링](../monitoring-replication.md)  
   
   

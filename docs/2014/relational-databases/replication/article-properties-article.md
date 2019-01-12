@@ -14,12 +14,12 @@ ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c426781f52a513cca1e90e5f83eac7feab79fdaf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785225"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124993"
 ---
 # <a name="article-properties---ltarticlegt"></a>아티클 속성 - &lt;Article&gt;
   **아티클 속성** 대화 상자는 새 게시 마법사 및 **게시 속성** 대화 상자에서 사용할 수 있습니다. 이 대화 상자를 사용하여 모든 아티클 유형에 대한 속성을 보고 설정할 수 있습니다. 게시가 생성된 경우에만 설정할 수 있거나 게시에 활성 구독이 없는 경우에만 설정할 수 있는 속성이 있습니다. 설정할 수 없는 속성은 읽기 전용으로 표시됩니다.  
@@ -121,7 +121,7 @@ ms.locfileid: "52785225"
   
 ### <a name="resolver-tab"></a>해결 프로그램 탭  
  **기본 해결 프로그램 사용**  
- 기본 해결 프로그램을 선택한 경우 사용된 구독 유형에 따라 각 구독자에 할당된 우선 순위나 게시자에 기록된 첫 번째 변경 내용을 기준으로 충돌을 해결합니다. 자세한 내용은 [병합 복제 충돌 감지 및 해결](merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)을 참조하세요.  
+ 기본 해결 프로그램을 선택한 경우 사용된 구독 유형에 따라 각 구독자에 할당된 우선 순위나 게시자에 기록된 첫 번째 변경 내용을 기준으로 충돌을 해결합니다. 자세한 내용은 [병합 복제 충돌 감지 및 해결](merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
   
  **사용자 지정 해결 프로그램 사용(배포자에 등록됨)**  
  아티클 해결 프로그램( [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 제공하는 해결 프로그램 또는 사용자가 작성한 해결 프로그램) 사용을 선택한 경우 목록 상자에서 해결 프로그램을 선택해야 합니다. 자세한 내용은 [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
@@ -172,7 +172,7 @@ ms.locfileid: "52785225"
   
 -   일부 형식의 경우 두 개 이상의 매핑을 선택할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 는 애플리케이션에 다른 매핑이 필요 하지 않는 한 기본 매핑을 사용할 것을 권장합니다. 자세한 내용은 [Data Type Mapping for Oracle Publishers](non-sql/data-type-mapping-for-oracle-publishers.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Create a Publication](publish/create-a-publication.md)   
  [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)   
  [초기 스냅숏 만들기 및 적용](create-and-apply-the-initial-snapshot.md)   

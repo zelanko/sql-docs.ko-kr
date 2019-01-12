@@ -13,12 +13,12 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cce805ea589a3795a5d617a1d2e01274f8a2fc0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 547ebeb6043345821d2b2a19b407599abfd14008
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174623"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125413"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹에 대한 복제 구성(SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 및 AlwaysOn 가용성 그룹을 구성하는 과정은 7단계로 구성됩니다. 각 단계에 대해서는 다음 섹션에서 자세하게 설명합니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "48174623"
   
  **원래 게시자에서 게시자 구성**  
   
-1.  원격 배포를 구성합니다. 저장된 프로시저는 게시자 구성에 사용 중인 경우 실행 `sp_adddistributor`합니다. 동일한 값을 지정 *@password* 때와 `sp_adddistrbutor` 배포를 설정 하기 위해 배포자에서 실행 되었습니다.  
+1.  원격 배포를 구성합니다. 게시자 구성에 저장 프로시저를 사용하는 경우 `sp_adddistributor`을 실행합니다. 동일한 값을 지정 *@password* 때와 `sp_adddistrbutor` 배포를 설정 하기 위해 배포자에서 실행 되었습니다.  
   
     ```  
     exec sys.sp_adddistributor  
@@ -78,7 +78,7 @@ ms.locfileid: "48174623"
         @password = 'MyDistPass'  
     ```  
   
-2.  데이터베이스를 복제할 수 있도록 설정합니다. 저장된 프로시저는 게시자 구성에 사용 중인 경우 실행 `sp_replicationdboption`합니다. 데이터베이스에 대해 트랜잭션 복제와 병합 복제를 모두 구성하려는 경우 각각을 따로 설정해야 합니다.  
+2.  데이터베이스를 복제할 수 있도록 설정합니다. 게시자 구성에 저장 프로시저를 사용하는 경우 `sp_replicationdboption`을 실행합니다. 데이터베이스에 대해 트랜잭션 복제와 병합 복제를 모두 구성하려는 경우 각각을 따로 설정해야 합니다.  
   
     ```  
     USE master;  
@@ -133,7 +133,7 @@ EXEC sys.sp_adddistpublisher
     @password = '**Strong password for publisher**';  
 ```  
   
- 각 보조 복제본 호스트에서 배포를 구성합니다. 원래 게시자의 배포자를 원격 배포자로 식별합니다. 때와 동일한 암호를 사용 하 여 `sp_adddistributor` 배포자에서 원래 실행 되었습니다. 배포 구성에 저장된 프로시저를 사용 하는 경우는 *@password* 의 매개 변수 `sp_adddistributor` 암호를 지정 하는 데 사용 됩니다.  
+ 각 보조 복제본 호스트에서 배포를 구성합니다. 원래 게시자의 배포자를 원격 배포자로 식별합니다. 배포자에서 원래 `sp_adddistributor`를 실행했을 때와 동일한 암호를 사용합니다. 배포 구성에 저장된 프로시저를 사용 하는 경우는 *@password* 의 매개 변수 `sp_adddistributor` 암호를 지정 하는 데 사용 됩니다.  
   
 ```  
 EXEC sp_adddistributor   
@@ -141,7 +141,7 @@ EXEC sp_adddistributor
     @password = '**Strong password for distributor**';  
 ```  
   
- 각 보조 복제본 호스트에서 데이터베이스 게시의 밀어넣기 구독자가 연결된 서버로 표시되는지 확인합니다. 사용 하 여 저장된 프로시저를 사용 하 여 원격 게시자 구성 되는, 경우 `sp_addlinkedserver` 구독자 추가 (아직 없는 경우)를 게시자에 연결 된 서버로 하 합니다.  
+ 각 보조 복제본 호스트에서 데이터베이스 게시의 밀어넣기 구독자가 연결된 서버로 표시되는지 확인합니다. 원격 게시자 구성에 저장 프로시저를 사용하는 경우 `sp_addlinkedserver`를 사용하여 구독자(아직 없는 경우)를 게시자에 연결된 서버로 추가합니다.  
   
 ```  
 EXEC sys.sp_addlinkedserver   
@@ -176,27 +176,27 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
  가용성 그룹에 대한 정보를 쿼리하려면 각 가용성 그룹 복제본 호스트에서 충분한 권한이 있는 로그인으로 `sp_validate_replica_hosts_as_publishers` 저장 프로시저를 실행해야 합니다. 와 달리 `sp_validate_redirected_publisher`, 호출자의 자격 증명을 사용 하 고 가용성 그룹 복제본에 연결할 msdb.dbo.MSdistpublishers에 저장 된 로그인을 사용 하지 않습니다.  
   
 > [!NOTE]  
->  `sp_validate_replica_hosts_as_publishers` 읽기 액세스를 허용 하거나 필요 하지 않는 보조 복제본 호스트의 유효성을 검사 읽기 의도를 지정할 때 다음 오류로 인해 실패 합니다.  
+>  읽기 액세스를 허용하지 않거나 읽기 전용으로 지정해야 하는 보조 복제본 호스트의 유효성을 검사할 경우에는 다음 오류와 함께 `sp_validate_replica_hosts_as_publishers`가 실패합니다.  
 >   
 >  메시지 21899, 수준 11, 상태 1, 프로시저 `sp_hadr_verify_subscribers_at_publisher`, 줄 109  
 >   
->  '976' 오류로 인해 리디렉션된 게시자 'MyReplicaHostName'에서 원래 게시자 'MyOriginalPublisher'의 구독자에 대한 sysserver 항목이 있는지 확인하기 위한 쿼리에 실패했습니다(오류 메시지 '오류 976, 수준 14, 상태 1, 메시지: 대상 데이터베이스 'MyPublishedDB'이(가) 가용성 그룹에 참여 중이며 현재 쿼리로 액세스할 수 없습니다. 데이터 이동이 일시 중지되었거나 가용성 복제본이 읽기 액세스로 설정되지 않았습니다. 이 데이터베이스 및 가용성 그룹 내 다른 데이터베이스에 읽기 전용 액세스를 허용하려면 그룹 내 하나 이상의 보조 가용성 복제본에 읽기 액세스를 설정하세요.  자세한 내용은 참조는 `ALTER AVAILABILITY GROUP` 문에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Onl 온라인 설명서.'.  
+>  '976' 오류로 인해 리디렉션된 게시자 'MyReplicaHostName'에서 원래 게시자 'MyOriginalPublisher'의 구독자에 대한 sysserver 항목이 있는지 확인하기 위한 쿼리에 실패했습니다(오류 메시지 '오류 976, 수준 14, 상태 1, 메시지: 대상 데이터베이스 'MyPublishedDB'이(가) 가용성 그룹에 참여 중이며 현재 쿼리로 액세스할 수 없습니다. 데이터 이동이 일시 중지되었거나 가용성 복제본이 읽기 액세스로 설정되지 않았습니다. 이 데이터베이스 및 가용성 그룹 내 다른 데이터베이스에 읽기 전용 액세스를 허용하려면 그룹 내 하나 이상의 보조 가용성 복제본에 읽기 액세스를 설정하세요.  자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서의 `ALTER AVAILABILITY GROUP` 문을 참조하십시오.').  
 >   
 >  복제본 호스트 'MyReplicaHostName'에 대해 하나 이상의 게시자 유효성 검사 오류가 발생했습니다.  
   
- 이 동작은 정상적인 동작입니다. 이러한 보조 복제본 호스트에서 직접 sysserver 항목을 쿼리하여 구독자 서버 항목이 있는지 확인해야 합니다.  
+ 이는 예상된 동작입니다. 이러한 보조 복제본 호스트에서 직접 sysserver 항목을 쿼리하여 구독자 서버 항목이 있는지 확인해야 합니다.  
   
 ##  <a name="step7"></a> 7. 원래 게시자를 복제 모니터에 추가  
  각 가용성 그룹 복제본에서 원래 게시자를 복제 모니터에 추가합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **복제**  
   
 -   [AlwaysOn 게시 데이터베이스 유지 관리 &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
   
 -   [복제, 변경 내용 추적, 변경 데이터 캡처 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)  
   
--   [관리&#40;복제&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [복제 관리 FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **가용성 그룹을 만들고 구성하려면**  
   

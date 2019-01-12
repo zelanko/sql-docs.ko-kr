@@ -14,12 +14,12 @@ ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec91a27daf01a77cc9c1916db36d80de4864964f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: a93eed388f494b7d0aeaac127b95bc0d87c76963
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752705"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128979"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>조건부 삭제 추적으로 병합 복제 성능 최적화
     
@@ -46,7 +46,7 @@ ms.locfileid: "52752705"
   
  **삭제가 추적되지 않게 지정하려면**  
   
--   복제 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 프로그래밍: [병합 아티클에 대해 삭제가 추적되지 않도록 지정&#40;복제 Transact-SQL 프로그래밍&#41;](../publish/specify-that-deletes-should-not-be-tracked-for-merge-articles.md)  
+-   복제 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 프로그래밍: [병합 아티클에 대해 삭제가 추적되지 않도록 지정&#40;복제 Transact-SQL 프로그래밍&#41;](..//publish/specify-merge-replication-properties.md#tracking-deletes)  
   
 ## <a name="see-also"></a>관련 항목  
  [병합 복제를 위한 아티클 옵션](article-options-for-merge-replication.md)   

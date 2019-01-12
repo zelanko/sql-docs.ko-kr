@@ -16,12 +16,12 @@ ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba242dfc6c457bd94c082f151f162b8f6eb06e29
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 81f6b1ca0ea65068851756dc2a1b91cb84c52227
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819185"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128238"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +41,16 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publisher=** ] **'***게시자***'**  
+ [  **@publisher=** ] **'**_게시자_**'**  
  게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@property=** ] **'***속성***'**  
+ [  **@property=** ] **'**_속성_**'**  
  지정된 게시자에 대해 변경할 속성입니다. *속성* 됩니다 **sysname** 이며 다음이 값 중 하나일 수 있습니다.  
   
- [ **@value=** ] **'***value***'**  
+ [ **@value=** ] **'**_value_**'**  
  지정된 속성에 대한 값입니다. *값* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다.  
   
- [  **@storage_connection_string =**] **'***storage_connection_string***'**  
+ [  **@storage_connection_string =**] **'**_storage_connection_string_**'**  
  SQL Database 관리 되는 인스턴스에 대 한 필요 하며 Azure SQL Database 저장소 볼륨에 대 한 액세스 키와 일치 해야 합니다. 
 
 

@@ -14,12 +14,12 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b15344c41bcfe8f43606683dc2e94f848bdb5923
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 7c8f75360bb3eb4b304c2a56a150218e8f8c8eff
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780085"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125453"
 ---
 # <a name="secure-the-subscriber"></a>구독자 보안 설정
   병합 에이전트 및 배포 에이전트는 구독자에 연결합니다. 이러한 연결은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 또는 Windows 로그인의 컨텍스트에서 설정됩니다. 필요한 최소 권한만 부여하는 원칙을 따르고 모든 암호 스토리지를 보호하면서 이러한 에이전트에 적절한 로그인을 제공하는 것이 중요합니다. 각 에이전트에 필요한 사용 권한에 대한 자세한 내용은 [Replication Agent Security Model](replication-agent-security-model.md)을 참조하십시오.  
@@ -50,10 +50,10 @@ ms.locfileid: "52780085"
 > [!IMPORTANT]  
 >  연결 정보를 지정하려면 저장 프로시저 [sp_link_publication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql)을 참조하세요. 또한 **sp_link_publication** 을 호출하는 새 구독 마법사의 **업데이트할 수 있는 구독에 대한 로그인**페이지를 사용할 수 있습니다. 특정 상황에서는 구독자가 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] SP1(서비스 팩 1) 이상을 실행하고 게시자가 이전 버전을 실행할 경우 이 저장 프로시저가 실패할 수 있습니다. 이 시나리오에서 저장 프로시저가 실패할 경우 게시자를 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] SP1 이상으로 업그레이드합니다.  
   
- 자세한 내용은 [트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기](../create-updatable-subscription-transactional-publication-transact-sql.md) 및 [복제 보안 설정 보기 및 수정](view-and-modify-replication-security-settings.md)을 참조하세요.  
+ 자세한 내용은 [트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기](../publish/create-an-updatable-subscription-to-a-transactional-publication.md) 및 [복제 보안 설정 보기 및 수정](view-and-modify-replication-security-settings.md)을 참조하세요.  
   
 > [!IMPORTANT]  
->  연결에 대해 지정된 계정에는 복제가 게시 데이터베이스에 만드는 뷰에서 데이터를 삽입, 업데이트 및 삭제할 수 있는 사용 권한만 부여하고 다른 추가 사용 권한은 부여하지 않습니다. 각 구독자에서 구성한 계정에 이름이 **syncobj_***\<HexadecimalNumber>* 형식으로 지정된 게시 데이터베이스의 뷰에 대한 사용 권한을 부여합니다.  
+>  연결에 대해 지정된 계정에는 복제가 게시 데이터베이스에 만드는 뷰에서 데이터를 삽입, 업데이트 및 삭제할 수 있는 사용 권한만 부여하고 다른 추가 사용 권한은 부여하지 않습니다. 각 구독자에서 구성한 계정에 이름이 **syncobj_**_\<HexadecimalNumber>_ 형식으로 지정된 게시 데이터베이스의 뷰에 대한 사용 권한을 부여합니다.  
   
 ## <a name="queued-updating-subscriptions"></a>지연 업데이트 구독  
  지연 업데이트 구독 구성 시 보안과 관련된 다음 두 가지 영역을 유의하십시오.  
@@ -76,6 +76,6 @@ ms.locfileid: "52780085"
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [보안 및 보호&#40;복제&#41;](security-and-protection-replication.md)  
+ [SQL Server 복제 보안](view-and-modify-replication-security-settings.md)  
   
   

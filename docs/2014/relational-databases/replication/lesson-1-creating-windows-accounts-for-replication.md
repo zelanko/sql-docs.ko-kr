@@ -1,11 +1,10 @@
 ---
-title: '1단원: 복제용 Windows 계정 만들기 | Microsoft 문서'
+title: '1단원: 복제에 대 한 계정 Windows 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- replication
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
@@ -14,12 +13,12 @@ ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 0269a82d4ef11e53c41d7b288797064e0f3abd16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095573"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127463"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>1단원: 복제용 Windows 계정 만들기
   이 단원에서는 복제 에이전트를 실행할 Windows 계정을 만들며 다음 에이전트에 대해 로컬 서버에 별도의 Windows 계정을 만듭니다.  
@@ -63,7 +62,7 @@ ms.locfileid: "48095573"
 6.  **닫기**를 클릭합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 복제 에이전트에 대한 Windows 계정을 성공적으로 만들었습니다. 다음 단원에서는 스냅숏 폴더를 구성합니다. [2단원: 스냅숏 폴더 준비](lesson-2-preparing-the-snapshot-folder.md)를 참조하세요.  
+ 복제 에이전트에 대한 Windows 계정을 성공적으로 만들었습니다. 다음 단원에서는 스냅숏 폴더를 구성합니다. 참조 [2 단원: 스냅숏 폴더 준비](lesson-2-preparing-the-snapshot-folder.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [복제 에이전트 개요](agents/replication-agents-overview.md)  

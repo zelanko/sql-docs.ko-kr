@@ -10,12 +10,12 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6efa9ab6ec2733c67a00b4c16e08d6b4e435cf9b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367197"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127213"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>2단원: 다른 컴퓨터에서 연결
   보안을 강화하기 위해 처음 설치 시에는 [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer, Express 및 Evaluation 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 다른 컴퓨터에서 액세스할 수 없습니다. 이 단원에서는 다른 컴퓨터에서 연결하기 위해 프로토콜을 설정하고 포트를 구성하며 Windows 방화벽을 구성하는 방법을 보여 줍니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "53367197"
     > [!NOTE]  
     >  32비트 및 64비트 옵션을 모두 사용할 수 있습니다.  
   
-2.  **SQL Server 구성 관리자**를 확장 하 고 **SQL Server 네트워크 구성**를 클릭 하 고 **에 대 한 프로토콜**  *\<InstanceName >* 합니다.  
+2.  **SQL Server 구성 관리자**를 확장 하 고 **SQL Server 네트워크 구성**를 클릭 하 고 **에 대 한 프로토콜**  _\<InstanceName >_ 합니다.  
   
      기본 인스턴스(명명되지 않은 인스턴스)는 **MSSQLSERVER**로 나열됩니다. 명명된 인스턴스를 설치한 경우 제공한 이름이 나열됩니다. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] 는 설치하는 동안 이름을 변경하지 않는 한 **SQLEXPRESS**로 설치됩니다.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "53367197"
   
 2.  **서버에 연결** 대화 상자의 **서버 유형** 상자에서 **데이터베이스 엔진** 을 선택합니다.  
   
-3.  **서버 이름** 상자에 **tcp:** 를 입력하여 프로토콜을 지정한 다음 컴퓨터 이름, 쉼표, 포트 번호를 차례로 입력합니다. 기본 인스턴스 연결 시에는 포트 1433이 적용되므로 포트를 생략할 수 있습니다. 따라서 **tcp:***<computer_name>* 을 입력합니다. 이 예제에서 사용하는 명명된 인스턴스의 경우 **tcp:***<computer_name>***,49172**를 입력합니다.  
+3.  **서버 이름** 상자에 **tcp:** 를 입력하여 프로토콜을 지정한 다음 컴퓨터 이름, 쉼표, 포트 번호를 차례로 입력합니다. 기본 인스턴스 연결 시에는 포트 1433이 적용되므로 포트를 생략할 수 있습니다. 따라서 **tcp:**_<computer_name>_ 을 입력합니다. 이 예제에서 사용하는 명명된 인스턴스의 경우 **tcp:**_<computer_name>_**,49172**를 입력합니다.  
   
     > [!NOTE]  
     >  **서버 이름** 상자에서 **tcp:** 를 생략하면 클라이언트에서 설정된 모든 프로토콜을 클라이언트 구성에 지정된 순서대로 시도합니다.  

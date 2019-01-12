@@ -15,12 +15,12 @@ ms.assetid: 6a18f7f0-eb50-485f-a9c7-df31ae0f994e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f309bf2f339347c6d29000b45bdaab602b3bd752
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a3e8497e4f5a8b5e74b7bb0b5d9c01cef78e275d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760735"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131083"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 SQL Server 관리 개체를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 작업 범주의 멤버 자격을 변경하는 방법에 대해 설명합니다.  
@@ -56,13 +56,13 @@ ms.locfileid: "52760735"
   
 3.  **작업** 폴더를 마우스 오른쪽 단추로 클릭하고 **작업 범주 관리**를 선택합니다.  
   
-4.  **작업 범주 관리***server_name* 대화 상자에서 편집하려는 작업 범주를 선택한 다음, **작업 보기**를 클릭합니다.  
+4.  **작업 범주 관리**_server_name_ 대화 상자에서 편집하려는 작업 범주를 선택한 다음 **작업 보기**를 클릭합니다.  
   
 5.  **모든 작업 표시** 확인란을 선택합니다.  
   
 6.  범주에 작업을 추가하려면 주 표 형태의 **선택** 열에서 해당 작업에 대한 확인란을 선택합니다. 범주에서 작업을 제거하려면 해당 확인란의 선택을 취소합니다. 완료되었으면 **확인**을 클릭합니다.  
   
-7.  **작업 범주 관리***server_name* 대화 상자를 닫습니다.  
+7.  **작업 범주 관리**_server_name_ 대화 상자를 닫습니다.  
   
 ##  <a name="TSQL"></a> Transact-SQL 사용  
   

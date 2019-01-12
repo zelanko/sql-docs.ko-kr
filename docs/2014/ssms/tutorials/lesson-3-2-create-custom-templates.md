@@ -14,12 +14,12 @@ ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e94112325267cf65329d825f46a30f3ed9c50450
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215583"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127253"
 ---
 # <a name="create-custom-templates"></a>사용자 지정 템플릿 만들기
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 와 함께 많은 일반 태스크에 사용할 템플릿이 제공되지만 템플릿의 진정한 힘은 자주 만들어야 할 복잡한 스크립트의 사용자 지정 템플릿을 만드는 기능에 있습니다. 이 연습에서 소수의 매개 변수가 있는 단순 스크립트를 만들지만 템플릿은 반복되는 긴 스크립트에도 유용합니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "48215583"
   
 10. 쿼리 편집기에 **EXECUTE dbo.WorkOrdersForBlade**를 입력한 다음 F5 키를 눌러 쿼리를 실행합니다. **결과** 창에서 Blade에 대한 작업 주문 목록이 반환되는지 확인합니다.  
   
-11. 템플릿 스크립트 (7 단계의 스크립트)를 편집 제품 이름 Blade를 매개 변수로 바꾸어 ***< * product_name**를 `nvarchar(50)`, **이름*> * * *를 네 곳에서.  
+11. 템플릿 스크립트 (7 단계의 스크립트)를 편집 제품 이름 Blade를 매개 변수로 바꾸어  <strong>*<* product_name</strong>, `nvarchar(50)`하십시오 <strong>이름*>*</strong> , 네 가지 위치에 있습니다.  
   
     > [!NOTE]  
     >  매개 변수에는 바꾸려는 매개 변수의 이름, 매개 변수의 데이터 형식 및 매개 변수 기본값의 세 가지 요소가 필요합니다.  

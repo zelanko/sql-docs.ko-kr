@@ -14,12 +14,12 @@ ms.assetid: 978d150f-8971-458a-ab2b-3beba5937b46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 880f2f6fc155338aa65637fbc71402ba7ec55821
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b03dd7f886cee5816d591034d1be63ece45d8d1d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800215"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127884"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>스냅숏 속성 구성(복제 Transact-SQL 프로그래밍)
   복제 저장 프로시저를 사용하여 스냅숏 속성을 프로그래밍 방식으로 정의 및 수정할 수 있습니다. 사용되는 저장 프로시저는 게시 유형에 따라 달라집니다.  
@@ -101,7 +101,7 @@ ms.locfileid: "52800215"
 ## <a name="see-also"></a>관련 항목  
  [대체 스냅숏 폴더 위치](../alternate-snapshot-folder-locations.md)   
  [압축 스냅숏](../compressed-snapshots.md)   
- [스냅숏 적용 전후에 스크립트 실행](../execute-scripts-before-and-after-the-snapshot-is-applied.md)   
+ [스냅숏 적용 전후에 스크립트 실행](../snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [FTP를 통해 스냅숏 전송](../transfer-snapshots-through-ftp.md)   
  [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)  

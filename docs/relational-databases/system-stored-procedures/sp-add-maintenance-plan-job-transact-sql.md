@@ -18,12 +18,12 @@ ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1705c6b171c047b525d888e6e5839cd816cb9979
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f941269d1e42e1adc09dce2a6937b900e0aaa13
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716441"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123483"
 ---
 # <a name="spaddmaintenanceplanjob-transact-sql"></a>sp_add_maintenance_plan_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@plan_id =**] **'***plan_id***'**  
+ [  **@plan_id =**] **'**_plan_id_**'**  
  유지 관리 계획의 ID를 지정합니다. *plan_id* 됩니다 **uniqueidentifier**, 이며 유효한 ID 여야 합니다  
   
- [ **@job_id =**] **'***job_id***'**  
+ [  **@job_id =**] **'**_job_id_**'**  
  유지 관리 계획과 연관된 작업의 ID를 지정합니다. *job_id* 됩니다 **uniqueidentifier**, 이며 유효한 ID 여야 합니다 실행 작업 또는 작업을 만들려면 **sp_add_job**, 또는 SQL Server Management Studio를 사용 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

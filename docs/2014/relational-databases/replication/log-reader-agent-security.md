@@ -14,12 +14,12 @@ ms.assetid: d6981e74-ddb8-41b8-9ea1-56c2ece63b8a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03455e0ae31712d4ce02beab7eebb697978a1a1a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c55292aff126d1955c438c9417ce0651cc6afc94
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799925"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128893"
 ---
 # <a name="log-reader-agent-security"></a>로그 판독기 에이전트 보안
   **로그 판독기 에이전트 보안** 대화 상자에서 다음을 지정할 수 있습니다.  
@@ -50,8 +50,8 @@ ms.locfileid: "52799925"
   
  연결에 사용되는 Windows 계정이나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정은 적어도 게시 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [복제의 로그인 및 암호 관리](security/manage-logins-and-passwords-in-replication.md)   
+## <a name="see-also"></a>관련 항목  
+ [복제의 로그인 및 암호 관리](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [복제 에이전트 보안 모델](security/replication-agent-security-model.md)   
  [복제 에이전트 개요](agents/replication-agents-overview.md)   
  [복제 보안을 위한 최선의 구현 방법](security/replication-security-best-practices.md)  

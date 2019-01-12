@@ -16,12 +16,12 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6fa11684cc9f35eb662ca41c731f11887e1bce32
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cd3c7f0bb394025581e4a2dffc8eb79a43acb498
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534040"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127923"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>다른 파일 그룹으로 기존 인덱스 이동
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 현재 파일 그룹에서 다른 파일 그룹으로 기존 인덱스를 이동하는 방법을 설명합니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "52534040"
   
 8.  **닫기**를 클릭합니다.  
   
-9. **파일** 메뉴에서 **Save***table_name*을 선택합니다.  
+9. **파일** 메뉴에서 _table_name_ **저장**을 선택합니다.  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>개체 탐색기에서 기존 인덱스를 다른 파일 그룹으로 이동하려면  
   
@@ -87,7 +87,7 @@ ms.locfileid: "52534040"
   
 5.  이동할 인덱스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-6.  **페이지 선택**아래에서 **저장소**를 선택합니다.  
+6.  **페이지 선택**아래에서 **스토리지**를 선택합니다.  
   
 7.  인덱스를 이동할 파일 그룹을 선택합니다.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "52534040"
   
 8.  **확인**을 클릭합니다.  
   
- **인덱스 속성 –** *index_name* 대화 상자의 **스토리지** 페이지에서 다음 정보를 사용할 수 있습니다.  
+ **인덱스 속성 –** _index_name_ 대화 상자의 **스토리지** 페이지에서 다음 정보를 사용할 수 있습니다.  
   
  **파일 그룹**  
  지정한 파일 그룹에 인덱스를 저장합니다. 목록에는 표준(행) 파일 그룹만 표시됩니다. 목록에서는 기본적으로 데이터베이스의 PRIMARY 파일 그룹이 선택됩니다.  

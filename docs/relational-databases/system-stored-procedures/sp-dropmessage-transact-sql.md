@@ -18,12 +18,12 @@ ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4aa4b07c3a7c27546990f1b5a1a25fd4f7d0da83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3eae9eeceec6d32ca616244f2ebd77f96d23e614
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725041"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124153"
 ---
 # <a name="spdropmessage-transact-sql"></a>sp_dropmessage(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_dropmessage [ @msgnum = ] message_number
  [  **@msgnum =** ] *message_number*  
  삭제할 메시지 번호입니다. *message_number* 메시지 번호가 50000 보다 커야 하는 사용자 정의 메시지 여야 합니다. *message_number* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [  **@lang =** ] **'***언어***'**  
+ [  **@lang =** ] **'**_언어_**'**  
  삭제할 메시지의 언어입니다. 하는 경우 **모든** 지정 된 모든 언어 버전의 *message_number* 삭제 됩니다. *언어* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

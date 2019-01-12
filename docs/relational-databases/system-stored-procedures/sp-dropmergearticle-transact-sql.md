@@ -16,12 +16,12 @@ ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4d96dd15857847e739600f087fa63b2c34453d27
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 78328463828b3c4a93b72ddc8790df13677dee81
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816045"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125373"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_게시_**'**  
  아티클을 삭제할 게시의 이름입니다. *게시*됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@article=**] **'***문서***'**  
+ [  **@article=**] **'**_문서_**'**  
  지정된 게시에서 삭제할 아티클의 이름입니다. *문서*됩니다 **sysname**, 기본값은 없습니다. 하는 경우 **모든**, 지정 된 병합 게시의 모든 기존 아티클을 제거 됩니다. 경우에 *문서* 됩니다 **모든**, 게시 여전히에서 삭제 해야 별도로 문서.  
   
  [  **@ignore_distributor=**] *ignore_distributor*  
@@ -162,7 +162,7 @@ EXEC sp_dropmergearticle
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [아티클 삭제](../../relational-databases/replication/publish/delete-an-article.md)   
  [기존 게시에 대한 아티클 추가 및 삭제](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
  [sp_addmergearticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   

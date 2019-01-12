@@ -16,12 +16,12 @@ ms.assetid: b52b37e6-4fec-40cf-abba-7dce4ff395fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 31958069ae54e1b94291cfb220f669f25100afe3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a05845955116454ae23b2cd97e25250dbb1e6331
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759875"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124093"
 ---
 # <a name="spdroppublication-transact-sql"></a>sp_droppublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_droppublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=** ] **'***게시***'**  
+ [  **@publication=** ] **'**_게시_**'**  
  삭제할 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다. 하는 경우 **모든** 지정 된 경우 구독을 사용 하 여 제외 하 고, 게시 데이터베이스에서 모든 게시가 삭제 됩니다.  
   
  [  **@ignore_distributor =** ] *ignore_distributor*  
@@ -61,7 +61,7 @@ sp_droppublication [ @publication= ] 'publication'
 ## <a name="examples"></a>예  
  [!code-sql[HowTo#sp_droppublication](../../relational-databases/replication/codesnippet/tsql/sp-droppublication-trans_1.sql)]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [게시 삭제](../../relational-databases/replication/publish/delete-a-publication.md)   
  [sp_addpublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   

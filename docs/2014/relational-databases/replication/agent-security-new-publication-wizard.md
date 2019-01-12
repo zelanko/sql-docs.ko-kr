@@ -12,12 +12,12 @@ ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b7acd2c6ab698a8fafb8e89c21376973163d88c2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 555aa4e49887000354e5d31ff5d039a5f0ac75eb
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758205"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129203"
 ---
 # <a name="agent-security-new-publication-wizard"></a>에이전트 보안(새 게시 마법사)
   **에이전트 보안** 페이지를 사용하여 다음 에이전트를 실행하고 복제 토폴로지의 컴퓨터에 연결할 때 사용되는 계정을 지정할 수 있습니다.  
@@ -52,12 +52,12 @@ ms.locfileid: "52758205"
 > [!NOTE]  
 >  각 배포 데이터베이스 및 이 데이터베이스에서 처리하는 모든 게시자에 대해 하나의 큐 판독기 에이전트가 있습니다. 지정된 배포 데이터베이스를 사용하는 게시자에 지연 업데이트 구독을 허용하는 트랜잭션 게시가 이미 있으면 보안 설정은 읽기 전용입니다. **배포자 속성** 대화 상자에서 큐 판독기 에이전트를 실행 및 연결할 때 사용되는 계정을 변경할 수 있지만 이 변경 내용은 해당 배포 데이터베이스를 사용하는 모든 게시자에서의 게시에 적용됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Create a Publication](publish/create-a-publication.md)   
- [Create an Updatable Subscription to a Transactional Publication](create-updatable-subscription-transactional-publication-transact-sql.md)   
+ [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [배포자 및 게시자 속성 보기 및 수정](view-and-modify-distributor-and-publisher-properties.md)   
  [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)   
- [복제의 로그인 및 암호 관리](security/manage-logins-and-passwords-in-replication.md)   
+ [복제의 로그인 및 암호 관리](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [데이터 및 데이터베이스 개체 게시](publish/publish-data-and-database-objects.md)   
  [복제 에이전트 개요](agents/replication-agents-overview.md)  
   

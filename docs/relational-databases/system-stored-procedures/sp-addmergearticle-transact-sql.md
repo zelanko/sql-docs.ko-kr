@@ -16,12 +16,12 @@ ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f7894d5f7f3d3c686c8984c0386f1025f00c2890
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4bcf5b0163156fe078c3bd3382efb193ec417399
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770145"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129411"
 ---
 # <a name="spaddmergearticle-transact-sql"></a>sp_add_targetservergroup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -161,7 +161,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0x100000000**|에 지정 된 경우 FILESTREAM 특성을 복제 하려면이 옵션을 사용 **varbinary (max)** 열입니다. 테이블을 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 구독자에 복제할 경우에는 이 옵션을 지정하지 마십시오. FILESTREAM 열이 있는 테이블을 복제 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 이 스키마 옵션을 설정 하는 방법에 관계 없이 구독자 지원 되지 않습니다. 관련된 옵션을 참조 하세요 **0x800000000**합니다.|  
 |**0x200000000**|날짜 및 시간 데이터 형식 변환 (**날짜**를 **시간**를 **datetimeoffset**, 및 **datetime2**)에 도입 된 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 데이터 이전 버전의 지원 되는 형식을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|  
 |**0x400000000**|데이터 및 인덱스에 대한 압축 옵션을 복제합니다. 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요.|  
-|**0x800000000**|FILESTREAM 데이터를 구독자에서 고유한 파일 그룹에 저장하려면 이 옵션을 설정합니다. 이 옵션을 설정하지 않으면 FILESTREAM 데이터는 기본 파일 그룹에 저장됩니다. 복제 기능에서는 파일 그룹을 만들지 않으므로 이 옵션을 설정할 경우 구독자에서 스냅숏을 적용하기 전에 파일 그룹을 만들어야 합니다. 스냅숏을 적용 하기 전에 개체를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [하기 전에 스크립트 실행 및 스냅숏 적용 전후](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)합니다.<br /><br /> 관련된 옵션을 참조 하세요 **0x100000000**합니다.|  
+|**0x800000000**|FILESTREAM 데이터를 구독자에서 고유한 파일 그룹에 저장하려면 이 옵션을 설정합니다. 이 옵션을 설정하지 않으면 FILESTREAM 데이터는 기본 파일 그룹에 저장됩니다. 복제 기능에서는 파일 그룹을 만들지 않으므로 이 옵션을 설정할 경우 구독자에서 스냅숏을 적용하기 전에 파일 그룹을 만들어야 합니다. 스냅숏을 적용 하기 전에 개체를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [하기 전에 스크립트 실행 및 스냅숏 적용 전후](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)합니다.<br /><br /> 관련된 옵션을 참조 하세요 **0x100000000**합니다.|  
 |**0x1000000000**|공용 언어 런타임 (CLR) 사용자 정의 형식 (Udt) 변환 **varbinary (max)** 실행 하는 구독자에 게 UDT 형식의 열을 복제할 수 있도록 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]입니다.|  
 |**0x2000000000**|변환 된 **hierarchyid** 데이터 형식입니다 **varbinary (max)** 있도록 형식의 열 **hierarchyid** 실행 하는 구독자에 복제할 수 있습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. 사용 하는 방법에 대 한 자세한 내용은 **hierarchyid** 복제 된 테이블의 열 참조 [hierarchyid &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 |**0x4000000000**|테이블의 필터링된 인덱스를 복제합니다. 필터링 된 인덱스에 대 한 자세한 내용은 참조 하세요. [필터링 된 인덱스 만들기](../../relational-databases/indexes/create-filtered-indexes.md)합니다.|  
@@ -296,7 +296,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 >  아티클의 원본 테이블은 이미 다른 게시의 값에 게시 된 경우 *partition_options* 두 아티클에 대해 동일 해야 합니다.  
   
  [  **@processing_order=** ] *processing_order*  
- 병합 게시에서 아티클의 처리 순서를 나타냅니다. *processing_order* 됩니다 **int**, 기본값은 0입니다. **0** 지정은 아티클이 정렬 되지을 다른 값이 아티클의 처리 순서의 서 수 값을 나타냅니다. 아티클은 최하위에서 최상위의 순서로 처리됩니다. 처리 순서의 아티클 애칭 순서에 따라 결정은 두 문서는 동일한 값이 있으면 합니다 [sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md) 시스템 테이블입니다. 자세한 내용은 [병합 아티클의 처리 순서 지정](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)을 참조하세요.  
+ 병합 게시에서 아티클의 처리 순서를 나타냅니다. *processing_order* 됩니다 **int**, 기본값은 0입니다. **0** 지정은 아티클이 정렬 되지을 다른 값이 아티클의 처리 순서의 서 수 값을 나타냅니다. 아티클은 최하위에서 최상위의 순서로 처리됩니다. 처리 순서의 아티클 애칭 순서에 따라 결정은 두 문서는 동일한 값이 있으면 합니다 [sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md) 시스템 테이블입니다. 자세한 내용은 [병합 복제 지정할 속성](../../relational-databases/replication/merge/specify-merge-replication-properties.md)합니다.  
   
  [  **@subscriber_upload_options=** ] *subscriber_upload_options*  
  구독 유형이 클라이언트 구독인 구독자에서 수행되는 업데이트에 대한 제한을 정의합니다. 자세한 내용은 [다운로드 전용 아티클로 병합 복제 성능 최적화](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)를 참조하세요. *subscriber_upload_options* 됩니다 **tinyint**, 이며 다음 값 중 하나일 수 있습니다.  
@@ -358,11 +358,11 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  값을 지정 하는 경우 **3** 에 대 한 *partition_options*, 구독이 하나만 각 파티션에 대 한 해당 문서의 데이터 있을 수 있습니다. 새 구독의 필터링 조건이 기존 구독과 동일한 파티션을 사용하도록 하여 두 번째 구독이 생성될 경우 기존 구독이 삭제됩니다.  
   
- 에 대 한 3의 값을 지정 하면 *partition_options*, 메타 데이터 정리 되어 병합 에이전트가 실행 될 때마다 분할 된 스냅숏은 더 빨리 만료 됩니다. 이 옵션을 사용할 때는 구독자가 요청한 분할된 스냅숏을 활성화해야 합니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)을 참조하세요.  
+ 에 대 한 3의 값을 지정 하면 *partition_options*, 메타 데이터 정리 되어 병합 에이전트가 실행 될 때마다 분할 된 스냅숏은 더 빨리 만료 됩니다. 이 옵션을 사용할 때는 구독자가 요청한 분할된 스냅숏을 활성화해야 합니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
   
  정적 행 필터를 사용 하 여 아티클을 추가 사용 하 여 *subset_filterclause*를 매개 변수가 있는 필터는 아티클을 기존 게시에 구독을 다시 초기화 해야 합니다.  
   
- 지정 하는 경우 *processing_order*, 좋습니다 아티클 순서 값 간에 간격을 두는 쉽게 나중에 새 값을 설정 합니다. 예를 들어 Article1, Article2 및 article3과 같이 세 개의 문서로 경우 설정할 *processing_order* 10, 20, 및 30 보다는 1, 2 및 3입니다. 자세한 내용은 [병합 아티클의 처리 순서 지정](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)을 참조하세요.  
+ 지정 하는 경우 *processing_order*, 좋습니다 아티클 순서 값 간에 간격을 두는 쉽게 나중에 새 값을 설정 합니다. 예를 들어 Article1, Article2 및 article3과 같이 세 개의 문서로 경우 설정할 *processing_order* 10, 20, 및 30 보다는 1, 2 및 3입니다. 자세한 내용은 [병합 복제 지정할 속성](../../relational-databases/replication/merge/specify-merge-replication-properties.md)합니다.  
   
 ## <a name="default-schema-option-table"></a>기본 스키마 옵션 표  
  이 표에서 NULL 값을 지정 하는 경우 저장된 프로시저에 의해 설정 된 기본값 *schema_option*, 문서 형식에 따라 다릅니다.  
@@ -395,7 +395,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 ## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [데이터 및 데이터베이스 개체 게시](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Id 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)   

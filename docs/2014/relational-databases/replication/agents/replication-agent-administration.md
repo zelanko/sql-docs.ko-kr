@@ -22,12 +22,12 @@ ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49729948f284af9ec2a638f7da3da4b248521653
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 00fc90be42bddd7feb43d96c9110def4db60835c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762495"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130453"
 ---
 # <a name="replication-agent-administration"></a>복제 에이전트 관리
   복제 에이전트는 스키마와 데이터의 복사본 만들기, 게시자 또는 구독자에서 업데이트 검색, 서버 간에 변경 내용 전파 등 복제와 관련된 많은 태스크를 수행합니다. 기본적으로 복제 에이전트는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서 실행됩니다. 에이전트는 단순히 실행 파일이므로 명령줄 및 일괄 처리 스크립트에서 직접 호출할 수도 있습니다. 각 응용 프로그램 에이전트는 실행 방식을 제어하는 데 사용되는 일련의 런타임 매개 변수를 지원합니다. 이러한 매개 변수는 에이전트 프로필 또는 명령줄에서 지정됩니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "52762495"
   
     -   큐 판독기 에이전트  
   
-     이러한 에이전트와 연결된 정보 및 태스크는 **에이전트** 탭을 통해 액세스할 수 있습니다. 자세한 내용은 [게시 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../monitor/view-information-and-perform-tasks-for-publication-agents.md)을 참조하세요.  
+     이러한 에이전트와 연결된 정보 및 태스크는 **에이전트** 탭을 통해 액세스할 수 있습니다. 자세한 내용은 [정보 보기 및 태스크 수행 복제 모니터를 사용 하 여](../monitor/view-information-and-perform-tasks-replication-monitor.md)입니다.  
   
 -   다음 에이전트는 복제 모니터에서 구독과 연결됩니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "52762495"
   
     -   병합 에이전트  
   
-     이러한 에이전트와 연결된 정보 및 태스크는 **구독 조사 목록** (각 게시자에 대 한 사용 가능) 또는 **모든 구독** 탭 (각 게시에 대 한 사용 가능). 자세한 내용은 [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)을 참조하세요.  
+     이러한 에이전트와 연결된 정보 및 태스크는 **구독 조사 목록** (각 게시자에 대 한 사용 가능) 또는 **모든 구독** 탭 (각 게시에 대 한 사용 가능). 자세한 내용은 [정보 보기 및 태스크 수행 복제 모니터를 사용 하 여](../monitor/view-information-and-perform-tasks-replication-monitor.md)입니다.  
   
 ## <a name="independent-and-shared-agents"></a>독립 및 공유 에이전트  
  독립 에이전트는 한 구독에 사용되는 에이전트입니다. 공유 에이전트는 여러 구독을 제공합니다. 동일한 공유 에이전트를 사용하는 여러 구독을 동기화해야 할 경우 기본적으로 여러 구독은 큐에서 대기하고 공유 에이전트가 한 번에 하나씩 구독을 처리합니다. 독립 에이전트는 구독에 동기화가 필요할 때마다 준비가 되어 있기 때문에 이를 사용하면 대기 시간이 줄어듭니다. 병합 복제는 항상 독립 에이전트를 사용하고 트랜잭션 복제는 새 게시 마법사에서 만든 게시에 대해 기본적으로 독립 에이전트를 사용합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 트랜잭션 복제가 기본적으로 공유 에이전트를 사용했습니다.  

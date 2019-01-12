@@ -12,12 +12,12 @@ ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8e82c71834a2d41a7620f549bc6335fa15df84bf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c9b8ed6778a087c2200012c6df1409b187b39329
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813995"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125383"
 ---
 # <a name="tutorial-preparing-the-server-for-replication"></a>자습서: 복제용 서버 준비
   복제 토폴로지를 구성하려면 보안을 계획해야 합니다. 이 자습서에서는 데이터 복제의 첫 단계인 배포를 구성하는 방법과 복제 토폴로지의 보안을 강화하는 방법을 보여 줍니다. 다른 자습서를 사용하기 전에 먼저 이 자습서를 완료해야 합니다.  
@@ -47,8 +47,8 @@ ms.locfileid: "52813995"
   
  [자습서 시작](lesson-1-creating-windows-accounts-for-replication.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [배포 구성](configure-distribution.md)   
- [보안 및 보호&#40;복제&#41;](security/security-and-protection-replication.md)  
+ [SQL Server 복제 보안](security/view-and-modify-replication-security-settings.md)  
   
   

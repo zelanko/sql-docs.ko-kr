@@ -23,12 +23,12 @@ ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9feaa3be20692b89b0d0568f1ccacc49c992667
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 24587f27710381ac787fe8045029df681e401af5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408282"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130193"
 ---
 # <a name="set-index-options"></a>인덱스 옵션 설정
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 인덱스 속성을 수정하는 방법에 대해 설명합니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "52408282"
   
 7.  **닫기**를 클릭합니다.  
   
-8.  **파일** 메뉴에서 **Save***table_name*을 선택합니다.  
+8.  **파일** 메뉴에서 _table_name_ **저장**을 선택합니다.  
   
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>개체 탐색기에서 인덱스 속성을 수정하려면  
   
@@ -96,7 +96,7 @@ ms.locfileid: "52408282"
   
 7.  속성의 설정을 변경하여 인덱스를 사용자 지정합니다.  
   
-8.  인덱스 열을 추가 또는 제거하거나 그 위치를 변경하려면 **인덱스 속성 -**  **일반** *일반* 페이지를 선택합니다. 자세한 내용은 [Index Properties F1 Help](index-properties-f1-help.md)를 참조하세요.  
+8.  인덱스 열을 추가 또는 제거하거나 그 위치를 변경하려면 **인덱스 속성 -**  **일반** _일반_ 페이지를 선택합니다. 자세한 내용은 [Index Properties F1 Help](index-properties-f1-help.md)를 참조하세요.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

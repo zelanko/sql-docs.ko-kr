@@ -17,12 +17,12 @@ ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8592517c71651b457c660e1d73e683c1c5ed332
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813985"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126433"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "52813985"
   
  트랜잭션 게시에 대해 업데이트할 수 있는 구독을 설정하려면 [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md)을 참조하세요.  
   
- 트랜잭션 게시에 대해 업데이트할 수 있는 구독을 만들려면 [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md)를 참조하세요.  
+ 트랜잭션 게시에 대해 업데이트할 수 있는 구독을 만들려면 [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)를 참조하세요.  
   
 ## <a name="switching-between-update-modes"></a>업데이트 모드 전환  
  업데이트할 수 있는 구독을 사용할 때는 구독에서 특정 업데이트 모드를 사용하도록 지정한 다음 애플리케이션의 필요에 따라 다른 업데이트 모드로 전환할 수 있습니다. 예를 들어 구독에서 즉시 업데이트를 사용하도록 지정한 다음 시스템 오류로 인해 네트워크 연결이 손실된 경우에 지연 업데이트로 전환할 수 있습니다.  
@@ -124,7 +124,7 @@ ms.locfileid: "52813985"
   
 ## <a name="see-also"></a>관련 항목  
  [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)   
- [트랜잭션 복제에 대한 게시 유형](publication-types-for-transactional-replication.md)   
+ [트랜잭션 복제](transactional-replication.md)   
  [데이터 및 데이터베이스 개체 게시](../publish/publish-data-and-database-objects.md)   
  [게시 구독](../subscribe-to-publications.md)  
   

@@ -16,12 +16,12 @@ ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ab783933dd060c23019db5a7c16e9734e59bb140
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0e21e07cb9c81b65cccafda2e938057cd16f96b4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802285"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124413"
 ---
 # <a name="spvupgradereplication-transact-sql"></a>sp_vupgrade_replication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,27 +42,27 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@login=**] **'***로그인***'**  
+ [  **@login=**] **'**_로그인_**'**  
  배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 시스템 관리자 로그인입니다. *login*은 **sysname**이며 기본값은 NULL입니다. 경우에이 매개 변수가 필요 하지 않습니다 *security_mode* 로 설정 된 **1**, Windows 인증이 있는 합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전으로 업그레이드할 경우 이 매개 변수가 무시됩니다.  
   
- [  **@password=**] **'***암호***'**  
+ [  **@password=**] **'**_암호_**'**  
  배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 시스템 관리자 암호입니다. *암호* 됩니다 **sysname**, 기본값은 **'** (빈 문자열)입니다. 경우에이 매개 변수가 필요 하지 않습니다 *security_mode* 로 설정 된 **1**, Windows 인증이 있는 합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전으로 업그레이드할 경우 이 매개 변수가 무시됩니다.  
   
- [  **@ver_old=**] **'***old_version***'**  
+ [  **@ver_old=**] **'**_old_version_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  이 저장 프로시저는 더 이상 사용되지 않으며 차후의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 릴리스에서 제거될 예정입니다.  
   
- [  **@force_remove=**] **'***force_removal***'**  
+ [  **@force_remove=**] **'**_force_removal_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@security_mode=**] **'***security_mode***'**  
+ [  **@security_mode=**] **'**_security_mode_**'**  
  배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 로그인 보안 모드입니다. *security_mode* 됩니다 **비트** 이며 기본값은 **0**합니다. 하는 경우 **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용 합니다. 하는 경우 **1**, Windows 인증을 사용 합니다.  
   
 > [!NOTE]  
@@ -79,6 +79,6 @@ sp_vupgrade_replication [ [@login=] 'login' ]
   
 ## <a name="see-also"></a>관련 항목  
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [복제된 데이터의 유효성 검사](../../relational-databases/replication/validate-replicated-data.md)  
+ [복제된 데이터의 유효성 검사](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

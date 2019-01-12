@@ -16,12 +16,12 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b247e6869d3eea05325fd9020ee6a073540deb4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5cdd5f3b4c4c1dd8ddac0df34423834c3b09b839
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209132"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131243"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication =** ] **'***게시***'**  
+ [  **@publication =** ] **'**_게시_**'**  
  게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@property =** ] **'***속성***'**  
+ [  **@property =** ] **'**_속성_**'**  
  변경할 게시 속성입니다. *속성* 됩니다 **nvarchar(255)** 합니다.  
   
- [  **@value =** ] **'***값***'**  
+ [  **@value =** ] **'**_값_**'**  
  새 속성 값입니다. *값* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다.  
   
  이 표에서는 변경할 수 있는 게시의 속성 및 그 속성의 값에 대한 제한에 대해 설명합니다.  
@@ -130,7 +130,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   - **0** 문서를 변경으로 인해 구독이 다시 초기화 되지 않습니다 지정 합니다. 저장 프로시저가 기존 구독을 다시 초기화해야 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   - **1** 문서 변경으로 인해 기존 구독이 다시 초기화 되도록 지정 하며 구독을 다시 초기화할 수에 대 한 사용 권한을 부여 합니다.  
   
-[ **@publisher** = ] **'***publisher***'**  
+[ **@publisher** =] **'**_게시자_**'**  
  지정 된 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
   > [!NOTE]  

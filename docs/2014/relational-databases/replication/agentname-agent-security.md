@@ -12,12 +12,12 @@ ms.assetid: d34c7ef8-cf77-4ffd-887f-3c4214dfd71e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25dc706689ec136a5423de8051fecd3c6071d5bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d77f8d6acb449bc9aa2298dbcba9782fd7bc07e7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762385"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127447"
 ---
 # <a name="ltagentnamegt-agent-security"></a>&lt;AgentName&gt; 에이전트 보안
   **\<AgentName> 에이전트 보안** 페이지를 사용하여 배포 에이전트(트랜잭션 및 스냅숏 복제의 경우) 또는 병합 에이전트(병합 복제의 경우)를 실행하고 복제 토폴로지의 컴퓨터에 연결하는 계정을 지정할 수 있습니다. 에이전트에 필요한 사용 권한 및 복제 보안을 위한 최선의 구현 방법은 [Replication Agent Security Model(복제 에이전트 보안 모델)](security/replication-agent-security-model.md) 및 [Replication Security Best Practices](security/replication-security-best-practices.md)(복제 보안 모범 사례)를 참조하세요.  
@@ -51,11 +51,11 @@ ms.locfileid: "52762385"
   
 -   밀어넣기 구독의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 컨텍스트로 연결할 수도 있습니다. 필드에는 **사용 하 여 로그인 '\<로그인 >'** 하십시오 **Impersonate '\<도메인 >\\< 로그인\>'** 하거나 **Impersonate '\<컴퓨터 >\\< 로그인\>'** 합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서는 Windows 계정의 컨텍스트를 사용하여 모든 연결을 설정할 것을 권장합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [끌어오기 구독 속성 보기 및 수정](view-and-modify-pull-subscription-properties.md)   
  [밀어넣기 구독 속성 보기 및 수정](view-and-modify-push-subscription-properties.md)   
- [복제의 로그인 및 암호 관리](security/manage-logins-and-passwords-in-replication.md)   
+ [복제의 로그인 및 암호 관리](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [복제 에이전트 보안 모델](security/replication-agent-security-model.md)   
- [보안 및 보호&#40;복제&#41;](security/security-and-protection-replication.md)  
+ [SQL Server 복제 보안](security/view-and-modify-replication-security-settings.md)  
   
   

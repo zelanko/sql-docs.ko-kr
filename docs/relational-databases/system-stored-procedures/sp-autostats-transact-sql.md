@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3a7a6c0ddee6e425ff80155be3002d8deffe187
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d628f2b5dffc976e32b15bea08407c5d0740c297
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721273"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123994"
 ---
 # <a name="spautostats-transact-sql"></a>sp_autostats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@tblname=** ] **'***table_or_indexed_view_name***'**  
+ [  **@tblname=** ] **'**_table_or_indexed_view_name_**'**  
  AUTO_UPDATE_STATISTICS 옵션을 표시하려는 테이블 또는 인덱싱된 뷰의 이름입니다. *table_or_indexed_view_name* 됩니다 **nvarchar(776)**, 기본값은 없습니다.  
   
- [  **@flagc=** ] **'***stats_value***'**  
+ [  **@flagc=** ] **'**_stats_value_**'**  
  AUTO_UPDATE_STATISTICS 옵션을 다음 값 중 하나로 업데이트합니다.  
   
  **ON** = ON  
@@ -57,7 +57,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  때 *stats_flag* 은 지정 하지 않으면 현재 AUTO_UPDATE_STATISTICS 설정을 표시 합니다. *stats_value* 됩니다 **varchar(10)**, 기본값은 NULL입니다.  
   
- [  **@indname=** ] **'***statistics_name***'**  
+ [  **@indname=** ] **'**_statistics_name_**'**  
  AUTO_UPDATE_STATISTICS 옵션을 표시하거나 업데이트할 통계의 이름입니다. 인덱스에 대한 통계를 표시하려면 인덱스 이름을 사용하면 됩니다. 인덱스와 해당 통계 개체는 동일한 이름을 갖습니다.  
   
  *statistics_name* 됩니다 **sysname**, 기본값은 NULL입니다.  

@@ -13,12 +13,12 @@ ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b275f7b25d87753911548eda5225d5de29f0897c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143763"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126987"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>AlwaysOn 게시 데이터베이스 유지 관리(SQL Server)
   이 항목에서는 AlwaysOn 가용성 그룹을 사용할 경우 게시 데이터베이스 유지 관리와 관련하여 특별히 고려해야 할 사항에 대해 설명합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "48143763"
     > [!NOTE]  
     >  게시된 멤버 데이터베이스가 있는 가용성 그룹을 제거하거나 게시된 데이터베이스를 가용성 그룹에서 제거하면 게시된 데이터베이스의 모든 복사본이 복구 중 상태로 남게 됩니다. 데이터베이스를 복원하면 각각이 게시된 데이터베이스로 표시됩니다. 한 복사본에만 게시 메타데이터를 유지해야 합니다. 게시된 데이터베이스 복사본에 대해 복제를 비활성화하려면 먼저 모든 구독 및 게시를 데이터베이스에서 제거합니다.  
   
-     실행 `sp_dropsubscription` 게시 구독을 제거 합니다. 배포자에서 활성 게시 데이터베이스에 대한 메타데이터를 유지하려면 *@ignore_distributributor* 매개 변수를 1로 설정해야 합니다.  
+     `sp_dropsubscription`을 실행하여 게시의 구독을 제거합니다. 배포자에서 활성 게시 데이터베이스에 대한 메타데이터를 유지하려면 *@ignore_distributributor* 매개 변수를 1로 설정해야 합니다.  
   
     ```  
     USE MyDBName;  
@@ -81,7 +81,7 @@ ms.locfileid: "48143763"
         @ignore_distributor = 1;  
     ```  
   
-     실행 `sp_droppublication` 모든 게시를 제거 합니다. 다시 *@ignore_distributor* 매개 변수를 1로 설정하여 배포자의 활성 게시 데이터베이스에 대한 메타데이터를 유지합니다.  
+     `sp_droppublication`을 실행하여 모든 게시를 제거합니다. 다시 *@ignore_distributor* 매개 변수를 1로 설정하여 배포자의 활성 게시 데이터베이스에 대한 메타데이터를 유지합니다.  
   
     ```  
     EXEC sys.sp_droppublication   
@@ -100,13 +100,13 @@ ms.locfileid: "48143763"
   
      이때 게시된 데이터베이스의 복사본을 유지하거나 삭제할 수 있습니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [AlwaysOn 가용성 그룹 (SQL Server)에 대 한 복제 구성](always-on-availability-groups-sql-server.md)  
   
 -   [복제, 변경 내용 추적, 변경 데이터 캡처 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)  
   
--   [관리&#40;복제&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [복제 관리 FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
 -   [복제 구독자 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   

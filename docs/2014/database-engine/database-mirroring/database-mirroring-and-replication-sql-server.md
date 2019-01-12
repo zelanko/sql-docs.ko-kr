@@ -13,12 +13,12 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3141146842bd568336033073f07b41c636129ee7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543578"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130483"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>데이터베이스 미러링 및 복제(SQL Server)
   데이터베이스 미러링은 게시 데이터베이스의 가용성을 제공하기 위해 복제와 함께 사용될 수 있습니다. 데이터베이스 미러링에는 일반적으로 서로 다른 컴퓨터에 있는 두 개의 단일 데이터베이스 복사본이 사용됩니다. 클라이언트는 항상 하나의 데이터베이스 복사본만 사용할 수 있습니다. 이 복사본을 주 데이터베이스라고 합니다. 클라이언트가 주 데이터베이스에 수행한 업데이트는 미러 데이터베이스라고 하는 다른 데이터베이스 복사본에 적용됩니다. 미러링에는 주 데이터베이스에 대해 수행된 모든 삽입, 업데이트 또는 삭제 작업의 트랜잭션 로그를 미러 데이터베이스에 적용하는 작업이 포함됩니다.  
@@ -161,7 +161,7 @@ ms.locfileid: "52543578"
 |자동 장애 조치를 지원하지 않는 보호 우선 모드|커밋된 모든 트랜잭션이 미러 서버의 디스크에 확정됩니다. 로그 판독기 에이전트는 미러 서버에 확정된 트랜잭션만 복제합니다. 미러 서버를 사용할 수 없는 경우 주 서버는 데이터베이스에 대한 더 이상의 작동을 허용하지 않기 때문에 로그 에이전트에는 복제할 트랜잭션이 없게 됩니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [복제 기능 및 태스크](../../relational-databases/replication/replication-features-and-tasks.md)   
+ [SQL Server 복제](../../relational-databases/replication/sql-server-replication.md)   
  [로그 전달 및 복제&#40;SQL Server&#41;](../log-shipping/log-shipping-and-replication-sql-server.md)  
   
   

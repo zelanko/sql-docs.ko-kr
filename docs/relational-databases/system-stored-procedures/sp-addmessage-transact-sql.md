@@ -18,12 +18,12 @@ ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b5ba2a19505d0d7a1493b997eda7d12f3a588f7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bbf909004f6b3d809babfb99b1787728194bd140
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524114"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100863"
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,25 +43,25 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@msgnum****=** ] *msg_id*  
+ [  **\@msgnum =** ] *msg_id*  
  메시지 ID입니다. *msg_id* 됩니다 **int** 이며 기본값은 NULL입니다. *msg_id* 사용자 정의 오류 메시지에는 50,001과 2,147,483,647 사이의 정수로 지정할 수 있습니다. 조합 *msg_id* 하 고 *언어* 고유 해야 합니다. 지정 된 언어 ID가 이미 있으면 오류가 반환 됩니다.  
   
- [  **@severity =** ]*심각도*  
+ [  **\@심각도 =** ]*심각도*  
  오류의 심각도입니다. *심각도* 됩니다 **smallint** 이며 기본값은 NULL입니다. 유효한 수준은 0에서 25까지입니다. 심각도에 대한 자세한 내용은 [데이터베이스 엔진 오류 심각도](../../relational-databases/errors-events/database-engine-error-severities.md)를 참조하세요.  
   
- [  **@msgtext =** ] **'**_msg_**'**  
+ [  **\@메시지 텍스트 =** ] **'**_msg_**'**  
  오류 메시지의 텍스트입니다. *msg* 됩니다 **nvarchar(255)** 이며 기본값은 NULL입니다.  
   
- [  **@lang =** ] **'**_언어_**'**  
+ [  **\@lang =** ] **'**_언어_**'**  
  이 메시지의 언어입니다. *언어* 됩니다 **sysname** 이며 기본값은 NULL입니다. 동일한 서버에서 여러 언어를 설치할 수 있으므로 *언어* 각 메시지가 작성 되는 언어를 지정 합니다. 때 *언어* 는 생략 하면 언어는 기본 언어는 세션에 대 한 합니다.  
   
- [  **@with_log =** ] { **'** TRUE **'** | **'FALSE'** }  
- 오류가 발생할 때 Windows 응용 프로그램 로그에 기록할지 여부입니다. **@with_log** 됩니다 **varchar(5)** 이며 기본값은 FALSE입니다. TRUE인 경우 오류가 항상 Windows 응용 프로그램 로그에 기록됩니다. FALSE인 경우 오류가 항상 Windows 응용 프로그램 로그에 기록되지는 않으며 오류가 어떻게 발생했는지에 따라 달라집니다. 멤버를 **sysadmin** 서버 역할이이 옵션을 사용할 수 있습니다.  
+ [  **\@with_log =** ] { **'** TRUE **'** | **'FALSE'** }  
+ 오류가 발생할 때 Windows 응용 프로그램 로그에 기록할지 여부입니다. **\@with_log** 됩니다 **varchar(5)** 이며 기본값은 FALSE입니다. TRUE인 경우 오류가 항상 Windows 응용 프로그램 로그에 기록됩니다. FALSE인 경우 오류가 항상 Windows 응용 프로그램 로그에 기록되지는 않으며 오류가 어떻게 발생했는지에 따라 달라집니다. 멤버를 **sysadmin** 서버 역할이이 옵션을 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  Windows 응용 프로그램 로그에 메시지가 기록된 경우에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 오류 로그 파일에도 기록됩니다.  
   
- [ **@replace** *=* ] **'**_바꾸기_**'**  
+ [  **\@대체 =** ] **'**_대체_**'**  
  문자열로 지정 된 경우 *대체*, 기존의 오류 메시지는 새 메시지 텍스트와 심각도 수준으로 덮어씁니다. *바꿉니다* 됩니다 **varchar(7)** 이며 기본값은 NULL입니다. 하는 경우이 옵션을 지정 해야 *msg_id* 이미 있습니다. 영어(미국)로 작성된 모든 메시지는 다른 모든 언어의 영어 메시지 심각도 바뀝니다 *msg_id*합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

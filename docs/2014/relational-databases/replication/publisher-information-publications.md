@@ -1,5 +1,5 @@
 ---
-title: 게시자 정보, 게시 | Microsoft 문서
+title: SQL Server 복제 ' 게시자 정보 ' 대화 상자 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,14 +12,14 @@ ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8614db7bd44f6ba5de8826215aed8cf123e86488
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 344b899905e844312ee6e5a66455fc2fa14b446f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812175"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128913"
 ---
-# <a name="publisher-information-publications"></a>게시자 정보, 게시
+# <a name="sql-server-replication-publisher-information-dialog-box"></a>SQL Server 복제 ' 게시자 정보 ' 대화 상자
   **게시** 탭은 왼쪽 창에서 선택한 게시자에서의 모든 게시에 대한 요약 정보를 제공합니다.  
   
 ## <a name="options"></a>변수  
@@ -64,7 +64,7 @@ ms.locfileid: "52812175"
 -   스냅숏 복제에서 "동기화 중"은 배포 에이전트가 실행 중이며 데이터가 현재 복제되고 있음을 의미합니다.  
   
  **현재 평균 성능** 및 **현재 가장 낮은 성능**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당됩니다. 게시에 대한 모든 구독의 평균 성능 등급과 가장 낮은 성능 등급입니다. 등급은 복제 모니터에서 측정한 가장 최근 측정값을 기반으로 하며 이전 구독 성능을 반영하지 않습니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. 게시에 대한 모든 구독의 평균 성능 등급과 가장 낮은 성능 등급입니다. 등급은 복제 모니터에서 측정한 가장 최근 측정값을 기반으로 하며 이전 구독 성능을 반영하지 않습니다.  
   
  트랜잭션 복제의 경우 복제 모니터는 성능 임계값이 정의된 게시에 대해서만 값을 표시합니다. 게시에 대해 성능 임계값을 정의하지 않으면 이 열에 **사용 안 함**이 표시됩니다. 병합 복제의 경우 복제 모니터는 같은 유형의 연결(전화 접속 또는 LAN)별로 50개 이상의 변경 사항을 5번 동기화한 후에 값을 표시합니다. 50개 이상의 변경 사항에 대해 동기화가 5번 미만으로 수행되었거나 가장 최근에 동기화가 수행된 변경 사항이 50개 미만인 경우에는 이 열이 비어 있습니다.  
   
@@ -78,13 +78,13 @@ ms.locfileid: "52812175"
   
 -   나쁨  
   
--   위험  
+-   심각  
   
  성능 등급 정의 방법 및 성능 임계값 설정 방법은 [복제 모니터로 성능 모니터링](monitor/monitor-performance-with-replication-monitor.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [복제 모니터 시작](monitor/start-the-replication-monitor.md)   
- [게시자에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [정보 및 복제 모니터를 사용 하 여 수행할 작업 보기](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [복제 모니터링](monitoring-replication.md)  
   
   

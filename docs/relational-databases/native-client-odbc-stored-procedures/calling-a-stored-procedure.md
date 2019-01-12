@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d93734ea9ef55361eb065f1f200757632dca1fd7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e7cd89d826177074bca18a047545a32acee115a9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662402"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128368"
 ---
 # <a name="calling-a-stored-procedure"></a>저장 프로시저 호출
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51662402"
   
  프로시저를 호출하는 ODBC CALL 이스케이프 시퀀스는 다음과 같습니다.  
   
- {[**?=**]**call***procedure_name*[([*parameter*][**,**[* parameter*]]...)]}  
+ {[**? =**]**호출**_procedure_name_[([*매개 변수*] [**하십시오**[*매개*]] ...)]}  
   
  여기서 *procedure_name* 프로시저의 이름을 지정 하 고 *매개 변수* 프로시저 매개 변수를 지정 합니다. 명명된 매개 변수는 ODBC CALL 이스케이프 시퀀스를 사용하는 문에서만 지원됩니다.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "51662402"
   
  입력 및 입/출력 매개 변수는 프로시저 호출에서 생략할 수 있습니다. 매개 변수 없이 괄호만 지정하여 프로시저를 호출하면 드라이버는 첫 번째 매개 변수에 기본값을 사용하도록 데이터 원본에 지시합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
- {**호출** * * procedure_name **()**}  
+ {**호출** _procedure_name_**()**}  
   
  프로시저에 매개 변수가 없으면 프로시저가 실패할 수 있습니다. 괄호 없이 프로시저를 호출하면 드라이버는 아무 매개 변수 값도 보내지 않습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
- {**call** *procedure_name*}  
+ {**call** _procedure_name_}  
   
  프로시저 호출 시 리터럴을 입력 및 입/출력 매개 변수로 지정할 수 있습니다. 예를 들어 InsertOrder 프로시저에는 입력 매개 변수 다섯 개가 있습니다. InsertOrder 다음 호출을 첫 번째 매개 변수를 생략, 두 번째 매개 변수에 리터럴을 제공 및 세 번째, 네 번째 및 다섯 번째 매개 변수 표식을 사용 하 여 매개 변수입니다. 매개 변수는 1부터 차례대로 번호가 지정됩니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "51662402"
 {call InsertOrder(, 10, ?, ?, ?)}  
 ```  
   
- 매개 변수를 생략하더라도 다른 매개 변수와 구분하는 쉼표는 생략하면 안 됩니다. 입력 또는 입/출력 매개 변수를 생략할 경우 프로시저는 매개 변수의 기본값을 사용합니다. 매개 변수에 바인딩된 길이/표시기 버퍼의 값을 SQL_DEFAULT_PARAM으로 설정하거나, DEFAULT 키워드를 사용하여 입력 또는 입/출력 매개 변수의 기본값을 지정할 수도 있습니다.  
+ 매개 변수를 생략하더라도 다른 매개 변수와 구분하는 쉼표는 생략하면 안 됩니다. 입력 또는 입/출력 매개 변수를 생략 하면 프로시저는 매개 변수의 기본값을 사용 합니다. 매개 변수에 바인딩된 길이/표시기 버퍼의 값을 SQL_DEFAULT_PARAM으로 설정하거나, DEFAULT 키워드를 사용하여 입력 또는 입/출력 매개 변수의 기본값을 지정할 수도 있습니다.  
   
  입/출력 매개 변수를 생략하거나, 매개 변수에 리터럴을 제공하면 드라이버는 출력 값을 삭제합니다. 마찬가지로 프로시저의 반환 값에 대한 매개 변수 표식을 생략하면 드라이버는 반환 값을 삭제합니다. 마지막으로, 응용 프로그램에서 값을 반환하지 않는 프로시저에 대해 반환 값 매개 변수를 지정하면 드라이버는 매개 변수에 바인딩된 길이/표시기 버퍼의 값을 SQL_NULL_DATA로 설정합니다.  
   

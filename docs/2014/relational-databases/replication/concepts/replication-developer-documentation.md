@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: replication
 ms.topic: reference
 helpviewer_keywords:
 - developer's guide [SQL Server replication]
@@ -14,30 +14,24 @@ ms.assetid: 7ee134ae-1cab-4a35-8017-8ac6d8fc64b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 499edc588b4253b3ae37c2be0bcde1cbbd79dea6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ce595518fc33903a9438a9a702d19725fa605f9b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777825"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128443"
 ---
 # <a name="developer39s-guide-replication"></a>개발자&#39;가이드 (복제)
   복제 토폴로지를 프로그래밍 방식으로 구성, 유지 관리 및 모니터링하면 반복되는 복제 태스크를 간소화하고 복제 기반 애플리케이션의 사용자 환경을 향상시킬 수 있습니다. 복제를 프로그래밍하면 최종 사용자가 복제 저장 프로시저와 복제 에이전트 실행 파일에 대해 잘 알지 못하거나 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 구현된 복제 사용자 인터페이스를 사용하지 않아도 사용자 지정 복제 기능을 사용할 수 있습니다.  
   
  다음과 같은 시나리오에서는 애플리케이션에서 복제 서비스에 대한 프로그래밍 방식 액세스의 장점을 활용할 수 있습니다.  
   
--   사용자가 단추를 클릭했을 때 끌어오기 구독을 동기화하는 것과 같은 복제 기능을 기존 최종 사용자 애플리케이션에 추가하는 경우  
-  
--   복제를 원격으로 관리하기 위한 웹 기반 사용자 인터페이스를 만드는 경우  
-  
--   관리 기능의 일부만 제공하거나, 한 곳에서 여러 복제 토폴로지를 원격으로 관리하거나, 관리 및 동기화 기능을 결합하는 사용자 지정 인터페이스를 만드는 경우  
-  
--   게시, 구독 또는 배포자에 대한 상태 모니터링 기능을 추가하여 기존의 모니터링 도구를 향상시키는 경우  
-  
--   Oracle 게시자에 대해 구독을 동기화하거나 관리하는 사용자 지정 애플리케이션을 만드는 경우  
-  
--   병합 구독이 동기화될 때 실행되는 사용자 지정 비즈니스 규칙을 작성하는 경우  
-  
+-   사용자가 단추를 클릭했을 때 끌어오기 구독을 동기화하는 것과 같은 복제 기능을 기존 최종 사용자 애플리케이션에 추가하는 경우   
+-   복제를 원격으로 관리하기 위한 웹 기반 사용자 인터페이스를 만드는 경우    
+-   관리 기능의 일부만 제공하거나, 한 곳에서 여러 복제 토폴로지를 원격으로 관리하거나, 관리 및 동기화 기능을 결합하는 사용자 지정 인터페이스를 만드는 경우    
+-   게시, 구독 또는 배포자에 대한 상태 모니터링 기능을 추가하여 기존의 모니터링 도구를 향상시키는 경우    
+-   Oracle 게시자에 대해 구독을 동기화하거나 관리하는 사용자 지정 애플리케이션을 만드는 경우    
+-   병합 구독이 동기화될 때 실행되는 사용자 지정 비즈니스 규칙을 작성하는 경우    
 -   새 구독자를 구성할 때 반복 실행될 수 있는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트를 생성하는 경우  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 복제 에이전트를 프로그래밍 방식으로 제어하고 복제 토폴로지를 프로그래밍 방식으로 관리 및 모니터링할 수 있습니다. 복제 프로그래밍에 대한 자세한 내용은 [복제 프로그래밍 개념](replication-programming-concepts.md)을 참조하세요.  
@@ -54,8 +48,6 @@ ms.locfileid: "52777825"
   
  [복제 에이전트 실행 파일 개념](replication-agent-executables-concepts.md)  
  복제 에이전트 실행 파일 사용 방법에 대해 설명합니다.  
-  
- [개발자 가이드: 방법 도움말 항목 &#40;복제&#41;](../developer-s-guide-how-to-topics-replication.md)  
- 복제와 관련된 방법 도움말 항목을 제공합니다.  
+
   
   

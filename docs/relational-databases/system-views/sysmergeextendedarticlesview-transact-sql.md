@@ -18,12 +18,12 @@ ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f41868f4ffa8a542475ef7c4be304d8636f87d4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 3f91537880615fd7075db67ff8d89835944d1a79
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802145"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125883"
 ---
 # <a name="sysmergeextendedarticlesview-transact-sql"></a>sysmergeextendedarticlesview(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "52802145"
 |**fast_multicol_updateproc**|**bit**|병합 에이전트를 사용하도록 설정하여 한 UPDATE 문에서 같은 행의 여러 열에 변경 사항을 적용했는지 여부를 지정합니다.<br /><br /> **0** = 각 열에 대해 별도 업데이트로 변경 하는 문제입니다.<br /><br /> **1** 하나의 문에서 여러 열 업데이트는 UPDATE 문에서 발급자 =.|  
 |**check_permissions**|**int**|병합 에이전트가 변경 내용을 게시자에 적용할 때 확인할 테이블 수준 사용 권한의 비트맵입니다. *check_permissions* 다음이 값 중 하나일 수 있습니다.<br /><br /> **0x00** = 권한을 확인 하지 않습니다.<br /><br /> **0x10** 구독자에서 수행한 Insert를 업로드 하기 전에 = 게시자에서 사용 권한을 확인 합니다.<br /><br /> **0x20** 구독자에서 수행한 Update를 업로드 하기 전에 = 게시자에서 사용 권한을 확인 합니다.<br /><br /> **0x40** 삭제가 구독자를 업로드 하기 전에 = 게시자에서 사용 권한을 확인 합니다.|  
 |**maxversion_at_cleanup**|**int**|메타데이터가 정리되는 가장 높은 생성층입니다.|  
-|**processing_order**|**int**|병합 게시에서 아티클의 처리 순서를 나타냅니다. 여기서 값 **0** 은 아티클이 정렬 되지를 가장 낮은 값에서 가장 높은 값에서 순서 대로 아티클이 처리를 표시 합니다. 두 아티클의 값이 같으면 동시에 처리됩니다. 자세한 내용은 [병합 아티클의 처리 순서 지정](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)을 참조하세요.|  
+|**processing_order**|**int**|병합 게시에서 아티클의 처리 순서를 나타냅니다. 여기서 값 **0** 은 아티클이 정렬 되지를 가장 낮은 값에서 가장 높은 값에서 순서 대로 아티클이 처리를 표시 합니다. 두 아티클의 값이 같으면 동시에 처리됩니다. 자세한 내용은 [병합 복제 지정할 속성](../../relational-databases/replication/merge/specify-merge-replication-properties.md)합니다.|  
 |**published_in_tran_pub**|**bit**|병합 게시의 아티클이 트랜잭션 게시에도 게시됨을 나타냅니다.<br /><br /> **0** = 아티클을 트랜잭션 아티클에도 게시 하지 않습니다.<br /><br /> **1** = 아티클을 트랜잭션 아티클에도 게시 합니다.|  
 |**upload_options**|**tinyiny**|구독자에서 변경이 수행되거나 업로드될 수 있는지 여부를 정의하며 다음 값 중 하나일 수 있습니다.<br /><br /> **0** = 구독자에서 업데이트에 대 한 제한은 없습니다; 모든 변경 내용이 게시자로 업로드 됩니다.<br /><br /> **1** = 허용 되지만 변경 내용이 구독자에서 게시자로 업로드 되지 않습니다.<br /><br /> **2** = 구독자에서 변경이 허용 되지 않습니다.|  
 |**lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

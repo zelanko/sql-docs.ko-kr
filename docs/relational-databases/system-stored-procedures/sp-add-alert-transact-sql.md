@@ -18,12 +18,12 @@ ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12c44c565e6e867c2fde6a99d770c2b083e3d6f9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4193e073f4ad4c52d6b2c7f6b82c6246107e85a1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203284"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127073"
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@name =** ] **'***name***'**  
+ [  **@name =** ] **'**_이름_**'**  
  경고의 이름입니다. 이름은 경고에 대한 응답으로 메시지가 전달된 전자 메일 또는 호출기에 표시됩니다. 고유 해야 하며 퍼센트 (**%**) 문자입니다. *이름을* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ **@message_id =** ] *message_id*  
@@ -78,7 +78,7 @@ sp_add_alert [ @name = ] 'name'
   
  이 값을 설정함으로써 단기간에 경고가 반복적으로 발생하는 경우, 원하지 않는 전자 메일 메시지가 전달되지 않도록 하는 등의 작업을 할 수 있습니다.  
   
- [  **@notification_message =** ] **'***notification_message***'**  
+ [  **@notification_message =** ] **'**_notification_message_**'**  
  전자 메일의 일부로 운영자에 게 전송 하는 선택적 추가 메시지는 **net send**, 또는 호출기 알림의 합니다. *notification_message* 됩니다 **nvarchar(512)**, 기본값은 NULL입니다. 지정 *notification_message* 교정 프로시저와 같은 특별 한 메모를 추가 하는 데 유용 합니다.  
   
  [ **@include_event_description_in =** ] *include_event_description_in*  
@@ -94,16 +94,16 @@ sp_add_alert [ @name = ] 'name'
 |**2**|호출기|  
 |**4**|**Net Send**|  
   
- [ **@database_name =** ] **'***database***'**  
+ [  **@database_name =** ] **'**_database_**'**  
  오류가 있는 경우 경고가 시작되도록 해 놓은 데이터베이스입니다. 하는 경우 *데이터베이스*제공 되지 않으면 오류가 발생 하는 것에 관계 없이 경고가 발생 합니다. *데이터베이스* 됩니다 **sysname**합니다. 이름을 대괄호([ ])로 묶는 것은 허용되지 않습니다. 기본값은 NULL입니다.  
   
- [ **@event_description_keyword =** ] **'***event_description_keyword_pattern***'**  
+ [  **@event_description_keyword =** ] **'**_event_description_keyword_pattern_**'**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류에 대한 설명과 일치해야 하는 문자 시퀀스입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 식 패턴 일치 문자를 사용할 수 있습니다. *event_description_keyword_pattern* 됩니다 **nvarchar(100)**, 기본값은 NULL입니다. 이 매개 변수는 개체 이름을 필터링 하는 데 (예를 들어 **%customer_table%**).  
   
  [ **@job_id =** ] *job_id*  
  해당 경고에 대한 응답으로 실행할 작업의 작업 ID입니다. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
   
- [ **@job_name =** ] **'***job_name***'**  
+ [  **@job_name =** ] **'**_job_name_**'**  
  해당 경고에 대한 응답으로 실행할 작업의 이름입니다. *job_name*됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
@@ -112,7 +112,7 @@ sp_add_alert [ @name = ] 'name'
  [ **@raise_snmp_trap =** ] *raise_snmp_trap*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 7.0에서는 구현되지 않습니다. *raise_snmp_trap* 됩니다 **tinyint**, 기본값은 0입니다.  
   
- [  **@performance_condition =** ] **'***performance_condition***'**  
+ [  **@performance_condition =** ] **'**_performance_condition_**'**  
  형식으로 표시 되는 값은 '*itemcomparatorvalue*'. *performance_condition* 은 **nvarchar(512)** 이며 기본값은 NULL 이며 다음이 요소로 구성 됩니다.  
   
 |형식 요소|Description|  
@@ -121,13 +121,13 @@ sp_add_alert [ @name = ] 'name'
 |*비교 연산자*|이러한 연산자 중 하나: >, <, 또는 =|  
 |*Value*|카운터의 숫자 값|  
   
- [  **@category_name =** ] **'***범주***'**  
+ [  **@category_name =** ] **'**_category_**'**  
  경고 범주의 이름입니다. *범주* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [ **@wmi_namespace**= ] **'***wmi_namespace***'**  
+ [ **@wmi_namespace**=] **'**_wmi_namespace_**'**  
  이벤트를 쿼리하는 WMI 네임스페이스입니다. *wmi_namespace* 됩니다 **sysname**, 기본값은 NULL입니다. 로컬 서버의 네임스페이스만 지원됩니다.  
   
- [ **@wmi_query**= ] **'***wmi_query***'**  
+ [ **@wmi_query**=] **'**_wmi_query_**'**  
  경고에 대한 WMI 이벤트를 지정하는 쿼리입니다. *wmi_query* 됩니다 **nvarchar(512)**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

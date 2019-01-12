@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: replication
 ms.topic: reference
 dev_langs:
 - VB
@@ -20,12 +20,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 75d4e1e4ac97683d25e00fd2cf249a8890f5edd3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2cbc3571aa26728fa94957bb0c2f207ff769f4c4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772086"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129573"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
   RMO(복제 관리 개체)는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 복제 기능을 캡슐화하는 관리 코드 어셈블리로, <xref:Microsoft.SqlServer.Replication> 네임스페이스를 통해 구현됩니다.  
@@ -35,16 +35,16 @@ ms.locfileid: "52772086"
  [배포 구성](../configure-distribution.md)  
  이 섹션의 항목에서는 RMO를 사용하여 게시 및 배포를 구성하는 방법을 보여 줍니다.  
   
- [게시 및 아티클 만들기, 수정 및 삭제&#40;복제&#41;](../publish/create-modify-and-delete-publications-and-articles-replication.md)  
+ [Create a Publication](../publish/create-a-publication.md)  
  이 섹션의 항목에서는 RMO를 사용하여 게시 및 아티클을 작성, 삭제 및 수정하는 방법을 보여 줍니다.  
   
  [게시 구독](../subscribe-to-publications.md)  
  이 섹션의 항목에서는 RMO를 사용하여 구독을 작성, 삭제 및 수정하는 방법을 보여 줍니다.  
   
- [복제 토폴로지 보안 설정](../security/secure-a-replication-topology.md)  
+ [복제 토폴로지 보안 설정](../security/view-and-modify-replication-security-settings.md)  
  이 섹션의 항목에서는 RMO를 사용하여 보안 설정을 보고 수정하는 방법을 보여 줍니다.  
   
- [구독 동기화&#40;복제&#41;](../synchronize-subscriptions-replication.md)  
+ [구독 동기화&#40;복제&#41;](../synchronize-data.md)  
  이 섹션의 항목에서는 구독을 동기화하는 방법을 보여 줍니다.  
   
  [복제 모니터링](../monitoring-replication.md)  

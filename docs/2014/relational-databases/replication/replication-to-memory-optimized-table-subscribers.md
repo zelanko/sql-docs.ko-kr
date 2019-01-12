@@ -10,12 +10,12 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d2409c993aad299551dcaf97e11c99fe032a96f1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0ee585f9773858848f213b3eeef6e995aedfb53f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800665"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127773"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>메모리 액세스에 최적화된 테이블 구독자로 복제
   피어 투 피어 트랜잭션 복제를 제외하고 트랜잭션 복제 구독자 역할을 수행하는 테이블은 메모리 최적화 테이블로 구성할 수 있습니다. 다른 복제 구성은 메모리 최적화 테이블과 호환되지 않습니다.  
@@ -317,6 +317,6 @@ GO
  메모리 최적화 테이블의 기본 키는 업데이트할 수 없습니다. 구독자에서 기본 키 업데이트를 복제하려면 삭제 및 삽입 쌍으로 업데이트를 제공하도록 업데이트 저장 프로시저를 수정합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [복제 기능 및 태스크](replication-features-and-tasks.md)  
+ [SQL Server 복제](sql-server-replication.md)  
   
   
