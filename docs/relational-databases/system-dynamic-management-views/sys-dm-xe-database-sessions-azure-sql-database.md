@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 732d0bc450c23413fb31c7336e93dbf3dc785bec
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7602e03864a736c6011142fd56c3e6129efcb718
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662782"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143273"
 ---
 # <a name="sysdmxedatabasesessions-azure-sql-database"></a>sys.dm_xe_database_sessions(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "51662782"
   
 ||  
 |-|  
-|**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 이상 모든 버전.|  
+|**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 및 모든 이후 버전입니다.|  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|이벤트 세션의 메모리 주소입니다. Null을 허용하지 않습니다.|  
 |event_name|**nvarchar(60)**|동작이 바인딩된 이벤트의 이름입니다. Null을 허용하지 않습니다.|  
@@ -39,7 +39,7 @@ ms.locfileid: "51662782"
  VIEW DATABASE STATE 권한이 필요합니다.  
   
 ### <a name="relationship-cardinalities"></a>관계 카디널리티  
-2015-07-13 일부 터 'sys.dm_xe_objects' 이름에 ' _database 포함 하지 않는 이러한 Xevent Dmv 중 하나입니다. 오타 또는 다음 테이블의 오른쪽 열에는 오류가 아닙니다. 이름은 Microsoft SQL Server 및 Azure SQL Database에서 동일 합니다. GeneMi 합니다.  
+2015-07-13 일부 터 'sys.dm_xe_objects' 이름에 ' _database 포함 하지 않는 이러한 Xevent Dmv 중 하나입니다. 오타 또는 다음 테이블의 오른쪽 열에는 오류가 아닙니다. 이름은 Microsoft SQL Server 및 Azure SQL Database에서 동일 합니다.  
   
 |보낸 사람|수행할 작업|관계|  
 |--------|------|----------------|  

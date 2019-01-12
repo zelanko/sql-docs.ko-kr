@@ -23,12 +23,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb5b2558a6dca79d4794b5d12c8e63fd6f002312
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 21756cadbfb924e95edd261942f018fb6aef6a4c
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527503"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226520"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_튜닝\_권장 사항 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -62,6 +62,7 @@ ms.locfileid: "52527503"
  반환 된 정보 `sys.dm_db_tuning_recommendations` 데이터베이스 엔진 잠재적인 쿼리 성능 저하를 식별 하 고 유지 되지 않습니다 업데이트 됩니다. 권장 사항 까지만 유지 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다시 시작 됩니다. 정기적으로 데이터베이스 관리자는 서버 재활용 후 유지 하려는 경우 튜닝 권장 구성의 백업 복사본을 확인 해야 합니다. 
 
  `currentValue` 필드는 `state` 열 같은 값을 가질 수 있습니다.
+ 
  | 상태 | Description |
  |--------|-------------|
  | `Active` | 권장 사항 활성화 되어 아직 적용 되지 않음입니다. 사용자는 권장 구성 스크립트를 사용 하 고 수동으로 실행할 수 있습니다. |
@@ -88,29 +89,97 @@ JSON 문서에 `state` 열 현재 상태의 권장 된 이유를 설명 하는 �
 
  세부 정보 열 통계는 런타임 계획 통계 (예를 들어, 현재 CPU 시간)를 표시 하지 않습니다. 권장 사항 세부 정보 회귀 감지 시 수행 되 고 이유를 설명 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 성능 저하를 식별 합니다. 사용 하 여 `regressedPlanId` 및 `recommendedPlanId` 쿼리에 [쿼리 저장소 카탈로그 뷰](../../relational-databases/performance/how-query-store-collects-data.md) 정확한 런타임 계획 통계를 찾으려고 합니다.
 
-## <a name="using-tuning-recommendations-information"></a>튜닝 권장 구성 정보를 사용 하 여  
-다음 쿼리를 사용 하 여 가져올 수는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문제를 해결 하는 스크립트:  
+## <a name="examples-of-using-tuning-recommendations-information"></a>튜닝 권장 구성 정보를 사용 하는 예제  
+
+### <a name="example-1"></a>예제 1
+다음 생성 된 가져옵니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 지정 된 쿼리에 대 한 좋은 계획을 강제로 실행 하는 스크립트:  
  
 ```sql
 SELECT name, reason, score,
-        JSON_VALUE(details, '$.implementationDetails.script') as script,
-        details.* 
+    JSON_VALUE(details, '$.implementationDetails.script') AS script,
+    details.* 
 FROM sys.dm_db_tuning_recommendations
-    CROSS APPLY OPENJSON(details, '$.planForceDetails')
-                WITH (  query_id int '$.queryId',
-                        regressed_plan_id int '$.regressedPlanId',
-                        last_good_plan_id int '$.recommendedPlanId') as details
-WHERE JSON_VALUE(state, '$.currentValue') = 'Active'
+CROSS APPLY OPENJSON(details, '$.planForceDetails')
+    WITH (  [query_id] int '$.queryId',
+            regressed_plan_id int '$.regressedPlanId',
+            last_good_plan_id int '$.recommendedPlanId') AS details
+WHERE JSON_VALUE(state, '$.currentValue') = 'Active';
 ```
-  
- 권장 사항 보기에서 쿼리 값을 사용할 수 있는 JSON 함수에 대 한 자세한 내용은 참조 하세요. [JSON 지원](../../relational-databases/json/index.md) 에서 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]합니다.
+### <a name="example-2"></a>예제 2
+다음 생성 된 가져옵니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모든 지정 된 쿼리 및 예상된 된 향상에 대 한 추가 정보에 대 한 좋은 계획을 강제로 실행 하는 스크립트:
+
+```sql
+SELECT reason, score,
+      script = JSON_VALUE(details, '$.implementationDetails.script'),
+      planForceDetails.*,
+      estimated_gain = (regressedPlanExecutionCount + recommendedPlanExecutionCount)
+                  *(regressedPlanCpuTimeAverage - recommendedPlanCpuTimeAverage)/1000000,
+      error_prone = IIF(regressedPlanErrorCount > recommendedPlanErrorCount, 'YES','NO')
+FROM sys.dm_db_tuning_recommendations
+CROSS APPLY OPENJSON (Details, '$.planForceDetails')
+    WITH (  [query_id] int '$.queryId',
+            regressedPlanId int '$.regressedPlanId',
+            recommendedPlanId int '$.recommendedPlanId',
+            regressedPlanErrorCount int,
+            recommendedPlanErrorCount int,
+            regressedPlanExecutionCount int,
+            regressedPlanCpuTimeAverage float,
+            recommendedPlanExecutionCount int,
+            recommendedPlanCpuTimeAverage float
+          ) AS planForceDetails;
+```
+
+### <a name="example-3"></a>예 3
+다음 생성 된 가져옵니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모든 지정 된 쿼리 및 쿼리 텍스트를 포함 하는 추가 정보에 대 한 좋은 계획 및 쿼리 저장소에 저장 된 쿼리 계획을 강제로 실행 하는 스크립트:
+
+```sql
+WITH cte_db_tuning_recommendations
+AS (SELECT reason,
+        score,
+        query_id,
+        regressedPlanId,
+        recommendedPlanId,
+        current_state = JSON_VALUE(state, '$.currentValue'),
+        current_state_reason = JSON_VALUE(state, '$.reason'),
+        script = JSON_VALUE(details, '$.implementationDetails.script'),
+        estimated_gain = (regressedPlanExecutionCount + recommendedPlanExecutionCount)
+                * (regressedPlanCpuTimeAverage - recommendedPlanCpuTimeAverage)/1000000,
+        error_prone = IIF(regressedPlanErrorCount > recommendedPlanErrorCount, 'YES','NO')
+    FROM sys.dm_db_tuning_recommendations
+    CROSS APPLY OPENJSON(Details, '$.planForceDetails')
+    WITH ([query_id] int '$.queryId',
+        regressedPlanId int '$.regressedPlanId',
+        recommendedPlanId int '$.recommendedPlanId',
+        regressedPlanErrorCount int,    
+        recommendedPlanErrorCount int,
+        regressedPlanExecutionCount int,
+        regressedPlanCpuTimeAverage float,
+        recommendedPlanExecutionCount int,
+        recommendedPlanCpuTimeAverage float
+        )
+    )
+SELECT qsq.query_id,
+    qsqt.query_sql_text,
+    dtr.*,
+    CAST(rp.query_plan AS XML) AS RegressedPlan,
+    CAST(sp.query_plan AS XML) AS SuggestedPlan
+FROM cte_db_tuning_recommendations AS dtr
+INNER JOIN sys.query_store_plan AS rp ON rp.query_id = dtr.query_id
+    AND rp.plan_id = dtr.regressedPlanId
+INNER JOIN sys.query_store_plan AS sp ON sp.query_id = dtr.query_id
+    AND sp.plan_id = dtr.recommendedPlanId
+INNER JOIN sys.query_store_query AS qsq ON qsq.query_id = rp.query_id
+INNER JOIN sys.query_store_query_text AS qsqt ON qsqt.query_text_id = qsq.query_text_id;
+```
+
+권장 사항 보기에서 쿼리 값을 사용할 수 있는 JSON 함수에 대 한 자세한 내용은 참조 하세요. [JSON 지원](../../relational-databases/json/index.md) 에서 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]합니다.
   
 ## <a name="permissions"></a>사용 권한  
 
-온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
+필요 `VIEW SERVER STATE` 에 대 한 권한과 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]합니다.   
+필요 합니다 `VIEW DATABASE STATE` 데이터베이스에 대 한 권한을 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.   
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [자동 조정](../../relational-databases/automatic-tuning/automatic-tuning.md)   
  [sys.database_automatic_tuning_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)   
  [sys.database_query_store_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   

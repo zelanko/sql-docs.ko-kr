@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2017 Analysis Services 이전 버전과 호환성 | Microsoft Docs
-ms.date: 05/08/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 29fb46b02e887ceebde293383fda99cbd3ed42be
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 411fa78bada76c79d4a869d68c94abf752b8466a
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072430"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185079"
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Analysis Services 이전 버전과 호환성 (SQL 2017)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "53072430"
 기능 가용성 및 현재 릴리스 및 이전 버전 간의 동작 변경 내용을 설명합니다.
 
 ## <a name="deprecated-features"></a>사용되지 않는 기능
-A *사용 되지 않는 기능* 향후 릴리스에서 제품에서 중단 될 예정 이지만 여전히 지원 되 고 이전 버전과 호환성을 유지 하기 위해 현재 릴리스에서 포함 합니다. 신규 및 기존 프로젝트에서 사용 되지 않는 기능을 사용 하 여 향후 릴리스와도 호환을 유지 관리를 중단 하는 것이 좋습니다.
+A *사용 되지 않는 기능* 향후 릴리스에서 제품에서 중단 될 예정 이지만 여전히 지원 되 고 이전 버전과 호환성을 유지 하기 위해 현재 릴리스에서 포함 합니다. 신규 및 기존 프로젝트에서 사용 되지 않는 기능을 사용 하 여 향후 릴리스와도 호환을 유지 관리를 중단 하는 것이 좋습니다. 사용 되지 않는 기능에 대 한 설명서 업데이트 되지 않습니다.
 
 다음 기능은이 릴리스에서 사용 되지 않습니다.
   

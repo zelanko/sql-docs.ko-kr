@@ -12,12 +12,12 @@ ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f9d7183d6e94f5808434090dd8fc998b946ed0f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810895"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136063"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle 게시자에 대한 디자인 고려 사항 및 제한 사항
   Oracle 데이터베이스에서의 게시 작업은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에서의 게시 작업과 거의 동일합니다. 그러나 Oracle 데이터베이스에서의 게시 작업에 대한 다음과 같은 제한 사항 및 문제점을 알고 있어야 합니다.  
@@ -135,7 +135,7 @@ ms.locfileid: "52810895"
   
 -   Oracle 게시의 구독자는 백업에서 자동으로 초기화할 수 없습니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 이진 유효성 검사와 행 개수 유효성 검사를 지원합니다. Oracle 게시자에서는 행 개수 유효성 검사를 지원합니다. 자세한 내용은 [복제된 데이터의 유효성 검사](../validate-replicated-data.md)를 참조하세요.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 이진 유효성 검사와 행 개수 유효성 검사를 지원합니다. Oracle 게시자에서는 행 개수 유효성 검사를 지원합니다. 자세한 내용은 [복제된 데이터의 유효성 검사](../validate-data-at-the-subscriber.md)를 참조하세요.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 네이티브 bcp 모드 스냅숏과 문자 모드 스냅숏을 제공합니다. Oracle 게시자에서는 문자 모드 스냅숏을 지원합니다.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "52810895"
   
     -   [sp_changepublication_snapshot&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql) 또는 [sp_changelogreader_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql)에서 **@job_login** 매개 변수는 변경할 수 없지만 암호는 변경할 수 있습니다.  
   
- 복제 보안에 대한 자세한 내용은 [보안 및 보호&#40;복제&#41;](../security/security-and-protection-replication.md)를 참조하세요.  
+ 복제 보안에 대 한 자세한 내용은 참조 하세요. [SQL Server 복제 보안](../security/view-and-modify-replication-security-settings.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Oracle 게시자에 대한 관리 고려 사항](administrative-considerations-for-oracle-publishers.md)   

@@ -14,12 +14,12 @@ ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35f1ce877d6ed8a390bb6425a4d7f33a5d6947d2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 827dd531eda338f4fd297a4420ed144d46a613ff
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513989"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135713"
 ---
 # <a name="outer-joins"></a>외부 조인
 ODBC는 SQL-92 left, right 및 full outer join 구문을 지원합니다. 외부 조인 이스케이프 시퀀스는  
@@ -28,7 +28,7 @@ ODBC는 SQL-92 left, right 및 full outer join 구문을 지원합니다. 외부
   
  여기서 *외부 조인* 는  
   
- *테이블 참조* {0}**왼쪽 &#124; 오른쪽 &#124; 전체} 외부 조인** {0}*테이블 참조* &#124; *외부 조인*} **ON**  *검색 조건*  
+ *테이블 참조* {0}**왼쪽 &#124; 오른쪽 &#124; 전체} 외부 조인** {0}*테이블 참조* &#124; *외부 조인*} **ON**  _검색 조건_  
   
  *테이블 참조* 테이블 이름을 지정 하 고 *검색 조건* 간에 조인 조건을 지정 합니다 *테이블 참조*합니다.  
   

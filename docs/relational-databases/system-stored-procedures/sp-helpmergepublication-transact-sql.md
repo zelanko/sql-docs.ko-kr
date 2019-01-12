@@ -16,12 +16,12 @@ ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3328facfd0f19d6fa5f5f02a614c45cd22a79f76
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754129"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226650"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @publication **=** ] **'***게시***'**  
+ [ @publication **=** ] **'**_게시_**'**  
  게시의 이름입니다. *게시*됩니다 **sysname**, 기본값은 **%**, 현재 데이터베이스의 모든 병합 게시에 대 한 정보를 반환 하는 합니다.  
   
  [ @found **=** ] **'***발견***'** 출력  
@@ -127,7 +127,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_helpmergepublication](../../relational-databases/replication/codesnippet/tsql/sp-helpmergepublication-_1.sql)]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [게시 속성 보기 및 수정](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   

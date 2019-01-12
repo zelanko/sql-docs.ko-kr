@@ -12,12 +12,12 @@ ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3a7139c51aaa960fd2806ba1d969f6057e8f95e2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 13c1acf24212a236eae5e377a7febfd398e579c3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761535"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135923"
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>게시 정보, 모든 구독(병합 게시)
   **모든 구독** 탭은 선택한 병합 게시에 대한 모든 구독 정보를 표시합니다.  
@@ -98,13 +98,12 @@ ms.locfileid: "52761535"
  **기간**  
  마지막 동기화 중에 병합 에이전트가 실행된 시간입니다. 병합 에이전트가 현재 동기화 중이면 이 시간은 경과된 시간을 나타내고 병합 에이전트가 이전에 동기화된 경우에는 총 시간을 나타냅니다.  
   
- **대량 삽입 태스크 편집기**  
+ **연결**  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당됩니다. 구독자와 게시자 간의 연결 유형입니다. 가능한 값은 **LAN**, **전화 접속**및 **인터넷**입니다. **인터넷** 값은 구독에서 웹 동기화를 사용하는 경우에 표시됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [복제 모니터 시작](monitor/start-the-replication-monitor.md)   
- [구독에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
- [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
+ [정보 및 복제 모니터를 사용 하 여 수행할 작업 보기](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [복제 모니터링](monitoring-replication.md)   
  [병합 복제에 대한 웹 동기화](web-synchronization-for-merge-replication.md)  
   

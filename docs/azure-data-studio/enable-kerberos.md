@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
-ms.openlocfilehash: b73e144dd362691ea93b3312f6dc10ce542f1c43
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 02e5e0ba4bd7300d71d95d5e3572ce4e09ac3bd4
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030217"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143332"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>연결 [!INCLUDE[name-sos](../includes/name-sos-short.md)] Kerberos Windows 인증을 사용 하 여 SQL server 
 
@@ -27,7 +27,7 @@ MacOS 또는 Linux에서 통합 인증 (Windows 인증)을 사용 하려면 설�
 ## <a name="prerequisites"></a>사전 요구 사항
 
 - Kerberos 도메인 컨트롤러를 쿼리 하기 위해 Windows 도메인에 가입 된 컴퓨터에 액세스 합니다.
-- SQL Server는 Kerberos 인증을 허용 하도록 구성 되어야 합니다. 클라이언트 드라이버의 Unix에서 실행 되는 경우 통합된 인증 에서만 지원 됩니다 Kerberos를 사용 하 여. Kerberos를 사용 하 여 인증 하도록 Sql Server를 설정 하는 방법은 찾을 수 있습니다 [여기](https://support.microsoft.com/en-us/help/319723/how-to-use-kerberos-authentication-in-sql-server)합니다. 에 연결 하려는 Sql Server의 각 인스턴스에 대해 등록 된 Spn이 있어야 합니다. SQL Server Spn의 형식에 대 한 자세한 내용은 [여기](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
+- SQL Server는 Kerberos 인증을 허용 하도록 구성 되어야 합니다. 클라이언트 드라이버의 Unix에서 실행 되는 경우 통합된 인증 에서만 지원 됩니다 Kerberos를 사용 하 여. Kerberos를 사용 하 여 인증 하도록 Sql Server를 설정 하는 방법은 찾을 수 있습니다 [여기](https://support.microsoft.com/help/319723/how-to-use-kerberos-authentication-in-sql-server)합니다. 에 연결 하려는 Sql Server의 각 인스턴스에 대해 등록 된 Spn이 있어야 합니다. SQL Server Spn의 형식에 대 한 자세한 내용은 [여기](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
 
 
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>Sql Server가 Kerberos 설정 하는 경우 확인

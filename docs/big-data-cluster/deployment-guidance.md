@@ -9,12 +9,12 @@ ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: seodec18
-ms.openlocfilehash: 9c1f2fbb750dcdf8e5d78ddcfd5004a32c0cc209
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
-ms.translationtype: MT
+ms.openlocfilehash: 4d4e39da3176223305fe02a8931ff9d2c34a64c4
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246752"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206357"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 배포 하는 방법
 
@@ -77,7 +77,7 @@ Kubernetes 클러스터를 구성한 후에 SQL Server 빅 데이터 클러스�
 kubectl config view
 ```
 
-## <a name="define-environment-variables"></a>환경 변수를 정의 합니다.
+## <a id="env"></a> 환경 변수를 정의 합니다.
 
 에 전달 되는 환경 변수 집합을 사용 하 여 클러스터 구성을 사용자 지정할 수는 `mssqlctl create cluster` 명령입니다. 대부분의 환경 변수는 아래 따라 기본값을 사용 하 여 선택적입니다. 사용자 입력을 요구 하는 자격 증명 같은 환경 변수는 note 합니다.
 

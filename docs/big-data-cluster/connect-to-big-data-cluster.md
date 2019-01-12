@@ -8,12 +8,12 @@ manager: craigg
 ms.date: 12/10/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 8bccadd8fbce9fe2a8cc6f16db75dbd09f3d1ed0
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
-ms.translationtype: MT
+ms.openlocfilehash: 4d3ca6a3e43781b35bfd24f04ee1cf0483b1eb05
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53264365"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206269"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Azure Data Studio를 사용 하 여 SQL Server 빅 데이터 클러스터에 연결
 
@@ -29,7 +29,7 @@ ms.locfileid: "53264365"
 
 ## <a name="connect-to-the-cluster"></a>클러스터에 연결
 
-SQL Server에 연결할 수 있는 빅 데이터 클러스터에 연결할 때 [마스터 인스턴스](concept-master-instance.md) 또는 HDFS/Spark 게이트웨이. 다음 섹션에서는 각각에 연결 하는 방법을 보여 줍니다.
+빅 데이터 클러스터에 연결할 때 SQL Server 마스터 인스턴스 또는 HDFS/Spark 게이트웨이에 연결할 수가 있습니다. 다음 섹션에서는 각각에 연결 하는 방법을 보여 줍니다.
 
 ## <a id="master"></a> 마스터 인스턴스
 
@@ -79,6 +79,9 @@ SQL Server 마스터 인스턴스는 관계형 SQL Server 데이터베이스가 
 1. Azure Data Studio 눌러 **F1** > **새 연결**합니다.
 
 1. **연결 유형**를 선택 **SQL Server 빅 데이터 클러스터**합니다.
+
+   > [!TIP]
+   > 표시 되지 않으면를 **SQL Server 빅 데이터 클러스터** 연결 입력, 설치 했는지 확인 합니다 [SQL Server 2019 확장](../azure-data-studio/sql-server-2019-extension.md) 확장 완료 한 후 다시 시작 하면 Azure Data Studio 및 설치 합니다.
 
 1. 빅 데이터 클러스터의 IP 주소를 입력 **서버 이름** (포트를 지정 하지 않으면).
 

@@ -17,19 +17,19 @@ ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f4614ab97c2f5726c1c5382fbe87b9198f9cf2f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd8520a26b28c16876163cf8f2c0f7a57b3c33ad
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800731"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136033"
 ---
 # <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   지정한 LSN(로그 시퀀스 번호) 내 원본 테이블에 적용된 각 변경에 대해 한 개의 행을 반환합니다. 해당 간격 동안 원본 행이 여러 번 변경된 경우에는 반환된 결과 집합에 각 변경이 표시됩니다. 변경 데이터를 반환하는 것 외에 4개의 메타데이터 열은 다른 데이터 원본에 해당 변경을 적용하는 데 필요한 정보를 제공합니다. 행 필터링 옵션은 결과 집합에 반환되는 행 및 메타데이터 열의 내용을 제어합니다. 행 필터 옵션이 'all'로 지정된 경우 각 변경에는 변경을 식별하기 위한 하나의 행이 있습니다. 'all update old' 옵션을 지정하면 업데이트 작업이 두 행으로 표시됩니다. 그 중 한 행에는 업데이트하기 전에 캡처한 열의 값이 포함되고 다른 행에는 업데이트한 후에 캡처한 열의 값이 포함됩니다.  
   
- 이 열거 함수는 원본 테이블에 변경 데이터 캡처가 활성화될 때 생성됩니다. 함수 이름을 파생 및 형식을 사용 하 여 **cdc.fn_cdc_get_all_changes_***capture_instance* 여기서 *capture_instance* 원본 테이블은 때 캡처 인스턴스에 대해 지정한 값이 변경 데이터 캡처를 사용할 수 있습니다.  
+ 이 열거 함수는 원본 테이블에 변경 데이터 캡처가 활성화될 때 생성됩니다. 함수 이름은 파생 및 형식을 사용 **cdc.fn_cdc_get_all_changes_**_capture_instance_ 여기서 *capture_instance* 캡처에 대해 지정한 값이 원본 테이블에 변경 데이터 캡처가 활성화 될 때 인스턴스.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

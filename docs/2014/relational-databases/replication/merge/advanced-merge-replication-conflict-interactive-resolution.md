@@ -15,12 +15,12 @@ ms.assetid: 172c60c7-f605-4eb5-b185-54ae9e9d3c60
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7485f840682c6bc8f8140aae6376431ad92442a0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 43347190c53331d0a30ba0f29d795cce981eec34
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815415"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135633"
 ---
 # <a name="interactive-conflict-resolution"></a>Interactive Conflict Resolution
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 동기화 관리자에서 요청 시 동기화 중에 수동으로 충돌을 해결할 수 있는 대화형 해결 프로그램을 제공합니다. 런타임 시 활성화되는 대화형 해결 프로그램은 충돌하는 각 행의 데이터를 표시하여 충돌 데이터를 보고 편집하며 각 충돌을 개별적으로 해결하는 옵션을 제공하는 그래픽 인터페이스입니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "52815415"
   
  대화형 해결 프로그램을 사용하려면 필요한 각 아티클과 구독에 대해 대화형 해결을 사용할 수 있게 설정해야 합니다. 하나 이상의 아티클과 구독에 대해 대화형 해결을 사용할 수 있게 설정하면 병합 동기화 중 충돌이 감지될 때 대화형 해결 프로그램이 사용됩니다.  
   
- 대화형 해결 프로그램을 사용하려면 [병합 아티클에 대한 상호 충돌 해결 프로그램 지정](../publish/specify-interactive-conflict-resolution-for-merge-articles.md) 및 [Windows 동기화 관리자를 사용하여 구독 동기화&#40;Windows 동기화 관리자&#41;](../synchronize-a-subscription-using-windows-synchronization-manager.md)를 참조하세요.  
+ 대화형 해결 프로그램을 사용하려면 [병합 아티클에 대한 상호 충돌 해결 프로그램 지정](..//publish/specify-merge-replication-properties.md#interactive-conflict-resolution) 및 [Windows 동기화 관리자를 사용하여 구독 동기화&#40;Windows 동기화 관리자&#41;](../synchronize-a-subscription-using-windows-synchronization-manager.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)  

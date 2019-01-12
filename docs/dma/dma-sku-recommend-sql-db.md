@@ -2,7 +2,7 @@
 title: (Data Migration Assistant) 온-프레미스 데이터베이스에 대 한 올바른 Azure SQL 데이터베이스 SKU 확인 | Microsoft Docs
 description: 온-프레미스 데이터베이스에 대 한 Azure SQL 데이터베이스 SKU 오른쪽을 확인 하려면 Data Migration Assistant를 사용 하는 방법 알아보기
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 6e990d8b3320eafccc3da574476fa66cdf52d8d5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 002a9fc587d742c235aedb0f773864296bdf645b
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544115"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226500"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>온-프레미스 데이터베이스에 대 한 올바른 Azure SQL 데이터베이스 SKU 확인
 
@@ -30,9 +30,6 @@ ms.locfileid: "52544115"
 
 > [!NOTE] 
 > 이 기능은 현재 사용할 수만 통해 명령줄 인터페이스 (CLI)입니다. DMA 사용자 인터페이스를 통해이 기능에 대 한 지원이 향후 릴리스에서 추가 됩니다.
-
-> [!IMPORTANT]
-> Azure SQL Database에 대 한 SKU 권장 사항은 마이그레이션을 이상 SQL Server 2016에서 현재 사용할 수 있습니다.
 
 다음 지침을 통해 Azure SQL 데이터베이스 SKU 권장 사항을 확인 하 고 Data Migration Assistant를 사용 하 여 azure에 연결된 된 데이터베이스를 프로 비전 합니다.
 
@@ -66,7 +63,7 @@ Database Migration Assistant v4.0 다운로드 이상을 설치 합니다. 이�
     .\SkuRecommendationDataCollectionScript.ps1
      -ComputerName Foobar1
      -OutputFilePath D:\counters2.csv
-     -CollectionTimeInSeconds 10
+     -CollectionTimeInSeconds 2400
      -DbConnectionString "Server=localhost;Initial Catalog=master;Integrated Security=SSPI;"
     ```
     

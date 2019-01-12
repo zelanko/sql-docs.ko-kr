@@ -5,18 +5,17 @@ description: Linux에는 SQL Server 항상에서 AG (가용성 그룹) 읽기 �
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 02/14/2018
+ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.assetid: ''
-ms.openlocfilehash: 014ff123618c04f91c0e2c2a39d5ef8e5690a386
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 60cdef13ec46ab1f859d17f724863f67939e6b6f
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203872"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206499"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Linux에서 읽기-배율에 대 한 SQL Server 가용성 그룹 구성
 
@@ -24,8 +23,8 @@ ms.locfileid: "53203872"
 
 Linux에는 SQL Server 항상에서 AG (가용성 그룹) 읽기-배율 워크 로드를 구성할 수 있습니다. AG에 대한 두 가지 종류의 아키텍처가 있습니다. 고가용성에 대 한 아키텍처를 향상 된 비즈니스 연속성을 제공 하는 클러스터 관리자를 사용 합니다. 또한이 아키텍처는 읽기-배율 복제본을 포함할 수 있습니다. 고가용성 아키텍처를 참조 하세요 [구성할 SQL Server Always On 가용성 그룹 Linux에서 고가용성을 위해](sql-server-linux-availability-group-configure-ha.md)합니다. 다른 아키텍처는 읽기 배율 작업만을 지원합니다. 이 문서에서는 읽기 배율 작업에 대한 클러스터 관리자 없이 AG를 만드는 방법을 설명합니다. 이 아키텍처는 읽기 배율만을 제공합니다. 고가용성을 제공하지 않습니다.
 
->[!NOTE]
->`CLUSTER_TYPE = NONE`인 가용성 그룹은 다른 운영 체제 플랫폼에서 호스팅되는 복제본을 포함할 수 있습니다. 고가용성을 지원할 수 없습니다. 
+> [!NOTE]
+> `CLUSTER_TYPE = NONE`인 가용성 그룹은 다른 운영 체제 플랫폼에서 호스팅되는 복제본을 포함할 수 있습니다. 고가용성을 지원할 수 없습니다. 
 
 [!INCLUDE [Create prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
@@ -84,7 +83,6 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 ## <a name="next-steps"></a>다음 단계
 
-* [분산 가용성 그룹 구성](..\database-engine\availability-groups\windows\distributed-availability-groups-always-on-availability-groups.md)
-* [가용성 그룹에 대한 자세한 정보](..\database-engine\availability-groups\windows\overview-of-always-on-availability-groups-sql-server.md)
+* [분산 가용성 그룹 구성](../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)
+* [가용성 그룹에 대한 자세한 정보](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 * [강제 수동 장애 조치(failover) 수행](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)
-

@@ -14,12 +14,12 @@ ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc2cc36a309f74c63ad13f93c9d5e76fb9140900
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f5fca9032df4f1327933580a306215fd2fd47854
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770225"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135973"
 ---
 # <a name="rename-columns-database-engine"></a>열 이름 바꾸기(데이터베이스 엔진)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 테이블 열의 이름을 바꿀 수 있습니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "52770225"
   
 2.  **열 이름**아래에서 변경하려는 이름을 선택하고 새 이름을 입력합니다.  
   
-3.  **파일** 메뉴에서 *****테이블 이름 저장*을 클릭합니다.  
+3.  **파일** 메뉴에서 **저장**_table name_을 클릭합니다.  
   
 > [!NOTE]  
 >  **열 속성** 탭에서 열 이름을 변경할 수도 있습니다. 이름을 변경하려는 열을 선택하고 **이름**에 새 이름을 입력합니다.  

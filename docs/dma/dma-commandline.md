@@ -2,7 +2,7 @@
 title: Data Migration Assistant (SQL Server) 명령줄에서 실행 | Microsoft Docs
 description: 마이그레이션에 대 한 SQL Server 데이터베이스를 평가 하기 위해 명령줄에서 Data Migration Assistant를 실행 하는 방법 알아보기
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,15 +15,15 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: c308dc9e0f05ec8abed83a75a3a1d0ea396fd46c
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 7d02ead6a601c47ba68bd12ece8fa444ceee5a9e
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643991"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226400"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>명령줄에서 Data Migration Assistant 실행
-Data Migration Assistant 설치 버전 2.1 이상에서 시기, dmacmd.exe에도 설치 됩니다 *% ProgramFiles %\\Microsoft Data Migration Assistant\\*합니다. Dmacmd.exe를 사용 하 여 무인된 모드에서 데이터베이스를 평가 및 JSON 또는 CSV 파일로 결과 출력 합니다. 이 메서드는 여러 데이터베이스 또는 대규모 데이터베이스를 평가할 때 특히 유용 합니다. 
+Data Migration Assistant 설치 버전 2.1 이상에서 시기, dmacmd.exe에도 설치 됩니다 *% ProgramFiles %\\Microsoft Data Migration Assistant\\*합니다. Dmacmd.exe를 사용 하 여 무인된 모드에서 데이터베이스를 평가 및 JSON 또는 CSV 파일로 결과 출력 합니다. 이 메서드는 여러 데이터베이스 또는 대규모 데이터베이스를 평가할 때 특히 유용 합니다. 
 
 > [!NOTE]
 > Dmacmd.exe 실행 중인 평가 지원합니다. 이 이번에는 마이그레이션이 지원 되지 않습니다.
@@ -96,13 +96,13 @@ Catalog=DatabaseName;Integrated Security=true"
 **대상 플랫폼이 SQL Azure 데이터베이스에 대 한 단일 데이터베이스 평가.json 및.csv 파일로 결과 저장**
 
 ```
-DmaCmd.exe /AssessmentName="TestAssessment" 
+DmaCmd.exe /AssessmentName="TestAssessment" 
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
 Catalog=DatabaseName;Integrated Security=true"
 /AssessmentTargetPlatform="AzureSqlDatabaseV12"
 /AssessmentEvaluateCompatibilityIssues /AssessmentEvaluateFeatureParity
-/AssessmentOverwriteResult 
-/AssessmentResultCsv="C:\\temp\\AssessmentReport.csv" 
+/AssessmentOverwriteResult 
+/AssessmentResultCsv="C:\\temp\\AssessmentReport.csv" 
 /AssessmentResultJson="C:\\temp\\AssessmentReport.json"
 ```
 
@@ -122,24 +122,6 @@ Catalog=DatabaseName3;Integrated Security=true"***
 ```
 
 ## <a name="azure-sql-database-sku-recommendations-using-the-cli"></a>CLI를 사용 하 여 azure SQL 데이터베이스 SKU 권장 사항
-
-> [!IMPORTANT]
-> Azure SQL Database에 대 한 SKU 권장 사항은 마이그레이션을 이상 SQL Server 2016에서 현재 사용할 수 있습니다.
-
-```
-.\DmaCmd.exe /Action=SkuRecommendation
-/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
-/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
-/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
-/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
-/SkuRecommendationCurrencyCode=USD
-/SkuRecommendationOfferName=MS-AZR-0044p
-/SkuRecommendationRegionName=UKWest
-/SkuRecommendationSubscriptionId=<Your Subscription Id>
-/AzureAuthenticationInteractiveAuthentication=true
-/AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
-/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
-```
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation

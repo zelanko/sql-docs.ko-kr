@@ -1,6 +1,6 @@
 ---
 title: 데이터 마이닝 (SSAS) | Microsoft Docs
-ms.date: 05/01/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: data-mining
@@ -9,15 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7468074eb8a18dd9448e558cadebdc9f07ffc2cb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 163314576f609d6fc34ba55b05eff841d1361182
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014820"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185099"
 ---
 # <a name="data-mining-ssas"></a>데이터 마이닝(SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
+> [!IMPORTANT]
+> 데이터 마이닝은 SQL Server Analysis Services 2017에서 사용 되지 않습니다. 사용 되지 않는 기능에 대 한 설명서 업데이트 되지 않습니다. 자세한 내용은 참조 하세요 [Analysis Services 이전 버전과 호환성 (SQL 2017)](../analysis-services-backward-compatibility-sql2017.md)합니다.
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 데이터 마이닝을 제공함으로써 2000 릴리스 이후 예측 분석에 앞장서 왔습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝의 조합은 데이터 정리 및 준비, 기계 학습 및 보고를 포함하는 예측 분석에 대한 통합된 플랫폼을 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝에는 EM 및 K-means 클러스터링 모델, 신경망, 로지스틱 회귀 분석 및 선형 회귀, 의사 결정 트리 및 naive bayes 분류자를 비롯하여 여러 표준 알고리즘이 포함됩니다. 모든 모델은 모델을 개발하고 구체화하고 평가할 수 있도록 시각화를 통합했습니다.  비즈니스 인텔리전스 솔루션에 데이터 마이닝을 통합하면 복잡한 문제에 대한 지능형 의사 결정을 수행할 수 있습니다.  
   
 ## <a name="benefits-of-data-mining"></a>데이터 마이닝의 장점  
@@ -28,15 +32,15 @@ ms.locfileid: "34014820"
 ## <a name="key-data-mining-features"></a>주요 데이터 마이닝 기능  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝은 통합 데이터 마이닝 솔루션을 지원하여 다음과 같은 기능을 제공합니다.  
   
--   여러 데이터 원본: 데이터 마이닝을 위해 스프레드시트 및 텍스트 파일을 포함하여 모든 테이블 형식 데이터 원본을 사용할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 만든 OLAP 큐브를 쉽게 마이닝할 수도 있습니다. 그러나 메모리 내 데이터베이스에서 데이터를 사용할 수 없습니다.  
+-   여러 데이터 원본: 데이터 마이닝, 스프레드시트 및 텍스트 파일을 포함 하 여 모든 테이블 형식 데이터 원본을 사용할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 만든 OLAP 큐브를 쉽게 마이닝할 수도 있습니다. 그러나 메모리 내 데이터베이스에서 데이터를 사용할 수 없습니다.  
   
 -   통합 데이터 정리, 데이터 관리 및 보고: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 데이터 프로파일링 및 정리를 위한 도구를 제공합니다. 모델링 준비 과정에서 데이터 정리를 위한 ETL 프로세스를 작성할 수 있으며, ssISnoversion은 쉽게 모델을 다시 학습하고 업데이트할 수도 있습니다.  
   
--   사용자 지정 가능한 다양한 알고리즘: 클러스터링, 신경망 및 의사 결정 트리와 같은 알고리즘 제공 외에도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝은 고유의 사용자 지정 플러그 인 알고리즘의 개발을 지원합니다.  
+-   사용자 지정 가능한 다양한 알고리즘: 클러스터링, 신경망 및 의사 결정 트리와 같은 알고리즘 제공 외에도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝은 고유의 사용자 지정 플러그 인 알고리즘의 개발을 지원 합니다.  
   
--   모델 테스트 인프라: 교차 유효성 검사, 분류표, 리프트 차트 및 산점도와 같은 중요한 통계 도구를 사용하여 모델과 데이터 집합을 테스트합니다. 테스트 및 학습 집합을 간편하게 만들고 관리합니다.  
+-   모델 테스트 인프라: 교차 유효성 검사, 분류 행렬, 리프트 차트 및 산점도와 같은 중요한 통계 도구를 사용하여 모델과 데이터 집합을 테스트합니다. 테스트 및 학습 집합을 간편하게 만들고 관리합니다.  
   
--   쿼리 및 드릴스루: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝은 예측 쿼리를 애플리케이션에 통합하기 위한 DMX 언어를 제공합니다. 모델에서 자세한 통계 및 패턴을 검색하고 사례 데이터로 드릴스루할 수도 있습니다.  
+-   쿼리 및 드릴스루: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝 예측 쿼리를 응용 프로그램에 통합 하기 위한 DMX 언어를 제공 합니다. 모델에서 자세한 통계 및 패턴을 검색하고 사례 데이터로 드릴스루할 수도 있습니다.  
   
 -   클라이언트 도구: SQL Server에서 제공하는 개발 및 디자인 스튜디오 외에도 Excel용 데이터 마이닝 추가 기능을 사용하여 모델을 만들고 쿼리하며 찾아볼 수 있습니다. 또한 웹 서비스를 포함한 사용자 지정 클라이언트를 만듭니다.  
   

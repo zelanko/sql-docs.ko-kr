@@ -18,12 +18,12 @@ ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3b9390b198ddcb9a54691a7f33b8f52d520356d8
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 232b071c11d4a2a0bb2e42b6f9787d07f99e21e2
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292431"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226590"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery 및 정적 형식 지정
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "51292431"
   
  암시적 변환 이후에 약한 형식 지정이 필요한 경우 정적 형식 확인을 통해 올바른 카디널리티를 가진 허용되는 형식의 값만 연산으로 전달되도록 합니다. "String" + 1, "string"의 정적 형식의 임을 인식 **xs: string**합니다. 허용 되는 형식에 대 한이 없기 때문에 합니다 **+** 작업 유형 오류가 발생 합니다.  
   
- 임의의 식 E1의 결과를 임의의 식 E2(E1 + E2)에 추가하는 경우 정적 형식 유추를 통해 먼저 E1과 E2의 정적 형식을 확인한 다음 이러한 정적 형식을 해당 연산에 허용되는 형식과 대조합니다. 예를 들어 E1의 정적 형식을 일 수 있습니다는 **xs: string** 요소나 **xs: integer**런타임 정수가 될 수 있는 일부 값에, 정적 형식 확인에서 유형 오류가 발생 합니다. 동일 하는 경우가 E1의 정적 형식이 되었으면 **xs: integer\*** 합니다. 때문에 합니다 **+** 작업에 정확히 하나의 정수 값만 허용 하 고 E1 0을 반환할 수 있습니다 또는 1 개, 정적 형식 확인 오류를 발생 시킵니다.  
+ 임의의 식 E1의 결과를 임의의 식 E2(E1 + E2)에 추가하는 경우 정적 형식 유추를 통해 먼저 E1과 E2의 정적 형식을 확인한 다음 이러한 정적 형식을 해당 연산에 허용되는 형식과 대조합니다. 예를 들어 E1의 정적 형식을 일 수 있습니다는 **xs: string** 요소나 **xs: integer**런타임 정수가 될 수 있는 일부 값에, 정적 형식 확인에서 유형 오류가 발생 합니다. 동일 하는 경우가 E1의 정적 형식이 되었으면 **xs: integer&#42;** 합니다. 때문에 합니다 **+** 작업에 정확히 하나의 정수 값만 허용 하 고 E1 0을 반환할 수 있습니다 또는 1 개, 정적 형식 확인 오류를 발생 시킵니다.  
   
  앞에서도 설명한 대로 형식 유추를 통해 전달될 데이터의 형식에 대해 사용자가 알고 있는 것보다 폭넓은 형식을 유추하기도 합니다. 이러한 경우 사용자는 쿼리를 다시 작성해야 합니다. 그러한 경우를 몇 가지 예로 들면 다음과 같습니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "51292431"
 ## <a name="type-checking-of-union-types"></a>UNION 유형에 대한 유형 검사  
  UNION 유형은 유형 검사로 인해 조심스럽게 처리해야 합니다. 다음 예에서는 두 가지 문제에 대해 설명합니다.  
   
-### <a name="example-function-over-union-type"></a>Union 유형에 대 한 예제: 함수  
+### <a name="example-function-over-union-type"></a>예: UNION 유형에 대한 함수  
  UNION 유형의 <`r`>에 대한 요소 정의를 고려하십시오.  
   
 ```  
@@ -86,7 +86,7 @@ ms.locfileid: "51292431"
   
  "평균" 함수인 XQuery 컨텍스트 내에서 `fn:avg (//r)` XQuery 컴파일러는 서로 다른 형식의 값을 추가할 수 없습니다 때문에 정적 오류를 반환 합니다 (**xs: int**하십시오 **xs: float** 또는 **xs: 이중**)에 <`r`> 인수에는 요소 **fn:avg()** 합니다. 이 문제를 해결하려면 함수 호출을 `fn:avg(for $r in //r return $r cast as xs:double ?)`로 다시 작성합니다.  
   
-### <a name="example-operator-over-union-type"></a>Union 유형에 대 한 예: 연산자  
+### <a name="example-operator-over-union-type"></a>예: UNION 유형에 대한 연산자  
  더하기 연산('+')에는 정확한 유형의 피연산자가 필요합니다. 따라서 `(//r)[1] + 1` 식은 <`r`> 요소에 대해 앞에서 설명한 유형 정의가 있는 정적 오류를 반환합니다. 한 가지 해결 방법은 식을 `(//r)[1] cast as xs:int? +1`(여기서 "?"는 0번 또는 1번의 발생 횟수를 나타냄)로 다시 작성하는 것입니다. 모든 캐스트는 런타임 오류의 결과로 빈 시퀀스를 발생시킬 수 있기 때문에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에는 "cast as"와 "?"가 필요합니다.  
   
 ## <a name="see-also"></a>관련 항목  

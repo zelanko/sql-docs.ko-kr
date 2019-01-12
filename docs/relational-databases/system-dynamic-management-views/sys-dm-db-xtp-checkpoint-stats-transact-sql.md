@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fdb255570febc6d37bef824958c15422b6fae733
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 43474055a9dd9d5f8b71a0c2ec008b02f4b847ed
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503189"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211084"
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,8 @@ ms.locfileid: "52503189"
  자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.  
   
 ```  
-SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;  
+USE In_Memory_db_name
+SELECT * FROM sys.dm_db_xtp_checkpoint_stats;  
 ```  
   
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 상당히 다른 보다 최신 버전 이며 낮은 항목에 설명 되어 [SQL Server 2014](#bkmk_2014)합니다.**

@@ -14,12 +14,12 @@ ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e2998ac4c51ea4ea7b289e4ef769acf0f3991f53
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 963fe86b0d5939c82bffb9c07d5adacbadadba89
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784895"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135953"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>트랜잭션 게시에 대해 업데이트할 수 있는 구독 설정
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 트랜잭션 게시에 대해 구독 업데이트를 설정하는 방법에 대해 설명합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "52784895"
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  새 게시 마법사의 **게시 유형** 페이지에서 트랜잭션 게시에 대해 구독 업데이트를 설정합니다. 이 마법사를 사용하는 방법에 대한 자세한 내용은 [게시 만들기](create-a-publication.md)를 참조하세요. 게시가 생성된 다음에는 구독 업데이트를 설정할 수 없습니다.  
   
- 구독 업데이트를 사용하려면 새 구독 마법사에서도 옵션을 구성해야 합니다. 자세한 내용은 [트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기](../create-updatable-subscription-transactional-publication-transact-sql.md)을 참조하세요.  
+ 구독 업데이트를 사용하려면 새 구독 마법사에서도 옵션을 구성해야 합니다. 자세한 내용은 [트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)을 참조하세요.  
   
 #### <a name="to-enable-updating-subscriptions"></a>구독 업데이트를 설정하려면  
   
@@ -67,7 +67,7 @@ ms.locfileid: "52784895"
   
 4.  아티클을 게시에 추가합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
-5.  구독자에서 이 게시에 대한 업데이트 구독을 만듭니다. 자세한 내용은 [트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기](../create-updatable-subscription-transactional-publication-transact-sql.md)을 참조하세요.  
+5.  구독자에서 이 게시에 대한 업데이트 구독을 만듭니다. 자세한 내용은 [트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)을 참조하세요.  
   
 #### <a name="to-create-a-publication-that-supports-queued-updating-subscriptions"></a>지연 업데이트 구독을 지원하는 게시를 만들려면  
   
@@ -93,7 +93,7 @@ ms.locfileid: "52784895"
   
 5.  아티클을 게시에 추가합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
-6.  구독자에서 이 게시에 대한 업데이트 구독을 만듭니다. 자세한 내용은 [트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기](../create-updatable-subscription-transactional-publication-transact-sql.md)을 참조하세요.  
+6.  구독자에서 이 게시에 대한 업데이트 구독을 만듭니다. 자세한 내용은 [트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)을 참조하세요.  
   
 #### <a name="to-change-the-conflict-policy-for-a-publication-that-allows-queued-updating-subscriptions"></a>지연 업데이트 구독을 허용하는 게시에 대한 충돌 정책을 변경하려면  
   
@@ -105,11 +105,11 @@ ms.locfileid: "52784895"
  [!code-sql[HowTo#sp_createtranupdatingpub](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubupdate.sql#sp_createtranupdatingpub)]  
   
 ## <a name="see-also"></a>관련 항목  
- [지연 업데이트 충돌 해결 옵션 설정&#40;SQL Server Management Studio&#41;](../publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)   
- [트랜잭션 복제에 대한 게시 유형](../transactional/publication-types-for-transactional-replication.md)   
+ [지연 업데이트 충돌 해결 옵션 설정&#40;SQL Server Management Studio&#41;](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+ [트랜잭션 복제에 대한 게시 유형](../transactional/transactional-replication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Create a Publication](create-a-publication.md)   
- [Create an Updatable Subscription to a Transactional Publication](../create-updatable-subscription-transactional-publication-transact-sql.md)   
+ [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [스크립팅 변수와 함께 sqlcmd 사용](../../scripting/sqlcmd-use-with-scripting-variables.md)  
   

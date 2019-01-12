@@ -18,12 +18,12 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 439a2009e6cb5e470ef09d3c766c4349d54ecdb8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4af21c912ce5a703cd46f0f9b00b5dd4bda7d2d3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792299"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135833"
 ---
 # <a name="view-and-modify-publication-properties"></a>게시 속성 보기 및 수정
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 게시 속성을 보고 수정하는 방법에 대해 설명합니다.  
@@ -187,13 +187,13 @@ ms.locfileid: "52792299"
   
  [!code-vb[HowTo#rmo_vb_ChangeMergePub_ddl](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changemergepub_ddl)]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 및 데이터베이스 개체 게시](publish-data-and-database-objects.md)   
  [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)   
  [게시 데이터베이스의 스키마 변경](make-schema-changes-on-publication-databases.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
- [게시에 대한 아티클 추가 및 삭제&#40;SQL Server Management Studio&#41;](add-articles-to-and-drop-articles-from-a-publication.md)   
- [게시에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
+ [게시에서 아티클 및 삭제 추가](add-articles-to-and-drop-articles-from-a-publication.md)   
+ [정보 및 복제 모니터를 사용 하 여 수행할 작업 보기](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [아티클 속성 보기 및 수정](view-and-modify-article-properties.md)  
   
   

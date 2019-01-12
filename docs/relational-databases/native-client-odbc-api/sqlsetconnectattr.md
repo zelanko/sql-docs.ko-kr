@@ -1,7 +1,7 @@
 ---
 title: SQLSetConnectAttr | Microsoft Docs
 ms.custom: ''
-ms.date: 12/11/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,14 +15,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7167f88fd1cc3b349df9543080caf6d571322c40
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+ms.openlocfilehash: 0e27df2328474f4123daa9488af88eb7903832be
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306260"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206379"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -35,7 +36,7 @@ ms.locfileid: "53306260"
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에는 새로운 트랜잭션 격리 특성인 SQL_COPT_SS_TXN_ISOLATION이 지원됩니다. SQL_COPT_SS_TXN_ISOLATION을 SQL_TXN_SS_SNAPSHOT으로 설정하면 스냅숏 격리 수준에서 트랜잭션이 실행됩니다.  
   
 > [!NOTE]  
->  SQL_ATTR_TXN_ISOLATION을 사용하면 SQL_TXN_SS_SNAPSHOT을 제외한 다른 모든 격리 수준을 설정할 수 있습니다. 스냅숏 격리를 사용하려면 SQL_COPT_SS_TXN_ISOLATION을 통해 SQL_TXN_SS_SNAPSHOT을 설정해야 합니다. 그러나 격리 수준을 검색할 때는 SQL_ATTR_TXN_ISOLATION이나 SQL_COPT_SS_TXN_ISOLATION을 모두 사용할 수 있습니다.  
+> SQL_ATTR_TXN_ISOLATION을 사용하면 SQL_TXN_SS_SNAPSHOT을 제외한 다른 모든 격리 수준을 설정할 수 있습니다. 스냅숏 격리를 사용하려면 SQL_COPT_SS_TXN_ISOLATION을 통해 SQL_TXN_SS_SNAPSHOT을 설정해야 합니다. 그러나 격리 수준을 검색할 때는 SQL_ATTR_TXN_ISOLATION이나 SQL_COPT_SS_TXN_ISOLATION을 모두 사용할 수 있습니다.  
   
  ODBC 문 특성을 연결 특성으로 승격하면 예기치 않은 결과가 발생할 수 있습니다. 결과 집합 처리를 위해 서버 커서를 요청하는 문 특성은 연결로 승격할 수 있습니다. 예를 들어 ODBC 문 특성 SQL_ATTR_CONCURRENCY를 기본 SQL_CONCUR_READ_ONLY보다 더 제한적인 값으로 설정하면 드라이버는 연결을 통해 전송한 모든 문에 대해 동적 커서를 사용합니다. 연결을 통해 문에 ODBC 카탈로그 함수를 실행하면 SQL_SUCCESS_WITH_INFO 및 커서 동작이 읽기 전용으로 변경되었음을 나타내는 진단 레코드가 반환됩니다. 같은 연결에서 COMPUTE 절이 포함된 Transact-SQL SELECT 문을 실행하려고 하면 문 실행이 실패합니다.  
   
@@ -193,7 +194,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |SQL_IS_OFF|기본. 로그인 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 사용자 식별자와 암호를 확인합니다.|  
 |SQL_IS_ON|Windows 인증 모드를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 사용자의 액세스 권한을 확인합니다.|  
 
-< 이름 "sqlcoptssmarsenabled" = ></a>
+<a name="sqlcoptssmarsenabled"></a>
 ## <a name="sqlcoptssmarsenabled"></a>SQL_COPT_SS_MARS_ENABLED  
  이 특성은 MARS(Multiple Active Result Sets)를 사용하거나 사용하지 않도록 설정합니다. 기본적으로 MARS는 사용되지 않습니다. 이 특성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하기 전에 설정해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결된 후 MARS는 연결의 유효 기간 동안 설정되거나 설정되지 않은 상태로 유지됩니다.  
   
@@ -315,7 +316,8 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
  스냅숏 격리에 대 한 자세한 내용은 참조 하세요. [스냅숏 격리 작업](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)합니다.  
   
-## <a name="sqlcoptssuseprocforprep"></a>SQL_COPT_SS_USE_PROC_FOR_PREP  
+## <a name="sqlcoptssuseprocforprep"></a>SQL_COPT_SS_USE_PROC_FOR_PREP
+
  이 특성은 더 이상 지원되지 않습니다.  
 
 <a name="sqlcoptssuserdata"></a>
@@ -333,7 +335,8 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 |SQL_WARN_YES|코드 페이지 변환 중에 데이터 손실이 발생할 경우 경고를 생성합니다.|  
 |SQL_WARN_NO|(기본값) 코드 페이지 변환 중에 데이터 손실이 발생할 경우 경고를 생성하지 않습니다.|  
   
-## <a name="sqlsetconnectattr-support-for-service-principal-names-spns"></a>SPN에 대한 SQLSetConnectAttr 지원  
+## <a name="sqlsetconnectattr-support-for-service-principal-names-spns"></a>SPN에 대한 SQLSetConnectAttr 지원
+
  새 연결 특성인 SQL_COPT_SS_SERVER_SPN 및 sql_copt_ss_failover_partner_spn 연결 문자열의 값을 설정 하려면 SQLSetConnectAttr은 사용할 수 있습니다. 이러한 특성은 연결이 열려 있는 상태에서는 설정할 수 없습니다. 연결이 열려 있을 때 이러한 특성을 설정하려고 하면 "작업을 현재 사용할 수 없습니다."라는 메시지와 함께 HY011 오류가 반환됩니다. (SQLSetConnectOption 데도 사용할 수 있습니다 이러한 값을 설정 합니다.)  
   
  Spn에 대 한 자세한 내용은 참조 하세요. [서비스 사용자 이름 &#40;Spn&#41; 클라이언트 연결의 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)합니다.  
@@ -344,7 +347,8 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
  SQL_COPT_SS_CONNECTION_DEAD에 대 한 자세한 내용은 참조 하세요. [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) 하 고 [데이터 원본에 연결 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/connecting-to-a-data-source-odbc.md).  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예제
+
  이 예에서는 성능 데이터를 로깅합니다.  
   
 ```  
@@ -388,7 +392,8 @@ SQLSetConnectAttr(hDbc, SQL_COPT_SS_PERF_DATA,
 // Continue on...  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목
+
  [SQLSetConnectAttr 함수](https://go.microsoft.com/fwlink/?LinkId=59368)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [대량 복사 함수](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)   

@@ -15,12 +15,12 @@ ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 828608b5c00cdcf0ed625a302359bb5c271381b4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d9d42017e3dfd6016d8b4a42c6953905e804200f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538534"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136023"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 통합 프로그래밍 모델 제한 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "52538534"
   
 -   어셈블리가 지원되는 어셈블리 중 하나입니다. 자세한 내용은 [Supported .NET Framework Libraries](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)을 참조하세요.  
   
--   사용 하는 **CREATE ASSEMBLY FROM * * *\<위치 >,* 에서 사용할 수 있는 모든 참조 된 어셈블리 및 해당 종속성  *\<위치 >* 합니다.  
+-   사용 중인 **에서 어셈블리 만들기**_\<위치 >,_ 에서 사용할 수 있는 모든 참조 된 어셈블리 및 해당 종속성 *\<위치 >*.  
   
--   사용 하는 **CREATE ASSEMBLY FROM * * *\<바이트... >를* 바이트를 구분 하는 모든 참조를 통해 지정 됩니다.  
+-   사용 중인 **에서 어셈블리 만들기**_\<바이트... >를_ 바이트를 구분 하는 모든 참조를 통해 지정 됩니다.  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  모든 **EXTERNAL_ACCESS** 어셈블리가 다음 조건을 충족 해야 합니다.  
@@ -117,7 +117,7 @@ ms.locfileid: "52538534"
 ### <a name="safe"></a>SAFE  
  모든 **EXTERNAL_ACCESS** 조건이 검사 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [지원 되는.NET Framework 라이브러리](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)   
  [CLR 통합 코드 액세스 보안](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [호스트 보호 특성 및 CLR 통합 프로그래밍](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   

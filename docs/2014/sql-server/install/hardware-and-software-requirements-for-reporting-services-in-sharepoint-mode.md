@@ -1,7 +1,7 @@
 ---
 title: 하드웨어 및 소프트웨어 요구 사항 SharePoint 모드의 Reporting Services | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/09/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -11,14 +11,15 @@ ms.assetid: ed91877d-4f74-4266-a932-b824b4810c99
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6ee2cbd875416e1b981d2dfa6006e42529fcf679
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5b70a6a736d9a7f566eb4aa60a37ed7b5151168e
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362605"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206179"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>SharePoint 모드의 Reporting Services에 대한 하드웨어 및 소프트웨어 요구 사항
+
   이 항목에서는 SharePoint 모드로 실행 중인 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 필수 구성 요소, 하드웨어 요구 사항 및 설치 고려 사항에 대해 설명합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드에는 SharePoint 서버가 필요하기 때문에 대부분의 요구 사항은 SharePoint 환경을 기반으로 합니다. 기본 모드 보고서 서버의 경우 하드웨어가 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]실행에 필요한 최소 하드웨어 및 소프트웨어 요구 사항을 충족해야 합니다. 자세한 내용은 [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)을 참조하세요.  
   
 -   [필수 구성 요소](#bkmk_prereq)  
@@ -61,11 +62,13 @@ ms.locfileid: "53362605"
   
 -   보고서 서버 인스턴스는 SQL Server Express Edition을 데이터베이스로 사용할 수 없습니다. 그러나 SharePoint 제품에 의해 설치된 SQL Server Express Edition 인스턴스는 다른 데이터베이스 엔진 버전과 함께 있을 수 있습니다.  
   
-##  <a name="bkmk_powerview"></a> [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 요구 사항  
+##  <a name="bkmk_powerview"></a> [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 요구 사항
+
  Office.Microsoft.com에서 최신 [Power View 설명서](http://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx) 를 참조하세요. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]는 Microsoft Excel 2013의 기능이며, Microsoft SharePoint Server 2010 및 2013 Enterprise Edition용 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services 추가 기능의 일부입니다.  
   
-##  <a name="bkmk_more_information"></a> 자세한 정보  
- SharePoint 변경에 대 한 정보를 참조 하세요 [SharePoint 2010에서 SharePoint 2013으로 변경](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) (https://technet.microsoft.com/en-us/library/ff607742(office.15).aspx)합니다.  
+##  <a name="bkmk_more_information"></a> 자세한 정보
+
+ SharePoint 변경에 대 한 정보를 참조 하세요 [SharePoint 2010에서 SharePoint 2013으로 변경](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) (https://technet.microsoft.com/library/ff607742(office.15).aspx)합니다.  
   
  [SQL Server 2014 릴리스 정보](https://go.microsoft.com/fwlink/?LinkID=296445)  
   

@@ -15,12 +15,12 @@ ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 18a3bed07be7fd035a5011d16c528525685cdfb6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7db85ce6d63cd6c3eb458434357fa5a2d8127dec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781175"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135933"
 ---
 # <a name="replication-security-best-practices"></a>복제 보안을 위한 최선의 구현 방법
   단일 도메인의 인트라넷에서부터 트러스트되지 않은 도메인 간이나 인터넷을 통해 데이터에 액세스하는 애플리케이션에 이르기까지의 분산 환경에서 복제는 데이터를 이동합니다. 따라서 이러한 다양한 환경에서 복제 연결의 보안을 유지하는 최선의 방법을 이해하는 것이 중요합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "52781175"
   
     -   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
   
--   각 복제 에이전트를 서로 다른 Windows 계정으로 실행하고 모든 복제 에이전트 연결에 Windows 인증을 사용합니다. 계정 지정에 대한 자세한 내용은 [복제의 로그인 및 암호 관리](manage-logins-and-passwords-in-replication.md)를 참조하세요.  
+-   각 복제 에이전트를 서로 다른 Windows 계정으로 실행하고 모든 복제 에이전트 연결에 Windows 인증을 사용합니다. 계정 지정에 대한 자세한 내용은 [복제의 로그인 및 암호 관리](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)를 참조하세요.  
   
 -   각 에이전트에 필요한 사용 권한만 부여합니다. 자세한 내용은 [Replication Agent Security Model](replication-agent-security-model.md)의 "에이전트에 필요한 사용 권한" 섹션을 참조하십시오.  
   
@@ -73,6 +73,6 @@ ms.locfileid: "52781175"
  [구독자 보안 설정](secure-the-subscriber.md)   
  [배포자 보안 설정](secure-the-distributor.md)   
  [게시자 보안 설정](secure-the-publisher.md)   
- [보안 및 보호&#40;복제&#41;](security-and-protection-replication.md)  
+ [SQL Server 복제 보안](view-and-modify-replication-security-settings.md)  
   
   

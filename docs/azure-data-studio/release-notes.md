@@ -3,7 +3,7 @@ title: 릴리스 정보 및 변경 로그
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 릴리스 정보
 ms.custom: seodec18
-ms.date: 11/06/2018
+ms.date: 01/10/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,34 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 22542b42aff4b6d2d37e4a7342395d154d16dc95
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 63cf17e26ce554b901a3c9cc6db1fcb18162140d
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030347"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143663"
 ---
 # <a name="azure-data-studio-latest-release-notes-and-changelog"></a>Azure Data Studio 최신 릴리스 정보 및 변경 로그
 
-**[11 월 릴리스를 다운로드 하십시오!](download.md)**
+**[1 월 릴리스를 다운로드 하십시오!](download.md)**
+
+
+## <a name="january-2019-january-release"></a>2019 1 월 (1 월 릴리스)
+
+릴리스 날짜: 2019 년 1 월 9 일  
+버전: 1.3.8
+
+- Windows에 대 한 새 사용자 설치 관리자를 추가 합니다. 기존 체제 설치 관리자와 달리 새 사용자 설치 관리자에 관리자 권한이 필요 하지 않습니다. 비 관리자는 쉽게 업그레이드할을 수도 있습니다.
+- Azure Active Directory 인증을 지원 합니다.
+- Idera SQL DM Performance Insights (미리 보기)를 발표합니다.
+- SQL Server 가져오기 확장에서 데이터 계층 응용 프로그램 마법사를 지원 합니다.
+- 업데이트 된 [SQL Server 2019 미리 보기 확장](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- SQL Server Profiler 개선 사항입니다.
+- 대규모 쿼리 (미리 보기)에 대 한 스트리밍 결과입니다.
+- 커뮤니티 확장: sp_executesql to sql 및 새 데이터베이스입니다.
+- 확인할 [버그 및 문제](https://github.com/Microsoft/azuredatastudio/milestone/19?closed=1)합니다.
+
+자세한 내용은 참조는 [변경 로그](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), 및 [릴리스](https://github.com/Microsoft/azuredatastudio/releases)합니다.
 
 ## <a name="november-2018-november-release"></a>2018 년 11 월 (11 월 릴리스)
 
@@ -35,6 +53,7 @@ ms.locfileid: "53030347"
 - .NET Core에 SQL 도구 서비스 업그레이드 (지원용 최종 AAD) 2.2 미리 보기 3
 
 ### <a name="bug-fixes"></a>버그 수정
+
 - 수정 [#2933 발급](https://github.com/Microsoft/azuredatastudio/issues/2933): Azure SQL DB에 연결
 - 수정 [#2914 발급](https://github.com/Microsoft/azuredatastudio/issues/2914): "잘못 된 인수" 예외 확장 OE 데이터베이스 노드
 - 수정 [#2935 발급](https://github.com/Microsoft/azuredatastudio/pull/2935): 쿼리 결과에 여러 줄 메시지를 올바르게 표시
@@ -44,8 +63,6 @@ ms.locfileid: "53030347"
 - 수정 [#3047 발급](https://github.com/Microsoft/azuredatastudio/pull/3047): SQL Server에 연결 하기 위한 명령줄 인터페이스를 추가 합니다.
 - 수정 [#3031 발급](https://github.com/Microsoft/azuredatastudio/pull/3031): 쿼리 계획 테마 지원 추가
 - ...
-
-자세한 내용은 참조는 [변경 로그](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), 및 [릴리스](https://github.com/Microsoft/azuredatastudio/releases)합니다.
 
 ## <a name="october-2018-october-release"></a>2018 년 10 월 (10 월 릴리스)
 
@@ -146,7 +163,7 @@ Azure Data Studio (이전의 SQL Operations Studio)의 일반 공급 릴리스 �
 - 수정 [#2129 발급](https://github.com/Microsoft/azuredatastudio/pull/2129): 탭을 전환할 때 편집 데이터 스크롤 위치를 저장 합니다.
 - 수정 [#2152 발급](https://github.com/Microsoft/azuredatastudio/issues/2152): 결과 표 형태 창의 행 표시기 0부터 시작 합니다.
 
-## <a name="known-issues"></a>알려진 문제
+### <a name="known-issues"></a>알려진 문제
 
 - [문제 #2371](https://github.com/Microsoft/azuredatastudio/issues/2371) Excel 데이터의 첫 번째 행만 저장 하는 대로 저장
 - [문제 #2150](https://github.com/Microsoft/azuredatastudio/issues/2150): Ubuntu 16.04를 컨테이너에는 SQL에 연결할 수 없습니다.

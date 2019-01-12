@@ -16,12 +16,12 @@ ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a71f486318c9431e25898b36343c67562da5451e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9b7c8e0bd544815b7a26afaccd308d6898e3bc95
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784685"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136133"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,19 +42,19 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_게시_**'**  
  게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 %입니다.  
   
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_게시자_**'**  
  게시자의 이름입니다. *게시자*됩니다 **sysname**, 기본값은 %입니다.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_**'**  
  게시자 데이터베이스의 이름입니다. *publisher_db*됩니다 **sysname**, 기본값은 %입니다.  
   
- [  **@property=**] **'***속성***'**  
+ [  **@property=**] **'**_속성_**'**  
  변경할 속성의 이름입니다. *속성* 됩니다 **sysname**, 테이블의 값 중 하나일 수 있습니다.  
   
- [  **@value=**] **'***값***'**  
+ [  **@value=**] **'**_값_**'**  
  지정한 속성의 새 값입니다. *값*됩니다 **nvarchar(255)**, 테이블의 값 중 하나일 수 있습니다.  
   
 |속성|값|Description|  
@@ -110,7 +110,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_changemergepullsubscription**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [끌어오기 구독 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [sp_addmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_dropmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   

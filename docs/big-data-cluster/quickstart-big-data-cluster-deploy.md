@@ -5,162 +5,238 @@ description: Azure Kubernetes Service (AKS)에서 SQL Server 2019 빅 데이터 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 12/17/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.custom: seodec18
-ms.openlocfilehash: f5ddd80eaf29db657c42eec5c84c8485e8b0d8b6
-ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
-ms.translationtype: MT
+ms.openlocfilehash: 29dda6e0f3849d22568c3e7893dc0926f28144a6
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531158"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206289"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>빠른 시작: Azure Kubernetes Service (AKS)에서 SQL Server 빅 데이터 클러스터를 배포 합니다.
 
-이 빠른 시작에서는 개발/테스트 환경에 적합 한 기본 구성에서는 AKS에서 SQL Server 2019 빅 데이터 클러스터 (미리 보기)를 배포할가 있습니다.
+이 빠른 시작에서는 Azure Kubernetes Service (AKS)를 SQL Server 2019 빅 데이터 클러스터 (미리 보기)를 배포 하는 샘플 배포 스크립트를 사용 합니다. 
 
-> [!NOTE]
-> AKS는 Kubernetes 호스트에 단 한 곳입니다. 기본 인프라에 관계 없이 Kubernetes에 빅 데이터 클러스터를 배포할 수 있습니다. 자세한 내용은 [빅 데이터를 SQL Server를 배포 하는 방법에서 kubernetes 클러스터](deployment-guidance.md)합니다.
+> [!TIP]
+> AKS는 Kubernetes 빅 데이터 클러스터에 대 한 호스팅에 대 한 하나의 옵션입니다. 다른 배포 옵션 하는 옵션 배포를 사용자 지정 하는 방법을 알아보려면 [빅 데이터를 SQL Server를 배포 하는 방법에서 kubernetes 클러스터](deployment-guidance.md)합니다.
 
-SQL Master 인스턴스 외에 클러스터 풀 인스턴스를 하나의 계산, 데이터 풀 인스턴스 하나 및 두 개의 저장소 풀 인스턴스를 포함합니다. 데이터는 AKS 기본 저장소 클래스를 사용 하는 Kubernetes 영구적 볼륨을 사용 하 여 유지 됩니다. 추가 사용자 지정 구성에서 환경 변수 참조를 [배포 가이드](deployment-guidance.md)합니다.
-
-AKS 클러스터 만들기, 빅 데이터 클러스터를 동시에 설치를 참조 하는 스크립트를 실행 하려는 경우 [빅 데이터 클러스터 Azure Kubernetes Service (AKS)에서 SQL Server 배포](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks)합니다.
+여기에 기본 빅 데이터 클러스터 배포를 SQL 마스터 인스턴스를, 풀 인스턴스를 하나의 계산, 두 데이터 풀 인스턴스 및 두 개의 저장소 풀 인스턴스에 구성 됩니다. 데이터는 AKS 기본 저장소 클래스를 사용 하는 Kubernetes 영구적 볼륨을 사용 하 여 유지 됩니다. 이 빠른 시작에 사용 된 기본 구성을 개발/테스트 환경에 적합 합니다.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-이 빠른 시작이에서는 이미 v1.10의 최소 버전을 사용 하 여 AKS 클러스터를 구성한 필요 합니다. 자세한 내용은 참조는 [AKS에 배포](deploy-on-aks.md) 가이드입니다.
-
-- [SQL Server 2019 빅 데이터 도구도](deploy-big-data-tools.md):
+- Azure 구독입니다.
+- [빅 데이터 도구도](deploy-big-data-tools.md):
+   - **mssqlctl**
+   - **Kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 확장**
-   - **Kubectl**
-   - **mssqlctl**
+   - **Azure CLI**
 
-## <a name="verify-aks-configuration"></a>AKS 구성 확인
+## <a name="log-in-to-your-azure-account"></a>Azure 계정에 로그인
 
-배포 된 AKS 클러스터를 만든 후 실행할 수는 아래 클러스터 구성을 보려면 kubectl 명령을 합니다. 해당 kubectl 가리키는 올바른 클러스터 컨텍스트를 확인 합니다.
+AKS 클러스터 만들기를 자동화 하려면 Azure CLI를 사용 하는 스크립트입니다. 스크립트를 실행 하기 전에 로그인 해야 Azure CLI를 사용 하 여 Azure 계정에 한 번 이상. 명령 프롬프트에서 다음 명령을 실행 합니다.
 
-```bash
-kubectl config view
+```
+az login
 ```
 
-## <a name="define-environment-variables"></a>환경 변수를 정의 합니다.
+## <a name="download-the-deployment-script"></a>배포 스크립트를 다운로드 합니다.
 
-Windows 또는 Linux/macOS 클라이언트 사용 하는지에 따라 달라 집니다 약간 빅 데이터 클러스터를 배포 하는 데 필요한 환경 변수를 설정 합니다.  사용 중인 운영 체제에 따라 아래 단계를 선택 합니다.
+이 빠른 시작이에서는 python 스크립트를 사용 하 여 AKS에서 빅 데이터 클러스터 만들기 자동화 **배포-sql-큰-데이터-aks.py**합니다. Python을 이미 설치한 경우 **mssqlctl**,이 빠른 시작에서 스크립트를 성공적으로 실행할 수 있도록 해야 합니다. 
 
-계속 하기 전에 다음 중요 한 지침을 note:
+Windows PowerShell 또는 Linux bash 프롬프트에서 GitHub에서 배포 스크립트를 다운로드 하려면 다음 명령을 실행 합니다.
 
-- 에 [명령 창](https://docs.microsoft.com/visualstudio/ide/reference/command-window), 따옴표 환경 변수에 포함 됩니다. 따옴표를 사용 하 여 암호를 래핑할 경우 큰따옴표는 암호에 포함 됩니다.
-- Bash에서 따옴표 변수에 포함 되지 않습니다. 큰따옴표를 사용 하는 예제 `"`합니다.
-- 원하는에 환경 변수는 암호를 설정할 수는 있지만 해야 속도가 충분히 복잡 한 사용 하지 않는 합니다 `!`, `&`, 또는 `'` 문자입니다.
-- `sa` 계정은 설치 중에 생성 되는 SQL Server Master 인스턴스의 시스템 관리자입니다. SQL Server 컨테이너를 만든 후 컨테이너에서 `echo $MSSQL_SA_PASSWORD`를 실행하여 지정한 `MSSQL_SA_PASSWORD` 환경 변수를 검색할 수 있습니다. 보안상의 이유로 변경 프로그램 `sa` 설명 된 모범 사례에 따라 암호 [여기](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password)합니다.
-
-다음 환경 변수를 초기화 합니다.  빅 데이터 클러스터를 배포 하는 데 필요 합니다.
-
-### <a name="windows"></a>Windows
-
-명령 창 (PowerShell)를 사용 하면 다음 환경 변수를 구성할:
-
-```cmd
-SET ACCEPT_EULA=Y
-SET CLUSTER_PLATFORM=aks
-
-SET CONTROLLER_USERNAME=<controller_admin_name - can be anything>
-SET CONTROLLER_PASSWORD=<controller_admin_password - can be anything, password complexity compliant>
-SET KNOX_PASSWORD=<knox_password - can be anything, password complexity compliant>
-SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
-
-SET DOCKER_REGISTRY=private-repo.microsoft.com
-SET DOCKER_REPOSITORY=mssql-private-preview
-SET DOCKER_USERNAME=<your username, credentials provided by Microsoft>
-SET DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
-SET DOCKER_EMAIL=<your Docker email, use the username provided by Microsoft>
-SET DOCKER_PRIVATE_REGISTRY="1"
+```
+curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/aks/deploy-sql-big-data-aks.py"
 ```
 
-### <a name="linuxmacos"></a>Linux/macOS
+## <a name="run-the-deployment-script"></a>배포 스크립트를 실행 합니다.
 
-다음 환경 변수를 초기화 합니다.
+배포 스크립트를 실행 하려면 다음 단계를 사용 합니다. 이 스크립트를 Azure에서 AKS 서비스를 만들고 AKS에 SQL Server 2019 빅 데이터 클러스터를 배포 합니다. 또한 다른 스크립트를 수정할 수 있습니다 [환경 변수](deployment-guidance.md#env) 사용자 지정 배포를 만듭니다.
 
-```bash
-export ACCEPT_EULA="Y"
-export CLUSTER_PLATFORM="aks"
+1. 다음 명령을 사용 하 여 스크립트를 실행 합니다.
 
-export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
-export CONTROLLER_PASSWORD="<controller_admin_password - can be anything, password complexity compliant>"
-export KNOX_PASSWORD="<knox_password - can be anything, password complexity compliant>"
-export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
+   ```
+   python deploy-sql-big-data-aks.py
+   ```
 
-export DOCKER_REGISTRY="private-repo.microsoft.com"
-export DOCKER_REPOSITORY="mssql-private-preview"
-export DOCKER_USERNAME="<your username, credentials provided by Microsoft>"
-export DOCKER_PASSWORD="<your password, credentials provided by Microsoft>"
-export DOCKER_EMAIL="<your Docker email, use the username provided by Microsoft>"
-export DOCKER_PRIVATE_REGISTRY="1"
+   > [!NOTE]
+   > Python3을 사용 하 여 명령을 실행 해야 하는 경우 python3와 python2 경로 및 클라이언트 컴퓨터에서: `python3 deploy-sql-big-data-aks.py`합니다.
+
+1. 메시지가 표시 되 면 다음 정보를 입력 합니다.
+
+   | 값 | Description |
+   |---|---|
+   | **Azure 구독 ID** | AKS를 사용 하 여 Azure 구독 ID입니다. 실행 하 여 모든 구독 및 해당 Id를 나열할 수 있습니다 `az account list` 다른 명령줄에서. |
+   | **Azure 리소스 그룹** | AKS 클러스터를 만드는 Azure 리소스 그룹 이름입니다. |
+   | **Docker 사용자 이름** | 제한 된 공개 미리 보기의 일부로 제공 되는 Docker 사용자 이름입니다. |
+   | **Docker 암호** | 제한 된 공개 미리 보기의 일부로 제공 된 Docker 암호입니다. |
+   | **Azure 지역** | 새 AKS 클러스터에 대 한 Azure 지역 (기본 **westus**). |
+   | **컴퓨터 크기** | 합니다 [컴퓨터 크기](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) AKS 클러스터의 노드에 대해 사용 하도록 (기본 **Standard_L4s**). |
+   | **작업자 노드** | AKS 클러스터의 작업자 노드 수 (기본 **3**). |
+   | **클러스터 이름** | AKS 클러스터와 빅 데이터 클러스터의 이름입니다. 소문자 영숫자 문자만 및 공백 없이 클러스터의 이름 이어야 합니다. (기본값 **sqlbigdata**). |
+   | **암호** | 컨트롤러, HDFS/Spark 게이트웨이 및 마스터 인스턴스를 실행 하는 것에 대 한 암호 (기본 **MySQLBigData2019**). |
+   | **컨트롤러 사용자** | 컨트롤러 사용자의 사용자 이름 (기본값: **관리자**). |
+
+   > [!IMPORTANT]
+   > 클러스터의 각 영구적 볼륨 클레임에는 연결된 된 디스크에 필요합니다. 현재 빅 데이터 클러스터 21 영구적 볼륨 클레임을 필요합니다. Azure 가상 머신 크기 및 노드 수를 선택할 때 노드에서 연결할 수 있는 디스크의 총 21 보다 크거나 같은 경우 인지 확인 합니다. 예를 들어, 합니다 [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) 48 디스크를 연결할 수는 3 개의 노드가 의미 하므로 컴퓨터 크기 16 개의 연결 된 디스크를 지원 합니다.
+
+   > [!NOTE]
+   > `sa` 계정은 설치 중에 생성 되는 SQL Server 마스터 인스턴스에서 시스템 관리자입니다. 배포를 만든 후 합니다 `MSSQL_SA_PASSWORD` 실행 하 여 환경 변수를 검색할 수 `echo $MSSQL_SA_PASSWORD` 마스터 인스턴스 컨테이너에 있습니다. 보안상의 이유로 변경에 `sa` 마스터 인스턴스 배포 후에 암호입니다. 자세한 내용은 [SA 암호 변경](../linux/quickstart-install-connect-docker.md#sapassword)합니다.
+
+1. 지정한 매개 변수를 사용 하 여 AKS 클러스터를 만들어 스크립트를 시작 합니다. 이 단계는 몇 분 정도 걸립니다.
+
+   <img src="./media/quickstart-big-data-cluster-deploy/script-parameters.png" width="800px" alt="Script parameters and AKS cluster creation"/>
+
+## <a name="monitor-the-status"></a>상태 모니터링
+
+AKS 클러스터에서 스크립트를 만든 후 이전에 지정한 설정 사용 하 여 필요한 환경 변수를 설정 하려면 진행 됩니다. 그런 다음 호출 **mssqlctl** AKS에서 빅 데이터 클러스터를 배포 합니다.
+
+클라이언트 명령 창에는 배포 상태를 출력 합니다. 배포 과정에서 컨트롤러 pod에 대 한 기다리고 있는 일련의 메시지를 표시 됩니다.
+
+```output
+2018-11-15 15:42:02.0209 UTC | INFO | Waiting for controller pod to be up...
 ```
 
-> [!NOTE]
-> 제한 된 공개 미리 보기 중 SQL Server 빅 데이터 클러스터 이미지 다운로드를 위해 Docker 자격 증명은 Microsoft에서 각 고객에 게 제공 됩니다. 액세스를 요청 하려면 등록 [여기](https://aka.ms/eapsignup), SQL Server 빅 데이터 클러스터를 시도 하려면 관심을 가져를 지정 합니다.
+10 ~ 20 분 후 있습니다 알려야 컨트롤러 pod가 실행 중인지:
 
-## <a name="deploy-a-big-data-cluster"></a>빅 데이터 클러스터를 배포 합니다.
-
-Kubernetes 클러스터에서 SQL Server 2019 CTP 2.2 빅 데이터 클러스터를 배포 하려면 다음 명령을 실행 합니다.
-
-```bash
-mssqlctl create cluster <your-cluster-name>
+```output
+2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
 ```
 
-> [!NOTE]
-> 클러스터의 이름을 소문자 영숫자 문자, 공백 없이 해야 합니다. 클러스터와 동일한 이름 가진 네임 스페이스의 빅 데이터 클러스터에 대 한 모든 Kubernetes 아티팩트를 만들 수는 지정 된 이름입니다.
+> [!IMPORTANT]
+> 전체 배포는 빅 데이터 클러스터의 구성 요소에 대 한 컨테이너 이미지를 다운로드 하는 데 필요한 시간 때문에 시간이 걸릴 수 있습니다. 그러나 하지 몇 시간이 걸립니다. 배포 문제가 발생 하는 경우 참조를 [배포 문제 해결](deployment-guidance.md#troubleshoot) 배포 지침 문서의 섹션입니다.
 
-명령 창 또는 셸에서 배포 상태를 반환합니다. 또한 다른 cmd 창에서 다음이 명령을 실행 하 여 배포 상태를 확인할 수 있습니다.
+## <a name="inspect-the-cluster"></a>클러스터를 검사 합니다.
 
-```bash
-kubectl get all -n <your-cluster-name>
-kubectl get pods -n <your-cluster-name>
-kubectl get svc -n <your-cluster-name>
-```
+배포 하는 동안 언제 든 상태 및 실행 빅 데이터 클러스터에 대 한 세부 정보를 검사할 kubectl 또는 클러스터 관리 포털을 사용할 수 있습니다.
 
-보다 세부적인 상태 및 각 pod에 대 한 구성을 실행 하 여 확인할 수 있습니다.
-```bash
-kubectl describe pod <pod name> -n <your-cluster-name>
-```
+### <a name="use-kubectl"></a>Kubectl 사용
+
+사용 하는 새 명령 창을 열고 **kubectl** 배포 프로세스 중입니다.
+
+1. 전체 클러스터의 상태 요약을 가져오려면 다음 명령을 실행 합니다.
+
+   ```
+   kubectl get all -n <your-cluster-name>
+   ```
+
+1. Kubernetes 서비스 및 해당 내부 및 외부 끝점은 다음을 사용 하 여 검사할 **kubectl** 명령:
+
+   ```
+   kubectl get svc -n <your-cluster-name>
+   ```
+
+1. 또한 다음 명령 사용 하 여 kubernetes pod의 상태를 검사할 수 있습니다.
+
+   ```
+   kubectl get pods -n <your-cluster-name>
+   ```
+
+1. 다음 명령 사용 하 여 특정 pod에 대 한 자세한 정보를 확인 합니다.
+
+   ```
+   kubectl describe pod <pod name> -n <your-cluster-name>
+   ```
 
 > [!TIP]
 > 모니터링 및 배포 문제를 해결 하는 방법에 대 한 자세한 내용은 참조는 [배포 문제 해결](deployment-guidance.md#troubleshoot) 배포 지침 문서의 섹션입니다.
 
-## <a name="open-the-cluster-administration-portal"></a>클러스터 관리 포털 열기
+### <a name="use-the-cluster-administration-portal"></a>클러스터 관리 포털 사용
 
-컨트롤러 pod가 실행 되 면 배포를 모니터링 하려면 클러스터 관리 포털을 사용할 수 있습니다. 외부 IP 주소 및 포트 번호를 사용 하 여 포털에 액세스할 수 있습니다 합니다 `service-proxy-lb` (예: **https://\<ip 주소\>: 30777/포털**). 값은 관리 포털 액세스에 대 한 자격 증명 `CONTROLLER_USERNAME` 고 `CONTROLLER_PASSWORD` 위에 제공 된 환경 변수입니다.
+컨트롤러 pod가 실행 되 면 배포를 모니터링 하려면 클러스터 관리 포털을 사용할 수도 있습니다. 외부 IP 주소 및 포트 번호를 사용 하 여 포털에 액세스할 수 있습니다 합니다 `service-proxy-lb` (예: **https://\<ip 주소\>: 30777/포털**). 포털에 로그인 하는 데 자격 증명에 대 한 값과 일치 **컨트롤러 사용자** 하 고 **암호** 배포 스크립트에 지정 합니다.
 
-Bash 또는 cmd 창에서이 명령을 실행 하 여 lb-프록시 서비스-서비스의 IP 주소를 가져올 수 있습니다.
+IP 주소를 가져올 수는 **lb-프록시 서비스-** bash 또는 cmd 창에서이 명령을 실행 하 여 서비스:
 
 ```bash
 kubectl get svc service-proxy-lb -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> 자동으로 생성 된 SSL 인증서 사용 하므로 웹 페이지에 액세스할 때 보안 경고가 나타납니다. 향후 릴리스에서 자체 서명 된 인증서를 제공 하는 기능을 제공 합니다 했습니다.
+> CTP 2.2에서 경고가 표시 됩니다는 보안 웹 페이지에 액세스할 때 빅 데이터 클러스터는 자동으로 생성 된 SSL 인증서를 사용 하 여 현재 때문입니다. 또한 CTP 2.2에 나타나지 않음 마스터 SQL Server 인스턴스의 상태입니다.
 
-## <a name="connect-to-the-big-data-cluster"></a>빅 데이터 클러스터에 연결
+## <a name="connect-to-the-cluster"></a>클러스터에 연결
 
-배포 스크립트를 성공적으로 완료 된 후에 SQL Server 마스터 인스턴스와 아래 설명 된 단계를 사용 하 여 Spark/HDFS 끝점의 IP 주소를 얻을 수 있습니다. 모든 클러스터 끝점도 쉽게 참조할 수 있도록에 대 한 클러스터 관리 포털에서 서비스 끝점 섹션에 표시 됩니다.
+배포 스크립트가 완료 되 면 출력 성공 알리는 메시지를 표시 합니다.
 
-Azure는 AKS에 Azure 부하 분산 장치 서비스를 제공합니다. 다음 명령을 cmd에서 실행할지 bash 창:
-
-```bash
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
-kubectl get svc service-security-lb -n <your-cluster-name>
+```output
+2018-11-15 16:10:25.0583 UTC | INFO | Cluster state: Ready
+2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-검색할 합니다 **EXTERNAL-IP** 서비스에 할당 되는 값입니다. 에 대 한 IP 주소를 사용 하 여 SQL Server 마스터 인스턴스에 연결할 합니다 `endpoint-master-pool` 31433 포트 (예:  **\<ip 주소\>31433,**) 및에 대 한 외부 IP를 사용 하 여 SQL Server 빅 데이터 클러스터 끝점에는 `service-security-lb` 서비스입니다.   빅 데이터 클러스터 끝점은 HDFS와 상호 작용 하 고 Knox 통해 Spark 작업을 제출할 수 있는 됩니다.
+SQL Server 빅 데이터 클러스터를 AKS에 배포 됩니다. 이제 Azure 데이터 Studio를 사용 하 여 마스터 SQL Server 인스턴스 및 Azure Data Studio를 사용 하 여 HDFS/Spark 끝점에 연결할 수 있습니다.
+
+### <a id="master"></a> 마스터 인스턴스
+
+SQL Server 마스터 인스턴스는 관계형 SQL Server 데이터베이스가 포함 된 기존 SQL Server 인스턴스입니다. 다음 단계를 사용 하 여 Azure Data Studio 마스터 인스턴스에 연결 하는 방법에 설명 합니다.
+
+1. 명령줄에서 다음 명령 사용 하 여 마스터 인스턴스 IP를 찾습니다.
+
+   ```
+   kubectl get svc endpoint-master-pool -n <your-cluster-name>
+   ```
+
+1. Azure Data Studio 눌러 **F1** > **새 연결**합니다.
+
+1. **연결 유형**를 선택 **Microsoft SQL Server**합니다.
+
+1. SQL Server 마스터 인스턴스의 IP 주소를 입력 **서버 이름** (예: **\<IP 주소\>31433,**).
+
+1. SQL 로그인을 입력 **사용자 이름** (`SA`) 및 **암호** (배포 스크립트에 입력 한 암호).
+
+1. 대상 변경 **데이터베이스 이름** 관계형 데이터베이스 중 하나에 있습니다.
+
+   ![마스터 인스턴스에 연결](./media/quickstart-big-data-cluster-deploy/connect-to-cluster.png)
+
+1. 키를 눌러 **Connect**, 및 **Server 대시보드** 표시 되어야 합니다.
+
+### <a id="hdfs"></a> HDFS/Spark 게이트웨이
+
+합니다 **HDFS/Spark 게이트웨이** Spark 작업을 실행 하는 HDFS 저장소 풀을 사용 하려면 연결할 수 있습니다. 다음 단계에서는 Azure Data Studio를 사용 하 여 연결 하는 방법에 설명 합니다.
+
+1. 명령줄에서 다음 명령 사용 하 여 HDFS/Spark 게이트웨이의 IP 주소를 찾으려면:
+
+   ```
+   kubectl get svc service-security-lb -n <your-cluster-name>
+   ```
+ 
+1. Azure Data Studio 눌러 **F1** > **새 연결**합니다.
+
+1. **연결 유형**를 선택 **SQL Server 빅 데이터 클러스터**합니다.
+   
+   > [!TIP]
+   > 표시 되지 않으면를 **SQL Server 빅 데이터 클러스터** 연결 입력, 설치 했는지 확인 합니다 [SQL Server 2019 확장](../azure-data-studio/sql-server-2019-extension.md) 확장 완료 한 후 다시 시작 하면 Azure Data Studio 및 설치 합니다.
+
+1. 빅 데이터 클러스터의 IP 주소를 입력 **서버 이름** (포트를 지정 하지 않으면).
+
+1. 입력 `root` 에 대 한는 **사용자** 지정 합니다 **암호** 배포 스크립트에서 입력 한 빅 데이터 클러스터에 있습니다.
+
+   ![HDFS/Spark 게이트웨이에 연결](./media/quickstart-big-data-cluster-deploy/connect-to-cluster-hdfs-spark.png)
+
+1. 키를 눌러 **Connect**, 및 **Server 대시보드** 표시 되어야 합니다.
+
+## <a name="clean-up"></a>정리
+
+Azure에서 SQL Server 빅 데이터 클러스터를 테스트 하는 경우 예기치 않은 요금을 방지 하려면 완료 되 면 AKS 클러스터를 삭제 해야 합니다. 계속 사용 하려는 경우에 클러스터를 제거 하지 마십시오.
+
+> [!WARNING]
+> AKS 클러스터 뿐만 아니라 SQL Server 빅 데이터 클러스터를 제거 하는 다음 단계를 삭제 합니다. 모든 데이터베이스 또는 HDFS 데이터를 유지 하려는 경우 클러스터를 삭제 하기 전에 해당 데이터를 백업 합니다.
+
+Azure에서 빅 데이터 클러스터 및 AKS 서비스를 제거 하려면 다음 Azure CLI 명령을 실행 (바꿉니다 `<resource group name>` 사용 하 여 합니다 **Azure 리소스 그룹** 배포 스크립트에 지정):
+
+```azurecli
+az group delete -n <resource group name>
+```
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server 빅 데이터 클러스터를 배포 했으므로 새 기능 중 일부를 사용해 보세요.
+이제 SQL Server 빅 데이터 클러스터를 배포한 샘플 데이터를 로드 하 고 수 있는 자습서를 탐색 합니다.
 
 > [!div class="nextstepaction"]
-> [SQL Server 2019 미리 보기에서 notebook을 사용 하는 방법](notebooks-guidance.md)
+> [자습서: SQL Server 2019 빅 데이터 클러스터에 샘플 데이터 로드](tutorial-load-sample-data.md)

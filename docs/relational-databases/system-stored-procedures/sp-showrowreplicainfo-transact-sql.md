@@ -16,12 +16,12 @@ ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 874777b0bcb2665d01e627dff936b0114ec447d0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 51b5b2aa6c6f815f1b2f5f37c9093698955ffd3b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810147"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136113"
 ---
 # <a name="spshowrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
  **sp_showrowreplicainfo** 의 구성원만 실행할 수 있습니다 합니다 **db_owner** 게시 데이터베이스의 게시 액세스 목록 (PAL)의 멤버 또는 게시 데이터베이스의 고정된 데이터베이스 역할.  
   
 ## <a name="see-also"></a>관련 항목  
- [병합 복제 충돌 감지 및 해결](../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)   
+ [병합 복제 충돌 감지 및 해결](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

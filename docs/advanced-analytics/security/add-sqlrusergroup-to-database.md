@@ -1,6 +1,6 @@
 ---
-title: SQLRUserGroup을 데이터베이스 사용자-SQL Server Machine Learning Services 추가
-description: 묵시적된 인증을 사용 하 여 루프백 연결을 작업자 계정 id 변환 다시 호출 사용자에 게는 서버에 로그인 할 수 있도록 SQLRUserGroup을 데이터베이스 사용자로 추가 합니다.
+title: SQL Server Machine Learning 서비스-SQL Server 로그인을 SQLRUserGroup 추가
+description: 묵시적된 인증을 사용 하 여 루프백 연결에 대 한 작업자 계정 id 변환 다시 호출 사용자에 게는 서버에 로그인 할 수 있도록 SQLRUserGroup SQL Server 로그인으로 추가 합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
@@ -8,17 +8,17 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: abd0745126a4f2a23cf559500b93d2fa53fa2cf9
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 0bc84a7a4cfae14ea19491c42e828d0a93cdfba7
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432356"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143423"
 ---
-# <a name="add-sqlrusergroup-as-a-database-user"></a>SQLRUserGroup을 데이터베이스 사용자로 추가
+# <a name="add-sqlrusergroup-as-a-sql-server-login"></a>SQLRUserGroup SQL Server 로그인으로 추가
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-데이터베이스 로그인을 만듭니다 [SQLRUserGroup](../concepts/security.md#sqlrusergroup) 경우는 [루프백 연결 루프](../../advanced-analytics/concepts/security.md#implied-authentication) 스크립트에 지정를 *트러스트 된 연결*, 및 개체를 실행 하는 데 id 포함 코드는 Windows 사용자 계정입니다.
+SQL Server 로그인을 만듭니다 [SQLRUserGroup](../concepts/security.md#sqlrusergroup) 경우는 [루프백 연결 루프](../../advanced-analytics/concepts/security.md#implied-authentication) 스크립트에 지정를 *트러스트 된 연결*, 및 개체를 실행 하는 데 id 포함 코드는 Windows 사용자 계정입니다.
 
 연결 되는 것을 신뢰할 수 있는 `Trusted_Connection=True` 연결 문자열에 있습니다. SQL Server가 트러스트 된 연결을 지정 하는 요청을 받으면 현재 Windows 사용자의 id를 로그인에 있는지 여부를 확인 합니다. 작업자 계정으로 실행 하는 외부 프로세스에 대 한 (에서 MSSQLSERVER01 등 **SQLRUserGroup**), 이러한 계정을 기본적으로 로그인 하지 않으므로 요청이 실패 합니다.
 

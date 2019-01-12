@@ -5,7 +5,7 @@ description: 이 빠른 시작이에서는 Docker를 사용 하 여 SQL Server 2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 11/07/2018
+ms.date: 01/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -13,12 +13,12 @@ ms.custom: sql-linux, seodec18
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: a8ed1a9be24ab071bc3e202902b2a56f3ab3c046
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: f4e6298cb1165f75dcd9a6aa6c77a1628650c0f6
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266014"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206319"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>빠른 시작: Docker를 사용 하 여 SQL Server 컨테이너 이미지 실행
 
@@ -328,7 +328,7 @@ SELECT @@SERVERNAME,
 
 SQL 연결을 지원하는 모든 외부 Linux, Windows 또는 macOS 도구에서 Docker 컴퓨터에 있는 SQL Server 인스턴스에 연결할 수 있습니다.
 
-다음 단계는 컨테이너에서 실행 중인 SQL Server에 연결하기 위해 컨테이너 외부에서 **sqlcmd**를 사용합니다. 이러한 단계는 컨테이너의 외부에 설치된 SQL Server 명령줄 도구가 이미 있다고 가정합니다. 다른 도구를 사용할 경우 동일한 보안 주체가 적용되지만 연결하는 프로세스는 각 도구에 고유합니다.
+다음 단계는 컨테이너에서 실행 중인 SQL Server에 연결하기 위해 컨테이너 외부에서 **sqlcmd**를 사용합니다. 이러한 단계는 컨테이너의 외부에 설치된 SQL Server 명령줄 도구가 이미 있다고 가정합니다. 다른 도구를 사용 하는 경우 동일한 원칙이 적용 되지만 연결 하는 프로세스는 각 도구에 고유 합니다.
 
 1. 컨테이너를 호스팅하는 컴퓨터에 대한 IP 주소를 찾습니다. Linux에서 **ifconfig** 또는 **ip 주소**를 사용합니다. Windows에서 **ipconfig**를 사용합니다.
 

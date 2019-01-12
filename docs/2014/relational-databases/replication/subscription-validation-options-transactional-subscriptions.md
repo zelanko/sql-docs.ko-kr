@@ -14,12 +14,12 @@ ms.assetid: fd66ad1f-df01-4240-9e89-8f41bff12c1e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4538774295e7456d46922a71db91527604d71fb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a82e13202209121897a5e5878a141c8d53800a47
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761655"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135843"
 ---
 # <a name="subscription-validation-options-transactional-subscriptions"></a>구독 유효성 검사 옵션(트랜잭션 구독)
   **구독 유효성 검사 옵션** 대화 상자를 사용하여 유효성 검사에서 행 개수만 사용할지, 아니면 행 개수와 이진 체크섬을 사용할지를 지정할 수 있습니다.  
@@ -36,6 +36,6 @@ ms.locfileid: "52761655"
   
 ## <a name="see-also"></a>관련 항목  
  [구독자에서 데이터 유효성 검사](validate-data-at-the-subscriber.md)   
- [복제된 데이터의 유효성 검사](validate-replicated-data.md)  
+ [복제된 데이터의 유효성 검사](validate-data-at-the-subscriber.md)  
   
   

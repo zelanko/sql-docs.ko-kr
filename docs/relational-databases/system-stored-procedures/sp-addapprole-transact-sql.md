@@ -18,12 +18,12 @@ ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 04163593c48a22bebdd933881b165af3418e0dfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40e397bd63d8018d2043a1aced4824f48e4ddc9a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690691"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135873"
 ---
 # <a name="spaddapprole-transact-sql"></a>sp_addapprole(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,12 +43,12 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@rolename =** ] **'***역할***'**  
+ [  **@rolename =** ] **'**_역할_**'**  
  새 응용 프로그램 역할의 이름입니다. *역할* 됩니다 **sysname**, 기본값은 없습니다. *역할* 유효한 식별자 여야 하며 현재 데이터베이스에 이미 존재할 수 없습니다.  
   
  응용 프로그램 역할 이름은 문자, 기호 및 숫자를 비롯하여 1자에서 128자까지의 문자를 포함할 수 있습니다. 역할 이름은 백슬래시를 포함할 수 없습니다 (\\) NULL 또는 빈 문자열 (")도 있습니다.  
   
- [  **@password =** ] **'***암호***'**  
+ [  **@password =** ] **'**_암호_**'**  
  응용 프로그램 역할을 활성화하는 데 필요한 암호입니다. *암호* 됩니다 **sysname**, 기본값은 없습니다. *암호* NULL 일 수 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

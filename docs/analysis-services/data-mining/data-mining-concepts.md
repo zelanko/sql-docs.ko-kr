@@ -1,6 +1,6 @@
 ---
 title: 데이터 마이닝 개념 | Microsoft Docs
-ms.date: 05/01/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: data-mining
@@ -9,15 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6dc15187198b5355d9e6f5a2171e57d52406e839
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 161ba42729a21bd3794cf380c745380f8f7ed59c
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982005"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185139"
 ---
 # <a name="data-mining-concepts"></a>데이터 마이닝 개념
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
+> [!IMPORTANT]
+> 데이터 마이닝은 SQL Server Analysis Services 2017에서 사용 되지 않습니다. 사용 되지 않는 기능에 대 한 설명서 업데이트 되지 않습니다. 자세한 내용은 참조 하세요 [Analysis Services 이전 버전과 호환성 (SQL 2017)](../analysis-services-backward-compatibility-sql2017.md)합니다.
+
   데이터 마이닝은 큰 데이터 집합에서 동작 가능한 정보를 찾는 프로세스입니다. 데이터 마이닝에서는 수학적 분석을 사용하여 데이터에 있는 패턴 및 추세를 찾습니다. 일반적으로는 관계가 너무 복잡하거나 데이터가 너무 많아서 전통적인 데이터 탐색으로는 이러한 패턴을 찾을 수 없습니다.  
   
  이러한 패턴과 추세를 수집하여 *데이터 마이닝 모델*로 정의할 수 있습니다. 마이닝 모델은 다음과 같은 특정 시나리오에 적용할 수 있습니다.  
@@ -26,9 +30,9 @@ ms.locfileid: "38982005"
   
 -   **위험 및 확률**: 타겟 메일링을 위한 최적합 고객의 선택, 위험 시나리오를 위한 예상 손익 평형 포인트 결정, 진단 또는 기타 결과에 확률 할당  
   
--   **추천**: 함께 판매될 가능성이 높은 제품 결정, 추천 제품 구성  
+-   **권장 사항**: 함께 판매될 가능성이 높은 제품 확인, 권장 구성 생성  
   
--   **연계성 찾기**: 장바구니의 고객 선택 분석, 적절한 다음 이벤트 예측  
+-   **연계 성 찾기**: 장바구니의 고객 선택 분석, 적절한 다음 이벤트 예측  
   
 -   **그룹화**: 고객 또는 이벤트를 관련된 항목의 클러스터로 분리, 선호도 분석 및 예측  
   

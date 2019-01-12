@@ -15,12 +15,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a196ef879c176fe731fe85b2de7962d70edff7b4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7382e4d1b9e9d968d7ad87af9830691dd931d657
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541169"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226620"
 ---
 # <a name="automatic-tuning"></a>자동 튜닝
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], 쿼리 저장소 시스템 뷰를 사용 하 여 계획 선택 회귀를 찾을 수 있습니다. [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]의 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 검색 하 고 잠재적 계획 선택 회귀 및에 적용 해야 하는 권장된 작업을 표시 합니다 [sys.dm_db_tuning_recommendations &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 보기. 문제, 재발 된 계획의 ID를 기준으로 비교에 사용 된 계획의 ID 식별된 된 쿼리 등의 세부 정보와 문제를의 중요성에 대 한 정보를 표시 하는 뷰 및 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 문제를 해결 하려면 실행 될 수 있는 문에 문제가 발생 했습니다.
 
-| 형식 | 설명 | DATETIME | score | 자세히 | ... |
+| 유형 | description | Datetime | score | 자세히 | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | 14 ms 4ms에서 변경 하는 CPU 시간 | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | 84 ms 37 ms에서 변경 하는 CPU 시간 | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
@@ -114,24 +114,21 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 SELECT reason, score,
       script = JSON_VALUE(details, '$.implementationDetails.script'),
       planForceDetails.*,
-      estimated_gain = (regressedPlanExecutionCount+recommendedPlanExecutionCount)
-                  *(regressedPlanCpuTimeAverage-recommendedPlanCpuTimeAverage)/1000000,
-      error_prone = IIF(regressedPlanErrorCount>recommendedPlanErrorCount, 'YES','NO')
+      estimated_gain = (regressedPlanExecutionCount + recommendedPlanExecutionCount)
+                  * (regressedPlanCpuTimeAverage - recommendedPlanCpuTimeAverage)/1000000,
+      error_prone = IIF(regressedPlanErrorCount > recommendedPlanErrorCount, 'YES','NO')
 FROM sys.dm_db_tuning_recommendations
-  CROSS APPLY OPENJSON (Details, '$.planForceDetails')
+CROSS APPLY OPENJSON (Details, '$.planForceDetails')
     WITH (  [query_id] int '$.queryId',
-            [current plan_id] int '$.regressedPlanId',
-            [recommended plan_id] int '$.recommendedPlanId',
-
+            regressedPlanId int '$.regressedPlanId',
+            recommendedPlanId int '$.recommendedPlanId',
             regressedPlanErrorCount int,
             recommendedPlanErrorCount int,
-
             regressedPlanExecutionCount int,
             regressedPlanCpuTimeAverage float,
             recommendedPlanExecutionCount int,
             recommendedPlanCpuTimeAverage float
-
-          ) as planForceDetails;
+          ) AS planForceDetails;
 ```
 
 [!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]     
@@ -176,7 +173,7 @@ FROM sys.dm_db_tuning_recommendations
 
 ### <a name="alternative---manual-index-management"></a>대안-수동 인덱스 관리
 
-자동 인덱스 관리 없이 사용자를 수동으로 쿼리하려면 해야 [sys.dm_db_missing_index_details &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) 성능 향상, 세부 정보를 사용 하 여 인덱스를 만들 수는 인덱스를 찾을 수 보기 이 뷰와 수동으로 쿼리 성능 모니터링에 제공 합니다. 삭제 해야 하는 인덱스를 찾기 위해 사용자는 거의 사용 찾기 인덱스에 인덱스의 통계 운영 사용 현황을 모니터링 해야 합니다.
+자동 인덱스 관리 없이 사용자를 수동으로 쿼리하려면 해야 [sys.dm_db_missing_index_details &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md) 보기 또는 성능 대시보드 보고서에서 사용 하 여 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 찾기 인덱스 수 성능 향상,이 보기에 제공 된 세부 정보를 사용 하 여 인덱스를 만들 및 수동으로 쿼리 성능을 모니터링 합니다. 삭제 해야 하는 인덱스를 찾기 위해 사용자는 거의 사용 찾기 인덱스에 인덱스의 통계 운영 사용 현황을 모니터링 해야 합니다.
 
 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 이 프로세스를 간소화 합니다. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 워크 로드를 분석 하 여, 새 인덱스를 사용 하 여 더 빠르게 실행 될 수 있는 쿼리를 식별 하 고 사용 되지 않거나 중복 된 인덱스를 식별 합니다. 변경 해야 하는 인덱스의 id에 대 한 자세한 정보를 찾으려면 [Azure portal에서 인덱스 권장 사항을 찾거나](https://docs.microsoft.com/azure/sql-database/sql-database-advisor-portal)합니다.
 

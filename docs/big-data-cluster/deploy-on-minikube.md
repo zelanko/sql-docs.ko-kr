@@ -9,12 +9,12 @@ ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: seodec18
-ms.openlocfilehash: a4bdccba6d42868225a39792cb94566df1f56680
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
-ms.translationtype: MT
+ms.openlocfilehash: 02c0eb930cddbe3ff1a9d5529f640474b5bf2af4
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246572"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206209"
 ---
 # <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>SQL Server 2019 빅 데이터 클러스터 배포용 minikube를 구성 합니다.
 
@@ -25,7 +25,7 @@ ms.locfileid: "53246572"
 - Minikube 클러스터 SQL Server 2019 (미리 보기)에 대 한 빅 데이터 클러스터를 실행 하려면 컴퓨터에 있는 최소 32GB의 RAM이 좋습니다.
 
    > [!TIP] 
-   > 컴퓨터에 최소 메모리를 권장 하는 경우에 계산 풀 인스턴스를 하나만, 1 데이터 풀 인스턴스 및 1 저장소 풀 인스턴스에 있는 클러스터를 배포를 구성 합니다. 이 구성만 사용할 평가 환경에 대 한 내구성 및 가용성 데이터는 중요 하지 않습니다. 참조를 [배포 설명서](deployment-guidance.md#define-environment-variables) 데이터 풀에 대 한 복제본의 수를 구성 하려면 설정 환경 변수에 대 한 자세한 내용은 풀 및 저장소 풀을 계산 합니다.
+   > 컴퓨터에 최소 메모리를 권장 하는 경우에 계산 풀 인스턴스를 하나만, 1 데이터 풀 인스턴스 및 1 저장소 풀 인스턴스에 있는 클러스터를 배포를 구성 합니다. 이 구성만 사용할 평가 환경에 대 한 내구성 및 가용성 데이터는 중요 하지 않습니다. 참조를 [배포 설명서](deployment-guidance.md#env) 데이터 풀에 대 한 복제본의 수를 구성 하려면 설정 환경 변수에 대 한 자세한 내용은 풀 및 저장소 풀을 계산 합니다.
 
 - 컴퓨터의 BIOS에서 VT x 또는 amd-v 가상화를 활성화 되어야 합니다.
 

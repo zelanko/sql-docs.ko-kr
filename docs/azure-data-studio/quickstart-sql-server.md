@@ -11,12 +11,12 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 2b7e251440fd8b0184e36e0e41c47d2ab0dcaf18
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 9e25008836b72ac8860953c5a1f98c13d7540d92
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030287"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143453"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>빠른 시작: 연결 및 SQL Server를 사용 하 여 쿼리 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 이 빠른 시작은 [!INCLUDE[name-sos](../includes/name-sos-short.md)]을 사용하여 SQL Server에 연결한 다음 TRANSACT-SQL (T-SQL) 문을 사용하여 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 자습서에 있는 *TutorialDB*를 생성하는 방법을 보여줍니다.
@@ -28,7 +28,7 @@ ms.locfileid: "53030287"
 - [[!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md)를 설치합니다.
 
 SQL Server에 액세스할 수 없는 경우 다음 링크에서 플랫폼을 선택합니다(SQL 로그인 및 암호를 기억해야 함!).
-- [Windows - SQL Server 2017 Developer Edition 다운로드](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- [Windows - SQL Server 2017 Developer Edition 다운로드](https://www.microsoft.com/sql-server/sql-server-downloads)
 - [macOS - Docker에서 SQL Server 2017 다운로드](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
 - [Linux-SQL Server 2017 Developer Edition 다운로드](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install) -단계를 수행 해야 *만들기 및 쿼리 데이터*입니다.
 

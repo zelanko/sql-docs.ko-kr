@@ -12,12 +12,12 @@ ms.assetid: 7ce656c2-6e60-4625-8955-1daff641070c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 30f407c862bdc0b4cc38b225b9ff6842e8fbcce0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3665647e89c03b75230acf58d2f5193fceefe878
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776945"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135733"
 ---
 # <a name="publication-information-all-subscriptions-snapshot-publication"></a>게시 정보, 모든 구독(스냅숏 게시)
   **모든 구독** 탭은 선택한 스냅숏 게시의 모든 구독에 대한 정보를 표시합니다.  
@@ -69,8 +69,7 @@ ms.locfileid: "52776945"
   
 ## <a name="see-also"></a>관련 항목  
  [복제 모니터 시작](monitor/start-the-replication-monitor.md)   
- [구독에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
- [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
+ [정보 및 복제 모니터를 사용 하 여 수행할 작업 보기](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [복제 모니터링](monitoring-replication.md)  
   
   

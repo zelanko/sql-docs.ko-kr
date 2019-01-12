@@ -10,12 +10,12 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5113730b1920fb1cd6ecf305e03614e3de894a8e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
-ms.translationtype: HT
+ms.openlocfilehash: 3242f463e24322921b16a513c1b3a6905965b390
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366855"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136053"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>SMB fileshare 기능이 있는 SQL Server를 스토리지 옵션으로 설치
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시스템 데이터베이스(Master, Model, MSDB 및 TempDB) 및 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 사용자 데이터베이스를 SMB(서버 메시지 블록) 파일 서버와 함께 저장소 옵션으로 설치할 수 있습니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 독립 실행형 설치와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FCI(장애 조치(Failover) 클러스터 설치) 모두에 적용됩니다.  
@@ -98,11 +98,11 @@ ms.locfileid: "53366855"
     > [!NOTE]  
     >  SMB 공유 폴더에 대한 FULL CONTROL 공유 권한 및 NTFS 권한은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정 및 관리자 서버 역할이 할당된 Windows 사용자에게만 부여되어야 합니다.  
   
-     도메인 계정을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정으로 사용하는 것이 좋습니다. 시스템 계정을 서비스 계정으로 사용 하는 경우에 형식으로 컴퓨터 계정에 대 한 사용 권한을 부여 합니다. * < 도메인 _ 이름 >***\\***< 컴퓨터 이름 > ***$** 합니다.  
+     도메인 계정을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정으로 사용하는 것이 좋습니다. 시스템 계정을 서비스 계정으로 사용하는 경우에는 _<domain_name>_**\\**_<computer_name>_**$** 형식으로 컴퓨터 계정에 대한 사용 권한을 부여해야 합니다.  
   
     > [!NOTE]  
-    >  -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치할 때 SMB 파일 공유를 저장소 옵션으로 지정하는 경우 도메인 계정을 서비스 계정으로 지정해야 합니다. SMB 파일 공유를 사용하는 경우 시스템 계정은 서비스 계정 게시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치로만 지정할 수 있습니다.  
-    > -   가상 계정은 원격 위치에 대해 인증할 수 없습니다. 모든 가상 계정에는 시스템 계정의 사용 권한이 사용됩니다. *<domain_name>***\\***<computer_name>***$** 형식으로 시스템 계정을 프로비전합니다.  
+    >  -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치할 때 SMB 파일 공유를 스토리지 옵션으로 지정하는 경우 도메인 계정을 서비스 계정으로 지정해야 합니다. SMB 파일 공유를 사용하는 경우 시스템 계정은 서비스 계정 게시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치로만 지정할 수 있습니다.  
+    > -   가상 계정은 원격 위치에 대해 인증할 수 없습니다. 모든 가상 계정에는 시스템 계정의 사용 권한이 사용됩니다. _<domain_name>_**\\**_<computer_name>_**$** 형식으로 시스템 계정을 프로비전합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 사용되는 계정에는 클러스터를 설치하는 동안 데이터 디렉터리로 사용되는 SMB 파일 공유 폴더 또는 다른 데이터 폴더(사용자 데이터베이스 디렉터리, 사용자 데이터베이스 로그 디렉터리, TempDB 디렉터리, TempDB 로그 디렉터리, 백업 디렉터리)에 대해 FULL CONTROL NTFS 권한이 있어야 합니다.  
   
