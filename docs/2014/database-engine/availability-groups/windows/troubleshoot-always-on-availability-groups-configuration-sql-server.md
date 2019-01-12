@@ -14,12 +14,12 @@ ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 05404740b18f28a4c47e791fd321af39be1b757f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d1756c80b86ec9b8c16792bf488cc1d3d19b590d
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367615"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100908"
 ---
 # <a name="troubleshoot-alwayson-availability-groups-configuration-sql-server"></a>AlwaysOn 가용성 그룹 구성 문제 해결(SQL Server)
   이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 서버 인스턴스를 구성하는 것과 관련된 일반적인 문제를 해결하는 데 유용한 정보를 제공합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 사용할 수 없거나, 계정이 잘못 구성되거나, 데이터베이스 미러링 엔드포인트가 없거나, 엔드포인트에 액세스할 수 없거나(SQL Server 오류 1418), 네트워크 액세스 권한이 없거나, 데이터베이스 조인 명령이 실패(SQL Server 오류 35250)하는 경우가 일반적인 구성 문제에 해당합니다.  
@@ -136,7 +136,7 @@ ms.locfileid: "53367615"
 |![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|현재 주 복제본|READ_ONLY_ROUTING_LIST에 읽기 가능한 보조 복제본을 호스팅하는 서버 인스턴스만 포함되어 있는지 확인합니다.|**읽기 가능한 보조 복제본을 확인하려면:** sys.availability_replicas(**secondary_role_allow_connections_desc** 열)<br /><br /> **읽기 전용 라우팅 목록을 보려면:** sys.availability_read_only_routing_lists<br /><br /> **읽기 전용 라우팅 목록을 변경 합니다.** ALTER AVAILABILITY GROUP|[sys.availability_replicas&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [sys.availability_read_only_routing_lists&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
 |![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|read_only_routing_list에 있는 모든 복제본|Windows 방화벽이 READ_ONLY_ROUTING_URL 포트를 차단하고 있는지 확인합니다.|-|[데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성](../../configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|read_only_routing_list에 있는 모든 복제본|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자에서 다음을 확인합니다.<br /><br /> SQL Server 원격 연결이 사용되고 있는지 여부<br /><br /> TCP/IP가 사용되고 있는지 여부<br /><br /> IP 주소가 올바르게 구성되어 있는지 여부|-|[서버 속성 보기 또는 변경&#40;SQL Server&#41;](../../configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [특정 TCP 포트로 수신하도록 서버 구성&#40;SQL Server 구성 관리자&#41;](../../configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
-|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|read_only_routing_list에 있는 모든 복제본|되도록 READ_ONLY_ROUTING_URL (TCP **://*`system-address`*: * * * 포트*) 올바른 정규화 된 도메인 이름 (FQDN) 및 포트 번호를 포함 합니다.|-|[AlwaysOn에 대 한 read_only_routing_url 계산](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)<br /><br /> [sys.availability_replicas&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
+|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|read_only_routing_list에 있는 모든 복제본|되도록 READ_ONLY_ROUTING_URL (TCP<strong>://*`system-address`*:</strong>*포트*) 올바른 정규화 된 도메인 이름 (FQDN) 및 포트 번호를 포함 합니다.|-|[AlwaysOn에 대 한 read_only_routing_url 계산](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)<br /><br /> [sys.availability_replicas&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
 |![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|클라이언트 시스템|클라이언트 드라이버가 읽기 전용 라우팅을 지원하는지 확인합니다.|-|[AlwaysOn 클라이언트 연결 (SQL Server)](always-on-client-connectivity-sql-server.md)|  
   
 ##  <a name="RelatedTasks"></a> 관련 작업  

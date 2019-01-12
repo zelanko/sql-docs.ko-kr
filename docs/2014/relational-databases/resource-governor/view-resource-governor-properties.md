@@ -14,12 +14,12 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c1093297892ea2e03cb9583a1e5c40a1c2a85b19
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 35d4720a8fe8b8c1b404a97e27b36896f36dd5f7
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781266"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100798"
 ---
 # <a name="view-resource-governor-properties"></a>리소스 관리자 속성 보기
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 리소스 관리자 속성 페이지를 사용하여 리소스 풀, 작업 그룹과 같은 리소스 관리자 엔터티를 만들거나 구성할 수 있습니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "52781266"
  확인란을 선택하거나 선택 취소하여 리소스 관리자를 사용하거나 사용하지 않습니다.  
   
  **리소스 풀**  
- 제공된 표를 사용하여 리소스 풀 구성을 만들거나 변경합니다. 이 표는 미리 정의된 내부 풀 및 기본 풀에 대한 정보로 채워집니다. 풀의 행에 있는 첫 번째 열을 클릭하여 작업할 풀을 선택합니다. 새 리소스 풀을 만들려면 접두사로 별표(**\***)가 붙은 행을 클릭합니다.  
+ 제공된 표를 사용하여 리소스 풀 구성을 만들거나 변경합니다. 이 표는 미리 정의된 내부 풀 및 기본 풀에 대한 정보로 채워집니다. 풀의 행에 있는 첫 번째 열을 클릭하여 작업할 풀을 선택합니다. 새 리소스 풀을 만들려면 접두사로 별표는 행을 클릭 합니다 (**&#42;**).  
   
  **이름**  
  리소스 풀의 이름을 지정합니다.  
@@ -93,7 +93,7 @@ ms.locfileid: "52781266"
  자세한 내용은 [CREATE RESOURCE POOL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)합니다.  
   
  **리소스 풀의 작업 그룹**  
- 제공된 표를 사용하여 작업 그룹 구성을 만들거나 변경합니다. 이 표는 미리 정의된 내부 그룹 및 기본 그룹에 대한 정보로 채워집니다. 풀의 행에 있는 첫 번째 열을 클릭하여 작업할 그룹을 선택합니다. 새 작업 그룹을 만들려면 접두사로 별표(**\***)가 붙은 행을 클릭합니다.  
+ 제공된 표를 사용하여 작업 그룹 구성을 만들거나 변경합니다. 이 표는 미리 정의된 내부 그룹 및 기본 그룹에 대한 정보로 채워집니다. 풀의 행에 있는 첫 번째 열을 클릭하여 작업할 그룹을 선택합니다. 새 작업 그룹을 만들려면 접두사로 별표는 행을 클릭 합니다 (**&#42;**).  
   
  **이름**  
  작업 그룹의 이름을 지정합니다.  
@@ -125,7 +125,7 @@ ms.locfileid: "52781266"
   
 2.  Resource Governor 엔터티의 현재 구성을 보려면 [Resource Governor 관련 동적 관리 뷰&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql)를 사용하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [리소스 관리자](resource-governor.md)   
  [리소스 관리자 사용](enable-resource-governor.md)   
  [리소스 관리자 리소스 풀](resource-governor-resource-pool.md)   

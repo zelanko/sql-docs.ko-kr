@@ -18,12 +18,12 @@ ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 73f3fcdb485d4fdfbb06392414086d25f405a77f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ea37fdca56c222cbebbdcb00956938a92fe2c203
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505447"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100558"
 ---
 # <a name="view-user-defined-functions"></a>사용자 정의 함수 보기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 사용자 정의 함수의 정의 또는 속성에 대한 정보를 얻을 수 있습니다. 함수 정의를 보면 어떻게 데이터가 원본 테이블에서 파생되었는지 알 수 있고 함수에서 정의한 데이터를 볼 수 있습니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "52505447"
   
 4.  속성을 볼 함수를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-     다음 속성이 **함수 속성 –** *function_name* 대화 상자에 표시됩니다.  
+     다음 속성이 **함수 속성 –** _function_name_ 대화 상자에 표시됩니다.  
   
      **데이터베이스 백업**  
      이 함수를 포함하는 데이터베이스의 이름입니다.  

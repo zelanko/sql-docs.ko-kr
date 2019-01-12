@@ -17,12 +17,12 @@ ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 997855d160108abe530affdd2b28e464076fbbb7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 263df9986df0297c8bf1afdb35d70841835cef4d
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077013"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100638"
 ---
 # <a name="using-catalog-functions"></a>카탈로그 함수 사용
   모든 데이터베이스에는 데이터베이스에 저장된 데이터를 포함하는 구조가 있습니다. 이 구조의 정의는 데이터 사전이라고도 하는 시스템 테이블의 집합으로 구현된 카탈로그에 사용 권한과 같은 다른 정보와 함께 저장됩니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "48077013"
   
      연결된 서버에 포함되어 있는 카탈로그 목록을 반환합니다.  
   
- 연결된 된 서버 이름 및 카탈로그 이름을 설정한 후 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버의 두 부분으로 된 이름을 사용 하 여 카탈로그에서 정보를 가져오는 지원 *linked_server_name ***.*** 카탈로그* 에 대 한 *CatalogName* 에서 다음 ODBC 카탈로그 함수:  
+ 연결된 된 서버 이름 및 카탈로그 이름을 설정한 후 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버의 두 부분으로 된 이름을 사용 하 여 카탈로그에서 정보를 가져오는 지원 _linked_server_name_**.** _카탈로그_ 에 대 한 *CatalogName* 에서 다음 ODBC 카탈로그 함수:  
   
 -   **SQLColumnPrivileges**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48077013"
   
 -   **SQLTables**  
   
- 두 부분 *linked_server_name ***.*** 카탈로그* 에 지원 됩니다 *FKCatalogName* 하 고 *PKCatalogName* 온 [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md)합니다.  
+ 두 부분 _linked_server_name_**.** _카탈로그_ 에 지원 됩니다 *FKCatalogName* 하 고 *PKCatalogName* 온 [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md)합니다.  
   
  SQLLinkedServers 및 SQLLinkedCatalogs를 사용하려면 다음 파일이 필요합니다.  
   

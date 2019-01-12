@@ -16,12 +16,12 @@ ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20b6109b5622fb78366ab24886b991185c8dbc76
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: edb7ea682ebef5d99cee7a248681be80fc433312
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777815"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100458"
 ---
 # <a name="ssms-utility"></a>Ssms 유틸리티
   **Ssms**유틸리티는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 엽니다. **Ssms** 를 지정하면 서버 연결도 설정되며 쿼리, 스크립트, 파일, 프로젝트 및 솔루션이 열립니다.  
@@ -51,16 +51,16 @@ ms.locfileid: "52777815"
  *solutionfile*  
  열려는 솔루션을 지정합니다. 매개 변수에 솔루션 파일의 전체 경로가 포함되어야 합니다.  
   
- [**-S** *servername*]  
+ [**-S** _servername_]  
  서버 이름  
   
- [**-d** *databasename*]  
+ [**-d** _databasename_]  
  데이터베이스 이름  
   
- [**-U** *username*]  
+ [**-U** _username_]  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하여 연결할 때 사용하는 사용자 이름입니다.  
   
- [**-P** *password*]  
+ [**-P** _password_]  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하여 연결할 때 사용하는 암호입니다.  
   
  [**-E**]  
@@ -69,7 +69,7 @@ ms.locfileid: "52777815"
  [**-nosplash**]  
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 여는 동안 시작 화면을 표시하지 않습니다. 대역폭이 제한된 연결에서 터미널 서비스를 사용하여 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 실행하는 컴퓨터에 연결할 때 이 옵션을 사용합니다. 이 인수는 대/소문자를 구분하지 않으며 다른 인수 앞이나 뒤에 나타날 수 있습니다.  
   
- [**-log***[filename]?*]  
+ [**-log**_[filename]?_]  
  문제 해결을 위해 지정된 파일에 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 작업을 기록합니다.  
   
  [**-?**]  

@@ -20,12 +20,12 @@ ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 36aa1bbfd37642e66b232a1b532ff114397841d8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 39bd24414e2382557a22469da502bad91abe20b7
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788439"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100498"
 ---
 # <a name="system-data-collection-set-reports"></a>시스템 데이터 컬렉션 집합 보고서
   데이터 수집기는 각 시스템 데이터 컬렉션 집합에 대한 기록 보고서를 제공합니다. 다음 보고서 각각은 관리 데이터 웨어하우스에 저장된 데이터를 사용합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "52788439"
  그래프 아래의 테이블에서는 데이터 컬렉션 시간 및 해당 사용 데이터를 보여 줍니다.  
   
 #### <a name="disk-usage-for-database-databasename-subreport"></a>데이터베이스에 대한 디스크 사용: <database_name> 하위 보고서  
- 디스크 사용 컬렉션 집합 보고서의 요약 테이블에 있는 데이터베이스 이름을 클릭하면 **데이터베이스에 대한 디스크 사용:***<database_name>* 하위 보고서가 표시됩니다. 이 보고서에서는 데이터베이스의 데이터 및 트랜잭션 로그 파일에 의한 공간 사용을 숫자와 그래픽으로 분석하여 제공합니다. 데이터 파일의 공간 사용은 인덱스 페이지, 할당되지 않은 공간, 데이터 페이지 및 사용하지 않은 공간에 할당된 백분율로 분류됩니다. 이러한 범주는 다음과 같이 정의됩니다.  
+ 디스크 사용 컬렉션 집합 보고서의 요약 테이블에 있는 데이터베이스 이름을 클릭하면 **데이터베이스에 대한 디스크 사용:**_<database_name>_ 하위 보고서가 표시됩니다. 이 보고서에서는 데이터베이스의 데이터 및 트랜잭션 로그 파일에 의한 공간 사용을 숫자와 그래픽으로 분석하여 제공합니다. 데이터 파일의 공간 사용은 인덱스 페이지, 할당되지 않은 공간, 데이터 페이지 및 사용하지 않은 공간에 할당된 백분율로 분류됩니다. 이러한 범주는 다음과 같이 정의됩니다.  
   
 |범주|정의|  
 |--------------|----------------|  

@@ -15,12 +15,12 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a173b15546db7e2ceda571e617191fe4f0e84a4e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f936853c284196b05b6da6369f4410bed2297d4d
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211842"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100483"
 ---
 # <a name="specify-parameters"></a>매개 변수 지정
   프로시저 매개 변수를 지정하여 호출 프로그램이 값을 프로시저 본문에 전달할 수 있습니다. 이러한 값은 프로시저 실행 시 다양한 목적으로 쓰일 수 있습니다. 프로시저 매개 변수는 매개 변수가 OUTPUT 매개 변수로 표시된 경우 호출 프로그램에 값을 반환할 수도 있습니다.  
@@ -63,10 +63,10 @@ GO
  매개 변수 이름을 명시적으로 지정하고 프로시저 호출 시 적절한 값을 각 매개 변수에 할당하면 매개 변수를 임의의 순서로 제공할 수 있습니다. 예를 들어, 프로시저 **my_proc**에서 **\@first**, **\@second** 및 **\@third**라는 세 개의 매개 변수를 사용하는 경우 `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`과 같이 프로시저에 전달된 값을 매개 변수 이름에 할당할 수 있습니다.  
   
 > [!NOTE]
->  **/@parameter =***value* 형식에 하나의 매개 변수 값이 입력되는 경우 모든 후속 매개 변수도 이러한 방식으로 입력되어야 합니다. **\@parameter =***value* 형식에 매개 변수 값이 전달되지 않은 경우 해당 값은 CREATE PROCEDURE 문에 나열된 매개 변수를 따라 동일한 순서(왼쪽에서 오른쪽)로 제공되어야 합니다.  
+>  **\@parameter =**_value_ 형식에 하나의 매개 변수 값이 입력되는 경우 모든 후속 매개 변수도 이러한 방식으로 입력되어야 합니다. **\@parameter =**_value_ 형식에 매개 변수 값이 전달되지 않은 경우 해당 값은 CREATE PROCEDURE 문에 나열된 매개 변수를 따라 동일한 순서(왼쪽에서 오른쪽)로 제공되어야 합니다.  
 > 
 > [!WARNING]
->  철자가 잘못 입력된 매개 변수와 함께 **\@parameter =***value* 형식으로 매개 변수가 전달될 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 오류가 발생하여 프로시저 실행을 방해할 수 있습니다.  
+>  철자가 잘못 입력된 매개 변수와 함께 **\@parameter =**_value_ 형식으로 매개 변수가 전달될 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 오류가 발생하여 프로시저 실행을 방해할 수 있습니다.  
   
 ## <a name="specifying-parameter-data-types"></a>매개 변수 데이터 형식 지정  
  CREATE PROCEDURE 문에서 매개 변수가 선언될 때에는 데이터 형식이 함께 정의되어야 합니다. 프로시저가 호출될 때 매개 변수의 데이터 형식에 따라 매개 변수에 허용되는 값의 형식과 범위가 결정됩니다. 예를 들어 `tinyint` 데이터 형식으로 매개 변수를 정의하면 해당 매개 변수로는 0에서 255까지의 숫자 값만 전달될 수 있습니다. 데이터 형식과 맞지 않는 값으로 프로시저를 실행하면 오류가 반환됩니다.  
@@ -126,7 +126,7 @@ EXEC Sales.usp_GetSalesYTD N'Blythe';
 GO  
 ```  
   
- 기본값이 있는 매개 변수는 생략될 수 있지만 실제로는 매개 변수의 목록이 잘리는 것뿐입니다. 예를 들어 한 프로시저가 다섯 개의 매개 변수를 갖는 경우 4번째, 5번째 매개 변수는 생략될 수 있습니다. 하지만 매개 변수가 **\@parameter =***value* 형식으로 입력되지 않는 한 5번째 매개 변수가 있는 경우 4번째 매개 변수는 생략할 수 없습니다.  
+ 기본값이 있는 매개 변수는 생략될 수 있지만 실제로는 매개 변수의 목록이 잘리는 것뿐입니다. 예를 들어 한 프로시저가 다섯 개의 매개 변수를 갖는 경우 4번째, 5번째 매개 변수는 생략될 수 있습니다. 하지만 매개 변수가 **\@parameter =**_value_ 형식으로 입력되지 않는 한 5번째 매개 변수가 있는 경우 4번째 매개 변수는 생략할 수 없습니다.  
   
 ## <a name="specifying-parameter-direction"></a>매개 변수 방향 지정  
  매개 변수의 방향은 프로시저 본문으로 전달되는 값을 의미하는 입력 또는 프로시저가 호출 프로그램에 값을 반환함을 의미하는 출력입니다. 기본값은 입력 매개 변수입니다.  
@@ -167,7 +167,7 @@ GO
  `usp_GetList` 를 실행하여 가격이 $700 미만인 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 제품(자전거) 목록을 반환합니다. OUTPUT 매개 변수인 **\@cost**와 **\@compareprices**는 **메시지** 창의 메시지를 반환하기 위해 흐름 제어 언어와 함께 사용됩니다.  
   
 > [!NOTE]  
->  OUTPUT 변수는 프로시저를 만들 때와 변수를 사용할 때 정의되어야 합니다. 매개 변수 이름과 변수 이름은 일치하지 않아도 되지만 **\@listprice=** *variable*을 사용하지 않는 경우 데이터 형식과 매개 변수 위치는 일치해야 합니다.  
+>  OUTPUT 변수는 프로시저를 만들 때와 변수를 사용할 때 정의되어야 합니다. 매개 변수 이름과 변수 이름은 일치하지 않아도 되지만 **\@listprice=** _variable_을 사용하지 않는 경우 데이터 형식과 매개 변수 위치는 일치해야 합니다.  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  

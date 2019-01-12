@@ -14,12 +14,12 @@ ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f8e32b949e6c2868f5478215154df70cdd0e53e9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fa30824e32faae5feee1612305c1ca292d44e8e4
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519187"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100168"
 ---
 # <a name="view-a-sql-server-audit-log"></a>SQL Server 감사 로그 보기
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 SQL Server 감사 로그를 보는 방법에 대해 설명합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "52519187"
   
 2.  **감사** 폴더를 확장합니다.  
   
-3.  보려는 감사 로그를 마우스 오른쪽 단추로 클릭하고 **감사 로그 보기**를 선택합니다. 열립니다는 **로그 파일 뷰어-* * * server_name* 대화 상자. 자세한 내용은 [Log File Viewer F1 Help](../../logs/log-file-viewer-f1-help.md)을 참조하세요.  
+3.  보려는 감사 로그를 마우스 오른쪽 단추로 클릭하고 **감사 로그 보기**를 선택합니다. 열립니다는 **로그 파일 뷰어-**_server_name_ 대화 상자. 자세한 내용은 [Log File Viewer F1 Help](../../logs/log-file-viewer-f1-help.md)을 참조하세요.  
   
 4.  완료되면 **닫기**를 클릭합니다.  
   

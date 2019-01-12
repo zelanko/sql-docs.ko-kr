@@ -16,12 +16,12 @@ ms.assetid: 90e3731e-6fae-43db-833e-9accecdd1c03
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57117e531714e93000fef6beefefffc2ef210c80
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fd21f4b08bf53d4715f2b99eefed523f3853c033
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823177"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100688"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 해당 오류 로그에 실행 추적 메시지를 포함하도록 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 구성하는 방법에 대해 설명합니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "52823177"
   
 2.  **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-3.  에 **SQL Server 에이전트 속성-* * * server_name* 대화 상자의 **오류 로그** 에 **일반** 페이지에서를 **실행 추적을 포함 메시지** 확인란 합니다.  
+3.  에 **SQL Server 에이전트 속성-**_server_name_ 대화 상자의 **오류 로그** 에 **일반** 페이지에서 선택 합니다 **실행 추적 메시지 포함** 확인란 합니다.  
   
 4.  **확인**을 클릭합니다.  
   

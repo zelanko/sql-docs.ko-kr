@@ -18,12 +18,12 @@ ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a327b07384ce2c12e64612b19c611c57dbbf18b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36e00cf0e5d39722fee1c60fc86f0e6f81fd7e43
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850371"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100358"
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  [ **@job_id=** ] *job_id*  
  작업 ID입니다. *job_id*됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
   
- [ **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **'**_job_name_**'**  
  작업의 이름입니다. *job_name*됩니다 **sysname**, 기본값은 NULL입니다.  
   
-> **참고:** 중 하나 *job_id* 하거나 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
+> **참고:** 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [ **@schedule_name=** ] **'***schedule_name***'**  
+ [  **@schedule_name=** ] **'**_schedule_name_**'**  
  작업에 대한 일정 항목의 이름입니다. *schedule_name*됩니다 **sysname**, 기본값은 NULL입니다.  
   
  [ **@schedule_id=** ] *schedule_id*  
@@ -88,7 +88,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_uid**|**uniqueidentifier**|일정에 대한 식별자입니다.|  
 |**job_count**|**int**|반환된 작업 수입니다.|  
   
-> **참고:** **sp_help_jobschedule** 에서 값을 반환 합니다 **dbo.sysjobschedules** 하 고 **dbo.sysschedules** 시스템 테이블 **msdb** .   **sysjobschedules** 20 분 마다 업데이트 합니다. 이는 저장 프로시저에서 반환하는 값에 영향을 줄 수 있습니다.  
+> **참고: sp_help_jobschedule** 에서 값을 반환 합니다 **dbo.sysjobschedules** 하 고 **dbo.sysschedules** 시스템 테이블 **msdb**합니다. **sysjobschedules** 20 분 마다 업데이트 합니다. 이는 저장 프로시저에서 반환하는 값에 영향을 줄 수 있습니다.  
   
 ## <a name="remarks"></a>Remarks  
  매개 변수 **sp_help_jobschedule** 특정 조합 에서만에서 사용할 수 있습니다. 하는 경우 *schedule_id* 도 지정 된 *job_id* 나 *job_name* 지정할 수 있습니다. 이 고, 그렇지 합니다 *job_id* 하거나 *job_name* 매개 변수는 함께 사용할 수 있습니다 *schedule_name*합니다.  

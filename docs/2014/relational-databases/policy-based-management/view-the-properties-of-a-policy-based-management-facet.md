@@ -12,12 +12,12 @@ ms.assetid: 022a244c-c2e7-4467-b9a2-c7a27859be22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fbd3260e8d32811c405623dbdcc94dd34b0b8711
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c819fc7fb3b1cc73b67362a0eabd82ad33946fbc
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753265"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100300"
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>정책 기반 관리 패싯의 속성 보기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 정책 기반 관리 패싯의 속성을 보는 방법에 대해 설명합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "52753265"
   
 4.  더하기 기호를 클릭하여 **패싯** 폴더를 확장합니다.  
   
-5.  보려는 속성이 지정된 패싯을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **패싯 속성 –***facet_name* 대화 상자에서 사용 가능한 옵션에 대한 자세한 내용은 [패싯 속성 대화 상자, 일반 페이지](../../integration-services/general-page-of-integration-services-designers-options.md), [패싯 속성 대화 상자, 종속 정책 페이지](facet-properties-dialog-box-dependent-policies-page.md) 및 [패싯 속성 대화 상자, 종속 조건 페이지](facet-properties-dialog-box-dependent-conditions-page.md)를 참조하세요.  
+5.  보려는 속성이 지정된 패싯을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 사용 가능한 옵션에 대 한 자세한 내용은 합니다 **패싯 속성-**_facet_name_ 대화 상자, 참조 [패싯 속성 대화 상자, 일반 페이지](../../integration-services/general-page-of-integration-services-designers-options.md), [ 패싯 속성 대화 상자, 종속 정책 페이지](facet-properties-dialog-box-dependent-policies-page.md), 및 [패싯 속성 대화 상자, 종속 조건 페이지](facet-properties-dialog-box-dependent-conditions-page.md)합니다.  
   
 6.  완료되면 **닫기**를 클릭합니다.  
   

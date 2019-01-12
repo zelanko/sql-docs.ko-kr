@@ -18,12 +18,12 @@ ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29fbce7f3e8fee200384f6162b28576d96593b37
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5801a38e22a0c638e9daee1e448158941499b19f
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502976"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100788"
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
 ```  
   
 ## <a name="arguments"></a>인수  
- **N'** *plan_guide_name* **'**  
+ **N'** _plan_guide_name_ **'**  
  삭제되거나 활성화되거나 비활성화되는 계획 지침을 지정합니다. *plan_guide_name* 현재 데이터베이스로 확인 됩니다. 지정 하지 않으면 *plan_guide_name* 기본값은 NULL입니다.  
   
  DROP  
