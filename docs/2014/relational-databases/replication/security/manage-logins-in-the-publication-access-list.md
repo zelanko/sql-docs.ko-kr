@@ -16,12 +16,12 @@ ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2ffc40d39df10e83e4f5c68f891b0d7f44223524
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 966b8a03d10bb8e87950e19e3e099954e8aaad8f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784725"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132233"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>게시 액세스 목록에서 로그인 관리
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 게시 액세스 목록의 로그인을 관리하는 방법에 대해 설명합니다. 게시에 대한 액세스는 PAL(게시 액세스 목록)에서 제어합니다. 로그인 및 그룹을 추가하고 PAL에서 제거할 수 있습니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "52784725"
   
 ## <a name="see-also"></a>관련 항목  
  [복제 에이전트 보안 모델](replication-agent-security-model.md)   
- [복제 토폴로지 보안 설정](secure-a-replication-topology.md)   
+ [복제 토폴로지 보안 설정](view-and-modify-replication-security-settings.md)   
  [게시자 보안 설정](secure-the-publisher.md)  
   
   

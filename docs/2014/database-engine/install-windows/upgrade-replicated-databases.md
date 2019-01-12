@@ -16,12 +16,12 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d26bb248705ddce8932264701fbb7b9c09f64fcb
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018598"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132403"
 ---
 # <a name="upgrade-replicated-databases"></a>복제된 데이터베이스 업그레이드
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 복제된 데이터베이스를 업그레이드할 수 있도록 지원합니다. 따라서 노드 업그레이드 중에 다른 노드의 작업을 중지할 필요가 없으며 한 토폴로지 내에서 지원되는 버전과 관련된 규칙만 잘 지키면 됩니다.  
@@ -89,9 +89,8 @@ ms.locfileid: "51018598"
  이전 버전에서 복제된 데이터베이스의 백업을 복원할 때 복제 설정이 유지되게 하려면 백업 당시의 서버 및 데이터베이스와 같은 이름의 서버 및 데이터베이스에 복원합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [관리&#40;복제&#41;](../../relational-databases/replication/administration/administration-replication.md)   
+ [복제 관리 FAQ](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [복제의 이전 버전과의 호환성](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
- [새로운 기능&#40;복제&#41;](../../../2014/relational-databases/replication/what-s-new-replication.md)   
  [지원되는 버전 및 에디션 업그레이드](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [SQL Server 2014로 업그레이드](upgrade-sql-server.md)  
   

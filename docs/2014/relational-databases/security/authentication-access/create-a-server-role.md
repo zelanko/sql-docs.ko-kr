@@ -16,12 +16,12 @@ ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 05314fe18f555d4d2d3cca161a3b770ec85b4256
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 22e08b5eb0bccc02303201b7fae46b55f1012fd8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532129"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133293"
 ---
 # <a name="create-a-server-role"></a>서버 역할 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 새 서버 역할을 만드는 방법에 대해 설명합니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "52532129"
   
 3.  **서버 역할** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 서버 역할...** 을 선택합니다.  
   
-4.  에 **새 서버 역할-* * * server_role_name* 대화 상자의 **일반** 페이지에서 새 서버 역할의 이름을 입력 합니다 **서버 역할 이름** 상자.  
+4.  에 **새 서버 역할-**_server_role_name_ 대화 상자의 **일반** 페이지에서 새 서버 역할의 이름을 입력 합니다 **서버 역할 이름**상자입니다.  
   
 5.  **소유자** 상자에 새 역할을 소유할 서버 보안 주체의 이름을 입력합니다. 또는 줄임표 **(...)** 를 클릭하여 **서버 로그인 또는 역할 선택** 대화 상자를 엽니다.  
   

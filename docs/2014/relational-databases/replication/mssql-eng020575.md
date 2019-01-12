@@ -12,12 +12,12 @@ ms.assetid: 8886378c-e70e-481a-bd24-2d613a39f491
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1a4e4f951f221f9a66b69c942a3ca0f48abfaeac
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 46e346cf816d265f13120b85839d6a306f0d1dc4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772395"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132553"
 ---
 # <a name="mssqleng020575"></a>MSSQL_ENG020575
     
@@ -33,7 +33,7 @@ ms.locfileid: "52772395"
 |메시지 텍스트|게시 '%s'의 아티클 '%s'에 대한 구독자 '%s'의 구독이 데이터 유효성 검사를 통과했습니다.|  
   
 ## <a name="explanation"></a>설명  
- 구독자의 데이터를 게시자의 데이터와 비교하여 유효성을 검사했는데 데이터가 일치하여 유효성 검사를 통과했습니다. 유효성 검사에 대한 자세한 내용은 [Validate Replicated Data](validate-replicated-data.md)를 참조하십시오.  
+ 구독자의 데이터를 게시자의 데이터와 비교하여 유효성을 검사했는데 데이터가 일치하여 유효성 검사를 통과했습니다. 유효성 검사에 대한 자세한 내용은 [Validate Replicated Data](validate-data-at-the-subscriber.md)를 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
  [오류 및 이벤트 참조&#40;복제&#41;](errors-and-events-reference-replication.md)  

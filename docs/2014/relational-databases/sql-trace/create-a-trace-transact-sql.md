@@ -13,12 +13,12 @@ ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a99f8c338ec829703c9e4c321fec1c1ced02da03
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2ebd2a138451f3ebb7da267284f110790f2db058
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761058"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132103"
 ---
 # <a name="create-a-trace-transact-sql"></a>추적 만들기(Transact-SQL)
   이 항목에서는 저장 프로시저를 사용하여 추적을 만드는 방법에 대해 설명합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "52761058"
      **sp_trace_setevent** 및 **sp_trace_setfilter** 는 중지된 기존 추적에서만 실행할 수 있습니다.  
   
     > [!IMPORTANT]  
-    >  일반적인 저장 프로시저와 달리 모든 SQL Server Profiler 저장 프로시저의 매개 변수(**sp_trace_* xx***)는 정확하게 입력해야 하며 데이터 형식 자동 변환을 지원하지 않습니다. 이러한 매개 변수를 인수 설명에 지정된 올바른 입력 매개 변수 데이터 형식으로 호출하지 않으면 저장 프로시저가 오류를 반환합니다.  
+    >  일반적인 저장된 프로시저와 달리 모든 SQL Server Profiler의 매개 변수 저장 프로시저 (<strong>sp_trace_*xx*</strong>)는 엄격 하 게 형식이 며 데이터 형식 자동 변환을 지원 하지 않습니다. 이러한 매개 변수를 인수 설명에 지정된 올바른 입력 매개 변수 데이터 형식으로 호출하지 않으면 저장 프로시저가 오류를 반환합니다.  
   
 ## <a name="example"></a>예제  
  다음 코드에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 추적을 만드는 방법을 보여 줍니다. 이 코드는 추적 만들기, 추적 파일 채우기 및 추적 중지의 세 가지 섹션으로 구성되어 있습니다. 추적하려는 이벤트를 추가하여 추적을 사용자 지정합니다. 이벤트 및 열 목록에 대한 자세한 내용은 [sp_trace_setevent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)을 사용하여 추적을 만드는 방법을 보여 줍니다.  
@@ -101,7 +101,7 @@ EXEC sp_trace_setstatus @TraceID, 2
 ## <a name="example"></a>예제  
  추적 파일을 검사하려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 SampleTrace.trc 파일을 엽니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server Profiler 저장 프로시저&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql)   
  [sp_trace_create&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-create-transact-sql)   
  [sp_trace_setevent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   

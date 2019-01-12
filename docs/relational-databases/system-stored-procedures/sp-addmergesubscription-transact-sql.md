@@ -16,12 +16,12 @@ ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1fc809277151ee85608c9ca286185011cf52552
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6c3341c37998f61cba743c8da8a4cd772c2c73d9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822577"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133763"
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,22 +62,22 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_게시_**'**  
  게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다. 반드시 게시가 이미 존재해야 합니다.  
   
- [  **@subscriber =**] **'***구독자***'**  
+ [  **@subscriber =**] **'**_구독자_**'**  
  구독자의 이름입니다. *구독자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@subscriber_db=**] **'***subscriber_db***'**  
+ [  **@subscriber_db=**] **'**_subscriber_db_**'**  
  구독 데이터베이스의 이름입니다. *subscriber_db*됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@subscription_type=**] **'***subscription_type***'**  
+ [  **@subscription_type=**] **'**_subscription_type_**'**  
  구독 유형입니다. *subscription_type*됩니다 **nvarchar(15)**, 기본값은 PUSH 사용 하 여 합니다. 하는 경우 **푸시**밀어넣기 구독이 추가 되 고 병합 에이전트가 배포자에서 추가 됩니다. 하는 경우 **끌어오기**, 배포자에서 병합 에이전트를 추가 하지 않고 끌어오기 구독이 추가 됩니다.  
   
 > [!NOTE]  
 >  익명 구독은 이 저장 프로시저를 사용할 필요가 없습니다.  
   
- [  **@subscriber_type=**] **'***subscriber_type***'**  
+ [  **@subscriber_type=**] **'**_subscriber_type_**'**  
  구독자의 유형입니다. *subscriber_type*됩니다 **nvarchar(15)**, 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
@@ -90,7 +90,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@subscription_priority=**] *subscription_priority*  
  구독의 우선 순위를 나타내는 숫자입니다. *subscription_priority*됩니다 **실제**, 기본값은 NULL입니다. 로컬 및 익명 구독의 경우에는 우선 순위가 0.0입니다. 전역 구독의 경우에는 우선 순위가 100.0 미만이어야 합니다.  
   
- [  **@sync_type=**] **'***sync_type***'**  
+ [  **@sync_type=**] **'**_sync_type_**'**  
  구독 동기화 유형입니다. *sync_type*됩니다 **nvarchar(15)**, 기본값은 **자동**합니다. 일 수 있습니다 **자동** 하거나 **none**합니다. 하는 경우 **자동**, 스키마 및 게시 된 테이블의 초기 데이터가 먼저 구독자에 전송 됩니다. 하는 경우 **none**를 구독자에 이미 게시 된 테이블에 대 한 초기 데이터 및 스키마를 가정 합니다. 시스템 테이블 및 데이터는 항상 전송됩니다.  
   
 > [!NOTE]  
@@ -167,13 +167,13 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@active_end_date=**] *active_end_date*  
  병합 에이전트가 마지막으로 실행되도록 예약된 날짜이며 YYYYMMDD 형식으로 표시됩니다. *active_end_date* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [  **@optional_command_line=**] **'***optional_command_line***'**  
+ [  **@optional_command_line=**] **'**_optional_command_line_**'**  
  실행할 선택적 명령 프롬프트입니다. *optional_command_line*됩니다 **nvarchar(4000)**, 기본값은 NULL입니다. 이 매개 변수는 출력을 캡처하여 파일로 저장하는 명령을 추가하거나 구성 파일 또는 특성을 지정하는 데 사용됩니다.  
   
- [  **@description=**] **'***설명***'**  
+ [  **@description=**] **'**_설명을_**'**  
  해당 병합 구독에 대한 간단한 설명입니다. *설명*됩니다 **nvarchar(255)**, 기본값은 NULL입니다. 이 값의 복제 모니터에 의해 표시 됩니다는 **이름을** 모니터링 되는 게시에 대 한 구독을 정렬 하는 열입니다.  
   
- [  **@enabled_for_syncmgr=**] **'***enabled_for_syncmgr***'**  
+ [  **@enabled_for_syncmgr=**] **'**_enabled_for_syncmgr_**'**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 동기화 관리자를 통해 구독을 동기화할 수 있는지 여부를 지정합니다. *enabled_for_syncmgr* 됩니다 **nvarchar(5)**, 기본값은 FALSE입니다. 하는 경우 **false**의 구독이 동기화 관리자에 등록 되지 않았습니다. 하는 경우 **true**, 구독이 동기화 관리자에 등록 및 시작 하지 않고 동기화 할 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  
   
  [  **@offloadagent=** ] *remote_agent_activation*  
@@ -182,16 +182,16 @@ sp_addmergesubscription [ @publication= ] 'publication'
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전의 스크립트와의 호환성을 위해서만 유지 관리됩니다.  
   
- [  **@offloadserver=** ] **'***remote_agent_server_name***'**  
+ [  **@offloadserver=** ] **'**_remote_agent_server_name_**'**  
  원격 에이전트 활성화에 사용할 서버의 네트워크 이름을 지정합니다. *remote_agent_server_name*됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@use_interactive_resolver=** ] **'***use_interactive_resolver***'**  
+ [  **@use_interactive_resolver=** ] **'**_use_interactive_resolver_**'**  
  대화형 해결을 허용하는 모든 아티클에 대해 충돌을 대화형으로 해결할 수 있도록 합니다. *use_interactive_resolver* 됩니다 **nvarchar(5)**, 기본값은 FALSE입니다.  
   
- [  **@merge_job_name=** ] **'***merge_job_name***'**  
+ [  **@merge_job_name=** ] **'**_merge_job_name_**'**  
  합니다 *@merge_job_name* 매개 변수는 사용 되지 않으며 설정할 수 없습니다. *merge_job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [ **@hostname**=] **'***hostname***'**  
+ [ **@hostname**=] **'**_hostname_**'**  
  반환 된 값을 재정의 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 매개 변수가 있는 필터의 WHERE 절에이 함수는 사용 하는 경우. *호스트 이름* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!IMPORTANT]  

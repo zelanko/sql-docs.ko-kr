@@ -17,12 +17,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 056675637b181340dc27e7f09698a0ac439dfb6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164603"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131813"
 ---
 # <a name="create-indexed-views"></a>인덱싱된 뷰 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 인덱싱된 뷰를 만드는 방법에 대해 설명합니다. 뷰에 만들어지는 첫 번째 인덱스는 고유 클러스터형 인덱스여야 합니다. 고유 클러스터형 인덱스가 만들어진 후에 비클러스터형 인덱스를 더 만들 수 있습니다. 뷰에 고유 클러스터형 인덱스를 만들면 클러스터형 인덱스가 있는 테이블의 저장 방식과 마찬가지로 데이터베이스에 뷰가 저장되므로 쿼리 성능이 향상됩니다. 쿼리 최적화 프로그램은 인덱싱된 뷰를 사용하여 쿼리 실행 속도를 높일 수 있습니다. 최적화 프로그램이 인덱싱된 뷰를 대신 사용하므로 쿼리에서 해당 뷰를 참조할 필요가 없습니다.  
@@ -86,11 +86,11 @@ ms.locfileid: "48164603"
   
 -   인덱스를 만들 때 IGNORE_DUP_KEY 옵션은 OFF(기본 설정)로 설정되어야 합니다.  
   
--   테이블은 뷰 정의에서 *schema ***.*** tablename* 처럼 두 부분으로 구성된 이름으로 참조되어야 합니다.  
+-   테이블은 뷰 정의에서 _schema_**.**_tablename_ 처럼 두 부분으로 구성된 이름으로 참조되어야 합니다.  
   
 -   뷰에서 참조하는 사용자 정의 함수는 WITH SCHEMABINDING 옵션을 사용하여 만들어야 합니다.  
   
--   뷰에서 참조하는 사용자 정의 함수는 두 부분으로 구성된 이름인 *schema ***.*** function*으로 참조되어야 합니다.  
+-   뷰에서 참조하는 사용자 정의 함수는 두 부분으로 구성된 이름 _schema_**.**_function_으로 참조되어야 합니다.  
   
 -   사용자 정의 함수의 데이터 액세스 속성은 NO SQL이어야 하고 외부 액세스 속성은 NO여야 합니다.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "48164603"
 -   뷰 정의에 GROUP BY 절이 들어 있으면 고유 클러스터형 인덱스의 키는 GROUP BY 절에 지정된 열만 참조할 수 있습니다.  
   
 ###  <a name="Recommendations"></a> 권장 사항  
- 인덱싱된 뷰의 `datetime` 및 `smalldatetime` 문자열 리터럴을 참조할 때 결정적 날짜 형식 스타일을 사용하여 리터럴을 원하는 날짜 유형으로 명시적으로 변환하는 것이 좋습니다. 결정적 날짜 형식 스타일 목록은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)를 참조하세요. 암시적으로 변환할 문자열을 포함 하는 식 `datetime` 또는 `smalldatetime` 비 결정적인 것으로 간주 됩니다. 이는 서버 세션의 LANGUAGE 및 DATEFORMAT 설정에 따라 결과가 달라지기 때문입니다. 예를 들어 ' `CONVERT (datetime, '30 listopad 1996', 113)` ' 문자열이 다른 언어에서는 다른 월을 의미하므로`listopad`식의 결과는 LANGUAGE 설정에 따라 달라집니다. 마찬가지로 `DATEADD(mm,3,'2000-12-01')`식에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 DATEFORMAT 설정을 기준으로 `'2000-12-01'` 문자열을 해석합니다.  
+ 인덱싱된 뷰의 `datetime` 및 `smalldatetime` 문자열 리터럴을 참조할 때 결정적 날짜 형식 스타일을 사용하여 리터럴을 원하는 날짜 유형으로 명시적으로 변환하는 것이 좋습니다. 결정적 날짜 형식 스타일 목록은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)를 참조하세요. 문자열을 `datetime` 또는 `smalldatetime`으로 암시적으로 변환하는 작업과 관련된 식은 비결정적인 것으로 간주됩니다. 이는 서버 세션의 LANGUAGE 및 DATEFORMAT 설정에 따라 결과가 달라지기 때문입니다. 예를 들어 ' `CONVERT (datetime, '30 listopad 1996', 113)` ' 문자열이 다른 언어에서는 다른 월을 의미하므로`listopad`식의 결과는 LANGUAGE 설정에 따라 달라집니다. 마찬가지로 `DATEADD(mm,3,'2000-12-01')`식에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 DATEFORMAT 설정을 기준으로 `'2000-12-01'` 문자열을 해석합니다.  
   
  데이터 정렬 간의 비유니코드 문자 데이터를 암시적으로 변환하는 작업도 비결정적인 것으로 간주됩니다.  
   

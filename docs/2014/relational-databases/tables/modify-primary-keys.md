@@ -13,12 +13,12 @@ ms.assetid: 8e2a15ba-1cd1-4408-b860-16c3ee37d635
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c411b3f032931dfe0964fe008d7fa1b5598d6423
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e9e19d6d6453acedff16e46dbd2d90d92a3b9587
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822957"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134803"
 ---
 # <a name="modify-primary-keys"></a>기본 키 수정
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 기본 키를 수정할 수 있습니다. 열 순서, 인덱스 이름, 클러스터형 옵션 또는 채우기 비율을 변경하여 테이블의 기본 키를 수정할 수 있습니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "52822957"
     |채우기 비율 정의|**채우기 사양** 범주를 확장하고 0에서 100 사이의 정수를 **채우기 비율** 상자에 입력합니다. 채우기 비율과 그 사용 방법은 [인덱스의 채우기 비율 지정](../indexes/specify-fill-factor-for-an-index.md)을 참조하세요.|  
     |열 순서 변경|**열**을 선택한 다음, 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다. **인덱스 열** 대화 상자에서 기본 키의 열을 제거합니다. 그런 다음 이 열을 원하는 순서로 다시 추가합니다. 키에서 열을 제거하려면 **열** 이름 목록에서 열 이름을 제거하기만 하면 됩니다.|  
   
-4.  **파일** 메뉴에서 *****테이블 이름 저장*을 클릭합니다.  
+4.  **파일** 메뉴에서 **저장**_table name_을 클릭합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  **기본 키를 수정하려면**  

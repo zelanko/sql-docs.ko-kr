@@ -22,12 +22,12 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c9ff712cb5915493f1ff285421bfe3edc8d7981f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374765"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131593"
 ---
 # <a name="create-a-login"></a>로그인 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 로그인을 만드는 방법에 대해 설명합니다. 로그인은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 연결하는 사용자 또는 프로세스의 ID입니다.  
@@ -146,7 +146,7 @@ ms.locfileid: "53374765"
  **사용자 매핑** 페이지에는 사용 가능한 모든 데이터베이스와 이러한 데이터베이스에서 해당 로그인에 적용할 수 있는 데이터베이스 역할이 나열됩니다. 선택한 데이터베이스에 따라 로그인에 사용할 수 있는 역할 멤버 자격이 결정됩니다. 이 페이지에서는 다음과 같은 옵션을 사용할 수 있습니다.  
   
  **이 로그인으로 매핑된 사용자**  
- 이 로그인으로 액세스할 수 있는 데이터베이스를 선택합니다. 데이터베이스를 선택하면 **데이터베이스 역할 멤버 자격:** *database_name* 창에 유효한 데이터베이스 역할이 표시됩니다.  
+ 이 로그인으로 액세스할 수 있는 데이터베이스를 선택합니다. 데이터베이스를 선택하면 **데이터베이스 역할 멤버 자격:** _database_name_ 창에 유효한 데이터베이스 역할이 표시됩니다.  
   
  **지도**  
  아래 나열되는 데이터베이스에 해당 로그인이 액세스하는 것을 허용합니다.  
@@ -160,10 +160,10 @@ ms.locfileid: "53374765"
  **기본 스키마**  
  사용자의 기본 스키마를 지정합니다. 사용자를 처음 만들 경우 기본 스키마는 **dbo**입니다. 아직 존재하지 않는 기본 스키마를 지정할 수도 있습니다. Windows 그룹, 인증서 또는 비대칭 키에 매핑된 사용자에 대해서는 기본 스키마를 지정할 수 없습니다.  
   
- **게스트 계정 설정:**  *database_name*  
+ **Guest account enabled for:**  _database_name_  
  선택한 데이터베이스에 게스트 계정이 설정되어 있는지 여부를 나타내는 읽기 전용 특성입니다. 게스트 계정에 대한 **로그인 속성** 대화 상자의 **상태** 페이지를 사용하여 게스트 계정을 설정하거나 해제할 수 있습니다.  
   
- **데이터베이스 역할 멤버 자격:**  *database_name*  
+ **Database role membership for:**  _database_name_  
  지정한 데이터베이스 사용자에 대한 역할을 선택합니다. 모든 사용자는 모든 데이터베이스에서 **public** 역할의 멤버이며 제거할 수 없습니다. 데이터베이스 역할에 대한 자세한 내용은 [데이터베이스 수준 역할](database-level-roles.md)을 참조하세요.  
   
 ### <a name="securables"></a>보안 개체  
@@ -176,10 +176,10 @@ ms.locfileid: "53374765"
   
 1.  **검색**을 클릭합니다.  
   
-2.  에 **개체 추가** 대화 상자에서 다음 옵션 중 하나를 선택 합니다. **특정 개체...** , **유형의 모든 개체...** , 또는 **서버 * * * server_name*합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  에 **개체 추가** 대화 상자에서 다음 옵션 중 하나를 선택 합니다. **특정 개체...** , **유형의 모든 개체...** , 또는 **서버**_server_name_합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  선택 하면 **서버 * * * server_name* 에 자동으로 채워 상단 표에 해당 서버의 보안 개체의 모든.  
+    >  **서버**_server_name_을 선택하면 상단 표에 해당 서버의 모든 보안 개체가 자동으로 채워집니다.  
   
 3.  **특정 개체...** 를 선택한 경우:  
   

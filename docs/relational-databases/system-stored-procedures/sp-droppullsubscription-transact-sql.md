@@ -16,12 +16,12 @@ ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d8d796c5e7b309ef33bf30eba851b3aedb6c1e6b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0343855bbc3d82e58a0a0252109dee6255ee766f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823937"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134053"
 ---
 # <a name="spdroppullsubscription-transact-sql"></a>sp_droppullsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publisher=** ] **'***게시자***'**  
+ [  **@publisher=** ] **'**_게시자_**'**  
  원격 서버 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다. 하는 경우 **모든**, 구독이 전혀 게시자 삭제 됩니다.  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
+ [  **@publisher_db=** ] **'**_publisher_db_**'**  
  게시자 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다. **모든** 은 모든 게시자 데이터베이스를 의미 합니다.  
   
- [  **@publication=** ] **'***게시***'**  
+ [  **@publication=** ] **'**_게시_**'**  
  게시 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다. 하는 경우 **모든**, 모든 게시에 대 한 구독이 삭제 됩니다.  
   
  [  **@reserved=** ] *예약*  
@@ -67,7 +67,7 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할 또는 끌어오기 구독을 만든 사용자를 실행할 수 있습니다 **sp_droppullsubscription**합니다. 합니다 **db_owner** 고정된 데이터베이스 역할은 실행할 수만 **sp_droppullsubscription** 끌어오기 구독을 만든 사용자가이 역할에 속한 경우.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [끌어오기 구독 삭제](../../relational-databases/replication/delete-a-pull-subscription.md)   
  [sp_addpullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
  [sp_change_subscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   

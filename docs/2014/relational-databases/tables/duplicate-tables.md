@@ -15,12 +15,12 @@ ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea98f596638d19994d76606ae136204ae5f8d419
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 951e96cd13ba7cbb6f14039d3745a44ff6167fa0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823927"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132443"
 ---
 # <a name="duplicate-tables"></a>테이블 복제
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하거나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 새 테이블을 만들고, 기존 테이블에서 열 정보를 복사하여 기존 테이블을 복제할 수 있습니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "52823927"
   
 6.  **편집** 메뉴에서 **붙여넣기**를 클릭합니다.  
   
-7.  **파일** 메뉴에서 **저장***테이블 이름*을 클릭합니다.  
+7.  **파일** 메뉴에서 **저장**_table name_을 클릭합니다.  
   
 8.  **이름 선택** 대화 상자에서 새 테이블의 이름을 입력하고 **확인**을 클릭합니다.  
   

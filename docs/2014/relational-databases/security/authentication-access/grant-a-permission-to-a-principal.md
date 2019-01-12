@@ -12,12 +12,12 @@ ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 17282ecfc0c6adbb1e4d1fc97f470371f90bd3f0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9b0ff18a9b3c6ff338a2b827b91ff20bbc7b2ce9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520804"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134923"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>보안 주체에게 사용 권한 부여
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 보안 주체에 권한을 부여하는 방법에 대해 설명합니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "52520804"
   
 4.  저장 프로시저를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-5.  에 **저장 프로시저 속성-* * * stored_procedure_name* 대화 상자의 페이지를 선택 **권한을**합니다. 이 페이지에서는 저장 프로시저에 사용자 또는 역할을 추가하고 해당 사용자 또는 역할이 포함할 사용 권한을 지정할 수 있습니다.  
+5.  에 **저장 프로시저 속성-**_stored_procedure_name_ 대화 상자 페이지를 선택 **권한을**합니다. 이 페이지에서는 저장 프로시저에 사용자 또는 역할을 추가하고 해당 사용자 또는 역할이 포함할 사용 권한을 지정할 수 있습니다.  
   
 6.  완료되었으면 **확인**을 클릭합니다.  
   

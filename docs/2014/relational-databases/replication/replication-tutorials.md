@@ -14,12 +14,12 @@ ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b2d57e12535bad09c1ddf1f89e87cba17e364f19
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 61e6b3d1682ba746f74f22413e49afa1ea585591
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784826"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135403"
 ---
 # <a name="replication-tutorials"></a>복제 자습서
   복제에는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 복제 토폴로지를 설정 및 실행하는 방법을 배우는 데 사용할 수 있는 자습서가 포함되어 있습니다.  
@@ -40,6 +40,6 @@ ms.locfileid: "52784826"
  병합 복제를 사용하여 한 서버와 가끔만 연결되는 하나 이상의 클라이언트 간에 데이터를 교환하는 방법을 배웁니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보안 및 보호&#40;복제&#41;](security/security-and-protection-replication.md)  
+ [SQL Server 복제 보안](security/view-and-modify-replication-security-settings.md)  
   
   

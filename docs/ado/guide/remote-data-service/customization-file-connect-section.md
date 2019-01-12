@@ -14,12 +14,12 @@ ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d9b891d4c8196dbac8fd7e557abc17f15bafbe0f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 627bbbafd272b6bb7682b776132445041207f8e1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545218"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133333"
 ---
 # <a name="customization-file-connect-section"></a>사용자 지정 파일 연결 섹션
 처리기의 기본 동작은 모든 연결을 거부 합니다. 합니다 **연결** 섹션에서는 해당 동작에 대 한 예외를 지정 합니다. 예를 들어, 모든 경우는 **연결** 없거나 비어 있는 경우 섹션 된 다음 기본적으로 없습니다 연결을 만들 수 없습니다.  
@@ -57,11 +57,11 @@ connectionString
 |부분|설명|  
 |----------|-----------------|  
 |**연결**|이 나타내는 리터럴 문자열은 연결 문자열 입력입니다.|  
-|***connectionString***|전체 클라이언트 연결 문자열을 대체 하는 문자열입니다.|  
+|**_ConnectionString_**|전체 클라이언트 연결 문자열을 대체 하는 문자열입니다.|  
 |**액세스 권한**|이 나타내는 리터럴 문자열에 대 한 액세스 항목입니다.|  
-|***accessRight***|다음 액세스 권한 중 하나입니다.<br /><br /> -   **액세스 권한 없음** -사용자 데이터 원본에 액세스할 수 없습니다.<br />-   **읽기 전용** -사용자는 데이터 소스를 읽을 수 있습니다.<br />-   **ReadWrite** -사용자 읽기 또는 데이터 원본에 쓸 수 있습니다.|  
+|**_accessRight_**|다음 액세스 권한 중 하나입니다.<br /><br /> -   **액세스 권한 없음** -사용자 데이터 원본에 액세스할 수 없습니다.<br />-   **읽기 전용** -사용자는 데이터 소스를 읽을 수 있습니다.<br />-   **ReadWrite** -사용자 읽기 또는 데이터 원본에 쓸 수 있습니다.|  
   
- (기본 처리기 동작을 사용 하지 않도록 설정 적용)에서 모든 연결을 허용 하려는 경우에서 액세스 항목을 설정 합니다 **기본 연결** 섹션을 `Access=ReadWrite`, 및 삭제 하거나 다른 주석 **연결** *식별자* 섹션입니다.  
+ (기본 처리기 동작을 사용 하지 않도록 설정 적용)에서 모든 연결을 허용 하려는 경우에서 액세스 항목을 설정 합니다 **기본 연결** 섹션을 `Access=ReadWrite`, 및 삭제 하거나 다른 주석 **연결** _식별자_ 섹션입니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [사용자 지정 파일 로그 섹션](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   

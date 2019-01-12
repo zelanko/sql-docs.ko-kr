@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 8248404353674f8139a26cfc75f37363557136b9
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: acca24570cf1c5052d92378b0dd5aa44d978aab6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030747"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131423"
 ---
 # <a name="sql-server-import-extension-preview"></a>SQL Server 가져오기 확장 (미리 보기)
 
@@ -55,7 +55,7 @@ SQL Server 가져오기 확장 (미리 보기)는 SQL 테이블에.csv 및.txt �
     ![열기 마법사](media/sql-server-import-extension/import-wizard-modify-columns.png)
 3. 이 페이지는 선택한 작업의 요약을 제공 합니다. 테이블에 성공적으로 삽입 여부를 확인할 수 있습니다. 
 
-    클릭 하거나 **끝나면** **이전** 변경 해야 할 경우 또는 **새 파일 가져오기** 신속 하 게 다른 파일을 가져오려면.
+    클릭 하거나 **를 완료 하 고 이전** 변경 해야 할 경우 또는 **새 파일 가져오기** 신속 하 게 다른 파일을 가져오려면.
     ![열기 마법사](media/sql-server-import-extension/import-wizard-summary.png)
 1. 대상 데이터베이스를 새로 고치거 나 테이블 이름에서 SELECT 쿼리를 실행 하 여 테이블에 성공적으로 가져온 경우를 확인 합니다.
 

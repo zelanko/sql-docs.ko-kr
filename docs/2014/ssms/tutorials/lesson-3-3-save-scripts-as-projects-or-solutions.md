@@ -10,12 +10,12 @@ ms.assetid: 72dfd37f-dbe7-4d1d-bda6-7eb54c7922d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d64724108630e64ecfd654367180a6603aabe3e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d17dd44f597d7b3ddfce574670e9e6bfd55f908
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125953"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134833"
 ---
 # <a name="save-scripts-as-projects-or-solutions"></a>스크립트를 프로젝트 또는 솔루션으로 저장
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio에 익숙한 개발자라면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 솔루션 탐색기를 쉽게 활용할 수 있을 것입니다. 업무 지원 스크립트를 스크립트 프로젝트로 그룹화하고 스크립트 프로젝트를 하나의 솔루션으로 함께 관리할 수 있습니다. 스크립트 프로젝트와 솔루션에 배치된 스크립트는 하나의 그룹으로 함께 열거나 Visual SourceSafe와 같은 원본 제어 제품에 함께 저장할 수 있습니다. 스크립트 프로젝트에는 스크립트를 제대로 실행하기 위한 연결 정보가 포함되며 지원 텍스트 파일 같이 스크립트가 아닌 파일이 포함될 수 있습니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "48125953"
     > [!NOTE]  
     >  쿼리를 입력할 공간이 더 필요하면 Shift+Alt+Enter를 눌러 전체 화면 모드로 전환합니다.  
   
-11. 솔루션 탐색기에서 **SQLQuery1**을 마우스 오른쪽 단추로 클릭한 다음 **이름 바꾸기**를 클릭합니다. 쿼리의 새 이름으로 **Check Workorders****.sql** 을 입력하고 Enter 키를 누릅니다.  
+11. 솔루션 탐색기에서 **SQLQuery1**을 마우스 오른쪽 단추로 클릭한 다음 **이름 바꾸기**를 클릭합니다. 형식 **Check Workorders.sql** 쿼리 및 ENTER 키를 눌러 새 이름으로 합니다.  
   
 12. 솔루션과 스크립트 프로젝트를 저장하려면 **파일** 메뉴에서 **모두 저장**을 클릭합니다.  
   

@@ -18,12 +18,12 @@ ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23bc80a73c9a3343e2ee1191a729207e2b8f45b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7385dddea48813615a851979e526af5f03a23332
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193173"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134393"
 ---
 # <a name="calling-a-stored-procedure-ole-db"></a>저장 프로시저 호출(OLE DB)
   저장 프로시저는 0개 이상의 매개 변수를 가질 수 있으며 값을 반환할 수도 있습니다. 사용 하는 경우는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에 매개 변수는 저장된 프로시저를 통해 전달할 수 있습니다.  
@@ -91,7 +91,7 @@ ms.locfileid: "48193173"
   
  ODBC CALL 이스케이프 시퀀스를 사용한 프로시저 호출의 일반적인 구문은 다음과 같습니다.  
   
- {[**?=**]**call***procedure_name*[**(**[*parameter*][**,**[*parameter*]]...**)**]}  
+ {0} [**? =**]**호출**_procedure_name_[**(**[*매개 변수*] [**합니다**[*매개 변수*]]... **)**]}  
   
  이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
@@ -126,6 +126,6 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [저장 프로시저](stored-procedures.md)  
+ [저장된 프로시저](stored-procedures.md)  
   
   

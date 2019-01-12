@@ -16,12 +16,12 @@ ms.assetid: 7c83049b-9227-4723-9b7f-66288bc6bd1d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ee501c8e576363fd4a4bc15883ca322490d60908
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34f36ea3b27100510857a05cd5edffa68c5be74a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150773"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132393"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>업그레이드 관리자 실행(명령 프롬프트)
   사용 된 **UpgradeAdvisorWizardCmd** 명령 프롬프트에서 업그레이드 관리자를 실행 하는 유틸리티입니다. XML 형식, 또는 쉼표로 구분된 값을 사용하는 파일로 결과를 받을 수 있습니다.  
@@ -43,7 +43,7 @@ where <server_info> is any combination of the following:
  **-?**  
  명령 구문을 표시합니다.  
   
- **-ConfigFile** *파일 이름*  
+ **-ConfigFile** _파일 이름_  
  경로 이름 및 실행할 때 사용할 설정이 포함 된 XML 파일의 파일 이름을 합니다 **UpgradeAdvisorWizardCmd** 유틸리티입니다.  
   
  *< 자유롭게 >*  
@@ -51,22 +51,22 @@ where <server_info> is any combination of the following:
   
  *< 자유롭게 >* 다음 네 개의 인수의 조합일 수 있습니다.  
   
- **서버** *server_name*  
+ **서버** _server_name_  
  분석할 컴퓨터의 이름을 지정합니다. 로컬 컴퓨터(기본값) 또는 원격 컴퓨터일 수 있습니다.  
   
- **-인스턴스** *instance_name*  
+ **-인스턴스** _instance_name_  
  분석할 인스턴스의 이름을 지정합니다. 기본값은 없습니다. 이 매개 변수를 지정하지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 검색되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 인스턴스에 대한 값은 MSSQLSERVER입니다. 명명된 인스턴스의 경우 인스턴스 이름을 사용합니다.  
   
- **-ASInstance***이름*   
+ **-ASInstance**_이름_   
  분석할 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 이름을 지정합니다. 기본값은 없습니다. 이 값을 지정하지 않으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]가 검색되지 않습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 기본 인스턴스에 대한 값은 MSSQLServerOLAPService입니다. 명명된 인스턴스의 경우 인스턴스 이름을 사용합니다.  
   
- **-RSInstance***서버*   
+ **-RSInstance**_서버_   
  분석할 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스의 이름을 지정합니다. 기본값은 없습니다. 이 값을 지정하지 않으면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]가 검색되지 않습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 기본 인스턴스에 대한 값은 ReportServer입니다. 명명된 인스턴스의 경우 인스턴스 이름을 사용합니다.  
   
- **-SqlUser** *login_id*  
+ **-SqlUser** _login_id_  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 이 값은 업그레이드 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하는 데 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인입니다. 로그인을 지정하지 않으면 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다.  
   
- **-SqlPassword** *암호*  
+ **-SqlPassword** _암호_  
  사용 하는 경우는 **-SqlUser** 인수에이 인수를 사용 하 여 암호를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 합니다.  
   
  **CSV**  
@@ -137,11 +137,11 @@ where <server_info> is any combination of the following:
 |`BatchFile`|분석할 배치 파일을 지정합니다. 여러 개일 수 있습니다.|`BatchFiles` 요소가 있는 경우 한 번 이상 필요합니다. 기본값은 없습니다.|  
 |`BatchSeparator`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 배치 파일에 사용되는 일괄 처리 구분 기호를 지정합니다.|`SQLServer` 요소마다 한 번만 지정할 수 있습니다(옵션). 기본값은 GO입니다.|  
 |`AnalysisServices`|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 분석 설정을 포함합니다.|구성 파일마다 한 번만 지정할 수 있습니다(옵션). 지정하지 않으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스가 분석되지 않습니다.|  
-|`ASInstance`|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 이름을 지정합니다.|당 한 번씩만 필요 `AnalysisServices` 요소입니다. 기본값은 없습니다.|  
+|`ASInstance`|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 이름을 지정합니다.|각 `AnalysisServices` 요소 당 한 번씩만 필요합니다. 기본값은 없습니다.|  
 |`Databases` 요소용 `Analysis Services`|분석할 데이터베이스의 목록을 포함합니다.|`AnalysisServices` 요소마다 한 번만 지정할 수 있습니다(옵션). 이 요소가 없으면 인스턴스의 모든 데이터베이스가 분석됩니다.|  
 |`Database` 요소용 `AnalysisServices`|분석할 데이터베이스의 이름을 지정합니다.|`Databases` 요소가 있는 경우 한 번 이상 필요합니다. `Database` 요소에 "*" 값이 포함되면 인스턴스의 모든 데이터베이스가 분석됩니다. 기본값은 없습니다.|  
 |`ReportingServices`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대해 분석을 실행하도록 지정합니다.|구성 파일마다 한 번만 지정할 수 있습니다(옵션). 지정하지 않으면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]가 분석되지 않습니다.|  
-|`RSInstance`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스 이름을 지정합니다.|당 한 번씩만 필요 `ReportingServices` 요소입니다. 기본값은 없습니다.|  
+|`RSInstance`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스 이름을 지정합니다.|각 `ReportingServices` 요소 당 한 번씩만 필요합니다. 기본값은 없습니다.|  
 |`IntegrationServices`|에 대 한 분석 설정을 포함 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]합니다.|구성 파일마다 한 번만 지정할 수 있습니다(옵션). 지정하지 않으면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]가 분석되지 않습니다.|  
 |`PackagePath`|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 집합의 경로를 지정합니다.|`IntegrationServices` 요소마다 한 번만 지정할 수 있습니다(옵션). 이 요소가 없으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 분석이 수행되며 외부에서 저장된 패키지는 분석되지 않습니다. 기본값은 없습니다.|  
   

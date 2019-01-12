@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: replication
 ms.topic: reference
 helpviewer_keywords:
 - programming interfaces [SQL Server replication]
@@ -16,12 +16,12 @@ ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 26d4399d453519f317ff64b4a2d70ae6f7e98d3d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 451b7ca4cc06269f116c62be2ef7f01f0e33abd2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757095"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132713"
 ---
 # <a name="replication-agent-executables-concepts"></a>복제 에이전트 실행 파일 개념
   다음과 같은 방법으로 복제 에이전트를 프로그래밍 방식으로 제어할 수 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "52757095"
  복제 에이전트를 호출할 때 성능 프로필을 사용하여 에이전트 실행 파일에 정의된 매개 변수 집합을 자동으로 전달할 수 있습니다. 자세한 내용은 [Replication Agent Profiles](../agents/replication-agent-profiles.md)을(를) 참조하세요.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 명령 프롬프트에서 복제 에이전트를 호출하는 방법을 보여 줍니다. RMO(복제 관리 개체)를 사용하여 복제 에이전트를 호출할 수도 있습니다. 자세한 내용은 [구독 동기화&#40;복제&#41;](../synchronize-subscriptions-replication.md)를 참조하세요.  
+ 다음 예에서는 명령 프롬프트에서 복제 에이전트를 호출하는 방법을 보여 줍니다. RMO(복제 관리 개체)를 사용하여 복제 에이전트를 호출할 수도 있습니다. 자세한 내용은 [구독 동기화&#40;복제&#41;](../synchronize-data.md)를 참조하세요.  
   
 > [!NOTE]  
 >  이 예에서는 가독성을 높이기 위해 줄 바꿈이 추가되었지만 배치 파일에서 명령은 단일 행으로 작성해야 합니다.  

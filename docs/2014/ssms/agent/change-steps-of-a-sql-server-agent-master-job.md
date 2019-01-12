@@ -10,12 +10,12 @@ ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2bf10e4357579bcda5ec9ac3bef92b49f596b7a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1a60d9e5d8569324cc3f68200d4a5a232b930d8b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812295"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133263"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 SQL Server 에이전트 마스터 작업의 단계를 변경하는 방법에 대해 설명합니다.  
@@ -56,13 +56,13 @@ ms.locfileid: "52812295"
   
 4.  단계를 수정하려는 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-5.  에 **작업 속성-* * * job_name* 대화 상자의 **페이지 선택**를 선택 **단계**합니다.  
+5.  **Job Properties -**_job_name_ 대화 상자의 **페이지 선택**에서 **단계**를 선택합니다.  
   
-6.  클릭 **편집할** 열려는 **작업 단계 속성-* * * job_step_name* 대화 상자. 이 대화 상자에서 사용 가능한 옵션에 대 한 자세한 내용은 참조 하세요. [작업 단계 속성: 새 작업 단계 &#40;일반 페이지&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) 하 고 [작업 단계 속성: 새 작업 단계 &#40;고급 페이지&#41;](job-step-properties-new-job-step-advanced-page.md)합니다.  
+6.  클릭 **편집할** 열려는 합니다 **작업 단계 속성-**_job_step_name_ 대화 상자. 이 대화 상자에서 사용 가능한 옵션에 대 한 자세한 내용은 참조 하세요. [작업 단계 속성: 새 작업 단계 &#40;일반 페이지&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) 하 고 [작업 단계 속성: 새 작업 단계 &#40;고급 페이지&#41;](job-step-properties-new-job-step-advanced-page.md)합니다.  
   
 7.  완료되었으면 **확인**을 클릭합니다.  
   
-8.  에 **작업 속성-* * * job_name* 대화 상자, 클릭 **확인**합니다.  
+8.  에 **작업 속성-**_job_name_ 대화 상자에서 클릭 **확인**합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

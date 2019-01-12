@@ -39,12 +39,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72f7ee857946267ca1c8732976cb31d30767bfed
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2686eb387854823ff16a722fe3219c6e2acb2adc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371185"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131493"
 ---
 # <a name="configure-database-mail"></a>데이터베이스 메일 구성
   이 항목에서는 데이터베이스 메일 구성 마법사를 사용하여 데이터베이스 메일을 활성화 및 구성하고, 템플릿을 사용하여 데이터베이스 메일 구성 스크립트를 만드는 방법에 대해 설명합니다.  
@@ -394,7 +394,7 @@ ms.locfileid: "53371185"
 
   
 ###  <a name="TestEmail"></a> Send Test E-Mail Page  
- *****<instance_name>에서 테스트 이메일 보내기* 페이지를 사용하여 지정된 데이터베이스 메일 프로필을 통해 이메일 메시지를 보낼 수 있습니다. **sysadmin** 고정 서버 역할의 멤버만 이 페이지를 사용하여 테스트 메일을 보낼 수 있습니다.  
+ _<instance_name>_ 에서 **테스트 메일 보내기** 페이지를 사용하여 지정된 데이터베이스 메일 프로필을 통해 메일 메시지를 보낼 수 있습니다. **sysadmin** 고정 서버 역할의 멤버만 이 페이지를 사용하여 테스트 메일을 보낼 수 있습니다.  
   
  **데이터베이스 메일 프로필**  
  목록에서 데이터베이스 메일 프로필을 선택합니다. 이 이름은 반드시 입력해야 합니다. 아무 프로필도 나타나지 않으면 프로필이 없거나 프로필에 대한 권한이 없음을 나타냅니다. **데이터베이스 메일 구성 마법사** 를 사용하여 프로필을 만들고 구성할 수 있습니다. 나열되는 프로필이 없을 경우 데이터베이스 메일 구성 마법사를 통해 사용할 프로필을 만드십시오.  

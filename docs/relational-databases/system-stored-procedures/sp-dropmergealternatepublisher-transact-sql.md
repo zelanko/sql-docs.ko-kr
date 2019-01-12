@@ -16,12 +16,12 @@ ms.assetid: a7dee4e2-2a60-41da-9d1d-6f991d7e2c5e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1cc29de8227cab3fc9045e7d98d9453146965008
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 722a8092a799695be0ab5e4f6925cd7416b7c1b9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773855"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134723"
 ---
 # <a name="spdropmergealternatepublisher-transact-sql"></a>sp_dropmergealternatepublisher(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,22 +38,22 @@ sp_dropmergealaternatepublisher [ @publisher = ] 'publisher'    , [ @publisher_d
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publisher=**] **'***publisher***'**  
+ [  **@publisher=**] **'**_게시자_**'**  
  현재 게시자의 이름입니다. *게시자*됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+ [  **@publisher_db=**] **'**_publisher_db_**'**  
  현재 게시 데이터베이스의 이름입니다. *publisher_db*됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@publication =**] **'***게시***'**  
+ [  **@publication =**] **'**_게시_**'**  
  현재 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@alternate_publisher=**] **'***alternate_publisher***'**  
+ [  **@alternate_publisher=**] **'**_alternate_publisher_**'**  
  대체 동기화 파트너로서 삭제할 대체 게시자의 이름입니다. *alternate_publisher*됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@alternate_publisher_db=**] **'***alternate_publisher_db***'**  
+ [  **@alternate_publisher_db=**] **'**_alternate_publisher_db_**'**  
  대체 동기화 파트너 게시 데이터베이스로서 삭제할 게시 데이터베이스의 이름입니다. *alternate_publisher_db*됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@alternate_publication=**] **'***alternate_publication***'**  
+ [  **@alternate_publication=**] **'**_alternate_publication_**'**  
  대체 동기화 파트너 게시로서 삭제할 게시의 이름입니다. *alternate_publication*됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

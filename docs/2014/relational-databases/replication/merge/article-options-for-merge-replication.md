@@ -13,12 +13,12 @@ ms.assetid: 670abd41-d204-4cd7-a371-7664e603a0ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f58b96f2b8d95f31eeb89c9e0796b39a221b0a66
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7033db55df0dd9b25c3dee5accdd4259842a571b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786125"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133323"
 ---
 # <a name="article-options-for-merge-replication"></a>병합 복제를 위한 아티클 옵션
   애플리케이션의 요구에 맞게 복제 동작을 사용자 지정할 수 있는 여러 가지 병합 테이블 아티클 옵션이 있습니다. 병합 복제를 사용하여 다음을 수행할 수 있습니다.  
@@ -29,11 +29,11 @@ ms.locfileid: "52786125"
   
 -   복제 트리거 및 시스템 테이블에서 하나 이상의 아티클에 대한 삭제를 추적하지 않도록 지정합니다. 이 옵션은 많은 애플리케이션 시나리오에서 유용하게 사용됩니다. 복제할 필요가 없는 일괄 처리 삭제를 사용하는 시나리오도 여기에 포함됩니다. 자세한 내용은 [조건부 삭제 추적으로 병합 복제 성능 최적화](optimize-merge-replication-performance-with-conditional-delete-tracking.md)를 참조하세요.  
   
--   애플리케이션에 필요한 순서대로 아티클이 처리되도록 아티클의 처리 순서를 지정합니다. 자세한 내용은 [병합 아티클의 처리 순서 지정](specify-the-processing-order-of-merge-articles.md)을 참조하세요.  
+-   애플리케이션에 필요한 순서대로 아티클이 처리되도록 아티클의 처리 순서를 지정합니다. 자세한 내용은 [병합 복제 지정할 속성](../publish/specify-merge-replication-properties.md)합니다.  
   
 -   관련된 레코드 집합이 하나의 단위로 처리되도록 지정합니다. 기본적으로 병합 복제는 행 단위로 테이블 변경 내용을 처리합니다. 자세한 내용은 [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](group-changes-to-related-rows-with-logical-records.md)를 참조하세요.  
   
--   같은 데이터를 토폴로지에 있는 두 개 이상의 노드에서 변경할 수 있는 경우에 충돌 감지 및 해결 기능을 사용합니다. 자세한 내용은 [Detect and Resolve Merge Replication Conflicts](advanced-merge-replication-resolve-merge-replication-conflicts.md)을 참조하세요.  
+-   같은 데이터를 토폴로지에 있는 두 개 이상의 노드에서 변경할 수 있는 경우에 충돌 감지 및 해결 기능을 사용합니다. 자세한 내용은 [Detect and Resolve Merge Replication Conflicts](advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
   
 -   제약 조건 및 트리거를 구독자로 복사할지 여부와 같은 스키마 옵션을 지정합니다. 자세한 내용은 [스키마 옵션 지정](../publish/specify-schema-options.md)을 참조하세요.  
   

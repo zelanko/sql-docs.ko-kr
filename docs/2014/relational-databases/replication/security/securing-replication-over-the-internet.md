@@ -13,12 +13,12 @@ ms.assetid: 25b7af05-2721-4b24-9083-fb671e8bf4e0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f0af2d4357c74d9ce7bec74e1b787ed259b04977
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 78dfc544d7fd01f6641df6c0968d4a59a668cdd3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797368"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132523"
 ---
 # <a name="securing-replication-over-the-internet"></a>Securing Replication Over the Internet
   인터넷을 통한 복제는 특히 모바일 구독자에게 유용하지만 적절한 보안을 유지하려면 인터넷 복제를 알맞게 구성해야 합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 에서는 다음 두 가지 기술 중 하나를 통해 인터넷에서 정보를 안전하게 공유할 것을 권장합니다.  
@@ -39,6 +39,6 @@ ms.locfileid: "52797368"
   
 ## <a name="see-also"></a>관련 항목  
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [보안 및 보호&#40;복제&#41;](security-and-protection-replication.md)  
+ [SQL Server 복제 보안](view-and-modify-replication-security-settings.md)  
   
   

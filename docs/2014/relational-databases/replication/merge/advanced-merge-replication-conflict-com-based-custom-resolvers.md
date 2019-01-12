@@ -13,12 +13,12 @@ ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae66ab14a058f5fd6cfef462ddcc1c83c5a9cfe3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 27d5be264fc6e6033997babb4a7aac1e8271a39d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823527"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134953"
 ---
 # <a name="com-based-custom-resolvers"></a>COM-Based Custom Resolvers
   사용자 지정 해결 프로그램은 기본 해결 메커니즘보다 더 높은 유연성을 제공하며 복제된 데이터를 사용하여 애플리케이션에 필요한 비즈니스 논리를 구현할 수 있습니다. COM 기반 사용자 지정 해결 프로그램은 DLL(동적 연결 라이브러리)이며 **ICustomResolver** COM 인터페이스, 해당 메서드 및 속성, 그리고 충돌 해결을 위해 특별히 디자인된 다른 지원 인터페이스 및 유형 정의를 구현합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "52823527"
   
 -   해결하려는 행 변경의 유형(예: 업데이트, 삽입 및 삭제) 및 해결 프로그램을 병합 변경 내용을 업로드하는 동안 호출할지 병합 변경 내용을 다운로드하는 동안 호출할지 또는 두 작업 모두를 수행하는 동안 호출할지 여부. 사용자는 하나의 변경 내용, 모든 변경 내용 또는 변경 내용이 조합된 것의 유형을 지정할 수 있습니다. 기본 병합 충돌 해결 프로그램은 사용자 지정 해결 프로그램이 해결하지 못하는 충돌을 처리합니다.  
   
--   충돌 해결 시 열 추적의 사용 여부. 열 추적이 설정되어 있으면 충돌이 존재하는 열의 데이터만 충돌로 플래그가 지정되며, 그렇지 않을 경우에 데이터는 병합됩니다. 그러나 충돌은 행 수준 추적에서와 같은 방법으로 해결됩니다. 즉, 우선 순위 적용 항목이 데이터 전체 행을 덮어씁니다. 그러나 데이터는 게시자나 구독자의 값 또는 게시자 및 구독자가 아닌 위치의 일부 변경된 값이 혼합된 것일 수 있습니다. 자세한 내용은 [병합 복제 충돌 감지 및 해결](advanced-merge-replication-resolve-merge-replication-conflicts.md)을 참조하세요.  
+-   충돌 해결 시 열 추적의 사용 여부. 열 추적이 설정되어 있으면 충돌이 존재하는 열의 데이터만 충돌로 플래그가 지정되며, 그렇지 않을 경우에 데이터는 병합됩니다. 그러나 충돌은 행 수준 추적에서와 같은 방법으로 해결됩니다. 즉, 우선 순위 적용 항목이 데이터 전체 행을 덮어씁니다. 그러나 데이터는 게시자나 구독자의 값 또는 게시자 및 구독자가 아닌 위치의 일부 변경된 값이 혼합된 것일 수 있습니다. 자세한 내용은 [병합 복제 충돌 감지 및 해결](advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
   
  COM 기반 사용자 지정 충돌 해결 프로그램을 구현하려면 [병합 아티클용 사용자 지정 충돌 해결 프로그램 구현](../implement-a-custom-conflict-resolver-for-a-merge-article.md)을 참조하십시오.  
   

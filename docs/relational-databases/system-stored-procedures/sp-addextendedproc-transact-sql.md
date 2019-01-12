@@ -18,12 +18,12 @@ ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2c66f3ac4395e3985d6881ddb085db1d9a71c366
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23c97002d5400d3794bed23fea4fb4eb05efd7f0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713221"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133013"
 ---
 # <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@functname =** ] **'***프로시저***'**  
+ [  **@functname =** ] **'**_프로시저_**'**  
  DDL(동적 연결 라이브러리)에서 호출할 함수의 이름입니다. *프로시저* 됩니다 **nvarchar(517)**, 기본값은 없습니다. *프로시저* 필요에 따라 폼의 소유자 이름을 포함할 수 있습니다 *owner.function*합니다.  
   
- [  **@dllname =** ] **'***dll***'**  
+ [  **@dllname =** ] **'**_dll_**'**  
  함수를 포함하고 있는 DLL의 이름입니다. *dll* 됩니다 **varchar(255)**, 기본값은 없습니다. DLL의 전체 경로를 지정하는 것이 좋습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

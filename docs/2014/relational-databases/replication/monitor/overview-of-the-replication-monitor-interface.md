@@ -13,12 +13,12 @@ ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b03c94ccfd50dc1c031c7e25f548e61ab1de1ac5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 48299e2cf318071624c8a7649c52dd9b2f932a77
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815725"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134583"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>복제 모니터 인터페이스 개요
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터는 모든 복제 작업을 게시자 관점 또는 배포자 관점으로 제공합니다. 왼쪽 창에서 모니터에 게시자를 추가하면 오른쪽 창에 게시자, 해당 게시, 게시에 대한 구독 및 다양한 복제 에이전트 정보가 표시됩니다. 복제 토폴로지에 대한 정보를 제공하는 것 외에도 복제 모니터를 사용하여 에이전트 시작 및 중지, 데이터 유효성 검사 등 다양한 태스크를 수행할 수 있습니다.  
@@ -104,7 +104,7 @@ ms.locfileid: "52815725"
   
      이 탭에는 모든 복제 유형에 사용되는 에이전트 및 작업에 대한 세부 정보가 표시됩니다. 이 탭에서는 각 에이전트 및 작업을 시작하고 중지할 수 있습니다.  
   
- 자세한 내용은 [게시자에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)을 참조하세요.  
+ 자세한 내용은 [정보 보기 및 태스크 수행 복제 모니터를 사용 하 여](view-information-and-perform-tasks-replication-monitor.md)입니다.  
   
  복제 모니터는 게시자 노드에 대한 상황에 맞는 메뉴도 제공합니다. 왼쪽 창에서 게시자를 마우스 오른쪽 단추로 클릭하여 다음 작업을 수행할 수 있습니다.  
   
@@ -177,7 +177,7 @@ ms.locfileid: "52815725"
   
          제공되는 오류 메시지를 통해 에이전트가 실행되지 않는 이유를 자세히 확인할 수 있습니다. 이 오류 메시지는 게시와 연결된 에이전트의 문제 해결을 위한 출발점입니다.  
   
- 자세한 내용은 [게시에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](view-information-and-perform-tasks-for-a-publication-replication-monitor.md) 및 [게시 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](view-information-and-perform-tasks-for-publication-agents.md)을 참조하세요.  
+ 자세한 내용은 [정보 보기 및 태스크 수행 복제 모니터를 사용 하 여](view-information-and-perform-tasks-replication-monitor.md)입니다.  
   
  복제 모니터는 게시 노드에 대한 상황에 맞는 메뉴도 제공합니다. 왼쪽 창에서 게시를 마우스 오른쪽 단추로 클릭하여 다음 작업을 수행할 수 있습니다.  
   
@@ -216,7 +216,7 @@ ms.locfileid: "52815725"
   
          이 탭에서는 각 처리 단계(변경 내용 업로드, 변경 내용 다운로드 등)에 소요된 시간을 포함하여 동기화 중에 처리된 각 아티클에 대한 자세한 통계를 제공합니다. 이 통계는 속도 저하의 원인이 되고 병합 구독의 성능 문제를 해결하기에 가장 적합한 특정 테이블을 정확히 찾아내는 데 도움이 될 수 있습니다.  
   
- 자세한 내용은 [구독에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](view-information-and-perform-tasks-for-a-subscription-replication-monitor.md) 및 [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](view-information-and-perform-tasks-for-subscription-agents.md)을 참조하세요.  
+ 자세한 내용은 [정보 보기 및 태스크 수행 복제 모니터를 사용 하 여](view-information-and-perform-tasks-replication-monitor.md)입니다.
   
 ## <a name="viewing-information-and-performing-tasks-related-to-agent-profiles"></a>에이전트 프로필 관련 정보 보기 및 태스크 수행  
  복제 모니터에는 에이전트 프로필을 관리하기 위한 많은 대화 상자가 포함되어 있습니다. 에이전트 프로필은 에이전트 동작을 결정하는 에이전트에 대한 매개 변수 집합입니다. 자세한 내용은 [Replication Agent Profiles](../agents/replication-agent-profiles.md)을(를) 참조하세요. 다음과 같은 대화 상자가 있습니다.  

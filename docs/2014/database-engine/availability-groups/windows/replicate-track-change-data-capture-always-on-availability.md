@@ -15,12 +15,12 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50328c814b23f9df33a0524bae1758afecd3f5f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b3bf1b9c7b43a2196f2bc2c09422feb43cbc7c4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091263"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134093"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>복제, 변경 내용 추적, 변경 데이터 캡처 및 AlwaysOn 가용성 그룹(SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제, CDC(변경 데이터 캡처) 및 CT(변경 내용 추적)는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 지원됩니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하면 고가용성 및 추가 데이터베이스 복구 기능을 제공할 수 있습니다.  
@@ -191,9 +191,9 @@ ms.locfileid: "48091263"
   
 -   병합 복제를 사용할 때 게시 데이터베이스가 가용성 그룹에 있는 경우:  
   
-    -   밀어넣기 구독: 게시자와 배포자 모두 최소한 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]를 실행해야 합니다.  
+    -   밀어넣기 구독인 경우. 게시자와 배포자 모두 최소한 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]를 실행해야 합니다.  
   
-    -   끌어오기 구독: 게시자, 배포자 및 구독자 데이터베이스는 최소한 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에 있어야 합니다. 구독자의 병합 에이전트가 가용성 그룹이 보조 그룹으로 장애 조치(Failover)하는 방법을 이해해야 하기 때문입니다.  
+    -   끌어오기 구독인 경우. 게시자, 배포자 및 구독자 데이터베이스는 최소한 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에 있어야 합니다. 구독자의 병합 에이전트가 가용성 그룹이 보조 그룹으로 장애 조치(Failover)하는 방법을 이해해야 하기 때문입니다.  
   
 -   배포 데이터베이스는 가용성 그룹에 배치할 수 없습니다.  
   
@@ -231,7 +231,7 @@ ms.locfileid: "48091263"
   
 -   [AlwaysOn 게시 데이터베이스 유지 관리 &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [관리&#40;복제&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [복제 관리 FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **Change data capture**  
   

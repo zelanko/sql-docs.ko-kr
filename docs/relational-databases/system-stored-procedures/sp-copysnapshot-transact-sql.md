@@ -16,12 +16,12 @@ ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0cb4757d454343b48d5eea74d10d66cdbaa7a52a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d3c8037bdccc0b04e2c11399f09e5a99c109df65
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817195"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134113"
 ---
 # <a name="spcopysnapshot-transact-sql"></a>sp_copysnapshot(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,16 +40,16 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication=**] **'***publication***'**  
+ [  **@publication=**] **'**_게시_**'**  
  해당 스냅숏 내용을 복사하려는 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@destination_folder=**] **'***destination_folder***'**  
+ [  **@destination_folder=**] **'**_destination_folder_**'**  
  게시 스냅숏의 내용을 복사할 대상 폴더의 이름입니다. *destination_folder*됩니다 **nvarchar(255)**, 기본값은 없습니다. 합니다 *destination_folder* 다른 서버, 네트워크 드라이브 또는 이동식 미디어 (예: Cd-rom 또는 이동식 디스크)와 같은 대체 위치가 될 수 있습니다.  
   
- [  **@subscriber=**] **'***구독자***'**  
+ [  **@subscriber=**] **'**_구독자_**'**  
  구독자의 이름입니다. *구독자* 는 sysname 이며 기본값은 NULL입니다.  
   
- [  **@subscriber_db=**] **'***subscriber_db***'**  
+ [  **@subscriber_db=**] **'**_subscriber_db_**'**  
  구독 데이터베이스의 이름입니다. *subscriber_db* 는 sysname 이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -62,7 +62,7 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
  멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_copysnapshot**합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [대체 스냅숏 폴더 위치](../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
+ [대체 스냅숏 폴더 위치](../../relational-databases/replication/snapshot-options.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

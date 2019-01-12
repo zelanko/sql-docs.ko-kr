@@ -20,12 +20,12 @@ ms.assetid: 4949530c-62d1-4f1a-b592-144244444ce0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1d600a29020a3ecc729e3e405e14b0920504ab56
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 173d0287ba1b63e8811e2d340448d03c3bbf961d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115943"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133143"
 ---
 # <a name="diagnostic-records-and-fields"></a>진단 레코드 및 필드
   진단 레코드는 ODBC 환경, 연결, 문 또는 설명자 핸들과 연결되어 있습니다. ODBC 함수가 SQL_SUCCESS 또는 SQL_INVALID_HANDLE이 아닌 반환 코드를 생성하는 경우 해당 함수에서 호출된 핸들에 정보 또는 오류 메시지가 포함된 진단 레코드가 연결되어 있습니다. 이러한 레코드는 해당 핸들을 사용하여 다른 함수를 호출할 때까지 유지되며, 이때 레코드가 삭제됩니다. 한 번에 핸들에 연결할 수 있는 진단 레코드 수에는 제한이 없습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "48115943"
   
  상태 레코드의 필드에는 SQLSTATE, 원시 오류 번호, 진단 메시지, 열 번호 및 행 번호를 비롯하여 ODBC 드라이버 관리자, 드라이버 또는 데이터 원본에서 반환된 특정 오류 또는 경고에 대한 정보가 포함됩니다. 상태 레코드는 함수에서 SQL_ERROR, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_NEED_DATA 또는 SQL_STILL_EXECUTING을 반환하는 경우에만 생성됩니다. 상태 레코드의 필드의 전체 목록은 참조 하세요 **SQLGetDiagField**합니다.  
   
- **SQLGetDiagRec** ODBC SQLSTATE, 원시 오류 번호 및 진단 메시지 필드와 함께 단일 진단 레코드를 검색 합니다. 이 기능은 ODBC 2와 비슷합니다. *x * * * SQLError** 함수입니다. ODBC 3에는 가장 간단한 오류 처리 함수입니다. *x* 반복적으로 호출 하는 것 **SQLGetDiagRec** 사용 하 여 시작 합니다 *RecNumber* 1 및 증가 매개 변수 설정 *RecNumber* 될 때까지 1 씩 **SQLGetDiagRec** SQL_NO_DATA를 반환 합니다. 이 해당 하는 ODBC 2. *x* 응용 프로그램 호출 **SQLError** SQL_NO_DATA_FOUND가 반환 될 때까지 합니다.  
+ **SQLGetDiagRec** ODBC SQLSTATE, 원시 오류 번호 및 진단 메시지 필드와 함께 단일 진단 레코드를 검색 합니다. 이 기능은 ODBC 2와 비슷합니다. _x_**SQLError** 함수입니다. ODBC 3에는 가장 간단한 오류 처리 함수입니다. *x* 반복적으로 호출 하는 것 **SQLGetDiagRec** 사용 하 여 시작 합니다 *RecNumber* 1 및 증가 매개 변수 설정 *RecNumber* 될 때까지 1 씩 **SQLGetDiagRec** SQL_NO_DATA를 반환 합니다. 이 해당 하는 ODBC 2. *x* 응용 프로그램 호출 **SQLError** SQL_NO_DATA_FOUND가 반환 될 때까지 합니다.  
   
  ODBC 3입니다. *x* ODBC 2 보다 훨씬 더 많은 진단 정보를 지원 합니다. *x*합니다. 이 정보를 사용 하 여 검색 된 진단 레코드의 추가 필드에 저장 됩니다 **SQLGetDiagField**합니다.  
   

@@ -15,12 +15,12 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7d4a8d29e27fae9b54a6060ec1be8f6c5a4163a8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507275"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132543"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션에 클라이언트 연결(SQL Server)
   데이터베이스 미러링 세션에 연결하기 위해 클라이언트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 또는 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용할 수 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스에 대해 구성하면 두 데이터 액세스 공급자가 모두 데이터베이스 미러링을 완전하게 지원합니다. 미러된 데이터베이스 사용 시 프로그래밍 고려 사항에서 대한 자세한 내용은 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)을 참조하십시오. 또한 현재 주 서버 인스턴스를 사용할 수 있어야 하며 서버 인스턴스에 클라이언트 로그인이 만들어져 있어야 합니다. 자세한 내용은 [분리된 사용자 문제 해결&#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)을 실행합니다. 클라이언트에서 데이터베이스 미러링 세션에 연결할 때는 미러링 모니터 서버 인스턴스가 있어도 사용되지 않습니다.  
@@ -85,7 +85,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Server 특성  
  연결 문자열에는 초기 파트너 이름을 제공하는 `Server` 특성이 있어야 합니다. 이 특성은 현재 주 서버 인스턴스를 식별합니다.  
   
- 서버 인스턴스를 식별하는 가장 간단한 방법은 *<server_name>*[**\\***<SQL_Server_instance_name>*]과 같이 해당 이름을 지정하는 것입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 서버 인스턴스를 식별하는 가장 간단한 방법은 *<server_name>*[**\\**_<SQL_Server_instance_name>_]과 같이 해당 이름을 지정하는 것입니다. 예를 들어  
   
  `Server=Partner_A;`  
   
@@ -129,7 +129,7 @@ Server=123.34.45.56,4724;
 |ODBC 드라이버|`Failover_Partner`|  
 |ADO(ActiveX Data Objects)|`Failover Partner`|  
   
- 서버 인스턴스를 식별하는 가장 간단한 방법은 *<server_name>*[**\\***<SQL_Server_instance_name>*]과 같이 시스템 이름을 지정하는 것입니다.  
+ 서버 인스턴스를 식별하는 가장 간단한 방법은 *<server_name>*[**\\**_<SQL_Server_instance_name>_]과 같이 시스템 이름을 지정하는 것입니다.  
   
  또는 `Failover Partner` 특성에 IP 주소와 포트 번호를 제공할 수 있습니다. 데이터베이스에 대한 첫 번째 연결 중에 초기 연결 시도가 실패하면 장애 조치(failover) 파트너에 대한 연결에서 DNS 및 SQL Server Browser를 사용하지 않습니다. 연결이 설정되면 장애 조치(failover) 파트너 이름이 장애 조치(failover) 파트너 이름을 덮어쓰므로 장애 조치가 발생할 경우 리디렉션된 연결에 DNS 및 SQL Server Browser가 필요합니다.  
   
@@ -166,7 +166,7 @@ Server=123.34.45.56,4724;
   
  다시 시도 시간은 다음 수식을 사용하여 계산됩니다.  
   
- *RetryTime* **=** *PreviousRetryTime* **+(** 0.08 **\****LoginTimeout***)**  
+ _RetryTime_ **=** _PreviousRetryTime_ **+ (** 0.08 **&#42;**  _LoginTimeout_**)**  
   
  여기서 *PreviousRetryTime* 의 초기값은 0입니다.  
   
@@ -174,10 +174,10 @@ Server=123.34.45.56,4724;
   
 |반올림|*RetryTime* 계산|시도당 다시 시도 시간|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+(** 0.08 **\*** 15 **)**|1.2초|  
-|2|1.2 **+(** 0.08 **\*** 15 **)**|2.4초|  
-|3|2.4 **+(** 0.08 **\*** 15 **)**|3.6초|  
-|4|3.6 **+(** 0.08 **\*** 15 **)**|4.8초|  
+|1|0 **+ (** 0.08 **&#42;** 15 **)**|1.2초|  
+|2|1.2 **+ (** 0.08 **&#42;** 15 **)**|2.4초|  
+|3|2.4 **+ (** 0.08 **&#42;** 15 **)**|3.6초|  
+|4|3.6 **+ (** 0.08 **&#42;** 15 **)**|4.8초|   
   
  다음 그림에서는 각각 시간 초과되는 연속 연결 시도의 다시 시도 시간을 보여 줍니다.  
   

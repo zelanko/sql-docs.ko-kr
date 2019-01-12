@@ -23,12 +23,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9e01e1c77d67bd19fa01ec1cf07e4e53807651b1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5f5b1b235cf3cf3a97198a97ee6a8520a6034635
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797959"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134673"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>패키지 실행 유틸리티(DtExecUI) UI 참조
   **패키지 실행 유틸리티** 를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 수 있습니다. 이 유틸리티는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스, [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템의 세 위치 중 하나에 저장된 패키지를 실행합니다. 열 수 있는이 사용자 인터페이스 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 입력 하 여 `dtexecui` 명령 프롬프트를 사용 하 여 패키지를 실행 하지 않아도 됩니다 합니다 **DTExec** 명령 프롬프트 도구입니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "52797959"
 |||  
 |-|-|  
 |값|Description|  
-|**SQL Server**|패키지가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 있으면 이 옵션을 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증의 사용자 이름과 암호를 입력합니다. 사용자 이름과 암호를 입력할 때마다 명령 프롬프트에 **/USER** *username* 및 **/PASSWORD** *password* options to the comm및 prompt.|  
+|**SQL Server**|패키지가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 있으면 이 옵션을 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증의 사용자 이름과 암호를 입력합니다. 사용자 이름과 암호를 입력할 때마다 명령 프롬프트에 **/USER** _username_ 및 **/PASSWORD** _password_ options to the comm및 prompt.|  
 |**파일 시스템**|패키지가 파일 시스템에 있으면 이 옵션을 선택합니다.|  
 |**SSIS 패키지 저장소**|패키지가 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소에 있으면 이 옵션을 선택합니다.|  
   

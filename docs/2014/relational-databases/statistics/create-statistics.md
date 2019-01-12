@@ -18,12 +18,12 @@ ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3128828bd26e6d2755f30748c23873538b8a7649
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: be88f92c6dbf2a2fc0f04c3f29c54816174aafa0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527720"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133473"
 ---
 # <a name="create-statistics"></a>통계 만들기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 테이블 또는 인덱싱된 뷰의 하나 이상의 열에 대한 쿼리 최적화 통계를 만들 수 있습니다. 대부분의 쿼리에서 쿼리 최적화 프로그램은 고품질의 쿼리 계획에 필요한 통계를 이미 생성하므로 경우에 따라서 추가 통계를 만들어야 합니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "52527720"
   
 4.  **통계** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 통계...** 를 선택합니다.  
   
-     **테이블에 대한 새 통계***table_name* 대화 상자의 **일반** 페이지에 다음 속성이 표시됩니다.  
+     **테이블에 대한 새 통계** table_name **대화 상자의**_일반_ 페이지에 다음 속성이 표시됩니다.  
   
      **테이블 이름**  
      통계에서 설명하는 테이블 이름을 표시합니다.  
@@ -113,12 +113,12 @@ ms.locfileid: "52527720"
      **이 열에 대한 통계 업데이트**  
      대화 상자를 닫을 때 통계를 업데이트하려면 선택합니다.  
   
-     **테이블에 대한 새 통계***table_name* 대화 상자의 **필터** 페이지에 다음 속성이 표시됩니다.  
+     **테이블에 대한 새 통계** table_name **대화 상자의**_필터_ 페이지에 다음 속성이 표시됩니다.  
   
      **필터 식**  
-     필터링된 통계에 포함할 데이터 행을 정의합니다. 예를 들어 IPv4 주소를 사용하는 경우 `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     필터링된 통계에 포함할 데이터 행을 정의합니다. 예를 들면 다음과 같습니다. `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  **테이블에 대한 새 통계***table_name* 대화 상자의 **일반** 페이지에서 **추가**를 클릭합니다.  
+5.  **테이블에 대한 새 통계**_table_name_ 대화 상자의 **일반** 페이지에서 **추가**를 클릭합니다.  
   
      **열 선택** 대화 상자에 표시되는 속성은 다음과 같습니다. 이 정보는 읽기 전용입니다.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "52527720"
   
 6.  **열 선택** 대화 상자에서 통계를 만들려는 각 열의 확인란을 선택한 다음 **확인**을 클릭합니다.  
   
-7.  **테이블에 대한 새 통계***table_name* 대화 상자에서 **확인**을 클릭합니다.  
+7.  **테이블에 대한 새 통계**_table_name_ 대화 상자에서 **확인**을 클릭합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
