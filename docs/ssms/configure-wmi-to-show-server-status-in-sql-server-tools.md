@@ -14,12 +14,12 @@ ms.assetid: 7e97197b-ed4d-40d1-9a52-9ab1d92401d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 93a01e3d3c687485bb9d330dfe8e97c31cc65cef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9309df663b0754b28a9ec1397fb5bfa1ad1beabc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609838"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134713"
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>WMI를 구성하여 SQL Server 도구에 서버 상태 표시
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47609838"
   
 6.  **그룹 또는 사용자 이름** 상자에 그룹 또는 사용자를 추가하고 해당 이름을 선택합니다.  
   
-7.  **에 대한 사용 권한***<group or user>* 상자에서 서비스 상태를 원격으로 검색하려는 사용자의 경우 **원격으로부터 사용 가능** 사용 권한에 대해 **허용** 열을 선택합니다.  
+7.  **에 대한 사용 권한**_<group or user>_ 상자에서 서비스 상태를 원격으로 검색하려는 사용자의 경우 **원격으로부터 사용 가능** 사용 권한에 대해 **허용** 열을 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server 에이전트 서비스 시작, 중지 또는 일시 중지](../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  

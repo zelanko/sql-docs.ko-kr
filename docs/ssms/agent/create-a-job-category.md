@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2e0de2004ce2b3e9c91988bfc08fa0fea2074435
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c7dbc000d71d7d2cda2d299de476346103f2d2a6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701964"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134313"
 ---
 # <a name="create-a-job-category"></a>작업 범주 만들기
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "51701964"
 다중 서버 범주는 마스터 서버에만 존재합니다. 한 마스터 서버에서는 하나의 기본 작업 범주만 사용할 수 있습니다. 즉, [**범주화되지 않음(다중 서버)**] 하나만 있습니다. 다중 서버 작업을 다운로드하면 해당 범주가 대상 서버에서 **MSX의 작업** 으로 변경됩니다.  
   
 ### <a name="Security"></a>보안  
-자세한 내용은 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)을 참조하세요.  
+자세한 내용은 [SQL Server 에이전트 보안 구현](../../ssms/agent/implement-sql-server-agent-security.md)을 참조하세요.  
   
 ## <a name="SSMS"></a>SQL Server Management Studio 사용  
   
@@ -67,7 +67,7 @@ ms.locfileid: "51701964"
   
 3.  **작업** 폴더를 마우스 오른쪽 단추로 클릭하고 **작업 범주 관리**를 선택합니다.  
   
-4.  **작업 범주 관리***server_name* 대화 상자에서 **추가**를 클릭합니다.  
+4.  **작업 범주 관리**_server_name_ 대화 상자에서 **추가**를 클릭합니다.  
   
 5.  새 대화 상자의 **이름** 상자에서 새 작업 범주의 이름을 입력합니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "51701964"
   
 7.  **확인**을 클릭합니다.  
   
-8.  **작업 범주 관리***server_name* 대화 상자에서 **새로 고침**을 클릭하여 새 작업 범주가 활성 상태인지 확인합니다. 모든 항목이 예상대로 되어 있으면 이 대화 상자를 닫습니다.  
+8.  **작업 범주 관리**_server_name_ 대화 상자에서 **새로 고침** 을 클릭하여 새 작업 범주가 활성 상태인지 확인합니다. 모든 항목이 예상대로 되어 있으면 이 대화 상자를 닫습니다.  
   
 이러한 대화 상자에 대한 자세한 내용은 [작업 범주 - 작업 범주 관리](../../ssms/agent/job-categories-manage-job-categories.md) 및 [작업 범주 속성 - 새 작업 범주](../../ssms/agent/job-categories-properties-new-job-category.md)를 참조하세요.  
   
