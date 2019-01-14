@@ -36,7 +36,7 @@ ms.locfileid: "53210812"
 
 #### <a name="to-configure-distribution"></a>배포를 구성하려면 
 
-1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 배포자가 될 서버에 연결한 다음 서버 노드를 확장합니다. 게시자와 배포자가 같은 서버인 경우가 많습니다.
+1. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 배포자가 될 서버에 연결한 다음 서버 노드를 확장합니다. 게시자와 배포자가 같은 서버인 경우가 많습니다.
 
 2. **복제** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **배포 구성**을 클릭합니다.
 
@@ -65,7 +65,7 @@ ms.locfileid: "53210812"
 
 2. 게시자이기도 한 배포자에서 [sp_adddistpublisher&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)를 실행하여 `@working_directory`에 기본 스냅숏 폴더로 사용할 UNC 공유를 지정합니다.
 
-   SQL Database Managed Instance의 배포자에는 `@working_directory`에 대한 Azure storage 계정 및 `@storage_connection_string`에 대한 저장소 액세스 키를 사용합니다. 
+   SQL Database Managed Instance의 배포자에는 `@working_directory`에 대한 Azure storage 계정 및 `@storage_connection_string`에 대한 스토리지 액세스 키를 사용합니다. 
 
 3. 게시자에서 [sp_replicationdboption&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)을 실행합니다. 이때 `@dbname`에 게시할 데이터베이스를 지정하고 `@optname`에 복제 유형을 지정하며 `@value`에 `true` 값을 지정합니다.
 
@@ -79,7 +79,7 @@ ms.locfileid: "53210812"
 
 2. 배포자에서 [sp_adddistpublisher&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)를 실행하여 `@working_directory`에 기본 스냅숏 폴더로 사용할 UNC 공유를 지정합니다. 게시자에 연결할 때 배포자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하면 `@security_mode`에 `0` 값을 지정하고 `@login` 및 `@password`에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 정보를 지정해야 합니다.
 
-   SQL Database Managed Instance의 배포자에는 `@working_directory`에 대한 Azure storage 계정 및 `@storage_connection_string`에 대한 저장소 액세스 키를 사용합니다. 
+   SQL Database Managed Instance의 배포자에는 `@working_directory`에 대한 Azure storage 계정 및 `@storage_connection_string`에 대한 스토리지 액세스 키를 사용합니다. 
 
 3. master 데이터베이스의 게시자에서 [sp_adddistributor&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)를 실행합니다. 이때 `@password`에 1단계에서 사용한 강력한 암호를 지정합니다. 이 암호는 배포자에 연결할 때 게시자에서 사용됩니다.
 

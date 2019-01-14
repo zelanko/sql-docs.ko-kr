@@ -16,12 +16,12 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f9f106af7d3464ca1b0f2047fd86e2670389d821
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 207f934a9fba6e60bf1903544b12c88b4924dc23
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822597"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135813"
 ---
 # <a name="change-publication-and-article-properties"></a>게시 및 아티클 속성 변경
   게시 생성 후 대부분의 게시 및 아티클 속성을 변경할 수 있지만 일부 속성을 변경하려면 스냅숏을 다시 생성하거나 구독을 다시 초기화해야 합니다. 이 항목에서는 변경 시 이러한 두 가지 동작 중 하나 또는 모두가 필요한 모든 속성에 대한 정보를 제공합니다.  
@@ -93,7 +93,7 @@ ms.locfileid: "52822597"
 |대상 테이블 소유자를 변경합니다.|**sp_changemergearticle**|**destination_owner**|새 스냅숏<br /><br /> 구독을 다시 초기화합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [관리&#40;복제&#41;](../administration/administration-replication.md)   
+ [복제 관리 FAQ](../administration/frequently-asked-questions-for-replication-administrators.md)   
  [스냅숏 만들기 및 적용](../create-and-apply-the-snapshot.md)   
  [구독 다시 초기화](../reinitialize-subscriptions.md)   
  [sp_addmergefilter&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)   

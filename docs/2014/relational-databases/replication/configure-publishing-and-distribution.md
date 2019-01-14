@@ -14,12 +14,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 013e2234b33d9277cabb60d95bf2c8db783e93cf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
-ms.translationtype: HT
+ms.openlocfilehash: 557c3eb76dbaba037c289b93bc80bb1314e4d106
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350073"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135863"
 ---
 # <a name="configure-publishing-and-distribution"></a>게시 및 배포 구성
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 게시 및 배포를 구성하는 방법에 대해 설명합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "53350073"
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
- 자세한 내용은 [안전한 배포&#40;복제&#41;](security/secure-deployment-replication.md)를 참조하세요.  
+ 자세한 내용은 [안전한 복제 배포](security/view-and-modify-replication-security-settings.md)합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  새 게시 마법사나 배포 구성 마법사를 사용하여 배포를 구성합니다. 배포자를 구성한 다음 **배포자 속성 - \<배포자>** 대화 상자에서 속성을 확인하고 수정합니다. **db_owner** 고정 데이터베이스 역할의 멤버가 게시를 만들 수 있도록 배포자를 구성하려는 경우 또는 게시자가 아닌 원격 배포자를 구성하려는 경우 배포 구성 마법사를 사용합니다.  
@@ -164,7 +164,7 @@ ms.locfileid: "53350073"
   
  [!code-vb[HowTo#rmo_vb_AddDistPub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_adddistpub)]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [배포자 및 게시자 속성 보기 및 수정](view-and-modify-distributor-and-publisher-properties.md)   
  [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
  [배포 구성](configure-distribution.md)   

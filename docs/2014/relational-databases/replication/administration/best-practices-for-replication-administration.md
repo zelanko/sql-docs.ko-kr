@@ -13,12 +13,12 @@ ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd6f263e816d74f1fe3f09902c7e806709dd6993
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823312"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134744"
 ---
 # <a name="best-practices-for-replication-administration"></a>최선의 복제 관리 방법
   복제를 구성한 후에는 복제 토폴로지 관리 방법을 이해하는 것이 중요합니다. 이 항목에서는 다양한 영역의 작업에 대한 기본적인 수행 방법과 각 영역에 대한 추가 정보를 제공하는 링크를 제공합니다. 이 항목에 제공된 최상의 수행 방법 외에 다음의 FAQ 항목을 읽고 일반적인 질문 사항과 문제점에 대해 숙지하십시오. [복제 관리자를 위한 질문과 대답](frequently-asked-questions-for-replication-administrators.md)합니다.  
@@ -121,7 +121,7 @@ ms.locfileid: "52823312"
 ## <a name="validate-data-periodically"></a>주기적으로 데이터 유효성 검사  
  복제에 대해 유효성 검사를 반드시 수행할 필요는 없지만 트랜잭션 복제 및 병합 복제에 대해 주기적으로 유효성 검사를 실행하는 것이 좋습니다. 유효성 검사를 사용하면 구독자의 데이터가 게시자의 데이터와 일치하는지 확인할 수 있습니다. 유효성 검사 성공은 검사를 수행한 시점에 게시자의 모든 변경 내용이 구독자로 복제되어(구독자에 업데이트가 지원되는 경우에는 구독자에서 게시자로도 복제됨) 두 데이터베이스가 동기화 상태에 있음을 나타냅니다.  
   
- 유효성 검사를 게시 데이터베이스의 백업 일정에 따라 수행하는 것이 좋습니다. 예를 들어 게시 데이터베이스를 일주일에 한 번 전체 백업하면 유효성 검사도 일주일에 한 번 백업이 완료된 후에 실행할 수 있습니다. 자세한 내용은 [복제된 데이터의 유효성 검사](../validate-replicated-data.md)를 참조하세요.  
+ 유효성 검사를 게시 데이터베이스의 백업 일정에 따라 수행하는 것이 좋습니다. 예를 들어 게시 데이터베이스를 일주일에 한 번 전체 백업하면 유효성 검사도 일주일에 한 번 백업이 완료된 후에 실행할 수 있습니다. 자세한 내용은 [복제된 데이터의 유효성 검사](../validate-data-at-the-subscriber.md)를 참조하세요.  
   
 ## <a name="use-agent-profiles-to-change-agent-parameters-if-necessary"></a>에이전트 프로필을 사용하여 에이전트 매개 변수 변경(필요한 경우)  
  에이전트 프로필은 복제 에이전트 매개 변수를 설정하는 편리한 방법을 제공합니다. 매개 변수를 에이전트 명령줄에서 지정할 수도 있지만 일반적으로 미리 정의된 에이전트 프로필을 사용하거나 매개 변수 값을 변경해야 할 경우에는 새 프로필을 만드는 것이 더 적합합니다. 예를 들어 병합 복제를 사용하고 구독자가 광대역 연결에서 전화 접속 연결로 이동하는 경우에는 병합 에이전트에 대해 느린 통신 연결에 더 적합한 매개 변수 집합을 사용하는 **느린 연결** 프로필을 사용하십시오. 자세한 내용은 [Replication Agent Profiles](../agents/replication-agent-profiles.md)을(를) 참조하세요.  
@@ -148,6 +148,6 @@ ms.locfileid: "52823312"
  자세한 내용은 [게시 데이터베이스의 스키마 변경](../publish/make-schema-changes-on-publication-databases.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [관리&#40;복제&#41;](administration-replication.md)  
+ [복제 관리 FAQ](frequently-asked-questions-for-replication-administrators.md)  
   
   

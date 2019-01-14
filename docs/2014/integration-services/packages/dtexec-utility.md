@@ -10,12 +10,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b51100904cfa704f9177aab9c7a0e79974cc30b6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
-ms.translationtype: HT
+ms.openlocfilehash: d30dbae5ffe7a392fc846b575a44af66246c9682
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363775"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132793"
 ---
 # <a name="dtexec-utility"></a>dtexec 유틸리티
   합니다 `dtexec` 명령 프롬프트 유틸리티를 사용 하 여 구성 및 실행 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 있습니다. `dtexec`유틸리티에서는 매개 변수, 연결, 속성, 변수, 로깅, 진행률 표시기 등의 모든 패키지 구성 및 실행 기능에 액세스할 수 있습니다. `dtexec` 유틸리티를 사용 하면 이러한 원본에서 패키지를 로드할 수: 합니다 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버,.ispac 프로젝트 파일을를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템입니다.  
@@ -157,24 +157,24 @@ dtexec /option [value] [/option [value]]...
 -   **/Ca [llerInfo]**:   
                   (선택 사항) 패키지 실행에 대한 추가 정보를 지정합니다. SQL Server 에이전트를 사용하여 패키지를 실행할 때 에이전트는 패키지 실행이 SQL Server 에이전트로 호출되었음을 나타내도록 이 인수를 설정합니다. `dtexec` 유틸리티가 명령줄로부터 실행될 경우 이 매개 변수가 무시됩니다.  
   
--   **/Checkf [ile]** *filespec*:   
+-   **/Checkf [ile]** _filespec_:   
                   (선택 사항) 집합의 `CheckpointFileName` 속성에 경로 및 파일 지정 된 패키지 *filespec*합니다. 이 파일은 패키지를 다시 시작할 때 사용됩니다. 이 옵션을 지정하고 파일 이름 값을 제공하지 않으면 패키지의 `CheckpointFileName`이 빈 문자열로 설정됩니다. 이 옵션을 지정하지 않으면 패키지의 값이 유지됩니다.  
   
--   **/Checkp [ointing]** *{on\off}*:   
+-   **/Checkp [ointing]** _{on\off}_:   
                   (선택 사항) 패키지 실행 중 패키지에서 검사점을 사용하는지 여부를 결정하는 값을 설정합니다. **on** 값에서는 실패한 패키지를 다시 실행합니다. 실패한 패키지가 다시 실행되면 런타임 엔진에서 검사점 파일을 사용하여 실패한 지점에서 패키지를 다시 시작합니다.  
   
      값을 지정하지 않고 이 옵션을 선언할 경우 기본값은 on입니다. 값을 on으로 설정한 경우 검사점 파일을 찾을 수 없으면 패키지를 실행할 수 없습니다. 이 옵션을 지정하지 않으면 패키지에 설정된 값이 유지됩니다. 자세한 내용은 [검사점을 사용하여 패키지 다시 시작](restart-packages-by-using-checkpoints.md)을 참조하세요.  
   
      **에서 /CheckPointing** dtexec 옵션 설정에 해당 하는 합니다 `SaveCheckpoints` True 패키지의 속성 및 `CheckpointUsage` 속성을 Always.  
   
--   **/Com [mandFile]** *filespec*:   
+-   **/Com [mandFile]** _filespec_:   
                   (선택 사항) `dtexec`와 함께 실행되는 명령 옵션을 지정합니다. *filespec* 에 지정된 파일을 열고 이 파일에서 EOF가 검색될 때까지 옵션을 읽습니다. *filespec* 는 텍스트 파일입니다. *filespec* 인수는 패키지 실행과 연관시킬 명령 파일의 이름과 경로를 지정합니다.  
   
--   **/Conf [igFile]** *filespec*: (선택 사항) 값을 추출할 구성 파일을 지정합니다. 이 옵션을 사용하면 패키지의 디자인 타임에 지정한 구성과 다르게 런타임 구성을 설정할 수 있습니다. 다른 구성 설정을 XML 구성 파일에 저장한 다음 패키지를 실행하기 전에 **ConfigFile** 옵션을 사용하여 이 설정을 로드할 수 있습니다.  
+-   **/Conf [igFile]** _filespec_: (선택 사항) 값을 추출할 구성 파일을 지정합니다. 이 옵션을 사용하면 패키지의 디자인 타임에 지정한 구성과 다르게 런타임 구성을 설정할 수 있습니다. 다른 구성 설정을 XML 구성 파일에 저장한 다음 패키지를 실행하기 전에 **ConfigFile** 옵션을 사용하여 이 설정을 로드할 수 있습니다.  
   
      **/ConfigFile** 옵션을 사용하면 디자인 타임에 지정하지 않은 추가 구성을 런타임에 로드할 수 있습니다. 그러나 디자인 타임에도 지정한 구성 값을 **/ConfigFile** 옵션을 사용하여 바꿀 수는 없습니다. 패키지 구성이 적용되는 방법을 이해하려면 [Package Configurations](../package-configurations.md)을 참조하십시오.  
   
--   **/Conn [ection]** *id_or_name; connection_string [[; id_or_name; connection_string]...]* :   
+-   **/Conn [ection]** _id_or_name; connection_string [[; id_or_name; connection_string]...]_ :   
                   (선택 사항) 이름 또는 GUID가 지정된 연결 관리자가 패키지에 있음을 지정하고 연결 문자열을 지정합니다.  
   
      이 옵션을 사용하려면 두 매개 변수 모두를 지정해야 합니다. 즉, *id_or_name* 인수에 연결 관리자 이름 또는 GUID를 제공하고 *connection_string* 인수에 올바른 연결 문자열을 지정해야 합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](../connection-manager/integration-services-ssis-connections.md)을 참조하세요.  
@@ -222,16 +222,16 @@ dtexec /option [value] [/option [value]]...
   
      에 대 한 예제는 **/ConsoleLog** 옵션을 **주의** 섹션.  
   
--   **/D [ts]** *package_path*:   
+-   **/D [ts]** _package_path_:   
                   (선택 사항) SSIS 패키지 저장소에서 패키지를 로드합니다. SSIS 패키지 저장소에 저장된 패키지는 레거시 패키지 배포 모델을 사용하여 배포됩니다. 프로젝트 배포 모델을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 패키지를 실행하려면 `/ISServer` 옵션을 사용합니다. 패키지 및 프로젝트 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)를 참조하십시오.  
   
      *package_path* 인수는 SSIS 패키지 저장소의 루트에서 시작하여 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지의 상대 경로를 지정하고 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지의 이름을 포함합니다. *package_path* 인수에 지정된 경로나 파일 이름에 공백이 있는 경우 *package_path* 인수를 따옴표로 묶어야 합니다.  
   
      `/DTS` 옵션은 `/File` 또는 `/SQL` 옵션과 함께 사용할 수 없습니다. 여러 개의 옵션을 지정하는 경우 `dtexec`는 실패합니다.  
   
--   **/De [crypt]***암호*:   (선택 사항) 암호가 암호화된 패키지를 로드할 때 사용할 해독 암호를 설정합니다.  
+-   **/De [crypt]**_암호_:   (선택 사항) 암호가 암호화된 패키지를 로드할 때 사용할 해독 암호를 설정합니다.  
   
--   **/Dump** *오류 코드*:  
+-   **/Dump** _오류 코드_:  
                   패키지를 실행 하는 동안 하나 이상의 지정 된 이벤트가 발생할 때 선택적 만듭니다 디버그 덤프 파일.mdmp 및.tmp입니다. *error code* 인수는 시스템에서 디버그 덤프 파일을 만들도록 트리거할 이벤트 코드 유형(오류, 경고 또는 정보)을 지정합니다. 여러 이벤트 코드를 지정하려면 각 *error code* 인수를 세미콜론(;)으로 구분합니다. 이때 *error code* 인수를 따옴표로 묶으면 안 됩니다.  
   
      다음 예에서는 DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER 오류가 발생할 때 디버그 덤프 파일을 생성합니다.  
@@ -274,7 +274,7 @@ dtexec /option [value] [/option [value]]...
   
      이 매개 변수는 SQL Server 에이전트에서 사용됩니다.  
   
--   **/F [ile]** *filespec*:   
+-   **/F [ile]** _filespec_:   
                   (선택 사항) 파일 시스템에 저장된 패키지를 로드합니다. 파일 시스템에 저장된 패키지는 레거시 패키지 배포 모델을 사용하여 배포됩니다. 프로젝트 배포 모델을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 패키지를 실행하려면 `/ISServer` 옵션을 사용합니다. 패키지 및 프로젝트 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)를 참조하십시오.  
   
      *filespec* 인수는 패키지의 경로와 파일 이름을 지정합니다. 경로는 UNC(Universal Naming Convention) 경로나 로컬 경로로 지정할 수 있습니다. *filespec* 인수에 지정된 경로나 파일 이름에 공백이 있는 경우 *filespec* 인수를 따옴표로 묶어야 합니다.  
@@ -300,7 +300,7 @@ dtexec /option [value] [/option [value]]...
   
      이 매개 변수는 SQL Server 에이전트에서 사용됩니다.  
   
--   **/L [ogger]** *classid_orprogid; configstring*:  
+-   **/L [ogger]** _classid_orprogid; configstring_:  
                   (선택 사항) [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 실행에 하나 이상의 로그 공급자를 연결합니다. *classid_orprogid* 매개 변수는 로그 공급자를 지정하며 클래스 GUID로 지정될 수 있습니다. *configstring* 은 로그 공급자를 구성하는 데 사용되는 문자열입니다.  
   
      다음 목록에서는 사용 가능한 로그 공급자를 보여 줍니다.  
@@ -335,13 +335,13 @@ dtexec /option [value] [/option [value]]...
   
         -   ClassID: {AFED6884-619C-484F-9A09-F42D56E1A7EA}  
   
--   **/M [axConcurrent]** *concurrent_executables*:  
+-   **/M [axConcurrent]** _concurrent_executables_:  
                   (선택 사항) 패키지에서 동시에 실행할 수 있는 실행 파일 수를 지정합니다. 값은 음수가 아닌 정수 또는 -1로 지정해야 합니다. -1 값은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 에서 패키지를 실행하는 컴퓨터의 총 프로세서 수에 2를 더한 값과 같은 동시에 실행 가능한 최대 실행 파일 수를 허용함을 의미합니다.  
   
--   **/Pack [age]** *PackageName*:  
+-   **/Pack [age]** _PackageName_:  
                   (선택 사항) 실행되는 패키지를 지정합니다. 이 매개 변수는 주로 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서 패키지를 실행할 때 사용됩니다.  
   
--   **/P [assword]** *암호*:  
+-   **/P [assword]** _암호_:  
                   (선택 사항) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증으로 보호되는 패키지를 검색할 수 있도록 합니다. 이 옵션은 **/User** 옵션과 함께 사용합니다. **/Password** 옵션을 생략하고 **/User** 옵션을 사용하면 빈 암호가 사용됩니다. *password* 값은 따옴표로 묶을 수 있습니다.  
   
     > [!IMPORTANT]  
@@ -371,13 +371,13 @@ dtexec /option [value] [/option [value]]...
     /parameter CM.SourceServer.ServerName;.  
     ```  
   
--   **/Proj [ect]** *ProjectFile*:  
+-   **/Proj [ect]** _ProjectFile_:  
                   (선택 사항) 실행되는 패키지를 검색할 프로젝트를 지정합니다. *ProjectFile* 인수는 .ispac 파일 이름을 지정합니다. 이 매개 변수는 주로 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서 패키지를 실행할 때 사용됩니다.  
   
--   **/Rem** *주석*:  
+-   **/Rem** _주석_:  
                   (선택 사항) 명령 프롬프트 또는 명령 파일에 설명을 포함합니다. 이 인수는 선택 사항입니다. *comment* 값은 따옴표로 묶여 있거나 공백이 없는 문자열이어야 합니다. 인수를 지정하지 않으면 빈 줄이 삽입됩니다. *comment* 값은 명령을 읽어 들이는 단계를 수행하는 동안 삭제됩니다.  
   
--   **/Rep [orting]** *수준* [*; event_guid_or_name*[*; event_guid_or_name*[...]]: (선택 사항) 보고할 메시지의 유형을 지정합니다. *level* 에 대해 사용할 수 있는 보고 옵션은 다음과 같습니다.  
+-   **/Rep [orting]** _수준_ [*; event_guid_or_name*[*; event_guid_or_name*[...]]: (선택 사항) 보고할 메시지의 유형을 지정합니다. *level* 에 대해 사용할 수 있는 보고 옵션은 다음과 같습니다.  
   
      **N** - 보고하지 않습니다.  
   
@@ -434,7 +434,7 @@ dtexec /option [value] [/option [value]]...
   
      `/Ser[ver]` 옵션이 지정된 경우 `/ISServer` 옵션이 필요합니다.  
   
--   **/SQ [L]** *package_path*:  
+-   **/SQ [L]** _package_path_:  
                   `msdb` 데이터베이스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 패키지를 로드합니다. `msdb` 데이터베이스에 저장된 패키지는 패키지 배포 모델을 사용하여 배포됩니다. 프로젝트 배포 모델을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 패키지를 실행하려면 `/ISServer` 옵션을 사용합니다. 패키지 및 프로젝트 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)를 참조하십시오.  
   
      *package_path* 인수는 검색할 패키지의 이름을 지정합니다. 경로에 폴더가 포함된 경우 백슬래시("\\")로 끝납니다. *package_path* 값은 따옴표로 묶을 수 있습니다. *package_path* 인수에 지정된 경로나 파일 이름에 공백이 있는 경우 *package_path* 인수를 따옴표로 묶어야 합니다.  
@@ -454,7 +454,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Su [m]**: (선택 사항) 다음 구성 요소에서 받을 행 수를 포함하는 증분 카운터를 표시합니다.  
   
--   **/U [ser]** *user_name*:  
+-   **/U [ser]** _user_name_:  
                   (선택 사항) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증으로 보호되는 패키지를 검색할 수 있도록 합니다. 이 옵션은 `/SQL` 옵션을 지정한 경우에만 사용합니다. *user_name* 값은 따옴표로 묶을 수 있습니다.  
   
     > [!IMPORTANT]  
@@ -463,7 +463,7 @@ dtexec /option [value] [/option [value]]...
 -   **/Va [lidate]**:  
                   (선택 사항) 유효성 검사 단계 후에 실제로 패키지를 실행하지 않고 패키지 실행을 중지합니다. 유효성 검사 중 사용 된 **/WarnAsError** 옵션을 사용 하면 `dtexec` 경고를 오류로 처리 하려면 유효성 검사 중 경고가 발생 하면 패키지가 실패 하는 따라서 합니다.  
   
--   **/Verifyb [uild]** *주요*[*; minor*[*; 빌드*]]: (선택 사항) 확인 단계 동안 *major*, *minor*및 *build* 인수에 지정된 빌드 번호에 대해 패키지의 빌드 번호를 확인합니다. 일치하지 않을 경우 패키지가 실행되지 않습니다.  
+-   **/Verifyb [uild]** _주요_[*; minor*[*; 빌드*]]: (선택 사항) 확인 단계 동안 *major*, *minor*및 *build* 인수에 지정된 빌드 번호에 대해 패키지의 빌드 번호를 확인합니다. 일치하지 않을 경우 패키지가 실행되지 않습니다.  
   
      값은 정수(Long)입니다. 인수의 형식으로 3가지 중 하나를 사용할 수 있으며 *major* 값은 항상 필요합니다.  
   
@@ -473,7 +473,7 @@ dtexec /option [value] [/option [value]]...
   
     -   *major*; *minor*; *build*  
   
--   **/Verifyp [ackageID]** *packageID*:  
+-   **/Verifyp [ackageID]** _packageID_:  
                   (선택 사항) 실행할 패키지의 GUID를 *package_id* 인수에 지정된 값과 비교하여 확인합니다.  
   
 -   **/Verifys [igned]**:  
@@ -485,9 +485,9 @@ dtexec /option [value] [/option [value]]...
     > [!NOTE]  
     >  선택적 **BlockedSignatureStates** 레지스트리 값에서 설정한 디지털 서명 옵션 보다 더 제한적인 설정을 지정할 수 있습니다 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 이 든 여 `dtexec` 명령줄입니다. 이 경우 더 제한적인 설정이 다른 설정보다 우선합니다.  
   
--   **/Verifyv [ersionID]** *versionID*: (선택 사항) 패키지 유효성 검사 단계 동안 실행할 패키지의 버전 GUID를 *version_id* 인수에 지정된 값과 비교하여 확인합니다.  
+-   **/Verifyv [ersionID]** _versionID_: (선택 사항) 패키지 유효성 검사 단계 동안 실행할 패키지의 버전 GUID를 *version_id* 인수에 지정된 값과 비교하여 확인합니다.  
   
--   **/Vlog** *[Filespec]*: (선택 사항) 패키지를 디자인할 때 사용하도록 설정한 로그 공급자에 모든 Integration Services 패키지 이벤트를 기록합니다. Integration Services가 텍스트 파일용 로그 공급자를 사용하고 지정된 텍스트 파일에 로그 이벤트를 기록하도록 만들려면 경로 및 파일 이름을 *Filespec* 매개 변수로 포함합니다.  
+-   **/Vlog** _[Filespec]_: (선택 사항) 패키지를 디자인할 때 사용하도록 설정한 로그 공급자에 모든 Integration Services 패키지 이벤트를 기록합니다. Integration Services가 텍스트 파일용 로그 공급자를 사용하고 지정된 텍스트 파일에 로그 이벤트를 기록하도록 만들려면 경로 및 파일 이름을 *Filespec* 매개 변수로 포함합니다.  
   
      *Filespec* 매개 변수를 포함하지 않으면 Integration Services가 텍스트 파일용 로그 공급자를 사용하지 않습니다. Integration Services는 패키지를 디자인할 때 사용하도록 설정한 로그 공급자에만 로그 이벤트를 기록합니다.  
   

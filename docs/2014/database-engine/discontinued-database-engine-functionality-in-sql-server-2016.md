@@ -33,12 +33,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 27eb70cb687553b11fefae423a7544609836c5c8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
-ms.translationtype: HT
+ms.openlocfilehash: fc6b593694feda96032cb0af45d9b3bdb4cc2a8a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357019"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132621"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>SQL Server 2014에서 지원되지 않는 데이터베이스 엔진 기능
   이 항목에서는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 에서 더 이상 사용할 수 없는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]기능에 대해 설명합니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "53357019"
 |시스템 테이블|sys.database_principal_aliases|별칭 대신 역할을 사용해야 합니다.|  
 |Transact-SQL|`RAISERROR` 형식의 `RAISERROR integer 'string'`는 더 이상 사용되지 않습니다.|현재 사용 하 여 문을 다시 작성 **raiserror (...)**  구문입니다.|  
 |Transact-SQL 구문|`COMPUTE / COMPUTE BY`|`ROLLUP` 사용|  
-|Transact-SQL 구문|이용 **\* =** 및 **=\***|ANSI 조인 구문을 사용합니다. 자세한 내용은 [FROM (Transact-SQL)](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)을 참조하십시오.|  
+|Transact-SQL 구문|이용 **\* =** 고 **=&#42;**|ANSI 조인 구문을 사용합니다. 자세한 내용은 [FROM (Transact-SQL)](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)을 참조하십시오.|  
 |XEvents|databases_data_file_size_changed, databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Database_file_size_change database_file_size_change 이벤트로 대체<br /><br /> database_file_size_change event<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **추가 XEvent 변경**  

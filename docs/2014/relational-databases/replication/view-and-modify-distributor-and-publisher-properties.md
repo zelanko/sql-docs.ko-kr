@@ -15,12 +15,12 @@ ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 90eb7b166316533b68fdc128fb6ecc65e1820efb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
-ms.translationtype: HT
+ms.openlocfilehash: e4049cfa36020431e9cae8cbe2431c1c270d5deb
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361335"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131143"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>게시자 및 배포자 속성 보기 및 수정
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 배포자 및 게시자 속성을 보고 수정하는 방법에 대해 설명합니다.  
@@ -197,13 +197,13 @@ ms.locfileid: "53361335"
   
  [!code-vb[HowTo#rmo_vb_ChangeDistPub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changedistpub)]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [복제 관리 개체 개념](concepts/replication-management-objects-concepts.md)   
  [게시 및 배포 해제](disable-publishing-and-distribution.md)   
  [배포 구성](configure-distribution.md)   
  [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [배포자 및 게시자 정보 스크립트](administration/distributor-and-publisher-information-script.md)   
  [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
- [게시자에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
+ [정보 및 복제 모니터를 사용 하 여 수행할 작업 보기](monitor/view-information-and-perform-tasks-replication-monitor.md)  
   
   

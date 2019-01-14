@@ -20,12 +20,12 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8ffe88de8533db5cf9bbec7936d30e95d64b1726
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
-ms.translationtype: HT
+ms.openlocfilehash: a872057f354b289d65a6a3a730e3a63afd7af0d4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640774"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133913"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine-sql-server-configuration-manager"></a>데이터베이스 엔진에 암호화 연결 사용(SQL Server 구성 관리자)
   이 항목에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에 대한 인증서를 지정하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 암호화된 연결을 사용하도록 설정하는 방법에 대해 설명합니다. 서버 컴퓨터에 구축된 인증서가 있어야 하며 클라이언트 컴퓨터가 해당 인증서의 루트 인증 기관을 트러스트하도록 설정되어 있어야 합니다. 구축은 인증서를 Windows로 가져와서 설치하는 프로세스입니다.  
@@ -83,9 +83,9 @@ ms.locfileid: "52640774"
   
 ###  <a name="ConfigureServerConnections"></a> 암호화된 연결을 허용하도록 서버를 구성하려면  
   
-1.  **SQL Server 구성 관리자**에서 **SQL Server 네트워크 구성**을 펼치고 *\<서버 인스턴스>***에 대한 프로토콜**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
+1.  **SQL Server 구성 관리자**에서 **SQL Server 네트워크 구성**을 펼치고 _\<서버 인스턴스>_**에 대한 프로토콜**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
-2.  에 **에 대 한 프로토콜 * * *\<인스턴스 이름 >* **속성** 대화 상자의 **인증서** 탭, 아래쪽 드롭다운에서 원하는 인증서를 선택 합니다. 에 대 한 합니다 **인증서** 상자를 선택한 다음 클릭 **확인**합니다.  
+2.  에 **에 대 한 프로토콜**_\<인스턴스 이름 >_ **속성** 대화 상자의 합니다 **인증서** 탭을 선택 합니다 아래로 드롭다운에서 인증서 필요 합니다 **인증서** 상자를 선택한 다음 클릭 **확인**합니다.  
   
 3.  **플래그** 탭의 **ForceEncryption** 상자에서 **예**를 선택한 다음 **확인** 을 클릭하여 대화 상자를 닫습니다.  
   

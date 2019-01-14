@@ -17,12 +17,12 @@ ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 16249e9b9a1af56793d30cef48a9e1573f883c57
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e85b1a85ab9415c76fdaeee5453c992994a286ba
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371195"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136093"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port-sql-server-configuration-manager"></a>특정 TCP 포트로 수신하도록 서버 구성(SQL Server 구성 관리자)
   이 항목에서는 SQL Server 구성 관리자를 사용하여 특정 고정 포트에서 수신할 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스를 구성하는 방법에 대해 설명합니다. 설정된 경우 기본 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스는 TCP 포트 1433에서 수신합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 의 명명된 인스턴스는 동적 포트로 구성됩니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 시작되면 해당 인스턴스가 사용 가능한 포트를 선택함을 의미합니다. 방화벽을 통해 명명된 인스턴스에 연결할 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 특정 포트에서 수신하도록 구성하면 방화벽에서 해당 포트를 열 수 있습니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "53371195"
   
 3.  **TCP 동적 포트** 대화 상자에 **0**이 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 동적 포트에서 수신한다는 표시이므로 0을 삭제합니다.  
   
-4.  **IP***n* **속성** 영역 상자의 **TCP 포트** 상자에서 이 IP 주소가 수신 대기할 포트 번호를 입력한 다음 **확인**을 클릭합니다.  
+4.   **IP**_n_ **속성** 영역의 **TCP 포트** 상자에 이 IP 주소가 수신할 포트 번호를 입력한 다음 **확인**을 클릭합니다.  
   
 5.  콘솔 창에서 **SQL Server 서비스**를 클릭합니다.  
   

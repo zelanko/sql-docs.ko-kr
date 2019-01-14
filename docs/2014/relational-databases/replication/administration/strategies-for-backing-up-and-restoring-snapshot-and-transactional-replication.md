@@ -20,12 +20,12 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 43be13027d1460ec407239140cd4306be76a445e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823518"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125233"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>스냅숏 및 트랜잭션 복제의 백업 및 복원을 위한 전략
   스냅숏 및 트랜잭션 복제에 대한 백업 및 복원 전략을 설계할 때 다음 세 가지 영역을 고려해야 합니다.  
@@ -117,7 +117,7 @@ ms.locfileid: "52823518"
   
          배포 에이전트를 실행하는 방법은 [복제 에이전트 시작 및 중지&#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 및 [복제 에이전트 실행 파일 개념](../concepts/replication-agent-executables-concepts.md)을 참조하세요.  
   
-         명령을 확인하는 방법은 [배포 데이터베이스의 복제된 명령 및 기타 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) 및 [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)을 참조하세요.  
+         명령을 확인 하는 방법에 대 한 자세한 내용은 참조 하세요. [복제 된 명령 및 기타 정보 배포 데이터베이스의 &#40;복제 TRANSACT-SQL 프로그래밍&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) 하 고 [정보 보기 복제 모니터를 사용 하 여 작업을 수행 하 고](../monitor/view-information-and-perform-tasks-replication-monitor.md)입니다.  
   
     2.  게시자, 배포자 및 구독자에서 복제 구성을 제거한 후 구성을 다시 만듭니다. 구독을 다시 만들 때 구독자에 이미 데이터가 있다고 지정합니다. 이로써 복원이 완료됩니다.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "52823518"
   
          배포 에이전트를 실행하는 방법은 [복제 에이전트 시작 및 중지&#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 및 [복제 에이전트 실행 파일 개념](../concepts/replication-agent-executables-concepts.md)을 참조하세요.  
   
-         명령을 확인하는 방법은 [배포 데이터베이스의 복제된 명령 및 기타 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) 및 [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)을 참조하세요.  
+         명령을 확인 하는 방법에 대 한 자세한 내용은 참조 하세요. [복제 된 명령 및 기타 정보 배포 데이터베이스의 &#40;복제 TRANSACT-SQL 프로그래밍&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) 하 고 [정보 보기 복제 모니터를 사용 하 여 작업을 수행 하 고](../monitor/view-information-and-perform-tasks-replication-monitor.md)입니다.  
   
     2.  [tablediff 유틸리티](../../../tools/tablediff-utility.md) 또는 다른 도구를 사용하여 게시자를 구독자와 수동으로 동기화합니다. 이렇게 하면 게시 데이터베이스 백업에 포함되지 않은 데이터를 구독 데이터베이스에서 복구할 수 있습니다. c 단계로 이동합니다.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "52823518"
   
      배포 에이전트를 실행하는 방법은 [복제 에이전트 시작 및 중지&#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 및 [복제 에이전트 실행 파일 개념](../concepts/replication-agent-executables-concepts.md)을 참조하세요.  
   
-     명령을 확인하는 방법은 [배포 데이터베이스의 복제된 명령 및 기타 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) 및 [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md)을 참조하세요.  
+     명령을 확인 하는 방법에 대 한 자세한 내용은 참조 하세요. [복제 된 명령 및 기타 정보 배포 데이터베이스의 &#40;복제 TRANSACT-SQL 프로그래밍&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) 하 고 [정보 보기 복제 모니터를 사용 하 여 작업을 수행 하 고](../monitor/view-information-and-perform-tasks-replication-monitor.md)입니다.  
   
 3.  지연 업데이트 구독을 사용하는 경우 각 구독자에 연결하고 구독 데이터베이스에 있는 [MSreplication_queue&#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/msreplication-queue-transact-sql) 테이블의 모든 행을 삭제합니다. 4단계로 이동합니다.  
   
@@ -285,7 +285,7 @@ ms.locfileid: "52823518"
   
     2.  모든 게시의 유효성을 검사하도록 표시합니다. 유효성 검사에 실패한 모든 구독을 다시 초기화합니다. 복구가 완료되었습니다.  
   
-         유효성 검사에 대한 자세한 내용은 [Validate Replicated Data](../validate-replicated-data.md)를 참조하십시오. 다시 초기화에 대한 자세한 내용은 [구독 다시 초기화](../reinitialize-subscriptions.md)를 참조하세요.  
+         유효성 검사에 대한 자세한 내용은 [Validate Replicated Data](../validate-data-at-the-subscriber.md)를 참조하십시오. 다시 초기화에 대한 자세한 내용은 [구독 다시 초기화](../reinitialize-subscriptions.md)를 참조하세요.  
   
 #### <a name="msdb-database-distributor"></a>msdb 데이터베이스(배포자)  
   
@@ -301,7 +301,7 @@ ms.locfileid: "52823518"
   
 4.  모든 게시의 유효성을 검사하도록 표시합니다. 유효성 검사에 실패한 모든 구독을 다시 초기화합니다. 복구가 완료되었습니다.  
   
-     유효성 검사에 대한 자세한 내용은 [Validate Replicated Data](../validate-replicated-data.md)를 참조하십시오. 다시 초기화에 대한 자세한 내용은 [구독 다시 초기화](../reinitialize-subscriptions.md)를 참조하세요.  
+     유효성 검사에 대한 자세한 내용은 [Validate Replicated Data](../validate-data-at-the-subscriber.md)를 참조하십시오. 다시 초기화에 대한 자세한 내용은 [구독 다시 초기화](../reinitialize-subscriptions.md)를 참조하세요.  
   
 #### <a name="master-database-distributor"></a>master 데이터베이스(배포자)  
   

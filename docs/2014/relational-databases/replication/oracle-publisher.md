@@ -12,12 +12,12 @@ ms.assetid: 019b7c49-dcca-445d-8969-5982a8ccbc1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ad7a226b3c4e3fa9aa593e82e976ff94dd4fe557
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: b38b397c0a2128aed5ebaba0b1367ca14ebdcd09
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753875"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130253"
 ---
 # <a name="oracle-publisher"></a>Oracle 게시자
    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 스냅숏과 트랜잭션 복제를 사용하여 Oracle 데이터베이스에서 데이터를 게시할 수 있습니다. 자세한 내용은 [Oracle 게시 개요](non-sql/oracle-publishing-overview.md)를 참조하세요.  
@@ -37,8 +37,8 @@ ms.locfileid: "52753875"
 > [!NOTE]  
 >  마법사가 실행 중인 서버가 배포자로 구성되어 있지 않으면 지금 배포자로 구성하라는 메시지가 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Oracle 데이터베이스에서 게시 만들기](publish/create-a-publication-from-an-oracle-database.md)   
- [속성 참조&#40;복제&#41;](properties-reference-replication.md)  
+
   
   

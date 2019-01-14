@@ -14,35 +14,17 @@ ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2e3422e1fc41069bcb1f5f88c841212b5415cacd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: d1a8989492c9efb670b00bda00dbfa757c549fca
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777565"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130273"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>FTP를 통해 스냅숏 배달
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 FTP를 통해 스냅숏을 배달하는 방법에 대해 설명합니다.  
   
- **항목 내용**  
-  
--   **시작하기 전 주의 사항:**  
-  
-     [제한 사항](#Restrictions)  
-  
-     [필수 구성 요소](#Prerequisites)  
-  
-     [보안](#Security)  
-  
--   **다음을 사용하여 FTP를 통해 스냅숏을 배달하려면**  
-  
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
-  
-###  <a name="Restrictions"></a> 제한 사항  
+##  <a name="Restrictions"></a> 제한 사항  
   
 -   스냅숏 에이전트는 지정한 디렉터리에 대해 쓰기 권한이 있어야 하며 배포 에이전트 또는 병합 에이전트는 읽기 권한이 있어야 합니다. 끌어오기 구독을 사용하는 경우 공유 디렉터리를 \\\ftpserver\home\snapshots과 같이 UNC(Universal Naming Convention) 경로로 지정해야 합니다. 자세한 내용은 [스냅숏 폴더 보안 설정](../security/secure-the-snapshot-folder.md)을 참조하세요.  
   
@@ -62,26 +44,16 @@ ms.locfileid: "52777565"
   
 #### <a name="to-specify-ftp-information"></a>FTP 정보를 지정하려면  
   
-1.  **게시 속성 - \<게시>** 대화 상자의 다음 두 페이지 중 하나에서 **구독자가 FTP(파일 전송 프로토콜)를 사용하여 스냅숏 파일을 다운로드하도록 허용**을 선택합니다.  
-  
-    -    **FTP 스냅숏** 페이지 - [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]이전 버전을 실행하는 구독자에 대한 병합 게시와 스냅숏 및 트랜잭션 게시의 경우  
-  
-    -   **FTP 스냅숏 및 인터넷** 페이지 - [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이후 버전을 실행하는 게시자의 병합 게시의 경우  
-  
-2.  **FTP 서버 이름**, **포트 번호**, **FTP 루트 폴더에서의 경로**, **로그인**및 **암호**에 대한 값을 지정합니다.  
-  
-     예를 들어 FTP 서버 루트가 \\\ftpserver\home이고 스냅숏을 \\\ftpserver\home\snapshots에 저장하려면 **FTP 루트 폴더에서의 경로** 속성에 대해 \snapshots\ftp를 지정합니다. 복제는 스냅숏 파일을 만들 때 스냅숏 폴더 경로에 'ftp'를 추가합니다.  
-  
-3.  스냅숏 에이전트가 스냅숏 파일을 2단계에서 지정한 디렉터리에 쓰도록 지정합니다. 예를 들어 스냅숏 에이전트가 스냅숏 파일을 \\\ftpserver\home\snapshots\ftp에 쓰도록 하려면 다음 두 위치 중 하나에 \\\ftpserver\home\snapshots 경로를 지정해야 합니다.  
-  
-    -   이 게시와 연결된 배포자의 기본 스냅숏 위치  
-  
-         기본 스냅숏 위치 지정 방법은 [기본 스냅숏 위치 지정&#40;SQL Server Management Studio&#41;](../specify-the-default-snapshot-location-sql-server-management-studio.md)을 참조하세요.  
-  
-    -   이 게시의 대체 스냅숏 폴더 위치. 대체 위치는 스냅숏이 압축된 경우에 필요합니다.  
-  
-         **게시 속성 - \<게시>** 대화 상자의 스냅숏 페이지에 있는 **다음 폴더에 파일 보관** 텍스트 상자에 경로를 입력합니다. 대체 스냅숏 폴더 위치에 대한 자세한 내용은 [Alternate Snapshot Folder Locations](../alternate-snapshot-folder-locations.md)를 참조하세요.  
-  
+1.  **게시 속성 - \<게시>** 대화 상자의 다음 두 페이지 중 하나에서 **구독자가 FTP(파일 전송 프로토콜)를 사용하여 스냅숏 파일을 다운로드하도록 허용**을 선택합니다.   
+    -    **FTP 스냅숏** 페이지 - [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]이전 버전을 실행하는 구독자에 대한 병합 게시와 스냅숏 및 트랜잭션 게시의 경우    
+    -   **FTP 스냅숏 및 인터넷** 페이지 - [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이후 버전을 실행하는 게시자의 병합 게시의 경우    
+2.  **FTP 서버 이름**, **포트 번호**, **FTP 루트 폴더에서의 경로**, **로그인**및 **암호**에 대한 값을 지정합니다.    
+     예를 들어 FTP 서버 루트가 \\\ftpserver\home이고 스냅숏을 \\\ftpserver\home\snapshots에 저장하려면 **FTP 루트 폴더에서의 경로** 속성에 대해 \snapshots\ftp를 지정합니다. 복제는 스냅숏 파일을 만들 때 스냅숏 폴더 경로에 'ftp'를 추가합니다.    
+3.  스냅숏 에이전트가 스냅숏 파일을 2단계에서 지정한 디렉터리에 쓰도록 지정합니다. 예를 들어 스냅숏 에이전트가 스냅숏 파일을 \\\ftpserver\home\snapshots\ftp에 쓰도록 하려면 다음 두 위치 중 하나에 \\\ftpserver\home\snapshots 경로를 지정해야 합니다.    
+    -   이 게시와 연결된 배포자의 기본 스냅숏 위치    
+         기본 스냅숏 위치를 지정 하는 방법에 대 한 자세한 내용은 참조 하세요. [기본 스냅숏 위치 지정](../snapshot-options.md#snapshot-folder-locations)합니다.    
+    -   이 게시의 대체 스냅숏 폴더 위치. 대체 위치는 스냅숏이 압축된 경우에 필요합니다.    
+         **게시 속성 - \<게시>** 대화 상자의 스냅숏 페이지에 있는 **다음 폴더에 파일 보관** 텍스트 상자에 경로를 입력합니다.   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
@@ -89,16 +61,11 @@ ms.locfileid: "52777565"
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 대한 FTP 스냅숏 배달을 설정하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)을 실행합니다. 지정할 **@publication**를 값 `true` 에 대 한 **@enabled_for_internet**, 적절 한 다음 매개 변수 값:  
-  
-    -   **@ftp_address** - 스냅숏을 배달하는 데 사용되는 FTP 서버의 주소입니다.  
-  
-    -   (옵션) **@ftp_port** - FTP 서버에서 사용되는 포트입니다.  
-  
-    -   (옵션) **@ftp_subdirectory** - FTP 로그온에 할당된 기본 FTP 디렉터리의 하위 디렉터리입니다. 예를 들어 FTP 서버 루트가 \\\ftpserver\home이고 스냅숏을 \\\ftpserver\home\snapshots에 저장하려면 **@ftp_subdirectory**에 **\snapshots\ftp**를 지정합니다. 복제는 스냅숏 파일을 만들 때 스냅숏 폴더 경로에 'ftp'를 추가합니다.  
-  
-    -   (옵션) **@ftp_login** - FTP 서버에 연결할 때 사용되는 로그인 계정입니다.  
-  
+1.  게시 데이터베이스의 게시자에서 [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)을 실행합니다. 지정할 **@publication**를 값 `true` 에 대 한 **@enabled_for_internet**, 적절 한 다음 매개 변수 값:    
+    -   **@ftp_address** - 스냅숏을 배달하는 데 사용되는 FTP 서버의 주소입니다.    
+    -   (옵션) **@ftp_port** - FTP 서버에서 사용되는 포트입니다.    
+    -   (옵션) **@ftp_subdirectory** - FTP 로그온에 할당된 기본 FTP 디렉터리의 하위 디렉터리입니다. 예를 들어 FTP 서버 루트가 \\\ftpserver\home이고 스냅숏을 \\\ftpserver\home\snapshots에 저장하려면 **@ftp_subdirectory**에 **\snapshots\ftp**를 지정합니다. 복제는 스냅숏 파일을 만들 때 스냅숏 폴더 경로에 'ftp'를 추가합니다.    
+    -   (옵션) **@ftp_login** - FTP 서버에 연결할 때 사용되는 로그인 계정입니다.    
     -   (옵션) **@ftp_password** - FTP 로그인에 대한 암호입니다.  
   
      이렇게 하면 FTP를 사용하는 게시가 만들어집니다. 자세한 내용은 [Create a Publication](create-a-publication.md)를 참조하세요.  
@@ -107,14 +74,10 @@ ms.locfileid: "52777565"
   
 1.  게시 데이터베이스의 게시자에서 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)을 실행합니다. 지정할 **@publication**에 값 `true` 에 대 한 **@enabled_for_internet** 적절 한 다음 매개 변수 값:  
   
-    -   **@ftp_address** - 스냅숏을 배달하는 데 사용되는 FTP 서버의 주소입니다.  
-  
-    -   (옵션) **@ftp_port** - FTP 서버에서 사용되는 포트입니다.  
-  
-    -   (옵션) **@ftp_subdirectory** - FTP 로그온에 할당된 기본 FTP 디렉터리의 하위 디렉터리입니다. 예를 들어 FTP 서버 루트가 \\\ftpserver\home이고 스냅숏을 \\\ftpserver\home\snapshots에 저장하려면 **@ftp_subdirectory**에 **\snapshots\ftp**를 지정합니다. 복제는 스냅숏 파일을 만들 때 스냅숏 폴더 경로에 'ftp'를 추가합니다.  
-  
-    -   (옵션) **@ftp_login** - FTP 서버에 연결할 때 사용되는 로그인 계정입니다.  
-  
+    -   **@ftp_address** - 스냅숏을 배달하는 데 사용되는 FTP 서버의 주소입니다.    
+    -   (옵션) **@ftp_port** - FTP 서버에서 사용되는 포트입니다.    
+    -   (옵션) **@ftp_subdirectory** - FTP 로그온에 할당된 기본 FTP 디렉터리의 하위 디렉터리입니다. 예를 들어 FTP 서버 루트가 \\\ftpserver\home이고 스냅숏을 \\\ftpserver\home\snapshots에 저장하려면 **@ftp_subdirectory**에 **\snapshots\ftp**를 지정합니다. 복제는 스냅숏 파일을 만들 때 스냅숏 폴더 경로에 'ftp'를 추가합니다.    
+    -   (옵션) **@ftp_login** - FTP 서버에 연결할 때 사용되는 로그인 계정입니다.    
     -   (옵션) **@ftp_password** - FTP 로그인에 대한 암호입니다.  
   
      이렇게 하면 FTP를 사용하는 게시가 만들어집니다. 자세한 내용은 [Create a Publication](create-a-publication.md)를 참조하세요.  
@@ -129,46 +92,32 @@ ms.locfileid: "52777565"
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication-that-uses-ftp-snapshot-delivery"></a>FTP 스냅숏 배달을 사용하는 병합 게시에 대한 끌어오기 구독을 만들려면  
   
-1.  구독 데이터베이스의 구독자에서 [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)을 실행합니다. 이때 **@publisher** 및 **@publication**에서 사용 가능합니다.  
-  
-2.  구독 데이터베이스의 구독자에서 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)를 실행합니다. 지정할 **@publisher**를 **@publisher_db**를 **@publication**, 구독자에서 배포 에이전트가 실행 되는 Windows 자격 증명 **@job_login** 하 고 **@job_password**에 값 `true` 에 대 한 **@use_ftp**합니다.  
-  
+1.  구독 데이터베이스의 구독자에서 [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)을 실행합니다. 이때 **@publisher** 및 **@publication**에서 사용 가능합니다.   
+2.  구독 데이터베이스의 구독자에서 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)를 실행합니다. 지정할 **@publisher**를 **@publisher_db**를 **@publication**, 구독자에서 배포 에이전트가 실행 되는 Windows 자격 증명 **@job_login** 하 고 **@job_password**에 값 `true` 에 대 한 **@use_ftp**합니다.    
 3.  게시 데이터베이스의 게시자에서 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) 을 실행하여 끌어오기 구독을 등록합니다. 자세한 내용은 [끌어오기 구독 만들기](../create-a-pull-subscription.md)를 참조하세요.  
   
 #### <a name="to-change-one-or-more-ftp-snapshot-delivery-settings-for-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 대한 하나 이상의 FTP 스냅숏 배달 설정을 변경하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)을 실행합니다. **@property**에 다음 중 한 가지 값을 지정하고, 이 설정의 새 값을 **@value**에 지정합니다.  
-  
-    -   `ftp_address` - 스냅숏을 배달하는 데 사용되는 FTP 서버의 주소입니다.  
-  
-    -   `ftp_port` - FTP 서버에서 사용되는 포트입니다.  
-  
-    -   `ftp_subdirectory` - FTP 스냅숏에 사용되는 기본 FTP 디렉터리의 하위 디렉터리입니다.  
-  
-    -   `ftp_login` - FTP 서버에 연결하는 데 사용되는 로그인입니다.  
-  
+1.  게시 데이터베이스의 게시자에서 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)을 실행합니다. **@property**에 다음 중 한 가지 값을 지정하고, 이 설정의 새 값을 **@value**에 지정합니다.    
+    -   `ftp_address` - 스냅숏을 배달하는 데 사용되는 FTP 서버의 주소입니다.    
+    -   `ftp_port` - FTP 서버에서 사용되는 포트입니다.    
+    -   `ftp_subdirectory` - FTP 스냅숏에 사용되는 기본 FTP 디렉터리의 하위 디렉터리입니다.    
+    -   `ftp_login` - FTP 서버에 연결하는 데 사용되는 로그인입니다.    
     -   `ftp_password` - FTP 로그인에 대한 암호입니다.  
   
-2.  (옵션) 변경되는 각 FTP 설정에 대해 1단계를 반복합니다.  
-  
+2.  (옵션) 변경되는 각 FTP 설정에 대해 1단계를 반복합니다.    
 3.  (옵션) FTP 스냅숏 배달을 해제하려면 게시 데이터베이스의 게시자에서 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) 을 실행합니다. 값을 지정 `enabled_for_internet` 에 대 한 **@property** 값 `false` 에 대 한 **@value**합니다.  
   
 #### <a name="to-change-ftp-snapshot-delivery-settings-for-a-merge-publication"></a>병합 게시에 대한 FTP 스냅숏 배달 설정을 변경하려면  
   
 1.  게시 데이터베이스의 게시자에서 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 실행합니다. **@property**에 다음 중 한 가지 값을 지정하고, 이 설정의 새 값을 **@value**에 지정합니다.  
   
-    -   `ftp_address` - 스냅숏을 배달하는 데 사용되는 FTP 서버의 주소입니다.  
-  
-    -   `ftp_port` - FTP 서버에서 사용되는 포트입니다.  
-  
-    -   `ftp_subdirectory` - FTP 스냅숏에 사용되는 기본 FTP 디렉터리의 하위 디렉터리입니다.  
-  
-    -   `ftp_login` - FTP 서버에 연결하는 데 사용되는 로그인입니다.  
-  
-    -   `ftp_password` - FTP 로그인에 대한 암호입니다.  
-  
-2.  (옵션) 변경되는 각 FTP 설정에 대해 1단계를 반복합니다.  
-  
+    -   `ftp_address` - 스냅숏을 배달하는 데 사용되는 FTP 서버의 주소입니다.    
+    -   `ftp_port` - FTP 서버에서 사용되는 포트입니다.    
+    -   `ftp_subdirectory` - FTP 스냅숏에 사용되는 기본 FTP 디렉터리의 하위 디렉터리입니다.   
+    -   `ftp_login` - FTP 서버에 연결하는 데 사용되는 로그인입니다.    
+    -   `ftp_password` - FTP 로그인에 대한 암호입니다.    
+2.  (옵션) 변경되는 각 FTP 설정에 대해 1단계를 반복합니다.    
 3.  (옵션) FTP 스냅숏 배달을 해제하려면 게시 데이터베이스의 게시자에서 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) 을 실행합니다. 값을 지정 `enabled_for_internet` 에 대 한 **@property** 값 `false` 에 대 한 **@value**합니다.  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  

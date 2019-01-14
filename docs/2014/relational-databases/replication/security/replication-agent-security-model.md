@@ -20,15 +20,15 @@ ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f34b5accc278a55946546c149c00bffd3a02a693
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 4b919289d49901f64b26db0aa2d4b71eeb0e132a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811998"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133573"
 ---
 # <a name="replication-agent-security-model"></a>복제 에이전트 보안 모델
-  복제 에이전트 보안 모델을 사용하여 복제 에이전트를 실행 및 연결하는 계정을 세밀하게 제어할 수 있습니다. 즉, 각 에이전트에 대해 다른 계정을 지정할 수 있습니다. 계정을 지정하는 방법은 [복제의 로그인 및 암호 관리](manage-logins-and-passwords-in-replication.md)를 참조하세요.  
+  복제 에이전트 보안 모델을 사용하여 복제 에이전트를 실행 및 연결하는 계정을 세밀하게 제어할 수 있습니다. 즉, 각 에이전트에 대해 다른 계정을 지정할 수 있습니다. 계정을 지정하는 방법은 [복제의 로그인 및 암호 관리](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)를 참조하세요.  
   
 > [!IMPORTANT]  
 >  **sysadmin** 고정 서버 역할의 멤버가 복제를 구성할 경우 복제 에이전트가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 계정을 가장하도록 구성할 수 있습니다. 이는 복제 에이전트의 로그인과 암호를 지정하여 수행할 수 있지만 이 방법은 사용하지 않는 것이 좋습니다. 대신 이 항목의 뒷부분에 나오는 "에이전트에 필요한 사용 권한" 섹션에서 설명하는 최소 사용 권한이 있는 각 에이전트에 대해 계정을 지정(최상의 보안 방법)하는 것이 좋습니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "52811998"
   
 ## <a name="see-also"></a>관련 항목  
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [보안 및 보호&#40;복제&#41;](security-and-protection-replication.md)   
+ [SQL Server 복제 보안](view-and-modify-replication-security-settings.md)   
  [스냅숏 폴더 보안 설정](secure-the-snapshot-folder.md)  
   
   

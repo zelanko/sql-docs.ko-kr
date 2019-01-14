@@ -16,12 +16,12 @@ ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbfef6f848aaa0d9dddcef68aaa3af8aca4c0880
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: dc236b4b022a80c7c1cbd4aa4239200b17840db6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823807"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126883"
 ---
 # <a name="spdropsubscriber-transact-sql"></a>sp_dropsubscriber(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@subscriber=** ] **'***구독자***'**  
+ [  **@subscriber=** ] **'**_구독자_**'**  
  삭제할 구독자의 이름입니다. *구독자* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@reserved=** ] **'***예약 된***'**  
+ [  **@reserved=** ] **'**_예약_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [  **@ignore_distributor =** ] *ignore_distributor*  

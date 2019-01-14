@@ -19,12 +19,12 @@ ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7e8f2f9de721f2e314961a6d2c10cf14c99be53
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786105"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132883"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Advanced Merge Replication Conflict Detection and Resolution
   게시자와 구독자가 연결되고 동기화가 이루어지면 병합 에이전트는 충돌이 있는지 감지합니다. 충돌이 감지되면 병합 에이전트는 게시에 아티클을 추가할 때 지정한 충돌 해결 프로그램을 사용해서 수락하여 다른 사이트로 전파할 데이터를 확인합니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "52786105"
   
  자세한 내용은 [논리적 레코드에서 충돌 감지 및 해결](advanced-merge-replication-conflict-resolving-in-logical-record.md)을 참조하세요.  
   
- 아티클의 충돌 추적 및 해결 수준을 지정하려면 [병합 아티클에 대 한 충돌 추적 및 해결 수준 지정](../publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md)을 참조하십시오.  
+ 아티클의 충돌 추적 및 해결 수준을 지정하려면 [병합 아티클에 대 한 충돌 추적 및 해결 수준 지정](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution)을 참조하십시오.  
   
 ## <a name="conflict-resolution"></a>충돌 해결  
  충돌이 감지되면 병합 에이전트는 선택한 충돌 해결 프로그램을 시작하고 해결 프로그램을 사용하여 충돌 시 적용되는 내용을 확인합니다. 적용되는 행이 게시자 및 구독자에서 적용되며 무시되는 행의 데이터는 충돌 테이블에 기록됩니다. 대화형으로 충돌을 해결하도록 선택하지 않으면 해결 프로그램이 실행된 후 즉시 충돌이 해결됩니다.  

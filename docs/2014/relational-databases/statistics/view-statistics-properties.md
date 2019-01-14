@@ -15,12 +15,12 @@ ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 343ba03f20d059763f4b1122aac80e0af80fc2ae
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 8db42e567b80ca282b89d9be29fffff3e643ea7a
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415640"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54099968"
 ---
 # <a name="view-statistics-properties"></a>통계 속성 보기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 테이블 또는 인덱싱된 뷰에 대한 현재 쿼리 최적화 통계를 표시할 수 있습니다. 통계 개체에는 통계에 대한 메타데이터가 있는 헤더, 통계 개체의 첫 번째 키 열에 있는 값의 분포에 대한 히스토그램, 그리고 열 간 상관 관계를 측정하는 밀도 벡터가 포함됩니다. 히스토그램 및 밀도 벡터에 대한 자세한 내용은 [DBCC SHOW_STATISTICS&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)를 참조하세요.  
@@ -58,9 +58,9 @@ ms.locfileid: "52415640"
   
 5.  속성을 보려는 통계 개체를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-6.   **통계 속성 -** *statistics_name* 대화 상자의 **페이지 선택** 창에서 **자세히**를 선택합니다.  
+6.   **통계 속성 -** _statistics_name_ 대화 상자의 **페이지 선택** 창에서 **자세히**를 선택합니다.  
   
-      **통계 속성 -**  **statistics_name** *statistics_name* 페이지에 다음 속성이 표시됩니다.  
+      **통계 속성 -**  **statistics_name** _statistics_name_ 페이지에 다음 속성이 표시됩니다.  
   
      **테이블 이름**  
      통계에서 설명하는 테이블 이름을 표시합니다.  

@@ -1,5 +1,5 @@
 ---
-title: 게시자 추가 | Microsoft 문서
+title: 게시자 추가 대화 상자
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8fc6041d3d33a7ddaaeb9fb11ff8582c70c7f080
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 735162edb8e7eda06e99d69ed74d4752b7f0d950
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817495"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133303"
 ---
-# <a name="add-publisher"></a>게시자 추가
+# <a name="sql-server-replication-add-publisher-dialog-box"></a>SQL Server 복제 게시자 추가 ' 대화 상자 
   **게시자 추가** 대화 상자를 사용하여 복제 모니터의 왼쪽 창에 하나 이상의 게시자를 추가할 수 있습니다. 게시자를 추가한 후 왼쪽 창에서 게시자를 선택하면 오른쪽 창에 해당 게시자에 대한 정보가 표시됩니다.  
   
 ## <a name="options"></a>변수  

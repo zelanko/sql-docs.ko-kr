@@ -16,12 +16,12 @@ ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7bf36beb01ee7d31b78e6bdf06921bc460bcbbad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d2529bc92acf32730b0462edeb7315b60fd046a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199213"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127440"
 ---
 # <a name="database-engine-scripting"></a>데이터베이스 엔진 스크립팅
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인스턴스 및 이러한 인스턴스의 개체를 관리하기 위한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] PowerShell 스크립팅 환경을 지원합니다. 또한 스크립팅 환경과 매우 유사한 환경에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 XQuery를 포함하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 작성 및 실행할 수 있습니다.  
@@ -58,9 +58,9 @@ ms.locfileid: "48199213"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 스크립트 파일은 일반적으로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 대화형으로 코딩됩니다. 이 파일은 나중에 다음 환경 중 하나에서 열 수 있습니다.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **파일**/**열기** 메뉴를 사용하여 새 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창에 파일을 열 수 있습니다.  
+-    [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **파일**/**열기** 메뉴를 사용하여 새 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창에 파일을 열 수 있습니다.  
   
--   사용 하 여는 **-i * input_file* 매개 변수를 사용 하 여 파일을 실행 합니다 `sqlcmd` 유틸리티입니다.  
+-   사용 된 **-i**_input_file_ 매개 변수를 사용 하 여 파일을 실행 합니다 `sqlcmd` 유틸리티입니다.  
   
 -   **-QueryFromFile** 매개 변수를 사용하여 **PowerShell 스크립트에서** Invoke-Sqlcmd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cmdlet으로 파일을 실행할 수 있습니다.  
   
@@ -73,12 +73,12 @@ ms.locfileid: "48199213"
 |태스크 설명|항목|  
 |----------------------|-----------|  
 |[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 코드 및 텍스트 편집기를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 대화식으로 개발, 디버그 및 실행하는 방법에 대해 설명합니다.|[쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)|  
-|사용 하는 방법에 설명 합니다 `sqlcmd` 유틸리티가 실행 되도록 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 대화식으로 개발 하는 기능을 포함 하 여 명령 프롬프트에서 스크립트입니다.|[sqlcmd 방법 도움말 항목](../../database-engine/sqlcmd-how-to-topics.md)|  
+|스크립트를 대화식으로 개발하는 기능을 포함하여 `sqlcmd` 유틸리티를 사용하여 명령 프롬프트에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 실행하는 방법에 대해 설명합니다.|[sqlcmd 방법 도움말 항목](../../database-engine/sqlcmd-how-to-topics.md)|  
 |SQL Server 구성 요소를 Windows PowerShell 2.0 환경에 통합한 다음 SQL Server 인스턴스 및 개체를 관리하는 PowerShell 스크립트를 작성하는 방법에 대해 설명합니다.|[SQL Server PowerShell](../../powershell/sql-server-powershell.md)|  
 |**스크립트 생성 및 게시 마법사** 를 사용하여 데이터베이스에서 하나 이상의 개체를 다시 만드는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 작성하는 방법에 대해 설명합니다.|[스크립트 생성&#40;SQL Server Management Studio&#41;](generate-scripts-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>관련 항목  
  [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)   
- [자습서: Transact-SQL 문 작성](../../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [자습서: TRANSACT-SQL 문 작성](../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   
