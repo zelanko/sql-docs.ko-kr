@@ -13,12 +13,12 @@ ms.assetid: 66b44b6c-10a5-4e3f-a97b-7568609c88ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce595fc0032ef8c1f498993f0953aa90117d73ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be115f4a0dad8cd7cfacca89a5ff117734087b28
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737381"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134913"
 ---
 # <a name="sort-columns"></a>열 정렬
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47737381"
   
 2.  표의 두 번째 행에서 **열 이름** 열의 **연결 유형** 을 선택하고 **정렬 순서** 열에서 값을 선택합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **상태**  
  정렬 기준으로 사용할 열의 이름입니다. 하나 이상의 열을 기준으로 정렬할 수 있습니다. **게시** 탭의 **현재 평균 성능** 또는 **현재 가장 낮은 성능** 열은 해당 값이 계산되는 방식 때문에 정렬 기준으로 사용할 수 없습니다.  
   
@@ -39,6 +39,6 @@ ms.locfileid: "47737381"
  정렬 표에서 모든 행을 제거합니다. 단일 행을 제거하려면 행을 선택하고 Delete 키를 누릅니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

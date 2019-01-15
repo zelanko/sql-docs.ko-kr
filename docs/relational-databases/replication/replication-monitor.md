@@ -15,12 +15,12 @@ ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 397604c04c71b662a36cb5bf39f7aaa99c600a05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9646f61d6cb8d9a277f08711dc8326f34064c5ad
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799471"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124603"
 ---
 # <a name="replication-monitor"></a>복제 모니터
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,14 +33,6 @@ ms.locfileid: "47799471"
 -   [배포자 설정](../../relational-databases/replication/distributor-settings.md)  
   
 -   [배포자 정보, 게시](../../relational-databases/replication/distributor-information-publications.md)  
-  
--   [배포자 정보, 구독 조사 목록&#40;트랜잭션 게시, SQL Server 2005 이상&#41;](../../relational-databases/replication/distributor-info-subscription-watch-list-transaction-pub-sql-2005.md)  
-  
--   [배포자 정보, 구독 조사 목록&#40;병합 게시, SQL Server 2005 이상&#41;](../../relational-databases/replication/distributor-info-subscription-watch-list-merge-pub-sql-2005.md)  
-  
--   [배포자 정보, 구독 조사 목록&#40;스냅숏 게시, SQL Server 2005 이상&#41;](../../relational-databases/replication/distributor-info-subscription-watch-list-snapshot-pub-sql-2005.md)  
-  
--   [배포자 정보, 에이전트](../../relational-databases/replication/distributor-information-agents.md)  
   
 -   [게시자 설정](../../relational-databases/replication/publisher-settings.md)  
   
@@ -68,8 +60,7 @@ ms.locfileid: "47799471"
   
 -   [게시 정보, 에이전트&#40;트랜잭션 게시&#41;](../../relational-databases/replication/publication-information-agents-transactional-publication.md)  
   
--   [게시 정보, 에이전트&#40;병합 게시&#41;](../../relational-databases/replication/publication-information-agents-merge-publication.md)  
-  
+-   [게시 정보, 에이전트&#40;병합 게시&#41;](../../relational-databases/replication/publication-information-agents-merge-publication.md)    
 -   [게시 정보, 에이전트&#40;스냅숏 게시&#41;](../../relational-databases/replication/publication-information-agents-snapshot-publication.md)  
   
 -   [게시 정보, 추적 프로그램 토큰&#40;트랜잭션 게시, SQL Server 2005 이상&#41;](../../relational-databases/replication/publication-information-tracer-tokens-sql-server-2005-and-later.md)  
@@ -81,8 +72,6 @@ ms.locfileid: "47799471"
 -   [구독, 배포자에서 구독자로의 연결 기록&#40;트랜잭션 구독&#41;](../../relational-databases/replication/subscription-distributor-to-subscriber-history-transactional-subscription.md)  
   
 -   [구독, 동기화 기록&#40;병합 구독, SQL Server 2005 이상&#41;](../../relational-databases/replication/subscription-synchronization-history.md)  
-  
--   [구독, 동기화 기록&#40;병합 구독, SQL Server 2000&#41;](../../relational-databases/replication/subscription-synchronization-history-merge-subscription-sql-server-2000.md)  
   
 -   [구독, 배포자에서 구독자로의 연결 기록&#40;스냅숏 구독&#41;](../../relational-databases/replication/subscription-distributor-to-subscriber-history-snapshot-subscription.md)  
   
@@ -98,7 +87,6 @@ ms.locfileid: "47799471"
   
 ## <a name="see-also"></a>참고 항목  
  [복제 모니터 시작](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [속성 참조&#40;복제&#41;](../../relational-databases/replication/properties-reference-replication.md)  
+
   
   

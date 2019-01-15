@@ -14,12 +14,12 @@ ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 799a3890afb2247e42dd78e7e133b94b44f162ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e47b99fef642ab0760a177d426db4e3353da2e21
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834691"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125089"
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>피어 투 피어 - 피어 투 피어 복제에서 충돌 검색
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47834691"
  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이상 버전의 피어 투 피어 복제에서는 피어 투 피어 토폴로지에서 충돌을 검색할 수 있는 옵션을 제공합니다. 이 옵션을 사용하면 일관성 없는 애플리케이션 동작, 업데이트 손실과 같은 검색되지 않는 충돌로 인해 발생하는 문제를 방지할 수 있습니다. 이 옵션을 설정하면 기본적으로 충돌을 일으키는 변경이 배포 에이전트 오류를 유발하는 치명적 오류로 취급됩니다. 충돌이 발생할 경우 충돌이 해결되고 데이터가 토폴로지 전체에서 일관성을 가질 때까지 토폴로지가 일관성 없는 상태로 유지됩니다.  
   
 > [!NOTE]  
->  데이터 불일치의 가능성을 배제하려면 충돌 검색이 설정되어 있는 경우라도 피어 투 피어 토폴로지에서 충돌이 발생하지 않도록 해야 합니다. 특정 행에 대한 쓰기 작업이 하나의 노드에서만 수행되도록 하려면 데이터에 액세스하여 변경하는 애플리케이션에서 삽입, 업데이트 및 삭제 작업을 분할해야 합니다. 이렇게 분할하면 한 노드에서 발생한 지정된 행에 대한 수정이 다른 노드에서 해당 행을 수정하기 전에 토폴로지의 모든 노드와 동기화됩니다. 애플리케이션에 정교한 충돌 검색 및 해결 기능이 필요한 경우 병합 복제를 사용하세요. 자세한 내용은 [병합 복제](../../../relational-databases/replication/merge/merge-replication.md) 및 [병합 복제 충돌 감지 및 해결](../../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)을 참조하세요.  
+>  데이터 불일치의 가능성을 배제하려면 충돌 검색이 설정되어 있는 경우라도 피어 투 피어 토폴로지에서 충돌이 발생하지 않도록 해야 합니다. 특정 행에 대한 쓰기 작업이 하나의 노드에서만 수행되도록 하려면 데이터에 액세스하여 변경하는 애플리케이션에서 삽입, 업데이트 및 삭제 작업을 분할해야 합니다. 이렇게 분할하면 한 노드에서 발생한 지정된 행에 대한 수정이 다른 노드에서 해당 행을 수정하기 전에 토폴로지의 모든 노드와 동기화됩니다. 애플리케이션에 정교한 충돌 검색 및 해결 기능이 필요한 경우 병합 복제를 사용하세요. 자세한 내용은 [병합 복제](../../../relational-databases/replication/merge/merge-replication.md) 및 [병합 복제 충돌 감지 및 해결](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
   
 ## <a name="understanding-conflicts-and-conflict-detection"></a>충돌 및 충돌 검색 이해  
  단일 데이터베이스에서는 서로 다른 애플리케이션에 의해 수행된 동일한 행에 대한 변경이 충돌을 일으키지 않습니다. 트랜잭션이 직렬화되고, 동시 변경 처리를 위해 잠금이 사용되기 때문입니다. 피어 투 피어 복제와 같은 비동기 분산형 시스템에서는 트랜잭션이 각 노드에서 독립적으로 활동하며 여러 노드 간에 트랜잭션을 직렬화하는 메커니즘이 없습니다. 2단계 커밋과 같은 프로토콜을 사용할 수 있지만 이 경우 성능이 크게 저하됩니다.  
@@ -94,7 +94,7 @@ ms.locfileid: "47834691"
   
     3.  충돌 뷰어를 사용하여 충돌이 검색되었는지 확인하고 충돌에 관련된 행, 충돌의 유형 및 충돌 시 우선 적용 사항을 확인합니다. 충돌은 구성 중에 지정된 송신자 ID 값을 기반으로 해결됩니다. 가장 높은 ID의 노드를 출처로 하는 행이 충돌에서 우선 적용됩니다. 자세한 내용은 [트랜잭션 게시의 데이터 충돌 확인&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)을 참조하세요.  
   
-    4.  유효성 검사를 실행하여 충돌 행이 올바르게 일치되었는지 확인합니다. 자세한 내용은 [복제된 데이터의 유효성 검사](../../../relational-databases/replication/validate-replicated-data.md)를 참조하세요.  
+    4.  유효성 검사를 실행하여 충돌 행이 올바르게 일치되었는지 확인합니다. 자세한 내용은 [복제된 데이터의 유효성 검사](../../../relational-databases/replication/validate-data-at-the-subscriber.md)를 참조하세요.  
   
         > [!NOTE]  
         >  이 단계를 수행한 이후에도 데이터에 일관성이 없는 경우에는 우선 순위가 가장 높은 노드의 행을 수동으로 업데이트한 후 이 노드에서 변경 내용이 전파되도록 해야 합니다. 토폴로지에 더 이상 충돌하는 변경 내용이 없으면 모든 노드가 일관적인 상태가 됩니다.  

@@ -22,12 +22,12 @@ ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1a4d4cbb310251bfe6abed7a44dfb5c8514c369c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcd52d1f45b1f1b29777cae26e65660887302e92
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739041"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131923"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,9 +55,9 @@ CREATE SERVICE service_name
 >  *service_name*에 ANY 키워드를 사용하는 서비스를 만들지 마십시오. CREATE BROKER PRIORITY에서 서비스 이름에 ANY를 지정하면 모든 서비스에 대해 우선 순위가 고려됩니다. 이러한 규칙은 이름이 ANY인 서비스로 제한되지 않습니다.  
   
  AUTHORIZATION *owner_name*  
- 서비스 소유자를 지정된 데이터베이스 사용자 또는 역할로 설정합니다. 현재 사용자가 **dbo** 또는 **sa**일 경우 *owner_name*은 유효한 사용자 또는 역할의 이름일 수 있습니다. 그렇지 않으면 *owner_name*은 현재 사용자 이름, 현재 사용자가 IMPERSONATE 권한을 갖는 사용자의 이름, 현재 사용자가 속해 있는 역할 이름 중 하나여야 합니다.  
+ 서비스 소유자를 지정된 데이터베이스 사용자 또는 역할로 설정합니다. 현재 사용자가 **dbo** 또는 **sa**일 경우 *owner_name*은 유효한 사용자 또는 역할의 이름일 수 있습니다. 그렇지 않으면 *owner_name*은 현재 사용자 이름, 현재 사용자가 권한을 가장한 사용자의 이름, 현재 사용자가 속해 있는 역할 이름 중 하나여야 합니다.  
   
- ON QUEUE [ *schema_name***.** ] *queue_name*  
+ ON QUEUE [ _schema_name_**.** ] *queue_name*  
  서비스에 대한 메시지를 받는 큐를 지정합니다. 이 큐는 서비스와 같은 데이터베이스에 있어야 합니다. *schema_name*을 지정하지 않으면 스키마는 문을 실행하는 사용자의 기본 스키마가 됩니다.  
   
  *contract_name*  

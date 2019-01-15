@@ -18,12 +18,12 @@ ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 083a4ccb00c834fba4f250aa1a2063b76ad9bd86
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f8e1433d9157aed6a933d5117417be1a4fcc1c79
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407630"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133748"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>병합 동기화 중 비즈니스 논리 실행
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "52407630"
   
 -   사용자 지정 해결 수행  
   
-     이 작업은 해당 비즈니스 논리와 관련된 데이터 값을 선택하고 동기화 프로세스에 이 사용자 지정 데이터 집합을 제공해야 하는 애플리케이션에 유용합니다. 예를 들어 애플리케이션은 게시자 데이터 집합의 값과 구독자 데이터 집합의 값을 결합하여 새 버전의 적용되는 행을 제공할 수 있습니다.  
+     이 작업은 해당 비즈니스 논리와 관련된 데이터 값을 선택하고 동기화 프로세스에 이 사용자 지정 데이터 세트를 제공해야 하는 애플리케이션에 유용합니다. 예를 들어 애플리케이션은 게시자 데이터 집합의 값과 구독자 데이터 집합의 값을 결합하여 새 버전의 적용되는 행을 제공할 수 있습니다.  
   
 ### <a name="custom-error-resolution"></a>사용자 지정 오류 해결  
  오류를 일으키는 변경 내용을 전파하는 중 사용자 지정 논리를 호출할 수 있습니다. 사용자 지정 논리는 다음 두 동작 중 하나를 수행할 수 있습니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "52407630"
   
 -   사용자 지정 오류 해결 적용  
   
-     이 작업은 해당 비즈니스 논리와 관련된 데이터 값을 선택하고 동기화 프로세스에 이 사용자 지정 데이터 집합을 제공해야 하는 애플리케이션에 유용합니다. 예를 들어 복제 프로세스에서 중복 키 위반이 발생하면 비즈니스 논리 처리기는 키가 충돌하지 않는 새 버전의 데이터 변경 내용을 제공할 수 있습니다. 이렇게 하면 게시자 및 구독자에서 적용한 변경 내용이 데이터베이스에서 지속되며 복제 프로세스에서 삭제를 사용하여 실패한 삽입을 해결할 필요가 없습니다.  
+     이 작업은 해당 비즈니스 논리와 관련된 데이터 값을 선택하고 동기화 프로세스에 이 사용자 지정 데이터 세트를 제공해야 하는 애플리케이션에 유용합니다. 예를 들어 복제 프로세스에서 중복 키 위반이 발생하면 비즈니스 논리 처리기는 키가 충돌하지 않는 새 버전의 데이터 변경 내용을 제공할 수 있습니다. 이렇게 하면 게시자 및 구독자에서 적용한 변경 내용이 데이터베이스에서 지속되며 복제 프로세스에서 삭제를 사용하여 실패한 삽입을 해결할 필요가 없습니다.  
   
 ## <a name="deployment-scenarios-for-business-logic-handlers"></a>비즈니스 논리 처리기의 배포 시나리오  
  비즈니스 논리 처리기는 다음에 배포할 수 있습니다.  

@@ -31,12 +31,12 @@ ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3ef067f78e6ff7e1358a89ab210ae8c701625b14
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f26eace7208ce0ec251707a34e964f718fcc1d09
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543833"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124793"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
 ```  
   
 ## <a name="arguments"></a>인수  
- **@** *dialog_handle*  
+ **@** _dialog_handle_  
  BEGIN DIALOG CONVERSATION 문에서 반환하는 새 대화에 대한 시스템 생성 대화 핸들을 저장하는 데 사용되는 변수입니다. 변수는 **uniqueidentifier** 형식이어야 합니다.  
   
  FROM SERVICE *initiator_service_name*  
@@ -165,7 +165,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
    ON CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission] ;  
 ```  
   
-### <a name="d-beginning-a-dialog-and-relating-it-to-an-existing-conversation-group"></a>4. 대화를 시작하여 기존 대화 그룹에 연결  
+### <a name="d-beginning-a-dialog-and-relating-it-to-an-existing-conversation-group"></a>D. 대화를 시작하여 기존 대화 그룹에 연결  
  다음 예에서는 대화를 시작하고 `@dialog_handle`에 대화 식별자를 저장합니다. `//Adventure-Works.com/ExpenseClient` 서비스는 대화의 시작자이고 `//Adventure-Works.com/Expenses` 서비스는 대화의 대상입니다. 대화는 `//Adventure-Works.com/Expenses/ExpenseSubmission` 계약을 따릅니다. Broker는 새 대화 그룹을 만들지 않고 `@conversation_group_id`로 식별되는 대화 그룹에 대화를 연결합니다.  
   
 ```  
@@ -181,7 +181,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
    WITH RELATED_CONVERSATION_GROUP = @conversation_group_id ;  
 ```  
   
-### <a name="e-beginning-a-dialog-with-an-explicit-lifetime-and-relating-the-dialog-to-an-existing-conversation"></a>5. 명시적으로 수명을 지정하여 대화를 시작하고 기존 대화에 대화 연결  
+### <a name="e-beginning-a-dialog-with-an-explicit-lifetime-and-relating-the-dialog-to-an-existing-conversation"></a>E. 명시적으로 수명을 지정하여 대화를 시작하고 기존 대화에 대화 연결  
  다음 예에서는 대화를 시작하고 `@dialog_handle`에 대화 식별자를 저장합니다. `//Adventure-Works.com/ExpenseClient` 서비스는 대화의 시작자이고 `//Adventure-Works.com/Expenses` 서비스는 대화의 대상입니다. 대화는 `//Adventure-Works.com/Expenses/ExpenseSubmission` 계약을 따릅니다. 새 대화는 `@existing_conversation_handle`이 속하는 대화 그룹에 똑같이 속합니다. END CONVERSATION 명령으로 `600`초 내에 대화가 닫히지 않으면 [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서 오류가 발생하여 대화가 종료됩니다.  
   
 ```  
@@ -198,7 +198,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
    LIFETIME = 600 ;  
 ```  
   
-### <a name="f-beginning-a-dialog-with-optional-encryption"></a>6. 선택적 암호화를 사용하여 대화 시작  
+### <a name="f-beginning-a-dialog-with-optional-encryption"></a>F. 선택적 암호화를 사용하여 대화 시작  
  다음 예에서는 대화를 시작하고 `@dialog_handle`에 대화 식별자를 저장합니다. `//Adventure-Works.com/ExpenseClient` 서비스는 대화의 시작자이고 `//Adventure-Works.com/Expenses` 서비스는 대화의 대상입니다. 대화는 `//Adventure-Works.com/Expenses/ExpenseSubmission` 계약을 따릅니다. 이 예의 대화에서는 암호화를 사용할 수 없는 경우 암호화를 사용하지 않고 네트워크를 통해 메시지를 전달할 수 있습니다.  
   
 ```  

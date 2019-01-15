@@ -13,12 +13,12 @@ ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9970c01b1af46287c9438b2b731af6a1c9e1f44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c92321a8f9e0cb70a1e16a268ef1e84b17946ae
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655951"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130433"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>로그 전달 및 복제(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "47655951"
   
 3.  게시자에서 오류가 발생하면 RESTORE LOG의 KEEP_REPLICATION 옵션을 사용하여 데이터베이스의 마지막 로그를 보조 서버로 복원합니다. 이렇게 하면 데이터베이스에 대한 모든 복제 설정이 유지됩니다. 자세한 내용은 [로그 전달 보조 데이터베이스로 장애 조치(Failover)&#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) 및 [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)를 참조하세요.  
   
-4.  주 서버에서 보조 서버로 **msdb** 데이터베이스와 **master** 데이터베이스를 복원합니다. 자세한 내용은 [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)를 참조하세요. 주 서버가 배포자이기도 한 경우 배포 데이터베이스를 주 서버에서 보조 서버로 복원합니다.  
+4.  주 서버에서 보조 서버로 **msdb** 데이터베이스와 **master** 데이터베이스를 복원합니다. 자세한 내용은 [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)를 참조하세요. 주 서버가 배포자이기도 한 경우 배포 데이터베이스를 주 서버에서 보조 서버로 복원합니다.  
   
      이러한 데이터베이스의 복제 구성 및 설정은 주 서버의 게시 데이터베이스와 일치해야 합니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "47655951"
   
 2.  게시자에서 오류가 발생하면 RESTORE LOG의 KEEP_REPLICATION 옵션을 사용하여 데이터베이스의 마지막 로그를 보조 서버로 복원합니다. 이렇게 하면 데이터베이스에 대한 모든 복제 설정이 유지됩니다. 자세한 내용은 [로그 전달 보조 데이터베이스로 장애 조치(Failover)&#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) 및 [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)를 참조하세요.  
   
-3.  주 서버에서 보조 서버로 **msdb** 데이터베이스와 **master** 데이터베이스를 복원합니다. 자세한 내용은 [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)를 참조하세요. 주 서버가 배포자이기도 한 경우 배포 데이터베이스를 주 서버에서 보조 서버로 복원합니다.  
+3.  주 서버에서 보조 서버로 **msdb** 데이터베이스와 **master** 데이터베이스를 복원합니다. 자세한 내용은 [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)를 참조하세요. 주 서버가 배포자이기도 한 경우 배포 데이터베이스를 주 서버에서 보조 서버로 복원합니다.  
   
      이러한 데이터베이스의 복제 구성 및 설정은 주 서버의 게시 데이터베이스와 일치해야 합니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "47655951"
   
 3.  RESTORE LOG의 KEEP_REPLICATION 옵션을 사용하여 데이터베이스의 마지막 로그를 보조 서버로 복원합니다. 이렇게 하면 데이터베이스에 대한 모든 복제 설정이 유지됩니다. 자세한 내용은 [로그 전달 보조 데이터베이스로 장애 조치(Failover)&#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) 및 [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)를 참조하세요.  
   
-4.  주 서버에서 보조 서버로 **msdb** 데이터베이스와 **master** 데이터베이스를 복원합니다. 자세한 내용은 [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)를 참조하세요. 주 서버가 배포자이기도 한 경우 배포 데이터베이스를 주 서버에서 보조 서버로 복원합니다.  
+4.  주 서버에서 보조 서버로 **msdb** 데이터베이스와 **master** 데이터베이스를 복원합니다. 자세한 내용은 [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)를 참조하세요. 주 서버가 배포자이기도 한 경우 배포 데이터베이스를 주 서버에서 보조 서버로 복원합니다.  
   
      이러한 데이터베이스의 복제 구성 및 설정은 주 서버의 게시 데이터베이스와 일치해야 합니다.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "47655951"
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]를 실행하는 구독자와 동기화할 경우에 해당 구독은 익명일 수 없습니다. 구독은 클라이언트 구독 또는 서버 구독(이전 버전에서는 로컬 구독 및 전역 구독)이어야 합니다. 자세한 내용은 [데이터 동기화](../../relational-databases/replication/synchronize-data.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [복제 기능 및 태스크](../../relational-databases/replication/replication-features-and-tasks.md)   
+ [SQL Server 복제](../../relational-databases/replication/sql-server-replication.md)   
  [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [데이터베이스 미러링 및 복제&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  
   

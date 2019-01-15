@@ -13,12 +13,12 @@ ms.assetid: e037bd27-cc87-4ee9-9e5f-83f6d717cfa4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4ecfeb1175223ec1827732b702c0ff9d5285d73b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 389df9d30f4a1d1cace4f3943ba6ea22bcc846c9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646111"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124063"
 ---
 # <a name="start-the-replication-monitor"></a>복제 모니터 시작
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,6 +37,6 @@ ms.locfileid: "47646111"
 2.  sqlmonitor.exe를 실행합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [복제 모니터링](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [복제 모니터링](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

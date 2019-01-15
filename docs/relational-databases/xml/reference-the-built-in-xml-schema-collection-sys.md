@@ -17,24 +17,24 @@ ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2982a8882fde670fa6a148087885116b3bfaf372
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3b6d151d2407e97f2030a083e577d9fd534b770c
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677957"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256548"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>기본 제공 XML 스키마 컬렉션 참조(sys)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   사용자가 만드는 모든 데이터베이스의 **sys** 관계형 스키마에는 미리 정의된 **sys** XML 스키마 컬렉션이 있습니다. 이 스키마 컬렉션에는 이러한 미리 정의된 스키마가 포함되며 사용자가 만든 다른 XML 스키마 컬렉션으로부터 이러한 스키마를 액세스할 수 있습니다. 이러한 미리 정의된 스키마에 사용되는 접두사는 XQuery에서 의미를 갖습니다. 예약된 접두사는 **xml** 뿐입니다.  
   
 ```  
-xml = https://www.w3.org/XML/1998/namespace  
-xs = https://www.w3.org/2001/XMLSchema  
-xsi = https://www.w3.org/2001/XMLSchema-instance  
-fn = https://www.w3.org/2004/07/xpath-functions  
+xml = http://www.w3.org/XML/1998/namespace  
+xs = http://www.w3.org/2001/XMLSchema  
+xsi = http://www.w3.org/2001/XMLSchema-instance  
+fn = http://www.w3.org/2004/07/xpath-functions  
 sqltypes = https://schemas.microsoft.com/sqlserver/2004/sqltypes  
-xdt = https://www.w3.org/2004/07/xpath-datatypes  
+xdt = http://www.w3.org/2004/07/xpath-datatypes  
 (no prefix) = urn:schemas-microsoft-com:xml-sql  
 (no prefix) = https://schemas.microsoft.com/sqlserver/2004/SOAP  
 ```  
@@ -64,11 +64,11 @@ GO
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
 <schema   
-   xmlns="https://www.w3.org/2001/XMLSchema"   
+   xmlns="http://www.w3.org/2001/XMLSchema"   
    targetNamespace="myNS"  
    xmlns:ns="myNS"  
    xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
-   <import namespace="https://www.w3.org/XML/1998/namespace"/>  
+   <import namespace="http://www.w3.org/XML/1998/namespace"/>  
    <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
    <element name="root">  
       <complexType>  
@@ -98,7 +98,7 @@ GO
   
     ```  
     CREATE XML SCHEMA COLLECTION SC AS '  
-    <schema xmlns="https://www.w3.org/2001/XMLSchema"   
+    <schema xmlns="http://www.w3.org/2001/XMLSchema"   
     targetNamespace    
         ="https://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
           <element name="root" type="string"/>  
@@ -123,7 +123,7 @@ GO
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema"   
+<schema xmlns="http://www.w3.org/2001/XMLSchema"   
         targetNamespace="myNS" xmlns:ns="myNS"  
         xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
    <import     

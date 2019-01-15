@@ -1,7 +1,7 @@
 ---
 title: SQL Server 보조-주 복제본 읽기/쓰기 연결 리디렉션 - Always On 가용성 그룹 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -18,14 +18,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a811fdb21d6c0c1d702c067f255ece3c2b183b9c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: e64768dcfaf4342c3ea52f1b01c29940fb1c8cf0
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600542"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206309"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>보조-주 복제본 읽기/쓰기 연결 리디렉션(Always On 가용성 그룹)
+
 [!INCLUDE[appliesto](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0은 Always On 가용성 그룹에 대해 *보조-주 복제본 읽기/쓰기 연결 리디렉션*을 도입했습니다. 읽기/쓰기 연결 리디렉션은 모든 운영 체제 플랫폼에서 사용할 수 있습니다. 이 기능은 연결 문자열에 지정된 대상 서버에 관계없이, 클라이언트 애플리케이션 연결이 주 복제본으로 전송되도록 합니다. 
@@ -53,8 +54,8 @@ ms.locfileid: "51600542"
 
 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)]에서 `READ_WRITE_ROUTING_URL`이 `<add_replica_option>` 사양에 추가되었습니다. 다음 항목을 참조하세요. 
 
-* [CREATE AVAILABILITY GROUP](../../../t-sql\statements\create-availability-group-transact-sql.md)
-* [ALTER AVAILABILITY GROUP](../../../t-sql\statements\alter-availability-group-transact-sql.md)
+* [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)
+* [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
 
 ### <a name="primaryrolereadwriteroutingurl-not-set-default"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL)이 설정되지 않음(기본값) 
@@ -156,9 +157,10 @@ GO
 
 연결 문자열에 지정된 SQL Server 인스턴스를 사용할 수 없는 경우(가동 중단의 경우) 대상 서버에서 해당 복제본의 역할에 관계없이 연결이 실패합니다. 애플리케이션이 장시간 가동 중지되는 것을 방지하려면 연결 문자열에 대체 `FailoverPartner`를 구성합니다. 애플리케이션은 실제 장애 조치(Failover) 동안 주 및 보조 복제본을 수용하기 위해 다시 시도 논리를 구현해야 합니다. 연결 문자열에 대한 자세한 내용은 [SqlConnection.ConnectionString Property](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고 항목
+
 [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  
 [가용성 복제본에 대한 클라이언트 연결 액세스 정보&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
 
-[가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md) 
+[가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md) 

@@ -15,18 +15,18 @@ ms.assetid: 32aa0347-64e4-4aa4-ac57-6bd3e5d52070
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a84f6880cb0ef1ea41adc616718f167b165b767b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec29a632d1125282d74c59ac511ed0c883a66c52
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691241"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123873"
 ---
 # <a name="subscriber-properties"></a>구독자 속성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **구독자 속성** 대화 상자에는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행 중인 구독자와 관련된 정보가 포함되어 있습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **에이전트에서 구독자 연결**  
  배포 에이전트 및 병합 에이전트가 배포자에서 구독자로 연결하는 컨텍스트로서, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]이전 버전에만 적용됩니다.  
   
@@ -42,7 +42,6 @@ ms.locfileid: "47691241"
   
 ## <a name="see-also"></a>참고 항목  
  [배포자 및 게시자 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [속성 참조&#40;복제&#41;](../../relational-databases/replication/properties-reference-replication.md)   
  [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

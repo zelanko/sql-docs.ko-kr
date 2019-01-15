@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c06ef657cc4a29926c29eef8616e22ba4025201f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 55e3dda77a2b623ef50fe64ad82824b84a934f44
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511924"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124103"
 ---
 # <a name="expressions-transact-sql"></a>식(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -89,8 +89,8 @@ ms.locfileid: "52511924"
 |[ _table_name_**.** ]|테이블의 이름 또는 별칭입니다.|  
 |*column*|열의 이름입니다. 식에는 열 이름만 사용할 수 있습니다.|  
 |*variable*|변수 또는 매개 변수의 이름입니다. 자세한 내용은 [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)을 참조하세요.|  
-|**(** *expression*  **)**|이 항목에서 정의된 바와 같이 유효한 식입니다. 괄호는 안에 있는 식의 모든 연산자를 평가한 후에 그 결과를 다른 식과 결합하는 그룹 연산자입니다.|  
-|**(** *scalar_subquery* **)**|한 개의 값을 반환하는 하위 쿼리입니다. 예를 들어 다음과 같이 사용할 수 있습니다.<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
+|**(** _expression_  **)**|이 항목에서 정의된 바와 같이 유효한 식입니다. 괄호는 안에 있는 식의 모든 연산자를 평가한 후에 그 결과를 다른 식과 결합하는 그룹 연산자입니다.|  
+|**(** _scalar_subquery_ **)**|한 개의 값을 반환하는 하위 쿼리입니다. 예를 들어 다음과 같이 사용할 수 있습니다.<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
 |{ *unary_operator* }|단항 연산자는 숫자 데이터 형식 범주의 데이터 형식 하나로 평가되는 식에 대해서만 적용할 수 있습니다. 단 하나의 숫자 피연산자만 있는 연산자입니다.<br /><br /> +는 양수를 나타냅니다.<br /><br /> -는 음수를 나타냅니다.<br /><br /> ~는 보수 연산자를 나타냅니다.|  
 |{ *binary_operator* }|두 식을 결합하여 단일 결과를 만드는 방식을 정의하는 연산자입니다. *binary_operator*는 산술 연산자, 대입 연산자(=), 비트 연산자, 비교 연산자, 논리 연산자, 문자열 연결 연산자(+) 또는 단항 연산자일 수 있습니다. 연산자에 대한 자세한 내용은 [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)를 참조하세요.|  
 |*ranking_windowed_function*|[!INCLUDE[tsql](../../includes/tsql-md.md)] 순위 함수입니다. 자세한 내용은 [순위 함수&#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)를 참조하세요.|  
@@ -99,7 +99,7 @@ ms.locfileid: "52511924"
 ## <a name="expression-results"></a>식 결과  
  단일 상수, 변수, 스칼라 함수, 열 이름, 데이터 정렬, 전체 자릿수, 소수 자릿수 및 식의 값으로 이루어진 단순 식은 데이터 형식, 데이터 정렬, 전체 자릿수, 소수 자릿수 및 참조된 요소의 값입니다.  
   
- 두 식이 비교 연산자 또는 논리 연산자를 사용하여 결합되면, 결과 데이터 형식은 부울이고 값은 TRUE, FALSE 또는 UNKNOWN 중 하나입니다. 부울 데이터 형식에 대한 자세한 내용은 [비교 연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)를 참조하세요.  
+ 비교 연산자나 논리 연산자를 사용하여 두 식을 결합하면 결과 데이터 형식은 부울이 되며 값은 TRUE, FALSE 또는 UNKNOWN 중 하나가 됩니다. 부울 데이터 형식에 대한 자세한 내용은 [비교 연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)를 참조하세요.  
   
  산술, 비트 또는 문자열 연산자를 사용하여 두 식을 결합하면 연산자에 따라 결과 데이터 형식이 결정됩니다.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "52511924"
   
  문자열로 평가되는 모든 식의 데이터 정렬은 선행 정렬 규칙에 따라 설정됩니다. 자세한 내용은 [데이터 정렬 선행 규칙&#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)을 참조하세요.  
   
- C 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]과 같은 프로그래밍 언어에서 식은 항상 단일 결과로 평가됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 목록의 식은 이 규칙의 변형을 따릅니다. 즉 식은 결과 집합의 각 행에 대해 개별적으로 평가됩니다. 단일 식은 결과 집합의 각 행에 서로 다른 값을 가질 수 있습니다. 그러나 각 행은 식에 대해 단 하나의 값만을 가집니다. 예를 들어 다음 `SELECT` 문에서 `ProductID`에 대한 참조와 선택 목록의 `1+2` 항목은 모두 식입니다.  
+ C 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]과 같은 프로그래밍 언어에서 식은 항상 단일 결과로 평가됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 선택 목록의 식은 이 규칙이 적용되지 않습니다. 식은 결과 집합의 각 행에 대해 개별적으로 평가됩니다. 단일 식은 결과 집합의 각 행에 서로 다른 값을 가질 수 있습니다. 그러나 각 행은 식에 대해 단 하나의 값만을 가집니다. 예를 들어 다음 `SELECT` 문에서 `ProductID`에 대한 참조와 선택 목록의 `1+2` 항목은 모두 식입니다.  
   
 ```  
 USE AdventureWorks2012;  

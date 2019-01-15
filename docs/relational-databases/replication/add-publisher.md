@@ -15,18 +15,18 @@ ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d48c5860c097b8d027c23ead603094f9637d8368
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 271dd589a4bab4d6d7117eeb62d36dfcc32bf6a2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513918"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128653"
 ---
 # <a name="add-publisher"></a>게시자 추가
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **게시자 추가** 대화 상자를 사용하여 복제 모니터의 왼쪽 창에 하나 이상의 게시자를 추가할 수 있습니다. 게시자를 추가한 후 왼쪽 창에서 게시자를 선택하면 오른쪽 창에 해당 게시자에 대한 정보가 표시됩니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **추가**  
  추가할 게시자 유형을 선택하려면 클릭합니다. **서버에 연결** 대화 상자가 시작됩니다. 다음 옵션을 사용할 수 있습니다.  
   
@@ -70,6 +70,6 @@ ms.locfileid: "52513918"
   
 ## <a name="see-also"></a>참고 항목  
  [복제 모니터 시작](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

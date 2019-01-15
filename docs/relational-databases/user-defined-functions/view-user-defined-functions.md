@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7bce0be6e849dc2e374ca8af1025a5da386b27a2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5a6f4b6283c6e1a29f273eae5c607478166535af
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533581"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256028"
 ---
 # <a name="view-user-defined-functions"></a>사용자 정의 함수 보기
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "52533581"
   
 4.  속성을 볼 함수를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-     다음 속성이 **함수 속성 –** *function_name* 대화 상자에 표시됩니다.  
+     다음 속성이 **함수 속성 –** _function_name_ 대화 상자에 표시됩니다.  
   
      **데이터베이스 백업**  
      이 함수를 포함하는 데이터베이스의 이름입니다.  

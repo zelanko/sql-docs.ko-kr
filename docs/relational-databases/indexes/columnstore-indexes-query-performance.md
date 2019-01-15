@@ -1,7 +1,7 @@
 ---
 title: Columnstore 인덱스 - 쿼리 성능 | Microsoft Docs
 ms.custom: ''
-ms.date: 12/01/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -12,14 +12,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfe14cc4f52fe0606fd68613736d91fd48bf87f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dddb1ee5aaeab9a741cfe0a09bea2a93b786c57e
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637147"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255290"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Columnstore 인덱스 쿼리 성능
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   디자인된 columnstore 인덱스에서 매우 빠른 쿼리 성능을 제공하기 위한 권장 사항에 대해 설명합니다.    
@@ -141,11 +142,11 @@ FROM FactResellerSalesXL_CCI
 ```    
     
 ### <a name="string-predicate-pushdown"></a>문자열 조건자 푸시다운    
-데이터 웨어하우스 스키마를 디자인할 때 하나 이상의 팩트 테이블과 많은 차원 테이블로 구성된 별 모양 스키마 또는 눈송이 스키마를 스키마 모델링으로 사용하는 것이 권장됩니다. [팩트 테이블](https://en.wikipedia.org/wiki/Fact_table) 에는 비즈니스 측정값 또는 트랜잭션을 저장하고, [차원 테이블](https://en.wikipedia.org/wiki/Dimension_table) 에는 분석해야 하는 팩트 전체에 대한 차원을 저장합니다.    
+데이터 웨어하우스 스키마를 디자인할 때 하나 이상의 팩트 테이블과 많은 차원 테이블로 구성된 별 모양 스키마 또는 눈송이 스키마를 스키마 모델링으로 사용하는 것이 권장됩니다. [팩트 테이블](https://wikipedia.org/wiki/Fact_table) 에는 비즈니스 측정값 또는 트랜잭션을 저장하고, [차원 테이블](https://wikipedia.org/wiki/Dimension_table) 에는 분석해야 하는 팩트 전체에 대한 차원을 저장합니다.    
     
 예를 들어 팩트는 특정 지역에서 특정 제품의 판매를 나타내는 레코드일 수 있으며, 차원은 지역, 제품 등의 집합을 나타냅니다. 팩트 테이블과 차원 테이블은 기본/외래 키 관계를 통해 연결됩니다. 가장 일반적으로 사용되는 분석 쿼리는 하나 이상의 차원 테이블을 팩트 테이블에 조인하는 것입니다.    
     
-`Products` 차원 테이블이 있다고 가정해 봅시다. 일반적인 기본 키는 주로 string 데이터 형식으로 표현되는 `ProductCode`가 됩니다. 쿼리 성능을 위해 일반적으로 정수 열인 대리 키를 만들어 팩트 테이블에서 차원 테이블의 행을 참조하는 것이 가장 좋습니다.    
+`Products` 차원 테이블이 있다고 가정해 봅시다. 일반적인 기본 키는 주로 string 데이터 형식으로 표현되는 `ProductCode`가 됩니다. 쿼리 성능을 위해 일반적으로 정수 열인 대리 키를 만들어 팩트 테이블에서 차원 테이블의 행을 참조하는 것이 가장 좋습니다.    
     
 columnstore 인덱스는 숫자 또는 정수를 기반으로 하는 키가 포함된 조인/조건자를 사용하여 분석 쿼리를 매우 효율적으로 실행합니다. 그러나 많은 고객 작업에서 팩트/차원 테이블을 연결하는 문자열 기반 열이 사용되고 있고 그 결과 columnstore 인덱스를 사용하는 쿼리 성능은 직접 수행할 때와는 다릅니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]는 문자열 열이 있는 조건자를 SCAN 노드로 푸시다운하여 문자열 기반의 열을 사용하는 분석 쿼리의 성능을 크게 향상시켰습니다.    
     

@@ -29,12 +29,12 @@ ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ee5082535620d05c96b505b1920b8036d92f5e97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83017a49354eb3da8220ae2fa4536961d1fed420
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843105"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124783"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,14 +65,14 @@ AS PARTITION partition_function_name
  ALL  
  모든 파티션이 *file_group_name*에서 제공한 파일 그룹에 매핑되거나 또는 **[** PRIMARY **]** 가 지정된 경우 주 파일 그룹에 매핑되도록 지정합니다. ALL을 지정하면 하나의 *file_group_name*만 지정할 수 있습니다.  
   
- *file_group_name* | **[** PRIMARY **]** [ **,***...n*]  
+ *file_group_name* | **[** PRIMARY **]** [ **,**_...n_]  
  *partition_function_name*에 지정된 파티션을 보유할 파일 그룹의 이름을 지정합니다. *file_group_name*은 데이터베이스에 이미 있어야 합니다.  
   
- **[** PRIMARY **]** 를 지정하면 파티션은 주 파일 그룹에 저장됩니다. ALL을 지정하면 하나의 *file_group_name*만 지정할 수 있습니다. [**,***...n*]에 나열된 파일 그룹의 순서대로 1번 파티션부터 시작하여 파티션을 파일 그룹에 할당합니다. [**,***...n*]에서 같은 *file_group_name*을 두 번 이상 지정할 수 있습니다. *n*이 *partition_function_name*에서 지정된 만큼의 파티션 수를 보유하기에 부족한 경우 CREATE PARTITION SCHEME은 오류가 발생하고 실패합니다.  
+ **[** PRIMARY **]** 를 지정하면 파티션은 주 파일 그룹에 저장됩니다. ALL을 지정하면 하나의 *file_group_name*만 지정할 수 있습니다. [**,**_...n_]에 나열된 파일 그룹의 순서대로 1번 파티션부터 시작하여 파티션을 파일 그룹에 할당합니다. [**,**_...n_]에서 같은 *file_group_name*을 두 번 이상 지정할 수 있습니다. *n*이 *partition_function_name*에서 지정된 만큼의 파티션 수를 보유하기에 부족한 경우 CREATE PARTITION SCHEME은 오류가 발생하고 실패합니다.  
   
  *partition_function_name*이 파일 그룹보다 적은 파티션을 생성한 경우 할당되지 않은 첫 번째 파일 그룹이 NEXT USED로 표시되고 정보 메시지가 NEXT USED 파일 그룹에 표시됩니다. ALL을 지정하면 하나의 *file_group_name*만이 해당 *partition_function_name*의 NEXT USED 속성을 유지합니다. ALTER PARTITION FUNCTION 문에서 파티션을 생성한 경우 NEXT USED 파일 그룹이 추가 파티션을 받습니다. 할당되지 않은 파일 그룹을 추가로 만들어 새 파티션을 보유하려면 ALTER PARTITION SCHEME을 사용하십시오.  
   
- *file_group_name* [ 1 **,***...n*]에서 주 파일 그룹을 지정하면 PRIMARY는 키워드이므로 **[** PRIMARY**]**와 같이 구분해야 합니다.  
+ *file_group_name* [ 1 **,**_...n_]에서 주 파일 그룹을 지정하면 PRIMARY는 키워드이므로 **[** PRIMARY **]** 와 같이 구분해야 합니다.  
   
  [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에는 PRIMARY만 사용할 수 있습니다. 아래 예제 E를 참조하세요. 
   
@@ -139,7 +139,7 @@ AS PARTITION myRangePF3
 ALL TO ( test1fg );  
 ```  
   
-### <a name="d-creating-a-partition-scheme-that-specifies-a-next-used-filegroup"></a>4. 'NEXT USED' 파일 그룹을 지정하는 파티션 구성표 만들기  
+### <a name="d-creating-a-partition-scheme-that-specifies-a-next-used-filegroup"></a>D. 'NEXT USED' 파일 그룹을 지정하는 파티션 구성표 만들기  
  다음 예에서는 앞의 예와 같은 파티션 함수를 만들고 연관된 파티션 함수가 생성한 파티션보다 많은 파일 그룹을 나열하는 파티션 구성표를 만드는 방법을 보여 줍니다.  
   
 ```  
@@ -158,7 +158,7 @@ TO (test1fg, test2fg, test3fg, test4fg, test5fg)
   
  파티션을 추가하도록 `myRangePF4` 파티션 함수를 변경한 경우 `test5fg` 파일 그룹이 새로 만들어진 파티션을 받습니다.  
 
-### <a name="e-creating-a-partition-schema-only-on-primary---only-primary-is-supported-for-includesqldbesaincludessqldbesa-mdmd"></a>5. PRIMARY에서만 파티션 스키마 만들기 - [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에 대해 PRIMARY만 지원됨
+### <a name="e-creating-a-partition-schema-only-on-primary---only-primary-is-supported-for-includesqldbesaincludessqldbesa-mdmd"></a>E. PRIMARY에서만 파티션 스키마 만들기 - [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에 대해 PRIMARY만 지원됨
 
  다음 예에서는 테이블이나 인덱스를 4개의 파티션으로 분할하는 파티션 함수를 만듭니다. 그러면 모든 파티션이 PRIMARY 파일 그룹에 만들어지도록 지정하는 파티션 구성표가 만들어집니다.  
   

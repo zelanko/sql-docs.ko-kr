@@ -42,12 +42,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9d1acf8774331ca5e789d9c8d9c50e05a6a3b1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e0f959c6bc5a34fe2c2a3aec08f87f1e703749cf
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523070"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129013"
 ---
 # <a name="publish-data-and-database-objects"></a>데이터 및 데이터베이스 개체 게시
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,36 +71,22 @@ ms.locfileid: "52523070"
 ## <a name="creating-publications"></a>게시 만들기  
  게시를 만들려면 다음 정보를 제공해야 합니다.  
   
--   배포자  
-  
--   스냅숏 파일의 위치  
-  
--   게시 데이터베이스  
-  
--   만들 게시의 유형(스냅숏, 트랜잭션, 업데이트할 수 있는 구독이 있는 트랜잭션 또는 병합)  
-  
--   게시에 포함할 데이터 및 데이터베이스 개체(아티클)  
-  
--   모든 유형의 게시에 대한 정적 행 필터 및 열 필터, 병합 게시에 대한 매개 변수가 있는 행 필터 및 조인 필터  
-  
--   스냅숏 에이전트 일정  
-  
--   다음 에이전트가 실행되는 계정 - 모든 게시에 대한 스냅숏 에이전트, 모든 트랜잭션 게시에 대한 로그 판독기 에이전트, 구독 업데이트를 허용하는 모든 트랜잭션 게시에 대한 큐 판독기 에이전트  
-  
+-   배포자    
+-   스냅숏 파일의 위치    
+-   게시 데이터베이스    
+-   만들 게시의 유형(스냅숏, 트랜잭션, 업데이트할 수 있는 구독이 있는 트랜잭션 또는 병합)    
+-   게시에 포함할 데이터 및 데이터베이스 개체(아티클)   
+-   모든 유형의 게시에 대한 정적 행 필터 및 열 필터, 병합 게시에 대한 매개 변수가 있는 행 필터 및 조인 필터   
+-   스냅숏 에이전트 일정    
+-   다음 에이전트가 실행되는 계정 - 모든 게시에 대한 스냅숏 에이전트, 모든 트랜잭션 게시에 대한 로그 판독기 에이전트, 구독 업데이트를 허용하는 모든 트랜잭션 게시에 대한 큐 판독기 에이전트    
 -   게시에 대한 이름 및 설명  
   
- 게시로 작업하는 방법은 다음 항목을 참조하십시오.  
-  
--   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
-  
--   [아티클 정의](../../../relational-databases/replication/publish/define-an-article.md)  
-  
--   [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
-  
--   [아티클 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)  
-  
--   [게시 삭제](../../../relational-databases/replication/publish/delete-a-publication.md)  
-  
+ 게시로 작업하는 방법은 다음 항목을 참조하십시오.    
+-   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)    
+-   [아티클 정의](../../../relational-databases/replication/publish/define-an-article.md)    
+-   [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)    
+-   [아티클 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)    
+-   [게시 삭제](../../../relational-databases/replication/publish/delete-a-publication.md)    
 -   [아티클 삭제](../../../relational-databases/replication/publish/delete-an-article.md)  
   
 > [!NOTE]  
@@ -109,12 +95,9 @@ ms.locfileid: "52523070"
 ## <a name="publishing-tables"></a>테이블 게시  
  가장 일반적으로 게시되는 개체는 테이블입니다. 다음 링크는 테이블 게시와 관련된 영역에 대한 추가 정보를 제공합니다.  
   
--   [게시된 데이터 필터링](../../../relational-databases/replication/publish/filter-published-data.md)  
-  
--   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
-  
--   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
-  
+-   [게시된 데이터 필터링](../../../relational-databases/replication/publish/filter-published-data.md)    
+-   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)
+-   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)    
 -   [ID 열 복제](../../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
  복제를 위해 테이블을 게시할 때는 구독자로 복사할 선언된 참조 무결성(PRIMARY KEY 제약 조건, 참조 제약 조건, UNIQUE 제약 조건), 인덱스, 사용자 DML 트리거(DDL 트리거는 복제할 수 없음), 확장 속성, 데이터 정렬 등의 스키마 개체를 지정할 수 있습니다. 확장 속성은 게시자와 구독자 간의 초기 동기화 수행 시에만 복제됩니다. 초기 동기화 후에 확장 속성을 추가하거나 수정하면 변경 내용이 복제되지 않습니다.  
@@ -199,7 +182,7 @@ ms.locfileid: "52523070"
   
 -   문자 모드 스냅숏([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자 및 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 구독자에 사용됨)을 사용하는 게시의 아티클에 대해 기본적으로 소유자는 빈 상태입니다. 소유자는 기본적으로 배포 에이전트 또는 병합 에이전트를 구독자에 연결하는 데 사용하는 계정과 연결된 소유자입니다.  
   
- 개체 소유자는 **아티클 속성 - \<***Article***>** 대화 상자와 **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** 및 **sp_changemergearticle** 저장 프로시저를 통해 변경할 수 있습니다. 자세한 내용은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [아티클 정의](../../../relational-databases/replication/publish/define-an-article.md) 및 [아티클 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)을 참조하세요.  
+ 개체 소유자는 **아티클 속성 - \<**_Article_**>** 대화 상자와 **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** 및 **sp_changemergearticle** 저장 프로시저를 통해 변경할 수 있습니다. 자세한 내용은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [아티클 정의](../../../relational-databases/replication/publish/define-an-article.md) 및 [아티클 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)을 참조하세요.  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>이전 버전의 SQL Server를 실행하는 구독자에 데이터 게시  
   

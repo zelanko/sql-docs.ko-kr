@@ -14,12 +14,12 @@ ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5bd71aa5fe43b953fc887e9cede1bab221bcc26c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5acba25c4a393723c4311cc0070b6dee165757c2
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658282"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256658"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>XML 스키마 컬렉션에 대한 사용 권한 부여
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ SETUSER 'TestLogin1'
 GO  
 CREATE XML SCHEMA COLLECTION myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
 <xsd:element name="AdditionalContactInfo" >  
   <xsd:complexType mixed="true" >  
@@ -155,7 +155,7 @@ SETUSER 'TestLogin1'
 GO  
 CREATE XML SCHEMA COLLECTION myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
   
 <xsd:element name="AdditionalContactInfo" >  
@@ -270,7 +270,7 @@ SETUSER 'TestLogin1'
 GO  
 CREATE XML SCHEMA COLLECTION myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
   
 <xsd:element name="AdditionalContactInfo" >  
@@ -296,7 +296,7 @@ SETUSER 'TestLogin1'
 GO  
 ALTER XML SCHEMA COLLECTION myTestSchemaCollection ADD '  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns="https://schemas.adventure-works.com/Additional/ContactInfo"   
 elementFormDefault="qualified">  
  <xsd:element name="pager" type="xsd:string"/>  
@@ -314,7 +314,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### <a name="d-granting-take-ownership-permission-on-an-xml-schema-collection"></a>4. XML 스키마 컬렉션에 대한 TAKE OWNERSHIP 권한 부여  
+### <a name="d-granting-take-ownership-permission-on-an-xml-schema-collection"></a>D. XML 스키마 컬렉션에 대한 TAKE OWNERSHIP 권한 부여  
  다음 예에서는 XML 스키마 소유권을 한 사용자에서 다른 사용자로 이전하는 방법을 보여 줍니다. 보다 유용한 예로 만들기 위해 사용자는 서로 다른 기본 관계형 스키마에서 작업을 수행합니다.  
   
  이 예에서는 다음을 수행합니다.  
@@ -363,7 +363,7 @@ setuser 'TestLogin1'
 GO  
 CREATE XML SCHEMA COLLECTION myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
   
 <xsd:element name="AdditionalContactInfo" >  
@@ -432,7 +432,7 @@ DROP LOGIN TestLogin2
 go   
 ```  
   
-### <a name="e-granting-view-definition-permission-on-an-xml-schema-collection"></a>5. XML 스키마 컬렉션에 대한 VIEW DEFINITION 권한 부여  
+### <a name="e-granting-view-definition-permission-on-an-xml-schema-collection"></a>E. XML 스키마 컬렉션에 대한 VIEW DEFINITION 권한 부여  
  다음 예에서는 XML 스키마 컬렉션에 대한 VIEW DEFINITION 권한을 부여하는 방법을 보여 줍니다.  
   
 ```  
@@ -457,8 +457,8 @@ GO
 CREATE USER schemaUser WITH DEFAULT_SCHEMA=dbo  
 GO  
 CREATE XML SCHEMA COLLECTION MySC AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema" targetNamespace="https://ns"  
-xmlns:ns="https://ns">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ns"  
+xmlns:ns="http://ns">  
   
    <simpleType name="ListOfIntegers">  
       <list itemType="integer"/>  

@@ -14,12 +14,12 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 029ad55778a1c4239bdb83d587ca9a1f21bcaf20
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 40035d23d7414aa00f44f22411244ca7452ccafd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534440"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124873"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>데이터베이스 미러링 및 복제(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ ms.locfileid: "52534440"
 |자동 장애 조치를 지원하지 않는 보호 우선 모드|커밋된 모든 트랜잭션이 미러 서버의 디스크에 확정됩니다. 로그 판독기 에이전트는 미러 서버에 확정된 트랜잭션만 복제합니다. 미러 서버를 사용할 수 없는 경우 주 서버는 데이터베이스에 대한 더 이상의 작동을 허용하지 않기 때문에 로그 에이전트에는 복제할 트랜잭션이 없게 됩니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [복제 기능 및 태스크](../../relational-databases/replication/replication-features-and-tasks.md)   
+ [SQL Server 복제](../../relational-databases/replication/sql-server-replication.md)   
  [로그 전달 및 복제&#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)  
   
   

@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 820a11940cfd3ee904979420acb0c766a6b32fb0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f18a3d809be2302732fa4e4aaeaa1b1e19cbb2dd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664051"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130393"
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +85,7 @@ column_name <data_type>
  *column_name*  
  변경, 추가 또는 삭제할 열의 이름입니다. *column_name*은 1~128자로 구성될 수 있습니다. 새 열의 경우 타임스탬프 데이터 형식으로 만들어진 *column_name*을 생략할 수 있습니다. **타임스탬프** 데이터 형식 열에 대해 *column_name*이 지정되지 않으면 **타임스탬프**가 이름으로 사용됩니다.  
   
- [ *type_schema_name***.** ] *type_name*  
+ [ _type_schema_name_**.** ] *type_name*  
  추가된 열 및 해당 열이 속한 스키마의 데이터 형식입니다.  
   
  *type_name*은 다음과 같을 수 있습니다.  
@@ -155,7 +155,7 @@ DEFAULT
  기본 열 값으로 사용되는 리터럴 값, NULL, 시스템 함수입니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 사용자 정의 유형으로 정의된 열과 함께 사용할 경우 *constant_expression*에서 사용자 정의 유형으로의 암시적 변환이 지원되어야 합니다.  
   
 WITH VALUES   
- 열 및 DEFAULT 제약 조건을 추가할 때 열에서 NULLS를 허용하는 경우 기존 행에 WITH VALUES를 사용하면 새 열의 값이 DEFAULT *constant_expression*에 제공된 값으로 설정됩니다. 추가되는 열에서 NULLS를 허용하지 않으면 기존 행의 열 값은 항상 DEFAULT *constant expression*에 제공된 값으로 설정됩니다. SQL Server 2012부터 이 작업은 메타데이터 작업 [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation)입니다.
+ 열 및 DEFAULT 제약 조건을 추가할 때 열에서 NULLS를 허용하는 경우 기존 행에 WITH VALUES를 사용하면 새 열의 값이 DEFAULT *constant_expression*에 제공된 값으로 설정됩니다. 추가되는 열에서 NULLS를 허용하지 않으면 기존 행의 열 값은 항상 DEFAULT *constant expression*에 제공된 값으로 설정됩니다. SQL Server 2012부터 이 작업은 메타데이터 작업 [온라인 작업으로 null 열을 추가하지 않음](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation)입니다.
 관련 열이 추가되지 않을 때 이 작업이 사용되면 아무런 영향을 주지 않습니다.
  
  DEFAULT *constant_expression*에 지정된 값이 기존 행에 추가된 새 열에 저장되도록 지정합니다. 추가된 열이 Null 값을 허용하고 WITH VALUES가 지정된 경우 기존 행에 추가된 새 열에 기본값이 저장됩니다. Null을 허용하는 열에 WITH VALUES를 지정하지 않으면 NULL 값은 기존 행의 새 열에 저장됩니다. 새 열이 Null을 허용하지 않으면 WITH VALUES의 지정 여부에 관계없이 새 행에 기본값이 저장됩니다.  

@@ -28,12 +28,12 @@ ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fa09a229b3cff08f452417a89bbc2ba357a502b0
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 52e2d08a629a2e7272a409f0e84ab9b79299649b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191022"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132133"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  *boundary_value*에 제공된 값 개수가 14,999개를 초과하지 않도록 지정합니다. 생성되는 파티션 수는 *n* + 1개입니다. 값은 순서대로 나열되지 않아도 됩니다. 값이 순서대로 나열되지 않은 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 값을 정렬하여 함수를 만들고 값이 순서대로 제공되지 않았다는 경고를 반환합니다. *n*에 중복 값이 있는 경우 데이터베이스 엔진에서 오류를 반환합니다.  
   
  **LEFT** | RIGHT  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 간격 값을 왼쪽에서 오른쪽으로 오름차순으로 정렬할 때 *boundary_value* [ **,***...n* ]이 각 경계 값 간격의 왼쪽과 오른쪽 중 어느 쪽에 속하는지 지정합니다. 지정하지 않은 경우 LEFT가 기본값입니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 간격 값을 왼쪽에서 오른쪽으로 오름차순으로 정렬할 때 *boundary_value* [ **,**_...n_ ]이 각 경계 값 간격의 왼쪽과 오른쪽 중 어느 쪽에 속하는지 지정합니다. 지정하지 않은 경우 LEFT가 기본값입니다.  
   
 ## <a name="remarks"></a>Remarks  
  파티션 함수의 범위는 함수가 생성된 데이터베이스로 제한됩니다. 해당 데이터베이스 내에서 파티션 함수는 다른 함수와 서로 다른 네임스페이스에 있습니다.  
@@ -107,7 +107,7 @@ AS RANGE LEFT FOR VALUES (1, 100, 1000);
 |**값**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <=`1000`|**col1** > `1000`|  
   
 ### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>2. int 열에 RANGE RIGHT 파티션 함수 만들기  
- 다음 파티션 함수는 RANGE RIGHT를 지정한다는 점을 제외하고 *boundary_value* [ **,***...n* ]에 위 예와 동일한 값을 사용합니다.  
+ 다음 파티션 함수는 RANGE RIGHT를 지정한다는 점을 제외하고 *boundary_value* [ **,**_...n_ ]에 위 예와 동일한 값을 사용합니다.  
   
 ```sql  
 CREATE PARTITION FUNCTION myRangePF2 (int)  
@@ -136,7 +136,7 @@ AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',
 |---------------|-------|-------|---------|--------|--------|  
 |**값**|**datecol** \< `February 1, 2003`|**datecol** >= `February 1, 2003` AND **datecol** \< `March 1, 2003`||**datecol** >= `November 1, 2003` AND **col1** \< `December 1, 2003`|**datecol** >= `December 1, 2003`| 
   
-### <a name="d-creating-a-partition-function-on-a-char-column"></a>4. char 열에 파티션 함수 만들기  
+### <a name="d-creating-a-partition-function-on-a-char-column"></a>D. char 열에 파티션 함수 만들기  
  다음 파티션 함수는 테이블이나 인덱스를 4개의 파티션으로 분할합니다.  
   
 ```sql  
@@ -150,7 +150,7 @@ AS RANGE RIGHT FOR VALUES ('EX', 'RXE', 'XR');
 |---------------|-------|-------|-------|-------|  
 |**값**|**col1** \< `EX`...|**col1** >= `EX` AND **col1** \< `RXE`...|**col1** >= `RXE` AND **col1** \< `XR`...|**col1** >= `XR`| 
   
-### <a name="e-creating-15000-partitions"></a>5. 15,000개의 파티션 만들기  
+### <a name="e-creating-15000-partitions"></a>E. 15,000개의 파티션 만들기  
  다음 파티션 함수는 테이블이나 인덱스를 15,000개의 파티션으로 분할합니다.  
   
 ```sql  
@@ -169,7 +169,7 @@ EXEC sp_executesql @IntegerPartitionFunction;
 GO  
 ```  
   
-### <a name="f-creating-partitions-for-multiple-years"></a>6. 여러 연도에 대한 파티션 만들기  
+### <a name="f-creating-partitions-for-multiple-years"></a>F. 여러 연도에 대한 파티션 만들기  
  다음 파티션 함수는 테이블이나 인덱스를 **datetime2** 열에 50개의 파티션으로 분할합니다. 2007년 1월에서 2011년 1월 사이의 각 월마다 하나의 파티션이 있습니다.  
   
 ```sql  

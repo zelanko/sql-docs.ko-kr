@@ -21,12 +21,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38ce786d8362f711e238b32059ae3bae4f50006e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3b2ce551f280c56e7526455ee03931478f2322b2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672632"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125057"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,19 +38,19 @@ ms.locfileid: "51672632"
  [배포 구성](../../../relational-databases/replication/configure-distribution.md)  
  이 섹션의 항목에서는 RMO를 사용하여 게시 및 배포를 구성하는 방법을 보여 줍니다.  
   
- [게시 및 아티클 만들기, 수정 및 삭제&#40;복제&#41;](../../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)  
+ [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
  이 섹션의 항목에서는 RMO를 사용하여 게시 및 아티클을 작성, 삭제 및 수정하는 방법을 보여 줍니다.  
   
  [게시 구독](../../../relational-databases/replication/subscribe-to-publications.md)  
  이 섹션의 항목에서는 RMO를 사용하여 구독을 작성, 삭제 및 수정하는 방법을 보여 줍니다.  
   
- [복제 토폴로지 보안 설정](../../../relational-databases/replication/security/secure-a-replication-topology.md)  
+ [복제 토폴로지 보안 설정](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
  이 섹션의 항목에서는 RMO를 사용하여 보안 설정을 보고 수정하는 방법을 보여 줍니다.  
   
- [구독 동기화&#40;복제&#41;](../../../relational-databases/replication/synchronize-subscriptions-replication.md)  
+ [구독 동기화&#40;복제&#41;](../../../relational-databases/replication/synchronize-data.md)  
  이 섹션의 항목에서는 구독을 동기화하는 방법을 보여 줍니다.  
   
- [복제 모니터링](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [복제 모니터링](../../../relational-databases/replication/monitor/monitoring-replication.md)  
  이 섹션의 항목에서는 프로그래밍 방식으로 복제 토폴로지를 모니터링하는 방법을 보여 줍니다.  
   
 ## <a name="introduction-to-rmo-programming"></a>RMO 프로그래밍 소개  
@@ -68,7 +68,7 @@ ms.locfileid: "51672632"
   
 2.  **파일** 메뉴에서 **새 프로젝트**를 클릭합니다. **새 프로젝트** 대화 상자가 나타납니다.  
   
-3.  **프로젝트 형식** 대화 상자에서 **Visual C# 프로젝트**를 선택합니다. **템플릿** 창에서 **Windows 응용 프로그램**을 선택합니다.  
+3.  **프로젝트 형식** 대화 상자에서 **Visual C# 프로젝트**를 선택합니다. **템플릿** 창에서 **Windows 애플리케이션**을 선택합니다.  
   
 4.  (옵션) **이름**에 새 애플리케이션의 이름을 입력합니다.  
   

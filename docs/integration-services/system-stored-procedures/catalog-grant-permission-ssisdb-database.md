@@ -14,12 +14,12 @@ ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 856b4dfea1025e9cd9b6818a35410d9463d01e8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51383126fe72627c09b00f3e55bdf5cbe82fe070
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817813"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130133"
 ---
 # <a name="cataloggrantpermission-ssisdb-database"></a>catalog.grant_permission(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ catalog.grant_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>인수  
  [ @object_type = ] *object_type*  
- 보안 개체의 유형입니다. 보안 개체 유형에는 폴더(`1`), 프로젝트(`2`), 환경(`3`) 및 작업(`4`)이 있습니다. *object_type*은 **smallint**** 입니다.  
+ 보안 개체의 유형입니다. 보안 개체 유형에는 폴더(`1`), 프로젝트(`2`), 환경(`3`) 및 작업(`4`)이 있습니다. *object_type*은 **smallint**_입니다._  
   
  [ @object_id = ] *object_id*  
  보안 개체의 고유 식별자(ID)입니다. *object_id*는 **bigint**입니다.  

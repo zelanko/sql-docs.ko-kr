@@ -33,12 +33,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 36d70b56432fee62d157bb8e6cf192d906e84bc3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 144323deee0c84ac1be404869a0ca71197ffcd32
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519345"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135583"
 ---
 # <a name="configure-web-synchronization"></a>웹 동기화 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "52519345"
   
 #### <a name="to-increase-maximum-worker-processes-in-iis-7"></a>IIS 7에서 최대 작업자 프로세스 수를 늘리려면  
   
-1.  **인터넷 정보 서비스(IIS) 관리자**에서 로컬 서버 노드를 확장한 다음 **응용 프로그램 풀** 노드를 클릭합니다.  
+1.  **인터넷 정보 서비스(IIS) 관리자**에서 로컬 서버 노드를 확장한 다음 **애플리케이션 풀** 노드를 클릭합니다.  
   
 2.  웹 동기화 사이트와 연결된 애플리케이션 풀을 선택한 다음 **동작** 창에서 **고급 설정** 을 클릭합니다.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "52519345"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 수신기(Replisapi.dll)를 실행하는 계정은 동기화하는 동안 게시자 및 배포자에 연결되는 계정이기도 합니다. 계정은 게시자 및 배포자의 SQL 로그인 계정에 매핑되어야 합니다. 자세한 내용은 [웹 동기화를 위한 IIS 구성](../../relational-databases/replication/configure-iis-for-web-synchronization.md)에서 "SQL Server 복제 수신기에 대한 사용 권한 설정" 섹션을 참조하세요.  
   
--   FTP를 사용하여 게시자에 있는 스냅숏을 IIS를 실행하는 컴퓨터로 배달할 수 있습니다. 스냅숏은 항상 IIS를 실행하는 컴퓨터에서 HTTPS를 사용하여 구독자로 배달됩니다. 자세한 내용은 [FTP를 통해 스냅숏 전송](../../relational-databases/replication/transfer-snapshots-through-ftp.md)을 참조하세요.  
+-   FTP를 사용하여 게시자에 있는 스냅숏을 IIS를 실행하는 컴퓨터로 배달할 수 있습니다. 스냅숏은 항상 IIS를 실행하는 컴퓨터에서 HTTPS를 사용하여 구독자로 배달됩니다. 자세한 내용은 [FTP를 통해 스냅숏 전송](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)을 참조하세요.  
   
 -   복제 토폴로지에 있는 서버에 방화벽이 설정되어 있는 경우 웹 동기화를 사용하기 위해 방화벽에서 포트를 열어야 할 수 있습니다.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "52519345"
   
     -   IIS를 실행하는 컴퓨터는 일반적으로 포트 1433(기본 인스턴스)을 사용하여 게시자나 배포자에 연결합니다. 다른 기본 인스턴스가 있는 서버에서 게시자나 배포자가 명명된 인스턴스인 경우 일반적으로 포트 1500을 사용하여 명명된 인스턴스에 연결합니다.  
   
-    -   IIS를 실행하는 컴퓨터가 방화벽에 의해 배포자와 분리되고 스냅숏 전달에 FTP 공유가 사용되는 경우 FTP에 사용되는 포트를 열어야 합니다. 자세한 내용은 [FTP를 통해 스냅숏 전송](../../relational-databases/replication/transfer-snapshots-through-ftp.md)을 참조하세요.  
+    -   IIS를 실행하는 컴퓨터가 방화벽에 의해 배포자와 분리되고 스냅숏 전달에 FTP 공유가 사용되는 경우 FTP에 사용되는 포트를 열어야 합니다. 자세한 내용은 [FTP를 통해 스냅숏 전송](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)을 참조하세요.  
   
 > [!IMPORTANT]  
 >  방화벽의 포트를 열면 서버가 악의적인 공격에 노출될 수 있습니다. 포트를 열기 전에 방화벽 시스템을 잘 이해해야 합니다. 자세한 내용은 [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)을 참조하세요.  

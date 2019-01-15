@@ -24,12 +24,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ec072be872bbee61b00839b70327fa3397f1fe92
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bb2f54dde0e73733a4fd129c2d2a4d081942af52
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506243"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132253"
 ---
 # <a name="execute-package-utility-dtexecui"></a>패키지 실행 유틸리티(dtexecui)
   **패키지 실행 유틸리티** 를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 수 있습니다. 이 유틸리티는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스, [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템의 세 위치 중 하나에 저장된 패키지를 실행합니다. 이 사용자 인터페이스는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 열거나 명령 프롬프트에서 **dtexecui** 를 입력하여 열 수 있으며 **DTExec** 명령 프롬프트 도구를 사용하여 패키지를 실행하는 방법 대신 사용할 수 있습니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "52506243"
 |||  
 |-|-|  
 |값|설명|  
-|**SQL Server**|패키지가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 있으면 이 옵션을 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증의 사용자 이름과 암호를 입력합니다. 사용자 이름과 암호를 입력할 때마다 명령 프롬프트에 **/USER** *username* 및 **/PASSWORD** *password* options to the comm및 prompt.|  
+|**SQL Server**|패키지가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 있으면 이 옵션을 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증의 사용자 이름과 암호를 입력합니다. 사용자 이름과 암호를 입력할 때마다 명령 프롬프트에 **/USER** _username_ 및 **/PASSWORD** _password_ options to the comm및 prompt.|  
 |**파일 시스템**|패키지가 파일 시스템에 있으면 이 옵션을 선택합니다.|  
 |**SSIS 패키지 저장소**|패키지가 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소에 있으면 이 옵션을 선택합니다.|  
   
@@ -124,7 +124,7 @@ ms.locfileid: "52506243"
 ## <a name="configurations-page"></a>구성 페이지  
  **패키지 실행 유틸리티** 대화 상자의 **구성** 페이지를 사용하여 런타임에 로드할 구성 파일을 선택하고 이러한 파일의 로드 순서를 지정할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **구성 파일**  
  패키지가 사용하는 구성을 나열합니다. 구성 파일을 사용할 때마다 명령 프롬프트에 **/CONFIGFILE filename** 옵션이 추가됩니다.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "52506243"
 ## <a name="command-files-page"></a>명령 파일 페이지  
  	**패키지 실행 유틸리티** 대화 상자의 **명령 파일** 페이지를 사용하여 런타임에 로드할 명령 파일을 선택할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **Command files**  
  패키지에서 사용하는 명령 파일을 나열합니다. 패키지는 여러 파일을 사용하여 명령줄 옵션을 설정할 수 있습니다.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "52506243"
 ## <a name="connection-managers-page"></a>연결 관리자 페이지  
  **패키지 실행 유틸리티** 대화 상자의 **연결 관리자** 페이지를 사용하여 패키지가 사용하는 연결 관리자의 연결 문자열을 편집할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **연결 관리자**  
  **연결 문자열** 열을 편집할 수 있도록 하려면 확인란을 선택합니다.  
   
@@ -190,7 +190,7 @@ ms.locfileid: "52506243"
 ## <a name="execution-options-page"></a>실행 옵션 페이지  
  **패키지 실행 유틸리티** 대화 상자의 **실행 옵션** 페이지를 사용하여 패키지에 대한 런타임 옵션을 지정할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **유효성 검사 경고 발생 시 패키지 실패**  
  유효성 검사 경고가 발생할 경우 패키지가 실패하는지 여부를 나타냅니다.  
   
@@ -224,7 +224,7 @@ ms.locfileid: "52506243"
 ## <a name="reporting-page"></a>보고 페이지  
  **패키지 실행 유틸리티** 대화 상자의 **보고** 페이지를 사용하여 패키지 실행 시 콘솔에 기록할 패키지 정보 및 이벤트를 지정할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **콘솔 이벤트**  
  보고할 이벤트와 메시지 유형을 나타냅니다.  
   
@@ -285,7 +285,7 @@ ms.locfileid: "52506243"
 ## <a name="logging-page"></a>로깅 페이지  
  **패키지 실행 유틸리티** 대화 상자의 **로깅** 페이지를 사용하여 런타임에 로그 공급자를 패키지에서 사용 가능하게 만들 수 있습니다. 로그에 연결하는 데 사용할 패키지 로그 공급자 유형 및 연결 문자열을 입력합니다. 로그 공급자를 입력할 때마다 명령 프롬프트에 **/LOGGER**_classid_ 옵션이 추가됩니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **로그 공급자**  
  목록에서 로그 공급자를 선택합니다.  
   
@@ -304,7 +304,7 @@ ms.locfileid: "52506243"
 ## <a name="set-values-page"></a>값 설정 페이지  
  **패키지 실행 유틸리티** 대화 상자의 **값 설정** 페이지에서 속성의 경로 및 해당 속성 값을 입력하여 패키지, 실행 파일, 연결, 변수 및 로그 공급자의 속성 값을 설정할 수 있습니다. 경로를 입력할 때마다 명령 프롬프트에 **/SET**_propertypath;value_ 옵션이 추가됩니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **속성 경로**  
  속성의 경로를 입력합니다. 경로 구문에서는 백슬래시(\\)를 사용하여 다음 항목이 컨테이너임을 나타내고, 마침표(.)를 사용하여 다음 항목이 속성임을 나타내고, 대괄호를 사용하여 컬렉션 멤버임을 나타냅니다. 멤버는 해당 멤버의 인덱스 또는 이름으로 식별할 수 있습니다. 예를 들어 패키지 변수의 속성 경로는 \Package.Variables[MyVariable].Value입니다.  
   
@@ -323,7 +323,7 @@ ms.locfileid: "52506243"
 ## <a name="verification-page"></a>확인 페이지  
  **패키지 실행 유틸리티** 대화 상자의 **확인** 페이지를 사용하여 패키지 확인 조건을 설정할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **서명된 패키지만 실행**  
  서명된 패키지만 실행하려면 선택합니다.  
   
@@ -354,7 +354,7 @@ ms.locfileid: "52506243"
 ## <a name="command-line-page"></a>명령줄 페이지  
  **패키지 실행 유틸리티** 대화 상자의 **명령줄** 노드를 사용하여 여러 대화 상자에서 만든 옵션으로 생성한 명령줄을 편집할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **원래 옵션 복원**  
  명령줄을 원래 상태로 복원하려면 클릭합니다. **수동으로 명령줄 편집** 옵션을 사용하여 수정했는데 원래 명령줄 옵션을 복원하려는 경우 이 옵션을 사용합니다.  
   

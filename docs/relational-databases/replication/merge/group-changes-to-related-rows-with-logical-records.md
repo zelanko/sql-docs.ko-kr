@@ -15,12 +15,12 @@ ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8c76fe140a6cfd6e8d4cc2f83e3c0f3143a15708
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a4bebb60c7d40ab7d1a98bbb6c8b28ff64ea7b09
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834121"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134273"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "47834121"
   
 -   논리적 레코드에 포함된 아티클에 대해서는 비즈니스 논리 처리기 또는 사용자 지정 해결 프로그램을 사용하는 사용자 지정 충돌 해결이 지원되지 않습니다.  
   
--   매개 변수가 있는 필터를 포함하는 게시에서 논리적 레코드를 사용하는 경우에는 각 구독자를 해당 파티션에 대한 스냅숏으로 초기화해야 합니다. 다른 방법으로 구독자를 초기화하면 병합 에이전트는 실패합니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)을 참조하세요.  
+-   매개 변수가 있는 필터를 포함하는 게시에서 논리적 레코드를 사용하는 경우에는 각 구독자를 해당 파티션에 대한 스냅숏으로 초기화해야 합니다. 다른 방법으로 구독자를 초기화하면 병합 에이전트는 실패합니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
   
 -   논리적 레코드와 관련된 충돌은 충돌 뷰어에 표시되지 않습니다. 이러한 충돌에 대한 정보를 보려면 복제 저장 프로시저를 사용합니다. 자세한 내용은 [병합 게시에 대한 충돌 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)을 참조하세요.  
   
