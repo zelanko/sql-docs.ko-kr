@@ -13,12 +13,12 @@ ms.assetid: f7d97977-0e2b-40c6-a4ce-2d5bc32a91a7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b2ff9504f359fad099d9d7443875e0ed6da9eecf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a25b2347d3d9f68b9a3adf919605c77646b08c6f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822001"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125333"
 ---
 # <a name="configure-distribution-wizard"></a>Configure Distribution Wizard
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,6 +37,6 @@ ms.locfileid: "47822001"
 ## <a name="see-also"></a>참고 항목  
  [배포 구성](../../relational-databases/replication/configure-distribution.md)   
  [게시 및 배포 구성](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [속성 참조&#40;복제&#41;](../../relational-databases/replication/properties-reference-replication.md)  
+
   
   

@@ -14,12 +14,12 @@ ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2b03471825ee3a6db98a0df68c81828ee61d433a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5231236fea77859bcdd7b1e18979480a944ec22c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527485"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131463"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,11 +118,11 @@ ms.locfileid: "52527485"
   
 1.  게시 데이터베이스의 게시자에서 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 실행합니다. **@publication**에 아티클이 속한 게시 이름, **@article**에 아티클 이름, **@source_object**에 게시할 데이터베이스 개체, **0x02** 값(사용자 지정 저장 프로시저의 자동 생성 설정)을 포함하는 **@schema_option** 비트마스크에 값을 지정하고 다음 매개 변수 중 하나 이상을 지정합니다.  
   
-    -   **@ins_cmd** - **CALL sp_MSins\__article_name_** 값을 지정합니다. 여기서 **_article_name_** 은 **@article**에 지정된 값입니다.  
+    -   **@ins_cmd** - **CALL sp_MSins_* article_name*** 값을 지정합니다. 여기서 ***article_name***은 **@article**에 지정된 값입니다.  
   
-    -   **@del_cmd** - **CALL sp_MSdel\__article_name_** 또는 **XCALL sp_MSdel\__article_name_** 값을 지정합니다. 여기서 **_article_name_** 은 **@article**에 지정된 값입니다.  
+    -   **@del_cmd** - **CALL sp_MSdel_*article_name*** 또는 **XCALL sp_MSdel_* article_name*** 값을 지정합니다. 여기서 ***article_name***은 **@article**에 지정된 값입니다.  
   
-    -   **@upd_cmd** - **SCALL sp_MSupd\__article_name_**, **CALL sp_MSupd\__article_name_**, **XCALL sp_MSupd\__article_name_** 또는 **MCALL sp_MSupd\__article_name_** 값을 지정합니다. 여기서 **_article_name_** 은 **@article**에서 지정된 값입니다.  
+    -   **@upd_cmd** - **SCALL sp_MSupd_* article_name***, **CALL sp_MSupd_* article_name***, **XCALL sp_MSupd_* article_name*** 또는 **MCALL sp_MSupd_* article_name*** 값을 지정합니다. 여기서 ***article_name***은 **@article**에서 트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법을 설정하는 방법에 대해 설명합니다.  
   
     > [!NOTE]  
     >  위 명령 매개 변수마다 복제 시 생성되는 저장 프로시저의 이름을 고유하게 지정할 수 있습니다.  
@@ -138,11 +138,11 @@ ms.locfileid: "52527485"
   
 1.  게시 데이터베이스의 게시자에서 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 실행합니다. **@publication**에 아티클이 속한 게시 이름, **@article**에 아티클 이름, **@source_object**에 게시할 데이터베이스 개체, **0x02** 값(사용자 지정 저장 프로시저의 자동 생성 설정)을 포함하는 **@schema_option** 비트마스크에 값을 지정하고 다음 매개 변수 중 하나 이상을 지정합니다.  
   
-    -   **@ins_cmd** - **CALL sp_MSins\__article_name_** 값을 지정합니다. 여기서 **_article_name_** 은 **@article**에 지정된 값입니다.  
+    -   **@ins_cmd** - **CALL sp_MSins_* article_name*** 값을 지정합니다. 여기서 ***article_name***은 **@article**에 지정된 값입니다.  
   
-    -   **@del_cmd** - **CALL sp_MSdel\__article_name_** 또는 **XCALL sp_MSdel\__article_name_** 값을 지정합니다. 여기서 **_article_name_** 은 **@article**에 지정된 값입니다.  
+    -   **@del_cmd** - **CALL sp_MSdel_*article_name*** 또는 **XCALL sp_MSdel_* article_name*** 값을 지정합니다. 여기서 ***article_name***은 **@article**에 지정된 값입니다.  
   
-    -   **@upd_cmd** - **SCALL sp_MSupd\__article_name_**, **CALL sp_MSupd\__article_name_**, **XCALL sp_MSupd\__article_name_**, **MCALL sp_MSupd\__article_name_** 값을 지정합니다. 여기서 **_article_name_** 은 **@article**에서 지정된 값입니다.  
+    -   **@upd_cmd** - **SCALL sp_MSupd_* article_name***, **CALL sp_MSupd_* article_name***, **XCALL sp_MSupd_* article_name***, **MCALL sp_MSupd_* article_name*** 값을 지정합니다. 여기서 ***article_name***은 **@article**에서 트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법을 설정하는 방법에 대해 설명합니다.  
   
     > [!NOTE]  
     >  위 명령 매개 변수마다 복제 시 생성되는 저장 프로시저의 이름을 고유하게 지정할 수 있습니다.  
@@ -162,6 +162,6 @@ ms.locfileid: "52527485"
   
 ## <a name="see-also"></a>참고 항목  
  [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)   
- [게시 및 아티클 만들기, 수정 및 삭제&#40;복제&#41;](../../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)  
+ [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
   
   

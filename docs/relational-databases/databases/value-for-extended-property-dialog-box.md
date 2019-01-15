@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb97cce19ca354cf5c32fbae44180e3eb5366f60
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 5ce01f4820e24ea93693cd83f6a3a6ab1e508539
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559851"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256828"
 ---
 # <a name="value-for-extended-property-dialog-box"></a>확장 속성 값 대화 상자
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  *\<속성 이름* **에 대한 값** 대화 상자를 사용하여 값을 입력하거나 확인할 수 있습니다. 이 대화 상자는 여러 위치에서 열 수 있는 일반 대화 상자입니다.  
+  _\<속성 이름_ **에 대한 값** 대화 상자를 사용하여 값을 입력하거나 확인할 수 있습니다. 이 대화 상자는 여러 위치에서 열 수 있는 일반 대화 상자입니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
  **확장 속성 이름**  

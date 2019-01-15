@@ -14,12 +14,12 @@ ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 09c5b51db06cc41153441d155c2d5292f505705d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6555af4448af4e9e1e4e14f2e4e23f1407f0681
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673621"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135993"
 ---
 # <a name="advanced-merge-replication-conflict---com-based-custom-resolvers"></a>고급 병합 복제 충돌 - COM 기반 사용자 지정 해결 프로그램
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47673621"
   
 -   해결하려는 행 변경의 유형(예: 업데이트, 삽입 및 삭제) 및 해결 프로그램을 병합 변경 내용을 업로드하는 동안 호출할지 병합 변경 내용을 다운로드하는 동안 호출할지 또는 두 작업 모두를 수행하는 동안 호출할지 여부. 사용자는 하나의 변경 내용, 모든 변경 내용 또는 변경 내용이 조합된 것의 유형을 지정할 수 있습니다. 기본 병합 충돌 해결 프로그램은 사용자 지정 해결 프로그램이 해결하지 못하는 충돌을 처리합니다.  
   
--   충돌 해결 시 열 추적의 사용 여부. 열 추적이 설정되어 있으면 충돌이 존재하는 열의 데이터만 충돌로 플래그가 지정되며, 그렇지 않을 경우에 데이터는 병합됩니다. 그러나 충돌은 행 수준 추적에서와 같은 방법으로 해결됩니다. 즉, 우선 순위 적용 항목이 데이터 전체 행을 덮어씁니다. 그러나 데이터는 게시자나 구독자의 값 또는 게시자 및 구독자가 아닌 위치의 일부 변경된 값이 혼합된 것일 수 있습니다. 자세한 내용은 [병합 복제 충돌 감지 및 해결](../../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)을 참조하세요.  
+-   충돌 해결 시 열 추적의 사용 여부. 열 추적이 설정되어 있으면 충돌이 존재하는 열의 데이터만 충돌로 플래그가 지정되며, 그렇지 않을 경우에 데이터는 병합됩니다. 그러나 충돌은 행 수준 추적에서와 같은 방법으로 해결됩니다. 즉, 우선 순위 적용 항목이 데이터 전체 행을 덮어씁니다. 그러나 데이터는 게시자나 구독자의 값 또는 게시자 및 구독자가 아닌 위치의 일부 변경된 값이 혼합된 것일 수 있습니다. 자세한 내용은 [병합 복제 충돌 감지 및 해결](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
   
  COM 기반 사용자 지정 충돌 해결 프로그램을 구현하려면 [병합 아티클용 사용자 지정 충돌 해결 프로그램 구현](../../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)을 참조하십시오.  
   
