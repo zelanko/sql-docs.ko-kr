@@ -17,12 +17,12 @@ ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9ea67ab144a87c2ad77cdaac725d36777cc281ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 413fc991d9f908d4390de109dededa07056e5b63
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770761"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125534"
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>업데이트할 수 있는 구독 - 지연 업데이트 충돌 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "47770761"
   
  **지연 업데이트 충돌 해결 정책을 설정하려면**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [지연 업데이트 충돌 해결 옵션 설정&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [지연 업데이트 충돌 해결 옵션 설정&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
 -   복제 Transact-SQL 프로그래밍: [트랜잭션 게시에 대해 업데이트할 수 있는 구독 설정](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   

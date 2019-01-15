@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8163d96451489e5704e92763de123cd208fb503f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b873abd4efb2d0e4931d54766c99ee52910f9968
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746071"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125283"
 ---
 # <a name="synchronize-data"></a>데이터 동기화
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -72,6 +72,6 @@ ms.locfileid: "47746071"
 -   비즈니스 논리 처리기는 병합 복제에 대해 지원됩니다. 비즈니스 논리 처리기 프레임워크를 사용하면 병합 동기화 과정 동안 호출되는 관리 코드 어셈블리를 작성할 수 있습니다. 이 어셈블리에는 동기화 중 데이터 변경, 충돌, 오류 등의 여러 상황에 응답할 수 있는 비즈니스 논리가 포함되어 있습니다. 자세한 내용은 [병합 동기화 중 비즈니스 논리 실행](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [병합 복제 충돌 감지 및 해결](../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)  
+ [병합 복제 충돌 감지 및 해결](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   
