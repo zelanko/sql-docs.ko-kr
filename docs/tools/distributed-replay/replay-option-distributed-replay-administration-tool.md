@@ -11,12 +11,12 @@ ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46285d61f38619ed8dff835faee266e5a76f591d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 709ee04eaaf35501cedae0e61d93cfe6e3b55210
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511165"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125943"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>재생 옵션(Distributed Replay Administration Tool)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,12 +36,12 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- **-m** *controller*  
+ **-m** _controller_  
  컨트롤러의 컴퓨터 이름을 지정합니다. "`localhost`" 또는 "`.`"을 사용하여 로컬 컴퓨터를 참조할 수 있습니다.  
   
  **-m** 매개 변수를 지정하지 않으면 로컬 컴퓨터가 사용됩니다.  
   
- **-d** *controller_working_dir*  
+ **-d** _controller_working_dir_  
  컨트롤러에서 중간 파일이 저장될 디렉터리를 지정합니다. **-d** 매개 변수는 필수 항목입니다.  
   
  적용되는 요구 사항은 다음과 같습니다.  
@@ -59,7 +59,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
  **–o** 매개 변수를 지정하지 않으면 결과 추적 파일이 생성되지 않습니다. 콘솔 출력은 재생이 끝날 때 요약 정보를 반환하지만 그 외 다른 재생 통계는 사용할 수 없습니다.  
   
- **-s** *target_server*  
+ **-s** _target_server_  
  분산 작업이 재생될 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정합니다. 이 매개 변수는 **server_name[\인스턴스 이름]** 형식으로 지정해야 합니다.  
   
  "`localhost`" 또는 "`.`"을 대상 서버로 사용할 수 없습니다.  
@@ -68,18 +68,18 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
  **-s** 매개 변수를 사용하는 경우 재생 구성 파일의 `<Server>` 섹션에 있는 `<ReplayOptions>` 요소가 무시됩니다.  
   
- **-w** *clients*  
+ **-w** _clients_  
  이 필수 매개 변수는 분산 재생에 참여할 클라이언트의 컴퓨터 이름을 지정하는 쉼표로 구분된 목록(공백 없음)입니다. IP 주소는 허용되지 않습니다. 클라이언트가 컨트롤러에 이미 등록되어 있어야 합니다.  
   
 > [!NOTE]  
 >  각 클라이언트는 클라이언트 서비스가 시작될 때 클라이언트 구성 파일에 지정된 컨트롤러에 등록됩니다.  
   
- **-c** *config_file*  
+ **-c** _config_file_  
  재생 구성 파일의 전체 경로이며, 다른 위치에 저장된 경우 파일의 위치를 지정하는 데 사용됩니다.  
   
  재생 구성 파일 **의 기본값을 사용하려는 경우** -c `DReplay.exe.replay.config`매개 변수를 지정할 필요가 없습니다.  
   
- **-f** *status_interval*  
+ **-f** _status_interval_  
  상태를 표시할 빈도(초)를 지정합니다.  
   
  **-f** 를 지정하지 않을 경우 기본 간격은 30초입니다.  

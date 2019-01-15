@@ -14,12 +14,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 93dad2e3a1739448e17fd8759b25f7b4dadeca66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afc794e19ecc93f7275427760df78004a0f1fb13
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610970"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211552"
 ---
 # <a name="filestream-support"></a>FILESTREAM 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>하위 수준과의 호환성  
-SQL Server 용 OLE DB 드라이버를 사용 하 여 클라이언트가 컴파일 되었으며 응용 프로그램에 연결할 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]), 한 다음 **varbinary (max)** 동작 동작과 호환 됩니다. 도입 된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]입니다. 즉, 반환되는 데이터의 최대 크기가 2GB로 제한됩니다. 결과 값이 2GB보다 큰 경우 잘림이 발생하고 "문자열 데이터 오른쪽 잘림" 경고가 반환됩니다. 
+SQL Server 용 OLE DB 드라이버를 사용 하 여 클라이언트가 컴파일 되었으며 응용 프로그램에 연결할 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]), 한 다음 **varbinary (max)** 동작 동작과 호환 됩니다. 도입 된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]입니다. 즉, 반환되는 데이터의 최대 크기가 2GB로 제한됩니다. 결과 값이 2GB보다 큰 경우 잘림이 발생하고 "문자열 데이터 오른쪽 잘림" 경고가 반환됩니다. 
   
 데이터 형식 호환성을 80으로 설정하면 클라이언트 동작이 하위 수준 클라이언트 동작과 일치합니다.  
   

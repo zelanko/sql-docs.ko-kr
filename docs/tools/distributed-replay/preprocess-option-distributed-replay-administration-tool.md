@@ -11,12 +11,12 @@ ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb0411323de64747c4b142fc4eda1882aceae010
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ad198e96c24431ab51f0ab89517530598bfb1ced
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502710"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129444"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>전처리 옵션(Distributed Replay Utility Administration Tool)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,12 +35,12 @@ dreplay preprocess [-m controller] -i input_trace_file
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- **-m** *controller*  
+ **-m** _controller_  
  컨트롤러의 컴퓨터 이름을 지정합니다. "`localhost`" 또는 "`.`"을 사용하여 로컬 컴퓨터를 참조할 수 있습니다.  
   
  **-m** 매개 변수를 지정하지 않으면 로컬 컴퓨터가 사용됩니다.  
   
- **-i** *input_trace_file*  
+ **-i** _input_trace_file_  
  컨트롤러에서 입력 추적 파일의 전체 경로(예: `D:\Mytrace.trc`)를 지정합니다. **-i** 매개 변수는 필수 항목입니다.  
   
  같은 디렉터리에 롤오버 파일이 있으면 자동으로 로드되어 사용됩니다. 파일은 파일 롤오버 명명 규칙을 따라야 합니다(예: `Mytrace.trc`, `Mytrace_1.trc`, `Mytrace_2.trc`, `Mytrace_3.trc`, `Mytrace_n.trc`).  
@@ -48,7 +48,7 @@ dreplay preprocess [-m controller] -i input_trace_file
 > [!NOTE]  
 >  컨트롤러와는 다른 컴퓨터에서 관리 도구를 사용하는 경우 이 매개 변수에 로컬 경로를 사용할 수 있도록 입력 추적 파일을 컨트롤러로 복사해야 합니다.  
   
- **-d** *controller_working_dir*  
+ **-d** _controller_working_dir_  
  컨트롤러에서 중간 파일이 저장될 디렉터리를 지정합니다. **-d** 매개 변수는 필수 항목입니다.  
   
  적용되는 요구 사항은 다음과 같습니다.  
@@ -61,14 +61,14 @@ dreplay preprocess [-m controller] -i input_trace_file
   
 -   UNC 경로는 지원되지 않습니다.  
   
- **-c** *config_file*  
+ **-c** _config_file_  
  전처리 구성 파일의 전체 경로이며, 다른 위치에 저장된 경우 전처리 구성 파일의 위치를 지정하는 데 사용됩니다. 이 매개 변수는 UNC 경로이거나 관리 도구를 실행하는 컴퓨터에 로컬로 있을 수 있습니다.  
   
  필터링이 필요 없거나 최대 유휴 시간을 수정하지 않으려는 경우에는 **-c** 매개 변수를 지정하지 않아도 됩니다.  
   
  **-c** 매개 변수를 지정하지 않을 경우 기본 전처리 구성 파일 `DReplay.exe.preprocess.config`가 사용됩니다.  
   
- **-f** *status_interval*  
+ **-f** _status_interval_  
  상태 메시지를 표시할 빈도(초)를 지정합니다.  
   
  **-f** 를 지정하지 않을 경우 기본 간격은 30초입니다.  
