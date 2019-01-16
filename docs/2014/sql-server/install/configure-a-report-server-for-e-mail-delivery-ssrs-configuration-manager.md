@@ -23,14 +23,19 @@ ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f2a600f727de4aa4e23de1ccbf2b668bba4ae0ff
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 17e210356aadaa17394abf0b68bf9303461943d2
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370147"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300340"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>전자 메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)
+
+  > [!div class="nextstepaction"]
+  > [SQL 문서 내용 테이블에 대 한 의견을 공유 하세요!](https://aka.ms/sqldocsurvey)
+
+
    [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에는 전자 메일을 통해 보고서를 배포할 수 있는 전자 메일 배달 확장 프로그램이 있습니다.  전자 메일 구독을 정의하는 방법에 따라 배달은 알림, 링크, 첨부 파일 또는 포함된 보고서로 구성될 수 있습니다. 전자 메일 배달 확장 프로그램은 기존 메일 서버 기술을 사용합니다. 메일 서버는 SMTP 서버 또는 전달자여야 합니다. 보고서 서버는 운영 체제에서 제공하는 CDO(Collaboration Data Objects) 라이브러리(cdosys.dll)를 통해 SMTP 서버에 연결합니다.  
   
  보고서 서버 전자 메일 배달 확장 프로그램은 기본적으로 구성되어 있지 않습니다. 따라서 Reporting Services 구성 관리자를 사용하여 확장 프로그램을 최소한으로 구성해야 합니다. 고급 속성을 설정하려면 `RSReportServer.config` 파일을 편집해야 합니다. 이 확장 프로그램을 사용할 수 있도록 보고서 서버를 구성할 수 없는 경우에는 보고서를 공유 폴더로 배달할 수 있습니다. 자세한 내용은 [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)을 참조하세요.  
@@ -228,7 +233,7 @@ ms.locfileid: "53370147"
   
  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

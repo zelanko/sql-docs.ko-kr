@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 894e543d3f8314fd717f01e9163210e68554a29d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f7ded788c5aecff2445d7f3257f7c56957b9d0bd
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667302"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256838"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Updategram의 데이터베이스 동시성 문제 처리(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "51667302"
   
  업데이트 된 열 기본 키 열을 지정 하 여 이러한 수준의 보호를 얻을 수 있는  **\<전에 >** 블록.  
   
- 예를 들어 다음 updategram은 ContactID가 1인 연락처의 Person.Contact 테이블의 Phone 열 값을 변경합니다. **\<전에 >** 블록 지정 된 **전화** 특성을 특성 값이 값이 업데이트를 적용 하기 전에 데이터베이스의 해당 열에 있는 값을 일치 하는지 확인 합니다. .  
+ 예를 들어 다음 updategram은 ContactID가 1인 연락처의 Person.Contact 테이블의 Phone 열 값을 변경합니다.  **\<전에 >** 블록 지정 된 **전화** 특성을 특성 값이 값이 업데이트를 적용 하기 전에 데이터베이스의 해당 열에 있는 값을 일치 하는지 확인 합니다. .  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -128,7 +128,7 @@ ms.locfileid: "51667302"
 3.  다음 XSD 스키마를 복사하여 메모장에 붙여넣고 ConcurrencySampleSchema.xml로 저장합니다.  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
       <xsd:element name="Customer" sql:relation="Customer" >  
        <xsd:complexType>  

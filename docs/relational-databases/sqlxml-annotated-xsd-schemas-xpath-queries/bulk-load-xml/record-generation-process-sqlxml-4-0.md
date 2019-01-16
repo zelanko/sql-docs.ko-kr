@@ -23,12 +23,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0572f9ef57b5d1ba17383cf758f612b0c6eec81f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bfd659028d02c7b37dcf31c36b587ce5f3550661
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677692"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256818"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>레코드 생성 프로세스(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "51677692"
  예를 들어, 다음 XSD 스키마 조각을 고려해 보십시오.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Customer" sql:relation="Customers" >  
    <xsd:complexType>  
@@ -116,7 +116,7 @@ ms.locfileid: "51677692"
  이제 다음과 같은 주석이 추가된 XSD 스키마에 지정된 XML 뷰를 고려해 보십시오. 이 스키마를 사용 하 여  **\<sql: relationship >** Cust 테이블과 CustOrder 테이블 간의 관계를 지정 합니다.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -221,12 +221,12 @@ ms.locfileid: "51677692"
 ## <a name="exceptions-to-the-record-generation-rule"></a>레코드 생성 규칙의 예외  
  노드가 IDREF 또는 IDREFS 형식인 경우 XML 대량 로드는 범위가 시작될 때 노드에 대한 레코드를 생성하지 않습니다. 따라서 스키마의 특정 위치에 레코드의 완전한 설명이 존재해야 합니다. **dt: type = "특성"** IDREFS 유형이 무시 됩니다 것 처럼 주석을 무시 됩니다.  
   
- 예를 들어 다음 XSD 스키마를 설명 하는  **\<고객 >** 및  **\<주문 >** 요소. **\<고객 >** 요소에 포함 된 **OrderList** IDREFS 유형의 특성. **\<sql: relationship >** 태그는 고객과 주문 목록 간의 한 일대다 관계를 지정 합니다.  
+ 예를 들어 다음 XSD 스키마를 설명 하는  **\<고객 >** 및  **\<주문 >** 요소.  **\<고객 >** 요소에 포함 된 **OrderList** IDREFS 유형의 특성.  **\<sql: relationship >** 태그는 고객과 주문 목록 간의 한 일대다 관계를 지정 합니다.  
   
  스키마는 다음과 같습니다.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -262,7 +262,7 @@ ms.locfileid: "51677692"
 </xsd:schema>  
 ```  
   
- 대량 로드에서 IDREFS 유형의 노드를 무시 하면 레코드를 생성 하지 않습니다 때의 **OrderList** 특성 노드가 범위를 입력 합니다. 따라서 Orders 테이블에 주문 레코드를 추가하려면 스키마의 특정 위치에서 해당 주문을 설명해야 합니다. 이 스키마에 지정 하는  **\<주문 >** 요소를 사용 하면 XML 대량 로드는 Orders 테이블에 주문 레코드를 추가 합니다. **\<주문 >** 요소는 CustOrder 테이블에 레코드를 작성 하는 데 필요한 모든 특성을 설명 합니다.  
+ 대량 로드에서 IDREFS 유형의 노드를 무시 하면 레코드를 생성 하지 않습니다 때의 **OrderList** 특성 노드가 범위를 입력 합니다. 따라서 Orders 테이블에 주문 레코드를 추가하려면 스키마의 특정 위치에서 해당 주문을 설명해야 합니다. 이 스키마에 지정 하는  **\<주문 >** 요소를 사용 하면 XML 대량 로드는 Orders 테이블에 주문 레코드를 추가 합니다.  **\<주문 >** 요소는 CustOrder 테이블에 레코드를 작성 하는 데 필요한 모든 특성을 설명 합니다.  
   
  되도록 해야는 **CustomerID** 및 **OrderID** 값에  **\<고객 >** 의 값과 일치 하는 요소는  **\<주문 >** 요소. 참조 무결성을 유지하는 책임은 사용자에게 있습니다.  
   
