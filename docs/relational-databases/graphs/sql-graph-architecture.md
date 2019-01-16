@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf061fc552a29730fb25a1fd36fb868efb031953
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 3e742e1b5c8ed1b0149292aeee5a3c0e518d9783
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512808"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300190"
 ---
 # <a name="sql-graph-architecture"></a>SQL 그래프 아키텍처  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ SQL 그래프를 설계 하는 방법에 대해 알아봅니다. 기본 사항�
 ## <a name="edge-table"></a>Edge 테이블
 Edge 테이블에는 그래프에서 관계를 나타냅니다. 가장자리는 항상 전송 하 고 두 노드를 연결 합니다. Edge 테이블을 그래프에서 다 대 다 관계를 모델링 하는 사용자를 수 있습니다. Edge 테이블을 수도 있습니다에 모든 사용자 정의 특성 없을 수 있습니다. 사용자 정의 특성을 함께 edge 테이블을 만들 때마다 edge 테이블의 세 가지 암시적 열이 생성 됩니다.
 
-|열 이름    |설명  |
+|열 이름    |Description  |
 |---   |---  |
 |`$edge_id`   |데이터베이스에 지정 된 가장자리를 고유 하 게 식별합니다. 생성된 된 열 이며 값은 내부적으로 생성 된 bigint 값을 edge 테이블의 object_id의 조합입니다. 그러나 경우는 `$edge_id` 열을 선택 하면 JSON 문자열의 형태로 계산 된 값이 표시 됩니다. `$edge_id` 16 진수 문자열을 사용 하 여 내부 이름에 매핑하는 의사 (pseudo) 열입니다. 선택 하면 `$edge_id` 테이블에서 열 이름으로 나타납니다 `$edge_id_\<hex_string>`합니다. 쿼리에서 의사 (pseudo) 열 이름을 사용 하 여 권장 되는 방법의 내부 쿼리 `$edge_id` 열 및 16 진수 문자열을 사용 하 여 내부 이름을 사용 하 여 피해 야 합니다. |
 |`$from_id`   |저장소는 `$node_id` 가장자리의 원본 위치에서 노드.  |
@@ -58,7 +58,7 @@ Edge 테이블에는 그래프에서 관계를 나타냅니다. 가장자리는 
 
 ![사용자 친구 테이블](../../relational-databases/graphs/media/person-friends-tables.png "Person 노드 및 친구 edge 테이블")   
 
-그림 2: 노드와 지 테이블 표현
+그림 2: 노드 및에 지 테이블 표현
 
 
 
@@ -68,7 +68,7 @@ Edge 테이블에는 그래프에서 관계를 나타냅니다. 가장자리는 
 ### <a name="systables"></a>sys.tables
 다음의 새로운, bit 형식, SYS에 열이 추가 됩니다. 테이블입니다. 하는 경우 `is_node` 테이블 노드 테이블 인지 여부를 나타내는 1로 설정 된 경우 `is_edge` 테이블이 지 테이블 인지 여부를 나타내는 1로 설정 됩니다.
  
-|열 이름 |데이터 형식 |설명 |
+|열 이름 |데이터 형식 |Description |
 |--- |---|--- |
 |is_node |bit |1 = 노드 테이블입니다. |
 |is_edge |bit |1 =는 edge 테이블 |
@@ -76,14 +76,14 @@ Edge 테이블에는 그래프에서 관계를 나타냅니다. 가장자리는 
 ### <a name="syscolumns"></a>sys.columns
 `sys.columns` 뷰에 추가 열 `graph_type` 및 `graph_type_desc`, 노드와 지 테이블의 열 형식을 나타내는입니다.
  
-|열 이름 |데이터 형식 |설명 |
+|열 이름 |데이터 형식 |Description |
 |--- |---|--- |
 |graph_type |ssNoversion |값 집합이 포함 된 내부 열입니다. 값은 1 ~ 8 그래프 열에 대 한 다른 사용자에 대 한 NULL 사이 하는 것입니다.  |
 |graph_type_desc |nvarchar(60)  |값 집합이 포함 된 내부 열 |
  
 다음 표에서 유효한 값은 `graph_type` 열
 
-|열 값  |설명  |
+|열 값  |Description  |
 |---   |---   |
 |1  |GRAPH_ID  |
 |2  |GRAPH_ID_COMPUTED  |
@@ -97,13 +97,15 @@ Edge 테이블에는 그래프에서 관계를 나타냅니다. 가장자리는 
 
 `sys.columns` 또한 노드 또는 지 테이블에 생성 된 암시적 열에 대 한 정보를 저장 합니다. 그러나 Sys.columns에서 다음 정보를 검색할 수 있습니다, 그리고 사용자가 노드 또는 지 테이블에서 이러한 열을 선택할 수 없습니다는 합니다. 
 
-노드 테이블의 암시적 열  
+노드 테이블의 암시적 열
+
 |열 이름    |데이터 형식  |is_hidden  |설명  |
 |---  |---|---|---  |
 |graph_id_\<hex_string> |bigint |1  |내부 `graph_id` 열  |
 |$node_id_\<hex_string> |NVARCHAR   |0  |외부 노드 `node_id` 열  |
 
-Edge 테이블에 암시적 열  
+Edge 테이블에 암시적 열
+
 |열 이름    |데이터 형식  |is_hidden  |설명  |
 |---  |---|---|---  |
 |graph_id_\<hex_string> |bigint |1  |내부 `graph_id` 열  |
@@ -118,7 +120,7 @@ Edge 테이블에 암시적 열
 ### <a name="system-functions"></a>시스템 함수
 다음 기본 제공 함수를 추가 됩니다. 이러한 하면 사용자가 생성 된 열에서 정보를 추출 합니다. 이러한 메서드는 사용자 로부터 입력을 확인 하지 않습니다는 참고 합니다. 사용자 지정 유효 하지 않은 경우 `sys.node_id` 메서드는 적절 한 부분을 추출 하 고 반환 합니다. OBJECT_ID_FROM_NODE_ID 걸립니다 예를 들어를 `$node_id` 입력과 object_id를 반환 하는이 노드가 속한 테이블의 합니다. 
  
-|기본 제공   |설명  |
+|기본 제공   |Description  |
 |---  |---  |
 |OBJECT_ID_FROM_NODE_ID |Object_id에서 추출 된 `node_id`  |
 |GRAPH_ID_FROM_NODE_ID  |graph_id 추출를 `node_id`  |

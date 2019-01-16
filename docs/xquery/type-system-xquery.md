@@ -24,21 +24,21 @@ ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e8b4680532843b9f60b6cdab3c0c528aab719dbf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 34680d0af0e8c69bca15e4e93cddbe6b2a3386cb
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668671"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254788"
 ---
 # <a name="type-system-xquery"></a>유형 시스템(XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery는 유형 지정이 엄격한 언어이며 형식화되지 않은 데이터에 대해서는 유형 지정이 엄격하지 않은 언어입니다. XQuery의 미리 정의된 유형에는 다음이 포함됩니다.  
   
--   XML 스키마의 기본 제공 형식 합니다 **https://www.w3.org/2001/XMLSchema** 네임 스페이스입니다.  
+-   XML 스키마의 기본 제공 형식 합니다 **http://www.w3.org/2001/XMLSchema** 네임 스페이스입니다.  
   
--   에 정의 된 형식을 합니다 **https://www.w3.org/2004/07/xpath-datatypes** 네임 스페이스입니다.  
+-   에 정의 된 형식을 합니다 **http://www.w3.org/2004/07/xpath-datatypes** 네임 스페이스입니다.  
   
  이 항목에서는 다음에 대해서도 설명합니다.  
   
@@ -65,7 +65,7 @@ WHERE ProductModelID=7
  이 유형 지정 정보는 열과 연결된 XML 스키마 컬렉션에 의해 제공됩니다.  
   
 ## <a name="types-defined-in-xpath-data-types-namespace"></a>XPath 데이터 형식 네임스페이스에 정의된 유형  
- 에 정의 된 형식을 합니다 **https://www.w3.org/2004/07/xpath-datatypes** 네임 스페이스의 미리 정의 된 접두사가 **xdt**합니다. 이러한 유형에는 다음이 적용됩니다.  
+ 에 정의 된 형식을 합니다 **http://www.w3.org/2004/07/xpath-datatypes** 네임 스페이스의 미리 정의 된 접두사가 **xdt**합니다. 이러한 유형에는 다음이 적용됩니다.  
   
 -   XML 스키마 컬렉션을 만들 때는 이러한 유형을 사용할 수 없습니다. 이러한 형식은 XQuery 유형 시스템에 사용 되 고에 사용 됩니다 [XQuery 및 정적 형식 지정](../xquery/xquery-and-static-typing.md)합니다. 예를 들어 원자성 유형으로 캐스팅할 수 있습니다 **xdt: untypedatomic**를 **xdt** 네임 스페이스입니다.  
   
@@ -110,7 +110,7 @@ SELECT @x.query( '/a[1] instance of element()')
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
       <element name="root" type="integer"/>  
 </schema>'  
 GO  

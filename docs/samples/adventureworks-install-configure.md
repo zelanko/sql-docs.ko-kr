@@ -10,15 +10,18 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 474cc691a8adc0e022e10e52c766368e9f655d8a
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: a5eb1b2d0aa49b882afd9aa8b239a6bb64375563
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979409"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299664"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>AdventureWorks 설치 및 구성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [SQL 문서 내용 테이블에 대 한 의견을 공유 하세요!](https://aka.ms/sqldocsurvey)
 
 AdventureWorks 링크와 설치 지침은 다운로드 합니다. 
 

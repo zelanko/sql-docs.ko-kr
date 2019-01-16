@@ -28,12 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86a7c1418e59b494362a3d64da81f07caf6cab95
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f0d627b294281e5022cbc2dec34de884ab658318
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674162"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256598"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 업데이트(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -269,7 +269,7 @@ ms.locfileid: "51674162"
  다음 XSD 매핑 스키마에  **\<고객 >** 합니다  **\<순서 >**, 및  **\<OD >** 에 매핑되는 요소는 데이터베이스의 Sales.Customer, Sales.SalesOrderHeader 및 Sales.SalesOrderDetail 테이블입니다.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -363,7 +363,7 @@ ms.locfileid: "51674162"
  다음 XSD 매핑 스키마를 사용 하 여 테이블의 XML 뷰를 제공 합니다  **\<학생 >** 합니다  **\<과정 >**, 및  **\<등록 >** 요소입니다. 합니다 **IDREFS** 특성 매핑 스키마에서 이러한 요소 간의 관계를 지정 합니다. **StudentIDList** 특성을  **\<과정 >** 요소는는 **IDREFS** Enrollment 테이블의 StudentID 열을 참조 하는 형식 특성입니다. 마찬가지로 합니다 **enrolledin 특성은** 특성을  **\<학생 >** 요소는는 **IDREFS** 등록의 CourseID 열을 참조 하는 형식 특성 테이블입니다.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  

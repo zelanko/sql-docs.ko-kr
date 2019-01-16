@@ -15,12 +15,12 @@ ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a3f3e2b41dcda79c21d3b7b4f3dc6ab7ed6573ff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cb95142a49fffef666be2e775e6e419c4df55290
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539871"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256218"
 ---
 # <a name="general-xquery-use-cases"></a>일반 XQuery 사용 사례
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -217,9 +217,9 @@ WHERE ProductModelID=19
   <p2:Maintenance>...  </p2:Maintenance>  
   <p3:wheel xmlns:p3="https://www.adventure-works.com/schemas/OtherFeatures">High performance wheels.</p3:wheel>  
   <p4:saddle xmlns:p4="https://www.adventure-works.com/schemas/OtherFeatures">  
-    <p5:i xmlns:p5="https://www.w3.org/1999/xhtml">Anatomic design</p5:i> and made from durable leather for a full-day of riding in comfort.</p4:saddle>  
+    <p5:i xmlns:p5="http://www.w3.org/1999/xhtml">Anatomic design</p5:i> and made from durable leather for a full-day of riding in comfort.</p4:saddle>  
   <p6:pedal xmlns:p6="https://www.adventure-works.com/schemas/OtherFeatures">  
-    <p7:b xmlns:p7="https://www.w3.org/1999/xhtml">Top-of-the-line</p7:b> clipless pedals with adjustable tension.</p6:pedal>  
+    <p7:b xmlns:p7="http://www.w3.org/1999/xhtml">Top-of-the-line</p7:b> clipless pedals with adjustable tension.</p6:pedal>  
    ...  
 ```  
   
@@ -313,7 +313,7 @@ ProductModelID Result
 -------------- ------------------------------------------  
 28     <Prod ProductModelID="28">  
         <pd:Summary xmlns:pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
-       <p1:p xmlns:p1="https://www.w3.org/1999/xhtml">  
+       <p1:p xmlns:p1="http://www.w3.org/1999/xhtml">  
          A TRUE multi-sport bike that offers streamlined riding and a  
          revolutionary design. Aerodynamic design lets you ride with the   
          pros, and the gearing will conquer hilly roads.</p1:p>  
@@ -339,7 +339,7 @@ AND     CatalogDescription.exist('declare namespace p1="https://schemas.microsof
   
 -   모든 제품 설명에는 <`Picture`> 요소가 포함되기 때문에 이 경우 결과 집합이 비어 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [계층 구조와 관련 된 XQueries](../xquery/xqueries-involving-hierarchy.md)   
  [XQueries 정렬 포함](../xquery/xqueries-involving-order.md)   
  [XQueries 관계형 데이터 처리](../xquery/xqueries-handling-relational-data.md)   

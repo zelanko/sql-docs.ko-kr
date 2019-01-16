@@ -14,12 +14,12 @@ ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a91275eadeebd6b996774363ab279eddc76f0f75
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b7c21521fbdd4a4e80ed196c67c72f790341f020
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540014"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254278"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>system_function_schema에서 사용자 정의 함수가 허용되지 않습니다.
   업그레이드 관리자가 문서화 되지 않은 사용자가 소유한 사용자 정의 함수 **system_function_schema**합니다. 이 사용자를 지정해서는 사용자 정의 시스템 함수를 만들 수 없습니다. **system_function_schema** 존재 하지 않는 사용자 이름 및이 이름의 연결 된 사용자 ID (UID = 4)에 예약 되어 합니다 **sys** 스키마 있으며 내부 에서만 사용 하도록 제한 됩니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "52540014"
   
 4.  에 대 한 참조를 바꿀 **system_function_schema** 사용 하 여 **dbo** 사용자 정의 함수 DDL 문이 포함 된 모든 스크립트에서.  
   
-5.  이러한 함수를 사용 하 여 중 하나는 두 부분으로 된 이름 dbo *를 호출 하는 스크립트를 수정*합니다. * * * function_name*, 또는 세 부분으로 이루어진 이름을 *database_name ***.** dbo입니다.* function_name * 합니다.  
+5.  두 부분으로 된 이름 dbo를 사용 하기 위해 이러한 함수를 호출 하는 스크립트를 수정 **.** _function_name_, 또는 세 부분으로 이루어진 이름을 _database_name_**.** dbo입니다. *function_name*합니다.  
   
  자세한 내용은 SQL Server 온라인 설명서에서 다음 항목을 참조하십시오.  
   

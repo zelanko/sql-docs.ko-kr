@@ -16,12 +16,12 @@ ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6715c89ff3086f5031e2554929aced39d6f135db
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e95081c03a5a3f91b601e9db1ddbb24b9c5f295a
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501901"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256898"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>QNames 관련 함수 - expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 xs:QName 유형을 다른 유형으로 변환할 수 없습니다. 이 인해 합니다 **expanded-qname ()** 함수는 XML 생성에 사용할 수 없습니다. 예를 들어 `<e> expanded-QName(...) </e>`과 같은 노드를 생성할 때 값은 형식화되지 않아야 합니다. 형식화되면 `expanded-QName()`이 반환한 xs:QName 유형 값을 xdt:untypedAtomic으로 변환해야 하기 때문입니다. 앞에서 말했듯이 변환 기능은 지원되지 않습니다. 해결 방법은 이 항목 뒷부분의 예에 나와 있습니다.  
   
--   기존의 QName 유형 값을 수정하거나 비교할 수 있습니다. 예를 들어 `/root[1]/e[1] eq expanded-QName("https://nsURI" "myNS")` 요소의 값과 비교 <`e`>를 반환한 QName과는 **expanded-qname ()** 함수입니다.  
+-   기존의 QName 유형 값을 수정하거나 비교할 수 있습니다. 예를 들어 `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` 요소의 값과 비교 <`e`>를 반환한 QName과는 **expanded-qname ()** 함수입니다.  
   
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** 유형 열에는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스입니다.  
@@ -70,8 +70,8 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
 -- go  
 -- Create XML schema collection  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="https://www.w3.org/2001/XMLSchema"  
-    xmlns:xs="https://www.w3.org/2001/XMLSchema"   
+<schema xmlns="http://www.w3.org/2001/XMLSchema"  
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"   
     targetNamespace="QNameXSD"   
       xmlns:xqo="QNameXSD" elementFormDefault="qualified">  
       <element name="Root" type="xqo:rootType" />  
@@ -143,7 +143,7 @@ go
 -- DROP XML SCHEMA COLLECTION SC  
 -- go  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
       <element name="root" type="QName" nillable="true"/>  
 </schema>'  
 go  
@@ -162,7 +162,7 @@ FROM T
   
 ```  
 update T SET xmlCol.modify('  
-insert <root>{expanded-QName("https://ns","someLocalName")}</root> as last into / ')  
+insert <root>{expanded-QName("http://ns","someLocalName")}</root> as last into / ')  
 go  
 ```  
   
@@ -174,7 +174,7 @@ insert <root xsi:nil="true"/> as last into / ')
 go  
 -- now replace the nil value with another QName.  
 update T SET xmlCol.modify('  
-replace value of /root[last()] with expanded-QName("https://ns","someLocalName") ')  
+replace value of /root[last()] with expanded-QName("http://ns","someLocalName") ')  
 go  
  -- verify   
 SELECT * FROM T  
@@ -185,7 +185,7 @@ go
   
  `<root xmlns:a="https://someURI">a:b</root>`  
   
- `<root xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns:p1="https://ns">p1:someLocalName</root>`  
+ `<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p1="http://ns">p1:someLocalName</root>`  
   
  다음 쿼리와 같이 QName 값을 비교할 수 있습니다. 쿼리만 반환 합니다 <`root`> 해당 값은 QName과 일치 하는 요소에서 반환 된 값을 입력 합니다 **expanded-qname ()** 함수입니다.  
   
@@ -193,7 +193,7 @@ go
 SELECT xmlCol.query('  
     for $i in /root  
     return  
-       if ($i eq expanded-QName("https://ns","someLocalName") ) then  
+       if ($i eq expanded-QName("http://ns","someLocalName") ) then  
           $i  
        else  
           ()')  
@@ -203,7 +203,7 @@ FROM T
 ### <a name="implementation-limitations"></a>구현 시 제한 사항  
  한 가지 제한 사항이 있습니다. 합니다 **expanded-qname ()** 함수는 두 번째 인수로 빈 시퀀스를 허용 하 고 두 번째 인수가 잘못 되었을 때 런타임 오류를 발생 시키는 대신 빈 반환 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [QNames 관련 함수 &#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

@@ -33,12 +33,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cefdb89d4b8c36747f8fce6824f51b8dbb11e095
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 22d521b86e1129547c925d3958af67af6003109c
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673982"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256209"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 대량 로드 예(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ End Function
 2.  기본 텍스트 편집기 또는 XML 편집기에서 파일을 만든 후 SampleSchema.xml로 저장합니다. 이 파일에 다음 XSD 스키마를 추가합니다.  
   
     ```xml  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
        <xsd:element name="ROOT" sql:is-constant="1" >  
          <xsd:complexType>  
@@ -236,7 +236,7 @@ End Function
  다음 XSD 스키마는 이러한 테이블의 XML 뷰를 정의합니다. 스키마 간의 부모-자식 관계를 지정 합니다  **\<고객 >** 하 고  **\<순서 >** 요소입니다.  
   
 ```xml  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
     <xsd:appinfo>  
@@ -338,7 +338,7 @@ End Function
  예를 들어 다음 XSD 스키마를 참조하십시오.  
   
 ```xml  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -490,7 +490,7 @@ OrderDetail (OrderID, ProductID)
 2.  기본 텍스트 편집기 또는 XML 편집기에서 파일을 만든 후 SampleSchema.xml로 저장합니다. 이 파일에 이 XSD 스키마를 추가합니다.  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
      <xsd:annotation>  
        <xsd:appinfo>  
@@ -566,7 +566,7 @@ OrderDetail (OrderID, ProductID)
   
 -   CheckConstraints 합니다. 이 속성을 TRUE로 설정하면 테이블에 삽입되는 데이터가 테이블에 지정된 제약 조건을 위반하지 않도록 보장할 수 있습니다(이 예에서는 Cust와 CustOrder 테이블 간에 지정된 PRIMARY KEY/FOREIGN KEY 제약 조건). 제약 조건 위반이 발생하면 대량 로드는 실패합니다.  
   
--   XMLFragment 합니다. 예제 XML 문서(데이터 원본)에는 단일 최상위 요소가 없고 따라서 조각이므로 이 속성은 TRUE로 설정해야 합니다.  
+-   XMLFragment. 예제 XML 문서(데이터 원본)에는 단일 최상위 요소가 없고 따라서 조각이므로 이 속성은 TRUE로 설정해야 합니다.  
   
  다음은 VBScript 코드입니다.  
   
@@ -657,7 +657,7 @@ Set objBL = Nothing
  다음 XSD 매핑 스키마는 테이블을 만드는 데 필요한 정보를 제공합니다.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:element name="ROOT" sql:is-constant="true" >  
   <xsd:complexType>  
@@ -815,7 +815,7 @@ End Sub
  다음 XSD 스키마를 고려해 보십시오.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -990,7 +990,7 @@ set objBL=Nothing
 2.  기본 텍스트 편집기 또는 XML 편집기에서 파일을 만든 후 SampleSchema.xml로 저장합니다. 다음 XSD 스키마를 파일에 추가합니다.  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
       <xsd:element name="ROOT" sql:is-constant="true" >  
         <xsd:complexType>  
@@ -1045,7 +1045,7 @@ set objBL=Nothing
      다음은 업데이트된 스키마입니다.  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
       <xsd:element name="ROOT" sql:is-constant="true" >  
         <xsd:complexType>  
@@ -1134,7 +1134,7 @@ End Sub
 2.  기본 텍스트 편집기 또는 XML 편집기에서 파일을 만든 후 SampleSchema.xml로 저장합니다. 다음 XSD 스키마를 파일에 추가합니다.  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
     <xsd:annotation>  
       <xsd:appinfo>  
@@ -1251,7 +1251,7 @@ End Sub
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
            xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
            xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
   <xsd:element name="ProductModel"  sql:relation="Production.ProductModel" >  
@@ -1293,7 +1293,7 @@ End Sub
             <p1:ProductDescription xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
                   xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
                   xmlns:wf="https://www.adventure-works.com/schemas/OtherFeatures"   
-                  xmlns:html="https://www.w3.org/1999/xhtml"   
+                  xmlns:html="http://www.w3.org/1999/xhtml"   
                   xmlns="">  
                 <p1:Summary>  
                     <html:p>Our top-of-the-line competition mountain bike.   

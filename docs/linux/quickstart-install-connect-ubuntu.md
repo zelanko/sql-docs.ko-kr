@@ -11,16 +11,18 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 83f5cdf3f02ffc9a51dfa954347cc57f78e004dd
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: bb262bdb82dd694e624573fa867cf7663d0cc850
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160551"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298940"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>빠른 시작: SQL Server를 설치 하 고 Ubuntu에서 데이터베이스 만들기
-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+  > [!div class="nextstepaction"]
+  > [SQL 문서 내용 테이블에 대 한 의견을 공유 하세요!](https://aka.ms/sqldocsurvey)
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

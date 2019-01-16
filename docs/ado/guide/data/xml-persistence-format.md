@@ -13,12 +13,12 @@ ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f794267904ec1c84595b4b627722a1ca935c15a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2330703450e42e8ddf9bfeed536dd3649d65edf8
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211012"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255688"
 ---
 # <a name="xml-persistence-format"></a>XML 지속성 형식
 ADO 유지 XML 스트림에 대 한 utf-8 인코딩을 사용 합니다.  
@@ -67,7 +67,7 @@ xmlns:z="#RowsetSchema">
   
  스키마 네임 스페이스, 스키마 섹션 및 데이터 섹션의 선언을 보여 줍니다. 스키마 섹션 행, ShipperID, CompanyName 및 전화 번호에 대 한 정의 포함합니다.  
   
- 스키마 정의를 따라야 합니다 [W3C XML 데이터 사양](https://www.w3.org/TR/1998/NOTE-XML-data/) 완벽 하 게 유효성을 검사할 수 (경우에 Internet Explorer 5의 유효성 검사를 발생 하지 것입니다). XML 데이터는 현재만 지원 되는 스키마 형식 레코드 집합 지 속성에 대 한 합니다.  
+ 스키마 정의를 따라야 합니다 [W3C XML 데이터 사양](http://www.w3.org/TR/1998/NOTE-XML-data/) 완벽 하 게 유효성을 검사할 수 (경우에 Internet Explorer 5의 유효성 검사를 발생 하지 것입니다). XML 데이터는 현재만 지원 되는 스키마 형식 레코드 집합 지 속성에 대 한 합니다.  
   
  데이터 섹션에는 운송 업체에 대 한 정보를 포함 하는 세 개의 행에 있습니다. 빈 행 집합에 대 한 데이터 섹션 비어 있을 수 있지만 \<rs: 데이터 > 태그가 있어야 합니다. 데이터가 없는 작성할 수 있습니다 태그 줄임 간단히 \<rs: 데이터 / >입니다. 태그 "rs"를 접두사로 urn: 스키마에 의해 정의 된 네임 스페이스 임을 나타냅니다.-microsoft-com:rowset 합니다.  
   

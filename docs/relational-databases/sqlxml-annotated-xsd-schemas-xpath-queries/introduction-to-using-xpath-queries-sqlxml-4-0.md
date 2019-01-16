@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c8edb6cb54d2ef600080093729a9ff0c06f4082
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3758a437a35ad3add877d04eaafca0997f7b2096
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671642"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256458"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath 쿼리 사용 소개(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "51671642"
   
  XPath는 XML 문서에서 노드 집합을 선택하는 데 사용되는 그래프 탐색 언어입니다. 각 XPath 연산자는 이전 XPath 연산자에서 선택한 노드 집합을 기반으로 노드 집합을 선택합니다. 예를 들어, 일련의 주어진  **\<고객 >** 모든 XPath 노드를 선택할 수  **\<순서 >** 노드는 **날짜** 특성 값은 **"7/14/1999"**. 결과 노드 집합에는 주문 날짜가 1999년 7월 14일인 모든 주문이 포함됩니다.  
   
- XPath 언어는 W3C(World Wide Web Consortium)에서 표준 탐색 언어로 정의됩니다. SQLXML 4.0에 있는 W3C XPath 사양의 하위 집합을 구현 https://www.w3.org/TR/1999/PR-xpath-19991008.html.  
+ XPath 언어는 W3C(World Wide Web Consortium)에서 표준 탐색 언어로 정의됩니다. SQLXML 4.0에 있는 W3C XPath 사양의 하위 집합을 구현 http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   
  다음은 W3C XPath 구현과 SQLXML 4.0 구현 간의 주요 차이점입니다.  
   

@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 메모리 속성 | Microsoft Docs
-ms.date: 10/03/2018
+ms.date: 01/15/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 763c085e9a4dbc6ecb459ffcd17f5185531b98fb
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 055b46ab1464f360cfb89f9bf4d42c0b8997f841
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072000"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327868"
 ---
 # <a name="memory-properties"></a>메모리 속성
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -58,7 +58,14 @@ HardMemoryLimit | Analysis Services가 메모리 압력으로 인해 완전히 �
  인스턴스가 메모리 사용량을 줄이기 위해 활성 사용자 세션을 적극적으로 종료하기 시작하는 메모리 임계값을 지정합니다. 종료 된 모든 세션에는 메모리 부족으로 취소 하는 방법에 대 한 오류가 표시 됩니다. 기본값 영(0)은 **HardMemoryLimit** 가 **TotalMemoryLimit** 와 시스템의 실제 총 메모리 사이의 중간 값으로 설정됨을 의미합니다. 시스템의 실제 메모리가 프로세스의 가상 주소 공간보다 큰 경우 **HardMemoryLimit**를 계산할 때 가상 주소 공간이 대신 사용됩니다.  
 
 **QueryMemoryLimit**   
-Azure Analysis Services에만 해당 합니다. 고급 속성을 쿼리 하는 동안 임시 결과에서 얼마나 많은 메모리를 사용할 수 있습니다. DAX 측정값 및 쿼리에만 적용 됩니다. 다차원 모드 서버에 대 한 MDX 쿼리는이 한도 사용 하지 마세요. 쿼리에 사용 되는 일반 메모리 할당에 고려 되지 않습니다. 에 지정 된 백분율입니다. 기본값은 0 이면 제한이 지정 되지 않습니다.
+Azure Analysis Services에만 해당 합니다. 고급 속성을 쿼리 하는 동안 임시 결과에서 얼마나 많은 메모리를 사용할 수 있습니다. DAX 측정값 및 쿼리에만 적용 됩니다. 쿼리에 사용 되는 일반 메모리 할당에 고려 되지 않습니다. 비율에 지정 된, 기본 값을 계획에 의해 결정 됩니다. 
+
+|계획  |Default  |
+|---------|---------|
+|D1     |   80      |
+|다른 모든 계획     |    20     |
+
+이 속성을 변경할 수 있습니다. 지정 된 설정 값이 0 이면 제한이 없습니다.
 
  **VirtualMemoryLimit**  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  

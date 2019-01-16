@@ -23,12 +23,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55b81e7fff73442660ae98f4d6e6fcbfca0906df
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: acac24b36f5eefcc1490e016d43c4ef014fb813d
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675143"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256128"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>sql:max-depth를 사용하여 재귀 관계의 깊이 지정
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  이러한 결과를 얻으려면 다음 XSD 스키마를 사용하고 해당 스키마에 대해 XPath 쿼리를 지정할 수 있습니다. 스키마에 설명 합니다는  **\<Emp >** 구성 된 유형의 요소는  **\<Emp >** EmployeeType 동일한 형식의 자식 요소입니다. 이는 요소와 해당 상위 항목이 동일한 유형인 재귀 관계입니다. 또한 스키마에서는  **\<sql: relationship >** supervisor와 supervisee 간의 부모-자식 관계를 설명 합니다. 이 사실은  **\<sql: relationship >** 에서 Emp는 부모 및 자식 테이블입니다.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
@@ -191,7 +191,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  다음은 수정된 스키마입니다.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
@@ -232,7 +232,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 ## <a name="sqlmax-depth-annotation"></a>sql:max-depth 주석  
  재귀 관계로 이루어진 스키마에서는 재귀 깊이를 명시적으로 지정해야 합니다. 요청된 결과를 반환하는 해당 FOR XML EXPLICIT 쿼리를 성공적으로 생성하려면 이 작업을 수행해야 합니다.  
   
- 사용 된 **sql:max-깊이** 스키마에 설명 된 재귀 관계의 재귀 깊이 지정 하려면 스키마에서 주석입니다. 값을 **sql:max-깊이** 주석은 재귀 횟수를 나타내는 양의 정수 (1 ~ 50): 값이 1는 요소에서 재귀가 중단 되는 **sql:max-깊이** 주석 지정 되어 있으면 값 2는 요소에서 다음 수준에서 재귀가 중단 되 **sql:max-깊이** 지정 되어 있으면 등에입니다.  
+ 사용 된 **sql:max-깊이** 스키마에 설명 된 재귀 관계의 재귀 깊이 지정 하려면 스키마에서 주석입니다. 값을 **sql:max-깊이** 주석은 재귀 횟수를 나타내는 양의 정수 (1 ~ 50):  값이 1는 요소에서 재귀가 중단 되는 **sql:max-깊이** 주석이 지정 되지 않으면 값이 2는 요소에서 다음 수준에서 재귀가 중단 됩니다 **sql:max-깊이** 지정 ; 등에입니다.  
   
 > [!NOTE]  
 >  기본 구현에서는 매핑 스키마에 대해 지정된 XPath 쿼리가 SELECT ... FOR XML EXPLICIT 쿼리로 변환됩니다. 이 쿼리에서는 한정된 재귀 깊이를 지정해야 합니다. 에 대해 지정한 값이 높을수록 **sql:max-깊이**클수록 FOR XML EXPLICIT 쿼리는 생성 됩니다. 그러면 검색 시간이 느려질 수 있습니다.  
@@ -249,7 +249,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 #### <a name="example-b"></a>예 2  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
@@ -291,7 +291,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 #### <a name="example-c"></a>예 3  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
     <xsd:appinfo>  
@@ -339,7 +339,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
 #### <a name="example-d"></a>예 4  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:msdata="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:complexType name="CustomerBaseType">   

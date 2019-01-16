@@ -18,12 +18,12 @@ ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 470543f0016a01d10f6fff06383216ff984649fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0e7c73e33a1f19acb2158ced848c220b2b7af447
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656293"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254158"
 ---
 # <a name="sequence-and-qnames-xquery"></a>시퀀스 및 QName(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -135,19 +135,19 @@ WHERE ProductModelID=7;
   
 |접두사|URI|  
 |------------|---------|  
-|xs|https://www.w3.org/2001/XMLSchema|  
-|xsi|https://www.w3.org/2001/XMLSchema-instance|  
-|xdt|https://www.w3.org/2004/07/xpath-datatypes|  
-|fn|https://www.w3.org/2004/07/xpath-functions|  
+|xs|http://www.w3.org/2001/XMLSchema|  
+|xsi|http://www.w3.org/2001/XMLSchema-instance|  
+|xdt|http://www.w3.org/2004/07/xpath-datatypes|  
+|fn|http://www.w3.org/2004/07/xpath-functions|  
 |(접두사 없음)|`urn:schemas-microsoft-com:xml-sql`|  
 |sqltypes|https://schemas.microsoft.com/sqlserver/2004/sqltypes|  
-|xml|`https://www.w3.org/XML/1998/namespace`|  
+|xml|`http://www.w3.org/XML/1998/namespace`|  
 |(접두사 없음)|`https://schemas.microsoft.com/sqlserver/2004/SOAP`|  
   
  사용자가 만드는 모든 데이터베이스를 **sys** XML 스키마 컬렉션입니다. 이 컬렉션은 사용자가 만든 XML 스키마 컬렉션에서 액세스할 수 있도록 이러한 스키마를 준비해 둡니다.  
   
 > [!NOTE]  
->  이 구현이 지원 하지 않는 합니다 `local` XQuery 사양에 설명 된 대로 접두사 https://www.w3.org/2004/07/xquery-local-functions합니다.  
+>  이 구현이 지원 하지 않는 합니다 `local` XQuery 사양에 설명 된 대로 접두사 http://www.w3.org/2004/07/xquery-local-functions합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [XQuery 기초](../xquery/xquery-basics.md)  

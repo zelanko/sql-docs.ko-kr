@@ -16,18 +16,18 @@ ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f619c519bd5ec6a3ebb3567fc39e73d63e8b68f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 445fe3a0b87e6ad8e35dbc585981d874f8e357bf
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619691"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256958"
 ---
 # <a name="types-of-drivers"></a>드라이버 형식
 ODBC 드라이버는 다음과 같이 분류할 수 있습니다.  
   
 -   **32 비트 ODBC 2입니다.**  
-     ***x* 드라이버** 32 비트 드라이버입니다.  
+     **_x_ 드라이버** 32 비트 드라이버입니다.  
   
     -   ODBC 2만 내보냅니다 *.x* 함수입니다.  
   

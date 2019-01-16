@@ -1,7 +1,7 @@
 ---
 title: 주석이 추가 된 SQLXML 4.0의에서 XSD 스키마 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/11/2019"
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 73695ebfc9d2322d57fc3b03a6fe576f90e54554
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 961f4af715f8639a67ff6a6ea03cf63d52e1c086
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662312"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255638"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>SQLXML 4.0의 주석이 추가된 XSD 스키마
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,14 +49,14 @@ ms.locfileid: "51662312"
 ## <a name="other-resources"></a>기타 리소스  
  XSD(XML 스키마 정의 언어), XPath(XML Path Language) 및 XSLT(Extensible Stylesheet Language Transformations)에 대한 자세한 내용은 다음 웹 사이트를 참조하십시오.  
   
--   XML Schema Part 0: Primer, W3C 권장 사항 (https://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: Primer, W3C 권장 사항 (http://www.w3.org/TR/xmlschema-0/)  
   
--   XML Schema Part 1: 구조, W3C 권장 사항 (https://www.w3.org/TR/xmlschema-1/)  
+-   XML Schema Part 1: 구조, W3C 권장 사항 (http://www.w3.org/TR/xmlschema-1/)  
   
--   XML Schema Part 2: datatypes, W3C 권장 사항 (https://www.w3.org/TR/xmlschema-2/)  
+-   XML Schema Part 2: datatypes, W3C 권장 사항 (http://www.w3.org/TR/xmlschema-2/)  
   
--   XML 경로 언어 (XPath) (https://www.w3.org/TR/xpath)  
+-   XML 경로 언어 (XPath) (http://www.w3.org/TR/xpath)  
   
--   XSL 변환 (XSLT) (https://www.w3.org/TR/xslt)  
+-   XSL 변환 (XSLT) (http://www.w3.org/TR/xslt)  
   
   

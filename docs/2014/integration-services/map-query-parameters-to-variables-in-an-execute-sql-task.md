@@ -18,14 +18,18 @@ ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b0f1add0f2d249922f00fc1b16d5da12bb903faf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6fb2354720b334d69f7d5e05977c82c3807fd109
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524995"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300080"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>쿼리 매개 변수를 SQL 실행 태스크의 변수에 매핑
+
+  > [!div class="nextstepaction"]
+  > [SQL 문서 내용 테이블에 대 한 의견을 공유 하세요!](https://aka.ms/sqldocsurvey)
+
   이 항목에서는 SQL 실행 태스크에서 매개 변수가 있는 SQL 문을 사용하는 방법과 SQL 문의 변수와 매개 변수 간 매핑을 만드는 방법에 대해 설명합니다.  
   
  다른 연결 형식에 사용할 매개 변수 이름, 매개 변수 표식 및 SQL 실행 태스크에 대한 자세한 내용은 [SQL 실행 태스크](control-flow/execute-sql-task.md) 및 [SQL 실행 태스크의 매개 변수 및 반환 코드](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)를 참조하세요.  
@@ -39,7 +43,7 @@ ms.locfileid: "52524995"
 3.  **제어 흐름** 탭을 클릭합니다.  
   
 4.  패키지에 아직 SQL 실행 태스크가 포함되어 있지 않으면 패키지의 제어 흐름에 해당 작업을 추가합니다. 자세한 내용은 참조 하세요. [작업 또는 제어 흐름 컨테이너 추가 또는 삭제](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  .  
+  의 동일한 원격 인스턴스에 있는 경우 master 데이터베이스는 여러 보조 데이터베이스를 사용할 수 있습니다.  
   
 5.  SQL 실행 태스크를 두 번 클릭합니다.  
   

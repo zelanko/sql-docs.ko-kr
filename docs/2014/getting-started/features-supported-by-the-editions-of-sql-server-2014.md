@@ -17,17 +17,21 @@ ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bcf2d5924e160f38c9b00b564a8ae94b6f8705c3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 23ba1fdda2ce951834c221cdd58d39a034a5b3ff
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358005"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300590"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>SQL Server 2014 버전에서 지원하는 기능
-  이 항목은 다른 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]버전에서 지원되는 기능의 세부 정보를 제공합니다.  
-  
-> **참고:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 180 일 평가 기간 동안 평가 버전에서 사용할 수 있습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [평가판 소프트웨어 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=190955)를 참조하세요.  
+
+  > [!div class="nextstepaction"]
+  > [SQL 문서 내용 테이블에 대 한 의견을 공유 하세요!](https://aka.ms/sqldocsurvey)
+
+  이 항목은 다른 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]버전에서 지원되는 기능의 세부 정보를 제공합니다. 
+
+ > **참고:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 180 일 평가 기간 동안 평가 버전에서 사용할 수 있습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [평가판 소프트웨어 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=190955)를 참조하세요.  
 > 
 > **참고:** Evaluation 및 Developer 버전에서 지원하는 기능은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 기능 집합을 참조하세요.  
   
@@ -314,7 +318,7 @@ ms.locfileid: "53358005"
   
 |기능 이름|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|반가산적 측정값|사용자 계정 컨트롤|사용자 계정 컨트롤|이상<sup>1</sup>|||||  
+|반가산적 측정값|사용자 계정 컨트롤|사용자 계정 컨트롤|No<sup>1</sup>|||||  
 |계층 구조|사용자 계정 컨트롤|예|사용자 계정 컨트롤|||||  
 |KPI|사용자 계정 컨트롤|예|사용자 계정 컨트롤|||||  
 |큐브 뷰|사용자 계정 컨트롤|사용자 계정 컨트롤||||||  
@@ -368,7 +372,7 @@ ms.locfileid: "53358005"
 |사용 보고|사용자 계정 컨트롤|사용자 계정 컨트롤||||||  
 |상태 모니터링 규칙|사용자 계정 컨트롤|사용자 계정 컨트롤||||||  
 |PowerPivot 갤러리|사용자 계정 컨트롤|사용자 계정 컨트롤||||||  
-|PowerPivot 데이터 새로 고침|사용자 계정 컨트롤|사용자 계정 컨트롤||||||  
+|PowerPivot 데이터 새로 고침|사용자 계정 컨트롤|예||||||  
 |PowerPivot 데이터 피드|사용자 계정 컨트롤|사용자 계정 컨트롤||||||  
   
 ###  <a name="DataMining"></a> Data Mining  

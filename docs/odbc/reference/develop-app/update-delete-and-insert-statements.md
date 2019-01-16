@@ -17,31 +17,31 @@ ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92fb7b0e9722c52c7f1e9fc071d434f531b2fc46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00732de7eca32dc8b2984fdda14163c77c66ad43
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721911"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256228"
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE, DELETE 및 INSERT 문
 SQL 기반 응용 프로그램 실행 하 여 테이블에 변경 내용을 확인 합니다 **업데이트**, **삭제**, 및 **삽입** 문입니다. 이러한 문은 SQL 최소 문법 규칙 수준은의 일부 이며 모든 드라이버 및 데이터 원본에서 지원 되어야 합니다.  
   
  이러한 문의 구문은 다음과 같습니다.  
   
- **UPDATE**  *table-name*  
+ **UPDATE** _table-name_  
   
- **설정할** *열 식별자* **=** {*식* &#124; **NULL**}  
+ **설정할** _열 식별자_ **=** {*식* &#124; **NULL**}  
   
- [**하십시오** *열 식별자* **=** {*식* &#124; **NULL**}]...  
+ [**하십시오** _열 식별자_ **=** {*식* &#124; **NULL**}]...  
   
- [**WHERE** *search-condition*]  
+ [**WHERE** _search-condition_]  
   
- **DELETE FROM** *table-name*[**WHERE** *search-condition*]  
+ **DELETE FROM** _table-name_[**WHERE** _search-condition_]  
   
- **INSERT INTO** *테이블 이름*[**(* * * 열 식별자* [* *을** *열 식별자*]... **)**]  
+ **INSERT INTO** _테이블 이름_[**(** _열 식별자_ [**하십시오** _열 식별자_]... **)**]  
   
- {*쿼리 사양* &#124;  **값 (* * * 삽입 값* [* *를** *삽입 값*]... **)**}  
+ {*쿼리 사양* &#124; **값 (** _삽입 값_ [**하십시오** _삽입 값_]... **)**}  
   
  *쿼리 사양* 요소는 및 코어 및 확장 SQL 문법의 경우에 유효 합니다 *식* 및 *검색 조건을* 요소 정하여 코어 및 확장 SQL 문법에 복합 형식입니다.  
   

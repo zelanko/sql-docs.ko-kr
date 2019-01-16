@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ab60a5cae291c307b0717b2d90409e26b835327f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e247e2bf49c9fcf0c6eb211bd9c83b6444118f17
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675302"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256648"
 ---
 # <a name="annotation-interpretation---sqlrelationship-and-key-ordering-rule"></a>주석 해석 - sql:relationship 및 키 순서 지정 규칙
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51675302"
  다음 XSD 스키마를 고려해 보십시오 사이 일 대 다 관계  **\<고객 >** 하 고  **\<순서 >** 요소 (한 명의 고객이 여러 개의 주문을 배치할 수) 사용 하 여 지정 된  **\<sql: relationship >** 요소:  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"<>   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"<>   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -118,7 +118,7 @@ ms.locfileid: "51675302"
     set objBL=Nothing  
     ```  
   
-     그러면 XML 대량 로드가 CustOrder 테이블의 CustomerID 외래 키 열에 NULL 값을 삽입합니다. XML 샘플 데이터를 수정 하는 경우 있도록를  **\<CustomerID >** 자식 요소 앞에 표시 된  **\<순서 >** 예상된 결과 가져오려면 자식 요소: XML 대량 로드 지정된 된 외래 키 값 열에 삽입합니다.  
+     그러면 XML 대량 로드가 CustOrder 테이블의 CustomerID 외래 키 열에 NULL 값을 삽입합니다. XML 샘플 데이터를 수정 하는 경우 있도록를  **\<CustomerID >** 자식 요소 앞에 표시 된  **\<순서 >** 예상된 결과 가져오려면 자식 요소: XML 대량 로드가 지정된 외래 키 값을 열에 삽입합니다.  
   
  다음은 동등한 XDR 스키마입니다.  
   

@@ -1,6 +1,6 @@
 ---
-title: 분석 플랫폼 시스템에는 핫픽스를 제거 합니다. | Microsoft Docs
-description: 분석 플랫폼 시스템 핫픽스를 제거 합니다.
+title: Analytics Platform System 핫픽스 제거 | Microsoft Docs
+description: Analytics Platform System 핫픽스를 제거 합니다.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,34 +9,34 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 83e57a676ee0eff21eb3a736484d8e286cdeee01
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 5507eae7bb2f8a5ce138223a031ac4946d9f0030
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538783"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255069"
 ---
-# <a name="uninstall-analytics-platform-system-hotfixes"></a>분석 플랫폼 시스템 핫픽스를 제거 합니다. 
-다음 단계에서는 이전에 설치한 분석 플랫폼 시스템 핫픽스를 제거 하는 방법에 설명 합니다.  
+# <a name="uninstall-analytics-platform-system-hotfixes"></a>Analytics Platform System 핫픽스 제거 
+다음 단계를 이전에 설치 된 Analytics Platform System 핫픽스 제거 하는 방법에 설명 합니다.  
   
-## <a name="before-you-begin"></a>시작하기 전에  
+## <a name="before-you-begin"></a>시작하기 전 주의 사항  
   
-### <a name="prerequisites"></a>필수 구성 요소  
-다음이 단계를 수행 하려면 다음이 필요 합니다.  
+### <a name="prerequisites"></a>사전 요구 사항  
+이러한 단계를 수행 하려면 해야 합니다.  
   
--   어플라이언스를 모니터링 하는 관리 콘솔에 액세스할 수 있는 권한이 있는 분석 플랫폼 시스템 로그인입니다.  
+-   어플라이언스를 모니터링 하려면 관리자 콘솔에 액세스할 수 있는 권한이 있는 분석 플랫폼 시스템 로그인을 합니다.  
   
--   도메인 관리자 계정에 로그인 하 고 *< appliance_domain > * * *-HST01** 노드.  
+-   도메인 관리자 계정에 로그인 하는 <em>< appliance_domain ></em>**-HST01** 노드.  
   
--   기술 자료 문서 번호 핫픽스를 제거 합니다.  
+-   기술 자료 문서 번호를 핫픽스를 제거 합니다.  
   
 ## <a name="HowToUninstallPDW"></a>SQL Server PDW 핫픽스를 제거 하려면  
   
-1.  로그온 하는 *< appliance_domain > * * *-HST01** 패브릭 도메인 관리자로 노드.  
+1.  에 로그온 합니다 <em>< appliance_domain ></em>**-HST01** 노드 Fabric 도메인 관리자입니다.  
   
-2.  명령 프롬프트를 열려면 관리자 옵션으로 실행을 사용 합니다.  
+2.  As Administrator 옵션 실행 사용 하 여 명령 프롬프트를 엽니다.  
   
-3.  디렉터리 `C:\PDWINST\Patches\<kbarticle>\media` 여기서 *<kbarticle>* 핫픽스를 제거 하려면 기술 자료 문서입니다.  
+3.  디렉터리를 변경 `C:\PDWINST\Patches\<kbarticle>\media` 여기서 *<kbarticle>* 기술 자료 문서 번호를 핫픽스 제거 됩니다.  
   
     ```  
     cd /d c:\PDWINST\Patches\<kbarticle>\media  
@@ -48,9 +48,9 @@ ms.locfileid: "31538783"
     setup.exe /action="removepatch" /DomainAdminPassword="<password>"  
     ```  
   
-## <a name="see-also"></a>관련 항목:  
-[다운로드 하 여 Microsoft 업데이트 적용 &#40;분석 플랫폼 시스템&#41;](download-and-apply-microsoft-updates.md)  
-[업데이트 제거 &#40;분석 플랫폼 시스템&#41;](uninstall-microsoft-updates.md)  
-[분석 플랫폼 시스템 핫픽스를 적용 &#40;분석 플랫폼 시스템&#41;](apply-analytics-platform-system-hotfixes.md)  
-[소프트웨어 서비스 &#40;분석 플랫폼 시스템&#41;](software-servicing.md)  
+## <a name="see-also"></a>관련 항목  
+[Microsoft 업데이트 다운로드 및 적용 &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md)  
+[Microsoft 업데이트를 제거할 &#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
+[Analytics Platform System 핫픽스 적용 &#40;Analytics Platform System&#41;](apply-analytics-platform-system-hotfixes.md)  
+[소프트웨어 설치 &#40;Analytics Platform System&#41;](software-servicing.md)  
   

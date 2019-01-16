@@ -17,18 +17,18 @@ ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2d835e7d541f69c6a84129d3d6c1c8128f748a23
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 50e3e733a4ddd4855da2ea7722407e5f061eee47
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541915"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255798"
 ---
 # <a name="types-of-applications"></a>애플리케이션 형식
 ODBC 응용 프로그램은 다음과 같이 분류할 수 있습니다.  
   
 -   **순수 ODBC 2입니다.**  
-     ***x* 응용 프로그램** 32 비트 응용 프로그램입니다.  
+     **_x_ 응용 프로그램** 32 비트 응용 프로그램입니다.  
   
     -   ODBC 2를 호출합니다. *x* 함수 (ODBC 1.0 함수를 포함 하 여 **SQLSetParam**). 여기에 ODBC 1이 포함 됩니다. *x* 응용 프로그램을 32 비트로 이식 되었습니다.  
   
@@ -37,10 +37,10 @@ ODBC 응용 프로그램은 다음과 같이 분류할 수 있습니다.
     -   컴파일되지 않은 ODBC 3.5 헤더를 사용 하 여 합니다.  
   
 -   **순수 ODBC 2입니다.**  
-     ***x* 응용 프로그램 다시 컴파일할** 순수 ODBC 2. *x* 다시 컴파일 했음을 ODBC 3.5 헤더 파일을 사용 하는 응용 프로그램 = 0x0250 ODBCVER를 설정 합니다.  
+     **_x_ 응용 프로그램 다시 컴파일할** 순수 ODBC 2. *x* 다시 컴파일 했음을 ODBC 3.5 헤더 파일을 사용 하는 응용 프로그램 = 0x0250 ODBCVER를 설정 합니다.  
   
 -   **순수 ODBC 2입니다.**  
-     ***x* 유니코드 응용 프로그램** 순수 ODBC 2. *x* 유니코드 규격이 고 SQL_WCHAR 데이터 형식을 사용 하는 응용 프로그램을 다시 컴파일됩니다.  
+     **_x_ 유니코드 응용 프로그램** 순수 ODBC 2. *x* 유니코드 규격이 고 SQL_WCHAR 데이터 형식을 사용 하는 응용 프로그램을 다시 컴파일됩니다.  
   
 -   **순수 Open Group 및 ISO**-**호환 ODBC 응용 프로그램** 32 비트 응용 프로그램입니다.  
   

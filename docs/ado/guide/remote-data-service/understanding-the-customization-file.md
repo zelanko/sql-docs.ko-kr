@@ -13,12 +13,12 @@ ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31d486f24d9c06926462be856d9102a9a457bb7b
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: e4d6b6698f57184c0b1c4bc170e17c9fc11b9ea0
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558720"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256388"
 ---
 # <a name="understanding-the-customization-file"></a>사용자 지정 파일 이해
 사용자 지정 파일의 각 섹션 헤더 대괄호로 구성 됩니다 (**[]**) 형식 및 매개 변수를 포함 합니다. 네 가지 섹션 유형은 리터럴 문자열에 표시 됩니다 **연결**, **sql**합니다 **userlist**, 또는 **로그**합니다. 리터럴 문자열, 기본, 사용자가 지정한 식별자를 또는 nothing입니다.  
@@ -55,7 +55,7 @@ identifier
   
  특정 섹션은 다음 상황에서 사용 됩니다.  
   
--   **연결** 클라이언트의 값 부분 연결 문자열 키워드 섹션은 "**데이터 원본 = * * * 값*"를 일치 하는 **연결** 섹션 식별자 *.*  
+-   **연결** 클라이언트의 값 부분 연결 문자열 키워드 섹션은 "**데이터 원본 =**_값_"를 일치 하는 **연결** 섹션 식별자*합니다.*  
   
 -   **sql** 섹션 클라이언트 명령 문자열을 일치 하는 문자열을 포함 하는 경우 사용 되는 **sql** 섹션 식별자입니다.  
   

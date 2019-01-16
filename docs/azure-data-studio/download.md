@@ -11,16 +11,20 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a4f8861d8d7104b536abbf14a7629218c46e577e
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: d7e9cd2130487a0ac50d6aa55a8a2e0f9cf9e80c
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143063"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298720"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Azure Data Studio 다운로드 및 설치
 
+  > [!div class="nextstepaction"]
+  > [SQL 문서 내용 테이블에 대 한 의견을 공유 하세요!](https://aka.ms/sqldocsurvey)
+
 [!INCLUDE[name-sos](../includes/name-sos.md)]는 Windows, macOS, Linux에서 실행됩니다.
+
 
 다운로드 하 고 최신 릴리스를 설치 합니다 *년 1 월 릴리스*:
 
@@ -188,15 +192,15 @@ Windows 설치 관리자를 사용하여 [!INCLUDE[name-sos-short](../includes/n
 
 1. 왼쪽 아래에서 기어를 클릭하고 **설정**을 클릭하여 설정을 엽니다.
 
-   ![설정 열기](./media/download/open-settings.png)
+   ![open-settings](./media/download/open-settings.png)
 
 2. 마우스 오른쪽 단추로 클릭 합니다 **사용자 설정** 위쪽에 탭을 클릭 **탐색기에 표시**
 
-   ![탐색기에서 표시](./media/download/reveal-in-explorer.png)
+   ![reveal-in-explorer](./media/download/reveal-in-explorer.png)
 
 3. 이 폴더에 있는 모든 파일을 복사하고 문서 폴더와 같은 로컬 드라이브의 위치를 찾기 쉽게 저장합니다.
 
-   ![설정 복사](./media/download/copy-settings.png)
+   ![copy-settings](./media/download/copy-settings.png)
 
 4. 새 버전의 Azure Data Studio, 1-2, 3단계에 대한 다음 폴더에 저장한 콘텐츠를 붙여넣습니다. 단계를 수행합니다. 수동으로 설정, 키 바인딩 또는 해당 위치로의 코드 조각은 복사할 수 있습니다.
 

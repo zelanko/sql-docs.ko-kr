@@ -19,12 +19,12 @@ ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24e9f4aa4cf1ab8694947411f5565250c6544d92
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f7b50d9cf05f1242ae853f7aa24e7e681bdc245f
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659112"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256238"
 ---
 # <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +47,16 @@ sp_syscollector_create_collector_type
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @collector_type_uid =] '*collector_type_uid*'  
+ [ @collector_type_uid = ] '*collector_type_uid*'  
  수집기 유형의 GUID입니다. *collector_type_uid* 됩니다 **uniqueidentifier** 이며이 자동으로 만들어지고 OUTPUT으로 반환 NULL 인 경우.  
   
- [ @name =] '*이름을*'  
+ [ @name = ] '*name*'  
  수집기 유형의 이름입니다. *이름을* 됩니다 **sysname** 지정 해야 합니다.  
   
- [ @parameter_schema =] '*parameter_schema*'  
+ [ @parameter_schema = ] '*parameter_schema*'  
  이 수집기 유형의 XML 스키마입니다. *parameter_schema* 됩니다 **xml** 이며 기본값은 NULL입니다.  
   
- [ @parameter_formatter =] '*parameter_formatter*'  
+ [ @parameter_formatter = ] '*parameter_formatter*'  
  컬렉션 집합 속성 페이지에서 맞게 XML을 변환하는 데 사용하는 템플릿입니다. *parameter_formatter* 됩니다 **xml** 이며 기본값은 NULL입니다.  
   
  [@collection_package_id = ] *collection_package_id*  
@@ -79,7 +79,7 @@ EXEC sp_syscollector_create_collector_type
 @collector_type_uid = '302E93D1-3424-4be7-AA8E-84813ECF2419',  
 @name = 'Generic T-SQL Query Collector Type',  
 @parameter_schema = '<?xml version="1.0" encoding="utf-8"?>  
-  <xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema" targetNamespace="DataCollectorType">  
+  <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="DataCollectorType">  
     <xs:element name="TSQLQueryCollector">  
       <xs:complexType>  
         <xs:sequence>  

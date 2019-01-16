@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 567c4b6054623fad160dc17378e2a4a680fc4c8e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 12746eec96373e5d5a66206081408fbe2d0d3544
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669512"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255828"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>SQLXML 4.0의 DiffGrams 소개
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "51669512"
 <diffgr:diffgram   
          xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"  
          xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1"  
-         xmlns:xsd="https://www.w3.org/2001/XMLSchema">  
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
    <DataInstance>  
       ...  
    </DataInstance>  
@@ -74,7 +74,7 @@ ms.locfileid: "51669512"
 ## <a name="understanding-the-diffgram-processing-logic"></a>DiffGram 처리 논리 이해  
  DiffGram 처리 논리는 특정 규칙에 따라 작업이 삽입, 업데이트 또는 삭제 작업인지를 결정합니다. 다음 표에서는 이러한 규칙에 대해 설명합니다.  
   
-|연산|설명|  
+|연산|Description|  
 |---------------|-----------------|  
 |Insert|DiffGram에서 요소가 표시 되 면 삽입 작업을 나타냅니다 합니다  **\<DataInstance >** 블록 아니라 해당  **\<전에 >** 블록과 합니다 **diffgr: haschanges** 특성을 지정 (**diffgr: haschanges = inserted**) 요소에 있습니다. DiffGram에 지정 된 레코드 인스턴스를 삽입 하는 경우에  **\<DataInstance >** 데이터베이스로 블록입니다.<br /><br /> 경우는 **diffgr: haschanges** 특성이 지정 되지 않은, 요소 처리 논리에서 무시 되 고 없습니다 삽입이 수행 합니다. 작업 예제를 참조 하세요. [DiffGram 예 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)합니다.|  
 |Update|DiffGram에서 요소가 있으면 업데이트 작업을 나타냅니다 합니다 \<하기 전에 >의 해당 요소 블록 합니다  **\<DataInstance >** 블록 (즉, 두 요소 모두를 **diffgr: id** 특성과 동일한 값) 및 **diffgr: haschanges** 특성 값으로 지정 됩니다 **수정** 에서 요소를  **\<DataInstance >** 블록입니다.<br /><br /> 경우는 **diffgr: haschanges** 에서 요소 특성을 지정 하지 않으면 합니다  **\<DataInstance >** 블록 처리 논리에서 오류가 반환 됩니다. 작업 예제를 참조 하세요. [DiffGram 예 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)합니다.<br /><br /> 경우 **diffgr: parentid** 에 지정 된 된  **\<하기 전에 >** 요소에서 지정 된 부모-자식 관계를 차단 **parentID** 레코드 업데이트 되는 순서가 결정 됩니다.|  

@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 3b36e720cc390311c851eef55d09a74cc5e5d6ad
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d26de5c86485e6e7a2c6a11b8528c55c8ce92229
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503285"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300090"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>엔터프라이즈 평가 및 DMA 사용 하 여 평가 보고서 통합
 
@@ -35,6 +35,7 @@ ms.locfileid: "52503285"
     - [.NET framework](https://www.microsoft.com/download/details.aspx?id=30653) v4.5 이상.
     - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 이상.
     - [PowerBI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)합니다.
+    - [Azure PowerShell 모듈](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - 다운로드 및 추출 합니다.
     - 합니다 [DMA 보고서 Power BI 템플릿](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip)합니다.
     - 합니다 [LoadWarehouse 스크립트](https://msdnshared.blob.core.windows.net/media/2018/10/LoadWarehouse.zip)합니다.

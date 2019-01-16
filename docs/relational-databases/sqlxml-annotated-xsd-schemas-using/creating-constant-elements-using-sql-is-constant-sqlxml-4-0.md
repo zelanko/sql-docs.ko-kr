@@ -1,7 +1,7 @@
 ---
 title: Sql 사용 하 여 상수 요소 만들기:은 상수가 (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,14 +20,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f749e5c37742ac4e52a9cf0fc9dcb417d07aede0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bfc7504807754227de489b03f845ddbd2ad5d61b
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545427"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256939"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>sql:is-constant를 사용하여 상수 요소 만들기(SQLXML 4.0)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   상수 요소를 지정 하려면-, 즉 데이터베이스 테이블 또는 열에 매핑되지 않는 XSD 스키마의 요소-사용할 수는 **sql:은 상수** 주석. 이 주석은 부울 값(0=false, 1=true)을 사용합니다. 허용되는 값은 0, 1, true 및 false입니다. 합니다 **sql:은 상수** 주석은 특성이 없는 요소에 지정할 수 있습니다. 값이 true(또는 1)인 요소에 이 주석을 지정하면 해당 요소는 데이터베이스에 매핑되지 않지만 XML 문서에 계속 표시됩니다.  
   
@@ -48,7 +49,7 @@ ms.locfileid: "52545427"
  하지만  **\<CustomerOrders >** 에 매핑되지 않는 경우 데이터베이스 테이블 또는 열을 포함 하는 컨테이너 요소를 결과 XML에 계속 표시 되는  **\<순서 >** 자식 요소입니다.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  

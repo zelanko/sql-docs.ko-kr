@@ -1,7 +1,7 @@
 ---
 title: 만들기, 변경, 및 인덱스 제거 | Microsoft 문서
 ms.custom: ''
-ms.date: 08/06/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,14 +14,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7325d9a9093e1b62ecf8564ca10c31499d915a45
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b84d3ab70f466859da6898bcb7c226544df30978
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671312"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256188"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>인덱스 생성, 변경 및 제거
+
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects(SMO) 계층 구조에서 인덱스는 <xref:Microsoft.SqlServer.Management.Smo.Index> 개체로 표시됩니다. 인덱싱된 열은 <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> 속성으로 표현된 <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A> 개체 모음으로 표시됩니다.  
@@ -208,7 +209,7 @@ Public Class A
         Dim tb As New Table(db1, "XmlTable3")  
   
         Dim mySample As New XmlSchemaCollection(db1, "Sample4", "dbo")  
-        mySample.Text = "<xsd:schema xmlns:xsd=""https://www.w3.org/2001/XMLSchema"" targetNamespace=""NS2""> <xsd:element name=""elem1"" type=""xsd:integer""/></xsd:schema>"  
+        mySample.Text = "<xsd:schema xmlns:xsd=""http://www.w3.org/2001/XMLSchema"" targetNamespace=""NS2""> <xsd:element name=""elem1"" type=""xsd:integer""/></xsd:schema>"  
         mySample.Create()  
   
         Dim col11 As Column  
@@ -271,7 +272,7 @@ public class A {
       Table tb = new Table(db1, "XmlTable3");  
   
       XmlSchemaCollection mySample = new XmlSchemaCollection(db1, "Sample4", "dbo");  
-      mySample.Text = "<xsd:schema xmlns:xsd=\"https://www.w3.org/2001/XMLSchema\" targetNamespace=\"NS2\"> <xsd:element name=\"elem1\" type=\"xsd:integer\"/></xsd:schema>";  
+      mySample.Text = "<xsd:schema xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" targetNamespace=\"NS2\"> <xsd:element name=\"elem1\" type=\"xsd:integer\"/></xsd:schema>";  
       mySample.Create();  
   
       Column col11;  

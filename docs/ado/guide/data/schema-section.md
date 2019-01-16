@@ -13,12 +13,12 @@ ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5eb8012190914c2b5312a89428947f670db11df4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 45e8e37d8bb85e727771072abda9249b8155076f
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201732"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256198"
 ---
 # <a name="schema-section"></a>스키마 섹션
 스키마 섹션은 필수입니다. 이전 예제에서 알 수 있듯이, ADO 데이터 값의 의미 체계를 업데이트 하기 위한 최대한 유지 하기 위해 각 열에 대 한 자세한 메타 데이터를 작성 합니다. 그러나 XML을 로드 하려면 ADO 하기만 열 및 속해 있는 행 집합의 이름입니다. 최소 스키마의 예는 다음과 같습니다.  
@@ -99,7 +99,7 @@ ms.locfileid: "53201732"
  에 대 한 별칭이 없는 정의 되어 있기 때문에 마찬가지로 `CompanyName` 이전 예에서 `CompanyName` 문서 전체에서 일관 되 게 사용 해야 합니다.  
   
 ## <a name="data-types"></a>데이터 형식  
- Dt: type 특성을 사용 하 여 열 데이터 형식에 적용할 수 있습니다. 허용 되는 XML 형식에 선언적 가이드의 데이터 형식 섹션을 참조 합니다 [W3C XML 데이터 사양](https://www.w3.org/TR/1998/NOTE-XML-data/)합니다. 두 가지 방법으로 데이터 형식을 지정할 수 있습니다: 열 정의 자체가에 직접 dt: type 특성을 지정 하거나 방법 열 정의의 중첩 된 요소로 사용 합니다. 예:  
+ Dt: type 특성을 사용 하 여 열 데이터 형식에 적용할 수 있습니다. 허용 되는 XML 형식에 선언적 가이드의 데이터 형식 섹션을 참조 합니다 [W3C XML 데이터 사양](http://www.w3.org/TR/1998/NOTE-XML-data/)합니다. 두 가지 방법으로 데이터 형식을 지정할 수 있습니다: 열 정의 자체가에 직접 dt: type 특성을 지정 하거나 방법 열 정의의 중첩 된 요소로 사용 합니다. 예:  
   
 ```  
 <s:AttributeType name="Phone" >  
