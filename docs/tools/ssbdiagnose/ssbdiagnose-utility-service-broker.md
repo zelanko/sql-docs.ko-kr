@@ -26,12 +26,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23985f7a9c78993e154babdcbdd9980334f0fc36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: cc67193013c0ea546f69aaa87fb1fb0aa0ad7cac
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541322"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590547"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 유틸리티(Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,22 +115,22 @@ ssbdiagnose
   
  기본 설정은 **WARNING**입니다.  
   
- **-IGNORE** *error_id*  
+ **-IGNORE** _error_id_  
  지정된 *error_id* 의 오류 또는 메시지가 보고서에 포함되지 않도록 지정합니다. 여러 메시지 ID를 표시하지 않으려면 **-IGNORE** 를 여러 번 지정하면 됩니다.  
   
- **\<baseconnectionoptions >**  
+ **\<baseconnectionoptions>**  
  특정 절에 연결 옵션이 포함되어 있지 않은 경우 **ssbdiagnose** 에서 사용되는 기본 연결 정보를 지정합니다. 특정 절에 지정되는 연결 정보는 **baseconnectionoption** 정보보다 우선합니다. 이 작업은 각 매개 변수에 대해 별도로 수행됩니다. 예를 들어 **baseconnetionoptions** 에는 **-S** 와 **-d**가 둘 다 지정되고 **toconnetionoptions** 에는 **-d**만 지정된 경우 **ssbdiagnose** 는 **baseconnetionoptions** 의 -S와 **toconnetionoptions**의 -d를 사용합니다.  
   
  **CONFIGURATION**  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스 쌍 간 구성 오류 또는 단일 서비스 구성 오류에 대한 보고서를 요청합니다.  
   
- **FROM SERVICE** *service_name*  
+ **FROM SERVICE** _service_name_  
  대화를 시작하는 서비스를 지정합니다.  
   
- **\<fromconnectionoptions >**  
+ **\<fromconnectionoptions>**  
  시작자 서비스를 보유하는 데이터베이스에 연결하는 데 필요한 정보를 지정합니다. **fromconnectionoptions** 를 지정하지 않은 경우 **ssbdiagnose** 는 **baseconnectionoptions** 의 연결 정보를 사용하여 시작자 데이터베이스에 연결합니다. **fromconnectionoptions** 를 지정한 경우 시작자 서비스를 보유하는 데이터베이스를 포함해야 합니다. **fromconnectionoptions** 를 지정하지 않은 경우 **baseconnectionoptions** 에서 시작자 데이터베이스를 지정해야 합니다.  
   
- **TO SERVICE** *service_name*[, *broker_id* ]  
+ **TO SERVICE** _service_name_[, *broker_id* ]  
  대화의 대상이 되는 서비스를 지정합니다.  
   
  *service_name*: 대상 서비스의 이름을 지정합니다.  
@@ -143,22 +143,22 @@ FROM sys.databases
 WHERE database_id = DB_ID();  
 ```  
   
- **\<toconnectionoptions >**  
+ **\<toconnectionoptions>**  
  대상 서비스를 보유하는 데이터베이스에 연결하는 데 필요한 정보를 지정합니다. **toconnectionoptions** 를 지정하지 않은 경우 **ssbdiagnose** 는 **baseconnectionoptions** 의 연결 정보를 사용하여 대상 데이터베이스에 연결합니다.  
   
  **MIRROR**  
  연결된 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스가 미러된 데이터베이스에서 호스팅되도록 지정합니다. **ssbdiagnose** 는 서비스에 대한 경로가 CREATE ROUTE에 MIRROR_ADDRESS가 지정된 미러된 경로인지 확인합니다.  
   
- **\<mirrorconnectionoptions >**  
+ **\<mirrorconnectionoptions>**  
  미러 데이터베이스에 연결하는 데 필요한 정보를 지정합니다. **mirrorconnectionoptions** 를 지정하지 않은 경우 **ssbdiagnose** 는 **baseconnectionoptions** 의 연결 정보를 사용하여 미러 데이터베이스에 연결합니다.  
   
- **ON CONTRACT** *contract_name*  
+ **ON CONTRACT** _contract_name_  
  **ssbdiagnose** 가 지정된 계약을 사용하는 구성만 검사하도록 요청합니다. ON CONTRACT를 지정하지 않을 경우 **ssbdiagnose** 는 DEFAULT라는 계약에 대해 보고합니다.  
   
  **ENCRYPTION** { **ON** | **OFF** | **ANONYMOUS** }  
  대화가 지정된 수준의 암호화에 대해 올바로 구성되었는지 확인하도록 요청합니다.  
   
- **ON**: 기본 설정입니다. 전체 대화 보안이 구성됩니다. 인증서가 대화의 양측에 배포되었고, 원격 서비스 바인딩이 있으며, 대상 서비스에 대한 GRANT SEND 문이 시작 사용자를 지정했습니다.  
+ **ON**: 기본 설정. 전체 대화 보안이 구성됩니다. 인증서가 대화의 양측에 배포되었고, 원격 서비스 바인딩이 있으며, 대상 서비스에 대한 GRANT SEND 문이 시작 사용자를 지정했습니다.  
   
  **OFF**: 대화 보안이 구성되지 않습니다. 인증서가 배포되지 않았고, 원격 서비스 바인딩이 만들어지지 않았으며, 시작자 서비스에 대한 GRANT SEND가 **public** 역할을 지정했습니다.  
   
@@ -201,10 +201,10 @@ WHERE database_id = DB_ID();
   
  대화 ID는 **sys.conversation_endpoints** 카탈로그 뷰의 **conversation_id** 열에서 보고됩니다.  
   
- **-TIMEOUT** *timeout_interval*  
+ **-TIMEOUT** _timeout_interval_  
  **RUNTIME** 보고서를 실행할 시간(초)을 지정합니다. **-TIMEOUT** 을 지정하지 않을 경우 런타임 보고서가 무기한 실행됩니다. **-TIMEOUT** 은 **RUNTIME** 보고서에서만 사용됩니다. **CONFIGURATION** 보고서에서는 사용되지 않습니다. Ctrl+C를 사용하면 **-TIMEOUT** 을 지정하지 않은 경우 **ssbdiagnose** 를 종료하거나 제한 시간 간격이**-** 만료되기 전에 런타임 보고서를 종료할 수 있습니다. *timeout_interval* 은 1에서 2,147,483,647 사이의 숫자여야 합니다.  
   
- **\<runtimeconnectionoptions >**  
+ **\<runtimeconnectionoptions>**  
  모니터링 중인 대화 요소와 연결된 서비스를 포함하는 데이터베이스에 대한 연결 정보를 지정합니다. 모든 서비스가 동일한 데이터베이스에 있으면 **CONNECT TO** 절을 하나만 지정하면 됩니다. 서비스가 서로 다른 데이터베이스에 있으면 각 데이터베이스에 대해 **CONNECT TO** 절을 제공해야 합니다. **runtimeconnectionoptions** 를 지정하지 않은 경우 **ssbdiagnose** 는 **baseconnectionoptions**의 연결 정보를 사용합니다.  
   
  **-E**  
@@ -216,14 +216,14 @@ WHERE database_id = DB_ID();
   
  **-E** 옵션과 함께 **-U** 옵션 또는 **-P** 옵션을 사용하면 오류 메시지가 생성됩니다.  
   
- **-U** *login_id*  
+ **-U** _login_id_  
  지정된 로그인 ID를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 연결을 엽니다. 로그인은 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
  **-E** 와 **-U** 를 둘 다 지정하지 않을 경우 **ssbdiagnose** 가 SQLCMDUSER 환경 변수의 값을 사용합니다. SQLCMDUSER도 설정하지 않을 경우 **ssbdiagnose** 는 **ssbdiagnose**를 실행하는 사용자의 Windows 계정을 기반으로 하는 Windows 인증 모드를 사용하여 연결을 시도합니다.  
   
  **-U** 옵션과 함께 **-E** 옵션을 사용하면 오류 메시지가 생성됩니다. **–U** 옵션 다음에 둘 이상의 인수를 지정하면 오류 메시지가 생성되고 프로그램이 종료됩니다.  
   
- **-P** *password*  
+ **-P** _password_  
  **-U** 로그인 ID의 암호를 지정합니다. 암호는 대/소문자를 구분합니다. **-U** 옵션만 사용하고 **-P** 옵션을 사용하지 않을 경우 **ssbdiagnose** 는 SQLCMDPASSWORD 환경 변수의 값을 사용합니다. SQLCMDPASSWORD도 설정하지 않을 경우 **ssbdiagnose** 는 사용자에게 암호를 묻는 메시지를 표시합니다.  
   
 > [!IMPORTANT]  
@@ -242,15 +242,15 @@ WHERE database_id = DB_ID();
   
  **-P** 옵션 다음에 둘 이상의 인수를 지정하면 오류 메시지가 생성됩니다.  
   
- **baseconnetionoptions** *server_name*[\\*instance_name*]  
+ **baseconnetionoptions** _server_name_[\\*instance_name*]  
  분석할 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스를 보유하는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 인스턴스를 지정합니다.  
   
  해당 서버에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하려면 _server\_name_**\\**_instance\_name_을 지정합니다. **-S** 를 지정하지 않으면 **ssbdiagnose** 가 기본적으로 SQLCMDSERVER 환경 변수의 값을 사용합니다. SQLCMDSERVER도 설정하지 않을 경우 **ssbdiagnose** 는 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
   
- **-S** *database_name*  
+ **-S** _database_name_  
  분석할 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스를 보유하는 데이터베이스를 지정합니다. 데이터베이스가 없을 경우에는 오류가 생성됩니다. **-d** 를 지정하지 않을 경우 기본적으로 로그인의 기본 데이터베이스 속성에 지정된 데이터베이스가 사용됩니다.  
   
- **-l** *login_timeout*  
+ **-l** _login_timeout_  
  서버 연결 시도 시간이 초과되기 전의 대기 시간을 초 단위로 지정합니다. **-l** 를 지정하지 않을 경우 **ssbdiagnose** 가 SQLCMDLOGINTIMEOUT 환경 변수의 값 집합을 사용합니다. SQLCMDLOGINTIMEOUT도 설정하지 않을 경우 기본 제한 시간은 30초입니다. 로그인 제한 시간은 0에서 65534 사이의 숫자여야 합니다. 입력한 값이 숫자가 아니거나 이 범위에 속하지 않을 경우 **ssbdiagnose** 는 오류 메시지를 생성합니다. 값을 0으로 설정하면 제한 시간이 없습니다.  
   
  **-?**  
@@ -348,7 +348,7 @@ ssbdiagnose CONFIGURATION FROM SERVICE /text/initiator
 -U TargetLogin -p ER!49jiy -d TargetDatabase ON CONTRACT TestContract  
 ```  
   
-### <a name="d-checking-mirrored-service-configurations-on-separate-computers-with-anonymous-encryption"></a>4. 익명 암호화를 사용하는 서로 다른 컴퓨터에 있는 미러된 서비스 구성 검사  
+### <a name="d-checking-mirrored-service-configurations-on-separate-computers-with-anonymous-encryption"></a>D. 익명 암호화를 사용하는 서로 다른 컴퓨터에 있는 미러된 서비스 구성 검사  
  다음 예에서는 시작자 서비스와 대상 서비스가 서로 다른 컴퓨터에 있고 시작자가 명명된 인스턴스에 미러된 경우 보고서를 요청하는 방법을 보여 줍니다. 보고서는 서비스가 익명 암호화를 사용하도록 구성되어 있는지도 확인합니다.  
   
 ```  
@@ -358,7 +358,7 @@ ssbdiagnose -E CONFIGURATION FROM SERVICE /text/initiator
 -S TargetComputer -d TargetDatabase ON CONTRACT TestContract ENCRYPTION ANONYMOUS  
 ```  
   
-### <a name="e-checking-the-configuration-of-two-contracts"></a>5. 두 계약의 구성 검사  
+### <a name="e-checking-the-configuration-of-two-contracts"></a>E. 두 계약의 구성 검사  
  다음 예에서는 아래 조건에 해당하는 경우 구성 보고서를 요청하는 명령 파일을 작성하는 방법을 보여 줍니다.  
   
 -   시작자 서비스와 대상 서비스가 동일한 데이터베이스에 있습니다.  
@@ -376,14 +376,14 @@ ssbdiagnose -E -d MyDatabase CONFIGURATION FROM SERVICE /test/initiator
 TO SERVICE /test/target ON CONTRACT PromotionContract  
 ```  
   
-### <a name="f-monitor-the-status-of-a-specific-conversation-on-the-local-computer-with-a-time-out"></a>6. 제한 시간이 설정된 로컬 컴퓨터에 있는 특정 대화 상태 모니터링  
+### <a name="f-monitor-the-status-of-a-specific-conversation-on-the-local-computer-with-a-time-out"></a>F. 제한 시간이 설정된 로컬 컴퓨터에 있는 특정 대화 상태 모니터링  
  다음 예에서는 시작자 서비스와 대상 서비스가 **ssbdiagnose**를 실행하고 있는 동일한 컴퓨터의 기본 인스턴스에 있는 동일한 데이터베이스에 있는 특정 대화를 모니터링하는 방법을 보여 줍니다. 제한 시간 간격은 20초로 설정됩니다.  
   
 ```  
 ssbdiagnose -E -d TestDatabase RUNTIME -ID D68D77A9-B1CF-41BF-A5CE-279ABCAB140D -TIMEOUT 20  
 ```  
   
-### <a name="g-monitor-the-status-of-a-conversation-that-spans-two-computers"></a>7. 두 컴퓨터를 연결하는 대화의 상태 모니터링  
+### <a name="g-monitor-the-status-of-a-conversation-that-spans-two-computers"></a>G. 두 컴퓨터를 연결하는 대화의 상태 모니터링  
  다음 예에서는 시작자 서비스와 대상 서비스가 서로 다른 컴퓨터에 있는 특정 대화를 모니터링하는 방법을 보여 줍니다.  
   
 ```  
@@ -393,7 +393,7 @@ ssbdiagnose RUNTIME -ID D68D77A9-B1CF-41BF-A5CE-279ABCAB140D
 -d TargetDatabase  
 ```  
   
-### <a name="h-monitor-the-status-of-a-conversation-in-two-databases-in-the-same-instance"></a>8. 동일한 인스턴스의 두 데이터베이스에 있는 대화 상태 모니터링  
+### <a name="h-monitor-the-status-of-a-conversation-in-two-databases-in-the-same-instance"></a>H. 동일한 인스턴스의 두 데이터베이스에 있는 대화 상태 모니터링  
  다음 예에서는 시작자 서비스와 대상 서비스가 동일한 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스의 서로 다른 데이터베이스에 있는 특정 대화를 모니터링하는 방법을 보여 줍니다. 이 예에서는 **baseconnectionoptions** 를 사용하여 인스턴스 및 로그인 정보를 지정하고 두 개의 CONNECT TO 절을 사용하여 데이터베이스를 지정합니다. -SHOWEVENTS는 모든 런타임 이벤트가 보고서 출력에 포함되도록 하기 위해 지정됩니다.  
   
 ```  

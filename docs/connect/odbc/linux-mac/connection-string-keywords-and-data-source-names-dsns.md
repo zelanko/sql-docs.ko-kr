@@ -15,12 +15,12 @@ ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c07b0bb4659f9b1b05573bf952842486f9ec72e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: db4df94d04a27df5715abe4bf5e4947850c687e4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420454"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125843"
 ---
 # <a name="connecting-to-sql-server"></a>SQL Server에 연결
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "52420454"
 참조 [DSN 및 연결 문자열 키워드 및 특성](../../../connect/odbc/dsn-connection-string-attribute.md) 모든 연결 문자열 키워드와 Linux 및 Mac에서 지 원하는 특성
 
 > [!IMPORTANT]  
-> 데이터베이스 미러링(장애 조치(failover) 파트너 있음)을 사용하는 데이터베이스에 연결할 때 연결 문자열에 데이터베이스 이름을 지정하지 마세요. 대신 쿼리를 실행하기 전에 **use** *database_name* 명령을 보내 데이터베이스에 연결합니다.  
+> 데이터베이스 미러링(장애 조치(failover) 파트너 있음)을 사용하는 데이터베이스에 연결할 때 연결 문자열에 데이터베이스 이름을 지정하지 마세요. 대신 쿼리를 실행하기 전에 **use** _database_name_ 명령을 보내 데이터베이스에 연결합니다.  
   
 전달 되는 값을 **드라이버** 키워드는 다음 중 하나일 수 있습니다.  
   
@@ -53,12 +53,12 @@ Server = [protocol:]server[,port]
 #  
 ```  
 
-필요에 따라 서버에 연결할 프로토콜 및 포트를 지정할 수 있습니다. 예를 들어 **Server = tcp:***servername***12345,** 합니다. Linux 및 macOS 드라이버에서 지원 되는 유일한 프로토콜은 `tcp`합니다.
+필요에 따라 서버에 연결할 프로토콜 및 포트를 지정할 수 있습니다. 예를 들어 **Server = tcp:**_servername_**, 12345**합니다. Linux 및 macOS 드라이버에서 지원 되는 유일한 프로토콜은 `tcp`합니다.
 
 고정 포트의 명명된 인스턴스에 연결하려면 <b>Server =</b>*servername*,**port_number**를 사용합니다. 동적 포트에 연결하는 것은 지원되지 않습니다.  
 
 또는 DSN 정보를 템플릿 파일에 추가하고 다음 명령을 실행하여 `~/.odbc.ini`에 추가할 수 있습니다.
- - **odbcinst-i-s-f** *template_file*  
+ - **odbcinst -i -s -f** _template_file_  
  
 드라이버를 사용 하 여 작동 하는지 확인할 수 있습니다 `isql` 하거나 연결을 테스트 하려면이 명령을 사용 합니다.
  - **OutFile.dat-S 아웃 bcp master.INFORMATION_SCHEMA.TABLES <server> -U <name> -P <password>**  
@@ -72,7 +72,7 @@ SSL(Secure Sockets Layer)을 사용하여 [!INCLUDE[ssNoVersion](../../../includ
 
 **Encrypt** 및 **TrustServerCertificate**에 대한 설정과 관계없이 서버 로그인 자격 증명(사용자 이름 및 암호)은 상시 암호화됩니다. 다음 표는 **Encrypt** 및 **TrustServerCertificate** 를 설정할 때의 영향을 보여 줍니다.  
 
-||**TrustServerCertificate = 아니요**|**TrustServerCertificate = yes**|  
+||**TrustServerCertificate=no**|**TrustServerCertificate=yes**|  
 |-|-------------------------------------|------------------------------------|  
 |**Encrypt=no**|서버 인증서를 확인하지 않습니다.<br /><br />클라이언트와 서버 간에 전송되는 데이터가 암호화되지 않습니다.|서버 인증서를 확인하지 않습니다.<br /><br />클라이언트와 서버 간에 전송되는 데이터가 암호화되지 않습니다.|  
 |**Encrypt=yes**|서버 인증서를 확인합니다.<br /><br />클라이언트와 서버 간에 전송되는 데이터가 암호화됩니다.<br /><br />[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSL 인증서에 있는 주체 CN(일반 이름) 또는 SAN(주체 대체 이름)의 이름(또는 IP 주소)은 연결 문자열에 지정된 서버 이름(또는 IP 주소)과 정확하게 일치해야 합니다.|서버 인증서를 확인하지 않습니다.<br /><br />클라이언트와 서버 간에 전송되는 데이터가 암호화됩니다.|  

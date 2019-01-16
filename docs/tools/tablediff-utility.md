@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fdb89ebbfebe6ea8e47857347428cb27d4d41530
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: f0c4bec0b0ef0181a62ac8c8183830716a604490
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293149"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128513"
 ---
 # <a name="tablediff-utility"></a>tablediff 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -81,58 +81,58 @@ tablediff
  [ **-?** ]  
  지원되는 매개 변수 목록을 반환합니다.  
   
- **-sourceserver** *source_server_name*[**\\**_instance\_name_]  
- 원본 서버의 이름입니다. *의 기본 인스턴스에 대해* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 명명된 인스턴스에 대해 *source_server_name***\\***instance_name*을 지정합니다.  
+ **-sourceserver** _source_server_name_[**\\**_instance\_name_]  
+ 원본 서버의 이름입니다. *의 기본 인스턴스에 대해* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다. _의 명명된 인스턴스에 대해_**\\**_source_server_name_ instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다.  
   
- **-sourcedatabase** *source_database*  
+ **-sourcedatabase** _source_database_  
  원본 데이터베이스의 이름입니다.  
   
- **-sourcetable** *source_table_name*  
+ **-sourcetable** _source_table_name_  
  검사할 원본 테이블의 이름입니다.  
   
- **-sourceschema** *source_schema_name*  
+ **-sourceschema** _source_schema_name_  
  원본 테이블의 스키마 소유자입니다. 기본적으로 테이블 소유자를 dbo로 간주합니다.  
   
- **-sourcepassword** *source_password*  
+ **-sourcepassword** _source_password_  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하여 원본 서버에 연결하는 데 사용되는 로그인 암호입니다.  
   
 > [!IMPORTANT]  
 >  가능하면 런타임 동안 보안 자격 증명을 지정합니다. 스크립트 파일에 자격 증명을 저장해야 하는 경우에는 무단으로 액세스하지 못하도록 파일에 보안을 설정해야 합니다.  
   
- **-sourceuser** *source_login*  
+ **-sourceuser** _source_login_  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하여 원본 서버에 연결하는 데 사용되는 로그인입니다. *source_login* 을 지정하지 않으면 원본 서버에 연결할 때 Windows 인증이 사용됩니다. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-sourcelocked**  
  비교를 수행하는 동안 TABLOCK 및 HOLDLOCK 테이블 힌트를 사용하여 원본 테이블이 잠깁니다.  
   
- **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- 대상 서버의 이름입니다. *의 기본 인스턴스에 대해* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 명명된 인스턴스에 대해 *destination_server_name***\\***instance_name*을 지정합니다.  
+ **-destinationserver** _destination_server_name_[**\\**_instance_name_]  
+ 대상 서버의 이름입니다. *의 기본 인스턴스에 대해* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다. _의 명명된 인스턴스에 대해_**\\**_destination_server_name_ instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다.  
   
- **-destinationdatabase** *subscription_database*  
+ **-destinationdatabase** _subscription_database_  
  대상 데이터베이스의 이름입니다.  
   
- **-destinationtable** *destination_table*  
+ **-destinationtable** _destination_table_  
  대상 테이블의 이름입니다.  
   
- **-destinationschema** *destination_schema_name*  
+ **-destinationschema** _destination_schema_name_  
  대상 테이블의 스키마 소유자입니다. 기본적으로 테이블 소유자를 dbo로 간주합니다.  
   
- **-destinationpassword** *destination_password*  
+ **-destinationpassword** _destination_password_  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하여 대상 서버에 연결하는 데 사용되는 로그인 암호입니다.  
   
 > [!IMPORTANT]  
 >  가능하면 런타임 동안 보안 자격 증명을 지정합니다. 스크립트 파일에 자격 증명을 저장해야 하는 경우에는 무단으로 액세스하지 못하도록 파일에 보안을 설정해야 합니다.  
   
- **-destinationuser** *destination_login*  
+ **-destinationuser** _destination_login_  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하여 대상 서버에 연결하는 데 사용되는 로그인입니다. *destination_login* 을 지정하지 않으면 대상 서버에 연결할 때 Windows 인증이 사용됩니다. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-destinationlocked**  
  비교를 수행하는 동안 TABLOCK 및 HOLDLOCK 테이블 힌트를 사용하여 대상 테이블이 잠깁니다.  
   
- **-b** *large_object_bytes*  
+ **-b** _large_object_bytes_  
  큰 개체 데이터 형식 열에 대해 비교할 바이트 수입니다. 이 데이터 형식에는 **text**, **ntext**, **이미지**, **varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 가 포함됩니다. *large_object_bytes* 는 기본적으로 열 크기로 설정됩니다. *large_object_bytes* 에 지정한 바이트 수를 초과하는 데이터는 비교되지 않습니다.  
   
- **-bf**  *number_of_statements*  
+ **-bf**  _number_of_statements_  
  [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] 옵션을 사용할 경우 현재 **스크립트 파일에 쓸** 문의 수입니다. [!INCLUDE[tsql](../includes/tsql-md.md)] 문의 수가 *number_of_statements*를 초과하면 새 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트 파일이 생성됩니다.  
   
  **-c**  
@@ -141,28 +141,28 @@ tablediff
  **-dt**  
  *table_name*에 지정된 결과 테이블이 이미 있는 경우 삭제합니다.  
   
- **-et** *table_name*  
+ **-et** _table_name_  
  만들 결과 테이블의 이름을 지정합니다. 이 테이블이 이미 있을 경우 **-DT** 를 사용해야 합니다. 그렇지 않으면 작업이 실패합니다.  
   
  **-f** [ *file_name* ]  
  대상 서버의 테이블을 원본 서버의 테이블과 일치시키는 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트를 생성합니다. 생성된 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트 파일의 이름과 경로를 필요에 따라 지정할 수 있습니다. *file_name* 을 지정하지 않으면 유틸리티가 실행되는 디렉터리에 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트 파일이 생성됩니다.  
   
- **-o** *output_file_name*  
+ **-o** _output_file_name_  
  출력 파일의 전체 이름 및 경로입니다.  
   
  **-q**  
  행 개수와 스키마만 비교하여 비교 작업을 빨리 수행합니다.  
   
- **-rc** *number_of_retries*  
+ **-rc** _number_of_retries_  
  유틸리티가 실패한 작업을 다시 시도하는 횟수입니다.  
   
- **-ri**  *retry_interval*  
+ **-ri**  _retry_interval_  
  다시 시도 작업 사이의 대기 간격(초)입니다.  
   
  **-strict**  
  원본 스키마와 대상 스키마를 엄격하게 비교합니다.  
   
- **-t** *connection_timeouts*  
+ **-t** _connection_timeouts_  
  원본 서버 및 대상 서버에 대한 연결 제한 시간(초)을 설정합니다.  
   
 ## <a name="return-value"></a>반환 값  
@@ -174,7 +174,7 @@ tablediff
 |**2**|테이블 차이|  
   
 ## <a name="remarks"></a>Remarks  
- **이외 서버에서는** tablediff[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티를 사용할 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이외 서버에서는 **tablediff** 유틸리티를 사용할 수 없습니다.  
   
  데이터 형식이 **sql_variant** 인 열이 있는 테이블은 지원되지 않습니다.  
   

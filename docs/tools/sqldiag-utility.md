@@ -30,16 +30,16 @@ ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a20913ac99f7c4cf32ae31c55cdf027f2db360c1
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 05336c1b9a7f6830b3dd2c6e6f0b794984bda061
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292710"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100948"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag Utility
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **SQLdiag** 유틸리티는 콘솔 응용 프로그램 또는 서비스로 실행할 수 있는 범용 진단 정보 수집 유틸리티입니다. **SQLdiag** 를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 기타 서버 유형에서 로그 및 데이터 파일을 수집할 수 있으며 이러한 파일을 사용하여 지속적으로 서버를 모니터링하거나 특정 서버 문제를 해결할 수 있습니다. **SQLdiag** 는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 고객 지원 서비스에서 진단 정보를 빠르고 간편하게 수집할 수 있도록 지원하는 유틸리티입니다.  
+  **SQLdiag** 유틸리티는 콘솔 애플리케이션 또는 서비스로 실행할 수 있는 범용 진단 정보 수집 유틸리티입니다. **SQLdiag** 를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 기타 서버 유형에서 로그 및 데이터 파일을 수집할 수 있으며 이러한 파일을 사용하여 지속적으로 서버를 모니터링하거나 특정 서버 문제를 해결할 수 있습니다. **SQLdiag** 는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 고객 지원 서비스에서 진단 정보를 빠르고 간편하게 수집할 수 있도록 지원하는 유틸리티입니다.  
   
 > [!NOTE]  
 >  이 유틸리티는 변경될 수 있으며 해당 명령줄 인수나 동작을 사용하는 애플리케이션 또는 스크립트의 경우 후속 릴리스에서 제대로 작동하지 않을 수 있습니다.  
@@ -86,16 +86,16 @@ sqldiag
  **/?**  
  사용법 정보를 표시합니다.  
   
- **/I** *configuration_file*  
+ **/I** _configuration_file_  
  **SQLdiag** 에서 사용할 구성 파일을 설정합니다. 기본적으로 **/I** 는 SQLDiag.Xml로 설정되어 있습니다.  
   
- **/O** *output_folder_path*  
+ **/O** _output_folder_path_  
  **SQLdiag** 출력을 지정된 폴더로 리디렉션합니다. **/O** 옵션을 지정하지 않으면 **SQLdiag** 출력이 **SQLdiag** 시작 폴더의 SQLDIAG라는 하위 폴더에 기록됩니다. SQLDIAG 폴더가 없으면 **SQLdiag** 에서 이 폴더를 만듭니다.  
   
 > [!NOTE]  
 >  출력 폴더 위치는 **/P**로 지정할 수 있는 지원 폴더 위치에 대해 상대적입니다. 완전히 다른 출력 폴더 위치를 설정하려면 **/O**에 대해 전체 디렉터리 경로를 지정합니다.  
   
- **/P** *support_folder_path*  
+ **/P** _support_folder_path_  
  지원 폴더 경로를 설정합니다. 기본적으로 **/P** 는 **SQLdiag** 실행 파일이 있는 폴더로 설정됩니다. 지원 폴더에는 XML 구성 파일, Transact-SQL 스크립트 및 진단 정보를 수집하는 동안 유틸리티에서 사용하는 기타 파일을 비롯한 **SQLdiag** 지원 파일이 있습니다. 이 옵션을 사용하여 대체 지원 파일 경로를 지정하면 **SQLdiag** 는 지정한 폴더에 없는 경우 필요한 지원 파일을 자동으로 복사합니다.  
   
 > [!NOTE]  
@@ -103,7 +103,7 @@ sqldiag
 >   
 >  **SQLDIAG /P %cd%**  
   
- **/N** *output_folder_management_option*  
+ **/N** _output_folder_management_option_  
  **SQLdiag** 가 시작될 때 출력 폴더를 덮어쓸 것인지 또는 이름을 바꿀 것인지 설정합니다. 사용 가능한 옵션은 다음과 같습니다.  
   
  1 = 출력 폴더를 덮어씁니다(기본값).  
@@ -113,12 +113,12 @@ sqldiag
 > [!NOTE]  
 >  **SQLdiag** 는 시작할 때 현재 출력 폴더에 출력을 추가하지 않습니다. 대신 기본 출력 폴더를 덮어쓰거나(옵션 1) 폴더의 이름을 바꾼 다음(옵션 2) SQLDIAG라는 새 기본 출력 폴더에 출력을 씁니다.  
   
- **/M** *machine1* [ *machine2 * * machineN*] | *@machinelistfile*  
+ **/M** _machine1_ [ *machine2* *machineN*] | *@machinelistfile*  
  구성 파일에 지정된 컴퓨터를 재정의합니다. 기본적으로 구성 파일은 SQLDiag.Xml이거나 **/I** 매개 변수를 사용하여 설정됩니다. 둘 이상의 컴퓨터를 지정할 경우 각 컴퓨터 이름을 공백으로 구분하십시오.  
   
  *@machinelistfile*을 사용하면 구성 파일에 저장할 컴퓨터 목록 파일 이름이 지정됩니다.  
   
- **/C** *file_compression_type*  
+ **/C** _file_compression_type_  
  **SQLdiag** 출력 폴더 파일에서 사용되는 파일 압축 유형을 설정합니다. 사용 가능한 옵션은 다음과 같습니다.  
   
  0 = 없음(기본값)  
@@ -153,7 +153,7 @@ sqldiag
   
  **SQLdiag** 는 유틸리티를 실행하는 컴퓨터의 현지 시간을 사용합니다.  
   
- **/A**  *SQLdiag_application_name*  
+ **/A**  _SQLdiag_application_name_  
  동일한 **인스턴스에 대해 여러** SQLdiag [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 인스턴스를 실행할 수 있도록 합니다.  
   
  각 *SQLdiag_application_name* 은 서로 다른 **SQLdiag**인스턴스를 식별합니다. *SQLdiag_application_name* 인스턴스와 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스 이름은 전혀 관계가 없습니다.  
@@ -162,11 +162,11 @@ sqldiag
   
  예를 들어 다음과 같이 사용할 수 있습니다.  
   
- **SQLDIAG START /A**  *SQLdiag_application_name*  
+ **SQLDIAG START /A**  _SQLdiag_application_name_  
   
  또한 **/R** 옵션과 함께 사용하여 특정 **SQLdiag** 인스턴스를 서비스로 등록할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
- **SQLDIAG /R /A** *SQLdiag_application_name*  
+ **SQLDIAG /R /A** _SQLdiag_application_name_  
   
 > [!NOTE]  
 >  **SQLdiag** 는 *SQLdiag_application_name*에 대해 지정한 인스턴스 이름 앞에 DIAG$를 자동으로 붙입니다. **SQLdiag** 를 서비스로 등록하는 경우 이를 통해 구분이 가능한 서비스 이름이 제공됩니다.  
@@ -202,7 +202,7 @@ sqldiag
   
  다음과 같이 **net start** 명령을 사용하여 서비스를 시작할 수도 있습니다.  
   
- **net**  **start SQLDIAG**  
+ **net  start SQLDIAG**  
   
  **/U**  
  서비스로 등록된 **SQLdiag** 의 등록을 취소합니다.  
@@ -229,10 +229,10 @@ sqldiag
   
  명명된 **SQLdiag** 인스턴스를 지정하는 **/A**인수만 **START**, **STOP**또는 **STOP_ABORT** 와 함께 사용하여 특정 **SQLdiag** 서비스 인스턴스를 제어할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
- **SQLDIAG START /A** *SQLdiag_application_name*  
+ **SQLDIAG START /A** _SQLdiag_application_name_  
   
 ## <a name="security-requirements"></a>보안 요구 사항  
-  **SQLdiag** 명령줄 인수를 지정하여 일반 모드에서 **SQLdiag** 를 실행하지 않을 경우 **SQLdiag** 를 실행하는 사용자는 Windows **Administrators** 그룹의 멤버이면서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** 고정 서버 역할의 멤버여야 합니다. 기본적으로 **SQLdiag** 에서는 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 연결하지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증도 지원합니다.  
+ **SQLdiag** 명령줄 인수를 지정하여 일반 모드에서 **SQLdiag** 를 실행하지 않을 경우 **SQLdiag** 를 실행하는 사용자는 Windows **Administrators** 그룹의 멤버이면서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** 고정 서버 역할의 멤버여야 합니다. 기본적으로 **SQLdiag** 에서는 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 연결하지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증도 지원합니다.  
   
 ## <a name="performance-considerations"></a>성능 고려 사항  
  **SQLdiag** 를 실행할 때 성능에 주는 영향은 수집하도록 구성한 진단 데이터의 종류에 따라 다릅니다. 예를 들어 **추적 정보를 수집하도록** SQLdiag [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 를 구성한 경우 추적할 이벤트 클래스를 많이 선택할수록 서버 성능에 더 많은 영향을 줍니다.  
@@ -257,7 +257,7 @@ sqldiag
  **SQLdiag** 를 다시 시작하면 출력 폴더의 내용을 덮어씁니다. 이 문제를 방지하려면 명령줄에서 **/N 2** 를 지정합니다.  
   
 ## <a name="data-collection-process"></a>데이터 수집 프로세스  
- **SQLdiag** 가 시작되면 SQLDiag.Xml에 지정된 진단 데이터를 수집하는 데 필요한 초기화 검사가 수행됩니다. 이 프로세스는 몇 초 정도 걸릴 수 있습니다. **SQLdiag** 를 콘솔 응용 프로그램으로 실행하는 경우 진단 데이터 수집을 시작하면 **SQLdiag** 에서 수집을 시작했으며 Ctrl+C를 눌러 중지할 수 있음을 알리는 메시지가 표시됩니다. **SQLdiag** 를 서비스로 실행하는 경우 이와 비슷한 메시지가 Windows 이벤트 로그에 기록됩니다.  
+ **SQLdiag** 가 시작되면 SQLDiag.Xml에 지정된 진단 데이터를 수집하는 데 필요한 초기화 검사가 수행됩니다. 이 프로세스는 몇 초 정도 걸릴 수 있습니다. **SQLdiag** 를 콘솔 애플리케이션으로 실행하는 경우 진단 데이터 수집을 시작하면 **SQLdiag** 에서 수집을 시작했으며 Ctrl+C를 눌러 중지할 수 있음을 알리는 메시지가 표시됩니다. **SQLdiag** 를 서비스로 실행하는 경우 이와 비슷한 메시지가 Windows 이벤트 로그에 기록됩니다.  
   
  **SQLdiag** 를 사용하여 재현할 수 있는 문제를 진단하는 경우 이 메시지가 표시된 다음에 서버에서 해당 문제를 재현해야 합니다.  
   
@@ -269,11 +269,11 @@ sqldiag
  **SQLdiag** 가 중지되면 시작했던 모든 진단이 중지됩니다. 예를 들어 수집 중인 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 추적이 중지되고 실행 중인 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트 실행이 중지되며 데이터를 수집하는 동안 발생한 모든 하위 프로세스가 중지됩니다. 진단 데이터 수집이 완료되면 **SQLdiag** 가 종료됩니다.  
   
 > [!NOTE]  
->  **SQLdiag** 서비스를 일시 중지하는 작업은 지원되지 않습니다. **SQLdiag** 서비스를 일시 중지하면 일시 중지했을 때 수집하던 진단 정보의 수집을 완료한 다음 중지됩니다. **SQLdiag** 를 중지한 다음 다시 시작하면 응용 프로그램이 다시 시작되며 출력 폴더가 덮어쓰여집니다. 출력 폴더를 덮어쓰지 않으려면 명령줄에서 **/N 2** 를 지정합니다.  
+>  **SQLdiag** 서비스를 일시 중지하는 작업은 지원되지 않습니다. **SQLdiag** 서비스를 일시 중지하면 일시 중지했을 때 수집하던 진단 정보의 수집을 완료한 다음 중지됩니다. **SQLdiag** 를 중지한 다음 다시 시작하면 애플리케이션이 다시 시작되며 출력 폴더가 덮어쓰여집니다. 출력 폴더를 덮어쓰지 않으려면 명령줄에서 **/N 2** 를 지정합니다.  
   
- **콘솔 응용 프로그램으로 실행하는 SQLdiag를 중지하려면**  
+ **콘솔 애플리케이션으로 실행하는 SQLdiag를 중지하려면**  
   
- **SQLdiag** 를 콘솔 응용 프로그램으로 실행하는 경우 **SQLdiag** 가 실행 중인 콘솔 창에서 Ctrl+C를 눌러 중지할 수 있습니다. Ctrl+C를 누르면 **SQLdiag** 데이터 수집이 종료되며 프로세스가 종료될 때까지 몇 분 정도 기다려야 한다는 메시지가 콘솔 창에 표시됩니다.  
+ **SQLdiag** 를 콘솔 애플리케이션으로 실행하는 경우 **SQLdiag** 가 실행 중인 콘솔 창에서 Ctrl+C를 눌러 중지할 수 있습니다. Ctrl+C를 누르면 **SQLdiag** 데이터 수집이 종료되며 프로세스가 종료될 때까지 몇 분 정도 기다려야 한다는 메시지가 콘솔 창에 표시됩니다.  
   
  Ctrl+C를 두 번 눌러 모든 자식 진단 프로세스를 종료하고 즉시 애플리케이션을 종료합니다.  
   

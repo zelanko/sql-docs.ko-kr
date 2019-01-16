@@ -21,16 +21,16 @@ ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 719e891168fcf6a0ce094d67ec8186c653d00f49
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: b40e9c05d81f7fb868884ab25e0f317804d162e0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529119"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590197"
 ---
 # <a name="dta-utility"></a>dta 유틸리티
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **dta** 유틸리티는 데이터베이스 엔진 튜닝 관리자의 명령 프롬프트 버전입니다. **dta** 유틸리티를 통해 응용 프로그램과 스크립트에서 데이터베이스 엔진 튜닝 관리자의 기능을 사용할 수 있습니다.  
+  **dta** 유틸리티는 데이터베이스 엔진 튜닝 관리자의 명령 프롬프트 버전입니다. **dta** 유틸리티를 통해 애플리케이션과 스크립트에서 데이터베이스 엔진 튜닝 관리자의 기능을 사용할 수 있습니다.  
   
  데이터베이스 엔진 튜닝 관리자와 마찬가지로 **dta** 유틸리티는 작업을 분석하고 이 작업에 대해 서버 성능을 향상시키기 위한 물리적 디자인 구조를 제안합니다. 작업은 계획 캐시, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적 파일이나 테이블 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트일 수 있습니다. 물리적 디자인 구조에는 인덱스, 인덱싱된 뷰 및 분할이 포함됩니다. 작업을 분석한 후 **dta** 유틸리티는 실제 데이터베이스 디자인을 제안하며 이 제안 사항을 구현하는 데 필요한 스크립트를 생성할 수 있습니다. 명령 프롬프트에서 **-if** 또는 **-it** 인수를 사용하여 작업을 지정할 수 있습니다. 또한 명령 프롬프트에서 **-ix** 인수를 사용하여 XML 입력 파일을 지정할 수도 있습니다. 이러한 경우 작업은 XML 입력 파일에서 지정됩니다.  
   
@@ -81,13 +81,13 @@ dta
  **-?**  
  사용법 정보를 표시합니다.  
   
- **-A** *time_for_tuning_in_minutes*  
+ **-A** _time_for_tuning_in_minutes_  
  튜닝 시간 제한(분)을 지정합니다. **dta** 는 지정된 시간 동안 작업을 튜닝하고 제안된 실제 디자인 변경 내용을 사용하여 스크립트를 생성합니다. **dta** 의 기본 튜닝 시간은 8시간입니다. 0을 지정하면 튜닝에 시간 제한이 없습니다. **dta** 는 시간 제한이 만료되기 전에 전체 작업 튜닝을 마칠 수 있습니다. 그러나 전체 작업이 튜닝되도록 하려면 무제한 튜닝 시간(-A 0)을 지정하는 것이 좋습니다.  
   
  **-a**  
  작업을 튜닝한 후 사용자에게 메시지를 표시하지 않고 제안 사항을 적용합니다.  
   
- **-B** *storage_size*  
+ **-B** _storage_size_  
  권장되는 인덱스 및 분할에서 소비할 수 있는 최대 공간(MB)을 지정합니다. 여러 개의 데이터베이스를 튜닝할 경우 모든 데이터베이스에 대한 권장 구성은 공간 계산을 고려하여 처리됩니다. 기본적으로 **dta** 는 다음 스토리지 크기 중 더 작은 크기를 사용합니다.  
   
 -   현재 원시 데이터 크기의 3배이며 데이터베이스의 테이블에 있는 힙과 클러스터형 인덱스의 전체 크기를 포함합니다.  
@@ -96,13 +96,13 @@ dta
   
  기본 스토리지 크기는 비클러스터형 인덱스 및 인덱싱된 뷰를 포함하지 않습니다.  
   
- **-C** *max_columns_in_index*  
+ **-C** _max_columns_in_index_  
  **dta** 에서 제안하는 인덱스의 최대 열 수를 지정합니다. 최대값은 1024입니다. 기본적으로 이 인수는 16으로 설정됩니다.  
   
- **-c** *max_key_columns_in_index*  
+ **-c** _max_key_columns_in_index_  
  **dta** 에서 제안하는 인덱스의 최대 키 열 수를 지정합니다. 기본값은 16이며 허용되는 최대값입니다. **dta** 는 포함된 열을 사용하여 인덱스를 만듭니다. 포함된 열을 사용할 때 권장되는 인덱스는 이 인수에 지정된 열 수를 초과할 수 있습니다.  
   
- **-D** *database_name*  
+ **-D** _database_name_  
  튜닝할 각 데이터베이스의 이름을 지정합니다. 첫 번째 데이터베이스가 기본 데이터베이스입니다. 다음과 같이 데이터베이스 이름을 쉼표로 구분하여 여러 데이터베이스를 지정할 수 있습니다.  
   
 ```  
@@ -129,7 +129,7 @@ dta -D db_name1, db_name2...
 dta -D db_name1, db_name2 -d db_name1  
 ```  
   
- **-d** *database_name*  
+ **-d** _database_name_  
  작업을 튜닝할 때 **dta** 가 연결하는 첫 번째 데이터베이스를 지정합니다. 이 인수에는 데이터베이스를 하나만 지정할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  
@@ -145,7 +145,7 @@ dta -d AdventureWorks2012 ...
  **-E**  
  암호를 요구하지 않고 트러스트된 연결을 사용합니다. 로그인 ID를 지정하는 **-E** 인수 또는 **-U** 인수를 사용해야 합니다.  
   
- **-e** *tuning_log_name*  
+ **-e** _tuning_log_name_  
  **dta** 가 튜닝할 수 없는 이벤트를 기록하는 테이블 또는 파일의 이름을 지정합니다. 이 테이블은 튜닝을 수행하는 서버에 생성됩니다.  
   
  테이블을 사용하는 경우 *[database_name].[owner_name].table_name*형식으로 해당 이름을 지정합니다. 다음 표에서는 각 매개 변수의 기본값을 보여 줍니다.  
@@ -164,8 +164,8 @@ dta -d AdventureWorks2012 ...
  **-F**  
  **dta** 가 기존의 출력 파일을 덮어쓰도록 허용합니다. 이름이 같은 출력 파일이 이미 있을 경우 **-F** 를 지정하지 않으면 **dta**는 오류를 반환합니다. **-of** , **-or**또는 **-ox**와 함께 **-F**를 사용할 수 있습니다.  
   
- **-fa** *physical_design_structures_to_add*  
- **dta** 가 권장 구성에 포함해야 할 실제 디자인 구조 유형을 지정합니다. 다음 표에서는 이 인수에 지정할 수 있는 값을 나열하고 설명합니다. 값을 지정하지 않으면 **dta** 는 기본적으로 **-fa****IDX**를 사용합니다.  
+ **-fa** _physical_design_structures_to_add_  
+ **dta** 가 권장 구성에 포함해야 할 실제 디자인 구조 유형을 지정합니다. 다음 표에서는 이 인수에 지정할 수 있는 값을 나열하고 설명합니다. 값을 지정하지 않으면 **dta**는 기본적으로 **-fa IDX**를 사용합니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -185,7 +185,7 @@ dta -d AdventureWorks2012 ...
 |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|  
 
   
- **-fk** *keep_existing_option*  
+ **-fk** _keep_existing_option_  
  권장 구성을 생성할 때 **dta** 가 유지해야 할 기존의 실제 디자인 구조를 지정합니다. 다음 표에서는 이 인수에 지정할 수 있는 값을 나열하고 설명합니다.  
   
 |값|설명|  
@@ -196,7 +196,7 @@ dta -d AdventureWorks2012 ...
 |CL_IDX|테이블에 있는 모든 클러스터형 인덱스|  
 |IDX|테이블에 있는 모든 클러스터형 및 비클러스터형 인덱스|  
   
- **-fp** *partitioning_strategy*  
+ **-fp** _partitioning_strategy_  
  **dta** 가 제안하는 새 실제 디자인 구조(인덱스 및 인덱싱된 뷰)를 분할할 것인지 여부와 분할 방법을 지정합니다. 다음 표에서는 이 인수에 지정할 수 있는 값을 나열하고 설명합니다.  
   
 |값|설명|  
@@ -205,12 +205,12 @@ dta -d AdventureWorks2012 ...
 |FULL|전체 분할(성능 향상 중심)|  
 |ALIGNED|정렬된 분할만(관리 효율성 향상 중심)|  
   
- ALIGNED는 **dta** 로 생성된 권장 구성에서 제안된 모든 인덱스가 이 인덱스를 정의한 기본 테이블과 정확히 같은 방식으로 분할됨을 의미합니다. 인덱싱된 뷰의 비클러스터형 인덱스는 인덱싱된 뷰에 정렬됩니다. 이 인수에는 값을 하나만 지정할 수 있습니다. 기본값은 **-fp****NONE**입니다.  
+ ALIGNED는 **dta** 로 생성된 권장 구성에서 제안된 모든 인덱스가 이 인덱스를 정의한 기본 테이블과 정확히 같은 방식으로 분할됨을 의미합니다. 인덱싱된 뷰의 비클러스터형 인덱스는 인덱싱된 뷰에 정렬됩니다. 이 인수에는 값을 하나만 지정할 수 있습니다. 기본값은 **-fp NONE**입니다.  
   
- **-fx** *drop_only_mode*  
+ **-fx** _drop_only_mode_  
  **dta** 에서 기존의 실제 디자인 구조의 삭제만 고려할 것인지 지정합니다. 새 물리적 디자인 구조는 고려되지 않습니다. 이 옵션을 지정하면 **dta** 는 기존 물리적 디자인 구조의 유용성을 평가하고 거의 사용하지 않는 구조를 삭제할 것을 권장합니다. 이 인수에는 값이 없습니다. 이 인수는 **-fa**, **-fp**또는 **-fk ALL** 인수와 함께 사용할 수 없습니다.  
   
- **-ID** *session_ID*  
+ **-ID** _session_ID_  
  튜닝 세션에 대한 숫자 식별자를 지정합니다. 이 옵션을 지정하지 않으면 **dta** 는 ID 번호를 생성합니다. 이 식별자를 사용하여 기존 튜닝 세션에 대한 정보를 볼 수 있습니다. **-ID**값을 지정하지 않을 경우 **-s**를 사용하여 세션 이름을 지정해야 합니다.  
   
  **-ip**  
@@ -223,11 +223,11 @@ dta -d AdventureWorks2012 ...
 |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|  
      
   
- **-if** *workload_file*  
+ **-if** _workload_file_  
  튜닝을 위한 입력으로 사용할 작업 파일의 경로와 이름을 지정합니다. 파일은 .trc(SQL Server Profiler 추적 파일), .sql(SQL 파일) 또는 .log([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 추적 파일) 형식 중 하나여야 합니다. 작업 파일 또는 작업 테이블을 하나 지정해야 합니다.  
   
- **-it** *workload_trace_table_name*  
- 튜닝을 위한 작업 추적을 포함하는 테이블의 이름을 지정합니다. 이름은 [*database_name*]**.**[*owner_name*]**.***table_name* 형식으로 지정됩니다.  
+ **-it** _workload_trace_table_name_  
+ 튜닝을 위한 작업 추적을 포함하는 테이블의 이름을 지정합니다. 이름은 [*database_name*]**.**[*owner_name*]**.**_table_name_ 형식으로 지정됩니다.  
   
  다음 표에서는 각 매개 변수의 기본값을 보여 줍니다.  
   
@@ -240,13 +240,13 @@ dta -d AdventureWorks2012 ...
 > [!NOTE]  
 >  *owner_name*은 **dbo**여야 합니다. 다른 값을 지정하면 **dta** 가 실행되지 않고 오류가 반환됩니다. 작업 파일 또는 작업 테이블 하나를 지정해야 합니다.  
   
- **-ix** *input_XML_file_name*  
+ **-ix** _input_XML_file_name_  
  **dta** 입력 정보가 포함된 XML 파일의 이름을 지정합니다. 이 파일은 DTASchema.xsd를 준수하는 유효한 XML 문서여야 합니다. 명령 프롬프트에서 튜닝 옵션에 대해 지정한 인수와 충돌하면 이 XML 파일의 해당 값보다 우선 적용됩니다. 단, 사용자 지정 구성을 XML 입력 파일에 평가 모드로 입력할 경우는 예외입니다. 예를 들어 XML 입력 파일의 **Configuration** 요소에 구성을 입력하고 튜닝 옵션 중 하나로 **EvaluateConfiguration** 요소를 지정한 경우 XML 입력 파일에서 지정한 튜닝 옵션은 명령 프롬프트에서 입력한 튜닝 옵션보다 우선 적용됩니다.  
   
- **-m** *minimum_improvement*  
+ **-m** _minimum_improvement_  
  권장 구성이 만족시켜야 할 최소 향상률을 지정합니다.  
   
- **-N** *online_option*  
+ **-N** _online_option_  
  물리적 디자인 구조를 온라인으로 만들 것인지 여부를 지정합니다. 다음 표에서는 이 인수에 지정할 수 있는 값을 나열하고 설명합니다.  
   
 |값|설명|  
@@ -257,7 +257,7 @@ dta -d AdventureWorks2012 ...
   
  인덱스를 온라인으로 만드는 경우 개체 정의에 ONLINE = ON이 추가됩니다.  
   
- **-n** *number_of_events*  
+ **-n** _number_of_events_  
  **dta** 가 튜닝해야 할 작업의 이벤트 수를 지정합니다. 이 인수를 지정한 경우 작업이 기간 정보가 포함된 추적 파일이면 **dta** 는 기간의 내림차순으로 이벤트를 튜닝합니다. 이 인수는 물리적 디자인 구조의 두 구성을 비교할 때 유용합니다. 두 구성을 비교하려면 다음과 같이 두 구성에 대해 튜닝할 이벤트 수를 같은 값으로 지정하고 무제한 튜닝 시간을 지정합니다.  
   
 ```  
@@ -266,7 +266,7 @@ dta -n number_of_events -A 0
   
  이러한 경우 반드시 무제한 튜닝 시간(`-A 0`)을 지정해야 합니다. 그렇지 않으면 기본적으로 데이터베이스 엔진 튜닝 관리자에서 튜닝 시간으로 8시간을 적용합니다.
  
- **-I** *time_window_in_hours*   
+ **-I** _time_window_in_hours_   
    기간 (시간)을 지정 하면 쿼리 실행 사용 하는 경우 튜닝에 대 한 DTA로 간주 되기 위해 **-iq** 옵션 (쿼리 저장소의 작업). 
 ```  
 dta -iq -I 48  
@@ -278,28 +278,28 @@ dta -iq -I 48
 
 
   
- **-or** *output_script_file_name*  
+ **-or** _output_script_file_name_  
  **dta** 가 권장 구성을 지정된 파일 이름 및 대상에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트로 쓰도록 지정합니다.  
   
  이 옵션과 함께 **-F**를 사용할 수 있습니다. 파일 이름이 고유한지 확인합니다. 특히 **-or** 및 **-ox**를 함께 사용하는 경우 고유한 파일 이름이어야 합니다.  
   
- **-ox** *output_xml_report_file_name*  
+ **-or** _output_xml_report_file_name_  
  **dta** 가 권장 구성을 XML 형식의 출력 보고서로 쓰도록 지정합니다. 파일 이름을 제공한 경우 권장 구성이 해당 대상에 기록됩니다. 그렇지 않으면 **dta** 는 세션 이름을 사용하여 파일 이름을 생성하고 현재 디렉터리에 씁니다.  
   
  이 옵션과 함께 **-F** 를 사용할 수 있습니다. 파일 이름이 고유한지 확인합니다. 특히 **-of** 및 **-ox**를 함께 사용하는 경우 고유한 파일 이름이어야 합니다.  
   
- **-F** *output_XML_file_name*  
+ **-ox** _output_XML_file_name_  
  **dta** 가 권장 구성을 제공된 파일 이름 및 대상에 XML 파일로 쓰도록 지정합니다. 데이터베이스 엔진 튜닝 관리자에서 대상 디렉터리에 쓸 수 있는 권한이 있는지 확인합니다.  
   
  이 옵션과 함께 **-F** 를 사용할 수 있습니다. 파일 이름이 고유한지 확인합니다. 특히 **-of** 및 **-or**을 함께 사용하는 경우 고유한 파일 이름이어야 합니다.  
   
- **-P** *password*  
+ **-P** _password_  
  로그인 ID의 암호를 지정합니다. 이 옵션을 사용하지 않으면 **dta** 가 암호를 묻는 메시지를 표시합니다.  
   
  **-q**  
  자동 모드를 설정합니다. 진행률 및 머리글 정보를 포함하여 어떤 정보도 콘솔에 표시되지 않습니다.  
   
- **-rl** *analysis_report_list*  
+ **-rl** _analysis_report_list_  
  생성할 분석 보고서의 목록을 지정합니다. 다음 표에서는 이 인수에 지정할 수 있는 값을 나열합니다.  
   
 |값|보고서|  
@@ -327,13 +327,13 @@ dta -iq -I 48
 ... -rl EVT_FREQ, VIW_TAB, WKLD_ANL ...  
 ```  
   
- **-S** *server_name*[ *\instance*]  
+ **-S** _server_name_[ *\instance*]  
  연결할 컴퓨터 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정합니다. *server_name* 을 지정하지 않으면 **dta** 가 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 명명된 인스턴스에 연결할 때 또는 네트워크의 원격 컴퓨터에서 **dta** 를 실행할 때 이 옵션을 지정해야 합니다.  
   
- **-s** *session_name*  
+ **-s** _session_name_  
  튜닝 세션 이름을 지정합니다. **-ID** 를 지정하지 않는 경우 이 인수를 반드시 지정해야 합니다.  
   
- **-Tf** *table_list_file*  
+ **-Tf** _table_list_file_  
  튜닝할 테이블 목록이 들어 있는 파일의 이름을 지정합니다. 파일 내에 표시된 각 테이블은 새 줄로 시작해야 합니다. 테이블 이름은 **AdventureWorks2012.HumanResources.Department**와 같이 세 부분으로 이루어진 정규화된 이름이어야 합니다. 또한 테이블 배율 기능을 호출하려면 기존 테이블 이름 뒤에 테이블의 예상 행 수를 나타내는 숫자를 붙일 수 있습니다. 데이터베이스 엔진 튜닝 관리자에서는 이 테이블을 참조하는 작업에서 문을 튜닝하거나 평가하는 동안 예상 행 수를 고려합니다. *number_of_rows* 개수와 *table_name*사이에 하나 이상의 공백이 있을 수 있습니다.  
   
  다음은 *table_list_file*의 파일 형식입니다.  
@@ -348,12 +348,12 @@ dta -iq -I 48
   
  **-Tf** 및 **-Tl** 인수를 둘 다 생략하면 지정한 데이터베이스의 모든 사용자 테이블이 튜닝 대상으로 고려됩니다.  
   
- **-Tl** *table_list*  
+ **-Tl** _table_list_  
  명령 프롬프트에서 튜닝할 테이블 목록을 지정합니다. 테이블 이름은 쉼표를 입력하여 구분합니다. **-D** 인수로 데이터베이스를 하나만 지정하는 경우 데이터베이스 이름으로 테이블 이름을 정규화할 필요가 없습니다. 그렇지 않고 여러 데이터베이스를 지정하는 경우에는 각 테이블에 *database_name.schema_name.table_name* 형식으로 정규화된 이름을 사용해야 합니다.  
   
  이 인수는 테이블 목록 파일(**-Tf**) 대신 사용할 수 있습니다. **-Tl** 및 **-Tf** 를 모두 사용하면 **dta** 가 실패하고 오류가 반환됩니다.  
   
- **-U** *login_id*  
+ **-U** _login_id_  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]연결에 사용하는 로그인 ID를 지정합니다.  
   
  **-u**  

@@ -28,20 +28,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fbda7d318e797bb5336534cf380089d3bc5b7d38
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: bdea0473176e08c51931f1bb192462c5c45ee514
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712724"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143693"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > SQL Server 2014 및 하위 [sqlcmd 유틸리티](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
-)합니다.
-
- > Sqlcmd를 사용 하 여 linux에 대해서 [Linux에서 sqlcmd 및 bcp 설치](../linux/sql-server-linux-setup-tools.md)합니다.
+> SQL Server 2014 및 하위 [sqlcmd 유틸리티](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
+> )합니다.
+> 
+> Sqlcmd를 사용 하 여 linux에 대해서 [Linux에서 sqlcmd 및 bcp 설치](../linux/sql-server-linux-setup-tools.md)합니다.
 
  합니다 **sqlcmd** 유틸리티를 사용 하면 TRANSACT-SQL 문, 시스템 프로시저 및 다양 한 사용 가능한 모드를 통해 스크립트 파일을 입력 합니다.
 
@@ -54,8 +54,8 @@ ms.locfileid: "52712724"
 
 ## <a name="download-the-latest-version-of-sqlcmd-utility"></a>Sqlcmd 유틸리티의 최신 버전 다운로드
 
-**[![다운로드](../ssdt/media/download.png) Microsoft 명령줄 유틸리티 다운로드 15.0.x for SQL Server (x64) (2.4 MB)](https://go.microsoft.com/fwlink/?linkid=2043518)**
-<br>**[![다운로드](../ssdt/media/download.png) Microsoft 명령줄 유틸리티 다운로드 15.0.x SQL 서버 (x86) (2.2MB)에 대 한](https://go.microsoft.com/fwlink/?linkid=2043622)**
+**[![다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15.0.x(x64) 다운로드(2.4MB)](https://go.microsoft.com/fwlink/?linkid=2043518)**
+<br>**[![다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15.0.x(x86) 다운로드(2.2MB)](https://go.microsoft.com/fwlink/?linkid=2043622)**
 
 하지만 명령줄 도구는 일반 가용성 (GA)에 대 한 설치 관리자 패키지를 사용 하 여 릴리스되기 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]합니다.
 
@@ -63,7 +63,7 @@ ms.locfileid: "52712724"
 
 릴리스 번호: 15.0 <br>
 빌드 번호: 15.0.1000.34<br>
-릴리스 날짜: 2018 년 10 월 18 일
+릴리스 날짜 2018 년 10 월 18 일
 
 새 버전의 SQLCMD에 SQL Database, SQL Data Warehouse 및 상시 암호화 기능에 대 한 Multi-factor Authentication (MFA) 지원을 비롯 하 여 Azure AD 인증을 지원 합니다.
 새 BCP는 SQL Database 및 SQL Data Warehouse에 대 한 Multi-factor Authentication (MFA) 지원을 비롯 하 여 Azure AD 인증을 지원 합니다.
@@ -77,7 +77,7 @@ SQLCMD 버전 실행을 확인 하려면 `sqlcmd -?` 명령 및 해당 15.0.1000
 > [!NOTE]
 > 버전 13.1 이상이 상시 암호화를 지원 해야 (`-g`) 및 Azure Active Directory 인증 (`-G`). (컴퓨터에 설치된 sqlcmd.exe 버전이 여러 개일 수 있습니다. 올바른 버전을 사용해야 합니다. 버전을 확인하려면 `sqlcmd -?`를 실행하세요.)
 
-기본적으로 미리 설치 하는 대로 Azure Cloud Shell에서 sqlcmd 유틸리티를 시도할 수 있습니다: [ ![Cloud Shell 시작](https://shell.azure.com/images/launchcloudshell.png "Cloud Shell 시작")](https://shell.azure.com)
+기본적으로 미리 설치 하는 대로 Azure Cloud Shell에서 sqlcmd 유틸리티를 시도할 수 있습니다. [![Cloud Shell을 시작](https://shell.azure.com/images/launchcloudshell.png "Cloud Shell 시작")](https://shell.azure.com)
 
   SSMS에서 sqlcmd 문을 실행하려면 위쪽 탐색 쿼리 메뉴 드롭다운에서 SQLCMD 모드를 선택합니다.  
   
@@ -151,10 +151,10 @@ sqlcmd
  **-C**  
  이 스위치는 클라이언트에서 유효성 검사 없이 암시적으로 서버 인증서를 신뢰하는 데 사용됩니다. 이 옵션은 ADO.NET 옵션 `TRUSTSERVERCERTIFICATE = true`와 동일합니다.  
   
- **-d** *db_name*  
+ **-d** _db_name_  
  **sqlcmd**를 시작할 때 `USE` *db_name* 문을 실행합니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDDBNAME을 설정합니다. 이 매개 변수는 초기 데이터베이스를 지정합니다. 기본값은 사용자 로그인의 기본 데이터베이스 속성입니다. 데이터베이스가 없을 경우 오류 메시지가 생성되고 **sqlcmd** 가 종료됩니다.  
   
- **-l** *login_timeout*  
+ **-l** _login_timeout_  
  서버에 연결을 시도할 때 ODBC 드라이버에 대한 **sqlcmd** 로그인 시간 제한(초)을 지정합니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDLOGINTIMEOUT을 설정합니다. 기본 **sqlcmd** 로그인 제한 시간은 8초입니다. **-G** 옵션을 사용하여 SQL 데이터베이스 또는 SQL 데이터 웨어하우스에 연결하고 Azure Active Directory를 사용하여 인증하는 경우 최소 30초의 시간 제한 값이 권장됩니다. 로그인 제한 시간은 0에서 65534 사이의 숫자여야 합니다. 입력한 값이 숫자가 아니거나 이 범위에 속하지 않을 경우 **sqlcmd** 는 오류 메시지를 생성합니다. 값을 0으로 설정하면 제한 시간이 없습니다.
   
  **-E**  
@@ -212,7 +212,7 @@ sqlcmd
 
    대화형 인증을 사용 하려면 사용자 이름의-G 옵션 제공 (-U) 암호 없이 합니다.
 
-   다음 예제에서는 사용자의 AAD 계정을 나타냅니다 있는 사용자를 나타내는 Azure AD 대화형 모드 사용 하 여 데이터를 내보냅니다. 이 이전 섹션에 사용 된 동일한 예제: *Azure Active Directory 사용자 이름 및 암호*합니다.  
+   다음 예제에서는 사용자의 AAD 계정을 나타냅니다 있는 사용자를 나타내는 Azure AD 대화형 모드 사용 하 여 데이터를 내보냅니다. 다음은 이전 섹션에 사용 된 동일한 예제입니다. *Azure Active Directory 사용자 이름 및 암호:*  
 
    대화형 모드에 수동으로 입력 하는 데 암호 필요 하거나 다단계 인증을 사용 하는 계정에 구성 된 MFA 인증 메서드를 완료 합니다.
 
@@ -238,22 +238,22 @@ sqlcmd
   >사용 하는 경우 알려진된 문제가 없는 합니다 `-G` 및 `-U` SQLCMD 사용 하 여 옵션 배치 하는 경우를 `-U` 전에 옵션를 `-G` 옵션 인증이 실패 발생할 수 있습니다. 항상 시작 합니다 `-G` 옵션 뒤에 `-U` 옵션입니다.
 
     
- **-H** *workstation_name*  
+ **-H** _workstation_name_  
  워크스테이션 이름입니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDWORKSTATION을 설정합니다. 워크스테이션 이름은 **sys.sysprocesses** 카탈로그 뷰의 **hostname** 열에 나열되거나 **sp_who**저장 프로시저를 사용하여 반환할 수 있습니다. 이 옵션을 지정하지 않으면 기본적으로 현재 컴퓨터 이름이 사용됩니다. 이 이름을 사용하여 다른 **sqlcmd** 세션을 식별할 수 있습니다  
 
 
 **-j** 화면에 원시 오류 메시지를 출력합니다.
   
- **-K** *application_intent*  
- 서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 현재 **ReadOnly**값만 지원됩니다. **-K** 를 지정하지 않으면 sqlcmd 유틸리티가 Always On 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [활성 보조: 읽기 가능한 보조 복제본(Always On 가용성 그룹)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
+ **-K** _application_intent_  
+ 서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 현재 **ReadOnly**값만 지원됩니다. **-K** 를 지정하지 않으면 sqlcmd 유틸리티가 Always On 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [활성 보조 복제본: 읽기 가능한 보조 복제본(Always On 가용성 그룹)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
   
-**-M** *multisubnet_failover*  
- SQL Server 가용성 그룹 또는 SQL Server 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **-M**을 지정합니다. **-M** 은 현재 활성 상태인 서버를 빠르게 검색하여 연결할 수 있도록 제공합니다. **–M**이 지정되지 않으면 **-M** 이 해제되어 있습니다. [수신기, 클라이언트 연결 및 애플리케이션 장애 조치(Failover)](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)에 대한 자세한 내용은 [가용성 그룹의 생성 및 구성 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [장애 조치(Failover) 클러스터링 및 Always On 가용성 그룹(SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx) 및 [활성 보조: 읽기 가능한 보조 복제본(Always On 가용성 그룹)](https://msdn.microsoft.com/library/ff878253.aspx)을 참조하세요. 
+**-M** _multisubnet_failover_  
+ SQL Server 가용성 그룹 또는 SQL Server 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **-M**을 지정합니다. **-M** 은 현재 활성 상태인 서버를 빠르게 검색하여 연결할 수 있도록 제공합니다. **–M**이 지정되지 않으면 **-M** 이 해제되어 있습니다. [수신기, 클라이언트 연결 및 애플리케이션 장애 조치(Failover)](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)에 대한 자세한 내용은 [가용성 그룹의 생성 및 구성 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [장애 조치(Failover) 클러스터링 및 Always On 가용성 그룹(SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx) 및 [활성 보조 복제본: 읽기 가능한 보조 복제본(Always On 가용성 그룹)](https://msdn.microsoft.com/library/ff878253.aspx)을 참조하세요. 
   
  **-N**  
  이 스위치는 클라이언트에서 암호화된 연결을 요청하는 데 사용됩니다.  
   
- **-P** *password*  
+ **-P** _password_  
  사용자가 지정하는 암호입니다. 암호는 대소문자를 구분합니다. -U 옵션을 사용하고 **-P** 옵션을 사용하지 않으며 SQLCMDPASSWORD 환경 변수를 설정하지 않을 경우 **sqlcmd** 는 암호를 묻는 메시지를 표시합니다. Null 암호를 사용 권장 하지는 않습니다 하지만 매개 변수 값에 대 한 연속 큰따옴표 쌍을 사용 하 여 null 암호를 지정할 수 있습니다.
 
 - **-P ""**
@@ -284,7 +284,7 @@ sqlcmd
   
  **-P** 옵션 다음에 둘 이상의 인수를 지정하면 오류 메시지가 생성되고 프로그램이 종료됩니다.  
   
- **-S** [*프로토콜*:]*server*[**\\**_인스턴스\_이름_] [**,**  _포트_]  
+ **-S** [*protocol*:]*server*[**\\**_instance\_name_][**,**_port_]  
  연결할 SQL Server 인스턴스를 지정합니다. **sqlcmd** 스크립팅 변수 SQLCMDSERVER를 설정합니다.  
   
  해당 서버 컴퓨터에 있는 기본 SQL Server 인스턴스에 연결하려면 *server_name*을 지정합니다. 해당 서버 컴퓨터에 있는 명명된 SQL Server 인스턴스에 연결하려면 *server_name* [ **\\**_instance\_name_ ]을 지정합니다. 서버 컴퓨터를 지정하지 않으면 **sqlcmd** 가 로컬 컴퓨터에 있는 기본 SQL Server 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터에서 **sqlcmd** 를 실행할 경우에는 이 옵션을 지정해야 합니다.  
@@ -296,7 +296,7 @@ sqlcmd
 > [!NOTE]  
 >  OSQLSERVER 환경 변수는 이전 버전과의 호환성을 위해 유지되었습니다. SQLCMDSERVER 환경 변수는 OSQLSERVER 환경 변수보다 우선 적용됩니다. 따라서 **sqlcmd** 와 **osql** 을 문제 없이 함께 사용할 수 있으며 이전 스크립트를 계속 사용할 수 있습니다.  
   
- **-U** *login_id*  
+ **-U** _login_id_  
  로그인 이름 또는 포함된 데이터베이스 사용자 이름입니다. 포함된 데이터베이스 사용자의 경우 데이터베이스 이름 옵션(-d)을 제공해야 합니다.  
   
 > [!NOTE]  
@@ -306,18 +306,18 @@ sqlcmd
   
  이 항목의 뒷부분에 설명되어 있는 **-E** 옵션과 함께 **-U** 옵션을 사용하면 오류 메시지가 생성됩니다. **–U** 옵션 다음에 둘 이상의 인수를 지정하면 오류 메시지가 생성되고 프로그램이 종료됩니다.  
   
- **-z** *new_password*  
+ **-z** _new_password_  
  암호를 변경합니다.  
   
  `sqlcmd -U someuser -P s0mep@ssword -z a_new_p@a$$w0rd`  
   
- **-Z** *new_password*  
+ **-Z** _new_password_  
  암호 변경 후 종료합니다.  
   
  `sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd`  
   
  **입/출력 옵션**  
-  **-f** *codepage* | **i:**_codepage_[**,o:**_codepage_] | **o:**_codepage_[**,i:**_codepage_]  
+  **-f** _codepage_ | **i:**_codepage_[**,o:**_codepage_] | **o:**_codepage_[**,i:**_codepage_]  
  입력 및 출력 코드 페이지를 지정합니다. 코드 페이지 번호는 설치된 Windows 코드 페이지를 지정하는 숫자 값입니다.  
   
  코드 페이지 변환 규칙은 다음과 같습니다.  
@@ -332,7 +332,7 @@ sqlcmd
   
  명령 프롬프트에서 **chcp** 를 입력하여 Cmd.exe의 코드 페이지를 확인합니다.  
   
- **-i** *input_file*[**하십시오**_입력\_file2_...]  
+ **-i** _input_file_[**,**_input\_file2_...]  
  SQL 문 또는 저장 프로시저의 일괄 처리가 포함된 파일을 나타냅니다. 순서대로 읽고 처리할 파일을 여러 개 지정할 수 있습니다. 파일 이름 사이에 공백을 넣지 마십시오. 먼저**sqlcmd** 는 지정한 모든 파일이 있는지 확인합니다. 하나 이상의 파일이 없을 경우 **sqlcmd** 가 종료됩니다. -i 옵션과 -Q/-q 옵션은 함께 사용할 수 없습니다.  
   
  경로 예는 다음과 같습니다.  
@@ -347,7 +347,7 @@ sqlcmd
   
  이 옵션은 두 번 이상 사용할 수 있습니다. **-i**_input\_file_ **-I**_I input_file._  
   
- **-o** *output_file*  
+ **-o** _output_file_  
  **sqlcmd**에서 출력을 받는 파일을 식별합니다.  
   
  **-u** 를 지정하면 *output_file* 이 유니코드 형식으로 저장됩니다. 파일 이름이 잘못된 경우 오류 메시지가 생성되고 **sqlcmd** 가 종료됩니다. **sqlcmd** 는 여러 **sqlcmd** 프로세스를 같은 파일에 동시에 쓸 수 없습니다. 이 경우 파일 출력이 손상되거나 제대로 수행되지 않습니다. 참조 된 **-f** 스위치와 관련 된 파일 형식 이기도 합니다. 이 파일은 없는 경우 생성됩니다. 이전 **sqlcmd** 세션에서와 이름이 같은 파일은 덮어쓰여집니다. 여기에 지정된 파일은 **stdout** 파일이 아닙니다. **stdout** 파일이 지정된 경우에는 이 파일이 사용되지 않습니다.  
@@ -377,7 +377,7 @@ sqlcmd
  **-I**  
  SET QUOTED_IDENTIFIER 연결 옵션을 ON으로 설정합니다. 기본적으로 OFF로 설정되어 있습니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](~/t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
   
- **-q "** *cmdline query* **"**  
+ **-q "** _cmdline query_ **"**  
  **sqlcmd** 가 시작될 때 쿼리를 실행하지만 쿼리 실행이 완료되더라도 **sqlcmd** 가 종료되지는 않습니다. 세미콜론으로 구분된 여러 쿼리를 실행할 수 있습니다. 다음 예와 같이 쿼리를 따옴표로 묶습니다.  
   
  명령 프롬프트에서 다음을 입력합니다.  
@@ -391,7 +391,7 @@ sqlcmd
   
  이 옵션과 함께 **-b** 를 지정하면 오류가 발생하여 **sqlcmd** 가 종료됩니다. **-b**에 대해서는 이 문서의 뒷부분에서 설명합니다.  
   
- **-Q "** *cmdline query* **"**  
+ **-Q "** _cmdline query_ **"**  
  **sqlcmd** 가 시작될 때 쿼리를 실행한 다음 바로 **sqlcmd**를 종료합니다. 세미콜론으로 구분된 여러 쿼리를 실행할 수 있습니다.  
   
  다음 예와 같이 쿼리를 따옴표로 묶습니다.  
@@ -407,13 +407,13 @@ sqlcmd
   
  이 옵션과 함께 **-b** 를 지정하면 오류가 발생하여 **sqlcmd** 가 종료됩니다. **-b**에 대해서는 이 문서의 뒷부분에서 설명합니다.  
   
- **-t** *query_timeout*  
+ **-t** _query_timeout_  
  명령 또는 SQL 문 제한 시간(초)을 지정합니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDSTATTIMEOUT을 설정합니다. *time_out* 값을 지정하지 않으면 명령이 무기한 실행됩니다. *query**time_out*은 1에서 65534 사이의 숫자여야 합니다. 입력한 값이 숫자가 아니거나 이 범위에 속하지 않을 경우 **sqlcmd** 는 오류 메시지를 생성합니다.  
   
 > [!NOTE]  
 >  실제 제한 시간 값은 지정한 *time_out* 값과 몇 초 정도 차이가 날 수 있습니다.  
   
- **-vvar =**  *value*[ **var =** *value*...]  
+ **-vvar =**  _value_[ **var =** _value_...]  
  **sqlcmd**스크립트에서 사용할 수 있는 **sqlcmd** 스크립팅 변수를 만듭니다. 공백이 포함된 값은 따옴표로 묶습니다. 여러 _**var**_=**"**_values_**"** 값을 지정할 수 있습니다. 지정한 값에 오류가 있을 경우 **sqlcmd** 는 오류 메시지를 생성하고 종료됩니다.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
@@ -424,22 +424,22 @@ sqlcmd
  **sqlcmd** 에서 스크립팅 변수를 무시하도록 합니다. 이 매개 변수는 $(*variable_name*) 등의 일반 변수와 형식이 같은 문자열이 포함되어 있을 수 있는 INSERT 문이 스크립트에 많이 포함된 경우에 유용합니다.  
   
  **형식 지정 옵션**  
-  **-h** *headers*  
+  **-h** _headers_  
  열 머리글 사이에 출력할 행의 수를 지정합니다. 기본적으로 각 쿼리 결과 집합마다 머리글을 한 번 출력합니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDHEADERS를 설정합니다. 머리글을 출력하지 않으려면 **-1**을 사용합니다. 잘못된 값을 지정할 경우 **sqlcmd** 는 오류 메시지를 생성하고 종료됩니다.  
   
  **-k** [**1** | **2**]  
  출력에서 탭이나 줄 바꿈 문자와 같은 모든 제어 문자를 제거합니다. 이 매개 변수는 데이터를 반환할 때 열 서식은 유지됩니다. 1을 지정하면 제어 문자가 단일 공백으로 바뀝니다. 2를 지정하면 연속된 제어 문자가 단일 공백으로 바뀝니다. **-k** 는 **-k1**과 같습니다.  
   
- **-s** *col_separator*  
+ **-s** _col_separator_  
  열 구분 기호 문자를 지정합니다. 기본값은 공백입니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDCOLSEP를 설정합니다. 앰퍼샌드(&)나 세미콜론(;)과 같이 운영 체제에서 특별한 의미를 갖는 문자를 사용하려면 해당 문자를 따옴표(")로 묶습니다. 열 구분 기호로 임의의 8비트 문자를 사용할 수 있습니다.  
   
- **-w** *column_width*  
+ **-w** _column_width_  
  출력할 화면 너비를 지정합니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDCOLWIDTH를 설정합니다. 열 너비는 8보다 크고 65536보다 작은 숫자여야 합니다. 지정한 열 너비가 이 범위에 속하지 않을 경우 **sqlcmd**는 오류 메시지를 생성합니다. 기본 너비는 80자입니다. 출력 줄이 지정한 열 너비를 초과하면 다음 줄로 넘어갑니다.  
   
  **-W**  
  이 옵션은 열에서 후행 공백을 제거합니다. 다른 애플리케이션으로 내보낼 데이터를 준비하는 경우 **-s** 옵션과 함께 이 옵션을 사용합니다. **-y** 또는 **-Y** 옵션과 함께 사용할 수 없습니다.  
   
- **-y** *variable_length_type_display_width*  
+ **-y** _variable_length_type_display_width_  
  **sqlcmd** 스크립팅 변수 `SQLCMDMAXVARTYPEWIDTH`를 설정합니다. 기본값은 256입니다. 다음과 같은 큰 가변 길이 데이터 형식에 대해 반환되는 문자 수를 제한합니다.  
   
 -   **varchar(max)**  
@@ -465,18 +465,18 @@ sqlcmd
 > [!IMPORTANT]  
 >  **-y 0** 옵션은 반환되는 데이터 크기에 따라 서버와 네트워크 모두에서 심각한 성능 문제를 일으킬 수 있으므로 사용 시 매우 주의해야 합니다.  
   
- **-Y** *fixed_length_type_display_width*  
+ **-Y** _fixed_length_type_display_width_  
  **sqlcmd** 스크립팅 변수 `SQLCMDMAXFIXEDTYPEWIDTH`를 설정합니다. 기본값은 0(무제한)입니다. 다음 데이터 형식에 대해 반환되는 문자 수를 제한합니다.  
   
--   **char(** *n* **)**, 여기서 1<=n<=8000  
+-   **char(** _n_ **)**, 여기서 1<=n<=8000  
   
--   **nchar(n** *n* **)**, 여기서 1<=n<=4000  
+-   **nchar(n** _n_ **)**, 여기서 1<=n<=4000  
   
--   **varchar(n** *n* **)**, 여기서 1<=n<=8000  
+-   **varchar(n** _n_ **)**, 여기서 1<=n<=8000  
   
--   **nvarchar(n** *n* **)**, 여기서 1<=n<=4000  
+-   **nvarchar(n** _n_ **)**, 여기서 1<=n<=4000  
   
--   **varbinary(n** *n* **)**, 여기서 1<=n\<=4000  
+-   **varbinary(n** _n_ **)**, 여기서 1<=n\<=4000  
   
 -   **variant**  
   
@@ -486,19 +486,19 @@ sqlcmd
   
  **sqlcmd** 스크립트에 잘못된 설명 또는 구문 오류가 포함되었거나 스크립팅 변수가 없을 경우 반환되는 ERRORLEVEL은 1입니다.  
   
- **-m** *error_level*  
+ **-m** _error_level_  
  **stdout**에 보낼 오류 메시지를 제어합니다. 심각도가 이 수준보다 크거나 같은 메시지는 보내집니다. 이 값을 **1**로 설정하면 정보 메시지를 포함한 모든 메시지가 보내집니다. **-m** 과 **-1**사이에는 공백이 있으면 안 됩니다. 예를 들어 **-m-1** 은 유효하고 **-m-1** 은 유효하지 않습니다.  
   
  이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDERRORLEVEL도 설정합니다. 이 변수의 기본값은 0입니다.  
   
- **-b** *error_severity_level*  
+ **-V** _error_severity_level_  
  ERRORLEVEL 변수를 설정하는 데 사용되는 심각도를 제어합니다. 심각도가 이 값보다 크거나 같은 오류 메시지는 ERRORLEVEL을 설정합니다. 0보다 작은 값은 0으로 보고됩니다. 배치 파일 및 CMD 파일은 ERRORLEVEL 변수의 값을 테스트하는 데 사용할 수 있습니다.  
   
  **기타 옵션**  
-  **-a** *packet_size*  
+  **-a** _packet_size_  
  다른 크기의 패킷을 요청합니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDPACKETSIZE를 설정합니다. *packet_size* 는 512에서 32767 사이의 값이어야 합니다. 기본값은 4096입니다. GO 명령 사이에 SQL 문 수가 많은 스크립트를 실행할 때는 패킷 크기가 클수록 성능이 더 향상됩니다. 더 큰 패킷 크기를 요청할 수 있습니다. 그러나 요청이 거부되면 **sqlcmd** 는 서버 기본값을 패킷 크기로 사용합니다.  
   
- **-c** *batch_terminator*  
+ **-c** _batch_terminator_  
  일괄 처리 종결자를 지정합니다. 기본적으로 줄에 "GO"만 단독으로 입력하면 명령이 종료되어 SQL Server로 보내집니다. 일괄 처리 종결자를 다시 설정할 때는 앞에 백슬래시가 있더라도 Transact-SQL 예약 키워드 또는 운영 체제와 연관된 특별한 의미를 가진 문자를 사용하지 마십시오.  
   
  **-L**[**c**]  
@@ -539,7 +539,7 @@ sqlcmd
   
 -   **ED**  
   
--   **!!** *명령*  
+-   **!!** _명령_  
   
  **-X** 옵션을 지정하면 환경 변수가 **sqlcmd**에 전달되지 않습니다. 또한 SQLCMDINI 스크립팅 변수를 사용하여 지정한 시작 스크립트가 실행되지 않습니다. **sqlcmd** 스크립팅 변수에 대한 자세한 내용은 [스크립팅 변수와 함께 sqlcmd 사용](~/relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)을 참조하세요.  
   
@@ -646,7 +646,7 @@ sqlcmd
  문 캐시 내용을 출력합니다.  
   
  **변수**  
-  **: Setvar** \< **var**> [ **"**_값_**"** ]  
+  **:Setvar** \<**var**> [ **"**_value_**"** ]  
  **sqlcmd** 스크립팅 변수를 정의합니다. 스크립팅 변수의 형식은 다음과 같습니다. `$(VARNAME)`.  
   
  변수 이름은 대/소문자를 구분하지 않습니다.  
@@ -690,10 +690,10 @@ sqlcmd
  **STDOUT**  
  오류 출력을 **stdout** 스트림으로 전환합니다. 스트림을 리디렉션할 경우 리디렉션된 스트림 대상이 오류 출력을 받습니다.  
   
- **:Out \<** *filename* **>**| **STDERR**| **STDOUT**  
+ **:Out \<** _filename_ **>**| **STDERR**| **STDOUT**  
  쿼리 결과를 만들어 *file name*에 지정된 파일, **stderr** 또는 **stdout**으로 모두 리디렉션합니다. 기본적으로 출력은 **stdout**으로 전송됩니다. 이 파일이 이미 있을 경우 0바이트로 잘립니다. 스크립트에서 **Out** 명령이 여러 번 나타날 수 있습니다.  
   
- **:Perftrace \<** *filename* **>**| **STDERR**| **STDOUT**  
+ **:Perftrace \<** _filename_ **>**| **STDERR**| **STDOUT**  
  성능 추적 정보를 만들어 *file name*에 지정된 파일, **stderr** 또는 **stdout**으로 모두 리디렉션합니다. 기본적으로 성능 추적 출력은 **stdout**으로 전송됩니다. 이 파일이 이미 있을 경우 0바이트로 잘립니다. 스크립트에서 **Perftrace** 명령이 여러 번 나타날 수 있습니다.  
   
  **실행 제어 명령**  
@@ -756,13 +756,13 @@ sqlcmd
  GO는 일괄 처리의 끝을 알려 주고 캐시된 Transact-SQL 문을 실행하도록 신호를 보냅니다. 일괄 처리는 별도 배치로 여러 번 실행 됩니다. 단일 일괄 처리에서 변수를 두 번 이상 선언할 수 없습니다.
   
  **기타 명령**  
-  **:r \<** *filename* **>**  
+  **:r \<** _filename_ **>**  
  **\<**_filename_**>** 으로 지정된 파일의 추가 Transact-SQL 문과 **sqlcmd** 명령을 명령문 캐시로 구문 분석합니다.  
   
  파일에 Transact-SQL 문이 포함되어 있고 뒤에 **GO**가 오지 않을 경우 **:r** 뒤에 오는 줄에 **GO**를 입력해야 합니다.  
   
 > [!NOTE]  
->  **\<** *filename* **>** 은 **sqlcmd** 가 실행된 시작 디렉터리를 기준으로 상대적으로 읽혀집니다.  
+>  **\<** _filename_ **>** 은 **sqlcmd** 가 실행된 시작 디렉터리를 기준으로 상대적으로 읽혀집니다.  
   
  일괄 처리 종결자가 나타난 후 이 파일이 읽혀지고 실행됩니다. 여러 **:r** 명령을 실행할 수 있습니다. 이 파일에는 모든 유형의 **sqlcmd** 명령이 포함될 수 있으며 그 예로 일괄 처리 종결자 **GO**를 들 수 있습니다.  
   
@@ -772,7 +772,7 @@ sqlcmd
  **:Serverlist**  
  로컬로 구성된 서버와 네트워크상에서 브로드캐스팅하는 서버의 이름을 표시합니다.  
   
- **:Connect**  *server_name*[**\\**_instance\_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
+ **:Connect**  _server_name_[**\\**_instance\_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
  SQL Server 인스턴스에 연결합니다. 또한 현재 연결을 종료합니다.  
   
  제한 시간 옵션은 다음과 같습니다.  
@@ -837,7 +837,7 @@ sqlcmd 프롬프트 유형:
 
 `GO`
 
-Enter 키를 누르면 "데이터베이스 컨텍스트가 'AdventureWorks2012'로 변경되었습니다." 정보 메시지가 출력됩니다.  
+Enter 키를 누르면 다음 정보 메시지가 출력됩니다. "데이터베이스 컨텍스트가 'AdventureWorks2012'(으)로 변경되었습니다."  
   
 ### <a name="output-format-from-transact-sql-queries"></a>Transact-SQL 쿼리의 출력 형식  
  먼저**sqlcmd** 는 SELECT 목록에서 지정한 열 이름이 포함된 열 머리글을 출력합니다. 열 이름은 SQLCMDCOLSEP 문자로 구분됩니다. 기본적으로 구분 문자는 공백입니다. 열 이름이 열 너비보다 짧은 경우 출력은 다음 열까지 공백으로 채워집니다.  
@@ -925,7 +925,7 @@ sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G -U bob@contoso.com -P 
 
 ## <a name="feedback"></a>피드백
 
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 클라이언트 도구 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 클라이언트 도구 포럼](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

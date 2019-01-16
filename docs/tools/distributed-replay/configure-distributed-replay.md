@@ -11,12 +11,12 @@ ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5253fc1b7ace718fc2d83cadd9fca944b4898c7b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 166e5e929863a9c7213f3cda6f43e6c1007865b2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506224"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125563"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "52506224"
 |설정|XML 요소|설명|허용되는 값|필수|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |시스템 세션 작업 포함|`<IncSystemSession>`|캡처하는 동안의 시스템 세션 작업이 재생 중에 포함되는지 여부를 나타냅니다.|`Yes` &#124; `No`|아니요. 기본값은 `No`입니다.|  
-|최대 유휴 시간|`<MaxIdleTime>`|유휴 시간을 절대 수(초)로 나타냅니다.|-1보다 크거나 같은 정수입니다.<br /><br /> `-1`은 원래 추적 파일의 원래 값이 변경되지 않음을 의미합니다.<br /><br /> `0` 은 지정된 시점에 일부 작업이 진행 중임을 나타냅니다.|아니요. 기본값은 `-1`입니다.|  
+|최대 유휴 시간|`<MaxIdleTime>`|유휴 시간을 절대 수(초)로 나타냅니다.|-1보다 크거나 같은 정수입니다.<br /><br /> `-1` 은 원래 추적 파일의 원래 값이 변경되지 않음을 의미합니다.<br /><br /> `0` 은 지정된 시점에 일부 작업이 진행 중임을 나타냅니다.|아니요. 기본값은 `-1`입니다.|  
   
 ### <a name="example"></a>예제  
  기본 전처리 구성 파일입니다.  
@@ -123,7 +123,7 @@ ms.locfileid: "52506224"
   
 |설정|XML 요소|설명|허용되는 값|필수|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
-|대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스(테스트 서버)|`<Server>`|연결할 서버 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정합니다.|*server_name*[\\*instance_name*]<br /><br /> "`localhost`" 또는 "`.`"을 사용하여 로컬 호스트를 나타낼 수 없습니다.|아니요(관리 도구의 **재생**옵션에 **-s***target server* 매개 변수를 사용하여 서버 이름이 이미 지정된 경우)|  
+|대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스(테스트 서버)|`<Server>`|연결할 서버 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정합니다.|*server_name*[\\*instance_name*]<br /><br /> "`localhost`" 또는 "`.`"을 사용하여 로컬 호스트를 나타낼 수 없습니다.|아니요(관리 도구의 **다시 재생**_옵션에_ -s **target server** 매개 변수를 사용하여 서버 이름이 이미 지정된 경우)|  
 |시퀀스 모드|`<SequencingMode>`|이벤트 예약에 사용되는 모드를 지정합니다.|`synchronization` &#124; `stress`|아니요. 기본값은 `stress`입니다.|  
 |스트레스 규모 세분성|`<StressScaleGranularity>`|스트레스 모드에서 SPID(Service Profile Identifier)에 대한 모든 연결의 배율을 함께 조정(SPID)해야 하는지 개별적으로 조정(연결)해야 하는지를 지정합니다.|SPID &#124; Connection|예 기본값은 `SPID`입니다.|  
 |연결 시간 조절|`<ConnectTimeScale>`|스트레스 모드에서 연결 시간을 조절하는 데 사용됩니다.|`1` 에서 `100`사이의 정수입니다.|아니요. 기본값은 `100`입니다.|  
@@ -167,8 +167,8 @@ ms.locfileid: "52506224"
 
 ### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>모드를 시퀀싱 하는 동기화를 사용 하 여 실행 하는 경우 가능한 문제
  재생 기능을 표시 되는 "정지" 또는 재생 이벤트에 매우 느리게 진행 하는 문제가 발생할 수 있습니다. 재생 중인 추적 데이터 및/또는 복원된 대상 데이터베이스에 존재 하지 않는 이벤트에 의존 하는 경우이 현상이 발생할 수 있습니다. 
- 
-한 가지 예는 Service Broker 수신 WAITFOR 문에서 같이 WAITFOR를 사용 하는 캡처된 작업 합니다. 동기화 시퀀스 모드를 사용할 때 일괄 처리는 순차적으로 재생 됩니다. WAITFOR의 전체 기간 대기 데이터베이스 백업 후 원본 데이터베이스에 대해 발생 하는 삽입 하지만 추적 캡처를 재생 하기 전에 시작 될 경우 할 수도 있습니다 재생 중에 발급 된 WAITFOR 수신 합니다. WAITFOR 수신 중지 됩니다 후 재생할 수로 설정 하는 이벤트입니다. 이 WAITFOR 완료 될 때까지 Batch Requests/sec 성능 모니터 카운터를 0으로 재생 데이터베이스 대상 삭제 될 수 있습니다. 
+ 
+ 한 가지 예는 Service Broker 수신 WAITFOR 문에서 같이 WAITFOR를 사용 하는 캡처된 작업 합니다. 동기화 시퀀스 모드를 사용할 때 일괄 처리는 순차적으로 재생 됩니다. WAITFOR의 전체 기간 대기 데이터베이스 백업 후 원본 데이터베이스에 대해 발생 하는 삽입 하지만 추적 캡처를 재생 하기 전에 시작 될 경우 할 수도 있습니다 재생 중에 발급 된 WAITFOR 수신 합니다. WAITFOR 수신 중지 됩니다 후 재생할 수로 설정 하는 이벤트입니다. 이 WAITFOR 완료 될 때까지 Batch Requests/sec 성능 모니터 카운터를 0으로 재생 데이터베이스 대상 삭제 될 수 있습니다. 
  
  이 문제를 방지 하려면 동기화 모드를 사용 하는 경우 다음을 수행 해야 합니다.
  

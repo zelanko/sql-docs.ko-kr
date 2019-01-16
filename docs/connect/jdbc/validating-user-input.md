@@ -11,12 +11,12 @@ ms.assetid: 8aa867b0-e6f0-49eb-93d3-817ae2ed8f77
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cba6e20e1e2efbd17ca677f06c07ac0a4a27648c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24eef3e97f87d60db624605b19420e5fd562360b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669921"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213782"
 ---
 # <a name="validating-user-input"></a>사용자 입력 유효성 검사
 
@@ -30,4 +30,4 @@ SQL 삽입 및 방지 방법에 대한 자세한 내용은 [!INCLUDE[ssNoVersion
 
 ## <a name="see-also"></a>참고 항목
 
-[JDBC 드라이버 응용 프로그램 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)
+[JDBC 드라이버 애플리케이션 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)

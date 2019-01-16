@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: e6585c78b26199c7ae5194e37d152db91aab1224
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba1cb702faef5826158f9f65e9bb36d794934a5a
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396318"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991776"
 ---
 # <a name="download-and-install-sqlpackage"></a>다운로드 및 설치 sqlpackage
 
@@ -26,8 +26,8 @@ sqlpackage는 Windows, macOS 및 Linux에서 실행 됩니다.
 |플랫폼|다운로드|릴리스 날짜|버전 옵션|빌드
 |:---|:---|:---|:---|:---|
 |Windows|[MSI 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2033947)|2018 년 10 월 24 일|18.0|15.0.4200.1|
-|macOS.NET Core (미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2044514)|2018 년 11 월 15 일 | - |13.0.0.0|
-|.NET Core Linux (미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2044263)|2018 년 11 월 15 일 | - |13.0.0.0|
+|macOS.NET Core (미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2044514)|2018년 11월 15일 | - |15.0.4240.1|
+|.NET Core Linux (미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2044263)|2018년 11월 15일 | - |15.0.4240.1|
 
 최신 릴리스에 대 한 자세한 내용은 참조는 [릴리스](sqlpackage-release-notes.md)합니다.
 
@@ -65,8 +65,9 @@ sqlpackage는 Windows, macOS 및 Linux에서 실행 됩니다.
    ```bash
    cd ~
    mkdir sqlpackage
-   unzip ~/Downloads/sqlpackage-linux-<version string>.zip ~/sqlpackage 
-   echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bashrc
+   unzip ~/Downloads/sqlpackage-linux-<version string>.zip -d ~/sqlpackage 
+   echo "export PATH=\"\$PATH:$HOME/sqlpackage\"" >> ~/.bashrc
+   chmod a+x ~/sqlpackage/sqlpackage
    source ~/.bashrc
    sqlpackage
    ```
@@ -77,7 +78,7 @@ sqlpackage는 Windows, macOS 및 Linux에서 실행 됩니다.
    **Debian:**
 
    ```bash
-   sudo apt-get install libuwind8
+   sudo apt-get install libunwind8
    ```
 
    **Redhat:**
@@ -122,7 +123,7 @@ sqlpackage는 Windows, macOS 및 Linux에서 실행 되 고 다음 플랫폼에�
 
 ### <a name="macos"></a>macOS
 
-- macOS 10.13(high Sierra
+- macOS 10.13 High Sierra
 - macOS 10.12 Sierra
 
 ### <a name="linux-x64"></a>Linux (x64)
