@@ -16,12 +16,12 @@ ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66db1468b93e2ff95073bfd7e9f065860f774a0f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8c1be5887e4d3b6ff4af02e12e8af26a456987e2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202792"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125434"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>Always On 가용성 그룹 기능을 사용하거나 사용하지 않도록 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +134,7 @@ ms.locfileid: "53202792"
   
 2.  **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
-3.  **SQL Server 구성 관리자**에서 **SQL Server 서비스**를 클릭하고 SQL Server(**\<***인스턴스 이름***>)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 여기서 **\<***인스턴스 이름***>** 은 Always On 가용성 그룹을 사용하도록 설정할 로컬 서버 인스턴스의 이름입니다.  
+3.  **SQL Server 구성 관리자**에서 **SQL Server 서비스**를 클릭하고 SQL Server(**\<**_인스턴스 이름_**>)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 여기서 **\<**_인스턴스 이름_**>** 은 Always On 가용성 그룹을 사용하도록 설정할 로컬 서버 인스턴스의 이름입니다.  
   
 4.  **Always On 고가용성** 탭을 선택합니다.  
   
@@ -198,7 +198,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 2.  **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
-3.  **SQL Server 구성 관리자**에서 **SQL Server 서비스**를 클릭하고 SQL Server(**\<***인스턴스 이름***>)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 여기서 **\<***인스턴스 이름***>** 은 Always On 가용성 그룹을 사용하지 않도록 설정할 로컬 서버 인스턴스의 이름입니다.  
+3.  **SQL Server 구성 관리자**에서 **SQL Server 서비스**를 클릭하고 SQL Server(**\<**_인스턴스 이름_**>)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 여기서 **\<**_인스턴스 이름_**>** 은 Always On 가용성 그룹을 사용하지 않도록 설정할 로컬 서버 인스턴스의 이름입니다.  
   
 4.  **Always On 고가용성**탭에서 **Always On 가용성 그룹 사용** 확인란의 선택을 취소하고 **확인**을 클릭합니다.  
   

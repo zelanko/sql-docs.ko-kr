@@ -18,12 +18,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ec86bf23a2fdf951da6d64f934ce8f62f6b3cb5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f1f0e5180c03a033cd854aba9f3261e5a89960f5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409900"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210433"
 ---
 # <a name="row-level-security"></a>행 수준 보안
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52409900"
   
  RLS는 [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 [인라인 테이블 반환 함수](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)로 만들어진 조건자를 사용하여 구현합니다.  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([이해하기](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([이해하기](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
 > [!NOTE]
 > Azure SQL Data Warehouse는 필터 조건자만 지원합니다. 차단 조건자는 현재 Azure SQL Data Warehouse에서 지원되지 않습니다.
@@ -52,7 +52,7 @@ ms.locfileid: "52409900"
   
  테이블의 행 수준 데이터에 대한 액세스는 인라인 테이블 반환 함수로 정의된 보안 조건자에 의해 제한됩니다. 그런 다음 함수가 호출되고 보안 정책에 의해 적용됩니다. 필터 조건자의 경우 애플리케이션은 결과 세트에서 필터링된 행을 인식하지 못합니다. 모든 행이 필터링되면 null 세트가 반환됩니다. 차단 조건자의 경우 조건자를 위반하는 모든 작업은 오류와 함께 실패합니다.  
   
- 필터 조건자는 기본 테이블에서 데이터를 읽는 동안 적용되며, 모든 가져오기 작업, 즉 **SELECT**, **DELETE**(사용자가 필터링된 행을 삭제할 수 없음) 및 **UPDATE**(사용자가 필터링된 행을 업데이트할 수 없지만, 나중에 필터링되는 방식으로 행을 업데이트할 수 있음)에 영향을 줍니다. 차단 조건자는 모든 쓰기 작업에 영향을 줍니다.  
+ 필터 조건자는 기본 테이블에서 데이터를 읽는 동안 적용되며, 모든 가져오기 작업에 영향을 줍니다. **SELECT**, **DELETE**(사용자가 필터링된 행을 삭제할 수 없음) 및 **UPDATE**(사용자가 필터링된 행을 업데이트할 수 없지만, 나중에 필터링되는 방식으로 행을 업데이트할 수 있습니다). 차단 조건자는 모든 쓰기 작업에 영향을 줍니다.  
   
 -   AFTER INSERT 및 AFTER UPDATE 조건자는 사용자가 조건자를 위반하는 값으로 행을 업데이트하는 것을 방지할 수 있습니다.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "52409900"
   
 -   UPDATE에 대한 차단 조건자는 BEFORE 및 AFTER에 대해 별도의 작업으로 분할됩니다. 따라서 예를 들어 사용자가 행을 현재보다 큰 값으로 업데이트하는 것을 차단할 수 없습니다. 이러한 종류의 논리가 필요한 경우 DELETED 및 INSERTED 중간 테이블과 함께 트리거를 사용하여 이전 값과 새 값을 함께 참조해야 합니다.  
   
--   최적화 프로그램은 조건자 함수에서 사용하는 열이 변경되지 않은 경우 AFTER UPDATE 차단 조건자를 확인하지 않습니다. 예를 들어 Alice는 급여를 100,000보다 크게 변경할 수 없지만, 이미 조건자를 위반함으로써 급여가 100,000을 초과한 직원의 주소는 변경할 수 있어야 합니다.  
+-   최적화 프로그램은 조건자 함수에서 사용하는 열이 변경되지 않은 경우 AFTER UPDATE 차단 조건자를 확인하지 않습니다. 예를 들어 다음과 같이 사용할 수 있습니다. Alice는 급여를 100,000보다 크게 변경할 수 없지만, 이미 조건자를 위반함으로써 급여가 100,000을 초과한 직원의 주소는 변경할 수 있어야 합니다.  
   
 -   BULK INSERT를 포함하여 대량 API에 적용된 변경 내용은 없습니다. 따라서 일반적인 삽입 작업과 마찬가지로 차단 조건자 AFTER INSERT가 대량 삽입 작업에 적용됩니다.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "52409900"
    
   
 ##  <a name="SecNote"></a> 보안 정보: 사이드 채널 공격  
- **악의적 보안 정책 관리자:** 중요한 열에 기반하여 보안 정책을 만들 수 있는 권한과 인라인 테이블 반환 함수를 만들거나 변경할 수 있는 권한이 있는 악의적 보안 정책 관리자가 데이터를 추론하기 위해 부채널 공격을 사용하도록 설계된 인라인 테이블 반환 함수를 악의적으로 만들어 데이터를 유출할 수 있는 테이블에 대한 선택 권한이 있는 다른 사용자와 공모할 수 있다는 사실에 주의해야 합니다. 이러한 공격에는 공모(또는 악의적인 사용자에게 부여되는 과도한 권한)가 필요하고, 정책을 수정하고(스키마 바인딩을 중단하기 위해 조건자를 제거할 수 있는 권한 필요) 인라인 테이블 반환 함수를 수정하고 대상 테이블에서 select 문을 반복적으로 하는 실행하는 작업을 여러 번 반복해야 합니다. 필요에 따라 권한을 제한하고, 지속적으로 변경되는 정책 및 행 수준 보안과 관련된 인라인 테이블 반환 함수와 같은 의심스러운 활동을 모니터링하는 것이 좋습니다.  
+ **악의적인 보안 정책 관리자:** 중요한 열의 상단에 보안 정책을 만들 수 있는 권한과 인라인 테이블 반환 함수를 만들거나 변경할 수 있는 권한을 가지고, 데이터를 추론하기 위해 부채널 공격을 사용하도록 설계된 인라인 테이블 값 함수를 악의적으로 만들어 데이터를 유출할 목적으로 테이블의 선택 권한을 가진 다른 사용자와 공모할 수 있는 악의적인 보안 정책 관리자를 관찰하는 것이 중요합니다. 이러한 공격에는 공모(또는 악의적인 사용자에게 부여되는 과도한 권한)가 필요하고, 정책을 수정하고(스키마 바인딩을 중단하기 위해 조건자를 제거할 수 있는 권한 필요) 인라인 테이블 반환 함수를 수정하고 대상 테이블에서 select 문을 반복적으로 하는 실행하는 작업을 여러 번 반복해야 합니다. 필요에 따라 권한을 제한하고, 지속적으로 변경되는 정책 및 행 수준 보안과 관련된 인라인 테이블 반환 함수와 같은 의심스러운 활동을 모니터링하는 것이 좋습니다.  
   
  **정교하게 만들어진 쿼리:** 정교하게 만들어진 쿼리를 통해 정보가 누출될 수 있습니다. 예를 들어, 악의적인 사용자가 `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` 을(를) 통해 John Doe의 급료가 $100,000임을 알게 됩니다. 악의적인 사용자가 타인의 급여를 직접 쿼리하는 것을 방지하기 위해 보안 조건자가 있더라도, 해당 사용자는 쿼리가 0으로 나누기 예외를 반환할 때 알아낼 수 있습니다.  
    
@@ -165,7 +165,7 @@ ms.locfileid: "52409900"
   
 -   **변경 내용 추적** 변경 내용 추적은 **SELECT** 및 **VIEW CHANGE TRACKING** 권한이 있는 사용자로 필터링해야 하는 행의 기본 키를 누출할 수 있습니다. 실제 데이터 값은 누출되지 않습니다. 기본 키가 B인 행에 대해 열 A가 업데이트/삽입/삭제되었다는 사실만 누출됩니다. 이는 기본 키에 주민 등록 번호와 같은 기밀 요소가 포함된 경우 문제가 될 수 있습니다. 그러나 실제로 이 **CHANGETABLE** 은 최신 데이터를 가져오기 위해 거의 항상 원래 테이블과 조인됩니다.  
   
--   **전체 텍스트 검색** **CONTAINSTABLE**, **FREETEXTTABLE**, semantickeyphrasetable, semanticsimilaritydetailstable, semanticsimilaritytable 등의 전체 텍스트 검색 및 의미 체계 검색 함수를 사용하는 쿼리는 행 수준 보안을 적용하고 필터링해야 하는 행의 기본 키 누출을 방지하기 위해 추가 조인이 도입되므로 성능 저하가 예상됩니다.  
+-   **전체 텍스트 검색** 다음과 같은 전체 텍스트 검색 및 의미 체계 Search 함수를 사용하는 쿼리는 행 수준 보안을 적용하고 필터링해야 하는 행의 기본 키 누출을 방지하기 위해 추가 조인이 도입되므로 성능 저하가 예상됩니다. **CONTAINSTABLE**, **FREETEXTTABLE**, semantickeyphrasetable, semanticsimilaritydetailstable, semanticsimilaritytable.  
   
 -   **Columnstore 인덱스** RLS는 클러스터형 columnstore 인덱스 및 비클러스터형 columnstore 인덱스 모두와 호환됩니다. 그러나 행 수준 보안이 함수에 적용되므로 최적화 프로그램에서 일괄 처리 모드를 사용하지 않도록 쿼리 계획을 수정할 수 있습니다.  
   
@@ -284,7 +284,7 @@ WITH (STATE = OFF);
 > [!NOTE]
 > 현재 SESSION_CONTEXT와 차단 조건자가 모두 지원되지 않으므로 Azure SQL Data Warehouse에는 이 예제가 적용되지 않습니다.
 
-이 예는 중간 계층 애플리케이션이 애플리케이션 사용자(또는 테넌트)가 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자(애플리케이션)을 공유하는 연결 필터링을 구현하는 방법을 보여줍니다. 데이터베이스에 연결한 후 응용 프로그램이 [SESSION_CONTEXT&#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) 에서 현재 응용 프로그램 사용자 ID를 설정하면 보안 정책이 이 ID에 표시되지 않아야 하는 행을 투명하게 필터링하고 사용자가 잘못된 사용자 ID에 대한 행을 삽입하지 못하도록 차단합니다. 다른 응용 프로그램은 변경하지 않아도 됩니다.  
+이 예는 중간 계층 애플리케이션이 애플리케이션 사용자(또는 테넌트)가 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자(애플리케이션)을 공유하는 연결 필터링을 구현하는 방법을 보여줍니다. 데이터베이스에 연결한 후 애플리케이션이 [SESSION_CONTEXT&amp;#40;Transact-SQL&amp;#41;](../../t-sql/functions/session-context-transact-sql.md) 에서 현재 애플리케이션 사용자 ID를 설정하면 보안 정책이 이 ID에 표시되지 않아야 하는 행을 투명하게 필터링하고 사용자가 잘못된 사용자 ID에 대한 행을 삽입하지 못하도록 차단합니다. 다른 응용 프로그램은 변경하지 않아도 됩니다.  
   
  데이터를 보유하는 간단한 테이블을 만듭니다.  
   

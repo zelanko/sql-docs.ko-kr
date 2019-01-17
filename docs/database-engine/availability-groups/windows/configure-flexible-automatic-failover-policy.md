@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: abfad9aeef575035f4f171a19073b97a266797ef
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3de9c31febeecca588464cfb386543347ddad852
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208562"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126583"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 유연한 자동 장애 조치(failover) 정책 구성
 
@@ -113,7 +113,7 @@ ms.locfileid: "53208562"
   
 2.  가용성 그룹에 가용성 복제본을 추가하는 경우 **New-SqlAvailabilityGroup** cmdlet을 사용합니다. 기존 가용성 복제본을 수정할 때 **Set-SqlAvailabilityGroup** cmdlet을 사용합니다.  
   
-    -   장애 조치 상태 수준을 설정하려면 **FailureConditionLevel***level* 매개 변수를 사용합니다. 여기서 *level*은 다음 값 중 하나입니다.  
+    -   장애 조치 상태 수준을 설정하려면 **FailureConditionLevel**_level_ 매개 변수를 사용합니다. 여기서 *level* 은 다음 값 중 하나입니다.  
   
         |값|Level|자동 장애 조치가 시작되는 경우|  
         |-----------|-----------|-------------------------------------------|  
@@ -133,7 +133,7 @@ ms.locfileid: "53208562"
         -FailureConditionLevel OnServerDown  
         ```  
   
-    -   상태 확인 제한 시간 임계값을 설정하려면 **HealthCheckTimeout***n* 매개 변수를 사용합니다. 여기서 *n*은 15000밀리초(15초)부터 4294967295밀리초 사이의 정수입니다. 기본값은 30000밀리초(30초)입니다.  
+    -   상태 확인 제한 시간 임계값을 설정하려면 **HealthCheckTimeout**_n_ 매개 변수를 사용합니다. 여기서 *n* 은 15000밀리초(15초)부터 4294967295밀리초 사이의 정수입니다. 기본값은 30000밀리초(30초)입니다.  
   
          예를 들어 다음 명령은 기존 가용성 그룹 `AG1`의 상태 확인 제한 시간 임계값을 120,000밀리초(2분)로 변경합니다.  
   

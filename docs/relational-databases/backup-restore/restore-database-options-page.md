@@ -13,12 +13,12 @@ ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3b590fa12fb2168a80c320068facb979702cd4fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbeeb28aced36cf1d80b2a6c4efeba3c614385c0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853921"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209992"
 ---
 # <a name="restore-database-options-page"></a>데이터베이스 복원(옵션 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,18 +28,18 @@ ms.locfileid: "47853921"
   
 -   [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
--   [테이프 드라이브에 대한 논리적 백업 장치 정의&#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
+-   [테이프 드라이브에 대한 논리적 백업 디바이스 정의&amp;#40;SQL Server&amp;#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 복원 태스크를 지정할 때 이 복원 작업에 대해 RESTORE 문을 포함하는 해당 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 생성할 수 있습니다. 스크립트를 생성하려면 **스크립트** 를 클릭한 다음 스크립트 대상을 선택합니다. RESTORE 구문에 대한 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)를 참조하세요.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
   
 ### <a name="restore-options"></a>복원 옵션  
  복원 작업의 동작 측면을 수정하려면 **복원 옵션** 패널의 옵션을 사용합니다.  
   
  **기존 데이터베이스 덮어쓰기[WITH REPLACE]**  
- **데이터베이스 복원**대화 상자에 있는 [일반](../../relational-databases/backup-restore/restore-database-general-page.md) 페이지의 **복원 위치** 필드에서 지정하는 데이터베이스 이름을 현재 사용 중인 모든 데이터베이스의 파일을 복원 작업에서 덮어씁니다. 다른 데이터베이스에서 기존 데이터베이스 이름으로 백업을 복원하는 중이더라도 기존 데이터베이스의 파일을 덮어씁니다. 이 옵션을 선택하는 것은 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 문에서 REPLACE 옵션을 사용하는 것과 같습니다.([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ **데이터베이스 복원**대화 상자에 있는 [일반](../../relational-databases/backup-restore/restore-database-general-page.md) 페이지의 **복원 위치** 필드에서 지정하는 데이터베이스 이름을 현재 사용 중인 모든 데이터베이스의 파일을 복원 작업에서 덮어씁니다. 다른 데이터베이스에서 기존 데이터베이스 이름으로 백업을 복원하는 중이더라도 기존 데이터베이스의 파일을 덮어씁니다. 이 옵션을 선택하는 것은 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 문에서 REPLACE 옵션을 사용하는 것과 같습니다([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!CAUTION]  
 >  이 옵션은 신중하게 고려한 후에만 사용해야 합니다. 자세한 내용은 [RESTORE 인수&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)를 참조하세요.  
@@ -116,7 +116,7 @@ ms.locfileid: "47853921"
   
 ## <a name="see-also"></a>참고 항목  
  [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [장치에서 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)   
+ [디바이스에서 백업 복원&amp;#40;SQL Server&amp;#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)   
  [트랜잭션 로그 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)   
  [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   

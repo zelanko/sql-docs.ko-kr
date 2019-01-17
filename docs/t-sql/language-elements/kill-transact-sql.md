@@ -35,12 +35,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2eec14db312bb6fb2a8fb65bb51e396a4c1be3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be0bccac59c011fc36e8481029d9951cd36cad99
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837004"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205402"
 ---
 # <a name="kill-transact-sql"></a>KILL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,7 +79,7 @@ JOIN sys.dm_exec_connections AS conn
 ```  
   
 *UOW*  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**적용 대상**: ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  분산 트랜잭션의 UOW(작업 단위) ID를 식별합니다. *UOW*는 sys.dm_tran_locks 동적 관리 뷰의 request_owner_guid 열에서 구할 수 있는 GUID입니다. *UOW*는 오류 로그나 MS DTC 모니터를 통해 가져올 수도 있습니다. 분산 트랜잭션 모니터링 방법은 MS DTC 설명서를 참조하세요.  
   

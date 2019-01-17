@@ -13,12 +13,12 @@ ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5ceb15bd6f12234bab2a5763ca1d55162c1a7934
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 72b79e02cfdc8bab664df1a47c1e8bfb91743493
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665802"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596664"
 ---
 # <a name="database-properties-query-store-page"></a>데이터베이스 속성(쿼리 저장소 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "51665802"
   
 ||  
 |-|  
-|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  작업 모드  
  유효한 값은 OFF, READ_ONLY 및 READ_WRITE입니다. OFF는 쿼리 저장소를 사용하지 않도록 합니다. READ_WRITE 모드에서 쿼리 저장소는  쿼리 계획 및 런타임 실행 통계 정보를 수집하고 유지합니다. READ_ONLY 모드에서는 쿼리 저장소에서 정보를 읽을 수 있지만 새 정보는 추가되지 않습니다. 쿼리 저장소의 최대 할당 공간이 모두 사용되면 쿼리 저장소는 작업 모드를 READ_ONLY로 변경합니다.  
   
@@ -71,5 +71,3 @@ ms.locfileid: "51665802"
 ## <a name="see-also"></a>참고 항목  
  [쿼리 저장소 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [쿼리 저장소 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
-  
-  

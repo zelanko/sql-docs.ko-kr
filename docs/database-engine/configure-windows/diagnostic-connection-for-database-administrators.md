@@ -21,12 +21,12 @@ ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d08609edc596006290d5e0bb062701c5f212ff8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c51655426d892c4d6e233bc72b7388d200bbce8a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514702"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589398"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>데이터베이스 관리자를 위한 진단 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "52514702"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 성공적으로 DAC가 연결되도록 모든 시도를 하지만 극단적인 경우 연결이 실패할 수도 있습니다.  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ## <a name="connecting-with-dac"></a>DAC를 사용하여 연결  
  기본적으로 서버에서 실행되는 클라이언트에서만 연결이 허용됩니다. [remote admin connections 옵션](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md)이 사용된 sp_configure 저장 프로시저를 사용하여 구성하지 않은 경우에는 네트워크 연결이 허용되지 않습니다.  
@@ -93,7 +93,7 @@ ms.locfileid: "52514702"
   
  시작할 때 DAC 포트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 의해 동적으로 할당됩니다. 기본 인스턴스에 연결할 때 DAC는 SQL Server Browser 서비스에 대한 SSRP( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol) 요청을 사용하지 않습니다. 먼저 TCP 포트 1434를 통해 연결합니다. 연결이 실패할 경우 SSRP 호출을 실행하여 포트를 설정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser가 SSRP 요청을 수신하지 않을 경우 연결 요청이 오류를 반환합니다. 오류 로그를 참조하여 DAC를 수신 대기 중인 포트 번호를 찾으십시오. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 원격 관리 연결을 허용하도록 구성되어 있는 경우 DAC를 명시적 포트 번호로 시작해야 합니다.  
   
- **sqlcmd -S tcp:***\<server>,\<port>*  
+ **sqlcmd -S tcp:**_\<server>,\<port>_  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그는 DAC의 포트 번호를 표시합니다. 포트 번호는 기본적으로 1434입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 로컬 DAC 연결만 허용하도록 구성된 경우 다음 명령을 사용하여 루프백 어댑터를 통해 연결하십시오.  
   

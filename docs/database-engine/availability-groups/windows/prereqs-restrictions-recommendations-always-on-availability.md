@@ -1,6 +1,7 @@
 ---
-title: 필수 조건, 제한 사항 및 권장 사항 - Always On 가용성 그룹 | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹에 대한 필수 구성 요소, 제한 사항 및 권장 사항
+description: Always On 가용성 그룹을 배포하기 위한 필수 구성 조건, 제한 사항 및 권장 사항에 대한 설명입니다.
+ms.custom: seodec18
 ms.date: 06/05/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -19,14 +20,14 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0343bef5bcd6ba26539bfe3f4a726ab538bb24a1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e4aa84ac344bc9ca6d698f1ae3aa26f2a11f8072
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516467"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202992"
 ---
-# <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>필수 조건, 제한 사항 및 권장 사항 - Always On 가용성 그룹
+# <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   이 문서에서는 호스트 컴퓨터, WSFC(Windows Server 장애 조치 클러스터), 서버 인스턴스 및 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항을 포함하여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 배포할 때 고려해야 할 사항에 대해 설명합니다. 이러한 각 구성 요소에 대한 보안 고려 사항과 필요한 권한이 있는 경우 알려줍니다.  
@@ -39,7 +40,7 @@ ms.locfileid: "52516467"
   
 ||종속 기능|핫픽스|링크|  
 |------|-----------------------|------------|----------|  
-|![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.Net 3.5 SP1 핫픽스는 읽기 전용 및 multisubnetFailover의 Always On 기능을 위한 SQL 클라이언트에 대한 지원을 추가합니다. 각 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 서버에 핫픽스를 설치해야 합니다.|KB 2654347 [Always On 기능 지원을 추가하기 위한 .Net 3.5 SP1 핫픽스](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.Net 3.5 SP1 핫픽스는 읽기 전용 및 multisubnetFailover의 Always On 기능을 위한 SQL 클라이언트에 대한 지원을 추가합니다. 각 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 서버에 핫픽스를 설치해야 합니다.|KB 2654347: [Always On 기능 지원을 추가하기 위한 .Net 3.5 SP1 핫픽스](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
 ###  <a name="SystemRequirements"></a> 검사 목록: 요구 사항(Windows 시스템)  
@@ -58,9 +59,9 @@ ms.locfileid: "52516467"
   
 ###  <a name="ComputerRecommendations"></a> 가용성 복제본을 호스팅하는 컴퓨터에 대한 권장 사항(Windows 시스템)  
   
--   **동등한 시스템:**  특정 가용성 그룹의 모든 가용성 복제본은 동일한 작업을 처리할 수 있는 동등한 시스템에서 실행해야 합니다.  
+-   **동등한 시스템:**  지정된 가용성 그룹의 경우 모든 가용성 복제본은 동일한 작업을 처리할 수 있는 동등한 시스템에서 실행해야 합니다.  
   
--   **전용 네트워크 어댑터:**  최상의 성능을 위해 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]전용 네트워크 어댑터(네트워크 인터페이스 카드)를 사용하세요.  
+-   **전용 네트워크 어댑터:**  성능을 최대화하려면 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 전용 네트워크 어댑터(네트워크 인터페이스 카드)를 사용합니다.  
   
 -   **충분한 디스크 공간:**  가용성 복제본을 호스팅하는 서버 인스턴스가 있는 모든 컴퓨터에는 가용성 그룹의 모든 데이터베이스를 저장하기에 충분한 디스크 공간이 있어야 합니다. 주 데이터베이스의 크기가 늘어나면 해당하는 보조 데이터베이스도 같은 크기만큼 늘어난다는 것에 유의해야 합니다.  
   
@@ -167,7 +168,7 @@ ms.locfileid: "52516467"
   
     -   보조 복제본의 백업은 백업 작업 시간 동안 주 스레드를 복제본에 보관합니다.  
   
- 자세한 내용은 [Always On - HADRON 학습 시리즈: HADRON 지원 데이터베이스에 대한 작업자 풀 사용](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 엔지니어 블로그)을 참조하세요.  
+ 자세한 내용은 [Always On - HADRON 학습 시리즈: HADRON 사용 데이터베이스의 작업자 풀 사용](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)(CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 엔지니어 블로그)을 참조하세요.  
   
 ###  <a name="PermissionsSI"></a> 사용 권한(서버 인스턴스)  
   
@@ -186,7 +187,7 @@ ms.locfileid: "52516467"
   
 ###  <a name="RelatedContentSI"></a> 관련 내용(서버 인스턴스)  
   
--   [Always On - HADRON 학습 시리즈: HADRON 지원 데이터베이스에 대한 작업자 풀 사용](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Always On - HADRON 학습 시리즈: HADRON 사용 데이터베이스의 작업자 풀 사용](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ##  <a name="NetworkConnect"></a> 네트워크 연결 권장 사항  
  WSFC 노드 간의 통신 및 가용성 복제본 간의 통신에는 동일한 네트워크 링크를 사용하는 것이 좋습니다.  개별 네트워크 링크를 사용하면 가끔씩이라도 일부 링크에 문제가 발생할 경우 예기치 않은 동작이 발생할 수 있습니다.  
@@ -203,7 +204,7 @@ ms.locfileid: "52516467"
   
 -   [검사 목록: 필수 구성 요소](#PrerequisitesFCI)  
   
--   [관련 태스크](#RelatedTasksFCIs)  
+-   [관련 작업](#RelatedTasksFCIs)  
   
 -   [관련 내용](#RelatedContentFCIs)  
   
@@ -212,7 +213,7 @@ ms.locfileid: "52516467"
 > [!NOTE]  
 > 장애 조치(failover) 클러스터 인스턴스는 CSV(클러스터 공유 볼륨)를 지원합니다. CSV에 대한 자세한 내용은 [장애 조치(Failover) 클러스터에서 클러스터 공유 볼륨 이해](https://technet.microsoft.com/library/dd759255.aspx)를 참조하세요.  
   
--   **FCI의 클러스터 노드는 지정된 가용성 그룹에 대해 하나의 복제본만 호스팅할 수 있음:** FCI에 가용성 복제본을 추가하면 가능한 FCI 소유자인 WSFC 노드에서 동일한 가용성 그룹에 대해 다른 복제본을 호스팅할 수 있습니다.  가능한 충돌을 방지하려면 장애 조치(Failover) 클러스터 인스턴스의 가능한 소유자를 구성하는 것이 좋습니다. 그러면 단일 WSFC에서 동일한 가용성 그룹의 두 가용성 복제본을 호스트하려고 시도하지 않게 됩니다.
+-   **FCI의 클러스터 노드는 특정 가용성 그룹에 대한 하나의 복제본만 호스팅할 수 있습니다.**  FCI에 가용성 복제본을 추가하는 경우 잠재적인 FCI 소유자인 WSFC 노드는 동일한 가용성 그룹에 대해 다른 복제본을 호스팅할 수 없습니다.  가능한 충돌을 방지하려면 장애 조치(Failover) 클러스터 인스턴스의 가능한 소유자를 구성하는 것이 좋습니다. 그러면 단일 WSFC에서 동일한 가용성 그룹의 두 가용성 복제본을 호스트하려고 시도하지 않게 됩니다.
   
      또한 다른 모든 복제본은 동일한 Windows Server 장애 조치(Failover) 클러스터의 다른 클러스터 노드에 있는 SQL Server 2016 인스턴스에서 호스트해야 합니다. 유일한 예외는 다른 클러스터로 마이그레이션되는 동안 가용성 그룹이 일시적으로 두 클러스터에 걸쳐 있을 수 있는 경우입니다. 
 
@@ -220,9 +221,9 @@ ms.locfileid: "52516467"
   > 장애 조치(Failover) 클러스터 관리자를 사용하여 가용성 그룹을 호스트하는 *장애 조치(Failover) 클러스터 인스턴스*를 동일한 가용성 그룹의 복제본을 *이미* 호스트하는 노드로 이동하면 가용성 그룹의 복제본이 손실되어 대상 노드에서 온라인 상태가 될 수 없습니다. 장애 조치(Failover) 클러스터의 단일 노드는 동일한 가용성 그룹의 복제본 2개 이상을 호스트할 수 없습니다. 이러한 결과가 나타나는 방식 및 복구 방법에 대한 자세한 내용은 블로그 [Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/)(복제본이 가용성 그룹에서 예기치 않게 손실되는 경우)를 참조하세요. 
 
   
--   **FCI가 가용성 그룹별 자동 장애 조치(Failover)를 지원하지 않음:**  FCI는 가용성 그룹별 자동 장애 조치(Failover)를 지원하지 않으므로 FCI에서 호스팅하는 모든 가용성 복제본은 수동 장애 조치(Failover)에 대해서만 구성될 수 있습니다.  
+-   **FCI는 가용성 그룹별 자동 장애 조치(failover)를 지원하지 않습니다.**  FCI는 가용성 그룹에 의한 자동 장애 조치(failover)를 지원하지 않으므로 FCI에서 호스트하는 모든 가용성 복제본은 수동 장애 조치(failover)에 대해서만 구성될 수 있습니다.  
   
--   **FCI 네트워크 이름 변경:**  가용성 복제본을 호스트하는 FCI의 네트워크 이름을 변경해야 하는 경우 복제본을 해당 가용성 그룹에서 제거한 다음 다시 가용성 그룹에 추가해야 합니다. 주 복제본은 제거할 수 없으므로 주 복제본을 호스팅하는 FCI의 이름을 바꾸려는 경우 보조 복제본으로 장애 조치한 다음 이전 주 복제본을 제거하고 다시 추가해야 합니다. FCI 이름을 바꾸면 해당 데이터베이스 미러링 엔드포인트의 URL이 변경될 수 있습니다. 복제본을 추가할 때 현재 엔드포인트 URL을 지정해야 합니다.  
+-   **FCI 네트워크 이름 변경:**  가용성 복제본을 호스트하는 FCI의 네트워크 이름을 변경해야 하는 경우 복제본을 해당 가용성 그룹에서 제거한 다음, 다시 가용성 그룹에 추가해야 합니다. 주 복제본은 제거할 수 없으므로 주 복제본을 호스팅하는 FCI의 이름을 바꾸려는 경우 보조 복제본으로 장애 조치한 다음 이전 주 복제본을 제거하고 다시 추가해야 합니다. FCI 이름을 바꾸면 해당 데이터베이스 미러링 엔드포인트의 URL이 변경될 수 있습니다. 복제본을 추가할 때 현재 엔드포인트 URL을 지정해야 합니다.  
   
 ###  <a name="PrerequisitesFCI"></a> 검사 목록: 필수 구성 요소(FCI)  
   
@@ -242,7 +243,7 @@ ms.locfileid: "52516467"
   
 -   [장애 조치(failover) 클러스터링 및 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [Always On 아키텍처 가이드: 장애 조치(failover) 클러스터 인스턴스 및 가용성 그룹을 사용하여 고가용성 및 재해 복구 솔루션 구축](https://technet.microsoft.com/library/jj215886.aspx)  
+-   [Always On 아키텍처 가이드: 장애 조치(Failover) 클러스터 인스턴스 및 가용성 그룹을 사용하여 고가용성 및 재해 복구 솔루션 빌드](https://technet.microsoft.com/library/jj215886.aspx)  
   
 ##  <a name="PrerequisitesForAGs"></a> 가용성 그룹 필수 구성 요소 및 제한 사항  
  **섹션 내용**  
@@ -257,12 +258,12 @@ ms.locfileid: "52516467"
   
 ###  <a name="RestrictionsAG"></a> 제한 사항(가용성 그룹)  
   
--   **한 WSFC의 다른 노드에서 가용성 복제본을 호스팅해야 함:** 지정된 가용성 그룹의 가용성 복제본은 동일한 WSFC의 다른 노드에서 실행되는 서버 인스턴스에서 호스팅해야 합니다. 유일한 예외는 다른 클러스터로 마이그레이션되는 동안 가용성 그룹이 일시적으로 두 클러스터에 걸쳐 있을 수 있는 경우입니다.  
+-   **가용성 복제본은 하나의 WSFC의 다른 노드에서 호스팅해야 합니다.**  지정된 가용성 그룹의 경우 가용성 복제본은 동일한 WSFC의 다른 노드에서 실행되는 서버 인스턴스에서 호스팅해야 합니다. 유일한 예외는 다른 클러스터로 마이그레이션되는 동안 가용성 그룹이 일시적으로 두 클러스터에 걸쳐 있을 수 있는 경우입니다.  
   
     > [!NOTE]  
     >  동일한 실제 컴퓨터에 가상 머신이 있는 경우에는 각 가상 머신이 개별 컴퓨터 역할을 하므로 가상 머신별로 동일한 가용성 그룹의 가용성 복제본을 하나씩 호스팅할 수 있습니다.  
   
--   **고유한 가용성 그룹 이름:** 각 가용성 그룹 이름은 WSFC에서 고유해야 합니다. 가용성 그룹 이름의 최대 길이는 128자입니다.  
+-   **고유한 가용성 그룹 이름:**  각 가용성 그룹 이름은 WSFC에서 고유해야 합니다. 가용성 그룹 이름의 최대 길이는 128자입니다.  
   
 -   **가용성 복제본:**  각 가용성 그룹은 하나의 주 복제본과 최대 8개의 보조 복제본을 지원합니다. 모든 복제본은 비동기 커밋 모드에서 실행하거나 최대 3개의 복제본은 동기 커밋 동기 모드에서 실행할 수 있습니다(하나의 주 복제본과 2개의 동기 보조 복제본).  
   
@@ -329,7 +330,7 @@ ms.locfileid: "52516467"
   
 -   [사용 권한](#PermissionsDbs)  
   
--   [관련 태스크](#RelatedTasksADb)  
+-   [관련 작업](#RelatedTasksADb)  
   
 ###  <a name="RequirementsDb"></a> 검사 목록: 요구 사항(가용성 데이터베이스)  
  가용성 그룹에 추가하기에 적합한 데이터베이스는 다음 조건을 충족해야 합니다.  
@@ -355,7 +356,7 @@ ms.locfileid: "52516467"
   
 -   보조 데이터베이스의 파일 경로(드라이브 문자 포함)와 해당하는 주 데이터베이스의 경로가 다를 경우 다음 제한 사항이 적용됩니다.  
   
-    -   **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]:** **초기 데이터 동기화 선택** 페이지에서[전체](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md) 옵션이 지원되지 않습니다.  
+    -   **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]:**  [초기 데이터 동기화 선택](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md) 페이지에서 **전체** 옵션이 지원되지 않습니다.  
   
     -   **RESTORE WITH MOVE:**  보조 데이터베이스를 만들려면 보조 복제본을 호스팅하는 각 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 데이터베이스 파일에 대해 RESTORED WITH MOVE를 실행해야 합니다.  
   
@@ -386,7 +387,7 @@ ms.locfileid: "52516467"
   
 -   [SQL Server Always On 팀 블로그: 공식 SQL Server Always On 팀 블로그](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [Always On - HADRON 학습 시리즈: HADRON 지원 데이터베이스에 대한 작업자 풀 사용](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Always On - HADRON 학습 시리즈: HADRON 사용 데이터베이스의 작업자 풀 사용](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

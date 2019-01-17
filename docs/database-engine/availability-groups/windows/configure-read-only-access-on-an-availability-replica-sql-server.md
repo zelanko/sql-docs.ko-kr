@@ -17,12 +17,12 @@ ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fa0b0edbc46917930975cbbe7cbc9b4067579b68
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c7dfd6c8dc39e2653a2ddeca3bec07a1270f5cd8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212022"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135823"
 ---
 # <a name="configure-read-only-access-to-a-secondary-replica-of-an-always-on-availability-group"></a>Always On 가용성 그룹의 보조 복제본에 대한 읽기 전용 액세스 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -159,7 +159,7 @@ GO
   
 2.  가용성 그룹에 가용성 복제본을 추가하는 경우 **New-SqlAvailabilityReplica** cmdlet을 사용합니다. 기존 가용성 복제본을 수정하는 경우 **Set-SqlAvailabilityReplica** cmdlet을 사용합니다. 관련 매개 변수는 다음과 같습니다.  
   
-    -   보조 역할에 대한 연결 액세스를 구성하려면 **ConnectionModeInSecondaryRole***secondary_role_keyword* 매개 변수를 지정합니다. 여기서 *secondary_role_keyword*에는 다음 값 중 하나를 사용합니다.  
+    -   보조 역할에 대한 연결 액세스를 구성하려면 **ConnectionModeInSecondaryRole**_secondary_role_keyword_ 매개 변수를 지정합니다. 여기서 *secondary_role_keyword* 에는 다음 값 중 하나를 사용합니다.  
   
          **AllowNoConnections**  
          보조 복제본의 데이터베이스에 대한 직접 연결이 허용되지 않으며 읽기 액세스를 위해 데이터베이스에 연결할 수 없습니다. 이 값은 기본 설정입니다.  
@@ -170,7 +170,7 @@ GO
          **AllowAllConnections**  
          보조 복제본의 데이터베이스에 대해 읽기 전용 액세스를 위한 모든 연결이 허용됩니다.  
   
-    -   주 역할에 대한 연결 액세스를 구성하려면 **ConnectionModeInPrimaryRole***primary_role_keyword*를 지정합니다. 여기서 *primary_role_keyword*에는 다음 값 중 하나를 사용합니다.  
+    -   주 역할에 대한 연결 액세스를 구성하려면 **ConnectionModeInPrimaryRole**_primary_role_keyword_를 지정합니다. 여기서 *primary_role_keyword* 에는 다음 값 중 하나를 사용합니다.  
   
          **AllowReadWriteConnections**  
          애플리케이션 의도 연결 속성이 ReadOnly로 설정된 연결은 허용되지 않습니다. 애플리케이션 의도 속성이 ReadWrite로 설정되었거나 애플리케이션 의도 연결 속성이 설정되지 않은 경우에는 연결이 허용됩니다. 애플리케이션 의도 연결 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하십시오.  

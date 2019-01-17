@@ -1,7 +1,7 @@
 ---
 title: 메모리 관리 아키텍처 가이드 | Microsoft 문서
 ms.custom: ''
-ms.date: 06/08/2018
+ms.date: 12/11/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dadd28224a7f360ee90767861025b0bdebc7cbe5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 924b347e5fa8907fa1f2b9cb9b820a63808cbc3b
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669402"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328983"
 ---
 # <a name="memory-management-architecture-guide"></a>메모리 관리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,8 +57,8 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 | |32비트 <sup>1</sup> |64비트|
 |-------|-------|-------| 
 |기본 메모리 |모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전 프로세스 가상 주소 공간 제한까지 허용됩니다. <br>- 2GB<br>- 3 GB /3gb 부팅 매개 변수를 사용하면 3GB <sup>2</sup> <br>- WOW64에서는 4GB <sup>3</sup> |모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전 프로세스 가상 주소 공간 제한까지 허용됩니다. <br>- IA64 아키텍처에서는 7TB(IA64는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 이상에서 지원되지 않음)<br>- 최대 x64 아키텍처의 운영 체제가 지원하는 최대 크기 <sup>4</sup>
-|AWE 메커니즘( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 32비트 플랫폼의 프로세스 가상 주소 공간 제한을 초과할 수 있도록 허용) |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard, Enterprise 및 개발자 버전: 버퍼 풀에서 최대 64GB의 메모리에 액세스할 수 있습니다.|해당 사항 없음 <sup>5</sup> |
-|메모리의 페이지 잠금 운영 체제(OS) 권한(실제 메모리 잠금을 허용하여 잠긴 메모리의 OS 페이징 방지) <sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard, Enterprise 및 개발자 버전: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스에서 AWE 메커니즘을 사용하려면 필요합니다. AWE 메커니즘을 통해 할당된 메모리는 페이징할 수 없습니다. <br> AWE를 사용하지 않고 이 권한을 부여하면 서버에 영향을 주지 않습니다. | 필요한 경우, 즉 sqlservr 프로세스가 페이징 아웃되고 있다는 징후가 있는 경우에만 사용됩니다. 이 경우 오류 17890이 다음 예제와 유사한 Errorlog에 보고됩니다.`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
+|AWE 메커니즘( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 32비트 플랫폼의 프로세스 가상 주소 공간 제한을 초과할 수 있도록 허용) |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard, Enterprise 및 Developer 버전: 버퍼 풀이 최대 64GB의 메모리에 액세스할 수 있습니다.|해당 사항 없음 <sup>5</sup> |
+|메모리의 페이지 잠금 운영 체제(OS) 권한(실제 메모리 잠금을 허용하여 잠긴 메모리의 OS 페이징 방지) <sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard, Enterprise 및 Developer 버전: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스에서 AWE 메커니즘을 사용하는 데 필요합니다. AWE 메커니즘을 통해 할당된 메모리는 페이징할 수 없습니다. <br> AWE를 사용하지 않고 이 권한을 부여하면 서버에 영향을 주지 않습니다. | 필요한 경우, 즉 sqlservr 프로세스가 페이징 아웃되고 있다는 징후가 있는 경우에만 사용됩니다. 이 경우 오류 17890이 다음 예제와 유사한 Errorlog에 보고됩니다.`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
 
 <sup>1</sup> 32비트 버전은 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]부터 사용할 수 없습니다.  
 <sup>2</sup> /3gb는 운영 체제 부팅 매개 변수입니다. 자세한 내용은 MSDN 라이브러리를 참조하세요.  
@@ -71,7 +71,7 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 > 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 32비트 운영 체제에서 실행할 수 있었습니다. 32비트 운영 체제에서 4GB가 넘는 메모리에 액세스하려면 AWE(Address Windowing Extension)에서 메모리를 관리해야 합니다. 이는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 64비트 운영 체제에서 실행할 경우에는 필요하지 않습니다. AWE에 대한 자세한 내용은 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 설명서에서 [프로세스 주소 공간](https://msdn.microsoft.com/library/ms189334.aspx) 및 [큰 데이터베이스의 메모리 관리](https://msdn.microsoft.com/library/ms191481.aspx)를 참조하세요.   
 
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 메모리 관리로 변경
-이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)])에서는 5가지 메커니즘을 사용하여 메모리 할당이 수행되었습니다.
+이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)])에서는 5가지 메커니즘을 사용하여 메모리 할당이 수행되었습니다.
 -  **단일 페이지 할당자(SPA)**: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스에서 8KB 이하인 메모리 할당만 포함합니다. *max server memory(MB)* 및 *min server memory(MB)* 구성 옵션은 SPA가 사용한 실제 메모리의 한계를 결정했습니다. 버퍼 풀은 SPA의 메커니즘이자 동시에 가장 큰 단일 페이지 할당 소비자였습니다.
 -  **다중 페이지 할당자(MPA)**: 8KB 이상을 요청하는 메모리 할당입니다.
 -  **CLR 할당자**: SQL CLR 힙 및 CLR 초기화 중에 생성되는 전역 할당을 포함합니다.
@@ -103,8 +103,9 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 -  대용량 메모리 버퍼가 필요한 백업 작업.
 -  큰 입력 매개 변수를 저장해야 하는 추적 작업.
 
+<a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 "memory_to_reserve"로 변경
-이전 버전의 SQL Server([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)])에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 관리자는 **Multi-Page Allocator(MPA)**, **CLR 할당자**, SQL Server 프로세스에서 **스레드 스택**에 대한 메모리 할당, **Direct Windows 할당(DWA)** 으로 사용하기 위해 프로세스 가상 주소 공간(VAS)의 일부로 따로 지정했습니다. 가상 주소 공간의 이 부분은 "Mem-To-Leave" 또는 "non-Buffer Pool" 영역으로도 알려져 있습니다.
+이전 버전의 SQL Server([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)])에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 관리자는 **MPA(Multi-Page Allocator)**, **CLR 할당자**, SQL Server 프로세스에서 **스레드 스택**에 대한 메모리 할당, **DWA(Direct Windows 할당)** 로 사용하기 위해 프로세스 VAS(가상 주소 공간)의 일부로 따로 지정했습니다. 가상 주소 공간의 이 부분은 "Mem-To-Leave" 또는 "non-Buffer Pool" 영역으로도 알려져 있습니다.
 
 이러한 할당을 위해 예약된 가상 주소 공간은 _**memory\_to\_reserve**_ 구성 옵션에 의해 결정됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 사용하는 기본값은 256MB입니다. 기본값을 재정의하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g* 시작 매개 변수를 사용합니다. *-g* 시작 매개 변수에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](../database-engine/configure-windows/database-engine-service-startup-options.md)의 설명서 페이지를 참조하세요.
 
@@ -177,15 +178,15 @@ FROM sys.dm_os_process_memory;
 
 min server memory 및 max server memory 둘 모두에 같은 값이 지정된 경우 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에 할당된 메모리가 해당 값에 도달하면 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]는 버퍼 풀에 대한 메모리의 동적 해제 및 확보를 중지합니다.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스가 다른 응용 프로그램이 자주 중지되거나 시작되는 컴퓨터에서 실행 중인 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 의한 메모리 할당 및 할당 취소는 다른 응용 프로그램의 시작 시간을 늦출 수 있습니다. 또한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가 단일 컴퓨터에서 실행되는 여러 서버 애플리케이션 중 하나인 경우 시스템 관리자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 할당된 메모리 양을 제어해야 할 수도 있습니다. 이러한 경우 min server memory 및 max server memory 옵션을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가 사용할 수 있는 메모리 양을 제어할 수 있습니다. **min server memory** 및 **max server memory** 옵션은 MB 단위로 지정됩니다. 자세한 내용은 [Server Memory Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md)(서버 메모리 구성 옵션)를 참고하세요.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스가 다른 애플리케이션이 자주 중지되거나 시작되는 컴퓨터에서 실행 중인 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 의한 메모리 할당 및 할당 취소는 다른 애플리케이션의 시작 시간을 늦출 수 있습니다. 또한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가 단일 컴퓨터에서 실행되는 여러 서버 애플리케이션 중 하나인 경우 시스템 관리자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 할당된 메모리 양을 제어해야 할 수도 있습니다. 이러한 경우 min server memory 및 max server memory 옵션을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가 사용할 수 있는 메모리 양을 제어할 수 있습니다. **min server memory** 및 **max server memory** 옵션은 MB 단위로 지정됩니다. 자세한 내용은 [Server Memory Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md)(서버 메모리 구성 옵션)를 참고하세요.
 
 ## <a name="memory-used-by-sql-server-objects-specifications"></a>SQL Server 개체 사양에서 사용하는 메모리
 다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 다양한 개체에서 사용하는 대략적인 메모리 양을 설명합니다. 제시된 크기는 추정값이기 때문에 사용 중인 환경과 개체 생성 방법에 따라 다를 수 있습니다.
 
 * 잠금(잠금 관리자에 의해 유지 관리됨): 64바이트+32바이트(소유자당)   
-* 사용자 연결: 약 (3 \* network_packet_size + 94KB)    
+* 사용자 연결: 약(3 \*network_packet_size+94kb)    
 
-**네트워크 패킷 크기**는 응용 프로그램과 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 엔진 간의 통신에 사용하는 TDS(Tabular Data Stream) 패킷의 크기입니다. 기본 패킷 크기는 4KB이며 네트워크 패킷 크기 구성 옵션으로 제어됩니다.
+**네트워크 패킷 크기**는 애플리케이션과 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 엔진 간의 통신에 사용하는 TDS(Tabular Data Stream) 패킷의 크기입니다. 기본 패킷 크기는 4KB이며 네트워크 패킷 크기 구성 옵션으로 제어됩니다.
 
 다중 활성 결과 집합(MARS)을 사용할 수 있으면 사용자 연결은 약 (3 + 3 \*num_logical_connections)\* network_packet_size + 94KB입니다.
 
@@ -313,7 +314,7 @@ min server memory 및 max server memory 둘 모두에 같은 값이 지정된 �
 > TORN_PAGE_DETECTION은 리소스는 덜 사용하지만 CHECKSUM 보호를 최소한으로 제공합니다.
 
 ## <a name="understanding-non-uniform-memory-access"></a>NUMA(Non-Uniform Memory Access) 이해
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 NUMA(Non-Uniform Memory Access)를 인식하며 특수한 구성 없이 NUMA 하드웨어에서 원활하게 작동합니다. 클럭 속도와 프로세서 수가 증가할수록 이러한 추가 처리 능력을 사용하는 데 필요한 메모리 대기 시간을 줄이기가 더 어려워집니다. 이러한 문제를 피하기 위해 하드웨어 공급업체에서는 대용량의 L3 캐시를 제공하지만 이는 제한적인 해결책입니다. NUMA 아키텍처는 확장성 있는 솔루션으로 이 문제를 해결합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 응용 프로그램을 변경할 필요 없이 NUMA 기반 컴퓨터를 활용하도록 설계되었습니다. 자세한 내용은 [방법: 소프트 NUMA를 사용하도록 SQL Server 구성](../database-engine/configure-windows/soft-numa-sql-server.md)을 참조하세요.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 NUMA(Non-Uniform Memory Access)를 인식하며 특수한 구성 없이 NUMA 하드웨어에서 원활하게 작동합니다. 클럭 속도와 프로세서 수가 증가할수록 이러한 추가 처리 능력을 사용하는 데 필요한 메모리 대기 시간을 줄이기가 더 어려워집니다. 이러한 문제를 피하기 위해 하드웨어 공급업체에서는 대용량의 L3 캐시를 제공하지만 이는 제한적인 해결책입니다. NUMA 아키텍처는 확장성 있는 솔루션으로 이 문제를 해결합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 애플리케이션을 변경할 필요 없이 NUMA 기반 컴퓨터를 활용하도록 설계되었습니다. 자세한 내용은 [ 방법: 소프트 NUMA를 사용하도록 SQL Server 구성](../database-engine/configure-windows/soft-numa-sql-server.md)을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 [서버 메모리 서버 구성 옵션](../database-engine/configure-windows/server-memory-server-configuration-options.md)   

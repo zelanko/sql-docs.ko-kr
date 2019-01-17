@@ -16,12 +16,12 @@ ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7e4844a9bf0e265f52db634400383452cc99a5d9
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0f61e3417e44fad0ce25796e5e888bcfc2781206
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703841"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204282"
 ---
 # <a name="table-transact-sql"></a>table(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "51703841"
 나중에 처리하기 위해 결과 집합을 저장하는 데 사용할 수 있는 특별한 데이터 형식입니다. **테이블**은 주로 테이블 반환 함수의 결과 집합으로 반환되는 행 집합을 임시로 저장하는 데 사용됩니다. **테이블**은 주로 테이블 반환 함수의 결과 집합으로 반환되는 행 집합을 임시로 저장하는 데 사용됩니다. **테이블** 변수는 함수, 저장 프로시저 및 일괄 처리에 사용할 수 있습니다. **테이블** 유형의 변수를 선언하려면 [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)를 사용합니다.
   
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   

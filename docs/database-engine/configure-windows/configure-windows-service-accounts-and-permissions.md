@@ -51,12 +51,12 @@ ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c35e10e3ac81468a6add4bc1674fc6e56e126d42
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 32cf3ce9d4f128003f21fa049a5bc6a2603e164b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617733"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203822"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows 서비스 계정 및 권한 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "52617733"
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트** - 작업을 실행하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 모니터링하고 경고를 발생시키고 일부 관리 태스크의 자동화를 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 제공되지만 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]인스턴스에서 해제됩니다. 실행 파일 경로는 \<MSSQLPATH>\MSSQL\Binn\sqlagent.exe입니다.  
   
--   **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**  - 비즈니스 인텔리전스 응용 프로그램을 위한 OLAP(온라인 분석 처리) 및 데이터 마이닝 기능을 제공합니다. 실행 파일 경로는 \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe입니다.  
+-   **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**  - 비즈니스 인텔리전스 애플리케이션을 위한 OLAP(온라인 분석 처리) 및 데이터 마이닝 기능을 제공합니다. 실행 파일 경로는 \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe입니다.  
   
 -   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**  - 보고서를 관리, 실행, 작성, 예약 및 배달합니다. 실행 파일 경로는 \<MSSQLPATH>\Reporting Services\ReportServer\Bin\ReportingServicesService.exe입니다.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "52617733"
   
 -   **전체 텍스트 검색** - 구조화 또는 반구조화된 데이터의 내용 및 속성에 대한 전체 텍스트 인덱스를 생성하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 문서 필터링 및 단어 분리를 제공합니다.  
   
--   **SQL 기록기** - 백업 및 복원 응용 프로그램이 VSS(볼륨 섀도 복사본 서비스) 프레임워크에서 작동할 수 있도록 합니다.
+-   **SQL 기록기** - 백업 및 복원 애플리케이션이 VSS(볼륨 섀도 복사본 서비스) 프레임워크에서 작동할 수 있도록 합니다.
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller** - 여러 Distributed Replay Client 컴퓨터 간의 추적 재생 오케스트레이션을 제공합니다.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "52617733"
 
 ####  <a name="Changing_Accounts"></a> 계정 속성 변경
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  -   항상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 사용하여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스에 사용되는 계정을 변경하거나 계정의 암호를 변경할 수 있습니다. 계정 이름을 변경하는 것 외에도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 대한 서비스 마스터 키를 보호하는 Windows 로컬 보안 저장소 업데이트와 같은 추가 구성을 수행합니다. Windows 서비스 제어 관리자와 같은 다른 도구를 사용하면 계정 이름을 변경할 수 있지만 모든 필수 설정을 변경할 수 없습니다.  
 > -   SharePoint 팜에 배포한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 경우 항상 SharePoint 중앙 관리를 사용하여 [!INCLUDE[ssGeminiMTS](../../includes/ssgeminimts-md.md)] 애플리케이션 및 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]에 대한 서버 계정을 변경합니다. 관련 설정 및 사용 권한은 중앙 관리를 사용할 때 새로운 계정 정보를 사용할 수 있도록 업데이트됩니다.  
 > -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 옵션을 변경하려면 Reporting Services 구성 도구를 사용합니다.  
@@ -199,13 +199,13 @@ ms.locfileid: "52617733"
     |서비스|가상 계정 이름|  
     |-------------|--------------------------|  
     |[!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스의 기본 인스턴스|**NT SERVICE\MSSQLSERVER**|  
-    | [!INCLUDE[ssDE](../../includes/ssde-md.md)] 로 이름이 지정된 **로 이름이 지정된**서비스의 명명된 인스턴스|**NT SERVICE\MSSQL$PAYROLL**|  
+    |[!INCLUDE[ssDE](../../includes/ssde-md.md)] 로 이름이 지정된 **로 이름이 지정된**서비스의 명명된 인스턴스|**NT SERVICE\MSSQL$PAYROLL**|  
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스(기본 인스턴스: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|**NT SERVICE\SQLSERVERAGENT**|  
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PAYROLL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 이름이 지정된 **로 이름이 지정된**|**NT SERVICE\SQLAGENT$PAYROLL**|  
   
  관리 서비스 계정 및 가상 계정에 대한 자세한 내용은 **서비스 계정 단계별 가이드** 의 [관리 서비스 계정 및 가상 계정 개념](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx) 섹션과 [관리 서비스 계정 FAQ(질문과 대답)](https://technet.microsoft.com/library/ff641729\(WS.10\).aspx)를 참조하세요.  
   
- **보안 정보:** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] 가능하다면 [MSA](#MSA) 또는 [virtual account](#VA_Desc) 을 사용하세요. MSA 및 가상 계정을 사용할 수 없으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대해 공유 계정 대신 권한이 낮은 특정 사용자 계정 또는 도메인 계정을 사용하십시오. 서로 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대해서는 각각 별도의 계정을 사용하십시오. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정 또는 서비스 그룹에 추가 권한을 부여하지 마세요. 권한은 그룹 멤버 자격을 통해 부여되거나 서비스 SID에 직접 부여됩니다(서비스 SID가 지원되는 경우).  
+ **보안 정보:** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] 가능하다면 [MSA](#MSA) 또는 [가상 계정](#VA_Desc)을 사용하세요. MSA 및 가상 계정을 사용할 수 없으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대해 공유 계정 대신 권한이 낮은 특정 사용자 계정 또는 도메인 계정을 사용하십시오. 서로 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대해서는 각각 별도의 계정을 사용하십시오. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정 또는 서비스 그룹에 추가 권한을 부여하지 마세요. 권한은 그룹 멤버 자격을 통해 부여되거나 서비스 SID에 직접 부여됩니다(서비스 SID가 지원되는 경우).  
   
 ###  <a name="Auto_Start"></a> 자동 시작
 
@@ -213,7 +213,7 @@ ms.locfileid: "52617733"
   
 -   **사용 안 함** 서비스가 설치되어 있지만 현재 실행되지 않습니다.  
   
--   **수동** 서비스가 설치되어 있지만 다른 서비스 또는 응용 프로그램이 해당 기능을 필요로 하는 경우에만 시작됩니다.  
+-   **수동** 서비스가 설치되어 있지만 다른 서비스 또는 애플리케이션이 해당 기능을 필요로 하는 경우에만 시작됩니다.  
   
 -   **자동** 운영 체제에서 서비스를 자동으로 시작합니다.  
   
@@ -291,7 +291,7 @@ ms.locfileid: "52617733"
 |---------------------------------------|------------------------------------------------------------|
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT SERVICE\MSSQLSERVER**. 명명된 인스턴스: **NT SERVICE\MSSQL$** InstanceName.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)<br /><br /> SQL 기록기를 시작할 수 있는 권한<br /><br /> 이벤트 로그 서비스를 읽을 수 있는 권한<br /><br /> 원격 프로시저 호출 서비스를 읽을 수 있는 권한|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트:** \*<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT Service\SQLSERVERAGENT**. 명명된 인스턴스: **NT Service\SQLAGENT$**_InstanceName_.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)|  
-|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (로컬 Windows 그룹에는 모든 권한이 부여됩니다. 기본 인스턴스: **SQLServerMSASUser$**_ComputerName_**$MSSQLSERVER**. 명명된 인스턴스: **SQLServerMSASUser$**_ComputerName_**$**_InstanceName_. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 인스턴스: **SQLServerMSASUser$**_ComputerName_**$**_PowerPivot_)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> 테이블 형식에만 해당:<br /><br /> **프로세스 작업 집합 향상** (SeIncreaseWorkingSetPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)<br /><br /> **메모리의 페이지 잠금**(SeLockMemoryPrivilege) – 페이징이 전체적으로 해제된 경우에만 필요합니다.<br /><br /> 장애 조치(Failover) 클러스터 설치에만 해당:<br /><br /> **예약 우선 순위 증가** (SeIncreaseBasePriorityPrivilege)|  
+|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (로컬 Windows 그룹에는 모든 권한이 부여됩니다. 기본 인스턴스: **SQLServerMSASUser$**_ComputerName_**$MSSQLSERVER**. 명명된 인스턴스: **SQLServerMSASUser$**_ComputerName_**$**_InstanceName_. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 인스턴스: **SQLServerMSASUser$**_ComputerName_**$**_PowerPivot_.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> 테이블 형식에만 해당:<br /><br /> **프로세스 작업 집합 향상** (SeIncreaseWorkingSetPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)<br /><br /> **메모리의 페이지 잠금**(SeLockMemoryPrivilege) – 페이징이 전체적으로 해제된 경우에만 필요합니다.<br /><br /> 장애 조치(Failover) 클러스터 설치에만 해당:<br /><br /> **예약 우선 순위 증가** (SeIncreaseBasePriorityPrivilege)|  
 |**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT SERVICE\ReportServer**. 명명된 인스턴스: **NT SERVICE\\ReportServer$**_InstanceName_.)|**서비스로 로그온** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스 및 명명된 인스턴스: **NT SERVICE\MsDtsServer130**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 명명된 인스턴스에 대한 개별 프로세스가 없습니다.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> 애플리케이션 이벤트 로그에 기록할 수 있는 권한<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **인증 후 클라이언트 가장** (SeImpersonatePrivilege)|  
 |**전체 텍스트 검색:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT Service\MSSQLFDLauncher**. 명명된 인스턴스: **NT Service\ MSSQLFDLauncher$**_InstanceName_.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)|  
@@ -302,7 +302,7 @@ ms.locfileid: "52617733"
 |**PolyBase 엔진 및 DMS**| **서비스로 로그온** (SeServiceLogonRight)  |   
 |**실행 패드:**|**서비스로 로그온** (SeServiceLogonRight) <br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br />**트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br />**프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)|     
 |**R Services:** **SQLRUserGroup**(SQL 2016 및 2017)  |**로컬 로그온 허용** |   
-|**Machine Learning** '**모든 응용 프로그램 패키지’ [AppContainer]**(SQL 2019)  |SQL Server 'Binn', R_Services 및 PYTHON_Services 디렉터리에 대한 **읽기 및 실행 권한** |   
+|**Machine Learning** '**모든 애플리케이션 패키지’ [AppContainer]**(SQL 2019)  |SQL Server 'Binn', R_Services 및 PYTHON_Services 디렉터리에 대한 **읽기 및 실행 권한** |   
 
  \*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]의 인스턴스에서 사용할 수 없습니다.  
   

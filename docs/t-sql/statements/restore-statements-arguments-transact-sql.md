@@ -13,15 +13,15 @@ helpviewer_keywords:
 - RESTORE statement, arguments
 - RESTORE statement
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 78dfe43617d9a519b479e53abbabcf311d726b1d
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 48df9a641db478f58f2e7db1ec8b3477594d04eb
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980519"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242256"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 문 - 인수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -239,7 +239,7 @@ MOVE **'**_logical\_file\_name\_in\_backup_**'** TO **'**_operating\_system\_fil
   
  RESTORE LOG와 함께 사용할 경우 MOVE 옵션은 복원할 로그에 포함된 기간 동안 추가된 파일의 위치를 다시 지정하는 데만 사용할 수 있습니다. 예를 들어 로그 백업에 `file23` 파일에 대한 파일 추가 작업이 포함되면 이 파일의 위치는 RESTORE LOG에서 MOVE 옵션을 사용하여 다시 지정할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스냅숏 백업과 함께 사용할 경우, MOVE 옵션을 사용해서만 파일을 원본 blob와 동일한 저장소 계정 내에서 Azure blob으로 이동할 수 있습니다. MOVE 옵션을 사용하여 스냅숏 백업을 로컬 파일 또는 다른 저장소 계정으로 복원할 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스냅숏 백업과 함께 사용할 경우, MOVE 옵션을 사용해서만 파일을 원본 blob와 동일한 스토리지 계정 내에서 Azure blob으로 이동할 수 있습니다. MOVE 옵션을 사용하여 스냅숏 백업을 로컬 파일 또는 다른 스토리지 계정으로 복원할 수 없습니다.  
   
  동일한 서버에서 데이터베이스 위치를 다시 지정하거나 다른 서버에 데이터베이스를 복사하려는 경우 RESTORE VERIFYONLY 문을 사용하면 대상에 충분한 공간이 있는지 확인하고 기존 파일과의 충돌 가능성을 식별하는 데 MOVE 옵션이 필요할 수 있습니다.  
   
@@ -402,7 +402,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
 ##### <a name="monitoring-options"></a>모니터링 옵션  
  이러한 옵션을 사용하면 백업 장치로부터의 데이터 전송을 모니터링할 수 있습니다.  
   
- STATS [ **=** *percentage* ]  
+ STATS [ **=** _percentage_ ]  
  **지원 요소:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
  새로 백분율이 완료될 때마다 메시지를 표시하여 진행 상태를 측정하는 데 사용됩니다. *percentage*를 생략하면 대략 10%가 완료될 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 메시지를 표시합니다.  

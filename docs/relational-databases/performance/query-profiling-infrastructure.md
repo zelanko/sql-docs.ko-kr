@@ -5,17 +5,24 @@ ms.date: 11/26/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
-ms.topic: conceptual - "query plans [SQL Server]" - "execution plans [SQL Server]" - "query profiling" - "lightweight query profiling" - "lightweight profiling" - "lwp"
+ms.topic: conceptual
+helpviewer_keywords:
+- query plans [SQL Server]
+- execution plans [SQL Server]
+- query profiling
+- lightweight query profiling
+- lightweight profiling
+- lwp
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: e0ee0bc2c99d997d6a44d5ca0e9944e0ae4bfeb3
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 39f3d82d65eb0dd05b8459742febd67d2bc56790
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617253"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732030"
 ---
 # <a name="query-profiling-infrastructure"></a>쿼리 프로파일링 인프라
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +59,7 @@ ms.locfileid: "52617253"
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v1"></a>간단한 쿼리 실행 통계 프로파일링 인프라 v1
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 ~ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]). 
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 ~ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]). 
   
 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 간단한 프로파일링을 도입하여 실행 계획에 대한 정보를 수집하는 성능 오버헤드를 줄였습니다. 표준 프로파일링과는 달리, 간단한 프로파일링에서 CPU 런타임 정보를 수집하지 않습니다. 그러나 간단한 프로파일링에서는 여전히 행 수 및 I/O 사용 정보를 수집합니다.
 
@@ -76,13 +83,13 @@ WITH (MAX_MEMORY=4096 KB,
 ```
 
 > [!NOTE]
-> 쿼리 프로파일링의 성능 오버헤드에 자세한 내용은 [개발자 선택 사항: 쿼리 진행률 - 언제, 어디서나](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) 블로그 게시물을 참조하세요. 
+> 쿼리 프로파일링의 성능 오버헤드에 자세한 내용은 블로그 게시물 [개발자 선택 사항: 쿼리 진행률 - 언제, 어디서나](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)를 참조하세요. 
 
 *query_thread_profile* 이벤트를 사용하는 확장 이벤트 세션을 실행하면 간단한 프로파일링을 사용하여 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV도 채워지며, 따라서 [Activity Monitor](../../relational-databases/performance-monitor/activity-monitor.md)를 사용하여 또는 DMV를 직접 쿼리하여 모든 세션에 활성 쿼리 통계를 사용할 수 있습니다.
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v2"></a>간단한 쿼리 실행 통계 프로파일링 인프라 v2
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 ~ [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). 
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 ~ [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). 
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1에는 오버헤드를 최소화하도록 수정된 버전의 간단한 프로파일링이 포함되어 있습니다. 위의 *적용 대상*에 언급된 버전의 [추적 플래그 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 사용하여 간단한 프로파일링을 전역적으로 사용할 수도 있습니다. 새 DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)은 진행 중인 요청에 대한 쿼리 실행 계획을 반환하기 위해 도입되었습니다.
 
@@ -107,7 +114,7 @@ WITH (MAX_MEMORY=4096 KB,
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v3"></a>간단한 쿼리 실행 통계 프로파일링 인프라 v3
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작)
 
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에는 모든 실행의 행 수 정보를 수집하는 수정된 버전의 간단한 프로파일링이 포함되어 있습니다. 기본적으로 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 간단한 프로파일링이 사용되며 추적 플래그 7412는 영향을 주지 않습니다.
 
@@ -118,7 +125,7 @@ WITH (MAX_MEMORY=4096 KB,
 
 오버헤드가 적은 간단한 프로파일링 v2부터는 아직 CPU의 제약을 받지 않는 모든 서버는 간단한 프로파일링을 **지속적으로** 실행할 수 있으며, 데이터베이스 전문가는 언제든지 진행 중인 실행으로 이동할 수 있습니다. 예를 들어 Activity Monitor를 사용하여 또는 `sys.dm_exec_query_profiles`를 직접 쿼리하여 런타임 통계가 포함된 쿼리 계획을 가져올 수 있습니다.
 
-쿼리 프로파일링의 성능 오버헤드에 자세한 내용은 [개발자 선택 사항: 쿼리 진행률 - 언제, 어디서나](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) 블로그 게시물을 참조하세요. 
+쿼리 프로파일링의 성능 오버헤드에 자세한 내용은 블로그 게시물 [개발자 선택 사항: 쿼리 진행률 - 언제, 어디서나](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)를 참조하세요. 
 
 ## <a name="see-also"></a>참고 항목  
  [성능 모니터링 및 튜닝](../../relational-databases/performance/monitor-and-tune-for-performance.md)     

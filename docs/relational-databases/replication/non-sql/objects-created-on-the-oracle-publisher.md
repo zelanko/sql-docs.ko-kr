@@ -13,16 +13,16 @@ ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1dad91e3b387903cd170af8fc6f181fbc6a174e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b47b98a79427ed596d1ae90734e30a63f82b106
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642361"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214072"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objects Created on the Oracle Publisher
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제는 변경 내용 추적 및 전달을 사용할 수 있도록 Oracle 게시자에 데이터베이스 개체를 설치합니다.[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 Oracle 게시자에 이진 파일을 설치하지 않습니다. 다음 표에서는 Oracle 게시자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에서 게시자로 식별될 때 Oracle 게시자에서 생성된 개체를 나열합니다. 개체 설명은 정보 제공의 목적으로만 제공됩니다. 이러한 개체는 수정하면 안 됩니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제는 변경 내용 추적 및 전달을 사용할 수 있도록 Oracle 게시자에 데이터베이스 개체를 설치합니다([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 Oracle 게시자에 이진 파일을 설치하지 않음). 다음 표에서는 Oracle 게시자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에서 게시자로 식별될 때 Oracle 게시자에서 생성된 개체를 나열합니다. 개체 설명은 정보 제공의 목적으로만 제공됩니다. 이러한 개체는 수정하면 안 됩니다.  
   
 |개체 이름|개체 유형|설명|  
 |-----------------|-----------------|-----------------|  

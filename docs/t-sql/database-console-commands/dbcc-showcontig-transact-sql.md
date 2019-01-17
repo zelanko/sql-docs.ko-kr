@@ -24,12 +24,12 @@ ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 2d66330f4c575972b019d7df68cf0f1d00f2fab4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9ae3cd167b7f8b2dc633eb50063b4bcaee143acf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510716"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213852"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52510716"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)를 대신 사용합니다.  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -96,9 +96,9 @@ DBCC SHOWCONTIG
 |**검색한 익스텐트**|테이블이나 인덱스의 익스텐트 수입니다.|  
 |**익스텐트 스위치**|DBCC 문이 테이블이나 인덱스의 페이지를 이동한 동안 익스텐트 간에 이동한 횟수입니다.|  
 |**Avg. Pages per Extent**|페이지 체인에서 익스텐트당 페이지 수입니다.|  
-|**검색 밀도[최적:실제]**|백분율입니다. **Best Count** 대 **Actual Count**의 비율입니다. 모든 데이터가 인접한 경우 이 값은 100이고 이 값이 100보다 작으면 일부 데이터가 조각화된 것입니다.<br /><br /> **최적**은 모든 데이터가 인접해서 연결되어 있는 경우 이상적인 익스텐트 변경 횟수이고 **실제**는 실제 익스텐트 변경 횟수입니다.|  
+|**검색 밀도[최적: 실제]**|백분율입니다. **Best Count** 대 **Actual Count**의 비율입니다. 모든 데이터가 인접한 경우 이 값은 100이고 이 값이 100보다 작으면 일부 데이터가 조각화된 것입니다.<br /><br /> **최적**은 모든 데이터가 인접해서 연결되어 있는 경우 이상적인 익스텐트 변경 횟수이고 **실제**는 실제 익스텐트 변경 횟수입니다.|  
 |**논리 검색 조각화 상태**|인덱스의 리프 페이지 검색에서 반환된 순서가 잘못된 페이지의 비율입니다. 이 값은 힙과는 관계가 없습니다. 순서가 잘못된 페이지란 인덱스에 할당된 다음 물리적 페이지가 현재 리프 페이지의 다음 페이지 포인터가 가리키는 페이지와 다른 경우를 나타냅니다.|  
-|**익스텐트 검색 조각화 상태**|인덱스의 리프 페이지 검색에서 순서가 잘못된 익스텐트의 비율입니다. 이 값은 힙과는 관계가 없습니다. 순서가 잘못된 익스텐트란 인덱스의 현재 페이지가 들어 있는 익스텐트가 실제로 인덱스의 이전 페이지가 들어 있는 익스텐트의 다음 익스텐트가 아닌 경우입니다.<br /><br /> 인덱스가 여러 파일에 걸쳐 있을 경우 이 값은 의미가 없습니다.|  
+|**익스텐트 검색 조각화 상태**|인덱스의 리프 페이지 검색에서 순서가 잘못된 익스텐트의 비율입니다. 이 값은 힙과는 관계가 없습니다. 순서가 잘못된 익스텐트란 인덱스의 현재 페이지가 들어 있는 익스텐트가 실제로 인덱스의 이전 페이지가 들어 있는 익스텐트의 다음 익스텐트가 아닌 경우입니다.<br /><br /> 참고: 인덱스가 여러 파일에 걸쳐 있을 경우 이 값은 의미가 없습니다.|  
 |**Avg. Bytes Free per Page**|검색된 페이지에서 사용 가능한 평균 바이트 수입니다. 이 값이 클수록 페이지의 사용률이 낮습니다. 인덱스의 임의 삽입 횟수가 적은 경우 이 값이 작은 것이 좋습니다. 이 값은 행 크기에 따라 달라지며 행 크기가 크면 값이 커집니다.|  
 |**Avg. Page density (full)**|평균 페이지 밀도입니다(백분율). 이 값은 행 크기의 영향을 받습니다. 따라서 이 값은 페이지의 꽉 찬 정도를 보다 정확하게 반영합니다. 이 백분율 값이 클수록 좋습니다.|  
   
@@ -132,7 +132,7 @@ TABLERESULTS를 지정하면 DBCC SHOWCONTIG가 다음 열을 반환하고 이�
 |**BestCount**|모든 데이터가 인접해서 연결되어 있는 경우 이상적인 익스텐트 변경 횟수가 됩니다.|  
 |**ActualCount**|실제 익스텐트 변경 횟수입니다.|  
 |**LogicalFragmentation**|인덱스의 리프 페이지 검색에서 반환된 순서가 잘못된 페이지의 비율입니다. 이 값은 힙과는 관계가 없습니다. 순서가 잘못된 페이지란 인덱스에 할당된 다음 물리적 페이지가 현재 리프 페이지의 다음 페이지 포인터가 가리키는 페이지와 다른 경우를 나타냅니다.|  
-|**ExtentFragmentation**|인덱스의 리프 페이지 검색에서 순서가 잘못된 익스텐트의 비율입니다. 이 값은 힙과는 관계가 없습니다. 순서가 잘못된 익스텐트란 인덱스의 현재 페이지가 들어 있는 익스텐트가 실제로 인덱스의 이전 페이지가 들어 있는 익스텐트의 다음 익스텐트가 아닌 경우입니다.<br /><br /> 인덱스가 여러 파일에 걸쳐 있을 경우 이 값은 의미가 없습니다.|  
+|**ExtentFragmentation**|인덱스의 리프 페이지 검색에서 순서가 잘못된 익스텐트의 비율입니다. 이 값은 힙과는 관계가 없습니다. 순서가 잘못된 익스텐트란 인덱스의 현재 페이지가 들어 있는 익스텐트가 실제로 인덱스의 이전 페이지가 들어 있는 익스텐트의 다음 익스텐트가 아닌 경우입니다.<br /><br /> 참고: 인덱스가 여러 파일에 걸쳐 있을 경우 이 값은 의미가 없습니다.|  
   
 WITH TABLERESULTS와 FAST를 지정할 때의 결과 집합은 다음 열이 Null 값을 가진다는 점을 제외하면 WITH TABLERESULTS를 지정할 때와 동일합니다.
 
@@ -225,7 +225,7 @@ DBCC SHOWCONTIG ('Production.Product', 1) WITH FAST;
 GO  
 ```  
   
-### <a name="d-displaying-the-full-result-set-for-every-index-on-every-table-in-a-database"></a>4. 데이터베이스의 모든 테이블의 모든 인덱스에 대한 전체 결과 집합 표시  
+### <a name="d-displaying-the-full-result-set-for-every-index-on-every-table-in-a-database"></a>D. 데이터베이스의 모든 테이블의 모든 인덱스에 대한 전체 결과 집합 표시  
 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 있는 모든 테이블의 모든 인덱스에 대한 전체 테이블 결과 집합을 반환합니다.
   
 ```sql  
@@ -235,7 +235,7 @@ DBCC SHOWCONTIG WITH TABLERESULTS, ALL_INDEXES;
 GO  
 ```  
   
-### <a name="e-using-dbcc-showcontig-and-dbcc-indexdefrag-to-defragment-the-indexes-in-a-database"></a>5. DBCC SHOWCONTIG 및 DBCC INDEXDEFRAG를 사용하여 데이터베이스에서 인덱스 조각 모음 수행  
+### <a name="e-using-dbcc-showcontig-and-dbcc-indexdefrag-to-defragment-the-indexes-in-a-database"></a>E. DBCC SHOWCONTIG 및 DBCC INDEXDEFRAG를 사용하여 데이터베이스에서 인덱스 조각 모음 수행  
 다음 예에서는 데이터베이스에서 선언된 임계값 이상으로 조각화된 모든 인덱스에 조각 모음을 수행하는 간단한 방법을 보여 줍니다.
   
 ```sql

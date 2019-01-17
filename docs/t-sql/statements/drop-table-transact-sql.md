@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c6d1a10da586bedb0356bd0fd6eab2ababe03a4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c0bb145c668022c310a159455a77c9065635c99d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703612"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201529"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,7 +76,7 @@ DROP TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
  database_name이 현재 데이터베이스이거나 database_name이 tempdb이고 object_name이 #으로 시작하는 경우 Microsoft Azure SQL Database는 세 부분으로 구성된 이름 형식 database_name.[schema_name].object_name을 지원합니다. Microsoft Azure SQL Database는 네 부분으로 구성된 이름을 지원하지 않습니다.  
   
  *IF EXISTS*  
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  이미 있는 경우에만 테이블을 조건부로 삭제합니다.  
   
@@ -140,9 +140,9 @@ SELECT * FROM #temptable;
   
 ```  
   
-### <a name="d-dropping-a-table-using-if-exists"></a>4. IF EXISTS를 사용하여 테이블 삭제  
+### <a name="d-dropping-a-table-using-if-exists"></a>D. IF EXISTS를 사용하여 테이블 삭제  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  다음 예에서는 T1이라는 리소스 풀을 만듭니다. 다음으로 두 번째 문이 삭제됩니다. 세 번째 문은 테이블이 이미 삭제되었으므로 아무런 작업도 수행하지 않지만 오류는 발생하지 않습니다.  
   

@@ -22,12 +22,12 @@ ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1666835b53c72844aeb63cf48db5bde749e2b5ec
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e727fa9d1042fc40b70872b948f1723c7eaaddcf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703622"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212372"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
  sys.messages에 저장된 메시지의 ID입니다. *msg_number*가 <= 13000이거나 메시지가 sys.messages에 없는 경우 NULL을 반환합니다.  
   
  *msg_string*  
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  작은 따옴표로 묶고 매개 변수 값 자리 표시자가 포함된 문자열입니다. 오류 메시지는 최대 2,047자까지 지정할 수 있습니다. 메시지의 문자가 2,048자 이상이면 처음 2,044자만 표시되고 메시지가 잘렸음을 나타내기 위해 줄임표가 추가됩니다. 내부 저장 방식의 특성상 대체 매개 변수는 출력에 표시되는 것보다 더 많은 수의 문자를 사용합니다.  메시지 문자열의 구조 및 문자열의 매개 변수 사용에 대한 자세한 내용은 [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)에서 *msg_str* 인수에 대한 설명을 참조하세요.  
   
@@ -78,7 +78,7 @@ SELECT @var1;
   
 ### <a name="b-example-with-a-message-string"></a>2. 메시지 문자열 사용 예  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  다음 예는 입력으로 문자열을 사용합니다.  
   

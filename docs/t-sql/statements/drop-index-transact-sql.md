@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 833775d4ab032724eb76f80ed51b2548d29bd875
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fdb2e2dc081bce539bf2671e14993281d2415b98
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701758"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206232"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "51701758"
   
  DROP INDEX 문은 PRIMARY KEY 또는 UNIQUE 제약 조건을 정의함으로써 생성된 인덱스에는 적용되지 않습니다. 제약 조건과 해당 인덱스를 제거하려면 DROP CONSTRAINT 절과 함께 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)을 사용합니다.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  `<drop_backward_compatible_index>`에 정의된 구문은 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서 제거될 예정입니다. 새 개발 작업에서는 이 구문을 사용하지 말고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. 대신 `<drop_relational_or_xml_index>`에 지정된 구문을 사용하세요. XML 인덱스는 이전 버전과의 호환을 위한 구문을 사용하여 삭제할 수 없습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -115,7 +115,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
 ## <a name="arguments"></a>인수  
  *IF EXISTS*  
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  이미 있는 경우에만 인덱스를 조건부로 삭제합니다.  
   
@@ -202,7 +202,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  **"** default **"**  
  결과 테이블의 기본 위치를 지정합니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  이 컨텍스트에서 default는 키워드가 아니라 기본 파일 그룹에 대한 식별자이므로 MOVE TO **"** default **"** 또는 MOVE TO **[** default **]** 와 같이 구분되어야 합니다. **"** default **"** 를 지정하면 현재 세션에 대한 QUOTED_IDENTIFIER 옵션이 ON으로 설정되어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
   
  FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* | **"** default **"** }  
@@ -221,7 +221,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  **"** default **"**  
  FILESTREAM 데이터의 기본 위치를 지정합니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  이 컨텍스트에서 default는 키워드가 아니라 기본 파일 그룹에 대한 식별자이므로 MOVE TO **"** default **"** 또는 MOVE TO **[** default **]** 와 같이 구분되어야 합니다. "default"를 지정하면 현재 세션의 QUOTED_IDENTIFIER 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
   
 ## <a name="remarks"></a>Remarks  
@@ -305,7 +305,7 @@ DROP INDEX AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate
 GO  
 ```  
   
-### <a name="d-dropping-a-clustered-index-online-and-moving-the-table-to-a-new-filegroup"></a>4. 온라인으로 클러스터형 인덱스 삭제 및 새 파일 그룹으로 테이블 이동  
+### <a name="d-dropping-a-clustered-index-online-and-moving-the-table-to-a-new-filegroup"></a>D. 온라인으로 클러스터형 인덱스 삭제 및 새 파일 그룹으로 테이블 이동  
  다음 예에서는 `NewGroup` 절을 사용하여 온라인으로 클러스터형 인덱스를 삭제하고 결과 테이블을 `MOVE TO` 파일 그룹으로 옮깁니다. 테이블을 이동하기 전과 이동한 후에 파일 그룹에서의 인덱스 및 테이블 배치를 확인하기 위해 `sys.indexes`, `sys.tables`및 `sys.filegroups` 카탈로그 뷰를 쿼리합니다. ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 DROP INDEX IF EXISTS 구문을 사용할 수 있습니다.)  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
@@ -358,7 +358,7 @@ FROM sys.indexes AS i
 GO  
 ```  
   
-### <a name="e-dropping-a-primary-key-constraint-online"></a>5. 온라인으로 PRIMARY KEY 제약 조건 삭제  
+### <a name="e-dropping-a-primary-key-constraint-online"></a>E. 온라인으로 PRIMARY KEY 제약 조건 삭제  
  PRIMARY KEY 또는 UNIQUE 제약 조건 생성 결과로 생성된 인덱스는 DROP INDEX를 사용하여 삭제할 수 없습니다. 이러한 인덱스는 ALTER TABLE DROP CONSTRAINT 문을 사용하여 삭제할 수 있습니다. 자세한 내용은 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.  
   
  다음 예에서는 제약 조건을 삭제하여 PRIMARY KEY 제약 조건을 가진 클러스터형 인덱스를 삭제합니다. `ProductCostHistory` 테이블에는 FOREIGN KEY 제약 조건이 없습니다. 제약 조건이 있을 경우 제약 조건을 먼저 제거해야 합니다.  
@@ -370,7 +370,7 @@ DROP CONSTRAINT PK_TransactionHistoryArchive_TransactionID
 WITH (ONLINE = ON);  
 ```  
   
-### <a name="f-dropping-an-xml-index"></a>6. XML 인덱스 삭제  
+### <a name="f-dropping-an-xml-index"></a>F. XML 인덱스 삭제  
  다음 예에서는 `ProductModel` 데이터베이스에서 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블의 XML 인덱스를 삭제합니다.  
   
 ```  
@@ -378,7 +378,7 @@ DROP INDEX PXML_ProductModel_CatalogDescription
     ON Production.ProductModel;  
 ```  
   
-### <a name="g-dropping-a-clustered-index-on-a-filestream-table"></a>7. FILESTREAM 테이블에서 클러스터형 인덱스 삭제  
+### <a name="g-dropping-a-clustered-index-on-a-filestream-table"></a>G. FILESTREAM 테이블에서 클러스터형 인덱스 삭제  
  다음 예에서는 클러스터형 인덱스를 온라인으로 삭제하고 `MyPartitionScheme` 절과 `MOVE TO` 절을 모두 사용하여 테이블(힙) 결과 및 FILESTREAM 데이터를 `FILESTREAM ON` 파티션 구성표로 이동합니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  

@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e89d2803fda21563b69bb2ba658df2f9a8f0bef
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7a06414a9ca09ecfd02438827cbee6645ca381ae
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545449"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215389"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL) 
 
@@ -668,7 +668,7 @@ Windows 호환 디렉터리 이름입니다. 이 이름은 [!INCLUDE[ssNoVersion
   
 **\<mixed_page_allocation_option> ::=**  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)). 
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)). 
   
 MIXED_PAGE_ALLOCATION { OFF | ON }은 데이터베이스가 테이블이나 인덱스의 첫 8페이지에 대해 혼합 익스텐트를 사용하여 초기 페이지를 만들 수 있을지 여부를 제어합니다.  
  
@@ -695,7 +695,7 @@ FORCED
   
 **\<query_store_options> ::=**  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 ON | OFF | CLEAR [ ALL ]  
 이 데이터베이스에서 쿼리 저장소를 사용 여부를 제어하고 쿼리 저장소의 내용 제거를 제어합니다. 자세한 내용은 [쿼리 스토리지 사용 시나리오](../../relational-databases/performance/query-store-usage-scenarios.md)를 참조하세요. 
@@ -1218,7 +1218,7 @@ GO
 |-------------------- |------------------------  |----------|  
 |AdventureWorks2012   |1                        | ON |  
   
-### <a name="d-enabling-modifying-and-disabling-change-tracking"></a>4. 변경 내용 추적 설정, 수정 및 해제  
+### <a name="d-enabling-modifying-and-disabling-change-tracking"></a>D. 변경 내용 추적 설정, 수정 및 해제  
 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 변경 내용 추적을 설정하고 보존 기간을 `2` 일로 설정합니다.  
   
 ```sql  
@@ -1241,8 +1241,8 @@ ALTER DATABASE AdventureWorks2012
 SET CHANGE_TRACKING = OFF;  
 ```  
   
-### <a name="e-enabling-the-query-store"></a>5. 쿼리 저장소를 사용하도록 설정  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+### <a name="e-enabling-the-query-store"></a>E. 쿼리 저장소를 사용하도록 설정  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 다음 예제에서는 쿼리 저장소를 사용하도록 설정하고 쿼리 저장소 매개 변수를 구성합니다.  
   
@@ -2030,7 +2030,7 @@ ALTER DATABASE AdventureWorks2012
 SET CHANGE_TRACKING = OFF;  
 ```  
   
-### <a name="d-enabling-the-query-store"></a>4. 쿼리 저장소를 사용하도록 설정  
+### <a name="d-enabling-the-query-store"></a>D. 쿼리 저장소를 사용하도록 설정  
   
 다음 예제에서는 쿼리 저장소를 사용하도록 설정하고 쿼리 저장소 매개 변수를 구성합니다.  
   
@@ -2732,7 +2732,7 @@ ALTER DATABASE AdventureWorks2012
 SET CHANGE_TRACKING = OFF;  
 ```  
   
-### <a name="d-enabling-the-query-store"></a>4. 쿼리 저장소를 사용하도록 설정  
+### <a name="d-enabling-the-query-store"></a>D. 쿼리 저장소를 사용하도록 설정  
   
 다음 예제에서는 쿼리 저장소를 사용하도록 설정하고 쿼리 저장소 매개 변수를 구성합니다.  
   

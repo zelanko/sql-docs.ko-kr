@@ -23,12 +23,12 @@ ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73eed98ef8b7d6c8f842431d5ebc5f1ea846e8c0
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b163dd722797a7d3c4ec3fdec0551350005507ee
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642210"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203962"
 ---
 # <a name="working-with-variables-programmatically"></a>프로그래밍 방식으로 변수 사용
   변수는 패키지, 컨테이너, 태스크 및 이벤트 처리기에서 동적으로 값을 설정하고 프로세스를 제어하는 데 사용됩니다. 선행 제약 조건에서 변수를 사용하여 다른 태스크로의 데이터 흐름 방향을 제어할 수도 있습니다. 다음과 같은 다양한 용도로 변수를 사용할 수 있습니다.  
@@ -159,7 +159,7 @@ End Module
  범위가 **System** 네임스페이스인 모든 변수는 패키지에서 사용할 수 있습니다. 자세한 내용은 [System Variables](../../integration-services/system-variables.md)을 참조하세요.  
   
 ## <a name="namespaces"></a>네임스페이스  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)])에서는 변수가 존재하는 두 개의 기본 네임스페이스인 **User** 및 **System** 네임스페이스를 제공합니다. 기본적으로 개발자가 만드는 모든 사용자 지정 변수는 **User** 네임스페이스에 추가됩니다. 시스템 변수는 **System** 네임스페이스에 있습니다. **User** 네임스페이스 외의 추가 네임스페이스를 만들어 사용자 지정 변수를 저장하거나, **User** 네임스페이스의 이름을 변경할 수는 있지만 **System** 네임스페이스의 변수를 추가 또는 수정하거나, 시스템 변수를 다른 네임스페이스에 할당할 수는 없습니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]([!INCLUDE[ssIS](../../includes/ssis-md.md)])에서는 변수가 존재하는 두 개의 기본 네임스페이스인 **User** 및 **System** 네임스페이스를 제공합니다. 기본적으로 개발자가 만드는 모든 사용자 지정 변수는 **User** 네임스페이스에 추가됩니다. 시스템 변수는 **System** 네임스페이스에 있습니다. **User** 네임스페이스 외의 추가 네임스페이스를 만들어 사용자 지정 변수를 저장하거나, **User** 네임스페이스의 이름을 변경할 수는 있지만 **System** 네임스페이스의 변수를 추가 또는 수정하거나, 시스템 변수를 다른 네임스페이스에 할당할 수는 없습니다.  
   
  사용할 수 있는 시스템 변수는 컨테이너 유형에 따라 달라집니다. 패키지, 컨테이너, 태스크 및 이벤트 처리기에서 사용할 수 있는 시스템 변수의 목록은 [시스템 변수](../../integration-services/system-variables.md)를 참조하세요.  
   

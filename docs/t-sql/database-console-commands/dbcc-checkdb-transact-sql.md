@@ -35,12 +35,12 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: f5d0da7fb7b4515875b456eac380a6f5e0588e55
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cd332393a0d605f2ae0e519e6a449fe49bff3477
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420434"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215772"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD
     
 REPAIR_ALLOW_DATA_LOSS  
  보고된 모든 오류를 복구합니다. 이러한 복구를 수행하면 일부 데이터가 손실될 수 있습니다.  
-    
+    
 > [!WARNING]
 > REPAIR_ALLOW_DATA_LOSS 옵션은 지원되는 기능이지만, 데이터베이스를 물리적으로 일관된 상태로 전환하는 것이 항상 가장 적합한 옵션인 것은 아닙니다. 성공할 경우 REPAIR_ALLOW_DATA_LOSS 옵션 때문에 일부 데이터가 손실될 수 있습니다. 실제로 사용자가 마지막으로 알려진 성공한 백업으로부터 데이터베이스를 복원했던 것보다 더 많은 데이터가 손실될 수 있습니다. 
 >
@@ -133,7 +133,7 @@ NO_INFOMSGS
     
 TABLOCK  
  내부 데이터베이스 스냅숏을 사용하는 대신 DBCC CHECKDB가 잠금을 가져오도록 합니다. 여기에는 데이터베이스에 대한 단기 배타(X) 잠금이 포함됩니다. TABLOCK을 사용하면 데이터베이스에 로드가 많은 상황에서 DBCC CHECKDB가 더 빠르게 실행됩니다. 그러나 DBCC CHECKDB가 실행되는 동안 데이터베이스의 동시 사용 가능성은 줄어듭니다.  
-    
+    
 > [!IMPORTANT] 
 > TABLOCK은 수행되는 검사를 제한합니다. 데이터베이스에 대해 DBCC CHECKCATALOG가 실행되지 않으며 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 데이터의 유효성이 검사되지 않습니다.
     
@@ -155,14 +155,14 @@ PHYSICAL_ONLY
 DATA_PURITY  
  DBCC CHECKDB가 데이터베이스에서 올바르지 않거나 범위를 벗어난 열 값을 검사하도록 합니다. 예를 들어 DBCC CHECKDB는 **datetime** 데이터 형식으로 허용 가능한 범위보다 크거나 작은 날짜 및 시간 값을 가진 열을 검색하거나, 올바르지 않은 소수 자릿수 또는 전체 자릿수 값을 가진 **소수** 또는 근사값 데이터 형식의 열을 검색할 수 있습니다.  
  기본적으로 열 값 무결성 검사가 사용되며 DATA_PURITY 옵션은 필요하지 않습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 업그레이드한 데이터베이스의 경우에는 DBCC CHECKDB WITH DATA_PURITY가 데이터베이스에서 오류 없이 실행되기 전까지는 열 값 검사가 기본적으로 사용되지 않습니다. 이 옵션이 성공적으로 실행되면 DBCC CHECKDB는 기본적으로 열 값 무결성을 검사합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스를 업그레이드함에 따라 CHECKDB가 어떤 영향을 받는지에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 주의 섹션을 참조하십시오.  
-    
+    
 > [!WARNING]
 > PHYSICAL_ONLY를 지정하면 열 무결성 검사는 수행되지 않습니다.
     
- 이 옵션에서 보고된 유효성 검사 오류는 DBCC 복구 옵션을 사용하여 수정할 수 없습니다. 이러한 오류를 수동으로 수정하는 방법은 기술 자료 문서 923247: [SQL Server 2005 이상에서 DBCC 오류 2570 문제 해결](https://support.microsoft.com/kb/923247)을 참조하세요.  
+ 이 옵션에서 보고된 유효성 검사 오류는 DBCC 복구 옵션을 사용하여 수정할 수 없습니다. 이러한 오류를 수동으로 수정하는 방법은 기술 자료 문서 923247: [SQL Server 2005 이상 버전에서 DBCC 오류 2570 문제 해결](https://support.microsoft.com/kb/923247)을 참조하세요.  
     
  MAXDOP  
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
     
  명령문에 대한 **sp_configure**의 **최대 병렬 처리 수준** 구성 옵션을 재정의합니다. MAXDOP은 sp_configure로 구성한 값을 초과할 수 있습니다. MAXDOP가 Resource Governor로 구성한 값을 초과하면 [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)]가 [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md)에서 설명한 Resource Governor MAXDOP 값을 사용합니다. max degree of parallelism 구성 옵션에 사용된 모든 의미 체계 규칙을 MAXDOP 쿼리 힌트 사용 시 적용할 수 있습니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
  

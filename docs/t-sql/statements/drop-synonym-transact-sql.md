@@ -22,12 +22,12 @@ ms.assetid: 23578932-e4de-4c39-a5a0-ce45139c4269
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b4704b1fdb9181e8abd9f800da7c57a7973d2090
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f44ba9c4d2b882e97b397fdf959c41d7a9b35fbf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701241"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213142"
 ---
 # <a name="drop-synonym-transact-sql"></a>DROP SYNONYM(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
   
 ## <a name="arguments"></a>인수  
  *IF EXISTS*  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658))
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
  이미 있는 경우에만 동의어를 조건부로 삭제합니다.  
   

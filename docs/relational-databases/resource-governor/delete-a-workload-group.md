@@ -10,25 +10,25 @@ helpviewer_keywords:
 - workload groups [SQL Server], delete
 - Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: ca79a8ca6510431714ccd9a2f37bb322ebb75b56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26ce42d2c28fcb991ac8127b8806cde4156fa4d6
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638861"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380414"
 ---
 # <a name="delete-a-workload-group"></a>작업 그룹 삭제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 Transact-SQL을 사용하여 작업 그룹 또는 리소스 풀을 삭제할 수 있습니다.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions), [사용 권한](#Permissions)  
   
--   **작업 그룹을 삭제하려면:**  [개체 탐색기](#DelWGObjEx), [리소스 관리자 속성](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
+-   **작업 그룹을 삭제하려면 다음을 사용합니다.**  [개체 탐색기](#DelWGObjEx), [Resource Governor 속성](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
  활성 세션이 들어 있는 작업 그룹은 삭제할 수 없습니다.  
   
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
@@ -93,7 +93,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [관리](../../relational-databases/resource-governor/resource-governor.md)   
+ [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)   
  [리소스 풀 만들기](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [작업 그룹 만들기](../../relational-databases/resource-governor/create-a-workload-group.md)   
  [리소스 풀 삭제](../../relational-databases/resource-governor/delete-a-resource-pool.md)   

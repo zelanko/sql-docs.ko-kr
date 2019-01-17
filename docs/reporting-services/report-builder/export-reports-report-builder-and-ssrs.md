@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5bf5375edaa73a280bb2332e21c0bde50d304832
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 5be30a3d5a7461c728bdcf67b5de07a18d929704
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813926"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211259"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>보고서 내보내기(보고서 작성기 및 SSRS)
 
@@ -23,13 +23,13 @@ ms.locfileid: "51813926"
   
  보고서를 내보내면 다음을 수행할 수 있습니다.  
   
--   **다른 응용 프로그램에서 보고서 데이터로 작업.** 예를 들어 보고서를 Excel로 내보낸 다음 Excel에서 해당 데이터를 사용하여 계속 작업할 수 있습니다.  
+-   **다른 애플리케이션에서 보고서 데이터로 작업.** 예를 들어 보고서를 Excel로 내보낸 다음 Excel에서 해당 데이터를 사용하여 계속 작업할 수 있습니다.  
   
 -   **다른 형식으로 보고서 인쇄.** 예를 들어 보고서를 PDF 파일 형식으로 내보낸 다음 인쇄할 수 있습니다.  
   
 -   **다른 파일 유형으로 보고서 복사본 저장.** 예를 들어 보고서의 복사본을 만들어 Word로 내보낸 다음 저장할 수 있습니다.  
   
--   **응용 프로그램에서 보고서 데이터를 데이터 피드로 사용.** 예를 들어 파워 피벗 또는 Power BI에서 사용할 수 있는 Atom 규격 데이터 피드를 생성한 다음 파워 피벗 또는 Power BI에서 이 데이터로 작업할 수 있습니다. 자세한 내용은 [보고서에서 데이터 피드 생성](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)을 참조하세요.  
+-   **애플리케이션에서 보고서 데이터를 데이터 피드로 사용.** 예를 들어 파워 피벗 또는 Power BI에서 사용할 수 있는 Atom 규격 데이터 피드를 생성한 다음 파워 피벗 또는 Power BI에서 이 데이터로 작업할 수 있습니다. 자세한 내용은 [보고서에서 데이터 피드 생성](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)을 참조하세요.  
   
 -   보고서 서버에서 보고서를 렌더링하면 구독을 설정하려는 경우나 전자 메일을 통해 보고서를 배달하려는 경우 또는 보고서 서버에서 사용할 수 있도록 보고서를 저장하려는 경우에 도움이 됩니다. 자세한 내용은 [구독 및 배달&#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)을 참조하세요.  
   
@@ -103,11 +103,11 @@ ms.locfileid: "51813926"
   
 -   **소프트 페이지 나누기 렌더러 확장 프로그램** 소프트 페이지 나누기 렌더링 확장 프로그램에서는 보고서 레이아웃과 서식이 유지됩니다. 이렇게 내보낸 파일은 웹 페이지나 **ReportViewer** 컨트롤 같은 화면 중심의 보기 및 배달용으로 최적화됩니다.  
   
-     지원되는 소프트 페이지 나누기 렌더링 확장 프로그램은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 및 웹 보관 파일(MHTML)입니다.  
+     지원되는 소프트 페이지 나누기 렌더링 확장 프로그램은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 및 MHTML(웹 보관 파일)입니다.  
   
 -   **하드 페이지 나누기 렌더링 확장 프로그램** 하드 페이지 나누기 렌더러 확장 프로그램에서는 보고서 레이아웃과 서식이 유지됩니다. 생성되는 파일은 인쇄 환경을 일정하게 유지하거나 온라인에서 책 형태로 보고서를 볼 수 있도록 최적화됩니다.  
   
-     지원되는 하드 페이지 나누기 렌더링 확장 프로그램은 TIFF 및 PDF입니다.  
+     지원되는 하드 페이지 나누기 렌더링 확장 프로그램은 TIFF와 PDF입니다.  
   
 ##  <a name="ExportFormats"></a> 보고서를 보는 중에 내보낼 수 형식  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 다양한 형식으로 보고서를 렌더링하는 렌더링 확장 프로그램을 제공합니다. 선택한 파일 형식에 맞게 보고서 디자인을 최적화해야 합니다.  다음 표에는 사용자 인터페이스에서 내보낼 수 형식이 나와 있습니다.  URL에 액세스하여 내보내는 경우 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독에서 내보내는 경우에는 추가 형식을 사용할 수 있습니다.  이 항목의 [보고서를 내보내는 다른 방법](#OtherWaysExportingReports)섹션을 참조하세요.  
@@ -125,7 +125,7 @@ ms.locfileid: "51813926"
 |XML|데이터|XML 렌더링 확장 프로그램은 보고서를 XML 형식으로 반환합니다. 보고서의 XML 스키마는 보고서마다 고유하며 데이터만 포함합니다. 레이아웃 정보는 렌더링되지 않으며 페이지 번호는 XML 렌더링 확장 프로그램을 통해 유지되지 않습니다. 이 확장 프로그램에서 생성된 XML은 데이터베이스로 가져오거나 XML 데이터 메시지로 사용하거나 사용자 지정 애플리케이션으로 전송할 수 있습니다.<br/><br/> 자세한 내용은 [XML로 내보내기](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)를 참조하세요.|  
   
 ##  <a name="GeneratingDataFeedsFromReport"></a> 보고서에서 데이터 피드 생성  
- 보고서에서 데이터 피드를 생성하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털에서 보고서를 실행한 다음 웹 포털 도구 모음에서 **데이터 피드 생성** 아이콘을 클릭합니다. 파일을 저장할지, 아니면 열지를 선택하라는 메시지가 나타납니다. **열기**를 선택하면 .atomsvc 파일 확장명과 연결된 응용 프로그램에서 Atom 서비스 문서가 열리고, **저장**을 선택하면 문서가 .atomsvc 파일로 저장됩니다. 기본적으로 이 파일의 이름은 보고서의 이름입니다. 이 이름은 보다 의미 있는 이름으로 변경할 수 있습니다.  
+ 보고서에서 데이터 피드를 생성하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털에서 보고서를 실행한 다음 웹 포털 도구 모음에서 **데이터 피드 생성** 아이콘을 클릭합니다. 파일을 저장할지, 아니면 열지를 선택하라는 메시지가 나타납니다. **열기**를 선택하면 .atomsvc 파일 확장명과 연결된 애플리케이션에서 Atom 서비스 문서가 열리고, **저장**을 선택하면 문서가 .atomsvc 파일로 저장됩니다. 기본적으로 이 파일의 이름은 보고서의 이름입니다. 이 이름은 보다 의미 있는 이름으로 변경할 수 있습니다.  
   
  Atom 서비스 문서를 컴퓨터에 저장한 후 나중에 다른 사용자가 사용할 수 있도록 보고서 서버나 다른 서버에 업로드할 수 있습니다. 자세한 내용은 [보고서에서 데이터 피드 생성](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md) 및 [보고서에서 데이터 피드 생성](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)을 참조하세요.  
   

@@ -14,12 +14,12 @@ ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ecfa60f4b28d72e20d6f6b112d4739be793daaa1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e29fe0deaaba673136ee1e1f135e61a8f2b402e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657261"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212092"
 ---
 # <a name="back-up-database-media-options-page"></a>데이터베이스 백업(미디어 옵션 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47657261"
 > [!NOTE]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 백업 태스크를 지정할 때 [!INCLUDE[tsql](../../includes/tsql-md.md)][스크립트](../../t-sql/statements/backup-transact-sql.md) 단추를 클릭한 다음 스크립트에 대한 대상을 선택하여 해당되는 **BACKUP** 스크립트를 생성할 수 있습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
   
 ### <a name="overwrite-media"></a>미디어 덮어쓰기  
  **미디어 덮어쓰기** 패널의 옵션은 백업이 미디어에 쓰여지는 방법을 제어합니다. URL(Windows Azure Storage)을 데이터베이스 백업 대화 상자의 일반 페이지에 있는 백업 대상으로 선택한 경우 미디어 덮어쓰기 섹션의 옵션을 사용할 수 없습니다. **BACKUP TO URL. WITH FORMAT** Transact-SQL 문을 사용하여 백업을 덮어쓸 수 있습니다. 자세한 내용은 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.  
@@ -105,7 +105,7 @@ ms.locfileid: "47657261"
  **테이프 드라이브** 패널의 옵션은 백업 작업 동안 테이프 관리를 제어합니다. **테이프** 가 **데이터베이스 백업** 대화 상자의 [일반](../../relational-databases/backup-restore/back-up-database-general-page.md) 페이지에 있는 **대상** 필드에서 선택된 경우에만 이 옵션이 활성화됩니다.  
   
 > [!NOTE]  
->  테이프 장치를 사용하는 방법은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
+>  테이프 디바이스를 사용하는 방법은 [백업 디바이스&amp;#40;SQL Server&amp;#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
   
  **백업 후 테이프 언로드**  
  백업이 완료된 후 테이프를 언로드합니다.  

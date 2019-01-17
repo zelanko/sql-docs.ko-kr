@@ -20,12 +20,12 @@ ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f20b2f1b29c6ba175237e2e4f47cb5cf6fa0a610
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 066bd086fcbe9b69cc49821651302cd2102cd671
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771833"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214092"
 ---
 # <a name="full-database-backups-sql-server"></a>전체 데이터베이스 백업(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47771833"
   
  ![데이터베이스 백업 간의 작업 손실 가능성 표시](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "Shows work-loss exposure between database backups")  
   
-### <a name="example-includetsqlincludestsql-mdmd"></a>예([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>예제([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  다음 예에서는 기존 백업을 덮어쓰고 새 미디어 세트를 만들기 위해 WITH FORMAT을 사용하여 전체 데이터베이스 백업을 만드는 방법을 보여 줍니다.  
   
 ```  
@@ -70,7 +70,7 @@ GO
   
  로그 백업을 만드는 방법은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)을 참조하세요.  
   
-### <a name="example-includetsqlincludestsql-mdmd"></a>예([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>예제([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  다음 예에서는 기존 백업을 덮어쓰고 새 미디어 세트를 만들기 위해 WITH FORMAT을 사용하여 전체 데이터베이스 백업을 만드는 방법을 보여 줍니다. 그런 다음 트랜잭션 로그를 백업합니다. 실제 상황에서는 일련의 정기적인 로그 백업을 수행해야 합니다. 이 예의 경우 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스는 전체 복구 모델을 사용하도록 설정됩니다.  
   
 ```  

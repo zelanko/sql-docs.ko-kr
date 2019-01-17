@@ -19,12 +19,12 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a70a9808f51ff102d62159d524007101aa2d3dd8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c6016d1feff6d66fa7ef93fc99b04f20eda88970
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212332"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133225"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>Always On 가용성 그룹의 보조 복제본에서 백업 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ ms.locfileid: "53212332"
   
 2.  필요한 경우 추가하거나 수정할 각 가용성 복제본의 백업 우선 순위를 구성합니다. 이 우선 순위는 어느 복제본이 가용성 그룹의 데이터베이스에서 자동 백업 요청을 지원해야 하는지를 결정하기 위해(우선 순위가 가장 높은 복제본이 선택됨) 주 복제본을 호스팅하는 서버 인스턴스가 사용합니다. 이 우선 순위는 1부터 100까지의 임의의 숫자일 수 있습니다. 우선 순위 0은 백업 요청 지원을 위한 후보로 해당 복제본을 고려하지 않아야 함을 나타냅니다.  기본 설정은 50입니다.  
   
-     가용성 그룹에 가용성 복제본을 추가하는 경우 **New-SqlAvailabilityReplica** cmdlet을 사용합니다. 기존 가용성 복제본을 수정하는 경우 **Set-SqlAvailabilityReplica** cmdlet을 사용합니다. 두 경우 모두 **BackupPriority***n* 매개 변수를 지정해야 하며 여기서 *n*은 0부터 100 사이의 값입니다.  
+     가용성 그룹에 가용성 복제본을 추가하는 경우 **New-SqlAvailabilityReplica** cmdlet을 사용합니다. 기존 가용성 복제본을 수정하는 경우 **Set-SqlAvailabilityReplica** cmdlet을 사용합니다. 두 경우 모두 **BackupPriority**_n_ 매개 변수를 지정해야 하며 여기서 *n* 은 0부터 100까지의 값입니다.  
   
      예를 들어 다음 명령은 가용성 복제본 `MyReplica` 의 백업 우선 순위를 **60**으로 설정합니다.  
   

@@ -22,12 +22,12 @@ ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8638b820959174c872f731f9f418b03e241389ed
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ffd987e0b695fdc0976706e4b6689a9e60527893
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699721"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991886"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51699721"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원되는 전체 텍스트 검색 형식에 대한 자세한 내용은 [전체 텍스트 검색이 있는 쿼리](../../relational-databases/search/query-with-full-text-search.md)를 참조하세요.  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -74,7 +74,7 @@ FREETEXT ( { column_name | (column_list) | * }
   
  *freetext_string*은 **nvarchar**입니다. 암시적 변환은 다른 문자 데이터 형식이 입력으로 사용될 때 발생합니다. 큰 문자열 데이터 형식 nvarchar (max) 및 varchar(max)를 사용할 수 없습니다. 다음 예에서는 `@SearchWord`로 정의된 `varchar(30)` 변수로 인해 `FREETEXT` 조건자에서 암시적 변환이 발생합니다.  
   
-```  
+```sql  
   
 USE AdventureWorks2012;  
 GO  
@@ -88,7 +88,7 @@ WHERE FREETEXT(Description, @SearchWord);
   
  변환 시 "매개 변수 스니핑"이 작동하지 않으므로 성능 향상을 위해 **nvarchar**를 사용합니다. 이 예에서는 `@SearchWord`를 `nvarchar(30)`로 선언합니다.  
   
-```  
+```sql  
   
 USE AdventureWorks2012;  
 GO  
@@ -105,7 +105,7 @@ WHERE FREETEXT(Description, @SearchWord);
  LANGUAGE *language_term*  
  쿼리의 일부로 단어 분리, 형태소 분석, 동의어 사전 및 중지 단어 제거에 리소스를 사용할 언어입니다. 이 매개 변수는 선택적이며 언어의 LCID(로캘 ID)에 해당하는 문자열, 정수 또는 16진수 값으로 지정할 수 있습니다. *language_term*을 지정할 경우 해당 언어는 검색 조건의 모든 요소에 적용됩니다. 값을 지정하지 않으면 열의 전체 텍스트 언어가 사용됩니다.  
   
- 언어가 다른 문서가 단일 열에 BLOB(Binary Large Object)으로 함께 저장된 경우 지정된 문서의 LCID(로캘 ID)에 따라 해당 내용을 인덱싱하는 데 사용할 언어가 결정됩니다. 이러한 열을 쿼리할 때 LANGUAGE** *language_term*을 지정하면 검색 확률을 높일 수 있습니다.  
+ 언어가 다른 문서가 단일 열에 BLOB(Binary Large Object)으로 함께 저장된 경우 지정된 문서의 LCID(로캘 ID)에 따라 해당 내용을 인덱싱하는 데 사용할 언어가 결정됩니다. 이러한 열을 쿼리할 때 *LANGUAGE language_term*을 지정하면 검색 확률을 높일 수 있습니다.  
   
  문자열로 지정하는 경우 *language_term*은 [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 호환성 뷰의 **alias** 열 값에 해당합니다.  문자열은 '*language_term*'과 같이 작은따옴표로 묶어야 합니다. 정수로 지정하는 경우 *language_term*은 언어를 식별하는 실제 LCID입니다. 16진수 값으로 지정하는 경우 *language_term*은 0x로 시작하는 16진수 LCID 값입니다. 16진수 값은 선행 0을 포함하여 8자리 수를 초과할 수 없습니다.  
   
@@ -134,7 +134,7 @@ FREETEXT를 사용하는 전체 텍스트 쿼리는 CONTAINS를 사용하는 전
 ### <a name="a-using-freetext-to-search-for-words-containing-specified-character-values"></a>1. FREETEXT를 사용하여 지정된 문자 값을 포함하는 단어 검색  
  다음 예에서는 vital, safety, components와 관련된 단어를 포함하는 문서를 모두 검색합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Title  
@@ -146,7 +146,7 @@ GO
 ### <a name="b-using-freetext-with-variables"></a>2. FREETEXT에 변수 사용  
  다음 예에서는 특정 검색 용어 대신 변수를 사용합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @SearchWord nvarchar(30);  

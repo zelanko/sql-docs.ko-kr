@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b154ba3569c46d96c2e89b8fd209f51159e603a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 89b07e80d9bb9c0a04fe3dd1829ab4b7180f1718
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661722"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206442"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "51661722"
 |------------|-----------------|    
 |대/소문자 구분(_CS)|대/소문자를 구분합니다. 이 정렬 순서를 선택하면 소문자가 대문자보다 먼저 정렬됩니다. 이 옵션을 선택하지 않으면 데이터 정렬에서 대소문자를 구분하지 않습니다. 즉, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 정렬할 때 대문자와 소문자를 동일한 것으로 간주합니다. _CI를 지정하여 대/소문자를 구분하지 않도록 명시적으로 선택할 수 있습니다.|    
 |악센트 구분(_AS)|악센트가 있는 문자와 악센트가 없는 문자를 구분합니다. 예를 들어 'a'와 'ấ'는 같지 않습니다. 이 옵션을 선택하지 않으면 데이터 정렬에서 악센트를 구분하지 않습니다. 즉, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 정렬할 때 악센트가 있는 문자와 악센트가 없는 문자가 동일한 것으로 간주합니다. _AI를 지정하여 악센트를 구분하지 않도록 명시적으로 선택할 수 있습니다.|    
-|일본어 가나 구분(_KS)|일본어 가나 문자의 두 가지 유형인 히라가나와 가타가나를 구분합니다. 이 옵션을 선택하지 않으면 데이터 정렬에서 가나를 구분하지 않습니다. 즉, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 정렬할 때 히라가나 문자와 가타카나 문자를 동일한 것으로 간주합니다. 일본어 가나를 구분하지 않도록 지정하는 유일한 방법은 이 옵션을 생략하는 것입니다.|    
+|일본어 가나 구분(_KS)|일본어 가나 문자의 두 가지 유형인 히라가나와 가타카나)를 구분할지 여부를 나타냅니다. 이 옵션을 선택하지 않으면 데이터 정렬에서 가나를 구분하지 않습니다. 즉, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 정렬할 때 히라가나 문자와 가타카나 문자를 동일한 것으로 간주합니다. 일본어 가나를 구분하지 않도록 지정하는 유일한 방법은 이 옵션을 생략하는 것입니다.|    
 |전자/반자 구분(_WS)|전자와 반자 문자를 구분합니다. 이 옵션을 선택하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 정렬할 때 같은 문자의 전자 표시와 반자 표시를 동일한 문자로 간주합니다. 전자/반자를 구분하지 않도록 지정하는 유일한 방법은 이 옵션을 생략하는 것입니다.|    
 |변형 선택기 구분(_VSS) | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]에서 처음 도입된 일본어 데이터 정렬 Japanese_Bushu_Kakusu_140 및 Japanese_XJIS_140에서 다양한 표의 변형 선택기를 구분합니다. 변형 시퀀스는 기본 문자와 추가 변형 선택기로 구성됩니다. 이 _VSS 옵션을 선택하지 않으면 데이터 정렬이 변형 선택기를 구분하지 않고 변형 선택기가 비교에서 고려되지 않습니다. 즉, SQL Server는 정렬할 때 다른 변형 선택기를 사용하여 동일한 기본 문자 위에 구축된 문자를 동일한 것으로 간주합니다. [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/)(유니코드 표의 변형 데이터베이스)도 참조하세요. <br/><br/> 변형 선택기 구분(_VSS) 데이터 정렬은 전체 텍스트 검색 인덱스에서 지원되지 않습니다. 전체 텍스트 검색 인덱스는 악센트 구분(_AS), 일본어 가나 구분(_KS) 및 전자/반자 구분(_WS) 옵션만 지원합니다. SQL Server XML 및 CLR 엔진은 (_VSS) 변형 선택기를 지원하지 않습니다.
 |UTF-8(_UTF8)|UTF-8 인코딩 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장할 수 있습니다. 이 옵션을 선택하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 해당 데이터 형식에 기본 비유니코드 인코딩 형식을 사용합니다.| 
@@ -121,7 +121,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
  정렬 순서는 데이터 값이 정렬되는 방식을 지정합니다. 이는 데이터 비교의 결과에 영향을 줍니다. 데이터는 데이터 정렬을 사용하여 정렬되며 인덱스를 사용하여 데이터 정렬을 최적화할 수 있습니다.    
     
 ##  <a name="Unicode_Defn"></a> 유니코드 지원    
-유니코드는 코드 포인트를 문자에 매핑하기 위한 표준입니다. 유니코드는 전 세계 모든 언어의 모든 문자를 지원하기 때문에 각 문자 집합을 처리하는 데 서로 다른 코드 페이지가 필요하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])에서 여러 언어를 반영하는 문자 데이터를 저장할 경우에는 유니코드를 지원하지 않는 데이터 형식(**char**, **varchar** 및 **text**) 대신 항상 유니코드(UTF-16) 데이터 형식(**nchar**, **nvarchar** 및 **ntext**)을 사용하세요. 또는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터는 UTF-8 지원 데이터 정렬(\_UTF8)을 사용하는 경우 이전의 비유니코드 데이터 형식(**char** 및 **varchar**)이 유니코드(UTF-8) 데이터 형식이 됩니다. 
+유니코드는 코드 포인트를 문자에 매핑하기 위한 표준입니다. 유니코드는 전 세계 모든 언어의 모든 문자를 지원하기 때문에 각 문자 집합을 처리하는 데 서로 다른 코드 페이지가 필요하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])에서 여러 언어를 반영하는 문자 데이터를 저장할 경우에는 유니코드를 지원하지 않는 데이터 형식(**char**, **varchar** 및 **text**) 대신 항상 유니코드(UTF-16) 데이터 형식(**nchar**, **nvarchar** 및 **ntext**)을 사용하세요. 또는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터는 UTF-8 지원 데이터 정렬(\_UTF8)을 사용하는 경우 이전의 비유니코드 데이터 형식(**char** 및 **varchar**)이 유니코드(UTF-8) 데이터 형식이 됩니다. 
 
 > [!NOTE]
 > [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서는 이전의 유니코드(UTF-16) 데이터 형식(**nchar**, **nvarchar** 및 **ntext**) 동작이 달라지지 않습니다.   
@@ -220,7 +220,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |[와일드카드 - 문자 하나와 일치](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)<br /><br /> [와일드카드 - 일치하지 않는 문자](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)|모든 와일드카드 연산에 보조 문자를 사용할 수 있습니다.|이러한 와일드카드 연산에 보조 문자를 사용할 수 없습니다. 다른 와일드카드 연산자는 사용할 수 있습니다.|    
     
 ##  <a name="GB18030"></a> GB18030 지원    
- GB18030은 중국에서 사용하는 별개의 중국어 인코딩 표준입니다. GB18030에서 문자 길이는 1바이트, 2바이트 또는 4바이트일 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 서버가 클라이언트 쪽 응용 프로그램으로부터 GB18030으로 인코딩된 문자를 받을 때 해당 문자를 인식하고 유니코드 문자로 기본 변환 및 저장하는 방식으로 GB18030 문자를 지원합니다. 이렇게 변환된 문자는 서버에 저장된 후 모든 후속 작업에서 유니코드 문자로 처리됩니다. 모든 중국어 데이터 정렬(가급적 최신 100 버전)을 사용할 수 있습니다. 모든 _100 수준 데이터 정렬은 GB18030 문자를 사용한 언어적 정렬을 지원합니다. 데이터에 보조 문자(서로게이트 쌍)가 포함되어 있는 경우 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 제공되는 SC 데이터 정렬을 사용하여 검색 및 정렬 성능을 향상시킬 수 있습니다.    
+ GB18030은 중국에서 사용하는 별개의 중국어 인코딩 표준입니다. GB18030에서 문자 길이는 1바이트, 2바이트 또는 4바이트일 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 서버가 클라이언트 쪽 애플리케이션으로부터 GB18030으로 인코딩된 문자를 받을 때 해당 문자를 인식하고 유니코드 문자로 기본 변환 및 저장하는 방식으로 GB18030 문자를 지원합니다. 이렇게 변환된 문자는 서버에 저장된 후 모든 후속 작업에서 유니코드 문자로 처리됩니다. 모든 중국어 데이터 정렬(가급적 최신 100 버전)을 사용할 수 있습니다. 모든 _100 수준 데이터 정렬은 GB18030 문자를 사용한 언어적 정렬을 지원합니다. 데이터에 보조 문자(서로게이트 쌍)가 포함되어 있는 경우 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 제공되는 SC 데이터 정렬을 사용하여 검색 및 정렬 성능을 향상시킬 수 있습니다.    
     
 ##  <a name="Complex_script"></a> 복합 스크립트 지원    
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 복합 스크립트를 입력, 저장, 변경 및 표시할 수 있습니다. 복합 스크립트에는 다음 형식이 포함됩니다.    
@@ -229,7 +229,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 -   아랍어, 인도어, 태국어 문자와 같이 위치에 따라 문자 모양이 바뀌거나 다른 문자와 함께 사용되면 문자 모양이 바뀌는 양방향 텍스트    
 -   태국어와 같이 단어 사이를 구분하는 공백이 없어 단어 인식을 위해 내부 사전이 필요한 언어    
     
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 상호 작용하는 데이터베이스 응용 프로그램은 복합 스크립트를 지원하는 컨트롤을 사용해야 합니다. 관리 코드로 생성되는 표준 Windows 폼 컨트롤에는 복합 스크립트 기능이 설정되어 있습니다.    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 상호 작용하는 데이터베이스 애플리케이션은 복합 스크립트를 지원하는 컨트롤을 사용해야 합니다. 관리 코드로 생성되는 표준 Windows 폼 컨트롤에는 복합 스크립트 기능이 설정되어 있습니다.    
 
 ##  <a name="Japanese_Collations"></a> 일본어 데이터 정렬이  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
  

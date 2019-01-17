@@ -31,19 +31,19 @@ ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: b6fd6c8f987fb0349f6282755ebb4c4ff33a9147
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 4f842829fd3d00e6e2cc238107024fa5f284eff2
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380654"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257158"
 ---
 # <a name="use-sql-server-objects"></a>SQL Server 개체 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 실행하는 컴퓨터의 작업을 모니터링하기 위해 시스템 모니터에서 사용할 수 있는 개체 및 카운터를 제공합니다. 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금이나 Windows 프로세스와 같은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스를 말합니다. 각 개체에는 모니터링할 개체의 여러 요소를 결정하는 하나 이상의 카운터가 포함됩니다. 예를 들어 **SQL Server Locks** 개체에는 **Number of Deadlocks/sec** 및 **Lock Timeouts/sec**이라는 카운터가 포함됩니다.  
   
- 지정된 유형의 리소스가 컴퓨터에 여러 개 존재할 경우 일부 개체는 여러 인스턴스를 갖습니다. 예를 들어 **Processor** 개체 유형은 시스템에 프로세서가 여러 개 있는 경우 인스턴스를 여러 개 갖게 됩니다. **Databases** 개체 유형은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 각 데이터베이스에 대해 인스턴스를 하나씩 갖습니다. 일부 개체 유형(예: **Memory Manager** 개체)은 인스턴스를 하나만 갖습니다. 개체 유형이 인스턴스를 여러 개 가지는 경우 카운터를 추가해 각 인스턴스의 통계를 추적할 수 있고, 대부분의 경우 모든 인스턴스를 한 번에 추적할 수 있습니다. 기본 인스턴스용 카운터는 *SQLServer:***\<개체 이름>* 형식으로 표시됩니다. 명명된 인스턴스용 카운터는 **MSSQL$***\<인스턴스 이름>***:***\<카운터 이름>* 또는**SQLAgent$***\<인스턴스 이름>***:***\<카운터 이름>* 형식으로 표시됩니다.  
+ 지정된 유형의 리소스가 컴퓨터에 여러 개 존재할 경우 일부 개체는 여러 인스턴스를 갖습니다. 예를 들어 **Processor** 개체 유형은 시스템에 프로세서가 여러 개 있는 경우 인스턴스를 여러 개 갖게 됩니다. **Databases** 개체 유형은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 각 데이터베이스에 대해 인스턴스를 하나씩 갖습니다. 일부 개체 유형(예: **Memory Manager** 개체)은 인스턴스를 하나만 갖습니다. 개체 유형이 인스턴스를 여러 개 가지는 경우 카운터를 추가해 각 인스턴스의 통계를 추적할 수 있고, 대부분의 경우 모든 인스턴스를 한 번에 추적할 수 있습니다. 기본 인스턴스용 카운터는 **SQLServer:**_\<개체 이름>_ 형식으로 표시됩니다. 명명된 인스턴스용 카운터는 **MSSQL$**_\<인스턴스 이름>_**:**_\<카운터 이름>_ 또는**SQLAgent$**_\<인스턴스 이름>_**:**_\<카운터 이름>_ 형식으로 표시됩니다.  
   
  카운터를 차트에 추가하거나 제거하고 차트 설정을 저장하면 시스템 모니터가 시작될 때 모니터링되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 및 카운터를 지정할 수 있습니다.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "53380654"
 |[SQLServer:General Statistics](../../relational-databases/performance-monitor/sql-server-general-statistics-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 현재 연결된 사용자 수와 같은 일반적인 서버 차원의 작업에 관한 정보를 제공합니다.|  
 |[SQL Server:HADR 가용성 복제본](../../relational-databases/performance-monitor/sql-server-availability-replica.md)|현재 할당된 총 잠금 구조 수와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 가용성 복제본에 대한 정보를 제공합니다.|  
 |[SQL Server:HADR 데이터베이스 복제본](../../relational-databases/performance-monitor/sql-server-database-replica.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 데이터베이스 복제본에 대한 정보를 제공합니다.|  
-|[SQL Server:HTTP 저장소](../../relational-databases/performance-monitor/sql-server-http-storage-object.md)|[Microsoft Azure에서 SQL Server 데이터 파일](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)을 사용할 때 Microsoft Azure Storage 계정을 모니터링할 정보를 제공합니다.|  
+|[SQL Server:HTTP 스토리지](../../relational-databases/performance-monitor/sql-server-http-storage-object.md)|[Microsoft Azure에서 SQL Server 데이터 파일](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)을 사용할 때 Microsoft Azure Storage 계정을 모니터링할 정보를 제공합니다.|  
 |[SQLServer:Latches](../../relational-databases/performance-monitor/sql-server-latches-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 내부 리소스(예: 데이터베이스 페이지)에 있는 래치에 관한 정보를 제공합니다.|  
 |[SQLServer:Locks](../../relational-databases/performance-monitor/sql-server-locks-object.md)|잠금 제한 시간 및 교착 상태와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 만든 개별 잠금 요청에 관한 정보를 제공합니다. 이 개체에는 인스턴스가 여러 개 있을 수 있습니다.|  
 |[SQLServer:LogPool FreePool](../../relational-databases/performance-monitor/sql-server-logpool-freepool-object.md)|로그 풀 내 사용 가능한 풀의 통계를 설명합니다.|

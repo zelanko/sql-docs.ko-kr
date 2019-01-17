@@ -19,19 +19,19 @@ ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1872a3a1cdcdbe112ead08b4bef1fc680ef90338
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 72accd7718280b4994c3339531c8e5d0fef067c1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703731"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210793"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   현재 데이터베이스에서 하나 이상의 사용자 정의 기본값을 제거합니다.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  DROP DEFAULT는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다음 버전에서 제거될 예정입니다. 향후 개발 작업에서는 DROP DEFAULT를 사용하지 않도록 하고 현재 이것을 사용하는 응용 프로그램은 수정하십시오. [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 또는 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)의 DEFAULT 키워드를 사용하여 만들 수 있는 기본 정의를 대신 사용하십시오.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -44,7 +44,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
   
 ## <a name="arguments"></a>인수  
  *IF EXISTS*  
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  이미 있는 경우에만 기본값을 조건부로 삭제합니다.  
   

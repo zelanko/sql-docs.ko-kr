@@ -10,12 +10,12 @@ ms.technology: developer
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
-ms.openlocfilehash: 498432a84d523c597d7c7c52c151dce003047ba2
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: c3ea066f93f2848ed822fdac24f37b2c5f179ac9
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328561"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254698"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Reporting Services에 대한 REST API를 사용하여 개발
 
@@ -40,14 +40,14 @@ REST API 요청/응답 쌍은 5개의 구성 요소로 구분할 수 있습니�
 
 * HTTP 요청 메시지 헤더 필드:
 
-    * 요청하는 작업의 유형이 무엇인지를 서비스에 알리는 필수 [HTTP 메서드](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html)(작업 또는 동사로 알려지기도 함)입니다. Reporting Services REST API는 DELETE, GET, HEAD, PUT, POST 및 PATCH 메서드를 지원합니다.
+    * 요청하는 작업의 유형이 무엇인지를 서비스에 알리는 필수 [HTTP 메서드](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html)(작업 또는 동사로 알려지기도 함)입니다. Reporting Services REST API는 DELETE, GET, HEAD, PUT, POST 및 PATCH 메서드를 지원합니다.
     * 지정된 URI 및 HTTP 메서드에서 필요로 하는 선택적 추가 헤더 필드입니다.
 
 * URI 및 HTTP 작업을 지원하는 선택적 HTTP **요청 메시지 본문** 필드입니다. 예를 들어 POST 작업은 복잡한 매개 변수로 전달되는 MIME 인코딩된 개체를 포함합니다. POST 또는 PUT 작업의 경우 `Content-type` 요청 헤더에서도 본문에 대한 MIME 인코딩 형식을 지정해야 합니다. 일부 서비스에서는 `application/json`과 같은 특정 MIME 형식을 사용해야 합니다.
 
 * HTTP **응답 메시지 헤더** 필드:
 
-    * 범위가 2xx 성공 코드부터 4xx 또는 5xx 오류 코드인 [HTTP 상태 코드](https://www.w3.org/Protocols/HTTP/HTRESP.html)입니다. 또는 API 설명서에 나와 있는 것처럼 서비스 정의된 상태 코드가 반환될 수 있습니다.
+    * 범위가 2xx 성공 코드부터 4xx 또는 5xx 오류 코드인 [HTTP 상태 코드](http://www.w3.org/Protocols/HTTP/HTRESP.html)입니다. 또는 API 설명서에 나와 있는 것처럼 서비스 정의된 상태 코드가 반환될 수 있습니다.
     * `Content-type` 응답 헤더와 같은 요청의 응답을 지원하는 데 필요한 선택적 추가 헤더 필드입니다.
 
 * 선택적 HTTP **응답 메시지 본문** 필드:

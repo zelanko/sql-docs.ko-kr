@@ -37,12 +37,12 @@ ms.assetid: ''
 author: pamela
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: fe1fef76dd083d5b464bd2021aebb0e74e695543
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 51acbbb1bac63084a26abb68f461880df1409578
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703921"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204812"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -229,7 +229,7 @@ DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH NO_STATISTICS, NO
 GO 
 ```  
 
-### <a name="d-creating-a-clone-of-a-database-that-is-verified-for-production-use"></a>4. 프로덕션용으로 확인된 데이터베이스의 클론 만들기
+### <a name="d-creating-a-clone-of-a-database-that-is-verified-for-production-use"></a>D. 프로덕션용으로 확인된 데이터베이스의 클론 만들기
 다음 예에서는 프로덕션 데이터베이스로 사용하도록 확인되었고, 통계 및 쿼리 저장소가 없는 AdventureWorks 데이터베이스의 스키마 전용 클론을 만듭니다([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 이상 버전).
 
 ```sql  
@@ -237,7 +237,7 @@ DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH VERIFY_CLONEDB;
 GO 
 ```  
   
-### <a name="e-creating-a-clone-of-a-database-that-is-verified-for-production-use-that-includes-a-backup-of-the-cloned-database"></a>5. 프로덕션용으로 확인되었고, 복제된 데이터베이스의 백업을 포함하는 데이터베이스 클론 만들기
+### <a name="e-creating-a-clone-of-a-database-that-is-verified-for-production-use-that-includes-a-backup-of-the-cloned-database"></a>E. 프로덕션용으로 확인되었고, 복제된 데이터베이스의 백업을 포함하는 데이터베이스 클론 만들기
 다음 예에서는 프로덕션 데이터베이스로 사용하도록 확인되었고, 통계 및 쿼리 저장소가 없는 AdventureWorks 데이터베이스의 스키마 전용 클론을 만듭니다.  복제된 데이터베이스의 확인된 백업도 생성됩니다([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 이상 버전).
 
 ```sql  

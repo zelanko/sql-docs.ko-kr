@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67e1f72fef6c10551f3d0670aff694777f52e391
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 845031e6002ef992b6f04b053bde9955896591fe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512125"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202902"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -148,7 +148,7 @@ AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
   
 ## <a name="arguments"></a>인수
 OR ALTER  
- **적용 대상**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터)  
+ **적용 대상**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 시작).  
   
  프로시저가 이미 존재하는 경우 변경합니다.
  
@@ -220,7 +220,7 @@ RECOMPILE
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 프로시저 안에 있는 개별 쿼리에 대한 쿼리 계획을 삭제하도록 하려면 쿼리 정의에서 RECOMPILE 쿼리 힌트를 사용합니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
 ENCRYPTION  
- **적용 대상**: SQL Server([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **적용 대상**: SQL Server([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CREATE PROCEDURE 문의 원본 텍스트를 난독 처리된 형식으로 변환하는 것을 나타냅니다. 난독 처리된 출력은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 카탈로그 뷰 어디에서도 직접 표시되지 않습니다. 시스템 테이블 또는 데이터베이스 파일에 대한 액세스 권한이 없는 사용자는 변조된 텍스트를 검색할 수 없습니다. 하지만 [DAC 포트](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)를 통해 시스템 테이블에 액세스하거나 데이터베이스 파일에 직접 액세스할 수 있는 권한이 있는 사용자는 난독 처리된 텍스트를 사용할 수 있습니다. 또한 디버거를 서버 프로세스에 연결할 수 있는 사용자는 런타임에 메모리에서 해독된 프로시저를 검색할 수 있습니다. 시스템 메타데이터에 액세스하는 방법에 대한 자세한 내용은 [메타데이터 표시 유형 구성](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
@@ -236,7 +236,7 @@ EXECUTE AS *절*
  자세한 내용은 [EXECUTE AS 절&#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)을 참조하세요.  
   
 FOR REPLICATION  
- **적용 대상**: SQL Server([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **적용 대상**: SQL Server([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  프로시저가 복제용으로 생성되도록 지정합니다. 따라서 구독자에서는 프로시저를 실행할 수 없습니다. FOR REPLICATION 옵션을 사용하여 만든 프로시저는 프로시저 필터로 사용되며 복제하는 동안에만 실행됩니다. FOR REPLICATION을 지정하면 매개 변수를 선언할 수 없습니다. CLR 프로시저에는 FOR REPLICATION을 지정할 수 없습니다. FOR REPLICATION으로 만든 프로시저의 경우 RECOMPILE 옵션이 무시됩니다.  
   
@@ -455,7 +455,7 @@ GO
   
 |성능 모니터 개체 이름|성능 모니터 카운터 이름|  
 |-------------------------------------|--------------------------------------|  
-|SQLServer: Plan Cache 개체|Cache Hit Ratio|  
+|SQLServer: 계획 캐시 개체|Cache Hit Ratio|  
 ||Cache Pages|  
 ||Cache Object Counts*|  
   
@@ -565,7 +565,7 @@ GO
 ###  <a name="Parameters"></a> 매개 변수 전달  
  이 섹션의 예에서는 입력 및 출력 매개 변수를 통해 값을 저장 프로시저로 전달 및 저장 프로시저에서 값을 전달하는 방법을 보여 줍니다.  
   
-#### <a name="d-creating-a-procedure-with-input-parameters"></a>4. 입력 매개 변수가 있는 프로시저 만들기  
+#### <a name="d-creating-a-procedure-with-input-parameters"></a>D. 입력 매개 변수가 있는 프로시저 만들기  
  다음 예에서는 직원의 성과 이름에 대한 값을 전달하여 특정 직원 정보를 반환하는 저장 프로시저를 만듭니다. 이 프로시저는 전달된 매개 변수와 정확히 일치하는 항목만 받습니다.  
   
 ```sql  
@@ -600,7 +600,7 @@ HumanResources.uspGetEmployees N'Ackerman', N'Pilar';
   
 ```  
   
-#### <a name="e-using-a-procedure-with-wildcard-parameters"></a>5. 프로시저에 와일드카드 매개 변수 사용  
+#### <a name="e-using-a-procedure-with-wildcard-parameters"></a>E. 프로시저에 와일드카드 매개 변수 사용  
  다음 예에서는 직원의 성과 이름에 대한 전체 또는 일부 값을 전달하여 직원 정보를 반환하는 저장 프로시저를 만듭니다. 이 프로시저는 전달된 매개 변수에 패턴 일치를 사용하고 매개 변수가 없으면 미리 설정된 기본값(`D`로 시작되는 성)을 사용합니다.  
   
 ```sql  
@@ -633,7 +633,7 @@ EXECUTE HumanResources.uspGetEmployees2 N'Hesse', N'Stefen';
 EXECUTE HumanResources.uspGetEmployees2 N'H%', N'S%';  
 ```  
   
-#### <a name="f-using-output-parameters"></a>6. OUTPUT 매개 변수 사용  
+#### <a name="f-using-output-parameters"></a>F. OUTPUT 매개 변수 사용  
  다음 예에서는 `uspGetList` 프로시저를 만듭니다. 이 프로시저에서는 가격이 지정한 금액을 초과하지 않는 제품 목록을 반환합니다. 다음 예에서는 여러 `SELECT` 문과 여러 `OUTPUT` 매개 변수의 사용 방법을 보여 줍니다. OUTPUT 매개 변수는 프로시저를 실행하는 동안 외부 프로시저, 일괄 처리 또는 둘 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 값 집합을 액세스하도록 허용합니다.  
   
 ```sql  
@@ -699,7 +699,7 @@ ELSE
  These items can be purchased for less than $700.00.
  ```  
   
-#### <a name="g-using-a-table-valued-parameter"></a>7. 테이블 반환 매개 변수 사용  
+#### <a name="g-using-a-table-valued-parameter"></a>G. 테이블 반환 매개 변수 사용  
  다음 예에서는 테이블 반환 매개 변수 유형을 사용하여 테이블에 여러 행을 삽입합니다. 다음 예에서는 매개 변수 유형을 만들고, 해당 형식을 참조하는 테이블 변수를 선언하며, 매개 변수 목록을 채운 다음 저장 프로시저에 값을 전달하는 방법을 보여 줍니다. 저장 프로시저는 해당 값을 사용하여 테이블에 여러 행을 삽입합니다.  
   
 ```sql  
@@ -738,7 +738,7 @@ EXEC usp_InsertProductionLocation @LocationTVP;
 GO  
 ```  
   
-##### <a name="h-using-an-output-cursor-parameter"></a>8. OUTPUT 커서 매개 변수 사용  
+##### <a name="h-using-an-output-cursor-parameter"></a>H. OUTPUT 커서 매개 변수 사용  
  다음 예에서는 프로시저에서 로컬로 사용되는 커서를 호출한 일괄 처리, 프로시저 또는 트리거에 다시 전달하는 OUTPUT 커서 매개 변수를 사용합니다.  
   
  먼저 커서를 선언하여 `Currency` 테이블에서 여는 프로시저를 만듭니다.  
@@ -797,7 +797,7 @@ EXEC HumanResources.Update_VacationHours 40;
 ###  <a name="Error"></a> 오류 처리  
  이 섹션의 예에서는 저장 프로시저가 실행될 때 발생할 수 있는 오류를 처리하는 방법을 보여 줍니다.  
   
-#### <a name="j-using-trycatch"></a>10. TRY...CATCH 사용  
+#### <a name="j-using-trycatch"></a>J. TRY...CATCH 사용  
  다음 예에서는 TRY...CATCH 구문을 사용하여 저장 프로시저를 실행하는 동안 발생한 오류 정보를 반환합니다.  
   
 ```sql  

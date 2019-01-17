@@ -13,12 +13,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1a0b583c66355245790004a8612afa0ace72999
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a204ee5d34e37736ddd433636cf0e86564718b77
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213132"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128017"
 ---
 # <a name="publication-properties-subscription-options"></a>게시 속성, 구독 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "53213132"
  이 데이터베이스의 다른 게시에 대해 독립적인 에이전트의 사용 여부를 결정합니다. 이 옵션은 읽기 전용입니다. 새 게시 마법사를 사용하여 만든 게시에 대해 이 옵션은 기본적으로 **True** 로 설정되어 있으며 게시를 만든 후에는 이를 변경할 수 없습니다. 자세한 내용은 [복제 에이전트 관리](../../relational-databases/replication/agents/replication-agent-administration.md)를 참조하세요.  
   
  **스냅숏을 항상 사용할 수 있음**  
- 스냅숏 에이전트를 실행할 때마다 스냅숏 파일을 만들지 여부를 결정합니다( **독립 배포 에이전트**필요). 이 옵션은 읽기 전용입니다. 새 게시 마법사의 **스냅숏 에이전트** 페이지에서 **즉시 스냅숏을 만들고 구독 초기화에 사용할 수 있도록 유지합니다** (기본값)를 선택하면 이 옵션이 **True** 로 설정됩니다. 자세한 내용은 [스냅숏 만들기 및 적용](../../relational-databases/replication/create-and-apply-the-snapshot.md)을 참조하세요.  
+ 스냅숏 에이전트를 실행할 때마다 스냅숏 파일을 만들지 여부를 결정합니다( **독립 배포 에이전트**필요). 이 옵션은 읽기 전용입니다. 새 게시 마법사의 **스냅숏 에이전트** 페이지에서 **즉시 스냅숏을 만들고 구독 초기화에 사용할 수 있도록 유지합니다** (기본값)를 선택하면 이 옵션이 **True** 로 설정됩니다. 자세한 내용은 [스냅숏 만들기 및 적용](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)을 참조하세요.  
   
  **백업 파일로 초기화 허용**  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당됩니다. 백업 파일을 사용하여 구독을 초기화할 수 있도록 허용할지 여부를 결정합니다. 자세한 내용은 [스냅숏 없이 트랜잭션 구독 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  

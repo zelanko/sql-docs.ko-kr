@@ -17,19 +17,19 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 748c341960d8bb50a70f06e6473c2eb613b071aa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 841d38d4a862582a393fba116676908572f39d38
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675132"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203042"
 ---
 # <a name="always-encrypted-database-engine"></a>상시 암호화(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   ![상시 암호화](../../../relational-databases/security/encryption/media/always-encrypted.png "상시 암호화")  
   
- 상시 암호화는 신용 카드 번호나 주민 등록 번호(예: 미국 사회 보장 번호)와 같이 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 저장된 중요한 데이터를 보호하기 위한 기능입니다. 상시 암호화를 사용하면 클라이언트가 클라이언트 애플리케이션의 중요한 데이터를 암호화하고 암호화 키를 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)])에 표시하지 않을 수 있습니다. 따라서 상시 암호화는 데이터를 소유하고 볼 수 있는 사람과 데이터를 관리하지만 액세스 권한이 없어야 하는 사람을 분리합니다. 온-프레미스 데이터베이스 관리자, 클라우드 데이터베이스 관리자 또는 기타 높은 권한을 가지고 있지만 인증되지 않은 사용자가 암호화된 데이터에 액세스할 수 없도록 함으로써 상시 암호화는 고객이 직접 제어할 수 없는 중요한 데이터를 안전하게 저장하도록 해줍니다. 이를 통해 조직에서는 미사용 데이터와 사용 중인 데이터를 Azure에 저장하기 위해 암호화하거나, 온-프레미스 데이터베이스 관리를 타사에 위임할 수 있도록 하거나, 자체 DBA 직원에 대한 보안 정보 사용 허가 요구 사항을 줄일 수 있습니다.  
+ 상시 암호화는 신용 카드 번호나 주민 등록 번호(예: 미국 사회 보장 번호)와 같이 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 저장된 중요한 데이터를 보호하기 위한 기능입니다. Always Encrypted를 사용하면 클라이언트가 클라이언트 애플리케이션의 중요한 데이터를 암호화하고 암호화 키를 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)])에 표시하지 않을 수 있습니다. 따라서 상시 암호화는 데이터를 소유하고 볼 수 있는 사람과 데이터를 관리하지만 액세스 권한이 없어야 하는 사람을 분리합니다. 온-프레미스 데이터베이스 관리자, 클라우드 데이터베이스 관리자 또는 기타 높은 권한을 가지고 있지만 인증되지 않은 사용자가 암호화된 데이터에 액세스할 수 없도록 함으로써 상시 암호화는 고객이 직접 제어할 수 없는 중요한 데이터를 안전하게 저장하도록 해줍니다. 이를 통해 조직에서는 미사용 데이터와 사용 중인 데이터를 Azure에 저장하기 위해 암호화하거나, 온-프레미스 데이터베이스 관리를 타사에 위임할 수 있도록 하거나, 자체 DBA 직원에 대한 보안 정보 사용 허가 요구 사항을 줄일 수 있습니다.  
   
  상시 암호화는 암호화를 애플리케이션에 투명하게 만듭니다. 클라이언트 컴퓨터에 설치된 상시 암호화 지원 드라이버가 클라이언트 애플리케이션의 중요한 데이터를 자동으로 암호화하고 암호 해독합니다. 드라이버는 데이터를 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]로 전달하기 전에 중요한 열의 데이터를 암호화하고 애플리케이션에 대한 의미 체계가 유지되도록 자동으로 쿼리를 다시 작성합니다. 마찬가지로, 드라이버는 쿼리 결과에 포함되고 암호화된 데이터베이스 열에 저장된 데이터의 암호를 투명하게 해독합니다.  
   
@@ -38,10 +38,10 @@ ms.locfileid: "51675132"
 ## <a name="typical-scenarios"></a>일반적인 시나리오  
   
 ### <a name="client-and-data-on-premises"></a>온-프레미스 클라이언트와 데이터  
- 고객은 비즈니스 위치의 온-프레미스에서 클라이언트 애플리케이션과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 모두 실행합니다. 고객은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 관리할 외부 공급업체를 고용하려고 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 저장된 중요한 데이터를 보호하기 위해 고객은 상시 암호화를 사용하여 데이터베이스 관리자와 응용 프로그램 관리자 간의 업무를 분리합니다. 고객은 상시 암호화 키의 일반 텍스트 값을 클라이언트 애플리케이션에서 액세스할 수 있는 신뢰할 수 있는 키 저장소에 저장합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리자는 키에 대한 액세스 권한이 없으므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 저장된 중요한 데이터의 암호를 해독할 수 없습니다.  
+ 고객은 비즈니스 위치의 온-프레미스에서 클라이언트 애플리케이션과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 모두 실행합니다. 고객은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 관리할 외부 공급업체를 고용하려고 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 저장된 중요한 데이터를 보호하기 위해 고객은 상시 암호화를 사용하여 데이터베이스 관리자와 애플리케이션 관리자 간의 업무를 분리합니다. 고객은 상시 암호화 키의 일반 텍스트 값을 클라이언트 애플리케이션에서 액세스할 수 있는 신뢰할 수 있는 키 저장소에 저장합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리자는 키에 대한 액세스 권한이 없으므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 저장된 중요한 데이터의 암호를 해독할 수 없습니다.  
   
 ### <a name="client-on-premises-with-data-in-azure"></a>온-프레미스 클라이언트와 Azure의 데이터  
- 고객은 비즈니스 위치에서 온-프레미스 클라이언트 애플리케이션을 실행합니다. 애플리케이션은 Azure에서 호스트되는 데이터베이스(Microsoft Azure의 가상 머신에서 실행되는[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)])에 저장된 중요한 데이터를 작동합니다. 고객은 상시 암호화를 사용하고 상시 암호화 키를 온-프레미스에서 호스트되는 신뢰할 수 있는 키 저장소에 저장하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 클라우드 관리자가 중요한 데이터에 액세스하지 못하도록 합니다.  
+ 고객은 비즈니스 위치에서 온-프레미스 클라이언트 애플리케이션을 실행합니다. 애플리케이션은 Azure에서 호스트되는 데이터베이스(Microsoft Azure의 가상 머신에서 실행되는 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)])에 저장된 중요한 데이터를 작동합니다. 고객은 상시 암호화를 사용하고 상시 암호화 키를 온-프레미스에서 호스트되는 신뢰할 수 있는 키 저장소에 저장하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 클라우드 관리자가 중요한 데이터에 액세스하지 못하도록 합니다.  
   
 ### <a name="client-and-data-in-azure"></a>Azure의 클라이언트와 데이터  
  고객은 Microsoft Azure(예: 작업자 역할 또는 웹 역할)에서 호스트된 클라이언트 애플리케이션을 실행합니다. 이 애플리케이션은 Azure에서 호스트된 데이터베이스(Microsoft Azure의 가상 머신에서 실행되는 SQL 데이터베이스 또는 SQL Server)에 저장된 중요한 데이터에 대해 작동합니다. 상시 암호화는 클라이언트 계층을 호스트하는 플랫폼의 클라우드 관리자에게 데이터와 키가 둘 다 노출되기 때문에 클라우드 관리자로부터 데이터를 완전히 격리하지 않지만 고객이 보안 공격 노출 영역을 줄일 수 있습니다(데이터베이스의 데이터가 항상 암호화됨).  

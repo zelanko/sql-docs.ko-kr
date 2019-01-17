@@ -1,7 +1,7 @@
 ---
 title: RESTORE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,16 +37,16 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], RESTORE statement
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d4370a2f60a17ee126be5940ec69dbdfc5a03d4f
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 2022064cd1f9db8ae61d4480266278854bf0bc8c
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980319"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242236"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 문(Transact-SQL)
 BACKUP 명령을 사용하여 만든 SQL 데이터베이스 백업을 복원합니다. 
@@ -356,8 +356,8 @@ RESTORE는 명시적 또는 암시적 트랜잭션에서 사용할 수 없습니
 ### <a name="restoring-an-encrypted-database"></a>암호화된 데이터베이스 복원  
 암호화된 데이터베이스를 복원하려면 데이터베이스를 암호화하는 데 사용된 인증서 또는 비대칭 키에 대한 액세스 권한이 있어야 합니다. 인증서 또는 비대칭 키가 없으면 데이터베이스를 복원할 수 없습니다. 따라서 데이터베이스 암호화 키를 암호화하는 데 사용되는 인증서는 백업이 필요한 동안에는 유지되어야 합니다. 자세한 내용은 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)을 참조하세요.  
   
-### <a name="restoring-a-database-enabled-for-vardecimal-storage"></a>VarDecimal 저장소에 사용할 수 있는 데이터베이스 복원  
-백업 및 복원은 **vardecimal** 저장소 형식에서 올바르게 작동합니다. **vardecimal** 저장소 형식에 대한 자세한 내용은 [sp_db_vardecimal_storage_format &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)을 참조하세요.  
+### <a name="restoring-a-database-enabled-for-vardecimal-storage"></a>VarDecimal 스토리지에 사용할 수 있는 데이터베이스 복원  
+백업 및 복원은 **vardecimal** 스토리지 형식에서 올바르게 작동합니다. **vardecimal** 스토리지 형식에 대한 자세한 내용은 [sp_db_vardecimal_storage_format &amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)을 참조하세요.  
   
 ### <a name="restore-full-text-data"></a>전체 텍스트 데이터 복원  
 전체 텍스트 데이터가 전체 복원 시에 다른 데이터베이스 데이터와 함께 복원됩니다. 전체 텍스트 파일은 일반 `RESTORE DATABASE database_name FROM backup_device` 구문을 사용하여 데이터베이스 파일 복원의 일부로 복원됩니다.  
@@ -650,7 +650,7 @@ GO
 [&#91;주요 예제&#93;](#examples)  
   
 ###  <a name="Azure_Blob"></a> K. Microsoft Azure Blob Storage 서비스에서 복원  
-아래의 세 예제에서는 Microsoft Azure Storage 서비스를 사용하게 됩니다.  저장소 계정 이름은 `mystorageaccount`입니다.  데이터 파일의 컨테이너는 `myfirstcontainer`입니다.  백업 파일의 컨테이너는 `mysecondcontainer`입니다.  각 컨테이너에 대한 읽기, 쓰기, 삭제 및 나열 권한이 있는 저장된 액세스 정책을 만들었습니다.  저장된 액세스 정책에 연결된 공유 액세스 서명을 사용하여 SQL Server 자격 증명을 만들었습니다.  Microsoft Azure Blob Storage로 SQL Server 백업 및 복원 관련 정보는 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.  
+아래의 세 예제에서는 Microsoft Azure Storage 서비스를 사용하게 됩니다.  스토리지 계정 이름은 `mystorageaccount`입니다.  데이터 파일의 컨테이너는 `myfirstcontainer`입니다.  백업 파일의 컨테이너는 `mysecondcontainer`입니다.  각 컨테이너에 대한 읽기, 쓰기, 삭제 및 나열 권한이 있는 저장된 액세스 정책을 만들었습니다.  저장된 액세스 정책에 연결된 공유 액세스 서명을 사용하여 SQL Server 자격 증명을 만들었습니다.  Microsoft Azure Blob Storage로 SQL Server 백업 및 복원 관련 정보는 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.  
 
 **K1.  Microsoft Azure Storage 서비스에서 전체 데이터베이스 백업 복원**  
 `mysecondcontainer`에 있는 `Sales`의 전체 데이터베이스 백업이 `myfirstcontainer`에 복원됩니다.  `Sales`는 현재 서버에 없습니다. 
@@ -663,8 +663,8 @@ RESTORE DATABASE Sales
   STATS = 10;
 ```
 
-**K2. Microsoft Azure Storage 서비스에서 로컬 저장소로 전체 데이터베이스 백업 복원**  
-`mysecondcontainer`에 있는 `Sales`의 전체 데이터베이스 백업이 로컬 저장소에 복원됩니다.  `Sales`는 현재 서버에 없습니다.
+**K2. Microsoft Azure Storage 서비스에서 로컬 스토리지로 전체 데이터베이스 백업 복원**  
+`mysecondcontainer`에 있는 `Sales`의 전체 데이터베이스 백업이 로컬 스토리지에 복원됩니다.  `Sales`는 현재 서버에 없습니다.
 
 ```sql
 RESTORE DATABASE Sales
@@ -674,7 +674,7 @@ RESTORE DATABASE Sales
   STATS = 10;
 ```
   
-**K3. 로컬 저장소에서 Microsoft Azure Storage 서비스로 전체 데이터베이스 백업 복원**  
+**K3. 로컬 스토리지에서 Microsoft Azure Storage 서비스로 전체 데이터베이스 백업 복원**  
 ```sql
 RESTORE DATABASE Sales
   FROM DISK = 'E:\BAK\Sales.bak'
@@ -722,7 +722,7 @@ RESTORE DATABASE Sales
 - [RESTORE VERIFYONLY(Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
 
 > [!IMPORTANT]
-> Azure SQL Database Managed Instance 자동 백업에서 복원하려면 [SQL Database 복원](https://docs.microsoft.com/azure/sql-database/sql-database-restore)을 참조하세요.
+> Azure SQL Database Managed Instance 자동 백업에서 복원하려면 [SQL Database 복원](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups)을 참조하세요.
   
 ## <a name="syntax"></a>구문  
   
@@ -752,7 +752,7 @@ FROM URL
  
 ## <a name="general-remarks"></a>일반적인 주의 사항
 
-전제 조건으로 BLOB 저장소 계정 URL과 일치하는 이름으로 자격 증명을 만들고, 공유 액세스 서명을 암호로 배치해야 합니다. RESTORE 명령은 BLOB 저장소 URL을 사용하여 자격 증명을 조회하고 백업 디바이스를 읽는 데 필요한 정보를 찾습니다.
+전제 조건으로 BLOB 스토리지 계정 URL과 일치하는 이름으로 자격 증명을 만들고, 공유 액세스 서명을 암호로 배치해야 합니다. RESTORE 명령은 BLOB 스토리지 URL을 사용하여 자격 증명을 조회하고 백업 장치를 읽는 데 필요한 정보를 찾습니다.
 
 RESTORE 작업은 비동기식으로, 클라이언트 연결을 중단하는 경우에도 복원은 계속됩니다. 사용자 연결을 드롭하는 경우 복원 작업의 상태에 대한 [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) 보기를 확인할 수 있습니다(데이터베이스의 CREATE 및 DROP 경우 포함). 
 

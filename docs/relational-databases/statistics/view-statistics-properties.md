@@ -12,16 +12,16 @@ helpviewer_keywords:
 - viewing statistics properties
 - statistics [SQL Server], viewing properties
 ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48d205f913127fa598ba3d2d2d75f2a1eb3f1303
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4f710a7ef79f5532cd8a58921cb8b07d350c1305
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406690"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380891"
 ---
 # <a name="view-statistics-properties"></a>통계 속성 보기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -108,7 +108,7 @@ ms.locfileid: "52406690"
      다음 정보는 밀도 벡터의 결과 집합에 반환되는 열에 대한 설명입니다.  
   
      **모든 밀도**  
-     밀도는 1/ *고유 값*입니다. 결과에는 통계 개체에 있는 각 열 접두사의 밀도가 한 행씩 표시됩니다. 고유 값은 행별 및 열 접두사별 열 값의 고유한 목록입니다. 예를 들어 통계 개체가 키 열 (A, B, C)를 포함하는 경우 결과에서 밀도는 이러한 각 열 접두사의 고유 값 목록인 (A), (A,B) 및 (A, B, C)로 보고됩니다. 접두사 (A, B, C)를 사용하면 이러한 각 목록은 고유 값 목록 (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7)입니다. 접두사 (A, B)를 사용하면 동일한 열 값은 고유 값 목록 (3, 5), (4, 4) 및 (4, 5)입니다.  
+     밀도는 1/ *고유 값*입니다. 결과에는 통계 개체에 있는 각 열 접두사의 밀도가 한 행씩 표시됩니다. 고유 값은 행별 및 열 접두사별 열 값의 고유한 목록입니다. 예를 들어 통계 개체가 키 열 (A, B, C)를 포함하는 경우 결과에서 밀도는 이러한 각 열 접두사의 고유 값 목록인 (A), (A,B) 및 (A, B, C)로 보고됩니다. 접두사 (A, B, C)를 사용하면 이러한 각 목록은 다음과 같은 고유 값 목록입니다. (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). 접두사 (A, B)를 사용하면 동일한 열 값은 고유 값 목록 (3, 5), (4, 4) 및 (4, 5)입니다.  
   
      **평균 길이**  
      열 접두사의 열 값 목록을 저장하기 위한 평균 길이(바이트)입니다. 예를 들어 목록 (3, 5, 6)의 각 값에 4바이트가 필요한 경우 길이는 12바이트입니다.  

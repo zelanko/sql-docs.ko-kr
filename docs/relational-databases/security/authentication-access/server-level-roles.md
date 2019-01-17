@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2466e5b1cff9efb055d348a7e72729fa5208156
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5225b335cc028397f63cb930b07e8781ce0d8454
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661332"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213712"
 ---
 # <a name="server-level-roles"></a>서버 수준 역할
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "51661332"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 제공하는 고정 서버 역할은 9개입니다. 고정 서버 역할(**공용** 제외)에 부여된 사용 권한은 변경할 수 없습니다. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]부터는 사용자 정의 서버 역할을 만들어 여기에 서버 수준 사용 권한을 추가할 수 있습니다.  
   
  서버 수준 보안 주체([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인, Windows 계정 및 Windows 그룹)를 서버 수준 역할에 추가할 수 있습니다. 고정 서버 역할의 각 멤버는 같은 역할에 다른 로그인을 추가할 수 있습니다. 사용자 정의 서버 역할의 멤버는 이 역할에 다른 서버 보안 주체를 추가할 수 없습니다.  
->  [!NOTE]
+> [!NOTE]
 >  SQL Database 또는 SQL Data Warehouse에서는 서버 수준 사용 권한을 사용할 수 없습니다. SQL Database에 대한 자세한 내용은 [데이터베이스 액세스 제어 및 권한 부여](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)를 참조하세요.
   
 ## <a name="fixed-server-level-roles"></a>고정 서버 수준 역할  

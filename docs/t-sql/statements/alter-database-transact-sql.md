@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d67a43a1732ccbbecb7ffe3b6099acf315c86ecb
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9eb95a89fa8539eede53a154f7e7087a3f31f71b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203112"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135323"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL)
 
@@ -138,7 +138,7 @@ CURRENT
   
 현재 사용 중인 데이터베이스를 변경하도록 지정합니다.  
   
-MODIFY NAME **=***new_database_name*  
+MODIFY NAME **=**_new_database_name_  
 데이터베이스의 이름을 지정된 이름 *new_database_name*으로 바꿉니다.  
   
 COLLATE *collation_name*  
@@ -378,7 +378,7 @@ CURRENT
 
 현재 사용 중인 데이터베이스를 변경하도록 지정합니다.  
   
-MODIFY NAME **=***new_database_name*  
+MODIFY NAME **=**_new_database_name_  
 
 데이터베이스의 이름을 지정된 이름 *new_database_name*으로 바꿉니다. 다음 예에서는 `db1` 데이터베이스의 이름을 `db2`로 변경합니다.   
 
@@ -405,7 +405,7 @@ MODIFY(MAXSIZE **=**[100MB | 500MB | 1 | 1024...4096]GB)
 데이터베이스의 최대 크기를 지정합니다. 최대 크기는 데이터베이스의 EDITION 속성에 대한 유효한 값 집합을 따라야 합니다. 데이터베이스의 최대 크기를 변경하면 데이터베이스 EDITION이 변경될 수 있습니다. 
 
 > [!NOTE]
-> **MAXSIZE** 인수는 하이퍼스케일 서비스 계층의 단일 데이터베이스에 적용되지 않습니다. 하이퍼스케일 계층 데이터베이스는 필요에 따라 100TB까지 증가합니다. SQL Database 서비스는 저장소를 자동으로 추가하므로 최대 크기를 설정할 필요가 없습니다.
+> **MAXSIZE** 인수는 하이퍼스케일 서비스 계층의 단일 데이터베이스에 적용되지 않습니다. 하이퍼스케일 계층 데이터베이스는 필요에 따라 100TB까지 증가합니다. SQL Database 서비스는 스토리지를 자동으로 추가하므로 최대 크기를 설정할 필요가 없습니다.
 
 **DTU 기반 모델**
 
@@ -433,7 +433,7 @@ MODIFY(MAXSIZE **=**[100MB | 500MB | 1 | 1024...4096]GB)
 |1024GB|해당 사항 없음|√|√|√|√ (D)|  
 |1024GB에서 최대 4096GB(256 GB*로 증분)|해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|√|√|  
   
-\* P11과 P15는 기본 크기인 1024를 사용하여 MAXSIZE를 최대 4TB까지 허용합니다.  P11 및 P15는 추가 비용없이 최대 4TB가 포함된 저장소를 사용할 수 있습니다. 프리미엄 계층에서 1TB 초과 MAXSIZE는 현재 다음 지역에서 사용할 수 있습니다. 미국 동부2, 미국 서부, 미국 버지니아 주 정부, 유럽 서부, 독일 중부, 동남 아시아, 일본 동부, 오스트레일리아 동부, 캐나다 중부 및 캐나다 동부. DTU 기반 모델에 대한 리소스 제한에 대한 자세한 내용은 [DTU 기반 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요.  
+\* P11과 P15는 기본 크기인 1024를 사용하여 MAXSIZE를 최대 4TB까지 허용합니다.  P11 및 P15는 추가 비용 없이 최대 4TB가 포함된 스토리지를 사용할 수 있습니다. 프리미엄 계층에서 1TB 초과 MAXSIZE는 현재 다음 지역에서 사용할 수 있습니다. 미국 동부2, 미국 서부, 미국 버지니아 주 정부, 유럽 서부, 독일 중부, 동남 아시아, 일본 동부, 오스트레일리아 동부, 캐나다 중부 및 캐나다 동부. DTU 기반 모델에 대한 리소스 제한에 대한 자세한 내용은 [DTU 기반 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요.  
 
 DTU 기반 모델에 대한 MAXSIZE 값은 지정된 경우 지정된 서비스 계층에 대한 위의 표에 표시된 유효한 값이어야 합니다.
  
@@ -919,10 +919,10 @@ ALTER DATABASE database_name
 수정할 데이터베이스의 이름입니다. 데이터베이스 목록을 어플라이언스에 표시하려면 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)을 사용합니다.  
   
 AUTOGROW = { ON | OFF }  
-AUTOGROW 옵션을 업데이트합니다. AUTOGROW가 켜진 경우 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]이 저장소 요구 사항의 증가를 수용할 필요에 따라 복제된 테이블, 분산된 테이블 및 트랜잭션 로그에 대해 할당된 공간을 자동으로 증가시킵니다. AUTOGROW가 꺼진 경우 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]은 복제된 테이블이나 분산된 테이블 또는 트랜잭션 로그가 최대 크기 설정을 초과한 경우 오류를 반환합니다.  
+AUTOGROW 옵션을 업데이트합니다. AUTOGROW가 켜진 경우 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]이 스토리지 요구 사항의 증가를 수용할 필요에 따라 복제된 테이블, 분산된 테이블 및 트랜잭션 로그에 대해 할당된 공간을 자동으로 증가시킵니다. AUTOGROW가 꺼진 경우 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]은 복제된 테이블이나 분산된 테이블 또는 트랜잭션 로그가 최대 크기 설정을 초과한 경우 오류를 반환합니다.  
   
 REPLICATED_SIZE = *size* [GB]  
-변경되는 데이터베이스에 모든 복제된 테이블을 저장하기 위해 계산 노드당 최대 기가바이트를 새로 지정합니다. 어플라이언스 저장 공간을 계획하는 경우 어플라이언스에서 REPLICATED_SIZE에 계산 노드 수를 곱해야 합니다.  
+변경되는 데이터베이스에 모든 복제된 테이블을 저장하기 위해 계산 노드당 최대 기가바이트를 새로 지정합니다. 어플라이언스 스토리지 공간을 계획하는 경우 어플라이언스에서 REPLICATED_SIZE에 계산 노드 수를 곱해야 합니다.  
   
 DISTRIBUTED_SIZE = *size* [GB]  
 변경되는 데이터베이스에 모든 분산된 테이블을 저장하기 위해 데이터베이스당 최대 기가바이트를 새로 지정합니다. 해당 크기는 어플라이언스의 모든 계산 노드에 분산됩니다.  
@@ -1031,23 +1031,23 @@ ALTER DATABASE CustomerSales
     SET ( AUTOGROW = ON );  
 ```  
   
-### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>2. 복제된 테이블에 대해 최대 저장소 변경  
-다음 예제에서는 데이터베이스 `CustomerSales`에 대해 복제된 테이블 저장소 용량 한도를 1GB로 설정. 계산 노드당 저장소 용량 한도입니다.  
+### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>2. 복제된 테이블에 대해 최대 스토리지 변경  
+다음 예제에서는 데이터베이스 `CustomerSales`에 대해 복제된 테이블 스토리지 용량 한도를 1GB로 설정. 계산 노드당 스토리지 용량 한도입니다.  
   
 ```sql  
 ALTER DATABASE CustomerSales  
     SET ( REPLICATED_SIZE = 1 GB );  
 ```  
   
-### <a name="c-altering-the-maximum-storage-for-distributed-tables"></a>3. 분산된 테이블에 대해 최대 저장소 변경  
- 다음 예제에서는 데이터베이스 `CustomerSales`에 대해 분산된 테이블 저장소 용량 한도를 1000GB(1테라바이트)로 설정합니다. 계산 노드당 저장소 용량 한도가 아닌 모든 계산 노드에 대해 어플라이언스에서 결합된 저장소 용량 한도입니다.  
+### <a name="c-altering-the-maximum-storage-for-distributed-tables"></a>3. 분산된 테이블에 대해 최대 스토리지 변경  
+ 다음 예제에서는 데이터베이스 `CustomerSales`에 대해 분산된 테이블 스토리지 용량 한도를 1000GB(1테라바이트)로 설정합니다. 계산 노드당 스토리지 용량 한도가 아닌 모든 계산 노드에 대해 어플라이언스에서 결합된 스토리지 용량 한도입니다.  
   
 ```sql  
 ALTER DATABASE CustomerSales  
     SET ( DISTRIBUTED_SIZE = 1000 GB );  
 ```  
   
-### <a name="d-altering-the-maximum-storage-for-the-transaction-log"></a>D. 트랜잭션 로그에 대해 최대 저장소 변경  
+### <a name="d-altering-the-maximum-storage-for-the-transaction-log"></a>D. 트랜잭션 로그에 대해 최대 스토리지 변경  
  다음 예제에서는 어플라이언스에 대해 10GB의 트랜잭션 로그 크기가 최대값[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 갖도록 데이터베이스 `CustomerSales`를 업데이트합니다.  
   
 ```sql  

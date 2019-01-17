@@ -23,12 +23,12 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2183c64e1d525e0d0add54317e2af10d0ada311b
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 6a66ee0be27bcc584bd3d01a7b17a1fffbc74a33
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979709"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134343"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "53979709"
 > [!IMPORTANT]  
 >  데이터베이스 사용자로의 컨텍스트 전환이 활성화되어 있는 동안 해당 데이터베이스 외부의 리소스에 액세스하려고 하면 문이 실패합니다. USE *database* 문, 분산 쿼리, 식별자가 3-4부분으로 구성된 다른 데이터베이스를 참조하는 쿼리 등이 여기에 해당됩니다.  
   
- **'** *name* **'**  
+ **'** _name_ **'**  
  유효한 사용자 또는 로그인 이름입니다. *name*은 **sysadmin** 고정 서버 역할의 멤버이거나 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 또는 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)에서 각각 보안 주체여야 합니다.  
   
  *name*에 지역 변수를 지정할 수 있습니다.  
@@ -85,7 +85,7 @@ ms.locfileid: "53979709"
  COOKIE INTO **@**_varbinary_variable_  
  호출 REVERT WITH COOKIE 문에 올바른 **@**_varbinary_variable_값이 포함되어 있는 경우에만 실행 컨텍스트를 이전 컨텍스트로 되돌릴 수 있도록 지정합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 쿠키를 **@**_varbinary_variable_로 전달합니다. **COOKIE INTO** 옵션은 임시 수준에서만 사용할 수 있습니다.  
   
- **@** *varbinary_variable*은 **varbinary(8000)** 입니다.  
+ **@** _varbinary_variable_은 **varbinary(8000)** 입니다.  
   
 > [!NOTE]  
 >  현재 쿠키 **OUTPUT** 매개 변수는 정확한 최대 길이인 **varbinary(8000)** 로 정의되어 있습니다. 그러나 현재 구현은 **varbinary(100)** 입니다. 애플리케이션은 **varbinary(8000)** 를 예약하여 후속 릴리스에서 쿠키 반환 크기가 늘어날 경우에도 애플리케이션이 제대로 작동할 수 있도록 해야 합니다.  

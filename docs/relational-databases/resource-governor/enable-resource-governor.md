@@ -9,25 +9,25 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, enabling
 ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 1d69214acdfc469a9c74afbd1ec9c379acc02689
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c44ea082390f2722bd4544e264cf5f1266e69b7
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617831"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380314"
 ---
 # <a name="enable-resource-governor"></a>리소스 관리자 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   리소스 관리자는 기본적으로 해제되어 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 Transact-SQL을 사용하여 리소스 관리자를 사용하도록 설정할 수 있습니다.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions), [사용 권한](#Permissions)  
   
--   **Resource Governor를 사용하도록 설정하는 데 사용되는 도구:**  [개체 탐색기](#RGOnObjEx), [Resource Governor 속성](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
+-   **Resource Governor를 사용하도록 설정하려면 다음을 사용합니다.**  [개체 탐색기](#RGOnObjEx), [Resource Governor 속성](#RGOnProp) 또는 [Transact-SQL](#RGOnTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
  리소스 관리자를 사용하도록 설정하면 다음과 같은 결과가 나타납니다.  
   
 -   작업 그룹에 해당 작업을 할당할 수 있도록 새 연결에 대해 분류자 함수가 실행됩니다.  
@@ -72,7 +72,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [관리](../../relational-databases/resource-governor/resource-governor.md)   
+ [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)   
  [리소스 관리자 사용 안 함](../../relational-databases/resource-governor/disable-resource-governor.md)   
  [리소스 관리자 리소스 풀](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [리소스 관리자 작업 그룹](../../relational-databases/resource-governor/resource-governor-workload-group.md)   

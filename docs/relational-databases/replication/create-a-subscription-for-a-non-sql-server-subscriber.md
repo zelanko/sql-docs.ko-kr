@@ -15,12 +15,12 @@ ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 854e407cce5f229883e9b4f53e6a818d4532640b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4ae569fa5f7a15435fc69f84fd4254c692e1eb1d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205242"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126513"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>SQL Server 이외 구독자에 대한 구독 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "53205242"
   
     -   IBM DB2의 경우 데이터베이스가 DB2 연결 문자열의 **Initial Catalog** 속성에 지정됩니다. 이 연결 문자열은 이 과정의 뒷부분에서 설명하는 **추가 연결 옵션** 필드에 입력할 수 있습니다.  
   
-8.  **배포 에이전트 보안** 페이지에서 구독자 옆에 있는 속성 단추(**...**)를 클릭하여 **배포 에이전트 보안** 대화 상자에 액세스합니다.  
+8.  **배포 에이전트 보안** 페이지에서 구독자 옆에 있는 속성 단추 (**...**)를 클릭하여 **배포 에이전트 보안** 대화 상자에 액세스합니다.  
   
 9. **배포 에이전트 보안** 대화 상자에서 다음을 수행하세요.  
   

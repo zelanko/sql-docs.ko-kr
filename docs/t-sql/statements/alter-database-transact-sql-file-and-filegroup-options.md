@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE 파일 및 파일 그룹 옵션(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 12/11/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -43,12 +43,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1191ae28c9683a89d06830c942a22941fccfb943
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5a91f7bf27dea953cde7186262c8b28b2cd0cf7e
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403560"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53329020"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE(Transact-SQL) 파일 및 파일 그룹 옵션 
 
@@ -144,8 +144,8 @@ REMOVE FILE *logical_file_name*
 *logical_file_name*  
 파일 참조 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 논리적 이름입니다.  
   
-> [!WARNING]  
-> `FILE_SNAPSHOT` 백업과 연결된 데이터베이스 파일을 제거하는 것은 성공하지만 연결된 스냅숏은 데이터베이스 파일을 참조하는 백업이 무효화되는 것을 방지하기 위해 삭제되지 않습니다. 파일은 잘라지지만 FILE_SNAPSHOT 백업을 그대로 유지하기 위해 물리적으로 삭제되지는 않습니다. 자세한 내용은 [Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+> [!WARNING]
+> `FILE_SNAPSHOT` 백업과 연결된 데이터베이스 파일을 제거하는 것은 성공하지만 연결된 스냅숏은 데이터베이스 파일을 참조하는 백업이 무효화되는 것을 방지하기 위해 삭제되지 않습니다. 파일은 잘라지지만 FILE_SNAPSHOT 백업을 그대로 유지하기 위해 물리적으로 삭제되지는 않습니다. 자세한 내용은 [Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 MODIFY FILE  
 수정할 파일을 지정합니다. \<filespec> 속성은 한 번에 한 개씩만 변경할 수 있습니다. 수정할 파일을 식별하려면 \<filespec>에 항상 NAME을 지정해야 합니다. SIZE를 지정할 경우 새 크기가 현재 파일 크기보다 커야 합니다.  
@@ -294,7 +294,7 @@ CONTAINS FILESTREAM
   
 CONTAINS MEMORY_OPTIMIZED_DATA  
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
 파일 그룹이 메모리 액세스에 최적화된 데이터를 파일 시스템에 저장하도록 지정합니다. 자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요. 데이터베이스당 하나의 `MEMORY_OPTIMIZED_DATA` 파일 그룹만 허용됩니다. 메모리 액세스에 최적화된 테이블을 만들기 위해서는 파일 그룹을 비워 둘 수 없습니다. 적어도 한 개의 파일이 있어야 합니다. *filegroup_name*은 경로를 참조합니다. 따라서 마지막 폴더 바로 위의 경로까지 있어야 하고 마지막 폴더 자체는 있으면 안 됩니다.  
  
@@ -316,13 +316,13 @@ NAME = *new_filegroup_name*
 파일 그룹 이름을 *new_filegroup_name*으로 변경합니다.  
   
 AUTOGROW_SINGLE_FILE  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
 파일 그룹의 파일이 자동 증가 임계값을 충족하면 해당 파일만이 증가합니다. 기본값입니다.  
   
 AUTOGROW_ALL_FILES  
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
 파일 그룹의 파일이 자동 증가 임계값을 충족하면 파일 그룹의 모든 파일이 커집니다. 
 
@@ -341,15 +341,15 @@ READ_ONLY | READONLY
 - 데이터베이스 축소가 불가능합니다.  
 - 읽기 전용 데이터베이스에서는 잠금이 발생하지 않습니다. 따라서 쿼리 성능은 더 향상될 수 있습니다.  
   
-> [!NOTE]  
+> [!NOTE]
 > 키워드 `READONLY`는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 향후 버전에서 제거될 예정입니다. 향후 개발 작업에서는 `READONLY`를 사용하지 않도록 하고 현재 `READONLY`를 사용하는 애플리케이션은 수정하세요. 대신 `READ_ONLY` 를 사용해야 합니다.  
   
 READ_WRITE | READWRITE  
 파일 그룹을 READ_WRITE로 지정합니다. 해당 파일 그룹의 개체를 업데이트할 수 있습니다. 이 상태를 변경하려면 데이터베이스에 대해 배타적 액세스 권한이 있어야 합니다. 자세한 내용은 SINGLE_USER 절을 참조하십시오.  
   
-> [!NOTE]  
+> [!NOTE]
 > 키워드 `READWRITE`는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 향후 버전에서 제거될 예정입니다. 새 개발 작업에서 `READWRITE`를 사용하지 않도록 하고 현재 `READWRITE`를 사용하는 애플리케이션을 `READ_WRITE`를 대신 사용하도록 수정하세요.  
-  
+> 
 > [!TIP]
 > 이러한 옵션의 상태는 **sys.databases** 카탈로그 뷰의 **is_read_only** 열 또는 `DATABASEPROPERTYEX` 함수의 **Updateability** 속성을 검사하여 결정할 수 있습니다.  
   
@@ -887,13 +887,13 @@ READ_ONLY | READONLY
 - 데이터베이스 축소가 불가능합니다.  
 - 읽기 전용 데이터베이스에서는 잠금이 발생하지 않습니다. 따라서 쿼리 성능은 더 향상될 수 있습니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  READONLY 키워드는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 향후 버전에서 제거될 예정입니다. 향후 개발 작업에서는 READONLY를 사용하지 않도록 하고 현재 READONLY를 사용하는 응용 프로그램은 수정하십시오. 대신 READ_ONLY를 사용하십시오.  
   
 READ_WRITE | READWRITE  
 파일 그룹을 READ_WRITE로 지정합니다. 해당 파일 그룹의 개체를 업데이트할 수 있습니다. 이 상태를 변경하려면 데이터베이스에 대해 배타적 액세스 권한이 있어야 합니다. 자세한 내용은 SINGLE_USER 절을 참조하십시오.  
   
-> [!NOTE]  
+> [!NOTE]
 >  키워드 `READWRITE`는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 향후 버전에서 제거될 예정입니다. 새 개발 작업에서 `READWRITE`를 사용하지 않도록 하고 현재 `READWRITE`를 사용하는 애플리케이션을 `READ_WRITE`를 대신 사용하도록 수정하세요.  
   
 이러한 옵션의 상태는 **sys.databases** 카탈로그 뷰의 **is_read_only** 열 또는 `DATABASEPROPERTYEX` 함수의 **Updateability** 속성을 검사하여 결정할 수 있습니다.  
@@ -907,7 +907,7 @@ READ_WRITE | READWRITE
   
 ## <a name="examples"></a>예  
   
-### <a name="a-adding-a-file-to-a-database"></a>1. 데이터베이스에 파일 추가  
+### <a name="a-adding-a-file-to-a-database"></a>A. 데이터베이스에 파일 추가  
 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 5MB 데이터 파일을 추가합니다.  
   
 ```sql  
@@ -925,7 +925,7 @@ GO
   
 ```  
   
-### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>2. 데이터베이스에 두 개의 파일이 포함된 파일 그룹 추가  
+### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. 데이터베이스에 두 개의 파일이 포함된 파일 그룹 추가  
 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 `Test1FG1` 파일 그룹을 만들고 이 파일 그룹에 두 개의 5MB 파일을 추가합니다.  
   
 ```sql  
@@ -964,7 +964,7 @@ REMOVE FILE test1dat4;
 GO  
 ```  
   
-### <a name="d-modifying-a-file"></a>4. 파일 수정  
+### <a name="d-modifying-a-file"></a>D. 파일 수정  
 다음 예에서는 2번 예에서 추가한 파일 중 하나의 크기를 늘립니다.  
 MODIFY FILE 명령을 포함한 ALTER DATABASE는 파일 크기를 더 크게 만들 수만 있으므로 파일 크기를 더 작게 만들려면 DBCC SHRINKFILE을 사용해야 합니다.  
   
@@ -998,7 +998,7 @@ SIZE = 200MB);
 GO
 ```
 
-### <a name="e-making-a-filegroup-the-default"></a>5. 기본 파일 그룹 설정  
+### <a name="e-making-a-filegroup-the-default"></a>E. 기본 파일 그룹 설정  
 다음 예제에서는 예제 B에서 만든 `Test1FG1` 파일 그룹을 기본 파일 그룹으로 만듭니다. 그 다음 `PRIMARY` 파일 그룹을 기본 파일 그룹으로 다시 설정합니다. `PRIMARY`는 대괄호 또는 따옴표로 구분해야 합니다.  
   
 ```sql  
@@ -1012,7 +1012,7 @@ MODIFY FILEGROUP [PRIMARY] DEFAULT;
 GO  
 ```  
   
-### <a name="f-adding-a-filegroup-using-alter-database"></a>6. ALTER DATABASE를 사용하여 파일 그룹 추가  
+### <a name="f-adding-a-filegroup-using-alter-database"></a>F. ALTER DATABASE를 사용하여 파일 그룹 추가  
 다음 예에서는 `FILEGROUP`을 `MyDB` 데이터베이스에 추가합니다.  
   
 ```sql  
@@ -1031,7 +1031,7 @@ TO FILEGROUP NewFG;
 GO  
 ```      
         
-### <a name="g-change-filegroup-so-that-when-a-file-in-the-filegroup-meets-the-autogrow-threshold-all-files-in-the-filegroup-grow"></a>7. 파일 그룹을 파일 그룹의 파일이 자동 증가 임계값을 충족하면 파일 그룹의 모든 파일이 증가하도록 변경합니다.
+### <a name="g-change-filegroup-so-that-when-a-file-in-the-filegroup-meets-the-autogrow-threshold-all-files-in-the-filegroup-grow"></a>G. 파일 그룹을 파일 그룹의 파일이 자동 증가 임계값을 충족하면 파일 그룹의 모든 파일이 증가하도록 변경합니다.
  다음 예제에서는 필수 `ALTER DATABASE` 문을 생성하고 `AUTOGROW_ALL_FILES` 설정을 사용하여 읽기-쓰기 파일 그룹을 수정합니다.  
   
 ```sql  
@@ -1092,5 +1092,6 @@ GO
 [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)   
-[메모리 최적화 파일 그룹](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) 
+[메모리 최적화 파일 그룹](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)
 
+::: moniker-end

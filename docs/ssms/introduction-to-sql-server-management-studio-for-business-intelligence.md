@@ -15,18 +15,18 @@ ms.assetid: ffaa77b7-03d0-4d7a-aa42-c5091a4f2ceb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f3ec990e48b6d9913db9e610fee6bfca6b9190a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4e928be305f701c8493e03fea504c8d275226966
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701369"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215379"
 ---
 # <a name="introduction-to-sql-server-management-studio-for-business-intelligence"></a>비즈니스 인텔리전스용 SQL Server Management Studio 소개
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 및 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 액세스, 구성 및 관리하려면 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용합니다. 3가지 비즈니스 인텔리전스 기술 모두 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 의존하지만 각 기술과 관련된 관리 태스크는 약간씩 다릅니다.  
   
-> [!NOTE]  
+> [!NOTE]
 > [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]및 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 솔루션은 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull_md.md)]가 아닌 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 만들고 수정합니다. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull_md.md)][!INCLUDE[msCoName](../includes/msconame_md.md)][!INCLUDE[vsprvs](../includes/vsprvs-md.md)]기반의 개발 환경입니다.  
   
 ## <a name="managing-analysis-services-solutions-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 Analysis Services 솔루션 관리  

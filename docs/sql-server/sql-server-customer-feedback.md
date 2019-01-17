@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 47d911c6a05af96d042211f98b5365230dd57084
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d89d70b7aae73acd965f053a993432c62878351f
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525199"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979649"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>SQL Server를 구성하여 Microsoft에 피드백 보내기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ SQL Server 오류 및 사용 보고를 시작하려면 **시작**을 클릭하�
     
     레지스트리 항목 이름 = CustomerFeedback
     
-    항목 종류 DWORD: 0은 참여하지 않음, 1은 참여함
+    항목 종류 DWORD: 0은 참여하지 않음. 1은 참여함
     
     {InstanceID}은(는) 다음 예제와 같이 인스턴스 유형 및 인스턴스를 나타냅니다.
 
@@ -91,18 +91,18 @@ SQL Server 오류 및 사용 보고를 시작하려면 **시작**을 클릭하�
     
     레지스트리 항목 이름 = CustomerFeedback
     
-    항목 종류 DWORD: 0은 참여하지 않음, 1은 참여함
+    항목 종류 DWORD: 0은 참여하지 않음. 1은 참여함
 
 > [!NOTE]
 > {Major Version}은 SQL Server 버전을 나타냄(예: SQL Server 2017의 경우는 140)
 
-- SQL Server Management Studio:
+- SQL Server Management Studio 17:
   
-    하위 키 = HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\140
+    하위 키 = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\14.0
 
-    레지스트리 항목 이름 = CustomerFeedback
+    레지스트리 항목 이름 = UserFeedbackOptIn
 
-    항목 종류 DWORD: 0은 참여하지 않음, 1은 참여함
+    항목 종류 DWORD: 0은 참여하지 않음. 1은 참여함
 
     또한 SSMS 17.x는 Visual Studio 2015 셸에 기반을 두고 있으며, Visual Studio를 설치하면 기본적으로 고객 피드백이 활성화됩니다.  
 
@@ -114,6 +114,13 @@ SQL Server 오류 및 사용 보고를 시작하려면 **시작**을 클릭하�
 
     이러한 레지스트리 하위 키에 대한 레지스트리 기반 그룹 정책은 SQL Server 2017 사용 데이터 수집에 따라 적용됩니다.
 
+- SQL Server Management Studio 18:
+    
+    하위 키 = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\18.0_IsoShell
+
+    레지스트리 항목 이름 = UserFeedbackOptIn
+
+    항목 종류 DWORD: 0은 참여하지 않음. 1은 참여함
 ## <a name="set-registry-subkeys-for-crash-dump-collection"></a>크래시 덤프 수집에 대한 레지스트리 하위 키 설정
 
 이전 버전의 SQL Server에서 나타난 동작과 마찬가지로, SQL Server 2017 Enterprise 고객은 크래시 덤프 수집에 참여 또는 참여하지 않도록 서버의 그룹 정책 설정을 구성할 수 있습니다. 이 작업은 레지스트리 기반 정책을 구성하여 수행합니다. 관련 레지스트리 키와 설정은 다음과 같습니다. 
@@ -124,7 +131,7 @@ SQL Server 오류 및 사용 보고를 시작하려면 **시작**을 클릭하�
 
     레지스트리 항목 이름 = EnableErrorReporting
 
-    항목 종류 DWORD: 0은 참여하지 않음, 1은 참여함
+    항목 종류 DWORD: 0은 참여하지 않음. 1은 참여함
  
     {InstanceID}은(는) 다음 예제와 같이 인스턴스 유형 및 인스턴스를 나타냅니다. 
 
@@ -139,7 +146,7 @@ SQL Server 오류 및 사용 보고를 시작하려면 **시작**을 클릭하�
 
     레지스트리 항목 이름 = EnableErrorReporting
 
-    항목 종류 DWORD: 0은 참여하지 않음, 1은 참여함
+    항목 종류 DWORD: 0은 참여하지 않음. 1은 참여함
 
 > [!NOTE]
 > {Major Version}은 SQL Server 버전을 나타냅니다. 예를 들어 SQL Server 2017의 경우는 “140”입니다.

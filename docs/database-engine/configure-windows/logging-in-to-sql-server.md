@@ -22,18 +22,18 @@ ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 35366fbbeac73a551546f2778592f03da5c7e1e7
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 230e57dbbe3b3d2ca88bd6f4fd727555b4fa38b2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617673"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214824"
 ---
 # <a name="logging-in-to-sql-server"></a>SQL Server로 로그인
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   그래픽 관리 도구를 사용하거나 명령 프롬프트에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스에 로그인할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 같은 그래픽 관리 도구를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 인스턴스에 로그인할 때 필요에 따라 서버 이름, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 및 암호를 제공하라는 메시지가 표시됩니다. Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 로그인하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. 대신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용자의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정을 사용하여 자동으로 로그인합니다. 혼합 모드 인증( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 인증 모드)에서[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 실행 중인 상태에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 로그인하도록 선택한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인과 암호를 제공해야 합니다. 가능하면 Windows 인증을 사용하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 같은 그래픽 관리 도구를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 인스턴스에 로그인할 때 필요에 따라 서버 이름, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 및 암호를 제공하라는 메시지가 표시됩니다. Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 로그인하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. 대신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용자의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정을 사용하여 자동으로 로그인합니다. 혼합 모드 인증([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 인증 모드)에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행 중인 상태에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 로그인하도록 선택한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인과 암호를 제공해야 합니다. 가능하면 Windows 인증을 사용하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치할 때 대/소문자를 구분하는 데이터 정렬을 선택한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인도 대/소문자를 구분합니다.  
