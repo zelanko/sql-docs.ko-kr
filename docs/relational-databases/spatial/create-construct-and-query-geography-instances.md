@@ -15,16 +15,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 716aa4485030a907c8e816f0daf3036c979e2ae5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 52b121f7b56032856d2c844c230b915069bf69ef
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660733"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980379"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>geography 인스턴스 만들기, 구성 및 쿼리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  지리 공간 데이터 형식인 **geography**는 둥근 표면 좌표계로 데이터를 나타냅니다. 이 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 .NET CLR(공용 언어 런타임) 데이터 형식으로 구현됩니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 데이터 형식은 GPS 위도 및 경도 좌표 등의 타원(둥근 표면) 데이터를 저장합니다.  
+  지리 공간 데이터 형식인 **geography**는 둥근 표면 좌표계로 데이터를 나타냅니다. 이 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 .NET CLR(공용 언어 런타임) 데이터 형식으로 구현됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 데이터 형식은 GPS 위도 및 경도 좌표 등의 타원(둥근 표면) 데이터를 저장합니다.  
   
  **geography** 형식은 각 데이터베이스에서 미리 정의되고 사용할 수 있습니다. 다른 시스템 제공 형식을 사용할 때와 동일한 방식으로 **geography** 형식의 테이블 열을 만들고 **geography** 데이터에 대한 작업을 수행할 수 있습니다.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "51660733"
 ###  <a name="gml"></a> GML 텍스트 입력으로부터 지리 인스턴스 구성  
  **geography** 데이터 형식은 **geography** 인스턴스의 XML 표현인 GML에서 **geography** 인스턴스를 생성하는 메서드를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 GML 하위 집합을 지원합니다.  
   
- Geography Markup Language에 대한 자세한 내용은 OGC 사양: [OGC 사양, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)를 참조하세요.  
+ Geography Markup Language에 대한 자세한 내용은 OGC [OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)를 참조하세요.  
   
  **GML 입력으로부터 지리 인스턴스 유형을 구성하려면**  
  [GeomFromGML&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/geomfromgml-geography-data-type.md)  
@@ -232,41 +232,44 @@ ms.locfileid: "51660733"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 메서드를 사용할 경우 **geography** 인스턴스 간 관계를 확인할 수 있습니다. WGS 84(또는 SRID 4326)가 아닌 공간 참조 시스템의 데이터를 사용할 경우 지리 공간 데이터에 대해 특정 SRID를 결정해야 합니다.  
   
 ##  <a name="examples"></a> 예  
- 다음 예에서는 geography 데이터를 추가하고 쿼리하는 방법을 보여 줍니다.  
+다음 예에서는 geography 데이터를 추가하고 쿼리하는 방법을 보여 줍니다.  
   
--   첫 번째 예에서는 ID 열과 `geography` 열 `GeogCol1`이 있는 테이블을 만듭니다. 세 번째 열에서는 `geography` 열을 OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현으로 렌더링하고 `STAsText()` 메서드를 사용합니다. 그러고 나면 두 개의 행이 삽입됩니다. 이 중 한 행에는 `LineString` 의 `geography`인스턴스가 들어 있고, 다른 행에는 `Polygon` 인스턴스가 들어 있습니다.  
+### <a name="example-a"></a>예 A. 
+이 예에서는 ID 열과 `geography` 열 `GeogCol1`이 있는 테이블을 만듭니다. 세 번째 열에서는 `geography` 열을 OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현으로 렌더링하고 `STAsText()` 메서드를 사용합니다. 그러고 나면 두 개의 행이 삽입됩니다. 이 중 한 행에는 `LineString` 의 `geography`인스턴스가 들어 있고, 다른 행에는 `Polygon` 인스턴스가 들어 있습니다.  
   
-    ```  
-    IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
-        DROP TABLE dbo.SpatialTable;  
-    GO  
+```sql  
+IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
+DROP TABLE dbo.SpatialTable;  
+GO  
   
-    CREATE TABLE SpatialTable   
-        ( id int IDENTITY (1,1),  
-        GeogCol1 geography,   
-        GeogCol2 AS GeogCol1.STAsText() );  
-    GO  
+CREATE TABLE SpatialTable   
+  ( id int IDENTITY (1,1),  
+    GeogCol1 geography,   
+    GeogCol2 AS GeogCol1.STAsText()
+   );  
+GO  
   
-    INSERT INTO SpatialTable (GeogCol1)  
-    VALUES (geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326));  
+INSERT INTO SpatialTable (GeogCol1)  
+VALUES (geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)', 4326));  
   
-    INSERT INTO SpatialTable (GeogCol1)  
-    VALUES (geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326));  
-    GO  
-    ```  
+INSERT INTO SpatialTable (GeogCol1)  
+VALUES (geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))', 4326));  
+GO  
+```  
   
--   두 번째 예에서는 `STIntersection()` 메서드를 사용하여 앞서 삽입한 두 `geography` 인스턴스가 교차하는 지점을 반환합니다.  
+### <a name="example-b"></a>예 2.
+이 예에서는 `STIntersection()` 메서드를 사용하여 앞서 삽입한 두 `geography` 인스턴스가 교차하는 지점을 반환합니다.  
   
-    ```  
-    DECLARE @geog1 geography;  
-    DECLARE @geog2 geography;  
-    DECLARE @result geography;  
+```sql  
+DECLARE @geog1 geography;  
+DECLARE @geog2 geography;  
+DECLARE @result geography;  
   
-    SELECT @geog1 = GeogCol1 FROM SpatialTable WHERE id = 1;  
-    SELECT @geog2 = GeogCol1 FROM SpatialTable WHERE id = 2;  
-    SELECT @result = @geog1.STIntersection(@geog2);  
-    SELECT @result.STAsText();  
-    ```  
+SELECT @geog1 = GeogCol1 FROM SpatialTable WHERE id = 1;  
+SELECT @geog2 = GeogCol1 FROM SpatialTable WHERE id = 2;  
+SELECT @result = @geog1.STIntersection(@geog2);  
+SELECT @result.STAsText();  
+```  
   
 ## <a name="see-also"></a>참고 항목  
  [공간 데이터&#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  

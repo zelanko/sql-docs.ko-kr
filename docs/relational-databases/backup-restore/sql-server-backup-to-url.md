@@ -11,12 +11,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7030a99d5afed1c2c996eb34271fc130650e2aa3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e59713e537f14d6b18ce6600082f9df172112b97
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514470"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980229"
 ---
 # <a name="sql-server-backup-to-url"></a>URL에 대한 SQL Server 백업
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -57,10 +57,10 @@ ms.locfileid: "52514470"
 ###  <a name="intorkeyconcepts"></a> 주요 구성 요소 및 개념 소개  
  다음 두 섹션에서는 Microsoft Azure Blob 저장소 서비스와 Microsoft Azure Blob 저장소 서비스로 백업하거나 복원하는 데 사용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 소개합니다. 구성 요소와 Microsoft Azure Blob 저장소 서비스로 백업하거나 복원할 때 구성 요소 간의 상호 작용을 이해하는 것이 중요합니다.  
   
- 이 프로세스의 첫 번째 단계에서는 Azure 구독 내에 Microsoft Azure Storage 계정을 만듭니다. 이 저장소 계정은 저장소 계정을 사용하여 만든 모든 컨테이너 및 개체에 대한 모든 관리 권한이 있는 관리자 계정입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 Microsoft Azure Storage 계정 이름 및 해당 액세스 키 값을 사용하여 Microsoft Azure Blob 저장소 서비스에 인증하고 blob을 읽고 쓰거나, 읽기 및 쓰기 권한을 부여하는 특정 컨테이너에서 생성된 공유 액세스 서명 토큰을 사용할 수 있습니다. Azure Storage 계정에 대한 자세한 내용은 [Azure Storage 계정 정보](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/) 를 참조하고, 공유 액세스 서명에 대한 자세한 내용은 [공유 액세스 서명, 1부: SAS 모델 이해](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)를 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명은 이 인증 정보를 저장하며 백업 또는 복원 작업 중에 사용됩니다.  
+ 이 프로세스의 첫 번째 단계에서는 Azure 구독 내에 Microsoft Azure Storage 계정을 만듭니다. 이 저장소 계정은 저장소 계정을 사용하여 만든 모든 컨테이너 및 개체에 대한 모든 관리 권한이 있는 관리자 계정입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 Microsoft Azure Storage 계정 이름 및 해당 액세스 키 값을 사용하여 Microsoft Azure Blob 저장소 서비스에 인증하고 blob을 읽고 쓰거나, 읽기 및 쓰기 권한을 부여하는 특정 컨테이너에서 생성된 공유 액세스 서명 토큰을 사용할 수 있습니다. Azure Storage 계정에 대한 자세한 내용은 [Azure Storage 계정 정보](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)를 참조하고, 공유 액세스 서명에 대한 자세한 내용은 [공유 액세스 서명, 1부: SAS 모델 이해](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)를 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명은 이 인증 정보를 저장하며 백업 또는 복원 작업 중에 사용됩니다.  
   
 ###  <a name="blockbloborpageblob"></a> 블록 Blob 및 페이지 Blob으로 백업 
- Microsoft Azure Blob 저장소 서비스에는 블록 Blob과 페이지 Blob이라는 두 가지 유형의 Blob을 저장할 수 있습니다. SQL Server 백업은 사용되는 Transact-SQL 구문에 따라 두 Blob 유형 중 하나를 사용할 수 있습니다. 저장소 키가 자격 증명에 사용되면 페이지 Blob이 사용되고, 공유 액세스 서명이 사용되면 블록 Blob이 사용됩니다.
+ Microsoft Azure Blob 저장소 서비스에는 블록 Blob과 페이지 Blob이라는 두 가지 유형의 Blob을 저장할 수 있습니다. SQL Server 백업에서는 사용되는 Transact-SQL 구문에 따라 Blob 유형 중 하나를 사용할 수 있습니다. 스토리지 키를 자격 증명에 사용하는 경우 페이지 Blob이 사용되고, 공유 액세스 서명을 사용하는 경우 블록 Blob이 사용됩니다.
  
  블록 Blob으로의 백업은 SQL Server 2016 이상 버전에서만 제공됩니다. SQL Server 2016 이상을 실행하는 경우 페이지 Blob 대신 블록 Blob으로 백업하는 것이 좋습니다. 기본 이유는 다음과 같습니다.
 - 공유 액세스 서명은 저장소 키와 비교할 때 Blob 액세스 권한을 부여하는 보다 안전한 방법입니다.
@@ -72,9 +72,9 @@ ms.locfileid: "52514470"
 - 여러 블록 Blob에 백업
 
 ###  <a name="Blob"></a> Microsoft Azure Blob 저장소 서비스  
- **저장소 계정:** 저장소 계정은 모든 저장소 서비스의 시작 지점입니다. Microsoft Azure Blob 저장소 서비스에 액세스하려면 먼저 Microsoft Azure Storage 계정을 만듭니다. 자세한 내용은 [저장소 계정 만들기](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)를 참조하세요.  
+ **스토리지 계정:** 저장소 계정은 모든 저장소 서비스의 시작 지점입니다. Microsoft Azure Blob 저장소 서비스에 액세스하려면 먼저 Microsoft Azure Storage 계정을 만듭니다. 자세한 내용은 [저장소 계정 만들기](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)를 참조하세요.  
   
- **컨테이너:** 컨테이너에서는 그룹화된 blob 집합을 제공하며 blob을 무제한으로 저장할 수 있습니다. Microsoft Azure Blob 저장소 서비스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 쓰려면 적어도 루트 컨테이너가 만들어져 있어야 합니다. 컨테이너에서 공유 액세스 서명 토큰을 생성하고 특정 컨테이너의 개체에 대한 액세스 권한만 부여할 수 있습니다.  
+ **컨테이너:** 컨테이너에서는 그룹화된 Blob 집합을 제공하며 Blob을 무제한으로 저장할 수 있습니다. Microsoft Azure Blob 저장소 서비스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 쓰려면 적어도 루트 컨테이너가 만들어져 있어야 합니다. 컨테이너에서 공유 액세스 서명 토큰을 생성하고 특정 컨테이너의 개체에 대한 액세스 권한만 부여할 수 있습니다.  
   
  **Blob:** 모든 형식과 크기의 파일입니다. Microsoft Azure Blob 저장소 서비스에는 블록 Blob과 페이지 Blob이라는 두 가지 유형의 Blob을 저장할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에서는 사용되는 TRANSACT-SQL 구문에 따라 Blob 유형 중 하나를 사용할 수 있습니다. Blob에는 https://\<storage account>.blob.core.windows.net/\<container>/\<blob> URL 형식을 사용하여 주소를 지정할 수 있습니다. Microsoft Azure Blob 저장소 서비스에 대한 자세한 내용은 [.NET에서 Blob 저장소 서비스를 사용하는 방법](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)을 참조하세요. 페이지 및 블록 Blob에 대한 자세한 내용은 [블록 및 페이지 Blob 이해](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx)를 참조하세요.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "52514470"
   
 -   backupset 옵션 **RETAINDAYS** 및 **EXPIREDATE** 지정은 지원되지 않습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 백업 장치 이름이 최대 259자로 제한됩니다. BACKUP TO URL에서 URL - ‘https://.blob.core.windows.net//.bak’를 지정하는 데 사용되는 필수 요소에 36자가 사용되며, 계정, 컨테이너 및 blob 이름에 사용할 수 있는 문자는 223자입니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 백업 디바이스 이름이 최대 259자로 제한됩니다. BACKUP TO URL에서 URL - ‘https://.blob.core.windows.net//.bak’를 지정하는 데 사용되는 필수 요소에 36자가 사용되며, 계정, 컨테이너 및 blob 이름에 사용할 수 있는 문자는 223자입니다.  
   
 ###  <a name="Support"></a> Backup/Restore 문 지원  
   
@@ -220,7 +220,7 @@ SQL Server 자격 증명을 사용하여 SQL Server Management Studio의 백업 
   
 3.  **대상** 섹션의 **일반** 페이지에 있는 **백업할 위치:** 드롭다운 목록에서 **URL** 옵션을 사용할 수 있습니다.  **URL** 옵션은 Microsoft Azure Storage에 백업을 만드는 데 사용됩니다. **추가** 를 클릭하면 **백업 대상 선택** 대화 상자가 열립니다.
    
-    1.  **Azure Storage 컨테이너:** 백업 파일을 저장할 Microsoft Azure Storage 컨테이너의 이름입니다.  드롭다운 목록에서 기존 컨테이너를 선택하거나 수동으로 컨테이너를 입력합니다. 
+    1.  **Azure 스토리지 컨테이너:** 백업 파일을 저장할 Microsoft Azure Storage 컨테이너의 이름입니다.  드롭다운 목록에서 기존 컨테이너를 선택하거나 수동으로 컨테이너를 입력합니다. 
   
     2.  **공유 액세스 정책:** 수동으로 입력한 컨테이너에 대한 공유 액세스 서명을 입력합니다.  기존 컨테이너를 선택한 경우에는 이 필드를 사용할 수 없습니다. 
   
@@ -252,19 +252,19 @@ SQL Server 자격 증명을 사용하여 SQL Server Management Studio의 백업 
   
 1.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...** 을 선택합니다. 
   
-2.  **일반** 페이지의 **원본** 섹션에서 **장치** 를 선택합니다.
+2.  **일반** 페이지의 **원본** 섹션에서 **디바이스** 를 선택합니다.
   
 3.  찾아보기(...) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. 
 
 4.  **백업 미디어 유형:** 드롭다운 목록에서 **URL** 을 선택합니다.  **추가** 를 클릭하여 **백업 파일 위치 선택** 대화 상자를 엽니다.
 
-    1.  **Azure Storage 컨테이너:** 백업 파일을 포함하는 Microsoft Azure Storage 컨테이너의 정규화된 이름입니다.  드롭다운 목록에서 기존 컨테이너를 선택하거나 정규화된 컨테이너 이름을 수동으로 입력합니다.
+    1.  **Azure 스토리지 컨테이너:** 백업 파일을 포함하는 Microsoft Azure 스토리지 컨테이너의 정규화된 이름입니다.  드롭다운 목록에서 기존 컨테이너를 선택하거나 정규화된 컨테이너 이름을 수동으로 입력합니다.
       
     2.  **공유 액세스 서명:**  지정된 컨테이너에 대한 공유 액세스 서명을 입력하는 데 사용됩니다.
       
     3.  **추가:**  공유 액세스 서명이 없는 기존 컨테이너를 등록하는 데 사용됩니다.  [Microsoft Azure 구독에 연결](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)을 참조하세요.
       
-    4.  **확인:** SQL Server가 제공된 SQL 자격 증명 정보를 사용하여 Microsoft Azure Storage에 연결하고 **Microsoft Azure에서 백업 파일 찾기** 대화 상자를 엽니다. 저장소 컨테이너에 있는 백업 파일이 이 페이지에 표시됩니다. 복원하는 데 사용할 파일을 선택하고 **확인**을 클릭합니다. **백업 장치 선택** 대화 상자가 표시됩니다. 이 대화 상자에서 **확인** 을 클릭하면 복원을 완료할 수 있는 기본 **복원** 대화 상자가 표시됩니다. 
+    4.  **확인:** SQL Server가 제공된 SQL 자격 증명 정보를 사용하여 Microsoft Azure 스토리지에 연결하고 **Microsoft Azure에서 백업 파일 찾기** 대화 상자를 엽니다. 저장소 컨테이너에 있는 백업 파일이 이 페이지에 표시됩니다. 복원하는 데 사용할 파일을 선택하고 **확인**을 클릭합니다. **백업 디바이스 선택** 대화 상자가 표시됩니다. 이 대화 상자에서 **확인**을 클릭하면 복원을 완료할 수 있는 기본 **복원** 대화 상자가 표시됩니다. 
   
      [데이터베이스 복원&#40;일반 페이지&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
@@ -282,7 +282,7 @@ SQL Server 자격 증명을 사용하여 SQL Server Management Studio의 백업 
 -   [STOPAT를 사용하여 지정 시간으로 복원](#PITR)  
   
 > [!NOTE]  
->  Microsoft Azure Blob 저장소 서비스에서 SQL Server 2016을 사용하는 방법에 대한 자습서는 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 저장소 서비스 사용](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)을 참조하세요.  
+>  Microsoft Azure Blob 스토리지 서비스와 함께 SQL Server 2016 사용에 대한 자습서는 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 스토리지 서비스 사용](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)을 참조하세요.  
   
 ###  <a name="SAS"></a> 공유 액세스 서명 만들기  
  다음 예제에서는 새로 만든 컨테이너에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명을 만드는 데 사용할 수 있는 공유 액세스 서명을 만듭니다. 이 스크립트는 저장된 액세스 정책에 연결된 공유 액세스 서명을 만듭니다. 자세한 내용은 [공유 액세스 서명, 1부: SAS 모델 이해](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)를 참조하세요. 또한 스크립트는 SQL Server에 자격 증명을 만드는 데 필요한 T-SQL 명령을 작성합니다. 
@@ -346,7 +346,7 @@ $tSql | clip
 Write-Host $tSql  
 ```  
 
-스크립트를 성공적으로 실행한 후에는, `CREATE CREDENTIAL` 명령을 쿼리 도구에 복사하고 SQL Server 인스턴스에 연결한 다음 명령을 실행하여 공유 액세스 서명으로 자격 증명을 만듭니다. 
+스크립트를 성공적으로 실행한 후에는, `CREATE CREDENTIAL` 명령을 쿼리 도구에 복사하고 SQL Server 인스턴스에 연결하고 명령을 실행하여 공유 액세스 서명으로 자격 증명을 만듭니다. 
 
 ###  <a name="credential"></a> 자격 증명 만들기  
  다음 예제에서는 Microsoft Azure Blob 저장소 서비스 인증용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명을 만듭니다. 다음 중 하나를 수행합니다. 
@@ -426,6 +426,6 @@ Write-Host $tSql
 ## <a name="see-also"></a>참고 항목  
  [URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
- [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 저장소 서비스 사용](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 스토리지 서비스 사용](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   

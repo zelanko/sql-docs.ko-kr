@@ -253,7 +253,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/_vti_bin/reportserver -v st="sites/bi" -v f="Shared Documents" -u Domain\User1 -p Password -v ts="https://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_native_to_native_Azure_vm"> 기본 모드에서 기본 모드로 – Microsoft Azure Virtual Machine</a>  
+###  <a name="bkmk_native_to_native_Azure_vm"></a> 기본 모드에서 기본 모드로 – Microsoft Azure Virtual Machine  
  다음 예제는 다음과 같이 콘텐츠를 마이그레이션합니다.  
   
 -   기본 모드 보고서 서버 **SourceServer**에서  
@@ -267,7 +267,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 > [!TIP]  
 >  Microsoft Azure 가상 컴퓨터에서 Windows PowerShell을 사용해서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버를 만드는 방법에 대한 자세한 내용은 [PowerShell을 사용해서 기본 모드 보고서 서버로 Microsoft Azure VM 만들기](https://msdn.microsoft.com/library/dn449661.aspx)를 참조하세요.  
   
-##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"> SharePoint 모드 – ‘bi’ 사이트 컬렉션에서 Microsoft Azure Virtual Machine의 기본 모드로 서버로</a>  
+##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint 모드 – ‘bi’ 사이트 컬렉션에서 Microsoft Azure Virtual Machine의 기본 모드로 서버로  
  다음 예제는 다음과 같이 콘텐츠를 마이그레이션합니다.  
   
 -   "sites/bi" 사이트 모음 및 공유 라이브러리가 포함된 SharePoint 모드 보고서 서버 **SourceServer** 에서  

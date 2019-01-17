@@ -11,12 +11,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 921994834433e7a4e2e081d6b8b43ce6294f6e09
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 99e6a0b600dfe7adfe173176b69cd2b45ffdd223
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518300"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209212"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>SharePoint용 Power Pivot 업그레이드
 
@@ -106,7 +106,7 @@ ms.locfileid: "52518300"
   
     2.  시작 시 구성 도구에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 팜 솔루션과 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 웹 애플리케이션 솔루션의 업그레이드 상태를 확인합니다. 이 솔루션의 이전 버전이 검색될 경우 "**최신 버전[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]의 솔루션 파일이 검색되었습니다. 팜을 업그레이드하려면 업그레이드 옵션을 선택하세요**"라는 메시지가 표시됩니다. **확인** 을 클릭하여 시스템 유효성 검사 메시지를 닫습니다.  
   
-    3.  **기능, 서비스, 응용 프로그램 및 솔루션 업그레이드**를 클릭한 다음 **확인**을 클릭합니다.  
+    3.  **기능, 서비스, 애플리케이션 및 솔루션 업그레이드**를 클릭한 다음 **확인**을 클릭합니다.  
   
     4.  왼쪽 창의 태스크 목록에서 동작을 검토하고 도구에서 수행하지 않으려는 동작을 제외합니다. 모든 동작은 기본적으로 포함됩니다. 동작을 제거하려면 왼쪽 태스크 목록에서 동작을 선택한 다음 **매개 변수** 페이지에서 **태스크 목록에 이 동작 포함** 확인란의 선택을 취소합니다.  
   
@@ -116,12 +116,12 @@ ms.locfileid: "52518300"
   
          스크립트 탭은 PowerShell cmdlet을 표시하거나 도구에서 실행할 PowerShell 스크립트 파일을 참조합니다.  
   
-    6.  **유효성 검사** 를 클릭하여 각 동작이 유효한지 여부를 확인합니다. **유효성 검사** 를 사용할 수 없는 경우 모든 동작이 시스템에 유효한 것입니다. **유효성 검사** 를 사용할 수 있는 경우 입력 값(예: Excel 서비스 응용 프로그램 이름)을 수정했거나 도구에서 특정 동작을 수행할 수 없음을 확인했을 수 있습니다. 동작을 수행할 수 없는 경우 해당 동작을 제외하거나 동작이 유효하지 않은 것으로 플래그가 지정되게 하는 기본 조건을 수정해야 합니다.  
+    6.  **유효성 검사** 를 클릭하여 각 동작이 유효한지 여부를 확인합니다. **유효성 검사** 를 사용할 수 없는 경우 모든 동작이 시스템에 유효한 것입니다. **유효성 검사** 를 사용할 수 있는 경우 입력 값(예: Excel 서비스 애플리케이션 이름)을 수정했거나 도구에서 특정 동작을 수행할 수 없음을 확인했을 수 있습니다. 동작을 수행할 수 없는 경우 해당 동작을 제외하거나 동작이 유효하지 않은 것으로 플래그가 지정되게 하는 기본 조건을 수정해야 합니다.  
   
         > [!IMPORTANT]  
         >  첫 번째 동작인 **팜 솔루션 업그레이드**를 항상 먼저 처리해야 합니다. 이 동작은 서버를 구성하는 데 사용되는 PowerShell cmdlet을 등록합니다. 이 동작에서 오류가 발생하는 경우 계속하지 마십시오. 태스크 목록의 추가 동작을 처리하기 전에 오류에서 제공하는 정보를 사용하여 문제를 진단하고 해결합니다.  
   
-    7.  **실행** 을 클릭하여 이 태스크에 유효한 모든 동작을 수행합니다. **실행** 은 유효성 검사를 통과한 후에만 사용할 수 있습니다. **실행**을 클릭하면 동작이 일괄 처리 모드로 처리됨을 알리는 다음 경고가 나타납니다. “**도구에서 유효한 것으로 플래그가 지정되는 모든 구성 설정이 SharePoint 팜에 적용됩니다. 계속하시겠습니까?**”.  
+    7.  **실행** 을 클릭하여 이 태스크에 유효한 모든 동작을 수행합니다. **실행** 은 유효성 검사를 통과한 후에만 사용할 수 있습니다. **실행**을 클릭하면 작업이 일괄 처리 모드로 처리됨을 알리는 다음 경고가 나타납니다. "**도구에서 유효한 것으로 플래그가 지정되는 모든 구성 설정이 SharePoint 팜에 적용됩니다. 계속하시겠습니까?**”.  
   
     8.  계속하려면 **예** 를 클릭합니다.  
   
@@ -164,17 +164,17 @@ ms.locfileid: "52518300"
     Get-Service | where {$_.displayname -like "*powerpivot*"}  
     ```  
   
-5.  **SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** Windows 서비스를 실행하는 첫 번째 SharePoint 응용 프로그램 서버에서 **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 프로그램을 실행**하여 POWERPIVOT 인스턴스를 업그레이드합니다. SQL Server 설치 마법사의 설치 페이지에서 업그레이드 옵션을 선택합니다. 자세한 내용은 [설치 마법사를 사용하여 SQL Server 2016으로 업그레이드&#40;설치 프로그램&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)를 참조하세요.  
+5.  **SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** Windows 서비스를 실행하는 첫 번째 SharePoint 애플리케이션 서버에서 **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 프로그램을 실행**하여 POWERPIVOT 인스턴스를 업그레이드합니다. SQL Server 설치 마법사의 설치 페이지에서 업그레이드 옵션을 선택합니다. 자세한 내용은 [설치 마법사를 사용하여 SQL Server 2016으로 업그레이드&#40;설치 프로그램&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)를 참조하세요.  
   
 6.  구성 도구를 실행하기 전에**서버를 다시 시작** 합니다. 이 단계를 수행하면 SQL Server 설치 프로그램에서 설치하는 업데이트나 필수 구성 요소가 시스템에 완전히 구성됩니다.  
   
-7.  **SharePoint 2013 팜의 각 서버에서 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ) 서비스를 실행하는 첫 번째 SharePoint 응용 프로그램 서버에서** 구성 도구를 실행[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]하여 SharePoint의 솔루션과 웹 서비스를 업그레이드합니다. 이 단계에서는 중앙 관리를 사용할 수 없습니다.  
+7.  **SharePoint 2013 팜의 각 서버에서 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ) 서비스를 실행하는 첫 번째 SharePoint 애플리케이션 서버에서** 구성 도구를 실행[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]하여 SharePoint의 솔루션과 웹 서비스를 업그레이드합니다. 이 단계에서는 중앙 관리를 사용할 수 없습니다.  
   
     1.  **시작** 메뉴에서 **모든 프로그램**을 가리키고 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**, **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구**를 차례로 클릭합니다. 이 도구는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 이 로컬 서버에 설치된 경우에만 표시됩니다.  
   
     2.  시작 시 구성 도구에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 팜 솔루션과 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 웹 애플리케이션 솔루션의 업그레이드 상태를 확인합니다. 이 솔루션의 이전 버전이 검색될 경우 "최신 버전의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 솔루션 파일이 검색되었습니다. 팜을 업그레이드 하려면 업그레이드 옵션을 선택하세요."라는 메시지가 표시됩니다. **확인** 을 클릭하여 메시지를 닫습니다.  
   
-    3.  **기능, 서비스, 응용 프로그램 및 솔루션 업그레이드**를 클릭한 다음 **확인** 을 클릭하여 계속합니다.  
+    3.  **기능, 서비스, 애플리케이션 및 솔루션 업그레이드**를 클릭한 다음 **확인** 을 클릭하여 계속합니다.  
   
     4.  다음 경고가 나타납니다. "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드의 통합 문서가 최신 버전으로 업그레이드됩니다. 기존 통합 문서에 대한 사용자 지정은 모두 손실됩니다. 계속하시겠습니까?”  
   
@@ -192,18 +192,18 @@ ms.locfileid: "52518300"
   
          스크립트 탭은 PowerShell cmdlet을 표시하거나 도구에서 실행할 PowerShell 스크립트 파일을 참조합니다.  
   
-    7.  **유효성 검사** 를 클릭하여 각 동작이 유효한지 여부를 확인합니다. **유효성 검사** 를 사용할 수 없는 경우 모든 동작이 시스템에 유효한 것입니다. **유효성 검사** 를 사용할 수 있는 경우 입력 값(예: Excel 서비스 응용 프로그램 이름)을 수정했거나 도구에서 특정 동작을 수행할 수 없음을 확인했을 수 있습니다. 동작을 수행할 수 없는 경우 해당 동작을 제외하거나 동작이 유효하지 않은 것으로 플래그가 지정되게 하는 기본 조건을 수정해야 합니다.  
+    7.  **유효성 검사** 를 클릭하여 각 동작이 유효한지 여부를 확인합니다. **유효성 검사** 를 사용할 수 없는 경우 모든 동작이 시스템에 유효한 것입니다. **유효성 검사** 를 사용할 수 있는 경우 입력 값(예: Excel 서비스 애플리케이션 이름)을 수정했거나 도구에서 특정 동작을 수행할 수 없음을 확인했을 수 있습니다. 동작을 수행할 수 없는 경우 해당 동작을 제외하거나 동작이 유효하지 않은 것으로 플래그가 지정되게 하는 기본 조건을 수정해야 합니다.  
   
         > [!IMPORTANT]  
         >  첫 번째 동작인 **팜 솔루션 업그레이드**를 항상 먼저 처리해야 합니다. 이 동작은 서버를 구성하는 데 사용되는 PowerShell cmdlet을 등록합니다. 이 동작에서 오류가 발생하는 경우 계속하지 마십시오. 태스크 목록의 추가 동작을 처리하기 전에 오류에서 제공하는 정보를 사용하여 문제를 진단하고 해결합니다.  
   
-    8.  **실행** 을 클릭하여 이 태스크에 유효한 모든 동작을 수행합니다. **실행** 은 유효성 검사를 통과한 후에만 사용할 수 있습니다. **실행**을 클릭하면 동작이 일괄 처리 모드로 처리됨을 알리는 다음 경고가 나타납니다. “도구에서 유효한 것으로 플래그가 지정되는 모든 구성 설정이 SharePoint 팜에 적용됩니다. 계속하시겠습니까?”  
+    8.  **실행** 을 클릭하여 이 태스크에 유효한 모든 동작을 수행합니다. **실행** 은 유효성 검사를 통과한 후에만 사용할 수 있습니다. **실행**을 클릭하면 작업이 일괄 처리 모드로 처리됨을 알리는 다음 경고가 나타납니다. "도구에서 유효한 것으로 플래그가 지정되는 모든 구성 설정이 SharePoint 팜에 적용됩니다. 계속하시겠습니까?”  
   
     9. 계속하려면 **예** 를 클릭합니다.  
   
     10. 팜에서 솔루션 및 기능 업그레이드를 완료하는 데 몇 분 정도 걸릴 수 있습니다. 이 시간 동안 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터에 대한 연결 요청은 “데이터를 새로 고칠 수 없습니다” 또는 “요청된 작업을 수행하는 동안 오류가 발생했습니다. 다시 시도하세요”와 같은 오류로 인해 실패합니다. 업그레이드가 완료된 후에는 서버를 사용할 수 있으며 이러한 오류가 더 이상 발생하지 않습니다.  
   
-8.  팜의 각 SQL Server Analysis Services(**)에 대해** 프로세스 반복[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]: 1) SQL Server 설치를 실행합니다. 2) [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 실행합니다.  
+8.  팜의 각 SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) 서비스에 대해 **프로세스 반복**: 1) SQL Server 설치 프로그램을 실행합니다. 2) [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 실행합니다.  
   
 9. 업그레이드 후 단계를 수행하고 팜의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 버전을 확인하여 업그레이드에 성공했는지 확인합니다. 자세한 내용은 이 문서의 [업그레이드 후 확인 태스크](#verify) 및 다음 섹션을 참조하세요.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "52518300"
         Stsadm -o enumdeployments  
         ```  
   
-    2.  기존 배포에서 **유형** 이 취소 또는 배포인지, **파일** 이 powerpivotwebapp.wsp 또는 powerpivotfarm.wsp인지 검토합니다.  
+    2.  기존 배포에서 **유형**이 취소 또는 배포인지, **파일**이 powerpivotwebapp.wsp 또는 powerpivotfarm.wsp인지 검토합니다.  
   
     3.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 솔루션에 관련된 배포 또는 취소의 경우 **JobId**의 GUID 값을 복사하여 다음 명령에 붙여넣습니다(Shell의 편집 메뉴에서 표시, 복사 및 붙여넣기 명령을 사용하여 GUID를 복사합니다).  
   
@@ -330,7 +330,7 @@ Get-PowerPivotSystemService
   
 2.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 시작합니다.  
   
-3.  **기능, 서비스, 응용 프로그램 및 솔루션 업그레이드**를 클릭한 다음 **확인**을 클릭합니다.  
+3.  **기능, 서비스, 애플리케이션 및 솔루션 업그레이드**를 클릭한 다음 **확인**을 클릭합니다.  
   
 4.  업그레이드 태스크에 포함된 동작을 검토한 다음 **유효성 검사**를 클릭합니다.  
   

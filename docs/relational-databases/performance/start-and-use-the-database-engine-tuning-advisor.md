@@ -16,15 +16,15 @@ f1_keywords:
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 926b099e6cadadb130717159188f2fcc87dbc218
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 749f94658d03828b30de3b328df1abfc8c932d43
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517666"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351057"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자 시작 및 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -454,7 +454,7 @@ database_name.owner_name.table_name
  인덱싱된 뷰 추가에 대한 권장 구성만 포함됩니다. 클러스터형 인덱스와 비클러스터형 인덱스에 대한 권장 구성은 생성되지 않습니다.  
   
  **필터링된 인덱스 포함**  
- 필터링된 인덱스 추가에 대한 권장 구성을 포함합니다. **인덱스와 인덱싱된 뷰**, **인덱스**, **비클러스터형 인덱스**중 하나를 선택한 경우 이 옵션을 사용할 수 있습니다.  
+ 필터링된 인덱스 추가에 대한 권장 구성을 포함합니다. 인덱스와 인덱싱된 뷰, 인덱스, 비클러스터형 인덱스 중 하나를 선택한 경우 **인덱스 및 인덱싱된 보기**, **인덱스** 또는 **비클러스터형 인덱스** 옵션을 사용할 수 있습니다.  
   
  **인덱스**  
  클러스터형 인덱스 및 비클러스터형 인덱스 추가에 대한 권장 구성만 포함됩니다. 인덱싱된 뷰에 대한 권장 구성은 생성되지 않습니다.  

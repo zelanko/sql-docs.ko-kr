@@ -3,7 +3,7 @@ title: 를 다운로드하여 설치합니다
 titleSuffix: Azure Data Studio
 description: 다운로드 및 Windows에 대 한 Azure 데이터 Studio 설치, macOS 또는 Linux
 ms.custom: seodec18
-ms.date: 01/10/2019
+ms.date: 01/17/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d7e9cd2130487a0ac50d6aa55a8a2e0f9cf9e80c
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 09e459b61350a100a64a788e0c7746d9a2ae623e
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298720"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361621"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Azure Data Studio 다운로드 및 설치
 
@@ -26,16 +26,18 @@ ms.locfileid: "54298720"
 [!INCLUDE[name-sos](../includes/name-sos.md)]는 Windows, macOS, Linux에서 실행됩니다.
 
 
-다운로드 하 고 최신 릴리스를 설치 합니다 *년 1 월 릴리스*:
+다운로드 하 고 최신 릴리스를 설치 합니다 *월 핫픽스 릴리스가*:
+
+버전 1.3.9 1.3.8 발견 된 몇 가지 문제를 해결 합니다. 자세한 내용은 참조 하세요 [월 핫픽스 릴리스](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1)합니다.
 
 > [!NOTE]
 > SQL Operations Studio를 통해 업데이트하고 설정, 바로 가기 키 또는 코드 조각을 유지하려는 경우 [사용자 설정 이동](#move-user-settings)을 확인합니다.
 
 |플랫폼|다운로드|릴리스 날짜| 버전 |
 |:---|:---|:---|:---|
-|Windows|[사용자 설치 관리자 (권장)](https://go.microsoft.com/fwlink/?linkid=2049972)<br>[시스템 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2049975)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2050146)|2019 년 1 월 9 일 |1.3.8|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2049981)|2019 년 1 월 9 일 |1.3.8|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2050157)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2049989)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2049986)|2019 년 1 월 9 일 |1.3.8|
+|Windows|[사용자 설치 관리자 (권장)](https://go.microsoft.com/fwlink/?linkid=2049972)<br>[시스템 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2049975)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2050146)|2019 년 1 월 16 일 |1.3.9|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2049981)|2019 년 1 월 16 일 |1.3.9|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2050157)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2049989)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2049986)|2019 년 1 월 16 일 |1.3.9|
 
 최신 릴리스에 대한 자세한 내용은 [릴리스 정보](release-notes.md)를 참조하십시오.
 

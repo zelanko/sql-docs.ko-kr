@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 92655853880919ba29b4736404fe1637471e8f15
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 6ba83e5cb431b2bcc10c0ba195189fc570f14cb9
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712634"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591567"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config Configuration File
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** 파일은 보고서 서버 웹 서비스 및 백그라운드 처리에 사용되는 설정을 저장합니다. 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션은 RSReportServer.config 파일에 저장된 구성 설정을 읽는 단일 프로세스 내에서 실행됩니다. 기본 모드 및 SharePoint 모드 보고서 서버에는 모두 RSReportServer.config가 사용되지만 두 모드가 구성 파일에서 모두 동일한 설정을 사용하지는 않습니다. 이 파일의 SharePoint 모드 버전은 SharePoint 모드의 설정 대부분이 파일이 아니라 SharePoint 구성 데이터베이스에 저장되기 때문에 더 작습니다. 이 항목에서는 기본 모드 및 SharePoint 모드에서 설치되는 기본 구성 파일과 구성 파일을 통해 제어되는 일부 중요한 설정 및 동작에 대해 설명합니다.  
@@ -66,7 +66,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**Dsn**|보고서 서버 데이터베이스를 호스팅하는 데이터베이스 서버에 대한 연결 문자열을 지정합니다. 이 값은 보고서 서버 데이터베이스를 만들 때 암호화되어 구성 파일에 추가됩니다. Sharepoint에 대한 데이터베이스 연결 정보는 SharePoint 구성 데이터베이스에서 가져옵니다.|N,S|  
 |**ConnectionType**|보고서 서버에서 보고서 서버 데이터베이스 연결에 사용하는 자격 증명 유형을 지정합니다. 유효한 값은 **Default** 및 **Impersonate**입니다. 보고서 서버가**로그인 또는 서비스 계정을 사용하여 보고서 서버 데이터베이스에 연결하도록 구성된 경우** Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 지정됩니다. 보고서 서버가 Windows 계정을 사용하여 보고서 서버 데이터베이스에 연결하는 경우에는**Impersonate** 가 지정됩니다.|N|  
 |**LogonUser, LogonDomain, LogonCred**|보고서 서버가 보고서 서버 데이터베이스에 연결하는 데 사용하는 도메인 계정의 도메인, 사용자 이름 및 암호를 저장합니다. **LogonUser**, **LogonDomain**및 **LogonCred** 의 값은 보고서 서버 연결에서 도메인 계정을 사용하도록 구성될 때 생성됩니다. 보고서 서버 데이터베이스 연결에 대한 자세한 내용은 [보고서 서버 데이터베이스 연결 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)를 참조하세요.|N|  
-|**InstanceID**|보고서 서버 인스턴스의 식별자입니다. 보고서 서버 인스턴스 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 기반으로 합니다. 이 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 지정합니다. 기본적으로 이 값은 **MSRS12***\<instancename>* 입니다. 이 설정은 수정하지 마세요. 다음은 전체 값을 보여주는 예입니다. `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> 다음은 SharePoint 모드의 예입니다.<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
+|**InstanceID**|보고서 서버 인스턴스의 식별자입니다. 보고서 서버 인스턴스 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 기반으로 합니다. 이 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 지정합니다. 기본적으로 이 값은 **MSRS12**_\<instancename>_ 입니다. 이 설정은 수정하지 마세요. 다음은 전체 값을 보여주는 예입니다. `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> 다음은 SharePoint 모드의 예입니다.<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
 |**InstallationID**|설치 프로그램에서 만드는 보고서 서버 설치의 ID입니다. 이 값은 GUID로 설정됩니다. 이 설정은 수정하지 마세요.|N|  
 |**SecureConnectionLevel**|웹 서비스 호출에 SSL(Secure Sockets Layer)을 반드시 사용해야 하는 수준을 지정합니다. 이 설정은 보고서 서버 웹 서비스와 웹 포털에 모두 사용됩니다. 이 값은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구에서 사용할 URL(HTTP 또는 HTTPS)을 구성할 때 설정됩니다. SQL Server 2008 R2에서 SecureConnectionLevel은 설정/해제가 전환됩니다. SQL Server 2008 R2보다 이전 버전의 경우 유효한 값의 범위는 0에서 3 사이입니다. 여기서 0은 가장 안전하지 않습니다. 자세한 내용은 [ConfigurationSetting 메서드 - SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md), [보안 웹 서비스 메서드 사용](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md) 및 [기본 모드 보고서 서버에서 SSL 연결 구성](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)을 참조하세요.|N,S|
 |**DisableSecureFormsAuthenticationCookie**|기본값은 False입니다.<br /><br /> 보안되도록 표시할 폼 및 사용자 지정 인증에 사용된 쿠키를 강제로 적용하지 않도록 설정할지 여부를 지정합니다. SQL Server 2012부터 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 사용자 지정 인증 확장 프로그램에 사용된 폼 인증 쿠키를 클라이언트에 전송할 때 보안 쿠키로 표시합니다. 보고서 서버 관리자 및 사용자 지정 보안 확장 프로그램 작성자는 이 속성을 변경하여, 사용자 지정 보안 확장 프로그램 작성자가 쿠키를 보안 쿠키로 표시할지 여부를 결정할 수 있도록 한 이전 동작으로 되돌릴 수 있습니다. 네트워크 스니핑과 재생 공격을 방지하도록 폼 인증에 보안 쿠키를 사용하는 것이 좋습니다.|N|  
@@ -102,8 +102,8 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
 |설정|설명|모드|  
 |-------------|-----------------|----------|  
-|**응용 프로그램**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 응용 프로그램에 대한 설정을 포함합니다.|N|  
-|**이름**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 응용 프로그램을 지정합니다. 유효한 값은 ReportServerWebService나 ReportManager입니다.|N|  
+|**애플리케이션**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션에 대한 설정을 포함합니다.|N|  
+|**이름**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션을 지정합니다. 유효한 값은 ReportServerWebService나 ReportManager입니다.|N|  
 |**VirtualDirectory**|애플리케이션의 가상 디렉터리 이름을 지정합니다.|N|  
 |**URL**|애플리케이션에 대한 하나 이상의 URL 예약을 포함합니다.|N|  
 |**UrlString**|HTTP.SYS에 유효한 URL 구문을 지정합니다. 구문에 대한 자세한 내용은 [URL 예약 구문&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)를 참조하세요.|N|  
@@ -145,7 +145,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**EnableAuthPersistence**|인증을 연결 시 수행할지, 아니면 요청마다 수행할지를 결정합니다.<br /><br /> 유효한 값은 **True** (기본값) 또는 **False**입니다. **True**로 설정하면 같은 연결의 이후 요청이 첫 번째 요청의 가장 컨텍스트를 가정합니다.<br /><br /> ISA 서버와 같은 프록시 서버 소프트웨어를 사용하여 보고서 서버에 액세스하는 경우에는 이 값을 **False** 로 설정해야 합니다. 프록시 서버를 사용하면 여러 사용자가 프록시 서버의 단일 연결을 사용할 수 있습니다. 이 시나리오에서는 각 사용자 요청이 별도로 인증되도록 인증 지속성을 사용하지 않아야 합니다. **EnableAuthPersistence** 를 **False**로 설정하지 않으면 모든 사용자가 첫 번째 요청의 가장 컨텍스트를 사용하여 연결합니다.|N,S|  
   
 ##  <a name="bkmk_service"></a> Service(RSReportServer.config 파일)  
- **Service** 는 서비스 전체에 적용되는 응용 프로그램 설정을 지정합니다.  
+ **Service** 는 서비스 전체에 적용되는 애플리케이션 설정을 지정합니다.  
   
  다음 표의 마지막 열은 해당 설정이 기본 모드 보고서 서버에 적용되는지(N) 또는 SharePoint 모드 보고서 서버에 적용되는지(S) 또는 두 가지 서버 모두에 적용되는지를 나타냅니다.  
   
@@ -157,7 +157,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**IsAlertingService**|기본값은 **True**입니다.|S|  
 |**PollingInterval**|보고서 서버가 이벤트 테이블을 폴링하는 간격(초)을 지정합니다. 유효한 값은 0에서 최대 정수 사이입니다. 기본값은 10입니다.|N,S|  
 |**WindowsServiceUseFileShareStorage**|사용자 세션 동안 보고서 서버 서비스가 만든 캐시된 보고서와 임시 스냅숏을 파일 시스템에 저장할지 여부를 지정합니다. 유효한 값은 **True** 및 **False** (기본값)입니다.|N,S|  
-|**MemorySafetyMargin**|보통 및 낮음 가중 시나리오 간 경계를 정의하는 **WorkingSetMaximum** 의 비율을 지정합니다. 기본값은 80입니다. **WorkingSetMaximum** 및 사용 가능한 메모리 구성에 대한 자세한 내용은 [보고서 서버 응용 프로그램을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)을 참조하세요.|N,S|  
+|**MemorySafetyMargin**|보통 및 낮음 가중 시나리오 간 경계를 정의하는 **WorkingSetMaximum** 의 비율을 지정합니다. 기본값은 80입니다. **WorkingSetMaximum** 및 사용 가능한 메모리 구성에 대한 자세한 내용은 [보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)을 참조하세요.|N,S|  
 |**MemoryThreshold**|높음 및 보통 가중 시나리오 간 경계를 정의하는 **WorkingSetMaximum** 의 비율을 지정합니다. 기본값은 **90**입니다. 이 값은 **MemorySafetyMargin**에 설정된 값보다 커야 합니다. 자세한 내용은 [보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)을 참조하세요.|N,S|  
 |**RecycleTime**|애플리케이션 도메인에 대한 재활용 시간(분)을 지정합니다. 유효한 값은 0에서 최대 정수 사이입니다. 기본값은 720입니다.|N,S|  
 |**MaxAppDomainUnloadTime**|재활용 작업 중 애플리케이션 도메인 언로드 작업이 허용되는 간격을 지정합니다. 이 기간 동안 재활용이 완료되지 않으면 애플리케이션 도메인의 모든 처리가 중지됩니다. 자세한 내용은 [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)을 참조하세요.<br /><br /> 이 값은 분 단위로 지정됩니다. 유효한 값은 0에서 최대 정수 사이입니다. 기본값은 **30**입니다.|N,S|  
@@ -171,14 +171,14 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**IsRdceEnabled**|RDCE(Report Definition Customization Extension) 설정 여부를 지정합니다. 유효한 값은 **True** 및 **False**입니다.|N,S|  
   
 ##  <a name="bkmk_UI"></a> UI(RSReportServer.config 파일)  
- **UI**는 웹 포털 응용 프로그램에 적용되는 구성 설정을 지정합니다.  
+ **UI**는 웹 포털 애플리케이션에 적용되는 구성 설정을 지정합니다.  
   
  다음 표의 마지막 열은 해당 설정이 기본 모드 보고서 서버에 적용되는지(N) 또는 SharePoint 모드 보고서 서버에 적용되는지(S) 또는 두 가지 서버 모두에 적용되는지를 나타냅니다.  
   
 |설정|설명|모드|  
 |-------------|-----------------|----------|  
 |**ReportServerUrl**|웹 포털이 연결하는 보고서 서버의 URL을 지정합니다. 다른 인스턴스 또는 원격 컴퓨터의 보고서 서버에 연결하도록 웹 포털을 구성하는 경우에만 이 값을 수정합니다.|N,S|  
-|**ReportBuilderTrustLevel**|이 값을 수정하지 마세요. 이 값은 구성할 수 없습니다.  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이상 버전에서 보고서 작성기는 **FullTrust**에서만 실행됩니다. 부분 신뢰 모드 중단에 대한 자세한 내용은 [SQL Server 2016의 SQL Server Reporting Services에서 중단된 기능](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)을 참조하세요.|N,S|  
+|**ReportBuilderTrustLevel**|이 값을 수정하지 마세요. 이 값은 구성할 수 없습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이상 버전에서 보고서 작성기는 **FullTrust**에서만 실행됩니다. 부분 신뢰 모드 중단에 대한 자세한 내용은 [SQL Server 2016의 SQL Server Reporting Services에서 중단된 기능](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)을 참조하세요.|N,S|  
 |**PageCountMode**|웹 포털에만 해당하는 이 설정은 보고서가 렌더링되기 전에 보고서 서버가 페이지 수 값을 계산하는지, 아니면 보고서를 볼 때 보고서 서버가 페이지 수 값을 계산하는지를 지정합니다. 유효한 값은 **Estimate** (기본값) 및 **Actual**입니다. 사용자가 보고서를 볼 때 페이지 수 정보를 계산하려면 **Estimate** 를 사용합니다. 처음에 페이지 수는 2(현재 페이지와 추가 한 페이지)로 설정되지만 사용자가 보고서 페이지를 이동할 때 상향 조정됩니다. 보고서가 표시되기 전에 미리 페이지 수를 계산하려면 **Actual** 을 사용합니다. **Actual** 은 이전 버전과의 호환성을 위해 제공됩니다. **PageCountMode** 를 **Actual**로 설정하면 올바른 페이지 수를 얻기 위해 전체 보고서를 처리해야 하므로 보고서가 표시될 때까지의 대기 시간이 증가합니다.|N,S|  
   
 ##  <a name="bkmk_extensions"></a> 확장 프로그램(RSReportServer.config 파일) 기본 모드  
@@ -304,7 +304,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
 -   IMAGE  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 릴리스부터는 MHTML 및 HTML 4.0 렌더링에는 기본적으로 데이터 시각화 크기 조정 동작을 제어하기 위해 다음과 같은 장치 정보 설정이 포함됩니다.  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 릴리스부터는 MHTML 및 HTML 4.0 렌더링에는 기본적으로 데이터 시각화 크기 조정 동작을 제어하기 위해 다음과 같은 디바이스 정보 설정이 포함됩니다.  
   
 ```  
 <DeviceInfo><DataVisualizationFitSizing>Approximate</DataVisualizationFitSizing></DeviceInfo>  
@@ -312,11 +312,11 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  DeviceInfo 설정에 대한 자세한 내용은 다음을 참조하십시오.  
   
--   [MHTML 장치 정보 설정](../../reporting-services/mhtml-device-information-settings.md)  
+-   [MHTML 디바이스 정보 설정](../../reporting-services/mhtml-device-information-settings.md)  
   
--   [HTML 장치 정보 설정](../../reporting-services/html-device-information-settings.md)  
+-   [HTML 디바이스 정보 설정](../../reporting-services/html-device-information-settings.md)  
   
--   [렌더링 확장 프로그램에 대한 장치 정보 설정&#40;Reporting Services&#41;](../../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)  
+-   [렌더링 확장 프로그램에 대한 디바이스 정보 설정&amp;#40;Reporting Services&amp;#41;](../../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)  
   
  **\<Render>** 에서 자식 **\<Extension>** 요소의 특성에 대한 자세한 내용은 다음을 참조하세요.  
   
@@ -837,7 +837,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
   
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [보고서 서버 응용 프로그램을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
+ [보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
  [Reporting Services 구성 파일](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [보고서 서버 초기화&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [암호화된 보고서 서버 데이터 저장&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   

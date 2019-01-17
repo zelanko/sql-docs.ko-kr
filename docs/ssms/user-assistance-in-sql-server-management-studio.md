@@ -14,12 +14,12 @@ ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4e85c73beea1db9b3db7032492321556bb17253
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9db497d157ac6b48591fccb42c0eb6fd9dc34779
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818776"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208932"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio의 사용자 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

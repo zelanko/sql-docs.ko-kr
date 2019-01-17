@@ -1,6 +1,7 @@
 ---
-title: Always On 가용성 그룹 문제 해결 및 모니터링 가이드(SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: Always On 가용성 그룹 모니터링 및 문제 해결을 위한 참조
+description: 이 가이드에서는 Always On 가용성 그룹에 있는 몇 가지 일반적인 문제를 모니터링하고 해결하는 데 도움이 되는 참조 페이지 역할을 제공합니다.
+ms.custom: ag-guide, seodec18
 ms.date: 05/10/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -10,19 +11,18 @@ ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6af848993830329f9f5bbc6b2dc42be416a36fcc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 59ca941e6588f00140b4b57fa3a73904b6ad8f35
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398866"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215622"
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Always On 가용성 그룹 문제 해결 및 모니터링 가이드
  이 가이드에서는 Always On 가용성 그룹 모니터링 및 가용성 그룹의 일반적인 문제 중 일부의 문제 해결을 시작하도록 돕습니다. 원래 콘텐츠 뿐만 아니라 다른 곳에서 게시된 유용한 정보의 방문 페이지를 제공합니다. 이 가이드는 가용성 그룹의 넓은 영역에서 발생할 수 있는 모든 문제를 완벽하게 논의할 수 없지만 근본 원인 분석 및 문제 해결의 올바른 방향을 안내할 수 있습니다. 
  
  가용성 그룹은 통합된 기술이기 때문에 발생하는 많은 문제는 데이터베이스 시스템에서 다른 문제의 증상일 수 있습니다. 몇 가지 문제는 일시 중지되는 가용성 데이터베이스와 같은 가용성 그룹 내의 설정에 의해 발생합니다. 다른 문제는 SQL Server 설정, 데이터베이스 파일 배포 및 사용 가능성에 관련되지 않은 시스템 성능 문제와 같은 다른 측면의 SQL Server 문제를 포함할 수 있습니다. 여전히 다른 문제가 네트워크 I/O, TCP/IP, Active Directory 및 WSFC(Windows Server 장애 조치(failover) 클러스터링) 문제와 같은 SQL Server 외부에 있을 수 있습니다. 종종 가용성 그룹, 복제본 또는 데이터베이스에서 발생하는 문제는 근본 원인을 파악하는 여러 기술을 해결하는 데 필요합니다.  
   
-
   
 ##  <a name="BKMK_SCENARIOS"></a> 문제 해결 시나리오  
  다음 표는 가용성 그룹에 대한 일반적인 문제 해결 시나리오에 대한 링크를 포함합니다. 구성, 클라이언트 연결, 장애 조치(failover) 및 성능과 같은 해당 시나리오 유형에 의해 분류되어 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "52398866"
 |[Always On 가용성 그룹 구성 문제 해결&#40;SQL Server&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md)|Configuration|가용성 그룹에 대한 서버 인스턴스를 구성하는 것과 관련된 일반적인 문제를 해결하는 데 유용한 정보를 제공합니다. 가용성 그룹을 사용할 수 없거나, 계정이 잘못 구성되거나, 데이터베이스 미러링 엔드포인트가 없거나, 엔드포인트에 액세스할 수 없거나(SQL Server 오류 1418), 네트워크 액세스 권한이 없거나, 데이터베이스 조인 명령이 실패(SQL Server 오류 35250)하는 경우가 일반적인 구성 문제에 해당합니다.|  
 |[실패한 파일 추가 작업 문제 해결&#40;Always On 가용성 그룹&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)|Configuration|파일 추가 작업으로 인해 보조 데이터베이스가 일시 중단되고 NOT SYNCHRONIZING 상태가 되었습니다.|  
 |[다중 서브넷 환경에서 가용성 그룹 수신기에 연결할 수 없음](https://support.microsoft.com/kb/2792139/en-us)|클라이언트 연결|가용성 그룹 수신기를 구성한 후 수신기를 ping하거나 애플리케이션에서 연결할 수 없습니다.|  
-|[실패 자동 장애 조치(failover) 문제 해결](https://support.microsoft.com/kb/2833707)| 장애 조치 |자동 장애 조치(failover)가 성공적으로 완료되지 않았습니다.|  
+|[실패 자동 장애 조치(failover) 문제 해결](https://support.microsoft.com/kb/2833707)|장애 조치 |자동 장애 조치(failover)가 성공적으로 완료되지 않았습니다.|  
 |[문제 해결: 가용성 그룹 초과 RTO](troubleshoot-availability-group-exceeded-rto.md)|성능|데이터 손실 없이 자동 장애 조치(failover) 또는 계획된 수동 장애 조치 후 장애 조치 시간이 RTO를 초과합니다. 또는 동기 커밋 보조 복제본(예: 자동 장애 조치(failover) 파트너)의 장애 조치 시간을 예측할 때 RTO 초과를 발견할 수 있습니다.|  
 |[문제 해결: 가용성 그룹 초과 RPO](troubleshoot-availability-group-exceeded-rpo.md)|성능|강제 수동 장애 조치(failover)를 수행한 후 데이터 손실이 RPO보다 많습니다. 또는 비동기 커밋 보조 복제본의 잠재적 데이터 손실을 계산할 때 RPO 초과를 발견합니다.|  
 |[문제 해결: 보조 복제본에 반영되지 않은 주 복제본의 변경 내용](troubleshoot-primary-changes-not-reflected-on-secondary.md)|성능|클라이언트 애플리케이션에서 주 복제본에 대한 업데이트를 성공적으로 완료하지만 보조 복제본 쿼리는 변경 내용이 반영되지 않았음을 보여줍니다.|  
@@ -65,11 +65,11 @@ ms.locfileid: "52398866"
 |-----------|-----------------|  
 |[Always On 가용성 그룹에 대한 성능 모니터링](monitor-performance-for-always-on-availability-groups.md)|가용성 그룹에 대한 데이터 동기화 프로세스, 흐름 제어 게이트 및 가용성 그룹을 모니터링할 때 유용한 메트릭을 설명하고 RTO 및 RPO 메트릭을 수집하는 방법을 보여줍니다.|  
 |[가용성 그룹 모니터링&#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|가용성 그룹 모니터링을 위한 도구의 정보를 제공합니다.|  
-|[Always On 상태 모델, 파트 1: 상태 모델 아키텍처](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)|Always On 상태 모델의 개요를 제공합니다.|  
-|[Always On 상태 모델, 파트 2: 상태 모델 확장](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)|Always On 상태 모델을 사용자 지정하고 Always On 대시보드를 사용자 지정하여 추가 정보를 표시하는 방법을 보여줍니다.|  
+|[Always On 상태 모델, 1단계: 상태 모델 아키텍처](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)|Always On 상태 모델의 개요를 제공합니다.|  
+|[Always On 상태 모델, 2단계: 상태 모델 확장](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)|Always On 상태 모델을 사용자 지정하고 Always On 대시보드를 사용자 지정하여 추가 정보를 표시하는 방법을 보여줍니다.|  
 |[PowerShell을 사용하여 Always On 상태 모니터링, 1부: 기본 cmdlet 개요](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)|가용성 그룹의 상태를 모니터링하는 데 사용할 수 있는 Always On PowerShell cmdlet의 기본적인 개요를 제공합니다.|  
 |[PowerShell을 사용하여 Always On 상태 모니터링, 2부: 고급 cmdlet 사용](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)|가용성 그룹의 상태를 모니터링하는 Always On PowerShell cmdlet의 고급 사용에 대한 정보를 제공합니다.|  
-|[PowerShell을 사용하여 Always On 상태 모니터링, 3부: 간단한 모니터링 응용 프로그램](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)|애플리케이션을 사용하여 가용성 그룹을 자동으로 모니터링하는 방법을 보여줍니다.|  
+|[PowerShell을 사용하여 Always On 상태 모니터링, 3부: 간단한 모니터링 애플리케이션](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)|애플리케이션을 사용하여 가용성 그룹을 자동으로 모니터링하는 방법을 보여줍니다.|  
 |[PowerShell을 사용하여 Always On 상태 모니터링, 4부: SQL Server 에이전트와의 통합](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)|SQL Server 에이전트를 사용하여 가용성 그룹 모니터링을 통합하고 문제가 발생하는 경우 적절한 대상에 대한 알림을 구성하는 방법에 대한 정보를 제공합니다.|  
 
 ## <a name="next-steps"></a>다음 단계  

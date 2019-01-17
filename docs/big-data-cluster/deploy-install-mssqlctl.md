@@ -5,16 +5,16 @@ description: 설치 하 고 SQL Server 2019 빅 데이터 클러스터 (미리 �
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/13/2018
+ms.date: 01/15/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cb012492811383154d10358e1c3ee40c422e3813
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: aec8f030a996e5dd86c44a5a655e98d4926988ed
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241694"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361413"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-2019-big-data-clusters"></a>SQL Server 2019 빅 데이터 클러스터를 관리 하는 mssqlctl 설치
 
@@ -49,16 +49,24 @@ Linux에서 Python 3.5를 설치 하 고 그런 다음 pip를 업그레이드 �
    ```bash
    sudo apt-get update && /
    sudo apt-get install -y python3 && /
-   sudo apt-get install -y python3-pip && /
-   sudo -H pip3 install --upgrade pip
+   sudo apt-get install -y python3-pip
    ```
 
+1. Pip3 업그레이드:
+
+   ```bash
+   sudo -H pip3 install --upgrade pip
+   ```
+   
 1. 설치할 **mssqlctl** 다음 명령을 사용 하 여:
 
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --user
    ```
-
+   
+   > [!NOTE]
+   > `--user` 스위치는 mssqlctl Python 사용자 설치 디렉터리에 설치 합니다. 이 일반적으로 `~/.local/bin` linux. 이 디렉터리 경로를 추가 하거나 또는 사용자 설치 디렉터리로 이동 하 고 실행 `./mssqlctl` 거기서에서 합니다.
+   
 ## <a name="next-steps"></a>다음 단계
 
 빅 데이터 클러스터에 대 한 자세한 내용은 참조 하십시오 [SQL Server 2019 빅 데이터 클러스터 이란?](big-data-cluster-overview.md)합니다.

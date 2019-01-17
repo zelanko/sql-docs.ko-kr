@@ -19,12 +19,12 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5723f60855952e9e14e7cdff07ac312d10e38732
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d8f51a507ff3dc2ee317b2b347c4c7b56b043694
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526612"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202882"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Integration Services(SSIS) 프로젝트 및 패키지 배포
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 프로젝트 배포 모델 및 레거시 패키지 배포 모델의 두 가지 배포 모델을 지원합니다. 프로젝트 배포 모델을 사용하면 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "52526612"
 
 기본값에서 SSIS 서비스 계정을 변경하는 경우, 패키지를 성공적으로 배포하려면 먼저 기본이 아닌 서비스 계정에 추가 권한을 부여해야 할 수 있습니다. 기본이 아닌 서비스 계정에 필요한 사용 권한이 없으면 다음과 같은 오류 메시지가 표시될 수 있습니다.
 
-*사용자 정의 루틴 또는 집계 "deploy_project_internal"을 실행하는 동안 .NET Framework 오류가 발생했습니다: System.ComponentModel.Win32Exception: 클라이언트가 필요한 권한을 가지고 있지 않습니다.*
+*사용자 정의 루틴 또는 집계 "deploy_project_internal"을 실행하는 동안 .NET Framework 오류가 발생했습니다. System.ComponentModel.Win32Exception: 클라이언트에 필수 권한이 없습니다.*
 
 이 오류는 일반적으로 DCOM 권한 누락으로 인해 발생합니다. 오류를 해결하려면 다음 작업을 수행합니다.
 
@@ -102,14 +102,14 @@ ms.locfileid: "52526612"
   
 1.  아직 없는 경우 SSISDB 카탈로그를 만듭니다. 자세한 내용은 [SSIS 카탈로그](../../integration-services/catalog/ssis-catalog.md)를 참조하세요.  
   
-2.  **Integration Services 프로젝트 변환 마법사** 를 실행하여 프로젝트를 프로젝트 배포 모델로 변환합니다. 자세한 내용은 아래의 [프로젝트 배포 모델로 프로젝트를 변환하려면](#convert)지침을 참조하세요.  
+2.  **Integration Services 프로젝트 변환 마법사** 를 실행하여 프로젝트를 프로젝트 배포 모델로 변환합니다. 자세한 내용은 [프로젝트 배포 모델로 프로젝트를 변환하려면](#convert)  
   
     -   [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)] 이상에서 프로젝트를 만든 경우 기본적으로 해당 프로젝트는 프로젝트 배포 모델을 사용합니다.  
   
     -   이전 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 프로젝트를 만든 경우 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 프로젝트 파일을 연 후 프로젝트 배포 모델로 프로젝트를 변환합니다.  
   
         > [!NOTE]  
-        >  프로젝트에 하나 이상의 데이터 원본이 포함된 경우 프로젝트 변환이 완료되면 데이터 원본이 제거됩니다. 프로젝트의 패키지에서 공유할 수 있는 데이터 원본에 대한 연결을 만들려면 프로젝트 수준에서 연결 관리자를 추가합니다. 자세한 내용은 [Add, Delete, or Share a Connection Manager in a Package](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)을 참조하세요.  
+        >  프로젝트에 하나 이상의 데이터 원본이 포함된 경우 프로젝트 변환이 완료되면 데이터 원본이 제거됩니다. 프로젝트의 패키지에서 공유할 수 있는 데이터 원본에 대한 연결을 만들려면 프로젝트 수준에서 연결 관리자를 추가합니다. 자세한 내용은 [패키지에서 연결 관리자 추가, 삭제 또는 공유](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)을 참조하세요.  
   
          **Integration Services 프로젝트 변환 마법사** 를 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 에서 실행하는지 아니면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 실행하는지에 따라 수행되는 변환 태스크가 다릅니다.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "52526612"
   
      패키지 업그레이드에 대한 자세한 내용은 [Integration Services 패키지 업그레이드](../../integration-services/install-windows/upgrade-integration-services-packages.md) 및 [SSIS 패키지 업그레이드 마법사를 사용하여 Integration Services 패키지 업그레이드](../../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)를 참조하세요.  
   
-3.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 프로젝트를 배포합니다. 자세한 내용은 아래의 [Integration Services 서버에 프로젝트를 배포하려면](#deploy)지침을 참조하세요.  
+3.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 프로젝트를 배포합니다. 자세한 내용은 [Integration Services 서버에 프로젝트를 배포하려면](#deploy) 지침을 참조하세요.  
   
 4.  (선택 사항) 배포한 프로젝트에 대한 환경을 만듭니다. 
   
@@ -293,7 +293,7 @@ static void Main()
 
 **OR**
 
- - SQL Server 설치 폴더에서 실행 파일 **ISDeploymentWizard.exe**를 검색합니다(예: C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn). 
+ - SQL Server 설치 폴더에서 실행 파일 **ISDeploymentWizard.exe**를 검색합니다(예: "C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn". 
  
  > **참고:** **소개** 페이지에서 **다음** 을 클릭하여 **원본 선택** 페이지로 전환합니다. 
  
@@ -409,13 +409,13 @@ static void Main()
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 사용하여 프로젝트를 배포하고 패키지를 실행할 수도 있습니다. 자세한 내용은 **참고 항목** 섹션의 항목을 참조하십시오.  
   
-> [!TIP]  
+> [!TIP]
 >  다음을 수행하여 아래 절차에 나열된 저장 프로시저에 대한 Transact-SQL 문을 쉽게 생성할 수 있습니다. 단, catalog.deploy_project는 예외입니다.  
->   
+> 
 >  1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 **Integration Services 카탈로그** 노드를 확장하고 실행할 패키지로 이동합니다.  
 > 2.  패키지를 마우스 오른쪽 단추로 클릭하고 **실행**을 클릭합니다.  
 > 3.  필요에 따라 **고급** 탭에서 로깅 수준 등의 옵션을 설정하거나 매개 변수 값과 연결 관리자 속성을 설정합니다.  
->   
+> 
 >      로깅 수준에 대한 자세한 내용은 [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)을 참조하십시오.  
 > 4.  **확인** 을 클릭하여 패키지를 실행하기 전에 **스크립트**를 클릭합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 편집기 창에 Transact-SQL이 나타납니다.  
   
@@ -513,7 +513,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   **Integration Services 프로젝트 변환 마법사** 는 프로젝트를 프로젝트 배포 모델로 변환합니다.  
   
 > [!NOTE]  
->  프로젝트에 하나 이상의 데이터 원본이 포함된 경우 프로젝트 변환이 완료되면 데이터 원본이 제거됩니다. 프로젝트의 패키지에서 공유할 수 있는 데이터 원본에 대한 연결을 만들려면 프로젝트 수준에서 연결 관리자를 추가합니다. 자세한 내용은 [Add, Delete, or Share a Connection Manager in a Package](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)을 참조하세요.  
+>  프로젝트에 하나 이상의 데이터 원본이 포함된 경우 프로젝트 변환이 완료되면 데이터 원본이 제거됩니다. 프로젝트의 패키지에서 공유할 수 있는 데이터 원본에 대한 연결을 만들려면 프로젝트 수준에서 연결 관리자를 추가합니다. 자세한 내용은 [패키지에서 연결 관리자 추가, 삭제 또는 공유](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)을 참조하세요.  
   
  **수행 작업**  
   

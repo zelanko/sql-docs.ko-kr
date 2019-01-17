@@ -16,7 +16,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
 ms.locfileid: "34027350"
 ---
-# <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>Create a trusted location for Power Pivot sites in Central Administration
+# <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>중앙 관리에서 파워 피벗 사이트에 대한 신뢰할 수 있는 위치 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Excel 서비스에서는 SharePoint 서버에서 연 통합 문서에 올바른 리포지토리인 위치를 지정할 수 있습니다. 이러한 위치를 '신뢰할 수 있는 위치'라고 하며 사용자가 만든 신뢰할 수 있는 위치 각각에 대해 다른 구성 설정을 사용할 수 있습니다. SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 배포하는 경우 팜의 나머지 부분에는 기본 설정을 계속 사용하면서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 액세스에 가장 적합한 설정을 적용할 수 있도록 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 포함하는 사이트에 대한 신뢰할 수 있는 위치를 만드는 것이 좋습니다.  
   

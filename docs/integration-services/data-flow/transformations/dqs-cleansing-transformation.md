@@ -17,12 +17,12 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c36cd11c60c3558e6b050de17a517d9feb968d32
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a8749700b557852b9807d28ee7cae2295504fa24
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638631"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979989"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS 정리 변환
   DQS 정리 변환은 DQS(Data Quality Services)를 통해, 데이터 원본 또는 유사한 데이터 원본에 대해 만든 승인된 규칙을 적용하여 연결된 데이터 원본에서 데이터를 수정합니다. 데이터 수정 규칙에 대한 자세한 내용은 [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md)을 참조하십시오. DQS에 대한 자세한 내용은 [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md)을 참조하십시오.  
@@ -88,7 +88,7 @@ ms.locfileid: "51638631"
  연결된 데이터 원본에 대한 기존 DQS 기술 자료를 선택합니다. DQS 기술 자료에 대한 자세한 내용은 [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md)을 참조하십시오.  
   
  **연결 암호화**  
- DQS 서버와 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]간 데이터 전송을 암호화하기 위해 연결을 암호화할지 여부를 지정합니다.  
+ DQS 서버와 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 사이의 데이터 전송을 암호화하기 위해 연결을 암호화할지 여부를 지정합니다.  
   
  **사용 가능한 도메인**  
  선택한 기술 자료에 사용 가능한 도메인을 나열합니다. 단일 도메인과 둘 이상의 단일 도메인을 포함하는 복합 도메인의 두 가지 도메인 유형이 있습니다.  

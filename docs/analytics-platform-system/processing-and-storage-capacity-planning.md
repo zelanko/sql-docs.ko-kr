@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 7188ace65e31d92cc5acfdc684457b219836d2d1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f20de8ebc4e3b2970e439dbc413e588aa08b5324
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527798"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361573"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Analytics Platform System의 처리 및 저장소 용량
 비즈니스 요구 사항을 Analytics Platform System (APS) 어플라이언스에서에 필요한 계산 노드의 디스크의 크기와 데이터 배율 단위의 수를 결정 합니다. 이러한 처리 및 저장소 계산을 사용 하 여 용량 구매 및 계획 결정을 안내 합니다.  
@@ -85,14 +85,14 @@ ms.locfileid: "52527798"
 |----------|--------------|------------------------------------------|----------------------------------|------------------------------------------|------------------------------------------------|-----------------|-----------------------------------------------------|  
 |HPE|1TB|16TB|8|128 TB|320 TB|7|2,240 TB|  
 |HPE|2TB|32TB|8|256TB|640 TB|7|4,480 TB|  
-|HPE|3TB|48 TB|8|384 TB|960 TB|7|6,720 TB|  
+|HPE|4TB|64TB|8|512 TB|1280 TB|7|8,960 TB|  
 |DELL|1TB|16TB|9|144 TB|360 TB|6|2,160 TB|  
 |DELL|2TB|32TB|9|288 TB|720 TB|6|4, 320 TB|  
-|DELL|3TB|48 TB|9|432 TB|1080 TB|6|6,480 TB|  
+|DELL|4TB|64TB|9|576 TB|1440 TB|6|8,640 TB|   
   
 설명:  
   
--   **드라이브 크기** 각 하드웨어 공급 업체에서 1, 2 또는 3 TB입니다.  
+-   **드라이브 크기** 각 하드웨어 공급 업체에서 1, 2 또는 4TB입니다.  
   
 -   **계산 노드당 실제 데이터 저장소** = (드라이브 크기) * (계산 노드 당 16 개 디스크). 미러 디스크 중복 되므로 포함 되지 않습니다.  
   

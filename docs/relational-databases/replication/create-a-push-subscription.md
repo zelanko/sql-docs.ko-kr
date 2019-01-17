@@ -17,12 +17,12 @@ ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2961e4c8345157df3d8b625ccc7bb45501570793
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 419f8c12e3716d295440dae887591b547af54f32
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675212"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208250"
 ---
 # <a name="create-a-push-subscription"></a>밀어넣기 구독 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "51675212"
   
     -   배포자의 배포 에이전트가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_login **@job_login** 를 지정하고 **@job_password**를 참조하세요.  
   
-        > **참고:** Windows 통합 인증을 사용하여 만든 연결은 항상 **@job_login** 및 **@job_password**로 지정된 Windows 자격 증명을 사용합니다. 배포 에이전트는 항상 Windows 통합 인증을 사용하여 배포자에 대한 로컬 연결을 만듭니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 구독자에 연결합니다.  
+        > **참고:** Windows 통합 인증을 사용하여 만든 연결은 항상 **@job_login** 을 지정하고 **@job_password**를 참조하세요. 배포 에이전트는 항상 Windows 통합 인증을 사용하여 배포자에 대한 로컬 연결을 만듭니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 구독자에 연결합니다.  
   
     -   (옵션) **0** 에 **@subscriber_security_mode** 값 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 **@subscriber_login** 를 지정하고 **@subscriber_password**를 참조하세요. 구독자에 연결할 때 SQL Server 인증을 사용해야 하는 경우 이러한 매개 변수를 지정합니다.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "51675212"
   
     -   **@job_login** 및 **@job_password**에 대해 배포자의 병합 에이전트를 실행하는 데 사용되는 Windows 자격 증명  
   
-        > **참고:** Windows 통합 인증을 사용하여 만든 연결은 항상 **@job_login** 및 **@job_password**로 지정된 Windows 자격 증명을 사용합니다. 병합 에이전트는 항상 Windows 통합 인증을 사용하여 배포자에 로컬로 연결합니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 구독자에 연결합니다.  
+        > **참고:**  Windows 통합 인증을 사용하여 만든 연결은 항상 **@job_login** 을 지정하고 **@job_password**를 참조하세요. 병합 에이전트는 항상 Windows 통합 인증을 사용하여 배포자에 로컬로 연결합니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 구독자에 연결합니다.  
   
     -   (옵션) **0** 에 **@subscriber_security_mode** 값 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 **@subscriber_login** 를 지정하고 **@subscriber_password**를 참조하세요. 구독자에 연결할 때 SQL Server 인증을 사용해야 하는 경우 이러한 매개 변수를 지정합니다.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "51675212"
   
     -   배포자의 배포 에이전트가 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 를 지정하고 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 필드와 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 필드. 이 계정은 Windows 인증을 사용하여 배포자에 대한 로컬 연결 및 원격 연결을 만드는 데 사용됩니다.  
   
-        > **참고:****sysadmin** 고정 서버 역할의 멤버가 구독을 만들 때 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>를 설정할 필요는 없지만 설정해 두는 것이 좋습니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [복제 에이전트 보안 모델](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
+        > **참고:** **sysadmin** 고정 서버 역할의 멤버가 구독을 만들 때 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>를 설정할 필요는 없지만 설정해 두는 것이 좋습니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [복제 에이전트 보안 모델](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
   
     -   (옵션) **@value** 에 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 값(기본값). **false**를 지정한 경우 구독은 프로그래밍 방식으로만 동기화할 수 있습니다.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "51675212"
   
     -   배포자의 배포 에이전트가 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 를 지정하고 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 필드와 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 필드. 이 계정은 Windows 인증을 사용하여 배포자에 대한 로컬 연결 및 원격 연결을 만드는 데 사용됩니다.  
   
-        > **참고:****sysadmin** 고정 서버 역할의 멤버가 구독을 만들 때 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>를 설정할 필요는 없지만 설정해 두는 것이 좋습니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [복제 에이전트 보안 모델](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
+        > **참고:** **sysadmin** 고정 서버 역할의 멤버가 구독을 만들 때 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>를 설정할 필요는 없지만 설정해 두는 것이 좋습니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [복제 에이전트 보안 모델](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
   
     -   (옵션) **@value** 에 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 값(기본값). **false**를 지정한 경우 구독은 프로그래밍 방식으로만 동기화할 수 있습니다.  
   

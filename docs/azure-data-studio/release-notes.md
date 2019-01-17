@@ -3,7 +3,7 @@ title: 릴리스 정보 및 변경 로그
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 릴리스 정보
 ms.custom: seodec18
-ms.date: 01/10/2019
+ms.date: 01/17/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,17 +11,26 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 63cf17e26ce554b901a3c9cc6db1fcb18162140d
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 163f5740626b0f4cb927272d46acddc79495e4c1
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143663"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361683"
 ---
 # <a name="azure-data-studio-latest-release-notes-and-changelog"></a>Azure Data Studio 최신 릴리스 정보 및 변경 로그
 
-**[1 월 릴리스를 다운로드 하십시오!](download.md)**
+**[다운로드 하 고 최신 릴리스를 설치!](download.md)**
 
+
+## <a name="january-hotfix-2019-january-hotfix-release"></a>(1 월 핫픽스 릴리스) 2019 년 1 월 핫픽스
+
+릴리스 날짜: 2019 년 1 월 16 일  
+버전: 1.3.9
+
+버전 1.3.9 1.3.8 발견 된 몇 가지 문제를 해결 합니다. 자세한 내용은 참조 하세요 [월 핫픽스 릴리스](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1)합니다.
+
+자세한 내용은 참조는 [변경 로그](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), 및 [릴리스](https://github.com/Microsoft/azuredatastudio/releases)합니다.
 
 ## <a name="january-2019-january-release"></a>2019 1 월 (1 월 릴리스)
 
@@ -37,8 +46,6 @@ ms.locfileid: "54143663"
 - 대규모 쿼리 (미리 보기)에 대 한 스트리밍 결과입니다.
 - 커뮤니티 확장: sp_executesql to sql 및 새 데이터베이스입니다.
 - 확인할 [버그 및 문제](https://github.com/Microsoft/azuredatastudio/milestone/19?closed=1)합니다.
-
-자세한 내용은 참조는 [변경 로그](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), 및 [릴리스](https://github.com/Microsoft/azuredatastudio/releases)합니다.
 
 ## <a name="november-2018-november-release"></a>2018 년 11 월 (11 월 릴리스)
 

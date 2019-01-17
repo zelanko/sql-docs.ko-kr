@@ -20,12 +20,12 @@ ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 47986d4615a6cc9425c8547fecd9527731072d65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19f3748634b86bcb4419f96a8abae36a72f20f88
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695691"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589217"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>전송 보안 - 데이터베이스 미러링 - Always On 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,12 +50,12 @@ ms.locfileid: "47695691"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 동일 도메인 계정에서 서비스로 실행될 경우 추가 구성이 필요하지 않습니다.  
   
--   ph x="1" /&gt; 인스턴스가 동일 도메인 또는 신뢰할 수 있는 도메인에서 다른 도메인 계정을 사용하여 서비스로 실행될 경우 각 계정의 로그인을 다른 각 서버 인스턴스에서 **마스터** 로 만들어야 하며, 해당 로그인에는 해당 엔드포인트에 대한 CONNECT 권한이 부여되어 있어야 합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 동일 도메인 또는 신뢰할 수 있는 도메인에서 다른 도메인 계정을 사용하여 서비스로 실행될 경우 각 계정의 로그인을 다른 각 서버 인스턴스에서 **마스터** 로 만들어야 하며, 해당 로그인에는 해당 엔드포인트에 대한 CONNECT 권한이 부여되어 있어야 합니다.  
   
--   ph x="1" /&gt; 인스턴스가 네트워크 서비스 계정으로 실행될 경우 각 호스트 컴퓨터 계정(*DomainName***\\***ComputerName$*)의 로그인은 다른 각 서버의 **마스터**에서 만들어야 하며, 해당 로그인에는 해당 엔드포인트에 대한 CONNECT 권한이 부여되어야 합니다. 네트워크 서비스 계정을 사용하여 서버 인스턴스를 실행할 경우 호스트 컴퓨터의 도메인 계정을 사용하여 인증이 수행되기 때문입니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 네트워크 서비스 계정으로 실행될 경우 각 호스트 컴퓨터 계정(_DomainName_**\\**_ComputerName$_)의 로그인은 다른 각 서버에서 **마스터** 로 만들어야 하며, 해당 로그인에는 해당 엔드포인트에 대한 CONNECT 권한이 부여되어 있어야 합니다. 네트워크 서비스 계정을 사용하여 서버 인스턴스를 실행할 경우 호스트 컴퓨터의 도메인 계정을 사용하여 인증이 수행되기 때문입니다.  
   
 > [!NOTE]  
->  Windows 인증을 사용하여 데이터베이스 미러링 세션을 설정하는 예는 [예제: Windows 인증을 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)을 참조하세요.  
+>  Windows 인증을 사용하여 데이터베이스 미러링 세션을 설정하는 예제는 [예제: Windows 인증을 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)을 참조하세요.  
   
 ### <a name="certificates"></a>인증서  
  서버 인스턴스가 트러스트된 도메인에 없거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 로컬 서비스로 실행되고 있는 경우와 같이 Windows 인증을 사용할 수 없는 경우가 있습니다. 이런 경우에는 연결 요청을 인증하는 데 사용자 자격 증명 대신 인증서가 필요합니다. 각 서버 인스턴스의 미러링 엔드포인트는 로컬에서 만든 자체 인증서를 사용하여 구성해야 합니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "47695691"
   
 |ALGORITHM 값|설명|  
 |---------------------|-----------------|  
-|RC4|엔드포인트가 반드시 RC4 알고리즘을 사용하도록 지정합니다. 기본값입니다.<br /><br /> **\*\* 경고 \*\*** RC4 알고리즘은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES를 사용하는 것이 좋습니다.|  
+|RC4|엔드포인트가 반드시 RC4 알고리즘을 사용하도록 지정합니다. 기본값입니다.<br /><br /> <strong>\*\* 경고 \*\*</strong> RC4 알고리즘은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES를 사용하는 것이 좋습니다.|  
 |AES|엔드포인트가 반드시 AES 알고리즘을 반드시 사용하도록 지정합니다.|  
 |AES RC4|두 엔드포인트가 암호화 알고리즘에 대해 협상하고 이 엔드포인트가 AES 알고리즘에 우선권을 주도록 지정합니다.|  
 |RC4 AES|두 엔드포인트가 암호화 알고리즘에 대해 협상하고 이 엔드포인트가 RC4 알고리즘에 우선권을 주도록 지정합니다.|  
@@ -95,9 +95,9 @@ ms.locfileid: "47695691"
   
 -   [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
--   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기 &#40;Transact-SQL &#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
+-   [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용 &40;Transact-SQL &#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [암호화 알고리즘 선택](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
@@ -105,7 +105,7 @@ ms.locfileid: "47695691"
  [DROP ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 보안 센터](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
- [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [데이터베이스 미러링 엔드포인트 &#40;SQL Server &#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [sys.database_mirroring_endpoints&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [sys.dm_db_mirroring_connections&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)   
  [데이터베이스 미러링 구성 문제 해결&#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   

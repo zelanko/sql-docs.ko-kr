@@ -1,8 +1,8 @@
 ---
-title: 보조 복제본에 대한 자동 시드(SQL Server) | Microsoft Docs
-description: 자동 시드를 사용하여 보조 복제본을 초기화합니다.
+title: 자동 시드를 사용하여 가용성 그룹의 보조 복제본을 초기화합니다.
+description: 자동 시드를 사용하여 SQL 2016 이상의 Always On 가용성 그룹의 일부로 보조 복제본을 초기화합니다.
 services: data-lake-analytics
-ms.custom: ''
+ms.custom: seodec18
 ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +14,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6a8359fede2b688292fa47e59a64d5ef43d424d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b903c4e55940f4c941564f4f0d180f4f94d1ad58
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506693"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306170"
 ---
-# <a name="automatic-seeding-for-secondary-replicas"></a>보조 복제본에 대한 자동 시드
+# <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>자동 시드를 사용하여 Always On 가용성 그룹의 보조 복제본을 초기화합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server 2012 및 2014에서 SQL Server Always On 가용성 그룹의 보조 복제본을 초기화하는 유일한 방법은 백업, 복사 및 복원을 사용하는 것입니다. SQL Server 2016에서는 보조 복제본을 초기화하는 *자동 시드* 기능을 새로 도입했습니다. 자동 시드는 VDI를 사용하여 구성된 엔드포인트를 사용하는 가용성 그룹의 각 데이터베이스에 대한 보조 복제본으로 백업을 스트리밍하기 위해 로그 스트림 전송을 사용합니다. 새로운 이 기능은 가용성 그룹을 처음 만드는 중에 또는 데이터베이스를 추가할 때 사용할 수 있습니다. 자동 시드는 Always On 가용성 그룹을 지원하는 모든 버전의 SQL Server에 포함되어 있으며, 기존 가용성 그룹과 [분산 가용성 그룹](distributed-availability-groups.md) 모두에서 사용할 수 있습니다.
@@ -207,7 +207,7 @@ GO
 예를 들어 다음 스크립트에서는 자동 시드와 관련된 이벤트를 캡처하는 확장 이벤트 세션을 만듭니다.
 
 ```sql
-CREATE EVENT SESSION [AG_autoseed] ON SERVER 
+CREATE EVENT SESSION [AlwaysOn_autoseed] ON SERVER 
     ADD EVENT sqlserver.hadr_automatic_seeding_state_transition,
     ADD EVENT sqlserver.hadr_automatic_seeding_timeout,
     ADD EVENT sqlserver.hadr_db_manager_seeding_request_msg,
