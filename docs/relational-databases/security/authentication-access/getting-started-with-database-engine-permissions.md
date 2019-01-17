@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00d28b0750ba599e4bc73fa2ec6586271b683545
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 23ed71d50fc84c743f5574a3e3e96852b2e9bd21
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410860"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202662"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>데이터베이스 엔진 권한 시작
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -188,7 +188,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
 ### <a name="useful-transact-sql-statements"></a>유용한 Transact-SQL 문  
  다음 문은 권한에 대한 유용한 정보를 반환합니다.  
   
- 데이터베이스에서 부여되거나 거부된 명시적 권한([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)])을 반환하려면 데이터베이스에서 다음 문을 실행합니다.  
+ 데이터베이스에서 부여되거나 거부된 명시적 권한([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)])을 반환하려면 데이터베이스에서 다음 명령문을 실행합니다.  
   
 ```sql  
 SELECT   
@@ -203,7 +203,7 @@ JOIN sys.objects AS obj
     ON perms.major_id = obj.object_id;  
 ```  
   
- 서버 역할의 멤버([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 만)를 반환하려면 다음 문을 실행합니다.  
+ 서버 역할의 멤버 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]만 해당)를 반환하려면 다음 명령문을 실행합니다.  
   
 ```sql  
 SELECT sRole.name AS [Server Role Name] , sPrinc.name AS [Members]  
@@ -215,7 +215,7 @@ JOIN sys.server_principals AS sRole
 ```  
   
  
- 데이터베이스 역할의 멤버([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)])를 반환하려면 데이터베이스에서 다음 문을 실행합니다.  
+ 데이터베이스 역할의 멤버([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)])를 반환하려면 데이터베이스에서 다음 명령문을 실행합니다.  
   
 ```sql  
 SELECT dRole.name AS [Database Role Name], dPrinc.name AS [Members]  

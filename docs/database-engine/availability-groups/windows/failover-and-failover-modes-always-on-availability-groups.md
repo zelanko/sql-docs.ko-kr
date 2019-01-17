@@ -1,6 +1,7 @@
 ---
-title: 장애 조치 및 장애 조치 모드(Always On 가용성 그룹) | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹의 장애 조치(failover) 모드
+description: Always On 가용성 그룹에 참여하는 데이터베이스에 사용할 수 있는 다양한 장애 조치(failover) 모드에 대한 설명입니다.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d66d1ccdbfbcd7f59f395b9ecf8367b7a7e16058
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 44e11edc9608dc4c10634ea58af1c0140bba666f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523404"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207442"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>장애 조치(Failover) 및 장애 조치(Failover) 모드(Always On 가용성 그룹)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "52523404"
 -   **비동기-커밋 복제본** 은 수동 장애 조치(Failover) 모드만 지원합니다. 또한, 절대 동기화되지 않기 때문에 강제 장애 조치(Failover)만 지원합니다.  
   
 > [!NOTE]  
->  장애 조치(Failover) 후 주 데이터베이스에 액세스해야 하는 클라이언트 애플리케이션은 새로운 주 복제본에 연결되어야 합니다. 또한 새로운 보조 복제본이 읽기 전용 액세스를 허용하도록 구성되면 읽기 전용 클라이언트 애플리케이션이 해당 복제본에 연결할 수 있습니다. 클라이언트가 가용성 그룹에 연결하는 방법에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)를 참조하세요.  
+>  장애 조치(Failover) 후 주 데이터베이스에 액세스해야 하는 클라이언트 애플리케이션은 새로운 주 복제본에 연결되어야 합니다. 또한 새로운 보조 복제본이 읽기 전용 액세스를 허용하도록 구성되면 읽기 전용 클라이언트 애플리케이션이 해당 복제본에 연결할 수 있습니다. 클라이언트가 가용성 그룹에 연결하는 방법에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)를 참조하세요.  
   
  **이 항목의 섹션:**  
   
@@ -68,7 +69,7 @@ ms.locfileid: "52523404"
  보조 복제본이 주 복제본과 동기화되지 않거나 주 복제본이 실행되고 있지 않아서 보조 복제본의 장애 조치(failover)가 준비되지 않았을 때 데이터베이스 관리자가 시작할 수 있는 장애 조치(Failover)입니다. 강제 장애 조치(Failover)는 데이터가 손실될 수 있는 위험이 있으며 재해 복구용으로만 사용하는 것이 좋습니다. 강제 장애 조치(failover)는 수동으로만 시작될 수 있기 때문에 강제 수동 장애 조치(failover)라고도 합니다. 이 장애 조치(Failover)는 비동기-커밋 가용성 모드에서 지원되는 유일한 장애 조치(Failover) 형태입니다.  
   
  [!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)]  
- 지정된 가용성 그룹 내에서 자동 장애 조치(Failover)를 사용하는 동기-커밋 모드(있는 경우)에 대해 구성된 가용성 복제본의 쌍(현재 주 복제본 포함)입니다. [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]은(는) 보조 복제본이 주 복제본과 현재 SYNCHRONIZED된 경우에만 효과가 있습니다.  
+ 지정된 가용성 그룹 내에서 자동 장애 조치(Failover)를 사용하는 동기-커밋 모드(있는 경우)에 대해 구성된 가용성 복제본의 쌍(현재 주 복제본 포함)입니다. [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]는 보조 복제본이 주 복제본과 현재 SYNCHRONIZED된 경우에만 효과가 있습니다.  
   
  [!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)]  
  지정된 가용성 그룹 내에서 동기-커밋 모드(있는 경우)로 구성된 2개 또는 3개의 가용성 복제본(현재 주 복제본 포함) 집합입니다. [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)]은(는) 보조 복제본이 수동 장애 조치(Failover) 모드로 구성되고 하나 이상의 보조 복제본이 주 복제본과 현재 SYNCHRONIZED된 경우에만 효과가 있습니다.  
@@ -95,9 +96,9 @@ ms.locfileid: "52523404"
 ### <a name="failover-sets"></a>장애 조치(Failover) 집합  
  지정된 가용성 그룹에 대해 가능한 장애 조치(Failover)의 형태는 장애 조치(Failover) 설정의 관점에서 이해할 수 있습니다. 장애 조치(Failover) 설정은 다음과 같이 지정된 형태의 장애 조치(Failover)를 지원하는 주 복제본과 보조 복제본으로 구성됩니다.  
   
--   **[!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (옵션):**  지정된 가용성 그룹 내에서 자동 장애 조치(Failover)를 사용하는 동기-커밋 모드(있는 경우)로 구성된 가용성 복제본의 쌍(현재 주 복제본 포함)입니다. 자동 장애 조치(Failover) 설정은 보조 복제본이 주 복제본과 현재 SYNCHRONIZED된 경우에만 효과가 있습니다.  
+-   **[!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)](선택 사항):**  지정된 가용성 그룹 내에서 자동 장애 조치(Failover)를 사용하는 동기-커밋 모드(있는 경우)에 대해 구성된 가용성 복제본의 쌍(현재 주 복제본 포함)입니다. 자동 장애 조치(Failover) 설정은 보조 복제본이 주 복제본과 현재 SYNCHRONIZED된 경우에만 효과가 있습니다.  
   
--   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (옵션):**  지정된 가용성 그룹 내에서 동기-커밋 모드(있는 경우)로 구성된 2개 또는 3개의 가용성 복제본(현재 주 복제본 포함) 집합입니다. 동기 커밋 장애 조치(Failover) 설정은 보조 복제본이 수동 장애 조치(Failover) 모드에 대해 구성되고 하나 이상의 보조 복제본이 주 복제본과 현재 SYNCHRONIZED된 경우에만 효과가 있습니다.  
+-   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (선택 사항):**  지정된 가용성 그룹 내에서 동기-커밋 모드(있는 경우)로 구성된 2개 또는 3개의 가용성 복제본(현재 주 복제본 포함) 집합입니다. 동기 커밋 장애 조치(Failover) 설정은 보조 복제본이 수동 장애 조치(Failover) 모드에 대해 구성되고 하나 이상의 보조 복제본이 주 복제본과 현재 SYNCHRONIZED된 경우에만 효과가 있습니다.  
   
 -   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :**  지정된 가용성 그룹 내에서 가용성 모드 및 장애 조치(Failover) 모드와 상관없이 작업 상태가 현재 ONLINE인 모든 가용성 복제본 집합입니다. 전체 장애 조치(Failover) 설정은 보조 복제본이 주 복제본과 현재 SYNCHRONIZED된 경우에만 관련이 있습니다.  
   
@@ -221,7 +222,7 @@ ms.locfileid: "52523404"
     > [!NOTE]  
     >  새로운 보조 복제본이 해당 데이터베이스를 다시 동기화한 후 즉시 장애 조치(Failover)를 반대 방향으로 다시 수행할 수 있습니다.  
   
- 장애 조치(Failover) 후 클라이언트는 현재 주 데이터베이스에 다시 연결해야 합니다. 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)개념을 소개합니다.  
+ 장애 조치(Failover) 후 클라이언트는 현재 주 데이터베이스에 다시 연결해야 합니다. 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)개념을 소개합니다.  
   
 ###  <a name="ManualFailoverDuringUpgrades"></a> 업그레이드 중에 가용성 유지  
  하드웨어나 소프트웨어를 업그레이드할 때 가용성 그룹의 데이터베이스 관리자는 수동 장애 조치(Failover)를 사용하여 데이터베이스 가용성을 유지 관리할 수 있습니다. 소프트웨어 업그레이드에 가용성 그룹을 사용하려면 대상 보조 복제본을 호스팅하는 서버 인스턴스 및/또는 컴퓨터 노드는 업그레이드를 이미 수신한 상태여야 합니다. 자세한 내용은 [Always On 가용성 그룹 복제본 인스턴스 업그레이드](../../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)를 참조하세요.  
@@ -267,7 +268,7 @@ ms.locfileid: "52523404"
 ###  <a name="WhyFFoPostForcedQuorum"></a> 강제 쿼럼 후에 강제 장애 조치(failover)가 필요한 이유  
  WSFC 클러스터에서 쿼럼을 수행한 후에는(*강제 쿼럼*) 각 가용성 그룹에 대해 강제 장애 조치(failover)(데이터 손실 가능)를 수행해야 합니다. 강제 장애 조치(failover)가 필요한 이유는 WSFC 클러스터 값의 실제 상태가 손실되었을 수 있기 때문입니다. 강제 쿼럼 후 정상적인 장애 방지가 필요한 이유는 동기화되지 않은 보조 복제본이 다시 구성된 WSFC 클러스터에서 동기화된 것으로 나타날 수 있기 때문입니다.  
   
- 세 개의 노드에서 가용성 그룹을 호스트하는 WSFC 클러스터를 예로 들어 보겠습니다. 노드 A는 주 복제본을 호스팅하며 노드 B와 노드 C는 보조 복제본을 호스팅합니다. 로컬 보조 복제본이 동기화하는 동안 노드 C는 WSFC 클러스터에서 연결이 끊어집니다.  그러나 노드 A와 노드 B는 정상 상태의 쿼럼을 유지하고 가용성 그룹을 온라인 상태로 유지합니다. 노드 A에서 주 복제본은 계속해서 업데이트를 허용하고 노드 B에서 보조 복제본은 계속해서 주 복제본과 동기화합니다. 노드 C에서 보조 복제본은 비동기화되고 주 복제본 뒤에서 점점 뒤쳐집니다. 그러나, 노드 C는 연결이 끊어졌기 때문에 복제본의 동기화 상태가 잘못 유지됩니다.  
+ 세 개의 노드에서 가용성 그룹을 호스팅하는 WSFC 클러스터를 예로 들어 보겠습니다.  노드 A는 주 복제본을 호스팅하며 노드 B와 노드 C는 보조 복제본을 호스팅합니다. 로컬 보조 복제본이 동기화하는 동안 노드 C는 WSFC 클러스터에서 연결이 끊어집니다.  그러나 노드 A와 노드 B는 정상 상태의 쿼럼을 유지하고 가용성 그룹을 온라인 상태로 유지합니다. 노드 A에서 주 복제본은 계속해서 업데이트를 허용하고 노드 B에서 보조 복제본은 계속해서 주 복제본과 동기화합니다. 노드 C에서 보조 복제본은 비동기화되고 주 복제본 뒤에서 점점 뒤쳐집니다. 그러나, 노드 C는 연결이 끊어졌기 때문에 복제본의 동기화 상태가 잘못 유지됩니다.  
   
  쿼럼이 손실된 다음, 노드 A에서 강제 적용되면 WSFC 클러스터에서 가용성 그룹의 동기화 상태는 UNSYNCHRONIZED로 표시되는 노드 C의 보조 복제본에서 올바른 상태여야 합니다. 그러나 노드 C에서 쿼럼이 강제 적용되면 가용성 그룹의 동기화는 잘못됩니다. 클러스터의 동기화 상태는 SYNCHRONIZED로 *잘못* 표시된 노드 C의 보조 복제본과 노드 C 연결이 끊어진 상태로 되돌아가야 합니다. 계획된 수동 장애 조치(failover)는 데이터의 안전성을 보장하므로 쿼럼이 강제 적용된 후 가용성 그룹이 다시 온라인 상태가 되도록 허용되지 않습니다.  
   

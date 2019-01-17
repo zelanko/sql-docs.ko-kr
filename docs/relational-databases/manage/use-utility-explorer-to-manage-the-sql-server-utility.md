@@ -47,7 +47,7 @@ ms.locfileid: "51663009"
   
      필터 설정에 액세스하거나 목록 뷰의 데이터를 새로 고치려면 트리 뷰에서 **배포된 데이터 계층 애플리케이션** 노드를 마우스 오른쪽 단추로 클릭합니다.  
   
--   ph x="1" /&gt; 유틸리티 내용 창의 목록 뷰 데이터에 액세스하려면 트리 뷰에서 **관리되는 인스턴스[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 노드를 클릭합니다. 내용 창 아래에 있는 자세히 탭에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 개별 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스 정책 정의와 속성 정보는 물론 CPU와 스토리지 볼륨 사용에 대한 데이터를 제공합니다. 자세한 내용은 [관리되는 인스턴스 세부 정보&#40;SQL Server 유틸리티&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)를 참조하세요.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 내용 창의 목록 뷰 데이터에 액세스하려면 트리 뷰에서 **관리되는 인스턴스** 노드를 클릭합니다. 내용 창 아래에 있는 자세히 탭에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 개별 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스 정책 정의와 속성 정보는 물론 CPU와 스토리지 볼륨 사용에 대한 데이터를 제공합니다. 자세한 내용은 [관리되는 인스턴스 세부 정보&#40;SQL Server 유틸리티&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)를 참조하세요.  
   
      필터 설정에 액세스하거나 목록 뷰의 데이터를 새로 고치려면 트리 뷰에서 **관리되는 인스턴스** 노드를 마우스 오른쪽 단추로 클릭하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 추가합니다.  
   

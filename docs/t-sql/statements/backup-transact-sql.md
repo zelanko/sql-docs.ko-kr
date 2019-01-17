@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ecd7626e28faae1626809e6f45141c93dd4021e3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 48e1ef4a027c3bd62818bb85fd0218e033e620da
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404518"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203882"
 ---
 # <a name="backup-transact-sql"></a>BACKUP(Transact-SQL)
 
@@ -241,32 +241,32 @@ FILEGROUP = { *logical_filegroup_name* | **@**_logical\_filegroup\_name\_var_ }
   
 부분 백업에 대한 자세한 내용은 [부분 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md)을 참조하세요.  
   
-TO \<backup_device> [ **,**...*n* ] 함께 제공되는 [백업 장치](../../relational-databases/backup-restore/backup-devices-sql-server.md) 세트가 미러되지 않은 미디어 세트이거나 하나 이상의 MIRROR TO 절이 선언된 경우 미러된 미디어 세트 내의 미러 중 첫 번째임을 나타냅니다.  
+TO \<backup_device&gt; [ **,**...*n* ] 함께 제공되는 [백업 디바이스](../../relational-databases/backup-restore/backup-devices-sql-server.md) 세트가 미러되지 않은 미디어 세트이거나 하나 이상의 MIRROR TO 절이 선언된 경우 미러된 미디어 세트 내의 미러 중 첫 번째임을 나타냅니다.  
   
 \<backup_device>
 
 백업 작업에 사용할 논리적 백업 장치나 물리적 백업 장치를 지정합니다.  
   
-{ *logical_device_name* | **@**_logical\_device\_name\_var_ } **Applies to:** SQL Server   
+{ *logical_device_name* | **@**_logical\_device\_name\_var_ } **적용 대상:** SQL Server   
 데이터베이스를 백업할 백업 장치의 논리적 이름입니다. 논리적 이름은 식별자 규칙을 따라야 합니다. 변수(@*logical_device_name_var*)로 제공한 경우 백업 디바이스 이름은 문자열 상수(@_logical\_device\_name\_var_**=** 논리적 백업 디바이스 이름)나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
   
 { DISK | TAPE | URL} **=** { **'**_physical\_device\_name_**'** | **@**_physical\_device\_name\_var_ | 'NUL' } **적용 대상:** DISK, TAPE 및 URL이 SQL Server에 적용됩니다. 
-디스크 파일이나 테이프 디바이스 또는 Microsoft Azure Blob Storage 서비스를 지정합니다. URL 형식은 Microsoft Azure Storage 서비스에 대한 백업을 만드는 데 사용됩니다. 자세한 내용과 예제는 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. 자습서는 [자습서: Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)을 참조하세요. 
+디스크 파일이나 테이프 디바이스 또는 Microsoft Azure Blob Storage 서비스를 지정합니다. URL 형식은 Microsoft Azure Storage 서비스에 대한 백업을 만드는 데 사용됩니다. 자세한 내용과 예제는 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. 자습서는 [자습서: Microsoft Azure Blob Storage Service에 SQL Server 백업 및 복원](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)을 참조하세요. 
 
 > [!NOTE] 
 > NUL 디스크 디바이스는 전송된 모든 정보를 버리고 테스트용으로만 사용해야 합니다. 프로덕션용이 아닙니다.
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2부터 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]까지는 URL로 백업할 때 단일 장치로만 백업할 수 있습니다. URL로 백업할 때 여러 디바이스에 백업하려면 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지를 사용해야 하고 SAS(공유 액세스 서명) 토큰을 사용해야 합니다. 공유 액세스 서명 만들기에 대한 자세한 내용은 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 및 [Powershell로 Azure Storage의 SAS(공유 액세스 서명) 토큰이 있는 SQL 자격 증명 만들기 간소화](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)를 참조하세요.  
+> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2부터 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]까지는 URL로 백업할 때 단일 디바이스로만 백업할 수 있습니다. URL로 백업할 때 여러 디바이스에 백업하려면 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지를 사용해야 하고 SAS(공유 액세스 서명) 토큰을 사용해야 합니다. 공유 액세스 서명 만들기에 대한 자세한 내용은 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 및 [Powershell로 Azure Storage의 SAS(공유 액세스 서명) 토큰이 있는 SQL 자격 증명 만들기 간소화](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)를 참조하세요.  
   
-**URL 적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)  
+**URL 적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 BACKUP 문에 지정되기 전에는 디스크 장치가 없어도 됩니다. 물리적 장치가 존재하고 BACKUP 문에서 INIT 옵션이 지정되지 않은 경우에는 백업이 장치에 추가됩니다.  
  
 > [!NOTE] 
 > NUL 디바이스는 이 파일로 보낸 모든 입력을 버리지만 백업은 모든 페이지를 백업된 것으로 표시합니다.
   
-자세한 내용은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)인스턴스에서 가져온 경우에 필요합니다.  
+자세한 내용은 [백업 디바이스&amp;#40;SQL Server&amp;#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
   
 > [!NOTE]  
 > TAPE 옵션은 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 예정입니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.  
@@ -274,7 +274,7 @@ BACKUP 문에 지정되기 전에는 디스크 장치가 없어도 됩니다. �
 *n*  
 쉼표로 구분된 목록에 백업 장치를 최대 64개까지 지정할 수 있음을 나타내는 자리 표시자입니다.  
   
-MIRROR TO \<backup_device> [ **,**...*n* ] TO 절에 지정된 각각의 백업 장치를 미러할 최대 3개의 보조 백업 장치 세트를 지정합니다. MIRROR TO 절에는 TO 절에서와 같은 유형과 개수의 백업 디바이스를 지정해야 합니다. MIRROR TO 절은 최대 3개까지 포함시킬 수 있습니다.  
+MIRROR TO \<backup_device&gt; [ **,**...*n* ] TO 절에 지정된 각각의 백업 디바이스를 미러할 최대 3개의 보조 백업 디바이스 세트를 지정합니다. MIRROR TO 절에는 TO 절에서와 같은 유형과 개수의 백업 디바이스를 지정해야 합니다. MIRROR TO 절은 최대 3개까지 포함시킬 수 있습니다.  
   
 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 엔터프라이즈 버전에서만 사용할 수 있습니다.  
   
@@ -295,10 +295,10 @@ MIRROR TO \<backup_device> [ **,**...*n* ] TO 절에 지정된 각각의 백업 
 백업 작업에 사용할 옵션을 지정합니다.  
   
 CREDENTIAL  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
 Microsoft Azure Blob Storage 서비스에 대한 백업을 만들 때에만 사용됩니다.  
   
-FILE_SNAPSHOT **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 통한 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]).
+FILE_SNAPSHOT **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
 Azure Blob 저장소 서비스를 사용하여 모든 SQL Server 데이터베이스 파일을 저장할 때 데이터베이스 파일의 Azure 스냅숏을 만드는 데 사용됩니다. 자세한 내용은 [Microsoft Azure의 SQL Server 데이터 파일](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)을 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스냅숏 백업은 일관된 상태에서 데이터베이스 파일(데이터 및 로그 파일)의 Azure 스냅숏을 사용합니다. 일관된 Azure 스냅숏 집합이 백업을 구성하고 백업 파일에 기록됩니다. `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT`과 `BACKUP LOG TO URL WITH FILE_SNAPSHOT`의 유일한 차이점은 후자는 트랜잭션 로그를 자르지만 전자는 그렇지 않다는 점입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server 스냅숏 백업에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 백업 체인을 설정하는 데 필요한 초기 전체 백업 이후에 트랜잭션 로그 백업 시점으로 데이터베이스를 복원하려면 단일 트랜잭션 로그 백업만 필요합니다. 또한 두 건의 트랜잭션 로그 백업 시간 사이의 특정 시점으로 데이터베이스를 복원하려면 트랜잭션 로그 백업이 두 개만 필요합니다.  
     
@@ -539,7 +539,7 @@ NOREWIND
 NOREWIND는 NOUNLOAD를 의미하며 두 옵션은 단일 BACKUP 문 내에서 호환되지 않습니다.  
   
 > [!NOTE]  
-> `NOREWIND`를 사용하는 경우 같은 프로세스에서 실행 중인 BACKUP 또는 RESTORE 문이 `REWIND` 또는 `UNLOAD` 옵션을 사용하거나 서버 인스턴스가 종료될 때까지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 테이프 드라이브에 대한 소유권을 보유합니다. 테이프를 열어 두면 다른 프로세스에서 테이프를 액세스하는 것을 방지합니다. 열린 테이프 목록을 표시하고 열린 테이프를 닫는 방법은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
+> `NOREWIND`를 사용하는 경우 같은 프로세스에서 실행 중인 BACKUP 또는 RESTORE 문이 `REWIND` 또는 `UNLOAD` 옵션을 사용하거나 서버 인스턴스가 종료될 때까지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 테이프 드라이브에 대한 소유권을 보유합니다. 테이프를 열어 두면 다른 프로세스에서 테이프를 액세스하는 것을 방지합니다. 열린 테이프 목록을 표시하고 열린 테이프를 닫는 방법은 [백업 디바이스&amp;#40;SQL Server&amp;#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
   
 { **UNLOAD** | NOUNLOAD }    
 
@@ -593,7 +593,7 @@ BACKUP LOG의 NO_TRUNCATE 옵션은 COPY_ONLY와 CONTINUE_AFTER_ERROR를 모두 
 [백업 유형](#Backup_Types)  
 [트랜잭션 로그 잘림](#Tlog_Truncation)  
 [백업 미디어 포맷](#Formatting_Media)  
-[백업 장치 및 미디어 세트 사용](#Backup_Devices_and_Media_Sets)  
+[백업 디바이스 및 미디어 세트 사용](#Backup_Devices_and_Media_Sets)  
 [SQL Server 백업 복원](#Restoring_Backups)  
   
 > [!NOTE]  
@@ -634,7 +634,7 @@ BACKUP LOG의 NO_TRUNCATE 옵션은 COPY_ONLY와 CONTINUE_AFTER_ERROR를 모두 
 - 미디어가 비어 있는 경우  
 - 작업이 연속 테이프를 기록하는 경우  
   
-###  <a name="Backup_Devices_and_Media_Sets"></a> 백업 장치 및 미디어 세트 사용  
+###  <a name="Backup_Devices_and_Media_Sets"></a> 백업 디바이스 및 미디어 세트 사용  
   
 #### <a name="backup-devices-in-a-striped-media-set-a-stripe-set"></a>다중 미디어 세트(스트라이프 세트)의 백업 디바이스  
 *스트라이프 세트*는 데이터가 블록으로 구분되고 고정 순서로 분산되는 디스크 파일 세트입니다. 스트라이프 세트에 사용된 백업 디바이스 수는 미디어가 `FORMAT`으로 다시 초기화하지 않는 한 동일하게 유지해야 합니다.  
@@ -765,7 +765,7 @@ BACKUP은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 ### <a name="permissions"></a>Permissions  
 BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버로 설정됩니다.  
   
-백업 디바이스의 물리적 파일에서 발생하는 소유권과 사용 권한 문제는 백업 작업에 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 장치를 읽고 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 있어야 합니다. 그러나 시스템 테이블의 백업 디바이스에 대한 항목을 추가하는 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)는 파일 액세스 권한을 확인하지 않습니다. 백업 디바이스의 물리적 파일에서 발생하는 이러한 문제는 백업 또는 복원을 시도할 때 실제 리소스를 액세스하기 전까지는 발생하지 않습니다.  
+백업 디바이스의 물리적 파일에서 발생하는 소유권과 사용 권한 문제는 백업 작업에 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 디바이스를 읽고 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 있어야 합니다. 그러나 시스템 테이블의 백업 디바이스에 대한 항목을 추가하는 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)는 파일 액세스 권한을 확인하지 않습니다. 백업 디바이스의 물리적 파일에서 발생하는 이러한 문제는 백업 또는 복원을 시도할 때 실제 리소스를 액세스하기 전까지는 발생하지 않습니다.  
   
 ##  <a name="examples"></a> 예  
 이 섹션에서는 다음과 같은 예를 보여 줍니다.  
@@ -773,11 +773,11 @@ BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서
 - 1. [전체 데이터베이스 백업](#backing_up_db)  
 - 2. [데이터베이스 및 로그 백업](#backing_up_db_and_log)  
 - 3. [보조 파일 그룹의 전체 파일 백업 만들기](#full_file_backup)  
-- 4. [보조 파일 그룹의 차등 파일 백업 만들기](#differential_file_backup)  
-- 5. [미러된 단일 패밀리 미디어 세트 만들기 및 백업](#create_single_family_mirrored_media_set)  
-- 6. [미러된 다중 패밀리 미디어 세트 만들기 및 백업](#create_multifamily_mirrored_media_set)  
+- D. [보조 파일 그룹의 차등 파일 백업 만들기](#differential_file_backup)  
+- E. [미러된 단일 패밀리 미디어 세트 만들기 및 백업](#create_single_family_mirrored_media_set)  
+- F. [미러된 다중 패밀리 미디어 세트 만들기 및 백업](#create_multifamily_mirrored_media_set)  
 - G  [기존 미러된 미디어 세트에 백업](#existing_mirrored_media_set)  
-- 8. [새 미디어 세트에 압축된 백업 만들기](#creating_compressed_backup_new_media_set)  
+- H. [새 미디어 세트에 압축된 백업 만들기](#creating_compressed_backup_new_media_set)  
 - 9. [Microsoft Azure Blob 저장소 서비스에 백업](#url)  
   
 > [!NOTE]  
@@ -917,10 +917,10 @@ WITH STATS = 5;
 ```
   
 ## <a name="see-also"></a>참고 항목  
-[백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
+[백업 디바이스&amp;#40;SQL Server&amp;#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
 [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
 [비상 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)   
-[ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+[ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
 [DBCC SQLPERF&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
 [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
 [RESTORE FILELISTONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
@@ -1126,7 +1126,7 @@ STATS 옵션은 다음 간격을 보고할 임계값에 도달한 시점까지�
 ### <a name="permissions"></a>Permissions  
 BACKUP DATABASE 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버로 설정됩니다.  
   
-URL에서 발생하는 소유권과 사용 권한 문제는 백업 작업에 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 장치를 읽고 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 있어야 합니다.   
+URL에서 발생하는 소유권과 사용 권한 문제는 백업 작업에 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 디바이스를 읽고 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 있어야 합니다.   
   
 ##  <a name="examples"></a> 예  
 이 예제에서는 Microsoft Azure Blob Storage 서비스에 `Sales`의 COPY_ONLY 백업을 수행합니다.  저장소 계정 이름은 `mystorageaccount`입니다.  컨테이너는 `myfirstcontainer`입니다.  읽기, 쓰기, 삭제 및 나열 권한이 있는 저장된 액세스 정책을 만들었습니다.  저장된 액세스 정책에 연결된 공유 액세스 서명을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명인 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`를 만들었습니다.  Microsoft Azure Blob Storage 서비스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업의 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 및 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.
@@ -1322,7 +1322,7 @@ EXEC sp_pdw_remove_network_credentials 'xxx.xxx.xxx.xxx';
 BACKUP DATABASE Invoices TO DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';  
 ```  
   
-### <a name="d-create-a-differential-backup-of-a-user-database"></a>4. 사용자 데이터베이스의 전체 백업 만들기  
+### <a name="d-create-a-differential-backup-of-a-user-database"></a>D. 사용자 데이터베이스의 전체 백업 만들기  
 다음 예에서는 송장 데이터베이스의 마지막 전체 백업 이후에 발생한 모든 변경 내용을 포함하는 차등 백업을 만듭니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]은 파일을 저장할 \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff 디렉토리를 만듭니다. '송장 2013 차등 백업' 설명이 백업에 대한 헤더 정보와 함께 저장됩니다.  
   
 차등 백업은 송장의 마지막 전체 백업이 성공적으로 완료된 경우에만 성공적으로 실행됩니다.  
@@ -1333,14 +1333,14 @@ BACKUP DATABASE Invoices TO DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices201
     DESCRIPTION = 'Invoices 2013 differential backup';  
 ```  
   
-### <a name="e-create-a-full-backup-of-the-master-database"></a>5. master 데이터베이스의 전체 백업 만들기  
+### <a name="e-create-a-full-backup-of-the-master-database"></a>E. master 데이터베이스의 전체 백업 만들기  
 다음 예제에서는 master 데이터베이스의 전체 백업을 만들고 '\\\10.192.63.147\backups\2013\daily\20130722\master' 디렉터리에 저장합니다.  
   
 ```sql  
 BACKUP DATABASE master TO DISK = '\\xxx.xxx.xxx.xxx\backups\2013\daily\20130722\master';  
 ```  
   
-### <a name="f-create-a-backup-of-appliance-login-information"></a>6. 어플라이언스 로그인 정보의 백업을 만듭니다.  
+### <a name="f-create-a-backup-of-appliance-login-information"></a>F. 어플라이언스 로그인 정보의 백업을 만듭니다.  
 마스터 데이터베이스는 어플라이언스 로그인 정보를 저장합니다. 어플라이언스 로그인 정보를 백업하려면 master를 백업해야 합니다.  
   
 다음 예에서는 마스터 데이터베이스의 백업을 만듭니다.  
