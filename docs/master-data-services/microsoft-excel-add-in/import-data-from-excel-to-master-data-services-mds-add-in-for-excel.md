@@ -11,12 +11,12 @@ ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f60def6beacaa2c213a0f78c9701c1cc3b51090d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e987ab75413334865b5e7d577860c498540adcd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668972"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53200853"
 ---
 # <a name="import-data-from-excel-to-master-data-services-mds-add-in-for-excel"></a>Excel에서 Master Data Services로 데이터 가져오기(Excel용 MDS 추가 기능)
 
@@ -24,7 +24,7 @@ ms.locfileid: "47668972"
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 Excel에서 작업을 마치고 다른 사용자가 데이터 액세스할 수 있도록 변경 내용을 저장하려는 경우 데이터를 MDS 리포지토리에 게시합니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   변경 내용을 게시하면 MDS 관리 셀에 대한 주석이 삭제됩니다.  
 > -   MDS 관리 셀에서는 수식을 사용할 수 없습니다. MDS 관리 셀의 수식은 텍스트 값으로 처리됩니다.  
   

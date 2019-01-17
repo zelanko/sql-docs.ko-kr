@@ -1,6 +1,7 @@
 ---
-title: 분산 트랜잭션에 대한 가용성 그룹 구성 | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹에 대한 분산 트랜잭션 구성
+description: 'Always On 가용성 그룹 내의 데이터베이스에 대한 분산 트랜잭션을 구성하는 방법을 설명합니다. '
+ms.custom: seodec18
 ms.date: 05/22/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -16,14 +17,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9a4a035c33efa17f901e721ed23faf41c068c507
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3953e1d6a4b9382d1607765683c990c42432f7b4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513678"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215672"
 ---
-# <a name="configure-availability-group-for-distributed-transactions"></a>분산 트랜잭션에 대한 가용성 그룹 구성
+# <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 분산 트랜잭션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)]은 가용성 그룹의 데이터베이스를 포함하여 모든 분산 트랜잭션을 지원합니다. 이 문서에서는 분산 트랜잭션에 대한 가용성 그룹을 구성하는 방법에 대해 설명합니다.  
@@ -186,10 +187,10 @@ following the guideline for Troubleshooting DTC Transactions.
 
 [분산 트랜잭션](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 
-[Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
+[Always On 가용성 그룹: 상호 운용성 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
 [트랜잭션 - Always On 가용성 그룹 및 데이터베이스 미러링](transactions-always-on-availability-and-database-mirroring.md)  
 
 [XA 트랜잭션 지원(영문)](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
 
-[작동 방법: DTC 트랜잭션에 대한 세션/SPID(-2)](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)
+[작동 방식: DTC 트랜잭션에 대한 세션/SPID(-2)](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)

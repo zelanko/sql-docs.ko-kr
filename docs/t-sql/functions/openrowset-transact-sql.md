@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: db0fbc2125ca748f0426eea95c4c1a059e5b67f5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7cbf93440d9b164adef0f87c5af88da02d0f9b50
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509958"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531098"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -114,13 +114,13 @@ OPENROWSET
  BULK 옵션 사용법은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오. BULK 옵션에 필요한 사용 권한에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "사용 권한"을 참조하십시오.  
   
 > [!NOTE]  
->  전체 복구 모델로 데이터를 가져올 때 OPENROWSET(BULK ...)을 사용하면 로깅이 최적화되지 않습니다.  
+> 전체 복구 모델로 데이터를 가져올 때 OPENROWSET(BULK ...)을 사용하면 로깅이 최적화되지 않습니다.  
   
  대량 가져오기를 위한 데이터 준비 방법은 [대량 내보내기 또는 가져오기를 위한 데이터 준비&#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)를 참조하세요.  
   
  '*data_file*'  
  대상 테이블에 복사할 데이터가 있는 데이터 파일의 전체 경로입니다.   
- **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+ **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1.   
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1부터 data_file은 Azure Blob Storage에 있을 수 있습니다. 예제는 [Azure Blob Storage의 데이터에 대량 액세스 예제](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)를 참조하세요.
 
 > [!IMPORTANT]
@@ -136,7 +136,7 @@ OPENROWSET
 > CODEPAGE는 Linux에서 지원되는 옵션이 아닙니다.
 
 > [!NOTE]  
->  데이터 정렬/코드 페이지 사양보다 65001 옵션에 더 높은 우선 순위를 두려는 경우를 제외하고는 서식 파일의 각 열에 대한 데이터 정렬 이름을 지정하는 것이 좋습니다.  
+> 데이터 정렬/코드 페이지 사양보다 65001 옵션에 더 높은 우선 순위를 두려는 경우를 제외하고는 서식 파일의 각 열에 대한 데이터 정렬 이름을 지정하는 것이 좋습니다.  
   
 |CODEPAGE 값|설명|  
 |--------------------|-----------------|  
@@ -149,11 +149,11 @@ OPENROWSET
  형식 오류가 있어 OLE DB 행 집합으로 변환할 수 없는 행을 수집하는 데 사용되는 파일을 지정합니다. 이러한 행은 데이터 파일에서 "있는 그대로" 이 오류 파일에 복사됩니다.  
   
  오류 파일은 명령이 실행될 때 생성됩니다. 파일이 이미 있으면 오류가 발생합니다. 또한 확장명이 .ERROR.txt인 제어 파일이 생성됩니다. 이 파일은 오류 파일의 각 행을 참조하여 오류를 진단합니다. 오류를 해결한 후에는 데이터를 로드할 수 있습니다.  
-**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1.
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]부터 `error_file_path`는 Azure Blob Storage에 있을 수 있습니다. 
 
 'errorfile_data_source_name'   
-**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1.
 가져오는 동안 발견된 오류를 포함할 오류 파일의 Azure Blob 저장소 위치를 가리키는 명명된 외부 데이터 원본입니다. 외부 데이터 원본은 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1에서 추가된 `TYPE = BLOB_STORAGE` 옵션을 사용하여 만들어야 합니다. 자세한 내용은 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)를 참조하세요.
   
  FIRSTROW =*first_row*  
@@ -168,7 +168,7 @@ OPENROWSET
  *maximum_errors*의 기본값은 10입니다.  
   
 > [!NOTE]  
->  MAX_ERRORS는 CHECK 제약 조건이나 **money** 및 **bigint** 데이터 형식 변환에 적용되지 않습니다.  
+> MAX_ERRORS는 CHECK 제약 조건이나 **money** 및 **bigint** 데이터 형식 변환에 적용되지 않습니다.  
   
  ROWS_PER_BATCH =*rows_per_batch*  
  데이터 파일에 있는 대략적인 데이터 행 수를 지정합니다. 이 값은 실제 행 수와 순서가 같아야 합니다.  
@@ -198,7 +198,7 @@ OPENROWSET
  *data_file*의 내용을 **varbinary(max)** 형식의 단일 행 및 단일 열로 된 행 집합으로 반환합니다.  
   
 > [!IMPORTANT]  
->  SINGLE_BLOB만 모든 Windows 인코딩 변환을 지원하므로 SINGLE_CLOB 및 SINGLE_NCLOB가 아닌 SINGLE_BLOB 옵션만 사용하여 XML 데이터를 가져오는 것이 좋습니다.  
+> SINGLE_BLOB만 모든 Windows 인코딩 변환을 지원하므로 SINGLE_CLOB 및 SINGLE_NCLOB가 아닌 SINGLE_BLOB 옵션만 사용하여 XML 데이터를 가져오는 것이 좋습니다.  
   
  SINGLE_CLOB  
  *data_file*을 ASCII로 읽은 후 현재 데이터베이스의 데이터 정렬을 사용하여 내용을 **varchar(max)** 형식의 단일 행 및 단일 열로 된 행 집합으로 반환합니다.  
@@ -209,21 +209,21 @@ OPENROWSET
 ### <a name="input-file-format-options"></a>입력 파일 형식 옵션
   
 FORMAT **=** 'CSV'   
-**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1.   
 [RFC 4180](https://tools.ietf.org/html/rfc4180) 표준을 준수하는 쉼표로 구분된 값 파일을 지정합니다.
 
  FORMATFILE ='*format_file_path*'  
- 서식 파일의 전체 경로를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 두 가지 유형의 서식 파일 즉, XML 및 비 XML을 지원합니다.  
+ 서식 파일의 전체 경로를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 XML 및 비 XML 서식 파일 유형을 지원합니다.  
   
  서식 파일은 결과 집합에서 열 유형을 정의하는 데 필요합니다. 단, SINGLE_CLOB, SINGLE_BLOB 또는 SINGLE_NCLOB를 지정한 경우에는 서식 파일이 필요하지 않습니다.  
   
  서식 파일에 대한 자세한 내용은 [서식 파일을 사용하여 데이터 대량 가져오기&#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)를 참조하세요.  
 
-**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1.   
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1부터 format_file_path는 Azure Blob Storage에 있을 수 있습니다. 예제는 [Azure Blob Storage의 데이터에 대량 액세스 예제](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)를 참조하세요.
 
 FIELDQUOTE **=** 'field_quote'   
-**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1.   
 CSV 파일에 따옴표 문자로 사용될 문자를 지정합니다. 지정하지 않으면 [RFC 4180](https://tools.ietf.org/html/rfc4180) 표준에 정의한 대로 따옴표 문자(")가 따옴표 문자로 사용됩니다.
 
   
@@ -248,10 +248,10 @@ CSV 파일에 따옴표 문자로 사용될 문자를 지정합니다. 지정하
      `FROM OPENROWSET(BULK...) AS table_alias`  
   
      `FROM OPENROWSET(BULK...) AS table_alias(column_alias,...n)`  
->    [!IMPORTANT]  
->    `AS <table_alias>`를 추가하지 않으면 오류가 발생합니다.    
->    메시지 491, 수준 16, 상태 1, 줄 20    
->    FROM 절의 대량 행 집합에 대해 상관 관계 이름을 지정해야 합니다.    
+> [!IMPORTANT]  
+> `AS <table_alias>`를 추가하지 않으면 오류가 발생합니다.    
+> 메시지 491, 수준 16, 상태 1, 줄 20    
+> FROM 절의 대량 행 집합에 대해 상관 관계 이름을 지정해야 합니다.    
   
 -   `SELECT...FROM OPENROWSET(BULK...)` 문은 데이터를 테이블로 가져오지 않고 파일의 데이터를 직접 쿼리합니다. `SELECT...FROM OPENROWSET(BULK...)` 문도 서식 파일을 사용하여 대량 열 별칭을 나열하는 방법으로 열 이름 및 데이터 형식을 지정할 수 있습니다.  
   
@@ -262,13 +262,13 @@ CSV 파일에 따옴표 문자로 사용될 문자를 지정합니다. 지정하
  `INSERT...SELECT * FROM OPENROWSET(BULK...)` 문을 사용하는 방법에 대한 자세한 내용은 [데이터 대량 가져오기 및 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)를 참조하세요. 대량 가져오기로 수행된 행 삽입 작업이 트랜잭션 로그에 기록되는 경우에 대한 자세한 내용은 [대량 가져오기의 최소 로깅을 위한 선행 조건](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)을 참조하세요.  
   
 > [!NOTE]  
->  `OPENROWSET`을 사용할 때는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 가장을 처리하는 방법을 이해하는 것이 중요합니다. 보안 고려 사항에 대한 자세한 내용은 [BULK INSERT 또는 OPENROWSET&#40;BULK...&#41;를 사용하여 데이터 대량 가져오기&#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)를 참조하세요.  
+> `OPENROWSET`을 사용할 때는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 가장을 처리하는 방법을 이해하는 것이 중요합니다. 보안 고려 사항에 대한 자세한 내용은 [BULK INSERT 또는 OPENROWSET&#40;BULK...&#41;를 사용하여 데이터 대량 가져오기&#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)를 참조하세요.  
   
 ### <a name="bulk-importing-sqlchar-sqlnchar-or-sqlbinary-data"></a>SQLCHAR, SQLNCHAR 또는 SQLBINARY 데이터 대량 가져오기  
  OPENROWSET(BULK...)은 지정되지 않은 경우 SQLCHAR, SQLNCHAR 또는 SQLBINARY 데이터의 최대 길이가 8000바이트를 초과하지 않는다고 가정합니다. 가져올 데이터가 8000바이트를 초과하는 **varchar(max)**, **nvarchar(max)** 또는 **varbinary(max)** 개체가 포함된 LOB 데이터 필드에 있는 경우 데이터 필드의 최대 길이를 정의하는 XML 서식 파일을 사용해야 합니다. 최대 길이를 지정하려면 서식 파일을 편집하고 MAX_LENGTH 특성을 선언합니다.  
   
 > [!NOTE]  
->  자동으로 생성된 서식 파일은 LOB 필드의 길이 또는 최대 길이를 지정하지 않습니다. 그러나 직접 서식 파일을 편집하고 길이 또는 최대 길이를 지정할 수 있습니다.  
+> 자동으로 생성된 서식 파일은 LOB 필드의 길이 또는 최대 길이를 지정하지 않습니다. 그러나 직접 서식 파일을 편집하고 길이 또는 최대 길이를 지정할 수 있습니다.  
   
 ### <a name="bulk-exporting-or-importing-sqlxml-documents"></a>SQLXML 문서 대량 내보내기 또는 가져오기  
  SQLXML 데이터를 대량으로 내보내거나 가져오려면 서식 파일에서 다음 데이터 형식 중 하나를 사용합니다.  
@@ -299,7 +299,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
  다음 예에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access `Customers` 데이터베이스의 `Northwind` 테이블에 액세스합니다.  
   
 > [!NOTE]  
->  이 예에서는 Access가 설치되어 있다고 가정합니다. 이 예를 실행하려면 Northwind 데이터베이스를 설치해야 합니다.  
+> 이 예에서는 Access가 설치되어 있다고 가정합니다. 이 예를 실행하려면 Northwind 데이터베이스를 설치해야 합니다.  
   
 ```sql  
 SELECT CustomerID, CompanyName  
@@ -315,7 +315,7 @@ GO
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Northwind` 데이터베이스의 로컬 인스턴스에 있는 `Customers` 테이블과 해당 컴퓨터에 저장되어 있는 Access `Northwind` 데이터베이스의 `Orders` 테이블에서 모든 데이터를 선택합니다.  
   
 > [!NOTE]  
->  이 예에서는 Access가 설치되어 있다고 가정합니다. 이 예를 실행하려면 Northwind 데이터베이스를 설치해야 합니다.  
+> 이 예에서는 Access가 설치되어 있다고 가정합니다. 이 예를 실행하려면 Northwind 데이터베이스를 설치해야 합니다.  
   
 ```sql  
 USE Northwind  ;  
@@ -333,7 +333,7 @@ GO
 > Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
 
   
-### <a name="d-using-openrowset-to-bulk-insert-file-data-into-a-varbinarymax-column"></a>4. OPENROWSET를 사용하여 varbinary(max) 열에 파일 데이터 대량 삽입  
+### <a name="d-using-openrowset-to-bulk-insert-file-data-into-a-varbinarymax-column"></a>D. OPENROWSET를 사용하여 varbinary(max) 열에 파일 데이터 대량 삽입  
  다음 예에서는 데모용으로 작은 테이블을 만들고 `Text1.txt` 루트 디렉터리에 있는 `C:`라는 파일의 파일 데이터를 `varbinary(max)` 열에 삽입합니다.  
   
 ```sql  
@@ -354,7 +354,7 @@ GO
 > Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
   
 
-### <a name="e-using-the-openrowset-bulk-provider-with-a-format-file-to-retrieve-rows-from-a-text-file"></a>5. OPENROWSET BULK 공급자를 서식 파일과 함께 사용하여 텍스트 파일의 행 검색  
+### <a name="e-using-the-openrowset-bulk-provider-with-a-format-file-to-retrieve-rows-from-a-text-file"></a>E. OPENROWSET BULK 공급자를 서식 파일과 함께 사용하여 텍스트 파일의 행 검색  
  다음 예에서는 서식 파일을 사용하여 다음 데이터가 들어 있는 탭으로 분리된 텍스트 파일인 `values.txt`에서 행을 검색합니다.  
   
 ```sql  
@@ -383,7 +383,7 @@ SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',
 > Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
   
 
-### <a name="f-specifying-a-format-file-and-code-page"></a>6. 서식 파일 및 코드 페이지 지정  
+### <a name="f-specifying-a-format-file-and-code-page"></a>F. 서식 파일 및 코드 페이지 지정  
  다음 예제는 서식 파일과 코드 페이지 옵션을 동시에 사용하는 방법을 보여줍니다.  
   
 ```sql  
@@ -391,8 +391,8 @@ INSERT INTO MyTable SELECT a.* FROM
 OPENROWSET (BULK N'D:\data.csv', FORMATFILE =   
     'D:\format_no_collation.txt', CODEPAGE = '65001') AS a;  
 ```  
-### <a name="g-accessing-data-from-a-csv-file-with-a-format-file"></a>7. 서식 파일로 CSV 파일의 데이터에 액세스  
-**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+### <a name="g-accessing-data-from-a-csv-file-with-a-format-file"></a>G. 서식 파일로 CSV 파일의 데이터에 액세스  
+**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1.   
 ```sql
 SELECT *
 FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
@@ -405,7 +405,7 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 > Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
 
 
-### <a name="h-accessing-data-from-a-csv-file-without-a-format-file"></a>8. 서식 파일 없이 CSV 파일의 데이터에 액세스
+### <a name="h-accessing-data-from-a-csv-file-without-a-format-file"></a>H. 서식 파일 없이 CSV 파일의 데이터에 액세스
 
 ```sql
 SELECT * FROM OPENROWSET(
@@ -418,7 +418,7 @@ SELECT * FROM OPENROWSET(
 
 
 ### <a name="i-accessing-data-from-a-file-stored-on-azure-blob-storage"></a>9. Azure Blob 저장소에 저장된 파일에서 데이터에 액세스   
-**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1.   
 다음 예에서는 공유 액세스 서명을 위해 만든 데이터베이스 범위 자격 증명 및 Azure 저장소 계정의 컨테이너를 가리키는 외부 데이터 원본을 사용합니다.     
 
 ```sql

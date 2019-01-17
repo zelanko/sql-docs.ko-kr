@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], creating link attributes
@@ -15,12 +14,12 @@ ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1f309ad8d7842b678fa47ed5786023b0bb042b63
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4bcd5917c6215fc263283fb5d66269fab6645fb1
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703159"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779205"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>링크 특성 만들기(Master Data Services)
 
@@ -57,11 +56,11 @@ ms.locfileid: "51703159"
   
 -   **만든 사람**: 특성을 만든 사용자의 이름입니다.  
   
--   **날짜**: 특성을 만든 날짜와 시간입니다.  
+-   **On**: 특성을 만든 날짜와 시간입니다.  
   
 -   **업데이트한 사람**: 특성을 마지막으로 업데이트한 사용자의 이름입니다.  
   
--   **날짜**: 특성을 마지막으로 업데이트한 날짜와 시간입니다.  
+-   **On**: 특성을 마지막으로 업데이트한 날짜와 시간입니다.  
   
 ### <a name="to-create-a-link-attribute"></a>링크 특성을 만들려면  
   

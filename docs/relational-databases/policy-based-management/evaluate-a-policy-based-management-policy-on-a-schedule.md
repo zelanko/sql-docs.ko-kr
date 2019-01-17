@@ -13,12 +13,12 @@ ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8ca041f0bb84feab3773a1a7404d110c6d5c75f6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: dc78ec53189ff3f9deae1a95895c12ac33cd25d7
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526299"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588618"
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>일정에 따라 정책 기반 관리 정책 평가
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "52526299"
   
 5.  평가하려는 일정이 지정된 정책을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-6.  **정책 열기 –***policy_name* 대화 상자의 **평가 모드** 목록에서 **예약 시**를 선택합니다.  
+6.  **정책 열기** _–policy_name_ 대화 상자의 **평가 모드** 목록에서 **예약 시**를 선택합니다.  
   
 7.  **일정**에서 **선택** 을 클릭하여 기존 일정을 지정하거나 **새로 만들기** 를 클릭하여 새 일정을 만듭니다.  
   

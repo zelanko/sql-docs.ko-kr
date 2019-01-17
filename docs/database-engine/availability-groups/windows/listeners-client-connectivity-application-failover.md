@@ -1,6 +1,7 @@
 ---
-title: 수신기, 클라이언트 연결 및 애플리케이션 장애 조치 | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹 수신기에 연결
+description: 장애 조치(failover) 전후에 Always On 가용성 그룹 수신기에 연결하는 방법에 대한 정보가 들어 있습니다.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,14 +18,14 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b02b430acbc2fc56942e1c7287ea1c7e4527ccc4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 23321c9c8208cf4a78909ab5cedcd921184f7b0b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408890"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214704"
 ---
-# <a name="listeners-client-connectivity-application-failover"></a>수신기, 클라이언트 연결 및 애플리케이션 장애 조치
+# <a name="connect-to-an-always-on-availability-group-listener"></a>Always On 가용성 그룹 수신기에 연결 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 클라이언트 연결 및 애플리케이션 장애 조치(failover) 기능에 대한 고려 사항에 대해 설명합니다.  
   
@@ -41,7 +42,7 @@ ms.locfileid: "52408890"
   
     -   [읽기 전용 라우팅에 대한 가용성 복제본을 구성하려면](#ConfigureARsForROR)  
   
-    -   [읽기 전용 응용 프로그램 의도 및 읽기 전용 라우팅](#ReadOnlyAppIntent)  
+    -   [읽기 전용 애플리케이션 의도 및 읽기 전용 라우팅](#ReadOnlyAppIntent)  
   
 -   [가용성 그룹 수신기 무시](#BypassAGl)  
   
@@ -138,7 +139,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
   
 -   [가용성 그룹에 대한 읽기 전용 라우팅 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
-###  <a name="ReadOnlyAppIntent"></a> 읽기 전용 응용 프로그램 의도 및 읽기 전용 라우팅  
+###  <a name="ReadOnlyAppIntent"></a> 읽기 전용 애플리케이션 의도 및 읽기 전용 라우팅  
  애플리케이션 의도 연결 문자열 속성은 가용성 그룹 데이터베이스의 읽기/쓰기 또는 읽기 전용 버전에 전달할 클라이언트 애플리케이션의 요청을 나타냅니다. 읽기 전용 라우팅을 사용하려면 가용성 그룹 수신기에 연결할 때 클라이언트가 연결 문자열에 애플리케이션의 읽기 전용 의도를 사용해야 합니다. 읽기 전용 애플리케이션 의도가 없으면 가용성 그룹 수신기에 대한 연결이 주 복제본의 데이터베이스에 전송됩니다.  
   
  애플리케이션 의도 특성은 로그인 중에 클라이언트의 세션에 저장됩니다. 그러면 SQL Server의 인스턴스에서 이 의도를 처리하고 보조 복제본에 있는 대상 데이터베이스의 현재 읽기/쓰기 상태와 가용성 그룹의 구성에 따라 수행할 작업을 결정합니다.  
@@ -247,7 +248,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Always On 클라이언트 연결&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)   
  [가용성 복제본에 대한 클라이언트 연결 액세스 정보&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [활성 보조: 읽기 가능한 보조 복제본&#40;Always ON 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [활성 보조 복제본: 읽기 가능한 보조 복제본&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [데이터베이스 미러링 세션에 클라이언트 연결&#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)  
   
   

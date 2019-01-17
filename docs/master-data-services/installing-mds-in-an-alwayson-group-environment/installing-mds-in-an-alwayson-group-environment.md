@@ -11,12 +11,12 @@ ms.assetid: ''
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 86a56f8394dbddccf00025b750256364aa51e99d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27ffbf76d0841479b10b515e0a66f14c8b6bfee3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395685"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215822"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services에 대한 고가용성 및 재해 복구
 
@@ -156,8 +156,8 @@ Windows Server 인스턴스마다 다음 단계를 완료하여 각 인스턴스
 7.  **요약** 페이지에서 경고 또는 오류 메시지를 확인합니다.
 
     오류를 수정해야 합니다. 그러나 경고는 문제가 아닐 수 있습니다. 경고 메시지는 "테스트된 항목이 요구 사항을 충족하나, 사용자의 확인이 필요한 항목이 있습니다"라는 의미입니다. 예를 들어 그림 7에서는 "디스크 액세스 대기 시간 유효성 검사" 경고가 표시되는데, 디스크가 일시적으로 다른 작업에 사용되었기 때문일 수 있으며 이는 무시할 수 있습니다. 각 경고 및 오류 메시지에 대한 자세한 내용은 온라인 설명서를 확인해야 합니다. 그림 7을 참조하세요.
- 
-![유효성 검사 구성 마법사, 유효성 검사 중 페이지](media/Fig6_ValidationTests.png)
+ 
+    ![유효성 검사 구성 마법사, 유효성 검사 중 페이지](media/Fig6_ValidationTests.png)
 
     그림 6
 
@@ -187,7 +187,7 @@ Windows Server 인스턴스마다 다음 단계를 완료하여 각 인스턴스
 
 -   WSFC 기능은 모든 Windows Server 버전에서 사용할 수 있는 것은 아닙니다. 버전에 이 기능이 있는지 확인합니다.
 
--   Active Directory에 WSFC를 설정하는 적절한 권한이 있는지 확인합니다. 문제가 있으면 [장애 조치 클러스터 단계별 가이드: Active Directory에서 계정 구성](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx)을 참조하세요.
+-   Active Directory에 WSFC를 설정하는 적절한 권한이 있는지 확인합니다. 문제가 있으면 [장애 조치(failover) 클러스터 단계별 가이드: Active Directory에서 계정 구성](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx)을 참조하세요.
 
 WSFC에 대한 더 자세한 내용은 [장애 조치 클러스터](https://technet.microsoft.com/library/cc732488(v=ws.10).aspx)를 참조하세요.
 
@@ -311,9 +311,9 @@ AG는 기존 데이터베이스에서만 만들 수 있습니다. 따라서 한 
 
     이 확인란을 선택하지 않으면 비동기 커밋이 사용됩니다.
 
-    **자동 장애 조치:** 주 복제본이 다운되는 경우 자동 장애 조치가 선택되어 있으면 AG가 자동으로 해당 보조 복제본에 장애 조치합니다. 이는 동기 커밋을 사용하는 복제본에서만 사용할 수 있습니다.
+    **자동 장애 조치(failover):** 주 복제본이 다운되는 경우 자동 장애 조치(failover)가 선택되어 있으면 AG가 자동으로 해당 보조 복제본에 장애 조치(failover)합니다. 이는 동기 커밋을 사용하는 복제본에서만 사용할 수 있습니다.
 
-    **읽기용 보조:** 기본적으로 사용자는 보조 복제본에 연결할 수 없습니다. 사용자는 읽기 전용 액세스 권한이 있는 보조 복제본에 연결할 수 있습니다.
+    **읽기용 보조 복제본:** 기본적으로 사용자는 보조 복제본에 연결할 수 없습니다. 사용자는 읽기 전용 액세스 권한이 있는 보조 복제본에 연결할 수 있습니다.
 
 8.  **복제본 지정** 페이지에서 **수신기** 탭을 클릭하고 다음을 수행합니다. 그림 18을 참조하세요.
 
@@ -358,7 +358,7 @@ AG는 기존 데이터베이스에서만 만들 수 있습니다. 따라서 한 
 
 3.  **장애 조치**를 클릭하여 동기 복제본 및 비동기 복제본으로 장애 조치를 수행합니다. 이는 해당 장애 조치가 문제 없이 올바르게 실행되었는지 확인하기 위한 것입니다.
 
- AlwaysOn 설정이 완료되었습니다.
+ AlwaysOn 설정이 완료되었습니다.
 
 AlwaysOn 가용성 그룹에 대한 자세한 내용은 [SQL Server 2016 AlwaysOn 가용성 그룹](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server)을 참조하세요.
 
@@ -382,7 +382,7 @@ AlwaysOn 가용성 그룹에 대한 자세한 내용은 [SQL Server 2016 AlwaysO
 
 4.  **데이터베이스 만들기** **마법사**를 완료합니다. 자세한 내용은 [Master Data Services 설치 및 구성](https://docs.microsoft.com/sql/master-data-services/master-data-services-installation-and-configuration)을 참조하세요.
 
-5.  **Master Data Service 구성 관리자**에서 **웹 응용 프로그램**을 클릭하여 웹 응용 프로그램을 구성한 다음 **적용**을 클릭하여 MDS에 설정을 적용합니다. 그림 23을 참조하세요. 자세한 내용은 [Master Data Services 설치 및 구성](https://docs.microsoft.com/sql/master-data-services/master-data-services-installation-and-configuration)을 참조하세요.
+5.  **Master Data Service 구성 관리자**에서 **웹 애플리케이션**을 클릭하여 웹 애플리케이션을 구성한 다음 **적용**을 클릭하여 MDS에 설정을 적용합니다. 그림 23을 참조하세요. 자세한 내용은 [Master Data Services 설치 및 구성](https://docs.microsoft.com/sql/master-data-services/master-data-services-installation-and-configuration)을 참조하세요.
 
     ![웹 애플리케이션 구성](media/Fig23_MDSWebApplication.png)
 

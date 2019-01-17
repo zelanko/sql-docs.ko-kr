@@ -6,8 +6,7 @@ ms.date: 05/18/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: douglasl
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL13.DTS.DESIGNER.AFPADLSTASK.F1
@@ -15,12 +14,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: 3060dd1fa3a46f64b34658a1c8ebccbc4155526c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 1b324d4aa115a08c1c13b1680176022cab343daa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641750"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808465"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics 태스크
 
@@ -42,7 +41,7 @@ Azure Data Lake Analytics 태스크를 사용하여 U-SQL 작업을 Azure Data L
 
 ### <a name="u-sql-configuration"></a>U-SQL 구성
 
-U-SQL 구성에는 두 개의 설정인 **SourceType** 및 **SourceType** 값을 기반으로 하는 동적 옵션이 있습니다. 
+U-SQL 구성에는 다음 두 가지 설정이 있습니다. **SourceType** 및 **SourceType** 값을 기반으로 하는 동적 옵션. 
 
 **SourceType**은 U-SQL 스크립트의 원본을 지정합니다. SSIS 패키지 실행 중에 Data Lake Analytics 계정에 스크립트가 제출됩니다. 이 속성의 옵션은 다음과 같습니다.
 
@@ -68,7 +67,7 @@ U-SQL 구성에는 두 개의 설정인 **SourceType** 및 **SourceType** 값을
 
 - **JobName:** U-SQL 작업의 이름을 지정합니다. 
 - **AnalyticsUnits:** U-SQL 작업의 분석 단위 수를 지정합니다.
-- **Priority:** U-SQL 작업의 우선 순위를 지정합니다. 이 항목은 0~1000 사이의 값으로 설정할 수 있습니다. 숫자가 작을수록 우선 순위가 높습니다.
+- **Priority:** U-SQL 작업의 우선순위를 지정합니다. 이 항목은 0~1000 사이의 값으로 설정할 수 있습니다. 숫자가 작을수록 우선 순위가 높습니다.
 - **RuntimeVersion:** U-SQL 작업의 Data Lake Analytics 런타임 버전을 지정합니다. 기본적으로 “default”로 설정됩니다. 일반적으로 이 속성을 변경할 필요가 없습니다.
 - **Synchronous:** 작업 실행이 완료될 때까지 태스크가 기다릴지 여부를 지정하는 부울 값입니다. 값이 true로 설정되면 작업이 완료된 후 태스크가 **성공**으로 표시됩니다. 값이 false로 설정되면 작업이 준비 단계를 통과한 후 태스크가 **성공**으로 표시됩니다.
 

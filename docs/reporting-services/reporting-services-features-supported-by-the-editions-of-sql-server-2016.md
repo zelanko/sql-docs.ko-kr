@@ -1,19 +1,18 @@
 ---
-title: SQL Server 버전에서 지원하는 Reporting Services 기능 | Microsoft Docs
-ms.date: 11/01/2018
+title: SQL Server 버전에서 지원하는 Reporting Services 기능
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
-ms.assetid: 39f03d2d-6e48-4b34-a9d3-07f86313b937
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad0d24d2674b092d82615f8674a0a5a378fbc7a2
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.date: 11/01/2018
+ms.openlocfilehash: 37dec44c539db86f8f0d239fffe0ca28699f2799
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350537"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645332"
 ---
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server 버전에서 지원하는 Reporting Services 기능
 
@@ -22,11 +21,11 @@ ms.locfileid: "51350537"
 이 항목은 다른 SQL Server 버전에서 지원되는 Reporting Services 기능의 세부 정보를 제공합니다. SQL Server 평가 버전은 180일 동안 시험용으로 사용할 수 있습니다.  
   
  최신 SQL Server 릴리스 정보는 [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)를 참조하세요. 새로운 기능에 대한 최신 정보는 [Reporting Services(SSRS)의 새로운 기능](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)을 참조하세요.
-    
+
  **SQL Server 2017을 사용해 보세요.**    
-    
- > [![SQL Server 2017 다운로드](../analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[평가 센터에서 SQL Server 2017을 다운로드하세요.](https://go.microsoft.com/fwlink/?LinkID=829477)**    
-    
+
+> [![SQL Server 2017 다운로드](../analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[평가 센터에서 SQL Server 2017을 다운로드하세요.](https://go.microsoft.com/fwlink/?LinkID=829477)**    
+>
 > ![Azure Virtual Machine 소형](../analysis-services/media/azure-virtual-machine-small.png)**[이미 설치된 SQL Server 2017로 Virtual Machine을 스핀업](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
 
 Evaluation 및 Developer 버전에서 지원하는 기능은 SQL Server Enterprise Edition 열을 참조하세요.
@@ -44,8 +43,8 @@ Evaluation 및 Developer 버전에서 지원하는 기능은 SQL Server Enterpri
 |역할 기반 보안|예|예|예|예|예|  
 |Excel, PowerPoint, Word, PDF 및 이미지로 내보내기|예|예|예|예|예|  
 |향상된 계기 및 차트|예|예|예|예|예|  
-|[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]대시보드에 보고서 항목 고정|예|예|예|예|예|  
-|사용자 지정 인증|예|예|예|예|예|  
+|[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 대시보드에 보고서 항목 고정|예|예|예|예|예|  
+|사용자 지정 인증|예|예|예||예|  
 |데이터 피드로 보고서 사용|예|예|예|예|예|  
 |모델 지원|예|예|예||예|  
 |역할 기반 보안을 위해 사용자 지정 역할 만들기|예|예|||예|  
@@ -63,8 +62,7 @@ Evaluation 및 Developer 버전에서 지원하는 기능은 SQL Server Enterpri
 |경고<sup>2</sup>(SSRS 2016) |예||||예|  
 | Power View<sup>2</sup>(SSRS 2016) |예||||예| 
 |주석<sup>3</sup> |예|예|예|예|예|  
- 
-  
+
  <sup>1</sup> SQL Server Reporting Services(SSRS)에서 지원하는 데이터 원본에 대한 자세한 내용은 [Reporting Services에서 지원하는 데이터 원본 &#40;SSRS&#41;](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)를 참조하세요.  
   
  <sup>2</sup> SharePoint 모드의 Reporting Services 2016이 필요합니다. 자세한 내용은 [Reporting Services SharePoint 모드 설치](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)를 참조하세요. Reporting Services 2017부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다. 
@@ -74,7 +72,7 @@ Evaluation 및 Developer 버전에서 지원하는 기능은 SQL Server Enterpri
 > [!NOTE]
 > SQL Server Express with Tools 및 SQL Server Express는 SQL Server Reporting Services를 지원하지 않습니다.
   
-## <a name="report-server-database-server-edition-requirements"></a>보고서 서버 데이터베이스 서버 버전 요구 사항  
+## <a name="report-server-database-server-edition-requirements"></a>보고서 서버 데이터베이스 서버 버전 요구 사항
  보고서 서버 데이터베이스를 만들 때 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전은 데이터베이스 호스팅에 사용할 수 없습니다. 다음 표에서는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 특정 버전에 사용할 수 있는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]버전을 보여 줍니다.  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services 버전|데이터베이스 호스팅에 사용할 데이터베이스 엔진 인스턴스 버전|  
@@ -95,9 +93,9 @@ Evaluation 및 Developer 버전에서 지원하는 기능은 SQL Server Enterpri
 |모바일 디바이스용 Power BI 앱(iOS, Windows 10, Android)(.rsmobile)|예||||예|  
   
 > [!NOTE]  
-> 1.  위의 표는 이러한 클라이언트 도구를 활성화하는 데 필요한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 식별하지만 이러한 도구는 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서 호스트되는 데이터에 액세스할 수 있습니다.  
-> 2.  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] 은 모바일 보고서를 만들기 위한 단일 지점입니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서버에 연결하여 데이터 원본에 액세스하고 보고서를 만듭니다. 그런 다음 조직의 다른 사용자가 서버 또는 모바일 디바이스에 액세스할 수 있도록 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서버에 게시합니다. 로컬 데이터 원본과 함께 독립적으로 [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] 를 사용할 수도 있습니다.  
-> 3.  클라우드에서  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 온-프레미스 또는 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 를 사용하든 보고서 배달 솔루션으로 둘 다를 사용하든 하나의 모바일 앱만 있으면 모바일 디바이스의 대시보드 및 모바일 보고서에 액세스할 수 있습니다. [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 앱은 Windows, iOS 또는 Android 앱 스토어에서 다운로드할 수 있습니다.  
+> 1. 위의 표는 이러한 클라이언트 도구를 활성화하는 데 필요한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 식별하지만 이러한 도구는 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서 호스트되는 데이터에 액세스할 수 있습니다.  
+> 2. [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] 은 모바일 보고서를 만들기 위한 단일 지점입니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서버에 연결하여 데이터 원본에 액세스하고 보고서를 만듭니다. 그런 다음 조직의 다른 사용자가 서버 또는 모바일 디바이스에 액세스할 수 있도록 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서버에 게시합니다. 로컬 데이터 원본과 함께 독립적으로 [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] 를 사용할 수도 있습니다.  
+> 3. 클라우드에서  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 온-프레미스 또는 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 를 사용하든 보고서 배달 솔루션으로 둘 다를 사용하든 하나의 모바일 앱만 있으면 모바일 디바이스의 대시보드 및 모바일 보고서에 액세스할 수 있습니다. [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 앱은 Windows, iOS 또는 Android 앱 스토어에서 다운로드할 수 있습니다.  
 
 ## <a name="next-steps"></a>다음 단계
 

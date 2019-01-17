@@ -23,12 +23,12 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4db2249838a1032ce44e13870463fac43012dfa9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2183c64e1d525e0d0add54317e2af10d0ada311b
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512624"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979709"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ ms.locfileid: "52512624"
 ## <a name="using-with-no-revert"></a>WITH NO REVERT 사용  
  EXECUTE AS 문에 선택적 WITH NO REVERT 절이 포함되어 있으면 REVERT를 사용하거나 다른 EXECUTE AS 문을 실행하여 세션의 실행 컨텍스트를 다시 설정할 수 없습니다. 해당 문으로 설정한 컨텍스트는 세션이 삭제될 때까지 유효합니다.  
   
- WITH NO REVERT COOKIE = @*varbinary_variabl* 절을 지정하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]이 쿠키 값을 @*varbinary_variabl*e에 전달합니다. 호출하는 REVERT WITH COOKIE = @*varbinary_variable* 문에 동일한 *@varbinary_variable* 값이 포함되어 있는 경우에만 해당 명령문으로 설정된 실행 컨텍스트를 이전 컨텍스트로 되돌릴 수 있습니다.  
+ WITH NO REVERT COOKIE = @*varbinary_variabl* 절을 지정하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]이 쿠키 값을 @*varbinary_variable*에 전달합니다. 호출하는 REVERT WITH COOKIE = @*varbinary_variable* 문에 동일한 *@varbinary_variable* 값이 포함되어 있는 경우에만 해당 명령문으로 설정된 실행 컨텍스트를 이전 컨텍스트로 되돌릴 수 있습니다.  
   
  이 옵션은 연결 풀링을 사용하는 환경에서 유용합니다. 연결 풀링은 응용 프로그램 서버의 응용 프로그램이 다시 사용할 수 있도록 데이터베이스 연결 그룹을 유지 관리하는 것입니다. *@varbinary_variable*에 전달된 값은 EXECUTE AS 문의 호출자에게만 알려지므로 호출자는 자신이 설정한 실행 컨텍스트를 다른 사람이 변경할 수 없도록 할 수 있습니다.  
   
@@ -185,7 +185,7 @@ GO
 ```  
   
 ### <a name="b-using-the-with-cookie-clause"></a>2. WITH COOKIE 절 사용  
- 다음 예에서는 세션 실행 컨텍스트를 지정한 사용자로 설정하고 WITH NO REVERT COOKIE = @*varbinary_variabl*e 절을 지정합니다. 컨텍스트를 호출자로 되돌리려면 `REVERT` 문에 `@cookie` 문의 `EXECUTE AS` 변수로 전달되는 값을 지정해야 합니다. 이 예를 실행하려면 예 1에서 생성된 `login1` 로그인 및 `user1` 사용자가 있어야 합니다.  
+ 다음 예에서는 세션 실행 컨텍스트를 지정한 사용자로 설정하고 WITH NO REVERT COOKIE = @*varbinary_variable* 절을 지정합니다. 컨텍스트를 호출자로 되돌리려면 `REVERT` 문에 `@cookie` 문의 `EXECUTE AS` 변수로 전달되는 값을 지정해야 합니다. 이 예를 실행하려면 예 1에서 생성된 `login1` 로그인 및 `user1` 사용자가 있어야 합니다.  
   
 ```  
 DECLARE @cookie varbinary(8000);  

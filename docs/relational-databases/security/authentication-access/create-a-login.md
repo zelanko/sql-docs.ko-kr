@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3702cdd2e09b101b3a779926fa170a976b39c958
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 290dd7ad7be98334ebd7eccf49c29df89890bc13
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516639"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209102"
 ---
 # <a name="create-a-login"></a>로그인 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,11 +39,11 @@ ms.locfileid: "52516639"
 ##  <a name="Background"></a> 배경  
  로그인은 보안 시스템에서 인증을 수행할 수 있는 보안 주체 또는 엔터티입니다. 사용자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결하려면 로그인이 필요합니다. 도메인 사용자 또는 Windows 도메인 그룹 등의 Windows 주체에 기반한 로그인을 만들거나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인과 같은 Windows 주체에 기반한 로그인을 만들 수 있습니다.  
   
-> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하려면 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 에서 혼합 모드 인증을 사용해야 합니다. 자세한 내용은 [인증 모드 선택](../../../relational-databases/security/choose-an-authentication-mode.md)을 참조하세요.  
+> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하려면 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]에서 혼합 모드 인증을 사용해야 합니다. 자세한 내용은 [인증 모드 선택](../../../relational-databases/security/choose-an-authentication-mode.md)을 참조하세요.  
   
- 보안 주체는 사용 권한을 로그인에 부여할 수 있습니다. 로그인의 범위는 전체 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 특정 데이터베이스에 연결하려면 로그인을 데이터베이스 사용자에 매핑해야 합니다. 이 경우 로그인이 아니라 데이터베이스 내의 사용 권한이 데이터베이스 사용자에게 부여되며 거부됩니다. 범위가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 전체 인스턴스에 속하는 사용 권한(예: **CREATE ENDPOINT** 권한)을 로그인에 부여할 수 있습니다.  
+ 보안 주체는 사용 권한을 로그인에 부여할 수 있습니다. 로그인의 범위는 전체 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에서 특정 데이터베이스에 연결하려면 로그인을 데이터베이스 사용자에 매핑해야 합니다. 이 경우 로그인이 아니라 데이터베이스 내의 사용 권한이 데이터베이스 사용자에게 부여되며 거부됩니다. 범위가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 전체 인스턴스에 속하는 사용 권한(예: **CREATE ENDPOINT** 권한)을 로그인에 부여할 수 있습니다.  
   
-> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 연결하는 경우 ID는 master 데이터베이스에서 유효성을 검사합니다. 포함된 데이터베이스 사용자를 사용하여 데이터베이스 수준에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 연결을 인증합니다. 포함된 데이터베이스 사용자를 사용할 때는 로그인이 필요하지 않습니다. 포함된 데이터베이스는 다른 데이터베이스 및 해당 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (및 master 데이터베이스) 인스턴스에서 격리된 데이터베이스입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 Windows 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 위해 포함된 데이터베이스 사용자를 지원합니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]을(를) 사용하는 경우, 포함된 데이터베이스 사용자와 데이터베이스 수준 방화벽 규칙을 조합합니다. 자세한 내용은 [포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)를 참조하세요.  
+> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 연결하는 경우 ID는 master 데이터베이스에서 유효성을 검사합니다. 포함된 데이터베이스 사용자를 사용하여 데이터베이스 수준에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 연결을 인증합니다. 포함된 데이터베이스 사용자를 사용할 때는 로그인이 필요하지 않습니다. 포함된 데이터베이스는 다른 데이터베이스 및 해당 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (및 master 데이터베이스) 인스턴스에서 격리된 데이터베이스입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 Windows 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 위해 포함된 데이터베이스 사용자를 지원합니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]을(를) 사용하는 경우, 포함된 데이터베이스 사용자와 데이터베이스 수준 방화벽 규칙을 조합합니다. 자세한 내용은 [포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)를 참조하세요.  
   
 ##  <a name="Security"></a> 보안  
 
@@ -62,7 +62,7 @@ ms.locfileid: "52516639"
   
      **검색...** 을 클릭한 경우:  
   
-    1.  **개체 유형 선택**에서 **개체 유형...** 을 클릭하여 **개체 유형** 대화 상자를 열고 **기본 제공 보안 주체**, **그룹** 및 **사용자** 중에서 일부 또는 모두를 선택합니다. **기본 제공 보안 주체** 및 **사용자** 는 기본적으로 선택됩니다. 완료되었으면 **확인**을 클릭합니다.  
+    1.  **개체 유형 선택**에서 **개체 유형...** 을 클릭하여 **개체 유형** 대화 상자를 열고 다음 중에서 일부 또는 전부를 선택합니다. **기본 제공 보안 주체**, **그룹** 및 **사용자**. **기본 제공 보안 주체** 및 **사용자** 는 기본적으로 선택됩니다. 완료되었으면 **확인**을 클릭합니다.  
   
     2.  **찾을 위치를 선택하세요.** 에서 **위치...** 를 클릭하여 **위치** 대화 상자를 열고 사용 가능한 서버 위치 중 하나를 선택합니다. 완료되었으면 **확인**을 클릭합니다.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "52516639"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>추가 옵션  
- **로그인 - 신규** 대화 상자에는 또한 **서버 역할**, **사용자 매핑**, **보안 개체** 및 **상태**의 추가 페이지에 대한 옵션이 제공됩니다.  
+ **로그인 - 신규** 대화 상자에서는 다음 네 가지 추가 페이지에 대한 옵션도 제공합니다. **서버 역할**, **사용자 매핑**, **보안 개체** 및 **상태**.  
   
 ### <a name="server-roles"></a>서버 역할  
  **서버 역할** 페이지에는 새 로그인에 할당할 수 있는 모든 사용 가능한 역할이 나열됩니다. 사용할 수 있는 옵션은 다음과 같습니다.  
@@ -165,15 +165,15 @@ ms.locfileid: "52516639"
   
 1.  **검색**을 클릭합니다.  
   
-2.  **개체 추가** 대화 상자에서 **특정 개체...**, **선택한 유형의 모든 개체...** 또는 **서버**_server\_name_ 옵션 중 하나를 선택합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  **개체 추가** 대화 상자에서 다음 옵션 중 하나를 선택합니다. **특정 개체...**, **선택한 유형의 모든 개체...** 또는 **서버**_서버\_이름_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **참고:** **서버**_server\_name_을 선택하면 상단 표에 해당 서버의 모든 보안 개체가 자동으로 채워집니다.  
+    > **참고:** **서버**_서버\_이름_을 선택하면 상단 표에 해당 서버의 모든 보안 개체가 자동으로 채워집니다.  
   
 3.  **특정 개체...** 를 선택한 경우:  
   
     1.  **개체 선택** 대화 상자의 **개체 유형 선택**에서 **개체 유형...** 을 클릭합니다.  
   
-    2.  **개체 유형 선택** 대화 상자에서 **엔드포인트**, **로그인**, **서버**, **가용성 그룹**및 **서버 역할**개체 유형 중 일부 또는 모두를 선택합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    2.  **개체 유형 선택** 대화 상자에서 다음 개체 유형 중 하나를 선택합니다. **엔드포인트**, **로그인**, **서버**, **가용성 그룹** 및 **서버 역할**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     3.  **선택할 개체 이름을 입력하세요(예제)** 에서 **찾아보기...** 를 클릭합니다.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "52516639"
   
     5.  **개체 선택** 대화 상자에서 **확인**을 클릭합니다.  
   
-4.  **선택한 유형의 모든 개체...** 를 선택한 경우 **개체 유형 선택** 대화 상자에서 **엔드포인트**, **로그인**, **서버**, **가용성 그룹** 및 **서버 역할**의 개체 유형 중 일부 또는 모두를 선택합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  **선택한 유형의 모든 개체...** 를 선택한 경우 **개체 유형 선택** 대화 상자에서 다음 개체 유형 중 일부 또는 전부를 선택합니다. **엔드포인트**, **로그인**, **서버**, **가용성 그룹** 및 **서버 역할**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **이름**  
  표에 추가된 각 보안 주체 또는 보안 개체의 이름입니다.  

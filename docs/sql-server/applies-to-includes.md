@@ -3,27 +3,27 @@ title: 파일을 포함하는 SQL Server 설명서 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/15/2018
 ms.prod: sql
-ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: database-engine
+ms.technology: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
+ms.topic: conceptual
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 06d710e269ff4575bf7edb1c074de9421dad5c2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61cee54e6f49ffaf7e996cf593388ad22e8a7b44
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614761"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53731960"
 ---
 # <a name="sql-server-include-files-for-versioning-and-applies-to"></a>SQL Server에 버전 관리 및 적용 대상 파일이 포함되어 있는 경우
 
-이 문서의 참조는 Markdown에 포함된 파일을 사용하여 개별 문서의 실제 텍스트를 변경하지 않고도 쉽게 수정할 수 있습니다. SQL 콘텐츠 영역에는 세 가지 유형(SQL 버전, 적용 대상, 참조 텍스트)의 포함 파일이 있습니다. **SQL 버전 포함**은 SQL Server 2016 또는 2017과 같이 논의 중인 SQL 버전을 나타내는 데 사용됩니다. **applies-to includes**는 Linux 또는 Azure SQL Database의 SQL Server와 같이 문서가 적용되는 SQL 제품 및 서비스를 나타냅니다. **참조 텍스트 포함**은 다른 두 범주에 속하지 않습니다(예: 고객이 SQL에 대한 도움말을 보기 위해 사용할 수 있는 링크 목록인 “도움말 보기” Include).
+이 문서의 참조는 Markdown에 포함된 파일을 사용하여 개별 문서의 실제 텍스트를 변경하지 않고도 쉽게 수정할 수 있습니다. SQL 콘텐츠 세계에는 다음 세 가지 형식의 포함 파일이 있습니다. SQL 버전, 적용 대상 및 참조 텍스트. **SQL Server 버전** 포함 파일은 SQL Server 2016 또는 2017과 같이 논의 중인 SQL 버전을 나타내는 데 사용됩니다. **적용 대상** 포함 파일은 Linux 또는 Azure SQL Database의 SQL Server와 같이 문서가 적용되는 SQL 제품 및 서비스를 나타냅니다. **참조 텍스트**  포함 파일은 다른 두 범주에 속하지 않습니다(예: 고객이 SQL Server에 대한 도움말을 보기 위해 사용할 수 있는 링크 목록인 “도움말 보기” Include).
 
-이 문서에서는 처음 두 가지 유형의 Include에 대한 참조 지점으로만 사용됩니다. [sql-docs 리포지토리](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes)에서 포함 파일의 전체 목록을 찾아볼 수 있습니다.
+이 문서에서는 처음 두 가지 유형의 포함 파일에 대한 참조 지점으로만 사용됩니다. [sql-docs 리포지토리](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes)에서 포함 파일의 전체 목록을 찾아볼 수 있습니다.
 
-## <a name="sql-server-version-includes"></a>SQL Server 버전 포함
+## <a name="sql-server-version-include-files"></a>SQL Server 버전 포함 파일
 
 SQL 콘텐츠 작성자는 제품 이름과 SQL Server의 버전을 자주 포함해야 합니다. 이처럼, 이름이 변경되는 경우 모든 단일 문서에서 값을 수동으로 업데이트하는 대신 포함 파일이 업데이트됩니다. 이러한 포함 파일은 제품 이름의 자리 표시자로 사용되지만 모든 SQL 문서에서 일관되게 사용되지는 않습니다. SQL Server vNext는 아직 버전 번호가 없는 SQL의 향후 릴리스를 가리키며, 위 내용에 대해 예외입니다.  
 
@@ -41,9 +41,9 @@ SQL 콘텐츠 작성자는 제품 이름과 SQL Server의 버전을 자주 포�
 | SQL vNext | sssqlv15-md.md | `[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]` | SQL Server vNext |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |  
 
-## <a name="sql-server-non-version-specific"></a>SQL Server (비-버전별)
+## <a name="sql-server-applies-to-non-version-specific"></a>SQL Server 적용 대상(비-버전별)
 
-이러한 applies-to includes에는 SQL Server 버전이 생략됩니다.
+이러한 적용 대상 포함 파일에는 SQL Server 버전이 생략됩니다.
 
 | 파일 이름| Markdown 예제 |image|
 | :-------------| :----------| :-------------------|
@@ -63,9 +63,9 @@ SQL 콘텐츠 작성자는 제품 이름과 SQL Server의 버전을 자주 포�
 | appliesto-xx-xxxx-asdw-xxx-md.md | `[!INCLUDE[appliesto-xx-xxxx-asdw-xxx-md.md](../includes/appliesto-xx-xxxx-asdw-xxx-md.md)]` | [!INCLUDE[appliesto-xx-xxxx-asdw-xxx-md.md](../includes/appliesto-xx-xxxx-asdw-xxx-md.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
  
-## <a name="sql-server-version-specific"></a>SQL Server(버전별)
+## <a name="sql-server-applies-to-version-specific"></a>SQL Server 적용 대상(버전별)
 
-이러한 applies-to includes에는 문서가 적용되는 SQL 버전을 지정합니다.
+이러한 적용 대상 포함 파일에는 문서가 적용되는 SQL 버전을 지정합니다.
 
  파일 이름| Markdown 예제 |image|
 | :-------------| :----------| :-------------------|
@@ -107,9 +107,9 @@ SQL 콘텐츠 작성자는 제품 이름과 SQL Server의 버전을 자주 포�
 | tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md | `[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md](../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]` | [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md](../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
 
-## <a name="analysis-services"></a>Analysis Services
+## <a name="analysis-services-applies-to"></a>Analysis Services 적용 대상
 
-이러한 applies-to includes는 Analysis Services 설명서와 함께 사용됩니다.
+이러한 적용 대상 포함 파일은 Analysis Services 설명서와 함께 사용됩니다.
 
 | 파일 이름| Markdown 예제 |image|
 | :-------------| :----------| :-------------------|
@@ -124,9 +124,9 @@ SQL 콘텐츠 작성자는 제품 이름과 SQL Server의 버전을 자주 포�
 | ssas-appliesto-sqlas-all-aas.md | `[!INCLUDE[ssas-appliesto-sqlas-all-aas.md](../includes/ssas-appliesto-sqlas-all-aas.md)]` | [!INCLUDE[ssas-appliesto-sqlas-all-aas.md](../includes/ssas-appliesto-sqlas-all-aas.md)] |
 |&nbsp; | &nbsp; | &nbsp; |  
 
-## <a name="reporting-services"></a>Reporting Services
+## <a name="reporting-services-applies-to"></a>Reporting Services 적용 대상
 
-이러한 applies-to includes는 Reporting Services 설명서와 함께 사용됩니다.
+이러한 적용 대상 포함 파일은 Reporting Services 설명서와 함께 사용됩니다.
 
 | 파일 이름| Markdown 예제 |image|
 | :-------------| :----------| :-------------------|

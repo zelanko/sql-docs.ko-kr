@@ -1,6 +1,7 @@
 ---
-title: 가용성 그룹에 확장된 데이터베이스 장애 조치 추가(SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹에 대해 향상된 데이터베이스 장애 조치 사용
+description: Always On 가용성 그룹의 데이터베이스가 더 이상 트랜잭션을 쓸 수 있는 경우 장애 조치(failover)를 트리거하는 향상된 데이터베이스 장애 조치(failover)를 활성화하는 단계입니다.
+ms.custom: seodec18
 ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: mikeray
@@ -13,14 +14,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 181ebdbd2b9d14876b8990bbf8d7b4da768acf39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dee39cb437011c5e894eb54df91c7282db5fe08
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706141"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211662"
 ---
-# <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>가용성 그룹에 확장된 데이터베이스 장애 조치 추가(SQL Server)
+# <a name="enable-enhanced-database-failover-to-a-database-in-an-always-on-availability-group"></a>Always On 가용성 그룹의 데이터베이스에 대해 향상된 데이터베이스 장애 조치(failover) 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server 2012 및 2014에서 주 복제본의 가용성 그룹에 참여하는 데이터베이스에서 트랜잭션을 쓸 수 있는 기능이 손실되면, 복제본이 동기화되고 자동 장애 조치를 수행하도록 구성되어 있어도 장애 조치가 트리거되지 않습니다.
@@ -37,7 +38,7 @@ SQL Server 2016에서는 마법사 또는 Transact-SQL을 사용하여 설정할
 
 **시나리오 3**
 
-가용성 그룹은 DB1과 DB2라는 두 개의 데이터베이스를 포함하여 인스턴스 A와 인스턴스 B 간에 구성됩니다. 가용성 모드는 자동 장애 조치 모드가 포함된 동기 커밋으로 설정되며, 확장된 데이터베이스 장애 조치를 사용하도록 설정됩니다. DB2의 데이터와 트랜잭션 로그 파일을 포함한 디스크에 대한 액세스가 손실됩니다. 문제가 검색되면 가용성 그룹에서 자동으로 인스턴스 B로 장애 조치합니다.
+가용성 그룹은 다음 두 개의 데이터베이스가 포함된 인스턴스 A와 인스턴스 B 간에 구성됩니다. DB1 및 DB2. 가용성 모드는 자동 장애 조치 모드가 포함된 동기 커밋으로 설정되며, 확장된 데이터베이스 장애 조치를 사용하도록 설정됩니다. DB2의 데이터와 트랜잭션 로그 파일을 포함한 디스크에 대한 액세스가 손실됩니다. 문제가 검색되면 가용성 그룹에서 자동으로 인스턴스 B로 장애 조치합니다.
 
 ## <a name="configure-and-view-the-enhanced-database-failover-option"></a>확장된 데이터베이스 장애 조치 옵션 구성 및 보기
 

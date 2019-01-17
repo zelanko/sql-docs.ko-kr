@@ -1,6 +1,7 @@
 ---
-title: 가용성 복제본에 대한 클라이언트 연결 액세스 정보(SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹 내의 복제본에 대한 클라이언트 연결 유형
+description: 클라이언트가 SQL Server 내의 Always On 가용성 그룹의 주 복제본 또는 보조 복제본으로 만들 수 있는 다양한 유형의 연결에 대해 알아봅니다.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,14 +18,14 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 32bde72d793ac8c703c6a57fc4fe36ff5fd30d67
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6c8dbd61179ab89833c96657eb6107ced45c4528
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602673"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206492"
 ---
-# <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>가용성 복제본에 대한 클라이언트 연결 액세스 정보(SQL Server)
+# <a name="types-of-client-connections-to-replicas-within-an-always-on-availability-group"></a>Always On 가용성 그룹 내의 복제본에 대한 클라이언트 연결 유형
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Always On 가용성 그룹에서 보조 역할 즉, 보조 복제본으로 실행되는 동안 읽기 전용 연결을 허용하도록 하나 이상의 가용성 복제본을 구성할 수 있습니다. 주 역할 즉, 주 복제본으로 실행되는 동안 읽기 전용 연결을 허용하거나 제외하도록 각 가용성 복제본을 구성할 수도 있습니다.  
   
@@ -33,19 +34,7 @@ ms.locfileid: "51602673"
  장애 조치(failover) 중에 보조 복제본은 주 역할로 전환되고 이전의 주 복제본은 보조 역할로 전환됩니다. 장애 조치(failover) 프로세스 동안 주 복제본 및 보조 복제본에 대한 모든 클라이언트 연결은 종료됩니다. 장애 조치(failover) 후 클라이언트가 가용성 그룹 수신기에 다시 연결할 때 수신기는 읽기 전용 연결 요청을 제외하고 새로운 주 복제본에 클라이언트를 다시 연결합니다. 새로운 주 복제본을 호스팅하는 클라이언트 및 서버 인스턴스와 최소 하나 이상의 읽기 가능한 보조 복제본에서 읽기 전용 라우팅이 구성되어 있는 경우 읽기 전용 연결 요청은 클라이언트에 필요한 연결 액세스 유형을 지원하는 보조 복제본으로 다시 라우팅됩니다. 장애 조치(failover) 후 정상적인 클라이언트 환경을 위해 모든 가용성 복제본의 보조 역할 및 주 역할에 대해 연결 액세스를 구성해야 합니다.  
   
 > [!NOTE]  
->  클라이언트 연결 요청을 처리하는 가용성 그룹 수신기에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)을 참조하세요.  
-  
- **항목 내용:**  
-  
--   [보조 역할에서 지원되는 연결 액세스의 유형](#ConnectAccessForSecondary)  
-  
--   [주 역할에서 지원되는 연결 액세스의 유형](#ConnectAccessForPrimary)  
-  
--   [연결 액세스 구성이 클라이언트 연결에 미치는 영향](#HowConnectionAccessAffectsConnectivity)  
-  
--   [관련 작업](#RelatedTasks)  
-  
--   [관련 내용](#RelatedContent)  
+>  클라이언트 연결 요청을 처리하는 가용성 그룹 수신기에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)을 참조하세요.  
   
 ##  <a name="ConnectAccessForSecondary"></a> 보조 역할에서 지원되는 연결 액세스의 유형  
  보조 역할은 클라이언트 연결에 대해 다음과 같은 세 가지 대체 방법을 지원합니다.  
@@ -54,7 +43,7 @@ ms.locfileid: "51602673"
  사용자 연결이 허용되지 않습니다. 보조 데이터베이스를 읽기 액세스에 사용할 수 없습니다. 이 항목은 보조 역할의 기본 동작입니다.  
   
  읽기 전용 연결만  
- **응용 프로그램 의도** 연결 속성이 **ReadOnly** (*읽기 전용 연결*)로 설정된 연결에만 보조 데이터베이스를 사용할 수 있습니다.  
+ **애플리케이션 의도** 연결 속성이 **ReadOnly** (*읽기 전용 연결*)로 설정된 연결에만 보조 데이터베이스를 사용할 수 있습니다.  
   
  이 연결 속성에 대한 자세한 내용은 [고가용성 재해 복구를 위한 SQL Server Native Client 지원](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)을 참조하세요.  
   
@@ -70,7 +59,7 @@ ms.locfileid: "51602673"
  주 데이터베이스에 읽기/쓰기 및 읽기 전용 연결이 모두 허용됩니다. 이 항목은 주 역할의 기본 동작입니다.  
   
  읽기/쓰기 연결만 허용  
- **응용 프로그램 의도** 연결 속성을 설정하지 않거나 **ReadWrite** 로 설정하면 연결이 허용됩니다. **Application Intent** 연결 문자열 키워드를 **ReadOnly** 로 설정하는 연결은 허용되지 않습니다. 읽기/쓰기 연결을 허용하면 고객이 읽기 전용 작업 로드를 주 복제본에 실수로 연결하지 않도록 할 수 있습니다.  
+ **애플리케이션 의도** 연결 속성을 설정하지 않거나 **ReadWrite** 로 설정하면 연결이 허용됩니다. **Application Intent** 연결 문자열 키워드를 **ReadOnly** 로 설정하는 연결은 허용되지 않습니다. 읽기/쓰기 연결을 허용하면 고객이 읽기 전용 작업 로드를 주 복제본에 실수로 연결하지 않도록 할 수 있습니다.  
   
  이 연결 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하세요.  
   
@@ -89,7 +78,7 @@ ms.locfileid: "51602673"
 |주|읽기/쓰기|읽기 전용만|실패|  
 |주|읽기/쓰기|읽기/쓰기 또는 연결 의도가 지정되지 않음|성공|  
   
- 해당 복제본에 대한 클라이언트 연결을 허용하도록 가용성 그룹을 구성하는 방법은 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)을 참조하세요.  
+ 해당 복제본에 대한 클라이언트 연결을 허용하도록 가용성 그룹을 구성하는 방법은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)을 참조하세요.  
   
 ### <a name="example-connection-access-configuration"></a>연결 액세스 구성의 예  
  구성 액세스에 대해 가용성 복제본을 구성하는 방법에 따라 가용성 그룹이 장애 조치된 후 클라이언트 연결에 대한 지원이 변경될 수 있습니다. 예를 들어 원격 비동기 커밋 보조 복제본에서 보고가 수행되는 가용성 그룹의 경우, 모든 읽기 전용 연결이 읽기 전용 연결이 되도록 이 가용성 그룹의 데이터베이스에 대한 모든 읽기 전용 애플리케이션은 **애플리케이션 의도** 연결 속성을 **ReadOnly**로 설정합니다.  
@@ -125,7 +114,7 @@ ms.locfileid: "51602673"
   
 ## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
+ [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [통계](../../../relational-databases/statistics/statistics.md)  
   
   

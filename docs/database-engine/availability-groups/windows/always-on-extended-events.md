@@ -1,6 +1,7 @@
 ---
-title: Always On 가용성 그룹 확장 이벤트(SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: 가용성 그룹에 대한 확장 이벤트 구성
+description: SQL Server는 Always On 가용성 그룹 관련 확장 이벤트를 정의합니다. 세션에서 이 확장 이벤트를 모니터링하면 가용성 그룹 문제를 해결할 때 근본적인 원인 진단에 도움을 줄 수도 있습니다.
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2b33f51b741d9bb97882fb2662111833bb4937a0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: fa8c74ec8bb9c80350b537142ce27cb61354c52f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413200"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207572"
 ---
-# <a name="always-on-availability-groups-extended-events"></a>Always On 가용성 그룹 확장 이벤트
+# <a name="configure-extended-events-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 확장 이벤트 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   SQL Server는 Always On 가용성 그룹 관련 확장 이벤트를 정의합니다. 세션에서 이 확장 이벤트를 모니터링하면 가용성 그룹 문제를 해결할 때 근본적인 원인 진단에 도움을 줄 수도 있습니다. 다음 쿼리를 사용하여 가용성 그룹 확장 이벤트를 볼 수 있습니다.  
   
@@ -301,8 +302,8 @@ GO
 |----------|----------------|-----------------|  
 |availability_group_id|Guid|가용성 그룹의 ID입니다.|  
 |availability_group_name|unicode_string|가용성 그룹의 이름입니다.|  
-|ddl_action|alwayson_ddl_action|DDL 작업의 유형(CREATE, ALTER 또는 DROP)을 나타냅니다.|  
-|ddl_phase|ddl_opcode|DDL 작업 단계(BEGIN, COMMIT 또는 ROLLBACK)를 나타냅니다.|  
+|ddl_action|alwayson_ddl_action|DDL 작업의 유형을 나타냅니다. 생성, 변경 또는 삭제.|  
+|ddl_phase|ddl_opcode|DDL 작업의 단계를 나타냅니다. BEGIN, COMMIT 또는 ROLLBACK.|  
 |인수를 제거합니다.|unicode_string|실행된 명령문의 텍스트입니다.|  
   
 #### <a name="alwaysonhealth-session-definition"></a>Alwayson_health 세션 정의  

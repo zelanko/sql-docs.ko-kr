@@ -11,19 +11,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 10532564d2310ad3b8eaf28c2693bafb423d81a2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b621fa1c1b21e6b1131c65524675c3da9890e6ac
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658856"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980159"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **CurvePolygon** 은 외부 경계 링과 0개 이상의 내부 링에서 정의하는 토폴로지 방식으로 닫힌 표면입니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]CurvePolygon **하위 유형을 포함하여** 에 도입된 공간 기능에 대한 자세한 설명 및 예를 보려면 [SQL Server 2012의 새로운 공간 기능](https://go.microsoft.com/fwlink/?LinkId=226407)백서를 다운로드하세요.  
+> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]CurvePolygon **하위 유형을 포함하여** 에 도입된 공간 기능에 대한 자세한 설명 및 예를 보려면 [SQL Server 2012의 새로운 공간 기능](https://go.microsoft.com/fwlink/?LinkId=226407)백서를 다운로드하세요.  
   
  다음 조건은 **CurvePolygon** 인스턴스의 특성을 정의합니다.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "51658856"
   
 -   **CurvePolygon** 인스턴스의 내부는 외부 링과 모든 내부 링 사이의 공간입니다.  
   
- **CurvePolygon** 인스턴스는 **Polygon** 인스턴스와 다릅니다. **CurvePolygon** 인스턴스에는 원호 세그먼트인 **CircularString** 및 **CompoundCurve**가 포함될 수 있습니다.  
+ **CurvePolygon** 인스턴스는 **Polygon** 인스턴스와 다릅니다. **CurvePolygon** 인스턴스에는 원호 세그먼트: **CircularString** 및 **CompoundCurve**가 포함될 수 있습니다.  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve 인스턴스  
  다음 그림에서는 유효한 **CurvePolygon** 그림을 보여 줍니다.  
@@ -46,11 +46,11 @@ ms.locfileid: "51658856"
 3.  시작점과 끝점의 X 및 Y 좌표가 동일해야 합니다.  
   
     > [!NOTE]  
-    >  Z 및 M 값이 무시되어야 합니다.  
+    > Z 및 M 값이 무시되어야 합니다.  
   
- 다음 예에서는 허용되는 **CurvePolygon** 인스턴스를 보여 줍니다.  
+다음 예에서는 허용되는 **CurvePolygon** 인스턴스를 보여 줍니다.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CURVEPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0, 0 0))';  
 DECLARE @g3 geometry = 'CURVEPOLYGON((0 0 1, 0 0 2, 0 0 3, 0 0 3))'  
@@ -58,67 +58,57 @@ DECLARE @g4 geometry = 'CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))';
 DECLARE @g5 geography = 'CURVEPOLYGON((-122.3 47, 122.3 -47, 125.7 -49, 121 -38, -122.3 47))';  
 ```  
   
- `@g3` 이 허용됩니다. `@g5`**geography** 유형 인스턴스가 유효하지 않아도 허용됩니다.  
+`@g3` 이 허용됩니다. `@g5`**geography** 유형 인스턴스가 유효하지 않아도 허용됩니다.  
   
- 다음 예에서는 `System.FormatException`이 발생합니다.  
+다음 예에서는 `System.FormatException`이 발생합니다.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CURVEPOLYGON((0 5, 0 0, 0 0, 0 0))';  
 DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';  
 ```  
   
- `@g1` 이 허용되지 않습니다. `@g2` 가 허용되지 않습니다.  
+`@g1` 이 허용되지 않습니다. `@g2` 가 허용되지 않습니다.  
   
 ### <a name="valid-instances"></a>유효한 인스턴스  
- **CurvePolygon** 인스턴스가 유효하려면 외부 링과 내부 링이 모두 다음 조건을 충족해야 합니다.  
+**CurvePolygon** 인스턴스가 유효하려면 외부 링과 내부 링이 모두 다음 조건을 충족해야 합니다.  
   
 1.  이 두 링은 단일 탄젠트 점에서만 접할 수 있습니다.  
-  
 2.  이 두 링은 서로 교차할 수 없습니다.  
-  
 3.  각 링에 4개 이상의 점이 있어야 합니다.  
-  
 4.  각 링이 허용 가능한 곡선 유형이어야 합니다.  
   
- 또한**CurvePolygon** 인스턴스는 **geometry** 또는 **geography** 데이터 형식인지에 따라 특정 조건을 충족해야 합니다.  
+또한**CurvePolygon** 인스턴스는 **geometry** 또는 **geography** 데이터 형식인지에 따라 특정 조건을 충족해야 합니다.  
   
 #### <a name="geometry-data-type"></a>Geometry 데이터 형식  
- 유효한 **geometryCurvePolygon** 인스턴스는 다음 특성을 포함해야 합니다.  
+유효한 **geometryCurvePolygon** 인스턴스는 다음 특성을 포함해야 합니다.  
   
 1.  모든 내부 링은 외부 링에 포함되어야 합니다.  
-  
 2.  내부 링이 여러 개일 수 있지만 내부 링은 다른 내부 링을 포함할 수 없습니다.  
-  
 3.  링은 자체적으로 또는 다른 링을 교차할 수 없습니다.  
-  
 4.  링은 단일 탄젠트 점(링 접촉이 한정된 점 수)에서만 접할 수 있습니다.  
-  
 5.  다각형 내부는 연결되어야 합니다.  
   
- 다음 예에서는 유효한 **geometryCurvePolygon** 인스턴스를 보여 줍니다.  
+다음 예에서는 유효한 **geometryCurvePolygon** 인스턴스를 보여 줍니다.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'CURVEPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'CURVEPOLYGON(CIRCULARSTRING(1 3, 3 5, 4 7, 7 3, 1 3))';  
 SELECT @g1.STIsValid(), @g2.STIsValid();  
 ```  
   
- CurvePolygon 인스턴스의 유효성 규칙은 Polygon 인스턴스의 유효성 규칙과 동일합니다. 단, CurvePolygon 인스턴스는 새 원호 세그먼트 유형을 허용할 수 있습니다. 유효하거나 유효하지 않은 인스턴스에 대한 다른 예는 [Polygon](../../relational-databases/spatial/polygon.md)을 참조하십시오.  
+CurvePolygon 인스턴스의 유효성 규칙은 Polygon 인스턴스의 유효성 규칙과 동일합니다. 단, CurvePolygon 인스턴스는 새 원호 세그먼트 유형을 허용할 수 있습니다. 유효하거나 유효하지 않은 인스턴스에 대한 다른 예는 [Polygon](../../relational-databases/spatial/polygon.md)을 참조하십시오.  
   
 #### <a name="geography-data-type"></a>Geography 데이터 형식  
- 유효한 **geographyCurvePolygon** 인스턴스는 다음 특성을 포함해야 합니다.  
+유효한 **geographyCurvePolygon** 인스턴스는 다음 특성을 포함해야 합니다.  
   
 1.  다각형 내부는 왼쪽 규칙을 사용하여 연결됩니다.  
-  
 2.  링은 자체적으로 또는 다른 링을 교차할 수 없습니다.  
-  
 3.  링은 단일 탄젠트 점(링 접촉이 한정된 점 수)에서만 접할 수 있습니다.  
-  
 4.  다각형 내부는 연결되어야 합니다.  
   
- 다음 예에서는 유효한 geography CurvePolygon 인스턴스를 보여 줍니다.  
+다음 예에서는 유효한 geography CurvePolygon 인스턴스를 보여 줍니다.  
   
-```  
+```sql  
 DECLARE @g geography = 'CURVEPOLYGON((-122.3 47, 122.3 47, 125.7 49, 121 38, -122.3 47))';  
 SELECT @g.STIsValid();  
 ```  
@@ -147,7 +137,7 @@ DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
 ```  
   
-### <a name="d-storing-a-curvepolygon-with-only-an-exterior-bounding-ring"></a>4. 외부 경계 링만 사용하여 CurvePolygon 저장  
+### <a name="d-storing-a-curvepolygon-with-only-an-exterior-bounding-ring"></a>D. 외부 경계 링만 사용하여 CurvePolygon 저장  
  이 예에서는 단순 원을 **CurvePolygon** 인스턴스에 저장하는 방법을 보여 줍니다. 외부 경계 링만 사용하여 원을 정의합니다.  
   
 ```sql  
@@ -156,7 +146,7 @@ SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'
 SELECT @g.STArea() AS Area;  
 ```  
   
-### <a name="e-storing-a-curvepolygon-containing-interior-rings"></a>5. 내부 링을 포함하는 CurvePolygon 저장  
+### <a name="e-storing-a-curvepolygon-containing-interior-rings"></a>E. 내부 링을 포함하는 CurvePolygon 저장  
  이 예에서는 **CurvePolygon** 인스턴스에서 도넛형을 만듭니다. 외부 경계 링과 내부 링을 모두 사용하여 도넛형을 정의합니다.  
   
 ```sql  
@@ -182,7 +172,7 @@ IF @g2.STIsValid() = 1
 SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;  
 ```  
   
- @g1과 @g2 모두 동일한 외부 경계 링을 사용합니다. 이 원의 반지름은 5이고 둘 다 내부 링에 대해 사각형을 사용합니다.  그러나 @g1 인스턴스는 유효하고 @g2 인스턴스는 유효하지 않습니다.  @g2가 유효하지 않은 이유는 내부 링이 외부 링에 의해 경계가 지정된 내부 공간을 4개의 개별 영역으로 분할하기 때문입니다.  다음 그림에서는 이를 실행한 결과를 보여 줍니다.  
+ `@g1`과 `@g2` 모두 동일한 외부 경계 링을 사용합니다. 이 원의 반지름은 5이고 둘 다 내부 링에 대해 사각형을 사용합니다.  그러나 `@g1` 인스턴스는 유효하고 `@g2` 인스턴스는 유효하지 않습니다. @g2가 유효하지 않은 이유는 내부 링이 외부 링에 의해 경계가 지정된 내부 공간을 4개의 개별 영역으로 분할하기 때문입니다. 다음 그림에서는 이를 실행한 결과를 보여 줍니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Polygon](../../relational-databases/spatial/polygon.md)   

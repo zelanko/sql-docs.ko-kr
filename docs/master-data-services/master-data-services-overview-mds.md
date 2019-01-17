@@ -5,8 +5,7 @@ ms.date: 02/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 keywords:
 - what is master data
@@ -17,12 +16,12 @@ ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d43eed309999e39df61bd0ba0bb23cba29ce1c52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66cee237e12729f494aa1ed0e915db145ff5d076
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806551"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52786965"
 ---
 # <a name="master-data-services-overview-mds"></a>MDS(Master Data Services) 개요
 
@@ -65,12 +64,12 @@ ms.locfileid: "47806551"
 |도메인 기반 특성으로 사용할 엔터티 만들기|도메인 기반 특성을 만들려면 먼저 엔터티를 만들어 특성 값 목록을 채웁니다.|[도메인 기반 특성&#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)<br /><br /> [도메인 기반 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
 |엔터티에 대한 특성 만들기|멤버를 설명하기 위해 특성을 만듭니다. 이름 및 코드 특성은 각 엔터티에 자동으로 포함되며 제거할 수 없습니다. 다른 자유 형식 특성을 만들어 텍스트, 날짜, 숫자 또는 파일을 포함할 수 있습니다.|[특성&#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)<br /><br /> [텍스트 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)<br /><br /> [숫자 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-numeric-attribute-master-data-services.md)<br /><br /> [날짜 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-date-attribute-master-data-services.md)<br /><br /> [링크 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-link-attribute-master-data-services.md)<br /><br /> [파일 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)|  
 |특성 그룹 만들기|엔터티에 대한 4개 또는 5개 이상의 특성이 있는 경우 특성 그룹을 만들 수 있습니다. 이러한 그룹은 **탐색기** 에서 표 위에 탭으로 표시되며, 여러 특성을 손쉽게 탐색할 수 있도록 각 탭으로 그룹화합니다.|[특성 그룹&#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)<br /><br /> [특성 그룹 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md)|  
-|지원 엔터티를 위한 멤버 가져오기|준비 프로세스를 사용하여 지원 엔터티에 대한 데이터를 가져옵니다. 제품 모델의 경우 색이나 크기를 가져올 수 있습니다. 멤버를 직접 만들 수도 있습니다.<br /><br /> <br /><br /> 참고: 사용자는 엔터티의 리프 모델 개체에 대한 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 업데이트 **이상의 사용 권한과** 탐색기 **기능 영역에 대한 액세스 권한이 있는 경우** 에서 멤버를 만들 수 있습니다.|[개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)<br /><br /> [리프 멤버 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)|  
+|지원 엔터티를 위한 멤버 가져오기|준비 프로세스를 사용하여 지원 엔터티에 대한 데이터를 가져옵니다. 제품 모델의 경우 색이나 크기를 가져올 수 있습니다. 멤버를 직접 만들 수도 있습니다.<br /><br /> <br /><br /> 참고: 엔터티의 리프 모델 개체에 대한 **업데이트** 이상의 사용 권한과 **탐색기** 기능 영역에 대한 액세스 권한이 있는 경우 사용자는 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 멤버를 만들 수 있습니다.|[개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)<br /><br /> [리프 멤버 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)|  
 |데이터 품질을 보장하기 위한 비즈니스 규칙 만들기 및 적용|데이터의 정확성을 보장하는 비즈니스 규칙을 만들고 게시합니다. 다음과 같은 작업을 위해 비즈니스 규칙을 사용할 수 있습니다.<br /><br /> 기본 특성 값을 설정합니다.<br /><br /> 특성 값을 변경합니다.<br /><br /> 데이터가 비즈니스 규칙 유효성 검사에 실패한 경우 전자 메일 알림을 보냅니다.|[비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)<br /><br /> [비즈니스 규칙 만들기 및 게시&#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)<br /><br /> [비즈니스 규칙에 대해 특정 멤버 유효성 검사(Master Data Services)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)<br /><br /> [메일 알림 구성&#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)<br /><br /> [알림을 보내도록 비즈니스 규칙 구성&#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
 |기본 엔터티에 대한 멤버 가져오기 및 비즈니스 규칙 적용|준비 프로세스를 사용하여 기본 엔터티에 대한 멤버를 가져옵니다. 작업이 끝나면 버전의 유효성을 검사하여 비즈니스 규칙을 모델 버전의 모든 멤버에 적용합니다.<br /><br /> 그런 다음 모든 비즈니스 규칙 유효성 검사 문제를 해결할 수 있습니다.|[유효성 검사&#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)<br /><br /> [비즈니스 규칙에 대해 버전 유효성 검사&#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)<br /><br /> [유효성 검사 저장 프로시저&#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)|  
 |파생 계층 만들기|비즈니스 요구 사항이 변화함에 따라 파생 계층을 업데이트하여 모든 멤버를 적절한 수준으로 처리할 수 있습니다.|[파생 계층&#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)<br /><br /> [파생 계층 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
 |필요한 경우 명시적 계층을 만듭니다.|수준 기반이 아니고 단일 엔터티의 멤버를 포함하는 계층을 만들려면 명시적 계층을 만들 수 있습니다.|[명시적 계층&#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)<br /><br /> [명시적 계층 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|필요한 경우 컬렉션을 만듭니다.|전체 계층이 필요 없고 보고나 분석을 위해 멤버의 다른 그룹을 보려는 경우에 컬렉션을 만듭니다.<br /><br /> <br /><br /> 참고: 사용자는 컬렉션 모델 개체에 대한 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 업데이트 **이상의 사용 권한과** 탐색기 **기능 영역에 대한 액세스 권한이 있는 경우** 에서 컬렉션을 만들 수 있습니다.|[컬렉션&#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)<br /><br /> [컬렉션 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-collection-master-data-services.md)|  
+|필요한 경우 컬렉션을 만듭니다.|전체 계층이 필요 없고 보고나 분석을 위해 멤버의 다른 그룹을 보려는 경우에 컬렉션을 만듭니다.<br /><br /> <br /><br /> 참고: 컬렉션 모델 개체에 대한 **업데이트** 이상의 사용 권한과 **탐색기** 기능 영역에 대한 액세스 권한이 있는 경우 사용자는 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 컬렉션을 만들 수 있습니다.|[컬렉션&#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)<br /><br /> [컬렉션 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-collection-master-data-services.md)|  
 |사용자 정의 메타데이터 만들기|모델 개체를 설명하기 위해 사용자 정의 메타데이터를 모델에 추가합니다. 메타데이터는 개체 소유자나 데이터가 제공된 원본을 포함할 수 있습니다.||  
 |모델 버전 잠금 및 버전 플래그 할당|관리자를 제외하고 멤버를 변경할 수 없도록 모델 버전을 잠급니다. 비즈니스 규칙과 비교하여 버전 데이터에 대한 유효성 검사에 성공한 경우 버전을 커밋할 수 있으며 이렇게 하면 모든 사용자가 멤버를 변경할 수 없게 됩니다.<br /><br /> 버전 플래그를 만들어 모델에 할당합니다. 플래그는 사용자 및 구독 시스템이 사용할 모델 버전을 식별하는 데 유용합니다.|[버전&#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)<br /><br /> [버전 잠금&#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)<br /><br /> [버전 플래그 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
 |구독 뷰 만들기|구독 시스템에서 마스터 데이터를 사용하도록 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 표준 뷰를 만드는 구독 뷰를 만듭니다.|[개요: 데이터 내보내기&#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)<br /><br /> [구독 뷰를 만들어 데이터 내보내기&#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)|  

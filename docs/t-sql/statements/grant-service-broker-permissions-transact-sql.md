@@ -21,12 +21,12 @@ ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a5af2e9a7ad54c76d2c6fb6e5854803a652dc2ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3146d04acc0a74096af2cc2f04341eaa1b2a68fe
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799021"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589827"
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT Service Broker 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,19 +56,19 @@ GRANT permission  [ ,...n ] ON
  *permission*  
  Service Broker 보안 개체에 부여할 수 있는 사용 권한을 지정합니다.  아래와 같습니다.  
   
- CONTRACT **::***contract_name*  
+ CONTRACT **::**_contract_name_  
  사용 권한을 부여할 계약을 지정합니다. 범위 한정자 "::"이 필요합니다.  
   
- MESSAGE TYPE **::***message_type_name*  
+ MESSAGE TYPE **::**_message_type_name_  
  사용 권한을 부여할 메시지 유형을 지정합니다. 범위 한정자 "::"이 필요합니다.  
   
- REMOTE SERVICE BINDING **::***remote_binding_name*  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  사용 권한을 부여할 원격 서비스 바인딩을 지정합니다. 범위 한정자 "::"이 필요합니다.  
   
- ROUTE **::***route_name*  
+ ROUTE **::**_route_name_  
  사용 권한을 부여할 경로를 지정합니다. 범위 한정자 "::"이 필요합니다.  
   
- SERVICE **::***service_name*  
+ SERVICE **::**_service_name_  
  사용 권한을 부여할 서비스를 지정합니다. 범위 한정자 "::"이 필요합니다.  
   
  *database_principal*  

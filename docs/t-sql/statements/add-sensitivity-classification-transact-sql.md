@@ -23,12 +23,12 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: cbede7141154147bbb714d00d794d4b8af7cf8e0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0fc010c3b02bfbe5e2c5fabb1f8e6313144d7efa
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696411"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979380"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -87,13 +87,13 @@ ADD SENSITIVITY CLASSIFICATION TO
 ## <a name="remarks"></a>Remarks  
 
 - 한 개체에 분류를 하나만 추가할 수 있습니다. 이미 분류된 개체에 분류를 추가하면 기존 분류를 덮어씁니다.
-- 하나의 `ADD SENSITIVITY CLASSIFICTION` 문을 사용하여 여러 개체를 분류할 수 있습니다.
+- 하나의 `ADD SENSITIVITY CLASSIFICATION` 문을 사용하여 여러 개체를 분류할 수 있습니다.
 - 시스템 뷰 [sys.sensitivity_classifications](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)는 데이터베이스의 민감도 분류 정보를 검색하는 데 사용할 수 있습니다.
 
 
 ## <a name="permissions"></a>Permissions
 
-ALTER ANY SENSITIVITY CLASSIFICATION 권한이 필요합니다. ALTER ANY SENSITIVITY CLASSIFACTION은 데이터베이스 권한 ALTER 또는 서버 권한 CONTROL SERVER에 포함됩니다.
+ALTER ANY SENSITIVITY CLASSIFICATION 권한이 필요합니다. ALTER ANY SENSITIVITY CLASSIFICATION은 데이터베이스 권한 ALTER 또는 서버 권한 CONTROL SERVER에 포함됩니다.
 
 
 ## <a name="examples"></a>예  
@@ -119,7 +119,7 @@ ADD SENSITIVITY CLASSIFICATION TO
 
 ## <a name="see-also"></a>참고 항목  
 
-[DROP SENSITIVITY CLASSIFICTION(Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
+[DROP SENSITIVITY CLASSIFICATION(Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
 [sys.sensitivity_classifications(Transact-SQL)](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)
 

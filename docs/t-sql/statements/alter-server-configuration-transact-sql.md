@@ -21,12 +21,12 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 52149ae289f0cea89ff31a501acaaf8d0c7cbd3e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 352cd03017b33247c66f7eb0090cd79d0d5cd532
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545619"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980099"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ SQLDUMPEREDUMPFLAGS
  SQL  Server  오류 시 SQLDumper  유틸리티에서 덤프를 생성하기 위한 제한 시간 값(밀리초)입니다. 기본값은 0이며 이는 덤프를 완료하는 데 시간 제한이 없음을 의미합니다. 자세한 내용은 [SQL Server Dumper 유틸리티 기술 자료 문서](https://go.microsoft.com/fwlink/?LinkId=206173)를 참조하세요.  
   
  FAILURECONDITIONLEVEL  =  {  'failure_condition_level'  |  DEFAULT  }  
- SQL  Server  장애 조치(failover)  클러스터 인스턴스가 장애 조치(failover)되거나 다시 시작되는 조건입니다. 기본값은 3이며,  이는 치명적인 서버 오류 시 SQL  Server  리소스가 장애 조치(failover)되거나 다시 시작됨을 의미합니다. 이 오류 상태 및 기타 오류 상태 수준에 대한 자세한 내용은 [FailureConditionLevel 속성 설정 구성](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md)을 참조하세요.  
+ SQL Server 장애 조치(failover)  클러스터 인스턴스가 장애 조치(failover)되거나 다시 시작되는 조건입니다. 기본값은 3이며,  이는 치명적인 서버 오류 시 SQL  Server  리소스가 장애 조치(failover)되거나 다시 시작됨을 의미합니다. 이 오류 상태 및 기타 오류 상태 수준에 대한 자세한 내용은 [FailureConditionLevel 속성 설정 구성](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md)을 참조하세요.  
   
  HEALTHCHECKTIMEOUT  =  {  'health_check_time-out'  |  DEFAULT  }  
  SQL  Server  데이터베이스 엔진 리소스 DLL이 SQL  Server  인스턴스가 응답하지 않는 것으로 간주하기 전에 서버 상태 정보를 기다려야 하는 제한 시간 값입니다. 제한 시간 값은 밀리초로 표시됩니다. 기본값은 60,000밀리초(60초)입니다.  
@@ -196,7 +196,7 @@ SQLDUMPEREDUMPFLAGS
  대상 클러스터를 식별하려면 다음 값 중 하나를 지정합니다.  
   
  *windows_cluster*  
- WSFC의 netwirj 이름입니다. 짧은 이름 또는 전체 도메인 이름을 지정할 수 있습니다. 짧은 이름의 대상 IP  주소를 찾기 위해 ALTER  SERVER  CONFIGURATION은 DNS  확인을 사용합니다. 경우에 따라 짧은 이름을 사용하면 혼동이 생길 수 있고 DNS에서 잘못된 IP  주소를 반환할 수 있습니다. 따라서 전체 도메인 이름을 지정하는 것이 좋습니다.  
+ WSFC의 네트워크 이름입니다. 짧은 이름 또는 전체 도메인 이름을 지정할 수 있습니다. 짧은 이름의 대상 IP  주소를 찾기 위해 ALTER  SERVER  CONFIGURATION은 DNS  확인을 사용합니다. 경우에 따라 짧은 이름을 사용하면 혼동이 생길 수 있고 DNS에서 잘못된 IP  주소를 반환할 수 있습니다. 따라서 전체 도메인 이름을 지정하는 것이 좋습니다.  
   
   > [!NOTE] 
   > 이 설정을 사용하는 클러스터 간 마이그레이션을 더 이상 지원하지 않습니다. 클러스터 간 마이그레이션을 수행하려면 분산 가용성 그룹 또는 로그 전달 등 일부 다른 메서드를 사용합니다. 
@@ -237,10 +237,10 @@ SQLDUMPEREDUMPFLAGS
  OFF  
  큰 NUMA 하드웨어 노드를 작은 NUMA 노드로 분할하는 자동 소프트웨어를 사용하지 않도록 설정합니다. 실행 중인 값을 변경하려면 데이터베이스 엔진을 다시 시작해야 합니다.  
 
-> [!WARNING]  
+> [!WARNING]
 > SQL Server 에이전트 및 SOFT NUMA 옵션을 사용한 ALTER SERVER CONFIGURATION 문의 동작에는 알려진 문제가 있습니다.  다음은 권장되는 작업 순서입니다.  
 > 1) SQL Server 에이전트 인스턴스를 중지합니다.  
-> 2) ALTER SERVER CONFGURATION SOFT NUMA 옵션을 실행합니다.  
+> 2) ALTER SERVER CONFIGURATION SOFT NUMA 옵션을 실행합니다.  
 > 3) SQL Server 인스턴스를 다시 시작합니다.  
 > 4) SQL Server 에이전트 인스턴스를 시작합니다.  
   
@@ -272,7 +272,7 @@ SQLDUMPEREDUMPFLAGS
 ###  <a name="Affinity"></a> 프로세스 선호도 설정  
  이 섹션의 예에서는 CPU  및 NUMA  노드에 대한 프로세스 선호도를 설정하는 방법을 보여 줍니다. 이 예에서는 서버에 각각 16  NUMA  노드를 가진 4개 그룹으로 정렬된 256개의 CPU가 포함되어 있다고 가정합니다. 모든 NUMA  노드 또는 CPU에 스레드를 할당하지 않습니다.  
   
--   그룹 0: 0~3개의 NUMA 노드, 0~63개의 CPU  
+-   그룹 0: 0~3개의 NUMA  노드,  0~63개의 CPU  
 -   그룹 1: 4~7개의 NUMA 노드, 64~127개의 CPU  
 -   그룹 2: 8~12개의 NUMA 노드, 128~191개의 CPU  
 -   그룹 3: 13~16개의 NUMA 노드, 192~255개의 CPU  
@@ -301,14 +301,14 @@ ALTER SERVER CONFIGURATION
 SET PROCESS AFFINITY CPU=60 TO 200;  
 ```  
   
-#### <a name="d-setting-affinity-to-cpu-0-on-a-system-that-has-two-cpus"></a>4. 두 개의 CPU가 있는 시스템에서 CPU 0에 선호도 설정  
+#### <a name="d-setting-affinity-to-cpu-0-on-a-system-that-has-two-cpus"></a>D. 두 개의 CPU가 있는 시스템에서 CPU 0에 선호도 설정  
  다음 예에서는 두 개의 CPU가 있는 컴퓨터에서 `CPU=0`에 선호도를 설정합니다. 다음 문이 실행되기 전의 내부 선호도 비트 마스크는 00입니다.  
   
 ```  
 ALTER SERVER CONFIGURATION SET PROCESS AFFINITY CPU=0;  
 ```  
   
-#### <a name="e-setting-affinity-to-auto"></a>5. 선호도를 AUTO로 설정  
+#### <a name="e-setting-affinity-to-auto"></a>E. 선호도를 AUTO로 설정  
  다음 예에서는 선호도를 `AUTO`로 설정합니다.  
   
 ```  
@@ -344,7 +344,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG PATH = 'C:\logs';  
 ```  
   
-#### <a name="d-specifying-the-maximum-size-of-each-diagnostic-log"></a>4. 각 진단 로그의 최대 크기 지정  
+#### <a name="d-specifying-the-maximum-size-of-each-diagnostic-log"></a>D. 각 진단 로그의 최대 크기 지정  
  다음 예에서는 각 진단 로그의 최대 크기를 10MB로 설정합니다.  
   
 ```  

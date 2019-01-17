@@ -17,7 +17,7 @@ dev_langs:
 helpviewer_keywords:
 - server instance event data [SQL Server]
 - event notifications [SQL Server], event status
-- events [SQL Server], status infromation
+- events [SQL Server], status information
 - EVENTDATA function
 - status information [SQL Server], events
 - DDL triggers, returning event data
@@ -25,12 +25,12 @@ ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 953a4d79d128d2295b5365653f0f7b62647f6069
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0ec1c2d952c334b1ccb394f5abb36ea91d5f1a87
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701331"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979849"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ EVENTDATA( )
 `CREATE LOGIN` 또는 `ALTER LOGIN` 문이 실행될 때 암호가 표시되지 않습니다. 이를 통해 로그인 보안을 보호합니다.  
   
 ## <a name="schemas-returned"></a>반환된 스키마  
-EVENTDATA는 **xml** 데이터 형식 값을 반환합니다. 기본적으로 모든 이벤트의 스키마 정의는 [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd 디렉터리에 설치됩니다.  
+EVENTDATA는 **xml** 데이터 형식 값을 반환합니다. 기본적으로 모든 이벤트에 대한 스키마 정의는 [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd 디렉터리에 설치됩니다.  
   
 [Microsoft SQL Server XML 스키마](https://go.microsoft.com/fwlink/?LinkID=31850) 웹 페이지에도 이벤트 스키마가 있습니다.  
   

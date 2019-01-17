@@ -1,6 +1,7 @@
 ---
-title: 진행률 페이지(Always On 가용성 그룹 마법사) | Microsoft Docs
-ms.custom: ''
+title: 진행률 페이지(Always On 가용성 그룹 마법사)
+description: SQL Server Management Studio 내 Always On 가용성 그룹 마법사의 '진행률 페이지'에 있는 옵션에 대한 설명입니다.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1816481b249ec202f11d030a8eb119ae6e219c32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 147af9a2eecfe58cfc329fd8ce22b0452e21c59e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764928"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210497"
 ---
 # <a name="progress-page-always-on-availability-group-wizards"></a>진행률 페이지(Always On 가용성 그룹 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

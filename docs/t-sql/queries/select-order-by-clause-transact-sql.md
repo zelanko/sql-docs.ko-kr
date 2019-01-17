@@ -1,7 +1,7 @@
 ---
 title: ORDER BY 절(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/13/2017
+ms.date: 12/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -40,12 +40,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f7279def5a168f46a86db05be1c41b28bbfa9db
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8babb966273c05524a373a14c6a084e5c74cfc7b
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530231"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980279"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,7 +98,14 @@ ORDER BY order_by_expression
   
  여러 개의 열 정렬을 지정할 수 있습니다. 열 이름은 고유해야 합니다. ORDER BY 절에서 열 정렬의 순서가 정렬된 결과 집합의 구성 방식을 정의합니다. 즉, 결과 집합은 첫 번째 열을 기준으로 정렬된 다음 이 정렬된 목록이 두 번째 열을 기준으로 정렬되는 식으로 정렬됩니다.  
   
- ORDER BY 절에서 참조하는 열 이름은 정확하게 SELECT 목록의 열이나 FROM 절에서 지정한 테이블에 정의된 열과 같아야 합니다.  
+ ORDER BY 절에서 참조하는 열 이름은 선택 목록의 열이나 열 별칭 또는 정확하게 FROM 절에서 지정한 테이블에 정의된 열과 같아야 합니다. ORDER BY 절이 선택 목록에서 열 별칭을 참조하는 경우 열 별칭을 독립 실행형으로 사용해야 하며, 예를 들어 ORDER BY 절의 일부 식으로 사용하지 않아야 합니다.
+ 
+```sql
+SELECT SCHEMA_NAME(schema_id) AS SchemaName FROM sys.objects 
+ORDER BY SchemaName; -- correct 
+SELECT SCHEMA_NAME(schema_id) AS SchemaName FROM sys.objects 
+ORDER BY SchemaName + ''; -- wrong
+```
   
  COLLATE *collation_name*  
  테이블이나 뷰에 정의된 열의 데이터 정렬이 아니라 *collation_name*에 지정된 데이터 정렬에 따라 ORDER BY 작업을 수행하도록 지정합니다. *collation_name*으로는 Windows 데이터 정렬 이름 또는 SQL 데이터 정렬 이름을 사용할 수 있습니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요. COLLATE는 **char**, **varchar**, **nchar** 및 **nvarchar** 형식의 열에만 적용할 수 있습니다.  
@@ -188,7 +195,7 @@ ORDER BY order_by_expression
   
  이 항목의 뒷부분에 나오는 예 섹션에서 "단일 트랜잭션에서 여러 쿼리 실행" 예를 참조하세요.  
   
- 페이징 솔루션에 일관된 실행 계획이 중요한 경우 OFFSET 및 FETCH 매개 변수에 대한 OPTIMIZE FOR 쿼리 힌트를 사용하는 것이 좋습니다. 이 항목의 뒷부분에 나오는 예 섹션에서 "식을 사용하여 OFFSET 및 FETCH 값 지정"을 참조하세요. OPTIMZE FOR에 대한 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
+ 페이징 솔루션에 일관된 실행 계획이 중요한 경우 OFFSET 및 FETCH 매개 변수에 대한 OPTIMIZE FOR 쿼리 힌트를 사용하는 것이 좋습니다. 이 항목의 뒷부분에 나오는 예 섹션에서 "식을 사용하여 OFFSET 및 FETCH 값 지정"을 참조하세요. OPTIMIZE FOR에 대한 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
 ## <a name="examples"></a>예  
   
@@ -241,7 +248,7 @@ ORDER BY SchemaName;
   
 ```  
   
-#### <a name="d-specifying-an-expression-as-the-sort-column"></a>4. 식을 정렬 열로 지정  
+#### <a name="d-specifying-an-expression-as-the-sort-column"></a>D. 식을 정렬 열로 지정  
  다음 예에서는 식을 정렬 열로 사용합니다. 이 식은 DATEPART 함수를 사용하여 직원이 고용된 연도별로 결과 집합을 정렬하도록 정의됩니다.  
   
 ```sql
@@ -420,7 +427,7 @@ OPTION ( OPTIMIZE FOR (@StartingRowNumber = 1, @EndingRowNumber = 20) );
   
 ```  
   
-#### <a name="d-specifying-a-constant-scalar-subquery-for-offset-and-fetch-values"></a>4. 상수 스칼라 하위 쿼리를 사용하여 OFFSET 및 FETCH 값 지정  
+#### <a name="d-specifying-a-constant-scalar-subquery-for-offset-and-fetch-values"></a>D. 상수 스칼라 하위 쿼리를 사용하여 OFFSET 및 FETCH 값 지정  
  다음 예에서는 상수 스칼라 하위 쿼리를 사용하여 FETCH 절의 값을 정의합니다. 이 하위 쿼리는 `PageSize` 테이블의 `dbo.AppSettings` 열에서 단일 값을 반환합니다.  
   
 ```sql
@@ -440,7 +447,7 @@ ORDER BY DepartmentID ASC
   
 ```  
   
-#### <a name="e-running-multiple-queries-in-a-single-transaction"></a>5. 단일 트랜잭션에서 여러 쿼리 실행  
+#### <a name="e-running-multiple-queries-in-a-single-transaction"></a>E. 단일 트랜잭션에서 여러 쿼리 실행  
  다음 예에서는 쿼리의 모든 요청에서 안정적인 결과가 반환되도록 페이징 솔루션을 구현하는 한 가지 방법을 보여 줍니다. 쿼리는 스냅숏 격리 수준을 사용하여 단일 트랜잭션에서 실행되며, ORDER BY 절에 지정된 열이 열의 고유성을 보장합니다.  
   
 ```sql

@@ -1,6 +1,7 @@
 ---
-title: 일부 가용성 데이터베이스의 데이터 동기화 상태가 정상이 아님 | Microsoft Docs
-ms.custom: ''
+title: 일부 가용성 데이터베이스의 데이터 동기화 상태가 정상이 아님
+description: Always On 가용성 그룹의 일부 데이터베이스의 데이터 동기화 상태가 정상이 아닌 이유에 대한 가능한 원인을 식별합니다.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ ms.assetid: 89f95d15-33c6-4768-bccd-9dbf8c4f49a9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f9260f9de24d282b3b6ce5c4e46b4572e01aafa9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: ff4ab5ab6da9eaf7a4bf1a5099022c5463d09ef4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604459"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203408"
 ---
 # <a name="data-synchronization-state-of-some-availability-database-is-not-healthy"></a>일부 가용성 데이터베이스의 데이터 동기화 상태가 정상이 아님
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

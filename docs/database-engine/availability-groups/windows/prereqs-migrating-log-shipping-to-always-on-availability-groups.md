@@ -1,6 +1,7 @@
 ---
-title: 로그 전달을 Always On 가용성 그룹에 마이그레이션하기 위한 필수 조건 | Microsoft Docs
-ms.custom: ''
+title: 로그 전달을 가용성 그룹으로 변환하기 위한 필수 구성 요소
+description: 로그 전달을 Always On 가용성 그룹으로 변환하는 데 필요한 필수 구성 요소에 대한 설명입니다.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,14 +14,14 @@ ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c246912b7e12690427bc296d3db277481eddc42f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: f5dc6b48ece6318cdd1ab15e6bccd86401b05e2a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606923"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214724"
 ---
-# <a name="prereqs-migrating-log-shipping-to-always-on-availability-groups"></a>로그 전달을 Always On 가용성 그룹에 마이그레이션하기 위한 필수 조건
+# <a name="prerequisites-to-convert-log-shipping-to-always-on-availability-groups"></a>로그 전달을 Always On 가용성 그룹으로 변환하기 위한 필수 구성 요소
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 하나 이상의 보조 데이터베이스와 함께 로그 전달 주 데이터베이스를 Always On 주 데이터베이스 및 보조 데이터베이스로 변환하기 위한 필수 조건에 대해 설명합니다.  
@@ -68,7 +69,7 @@ ms.locfileid: "51606923"
   
  **자세한 내용은 다음을 참조하세요.**  
   
- [로그 전달 구성을 가용성 그룹으로 변환](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/09/converting-a-logshipping-configuration-to-availability-group/) (SQL Server 블로그)  
+ [로그 전달 구성을 가용성 그룹으로 변환](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/09/converting-a-logshipping-configuration-to-availability-group/)(SQL Server 블로그)  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
  **로그 전달**  

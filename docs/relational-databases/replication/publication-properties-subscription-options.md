@@ -13,12 +13,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 92aa4b83697bd424d4e6940f3c46b96033d5ecf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1a0b583c66355245790004a8612afa0ace72999
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847012"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213132"
 ---
 # <a name="publication-properties-subscription-options"></a>게시 속성, 구독 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47847012"
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당됩니다. 백업 파일을 사용하여 구독을 초기화할 수 있도록 허용할지 여부를 결정합니다. 자세한 내용은 [스냅숏 없이 트랜잭션 구독 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
   
  **SQL Server 이외 구독자 허용**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당됩니다. 게시에서[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자를 지원할지 여부를 결정합니다. 이 옵션을 **True** 로 설정하면 다른 게시 속성도[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자를 지원하도록 설정됩니다. 구독이 있으면 이 옵션은 읽기 전용입니다. **즉시 업데이트 구독 허용** , **지연 업데이트 구독 허용**또는 **피어 투 피어 구독 허용**이 **True** 로 설정된 경우에는 이 옵션을 **True**로 설정할 수 없습니다. 자세한 내용은 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)을(를) 참조하세요.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당됩니다. 게시에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자를 지원할지 여부를 결정합니다. 이 옵션을 **True** 로 설정하면 다른 게시 속성도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자를 지원하도록 설정됩니다. 구독이 있으면 이 옵션은 읽기 전용입니다. **즉시 업데이트 구독 허용** , **지연 업데이트 구독 허용**또는 **피어 투 피어 구독 허용**이 **True** 로 설정된 경우에는 이 옵션을 **True**로 설정할 수 없습니다. 자세한 내용은 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)을(를) 참조하세요.  
   
 ### <a name="data-transformation"></a>데이터 변환  
  **데이터 변환 허용**  
@@ -117,7 +117,7 @@ ms.locfileid: "47847012"
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당됩니다. 각 파티션에 속하는 데이터 행을 미리 계산하여 동기화를 최적화할지 여부를 결정합니다. 게시가 사전 계산 파티션 기준을 만족하면 이 설정은 기본적으로 **True** 로 지정됩니다. 자세한 내용은 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)를 참조하세요.  
   
  **동기화 최적화**  
- 각 구독자에서 추가 메타데이터를 저장하여 병합 처리를 최적화할지 여부를 결정합니다. 이 최적화보다 사전 계산 파티션이 우선합니다. **동기화 최적화** 옵션은 **파티션 미리 계산** 이 **False**로 설정된 경우에만 적용됩니다. 자세한 내용은 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)을(를) 참조하세요.  
+ 각 구독자에서 추가 메타데이터를 저장하여 병합 처리를 최적화할지 여부를 결정합니다. 이 최적화보다 사전 계산 파티션이 우선합니다. **동기화 최적화** 옵션은 **파티션 미리 계산** 이 **False**로 설정된 경우에만 적용됩니다. 자세한 내용은 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하세요.  
   
 ### <a name="merge-processes"></a>병합 프로세스  
  **동시 프로세스 제한**  

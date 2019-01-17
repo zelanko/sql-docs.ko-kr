@@ -11,12 +11,12 @@ ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18dbf43f2305e9991d6fe37615f572e1dc464fda
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: edf6642557510b61b19766766250ee2869bf512f
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529525"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553015"
 ---
 # <a name="lesson-1-1---creating-a-new-integration-services-project"></a>1-1단원: 새 Integration Services 프로젝트 만들기
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지를 만드는 첫 번째 단계는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만드는 것입니다. 이 프로젝트는 데이터 변환 솔루션에서 사용하는 데이터 원본, 데이터 원본 뷰, 패키지 등의 개체에 대한 템플릿을 포함합니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "52529525"
 > [!NOTE]  
 > 이 자습서를 사용하려면 Microsoft SQL Server Data Tools가 필요합니다.  
 >   
-> SQL Server Data Tools 설치에 대한 자세한 내용은 [SQL Server Data Tools 다운로드](https://msdn.microsoft.com/data/hh297027)를 참조하십시오.  
+> SQL Server Data Tools 설치에 대한 자세한 내용은 [SQL Server Data Tools 다운로드](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017)를 참조하십시오.  
   
 ### <a name="to-create-a-new-integration-services-project"></a>새 Integration Services 프로젝트를 만들려면  
   

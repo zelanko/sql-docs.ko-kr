@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4bf9ffc5d71e046c32322d20bc9b59c7fb5a25f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63b1c9e8bda9bbabcc94aa7b384b3e7ffef053de
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856171"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590207"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>대량 가져오기 수행 중 Null 유지 또는 기본값 사용(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,10 +46,10 @@ ms.locfileid: "47856171"
 |Command|한정자|한정자 유형|  
 |-------------|---------------|--------------------|  
 |bcp|-k|스위치|  
-|BULK INSERT|KEEPNULLS**\***|인수|  
-|INSERT ... 로 기본 값 사용|해당 사항 없음|해당 사항 없음|  
+|BULK INSERT|KEEPNULLS\*|인수|  
+|INSERT ... 선택 * OPENROWSET (BULK)에서|해당 사항 없음|해당 사항 없음|  
   
-**\*** [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)의 경우 기본값을 사용할 수 없으면 null 값을 허용하도록 테이블 열을 정의해야 합니다. 
+\* [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)의 경우 기본값을 사용할 수 없으면 null 값을 허용하도록 테이블 열을 정의해야 합니다. 
   
 > [!NOTE]
 > 이러한 한정자는 대량 가져오기 명령을 통해 테이블에서 DEFAULT 정의 확인을 비활성화합니다.  그러나 동시 INSERT 문의 경우 DEFAULT 정의가 있어야 합니다.

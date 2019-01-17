@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a727c599dc5a2b7c21d07a415f6ba9490c7e96cd
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 2203e8fe68861fd0e69dae352fef8c015e76859f
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712124"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328973"
 ---
 # <a name="best-practice-with-the-query-store"></a>쿼리 저장소에 대한 모범 사례
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -89,7 +89,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
- **오래된 쿼리 임계값(일):** 지속형 런타임 통계와 비활성 쿼리의 보존 기간을 제어하는 시간 기반 정리 정책입니다.  
+ **부실 쿼리 임계값(일):** 지속형 런타임 통계와 비활성 쿼리의 보존 기간을 제어하는 시간 기반 정리 정책입니다.  
 기본적으로 쿼리 저장소는 30일 동안 데이터를 보관하도록 구성되어 있어 시나리오에서 불필요하게 길 수도 있습니다.  
   
  사용하지 않을 기록 데이터는 보관하지 않는 것이 좋습니다. 이렇게 하면 읽기 전용 상태로 변경되는 횟수가 줄어듭니다. 쿼리 저장소의 데이터 크기와 문제를 검색하여 완화하는 시간도 더 예측 가능해집니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 다음 스크립트를 사용하여 시간 기반 정리 정책을 구성합니다.  
@@ -156,10 +156,10 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 |리소스를 최고로 사용 중인 쿼리|관심 있는 메트릭 실행을 선택하고 제공된 시간 간격 동안 가장 값이 높은 쿼리를 식별합니다. <br />데이터베이스 리소스 사용에 가장 큰 영향을 미치는 가장 관련성이 높은 쿼리에 주목하려면 이 보기를 사용합니다.|  
 |강제 계획이 포함된 쿼리|쿼리 저장소를 사용하여 이전 강제 계획을 나열합니다. <br />모든 현재 강제 계획에 빠르게 액세스하려면 이 보기를 사용합니다.|  
 |고변형 쿼리|기간, CPU 시간, IO 및 원하는 시간 간격의 메모리 사용량과 같은 사용 가능한 차원과 관련하여 실행 변형이 높은 쿼리를 분석합니다.<br />이 뷰를 사용하여 애플리케이션 전체에서 사용자 경험에 영향을 줄 수 있는, 성능 변동이 큰 쿼리를 식별합니다.|  
-|쿼리 대기 통계|데이터베이스에서 가장 많이 사용되는 대기 범주는 무엇이고 선택한 대기 범주에 가장 많은 영향을 주는 쿼리는 무엇인지 분석합니다.<br />이 보기를 사용하여 대기 통계를 분석하고 애플리케이션의 사용자 경험에 영향을 줄 수 있는 쿼리를 식별할 수 있습니다.<br /><br />**적용 대상:** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터|  
+|쿼리 대기 통계|데이터베이스에서 가장 많이 사용되는 대기 범주는 무엇이고 선택한 대기 범주에 가장 많은 영향을 주는 쿼리는 무엇인지 분석합니다.<br />이 보기를 사용하여 대기 통계를 분석하고 애플리케이션의 사용자 경험에 영향을 줄 수 있는 쿼리를 식별할 수 있습니다.<br /><br />**적용 대상:** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작|  
 |추적된 쿼리|가장 중요한 쿼리 실행을 실시간으로 추적합니다. 일반적으로 강제 계획을 사용하는 쿼리가 있고 해당 쿼리 성능이 안정적인지 확인하려고 할 경우 이 보기를 사용합니다.|
   
-> [!TIP]  
+> [!TIP]
 > [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하여 리소스를 가장 많이 사용하는 쿼리를 식별하고, 선택한 계획을 변경하여 재발된 쿼리를 수정하는 방법은 [@Azure 블로그의 쿼리 저장소](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)를 참조하세요.  
   
  최적 상태가 아닌 성능의 쿼리를 식별한 경우 수행할 작업은 문제의 성격에 따라 다릅니다.  
@@ -168,7 +168,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 
-> [!NOTE]  
+> [!NOTE]
 > 위의 그림에서는 쿼리 계획에 따라 셰이프가 다를 수 있으며, 셰이프는 다음과 같이 가능한 각 상태를 의미합니다.<br />  
 > |셰이프|의미|  
 > |-------------------|-------------|

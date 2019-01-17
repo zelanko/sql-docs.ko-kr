@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], creating models
@@ -15,12 +14,12 @@ ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f21bdeceed35e7eb680d5dd1c2b74863e3a29dbb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f08318c5dbd42137b7c818e5bb4b0a3d1e34fae8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398793"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748835"
 ---
 # <a name="create-a-model-master-data-services"></a>모델 만들기(Master Data Services)
 
@@ -63,15 +62,15 @@ ms.locfileid: "52398793"
   
 -   **설명**: 모델 설명입니다.  
   
--   **로그 보존 기간(일)**: 모델에 대 해 로그를 보존할 기간(일)입니다.  
+-   **로그 보존 기간(일)**: 모델에 대해 로그를 보존할 기간(일)입니다.  
   
 -   **만든 사람**: 모델을 만든 사용자의 사용자 이름입니다.  
   
--   **만든 날짜 및 시간**: 모델을 만든 날짜와 시간입니다.  
+-   **만든 날짜 및 시간**: 모델이 만들어진 날짜 및 시간입니다.  
   
 -   **업데이트한 사람**: 모델을 마지막으로 업데이트한 사용자의 사용자 이름입니다.  
   
--   **업데이트한 날짜 및 시간**: 모델을 마지막으로 업데이트한 날짜와 시간입니다.  
+-   **업데이트한 날짜 및 시간**: 모델을 마지막으로 업데이트한 날짜 및 시간입니다.  
   
 ## <a name="next-steps"></a>Next Steps  
   

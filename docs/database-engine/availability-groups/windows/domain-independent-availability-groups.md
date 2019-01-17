@@ -1,6 +1,7 @@
 ---
-title: 도메인 독립 가용성 그룹(SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 도메인 독립 가용성 그룹 만들기
+description: 작업 그룹 클러스터를 사용하는 가용성 그룹을 만드는 단계입니다. 이렇게 하면 SQL Server 2016(이상)에서는 Active Directory Domain Services가 필요하지 않으므로 각 서버가 동일한 도메인의 속할 필요가 없는 WSFC 위의 Always On 가용성 그룹을 배포할 수 있습니다.
+ms.custom: seodec18
 ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0024663d9d16d191338abfa2604e6c969f0d58e5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c70aba3f6dc1648b70c9bc9a524052a7ba591793
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415080"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211912"
 ---
-# <a name="domain-independent-availability-groups"></a>도메인 독립 가용성 그룹
+# <a name="create-a-domain-independent-availability-group"></a>도메인 독립 가용성 그룹 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Always On AG(가용성 그룹)에는 기본 WSFC(Windows Server 장애 조치 클러스터)가 필요합니다. Windows Server 2012 R2를 통해 WSFC를 배포하는 경우 노드라고도 하는 WSFC에 참여하는 서버가 반드시 동일한 도메인에 가입되어야 합니다. AD DS(Active Directory Domain Services)에 대한 자세한 내용은 [여기](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx)를 참조하세요.

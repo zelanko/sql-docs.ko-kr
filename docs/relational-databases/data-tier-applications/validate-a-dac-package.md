@@ -16,20 +16,20 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29449a8caceb76e6f4b0e5229b05603de2d6a8f3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5e7e22f164ba8da071a93dff1535b777993e76e2
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518675"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590477"
 ---
 # <a name="validate-a-dac-package"></a>DAC 패키지 유효성 검사
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   DAC 패키지를 프로덕션 환경에 배포하기 전에 내용을 검토하고 기존 DAC를 업그레이드하기 전에 업그레이드 동작의 유효성을 검사하는 것이 좋습니다. 사용자의 조직에서 개발되지 않은 패키지를 배포하는 경우에는 더욱 그렇습니다.  
   
-1.  **시작하기 전에:**  [필수 구성 요소](#Prerequisites)  
+1.  **시작하기 전 주의 사항:**  [필수 구성 요소](#Prerequisites)  
   
-2.  **DAC를 업그레이드하려면**  [DAC 내용 보기](#ViewDACContents), [데이터베이스 변경 내용 보기](#ViewDBChanges), [업그레이드 동작 보기](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
+2.  **DAC를 업그레이드하려면 다음을 사용합니다.**  [DAC 내용 보기](#ViewDACContents), [데이터베이스 변경 내용 보기](#ViewDBChanges), [업그레이드 동작 보기](#ViewUpgradeActions), [DAC 비교](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> 사전 요구 사항  
  출처를 알 수 없거나 신뢰할 수 없는 DAC 패키지는 배포하지 않는 것이 좋습니다. 이러한 DAC에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마를 수정하여 오류가 발생할 수 있습니다. 출처를 알 수 없거나 신뢰할 수 없는 DAC를 사용하기 전에 격리된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 테스트 인스턴스에 이를 배포하고, 해당 데이터베이스에 대해 [DBCC CHECKDB&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)를 실행하며, 저장 프로시저 또는 다른 사용자 정의 코드 같은 데이터베이스의 코드도 검사하세요.  
@@ -45,7 +45,7 @@ ms.locfileid: "52518675"
   
 3.  **솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **속성...** 을 선택합니다.  
   
-4.  **프로젝트 설정** 탭의 **출력 유형** 섹션에서 **데이터 계층 응용 프로그램(.dacpac 파일)** 확인란을 선택한 다음 속성 대화 상자를 닫습니다.  
+4.  **프로젝트 설정** 탭의 **출력 유형** 섹션에서 **데이터 계층 애플리케이션(.dacpac 파일)** 확인란을 선택한 다음 속성 대화 상자를 닫습니다.  
   
 5.  **솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **데이터 계층 애플리케이션 가져오기...** 를 선택합니다.  
   
@@ -171,8 +171,8 @@ $fileStream.Close()
  또는 별도의 폴더에 DAC의 압축을 풉니다. 그런 다음 WinDiff 유틸리티와 같은 비교 도구를 사용하여 차이를 분석할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 계층 응용 프로그램](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [데이터 계층 응용 프로그램 배포](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
- [데이터 계층 응용 프로그램 업그레이드](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  
+ [데이터 계층 애플리케이션](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+ [데이터 계층 애플리케이션 배포](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
+ [데이터 계층 애플리케이션 업그레이드](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  
   
   

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment packages [Master Data Services], about deployment packages
@@ -15,12 +14,12 @@ ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: df83c7a4fd4e7a335a3ac51aa047ccc09429ced7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca46c6709614184c094bb7d8457f542b734d375d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636331"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783235"
 ---
 # <a name="deploying-models-master-data-services"></a>모델 배포(Master Data Services)
 
@@ -29,7 +28,7 @@ ms.locfileid: "47636331"
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 패키지는 배포 가능한 모델 구조와 모델의 데이터(옵션)를 포함하는 XML 파일입니다. 모델 패키지를 사용하여 MDS 환경 간에 모델의 복사본을 이동하거나 기존 MDS 환경에 새로운 모델을 만듭니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] **MDSModelDeploy 도구**는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 이상에서 만든 패키지와 이전 버전에서 호환됩니다.  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] **MDSModelDeploy 도구** 는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 이상에서 만든 패키지와 이전 버전에서 호환됩니다.  
   
 ## <a name="tools-for-deploying-models"></a>모델 배포 도구  
  모델 패키지를 사용하려면 필요에 따라 다음 세 도구 중 하나를 사용합니다.  

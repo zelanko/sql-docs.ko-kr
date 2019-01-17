@@ -19,23 +19,23 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a9a3359957c543c809003c4289207cd4b325ee0c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cfcb3a58ee61e7cd4404ec32799fbc265acdc8f6
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513231"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591357"
 ---
 # <a name="register-a-database-as-a-dac"></a>DAC로 데이터베이스 등록
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **데이터 계층 응용 프로그램 등록 마법사** 또는 Windows PowerShell 스크립트를 사용하여 기존 데이터베이스의 개체를 설명하는 DAC(데이터 계층 응용 프로그램)를 작성하고 이 DAC 정의를 **msdb** 시스템 데이터베이스(**의** master [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)])에 등록할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  **데이터 계층 애플리케이션 등록 마법사** 또는 Windows PowerShell 스크립트를 사용하여 기존 데이터베이스의 개체를 설명하는 DAC(데이터 계층 애플리케이션)를 작성하고 이 DAC 정의를 **msdb** 시스템 데이터베이스(**의** master [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)])에 등록할 수 있습니다.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions), [사용 권한](#Permissions)  
   
--   **DAC 업그레이드에 사용되는 도구:**  [데이터 계층 응용 프로그램 등록 마법사](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
+-   **DAC를 업그레이드하려면 다음을 사용합니다.**  [데이터 계층 애플리케이션 등록 마법사](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
- 등록 프로세스에서는 데이터베이스의 개체를 정의하는 DAC 정의를 만듭니다. DAC 정의와 데이터베이스의 결합으로 DAC 인스턴스가 형성됩니다. DAC를 데이터베이스 엔진의 관리되는 인스턴스에 DAC로 등록할 경우 등록된 DAC는 유틸리티 컬렉션 집합이 인스턴스에서 유틸리티 제어 지점으로 다음에 전송될 때 SQL Server 유틸리티에 통합됩니다. DAC에 있게 됩니다는 **배포 된 데이터 계층 응용 프로그램** 의 노드는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **유틸리티 탐색기** 에 보고 된 **배포 된 데이터 계층 응용 프로그램**세부 정보 페이지입니다.  
+ 등록 프로세스에서는 데이터베이스의 개체를 정의하는 DAC 정의를 만듭니다. DAC 정의와 데이터베이스의 결합으로 DAC 인스턴스가 형성됩니다. DAC를 데이터베이스 엔진의 인스턴스에 DAC로 등록할 경우 등록된 DAC는 유틸리티 컬렉션 집합이 인스턴스에서 유틸리티 제어 지점으로 다음에 전송될 때 SQL Server 유틸리티에 통합됩니다. DAC에 있게 됩니다는 **배포 된 데이터 계층 애플리케이션** 의 노드는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**유틸리티 탐색기** 에 보고 된 **배포 된 데이터 계층 애플리케이션**세부 정보 페이지입니다.  
   
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4(서비스 팩 4) 이상의 데이터베이스에서만 DAC 등록을 수행할 수 있습니다. DAC가 데이터베이스에 이미 등록된 경우에는 DAC 등록을 수행할 수 없습니다. 예를 들어 데이터베이스가 DAC를 배포하는 방식으로 만들어진 경우 **데이터 계층 애플리케이션 등록 마법사**를 실행할 수 없습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "52513231"
 ###  <a name="Permissions"></a> 권한  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 DAC를 등록하려면 하나 이상의 ALTER ANY LOGIN과 데이터베이스 범위 VIEW DEFINITION 권한, **sys.sql_expression_dependencies**에 대한 SELECT 권한 및 **dbcreator** 고정 서버 역할의 멤버 자격이 필요합니다. **sysadmin** 고정 서버 역할의 멤버 또는 기본 제공 SQL Server 시스템 관리자 계정인 **sa** 도 DAC를 등록할 수 있습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 로그인이 없는 DAC를 등록하려면 **dbmanager** 또는 **serveradmin** 역할의 멤버 자격이 필요합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 로그인이 있는 DAC를 등록하려면 **loginmanager** 또는 **serveradmin** 역할의 멤버 자격이 필요합니다.  
   
-##  <a name="UsingRegisterDACWizard"></a> 데이터 계층 응용 프로그램 등록 마법사 사용  
+##  <a name="UsingRegisterDACWizard"></a> 데이터 계층 애플리케이션 등록 마법사 사용  
  **마법사를 사용하여 DAC를 등록하려면**  
   
 1.  **개체 탐색기**에서 DAC로 등록할 데이터베이스가 포함된 인스턴스에 대한 노드를 확장합니다.  
@@ -73,12 +73,12 @@ ms.locfileid: "52513231"
   
  **취소** - DAC를 등록하지 않고 마법사를 종료합니다.  
   
- [데이터 계층 응용 프로그램 등록 마법사 사용](#UsingRegisterDACWizard)  
+ [데이터 계층 애플리케이션 등록 마법사 사용](#UsingRegisterDACWizard)  
   
 ##  <a name="Set_properties"></a> 속성 설정 페이지  
  이 페이지를 사용하여 애플리케이션 이름 및 버전과 같은 DAC 수준 속성을 지정할 수 있습니다.  
   
- **응용 프로그램 이름.** - DAC 정의를 식별하는 데 사용되는 이름을 지정하는 문자열입니다. 이 필드는 데이터베이스 이름으로 채워집니다.  
+ **애플리케이션 이름.** - DAC 정의를 식별하는 데 사용되는 이름을 지정하는 문자열입니다. 이 필드는 데이터베이스 이름으로 채워집니다.  
   
  **버전.** - DAC의 버전을 식별하는 숫자 값입니다. DAC 버전은 Visual Studio에서 개발자가 작업 중인 DAC의 버전을 식별하는 데 사용됩니다. DAC를 배포하는 경우 이 버전은 **msdb** 데이터베이스에 저장되고 나중에 **의** 데이터 계층 애플리케이션 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]노드에서 볼 수 있습니다.  
   
@@ -90,12 +90,12 @@ ms.locfileid: "52513231"
   
  **취소** - DAC를 등록하지 않고 마법사를 종료합니다.  
   
- [데이터 계층 응용 프로그램 등록 마법사 사용](#UsingRegisterDACWizard)  
+ [데이터 계층 애플리케이션 등록 마법사 사용](#UsingRegisterDACWizard)  
   
 ##  <a name="Summary"></a> 유효성 검사 및 요약 페이지  
  이 페이지를 사용하여 DAC를 등록할 때 마법사가 수행할 동작을 검토할 수 있습니다. 이 페이지는 데이터베이스의 개체로 DAC를 작성할 수 있는지 확인할 때 세 가지 상태로 전환됩니다.  
   
- [데이터 계층 응용 프로그램 등록 마법사 사용](#UsingRegisterDACWizard)  
+ [데이터 계층 애플리케이션 등록 마법사 사용](#UsingRegisterDACWizard)  
   
 ### <a name="retrieving-objects"></a>개체 검색  
  **데이터베이스 및 서버 개체 검색** - 마법사가 데이터베이스의 모든 필요한 개체 및 데이터베이스 엔진의 인스턴스를 검색할 때 진행률 표시줄을 표시합니다.  
@@ -106,10 +106,10 @@ ms.locfileid: "52513231"
   
  **취소** - DAC를 등록하지 않고 마법사를 종료합니다.  
   
- [데이터 계층 응용 프로그램 등록 마법사 사용](#UsingRegisterDACWizard)  
+ [데이터 계층 애플리케이션 등록 마법사 사용](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>개체 유효성 확인  
- **.**  *.* **를 실행할 수 없습니다.** *ObjectName* **를 실행할 수 없습니다.** - 마법사가 검색된 개체의 종속성을 확인하고 모두 DAC에 유효한 개체인지 확인할 때 진행률 표시줄을 표시합니다. _SchemaName_**.**_ObjectName_ 은 현재 확인 중인 개체가 무엇인지 식별합니다.  
+ **Checking**  _SchemaName_ **.** _ObjectName_ **.** - 마법사가 검색된 개체의 종속성을 확인하고 모두 DAC에 유효한 개체인지 확인할 때 진행률 표시줄을 표시합니다. _SchemaName_**.**_ObjectName_ 은 현재 확인 중인 개체가 무엇인지 식별합니다.  
   
  **< 이전** - 입력한 값을 변경하기 위해 **속성 설정** 페이지로 돌아갑니다.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "52513231"
   
  **취소** - DAC를 등록하지 않고 마법사를 종료합니다.  
   
- [데이터 계층 응용 프로그램 등록 마법사 사용](#UsingRegisterDACWizard)  
+ [데이터 계층 애플리케이션 등록 마법사 사용](#UsingRegisterDACWizard)  
   
 ### <a name="summary"></a>요약  
  **다음 설정이 DAC를 등록하는 데 사용됩니다.** - DAC에 포함될 속성 및 개체에 대한 보고서를 표시합니다.  
@@ -130,7 +130,7 @@ ms.locfileid: "52513231"
   
  **취소** - DAC를 등록하지 않고 마법사를 종료합니다.  
   
- [데이터 계층 응용 프로그램 등록 마법사 사용](#UsingRegisterDACWizard)  
+ [데이터 계층 애플리케이션 등록 마법사 사용](#UsingRegisterDACWizard)  
   
 ##  <a name="Register"></a> DAC 등록 페이지  
  이 페이지에서는 등록의 성공 또는 실패를 보고합니다.  
@@ -141,7 +141,7 @@ ms.locfileid: "52513231"
   
  **마침** - 마법사를 종료합니다.  
   
- [데이터 계층 응용 프로그램 등록 마법사 사용](#UsingRegisterDACWizard)  
+ [데이터 계층 애플리케이션 등록 마법사 사용](#UsingRegisterDACWizard)  
   
 ##  <a name="RegisterDACPowerShell"></a> PowerShell을 사용하여 DAC 등록  
  **PowerShell 스크립트에서 Register() 메서드를 사용하여 데이터베이스를 DAC로 등록하려면**  
@@ -177,6 +177,6 @@ $registerunit.Register()
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 계층 응용 프로그램](../../relational-databases/data-tier-applications/data-tier-applications.md)  
+ [데이터 계층 애플리케이션](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   

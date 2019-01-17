@@ -1,6 +1,7 @@
 ---
-title: 가용성 그룹에 보조 복제본 추가(SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹에 보조 복제본 추가
+description: T-SQL(Transact-SQL), PowerShell 또는 SSMS(SQL Server Management Studio)의 가용성 그룹 마법사를 사용하여 Always On 가용성 그룹에 보조 복제본을 추가하는 방법을 알아봅니다.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,35 +14,17 @@ ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 834e84ea62e9cfa7b6398d67e2b59ba011d21979
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ffebb3bc39d15f52aeda8e2deed54c49e011df4e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512328"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213012"
 ---
-# <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>가용성 그룹에 보조 복제본 추가(SQL Server)
+# <a name="add-a-secondary-replica-to-an-always-on-availability-group"></a>Always On 가용성 그룹에 보조 복제본 추가
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]또는 PowerShell을 사용하여 기존 Always On 가용성 그룹에 보조 복제본을 추가하는 방법에 대해 설명합니다.  
-  
--   **시작하기 전 주의 사항:**  
-  
-     [사전 요구 사항 및 제한 사항](#PrerequisitesRestrictions)  
-  
-     [보안](#Security)  
-  
--   **복제본을 추가하려면:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **후속 작업:**  [복제본을 추가한 후](#FollowUp)  
-  
-## <a name="before-you-begin"></a>시작하기 전 주의 사항  
- 가용성 그룹을 처음 만들어 보는 경우 이 섹션을 먼저 읽는 것이 좋습니다.  
+
   
 ##  <a name="PrerequisitesRestrictions"></a> 사전 요구 사항 및 제한 사항  
   
@@ -122,7 +105,7 @@ ms.locfileid: "52512328"
   
 -   [SQL Server PowerShell 공급자](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 후속 작업: 보조 복제본을 추가한 후  
+##  <a name="FollowUp"></a> 후속 작업: 복제본을 추가한 후  
  기존 가용성 그룹에 대한 복제본을 추가하려면 다음 단계를 수행해야 합니다.  
   
 1.  새 보조 복제본을 호스팅할 서버 인스턴스에 연결합니다.  

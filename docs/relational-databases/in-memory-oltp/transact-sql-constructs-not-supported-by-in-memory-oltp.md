@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8023d29ccdf04ff46b995e1f698bb54a905df5d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5023d29379ab254e85c38e0b9e0b6ae3c8772133
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503622"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590767"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,8 +68,8 @@ ms.locfileid: "52503622"
 |연산|기본 키 열의 업데이트|메모리 최적화 테이블의 기본 키 열과 테이블 형식을 업데이트할 수 없습니다. 기본 키를 업데이트해야 하는 경우 기존 열을 삭제하고 업데이트된 기본 키가 있는 새 열을 삽입합니다.|  
 |연산|CREATE  INDEX|**CREATE TABLE** 문 또는 **ALTER TABLE** 문을 사용하여 메모리 최적화 테이블의 인덱스를 인라인으로 지정해야 합니다.|  
 |연산|CREATE FULLTEXT INDEX|전체 텍스트 인덱스는 메모리 최적화 테이블에서 지원되지 않습니다.|  
-|연산|스키마 변경|메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저는 특정 스키마 변경을 지원하지 않습니다.<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 및 SQL Server [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 이상: ALTER TABLE, ALTER PROCEDURE 및 sp_rename 작업이 지원됩니다. 예를 들어 확장된 속성 추가와 같은 다른 스키마 변경은 지원되지 않습니다.<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]: ALTER TABLE 및 ALTER PROCEDURE 작업은 지원됩니다. sp_rename을 포함한 다른 스키마 변경은 지원되지 않습니다.<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]: 스키마 변경은 지원되지 않습니다. 메모리 최적화 테이블 또는 고유하게 컴파일된 저장 프로시저의 정의를 변경하려면 먼저 개체를 삭제한 후 원하는 정의로 다시 만듭니다.| 
-|연산|TRUNCATE TABLE|TRUNCATE 작업은 메모리 최적화 테이블에서 지원되지 않습니다. 테이블에서 모든 행을 제거하려면 **DELETE FROM***table*을 사용하여 모든 행을 삭제하거나 테이블을 삭제하고 다시 만듭니다.|  
+|연산|스키마 변경|메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저는 특정 스키마 변경을 지원하지 않습니다.<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 및 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]를 시작하는 SQL Server: ALTER TABLE, ALTER PROCEDURE 및 sp_rename 작업이 지원됩니다. 예를 들어 확장된 속성 추가와 같은 다른 스키마 변경은 지원되지 않습니다.<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]: ALTER TABLE 및 ALTER PROCEDURE 작업은 지원됩니다. sp_rename을 포함한 다른 스키마 변경은 지원되지 않습니다.<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]: 스키마 변경은 지원되지 않습니다. 메모리 최적화 테이블 또는 고유하게 컴파일된 저장 프로시저의 정의를 변경하려면 먼저 개체를 삭제한 후 원하는 정의로 다시 만듭니다.| 
+|연산|TRUNCATE TABLE|TRUNCATE 작업은 메모리 최적화 테이블에서 지원되지 않습니다. 테이블에서 모든 행을 제거하려면 **DELETE FROM**_table_ 을 사용하여 모든 행을 삭제하거나 테이블을 삭제하고 다시 만듭니다.|  
 |연산|ALTER AUTHORIZATION|메모리 최적화 테이블이나 고유하게 컴파일된 저장 프로시저의 소유자 변경은 지원되지 않습니다. 테이블이나 프로시저를 삭제하고 다시 만들어 소유권을 변경합니다.|  
 |연산|ALTER SCHEMA|기존 테이블 또는 고유하게 컴파일된 저장 프로시저를 다른 스키마로 전환하는 것은 지원되지 않습니다. 스키마 간에 전환하려면 개체를 삭제하고 다시 만듭니다.|  
 |연산|DBCC CHECKTABLE|DBCC CHECKTABLE은 메모리 최적화 테이블에서 지원되지 않습니다. 디스크에서 검사점 파일의 무결성을 확인하려면 MEMORY_OPTIMIZED_DATA 파일 그룹의 백업을 수행합니다.|  
@@ -104,11 +104,11 @@ ms.locfileid: "52503622"
 |기능|커서|커서는 고유하게 컴파일된 저장 프로시저 위나 안에서 지원되지 않습니다.<br /><br /> 클라이언트에서 프로시저를 실행할 때는 커서 API 대신 RPC를 사용합니다. ODBC가 있는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] 인수를 제거합니다. **EXECUTE**를 사용하지 말고 그 대신 프로시저 이름을 직접 지정합니다.<br /><br /> [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 또는 다른 저장 프로시저에서 프로시저를 실행할 때는 고유하게 컴파일된 저장 프로시저와 함께 커서를 사용하지 마십시오.<br /><br /> 고유하게 컴파일된 저장 프로시저를 만들 때는 커서를 사용하는 대신 집합 기반 논리 또는 **WHILE** 루프를 사용합니다.|  
 |기능|비 상수 매개 변수 기본값|고유하게 컴파일된 저장 프로시저에서 매개 변수와 함께 기본값을 사용할 때는 값이 상수여야 합니다. 매개 변수 선언에서 와일드카드를 제거 합니다.|  
 |기능|EXTERNAL|CLR 저장 프로시저는 고유하게 컴파일될 수 없습니다. CREATE PROCEDURE 문에서 AS EXTERNAL 절이나 NATIVE_COMPILATION 옵션을 제거합니다.|  
-|기능|번호가 매겨진 저장 프로시저|고유하게 컴파일된 저장 프로시저에 번호를 매길 수 없습니다. **CREATE PROCEDURE** 문에서 **;***number*를 제거합니다.|  
+|기능|번호가 매겨진 저장 프로시저|고유하게 컴파일된 저장 프로시저에 번호를 매길 수 없습니다. **CREATE PROCEDURE**_문에서_ ; **number** 를 제거합니다.|  
 |기능|다중 행 INSERT... VALUES 문|고유하게 컴파일된 저장 프로시저에서 동일한 **INSERT** 문을 사용하여 여러 행을 삽입할 수 없습니다. 각 행에 대해 **INSERT** 문을 만듭니다.|  
 |기능|CTE(공통 테이블 식)|CTE(공통 테이블 식)은 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다. 쿼리를 다시 작성합니다.|  
 |기능|COMPUTE|**COMPUTE** 절은 지원되지 않습니다. 쿼리에서 이 절을 제거합니다.|  
-|기능|SELECT INTO|**INTO** 절은 **SELECT** 문에 지원되지 않습니다. **INSERT INTO** *Table* **SELECT**로 쿼리를 다시 작성합니다.|  
+|기능|SELECT INTO|**INTO** 절은 **SELECT** 문에 지원되지 않습니다. **INSERT INTO** _Table_ **SELECT**로 쿼리를 다시 작성합니다.|  
 |기능|불완전한 삽입 열 목록|일반적으로, INSERT 문에서는 테이블에 잇는 모든 열에 대해 값을 지정해야 합니다.<br /><br /> 그러나 메모리 최적화된 테이블에서는 기본 제약 조건 및 IDENTITY(1,1) 열이 지원됩니다. 이러한 열이 될 수 있고 IDENTITY 열이 반드시 있어야 하는 경우 INSERT 열 목록에서 생략합니다.|  
 |기능|*함수*|일부 기본 함수는 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다. 저장 프로시저에서 거부된 함수를 제거합니다. 지원되는 기본 제공 함수에 대한 자세한 내용은<br />[고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)또는<br />[고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)를 참조하세요.|  
 |기능|CASE|**적용 대상:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] 및 SQL Server [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)] 이상<br/>**CASE** 식은 고유하게 컴파일된 저장 프로시저 내의 쿼리에서 지원되지 않습니다. 각 사례에 대해 쿼리를 만듭니다. 자세한 내용은 [고유하게 컴파일된 저장 프로시저에서 CASE 식 구현](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)을 참조하세요.<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 및 SQL Server [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 이상에서는 CASE 식이 지원되지 않습니다.|  

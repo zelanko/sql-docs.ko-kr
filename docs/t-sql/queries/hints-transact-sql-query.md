@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42247b11f00524ba08dd74f41f11da35fdcb2026
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2a4eb946a9b851342b1f997f2b491b0b0708138c
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530350"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306280"
 ---
 # <a name="hints-transact-sql---query"></a>힌트(Transact-SQL) - 쿼리
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -153,7 +153,7 @@ ms.locfileid: "52530350"
   
  이 쿼리 힌트는 쿼리 계획에서 인덱싱된 뷰와 인덱싱된 뷰의 인덱스를 직접 사용하도록 허용하지 않습니다.  
   
- 인덱싱된 뷰는 쿼리의 SELECT 부분에서 뷰를 직접 참조하고 WITH (NOEXPAND) 또는 WITH (NOEXPAND, INDEX( *index_value* [ **,**_...n_ ] ) )가 지정된 경우에만 확장되지 않습니다. 쿼리 힌트 WITH (NOEXPAND)에 대한 자세한 내용은 [FROM](../../t-sql/queries/from-transact-sql.md)을 참조하세요.  
+ 인덱싱된 뷰는 쿼리의 SELECT 부분에서 뷰를 직접 참조하고 WITH (NOEXPAND) 또는 WITH (NOEXPAND, INDEX( *index_value* [ **,**_...n_ ] ) )가 지정된 경우에만 확장되지 않습니다. 쿼리 힌트 NOEXPAND에 대한 자세한 내용은 [NOEXPAND 사용](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand)을 참조하세요.  
   
  INSERT, UPDATE, MERGE 및 DELETE 문을 비롯한 문의 SELECT 부분에 있는 뷰만 힌트의 영향을 받습니다.  
   
@@ -296,7 +296,7 @@ ms.locfileid: "52530350"
   > query_post_execution_showplan 확장 이벤트 수집을 사용하도록 설정하는 경우 서버에서 실행되는 모든 쿼리에 표준 프로파일링 인프라가 추가되므로 전체 서버 성능에 영향을 미칠 수 있습니다.      
   > 대신 *query_thread_profile* 확장 이벤트의 컬렉션을 사용하도록 설정하여 간단한 프로파일링 인프라를 사용하는 경우 성능 오버헤드가 훨씬 감소하지만 전체 서버 성능에는 여전히 영향을 미칩니다.       
   > query_plan_profile 확장 이벤트를 사용하도록 설정하는 경우 QUERY_PLAN_PROFILE로 실행된 쿼리의 간단한 프로파일링 인프라만 사용하므로 서버의 다른 워크로드에는 영향을 미치지 않습니다. 이 힌트를 사용하여 서버 워크로드의 다른 부분에 영향을 미치지 않고 특정 쿼리를 프로파일링하세요.
-  > 간단한 프로파일링에 대한 자세한 내용은 [D개발자 선택 사항: 쿼리 진행률 - 시간, 장소에 제한 없음](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)을 참조하세요.
+  > 간단한 프로파일링에 대한 자세한 내용은 [쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조하세요.
  
 지원되는 모든 USE HINT 이름 목록은 동적 관리 뷰 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)를 사용하여 쿼리할 수 있습니다.    
 
@@ -398,7 +398,7 @@ GO
   
  코딩 오류를 교정한 다음에는 더 이상 MAXRECURSION이 필요하지 않습니다.  
   
-### <a name="d-using-merge-union"></a>4. MERGE UNION 사용  
+### <a name="d-using-merge-union"></a>D. MERGE UNION 사용  
  다음 예에서는 MERGE UNION 쿼리 힌트를 사용합니다. 이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용합니다.  
   
 ```sql  
@@ -411,7 +411,7 @@ OPTION (MERGE UNION);
 GO  
 ```  
   
-### <a name="e-using-hash-group-and-fast"></a>5. HASH GROUP 및 FAST 사용  
+### <a name="e-using-hash-group-and-fast"></a>E. HASH GROUP 및 FAST 사용  
  다음 예에서는 HASH GROUP 및 FAST 쿼리 힌트를 사용합니다. 이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용합니다.  
   
 ```sql  
@@ -424,7 +424,7 @@ OPTION (HASH GROUP, FAST 10);
 GO    
 ```  
   
-### <a name="f-using-maxdop"></a>6. MAXDOP 사용  
+### <a name="f-using-maxdop"></a>F. MAXDOP 사용  
  다음 예에서는 MAXDOP 쿼리 힌트를 사용합니다. 이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용합니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
@@ -439,7 +439,7 @@ OPTION (MAXDOP 2);
 GO
 ```  
   
-### <a name="g-using-index"></a>7. INDEX 사용  
+### <a name="g-using-index"></a>G. INDEX 사용  
  다음 예에서는 INDEX 힌트를 사용합니다. 첫 번째 예에서는 단일 인덱스를 지정하고, 두 번째 예에서는 단일 테이블 참조에 대해 여러 인덱스를 지정합니다. 두 예에서 INDEX 힌트는 별칭을 사용하는 테이블에 적용되므로 TABLE HINT 절에서도 표시된 개체 이름과 동일한 별칭을 지정해야 합니다. 이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용합니다.  
   
 ```sql  
@@ -467,7 +467,7 @@ EXEC sp_create_plan_guide
 GO    
 ```  
   
-### <a name="h-using-forceseek"></a>8. FORCESEEK 사용  
+### <a name="h-using-forceseek"></a>H. FORCESEEK 사용  
  다음 예에서는 FORCESEEK 테이블 힌트를 사용합니다. 이 예에서 INDEX 힌트는 두 부분으로 된 이름을 사용하는 테이블에 적용되므로 TABLE HINT 절에서도 표시된 개체 이름과 동일한 두 부분으로 된 이름을 지정해야 합니다. 이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용합니다.  
   
 ```sql  
@@ -503,7 +503,7 @@ EXEC sp_create_plan_guide
 GO  
 ```  
   
-### <a name="j-using-table-hint-to-override-an-existing-table-hint"></a>10. TABLE HINT를 사용하여 기존 테이블 힌트 다시 정의  
+### <a name="j-using-table-hint-to-override-an-existing-table-hint"></a>J. TABLE HINT를 사용하여 기존 테이블 힌트 다시 정의  
  다음 예에서는 힌트를 지정하지 않고 TABLE HINT 힌트를 사용하여 쿼리의 FROM 절에 지정된 INDEX 테이블의 동작을 다시 정의하는 방법을 보여 줍니다. 이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용합니다.  
   
 ```sql  

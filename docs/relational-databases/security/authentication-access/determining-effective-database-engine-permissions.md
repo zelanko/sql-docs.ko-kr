@@ -15,19 +15,19 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d4a037898aaa022b7db5d6bf55f4a6dfb08988c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5ef89fc257782f7977efbee371a40e188893bc7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734611"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53216062"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>효과적인 데이터베이스 엔진 사용 권한 결정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 이 문서에서는 SQL Server 데이터베이스 엔진의 다양한 개체에 대한 사용 권한이 있는 사용자를 결정하는 방법을 설명합니다. SQL Server는 데이터베이스 엔진에 대한 두 개의 사용 권한 시스템을 구현합니다. 고정된 역할의 이전 시스템은 사용 권한이 미리 구성되었습니다. SQL Server 2005부터 보다 유연하고 정확한 시스템을 사용할 수 있습니다. (이 문서의 정보는 SQL Server 2005부터 적용됩니다. SQL Server의 일부 버전에서는 일부 사용 권한 유형을 사용할 수 없습니다.)
 
->  [!IMPORTANT] 
+> [!IMPORTANT]
 >  * 유효 사용 권한은 두 권한 시스템을 집계한 것입니다. 
 >  * 사용 권한 거부는 권한 부여를 재정의합니다. 
 >  * 사용자가 sysadmin 고정 서버 역할의 멤버인 경우 사용 권한이 더 이상 확인되지 않으므로 거부도 적용되지 않습니다. 
@@ -51,24 +51,24 @@ ms.locfileid: "47734611"
 ## <a name="older-fixed-role-permission-system"></a>이전 고정 역할 사용 권한 시스템
 
 고정 서버 역할과 고정 데이터베이스 역할에는 변경할 수 없는 미리 구성된 사용 권한이 있습니다. 고정 서버 역할의 멤버를 확인하려면 다음 쿼리를 실행합니다.    
->  [!NOTE] 
+> [!NOTE]
 >  서버 수준 사용 권한을 사용할 수 없는 SQL Database 또는 SQL Data Warehouse에는 적용되지 않습니다. `sys.server_principals`의 `is_fixed_role` 열이 SQL Server 2012에 추가되었습니다. 이전 버전의 SQL Server에는 필요하지 않습니다.  
-```sql
-SELECT SP1.name AS ServerRoleName, 
- isnull (SP2.name, 'No members') AS LoginName   
- FROM sys.server_role_members AS SRM
- RIGHT OUTER JOIN sys.server_principals AS SP1
-   ON SRM.role_principal_id = SP1.principal_id
- LEFT OUTER JOIN sys.server_principals AS SP2
-   ON SRM.member_principal_id = SP2.principal_id
- WHERE SP1.is_fixed_role = 1 -- Remove for SQL Server 2008
- ORDER BY SP1.name;
+> ```sql
+> SELECT SP1.name AS ServerRoleName, 
+>  isnull (SP2.name, 'No members') AS LoginName   
+>  FROM sys.server_role_members AS SRM
+>  RIGHT OUTER JOIN sys.server_principals AS SP1
+>    ON SRM.role_principal_id = SP1.principal_id
+>  LEFT OUTER JOIN sys.server_principals AS SP2
+>    ON SRM.member_principal_id = SP2.principal_id
+>  WHERE SP1.is_fixed_role = 1 -- Remove for SQL Server 2008
+>  ORDER BY SP1.name;
 ```
->  [!NOTE] 
->  * 모든 로그인은 public 역할의 멤버이며 제거할 수 없습니다. 
->  * 이 쿼리는 master 데이터베이스의 테이블을 확인하지만 온-프레미스 제품의 모든 데이터베이스에서 실행할 수 있습니다. 
+> [!NOTE]
+>  * All logins are members of the public role and cannot be removed. 
+>  * This query checks tables in the master database but it can be executed in any database for the on premises product. 
 
-고정 데이터베이스 역할의 멤버를 확인하려면 각 데이터베이스에서 다음 쿼리를 실행합니다.
+To determine who is a member of a fixed database role, execute the following query in each database.
 ```sql
 SELECT DP1.name AS DatabaseRoleName, 
    isnull (DP2.name, 'No members') AS DatabaseUserName 
@@ -106,22 +106,22 @@ Windows 사용자(예: 엔지니어 및 관리자)는 둘 이상의 Windows 그�
 ### <a name="server-permissions"></a>서버 권한
 
 다음 쿼리는 서버 수준에서 부여되거나 거부된 사용 권한 목록을 반환합니다. 이 쿼리는 master 데이터베이스에서 실행해야 합니다.   
->  [!NOTE] 
+> [!NOTE]
 >  서버 수준 사용 권한은 SQL Database 또는 SQL Data Warehouse에서 부여하거나 쿼리할 수 없습니다.   
-```sql
-SELECT pr.type_desc, pr.name, 
- isnull (pe.state_desc, 'No permission statements') AS state_desc, 
- isnull (pe.permission_name, 'No permission statements') AS permission_name 
- FROM sys.server_principals AS pr
- LEFT OUTER JOIN sys.server_permissions AS pe
-   ON pr.principal_id = pe.grantee_principal_id
- WHERE is_fixed_role = 0 -- Remove for SQL Server 2008
- ORDER BY pr.name, type_desc;
+> ```sql
+> SELECT pr.type_desc, pr.name, 
+>  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
+>  isnull (pe.permission_name, 'No permission statements') AS permission_name 
+>  FROM sys.server_principals AS pr
+>  LEFT OUTER JOIN sys.server_permissions AS pe
+>    ON pr.principal_id = pe.grantee_principal_id
+>  WHERE is_fixed_role = 0 -- Remove for SQL Server 2008
+>  ORDER BY pr.name, type_desc;
 ```
 
-### <a name="database-permissions"></a>데이터베이스 권한
+### Database Permissions
 
-다음 쿼리는 데이터베이스 수준에서 부여되거나 거부된 권한 목록을 반환합니다. 이 쿼리는 각 데이터베이스에서 실행해야 합니다.   
+The following query returns a list of the permissions that have been granted or denied at the database level. This query should be executed in each database.   
 ```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
@@ -156,6 +156,6 @@ REVERT;
 
 ## <a name="see-also"></a>참고 항목:
 
-[데이터베이스 엔진 사용 권한 시작](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
+[데이터베이스 엔진 권한 시작](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
 [자습서: 데이터베이스 엔진 시작](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 
 

@@ -18,12 +18,12 @@ ms.assetid: 9bf87691-efd8-4c53-bd2f-eefe0acd19ca
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e0479fc0d6af9a3bcfe66261713ad7115b61f985
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e5021b710d780c5f6f35221099f41fc993c492c
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841771"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979759"
 ---
 # <a name="stunion-geography-data-type"></a>STUnion(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ SELECT @g.STUnion(@h).ToString();
  SELECT @g.STUnion(@h).ToString();
  ```  
   
-### <a name="c-producing-a-triagonal-hole-from-a-union-of-a-curvepolygon-and-a-traigonal-hole"></a>3. CurvePolygon과 삼각 구멍을 합하여 삼각 구멍 생성  
+### <a name="c-producing-a-triagonal-hole-from-a-union-of-a-curvepolygon-and-a-triagonal-hole"></a>3. CurvePolygon과 삼각 구멍을 결합하여 삼각 구멍을 생성합니다.  
  다음 예에서는 `CurvePolygon`을 `Polygon` 인스턴스와 합하여 삼각 구멍을 만듭니다.  
   
 ```

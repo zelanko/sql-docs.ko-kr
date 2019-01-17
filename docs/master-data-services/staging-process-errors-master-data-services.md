@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], error messages
@@ -14,12 +13,12 @@ ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a47b9b13c5de6368b14b6767ea71d8e888da4c72
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6583bab946104e08e102c422373aa94ff2ee752b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395397"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766135"
 ---
 # <a name="staging-process-errors-master-data-services"></a>준비 프로세스 오류(Master Data Services)
 
@@ -38,7 +37,7 @@ ms.locfileid: "52395397"
 |210041|"ROOT"는 올바른 멤버 코드가 아닙니다.|**MemberCode** 값에 "ROOT"라는 단어가 포함되어 있습니다.|리프<br /><br /> 통합<br /><br /> 관계|  
 |210042|"MDMUNUSED"는 올바른 멤버 코드가 아닙니다.|**MemberCode** 값에 "MDMUNUSED"라는 단어가 포함되어 있습니다.|리프<br /><br /> 통합<br /><br /> 관계|  
 |210052|MemberCode는 도메인 기반 특성 값으로 사용되기 때문에 비활성화할 수 없습니다.|**ImportType** = **3** 또는 **4**일 때 멤버가 다른 멤버의 특성 값으로 사용되는 경우 준비할 수 없습니다. **ImportType5** 또는 **6** 을 사용하여 값을 NULL로 설정하거나 준비 프로세스를 실행하기 전에 값을 변경합니다.|리프<br /><br /> 통합|  
-|300002|멤버 코드가 잘못되었습니다.|관계: 부모 또는 자식 멤버 코드가 존재하지 않습니다.<br /><br /> 리프 또는 통합: **ImportType** = **3** 또는 **4** 이며, 멤버 코드가 존재하지 않습니다.|리프<br /><br /> 통합<br /><br /> 관계|  
+|300002|멤버 코드가 잘못되었습니다.|관계: 부모 또는 자식 멤버 코드가 존재하지 않습니다.<br /><br /> 리프 또는 통합: **ImportType** = **3** 또는 **4**이며 멤버 코드가 존재하지 않습니다.|리프<br /><br /> 통합<br /><br /> 관계|  
 |300004|멤버 코드가 이미 있습니다.|**ImportType** = **1** 이며, 이미 엔터티에 존재하는 멤버 코드를 사용했습니다.|리프<br /><br /> 통합|  
 |210011|**RelationshipType** 이 **1**인 경우 **ParentCode** 는 리프 멤버일 수 없습니다.|**ParentCode** 값이 통합 멤버 코드인지 확인합니다.|관계|  
 |210015|멤버 코드가 계층 및 배치에 대한 준비 테이블에 여러 번 나옵니다.|명시적 계층의 경우 동일한 배치에서 동일한 멤버의 위치를 여러 번 지정했습니다.|관계|  

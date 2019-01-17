@@ -5,19 +5,18 @@ documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
 ms.technology: integration-services
-ms.devlang: NA
 ms.topic: conceptual
 ms.custom: loading
 ms.date: 08/20/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 1b25f4ecde0a80aef19e94b2d1f1b572529bcfd6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e4d5dbd9f7b419437481acb3306fc88a237fcc5d
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412690"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732070"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 사용하여 SQL Server 또는 Azure SQL Database에 데이터 로드
 
@@ -174,9 +173,9 @@ Visual Studio가 열리고 새 Integration Services(SSIS) 프로젝트를 만듭
 
 ## <a name="next-steps"></a>다음 단계
 
-- 디자인 환경에서 패키지 권한을 디버그하고 문제를 해결하는 방법을 알아봅니다. 여기에서 시작: [패키지 배포 문제 해결 도구][Troubleshooting Tools for Package Development]
+- 디자인 환경에서 패키지 권한을 디버그하고 문제를 해결하는 방법을 알아봅니다. 여기에서 시작하세요. [패키지 배포 문제 해결 도구][Troubleshooting Tools for Package Development].
 
-- SSIS 프로젝트 및 패키지를 Integration Services 서버 또는 다른 저장 위치에 배포하는 방법을 알아봅니다. 여기에서 시작: [프로젝트 및 패키지 배포][Deployment of Projects and Packages]
+- SSIS 프로젝트 및 패키지를 Integration Services 서버 또는 다른 저장 위치에 배포하는 방법을 알아봅니다. 여기에서 시작하세요. [프로젝트 및 패키지 배포][Deployment of Projects and Packages].
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-database-with-ssis/ssis-designer-01.png

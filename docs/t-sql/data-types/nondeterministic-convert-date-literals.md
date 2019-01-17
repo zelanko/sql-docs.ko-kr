@@ -13,12 +13,12 @@ ms.author: mikeray
 ms.reviewer: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7412b6ee9ad3b551fb91200c7d3f45f3287f6780
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 4ca2837780145af3c7f4428c446215ed3510bc50
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52255659"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783365"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>날짜 값으로 리터럴 날짜 문자열의 비결정적 변환
 
@@ -28,7 +28,7 @@ ms.locfileid: "52255659"
 
 
 
-## <a name="set-language-example-month-name-in-polish"></a>언어 설정 예제: 폴란드어에서 월 이름
+## <a name="set-language-example-month-name-in-polish"></a>SET LANGUAGE 예: 폴란드어로 Month 이름
 
 - `SET LANGUAGE Polish;`
 
@@ -75,7 +75,7 @@ SL_Croatian
 
 **ymd**가 지정된 경우 출력 값은 보장되지 않습니다. '2018'의 숫자 값은 너무 커서 날이 될 수 없습니다.
 <!--
-The preceding claim of "no guarantee" might be incorrect, in the minds of the SQL query engine Developer team??
+The preceding claim of "no guarantee" might be incorrect, in the minds of the SQL query engine Developer team?
 -->
 
 #### <a name="specific-countries"></a>특정 국가
@@ -125,7 +125,7 @@ YMD-Interpretation--?--NotGuaranteed
 CAST 및 CONVERT 설명서 문서는 날짜 변환을 _결정적으로_ 제어하는 데 CONVERT 함수와 함께 사용할 수 있는 명시적 코드를 나열합니다. 해당 문서는 매달 가장 높은 페이지뷰 중 하나를 차지합니다.
 
 - [CAST 및 CONVERT(Transact-SQL): 날짜 및 시간 스타일](../functions/cast-and-convert-transact-sql.md#date-and-time-styles)
-- [CAST 및 CONVERT(Transact-SQL): 일부 날짜/시간 변환은 비결정적임](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)
+- [CAST 및 CONVERT(Transact-SQL): 일부 datetime 변환은 비결정적임](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)
 
 
 
@@ -137,7 +137,7 @@ SQL Server 2005 및 90의 호환성 수준부터 암시적 데이터 변환은 �
 
 #### <a name="unicode"></a>유니코드
 
-<!-- The next live sentence needs an explanatory example!  N'??'.
+<!-- The next live sentence needs an explanatory example!  N'somethingHere?'.
 -->
 데이터 정렬 간의 비유니코드 문자 데이터를 변환하는 작업도 비결정적인 것으로 간주됩니다.
 

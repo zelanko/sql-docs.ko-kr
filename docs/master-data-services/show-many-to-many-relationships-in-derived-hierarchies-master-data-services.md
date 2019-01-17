@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d05fc6068b221bfd21ffdfd0e6f8fff850bab179
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6da7d5b12dcd8e998a32403bc9f98ae3ceee121b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755571"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52797135"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>파생 계층에서 다 대 다 관계 표시(Master Data Services)
 
@@ -44,7 +43,7 @@ ms.locfileid: "47755571"
   
  위의 스크린 샷에서는 **Employee** 엔터티가 가운데 **현재 수준** 아래 유일한 수준으로 나타납니다. 오른쪽에 있는 파생 계층 **미리 보기** 는 **Employee** 엔터티의 모든 구성원 목록을 보여 줍니다. 왼쪽에 있는 **사용 가능한 수준** 섹션은 현재 최상위 수준(**Employee**)의 맨 위에 어떤 수준을 추가할 수 있는지 보여 줍니다. 이들 중 대부분은 **Department** DBA를 포함하여 **Employee** 엔터티에서 DBA(도메인 기반 특성)입니다.  
   
- [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]부터는 M2M 관계를 모델링하는 새로운 유형의 수준이 있습니다(예: **Class(ClassRegistration.Student를 통해 매핑됨)**). 수준 이름은 매핑 관계를 명확하게 설명하는 데 필요한 추가 정보를 반영하기 위해 보다 세부적입니다. 이 수준을 **현재 수준** 섹션에서 **Employee** 수준으로 끌어서 놓습니다.  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]부터는 M2M 관계를 모델링하는 새로운 유형의 수준이 있습니다(예: **클래스(ClassRegistration.Student를 통해 매핑됨)**. 수준 이름은 매핑 관계를 명확하게 설명하는 데 필요한 추가 정보를 반영하기 위해 보다 세부적입니다. 이 수준을 **현재 수준** 섹션에서 **Employee** 수준으로 끌어서 놓습니다.  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
@@ -84,7 +83,7 @@ M2M 관계의 데모를 보려면 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshor
 Customer 샘플 모델 및 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]에 포함된 기타 샘플 모델을 배포하는 방법에 대한 지침은 [샘플 모델 및 데이터 배포](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md)를 참조하세요.   
   
 ## <a name="one-many-relationship"></a>일 대 다 관계  
- DH의 멤버는 여러 자식 멤버의 부모일 수 있지만 일반적으로 둘 이상의 부모를 가질 수 없습니다(예외는 [멤버 보안](#bkmk_member_security)참조). 예를 들어, Employee 및 Department라는 두 개의 엔터티가 있다고 가정해보겠습니다. 여기서 각 직원은 단일 부서에 속합니다. 이 관계는 Department 엔터티를 참조하는 도메인 기반 특성(DBA)을 Employee 엔터티에 추가하여 모델링합니다.  
+ DH의 멤버는 여러 자식 멤버의 부모일 수 있지만 일반적으로 둘 이상의 부모를 가질 수 없습니다(예외는 [멤버 보안](#bkmk_member_security)참조). 예를 들어, 다음 두 개의 엔터티가 있다고 가정합니다. Employee 및 Department, 여기서 각 직원은 단일 부서에 속합니다. 이 관계는 Department 엔터티를 참조하는 도메인 기반 특성(DBA)을 Employee 엔터티에 추가하여 모델링합니다.  
   
  ![mds_hierarchies_onetomany](../master-data-services/media/mds-hierarchies-onetomany.png "mds_hierarchies_onetomany")  
   

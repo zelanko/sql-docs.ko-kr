@@ -7,27 +7,24 @@ ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.newproject
-- vs.addnewproject
 helpviewer_keywords:
 - projects [SQL Server Management Studio], creating
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cd6c508700e22a7ef999e3511610093230e7b613
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46a65938bdac731d9922c1ccdb5f95eb8a05f700
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849900"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328003"
 ---
 # <a name="create-a-project"></a>프로젝트 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 기존 솔루션 내에 하나 이상의 프로젝트를 만들 수 있습니다.  
   
-### <a name="to-create-a-new-project-and-add-it-to-a-solution"></a>새 프로젝트를 만들어 솔루션에 추가하려면  
+## <a name="create-a-new-project-and-add-it-to-a-solution"></a>새 프로젝트를 만들어 솔루션에 추가  
   
 1.  솔루션 탐색기에서 솔루션을 선택합니다.  
   
@@ -96,9 +93,10 @@ ms.locfileid: "47849900"
   
 4.  **확인**을 클릭합니다.  
   
-스크립트 프로젝트의 이름을 설정할 수 있지만 폴더 이름은 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에 의해 설정되며 변경할 수 없습니다. **새 프로젝트 추가** 대화 상자를 사용하여 공통 폴더 집합에 대한 드라이브 및 경로 지정을 구성할 수 있습니다. **솔루션 탐색기**에서 솔루션 아이콘을 마우스 오른쪽 단추로 클릭한 다음 **추가**를 클릭합니다. 스크립트 프로젝트 폴더에 대한 기본 위치는 C:\Documents and Settings\\*username*\My Documents\SQL Server Management Studio\Projects\\입니다.  
+스크립트 프로젝트의 이름을 설정할 수 있지만 폴더 이름은 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에 의해 설정되며 변경할 수 없습니다. **새 프로젝트 추가** 대화 상자를 사용하여 공통 폴더 집합에 대한 드라이브 및 경로 지정을 구성할 수 있습니다. **솔루션 탐색기**에서 솔루션 아이콘을 마우스 오른쪽 단추로 클릭한 다음 **추가**를 클릭합니다. 스크립트 프로젝트 폴더의 기본 위치는 C:\Documents 및 Settings\\*username*\My Documents\SQL Server Management Studio\Projects\\입니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고 항목
+
 [솔루션 탐색기](../../ssms/solution/solution-explorer.md)  
 [솔루션에 기존 프로젝트 추가](../../ssms/solution/add-an-existing-project-to-a-solution.md)  
 [프로젝트에 새 항목 추가](../../ssms/solution/add-new-items-to-a-project.md)  
@@ -106,4 +104,3 @@ ms.locfileid: "47849900"
 [프로젝트 기본 위치 변경](../../ssms/solution/change-the-default-location-for-projects.md)  
 [항목이나 프로젝트 제거 또는 삭제](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
 [솔루션 삭제](../../ssms/solution/delete-a-solution.md)  
-  

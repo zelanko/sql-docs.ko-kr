@@ -19,12 +19,12 @@ ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 38175416fdd47ee50f9bb3aa94b7318b8926317b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a462e54379a5a916d6b302f99ef6f44d2148399a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640030"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209092"
 ---
 # <a name="ado-net-destination"></a>ADO.NET 대상
   ADO.NET 대상은 데이터베이스 테이블이나 뷰를 사용하는 다양한 [!INCLUDE[vstecado](../../includes/vstecado-md.md)]호환 데이터베이스로 데이터를 로드합니다. 이 데이터를 기존 테이블이나 뷰에 로드하는 옵션이 제공되거나 새 테이블을 만들고 데이터를 새 테이블에 로드할 수 있습니다.  
@@ -96,14 +96,14 @@ ms.locfileid: "51640030"
   
  **사용 가능한 경우 대량 삽입 사용**을 선택하고 **오류** 옵션을 **행 리디렉션**으로 설정하면 대상에서 오류 출력으로 리디렉션하는 일괄 처리 데이터에 올바른 행이 포함될 수 있습니다. 대량 작업에서 오류 처리에 대한 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요. **오류** 옵션에 대한 자세한 내용은 [ADO NET 대상 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)를 참조하세요.  
   
-> [!NOTE]  
+> [!NOTE]
 >  SQL Server 또는 Sybase 원본 테이블에 ID 열이 포함되어 있으면 SQL 실행 태스크를 사용하여 ADO NET 대상 전에 IDENTITY_INSERT를 활성화하고 그 후에 다시 비활성화해야 합니다. (ID 열 속성은 열에 대한 증분 값을 지정합니다. SET IDENTITY_INSERT 문은 원본 테이블의 명시적 값을 대상 테이블의 ID 열에 삽입되도록 합니다.)  
->   
+> 
 >   SET IDENTITY_INSERT 문 및 데이터 로딩을 성공적으로 실행하려면 다음을 수행해야 합니다.  
 >       1. SQL 실행 태스크와 ADO NET 대상에 같은 ADO.NET 연결 관리자를 사용합니다.  
 >       2. 연결 관리자에서 **RetainSameConnection** 속성 및 **MultipleActiveResultSets** 속성을 True로 설정합니다.  
 >       3. ADO.NET 대상에서 **UseBulkInsertWhenPossible** 속성을 False로 설정합니다.   
->
+> 
 >  자세한 내용은 [SET IDENTITY_INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) 및 [IDENTITY&#40;속성&#41;&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)를 참조하세요.  
   
 ## <a name="external-resources"></a>외부 리소스  
@@ -120,7 +120,7 @@ ms.locfileid: "51640030"
   
 3.  **ADO NET 대상 편집기**에서 **매핑**을 클릭합니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **사용 가능한 입력 열**  
  사용 가능한 입력 열 목록을 표시합니다. 끌어서 놓기 작업을 사용하여 테이블에서 사용 가능한 입력 열을 대상 열에 매핑합니다.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "51640030"
   
 3.  **ADO NET 대상 편집기**에서 **오류 출력**을 클릭합니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **입력 또는 출력**  
  입력 이름을 표시합니다.  
   

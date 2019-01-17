@@ -11,12 +11,12 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9e2237473024a75227ff7ec7838849618cdf54d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 14a4ff6a2af3182e8e62a019993d39a6470caf37
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663462"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205121"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>활성 임대가 있는 백업 Blob 파일 삭제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,22 +31,22 @@ ms.locfileid: "51663462"
 ## <a name="manage-orphaned-blobs"></a>분리된 Blob 관리  
  다음 단계에서는 백업 또는 복원 작업 실패 후 정리하는 방법을 설명합니다. PowerShell 스크립트를 사용하여 모든 단계를 수행할 수 있습니다. 다음 섹션에는 예제 PowerShell 스크립트가 포함되어 있습니다.  
   
-1.  **임대가 있는 Blob 식별:** 백업 프로세스를 실행하는 스크립트나 프로세스가 있는 경우 해당 스크립트나 프로세스 내에서 오류를 캡처하여 Blob 정리에 사용할 수 있습니다.  LeaseStats 및 LeastState 속성을 사용하여 임대가 있는 Blob을 식별할 수도 있습니다. Blob을 식별하고 나서 목록을 검토하고 백업 파일의 유효성을 확인한 후 Blob을 삭제합니다.  
+1.  **임대가 있는 Blob 식별:** 백업 프로세스를 실행하는 스크립트가 프로세스가 있는 경우 해당 스크립트나 프로세스 내에서 오류를 캡처하여 blob 정리에 사용할 수 있습니다.  LeaseStats 및 LeastState 속성을 사용하여 임대가 있는 Blob을 식별할 수도 있습니다. Blob을 식별하고 나서 목록을 검토하고 백업 파일의 유효성을 확인한 후 Blob을 삭제합니다.  
   
-2.  **임대 중단:** 권한 있는 요청은 임대 ID를 제공하지 않고 임대를 중단할 수 있습니다. 자세한 내용은 [여기](https://go.microsoft.com/fwlink/?LinkID=275664) 를 참조하십시오.  
+2.  **임대 해제:** 권한 있는 요청은 임대 ID를 제공하지 않고 임대를 해제할 수 있습니다. 자세한 내용은 [여기](https://go.microsoft.com/fwlink/?LinkID=275664) 를 참조하십시오.  
   
     > [!TIP]  
     >  SQL Server는 복원 작업 중 임대 ID를 실행하여 단독 액세스를 설정합니다. 복원 임대 ID는 BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2입니다.  
   
-3.  **Blob 삭제:** 활성 임대가 있는 Blob을 삭제하려면 먼저 임대를 중단해야 합니다.  
+3.  **Blob 삭제:** 활성 임대가 있는 Blob을 삭제하려면 먼저 임대를 해제해야 합니다.  
   
 ###  <a name="Code_Example"></a> PowerShell 스크립트 예  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  PowerShell 2.0을 실행하는 경우 Microsoft WindowsAzure.Storage.dll 어셈블리를 로드하는 데 문제가 있을 수 있습니다. 문제 해결을 위해 [PowerShell](https://docs.microsoft.com/powershell/)을 업그레이드하는 것이 좋습니다. PowerShell 2.0에 대한 다음 해결 방법을 사용할 수도 있습니다.  
->   
+> 
 >  -   다음과 같이 powershell.exe.config 파일을 만들거나 수정하여 런타임에 .NET 2.0 및 .NET 4.0 어셈블리를 로드합니다.  
->   
+> 
 >     ```  
 >     \<?xml version="1.0"?>   
 >     <configuration>   
@@ -55,7 +55,7 @@ ms.locfileid: "51663462"
 >             <supportedRuntime version="v2.0.50727"/>   
 >         </startup>   
 >     </configuration>  
->   
+> 
 >     ```  
   
  다음 예제 스크립트에서는 활성 임대가 있는 Blob을 식별한 다음 중단합니다. 임대 ID를 필터링하는 방법도 보여 줍니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "51663462"
   
      **임대 해제 중**  
   
-     **\<Blob의 URL>의 임대는 복원 임대입니다. 아직 활성 상태인 복원 임대를 가진 blob이 있는 경우에만 이 메시지가 나타납니다.**  
+     **Blob의 \<URL>에 대한 임대는 복원 임대입니다. 아직 활성 상태인 복원 임대를 가진 Blob이 있는 경우에만 이 메시지가 나타납니다.**  
   
      **\<Blob의 URL>의 임대는 \<Blob의 URL>의 복원 임대 해제 임대가 아닙니다.**  
   

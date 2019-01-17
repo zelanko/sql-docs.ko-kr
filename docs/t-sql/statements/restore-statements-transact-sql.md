@@ -41,12 +41,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f6ee77ac0a4fc91f9a182c1d893d39d599228da4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d4370a2f60a17ee126be5940ec69dbdfc5a03d4f
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524589"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980319"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 문(Transact-SQL)
 BACKUP 명령을 사용하여 만든 SQL 데이터베이스 백업을 복원합니다. 
@@ -167,7 +167,7 @@ FROM DATABASE_SNAPSHOT = database_snapshot_name
    } = { 'physical_backup_device_name' |  
       @physical_backup_device_name_var }   
 }   
-Note: URL is the format used to specify the location and the file name for the Microsoft Azure Blob. Although Microsoft Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seemless restore experince for all the three devices.  
+Note: URL is the format used to specify the location and the file name for the Microsoft Azure Blob. Although Microsoft Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seamless restore experience for all the three devices.  
 <files_or_filegroups>::=   
 {   
    FILE = { logical_file_name_in_backup | @logical_file_name_in_backup_var }   
@@ -430,13 +430,13 @@ RESTORE 예에는 다음이 포함됩니다.
 - 1. [전체 데이터베이스 복원](#restoring_full_db)  
 - 2. [전체 및 차등 데이터베이스 백업 복원](#restoring_full_n_differential_db_backups)  
 - 3. [RESTART 구문을 사용하여 데이터베이스 복원](#restoring_db_using_RESTART)  
-- 4. [데이터베이스 복원 및 파일 이동](#restoring_db_n_move_files)  
-- 5. [BACKUP 및 RESTORE를 사용하여 데이터베이스 복사](#copying_db_using_bnr)  
-- 6. [STOPAT를 사용하여 지정 시간으로 복원](#restoring_to_pit_using_STOPAT)  
-- 7. [트랜잭션 로그를 표시까지 복원](#restoring_transaction_log_to_mark)  
-- 8. [TAPE 구문을 사용하여 복원](#restoring_using_TAPE)  
+- D. [데이터베이스 복원 및 파일 이동](#restoring_db_n_move_files)  
+- E. [BACKUP 및 RESTORE를 사용하여 데이터베이스 복사](#copying_db_using_bnr)  
+- F. [STOPAT를 사용하여 지정 시간으로 복원](#restoring_to_pit_using_STOPAT)  
+- G. [트랜잭션 로그를 표시까지 복원](#restoring_transaction_log_to_mark)  
+- H. [TAPE 구문을 사용하여 복원](#restoring_using_TAPE)  
 - 9. [FILE 및 FILEGROUP 구문을 사용하여 복원](#restoring_using_FILE_n_FG)  
-- 10. [데이터베이스 스냅숏으로 되돌리기](#reverting_from_db_snapshot)  
+- J. [데이터베이스 스냅숏으로 되돌리기](#reverting_from_db_snapshot)  
 - 11. [Microsoft Azure Blob Storage 서비스에서 복원](#Azure_Blob)  
   
 > [!NOTE] 

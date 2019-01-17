@@ -18,12 +18,12 @@ ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e42e9f220c270b3e014eead20380167dde4b0dae
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7345bead67e3209ed4a21a208d8583a49b36a0e7
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514221"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979009"
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>가용성 그룹 사용 권한 부여(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  모든 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 권한에 대한 차트를 보려면 [데이터베이스 엔진 사용 권한 포스터](https://aka.ms/sql-permissions-poster)를 참조하십시오.  
   
 ## <a name="permissions"></a>Permissions  
- 가용성 그룹에 대한 CONTROL 권한 또는 서버에 대한 ALTER ANY AVAILABILTIY GROUP 권한이 필요합니다.  
+ 가용성 그룹에 대한 CONTROL 권한 또는 서버에 대한 ALTER ANY AVAILABILITY GROUP 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   

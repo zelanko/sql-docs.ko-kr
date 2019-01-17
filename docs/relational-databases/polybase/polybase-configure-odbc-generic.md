@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 414c9650a1ae933e6e472ab09a26e6d26ae503fd
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: 98e06e3199d4ce8750a4a5956aec6d97c141b33b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49947419"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214262"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>SQL Server의 외부 데이터에 액세스하도록 PolyBase 구성
 
@@ -33,13 +33,13 @@ PolyBase를 설치하지 않은 경우 [PolyBase 설치](polybase-installation.m
 
 ![PolyBase 스케일 아웃 그룹](../../relational-databases/polybase/media/polybase-odbc-admin.png) 
 
-  > **중요!**
-  >
-  > 쿼리 성능을 향상시키려면 드라이버에서 연결 풀링을 사용할 수 있도록 설정해야 합니다. "ODBC 데이터 원본 관리자"에서 이를 수행할 수 있습니다.
-
+> **중요!**
+> 
+> 쿼리 성능을 향상시키려면 드라이버에서 연결 풀링을 사용할 수 있도록 설정해야 합니다. "ODBC 데이터 원본 관리자"에서 이를 수행할 수 있습니다.
+> 
 > **참고**
 > 
->외부 데이터 원본을 생성할 때 드라이버 이름(예: 원으로 표시)을 지정해야 합니다(아래 3단계).
+> 외부 데이터 원본을 생성할 때 드라이버 이름(예: 원으로 표시)을 지정해야 합니다(아래 3단계).
 
 ## <a name="create-an-external-table"></a>외부 테이블 만들기
 

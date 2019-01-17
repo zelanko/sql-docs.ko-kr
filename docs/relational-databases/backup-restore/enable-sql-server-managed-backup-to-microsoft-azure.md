@@ -11,12 +11,12 @@ ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2fedebfb082639114ec068f80db436af7b8a035b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7ef52db1ccafaeaf9539974032da3622b23838c4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672802"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52787095"
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure에 대한 SQL Server Managed Backup 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "51672802"
   
 #### <a name="create-the-azure-blob-container"></a>Azure Blob 컨테이너 만들기  
   
-1.  **Azure 구독:** 이미 Azure 구독이 있는 경우 다음 단계로 이동합니다. 그렇지 않을 경우 [무료 평가판](https://azure.microsoft.com/pricing/free-trial/) 으로 시작한 후에 [구매 옵션](https://azure.microsoft.com/pricing/purchase-options/)을 살펴볼 수 있습니다.  
+1.  **Azure에 등록:** 이미 Azure 구독이 있는 경우 다음 단계로 이동합니다. 그렇지 않을 경우 [무료 평가판](https://azure.microsoft.com/pricing/free-trial/) 으로 시작한 후에 [구매 옵션](https://azure.microsoft.com/pricing/purchase-options/)을 살펴볼 수 있습니다.  
   
-2.  **Azure Storage 계정 만들기:** 이미 저장소 계정이 있는 경우 다음 단계로 이동합니다. 그렇지 않을 경우 [Azure 관리 포털](https://manage.windowsazure.com/) 또는 Azure PowerShell을 사용하여 저장소 계정을 만들 수 있습니다. 다음 `New-AzureStorageAccount` 명령은 미국 동부 지역에 `managedbackupstorage` 라는 저장소 계정을 만듭니다.  
+2.  **Azure 스토리지 계정 만들기:** 이미 스토리지 계정이 있는 경우 다음 단계로 이동합니다. 그렇지 않을 경우 [Azure 관리 포털](https://manage.windowsazure.com/) 또는 Azure PowerShell을 사용하여 저장소 계정을 만들 수 있습니다. 다음 `New-AzureStorageAccount` 명령은 미국 동부 지역에 `managedbackupstorage` 라는 저장소 계정을 만듭니다.  
   
     ```powershell  
     New-AzureStorageAccount -StorageAccountName "managedbackupstorage" -Location "EAST US"  
@@ -41,7 +41,7 @@ ms.locfileid: "51672802"
   
      저장소 계정에 대한 자세한 내용은 [Azure Storage 계정](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)을 참조하세요.  
   
-3.  **백업 파일의 Blob 컨테이너 만들기:** Blob 컨테이너를 Azure 관리 포털에 만들거나 Azure PowerShell을 사용하여 만들 수 있습니다. 다음 `New-AzureStorageContainer` 명령은 `backupcontainer` 저장소 계정에 `managedbackupstorage` 라는 Blob 컨테이너를 만듭니다.  
+3.  **백업 파일에 대한 Blob 컨테이너 만들기:** Azure Management Portal 포털에서 또는 Azure PowerShell을 사용하여 Blob 컨테이너를 만들 수 있습니다. 다음 `New-AzureStorageContainer` 명령은 `backupcontainer` 저장소 계정에 `managedbackupstorage` 라는 Blob 컨테이너를 만듭니다.  
   
     ```powershell  
     $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary  
@@ -54,6 +54,14 @@ ms.locfileid: "51672802"
     $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary   
     New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context  
     ```  
+    AzureRM의 경우 다음 명령을 사용합니다.
+       ```powershell
+    Connect-AzureRmAccount
+    Set-AzureRmContext -SubscriptionId "YOURSUBSCRIPTIONID"
+    $StorageAccountKey = (Get-AzureRmStorageAccountKey -ResourceGroupName YOURRESOURCEGROUPFORTHESTORAGE -Name managedbackupstorage)[0].Value
+    $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey $StorageAccountKey 
+    New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context
+   ```  
   
      이 명령의 출력에는 컨테이너와 SAS 토큰에 대한 URL이 포함됩니다. 다음은 이에 대한 예입니다.  
   
@@ -80,11 +88,11 @@ ms.locfileid: "51672802"
     SECRET = 'sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl'  
     ```  
   
-2.  **SQL Server 에이전트 서비스가 시작되고 실행 중인지 확인:** SQL 서버를 실행합니다(현재 실행되고 있지 않은 경우).  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 실행하여 백업 작업을 수행하려면 SQL Server 에이전트가 필요합니다.  SQL Server 에이전트가 자동으로 실행되어 백업 작업이 정기적으로 발생하도록 설정할 수 있습니다.  
+2.  **SQL Server 에이전트 서비스가 시작되고 실행 중인지 확인:** 현재 SQL Server 에이전트가 실행되지 않고 있으면 SQL Server 에이전트를 시작합니다.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 실행하여 백업 작업을 수행하려면 SQL Server 에이전트가 필요합니다.  SQL Server 에이전트가 자동으로 실행되어 백업 작업이 정기적으로 발생하도록 설정할 수 있습니다.  
   
 3.  **보존 기간 결정:** 백업 파일의 보존 기간을 결정합니다. 보존 기간은 일 단위로 지정되며 1-30일의 범위로 설정할 수 있습니다.  
   
-4.  **Enable and configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :** SQL Server Management Studio를 시작하고 대상 SQL Server 인스턴스에 연결합니다. 요구 사항에 따라 데이터베이스 이름, 컨테이너 URL, 보존 기간 값을 수정한 후 쿼리 창에서 다음 문을 실행합니다.  
+4.  **설정 및 구성 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]:** SQL Server Management Studio를 시작하고 대상 SQL Server 인스턴스에 연결합니다. 요구 사항에 따라 데이터베이스 이름, 컨테이너 URL, 보존 기간 값을 수정한 후 쿼리 창에서 다음 문을 실행합니다.  
   
     > [!IMPORTANT]  
     >  인스턴스 수준에서 Managed Backup을 사용하려면 `NULL` 매개 변수에 대해 `database_name` 을 지정합니다.  
@@ -102,7 +110,7 @@ ms.locfileid: "51672802"
   
      [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 이 설정되었습니다. 데이터베이스에서 백업 작업이 실행을 시작하려면 최대 15분이 필요합니다.  
   
-5.  **확장 이벤트 기본 구성 검토:** 다음 transact-SQL 문을 실행하여 확장 이벤트 설정을 검토합니다.  
+5.  **확장 이벤트 기본 구성 검토:** 다음 Transact-SQL 문을 실행하여 확장 이벤트 설정을 검토합니다.  
   
     ```  
     SELECT * FROM msdb.managed_backup.fn_get_current_xevent_settings()  
@@ -116,7 +124,7 @@ ms.locfileid: "51672802"
   
     2.  데이터베이스 메일을 사용하도록 SQL Server 에이전트 알림을 구성합니다. 자세한 내용은 [Configure SQL Server Agent Mail to Use Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)을 참조하세요.  
   
-    3.  **백업 오류 및 경고를 수신하도록 메일 알림 설정:** 쿼리 창에서 다음 Transact-SQL 문을 실행합니다.  
+    3.  **백업 오류 및 경고를 수신하도록 이메일 알림 설정:** 쿼리 창에서 다음 Transact-SQL 문을 실행합니다.  
   
         ```  
         EXEC msdb.managed_backup.sp_set_parameter  
@@ -125,9 +133,9 @@ ms.locfileid: "51672802"
   
         ```  
   
-7.  **Microsoft Azure Storage 계정에서 백업 파일 보기:** SQL Server Management Studio 또는 Azure 관리 포털에서 저장소 계정에 연결합니다. 지정한 컨테이너에 백업 파일이 표시됩니다. 데이터베이스에 대한 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 설정한 후 5분 이내에 데이터베이스 및 로그 백업이 표시될 수 있습니다.  
+7.  **Microsoft Azure Storage 계정의 백업 파일 보기:** SQL Server Management Studio 또는 Azure 관리 포털에서 저장소 계정에 연결합니다. 지정한 컨테이너에 백업 파일이 표시됩니다. 데이터베이스에 대한 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 설정한 후 5분 이내에 데이터베이스 및 로그 백업이 표시될 수 있습니다.  
   
-8.  **상태 모니터링:**  이전에 구성한 메일 알림을 통해 모니터링하거나 기록된 이벤트를 능동적으로 모니터링할 수 있습니다. 다음은 이벤트를 표시하는 데 사용하는 예제 Transact-SQL 문입니다.  
+8.  **상태 모니터링:**  이전에 구성한 전자 메일 알림을 통해 모니터링하거나 기록된 이벤트를 능동적으로 모니터링할 수 있습니다. 다음은 이벤트를 표시하는 데 사용하는 예제 Transact-SQL 문입니다.  
   
     ```  
     --  view all admin events  

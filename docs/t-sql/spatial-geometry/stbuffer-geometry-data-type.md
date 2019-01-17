@@ -18,12 +18,12 @@ ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8d18d64f08eacc5b2784c9101d77e90f4c5d33a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fdb4a177f1d391877e6f1b9d0f7b37c9c001b955
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702801"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979479"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "51702801"
 > [!NOTE]  
 >  `Polygon` 인스턴스는 `CurvePolygon` 인스턴스 대신 반환됩니다.  `CurvePolygon` 인스턴스를 반환하려면 [BufferWithCurves &#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)을 참조하세요.  
   
-### <a name="d-calling-stbuffer-with-a-negative-parameter-value-that-returns-an-empty-instance"></a>4. 빈 인스턴스를 반환하는 음수 매개 변수 값을 사용하여 STBuffer() 호출  
+### <a name="d-calling-stbuffer-with-a-negative-parameter-value-that-returns-an-empty-instance"></a>D. 빈 인스턴스를 반환하는 음수 매개 변수 값을 사용하여 STBuffer() 호출  
  다음 예제에서는 이전 예제에서 *distance* 매개 변수가 -2인 경우에 발생하는 결과를 보여 줍니다.  
   
 ```
@@ -108,7 +108,7 @@ ms.locfileid: "51702801"
   
  이 **SELECT** 문은 `GEOMETRYCOLLECTION EMPTY.`를 반환합니다.  
   
-### <a name="e-calling-stbuffer-with-parametervalue--0"></a>5. parameter_value = 0을 사용하여 STBuffer() 호출  
+### <a name="e-calling-stbuffer-with-parametervalue--0"></a>E. parameter_value = 0을 사용하여 STBuffer() 호출  
  다음 예에서는 호출 `geometry` 인스턴스의 복사본을 반환합니다.  
   
 ```
@@ -116,7 +116,7 @@ ms.locfileid: "51702801"
  SELECT @g.STBuffer(0).ToString();
  ```  
   
-### <a name="f-calling-stbuffer-with-a-non-zero-parameter-value-that-is-extremely-small"></a>6. 0이 아닌 매우 작은 매개 변수 값을 사용하여 STBuffer() 호출  
+### <a name="f-calling-stbuffer-with-a-non-zero-parameter-value-that-is-extremely-small"></a>F. 0이 아닌 매우 작은 매개 변수 값을 사용하여 STBuffer() 호출  
  다음 예에서도 호출 `geometry` 인스턴스의 복사본을 반환합니다.  
   
 ```
@@ -125,7 +125,7 @@ ms.locfileid: "51702801"
  SELECT @g.STBuffer(@distance).ToString();
  ```  
   
-### <a name="g-calling-stbuffer-with-parametervalue--0"></a>7. parameter_value > 0을 사용하여 STBuffer() 호출  
+### <a name="g-calling-stbuffer-with-parametervalue--0"></a>G. parameter_value > 0을 사용하여 STBuffer() 호출  
  다음 예에서는 `Polygon` 인스턴스를 반환합니다.  
   
 ```
@@ -133,7 +133,7 @@ ms.locfileid: "51702801"
  SELECT @g.STBuffer(2).ToString();
  ```  
   
-### <a name="h-calling-stbuffer-with-a-string-parameter-value"></a>8. 문자열 매개 변수 값을 사용하여 STBuffer() 호출  
+### <a name="h-calling-stbuffer-with-a-string-parameter-value"></a>H. 문자열 매개 변수 값을 사용하여 STBuffer() 호출  
  다음 예에서는 앞에서 설명한 것과 동일하지만 문자열 매개 변수가 메서드에 전달되는 `Polygon` 인스턴스를 반환합니다.  
   
 ```

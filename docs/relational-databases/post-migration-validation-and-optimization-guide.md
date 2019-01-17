@@ -13,12 +13,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: 7dcb9f3efe8ffcc0e1dc2dbd0ff800f67f82d499
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d85de6deffa9e140bc5f9bf489afd60e0dbbc948
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506336"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213622"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>마이그레이션 후 유효성 검사 및 최적화 가이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "52506336"
 다음은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 플랫폼으로 마이그레션한 후 발생하는 몇 가지 일반적인 성능 시나리오와 해결 방법입니다. 여기에는 이전 버전 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 새 버전 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션 및 Oracle, DB2, MySQL, Sybase 등의 외래 플랫폼에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션에 특정한 시나리오가 포함됩니다.
 
 ## <a name="CEUpgrade"></a>CE 버전 변경으로 인한 쿼리 성능 저하
-
+ 
 **적용 대상:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 마이그레이션.
 
 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 이상 버전으로 마이그레이션할 때, 그리고 [데이터베이스 호환성 수준](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)을 사용 가능한 최신으로 업그레이드할 때는 작업이 성능 저하 위험에 노출될 수 있습니다.
@@ -48,7 +48,7 @@ ms.locfileid: "52506336"
 
 ## <a name="ParameterSniffing"></a> 매개 변수 검색의 민감도
 
-**적용 대상:** 외래 플랫폼(예: Oracle, DB2, MySQL 및 Sybase)에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션
+**적용 대상:** 외래 플랫폼(예: Oracle, DB2, MySQL 및 Sybase)을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]으로 마이그레이션합니다.
 
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션은 이 문제가 원본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 있는 경우 최신 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로 그대로 마이그레이션해도 이 시나리오가 해결되지 않습니다. 
@@ -69,7 +69,7 @@ ms.locfileid: "52506336"
 
 ## <a name="MissingIndexes"></a> 누락된 인덱스
 
-**적용 대상:** 외래 플랫폼(예: Oracle, DB2, MySQL 및 Sybase) 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션
+**적용 대상:** 외래 플랫폼(예: Oracle, DB2, MySQL 및 Sybase) 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]으로 마이그레이션합니다.
 
 인덱스가 잘못되거나 누락되면 추가 I/O가 발생하여 메모리와 CPU가 불필요하게 사용됩니다. 다른 조건자 사용, 기존 인덱스 디자인 무효화 등과 같이 작업 프로필이 변경되기 때문일 수 있습니다. 잘못된 인덱싱 전략이나 작업 프로필의 변경을 알 수 있는 방법은 다음과 같습니다.
 -   중복되는 인덱스, 거의 사용되지 않거나 완전히 사용되지 않는 인덱스를 찾습니다.
@@ -87,7 +87,7 @@ ms.locfileid: "52506336"
 
 ## <a name="InabilityPredicates"></a> 조건자를 사용하여 데이터를 필터링할 수 없음
 
-**적용 대상:** 외래 플랫폼(예: Oracle, DB2, MySQL 및 Sybase) 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션
+**적용 대상:** 외래 플랫폼(예: Oracle, DB2, MySQL 및 Sybase) 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]으로 마이그레이션합니다.
 
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션은 이 문제가 원본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 있는 경우 최신 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로 그대로 마이그레이션해도 이 시나리오가 해결되지 않습니다.
@@ -115,7 +115,7 @@ SARGable이 아닌 조건자의 몇 가지 예:
 
 ## <a name="TableValuedFunctions"></a> 테이블 반환 함수(다중 문 및 인라인) 사용
 
-**적용 대상:** 외래 플랫폼(예: Oracle, DB2, MySQL 및 Sybase) 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션
+**적용 대상:** 외래 플랫폼(예: Oracle, DB2, MySQL 및 Sybase) 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]으로 마이그레이션합니다.
 
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션은 이 문제가 원본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 있는 경우 최신 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로 그대로 마이그레이션해도 이 시나리오가 해결되지 않습니다.

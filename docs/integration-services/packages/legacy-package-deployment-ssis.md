@@ -32,12 +32,12 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cad877fe1c1431f044f41b6dc7087c8b990cc4c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 8830f5984bed8b18c82d18e724c608d6730eb643
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639070"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204732"
 ---
 # <a name="legacy-package-deployment-ssis"></a>레거시 패키지 배포(SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지를 배포 컴퓨터에서 프로덕션 서버나 다른 컴퓨터로 손쉽게 배포할 수 있는 도구와 마법사가 포함되어 있습니다.  
@@ -176,15 +176,15 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
   
  **참고:**
->**구성** 속성 옆에 있는 줄임표 단추를 클릭하여 **패키지 구성 도우미** 에 액세스할 수도 있습니다. 구성 속성은 패키지의 속성 창에 나타납니다.  
-  
->구성은 패키지 배포 모델에 사용할 수 있습니다. 매개 변수는 프로젝트 배포 모델에 대한 구성 대신 사용됩니다. 프로젝트 배포 모델을 사용하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)를 참조하십시오.    
-  
->**패키지 구성 도우미** 대화 상자에서는 구성을 사용하도록 패키지를 활성화하고 구성을 추가 및 삭제하며 구성이 로드되는 기본 순서를 설정할 수 있습니다. 
- 
->패키지 구성이 기본 순서로 로드되는 경우 **패키지 구성 도우미** 대화 상자에 표시된 목록의 맨 위에서 맨 아래까지의 구성이 로드됩니다. 그러나 런타임 시 패키지 구성이 기본 순서로 로드되지 않을 수 있습니다. 특히 부모 패키지 구성은 다른 유형의 구성보다 뒤에 로드됩니다.  
-  
->여러 구성이 동일한 개체 속성을 설정하는 경우 마지막으로 로드된 값이 런타임에 사용됩니다.  
+> **구성** 속성 옆에 있는 줄임표 단추를 클릭하여 **패키지 구성 도우미** 에 액세스할 수도 있습니다. 구성 속성은 패키지의 속성 창에 나타납니다.  
+> 
+> 구성은 패키지 배포 모델에 사용할 수 있습니다. 매개 변수는 프로젝트 배포 모델에 대한 구성 대신 사용됩니다. 프로젝트 배포 모델을 사용하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)를 참조하십시오.    
+> 
+> **패키지 구성 도우미** 대화 상자에서는 구성을 사용하도록 패키지를 활성화하고 구성을 추가 및 삭제하며 구성이 로드되는 기본 순서를 설정할 수 있습니다. 
+> 
+> 패키지 구성이 기본 순서로 로드되는 경우 **패키지 구성 도우미** 대화 상자에 표시된 목록의 맨 위에서 맨 아래까지의 구성이 로드됩니다. 그러나 런타임 시 패키지 구성이 기본 순서로 로드되지 않을 수 있습니다. 특히 부모 패키지 구성은 다른 유형의 구성보다 뒤에 로드됩니다.  
+> 
+> 여러 구성이 동일한 개체 속성을 설정하는 경우 마지막으로 로드된 값이 런타임에 사용됩니다.  
   
  **패키지 구성 도우미** 대화 상자에서는 구성을 만드는 단계를 안내하는 패키지 구성 마법사를 실행할 수 있습니다. 패키지 구성 마법사를 실행하려면 **패키지 구성 도우미** 대화 상자에서 새 구성을 추가하거나 기존 구성을 편집합니다. 마법사 페이지에서 구성 유형을 선택하고 사용자가 구성에 직접 액세스할 것인지 또는 환경 변수를 사용할지 선택한 다음 구성에 저장할 속성을 선택하십시오.  
   
@@ -242,7 +242,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 8.  내보낼 속성 선택 페이지에서 구성에 포함할 패키지 개체의 속성을 선택합니다. 구성 유형이 하나의 속성만 지원할 경우 이 마법사 페이지의 제목은 대상 속성 선택입니다. 자세한 내용은 [Package Configuration Wizard UI Reference](../../integration-services/packages/package-configuration-wizard-ui-reference.md)을 참조하세요.  
   
-    > **참고** : 한 개의 구성에 여러 속성을 포함하는 기능은 **XML 구성 파일** 및 **SQL Server** 구성 유형만 지원합니다.  
+    > **참고:** 한 개의 구성에 여러 속성을 포함하는 기능은 **XML 구성 파일** 및 **SQL Server** 구성 유형만 지원합니다.  
   
 9. 마법사 완료 페이지에 구성 이름을 입력하고 **마침**을 클릭합니다.  
   
@@ -261,7 +261,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  패키지 구성은 런타임 시 패키지 개체의 속성 값을 업데이트합니다. 패키지가 로드되면 구성의 값이 패키지 개발 시 설정한 값을 대체합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 여러 가지 구성 유형을 지원합니다. 예를 들어 여러 구성이 포함될 수 있는 XML 파일이나 단일 구성이 포함되는 환경 변수를 사용할 수 있습니다. 자세한 내용은 [Package Configurations](../../integration-services/packages/package-configurations.md)을 참조하세요.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **패키지 구성 설정**  
  패키지에 구성을 사용하려면 선택합니다.  
   
@@ -302,7 +302,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="welcome-to-the-package-configuration-wizard-page"></a>패키지 구성 마법사 시작 페이지  
  **SSIS 구성 마법사** 를 사용하여 런타임에 패키지 및 패키지 개체의 속성을 업데이트하는 구성을 만들 수 있습니다.  
   
-#### <a name="options"></a>Options  
+#### <a name="options"></a>옵션  
  **이 페이지를 다시 표시 안 함**  
  다음에 마법사를 열 때 시작 페이지를 표시하지 않습니다.  
   
@@ -401,7 +401,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="select-objects-to-export-page"></a>내보낼 개체 선택 페이지  
  **대상 속성 선택 또는 내보낼 속성 선택** 페이지를 사용하여 구성에 포함할 개체 속성을 지정할 수 있습니다. 여러 속성을 선택하는 기능은 XML 구성 유형을 선택하는 경우에만 사용할 수 있습니다.  
   
-#### <a name="options"></a>Options  
+#### <a name="options"></a>옵션  
  **개체**  
  패키지 계층을 확장하고 내보낼 속성을 선택합니다.  
   
@@ -414,7 +414,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="completing-the-wizard-page"></a>마법사 완료 페이지  
  **마법사 완료** 페이지를 사용하여 구성의 이름을 지정하고 마법사에서 구성을 만드는 데 사용하는 설정을 볼 수 있습니다. 마법사를 완료하면 패키지의 모든 구성을 나열하는 **패키지 구성 도우미** 가 표시됩니다.  
   
-#### <a name="options"></a>Options  
+#### <a name="options"></a>옵션  
  **구성 이름**  
  구성의 이름을 입력합니다.  
   
@@ -583,11 +583,11 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="configure-packages-page"></a>패키지 구성 페이지  
  **패키지 구성** 페이지를 사용하여 패키지 구성을 편집할 수 있습니다.  
   
-#### <a name="options"></a>Options  
+#### <a name="options"></a>옵션  
  **구성 파일**  
  목록에서 파일을 선택하여 구성 파일의 내용을 편집합니다.  
   
- **Related Topics:** [Create Package Configurations](../../integration-services/packages/create-package-configurations.md)  
+ **관련 항목:** [패키지 구성 만들기](../../integration-services/packages/create-package-configurations.md)  
   
  **경로**  
  구성할 속성의 경로를 봅니다.  
@@ -619,7 +619,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="deploy-ssis-packages-page"></a>SSIS 패키지 배포 페이지  
  **SSIS 패키지 배포** 페이지를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 및 해당 종속성을 설치할 위치를 지정할 수 있습니다.  
   
-#### <a name="options"></a>Options  
+#### <a name="options"></a>옵션  
  **파일 시스템 배포**  
  파일 시스템에서 지정한 폴더에 패키지 및 종속성을 배포합니다.  
   
@@ -644,7 +644,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="select-installation-folder-page"></a>설치 폴더 선택 페이지  
  **설치 폴더 선택** 페이지를 사용하여 패키지 및 패키지의 종속성을 설치할 파일 시스템 폴더를 지정할 수 있습니다.  
   
-#### <a name="options"></a>Options  
+#### <a name="options"></a>옵션  
  **Folder**  
  패키지 및 해당 패키지의 종속성을 복사할 경로 및 폴더를 지정합니다.  
   
@@ -660,7 +660,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="specify-target-sql-server-page"></a>대상 SQL Server 지정 페이지  
  **대상 SQL Server 지정** 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 패키지를 배포할 수 있는 옵션을 지정할 수 있습니다.  
   
-#### <a name="options"></a>Options  
+#### <a name="options"></a>옵션  
  **서버 이름**  
  패키지를 배포할 서버의 이름을 지정합니다.  
   
@@ -682,7 +682,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **SSIS 패키지** 대화 상자에서 폴더를 선택하려면 찾아보기(...)를 클릭합니다. 그러나 이 대화 상자에서는 기본 폴더를 선택할 수 없습니다. 기본 폴더를 사용하려면 입력란에 "/"를 입력해야 합니다.  
   
 > [!NOTE]  
->  유효한 패키지 경로를 입력하지 않으면 "인수 중 하나가 올바르지 않습니다."라는 오류 메시지가 나타납니다.  
+>  유효한 패키지 경로를 입력하지 않으면 "인수 중 하나가 올바르지 않습니다"라는 오류 메시지가 나타납니다.  
   
  **암호화에 서버 저장소 사용**  
  패키지를 보호하기 위해 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 보안 기능을 사용하려면 선택합니다.  

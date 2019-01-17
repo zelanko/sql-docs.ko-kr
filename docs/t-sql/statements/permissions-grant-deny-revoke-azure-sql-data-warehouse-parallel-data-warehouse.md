@@ -14,14 +14,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ee7b41d2c6e4584bd2dd48dec09fbe71b5150d13
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6f73b9d5160989537de72192774bbd7c0157fa29
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696781"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979679"
 ---
-# <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>사용 권한: GRANT, DENY, REVOKE(Azure SQL Data Warehouse, 병렬 데이터 웨어하우스)
+# <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>사용 권한: GRANT, DENY, REVOKE(Azure SQL Data Warehouse, 병렬 Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   보안 개체(예: 데이터베이스, 테이블, 뷰)에 보안 주체(로그인, 데이터베이스 사용자 또는 데이터베이스 역할)에 대한 사용 권한(예: **UPDATE**)을 부여 또는 거부하려면 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**GRANT** 및 **DENY** 문을 사용합니다. **REVOKE**를 사용하여 권한 부여 또는 거부를 제거합니다.  
@@ -127,7 +127,7 @@ REVOKE
  암시적 권한은 또한 포괄적 또는 상위 권한을 상속할 수도 있습니다. 예를 들어, 테이블에 대한 **UPDATE** 권한은 해당 테이블, 또는 해당 테이블의 **CONTROL** 권한을 포함하는 스키마의 **UPDATE** 권한을 가짐으로써 상속할 수 있습니다,  
   
 ### <a name="ownership-chaining"></a>소유권 체인  
- 여러 데이터베이스 개체가 서로를 순차적으로 액세스하는 경우 이러한 시퀀스를 *체인*이라고 합니다. 이러한 체인이 독립적으로 존재하지는 않지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 체인에 있는 링크를 통과할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 개체를 개별적으로 액세스할 때와는 달리 구성된 개체에 대한 사용 권한을 평가합니다. 소유권 체인은 보안 관리에 중요한 영향을 줍니다. 소유권 체인에 대한 자세한 내용은 [소유권 체인](https://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx) 및 [지침: 소유권 체인 및 컨텍스트 스위칭 ](../../relational-databases/tutorial-ownership-chains-and-context-switching.md)을 참조하세요.  
+ 여러 데이터베이스 개체가 서로를 순차적으로 액세스하는 경우 이러한 시퀀스를 *체인*이라고 합니다. 이러한 체인이 독립적으로 존재하지는 않지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 체인에 있는 링크를 통과할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 개체를 개별적으로 액세스할 때와는 달리 구성된 개체에 대한 사용 권한을 평가합니다. 소유권 체인은 보안 관리에 중요한 영향을 줍니다. 소유권 체인에 대한 자세한 내용은 [소유권 체인](https://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx) 및 [자습서: 소유권 체인 및 컨텍스트 전환](../../relational-databases/tutorial-ownership-chains-and-context-switching.md)을 참조하세요.  
   
 ## <a name="permission-list"></a>허가 목록  
   
@@ -235,7 +235,7 @@ REVOKE
   
 -   UPDATE  
   
--   REFRENCES  
+-   REFERENCES  
   
  각 사용 권한 유형에 대한 정의는 [사용 권한(데이터베이스 엔진)](https://msdn.microsoft.com/library/ms191291.aspx)을 참조하세요.  
   
@@ -290,7 +290,7 @@ GRANT  VIEW DEFINITION ON LOGIN::Ted TO Mary;
 GRANT VIEW DEFINITION ON USER::[Ted] TO Mary;  
 ```  
   
-### <a name="d-granting-denying-and-revoking-a-schema-permission"></a>4. 스키마 사용 권한 부여, 거부 및 취소  
+### <a name="d-granting-denying-and-revoking-a-schema-permission"></a>D. 스키마 사용 권한 부여, 거부 및 취소  
  다음 **GRANT** 문은 Yuen에게 dbo 스키마 내의 모든 테이블 또는 뷰에서 데이터를 선택할 수 있는 기능을 부여합니다.  
   
 ```  
@@ -309,7 +309,7 @@ DENY SELECT ON SCHEMA::dbo TO [Yuen];
 REVOKE SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
-### <a name="e-demonstrating-the-optional-object-clause"></a>5. 선택적 OBJECT :: 절 표시  
+### <a name="e-demonstrating-the-optional-object-clause"></a>E. 선택적 OBJECT :: 절 표시  
  OBJECT는 사용 권한 문에 대한 기본 클래스이므로 다음 두 명령문은 동일합니다. **OBJECT::** 절은 선택 사항입니다.  
   
 ```  

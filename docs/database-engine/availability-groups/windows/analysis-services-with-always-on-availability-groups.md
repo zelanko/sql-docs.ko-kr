@@ -1,6 +1,7 @@
 ---
-title: Always On 가용성 그룹이 포함된 Analysis Services | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹이 포함된 Analysis Services
+description: Always On 가용성 그룹을 고가용성 솔루션으로 사용하는 경우 해당 그룹의 데이터베이스를 Analysis Services 테이블 형식 또는 다차원 솔루션의 데이터 원본으로 사용할 수 있습니다.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 252353bd71cbbc5d3cdeb18ae0bcf49b7be440b0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 81fd6e4a9be7b27190491c6a36ef536e3c1ba669
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395456"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212492"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Always On 가용성 그룹이 포함된 Analysis Services
 
@@ -180,7 +181,7 @@ ms.locfileid: "52395456"
   
      추적 창에 **Microsoft SQL Server Analysis Services**애플리케이션의 이벤트가 표시됩니다. 보조 복제본을 호스팅하는 서버 인스턴스의 데이터베이스에서 데이터를 검색하는 **SELECT** 문이 표시되면 수신기를 통해 보조 복제본에 연결되었음을 알 수 있습니다.  
   
-#### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>2단계: 계획된 장애 조치(failover)를 수행하여 구성 테스트  
+#### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>2단계: 계획된 장애 조치를 수행하여 구성 테스트  
   
 1.  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 에서 주 복제본 및 보조 복제본 둘 다 동기 커밋 모드로 구성되었고 현재 동기화되어 있는지 확인합니다.  
   
@@ -214,7 +215,7 @@ ms.locfileid: "52395456"
 ##  <a name="bkmk_whathappens"></a> 장애 조치 발생 후의 상황  
  장애 조치(failover) 중에 보조 복제본은 주 역할로 전환되고 이전의 주 복제본은 보조 역할로 전환됩니다. 모든 클라이언트 연결이 종료되고 가용성 그룹 수신기의 소유권은 주 복제본 역할과 함께 새 SQL Server 인스턴스로 옮겨지며 수신기 엔드포인트는 새 인스턴스의 가상 IP 주소 및 TCP 포트에 바인딩됩니다. 자세한 내용은 이 항목 뒷부분에 있는 [가용성 복제본에 대한 클라이언트 연결 액세스 정보&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)와 같은 시스템 데이터베이스, 사용자 데이터베이스를 비롯하여 보조 복제본을 호스트하는 서버 인스턴스의 읽기/쓰기 데이터베이스에는 데이터를 쓸 수 있습니다.  
   
- 처리 중 장애 조치(failover)가 발생하면 Analysis Services의 로그 파일 또는 출력 창에 다음과 같은 오류가 나타납니다. "OLE DB 또는 ODBC 오류: 통신 연결 오류입니다. 08S01; TPC 공급자: 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다. ; 08S01."  
+ 처리 중 장애 조치가 발생하면 Analysis Services의 로그 파일 또는 출력 창에 다음과 같은 오류가 나타납니다. "OLE DB 오류: OLE DB 또는 ODBC 오류: 통신 연결 오류입니다. 08S01; TPC 공급자: 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다. ; 08S01."  
   
  이 오류는 잠시 기다렸다가 다시 시도하면 해결됩니다. 가용성 그룹이 읽기 가능한 보조 복제본에 대해 올바로 구성된 경우 처리를 재시도하면 새 보조 복제본에서 처리가 재개됩니다.  
   
@@ -223,15 +224,15 @@ ms.locfileid: "52395456"
 ##  <a name="bkmk_writeback"></a> Always On 가용성 데이터베이스를 사용할 때의 쓰기 저장  
  쓰기 저장은 Excel의 가상 분석을 지원하는 Analysis Services 기능입니다. 또한 이 기능은 사용자 지정 애플리케이션에서 예산 작성 및 예측 태스크에 일반적으로 사용됩니다.  
   
- 쓰기 저장을 지원하려면 READWRITE 클라이언트 연결이 필요합니다. Excel에서 읽기 전용 연결에 대한 쓰기 저장을 시도하면 "외부 데이터 원본에서 데이터를 검색할 수 없습니다." 오류가 발생합니다.  
+ 쓰기 저장을 지원하려면 READWRITE 클라이언트 연결이 필요합니다. Excel에서 읽기 전용 연결에 대한 쓰기 저장을 시도하면 다음과 같은 오류가 발생합니다. 오류가 발생합니다. 오류가 발생합니다.  
   
  항상 읽기 가능한 보조 복제본에 액세스하도록 연결을 구성했다면 이제 주 복제본에 대한 READWRITE 연결을 사용하는 새 연결을 구성해야 합니다.  
   
  이렇게 하려면 Analysis Services 모델에 읽기/쓰기 연결을 지원하는 데이터 원본을 추가로 만들어야 합니다. 추가 데이터 원본을 만들 때는 읽기 전용 연결에 지정한 동일한 수신기 이름 및 데이터베이스를 사용합니다. 단, **애플리케이션 의도**는 수정하지 않고 READWRITE 연결을 지원하는 기본값을 그대로 둡니다. 이제 읽기/쓰기 데이터 원본을 기반으로 하는 새 팩트 또는 차원 테이블을 데이터 원본 뷰에 추가하고, 새 테이블에 쓰기 저장을 설정할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
- [활성 보조: 읽기 가능한 보조 복제본&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
+ [활성 보조 복제본: 읽기 가능한 보조 복제본&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Always On 가용성 그룹을 통한 운영 문제에 대한 Always On 정책&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
  [데이터 원본 만들기&#40;SSAS 다차원&#41;](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [차원 쓰기 저장(writeback) 설정](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  

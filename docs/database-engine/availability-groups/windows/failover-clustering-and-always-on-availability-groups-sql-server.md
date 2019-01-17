@@ -1,6 +1,7 @@
 ---
-title: 장애 조치 클러스터링 및 Always On 가용성 그룹(SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 장애 조치(failover) 클러스터링과 가용성 그룹 결합
+description: SQL Server 장애 조치(failover) 클러스터 인스턴스의 기능과 Always On 가용성 그룹의 기능을 결합하여 고가용성 및 재해 복구 기능을 향상시킵니다.
+ms.custom: seodec18
 ms.date: 07/02/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6e123661aa5b446c433b5e8813c58696bd5a7921
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0db7b259158d9d7404230405c3e72bf78e93b822
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605453"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213042"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>장애 조치(failover) 클러스터링 및 Always On 가용성 그룹(SQL Server)
 
@@ -121,7 +122,7 @@ ms.locfileid: "51605453"
   
 -   **백서:**  
   
-     [Always On 아키텍처 가이드: 장애 조치(failover) 클러스터 인스턴스 및 가용성 그룹을 사용하여 고가용성 및 재해 복구 솔루션 구축](https://msdn.microsoft.com/library/jj215886.aspx)  
+     [Always On 아키텍처 가이드: 장애 조치(failover) 클러스터 인스턴스 및 가용성 그룹을 사용하여 고가용성 및 재해 복구 솔루션 빌드](https://msdn.microsoft.com/library/jj215886.aspx)  
   
      [고가용성 및 재해 복구를 위한 Microsoft SQL Server Always On 솔루션 가이드](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

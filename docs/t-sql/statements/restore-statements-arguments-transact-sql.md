@@ -16,17 +16,17 @@ ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2d80647230c13b31ca9e5ae540798609fc93f527
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 78dfe43617d9a519b479e53abbabcf311d726b1d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527399"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980519"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 문 - 인수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-이 항목에서는 RESTORE {DATABASE|LOG} 문과 관련 보조 문 집합인 RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY 및 RESTORE VERIFYONLY의 구문 섹션에 설명되어 있는 인수에 대해 설명합니다. 대부분의 인수는 이러한 6개의 문에 사용되는 경우에만 지원됩니다. 각 인수에 대한 지원은 인수 설명에 나와 있습니다.  
+이 항목에서는 RESTORE {DATABASE|LOG} 문과 관련 보조 문 집합인 RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY 및 RESTORE VERIFYONLY 등이 있습니다. 대부분의 인수는 이러한 6개의 문에 사용되는 경우에만 지원됩니다. 각 인수에 대한 지원은 인수 설명에 나와 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,14 +47,14 @@ ms.locfileid: "52527399"
   
 ## <a name="arguments"></a>인수  
  DATABASE  
- **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **지원 요소:**  [복원](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  대상 데이터베이스를 지정합니다. 파일 및 파일 그룹의 목록이 지정되어 있으면 해당 파일 및 파일 그룹만 복원됩니다.  
   
  전체 또는 대량 로그 복구 모델을 사용하는 데이터베이스의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 대개 데이터베이스를 복원하기 전에 비상 로그 백업을 수행해야 합니다. RESTORE DATABASE 문에 데이터 백업이 종료된 후 발생한 시간 또는 트랜잭션을 지정해야 하는 WITH REPLACE나 WITH STOPAT 절이 포함되어 있지 않은 경우 비상 로그 백업을 먼저 수행하지 않고 데이터베이스를 복원하면 오류가 발생합니다. 비상 로그 백업에 대한 자세한 내용은 [비상 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)을 참조하세요.  
   
  LOG  
- **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **지원 요소:**  [복원](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  해당 데이터베이스에 트랜잭션 로그 백업을 적용하도록 지정합니다. 순차적으로 트랜잭션 로그를 적용해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 트랜잭션 로그가 올바른 시퀀스로 해당 데이터베이스로 로드될 수 있도록 백업한 트랜잭션 로그를 확인합니다. 여러 트랜잭션 로그를 적용하려면 마지막 복원 작업을 제외한 모든 복원 작업에 NORECOVERY 옵션을 사용하십시오.  
   
@@ -64,12 +64,12 @@ ms.locfileid: "52527399"
  자세한 내용은 [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)을 참조하세요.  
   
  { _database\_name_ | **@**_database\_name\_var_}  
- **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **지원 요소:**  [복원](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  로그나 전체 데이터베이스가 복원되는 데이터베이스입니다. 변수(**@**_database\_name\_var_)로 제공된 경우, 이 이름은 문자열 상수(**@**_database\_name\_var_ = *database*\_*name*)나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
   
  \<file_or_filegroup_or_page> [ **,**...*n* ]  
- **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **지원 요소:**  [복원](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  RESTORE DATABASE 또는 RESTORE LOG 문에 포함할 논리적 파일이나 파일 그룹 또는 페이지의 이름을 지정합니다. 파일 또는 파일 그룹의 목록을 지정할 수 있습니다.  
   
@@ -117,23 +117,23 @@ PAGE
  [ **,**...*n* ]  
  여러 개의 파일 및 파일 그룹과 페이지를 쉼표로 구분된 목록에 지정할 수 있음을 나타내는 자리 표시자입니다. 사용할 수 있는 숫자에는 제한이 없습니다.  
   
-FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> } 일반적으로 백업을 복원할 백업 장치를 지정합니다. 또는 RESTORE DATABASE 문의 FROM 절에서 데이터베이스를 되돌릴 데이터베이스 스냅숏의 이름을 지정할 수도 있습니다. 이런 경우 WITH 절은 사용할 수 없습니다.  
+FROM { \<backup_device&gt; [ **,**...*n* ]| \<database_snapshot&gt; } 일반적으로 백업을 복원할 백업 디바이스를 지정합니다. 또는 RESTORE DATABASE 문의 FROM 절에서 데이터베이스를 되돌릴 데이터베이스 스냅숏의 이름을 지정할 수도 있습니다. 이런 경우 WITH 절은 사용할 수 없습니다.  
   
  FROM 절을 생략하면 백업이 복원되지 않습니다. 대신 데이터베이스가 복원됩니다. 이렇게 하면 NORECOVERY 옵션으로 복원된 데이터베이스를 복구하거나 대기 중인 서버로 전환할 수 있습니다. FROM 절을 생략하면 WITH 절에서 NORECOVERY, RECOVERY 또는 STANDBY를 지정해야 합니다.  
   
- \<backup_device> [ **,**...*n* ] 복원 작업에 사용할 논리적 또는 물리적 백업 장치를 지정합니다.  
+ \<backup_device&gt; [ **,**...*n* ] 복원 작업에 사용할 논리적 또는 물리적 백업 디바이스를 지정합니다.  
   
- **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **지원 요소:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
- \<backup_device>::= 다음과 같이 백업 작업에 사용할 논리적 백업 장치나 물리적 백업 장치를 지정합니다.  
+ \<backup_device&gt;::= 다음과 같이 백업 작업에 사용할 논리적 백업 디바이스나 물리적 백업 디바이스를 지정합니다.  
   
  { _logical\_backup\_device\_name_ | **@**_logical\_backup\_device\_name\_var_ }  
  데이터베이스가 복원되는 **sp_addumpdevice**에서 만든 백업 디바이스의 논리적 이름입니다. 이 논리적 이름은 식별자에 대한 규칙을 따라야 합니다. 변수(**@**_logical\_backup\_device\_name\_var_)로 제공한 경우 백업 디바이스 이름은 문자열 상수(**@**_logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_)나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
   
  {DISK | TAPE } **=** { **'**_physical\_backup\_device\_name_**'** | **@**_physical\_backup\_device\_name\_var_ }  
- 지정한 디스크나 테이프 장치에서 백업을 복원할 수 있습니다. 디스크나 테이프의 장치 유형은 전체 경로와 파일 이름을 포함한 장치의 실제 이름으로 지정해야 합니다. `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` 또는 `TAPE ='\\\\.\TAPE0'`. 변수(**@**_physical\_backup\_device\_name\_var_)로 지정한 경우 디바이스 이름은 문자열 상수(**@**_physical\_backup\_device\_name\_var_ = '*physcial_backup_device_name*')나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
+ 지정한 디스크나 테이프 장치에서 백업을 복원할 수 있습니다. 디스크나 테이프의 디바이스 유형은 전체 경로와 파일 이름을 포함한 디바이스의 실제 이름으로 지정해야 합니다. `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` 또는 `TAPE ='\\\\.\TAPE0'`. 변수(**@**_physical\_backup\_device\_name\_var_)로 지정한 경우 디바이스 이름은 문자열 상수(**@**_physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*')나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
   
- 네트워크 서버에 UNC 이름(컴퓨터 이름 포함)을 사용하는 경우 디스크의 장치 유형을 지정합니다. UNC 이름을 사용하는 방법에 대한 자세한 내용은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
+ 네트워크 서버에 UNC 이름(컴퓨터 이름 포함)을 사용하는 경우 디스크의 장치 유형을 지정합니다. UNC 이름을 사용하는 방법에 대한 자세한 내용은 [백업 디바이스&amp;#40;SQL Server&amp;#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
   
  RESTORE 작업을 수행하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 계정에 원격 컴퓨터나 네트워크 서버에 대한 READ 권한이 있어야 합니다.  
   
@@ -152,7 +152,7 @@ FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> } 일반적으로 
 >  미러된 미디어 세트의 백업을 복원하려는 경우 각 미디어 패밀리에 하나의 미러만 지정할 수 있습니다. 그러나 오류가 발생할 때 다른 미러가 있으면 일부 복원 문제를 빨리 해결할 수 있습니다. 손상된 미디어 볼륨은 다른 미러에서 상응하는 볼륨으로 대체할 수 있습니다. 오프라인 복원의 경우 미디어 패밀리보다 적은 수의 장치에서 복원할 수 있지만 각 패밀리는 한 번만 처리됩니다.  
   
 \<database_snapshot>::=  
-**지원 문:**  [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)  
+**지원 요소:**  [데이터베이스 복원](../../t-sql/statements/restore-statements-transact-sql.md)  
   
 DATABASE_SNAPSHOT **=**_database\_snapshot\_name_  
  데이터베이스를 *database_snapshot_name*으로 지정한 데이터베이스 스냅숏으로 되돌립니다. DATABASE_SNAPSHOT 옵션은 전체 데이터베이스 복원에만 사용할 수 있습니다. 되돌리기 작업에서는 데이터베이스 스냅숏이 전체 데이터베이스 백업을 대신합니다.  
@@ -166,7 +166,7 @@ DATABASE_SNAPSHOT **=**_database\_snapshot\_name_
 >  여기서 WITH 옵션은 [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md)의 "구문" 섹션에서와 동일한 순서로 구성됩니다.  
   
  PARTIAL  
- **지원 문:**  [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **지원 요소:**  [데이터베이스 복원](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  주 파일 그룹과 지정한 보조 파일 그룹을 복원하는 부분 복원 작업을 지정합니다. PARTIAL 옵션은 암시적으로 주 파일 그룹을 선택하므로 FILEGROUP = 'PRIMARY'를 지정할 필요가 없습니다. 보조 파일 그룹을 복원하려면 FILE 옵션이나 FILEGROUP 옵션을 사용하여 명시적으로 파일 그룹을 지정해야 합니다.  
   
@@ -175,7 +175,7 @@ DATABASE_SNAPSHOT **=**_database\_snapshot\_name_
  PARTIAL 옵션은 증분 복원의 초기 단계를 시작합니다. 나머지 파일 그룹은 나중에 복원할 수 있습니다. 자세한 내용은 [증분 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)을 참조하세요.  
   
  [ **RECOVERY** | NORECOVERY | STANDBY ]  
- **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **지원 요소:**  [복원](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  **RECOVERY**  
  복원 작업에서 커밋되지 않은 트랜잭션을 모두 롤백하도록 지정합니다. 복원을 수행한 다음 데이터베이스를 사용할 수 있습니다. NORECOVERY, RECOVERY와 STANDBY를 지정하지 않으면 RECOVERY가 기본값이 됩니다.  
@@ -215,7 +215,7 @@ STANDBY **=**_standby\_file\_name_
  RECOVERY 옵션과 NORECOVERY 옵션에 대한 비교는 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)의 "주의" 섹션을 참조하세요.  
   
 LOADHISTORY  
- **지원 문:**  [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
+ **지원 요소:**  [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
  복원 작업에서 **msdb** 기록 테이블로 정보를 로드하도록 지정합니다. LOADHISTORY 옵션은 확인하려는 단일 백업 세트에 대해 미디어 세트에 저장된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에 대한 정보를 **msdb** 데이터베이스의 백업 및 복원 기록 테이블로 로드합니다. 기록 테이블에 대한 자세한 내용은 [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)을 참조하세요.  
   
@@ -226,7 +226,7 @@ LOADHISTORY
  이러한 옵션은 복원 작업의 동작에 영향을 줍니다.  
   
 MOVE **'**_logical\_file\_name\_in\_backup_**'** TO **'**_operating\_system\_file\_name_**'** [ ...*n* ]  
- **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
+ **지원 요소:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
  *logical_file_name_in_backup*에 논리적 이름이 지정된 데이터 또는 로그 파일을 *operating_system_file_name*에 지정된 위치로 복원하여 제거하도록 지정합니다. 백업 세트에 있는 데이터 또는 로그 파일의 논리적 파일 이름은 백업 세트 생성 시 데이터베이스의 해당 논리적 이름과 일치합니다.  
   
@@ -246,17 +246,17 @@ MOVE **'**_logical\_file\_name\_in\_backup_**'** TO **'**_operating\_system\_fil
  자세한 내용은 [백업 및 복원으로 데이터베이스 복사](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)를 참조하세요.  
   
 CREDENTIAL  
- **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **지원 요소:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Microsoft Azure Blob Storage 서비스에서 백업을 복원할 때에만 사용됩니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 until[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]을 사용하는 경우, URL에서 복원할 때 단일 장치에서만 복원할 수 있습니다. URL에서 복원할 때 여러 디바이스에서 복원하려면 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)까지 사용해야 하며 SAS(공유 액세스 서명) 토큰을 사용해야 합니다. 자세한 내용은 [SQL Server Managed Backup을 Microsoft Azure에 사용](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) 및 [Powershell 포함 Azure Storage에서 SAS(공유 액세스 서명)로 SQL 자격 증명 단순화](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)를 참조하세요.  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 until[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]을 사용하는 경우, URL에서 복원할 때 단일 디바이스에서만 복원할 수 있습니다. URL에서 복원할 때 여러 디바이스에서 복원하려면 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)까지 사용해야 하며 SAS(공유 액세스 서명) 토큰을 사용해야 합니다. 자세한 내용은 [SQL Server Managed Backup을 Microsoft Azure에 사용](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) 및 [Powershell 포함 Azure Storage에서 SAS(공유 액세스 서명)로 SQL 자격 증명 단순화](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)를 참조하세요.  
   
  REPLACE  
- **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **지원 요소:**  [복원](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  같은 이름을 가진 다른 데이터베이스가 이미 있을 경우에도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지정한 데이터베이스 및 관련 파일을 만들도록 지정합니다. 그런 경우에는 기존 데이터베이스가 삭제됩니다. REPLACE 옵션을 지정하지 않으면 실수로 다른 데이터베이스를 덮어쓰지 않도록 방지하는 안정성 검사가 수행됩니다. 안정성 검사를 수행하면 다음과 같은 경우 RESTORE DATABASE 문이 데이터베이스를 현재 서버로 복원하지 않습니다.  
   
@@ -271,12 +271,12 @@ CREDENTIAL
  REPLACE 옵션 사용에 대한 자세한 내용은 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)을 참조하세요.  
   
 RESTART  
- **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **지원 요소:**  [복원](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 중단된 복원 작업을 다시 시작하도록 지정합니다. RESTART는 복원 작업이 중단된 시점에서 복원 작업을 다시 시작합니다.  
   
 RESTRICTED_USER  
- **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md).  
+ **지원 요소:**  [복원](../../t-sql/statements/restore-statements-transact-sql.md).  
   
  새로 복원된 데이터베이스에 대한 액세스를 **db_owner**, **dbcreator** 또는 **sysadmin** 역할의 멤버로 제한합니다.  RESTRICTED_USER는 DBO_ONLY 옵션 대신 사용됩니다. DBO_ONLY는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서 더 이상 사용되지 않습니다.  
   
@@ -286,7 +286,7 @@ RESTRICTED_USER
  이러한 옵션은 복원할 백업이 포함된 백업 세트에서 작동합니다.  
   
 FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }  
- **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **지원 요소:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  복원할 백업 세트를 나타냅니다. 예를 들어 *backup_set_file_number* 가 **1** 인 경우는 백업 미디어의 첫 번째 백업 세트를 나타내고 *backup_set_file_number* 가 **2** 인 경우는 두 번째 백업 세트를 나타냅니다. 백업 세트의 *backup_set_file_number* 는 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 문을 사용하여 가져올 수 없습니다.  
   
@@ -296,7 +296,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
 >  이 FILE 옵션은 데이터베이스 파일을 지정하기 위한 FILE 옵션과 관련이 없습니다. FILE **=** { *logical_file_name_in_backup* | **@**_logical\_file\_name\_in\_backup\_var_ }.  
   
  PASSWORD  **=** { *password* | **@**_password\_variable_ }  
- **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **지원 요소:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  백업 세트에 대한 암호를 제공합니다. 백업 세트 암호는 문자열입니다.  
   
@@ -312,7 +312,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  이러한 옵션은 전체 미디어 세트에서 작동합니다.  
   
  MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_}  
- **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **지원 요소:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  미디어에 대한 이름을 지정합니다. 제공된 미디어 이름은 백업 볼륨의 미디어 이름과 일치해야 합니다. 그렇지 않으면 복원 작업이 종료됩니다. RESTORE 문에서 미디어 이름을 지정하지 않을 경우에는 백업 볼륨의 미디어 이름과 일치하는지 확인하지 않습니다.  
   
@@ -320,7 +320,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
 >  백업과 복원 작업에서 미디어 이름을 항상 사용하면 복원 작업을 위해 선택한 미디어에 대한 추가 안정성 검사를 제공합니다.  
   
  MEDIAPASSWORD **=** { *mediapassword* | **@**_mediapassword\_variable_ }  
- **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **지원 요소:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  미디어 세트에 대한 암호를 제공합니다. 미디어 세트 암호는 문자열입니다.  
   
@@ -333,7 +333,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
 >  이 암호는 미디어 세트에 대한 보호 수준이 낮습니다. 자세한 내용은 관련 문에 대한 "사용 권한" 섹션을 참조하십시오.  
   
  BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ }  
- **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **지원 요소:**  [복원](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  물리적 블록 크기(바이트)를 지정합니다. 지원되는 크기는 512, 1024, 2048, 4096, 8192, 16384, 32768 및 65536(64KB) 바이트입니다. 테이프 장치의 기본값은 65536이고 그렇지 않은 경우에는 512입니다. 일반적으로 RESTORE에서 장치에 적합한 블록 크기를 자동으로 선택하기 때문에 이 옵션은 필요하지 않습니다. 명시적으로 지정된 블록 크기는 자동 선택된 블록 크기보다 우선 적용됩니다.  
   
@@ -346,14 +346,14 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  이 옵션을 사용하면 백업 장치로부터의 데이터 전송을 최적화할 수 있습니다.  
   
  BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }  
- **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **지원 요소:**  [복원](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  복원 작업에 사용되는 I/O 버퍼의 총 수를 지정합니다. 임의의 양의 정수를 지정할 수 있지만 버퍼 수가 많으면 Sqlservr.exe 프로세스의 부적절한 가상 주소 공간으로 인해 "메모리가 부족합니다"라는 오류가 발생할 수 있습니다.  
   
  버퍼에 사용되는 총 공간은 다음 식으로 결정됩니다. _buffercount_**\**_maxtransfersize_.  
   
  MAXTRANSFERSIZE **=** { _maxtransfersize_ | **@**_maxtransfersize\_variable_ }  
- **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **지원 요소:**  [복원](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  백업 미디어와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 간에 사용되는 가장 큰 전송 단위(바이트)를 지정합니다. 가능한 값은 최대 4194304바이트(4MB)까지 65536바이트(64KB)의 배수입니다.  
 > [!NOTE]  
@@ -363,7 +363,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  이러한 옵션을 사용하면 복원 작업에 대해 백업 체크섬을 설정할 수 있는지 여부와 오류 발생 시 해당 작업을 중지할지 여부를 결정할 수 있습니다.    
   
  { CHECKSUM | NO_CHECKSUM }  
- **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **지원 요소:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  기본 동작은 체크섬이 있는 경우 체크섬을 확인하고 없는 경우에는 확인하지 않고 계속 진행하는 것입니다.  
   
@@ -381,7 +381,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  복원 작업에서 체크섬 유효성 검사를 명시적으로 비활성화합니다.  
   
  { **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR }  
- **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **지원 요소:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  STOP_ON_ERROR  
  첫 번째 오류가 발생하면 복원 작업이 중지하도록 지정합니다. 기본값으로 CONTINUE_AFTER_ERROR를 사용하는 VERIFYONLY를 제외하면 RESTORE의 기본 동작입니다.  
@@ -393,7 +393,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
   
 ##### <a name="filestream-options"></a>FILESTREAM Options  
  FILESTREAM ( DIRECTORY_NAME =*directory_name* )  
- **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
+ **지원 요소:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
   
@@ -403,7 +403,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  이러한 옵션을 사용하면 백업 장치로부터의 데이터 전송을 모니터링할 수 있습니다.  
   
  STATS [ **=** *percentage* ]  
- **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
+ **지원 요소:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
  새로 백분율이 완료될 때마다 메시지를 표시하여 진행 상태를 측정하는 데 사용됩니다. *percentage*를 생략하면 대략 10%가 완료될 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 메시지를 표시합니다.  
   
@@ -416,12 +416,12 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  이러한 옵션은 테이프 장치에만 사용됩니다. 테이프가 아닌 장치를 사용하는 경우 이 옵션은 무시됩니다.  
   
  REWIND  
- **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **지원 요소:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 테이프를 해제한 다음 되감도록 지정합니다. 기본값은 REWIND입니다.  
   
  NOREWIND  
- **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
+ **지원 요소:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
  다른 모든 복원 문에서 NOREWIND를 지정하면 오류가 발생합니다.  
   
@@ -430,10 +430,10 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  NOREWIND는 NOUNLOAD를 의미하며 두 옵션은 단일 RESTORE 문 내에서 호환되지 않습니다.  
   
 > [!NOTE]  
->  NOREWIND를 사용하는 경우 같은 프로세스에서 실행 중인 BACKUP 또는 RESTORE 문이 REWIND 또는 UNLOAD 옵션을 사용하거나 서버 인스턴스가 종료될 때까지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 테이프 드라이브에 대한 소유권을 보유합니다. 테이프를 열어 두면 다른 프로세스에서 테이프를 액세스하는 것을 방지합니다. 열린 테이프 목록을 표시하고 열린 테이프를 닫는 방법은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
+>  NOREWIND를 사용하는 경우 같은 프로세스에서 실행 중인 BACKUP 또는 RESTORE 문이 REWIND 또는 UNLOAD 옵션을 사용하거나 서버 인스턴스가 종료될 때까지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 테이프 드라이브에 대한 소유권을 보유합니다. 테이프를 열어 두면 다른 프로세스에서 테이프를 액세스하는 것을 방지합니다. 열린 테이프 목록을 표시하고 열린 테이프를 닫는 방법은 [백업 디바이스&amp;#40;SQL Server&amp;#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
   
  { **UNLOAD** | NOUNLOAD }  
- **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
+ **지원 요소:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  이러한 옵션은 테이프 장치에만 사용됩니다. 테이프가 아닌 장치를 사용하는 경우 이 옵션은 무시됩니다.  
   
@@ -450,7 +450,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  이 옵션은 백업을 만들 때 데이터베이스가 복제된 경우에만 해당합니다.  
   
  KEEP_REPLICATION  
- **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **지원 요소:**  [복원](../../t-sql/statements/restore-statements-transact-sql.md)  
   
 로그 전달에서 작업할 복제를 설정할 때 KEEP_REPLICATION을 사용합니다. 그러면 대기 중인 서버에서 데이터베이스 백업이나 로그 백업이 복원되고 데이터베이스가 복구될 때 복제 설정이 제거되지 않도록 할 수 있습니다. NORECOVERY 옵션을 사용하여 백업을 복원하는 동안 이 옵션을 지정할 수 없습니다. 복원 후 복제가 제대로 실행되도록 하려면 다음을 수행하십시오.  
   
@@ -462,7 +462,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  이 옵션은 백업을 만들 때 데이터베이스에 변경 데이터 캡처를 사용하도록 설정된 경우에만 해당합니다.  
   
  KEEP_CDC  
- **지원 문:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **지원 요소:**  [복원](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  데이터베이스 백업 또는 로그 백업을 다른 서버에서 복원하여 데이터베이스를 복구하는 경우 변경 데이터 캡처 설정이 제거되지 않도록 KEEP_CDC를 사용해야 합니다. NORECOVERY 옵션을 사용하여 백업을 복원하는 동안 이 옵션을 지정할 수 없습니다.  
   
@@ -474,7 +474,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 메시지 배달을 사용 또는 사용하지 않도록 설정하거나 새 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 식별자를 설정합니다. 이 옵션은 백업을 만들 때 데이터베이스에 대해 [!INCLUDE[ssSB](../../includes/sssb-md.md)]를 사용하도록 설정(활성화)한 경우에만 적용됩니다.  
   
  { ENABLE_BROKER  | ERROR_BROKER_CONVERSATIONS  | NEW_BROKER }  
- **지원 문:**  [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)  
+ **지원 요소:**  [데이터베이스 복원](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  ENABLE_BROKER  
  복원 작업이 완료된 후 즉시 메시지를 보낼 수 있도록 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 메시지 배달을 지정합니다. 기본적으로 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 메시지 배달은 복원 작업 동안 해제됩니다. 데이터베이스에는 기존 Service Broker 식별자가 유지됩니다.  
@@ -486,7 +486,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  데이터베이스에 새 Service Broker 식별자가 할당되도록 지정합니다. 데이터베이스는 새 Service Broker가 될 것으로 간주되기 때문에 데이터베이스 내의 기존 대화는 종료 대화 메시지 없이 즉시 제거됩니다. 이전 Service Broker 식별자를 참조하는 경로는 새 식별자로 다시 만들어야 합니다.  
   
 #### <a name="pointintimewithoptions"></a>\<point_in_time_WITH_options>  
- **지원 문:** [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md) 및 전체 또는 대량 로그된 복구 모델에 한함.  
+ **지원 요소:**  [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md) 및 전체 또는 대량 로그된 복구 모델에 한함.  
   
  STOPAT, STOPATMARK 또는 STOPBEFOREMARK 절에 대상 복구 지점을 지정 데이터베이스를 특정 지정 시간 또는 트랜잭션으로 복원할 수 있습니다. 지정된 시간 또는 트랜잭션은 항상 로그 백업에서 복원됩니다. 복원 순서의 모든 RESTORE LOG 문에서 동일한 STOPAT, STOPATMARK 또는 STOPBEFOREMARK 절에 대상 시간이나 트랜잭션을 지정해야 합니다.  
   
@@ -577,7 +577,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
 >  백업 세트를 지정하기 위한 FILE 옵션은 데이터베이스 파일을 지정하기 위한 FILE 옵션과 관련이 없습니다. FILE **=** { *logical_file_name_in_backup* | **@**_logical\_file\_name\_in\_backup\_var_ }.  
   
 ## <a name="summary-of-support-for-with-options"></a>WITH 옵션 지원에 대한 요약  
- 다음 WITH 옵션은 RESTORE 문에서만 지원됩니다. BLOCKSIZE, BUFFERCOUNT, MAXTRANSFERSIZE, PARTIAL, KEEP_REPLICATION, { RECOVERY | NORECOVERY | STANDBY }, REPLACE, RESTART, RESTRICTED_USER 및 { STOPAT | STOPATMARK | STOPBEFOREMARK }  
+ BLOCKSIZE, BUFFERCOUNT, MAXTRANSFERSIZE, BLOCKSIZE, BUFFERCOUNT, MAXTRANSFERSIZE, PARTIAL, KEEP_REPLICATION, { RECOVERY | NORECOVERY | STANDBY }, REPLACE, RESTART, RESTRICTED_USER 및 { STOPAT | STOPATMARK | STOPBEFOREMARK }  
   
 > [!NOTE]  
 >  PARTIAL 옵션은 RESTORE DATABASE에서만 지원합니다.  

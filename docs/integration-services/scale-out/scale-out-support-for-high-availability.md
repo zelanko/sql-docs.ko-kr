@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: f9572368002a0aef7b02d615701baefb0fd6708b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4e3429a52d24b9bb9fbb0de18c1687cfdaa76d30
+ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638150"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246742"
 ---
 # <a name="scale-out-support-for-high-availability"></a>고가용성에 대한 Scale Out 지원
 
@@ -107,7 +107,7 @@ Azure 가상 머신에서 이 구성 단계는 추가 단계가 필요합니다.
 
 이제 [Integration Services Scale Out 관리자](integration-services-ssis-scale-out-manager.md)를 통해 Scale Out 작업자를 추가할 수 있습니다. 연결 페이지에서 `[SQL Server Availability Group Listener DNS name],[Port]`를 입력합니다.
 
-# <a name="upgrade-scale-out-in-high-availability-environment"></a>고가용성 환경에서 Scale Out 업그레이드
+## <a name="upgrade-scale-out-in-high-availability-environment"></a>고가용성 환경에서 Scale Out 업그레이드
 고가용성 환경에서 Scale Out을 업그레이드하려면 [SSIS 카탈로그용 Always On의 업그레이드 단계](../catalog/ssis-catalog.md#Upgrade)를 따르고, 각 머신에서 Scale Out 마스터와 Scale Out 작업자를 업그레이드 하고, Scale Out 마스터 서비스의 새 버전으로 7단계 위에 Windows Server 장애 조치(failover) 클러스터 역할을 다시 만듭니다.
 
 ## <a name="next-steps"></a>다음 단계

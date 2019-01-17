@@ -1,6 +1,7 @@
 ---
-title: 유연한 자동 장애 조치 정책 구성 | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹에 대한 유연한 자동 장애 조치(failover) 정책 구성
+description: T-SQL(Transact-SQL), PowerShell 또는 SQL Server Management Studio를 사용하여 Always On 가용성에 대한 유연한 장애 조치(failover) 정책을 구성하는 방법을 설명합니다.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 621811a2cf4c3f7e08143f8608dd0fdced65a816
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: abfad9aeef575035f4f171a19073b97a266797ef
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505835"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208562"
 ---
-# <a name="configure-flexible-automatic-failover-policy"></a>유연한 자동 장애 조치 정책 구성
+# <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 유연한 자동 장애 조치(failover) 정책 구성
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

@@ -38,12 +38,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8e4fb4a2e8da7ecf32e4bec80f3d18a53a022ac
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ef9f5377ffef172436d7e84164a20f1d92a9a325
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699801"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979519"
 ---
 # <a name="search-condition-transact-sql"></a>검색 조건(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -190,7 +190,7 @@ ms.locfileid: "51699801"
  식이 목록에 포함되는지 또는 제외되는지 여부에 따라 식을 검색하도록 지정합니다. 검색 식은 상수 또는 열 이름이 될 수 있으며 목록은 상수 집합 또는 더 일반적으로는 하위 쿼리가 될 수 있습니다. 값의 목록은 괄호로 묶어야 합니다. 자세한 내용은 [IN&#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)을 참조하세요.  
   
  *subquery*  
- 제한된 SELECT 문으로 간주할 수 있고, SELECT 문에서 \<query_expresssion>과 비슷합니다. ORDER BY 절 및 INTO 키워드는 허용되지 않습니다. 자세한 내용은 [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)를 참조하세요.  
+ 제한된 SELECT 문으로 간주할 수 있고, SELECT 문에서 \<query_expression>과 비슷합니다. ORDER BY 절 및 INTO 키워드는 허용되지 않습니다. 자세한 내용은 [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)를 참조하세요.  
   
  ALL  
  비교 연산자 및 하위 쿼리와 함께 사용됩니다. 하위 쿼리에 대해 검색된 모든 값이 비교 연산을 충족하면 \<predicate>에 대해 TRUE를 반환하고, 모든 값이 비교 연산을 충족하지 않거나 하위 쿼리에서 외부 문에 행을 반환하지 않으면 FALSE를 반환합니다. 자세한 내용은 [ALL&#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)을 참조하세요.  
@@ -243,7 +243,7 @@ FROM DimEmployee
 WHERE LastName LIKE '%and%';  
 ```  
   
-### <a name="d-using-where-and-like-syntax-with-unicode-data"></a>4. WHERE 및 LIKE 구문에 유니코드 데이터 사용  
+### <a name="d-using-where-and-like-syntax-with-unicode-data"></a>D. WHERE 및 LIKE 구문에 유니코드 데이터 사용  
  다음 예제에서는 `WHERE` 절을 사용하여 `LastName` 열에서 유니코드 검색을 수행합니다.  
   
 ```  

@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 90a9b797862db65187d991bb6961cdfd0bda8959
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a4d833d132a0b4928d021beaa4cd9fcdd695d6c6
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523546"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046583"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>자습서: SSMS를 사용하여 보안 Enclave를 사용한 Always Encrypted 시작
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -122,7 +122,8 @@ ms.locfileid: "52523546"
 7. SQL Server 컴퓨터의 관리자 권한 Windows PowerShell 콘솔에서 다음 명령을 실행하여 증명할 위치를 SQL Server 컴퓨터에 알려 줍니다. HGS 컴퓨터의 IP 주소 또는 DNS 이름을 지정해야 합니다. 
 
    ```powershell
-   Set-HgsClientConfiguration -AttestationServerUrl https://<IP address or DNS name>/Attestation -KeyProtectionServerUrl https://<IP address or DNS name>/KeyProtection/  
+   # use http, and not https
+   Set-HgsClientConfiguration -AttestationServerUrl http://<IP address or DNS name>/Attestation -KeyProtectionServerUrl http://<IP address or DNS name>/KeyProtection/  
    ```
 
 위 명령의 결과는 AttestationStatus = Passed를 표시해야 합니다.
@@ -229,7 +230,7 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
 2. **개체 탐색기**에서 데이터베이스를 확장하고 **보안** > **Always Encrypted 키**로 이동합니다.
 3. 새 Enclave 사용 열 마스터 키를 프로비전합니다.
     1. **Always Encrypted 키**를 마우스 오른쪽 단추로 클릭하고 **새 열 마스터 키...** 를 선택합니다.
-    2. 열 마스터 키 이름 CMK1을 선택합니다.
+    2. 열 마스터 키 이름을 선택합니다. CMK1.
     3. **Windows 인증서 저장소(현재 사용자 또는 로컬 컴퓨터)** 또는 **Azure Key Vault**를 선택해야 합니다.
     4. **Enclave 계산 허용**을 선택합니다.
     5. Azure Key Vault를 선택한 경우 Azure에 로그인하고 Key Vault를 선택합니다. Always Encrypted용 Key Vault를 만드는 방법에 대한 자세한 내용은 [Azure Portal에서 Key Vault 관리](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/)를 참조하세요.
@@ -241,7 +242,7 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
 4. 새 Enclave 사용 열 암호화 키를 만듭니다.
 
     1. **Always Encrypted 키**를 마우스 오른쪽 단추로 클릭하고 **새 열 암호화 키**를 선택합니다.
-    2. 새 열 암호화 키의 이름으로 CEK1을 입력합니다.
+    2. 새 열 암호화 키의 이름을 입력합니다. CEK1.
     3. **열 마스터 키** 드롭다운에서 이전 단계에서 만든 열 마스터 키를 선택합니다.
     4. **확인**을 선택합니다.
 

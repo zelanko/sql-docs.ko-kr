@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 95ca303d9bed86f92cbd58776d4a24c4d92cce2a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 99e11038cbc7315ff485177f9270e6f0fba74142
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398208"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823697"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>MDSModelDeploy를 사용하여 모델 배포 패키지 배포
 
@@ -49,7 +48,7 @@ ms.locfileid: "52398208"
   
 1.  새 모델 또는 모델 복제를 배포할지 이전에 복제된 모델을 업데이트할지 여부를 결정합니다. 자세한 내용은 [모델 배포 옵션&#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md)을 참조하세요.  
   
-2.  관리자: 명령 프롬프트를 열고 MDSModelDeploy.exe로 이동합니다.  
+2.  관리자 열기: 명령 프롬프트를 열고 MDSModelDeploy.exe로 이동합니다.  
   
     -   MDS를 기본 위치에 설치하는 경우 도구는 *드라이브*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration에서 사용할 수 있습니다.  
   
@@ -98,7 +97,7 @@ ms.locfileid: "52398208"
   
  **참고:**  
   
--   패키지의 구독 뷰 이름이 기존 모델의 구독 뷰 이름과 동일한 경우 **배포자 구독 보기의 이름이 바뀌었습니다.** 라는 경고가 표시되고 뷰가 *modelname.subscriptionviewname*으로 만들어집니다. 이 이름이 이미 사용 중이면 구독 뷰가 만들어지지 않습니다.  
+-   패키지의 구독 보기가 기존 모델의 구독 보기 이름과 동일한 경우 다음 경고가 표시됩니다. **배포자 구독 보기의 이름이 바뀌고** 보기가 *modelname.subscriptionviewname*으로 생성됩니다. 이 이름이 이미 사용 중이면 구독 뷰가 만들어지지 않습니다.  
   
 -   배포 프로세스는 다음과 같은 4단계로 진행됩니다.  
   

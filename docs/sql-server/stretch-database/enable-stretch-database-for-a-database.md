@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Stretch Database, enabling database
 - enabling database for Stretch Database
 ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f2d95ea5ad60dda2b9d4e902aae80b0d2c06b9e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: dda58d512602c5d592078275106eefc7ca26ebda
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696418"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596894"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,8 +29,8 @@ ms.locfileid: "51696418"
   
  데이터베이스 또는 테이블에서 스트레치 데이터베이스를 활성화하려면 db_owner 사용 권한이 필요합니다. 데이터베이스에서 Stretch Database를 활성화하려면 CONTROL DATABASE 사용 권한도 필요합니다.  
 
- >   [!NOTE]
- > 나중에 Stretch Database를 사용하지 않도록 설정하려는 경우 테이블 또는 데이터베이스에서 Stretch Database를 사용하지 않도록 설정하면 원격 개체가 삭제되지 않습니다. 원격 테이블 또는 원격 데이터베이스를 삭제하려면 Azure 관리 포털을 사용하여 삭제해야 합니다. 원격 개체는 수동으로 삭제할 때까지 Azure 비용이 계속해서 발생합니다. 
+> [!NOTE]
+> 나중에 Stretch Database를 사용하지 않도록 설정하려는 경우 테이블 또는 데이터베이스에서 Stretch Database를 사용하지 않도록 설정하면 원격 개체가 삭제되지 않습니다. 원격 테이블 또는 원격 데이터베이스를 삭제하려면 Azure 관리 포털을 사용하여 삭제해야 합니다. 원격 개체는 수동으로 삭제할 때까지 Azure 비용이 계속해서 발생합니다. 
  
 ## <a name="before-you-get-started"></a>시작하기 전에  
   
@@ -42,7 +42,7 @@ ms.locfileid: "51696418"
   
 -   새 Azure 서버를 만들거나 기존 Azure 서버를 선택하는 데 필요한 연결 및 로그인 정보를 준비합니다.  
   
-##  <a name="EnableTSQLServer"></a> 필수 조건: 서버에서 스트레치 데이터베이스 사용  
+##  <a name="EnableTSQLServer"></a> 필수 구성 요소: 서버에서 스트레치 데이터베이스 사용  
  데이터베이스 또는 테이블에서 스트레치 데이터베이스를 활성화하기 전에 로컬 서버에서 스트레치 데이터베이스를 먼저 활성화해야 합니다. 이 작업에는 sysadmin 또는 serveradmin 권한이 필요합니다.  
   
 -   필요한 관리 권한이 있으면 **스트레치에 데이터베이스 사용** 마법사가 스트레치에 사용할 서버를 구성합니다.  

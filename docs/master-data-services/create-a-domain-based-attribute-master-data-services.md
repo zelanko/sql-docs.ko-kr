@@ -5,8 +5,7 @@ ms.date: 07/25/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - domain-based attributes [Master Data Services], creating
@@ -16,12 +15,12 @@ ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1752fd6736ef8900c22054dfa8f7ec6799d981fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23fe106f296860d121d7315daf669855c792b64d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685921"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759215"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>도메인 기반 특성 만들기(Master Data Services)
 
@@ -57,11 +56,11 @@ ms.locfileid: "47685921"
   
 -   **만든 사람**: 특성을 만든 사용자의 이름입니다.  
   
--   **날짜**: 특성을 만든 날짜와 시간입니다.  
+-   **On**: 특성을 만든 날짜와 시간입니다.  
   
 -   **업데이트한 사람**: 특성을 마지막으로 업데이트한 사용자의 이름입니다.  
   
--   **날짜**: 특성을 마지막으로 업데이트한 날짜와 시간입니다.  
+-   **On**: 특성을 마지막으로 업데이트한 날짜와 시간입니다.  
   
 ### <a name="to-create-a-domain-based-attribute"></a>도메인 기반 특성을 만들려면  
   

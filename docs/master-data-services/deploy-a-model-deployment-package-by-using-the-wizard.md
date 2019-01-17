@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment packages [Master Data Services], deploying
@@ -15,12 +14,12 @@ ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4b9c0b74d03de5fe8a8f37ba33e99e1ae41e20b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be5a8ecff530cfcc381ca8b6bd2d5c89bc2c46e8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645891"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790205"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>마법사를 사용하여 모델 배포 패키지 배포
 
@@ -62,7 +61,7 @@ ms.locfileid: "47645891"
   
  **참고:**  
   
--   패키지의 구독 뷰 이름이 기존 모델의 구독 뷰 이름과 동일한 경우 **배포자 구독 보기의 이름이 바뀌었습니다.** 라는 경고가 표시됩니다. 또한 *modelname.subscriptionviewname*(으)로 뷰가 만들어집니다. 이 이름이 이미 사용 중이면 구독 뷰가 만들어지지 않습니다.  
+-   패키지의 구독 보기가 기존 모델의 구독 보기 이름과 동일한 경우 다음 경고가 표시됩니다. **배포자 구독 보기의 이름이 바뀌었습니다**. 또한 *modelname.subscriptionviewname*(으)로 뷰가 만들어집니다. 이 이름이 이미 사용 중이면 구독 뷰가 만들어지지 않습니다.  
   
 -   배포 프로세스는 다음과 같은 4단계로 진행됩니다.  
   

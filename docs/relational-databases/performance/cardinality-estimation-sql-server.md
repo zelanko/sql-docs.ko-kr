@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CE (cardinality estimator)
 - estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27ef6862a5fcfb6e63ffcbdd89fb1e000c2065f2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4f827b1de0a9cba06a17fc2b84724277e9daab22
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667032"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328856"
 ---
 # <a name="cardinality-estimation-sql-server"></a>카디널리티 추정(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51667032"
 1998년 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0에서 호환성 수준 70으로 CE가 크게 업데이트되었습니다. 이 버전의 CE 모델은 다음과 같은 4개의 기본 가정 하에 설정됩니다.
 
 -  **독립성:** 상관 관계 정보가 지원되고 사용되지 않으면 다른 열의 데이터 배포는 서로 독립적이라고 간주됩니다.
--  **균일성:** 고유 값은 간격이 일정하고 빈도가 동일합니다. 보다 정확하게 [히스토그램](../../relational-databases/statistics/statistics.md#histogram) 단계 내에서 고유 값은 고르게 분산되고 각 값의 빈도가 동일합니다. 
+-  **일관성:** 고유 값은 간격이 일정하고 빈도가 동일합니다. 보다 정확하게 [히스토그램](../../relational-databases/statistics/statistics.md#histogram) 단계 내에서 고유 값은 고르게 분산되고 각 값의 빈도가 동일합니다. 
 -  **포함(단순):** 존재하는 데이터의 사용자 쿼리입니다. 예를 들어 두 테이블 간의 동등 조인의 경우 히스토그램을 조인하여 조인 선택도를 예측하기 전에 각 입력 히스토그램에서 조건자 선택도 <sup>1</sup>의 요소를 예측합니다. 
 -  **포함:** `Column = Constant`인 필터 조건자의 경우 상수가 연결된 열에 대해 실제로 존재한다고 가정됩니다. 해당하는 히스토그램 단계가 비어 있지 않은 경우 단계의 고유 값 중 하나는 조건자의 값과 일치한다고 가정합니다.
 
@@ -47,8 +47,8 @@ ms.locfileid: "51667032"
 
 이후 업데이트는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 시작되었으며 호환성 수준 120 이상을 의미합니다. 수준 120 이상의 CE 업데이트는 최신 데이터 웨어하우징 및 OLTP 워크로드에서 잘 작동하는 업데이트된 가정 및 알고리즘을 통합합니다. CE 70 가정에서 다음과 같은 모델 가정은 CE 120부터 변경되었습니다.
 
--  **독립성**은 **상관 관계**임: 다른 열 값의 조합이 반드시 독립적이지는 않습니다. 더 많은 실제 데이터 쿼리와 비슷할 수 있습니다.
--  **간단한 포함**은 **자료 포함**임: 사용자는 존재하지 않는 데이터를 쿼리할 수 있습니다. 예를 들어 두 테이블 간의 동등 조인의 경우 기본 테이블 히스토그램을 사용하여 조인 선택도를 예측한 다음, 조건자 선택도의 요소를 예측합니다.
+-  **독립성**은 **상관 관계임:** 다른 열 값의 조합이 반드시 독립적이지는 않습니다. 더 많은 실제 데이터 쿼리와 비슷할 수 있습니다.
+-  **간단한 포함**은 **기본 포함임:** 사용자는 존재하지 않는 데이터를 쿼리할 수 있습니다. 예를 들어 두 테이블 간의 동등 조인의 경우 기본 테이블 히스토그램을 사용하여 조인 선택도를 예측한 다음, 조건자 선택도의 요소를 예측합니다.
   
 **호환성 수준:** [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)에 대해 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 사용하여 데이터베이스가 특정 수준에 있는지 확인할 수 있습니다.  
 

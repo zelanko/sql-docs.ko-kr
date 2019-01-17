@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 89a7be267cfe6f4e60961e6d9a6610897cb5718d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 743c12fe1ec749c597655f249c1ba6fbfe1b0b4e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542520"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591887"
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -386,7 +386,7 @@ GO
 * 실행 계획은 자주 참조되므로 비용이 절대로 0이 되지 않습니다. 메모리가 부족하지 않고 현재 비용이 0이 아닌 경우 계획이 계획 캐시에 남아 있고 제거되지 않습니다.
 * 임시 실행 계획이 삽입되고 메모리 부족 현상이 발생하기 전에 다시 참조되지 않습니다. 임시 계획의 현재 비용이 0으로 초기화되므로 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 실행 계획을 조사할 때 현재 비용이 0임을 확인하고 해당 계획을 계획 캐시에서 제거합니다. 메모리가 부족하지 않으면 현재 비용이 0인 임시 실행 계획이 계획 캐시에 남아 있습니다.
 
-단일 계획이나 모든 계획을 캐시에서 수동으로 제거하려면 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)를 사용하세요.
+단일 계획이나 모든 계획을 캐시에서 수동으로 제거하려면 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)를 사용하세요. [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]부터 `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE`를 사용하여 범위에 있는 데이터베이스의 프로시저(계획) 캐시를 지웁니다.
 
 ### <a name="recompiling-execution-plans"></a>실행 계획 다시 컴파일
 
@@ -572,7 +572,7 @@ WHERE ProductSubcategoryID = 4;
 매개 변수화는 개별 Transact-SQL 문 수준에서 수행됩니다. 다시 말해 일괄 처리 내의 개별 문이 매개 변수화됩니다. 컴파일 후 매개 변수가 있는 쿼리는 쿼리가 원래 전송되었던 일괄 처리의 컨텍스트에서 실행됩니다. 쿼리의 실행 계획이 캐시된 경우에는 sys.syscacheobjects 동적 관리 뷰의 sql 열을 참조하여 쿼리가 매개 변수화되었는지 여부를 확인할 수 있습니다. 쿼리가 매개 변수화된 경우 \@1 tinyint와 같이 이 열에서 매개 변수의 이름 및 데이터 형식은 전송된 일괄 처리 텍스트 앞에 옵니다.
 
 > [!NOTE]
-> 매개 변수 이름은 임의로 지정하므로 사용자나 애플리케이션에서는 특정 명명 순서를 따를 필요가 없습니다. 또한 매개 변수 이름, 매개 변수화되는 리터럴 선택 항목 및 매개 변수화된 텍스트의 공백은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 서비스 팩 업그레이드의 버전에 따라 달라질 수 있습니다.
+> 매개 변수 이름은 임의로 지정하므로 사용자나 애플리케이션에서는 특정 명명 순서를 따를 필요가 없습니다. 또한 다음 요소는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 서비스 팩 업그레이드의 버전에 따라 달라질 수 있습니다. 매개 변수 이름, 매개 변수화되는 리터럴 선택 항목 및 매개 변수화된 텍스트의 공백이 여기에 포함됩니다.
 
 #### <a name="data-types-of-parameters"></a>매개 변수의 데이터 형식
 
@@ -1026,8 +1026,8 @@ XML 실행 계획 출력에서`Partitions Accessed`는 새 `RuntimePartitionSumm
 |A 열을 기반으로 하는 테이블 파티션 |각 테이블 파티션에서 B 열 검색 |
 |----|----|
 |테이블 파티션 1: A < 10   |B=50, B=100, B=150 |
-|테이블 파티션 2: A >= 10 AND A < 20   |B=50, B=100, B=150 |
-|테이블 파티션 3: A >= 20 AND A < 30   |B=50, B=100, B=150 |
+|테이블 파티션 2: A >= 10 및 A < 20   |B=50, B=100, B=150 |
+|테이블 파티션 3: A >= 20 및 A < 30   |B=50, B=100, B=150 |
 |테이블 파티션 4: A >= 30  |B=50, B=100, B=150 |
 
 ### <a name="best-practices"></a>최선의 구현 방법

@@ -22,12 +22,12 @@ ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 864377bee6ee587e95321338d0c1a46f5c7523e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31eb77b8223c13de9fe5a7e098a42462ed4fd915
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742981"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591757"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 감사 동작 그룹 및 동작
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -122,6 +122,9 @@ ms.locfileid: "47742981"
  서버 수준 동작 그룹은 전체 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 동작을 포함합니다. 예를 들어 서버 감사 사양에 적절한 동작 그룹이 추가되면 모든 데이터베이스의 모든 스키마 개체 액세스 검사가 기록됩니다. 데이터베이스 감사 사양에서는 해당 데이터베이스의 스키마 개체 액세스만 기록됩니다.  
   
  서버 수준 동작은 데이터베이스 수준 동작에 대한 자세한 필터링을 허용하지 않습니다. 자세한 동작 필터링을 구현하려면 데이터베이스 수준 감사(예: Employee 그룹에서 로그인에 사용할 Customers 테이블 SELECT 동작에 대한 감사)가 필요합니다. 시스템 뷰와 같은 서버 범위 개체는 사용자 데이터베이스 감사 사양에 포함하지 마십시오.  
+
+ > [!NOTE]
+ > 트랜잭션 수준 감사 활성화와 관련된 오버헤드 때문에 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 및 [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4부터 Common Criteria 호환성을 사용하지 않도록 설정한 경우 기본적으로 트랜잭션 수준의 감사가 비활성화됩니다.  Common Criteria 호환성이 비활성화된 경우에도 TRANSACTION_GROUP에서 감사 사양에 작업을 추가할 수 있지만 실제로는 트랜잭션 작업이 수집하지 않습니다.  TRANSACTION_GROUP에서 감사 작업을 구성하려면 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 및 [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 이상으로 시작하는 Common Criteria 호환성을 사용하도록 설정하여 트랜잭션 수준 감사 인프라를 활성화해야 합니다.  [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]에서 SP1 CU2로 시작하는 추적 플래그 3427을 사용하여 트랜잭션 수준 감사를 사용하지 않도록 설정할 수 도 있습니다.
   
 ## <a name="database-level-audit-action-groups"></a>데이터베이스 수준 감사 동작 그룹  
  데이터베이스 수준 감사 동작 그룹은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보안 감사 이벤트 클래스와 유사한 동작입니다. 이벤트 클래스에 대한 자세한 내용은 [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md)를 참조하십시오.  

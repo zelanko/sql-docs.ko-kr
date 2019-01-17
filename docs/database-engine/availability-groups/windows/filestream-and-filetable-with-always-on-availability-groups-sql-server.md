@@ -1,6 +1,7 @@
 ---
-title: Always On 가용성 그룹이 포함된 FILESTREAM 및 FileTable(SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹과 함께 FILESTREAM 및 FileTable 사용
+description: Always On 가용성 그룹에 참여하는 데이터베이스와 함께 FILESTREAM 또는 FileTable을 사용하는 단계입니다.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 51d808592db74aff5144f4fe453fe36a2bd4beb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f27403dcce14e657915abe3d8a98f886dd7cc9a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613501"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214864"
 ---
-# <a name="filestream-and-filetable-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹의 FILESTREAM 및 FileTable(SQL Server)
+# <a name="use-filestream-and-filetable-with-always-on-availability-groups"></a>Always On 가용성 그룹과 함께 FILESTREAM 및 FileTable 사용
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

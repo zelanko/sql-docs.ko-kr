@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], object security
@@ -15,18 +14,18 @@ ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d39d78d9fef6756804f69c8fb49ed1e880d94767
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: bbad98239ef2aabbea33a1874e5e6f3efad51c55
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395390"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783615"
 ---
 # <a name="database-object-security-master-data-services"></a>데이터베이스 개체 보안(Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 데이터는 여러 데이터베이스 테이블에 저장되고 뷰에서 볼 수 있습니다. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에서 보안을 설정한 정보는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에 액세스할 수 있는 사용자가 볼 수 있습니다.  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 데이터는 여러 데이터베이스 테이블에 저장되고 뷰에서 볼 수 있습니다. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션에서 보안을 설정한 정보는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에 액세스할 수 있는 사용자가 볼 수 있습니다.  
   
  특히 직원 급여 정보가 Employee 모델에 포함되거나 회사 재무 정보가 Account 모델에 포함될 수 있습니다. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 사용자 인터페이스에서 이러한 모델에 대한 사용자 액세스를 거부할 수 있지만 데이터베이스에 액세스할 수 있는 사용자는 이 데이터를 볼 수 있습니다.  
   
@@ -45,19 +44,19 @@ ms.locfileid: "52395390"
 -   [시스템 설정 구성](#SysSettings)  
   
 ##  <a name="Staging"></a> 데이터 준비  
- 다음 표에서 각 보안 개체에는 이름의 일부로 "이름"이 있습니다. 이것은 엔터티를 만들 때 지정된 준비 테이블의 이름을 나타냅니다. 자세한 내용은 [개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)를 참조하세요.  
+ 다음 표에서 각 보안 개체에는 이름의 일부로 "이름"이 있습니다. 이것은 엔터티를 만들 때 지정된 준비 테이블의 이름을 나타냅니다. 자세한 내용은 [ 개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
 |작업|보안 개체|Permissions|  
 |------------|----------------|-----------------|  
-|리프 멤버 및 해당 특성을 만들고, 업데이트하고, 삭제합니다.|stg.name_Leaf|필수: INSERT<br /><br /> 선택 사항: SELECT 및 UPDATE|  
+|리프 멤버 및 해당 특성을 만들고, 업데이트하고, 삭제합니다.|stg.name_Leaf|필수 사항: INSERT<br /><br /> 선택 사항: SELECT 및 UPDATE|  
 |리프 준비 테이블의 데이터를 해당 MDS 데이터 집합 테이블에 로드합니다.|stg.udp_name_Leaf|CREATE 문을 실행하기 전에|  
-|통합 멤버 및 해당 특성을 만들고, 업데이트하고, 삭제합니다.|stg.name_Consolidated|필수: INSERT<br /><br /> 선택 사항: SELECT 및 UPDATE|  
+|통합 멤버 및 해당 특성을 만들고, 업데이트하고, 삭제합니다.|stg.name_Consolidated|필수 사항: INSERT<br /><br /> 선택 사항: SELECT 및 UPDATE|  
 |통합 준비 테이블의 데이터를 해당 MDS 데이터 집합 테이블에 로드합니다.|stg.udp_name_Consolidated|CREATE 문을 실행하기 전에|  
-|명시적 계층에서 멤버를 이동합니다.|stg.name_Relationship|필수: INSERT<br /><br /> 선택 사항: SELECT 및 UPDATE|  
+|명시적 계층에서 멤버를 이동합니다.|stg.name_Relationship|필수 사항: INSERT<br /><br /> 선택 사항: SELECT 및 UPDATE|  
 |관계 준비 테이블의 데이터를 해당 MDS 테이블에 로드합니다.|stg.udp_name_Relationship|CREATE 문을 실행하기 전에|  
 |준비 테이블의 데이터를 MDS 데이터 집합 테이블에 삽입하는 동안 발생한 오류를 봅니다.|stg.udp_name_Relationship|SELECT|  
   
- 자세한 내용은 [개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)를 참조하세요.  
+ 자세한 내용은 [ 개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)를 참조하세요.  
   
 ##  <a name="rules"></a> 비즈니스 규칙에 대해 데이터 유효성 검사  
   

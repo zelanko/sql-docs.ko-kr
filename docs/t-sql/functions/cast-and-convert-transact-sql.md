@@ -36,12 +36,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 267e1c145a6a67976f1d057c0c98186f192f9247
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 513ccaf7c50b7ca08d6651d516a4b5265d86d7fe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191073"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210787"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 및 CONVERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "52191073"
 
 이러한 함수는 한 데이터 형식의 식을 다른 데이터 형식의 식으로 변환합니다.  
 
-**예:** 입력된 데이터 형식 변경
+**예제:** 입력된 데이터 형식 변경
 
 **캐스트**
 ```sql  
@@ -103,7 +103,7 @@ CONVERT 함수가 *식*을 변환하는 방법을 지정하는 정수 식입니�
 ## <a name="date-and-time-styles"></a>날짜 및 시간 스타일  
 날짜 또는 시간 데이터 형식 *식*인 경우 *스타일*은 다음 표에 있는 값 중 하나일 수 있습니다. 다른 값은 0으로 처리됩니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 날짜 및 시간 형식에서 **datetimeoffset**으로 변환할 때 지원되는 유일한 스타일은 0 또는 1입니다. 다른 모든 변환 스타일은 오류 9809를 반환합니다.
   
->  [!NOTE]  
+> [!NOTE]
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 쿠웨이트 알고리즘을 통해 아랍어 스타일의 날짜 형식을 지원합니다.
   
 |두 자리 연도(yy) (<sup>1</sup>)|네 자리 연도(yyyy)|Standard|입/출력(<sup>3</sup>)|  
@@ -167,9 +167,9 @@ CONVERT 함수가 *식*을 변환하는 방법을 지정하는 정수 식입니�
   
 |값|출력|  
 |---|---|
-|**0** (기본값)|소수점 앞 세 자리마다 쉼표를 사용하지 않으며 소수점 이하 두 자리인 수입니다.<br /><br />예: 4235.98|  
-|**1**|소수점 앞 세 자리마다 쉼표를 사용하며 소수점 이하 두 자리인 수입니다.<br /><br />예: 3,510.92|  
-|**2**|소수점 앞 세 자리마다 쉼표를 사용하지 않으며 소수점 이하 4자리인 수입니다.<br /><br />예: 4235.9819|  
+|**0** (기본값)|소수점 앞 세 자리마다 쉼표를 사용하지 않으며 소수점 이하 두 자리인 수입니다.<br /><br />예: 4235.98.|  
+|**1**|소수점 앞 세 자리마다 쉼표를 사용하며 소수점 이하 두 자리인 수입니다.<br /><br />예: 3,510.92.|  
+|**2**|소수점 앞 세 자리마다 쉼표를 사용하지 않으며 소수점 이하 4자리인 수입니다.<br /><br />예: 4235.9819.|  
 |**126**|char(n) 또는 varchar(n)으로 변환하는 경우 스타일 2와 같습니다.|  
   
 ## <a name="xml-styles"></a>xml 스타일
@@ -422,7 +422,7 @@ The list price is 364.09
 The list price is 364.09  
 ```  
   
-### <a name="d-using-cast-to-produce-more-readable-text"></a>4. CAST를 사용하여 읽기 쉬운 텍스트 만들기  
+### <a name="d-using-cast-to-produce-more-readable-text"></a>D. CAST를 사용하여 읽기 쉬운 텍스트 만들기  
 이 예에서는 SELECT 목록에 CAST를 사용하여 `Name` 열을 **char(10)** 열로 변환합니다. AdventureWorksDW 데이터베이스를 사용합니다.
   
 ```sql
@@ -441,7 +441,7 @@ Long-Sleev  32.4935
 Long-Sleev  49.99  
 ```  
   
-### <a name="e-using-cast-with-the-like-clause"></a>5. CAST에 LIKE 절 사용  
+### <a name="e-using-cast-with-the-like-clause"></a>E. CAST에 LIKE 절 사용  
 이 예에서는 `money` 열 `SalesYTD` 값을 `int` 데이터 형식으로 변환한 다음, `char(20)` 데이터 형식으로 변환하여 `LIKE` 절이 사용할 수 있게 합니다.
   
 ```sql
@@ -466,7 +466,7 @@ Rachel           Valdez              2241204.0424      289
 (3 row(s) affected)  
 ```
   
-### <a name="f-using-convert-or-cast-with-typed-xml"></a>6. 형식화된 XML과 함께 CONVERT 또는 CAST 사용  
+### <a name="f-using-convert-or-cast-with-typed-xml"></a>F. 형식화된 XML과 함께 CONVERT 또는 CAST 사용  
 이 예제에서는 CONVERT와 [XML 데이터 형식 및 열&#40;SQL Server&#41;](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md)을 사용하여 데이터를 형식화된 XML로 변환하는 것을 보여 줍니다.
   
 다음 예에서는 공백, 텍스트 및 태그가 있는 문자열을 형식화된 XML로 변환하고 불필요한 공백(노드 사이의 경계 공백)을 모두 제거합니다.
@@ -489,7 +489,7 @@ SELECT CAST('<Name><FName>Carol</FName><LName>Elliot</LName></Name>'  AS XML)
   
 다른 예는 [XML 데이터 인스턴스 만들기](../../relational-databases/xml/create-instances-of-xml-data.md)를 참조하세요.
   
-### <a name="g-using-cast-and-convert-with-datetime-data"></a>7. datetime 데이터와 함께 CAST 및 CONVERT 사용  
+### <a name="g-using-cast-and-convert-with-datetime-data"></a>G. datetime 데이터와 함께 CAST 및 CONVERT 사용  
 GETDATE() 값으로 시작하는 다음 예에서는 현재 날짜와 시간을 표시합니다. 즉, `CAST`를 사용하여 현재 날짜와 시간을 문자 데이터 형식으로 변경한 다음, `CONVERT`를 사용하여 `ISO 8601` 형식으로 날짜와 시간을 표시합니다.
   
 ```sql
@@ -528,7 +528,7 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 (1 row(s) affected)  
 ```
   
-### <a name="h-using-convert-with-binary-and-character-data"></a>8. CONVERT에 이진 및 문자 데이터 사용  
+### <a name="h-using-convert-with-binary-and-character-data"></a>H. CONVERT에 이진 및 문자 데이터 사용  
 이 예에서는 다양한 스타일을 사용하여 이진 및 문자 데이터를 변환한 결과를 보여 줍니다.
   
 ```sql
@@ -634,7 +634,7 @@ SELECT @dt1 AS [datetime], CAST (@dt1 AS date) AS [datetime as date],
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="j-using-cast-and-convert"></a>10. CAST 및 CONVERT 사용  
+### <a name="j-using-cast-and-convert"></a>J. CAST 및 CONVERT 사용  
 이 예에서는 제품 가격 첫 자리에 `3`이 있는 제품의 이름을 검색하고 이 제품의 `ListPrice`를 **int**로 변환합니다. AdventureWorksDW 데이터베이스를 사용합니다.
   
 ```sql

@@ -5,21 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Transactions
 - Transactions object
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 31753573d5033a4310c039f016211fa023378e5b
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 07b4c7d08816d84f3e1273f3fcdcf5324602cfc0
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158791"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380554"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, Transactions 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52158791"
 |**Longest Transaction Running Time**|다른 현재 트랜잭션보다 오래 활성화된 트랜잭션이 시작된 후 경과한 시간(초)입니다. 이 카운터는 데이터베이스가 읽기 커밋된 스냅숏 격리 수준 이하일 때만 작업을 보여 주고 다른 수준일 때는 작업을 기록하지 않습니다.|  
 |**NonSnapshot Version Transactions**|스냅숏 격리 수준을 사용하지 않고 데이터를 수정하여 **tempdb** 버전 저장소에 행 버전을 생성한 현재 활성 트랜잭션의 수입니다.|  
 |**Snapshot Transactions**|스냅숏 격리 수준을 사용하는 현재 활성 트랜잭션의 수입니다.<br /><br /> 참고: **Snapshot Transactions** 개체 카운터는 첫 번째 데이터 액세스가 발생할 때 응답하지만 `BEGIN TRANSACTION` 문이 실행될 때는 응답하지 않습니다.|  
-|**의**|모든 형식의 현재 활성 트랜잭션 수입니다.|  
+|**트랜잭션**|모든 형식의 현재 활성 트랜잭션 수입니다.|  
 |**Update conflict ratio**|마지막 1초 동안 업데이트 충돌이 발생하였고 스냅숏 격리 수준을 사용하는 트랜잭션의 비율입니다. 스냅숏 격리 수준 트랜잭션이 시작될 때 커밋되지 않은 다른 트랜잭션이 마지막으로 수정한 행을 스냅숏 격리 수준 트랜잭션에서 수정하려고 하면 업데이트 충돌이 발생합니다.|  
 |**Update conflict ratio base**|내부용으로만 사용할 수 있습니다.|
 |**Update Snapshot Transactions**|스냅숏 격리 수준을 사용하고 수정된 데이터가 있는 현재 활성 트랜잭션의 수입니다.|  

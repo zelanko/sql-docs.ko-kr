@@ -1,6 +1,7 @@
 ---
-title: Always On 가용성 그룹이 있는 데이터베이스 스냅숏(SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹에 대한 데이터베이스 스냅숏 만들기
+description: 기본 또는 보조 데이터베이스에서 Always On 가용성 그룹 내의 데이터베이스에 대한 데이터베이스 스냅숏을 만드는 방법을 설명합니다.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ ms.assetid: 7432da1c-ce2f-4cd9-af41-54c97744166b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 434d0ef7782766cfcf5a590c6a6adc3e5e13f504
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95a309a0742b28719e901bb54d285d5255955ba1
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808681"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212912"
 ---
 # <a name="database-snapshots-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹이 있는 데이터베이스 스냅숏(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

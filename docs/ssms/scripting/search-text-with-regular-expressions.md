@@ -7,8 +7,6 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
-- vsregularexpressionhelp
-- vs.regularexpressionhelp
 - vs.regularexpressionbuilder
 helpviewer_keywords:
 - regular expressions [SQL Server Management Studio]
@@ -19,25 +17,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58a824164a694239faeb5dbfc9ce18ba260f518f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ac5b1039e6424a66842fcd156fe3475d14826694
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538767"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53329033"
 ---
 # <a name="search-text-with-regular-expressions"></a>정규식을 사용한 텍스트 검색
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  정규식은 텍스트 패턴을 검색 및 대체하기 위한 간결하고 유연한 표기법입니다. **찾기 및 바꾸기** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **찾을 내용** 필드에서 특정 정규식 집합을 사용할 수 있습니다.  
+
+정규식은 텍스트 패턴을 검색 및 대체하기 위한 간결하고 유연한 표기법입니다. **찾기 및 바꾸기** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **찾을 내용** 필드에서 특정 정규식 집합을 사용할 수 있습니다.  
   
-#### <a name="to-find-using-regular-expressions"></a>정규식을 사용하여 검색하려면  
+## <a name="find-using-regular-expressions"></a>정규식을 사용하여 검색  
   
-1.  **빠른 찾기** 중에 **파일에서 찾기**, **빠른 바꾸기**또는 **파일에서 바꾸기**작업 도중에 **찾을 내용** 필드에서 정규식을 사용하도록 설정하려면 **찾기 옵션** 아래에서 **사용**옵션을 선택하고 **정규식**을 선택합니다.  
+1.  **빠른 찾기**, **파일에서 찾기**, **빠른 바꾸기** 또는 **파일에서 바꾸기** 작업 중에 **찾을 내용** 필드에서 정규식을 사용하도록 설정하려면 **찾기 옵션** 아래에서 **사용** 옵션을 선택하고 **정규식**을 선택합니다.  
   
 2.  그러면 **찾을 내용** 필드 옆에 있는 삼각형 **참조 목록** 단추를 사용할 수 있습니다. 이 단추를 클릭하면 가장 일반적으로 사용되는 정규식 목록이 표시됩니다. 식 작성기에서 임의의 항목을 선택하면 해당 항목이 **찾을 내용** 문자열에 삽입됩니다.  
   
 > [!NOTE]  
->  **찾을 내용** 문자열에서 사용할 수 있는 정규식과 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 프로그래밍에서 유효한 정규식은 구문상의 차이가 있습니다. 예를 들어 **찾기 및 바꾸기**에서 중괄호 표기법 {}은 태그가 지정된 식에 사용됩니다. 따라서 "zo{1}" 식은 "zo" 다음에 태그 1이 오는 모든 경우(예: "Alonzo1" 및 "Gonzo1")와 대응합니다. 그러나 .NET Framework 내에서 {} 표기법은 수량자에 사용됩니다. 따라서 "zo{1}" 식은 "z" 다음에 정확하게 하나의 "o"가 오는 모든 경우와 대응합니다(예:  "zone"과 대응하지만 "zoo"와는 대응하지 않음).  
+> **찾을 내용** 문자열에서 사용할 수 있는 정규식과 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 프로그래밍에서 유효한 정규식은 구문상의 차이가 있습니다. 예를 들어 **찾기 및 바꾸기**에서 중괄호 표기법 {}은 태그가 지정된 식에 사용됩니다. 따라서 "zo{1}" 식은 "zo" 다음에 태그 1이 오는 모든 경우(예: "Alonzo1" 및 "Gonzo1")와 대응합니다. 그러나 .NET Framework 내에서 {} 표기법은 수량자에 사용됩니다. 따라서 "zo{1}" 식은 "z" 다음에 정확하게 하나의 "o"가 오는 모든 경우와 대응합니다(예:  "zone"과 대응하지만 "zoo"와는 대응하지 않음).  
   
  다음 표에서는 **참조 목록**에서 사용할 수 있는 정규식을 설명합니다.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "52538767"
 |----------------|------------|-----------------|  
 |최소 - 없거나 1개 이상|@|선행 식이 없거나 하나 이상인 경우와 대응하며 가능한 적은 수의 문자를 포함합니다.|  
 |최소 - 1개 이상|#|1개 이상의 선행 식과 대응하며 가능한 적은 수의 문자와 대응합니다.|  
-|n번 반복|^n|선행 식의 n번과 대응합니다. 예를 들어 [0-9]^4는 모든 4자리 시퀀스와 대응합니다.|  
+|n번 반복|^n|선행 식의 n번과 대응합니다. 예를 들어 [0-9]^4는 모든 네 자리 시퀀스와 일치합니다.|  
 |그룹화|()|하위 식을 그룹화합니다.|  
 |n번째 태그가 지정된 텍스트|\n|**찾기 및 바꾸기** 식에서 n번째 태그가 지정된 식과 대응하는 텍스트를 나타냅니다. 여기서 n은 1부터 9까지의 숫자입니다.<br /><br /> **바꾸기** 식에서 \0은 대응하는 전체 텍스트를 삽입합니다.|  
 |오른쪽 정렬 필드|\\(w,n)|**바꾸기** 식에서 필드의 n번째 태그가 지정된 식을 적어도 *w* 문자 너비만큼 오른쪽 정렬합니다.|  
@@ -137,5 +136,3 @@ ms.locfileid: "52538767"
 ## <a name="see-also"></a>참고 항목  
  [찾기 및 바꾸기](../../relational-databases/scripting/search-and-replace.md)   
  [와일드카드로 텍스트 검색](../../relational-databases/scripting/search-text-with-wildcards.md)  
-  
-  

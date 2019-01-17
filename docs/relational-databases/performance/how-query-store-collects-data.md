@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, data collection
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5d262b72fec278e037c99662d1d5aecd93190cf
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: c2e84a286cb4fa59c25426e9b1e8e8506fb51d91
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711075"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370545"
 ---
 # <a name="how-query-store-collects-data"></a>쿼리 저장소에서 데이터를 수집하는 방법
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52711075"
 |**sys.query_store_query**|쿼리 저장소에서 개별적으로 추적되고 강제로 적용되는 쿼리 항목입니다. 다른 컨텍스트 설정에서 실행되거나 다른 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈(프로시저, 트리거 등이 저장됨)의 외부 및 내부에서 실행되는 경우 단일 쿼리 텍스트는 여러 쿼리 항목을 생성할 수 있습니다.|  
 |**sys.query_store_plan**|컴파일 시간 통계로 쿼리에 대한 예상 계획을 표시합니다. 저장된 계획은 `SET SHOWPLAN_XML ON`을(를) 사용하여 얻을 수 있는 것과 동일합니다.|  
 |**sys.query_store_runtime_stats_interval**|쿼리 저장소는 시간을 자동으로 생성된 시간 창(간격)으로 분할하고 실행된 모든 계획에 대한 해당 간격에 집계 통계를 저장합니다. 간격의 크기는 통계 수집 간격 구성 옵션([!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서) 또는 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 사용하여 `INTERVAL_LENGTH_MINUTES`에 의해 제어됩니다.|  
-|**sys.query_store_runtime_stats**|실행된 계획에 대한 집계된 런타임 통계입니다. 모든 캡처된 메트릭은 4개의 통계 함수 형태인 평균, 최소값, 최대값 및 표준 편차로 표현됩니다.|  
+|**sys.query_store_runtime_stats**|실행된 계획에 대한 집계된 런타임 통계입니다. 캡처된 모든 메트릭은 다음 4개의 통계 함수 형태로 표현됩니다. 평균, 최댓값, 최솟값 및 표준 편차.|  
   
  쿼리 저장소 보기에 대한 자세한 내용은 **쿼리 저장소를 사용하여 성능 모니터링**의 [관련 보기, 함수 및 프로시저](monitoring-performance-by-using-the-query-store.md) 섹션을 참조하세요.  
   

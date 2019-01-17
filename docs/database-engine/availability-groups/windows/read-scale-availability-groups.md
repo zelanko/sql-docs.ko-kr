@@ -1,6 +1,7 @@
 ---
-title: 읽기-배율 가용성 그룹 | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹이 포함된 읽기-배율 사용
+description: 'Always On 가용성 그룹을 사용하는 경우 읽기-배율을 달성하는 방법에 대한 설명입니다. '
+ms.custom: seodec18
 ms.date: 10/24/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ee043206e4525f8c549f9bf6e90c2655bff0c6c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b9556e7cecf64d0cd3d2abfe0aecdf3c5aa7cc8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622411"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203842"
 ---
-# <a name="read-scale-availability-groups"></a>읽기-배율 가용성 그룹
+# <a name="use-read-scale-with-always-on-availability-groups"></a>Always On 가용성 그룹이 포함된 읽기-배율 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 가용성 그룹은 SQL Server에 고가용성 기능을 제공하고 통합된 확장 솔루션을 제공하는 포괄적인 솔루션입니다. 일반적인 데이터베이스 애플리케이션에서는 여러 클라이언트가 다양한 유형의 작업을 실행합니다. 경우에 따라 리소스 제약으로 인해 병목 현상이 발생할 수 있습니다. 리소스를 확보하고 OLTP 워크로드의 처리량을 높일 수 있습니다. 또한 읽기 전용 작업 부하에서 더 높은 성능과 확장성을 제공할 수 있습니다. SQL Server에 대한 가장 빠른 복제 기술을 활용하여 복제된 데이터베이스 그룹을 만들어 보고 및 분석 워크로드를 읽기 전용 복제본으로 오프로드합니다.

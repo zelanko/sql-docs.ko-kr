@@ -12,12 +12,12 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 532a19a4fca82e200b9499672cf48f736cfd3f4b
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: d69a9393c990c16357287ac31433780c3b7e27a4
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226325"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979839"
 ---
 # <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN(Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -89,7 +89,7 @@ AND pdw_node_id = 201001
 order by request_id, [dms_step_index], [distribution_id];  
 ```  
   
-이전 쿼리 결과를 기반으로 DBCC PDW_SHOWEXEUCTIONPLAN에 sql_spid 및 pdw_node_id 매개 변수를 사용합니다. 예를 들어 다음 명령은 pdw_node_id 201001 및 sql_spid 375에 대한 실행 계획을 보여 줍니다.
+이전 쿼리 결과를 기반으로 DBCC PDW_SHOWEXECUTIONPLAN에 sql_spid 및 pdw_node_id 매개 변수를 사용합니다. 예를 들어 다음 명령은 pdw_node_id 201001 및 sql_spid 375에 대한 실행 계획을 보여 줍니다.
   
 ```sql
 DBCC PDW_SHOWEXECUTIONPLAN ( 201001, 375 );  

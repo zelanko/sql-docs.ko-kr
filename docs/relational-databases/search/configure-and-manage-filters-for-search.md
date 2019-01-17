@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87b18963f7b512d2fa395d53406528a2d813b364
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba65abd869322574cd2047be5066aad4b1c30767
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739701"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53552955"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>검색 필터 구성 및 관리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,10 +40,14 @@ ms.locfileid: "47739701"
 
 ## <a name="installed-filters"></a>설치된 필터 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 고유한 XML 및 HTML 필터를 설치합니다. 또한 운영 체제에 설치되어 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 소유 형식(.doc, .xdoc, .ppt 등)용 필터도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 로드합니다. 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 로드되어 있는 필터를 확인하려면 [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) 저장 프로시저를 다음과 같이 사용합니다.  
-  
+
 ```sql
 EXEC sp_help_fulltext_system_components 'filter';   
 ```  
+
+> [!NOTE]
+> .xlsx 지원을 제공하는 Office Filter Pack의 최신 버전을 사용하더라도 SQL Server는 엄격한 Open XML 스프레드시트를 지원하지 않습니다.  오류가 반환되지 않고 SQL Server는 엄격한 Open XML 스프레드시트 내용을 인덱싱하지 못합니다.
+
 ## <a name="non-microsoft-filters"></a>타사 필터
 하지만 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 형식 이외의 다른 형식용 필터를 사용하려면 수동으로 서버 인스턴스에 로드해야 합니다. 추가 필터 설치에 대한 자세한 내용은 [등록된 필터와 단어 분리기 보기 및 변경](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)을 참조하세요.  
   

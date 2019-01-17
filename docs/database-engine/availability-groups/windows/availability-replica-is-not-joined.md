@@ -1,6 +1,7 @@
 ---
-title: 가용성 복제본이 조인되어 있지 않음 | Microsoft Docs
-ms.custom: ''
+title: 가용성 복제본이 가용성 그룹에 조인되어 있지 않음
+description: 복제본이 Always On 가용성 그룹에 조인되지 않은 이유의 가능한 원인을 식별합니다.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: 9c0d10b1-9e12-430c-83b9-ca2bd0a3afc4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d05c100e13e59db4f65cc8dfc48f64b261e0e66c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 1be357ee98027d66f327e518a43947e3611fe119
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599773"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203652"
 ---
-# <a name="availability-replica-is-not-joined"></a>가용성 복제본이 조인되어 있지 않습니다.
+# <a name="availability-replica-is-not-joined-to-an-always-on-availability-group"></a>가용성 복제본이 Always On 가용성 그룹에 조인되어 있지 않음
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>소개  

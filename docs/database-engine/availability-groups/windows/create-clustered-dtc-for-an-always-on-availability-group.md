@@ -1,6 +1,7 @@
 ---
-title: Always On 가용성 그룹에 대한 클러스터된 DTC 만들기 | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹에 대한 클러스터형 DTC 리소스 만들기
+description: 이 항목에서는 SQL Server Always On 가용성 그룹에 대한 클러스터형 DTC 리소스의 전체 구성에 대해 안내합니다.
+ms.custom: seodec18
 ms.date: 08/30/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,14 +12,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ce78afa02f0a0f5acdb061e21a1311ac20f844d8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2182b11c9416c487d3d583308d07ae1ad5f3f72f
+ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396924"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069779"
 ---
-# <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 클러스터형 DTC 만들기
+# <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 클러스터형 DTC 리소스 만들기
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -42,7 +43,7 @@ ms.locfileid: "52396924"
   - 이름: `Cluster`
   - 네트워크 이름: `Cluster Network 1`
   - 노드: `SQLNODE1, SQLNODE2`
-  - 공유 저장소: `Cluster Disk 3` (소유자: `SQLNODE1`)
+  - 공유 스토리지: `Cluster Disk 3`(`SQLNODE1` 소유)
 - 클러스터 세부 정보(만들 예정):
   - 네트워크 이름 리소스: `DTCnet1`
   - DTC 네트워크 이름 리소스: `DTC1`
@@ -320,21 +321,21 @@ GO
 ```
 
 > [!IMPORTANT]
-기존 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서는 DTC를 사용하도록 설정할 수 없습니다.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 기존 가용성 그룹에 대해 다음 구문을 허용합니다.  
->
+> 기존 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서는 DTC를 사용하도록 설정할 수 없습니다.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 기존 가용성 그룹에 대해 다음 구문을 허용합니다.  
+> 
 > USE master;    
 > ALTER AVAILABILITY GROUP \<availability_group\>  
-SET (DTC_Support = Per_DB)  
->
->그러나 실제로 변경되는 구성은 없습니다.  다음 T-SQL 쿼리로 **dtc_support** 구성을 확인할 수 있습니다.  
->
->SELECT name, dtc_support FROM sys.availability_groups  
->
->가용성 그룹에 DTC 지원을 사용하도록 설정하는 유일한 방법은 Transact-SQL을 사용하여 가용성 그룹을 만드는 것입니다.
+> SET (DTC_Support = Per_DB)  
+> 
+> 그러나 실제로 변경되는 구성은 없습니다.  다음 T-SQL 쿼리로 **dtc_support** 구성을 확인할 수 있습니다.  
+> 
+> SELECT name, dtc_support FROM sys.availability_groups  
+> 
+> 가용성 그룹에 DTC 지원을 사용하도록 설정하는 유일한 방법은 Transact-SQL을 사용하여 가용성 그룹을 만드는 것입니다.
  
 ## <a name="ClusterDTC"></a>8.  클러스터 리소스 준비
 
-이 스크립트는 DTC의 종속 리소스인 디스크와 IP를 준비합니다.  공유 저장소는 Windows 클러스터에 추가됩니다.  네트워크 리소스가 만들어지고 DTC 생성되어 가용성 그룹에 리소스로 적용됩니다.  `SQLNODE1`에서 다음 PowerShell 스크립트를 실행합니다.
+이 스크립트는 다음 DTC 종속 리소스를 준비합니다. 디스크 및 IP.  공유 저장소는 Windows 클러스터에 추가됩니다.  네트워크 리소스가 만들어지고 DTC 생성되어 가용성 그룹에 리소스로 적용됩니다.  `SQLNODE1`에서 다음 PowerShell 스크립트를 실행합니다. 스크립트에 대해 [Allan Hirt](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)에게 감사드립니다.
 
 ```powershell  
 # Create a clustered Microsoft Distributed Transaction Coordinator properly in the resource group with SQL Server
@@ -587,4 +588,4 @@ GO
 ```
 
 > [!IMPORTANT]
-> 데이터베이스 컨텍스트가 `USE AG1` 로 설정되도록 `AG1`문을 실행해야 합니다.  그렇지 않으면 "다른 세션에서 트랜잭션 컨텍스트를 사용 중입니다."라는 오류 메시지가 나타납니다.
+> 데이터베이스 컨텍스트가 `USE AG1` 로 설정되도록 `AG1`문을 실행해야 합니다.  그러지 않으면 다음과 같은 오류 메시지가 나타납니다. "다른 세션에서 트랜잭션 컨텍스트를 사용 중입니다."

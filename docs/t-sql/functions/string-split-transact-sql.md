@@ -18,15 +18,15 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5fb13510e4894e3f2bc77293a1f4aac0b186f1f0
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: 93386da795d7e993c0d23c70625290cc8901d8bc
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586256"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589977"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 > [!div class="nextstepaction"]
 > [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
@@ -126,6 +126,9 @@ FROM Product
 |2|LL Headset|bike|  
 |3|HL Mountain Frame|bike|  
 |3|HL Mountain Frame|mountain|  
+
+  >[!NOTE]
+  > 출력 순서는 입력 문자열의 하위 문자열 순서와 일치하지 _않을 수_ 있으므로 순서가 달라질 수 있습니다.
   
 ### <a name="c-aggregation-by-values"></a>3. 값 기준 정렬  
 사용자는 각 태그별 제품의 수를 표시하고 제품 수 기준으로 정렬한 보고서를 생성하여 제품 수가 2 초과인 태그만 필터링해야 합니다.  
@@ -139,7 +142,7 @@ HAVING COUNT(*) > 2
 ORDER BY COUNT(*) DESC;  
 ```  
   
-### <a name="d-search-by-tag-value"></a>4. 태그 값으로 검색  
+### <a name="d-search-by-tag-value"></a>D. 태그 값으로 검색  
 개발자는 키워드를 기준으로 물품을 찾는 쿼리를 만들어야 합니다. 다음과 같은 쿼리를 사용할 수 있습니다.  
   
 단일 태그(의복)가 포함된 제품 찾기:  
@@ -153,15 +156,14 @@ WHERE 'clothing' IN (SELECT value FROM STRING_SPLIT(Tags, ','));
 지정된 태그 2개(의복 및 도로)가 포함된 제품 찾기:  
   
 ```sql  
-  
 SELECT ProductId, Name, Tags  
 FROM Product  
 WHERE EXISTS (SELECT *  
     FROM STRING_SPLIT(Tags, ',')  
-    WHERE value IN ('clothing', 'road');  
+    WHERE value IN ('clothing', 'road'));  
 ```  
   
-### <a name="e-find-rows-by-list-of-values"></a>5. 값 목록 기준으로 행 찾기  
+### <a name="e-find-rows-by-list-of-values"></a>E. 값 목록 기준으로 행 찾기  
 개발자는 ID 목록을 기준으로 물품을 찾는 쿼리를 만들어야 합니다. 다음과 같은 쿼리를 사용할 수 있습니다.  
   
 ```sql  

@@ -1,6 +1,6 @@
 ---
 title: 변경 데이터 캡처 정보(SQL Server) | Microsoft 문서
-ms.date: 03/14/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,15 +14,15 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5fc24683d4272a4e93ac7d1e30581fa202588e1e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d8c51d95fe74171fe9b90c439c34ea37700419b2
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402748"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991876"
 ---
 # <a name="about-change-data-capture-sql-server"></a>변경 데이터 캡처 정보(SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   변경 데이터 캡처는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 적용되는 삽입, 업데이트 및 삭제 작업을 기록합니다. 이로 인해 변경 세부 정보가 쉽게 사용할 수 있는 관계형 형식으로 제공됩니다. 대상 환경에 변경 내용을 적용하는 데 필요한 열 정보 및 메타데이터가 수정된 행에 대해 캡처되고 추적된 원본 테이블의 열 구조를 반영하는 변경 테이블에 저장됩니다. 소비자가 변경 데이터에 체계적으로 액세스할 수 있도록 테이블 반환 함수가 제공됩니다.  
   
  이 기술의 대상이 될 수 있는 좋은 데이터 소비자 예로 ETL(추출, 변환 및 로드) 애플리케이션을 들 수 있습니다. ETL 애플리케이션은 증분식으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원본 테이블의 변경 데이터를 데이터 웨어하우스 또는 데이터 마트로 로드합니다. 데이터 웨어하우스 내에서 원본 테이블의 표현은 해당 원본 테이블의 변경 내용을 반영해야 하지만 원본 복제본을 새로 고치는 종단 간 기술은 적합하지 않습니다. 대신 소비자가 다른 종류의 데이터 대상 표현에 적용할 수 있도록 구조화된 안정적인 변경 데이터 스트림이 필요합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 데이터 캡처는 이러한 기술을 제공합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "52402748"
   
  원본 테이블에 적용되는 각 삽입 또는 삭제 작업은 변경 테이블 내에 단일 행으로 나타납니다. 삽입 작업의 결과로 생성되는 행의 데이터 열에는 삽입 이후의 열 값이 포함되며 삭제 작업의 결과로 생성되는 행의 데이터 열에는 삭제 이전의 열 값이 포함됩니다. 업데이트 작업의 경우 하나의 행 항목에서 업데이트 이전의 열 값을 식별하고 다른 행 항목에서 업데이트 이후의 열 값을 식별해야 합니다.  
   
- 변경 테이블의 각 행에는 변경 작업을 해석할 수 있도록 추가 메타데이터도 포함됩니다. 열 __$start_lsn은 변경 내용에 할당된 커밋 LSN(로그 시퀀스 번호)을 식별합니다. 커밋 LSN은 동일한 트랜잭션 내에서 커밋된 변경 내용을 식별할 뿐만 아니라 해당 트랜잭션을 정렬합니다. 열 \_\_$seqval을 사용하여 동일한 트랜잭션 내에서 발생하는 추가 변경 내용을 정렬할 수 있습니다. 열 \_\_$operation은 변경 내용과 연결된 작업을 기록합니다. 1 = 삭제, 2 = 삽입, 3 = 업데이트(이미지 이전) 및 4 = 업데이트(이미지 이후)입니다. 열 \_\_$update_mask는 캡처된 각 열에 대해 1비트가 정의된 가변 비트 마스크입니다. 삽입 및 삭제 항목의 경우 업데이트 마스크에는 항상 모든 비트가 설정됩니다. 그러나 업데이트 행의 경우에는 변경된 열에 해당하는 비트만 설정됩니다.  
+ 변경 테이블의 각 행에는 변경 작업을 해석할 수 있도록 추가 메타데이터도 포함됩니다. 열 __$start_lsn은 변경 내용에 할당된 커밋 LSN(로그 시퀀스 번호)을 식별합니다. 커밋 LSN은 동일한 트랜잭션 내에서 커밋된 변경 내용을 식별할 뿐만 아니라 해당 트랜잭션을 정렬합니다. 열 \_\_$seqval을 사용하여 동일한 트랜잭션 내에서 발생하는 추가 변경 내용을 정렬할 수 있습니다. 열 \_\_$operation은 변경 내용과 관련된 1 = 삭제, 2 = 삽입, 3 = 업데이트(이전 이미지) 및 4 = 업데이트(이후 이미지) 작업을 기록합니다. 열 \_\_$update_mask는 캡처된 각 열에 대해 1비트가 정의된 가변 비트 마스크입니다. 삽입 및 삭제 항목의 경우 업데이트 마스크에는 항상 모든 비트가 설정됩니다. 그러나 업데이트 행의 경우에는 변경된 열에 해당하는 비트만 설정됩니다.  
   
 ## <a name="change-data-capture-validity-interval-for-a-database"></a>데이터베이스에 대한 변경 데이터 캡처 유효성 간격  
  데이터베이스에 대한 변경 데이터 캡처 유효성 간격은 캡처 인스턴스에 변경 데이터를 사용할 수 있는 시간입니다. 유효성 간격은 데이터베이스 테이블에 대한 첫 번째 캡처 인스턴스가 만들어질 때 시작되어 현재 시간까지 지속됩니다.  

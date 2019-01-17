@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f1fe0dc073063958af85019c7626d572b38810af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d67a43a1732ccbbecb7ffe3b6099acf315c86ecb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517975"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203112"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL)
 
@@ -433,7 +433,7 @@ MODIFY(MAXSIZE **=**[100MB | 500MB | 1 | 1024...4096]GB)
 |1024GB|해당 사항 없음|√|√|√|√ (D)|  
 |1024GB에서 최대 4096GB(256 GB*로 증분)|해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|√|√|  
   
-\* P11과 P15는 기본 크기인 1024를 사용하여 MAXSIZE를 최대 4TB까지 허용합니다.  P11 및 P15는 추가 비용없이 최대 4TB가 포함된 저장소를 사용할 수 있습니다. 프리미엄 계층에서 1TB 초과의 MAXSIZE는 현재 미국 동부2, 미국 서부, 미국 버지니아 주 정부, 서부 유럽, 독일 중앙, 동남 아시아, 일본 동부, 오스트레일리아 동부, 캐나다 중앙 및 캐나다 동부에서 사용할 수 있습니다. DTU 기반 모델에 대한 리소스 제한에 대한 자세한 내용은 [DTU 기반 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요.  
+\* P11과 P15는 기본 크기인 1024를 사용하여 MAXSIZE를 최대 4TB까지 허용합니다.  P11 및 P15는 추가 비용없이 최대 4TB가 포함된 저장소를 사용할 수 있습니다. 프리미엄 계층에서 1TB 초과 MAXSIZE는 현재 다음 지역에서 사용할 수 있습니다. 미국 동부2, 미국 서부, 미국 버지니아 주 정부, 유럽 서부, 독일 중부, 동남 아시아, 일본 동부, 오스트레일리아 동부, 캐나다 중부 및 캐나다 동부. DTU 기반 모델에 대한 리소스 제한에 대한 자세한 내용은 [DTU 기반 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요.  
 
 DTU 기반 모델에 대한 MAXSIZE 값은 지정된 경우 지정된 서비스 계층에 대한 위의 표에 표시된 유효한 값이어야 합니다.
  
@@ -558,7 +558,7 @@ ALTER DATABASE 문은 자동 커밋 모드(기본 트랜잭션 관리 모드)에
   
 계획 캐시를 삭제하면 모든 후속 실행 계획이 다시 컴파일되며 일시적으로 갑자기 쿼리 성능이 저하될 수 있습니다. 계획 캐시의 삭제된 각 캐시스토어에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 "데이터베이스 유지 관리 또는 재구성 작업으로 인해 '%s' 캐시스토어(계획 캐시의 일부)에 대한 캐시스토어 플러시가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 %d번 발견되었습니다"라는 정보 메시지가 있습니다. 이 메시지는 캐시가 해당 시간 간격 내에 플러시되는 동안 5분마다 기록됩니다.  
   
-프로시저 캐시는 다음 시나리오에서도 플러시됩니다. 기본 옵션이 있는 데이터베이스에 여러 쿼리를 실행합니다. 그러면 데이터베이스가 삭제됩니다.    
+프로시저 캐시는 다음 시나리오에도 플러시됩니다. 기본 옵션이 있는 데이터베이스에 대해 여러 가지 쿼리를 실행합니다. 그러면 데이터베이스가 삭제됩니다.    
   
 ## <a name="viewing-database-information"></a>데이터베이스 정보 보기  
 
@@ -602,7 +602,7 @@ ADD SECONDARY ON SERVER secondaryserver
 WITH ( ALLOW_CONNECTIONS = ALL )  
 ```  
   
-### <a name="d-remove-a-geo-replication-secondary"></a>4. 지역 복제 보조 데이터베이스 제거  
+### <a name="d-remove-a-geo-replication-secondary"></a>D. 지역 복제 보조 데이터베이스 제거  
  
 `secondaryserver` 서버에서 보조 데이터베이스 db1을 제거합니다.  
   
@@ -611,7 +611,7 @@ ALTER DATABASE db1
 REMOVE SECONDARY ON SERVER testsecondaryserver   
 ```  
   
-### <a name="e-failover-to-a-geo-replication-secondary"></a>5. 지역 복제 보조 데이터베이스로 장애 조치  
+### <a name="e-failover-to-a-geo-replication-secondary"></a>E. 지역 복제 보조 데이터베이스로 장애 조치  
 
 `secondaryserver` 서버에서 실행될 때 `secondaryserver` 서버에서 보조 데이터베이스 db1을 승격하여 새로운 주 데이터베이스를 만듭니다.  
   
@@ -719,7 +719,7 @@ ALTER DATABASE 문은 자동 커밋 모드(기본 트랜잭션 관리 모드)에
   
 계획 캐시를 삭제하면 모든 후속 실행 계획이 다시 컴파일되며 일시적으로 갑자기 쿼리 성능이 저하될 수 있습니다. 계획 캐시의 삭제된 각 캐시스토어에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 "데이터베이스 유지 관리 또는 재구성 작업으로 인해 '%s' 캐시스토어(계획 캐시의 일부)에 대한 캐시스토어 플러시가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 %d번 발견되었습니다"라는 정보 메시지가 있습니다. 이 메시지는 캐시가 해당 시간 간격 내에 플러시되는 동안 5분마다 기록됩니다.  
   
-프로시저 캐시는 다음 시나리오에서도 플러시됩니다. 기본 옵션이 있는 데이터베이스에 여러 쿼리를 실행합니다. 그러면 데이터베이스가 삭제됩니다.    
+프로시저 캐시는 다음 시나리오에도 플러시됩니다. 기본 옵션이 있는 데이터베이스에 대해 여러 가지 쿼리를 실행합니다. 그러면 데이터베이스가 삭제됩니다.    
   
 ## <a name="viewing-database-information"></a>데이터베이스 정보 보기  
 
@@ -865,7 +865,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB );
 ALTER DATABASE dw1 MODIFY ( SERVICE_OBJECTIVE= 'DW1200' );  
 ```  
   
-### <a name="d-change-the-max-size-and-the-performance-level"></a>4. 최대 크기와 서비스 계층을 변경합니다.  
+### <a name="d-change-the-max-size-and-the-performance-level"></a>D. 최대 크기와 서비스 계층을 변경합니다.  
   
 ```sql  
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );  
@@ -1047,7 +1047,7 @@ ALTER DATABASE CustomerSales
     SET ( DISTRIBUTED_SIZE = 1000 GB );  
 ```  
   
-### <a name="d-altering-the-maximum-storage-for-the-transaction-log"></a>4. 트랜잭션 로그에 대해 최대 저장소 변경  
+### <a name="d-altering-the-maximum-storage-for-the-transaction-log"></a>D. 트랜잭션 로그에 대해 최대 저장소 변경  
  다음 예제에서는 어플라이언스에 대해 10GB의 트랜잭션 로그 크기가 최대값[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 갖도록 데이터베이스 `CustomerSales`를 업데이트합니다.  
   
 ```sql  
@@ -1055,7 +1055,7 @@ ALTER DATABASE CustomerSales
     SET ( LOG_SIZE = 10 GB );  
 ```  
 
-### <a name="e-check-for-current-statistics-values"></a>5. 현재 통계 값에 대한 확인
+### <a name="e-check-for-current-statistics-values"></a>E. 현재 통계 값에 대한 확인
 
 다음 쿼리는 모든 데이터베이스에 대해 현재 통계 값을 반환합니다. 값이 1이면 기능이 켜져있고 0이면 기능이 꺼져있다는 의미입니다.
 
@@ -1066,7 +1066,7 @@ SELECT NAME,
     is_auto_update_stats_async_on
 FROM sys.databases;
 ```
-### <a name="f-enable-auto-create-and-auto-update-stats-for-a-database"></a>6. 데이터베이스에 대한 통계 자동 작성 및 자동 업데이트 사용
+### <a name="f-enable-auto-create-and-auto-update-stats-for-a-database"></a>F. 데이터베이스에 대한 통계 자동 작성 및 자동 업데이트 사용
 다음 명령문을 사용하여 CustomerSales 데이터베이스에 대한 통계를 자동 및 비동기적으로 만들고 업데이트할 수 있습니다.  이렇게 하면 고품질의 쿼리 계획을 만들기 위한 필요에 따라 단일 열 통계를 만들고 업데이트합니다.
 
 ```sql

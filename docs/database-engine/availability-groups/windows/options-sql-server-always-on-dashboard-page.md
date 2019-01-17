@@ -1,6 +1,7 @@
 ---
 title: 옵션(SQL Server Always On, 대시보드 페이지) | Microsoft Docs
-ms.custom: ''
+description: SQL Server Always On 대시보드에 있는 '옵션' 페이지에 대한 설명입니다.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +13,12 @@ ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d79165eae0ccbc1e5c442849c5df0ef83d4f1e90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d19f811faffda3584287ec29a4e4c03349586949
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773251"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214814"
 ---
 # <a name="options-sql-server-always-on-dashboard-page"></a>옵션(SQL Server Always On, 대시보드 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

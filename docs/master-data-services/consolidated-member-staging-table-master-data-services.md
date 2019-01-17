@@ -5,8 +5,7 @@ ms.date: 04/01/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], attributes staging table
@@ -15,12 +14,12 @@ ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0ae29a3e3b604ffdff961389f8acb2eebf2a4c95
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5951ff4222ba87af1a405b739d823e7702dda4da
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394429"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52806925"
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>통합 멤버 준비 테이블(Master Data Services)
 
@@ -43,7 +42,7 @@ ms.locfileid: "52394429"
 |**코드**<br /><br /> 필수(단, **ImportType 1** 또는 **2**에 대해 코드가 자동으로 생성되는 경우는 제외). 자세한 내용은 [코드 자동 생성&#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)을 참조하세요.|멤버의 고유 코드입니다.|  
 |**이름**<br /><br /> 선택 사항|멤버의 이름입니다.|  
 |**NewCode**|멤버 코드를 변경하는 경우에만 사용합니다.|  
-|\<특성 이름>|엔터티의 각 특성에 대해 열이 존재합니다. **ImportType** **0** 또는 **2**에 사용합니다. 자유 형식 특성의 경우 특성의 새 텍스트 또는 문자열 값을 지정합니다. 도메인 기반 특성의 경우에는 특성이 될 멤버의 코드를 지정합니다. 링크 특성의 경우 URL은 **https://** 로 시작해야 합니다.<br /><br /> <br /><br /> 참고: 파일 특성을 준비할 수 없습니다.|  
+|\<특성 이름>|엔터티의 각 특성에 대해 열이 존재합니다. **ImportType** **0** 또는 **2**에 사용합니다. 자유 형식 특성의 경우 특성의 새 텍스트 또는 문자열 값을 지정합니다. 도메인 기반 특성의 경우에는 특성이 될 멤버의 코드를 지정합니다. 링크 특성의 경우 URL은 **https://** 로 시작해야 합니다.<br /><br /> <br /><br /> 참고: 파일 특성은 준비할 수 없습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   

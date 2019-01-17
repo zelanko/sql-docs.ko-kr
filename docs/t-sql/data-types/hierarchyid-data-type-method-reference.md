@@ -19,12 +19,12 @@ ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6bba3aa9dd92086fa887e92c5c5efc3379f419fd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 51d4b6c9e19f334946657205de6cdc8c6ce593ec
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702958"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980029"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>hierarchyid 데이터 형식 메서드 참조
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,8 +75,8 @@ ms.locfileid: "51702958"
 **hierarchyid** 형식의 열은 복제된 모든 테이블에서 사용할 수 있습니다. 응용 프로그램의 요구 사항은 복제가 단방향인지 양방향인지, 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전이 무엇인지에 따라 달라집니다.
   
 ### <a name="one-directional-replication"></a>단방향 복제
-단방향 복제에는 변경 내용이 구독자에 적용되지 않는 병합 복제 및 스냅숏 복제, 트랜잭션 복제가 포함됩니다. **hierachyid** 열이 단방향 복제에서 어떻게 작동하는지는 구독자가 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 따라 달라집니다.
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 게시자는 특별히 고려할 사항 없이 **hierachyid** 열을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구독자에 복제할 수 있습니다.  
+단방향 복제에는 변경 내용이 구독자에 적용되지 않는 병합 복제 및 스냅숏 복제, 트랜잭션 복제가 포함됩니다. **hierarchyid** 열이 단방향 복제에서 어떻게 작동하는지는 구독자가 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 따라 달라집니다.
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 게시자는 특별히 고려할 사항 없이 **hierarchyid** 열을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구독자에 복제할 수 있습니다.  
 -   [!INCLUDE[ssEW](../../includes/ssew-md.md)] 또는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하고 있는 구독자에게 **hierarchyid** 열을 복제하려면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 게시자는 이러한 열을 변환해야 합니다. [!INCLUDE[ssEW](../../includes/ssew-md.md)] 및 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **hierarchyid** 열이 지원되지 않습니다. 이러한 버전 중 하나를 사용 중인 경우에도 데이터를 구독자로 복제할 수 있습니다. 이렇게 하려면 열을 호환되는 데이터 형식으로 변환할 수 있도록 스키마 옵션이나 게시 호환성 수준(병합 복제의 경우)을 설정해야 합니다.  
   
 열 필터링은 이러한 두 가지 시나리오에서 모두 지원됩니다. 여기에는 **hierarchyid** 열 필터링도 포함됩니다. 행 필터링은 필터에 **hierarchyid** 열이 포함되어 있지 않은 경우에 한해 지원됩니다.

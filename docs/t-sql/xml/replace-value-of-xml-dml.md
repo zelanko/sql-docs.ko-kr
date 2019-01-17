@@ -19,12 +19,12 @@ ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b413d8948d671b0b3717df94db8cf18ecada004
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 770568bcf8d6a89b350b9cd04ef3ff6cb10a015f
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701461"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980369"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of(XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ with Expression2
   
 ## <a name="arguments"></a>인수  
  *Expression1*  
- 업데이트할 값이 있는 노드를 식별합니다. 하나의 노드만 식별해야 합니다. 즉, *Expression1*은 정적 단일 항목이어야 합니다. XML이 형식화되는 경우 노드 유형은 단순 유형이어야 합니다. 노드를 여러 개 선택하면 오류가 발생합니다. *Expression1*이 빈 시퀀스를 반환하면 값이 대체되지 않고 오류가 반환되지 않습니다. *Expression1*은 단순 유형의 콘텐츠(목록 또는 원자성 유형), 텍스트 노드 또는 특성 노드를 가진 단일 요소를 반환해야 합니다. 또한 *Expression1*은 공용 구조체 형식, 복합 형식, 처리 명령, 문서 노드 또는 주석 노드는 될 수 없습니다. 이들 중 하나인 경우 오류가 반환됩니다.  
+ 업데이트할 값이 있는 노드를 식별합니다. 하나의 노드만 식별해야 합니다. 즉, *Expression1*은 정적 싱글톤이어야 합니다. XML이 형식화되는 경우 노드 유형은 단순 유형이어야 합니다. 노드를 여러 개 선택하면 오류가 발생합니다. *Expression1*이 빈 시퀀스를 반환하면 값이 대체되지 않고 오류가 반환되지 않습니다. *Expression1*은 단순 유형의 콘텐츠(목록 또는 원자성 유형), 텍스트 노드 또는 특성 노드를 가진 단일 요소를 반환해야 합니다. 또한 *Expression1*은 공용 구조체 형식, 복합 형식, 처리 명령, 문서 노드 또는 주석 노드는 될 수 없습니다. 이들 중 하나인 경우 오류가 반환됩니다.  
   
  *Expression2*  
  노드의 새 값을 식별합니다. **data()** 를 암시적으로 사용하므로 단순 유형의 노드를 반환하는 식이 될 수 있습니다. 값이 값 목록일 경우 **update** 문은 이전 값을 목록으로 대체합니다. 형식화된 XML 인스턴스를 수정하는 경우 *Expression2*는 *Expression*1과 같은 유형이거나 그 하위 유형이어야 합니다. 그렇지 않으면 오류가 반환됩니다. 형식화되지 않은 XML 인스턴스를 수정할 경우 *Expression2*는 원자화될 수 있는 식이어야 합니다. 그렇지 않으면 오류가 반환됩니다.  
@@ -137,7 +137,7 @@ SELECT x.query(' /Root/ProductDescription')
 FROM T  
 ```  
   
-### <a name="d-updating-xml-stored-in-a-typed-xml-column"></a>4. 형식화된 XML 열에 저장되어 있는 XML 업데이트  
+### <a name="d-updating-xml-stored-in-a-typed-xml-column"></a>D. 형식화된 XML 열에 저장되어 있는 XML 업데이트  
  다음 예에서는 형식화된 XML 열에 저장되어 있는 제조 지침 문서의 값을 대체합니다.  
   
  이 예에서는 먼저 AdventureWorks 데이터베이스에서 형식화된 XML 열을 가진 테이블(T)을 만듭니다. 그런 다음 ProductModel 테이블의 Instructions 열의 제조 지침 XML 인스턴스를 테이블 T로 복사합니다. 그러면 테이블 T의 XML에 삽입 내용이 적용됩니다.  

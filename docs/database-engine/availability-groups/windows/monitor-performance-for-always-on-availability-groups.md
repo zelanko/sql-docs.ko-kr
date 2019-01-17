@@ -1,6 +1,7 @@
 ---
-title: Always On 가용성 그룹에 대한 성능 모니터링(SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: 가용성 그룹에 대한 성능 모니터링
+description: 이 문서에서는 동기화 프로세스를 설명하고 몇몇 주요 메트릭을 계산하는 방법을 보여 주고 몇 가지 일반적인 성능 문제 해결 시나리오에 대한 링크를 제공합니다.
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2f9b3fb8ce55a57a7609aacd685ef56952b6811e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 52a1bde0da61988793463aa725a5b0a4003b2e12
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601153"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203360"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 성능 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +68,7 @@ ms.locfileid: "51601153"
   
  흐름 제어 게이트 외에도 로그 메시지가 보내지지 않도록 할 수 있는 다른 요인이 있습니다. 복제본을 동기화하면 메시지가 확실히 LSN(로그 시퀀스 번호) 순서대로 보내지고 적용됩니다. 로그 메시지가 보내지기 전에 해당 LSN에 대해 가장 낮은 승인된 LSN 번호를 확인하여 임계값(메시지 유형에 따라 다름) 중 하나보다 낮은지 확인합니다. 두 LSN 번호 간의 간격이 임계값보다 크면 메시지가 보내지지 않습니다. 간격이 다시 임계값보다 낮아진 후 메시지가 보내집니다.  
   
- 두 가지 유용한 성능 카운터 [SQL Server:가용성 복제본 > 흐름 제어/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md) 및 [SQL Server:가용성 복제본 > 흐름 제어 시간(ms/sec)](~/relational-databases/performance-monitor/sql-server-availability-replica.md)은 마지막 초 이내에 흐름 제어가 활성화된 시간 및 흐름 제어를 위해 대기하면서 소비한 시간을 보여 줍니다. 흐름 제어 대기 시간이 클수록 RPO가 더 큽니다. 흐름 제어에 대한 높은 대기 시간을 야기할 수 있는 문제 유형에 대한 자세한 내용은 [문제 해결: 가용성 그룹이 RPO를 초과하는 경우](troubleshoot-availability-group-exceeded-rpo.md)를 참조하세요.  
+ 두 가지 유용한 성능 카운터 [SQL Server:가용성 복제본 > 흐름 제어/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md) 및 [SQL Server:가용성 복제본 > 흐름 제어 시간(ms/sec)](~/relational-databases/performance-monitor/sql-server-availability-replica.md)은 마지막 초 이내에 흐름 제어가 활성화된 시간 및 흐름 제어를 위해 대기하면서 소비한 시간을 보여 줍니다. 흐름 제어 대기 시간이 클수록 RPO가 더 큽니다. 흐름 제어에 대한 높은 대기 시간을 야기할 수 있는 문제 유형에 대한 자세한 내용은 [문제 해결: 가용성 그룹 초과 RPO](troubleshoot-availability-group-exceeded-rpo.md)를 참조하세요.  
   
 ##  <a name="estimating-failover-time-rto"></a>장애 조치(failover) 시간 예측(RTO)  
  SLA의 RTO는 지정된 시간에 Always On 구현의 장애 조치(failover) 시간에 따라 달라지며 다음 수식으로 표현될 수 있습니다.  
@@ -136,7 +137,7 @@ Always On 가용성 그룹에서는 보조 복제본에 호스팅되는 데이�
 
 - **redo_queue_size**(KB) [*RTO에서 사용됨*]: 다시 실행 큐 크기는 **last_received_lsn**과 **last_redone_lsn** 사이의 트랜잭션 로그 크기입니다. **last_received_lsn**는 이 보조 데이터베이스를 호스팅하는 보조 복제본이 모든 로그 블록을 받은 지점을 식별하는 로그 블록 ID입니다. **Last_redone_lsn**는 보조 데이터베이스에서 마지막으로 다시 실행된 로그 레코드의 실제 로그 시퀀스 번호입니다. 이 두 값에 따라 시작 로그 블록(**last_received_lsn**) 및 최종 로그 블록(**last_redone_lsn**)의 ID를 찾을 수 있습니다. 그런 다음, 이러한 두 로그 블록 사이의 공간은 트랜잭션 로그 블록이 아직 다시 실행되지 않은 방법을 나타낼 수 있습니다. 이는 킬로바이트(KB)로 측정됩니다.
 -  **redo_rate**(KB/sec) [*RTO에서 사용됨*]: 경과된 시간의 기간에서 표시되는 누적 값, 보조 데이터베이스에서 트랜잭션 로그(KB)의 양을 킬로바이트(KB)/escond로 다시 실행되었습니다. 
-- **last_commit_time**(날짜/시간) [*RPO에서 사용됨*]: 주 데이터베이스의 경우 **last_commit_time**은 최신 트랜잭션이 커밋된 시간입니다. 보조 데이터베이스의 경우 **last_commit_time**은 보조 데이터베이스에서도 성공적으로 강화된 주 데이터베이스의 트랜잭션에 대한 최신 커밋 시간입니다. 보조의 이 값은 주의 동일한 값과 동기화되어야 하므로, 이 두 값 사이의 간격은 데이터 손실(RPO)의 추정치입니다.  
+- **last_commit_time**(Datetime) [*RPO에서 사용됨*]: 주 데이터베이스의 경우 **last_commit_time**은 최신 트랜잭션이 커밋된 시간입니다. 보조 데이터베이스의 경우 **last_commit_time**은 보조 데이터베이스에서도 성공적으로 강화된 주 데이터베이스의 트랜잭션에 대한 최신 커밋 시간입니다. 보조의 이 값은 주의 동일한 값과 동기화되어야 하므로, 이 두 값 사이의 간격은 데이터 손실(RPO)의 추정치입니다.  
  
 ## <a name="estimate-rto-and-rpo-using-dmvs"></a>DMV를 사용하여 RTO 및 RPO 추정
 
@@ -328,7 +329,7 @@ DMV [sys.dm_hadr_database_replica_states](../../../relational-databases/system-d
 
   
 ##  <a name="monitoring-for-rto-and-rpo"></a>RTO 및 RPO 모니터링  
- 이 섹션에서는 가용성 그룹의 RTO 및 RPO 메트릭을 모니터링하는 방법을 보여 줍니다. 이 데모는 [Always On 상태 모델, 2부: 상태 모델 확장](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)에 나오는 GUI 자습서와 유사합니다.  
+ 이 섹션에서는 가용성 그룹의 RTO 및 RPO 메트릭을 모니터링하는 방법을 보여 줍니다. 이 데모는 [Always On 상태 모델, 2부: 상태 모델 확장](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)에 지정된 GUI 자습서와 유사합니다.  
   
  [예상 장애 조치(failover) 시간(RTO)](#BKMK_RTO) 및 [예상 잠재적 데이터 손실(RPO)](#BKMK_RPO)에서 장애 조치(failover) 시간과 잠재적 데이터 손실 계산의 요소는 편의상 정책 관리 패싯 **데이터베이스 복제본 상태**의 성능 메트릭으로 제공됩니다([SQL Server 개체에 대한 정책 기반 관리 패싯 보기](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md) 참조). 이러한 두 메트릭을 일정에 따라 모니터링하고 메트릭이 각각 RTO 및 RPO를 초과하는 경우 경고할 수 있습니다.  
   
@@ -404,11 +405,11 @@ DMV [sys.dm_hadr_database_replica_states](../../../relational-databases/system-d
   
         -   **조건 확인**: `RTO`  
   
-        -   **대상 기준**: **IsPrimaryReplica AvailabilityGroup**의 **모든 DatabaseReplicaState**  
+        -   **적용 대상**: **IsPrimaryReplica AvailabilityGroup**의 **모든 DatabaseReplicaState**  
   
              이 설정은 로컬 가용성 복제본이 주 복제본인 가용성 그룹에 대해서만 정책이 평가되도록 합니다.  
   
-        -   **평가 모드**: **일정에 따라**  
+        -   **평가 모드**: **예약 시**  
   
         -   **일정**: **CollectorSchedule_Every_5min**  
   
@@ -432,9 +433,9 @@ DMV [sys.dm_hadr_database_replica_states](../../../relational-databases/system-d
   
         -   **조건 확인**: `RPO`  
   
-        -   **대상 기준**: **IsPrimaryReplica AvailabilityGroup**의 **모든 DatabaseReplicaState**  
+        -   **적용 대상**: **IsPrimaryReplica AvailabilityGroup**의 **모든 DatabaseReplicaState**  
   
-        -   **평가 모드**: **일정에 따라**  
+        -   **평가 모드**: **예약 시**  
   
         -   **일정**: **CollectorSchedule_Every_30min**  
   

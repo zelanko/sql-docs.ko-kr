@@ -1,7 +1,7 @@
 ---
 title: ALTER USER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/05/2017
+ms.date: 12/03/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2cd03ba4b9b0363ef1d8ebe9c3ff0721fc08e3f9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3c738f81901ca44891184ff6810eea05dac9d4c3
+ms.sourcegitcommit: 753364d8ac569c9f363d2eb6b1b8214948d2ed8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542271"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52826118"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "52542271"
 ## <a name="syntax"></a>구문  
   
 ```  
--- Syntax for SQL Server  
+-- Syntax for SQL Server and Azure SQL Database
   
 ALTER USER userName    
      WITH <set_item> [ ,...n ]  
@@ -56,9 +56,12 @@ ALTER USER userName
     | PASSWORD = 'password' [ OLD_PASSWORD = 'oldpassword' ]  
     | DEFAULT_LANGUAGE = { NONE | <lcid> | <language name> | <language alias> }  
     | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ]  
-```  
-  
-```  
+```
+
+> [!IMPORTANT]
+> SQL Database Managed Instance에 대한 Azure AD 로그인은 **공개 미리 보기**에 있습니다. Azure AD 로그인을 사용하는 사용자에게 적용하는 경우 Azure SQL Database Managed Instance에 대해 `DEFAULT_SCHEMA = { schemaName | NULL }` 및 `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }` 옵션만 지원됩니다.
+
+```
 -- Syntax for Azure SQL Database  
   
 ALTER USER userName    

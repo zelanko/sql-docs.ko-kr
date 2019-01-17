@@ -13,12 +13,12 @@ ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e03624a7db0cc28a15a92e9cc1ffff98e9cf4514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 227f488e3393352ae083576676b7934b722b0ce9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648209"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203722"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Oracle 원본 데이터베이스에 연결
   Oracle 원본 페이지를 사용하여 Oracle 원본 데이터베이스에 연결하는 데 필요한 정보를 제공할 수 있습니다. CDC 인스턴스는 연결된 Oracle 데이터베이스의 다시 실행 로그를 읽습니다.  
@@ -37,11 +37,11 @@ ms.locfileid: "47648209"
   
 -   **Windows 인증**: 현재 Windows 도메인 자격 증명을 사용하려면 선택합니다. Windows 인증을 사용하도록 Oracle 데이터베이스를 구성한 경우에만 이 옵션을 사용할 수 있습니다.  
   
--   **Oracle 인증**: 이 옵션을 선택하는 경우 연결 중인 Oracle 데이터베이스의 사용자에 대한 **사용자 이름** 과 **암호** 를 입력해야 합니다.  
+-   **Oracle 인증**: 이 옵션을 선택하는 경우 연결 중인 Oracle 데이터베이스의 사용자에 대한 **사용자 이름**과 **암호**를 입력해야 합니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  사용자가 로그 마이닝 사용자가 되려면 Oracle 데이터베이스에 다음 권한이 부여되어야 합니다.  
->   
+> 
 >  -   \<any-captured-table>에 대한 SELECT 권한  
 > -   SELECT ANY TRANSACTION  
 > -   DBMS LOGMNR에 대한 EXECUTE 권한  
@@ -55,7 +55,7 @@ ms.locfileid: "47648209"
 > -   ALL OBJECTS에 대한 SELECT 권한  
 > -   DBA OBJECTS에 대한 SELECT 권한  
 > -   ALL TABLES에 대한 SELECT 권한  
->   
+> 
 >  이러한 권한을 V$xxx에 부여할 수 없는 경우 V_S$xxx에 부여합니다.  
   
  **연결 테스트**  

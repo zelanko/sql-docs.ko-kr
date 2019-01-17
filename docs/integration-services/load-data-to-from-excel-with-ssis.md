@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 270528218e23d230ecb8b8ea4dc5bde6baaa6440
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 05d19b94f22187e699999642fe79fbcd08c2548a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545719"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749966"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 사용하여 Excel에서 데이터 가져오기 또는 Excel로 데이터 내보내기
 
@@ -52,7 +52,7 @@ ms.locfileid: "52545719"
 
 SSIS를 사용하여 Excel에서 데이터를 가져오거나 Excel로 데이터를 내보내려면 Excel용 연결 구성 요소가 설치되어 있지 않은 경우 먼저 다운로드해야 합니다. Excel용 연결 구성 요소는 기본적으로 설치되어 있지 않습니다.
 
-[Microsoft Access 데이터베이스 엔진 2016 재배포 가능](https://www.microsoft.com/download/details.aspx?id=54920)에서 최신 버전의 Excel용 연결 구성 요소를 다운로드합니다. 최신 버전 구성 요소는 이전 버전의 Excel에서 만든 파일을 열 수 있습니다.
+Excel용 연결 구성 요소의 최신 버전을 다음에서 다운로드합니다. [Microsoft Access 데이터베이스 엔진 2016 재배포 가능 패키지](https://www.microsoft.com/download/details.aspx?id=54920). 최신 버전 구성 요소는 이전 버전의 Excel에서 만든 파일을 열 수 있습니다.
 
 ### <a name="notes-about-the-download-and-installation"></a>다운로드 및 설치에 대한 참고
 
@@ -64,7 +64,7 @@ SSIS를 사용하여 Excel에서 데이터를 가져오거나 Excel로 데이터
 
     `C:\Users\<user_name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-    2016 재배포 가능을 설치하는 데 문제가 있는 경우 [Microsoft Access 데이터베이스 엔진 2010 재배포 가능](https://www.microsoft.com/download/details.aspx?id=13255)에서 2010 재배포 가능 패키지를 대신 설치합니다. (Excel 2013용 재배포 가능 패키지는 없습니다.)
+    2016 재배포 가능 패키지를 설치하는 데 문제가 있는 경우 다음에서 2010 재배포 가능 패키지를 대신 설치합니다. [Microsoft Access 데이터베이스 엔진 2010 재배포 가능 패키지](https://www.microsoft.com/download/details.aspx?id=13255). (Excel 2013용 재배포 가능 패키지는 없습니다.)
 
 ## <a name="specify-excel"></a> Excel을 데이터 원본으로 지정
 

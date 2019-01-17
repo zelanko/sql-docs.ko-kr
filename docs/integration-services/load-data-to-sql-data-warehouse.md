@@ -5,19 +5,18 @@ documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
 ms.technology: integration-services
-ms.devlang: NA
 ms.topic: conceptual
 ms.custom: loading
 ms.date: 08/09/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 2ae5eb35be423a7b0dedc85d9c7cd589f75c781e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e7a2ecb3d432579fdbffee9a5cec0d776d4f4596
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395566"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732090"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 사용하여 Azure SQL Data Warehouse로 데이터 로드
 
@@ -96,7 +95,7 @@ Visual Studio가 열리고 새 Integration Services(SSIS) 프로젝트를 만듭
 
 1. Azure Blob 업로드 태스크를 사용하여 Azure Blob Storage에 데이터를 저장합니다. Azure Blob 업로드 태스크를 가져오려면 [Azure용 Microsoft SQL Server Integration Services 기능 팩][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]을 다운로드합니다.
 
-2. 그런 다음, SSIS 실행 SQL 태스크를 사용하여 데이터를 SQL Data Warehouse로 로드하는 PolyBase 스크립트를 시작합니다. Azure Blob Storage에서 (SSIS가 아닌) SQL Data Warehouse로 데이터를 로드하는 예제는 [자습서: Azure SQL Data Warehouse로 데이터 로드](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw)를 참조하세요.
+2. 그런 다음, SSIS 실행 SQL 태스크를 사용하여 데이터를 SQL Data Warehouse로 로드하는 PolyBase 스크립트를 시작합니다. Azure Blob Storage에서 SQL Data Warehouse로 데이터를 로드하는 예제(SSIS가 아닌)는 [자습서: Azure SQL Data Warehouse에 데이터 로드](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw)를 참조하세요.
 
 ## <a name="option-2---use-a-source-and-destination"></a>옵션 2 - 원본 및 대상 사용
 
@@ -213,9 +212,9 @@ SQL Server 및 SQL Data Warehouse에 연결하려면 ADO.NET 연결 관리자와
 
 ## <a name="next-steps"></a>다음 단계
 
-- 디자인 환경에서 패키지 권한을 디버그하고 문제를 해결하는 방법을 알아봅니다. 여기에서 시작: [패키지 배포 문제 해결 도구][Troubleshooting Tools for Package Development]
+- 디자인 환경에서 패키지 권한을 디버그하고 문제를 해결하는 방법을 알아봅니다. 여기에서 시작하세요. [패키지 배포 문제 해결 도구][Troubleshooting Tools for Package Development].
 
-- SSIS 프로젝트 및 패키지를 Integration Services 서버 또는 다른 저장 위치에 배포하는 방법을 알아봅니다. 여기에서 시작: [프로젝트 및 패키지 배포][Deployment of Projects and Packages]
+- SSIS 프로젝트 및 패키지를 Integration Services 서버 또는 다른 저장 위치에 배포하는 방법을 알아봅니다. 여기에서 시작하세요. [프로젝트 및 패키지 배포][Deployment of Projects and Packages].
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-data-warehouse/ssis-designer-01.png

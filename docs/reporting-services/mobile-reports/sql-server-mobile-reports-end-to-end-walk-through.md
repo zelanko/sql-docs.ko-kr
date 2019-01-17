@@ -1,19 +1,21 @@
 ---
-title: 'SQL Server 모바일 보고서: 종단 간 연습 | Microsoft Docs'
-ms.date: 11/07/2017
+title: 'SQL Server 모바일 보고서: 종단 간 연습'
+description: Reporting Services 웹 포털의 SQL Server 모바일 보고서 게시자를 사용하여 모든 화면 크기에 적합한 모바일 보고서를 만들고 Power BI 모바일 앱에 표시하는 방법을 알아봅니다.
+ms.date: 12/07/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
+ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7db1fd9af6a36f0804819c389b06778ae04d2ebf
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: db6f8c664dff6f7234e43a3e3f11f6cc01e2eac4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813766"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209712"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 모바일 보고서: 종단 간 연습
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 웹 포털의 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 를 사용하여 모든 화면 크기에 적합한 모바일 보고서를 만들고 Power BI 모바일 앱에 표시하는 방법을 알아봅니다.
@@ -30,14 +32,14 @@ ms.locfileid: "51813766"
 ## <a name="before-we-start"></a>시작하기 전에  
 이러한 단계를 따르려면 다음 제품이 필요합니다.  
   
-* 데이터 원본 및 KPI를 만들고 데이터 세트 및 모바일 보고서를 게시하려면 [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md)에 액세스해야 합니다.  
-* [공유 데이터 집합을 만들려면](../install-windows/install-report-builder.md)  
+* 데이터 원본 및 KPI를 만들고 데이터 세트 및 모바일 보고서를 게시하려면 [Reporting Services 기본 모드 보고서 서버](../install-windows/install-reporting-services-native-mode-report-server.md)에 액세스해야 합니다.  
+* 공유 데이터 세트를 만들려면 [보고서 작성기를 설치](../install-windows/install-report-builder.md)합니다.  
 * 모바일 보고서를 만들려면 [SQL Server 모바일 보고서 게시자를 설치](https://go.microsoft.com/fwlink/?LinkId=717766)합니다.  
 * [AdventureWorks 예제 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)  
-*  또는 [Microsoft SQL Server 예제](../../sample/microsoft-sql-server-samples.md) 페이지에서 제공되는 Wide World Importers 예제 데이터베이스
+*  또는 [Microsoft SQL Server 샘플](../../sample/microsoft-sql-server-samples.md) 페이지에서 제공되는 Wide World Importers 샘플 데이터베이스.
 * 결과를 보려면 
   *   [Power BI 서비스에 등록](https://go.microsoft.com/fwlink/?LinkID=513879) 합니다.
-  *  모바일 장치(iOS, Android 휴대폰 또는 Windows 10 장치)에[Power BI 모바일 앱을 다운로드](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) 합니다.  
+  *  모바일 디바이스(iOS, Android 휴대폰 또는 Windows 10 디바이스)에[Power BI 모바일 앱을 다운로드](https://docs.microsoft.com/en-us/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) 합니다.  
 
   
 ## <a name="create-a-shared-data-source"></a>공유 데이터 원본 만들기  
@@ -61,14 +63,14 @@ Reporting Services에서 지원하는 모든 데이터 원본에서 모바일 �
   
 [Reporting Services의 공유 데이터 원본](../report-data/create-modify-and-delete-shared-data-sources-ssrs.md)에 대해 자세히 알아보세요.  
    
-## <a name="shared-dataset">공유 데이터 집합 만들기</a>  
+## <a name="shared-dataset">공유 데이터 세트 만들기</a>  
   
 기존 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 클라이언트 도구(예: [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너)를 사용하여 공유 데이터 세트를 만듭니다.  이 연습에서는 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]를 사용합니다. [보고서 작성기를 설치](../install-windows/install-report-builder.md)하거나 웹 포털에서 시작합니다. 세 개의 데이터 세트, 즉 KPI 값에 대한 데이터 세트, KPI 추세에 데이터 세트 및 Reporting Services 모바일 보고서의 추가 필드가 포함된 데이터 세트를 만듭니다.     
   
 1. [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에서 **새로 만들기** > **페이지가 매겨진 보고서** 를 클릭하여 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]를 시작합니다.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)   
-2. **새 데이터 집합**을 클릭합니다.  
+2. **새 데이터 세트**를 클릭합니다.  
   
    ![PBI_SSMRP_RBNewDataset](../../reporting-services/mobile-reports/media/pbi-ssmrp-rbnewdataset.png)  
    
@@ -83,7 +85,7 @@ Reporting Services에서 지원하는 모든 데이터 원본에서 모바일 �
    
 6. 데이터 원본을 선택하고 **열기** 를 다시 클릭합니다.    
   
-7. [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]에서 데이터 집합을 디자인합니다.  
+7. [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]에서 데이터 세트를 디자인합니다.  
   
    ![PBI_SSMRP_RB_QueryDesignr600](../../reporting-services/mobile-reports/media/pbi-ssmrp-rb-querydesignr600.png)  
    
@@ -99,11 +101,11 @@ Reporting Services에서 지원하는 모든 데이터 원본에서 모바일 �
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
       
    KPI 만들기 화면에서 수동으로 값을 입력하거나 공유 데이터 세트를 사용할 수 있습니다.    
-2. **값** 을 **수동 설정** 에서 **데이터 집합 필드**로 변경합니다.  
+2. **값**을 **수동 설정**에서 **데이터 세트 필드**로 변경합니다.  
    
    ![PBI_SSMRP_KPI_DatasetField](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpi-datasetfield.png)  
    
-3. **데이터 집합 필드 선택**상자에서 줄임표( **...** )를 클릭하고 이전 단계에서 데이터 집합을 선택합니다.  
+3. **데이터 세트 필드 선택**상자에서 줄임표( **...** )를 클릭하고 이전 단계에서 데이터 세트를 선택합니다.  
    
    ![PBI_SSMRP_KPIPickDataset](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpipickdataset.png)  
    
@@ -117,9 +119,9 @@ Reporting Services에서 지원하는 모든 데이터 원본에서 모바일 �
 
 6. **확인**을 클릭합니다.
 
-7. **추세 집합** 상자에서 **데이터 집합 추세**를 클릭합니다.  
+7. **추세 집합** 상자에서 **데이터 세트 추세**를 클릭합니다.  
   
-6. **데이터 집합 추세 선택** 상자에서 줄임표(**...**)를 클릭합니다.  
+6. **데이터 세트 추세 선택** 상자에서 줄임표(**...**)를 클릭합니다.  
    
 7. 필드를 선택하고 **확인**을 클릭합니다.  
 
@@ -260,7 +262,7 @@ Reporting Services 모바일 보고서를 만들려면 [SQL Server Mobile 보고
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서를 보려면 먼저 다음을 수행해야 합니다.
 
 *  계정이 아직 없는 경우[Power BI 서비스에 등록](https://go.microsoft.com/fwlink/?LinkID=513879)합니다.
-*  모바일 장치에[Power BI 모바일 앱을 다운로드](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) 합니다.  
+*  모바일 디바이스에[Power BI 모바일 앱을 다운로드](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) 합니다.  
 
 ### <a name="view-your-mobile-report"></a>모바일 보고서 보기
   
@@ -281,7 +283,9 @@ Reporting Services 모바일 보고서를 만들려면 [SQL Server Mobile 보고
   
     ![PBI_iPad_SSMRP_LeftNavBiggr](../../reporting-services/mobile-reports/media/pbi-ipad-ssmrp-leftnavbiggr.png)  
       
->**팁**: 언제든지 옵션 아이콘 ![PBI_iPad_OptionsIcon](../../reporting-services/mobile-reports/media/pbi-ipad-optionsicon.png) 을 탭하여 Reporting Services 웹 포털의 Reporting Services 모바일 보고서와 Power BI 서비스의 대시보드 간에 이동할 수 있습니다.   
+> [!TIP]
+> 언제든지 옵션 아이콘 ![PBI_iPad_OptionsIcon](../../reporting-services/mobile-reports/media/pbi-ipad-optionsicon.png)을 탭하여 Reporting Services 웹 포털의 Reporting Services 모바일 보고서와 Power BI 서비스의 대시보드 간에 이동할 수 있습니다.  
+
   
 ## <a name="view-kpis-and-mobile-reports-in-the-power-bi-app"></a>Power BI 앱에서 KPI 및 모바일 보고서 보기  
   
@@ -297,12 +301,10 @@ Reporting Services 모바일 보고서를 만들려면 [SQL Server Mobile 보고
   
 KPI와 모바일 보고서는 Reporting Services 웹 포털에 있는 것과 동일한 폴더에 표시됩니다.   
   
-### <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  
--  [iPad 앱(iOS용 Power BI)에서 Reporting Services 모바일 보고서 및 KPI 보기](https://powerbi.microsoft.com/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  
--  [iPhone 앱(iOS용 Power BI)에서 Reporting Services 모바일 보고서 및 KPI 보기](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports)  
--  [Android 휴대폰용 Power BI 앱에서 Reporting Services 모바일 보고서 및 KPI 보기](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports)
--  [Windows 10 장치용 Power BI 앱에서 Reporting Services 보고서 및 KPI 보기](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
+-  iOS 및 Android 디바이스용 [Power BI 모바일 앱의 온-프레미스 보고서 서버 보고서 모바일 및 KPI](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-app-ssrs-kpis-mobile-on-premises-reports) 보기
+-  [Windows 10 디바이스용 Power BI 모바일 앱의 온-프레미스 보고서 서버 보고서 모바일 및 KPI](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/) 보기    
   
    
 

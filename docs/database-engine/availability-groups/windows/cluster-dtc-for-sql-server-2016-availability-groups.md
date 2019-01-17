@@ -1,6 +1,7 @@
 ---
-title: SQL Server 2016 가용성 그룹에 대한 클러스터 DTC | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹에 대한 DTC 서비스를 클러스터링하는 방법
+description: 'Always On 가용성 그룹에 대한 Microsoft DTC(Distributed Transaction Coordinator) 서비스를 클러스터링하는 데 필요한 요구 사항 및 단계에 대해 설명합니다. '
+ms.custom: seodec18
 ms.date: 08/30/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,14 +12,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bd433b33fcf62afd16b27f368507fc2794768fae
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0bcbbd26ed97fd0df20abfb997495105fe2f726a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601383"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203312"
 ---
-# <a name="cluster-dtc-for-sql-server-2016-availability-groups"></a>SQL Server 2016 가용성 그룹에 대한 클러스터 DTC
+# <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 DTC 서비스를 클러스터링하는 방법
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -66,4 +67,4 @@ ms.locfileid: "51601383"
 
 [가용성 그룹의 SQL Server 2016 DTC 지원(영문)](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) 
 
-[외부 링크: Windows Server 2008 R2를 사용하여 SQL Server의 클러스터된 인스턴스에 대한 DTC 구성(영문)](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)
+[외부 링크: Windows Server 2008 R2를 사용하여 SQL Server의 클러스터된 인스턴스에 대한 DTC 구성](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)

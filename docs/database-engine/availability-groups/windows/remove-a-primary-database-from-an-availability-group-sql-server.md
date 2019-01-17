@@ -1,6 +1,7 @@
 ---
-title: 가용성 그룹에서 주 데이터베이스 제거(SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹에서 주 데이터베이스 제거
+description: T-SQL(Transact-SQL), PowerShell 또는 SQL Server Management Studio를 사용하여 Always On 가용성 그룹에서 주 데이터베이스를 제거하는 단계입니다.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,14 +18,14 @@ ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae9f27f97cc49192c1398a75528d66239649df70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5fb0b24d51c383466cf91e6e691717170c290f4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700381"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202002"
 ---
-# <a name="remove-a-primary-database-from-an-availability-group-sql-server"></a>가용성 그룹에서 주 데이터베이스 제거(SQL Server)
+# <a name="remove-a-primary-database-from-an-always-on-availability-group"></a>Always On 가용성 그룹에서 주 데이터베이스 제거
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 PowerShell을 사용하여 Always On 가용성 그룹에서 주 데이터베이스와 해당 보조 데이터베이스를 모두 제거하는 방법에 대해 설명합니다.  
   
@@ -44,7 +45,7 @@ ms.locfileid: "47700381"
   
 -   **후속 작업:**  [가용성 그룹에서 가용성 데이터베이스를 제거한 후](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항 및 제한 사항  
   

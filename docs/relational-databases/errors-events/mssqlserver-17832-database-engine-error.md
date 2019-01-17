@@ -15,12 +15,12 @@ ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4bf4143ad0d446e526a72ad32b45d4397933827c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c5def2cd5b24046fe41524ed26b149c335b1c1f0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657213"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590507"
 ---
 # <a name="mssqlserver17832"></a>MSSQLSERVER_17832
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ Kerberos 환경에서 Windows 인증을 사용할 경우 클라이언트는 PAC(
 > [!CAUTION]  
 > [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
-**서버 컴퓨터에서 MaxTokenSize** **를 변경하려면**  
+**서버 컴퓨터에서 MaxTokenSize를 변경하려면**  
   
 1.  **시작** 메뉴에서 **실행**을 클릭합니다.  
   

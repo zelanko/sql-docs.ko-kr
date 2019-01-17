@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Stretch Database, wizard
 - Enable Database for Stretch Wizard
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3be0f60c692334b577a7eb59fa25f385ef0af33c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: a2a977be46826859cf286fff1750345d5346e2b9
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43020466"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596824"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Stretch에 데이터베이스 사용 마법사를 실행하여 시작
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -178,10 +178,10 @@ ms.locfileid: "43020466"
   
 ##  <a name="KnownIssues"></a> 마법사 문제 해결  
  **스트레치 데이터베이스 마법사가 실패했습니다.**  
- 서버 수준에서 스트레치 데이터베이스가 아직 사용하도록 설정되지 않은 경우 시스템 관리자 권한 없이 마법사를 실행하여 사용하도록 설정하면 마법사가 실패합니다. 시스템 관리자에게 로컬 서버 인스턴스에서 스트레치 데이터베이스를 설정하도록 요청한 후 마법사를 다시 실행합니다. 자세한 내용은 [필수 구성 요소: 서버에서 Stretch Database를 활성화할 수 있는 권한](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)를 참조하십시오.  
+ 서버 수준에서 스트레치 데이터베이스가 아직 사용하도록 설정되지 않은 경우 시스템 관리자 권한 없이 마법사를 실행하여 사용하도록 설정하면 마법사가 실패합니다. 시스템 관리자에게 로컬 서버 인스턴스에서 스트레치 데이터베이스를 설정하도록 요청한 후 마법사를 다시 실행합니다. 자세한 내용은 [필수 구성 요소: 서버에서 Stretch Database를 활성화할 수 있는 권한](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)을 참조하세요.  
   
 ## <a name="next-steps"></a>다음 단계  
- 스트레치 데이터베이스에 추가 테이블을 사용합니다. 데이터 마이그레이션을 모니터링하고 스트레치 사용 데이터베이스 및 테이블을 관리합니다.  
+ Stretch Database에 추가 테이블을 사용합니다. 데이터 마이그레이션을 모니터링하고 스트레치 사용 데이터베이스 및 테이블을 관리합니다.  
   
 -   [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) : 추가 테이블을 사용합니다.  
   

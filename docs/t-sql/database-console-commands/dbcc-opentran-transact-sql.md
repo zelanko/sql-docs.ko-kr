@@ -26,19 +26,19 @@ ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: eafe617f4586863dba9bed75a14cee2623cb54e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cebd9e5b52e2aa80308e266858da014b13f267c
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821543"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206732"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 DBCC OPENTRAN은 로그 잘림을 발생하지 못하게 할 수 있는 활성 트랜잭션을 식별하는 데 도움이 됩니다. DBCC OPENTRAN은 지정된 데이터베이스의 트랜잭션 로그 내에서 가장 오래된 활성 트랜잭션과 가장 오래된 분산 및 비분산 복제 트랜잭션에 대한 정보를 표시합니다. 로그에 존재하는 활성 트랜잭션이 있거나 데이터베이스에 복제 정보가 포함된 경우에만 결과가 표시됩니다. 로그에 활성 트랜잭션이 없을 경우 정보 메시지가 표시됩니다.
   
-> [!NOTE]  
+> [!NOTE]
 >  DBCC OPENTRAN은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외의 게시자에 대해 지원되지 않습니다.  
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)

@@ -18,19 +18,19 @@ ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b4eb0d7865b71ba29ec00895e64574c0a188b3bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 933212da81784d7d186fc6ef7c0cdfaa4edab24b
+ms.sourcegitcommit: 7ead3a042d369315fc83a9ccc3d74f62e7b05bc0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795601"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54012319"
 ---
 # <a name="operator-precedence-transact-sql"></a>연산자 우선 순위(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   복합 식에 여러 개의 연산자가 있을 때는 연산자 우선 순위에 따라 연산자 실행 순서가 결정됩니다. 실행 순서는 결과 값에 중대한 영향을 줄 수 있습니다.  
   
- 다음 표에서는 연산자 우선 순위를 보여 줍니다. 우선 순위가 높은 연산자가 우선 순위가 낮은 연산자보다 먼저 평가됩니다.  
+ 다음 표에서는 연산자 우선 순위를 보여 줍니다. 높은 수준의 연산자는 낮은 수준의 연산자 보다 먼저 평가됩니다(다음 표에서 1은 최고 수준이고 8은 가장 낮은 수준임).
   
 |Level|연산자|  
 |-----------|---------------|  

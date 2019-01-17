@@ -22,15 +22,15 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 58fa8d8009806f22153a22d63ea83b238140d431
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 204aa0ea696e45fa756360df790cdf983066260f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517438"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590977"
 ---
 # <a name="deploy-a-data-tier-application"></a>데이터 계층 애플리케이션 배포
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   마법사 또는 PowerShell 스크립트를 사용하여 DAC 패키지의 DAC(데이터 계층 애플리케이션)를 데이터베이스 엔진 또는 Azure SQL Database의 기존 인스턴스에 배포합니다. 
   
  배포 프로세스에서는 **msdb** 시스템 데이터베이스([!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 **master**)에 DAC 정의를 저장하여 DAC 인스턴스를 등록하고 데이터베이스를 만든 다음 DAC에 정의된 모든 데이터베이스 개체로 해당 데이터베이스를 채웁니다.  
@@ -39,8 +39,7 @@ ms.locfileid: "52517438"
 ## <a name="deploy-the-same-dac-package-multiple-times"></a>동일한 DAC 패키지를 여러 번 배포 
  동일한 DAC 패키지를 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 단일 인스턴스에 여러 번 배포할 수 있지만 한 번에 하나씩 배포를 실행해야 합니다. 지정된 DAC 인스턴스 이름은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스 내에서 각 배포마다 고유해야 합니다.  
   
-## <a name="managed-instances"></a>관리되는 인스턴스  
- DAC를 데이터베이스 엔진의 관리되는 인스턴스로 배포하는 경우 배포된 DAC는 유틸리티 컬렉션 집합이 인스턴스에서 유틸리티 제어 지점으로 다음에 전송될 때 **SQL Server 유틸리티**에 통합됩니다. DAC에 있게 됩니다는 **배포 된 데이터 계층 응용 프로그램** 의 노드는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **유틸리티 탐색기** 에 보고 된 **배포 된 데이터 계층 응용 프로그램**세부 정보 페이지입니다.  
+ DAC를 데이터베이스 엔진의 인스턴스로 배포하는 경우 배포된 DAC는 유틸리티 컬렉션 집합이 인스턴스에서 유틸리티 제어 지점으로 다음에 전송될 때 **SQL Server 유틸리티**에 통합됩니다. DAC에 있게 됩니다는 **배포 된 데이터 계층 애플리케이션** 의 노드는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**유틸리티 탐색기** 에 보고 된 **배포 된 데이터 계층 애플리케이션**세부 정보 페이지입니다.  
   
 ###  <a name="database-options-and-settings"></a>데이터베이스 옵션 및 설정  
  기본적으로 배포 중에 생성된 데이터베이스에는 다음을 제외한 CREATE DATABASE 문의 모든 기본 설정이 적용됩니다.  
@@ -76,9 +75,9 @@ ms.locfileid: "52517438"
 ### <a name="select-the-dac-package"></a>DAC 패키지 선택  
  배포할 DAC 패키지를 선택합니다. DAC 패키지는 유효한 DAC 패키지 파일이어야 하며 확장자가 .dacpac여야 합니다.  
   
- **DAC 패키지** - 배포할 데이터 계층 응용 프로그램이 포함된 DAC 패키지의 경로와 파일 이름을 지정합니다. 입력란 오른쪽의 **찾아보기** 단추를 선택하여 DAC 패키지의 위치를 찾아볼 수 있습니다.  
+ **DAC 패키지** - 배포할 데이터 계층 애플리케이션이 포함된 DAC 패키지의 경로와 파일 이름을 지정합니다. 입력란 오른쪽의 **찾아보기** 단추를 선택하여 DAC 패키지의 위치를 찾아볼 수 있습니다.  
   
- **응용 프로그램 이름** - DAC를 만들거나 데이터베이스에서 추출할 때 할당된 DAC 이름을 표시하는 읽기 전용 입력란입니다.  
+ **애플리케이션 이름** - DAC를 만들거나 데이터베이스에서 추출할 때 할당된 DAC 이름을 표시하는 읽기 전용 입력란입니다.  
   
  **버전** - DAC를 만들거나 데이터베이스에서 추출할 때 할당된 버전을 표시하는 읽기 전용 입력란입니다.  
   
@@ -175,7 +174,7 @@ $fileStream.Close()
 ```  
   
 ## <a name="more-information"></a>자세한 정보 
- [데이터 계층 응용 프로그램](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+ [데이터 계층 애플리케이션](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [데이터베이스에서 DAC 추출](../../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md)   
  [데이터베이스 식별자](../../relational-databases/databases/database-identifiers.md)  
   

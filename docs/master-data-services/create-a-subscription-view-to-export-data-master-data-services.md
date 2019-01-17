@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - subscription views [Master Data Services], creating
@@ -15,12 +14,12 @@ ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 23e50b94464d252431d153c9d68247cbff410b7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9619bca36ec488fdd5e25b5b9eb9a82370d7049
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597052"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52754675"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>구독 뷰를 만들어 데이터 내보내기(Master Data Services)
 
@@ -82,13 +81,13 @@ ms.locfileid: "47597052"
   
  뷰를 클릭하면 다음 정보가 표시됩니다.  
   
--   **만든 사람**: 뷰를 만든 사용자의 이름입니다.  
+-   **만든 사람**: 보기를 만든 사용자의 이름입니다.  
   
--   **날짜**: 뷰를 만든 날짜와 시간입니다.  
+-   **On**: 보기를 만든 날짜와 시간입니다.  
   
--   **업데이트한 사람**: 뷰를 마지막으로 업데이트한 사용자의 이름입니다.  
+-   **업데이트한 사람**: 보기를 마지막으로 업데이트한 사용자의 이름입니다.  
   
--   **날짜**: 뷰를 마지막으로 업데이트한 날짜와 시간입니다.  
+-   **On**: 보기를 마지막으로 업데이트한 날짜와 시간입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [개요: 데이터 내보내기&#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   

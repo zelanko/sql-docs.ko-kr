@@ -30,12 +30,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3374d7ae2f86ce27de46fad9027f78a040ca356b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 68900243001edf7d9dcb39bcf10bf13e24bd0c48
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545748"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997585"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -103,7 +103,7 @@ END CATCH
   
 -   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md)는 오류 메시지의 전체 텍스트를 반환합니다. 이 텍스트는 길이, 개체 이름 또는 시간과 같은 대체 가능한 매개 변수에 제공된 값을 포함합니다.  
   
- CATCH 블록의 범위를 벗어나서 이러한 함수를 호출하면 NULL이 반환됩니다. CATCH 블록의 범위 내 어디에서나 이들 함수를 사용하여 오류 정보를 검색할 수 있습니다. 예를 들어 다음 스크립트는 오류 처리 함수를 포함하는 저장 프로시저를 보여 줍니다. `CATCH` 구문의 `TRY...CATCH` 블록에서 이 저장 프로시저를 호출하면 오류에 대한 정보가 반환됩니다.  
+CATCH 블록의 범위를 벗어나서 이러한 함수를 호출하면 NULL이 반환됩니다. CATCH 블록의 범위 내 어디에서나 이들 함수를 사용하여 오류 정보를 검색할 수 있습니다. 예를 들어 다음 스크립트는 오류 처리 함수를 포함하는 저장 프로시저를 보여 줍니다. `CATCH` 구문의 `TRY...CATCH` 블록에서 이 저장 프로시저를 호출하면 오류에 대한 정보가 반환됩니다.  
   
 ```sql  
 -- Verify that the stored procedure does not already exist.  
@@ -146,17 +146,19 @@ END CATCH;
   
 -   시스템 관리자가 KILL 문을 사용하여 세션을 종료할 때  
   
- 다음 유형의 오류가 TRY...CATCH 구문과 동일한 실행 수준에서 발생하는 경우 CATCH 블록에서 처리되지 않습니다.  
+다음 유형의 오류가 TRY...CATCH 구문과 동일한 실행 수준에서 발생하는 경우 CATCH 블록에서 처리되지 않습니다.  
   
 -   구문 오류와 같이 일괄 처리의 실행을 막는 컴파일 오류  
   
 -   문 수준 다시 컴파일 단계에서 발생한 오류(예: 컴파일 이후에 지연된 이름 확인으로 발생한 개체 이름 확인 오류)  
+-   개체 이름 확인 오류   
+
   
- 이런 오류는 해당 일괄 처리, 저장 프로시저 또는 트리거를 실행한 수준으로 반환됩니다.  
+이런 오류는 해당 일괄 처리, 저장 프로시저 또는 트리거를 실행한 수준으로 반환됩니다.  
   
- TRY 블록 내의 더 낮은 실행 수준(예: sp_executesql 또는 사용자 정의 저장 프로시저 실행 시)에서 컴파일하는 동안 또는 명령문 수준으로 다시 컴파일하는 동안 오류가 발생하는 경우 이 오류는 TRY...CATCH 구문보다 낮은 수준에서 발생하며 연결된 CATCH 블록에서 처리됩니다.  
+TRY 블록 내의 더 낮은 실행 수준(예: sp_executesql 또는 사용자 정의 저장 프로시저 실행 시)에서 컴파일하는 동안 또는 명령문 수준으로 다시 컴파일하는 동안 오류가 발생하는 경우 이 오류는 TRY...CATCH 구문보다 낮은 수준에서 발생하며 연결된 CATCH 블록에서 처리됩니다.  
   
- 다음 예에서는 `SELECT` 문에서 발생한 개체 이름 확인 오류가 `TRY...CATCH` 구문으로는 포착되지 않지만 저장 프로시저 내에서 동일한 `CATCH` 문을 실행할 때 `SELECT` 블록에서 포착되는 상황을 보여 줍니다.  
+다음 예에서는 `SELECT` 문에서 발생한 개체 이름 확인 오류가 `TRY...CATCH` 구문으로는 포착되지 않지만 저장 프로시저 내에서 동일한 `CATCH` 문을 실행할 때 `SELECT` 블록에서 포착되는 상황을 보여 줍니다.  
   
 ```sql  
 BEGIN TRY  
@@ -323,7 +325,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-trycatch"></a>4. TRY...CATCH 사용  
+### <a name="d-using-trycatch"></a>D. TRY...CATCH 사용  
  다음 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 이 오류로 인해 연결된 `CATCH` 블록으로 실행이 이동합니다.  
   
 ```sql  

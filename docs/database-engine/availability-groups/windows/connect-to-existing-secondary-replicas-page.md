@@ -1,6 +1,7 @@
 ---
-title: 기존 보조 복제본에 연결 페이지 | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹에 대한 '기존 보조 복제본 연결' 페이지
+description: SQL Server Management Studio의 '가용성 그룹 마법사' 내에 '기존 보조 복제본에 연결' 페이지에 있는 다양한 옵션에 대한 설명입니다.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,14 +14,14 @@ ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f2feb2d658f6d333fbe1b1762ea8483562b79db5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee9e77356304670fa884c4ba8cf70667e040f940
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753981"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211232"
 ---
-# <a name="connect-to-existing-secondary-replicas-page"></a>기존 보조 복제본에 연결 페이지
+# <a name="connect-to-existing-secondary-replicas-page---always-on-availability-groups"></a>기존 보조 복제본 연결 페이지 - Always On 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 도움말 항목에서는 **기존 보조 복제본에 연결** 페이지의 옵션에 대해 설명합니다. 이 항목은 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 의 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 와 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 사용됩니다.  
   

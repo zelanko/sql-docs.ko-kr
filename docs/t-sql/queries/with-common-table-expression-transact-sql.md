@@ -28,12 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c7768b97ba5fc337ab06b42e61fb1e80330bc76
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 066b202a91f646dadd4a72182193e9fb0fcee6f1
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970975"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979999"
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,7 @@ CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 �
  *CTE_query_definition*  
  공통 테이블 식을 채울 결과 집합을 위한 SELECT 문을 지정합니다. *CTE_query_definition*의 SELECT 문은 CTE가 또 다른 CTE를 정의하지는 못한다는 점을 제외하고는 뷰를 만들 때와 동일한 요구 사항을 만족해야 합니다. 자세한 내용은 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)과 주의 섹션을 참조하세요.  
   
- *CTE_query_definition*이 두 개 이상 정의된 경우 UNION ALL, UNION, EXCEPT 또는 INTERSECT 등의 집합 연산자 중 하나를 사용하여 쿼리 정의에 조인해야 합니다.  
+ *CTE_query_definition*을 두 개 이상 정의하는 경우: UNION ALL, UNION, EXCEPT 또는 INTERSECT 집합 연산자 중 하나로 쿼리 정의를 조인해야 합니다.  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -75,7 +75,7 @@ CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 �
   
 -   CTE 뒤에는 일부 또는 모든 CTE 열을 참조하는 SELECT, INSERT, UPDATE 또는 DELETE 문 하나가 있어야 합니다. 뷰의 SELECT 문 정의의 일부로 CREATE VIEW 문 내에 CTE를 지정할 수 있습니다.  
   
--   비재귀 CTE 내에 여러 개의 CTE 쿼리 정의를 정의할 수 있습니다. 이러한 정의는 UNION ALL, UNION, INTERSECT 또는 EXCEPT 등의 집합 연산자 중 하나를 사용하여 결합해야 합니다.  
+-   비재귀 CTE 내에 여러 개의 CTE 쿼리 정의를 정의할 수 있습니다. 정의는 UNION ALL, UNION, INTERSECT 또는 EXCEPT 집합 연산자 중 하나를 사용해 결합해야 합니다.  
   
 -   CTE는 같은 WITH 절에서 자신 및 이전에 정의한 CTE를 참조할 수 있지만 전방 참조는 허용되지 않습니다.  
   
@@ -104,7 +104,7 @@ CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 �
   
 -   재귀 CTE 정의는 적어도 두 개의 CTE 쿼리 정의 즉, 하나의 앵커 멤버와 재귀 멤버를 포함해야 합니다. 앵커 멤버와 재귀 멤버를 여러 개 정의할 수 있지만 앵커 멤버 쿼리 정의는 모두 첫 번째 재귀 멤버 정의 앞에 와야 합니다. 모든 CTE 쿼리 정의는 CTE 자체를 참조하지 않는 한 앵커 멤버입니다.  
   
--   앵커 멤버는 UNION ALL, UNION, INTERSECT 또는 EXCEPT 등의 집합 연산자 중 하나를 사용하여 결합해야 합니다. UNION ALL은 여러 재귀 멤버를 결합할 때 마지막 앵커 멤버와 첫 번째 재귀 멤버 사이에서 허용되는 유일한 집합 연산자입니다.  
+-   앵커 멤버는 UNION ALL, UNION, INTERSECT 또는 EXCEPT 집합 연산자 중 하나를 사용해 결합해야 합니다. UNION ALL은 여러 재귀 멤버를 결합할 때 마지막 앵커 멤버와 첫 번째 재귀 멤버 사이에서 허용되는 유일한 집합 연산자입니다.  
   
 -   앵커 멤버 및 재귀 멤버에 있는 열의 수는 같아야 합니다.  
   
@@ -144,7 +144,7 @@ CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 �
   
 -   CTE에서 원격 서버 상의 테이블을 참조할 수 있습니다. CTE의 재귀 멤버에서 원격 서버를 참조하는 경우 로컬에서 반복적으로 테이블에 액세스할 수 있도록 각 원격 테이블을 위한 스풀이 생성됩니다. CTE 쿼리인 경우 쿼리 계획에 Index Spool/Lazy Spool이 표시되며 이 스풀은 추가 WITH STACK 조건자를 가집니다. 이는 재귀를 올바르게 수행하는 한 가지 방법입니다.  
   
--   CTE의 재귀 부분에 있는 분석 및 집계 함수는 현재 재귀 수준에 대한 집합에만 적용되며 CTE에 대한 집합에는 적용되지 않습니다. ROW_NUMBER와 같은 함수는 CTE의 재귀 부분에 전달된 전체 데이터 집합이 아니라 현재 재귀 수준에 의해 함수로 전달된 데이터 하위 집합에 대해서만 실행됩니다. 자세한 내용은 예제 K. 재귀 CTE에서 분석 함수 사용을 참조하세요.  
+-   CTE의 재귀 부분에 있는 분석 및 집계 함수는 현재 재귀 수준에 대한 집합에만 적용되며 CTE에 대한 집합에는 적용되지 않습니다. ROW_NUMBER와 같은 함수는 CTE의 재귀 부분에 전달된 전체 데이터 세트가 아니라 현재 재귀 수준에 의해 함수로 전달된 데이터 하위 세트에 대해서만 실행됩니다. 자세한 내용은 예제 K. 재귀 CTE에서 분석 함수 사용을 참조하세요.  
   
 ## <a name="features-and-limitations-of-common-table-expressions-in-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 공통 테이블 식의 기능과 제한  
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 현재 CTE의 구현은 다음과 같은 기능과 제한이 있습니다.  
@@ -274,7 +274,7 @@ SalesPersonID SalesYear   TotalSales    SalesQuotaYear SalesQuota  Amt_Above_or_
   
 ```  
   
-### <a name="d-using-a-recursive-common-table-expression-to-display-multiple-levels-of-recursion"></a>4. 재귀 공통 테이블 식을 사용하여 여러 수준의 재귀 표시  
+### <a name="d-using-a-recursive-common-table-expression-to-display-multiple-levels-of-recursion"></a>D. 재귀 공통 테이블 식을 사용하여 여러 수준의 재귀 표시  
  다음 예에서는 관리자의 계층적 목록 및 이들에게 보고하는 직원을 보여 줍니다. `dbo.MyEmployees` 테이블을 만들고 채워 이 예를 시작합니다.  
   
 ```  
@@ -322,7 +322,7 @@ ORDER BY ManagerID;
 GO  
 ```  
   
-### <a name="e-using-a-recursive-common-table-expression-to-display-two-levels-of-recursion"></a>5. 재귀 공통 테이블 식을 사용하여 두 가지 수준의 재귀 표시  
+### <a name="e-using-a-recursive-common-table-expression-to-display-two-levels-of-recursion"></a>E. 재귀 공통 테이블 식을 사용하여 두 가지 수준의 재귀 표시  
  다음 예에서는 관리자와 그들에게 보고하는 직원을 보여 줍니다. 반환되는 수준은 2로 제한됩니다.  
   
 ```  
@@ -346,7 +346,7 @@ GO
   
 ```  
   
-### <a name="f-using-a-recursive-common-table-expression-to-display-a-hierarchical-list"></a>6. 재귀 공통 테이블 식을 사용하여 계층적 목록 표시  
+### <a name="f-using-a-recursive-common-table-expression-to-display-a-hierarchical-list"></a>F. 재귀 공통 테이블 식을 사용하여 계층적 목록 표시  
  다음 예에서는 4번 예를 바탕으로 관리자 및 직원의 이름과 각각의 직함을 추가하는 방법을 보여 줍니다. 관리자와 직원의 계층을 추가로 강조하기 위해 각 수준을 들여쓰기 했습니다.  
   
 ```  
@@ -377,7 +377,7 @@ ORDER BY Sort;
 GO  
 ```  
   
-### <a name="g-using-maxrecursion-to-cancel-a-statement"></a>7. MAXRECURSION을 사용하여 문 취소  
+### <a name="g-using-maxrecursion-to-cancel-a-statement"></a>G. MAXRECURSION을 사용하여 문 취소  
  잘못 구성된 재귀 CTE가 무한 루프에 진입하는 것을 방지하는 데 `MAXRECURSION`을 사용할 수 있습니다. 다음 예에서는 의도적으로 무한 루프를 만들고 `MAXRECURSION` 힌트를 사용하여 재귀 수준을 2로 제한하는 방법을 보여 줍니다.  
   
 ```  
@@ -423,7 +423,7 @@ FROM cte;
 GO  
 ```  
   
-### <a name="h-using-a-common-table-expression-to-selectively-step-through-a-recursive-relationship-in-a-select-statement"></a>8. 공통 테이블 식을 사용하여 SELECT 문에서 재귀적 관계를 선택적으로 단계별 진행  
+### <a name="h-using-a-common-table-expression-to-selectively-step-through-a-recursive-relationship-in-a-select-statement"></a>H. 공통 테이블 식을 사용하여 SELECT 문에서 재귀적 관계를 선택적으로 단계별 진행  
  다음 예에서는 `ProductAssemblyID = 800`에 대해 자전거를 제작하는 데 필요한 부품과 구성 요소의 계층을 보여 줍니다.  
   
 ```  
@@ -481,7 +481,7 @@ JOIN Parts AS d ON c.ProductAssemblyID = d.AssemblyID
 WHERE d.ComponentLevel = 0;  
 ```  
   
-### <a name="j-using-multiple-anchor-and-recursive-members"></a>10. 여러 앵커 및 재귀 멤버 사용  
+### <a name="j-using-multiple-anchor-and-recursive-members"></a>J. 여러 앵커 및 재귀 멤버 사용  
  다음 예에서는 지정된 인물의 모든 조상을 반환하기 위해 여러 개의 앵커 및 재귀 멤버를 사용하는 방법을 보여 줍니다. 이 예는 재귀 CTE가 반환한 가족 계보를 구성하기 위해 하나의 테이블을 만들고 값을 삽입합니다.  
   
 ```  

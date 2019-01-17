@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SQLServer:Databases
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 554e582d23afa6ef62b8bc1fd5ab7c8f0c704f4c
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 668fe6a825be365aa605febaaea7aafdd71ddf7d
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158920"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997575"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, Databases 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52158920"
 |**Backup/Restore Throughput/sec**|데이터베이스 백업 및 복원 작업에 대한 초당 읽기/쓰기 처리량입니다. 예를 들어 백업 디바이스를 병렬로 추가해 사용하거나 속도가 더 빠른 디바이스를 사용할 때 데이터베이스 백업 성능이 어떻게 변하는지 측정할 수 있습니다. 데이터베이스 백업 및 복원 작업의 처리량으로 사용자의 백업 및 복원 작업의 진행 상태와 성능을 확인할 수 있습니다.|  
 |**Bulk Copy Rows/sec**|초당 대량 복사되는 행 수입니다.|  
 |**Bulk Copy Throughput/sec**|초당 대량 복사되는 데이터 양(KB)입니다.|  
-|**Commit table entries**|데이터베이스의 커밋 테이블에 대한 메모리 내 부분의 크기입니다. 자세한 내용은 [sys.dm_tran_commit_table&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md)을 참조하세요.|  
+|**Commit table entries**|데이터베이스의 커밋 테이블에 대한 메모리 내 부분의 크기(행 수)입니다. 자세한 내용은 [sys.dm_tran_commit_table&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md)을 참조하세요.|  
 |**Data File(s) Size (KB)**|모든 자동 증가를 포함한 데이터베이스에 있는 모든 데이터 파일의 총 크기(KB)입니다. 이 카운터를 모니터링하면 **tempdb**의 크기 등을 확인할 때 유용합니다.|  
 |**DBCC Logical Scan Bytes/sec**|DBCC(데이터베이스 콘솔 명령)의 초당 논리적 읽기 검색 바이트 수입니다.|  
 |**Group Commit Time/sec**|초당 그룹 정지 시간(마이크로초)입니다.|

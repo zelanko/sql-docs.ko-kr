@@ -1,6 +1,7 @@
 ---
-title: 서버 인스턴스의 HADR 클러스터 컨텍스트 변경(SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹의 복제본에 대한 메타데이터를 관리하는 클러스터 변경
+description: 클러스터 간 마이그레이션을 수행하는 경우 SQL Server 인스턴스의 HADR 클러스터 컨텍스트를 변경하여 Always On 가용성 그룹 내 가용성 복제본에 대한 메타데이터를 관리하는 클러스터를 변경합니다.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 940fc70407c6a4131719818bbbc87049c93fab6b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: def5873f53093abfc13ed0968229671a012af839
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605705"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202132"
 ---
-# <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>서버 인스턴스의 HADR 클러스터 컨텍스트 변경(SQL Server)
+# <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>Always On 가용성 그룹의 복제본에 대한 메타데이터를 관리하는 클러스터 변경
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -39,7 +40,7 @@ ms.locfileid: "51605705"
   
      [보안](#Security)  
   
--   **가용성 복제본의 클러스터 컨텍스트를 전환하려면:**  [Transact-SQL](#TsqlProcedure)  
+-   **가용성 복제본의 클러스터 컨텍스트를 전환하려면 다음을 사용합니다.**  [Transact-SQL](#TsqlProcedure)  
   
 -   **후속 작업:**  [가용성 복제본의 클러스터 컨텍스트를 전환한 후](#FollowUp)  
   

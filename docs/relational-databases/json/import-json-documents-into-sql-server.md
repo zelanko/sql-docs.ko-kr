@@ -11,12 +11,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22365cc7a483b285f583268856a979a694eeabab
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7b77ef114e1af3ec0d8c7a7268ae5f9b892196fe
+ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537275"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52886928"
 ---
 # <a name="import-json-documents-into-sql-server"></a>SQL Server에 JSON 문서 가져오기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -121,8 +121,6 @@ FROM 'data/product.dat'
 WITH ( DATA_SOURCE = 'MyAzureBlobStorage');
 ```
 
-자세한 내용 및 OPENROWSET 사용 예제는 [Loading files from Azure Blob Storage into Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/02/23/loading-files-from-azure-blob-storage-into-azure-sql-database/)(Azure Blob Storage에서 Azure SQL Database로 파일 로드)를 참조하세요.
-
 ## <a name="parse-json-documents-into-rows-and-columns"></a>행과 열로 JSON 문서 구문 분석
 단일 값으로 전체 JSON 파일을 읽지 않고 파일을 구문 분석하여 파일의 책과 해당 속성을 행과 열에 반환할 수 있습니다. 다음 예제에서는 [이 사이트](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json)에서 책 목록이 포함된 JSON 파일을 사용합니다.
 
@@ -162,7 +160,7 @@ SELECT book.*
 |---|---|---|---|---|
 978-0641723445|번개 도둑|12.5|384|Rick Riordan| 
 978-1423103349|몬스터 바다|6.49|304|Rick Riordan| 
-978-1857995879|소피의 세계: 그리스 철학자|3.07|64|Jostein Gaarder| 
+978-1857995879|Sophie's World : 그리스 철학자|3.07|64|Jostein Gaarder| 
 978-1933988177|루씬 인 액션(개정판)|30.5|475|Michael McCandless|
 ||||||
 
@@ -170,10 +168,6 @@ SELECT book.*
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database에서 JSON에 대한 자세한 정보  
   
-### <a name="microsoft-blog-posts"></a>Microsoft 블로그 게시물  
-  
-특정 솔루션, 사용 사례 및 권장 사항은 SQL Server 및 Azure SQL Database의 기본 제공 JSON 지원에 대한 [블로그 게시물](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)을 참조하세요.  
-
 ### <a name="microsoft-videos"></a>Microsoft 비디오
 
 SQL Server 및 Azure SQL Database에서 기본 제공 JSON 지원에 대한 시각적 소개는 다음 비디오를 참조하세요.

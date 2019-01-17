@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], creating
@@ -15,12 +14,12 @@ ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 933c5a7f4eeae256ce9fafed6d5be53a1236e559
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3597ac503684c84b10b9ce8025b8fddbb26f3947
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702961"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52755085"
 ---
 # <a name="create-an-entity-master-data-services"></a>엔터티 만들기(Master Data Services)
 
@@ -55,8 +54,8 @@ ms.locfileid: "47702961"
   
     > [!TIP]  
     >  모델 이름을 준비 테이블의 일부로 사용합니다(예: *Modelname_Entityname*). 그러면 데이터베이스에서 테이블을 더 쉽게 찾을 수 있습니다. 준비 테이블에 대한 자세한 내용은 [개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)를 참조하세요.
-    > [!TIP]  
-    >  준비 테이블에 대해 기본 이름을 사용하는 경우 동일한 이름의 엔터티가 다른 모델에 존재하면 MDS는 준비 테이블 이름에 식별자(예: _1, _2)를 자동으로 추가합니다.
+    > [!TIP]
+    > 준비 테이블에 대해 기본 이름을 사용하는 경우 동일한 이름의 엔터티가 다른 모델에 존재하면 MDS는 준비 테이블 이름에 식별자(예: _1, _2)를 자동으로 추가합니다.
   
 7.  **트랜잭션 로그 유형** 필드의 드롭다운 목록에서 트랜잭션 로그 유형을 선택합니다.  
   

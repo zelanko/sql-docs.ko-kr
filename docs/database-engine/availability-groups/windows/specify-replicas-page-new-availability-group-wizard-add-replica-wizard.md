@@ -1,5 +1,5 @@
 ---
-title: '복제본 지정 페이지(새 가용성 그룹 마법사: 복제본 추가 마법사) | Microsoft Docs'
+title: '복제본 페이지 지정(새 가용성 그룹 마법사: 복제본 추가 마법사) | Microsoft Docs'
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12ad3867a465582aa1362f8607187ed9026c26ca
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9e5f746ed9aeea4356b619cff2439292d73384a7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605443"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212482"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>복제본 페이지 지정(새 가용성 그룹 마법사: 복제본 추가 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51605443"
  보조 복제본을 호스팅하는 데 사용할 서버 인스턴스가 **가용성 복제본** 표에 나열되어 있지 않으면 **복제본 추가** 단추를 클릭합니다. 하이브리드 IT 환경에서 가용성 그룹을 구성하는 경우( [Microsoft Azure 가상 컴퓨터에서 SQL Server에 대한 고가용성 및 재해 복구](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)참조) **Azure 복제본 추가** 단추를 클릭하여 Microsoft Azure에서 보조 복제본을 사용하는 가상 컴퓨터를 만들 수 있습니다.  
   
  **초기 역할**  
- 새 복제본이 처음에 수행할 역할( **주** 또는 **보조**)을 나타냅니다.  
+ 새 복제본이 처음에 수행할 역할(**주** 또는 **보조**)을 나타냅니다.  
   
  **자동 장애 조치(Failover)(최대 3개)**  
  이 가용성 복제본을 자동 장애 조치(failover) 파트너로 사용하려는 경우에만 이 확인란을 선택합니다. 자동 장애(failover) 조치를 구성하려면 초기 주 복제본 및 보조 복제본 하나에 대해 이 옵션을 선택해야 합니다. 이러한 복제본은 모두 동기-커밋 가용성 모드를 사용합니다. 세 개의 복제본만 자동 장애 조치(failover)를 지원할 수 있습니다.  
@@ -123,7 +123,7 @@ ms.locfileid: "51605443"
  백업을 수행할 복제본을 선택할 때 백업 작업에서 가용성 복제본의 역할을 무시하도록 지정합니다. 백업 작업에서는 각 가용성 복제본의 작동 상태 및 연결 상태와 함께 백업 우선 순위 등의 기타 요인을 평가할 수 있습니다.  
   
 > [!IMPORTANT]  
->  백업 기본 설정은 적용되지 않습니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 자세한 내용은 [활성 보조: 보조 복제본에 백업&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)개념을 소개합니다.  
+>  백업 기본 설정은 적용되지 않습니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 자세한 내용은 [활성 보조 복제본: 보조 복제본에 백업&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
   
 ### <a name="replica-backup-priorities-grid"></a>복제본 백업 우선 순위 표  
  가용성 그룹의 각 복제본에 대한 백업 우선 순위를 지정하려면 **복제 백업 우선 순위** 표를 사용합니다. 이 표에는 다음 열이 있습니다.  
@@ -189,9 +189,9 @@ ms.locfileid: "51605443"
  **서브넷**  
  **DHCP** 를 네트워크 모드로 선택한 경우 **서브넷** 드롭 목록을 사용하여 가용성 그룹의 가용성 복제본을 호스팅하는 서브넷에 대한 주소를 선택합니다.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  가용성 그룹 수신기를 정의한 후에는 다음을 수행하는 것이 좋습니다.  
->   
+> 
 >  -   네트워크 관리자에게 요청하여 수신기의 IP 주소를 배타적으로 사용할 수 있도록 예약합니다. 이 가용성 그룹에 대한 클라이언트 연결을 요청할 때 연결 문자열에 사용할 수신기의 DNS 호스트 이름을 애플리케이션 개발자에게 제공합니다.  
 > -   이 가용성 그룹에 대한 클라이언트 연결을 요청할 때 연결 문자열에 사용할 수신기의 DNS 호스트 이름을 애플리케이션 개발자에게 제공합니다.  
   

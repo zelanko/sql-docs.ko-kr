@@ -25,12 +25,12 @@ ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 79873bcd39eb9f5b03871345d230215fcf3e3814
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d4a3d885eb4f0d40d95f937ba252625e9e07de5
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838211"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979889"
 ---
 # <a name="susersid-transact-sql"></a>SUSER_SID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-susersid"></a>1. SUSER_SID 사용  
- 다음 예에서는 현재 보안 컨텍스트에 대한 SID(보안 ID)를 반환합니다.  
+ 다음 예제에서는 현재 보안 컨텍스트에 대한 SID(보안 ID)를 반환합니다.  
   
 ```  
 SELECT SUSER_SID();  
@@ -98,7 +98,7 @@ SELECT SUSER_SID('London\Workstation1');
 GO  
 ```  
   
-### <a name="d-using-susersid-as-a-default-constraint"></a>4. SUSER_SID를 DEFAULT 제약 조건으로 사용  
+### <a name="d-using-susersid-as-a-default-constraint"></a>D. SUSER_SID를 DEFAULT 제약 조건으로 사용  
  다음 예에서는 `SUSER_SID`를 `DEFAULT` 문의 `CREATE TABLE` 제약 조건으로 사용합니다.  
   
 ```  
@@ -116,7 +116,7 @@ INSERT sid_example DEFAULT VALUES;
 GO  
 ```  
   
-### <a name="e-comparing-the-windows-login-name-to-the-login-name-stored-in-sql-server"></a>5. Windows 로그인 이름을 SQL Server에 저장된 로그인 이름과 비교  
+### <a name="e-comparing-the-windows-login-name-to-the-login-name-stored-in-sql-server"></a>E. Windows 로그인 이름을 SQL Server에 저장된 로그인 이름과 비교  
  다음 예에서는 *Param2*를 사용하여 Windows에서 SID를 가져오는 방법을 보여 주고 해당 SID를 `SUSER_SNAME` 함수에 대한 입력으로 사용합니다. 이 예에서는 Windows에 저장된 형식으로 로그인을 제공하고(`TestComputer\User`), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 형식으로 로그인을 반환합니다(`TESTCOMPUTER\User`).  
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지

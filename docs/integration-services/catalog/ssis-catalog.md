@@ -15,12 +15,12 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41ed2ef9899e4c0df7cb6aa3aa8f00ac62d6ffb2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eaae67a3d08fd899a9a73e4e853b1dbc97dba9ee
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535545"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553215"
 ---
 # <a name="ssis-catalog"></a>SSIS 카탈로그
   **SSISDB** 카탈로그는 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 서버에 배포한 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)](SSIS) 프로젝트를 사용할 수 있는 중앙 위치입니다. 예를 들어 프로젝트 및 패키지 매개 변수를 설정하고, 패키지의 런타임 값을 지정하기 위한 환경을 구성하고, 패키지를 실행하거나 문제를 해결하고, [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 서버 작업을 관리할 수 있습니다.  
@@ -379,7 +379,7 @@ ms.locfileid: "52535545"
   
 ###  <a name="options"></a> 옵션 구성  
   
-#### <a name="options"></a>Options  
+#### <a name="options"></a>옵션  
  다음 표에서는 대화 상자의 특정 속성과 `catalog.catalog_properties` 보기의 해당 속성에 대해 설명합니다.  
   
 |속성 이름(카탈로그 속성 대화 상자)|속성 이름(catalog.catalog_properties 보기)|설명|  
@@ -436,7 +436,7 @@ ms.locfileid: "52535545"
   
 ### <a name="to-restore-the-ssis-database"></a>SSIS 데이터베이스를 복원하려면  
   
-1.  SSISDB 카탈로그가 만들어지지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 SSISDB 데이터베이스를 복원할 경우 sp_configure 저장 프로시저를 실행하여 CLR(공용 언어 런타임)을 사용하도록 설정합니다. 자세한 내용은 [sp_configure&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 및 [clr enabled 옵션](https://go.microsoft.com/fwlink/?LinkId=231855)을 참조하세요.  
+1.  SSISDB 카탈로그가 만들어지지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 SSISDB 데이터베이스를 복원할 경우 `sp_configure` 저장 프로시저를 실행하여 CLR(공용 언어 런타임)을 사용하도록 설정합니다. 자세한 내용은 [sp_configure&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 및 [clr enabled 옵션](https://go.microsoft.com/fwlink/?LinkId=231855)을 참조하세요.  
   
     ```  
     use master   
@@ -541,10 +541,10 @@ ms.locfileid: "52535545"
   
 2.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 로컬 서버와 **Integration Services 카탈로그**를 차례로 확장합니다.  
   
-3.  **SSISDB**를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 업그레이드** 를 선택하여 SSISDB 업그레이드 마법사를 시작합니다.  
+3.  **SSISDB**를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 업그레이드** 를 선택하여 SSISDB 업그레이드 마법사를 시작합니다. 또는 로컬 서버의 관리자 권한으로 `C:\Program Files\Microsoft SQL Server\140\DTS\Binn\ISDBUpgradeWizard.exe`를 실행하여 SSISDB 업그레이드 마법사를 시작합니다.
   
-     ![SSISDB 업그레이드 마법사 시작](../../integration-services/service/media/ssisdb-upgrade-wizard-1.png "SSISDB 업그레이드 마법사 시작")  
-  
+     ![SSISDB 업그레이드 마법사 시작](../../integration-services/service/media/ssisdb-upgrade-wizard-1.png)
+
 4.  **인스턴스 선택** 페이지에서 로컬 서버의 SQL Server 인스턴스를 선택합니다.  
   
     > [!IMPORTANT]  
@@ -598,7 +598,7 @@ SSISDB 데이터베이스에 대한 Always On 지원을 활성화하기 전에 �
 > -   Always On 가용성 그룹에 SSISDB를 추가한 *후* **Always On에 대한 SSIS 지원**을 사용하도록 설정해야 합니다.  
 
 > [!NOTE]
-> 이 절차에 대한 자세한 내용은 데이터 플랫폼 MVP Marcos Freccia의 추가 스크린 샷이 포함된 다음 연습을 참조하세요. [SQL Server 2016에 대한 AG에 SSISDB 추가](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
+> 이 절차에 대한 자세한 내용은 데이터 플랫폼 MVP Marcos Freccia의 추가 스크린 샷이 포함된 다음 연습을 참조하세요. [SQL Server 2016용 AG에 SSISDB 추가](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
 
 ####  <a name="Step1"></a> 1단계: Integration Services 카탈로그 만들기  
   
@@ -655,7 +655,7 @@ Always On 가용성 그룹에 SSISDB 데이터베이스를 추가하는 것은 �
   
 3.  **주 노드**에서 SSISDB 데이터베이스를 업그레이드합니다. SQL Server Management Studio의**개체 탐색기** 에서 **Integration Services 카탈로그**를 확장하고 **SSISDB**를 마우스 오른쪽 단추로 클릭한 다음 **데이터베이스 업그레이드**를 선택합니다. 데이터베이스를 업그레이드하려면 **SSISDB 업그레이드 마법사** 의 지침을 따릅니다. **주 노드**에서 **SSIDB 업그레이드 마법사**를 로컬로 시작합니다.  
   
-4.  [2단계: Always On 가용성 그룹에 SSISDB 추가](#Step2) 의 지침에 따라 가용성 그룹에 SSISDB를 다시 추가합니다.  
+4.  [2단계: Always On 가용성 그룹에 SSISDB 추가](#Step2)의 지침에 따라 가용성 그룹에 SSISDB를 다시 추가합니다.  
   
 5.  [3단계: Always On에 대한 SSIS 지원 활성화](#Step3)의 지침을 따릅니다.  
   

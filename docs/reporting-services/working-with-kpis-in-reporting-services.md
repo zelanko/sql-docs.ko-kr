@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c9612cb4cf45ec71bb511750bab9a84914a0e7f5
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: b1960771504184706bf21e9746a4fa3c784aad3b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712494"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212433"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Reporting Services에서 KPI 사용
 
@@ -32,7 +32,7 @@ SQL Server Reporting Services에서 KPI를 사용하여 다음 질문에 대한 
 ## <a name="creating-a-dataset"></a>데이터 세트 만들기  
 KPI는 공유된 데이터 세트에서 데이터의 첫 행만 사용합니다. 사용하려는 데이터가 첫 행에 있는지 확인합니다. 공유 데이터 세트를 만들기 위해 보고서 작성기 또는 SQL Server Data Tools를 사용할 수 있습니다.  
   
-> **참고**: 데이터 집합은 KPI와 같은 폴더에 있이 필요가 없습니다.  
+> **참고**: 데이터 세트는 KPI와 같은 폴더에 있을 필요가 없습니다.  
   
 ## <a name="placement-of-kpis"></a>KPI의 배치  
   
@@ -58,8 +58,8 @@ KPI의 위치를 확인한 후 해당 폴더로 이동하고 상단 메뉴에서
 |상태|KPI 타일 색을 결정하는 데 사용되는 숫자 값입니다. 유효한 값은 1(녹색), 0(주황색) 및 -1(빨강)입니다.|  
 |추세 집합|차트 시각화에 사용되는 쉼표로 구분되는 숫자 값입니다. 또한, 추세를 나타내는 값으로 데이터 세트의 열에 설정할 수도 있습니다.|  
   
-> **경고**: 설계 시간에 **상태** 필드에 대한 단어 값을 사용할 수 있지만, 데이터 집합을 새로 고침하는 경우 숫자 값을 사용해야 합니다. 숫자 대신 단어 값으로 데이터 세트를 새로 고침할 경우 서버에서 KPI가 손상될 수 있습니다.  
-  
+> **경고**: 디자인 타임에 **상태** 필드에 대한 단어 값을 사용할 수 있지만, 데이터 세트를 새로 고침하는 경우 숫자 값을 사용해야 합니다. 숫자 대신 단어 값으로 데이터 세트를 새로 고침할 경우 서버에서 KPI가 손상될 수 있습니다.  
+> 
 > **참고**: **값**, **목표** 및 **상태** 필드는 데이터 세트 결과의 첫 행에서만 값을 선택할 수 있습니다. 하지만, **집합 추세** 필드는 추세를 반영하는 열을 선택할 수 있습니다.  
   
 공유 데이터 세트에서 데이터를 사용하기 위해 다음을 수행할 수 있습니다.  
@@ -105,6 +105,6 @@ KPI를 새로 고치려면 공유 데이터 세트에 대한 캐싱을 구성해
 ## <a name="next-steps"></a>다음 단계
   
 [웹 포털](../reporting-services/web-portal-ssrs-native-mode.md)  
-[공유 데이터 집합 작업](../reporting-services/work-with-shared-datasets-web-portal.md)
+[공유 데이터 세트 작업](../reporting-services/work-with-shared-datasets-web-portal.md)
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

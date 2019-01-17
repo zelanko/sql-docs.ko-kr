@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f77ab925ebfba6ab1d3fd524d7d740eca58fcba6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3c08f8cb48e22ba5ca1546f9fcca63f77868b356
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523485"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208802"
 ---
 # <a name="install-polybase-on-windows"></a>Windows에 PolyBase 설치
 
@@ -36,18 +36,18 @@ SQL Server 평가판을 설치하려면 [SQL Server 평가](https://www.microsof
    
 - 최소 하드 디스크 공간: 2GB.
   
-- 권장: 최소 16GB RAM.
+- 권장: 최소 16GB의 RAM.
    
 - PolyBase가 제대로 작동하려면 TCP/IP를 사용하도록 설정해야 합니다. Developer 및 Express SQL Server 버전을 제외하고 모든 버전의 SQL Server에서 TCP/IP는 기본적으로 사용하도록 설정되어 있습니다. Developer 및 Express 버전에서 PolyBase가 제대로 작동하기 위해서는 TCP/IP 연결을 사용하도록 설정해야 합니다. [서버 네트워크 프로토콜 설정 또는 해제](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)를 참조하세요.
 
 - MSVC++ 2012. 
 
-> [!NOTE]  
-
+> [!NOTE]
+> 
 > PolyBase는 컴퓨터당 하나의 SQL Server 인스턴스에만 설치할 수 있습니다.
-
+> 
 > [!IMPORTANT]
->
+> 
 > Hadoop에 대해 계산 푸시 다운 기능을 사용하려면 대상 Hadoop 클러스터에 HDFS, YARN 및 MapReduce의 핵심 구성 요소가 있어야 하며 작업 기록 서버가 활성화되어 있어야 합니다. PolyBase는 MapReduce를 통해 푸시다운 쿼리를 제출하고 작업 기록 서버에서 상태를 가져옵니다. 두 구성 요소가 없으면 쿼리가 실패합니다.
   
 ## <a name="single-node-or-polybase-scale-out-group"></a>단일 노드 또는 PolyBase 스케일 아웃 그룹
@@ -108,10 +108,10 @@ PolyBase를 독립 실행형 또는 스케일 아웃 그룹에 설치한 후에�
 |SQL Server 설치 컨트롤|**필수**<br /><br /> /FEATURES=PolyBase|PolyBase 기능을 선택합니다.|  
 |SQL Server PolyBase 엔진|**선택 사항**<br /><br /> /PBENGSVCACCOUNT|엔진 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE**입니다.|  
 |SQL Server PolyBase 엔진|**선택 사항**<br /><br /> /PBENGSVCPASSWORD|엔진 서비스 계정의 암호를 지정합니다.|  
-|SQL Server PolyBase 엔진|**선택 사항**<br /><br /> /PBENGSVCSTARTUPTYPE|자동(기본), 사용 안 함, 수동 중에서 PolyBase 엔진의 시작 모드를 지정합니다.|  
+|SQL Server PolyBase 엔진|**선택 사항**<br /><br /> /PBENGSVCSTARTUPTYPE|PolyBase 엔진의 시작 모드를 지정합니다. 자동(기본값), 비활성화 및 수동.|  
 |SQL Server PolyBase 데이터 이동 |**선택 사항**<br /><br /> /PBDMSSVCACCOUNT|데이터 이동 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE**입니다.|  
 |SQL Server PolyBase 데이터 이동 |**선택 사항**<br /><br /> /PBDMSSVCPASSWORD|데이터 이동 계정의 암호를 지정합니다.|  
-|SQL Server PolyBase 데이터 이동 |**선택 사항**<br /><br /> /PBDMSSVCSTARTUPTYPE|자동(기본), 사용 안 함, 수동 중에서 데이터 이동 서비스의 시작 모드를 지정합니다.|  
+|SQL Server PolyBase 데이터 이동 |**선택 사항**<br /><br /> /PBDMSSVCSTARTUPTYPE|데이터 이동 서비스의 시작 모드를 지정합니다. 자동(기본값), 비활성화 및 수동.|  
 |PolyBase|**선택 사항**<br /><br /> /PBSCALEOUT|SQL Server 인스턴스가 PolyBase 스케일 아웃 계산 그룹의 일부로 사용되는지 여부를 지정합니다. <br />지원되는 값: True, False.|  
 |PolyBase|**선택 사항**<br /><br /> /PBPORTRANGE|PolyBase 서비스에 대해 6개 이상의 포트가 있는 포트 범위를 지정합니다. 예:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 
@@ -124,10 +124,10 @@ PolyBase를 독립 실행형 또는 스케일 아웃 그룹에 설치한 후에�
 |SQL Server 설치 컨트롤|**필수**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | PolyBaseCore는 Hadoop 연결을 제외한 모든 PolyBase 기능에 대한 지원을 설치합니다. PolyBaseJava는 Hadoop 연결을 지원합니다. PolyBase는 두 기능을 모두 설치합니다. |  
 |SQL Server PolyBase 엔진|**선택 사항**<br /><br /> /PBENGSVCACCOUNT|엔진 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE**입니다.|  
 |SQL Server PolyBase 엔진|**선택 사항**<br /><br /> /PBENGSVCPASSWORD|엔진 서비스 계정의 암호를 지정합니다.|  
-|SQL Server PolyBase 엔진|**선택 사항**<br /><br /> /PBENGSVCSTARTUPTYPE|자동(기본), 사용 안 함, 수동 중에서 PolyBase 엔진의 시작 모드를 지정합니다.|  
+|SQL Server PolyBase 엔진|**선택 사항**<br /><br /> /PBENGSVCSTARTUPTYPE|PolyBase 엔진의 시작 모드를 지정합니다. 자동(기본값), 비활성화 및 수동.|  
 |SQL Server PolyBase 데이터 이동 |**선택 사항**<br /><br /> /PBDMSSVCACCOUNT|데이터 이동 서비스의 계정을 지정합니다. 기본값은 **NT Authority\NETWORK SERVICE**입니다.|  
 |SQL Server PolyBase 데이터 이동 |**선택 사항**<br /><br /> /PBDMSSVCPASSWORD|데이터 이동 계정의 암호를 지정합니다.|  
-|SQL Server PolyBase 데이터 이동 |**선택 사항**<br /><br /> /PBDMSSVCSTARTUPTYPE|자동(기본), 사용 안 함, 수동 중에서 데이터 이동 서비스의 시작 모드를 지정합니다.|  
+|SQL Server PolyBase 데이터 이동 |**선택 사항**<br /><br /> /PBDMSSVCSTARTUPTYPE|데이터 이동 서비스의 시작 모드를 지정합니다. 자동(기본값), 비활성화 및 수동.|  
 |PolyBase|**선택 사항**<br /><br /> /PBSCALEOUT|SQL Server 인스턴스가 PolyBase 스케일 아웃 계산 그룹의 일부로 사용되는지 여부를 지정합니다. <br />지원되는 값: True, False.|  
 |PolyBase|**선택 사항**<br /><br /> /PBPORTRANGE|PolyBase 서비스에 대해 6개 이상의 포트가 있는 포트 범위를 지정합니다. 예:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 

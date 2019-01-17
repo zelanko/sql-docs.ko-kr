@@ -1,6 +1,7 @@
 ---
-title: Always On 게시 데이터베이스 유지 관리(SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹의 일부로 복제된 게시자 데이터베이스 관리
+description: 'SQL 복제에서 게시자 역할을 하고 Always On 가용성 그룹에 참여하는 데이터베이스를 관리하고 유지하는 방법에 대한 설명입니다. '
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,14 +14,14 @@ ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f5d6b88887e20f29c4d8e123143544f8c76d60fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1c8c674eb0e86d0b78348f07fb95259327582cc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600332"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208732"
 ---
-# <a name="maintaining-an-always-on-publication-database-sql-server"></a>Always On 게시 데이터베이스 유지 관리(SQL Server)
+# <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>Always On 가용성 그룹의 일부로 복제된 게시자 데이터베이스 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 Always On 가용성 그룹을 사용할 경우 게시 데이터베이스 유지 관리와 관련하여 특별히 고려해야 할 사항에 대해 설명합니다.  

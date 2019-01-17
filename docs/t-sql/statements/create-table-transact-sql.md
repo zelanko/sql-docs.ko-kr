@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a74cdb7827351c6616a7d37ad3deb80a068a375c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 60938c31712e8bb6b08579cab099baaaf99bb0aa
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394532"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980389"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -390,10 +390,10 @@ column_name <data_type>
   
  ON {*partition_scheme* | *filegroup* | **"** default **"**}는 PRIMARY KEY나 UNIQUE 제약 조건에도 지정할 수 있습니다. 이러한 제약 조건은 인덱스를 만듭니다. *filegroup*을 지정한 경우에는 인덱스가 명명된 파일 그룹에 저장됩니다. **"** default **"** 를 지정하거나 ON을 전혀 지정하지 않으면 테이블과 동일한 파일 그룹에 인덱스가 저장됩니다. PRIMARY KEY 또는 UNIQUE 제약 조건이 클러스터형 인덱스를 만드는 경우에는 테이블에 대한 데이터 페이지가 인덱스와 동일한 파일 그룹에 저장됩니다. CLUSTERED를 지정하거나 아니면 제약 조건이 클러스터형 인덱스를 만들고 테이블 정의의 *partition_scheme* 또는 *filegroup*과는 다르게 *partition_scheme*을 지정하거나 그 반대인 경우에는 제약 조건 정의만 유지하고 나머지는 무시합니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  이 컨텍스트에서 default는 키워드가 아니라 이것은 기본 파일 그룹에 대한 식별자이며 ON **"** default **"** 또는 ON **[** default **]** 와 같이 구분되어야 합니다. **"** default **"** 를 지정하면 현재 세션의 QUOTED_IDENTIFIER 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  분할된 테이블을 만든 후에는 테이블의 LOCK_ESCALATION 옵션을 AUTO로 설정하십시오. 이렇게 하면 테이블 수준이 아닌 파티션(HoBT) 수준으로 잠금이 에스컬레이션되도록 하여 동시성을 향상시킬 수 있습니다. 자세한 내용은 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.  
   
  TEXTIMAGE_ON { *filegroup*| **"** default **"** }  
@@ -401,12 +401,12 @@ column_name <data_type>
   
  테이블에 큰 값 열이 없는 경우에는 TEXTIMAGE_ON이 허용되지 않습니다. *partition_scheme*을 지정하면 TEXTIMAGE_ON을 지정할 수 없습니다. **"** default **"** 를 지정하거나 TEXTIMAGE_ON을 전혀 지정하지 않으면 큰 값 열이 기본 파일 그룹에 저장됩니다. CREATE TABLE에 지정된 큰 값 열 데이터를 저장한 후에는 곧이어 변경할 수 없습니다.  
 
-> [!NOTE]  
+> [!NOTE]
 > Varchar(max), nvarchar(max), varbinary(max), xml 및 큰 UDT 값은 레코드에 맞는 한 최대 8000바이트까지 데이터 행에 직접 저장됩니다. 값이 레코드에 맞지 않으면 포인터는 행 내부에 저장되고 나머지는 행 외부 LOB 저장 공간에 저장됩니다. 0이 기본값입니다.
-TEXTIMAGE_ON은 "LOB 저장 공간"의 위치만 변경하며, 데이터가 행 내부에 저장되는 경우 아무 영향도 주지 않습니다. sp_tableoption의 large value types out of row 옵션을 사용하여 전체 LOB 값을 행 외부에 저장합니다. 
-
-
-> [!NOTE]  
+> TEXTIMAGE_ON은 "LOB 저장 공간"의 위치만 변경하며, 데이터가 행 내부에 저장되는 경우 아무 영향도 주지 않습니다. sp_tableoption의 large value types out of row 옵션을 사용하여 전체 LOB 값을 행 외부에 저장합니다. 
+> 
+> 
+> [!NOTE]
 >  이 컨텍스트에서 default는 키워드가 아니라 기본 파일 그룹에 대한 식별자이며 TEXTIMAGE_ON **"** default **"** 또는 TEXTIMAGE_ON **[** default **]** 와 같이 구분되어야 합니다. **"** default **"** 를 지정하면 현재 세션의 QUOTED_IDENTIFIER 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
   
  FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } 
@@ -795,11 +795,11 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
 -   파티션의 파티션 번호를 지정합니다(예: ON PARTITIONS (2)).  
   
--   여러 개별 파티션의 파티션 번호를 쉼표로 구분하여 지정합니다(예: ON PARTITIONS (1,5)).  
+-   여러 개별 파티션의 파티션 번호를 쉼표로 구분하여 지정합니다(예: ON PARTITIONS (1, 5)).  
   
--   범위와 개별 파티션을 모두 지정합니다(예: ON PARTITIONS (2,4,6 TO 8)).  
+-   범위와 개별 파티션을 모두 지정합니다(예: ON PARTITIONS (2, 4, 6 TO 8)).  
   
- `<range>`는 단어 TO로 구분된 파티션 번호로 지정할 수 있습니다(예: ON PARTITIONS (6 TO 8)).  
+ `<range>`는 TO라는 단어로 구분된 파티션 번호로 지정할 수 있습니다. 예를 들면 다음과 같습니다. ON PARTITIONS (6 TO 8)).  
   
  여러 파티션에 대해 서로 다른 데이터 압축 유형을 설정하려면 DATA_COMPRESSION 옵션을 두 번 이상 지정합니다. 예를 들면 다음과 같습니다.  
   
@@ -957,7 +957,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
    
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지 
   
-CREATE TABLE 문의 일부로 열 및 테이블 인덱스를 지정할 수 있습니다. 메모리 최적화 테이블에서 인덱스 추가 및 제거에 대한 자세한 내용은 [메모리 최적화 테이블 변경](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)을 참조하세요.
+CREATE TABLE 문의 일부로 열 및 테이블 인덱스를 지정할 수 있습니다. 메모리 최적화 테이블에서 인덱스 추가 및 제거에 대한 자세한 내용은 다음을 참조하세요. [메모리 액세스에 최적화된 테이블 변경](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
   
  HASH  
    
@@ -1292,7 +1292,7 @@ Name nvarchar(100) NOT NULL
 UNIQUE NONCLUSTERED  
 ```  
   
-### <a name="d-using-default-definitions"></a>4. DEFAULT 정의 사용  
+### <a name="d-using-default-definitions"></a>D. DEFAULT 정의 사용  
  기본값은 값을 지정하지 않은 경우 사용할 값을 INSERT 및 UPDATE 문으로 제공합니다. 예를 들어 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스는 회사에서 직원이 담당하는 각기 다른 업무를 나열하는 조회 테이블을 포함할 수 있습니다. 각각의 업무를 기술하는 열에 실제 설명을 명시적으로 입력하지 않으면 문자열 기본값으로 설명을 제공할 수 있습니다.  
   
 ```sql  
@@ -1311,7 +1311,7 @@ DEFAULT (getdate())
 DEFAULT USER  
 ```  
   
-### <a name="e-using-check-constraints"></a>5. CHECK 제약 조건 사용  
+### <a name="e-using-check-constraints"></a>E. CHECK 제약 조건 사용  
  다음 예에서는 `CreditRating` 테이블의 `Vendor` 열에 입력한 값에 대한 제한을 보여 줍니다. 제약 조건은 명명되지 않았습니다.  
   
 ```sql  
@@ -1333,7 +1333,7 @@ CHECK (emp_id IN ('1389', '0736', '0877', '1622', '1756')
 OR emp_id LIKE '99[0-9][0-9]')  
 ```  
   
-### <a name="f-showing-the-complete-table-definition"></a>6. 전체 테이블 정의 표시  
+### <a name="f-showing-the-complete-table-definition"></a>F. 전체 테이블 정의 표시  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 만든 `PurchaseOrderDetail` 테이블에 대한 모든 제약 조건 정의를 가진 전체 테이블 정의를 보여 줍니다. 예제를 실행하기 위해 테이블 스키마가 `dbo`로 변경됩니다.  
   
 ```sql  
@@ -1362,7 +1362,7 @@ CREATE TABLE dbo.PurchaseOrderDetail
 ON PRIMARY;  
 ```  
   
-### <a name="g-creating-a-table-with-an-xml-column-typed-to-an-xml-schema-collection"></a>7. XML 스키마 컬렉션 유형의 xml 열을 가진 테이블 만들기  
+### <a name="g-creating-a-table-with-an-xml-column-typed-to-an-xml-schema-collection"></a>G. XML 스키마 컬렉션 유형의 xml 열을 가진 테이블 만들기  
  다음 예에서는 XML 스키마 컬렉션 `xml` 유형의 `HRResumeSchemaCollection` 열이 있는 테이블을 만듭니다. `DOCUMENT` 키워드는 *column_name*에 있는 `xml` 데이터 형식의 각 인스턴스가 하나의 최상위 요소만 포함할 수 있도록 지정합니다.  
   
 ```sql  
@@ -1371,7 +1371,7 @@ CREATE TABLE HumanResources.EmployeeResumes
     Resume xml( DOCUMENT HumanResources.HRResumeSchemaCollection) );  
 ```  
   
-### <a name="h-creating-a-partitioned-table"></a>8. 분할된 테이블 만들기  
+### <a name="h-creating-a-partitioned-table"></a>H. 분할된 테이블 만들기  
  다음 예에서는 테이블이나 인덱스를 4개의 파티션으로 분할하는 파티션 함수를 만듭니다. 그런 다음 4개의 파티션을 각각 보관할 파일 그룹을 지정하는 파티션 구성표를 만듭니다. 마지막으로 파티션 구성표를 사용하는 테이블을 만듭니다. 이 예에서는 데이터베이스에 이미 파일 그룹이 있다고 가정합니다.  
   
 ```sql  
@@ -1408,7 +1408,7 @@ CREATE TABLE dbo.Globally_Unique_Data
     CONSTRAINT Guid_PK PRIMARY KEY (guid) );  
 ```  
   
-### <a name="j-using-an-expression-for-a-computed-column"></a>10. 계산 열에 식 사용  
+### <a name="j-using-an-expression-for-a-computed-column"></a>J. 계산 열에 식 사용  
  다음 예에서는 `(low + high)/2` 계산 열을 계산하기 위해 식(`myavg`)을 사용하는 방법을 보여 줍니다.  
   
 ```sql  
@@ -1438,7 +1438,7 @@ CREATE TABLE dbo.mylogintable
 ```sql  
 CREATE TABLE dbo.EmployeePhoto  
     (  
-    EmployeeId int NOT NULL PRIMARY KEY,  
+     EmployeeId int NOT NULL PRIMARY KEY  
     ,Photo varbinary(max) FILESTREAM NULL  
     ,MyRowGuidColumn uniqueidentifier NOT NULL ROWGUIDCOL  
         UNIQUE DEFAULT NEWID()  

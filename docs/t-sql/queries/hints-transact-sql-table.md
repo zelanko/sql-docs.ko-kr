@@ -37,12 +37,12 @@ ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8bbde02754a5cfe9d1a164f025b7442e12167802
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b866f40fddcd5fa12082c296036492ec894d2989
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713371"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306270"
 ---
 # <a name="hints-transact-sql---table"></a>힌트(Transact-SQL) - 테이블
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,6 @@ ms.locfileid: "47713371"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
@@ -127,9 +126,9 @@ WITH **(** \<table_hint> **)** [ [**,** ]...*n* ]
 몇 가지 예외가 있지만 테이블 힌트는 WITH 키워드를 사용하여 힌트를 지정할 때만 FROM 절에서 지원됩니다. 또한 테이블 힌트는 괄호로 묶어 지정해야 합니다.  
   
 > [!IMPORTANT]  
->  WITH 키워드 생략은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+> WITH 키워드 생략은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT 및 NOEXPAND 테이블 힌트는 WITH 키워드의 사용 여부와 관계없이 허용됩니다. 이러한 테이블 힌트를 WITH 키워드 없이 지정하는 경우 힌트를 단독으로 지정해야 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT 및 NOEXPAND 테이블 힌트를 WITH 키워드와 함께 또는 WITH 키워드 없이 사용할 수 있습니다. 이러한 테이블 힌트를 WITH 키워드 없이 지정하는 경우 힌트를 단독으로 지정해야 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```sql  
 FROM t (TABLOCK)  
@@ -147,7 +146,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 >  힌트를 구분할 때 쉼표 대신 공백은 더 이상 사용할 수 없습니다. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 NOEXPAND  
-쿼리 최적화 프로그램에서 쿼리를 처리할 때 기본 테이블에 액세스하기 위해 인덱싱된 뷰를 확장하지 않도록 지정합니다. 쿼리 최적화 프로그램은 뷰를 클러스터형 인덱스가 있는 테이블처럼 처리합니다. NOEXPAND는 인덱싱된 뷰에만 적용됩니다. 자세한 내용은 설명 부분을 참조하세요.  
+쿼리 최적화 프로그램에서 쿼리를 처리할 때 기본 테이블에 액세스하기 위해 인덱싱된 뷰를 확장하지 않도록 지정합니다. 쿼리 최적화 프로그램은 뷰를 클러스터형 인덱스가 있는 테이블처럼 처리합니다. NOEXPAND는 인덱싱된 뷰에만 적용됩니다. 자세한 내용은 [NOEXPAND 사용](#using-noexpand)을 참조하세요.  
   
 INDEX  **(**_index\_value_ [**,**... _n_ ] ) | INDEX =  ( _index\_value_**)**  
 INDEX() 구문은 쿼리 최적화 프로그램이 문을 처리할 때 사용할 인덱스 하나 이상의 이름이나 ID를 지정합니다. 대체 INDEX = 구문은 단일 인덱스 값을 지정하며 테이블당 하나의 인덱스 힌트만 지정할 수 있습니다.  
@@ -157,7 +156,7 @@ INDEX() 구문은 쿼리 최적화 프로그램이 문을 처리할 때 사용�
  단일 힌트 목록에서 여러 인덱스가 사용되는 경우에는 중복이 무시되고 나열된 인덱스 중 나머지를 사용하여 테이블의 행을 검색합니다. 이때 인덱스 힌트에 있는 인덱스의 순서가 중요합니다. 여러 인덱스 힌트는 또한 인덱스 AND 연산을 강제 실행하고 쿼리 최적화 프로그램은 액세스되는 각 인덱스에 대해 가능한 한 많은 조건을 적용합니다. 인덱스 힌트 컬렉션에 쿼리에서 참조하는 모든 열이 포함되지 않은 경우 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]이 모든 인덱싱된 열을 검색한 후 인출을 수행하여 남은 열을 검색합니다.  
   
 > [!NOTE]  
->  여러 인덱스를 참조하는 인덱스 힌트가 스타 조인의 팩트 테이블에 사용되는 경우 최적화 프로그램은 인덱스 힌트를 무시하고 경고 메시지를 반환합니다. 또한 인덱스 힌트가 지정된 테이블에 대해서는 인덱스 OR 연산을 사용할 수 없습니다.  
+> 여러 인덱스를 참조하는 인덱스 힌트가 스타 조인의 팩트 테이블에 사용되는 경우 최적화 프로그램은 인덱스 힌트를 무시하고 경고 메시지를 반환합니다. 또한 인덱스 힌트가 지정된 테이블에 대해서는 인덱스 OR 연산을 사용할 수 없습니다.  
   
  테이블 힌트의 최대 인덱스 수는 비클러스터형 인덱스 250개입니다.  
   
@@ -167,9 +166,9 @@ BULK 옵션이 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)와
  가져온 데이터 파일의 ID 값이 ID 열에 사용되도록 지정합니다. KEEPIDENTITY를 지정하지 않는 경우 이 열의 ID 값을 확인하지만 가져오지는 않으며 쿼리 최적화 프로그램은 테이블 생성 중에 지정된 초기값 및 증가값에 따라 고유 값을 자동으로 할당합니다.  
   
 > [!IMPORTANT]  
->  데이터 파일의 테이블 또는 뷰에서 ID 열에 값이 없고 ID 열이 테이블의 마지막 열이 아닌 경우 ID 열을 건너뛰어야 합니다. 자세한 내용은 [서식 파일을 사용하여 데이터 필드 건너뛰기&#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)를 참조하세요. ID 열을 성공적으로 건너뛰면 쿼리 최적화 프로그램은 가져온 테이블 행에 ID 열의 고유 값을 자동으로 할당합니다.  
+> 데이터 파일의 테이블 또는 뷰에서 ID 열에 값이 없고 ID 열이 테이블의 마지막 열이 아닌 경우 ID 열을 건너뛰어야 합니다. 자세한 내용은 [서식 파일을 사용하여 데이터 필드 건너뛰기&#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)를 참조하세요. ID 열을 성공적으로 건너뛰면 쿼리 최적화 프로그램은 가져온 테이블 행에 ID 열의 고유 값을 자동으로 할당합니다.  
   
-INSERT ... SELECT * FROM OPENROWSET(BULK...) 문에서 이 힌트를 사용하는 예제는 [데이터 대량 가져오기 중 ID 값 유지&#40;SQL Server&#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)를 참조하세요.  
+`INSERT ... SELECT * FROM OPENROWSET(BULK...)` 문에서 이 힌트를 사용하는 예제는 [데이터 대량 가져오기 중 ID 값 유지&#40;SQL Server&#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)를 참조하세요.  
   
 테이블에 대한 ID 값을 확인하는 방법에 대한 내용은 [DBCC CHECKIDENT&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)를 참조하세요.  
   
@@ -221,9 +220,9 @@ FORCESEEK가 인덱스 매개 변수와 함께 지정된 경우 다음 지침과
 -   분할된 인덱스의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 암시적으로 추가된 분할 열은 FORCESEEK 힌트에 지정할 수 없습니다.  
   
 > [!CAUTION]  
-> 매개 변수와 함께 FORCESEEK를 지정할 경우 매개 변수 없이 FORCESEEK를 지정할 때보다 최적화 프로그램에서 고려할 수 있는 계획 수가 더 제한됩니다. 이로 인해 "계획을 생성할 수 없음" 오류가 많은 사례에서 발생하는 원인이 될 수도 있습니다. 후속 릴리스에서는 더 많은 계획을 고려할 수 있도록 최적화 프로그램이 수정될 것입니다.  
+> 매개 변수와 함께 FORCESEEK를 지정할 경우 매개 변수 없이 FORCESEEK를 지정할 때보다 최적화 프로그램에서 고려할 수 있는 계획 수가 더 제한됩니다. 이로 인해 더 많은 사례에서 `Plan cannot be generated` 오류가 발생할 수 있습니다. 후속 릴리스에서는 더 많은 계획을 고려할 수 있도록 쿼리 최적화 프로그램이 수정될 것입니다.  
   
-FORCESCAN **적용 대상**: [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+FORCESCAN **적용 대상**: [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 쿼리 최적화 프로그램이 참조된 테이블 또는 뷰의 액세스 경로로 인덱스 검색 작업만 사용하도록 지정합니다. FORCESCAN 힌트는 최적화 프로그램이 영향을 받는 행의 수를 과소평가하고 검색 작업 대신 Seek 연산을 선택하는 경우 쿼리에 유용할 수 있습니다. 이러한 경우 작업에 할당되는 메모리 양이 적으며 쿼리 성능에도 영향을 줍니다.  
   
 FORCESCAN은 인덱스 힌트와 함께 또는 인덱스 힌트 없이 지정할 수 있습니다. 인덱스 힌트와 함께 사용할 경우(`INDEX = index_name, FORCESCAN`) 쿼리 최적화 프로그램은 참조 테이블에 액세스할 때 지정된 인덱스 전체에서 검색 액세스 경로만 고려합니다. 기본 테이블에 대해 테이블 검색 작업이 강제로 수행되도록 하기 위해 FORCESCAN을 인덱스 힌트 INDEX(0)와 함께 지정할 수 없습니다.  
@@ -366,7 +365,7 @@ XLOCK
 다른 테이블에 있는 열에 액세스하는 식 또는 함수에 의해 계산되는 계산 열이 테이블에 있는 경우 테이블 힌트는 해당 테이블에서 사용되지 않으며 전파되지 않습니다. 예를 들어 NOLOCK 테이블 힌트는 쿼리의 테이블에 지정됩니다. 이 테이블에는 다른 테이블에 있는 열에 액세스하는 식과 함수의 조합에 의해 계산되는 계산 열이 있습니다. 이러한 식과 함수에 의해 참조되는 테이블은 액세스될 때 NOLOCK 테이블 힌트를 사용하지 않습니다.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 FROM 절의 각 테이블에 대해 다음 각 그룹에서 두 개 이상의 테이블 힌트를 허용하지 않습니다.  
--   세분성 힌트: PAGLOCK, NOLOCK, READCOMMITTEDLOCK, ROWLOCK, TABLOCK, TABLOCKX  
+-   세분성 힌트: PAGLOCK, NOLOCK, READCOMMITTEDLOCK, ROWLOCK, TABLOCK 또는 TABLOCKX  
 -   격리 수준 힌트: HOLDLOCK, NOLOCK, READCOMMITTED, REPEATABLEREAD, SERIALIZABLE  
   
 ## <a name="filtered-index-hints"></a>필터링된 인덱스 힌트  
@@ -408,7 +407,7 @@ NOEXPAND는 *인덱싱된 뷰*에만 적용됩니다. 인덱싱된 뷰란 고유
   
  또한 NUMERIC_ROUNDABORT 옵션은 OFF로 설정해야 합니다.  
   
- 최적화 프로그램이 인덱싱된 뷰에 대한 인덱스를 강제로 사용하게 하려면 NOEXPAND 옵션을 지정합니다. 이 힌트는 뷰가 쿼리에서도 명명되어 있는 경우에만 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 FROM 절에서 직접 뷰를 명명하지 않는 쿼리에서 특정 인덱싱된 뷰를 강제로 사용하도록 힌트를 제공하지 않지만 쿼리 최적화 프로그램은 쿼리에서 직접 참조되지 않은 경우에도 인덱싱된 뷰의 사용을 고려합니다.  
+ 최적화 프로그램이 인덱싱된 뷰에 대한 인덱스를 강제로 사용하게 하려면 NOEXPAND 옵션을 지정합니다. 이 힌트는 뷰가 쿼리에서도 명명되어 있는 경우에만 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 FROM 절에서 직접 뷰를 명명하지 않는 쿼리에서 특정 인덱싱된 뷰를 강제로 사용하도록 힌트를 제공하지 않지만 쿼리 최적화 프로그램은 쿼리에서 직접 참조되지 않은 경우에도 인덱싱된 뷰의 사용을 고려합니다. NOEXPAND 테이블 힌트를 사용하는 경우 SQL Server는 인덱싱된 보기의 통계만 자동으로 만듭니다. 이 힌트를 생략하면 수동으로 통계를 생성하여 확인할 수 없는 누락된 통계에 대한 실행 계획 경고가 발생할 수 있습니다. 쿼리 최적화 중 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 쿼리가 보기를 직접 참조하고 NOEXPAND 힌트를 사용할 때 자동 또는 수동으로 생성된 보기 통계를 사용합니다.    
   
 ## <a name="using-a-table-hint-as-a-query-hint"></a>테이블 힌트를 쿼리 힌트로 사용  
  *테이블 힌트*는 OPTION (TABLE HINT) 절을 사용하여 쿼리 힌트로 지정할 수도 있습니다. 테이블 힌트는 [계획 지침](../../relational-databases/performance/plan-guides.md)의 컨텍스트에서 쿼리 힌트로만 사용하는 것이 좋습니다. 다른 임시 쿼리의 경우에는 이러한 힌트를 테이블 힌트로만 지정합니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  

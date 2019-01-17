@@ -1,6 +1,7 @@
 ---
-title: '문제 해결: 보조 복제본에 반영되지 않는 주 복제본의 변경 내용(Always 가용성 그룹-SQL Server) | Microsoft Docs'
-ms.custom: ag-guide
+title: 가용성 그룹의 보조 복제본에서 변경 내용을 볼 수 없는 이유 확인 - SQL Server
+ms.description: Troubleshoot to determine why changes occurring on a primary replica are not reflected on the secondary replica for an Always On availability group.
+ms.custom: ag-guide,seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3604871a67e4d5f642015eab07ca11e301ae286c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: feed1ad23a72ef00d264994373e0ef23f4d1c8bd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803091"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203482"
 ---
-# <a name="troubleshoot-changes-on-the-primary-replica-are-not-reflected-on-the-secondary-replica"></a>문제 해결: 보조 복제본에 반영되지 않은 주 복제본의 변경 내용
+# <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>주 복제본의 변경 내용이 Always On 가용성 그룹의 보조 복제본에 반영되지 않은 이유 확인
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   클라이언트 애플리케이션에서 주 복제본에 대한 업데이트를 성공적으로 완료하지만 보조 복제본 쿼리는 변경 내용이 반영되지 않았음을 보여줍니다. 이 경우 가용성에 정상 동기화 상태가 있음을 가정합니다. 대부분의 경우에서 이 동작은 몇 분 후 자체적으로 해결합니다.  
   

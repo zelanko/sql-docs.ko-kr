@@ -14,25 +14,25 @@ ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6fd8dc38147cd3053aaf1720f9c3b30ea0ac512
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: e75565d69b2a5a1ac2cf5d6a9d512fffbcf768f5
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810359"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590727"
 ---
 # <a name="unpack-a-dac-package"></a>DAC 패키지 압축 풀기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   데이터 계층 애플리케이션 압축 풀기 대화 상자를 사용하여 DAC(데이터 계층 애플리케이션) 패키지에서 스크립트와 파일 압축을 해제할 수 있습니다. 스크립트와 파일은 폴더에 저장되며 패키지를 사용하여 DAC를 프로덕션 시스템에 배포하기 전에 폴더에서 검토할 수 있습니다. 한 DAC의 내용을 다른 폴더에 압축을 푼 다른 패키지의 내용과 비교할 수도 있습니다.  
   
 1.  **시작하기 전 주의 사항:**  [보안](#Security)  
   
-2.  **DAC 압축을 풀려면:**  [데이터 계층 응용 프로그램 압축 풀기 대화 상자](#UnpackDACDial), [DAC 패키지의 내용 검사](#ExamDACPack)  
+2.  **DAC의 압축을 풀려면 다음을 사용합니다.**  [데이터 계층 애플리케이션 압축 풀기 대화 상자](#UnpackDACDial), [DAC 패키지의 내용 검사](#ExamDACPack)  
   
 ##  <a name="Security"></a> 보안  
  출처를 알 수 없거나 신뢰할 수 없는 DAC 패키지는 배포하지 않는 것이 좋습니다. 이러한 DAC에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마를 수정하여 오류가 발생할 수 있습니다. 출처를 알 수 없거나 신뢰할 수 없는 DAC를 사용하려면 먼저 격리된 테스트 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 배포하고 DAC 압축을 푼 다음 저장 프로시저나 다른 사용자 정의 코드와 같은 코드를 검사하십시오.  
   
-##  <a name="UnpackDACDial"></a> 데이터 계층 응용 프로그램 압축 풀기 대화 상자  
+##  <a name="UnpackDACDial"></a> 데이터 계층 애플리케이션 압축 풀기 대화 상자  
  **DAC 패키지 파일을 압축을 풀려면**  
   
 -   **Windows 탐색기**에서 DAC 패키지(.dacpac) 파일의 위치로 이동합니다.  
@@ -83,8 +83,8 @@ ms.locfileid: "43810359"
  자세한 내용은 [Validate a DAC Package](../../relational-databases/data-tier-applications/validate-a-dac-package.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 계층 응용 프로그램](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [데이터 계층 응용 프로그램 배포](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
- [데이터 계층 응용 프로그램 업그레이드](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  
+ [데이터 계층 애플리케이션](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+ [데이터 계층 애플리케이션 배포](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
+ [데이터 계층 애플리케이션 업그레이드](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  
   
   

@@ -23,20 +23,20 @@ ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 31b1fb369ee6b5007e79c96ebb7a536d6e2a147e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: da5e69d974f33f7eeb60e185a5a4a67dae6c01a8
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514045"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589697"
 ---
 # <a name="upgrade-a-data-tier-application"></a>데이터 계층 애플리케이션 업그레이드
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   데이터 계층 애플리케이션 업그레이드 마법사 또는 Windows PowerShell 스크립트를 사용하여 현재 배포된 DAC(데이터 계층 애플리케이션)의 스키마와 속성을 새 DAC 버전에 정의된 스키마와 속성과 일치하도록 변경할 수 있습니다.  
   
 -   **시작하기 전 주의 사항:**  [DAC 업그레이드 옵션 선택](#ChoseDACUpgOptions), [제한 사항](#LimitationsRestrictions), [필수 구성 요소](#Prerequisites), [보안](#Security), [사용 권한](#Permissions)  
   
--   **DAC를 업그레이드하려면:**  [데이터 계층 응용 프로그램 업그레이드 마법사](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
+-   **DAC를 업그레이드하려면 다음을 사용합니다.**  [데이터 계층 애플리케이션 업그레이드 마법사](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
  DAC 업그레이드는 기존 데이터베이스의 스키마를 새 DAC 버전에 정의된 스키마와 일치하도록 변경하는 전체 업그레이드 프로세스입니다. 새 버전의 DTS가 DAC 패키지 파일에 제공됩니다. DAC 패키지를 만드는 방법은 [데이터 계층 애플리케이션](../../relational-databases/data-tier-applications/data-tier-applications.md)을 참조하세요.  
@@ -76,12 +76,12 @@ ms.locfileid: "52514045"
 ####  <a name="Permissions"></a> Permissions  
  **sysadmin** 또는 **serveradmin** 고정 서버 역할의 멤버를 통하거나 **dbcreator** 고정 서버 역할에 포함되고 ALTER ANY LOGIN 권한이 있는 로그인을 통해서만 DAC를 업그레이드할 수 있습니다. 로그인은 기존 데이터베이스의 소유자여야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **라는 기본 제공** 시스템 관리자 계정도 DAC를 업그레이드할 수 있습니다.  
   
-##  <a name="UsingDACUpgradeWizard"></a> 데이터 계층 응용 프로그램 업그레이드 마법사 사용  
+##  <a name="UsingDACUpgradeWizard"></a> 데이터 계층 애플리케이션 업그레이드 마법사 사용  
  **마법사를 사용하여 DAC를 업그레이드하려면**  
   
 1.  **개체 탐색기**에서 업그레이드할 DAC가 포함된 인스턴스에 대한 노드를 확장합니다.  
   
-2.  **관리** 노드, **데이터 계층 응용 프로그램** 노드를 차례로 확장합니다.  
+2.  **관리** 노드, **데이터 계층 애플리케이션** 노드를 차례로 확장합니다.  
   
 3.  업그레이드할 DAC에 대한 노드를 마우스 오른쪽 단추로 클릭한 다음, **데이터 계층 애플리케이션 업그레이드...** 를 선택합니다.  
   
@@ -116,9 +116,9 @@ ms.locfileid: "52514045"
 ### <a name="select-the-dac-package"></a>DAC 패키지 선택  
  이 페이지의 초기 상태를 사용하여 배포할 DAC 패키지를 선택할 수 있습니다. DAC 패키지는 유효한 DAC 패키지 파일이어야 하며 확장자가 .dacpac여야 합니다. DAC 패키지의 DAC 애플리케이션 이름이 현재 DAC의 애플리케이션 이름과 같아야 합니다.  
   
- **DAC 패키지** - 새 버전의 데이터 계층 응용 프로그램이 포함된 DAC 패키지의 경로와 파일 이름을 지정합니다. 입력란 오른쪽의 **찾아보기** 단추를 선택하여 DAC 패키지의 위치를 찾아볼 수 있습니다.  
+ **DAC 패키지** - 새 버전의 데이터 계층 애플리케이션이 포함된 DAC 패키지의 경로와 파일 이름을 지정합니다. 입력란 오른쪽의 **찾아보기** 단추를 선택하여 DAC 패키지의 위치를 찾아볼 수 있습니다.  
   
- **응용 프로그램 이름** - DAC를 만들거나 데이터베이스에서 추출할 때 할당된 DAC 응용 프로그램 이름을 표시하는 읽기 전용 입력란입니다.  
+ **애플리케이션 이름** - DAC를 만들거나 데이터베이스에서 추출할 때 할당된 DAC 애플리케이션 이름을 표시하는 읽기 전용 입력란입니다.  
   
  **버전** - DAC를 만들거나 데이터베이스에서 추출할 때 할당된 버전을 표시하는 읽기 전용 입력란입니다.  
   
@@ -285,7 +285,7 @@ $fileStream.Close()
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 계층 응용 프로그램](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+ [데이터 계층 애플리케이션](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   
   

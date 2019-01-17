@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 801cdcf393ebadb9c0fd287fdd97e65cad87c284
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4cc82fcdd1324ae8596d83d6a8911973a98ae569
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533026"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980339"
 ---
 # <a name="date-transact-sql"></a>date(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "52533026"
 |yyyy-mm-ddTZD|XML/SOAP을 사용할 경우 지원됩니다.<br /><br /> TZD는 표준 시간대 지정자(Z나 +hh:mm 또는 -hh:mm)입니다.<br /><br /> - hh:mm은 표준 시간대 오프셋을 나타냅니다. hh는 0에서 14 사이에 속하는 두 자리 숫자로, 표준 시간대 오프셋의 시간(시간)을 나타냅니다.<br />- MM은 0에서 59 사이에 속하는 두 자리 숫자로, 표준 시간대 오프셋의 추가 시간(분)을 나타냅니다.<br />- +(더하기) 또는 -(빼기)는 표준 시간대 오프셋의 필수 기호입니다. 이는 현지 시간을 가져오기 위해 UTC(Coordinated Universal Time)에서 표준 시간대 오프셋을 더했는지 또는 뺐는지를 나타냅니다. 올바른 표준 시간대 오프셋 범위는 -14:00에서 +14:00 사이입니다.|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>ANSI 및 ISO 8601 호환성  
-**date**는 그레고리력에 대한 ANSI SQL 표준 정의를 준수합니다. "NOTE 85 - Datetime 데이터 형식은 그레고리력 형식의 날짜를 CE 0001–01–01부터 CE 9999–12–31까지 날짜 범위에 저장할 수 있습니다."
+**날짜**는 일반 달력에 대한 ANSI SQL 표준 정의를 준수합니다. "NOTE 85 - Datetime 데이터 형식을 사용하면 일반 달력 형식의 날짜를 0001–01–01 CE에서 9999-12-31 CE 사이에 속하는 날짜 범위에 저장할 수 있습니다."를 따릅니다.
   
 하위 클라이언트에 대해 사용되는 기본 문자열 리터럴 형식은 YYYY-MM-DD로 정의되는 SQL 표준 형식을 따릅니다. 이 형식은 DATE에 대한 ISO 8601 정의와 같습니다.
   
@@ -106,7 +106,7 @@ ms.locfileid: "52533026"
 ### <a name="converting-date-to-other-date-and-time-types"></a>date을 다른 날짜 및 시간 형식으로 변환
 이 섹션에서는 **date** 데이터 형식이 다른 날짜 및 시간 데이터 형식으로 변환될 때 어떤 일이 발생하는지를 설명합니다.
   
-변환이 **time(n)** 에서 일어나는 경우 이 변환이 실패하고 "피연산자 유형 충돌: 날짜 시간와 호환되지 않습니다."라는 오류 메시지 206이 나타납니다.
+변환이 **time(n)** 에서 일어나는 경우 이 변환이 실패하고, "피연산자 유형 충돌: date는 time과 호환되지 않습니다"라는 오류 메시지 206이 발생합니다.
   
 변환이 **datetime**에서 일어나는 경우 날짜가 복사 됩니다. 다음 코드에서는 `date` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.
   
@@ -124,7 +124,7 @@ SELECT @date AS '@date', @datetime AS '@datetime';
 --(1 row(s) affected)  
 ```  
   
-변환이 **smalldatetime**에서 일어나는 경우 **date** 값이 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 범위 안에 있으면 날짜 구성 요소가 복사되고 시간 구성 요소는 00:00:00.000으로 설정됩니다. **date** 값이 **smalldatetime** 값의 범위 밖에 있는 경우 “date 데이터 형식이 smalldatetime 데이터 형식으로의 변환은 범위를 벗어난 값으로 나타납니다”라는 오류 메시지 242가 나타나고, **smalldatetime** 값은 NULL로 설정됩니다. 다음 코드에서는 `date` 값을 `smalldatetime` 값으로 변환한 결과를 보여 줍니다.
+변환이 **smalldatetime**에서 일어나는 경우 **date** 값이 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 범위 안에 있으면 날짜 구성 요소가 복사되고 시간 구성 요소는 00:00:00.000으로 설정됩니다. **날짜** 값이 **smalldatetime** 값의 범위 밖에 있으면, "date 데이터 형식을 smalldatetime 데이터 형식으로 변환하는 중 값 범위를 벗어났습니다"라는 오류 메시지 242가 발생하고 **smalldatetime** 값이 NULL로 설정됩니다. 다음 코드에서는 `date` 값을 `smalldatetime` 값으로 변환한 결과를 보여 줍니다.
   
 ```sql
 DECLARE @date date= '1912-10-25';  

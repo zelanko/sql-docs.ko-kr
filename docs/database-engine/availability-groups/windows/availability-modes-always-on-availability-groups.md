@@ -1,6 +1,7 @@
 ---
-title: 가용성 모드(Always On 가용성 그룹) | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹의 가용성 모드 간 차이점
+description: Always On 가용성 그룹에 대한 다양한 가용성 모드에 대한 설명입니다.
+ms.custom: seodec18
 ms.date: 10/16/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -17,14 +18,14 @@ ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a2dfe969dff2f9058af9391293dd1b3aabfdfdc5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2e35d2acfca7bf226f5b6e4ffde3a2843d08024f
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544037"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53206372"
 ---
-# <a name="availability-modes-always-on-availability-groups"></a>가용성 모드(Always On 가용성 그룹)
+# <a name="differences-between-availability-modes-for-an-always-on-availability-group"></a>Always On 가용성 그룹의 가용성 모드 간 차이점
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 *가용성 모드* 는 지정된 가용성 복제본을 동기 커밋 모드에서 실행할 수 있는지 여부를 결정하는 복제본 속성입니다. 각 가용성 복제본에 대해 가용성 모드를 동기 커밋 모드나 비동기 커밋 또는 구성 전용 모드로 구성해야 합니다.  주 복제본이 *비동기 커밋 모드*로 구성된 경우 주 복제본에서는 보조 복제본이 들어오는 트랜잭션 로그 레코드를 디스크에 기록( *로그 확정*)할 때까지 기다리지 않습니다. 특정 보조 복제본이 비동기 커밋 모드로 구성된 경우 주 복제본은 해당 보조 복제본이 로그를 확정할 때까지 기다리지 않습니다. 주 복제본과 특정 보조 복제본이 모두 *동기 커밋 모드*로 구성된 경우에는 보조 복제본이 주 복제본의 *세션 제한 시간*내에 주 복제본을 ping하는 데 실패하지 않은 한 주 복제본은 보조 복제본이 로그를 확정했음을 확인할 때까지 기다립니다. 
@@ -32,18 +33,6 @@ ms.locfileid: "52544037"
 
 > [!NOTE]  
 >  보조 복제본이 주 복제본의 세션 제한 시간을 초과할 경우 주 복제본은 일시적으로 해당 보조 복제본에 대해 비동기 커밋 모드로 전환합니다. 보조 복제본이 주 복제본에 다시 연결할 때는 동기 커밋 모드가 다시 시작됩니다.  
-  
- **항목 내용**  
-  
--   [지원되는 가용성 모드](#SupportedAvModes)  
-  
--   [Asynchronous-Commit Availability Mode](#AsyncCommitAvMode)  
-  
--   [Synchronous-Commit Availability Mode](#SyncCommitAvMode)  
-  
--   [관련 작업](#RelatedTasks)  
-  
--   [관련 내용](#RelatedContent)  
   
 ##  <a name="SupportedAvModes"></a> 지원되는 가용성 모드  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]은 다음과 같이 비동기-커밋 모드, 동기-커밋 모드 및 구성 전용 모드라는 세 가지 가용성 모드를 지원합니다.  

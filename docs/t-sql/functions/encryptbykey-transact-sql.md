@@ -21,12 +21,12 @@ ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f146b9aed0e8d5cf94e2028c83d7eb751202c309
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75dbab8f45c8a617ed0a98829082170dcf85e310
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746341"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53265964"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 암호화 함수를 ANSI_PADDING OFF 설정과 함께 사용하면 암시적 변환으로 인해 데이터가 손실될 수 있습니다. ANSI_PADDING에 관한 자세한 내용은 [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
- 다음 예에 설명된 기능은 [방법: 데이터 열 암호화](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)에서 생성된 키와 인증서에 의존합니다.  
+ 다음 예에 설명된 기능은 [방법: 데이터 열 암호화](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)에서 생성된 키와 인증서를 이용합니다.  
   
 ### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>1. 대칭 키로 문자열 암호화  
  다음 예에서는 `Employee` 테이블에 열을 추가한 다음 `NationalIDNumber` 열에 저장되는 주민 등록 번호의 값을 암호화합니다.  
@@ -128,7 +128,7 @@ GO
 USE AdventureWorks2012;  
   
 -- Create a column in which to store the encrypted data.  
-ALTER TABLE Sales.CreditCard.   
+ALTER TABLE Sales.CreditCard   
     ADD CardNumber_Encrypted varbinary(128);   
 GO  
   

@@ -1,6 +1,7 @@
 ---
-title: 정책 평가 결과(Always On) | Microsoft Docs
-ms.custom: ''
+title: 정책 평가 결과 페이지(Always On 대시보드) | Microsoft Docs
+description: SQL Server Management Studio의 'Always On 대시보드' 내에 있는 '정책 평가 결과 페이지'에 대한 설명입니다.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,14 +14,14 @@ ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 587258b743ae65201e1f30e10fc513f361da8824
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 907be803cc448a5b8424adf4e968cb4520c52cd3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821051"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201932"
 ---
-# <a name="policy-evaluation-result-always-on"></a>정책 평가 결과(Always On)
+# <a name="policy-evaluation-result-page-always-on-dashboard"></a>정책 평가 결과 페이지(Always On 대시보드)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Always On 대시보드의 **정책 평가 결과** 페이지를 사용하여 현재 정책 문제를 확인할 수 있습니다.  

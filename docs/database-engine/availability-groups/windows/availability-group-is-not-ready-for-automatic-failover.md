@@ -1,6 +1,7 @@
 ---
-title: 가용성 그룹에 대해 자동 장애 조치가 준비되지 않음 | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹에 대해 자동 장애 조치(Failover)가 준비되지 않음
+description: Always On 가용성 그룹에 대해 장애 조치(failover)가 준비되지 않은 이유의 가능한 원인을 식별합니다.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dec114e42921c7d7619ad3da6252d54e534826a9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2951f586d252d058d7de542160f8b103b6a79bef
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601603"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210112"
 ---
-# <a name="availability-group-is-not-ready-for-automatic-failover"></a>가용성 그룹에 대해 자동 장애 조치(Failover)가 준비되지 않음
+# <a name="always-on-availability-group-is-not-ready-for-automatic-failover"></a>Always On 가용성 그룹에 대해 자동 장애 조치(Failover)가 준비되지 않았습니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>소개  

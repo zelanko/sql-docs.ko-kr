@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e4a4805ee3cb706a20659919e28c09c84787934
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a71962ea2e0a6d40534a9884fbb026e3d90aaf1c
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518357"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590487"
 ---
 # <a name="replication-distribution-agent"></a>복제 배포 에이전트
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,43 +92,43 @@ distrib [-?]
  **-?**  
  사용 가능한 모든 매개 변수를 출력합니다.  
   
- **-Publisher** *server_name*[**\\***i**nstance_name*]  
- 게시자의 이름입니다. 해당 서버에 있는 기본 *server_name* 인스턴스에 대해 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 기본 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정하고,  
+ **-Publisher** _server_name_[**\\**_instance_name_]  
+ 게시자의 이름입니다. 해당 서버에 있는 기본 *server_name* 인스턴스에 대해 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고,  
   
- **-PublisherDB** *publisher_database*  
+ **-PublisherDB** _publisher_database_  
  게시자 데이터베이스의 이름입니다.  
   
- **-Subscriber** *server_name*[**\\***instance_name*]  
- 구독자의 이름입니다. 해당 서버에 있는 기본 *server_name* 인스턴스에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 기본 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정하고,  
+ **-Subscriber** _server_name_[**\\**_instance_name_]  
+ 구독자의 이름입니다. 해당 서버에 있는 기본 *server_name* 인스턴스에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고,  
   
- **-SubscriberDB** *subscriber_database*  
+ **-SubscriberDB** _subscriber_database_  
  구독자 데이터베이스의 이름입니다.  
   
- **-AltSnapshotFolder** *alt_snapshot_folder_path*  
+ **-AltSnapshotFolder** _alt_snapshot_folder_path_  
  구독에 대한 초기 스냅숏이 들어 있는 폴더의 경로입니다.  
   
- **-BcpBatchSize** *bcp_batch_size*  
+ **-BcpBatchSize** _bcp_batch_size_  
  대량 복사 작업에서 보낼 행 수입니다. **bcp in** 작업을 수행하는 경우 일괄 처리 크기는 한 번의 트랜잭션으로 서버에 보낼 행 수이며 배포 에이전트가 **bcp** 진행 메시지를 기록하기 전에 보내야 하는 행 수이기도 합니다. **bcp out** 작업을 수행하는 경우 고정 일괄 처리 크기로 **1000** 이 사용됩니다.  
   
- **-CommitBatchSize** *commit_batch_size*  
+ **-CommitBatchSize** _commit_batch_size_  
  COMMIT 문을 실행하기 전에 구독자에 대해 실행할 트랜잭션의 개수입니다. 기본값은 100입니다.  
   
- **-CommitBatchThreshold**  *commit_batch_threshold*  
+ **-CommitBatchThreshold**  _commit_batch_threshold_  
  COMMIT 문을 실행하기 전에 구독자에 대해 실행할 복제 명령의 개수입니다. 기본값은 1000입니다.  
   
  **-Continuous**  
  에이전트에서 복제된 트랜잭션의 폴링을 계속 시도할지 여부를 지정합니다. 이 인수가 지정된 경우 에이전트는 보류 중인 트랜잭션이 없는 경우에도 원본의 복제된 트랜잭션을 폴링 간격에 따라 폴링합니다.  
   
- **-DefinitionFile** *def_path_and_file_name*  
+ **-DefinitionFile** _def_path_and_file_name_  
  에이전트 정의 파일의 경로입니다. 에이전트 정의 파일에는 에이전트의 명령 프롬프트 인수가 들어 있습니다. 파일 내용은 실행 파일로 구문 분석됩니다. 임의 문자가 있는 인수 값을 지정하려면 큰따옴표(")를 사용합니다.  
   
- **-Distributor** *distributor*  
+ **-Distributor** _distributor_  
  배포자 이름입니다. 배포자(밀어넣기) 배포의 경우에는 로컬 배포자의 이름이 기본 이름이 됩니다.  
   
- **-DistributorLogin** *distributor_login*  
+ **-DistributorLogin** _distributor_login_  
  배포자의 로그인 이름입니다.  
   
- **-DistributorPassword** *distributor_password*  
+ **-DistributorPassword** _distributor_password_  
  배포자 암호입니다.  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
@@ -148,25 +148,25 @@ distrib [-?]
 
  자세한 내용은 [보안 개요&#40;복제&#41;](../../../relational-databases/replication/security/security-overview-replication.md)를 참조하세요.  
   
- **-ErrorFile** *error_path_and_file_name*  
+ **-ErrorFile** _error_path_and_file_name_  
  배포 에이전트에서 생성한 오류 파일의 경로 및 파일 이름입니다. 이 파일은 구독자에서 복제 트랜잭션을 적용하는 동안 오류가 발생할 때마다 생성되며 게시자나 배포자에서 발생한 오류는 이 파일에 기록되지 않습니다. 이 파일에는 실패한 복제 트랜잭션 및 관련 오류 메시지가 들어 있습니다. 지정하지 않으면 오류 파일이 배포 에이전트의 현재 디렉터리에 생성됩니다. 오류 파일 이름은 배포 에이전트의 이름에 .err 확장명을 붙인 것입니다. 지정된 파일 이름이 존재하면 오류 메시지가 파일에 추가됩니다. 이 매개 변수는 최대 256개의 유니코드 문자일 수 있습니다.  
   
- **-ExtendedEventConfigFile** *configuration_path_and_file_name*  
+ **-ExtendedEventConfigFile** _configuration_path_and_file_name_  
  확장 이벤트 XML 구성 파일의 경로 및 파일 이름을 지정합니다. 확장 이벤트 구성 파일에서는 세션을 구성하고 추적 이벤트를 사용하도록 설정할 수 있습니다.  
   
  **-FileTransferType** [ **0**| **1**]  
  파일 전송 유형을 지정합니다. 값 **0** 은 UNC(Universal Naming Convention)를 나타내고, 값 **1** 은 FTP(File Transfer Protocol)를 나타냅니다.  
   
- **-FtpAddress** *ftp_address*  
+ **-FtpAddress** _ftp_address_  
  배포자용 FTP 서비스의 네트워크 주소입니다. 지정되지 않은 경우, **DistributorAddress** 가 사용됩니다. **DistributorAddress** 가 지정되지 않은 경우 **Distributor** 가 사용됩니다.  
   
- **-FtpPassword** *ftp_password*  
+ **-FtpPassword** _ftp_password_  
  FTP 서비스에 연결할 때 사용되는 사용자 암호입니다.  
   
- **-FtpPort** *ftp_port*  
+ **-FtpPort** _ftp_port_  
  배포자용 FTP 서비스의 포트 번호입니다. 지정되지 않은 경우, FTP 서비스용 기본 포트 번호(21)가 사용됩니다.  
   
- **-FtpUserName**  *ftp_user_name*  
+ **-FtpUserName**  _ftp_user_name_  
  FTP 서비스에 연결할 때 사용할 사용자 이름입니다. 지정되지 않은 경우, **anonymous** 가 사용됩니다.  
   
  **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
@@ -179,25 +179,25 @@ distrib [-?]
 |**2**|유휴 메시지나 장기 실행 작업 메시지에 대한 레코드가 없으면 새 기록 레코드를 삽입합니다. 이 경우 이전 레코드를 업데이트합니다.|  
 |**3**|유휴 메시지에 대한 레코드가 없으면 항상 새 레코드를 삽입합니다.|  
   
- **-Hostname** *host_name*  
+ **-Hostname** _host_name_  
  게시자에 연결할 때 사용하는 호스트 이름입니다. 이 매개 변수는 최대 128개의 유니코드 문자일 수 있습니다.  
   
- **-KeepAliveMessageInterval** *keep_alive_message_interval_seconds*  
+ **-KeepAliveMessageInterval** _keep_alive_message_interval_seconds_  
  기록 스레드가 기존 연결에서 서버의 응답을 기다리고 있는지 확인할 때까지 걸리는 시간(초)입니다. 이 값을 줄이면 장기 실행 일괄 처리를 실행할 때 점검 에이전트에서 배포 에이전트를 주의 대상으로 표시하지 않도록 할 수 있습니다. 기본값은 **300** 초입니다.  
   
- **-LoginTimeOut** *login_time_out_seconds*  
+ **-LoginTimeOut** _login_time_out_seconds_  
  로그인 시간이 초과될 때까지 걸리는 시간(초)입니다. 기본값은 **15** 초입니다.  
   
- **-MaxBcpThreads** *number_of_threads*  
+ **-MaxBcpThreads** _number_of_threads_  
  병렬로 수행할 수 있는 대량 복사 작업 수를 지정합니다. 동시에 존재하는 스레드 및 ODBC 연결의 최대 개수는 **MaxBcpThreads** 와 배포 데이터베이스의 동기화 트랜잭션에 나타나는 대량 복사 요청 수 중 더 작은 값입니다. **MaxBcpThreads** 값은 **0** 보다 크고 하드 코딩된 상한값이 없어야 합니다. 기본값은 최대값이 **8** 인 프로세서 수의 **2**배입니다. 게시자에서 동시 스냅숏 옵션을 사용하여 생성된 스냅숏을 적용할 경우 **MaxBcpThreads**에 지정한 숫자에 관계없이 하나의 스레드가 사용됩니다.  
   
- **-MaxDeliveredTransactions** *number_of_transactions*  
+ **-MaxDeliveredTransactions** _number_of_transactions_  
  한 번의 동기화에서 구독자에 적용되는 밀어넣기 또는 끌어오기 트랜잭션의 최대 개수입니다. 값 **0** 은 최대값이 무한개의 트랜잭션임을 나타냅니다. 다른 값은 구독자가 게시자에서 끌어오는 동기화의 기간을 줄이는 데 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  -MaxDeliveredTransactions와 -Continuous를 둘 다 지정한 경우 배포 에이전트는 -Continuous가 지정되었음에도 불구하고 지정된 개수의 트랜잭션을 제공한 다음 중지합니다. 작업이 완료되면 배포 에이전트를 다시 시작해야 합니다.  
   
- **-MessageInterval**  *message_interval*  
+ **-MessageInterval**  _message_interval_  
  기록 로깅에 사용되는 시간 간격입니다. 기록 이벤트는 다음과 같은 경우에 기록됩니다.  
   
 -   마지막 기록 이벤트가 기록된 후 **TransactionsPerHistory** 값에 도달한 경우  
@@ -206,43 +206,43 @@ distrib [-?]
   
  원본에 사용할 수 있는 복제된 트랜잭션이 없는 경우 에이전트에서는 배포자에 트랜잭션 없음 메시지를 보고합니다. 이 옵션은 다른 트랜잭션 없음 메시지를 보고하기 전에 에이전트에서 기다리는 시간을 지정합니다. 에이전트에서는 이전에 복제된 트랜잭션을 처리한 후 원본에 사용할 수 있는 트랜잭션이 없는지 감지할 때 항상 트랜잭션 없음 메시지를 보고합니다. 기본값은 60초입니다.  
   
- **-OledbStreamThreshold** *oledb_stream_threshold*  
+ **-OledbStreamThreshold** _oledb_stream_threshold_  
  BLOB(Binary Large Object)의 최소 크기(바이트)를 지정합니다. 이 크기를 넘으면 데이터가 스트림으로 바인딩됩니다. 이 매개 변수를 사용하려면 **–UseOledbStreaming**을 지정해야 합니다. 값은 400바이트에서 1048576바이트 사이일 수 있으며 기본값은 16384바이트입니다.  
   
- **-Output** *output_path_and_file_name*  
+ **-Output** _output_path_and_file_name_  
  에이전트 출력 파일의 경로입니다. 파일 이름을 지정하지 않으면 출력이 콘솔로 전달됩니다. 지정된 파일 이름이 존재하면 출력이 파일에 추가됩니다.  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
  출력이 자세해야 하는지 여부를 지정합니다. 정보 표시 수준이 **0**이면 오류 메시지만 출력됩니다. 정보 표시 수준이 **1**이면 모든 진행률 보고 메시지가 출력됩니다. 정보 표시 수준이 **2** (기본값)이면 디버깅에 유용한 오류 메시지와 진행률 보고 메시지가 모두 출력됩니다.  
   
- **-PacketSize** *packet_size*  
+ **-PacketSize** _packet_size_  
  패킷 크기(바이트)입니다. 기본값은 4096바이트입니다.  
   
- **-PollingInterval** *polling_interval*  
+ **-PollingInterval** _polling_interval__  
  배포 데이터베이스에서 복제된 트랜잭션을 쿼리하는 빈도(초)입니다. 기본값은 5초입니다.  
   
- **-ProfileName** *profile_name*  
+ **-ProfileName** _profile_name_  
  에이전트 매개 변수에 사용할 에이전트 프로필을 지정합니다. **ProfileName** 이 NULL이면 에이전트 프로필이 사용되지 않습니다. **ProfileName** 이 지정되지 않으면 에이전트 유형에 대한 기본 프로필이 사용됩니다. 자세한 내용은 [복제 에이전트 프로필](../../../relational-databases/replication/agents/replication-agent-profiles.md)을 참조하세요.  
   
- **-Publication**  *publication*  
+ **-Publication**  _publication_  
  게시의 이름입니다. 이 매개 변수는 게시가 새 구독이나 다시 초기화된 구독에 대해 항상 스냅숏을 사용할 수 있도록 설정된 경우에만 유효합니다.  
   
- **-QueryTimeOut** *query_time_out_seconds*  
+ **-QueryTimeOut** _query_time_out_seconds_  
  쿼리 시간이 초과될 때까지 걸리는 시간(초)입니다. 기본값은 1800초입니다.  
   
- **-QuotedIdentifier** *quoted_identifier*  
+ **-QuotedIdentifier** _quoted_identifier_  
  사용할 따옴표 붙은 식별자 문자를 지정합니다. 값의 첫 번째 문자는 배포 에이전트에서 사용하는 값을 나타냅니다. 값을 지정하지 않고 **QuotedIdentifier** 를 사용하면 배포 에이전트에서는 공백을 사용합니다. **QuotedIdentifier** 를 사용하지 않는 경우 배포 에이전트에서는 구독자가 지원하는 따옴표 붙은 식별자를 사용합니다.  
   
- **-SkipErrors** *native_error_id* [**:***...n*]  
+ **-SkipErrors** _native_error_id_ [**:**_...n_]  
  이 에이전트에서 건너뛸 오류 번호를 지정하는 콜론으로 구분된 목록입니다.  
   
- **-SubscriberDatabasePath** *subscriber_database_path*  
+ **-SubscriberDatabasePath** _subscriber_database_path_  
  **SubscriberType** 이 **2** 로서, ODBC DSN(데이터 원본 이름)이 없는 Jet 데이터베이스에 대한 연결이 허용되는 경우 Jet 데이터베이스(.mdb 파일)의 경로입니다.  
   
- **-SubscriberLogin** *subscriber_login*  
+ **-SubscriberLogin** _subscriber_login_  
  구독자의 로그인 이름입니다. **SubscriberSecurityMode** 가 **0** ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증의 경우)이면 이 매개 변수를 지정해야 합니다.  
   
- **-SubscriberPassword** *subscriber_password*  
+ **-SubscriberPassword** _subscriber_password_  
  구독자 암호입니다. **SubscriberSecurityMode** 가 **0** ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증의 경우)이면 이 매개 변수를 지정해야 합니다.  
   
  **-SubscriberSecurityMode** [ **0**| **1**]  
@@ -269,7 +269,7 @@ distrib [-?]
 > [!NOTE]  
 >  Subscriptionstreams는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 제공하도록 구성된 아티클에 대해서는 작동하지 않습니다. subscriptionstreams를 사용하려면 대신 저장 프로시저 호출을 제공하도록 아티클을 구성하십시오.  
   
- **-SubscriptionTableName** *subscription_table*  
+ **-SubscriptionTableName** _subscription_table_  
  지정된 구독자에서 생성되거나 사용된 구독 테이블의 이름입니다. 지정되지 않은 경우 [MSreplication_subscriptions&#40;Transact-SQL&#41;](../../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) 테이블이 사용됩니다. 긴 파일 이름을 지원하지 않는 DBMS(데이터베이스 관리 시스템)의 경우에 이 옵션을 사용합니다.  
   
  **-SubscriptionType** [ **0**| **1**| **2**]  
@@ -282,7 +282,7 @@ distrib [-?]
  데이터 변환을 허용하는 게시의 매개 변수로 지정해야 합니다.  
   
  **-UseInprocLoader**  
- 배포 에이전트에서 구독자에 스냅숏 파일을 적용할 때 BULK INSERT 명령을 사용하도록 지정하여 초기 스냅숏의 성능을 향상시킵니다. 이 매개 변수는 XML 데이터 형식과 호환되지 않으므로 이후에는 지원되지 않습니다. XML 데이터를 복제하지 않을 계획이라면 이 매개 변수를 사용할 수 있습니다. 이 매개 변수는 문자 모드 스냅숏 또는[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자와 함께 사용할 수 없습니다. 이 매개 변수를 사용하려면 구독자의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정에 스냅숏 .bcp 데이터 파일이 있는 디렉터리에 대한 읽기 권한이 있어야 합니다. 이 매개 변수를 사용하지 않으면 에이전트([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자의 경우) 또는 에이전트에서 로드한 ODBC 드라이버( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자의 경우)가 파일 내용을 읽으므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정의 보안 컨텍스트가 사용되지 않습니다.  
+ 배포 에이전트에서 구독자에 스냅숏 파일을 적용할 때 BULK INSERT 명령을 사용하도록 지정하여 초기 스냅숏의 성능을 향상시킵니다. 이 매개 변수는 XML 데이터 형식과 호환되지 않으므로 이후에는 지원되지 않습니다. XML 데이터를 복제하지 않을 계획이라면 이 매개 변수를 사용할 수 있습니다. 이 매개 변수는 문자 모드 스냅숏 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자와 함께 사용할 수 없습니다. 이 매개 변수를 사용하려면 구독자의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정에 스냅숏 .bcp 데이터 파일이 있는 디렉터리에 대한 읽기 권한이 있어야 합니다. 이 매개 변수를 사용하지 않으면 에이전트([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자의 경우) 또는 에이전트에서 로드한 ODBC 드라이버([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자의 경우)가 파일 내용을 읽으므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정의 보안 컨텍스트가 사용되지 않습니다.  
   
  **-UseOledbStreaming**  
  이 인수를 지정하면 BLOB(Binary Large Object) 데이터를 스트림으로 바인딩할 수 있습니다. 크기(바이트)가 얼마 이상일 때 스트림을 사용할지를 지정하려면 **-OledbStreamThreshold** 를 사용합니다. **UseOledbStreaming** 은 기본적으로 사용하도록 설정됩니다. **UseOledbStreaming**은 **C:\Program Files\Microsoft SQL Server\\<version\>\COM** 폴더에 데이터를 씁니다.  

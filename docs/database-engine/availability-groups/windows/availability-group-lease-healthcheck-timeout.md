@@ -1,6 +1,7 @@
 ---
-title: SQL Server 가용성 그룹 임대 상태 확인 제한 시간 | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹 임대 상태 확인 제한 시간의 메커니즘
+description: Always On 가용성 그룹의 임대, 클러스터 및 상태 확인 시간에 대한 메커니즘 및 지침.
+ms.custom: seodec18
 ms.date: 05/02/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25728b2c12d31d53f9638d08c952d75ae929bf9c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c1c337e4a43082cef846623073054ae75513dc31
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393986"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209082"
 ---
-# <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts"></a>임대, 클러스터 및 상태 확인 제한 시간의 메커니즘 및 지침 
+# <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Always On 가용성 그룹의 임대, 클러스터 및 상태 확인 제한 시간의 메커니즘 및 지침 
 
 가동 시간 및 성능에 대한 다른 애플리케이션 요구 사항뿐만 아니라 하드웨어, 소프트웨어 및 클러스터 구성의 차이에는 임대, 클러스터 및 상태 확인 제한 시간 값에 대한 특정 구성이 필요합니다. 특정 애플리케이션 및 워크로드에는 다음과 같은 심각한 오류로 인한 가동 중지 시간을 제한하기 위해 보다 적극적으로 모니터링이 필요합니다. 다른 기능은 일시적인 네트워크 문제에 대한 자세한 허용 오차를 필요로 하며, 높은 리소스 사용량에 대해 대기하고 느린 장애 조치에 문제가 발생하지 않습니다. 
 
@@ -80,7 +81,7 @@ AG의 실패 조건 수준은 상태 검사에 대한 오류 조건을 변경합
 | 2: OnServerUnresponsive | HealthCheckTimeout의 `sp_server_diagnostics`에서 수신된 데이터가 없는 경우
 | 3: OnCriticalServerError | (기본값)시스템 구성 요소가 오류를 보고하는 경우
 | 4: OnModerateServerError | 리소스 구성 요소가 오류를 보고하는 경우 
-| 5: OnAnyQualifiedFailureConitions |  쿼리 처리 구성 요소가 오류를 보고하는 경우
+| 5:  OnAnyQualifiedFailureConitions |  쿼리 처리 구성 요소가 오류를 보고하는 경우
 
 ## <a name="updating-cluster-and-always-on-timeout-values"></a>클러스터 및 Always On 시간 제한 값 업데이트 
 
@@ -128,7 +129,7 @@ AG의 실패 조건 수준은 상태 검사에 대한 오류 조건을 변경합
    
 ### <a name="health-check-values"></a>상태 확인 값 
 
-Always On 상태 검사를 제어하는 두 개의 값: FailureConditionLevel 및 HealthCheckTimeout입니다. FailureConditionLevel은 `sp_server_diagnostics`에서 보고한 특정 오류 조건에 대한 허용 오차 수준을 나타내고, HealthCheckTimeout은 리소스 DLL이 `sp_server_diagnostics`의 업데이트를 수신하지 않고 실행할 수 있는 시간을 구성합니다. `sp_server_diagnostics`의 업데이트 간격은 항상 HealthCheckTimeout/3입니다. 
+다음 두 가지 값은 Always On 상태 검사를 제어합니다. FailureConditionLevel 및 HealthCheckTimeout. FailureConditionLevel은 `sp_server_diagnostics`에서 보고한 특정 오류 조건에 대한 허용 오차 수준을 나타내고, HealthCheckTimeout은 리소스 DLL이 `sp_server_diagnostics`의 업데이트를 수신하지 않고 실행할 수 있는 시간을 구성합니다. `sp_server_diagnostics`의 업데이트 간격은 항상 HealthCheckTimeout/3입니다. 
 
 장애 조치 상태 수준을 구성하려면 `CREATE` 또는 `ALTER` `AVAILABILITY GROUP` 문의 `FAILURE_CONDITION_LEVEL = <n>` 옵션을 사용합니다. 여기서 `<n>`는 1~5 사이의 정수입니다. 다음 명령은 AG 'AG1'에서 오류 상태 수준을 1로 설정합니다. 
 
@@ -155,7 +156,7 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
 
 ## <a name="see-also"></a>참고 항목    
 
-[활성 보조: 보조 복제본에 백업&#40;Always On 가용성 그룹&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)
+[활성 보조 복제본: 보조 복제본에 백업&#40;Always On 가용성 그룹&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)
 
 [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)         
 

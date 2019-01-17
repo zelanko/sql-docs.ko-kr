@@ -1,6 +1,7 @@
 ---
-title: 가용성 그룹에 데이터베이스 추가(SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹에 데이터베이스 추가
+description: 'T-SQL(Transact-SQL), PowerShell 또는 SQL Server Management Studio를 사용하여 Always On 가용성 그룹에 데이터베이스를 추가합니다. '
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,46 +15,41 @@ ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c8e63b4561c56f5d930856758afa464f85a9ab40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e31c26430433b26eb858b967f54df4e61b103b2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857135"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214664"
 ---
-# <a name="availability-group---add-a-database"></a>가용성 그룹 - 데이터베이스 추가
+# <a name="add-a-database-to-an-always-on-availability-group"></a>Always On 가용성 그룹에 데이터베이스 추가
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 PowerShell을 사용하여 Always On 가용성 그룹에 데이터베이스를 추가하는 방법을 설명합니다.  
   
 -   **시작하기 전 주의 사항:**  
   
-     [사전 요구 사항 및 제한 사항](#Prerequisites)  
-  
-     [사용 권한](#Permissions)  
-  
+     [필수 구성 요소 및 제한 사항](#Prerequisites)    
+     [사용 권한](#Permissions)    
 -   **가용성 그룹에 데이터베이스를 추가하려면:**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
+     [SQL Server Management Studio](#SSMSProcedure)    
+     [Transact-SQL](#TsqlProcedure)    
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항 및 제한 사항  
+## <a name="prerequisites-and-restrictions"></a>사전 요구 사항 및 제한 사항  
   
 -   주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
   
 -   데이터베이스는 주 복제본을 호스팅하는 서버 인스턴스에 있어야 하며 가용성 데이터베이스에 대한 사전 요구 사항과 제한 사항을 준수해야 합니다. 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)를 참조하세요.  
   
-###  <a name="Security"></a> 보안  
+##  <a name="Security"></a> 보안  
   
-###  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- **가용성 그룹에 데이터베이스를 추가하려면**  
+
   
 1.  개체 탐색기에서 주 복제본을 호스팅하는 서버 인스턴스에 연결하고 서버 트리를 확장합니다.  
   
@@ -74,10 +70,9 @@ ms.locfileid: "47857135"
          **가용성 그룹 속성** 대화 상자를 사용하여 가용성 그룹에 데이터베이스를 추가한 후에는 보조 복제본을 호스팅하는 각 서버 인스턴스에서 해당 보조 데이터베이스를 구성해야 합니다. 자세한 내용은 [Always On 보조 데이터베이스에서 데이터 이동 시작&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)를 참조하세요.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
- **가용성 그룹에 데이터베이스를 추가하려면**  
+
   
-1.  주 복제본을 호스팅하는 서버 인스턴스를 호스팅하는 서버 인스턴스에 연결합니다.  
-  
+1.  주 복제본을 호스팅하는 서버 인스턴스를 호스팅하는 서버 인스턴스에 연결합니다.    
 2.  다음과 같은 [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) 문을 사용합니다.  
   
      ALTER AVAILABILITY GROUP *group_name* ADD DATABASE *database_name* [,...*n*]  
@@ -96,7 +91,7 @@ ms.locfileid: "47857135"
 3.  가용성 그룹에 데이터베이스를 추가한 후에는 보조 복제본을 호스팅하는 각 서버 인스턴스에서 해당 보조 데이터베이스를 구성해야 합니다. 자세한 내용은 [Always On 보조 데이터베이스에서 데이터 이동 시작&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)를 참조하세요.  
   
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  
- **가용성 그룹에 데이터베이스를 추가하려면**  
+
   
 1.  주 복제본을 호스트하는 서버 인스턴스로 디렉터리(**cd**)를 변경합니다.  
   

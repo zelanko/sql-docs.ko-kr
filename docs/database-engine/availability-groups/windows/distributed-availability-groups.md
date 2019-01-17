@@ -1,6 +1,7 @@
 ---
-title: 분산 가용성 그룹(SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 분산 가용성 그룹이란?
+description: 분산 가용성 그룹은 별도의 두 가용성 그룹에 걸쳐 있는 특별한 유형의 가용성 그룹입니다. 분산 가용성 그룹에 참여하는 가용성 그룹은 동일한 위치에 있을 필요는 없습니다.
+ms.custom: seodec18
 ms.date: 07/31/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ebc3dfd0534deb313725ab646da26f770d0f99cf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1aaf988a3b9a869aba5ef30c6aac739a6349c70e
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534455"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53381034"
 ---
 # <a name="distributed-availability-groups"></a>분산 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +56,9 @@ AG 2의 주 복제본에서 삽입, 업데이트 및 삭제할 수 있도록 하
 
 ## <a name="sql-server-version-and-edition-requirements-for-distributed-availability-groups"></a>분산 가용성 그룹에 대한 SQL Server 버전 및 버전 요구 사항
 
-분산 가용성 그룹은 현재 동일한 주요 SQL Server 버전으로 만든 가용성 그룹에서만 작동합니다. 예를 들어 분산 가용성 그룹에 참여하는 모든 가용성 그룹은 현재 SQL Server 2016을 사용하여 만들어야 합니다. SQL Server 2012 또는 2014에는 분산 가용성 그룹 기능이 없으므로 이러한 버전으로 만든 가용성 그룹은 분산 가용성 그룹에 참여할 수 없습니다. 
+SQL Server 2017 이상의 분산 가용성 그룹은 동일한 분산 가용성 그룹에 SQL Server의 주 버전을 혼합할 수 있습니다. 읽기/쓰기 기본을 포함하는 AG는 분산 AG에 참여하는 다른 AG와 같거나 낮은 버전일 수 있습니다. 다른 AG는 같거나 높은 버전일 수 있습니다. 이 시나리오는 업그레이드 및 마이그레이션 시나리오를 대상으로 합니다. 예를 들어 읽기/쓰기 주 복제본을 포함하는 AG가 SQL Server 2016이지만 SQL Server 2017 이상으로 업그레이드/마이그레이션하려는 경우, 분산 AG에 참여하는 다른 AG는 SQL Server 2017로 구성될 수 있습니다.
+
+SQL Server 2012 또는 2014에는 분산 가용성 그룹 기능이 없으므로 이러한 버전으로 만든 가용성 그룹은 분산 가용성 그룹에 참여할 수 없습니다. 
 
 > [!NOTE]
 > Standard Edition 또는 Standard 및 Enterprise Edition의 혼합으로 분산된 가용성 그룹을 구성할 수 있습니다.
@@ -85,7 +88,7 @@ AG 2의 주 복제본에서 삽입, 업데이트 및 삭제할 수 있도록 하
 * 한 WSFC 클러스터는 도메인에 가입되고, 다른 하나의 WSFC 클러스터는 도메인에 가입되지 않습니다.
 * 두 WSFC 클러스터가 모두 도메인에 가입되지 않습니다.
 
-두 WSFC 클러스터가 모두 동일한 도메인(트러스트된 도메인이 아님)에 가입된 경우 분산 가용성 그룹을 만들 때 별도의 작업을 수행할 필요가 없습니다. 동일한 도메인에 가입되지 않은 가용성 그룹 및 WSFC 클러스터의 경우, 도메인 독립 가용성 그룹에 대한 가용성 그룹을 만드는 방식과 같이 인증서를 사용하여 분산 가용성 그룹을 작동하도록 합니다. 분산 가용성 그룹에 대한 인증서를 구성하는 방법을 알아보려면 [도메인 독립 가용성 그룹 만들기](domain-independent-availability-groups.md#create-a-domain-independent-availability-group)의 3-13 단계를 수행합니다.
+두 WSFC 클러스터가 모두 동일한 도메인(트러스트된 도메인이 아님)에 가입된 경우 분산 가용성 그룹을 만들 때 별도의 작업을 수행할 필요가 없습니다. 동일한 도메인에 가입되지 않은 가용성 그룹 및 WSFC 클러스터의 경우, 도메인 독립 가용성 그룹에 대한 가용성 그룹을 만드는 방식과 같이 인증서를 사용하여 분산 가용성 그룹을 작동하도록 합니다. 분산 가용성 그룹에 대한 인증서를 구성하는 방법을 알아보려면 [도메인 독립 가용성 그룹 만들기](domain-independent-availability-groups.md)의 3-13 단계를 수행합니다.
 
 분산 가용성 그룹을 사용하는 경우 주 가용성 그룹 각각의 주 복제본에는 서로의 인증서가 있어야 합니다. 인증서를 사용하지 않는 엔드포인트가 이미 있는 경우 [ALTER ENDPOINT](https://docs.microsoft.com/sql/t-sql/statements/alter-endpoint-transact-sql)를 사용하여 인증서 사용을 반영하도록 해당 엔드포인트를 재구성합니다.
 
@@ -138,7 +141,7 @@ AG 2의 주 복제본에서 삽입, 업데이트 및 삭제할 수 있도록 하
 
 ![분산 가용성 그룹을 사용한 읽기 복제본 확장](./media/distributed-availability-group/dag-05-scaling-out-reads-with-distributed-ags.png)
 
-다음 그림에서는 서로 다른 두 가지 분산 가용성 그룹, 즉 분산 AG 1(AG 1과 AG 2로 구성)과 분산 AG 2(AG 1과 AG 3으로 구성)에 대한 주 복제본인 AG 1을 보여 줍니다.
+다음 그림은 AG 1을 서로 다른 두 개의 분산 가용성 그룹에 대한 주 복제본으로 보여줍니다. 분산 AG 1(AG 1 및 AG 2로 구성) 및 분산 AG 2(AG 1 및 AG 3으로 구성).
 
 
 ![분산 가용성 그룹 예제를 사용한 또 다른 읽기 복제본 확장]( ./media/distributed-availability-group/dag-06-another-scaling-out-reads-using-distributed-ags-example.png)
@@ -229,7 +232,7 @@ INNER JOIN sys.availability_replicas AS ar
 GO
 ```
 
-분산 가용성 그룹에 참여하는 두 번째 WSFC 클러스터의 출력 예제가 다음 그림에 표시됩니다. SPAG1은 DENNIS와 JY라는 두 개의 복제본으로 구성되어 있습니다. 그러나 SPDistAG라는 이름의 분산 가용성 그룹에는 기존 가용성 그룹과 마찬가지로 인스턴스의 이름이 아닌 참여하는 가용성 그룹의 이름 2개(SPAG1 및 SPAG2)가 표시됩니다. 
+분산 가용성 그룹에 참여하는 두 번째 WSFC 클러스터의 출력 예제가 다음 그림에 표시됩니다. SPAG1은 다음 두 개의 복제본으로 구성됩니다. DENNIS 및 JY. 그러나 SPDistAG라는 이름의 분산 가용성 그룹에는 기존 가용성 그룹과 마찬가지로 인스턴스의 이름이 아닌 참여하는 가용성 그룹의 이름 2개(SPAG1 및 SPAG2)가 표시됩니다. 
 
 ![이전 쿼리의 예제 출력](./media/distributed-availability-group/dag-11-example-output-of-query-above.png)
 

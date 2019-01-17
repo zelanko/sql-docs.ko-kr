@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4409d67e60fd4d82d339ac31e96ca75b578171fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e7d0e18e67720b301f97cc212f7b3b5de0d08e29
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402818"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980539"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -237,7 +237,7 @@ reason 파일과 data 파일에는 모두 CTAS 문과 연결된 queryID가 있�
  OBJECT_NAME 절은 외부 테이블 정의를 원격 데이터베이스의 다른 이름을 가진 테이블에 매핑하는 기능을 제공합니다. 이 기능을 사용하여 로컬과 원격 데이터베이스에 모두 존재하는 개체 이름 사이를 구분합니다.  
   
  DISTRIBUTION  
- (선택 사항) 이 절은 SHARD_MAP_MANAGER 형식의 데이터베이스에 대해서만 필요합니다. 이 절은 테이블이 분할된 데이터베이스 테이블로 처리되는지 아니면 복제된 테이블로 처리되는지를 제어합니다. **SHARDED**(*열 이름*) 테이블에서는 서로 다른 테이블의 데이터가 겹치지 않습니다. **REPLICATED**는 테이블이 모든 분할된 데이터베이스에서 같은 데이터를 갖도록 지정합니다. **ROUND_ROBIN**은 응용 프로그램 관련 방법을 사용하여 데이터를 배포하도록 지정합니다.  
+ (선택 사항) 이 절은 SHARD_MAP_MANAGER 형식의 데이터베이스에 대해서만 필요합니다. 이 절은 테이블이 분할된 데이터베이스 테이블로 처리되는지 아니면 복제된 테이블로 처리되는지를 제어합니다. **SHARDED**(*열 이름*) 테이블에서는 서로 다른 테이블의 데이터가 겹치지 않습니다. **REPLICATED**는 테이블이 모든 분할된 데이터베이스에서 같은 데이터를 갖도록 지정합니다. **ROUND_ROBIN**은 애플리케이션 관련 방법을 사용하여 데이터를 배포하도록 지정합니다.  
   
 ## <a name="permissions"></a>Permissions  
  다음과 같은 권한이 필요합니다.  
@@ -255,8 +255,8 @@ reason 파일과 data 파일에는 모두 CTAS 문과 연결된 queryID가 있�
  참고로 외부 데이터 원본을 만드는 로그인은 Hadoop 또는 Azure Blob Storage에 있는 외부 데이터 원본에 대한 읽기 및 쓰기 권한을 가져야 합니다.  
 
 
- > [!IMPORTANT]  
-
+> [!IMPORTANT]
+> 
 >  ALTER ANY EXTERNAL DATA SOURCE 권한은 주체에 대해 외부 데이터 원본 개체를 만들고 수정하는 권한을 부여하며, 따라서 데이터베이스의 모든 데이터베이스 범위 자격 증명에 액세스하는 권한도 부여합니다. 이 권한은 높은 수준의 권한으로 간주되어야 하므로, 시스템의 신뢰할 수 있는 보안 주체에만 부여되어야 합니다.
 
 ## <a name="error-handling"></a>오류 처리  
@@ -405,7 +405,7 @@ WITH (
   
 ```  
   
-### <a name="d-querying-hadoop-data"></a>4. Hadoop 데이터 쿼리  
+### <a name="d-querying-hadoop-data"></a>D. Hadoop 데이터 쿼리  
  Clickstream은 Hadoop 클러스터의 텍스트로 구분된 파일 employee.tbl에 연결하는 외부 테이블입니다. 다음 쿼리는 표준 테이블에 대한 쿼리와 유사해 보입니다. 그러나 이 쿼리는 Hadoop에서 데이터를 검색한 다음, 결과를 계산합니다.  
   
 ```  
@@ -413,7 +413,7 @@ SELECT TOP 10 (url) FROM ClickStream WHERE user_ip = 'xxx.xxx.xxx.xxx'
 ;  
 ```  
   
-### <a name="e-join-hadoop-data-with-sql-data"></a>5. Hadoop 데이터를 SQL 데이터와 조인  
+### <a name="e-join-hadoop-data-with-sql-data"></a>E. Hadoop 데이터를 SQL 데이터와 조인  
  이 쿼리는 SQL 테이블 두 개에 대한 표준 JOIN과 유사해 보입니다. 차이점은 PolyBase이 Hadoop에서 Clickstream 데이터를 검색한 다음, UrlDescription 테이블에 조인한다는 것입니다. 한 테이블은 외부 테이블이며 다른 테이블은 표준 SQL 테이블입니다.  
   
 ```  
@@ -424,7 +424,7 @@ WHERE cs.url = 'msdn.microsoft.com'
 ;  
 ```  
   
-### <a name="f-import-data-from-hadoop-into-a-sql-table"></a>6. SQL 테이블로 Hadoop의 데이터 가져오기  
+### <a name="f-import-data-from-hadoop-into-a-sql-table"></a>F. SQL 테이블로 Hadoop의 데이터 가져오기  
  이 예제에서는 표준 SQL 테이블 *user*와 외부 테이블 *ClickStream* 간 조인의 결과를 영구적으로 저장하는 새 SQL 케이블 ms_user입니다.  
   
 ```  
@@ -438,7 +438,7 @@ ON user.user_ip = ms.user_ip
   
 ```  
   
-### <a name="g-create-an-external-table-for-a-sharded-data-source"></a>7. 분할된 데이터베이스 데이터 원본에 대한 외부 테이블 만들기  
+### <a name="g-create-an-external-table-for-a-sharded-data-source"></a>G. 분할된 데이터베이스 데이터 원본에 대한 외부 테이블 만들기  
  이 예제에서는 SCHEMA_NAME 및 OBJECT_NAME 절을 사용하여 원격 DMV를 외부 테이블에 다시 매핑합니다.  
   
 ```  
@@ -462,7 +462,7 @@ WITH
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="h-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>8. Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]로 ADLS의 데이터 가져오기  
+### <a name="h-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>H. Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]로 ADLS의 데이터 가져오기  
  
   
 ```  
@@ -523,7 +523,7 @@ WHERE cs.url = 'msdn.microsoft.com'
 ;  
 ```  
   
-### <a name="j-join-hdfs-data-with-pdw-data"></a>10. HDFS 데이터를 PDW 데이터와 조인  
+### <a name="j-join-hdfs-data-with-pdw-data"></a>J. HDFS 데이터를 PDW 데이터와 조인  
   
 ```  
 SELECT cs.user_ip FROM ClickStream cs  

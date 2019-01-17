@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], creating number attributes
@@ -15,12 +14,12 @@ ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6118bc6dd43c13668d2c1fbcbdd593293d40ce81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14c4d735b4bd295577b7e08a5ca6afdfed5aa95c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646781"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777115"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>숫자 특성 만들기(Master Data Services)
 
@@ -57,11 +56,11 @@ ms.locfileid: "47646781"
   
 -   **만든 사람**: 특성을 만든 사용자의 이름입니다.  
   
--   **날짜**: 특성을 만든 날짜와 시간입니다.  
+-   **On**: 특성을 만든 날짜와 시간입니다.  
   
 -   **업데이트한 사람**: 특성을 마지막으로 업데이트한 사용자의 이름입니다.  
   
--   **날짜**: 특성을 마지막으로 업데이트한 날짜와 시간입니다.  
+-   **On**: 특성을 마지막으로 업데이트한 날짜와 시간입니다.  
   
 ### <a name="to-create-a-numeric-attribute"></a>숫자 특성을 만들려면  
   

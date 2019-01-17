@@ -23,12 +23,12 @@ ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7098114ba6a69b65ba689f00a726bb93c93b6a2a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1bfefddd741f385fdcd465e93099f05c11ca5473
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528780"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980269"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -69,6 +69,7 @@ ALTER AVAILABILITY GROUP group_name
   | FAILURE_CONDITION_LEVEL  = { 1 | 2 | 3 | 4 | 5 }   
   | HEALTH_CHECK_TIMEOUT = milliseconds  
   | DB_FAILOVER  = { ON | OFF }   
+  | DTC_SUPPORT  = { PER_DB | NONE }  
   | REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = { integer }
   
 <server_instance> ::=   
@@ -93,7 +94,7 @@ ALTER AVAILABILITY GROUP group_name
      | PRIMARY_ROLE ( {   
             [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
         [,] [ READ_ONLY_ROUTING_LIST = { ( '<server_instance>' [ ,...n ] ) | NONE } ]  
-        [,] [ READ_WRITE_ROUTING_URL = { ( '<server_instance>' ) ] 
+        [,] [ READ_WRITE_ROUTING_URL = { ( '<server_instance>' ) ] 
      } )  
      | SESSION_TIMEOUT = integer
   
@@ -189,7 +190,7 @@ ALTER AVAILABILITY GROUP group_name
 >  기존 가용성 그룹의 자동화된 백업 기본 설정을 보려면 [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) 카탈로그 뷰의 **automated_backup_preference** 또는 **automated_backup_preference_desc** 열을 선택합니다. 또한 [sys.fn_hadr_backup_is_preferred_replica&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)를 사용하여 기본 백업 복제본을 확인할 수 있습니다.  이 함수는 `AUTOMATED_BACKUP_PREFERENCE = NONE`인 경우에도 복제본 하나 이상에 대해 항상 1을 반환합니다.  
   
  FAILURE_CONDITION_LEVEL **=** { 1 | 2 | **3** | 4 | 5 }  
- 이 가용성 그룹에 대한 자동 장애 조치(failover)를 트리거할 오류 상태를 지정합니다. FAILURE_CONDITION_LEVEL은 그룹 수준에서 설정되지만 동기-커밋 가용성 모드(AVAILIBILITY_MODE **=** SYNCHRONOUS_COMMIT)에 대해 구성된 가용성 복제본에서만 적절합니다. 또한 오류 상태는 주 복제본과 보조 복제본 모두 자동 장애 조치 모드(FAILOVER_MODE **=** AUTOMATIC)에 대해 구성되고 보조 복제본이 현재 주 복제본과 동기화된 경우에만 자동 장애 조치(failover)를 트리거할 수 있습니다.  
+ 이 가용성 그룹에 대한 자동 장애 조치(failover)를 트리거할 오류 상태를 지정합니다. FAILURE_CONDITION_LEVEL은 그룹 수준에서 설정되지만 동기-커밋 가용성 모드(AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT)에 대해 구성된 가용성 복제본에서만 적절합니다. 또한 오류 상태는 주 복제본과 보조 복제본 모두 자동 장애 조치 모드(FAILOVER_MODE **=** AUTOMATIC)에 대해 구성되고 보조 복제본이 현재 주 복제본과 동기화된 경우에만 자동 장애 조치(failover)를 트리거할 수 있습니다.  
   
  주 복제본에서만 지원되며,  
   
@@ -209,7 +210,7 @@ ALTER AVAILABILITY GROUP group_name
  FAILURE_CONDITION_LEVEL 및 HEALTH_CHECK_TIMEOUT 값은 지정된 그룹에 대한 *유연한 장애 조치(failover) 정책*을 정의합니다. 유연한 장애 조치(failover) 정책을 통해 자동 장애 조치(failover)를 수행해야 하는 상태를 세부적으로 제어할 수 있습니다. 자세한 내용은 [가용성 그룹 자동 장애 조치에 대한 유연한 장애 조치 정책&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)을 참조하세요.  
   
  HEALTH_CHECK_TIMEOUT **=** *milliseconds*  
- [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 시스템 저장 프로시저에서 서버 상태 정보를 반환할 때까지 허용되는 대기 시간(밀리초)을 지정합니다. 이 시간이 경과하면 WSFC 클러스터에서는 서버 인스턴스가 느리거나 중지된 것으로 간주합니다. HEALTH_CHECK_TIMEOUT은 그룹 수준에서 설정되지만 자동 장애 조치(failover)를 지원하는 동기-커밋 가용성 모드(AVAILIBILITY_MODE **=** SYNCHRONOUS_COMMIT)에 대해 구성된 가용성 복제본에서만 적절합니다.  또한 상태 확인 시간 제한은 복제본과 보조 복제본 모두 자동 장애 조치 모드(FAILOVER_MODE **=** AUTOMATIC)에 대해 구성되고 보조 복제본이 현재 주 복제본과 동기화된 경우에만 자동 장애 조치(failover)를 트리거할 수 있습니다.  
+ [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 시스템 저장 프로시저에서 서버 상태 정보를 반환할 때까지 허용되는 대기 시간(밀리초)을 지정합니다. 이 시간이 경과하면 WSFC 클러스터에서는 서버 인스턴스가 느리거나 중지된 것으로 간주합니다. HEALTH_CHECK_TIMEOUT은 그룹 수준에서 설정되지만 자동 장애 조치(failover)를 지원하는 동기-커밋 가용성 모드(AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT)에 대해 구성된 가용성 복제본에서만 적절합니다.  또한 상태 확인 시간 제한은 복제본과 보조 복제본 모두 자동 장애 조치 모드(FAILOVER_MODE **=** AUTOMATIC)에 대해 구성되고 보조 복제본이 현재 주 복제본과 동기화된 경우에만 자동 장애 조치(failover)를 트리거할 수 있습니다.  
   
  기본 HEALTH_CHECK_TIMEOUT 값은 30,000밀리초(30초)입니다. 최소값은 15,000밀리초(15초)이고 최대값은 4,294,967,295밀리초입니다.  
   
@@ -223,6 +224,11 @@ ALTER AVAILABILITY GROUP group_name
  
  이 설정에 대한 자세한 내용은 [데이터베이스 수준 상태 검색 옵션](../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)을 참조하세요. 
 
+DTC_SUPPORT  **=** { PER_DB | NONE }  
+이 가용성 그룹에 대한 분산 트랜잭션을 사용할 수 있는지 여부를 지정합니다. 분산 트랜잭션은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 시작하는 가용성 그룹 데이터베이스에 대해서만 지원되고 데이터베이스 간 트랜잭션은 [!INCLUDE[ssSQL16](../../includes/sssql15-md.md)] SP2에서 시작하는 경우에만 지원됩니다. `PER_DB`는 이러한 트랜잭션을 지원하는 가용성 그룹을 만들고 가용성 그룹의 데이터베이스와 관련된 데이터베이스 간 트랜잭션을 분산 트랜잭션으로 자동 승격합니다. `NONE`은 분산 트랜잭션에 대한 데이터베이스 간 트랜잭션의 자동 승격을 방지하고 DTC에서 안정적인 RMID로 데이터베이스를 등록하지 않습니다. `NONE` 설정을 사용하면 분산 트랜잭션을 방지하지 않지만 일부 상황에서는 데이터베이스 장애 조치(failover) 및 자동 복구가 성공하지 못할 수 있습니다. 자세한 내용은 [Always On 가용성 그룹 및 데이터베이스 미러링에 대한 데이터베이스 간 트랜잭션 및 분산 트랜잭션&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)를 참조하세요. 
+ 
+> [!NOTE]
+> 가용성 그룹의 DTC_SUPPORT 설정 변경에 대한 지원은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 서비스 팩 2에서 도입되었습니다. 이 옵션은 이전 버전과 함께 사용할 수 없습니다. 이전 버전의 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]에서 이 설정을 변경하려면 가용성 그룹을 다시 드롭하고 만들어야 합니다.
  
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  SQL Server 2017에서 도입되었습니다. 기본이 트랜잭션을 커밋하기 전에 커밋하는 데 필요한 동기 보조 복제본의 최소 수를 설정하는 데 사용됩니다. SQL Server 트랜잭션이 트랜잭션 로그가 보조 복제본의 최소 수에서 업데이트될 때까지 대기함을 보장합니다. 기본값은 0으로 SQL Server 2016과 동일한 동작을 제공합니다. 최솟값은 0입니다. 최댓값은 복제본 수에서 1을 뺀 수입니다. 이 옵션은 동기 커밋 모드의 복제본과 관련이 있습니다. 복제본이 동기 커밋 모드에 있는 경우 주 복제본의 쓰기는 보조 동기 복제본의 쓰기가 복제본 데이터베이스 트랜잭션 로그에 커밋될 때까지 기다립니다. 보조 동기 복제본을 호스팅하는 SQL Server가 응답을 중지하는 경우 주 복제본을 호스팅하는 SQL Server는 보조 복제본을 NOT SYNCHRONIZED로 표시하고 진행합니다. 응답하지 않는 데이터베이스가 다시 온라인 상태가 되면 "동기화 되지 않음" 상태에 되고 복제본은 주 복제본이 다시 동기화할 수 있을 때까지 비정상으로 표시됩니다. 이 설정은 주 복제본이 최소 복제본 수가 각 트랜잭션을 커밋할 때까지 진행되지 않음을 보장합니다. 최소 복제본 수를 사용할 수 없는 경우 주 복제본에서 커밋에 실패합니다. 클러스터 형식 `EXTERNAL`의 경우 가용성 그룹이 클러스터 리소스에 추가될 때 설정이 변경됩니다. [가용성 그룹 구성을 위한 고가용성 및 데이터 보호](../../linux/sql-server-linux-availability-group-ha.md)를 참조하세요.
@@ -271,7 +277,7 @@ ALTER AVAILABILITY GROUP group_name
  ENDPOINT_URL ='TCP://*system-address*:*port*'  
  추가 또는 수정 중인 가용성 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 [데이터베이스 미러링 엔드포인트](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)에 대한 URL 경로를 지정합니다.  
   
- ENDPOINT_URL은 ADD REPLICA ON 절에서는 필수적이고 MODIFY REPLICA ON 절에서는 선택적입니다.  자세한 내용은 [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&amp;#40;SQL Server&amp;#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)을 참조하세요.  
+ ENDPOINT_URL은 ADD REPLICA ON 절에서는 필수적이고 MODIFY REPLICA ON 절에서는 선택적입니다.  자세한 내용은 [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정 &#40;SQL Server &#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)을 참조하세요.  
   
  **'** TCP **://**_system-address_**:**_port_**'**  
  엔드포인트 URL 또는 읽기 전용 라우팅 URL을 지정하기 위한 URL을 지정합니다. URL 매개 변수는 다음과 같습니다.  
@@ -306,7 +312,10 @@ ALTER AVAILABILITY GROUP group_name
  정의하는 가용성 복제본의 장애 조치(failover) 모드를 지정합니다.  
   
  AUTOMATIC  
- 자동 장애 조치(failover)를 사용하도록 설정합니다. AUTOMATIC은 AVAILABILITY_MODE = SYNCHRONOUS_COMMIT을 지정한 경우에만 지원됩니다. 주 복제본을 포함하여 두 개의 가용성 복제본에 대해 AUTOMATIC을 지정할 수 있습니다.  
+ 자동 장애 조치(failover)를 사용하도록 설정합니다. AUTOMATIC은 AVAILABILITY_MODE = SYNCHRONOUS_COMMIT을 지정한 경우에만 지원됩니다. 주 복제본을 포함하여 세 개의 가용성 복제본에 대해 AUTOMATIC을 지정할 수 있습니다.  
+  
+> [!NOTE]  
+>  SQL Server 2016 이전에는 주 복제본을 포함하여 두 개의 자동 장애 조치(failover) 복제본으로 제한되었습니다.
   
 > [!NOTE]  
 >  SQL Server FCI(장애 조치(Failover) 클러스터 인스턴스)는 가용성 그룹에 따라 AlwaysOn 자동 장애 조치(Failover)를 지원하지 않으므로 FCI에서 호스팅하는 모든 가용성 복제본은 수동 장애 조치(Failover)에 대해서만 구성될 수 있습니다.  
@@ -329,13 +338,13 @@ ALTER AVAILABILITY GROUP group_name
  수동 시드(기본값)를 지정합니다. 이 메서드를 사용하면 주 복제본에서 데이터베이스의 백업을 만들고 보조 복제본에서 해당 백업을 수동으로 복원해야 합니다.  
   
  BACKUP_PRIORITY **=**_n_  
- 이 복제본에 대한 백업을 수행하기 위한 우선 순위를 지정하며 동일한 가용성 그룹의 다른 복제본을 기준으로 합니다. 이 값은 0에서 100 사이의 정수입니다. 이러한 값에는 다음과 같은 의미가 있습니다.  
+ 이 복제본에 대한 백업을 수행하기 위한 우선 순위를 지정하며 동일한 가용성 그룹의 다른 복제본을 기준으로 합니다. 이 값은 0에서 100  사이의 정수입니다. 이러한 값에는 다음과 같은 의미가 있습니다.  
   
 -   1..100은 가용성 복제본이 백업 수행을 위해 선택될 수 있음을 나타냅니다. 1은 가장 낮은 우선 순위를 나타내고 100은 가장 높은 우선 순위를 나타냅니다. BACKUP_PRIORITY = 1이면 현재 사용 가능한 더 높은 우선 순위의 가용성 복제본이 없는 경우에만 해당 가용성 복제본이 백업 수행을 위해 선택됩니다.  
   
 -   0은 이 가용성 복제본이 백업 수행을 위해 선택될 수 없음을 나타냅니다. 이 값은 예를 들어 백업을 장애 조치할 대상으로 사용하지 않을 원격 가용성 복제본의 경우에 유용합니다.  
   
- 자세한 내용은 [활성 보조: 보조 복제본에 백업&#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)개념을 소개합니다.  
+ 자세한 내용은 [활성 보조 복제본: 보조 복제본에 백업&#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
   
  SECONDARY_ROLE **(** ... **)**  
  이 가용성 복제본이 현재 보조 역할을 소유하는 경우(즉, 보조 복제본일 때마다) 적용되는 역할별 설정을 지정합니다. 괄호 안에 보조 역할 옵션 중 하나 또는 모두를 지정합니다. 둘 다 지정할 경우 쉼표로 구분된 목록을 사용합니다.  
@@ -345,7 +354,7 @@ ALTER AVAILABILITY GROUP group_name
  ALLOW_CONNECTIONS **=** { NO | READ_ONLY | ALL }  
  보조 역할, 즉 보조 복제본의 역할을 수행하는 지정된 가용성 복제본의 데이터베이스에서 클라이언트의 연결을 허용할 수 있는지 여부를 다음 중 하나로 지정합니다.  
   
- NO  
+ 아니요  
  이 복제본의 보조 데이터베이스에 대한 사용자 연결이 허용되지 않습니다. 즉, 읽기 액세스가 가능하지 않습니다. 이것이 기본 동작입니다.  
   
  READ_ONLY  
@@ -354,7 +363,7 @@ ALTER AVAILABILITY GROUP group_name
  ALL  
  보조 복제본의 데이터베이스에 대해 읽기 전용 액세스를 위한 모든 연결이 허용됩니다.  
   
- 자세한 내용은 [활성 보조: 읽기 가능한 보조 복제본&#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)개념을 소개합니다.  
+ 자세한 내용은 [활성 보조 복제본: 읽기 가능한 보조 복제본&#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
   
  READ_ONLY_ROUTING_URL **='** TCP **://**_system-address_**:**_port_**'**  
  이 가용성 복제본에 대한 읽기 전용 연결 요청을 라우팅하는 데 사용할 URL을 지정합니다. 이 URL은 SQL Server 데이터베이스 엔진이 수신하는 URL입니다. 일반적으로 SQL Server 데이터베이스 엔진의 기본 인스턴스는 TCP 포트 1433에서 수신합니다.  
@@ -453,11 +462,11 @@ ALTER AVAILABILITY GROUP group_name
  ADD LISTENER **'**_dns\_name_**'(** \<add_listener_option> **)**  
  이 가용성 그룹의 새 가용성 그룹 수신기를 정의합니다. 주 복제본에서만 지원되며,  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  첫 번째 수신기를 만들기 전에 [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)을 읽는 것이 좋습니다.  
->   
+> 
 >  지정된 가용성 그룹에 대한 수신기를 만든 후에는 다음을 수행하는 것이 좋습니다.  
->   
+> 
 >  -   네트워크 관리자에게 요청하여 수신기의 IP 주소를 배타적으로 사용할 수 있도록 예약합니다.  
 > -   이 가용성 그룹에 대한 클라이언트 연결을 요청할 때 연결 문자열에 사용할 수신기의 DNS 호스트 이름을 애플리케이션 개발자에게 제공합니다.  
   
@@ -628,6 +637,6 @@ GO
  [sys.availability_groups&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [Always On 가용성 그룹 구성 문제 해결&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
+ [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치&amp;#40;SQL Server&amp;#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   

@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 91709818cad0609fda4c624f9bd7585af0c9eea9
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 53a3a9b85b0f125e2c0ceb4cf882bbb86a962619
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712609"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213452"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)에 대한 변경 로그
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -191,7 +191,7 @@ ms.locfileid: "52712609"
 Visual Studio 2017(15.5.1)은 설치 관리자에 대한 다음과 같은 버그 수정을 제외하고 15.5.0 버전과 동일한 릴리스입니다.
 
 1.  SQL Server Integration Services 사후 설치 시 설치 관리자가 응답하지 않는 문제를 수정했습니다.
-2.  "요청된 메타 파일 작업이 지원되지 않습니다(0x800707D3)" 오류 메시지와 함께 설치가 실패하는 문제를 수정했습니다.
+2.  다음 오류 메시지와 함께 오류가 실패하는 문제를 해결합니다. "요청한 메타 파일 작업이 지원되지 않습니다(0x800707D3)".
 
 이러한 두 가지 버그 수정 외에도 15.5.0에 대한 다음과 같은 세부 사항이 15.5.1에 적용됩니다.
 
@@ -494,7 +494,7 @@ Visual Studio 2017용 SSDT(15.5.0)가 미리 보기에서 GA(일반 공급)로 �
 **데이터베이스 프로젝트:**
 - 뷰의 클러스터형 인덱스 수정에서 더 이상 배포를 차단하지 않음
 - 열 암호화와 관련된 스키마 비교 문자열에서 인스턴스 이름 대신 적절한 이름을 사용함.   
-- SqlPackage에 새 명령줄 옵션 ModelFilePath를 추가함.  이 옵션을 사용하면 고급 사용자가 가져오기, 게시 및 스크립팅 작업에 사용할 외부 model.xml 파일을 지정할 수 있습니다.   
+- SqlPackage에 새 명령줄 옵션 추가: ModelFilePath.  이 옵션을 사용하면 고급 사용자가 가져오기, 게시 및 스크립팅 작업에 사용할 외부 model.xml 파일을 지정할 수 있습니다.   
 - DacFx API가 Azure AD 유니버설 인증 및 MFA(Multi-Factor Authentication)를 지원하도록 확장됨
 
 **IS 프로젝트:**
@@ -532,17 +532,17 @@ Visual Studio 2017용 SSDT(15.5.0)가 미리 보기에서 GA(일반 공급)로 �
 - BI 프로젝트가 VS에서 [New Projects]\(새 프로젝트) 범주 맨 위에 표시되지 않도록 템플릿 우선 순위를 수정함
 - SSIS, SSAS 또는 SSRS 솔루션을 열 때 간혹 발생할 수 있는 VS 충돌 문제를 해결함
 - 테이블 형식: DAX 구문 분석 및 수식 입력줄에 대한 여러 개선 사항 및 성능 수정.
-- 테이블 형식: SSAS 테이블 형식 프로젝트가 열려 있지 않은 경우 테이블 형식 모델 탐색기가 더 이상 표시되지 않음.
-- 다차원: 고해상도(High-DPI) 컴퓨터에서 처리 대화 상자를 사용할 수 없는 문제를 해결함.
-- 표 형식: SSMS가 이미 열려 있을 때 BI 프로젝트를 여는 경우 SSDT 오류가 발생하는 문제를 해결함. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
-- 테이블 형식: 1103 모델에서 계층이 bim 파일로 올바르게 저장되지 않는 문제를 해결함. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
-- 테이블 형식: 통합 작업 영역 모드가 지원되지 않는데도 32비트 컴퓨터에서 허용되는 문제를 해결함.
-- 테이블 형식: 부분 선택 모드에서 항목을 클릭하는 경우(예를 들어, DAX 식을 입력하지만 측정값을 클릭함) 작동이 중단될 수 있는 문제를 해결함.
-- 테이블 형식: 배포 마법사에서 모델의 .Name 속성을 "Model"로 다시 설정하는 문제를 해결함. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
-- 테이블 형식: [다이어그램 뷰]를 선택하지 않았는데도 TME에서 계층을 선택할 때 속성이 표시되는 문제를 해결함.
-- 테이블 형식: 특정 애플리케이션에서 붙여넣을 때 DAX 수식 입력줄에 붙여넣으면 텍스트 대신 이미지나 기타 콘텐츠를 붙여넣는 문제를 해결함.
-- 테이블 형식: 특정 정의가 포함된 측정값이 있어서 1103의 일부 이전 모델을 열 수 없는 문제를 해결함.
-- 테이블 형식: XEvent 세션을 삭제할 수 없는 문제를 해결함.
+- 테이블 형식: SSAS 테이블 형식 프로젝트가 열려 있지 않은 경우 테이블 형식 모델 탐색기가 더 이상 표시되지 않습니다.
+- 다차원: High-DPI 머신에서 처리 대화 상자를 사용할 수 없는 문제를 해결했습니다.
+- 테이블 형식: SSMS가 이미 열려 있을 때 BI 프로젝트를 여는 경우 SSDT 오류가 발생하는 문제를 해결했습니다. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
+- 테이블 형식: 1103 모델에서 계층이 bim 파일로 올바르게 저장되지 않는 문제를 해결했습니다. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
+- 테이블 형식: 통합 작업 영역 모드가 지원되지 않는데도 32비트 머신에서 허용되는 문제를 해결했습니다.
+- 테이블 형식: 부분 선택 모드에서 항목을 클릭하는 경우(예를 들어, DAX 식을 입력하지만 측정값을 클릭함) 작동이 중단될 수 있는 문제를 해결했습니다.
+- 테이블 형식: 배포 마법사에서 모델의 .Name 속성을 "Model"로 다시 설정하는 문제를 해결했습니다. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
+- 테이블 형식: 다이어그램 뷰를 선택하지 않았는데도 TME에서 계층을 선택할 때 속성이 표시되는 문제를 해결했습니다.
+- 테이블 형식: 특정 애플리케이션에서 붙여넣을 때 DAX 수식 입력줄에 붙여넣으면 텍스트 대신 이미지나 기타 콘텐츠를 붙여넣는 문제를 해결했습니다.
+- 테이블 형식: 특정 정의가 포함된 측정값이 있어서 1103의 일부 이전 모델을 열 수 없는 문제를 해결했습니다.
+- 테이블 형식: XEvent 세션을 삭제할 수 없는 문제를 해결했습니다.
 - Devenv.com이 포함된 AS "smproj" 파일을 빌드하지 못하는 문제를 해결함
 - AS 테이블 형식 모델 시트 탭 제목에서 한국어 IME를 사용할 경우 텍스트 변경 내용을 너무 자주 종료하는 문제를 해결함
 - DAX Related() 함수에 대한 Intellisense가 제대로 작동하지 않아 다른 테이블의 열을 표시하는 문제를 해결함
@@ -586,7 +586,7 @@ Visual Studio 2017용 SSDT(15.5.0)가 미리 보기에서 GA(일반 공급)로 �
 - DeploymentContributors에서 공개 모델에 액세스할 수 있지만 지원 스키마가 초기화되지 않는 문제를 해결함. [Github 문제](https://github.com/Microsoft/DACExtensions/issues/8)
 - 파일 그룹 배치에 대한 DacFx 임시 수정
 - 외부 동의어에 대한 "확인되지 않은 참조" 오류에 대한 수정 
-- Always Encrypted: 온라인 암호화가 취소 시 변경 내용 추적을 사용하지 않도록 설정하지 않으며 암호화 시작 전에 변경 내용 추적이 정리되지 않은 경우 올바로 작동하지 않음
+- 항상 암호화: 온라인 암호화가 취소 시 변경 내용 추적을 사용하지 않도록 설정하지 않으며 암호화 시작 전에 변경 내용 추적이 정리되지 않은 경우 올바로 작동하지 않음
 
 
 ## <a name="ssdt-165-for-visual-studio-2015-supports-up-to-sql-server-2016"></a>Visual Studio 2015용 SSDT 16.5(SQL Server 2016까지 지원)
@@ -623,17 +623,17 @@ SqlPackage의 게시 및 스크립트 작업에 대해 새 인수 두 개가 추
 
 ```Sqlpackage.exe /a:Script /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:"My\DeployScript.sql" /deployreportpath:"My\DeployReport.xml"```
 
-DacFx에서 DacServices.Publish() 및 DacServices.Script()라는 새 API 두 개가 추가되었습니다. 이러한 API를 통해 게시 + 스크립트 + 보고서 작업의 동시 수행도 지원합니다. 사용법 예제:
+DacFx에서 다음 두 개의 새 API가 추가되었습니다. DacServices.Publish() 및 DacServices.Script(). 이러한 API를 통해 게시 + 스크립트 + 보고서 작업의 동시 수행도 지원합니다. 사용법 예제:
 
 ```
 DacServices service = new DacServices(connectionString);
 using(DacPackage package = DacPackage.Load(@"C:\My\db.dacpac")) {
 var options = new PublishOptions() {
-    GenerateDeploymentScript = true, // Should a deployment script be created?
-    GenerateDeploymentReport = true, // Should an xml deploy report be created?
-    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
-    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
-    DeployOptions = new DacDeployOptions()
+    GenerateDeploymentScript = true, // Should a deployment script be created?
+    GenerateDeploymentReport = true, // Should an xml deploy report be created?
+    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
+    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
+    DeployOptions = new DacDeployOptions()
 };
 
 // Call publish and receive deployment script & report in the results
@@ -733,7 +733,7 @@ SSAS 테이블 형식 디자이너 DAX 파서에서 큰 DAX 식으로 작업할 
 
 - **릴리스 버전 관리 및 번호 매기기:** 이제 릴리스에 월별이 아니라 번호로 태그가 지정됩니다. 이 변경 내용은 새 SSMS 정책에 부합하며 한 달에 여러 개의 릴리스 또는 핫픽스가 있는 경우를 간소화합니다. 이 릴리스는 16.3으로, RTM 릴리스 후 세 번째 업데이트를 의미합니다. 모든 핫픽스는 16.3.1 등으로 지정되며, 다음 달에 계획된 다음 업데이트는 16.4가 됩니다.
 - **Analysis Services - 테이블 형식 모델 탐색기:** 테이블 형식 모델 탐색기를 사용하면 데이터 원본, 테이블, 측정값, 관계 등 모델의 다양한 메타데이터 개체를 편리하게 탐색할 수 있습니다. Visual Studio에서 보기 메뉴를 열고 다른 창을 가리킨 다음 테이블 형식 모델 탐색기를 클릭하면 표시할 수 있는 별도 도구 창으로 구현됩니다. 테이블 형식 모델 탐색기는 기본적으로 솔루션 탐색기 영역의 별도 탭에 표시됩니다. 테이블 형식 모델 탐색기는 테이블 형식 1200 모델의 스키마와 매우 비슷한 트리 구조로 메타데이터 개체 및 많은 새로운 기능을 구성합니다.
-- **데이터베이스 도구 – Always Encrypted**: 이 릴리스에서는 데이터베이스 프로젝트 또는 SQL Server 개체 탐색기의 라이브 데이터베이스에 열 마스터 키 열 또는 열 암호화 키를 쉽게 추가할 수 있도록 새로운 [Always Encrypted 키 관리](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md) 대화 상자를 제공합니다. 이 릴리스에서는 Windows 인증서 저장소의 인증서를 지원합니다. 이후 릴리스에서는 Azure Key Vault 및 CNG 공급자가 지원될 예정입니다.
+- **데이터베이스 도구 - Always Encrypted**:  이 릴리스에서는 데이터베이스 프로젝트 또는 SQL Server 개체 탐색기의 라이브 데이터베이스에 열 마스터 키 열 또는 열 암호화 키를 쉽게 추가할 수 있도록 새로운 [Always Encrypted 키 관리](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md) 대화 상자를 제공합니다. 이 릴리스에서는 Windows 인증서 저장소의 인증서를 지원합니다. 이후 릴리스에서는 Azure Key Vault 및 CNG 공급자가 지원될 예정입니다.
     - 열 마스터 키 또는 열 암호화 키를 만드는 동안 데이터베이스 업데이트를 클릭한 후 즉시 변경 내용이 SQL Server 개체 탐색기에 반영되지 않을 수도 있습니다. 문제를 해결하려면 SQL Server 개체 탐색기에서 데이터베이스 노드를 새로 고칩니다.
     - SQL Server 개체 탐색기에서 데이터가 포함된 테이블의 열을 암호화하려는 경우 오류가 발생할 수 있습니다. 이 기능은 현재 SSDT 데이터베이스 프로젝트 및 SSMS에서만 지원됩니다. SQL Server 개체 탐색기에 대한 지원은 이후 릴리스에서 사용할 수 있습니다.
 

@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c92dc9aad30134f0d9b8b834798a416fb610e142
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 405e15aca972d600a566ca08ea85445291c8ec2a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521239"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590687"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC 파일을 가져와 새 사용자 데이터베이스 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "52521239"
 2.  내보내기 파일의 데이터에서 대량 복사본 가져오기  
   
 ## <a name="sql-server-utility"></a>SQL Server 유틸리티  
- DAC를 데이터베이스 엔진의 관리되는 인스턴스로 가져오는 경우 가져온 DAC는 유틸리티 컬렉션 집합이 다음에 인스턴스에서 유틸리티 제어 지점으로 전송될 때 SQL Server 유틸리티로 통합됩니다. DAC에 있게 됩니다는 **배포 된 데이터 계층 응용 프로그램** 의 노드는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **유틸리티 탐색기** 에 보고 된 **배포 된 데이터 계층 응용 프로그램**세부 정보 페이지입니다.  
+ DAC를 데이터베이스 엔진의 인스턴스로 가져오는 경우 가져온 DAC는 유틸리티 컬렉션 집합이 다음에 인스턴스에서 유틸리티 제어 지점으로 전송될 때 SQL Server 유틸리티로 통합됩니다. DAC에 있게 됩니다는 **배포 된 데이터 계층 애플리케이션** 의 노드는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**유틸리티 탐색기** 에 보고 된 **배포 된 데이터 계층 애플리케이션**세부 정보 페이지입니다.  
   
 ## <a name="database-options-and-settings"></a>데이터베이스 옵션 및 설정  
  기본적으로 가져오기 중에 만들어진 데이터베이스에는 CREATE DATABASE 문의 모든 기본 설정이 적용됩니다. 단, 데이터베이스 데이터 정렬 및 호환성 수준은 DAC 내보내기 파일에 정의된 값으로 설정됩니다. DAC 내보내기 파일은 원본 데이터베이스의 값을 사용합니다.  
@@ -62,14 +62,14 @@ ms.locfileid: "52521239"
  보안을 개선하기 위해 SQL Server 인증 로그인은 암호 없이 DAC 내보내기 파일에 저장됩니다. 파일을 가져오면 생성된 암호와 함께 비활성 로그인이 생성됩니다. 로그인을 활성화하려면 ALTER ANY LOGIN 권한이 있는 로그인을 사용하여 로그인하고 ALTER LOGIN을 사용하여 로그인을 활성화하여 사용자에게 알려 줄 수 있는 새 암호를 할당합니다. Windows 인증 로그인의 경우 암호가 SQL Server에서 관리되지 않으므로 이 과정이 필요 없습니다.  
   
 ## <a name="permissions"></a>Permissions  
- **sysadmin** 또는 **serveradmin** 고정 서버 역할의 멤버를 통하거나 **dbcreator** 고정 서버 역할에 포함되고 ALTER ANY LOGIN 권한이 있는 로그인을 통해서만 DAC를 가져올 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **라는 기본 제공** 시스템 관리자 계정도 DAC를 가져올 수 있습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 대한 로그인이 있는 DAC를 가져오려면 loginmanager 또는 serveradmin 역할의 멤버 자격이 필요합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 대한 로그인이 없는 DAC를 가져오려면 dbmanager 또는 serveradmin 역할의 멤버 자격이 필요합니다.  
+ **sysadmin** 또는 **serveradmin** 고정 서버 역할의 멤버를 통하거나 **dbcreator** 고정 서버 역할에 포함되고 ALTER ANY LOGIN 권한이 있는 로그인을 통해서만 DAC를 가져올 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **라는 기본 제공** 시스템 관리자 계정도 DAC를 가져올 수 있습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 대한 로그인이 있는 DAC를 가져오려면 loginmanager 또는 serveradmin 역할의 멤버 자격이 필요합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 대한 로그인이 없는 DAC를 가져오려면 dbmanager 또는 serveradmin 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="using-the-import-data-tier-application-wizard"></a>데이터 계층 애플리케이션 가져오기 마법사 사용  
  **마법사를 시작하려면 다음 단계를 따르십시오.**  
   
 1.  온-프레미스 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]인스턴스에 연결합니다.  
   
-2.  **개체 탐색기**에서 **데이터베이스**를 마우스 오른쪽 단추로 클릭한 후 **데이터 계층 응용 프로그램 가져오기** 메뉴 항목을 선택하여 마법사를 시작합니다.  
+2.  **개체 탐색기**에서 **데이터베이스**를 마우스 오른쪽 단추로 클릭한 후 **데이터 계층 애플리케이션 가져오기** 메뉴 항목을 선택하여 마법사를 시작합니다.  
   
 3.  마법사 대화 상자를 완료합니다.  
   
@@ -101,9 +101,9 @@ ms.locfileid: "52521239"
   
 -   **로컬 디스크에서 가져오기** - **찾아보기...** 를 클릭하고 로컬 컴퓨터로 이동하거나 제공된 공간에서 경로를 지정합니다. 경로 이름에 파일 이름과 .bacpac 확장명을 모두 포함해야 합니다.  
   
--   **Azure에서 가져오기** - Microsoft Azure 컨테이너에서 BACPAC 파일을 가져옵니다. 이 옵션의 유효성을 검사하려면 Microsoft Azure 컨테이너에 연결해야 합니다. 또한 이 옵션을 사용하려면 임시 파일을 보관할 로컬 디렉터리를 지정해야 합니다. 지정된 위치에 임시 파일이 만들어지고 작업이 완료될 때까지 해당 위치에 유지됩니다.  
+-   **Azure에서 가져오기** - Microsoft Azure 컨테이너에서 BACPAC 파일을 가져옵니다. 이 옵션의 유효성을 검사하려면 Microsoft Azure 컨테이너에 연결해야 합니다. 또한 Azure에서 가져오기 옵션을 사용하려면 임시 파일의 로컬 디렉터리를 지정해야 합니다. 지정된 위치에 임시 파일이 만들어지고 작업이 완료될 때까지 해당 위치에 유지됩니다.  
   
-     Azure를 검색할 때 단일 계정으로 컨테이너 간을 전환할 수 있습니다. 가져오기 작업을 계속하려면 단일 .bacpac 파일을 지정해야 합니다. **이름**, **크기**또는 **수정한 날짜**별로 열을 정렬할 수 있습니다.  
+     Azure를 검색할 때 단일 계정으로 컨테이너 간을 전환할 수 있습니다. 가져오기 작업을 계속하려면 단일 .bacpac 파일을 지정해야 합니다. **이름**, **크기** 또는 **수정한 날짜**별로 열을 정렬할 수 있습니다.  
   
      계속하려면 가져올 .bacpac 파일을 지정하고 **열기**를 클릭합니다.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "52521239"
   
 ## <a name="see-also"></a>참고 항목  
 [BACPAC 파일을 가져와 새 Azure SQL Database를 만들기](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
- [데이터 계층 응용 프로그램](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [데이터 계층 응용 프로그램 내보내기](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
+ [데이터 계층 애플리케이션](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+ [데이터 계층 애플리케이션 내보내기](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
   
   

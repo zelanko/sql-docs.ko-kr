@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2c82a2400020baf0d97cda595c630c2b7b55a9b1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 22a4907e0eec995839648371a14022a3f9c94d78
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504507"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266084"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>데이터베이스 엔진의 새로운 기능 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "52504507"
 다른 SQL Server 구성 요소의 새로운 기능을 검토하려면 [SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)을 참조하세요.
 
 > [!NOTE]
->  [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]는 64비트 응용 프로그램입니다. 일부 요소는 32비트 구성 요소로 실행되지만 32비트 설치는 중단되었습니다.
+>  [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]는 64비트 애플리케이션입니다. 일부 요소는 32비트 구성 요소로 실행되지만 32비트 설치는 중단되었습니다.
 
 #### <a name="try-it-out"></a>사용해보기
 
@@ -319,10 +319,10 @@ model 데이터베이스의 새 값 및 모델을 기반으로 하는 새 데이
 - [COMPRESS&#40;Transact-SQL&#41;](../t-sql/functions/compress-transact-sql.md) 및 [DECOMPRESS&#40;Transact-SQL&#41;](../t-sql/functions/decompress-transact-sql.md) 함수는 값을 GZIP 알고리즘으로 변환하거나, 그 반대로 변환합니다.
 - [DATEDIFF_BIG&#40;Transact-SQL&#41;](../t-sql/functions/datediff-big-transact-sql.md) 및 [AT TIME ZONE&#40;Transact-SQL&#41;](../t-sql/queries/at-time-zone-transact-sql.md) 함수와 [sys.time_zone_info&#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) 뷰가 날짜 및 시간 상호 작용을 지원하기 위해 추가되었습니다.
 - 이전에 제공된 서버 수준 자격 증명 이외에 이제 데이터베이스 수준에서 자격 증명을 만들 수 있습니다. 자세한 내용은 [CREATE DATABASE SCOPED CREDENTIAL&#40;Transact-SQL&#41;](../t-sql/statements/create-database-scoped-credential-transact-sql.md)을 참조하세요.
-- InstanceDefaultDataPath, InstanceDefaultLogPath, ProductBuild, ProductBuildType, ProductMajorVersion, ProductMinorVersion, ProductUpdateLevel 및 ProductUpdateReference라는 8개의 새로운 속성이 [SERVERPROPERTY&#40;Transact-SQL&#41;](../t-sql/functions/serverproperty-transact-sql.md)에 추가되었습니다.
+- [SERVERPROPERTY&#40;Transact-SQL&#41;](../t-sql/functions/serverproperty-transact-sql.md)에 8개의 새 속성이 추가되었습니다. InstanceDefaultDataPath, InstanceDefaultLogPath, ProductBuild, ProductBuildType, ProductMajorVersion, ProductMinorVersion, ProductUpdateLevel 및 ProductUpdateReference.
 - [HASHBYTES&#40;Transact-SQL&#41;](../t-sql/functions/hashbytes-transact-sql.md) 함수에 대한 8,000바이트 입력 길이 제한이 제거되었습니다.
 - 새로운 문자열 함수 [STRING_SPLIT&#40;Transact-SQL&#41;](../t-sql/functions/string-split-transact-sql.md) 및 [STRING_ESCAPE&#40;Transact-SQL&#41;](../t-sql/functions/string-escape-transact-sql.md)가 추가되었습니다.
-- 자동 증가 옵션: ALTER DATABASE의 AUTOGROW_SINGLE_FILE 및 AUTOGROW_ALL_FILES 옵션이 추적 플래그 1117을 대체했고 추적 플래그 1117이 아무런 영향을 미치지 않습니다. 자세한 내용은 [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) 및 [sys.filegroups&#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)의 새 is_autogrow_all_files 열을 참조하세요.
+- 자동 증가 옵션: ALTER DATABASE의 AUTOGROW_SINGLE_FILE 및 AUTOGROW_ALL_FILES 옵션이 추적 플래그 1117을 대체했고 추적 플래그 1117은 영향을 주지 않습니다. 자세한 내용은 [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) 및 [sys.filegroups&#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)의 새 is_autogrow_all_files 열을 참조하세요.
 - 혼합 익스텐트 할당: 사용자 데이터베이스에서 개체의 처음 8페이지에 대한 기본 할당이 혼합 페이지 익스텐트 사용에서 단일 익스텐트 사용으로 변경됩니다. ALTER DATABASE의 SET MIXED_PAGE_ALLOCATION 옵션이 추적 플래그 1118을 대체했고 추적 플래그 1118이 아무런 영향을 미치지 않습니다. 자세한 내용은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md) 및 [sys.databases&#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-databases-transact-sql.md)의 새 `is_mixed_page_allocation_on` 열을 참조하세요.
 
 ### <a name="transact-sql-improvements-for-natively-compiled-modules"></a>고유하게 컴파일된 모듈에 대한 Transact-SQL 개선 사항
@@ -438,10 +438,8 @@ SQL Server 2014의 고유하게 컴파일된 모듈에 지원되지 않았던 �
 최신 [SSMS(SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md)를 다운로드
 
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 는 Microsoft Azure에 연결하기 위해 개발 중인 ADAL(Active Directory Authentication Library)을 지원합니다. 이 기능은 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]에서 사용되는 인증서 기반 인증을 대체합니다.
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 설치하려면 필수 조건으로 .NET 4.6을 설치해야 합니다. .NET 4.6은 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 가 설치될 때 설치 프로그램에 의해 자동으로 설치됩니다.
 - 결과 표에서 텍스트를 복사하거나 저장할 때 캐리지 리턴/줄 바꿈(줄 바꿈 문자)을 유지하는 새 쿼리 결과 표 옵션이 지원됩니다. 도구/옵션 메뉴에서 이 옵션을 설정합니다.
 - SQL Server 관리 도구는 더 이상 주 기능 트리에서 설치되지 않습니다. 자세한 내용은 [SSMS로 SQL Server 관리 도구 설치](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)를 참조하세요.
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 설치하려면 필수 조건으로 .NET 4.6.1을 설치해야 합니다. .NET 4.6.1은 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]가 설치될 때 설치 프로그램에 의해 자동으로 설치됩니다.
 
 ### <a name="upgrade-advisor"></a>업그레이드 관리자
 SQL Server 2016 업그레이드 관리자 Preview는 이전 버전의 사용자가 SQL Server 데이터베이스에 대해 업그레이드 규칙 집합을 실행하여 주요 변경 내용, 동작 변경 내용 및 더 이상 사용되지 않는 기능을 파악하고 스트레치 데이터베이스 등의 새로운 기능을 적용할 때 도움을 제공할 수 있게 하는 독립 실행형 도구입니다.

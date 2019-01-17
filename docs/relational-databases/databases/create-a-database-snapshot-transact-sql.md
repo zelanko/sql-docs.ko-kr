@@ -13,12 +13,12 @@ ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a418de7f83355fedfed135665f699f62714572dc
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 6e09eae93b2b6a2f7c50dfc2d65370a23dc8d55d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560320"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205942"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>데이터베이스 스냅숏 만들기(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "51560320"
 
 - 원본 데이터베이스에는 MEMORY_OPTIMIZED_DATA 파일 그룹이 포함될 수 없습니다. 자세한 내용은 [메모리 내 OLTP에 대한 지원되지 않는 SQL Server 기능](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)을 참조하세요.
 
->  [!IMPORTANT]
+> [!IMPORTANT]
 > 다른 주요 고려 사항에 대한 자세한 내용은 [데이터베이스 스냅숏&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)을 사용해서만 만들 수 있습니다.  
   
 ##  <a name="Recommendations"></a> 권장 사항  

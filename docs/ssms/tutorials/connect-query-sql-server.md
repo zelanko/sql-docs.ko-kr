@@ -11,12 +11,12 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: baa4f703e4c76722dcecb729299e6ff416784f75
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 274e91c482ada16847cb2b2e704ac9d953567d7d
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970385"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328593"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>자습서: SQL Server Management Studio를 사용하여 SQL Server 인스턴스에 연결 및 쿼리
 
@@ -40,8 +40,8 @@ ms.locfileid: "50970385"
 - [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
 
 SQL Server 인스턴스에 대한 액세스 권한이 없는 경우 다음 링크에서 플랫폼을 선택합니다. SQL 인증을 선택한 경우 SQL Server 로그인 자격 증명을 사용합니다.
-- **Windows**: [SQL Server 2017 Developer Edition 다운로드](https://www.microsoft.com/sql-server/sql-server-downloads)
-- **macOS**: [Docker에서 SQL Server 2017 다운로드](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
+- **Windows**: [SQL Server 2017 Developer Edition 다운로드](https://www.microsoft.com/sql-server/sql-server-downloads).
+- **macOS**: [Docker에서 SQL Server 2017 다운로드](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 
 ## <a name="connect-to-a-sql-server-instance"></a>SQL Server 인스턴스에 연결
@@ -66,7 +66,7 @@ SQL Server 인스턴스에 대한 액세스 권한이 없는 경우 다음 링�
 ### <a name="examples-of-successful-connections"></a>성공적인 연결의 예
 SQL Server 연결에 성공했는지 확인하려면 **개체 탐색기** 내에서 개체를 확장하고 탐색합니다. 이러한 개체에 연결된 서버 유형에 따라 달라집니다. 
 
-- 온-프레미스 SQL Server에 연결 - 이 경우 NODE5\SQL2016ST: ![온-프레미스 서버에 연결](media/connect-query-sql-server/connect-on-prem.png)
+- 온-프레미스 SQL 서버에 연결 - 이 경우 NODE5\SQL2016ST: ![온-프레미스 서버에 연결](media/connect-query-sql-server/connect-on-prem.png)
 
 - SQL Azure DB에 연결 - 이 경우 msftestserver.database.windows.net: ![SQL Azure DB에 연결](media/connect-query-sql-server/connect-sql-azure.png)
 

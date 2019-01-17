@@ -5,19 +5,18 @@ ms.date: 04/01/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 73dbc21cd1be1d60144474a629e62af29048208c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 476be7dc2edb83e7cd257885d8d572331cf5dd02
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699062"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52773975"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>통합 관리 기능 영역(마스터 데이터 관리자)
 
@@ -40,6 +39,6 @@ ms.locfileid: "51699062"
  [구독 뷰 삭제&#40;Master Data Services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [마스터 데이터 관리자 웹 응용 프로그램](../master-data-services/master-data-manager-web-application.md)  
+ [마스터 데이터 관리자 웹 애플리케이션](../master-data-services/master-data-manager-web-application.md)  
   
   

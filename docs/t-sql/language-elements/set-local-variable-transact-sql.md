@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 839ef762a20d413f5e1c61ca45c46ad80a153d99
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b29291d808b643f9ac66491ae200d6169eb5232a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697332"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589637"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +71,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 ```  
   
 ## <a name="arguments"></a>인수  
- **@** *local_variable*  
+ **@** _local_variable_  
  **cursor**, **text**, **ntext**, **image** 또는 **table**을 제외한 모든 형식의 변수 이름입니다. 변수 이름은 기호(**@**)로 시작해야 합니다. 변수 이름은 [식별자](../../relational-databases/databases/database-identifiers.md) 규칙을 따라야 합니다.  
   
  *property_name*  
@@ -86,10 +86,10 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  { **.** | **::** }  
  CLR 사용자 정의 형식의 메서드를 지정합니다. 비정적 인스턴스 메서드의 경우 마침표(**.**)를 사용합니다. 정적 메서드의 경우 두 개의 콜론(**::**)을 사용합니다. CLR 사용자 정의 형식의 메서드, 속성 또는 필드를 호출하려면 해당 형식에 대해 EXECUTE 권한이 있어야 합니다.  
   
- *method_name* **(** *argument* [ **,**... *n* ] **)**  
+ _method_name_ **(** _argument_ [ **,**... *n* ] **)**  
  하나 이상의 인수를 사용하여 한 유형의 인스턴스 상태를 수정하는 사용자 정의 형식 메서드입니다. 정적 메서드는 공용이어야 합니다.  
   
- **@** *SQLCLR_local_variable*  
+ **@** _SQLCLR_local_variable_  
  어셈블리에 유형이 있는 변수입니다. 자세한 내용은 [CLR&#40;공용 언어 런타임&#41; 통합 프로그래밍 개요](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)를 참조하세요.  
   
  *mutator_method*  
@@ -127,7 +127,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  SET 문에 커서 선언이 포함되도록 지정합니다.  
   
  SCROLL  
- 커서가 모든 인출 옵션(FIRST, LAST, NEXT, PRIOR, RELATIVE 및 ABSOLUTE)을 지원하도록 지정합니다. FAST_FORWARD도 지정된 경우에는 SCROLL을 지정할 수 없습니다.  
+ 커서가 인출 옵션 FIRST, LAST, NEXT, PRIOR, RELATIVE 및 ABSOLUTE를 모두 지원하도록 지정합니다. FAST_FORWARD도 지정된 경우에는 SCROLL을 지정할 수 없습니다.  
   
  FORWARD_ONLY  
  커서가 FETCH NEXT 옵션만 지원하도록 지정합니다. 첫 번째 행에서 마지막 행까지 커서를 한 방향으로만 검색할 수 있습니다. STATIC, KEYSET 또는 DYNAMIC 키워드를 사용하지 않고 FORWARD_ONLY를 지정하면 커서가 DYNAMIC 커서로 구현됩니다. STATIC, KEYSET 또는 DYNAMIC 키워드가 지정된 경우를 제외하면 FORWARD_ONLY나 SCROLL을 모두 지정하지 않을 경우 FORWARD_ONLY가 기본값입니다. STATIC, KEYSET 및 DYNAMIC 커서의 경우 SCROLL이 기본값입니다.  
@@ -178,7 +178,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  변수는 식에서만 사용할 수 있으며 개체 이름이나 키워드 대신 사용할 수 없습니다. 동적 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 생성하려면 EXECUTE를 실행합니다.  
   
- SET **@***cursor_variable* 구문 규칙에는 LOCAL 및 GLOBAL 키워드가 없습니다. SET **@***cursor_variable* = CURSOR... 구문이 사용되면, 커서가 로컬 커서 데이터베이스 옵션의 기본 설정에 따라 GLOBAL 또는 LOCAL로 만들어집니다.  
+ SET **@**_cursor_variable_ 구문 규칙에는 LOCAL 및 GLOBAL 키워드가 없습니다. SET **@**_cursor_variable_ = CURSOR... 구문이 사용되면, 커서가 로컬 커서 데이터베이스 옵션의 기본 설정에 따라 GLOBAL 또는 LOCAL로 만들어집니다.  
   
  전역 커서를 참조하는 경우에도 커서 변수는 항상 지역 변수입니다. 커서 변수가 전역 커서를 참조하면 전역 커서 참조 및 로컬 커서 참조를 모두 가지게 됩니다. 자세한 내용은 예 3을 참조하세요.  
   
@@ -189,7 +189,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  값을 연결하려면, 즉 집계 값을 계산하려면 SELECT 문에 변수를 사용하지 마세요. 사용할 경우 예기치 않은 쿼리 결과가 발생할 수 있습니다. 이는 SELECT 목록의 모든 식(할당 포함)이 각 출력 행에 대해 정확히 한 번씩 실행되도록 보장되지 않기 때문입니다. 자세한 내용은 [이 KB 문서](https://support.microsoft.com/kb/287515)를 참조하세요.  
   
 ## <a name="permissions"></a>Permissions  
- public 역할의 멤버 자격이 필요합니다. 모든 사용자는 SET **@***local_variable*을 사용할 수 있습니다.  
+ public 역할의 멤버 자격이 필요합니다. 모든 사용자는 SET **@**_local_variable_을 사용할 수 있습니다.  
   
 ## <a name="examples"></a>예  
   
@@ -232,7 +232,7 @@ SET @NewBalance *= 10;
 SELECT @NewBalance;  
 ```  
   
-### <a name="d-using-set-with-a-global-cursor"></a>4. 전역 커서와 함께 SET 사용  
+### <a name="d-using-set-with-a-global-cursor"></a>D. 전역 커서와 함께 SET 사용  
  다음 예에서는 지역 변수를 만든 후 커서 변수를 전역 커서 이름으로 설정합니다.  
   
 ```  
@@ -247,7 +247,7 @@ DEALLOCATE my_cursor;
 --(@my_variable) to the my_cursor cursor.  
 ```  
   
-### <a name="e-defining-a-cursor-by-using-set"></a>5. SET을 사용하여 커서 정의  
+### <a name="e-defining-a-cursor-by-using-set"></a>E. SET을 사용하여 커서 정의  
  다음 예에서는 `SET` 문을 사용하여 커서를 정의합니다.  
   
 ```  
@@ -271,7 +271,7 @@ CLOSE @CursorVar;
 DEALLOCATE @CursorVar;  
 ```  
   
-### <a name="f-assigning-a-value-from-a-query"></a>6. 쿼리에서 값 할당  
+### <a name="f-assigning-a-value-from-a-query"></a>F. 쿼리에서 값 할당  
  다음 예에서는 쿼리를 사용하여 변수에 값을 할당합니다.  
   
 ```  
@@ -282,7 +282,7 @@ SET @rows = (SELECT COUNT(*) FROM Sales.Customer);
 SELECT @rows;  
 ```  
   
-### <a name="g-assigning-a-value-to-a-user-defined-type-variable-by-modifying-a-property-of-the-type"></a>7. 사용자 정의 형식의 속성을 수정하여 사용자 정의 형식 변수에 값 할당  
+### <a name="g-assigning-a-value-to-a-user-defined-type-variable-by-modifying-a-property-of-the-type"></a>G. 사용자 정의 형식의 속성을 수정하여 사용자 정의 형식 변수에 값 할당  
  다음 예에서는 사용자 정의 형식의 `Point` 속성 값을 수정하여 사용자 정의 형식 `X`의 값을 설정합니다.  
   
 ```  
@@ -292,7 +292,7 @@ SELECT @p;
 GO  
 ```  
   
-### <a name="h-assigning-a-value-to-a-user-defined-type-variable-by-invoking-a-method-of-the-type"></a>8. 사용자 정의 형식의 메서드를 호출하여 사용자 정의 형식 변수에 값 할당  
+### <a name="h-assigning-a-value-to-a-user-defined-type-variable-by-invoking-a-method-of-the-type"></a>H. 사용자 정의 형식의 메서드를 호출하여 사용자 정의 형식 변수에 값 할당  
  다음 예제에서는 형식의 `SetXY` 메서드를 호출하여 **point** 사용자 정의 형식의 값을 설정합니다.  
   
 ```  
@@ -313,7 +313,7 @@ SET @p.SetXY(22, 23);
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="j-printing-the-value-of-a-variable-initialized-by-using-set"></a>10. SET을 사용하여 초기화된 변수 값 인쇄  
+### <a name="j-printing-the-value-of-a-variable-initialized-by-using-set"></a>J. SET을 사용하여 초기화된 변수 값 인쇄  
  다음 예제에서는 `@myvar` 변수를 만들고, 문자열 값을 변수에 넣고, `@myvar` 변수 값을 출력합니다.  
   
 ```  

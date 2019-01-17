@@ -1,6 +1,8 @@
 ---
-title: '가용성 그룹 속성: 새 가용성 그룹(일반 페이지) | Microsoft Docs'
-ms.custom: ''
+title: '가용성 그룹 속성: 새 가용성 그룹(일반 페이지)'
+titleSuffix: SQL Server
+description: SQL Server Management Studio의 '새 가용성 그룹 ' 마법사의 '일반' 페이지에 있는 다양한 속성에 대한 설명입니다.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +14,12 @@ ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 098bc8bf6746acdec41aecc9533b21bc0b49e095
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1acbcb925b2b98cdc81bf3f745ebaa9b79edbf55
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690001"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208522"
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>가용성 그룹 속성: 새 가용성 그룹(일반 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +104,7 @@ ms.locfileid: "47690001"
  이 복제본에 대한 세션 제한 시간(초)입니다.  
   
  **엔드포인트 URL**  
- 엔드포인트의 URL입니다. 이러한 URL 형식에 대한 자세한 내용은 [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)을 참조하세요.  
+ 엔드포인트의 URL입니다. 이러한 URL 형식에 대한 자세한 내용은 [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)을 참조하세요.  
   
  **추가**  
  가용성 그룹에 보조 복제본을 추가하려면 클릭합니다.  

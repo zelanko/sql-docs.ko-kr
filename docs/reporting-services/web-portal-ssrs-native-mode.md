@@ -1,25 +1,26 @@
 ---
-title: 웹 포털(SSRS 기본 모드) | Microsoft Docs
-ms.date: 07/02/2017
+title: 보고서 서버의 웹 포털(SSRS 기본 모드) | Microsoft Docs
+ms.date: 12/05/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
+ms.description: The web portal of a Reporting Services report server is a web-based experience for viewing reports, mobile reports, KPIs, and navigating through the elements in your report server instance.
 ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c5f8405a36595b7a5ddaade9aa00952642625c65
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: ec3fac28637e21da9fecc7ad291b8ff347ba7d6d
+ms.sourcegitcommit: 9d2fef55b0abfc049fbb55c315097dda2aeb6853
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711224"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53010294"
 ---
-# <a name="web-portal-ssrs-native-mode"></a>웹 포털(SSRS 기본 모드)
+# <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>보고서 서버의 웹 포털(SSRS 기본 모드)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-Reporting Services 웹 포털은 보고서, 모바일 보고서, KPI를 보고 보고서 서버 인스턴스에 있는 요소로 이동할 수 있는 웹 기반 환경입니다. 웹 포털을 사용하여 단일 보고서 서버 인스턴스를 관리할 수도 있습니다.
+Reporting Services 보고서 서버의 웹 포털은 웹 기반 환경입니다. 포털에서 보고서, 모바일 보고서, KPI를 볼 수 있으며, 보고서 서버 인스턴스의 요소로 이동할 수 있습니다. 웹 포털을 사용하여 단일 보고서 서버 인스턴스를 관리할 수도 있습니다.
 
 ![ssRSPortal](../reporting-services/media/ssrsportal.png)
 
@@ -27,24 +28,15 @@ Reporting Services 웹 포털은 보고서, 모바일 보고서, KPI를 보고 �
 
 웹 포털을 사용하여 다음 작업을 수행할 수 있습니다.
 
-- 보고서 보기, 검색, 인쇄, 구독
-
+- 보고서 보기, 검색, 인쇄 및 구독
 - 서버의 항목을 체계적으로 구성하도록 폴더 계층 구조 생성, 보안 설정 및 유지 관리
-
 - 항목 및 작업에 대한 액세스 권한을 결정하는 역할 기반 보안 구성
-
-- 보고서 실행 속성, 보고서 기록, 보고서 매개 변수 구성
-
+- 보고서 실행 속성, 보고서 기록 및 보고서 매개 변수 구성
 - 일정 및 데이터 원본 연결을 편리하게 관리하기 위해 공유 일정 및 공유 데이터 원본 만들기
-
 - 다수의 받는 사람 목록에 보고서를 전달하는 데이터 기반 구독 만들기
-
 - 기존 보고서를 다른 방식으로 다시 사용하고 용도를 변경하기 위해 링크된 보고서 만들기
-
 - 보고서 작성기, 모바일 보고서 게시자 등의 공통 도구 다운로드
-
 - [KPI 만들기](../reporting-services/working-with-kpis-in-reporting-services.md)
-
 - 피드백 보내기 또는 기능 요청
 
 웹 포털을 사용하여 보고서 서버 폴더를 찾아보거나 특정 보고서를 검색할 수 있습니다. 보고서, 해당 일반 속성 및 보고서 기록에 캡처된 보고서의 지난 복사본을 볼 수 있습니다. 권한에 따라 보고서를 구독하여 전자 메일 받은 편지함 또는 파일 시스템의 공유 폴더로 배달되도록 할 수도 있습니다.
@@ -63,13 +55,13 @@ Reporting Services 웹 포털은 보고서, 모바일 보고서, KPI를 보고 �
 
 ## <a name="start-and-use-the-web-portal"></a>웹 포털 시작 및 사용
 
-웹 포털은 브라우저 창의 주소 표시줄에 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] URL을 입력하여 여는 웹 애플리케이션입니다. [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]을 시작하면 보고서 서버에 대한 권한을 기준으로 표시되는 페이지, 링크, 옵션이 달라집니다. 특정 태스크를 수행하기 위해서는 해당 태스크를 포함하는 역할이 할당되어야 합니다.  모든 권한이 있는 역할이 할당된 사용자는 보고서 서버를 관리하는 데 사용할 수 있는 애플리케이션의 모든 메뉴와 페이지에 액세스할 수 있습니다. 그러나 보고서를 보고 실행할 수 있는 권한이 있는 역할이 할당된 사용자는 이러한 작업을 지원하는 메뉴와 페이지만 볼 수 있습니다. 각 사용자는 각 보고서 서버에 대해 다른 역할을 할당 받을 수 있으며, 단일 보고서 서버에 저장된 여러 보고서 및 폴더에 대해서도 각기 다른 역할을 할당 받을 수 있습니다.
+웹 포털은 브라우저 창의 주소 표시줄에 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] URL을 입력하여 여는 웹 애플리케이션입니다. [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]을 시작하면 보고서 서버에 대한 권한을 기준으로 표시되는 페이지, 링크 및 옵션이 달라집니다. 특정 태스크를 수행하기 위해서는 해당 태스크를 포함하는 역할이 할당되어야 합니다.  모든 권한이 있는 역할이 할당된 사용자는 보고서 서버를 관리하는 데 사용할 수 있는 애플리케이션의 모든 메뉴와 페이지에 액세스할 수 있습니다. 그러나 보고서를 보고 실행할 수 있는 권한이 있는 역할이 할당된 사용자는 이러한 작업을 지원하는 메뉴와 페이지만 볼 수 있습니다. 각 사용자는 각 보고서 서버에 대해 다른 역할을 할당 받을 수 있으며, 단일 보고서 서버에 저장된 여러 보고서 및 폴더에 대해서도 각기 다른 역할을 할당 받을 수 있습니다.
 
 역할에 대해 자세히 알아보려면 [기본 모드 보고서 서버에 대한 사용 권한 부여](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)를 참조하십시오.
 
 ### <a name="start-the-web-portal"></a>웹 포털 시작
 
-브라우저에서 웹 포털을 시작하려면 다음을 수행합니다.
+브라우저에서 웹 포털을 시작하려면 다음 단계를 수행합니다.
 
 1. 웹 브라우저를 엽니다. 지원되는 웹 브라우저를 보려면 [Reporting Services 브라우저 지원 계획](../reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조하십시오.
 
@@ -104,11 +96,11 @@ Power BI Desktop 보고서 및 Excel 통합 문서에 대한 권한을 업로드
 
 ![ssRSWebPortal-view-pbi-and-excel](../reporting-services/media/ssrswebportal-view-pbi-and-excel.png)
 
-파일은 다른 리소스 파일과 마찬가지로 Reporting Services 안에 저장됩니다. 이러한 항목 중 하나를 선택하면 데스크톱에 로컬로 다운로드됩니다. 변경 사항이 있을 경우 보고서 서버에 다시 업로드하면 변경 사항이 저장됩니다.
+파일은 다른 리소스 파일과 마찬가지로 Reporting Services 안에 저장됩니다. 이러한 항목 중 하나를 선택하면 데스크톱에 로컬로 다운로드됩니다. 변경 내용이 있을 경우 보고서 서버에 다시 업로드하여 변경 내용을 저장할 수 있습니다.
 
 ## <a name="search-for-items"></a>항목 검색
 
-검색어를 입력하면 액세스할 수 있는 모든 항목이 표시됩니다. 결과는 KPI, 보고서, 데이터 세트 및 기타 항목으로 분류됩니다. 그런 다음 결과와 상호 작용하여 즐겨찾기에 추가할 수 있습니다.
+검색어를 입력하고 액세스할 수 있는 모든 항목을 확인합니다. 결과는 KPI, 보고서, 데이터 세트 및 기타 항목으로 분류됩니다. 그런 다음 결과와 상호 작용하여 즐겨찾기에 추가할 수 있습니다.
 
 ![ssRSWebPortal-Search](../reporting-services/media/ssrswebportal-search.png)
 
@@ -118,7 +110,7 @@ Power BI Desktop 보고서 및 Excel 통합 문서에 대한 권한을 업로드
 
 [KPI 작업](../reporting-services/working-with-kpis-in-reporting-services.md)
 
-[공유 데이터 집합 작업](../reporting-services/work-with-shared-datasets-web-portal.md)
+[공유 데이터 세트 작업](../reporting-services/work-with-shared-datasets-web-portal.md)
 
 ## <a name="see-also"></a>관련 항목:
 

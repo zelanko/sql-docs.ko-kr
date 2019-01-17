@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d923536f678884307be526ddebf0f825774c1093
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f01c19b7afd63402abc5729404d73e52429722be
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699671"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980079"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE(Transact-SQL) 호환성 수준
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 > 
 > 데이터베이스 전체에 데이터베이스 호환성 수준 140을 사용하려고 하는데 데이터베이스 호환성 수준 110에 매핑하는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]의 **카디널리티 예상** 모델을 선호하는 이유가 있다면 [ALTER DATABASE SCOPED CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 및 키워드 `LEGACY_CARDINALITY_ESTIMATION = ON`을 참조하세요.
 >  
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 두 호환성 수준 간의 가장 중요한 쿼리의 성능 차이를 평가하는 방법에 대한 내용은 [Azure SQL Database에서 호환성 수준 130으로 향상된 쿼리 성능](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)을 참조하세요. 이 아티클에서는 호환성 수준 130 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조하나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 대한 140으로 이동에도 같은 방법론이 적용됩니다.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 두 호환성 수준 간의 가장 중요한 쿼리의 성능 차이를 평가하는 방법에 대한 내용은 [Azure SQL Database에서 호환성 수준 130으로 향상된 쿼리 성능](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/)을 참조하세요. 이 아티클에서는 호환성 수준 130 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조하나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 대한 140으로 이동에도 같은 방법론이 적용됩니다.
 
 다음 쿼리를 실행하여 연결된 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 버전을 확인합니다.  
   
@@ -255,7 +255,7 @@ SQL Server 2017 이전의 SQL Server 이전 버전에서 추적 플래그 4199�
 |인라인 테이블 반환 함수 또는 뷰에 xQuery 메서드가 포함된 경우 이 메서드에 필요한 SET 옵션의 유효성을 검사하지 않습니다.|인라인 테이블 반환 함수 또는 뷰에 xQuery 메서드가 포함된 경우 이 메서드에 필요한 SET 옵션의 유효성을 검사합니다. 메서드의 SET 옵션을 잘못 설정하면 오류가 발생합니다.|낮음|  
 |줄 끝 문자(캐리지 리턴 및 줄 바꿈)를 포함하는 XML 특성 값은 XML 표준에 따라 정규화되지 않습니다. 즉, 하나의 줄 바꿈 문자 대신 두 문자 모두 반환됩니다.|줄 끝 문자(캐리지 리턴 및 줄 바꿈)를 포함하는 XML 특성 값은 XML 표준에 따라 정규화됩니다. 즉, 문서 엔터티를 포함하여 구문 분석된 외부 엔터티의 모든 줄 바꿈은 2자 시퀀스 #xD #xA 및 뒤에 #xA가 오지 않는 #xD 모두를 하나의 #xA 문자로 변환하여 입력에서 정규화됩니다.<br /><br /> 특성을 사용하여 줄 끝 문자를 포함하는 문자열 값을 변환하는 응용 프로그램은 이러한 제출된 문자를 다시 수신하지 않습니다. 정규화 프로세스를 방지하려면 XML 숫자 문자 엔터티를 사용하여 모든 줄 끝 문자를 인코딩합니다.|낮음|  
 |열 속성 `ROWGUIDCOL` 및 `IDENTITY`는 제약 조건으로 잘못 이름이 지정될 수 있습니다. 예를 들어 `CREATE TABLE T (C1 int CONSTRAINT MyConstraint IDENTITY)` 문은 실행되긴 하지만 제약 조건 이름이 보존되지 않으며 이를 통해 사용자에게 액세스할 수 없습니다.|열 속성 `ROWGUIDCOL` 및 `IDENTITY`는 제약 조건으로 이름을 지정할 수 없습니다. 오류 156이 반환됩니다.|낮음|  
-|`UPDATE T1 SET @v = column_name = <expression>`과 같은 양방향 할당을 사용하여 열을 업데이트하면 문 실행 중에 `WHER`E 및 `ON` 절과 같은 다른 절에서 문의 시작 값 대신 변수의 현재 값을 사용할 수 있으므로 예상치 못한 결과가 발생할 수 있습니다. 그 결과 각 행에서 조건자의 의미가 예기치 않게 변경될 수 있습니다.<br /><br /> 이 동작은 호환성 수준이 90으로 설정된 경우에만 발생합니다.|양방향 할당을 사용하여 열을 업데이트하면 문 실행 중에 열의 문 시작 값만 액세스되므로 예상대로 결과가 나타납니다.|낮음|  
+|`UPDATE T1 SET @v = column_name = <expression>`과 같은 양방향 할당을 사용하여 열을 업데이트하면 명령문 실행 중에 `WHERE` 및 `ON` 절과 같은 다른 절에서 명령문의 시작 값 대신 변수의 현재 값을 사용할 수 있으므로 예상치 못한 결과가 발생할 수 있습니다. 그 결과 각 행에서 조건자의 의미가 예기치 않게 변경될 수 있습니다.<br /><br /> 이 동작은 호환성 수준이 90으로 설정된 경우에만 발생합니다.|양방향 할당을 사용하여 열을 업데이트하면 문 실행 중에 열의 문 시작 값만 액세스되므로 예상대로 결과가 나타납니다.|낮음|  
 |아래 예제 섹션의 예제 E를 참조하세요.|아래 예제 섹션의 예제 F를 참조하세요.|낮음|  
 |ODBC 함수 {fn CONVERT()}는 언어의 기본 날짜 형식을 사용합니다. 일부 언어에서 기본 형식은 YDM입니다. 이 경우 CONVERT()가 YMD 형식을 사용하는 `{fn CURDATE()}`와 같은 다른 함수와 결합되면 변환 오류가 발생합니다.|ODBC 함수 `{fn CONVERT()}`는 ODBC 데이터 형식 SQL_TIMESTAMP, SQL_DATE, SQL_TIME, SQLDATE, SQL_TYPE_TIME 및 SQL_TYPE_TIMESTAMP로 변환할 때 스타일 121(언어와 상관없는 YMD 형식)을 사용합니다.|낮음|  
 |DATEPART와 같은 datetime 내장 함수에서 문자열 입력 값은 유효한 datetime 리터럴이 아니어도 됩니다. 예를 들어 `SELECT DATEPART (year, '2007/05-30')`는 성공적으로 컴파일됩니다.|`DATEPART`와 같은 datetime 내장 함수에서 문자열 입력 값은 유효한 datetime 리터럴이어야 합니다. 유효하지 않은 datetime 리터럴을 사용하면 오류 241이 반환됩니다.|낮음|  
@@ -332,7 +332,7 @@ FROM r;
   
 ```  
   
-### <a name="d"></a>4.  
+### <a name="d"></a>D.  
  이 예에서는 스타일 0과 스타일 121의 차이점을 보여 줍니다. 날 짜 및 시간 스타일에 대한 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.  
   
 ```sql  
@@ -355,7 +355,7 @@ Datetime2Style0      Datetime2Style121
 Jun  7 2011  3:15PM  2011-06-07 15:15:35.8130000  
 ```  
   
-### <a name="e"></a>5.  
+### <a name="e"></a>E.  
  최상위 UNION 연산자가 포함된 문에 변수를 할당할 수 있지만 예상치 않은 결과가 반환됩니다. 예를 들어 다음 문에서 지역 변수 `@v`에는 두 테이블의 합집합의 열 `BusinessEntityID` 값이 할당됩니다. 원래 SELECT 문에서 둘 이상의 값을 반환하면 반환된 값 중 마지막 값이 변수에 할당됩니다. 이 경우 변수에 마지막 값이 올바르게 할당되지만 SELECT UNION 문의 결과 집합도 함께 반환됩니다.  
   
 ```sql  
@@ -371,7 +371,7 @@ SELECT @v = BusinessEntityID FROM HumanResources.EmployeeAddress;
 SELECT @v;  
 ```  
   
-### <a name="f"></a>6.  
+### <a name="f"></a>F.  
  최상위 UNION 연산자가 포함된 문에는 변수를 할당할 수 없습니다. 오류 10734가 반환됩니다. 오류를 해결하려면 다음 예와 같이 쿼리를 다시 작성합니다.  
   
 ```sql  
@@ -384,7 +384,7 @@ SELECT @v;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [예약 키워드&#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
  [DATABASEPROPERTYEX&#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   

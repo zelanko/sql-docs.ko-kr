@@ -1,6 +1,7 @@
 ---
-title: Always On 가용성 그룹에 대한 PowerShell Cmdlet 개요(SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹에 대한 PowerShell Cmdlet 개요
+description: 'Always On 가용성 그룹 관리하는 데 사용할 수 있는 다양한 PowerShell cmdlet에 대한 참조입니다. '
+ms.custom: seodec18
 ms.date: 08/30/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4491943f13e515bda4d46285b1a1e0dd52dfd9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4f60098f7410b847e2a420ef899e4abc8b2ef94
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597872"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203772"
 ---
-# <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹에 대한 PowerShell Cmdlet 개요(SQL Server)
+# <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 PowerShell Cmdlet 개요
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell은 시스템 관리를 위해 특별히 설계된 태스크 기반 명령줄 셸이자 스크립팅 언어입니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 가용성 그룹, 가용성 복제본 및 가용성 데이터베이스를 배포, 관리 및 모니터링할 수 있도록 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에 PowerShell cmdlet 집합을 제공합니다.  

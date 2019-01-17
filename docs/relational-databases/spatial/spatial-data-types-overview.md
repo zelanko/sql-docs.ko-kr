@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 99f6a05b3d033a32b9a45ec305faa92f214e59e4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9fea754e936831833fd81ff9a50079c31b5938f6
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535825"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979609"
 ---
 # <a name="spatial-data-types-overview"></a>공간 데이터 형식 개요
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "52535825"
 
 ![geom_hierarchy](../../relational-databases/spatial/media/geom-hierarchy.gif) 
 
-그림에 표시된 대로 **geometry** 및 **geography** 데이터 형식 중 인스턴스화할 수 있는 10개의 형식은 **Point**, **MultiPoint**, **LineString**, **CircularString**, **MultiLineString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **MultiPolygon**및 **GeometryCollection**입니다. geography 데이터 형식의 경우 인스턴스화할 수 있는 추가 형식이 하나( **FullGlobe**) 있습니다. **geometry** 및 **geography** 형식은 인스턴스가 명시적으로 정의되어 있지 않더라도 형식이 올바르다면 특정 인스턴스를 인식할 수 있습니다. 예를 들어 STPointFromText() 메서드를 사용하여 **Point** 인스턴스를 명시적으로 정의할 경우, 올바른 형식의 메서드 입력에 한해 **geometry** 및 **geography** 는 해당 인스턴스를 **Point**로 인식합니다. `STGeomFromText()` 메서드를 사용하여 동일한 인스턴스를 정의할 경우 **geometry** 및 **geography** 데이터 형식은 해당 인스턴스를 **Point**로 인식합니다.  
+그림에 표시된 대로 **geometry** 및 **geography** 데이터 형식 중 인스턴스화할 수 있는 10개의 형식은 **Point**, **MultiPoint**, **LineString**, **CircularString**, **MultiLineString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **MultiPolygon**및 **GeometryCollection**입니다. geography 데이터 형식의 경우 인스턴스화할 수 있는 추가 형식으로 **FullGlobe**이 있습니다. **geometry** 및 **geography** 형식은 인스턴스가 명시적으로 정의되어 있지 않더라도 형식이 올바르다면 특정 인스턴스를 인식할 수 있습니다. 예를 들어 STPointFromText() 메서드를 사용하여 **Point** 인스턴스를 명시적으로 정의할 경우, 올바른 형식의 메서드 입력에 한해 **geometry** 및 **geography** 는 해당 인스턴스를 **Point**로 인식합니다. `STGeomFromText()` 메서드를 사용하여 동일한 인스턴스를 정의할 경우 **geometry** 및 **geography** 데이터 형식은 해당 인스턴스를 **Point**로 인식합니다.  
 
 geometry 및 geography 형식의 하위 형식은 단순 형식과 컬렉션 형식으로 나뉩니다.  `STNumCurves()` 와 같은 일부 메서드는 단순 형식에서만 작동합니다.  
 
@@ -88,7 +88,7 @@ OGC 사양에 대한 자세한 내용은 다음을 참조하십시오.
 -   [OGC Specifications, Simple Feature Access Part 2 - SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
 ##  <a name="circular"></a> 원호 세그먼트  
-인스턴스화할 수 있는 세 가지 형식은 원호 세그먼트 **CircularString**, **CompoundCurve**및 **CurvePolygon**을 취할 수 있습니다.  원호 세그먼트는 2차원 평면에서 3개의 점으로 정의되며 세 번째 점은 첫 번째 점과 같을 수 없습니다.  
+인스턴스화할 수 있는 세 가지 형식, **CircularString**, **CompoundCurve** 및 **CurvePolygon**을 사용할 수 있습니다.  원호 세그먼트는 2차원 평면에서 3개의 점으로 정의되며 세 번째 점은 첫 번째 점과 같을 수 없습니다.  
 
 그림 A와 B에서는 일반적인 원호 세그먼트를 보여 줍니다. 세 개의 각 점이 원의 둘레에 어떻게 놓이는지 확인하십시오.  
 
@@ -96,10 +96,11 @@ OGC 사양에 대한 자세한 내용은 다음을 참조하십시오.
 원호 세그먼트 형식에서 작동하는 메서드는 직선 세그먼트를 사용하여 원호를 대략적으로 나타냅니다. 호를 대략적으로 나타내는 데 사용되는 선 세그먼트의 수는 호의 길이와 곡률에 따라 달라집니다. 각 원호 세그먼트 형식에 대해 Z 값을 저장할 수 있지만 메서드는 계산에 Z 값을 사용하지 않습니다.  
 
 > [!NOTE]  
->  원호 세그먼트에 Z 값이 지정된 경우 원호 세그먼트의 모든 점에 대해 Z 값이 동일해야만 해당 원호 세그먼트를 입력할 수 있습니다. 예: `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` 은 허용되지만 `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` 은 허용되지 않습니다.  
+> 원호 세그먼트에 Z 값이 지정된 경우 원호 세그먼트의 모든 점에 대해 Z 값이 동일해야만 해당 원호 세그먼트를 입력할 수 있습니다. 예: `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` 은 허용되지만 `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` 은 허용되지 않습니다.  
 
 ### <a name="linestring-and-circularstring-comparison"></a>LineString 및 CircularString 비교  
 이 예에서는 **LineString** 인스턴스와 **CircularString** 인스턴스를 모두 사용하여 동일한 이등변 삼각형을 저장하는 방법을 보여줍니다.  
+
 ```sql
 DECLARE @g1 geometry;
 DECLARE @g2 geometry;
@@ -114,14 +115,16 @@ IF @g1.STIsValid() = 1 AND @g2.STIsValid() = 1
 
 삼각형을 정의하는 데 **CircularString** 인스턴스에는 7개의 점이 필요하지만 **LineString** 인스턴스에는 4개의 점만 필요합니다. 이는 **CircularString** 인스턴스가 원호 세그먼트만 저장하고 선 세그먼트는 저장하지 않기 때문입니다. 따라서 **CircularString** 인스턴스에 저장된 삼각형의 면은 ABC, CDE 및 EFA이지만 **LineString** 인스턴스에 저장된 삼각형의 면은 AC, CE 및 EA입니다.  
 
-다음 코드 조각을 참조하십시오.  
+다음 예를 살펴 보십시오.  
+
 ```sql
 SET @g1 = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 4 0)', 0);
 SET @g2 = geometry::STGeomFromText('CIRCULARSTRING(0 0, 2 2, 4 0)', 0);
 SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
 ```
 
-이 조각은 다음 결과를 생성합니다.  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
 ```
 LS LengthCS Length
 5.65685...6.28318...
@@ -131,15 +134,15 @@ LS LengthCS Length
 
 ### <a name="linestring-and-compoundcurve-comparison"></a>LineString 및 CompoundCurve 비교  
 다음 코드 예제에서는 **LineString** 및 **CompoundCurve** 인스턴스를 사용하여 동일한 그림을 저장하는 방법을 보여 줍니다.
+
 ```sql
 SET @g = geometry::Parse('LINESTRING(2 2, 4 2, 4 4, 2 4, 2 2)');
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2), (4 2, 4 4), (4 4, 2 4), (2 4, 2 2))');
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
 ```
 
-로 구분하거나 여러  
-
 위 예제에서 **LineString** 인스턴스나 **CompoundCurve** 인스턴스는 그림을 저장할 수 있습니다.  다음 예제에서는 **CompoundCurve** 를 사용하여 원형 조각을 저장합니다.  
+
 ```sql
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0, 2 2))');  
 ```  
@@ -148,6 +151,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0,
 
 ### <a name="circularstring-and-compoundcurve-comparison"></a>CircularString 및 CompoundCurve 비교  
 다음 코드 예제에서는 **CircularString** 인스턴스에 원형 조각을 저장하는 방법을 보여 줍니다.  
+
 ```sql
 DECLARE @g geometry;
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)');
@@ -168,7 +172,7 @@ SELECT @g.ToString(), @g.STLength();
 ```
 
 ### <a name="polygon-and-curvepolygon-comparison"></a>Polygon 및 CurvePolygon 비교  
-**CurvePolygon** 인스턴스는 외부 및 내부 링을 정의할 때 **CircularString** 및 **CompoundCurve** 인스턴스를 사용할 수 있습니다.  **Polygon** 인스턴스는 원호 세그먼트 형식인 **CircularString** 및 **CompoundCurve**를 사용합니다.  
+**CurvePolygon** 인스턴스는 외부 및 내부 링을 정의할 때 **CircularString** 및 **CompoundCurve** 인스턴스를 사용할 수 있습니다.  **Polygon** 인스턴스는 원호 세그먼트 형식인 **CircularString** 및 **CompoundCurve**를 사용할 수 없습니다.  
 
 ## <a name="see-also"></a>참고 항목  
 - [공간 데이터(SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx) 

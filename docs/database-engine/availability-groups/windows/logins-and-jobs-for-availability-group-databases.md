@@ -1,6 +1,7 @@
 ---
-title: 가용성 그룹 데이터베이스에 대한 로그인 및 작업 | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹의 데이터베이스를 사용하여 작업에 대한 로그인 관리
+description: Always On 가용성 그룹에 참여하는 데이터베이스를 사용하는 작업에 대한 로그인을 관리하는 방법에 대한 설명입니다.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37bc06c22b36022cb62b99123111871a6adf3a96
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 25684c696bf55948fc5106d0e906b14e5dba0410
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545282"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208882"
 ---
-# <a name="logins-and-jobs-for-availability-group-databases"></a>가용성 그룹 데이터베이스에 대한 로그인 및 작업
+# <a name="manage-logins-for-jobs-using-databases-in-an-always-on-availability-group"></a>Always On 가용성 그룹의 데이터베이스를 사용하여 작업에 대한 로그인 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Always On 가용성 그룹의 모든 주 데이터베이스와 해당 보조 데이터베이스에서 동일한 사용자 로그인 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업 집합을 정기적으로 유지 관리해야 합니다. 로그인과 작업은 가용성 그룹에 대한 가용성 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 모든 인스턴스에서 재현되어야 합니다.  
   
@@ -31,7 +32,7 @@ ms.locfileid: "52545282"
   
      가용성 그룹의 가용성 복제본을 호스팅하는 서버 인스턴스는 다른 테이프 드라이브 문자 등으로 다르게 구성될 수 있습니다. 각 가용성 복제본에 대한 작업 시 이러한 모든 차이점을 감안해야 합니다.  
   
-     백업 작업은 [sys.fn_hadr_is_preferred_backup_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) 함수를 사용하여 가용성 그룹 백업 기본 설정에 따라 로컬 복제본이 기본 백업 복제본인지 여부를 확인합니다. [유지 관리 계획 마법사](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) 를 사용하여 만든 백업 작업은 이 함수를 사용합니다. 다른 백업 작업의 경우 백업 작업이 기본 복제본에서만 실행되도록 이 함수를 백업 작업의 조건으로 사용하는 것이 좋습니다. 자세한 내용은 [활성 보조: 보조 복제본에 백업&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)개념을 소개합니다.  
+     백업 작업은 [sys.fn_hadr_is_preferred_backup_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) 함수를 사용하여 가용성 그룹 백업 기본 설정에 따라 로컬 복제본이 기본 백업 복제본인지 여부를 확인합니다. [유지 관리 계획 마법사](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) 를 사용하여 만든 백업 작업은 이 함수를 사용합니다. 다른 백업 작업의 경우 백업 작업이 기본 복제본에서만 실행되도록 이 함수를 백업 작업의 조건으로 사용하는 것이 좋습니다. 자세한 내용은 [활성 보조 복제본: 보조 복제본에 백업&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
   
 -   **로그인**  
   
@@ -46,7 +47,7 @@ ms.locfileid: "52545282"
   
      로그인과 작업 외에도 지정된 가용성 그룹의 보조 복제본을 호스팅하는 각 서버 인스턴스에서 다시 만들어야 하는 정보가 있습니다. 예를 들어 서버 구성 설정, 자격 증명, 암호화된 데이터, 사용 권한, 복제 설정, Service Broker 애플리케이션, 트리거(서버 수준) 등을 다시 만들어야 할 수 있습니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)을 참조하세요.  
   
-##  <a name="SSauthentication"></a> SQL Server 인증 또는 로컬 Windows 로그인을 사용하는 응용 프로그램의 로그인  
+##  <a name="SSauthentication"></a> SQL Server 인증 또는 로컬 Windows 로그인을 사용하는 애플리케이션의 로그인  
  애플리케이션에서 SQL Server 인증 또는 로컬 Windows 로그인을 사용하는 경우 일치하지 않는 SID로 인해 원격 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에서 애플리케이션의 로그인이 확인되지 않을 수 있습니다. 일치하지 않는 SID로 인해 해당 로그인이 원격 서버 인스턴스에서 분리된 사용자가 됩니다. 이 문제는 애플리케이션이 장애 조치(Failover) 후 미러링된 데이터베이스 또는 로그 전달 데이터베이스에 연결하거나 백업에서 초기화된 복제 구독자 데이터베이스에 연결하는 경우에 발생할 수 있습니다.  
   
  이 문제를 방지하려면 원격 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에서 호스팅하는 데이터베이스를 사용하도록 애플리케이션을 설정할 때 예방 조치를 취하는 것이 좋습니다. 예방 조치에는 로컬 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 원격 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스로 로그인 및 암호를 전송하는 것이 포함됩니다. 이 문제를 방지하는 방법에 대한 자세한 내용은 KB 문서 918992([SQL Server 인스턴스 간에 로그인 및 암호를 전송하는 방법](https://support.microsoft.com/kb/918992/))를 참조하세요.  

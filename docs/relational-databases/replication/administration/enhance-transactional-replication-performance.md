@@ -22,12 +22,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a5c17d05b00c711c311e41ac98add0e6fd549f58
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 67f22e0608493ba3f33144c8d97b9cb275a5c506
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535760"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207092"
 ---
 # <a name="enhance-transactional-replication-performance"></a>트랜잭션 복제 성능 향상
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -146,7 +146,7 @@ ms.locfileid: "52535760"
 - **Dist: Delivered Trans/sec** 성능 카운터 값은 항상 0입니다.
 - **Dist: Delivery Latency** 성능 카운터는 스레드 교착 상태가 해결될 때까지 값이 증가한다고 보고합니다.
 
-Microsoft SQL Server 온라인 설명서의 "복제 배포 에이전트" 항목에는 *SubscriptionStreams* 매개 변수에 대해 다음과 같은 설명이 포함됩니다. "연결 중 하나가 실행 또는 커밋에 실패하는 경우 모든 연결이 현재 일괄 처리를 중단하고, 에이전트가 단일 스트림을 사용하여 실패한 일괄 처리를 다시 시도합니다."
+SQL Server 온라인 설명서의 "복제 배포 에이전트" 항목에는 *SubscriptionStreams* 매개 변수에 대한 다음 설명이 포함되어 있습니다. "여러 연결 중 하나가 실행 또는 커밋되지 않으면 모든 연결에서 현재 일괄 처리를 중지하고 에이전트가 단일 스트림을 사용하여 실패한 일괄 처리를 다시 시도합니다."
 
 배포 에이전트는 하나의 세션을 사용하여 적용될 수 없는 일괄 처리를 다시 시도합니다. 배포 에이전트가 성공적으로 일괄 처리를 적용한 후에 다시 시작하지 않고 여러 세션을 사용하여 다시 시작됩니다.
 
@@ -156,7 +156,7 @@ Microsoft SQL Server 온라인 설명서의 "복제 배포 에이전트" 항목�
 트랜잭션 세트를 커밋할 때 오버헤드는 고정되어 있습니다. 그러므로 다수의 트랜잭션을 커밋하는 횟수를 줄이면 오버헤드가 대량의 데이터에 분산됩니다.  CommitBatchSize(최대 200)를 늘리면 더 많은 트랜잭션이 구독자에 커밋되므로 성능을 개선할 수 있습니다. 그러나 변경 내용 적용 비용은 로그가 포함된 디스크의 최대 I/O와 같은 다른 요인에 의해 제어되므로 이 매개 변수를 늘려서 얻을 수 있는 장점이 줄어듭니다. 또한 배포 에이전트를 다시 시작해야 하는 오류가 발생할 경우 많은 수의 트랜잭션을 롤백하고 다시 적용해야 한다는 것을 고려해야 합니다. 네트워크가 불안정한 경우 값을 낮게 설정하면 오류 발생 빈도가 줄어들고 오류가 발생해도 적은 수의 트랜잭션을 롤백하고 다시 적용하면 됩니다.  
   
 
-##<a name="see-more"></a>자세히 보기
+## <a name="see-more"></a>자세히 보기
   
 [복제 에이전트 프로필 작업](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
 [복제 에이전트의 명령 프롬프트 매개 변수 보기 및 수정&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  

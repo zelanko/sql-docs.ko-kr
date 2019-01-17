@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 967f4188168d1f322ba64c5ef9dfca5c958f3b45
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c8904d9cd03f8d9e7b7010f34f8bfde7e23f0475
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525352"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213662"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 유틸리티(SSRS)
   **rsconfig.exe** 유틸리티는 연결 및 계정 값을 암호화하여 RSReportServer.config 파일에 저장합니다. 암호화되는 값에는 무인 보고서 처리에 사용되는 보고서 서버 데이터베이스 연결 정보 및 계정 값이 포함됩니다.  
@@ -92,7 +92,7 @@ rsconfig -c -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -d reportserver -a SQL -u
 ```  
   
 #### <a name="specifying-a-built-in-account"></a>기본 제공 계정 지정  
- 이 예에서는 로컬 보고서 서버 데이터베이스에 연결할 때 기본 제공 계정을 사용하도록 보고서 서버를 구성하는 방법을 보여 줍니다. **-u** 는 사용되지 않습니다. 지원되는 기본 제공 계정 값의 예로는 로컬 시스템의 경우 NT AUTHORITY\SYSTEM, 네트워크 서비스의 경우 NT AUTHORITY\NETWORKSERVICE 등이 있습니다([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 만 해당).  
+ 이 예에서는 로컬 보고서 서버 데이터베이스에 연결할 때 기본 제공 계정을 사용하도록 보고서 서버를 구성하는 방법을 보여 줍니다. **-u** 는 사용되지 않습니다. 지원되는 기본 제공 계정 값의 예로는 로컬 시스템의 경우 NT AUTHORITY\SYSTEM, 네트워크 서비스의 경우 NT AUTHORITY\NETWORKSERVICE 등이 있습니다([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]만 해당).  
   
 ```  
 rsconfig -c -s <SQLSERVERNAME> -d reportserver -a Windows "NT AUTHORITY\SYSTEM"  

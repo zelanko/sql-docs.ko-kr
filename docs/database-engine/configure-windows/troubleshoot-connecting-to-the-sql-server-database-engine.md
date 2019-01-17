@@ -14,27 +14,27 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c491a67b55db4a730db2bb7fcd8977162657e516
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 853f3c26f729db2256ad859174eeef16d4698453
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410910"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531078"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진에 대한 연결 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server 데이터베이스 엔진에 연결할 수 없는 경우 사용할 문제 해결 기술의 전체 목록입니다. 이러한 단계는 이미 시도한 가장 가능성이 높은 문제 순서가 아닙니다. 가장 기본적인 문제에서 좀 더 복잡한 문제 순서로 표시됩니다. 이러한 단계에서는 TCP/IP 프로토콜을 사용하여 다른 컴퓨터에서 SQL Server에 연결한다고 가정하며, 이것이 가장 일반적인 상황입니다. Windows 10을 실행하는 클라이언트 애플리케이션과 SQL Server 둘 다를 포함하는 SQL Server 2016용으로 작성되었지만 약간만 수정하면 다른 버전의 SQL Server와 다른 운영 체제에도 일반적으로 적용됩니다.
 
-이러한 지침은 오류: 11001(또는 53), 심각도: 20, 상태: 0 및 다음과 같은 오류 메시지일 수 있는 "**서버에 연결**" 오류 문제를 해결할 때 특히 유용합니다.
+이러한 지침은 오류 번호일 수 있는 "**서버에 연결**" 오류 문제를 해결할 때 특히 유용합니다. 11001(또는 53), 심각도: 20, 상태: 0 및 다음과 같은 오류 메시지:
 
 *   "SQL Server에 연결을 설정하는 중에 네트워크 또는 인스턴스 관련 오류가 발생했습니다. 서버를 찾을 수 없거나 액세스할 수 없습니다. 인스턴스 이름이 올바르고 SQL Server가 원격 연결을 허용하도록 구성되어 있는지 확인하십시오. " 
 
-*   "(공급자: 명명된 파이프 공급자, 오류: 40 - SQL Server에 대한 연결을 열 수 없습니다.) (Microsoft SQL Server, 오류: 53)" 또는 "(공급자: TCP 공급자, 오류: 0 - 해당 호스트가 없습니다.) (Microsoft SQL Server, 오류: 11001)" 
+*   "(공급자: 명명된 파이프 공급자, 오류: 40 - SQL Server에 대한 연결을 열 수 없음) (Microsoft SQL Server, 오류: 53)" 또는 "(공급자: TCP 공급자, 오류: 0 - 해당 호스트를 알 수 없습니다.) (Microsoft SQL Server, 오류: 11001)" 
 
 이 오류는 일반적으로 SQL Server 컴퓨터를 찾을 수 없거나, TCP 포트 번호를 알 수 없거나 올바른 포트 번호가 아니거나 방화벽에서 차단되었음을 의미합니다.
 
->  [!TIP]
+> [!TIP]
 >  대화형 문제 해결 페이지는 [!INCLUDE[msCoName_md](../../includes/msconame-md.md)] 고객 지원 서비스의 [SQL Server에 대한 연결 오류 해결(영문)](https://support.microsoft.com/help/4009936/solving-connectivity-errors-to-sql-server)에서 사용할 수 있습니다.
 
 ### <a name="not-included"></a>포함되지 않음
@@ -64,8 +64,8 @@ SQL Server 데이터베이스 엔진에 연결할 수 없는 경우 사용할 �
     2.  로그 뷰어의 도구 모음에서 **필터** 단추를 클릭합니다. **메시지에 텍스트 포함** 상자에 **서버가 수신 대기 중입니다.** 를 입력하고 **필터 적용**을 클릭한 다음 **확인**을 클릭합니다.
     3.  **서버에서 [ 'any' \<ipv4> 1433]을 수신하고 있습니다.** 와 비슷한 메시지가 표시되어야 합니다. 이 메시지는 이 SQL Server 인스턴스가 이 컴퓨터의 모든 IP 주소(IP 버전 4)에서 수신 대기 중이며 TCP 포트 1433을 수신 대기 중음을 나타냅니다. TCP 포트 1433은 일반적으로 데이터베이스 엔진에서 사용하는 포트입니다. SQL Server 인스턴스 하나만 포트를 사용할 수 있으므로 SQL Server 인스턴스가 둘 이상 설치되어 있을 경우 일부 인스턴스는 다른 포트 번호를 사용해야 합니다. 연결하려는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 인스턴스에서 사용하는 포트 번호에 대해 적어둡니다. 
 
-    >    [!NOTE] 
-    >    IP 주소 127.0.0.1이 표시될 가능성이 큽니다. 이 주소는 루프백 어댑터 주소라고 하며 동일한 컴퓨터의 프로세스에서만 연결할 수 있습니다. 문제 해결에 유용할 수 있지만 다른 컴퓨터에서 연결하는 데 사용할 수 없습니다.
+    > [!NOTE] 
+    > IP 주소 127.0.0.1이 표시될 가능성이 큽니다. 이 주소는 루프백 어댑터 주소라고 하며 동일한 컴퓨터의 프로세스에서만 연결할 수 있습니다. 문제 해결에 유용할 수 있지만 다른 컴퓨터에서 연결하는 데 사용할 수 없습니다.
 
 ## <a name="enable-protocols"></a>프로토콜 사용
 
@@ -98,12 +98,12 @@ TCP/IP를 사용하여 SQL Server에 연결하려면 Windows에서 연결을 설
 |기본 인스턴스|컴퓨터 이름|ACCNT27|
 |명명된 인스턴스|컴퓨터 이름\인스턴스 이름|ACCNT27\PAYROLL|
 
->  [!NOTE] 
+> [!NOTE]
 >  동일한 컴퓨터의 클라이언트 애플리케이션에서 SQL Server에 연결하는 경우 공유 메모리 프로토콜이 사용됩니다. 공유 메모리는 명명된 로컬 파이프의 한 유형이므로 때때로 파이프와 관련된 오류가 발생합니다.
 
 이 시점에서 오류가 발생하면 계속하기 전에 해결해야 합니다. 문제가 될 수 있는 여러 가지 사항이 있습니다. 로그인에 연결 권한이 없을 수 있습니다. 기본 데이터베이스가 누락되었을 수도 있습니다.
 
->    [!NOTE] 
+> [!NOTE]
 >    클라이언트에 전달되는 일부 오류 메시지는 의도적으로 문제 해결에 충분한 정보를 제공하지 않습니다. 이는 공격자에게 SQL Server에 대한 정보를 제공하지 않기 위한 보안 기능입니다. 오류에 대한 전체 정보를 보려면 SQL Server 오류 로그를 확인하세요. 여기에 세부 정보가 제공됩니다. **18456 사용자가 로그인하지 못했습니다.** 오류가 발생하는 경우 온라인 설명서 항목 [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) 에 오류 코드에 대한 추가 정보가 포함되어 있습니다. 또한 Aaron Bertrand 블로그의 [오류 18456 문제 해결](https://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx)에는 광범위한 오류 목록이 있습니다. 개체 탐색기의 관리 섹션에서 SSMS를 사용하여 오류 로그를 볼 수 있습니다(연결할 수 있는 경우). 또는 Windows 메모장 프로그램을 사용하여 오류 로그를 볼 수 있습니다. 기본 위치는 사용 중인 버전에 따라 달라지며, 설치하는 동안 변경할 수 있습니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 의 기본 위치는 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`입니다.  
 
 4.   공유 메모리를 사용하여, 연결할 수 있는 경우 TCP를 사용하여 연결을 테스트합니다. 이름 앞에 **tcp:** 를 지정하여 강제로 TCP 연결을 적용할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.
@@ -144,7 +144,7 @@ TCP/IP를 사용하여 SQL Server에 연결하려면 Windows에서 연결을 설
   * SQL Server Browser 서비스를 시작합니다. 섹션 1.d, **SQL Server 인스턴스에 대한 정보 수집**섹션으로 돌아갑니다.
   * SQL Server Browser 서비스가 방화벽에 의해 차단되고 있습니다. 방화벽에서 UDP 포트 1434를 엽니다. **방화벽에서 포트 열기**섹션으로 돌아갑니다. (TCP 포트가 아니라 UDP 포트를 열고 있는지 확인하세요. 두 포트는 다릅니다.)
   * UDP 포트 1434 정보가 라우터에 의해 차단되고 있습니다. UDP 통신(사용자 데이터그램 프로토콜)은 라우터를 통과하도록 설계되지 않았습니다. 이는 우선 순위가 낮은 트래픽이 네트워크를 채우지 않도록 합니다. UDP 트래픽을 전달하도록 라우터를 구성하거나, 연결 시 항상 포트 번호를 제공하도록 결정할 수 있습니다.
-  * 클라이언트 컴퓨터에서 Windows 7 또는 Windows Server 2008(또는 최신 운영 체제)을 사용하는 경우 서버 응답이 쿼리된 IP 주소가 아닌 다른 IP 주소에서 반환되기 때문에 클라이언트 운영 체제에서 UDP 트래픽을 삭제할 수 있습니다. 이는 "느슨한 원본 매핑"을 차단하는 보안 기능입니다. 자세한 내용은 온라인 설명서 항목 **문제 해결: 제한 시간이 만료되었습니다.** 의 [여러 서버 IP 주소](https://msdn.microsoft.com/library/ms190181.aspx)섹션을 참조하세요. SQL Server 2008 R2의 문서이지만 원칙은 똑같이 적용됩니다. 올바른 IP 주소를 사용하도록 클라이언트를 구성하거나, 연결 시 항상 포트 번호를 제공하도록 결정할 수 있습니다.
+  * 클라이언트 컴퓨터에서 Windows 7 또는 Windows Server 2008(또는 최신 운영 체제)을 사용하는 경우 서버 응답이 쿼리된 IP 주소가 아닌 다른 IP 주소에서 반환되기 때문에 클라이언트 운영 체제에서 UDP 트래픽을 삭제할 수 있습니다. 이는 "느슨한 원본 매핑"을 차단하는 보안 기능입니다. 자세한 내용은 온라인 설명서 항목 [문제 해결의 **여러 항목의 IP 주소** 섹션을 참조하세요. 제한 시간 만료됨](https://msdn.microsoft.com/library/ms190181.aspx). SQL Server 2008 R2의 문서이지만 원칙은 똑같이 적용됩니다. 올바른 IP 주소를 사용하도록 클라이언트를 구성하거나, 연결 시 항상 포트 번호를 제공하도록 결정할 수 있습니다.
      
 3. IP 주소(또는 명명된 인스턴스의 IP 주소 및 인스턴스 이름)을 사용하여 연결할 수 있으면 컴퓨터 이름(또는 명명된 인스턴스의 경우 컴퓨터 이름 및 인스턴스 이름)을 사용하여 연결을 시도합니다. TCP/IP 연결을 강제로 적용하려면 컴퓨터 이름 앞에 `tcp:` 를 넣습니다. 예를 들어 `ACCNT27`컴퓨터에 있는 기본 인스턴스의 경우 `tcp:ACCNT27` 을 사용합니다. 해당 컴퓨터에 있는 `PAYROLL`이라는 명명된 인스턴스의 경우 `tcp:ACCNT27\PAYROLL` 을 사용합니다. IP 주소를 사용하여 연결할 수 있지만 컴퓨터 이름을 사용해서는 연결할 수 없는 경우 이름 확인 문제가 있는 것입니다. 섹션 4, **TCP/IP 연결 테스트**섹션으로 돌아갑니다.
 

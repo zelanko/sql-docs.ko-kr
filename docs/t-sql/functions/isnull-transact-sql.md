@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f19e41bb14179dcf0a01de36c86a9f4ff5fdfc88
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 2b5c3e694518f5500736ee1d991d6253e1ac5357
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970483"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978989"
 ---
 # <a name="isnull-transact-sql"></a>ISNULL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ ISNULL ( check_expression , replacement_value )
  NULL 여부를 검사할 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *check_expression*은 임의 형식이 될 수 있습니다.  
   
  *replacement_value*  
- *check_expression*이 NULL인 경우 반환할 식입니다. *replacement_value* 는 암시적으로 *check_expression*형식으로 변환되는 형식이어야 합니다.  
+ *check_expression*이 NULL인 경우 반환할 식입니다. *replacement_value*는 암시적으로 *check_expression* 형식으로 변환되는 형식이어야 합니다.  
   
 ## <a name="return-types"></a>반환 형식  
  *check_expression* 식과 같은 유형을 반환합니다. 리터럴 NULL이 *check_expression*으로 제공된 경우 *replacement_value* 데이터 형식을 반환합니다. 리터럴 NULL이 *check_expression*으로 제공되고 *replacement_value*가 제공되지 않은 경우 **int**를 반환합니다.  
@@ -132,7 +132,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-isnull-with-avg"></a>4. AVG와 함께 ISNULL 사용  
+### <a name="d-using-isnull-with-avg"></a>D. AVG와 함께 ISNULL 사용  
  다음 예에서는 샘플 표에 있는 모든 제품의 평균 무게를 구하는 방법을 보여 줍니다. `50` 테이블의 `Weight` 열에 있는 모든 NULL 항목을 `Product` 값으로 대체합니다.  
   
 ```  
@@ -149,7 +149,7 @@ FROM dbo.DimProduct;
 52.88   
 ```  
   
-### <a name="e-using-isnull"></a>5. ISNULL 사용  
+### <a name="e-using-isnull"></a>E. ISNULL 사용  
  다음 예에서는 ISNULL을 사용하여 `MinPaymentAmount` 열에 있는 NULL 값을 테스트하고 해당 열의 `0.00` 값을 표시합니다.  
   
 ```  
@@ -173,7 +173,7 @@ ORDER BY ResellerName;
 |  일반 자전거 상점         |   200.0000         |
 |  허용 가능 매출 및 서비스  |     0.0000         |
   
-### <a name="f-using-is-null-to-test-for-null-in-a-where-clause"></a>6. WHERE 절에서 NULL 테스트를 위해 IS NULL 사용  
+### <a name="f-using-is-null-to-test-for-null-in-a-where-clause"></a>F. WHERE 절에서 NULL 테스트를 위해 IS NULL 사용  
  다음 예에서는 `Weight` 열에 `NULL`이 있는 모든 제품을 찾는 방법을 보여 줍니다. `IS`와 `NULL` 사이에 공백이 있습니다.  
   
 ```  

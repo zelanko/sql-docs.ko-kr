@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 679eb8412f4633af845efc7c5520c351f9749822
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 55f5056f65daa3c9f52809087f4cf6773d708910
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518335"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980509"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -301,9 +301,12 @@ ON *partition_scheme_name* **( *column_name* )**
  ON **"** default **"**  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssCurrent](../../includes/sssdsfull-md.md)]까지  
   
- 기본 파일 그룹에 지정된 인덱스를 만듭니다.  
+ 테이블 또는 보기와 동일한 파일 그룹 또는 파티션 구성표에 지정된 인덱스를 만듭니다.  
   
- 이 컨텍스트에서 default는 키워드가 아닙니다. 이것은 기본 파일 그룹에 대한 식별자이며 ON **"** default **"** 또는 ON **[** default **]** 와 같이 구분되어야 합니다. "default"를 지정하면 현재 세션의 QUOTED_IDENTIFIER 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
+ 이 컨텍스트에서 default는 키워드가 아닙니다. 이것은 기본 파일 그룹에 대한 식별자이며 ON **"** default **"** 또는 ON **[** default **]** 와 같이 구분되어야 합니다. "default"를 지정하면 현재 세션의 QUOTED_IDENTIFIER 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.
+ 
+> [!NOTE]  
+> "default"는 CREATE INDEX의 컨텍스트에서 데이터베이스 기본 파일 그룹을 나타내지 않습니다. 이는 CREATE TABLE과 다르며, 여기서 "default"는 데이터베이스 기본 파일 그룹에서 테이블을 찾습니다.
   
  [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
@@ -452,7 +455,7 @@ DROP_EXISTING을 사용하여 다음을 변경할 수 없습니다.
 ONLINE = { ON | **OFF** }  
 인덱스 작업 중 쿼리 및 데이터 수정에 기본 테이블과 관련 인덱스를 사용할 수 있는지 여부를 지정합니다. 기본값은 OFF입니다.  
   
-> [!NOTE]  
+> [!NOTE]
 > 온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
  ON  
@@ -533,7 +536,7 @@ MAXDOP = *max_degree_of_parallelism*
   
  자세한 내용은 [병렬 인덱스 작업 구성](../../relational-databases/indexes/configure-parallel-index-operations.md)을 참조하세요.  
   
-> [!NOTE]  
+> [!NOTE]
 > 병렬 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016에 대한 버전 및 지원되는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) 및 [SQL Server 2017에 대한 버전 및 지원되는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요.  
   
  DATA_COMPRESSION  
@@ -558,10 +561,10 @@ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**...*n* 
  \<partition_number_expression>은 다음과 같은 방법으로 지정할 수 있습니다.  
   
 -   파티션의 번호를 지정합니다(예: ON PARTITIONS (2)).  
--   여러 개별 파티션의 파티션 번호를 쉼표로 구분하여 지정합니다(예: ON PARTITIONS (1,5)).  
--   범위와 개별 파티션을 모두 지정합니다(예: ON PARTITIONS (2,4,6 TO 8)).  
+-   여러 개별 파티션의 파티션 번호를 쉼표로 구분하여 지정합니다(예: ON PARTITIONS (1, 5)).  
+-   범위와 개별 파티션을 모두 지정합니다(예: ON PARTITIONS (2, 4, 6 TO 8)).  
   
- \<range>는 단어 TO로 구분된 파티션 번호로 지정할 수 있습니다(예: ON PARTITIONS (6 TO 8)).  
+ \<range>는 TO라는 단어로 구분된 파티션 번호로 지정할 수 있습니다. 예를 들면 다음과 같습니다. ON PARTITIONS (6 TO 8)).  
   
  여러 파티션에 대해 서로 다른 데이터 압축 유형을 설정하려면 DATA_COMPRESSION 옵션을 두 번 이상 지정합니다. 예를 들면 다음과 같습니다.  
  
@@ -655,7 +658,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 > 테이블이 분할된 경우 분할 키 열이 비고유 클러스터형 인덱스에 아직 없으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 의해 해당 열이 인덱스에 추가됩니다. 인덱싱된 열(포함 열 제외)과 추가된 분할 열의 결합된 크기는 비고유 클러스터형 인덱스에서 1,800바이트를 초과할 수 없습니다.  
   
 ## <a name="computed-columns"></a>계산 열  
- 계산 열에 인덱스를 만들 수 있습니다. 또한 계산 열은 PERSISTED 속성을 가질 수 있습니다. 즉, [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 계산된 값을 테이블에 저장하고 계산 열이 종속된 다른 열이 업데이트되면 해당 값을 업데이트합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 열에 인덱스를 만들 때와 이 인덱스가 쿼리에서 참조될 때 이러한 지속형 값을 사용합니다.  
+ 계산 열에 인덱스를 만들 수 있습니다. 또한 계산 열은 PERSISTED 속성을 가질 수 있습니다. 즉, [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 계산된 값을 테이블에 저장하고 계산 열이 종속된 다른 열이 업데이트되면 해당 값을 업데이트합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 열에 인덱스를 만들 때와 이 인덱스가 쿼리에서 참조될 때 이러한 지속형 값을 사용합니다.  
   
  계산 열을 인덱싱하려면 계산 열이 결정적이고 정확해야 합니다. 그러나 PERSISTED 속성을 사용하면 인덱싱할 수 있는 계산 열 유형이 다음을 포함하도록 확장할 수 있습니다.  
   
@@ -817,7 +820,7 @@ CREATE NONCLUSTERED INDEX IX_SalesPerson_SalesQuota_SalesYTD ON Sales.SalesPerso
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID ON Purchasing..ProductVendor (VendorID);   
 ```  
   
-### <a name="d-add-a-column-to-an-index"></a>4. 인덱스에 열 추가  
+### <a name="d-add-a-column-to-an-index"></a>D. 인덱스에 열 추가  
  다음 예제에서는 dbo.FactFinance 테이블의 열 2개를 사용하여 IX_FF 인덱스를 만듭니다.  다음 명령문은 하나 이상의 열을 포함한 인덱스를 다시 만들며 기존 이름을 유지합니다.  
   
 ```sql  
@@ -828,9 +831,9 @@ CREATE INDEX IX_FF ON dbo.FactFinance ( FinanceKey, DateKey, OrganizationKey DES
 WITH ( DROP_EXISTING = ON );  
  ```  
   
-## <a name="examples-sql-server-azure-sql-database"></a>예제: SQL Server, Azure SQL Database  
+## <a name="examples-sql-server-azure-sql-database"></a>예: SQL Server, Azure SQL Database  
   
-### <a name="e-create-a-unique-nonclustered-index"></a>5. 고유한 비클러스터형 인덱스 만들기  
+### <a name="e-create-a-unique-nonclustered-index"></a>E. 고유한 비클러스터형 인덱스 만들기  
  다음 예에서는 `Name` 데이터베이스에 있는 `Production.UnitMeasure` 테이블의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 열에 고유한 비클러스터형 인덱스를 만듭니다. 인덱스는 `Name` 열에 삽입된 데이터의 고유성을 강제 적용합니다.  
   
 ```sql  
@@ -855,7 +858,7 @@ Server: Msg 2601, Level 14, State 1, Line 1
 Cannot insert duplicate key row in object 'UnitMeasure' with unique index 'AK_UnitMeasure_Name'. The statement has been terminated.  
 ```  
   
-### <a name="f-use-the-ignoredupkey-option"></a>6. IGNORE_DUP_KEY 옵션 사용  
+### <a name="f-use-the-ignoredupkey-option"></a>F. IGNORE_DUP_KEY 옵션 사용  
  다음 예에서는 `IGNORE_DUP_KEY` 옵션을 먼저 `ON`으로 설정한 후 다시 `OFF`로 설정한 상태에서 여러 행을 임시 테이블에 삽입했을 때 미치는 영향을 보여 줍니다. 두 번째 여러 행 `#Test` 문이 실행될 때 의도적으로 중복 값을 발생시키는 `INSERT` 테이블에 단일 행을 삽입합니다. 테이블의 행 수가 삽입된 행 수를 반환합니다.  
   
 ```sql  
@@ -916,7 +919,7 @@ Number of rows
   
  `Production.UnitMeasure` 테이블에서 오직 한 행만 `UNIQUE` 인덱스 제약 조건을 위반했지만 이 테이블에서 어떤 행도 삽입되지 않았습니다.  
   
-### <a name="g-using-dropexisting-to-drop-and-re-create-an-index"></a>7. DROP_EXISTING을 사용하여 인덱스 삭제 및 다시 만들기  
+### <a name="g-using-dropexisting-to-drop-and-re-create-an-index"></a>G. DROP_EXISTING을 사용하여 인덱스 삭제 및 다시 만들기  
  다음 예에서는 `ProductID` 옵션을 사용하여 `Production.WorkOrder` 데이터베이스에 있는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블의 `DROP_EXISTING` 열에서 기존 인덱스를 삭제하고 다시 만듭니다. `FILLFACTOR` 및 `PAD_INDEX` 옵션도 설정됩니다.  
   
 ```sql  
@@ -928,7 +931,7 @@ CREATE NONCLUSTERED INDEX IX_WorkOrder_ProductID
 GO  
 ```  
   
-### <a name="h-create-an-index-on-a-view"></a>8. 뷰에 인덱스 만들기  
+### <a name="h-create-an-index-on-a-view"></a>H. 뷰에 인덱스 만들기  
  다음 예에서는 뷰를 만들고 이 뷰에 인덱스를 만듭니다. 인덱싱된 뷰를 사용하는 두 개의 쿼리가 포함되어 있습니다.  
   
 ```sql  
@@ -990,7 +993,7 @@ WHERE PostalCode BETWEEN N'98000' and N'99999';
 GO  
 ```  
   
-### <a name="j-create-a-partitioned-index"></a>10. 분할된 인덱스 만들기  
+### <a name="j-create-a-partitioned-index"></a>J. 분할된 인덱스 만들기  
  다음은 `TransactionsPS1` 데이터베이스에 있는 기존 파티션 구성표인 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]에 분할된 비클러스터형 인덱스를 만드는 예입니다. 이 예에서는 분할된 인덱스 샘플이 설치되었다고 가정합니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
@@ -1049,7 +1052,7 @@ CREATE  INDEX test_idx1 on test_table (col1) WITH (ONLINE=ON, MAXDOP=1, RESUMABL
 
 -- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
 
--- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumable index create operation is paused.
 CREATE INDEX test_idx2 on test_table (col2) WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
 
 -- Pause a running resumable online index creation 
@@ -1078,7 +1081,7 @@ CREATE  INDEX test_idx on test_table WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)
 
 -- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
 
--- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumable index create operation is paused.
 CREATE INDEX test_idx on test_table  WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
 
 -- Pause a running resumable online index creation 

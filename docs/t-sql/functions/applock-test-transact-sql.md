@@ -22,12 +22,12 @@ ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9ca73ac4f7283ac8bbcfb7490a9554ea49c9bcfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fe1b71d95dd326eedbdf481c68a74d30c052c6f
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749241"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980189"
 ---
 # <a name="applocktest-transact-sql"></a>APPLOCK_TEST(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
 클라이언트 애플리케이션이 지정한 잠금 리소스의 이름입니다. 애플리케이션은 고유한 리소스 이름인지 확인해야 합니다. 지정된 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금 관리자가 내부적으로 저장할 수 있는 값으로 내부적으로 해시됩니다.  *resource_name*은 **nvarchar(255)** 이며 기본값은 없습니다. *resource_name*은 이진 비교되며 현재 데이터베이스의 데이터 정렬 설정에 관계없이 대/소문자를 구분합니다.
   
 **'** *lock_mode* **'**  
-잠금 모드는 특정 리소스에 대해 가져오는 것입니다. *lock_mode*는 **nvarchar(32)** 이며 기본값은 없습니다. *lock_mode*는 **Shared**, **Update**, **IntentShared**, **IntentExclusive**, **Exclusive** 중 하나일 수 있습니다.
+특정 리소스를 얻기 위한 잠금 모드입니다. *lock_mode*는 **nvarchar(32)** 이며 기본값은 없습니다. *lock_mode*는 다음 값 중 하나를 가질 수 있습니다. **Shared**, **Update**, **IntentShared**, **IntentExclusive**, **Exclusive**.
   
 **'** *lock_owner* **'**  
 잠금의 소유자이며 잠금이 요청되었을 때의 *lock_owner* 값입니다. *lock_owner*는 **nvarchar (32)** 이고 값은 **Transaction**(기본값) 또는 **Session**이 될 수 있습니다. 기본값 또는 **Transaction**이 명시적으로 지정되면 APPLOCK_TEST는 트랜잭션 내에서 실행되어야 합니다.

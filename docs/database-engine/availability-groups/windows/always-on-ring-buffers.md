@@ -1,6 +1,7 @@
 ---
-title: Always On 가용성 그룹 링 버퍼(SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: 링 버퍼를 사용하여 가용성 그룹에 대한 상태 정보 얻기
+description: SQL Server 링 버퍼를 사용하여 Always On 가용성 그룹에 대한 특정 진단 정보를 얻습니다.
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: 47bb7a1a-c0a5-473c-a7db-d9f4bf3ee650
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1bc5ccc83285ead5a5d5de55742380d0af5766b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26f6cd91a0b2af905d863d398245c672657092dd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642398"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208302"
 ---
-# <a name="always-on-availability-groups-ring-buffers"></a>Always On 가용성 그룹 링 버퍼
+# <a name="use-ring-buffers-to-obtain-health-information-about-always-on-availability-groups"></a>링 버퍼를 사용하여 Always On 가용성 그룹에 대한 상태 정보 얻기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   SQL Server 링 버퍼 또는 sys.dm_os_ring_buffers DMV(동적 관리 뷰)에서 일부 진단 Always On 가용성 그룹 정보를 얻을 수 있습니다. 링 버퍼는 내부 진단에 대한 SQL Server 시스템 내에서 SQL Server 시작 및 레코드 경고 중 생성됩니다. 지원되지 않지만 문제를 해결할 때 귀중한 정보를 여전히 추출할 수 있습니다. 이러한 링 버퍼는 SQL Server가 중단되거나 손상되었을 때 다른 진단의 원본을 제공합니다.  
   

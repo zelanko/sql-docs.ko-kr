@@ -1,6 +1,7 @@
 ---
-title: 분산 가용성 그룹(Always On 가용성 그룹) 구성 | Microsoft Docs
-ms.custom: ''
+title: 분산 가용성 그룹 구성
+description: '분산 Always On 가용성 그룹을 만들고 구성하는 방법을 설명합니다. '
+ms.custom: seodec18
 ms.date: 08/17/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6cfc2b3cbb9dedc9f2b8902229c6aea9e68226ec
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: bc8dc35b72a5544bc6b52934a4e2e517a047a621
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603999"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215369"
 ---
-# <a name="configure-distributed-availability-group"></a>분산 가용성 그룹 구성  
+# <a name="configure-a-distributed-always-on-availability-group"></a>분산 Always On 가용성 그룹 구성  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 분산 가용성 그룹을 만들려면 각 WSFC(Windows Server 장애 조치 클러스터)에서 가용성 그룹 및 수신기를 만들어야 합니다. 그런 다음 이러한 가용성 그룹을 분산 가용성 그룹으로 결합해야 합니다. 다음 단계는 TRANSACT-SQL에서의 기본 예제를 제공합니다. 이 예제에서는 가용성 그룹 및 수신기를 만드는 데 관련된 자세한 내용을 다루지 않는 대신 주요 요구 사항을 집중적으로 다루고 있습니다. 

@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 877fbd597ce603427c9bdcca00b2ecdeffbb2180
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: f91d98f48031f34f4c1c1ef91c86c1cbb60520fd
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586296"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531068"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +75,7 @@ UPDATE STATISTICS table_or_indexed_view_name
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-UPDATE STATISTICS schema_name . ] table_name   
+UPDATE STATISTICS [ schema_name . ] table_name   
     [ ( { statistics_name | index_name } ) ]  
     [ WITH   
        {  
@@ -164,7 +164,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
 
 MAXDOP = *max_degree_of_parallelism*  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작)  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작).  
   
  통계 작업 기간 동안 **최대 병렬 처리 수준** 구성 옵션을 재정의합니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
   
@@ -266,7 +266,7 @@ UPDATE STATISTICS Production.Product(Products)
     WITH SAMPLE 50 PERCENT;  
 ```  
   
-### <a name="d-update-statistics-by-using-fullscan-and-norecompute"></a>4. FULLSCAN 및 NORECOMPUTE를 사용하여 통계 업데이트  
+### <a name="d-update-statistics-by-using-fullscan-and-norecompute"></a>D. FULLSCAN 및 NORECOMPUTE를 사용하여 통계 업데이트  
  다음 예에서는 `Products` 테이블의 `Product` 통계를 업데이트하고 `Product` 테이블의 모든 행을 전체 검색하며 `Products` 통계에 대한 자동 통계를 비활성화합니다.  
   
 ```sql  
@@ -279,21 +279,21 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-update-statistics-on-a-table"></a>5. 테이블에 대한 모든 통계 업데이트  
+### <a name="e-update-statistics-on-a-table"></a>E. 테이블에 대한 모든 통계 업데이트  
  다음 예제에서는 `Customer` 테이블에서 `CustomerStats1` 통계를 업데이트합니다.  
   
 ```sql  
 UPDATE STATISTICS Customer ( CustomerStats1 );  
 ```  
   
-### <a name="f-update-statistics-by-using-a-full-scan"></a>6. 전체 검사를 사용하여 통계 업데이트  
+### <a name="f-update-statistics-by-using-a-full-scan"></a>F. 전체 검사를 사용하여 통계 업데이트  
  다음 예제에서는 `Customer` 테이블의 모든 행 검사를 기반으로 `CustomerStats1` 통계를 업데이트합니다.  
   
 ```sql  
 UPDATE STATISTICS Customer (CustomerStats1) WITH FULLSCAN;  
 ```  
   
-### <a name="g-update-all-statistics-on-a-table"></a>7. 테이블에 대한 모든 통계 업데이트  
+### <a name="g-update-all-statistics-on-a-table"></a>G. 테이블에 대한 모든 통계 업데이트  
  다음 예제에서는 `Customer` 테이블에서 모든 통계를 업데이트합니다.  
   
 ```sql  
@@ -302,7 +302,7 @@ UPDATE STATISTICS Customer;
   
 ## <a name="see-also"></a>참고 항목  
  [통계](../../relational-databases/statistics/statistics.md)   
- [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [DBCC SHOW_STATISTICS&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   

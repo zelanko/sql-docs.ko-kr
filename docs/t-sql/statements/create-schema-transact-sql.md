@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2348a0ba8aa1fa0c3c01a1d59867a14abb4579f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9b2fad9fc09736a335e8fc5797cda836f907191
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808011"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210972"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -123,8 +123,8 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
  이 동작은 Windows 그룹에 속한 사용자가 개체를 만들어 소유할 수 있도록 허용하므로 필요합니다. 그러나 스키마 및 사용자가 의도하지 않게 생성될 수 있습니다. 의도하지 않은 사용자 및 스키마 생성을 방지하려면 가능한 경우 데이터베이스 보안 주체를 명시적으로 만들어 기본 스키마를 할당하세요. 또는 데이터베이스에서 개체를 만들 때 두, 세 부분으로 구성된 개체 이름을 사용하여 기존 스키마를 명시적으로 지정합니다.  
 
->  [!NOTE]
->  Azure Active Directory 사용자의 암시적 생성은 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 가능하지 않습니다. 외부 공급자에서 Azure AD 사용자를 생성하려면 AAD에서 사용자 상태를 확인해야 하므로 사용자 생성은 오류 2760과 함께 실패합니다. **지정한 스키마 이름 "\< user_name@domain>"이 없거나 그것을 사용할 권한이 없습니다.** 그리고 2759 오류 또한 발생합니다. **CREATE SCHEMA가 이전 오류로 인해 실패했습니다.** 이러한 오류를 해결하려면 먼저 외부 공급자로부터 Azure AD 사용자를 만든 다음, 개체를 만드는 명령문을 다시 실행하십시오.
+> [!NOTE]
+>  Azure Active Directory 사용자의 암시적 생성은 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 가능하지 않습니다. 외부 공급자에서 Azure AD 사용자를 생성하면 AAD에서 사용자 상태를 확인해야 하므로 사용자 생성은 오류 2760과 함께 실패합니다. **지정한 스키마 이름 "\<user_name@domain>"이 없거나 사용할 권한이 없습니다.** 그리고 2759 오류: **이전 오류로 인해 CREATE SCHEMA가 실패했습니다.** 이러한 오류를 해결하려면 먼저 외부 공급자로부터 Azure AD 사용자를 만든 다음, 개체를 만드는 명령문을 다시 실행하십시오.
  
   
 ## <a name="deprecation-notice"></a>사용 중단 고지 사항  

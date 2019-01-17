@@ -39,12 +39,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ab6a40f49ce64e4e157c4eacccb59b6135ed4ff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b5e69a2ebd97a554620914ffba5ea20c6a08aa21
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520854"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980329"
 ---
 # <a name="update-transact-sql"></a>UPDATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -327,7 +327,7 @@ GO
   
  UPDATE 문이 클러스터링 키와 한 개 이상의 **text**, **ntext** 또는 **image** 열을 함께 업데이트하는 경우, 이러한 열의 부분 업데이트는 값을 모두 대체하게 됩니다.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  **ntext**, **text** 및 **image** 데이터 형식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이후 버전에서 제거됩니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 애플리케이션은 수정하세요. 대신 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)및 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 를 사용합니다.  
   
 ### <a name="updating-large-value-data-types"></a>큰 값 데이터 형식 업데이트  
@@ -523,7 +523,7 @@ WHERE Name LIKE N'Road-250%' AND Color = N'Red';
 GO  
 ```  
   
-#### <a name="d-using-the-top-clause"></a>4. TOP 절 사용  
+#### <a name="d-using-the-top-clause"></a>D. TOP 절 사용  
  다음 예에서는 UPDATE 문에 TOP 절을 사용하여 수정되는 행 수를 제한합니다. UPDATE 문에 TOP(*n*) 절을 사용하면 임의로 선택된 '*n*'개의 행에 대해 업데이트 작업이 수행됩니다. 다음 예에서는 `VacationHours` 테이블에 있는 임의의 10개 행의 `Employee` 열을 25% 업데이트합니다.  
   
 ```sql  
@@ -545,8 +545,8 @@ WHERE HumanResources.Employee.BusinessEntityID = th.BusinessEntityID;
 GO  
 ```  
   
-#### <a name="e-using-the-with-commontableexpression-clause"></a>5. WITH common_table_expression 절 사용  
- 다음 예에서는 `PerAssemnblyQty`을 만드는 데 직접 또는 간접적으로 사용되는 모든 부분과 구성 요소의 `ProductAssemblyID 800` 값을 업데이트합니다. 공통 테이블 식은 `ProductAssemblyID 800`를 만드는 데 직접 사용되는 부분 및 해당 구성 요소를 만드는 데 사용되는 부분과 같은 식으로 이어지는 계층적 목록을 반환합니다. 이렇게 공통 테이블 식이 반환한 행만 수정됩니다.  
+#### <a name="e-using-the-with-commontableexpression-clause"></a>E. WITH common_table_expression 절 사용  
+ 다음 예에서는 `PerAssemblyQty`을 만드는 데 직접 또는 간접적으로 사용되는 모든 부분과 구성 요소의 `ProductAssemblyID 800` 값을 업데이트합니다. 공통 테이블 식은 `ProductAssemblyID 800`를 만드는 데 직접 사용되는 부분 및 해당 구성 요소를 만드는 데 사용되는 부분과 같은 식으로 이어지는 계층적 목록을 반환합니다. 이렇게 공통 테이블 식이 반환한 행만 수정됩니다.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -573,7 +573,7 @@ JOIN Parts AS d ON c.ProductAssemblyID = d.AssemblyID
 WHERE d.ComponentLevel = 0;  
 ```  
   
-#### <a name="f-using-the-where-current-of-clause"></a>6. WHERE CURRENT OF 절 사용  
+#### <a name="f-using-the-where-current-of-clause"></a>F. WHERE CURRENT OF 절 사용  
  다음 예에서는 WHERE CURRENT OF 절을 사용하여 커서가 있는 행만 업데이트합니다. 커서가 조인을 기반으로 할 경우 UPDATE 문에 지정된 `table_name`만 수정되고 커서에 사용한 다른 테이블은 영향을 받지 않습니다.  
   
 ```sql  
@@ -599,7 +599,7 @@ GO
 ###  <a name="ColumnValues"></a> 열 값 설정  
  이 섹션의 예에서는 계산 값, 하위 쿼리 및 DEFAULT 값을 사용하여 열을 업데이트하는 방법을 보여 줍니다.  
   
-#### <a name="g-specifying-a-computed-value"></a>7. 계산 값 지정  
+#### <a name="g-specifying-a-computed-value"></a>G. 계산 값 지정  
  다음 예에서는 UPDATE 문에 계산 값을 사용합니다. 이 예에서는 `ListPrice` 테이블의 모든 행에 대해 `Product` 열의 값을 두 배로 만듭니다.  
   
 ```sql  
@@ -610,7 +610,7 @@ SET ListPrice = ListPrice * 2;
 GO  
 ```  
   
-#### <a name="h-specifying-a-compound-operator"></a>8. 복합 연산자 지정  
+#### <a name="h-specifying-a-compound-operator"></a>H. 복합 연산자 지정  
  다음 예에서는 `@NewPrice` 변수를 사용하여 현재 가격을 가져오고 여기에 10을 더하여 모든 빨간색 자전거의 가격을 올립니다.  
   
 ```sql  
@@ -651,7 +651,7 @@ SET SalesYTD = SalesYTD +
 GO  
 ```  
   
-#### <a name="j-updating-rows-using-default-values"></a>10. DEFAULT 값을 사용하여 행 업데이트  
+#### <a name="j-updating-rows-using-default-values"></a>J. DEFAULT 값을 사용하여 행 업데이트  
  다음 예에서는 `CostRate` 값이 `CostRate`보다 큰 모든 행에 대해 `20.00` 열을 기본값(0.00)으로 설정합니다.  
   
 ```sql  
@@ -762,7 +762,7 @@ GO
  이 섹션의 예에서는 원격 테이블을 참조하는 [연결된 서버](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 또는 [행 집합 함수](../../t-sql/functions/rowset-functions-transact-sql.md)를 사용하여 원격 대상 테이블의 행을 업데이트하는 방법을 보여 줍니다.  
   
 #### <a name="o-updating-data-in-a-remote-table-by-using-a-linked-server"></a>15. 연결된 서버를 사용하여 원격 테이블의 데이터 업데이트  
- 다음 예에서는 원격 서버의 테이블을 업데이트합니다. 먼저 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)를 사용하여 원격 데이터 원본에 대한 링크를 만듭니다. 그런 다음 연결된 서버 이름 `MyLinkServer`가 server.catalog.schema.object와 같이 네 부분으로 구성된 개체 이름의 일부로 지정됩니다. `@datasrc`에는 유효한 서버 이름을 지정해야 합니다.  
+ 다음 예에서는 원격 서버의 테이블을 업데이트합니다. 먼저 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)를 사용하여 원격 데이터 원본에 대한 링크를 만듭니다. 그런 다음 연결된 서버 이름 `MyLinkedServer`가 server.catalog.schema.object와 같이 네 부분으로 구성된 개체 이름의 일부로 지정됩니다. `@datasrc`에는 유효한 서버 이름을 지정해야 합니다.  
   
 ```sql  
 USE master;  
@@ -770,7 +770,7 @@ GO
 -- Create a link to the remote data source.   
 -- Specify a valid server name for @datasrc as 'server_name' or 'server_nameinstance_name'.  
   
-EXEC sp_addlinkedserver @server = N'MyLinkServer',  
+EXEC sp_addlinkedserver @server = N'MyLinkedServer',  
     @srvproduct = N' ',  
     @provider = N'SQLNCLI10',   
     @datasrc = N'<server name>',  
@@ -781,7 +781,7 @@ GO
 -- Specify the remote data source using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
-UPDATE MyLinkServer.AdventureWorks2012.HumanResources.Department  
+UPDATE MyLinkedServer.AdventureWorks2012.HumanResources.Department  
 SET GroupName = N'Public Relations'  
 WHERE DepartmentID = 4;  
 ```  
@@ -790,18 +790,18 @@ WHERE DepartmentID = 4;
  다음 예에서는 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 행 집합 함수를 지정하여 원격 테이블의 행을 업데이트합니다. 이 예에서는 이전 예에서 만든 연결된 서버 이름이 사용됩니다.  
   
 ```sql  
-UPDATE OPENQUERY (MyLinkServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
+UPDATE OPENQUERY (MyLinkedServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
 SET GroupName = 'Sales and Marketing';  
 ```  
   
 #### <a name="q-updating-data-in-a-remote-table-by-using-the-opendatasource-function"></a>17. OPENDATASOURCE 함수를 사용하여 원격 테이블의 데이터 업데이트  
- 다음 예에서는 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 행 집합 함수를 지정하여 원격 테이블에 행을 삽입합니다. *server_name* 또는 *server_name\instance_name* 형식을 사용하여 데이터 원본에 대해 유효한 서버 이름을 지정해야 합니다. 임시 분산 쿼리에 맞게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 구성해야 할 수 있습니다. 자세한 내용은 [임시 분산 쿼리 서버 구성 옵션](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md)을 참조하세요.  
-  
-```sql  
-UPDATE OPENQUERY (MyLinkServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
-SET GroupName = 'Sales and Marketing';  
-```  
-  
+ 다음 예에서는 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 행 집합 함수를 지정하여 원격 테이블의 행을 업데이트합니다. *server_name* 또는 *server_name\instance_name* 형식을 사용하여 데이터 원본에 대해 유효한 서버 이름을 지정해야 합니다. 임시 분산 쿼리에 맞게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 구성해야 할 수 있습니다. 자세한 내용은 [임시 분산 쿼리 서버 구성 옵션](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md)을 참조하세요.  
+
+```sql
+UPDATE OPENDATASOURCE('SQLNCLI', 'Data Source=<server name>;Integrated Security=SSPI').AdventureWorks2012.HumanResources.Department
+SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;  
+```
+
 ###  <a name="LOBValues"></a> LOB(Large Object) 데이터 형식 업데이트  
  이 섹션의 예에서는 LOB(Large Object) 데이터 형식을 사용하여 정의된 열의 값을 업데이트하는 방법을 보여 줍니다.  
   

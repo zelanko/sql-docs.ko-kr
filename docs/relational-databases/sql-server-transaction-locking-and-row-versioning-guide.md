@@ -17,12 +17,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de24fe5caaafc1475e647c84ea5a300c5221e5f0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6dd3633cfe8b51cebceac01c0a9b0e2f17ee999a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511776"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980559"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>트랜잭션 잠금 및 행 버전 관리 지침
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "52511776"
  자동 커밋 모드는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 기본 트랜잭션 관리 모드입니다. 모든 [!INCLUDE[tsql](../includes/tsql-md.md)] 문은 완료 시 커밋되거나 롤백됩니다. 문이 성공적으로 완료되면 커밋되며 오류가 발생하면 롤백됩니다. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스 연결은 명시적 트랜잭션이나 암시적 트랜잭션에 의해 이 기본 모드가 무시되지 않는 한 자동 커밋 모드로 작동합니다. 자동 커밋 모드는 또한 ADO, OLE DB, ODBC 및 DB-Library의 기본 모드이기도 합니다.  
   
  **암시적 트랜잭션**  
- 연결이 암시적 트랜잭션 모드에서 작동할 때는 현재 트랜잭션이 커밋 또는 롤백된 후 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스에서 자동으로 새 트랜잭션을 시작합니다. 트랜잭션 시작을 직접 지정할 필요 없이 각 트랜잭션을 커밋 또는 롤백하기만 하면 됩니다. 암시적 트랜잭션 모드는 트랜잭션의 연속 체인을 생성합니다. API 함수나 [!INCLUDE[tsql](../includes/tsql-md.md)] SET IMPLICIT_TRANSACTIONS ON 문을 통해 암시적 트랜잭션 모드를 설정합니다.  
+ 연결이 암시적 트랜잭션 모드에서 작동할 때는 현재 트랜잭션이 커밋 또는 롤백된 후 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스에서 자동으로 새 트랜잭션을 시작합니다. 트랜잭션 시작을 직접 지정할 필요 없이 각 트랜잭션을 커밋 또는 롤백하기만 하면 됩니다. 암시적 트랜잭션 모드는 트랜잭션의 연속 체인을 생성합니다. API 함수나 [!INCLUDE[tsql](../includes/tsql-md.md)] SET IMPLICIT_TRANSACTIONS ON 문을 통해 암시적 트랜잭션 모드를 설정합니다.  이 모드를 자동 커밋 OFF라고 하며 [JDBC의 setAutoCommit 메서드](../connect/jdbc/reference/setautocommit-method-sqlserverconnection.md)를 참조하세요. 
   
  연결에 대해 암시적 트랜잭션 모드를 설정하고 나면 이러한 문을 처음 실행할 때 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스가 자동으로 트랜잭션을 시작합니다.  
   
@@ -313,7 +313,7 @@ GO
  ADO 애플리케이션은 **Connection** 개체의 `IsolationLevel` 속성을 adXactReadUncommitted, adXactReadCommitted, adXactRepeatableRead 또는 adXactReadSerializable로 설정합니다.  
   
  **ADO.NET**  
- `System.Data.SqlClient` 관리 네임스페이스를 사용하는 ADO.NET 응용 프로그램은 `SqlConnection.BeginTransaction` 메서드를 호출하고 *IsolationLevel* 옵션을 Unspecified, Chaos, ReadUncommitted, ReadCommitted, RepeatableRead, Serializable 및 Snapshot으로 설정할 수 있습니다.  
+ `System.Data.SqlClient` 관리 네임스페이스를 사용하는 ADO.NET 애플리케이션은 `SqlConnection.BeginTransaction` 메서드를 호출하고 *IsolationLevel* 옵션을 Unspecified, Chaos, ReadUncommitted, ReadCommitted, RepeatableRead, Serializable 및 Snapshot으로 설정할 수 있습니다.  
   
  **OLE DB**  
  OLE DB를 사용하는 애플리케이션은 트랜잭션을 시작할 때 *isoLevel*을 ISOLATIONLEVEL_READUNCOMMITTED, ISOLATIONLEVEL_READCOMMITTED, ISOLATIONLEVEL_REPEATABLEREAD, ISOLATIONLEVEL_SNAPSHOT 또는 ISOLATIONLEVEL_SERIALIZABLE로 설정하고 `ITransactionLocal::StartTransaction`을 호출합니다.  
@@ -585,7 +585,7 @@ INSERT mytable VALUES ('Dan');
 -   트랜잭션 A가 2행에 대한 배타적 잠금을 요청하고 트랜잭션 B가 2행에 대해 소유하고 있는 공유 잠금을 종료 및 해제할 때까지 트랜잭션 A가 차단됩니다.  
 -   트랜잭션 B가 1행에 대한 배타적 잠금을 요청하고 트랜잭션 A가 1행에 대해 소유하고 있는 공유 잠금을 종료 및 해제할 때까지 트랜잭션 B가 차단됩니다.  
   
- 트랜잭션 A는 트랜잭션 B가 완료 될 때까지 완료될 수 없지만 트랜잭션 B는 트랜잭션 A에 의해 차단됩니다. 이러한 상태를 순환 종속 관계라고 합니다. 트랜잭션 A는 트랜잭션 B에 종속되고 트랜잭션 B는 트랜잭션 A에 종속된 형태로 순환됩니다.  
+ 트랜잭션 B가 완료되어야 트랜잭션 A도 완료될 수 있지만 트랜잭션 B는 트랜잭션 A에 의해 차단된 상태입니다. 이러한 상태를 순환 종속 관계라고 합니다. 트랜잭션 A는 트랜잭션 B에 종속되고 트랜잭션 B는 트랜잭션 A에 종속된 형태로 순환됩니다.  
   
  교착 상태의 트랜잭션은 둘 다 외부 프로세스에서 교착 상태를 해제할 때까지 기다립니다. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 교착 상태 모니터는 교착 상태에 있는 태스크가 있는지 주기적으로 검사합니다. 순환 종속 관계가 발견되면 모니터는 두 작업 중 처리하지 않을 태스크를 하나 선택하고 해당 트랜잭션을 오류와 함께 종료합니다. 이렇게 하여 다른 태스크가 해당 트랜잭션을 완료할 수 있습니다. 오류와 함께 종료된 트랜잭션의 응용 프로그램은 해당 트랜잭션을 다시 시도하며 이 트랜잭션은 대개 교착 상태의 다른 트랜잭션이 완료된 후에 끝납니다.  
   
@@ -888,7 +888,7 @@ deadlock-list
 SQL 프로필러 교착 상태 그래프를 실행하는 방법에 대한 자세한 내용은 [교착 상태 그래프 저장&#40;SQL Server 프로파일러&#41;](../relational-databases/performance/save-deadlock-graphs-sql-server-profiler.md)을 참조하세요.  
   
 #### <a name="handling-deadlocks"></a>교착 상태 처리  
- [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스에서 교착 상태의 트랜잭션 중 처리하지 않을 트랜잭션이 선택되면 현재 배치가 종료되고 해당 트랜잭션이 롤백된 후 응용 프로그램에 오류 메시지 1205가 반환됩니다.  
+ [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스에서 교착 상태의 트랜잭션 중 처리하지 않을 트랜잭션이 선택되면 현재 배치가 종료되고 해당 트랜잭션이 롤백된 후 애플리케이션에 오류 메시지 1205가 반환됩니다.  
   
  `Your transaction (process ID #52) was deadlocked on {lock | communication buffer | thread} resources with another process and has been chosen as the deadlock victim. Rerun your transaction.`  
   

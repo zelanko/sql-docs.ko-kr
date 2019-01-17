@@ -1,6 +1,6 @@
 ---
 title: 변경 데이터 작업(SQL Server) | Microsoft 문서
-ms.date: 03/03/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,15 +15,15 @@ ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 62c705432367b8d2ad7b5de7de30c840be368aac
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c55ff97602a2c56a54523c68b5ef76a832888676
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405238"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991896"
 ---
 # <a name="work-with-change-data-sql-server"></a>변경 데이터 작업(SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   변경 데이터는 TVF(테이블 반환 함수)를 통해 변경 데이터 캡처 소비자에게 제공됩니다. 이러한 함수의 모든 쿼리에는 반환된 결과 집합을 개발할 때 고려할 LSN(로그 시퀀스 번호)의 범위를 정의하는 두 매개 변수가 필요합니다. 간격을 한정하는 LSN 하한/상한 값 모두 간격 내에 포함되는 것으로 간주됩니다.  
   
  TVF 쿼리에 적합한 LSN 값을 결정하는 데 유용한 여러 함수가 제공됩니다. [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) 함수는 캡처 인스턴스 유효성 간격과 관련된 가장 작은 LSN을 반환합니다. 유효성 간격은 현재 해당 캡처 인스턴스에 변경 데이터를 사용할 수 있는 시간 간격입니다. [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) 함수는 유효성 간격의 가장 큰 LSN을 반환합니다. [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) 및 [sys.fn_cdc_map_lsn_to_time](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md) 함수를 사용하여 LSN 값을 기존 시간대에 배치할 수 있습니다. 변경 데이터 캡처는 제한된 쿼리 간격을 사용하므로 연속적인 쿼리 창에서 변경 내용이 중복되지 않도록 시퀀스의 다음 LSN 값을 생성해야 하는 경우도 있습니다. LSN 값에 대한 증분 조정이 필요할 경우 [sys.fn_cdc_increment_lsn](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md) 및 [sys.fn_cdc_decrement_lsn](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md) 함수가 유용합니다.  
@@ -113,7 +113,7 @@ ms.locfileid: "52405238"
   
  모든 변경 내용 쿼리를 래핑하는 함수의 이름은 캡처 인스턴스 이름 앞에 fn_all_changes_가 붙는 형태입니다. 순 변경 내용 함수에 사용되는 접두사는 fn_net_changes_입니다. 두 함수는 모두 연결된 변경 데이터 캡처 TVF와 마찬가지로 3개의 인수를 사용합니다. 그러나 래퍼에 대한 쿼리 간격은 두 개의 LSN 값 대신 두 개의 datetime 값에 의해 제한됩니다. 두 함수 집합에 대한 @row_filter_option 매개 변수는 같습니다.  
   
- 생성된 래퍼 함수는 변경 데이터 캡처 시간대를 체계적으로 탐색하기 위해 이전 간격의 @end_time 매개 변수가 후속 간격의 @start_time 매개 변수로 사용된다는 규칙을 지원합니다. 래퍼 함수는 이 규칙이 준수되는 경우 datetime 값을 LSN 값에 매핑하고 데이터가 손실되거나 반복되지 않도록 합니다.  
+ 생성된 래퍼 함수는 변경 데이터 캡처 시간대를 체계적으로 탐색하기 위해 이전 간격의 @end_time 매개 변수는 후속 간격의 @start_time 매개 변수로 사용될 것으로 예상됩니다. 래퍼 함수는 이 규칙이 준수되는 경우 datetime 값을 LSN 값에 매핑하고 데이터가 손실되거나 반복되지 않도록 합니다.  
   
  지정된 쿼리 창에서 닫힌 상한이나 열린 상한을 지원하는 래퍼를 생성할 수 있습니다. 즉, 호출자가 커밋 시간이 추출 간격의 상한과 같은 항목을 간격 내에 포함할지 여부를 지정할 수 있습니다. 기본적으로 상한이 포함됩니다.  
   

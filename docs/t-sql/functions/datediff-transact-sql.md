@@ -1,7 +1,7 @@
 ---
 title: DATEDIFF(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/29/2017
+ms.date: 12/13/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -32,12 +32,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40e1027474bc84f3e30862ee43a61b3d199e8549
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 9af12ecd407504e4f04327260ccb446d395c7c9f
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970464"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432706"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -96,9 +96,9 @@ DATEDIFF ( datepart , startdate , enddate )
   
 ## <a name="return-value"></a>반환 값  
   
--   각 특정 *datepart* 및 해당 *datepart*에 대한 약어는 동일한 값을 반환합니다.  
+각 특정 *datepart* 및 해당 *datepart*에 대한 약어는 동일한 값을 반환합니다.  
   
-**int**에 대한 범위를 벗어난 반환 값의 경우(-2,147,483,648 to +2,147,483,647) `DATEDIFF`에서 오류를 반환합니다.  **밀리초**의 경우 *startdate*와 *enddate*의 최대 차이는 24일, 20시간, 31분 및 23.647초입니다. **초**의 경우 최대 차이는 68년입니다.
+**int**에 대한 범위를 벗어난 반환 값의 경우(-2,147,483,648 to +2,147,483,647) `DATEDIFF`에서 오류를 반환합니다.  **밀리초**의 경우 *startdate*와 *enddate*의 최대 차이는 24일, 20시간, 31분 및 23.647초입니다. **second**의 경우 최대 차이는 68년, 19일, 3시, 14분 7초입니다.
   
 *startdate* 및 *enddate* 모두에 시간 값만 할당되고 *datepart*가 시간 *datepart*가 아니면 `DATEDIFF`는 0을 반환합니다.
   
@@ -106,12 +106,12 @@ DATEDIFF ( datepart , startdate , enddate )
   
 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)은 분 단위까지만 정확하므로 *startdate* 또는 *enddate*에 **smalldatetime** 값이 있는 경우 반환 값에서 초와 밀리초는 항상 0으로 설정됩니다.
   
-날짜 데이터 형식의 변수에 시간 값만 할당된 경우 `DATEDIFF`은 누락된 날짜 부분 값을 기본값인 1900-01-01로 설정합니다. 시간 또는 날짜 데이터 형식의 변수에 날짜 값만 할당될 경우 `DATEDIFF`은 누락된 시간 부분 값을 기본값인 00:00:00으로 설정합니다. *startdate* 또는 *enddate* 중 하나는 시간 부분만 있고 다른 하나는 날짜 부분만 있는 경우 `DATEDIFF`는 누락된 시간 및 날짜 부분을 기본값으로 설정합니다.
+날짜 데이터 형식의 변수에 시간 값만 할당된 경우 `DATEDIFF`는 누락된 날짜 부분 값을 기본값인 `1900-01-01`로 설정합니다. 시간 또는 날짜 데이터 형식의 변수에 날짜 값만 할당될 경우 `DATEDIFF`는 누락된 시간 부분 값을 기본값인 `00:00:00`으로 설정합니다. *startdate* 또는 *enddate* 중 하나는 시간 부분만 있고 다른 하나는 날짜 부분만 있는 경우 `DATEDIFF`는 누락된 시간 및 날짜 부분을 기본값으로 설정합니다.
   
 *startdate*와 *enddate*가 날짜 데이터 형식이 다르고 한 쪽의 시간 부분 또는 소수 자릿수 초의 전체 자릿수가 다른 쪽보다 많을 경우 `DATEDIFF`는 다른 쪽의 누락된 부분을 0으로 설정합니다.
   
 ## <a name="datepart-boundaries"></a>datepart 범위  
-다음 명령문은 동일한 *startdate*와 동일한 *endate* 값을 가집니다. 이러한 날짜는 서로 인접하며 차이는 .0000001초입니다. 각 문에서 *startdate*와 *endate* 사이의 차이는 해당 *datepart*에서 하나의 달력 또는 시간 범위를 넘어섭니다. 각 문은 1을 반환합니다. *startdate* 및 *enddate*의 연도 값이 다르지만 달력 주 값이 동일한 경우 `DATEDIFF`는 *datepart* **week**에 대해 0을 반환합니다.
+다음 명령문은 동일한 *startdate*와 동일한 *endate* 값을 가집니다. 이러한 날짜는 서로 인접하며 1마이르코초(.0000001초)만큼 시간이 다릅니다. 각 문에서 *startdate*와 *endate* 사이의 차이는 해당 *datepart*에서 하나의 달력 또는 시간 범위를 넘어섭니다. 각 문은 1을 반환합니다. *startdate* 및 *enddate*의 연도 값이 다르지만 달력 주 값이 동일한 경우 `DATEDIFF`는 *datepart* **week**에 대해 0을 반환합니다.
   
 ```sql
 SELECT DATEDIFF(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -127,11 +127,13 @@ SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 ```
   
 ## <a name="remarks"></a>Remarks  
-SELECT, WHERE, HAVING, GROUP BY 및 ORDER BY 절에서 `DATEDIFF`를 <list>사용합니다.
+`SELECT <list>`, `WHERE`, `HAVING`, `GROUP BY` 및 `ORDER BY` 절에서 `DATEDIFF`를 사용합니다.
   
 `DATEDIFF`는 문자열 리터럴을 **datetime2** 형식으로 암시적으로 캐스팅합니다. 즉 `DATEDIFF`는 데이터가 문자열로 전달될 때 형식 YDM을 지원하지 않습니다. YDM 형식을 사용하려면 문자열을 **datetime** 또는 **smalldatetime** 형식으로 명시적으로 캐스팅해야 합니다.
   
-SET DATEFIRST를 지정해도 `DATEDIFF`에는 영향을 주지 않습니다. `DATEDIFF`은 항상 일요일을 한 주의 첫 날로 사용하여 함수가 결정적으로 작동하게 합니다.
+`SET DATEFIRST` 지정은 `DATEDIFF`에 영향을 주지 않습니다. `DATEDIFF`은 항상 일요일을 한 주의 첫 날로 사용하여 함수가 결정적으로 작동하게 합니다.
+
+*enddate*와 *startdate* 간의 차이가 **int**의 범위를 벗어난 값을 반환하는 경우 `DATEDIFF`는 **분** 이상의 정밀도로 오버플로할 수 있습니다.
   
 ## <a name="examples"></a>예  
 이러한 예에서는 여러 유형의 식을 *startdate* 및 *enddate* 매개 변수에 대한 인수로 사용합니다.
@@ -167,7 +169,7 @@ SELECT DATEDIFF(day, @startdate, @enddate);
 SELECT DATEDIFF(millisecond, GETDATE(), SYSDATETIME());  
 ```  
   
-### <a name="d-specifying-scalar-subqueries-and-scalar-functions-for-startdate-and-enddate"></a>4. startdate 및 enddate에 대한 스칼라 하위 쿼리 및 스칼라 함수 지정  
+### <a name="d-specifying-scalar-subqueries-and-scalar-functions-for-startdate-and-enddate"></a>D. startdate 및 enddate에 대한 스칼라 하위 쿼리 및 스칼라 함수 지정  
 이 예에서는 스칼라 하위 쿼리 및 스칼라 함수를 *startdate* 및 *enddate* 인수로 사용합니다.
   
 ```sql
@@ -178,7 +180,7 @@ SELECT DATEDIFF(day,
     (SELECT MAX(OrderDate) FROM Sales.SalesOrderHeader));  
 ```  
   
-### <a name="e-specifying-constants-for-startdate-and-enddate"></a>5. startdate 및 enddate에 대한 상수 지정  
+### <a name="e-specifying-constants-for-startdate-and-enddate"></a>E. startdate 및 enddate에 대한 상수 지정  
 이 예에서는 문자 상수를 *startdate* 및 *enddate* 인수로 사용합니다.
   
 ```sql
@@ -187,7 +189,7 @@ SELECT DATEDIFF(day,
    '2007-05-08 09:53:01.0376635');  
 ```  
   
-### <a name="f-specifying-numeric-expressions-and-scalar-system-functions-for-enddate"></a>6. enddate에 대한 숫자 식 및 스칼라 시스템 함수 지정  
+### <a name="f-specifying-numeric-expressions-and-scalar-system-functions-for-enddate"></a>F. enddate에 대한 숫자 식 및 스칼라 시스템 함수 지정  
 이 예에서는 `(GETDATE() + 1)` 숫자 식, `GETDATE` 스칼라 시스템 함수 및 `SYSDATETIME`을 *enddate* 인수로 사용합니다.
   
 ```sql
@@ -204,7 +206,7 @@ SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635', DATEADD(day, 1, SYSDATETIME(
 GO  
 ```  
   
-### <a name="g-specifying-ranking-functions-for-startdate"></a>7. startdate에 대한 순위 함수 지정  
+### <a name="g-specifying-ranking-functions-for-startdate"></a>G. startdate에 대한 순위 함수 지정  
 이 예제에서는 순위 함수를 *startdate* 인수로 사용합니다.
   
 ```sql
@@ -222,7 +224,7 @@ WHERE TerritoryID IS NOT NULL
     AND SalesYTD <> 0;  
 ```  
   
-### <a name="h-specifying-an-aggregate-window-function-for-startdate"></a>8. startdate에 대한 집계 창 함수 지정  
+### <a name="h-specifying-an-aggregate-window-function-for-startdate"></a>H. startdate에 대한 집계 창 함수 지정  
 이 예에서는 집계 창 함수를 *startdate* 인수로 사용합니다.
   
 ```sql
@@ -237,11 +239,71 @@ FROM Sales.SalesOrderDetail sod
 WHERE soh.SalesOrderID IN(43659, 58918);  
 GO  
 ```  
+
+### <a name="i-finding-difference-between-startdate-and-enddate-as-date-parts-strings"></a>9. 날짜 부분 문자열로 startdate와 enddate 간의 차이점 찾기
+
+```sql
+DECLARE @date1 DATETIME, @date2 DATETIME, @result VARCHAR(100)
+DECLARE @years INT, @months INT, @days INT, @hours INT, @minutes INT, @seconds INT, @milliseconds INT
+
+SET @date1 = '1900-01-01 00:00:00.000'
+SET @date2 = '2018-12-12 07:08:01.123'
+
+SELECT @years = DATEDIFF(yy, @date1, @date2)
+IF DATEADD(yy, -@years, @date2) < @date1 
+SELECT @years = @years-1
+SET @date2 = DATEADD(yy, -@years, @date2)
+
+SELECT @months = DATEDIFF(mm, @date1, @date2)
+IF DATEADD(mm, -@months, @date2) < @date1 
+SELECT @months=@months-1
+SET @date2= DATEADD(mm, -@months, @date2)
+
+SELECT @days=DATEDIFF(dd, @date1, @date2)
+IF DATEADD(dd, -@days, @date2) < @date1 
+SELECT @days=@days-1
+SET @date2= DATEADD(dd, -@days, @date2)
+
+SELECT @hours=DATEDIFF(hh, @date1, @date2)
+IF DATEADD(hh, -@hours, @date2) < @date1 
+SELECT @hours=@hours-1
+SET @date2= DATEADD(hh, -@hours, @date2)
+
+SELECT @minutes=DATEDIFF(mi, @date1, @date2)
+IF DATEADD(mi, -@minutes, @date2) < @date1 
+SELECT @minutes=@minutes-1
+SET @date2= DATEADD(mi, -@minutes, @date2)
+
+SELECT @seconds=DATEDIFF(s, @date1, @date2)
+IF DATEADD(s, -@seconds, @date2) < @date1 
+SELECT @seconds=@seconds-1
+SET @date2= DATEADD(s, -@seconds, @date2)
+
+SELECT @milliseconds=DATEDIFF(ms, @date1, @date2)
+
+SELECT @result= ISNULL(CAST(NULLIF(@years,0) AS VARCHAR(10)) + ' years,','')
+     + ISNULL(' ' + CAST(NULLIF(@months,0) AS VARCHAR(10)) + ' months,','')    
+     + ISNULL(' ' + CAST(NULLIF(@days,0) AS VARCHAR(10)) + ' days,','')
+     + ISNULL(' ' + CAST(NULLIF(@hours,0) AS VARCHAR(10)) + ' hours,','')
+     + ISNULL(' ' + CAST(@minutes AS VARCHAR(10)) + ' minutes and','')
+     + ISNULL(' ' + CAST(@seconds AS VARCHAR(10)) 
+          + CASE WHEN @milliseconds > 0 THEN '.' + CAST(@milliseconds AS VARCHAR(10)) 
+               ELSE '' END 
+          + ' seconds','')
+
+SELECT @result
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)] 
+
+```
+118 years, 11 months, 11 days, 7 hours, 8 minutes and 1.123 seconds
+```
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 이러한 예에서는 여러 유형의 식을 *startdate* 및 *enddate* 매개 변수에 대한 인수로 사용합니다.
   
-### <a name="i-specifying-columns-for-startdate-and-enddate"></a>9. startdate 및 enddate에 대한 열 지정  
+### <a name="j-specifying-columns-for-startdate-and-enddate"></a>J. startdate 및 enddate에 대한 열 지정  
 이 예에서는 테이블의 두 열 사이에 겹쳐지는 날짜 범위의 수를 계산합니다.
   
 ```sql
@@ -256,7 +318,7 @@ SELECT TOP(1) DATEDIFF(day, startDate, endDate) AS Duration
 -- Returns: 1  
 ```  
   
-### <a name="j-specifying-scalar-subqueries-and-scalar-functions-for-startdate-and-enddate"></a>10. startdate 및 enddate에 대한 스칼라 하위 쿼리 및 스칼라 함수 지정  
+### <a name="k-specifying-scalar-subqueries-and-scalar-functions-for-startdate-and-enddate"></a>11. startdate 및 enddate에 대한 스칼라 하위 쿼리 및 스칼라 함수 지정  
 이 예에서는 스칼라 하위 쿼리 및 스칼라 함수를 *startdate* 및 *enddate* 인수로 사용합니다.
   
 ```sql
@@ -268,7 +330,7 @@ FROM dbo.DimEmployee;
   
 ```  
   
-### <a name="k-specifying-constants-for-startdate-and-enddate"></a>11. startdate 및 enddate에 대한 상수 지정  
+### <a name="l-specifying-constants-for-startdate-and-enddate"></a>12. startdate 및 enddate에 대한 상수 지정  
 이 예에서는 문자 상수를 *startdate* 및 *enddate* 인수로 사용합니다.
   
 ```sql
@@ -279,7 +341,7 @@ SELECT TOP(1) DATEDIFF(day,
     '2007-05-08 09:53:01.0376635') FROM DimCustomer;  
 ```  
   
-### <a name="l-specifying-ranking-functions-for-startdate"></a>12. startdate에 대한 순위 함수 지정  
+### <a name="m-specifying-ranking-functions-for-startdate"></a>13. startdate에 대한 순위 함수 지정  
 이 예제에서는 순위 함수를 *startdate* 인수로 사용합니다.
   
 ```sql
@@ -291,7 +353,7 @@ SELECT FirstName, LastName,
 FROM dbo.DimEmployee;  
 ```  
   
-### <a name="m-specifying-an-aggregate-window-function-for-startdate"></a>13. startdate에 대한 집계 창 함수 지정  
+### <a name="n-specifying-an-aggregate-window-function-for-startdate"></a>14. startdate에 대한 집계 창 함수 지정  
 이 예에서는 집계 창 함수를 *startdate* 인수로 사용합니다.
   
 ```sql
@@ -307,6 +369,3 @@ FROM dbo.DimEmployee
 [DATEDIFF_BIG&#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-transact-sql.md)  
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
-  
-
-

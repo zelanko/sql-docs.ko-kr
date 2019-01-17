@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae5faf4c861de4849289fe8752633caca0347976
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0bf6e2b9a678d1406e2b9beb8cdda09d3ef704e6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523293"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209942"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +61,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
         [ [ FULLSCAN   
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | SAMPLE number { PERCENT | ROWS }   
-            [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
+            [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | <update_stats_stream_option> [ ,...n ]    
         [ [ , ] NORECOMPUTE ]   
         [ [ , ] INCREMENTAL = { ON | OFF } ] 
@@ -197,7 +197,7 @@ CREATE STATISTICS statistics_name
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
 MAXDOP = *max_degree_of_parallelism*  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작)  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작).  
   
  통계 작업 기간 동안 **최대 병렬 처리 수준** 구성 옵션을 재정의합니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
   
@@ -275,7 +275,7 @@ WITH SAMPLE 50 PERCENT;
 GO  
 ```  
   
-### <a name="d-create-statistics-on-an-external-table"></a>4. 외부 테이블에 대한 통계 만들기  
+### <a name="d-create-statistics-on-an-external-table"></a>D. 외부 테이블에 대한 통계 만들기  
  열 목록을 제공하는 것을 제외하고, 외부 테이블에 대한 통계를 만들 때 내려야 하는 유일한 결정은 통계를 만드는 방법이 행 샘플링인지 아니면 모든 행 검사인가 하는 것입니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 통계를 만들기 위해 외부 테이블의 데이터를 임시 테이블로 가져오므로 전체 검사 옵션이 훨씬 더 오래 걸립니다. 큰 테이블의 경우 일반적으로 기본 샘플링 방법으로 충분합니다.  
@@ -288,13 +288,13 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
 ```  
 
-### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>5. FULLSCAN 및 PERSIST_SAMPLE_PERCENT와 함께 CREATE STATISTICS 사용  
+### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. FULLSCAN 및 PERSIST_SAMPLE_PERCENT와 함께 CREATE STATISTICS 사용  
  다음 예제에서는 `Contact` 테이블의 `BusinessEntityID` 및 `EmailPromotion` 열에 있는 모든 행에 대한 `ContactMail2` 통계를 만들고 샘플링 비율을 명시적으로 지정하지 않은 모든 이후 업데이트에 대해 100% 샘플링 비율을 설정합니다.  
-  
+  
 ```sql  
 CREATE STATISTICS NamePurchase  
-    ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
-    WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
+    ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
+    WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
 ```  
   
 ### Examples using AdventureWorksDW database. 
@@ -306,7 +306,7 @@ CREATE STATISTICS NamePurchase  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
 ```  
   
-### <a name="g-create-statistics-by-using-a-full-scan"></a>7. 전체 검사를 사용하여 통계 만들기  
+### <a name="g-create-statistics-by-using-a-full-scan"></a>G. 전체 검사를 사용하여 통계 만들기  
  다음 예제에서는 `DimCustomer` 테이블의 모든 행 검사를 기반으로 `CustomerStatsFullScan` 통계를 만듭니다.  
   
 ```sql  
@@ -314,7 +314,7 @@ CREATE STATISTICS CustomerStatsFullScan
 ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
 ```  
   
-### <a name="h-create-statistics-by-specifying-the-sample-percentage"></a>8. 샘플 비율을 지정하여 통계 만들기  
+### <a name="h-create-statistics-by-specifying-the-sample-percentage"></a>H. 샘플 비율을 지정하여 통계 만들기  
  다음 예제에서는 `DimCustomer` 테이블 행의 50% 검사를 기반으로 `CustomerStatsSampleScan` 통계를 만듭니다.  
   
 ```sql  

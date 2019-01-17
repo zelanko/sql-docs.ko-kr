@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5764d853f70213c0f92b68af28f0647ba6d1a1e5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9790f320fe6f6ebe61eff665de625f9c9cfe77d2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021147"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205022"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>식(보고서 작성기 및 SSRS)
   식은 데이터를 검색, 계산, 표시, 그룹화, 정렬, 필터링, 매개 변수화 및 서식 지정하기 위해 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 에서 페이지를 매긴 보고서 전체에서 광범위하게 사용됩니다. 
@@ -42,7 +42,7 @@ ms.locfileid: "50021147"
   
  기본적으로 식은 보고서 디자인 화면에서 *간단한 식* 이나 *복잡한 식*으로 나타납니다.  
   
--   **간단한 식** 간단한 식에는 데이터 집합 필드, 매개 변수 또는 기본 제공 필드와 같은 기본 제공 컬렉션에 있는 단일 항목에 대한 참조가 포함됩니다. 디자인 화면에서 간단한 식은 대괄호 안에 나타납니다. 예를 들어 `[FieldName]` 은 기본 식 `=Fields!FieldName.Value`에 해당합니다. 보고서 레이아웃을 만들고 보고서 데이터 창의 항목을 디자인 화면으로 끌어서 놓으면 간단한 식이 자동으로 만들어집니다. 여러 다른 기본 제공 컬렉션을 나타내는 기호에 대한 자세한 내용은 [간단한 식의 접두사 기호 이해](#DisplayText)를 참조하세요.  
+-   **간단한 식** 간단한 식에는 데이터 세트 필드, 매개 변수 또는 기본 제공 필드와 같은 기본 제공 컬렉션에 있는 단일 항목에 대한 참조가 포함됩니다. 디자인 화면에서 간단한 식은 대괄호 안에 나타납니다. 예를 들어 `[FieldName]` 은 기본 식 `=Fields!FieldName.Value`에 해당합니다. 보고서 레이아웃을 만들고 보고서 데이터 창의 항목을 디자인 화면으로 끌어서 놓으면 간단한 식이 자동으로 만들어집니다. 여러 다른 기본 제공 컬렉션을 나타내는 기호에 대한 자세한 내용은 [간단한 식의 접두사 기호 이해](#DisplayText)를 참조하세요.  
   
 -   **복잡한 식** 복잡한 식에는 여러 개의 기본 제공 참조, 연산자 및 함수 호출에 대한 참조가 포함됩니다. 식 값에 간단한 참조 이상이 포함되어 있으면 복잡한 식이 <\<Expr>>로 나타납니다. 식을 보려면 식 위로 마우스를 이동하여 도구 설명을 사용합니다. 식을 편집하려면 **식** 대화 상자에서 식을 엽니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "50021147"
 ##  <a name="References"></a> 복잡한 식 작성  
  식에는 함수, 연산자, 상수, 필드, 매개 변수, 기본 제공 컬렉션의 항목 및 포함된 사용자 지정 코드나 사용자 지정 어셈블리에 대한 참조가 포함될 수 있습니다.  
   
-> [!NOTE]  
+> [!NOTE]
 >  복잡한 식이나 사용자 지정 코드 또는 사용자 지정 어셈블리를 사용하는 식을 개발하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 보고서 디자이너를 사용하는 것이 좋습니다. 자세한 내용은 [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)를 나타냅니다.  
   
  다음 표에서는 식에 포함할 수 있는 참조의 종류를 보여 줍니다.  

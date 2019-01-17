@@ -22,15 +22,15 @@ ms.assetid: ddfb0991-cde3-4b97-a5b7-ee450133f160
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 640a4b22ca8bec9f12778cae94d31de77c9cbe7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91c5694868c7e57182b8295e5bac793ee8698a50
+ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789141"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52951595"
 ---
 # <a name="originallogin-transact-sql"></a>ORIGINAL_LOGIN(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 연결된 로그인의 이름을 반환합니다. 이 함수를 사용하여 명시적 또는 암시적 컨텍스트 전환이 많이 있는 세션의 원래 로그인 ID를 반환할 수 있습니다.  
   
@@ -48,11 +48,13 @@ ORIGINAL_LOGIN( )
   
 ## <a name="remarks"></a>Remarks  
  이 함수는 원래 연결 컨텍스트의 ID를 감사하는 데 유용할 수 있습니다. [SESSION_USER](../../t-sql/functions/session-user-transact-sql.md) 및 [CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md)와 같은 함수가 현재 실행 중인 컨텍스트를 반환하는 반면에 ORIGINAL_LOGIN은 해당 세션에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 해당 인스턴스에 최초로 연결한 로그인의 ID를 반환합니다.  
-  
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 NULL을 반환합니다.  
+ 
   
 ## <a name="examples"></a>예  
- 다음 예에서는 현재 세션의 실행 컨텍스트를 문의 호출자에서 `login1`로 전환합니다. `SUSER_SNAME` 및 `ORIGINAL_LOGIN` 함수를 사용하여 현재 세션 사용자(컨텍스트가 전환되는 대상 사용자)와 원래 로그인 계정을 반환할 수 있습니다.  
+ 다음 예에서는 현재 세션의 실행 컨텍스트를 문의 호출자에서 `login1`로 전환합니다. `SUSER_SNAME` 및 `ORIGINAL_LOGIN` 함수를 사용하여 현재 세션 사용자(컨텍스트가 전환되는 대상 사용자)와 원래 로그인 계정을 반환할 수 있습니다. 
+ 
+  >[!NOTE]
+  > ORIGINAL_LOGIN 함수는 Azure SQL Database에서 지원되지만, *로그인으로 실행*은 Azure SQL Database에서 지원되지 않으므로 다음 스크립트가 실패합니다. 
   
 ```  
 USE AdventureWorks2012;  

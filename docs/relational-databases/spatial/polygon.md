@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3a6cee6ac23c38521d0c500aef5fd4a77495c43
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 90f1ff1b99dbc5880909fb8387fc1b82d9b32df8
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018428"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979020"
 ---
 # <a name="polygon"></a>Polygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "51018428"
 ## <a name="polygon-instances"></a>Polygon 인스턴스  
  **Polygon** 인스턴스는 서로 다른 점이 3개 이상 있는 링에서 구성될 수 있습니다. **Polygon** 인스턴스가 비어 있을 수도 있습니다.  
   
- **Polygon** 의 외부 및 내부 링은 해당 경계를 정의합니다. 링 내부 공간은 **Polygon**의 내부를 정의합니다.  
+**Polygon** 의 외부 및 내부 링은 해당 경계를 정의합니다. 링 내부 공간은 **Polygon**의 내부를 정의합니다.  
   
- 다음 그림에서는 **Polygon** 인스턴스의 예를 보여 줍니다.  
+다음 그림에서는 **Polygon** 인스턴스의 예를 보여 줍니다.  
   
  ![기하 도형 Polygon 인스턴스의 예](../../relational-databases/spatial/media/polygon.gif "기하 도형 Polygon 인스턴스의 예")  
   
- 그림에 대한 설명:  
+그림에 대한 설명:  
   
 1.  그림 1은 외부 링에서 정의한 경계가 있는 **Polygon** 인스턴스입니다.  
   
@@ -46,20 +46,17 @@ ms.locfileid: "51018428"
  허용되는 **Polygon** 인스턴스는 예외를 발생시키지 않고 **geometry** 또는 **geography** 변수에 저장할 수 있는 인스턴스입니다. 다음 **Polygon** 인스턴스가 허용됩니다.  
   
 -   빈 **Polygon** 인스턴스  
-  
 -   허용 가능 외부 링 및 0개 이상의 허용 가능 내부 링을 포함하는 **Polygon** 인스턴스  
   
- 링이 허용되려면 다음 조건을 충족해야 합니다.  
+링이 허용되려면 다음 조건을 충족해야 합니다.  
   
 -   **LineString** 인스턴스가 허용되어야 합니다.  
-  
 -   **LineString** 인스턴스에 4개 이상의 점이 있어야 합니다.  
-  
 -   **LineString** 인스턴스의 시작점 및 끝점이 같아야 합니다.  
   
- 다음 예에서는 허용되는 **Polygon** 인스턴스를 보여 줍니다.  
+다음 예에서는 허용되는 **Polygon** 인스턴스를 보여 줍니다.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'POLYGON EMPTY';  
 DECLARE @g2 geometry = 'POLYGON((1 1, 3 3, 3 1, 1 1))';  
 DECLARE @g3 geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 3 3, 0 3, 0 0))';  
@@ -67,18 +64,18 @@ DECLARE @g4 geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(3 0, 6 0, 6 3, 
 DECLARE @g5 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';  
 ```  
   
- `@g4` 및 `@g5` 가 보여 주듯이 허용된 **Polygon** 인스턴스는 유효한 **Polygon** 인스턴스가 아닐 수 있습니다. `@g5` 도 Polygon 인스턴스가 허용될 4개의 점이 있는 링만 포함해야 함을 보여 줍니다.  
+`@g4` 및 `@g5` 가 보여 주듯이 허용된 **Polygon** 인스턴스는 유효한 **Polygon** 인스턴스가 아닐 수 있습니다. `@g5` 도 Polygon 인스턴스가 허용될 4개의 점이 있는 링만 포함해야 함을 보여 줍니다.  
   
- 다음 예에서는 `System.FormatException` Polygon **인스턴스가 허용되지 않으므로** 이 발생합니다.  
+다음 예에서는 `System.FormatException` Polygon **인스턴스가 허용되지 않으므로** 이 발생합니다.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'POLYGON((1 1, 3 3, 1 1))';  
 DECLARE @g2 geometry = 'POLYGON((1 1, 3 3, 3 1, 1 5))';  
 ```  
   
- `@g1` 외부 링에 대한 **LineString** 인스턴스에 점이 부족하기 때문에 허용되지 않습니다. `@g2` 외부 링 **LineString** 인스턴스의 시작 점이 끝 점과 같지 않기 때문에 허용되지 않습니다. 다음 예에는 허용 가능한 외부 링이 있지만 내부 링은 허용되지 않습니다. 여기서도 `System.FormatException`이 발생합니다.  
+`@g1` 외부 링에 대한 **LineString** 인스턴스에 점이 부족하기 때문에 허용되지 않습니다. `@g2` 외부 링 **LineString** 인스턴스의 시작 점이 끝 점과 같지 않기 때문에 허용되지 않습니다. 다음 예에는 허용 가능한 외부 링이 있지만 내부 링은 허용되지 않습니다. 여기서도 `System.FormatException`이 발생합니다.  
   
-```  
+```sql  
 DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))';  
 ```  
   
@@ -87,7 +84,7 @@ DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))'
   
  다음 예에서는 유효한 **Polygon** 인스턴스를 보여 줍니다.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20))';  
 DECLARE @g2 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0, 0 10, 0 -10, 10 0))';  
 DECLARE @g3 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0, 0 10, 0 -10, 10 0), (-10 0, 0 10, -5 -10, -10 0))';  
@@ -96,7 +93,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
   
  `@g3` 이 유효합니다. 다음 예에서는 유효하지 않은 `Polygon` 인스턴스를 보여 줍니다.  
   
-```  
+```sql   
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (20 0, 0 10, 0 -20, 20 0))';  
 DECLARE @g2 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0, 0 10, 0 -10, 10 0), (5 0, 1 5, 1 -5, 5 0))';  
 DECLARE @g3 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0, 0 10, 0 -10, 10 0), (-10 0, 0 10, 0 -10, -10 0))';  
@@ -109,34 +106,39 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.S
  `@g1` 이 유효하지 않습니다. `@g2` 가 유효하지 않습니다. `@g3` 이 두 내부 링이 여러 연속 점에서 접하기 때문에 유효하지 않습니다. `@g4` 가 유효하지 않습니다. `@g5` 가 유효하지 않습니다. `@g6` 이 유효하지 않습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 구멍이 있고 SRID가 10인 단순한 `geometry``Polygon` 인스턴스를 만듭니다.  
+### <a name="example-a"></a>예 A.  
+다음 예에서는 구멍이 있고 SRID가 10인 단순한 `geometry``Polygon` 인스턴스를 만듭니다.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STPolyFromText('POLYGON((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 1, 1 1))', 10);  
 ```  
   
- 유효하지 않은 인스턴스는 유효한 `geometry` 인스턴스에 입력되고 변환될 수도 있습니다. 다음 `Polygon`의 예에서는 내부 및 외부 링이 겹치고 인스턴스가 유효하지 않습니다.  
+
+### <a name="example-b"></a>예 2.   
+유효하지 않은 인스턴스는 유효한 `geometry` 인스턴스에 입력되고 변환될 수도 있습니다. 다음 `Polygon`의 예에서는 내부 및 외부 링이 겹치고 인스턴스가 유효하지 않습니다.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('POLYGON((1 0, 0 1, 1 2, 2 1, 1 0), (2 0, 1 1, 2 2, 3 1, 2 0))');  
 ```  
   
- 다음 예에서는 유효하지 않은 인스턴스가 `MakeValid()`를 사용하여 유효하게 됩니다.  
+### <a name="example-c"></a>예 C:  
+다음 예에서는 유효하지 않은 인스턴스가 `MakeValid()`를 사용하여 유효하게 됩니다.  
   
-```  
+```sql  
 SET @g = @g.MakeValid();  
 SELECT @g.ToString();  
 ```  
   
- 위의 예에서 반환된 `geometry` 인스턴스는 `MultiPolygon`입니다.  
+위의 예에서 반환된 `geometry` 인스턴스는 `MultiPolygon`입니다.  
   
-```  
+```sql  
 MULTIPOLYGON (((2 0, 3 1, 2 2, 1.5 1.5, 2 1, 1.5 0.5, 2 0)), ((1 0, 1.5 0.5, 1 1, 1.5 1.5, 1 2, 0 1, 1 0)))  
 ```  
   
- 다음은 유효하지 않은 인스턴스를 유효한 geometry 인스턴스로 변환하는 다른 예입니다. 다음 예에서는 정확하게 서로 동일한 점 세 개를 사용하여 `Polygon` 인스턴스를 만들었습니다.  
+### <a name="example-d"></a>예제 D.  
+이는 유효하지 않은 인스턴스를 유효한 geometry 인스턴스로 변환하는 다른 예입니다. 다음 예에서는 정확하게 서로 동일한 점 세 개를 사용하여 `Polygon` 인스턴스를 만들었습니다.  
   
 ```sql  
 DECLARE @g geometry  
@@ -145,7 +147,7 @@ SET @g = @g.MakeValid();
 SELECT @g.ToString()  
 ```  
   
- 위에서 반환된 geometry 인스턴스는 `Point(1 3)`입니다.  지정한 `Polygon` 이 `POLYGON((1 3, 1 5, 1 3, 1 3))` 이면 `MakeValid()` 에서 `LINESTRING(1 3, 1 5)`를 반환합니다.  
+위에서 반환된 geometry 인스턴스는 `Point(1 3)`입니다.  지정한 `Polygon` 이 `POLYGON((1 3, 1 5, 1 3, 1 3))` 이면 `MakeValid()` 에서 `LINESTRING(1 3, 1 5)`를 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [STArea&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   

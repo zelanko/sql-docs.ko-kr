@@ -1,6 +1,7 @@
 ---
-title: 가용성 그룹 만들기(Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: T-SQL(Transact-SQL)을 사용하여 가용성 그룹 만들기
+description: 'T-SQL(Transact-SQL)을 사용하여 Always On 가용성 그룹을 만드는 단계입니다. '
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0460c654e9403b2d607197580462186e1ae1b805
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 44944c4dcc4c3f4b8cc45ee6f3ba57863316b9de
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512499"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213022"
 ---
-# <a name="create-an-availability-group-transact-sql"></a>가용성 그룹 만들기(Transact-SQL)
+# <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>T-SQL(Transact-SQL)을 사용하여 Always On 가용성 그룹 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 기능이 설정된 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 인스턴스에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하여 가용성 그룹을 만들고 구성하는 방법을 설명합니다. *가용성 그룹* 은 단일 단위로 장애 조치(Failover)될 사용자 데이터베이스 집합과 장애 조치(Failover)를 지원하는 장애 조치(Failover) 파트너 집합( *가용성 복제본*이라고 함)을 정의합니다.  
   
@@ -34,7 +35,7 @@ ms.locfileid: "52512499"
   
      [태스크 및 해당 Transact-SQL 문 요약](#SummaryTsqlStatements)  
   
--   **가용성 그룹을 만들고 구성하려면:**  [Transact-SQL](#TsqlProcedure)  
+-   **가용성 그룹을 만들고 구성하려면 다음을 사용합니다.**  [Transact-SQL](#TsqlProcedure)  
   
 -   **예제:**  [Windows 인증을 사용하는 가용성 그룹 구성](#ExampleConfigAGWinAuth)  
   
@@ -73,7 +74,7 @@ ms.locfileid: "52512499"
 ##  <a name="TsqlProcedure"></a> Transact-SQL을 사용하여 가용성 그룹 만들기 및 구성  
   
 > [!NOTE]  
->  이러한 각 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문의 코드 예가 포함된 샘플 구성 프로시저는 [예: Windows 인증을 사용하는 가용성 그룹 구성](#ExampleConfigAGWinAuth)을 참조하세요.  
+>  이러한 각 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문의 코드 예가 포함된 예제 구성 프로시저는 [예: Windows 인증을 사용하는 가용성 그룹 구성](#ExampleConfigAGWinAuth)을 참조하세요.  
   
 1.  주 복제본을 호스팅할 서버 인스턴스에 연결합니다.  
   
@@ -81,11 +82,11 @@ ms.locfileid: "52512499"
   
 3.  새 보조 복제본을 가용성 그룹에 조인합니다. 자세한 내용은 [가용성 그룹에 보조 복제본 조인&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)또는 PowerShell을 사용하여 Always On 가용성 그룹에 보조 데이터베이스를 조인하는 방법에 대해 설명합니다.  
   
-4.  가용성 그룹의 각 데이터베이스에 대해 RESTORE WITH NORECOVERY를 사용하여 주 데이터베이스의 최신 백업을 복원하는 방법으로 보조 데이터베이스를 만듭니다. 자세한 내용은 [예: Windows 인증을 사용하여 가용성 그룹 설정(Transact-SQL)](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)에서 데이터베이스 백업을 복원하는 단계부터 참조하세요.  
+4.  가용성 그룹의 각 데이터베이스에 대해 RESTORE WITH NORECOVERY를 사용하여 주 데이터베이스의 최신 백업을 복원하는 방법으로 보조 데이터베이스를 만듭니다. 자세한 내용은 이 항목의 [예: Windows 인증을 사용하여 가용성 그룹 설정(Transact-SQL)](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)에서 데이터베이스 백업을 복원하는 단계부터 참조하세요.  
   
-5.  모든 새 보조 데이터베이스를 가용성 그룹에 조인합니다. 자세한 내용은 [가용성 그룹에 보조 복제본 조인&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)를 참조하세요.  
+5.  모든 새 보조 데이터베이스를 가용성 그룹에 조인합니다. 자세한 내용은 [가용성 그룹에 보조 복제본 조인&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)또는 PowerShell을 사용하여 Always On 가용성 그룹에 보조 데이터베이스를 조인하는 방법에 대해 설명합니다.  
   
-##  <a name="ExampleConfigAGWinAuth"></a> 예: Windows 인증을 사용하는 가용성 그룹 구성  
+##  <a name="ExampleConfigAGWinAuth"></a> 예제: Windows 인증을 사용하는 가용성 그룹 구성  
  이 예에서 만드는 예제 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 구성 프로시저는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 Windows 인증을 사용하는 데이터베이스 미러링 엔드포인트를 설정하고, 가용성 그룹과 해당 보조 데이터베이스를 만들고 구성합니다.  
   
  이 예에는 다음과 같은 섹션이 포함되어 있습니다.  
@@ -527,7 +528,7 @@ GO
   
 -   **블로그:**  
   
-     [Always On - HADRON 학습 시리즈: HADRON 지원 데이터베이스에 대한 작업자 풀 사용](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [Always On - HADRON 학습 시리즈: HADRON 사용 데이터베이스의 작업자 풀 사용](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
      [SQL Server Always On 팀 블로그: 공식 SQL Server Always On 팀 블로그](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
@@ -537,7 +538,7 @@ GO
   
      [Microsoft SQL Server 코드 이름 "Denali" Always On 시리즈, 1부: 차세대 고가용성 솔루션 소개](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server 코드 이름 "Denali" Always On 시리즈, 2부: Always On을 사용하여 중요 업무용 고가용성 솔루션을 구축](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server 코드 이름 "Denali" Always On 시리즈, 2부: Always On을 사용하여 중요 업무용 고가용성 솔루션 빌드](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **백서:**  
   
@@ -550,7 +551,7 @@ GO
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 엔드포인트 &#40;SQL Server &#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
+ [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 66a1663a0411f91dcf89c294f10f087704ec96e3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 81d9914bee2661bfc3b679898c26a0f2ec3ed112
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418678"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212132"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹이 포함된 Reporting Services(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "52418678"
   
  보고서를 만들고 게시하는 방법에 따라 연결 문자열을 편집할 위치가 결정됩니다.  
   
--   **기본 모드:** 기본 모드 보고서 서버에 이미 게시된 공유 데이터 원본 및 보고서에 대해 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../includes/ssrswebportal-non-markdown-md.md)] 을 사용합니다.  
+-   **기본 모드:** 기본 모드 보고서 서버에 이미 게시된 공유 데이터 원본 및 보고서에 대해 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../includes/ssrswebportal-non-markdown-md.md)]를 사용합니다.  
   
 -   **SharePoint 모드:** SharePoint 서버에 이미 게시된 보고서에 대한 문서 라이브러리 내에서 SharePoint 구성 페이지를 사용합니다.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "52418678"
   
 -   **로컬 미리 보기:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] use the .Net framework 4.0 및 support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 연결 문자열 속성을 지원합니다.  
   
--   **원격 또는 서버 모드 미리 보기:** 보고서를 보고서 서버에 게시한 후 또는 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)]에서 미리 보기를 사용한 후 다음과 비슷한 오류가 표시되면 보고서를 미리 보려고 시도한 보고서 서버에 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에 대한 .Net Framework 3.5 SP1 핫픽스가 설치되지 않았기 때문입니다.  
+-   **원격 또는 서버 모드 미리 보기:** 보고서를 보고서 서버에 게시한 후 또는 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)]에서 미리 보기를 사용한 후 다음과 비슷한 오류가 표시되면 보고서를 미리 보려고 시도한 보고서 서버에 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 .Net Framework 3.5 SP1 핫픽스가 설치되지 않았기 때문입니다.  
   
 > **오류 메시지:** "키워드가 지원되는 'applicationintent'가 아닙니다."  
   
@@ -144,9 +144,9 @@ ms.locfileid: "52418678"
   
  기본 모드에서는 경고 데이터베이스 및 관련 기능을 지원하거나 사용하지 않습니다. 기본 모드 보고서 서버는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 관리자에서 구성합니다. SharePoint 모드의 경우 서비스 애플리케이션 데이터베이스 이름을 SharePoint 구성 중에 만든 "클라이언트 액세스 지점"의 이름으로 구성합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 SharePoint 구성에 대한 자세한 내용은 [SharePoint Server용 SQL Server 가용성 그룹 구성 및 관리(https://go.microsoft.com/fwlink/?LinkId=245165))](https://go.microsoft.com/fwlink/?LinkId=245165)를 참조하세요.  
   
-> [!NOTE]  
+> [!NOTE]
 >  SharePoint 모드 보고서 서버는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션 데이터베이스와 SharePoint 콘텐츠 데이터베이스 사이의 동기화 프로세스를 사용합니다. 보고서 서버 데이터베이스와 콘텐츠 데이터베이스를 함께 유지 관리하는 것이 중요합니다. 이를 하나의 집합으로 장애 조치(Failover)하고 복구할 수 있도록 동일한 가용성으로 구성해야 합니다. 다음과 같은 시나리오를 고려해 보세요.  
->   
+> 
 >  -   보고서 서버 데이터베이스가 수신한 것과 동일한 최근 업데이트가 아직 수신되지 않은 콘텐츠 데이터베이스의 복사본을 복원 또는 장애 조치(Failover)해야 하는 경우  
 > -   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 동기화 프로세스에서 콘텐츠 데이터베이스 및 보고서 서버 데이터베이스에 있는 항목 목록 간에 불일치가 발견된 경우  
 > -   동기화 프로세스로 콘텐츠 데이터베이스에 있는 항목이 삭제되거나 업데이트되는 경우  

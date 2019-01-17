@@ -2,19 +2,19 @@
 title: DMV를 사용하여 뷰의 사용 통계 및 성능 확인
 description: DMV를 사용하여 뷰의 사용 통계 및 성능 확인
 manager: craigg
-author: MashaMSFT
-ms.author: mathoma
+author: julieMSFT
+ms.author: jrasnick
 ms.date: 09/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 4181615840f62b6e4e8a7447f559f4f0c50eb206
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: 75563b5dcceead80b5b4d55c07413b37c9d0c278
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586316"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380664"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>DMV를 사용하여 뷰의 사용 통계 및 성능 확인
 이 문서에서는 **보기를 사용하는 쿼리 성능**에 대한 정보를 가져오는 데 사용되는 방법 및 스크립트를 설명합니다. 이러한 스크립트의 목적은 데이터베이스 내에 있는 다양한 보기의 사용 및 성능 표시기를 제공하는 것입니다. 
@@ -194,10 +194,4 @@ GO
 ```
 
 ## <a name="see-also"></a>관련 항목:
-[동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[성능 튜닝을 위한 DMV(동영상 - SQL Saturday Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)   
-[성능 튜닝을 위한 DMV(슬라이드 e 데모 - SQL Saturday Pordenone)](https://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)   
-[캡슐 양식으로 SQL Server 튜닝(동영상 - SQL Saturday Parma)](https://vimeo.com/200980883)    
-[nutshell에서 SQL Server 튜닝(슬라이드 및 데모 - SQL Saturday Parma)](https://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)   
-[SQL Server 동적 관리 뷰를 사용한 성능 튜닝](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)   
-[SQL Server 2016의 가장 중요한 대기 유형](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016)   
+[동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 

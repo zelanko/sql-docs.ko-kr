@@ -1,7 +1,7 @@
 ---
 title: catalog.catalog_properties(SSISDB 데이터베이스) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/11/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 456ab997ac599f4525f62a5eb6267600b0767c24
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0fa4d428ad10adf53118e901befcb10cede7f421
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519643"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328923"
 ---
 # <a name="catalogcatalogproperties-ssisdb-database"></a>catalog.catalog_properties(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "52519643"
 |**VALIDATION_TIMEOUT**|이 속성에 지정된 시간(초) 내에 완료되지 않은 유효성 검사는 중지됩니다.|  
 |**SERVER_CUSTOMIZED_LOGGING_LEVEL**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 대한 기본 사용자 지정된 로깅 수준입니다. 사용자 지정된 로깅 수준을 만들지 않은 경우 이 속성은 보기에 나타나지 않을 수 있습니다.|
 |**SERVER_LOGGING_LEVEL**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 대한 기본 로깅 수준입니다.|
-|**SERVER_OPERATION_ENCRYPTION_LEVEL**|값이 1(`PER_EXECUTION`)인 경우, 중요한 실행 매개 변수 및 실행 로그를 보호하는 데 사용되는 인증서 및 대칭 키가 각 *실행*에 대해 만들어집니다. 값이 2(`PER_PROJECT`)이 경우, 각 *프로젝트*에 대해 인증서 및 대칭 키가 한 번 만들어집니다. 이 속성에 대한 자세한 내용은 SSIS 저장 프로시저 [catalog.cleanup_server_log](..\system-stored-procedures\catalog-cleanup-server-log.md#remarks)에 대한 주의를 참조하세요.|
+|**SERVER_OPERATION_ENCRYPTION_LEVEL**|값이 1(`PER_EXECUTION`)인 경우, 중요한 실행 매개 변수 및 실행 로그를 보호하는 데 사용되는 인증서 및 대칭 키가 각 *실행*에 대해 만들어집니다. 값이 2(`PER_PROJECT`)이 경우, 각 *프로젝트*에 대해 인증서 및 대칭 키가 한 번 만들어집니다. 이 속성에 대한 자세한 내용은 SSIS 저장 프로시저 [catalog.cleanup_server_log](../system-stored-procedures/catalog-cleanup-server-log.md#remarks)에 대한 주의를 참조하세요.|
 |**VERSION_CLEANUP_ENABLED**|값이 `TRUE`이면 **MAX_PROJECT_VERSIONS**에 해당하는 개수의 프로젝트 버전만 카탈로그에 저장되고 다른 모든 프로젝트 버전은 삭제됩니다. 값이 **FALSE**이면 모든 프로젝트 버전이 카탈로그에 저장됩니다. 참고: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업은 작업 정리를 수행합니다.|
 |||
   

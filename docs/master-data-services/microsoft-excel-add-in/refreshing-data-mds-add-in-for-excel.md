@@ -11,12 +11,12 @@ ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f8fe62a659dce3f672f298c55b7d4308e682c3db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac71cce5f8a4fad04ea006c8ea96f0decae9c93a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814021"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215782"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>데이터 새로 고침(Excel용 MDS 추가 기능)
 
@@ -39,7 +39,7 @@ ms.locfileid: "47814021"
   
 -   MDS 저장소에서 특성 값이 변경된 경우 워크시트의 값이 MDS 저장소의 값으로 업데이트됩니다. 셀 색은 변경되지 않습니다.  
   
-> [!WARNING]  
+> [!WARNING]
 >  -   활성 워크시트에서 관리되지 않는 데이터가 MDS 관리 데이터 아래의 행에 있으면 관리되지 않는 데이터를 덮어쓸 수 있습니다. 이 경우는 시트를 새로 고치고 관리되지 않는 데이터와 겹치는 MDS 관리 데이터의 새 행이 추가될 때 발생합니다.  
 > -   게시하면 MDS 관리 셀에 대한 주석이 삭제됩니다.  
   

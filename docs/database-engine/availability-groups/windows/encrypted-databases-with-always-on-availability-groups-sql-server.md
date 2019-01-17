@@ -1,6 +1,7 @@
 ---
-title: Always On 가용성 그룹이 있는 암호화된 데이터베이스(SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹에 암호화된 데이터베이스 추가
+description: 암호화된(또는 최근에 암호 해독된) 데이터베이스를 Always On 가용성 그룹에 추가하는 단계입니다.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: 09eb6ebc-3051-4fff-86a5-93524507b1fc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12ee0cb358d64b0f81872c8c1d0d3fcf36d3a815
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf22a6a15d85f3e5ad6ffc24a9ce371f43b34206
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784761"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215489"
 ---
-# <a name="encrypted-databases-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹이 있는 암호화된 데이터베이스(SQL Server)
+# <a name="add-an-encrypted-database-to-an-always-on-availability-group"></a>Always On 가용성 그룹에 암호화된 데이터베이스 추가
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   이 항목에는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]과 함께 현재 암호화되었거나 최근에 암호 해독된 데이터베이스 사용에 대한 정보가 포함되어 있습니다.  

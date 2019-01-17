@@ -1,6 +1,7 @@
 ---
-title: 동적 관리 뷰 및 시스템 카탈로그 뷰(Always On 가용성 그룹-SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: 가용성 그룹에 대한 동적 관리 뷰 및 시스템 카탈로그 뷰
+description: Always On 가용성 그룹의 상태를 모니터링하고 진단하는 데 도움이 되는 동적 관리 및 카탈로그  뷰 컬력션입니다.
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.assetid: 4320a4a4-6183-462b-8bda-e7424e7cb706
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 79318dcd39a91eb8e3b9f570425f73838a1e53a3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8126cd6d7dba1f8cfab856d4e7b76288581e7f87
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417021"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209312"
 ---
 # <a name="dynamic-management-views-and-system-catalog-views-always-on-availability-groups"></a>동적 관리 뷰 및 시스템 카탈로그 뷰(Always On 가용성 그룹)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

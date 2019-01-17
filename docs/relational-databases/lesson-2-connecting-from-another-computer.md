@@ -1,5 +1,5 @@
 ---
-title: '2단원: 다른 컴퓨터에서 연결 | Microsoft 문서'
+title: '2단원: 다른 컴퓨터에서 연결 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2016
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 675379c6c182ad72ecdeefe09423fe981cf67b41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d08fe92b865076a330f0272f8b3fde81f17a8854
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520516"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589237"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>2단원: 다른 컴퓨터에서 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "52520516"
     > 32비트 및 64비트 옵션을 모두 사용할 수 있습니다.  
   
     > [!NOTE]  
-    > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 독립 실행형 프로그램이 아니라 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 프로그램용 스냅인이므로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 최신 버전의 Windows에서 응용 프로그램으로 표시되지 않습니다. 파일 이름에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 버전 번호를 나타내는 번호가 포함됩니다. 실행 명령에서 구성 관리자를 열려면 Windows가 C 드라이브에 설치되어 있는 경우 최신 4개 버전의 경로는 다음과 같습니다.  
+    > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 독립 실행형 프로그램이 아니라 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 프로그램용 스냅인이므로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 최신 버전의 Windows에서 애플리케이션으로 표시되지 않습니다. 파일 이름에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 버전 번호를 나타내는 번호가 포함됩니다. 실행 명령에서 구성 관리자를 열려면 Windows가 C 드라이브에 설치되어 있는 경우 최신 4개 버전의 경로는 다음과 같습니다.  
   
     |||  
     |-|-|  
@@ -56,7 +56,7 @@ ms.locfileid: "52520516"
     |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
     |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
-2.  **SQL Server 구성 관리자**에서 **SQL Server 네트워크 구성**을 확장한 다음 ***<InstanceName>* 에 대한 프로토콜**을 클릭합니다.  
+2.  **SQL Server 구성 관리자**에서 **SQL Server 네트워크 구성**을 확장한 다음 **_<InstanceName>_ 에 대한 프로토콜**을 클릭합니다.  
   
     기본 인스턴스(명명되지 않은 인스턴스)는 **MSSQLSERVER**로 나열됩니다. 명명된 인스턴스를 설치한 경우 제공한 이름이 나열됩니다. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] 는 설치하는 동안 이름을 변경하지 않는 한 **SQLEXPRESS**로 설치됩니다.  
   

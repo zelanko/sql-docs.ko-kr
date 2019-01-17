@@ -11,19 +11,19 @@ ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5ffaef2277d5e6e902078a75fca75df7c6400106
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51cd0ab995803c9582f91f5a9a732838736ac526
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719251"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207682"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>1-1단원 - 작업 폴더 및 환경 변수 만들기
 이 태스크에서는 이후의 자습서 태스크에서 사용할 작업 폴더(C:\DeploymentTutorial)와 새 시스템 환경 변수(`DataTransfer` 및 `LoadXMLData`)를 만듭니다.  
   
 작업 폴더는 C 드라이브의 루트에 있습니다. 필요한 경우 다른 드라이브나 위치를 사용할 수 있습니다. 단, 해당 위치를 메모해 두었다가 자습서에서 DeploymentTutorial 작업 폴더의 위치를 참조할 때마다 사용해야 합니다.  
   
-이후 단원에서는 파일 시스템에 저장된 패키지를 msdb[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 sysssispackages 테이블에 배포합니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 다른 컴퓨터에 배포하는 것이 가장 좋습니다. 그렇게 할 수 없는 경우에는 로컬 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 패키지를 배포하여 이 자습서에서 수행하는 많은 것들을 배울 수 있습니다. 로컬 및 대상 컴퓨터에서 사용되는 환경 변수는 동일한 변수 이름을 가져야 하지만 변수에 다른 값이 저장됩니다. 예를 들어 로컬 컴퓨터에서 `DataTransfer` 환경 변수의 값은 C:\DeploymentTutorial 폴더를 참조하고 대상 컴퓨터에서 `DataTransfer` 환경 변수는 C:\DeploymentTutorialInstall 폴더를 참조합니다.  
+이후의 단원에서는 파일 시스템에 저장된 패키지를 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 sysssispackages 테이블에 배포합니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 다른 컴퓨터에 배포하는 것이 가장 좋습니다. 그렇게 할 수 없는 경우에는 로컬 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 패키지를 배포하여 이 자습서에서 수행하는 많은 것들을 배울 수 있습니다. 로컬 및 대상 컴퓨터에서 사용되는 환경 변수는 동일한 변수 이름을 가져야 하지만 변수에 다른 값이 저장됩니다. 예를 들어 로컬 컴퓨터에서 `DataTransfer` 환경 변수의 값은 C:\DeploymentTutorial 폴더를 참조하고 대상 컴퓨터에서 `DataTransfer` 환경 변수는 C:\DeploymentTutorialInstall 폴더를 참조합니다.  
   
 로컬 컴퓨터에 배포하려는 경우 하나의 환경 변수 집합만 만들어야 합니다. 단, 로컬 배포를 수행하기 전에 환경 변수의 값을 적절한 값으로 업데이트해야 합니다.  
   

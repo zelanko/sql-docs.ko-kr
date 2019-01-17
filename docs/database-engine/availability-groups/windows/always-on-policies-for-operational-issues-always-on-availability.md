@@ -1,6 +1,7 @@
 ---
-title: 운영 문제에 대한 Always On 정책 - Always On 가용성 그룹 | Microsoft Docs
-ms.custom: ''
+title: 가용성 그룹의 운영 문제에 대한 정책 기반 관리
+description: Always On 가용성 그룹 상태 모델은 미리 정의된 PBM(정책 기반 관리) 정책 집합을 평가합니다. 이를 사용하여 SQL Server에서 가용성 그룹 및 복제본과 데이터베이스의 상태를 볼 수 있습니다.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,31 +14,18 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 330a9169fb1177686ffc95a530b5e068ed98e4e5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6d9d780473346a446811595d850aafd4da9d5930
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601684"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214172"
 ---
-# <a name="always-on-policies-for-operational-issues---always-on-availability"></a>운영 문제에 대한 Always On 정책 - Always On 가용성 그룹
+# <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Always On 가용성 그룹의 운영 문제에 대한 정책 기반 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 상태 모델은 미리 정의된 PBM(정책 기반 관리) 정책 집합을 평가합니다. 이를 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 가용성 그룹 및 가용성 복제본과 데이터베이스의 상태를 볼 수 있습니다.  
+  Always On 가용성 그룹 상태 모델은 미리 정의된 PBM(정책 기반 관리) 정책 집합을 평가합니다. 이를 사용하여 SQL Server에서 가용성 그룹 및 가용성 복제본과 해당 데이터베이스의 상태를 볼 수 있습니다.  
   
- **항목 내용:**  
-  
--   [용어 및 정의](#TermsAndDefinitions)  
-  
--   [미리 정의된 정책 및 문제](#Always OnPBM)  
-  
--   [Always On 대시보드](#Dashboard)  
-  
--   [Always On 상태 모델 확장](#ExtendHealthModel)  
-  
--   [관련 작업](#RelatedTasks)  
-  
--   [관련 내용](#RelatedContent)  
   
 ##  <a name="TermsAndDefinitions"></a> 용어 및 정의  
  Always On 미리 정의된 정책  
@@ -78,7 +66,7 @@ ms.locfileid: "51601684"
 |가용성 데이터베이스 조인 상태|[Secondary database is not joined](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md)입니다.|경고|가용성 데이터베이스|  
 |가용성 데이터베이스 데이터 동기화 상태|[Data synchronization state of availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md)입니다.|경고|가용성 데이터베이스|  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  **\*** Always On 정책의 경우 범주 이름이 ID로 사용됩니다. Always On 범주의 이름을 변경하면 상태 평가 기능이 작동하지 않으므로 이름을 수정하지 마세요.  
   
 ##  <a name="Dashboard"></a> Always On 대시보드  
@@ -99,7 +87,7 @@ ms.locfileid: "51601684"
 ##  <a name="ExtendHealthModel"></a> Always On 상태 모델 확장  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 상태 모델 확장은 단순히 사용자의 고유한 사용자 정의 정책을 만들고 사용자가 모니터링하는 개체 유형에 따라 이를 특정 범주에 넣는 작업입니다.  일부 설정을 변경한 후에는 Always On 대시보드가 Always On 미리 정의된 정책뿐만 아니라 사용자의 고유한 사용자 정의 정책을 자동으로 평가합니다.  
   
- 사용자 정의된 정책은 Always On 미리 정의된 정책에서 사용되는 패싯을 포함하여 사용 가능한 모든 PBM 패싯을 사용할 수 있습니다(이 항목의 앞 부분에 나오는 [미리 정의된 정책 및 문제](#Always OnPBM)참조). 서버 패싯은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 상태 모니터링을 위해**IsHadrEnabled** 및 **HadrManagerStatus**속성을 제공합니다. 서버 패싯은 또한 WSFC 클러스터 구성을 모니터링하기 위해 **ClusterQuorumType**및 **ClusterQuorumState**정책의 속성을 제공합니다.  
+ 사용자 정의된 정책은 Always On 미리 정의된 정책에서 사용되는 패싯을 포함하여 사용 가능한 모든 PBM 패싯을 사용할 수 있습니다(이 항목의 앞 부분에 나오는 [미리 정의된 정책 및 문제](#Always OnPBM)참조). 서버 패싯은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 상태 모니터링을 위해 (**IsHadrEnabled** 및 **HadrManagerStatus**) 속성을 제공합니다. 서버 패싯은 또한 WSFC 클러스터 구성을 모니터링하기 위해 **ClusterQuorumType** 및 **ClusterQuorumState** 정책을 속성에 제공합니다.  
   
  자세한 내용은 [Always On 상태 모델 파트 2 -- 상태 모델 확장](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/) (SQL Server Always On 팀 블로그)을 참조하세요.  
   

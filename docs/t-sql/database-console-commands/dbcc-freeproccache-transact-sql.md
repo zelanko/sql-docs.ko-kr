@@ -26,12 +26,12 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad662f209361dbffd8096bd7605cb5ad0e01a9d5
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 8c8a970d96475d2682bc58246aa2383bf19e8365
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072047"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979739"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -113,7 +113,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 -   user options  
   
 ## <a name="result-sets"></a>결과 집합  
-WITH NO_INFOMSGS 절이 지정되지 않으면 DBCC FREEPROCCACHE에서 "DBCC 실행이 완료되었습니다. DBCC에서 오류 메시지를 출력하면 시스템 관리자에게 문의하세요."
+WITH NO_INFOMSGS 절이 지정되지 않았으면 DBCC FREEPROCCACHE이 다음 메시지를 반환합니다. "DBCC 실행이 완료되었습니다. DBCC에서 오류 메시지를 출력하면 시스템 관리자에게 문의하세요."
   
 ## <a name="permissions"></a>Permissions  
 적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
@@ -131,7 +131,7 @@ DBCC FREEPROCCACHE는 실행 중에 취소할 수 있습니다.
   
 ## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 대한 제한 사항  
 DBCC FREEPROCCACHE는 트랜잭션 내에서 실행할 수 없습니다.
-DBCC FREEPROCCAHCE는 EXPLAIN 문에서 지원되지 않습니다.
+DBCC FREEPROCCACHE는 EXPLAIN 문에서 지원되지 않습니다.
   
 ## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 대한 메타데이터  
 DBCC FREEPROCCACHE가 실행되면 새 행이 sys.pdw_exec_requests 시스템 뷰에 추가됩니다.
@@ -190,7 +190,7 @@ GO
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-dbcc-freeproccache-basic-syntax-examples"></a>4. DBCC FREEPROCCACHE 기본 구문 예제  
+### <a name="d-dbcc-freeproccache-basic-syntax-examples"></a>D. DBCC FREEPROCCACHE 기본 구문 예제  
 다음 예제에서는 계산 노드에서 기존 쿼리 계획 캐시를 모두 제거합니다. 컨텍스트가 UserDbSales로 설정되어 있지만 모든 데이터베이스에 대한 계산 노드 쿼리 계획 캐시가 제거됩니다. WITH NO_INFOMSGS 절은 정보 메시지가 결과에 표시되지 않도록 합니다.  
   
 ```sql
@@ -207,7 +207,7 @@ DBCC FREEPROCCACHE (COMPUTE);
   
 정보 메시지가 요청되고 실행이 성공하면 쿼리 결과에는 계산 노드당 한 줄씩 표시됩니다.
   
-### <a name="e-granting-permission-to-run-dbcc-freeproccache"></a>5. DBCC FREEPROCCACHE 실행 권한 부여  
+### <a name="e-granting-permission-to-run-dbcc-freeproccache"></a>E. DBCC FREEPROCCACHE 실행 권한 부여  
 다음 예제에서는 DBCC FREEPROCCACHE를 실행할 수 있는 David 로그인 권한을 제공합니다.  
   
 ```sql

@@ -25,12 +25,12 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c541081382065d327e4d056a860aad47462be5a1
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 939ba409a75d332d0aba97aa972db2ba9eecaf7a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970524"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980019"
 ---
 # <a name="merge-transact-sql"></a>MERGE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -251,7 +251,7 @@ SET
  원본 테이블과의 암시적 조인을 수행하는 대상 테이블에 있는 하나 이상의 인덱스에 대한 이름 또는 ID를 지정합니다. 자세한 내용은 [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)를 참조하세요.  
   
  \<output_clause>  
- 업데이트, 삽입 또는 삭제되는 *target_table*의 모든 행과 일치하는 행을 임의의 순서로 반환합니다. **$action**은 OUTPUT 절에서 지정할 수 있습니다. **$action**은 해당 행에서 수행한 동작에 따라 'INSERT', 'UPDATE' 또는 'DELETE' 중 하나를 각 행의 값으로 반환하는 **nvarchar(10)** 형식의 열입니다. 이 절의 인수에 대한 자세한 내용은 [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)을 참조하세요.  
+ 업데이트, 삽입 또는 삭제되는 *target_table*의 모든 행과 일치하는 행을 임의의 순서로 반환합니다. **$action**은 OUTPUT 절에서 지정할 수 있습니다. **$action**은 각 행에 대한 세 가지 값 중 하나를 반환하는 **nvarchar(10)** 형식의 열입니다. 이 열은 해당 행에서 수행한 동작에 따라 'INSERT', 'UPDATE' 또는 'DELETE' 중 하나를 각 행의 값으로 반환합니다. 이 절의 인수에 대한 자세한 내용은 [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)을 참조하세요.  
   
  OPTION ( \<query_hint> [ ,...n ] )  
  최적화 프로그램 힌트를 사용하여 데이터베이스 엔진이 문을 처리하는 방법을 사용자 지정하도록 지정합니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
@@ -317,7 +317,7 @@ SET
 ### <a name="a-using-merge-to-perform-insert-and-update-operations-on-a-table-in-a-single-statement"></a>1. MERGE를 사용하여 단일 문에서 테이블에 INSERT 및 UPDATE 작업 수행  
  일반적인 시나리오에서는 일치하는 행이 있으면 테이블에서 하나 이상의 열을 업데이트하고 일치하는 행이 없으면 새 행으로 데이터를 테이블에 삽입합니다. 이 작업은 일반적으로 해당하는 UPDATE 및 INSERT 문이 포함된 저장 프로시저에 매개 변수를 전달합니다. MERGE 문으로 단일 문에서 두 태스크를 수행할 수 있습니다. 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]데이터베이스에서 INSERT 문과 UPDATE 문이 모두 포함된 저장 프로시저를 보여 줍니다. 해당 프로시저는 단일 MERGE 문을 사용하여 동일한 작업을 수행하기 위해 수정됩니다.  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.InsertUnitMeasure  
     @UnitMeasureCode nchar(3),  
     @Name nvarchar(25)  
@@ -389,7 +389,7 @@ GO
 ### <a name="b-using-merge-to-perform-update-and-delete-operations-on-a-table-in-a-single-statement"></a>2. MERGE를 사용하여 단일 문에서 테이블에 UPDATE 및 DELETE 작업 수행  
  다음 예에서는 MERGE를 사용하여 `ProductInventory` 테이블의 처리된 주문에 따라 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 예제 데이터베이스의 `SalesOrderDetail` 테이블을 매일 업데이트합니다. `Quantity` 테이블의 `ProductInventory` 열은 `SalesOrderDetail` 테이블에서 매일 제품별로 접수되는 주문의 수를 빼는 방식으로 업데이트됩니다. 제품에 대한 주문 수로 인해 제품의 재고 수준이 0 이하로 떨어지면 해당 제품에 대한 행이 `ProductInventory` 테이블에서 삭제됩니다.  
   
-```  
+```sql  
 CREATE PROCEDURE Production.usp_UpdateInventory  
     @OrderDate datetime  
 AS  
@@ -414,9 +414,9 @@ EXECUTE Production.usp_UpdateInventory '20030501'
 ```  
   
 ### <a name="c-using-merge-to-perform-update-and-insert-operations-on-a-target-table-by-using-a-derived-source-table"></a>3. MERGE를 사용하여 파생된 원본 테이블을 통해 대상 테이블에 UPDATE 및 INSERT 작업 수행  
- 다음 예에서는 MERGE를 사용하여 행을 업데이트하거나 삽입하는 방식으로 `SalesReason` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블을 수정합니다. 원본 테이블의 `NewName` 값이 대상 테이블 `Name`의 `SalesReason` 열에 있는 값과 일치하는 경우 대상 테이블에서 `ReasonType` 열이 업데이트됩니다. `NewName` 값이 일치하지 않으면 원본 행이 대상 테이블에 삽입됩니다. 원본 테이블은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 값 생성자를 사용하여 원본 테이블의 여러 행을 지정하는 파생 테이블입니다. 파생 테이블에서 테이블 값 생성자를 사용하는 방법에 대한 자세한 내용은 [Table Value Constructor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)을 참조하세요. 또한 이 예에서는 OUTPUT 절의 결과를 테이블 변수에 저장한 다음 삽입되거나 업데이트된 행의 개수를 반환하는 단순한 SELECT 작업을 수행하여 MERGE 문의 결과를 요약합니다.  
+ 다음 예에서는 MERGE를 사용하여 행을 업데이트하거나 삽입하는 방식으로 `SalesReason` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블을 수정합니다. 원본 테이블의 `NewName` 값이 대상 테이블 `Name`의 `SalesReason` 열에 있는 값과 일치하는 경우 대상 테이블에서 `ReasonType` 열이 업데이트됩니다. `NewName` 값이 일치하지 않으면 원본 행이 대상 테이블에 삽입됩니다. 원본 테이블은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 값 생성자를 사용하여 원본 테이블의 여러 행을 지정하는 파생 테이블입니다. 파생 테이블에서 테이블 값 생성자를 사용하는 방법에 대한 자세한 내용은 [Table Value Constructor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)을 참조하세요. 또한 이 예에서는 OUTPUT 절의 결과를 테이블 변수에 저장한 다음, 삽입되거나 업데이트된 행의 개수를 반환하는 단순한 select 작업을 수행하여 MERGE 문의 결과를 요약합니다.  
   
-```  
+```sql  
 -- Create a temporary table variable to hold the output actions.  
 DECLARE @SummaryOfChanges TABLE(Change VARCHAR(20));  
   
@@ -437,10 +437,10 @@ FROM @SummaryOfChanges
 GROUP BY Change;  
 ```  
   
-### <a name="d-inserting-the-results-of-the-merge-statement-into-another-table"></a>4. MERGE 문의 결과를 다른 테이블에 삽입  
+### <a name="d-inserting-the-results-of-the-merge-statement-into-another-table"></a>D. MERGE 문의 결과를 다른 테이블에 삽입  
  다음 예에서는 MERGE 문의 OUTPUT 절에서 반환된 데이터를 캡처하고 이 데이터를 다른 테이블에 삽입합니다. MERGE 문은 `Quantity` 데이터베이스에서 `ProductInventory` 테이블의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 열을 `SalesOrderDetail` 테이블에서 처리되는 순서대로 업데이트합니다. 이 예에서는 업데이트된 행을 캡처하여 재고 변경 내용을 추적하는 데 사용되는 다른 테이블에 삽입합니다.  
   
-```  
+```sql  
 CREATE TABLE Production.UpdatedInventory  
     (ProductID INT NOT NULL, LocationID int, NewQty int, PreviousQty int,  
      CONSTRAINT PK_Inventory PRIMARY KEY CLUSTERED (ProductID, LocationID));  
@@ -467,7 +467,7 @@ FROM
 GO  
 ```  
 
-### <a name="e-using-merge-to-perform-insert-or-update-on-a-target-edge-table-in-a-graph-database"></a>5. MERGE를 사용하여 그래프 데이터베이스의 대상 에지 테이블에 대해 INSERT 또는 UPDATE 수행
+### <a name="e-using-merge-to-perform-insert-or-update-on-a-target-edge-table-in-a-graph-database"></a>E. MERGE를 사용하여 그래프 데이터베이스의 대상 에지 테이블에 대해 INSERT 또는 UPDATE 수행
 이 예제에서는 노드 테이블 `Person` 및 `City`와 에지 테이블 `livesIn`을 만듭니다. `livesIn` 에지가 `Person` 및 `City` 사이에 아직 없으면 이 에지에 대해 MERGE 문을 사용하여 새 행을 삽입합니다. 에지가 이미 있는 경우 `livesIn` 에지에 대해 StreetAddress 특성만 업데이트하면 됩니다.
 
 ```sql

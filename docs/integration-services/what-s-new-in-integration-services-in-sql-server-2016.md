@@ -15,12 +15,12 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 93504e52da01f99536fd04581ef9af29c06afcc9
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 7d5a8b82d60dcd4c2fae13af02310767e10700cd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640200"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205842"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services의 새로운 기능
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -180,7 +180,7 @@ ms.locfileid: "51640200"
   
 -   MOM(관리 개체 모델) API  
   
- 자세한 내용은 [SSIS(Integration Services) 프로젝트 및 패키지 배포](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md를 참조하세요.  
+ 자세한 내용은 [Integration Services(SSIS) 프로젝트 및 패키지 배포](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하세요.  
 
 ####  <a name="encrypted"></a> SSIS 카탈로그에서 항상 암호화 지원  
  SSIS는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 항상 암호화 기능을 이미 지원합니다. 자세한 내용은 다음 블로그 게시물을 참조하세요.  
@@ -200,7 +200,7 @@ ms.locfileid: "51640200"
  SSIS 카탈로그에서 새 **RuntimeLineage** 로깅 수준에서는 데이터 흐름의 계보 정보를 추적하는 데 필요한 데이터를 수집합니다. 이 계보 정보를 구문 분석하여 작업 간의 계보 관계를 매핑할 수 있습니다. ISV와 개발자가 이 정보로 사용자 지정 계보 매핑 도구를 빌드할 수 있습니다. 
 
 ####  <a name="CustomLogging"></a> SSIS 카탈로그에서 새 사용자 지정 로깅 수준  
- SSIS 카탈로그의 이전 버전을 사용하면 패키지를 실행할 때 네 가지 기본 제공 로깅 수준 **없음, 기본, 성능, 자세한 정보 표시**에서 선택할 수 있습니다. SQL Server 2016에서는 **RuntimeLineage** 로깅 수준을 추가합니다. 또한 이제 SSIS 카탈로그에서 사용자 지정된 로깅 수준을 여러 개 만들고 저장할 수 있으며, 패키지를 실행할 때마다 사용할 로깅 수준을 선택할 수 있습니다. 각 사용자 지정된 로깅 수준에 대해 캡처할 통계 및 이벤트를 선택합니다. 필요에 따라 변수 값, 연결 문자열 및 작업 속성을 표시하는 이벤트 컨텍스트를 포함합니다. 자세한 내용은 [SSIS 서버에서 패키지 실행에 대한 로깅 설정](../integration-services/performance/integration-services-ssis-logging.md#server_logging)를 참조하십시오. 
+ SSIS 카탈로그의 이전 버전을 사용하면 패키지를 실행할 때 다음 네 가지 기본 제공 로깅 수준에서 선택할 수 있습니다. **없음, 기본, 성능 또는 자세한 정보**. SQL Server 2016에서는 **RuntimeLineage** 로깅 수준을 추가합니다. 또한 이제 SSIS 카탈로그에서 사용자 지정된 로깅 수준을 여러 개 만들고 저장할 수 있으며, 패키지를 실행할 때마다 사용할 로깅 수준을 선택할 수 있습니다. 각 사용자 지정된 로깅 수준에 대해 캡처할 통계 및 이벤트를 선택합니다. 필요에 따라 변수 값, 연결 문자열 및 작업 속성을 표시하는 이벤트 컨텍스트를 포함합니다. 자세한 내용은 [SSIS 서버에서 패키지 실행에 대한 로깅 설정](../integration-services/performance/integration-services-ssis-logging.md#server_logging)를 참조하십시오. 
 
 ####  <a name="ErrorColumn"></a> 데이터 흐름의 오류에 대한 열 이름  
  오류 출력에 오류를 포함 하는 데이터 흐름에서 행을 리디렉션하는 경우 출력 오류가 발생 했지만 열 이름이 표시 되지 않는 열에 대 한 숫자 식별자를 포함 합니다. 이제 여러 가지 방법을 사용하여 오류가 발생할 때 열 이름을 찾아 표시할 수 있습니다.  
@@ -213,7 +213,7 @@ ms.locfileid: "51640200"
   
 -   스크립트 구성 요소 또는 사용자 지정 데이터 흐름 구성 요소에서 IDTSComponentMetadata100 인터페이스의 새 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> 메서드를 호출합니다.  
   
- 이러한 향상에 대한 자세한 내용은 SSIS 개발자 Bo Fan의 다음 블로그 게시물 [Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)(SSIS 데이터 흐름에 대한 오류 열 개선)를 참조하세요.  
+ 이러한 개선에 대한 자세한 내용은 SSIS 개발자 Bo Fan의 다음 블로그 게시물을 참조하세요. [SSIS 데이터 흐름에 대한 오류 열 개선](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx).  
   
 > [!NOTE]  
 >  (이 지원은 후속 릴리스에서 확장되었습니다. 자세한 내용은 [오류 열 이름에 대한 지원 확장](#getidstring) 및 [API의 새로운 IDTSComponentMetaData130 인터페이스](#CMD130)를 참조하세요.)  
@@ -326,7 +326,7 @@ SQL Server 2016 서비스 팩 1을 설치하면 이제 OData 원본 및 OData �
    
  ![프로젝트 속성 대화 상자의 TargetServerVersion 속성](../integration-services/media/targetserverversion2.png "프로젝트 속성 대화 상자의 TargetServerVersion 속성")  
 
->   [!IMPORTANT]
+> [!IMPORTANT]
 > SSIS용 사용자 지정 확장 프로그램을 개발하는 경우 [사용자 지정 구성 요소에서 멀티 타기팅 지원](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) 및 [SQL Server 2016용 SSDT 2015의 다중 버전 지원에서 SSIS 사용자 지정 확장 프로그램을 지원하도록 설정](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/) 을 참조하세요.  
 
 ### <a name="better-management-experience-in-sql-server-management-studio"></a>SQL Server Management Studio의 환경 관리 향상
