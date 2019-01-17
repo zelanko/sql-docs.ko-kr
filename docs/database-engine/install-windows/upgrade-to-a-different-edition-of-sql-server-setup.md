@@ -76,7 +76,7 @@ ms.locfileid: "51601953"
   
 -   [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 로 프로비전된 사용자는 업그레이드 후에도 프로비전 상태가 유지됩니다. 특히 BUILTIN\Users 그룹은 프로비전 상태로 유지됩니다. 필요에 따라 이러한 계정을 비활성화 또는 제거하거나 다시 프로비전합니다. 자세한 내용은 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)을 참조하세요.  
   
--   tempdb 및 model 시스템 데이터베이스에 대한 크기 및 복구 모드는 업그레이드 후에도 변경되지 않은 상태로 유지됩니다. 필요에 따라 이러한 설정을 다시 구성하십시오. 자세한 내용은 [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)를 참조하세요.  
+-   tempdb 및 model 시스템 데이터베이스에 대한 크기 및 복구 모드는 업그레이드 후에도 변경되지 않은 상태로 유지됩니다. 필요에 따라 이러한 설정을 다시 구성하십시오. 자세한 내용은 [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)를 참조하세요.  
   
 -   템플릿 데이터베이스는 업그레이드 후에도 컴퓨터에 그대로 유지됩니다.  
   

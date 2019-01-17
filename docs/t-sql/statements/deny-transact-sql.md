@@ -166,7 +166,7 @@ DENY
 |계약|[DENY Service Broker 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)|  
 |데이터베이스|[DENY 데이터베이스 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-permissions-transact-sql.md)|  
 |DATABASE SCOPED CREDENTIAL|[DENY 데이터베이스 범위 자격 증명(Transact-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)|  
-|엔드포인트|[GRANT 엔드포인트 사용 권한&amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)|  
+|엔드포인트|[GRANT 엔드포인트 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)|  
 |전체 텍스트 카탈로그|[DENY 전체 텍스트 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-full-text-permissions-transact-sql.md)|  
 |전체 텍스트 중지 목록|[DENY 전체 텍스트 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-full-text-permissions-transact-sql.md)|  
 |함수|[DENY 개체 사용 권한 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  

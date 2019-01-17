@@ -1,7 +1,7 @@
 ---
 title: 메모리 관리 아키텍처 가이드 | Microsoft 문서
 ms.custom: ''
-ms.date: 12/11/2018
+ms.date: 01/09/2019"
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,14 +15,15 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 924b347e5fa8907fa1f2b9cb9b820a63808cbc3b
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 31ebb5ef9994c3c853b8163f4f2ba58e8cbe7d3b
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328983"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206449"
 ---
 # <a name="memory-management-architecture-guide"></a>메모리 관리 아키텍처 가이드
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 ## <a name="windows-virtual-memory-manager"></a>Windows 가상 메모리 관리자  
@@ -70,7 +71,10 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 > [!NOTE]
 > 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 32비트 운영 체제에서 실행할 수 있었습니다. 32비트 운영 체제에서 4GB가 넘는 메모리에 액세스하려면 AWE(Address Windowing Extension)에서 메모리를 관리해야 합니다. 이는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 64비트 운영 체제에서 실행할 경우에는 필요하지 않습니다. AWE에 대한 자세한 내용은 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 설명서에서 [프로세스 주소 공간](https://msdn.microsoft.com/library/ms189334.aspx) 및 [큰 데이터베이스의 메모리 관리](https://msdn.microsoft.com/library/ms191481.aspx)를 참조하세요.   
 
+<a name="changes-to-memory-management-starting-2012-11x-gm"></a>
+
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 메모리 관리로 변경
+
 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)])에서는 5가지 메커니즘을 사용하여 메모리 할당이 수행되었습니다.
 -  **단일 페이지 할당자(SPA)**: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스에서 8KB 이하인 메모리 할당만 포함합니다. *max server memory(MB)* 및 *min server memory(MB)* 구성 옵션은 SPA가 사용한 실제 메모리의 한계를 결정했습니다. 버퍼 풀은 SPA의 메커니즘이자 동시에 가장 큰 단일 페이지 할당 소비자였습니다.
 -  **다중 페이지 할당자(MPA)**: 8KB 이상을 요청하는 메모리 할당입니다.
@@ -294,7 +298,7 @@ min server memory 및 max server memory 둘 모두에 같은 값이 지정된 �
 메모리 브로커에 대한 자세한 내용은 [sys.dm_os_memory_brokers](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-brokers-transact-sql.md)를 참조합니다. 
 
 ### <a name="error-detection"></a>오류 검색  
-데이터베이스 페이지는 페이지를 디스크에 쓸 때부터 다시 읽을 때까지의 페이지 무결성을 보장하는 두 가지 선택적 메커니즘인 조각난 페이지 보호와 체크섬 보호 중 하나를 사용할 수 있습니다. 이러한 메커니즘을 사용하면 데이터 저장소뿐만 아니라 컨트롤러, 드라이버, 케이블, 심지어는 운영 체제를 비롯한 하드웨어 구성 요소의 정확성을 확인하는 독자적인 방법을 활용할 수 있습니다. 이러한 보호는 페이지를 디스크에 쓰기 바로 전에 페이지에 추가되며 디스크에서 읽은 후 확인됩니다.
+데이터베이스 페이지는 페이지를 디스크에 쓸 때부터 다시 읽을 때까지의 페이지 무결성을 보장하는 두 가지 선택적 메커니즘인 조각난 페이지 보호와 체크섬 보호 중 하나를 사용할 수 있습니다. 이러한 메커니즘을 사용하면 데이터 스토리지뿐만 아니라 컨트롤러, 드라이버, 케이블, 심지어는 운영 체제를 비롯한 하드웨어 구성 요소의 정확성을 확인하는 독자적인 방법을 활용할 수 있습니다. 이러한 보호는 페이지를 디스크에 쓰기 바로 전에 페이지에 추가되며 디스크에서 읽은 후 확인됩니다.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 체크섬, 조각난 페이지 또는 기타 I/O 오류로 읽기가 실패할 경우 4번 다시 시도합니다. 다시 시도 중에 한 번이라도 읽기가 성공하면 오류 로그에 메시지가 기록되고 해당 읽기를 트리거한 명령이 계속 수행됩니다. 다시 시도가 실패하면 824 오류 메시지와 함께 명령이 실패합니다. 
 

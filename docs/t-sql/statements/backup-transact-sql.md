@@ -43,16 +43,16 @@ helpviewer_keywords:
 - stripe sets [SQL Server]
 - cross-platform backups
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 48e1ef4a027c3bd62818bb85fd0218e033e620da
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9bb9f7368f9250bd96adb62c6af7e7711213e4fc
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203882"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242286"
 ---
 # <a name="backup-transact-sql"></a>BACKUP(Transact-SQL)
 
@@ -300,7 +300,7 @@ Microsoft Azure Blob Storage 서비스에 대한 백업을 만들 때에만 사�
   
 FILE_SNAPSHOT **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
-Azure Blob 저장소 서비스를 사용하여 모든 SQL Server 데이터베이스 파일을 저장할 때 데이터베이스 파일의 Azure 스냅숏을 만드는 데 사용됩니다. 자세한 내용은 [Microsoft Azure의 SQL Server 데이터 파일](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)을 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스냅숏 백업은 일관된 상태에서 데이터베이스 파일(데이터 및 로그 파일)의 Azure 스냅숏을 사용합니다. 일관된 Azure 스냅숏 집합이 백업을 구성하고 백업 파일에 기록됩니다. `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT`과 `BACKUP LOG TO URL WITH FILE_SNAPSHOT`의 유일한 차이점은 후자는 트랜잭션 로그를 자르지만 전자는 그렇지 않다는 점입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server 스냅숏 백업에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 백업 체인을 설정하는 데 필요한 초기 전체 백업 이후에 트랜잭션 로그 백업 시점으로 데이터베이스를 복원하려면 단일 트랜잭션 로그 백업만 필요합니다. 또한 두 건의 트랜잭션 로그 백업 시간 사이의 특정 시점으로 데이터베이스를 복원하려면 트랜잭션 로그 백업이 두 개만 필요합니다.  
+Azure Blob 스토리지 서비스를 사용하여 모든 SQL Server 데이터베이스 파일을 저장할 때 데이터베이스 파일의 Azure 스냅숏을 만드는 데 사용됩니다. 자세한 내용은 [Microsoft Azure의 SQL Server 데이터 파일](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)을 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스냅숏 백업은 일관된 상태에서 데이터베이스 파일(데이터 및 로그 파일)의 Azure 스냅숏을 사용합니다. 일관된 Azure 스냅숏 집합이 백업을 구성하고 백업 파일에 기록됩니다. `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT`과 `BACKUP LOG TO URL WITH FILE_SNAPSHOT`의 유일한 차이점은 후자는 트랜잭션 로그를 자르지만 전자는 그렇지 않다는 점입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server 스냅숏 백업에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 백업 체인을 설정하는 데 필요한 초기 전체 백업 이후에 트랜잭션 로그 백업 시점으로 데이터베이스를 복원하려면 단일 트랜잭션 로그 백업만 필요합니다. 또한 두 건의 트랜잭션 로그 백업 시간 사이의 특정 시점으로 데이터베이스를 복원하려면 트랜잭션 로그 백업이 두 개만 필요합니다.  
     
 DIFFERENTIAL  
 
@@ -367,7 +367,7 @@ DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }
 NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ }  
 백업 세트의 이름을 지정합니다. 이름은 최대 128자까지 지정할 수 있습니다. NAME을 지정하지 않으면 공백이 됩니다.  
   
-{ EXPIREDATE **='**_date_**'** | RETAINDAYS **=** *days* }  
+{ EXPIREDATE **='**_date_**'** | RETAINDAYS **=** _days_ }  
 이 백업에 대한 백업 세트를 덮어쓸 수 있는 날짜를 지정합니다. 두 옵션을 모두 사용하면 RETAINDAYS가 EXPIREDATE보다 우선적으로 적용됩니다.  
   
 두 옵션 모두 지정하지 않으면 **mediaretention** 구성 설정에 따라 만료 날짜가 결정됩니다. 자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.   
@@ -518,7 +518,7 @@ RESTART
   
 **모니터링 옵션**  
   
-STATS [ **=** *percentage* ]  
+STATS [ **=** _percentage_ ]  
 새로 *percentage*가 완료될 때마다 메시지를 표시하여 진행 상태를 측정하는 데 사용됩니다. *percentage*를 생략하면 10%가 완료될 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 메시지를 표시합니다.  
   
 STATS 옵션은 다음 간격을 보고할 임계값에 도달한 시점까지의 완료 백분율을 보고합니다. 간격은 지정된 비율을 대략적으로 나타냅니다. 예를 들어 STATS=10인 경우 완료된 크기가 40%이면 옵션은 43%를 표시할 수 있습니다. 대용량 백업 세트의 경우 완료 백분율이 완료된 I/O 호출 간에 매우 느리게 진행되므로 문제가 되지 않습니다.  
@@ -564,14 +564,14 @@ BACKUP 작업 후에 테이프가 테이프 드라이브에 로드된 상태로 
 > [!NOTE]  
 > 로그 백업을 수행하지 않으려면 단순 복구 모델을 사용합니다. 자세한 내용은 [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)을 참조하세요.  
   
-{ NORECOVERY | STANDBY **=** *undo_file_name* }  
+{ NORECOVERY | STANDBY **=** _undo_file_name_ }  
   NORECOVERY 
 
 비상 로그를 백업하고 데이터베이스를 RESTORING 상태로 유지합니다. NORECOVERY는 보조 데이터베이스로 장애 조치(failover)하거나 RESTORE 작업에 앞서 비상 로그를 저장할 때 유용합니다.  
   
 로그 잘림을 건너뛰는 최상의 로그 백업을 수행한 다음, 데이터베이스를 자동으로 다시 RESTORING 상태로 되돌리려면 `NO_TRUNCATE` 및 `NORECOVERY` 옵션을 함께 사용하십시오.  
   
-STANDBY **=** *standby_file_name* 
+STANDBY **=** _standby_file_name_ 
 
 비상 로그를 백업하고 데이터베이스를 읽기 전용 및 STANDBY 상태로 유지합니다. STANDBY 절은 대기 데이터를 쓰고 롤백을 수행하지만 추가 복원 옵션을 사용해야 합니다. STANDBY 옵션 사용은 BACKUP LOG WITH NORECOVERY를 사용한 다음 RESTORE WITH STANDBY를 사용하는 것과 동일합니다.  
   
@@ -778,7 +778,7 @@ BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서
 - F. [미러된 다중 패밀리 미디어 세트 만들기 및 백업](#create_multifamily_mirrored_media_set)  
 - G  [기존 미러된 미디어 세트에 백업](#existing_mirrored_media_set)  
 - H. [새 미디어 세트에 압축된 백업 만들기](#creating_compressed_backup_new_media_set)  
-- 9. [Microsoft Azure Blob 저장소 서비스에 백업](#url)  
+- 9. [Microsoft Azure Blob Storage 서비스에 백업](#url)  
   
 > [!NOTE]  
 > 백업 방법 도움말 항목에 추가적인 예가 포함되어 있습니다. 자세한 내용은 [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)을 참조하세요.  
@@ -907,8 +907,8 @@ WITH
    COMPRESSION;  
 ```  
 
-###  <a name="url"></a> I. Microsoft Azure Blob 저장소 서비스에 백업 
-이 예에서는 Microsoft Azure Blob 저장소 서비스에 `Sales`의 전체 데이터베이스 백업을 수행합니다.  저장소 계정 이름은 `mystorageaccount`입니다.  컨테이너는 `myfirstcontainer`입니다.  읽기, 쓰기, 삭제 및 나열 권한이 있는 저장된 액세스 정책을 만들었습니다.  저장된 액세스 정책에 연결된 공유 액세스 서명을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명인 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`를 만들었습니다.  Microsoft Azure Blob Storage 서비스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업의 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 및 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.
+###  <a name="url"></a> I. Microsoft Azure Blob Storage 서비스에 백업 
+이 예에서는 Microsoft Azure Blob Storage 서비스에 `Sales`의 전체 데이터베이스 백업을 수행합니다.  스토리지 계정 이름은 `mystorageaccount`입니다.  컨테이너는 `myfirstcontainer`입니다.  읽기, 쓰기, 삭제 및 나열 권한이 있는 저장된 액세스 정책을 만들었습니다.  저장된 액세스 정책에 연결된 공유 액세스 서명을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명인 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`를 만들었습니다.  Microsoft Azure Blob Storage 서비스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업의 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 및 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.
 
 ```sql  
 BACKUP DATABASE Sales
@@ -1113,7 +1113,7 @@ RESTART
   
 **모니터링 옵션**  
   
-STATS [ **=** *percentage* ]  
+STATS [ **=** _percentage_ ]  
 새로 *percentage*가 완료될 때마다 메시지를 표시하여 진행 상태를 측정하는 데 사용됩니다. *percentage*를 생략하면 10%가 완료될 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 메시지를 표시합니다.  
   
 STATS 옵션은 다음 간격을 보고할 임계값에 도달한 시점까지의 완료 백분율을 보고합니다. 간격은 지정된 비율을 대략적으로 나타냅니다. 예를 들어 STATS=10인 경우 완료된 크기가 40%이면 옵션은 43%를 표시할 수 있습니다. 대용량 백업 세트의 경우 완료 백분율이 완료된 I/O 호출 간에 매우 느리게 진행되므로 문제가 되지 않습니다.  
@@ -1129,7 +1129,7 @@ BACKUP DATABASE 권한은 기본적으로 **sysadmin** 고정 서버 역할과 *
 URL에서 발생하는 소유권과 사용 권한 문제는 백업 작업에 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 디바이스를 읽고 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 있어야 합니다.   
   
 ##  <a name="examples"></a> 예  
-이 예제에서는 Microsoft Azure Blob Storage 서비스에 `Sales`의 COPY_ONLY 백업을 수행합니다.  저장소 계정 이름은 `mystorageaccount`입니다.  컨테이너는 `myfirstcontainer`입니다.  읽기, 쓰기, 삭제 및 나열 권한이 있는 저장된 액세스 정책을 만들었습니다.  저장된 액세스 정책에 연결된 공유 액세스 서명을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명인 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`를 만들었습니다.  Microsoft Azure Blob Storage 서비스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업의 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 및 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.
+이 예제에서는 Microsoft Azure Blob Storage 서비스에 `Sales`의 COPY_ONLY 백업을 수행합니다.  스토리지 계정 이름은 `mystorageaccount`입니다.  컨테이너는 `myfirstcontainer`입니다.  읽기, 쓰기, 삭제 및 나열 권한이 있는 저장된 액세스 정책을 만들었습니다.  저장된 액세스 정책에 연결된 공유 액세스 서명을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명인 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`를 만들었습니다.  Microsoft Azure Blob Storage 서비스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업의 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 및 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.
 
 ```sql  
 BACKUP DATABASE Sales WITH COPY_ONLY

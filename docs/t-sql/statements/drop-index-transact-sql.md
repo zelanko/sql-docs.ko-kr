@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdb2e2dc081bce539bf2671e14993281d2415b98
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3e151639595e181fb434e5144daa64cc84128892
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206232"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132453"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -187,7 +187,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  MOVE TO를 사용하여 클러스터형 인덱스를 삭제하면 기본 테이블의 모든 비클러스터형 인덱스는 다시 작성되지만 원본 파일 그룹 또는 파티션 구성표에는 그대로 남습니다. 기본 테이블을 다른 파일 그룹 또는 파티션 구성표로 옮기면 비클러스터형 인덱스는 기본 테이블의 새 위치(힙)에 일치하게 옮겨지지 않습니다. 따라서 비클러스터형 인덱스가 전에 클러스터형 인덱스에 맞추어 정렬되었다 하더라도 더 이상 힙에 정렬되지는 않습니다. 분할된 인덱스 정렬에 대한 자세한 내용은 [분할된 테이블 및 인덱스](../../relational-databases/partitions/partitioned-tables-and-indexes.md)를 참조하세요.  
   
- *partition_scheme_name* **(** *column_name* **)**  
+ _partition_scheme_name_ **(** _column_name_ **)**  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
   
  파티션 구성표를 결과 테이블의 위치로 지정합니다. 파티션 구성표는 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 또는 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) 문을 실행하여 이미 생성되어 있어야 합니다. 지정된 위치가 없고 테이블이 분할되어 있다면 해당 테이블은 기존 클러스터형 인덱스와 동일한 파티션에 포함됩니다.  

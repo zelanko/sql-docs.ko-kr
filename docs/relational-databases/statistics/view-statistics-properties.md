@@ -16,12 +16,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f710a7ef79f5532cd8a58921cb8b07d350c1305
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: d3a20135a3063e5316f133e2f6483eb40e17d035
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380891"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256638"
 ---
 # <a name="view-statistics-properties"></a>통계 속성 보기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,9 +60,9 @@ ms.locfileid: "53380891"
   
 5.  속성을 보려는 통계 개체를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-6.  **통계 속성 -** *statistics_name* 대화 상자의 **페이지 선택** 창에서 **자세히**를 선택합니다.  
+6.  **통계 속성 -** _statistics_name_ 대화 상자의 **페이지 선택** 창에서 **자세히**를 선택합니다.  
   
-     **통계 속성 -**  **statistics_name** *statistics_name* 페이지에 다음 속성이 표시됩니다.  
+     **통계 속성 -**  **statistics_name** _statistics_name_ 페이지에 다음 속성이 표시됩니다.  
   
      **테이블 이름**  
      통계에서 설명하는 테이블 이름을 표시합니다.  

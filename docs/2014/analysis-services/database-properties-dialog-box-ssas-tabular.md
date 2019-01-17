@@ -34,7 +34,7 @@ ms.locfileid: "48105693"
 |**최종 스키마 업데이트**|데이터베이스에 대한 메타데이터를 마지막으로 업데이트한 날짜와 시간을 표시합니다.|  
 |**마지막 업데이트**|데이터베이스에 대한 데이터를 마지막으로 업데이트한 날짜와 시간을 표시합니다.|  
 |**읽기-쓰기 모드**|이 속성은 읽기 전용이지만 **분리** 명령과 **연결** 명령을 연속해서 사용하여 변경할 수 있습니다. 이 경우 이 속성은 **연결** 명령의 매개 변수입니다. 자세한 내용은 [ReadWriteMode 데이터베이스](multidimensional-models/database-readwritemodes.md)를 참조하세요.|  
-|**DirectQueryMode**|데이터베이스에서 메모리 내 스토리지만 사용하는지(디스크 스토리지를 사용하지 않음) 디스크 기반 스토리지만 사용하는지 또는 둘을 결합해서 사용하는지 여부를 지정합니다. 유효한 값은 InMemory, DirectQuery, InMemoryWithDirectQuery(대부분 메모리 기반이며 일부는 디스크로 페이징함) 또는 DirectQueryWithInMemory(대부분 디스크 기반이며 일부는 메모리 내 스토리지를 사용함)입니다. 자세한 내용은 [DirectQuery 배포 시나리오 &#40;&AMP;#40;SSAS 테이블 형식&#41;](directquery-deployment-scenarios-ssas-tabular.md)합니다.|  
+|**DirectQueryMode**|데이터베이스에서 메모리 내 스토리지만 사용하는지(디스크 스토리지를 사용하지 않음) 디스크 기반 스토리지만 사용하는지 또는 둘을 결합해서 사용하는지 여부를 지정합니다. 유효한 값은 InMemory, DirectQuery, InMemoryWithDirectQuery(대부분 메모리 기반이며 일부는 디스크로 페이징함) 또는 DirectQueryWithInMemory(대부분 디스크 기반이며 일부는 메모리 내 스토리지를 사용함)입니다. 자세한 내용은 [DirectQuery 배포 시나리오 &#40;SSAS 테이블 형식&#41;](directquery-deployment-scenarios-ssas-tabular.md)합니다.|  
 |**데이터 원본 가장 정보**|로컬 또는 원격 파티션의 데이터, 관계형 데이터 저장소에 대해 DirectQuery를 통해 실행된 쿼리, 아웃오브 라인 바인딩, 대상에서 원본으로의 데이터베이스 동기화를 처리하거나 새로 고칠 때 데이터베이스 연결에 사용되는 가장 계정을 지정합니다.<br /><br /> 유효한 값은 Analysis Services 서비스 계정 또는 특정 Windows 자격 증명 집합입니다. **현재 사용자의 자격 증명 사용**을 지정하지 마십시오. 이 자격 증명 옵션은 테이블 형식 모델 데이터베이스에는 지원되지 않습니다.|  
 |**마지막으로 처리**|데이터베이스를 마지막으로 처리한 날짜와 시간을 표시합니다.|  
 |**예상된 크기**|데이터베이스의 예상 크기를 표시합니다.|  
