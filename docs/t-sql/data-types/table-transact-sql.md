@@ -29,7 +29,7 @@ ms.locfileid: "53204282"
 나중에 처리하기 위해 결과 집합을 저장하는 데 사용할 수 있는 특별한 데이터 형식입니다. **테이블**은 주로 테이블 반환 함수의 결과 집합으로 반환되는 행 집합을 임시로 저장하는 데 사용됩니다. **테이블**은 주로 테이블 반환 함수의 결과 집합으로 반환되는 행 집합을 임시로 저장하는 데 사용됩니다. **테이블** 변수는 함수, 저장 프로시저 및 일괄 처리에 사용할 수 있습니다. **테이블** 유형의 변수를 선언하려면 [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)를 사용합니다.
   
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   

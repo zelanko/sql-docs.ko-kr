@@ -59,7 +59,7 @@ ms.locfileid: "53732030"
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v1"></a>간단한 쿼리 실행 통계 프로파일링 인프라 v1
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 ~ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]). 
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 ~ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]). 
   
 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 간단한 프로파일링을 도입하여 실행 계획에 대한 정보를 수집하는 성능 오버헤드를 줄였습니다. 표준 프로파일링과는 달리, 간단한 프로파일링에서 CPU 런타임 정보를 수집하지 않습니다. 그러나 간단한 프로파일링에서는 여전히 행 수 및 I/O 사용 정보를 수집합니다.
 
@@ -89,7 +89,7 @@ WITH (MAX_MEMORY=4096 KB,
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v2"></a>간단한 쿼리 실행 통계 프로파일링 인프라 v2
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 ~ [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). 
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 ~ [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). 
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1에는 오버헤드를 최소화하도록 수정된 버전의 간단한 프로파일링이 포함되어 있습니다. 위의 *적용 대상*에 언급된 버전의 [추적 플래그 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 사용하여 간단한 프로파일링을 전역적으로 사용할 수도 있습니다. 새 DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)은 진행 중인 요청에 대한 쿼리 실행 계획을 반환하기 위해 도입되었습니다.
 
@@ -114,7 +114,7 @@ WITH (MAX_MEMORY=4096 KB,
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v3"></a>간단한 쿼리 실행 통계 프로파일링 인프라 v3
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작)
 
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에는 모든 실행의 행 수 정보를 수집하는 수정된 버전의 간단한 프로파일링이 포함되어 있습니다. 기본적으로 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 간단한 프로파일링이 사용되며 추적 플래그 7412는 영향을 주지 않습니다.
 

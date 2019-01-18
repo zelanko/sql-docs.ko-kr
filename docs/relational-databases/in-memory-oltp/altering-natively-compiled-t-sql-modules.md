@@ -22,7 +22,7 @@ ms.locfileid: "53204572"
 # <a name="altering-natively-compiled-t-sql-modules"></a>Altering Natively Compiled T-SQL Modules
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 `ALTER` 문을 사용하여 고유하게 컴파일된 저장 프로시저와 스칼라 UDF, 트리거 등 고유하게 컴파일된 다른 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈에 대해 `ALTER` 작업을 수행할 수 있습니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 `ALTER` 문을 사용하여 고유하게 컴파일된 저장 프로시저와 스칼라 UDF, 트리거 등 고유하게 컴파일된 다른 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈에 대해 `ALTER` 작업을 수행할 수 있습니다.  
   
 고유하게 컴파일된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈에 대해 `ALTER`를 실행하면 새 정의를 사용하여 모듈이 다시 컴파일됩니다. 다시 컴파일이 진행되는 동안에는 이전 버전의 모듈을 계속 실행할 수 있습니다. 컴파일이 완료되면 모듈 실행이 종료되고 새 버전의 모듈이 설치됩니다. 고유하게 컴파일된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈을 변경하는 경우 다음 옵션을 수정할 수 있습니다.  
   

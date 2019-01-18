@@ -111,9 +111,9 @@ _server\_name_
 많은 코드 예제에서 유니코드 문자열 상수 앞에 문자 **N**을 접두사로 붙입니다. **N** 접두사가 없으면 문자열이 데이터베이스의 기본 코드 페이지로 변환됩니다. 이 기본 코드 페이지는 일부 문자를 인식하지 않을 수 있습니다.  
   
 ## <a name="applies-to-references"></a>'적용 대상' 참조  
-[!INCLUDE[tsql](../../includes/tsql-md.md)] 참조에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]와 관련된 항목이 포함되어 있습니다.   
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 참조에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]와 관련된 항목이 포함되어 있습니다.   
 
-각 항목의 위쪽에는 항목의 주제를 지원하는 제품을 나타내는 섹션이 있습니다. 제품이 생략되면 항목에서 설명하는 기능을 해당 제품에서 사용할 수 없습니다. 예를 들어 가용성 그룹이 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입되었습니다. **CREATE AVAILABILITY GROUP** 항목은 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 적용되지 않으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])에 적용됨을 나타냅니다.  
+각 항목의 위쪽에는 항목의 주제를 지원하는 제품을 나타내는 섹션이 있습니다. 제품이 생략되면 항목에서 설명하는 기능을 해당 제품에서 사용할 수 없습니다. 예를 들어 가용성 그룹이 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입되었습니다. **CREATE AVAILABILITY GROUP** 항목은 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 적용되지 않으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])에 적용됨을 나타냅니다.  
   
 경우에 따라 항목의 일반적인 주제를 제품에서 사용할 수 있지만 모든 인수가 지원되지는 않습니다. 예를 들어 포함된 데이터베이스 사용자가 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입되었습니다. **CREATE USER** 문은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품에서 사용할 수 있지만, **WITH PASSWORD** 구문은 이전 버전에서 사용할 수 없습니다. 이 경우 추가적인 **적용 대상** 섹션이 항목 본문의 적절한 인수 설명에 삽입됩니다.  
   
