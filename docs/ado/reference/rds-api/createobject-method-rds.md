@@ -32,8 +32,8 @@ ms.locfileid: "51599535"
   
 |프로토콜|구문|  
 |--------------|------------|  
-|HTTP|Set 개체 DataSpace.CreateObject = ("ProgId", "https://awebsrvr")|  
-|HTTPS|Set 개체 DataSpace.CreateObject = ("ProgId", "https://awebsrvr")|  
+|HTTP|Set 개체 DataSpace.CreateObject = ("ProgId", "\ https://awebsrvr")|  
+|HTTPS|Set 개체 DataSpace.CreateObject = ("ProgId", "\ https://awebsrvr")|  
 |DCOM|Set 개체 DataSpace.CreateObject ("ProgId", "computername") =|  
 |In-process|Set 개체 DataSpace.CreateObject = ("ProgId", "")|  
   
