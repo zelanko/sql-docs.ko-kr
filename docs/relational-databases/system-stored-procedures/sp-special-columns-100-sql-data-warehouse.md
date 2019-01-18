@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: design
+ms.subservice: design
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -14,12 +14,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 205d731e262514c0782cad09af6bf36d24b25bc5
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: fdebe91359fbe9d7c9ef7aaadc38ba096427f651
+ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254419"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54395386"
 ---
 # <a name="spspecialcolumns100-sql-data-warehouse"></a>sp_special_columns_100 (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 현재 사용자가 지정된 이름의 테이블을 소유한 경우 해당 테이블의 열이 반환됩니다. 하는 경우 *소유자* 지정 하지 않으면 현재 사용자 지정 된 테이블을 소유 하지 않는 한 *이름*,이 프로시저는 지정 된 테이블을 찾습니다 *이름* 데이터베이스 소유 소유자입니다. 테이블이 있으면 해당 열이 반환됩니다.  
   
- [ @qualifier=] '*한정자*'  
+ [ @qualifier=] '*qualifier*'  
  테이블 한정자의 이름입니다. *한정자* 됩니다 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 테이블에 대해 세 부분으로 이루어진 이름 (*qualifier.owner.name*). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
  [ @col_type=] '*col_type*'  

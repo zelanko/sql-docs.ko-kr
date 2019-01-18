@@ -3,7 +3,7 @@ title: SQL Data Warehouse는 저장된 프로시저 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.service: sql-data-warehouse
-ms.component: design
+ms.subservice: design
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: eb92907b87382c9aad2b7c1a580bf0feb33ac7bd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8dc5e634086c738399ce76090755466796cf3a69
+ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657152"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54395359"
 ---
 # <a name="sql-data-warehouse-stored-procedures"></a>SQL Data Warehouse는 저장된 프로시저
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
