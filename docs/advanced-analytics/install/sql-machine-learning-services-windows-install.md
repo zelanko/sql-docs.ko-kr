@@ -3,19 +3,20 @@ title: Windows-SQL Server에서 설치 SQL Server Machine Learning Services (In-
 description: SQL Server 또는 Windows에서 SQL Server 2017 Machine Learning Services에 대 한 SQL Server 설치 단계에서 Python R입니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2018
+ms.date: 01/17/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9118edd1ab25cf13cbb6d10212b50f7e7428fe9f
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 2f323ac135ed41ff15c1d41a17407d03138e4807
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645352"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372695"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Windows에 SQL Server Machine Learning를 설치합니다.
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2017부터 R 및 Python에 대 한 지원이 데이터베이스 내 분석에 제공 됩니다 **SQL Server Machine Learning Services**에 대 한 후속 [SQL Server R Services](../r/sql-server-r-services.md) SQL Server 2016에서 도입 되었습니다. 함수 라이브러리는 R 및 Python에서 사용할 수 있으며 데이터베이스 엔진 인스턴스에서 외부 스크립트로 실행할 수 있습니다. 
@@ -201,6 +202,13 @@ R 기능 통합만로 설정 해야 합니다 **MKL_CBWR** 환경 변수를 [일
     | hello |
     |----|
     | 1|
+
+
+<!--  The preceding 'hello' table is NOT rendering properly on live Docs.
+Instead, the RAW markdown for the table is being displayed.  Probable bug in this markdown source,
+due to stricter rules imposed by 'markdig' engine (replaced 'DFM').
+I will inform HeidiSteen  [GeneMi, 2019/01/17]
+-->
 
 
 > [!NOTE]

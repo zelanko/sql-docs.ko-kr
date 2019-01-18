@@ -5,17 +5,17 @@ description: SQL Server 2019 빅 데이터 클러스터 (미리 보기)와 함�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/13/2018
+ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 54ea67e8b85d4e9a1a8cdbe4b40cf1bb9c3f1062
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: ab8633ef6741ae1d1a3a973796eec1de0cc12c37
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241604"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372635"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>SQL Server 2019 빅 데이터 도구 설치
 
@@ -38,7 +38,14 @@ ms.locfileid: "54241604"
 | **sqlcmd** | 일부 스크립트 | SQL Server를 쿼리 하기 위한 레거시 명령줄 도구 ([자세한 내용은](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | **curl** <sup>3</sup> | 일부 스크립트 | Url 사용 하 여 데이터를 전송 하기 위한 명령줄 도구입니다. | [Windows](https://curl.haxx.se/windows/) \| Linux: curl 패키지 설치 |
 
-<sup>1</sup> kubectl 버전 1.10 이상을 사용 해야 합니다. 또한 kubectl 버전이 더하기 또는 빼기 Kubernetes 클러스터의 한 부 버전 이어야 합니다. Kubectl 클라이언트에 특정 버전을 설치 하려는 경우 참조 [curl을 통해 이진 kubectl 설치](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) (Windows 10에서 사용 하 여 cmd.exe와 Windows PowerShell이 아닌 curl을 실행).
+<sup>1</sup> kubectl 버전 1.10 이상을 사용 해야 합니다. 또한 kubectl 버전이 더하기 또는 빼기 Kubernetes 클러스터의 한 부 버전 이어야 합니다. Kubectl 클라이언트에 특정 버전을 설치 하려는 경우 참조 [curl을 통해 이진 kubectl 설치](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) (Windows 10에서 사용 하 여 cmd.exe와 Windows PowerShell이 아닌 curl을 실행). 
+
+> [!TIP]
+> Azure Kubernetes Service (AKS)에서 이전에 배포 된 클러스터와 kubectl을 사용 하려면 다음 Azure CLI 명령 사용 하 여 클러스터 컨텍스트를 설정 해야 합니다.
+>
+>    ```azurecli
+>    az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>
+>    ```
 
 <sup>2</sup> Azure CLI 버전 2.0.4 사용 해야 이상. 실행 `az --version` 필요한 경우 버전을 찾으려고 합니다.
 
@@ -49,7 +56,7 @@ ms.locfileid: "54241604"
 앞의 표에 모든 빅 데이터 클러스터와 함께 사용 되는 일반적인 도구를 제공 합니다. 도구에 필요한 시나리오에 따라 달라 집니다. 하지만 일반적으로 다음과 같은 도구는 관리, 연결 및 쿼리 하는 클러스터에 대 한 가장 중요 합니다.
 
 - **mssqlctl**
-- **Kubectl**
+- **kubectl**
 - **Azure Data Studio**
 - **SQL Server 2019 확장**
 
