@@ -48,7 +48,7 @@ EXEC managed_backup.sp_backup_config_basic
   
 ##  <a name="Arguments"></a> 인수  
  @enable_backup  
- 지정한 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 사용하거나 사용하지 않습니다. 합니다 @enable_backup 됩니다 **비트**합니다. 필수 매개 변수를 구성할 때 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 첫 번째 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 기존 변경 하는 경우 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 구성에서는이 매개 변수는 선택 사항입니다. 이 경우 모든 구성 값을 지정 하지 기존 값을 유지 합니다.  
+ 지정한 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 사용하거나 사용하지 않습니다. 합니다 @enable_backup 됩니다 **비트** 합니다. 필수 매개 변수를 구성할 때 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 첫 번째 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 기존 변경 하는 경우 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 구성에서는이 매개 변수는 선택 사항입니다. 이 경우 모든 구성 값을 지정 하지 기존 값을 유지 합니다.  
   
  @database_name  
  특정 데이터베이스에 대 한 managed backup을 사용 하도록 설정 하는 것에 대 한 데이터베이스 이름입니다.  
