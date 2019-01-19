@@ -8,19 +8,21 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: be4ac6b7f7c156ebeda843e8aa987ab45ef4057d
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: ab28dafe062d7a8d492e702aa5570881ef77f1e0
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596684"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405623"
 ---
-# <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>자습서: SQL 개발자를 위한 데이터베이스 내 Python 분석
+# <a name="tutorial-python-data-analytics-for-sql-developers"></a>자습서: SQL 개발자를 위한 Python 데이터 분석
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL 프로그래머를 위한이 자습서에서는 알아봅니다 Python 통합에 대 한 빌드 및 사용 하 여 솔루션을 학습 하는 Python 기반 컴퓨터를 배포 하 여는 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) SQL Server 데이터베이스에 있습니다. 
+SQL 프로그래머를 위한이 자습서에서는 알아봅니다 Python 통합에 대 한 빌드 및 사용 하 여 솔루션을 학습 하는 Python 기반 컴퓨터를 배포 하 여는 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) SQL Server 데이터베이스에 있습니다. T-SQL, SQL Server Management Studio 및 사용 하 여 데이터베이스 엔진 인스턴스를 사용할지 [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) 및 Python 언어 지원 합니다.
 
-이 자습서에서는 데이터 워크플로 모델링에 사용 되는 Python 함수 소개 합니다. 데이터 탐색, 작성 및 학습 이진 분류 모델 및 모델 배포를 포함 하는 단계입니다. 뉴욕 시 택시 및 Limosine 위원회에서 샘플 데이터를 사용 하 고 여정 팁의 시간, 보이고, 거리, 승차 위치에 따라 발생할 가능성이 있는지 여부를 예측 하는 모델을 빌드합니다. 이 자습서에 사용 되는 Python 코드를 모두 만들고 Management Studio에서 실행 하는 저장된 프로시저에 래핑됩니다.
+이 자습서에서는 데이터 워크플로 모델링에 사용 되는 Python 함수 소개 합니다. 데이터 탐색, 작성 및 학습 이진 분류 모델 및 모델 배포를 포함 하는 단계입니다. 뉴욕 시 택시 및 Limosine 위원회에서 샘플 데이터를 사용 하 고 여정 팁의 시간, 보이고, 거리, 승차 위치에 따라 발생할 가능성이 있는지 여부를 예측 하는 모델을 빌드합니다. 
+
+이 자습서에 사용 되는 Python 코드를 모두 만들고 Management Studio에서 실행 하는 저장된 프로시저에 래핑됩니다.
 
 > [!NOTE]
 > 이 자습서는 R 및 Python 모두에 사용할 수 있습니다. R 버전을 참조 하세요 [데이터베이스 내 분석 R 개발자를 위한](sqldev-in-database-r-for-sql-developers.md)합니다.
@@ -38,13 +40,13 @@ Machine learning 솔루션을 구축 하는 과정이 포함 될 수 있는 여�
 
 Python 또는 SQL로 새 Python 개발자를 새 SQL 프로그래머 라면 여부를이 다중 파트 자습서에서는 Python과 SQL Server를 사용 하 여 데이터베이스 내 분석을 수행 하기 위한 일반적인 과정을 소개 합니다. 
 
-+ [1 단원: Python을 사용 하 여 데이터 탐색 및 시각화](sqldev-py3-explore-and-visualize-the-data.md)
++ [1단원: Python을 사용 하 여 데이터 탐색 및 시각화](sqldev-py3-explore-and-visualize-the-data.md)
 
 + [2단원: 사용자 지정 SQL 함수를 사용 하 여 데이터 기능 만들기](sqldev-py4-create-data-features-using-t-sql.md)
 
-+ [3 단원: 학습 및 T-SQL을 사용 하 여 Python 모델을 저장 합니다.](sqldev-py5-train-and-save-a-model-using-t-sql.md)
++ [3단원: 학습 및 T-SQL을 사용 하 여 Python 모델을 저장 합니다.](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-+ [4 단원: 저장된 프로시저에서 Python 모델을 사용 하 여 잠재적인 결과 예측](sqldev-py6-operationalize-the-model.md)
++ [4단원: 저장된 프로시저에서 Python 모델을 사용 하 여 잠재적인 결과 예측](sqldev-py6-operationalize-the-model.md)
 
 모델 데이터베이스에 저장 된 후의 예측에 대 한 모델을 호출할 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장된 프로시저를 사용 하 여 합니다.
 

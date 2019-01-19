@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7fbed76272903fb7a9b6eee037a070677411a0f5
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 4b3beca0f9e9a8c714e60bde7a2e7ff067e2265e
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596424"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405733"
 ---
-# <a name="tutorial-in-database-analytics-for-data-scientists-using-r"></a>자습서: R을 사용 하 여 데이터 과학자를 위한 데이터베이스 내 분석
+# <a name="tutorial-sql-development-for-r-data-scientists"></a>자습서: R 데이터 과학자를 위한 SQL 개발
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 데이터 과학자를 위한이 자습서에서는 SQL Server 2016 또는 SQL Server 2017의 R 기능 지원에 기반 하는 예측 모델링에 대 한 종단 간 솔루션을 빌드하는 방법에 알아봅니다. 이 자습서에서는 한 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) SQL Server 데이터베이스에 있습니다. 
@@ -43,7 +43,7 @@ R 코드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SQL Server �
 이 연습에서는 둘 다 포함 된 컴퓨터에서 실행할 수 있습니다 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 R 개발 환경 했지만 프로덕션 환경에 대 한이 구성을 권장 하지 않습니다. 동일한 컴퓨터에 클라이언트 및 서버를 배치 해야 할 경우에 두 번째 집합이 "원격" 클라이언트에서 R 스크립트를 보내기 위한 Microsoft R 라이브러리를 설치 해야 합니다. SQL Server 인스턴스의 프로그램 파일에 설치 된 R 라이브러리를 사용 하지 마세요. 특히, 한 컴퓨터를 사용 하는 경우 클라이언트 및 서버 작업을 지원 하기 위해 이러한 위치 중에서 RevoScaleR 라이브러리를 해야 합니다.
 
 + C:\Program Files\Microsoft\R Client\R_SERVER\library\RevoScaleR 
-+ C:\Program Files\Microsoft SQL Server\MSSQL14 합니다. MSSQLSERVER\R_SERVICES\library\RevoScaleR
++ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
 
 <a name="add-packages"></a>
 

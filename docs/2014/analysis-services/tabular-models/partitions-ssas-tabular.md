@@ -11,12 +11,12 @@ ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0cb150e2bf076c6cef4e05d626b71eaab05d64a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8126278319caff77a3d4ff6a334ed985c190288e
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197215"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405643"
 ---
 # <a name="partitions-ssas-tabular"></a>파티션(SSAS 테이블 형식)
   파티션은 테이블을 논리적 부분으로 나눕니다. 각 파티션은 다른 파티션과 별개로 처리(새로 고침)할 수 있습니다. 모델 제작 중 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 파티션 대화 상자를 사용하여 만든 파티션은 모델 작업 영역 데이터베이스에 적용됩니다. 모델을 배포하면 모델 작업 영역 데이터베이스에 대해 정의된 파티션이 배포된 model 데이터베이스에 복제됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 파티션 대화 상자를 사용하여 배포된 model 데이터베이스에 대해 파티션을 추가로 만들고 관리할 수 있습니다.  이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 파티션 관리자 대화 상자를 사용하여 모델 제작 중에 만든 파티션을 설명합니다. 배포된 모델의 파티션을 만들고 관리하는 방법에 대한 자세한 내용은 [테이블 형식 모델 파티션 만들기 및 관리&#40;SSAS 테이블 형식&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)를 참조하세요.  
@@ -40,20 +40,20 @@ ms.locfileid: "48197215"
  테이블을 논리적 파티션으로 더 나눔으로써 각 파티션의 데이터가 처리되는 부분, 시간 및 방법을 선택적으로 정의할 수 있습니다. 모델을 배포할 때 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 파티션 대화 상자를 사용하거나 처리 명령을 실행하는 스크립트를 사용하여 파티션의 처리를 수동으로 완료할 수 있습니다.  
   
 ### <a name="partitions-in-the-model-workspace-database"></a>모델 작업 영역 데이터베이스의 파티션  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 파티션 관리자를 사용하여 새 파티션을 만들거나 파티션을 편집, 병합 또는 삭제할 수 있습니다. 파티션 관리자는 파티션에 대해 테이블, 행 및 열을 선택하는 두 가지 모드, 즉 테이블 미리 보기 모드 및 SQL 쿼리 모드를 제공합니다. SQL 쿼리를 사용하여 모든 파티션이 정의되지만, 테이블 미리 보기 모드를 사용하여 파티션에 포함할 데이터를 미리 보고 선택할 수 있습니다. SQL 쿼리가 자동으로 만들어지고 유효성이 검사됩니다. 테이블 미리 보기 모드는 테이블 속성 편집 대화 상자 및 테이블 가져오기 마법사의 테이블 미리 보기 페이지에 있는 것과 동일한 테이블 미리 보기이므로 미리 보기의 최대 행 수는 50입니다.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 파티션 관리자를 사용하여 새 파티션을 만들거나 파티션을 편집, 병합 또는 삭제할 수 있습니다. 파티션 관리자는 파티션에 대해 테이블, 행 및 열을 선택하는 두 가지 모드를 제공합니다. 테이블 미리 보기 모드와 SQL 쿼리 모드입니다. SQL 쿼리를 사용하여 모든 파티션이 정의되지만, 테이블 미리 보기 모드를 사용하여 파티션에 포함할 데이터를 미리 보고 선택할 수 있습니다. SQL 쿼리가 자동으로 만들어지고 유효성이 검사됩니다. 테이블 미리 보기 모드는 테이블 속성 편집 대화 상자 및 테이블 가져오기 마법사의 테이블 미리 보기 페이지에 있는 것과 동일한 테이블 미리 보기이므로 미리 보기의 최대 행 수는 50입니다.  
   
 ### <a name="partitions-in-a-deployed-model-database"></a>배포된 model 데이터베이스의 파티션  
  모델을 배포하면 배포된 model 데이터베이스에 대한 파티션은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 데이터베이스 개체로 나타납니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 파티션 대화 상자를 사용하여 배포된 모델에 대해 파티션을 만들고 편집, 병합 및 삭제할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 배포된 모델에 대한 파티션 관리는 이 항목에서 다루지 않습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 파티션을 관리하는 방법에 대한 자세한 내용은 [테이블 형식 모델 파티션 만들기 및 관리&#40;SSAS 테이블 형식&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)를 참조하세요.  
   
-##  <a name="bkmk_related_tasks"></a> 관련 태스크  
+##  <a name="bkmk_related_tasks"></a> 관련 작업  
   
 |항목|Description|  
 |-----------|-----------------|  
-|[작업 영역 데이터베이스에서 파티션 만들기 및 관리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](workspace-database-ssas-tabular.md)|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 파티션 관리자를 사용하여 모델 작업 영역 데이터베이스에서 파티션을 만들고 관리하는 방법에 대해 설명합니다.|  
-|[작업 영역 데이터베이스에서 파티션 처리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](process-partitions-in-the-workspace-databse-ssas-tabular.md)|모델 작업 영역 데이터베이스에서 파티션을 처리(새로 고침)하는 방법을 설명 합니다.|  
+|[작업 영역 데이터베이스에서 파티션 만들기 및 관리&#40;SSAS 테이블 형식&#41;](workspace-database-ssas-tabular.md)|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 파티션 관리자를 사용하여 모델 작업 영역 데이터베이스에서 파티션을 만들고 관리하는 방법에 대해 설명합니다.|  
+|[작업 영역 데이터베이스에서 파티션을 처리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](process-partitions-in-the-workspace-database-ssas-tabular.md)|모델 작업 영역 데이터베이스에서 파티션을 처리(새로 고침)하는 방법을 설명 합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [DirectQuery 모드&#40;SSAS 테이블 형식&#41;](directquery-mode-ssas-tabular.md)   
- [데이터 처리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../process-data-ssas-tabular.md)  
+ [데이터 처리&#40;SSAS 테이블 형식&#41;](../process-data-ssas-tabular.md)  
   
   

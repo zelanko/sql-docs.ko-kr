@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 12ec074501e93af586a5d495bd7984ad62f3fd88
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 900bd5fea075e304dae73a20168da952433f20be
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242144"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405823"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 배포 하는 방법
 
@@ -53,7 +53,7 @@ SQL Server 빅 데이터 클러스터의 Kubernetes 버전을 이상이 필요 v
 
 먼저 SQL Server 2019 빅 데이터 클러스터를 배포 하기 전에 [big data tools 설치](deploy-big-data-tools.md):
 - **mssqlctl**
-- **Kubectl**
+- **kubectl**
 - **Azure Data Studio**
 - **SQL Server 2019 확장**
 
@@ -248,7 +248,7 @@ kubectl get svc -n <your-cluster-name>
 
 현재 빅 데이터 클러스터를 새 릴리스로 업그레이드 하는 유일한 방법은 수동으로 제거 하 고 클러스터를 다시 만듭니다. 에 고유한 버전의 각 릴리스에 **mssqlctl** 는 이전 버전과 호환 되지 않습니다. 또한 새 노드에서 이미지를 다운로드 하는 이전 클러스터 있으면 최신 이미지 클러스터에서 이전 이미지와 호환 되지 않을 수 있습니다. 최신 버전으로 업그레이드 하려면 다음 단계를 사용 합니다.
 
-1. 이전 클러스터를 삭제 하기 전에 SQL Server 마스터 인스턴스 및 HDFS에서 데이터를 백업 합니다. SQL Server 마스터 인스턴스를 사용할 수 있습니다 [SQL Server 백업 및 복원](data-ingestion-restore-databse.md)합니다. HDFS에 대 한 있습니다 [사용 하 여 데이터를 복사할 수 있습니다 **curl**](data-ingestion-curl.md)합니다.
+1. 이전 클러스터를 삭제 하기 전에 SQL Server 마스터 인스턴스 및 HDFS에서 데이터를 백업 합니다. SQL Server 마스터 인스턴스를 사용할 수 있습니다 [SQL Server 백업 및 복원](data-ingestion-restore-database.md)합니다. HDFS에 대 한 있습니다 [사용 하 여 데이터를 복사할 수 있습니다 **curl**](data-ingestion-curl.md)합니다.
 
 1. 사용 하 여 이전 클러스터를 삭제 합니다 `mssqlctl delete cluster` 명령입니다.
 
@@ -310,10 +310,10 @@ kubectl get svc -n <your-cluster-name>
 
    | 서비스 | Description |
    |---|---|
-   | **마스터-풀 끝점** | 마스터 인스턴스에 대 한 액세스를 제공합니다.<br/>(**EXTERNAL-IP 31433** 하며 **SA** 사용자) |
-   | **서비스-mssql-컨트롤러-lb**<br/>**mssql 컨트롤러 nodeport 서비스** | 도구 및 클러스터를 관리 하는 클라이언트를 지원 합니다. |
-   | **lb-프록시 서비스-**<br/>**서비스-프록시-nodeport** | 에 대 한 액세스를 제공 합니다 [클러스터 관리 포털](cluster-admin-portal.md)합니다.<br/>(https://**EXTERNAL-IP**: 30777/포털)|
-   | **서비스-보안-lb**<br/>**서비스-보안-nodeport** | HDFS/Spark gateway에 대 한 액세스를 제공합니다.<br/>(**EXTERNAL-IP** 하며 **루트** 사용자) |
+   | **endpoint-master-pool** | 마스터 인스턴스에 대 한 액세스를 제공합니다.<br/>(**EXTERNAL-IP 31433** 하며 **SA** 사용자) |
+   | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | 도구 및 클러스터를 관리 하는 클라이언트를 지원 합니다. |
+   | **service-proxy-lb**<br/>**service-proxy-nodeport** | 에 대 한 액세스를 제공 합니다 [클러스터 관리 포털](cluster-admin-portal.md)합니다.<br/>(https://**EXTERNAL-IP**: 30777/포털)|
+   | **service-security-lb**<br/>**service-security-nodeport** | HDFS/Spark gateway에 대 한 액세스를 제공합니다.<br/>(**EXTERNAL-IP** 하며 **루트** 사용자) |
 
    > [!NOTE]
    > 서비스 이름은 Kubernetes 환경에 따라 달라질 수 있습니다. 서비스 이름을 사용 하 여 종료 Azure Kubernetes Service (AKS)를 배포할 때는 **-lb**합니다. 서비스 이름은 끝나야 minikube 및 kubeadm 배포용 **-nodeport**합니다.

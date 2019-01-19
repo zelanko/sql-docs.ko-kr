@@ -8,19 +8,21 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8e5b0bc8633e956817e778a1d5a2d75a86df8588
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 8d3235c585d3ea56a64776fde841ccc6d71b1a4d
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596349"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405603"
 ---
-# <a name="tutorial-in-database-analytics-for-sql-developers-using-r"></a>자습서: R을 사용 하 여 SQL 개발자를 위한 데이터베이스 내 분석
+# <a name="tutorial-r-data-analytics-for-sql-developers"></a>자습서: SQL 개발자를 위한 R 데이터 분석
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL 프로그래머를 위한이 자습서에서는 알아봅니다 R 통합에 대 한 빌드 및 사용 하 여 솔루션을 학습 하는 R 기반 컴퓨터를 배포 하 여는 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) SQL Server 데이터베이스에 있습니다. 
+SQL 프로그래머를 위한이 자습서에서는 알아봅니다 R 통합에 대 한 빌드 및 사용 하 여 솔루션을 학습 하는 R 기반 컴퓨터를 배포 하 여는 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) SQL Server 데이터베이스에 있습니다. T-SQL, SQL Server Management Studio 및 [Machine Learning 서비스]를 사용 하 여 데이터베이스 엔진 인스턴스를 사용할지 ([Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) 및 R 언어 지원
 
-이 자습서는 워크플로 모델링 하는 데이터에 사용 되는 R 함수를 소개 합니다. 데이터 탐색, 작성 및 학습 이진 분류 모델 및 모델 배포를 포함 하는 단계입니다. 여정 팁의 시간, 보이고, 거리, 승차 위치에 따라 발생할 가능성이 있는지 여부를 예측 하는 모델을 빌드합니다. 이 자습서에 사용 되는 R 코드를 모두 만들고 Management Studio에서 실행 하는 저장된 프로시저에 래핑됩니다.
+이 자습서는 워크플로 모델링 하는 데이터에 사용 되는 R 함수를 소개 합니다. 데이터 탐색, 작성 및 학습 이진 분류 모델 및 모델 배포를 포함 하는 단계입니다. 여정 팁의 시간, 보이고, 거리, 승차 위치에 따라 발생할 가능성이 있는지 여부를 예측 하는 모델을 빌드합니다. 
+
+이 자습서에 사용 되는 R 코드를 모두 만들고 Management Studio에서 실행 하는 저장된 프로시저에 래핑됩니다.
 
 ## <a name="background-for-sql-developers"></a>SQL 개발자를 위한 백그라운드
 
@@ -35,13 +37,13 @@ Machine learning 솔루션을 구축 하는 과정이 포함 될 수 있는 여�
 
 이 다중 파트 자습서의 목적은 마이그레이션 "완료 되도록 R 코드를" SQL Server에 대 한 일반적인 워크플로를 소개 합니다. 
 
-- [1 단원: 탐색 하 고 저장된 프로시저에서 R 함수를 호출 하 여 데이터 모양 및 분포를 시각화](../tutorials/sqldev-explore-and-visualize-the-data.md)
+- [1단원: 탐색 하 고 저장된 프로시저에서 R 함수를 호출 하 여 데이터 모양 및 분포를 시각화](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
 - [2단원: T-SQL 함수에서 R을 사용 하 여 데이터 기능 만들기](sqldev-create-data-features-using-t-sql.md)
   
-- [3 단원: 학습 및 저장 함수 및 저장된 프로시저를 사용 하 여 R 모델](sqldev-train-and-save-a-model-using-t-sql.md)
+- [3단원: 학습 및 저장 함수 및 저장된 프로시저를 사용 하 여 R 모델](sqldev-train-and-save-a-model-using-t-sql.md)
   
-- [4 단원: 저장된 프로시저에 R 모델을 사용 하 여 잠재적인 결과 예측](../tutorials/sqldev-operationalize-the-model.md)
+- [4단원: 저장된 프로시저에 R 모델을 사용 하 여 잠재적인 결과 예측](../tutorials/sqldev-operationalize-the-model.md)
 
 모델 데이터베이스에 저장 된 후 모델에서 예측에 대 한 호출 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장된 프로시저를 사용 하 여 합니다.
 
