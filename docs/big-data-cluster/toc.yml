@@ -70,7 +70,7 @@ items:
     - name: curl을 사용하여 데이터 로드
       href: data-ingestion-curl.md
     - name: 데이터베이스 복원
-      href: data-ingestion-restore-databse.md
+      href: data-ingestion-restore-database.md
   - name: 빅 데이터/기계 학습
     items:
     - name: PROSE Code Accelerator를 사용한 데이터 랭글링
@@ -109,9 +109,9 @@ items:
     href: ../relational-databases/polybase/polybase-guide.md
   - name: 빅 데이터 클러스터 액세스 권한 요청
     href: https://aka.ms/eapsignup
-ms.openlocfilehash: 3580372dfac82485e6c64bbb3d5b517ee34ede4a
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 0878ec62a789072b9796c928aad8e7c0b6af6e65
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53595804"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405563"

@@ -150,7 +150,7 @@ items:
   - name: 작업 영역 데이터베이스에서 파티션 만들기 및 관리
     href: create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md
   - name: 작업 영역 데이터베이스에서 파티션 처리
-    href: process-partitions-in-the-workspace-databse-ssas-tabular.md
+    href: process-partitions-in-the-workspace-database-ssas-tabular.md
 - name: 큐브 뷰
   href: perspectives-ssas-tabular.md
   items:
@@ -239,9 +239,9 @@ items:
     href: ../multidimensional-models/attach-and-detach-analysis-services-databases.md
 - name: 테이블 형식 모델 데이터 액세스
   href: tabular-model-data-access.md
-ms.openlocfilehash: 2d106683729d9c599333b1ab9ef6169d5d735e1e
-ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.openlocfilehash: e0eeb0529829c7366e2973fdc480ea27b0f528bf
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39316961"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405633"

@@ -400,7 +400,7 @@ items:
         - name: 작업 영역 데이터베이스에서 파티션 만들기 및 관리
           href: ./tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md
         - name: 작업 영역 데이터베이스에서 파티션 처리
-          href: ./tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md
+          href: ./tabular-models/process-partitions-in-the-workspace-database-ssas-tabular.md
       - name: 큐브 뷰
         href: ./tabular-models/perspectives-ssas-tabular.md
         items:
@@ -1523,9 +1523,9 @@ items:
     href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
   - name: 추적 이벤트
     href: https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events
-ms.openlocfilehash: ee7868cfee9c8f087ffd43959ccfa7f30b643b7e
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: b226bb92d106c31c54f37feeaedc2070393f835f
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53786004"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405813"
