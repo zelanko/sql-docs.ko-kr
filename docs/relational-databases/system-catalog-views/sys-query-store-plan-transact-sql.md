@@ -22,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5b7b4b9831fcfa04932ed05951b27bca7e4e4b0
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 60b9137e52b34b79fa4faddbef7b9e4da8734142
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710774"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397612"
 ---
-# <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (TRANSACT-SQL)
+# <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   쿼리와 관련 된 각 실행 계획에 대 한 정보를 포함 합니다.  
@@ -57,7 +57,14 @@ ms.locfileid: "52710774"
 |**last_execution_time**|**datetimeoffset**|마지막 실행 시간을 참조 마지막 쿼리/계획의 종료 시간입니다.|  
 |**avg_compile_duration**|**float**|컴파일 통계를 계획 합니다.|  
 |**last_compile_duration**|**bigint**|컴파일 통계를 계획 합니다.|  
-  
+|**plan_forcing_type**|**int**|형식 강제 계획입니다.<br /><br />
+0: 없음<br /><br />
+1: MANUAL<br /><br />
+2: 자동 | | **plan_forcing_type_desc**|**nvarchar(60)**| Plan_forcing_type의 텍스트 설명입니다.<br /><br />
+NONE: 계획 강제 적용 되지 않습니다<br /><br />
+수동: 사용자가 강제 적용 된 계획<br /><br />
+자동: 자동 조정에서 강제 계획 |
+
 ## <a name="plan-forcing-limitations"></a>계획 강제 적용 제한 사항
 쿼리 저장소에는 쿼리 최적화 프로그램이 특정 실행 계획을 사용하도록 적용하는 메커니즘이 있습니다. 그러나 계획이 적용되지 않도록 하는 몇 가지 제한 사항이 있습니다. 
 

@@ -13,12 +13,12 @@ ms.custom: sql-linux, seodec18
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: f4e6298cb1165f75dcd9a6aa6c77a1628650c0f6
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: f7c9612bac16463c1ea82d9e5a83bbad9f371700
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206319"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397632"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>빠른 시작: Docker를 사용 하 여 SQL Server 컨테이너 이미지 실행
 
@@ -348,7 +348,7 @@ SQL Server에 연결할 다른 일반적인 도구는 다음과 같습니다.
 
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 - [Windows의 SSMS(SQL Server Management Studio)](sql-server-linux-manage-ssms.md)
-- [Azure Data Studio (미리 보기)](../azure-data-studio/what-is.md)
+- [Azure Data Studio](../azure-data-studio/what-is.md)
 - [mssql-cli(미리 보기)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 ## <a name="remove-your-container"></a>컨테이너 제거

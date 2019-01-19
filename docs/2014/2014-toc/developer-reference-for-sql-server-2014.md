@@ -12,17 +12,19 @@ ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 934262fb9f5e1e67ebf475310518f924aebbc4c1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8d3a1a2c3c5f1f4bce9a3662e1bc7c7bc49f2836
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351470"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397602"
 ---
 # <a name="developer-reference-for-sql-server-2014"></a>SQL Server 2014 개발자 참조
+
   다음 기능과 기술을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 데이터에 액세스하는 애플리케이션을 개발할 수 있습니다.  
   
 ## <a name="programming-reference-sections"></a>프로그래밍 참조 섹션  
+
  ![작은 파일 폴더 아이콘](../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [공용 언어 런타임 &#40;CLR&#41; 통합 프로그래밍 개요](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
  ![작은 파일 폴더 아이콘](../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [네이티브 XML](https://technet.microsoft.com/library/ms191274.aspx)  
@@ -60,6 +62,7 @@ ms.locfileid: "53351470"
  ![작은 파일 폴더 아이콘](../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") [Reporting Services 개발자 가이드](../reporting-services/reporting-services-features-and-tasks-ssrs.md)  
   
 ## <a name="other-programming-resources"></a>관련 프로그래밍 자료  
+
  데이터 액세스 애플리케이션을 개발하기 위해서는 다음 기술을 하나 이상 사용해야 합니다.  
   
  [Visual Studio에서 데이터 액세스](https://go.microsoft.com/fwlink/?LinkId=129902)  

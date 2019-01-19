@@ -19,20 +19,22 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 6b54c44c88c384b28f9966ad9c7e3888fd038aa3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: eae4ddb70dceccaa4956322dbf74cd84df3a83cc
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353908"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397562"
 ---
 # <a name="books-online-for-sql-server-2014"></a>SQL Server 2014용 온라인 설명서
+
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)]®용 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]® 온라인 설명서를 시작합니다. 온라인 설명서에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 사용하여 데이터 관리 및 비즈니스 인텔리전스 작업을 수행하는 방법을 설명하는 태스크 설명과 참조 설명서가 들어 있습니다.  
   
  **사용해보기:**  
  ![Azure 가상 머신 소형](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Azure 계정이 있나요?  이동 **[여기](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 이미 설치 된 SQL Server 2014 서비스 팩 1 (SP1)를 사용 하 여 가상 머신을 스핀업 하 합니다. SQL Server 2014 (SP1)에 대 한 자세한 내용은 참조 하세요. [SQL Server 2014 서비스 팩 1 릴리스 정보 ](https://support.microsoft.com/en-us/kb/3058865)합니다. 
   
 ## <a name="sql-server-technologies"></a>SQL Server 기술  
+
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에는 여러 가지 데이터 관리 및 분석 기술이 포함되어 있습니다. 각 기술에 대한 기능, 태스크 및 참조 설명서를 찾으려면 다음 테이블의 링크를 클릭하십시오.  
   
 |||  
@@ -46,6 +48,7 @@ ms.locfileid: "53353908"
 |![Reporting Services 아이콘](media/reportingservices.gif "Reporting Services 아이콘")|[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> Reporting Services에서는 다양한 데이터 원본에서 내용을 가져오고 다양한 형식으로 보고서를 게시하며 중앙에서 보안 및 구독을 관리할 수 있게 해 주는 기업형의 웹 사용이 가능한 보고 기능을 제공합니다.|  
   
 ## <a name="sql-server-information-on-the-web"></a>웹의 SQL Server 정보  
+
  [!INCLUDE[msCoName](../includes/msconame-md.md)]는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대한 추가 정보를 여러 웹 사이트에 게시합니다.  
   
  **SQL Server 웹 사이트**  
@@ -56,13 +59,14 @@ ms.locfileid: "53353908"
   
 -   [SQL Server TechCenter](https://go.microsoft.com/fwlink/?linkid=28107)  
   
--   [SQL Server 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=42457)  
+-   [SQL Server Developer Center](https://go.microsoft.com/fwlink/?LinkId=42457)  
   
 -   [데이터 플랫폼 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=17386)  
   
 -   [XML 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=42458)  
   
 ## <a name="see-also"></a>관련 항목  
+
  [SQL Server 구성 관리자 도움말](../tools/configuration-manager/sql-server-configuration-manager-help.md)  
   
   

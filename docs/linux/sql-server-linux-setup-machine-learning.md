@@ -4,18 +4,18 @@ description: 이 문서에서는 Red Hat 및 Ubuntu에서 SQL Server Machine Lea
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 12/07/2018
+ms.date: 01/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 15a1a411672303fc8556927bcaf218052758744d
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: 7e140a4eeb8fe6481b52be378c6ad9569160e9e3
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553255"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397662"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>SQL Server 2019 Machine Learning 서비스 (R, Python, Java) linux 설치
 
@@ -77,7 +77,7 @@ ls /opt/microsoft/mssql/bin
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-+ Linux 버전 이어야 합니다 [SQL Server에서 지 원하는](sql-server-linux-release-notes-2019.md#supported-platforms), 온-프레미스에서 또는 Docker 컨테이너에서 실행 중입니다. 지원 되는 버전은 다음과 같습니다.
++ Linux 버전 이어야 합니다 [SQL Server에서 지 원하는](sql-server-linux-release-notes-2019.md#supported-platforms), Docker 엔진을 포함 하지 않습니다. 지원 되는 버전은 다음과 같습니다.
 
    + [Red Hat Enterprise Linux(RHEL)](quickstart-install-connect-red-hat.md)
 
@@ -167,17 +167,17 @@ zypper update
 
 | 패키지 이름 | 에 적용 됩니다. | Description |
 |--------------|----------|-------------|
-|mssql-서버-확장성  | All | 확장성 프레임 워크를 R, Python 또는 Java 코드를 실행 하는 데 사용 합니다. |
-|mssql-서버-확장성-java | 자바 | Java 실행 환경에 로드 하기 위한 Java 확장입니다. 추가 라이브러리 없거나 Java에 대 한 패키지 있습니다. |
-| microsoft openmpi  | Python, R | Linux에서 병렬화 Revo * 라이브러리에서 사용 되는 인터페이스를 전달 하는 메시지입니다. |
+|mssql-server-extensibility  | All | 확장성 프레임 워크를 R, Python 또는 Java 코드를 실행 하는 데 사용 합니다. |
+|mssql-server-extensibility-java | 자바 | Java 실행 환경에 로드 하기 위한 Java 확장입니다. 추가 라이브러리 없거나 Java에 대 한 패키지 있습니다. |
+| microsoft-openmpi  | Python, R | Linux에서 병렬화 Revo * 라이브러리에서 사용 되는 인터페이스를 전달 하는 메시지입니다. |
 | mssql-mlservices-python | Python | Anaconda 및 Python의 오픈 소스 배포 합니다. |
-|mssql mlservices-mlm py  | Python | *전체 설치*합니다. Revoscalepy, microsoftml, 미리 학습 된 모델 이미지 기능화 (featurization) 및 텍스트 감정 분석을 위해 제공 합니다.| 
-|mssql mlservices-패키지 py  | Python | *최소 설치*합니다. Revoscalepy 및 microsoftml 제공합니다. <br/>미리 학습 된 모델에서 제외 됩니다. | 
-| [microsoft-r-오픈 *](#mro) | R | R의 오픈 소스 배포는 세 가지 패키지로 구성 됩니다. |
-|mssql mlservices-mlm r  | R | *전체 설치*합니다. SqlRUtils RevoScaleR, MicrosoftML, olapR을 미리 학습 된 이미지 기능화 (featurization) 및 텍스트 감정 분석을 위해 모델을 제공 합니다.| 
-|mssql mlservices-패키지 r  | R | *최소 설치*합니다. SqlRUtils, MicrosoftML, olapR RevoScaleR를 제공합니다. <br/>미리 학습 된 모델에서 제외 됩니다. | 
-|mssql mlservices-mml py  | CTP 2.0 2.1 | CTP 2.2에서 mssql-mslservices-python으로 Python 패키지 통합으로 인해 사용 되지 않음. Revoscalepy를 제공합니다. 미리 학습 된 모델과 microsoftml 제외합니다.| 
-|mssql mlservices-mml r  | CTP 2.0 2.1 | CTP 2.2에서 mssql-mslservices-python으로 R 패키지 통합으로 인해 사용 되지 않음. RevoScaleR sqlRUtils, olapR를 제공합니다. 미리 학습 된 모델과 MicrosoftML 제외합니다.  |
+|mssql-mlservices-mlm-py  | Python | *전체 설치*합니다. Revoscalepy, microsoftml, 미리 학습 된 모델 이미지 기능화 (featurization) 및 텍스트 감정 분석을 위해 제공 합니다.| 
+|mssql-mlservices-packages-py  | Python | *최소 설치*합니다. Revoscalepy 및 microsoftml 제공합니다. <br/>미리 학습 된 모델에서 제외 됩니다. | 
+| [microsoft-r-open*](#mro) | R | R의 오픈 소스 배포는 세 가지 패키지로 구성 됩니다. |
+|mssql-mlservices-mlm-r  | R | *전체 설치*합니다. SqlRUtils RevoScaleR, MicrosoftML, olapR을 미리 학습 된 이미지 기능화 (featurization) 및 텍스트 감정 분석을 위해 모델을 제공 합니다.| 
+|mssql-mlservices-packages-r  | R | *최소 설치*합니다. Provides RevoScaleR, sqlRUtils, MicrosoftML, olapR. <br/>미리 학습 된 모델에서 제외 됩니다. | 
+|mssql-mlservices-mml-py  | CTP 2.0 2.1 | CTP 2.2에서 mssql-mslservices-python으로 Python 패키지 통합으로 인해 사용 되지 않음. Revoscalepy를 제공합니다. 미리 학습 된 모델과 microsoftml 제외합니다.| 
+|mssql-mlservices-mml-r  | CTP 2.0 2.1 | CTP 2.2에서 mssql-mslservices-python으로 R 패키지 통합으로 인해 사용 되지 않음. RevoScaleR sqlRUtils, olapR를 제공합니다. 미리 학습 된 모델과 MicrosoftML 제외합니다.  |
 
 <a name="RHEL"></a>
 
@@ -434,7 +434,7 @@ EULA 동의의 모든 가능한 순열에 설명 되어 있습니다 [mssql-conf
 
 |||
 |--|----|
-| mssql/mlservices 패키지 | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
+| mssql/mlservices packages | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
 | microsoft r 열린 패키지 | [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) | 
 
 
@@ -442,14 +442,14 @@ EULA 동의의 모든 가능한 순열에 설명 되어 있습니다 [mssql-conf
 
 |||
 |--|----|
-| mssql/mlservices 패키지 | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
+| mssql/mlservices packages | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
 | microsoft r 열린 패키지 | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/) | 
 
 #### <a name="sles12-paths"></a>SLES/12 경로
 
 |||
 |--|----|
-| mssql/mlservices 패키지 | [ https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| mssql/mlservices packages | [ https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
 | microsoft r 열린 패키지 | [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/) | 
 
 #### <a name="package-list"></a>패키지 목록

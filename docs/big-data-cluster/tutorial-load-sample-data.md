@@ -5,17 +5,17 @@ description: 이 자습서에는 SQL Server 빅 데이터 클러스터에 샘플
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/13/2018
+ms.date: 01/17/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a89b1bec266f590d6e96365436fe5339b9152f92
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 207d2d01278d96456bcec44814efe76fdae70fdf
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241484"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397512"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-2019-big-data-cluster"></a>자습서: SQL Server 2019 빅 데이터 클러스터에 샘플 데이터 로드
 
@@ -29,7 +29,7 @@ ms.locfileid: "54241484"
 - [배포 된 빅 데이터 클러스터](deployment-guidance.md)
 - [빅 데이터 도구](deploy-big-data-tools.md)
    - **mssqlctl**
-   - **Kubectl**
+   - **kubectl**
    - **sqlcmd**
    - **curl**
 
@@ -62,11 +62,11 @@ ms.locfileid: "54241484"
 
    | 매개 변수 | Description |
    |---|---|
-   | &LT; CLUSTER_NAMESPACE &GT; | 빅 데이터 클러스터에 제공한 이름입니다. |
-   | &LT; SQL_MASTER_IP &GT; | 마스터 인스턴스 IP 주소입니다. |
-   | &LT; SQL_MASTER_SA_PASSWORD &GT; | 마스터 인스턴스에 대 한 SA 암호입니다. |
-   | &LT; KNOX_IP &GT; | HDFS/Spark 게이트웨이의 IP 주소입니다. |
-   | &LT; KNOX_PASSWORD &GT; | HDFS/Spark 게이트웨이에 대 한 암호입니다. |
+   | <CLUSTER_NAMESPACE> | 빅 데이터 클러스터에 제공한 이름입니다. |
+   | <SQL_MASTER_IP> | 마스터 인스턴스 IP 주소입니다. |
+   | <SQL_MASTER_SA_PASSWORD> | 마스터 인스턴스에 대 한 SA 암호입니다. |
+   | <KNOX_IP> | HDFS/Spark 게이트웨이의 IP 주소입니다. |
+   | <KNOX_PASSWORD> | HDFS/Spark 게이트웨이에 대 한 암호입니다. |
 
    > [!TIP]
    > 사용 하 여 [kubectl](cluster-troubleshooting-commands.md) SQL Server 마스터 인스턴스와 Knox에 대 한 IP 주소를 찾을 수 있습니다. 실행할 `kubectl get svc -n <your-cluster-name>` 마스터 인스턴스에 대 한 외부 IP 주소를 확인 하 고 (**끝점 마스터 풀**) 및 Knox (**서비스-보안-lb** 또는 **서비스-보안-nodeport**).
@@ -98,11 +98,11 @@ ms.locfileid: "54241484"
 
    | 매개 변수 | Description |
    |---|---|
-   | &LT; CLUSTER_NAMESPACE &GT; | 빅 데이터 클러스터에 제공한 이름입니다. |
-   | &LT; SQL_MASTER_IP &GT; | 마스터 인스턴스 IP 주소입니다. |
-   | &LT; SQL_MASTER_SA_PASSWORD &GT; | 마스터 인스턴스에 대 한 SA 암호입니다. |
-   | &LT; KNOX_IP &GT; | HDFS/Spark 게이트웨이의 IP 주소입니다. |
-   | &LT; KNOX_PASSWORD &GT; | HDFS/Spark 게이트웨이에 대 한 암호입니다. |
+   | <CLUSTER_NAMESPACE> | 빅 데이터 클러스터에 제공한 이름입니다. |
+   | <SQL_MASTER_IP> | 마스터 인스턴스 IP 주소입니다. |
+   | <SQL_MASTER_SA_PASSWORD> | 마스터 인스턴스에 대 한 SA 암호입니다. |
+   | <KNOX_IP> | HDFS/Spark 게이트웨이의 IP 주소입니다. |
+   | <KNOX_PASSWORD> | HDFS/Spark 게이트웨이에 대 한 암호입니다. |
 
    > [!TIP]
    > 사용 하 여 [kubectl](cluster-troubleshooting-commands.md) SQL Server 마스터 인스턴스와 Knox에 대 한 IP 주소를 찾을 수 있습니다. 실행할 `kubectl get svc -n <your-cluster-name>` 마스터 인스턴스에 대 한 외부 IP 주소를 확인 하 고 (**끝점 마스터 풀**) 및 Knox (**서비스-보안-lb** 또는 **서비스-보안-nodeport**).
@@ -110,7 +110,7 @@ ms.locfileid: "54241484"
 1. 부트스트랩 스크립트를 실행 합니다.
 
    ```bash
-   ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
+   sudo env "PATH=$PATH" ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
    ```
 
 ## <a name="next-steps"></a>다음 단계

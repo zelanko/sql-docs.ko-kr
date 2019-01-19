@@ -3,20 +3,21 @@ title: 새로운&#39;새로 만들기-s SQL Server Machine Learning 서비스
 description: 새로운 기능 발표의 각 릴리스에 대 한 SQL Server 2016 R Services, R Server, SQL Server 2017의 Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/07/2018
+ms.date: 01/18/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f9e98d59318c9c7d43fd6f99195da972c4eca0c9
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 4a3450b308918e51b370865db4ad2bedeb8e004c
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432496"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397622"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 새로운 기능 
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 기계 학습 기능 계속 확장 하 고, 확장 및 데이터 플랫폼, 고급 분석 및 데이터 과학 간의 통합 향상 시킬 수에 따라 각 릴리스에서 SQL Server에 추가 됩니다. 
@@ -32,6 +33,7 @@ ms.locfileid: "53432496"
 |   | [Java 언어 확장](java/extension-java.md) Windows와 Linux 모두에서 새로운 SQL Server 2019 미리 보기로 제공에서 됩니다. 사용 권한을 할당 하 고 경로 설정 하 여 컴파일된 Java 코드 SQL Server에 사용할 수 있습니다. SQL Server 액세스를 사용 하 여 클라이언트 앱 수 데이터를 사용 하 고 호출 하 여 코드를 실행할 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), SQL Server에서 R 및 Python 통합에 사용 되는 동일한 절차입니다. | 
 |  | 합니다 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 쉽게 분할 된 데이터에서 여러 모델을 생성할 수 있도록 하는 두 개의 새 매개 변수를 소개 합니다. 이 자습서에서 자세히 알아보세요 [R에서 모델 파티션 만들기](tutorials/r-tutorial-create-models-per-partition.md)합니다. |
 |   | 장애 조치 클러스터 지원 Windows 및 Linux, SQL Server 실행 패드 서비스가 모든 노드에서 시작 하는 것으로 가정에서 이제 지원 됩니다. 자세한 내용은 [SQL Server 장애 조치 클러스터 설치](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)합니다. |
+
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -71,7 +73,7 @@ T-SQL을 사용할 수 있습니다 [PREDICT](../t-sql/queries/predict-transact-
 
 | 패키지 | Description |
 |---------|-------------|
-[**revoscalepy**](python/ref-py-revoscalepy.md)| Python-RevoScaleR에 해당 합니다. 선형 및 로지스틱 회귀, 의사 결정 트리, 승격 된 트리 및 임의 포리스트의 모든 병렬 및 원격 계산 컨텍스트에서 실행 되 고 수에 대 한 Python 모델을 만들 수 있습니다. 이 패키지는 여러 데이터 원본 및 원격 계산 컨텍스트 사용을 지원합니다. 데이터 과학자 또는 개발자가 데이터를 탐색 하거나 데이터를 이동 하지 않고 모델을 작성 하는 원격 SQL Server에서 Python 코드를 실행할 수 있습니다. |
+|[**revoscalepy**](python/ref-py-revoscalepy.md)| Python-RevoScaleR에 해당 합니다. 선형 및 로지스틱 회귀, 의사 결정 트리, 승격 된 트리 및 임의 포리스트의 모든 병렬 및 원격 계산 컨텍스트에서 실행 되 고 수에 대 한 Python 모델을 만들 수 있습니다. 이 패키지는 여러 데이터 원본 및 원격 계산 컨텍스트 사용을 지원합니다. 데이터 과학자 또는 개발자가 데이터를 탐색 하거나 데이터를 이동 하지 않고 모델을 작성 하는 원격 SQL Server에서 Python 코드를 실행할 수 있습니다. |
 |[**microsoftml**](python/ref-py-microsoftml.md) |MicrosoftML R 패키지의 Python에 해당 합니다. |
 
 ### <a name="pre-trained-models"></a>미리 학습된 모델
