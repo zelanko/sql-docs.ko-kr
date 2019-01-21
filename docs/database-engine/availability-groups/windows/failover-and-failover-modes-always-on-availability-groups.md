@@ -16,12 +16,12 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44e11edc9608dc4c10634ea58af1c0140bba666f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e20ad7cab67a87dd7bb76be0117ee87752e3e66f
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207442"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226670"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>장애 조치(Failover) 및 장애 조치(Failover) 모드(Always On 가용성 그룹)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,9 +84,9 @@ ms.locfileid: "53207442"
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
 |자동 장애 조치(automatic failover)|아니오|아니오|예|  
 |계획된 수동 장애 조치(Failover)|아니오|예|예|  
-|강제 장애 조치(failover)|예|예|예**\***|  
+|강제 장애 조치(failover)|예|예|예 **&#42;**|  
   
- **\*** 동기화된 보조 복제본에 강제 장애 조치(Failover) 명령을 실행하면 보조 복제본은 수동 장애 조치(Failover)의 경우와 동일하게 작동합니다.  
+ **&#42;** 동기화된 보조 복제본에 강제 장애 조치(Failover) 명령을 실행하면 보조 복제본은 수동 장애 조치(Failover)의 경우와 동일하게 작동합니다.  
   
  장애 조치(Failover) 중에 데이터베이스를 사용할 수 없는 시간은 장애 조치(Failover)의 유형과 원인에 따라 달라집니다.  
   

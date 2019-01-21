@@ -20,30 +20,32 @@ ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cf815386b00ca70ceacbb549b9dbccd50c9a482
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 88f175d5d3658a61964ab7d7daba1be88438e2cd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206352"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130573"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>고급 병합 복제 - 충돌 감지 및 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   게시자와 구독자가 연결되고 동기화가 이루어지면 병합 에이전트는 충돌이 있는지 감지합니다. 충돌이 감지되면 병합 에이전트는 게시에 아티클을 추가할 때 지정한 충돌 해결 프로그램을 사용해서 수락하여 다른 사이트로 전파할 데이터를 확인합니다.  
+
+ 병합 복제는 충돌을 감지하고 해결하는 다양한 방법을 제공합니다. 대부분의 애플리케이션에는 기본 방법이 적합합니다.  
+  
+-   게시자와 구독자 사이에 충돌이 발생하면 게시자 변경 내용이 유지되고 구독자 변경 내용은 삭제됩니다.   
+-   클라이언트 구독(가져오기 구독의 기본 유형)을 사용하는 두 구독자 사이에 충돌이 발생하면 게시자와 동기화하는 첫 번째 구독자의 변경 내용이 유지되고 두 번째 구독자의 변경 내용은 삭제됩니다. 클라이언트 및 서버 구독을 지정하는 방법에 대한 자세한 내용은 [병합 구독 유형 및 충돌 해결 우선 순위 지정&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)을 참조하세요.   
+-   서버 구독(밀어넣기 구독의 기본 유형)을 사용하는 두 구독자 사이에 충돌이 발생하면 우선 순위가 가장 높은 구독자의 변경 내용이 유지되고 두 번째 구독자의 변경 내용은 삭제됩니다. 우선 순위 값이 같으면 게시자와 동기화하는 첫 번째 구독자의 변경 내용이 유지됩니다.  
   
 > [!NOTE]  
 >  구독자와 게시자가 동기화되는 경우에도 충돌은 대체로 구독자 및 게시자에서 수행되는 업데이트가 아닌 여러 구독자에서 수행되는 업데이트 사이에서 발생합니다.  
   
- 충돌 감지 및 해결 동작은 다음 옵션에 따라 결정됩니다.  
-  
--   열 수준 추적, 행 수준 추적 또는 논리적 레코드 수준 추적 지정  
-  
+ 충돌 감지 및 해결 동작은 다음 옵션에 따라 결정됩니다.    
+-   열 수준 추적, 행 수준 추적 또는 논리적 레코드 수준 추적 지정    
 -   기본 우선 순위 기반 해결 메커니즘 또는 아티클 해결 프로그램 지정. 아티클 해결 프로그램은 다음 중 하나일 수 있습니다.  
   
-    -   관리 코드로 작성된 *비즈니스 논리 처리기*  
-  
-    -   COM 기반 *사용자 지정 해결 프로그램*  
-  
+    -   관리 코드로 작성된 *비즈니스 논리 처리기*   
+    -   COM 기반 *사용자 지정 해결 프로그램*    
     -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)]에서 제공하는 COM 기반 해결 프로그램  
   
      기본 해결 메커니즘을 사용하는 경우 구독 유형이 클라이언트인지 또는 서버인지에 따라 동작이 추가로 결정됩니다.  
@@ -51,18 +53,32 @@ ms.locfileid: "53206352"
 ## <a name="conflict-detection"></a>충돌 감지  
  데이터 변경의 충돌 여부는 아티클에 대해 설정한 충돌 추적 유형에 따라 결정됩니다.  
   
--   열 수준 충돌 추적을 선택하면 둘 이상의 복제 노드에서 동일한 행의 동일한 열이 변경되는 경우 충돌로 간주됩니다.  
-  
--   행 수준 추적을 선택하면 둘 이상의 복제 노드에서 동일한 행의 임의 열이 변경되는 경우 충돌로 간주됩니다. 해당 행에서 영향을 받는 열이 동일할 필요는 없습니다.  
-  
+-   열 수준 충돌 추적을 선택하면 둘 이상의 복제 노드에서 동일한 행의 동일한 열이 변경되는 경우 충돌로 간주됩니다.    
+-   행 수준 추적을 선택하면 둘 이상의 복제 노드에서 동일한 행의 임의 열이 변경되는 경우 충돌로 간주됩니다. 해당 행에서 영향을 받는 열이 동일할 필요는 없습니다.    
 -   논리적 레코드 수준 추적을 선택하면 둘 이상의 복제 노드에서 동일한 논리적 레코드의 임의 행이 변경되는 경우 충돌로 간주됩니다. 해당 행에서 영향을 받는 열이 동일할 필요는 없습니다.  
   
  자세한 내용은 [논리적 레코드에서 충돌 감지 및 해결](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)을 참조하세요.  
   
- 아티클의 충돌 추적 및 해결 수준을 지정하려면 [병합 아티클에 대 한 충돌 추적 및 해결 수준 지정](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md)을 참조하십시오.  
+ 아티클의 충돌 추적 및 해결 수준을 지정하려면 [병합 복제 속성 지정](../../../relational-databases/replication/merge/specify-merge-replication-properties.md)을 참조하세요.  
   
 ## <a name="conflict-resolution"></a>충돌 해결  
  충돌이 감지되면 병합 에이전트는 선택한 충돌 해결 프로그램을 시작하고 해결 프로그램을 사용하여 충돌 시 적용되는 내용을 확인합니다. 적용되는 행이 게시자 및 구독자에서 적용되며 무시되는 행의 데이터는 충돌 테이블에 기록됩니다. 대화형으로 충돌을 해결하도록 선택하지 않으면 해결 프로그램이 실행된 후 즉시 충돌이 해결됩니다.  
+
+병합 복제 충돌 해결 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  게시자와 구독자가 연결되고 동기화가 이루어지면 병합 에이전트는 충돌이 있는지 감지합니다. 충돌이 감지되면 병합 에이전트는 충돌 해결 프로그램을 사용해서 다른 사이트로 수락 및 전파할 데이터를 확인합니다.  
+  
+> [!NOTE]  
+>  구독자와 게시자가 동기화되는 경우에도 충돌은 대체로 구독자 및 게시자에서 수행되는 업데이트가 아닌 여러 구독자에서 수행되는 업데이트 사이에서 발생합니다.  
+  
+ 병합 복제는 충돌을 감지하고 해결하는 다양한 방법을 제공합니다. 대부분의 애플리케이션에는 기본 방법이 적합합니다.  
+  
+-   게시자와 구독자 사이에 충돌이 발생하면 게시자 변경 내용이 유지되고 구독자 변경 내용은 삭제됩니다.  
+  
+-   클라이언트 구독(가져오기 구독의 기본 유형)을 사용하는 두 구독자 사이에 충돌이 발생하면 게시자와 동기화하는 첫 번째 구독자의 변경 내용이 유지되고 두 번째 구독자의 변경 내용은 삭제됩니다. 클라이언트 및 서버 구독을 지정하는 방법에 대한 자세한 내용은 [병합 구독 유형 및 충돌 해결 우선 순위 지정&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)을 참조하세요.  
+  
+-   서버 구독(밀어넣기 구독의 기본 유형)을 사용하는 두 구독자 사이에 충돌이 발생하면 우선 순위가 가장 높은 구독자의 변경 내용이 유지되고 두 번째 구독자의 변경 내용은 삭제됩니다. 우선 순위 값이 같으면 게시자와 동기화하는 첫 번째 구독자의 변경 내용이 유지됩니다.  
+  
+ 병합 복제의 충돌 감지 및 해결에 대한 자세한 내용은 [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하십시오.  
   
 ### <a name="resolver-types"></a>해결 프로그램 유형  
  병합 복제에서 충돌 해결은 아티클 수준에서 수행됩니다. 여러 아티클로 구성된 게시의 경우 아티클별로 서로 다른 충돌 해결 프로그램을 사용할 수도 있고 게시를 구성하는 모든 아티클, 여러 아티클 또는 하나의 아티클에 대해 같은 충돌 해결 프로그램을 사용할 수도 있습니다.  

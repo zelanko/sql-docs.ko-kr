@@ -22,12 +22,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d10759ad75dd1df48aa3f59d3c17ab9f632755d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e58d15af6605a8b50440fcff6e181a39c58098f4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539193"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134370"
 ---
 # <a name="enhance-general-replication-performance"></a>일반적인 복제 성능 향상
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "52539193"
   
 ## <a name="server-and-network"></a>서버 및 네트워크  
   
--    [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]에 할당될 최소 및 최대 메모리 양을 설정합니다.  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]에 할당될 최소 및 최대 메모리 양을 설정합니다.  
   
      기본적으로 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 은 사용할 수 있는 시스템 리소스에 따라 메모리 요구 사항을 동적으로 변경합니다. 복제 작업 중 사용 가능한 메모리의 부족을 방지하기 위해 **min server memory** 옵션을 사용해서 사용 가능한 최소 메모리를 설정합니다. 메모리를 확보하기 위해 운영 체제가 디스크로 페이징하지 않도록 하기 위해 **max server memory** 옵션을 사용하여 최대 메모리를 설정할 수도 있습니다. 자세한 내용은 [서버 메모리 서버 구성 옵션](../../../database-engine/configure-windows/server-memory-server-configuration-options.md)을 참조하세요.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "52539193"
   
     -   병합 복제의 경우 비즈니스 논리 처리기를 사용하는 것이 보다 효율적일 수 있습니다. 자세한 내용은 [병합 동기화 중 비즈니스 논리 실행](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)을 참조하세요.  
   
-     트리거를 사용하여 병합 복제에 대해 게시된 테이블의 참조 무결성을 유지 관리하려면 병합 에이전트에 필요한 다시 시도 횟수를 줄이도록 테이블 처리 순서를 지정합니다. 자세한 내용은 [병합 아티클의 처리 순서 지정](../../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)을 참조하세요.  
+     트리거를 사용하여 병합 복제에 대해 게시된 테이블의 참조 무결성을 유지 관리하려면 병합 에이전트에 필요한 다시 시도 횟수를 줄이도록 테이블 처리 순서를 지정합니다. 자세한 내용은 [병합 복제 옵션 지정](../../../relational-databases/replication/merge/specify-merge-replication-properties.md)을 참조하세요.  
   
 -   LOB(Large Object) 데이터 형식의 사용을 제한합니다.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "52539193"
   
      많은 양의 변경 내용을 구독자로 보내야 할 경우 이를 새 스냅숏과 함께 다시 초기화하면 복제를 사용하여 개별 변경 내용을 이동하는 것보다 빠르게 보낼 수 있습니다. 자세한 내용은 [구독 다시 초기화](../../../relational-databases/replication/reinitialize-subscriptions.md)를 참조하세요.  
   
-     트랜잭션 복제의 경우 복제 모니터는 **배포되지 않은 명령** 탭에 구독자로 아직 배포되지 않은 배포 데이터베이스의 트랜잭션 수와 이러한 트랜잭션에 대한 예상 배포 시간 등을 표시합니다. 자세한 내용은 [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)을 참조하세요.  
+     트랜잭션 복제의 경우 복제 모니터는 **배포되지 않은 명령** 탭에 구독자로 아직 배포되지 않은 배포 데이터베이스의 트랜잭션 수와 이러한 트랜잭션에 대한 예상 배포 시간 등을 표시합니다. 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
 ## <a name="snapshot-considerations"></a>스냅숏 고려 사항  
   
@@ -144,8 +144,7 @@ ms.locfileid: "52539193"
   
      대체 스냅숏 폴더의 스냅숏 파일을 압축하면 스냅숏에 필요한 디스크 스토리지를 줄일 수 있으며 이동식 미디어에서 스냅숏 파일을 보다 간단하게 전송할 수 있습니다.  
   
-     스냅숏을 압축하면 네트워크에서의 스냅숏 파일 전송 성능이 향상되는 경우도 있습니다. 그러나 스냅숏 에이전트에서 스냅숏 파일을 생성하는 경우와 배포 에이전트 또는 병합 에이전트에서 스냅숏 파일을 적용하는 경우에 스냅숏 파일을 압축하려면 추가 처리 작업이 필요합니다. 이 경우 스냅숏 생성 속도가 느려지거나 스냅숏 적용 시간이 늘어날 수 있습니다. 또한 네트워크 오류가 발생하면 압축 스냅숏은 재개할 수 없으므로 불안정한 네트워크에서는 압축 스냅숏이 적합하지 않습니다. 네트워크에서 압축 스냅숏을 사용하는 경우 이러한 장단점을 신중하게 고려하여 균형을 맞추는 것이 좋습니다. 자세한 내용은 [Alternate Snapshot Folder Locations](../../../relational-databases/replication/alternate-snapshot-folder-locations.md) 및 [Compressed Snapshots](../../../relational-databases/replication/compressed-snapshots.md)를 참조하세요.  
-  
+     스냅숏을 압축하면 네트워크에서의 스냅숏 파일 전송 성능이 향상되는 경우도 있습니다. 그러나 스냅숏 에이전트에서 스냅숏 파일을 생성하는 경우와 배포 에이전트 또는 병합 에이전트에서 스냅숏 파일을 적용하는 경우에 스냅숏 파일을 압축하려면 추가 처리 작업이 필요합니다. 이 경우 스냅숏 생성 속도가 느려지거나 스냅숏 적용 시간이 늘어날 수 있습니다. 또한 네트워크 오류가 발생하면 압축 스냅숏은 재개할 수 없으므로 불안정한 네트워크에서는 압축 스냅숏이 적합하지 않습니다. 네트워크에서 압축 스냅숏을 사용하는 경우 이러한 장단점을 신중하게 고려하여 균형을 맞추는 것이 좋습니다. 자세한 내용은 [스냅숏 옵션 수정](../../../relational-databases/replication/snapshot-options.md)을 참조하세요. 
 -   구독을 수동으로 초기화해 봅니다.  
   
      큰 초기 데이터 세트와 관련된 일부 시나리오에서는 스냅숏 대신 다른 방법을 사용하여 구독을 초기화하는 것이 좋습니다. 자세한 내용은 [스냅숏 없이 트랜잭션 구독 초기화](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
@@ -156,9 +155,9 @@ ms.locfileid: "52539193"
   
      배포 에이전트 및 병합 에이전트의 **–HistoryVerboseLevel** 매개 변수 및 **–OutputVerboseLevel** 매개 변수를 줄입니다. 이렇게 하면 추적 에이전트 기록 및 출력에 삽입되는 새 행의 수가 줄어듭니다. 대신 상태가 같은 이전 기록 메시지는 새 기록 정보로 업데이트됩니다. 에이전트 작업에 대한 정보를 최대한 많이 가질 수 있도록 테스트, 모니터링 및 디버깅의 정보 표시 수준을 늘립니다.  
   
--   스냅숏 에이전트, 병합 에이전트 및 배포 에이전트의 **–MaxBCPThreads** 매개 변수를 사용합니다(지정된 스레드 수는 컴퓨터의 프로세서 수를 초과할 수 없습니다). 이 매개 변수는 스냅숏이 생성되어 적용될 때 병렬로 수행할 수 있는 대량 복사 작업 수를 지정합니다.  
+-   스냅숏 에이전트, 병합 에이전트 및 배포 에이전트의 **–MaxBCPThreads** 매개 변수를 사용합니다. 지정된 스레드 수는 컴퓨터의 프로세서 수를 초과할 수 없습니다. 이 매개 변수는 스냅숏이 생성되어 적용될 때 병렬로 수행할 수 있는 대량 복사 작업 수를 지정합니다.  
   
--   배포 에이전트와 병합 에이전트의 **–UseInprocLoader** 매개 변수를 사용합니다(게시된 테이블에 XML 열이 포함된 경우 이 매개 변수를 사용할 수 없습니다). 이 매개 변수를 사용할 경우 스냅숏이 적용되면 에이전트가 BULK INSERT 명령을 사용할 수 있습니다.  
+-   배포 에이전트와 병합 에이전트의 **–UseInprocLoader** 매개 변수를 사용합니다. 게시된 테이블에 XML 열이 있는 경우 이 매개 변수를 사용할 수 없습니다. 이 매개 변수를 사용할 경우 스냅숏이 적용되면 에이전트가 BULK INSERT 명령을 사용할 수 있습니다.  
   
  에이전트 프로필 및 명령줄에서 에이전트 매개 변수를 지정할 수 있습니다. 참조 항목:  
   

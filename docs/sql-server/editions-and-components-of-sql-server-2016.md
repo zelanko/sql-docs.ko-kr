@@ -33,15 +33,18 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cd06451150d655d7173025ecdaf7bc4247a22da1
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a5a265f75e983ec6994114196b6890f13d94e850
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206182"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299970"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016의 버전 및 지원하는 기능
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 이 항목에서는 SQL Server 버전에서 지원하는 기능에 대해 자세히 설명합니다.  지금은 SQL Server 2017의 버전에서 지원하는 기능에 대해 변경된 내용이 없습니다.  
   

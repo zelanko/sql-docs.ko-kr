@@ -29,18 +29,18 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2ee63ff261df82926fd67f5014c09f894160d14e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c4efa300619192caf4e07bf22de80d061d653477
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213742"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299260"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 DML, DDL 또는 LOGON 트리거를 만듭니다. 트리거는 데이터베이스 서버에서 이벤트가 발생하면 자동으로 실행되는 특수한 종류의 저장 프로시저입니다. DML 트리거는 DML(데이터 조작 언어) 이벤트를 통해 데이터를 수정하려는 경우에 실행됩니다. DML 이벤트는 테이블이나 뷰에 대한 INSERT, UPDATE 또는 DELETE 문입니다. 테이블 행이 영향을 받는지 여부에 관계없이 유효한 이벤트가 발생할 때 이러한 트리거가 발생합니다. 자세한 내용은 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)을 참조하세요.  
   

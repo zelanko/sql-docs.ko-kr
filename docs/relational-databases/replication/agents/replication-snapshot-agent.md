@@ -16,12 +16,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 93125f56a67d492581dbe68696156e3e95658a02
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: cc33bb52ec613d8e31cd8f61525dc7012ad01d48
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785874"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129793"
 ---
 # <a name="replication-snapshot-agent"></a>복제 스냅숏 에이전트
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -137,7 +137,7 @@ snapshot [ -?]
  > [!NOTE]  
  >  유효한 SSL 인증서는 SQL Server의 정규화된 도메인 이름으로 정의됩니다. -EncryptionLevel을 2로 설정할 때 에이전트가 성공적으로 연결되도록 하려면 로컬 SQL Server에서 별칭을 만듭니다. '별칭 이름' 매개 변수는 서버 이름이어야 하며 '서버' 매개 변수는 SQL Server의 정규화된 이름으로 설정되어야 합니다.
   
- 자세한 내용은 [보안 개요&#40;복제&#41;](../../../relational-databases/replication/security/security-overview-replication.md)를 참조하세요.  
+ 자세한 내용은 [복제 보안 설정 보기 및 수정](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)을 참조하세요.  
   
  **-FieldDelimiter** _field_delimiter_  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 대량 복사 데이터 파일에서 필드 끝을 표시하는 문자 또는 문자 시퀀스입니다. 기본값은 \n\<x$3>\n입니다.  
@@ -180,7 +180,7 @@ snapshot [ -?]
  병렬로 수행할 수 있는 대량 복사 작업 수를 지정합니다. 동시에 존재하는 스레드 및 ODBC 연결의 최대 개수는 **MaxBcpThreads** 와 배포 데이터베이스의 동기화 트랜잭션에 나타나는 대량 복사 요청 수 중 더 작은 값입니다. **MaxBcpThreads** 값은 **0** 보다 크고 하드 코딩된 상한값이 없어야 합니다. 기본값은 **1**입니다.  
   
  \- **MaxNetworkOptimization** [ **0**| **1**]  
- 관련이 없는 삭제 작업을 구독자에 보낼지 여부를 나타냅니다. 관련이 없는 삭제 작업은 구독자의 파티션에 속하지 않는 행에 대해 구독자에게 보내지는 DELETE 명령입니다. 관련이 없는 삭제 작업은 데이터 무결성 또는 일치성에 영향을 주지 않지만 불필요한 네트워크 트래픽을 초래할 수 있습니다. **MaxNetworkOptimization** 의 기본값은 **0**입니다. **MaxNetworkOptimization** 을 **1** 로 설정하면 관련이 없는 삭제 작업이 최소화되므로 네트워크 트래픽이 줄어들고 네트워크 성능은 최대화됩니다. 이 매개 변수를 **1** 로 설정하면 메타데이터 저장소 공간이 늘어나며 여러 수준의 조인 필터와 복잡한 하위 집합 필터가 있는 경우 성능이 저하됩니다. 복제 토폴로지를 신중하게 평가한 후 관련이 없는 삭제 작업으로 인해 네트워크 트래픽이 허용 불가능한 수준으로 높아지는 경우에만 **MaxNetworkOptimization** 을 **1** 로 설정해야 합니다.  
+ 관련이 없는 삭제 작업을 구독자에 보낼지 여부를 나타냅니다. 관련이 없는 삭제 작업은 구독자의 파티션에 속하지 않는 행에 대해 구독자에게 보내지는 DELETE 명령입니다. 관련이 없는 삭제 작업은 데이터 무결성 또는 일치성에 영향을 주지 않지만 불필요한 네트워크 트래픽을 초래할 수 있습니다. **MaxNetworkOptimization** 의 기본값은 **0**입니다. **MaxNetworkOptimization** 을 **1** 로 설정하면 관련이 없는 삭제 작업이 최소화되므로 네트워크 트래픽이 줄어들고 네트워크 성능은 최대화됩니다. 이 매개 변수를 **1** 로 설정하면 메타데이터 스토리지 공간이 늘어나며 여러 수준의 조인 필터와 복잡한 하위 집합 필터가 있는 경우 성능이 저하됩니다. 복제 토폴로지를 신중하게 평가한 후 관련이 없는 삭제 작업으로 인해 네트워크 트래픽이 허용 불가능한 수준으로 높아지는 경우에만 **MaxNetworkOptimization** 을 **1** 로 설정해야 합니다.  
   
 > [!NOTE]
 >  이 매개 변수를 **1**로 설정하는 것은 병합 게시의 동기화 최적화 옵션이 **true**([sp_addmergepublication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)의 **@keep_partition_changes** 매개 변수)로 설정된 경우에만 유용합니다.  

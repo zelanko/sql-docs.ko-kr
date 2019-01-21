@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd062ba7ea48de6cce202b964dea9d80754b75f9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 757d06003da83e2506e2912f0f5e7cd6a03a3e52
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215592"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211114"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN(Transact-SQL)
 
@@ -209,22 +209,29 @@ ALTER LOGIN Mary5 ENABLE;
 ```sql  
 ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';  
 ```  
+
+### <a name="c-changing-the-password-of-a-login-when-logged-in-as-the-login"></a>3. 로그인으로 로그인할 때 로그인 암호 변경 
+ 현재 로그인되어 있는 로그인 암호의 변경을 시도하지만 `ALTER ANY LOGIN` 권한이 없는 경우 `OLD_PASSWORD` 옵션을 지정해야 합니다.    
   
-### <a name="c-changing-the-name-of-a-login"></a>3. 로그인 이름 변경  
+```sql  
+ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>' OLD_PASSWORD = '<oldWeakPasswordHere>';  
+```  
+
+### <a name="d-changing-the-name-of-a-login"></a>D. 로그인 이름 변경  
  다음 예에서는 `Mary5` 로그인의 이름을 `John2`로 변경합니다.  
   
 ```sql  
 ALTER LOGIN Mary5 WITH NAME = John2;  
 ```  
   
-### <a name="d-mapping-a-login-to-a-credential"></a>D. 로그인을 자격 증명에 매핑  
+### <a name="e-mapping-a-login-to-a-credential"></a>E. 로그인을 자격 증명에 매핑  
  다음 예에서는 `John2` 로그인을 `Custodian04` 자격 증명에 매핑합니다.  
   
 ```sql  
 ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;  
 ```  
   
-### <a name="e-mapping-a-login-to-an-extensible-key-management-credential"></a>E. 로그인을 확장 가능 키 관리 자격 증명에 매핑  
+### <a name="f-mapping-a-login-to-an-extensible-key-management-credential"></a>F. 로그인을 확장 가능 키 관리 자격 증명에 매핑  
  다음 예에서는 `Mary5` 로그인을 `EKMProvider1` EKM 자격 증명에 매핑합니다.  
   
   

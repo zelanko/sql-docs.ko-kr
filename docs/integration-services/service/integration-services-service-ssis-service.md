@@ -23,12 +23,12 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67ab5eafeda0ca4c01d21b0fc2379ee7b9efc60d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cac8d0132d5b59d8840071254f9f71a84d2e89ed
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392428"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256528"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 서비스(SSIS 서비스)
   이 섹션의 항목에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 관리하는 Windows 서비스인 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에 대해 설명합니다. 이 서비스는 Integration Services 패키지를 생성, 저장 및 실행하는 데 필요하지 않습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 는 이전 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 버전과의 호환성을 위한 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]서비스를 지원합니다.  
@@ -88,7 +88,7 @@ ms.locfileid: "52392428"
   
 ## <a name="set-the-properties-of-the-service"></a>서비스 속성 설정
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 패키지를 관리하고 모니터링합니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 처음 설치하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스가 시작되고 서비스의 시작 유형이 자동으로 설정됩니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 패키지를 관리하고 모니터링합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 처음 설치하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스가 시작되고 서비스의 시작 유형이 자동으로 설정됩니다.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스가 설치된 후에는 SQL Server 구성 관리자나 서비스 MMC 스냅인을 사용하여 서비스의 속성을 설정할 수 있습니다.  
   
@@ -160,6 +160,28 @@ ms.locfileid: "52392428"
   
 8.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스를 다시 시작합니다.  
 
+### <a name="event-logged-when-permissions-are-missing"></a>권한이 없는 경우 이벤트 로깅
+
+SQL Server 에이전트의 서비스 계정에 Integration Services DCOM **[시작 및 활성화 권한]** 이 없는 경우 SQL Server 에이전트가 SSIS 패키지 작업을 실행할 때 다음 이벤트가 시스템 이벤트 로그에 추가됩니다.
+
+```
+Log Name: System
+Source: **Microsoft-Windows-DistributedCOM**
+Date: 1/9/2019 5:42:13 PM
+Event ID: **10016**
+Task Category: None
+Level: Error
+Keywords: Classic
+User: NT SERVICE\SQLSERVERAGENT
+Computer: testmachine
+Description:
+The application-specific permission settings do not grant Local Activation permission for the COM Server application with CLSID
+{xxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+and APPID
+{xxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487193-2804545603-1466107430) from address LocalHost (Using LRPC) running in the application container Unavailable SID (Unavailable). This security permission can be modified using the Component Services administrative tool.
+```
+
 ## <a name="configure-the-service"></a>서비스 구성
  
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 설치할 때 설치 프로세스는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에 대한 구성 파일을 만들고 설치합니다. 이 구성 파일에는 다음과 같은 설정이 들어 있습니다.  
@@ -177,7 +199,7 @@ ms.locfileid: "52392428"
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스가 중지되면 패키지 실행도 중지됩니다.  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 패키지 저장소에 대한 루트 폴더는 MSDB와 파일 시스템입니다.  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 패키지 스토리지에 대한 루트 폴더는 MSDB와 파일 시스템입니다.  
   
 -   서비스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 로컬 기본 인스턴스에 있는 msdb 데이터베이스에 저장된 패키지를 관리합니다.  
   
@@ -187,7 +209,7 @@ ms.locfileid: "52392428"
   
 ```xml
 \<?xml version="1.0" encoding="utf-8"?>  
-\<DtsServiceConfiguration xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+\<DtsServiceConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <StopExecutingPackagesOnShutdown>true</StopExecutingPackagesOnShutdown>  
   <TopLevelFolders>  
     \<Folder xsi:type="SqlServerFolder">  
@@ -232,7 +254,7 @@ ms.locfileid: "52392428"
   
 ```xml
 \<?xml version="1.0" encoding="utf-8"?>  
-\<DtsServiceConfiguration xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+\<DtsServiceConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <StopExecutingPackagesOnShutdown>true</StopExecutingPackagesOnShutdown>  
   <TopLevelFolders>  
     \<Folder xsi:type="SqlServerFolder">  
@@ -272,7 +294,7 @@ ms.locfileid: "52392428"
 
 ## <a name="connect-to-a-remote-ssis-server"></a>원격 SSIS 서버에 연결
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 나 다른 관리 응용 프로그램에서 원격 서버의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 인스턴스에 연결하려면 응용 프로그램 사용자에게 서버에 대한 특정 권한 집합이 필요합니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 나 다른 관리 애플리케이션에서 원격 서버의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 인스턴스에 연결하려면 애플리케이션 사용자에게 서버에 대한 특정 권한 집합이 필요합니다.  
   
 > [!IMPORTANT]
 > 레거시 Integration Services 서비스의 인스턴스에 직접 연결하려면 Integration Services 서비스가 실행 중인 SQL Server의 버전에 맞는 SSMS(SQL Server Management Studio) 버전을 사용해야 합니다. 예를 들어 SQL Server 2016의 인스턴스에서 실행 중인 레거시 Integration Services 서비스에 연결하려면 SQL Server 2016용으로 릴리스된 SSMS의 버전을 사용해야 합니다. [SSMS(SQL Server Management Studio) 다운로드합니다](../../ssms/download-sql-server-management-studio-ssms.md).
@@ -310,7 +332,7 @@ ms.locfileid: "52392428"
   
 3.  콘솔의 왼쪽 창에서 **구성 요소 서비스** 노드를 확장합니다. **컴퓨터** 노드를 확장하고 **내 컴퓨터**를 확장한 다음 **DCOM 구성** 노드를 클릭합니다.  
   
-4.  **DCOM 구성** 노드를 선택하고 구성할 수 있는 응용 프로그램 목록에서 SQL Server Integration Services 11.0을 선택합니다.  
+4.  **DCOM 구성** 노드를 선택하고 구성할 수 있는 애플리케이션 목록에서 SQL Server Integration Services 11.0을 선택합니다.  
   
 5.  SQL Server Integration Services 11.0을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
@@ -332,7 +354,7 @@ ms.locfileid: "52392428"
   
 1.  명령 프롬프트에서 **dcomcnfg.exe** 를 실행합니다.  
   
-2.  **DCOM 구성 속성** 대화 상자의 **응용 프로그램** 페이지에서 SQL Server Integration Services 11.0을 선택하고 **속성**을 클릭합니다.  
+2.  **DCOM 구성 속성** 대화 상자의 **애플리케이션** 페이지에서 SQL Server Integration Services 11.0을 선택하고 **속성**을 클릭합니다.  
   
 3.  **보안** 페이지를 선택합니다.  
   
@@ -397,11 +419,11 @@ SQL Server 서비스 계정에 **모든 서비스에 대한 위임용으로 이 
   
 1.  제어판에서 **Windows 방화벽**을 두 번 클릭합니다.  
   
-2.   **Windows 방화벽** 대화 상자에서 **예외** 탭을 클릭한 다음 **프로그램 추가**를 클릭합니다.  
+2.  **Windows 방화벽** 대화 상자에서 **예외** 탭을 클릭한 다음 **프로그램 추가**를 클릭합니다.  
   
 3.  **프로그램 추가** 대화 상자에서 **찾아보기**를 클릭하고 Program Files\Microsoft SQL Server\100\DTS\Binn 폴더로 이동한 다음 MsDtsSrvr.exe를 클릭하고 **열기**를 클릭합니다. **확인** 을 클릭하여 **프로그램 추가** 대화 상자를 닫습니다.  
   
-4.   **예외** 탭에서 **포트 추가**를 클릭합니다.  
+4.  **예외** 탭에서 **포트 추가**를 클릭합니다.  
   
 5.  **포트 추가** 대화 상자의 **이름** 상자에 **RPC(TCP/135)** 나 다른 설명이 포함된 이름을 입력하고 **포트 번호** 상자에 **135** 를 입력한 다음 **TCP**를 선택합니다.  
   

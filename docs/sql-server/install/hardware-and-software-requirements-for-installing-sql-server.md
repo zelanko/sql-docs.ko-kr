@@ -45,18 +45,18 @@ ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4b0201d40f68a8d000a102869af6c59e5b462491
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+ms.openlocfilehash: 3844664fd51806bcd9b3b3e6d7c1eb5623ff1453
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306250"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300440"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 이 문서에서는 Windows 운영 체제에서 [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] 설치 및 실행을 위한 최소 하드웨어 및 소프트웨어 요구 사항을 나열합니다. 
 
@@ -95,7 +95,7 @@ ms.locfileid: "53306250"
 |---------------|-----------------|  
 |.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 및 이후 버전을 사용하려면 데이터베이스 엔진, Master Data Services 또는 복제에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6이 필요합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 설치 프로그램이 자동으로 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 설치합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Windows용 Microsoft .NET Framework 4.6웹 설치 관리자 [에서 수동으로](https://support.microsoft.com/kb/3045560)를 설치할 수도 있습니다.<br/><br/>[!INCLUDE[sql2019](../../includes/sssqlv15-md.md)]에는 .NET Framework 4.6.2가 필요합니다. [다운로드 센터](https://www.microsoft.com/download/details.aspx?id=53344)에서 제공됩니다.<br/><br/> [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6에 대한 자세한 내용, 권장 사항 및 지침은 [개발자를 위한 .NET Framework 배포 가이드](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx)를 참조하세요.<br/><br/>[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6을 설치하기 전에 [!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)] 및 [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)]에 [KB2919355](https://support.microsoft.com/kb/2919355)가 필요합니다.|  
 |네트워크 소프트웨어|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 에 대해 지원되는 운영 체제에는 기본 제공 네트워크 소프트웨어가 포함되어 있습니다. 독립 실행형 설치의 명명된 인스턴스 및 기본 인스턴스는 다음 네트워크 프로토콜을 지원합니다. 공유 메모리, 명명된 파이프, TCP/IP 및 VIA.<br/><br/> **참고:** VIA 프로토콜은 장애 조치(failover) 클러스터에서 지원되지 않습니다. SQL Server 인스턴스와 동일한 장애 조치(failover) 클러스터 노드에서 실행 중인 클라이언트 또는 애플리케이션은 공유 메모리 프로토콜을 사용하여 로컬 파이프 주소를 통해 SQL Server에 연결할 수 있습니다. 그러나 이러한 연결은 클러스터에서 인식되지 않으며 인스턴스 장애 조치(failover) 이후에 실패합니다. 따라서 이 연결은 권장되지 않으며 아주 특별한 경우에만 사용해야 합니다.<br/><br/> **중요:** VIA 프로토콜은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> 네트워크 프로토콜 및 네트워크 라이브러리에 대한 자세한 내용은 [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md)를 참조하십시오.|  
-|하드 디스크|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 에는 최소 6GB의 사용 가능한 하드 디스크 공간이 필요합니다.<br/><br/> 디스크 공간 요구 사항은 설치하는 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 구성 요소에 따라 다릅니다. 자세한 내용은 이 문서의 뒷부분에 있는 [하드 디스크 공간 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace)을 참조하세요. 데이터 파일에 대해 지원되는 저장소 유형에 대한 자세한 내용은 [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)을 참조하십시오.|  
+|하드 디스크|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 에는 최소 6GB의 사용 가능한 하드 디스크 공간이 필요합니다.<br/><br/> 디스크 공간 요구 사항은 설치하는 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 구성 요소에 따라 다릅니다. 자세한 내용은 이 문서의 뒷부분에 있는 [하드 디스크 공간 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace)을 참조하세요. 데이터 파일에 대해 지원되는 스토리지 유형에 대한 자세한 내용은 [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)을 참조하십시오.|  
 |드라이브|디스크에서 설치하려면 경우에 따라 DVD 드라이브가 필요합니다.|  
 |모니터|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 에는 Super-VGA(800x600) 이상 해상도의 모니터가 필요합니다.|  
 |인터넷|인터넷 기능을 사용하려면 인터넷에 액세스해야 합니다(요금이 부과될 수 있음).|  
@@ -211,22 +211,22 @@ ms.locfileid: "53306250"
   
  *다운로드한 온라인 설명서 내용에 대한 디스크 공간 요구 사항은 200MB입니다.  
   
-##  <a name="StorageTypes"></a> 데이터 파일 저장소 유형  
- 데이터 파일에 대해 지원되는 저장소 유형은 다음과 같습니다.  
+##  <a name="StorageTypes"></a> 데이터 파일 스토리지 유형  
+ 데이터 파일에 대해 지원되는 스토리지 유형은 다음과 같습니다.  
   
 -   로컬 디스크  
   
--   공유 저장소  
+-   공유 스토리지  
 
--   [S2D\(저장소 공간 다이렉트\)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)
+-   [S2D\(스토리지 공간 다이렉트\)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)
   
 -   SMB 파일 공유  
   
     > [!NOTE]  
-    > SMB 저장소는 독립형 설치 또는 클러스터형 설치에 대한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 파일에 지원되지 않습니다. 대신 직접 연결 저장소, SAN(Storage Area Network) 또는 S2D를 사용합니다.  
+    > SMB 스토리지는 독립형 설치 또는 클러스터형 설치에 대한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 파일에 지원되지 않습니다. 대신 직접 연결 스토리지, SAN(스토리지 영역 네트워크) 또는 S2D를 사용합니다.  
   
     > [!IMPORTANT]  
-    > SMB 저장소는 Windows 파일 서버 또는 타사 SMB 저장 디바이스에서 호스팅할 수 있습니다. Windows 파일 서버가 사용되는 경우 Windows 파일 서버 버전이 2008 이상이어야 합니다. 저장소 옵션으로 SMB 파일 공유를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 대한 자세한 내용은 [Install SQL Server with SMB Fileshare as a Storage Option](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)를 설치 및 실행하기 위한 최소 하드웨어 및 소프트웨어 요구 사항을 나열합니다.  
+    > SMB 스토리지는 Windows 파일 서버 또는 타사 SMB 스토리지 장치에서 호스팅할 수 있습니다. Windows 파일 서버가 사용되는 경우 Windows 파일 서버 버전이 2008 이상이어야 합니다. 스토리지 옵션으로 SMB 파일 공유를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 대한 자세한 내용은 [SMB fileshare 기능이 있는 SQL Server를 스토리지 옵션으로 설치](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
   
     > [!WARNING]  
     > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 설치에서는 tempdb 파일 설치에 대해서만 로컬 디스크를 지원합니다. tempdb 데이터 및 로그 파일에 대해 지정된 경로가 모든 클러스터 노드에서 올바른지 확인하십시오. 장애 조치(failover) 중에 장애 조치 대상 노드에서 tempdb 디렉터리를 사용할 수 없으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스가 온라인이 될 수 없습니다.  

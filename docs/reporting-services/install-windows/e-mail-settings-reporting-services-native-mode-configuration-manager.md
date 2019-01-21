@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ab2d4208d26ca6da5188e635dda8183c545d6f3e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b2c8e71f65f4b6dfe4f5fe74f6030049d67c735f
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020397"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226570"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>전자 메일 설정 - Reporting Services 기본 모드(구성 관리자)
 Reporting Service에는 메일을 통해 보고서를 배포할 수 있는 메일 배달 확장 프로그램이 있습니다. 전자 메일 구독을 정의하는 방법에 따라 배달은 알림, 링크, 첨부 파일 또는 포함된 보고서로 구성될 수 있습니다. 전자 메일 배달 확장 프로그램은 기존 메일 서버 기술을 사용합니다. 메일 서버는 SMTP 서버 또는 전달자여야 합니다. 보고서 서버는 운영 체제에서 제공하는 CDO(Collaboration Data Objects) 라이브러리(cdosys.dll)를 통해 SMTP 서버에 연결합니다.
@@ -109,7 +109,7 @@ Reporting Service에는 메일을 통해 보고서를 배포할 수 있는 메�
      <SendPassword></SendPassword>
 </RSEmailDPConfiguration>
 ```
-## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>메시지의 받는 사람: 필드 설정을 위한 구성 옵션
+## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>메시지의 받는 사람: 필드 설정을 위한  구성 옵션 
 개인 구독 관리 태스크에 의해 부여된 권한에 따라 만들어진 사용자 정의 구독에는 도메인 사용자 계정에 따라 사전 설정된 사용자 이름이 들어 있습니다. 사용자가 구독을 생성할 때 구독을 생성하는 사람의 도메인 사용자 계정이 **받는 사람:** 필드의 수신자 이름으로 자동으로 삽입됩니다.
 
 도메인 사용자 계정과는 다른 전자 메일 계정을 사용하는 SMTP 서버 또는 전달자를 사용하는 경우 SMTP 서버가 보고서를 해당 사용자에게 배달할 수 없습니다.
@@ -160,7 +160,7 @@ Reporting Service에는 메일을 통해 보고서를 배포할 수 있는 메�
 
 8. 파일을 저장합니다.
 
-     보고서 서버가 자동으로 새 설정을 사용하므로 서비스를 다시 시작할 필요가 없습니다.  추가 SMTP 설정을 지정하여 보고서 서버 전자 메일 배달에 SMTP 서버가 사용되는 방법을 추가로 구성할 수 있습니다.
+     보고서 서버가 자동으로 새 설정을 사용하므로 서비스를 다시 시작할 필요가 없습니다. 추가 SMTP 설정을 지정하여 보고서 서버 전자 메일 배달에 SMTP 서버가 사용되는 방법을 추가로 구성할 수 있습니다.
 
 ## <a name="configuration-options-for-local-smtp-service"></a>로컬 SMTP 서비스를 위한 구성 옵션
 보고서 서버 전자 메일 배달을 테스트하거나 문제를 해결하려면 로컬 SMTP 서비스를 구성하는 것이 효율적입니다. 로컬 SMTP 서비스는 기본적으로 활성화되어 있지 않습니다.
@@ -183,7 +183,7 @@ Reporting Service에는 메일을 통해 보고서를 배포할 수 있는 메�
 
 3. IIS(인터넷 정보 서버)를 설치할 서버를 선택하고 **다음**을 선택합니다.
 
-4. **서버 역할** * 페이지에서 *다음*을 선택합니다.
+4. **서버 역할** 페이지에서 *다음*을 선택합니다.
      
 5. *기능* 페이지에서 **SMTP 서버** 를 선택하고 **다음**을 선택합니다.
 

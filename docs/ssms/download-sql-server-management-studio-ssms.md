@@ -24,18 +24,18 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f186989b4b6edad18333bd93cc89a69c65c2a977
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 685e2ca3c202a93cc290cce4342fe8eaa8151c10
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590027"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298691"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 SSMS는 SQL Server에서 Azure SQL Database까지 모든 SQL 인프라를 관리하기 위한 통합 환경입니다. SSMS는 SQL의 인스턴스를 구성, 모니터링 및 관리하는 도구를 제공합니다. SSMS를 사용하면 애플리케이션에 사용되는 데이터 계층 구성 요소를 배포, 모니터링 및 업그레이드하고 쿼리 및 스크립트를 작성할 수 있습니다.
 
@@ -159,7 +159,7 @@ SSMS
 
 ## <a name="feedback"></a>피드백
 
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 클라이언트 도구 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 클라이언트 도구 포럼](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

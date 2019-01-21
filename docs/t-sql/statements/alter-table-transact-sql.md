@@ -60,19 +60,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56dff4af5345359e5da37e4aae355f5c56b8228a
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 139b76fc90ba66ed34720be68e8c016263ea947b
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980488"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300480"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE(Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 열과 제약 조건을 변경, 추가 또는 삭제하거나 파티션을 재할당하고 다시 작성하거나 제약 조건과 트리거를 설정 또는 해제하여 테이블 정의를 수정합니다.
 

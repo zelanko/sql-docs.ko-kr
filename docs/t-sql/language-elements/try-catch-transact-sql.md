@@ -30,15 +30,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68900243001edf7d9dcb39bcf10bf13e24bd0c48
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 1487803dbbcb2ef09dd182dea2eaffa6a967badf
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997585"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298930"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] Visual C# 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ 언어의 예외 처리와 유사한 방식으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서 오류 처리를 구현합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 그룹을 TRY 블록으로 묶을 수 있으며 TRY 블록 내에서 오류가 발생하는 경우 CATCH 블록으로 묶은 또 다른 문의 그룹으로 제어가 전달됩니다.  
   

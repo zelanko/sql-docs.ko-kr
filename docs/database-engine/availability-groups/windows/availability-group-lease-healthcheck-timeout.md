@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1c337e4a43082cef846623073054ae75513dc31
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d04f3383409e51be48498853068c93b2d1a66725
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209082"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211094"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Always On 가용성 그룹의 임대, 클러스터 및 상태 확인 제한 시간의 메커니즘 및 지침 
 
@@ -46,7 +46,7 @@ Always On 리소스 DLL은 내부 SQL Server 구성 요소의 상태를 모니�
 
 임대 메커니즘은 SQL Server와 Windows Server 장애 조치(failover) 클러스터 간에 동기화를 적용합니다. 장애 조치 명령이 실행될 때 클러스터 서비스는 현재 주 복제본의 리소스 DLL에 오프라인 호출을 수행합니다. 먼저 리소스 DLL은 저장 프로시저를 사용하여 AG를 오프라인으로 전환하려고 합니다. 이 저장 프로시저가 실패하거나 시간 제한을 초과하면 클러스터 서비스에 다시 오류가 보고됩니다. 그러면 종료 명령이 발급됩니다. 종료는 다시 동일한 저장 프로시저를 실행하려고 하지만 이번에 클러스터는 새 복제본에서 AG를 온라인 상태로 전환하기 전에 리소스 DLL가 성공 또는 실패를 보고하기를 기다리지 않습니다. 이 두 번째 프로시저 호출에 실패하는 경우 리소스 호스트는 인스턴스를 오프라인 상태로 전환하는 임대 메커니즘을 사용해야 합니다. 리소스 DLL을 호출하여 AG를 오프라인 상태로 전환하면 리소스 DLL은 임대 중지 이벤트에 신호를 보내며 SQL Server 임대 작업자 스레드를 다시 시작하여 AG를 오프라인 상태로 전환합니다. 이 중지 이벤트가 신호를 보내지 않더라도 임대는 만료되고 복제본은 확인 상태로 전환됩니다. 
 
-임대는 주로 기본 인스턴스와 클러스터 간의 동기화 메커니즘이지만 그렇지 않으면 장애 조치하지 않아도 되는 실패 조건을 만들 수도 있습니다. 예를 들어 높은 CPU, 메모리 부족 상태, 메모리 덤프를 생성하는 동안 응답하지 못하는 SQL 프로세스, 시스템 전반의 중지 또는 tempdb 압력은 임대 작업자 스레드를 손상시켜 SQL 인스턴스에서 임대 갱신을 방지하고 장애 조치(failover)를 발생시킬 수 있습니다. 
+임대는 주로 기본 인스턴스와 클러스터 간의 동기화 메커니즘이지만 그렇지 않으면 장애 조치하지 않아도 되는 실패 조건을 만들 수도 있습니다. 예를 들어 높은 CPU, 메모리 부족 상태, 메모리 덤프를 생성하는 동안 응답하지 못하는 SQL 프로세스, 시스템 전반의 중지, 쿼럼 손실로 인해 오프라인으로 전환된 클러스터(WSFC) 또는 tempdb 압력은 임대 작업자 스레드를 손상시켜 SQL 인스턴스에서 임대 갱신을 방지하고 장애 조치(failover)를 발생시킬 수 있습니다. 
 
 ## <a name="guidelines-for-cluster-timeout-values"></a>클러스터 제한 시간 값에 대한 지침 
 

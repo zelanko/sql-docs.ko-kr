@@ -13,12 +13,12 @@ ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 58b0010f2440a95b698bb37d99e8e3bc11cce218
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 57330040f7fc5ba1fdd48278b69a46bcf7eaee46
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209982"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226550"
 ---
 # <a name="create-an-always-on-availability-group-using-powershell"></a>PowerShell을 사용하여 Always On 가용성 그룹 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "53209982"
 ###  <a name="SummaryPSStatements"></a> 태스크 및 해당 PowerShell cmdlet 요약  
  다음 표에서는 가용성 그룹을 구성하는 데 필요한 기본 태스크와 PowerShell cmdlet이 지원하는 기능을 보여 줍니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 태스크는 표에 나오는 순서대로 수행해야 합니다.  
   
-|태스크|PowerShell cmdlet(사용 가능한 경우) 또는 Transact-SQL 문|태스크를 수행할 위치**\***|  
+|태스크|PowerShell cmdlet(사용 가능한 경우) 또는 Transact-SQL 문|태스크를 수행할 위치 **&#42;**|  
 |----------|--------------------------------------------------------------------|---------------------------------|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스당 하나의 데이터베이스 미러링 엔드포인트 만들기|**New-SqlHadrEndPoint**|데이터베이스 미러링 엔드포인트가 없는 각 서버 인스턴스에서 실행합니다.<br /><br /> 참고: 기존 데이터베이스 미러링 엔드포인트를 변경하려면 **Set-SqlHadrEndpoint**를 사용합니다.|  
 |가용성 그룹 만들기|먼저 **New-SqlAvailabilityReplica** cmdlet과 **-AsTemplate** 매개 변수를 사용하여 가용성 그룹에 포함할 두 개의 각 가용성 복제본에 대한 메모리 내 가용성 복제본 개체를 만듭니다.<br /><br /> 그런 다음 **New-SqlAvailabilityGroup** cmdlet을 사용하고 가용성 복제본 개체를 참조하여 가용성 그룹을 만듭니다.|초기 주 복제본을 호스트할 서버 인스턴스에서 실행합니다.|  

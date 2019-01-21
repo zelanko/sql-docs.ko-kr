@@ -1,7 +1,7 @@
 ---
 title: FTP를 통해 스냅숏 배달 | Microsoft 문서
 ms.custom: ''
-ms.date: 03/17/2017
+ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,40 +15,28 @@ ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2dab89b5eacc0cd8c7bd639cdb2c92b1384dcea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e06cc6312c88139be3d4225ddd4e92fe432f4bb3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699294"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126193"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>FTP를 통해 스냅숏 배달
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 FTP를 통해 스냅숏을 배달하는 방법에 대해 설명합니다.  
+
+기본적으로 스냅숏은 UNC(Universal Naming Convention) 공유로 정의된 폴더에 저장됩니다. 복제 시 UNC 공유 대신 FTP(파일 전송 프로토콜) 공유를 지정할 수도 있습니다. FTP를 사용하려면 FTP 서버를 구성한 다음 FTP를 사용할 하나의 게시와 하나 이상의 구독을 구성합니다. FTP 서버 구성 방법은 인터넷 정보 서비스(IIS) 설명서를 참조하십시오. 게시에 FTP 정보를 지정하면 해당 게시에 대한 구독은 기본적으로 FTP를 사용합니다. FTP는 IIS를 실행하는 컴퓨터가 방화벽에 의해 배포자와 분리되어 있는 경우에만 웹 동기화에 사용됩니다. 이 경우 FTP는 IIS를 실행 중인 컴퓨터와 배포자의 스냅숏을 전송하는 데 사용할 수 있습니다. 스냅숏을 구독자에게 전송할 때는 항상 HTTPS를 사용합니다.  
   
- **항목 내용**  
+> [!IMPORTANT]  
+>  FTP 암호는 저장된 후 구독자, 또는 웹 동기화를 사용하는 경우 IIS를 실행하는 컴퓨터에서 일반 텍스트 형태로 FTP 서버에 전달되므로 FTP 공유 대신 Microsoft Windows 인증 및 UNC 공유를 사용하는 것이 좋습니다. 또한 단일 계정에서 스냅숏 공유에 대한 액세스를 제어하므로 필터링된 병합 게시의 구독자만 자신의 데이터 파티션에서 스냅숏으로 액세스하게 할 수는 없습니다.  
   
--   **시작하기 전 주의 사항:**  
-  
-     [제한 사항](#Restrictions)  
-  
-     [필수 구성 요소](#Prerequisites)  
-  
-     [보안](#Security)  
-  
--   **다음을 사용하여 FTP를 통해 스냅숏을 배달하려면**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
-  
-###  <a name="Restrictions"></a> 제한 사항  
+
+## <a name="limitations-and-restrictions"></a>제한 사항  
   
 -   스냅숏 에이전트는 지정한 디렉터리에 대해 쓰기 권한이 있어야 하며 배포 에이전트 또는 병합 에이전트는 읽기 권한이 있어야 합니다. 끌어오기 구독을 사용하는 경우 공유 디렉터리를 \\\ftpserver\home\snapshots과 같이 UNC(Universal Naming Convention) 경로로 지정해야 합니다. 자세한 내용은 [스냅숏 폴더 보안 설정](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+## <a name="prerequisites"></a>사전 요구 사항  
   
 -   FTP(파일 전송 프로토콜)를 사용하여 스냅숏 파일을 전송하려면 먼저 FTP 서버를 구성해야 합니다. 자세한 내용은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 인터넷 정보 서비스(IIS) 설명서를 참조하세요.  
   
@@ -76,14 +64,12 @@ ms.locfileid: "47699294"
   
 3.  스냅숏 에이전트가 스냅숏 파일을 2단계에서 지정한 디렉터리에 쓰도록 지정합니다. 예를 들어 스냅숏 에이전트가 스냅숏 파일을 \\\ftpserver\home\snapshots\ftp에 쓰도록 하려면 다음 두 위치 중 하나에 \\\ftpserver\home\snapshots 경로를 지정해야 합니다.  
   
-    -   이 게시와 연결된 배포자의 기본 스냅숏 위치  
-  
-         기본 스냅숏 위치 지정 방법은 [기본 스냅숏 위치 지정&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-the-default-snapshot-location-sql-server-management-studio.md)을 참조하세요.  
-  
+    -   이 게시와 연결된 배포자의 기본 스냅숏 위치    
     -   이 게시의 대체 스냅숏 폴더 위치. 대체 위치는 스냅숏이 압축된 경우에 필요합니다.  
+
+스냅숏 폴더 위치 속성을 수정하는 방법에 대한 자세한 내용은 [스냅숏 옵션](../snapshot-options.md)을 참조하세요.
   
-         **게시 속성 - \<게시>** 대화 상자의 스냅숏 페이지에 있는 **다음 폴더에 파일 보관** 텍스트 상자에 경로를 입력합니다. 대체 스냅숏 폴더 위치에 대한 자세한 내용은 [Alternate Snapshot Folder Locations](../../../relational-databases/replication/alternate-snapshot-folder-locations.md)를 참조하세요.  
-  
+
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
@@ -186,7 +172,6 @@ ms.locfileid: "47699294"
   
 ## <a name="see-also"></a>참고 항목  
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [FTP를 통해 스냅숏 전송](../../../relational-databases/replication/transfer-snapshots-through-ftp.md)   
  [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [스냅숏으로 구독 초기화](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
   

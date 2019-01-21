@@ -14,18 +14,18 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 20ebb8bc0658b7d31388d6f514102fba8db4a8e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12fbfd6c6e6ba6e6a3bb015aed5375553fcd735f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634311"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131903"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Windows 동기화 관리자를 사용하여 구독 동기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 가 동기화 관리자와 같은 컴퓨터에서 실행 중인 경우에는 구독을 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시와 동기화하는 데만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 동기화 관리자를 사용할 수 있습니다. 동기화 관리자를 사용하면 오프라인 파일과 웹 페이지를 동기화할 수도 있습니다. 동기화 관리자를 사용하려면 다음을 수행하십시오.  
   
-1.  **구독 속성 - \<Subscriber>:\<SubscriptionDatabase>** 대화 상자에서 Windows 동기화 관리자로 전체 구독의 동기화를 사용할 수 있습니다. 이 대화 상자에 액세스하는 방법은 [끌어오기 구독 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)을 참조하세요.  
+1.  **구독 속성 - \<Subscriber>: \<SubscriptionDatabase>** 대화 상자에서 Windows 동기화 관리자로 끌어오기 구독 동기화를 설정합니다. 이 대화 상자에 액세스하는 방법은 [끌어오기 구독 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)을 참조하세요.  
   
 2.  Windows의 **시작** 메뉴를 통해 동기화 관리자에 액세스합니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "47634311"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Windows 동기화 관리자를 통한 끌어오기 구독 동기화가 가능하도록 설정하려면  
   
-1.  **구독 속성-\<Subscriber>: \<SubscriptionDatabase>** 대화 상자의 **일반** 페이지에서 **Windows 동기화 관리자 사용** 옵션에 **사용** 값을 선택합니다.  
+1.  **구독 속성 - \<구독자>: \<SubscriptionDatabase>** 대화 상자의 **일반** 페이지에서 **Windows 동기화 관리자 사용** 옵션에 대한 **사용** 값을 선택합니다.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -99,7 +99,7 @@ ms.locfileid: "47634311"
   
 ### <a name="to-use-the-interactive-resolver"></a>대화형 해결 프로그램을 사용하려면  
   
-1.  대화형 해결을 사용할 아티클과 구독을 설정합니다. 자세한 내용은 [병합 아티클에 대한 상호 충돌 해결 지정](../../relational-databases/replication/publish/specify-interactive-conflict-resolution-for-merge-articles.md)을 참조하세요.  
+1.  대화형 해결을 사용할 아티클과 구독을 설정합니다. 자세한 내용은 [병합 복제 속성 지정](../../relational-databases/replication/merge/specify-merge-replication-properties.md)을 참조하세요.  
   
 2.  동기화 관리자에서 구독이 동기화를 시작하면 대화형 충돌 해결이 설정되어 있고 하나 이상의 아티클에 대한 충돌이 있는 경우 대화형 해결 프로그램이 자동으로 시작됩니다. 대화형 해결 프로그램은 권장 해결 방법(게시 및 구독을 만들 때 지정한 해결 프로그램에 기반함)과 함께 한 번에 하나의 충돌을 표시합니다.  
   

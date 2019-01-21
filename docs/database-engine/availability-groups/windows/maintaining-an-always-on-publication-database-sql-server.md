@@ -14,12 +14,12 @@ ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1c8c674eb0e86d0b78348f07fb95259327582cc
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 00de66d272688a7b61b4847e38a41f4738457d92
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208732"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300150"
 ---
 # <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>Always On 가용성 그룹의 일부로 복제된 게시자 데이터베이스 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "53208732"
     > [!NOTE]  
     >  게시된 멤버 데이터베이스가 있는 가용성 그룹을 제거하거나 게시된 데이터베이스를 가용성 그룹에서 제거하면 게시된 데이터베이스의 모든 복사본이 복구 중 상태로 남게 됩니다. 데이터베이스를 복원하면 각각이 게시된 데이터베이스로 표시됩니다. 한 복사본에만 게시 메타데이터를 유지해야 합니다. 게시된 데이터베이스 복사본에 대해 복제를 비활성화하려면 먼저 모든 구독 및 게시를 데이터베이스에서 제거합니다.  
   
-     **sp_dropsubscription** 을 실행하여 게시 구독을 제거합니다. 배포자에서 활성 게시 데이터베이스에 대한 메타데이터를 유지하려면 *@ignore_distributributor* 매개 변수를 1로 설정해야 합니다.  
+     **sp_dropsubscription** 을 실행하여 게시 구독을 제거합니다. 배포자에서 활성 게시 데이터베이스에 대한 메타데이터를 유지하려면 *@ignore_distributor* 매개 변수를 1로 설정해야 합니다.  
   
     ```  
     USE MyDBName;  
@@ -115,7 +115,7 @@ ms.locfileid: "53208732"
   
 -   [복제, 변경 내용 추적, 변경 데이터 캡처 및 Always On 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
   
--   [관리&#40;복제&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [복제 관리 FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
 -   [복제 구독자 및 Always On 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   

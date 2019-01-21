@@ -11,16 +11,19 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e9dd7920f18ab6a04b6993f8398204a9425e5ffa
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: c854d2e332d38443646de560a906826c419705b7
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591907"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300550"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
-
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
+
 이 문서에서는 SSMS의 현재 버전과 이전 버전에 대한 업데이트, 향상 및 버그 수정에 대한 세부 정보를 제공합니다. [이전 버전의 SSMS](#previous-ssms-releases)를 다운로드하세요.
 
 
@@ -1010,7 +1013,7 @@ SQL Azure 개체를 대상으로 지정할 때 "스크립트" 단추를 다시 �
 
 - “URL에서 복원”에서 국가 클라우드에 대한 지원 추가
 - 이제 QueryStoreUI 보고서는 sys.query_store_runtime_stats에서 추가 메트릭(RowCount, DOP, CLR Time 등)을 지원합니다.
-- Azure SQL Database에 IntelliSense 지원https://connect.microsoft.com/SQLServer/feedback/details/3100677/ssms-2016-would-be-nice-to-have-intellisense-on-azure-sql-databases
+- Azure SQL Database에 IntelliSense 지원 https://connect.microsoft.com/SQLServer/feedback/details/3100677/ssms-2016-would-be-nice-to-have-intellisense-on-azure-sql-databases
 - 보안: 연결 대화 상자가 기본적으로 Azure SQL DB 연결을 위해 신뢰하는 서버 인증서 및 요청 암호화에 연결되지 않음
 - Linux에서 SQL Server에 대한 지원과 관련된 일반 개선 사항:
  - 데이터베이스 메일 노드의 재등장
@@ -1079,9 +1082,9 @@ The connection is broken and recovery is not possible. The client driver attempt
 - SSMS 연결에 대해 일관성 없는 “애플리케이션 이름” 해결. https://connect.microsoft.com/SQLServer/feedback/details/3135115
 - SSMS가 SQL Azure에 대한 정확한 스크립트(DATA_COMPRESSIONS 옵션을 포함한 테이블 및 인덱스)를 생성하지 않았던 문제 해결. https://connect.microsoft.com/SQLServer/feedback/details/3133148
 - 사용자가 빠른 실행을 위해 CTRL+Q 바로 가기를 사용할 수 없었던 문제 해결(참고: 이제 쿼리 편집기에서 "IntelliSense 사용" 옵션을 설정/해제하기 위한 새 키 바인딩은 CTRL+B, CTRL+I). https://connect.microsoft.com/SQLServer/feedback/details/3131968
-- "데이터베이스 복원"에서 사용자 지정 도메인이 정의된 계정을 가진 구독에서 저장소 계정을 선택하려고 할 때 SSMS가 예외를 throw했던 문제 해결
+- "데이터베이스 복원"에서 사용자 지정 도메인이 정의된 계정을 가진 구독에서 스토리지 계정을 선택하려고 할 때 SSMS가 예외를 throw했던 문제 해결
 - "데이터베이스 다이어그램"에서 SSMS가 “인덱스가 배열의 범위 밖에 있습니다.” 오류를 throw하고 사용자가 "테이블 보기"를 표준이 아닌 것으로 변경할 수 없었던 문제 해결. https://connect.microsoft.com/SQLServer/feedback/details/3133792 및 https://connect.microsoft.com/SQLServer/feedback/details/3135326
-- "URL에 백업/복원"에서 SSMS가 클래식 저장소 계정을 열거하지 않았던 문제 해결.
+- "URL에 백업/복원"에서 SSMS가 클래식 스토리지 계정을 열거하지 않았던 문제 해결.
 - 스키마 바운드 보안 개체를 DB 역할에 추가하려고 할 때 예외가 throw되었던 문제 해결. https://connect.microsoft.com/SQLServer/feedback/details/3118143
 - SSMS에서 다음 오류가 간헐적으로 표시되는 문제를 해결했습니다. “데이터가 Null입니다. 이 메서드 또는 속성은 Null 값에 호출될 수 없습니다." 테이블 노드를 확장하는 경우 https://connect.microsoft.com/SQLServer/feedback/details/3136283
 - DTA: 특정 경계 값으로 파티션 함수를 평가할 때 DTAEngine.exe가 힙 손상으로 종료되는 문제를 해결했습니다.

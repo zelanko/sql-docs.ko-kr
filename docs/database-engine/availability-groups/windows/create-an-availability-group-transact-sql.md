@@ -13,12 +13,12 @@ ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44944c4dcc4c3f4b8cc45ee6f3ba57863316b9de
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4313725b5fc18b25749fabb6163361755de66715
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213022"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226610"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>T-SQL(Transact-SQL)을 사용하여 Always On 가용성 그룹 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "53213022"
 ###  <a name="SummaryTsqlStatements"></a> 태스크 및 해당 Transact-SQL 문 요약  
  다음 표에서는 가용성 그룹을 만들고 구성하는 데 필요한 기본 태스크와 이러한 태스크에 사용할 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 보여 줍니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 태스크는 표에 나오는 순서대로 수행해야 합니다.  
   
-|태스크|Transact-SQL 문|태스크를 수행할 위치**\***|  
+|태스크|Transact-SQL 문|태스크를 수행할 위치 **&#42;**|  
 |----------|----------------------------------|---------------------------------|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스당 하나의 데이터베이스 미러링 엔드포인트 만들기|[CREATE ENDPOINT](../../../t-sql/statements/create-endpoint-transact-sql.md) *endpointName* ... FOR DATABASE_MIRRORING|데이터베이스 미러링 엔드포인트가 없는 각 서버 인스턴스에서 실행합니다.|  
 |가용성 그룹 만들기|[CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)|초기 주 복제본을 호스트할 서버 인스턴스에서 실행합니다.|  

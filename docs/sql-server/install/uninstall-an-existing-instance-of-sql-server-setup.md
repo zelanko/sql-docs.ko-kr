@@ -16,15 +16,18 @@ ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e9b113a9ef0ca0905fa90833a5c9568a9318834a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 07399ad0d6b632c4d7c73aa7d7c7d1f74d8ffa7c
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698817"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299250"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>SQL Server의 기존 인스턴스 제거(설치)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  > [!div class="nextstepaction"]
+  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
   이 문서에서는 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 제거하는 방법에 대해 설명합니다. 이 문서의 단계를 수행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 설치할 수 있도록 시스템을 준비할 수도 있습니다.  
   

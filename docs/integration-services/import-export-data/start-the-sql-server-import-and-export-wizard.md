@@ -16,14 +16,17 @@ ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ab2820f37466cfd14a9d29791a7999a70b48dade
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: ed4bb739f6ca74e5e0744af1ed40b37196995213
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383578"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299060"
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사 시작
+
+  > [!div class="nextstepaction"]
+  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 이 항목에서 설명하는 방법 중 하나를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사를 시작하여 지원되는 데이터 원본에서 데이터를 가져오거나 내보낼 수 있습니다.
 
@@ -69,7 +72,7 @@ ms.locfileid: "49383578"
   
 ## <a name="startSSMS"></a> SSMS(SQL Server Management Studio)
 ### <a name="start-the-sql-server-import-and-export-wizard-from-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)에서 SQL Server 가져오기 및 내보내기 마법사 시작    
-1.   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.
     
 2.  **데이터베이스**를 확장합니다.
 3.  데이터베이스를 마우스 오른쪽 단추로 클릭합니다.

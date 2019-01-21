@@ -47,18 +47,18 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 60938c31712e8bb6b08579cab099baaaf99bb0aa
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 4cb25fff7ac946808ecad9cb4d0e8594f32ad5a2
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980389"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300570"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 새 테이블을 만듭니다.  
   
@@ -402,8 +402,8 @@ column_name <data_type>
  테이블에 큰 값 열이 없는 경우에는 TEXTIMAGE_ON이 허용되지 않습니다. *partition_scheme*을 지정하면 TEXTIMAGE_ON을 지정할 수 없습니다. **"** default **"** 를 지정하거나 TEXTIMAGE_ON을 전혀 지정하지 않으면 큰 값 열이 기본 파일 그룹에 저장됩니다. CREATE TABLE에 지정된 큰 값 열 데이터를 저장한 후에는 곧이어 변경할 수 없습니다.  
 
 > [!NOTE]
-> Varchar(max), nvarchar(max), varbinary(max), xml 및 큰 UDT 값은 레코드에 맞는 한 최대 8000바이트까지 데이터 행에 직접 저장됩니다. 값이 레코드에 맞지 않으면 포인터는 행 내부에 저장되고 나머지는 행 외부 LOB 저장 공간에 저장됩니다. 0이 기본값입니다.
-> TEXTIMAGE_ON은 "LOB 저장 공간"의 위치만 변경하며, 데이터가 행 내부에 저장되는 경우 아무 영향도 주지 않습니다. sp_tableoption의 large value types out of row 옵션을 사용하여 전체 LOB 값을 행 외부에 저장합니다. 
+> Varchar(max), nvarchar(max), varbinary(max), xml 및 큰 UDT 값은 레코드에 맞는 한 최대 8000바이트까지 데이터 행에 직접 저장됩니다. 값이 레코드에 맞지 않으면 포인터는 행 내부에 저장되고 나머지는 행 외부 LOB 스토리지 공간에 저장됩니다. 0이 기본값입니다.
+> TEXTIMAGE_ON은 "LOB 스토리지 공간"의 위치만 변경하며, 데이터가 행 내부에 저장되는 경우 아무 영향도 주지 않습니다. sp_tableoption의 large value types out of row 옵션을 사용하여 전체 LOB 값을 행 외부에 저장합니다. 
 > 
 > 
 > [!NOTE]
@@ -609,7 +609,7 @@ column_name <data_type>
    
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
- **varbinary(max)** 열에 대해서만 유효합니다. **varbinary(max)** BLOB 데이터에 대한 FILESTREAM 저장소를 지정합니다.  
+ **varbinary(max)** 열에 대해서만 유효합니다. **varbinary(max)** BLOB 데이터에 대한 FILESTREAM 스토리지를 지정합니다.  
   
  테이블에는 ROWGUIDCOL 특성을 갖는 **uniqueidentifier** 데이터 형식의 열도 있어야 합니다. 이 열은 Null 값을 허용하지 않으며 UNIQUE 또는 PRIMARY KEY 단일 열 제약 조건을 가져야 합니다. 열의 GUID 값은 응용 프로그램에서 데이터를 삽입할 때 제공하거나 NEWID () 함수를 사용하는 DEFAULT 제약 조건을 통해 제공해야 합니다.  
   
@@ -981,7 +981,7 @@ CREATE TABLE 문의 일부로 열 및 테이블 인덱스를 지정할 수 있�
   
  로컬 임시 테이블 이름 앞에는 숫자 기호가 하나 추가되고(예: #*table_name*) 전역 임시 테이블 이름 앞에는 숫자 기호가 두 개 추가됩니다(예: ##*table_name*).  
   
- SQL 문은 예를 들어 CREATE TABLE 문의 *table_name*에 대해 지정된 값을 사용하여 임시 테이블을 참조합니다####.  
+ SQL 문은 예를 들어 CREATE TABLE 문의 *table_name*에 대해 지정된 값을 사용하여 임시 테이블을 참조합니다.  
   
 ```sql  
 CREATE TABLE #MyTempTable (cola INT PRIMARY KEY);  
@@ -990,6 +990,8 @@ INSERT INTO #MyTempTable VALUES (1);
 ```  
   
  단일 저장 프로시저나 일괄 처리 내에 둘 이상의 임시 테이블을 만드는 경우 그 이름이 서로 달라야 합니다.  
+ 
+ 임시 테이블을 만들거나 테이블에 액세스할 때 *schema_name*을 포함하면 무시됩니다.  모든 임시 테이블은 dbo 스키마에서 생성됩니다.
   
  여러 사용자가 동시에 실행할 수 있는 저장 프로시저 또는 응용 프로그램에서 로컬 임시 테이블을 만드는 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 다른 사용자가 만든 테이블을 구별할 수 있어야 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 내부적으로 각 로컬 임시 테이블 이름에 숫자 접미사를 추가하여 구별합니다. **tempdb**의 **sysobjects** 테이블에 저장된 것과 같은 임시 테이블의 전체 이름은 CREATE TABLE 문에서 지정한 테이블 이름과 시스템이 생성한 숫자 접미사로 구성됩니다. 접미사를 추가해야 하므로 로컬 임시 이름으로 지정된 *table_name*은 116자를 초과할 수 없습니다.  
   

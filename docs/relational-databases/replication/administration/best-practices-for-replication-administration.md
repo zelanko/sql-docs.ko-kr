@@ -14,16 +14,16 @@ ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 791c9fc5b7a411a094d6fedc8aa16290baeea234
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaf073341709e2c612f89d70f566f3b2dd09283d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763351"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130333"
 ---
 # <a name="best-practices-for-replication-administration"></a>최선의 복제 관리 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  복제를 구성한 후에는 복제 토폴로지 관리 방법을 이해하는 것이 중요합니다. 이 항목에서는 다양한 영역의 작업에 대한 기본적인 수행 방법과 각 영역에 대한 추가 정보를 제공하는 링크를 제공합니다. 이 항목에 제공된 [복제 관리자를 위한 질문과 대답](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)의 모범 사례 지침 외에도 FAQ 항목을 읽고 일반적인 질문 사항과 문제점에 대해 숙지하세요.  
+  복제를 구성한 후에는 복제 토폴로지 관리 방법을 이해하는 것이 중요합니다. 이 항목에서는 다양한 영역의 작업에 대한 기본적인 수행 방법과 각 영역에 대한 추가 정보를 제공하는 링크를 제공합니다. 이 항목에 제공된 최상의 수행 방법 외에 다음의 FAQ 항목을 읽고 일반적인 질문 사항과 문제점에 대해 숙지하십시오. [복제 관리자를 위한 질문과 대답](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
   
  최선의 수행 방법을 다음과 같은 두 가지 영역으로 나누면 이해가 쉽습니다.  
   
@@ -114,28 +114,28 @@ ms.locfileid: "47763351"
 ## <a name="monitor-the-replication-topology"></a>복제 토폴로지 모니터링  
  복제 토폴로지를 적용하고 임계값과 경고를 구성한 다음에는 복제를 정기적으로 모니터링하는 것이 좋습니다. 복제 토폴로지의 모니터링은 복제 배포의 중요한 부분입니다. 복제 작업이 배포되므로 복제에 관련된 모든 컴퓨터에서 활동 및 상태를 추적해야 합니다. 다음 도구를 사용하여 복제를 모니터링할 수 있습니다.  
   
--   복제 모니터는 복제를 모니터링하는 가장 중요한 도구로 이를 사용하여 복제 토폴로지의 전체적 상태를 모니터링할 수 있습니다. 자세한 내용은 [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)을 참조하세요.  
+-   복제 모니터는 복제를 모니터링하는 가장 중요한 도구로 이를 사용하여 복제 토폴로지의 전체적 상태를 모니터링할 수 있습니다. 자세한 내용은 [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)을 참조하세요.  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)] 및 RMO(복제 관리 개체)는 복제 모니터링을 위한 인터페이스를 제공합니다. 자세한 내용은 [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)을 참조하세요.  
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)] 및 RMO(복제 관리 개체)는 복제 모니터링을 위한 인터페이스를 제공합니다. 자세한 내용은 [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)을 참조하세요.  
   
 -   복제 성능을 모니터링하는 데에는 시스템 모니터도 유용할 수 있습니다. 자세한 내용은 [Monitoring Replication with System Monitor](../../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md)을 참조하세요.  
   
 ## <a name="validate-data-periodically"></a>주기적으로 데이터 유효성 검사  
  복제에 대해 유효성 검사를 반드시 수행할 필요는 없지만 트랜잭션 복제 및 병합 복제에 대해 주기적으로 유효성 검사를 실행하는 것이 좋습니다. 유효성 검사를 사용하면 구독자의 데이터가 게시자의 데이터와 일치하는지 확인할 수 있습니다. 유효성 검사 성공은 검사를 수행한 시점에 게시자의 모든 변경 내용이 구독자로 복제되어(구독자에 업데이트가 지원되는 경우에는 구독자에서 게시자로도 복제됨) 두 데이터베이스가 동기화 상태에 있음을 나타냅니다.  
   
- 유효성 검사를 게시 데이터베이스의 백업 일정에 따라 수행하는 것이 좋습니다. 예를 들어 게시 데이터베이스를 일주일에 한 번 전체 백업하면 유효성 검사도 일주일에 한 번 백업이 완료된 후에 실행할 수 있습니다. 자세한 내용은 [복제된 데이터의 유효성 검사](../../../relational-databases/replication/validate-replicated-data.md)를 참조하세요.  
+ 유효성 검사를 게시 데이터베이스의 백업 일정에 따라 수행하는 것이 좋습니다. 예를 들어 게시 데이터베이스를 일주일에 한 번 전체 백업하면 유효성 검사도 일주일에 한 번 백업이 완료된 후에 실행할 수 있습니다. 자세한 내용은 [복제된 데이터의 유효성 검사](../../../relational-databases/replication/validate-data-at-the-subscriber.md)를 참조하세요.  
   
 ## <a name="use-agent-profiles-to-change-agent-parameters-if-necessary"></a>에이전트 프로필을 사용하여 에이전트 매개 변수 변경(필요한 경우)  
  에이전트 프로필은 복제 에이전트 매개 변수를 설정하는 편리한 방법을 제공합니다. 매개 변수를 에이전트 명령줄에서 지정할 수도 있지만 일반적으로 미리 정의된 에이전트 프로필을 사용하거나 매개 변수 값을 변경해야 할 경우에는 새 프로필을 만드는 것이 더 적합합니다. 예를 들어 병합 복제를 사용하고 구독자가 광대역 연결에서 전화 접속 연결로 이동하는 경우에는 병합 에이전트에 대해 느린 통신 연결에 더 적합한 매개 변수 집합을 사용하는 **느린 연결** 프로필을 사용하십시오. 자세한 내용은 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)을 참조하세요.  
   
 ## <a name="adjust-publication-and-distribution-retention-periods-if-necessary"></a>게시 및 배포 보존 기간 조정(필요한 경우)  
- 트랜잭션 복제 및 병합 복제는 보존 기간을 사용하여 각각 트랜잭션이 배포 데이터베이스에 저장되는 기간과 구독이 동기화되어야 하는 빈도를 결정합니다. 설정을 조정해야 할지 여부를 판단하기 위해 토폴로지를 모니터링하는 경우에는 초기 기본 설정을 사용하는 것이 좋습니다. 예를 들어 병합 복제의 경우 게시 보존 기간(기본값: 14일)은 시스템 테이블에 메타데이터를 저장하는 기간을 결정합니다. 구독이 항상 5일 이내에 동기화되는 경우 설정을 낮게 조정하면 메타데이터가 줄어들고 성능이 향상될 수 있습니다. 자세한 내용은 [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)을 참조하세요.  
+ 트랜잭션 복제 및 병합 복제는 보존 기간을 사용하여 각각 트랜잭션이 배포 데이터베이스에 저장되는 기간과 구독이 동기화되어야 하는 빈도를 결정합니다. 설정을 조정해야 할지 여부를 판단하기 위해 토폴로지를 모니터링하는 경우에는 초기 기본 설정을 사용하는 것이 좋습니다. 예를 들어 병합 복제의 경우 게시 보존 기간(기본값: 14일)은 시스템 테이블에 메타데이터를 저장하는 기간을 결정합니다. 구독이 항상 5일 이내에 동기화되는 경우 설정을 낮게 조정하면 메타데이터가 줄어들고 성능이 향상될 수 있습니다. 자세한 내용은 [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)을(를) 참조하세요.  
   
 ## <a name="understand-how-to-modify-publications-if-application-requirements-change"></a>애플리케이션 요구 사항이 변경된 경우 게시 수정 방법 이해  
  게시를 만든 후에 아티클을 추가 또는 삭제하거나 게시 및 아티클 속성을 변경해야 할 수 있습니다. 게시가 생성된 후에는 대부분의 변경이 허용되지만 일부 경우에 게시에 대한 스냅숏을 새로 생성하거나 게시에 대한 구독을 다시 초기화해야 합니다. 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) 및 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
   
 ## <a name="understand-how-to-make-schema-changes-if-application-requirements-change"></a>애플리케이션 요구 사항이 변경된 경우 스키마 변경 방법 이해  
- _대부분의 경우 애플리케이션을 제작한 후에 스키마를 변경해야 합니다. 복제 토폴로지에서는 이러한 변경 내용을 모든 구독자에 전파해야 하는 경우가 많습니다. 복제는 게시된 개체에 대한 다양한 스키마 변경을 지원합니다.  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 게시자에 게시된 개체에 대해 다음 스키마 변경을 수행하면 기본적으로 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자에 변경 내용이 전파됩니다.  
+ _대부분의 경우 애플리케이션을 제작한 후에 스키마를 변경해야 합니다. 복제 토폴로지에서는 이러한 변경 내용을 모든 구독자에 전파해야 하는 경우가 많습니다. 복제는 게시된 개체에 대한 다양한 스키마 변경을 지원합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 게시자에 게시된 개체에 대해 다음 스키마 변경을 수행하면 기본적으로 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자에 변경 내용이 전파됩니다.  
   
 -   ALTER TABLE  
   
@@ -150,6 +150,6 @@ ms.locfileid: "47763351"
  자세한 내용은 [게시 데이터베이스의 스키마 변경](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [관리&#40;복제&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+ [복제 관리 FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
   

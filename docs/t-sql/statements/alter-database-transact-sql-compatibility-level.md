@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE 호환성 수준(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/16/2018
+ms.date: 01/08/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f01c19b7afd63402abc5729404d73e52429722be
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 55d919cefd20ef4b139dbf30a053bbda568f6e38
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980079"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242164"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE(Transact-SQL) 호환성 수준
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -168,9 +168,9 @@ SELECT name, compatibility_level FROM sys.databases;
 ## <a name="differences-between-compatibility-level-140-and-level-150"></a>호환성 수준 140과 수준 150 사이의 차이  
 이 섹션에서는 호환성 수준 150으로 정의된 새로운 동작에 대해 설명합니다.
 
-데이터베이스 호환성 수준 150은 현재 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]의 비공개 미리 보기에 포함됩니다. 이 데이터베이스 호환성 수준은 데이터베이스 호환성 수준 140에 도입된 것을 넘어선 차세대 쿼리 처리 개선 사항과 연결됩니다.     
+데이터베이스 호환성 수준 150은 현재 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]의 공개 미리 보기에 포함됩니다. 이 데이터베이스 호환성 수준은 데이터베이스 호환성 수준 140에 도입된 것을 넘어선 차세대 쿼리 처리 개선 사항과 연결됩니다.     
 
-데이터베이스 호환성 수준 150에서 사용하도록 설정된 쿼리 처리 기능에 대한 자세한 내용은 [SQL Server 2019의 새로운 기능](../../sql-server/what-s-new-in-sql-server-ver15.md)을 참조하세요.     
+데이터베이스 호환성 수준 150에서 사용하도록 설정된 쿼리 처리 기능에 대한 자세한 내용은 [SQL Server 2019의 새로운 기능](../../sql-server/what-s-new-in-sql-server-ver15.md) 및 [SQL 데이터베이스의 지능형 쿼리 처리](https://docs.microsoft.com/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017)를 참조하세요.
 
 ## <a name="differences-between-compatibility-level-130-and-level-140"></a>호환성 수준 130과 수준 140 사이의 차이  
 이 섹션에서는 호환성 수준 140으로 도입된 새로운 동작에 대해 설명합니다.

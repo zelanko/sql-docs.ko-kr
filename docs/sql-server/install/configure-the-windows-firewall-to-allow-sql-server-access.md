@@ -23,18 +23,18 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f82ce2b0d3ec19dea48f99634a5c5c9936f25ef9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 483696e8ecc717e0ead5c7be16a627c046cb47ca
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408470"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300070"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 방화벽 시스템은 컴퓨터 리소스에 대한 무단 액세스를 방지합니다. 방화벽을 설정하고 올바르게 구성하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 연결 시도가 차단될 수 있습니다.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "52408470"
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|TCP 포트 4022. 사용되는 포트를 확인하려면 다음 쿼리를 실행합니다.<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)]에 대한 기본 포트는 없지만 이는 온라인 설명서 예에서는 이 구성이 일반적으로 사용됩니다.|  
 |데이터베이스 미러링|관리자가 선택한 포트입니다. 포트를 확인하려면 다음 쿼리를 실행합니다.<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|데이터베이스 미러링에 대한 기본 포트는 없지만 온라인 설명서의 예에서는 TCP 포트 5022 또는 7022를 사용합니다. 특히 자동 장애 조치(Failover)를 사용하는 보안 수준이 높은 모드에서는 사용 중인 미러링 엔드포인트가 중단되지 않도록 하는 것이 매우 중요합니다. 방화벽 구성으로 인해 쿼럼이 중단되면 안 됩니다. 자세햔 내용은 [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)을 사용합니다.|  
 |복제|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 복제 연결에는 일반적인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 포트(기본 인스턴스의 경우 TCP 포트 1433 등)가 사용됩니다.<br /><br /> 복제 스냅숏을 위한 웹 동기화 및 FTP/UNC 액세스를 위해서는 방화벽에서 추가 포트를 열어야 합니다. 복제는 초기 데이터 및 스키마를 다른 위치로 전송하기 위해 FTP(TCP 포트 21)를 사용하거나 HTTP(TCP 포트 80) 또는 파일 공유를 통해 동기화할 수 있습니다. 파일 공유에는 UDP 포트 137 및 138, TCP 포트 139가 사용됩니다(NetBIOS를 사용하는 경우). 파일 공유에는 TCP 포트 445가 사용됩니다.|HTTP를 통한 동기화의 경우 복제는 IIS 엔드포인트(포트를 구성할 수 있지만 기본 포트는 80)를 사용하지만 IIS 프로세스는 표준 포트(기본 인스턴스의 경우 1433)를 통해 백 엔드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결합니다.<br /><br /> FTP를 사용한 웹 동기화 중에 FTP 전송은 구독자와 IIS 사이가 아닌 IIS와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자 사이에 이뤄집니다.|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거|TCP 포트 135<br /><br />  [포트 135에 대한 특별 고려 사항](#BKMK_port_135)을 참조하세요.<br /><br /> [IPsec](#BKMK_IPsec) 예외가 필요할 수도 있습니다.|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]를 사용 중인 경우 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 호스트 컴퓨터에서 예외 목록에 **Devenv.exe** 를 추가하고 TCP 포트 135를 열어야 합니다.<br /><br /> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용 중인 경우 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 호스트 컴퓨터에서 예외 목록에 **ssms.exe** 를 추가하고 TCP 포트 135를 열어야 합니다. 자세한 내용은 [TSQL 디버거를 실행하기 전에 방화벽 규칙 구성](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)을 참조하세요.|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거|TCP 포트 135<br /><br /> [포트 135에 대한 특별 고려 사항](#BKMK_port_135)을 참조하세요.<br /><br /> [IPsec](#BKMK_IPsec) 예외가 필요할 수도 있습니다.|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]를 사용 중인 경우 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 호스트 컴퓨터에서 예외 목록에 **Devenv.exe** 를 추가하고 TCP 포트 135를 열어야 합니다.<br /><br /> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용 중인 경우 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 호스트 컴퓨터에서 예외 목록에 **ssms.exe** 를 추가하고 TCP 포트 135를 열어야 합니다. 자세한 내용은 [TSQL 디버거를 실행하기 전에 방화벽 규칙 구성](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)을 참조하세요.|  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 대해 Windows 방화벽을 구성하는 단계별 지침은 [데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)을 참조하세요.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "52408470"
   
 |기능|포트|주석|  
 |-------------|----------|--------------|  
-|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 원격 프로시저 호출(MS RPC)<br /><br /> [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임에 사용됩니다.|TCP 포트 135<br /><br />  [포트 135에 대한 특별 고려 사항](#BKMK_port_135)을 참조하세요.|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 포트 135에서 DCOM을 사용합니다. 서비스 제어 관리자는 포트 135를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스 시작 및 중지, 실행 중인 서비스에 대한 제어 요청 전송과 같은 태스크를 수행합니다. 포트 번호는 변경할 수 없습니다.<br /><br /> 이 포트는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 또는 사용자 지정 애플리케이션에서 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 서비스의 원격 인스턴스에 연결하는 경우에만 열면 됩니다.|  
+|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 원격 프로시저 호출(MS RPC)<br /><br /> [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임에 사용됩니다.|TCP 포트 135<br /><br /> [포트 135에 대한 특별 고려 사항](#BKMK_port_135)을 참조하세요.|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 포트 135에서 DCOM을 사용합니다. 서비스 제어 관리자는 포트 135를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스 시작 및 중지, 실행 중인 서비스에 대한 제어 요청 전송과 같은 태스크를 수행합니다. 포트 번호는 변경할 수 없습니다.<br /><br /> 이 포트는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 또는 사용자 지정 애플리케이션에서 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 서비스의 원격 인스턴스에 연결하는 경우에만 열면 됩니다.|  
   
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 대해 Windows 방화벽을 구성하는 단계별 지침은 [Integration Services 서비스&#40;SSIS 서비스&#41;](../../integration-services/service/integration-services-service-ssis-service.md)를 참조하세요.  
   
@@ -192,8 +192,8 @@ ms.locfileid: "52408470"
   
 |시나리오|포트|주석|  
 |--------------|----------|--------------|  
-|Windows Management Instrumentation<br /><br /> WMI에 대한 자세한 내용은 [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)을 참조하세요.|WMI는 공유 서비스 호스트의 일부로 실행되며 포트는 DCOM을 통해 할당됩니다. WMI는 TCP 포트 135를 사용 중일 수 있습니다.<br /><br />  [포트 135에 대한 특별 고려 사항](#BKMK_port_135)을 참조하세요.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 WMI를 사용하여 서비스를 나열하고 관리합니다. 미리 구성된 규칙 그룹 **WMI(Windows Management Instrumentation)** 를 사용하는 것이 좋습니다. 자세한 내용은 아래의 [다른 방화벽 규칙과의 상호 작용](#BKMK_other_rules) 섹션을 참조하세요.|  
-|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator(MS DTC)|TCP 포트 135<br /><br />  [포트 135에 대한 특별 고려 사항](#BKMK_port_135)을 참조하세요.|애플리케이션에서 분산 트랜잭션을 사용하는 경우 MS DTC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator) 트래픽이 개별 MS DTC 인스턴스 간에, 그리고 MS DTC와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]등의 리소스 관리자 간에 전달될 수 있도록 방화벽을 구성해야 합니다. 미리 구성된 **Distributed Transaction Coordinator** 규칙 그룹을 사용하는 것이 좋습니다.<br /><br /> 별도의 리소스 그룹에 있는 전체 클러스터에 단일 공유 MS DTC가 구성된 경우 방화벽에 sqlservr.exe를 예외로 추가해야 합니다.|  
+|Windows Management Instrumentation<br /><br /> WMI에 대한 자세한 내용은 [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)을 참조하세요.|WMI는 공유 서비스 호스트의 일부로 실행되며 포트는 DCOM을 통해 할당됩니다. WMI는 TCP 포트 135를 사용 중일 수 있습니다.<br /><br /> [포트 135에 대한 특별 고려 사항](#BKMK_port_135)을 참조하세요.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 WMI를 사용하여 서비스를 나열하고 관리합니다. 미리 구성된 규칙 그룹 **WMI(Windows Management Instrumentation)** 를 사용하는 것이 좋습니다. 자세한 내용은 아래의 [다른 방화벽 규칙과의 상호 작용](#BKMK_other_rules) 섹션을 참조하세요.|  
+|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator(MS DTC)|TCP 포트 135<br /><br /> [포트 135에 대한 특별 고려 사항](#BKMK_port_135)을 참조하세요.|애플리케이션에서 분산 트랜잭션을 사용하는 경우 MS DTC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator) 트래픽이 개별 MS DTC 인스턴스 간에, 그리고 MS DTC와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]등의 리소스 관리자 간에 전달될 수 있도록 방화벽을 구성해야 합니다. 미리 구성된 **Distributed Transaction Coordinator** 규칙 그룹을 사용하는 것이 좋습니다.<br /><br /> 별도의 리소스 그룹에 있는 전체 클러스터에 단일 공유 MS DTC가 구성된 경우 방화벽에 sqlservr.exe를 예외로 추가해야 합니다.|  
 |[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 찾아보기 단추를 클릭하면 UDP를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스에 연결됩니다. 자세한 내용은 [SQL Server Browser 서비스&#40;데이터베이스 엔진 및 SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)를 참조하세요.|UDP 포트 1434|UDP는 연결 없는 프로토콜입니다.<br /><br /> 방화벽에는 브로드캐스트(또는 멀티캐스트) UDP 요청에 대한 유니캐스트 응답과 관련하여 방화벽의 동작을 제어하는 [INetFwProfile 인터페이스의 UnicastResponsesToMulticastBroadcastDisabled 속성](https://go.microsoft.com/fwlink/?LinkId=118371) 이라는 설정이 포함됩니다.  여기에는 두 가지 동작이 있습니다.<br /><br /> 설정이 TRUE이면 브로드캐스트에 대한 유니캐스트 응답이 허용되지 않습니다. 서비스 열거는 실패합니다.<br /><br /> 설정이 FALSE(기본값)이면 유니캐스트 응답이 3초 동안 허용됩니다. 이 시간 길이는 구성할 수 없습니다. 혼잡하거나 지연 시간이 긴 네트워크 또는 부하가 높은 서버의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 열거하려고 시도하면 부분적인 목록만 반환되어 사용자에게 잘못된 정보를 줄 수 있습니다.|  
 |<a name="BKMK_IPsec"></a> IPsec 트래픽|UDP 포트 500 및 UDP 포트 4500|도메인 정책에 따라 IPSec을 통해 네트워크 통신을 수행해야 하는 경우 예외 목록에 UDP 포트 4500 및 UDP 포트 500도 추가해야 합니다. IPsec은 Windows 방화벽 스냅인의 **새 인바운드 규칙 마법사** 를 사용하는 옵션입니다. 자세한 내용은 아래의 [고급 보안이 포함된 Windows 방화벽 스냅인 사용](#BKMK_WF_msc) 을 참조하세요.|  
 |트러스트된 도메인에 Windows 인증 사용|인증 요청을 허용하도록 방화벽을 구성해야 합니다.|자세한 내용은 [도메인 및 트러스트를 위한 방화벽을 구성하는 방법](https://support.microsoft.com/kb/179442/)을 참조하세요.|  
@@ -313,6 +313,6 @@ ms.locfileid: "52408470"
   
 ## <a name="see-also"></a>참고 항목  
  [Windows 서버 시스템의 서비스 개요 및 네트워크 포트 요구 사항](https://support.microsoft.com/kb/832017)   
- [방법: 방화벽 설정 구성(Azure SQL 데이터베이스)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
+ [방법: 방화벽 설정 구성(Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   

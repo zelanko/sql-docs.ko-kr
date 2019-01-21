@@ -55,18 +55,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55f5056f65daa3c9f52809087f4cf6773d708910
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 8a77956d457e70566cbebef0e92d952b0b1158d9
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980509"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300510"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 테이블 또는 뷰에 관계 인덱스를 만듭니다. 이 인덱스는 클러스터형 또는 비클러스터형 B-트리 인덱스이므로 rowstore 인덱스라고도 합니다. 테이블에 데이터가 채워지기 전에 rowstore 인덱스를 만들 수 있습니다. 특히 쿼리가 특정 열에서 값을 선택하거나 값을 특정 순서로 정렬해야 하는 경우 rowstore 인덱스를 사용하여 쿼리 성능을 개선할 수 있습니다.  
   
@@ -278,7 +278,7 @@ CLUSTERED
   
  필터링된 인덱스는 XML 인덱스 및 전체 텍스트 인덱스에는 적용되지 않습니다. UNIQUE 인덱스의 경우에는 선택한 행만 고유 인덱스 값을 가져야 합니다. 필터링된 인덱스에서는 IGNORE_DUP_KEY 옵션이 허용되지 않습니다.  
   
-ON *partition_scheme_name* **( *column_name* )**  
+ON _partition_scheme_name_ **( *column_name* )**  
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
   
  분할된 인덱스의 파티션이 매핑될 파일 그룹을 정의하는 파티션 구성표를 지정합니다. 파티션 구성표는 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 또는 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)의 실행을 통해 데이터베이스 내에 있어야 합니다. *column_name*은 분할된 인덱스가 분할되는 기준으로 사용할 열을 지정합니다. 이 열은 *partition_scheme_name*에서 사용하는 파티션 함수의 인수와 데이터 형식, 길이 및 전체 자릿수가 일치해야 합니다. *column_name*은 인덱스 정의의 열만 사용할 필요는 없으며 기본 테이블의 모든 열을 지정할 수 있습니다. 단, UNIQUE 인덱스를 분할할 때 고유 키로 사용되는 열 중에서 *column_name*을 선택해야 하는 경우는 제외합니다. 이 제한 사항으로 인해 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 단일 파티션 내에서만 키 값의 고유성을 확인할 수 있습니다.  
@@ -476,7 +476,7 @@ RESUMABLE **=** { ON | **OFF**}
 
  OFF 인덱스 작업이 다시 시작될 수 없습니다.
 
-MAX_DURATION **=** *time* [**MINUTES**는] **RESUMABLE = ON** 상태에서만 사용됩니다(**ONLINE = ON** 필요).
+MAX_DURATION **=** _time_ [**MINUTES**는] **RESUMABLE = ON** 상태에서만 사용됩니다(**ONLINE = ON** 필요).
  
 **적용 대상**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](공개 미리 보기 기능으로)
 
@@ -696,7 +696,7 @@ INSERT INTO t1 VALUES (1, 0);
   
 -   새 인덱스 옵션은 WITH (**_option\_name_ = ON | OFF**)를 사용해서만 지정할 수 있습니다.  
 -   옵션은 동일한 문에 이전 버전과 호환되는 구문 및 새 구문 모두를 사용하여 지정할 수 없습니다. 예를 들어 WITH (**DROP_EXISTING, ONLINE = ON**)을 지정하면 문이 실패합니다.  
--   XML 인덱스를 만들 때 WITH(***option_name*= ON | OFF**)를 사용하여 옵션을 지정해야 합니다.  
+-   XML 인덱스를 만들 때 WITH(**_option_name_= ON | OFF**)를 사용하여 옵션을 지정해야 합니다.  
   
 ## <a name="dropexisting-clause"></a>DROP_EXISTING 절  
  DROP_EXISTING 절을 사용하여 인덱스 다시 작성, 열 추가 또는 삭제, 옵션 수정, 열 정렬 순서 수정 또는 파티션 구성표나 파일 그룹 변경 등의 작업을 수행할 수 있습니다.  

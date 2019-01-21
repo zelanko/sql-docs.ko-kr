@@ -1,7 +1,7 @@
 ---
 title: 병합 게시에 대한 데이터 충돌 보기 및 해결 | Microsoft 문서
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,14 +15,14 @@ ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 787e034767e419cd5f3b41b07364c6a11d908244
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0b9a3f872a87695da3e6c57ad90012cfe1307109
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543917"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129383"
 ---
-# <a name="view-and-resolve-data-conflicts-for-merge-publications"></a>병합 게시에 대한 충돌 보고 및 해결
+# <a name="conflict-resolution-for-merge-replication"></a>병합 복제에 대한 충돌 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   병합 복제에서의 충돌은 각 아티클에 대해 지정된 해결 프로그램에 따라 해결됩니다. 기본적으로 충돌은 사용자가 개입할 필요 없이 해결됩니다. 그러나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 복제 충돌 뷰어에서 충돌을 보고 해결 결과를 변경할 수 있습니다.  
   
@@ -32,21 +32,18 @@ ms.locfileid: "52543917"
   
 -   **@property** 매개 변수에 대해 **conflict_retention** 값을 지정하고 [sp_changemergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)의 **@value** 매개 변수에 대해 보존 값을 지정합니다.  
   
- 기본적으로 충돌 정보는 다음 위치에 저장됩니다.  
-  
--   게시 호환성 수준이 90RTM 이상일 경우 게시자 및 구독자.  
-  
--   게시 호환성 수준이 80RTM 미만일 경우 게시자  
-  
+ 기본적으로 충돌 정보는 다음 위치에 저장됩니다.    
+-   게시 호환성 수준이 90RTM 이상일 경우 게시자 및 구독자.   
+-   게시 호환성 수준이 80RTM 미만일 경우 게시자   
 -   구독자가 [!INCLUDE[ssEW](../../includes/ssew-md.md)]을 실행하는 경우 게시자. 충돌 데이터는 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 구독자에 저장할 수 없습니다.  
   
  충돌 정보의 스토리지는 **conflict_logging** 게시 속성에 의해 제어됩니다. 자세한 내용은 [sp_addmergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 및 [sp_changemergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)을 참조하세요.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 대화형 해결 프로그램을 사용하여 동기화하는 동안 대화형으로 충돌을 해결할 수도 있습니다. 대화형 해결 프로그램은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 동기화 관리자를 통해 사용할 수 있습니다. 자세한 내용은 [Windows 동기화 관리자를 사용하여 구독 동기화&#40;Windows 동기화 관리자&#41;](../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md)를 참조하세요.  
   
-### <a name="to-view-and-resolve-conflicts-for-merge-publications"></a>병합 게시에 대한 충돌을 보고 해결하려면  
+## <a name="resolve-conflicts"></a>충돌 해결  
   
-1.   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자(또는 구독자)에 연결한 다음 서버 노드를 확장합니다.  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자(또는 구독자)에 연결한 다음 서버 노드를 확장합니다.  
   
 2.  **복제** 폴더를 확장한 다음 **로컬 게시** 폴더를 확장합니다.  
   
@@ -65,7 +62,7 @@ ms.locfileid: "52543917"
   
     -   상단 표에서 하나 이상의 행을 선택한 다음 **제거**를 클릭합니다. 이것은 **적용되는 내용 전송** 단추를 클릭하는 것과 같으며 데이터는 변경되지 않습니다.  
   
-    -   속성 단추(**...**)를 클릭하여 충돌과 관련된 열에 대한 자세한 정보를 확인합니다.  
+    -   속성 단추 (**...**)를 클릭하여 충돌과 관련된 열에 대한 자세한 정보를 확인합니다.  
   
     -   데이터를 전송하기 전에 **충돌 시 적용되는 내용** 또는 **충돌 시 변경 내용 무시** 열의 데이터를 편집합니다. 열이 회색인 경우 데이터는 읽기 전용입니다.  
   
@@ -76,6 +73,55 @@ ms.locfileid: "52543917"
     -   **이 충돌 정보 기록** 을 선택하여 충돌 데이터를 파일에 기록합니다. 파일의 위치를 지정하려면 **보기** 메뉴를 가리킨 다음 **옵션**을 클릭합니다. 값을 입력하거나 찾아보기 단추 (**...**)를 클릭한 다음 해당 파일을 검색합니다. **확인** 을 클릭하여 **옵션** 대화 상자를 종료합니다.  
   
 6.  복제 충돌 뷰어를 닫습니다.  
+
+
+  
+## <a name="view-conflict-information"></a>충돌 정보 보기
+병합 복제의 충돌을 해결하는 과정에서 무시되는 행의 데이터는 충돌 테이블에 기록됩니다. 복제 저장 프로시저를 사용하여 이 충돌 데이터를 프로그래밍 방식으로 볼 수 있습니다. 자세한 내용은 [고급 병합 복제 충돌 감지 및 해결](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
+  
+1.  게시 데이터베이스의 게시자에서 [sp_helpmergepublication](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)을 실행합니다. 결과 집합에서 다음 열의 값을 확인합니다.  
+  
+    -   **centralized_conflicts** - 1은 충돌 행이 게시자에 저장된다는 것을 의미하며, 0은 충돌 행이 게시자에 저장되지 않는다는 것을 의미합니다.  
+  
+    -   **decentralized_conflicts** - 1은 충돌 행이 구독자에 저장된다는 것을 의미하며, 0은 충돌 행이 구독자에 저장되지 않는다는 것을 의미합니다.  
+  
+        > [!NOTE]  
+        >  병합 게시의 충돌 로깅 방식은 **@conflict_logging** 의 [@conflict_logging](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)을(를) 참조하세요. **@centralized_conflicts** 매개 변수는 사용되지 않습니다.  
+  
+     다음 표에서는 **@conflict_logging**을(를) 참조하세요.  
+  
+    |@conflict_logging 값|centralized_conflicts|decentralized_conflicts|  
+    |------------------------------|----------------------------|------------------------------|  
+    |**publisher**|1|0|  
+    |**subscriber**|0|1|  
+    |**both**|1|1|  
+  
+2.  게시 데이터베이스의 게시자나 구독 데이터베이스의 구독자에서 [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md)를 실행합니다. 특정 게시에 속한 아티클에 대한 충돌 정보만 반환하도록 하려면 **@publication** 의 값을 지정합니다. 이렇게 하면 충돌이 있는 아티클에 대한 충돌 테이블 정보가 반환됩니다. 정보를 보려는 아티클의 **conflict_table** 값을 확인합니다. 아티클에 대한 **conflict_table** 값이 NULL인 경우 이 아티클에 삭제 충돌만 발생한 것입니다.  
+  
+3.  필요에 따라 특정 아티클의 충돌 행을 검토합니다. 1단계에서 확인한 **centralized_conflicts** 및 **decentralized_conflicts** 값에 따라 다음 중 한 가지를 수행합니다.  
+  
+    -   게시 데이터베이스의 게시자에서 [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md)를 실행합니다. **@conflict_table**에 아티클에 대한 충돌 테이블(1단계에서 확인)을 지정합니다. 필요에 따라 **@publication** 의 값을 지정하여 반환되는 충돌 정보를 특정 게시로 제한합니다. 이렇게 하면 무시되는 행에 대한 행 데이터 및 기타 정보가 반환됩니다.  
+  
+    -   구독 데이터베이스의 구독자에서 [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md)를 실행합니다. **@conflict_table**에 아티클에 대한 충돌 테이블(1단계에서 확인)을 지정합니다. 이렇게 하면 무시되는 행에 대한 행 데이터 및 기타 정보가 반환됩니다.  
+  
+## <a name="conflict-where-delete-failed"></a>삭제가 실패한 충돌   
+  
+1.  게시 데이터베이스의 게시자에서 [sp_helpmergepublication](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)을 실행합니다. 결과 집합에서 다음 열의 값을 확인합니다.  
+  
+    -   **centralized_conflicts** - 1은 충돌 행이 게시자에 저장된다는 것을 의미하며, 0은 충돌 행이 게시자에 저장되지 않는다는 것을 의미합니다.  
+  
+    -   **decentralized_conflicts** - 1은 충돌 행이 구독자에 저장된다는 것을 의미하며, 0은 충돌 행이 구독자에 저장되지 않는다는 것을 의미합니다.  
+  
+        > [!NOTE]  
+        >  병합 게시의 충돌 로깅 방식은 **@conflict_logging** 의 [@conflict_logging](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)을(를) 참조하세요. **@centralized_conflicts** 매개 변수는 사용되지 않습니다.  
+  
+2.  게시 데이터베이스의 게시자나 구독 데이터베이스의 구독자에서 [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md)를 실행합니다. 특정 게시에 속한 아티클에 대한 충돌 정보만 반환하도록 하려면 **@publication** 의 값을 지정합니다. 이렇게 하면 충돌이 있는 아티클에 대한 충돌 테이블 정보가 반환됩니다. 정보를 보려는 아티클의 **source_object** 값을 확인합니다. 아티클에 대한 **conflict_table** 값이 NULL인 경우 이 아티클에 삭제 충돌만 발생한 것입니다.  
+  
+3.  필요에 따라 삭제 충돌에 대한 충돌 정보를 검토합니다. 1단계에서 확인한 **centralized_conflicts** 및 **decentralized_conflicts** 값에 따라 다음 중 한 가지를 수행합니다.  
+  
+    -   게시 데이터베이스의 게시자에서 [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md)를 실행합니다. **@source_object**에는 충돌이 발생한 원본 테이블의 이름(1단계에서 확인)을 지정합니다. 필요에 따라 **@publication** 의 값을 지정하여 반환되는 충돌 정보를 특정 게시로 제한합니다. 이렇게 하면 게시자에 저장된 삭제 충돌 정보가 반환됩니다.  
+  
+    -   구독 데이터베이스의 구독자에서 [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md)를 실행합니다. **@source_object**에는 충돌이 발생한 원본 테이블의 이름(1단계에서 확인)을 지정합니다. 필요에 따라 **@publication** 의 값을 지정하여 반환되는 충돌 정보를 특정 게시로 제한합니다. 이렇게 하면 구독자에 저장된 삭제 충돌 정보가 반환됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   

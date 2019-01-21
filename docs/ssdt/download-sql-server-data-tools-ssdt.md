@@ -14,18 +14,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 3067b05783d7a83118e87dc8db4cdc6a83d40a1c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d2769749327f01af9548ad608a42e6d030fd3842
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515999"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300661"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio용 SSDT(SQL Server Data Tools) 다운로드 및 설치
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 **SQL Server Data Tools**는 SQL Server 관계형 데이터베이스, Azure SQL 데이터베이스, AS(Analysis Services) 데이터 모델, IS(Integration Services) 패키지 및 RS(Reporting Services) 보고서를 빌드하기 위한 최신형 개발 도구입니다. SSDT를 사용하면 Visual Studio에서 애플리케이션을 개발할 때처럼 쉽게 SQL Server 콘텐츠 형식을 디자인 및 배포할 수 있습니다.
 
@@ -33,7 +33,7 @@ ms.locfileid: "52515999"
 
 ## <a name="install-ssdt-with-visual-studio-2017"></a>Visual Studio 2017을 사용하여 SSDT 설치
 
-[Visual Studio를 설치](https://docs.microsoft.com/visualstudio/install/install-visual-studio)하는 동안 SSDT를 설치하려면 **데이터 저장소 및 처리** 작업을 선택한 다음, **SQL Server Data Tools**를 선택합니다. Visual Studio가 이미 설치된 경우 [작업의 목록을 편집](https://docs.microsoft.com/visualstudio/install/modify-visual-studio)하여 SSDT: ![데이터 저장소 및 처리 작업](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload.png)을 포함할 수 있습니다.
+[Visual Studio를 설치](https://docs.microsoft.com/visualstudio/install/install-visual-studio)하는 동안 SSDT를 설치하려면 **데이터 스토리지 및 처리** 작업을 선택한 다음, **SQL Server Data Tools**를 선택합니다. Visual Studio가 이미 설치된 경우 [작업의 목록을 편집](https://docs.microsoft.com/visualstudio/install/modify-visual-studio)하여 SSDT: ![데이터 스토리지 및 처리 워크로드](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload.png)를 포함할 수 있습니다.
 
 
 
@@ -109,16 +109,19 @@ Visual Studio 2017용 SSDT는 Visual Studio와 동일한 [시스템 요구 사�
 
 사용 가능한 옵션을 보려면 `SSDT-Setup-ENU.exe /help`를 실행하세요.
 
+> [!NOTE]
+> Visual Studio 2017 전체 버전을 사용하는 경우 SSDT 전용 오프라인 폴더를 만들고 새로 생성된 이 폴더에서 `SSDT-Setup-ENU.exe`를 실행합니다(다른 Visual Studio 2017 오프라인 레이아웃에 SSDT를 추가 안 함). 기존 Visual Studio 오프라인 레이아웃에 SSDT 레이아웃을 추가하면 필요한 런타임(.exe) 구성 요소가 만들어지지 않습니다.
+
 ## <a name="supported-sql-versions"></a>지원되는 SQL 버전
   
 |프로젝트 템플릿|지원 되는 SQL 플랫폼|  
 |-------------------|--------------------|  
 관계형 데이터베이스|  SQL Server 2005* - SQL Server 2017<br> (Visual Studio 2017에 대해 SSDT 17.x 또는 SSDT를 사용하여 [Linux의 SQL Server](../linux/sql-server-linux-overview.md)에 연결)<br /><br />Azure SQL 데이터베이스<br /><br />Azure SQL Data Warehouse(쿼리만 지원, 데이터베이스 프로젝트는 아직 지원되지 않음)<br /><br />  * SQL Server 2005는 더 이상 지원되지 않습니다.<br /><br /> 공식적으로 지원되는 SQL 버전으로 전환하세요.|
   |Analysis Services 모델<br /><br />Reporting Services 보고서 | SQL Server 2008 - SQL Server 2017|
-  |Integration Services 패키지| SQL Server 2012 - SQL Server 2017    |
+  |Integration Services 패키지| SQL Server 2014 - SQL Server 2017    |
   
 ## <a name="dacfx"></a>DacFx
-Visual Studio 2015용 SSDT 및 Visual Studio 2017용 SSDT는 모두 DacFx 17.4.1를 사용합니다. [DacFx(Data-Tier Application Framework) 17.4.1 다운로드](https://www.microsoft.com/download/details.aspx?id=56508)
+Visual Studio 2015용 SSDT 및 Visual Studio 2017용 SSDT는 모두 DacFx 17.4.1을 사용합니다. [데이터 계층 애플리케이션 프레임워크(DacFx) 17.4.1](https://www.microsoft.com/download/details.aspx?id=56508).
 
 ## <a name="previous-versions"></a>이전 버전
 

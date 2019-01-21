@@ -11,17 +11,17 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: 274e91c482ada16847cb2b2e704ac9d953567d7d
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 99119431d65cc8780cba24fbd891a1688844a769
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328593"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300310"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>자습서: SQL Server Management Studio를 사용하여 SQL Server 인스턴스에 연결 및 쿼리
 
 > [!div class="nextstepaction"]
-> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 이 자습서에서는 SSMS(SQL Server Management Studio)를 사용하여 SQL Server 인스턴스에 연결하고 몇 가지 기본 T-SQL(Transact-SQL) 명령을 실행하는 방법을 설명합니다. 이 아티클에서는 다음을 수행하는 방법을 보여줍니다.
 

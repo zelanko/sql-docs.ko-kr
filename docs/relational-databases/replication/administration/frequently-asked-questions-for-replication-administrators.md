@@ -14,12 +14,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 04e138f38923745d0095344959bc5876fc213b00
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5f6d488b46f576ed5c5d97358ec8674a64be46bd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507440"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135363"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>복제 관리자를 위한 질문과 대답
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "52507440"
 ### <a name="when-is-a-subscription-available-when-can-the-subscription-database-be-used"></a>언제 구독을 사용할 수 있습니까? 구독 데이터베이스는 언제 사용할 수 있습니까?  
  스냅숏이 구독 데이터베이스에 적용된 다음에 구독을 사용할 수 있습니다. 그 전에도 구독 데이터베이스에 액세스할 수 있지만 스냅숏이 적용될 때까지 데이터베이스를 사용하면 안 됩니다. 다음과 같이 복제 모니터를 사용하여 스냅숏 생성 및 적용 상태를 확인합니다.  
   
--   스냅숏 에이전트에서 스냅숏을 생성한 다음 복제 모니터의 게시에 대한 **에이전트** 탭에서 스냅숏 생성 상태를 봅니다. 자세한 내용은 [게시 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)을 참조하세요.  
+-   스냅숏 에이전트에서 스냅숏을 생성한 다음 복제 모니터의 게시에 대한 **에이전트** 탭에서 스냅숏 생성 상태를 봅니다. 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
--   배포 에이전트 또는 병합 에이전트에서 스냅숏을 적용한 다음 복제 모니터의 **배포 에이전트** 또는 **병합 에이전트** 페이지에서 스냅숏 적용 상태를 봅니다. 자세한 내용은 [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)을 참조하세요.  
+-   배포 에이전트 또는 병합 에이전트에서 스냅숏을 적용한 다음 복제 모니터의 **배포 에이전트** 또는 **병합 에이전트** 페이지에서 스냅숏 적용 상태를 봅니다. 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
 ### <a name="what-happens-if-the-snapshot-agent-has-not-completed-when-the-distribution-or-merge-agent-starts"></a>배포 에이전트나 병합 에이전트가 시작할 때 스냅숏 에이전트가 완료되지 않은 경우 문제가 발생합니까?  
  배포 에이전트나 병합 에이전트가 스냅숏 에이전트와 동시에 실행되면 오류가 발생하지 않습니다. 그러나 다음과 같은 사항에 유의하십시오.  
@@ -96,7 +96,7 @@ ms.locfileid: "52507440"
  이러한 정보는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]와 여러 복제 저장 프로시저를 통해 얻을 수 있습니다. 자세한 내용은 [Distributor and Publisher Information Script](../../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)를 참조하세요.  
   
 ### <a name="does-replication-encrypt-data"></a>복제 작업에서 데이터를 암호화합니까?  
- 아니요. 복제 작업에서는 데이터베이스에 저장되어 있거나 네트워크를 통해 전송되는 데이터를 암호화하지 않습니다. 자세한 내용은 [보안 개요&#40;복제&#41;](../../../relational-databases/replication/security/security-overview-replication.md) 항목의 "암호화" 섹션을 참조하세요.  
+ 아니요. 복제 작업에서는 데이터베이스에 저장되어 있거나 네트워크를 통해 전송되는 데이터를 암호화하지 않습니다. 자세한 내용은 [복제 보안 설정 보기 및 수정](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md) 항목의 "암호화" 섹션을 참조하세요.  
   
 ### <a name="how-do-i-replicate-data-over-the-internet"></a>인터넷을 통해 데이터를 어떻게 복제합니까?  
  다음을 사용하여 인터넷을 통해 데이터를 복제합니다.  
@@ -119,11 +119,11 @@ ms.locfileid: "52507440"
  아니요. DTS 패키지를 만들어 한 게시자에서 하나 이상의 구독자로 로그인과 암호를 전송할 수 있습니다.  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>스키마란 무엇이며 어떻게 복제됩니까?  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *스키마* 는 다음 두 가지 의미를 갖습니다.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *스키마* 는 다음 두 가지 의미를 갖습니다.  
   
 -   CREATE TABLE 문과 같은 개체의 정의입니다. 기본적으로 복제는 복제된 모든 개체의 정의를 구독자로 복사합니다.  
   
--   개체가 만들어진 네임스페이스 \<Database>.\<Schema>.\<Object>입니다. 스키마는 CREATE SCHEMA 문을 사용하여 정의됩니다.  
+-   개체가 만들어진 다음과 같은 네임스페이스입니다. \<데이터베이스>.\<스키마>.\<개체>. 스키마는 CREATE SCHEMA 문을 사용하여 정의됩니다.  
   
 -   복제는 새 게시 마법사에서 스키마 및 개체 소유권에 대해 기본적으로 다음과 같이 작동합니다.  
   
@@ -142,8 +142,9 @@ ms.locfileid: "52507440"
   
 -   구독 데이터베이스에서 직접 GRANT 문을 실행합니다.  
   
--   포스트 스냅숏 스크립트를 사용하여 해당 문을 실행합니다. 자세한 내용은 [스냅숏 적용 전후에 스크립트 실행](../../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)을 참조하세요.  
-  
+-   포스트 스냅숏 스크립트를 사용하여 해당 문을 실행합니다. 자세한 내용은 [스냅숏 적용 전후에 스크립트 실행](../../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)을 참조하세요.  
+
+ 
 -   [sp_addscriptexec](../../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md) 저장 프로시저를 사용하여 해당 문을 실행합니다.  
   
 ### <a name="what-happens-to-permissions-granted-in-a-subscription-database-if-a-subscription-is-reinitialized"></a>구독을 다시 초기화하면 구독 데이터베이스에 부여된 사용 권한은 어떻게 됩니까?  
@@ -169,7 +170,7 @@ ms.locfileid: "52507440"
  예 복제에 관련된 데이터베이스에 대해 특별히 고려해야 할 사항이 많이 있습니다. 자세한 내용은 [복제된 데이터베이스 백업 및 복원](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)을 참조하세요.  
   
 ### <a name="does-replication-affect-the-size-of-the-transaction-log"></a>복제가 트랜잭션 로그의 크기에 영향을 미칩니까?  
- 병합 복제 및 스냅숏 복제는 트랜잭션 로그 크기에 영향을 주지 않지만 트랜잭션 복제는 영향을 줄 수 있습니다. 데이터베이스에 하나 이상의 트랜잭션 게시를 포함하는 경우 로그는 게시와 관련된 모든 트랜잭션이 배포 데이터베이스에 배달될 때까지 잘리지 않습니다. 로그 판독기 에이전트가 일정에 따라 실행되는 경우 트랜잭션 로그가 너무 방대해지면 일정 실행 간격을 좁히거나 일정이 연속 모드에서 실행되도록 설정하십시오. 연속 모드에서 실행되도록 설정(기본값)한 경우 로그 판독기 에이전트가 실행되고 있는지 확인하십시오. 로그 판독기 에이전트 상태 확인에 대한 자세한 내용은 [게시 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)을 참조하세요.  
+ 병합 복제 및 스냅숏 복제는 트랜잭션 로그 크기에 영향을 주지 않지만 트랜잭션 복제는 영향을 줄 수 있습니다. 데이터베이스에 하나 이상의 트랜잭션 게시를 포함하는 경우 로그는 게시와 관련된 모든 트랜잭션이 배포 데이터베이스에 배달될 때까지 잘리지 않습니다. 로그 판독기 에이전트가 일정에 따라 실행되는 경우 트랜잭션 로그가 너무 방대해지면 일정 실행 간격을 좁히거나 일정이 연속 모드에서 실행되도록 설정하십시오. 연속 모드에서 실행되도록 설정(기본값)한 경우 로그 판독기 에이전트가 실행되고 있는지 확인하십시오. 로그 판독기 에이전트 상태에 대한 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
  또한 게시 데이터베이스나 배포 데이터베이스에서 'sync with backup' 옵션을 설정한 경우 트랜잭션이 모두 백업될 때까지 트랜잭션 로그가 잘리지 않습니다. 이 옵션을 설정한 경우 트랜잭션 로그가 너무 방대해지면 트랜잭션 로그 백업 간격을 좁히십시오. 백업 및 트랜잭션 복제와 관련된 데이터베이스 복원에 대한 자세한 내용은 [스냅숏 및 트랜잭션 복제의 백업 및 복원을 위한 전략](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)을 참조하세요.  
   
@@ -191,7 +192,7 @@ ms.locfileid: "52507440"
 ## <a name="replication-maintenance"></a>복제 유지 관리  
   
 ### <a name="how-do-i-determine-if-the-data-at-subscribers-is-synchronized-with-data-at-the-publisher"></a>구독자의 데이터가 게시자의 데이터와 동기화되었는지 어떻게 확인합니까?  
- 유효성 검사를 사용합니다. 유효성 검사는 지정된 구독자가 게시자와 동기화되었는지 여부를 보고합니다. 자세한 내용은 [복제된 데이터의 유효성 검사](../../../relational-databases/replication/validate-replicated-data.md)를 참조하세요. 유효성 검사는 올바르게 동기화되지 않은 행이 있는 경우 해당 행에 대한 정보를 제공하지 않지만 [tablediff 유틸리티](../../../tools/tablediff-utility.md) 에서는 이러한 정보를 제공합니다.  
+ 유효성 검사를 사용합니다. 유효성 검사는 지정된 구독자가 게시자와 동기화되었는지 여부를 보고합니다. 자세한 내용은 [복제된 데이터의 유효성 검사](../../../relational-databases/replication/validate-data-at-the-subscriber.md)를 참조하세요. 유효성 검사는 올바르게 동기화되지 않은 행이 있는 경우 해당 행에 대한 정보를 제공하지 않지만 [tablediff 유틸리티](../../../tools/tablediff-utility.md) 에서는 이러한 정보를 제공합니다.  
   
 ### <a name="how-do-i-add-a-table-to-an-existing-publication"></a>기존 게시에 어떻게 테이블을 추가합니까?  
  테이블이나 다른 개체를 추가하기 위해 게시 또는 구독 데이터베이스의 작업을 중지하지 않아도 됩니다. **게시 속성 - \<Publication>** 대화 상자나 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 및 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 저장 프로시저를 통해 게시에 테이블을 추가합니다. 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
@@ -209,7 +210,7 @@ ms.locfileid: "52507440"
  데이터베이스에서 복제를 제거하는 데 필요한 동작은 데이터베이스가 게시 데이터베이스 역할을 하는지 구독 데이터베이스 역할을 하는지 아니면 두 역할을 다 하는지에 따라 달라집니다.  
   
 ### <a name="how-do-i-determine-whether-there-are-transactions-or-rows-to-be-replicated"></a>복제할 트랜잭션이나 행이 있는지 여부를 어떻게 확인합니까?  
- 트랜잭션 복제의 경우 저장 프로시저를 사용하거나 복제 모니터에서 **배포되지 않은 명령** 탭을 사용합니다. 자세한 내용은 [배포 데이터베이스의 복제된 명령 및 기타 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) 및 [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)을 참조하세요.  
+ 트랜잭션 복제의 경우 저장 프로시저를 사용하거나 복제 모니터에서 **배포되지 않은 명령** 탭을 사용합니다. 자세한 내용은 [배포 데이터베이스의 복제된 명령 및 기타 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) 및 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
  병합 복제의 경우 **sp_showpendingchanges**저장 프로시저를 사용합니다. 자세한 내용은 [sp_showpendingchanges&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md)를 참조하세요.  
   
@@ -220,7 +221,7 @@ ms.locfileid: "52507440"
   
 -   명령을 구독자에 배달하는 데 걸리는 예상 시간. 이 값이 스냅숏을 생성하여 구독자에 적용하는 데 필요한 시간 값보다 더 큰 경우 구독자를 다시 초기화하십시오. 자세한 내용은 [구독 다시 초기화](../../../relational-databases/replication/reinitialize-subscriptions.md)를 참조하세요.  
   
- 자세한 내용은 [sp_replmonitorsubscriptionpendingcmds&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql.md) 및 [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)을 참조하세요.  
+ 자세한 내용은 [sp_replmonitorsubscriptionpendingcmds&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql.md) 및 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
 ## <a name="replication-and-other-database-features"></a>복제 및 기타 데이터베이스 기능  
   
@@ -231,7 +232,7 @@ ms.locfileid: "52507440"
  예 모든 데이터가 클러스터의 한 디스크 세트에 저장되므로 특별히 고려해야 할 사항은 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [관리&#40;복제&#41;](../../../relational-databases/replication/administration/administration-replication.md)   
+ [복제 관리 FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
   
   

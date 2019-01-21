@@ -16,16 +16,19 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 729464b51af6c9450f9166bd9a3c51d35541810f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9f2f29e6fb715c35ee4ea80e6f02daeeb3b0461b
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530539"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299840"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>전체 데이터베이스 백업 만들기(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > SQL Server 2014의 경우 [전체 데이터베이스 백업 만들기(SQL Server)](create-a-full-database-backup-sql-server.md)로 이동하세요.
+
+  > [!div class="nextstepaction"]
+  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 전체 데이터베이스 백업을 만드는 방법을 설명합니다.  
   
@@ -57,7 +60,7 @@ ms.locfileid: "52530539"
 ####  <a name="Permissions"></a> Permissions  
  BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버로 설정됩니다.  
   
- 백업 디바이스의 물리적 파일에서 발생하는 소유권과 사용 권한 문제는 백업 작업에 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 장치를 읽고 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 **있어야 합니다** . 그러나 시스템 테이블의 백업 디바이스에 대한 항목을 추가하는 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)는 파일 액세스 권한을 확인하지 않습니다. 백업 디바이스의 물리적 파일에서 발생하는 이러한 문제는 백업 또는 복원을 시도할 때 실제 리소스를 액세스하기 전까지는 발생하지 않습니다.  
+ 백업 디바이스의 물리적 파일에서 발생하는 소유권과 사용 권한 문제는 백업 작업에 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 디바이스를 읽고 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 **있어야 합니다** . 그러나 시스템 테이블의 백업 디바이스에 대한 항목을 추가하는 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)는 파일 액세스 권한을 확인하지 않습니다. 백업 디바이스의 물리적 파일에서 발생하는 이러한 문제는 백업 또는 복원을 시도할 때 실제 리소스를 액세스하기 전까지는 발생하지 않습니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
@@ -65,7 +68,7 @@ ms.locfileid: "52530539"
   
 ### <a name="back-up-a-database"></a>데이터베이스 백업  
   
-1.   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 **개체 탐색기**에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 **개체 탐색기**에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
 2.  **데이터베이스**를 확장하고 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.  
   
@@ -209,7 +212,7 @@ ms.locfileid: "52530539"
     **D1.  URL로 스트라이프 백업 및 SQL Server 자격 증명에 이미 있는 경우**  
 읽기, 쓰기 및 나열 권한이 있는 저장된 액세스 정책을 만들었습니다.  저장된 액세스 정책에 연결된 공유 액세스 서명을 사용하여 SQL Server 자격 증명인 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`를 만들었습니다.  
 *
-    5.  `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` Azure 저장소 컨테이너: **텍스트 상자에서** 를 선택합니다.
+    5.  `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` Azure 스토리지 컨테이너: **텍스트 상자에서** 를 선택합니다.
 
     6.  **백업 파일:** 텍스트 상자에 `Sales_stripe1of2_20160601.bak`를 입력합니다.
 
@@ -224,7 +227,7 @@ ms.locfileid: "52530539"
     11.   **확인**을 클릭합니다.
 
     **D2.  공유 액세스 서명이 있고 SQL Server 자격 증명이 없는 경우**
-  5.    `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` Azure 저장소 컨테이너: **텍스트 상자에** 를 입력합니다.
+  5.    **Azure 스토리지 컨테이너:** 텍스트 상자에 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`를 입력합니다.
   
   6.    **공유 액세스 정책:** 텍스트 상자에 공유 액세스 서명을 입력합니다.
   
@@ -263,7 +266,7 @@ ms.locfileid: "52530539"
     |옵션|설명|  
     |------------|-----------------|  
     |*database*|백업할 데이터베이스입니다.|  
-    |*backup_device* [ **,**...*n* ]|백업 작업에 사용할 1-64개의 백업 디바이스 목록을 지정합니다. 물리적 백업 디바이스를 지정하거나, 이미 정의된 경우 해당 논리적 백업 디바이스를 지정할 수 있습니다. 물리적 백업 디바이스를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.<br /><br /> { DISK &#124; TAPE } **=**_physical\_backup\_device\_name_<br /><br /> 자세한 내용은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)인스턴스에서 가져온 경우에 필요합니다.|  
+    |*backup_device* [ **,**...*n* ]|백업 작업에 사용할 1-64개의 백업 디바이스 목록을 지정합니다. 물리적 백업 디바이스를 지정하거나, 이미 정의된 경우 해당 논리적 백업 디바이스를 지정할 수 있습니다. 물리적 백업 디바이스를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.<br /><br /> { DISK &#124; TAPE } **=**_physical\_backup\_device\_name_<br /><br /> 자세한 내용은 [백업 디바이스&amp;#40;SQL Server&amp;#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.|  
     |WITH *with_options* [ **,**...*o* ]|필요에 따라 *o*등과 같은 하나 이상의 추가 옵션을 지정합니다. 몇 가지 WITH의 기본 옵션에 대한 자세한 내용은 2단계를 참조하세요.|  
   
 2.  필요에 따라 한 개 이상의 WITH 옵션을 지정합니다. 몇 가지 WITH의 기본 옵션은 이 페이지에 설명되어 있습니다. 모든 WITH 옵션에 대한 자세한 내용은 [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)을 참조하세요.  

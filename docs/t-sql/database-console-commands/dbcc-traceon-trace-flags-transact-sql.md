@@ -1,7 +1,7 @@
 ---
 title: 추적 플래그(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/14/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,14 +21,15 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: ddf60d76f41da844fe9a5187d8ce3824777716a0
-ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
+ms.openlocfilehash: 90f27a36b455b4c0b497b43d5b302684a1a7a9ba
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069829"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206469"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 추적 플래그(Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 추적 플래그는 특정 서버 특성을 설정하거나 특정 동작을 변경하는 데 사용됩니다. 예를 들어 추적 플래그 3226은 오류 로그에서 성공적인 백업 메시지를 표시하지 못하게 하는 일반적으로 사용되는 시작 추적 플래그입니다. 추적 플래그는 성능 문제를 진단하거나 저장 프로시저 또는 복잡한 컴퓨터 시스템을 디버그하는 데 자주 사용되지만, 특정 작업에 부정적인 영향을 주는 동작을 해결하기 위해 Microsoft 지원에서 권장할 수도 있습니다.  모든 문서화된 추적 플래그와 Microsoft 추적 플래그를 지시에 따라 사용하는 경우 프로덕션 환경에서 완전히 지원됩니다.  이 목록의 추적 플래그는 특정 용도와 관련하여 추가 고려 사항이 있을 수 있으므로, 본 문서 및/또는 지원 엔지니어가 제공하는 모든 권장 사항을 주의 깊게 검토하는 것이 좋습니다. 또한 SQL Server의 구성 변경과 마찬가지로 배포하기 전에 비프로덕션 환경에서 플래그를 철저히 테스트하는 것이 가장 좋습니다.
@@ -116,7 +117,7 @@ ms.locfileid: "54069829"
 |**7412**|간단한 쿼리 실행 통계 프로파일링 인프라를 사용하도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/3170113)를 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 이상의 빌드에 적용됩니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 경량 프로파일링이 기본적으로 사용 가능으로 설정되므로 이 추적 플래그가 영향을 주지 않습니다.<br /><br />**범위**: 전역만|
 |**7471**|단일 테이블에서 서로 다른 통계에 대해 여러 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)를 동시에 실행할 수 있도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/3156157)를 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 이상의 빌드에 적용됩니다.<br /><br />**범위**: 전역만|
 |**7745**|데이터베이스 종료 시 쿼리 저장소에서 데이터를 디스크에 플러시하지 않도록 합니다.<br /><br />**참고:** 이 추적을 사용하면 종료 시 이전에 디스크로 플러시되지 않은 쿼리 저장소 데이터가 손실될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 종료의 경우 이 추적 플래그 대신 SHUTDOWN WITH NOWAIT 명령을 사용하여 강제로 즉시 종료할 수 있습니다.<br /><br />**범위**: 전역만|
-|**7752**|쿼리 저장소의 비동기 로드를 사용하도록 설정합니다.<br /><br />**참고:** [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]에서 쿼리 저장소 동기 로드와 관련된 많은 수의 QDS_LOADDB 대기가 발생하는 경우를 이 추적 플래그를 사용합니다(기본 동작).<br /><br />**범위**: 전역만|
+|**7752**|쿼리 저장소의 비동기 로드를 사용하도록 설정합니다.<br /><br />**참고:** [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]에서 쿼리 저장소 동기 로드와 관련된 많은 수의 QDS_LOADDB 대기가 발생하는 경우를 이 추적 플래그를 사용합니다(데이터베이스가 복구되는 동안의 기본 동작).<br /><br />**범위**: 전역만|
 |**7806**|[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]에 DAC(관리자 전용 연결)를 설정합니다. 기본적으로 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]에는 DAC 리소스가 예약되어 있지 않습니다. 자세한 내용은 [데이터베이스 관리자를 위한 진단 연결](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)을 참조하세요.<br /><br />**범위**: 전역만|  
 |**8011**|리소스 모니터에 대한 링 버퍼를 사용하지 않도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/920093)를 참조하세요.<br /><br />**범위**: 전역 및 세션|
 |**8012**|스케줄러에 대한 링 버퍼를 사용하지 않도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/920093)를 참조하세요.<br /><br />**범위**: 전역만|
@@ -126,7 +127,7 @@ ms.locfileid: "54069829"
 |**8020**|작업 집합 모니터링을 사용하지 않도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/920093)를 참조하세요.<br /><br />**범위**: 전역만|
 |**8032**|일반적으로 캐시가 더 커지도록 허용하는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] RTM 설정으로 캐시 제한 매개 변수를 복구합니다. 자주 재사용되는 캐시 항목이 캐시에 맞지 않고 [optimize for ad hoc workloads Server Configuration Option](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) 으로 계획 캐시 관련 문제를 해결하지 못한 경우 이 설정을 사용합니다.<br /><br />**경고:** 추적 플래그 8032는 대형 캐시로 버퍼 풀과 같은 다른 메모리 소비자에 제공되는 메모리가 줄어들 수 있는 성능 문제를 일으킬 수 있습니다.<br /><br />**범위**: 전역만|   
 |**8048**|NUMA 분할 메모리 개체를 CPU 분할로 변환합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/2809338)를 참조하세요.<br /><br />**참고:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 이 동작은 엔진에서 제어되며, 8048 추적 플래그는 아무 효과가 없습니다.<br /><br />**범위**: 전역만|  
-|**8075**|64비트 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 메모리 페이지 할당 오류가 발생하면 [VAS](../../relational-databases/memory-management-architecture-guide.md#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd) 조각화가 감소합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/3074434)를 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] RTM CU10 및 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 CU3에 적용됩니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 이 동작은 엔진에서 제어되며, 8075 추적 플래그는 아무 효과가 없습니다.<br /><br />**범위**: 전역만|
+|**8075**|64비트 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 메모리 페이지 할당 오류가 발생하면 [VAS](../../relational-databases/memory-management-architecture-guide.md#changes-to-memory-management-starting-2012-11x-gm) 조각화가 감소합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/3074434)를 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] RTM CU10 및 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 CU3에 적용됩니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 이 동작은 엔진에서 제어되며, 8075 추적 플래그는 아무 효과가 없습니다.<br /><br />**범위**: 전역만|
 |**8079**|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2에서 하드웨어 레이아웃을 조사하고 NUMA 노드당 8개 이상의 CPU를 보고하는 시스템에 Soft-NUMA를 자동으로 구성할 수 있도록 허용합니다. 자동 Soft-NUMA 동작은 하이퍼스레드(HT/논리 프로세서)를 인식합니다. 추가 노드를 분할하고 만드는 경우 수신기 수, 크기 조정, 네트워크 및 암호화 기능을 늘려서 백그라운드 처리의 크기를 조정합니다.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2에 적용됩니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 이 동작은 엔진에서 제어되며, 8079 추적 플래그는 아무 효과가 없습니다.<br /><br />**범위**: 전역만| 
 |**8207**|트랜잭션 복제 및 CDC에 대한 싱글톤 업데이트를 설정할 수 있습니다. 구독자에 대한 업데이트는 DELETE 및 INSERT 쌍으로 복제할 수 있습니다. 이렇게 하면 UPDATE 트리거 실행과 같은 비즈니스 규칙이 충족되지 않을 수 있습니다. 8207 추적 플래그를 사용하면 단일 행(싱글톤 업데이트)에만 영향을 주는 고유 열에 대한 업데이트가 DELETE 또는 INSERT 쌍이 아닌 UPDATE로 복제됩니다. 업데이트가 unique 제약 조건이 있는 열에 영향을 주거나 업데이트가 여러 행에 영향을 주는 경우에도 업데이트는 여전히 DELETE 또는 INSERT 쌍으로 복제됩니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/302341)를 참조하세요.<br /><br />**범위**: 전역만|
 |**8721**|통계 자동 업데이트를 실행할 때 오류 로그에 보고합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/195565)를 참조하세요.<br /><br />**범위**: 전역만|

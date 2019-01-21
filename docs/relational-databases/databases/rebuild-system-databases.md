@@ -16,12 +16,12 @@ ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f0a1a40b1f4dd31a91436ae7af80f691c2e5a7c
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 4225bb49eb60c61ba01575a2269120dff4a427d3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559200"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125613"
 ---
 # <a name="rebuild-system-databases"></a>시스템 데이터베이스 다시 작성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,15 +107,15 @@ ms.locfileid: "51559200"
     |/ACTION=REBUILDDATABASE|설치 시 시스템 데이터베이스를 다시 작성하도록 지정합니다.|  
     |/INSTANCENAME=*InstanceName*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 이름입니다. 기본 인스턴스의 경우 MSSQLSERVER를 입력합니다.|  
     |/SQLSYSADMINACCOUNTS=*accounts*|**sysadmin** 고정 서버 역할에 추가할 Windows 그룹이나 개별 계정을 지정합니다. 둘 이상의 계정을 지정할 경우 각 계정 이름을 공백으로 구분합니다. 예를 들면 **BUILTIN\Administrators MyDomain\MyUser**와 같이 입력합니다. 계정 이름에 공백이 포함되어 있는 계정을 지정할 때는 계정을 큰따옴표로 묶습니다. 예를 들면 **NT AUTHORITY\SYSTEM**과 같이 입력합니다.|  
-    |[ /SAPWD=*StrongPassword* ]| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** 계정의 암호를 지정합니다. 해당 인스턴스에서 혼합 인증([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 인증) 모드를 사용할 경우 이 매개 변수가 필요합니다.<br /><br /> **\*\* 보안 정보 \*\*****sa**계정은 잘 알려진 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정이므로 악의적인 사용자의 공격 대상이 되는 경우가 많습니다. **sa** 로그인에 대해 강력한 암호를 사용하도록 합니다.<br /><br /> Windows 인증 모드에 이 매개 변수를 지정하지 마세요.|  
+    |[ /SAPWD=*StrongPassword* ]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** 계정의 암호를 지정합니다. 해당 인스턴스에서 혼합 인증([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 인증) 모드를 사용할 경우 이 매개 변수가 필요합니다.<br /><br /> **&#42;&#42;보안 정보&#42;&#42;****sa**계정은 잘 알려진 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정이므로 악의적인 사용자의 공격 대상이 되는 경우가 많습니다. **sa** 로그인에 대해 강력한 암호를 사용하도록 합니다.<br /><br /> Windows 인증 모드에 이 매개 변수를 지정하지 마세요.|  
     |[ /SQLCOLLATION=*CollationName* ]|서버 수준 데이터 정렬을 새로 지정합니다. 이 매개 변수는 선택 사항입니다. 지정하지 않으면 서버의 현재 데이터 정렬이 사용됩니다.<br /><br /> **\*\* 중요 \*\*** 서버 수준 데이터 정렬을 변경해도 기존 사용자 데이터베이스의 데이터 정렬은 변경되지 않습니다. 새로 만드는 모든 사용자 데이터베이스는 기본적으로 새로운 데이터 정렬을 사용하게 됩니다.<br /><br /> 자세한 내용은 [서버 데이터 정렬 설정 또는 변경](../../relational-databases/collations/set-or-change-the-server-collation.md)을 참조하세요.|  
-    |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|tempdb 데이터 파일 수를 지정합니다. 이 값은 최대 8 또는 코어 수 중에서 더 높은 값까지 높일 수 있습니다.<br /><br /> 기본값: 8 또는 코어 수 중 낮은 값|  
+    |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|tempdb 데이터 파일 수를 지정합니다. 이 값은 최대 8 또는 코어 수 중에서 더 높은 값까지 높일 수 있습니다.<br /><br /> 기본값: 8 또는 코어 수 중 낮은 값.|  
     |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|각 tempdb 데이터 파일의 초기 크기를 MB 단위로 지정합니다. 설치에서는 최대 1024MB의 크기를 지원합니다.<br /><br /> 기본값: 8|  
     |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|각 tempdb 데이터 파일의 파일 증가 증분을 MB 단위로 지정합니다. 값이 0이면 자동 증가가 해제되어 있고 추가 공간이 허용되지 않음을 나타냅니다. 설치에서는 최대 1024MB의 크기를 지원합니다.<br /><br /> 기본값: 64|  
-    |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|tempdb 로그 파일의 초기 크기를 MB 단위로 지정합니다. 설치에서는 최대 1024MB의 크기를 지원합니다.<br /><br /> 기본값: 8<br /><br /> 허용되는 범위: Min = 8, Max = 1024|  
-    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|tempdb 로그 파일의 파일 증가 증분을 MB 단위로 지정합니다. 값이 0이면 자동 증가가 해제되어 있고 추가 공간이 허용되지 않음을 나타냅니다. 설치에서는 최대 1024MB의 크기를 지원합니다.<br /><br /> 기본값: 64<br /><br /> 허용되는 범위: Min = 8, Max = 1024|  
-    |[ /SQLTEMPDBDIR=Directories ]|tempdb 데이터 파일에 대한 디렉터리를 지정합니다. 둘 이상의 디렉터리를 지정할 경우 각 계정 이름을 공백으로 구분합니다. 여러 디렉터리가 지정된 경우 tempdb 데이터 파일은 라운드 로빈 방식으로 여러 디렉터리에 분배됩니다.<br /><br /> 기본 값: 시스템 데이터 디렉터리|  
-    |[ /SQLTEMPDBLOGDIR=Directory ]|tempdb 로그 파일의 디렉터리를 지정합니다.<br /><br /> 기본 값: 시스템 데이터 디렉터리|  
+    |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|tempdb 로그 파일의 초기 크기를 MB 단위로 지정합니다. 설치에서는 최대 1024MB의 크기를 지원합니다.<br /><br /> 기본값: 8.<br /><br /> 허용 범위: 최소 = 8, 최대 = 1024.|  
+    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|tempdb 로그 파일의 파일 증가 증분을 MB 단위로 지정합니다. 값이 0이면 자동 증가가 해제되어 있고 추가 공간이 허용되지 않음을 나타냅니다. 설치에서는 최대 1024MB의 크기를 지원합니다.<br /><br /> 기본값: 64<br /><br /> 허용 범위: 최소 = 8, 최대 = 1024.|  
+    |[ /SQLTEMPDBDIR=Directories ]|tempdb 데이터 파일에 대한 디렉터리를 지정합니다. 둘 이상의 디렉터리를 지정할 경우 각 계정 이름을 공백으로 구분합니다. 여러 디렉터리가 지정된 경우 tempdb 데이터 파일은 라운드 로빈 방식으로 여러 디렉터리에 분배됩니다.<br /><br /> 기본값: 시스템 데이터 디렉터리|  
+    |[ /SQLTEMPDBLOGDIR=Directory ]|tempdb 로그 파일의 디렉터리를 지정합니다.<br /><br /> 기본값: 시스템 데이터 디렉터리|  
   
 3.  시스템 데이터베이스를 다시 작성하는 작업이 완료되면 아무런 메시지 없이 명령 프롬프트로 돌아갑니다. Summary.txt 로그 파일을 검토하여 프로세스가 성공적으로 완료되었는지 확인합니다. 이 파일은 C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Logs에 있습니다.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "51559200"
 ## <a name="post-rebuild-tasks"></a>다시 작성 후 수행할 태스크  
  데이터베이스를 다시 작성한 후에는 다음과 같은 추가 태스크를 수행해야 할 수 있습니다.  
   
--   master, model 및 msdb 데이터베이스의 최근 전체 백업을 복원합니다. 자세한 내용은 [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)를 참조하세요.  
+-   master, model 및 msdb 데이터베이스의 최근 전체 백업을 복원합니다. 자세한 내용은 [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)를 참조하세요.  
   
     > [!IMPORTANT]  
     >  서버 데이터 정렬을 변경했을 경우 시스템 데이터베이스를 복원하지 마세요. 시스템 데이터베이스를 복원하면 새로운 데이터 정렬이 이전 데이터 정렬 설정으로 바뀝니다.  
@@ -163,7 +163,7 @@ ms.locfileid: "51559200"
 > [!WARNING]  
 >  **instmsdb** 스크립트를 사용하여 **msdb** 데이터베이스를 다시 작성하면 작업, 경고, 운영자, 유지 관리 계획, 백업 기록, 정책 기반 관리 설정, 데이터베이스 메일, 성능 데이터 웨어하우스 등과 같은 **msdb** 에 저장된 모든 정보가 제거됩니다.  
   
-1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에이전트, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssRS](../../includes/ssrs.md)]를 포함하는 [!INCLUDE[ssIS](../../includes/ssis-md.md)]에 연결된 서비스 및 데이터 저장소와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하는 응용프로그램을 모두 중지합니다.  
+1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에이전트, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssRS](../../includes/ssrs.md)]를 포함하는 [!INCLUDE[ssIS](../../includes/ssis-md.md)]에 연결된 서비스 및 데이터 저장소와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하는 애플리케이션을 모두 중지합니다.  
   
 2.  다음 명령을 사용하여 명령줄에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작합니다. `NET START MSSQLSERVER /T3608`  
   

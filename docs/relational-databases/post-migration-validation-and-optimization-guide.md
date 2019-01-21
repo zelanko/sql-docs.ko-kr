@@ -1,6 +1,6 @@
 ---
 title: 마이그레이션 후 유효성 검사 및 최적화 가이드 | Microsoft Docs
-ms.date: 5/03/2017
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,23 +13,25 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: d85de6deffa9e140bc5f9bf489afd60e0dbbc948
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7e9e96ee56895c38a8c242d3cd48804884f581d1
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213622"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206369"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>마이그레이션 후 유효성 검사 및 최적화 가이드
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 마이그레이션 후 단계는 데이터 정확도와 완전성을 조정하고 작업의 성능 문제를 파악하는 데 매우 중요합니다.
 
-# <a name="common-performance-scenarios"></a>일반적인 성능 시나리오 
+## <a name="common-performance-scenarios"></a>일반적인 성능 시나리오
+
 다음은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 플랫폼으로 마이그레션한 후 발생하는 몇 가지 일반적인 성능 시나리오와 해결 방법입니다. 여기에는 이전 버전 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 새 버전 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션 및 Oracle, DB2, MySQL, Sybase 등의 외래 플랫폼에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션에 특정한 시나리오가 포함됩니다.
 
 ## <a name="CEUpgrade"></a>CE 버전 변경으로 인한 쿼리 성능 저하
- 
+
 **적용 대상:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 마이그레이션.
 
 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 이상 버전으로 마이그레이션할 때, 그리고 [데이터베이스 호환성 수준](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)을 사용 가능한 최신으로 업그레이드할 때는 작업이 성능 저하 위험에 노출될 수 있습니다.
@@ -126,6 +128,7 @@ SARGable이 아닌 조건자의 몇 가지 예:
 > MSTVF(다중 문 테이블 반환 함수)의 출력 테이블은 컴파일 시간에 생성되지 않으므로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 실제 통계가 아닌 추론을 사용하여 행 예상치를 결정합니다. 이 경우 인덱스를 기본 테이블에 추가하더라도 도움이 되지 않습니다. MSTVF의 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 MSTVF에서 반환할 것으로 예상되는 행 수에 고정 예상치 1([!INCLUDE[ssSQL14](../includes/sssql14-md.md)]부터 고정 예상치는 100개 행)을 사용합니다.
 
 ### <a name="steps-to-resolve"></a>해결 단계
+
 1.  다중 문 TVF에 문이 하나뿐인 경우 인라인 TVF로 변환합니다.
 
     ```sql
@@ -142,7 +145,8 @@ SARGable이 아닌 조건자의 몇 가지 예:
     RETURN
     END
     ```
-    수행할 작업 
+
+    다음 표시된 예시는 인라인 형식입니다.
 
     ```sql
     CREATE FUNCTION dbo.tfnGetRecentAddress_inline(@ID int)
@@ -158,7 +162,8 @@ SARGable이 아닌 조건자의 몇 가지 예:
 
 2.  더 복잡한 경우 메모리 액세스에 최적화된 테이블 또는 임시 테이블에 저장된 중간 결과를 사용합니다.
 
-##  <a name="Additional_Reading"></a> 더 보기  
+##  <a name="Additional_Reading"></a> 더 보기
+
  [쿼리 저장소에 대한 모범 사례](../relational-databases/performance/best-practice-with-the-query-store.md)  
 [Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
 [사용자 정의 함수](../relational-databases/user-defined-functions/user-defined-functions.md)  

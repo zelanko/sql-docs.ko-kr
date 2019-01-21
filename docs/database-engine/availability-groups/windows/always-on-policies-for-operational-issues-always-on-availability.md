@@ -14,12 +14,12 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6d9d780473346a446811595d850aafd4da9d5930
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 07cc3b6b11d4f40792ede3c0d2a9668c5ada0db6
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214172"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226560"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Always On 가용성 그룹의 운영 문제에 대한 정책 기반 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53214172"
 ##  <a name="Always OnPBM"></a> 미리 정의된 정책 및 문제  
  다음 표에는 미리 정의된 정책이 요약되어 있습니다.  
   
-|정책 이름|문제점|범주**\***|패싯|  
+|정책 이름|문제점|범주 **&#42;**|패싯|  
 |-----------------|-----------|--------------------|-----------|  
 |WSFC 클러스터 상태|[WSFC cluster service is offline](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md)입니다.|심각|SQL Server 인스턴스|  
 |가용성 그룹 온라인 상태|[Availability group is offline](../../../database-engine/availability-groups/windows/availability-group-is-offline.md)입니다.|심각|가용성 그룹|  
@@ -67,7 +67,7 @@ ms.locfileid: "53214172"
 |가용성 데이터베이스 데이터 동기화 상태|[Data synchronization state of availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md)입니다.|경고|가용성 데이터베이스|  
   
 > [!IMPORTANT]
->  **\*** Always On 정책의 경우 범주 이름이 ID로 사용됩니다. Always On 범주의 이름을 변경하면 상태 평가 기능이 작동하지 않으므로 이름을 수정하지 마세요.  
+>  **&#42;** Always On 정책의 경우 범주 이름이 ID로 사용됩니다. Always On 범주의 이름을 변경하면 상태 평가 기능이 작동하지 않으므로 이름을 수정하지 마세요.  
   
 ##  <a name="Dashboard"></a> Always On 대시보드  
  Always On 대시보드에서는 가용성 그룹의 상태를 한 눈에 보이도록 표시합니다. Always On 대시보드에는 다음과 같은 기능이 포함되어 있습니다.  

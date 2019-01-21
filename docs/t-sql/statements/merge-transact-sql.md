@@ -25,18 +25,18 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 939ba409a75d332d0aba97aa972db2ba9eecaf7a
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 332776e10ac95fc7df54fcb2e140bf69c487d6ec
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980019"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299610"
 ---
 # <a name="merge-transact-sql"></a>MERGE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 원본 테이블과의 조인 결과를 기반으로 대상 테이블에서 삽입, 업데이트 또는 삭제 작업을 수행합니다. 예를 들어 원본 테이블과의 차이점에 따라 대상 테이블에서 행을 삽입, 업데이트 및 삭제하여 두 테이블을 동기화할 수 있습니다.  
   

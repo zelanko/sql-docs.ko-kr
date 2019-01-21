@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2203e8fe68861fd0e69dae352fef8c015e76859f
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 8b46686dfb440e9d0d9fa68fcaf23d51eea86c97
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328973"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143473"
 ---
 # <a name="best-practice-with-the-query-store"></a>쿼리 저장소에 대한 모범 사례
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -207,7 +207,7 @@ FROM sys.database_query_store_options;
   
  다음 단계를 수행하여 쿼리 저장소를 읽기-쓰기 모드로 전환하고 데이터 수집을 활성화해 보세요.  
   
--   **ALTER DATABASE** 의 **MAX_STORAGE_SIZE_MB**옵션을 사용하여 최대 저장소 크기를 늘립니다.  
+-   **ALTER DATABASE** 의 **MAX_STORAGE_SIZE_MB**옵션을 사용하여 최대 스토리지 크기를 늘립니다.  
   
 -   다음 문을 사용하여 쿼리 저장소 데이터를 정리합니다.  
   
@@ -329,17 +329,17 @@ WHERE is_forced_plan = 1;
   
 ##  <a name="Renaming"></a> 강제 계획이 포함된 쿼리가 있을 경우 데이터베이스 이름 변경 방지  
 
- 실행 계획에서는 세 부분으로 된 이름을 참조합니다(`database.schema.object`).   
+실행 계획에서는 세 부분으로 된 이름을 참조합니다(`database.schema.object`).   
 
 데이터베이스의 이름을 바꾸면 계획 강제 적용에 실패하여 모든 후속 쿼리 실행 시 다시 컴파일됩니다.  
 
-##  <a name="Recovery"></a> 중요 업무 서버에서 추적 플래그를 사용하여 재해로부터 복구 개선
+##  <a name="Recovery"></a> 중요 업무 서버에서 추적 플래그 사용
  
-전역 추적 플래그 7745 및 7752는 고가용성 및 재해 복구 시나리오 중에 쿼리 저장소의 성능을 향상하는 데 사용할 수 있습니다. 자세한 내용은 [추적 플래그](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.
+전역 추적 플래그 7745 및 7752를 사용하여 쿼리 저장소를 사용하는 데이터베이스의 가용성을 개선할 수 있습니다. 자세한 내용은 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을(를) 종료하기 전에 추적 플래그 7745는 쿼리 저장소에서 데이터를 디스크에 기록하는 기본 동작을 방지할 수 있습니다.
+-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을(를) 종료하기 전에 추적 플래그 7745는 쿼리 저장소에서 데이터를 디스크에 기록하는 기본 동작을 방지할 수 있습니다. 따라서 수집되었으나 아직 디스크에 보관되지 않은 커리 저장소 데이터가 손실됩니다. 
   
-추적 플래그 7752를 통해 쿼리 저장소를 비동기 로드할 수 있으며, 쿼리 저장소가 완전히 로드되기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 쿼리를 실행합니다. 기본 쿼리 저장소 동작은 쿼리 저장소가 복구되기 전에 쿼리가 실행되지 않도록 방지합니다.
+-  추적 플래그 7752는 쿼리 저장소의 비동기 로드를 사용하도록 설정합니다. 이 설정을 통해 쿼리 저장소가 완전히 복구되기 전에 데이터베이스가 온라인 상태로 전환되고 쿼리가 실행됩니다. 기본 동작은 쿼리 저장소의 비동기 로드 실행입니다. 이 기본 동작은 쿼리 저장소가 복구되기 전에 쿼리 실행을 차단하며 데이터 수집에서 쿼리가 누락되지 않도록 방지합니다.
 
 > [!IMPORTANT]
 > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 Just-In-Time 워크로드 인사이트에 대해 쿼리 저장소를 사용하는 경우, 가능하면 빨리 [KB 4340759](https://support.microsoft.com/help/4340759)의 성능 확장성 픽스를 설치하세요. 

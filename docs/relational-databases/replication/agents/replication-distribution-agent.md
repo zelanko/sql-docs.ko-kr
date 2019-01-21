@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a71962ea2e0a6d40534a9884fbb026e3d90aaf1c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: b1b43a2c739de3ae0f23871c7bc023b3f215b4ce
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590487"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126644"
 ---
 # <a name="replication-distribution-agent"></a>복제 배포 에이전트
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -146,7 +146,7 @@ distrib [-?]
  > [!NOTE]  
  >  유효한 SSL 인증서는 SQL Server의 정규화된 도메인 이름으로 정의됩니다. -EncryptionLevel을 2로 설정할 때 에이전트가 성공적으로 연결되도록 하려면 로컬 SQL Server에서 별칭을 만듭니다. '별칭 이름' 매개 변수는 서버 이름이어야 하며 '서버' 매개 변수는 SQL Server의 정규화된 이름으로 설정되어야 합니다.
 
- 자세한 내용은 [보안 개요&#40;복제&#41;](../../../relational-databases/replication/security/security-overview-replication.md)를 참조하세요.  
+ 자세한 내용은 [복제 보안 설정 보기 및 수정](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)을 참조하세요.  
   
  **-ErrorFile** _error_path_and_file_name_  
  배포 에이전트에서 생성한 오류 파일의 경로 및 파일 이름입니다. 이 파일은 구독자에서 복제 트랜잭션을 적용하는 동안 오류가 발생할 때마다 생성되며 게시자나 배포자에서 발생한 오류는 이 파일에 기록되지 않습니다. 이 파일에는 실패한 복제 트랜잭션 및 관련 오류 메시지가 들어 있습니다. 지정하지 않으면 오류 파일이 배포 에이전트의 현재 디렉터리에 생성됩니다. 오류 파일 이름은 배포 에이전트의 이름에 .err 확장명을 붙인 것입니다. 지정된 파일 이름이 존재하면 오류 메시지가 파일에 추가됩니다. 이 매개 변수는 최대 256개의 유니코드 문자일 수 있습니다.  
@@ -276,7 +276,7 @@ distrib [-?]
  배포의 구독 유형을 지정합니다. 값 **0** 은 밀어넣기 구독을, 값 **1** 은 끌어오기 구독을, 값 **2** 는 익명 구독을 나타냅니다.  
   
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
- 기록 로깅의 트랜잭션 간격을 지정합니다. 기록 로깅의 마지막 인스턴스 후 커밋된 트랜잭션의 수가 이 옵션보다 클 경우 기록 메시지가 기록됩니다. 기본값은 100입니다. 값이 **0** 이면 **TransactionsPerHistory**에는 제한이 없습니다. 앞에 나온 **–MessageInterval** 매개 변수를 참조하세요.  
+ 기록 로깅의 트랜잭션 간격을 지정합니다. 기록 로깅의 마지막 인스턴스 후 커밋된 트랜잭션의 수가 이 옵션보다 클 경우 기록 메시지가 기록됩니다. 기본값은 100입니다. 값이 **0** 이면 **TransactionsPerHistory**에는 제한이 없습니다. See the preceding **–MessageInterval**parameter.  
   
  **-UseDTS**  
  데이터 변환을 허용하는 게시의 매개 변수로 지정해야 합니다.  

@@ -41,18 +41,18 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f2b1ef643fe1d19b0df1ed4efd3b4802789006eb
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: cf2f90329896524a96425f69f9dc3afd46d7ac3c
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206192"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299930"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 사용자 정의 함수를 만듭니다. 사용자 정의 함수는 매개 변수를 허용하고 복잡한 계산 등의 동작을 수행하며 해당 동작의 결과를 값으로 반환하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CLR(공용 언어 런타임) 루틴입니다. 반환 값은 단일 스칼라 값이나 테이블일 수 있습니다. 이 문을 사용하여 다음과 같은 상황에서 다시 사용할 수 있는 루틴을 만들 수 있습니다.  
   

@@ -2,7 +2,7 @@
 title: ALTER DATABASE SET 옵션(Transact-SQL) | Microsoft Docs
 description: SQL Server 및 Azure SQL Database에서 자동 튜닝, 암호화, 쿼리 저장소와 같은 데이터베이스 옵션을 설정하는 방법 알아보기
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 1/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a06414a9ca09ecfd02438827cbee6645ca381ae
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1dee3b66253935a979aa483de87c42dc4bb53e3f
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215389"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211134"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL) 
 
@@ -704,10 +704,13 @@ ON
 쿼리 저장소를 사용하도록 설정합니다.  
   
 OFF  
-쿼리 저장소를 사용하지 않도록 합니다. 이것은 기본값입니다.   
+쿼리 저장소를 사용하지 않도록 합니다. 이것은 기본값입니다.
   
 CLEAR  
-쿼리 저장소의 내용을 제거합니다.  
+쿼리 저장소의 내용을 제거합니다.
+
+> [!NOTE]  
+> Azure SQL Data Warehouse의 경우 사용자 데이터베이스에서 `ALTER DATABASE SET QUERY_STORE`를 실행해야 합니다. 다른 데이터 웨어하우스 인스턴스에서는 문을 실행할 수 없습니다.
   
 OPERATION_MODE  
 쿼리 저장소의 작업 모드를 설명합니다. 유효한 값은 READ_ONLY 및 READ_WRITE입니다. READ_WRITE 모드에서 쿼리 저장소는  쿼리 계획 및 런타임 실행 통계 정보를 수집하고 유지합니다. READ_ONLY 모드에서는 쿼리 저장소에서 정보를 읽을 수 있지만 새 정보는 추가되지 않습니다. 쿼리 저장소의 최대 할당 공간이 최대값에 도달하면 쿼리 저장소는 작업 모드를 READ_ONLY로 변경합니다.  

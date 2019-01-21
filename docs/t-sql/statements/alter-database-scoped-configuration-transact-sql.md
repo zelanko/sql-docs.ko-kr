@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 972cd8bf1acc8a7abcf428c3bfd553e878248fde
-ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
+ms.openlocfilehash: e50b19daefc7f765a4d24850c6557af419c0a345
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069789"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226600"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 
@@ -103,7 +103,7 @@ LEGACY_CARDINALITY_ESTIMATION **=** { ON | **OFF** | PRIMARY }
 
 > [!TIP]
 > 쿼리 수준에서 이를 수행하기 위해 **QUERYTRACEON** [쿼리 힌트](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 추가합니다.
-> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 쿼리 수준에서 이를 수행하기 위해 추적 플래그를 사용하는 대신 **USE HINT** [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 추가합니다.
+> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 쿼리 수준에서 이를 수행하기 위해 추적 플래그를 사용하는 대신 **USE HINT** [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)를 추가합니다.
 
 PRIMARY
 
@@ -115,7 +115,7 @@ PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY}
 
 > [!TIP]
 > 쿼리 수준에서 이를 수행하기 위해 **OPTIMIZE FOR UNKNOWN** [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.
-> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 쿼리 수준에서 이를 수행하기 위해 **USE HINT** [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 사용할 수도 있습니다.
+> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 쿼리 수준에서 이를 수행하기 위해 **USE HINT** [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)를 사용할 수도 있습니다.
 
 PRIMARY
 
@@ -127,7 +127,7 @@ PRIMARY
 
 > [!TIP]
 > 쿼리 수준에서 이를 수행하기 위해 **QUERYTRACEON** [쿼리 힌트](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 추가합니다.
-> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 쿼리 수준에서 이를 수행하기 위해 추적 플래그를 사용하는 대신 USE HINT [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 추가합니다.
+> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 쿼리 수준에서 이를 수행하기 위해 추적 플래그를 사용하는 대신 USE HINT [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)를 추가합니다.
 
 PRIMARY
 
@@ -189,7 +189,7 @@ WHEN_SUPPORTED
 
 ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-***적용 대상**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](공개 미리 보기 기능으로)
+**적용 대상**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](공개 미리 보기 기능으로)
 
 엔진이 지원되는 작업의 권한을 resumable로 자동 상승시키도록 하는 옵션을 선택할 수 있습니다. 기본값은 OFF, 즉 명령문에 지정되지 않은 경우 작업의 권한이 resumable로 상승되지 않는 것입니다. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)는 ELEVATE_ELEVATE_RESUMABLE의 현재 값을 나타냅니다. 이러한 옵션은 resumable에 지원되는 작업에만 적용됩니다.
 
@@ -215,19 +215,19 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 
 DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
 
-**적용 대상:** [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 또는 명령문 범위에서 다중 명령문 테이블 값 함수에 대해 인터리브된 실행을 사용하거나 사용하지 않도록 설정할 수 있습니다. 인터리브된 실행은 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]의 적응 쿼리 처리의 일부인 기능입니다. 자세한 내용은 [적응 쿼리 처리](../../relational-databases/performance/adaptive-query-processing.md)를 참조하세요.
 
 DISABLE_BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
 
-**적용 대상:** [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 또는 명령문 범위에서 적응형 조인을 사용하거나 사용하지 않도록 설정할 수 있습니다. 적응형 조인은 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에서 도입된 [적응 쿼리 처리](../../relational-databases/performance/adaptive-query-processing.md)의 일부인 기능입니다.
 
 ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
-**적용 대상**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](공개 미리 보기 기능으로)
+**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](기능은 공개 미리 보기 상태)
 
 데이터베이스 호환성 수준 150 이상을 유지하면서 데이터베이스 또는 명령문 범위에서 행 모드 메모리 부여 피드백을 사용하거나 사용하지 않도록 설정할 수 있습니다. 행 모드 메모리는 SQL Server 2019에 도입된 [적응 쿼리 처리](../../relational-databases/performance/adaptive-query-processing.md)의 일부인 기능에 피드백을 제공합니다.
 
@@ -271,7 +271,7 @@ ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 ### <a name="dacfx"></a>DacFx
 
-`ALTER DATABASE SCOPED CONFIGURATION`은 데이터베이스 스키마에 영향을 주는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 시작)의 새 기능이므로 스키마(데이터 유무에 상관없이)를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이전 버전(예: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)])으로 내보낼 수 없습니다. 예를 들어 이 새로운 기능이 사용되는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 데이터베이스에서 [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) 또는 [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4)로 내보내기를 하위 수준 서버로 가져올 수 없게 됩니다.
+`ALTER DATABASE SCOPED CONFIGURATION`은 데이터베이스 스키마에 영향을 주는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 시작)의 새 기능이므로 스키마(데이터 유무에 상관없이)를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이전 버전(예: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])으로 내보낼 수 없습니다. 예를 들어 이 새로운 기능이 사용되는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 데이터베이스에서 [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) 또는 [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4)로 내보내기를 하위 수준 서버로 가져올 수 없게 됩니다.
 
 ### <a name="elevateonline"></a>ELEVATE_ONLINE
 
@@ -289,7 +289,7 @@ ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 이 예제에서는 ALTER DATABASE SCOPED CONFIGURATION의 사용을 보여 줍니다.
 
 ### <a name="a-grant-permission"></a>1. 사용 권한 부여
-이 예제에서는 ALTER DATABASE SCOPED CONFIGURATION을 실행하는 데 필요한 사용 권한을 사용자 [Joe]에게 부여합니다
+이 예제에서는 ALTER DATABASE SCOPED CONFIGURATION을 실행하는 데 필요한 사용 권한을 사용자 Joe에게 부여합니다.
 
 ```sql
 GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
@@ -300,59 +300,59 @@ GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET MAXDOP = 1 ;
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=4 ;
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = 4 ;
 ```
 
 이 예제는 지역에서 복제 시나리오에서 해당 기본 데이터베이스에 대해 설정된 것과 동일하도록 보조 데이터베이스에 대한 MAXDOP를 설정합니다.
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = PRIMARY ;
 ```
 
 ### <a name="c-set-legacycardinalityestimation"></a>3. LEGACY_CARDINALITY_ESTIMATION 설정
 이 예제는 지역에서 복제 시나리오에서 보조 데이터베이스에 대해 LEGACY_CARDINALITY_ESTIMATION을 ON으로 설정합니다.
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=ON ;
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION = ON ;
 ```
 
 이 예제는 지역에서 복제 시나리오에서 해당 기본 데이터베이스에 대해 설정된 것으로 보조 데이터베이스에 대해 LEGACY_CARDINALITY_ESTIMATION을 설정합니다.
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=PRIMARY ;
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION = PRIMARY ;
 ```
 
 ### <a name="d-set-parametersniffing"></a>D. PARAMETER_SNIFFING 설정
 이 예제는 지역에서 복제 시나리오에서 기본 데이터베이스에 대해 PARAMETER_SNIFFING을 OFF로 설정합니다.
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING =OFF ;
+ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING = OFF ;
 ```
 
 이 예제는 지역에서 복제 시나리오에서 기본 데이터베이스에 대해 PARAMETER_SNIFFING을 OFF로 설정합니다.
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=OFF ;
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = OFF ;
 ```
 
 이 예제는 지역에서 복제 시나리오에서 보조 데이터베이스에 대한 PARAMETER_SNIFFING을 기본 데이터베이스에 대한 것으로 설정합니다.
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY ;
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = PRIMARY ;
 ```
 
 ### <a name="e-set-queryoptimizerhotfixes"></a>E. QUERY_OPTIMIZER_HOTFIXES 설정
 지역에서 복제 시나리오에서 기본 데이터베이스에 대해 QUERY_OPTIMIZER_HOTFIXES를 ON으로 설정합니다.
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;
+ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES = ON ;
 ```
 
 ### <a name="f-clear-procedure-cache"></a>F. 프로시저 캐시 지우기
 이 예제에서는 프로시저 캐시를 지웁니다(기본 데이터베이스에 대해서만 사용 가능).
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
+ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 ```
 
 ### <a name="g-set-identitycache"></a>G. IDENTITY_CACHE 설정
@@ -361,7 +361,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 이 예제는 ID 캐시를 비활성화합니다.
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
+ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 ```
 
 ### <a name="h-set-optimizeforadhocworkloads"></a>H. OPTIMIZE_FOR_AD_HOC_WORKLOADS 설정
@@ -374,21 +374,21 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
 ### <a name="i-set-elevateonline"></a>9. ELEVATE_ONLINE 설정
-**적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 및 (공개 미리 보기 기능으로)
+**적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
 
 이 예에서는 ELEVATE_ONLINE을 FAIL_UNSUPPORTED로 설정합니다.
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE=FAIL_UNSUPPORTED ;
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED ;
 ```
 
 ### <a name="j-set-elevateresumable"></a>J. ELEVATE_RESUMABLE 설정
-**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](공개 미리 보기 기능으로)
+**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](기능은 공개 미리 보기 상태)
 
 이 예에서는 ELEVATE_RESUMABLE을 WHEN_SUPPORTED로 설정합니다.
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 ```
 
 ## <a name="additional-resources"></a>추가 리소스

@@ -16,12 +16,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9a3d92e91ec16bf51566575c235271bf69bbd72a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 773d7d8b513d0f93d00782d130c796d2b04cea83
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590343"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130864"
 ---
 # <a name="replication-log-reader-agent"></a>복제 로그 판독기 에이전트
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ logread [-?]
  > [!NOTE]  
  >  유효한 SSL 인증서는 SQL Server의 정규화된 도메인 이름으로 정의됩니다. -EncryptionLevel을 2로 설정할 때 에이전트가 성공적으로 연결되도록 하려면 로컬 SQL Server에서 별칭을 만듭니다. '별칭 이름' 매개 변수는 서버 이름이어야 하며 '서버' 매개 변수는 SQL Server의 정규화된 이름으로 설정되어야 합니다.
  
- 자세한 내용은 [보안 개요&#40;복제&#41;](../../../relational-databases/replication/security/security-overview-replication.md)를 참조하세요.  
+ 자세한 내용은 [복제 보안 설정 보기 및 수정](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)을 참조하세요.  
   
  **-ExtendedEventConfigFile** _configuration_path_and_file_name_  
  확장 이벤트 XML 구성 파일의 경로 및 파일 이름을 지정합니다. 확장 이벤트 구성 파일에서는 세션을 구성하고 추적 이벤트를 사용하도록 설정할 수 있습니다.  

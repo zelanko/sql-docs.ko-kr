@@ -41,15 +41,18 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 49a5a5681093c9a4f39f843d713aa286c86fc818
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6977a20130073326a50c522edbd47be32f8a117c
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601963"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298700"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>SQL Server 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
   이 항목에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]구성 관리자, 명령 프롬프트의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명령,  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 PowerShell을 사용하여 **,** 에이전트 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]Browser 서비스를 시작, 중지, 일시 중지, 재개 또는 다시 시작하는 방법에 대해 설명합니다.  
   
@@ -128,7 +131,7 @@ ms.locfileid: "51601963"
   
 1.  **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 독립 실행형 프로그램이 아니라 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 프로그램용 스냅인이므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 최신 버전의 Windows에서 응용 프로그램으로 표시되지 않습니다. Windows가 C 드라이브에 설치되어 있는 경우 최신 4개 버전의 경로는 다음과 같습니다.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 독립 실행형 프로그램이 아니라 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 프로그램용 스냅인이므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 최신 버전의 Windows에서 애플리케이션으로 표시되지 않습니다. Windows가 C 드라이브에 설치되어 있는 경우 최신 4개 버전의 경로는 다음과 같습니다.  
   
     |||  
     |-|-|  
@@ -188,7 +191,7 @@ ms.locfileid: "51601963"
 3.  작업을 수행할지 묻는 메시지가 표시되면 **예**를 클릭합니다.  
   
 ##  <a name="CommandPrompt"></a> 명령 프롬프트 창에서 net 명령 사용  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net [!INCLUDE[msCoName](../../includes/msconame-md.md)] 명령을 사용하여 **,** 서비스를 시작, 중지 또는 일시 중지할 수 있습니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net [!INCLUDE[msCoName](../../includes/msconame-md.md)] 명령을 사용하여 **,** 서비스를 시작, 중지 또는 일시 중지할 수 있습니다.  
   
 ###  <a name="dbDefault"></a> 다음 기본 인스턴스 시작하기: [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
