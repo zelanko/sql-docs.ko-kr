@@ -41,12 +41,12 @@ ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94eea6f9e8d76875c11a6e52de423812c16b255e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 78dde89a5554dbd548cc2d1d5d4b1436f08c9662
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516024"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143583"
 ---
 # <a name="database-project-settings"></a>데이터베이스 프로젝트 설정
 데이터베이스 프로젝트 설정을 사용하여 데이터베이스, 디버깅 및 빌드 구성의 여러 측면을 제어할 수 있습니다. 이러한 설정은 다음 범주로 구분됩니다.  
@@ -170,8 +170,7 @@ Transact-SQL 컴파일러 서비스는 Microsoft SQL Server 2012 데이터베이
   
 2.  VB를 사용하여 개체를 작성한 경우 먼저 **언어** 드롭다운 목록에서 VB를 선택한 다음 **고급** 버튼을 클릭하십시오. VB 옵션에 대한 설명은 [고급 컴파일러 설정 대화 상자(Visual Basic)](https://msdn.microsoft.com/library/07bysfz2.aspx)를 참조하세요.  
   
-자세한 내용은 [빌드 구성 속성](https://msdn.microsoft.com/query/dev10.query?appId=Dev10IDEF1&l=EN-US&k=k(CS.PROJECTPROPERTIESBUILD))을 참조하세요.  
-  
+
 ## <a name="bkmk_build"></a>빌드  
 솔루션의 각 데이터베이스 프로젝트에 대한 빌드 구성을 선택할 수 있습니다. 기본적으로 하나의 구성이 있지만 사용자 지정 구성을 추가할 수 있습니다. 예를 들어, 언제든지 데이터베이스를 삭제한 후 다시 생성할 수 있는 사용자 지정 구성을 원한다면 추가할 수 있습니다. 각기 다른 프로젝트 형식을 포함하고 있는 솔루션에서는 각 프로젝트를 위한 특정 빌드 구성을 포함한 사용자 지정 솔루션 구성을 만들 수 있습니다.  
   

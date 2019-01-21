@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d89562ce168d8cf5662fc7af96da3d89cdafe509
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: d473ba8f0a16fd161ec2c6edce2cd6de51a08f36
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021927"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143493"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>자습서: 자유 형식 보고서 만들기(보고서 작성기)
 이 자습서에서는 뉴스레터 역할을 하는 페이지가 매겨진 보고서를 만듭니다. 각 페이지에는 정적 텍스트, 요약 시각적 개체 및 자세한 샘플 판매 데이터가 표시됩니다.
@@ -22,7 +22,7 @@ ms.locfileid: "50021927"
 
 이 보고서에서는 정보가 지역별로 그룹화되고 지역의 판매 관리자 이름과 세부 및 요약 판매 정보가 표시됩니다. 자유 형식 보고서의 기초로 목록 데이터 영역에서 시작한 다음 이미지가 있는 장식 패널, 데이터가 삽입된 정적 텍스트, 세부 정보를 표시할 테이블, 요약 정보를 표시할 원형 및 세로 막대형 차트(옵션) 등을 추가합니다.  
   
-이 자습서에 소요되는 예상 시간: 20분  
+이 자습서에 소요되는 예상 시간: 20분.  
   
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
@@ -36,9 +36,9 @@ ms.locfileid: "50021927"
   
 1.  컴퓨터,[웹 포털 또는 SharePoint 통합 모드에서](../reporting-services/report-builder/start-report-builder.md) 보고서 작성기를 시작 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 합니다.  
   
-    **새 보고서 또는 데이터 집합** 대화 상자가 열립니다.  
+    **새 보고서 또는 데이터 세트** 대화 상자가 열립니다.  
   
-    **새 보고서 또는 데이터 집합** 대화 상자가 표시되지 않는 경우 **파일** 메뉴 > **새로 만들기**를 클릭합니다.  
+    **새 보고서 또는 데이터 세트** 대화 상자가 표시되지 않는 경우 **파일** 메뉴 &gt; **새로 만들기**를 클릭합니다.  
   
 2.  왼쪽 창에서 **새 보고서** 가 선택되어 있는지 확인합니다. 
  
@@ -48,11 +48,11 @@ ms.locfileid: "50021927"
   
 1.  보고서 데이터 창에서 **새로 만들기** > **데이터 원본**을 클릭합니다.  
   
-2.  **이름** 상자에 **ListDataSource**를 입력합니다.  
+2.  **이름** 상자에 다음을 입력합니다. **ListDataSource**  
   
 3.  **내 보고서에 포함된 연결 사용**을 클릭합니다.  
   
-4.  연결 형식이 Microsoft SQL Server인지 확인한 다음 **연결 문자열** 상자에 **Data Source = \<servername>** 을 입력합니다.  
+4.  연결 형식이 Microsoft SQL Server인지 확인한 다음 **연결 문자열** 상자에 다음을 입력합니다. **데이터 원본 = \<servername>**  
   
     **\<servername>**(예: Report001)은 SQL Server 데이터베이스 엔진의 인스턴스가 설치된 컴퓨터를 지정합니다. 이 보고서의 데이터는 SQL Server 데이터베이스에서 추출된 것이 아니므로 데이터베이스 이름을 포함하면 안 됩니다. 지정된 서버의 기본 데이터베이스는 쿼리를 구문 분석하는 데만 사용됩니다.  
   
@@ -64,9 +64,9 @@ ms.locfileid: "50021927"
   
 1.  보고서 데이터 창에서 **새로 만들기** > **데이터 집합**을 클릭합니다.  
   
-2.  **이름** 상자에 **ListDataset**을 입력합니다.  
+2.  **이름** 상자에 다음을 입력합니다. **ListDataset**.  
   
-3.  **내 보고서에 포함된 데이터 집합 사용**을 클릭하고 데이터 원본이 **ListDataSource**인지 확인합니다.  
+3.  **내 보고서에 포함된 데이터 세트 사용**을 클릭하고 데이터 원본이 **ListDataSource**인지 확인합니다.  
   
 4.  **텍스트** 쿼리 유형이 선택되어 있는지 확인한 다음 **쿼리 디자이너**를 클릭합니다.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "50021927"
   
     ![report-builder-free-form-tablix-properties](../reporting-services/media/report-builder-free-form-tablix-properties.png) 
   
-3.  **데이터 집합 이름** 드롭다운 목록에서 **ListDataset**을 선택합니다.  
+3.  **데이터 세트 이름** 드롭다운 목록에서 **ListDataset**을 선택합니다.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -199,7 +199,7 @@ ms.locfileid: "50021927"
   
 2.  **삽입** 탭 > **텍스트 상자**로 이동합니다. 이전에 추가한 사각형 안에 있는 목록의 왼쪽 위를 클릭하고 마우스를 끌어 입력란의 너비와 높이를 각각 3.45인치와 5인치로 조정합니다.  
   
-3.  입력란에 커서를 놓고 **Newsletter for** 를 입력합니다. 다음 단계에서 추가할 필드의 텍스트를 구분하기 위해 "for" 단어 뒤에 공백을 포함합니다.   
+3.  텍스트 상자에 커서를 놓고 다음을 입력합니다. **Newsletter for**. 다음 단계에서 추가할 필드의 텍스트를 구분하기 위해 "for" 단어 뒤에 공백을 포함합니다.   
   
     ![뉴스레터 제목 텍스트 추가](../reporting-services/media/tutorial-newsletterfor.png "뉴스레터 제목 텍스트 추가")  
   
@@ -215,7 +215,7 @@ ms.locfileid: "50021927"
     *  **20pt**.
     *  **토마토**.  
   
-9. 3단계에서 입력한 텍스트 아래에 커서를 놓고 **Hello** 를 입력한 후 단어 뒤에 공백을 추가하여 텍스트와 다음 단계에서 추가할 필드를 구분합니다.  
+9. 3단계에서 입력한 텍스트 아래에 커서를 놓고 **Hello**를 입력하고 단어 뒤에 공백을 추가하여 다음 단계에서 추가할 텍스트와 필드를 구분합니다.  
  
 10. 보고서 데이터 창의 ListDataSet에서 `[FullName]` 필드를 입력란으로 끌어 "Hello" 뒤에 놓은 다음 쉼표(,)를 입력합니다.  
    
@@ -244,7 +244,7 @@ ms.locfileid: "50021927"
       *  **10pt**.
       *  **검정**.  
  
-20. 입력란에 커서를 놓고 의미 없는 텍스트 아래에 **Congratulations on your total sales of**를 입력한 후 단어 뒤에 공백을 추가하여 텍스트와 다음 단계에서 추가할 필드를 구분합니다. 
+20. 의미 없는 텍스트 아래에 있는 텍스트 상자 내에 커서를 놓고 **Congratulations on your total sales of**를 입력하고 단어 뒤에 공백을 추가하여 다음 단계에서 추가할 필드와 텍스트를 구분합니다. 
   
 21. Sales 필드를 입력란으로 끌어 이전 단계에서 입력한 텍스트 뒤에 배치한 다음 느낌표(!)를 입력합니다.  
 
@@ -391,7 +391,7 @@ ms.locfileid: "50021927"
   
 1.  **삽입** 탭 > **데이터 시각화** > **차트** > **차트 마법사**로 이동합니다.  
   
-2.  **데이터 집합 선택** 페이지에서 **ListDataset** > **다음**을 클릭합니다.  
+2.  **데이터 세트 선택** 페이지에서 **ListDataset** > **다음**을 클릭합니다.  
   
 3.  **원형** > **다음**을 클릭합니다.  
   
@@ -405,7 +405,7 @@ ms.locfileid: "50021927"
   
 9. 차트를 사각형 안으로 끌어옵니다.  
    
-10. 차트 제목을 선택하고 **Product Quantities Sold**를 입력합니다.  
+10. 차트 제목을 선택하고 다음을 입력합니다. **Product Quantities Sold**.  
   
 12. **홈** 탭 > **글꼴**에서 제목을 다음과 같이 조정합니다.
     * **글꼴** **Segoe UI Semibold**을 참조하세요.
@@ -426,7 +426,7 @@ ms.locfileid: "50021927"
   
 1.  **삽입** 탭 > **데이터 시각화** > **차트** > **차트 마법사**로 이동합니다.  
   
-2.  **데이터 집합 선택** 페이지에서 **ListDataset**을 클릭하고 **다음**을 클릭합니다.  
+2.  **데이터 세트 선택** 페이지에서 **ListDataset**을 클릭한 후, **다음**을 클릭합니다.  
   
 3.  **세로 막대형**을 클릭하고 **다음**을 클릭합니다.  
   
@@ -444,7 +444,7 @@ ms.locfileid: "50021927"
   
 9. 차트를 원형 차트 아래의 사각형 안으로 끌어옵니다.  
    
-10. 차트 제목을 선택하고 **Product Sales**를 입력합니다.  
+10. 차트 제목을 선택하고 다음을 입력합니다. **Product Sales**.  
   
 12. **홈** 탭 > **글꼴**에서 제목을 다음과 같이 조정합니다.
     * **글꼴** **Segoe UI Semibold**을 참조하세요.
@@ -458,7 +458,7 @@ ms.locfileid: "50021927"
   
     ![report-builder-free-form-column](../reporting-services/media/report-builder-free-form-column.png)
 
-12. 차트 축을 선택하고 *홈** 탭 > **숫자** > **통화**로 이동합니다.
+12. 차트 축을 선택하고 **홈** 탭 > **숫자** > **통화**로 이동합니다.
 
 13. 숫자에 달러만 표시되고 센트는 표시되지 않도록 **소수 자릿수 줄이기** 를 두 번 선택합니다.      
 ### <a name="to-verify-the-charts-are-inside-the-rectangle"></a>차트가 사각형 내에 있는지 확인하려면  

@@ -15,12 +15,12 @@ ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cfb463245cc649d010ce6ce97b49170ec37ac9e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 057d3f820ac0f580a6109d5b5c04ea43e8eabd9c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729601"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129713"
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>병합 구독자의 파티션 정보 유효성 검사
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "47729601"
  병합 에이전트가 파티션의 유효성을 검사할 때 필터링 식에 사용된 함수에서 반환한 값에 대해 파티션의 유효성을 검사하는 것 외에도 에이전트는 메타데이터 정리 작업 또는 스키마 변경과 같이 스냅숏을 무효화한 변경 작업 이전에 스냅숏이 생성되었는지 여부도 확인합니다. 분할된 스냅숏이 너무 오래된 경우 병합 에이전트는 오류를 표시하고 이로 인해 현재 일반 스냅숏에 기반하여 해당 구독자에 대해 분할된 스냅숏을 다시 생성해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [관리&#40;복제&#41;](../../relational-databases/replication/administration/administration-replication.md)   
- [복제 관리에 대한 모범 사례](../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
+ [복제 관리 FAQ](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Best Practices for Replication Administration](../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
  [구독 다시 초기화](../../relational-databases/replication/reinitialize-subscriptions.md)   
- [복제된 데이터의 유효성 검사](../../relational-databases/replication/validate-replicated-data.md)  
+ [복제된 데이터의 유효성 검사](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

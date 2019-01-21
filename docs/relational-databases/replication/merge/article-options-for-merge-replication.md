@@ -14,12 +14,12 @@ ms.assetid: 670abd41-d204-4cd7-a371-7664e603a0ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 341137371f4a8bc26177963bb4e6475aaecd08c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 959e31e6e895f91117e90c83a8fa9375c881e141
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760452"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129163"
 ---
 # <a name="article-options-for-merge-replication"></a>병합 복제를 위한 아티클 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,11 +31,11 @@ ms.locfileid: "47760452"
   
 -   복제 트리거 및 시스템 테이블에서 하나 이상의 아티클에 대한 삭제를 추적하지 않도록 지정합니다. 이 옵션은 많은 애플리케이션 시나리오에서 유용하게 사용됩니다. 복제할 필요가 없는 일괄 처리 삭제를 사용하는 시나리오도 여기에 포함됩니다. 자세한 내용은 [조건부 삭제 추적으로 병합 복제 성능 최적화](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md)를 참조하세요.  
   
--   애플리케이션에 필요한 순서대로 아티클이 처리되도록 아티클의 처리 순서를 지정합니다. 자세한 내용은 [병합 아티클의 처리 순서 지정](../../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)을 참조하세요.  
+-   애플리케이션에 필요한 순서대로 아티클이 처리되도록 아티클의 처리 순서를 지정합니다. 자세한 내용은 [병합 복제 옵션 지정](../../../relational-databases/replication/merge/specify-merge-replication-properties.md)을 참조하세요.  
   
 -   관련된 레코드 집합이 하나의 단위로 처리되도록 지정합니다. 기본적으로 병합 복제는 행 단위로 테이블 변경 내용을 처리합니다. 자세한 내용은 [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)를 참조하세요.  
   
--   같은 데이터를 토폴로지에 있는 두 개 이상의 노드에서 변경할 수 있는 경우에 충돌 감지 및 해결 기능을 사용합니다. 자세한 내용은 [Detect and Resolve Merge Replication Conflicts](../../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)을 참조하세요.  
+-   같은 데이터를 토폴로지에 있는 두 개 이상의 노드에서 변경할 수 있는 경우에 충돌 감지 및 해결 기능을 사용합니다. 자세한 내용은 [Detect and Resolve Merge Replication Conflicts](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
   
 -   제약 조건 및 트리거를 구독자로 복사할지 여부와 같은 스키마 옵션을 지정합니다. 자세한 내용은 [스키마 옵션 지정](../../../relational-databases/replication/publish/specify-schema-options.md)을 참조하세요.  
   

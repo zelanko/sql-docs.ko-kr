@@ -20,12 +20,12 @@ ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 33661f3349dccdff96c47fabd540396ebeb9d2ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 192627d1050d7c8c87d99231770ba6bb957ac8c0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837751"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124004"
 ---
 # <a name="monitor-replication-agents"></a>복제 에이전트 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47837751"
   
     -   큐 판독기 에이전트  
   
-     이러한 에이전트와 연결된 정보 및 태스크는 **에이전트** (각 게시자 및 구독에 대해 사용 가능) 및 **경고** (각 게시에 대해 사용 가능) 탭을 통해 액세스할 수 있습니다. 자세한 내용은 [게시 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)을 참조하세요.  
+     이러한 에이전트와 연결된 정보 및 태스크는 **에이전트**(각 게시자 및 구독에 대해 사용 가능) 및 **경고**(각 게시에 대해 사용 가능) 탭을 통해 액세스할 수 있습니다. 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
 -   다음 에이전트는 복제 모니터에서 구독과 연결됩니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "47837751"
   
     -   병합 에이전트  
   
-     이러한 에이전트와 연결된 정보 및 태스크는 **구독 조사 목록** (각 게시자에 대해 사용 가능) 또는 **모든 구독** (각 게시에 대해 사용 가능) 탭을 통해 액세스할 수 있습니다. 자세한 내용은 [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)을 참조하세요.  
+     이러한 에이전트와 연결된 정보 및 태스크는 **구독 조사 목록**(각 게시자에 대해 사용 가능) 또는 **모든 구독** 탭(각 게시에 대해 사용 가능)을 통해 액세스할 수 있습니다. 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
 ## <a name="using-sql-server-management-studio-to-monitor-replication-agents"></a>SQL Server Management Studio를 사용하여 복제 에이전트 모니터링  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 는 복제 에이전트 모니터링을 위한 다음 대화 상자를 제공합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "47837751"
   
 -   **동기화 상태 보기** (모든 구독용. 이 대화 상자로 배포 에이전트 및 병합 에이전트에 액세스할 수 있음)  
   
- 복제 모니터는 각 에이전트에 대한 추가 정보를 제공하고 큐 판독기 에이전트 사용 시 해당 에이전트를 모니터링합니다. 자세한 내용은 [게시 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md), [게시 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md) 및 [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)을 참조하세요.  
+ 복제 모니터는 각 에이전트에 대한 추가 정보를 제공하고 큐 판독기 에이전트 사용 시 해당 에이전트를 모니터링합니다. 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.
   
 #### <a name="to-monitor-the-snapshot-agent-and-log-reader-agent"></a>스냅숏 에이전트 및 로그 판독기 에이전트를 모니터링하려면  
   
@@ -119,7 +119,6 @@ ms.locfileid: "47837751"
 5.  **닫기**를 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [복제 모니터링](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
  [복제 에이전트 개요](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

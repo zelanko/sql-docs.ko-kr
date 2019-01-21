@@ -21,18 +21,18 @@ ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d52233102f5ebe9a812e8071556afa4aff0316f4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b95da5f74481fed0053f31cde326fe271e79abc9
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511708"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299220"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>날짜 및 시간 데이터 형식 및 함수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 이 항목의 섹션에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 모든 날짜/시간 데이터 형식 및 함수를 다룹니다.
 -   [날짜 및 시간 데이터 형식](#DateandTimeDataTypes)  
@@ -99,11 +99,11 @@ ms.locfileid: "52511708"
 |함수|구문|반환 값|반환 데이터 형식|결정성|  
 |---|---|---|---|---|
 |[DATEFROMPARTS](../../t-sql/functions/datefromparts-transact-sql.md)|DATEFROMPARTS  ( *year*, *month*, *day* )|지정된 년, 월, 일에 대한 **date** 값을 반환합니다.|**date**|결정적|  
-|[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *precision*)|지정된 전체 자릿수를 사용하여 지정된 날짜 및 시간에 대한 **datetime2** 값을 반환합니다.|**datetime2(** *precision* **)**|결정적|  
+|[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *precision*)|지정된 전체 자릿수를 사용하여 지정된 날짜 및 시간에 대한 **datetime2** 값을 반환합니다.|**datetime2(** _precision_ **)**|결정적|  
 |[DATETIMEFROMPARTS](../../t-sql/functions/datetimefromparts-transact-sql.md)|DATETIMEFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *milliseconds*)|지정된 날짜 및 시간에 대한 **datetime** 값을 반환합니다.|**datetime**|결정적|  
-|[DATETIMEOFFSETFROMPARTS](../../t-sql/functions/datetimeoffsetfromparts-transact-sql.md)|DATETIMEOFFSETFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *hour_offset*, *minute_offset*, *precision*)|지정된 오프셋 및 전체 자릿수를 사용하여 지정된 날짜 및 시간에 대한 **datetimeoffset** 값을 반환합니다.|**datetimeoffset(** *precision* **)**|결정적|  
+|[DATETIMEOFFSETFROMPARTS](../../t-sql/functions/datetimeoffsetfromparts-transact-sql.md)|DATETIMEOFFSETFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *hour_offset*, *minute_offset*, *precision*)|지정된 오프셋 및 전체 자릿수를 사용하여 지정된 날짜 및 시간에 대한 **datetimeoffset** 값을 반환합니다.|**datetimeoffset(** _precision_ **)**|결정적|  
 |[SMALLDATETIMEFROMPARTS](../../t-sql/functions/smalldatetimefromparts-transact-sql.md)|SMALLDATETIMEFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute* )|지정된 날짜 및 시간에 대한 **smalldatetime** 값을 반환합니다.|**smalldatetime**|결정적|  
-|[TIMEFROMPARTS](../../t-sql/functions/timefromparts-transact-sql.md)|TIMEFROMPARTS  ( *hour*, *minute*, *seconds*, *fractions*, *precision* )|지정한 전체 자릿수를 사용하여 지정한 시간에 대한 **time** 값을 반환합니다.|**time(** *precision* **)**|결정적|  
+|[TIMEFROMPARTS](../../t-sql/functions/timefromparts-transact-sql.md)|TIMEFROMPARTS  ( *hour*, *minute*, *seconds*, *fractions*, *precision* )|지정한 전체 자릿수를 사용하여 지정한 시간에 대한 **time** 값을 반환합니다.|**time(** _precision_ **)**|결정적|  
   
 ###  <a name="GetDateandTimeDifference"></a> 날짜 및 시간 차이 값을 반환하는 함수
   
@@ -127,10 +127,10 @@ ms.locfileid: "52511708"
 |---|---|---|---|---|
 |[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST|세션에 대한 SET DATEFIRST의 현재 값을 반환합니다.|**tinyint**|비결정적|  
 |[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { *number* &#124; **@***number_var* }|일주일의 시작 요일을 1부터 7까지의 숫자로 설정합니다.|해당 사항 없음|해당 사항 없음|  
-|[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *format* &#124; **@***format_var* }|**datetime** 또는 **smalldatetime** 데이터를 입력할 때 날짜 부분의 순서(월/일/년도)를 설정합니다.|해당 사항 없음|해당 사항 없음|  
+|[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *format* &#124; **@**_format_var_ }|**datetime** 또는 **smalldatetime** 데이터를 입력할 때 날짜 부분의 순서(월/일/년도)를 설정합니다.|해당 사항 없음|해당 사항 없음|  
 |[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE|현재 사용 중인 언어의 이름을 반환합니다. @@LANGUAGE는 날짜 또는 시간 함수가 아닙니다. 하지만 언어 설정은 날짜 함수의 출력에 영향을 줄 수 있습니다.|해당 사항 없음|해당 사항 없음|  
-|[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'***language***'** &#124; **@***language_var* }|세션 및 시스템 메시지에 대한 언어 환경을 설정합니다. SET LANGUAGE는 날짜 또는 시간 함수가 아닙니다. 하지만 언어 설정은 날짜 함수의 출력에 영향을 줍니다.|해당 사항 없음|해당 사항 없음|  
-|[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'***language***'** ]|지원되는 모든 언어의 날짜 형식에 대한 정보를 반환합니다. **sp_helplanguage**는 날짜 또는 시간 저장 프로시저가 아닙니다. 하지만 언어 설정은 날짜 함수의 출력에 영향을 줍니다.|해당 사항 없음|해당 사항 없음|  
+|[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'**_language_**'** &#124; **@***language_var* }|세션 및 시스템 메시지에 대한 언어 환경을 설정합니다. SET LANGUAGE는 날짜 또는 시간 함수가 아닙니다. 하지만 언어 설정은 날짜 함수의 출력에 영향을 줍니다.|해당 사항 없음|해당 사항 없음|  
+|[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'**_language_**'** ]|지원되는 모든 언어의 날짜 형식에 대한 정보를 반환합니다. **sp_helplanguage**는 날짜 또는 시간 저장 프로시저가 아닙니다. 하지만 언어 설정은 날짜 함수의 출력에 영향을 줍니다.|해당 사항 없음|해당 사항 없음|  
   
 ###  <a name="ValidateDateandTimeValues"></a> 날짜 및 시간 값 유효성 검사 함수
   
@@ -143,7 +143,7 @@ ms.locfileid: "52511708"
 |항목|설명|  
 |-----------|-----------------|  
 |[CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)|문자열 리터럴과 다른 날짜 및 시간 형식 간의 날짜/시간 값 변환에 대한 정보를 제공합니다.|  
-|[국가별 Transact-SQL 문 작성](../../relational-databases/collations/write-international-transact-sql-statements.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하거나 여러 언어를 지원하는 데이터베이스 및 데이터베이스 응용 프로그램의 언어 간 이식성에 대한 지침을 제공합니다.|  
+|[국가별 Transact-SQL 문 작성](../../relational-databases/collations/write-international-transact-sql-statements.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하거나 여러 언어를 지원하는 데이터베이스 및 데이터베이스 애플리케이션의 언어 간 이식성에 대한 지침을 제공합니다.|  
 |[ODBC 스칼라 함수 &#40;Transact-SQL&#41;](../../t-sql/functions/odbc-scalar-functions-transact-sql.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 사용할 수 있는 ODBC 스칼라 함수에 대한 정보를 제공합니다. 여기에는 ODBC 날짜 및 시간 함수가 포함됩니다.|  
 |[AT TIME ZONE&#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)|표준 시간대 변환 기능을 제공합니다.|  
   

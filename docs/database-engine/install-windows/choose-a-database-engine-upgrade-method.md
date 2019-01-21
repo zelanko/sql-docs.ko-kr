@@ -11,18 +11,18 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: ba27a8364afc3d006341079a597cc0edcb6131fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bd388ede86a397fa83bf98deb017e294cb280752
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665612"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300160"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>데이터베이스 엔진 업그레이드 방법 선택
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
   
 가동 중지와 위험을 최소화하기 위해 이전 릴리스의 SQL Server에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 업그레이드하려는 경우 고려해야 할 몇 가지 방식이 있습니다. 전체 업그레이드를 실행하거나 새 설치로 마이그레이션하거나 롤링 업그레이드를 실행할 수 있습니다. 아래 다이어그램에 따라 적절한 방식을 선택할 수 있습니다. 다이어그램의 각 방식은 아래에서도 설명합니다. 다이어그램의 어느 지점에서 결정해야 하는지 알아보려면 [데이터베이스 엔진 업그레이드 계획 및 테스트](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)를 참조하십시오.  
   
@@ -64,11 +64,11 @@ ms.locfileid: "51665612"
 ## <a name="migrate-to-a-new-installation"></a>새 설치로 마이그레이션  
  이 방식에서는 현재 환경을 유지하면서 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경을 빌드합니다. 이때 새 하드웨어와 새 버전의 운영 체제를 사용하는 경우가 많습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 새 환경에 설치한 다음에는 기존 사용자 데이터베이스를 기존 환경에서 새 환경으로 마이그레이션하고 가동 중지 시간을 최소화할 수 있도록 새 환경을 준비하기 위한 여러 단계를 수행합니다. 이러한 단계에는 다음을 마이그레이션하는 작업이 포함됩니다.  
   
--   **시스템 개체:** 일부 응용 프로그램은 단일 사용자 데이터베이스 범위 밖에 있는 정보, 엔터티 및/또는 개체에 따라 달라집니다. 일반적으로 애플리케이션은 master 및 msdb 데이터베이스뿐만 아니라 사용자 데이터베이스에 따라 달라집니다. 사용자 데이터베이스의 올바른 작동을 위해 해당 데이터베이스 외부에 저장되어 있는 모든 요소는 대상 서버 인스턴스에서 사용할 수 있어야 합니다. 예를 들어 애플리케이션에 대한 로그인은 master 데이터베이스에서 메타데이터로 저장되어 있으며 대상 서버에서 다시 생성되어야 합니다. 메타데이터가 msdb 데이터베이스에 저장되어 있는 SQL Server 에이전트 작업에 따라 애플리케이션이나 데이터베이스 유지 관리 계획이 달라지는 경우 대상 서버 인스턴스에서 이러한 작업을 다시 만들어야 합니다. 마찬가지로 서버 수준 트리거에 대한 메타데이터는 master에 저장되어 있습니다.  
+-   **시스템 개체:** 일부 애플리케이션은 단일 사용자 데이터베이스 범위 밖에 있는 정보, 엔터티 및/또는 개체에 따라 달라집니다. 일반적으로 애플리케이션은 master 및 msdb 데이터베이스뿐만 아니라 사용자 데이터베이스에 따라 달라집니다. 사용자 데이터베이스의 올바른 작동을 위해 해당 데이터베이스 외부에 저장되어 있는 모든 요소는 대상 서버 인스턴스에서 사용할 수 있어야 합니다. 예를 들어 애플리케이션에 대한 로그인은 master 데이터베이스에서 메타데이터로 저장되어 있으며 대상 서버에서 다시 생성되어야 합니다. 메타데이터가 msdb 데이터베이스에 저장되어 있는 SQL Server 에이전트 작업에 따라 애플리케이션이나 데이터베이스 유지 관리 계획이 달라지는 경우 대상 서버 인스턴스에서 이러한 작업을 다시 만들어야 합니다. 마찬가지로 서버 수준 트리거에 대한 메타데이터는 master에 저장되어 있습니다.  
  
    애플리케이션에 대한 데이터베이스를 다른 서버 인스턴스로 이동할 경우 대상 서버 인스턴스의 master 및 msdb에서 종속 개체와 엔터티의 모든 메타데이터를 다시 만들어야 합니다. 예를 들어 데이터베이스 애플리케이션이 서비스 수준 트리거를 사용하는 경우 단순히 새 시스템에서 데이터베이스를 연결하거나 복원하는 것만으로 충분하지 않습니다. master 데이터베이스에서 이러한 트리거에 대한 모든 메타데이터를 수동으로 다시 만들지 않으면 데이터베이스가 예상대로 작동하지 않습니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)를 참조하세요.  
   
--   **MSDB에 저장된 Integration Services 패키지:** 패키지를 MSDB에 저장하는 경우 [dtutil Utility](../../integration-services/dtutil-utility.md) 를 사용하여 이러한 패키지를 제외하거나 새 서버에 재배포해야 합니다. 새 서버에서 패키지를 사용하기 전에 패키지를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]으로 업그레이드해야 합니다. 자세한 내용은 [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md)를 참조하세요.  
+-   **MSDB에 저장된 Integration Services 패키지:** 패키지를 MSDB에 저장하는 경우 [dtutil Utility](../../integration-services/dtutil-utility.md)를 사용하여 이러한 패키지를 제외하거나 새 서버에 재배포해야 합니다. 새 서버에서 패키지를 사용하기 전에 패키지를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]으로 업그레이드해야 합니다. 자세한 내용은 [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md)를 참조하세요.  
   
 -   **Reporting Services 암호화 키:** 보고서 서버 구성의 중요한 부분은 중요한 정보의 암호화에 사용되는 대칭 키의 백업 복사본을 만드는 것입니다. 대칭 키의 백업 복사본은 여러 일상 작업에 필요하며 새 설치에서 기존 보고서 서버 데이터베이스를 다시 사용할 수 있도록 합니다. 자세한 내용은 [Reporting Services 암호화 키 백업 및 복원](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md) 및 [Upgrade 및 Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)을 참조하세요.  
   
@@ -93,23 +93,23 @@ ms.locfileid: "51665612"
   
 새 설치 업그레이드에 필요한 단계는 연결된 스토리지를 사용하는 경우나 SAN 스토리지를 사용하는 경우에 따라 약간 달라집니다.  
   
--   **연결된 저장소 환경:** 연결된 저장소를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경에서는 다음 다이어그램과 다이어그램 내의 링크를 통해 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 새 설치 업그레이드에 필요한 단계를 안내합니다.  
+-   **연결된 스토리지 환경:** 연결된 스토리지를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경에서는 다음 다이어그램과 다이어그램 내의 링크를 통해 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 새 설치 업그레이드에 필요한 단계를 안내합니다.  
   
-     ![연결된 저장소에 대한 백업 및 복원을 사용한 새 설치 업그레이드 방법](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "연결된 저장소에 대한 백업 및 복원을 사용한 새 설치 업그레이드 방법")  
+     ![연결된 스토리지에 대한 백업 및 복원을 사용한 새 설치 업그레이드 방법](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "연결된 스토리지에 대한 백업 및 복원을 사용한 새 설치 업그레이드 방법")  
   
--   **SAN 저장소 환경:** SAN 저장소를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경에서는 다음 다이어그램과 다이어그램 내의 링크를 통해 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 새 설치 업그레이드에 필요한 단계를 안내합니다.  
+-   **SAN 스토리지 환경:**  SAN 스토리지를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경에서는 다음 다이어그램과 다이어그램 내의 링크를 통해 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 새 설치 업그레이드에 필요한 단계를 안내합니다.  
   
-     ![SAN 저장소에 대한 분리 및 연결을 사용한 새 설치 업그레이드 방법](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "SAN 저장소에 대한 분리 및 연결을 사용한 새 설치 업그레이드 방법")  
+     ![SAN 스토리지에 대한 분리 및 연결을 사용한 새 설치 업그레이드 방법](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "SAN 스토리지에 대한 분리 및 연결을 사용한 새 설치 업그레이드 방법")  
   
 ## <a name="rolling-upgrade"></a>롤링 업그레이드  
  롤링 업그레이드는 가동 시간을 극대화하고 위험을 최소화하며 기능을 보존하기 위해 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 특정 순서로 업그레이드해야 하는 SQL Server 솔루션 환경에 필요합니다. 롤링 업그레이드는 업그레이드 프로젝트에서 하드웨어 및/또는 운영 체제를 더욱 쉽게 업그레이드하기 위해 각각의 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 현재 위치 업그레이드를 수행하거나 새 설치 업그레이드를 수행하여 기본적으로 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 특정 순서로 업그레이드하는 것입니다. 롤링 업그레이드 방식을 사용해야 하는 여러 시나리오가 있습니다. 이러한 방식에 대해서는 다음 문서에서 설명합니다.  
   
--   Always-On 가용성 그룹: 이 환경에서 롤링 업그레이드를 수행하는 자세한 단계는 [Always On 가용성 그룹 복제본 인스턴스 업그레이드](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)를 참조하세요.    
--   장애 조치 클러스터 인스턴스: 이 환경에서 롤링 업그레이드를 수행하는 자세한 단계는 [SQL Server 장애 조치(failover) 클러스터 인스턴스 업그레이드](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)를 참조하세요.    
--   미러링된 인스턴스: 이 환경에서 롤링 업그레이드를 수행하는 자세한 단계는 [미러된 인스턴스 업그레이드](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)를 참조하세요.    
+-   Always On 가용성 그룹: 이 환경에서 롤링 업그레이드를 수행하는 자세한 단계는 [Always On 가용성 그룹 복제본 인스턴스 업그레이드](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)를 참조하세요.    
+-   장애 조치(Failover) 클러스터 인스턴스: 이 환경에서 롤링 업그레이드를 수행하는 자세한 단계는 [SQL Server 장애 조치(failover) 클러스터 인스턴스 업그레이드](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)를 참조하세요.    
+-   미러링된 인스턴스: 이 환경에서 롤링 업그레이드를 수행하는 자세한 단계는 [미러링된 인스턴스 업그레이드](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)를 참조하세요.    
 -   로그 전달 인스턴스: 이 환경에서 롤링 업그레이드를 수행하는 자세한 단계는 [SQL Server용 로그 전달 업그레이드&#40;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)를 참조하세요.    
--   복제 환경: 이 환경에서 롤링 업그레이드를 수행하는 자세한 단계는 [복제된 데이터베이스 업그레이드](../../database-engine/install-windows/upgrade-replicated-databases.md)를 참조하세요.  
--   SQL Server Reporting Services 확장 환경: 이 환경에서 롤링 업그레이드를 수행하는 자세한 단계는 [Reporting Services 업그레이드 및 마이그레이션](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)을 참조하세요.  
+-   복제 환경: 이 환경에서 롤링 업그레이드를 수행하기 위한 자세한 단계는 [복제된 데이터베이스 업그레이드](../../database-engine/install-windows/upgrade-replicated-databases.md)를 참조하세요.  
+-   SQL Server Reporting Services 확장 환경: 이 환경에서 롤링 업그레이드를 수행하기 위한 자세한 단계는 [ Reporting Services 업그레이드 및 마이그레이션](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)을 참조하세요.  
   
 ## <a name="next-steps"></a>다음 단계
  [데이터베이스 엔진 업그레이드 계획 및 테스트](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   

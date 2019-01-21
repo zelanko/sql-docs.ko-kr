@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: replication
 ms.topic: reference
 helpviewer_keywords:
 - replication [SQL Server], planning
@@ -15,12 +15,12 @@ ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bd202a4e3b42280f309912cb94a0e6a5ff0379d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85759d21668cc0eb5bc5b6f85f946da96de58442
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653460"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299903"
 ---
 # <a name="replication-programming-concepts"></a>복제 프로그래밍 개념
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "47653460"
   
  다음 항목에서는 보안에 대한 정보를 제공합니다.  
   
--   [보안 및 보호&#40;복제&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+-   [복제 보안 설정 보기 및 수정](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
 -   [SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
@@ -125,7 +125,7 @@ ms.locfileid: "47653460"
   
 3.  게시자에 연결할 때 Windows 인증 및 VPN(가상 사설망)을 사용하는 것을 포함하여 복제와 관련된 모든 보안 지침을 따릅니다. 웹 동기화를 구현하는 경우에는 SSL(Secure Sockets Layer) 연결을 사용합니다. 자세한 내용은 [웹 동기화 구성](../../../relational-databases/replication/configure-web-synchronization.md)을 참조하세요.  
   
-4.  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]의 기능을 활용하려면 관리되는 코드 언어를 사용하여 응용 프로그램을 개발합니다.  
+4.  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]의 기능을 활용하려면 관리되는 코드 언어를 사용하여 애플리케이션을 개발합니다.  
   
 5.  이러한 요구 사항을 고려했을 때 이 애플리케이션에 필요한 모든 복제 기능은 RMO(복제 관리 개체) 관리 인터페이스를 사용하여 구현할 수 있습니다.  
   

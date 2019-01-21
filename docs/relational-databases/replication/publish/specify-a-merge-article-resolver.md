@@ -15,32 +15,19 @@ ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ef65d698db19d1ada3c9c5260f19fa39c4140e95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 216387f82df57f8f3485ba95566fecf36c0ca897
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821941"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136003"
 ---
 # <a name="specify-a-merge-article-resolver"></a>병합 아티클 해결 프로그램 지정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 병합 아티클 해결 프로그램을 지정하는 방법에 대해 설명합니다.  
+
   
- **항목 내용**  
-  
--   **시작하기 전 주의 사항:**  
-  
-     [권장 사항](#Recommendations)  
-  
--   **다음을 사용하여 병합 아티클 해결 프로그램을 지정하려면**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
-  
-###  <a name="Recommendations"></a> 권장 사항  
+##  <a name="recommendations"></a>권장 사항  
   
 -   병합 복제에서 다음 유형의 아티클 해결 프로그램을 사용할 수 있습니다.  
   
@@ -112,7 +99,7 @@ ms.locfileid: "47821941"
     > [!NOTE]  
     >  병합 에이전트 실행 파일의 기본 설치 위치는 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM입니다.  
   
-#### <a name="to-specify-a-custom-resolver-when-defining-a-merge-article"></a>병합 아티클을 정의할 때 사용자 지정 해결 프로그램을 지정하려면  
+## <a name="specify-a-custom-resolver-when-defining-a-merge-article"></a>병합 문서를 정의할 때 사용자 지정 해결 프로그램 지정  
   
 1.  사용자 지정 충돌 해결 프로그램을 사용하려면 위 절차를 사용하여 해결 프로그램을 만들고 등록합니다.  
   
@@ -120,7 +107,7 @@ ms.locfileid: "47821941"
   
 3.  게시 데이터베이스의 게시자에서 [sp_addmergearticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행합니다. **@article_resolver**에 2단계의 해결 프로그램 이름을 지정하고 **@resolver_info** 매개 변수를 사용하여 사용자 지정 해결 프로그램에 필요한 입력을 지정합니다. 저장 프로시저 기반 사용자 지정 해결 프로그램의 경우 **@resolver_info** 는 저장 프로시저의 이름입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)]에서 제공하는 해결 프로그램에 필요한 입력에 대한 자세한 내용은 [Microsoft COM 기반 해결 프로그램](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)을 참조하세요.  
   
-#### <a name="to-specify-or-change-a-custom-resolver-for-an-existing-merge-article"></a>기존 병합 아티클에 대한 사용자 지정 해결 프로그램을 지정하거나 변경하려면  
+## <a name="specify-or-change-a-custom-resolver-for-an-existing-merge-article"></a>기존 병합 문서에 대한 사용자 지정 해결 프로그램 지정 및 변경  
   
 1.  아티클에 대한 사용자 지정 해결 프로그램이 정의되어 있는지 확인하려면 [sp_helpmergearticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)을 실행합니다. 아티클에 대해 정의된 사용자 지정 해결 프로그램이 있으면 **article_resolver** 필드에 이름이 표시됩니다. 해결 프로그램에 제공되는 입력은 모두 결과 집합의 **resolver_info** 에 표시됩니다.  
   
@@ -130,7 +117,7 @@ ms.locfileid: "47821941"
   
 4.  사용자 지정 해결 프로그램에 필요한 입력을 변경하려면 [sp_changemergearticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 다시 실행합니다. **@property**에 **resolver_info** 값, **@value**에 사용자 지정 해결 프로그램에 필요한 입력을 지정합니다. 저장 프로시저 기반 사용자 지정 해결 프로그램의 경우 **@resolver_info** 는 저장 프로시저의 이름입니다. 필요한 입력에 대한 자세한 내용은 [Microsoft COM 기반 해결 프로그램](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)을 참조하세요.  
   
-#### <a name="to-unregister-a-custom-conflict-resolver"></a>사용자 지정 충돌 해결 프로그램의 등록을 취소하려면  
+## <a name="unregister-a-custom-conflict-resolver"></a>사용자 지정 충돌 해결 프로그램 등록 취소  
   
 1.  게시자에서 [sp_enumcustomresolvers&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)를 실행하고 결과 집합의 **value** 필드에서 제거할 사용자 지정 해결 프로그램의 이름을 확인합니다.  
   

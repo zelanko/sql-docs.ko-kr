@@ -13,18 +13,18 @@ ms.assetid: 6bc64ddb-5c86-4681-a391-77fc1d3c4e6e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd82c1421167f496720f5a6bc14215105f1e7db6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a984f7cefc10e89fdb2b3bafca94b2d455105eac
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596283"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125324"
 ---
 # <a name="publisher-information-subscription-watch-list-transactional"></a>게시자 정보, 구독 조사 목록(트랜잭션)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **구독 조사 목록** 탭은 SQL Server 2005 이상 버전을 실행하는 배포자에 대해 사용할 수 있으며 선택한 게시자에서 사용 가능한 모든 게시의 구독 정보를 표시합니다. 구독 목록을 필터링하여 오류, 경고 및 성능이 저조한 구독을 볼 수 있습니다. 이 탭에서는 관리자가 게시자에서의 모든 복제 작업을 모니터링할 수 있는 단일 위치를 제공합니다. 복제 모니터는 선택한 복제 유형과 **표시** 드롭다운 목록 상자에서 선택한 옵션에 기반하여 주의가 필요한 모든 구독을 표시합니다. 이 탭에 표시되는 항목은 현재 상태와 성능에 기반하기 때문에 현재 **표시** 목록 상자의 옵션과 일치하는 구독만 이 페이지에 표시됩니다.  
+  **구독 조사 목록** 탭은 SQL Server 2005 이상 버전을 실행하는 배포자에 대해 사용할 수 있으며 선택한 게시자에서 사용 가능한 모든 게시의 구독 정보를 표시합니다. 구독 목록을 필터링하여 오류, 경고 및 성능이 저조한 구독을 볼 수 있습니다. 이 탭에서는 관리자가 게시자에서의 모든 복제 작업을 모니터링할 수 있는 복제 모니터를 제공합니다. 복제 모니터는 선택한 복제 유형과 **표시** 드롭다운 목록 상자에서 선택한 옵션에 기반하여 주의가 필요한 모든 구독을 표시합니다. 이 탭에 표시되는 항목은 현재 상태와 성능에 기반하기 때문에 현재 **표시** 목록 상자의 옵션과 일치하는 구독만 이 페이지에 표시됩니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  자세한 내용 및 구독과 관련된 태스크를 보려면 해당 구독에 대한 행을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 옵션을 클릭합니다. 표에서 데이터를 표시하는 방식을 변경하려면 표를 마우스 오른쪽 단추로 클릭한 후 다음 옵션 중 하나를 클릭합니다.  
   
 -   **정렬**: **열 정렬** 대화 상자에서 한 개 이상의 열에 대해 정렬합니다.  
@@ -69,10 +69,10 @@ ms.locfileid: "47596283"
  **성능 심각** 및 **곧 만료됨/만료됨** 상태 값은 임계값이 설정된 경우에만 표시됩니다. 성능 측정 및 임계값 설정에 대한 자세한 내용은 [복제 모니터로 성능 모니터링](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md) 및 [복제 모니터에 임계값 및 경고 설정](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)을 참조하세요.  
   
  **구독**  
- 각 구독의 이름으로 *SubscriberName: SubscriptionDatabaseName*형식입니다.  
+ 각 구독의 이름으로, 형식은 형식은 *SubscriberName: SubscriptionDatabaseName*입니다.  
   
  **게시**  
- 구독을 동기화할 게시의 이름이며 *PublicationDatabaseName: PublicationName*형식입니다.  
+ 구독을 동기화할 게시의 이름입니다. 형식은 *PublicationDatabaseName: PublicationName*입니다.  
   
  **성능**  
  각 구독의 성능 등급은 복제 모니터에서 측정한 가장 최근의 측정값을 기반으로 하며 이전 성능은 반영하지 않습니다. 성능 임계값이 정의된 게시의 구독에 대해 성능을 측정합니다. 게시에 대해 성능 임계값을 정의하지 않으면 이 열에 **사용 안 함**이 표시됩니다. 성능 등급은 다음 값 중 하나입니다.  
@@ -97,7 +97,7 @@ ms.locfileid: "47596283"
   
 ## <a name="see-also"></a>참고 항목  
  [복제 모니터 시작](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [게시자에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [게시자에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

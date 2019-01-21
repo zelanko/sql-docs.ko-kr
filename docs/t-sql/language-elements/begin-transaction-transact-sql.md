@@ -31,15 +31,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edcf0a919c0bcf5dbcbd1490b016c49ab7e46d8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 326b2dd3eed9db3f6ca71cc276fc68314092c181
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698101"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299230"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
   명시적 로컬 트랜잭션의 시작 위치를 표시합니다. 명시적 트랜잭션은 BEGIN TRANSACTION 문으로 시작되어 COMMIT 또는 ROLLBACK 문으로 끝납니다.  
 
@@ -134,7 +137,7 @@ COMMIT TRAN T1;
   
  "BEGIN TRAN M2 WITH MARK ...;"  
   
- "Server: Msg 3920, Level 16, State 1, Line 3"  
+ "서버: 메시지 3920, 수준 16, 상태 1, 줄 3"  
   
  "WITH MARK 옵션은 첫 번째 BEGIN TRAN WITH MARK 문에만 적용되므로  
   
@@ -146,7 +149,7 @@ COMMIT TRAN T1;
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-an-explicit-transaction"></a>1. 명시적 트랜잭션 사용
-**적용 대상:** SQL Server(2008 이상), Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse
+**적용 대상:** SQL Server(2008부터), Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse
 
 이 예제에서는 AdventureWorks를 사용합니다. 
 
@@ -158,7 +161,7 @@ COMMIT;
 ```
 
 ### <a name="b-rolling-back-a-transaction"></a>2. 트랜잭션 롤백
-**적용 대상:** SQL Server(2008 이상), Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse
+**적용 대상:** SQL Server(2008부터), Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse
 
 다음 예제에서는 트랜잭션 롤백의 결과를 보여 줍니다. 이 예제에서는 ROLLBACK 문이 INSERT 문을 롤백하지만 만들어진 테이블은 그대로 있습니다.
 
@@ -190,7 +193,7 @@ COMMIT TRANSACTION @TranName;
 GO  
 ```  
   
-### <a name="d-marking-a-transaction"></a>4. 트랜잭션 표시  
+### <a name="d-marking-a-transaction"></a>D. 트랜잭션 표시  
 **적용 대상:** SQL Server(2008부터), Azure SQL Database
 
 다음 예에서는 트랜잭션을 표시하는 방법을 보여 줍니다. `CandidateDelete` 트랜잭션이 표시됩니다.  
@@ -210,7 +213,7 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [BEGIN DISTRIBUTED TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
- [COMMIT TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
+ [COMMIT TransactION&#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
  [ROLLBACK TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
  [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   

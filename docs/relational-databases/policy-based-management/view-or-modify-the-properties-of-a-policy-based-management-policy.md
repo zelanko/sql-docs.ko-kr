@@ -14,12 +14,12 @@ ms.assetid: ba805504-5db5-4731-a8da-a0e89cb20c37
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: e1d7799abc3a930e72a9040c537e99fe7641a641
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cf3bb62c4008b870c50c230a6140fff2a6b8b802
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505896"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254518"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>정책 기반 관리 정책의 속성 보기 또는 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "52505896"
   
 #### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>개체에 있는 모든 정책의 속성을 보려면  
   
-1.  개체 탐색기에서 서버, 서버 개체, 데이터베이스 또는 데이터베이스 개체를 마우스 오른쪽 단추로 클릭하고 **정책** 을 가리킨 다음 **보기**를 선택합니다. **정책 보기 –***object_name* 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [정책 보기 대화 상자](../../relational-databases/policy-based-management/view-policies-dialog-box.md)를 참조하세요.  
+1.  개체 탐색기에서 서버, 서버 개체, 데이터베이스 또는 데이터베이스 개체를 마우스 오른쪽 단추로 클릭하고 **정책** 을 가리킨 다음 **보기**를 선택합니다. **정책 보기 –**_object_name_ 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [정책 보기 대화 상자](../../relational-databases/policy-based-management/view-policies-dialog-box.md)를 참조하세요.  
   
 2.  완료되면 **닫기**를 클릭합니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "52505896"
   
 4.  더하기 기호를 클릭하여 **정책** 폴더를 확장합니다.  
   
-5.  보거나 수정하려는 정책을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **정책 열기 –***policy_name* 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [새 정책 만들기 또는 정책 열기 대화 상자, 일반 페이지](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) 또는 [새 정책 만들기 또는 정책 열기 대화 상자, 설명 페이지](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)를 참조하세요.  
+5.  보거나 수정하려는 정책을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **정책 열기 –**_policy_name_ 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [새 정책 만들기 또는 정책 열기 대화 상자, 일반 페이지](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) 또는 [새 정책 만들기 또는 정책 열기 대화 상자, 설명 페이지](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)를 참조하세요.  
   
 6.  완료되었으면 **확인**을 클릭합니다.  
   

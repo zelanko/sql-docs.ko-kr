@@ -28,12 +28,12 @@ ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb3ae1a8437ddf73b371f317d6a9c85f200cff8c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0995346ac3c740efb6779f69e29003abf625a81e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531479"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136123"
 ---
 # <a name="move-system-databases"></a>시스템 데이터베이스 이동
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,11 +66,11 @@ ms.locfileid: "52531479"
     ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 중지하거나 시스템을 종료하여 유지 관리를 수행합니다. 자세한 내용은 [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)을 참조하세요.  
+2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 중지하거나 시스템을 종료하여 유지 관리를 수행합니다. 자세한 내용은 [SQL Server 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)을 참조하세요.  
   
 3.  파일을 새 위치로 이동합니다.  
 
-4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스나 서버를 다시 시작합니다. 자세한 내용은 [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)을 참조하세요.  
+4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스나 서버를 다시 시작합니다. 자세한 내용은 [SQL Server 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)을 참조하세요.  
   
 5.  다음 쿼리를 실행하여 파일 변경 내용을 확인합니다.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "52531479"
         NET START MSSQL$instancename /f /T3608
         ```  
   
-     자세한 내용은 [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)을 참조하세요.  
+     자세한 내용은 [SQL Server 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)을 참조하세요.  
   
 3.  이동할 각 파일에 대해 **sqlcmd** 명령 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 다음 문을 실행합니다.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "52531479"
   
 2.  **SQL Server 서비스** 노드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스(예: **SQL Server(MSSQLSERVER)**)를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
-3.  **SQL Server(***instance_name***) 속성** 대화 상자에서 **시작 매개 변수** 탭을 클릭합니다.  
+3.  **SQL Server(**_instance_name_**) 속성** 대화 상자에서 **시작 매개 변수** 탭을 클릭합니다.  
   
 4.  **기존 매개 변수** 상자에서 –d 매개 변수를 선택하여 마스터 데이터 파일을 이동합니다. **업데이트** 를 클릭하여 변경 내용을 저장합니다.  
   
@@ -268,7 +268,7 @@ ms.locfileid: "52531479"
  [사용자 데이터베이스 이동](../../relational-databases/databases/move-user-databases.md)   
  [데이터베이스 파일 이동](../../relational-databases/databases/move-database-files.md)   
  [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
- [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [시스템 데이터베이스 다시 작성](../../relational-databases/databases/rebuild-system-databases.md)  
   
   

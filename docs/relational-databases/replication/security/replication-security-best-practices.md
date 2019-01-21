@@ -16,12 +16,12 @@ ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 41346b81aa56f9ed4d83494092834535611cb905
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbda6137d9b844b13485c63488fad9efa85366c7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794541"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131563"
 ---
 # <a name="replication-security-best-practices"></a>복제 보안을 위한 최선의 구현 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47794541"
   
     -   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
--   각 복제 에이전트를 서로 다른 Windows 계정으로 실행하고 모든 복제 에이전트 연결에 Windows 인증을 사용합니다. 계정 지정에 대한 자세한 내용은 [복제의 로그인 및 암호 관리](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)를 참조하세요.  
+-   각 복제 에이전트를 서로 다른 Windows 계정으로 실행하고 모든 복제 에이전트 연결에 Windows 인증을 사용합니다. 계정 지정에 대한 자세한 내용은 [복제에 대한 ID 및 액세스 제어](../../../relational-databases/replication/security/identity-and-access-control-replication.md)를 참조하세요.  
   
 -   각 에이전트에 필요한 사용 권한만 부여합니다. 자세한 내용은 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)의 "에이전트에 필요한 사용 권한" 섹션을 참조하십시오.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "47794541"
   
     -   지정된 에이전트(예: 구독에 대한 배포 에이전트)가 각 컴퓨터에서 동일한 계정으로 연결하는지 확인합니다.  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증이 필요한 환경에서는 UNC 스냅숏 공유에 액세스할 수 없는 경우가 많습니다. 예를 들어 방화벽에서 액세스를 차단할 수 있습니다. 이 경우 FTP(파일 전송 프로토콜)를 통해 스냅숏을 구독자에게 전송할 수 있습니다. 자세한 내용은 [FTP를 통해 스냅숏 전송](../../../relational-databases/replication/transfer-snapshots-through-ftp.md)을 참조하세요.  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증이 필요한 환경에서는 UNC 스냅숏 공유에 액세스할 수 없는 경우가 많습니다. 예를 들어 방화벽에서 액세스를 차단할 수 있습니다. 이 경우 FTP(파일 전송 프로토콜)를 통해 스냅숏을 구독자에게 전송할 수 있습니다. 자세한 내용은 [FTP를 통해 스냅숏 전송](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
@@ -75,6 +75,6 @@ ms.locfileid: "47794541"
  [구독자 보안 설정](../../../relational-databases/replication/security/secure-the-subscriber.md)   
  [배포자 보안 설정](../../../relational-databases/replication/security/secure-the-distributor.md)   
  [게시자 보안 설정](../../../relational-databases/replication/security/secure-the-publisher.md)   
- [보안 및 보호&#40;복제&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+ [복제 보안 설정 보기 및 수정](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
   

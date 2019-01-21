@@ -26,15 +26,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f04a60e28b96c97890ab34157df50bd1dfc39891
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 53de562bb59b279f511e73a66ad308eff029b26e
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526389"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299430"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
   관련 창 함수를 적용하기 전에 행 집합의 분할과 순서를 결정합니다. 즉, OVER 절은 쿼리 결과 집합 내의 창 또는 사용자 지정 행 집합을 정의합니다. 그런 다음 창 함수가 창의 각 행에 대한 값을 계산합니다. OVER 절에 함수를 사용하여 이동 평균, 누적 집계, 누계 또는 그룹 결과당 상위 N개 결과 등의 집계된 값을 계산할 수 있습니다.  
   
@@ -389,7 +392,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 (10 row(s) affected)  
 ```  
   
-### <a name="d-specifying-the-rows-clause"></a>4. ROWS 절 지정  
+### <a name="d-specifying-the-rows-clause"></a>D. ROWS 절 지정  
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
@@ -456,7 +459,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
   
-### <a name="e-using-the-over-clause-with-the-rownumber-function"></a>5. OVER 절에 ROW_NUMBER 함수 사용  
+### <a name="e-using-the-over-clause-with-the-rownumber-function"></a>E. OVER 절에 ROW_NUMBER 함수 사용  
  다음 예는 담당자의 판매 할당량을 기반으로 영업 담당자의 ROW_NUMBER를 반환합니다.  
   
 ```sql  
@@ -483,7 +486,7 @@ GROUP BY LastName, FirstName;
  4          Jae        Pak                 10,514,000.00  
  ```
  
-### <a name="f-using-the-over-clause-with-aggregate-functions"></a>6. OVER 절에 집계 함수 사용  
+### <a name="f-using-the-over-clause-with-aggregate-functions"></a>F. OVER 절에 집계 함수 사용  
  다음 예에서는 OVER 절에 집계 함수를 사용하는 방법을 보여 줍니다. 이 예에서는 OVER 절을 사용하는 것이 하위 쿼리를 사용하는 것보다 더 효율적입니다.  
   
 ```sql  

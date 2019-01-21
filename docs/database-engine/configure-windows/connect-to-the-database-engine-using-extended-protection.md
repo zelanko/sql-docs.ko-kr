@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f820161dcf242a06054e3f64198aad1f827ed3dd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3d911c26eee5893d6817fe98b7a982e2ce25316f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395356"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133213"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>확장된 보호를 사용하여 데이터베이스 엔진에 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "52395356"
   
     -   **허용**으로 설정하면 **확장된 보호** 를 지원하는 운영 체제로부터의 연결에 대해 **확장된 보호**를 사용해야 합니다. **확장된 보호** 를 지원하지 않는 운영 체제로부터의 연결에 대해서는 **확장된 보호**가 무시됩니다. 보호된 클라이언트 운영 체제에서 실행되는 보호되지 않는 클라이언트 애플리케이션으로부터의 연결은 거부됩니다. 이 설정은 **해제**보다는 안전하지만 가장 안전한 설정은 아닙니다. **확장된 보호** 를 지원하는 운영 체제와 지원하지 않은 운영 체제가 혼합되어 있는 환경에서는 이 설정을 사용하십시오.  
   
-    -   **필수**로 설정하면 보호된 운영 체제에서 실행되는 보호된 응용 프로그램으로부터의 연결만 허용됩니다. 이 설정은 가장 안전하지만 **확장된 보호** 를 지원하지 않는 운영 체제 또는 애플리케이션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 수 없습니다.  
+    -   **필수**로 설정하면 보호된 운영 체제에서 실행되는 보호된 애플리케이션으로부터의 연결만 허용됩니다. 이 설정은 가장 안전하지만 **확장된 보호** 를 지원하지 않는 운영 체제 또는 애플리케이션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 수 없습니다.  
   
 -   **허용되는 NTLM SPN**  
   
@@ -87,7 +87,7 @@ ms.locfileid: "52395356"
   
 1.  **시작** 메뉴에서 **모든 프로그램**을 선택하고 **Microsoft SQL Server** 를 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
-2.  **SQL Server 네트워크 구성**을 펼치고 *\<* InstanceName*>***에 대한 프로토콜**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+2.  **SQL Server 네트워크 구성**을 확장한 다음, _\<_InstanceName*>* 에 대한 **프로토콜**을 마우스 오른쪽 단추로 클릭한 다음, **속성**을 클릭합니다.  
   
 3.  채널 바인딩과 서비스 바인딩 둘 다에 대해 **고급** 탭에서 **확장된 보호** 를 적절한 설정으로 지정합니다.  
   

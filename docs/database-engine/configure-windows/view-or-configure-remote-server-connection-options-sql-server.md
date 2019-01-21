@@ -15,12 +15,12 @@ ms.assetid: 356d3e6b-8514-4bd2-a683-9de147949b2b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 82f01b505cd534b795efb8b80baeb21764414882
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 58d6ca34183b63054b851cf3ef15ca32f7ed7a80
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760521"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255560"
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>원격 서버 연결 옵션 보기 또는 구성(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47760521"
   
 -   **후속 작업:**  [원격 서버 연결 옵션을 구성한 후](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="Security"></a> 보안  
   
@@ -53,7 +53,7 @@ ms.locfileid: "47760521"
   
 1.  개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-2.  **SQL Server 속성 - \<***server_name***>** 대화 상자에서 **연결**을 클릭합니다.  
+2.  **SQL Server 속성 - \<**_server_name_**>** 대화 상자에서 **연결**을 클릭합니다.  
   
 3.  **연결** 페이지에서 **원격 서버 연결** 설정을 확인한 다음 필요한 경우 수정합니다.  
   

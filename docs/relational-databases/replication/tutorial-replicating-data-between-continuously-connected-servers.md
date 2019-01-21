@@ -15,12 +15,12 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f477276ef55689b6d79244f4493246f99aa9d34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cc911c9a5a3d02e097945ebfe4a74b8ddd9ee285
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514198"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128353"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>자습서: 두 개의 완전히 연결된 서버 간 복제 구성(트랜잭션)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52514198"
   
   
 ## <a name="prerequisites"></a>사전 요구 사항  
-이 자습서는 기본적인 데이터베이스 작업에는 익숙하지만 복제에 대한 경험은 풍부하지 않은 사용자를 위한 것입니다. 이 자습서를 시작하기 전에 [자습서: 복제용 SQL 서버 준비](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)를 완료해야 합니다.  
+이 자습서는 기본적인 데이터베이스 작업에는 익숙하지만 복제에 대한 경험은 풍부하지 않은 사용자를 위한 것입니다. 이 자습서를 시작하려면 먼저 [자습서: 복제를 위한 SQL Server 준비](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)를 완료해야 합니다.  
   
 이 자습서를 완료하려면 SQL Server, SSMS(SQL Server Management Studio) 및 AdventureWorks 데이터베이스가 필요합니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "52514198"
 > - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 **sysadmin** 고정 서버 역할의 멤버인 로그인을 사용하여 게시자 및 구독자에 연결해야 합니다. 이 역할에 대한 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles)을 참조하세요.  
   
   
-**이 자습서를 완료하는 데 소요되는 예상 시간: 60분**  
+**이 자습서에 소요되는 예상 시간: 60분**  
   
 ## <a name="configure-the-publisher-for-transactional-replication"></a>트랜잭션 복제를 위한 게시자 구성
 이 섹션에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 트랜잭션 게시를 만들어 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 샘플 데이터베이스에 **Product** 테이블의 필터링된 하위 집합을 게시합니다. 또한 배포 에이전트에 사용된 SQL Server 로그인을 PAL(게시 액세스 목록)에 추가합니다.
@@ -226,7 +226,7 @@ ms.locfileid: "52514198"
   
    1. **추적 프로그램 토큰** 탭을 선택합니다.  
    2. **추적 프로그램 삽입**을 선택합니다.    
-   c. **게시자에서 배포자로 연결 시 대기 시간**, **배포자에서 구독자로 연결 시 대기 시간**, **총 대기 시간**열에서 추적 프로그램 토큰에 대한 경과 시간을 확인합니다. **보류 중**이라는 값은 토큰이 지정된 지점에 아직 도달하지 않았음을 나타냅니다.
+   c. 다음 열에서 추적 프로그램 토큰에 대한 경과 시간을 확인합니다. **게시자에서 배포자로 연결 시 대기 시간**, **배포자에서 구독자로 연결 시 대기 시간** 및 **총 대기 시간**. **보류 중**이라는 값은 토큰이 지정된 지점에 아직 도달하지 않았음을 나타냅니다.
 
    ![추적 프로그램 토큰에 대한 정보](media/tutorial-replicating-data-between-continuously-connected-servers/tracertoken.png)
 

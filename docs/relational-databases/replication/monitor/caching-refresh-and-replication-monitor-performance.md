@@ -17,12 +17,12 @@ ms.assetid: a2d8b666-ed41-4f86-b2b8-c8e118416ab7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f11bd1d26e363628a80ed2cd673e4acda7476526
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afa70f42c2ea5602bf549a4d5596bff2c8bbff66
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852851"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123883"
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>캐싱, 새로 고침 및 복제 모니터 성능
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,6 +56,6 @@ ms.locfileid: "47852851"
   
 ## <a name="see-also"></a>참고 항목  
  [복제 유지 관리 작업 실행&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)   
- [복제 모니터링](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [복제 모니터링](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

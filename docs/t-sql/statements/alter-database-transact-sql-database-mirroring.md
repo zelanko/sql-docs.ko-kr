@@ -18,12 +18,12 @@ ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e9378663dbe37bb6e00602cc34bc42c4a5bd4e08
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fa5285bee7041b0da548a963087493f4c5cc9b21
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530494"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134747"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE(Transact-SQL) 데이터베이스 미러링 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]  
 >  SET PARTNER 절당 하나의 \<partner_option>만 허용됩니다.  
   
- **'** *partner_server* **'**  
+ **'** _partner_server_ **'**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 서버 네트워크 주소가 새 데이터베이스 미러링 세션에서 장애 조치 파트너로 작동하도록 지정합니다. 각 세션에는 각각 주 서버와 미러 서버로 시작할 두 개의 파트너가 필요합니다. 각 파트너는 다른 컴퓨터에 있는 것이 좋습니다.  
   
  이 옵션은 각 파트너에서 세션당 한 번 지정합니다. 데이터베이스 미러링 세션을 시작하려면 두 개의 ALTER DATABASE *database* SET PARTNER **='**_partner_server_**'** 문이 필요합니다. 순서가 중요합니다. 먼저 미러 서버에 연결하고 주 서버 인스턴스를 *partner_server*(SET PARTNER **='**_principal_server_**'**)로 지정합니다. 두 번째로 주 서버에 연결하고 미러 서버 인스턴스를 *partner_server*(SET PARTNER **='**_mirror_server_**'**)로 지정합니다. 이렇게 하면 두 파트너 간에 데이터베이스 미러링 세션이 시작됩니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [데이터베이스 미러링 설정&#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)을 참조하세요.  
@@ -195,7 +195,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]  
 >  SET WITNESS 절당 하나의 \<witness_option>만 허용됩니다.  
   
- **'** *witness_server* **'**  
+ **'** _witness_server_ **'**  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 데이터베이스 미러링 세션에 대한 미러링 모니터 서버로 작동하도록 지정합니다. SET WITNESS 문은 주 서버에서만 지정할 수 있습니다.  
   
  SET WITNESS **='**_witness_server_**'** 문에서 *witness_server* 구문은 *partner_server*의 구문과 동일합니다.  

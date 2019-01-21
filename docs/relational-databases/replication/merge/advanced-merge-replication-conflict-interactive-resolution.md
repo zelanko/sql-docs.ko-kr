@@ -16,12 +16,12 @@ ms.assetid: 172c60c7-f605-4eb5-b185-54ae9e9d3c60
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c701e9fb98bbabe013632a3fd93f91d368ec2784
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20c748e6dea95ae06c2f0c8364b8720ca0d7a36a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849231"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132753"
 ---
 # <a name="advanced-merge-replication-conflict---interactive-resolution"></a>고급 병합 복제 충돌 - 대화형 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47849231"
   
  대화형 해결 프로그램을 사용하려면 필요한 각 아티클과 구독에 대해 대화형 해결을 사용할 수 있게 설정해야 합니다. 하나 이상의 아티클과 구독에 대해 대화형 해결을 사용할 수 있게 설정하면 병합 동기화 중 충돌이 감지될 때 대화형 해결 프로그램이 사용됩니다.  
   
- 대화형 해결 프로그램을 사용하려면 [병합 아티클에 대한 상호 충돌 해결 프로그램 지정](../../../relational-databases/replication/publish/specify-interactive-conflict-resolution-for-merge-articles.md) 및 [Windows 동기화 관리자를 사용하여 구독 동기화&#40;Windows 동기화 관리자&#41;](../../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md)를 참조하세요.  
+ 대화형 해결 프로그램을 사용하려면 [병합 복제 옵션 지정](../../../relational-databases/replication/merge/specify-merge-replication-properties.md) 및 [Windows 동기화 관리자를 사용하여 구독 동기화&#40;Windows 동기화 관리자&#41;](../../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  

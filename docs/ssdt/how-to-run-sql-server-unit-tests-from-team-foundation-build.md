@@ -11,19 +11,19 @@ ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1857f503abe300127d92c26ba5591407b863ebc0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8faabc4655cd3aff4d6f15790a4f0e03dd60b8e8
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527917"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226540"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>방법: Team Foundation Build에서 SQL Server 단위 테스트 실행
 Team Foundation Build를 사용하여 BVT(빌드 확인 테스트)의 일부로 SQL Server 단위 테스트를 실행할 수 있습니다. 데이터베이스를 배포하도록 단위 테스트를 구성하고, 테스트 데이터를 생성하고, 선택한 테스트를 실행할 수 있습니다. Team Foundation Build에 익숙하지 않으면 이 항목의 절차를 수행하기 전에 다음 정보를 검토하십시오.  
   
 -   [SQL Server 단위 테스트 만들기 및 정의](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [방법: 응용 프로그램을 빌드한 후 예약된 테스트 구성 및 실행](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [방법: 애플리케이션을 빌드한 후 예약된 테스트 구성 및 실행](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
   
 -   [기본 빌드 정의 만들기](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
   
@@ -262,7 +262,7 @@ x64 빌드 에이전트에서 단위 테스트를 실행하려면 먼저 호스�
   
 9. **확인**을 클릭합니다.  
   
-10. **기본** 그룹의 **자동화된 테스트**에서 실행하려는 테스트를 지정합니다. 기본적으로 솔루션에서 이름이 *test\*.dll로 지정된 파일에 포함된 테스트가 실행됩니다.  
+10. **기본** 그룹의 **자동화된 테스트**에서 실행하려는 테스트를 지정합니다. 기본적으로 솔루션에서 이름이 \*test\*.dll로 지정된 파일에 포함된 테스트가 실행됩니다.  
   
 11. **파일** 메뉴에서 *ProjectName* **저장**을 클릭합니다.  
   

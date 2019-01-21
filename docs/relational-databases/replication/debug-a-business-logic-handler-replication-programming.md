@@ -18,12 +18,12 @@ ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35f53ef33d1cf9316fcb7225ab5baf67a3b33383
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b8b74629bcaea743026c453614f2c69e268b6bc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804062"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130933"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>비즈니스 논리 처리기 디버깅(복제 프로그래밍)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47804062"
   
 ### <a name="to-debug-a-business-logic-handler-on-a-local-computer"></a>로컬 컴퓨터의 비즈니스 논리 처리기를 디버깅하려면  
   
-1.  게시 및 배포를 구성하고 게시를 만들고 게시에 대한 구독을 만듭니다. 자세한 내용은 [게시 및 배포 구성](../../relational-databases/replication/configure-publishing-and-distribution.md) 및 [게시 및 아티클 만들기, 수정 및 삭제&#40;복제&#41;](../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)를 참조하세요.  
+1.  게시 및 배포를 구성하고 게시를 만들고 게시에 대한 구독을 만듭니다. 자세한 내용은 [게시 및 배포 구성](../../relational-databases/replication/configure-publishing-and-distribution.md) 및 [게시 만들기](../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
 2.  비즈니스 논리 처리기를 만들고 등록합니다. 자세한 내용은 [병합 아티클에 대한 비즈니스 논리 처리기 구현](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)을 참조하세요.  
   

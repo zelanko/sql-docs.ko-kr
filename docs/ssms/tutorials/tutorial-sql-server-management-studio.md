@@ -1,5 +1,5 @@
 ---
-title: '자습서: SSMS(SQL Server Management Studio) | Microsoft Docs'
+title: '자습서: SSMS(SQL Server Management Studio) | Microsoft 문서'
 ms.custom: ''
 ms.date: 08/30/2017
 ms.prod: sql
@@ -23,18 +23,18 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5deb2b29c70187bb0222e21df7193f300f7eb7b0
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: f8b1560ef694885ae0debbf06f2d61d23c5d0f66
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970544"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299400"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 자습서
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 SSMS(SQL Server Management Studio) 자습서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인프라를 관리하기 위한 통합 환경을 소개합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 구성, 모니터링 및 관리를 위한 그래픽 인터페이스를 제공합니다. 또한 데이터베이스 등 애플리케이션에 사용되는 데이터 계층 구성 요소를 배포, 모니터링 및 업그레이드할 수도 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 스크립트 편집 및 디버그를 위한 [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX 및 XML 언어 편집기도 제공합니다.  
   
@@ -81,7 +81,7 @@ SSMS(SQL Server Management Studio) 자습서에서는 [!INCLUDE[ssNoVersion](../
 
   -   최신 버전의 [SSMS(SQL Server Management Studio)](../download-sql-server-management-studio-ssms.md) 설치  
 
-첫 번째 섹션에서는 데이터베이스를 만드는 과정을 설명하지만 다른 샘플 데이터베이스는 여기: [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)에서 찾을 수 있습니다. SSMS에서 데이터베이스를 복원하기 위한 지침은 여기: [데이터베이스 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)에서 찾을 수 있습니다. 
+첫 번째 섹션에서는 데이터베이스를 만드는 과정을 설명하지만 다른 샘플 데이터베이스는 여기: [AdventureWorks 예제 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)에서 찾을 수 있습니다. SSMS에서 데이터베이스를 복원하기 위한 지침은 여기: [데이터베이스 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)에서 찾을 수 있습니다. 
 
 
   

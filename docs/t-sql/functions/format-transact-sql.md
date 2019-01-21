@@ -18,18 +18,18 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9616a482a220c1c15813fc548ad959dccf46e10
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 64341fd261cb1c1e419b925049cf86403a64ab3e
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703101"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299601"
 ---
 # <a name="format-transact-sql"></a>FORMAT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 지정된 형식 및 선택적 culture로 서식이 지정된 값을 반환합니다. 날짜/시간 및 숫자 값을 문자열로 지정하는 로캘 인식 서식 지정에 FORMAT 함수를 사용합니다. 일반 데이터 형식 변환의 경우 CAST나 CONVERT를 사용합니다.  
@@ -76,14 +76,14 @@ FORMAT ( value, format [, culture ] )
   
 |범주|형식|.NET 형식|  
 |--------------|----------|---------------|  
-|숫자|bigint|Int64|  
+|숫자|BIGINT|Int64|  
 |숫자|ssNoversion|Int32|  
 |숫자|SMALLINT|Int16|  
 |숫자|TINYINT|Byte|  
-|숫자|decimal|SqlDecimal|  
+|숫자|Decimal|SqlDecimal|  
 |숫자|NUMERIC|SqlDecimal|  
 |숫자|FLOAT|Double|  
-|숫자|REAL|Single|  
+|숫자|REAL|단일|  
 |숫자|SMALLMONEY|Decimal|  
 |숫자|money|Decimal|  
 |날짜 및 시간|날짜|DateTime|  

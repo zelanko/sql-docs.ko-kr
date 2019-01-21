@@ -25,12 +25,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2829710d348c56a5b3fcc09d06436929bcbfe16
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4d2234f6f8d9fa54ccbbae35e1e1dfc7568cc8ff
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418324"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206229"
 ---
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ TODATETIMEOFFSET ( expression , time_zone )
 >  **varchar** 또는 **nvarchar**로 암시적으로 변환할 수 없는 **text**, **ntext** 또는 **image** 형식의 식을 사용할 수 없습니다.  
   
  *time_zone*  
- 분(-120과 같은 정수인 경우) 단위나 시간 및 분('+13.00'과 같은 문자열인 경우) 단위의 표준 시간대 오프셋을 나타내는 식입니다. 범위는 +14에서 -14(시간) 사이입니다. 이 식은 지정된 time_zone의 현지 시간으로 해석됩니다.  
+ 분(-120과 같은 정수인 경우) 단위나 시간 및 분('+13:00'과 같은 문자열인 경우) 단위의 표준 시간대 오프셋을 나타내는 식입니다. 범위는 +14에서 -14(시간) 사이입니다. 이 식은 지정된 time_zone의 현지 시간으로 해석됩니다.  
   
 > [!NOTE]  
 >  식이 문자열인 경우 {+|-}TZH:THM 형식이어야 합니다.  

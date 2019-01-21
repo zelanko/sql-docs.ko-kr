@@ -15,12 +15,12 @@ ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a326feef177287953982c94412d9619c716e2e22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c7299efbcdca72a100b13d2474f218357605a85
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692951"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125543"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>조건부 삭제 추적으로 병합 복제 성능 최적화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47692951"
   
  옵션은 게시 생성 시 지정할 수 있으며 애플리케이션에서 일부 삭제 내용은 복제하고 나머지 삭제 내용은 복제하지 않아야 하는 경우(예: 일괄 삭제) 옵션을 설정 또는 해제할 수 있습니다. 다음 예에서는 애플리케이션에서 이 옵션을 사용하는 방법을 설명합니다.  
   
--   이동이 잦은 영업 사원이 사용하는 애플리케이션에는 일반적으로 **SalesOrderHeader**, **SalesOrderDetail** 및 **Product**와 같은 테이블이 있습니다. 구독자에서 입력한 주문은 게시자로 복제되고 게시자에서는 이 데이터를 주문 수행 시스템에 제공합니다. 이동이 잦은 영업 사원 중 많은 수가 저장소가 제한된 핸드헬드 디바이스를 사용하므로 게시자에서 주문을 받으면 해당 주문을 구독자에서 삭제할 수 있습니다. 해당 주문은 시스템 내에서 계속 활성 상태이므로 삭제가 게시자에 전파되지 않습니다.  
+-   이동이 잦은 영업 사원이 사용하는 애플리케이션에는 일반적으로 **SalesOrderHeader**, **SalesOrderDetail** 및 **Product**와 같은 테이블이 있습니다. 구독자에서 입력한 주문은 게시자로 복제되고 게시자에서는 이 데이터를 주문 수행 시스템에 제공합니다. 이동이 잦은 영업 사원 중 많은 수가 스토리지가 제한된 핸드헬드 장치를 사용하므로 게시자에서 주문을 받으면 해당 주문을 구독자에서 삭제할 수 있습니다. 해당 주문은 시스템 내에서 계속 활성 상태이므로 삭제가 게시자에 전파되지 않습니다.  
   
      이 시나리오에서 **SalesOrderHeader** 및 **SalesOrderDetail** 테이블에 대해 삭제를 추적할 수 없습니다. 제품이 게시자에서 삭제되면 제품 목록을 최신 내용으로 유지할 수 있게 삭제 내용을 구독자로 보내야 하므로 **Product** 테이블에 대한 삭제는 추적할 수 있습니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "47692951"
   
  **삭제가 추적되지 않게 지정하려면**  
   
--   복제 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 프로그래밍: [병합 아티클에 대해 삭제가 추적되지 않도록 지정&#40;복제 Transact-SQL 프로그래밍&#41;](../../../relational-databases/replication/publish/specify-that-deletes-should-not-be-tracked-for-merge-articles.md)  
+-   복제 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 프로그래밍: [병합 복제 속성 지정](../../../relational-databases/replication/merge/specify-merge-replication-properties.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [병합 복제를 위한 아티클 옵션](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   

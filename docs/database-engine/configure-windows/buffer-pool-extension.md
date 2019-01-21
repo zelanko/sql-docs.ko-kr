@@ -11,23 +11,23 @@ ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f732c4038940ef2ed5ee511e399f3bcf2efae54f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 43423c8db03d27c26558672d287415fa5e12d638
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606893"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255958"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 도입된 버퍼 풀 확장은 I/O 처리량을 크게 향상하기 위해 비휘발성 RAM(즉, 반도체 드라이브) 확장을 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 버퍼 풀에 원활하게 통합할 수 있는 기능을 제공합니다. 버퍼 풀 확장은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서만 제공됩니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
 ## <a name="benefits-of-the-buffer-pool-extension"></a>버퍼 풀 확장의 이점  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 주 목적은 데이터 저장 및 검색이므로 데이터베이스 엔진의 핵심 특성은 집중형 디스크 I/O입니다. 디스크 I/O 작업은 많은 리소스를 소비하며 완료하는 데 비교적 오랜 시간이 걸리므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 I/O의 효율성을 높이는 데 주안점을 둡니다. 버퍼 풀은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 주 메모리 할당 원본으로 사용됩니다. 버퍼 관리는 이러한 효율성을 얻기 위한 핵심 구성 요소입니다. 버퍼 관리 구성 요소는 데이터베이스 페이지에 액세스하고 업데이트하기 위한 버퍼 관리자와 데이터베이스 파일 I/O를 줄이기 위한 버퍼 풀의 두 가지 메커니즘으로 구성되어 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 주 목적은 데이터 저장 및 검색이므로 데이터베이스 엔진의 핵심 특성은 집중형 디스크 I/O입니다. 디스크 I/O 작업은 많은 리소스를 소비하며 완료하는 데 비교적 오랜 시간이 걸리므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 I/O의 효율성을 높이는 데 주안점을 둡니다. 버퍼 풀은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 주 메모리 할당 원본으로 사용됩니다. 버퍼 관리는 이러한 효율성을 얻기 위한 핵심 구성 요소입니다. 버퍼 관리 구성 요소는 데이터베이스 페이지에 액세스하고 업데이트하는 버퍼 관리자와 데이터베이스 파일 I/O를 줄이기 위한 버퍼 풀의 두 가지 메커니즘으로 구성되어 있습니다.  
   
  데이터 및 인덱스 페이지는 디스크에서 버퍼 풀로 읽히고 수정된 페이지(더티 페이지라고도 함)는 디스크에 다시 쓰여집니다. 서버 및 데이터베이스 검사점에서 메모리가 부족하면 버퍼 캐시에 있는 핫(활성) 더티 페이지가 캐시에서 제거되고 기계식 디스크에 쓰여진 다음 다시 캐시에서 읽힙니다. 일반적으로 이러한 I/O 작업은 4KB 데이터에서 16KB 데이터 정도의 작은 임의 읽기 및 쓰기입니다. 작은 임의 I/O 패턴은 잦은 검색을 유발하기 때문에 기계식 디스크 충돌 경합이 발생하고, I/O 대기 시간이 증가하며, 시스템의 총 I/O 처리량이 감소합니다.  
   
- 이러한 I/O 병목 상태를 해결하는 일반적인 방법은 DRAM이나 고성능 SAS 스핀들을 추가하는 것입니다. 이러한 방법은 도움이 되지만 중요한 단점이 있습니다. DRAM은 데이터 스토리지 드라이브보다 더 비싸며, 스핀들 추가는 하드웨어 구입 비용을 증가시킵니다. 또한 전력 소비가 많고 구성 요소의 오류 발생 가능성이 높아 운영 비용이 증가합니다.  
+ 이러한 I/O 병목 상태를 해결하는 일반적인 방법은 DRAM이나 고성능 SAS 스핀들을 추가하는 것입니다. 이러한 방법은 도움이 되지만 중요한 단점이 있습니다. DRAM은 데이터 저장소 드라이브보다 더 비싸며, 스핀들 추가는 하드웨어 구입 비용을 증가시킵니다. 또한 전력 소비가 많고 구성 요소의 오류 발생 가능성이 높아 운영 비용이 증가합니다.  
   
  버퍼 풀 확장 기능은 비휘발성 스토리지(일반적으로 SSD)로 버퍼 풀 캐시를 확장합니다. 이 확장 덕분에 버퍼 풀은 더 큰 데이터베이스 작업 집합을 수용할 수 있고, 그에 따라 RAM과 SSD 간의 I/O 페이징이 강제로 수행됩니다. 따라서 작은 임의 I/O가 기계식 디스크에서 SSD로 효과적으로 오프로드됩니다. SSD의 더 낮은 대기 시간과 향상된 임의 I/O 성능 덕분에 버퍼 풀 확장은 I/O 처리량을 크게 향상합니다.  
   

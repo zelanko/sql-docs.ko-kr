@@ -13,12 +13,12 @@ ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8fbef18dc28786fc6455af68e09c788a3f0e2db1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7488391716a4ebc094bd6e783b591252bd24590f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748751"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125859"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle 게시자에 대한 디자인 고려 사항 및 제한 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "47748751"
   
  또한 다음 문제를 고려해야 합니다.  
   
--   Oracle 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 은 NULL을 다르게 처리합니다.Oracle은 NULL을 허용하고 UNIQUE 제약 조건 또는 고유 인덱스에 포함된 열에 대해 NULL 값을 갖는 행을 여러 개 허용합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 동일한 열에 대해 NULL 값을 갖는 행을 하나만 허용하여 고유성을 갖도록 합니다. 게시된 테이블에 인덱스 또는 제약 조건에 포함된 열에 대해 NULL 값을 갖는 행이 여러 개 포함된 경우 구독자에서 제약 조건 위반이 발생하므로 NULL을 허용하는 UNIQUE 제약 조건이나 고유 인덱스를 게시할 수 없습니다.  
+-   Oracle 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 NULL을 다르게 처리합니다. Oracle은 NULL을 허용하고 UNIQUE 제약 조건 또는 고유 인덱스에 포함된 열에 대해 NULL 값을 갖는 행을 여러 개 허용합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 동일한 열에 대해 NULL 값을 갖는 행을 하나만 허용하여 고유성을 갖도록 합니다. 게시된 테이블에 인덱스 또는 제약 조건에 포함된 열에 대해 NULL 값을 갖는 행이 여러 개 포함된 경우 구독자에서 제약 조건 위반이 발생하므로 NULL을 허용하는 UNIQUE 제약 조건이나 고유 인덱스를 게시할 수 없습니다.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 고유성을 테스트할 때 필드의 후행 공백을 무시하지만 Oracle에서는 무시하지 않습니다.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "47748751"
   
 -   Oracle 게시의 구독자는 백업에서 자동으로 초기화할 수 없습니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 이진 유효성 검사와 행 개수 유효성 검사를 지원합니다. Oracle 게시자에서는 행 개수 유효성 검사를 지원합니다. 자세한 내용은 [복제된 데이터의 유효성 검사](../../../relational-databases/replication/validate-replicated-data.md)를 참조하세요.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 이진 유효성 검사와 행 개수 유효성 검사를 지원합니다. Oracle 게시자에서는 행 개수 유효성 검사를 지원합니다. 자세한 내용은 [복제된 데이터의 유효성 검사](../../../relational-databases/replication/validate-data-at-the-subscriber.md)를 참조하세요.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 네이티브 bcp 모드 스냅숏과 문자 모드 스냅숏을 제공합니다. Oracle 게시자에서는 문자 모드 스냅숏을 지원합니다.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "47748751"
   
     -   [sp_changepublication_snapshot&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) 또는 [sp_changelogreader_agent&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)에서 **@job_login** 매개 변수는 변경할 수 없지만 암호는 변경할 수 있습니다.  
   
- 복제 보안에 대한 자세한 내용은 [보안 및 보호&#40;복제&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)를 참조하세요.  
+ 복제 보안에 대한 자세한 내용은 [복제 보안 설정 보기 및 수정](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [Oracle 게시자에 대한 관리 고려 사항](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   

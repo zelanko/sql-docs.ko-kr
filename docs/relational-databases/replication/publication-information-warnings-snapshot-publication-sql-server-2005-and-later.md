@@ -13,12 +13,12 @@ ms.assetid: 7aa2eb52-b6b7-4dd3-8483-8ef00d9f0435
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 263f1b3a76a30c1ab220234b32dd55af1ab6cfac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b6f01dd6e6b06464ac5fbaf76480a6c3aad2b38
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674711"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123984"
 ---
 # <a name="publication-information-warnings-snapshot-publication-sql-server-2005-and-later"></a>게시 정보, 경고(스냅숏 게시, SQL Server 2005 이상)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47674711"
   
  임계값에 도달하면 복제 모니터에 경고가 표시되는 것은 물론 알림 신호가 트리거될 수 있습니다. 알림 신호는 **경고 구성** 을 클릭하고 **복제 경고 구성** 대화 상자에서 정보를 제공하여 정의합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **설정**  
  경고를 설정하고 임계값을 지정하려면 선택합니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "47674711"
   
 ## <a name="see-also"></a>참고 항목  
  [복제 모니터 시작](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [게시에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
- [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

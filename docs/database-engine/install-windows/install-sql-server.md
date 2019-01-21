@@ -15,26 +15,29 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: c58fcf00f0feb3f6dc78f1df095a5934edfde6f3
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 89bb096f92bfd2ae5cc4da46ba99fb4ae41929d0
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600893"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300370"
 ---
 # <a name="install-sql-server"></a>SQL Server 설치
-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  > [!div class="nextstepaction"]
+  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
+
  
- [!INCLUDE[sssql15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]는 64비트 응용 프로그램으로만 사용할 수 있습니다. 다음은 SQL Server 다운로드 및 설치 방법에 대한 중요한 세부 정보입니다.
+ [!INCLUDE[sssql15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]는 64비트 애플리케이션으로만 사용할 수 있습니다. 다음은 SQL Server 다운로드 및 설치 방법에 대한 중요한 세부 정보입니다.
 
 ## <a name="installation-details"></a>설치 세부 정보
   
 *  **옵션**: 설치 마법사, 명령 프롬프트 또는 sysprep을 통해 설치
  
-*  **요구 사항**: 설치하기 전에 [SQL Server 설치 계획](../../sql-server/install/planning-a-sql-server-installation.md) 
+*  **요구 사항**: 설치하기 전에 [SQL Server 설치 계획](../../sql-server/install/planning-a-sql-server-installation.md)에서 설치 요구 사항, 시스템 구성 검사 및 보안 고려 사항을 검토하세요. 
 
-* **프로세스**: 설치 프로세스에 대한 전체 지침은 [SQL Server 설치](../../database-engine/install-windows/installation-for-sql-server-2016.md) 를 참조하세요.
+* **프로세스**: 설치 프로세스에 대한 전체 지침은 [SQL Server 설치](../../database-engine/install-windows/installation-for-sql-server-2016.md)를 참조하세요.
 
 * **샘플 데이터베이스 및 샘플 코드**: 
     * 기본적으로 SQL Server 설치의 일부로 설치되지 않습니다. 

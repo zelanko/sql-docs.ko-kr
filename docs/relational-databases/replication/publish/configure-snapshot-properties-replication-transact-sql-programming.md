@@ -15,12 +15,12 @@ ms.assetid: 978d150f-8971-458a-ab2b-3beba5937b46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 62bef7f28b04c03c15d32da5097420ca1345a2d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b454197982685882610fc808d9319835053e21bb
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623441"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134213"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>스냅숏 속성 구성(복제 Transact-SQL 프로그래밍)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,14 +30,10 @@ ms.locfileid: "47623441"
   
 1.  게시자에서 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)을 실행합니다. 이때 **@publication**에 게시 이름을 지정하고 **@repl_freq** 에 **snapshot** 또는 **@repl_freq**를 지정하며 다음과 같은 스냅숏 관련 매개 변수를 하나 이상 지정합니다.  
   
-    -   **@alt_snapshot_folder** - 이 게시에 대한 스냅숏을 기본 스냅숏 폴더 이외 위치 또는 기본 스냅숏 폴더에 추가된 위치에서 액세스하는 경우 경로를 지정합니다.  
-  
-    -   **@compress_snapshot** - 대체 스냅숏 폴더의 스냅숏 파일이 **CAB 파일 형식으로 압축되는 경우** true [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 값을 지정합니다.  
-  
-    -   **@pre_snapshot_script** - 초기 스냅숏을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.  
-  
-    -   **@post_snapshot_script** - 초기 스냅숏을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.  
-  
+    -   **@alt_snapshot_folder** - 이 게시에 대한 스냅숏을 기본 스냅숏 폴더 이외 위치 또는 기본 스냅숏 폴더에 추가된 위치에서 액세스하는 경우 경로를 지정합니다.    
+    -   **@compress_snapshot** - 대체 스냅숏 폴더의 스냅숏 파일이 **CAB 파일 형식으로 압축되는 경우** true [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 값을 지정합니다.    
+    -   **@pre_snapshot_script** - 초기 스냅숏을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.    
+    -   **@post_snapshot_script** - 초기 스냅숏을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.    
     -   **@snapshot_in_defaultfolder** - 대체 스냅숏 폴더의 스냅숏 파일이 **false** 값을 지정합니다.  
   
      게시를 만드는 방법은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
@@ -46,14 +42,10 @@ ms.locfileid: "47623441"
   
 1.  게시자에서 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)을 실행합니다. 이때 **@publication**에 게시 이름을 지정하고 **@repl_freq** 에 **snapshot** 또는 **@repl_freq**를 지정하며 다음과 같은 스냅숏 관련 매개 변수를 하나 이상 지정합니다.  
   
-    -   **@alt_snapshot_folder** - 이 게시에 대한 스냅숏을 기본 스냅숏 폴더 이외 위치 또는 기본 스냅숏 폴더에 추가된 위치에서 액세스하는 경우 경로를 지정합니다.  
-  
-    -   **@compress_snapshot** - 대체 스냅숏 폴더의 스냅숏 파일이 **CAB 파일 형식으로 압축되는 경우** 값을 지정합니다.  
-  
-    -   **@pre_snapshot_script** - 초기 스냅숏을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.  
-  
-    -   **@post_snapshot_script** - 초기 스냅숏을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.  
-  
+    -   **@alt_snapshot_folder** - 이 게시에 대한 스냅숏을 기본 스냅숏 폴더 이외 위치 또는 기본 스냅숏 폴더에 추가된 위치에서 액세스하는 경우 경로를 지정합니다.    
+    -   **@compress_snapshot** - 대체 스냅숏 폴더의 스냅숏 파일이 **CAB 파일 형식으로 압축되는 경우** 값을 지정합니다.   
+    -   **@pre_snapshot_script** - 초기 스냅숏을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.    
+    -   **@post_snapshot_script** - 초기 스냅숏을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.    
     -   **@snapshot_in_defaultfolder** - 대체 스냅숏 폴더의 스냅숏 파일이 **false** 값을 지정합니다.  
   
 2.  게시를 만드는 방법은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
@@ -62,14 +54,10 @@ ms.locfileid: "47623441"
   
 1.  게시 데이터베이스의 게시자에서 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행합니다. 이때 **@force_invalidate_snapshot** 또는 **@force_invalidate_snapshot** 을 지정하고 **@property**에 다음 값 중 하나를 지정합니다.  
   
-    -   **alt_snapshot_folder** - **@value**을 실행합니다.  
-  
-    -   **compress_snapshot** - **CAB 파일 형식으로 압축되는 경우** 에 **false** 또는 **@value** 값을 지정합니다.  
-  
-    -   **pre_snapshot_script** - **@value** 에도 마찬가지로 초기 스냅숏을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.  
-  
-    -   **post_snapshot_script** - **@value** 에도 마찬가지로 초기 스냅숏을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.  
-  
+    -   **alt_snapshot_folder** - **@value**을 실행합니다.    
+    -   **compress_snapshot** - **CAB 파일 형식으로 압축되는 경우** 에 **false** 또는 **@value** 값을 지정합니다.    
+    -   **pre_snapshot_script** - **@value** 에도 마찬가지로 초기 스냅숏을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.    
+    -   **post_snapshot_script** - **@value** 에도 마찬가지로 초기 스냅숏을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.    
     -   **snapshot_in_defaultfolder** - 마찬가지로 스냅숏을 기본 위치 이외 위치에서만 사용할 수 있는지 여부를 나타내는 **true** 또는 **false** 값을 지정합니다.  
   
 2.  (옵션) 게시 데이터베이스의 게시자에서 [sp_changepublication_snapshot](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)을 실행합니다. 이때 변경할 **@publication** 및 하나 이상의 일정 또는 보안 자격 증명 매개 변수를 지정합니다.  
@@ -83,14 +71,10 @@ ms.locfileid: "47623441"
   
 1.  게시 데이터베이스의 게시자에서 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)을 실행합니다. 이때 **@force_invalidate_snapshot** 또는 **@force_invalidate_snapshot** 을 지정하고 **@property**에 다음 값 중 하나를 지정합니다.  
   
-    -   **alt_snapshot_folder** - **@value**을 실행합니다.  
-  
-    -   **compress_snapshot** - **CAB 파일 형식으로 압축되는 경우** 에 **false** 또는 **@value** 값을 지정합니다.  
-  
-    -   **pre_snapshot_script** - **@value** 에도 마찬가지로 초기 스냅숏을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.  
-  
-    -   **post_snapshot_script** - **@value** 에도 마찬가지로 초기 스냅숏을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.  
-  
+    -   **alt_snapshot_folder** - **@value**을 실행합니다.    
+    -   **compress_snapshot** - **CAB 파일 형식으로 압축되는 경우** 에 **false** 또는 **@value** 값을 지정합니다.    
+    -   **pre_snapshot_script** - **@value** 에도 마찬가지로 초기 스냅숏을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.    
+    -   **post_snapshot_script** - **@value** 에도 마찬가지로 초기 스냅숏을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.    
     -   **snapshot_in_defaultfolder** - 마찬가지로 스냅숏을 기본 위치 이외 위치에서만 사용할 수 있는지 여부를 나타내는 **true** 또는 **false** 값을 지정합니다.  
   
 2.  명령 프롬프트에서 [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md) 를 실행하거나 스냅숏 에이전트 작업을 시작하여 새 스냅숏을 생성합니다. 자세한 내용은 [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)을 참조하세요.  
@@ -101,11 +85,10 @@ ms.locfileid: "47623441"
  [!code-sql[HowTo#sp_mergealtsnapshot](../../../relational-databases/replication/codesnippet/tsql/configure-snapshot-prope_1.sql)]  
   
 ## <a name="see-also"></a>참고 항목  
- [대체 스냅숏 폴더 위치](../../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
- [압축 스냅숏](../../../relational-databases/replication/compressed-snapshots.md)   
- [스냅숏 적용 전후에 스크립트 실행](../../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)   
+ [스냅숏 옵션 수정](../../../relational-databases/replication/snapshot-options.md)   
+ [스냅숏 적용 전후에 스크립트 실행](../../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [FTP를 통해 스냅숏 전송](../../../relational-databases/replication/transfer-snapshots-through-ftp.md)   
+ [FTP를 통해 스냅숏 전송](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md)   
  [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)  
   
   

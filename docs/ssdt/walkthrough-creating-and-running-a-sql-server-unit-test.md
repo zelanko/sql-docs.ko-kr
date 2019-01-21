@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 71be318c40c5776440bf427cad57ed3fb903e55a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a8eb48a0c3147b61eb57b6a8035765ed73850efa
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540932"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143593"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>연습: SQL Server 단위 테스트 만들기 및 실행
 이 연습에서는 일부 저장 프로시저의 동작을 확인하는 SQL Server 단위 테스트를 만듭니다. SQL Server 단위 테스트는 잘못된 애플리케이션 동작을 일으킬 수 있는 코드 결함을 식별하기 위해 만듭니다. SQL Server 단위 테스트와 애플리케이션 테스트는 자동화된 테스트 집합의 일부로 실행할 수 있습니다.  
@@ -274,7 +274,7 @@ ms.locfileid: "52540932"
   
 2.  저장 프로시저 중 하나를 마우스 오른쪽 단추로 클릭하고 **단위 테스트 만들기**를 클릭하여 **단위 테스트 만들기** 대화 상자를 표시합니다.  
   
-3.  다섯 개의 저장된 프로시저 전체에 대한 확인란을 선택합니다. **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder**및 **Sales.uspShowOrderDetails**.  
+3.  다섯 개의 저장된 프로시저 전체에 대한 확인란을 선택합니다. **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder** 및 **Sales.uspShowOrderDetails**.  
   
 4.  **프로젝트** 드롭다운 목록에서 **새 Visual C# 테스트 프로젝트 만들기**를 선택합니다.  
   
@@ -723,7 +723,7 @@ ms.locfileid: "52540932"
     |--------|-------------------|  
     |Sales_uspPlaceNewOrderTest|통과|  
     |Sales_uspShowOrderDetailsTest|통과|  
-    |Sales_uspFillOrderTest|다음 오류와 함께 실패: "ScalarValueCondition Condition (scalarValueCondition2) 실패: 결과 집합 1 행 1 열 1: 값이 일치하지 않습니다. '100'이(가) 필요한데 '-100'입니다." 이 오류는 저장 프로시저의 정의에 사소한 오류가 포함되었기 때문에 발생합니다.|  
+    |Sales_uspFillOrderTest|다음 오류로 인해 실패합니다. "ScalarValueCondition 조건(scalarValueCondition2)이 실패했습니다. ResultSet 1 행 1 열 1: 실제 '-100'이 예상했던 값 '100'과 일치하지 않습니다." 이 오류는 저장 프로시저의 정의에 사소한 오류가 포함되었기 때문에 발생합니다.|  
   
     이제 오류를 수정하고 다시 테스트를 실행합니다.  
   
@@ -950,7 +950,7 @@ ms.locfileid: "52540932"
   
     테스트가 실패하고 다음 오류가 표시됩니다.  
   
-    **Test 메서드 TestProject1.SqlServerUnitTests1.Sales_uspCancelOrderTest가 예외를 throw함: System.Data.SqlClient.SqlException: 열린 주문만 취소할 수 있습니다.**  
+    **테스트 메서드 TestProject1.SqlServerUnitTests1.Sales_uspCancelOrderTest 예외가 threw됩니다. System.Data.SqlClient.SqlException: 미결 주문만 취소할 수 있습니다.**  
   
     이제 예외가 예상됨을 나타내도록 코드를 수정합니다.  
   
@@ -968,7 +968,7 @@ ms.locfileid: "52540932"
     특정 예외가 표시되도록 지정합니다. 선택적으로 특정 오류 번호를 지정할 수도 있습니다. 이 특성을 추가하지 않으면 단위 테스트가 실패하고 메시지가 테스트 결과 창에 표시됩니다.  
   
     > [!IMPORTANT]  
-    > 현재 Visual Studio 2012에서는 ExpectedSqlException 특성을 지원하지 않습니다. 이 문제를 해결하는 방법은 ["예상 실패" 데이터베이스 단위 테스트를 실행할 수 없음](https://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345)을 참조하십시오.  
+    > 현재 Visual Studio 2012에서는 ExpectedSqlException 특성을 지원하지 않습니다. 이 문제를 해결하는 방법은 ["예상 실패" 데이터베이스 단위 테스트를 실행할 수 없음](https://social.msdn.microsoft.com/Forums/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345)을 참조하십시오.  
   
 3.  파일 메뉴에서 SqlServerUnitTests1.cs 저장을 클릭합니다.  
   

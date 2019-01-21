@@ -15,12 +15,12 @@ ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c5cf17437f97aa649ee81f2fb0f71061df04fec8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5ed0acd238ebc934c6adf5061eafe3f15ce44bef
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400396"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143463"
 ---
 # <a name="import-into-a-database-project"></a>데이터베이스 프로젝트로 가져오기
 가져오기를 사용하여 라이브 데이터베이스 또는 .dacpac의 새 개체로 프로젝트를 채우거나 프로젝트의 기존 개체를 스크립트의 새 정의로 업데이트할 수 있습니다. 이러한 세 경로 사이에는 아래 설명과 같이 주목할 몇 가지 동작 차이가 있습니다.  
@@ -31,13 +31,13 @@ ms.locfileid: "52400396"
   
 **이 항목의 단원**  
   
-[가져오기 원본: 데이터베이스 또는 데이터 계층 응용 프로그램(*.dacpac)](#bkmk_import_source_db)  
+[가져오기 원본: 데이터베이스 또는 데이터 계층 애플리케이션(*.dacpac)](#bkmk_import_source_db)  
   
 [가져오기 원본: 스크립트(*.sql)](#bkmk_import_source_script)  
   
 [암호화된 개체 가져오기](#bkmk_import_encrypted)  
   
-## <a name="bkmk_import_source_db"></a>가져오기 원본: 데이터베이스 또는 데이터 계층 응용 프로그램(*.dacpac)  
+## <a name="bkmk_import_source_db"></a>가져오기 원본: 데이터베이스 또는 데이터 계층 애플리케이션(*.dacpac)  
 데이터베이스 또는 .dacpac 파일에서 스키마를 가져오는 기능은 프로젝트에 정의된 스키마 개체가 없을 경우에만 사용할 수 있습니다. 여기에는 RefactorLog 또는 배포 전/배포 후 스크립트가 포함되지 않습니다.  
   
 가져올 때에는 새 개체에 대한 SSDT의 조직적 기본값을 사용하여 개체 정의가 프로젝트 파일에 스크립트로 작성됩니다. 최상위 개체에 대한 새 파일, 동일한 파일에 같은 부모로 정의된 계층적 자식, 가능할 경우 인라인으로 정의된 테이블/열 제약 조건. 각 개체에 대해 더 구체적인 표시 유형과 제어를 사용하려면 가져오기 대신 스키마 비교를 사용하십시오.  
@@ -59,8 +59,7 @@ ms.locfileid: "52400396"
   
 스크립트에서 가져오기 프로세스는 배포 전/배포 후 스크립트, SQLCMD 변수 또는 RefactorLog 파일을 이해하지 못합니다. 이러한 항목과 가져올 때 감지된 지원되지 않는 구문은 프로젝트에서 **스크립트** 폴더의 **ScriptsIgnoredOnImport.sql** 파일에 배치됩니다.  
   
-자세한 내용은 [https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads](https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads)에서 SSDT 팀 포럼을 참조하세요.  
-  
+ 
 ## <a name="bkmk_import_encrypted"></a>암호화된 개체 가져오기  
 암호화된 개체를 데이터베이스 프로젝트로 가져올 경우 개체 정의의 전문을 서버에서 항상 검색할 수 있는 것이 아닙니다. 그렇기 때문에 이러한 클래스의 개체를 처리할 때는 가져오기 동작이 다를 수 있습니다.  
   

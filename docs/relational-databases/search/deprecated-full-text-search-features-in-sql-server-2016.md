@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbab8cc4eb36d81c0aa6f1ff40c2f498157257f0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e43c8f3fb6be391bcead0c2671d73d46d5d2b261
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525945"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226510"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>SQL Server 2016에서 사용되지 않는 전체 텍스트 검색 기능
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,6 +57,6 @@ ms.locfileid: "52525945"
 |sp_detach_db 옵션:<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|없음|sp_detach_db @keepfulltextindexfile|226|  
 |sp_fulltext_service 동작 값: resource_usage는 아무 기능도 수행하지 않습니다.|없음|sp_fulltext_service @action=resource_usage|200|  
   
- ***SQL Server:Deprecated Features** 개체는 CREATE FULLTEXT CATLOG ON FILEGROUP *filegroup*의 발생을 모니터링하지 않습니다.  
+ &#42;**SQL Server:Deprecated Features** 개체는 CREATE FULLTEXT CATLOG ON FILEGROUP *filegroup*의 발생을 모니터링하지 않습니다.  
   
   

@@ -22,18 +22,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf82d7899558349bd28e73f19f648d2f66323bdd
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: c20122b1beaca348ccf405064143ef43af4e400b
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50971014"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299590"
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 이 함수는 두 번째 문자 식 내에서 하나의 문자 식을 찾고, 있는 경우 첫 번째 식의 시작 위치를 반환합니다.
   
@@ -136,7 +136,7 @@ GO
 (1 row(s) affected)
 ```
   
-### <a name="d-performing-a-case-sensitive-search"></a>4. 대/소문자 구분 검색 수행  
+### <a name="d-performing-a-case-sensitive-search"></a>D. 대/소문자 구분 검색 수행  
 다음 예제에서는 `'This is a Test``'` 검색 문자열에서 `'TEST'` 문자열에 대한 대/소문자 구분 검색을 보여 줍니다.
   
 ```sql
@@ -173,7 +173,7 @@ SELECT CHARINDEX ( 'Test',
 11
 ```  
   
-### <a name="e-performing-a-case-insensitive-search"></a>5. 대/소문자를 구분하지 않는 검색 수행  
+### <a name="e-performing-a-case-insensitive-search"></a>E. 대/소문자를 구분하지 않는 검색 수행  
 다음 예제에서는 `'This is a Test'`에서 `'TEST'` 문자열에 대한 대/소문자를 구분하지 않는 검색을 보여 줍니다.
   
 ```sql
@@ -195,7 +195,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="f-searching-from-the-start-of-a-string-expression"></a>6. 문자열 식의 처음부터 검색  
+### <a name="f-searching-from-the-start-of-a-string-expression"></a>F. 문자열 식의 처음부터 검색  
 다음 예제에서는 `This is a string`의 위치 1(첫 번째 문자)에서 시작하여 `This is a string` 문자열 중 `is` 문자열의 첫 번째 위치를 반환합니다.
   
 ```sql
@@ -209,7 +209,7 @@ SELECT CHARINDEX('is', 'This is a string');
 3
 ```  
   
-### <a name="g-searching-from-a-position-other-than-the-first-position"></a>7. 첫 번째 위치 이외의 위치에서 검색  
+### <a name="g-searching-from-a-position-other-than-the-first-position"></a>G. 첫 번째 위치 이외의 위치에서 검색  
 다음 예제에서는 위치 4(네 번째 문자)에서 검색을 시작하여 `This is a string` 문자열 중 `is` 문자열의 첫 번째 위치를 반환합니다.
   
 ```sql
@@ -223,7 +223,7 @@ SELECT CHARINDEX('is', 'This is a string', 4);
  6
  ```  
   
-### <a name="h-results-when-the-string-is-not-found"></a>8. 문자열이 없을 경우 결과  
+### <a name="h-results-when-the-string-is-not-found"></a>H. 문자열이 없을 경우 결과  
 다음 예제에서는 CHARINDEX가 검색된 문자열에서 *string_pattern* 문자열을 찾지 못했을 때의 반환 값을 보여 줍니다.
   
 ```sql

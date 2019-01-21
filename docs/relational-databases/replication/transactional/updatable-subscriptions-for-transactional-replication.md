@@ -18,12 +18,12 @@ ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 47a13686f1e4938886d11df7b2ee104553d3a684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8d607e528164e71d1e771d497ff7660cb7ecf66
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756941"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132993"
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>트랜잭션 복제를 위한 업데이트 가능 구독
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47756941"
  업데이트할 수 있는 구독을 사용할 때는 구독에서 특정 업데이트 모드를 사용하도록 지정한 다음 애플리케이션의 필요에 따라 다른 업데이트 모드로 전환할 수 있습니다. 예를 들어 구독에서 즉시 업데이트를 사용하도록 지정한 다음 시스템 오류로 인해 네트워크 연결이 손실된 경우에 지연 업데이트로 전환할 수 있습니다.  
   
 > [!NOTE]  
->  복제에서는 업데이트 모드가 자동으로 전환되지 않습니다. 모드를 전환하려면 SQL Server Management Studio를 통해 업데이트 모드를 설정하거나 응용 프로그램에서 [sp_setreplfailovermode&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)를 호출해야 합니다.  
+>  복제에서는 업데이트 모드가 자동으로 전환되지 않습니다. 모드를 전환하려면 SQL Server Management Studio를 통해 업데이트 모드를 설정하거나 애플리케이션에서 [sp_setreplfailovermode&amp;#40;Transact-SQL&amp;#41;](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)를 호출해야 합니다.  
   
  즉시 업데이트에서 지연 업데이트로 전환하면 구독자와 게시자가 연결되고 큐 판독기 에이전트에서 큐의 보류 중인 모든 메시지를 게시자에 적용할 때까지는 즉시 업데이트로 다시 전환할 수 없습니다.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "47756941"
   
 ## <a name="see-also"></a>참고 항목  
  [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
- [트랜잭션 복제에 대한 게시 유형](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)   
+ [트랜잭션 복제](../../../relational-databases/replication/transactional/transactional-replication.md)   
  [데이터 및 데이터베이스 개체 게시](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [게시 구독](../../../relational-databases/replication/subscribe-to-publications.md)  
   

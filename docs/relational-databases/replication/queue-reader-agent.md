@@ -15,18 +15,18 @@ ms.assetid: f02d24b6-dcb5-4126-b56e-fab41cfe4337
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 496ba72f12598157a6cf864538944a96f049e3c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7d4d6db158fd2cb6f4157508b39c335521f77ce
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636171"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135673"
 ---
 # <a name="queue-reader-agent"></a>큐 판독기 에이전트
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **큐 판독기 에이전트** 대화 상자에서는 상태, 기록, 정보 메시지 및 모든 오류 메시지를 포함한 큐 판독기 에이전트에 대한 자세한 정보를 표시합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **보기** 메뉴에서 보려는 큐 판독기 에이전트 세션을 선택한 다음 **큐 판독기 에이전트의 세션**표에서 특정 세션을 선택합니다. **선택한 세션의 동작**표에 이 세션에 대한 자세한 정보가 표시됩니다. 선택한 세션이 오류로 인해 종료될 경우 **선택한 세션에 대한 오류 정보 또는 메시지** 라는 텍스트 영역 또한 표시됩니다.  
   
  **보기**  
@@ -66,8 +66,8 @@ ms.locfileid: "47636171"
   
 ## <a name="see-also"></a>참고 항목  
  [복제 모니터 시작](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [게시 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
- [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
+ [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication.md)   
  [복제 에이전트 개요](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

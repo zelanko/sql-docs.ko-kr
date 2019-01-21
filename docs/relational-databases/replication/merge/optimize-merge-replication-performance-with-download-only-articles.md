@@ -15,12 +15,12 @@ ms.assetid: 8851faa6-e6df-4ea5-a6ea-2a3471680fa3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bd5c45f61329a63825eac983d21aca7e3106920d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dadf635e055a06a8f86349c73d4921c124f7f4c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814083"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123803"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>다운로드 전용 아티클로 병합 복제 성능 최적화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47814083"
   
  다운로드 전용 아티클은 클라이언트 구독과 함께 작동합니다. 아티클을 다운로드 전용으로 지정할 경우 해당 아티클에 대한 행은 클라이언트 구독을 사용하는 구독자에 삽입, 업데이트 또는 삭제할 수 없습니다. 서버 구독 유형을 사용하는 게시자와 구독자(일반적으로 데이터를 다른 구독자로 다시 게시하는 구독자)는 데이터를 삽입, 업데이트 및 삭제할 수 있습니다. 클라이언트 구독에 대한 자세한 내용은 [게시 구독](../../../relational-databases/replication/subscribe-to-publications.md)을 참조하세요.  
   
- 아티클을 다운로드 전용으로 지정하려면 [새 병합 테이블 아티클을 다운로드 전용으로 지정](../../../relational-databases/replication/publish/specify-that-a-merge-table-article-is-download-only.md)을 참조하십시오.  
+ 아티클을 다운로드 전용으로 지정하려면 [병합 복제 속성 지정](../../../relational-databases/replication/merge/specify-merge-replication-properties.md)을 참조하세요.  
   
 ## <a name="using-different-article-types-in-your-applications"></a>애플리케이션에서 다른 아티클 유형 사용  
  애플리케이션의 요구 사항을 이해하면 최대 유연성과 최적 성능 간 균형을 유지할 수 있습니다. 예를 들어 게시자와 구독자에서 충돌이 자주 발생하고 내용이 자주 변경되는 애플리케이션의 경우 표준 아티클로 구성된 애플리케이션을 사용합니다. SFA(Sales Force Automation) 애플리케이션과 같은 일부 애플리케이션에는 충돌 가능성이 있는 아티클과 다운로드 전용으로 지정할 수 있는 조회 테이블의 기능을 하는 다른 아티클이 있을 수 있습니다. POS(Point of Sale) 시스템 및 FFA(Field Force Automation) 애플리케이션과 같은 데이터 항목 애플리케이션은 충돌을 제거하고 한 구독자의 데이터가 다른 구독자로 이동하지 않는 방식으로 데이터를 엄격하게 분할하는 경우가 많습니다. 이러한 경우 겹치지 않는 파티션, 다운로드 전용 아티클 및 사전 계산 파티션을 잘 조합하여 성능과 확장성을 최적화할 수 있습니다. 겹치지 않는 파티션 및 사전 계산 파티션에 대한 자세한 내용은 [매개 변수가있는 행 필터](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  

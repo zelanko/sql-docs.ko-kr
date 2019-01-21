@@ -20,12 +20,12 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5cb5603b98701597847e1997c17714affa7b923
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 931c881651b87fd7ab8ce4b47a4e24710ce8c487
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535279"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136073"
 ---
 # <a name="enhance-merge-replication-performance"></a>병합 복제 성능 향상
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ ms.locfileid: "52535279"
   
 -   구독이 빠른 연결을 통해 동기화되고 게시자에서 구독자로 변경 내용이 전송되면 병합 에이전트에 대해 **–ParallelUploadDownload** 매개 변수를 사용합니다.  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에는 새로운 병합 에이전트 매개 변수인 **–ParallelUploadDownload**가 도입되었습니다. 이 매개 변수를 설정하면 병합 에이전트가 게시자로 업로드되는 변경 내용과 구독자로 다운로드되는 변경 내용을 병렬로 처리할 수 있습니다. 이것은 네트워크 대역폭이 높은 대규모 환경에서 유용합니다. 에이전트 프로필 및 명령줄에서 에이전트 매개 변수를 지정할 수 있습니다. 참조 항목:  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 에서는 새로운 병합 에이전트 매개 변수인 **–ParallelUploadDownload**가 도입되었습니다. 이 매개 변수를 설정하면 병합 에이전트가 게시자로 업로드되는 변경 내용과 구독자로 다운로드되는 변경 내용을 병렬로 처리할 수 있습니다. 이것은 네트워크 대역폭이 높은 대규모 환경에서 유용합니다. 에이전트 프로필 및 명령줄에서 에이전트 매개 변수를 지정할 수 있습니다. 참조 항목:  
   
     -   [복제 에이전트 프로필 작업](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
@@ -136,16 +136,16 @@ ms.locfileid: "52535279"
   
 -   스냅숏을 미리 생성하거나 구독자가 처음 동기화될 때 스냅숏의 생성과 적용을 요청하도록 합니다.  
   
-     이러한 옵션 중 하나 또는 둘 모두를 사용하여 매개 변수가 있는 필터를 사용하는 게시에 대한 스냅숏을 제공할 수 있습니다. 이러한 옵션을 하나도 지정하지 않으면 **bcp** 유틸리티를 사용하지 않고 일련의 SELECT 및 INSERT 문을 사용하여 구독을 초기화하게 되는데 이 경우 프로세스의 속도가 훨씬 느립니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)을 참조하세요.  
+     이러한 옵션 중 하나 또는 둘 모두를 사용하여 매개 변수가 있는 필터를 사용하는 게시에 대한 스냅숏을 제공할 수 있습니다. 이러한 옵션을 하나도 지정하지 않으면 **bcp** 유틸리티를 사용하지 않고 일련의 SELECT 및 INSERT 문을 사용하여 구독을 초기화하게 되는데 이 경우 프로세스의 속도가 훨씬 느립니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
   
 ## <a name="maintenance-and-monitoring-considerations"></a>유지 관리 및 모니터링 고려 사항  
   
 -   병합 복제 시스템 테이블의 인덱스를 가끔씩 다시 만듭니다.  
   
-     병합 복제 유지 관리의 한 부분으로 병합 복제와 연결된 **MSmerge_contents**, **MSmerge_genhistory**및 **MSmerge_tombstone**, **MSmerge_current_partition_mappings**및 **MSmerge_past_partition_mappings**시스템 테이블의 증가를 확인하십시오. 이러한 테이블의 인덱스를 주기적으로 다시 만듭니다. 자세한 내용은 [인덱스 다시 구성 및 다시 작성](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)을 참조하세요.  
+     병합 복제 유지 관리의 한 부분으로 병합 복제와 연결된 **MSmerge_contents**, **MSmerge_genhistory** 및 **MSmerge_tombstone**, **MSmerge_current_partition_mappings** 및 **MSmerge_past_partition_mappings** 시스템 테이블의 증가를 확인합니다. 이러한 테이블의 인덱스를 주기적으로 다시 만듭니다. 자세한 내용은 [인덱스 다시 구성 및 다시 작성](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)을 참조하세요.  
   
 -   복제 모니터의 **동기화 기록** 탭을 사용하여 동기화 성능을 모니터링합니다.  
   
-     병합 복제의 경우 복제 모니터는 각 처리 단계(변경 내용 업로드, 변경 내용 다운로드 등)에 소요된 시간을 포함하여 동기화 중에 처리된 각 아티클에 대한 자세한 통계를 **동기화 기록** 탭에 표시합니다. 이 통계는 속도 저하의 원인이 되고 병합 구독의 성능 문제를 해결하기에 가장 적합한 특정 테이블을 정확히 찾아내는 데 도움이 될 수 있습니다. 자세한 통계를 보는 방법은 [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)을 참조하세요.  
+     병합 복제의 경우 복제 모니터는 각 처리 단계(변경 내용 업로드, 변경 내용 다운로드 등)에 소요된 시간을 포함하여 동기화 중에 처리된 각 아티클에 대한 자세한 통계를 **동기화 기록** 탭에 표시합니다. 이 통계는 속도 저하의 원인이 되고 병합 구독의 성능 문제를 해결하기에 가장 적합한 특정 테이블을 정확히 찾아내는 데 도움이 될 수 있습니다. 자세한 통계 보기에 대한 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
   

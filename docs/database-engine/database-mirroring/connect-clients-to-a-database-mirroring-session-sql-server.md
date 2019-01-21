@@ -16,12 +16,12 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f35ed02444cc1fc4773eec528af73df76cde5bb5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7f238b5b31c4e354562091bb80768b7db1e9af5c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534679"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131853"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션에 클라이언트 연결(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Server 특성  
  연결 문자열에는 초기 파트너 이름을 제공하는 **Server** 특성이 있어야 합니다. 이 특성은 현재 주 서버 인스턴스를 식별합니다.  
   
- 서버 인스턴스를 식별하는 가장 간단한 방법은 *<server_name>*[**\\***<SQL_Server_instance_name>*]과 같이 해당 이름을 지정하는 것입니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 서버 인스턴스를 식별하는 가장 간단한 방법은 *<server_name>*[**\\**_<SQL_Server_instance_name>_]과 같이 해당 이름을 지정하는 것입니다. 예를 들어  
   
  `Server=Partner_A;`  
   
@@ -132,7 +132,7 @@ Server=123.34.45.56,4724;
 |ODBC 드라이버|**Failover_Partner**|  
 |ADO(ActiveX Data Objects)|**장애 조치(failover) 파트너**|  
   
- 서버 인스턴스를 식별하는 가장 간단한 방법은 *<server_name>*[**\\***<SQL_Server_instance_name>*]과 같이 시스템 이름을 지정하는 것입니다.  
+ 서버 인스턴스를 식별하는 가장 간단한 방법은 *<server_name>*[**\\**_<SQL_Server_instance_name>_]과 같이 시스템 이름을 지정하는 것입니다.  
   
  또는 **장애 조치(failover) 파트너** 특성에 IP 주소와 포트 번호를 제공할 수 있습니다. 데이터베이스에 대한 첫 번째 연결 중에 초기 연결 시도가 실패하면 장애 조치(failover) 파트너에 대한 연결에서 DNS 및 SQL Server Browser를 사용하지 않습니다. 연결이 설정되면 장애 조치(failover) 파트너 이름이 장애 조치(failover) 파트너 이름을 덮어쓰므로 장애 조치가 발생할 경우 리디렉션된 연결에 DNS 및 SQL Server Browser가 필요합니다.  
   
@@ -169,7 +169,7 @@ Server=123.34.45.56,4724;
   
  다시 시도 시간은 다음 수식을 사용하여 계산됩니다.  
   
- *RetryTime* **=** *PreviousRetryTime* **+(** 0.08 **\****LoginTimeout***)**  
+ _RetryTime_ **=** _PreviousRetryTime_ **+(** 0.08 **&#42;**_LoginTimeout_**)**  
   
  여기서 *PreviousRetryTime* 의 초기값은 0입니다.  
   
@@ -177,10 +177,10 @@ Server=123.34.45.56,4724;
   
 |반올림|*RetryTime* 계산|시도당 다시 시도 시간|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+(** 0.08 **\*** 15 **)**|1.2초|  
-|2|1.2 **+(** 0.08 **\*** 15 **)**|2.4초|  
-|3|2.4 **+(** 0.08 **\*** 15 **)**|3.6초|  
-|4|3.6 **+(** 0.08 **\*** 15 **)**|4.8초|  
+|1|0 **+(** 0.08 **&#42;** 15 **)**|1.2초|  
+|2|1.2 **+(** 0.08 **&#42;** 15 **)**|2.4초|  
+|3|2.4 **+(** 0.08 **&#42;** 15 **)**|3.6초|  
+|4|3.6 **+(** 0.08 **&#42;** 15 **)**|4.8초|  
   
  다음 그림에서는 각각 시간 초과되는 연속 연결 시도의 다시 시도 시간을 보여 줍니다.  
   

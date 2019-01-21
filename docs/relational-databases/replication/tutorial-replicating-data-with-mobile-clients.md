@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc09bcca6e70d80e256cba8cd8a1ad6a477a4742
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9f967453ff629a7827d47b25085edd4aa304b1aa
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545540"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130723"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>자습서: 서버와 모바일 클라이언트 간의 복제 구성(병합)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52545540"
 > * 병합 게시에 구독을 동기화합니다.
   
 ## <a name="prerequisites"></a>사전 요구 사항  
-이 자습서는 기본적인 데이터베이스 작업에는 익숙하지만 복제에 대한 경험은 풍부하지 않은 사용자를 위한 것입니다. 이 자습서를 시작하기 전에 [자습서: 복제용 SQL 서버 준비](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)를 완료해야 합니다.  
+이 자습서는 기본적인 데이터베이스 작업에는 익숙하지만 복제에 대한 경험은 풍부하지 않은 사용자를 위한 것입니다. 이 자습서를 시작하려면 먼저 [자습서: 복제를 위한 SQL Server 준비](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)를 완료해야 합니다.  
   
 이 자습서를 완료하려면 SQL Server, SSMS(SQL Server Management Studio) 및 AdventureWorks 데이터베이스가 필요합니다. 
   
@@ -58,7 +58,7 @@ ms.locfileid: "52545540"
 > - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 **sysadmin** 고정 서버 역할의 멤버인 로그인을 사용하여 게시자 및 구독자에 연결해야 합니다. 이 역할에 대한 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles)을 참조하세요.  
   
   
-**이 자습서를 완료하는 데 소요되는 예상 시간: 60분**  
+**이 자습서에 소요되는 예상 시간: 60분**  
   
 ## <a name="configure-a-publisher-for-merge-replication"></a>병합 복제를 위한 게시자 구성
 이 섹션에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 병합 게시를 만들어 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 샘플 데이터베이스에 **Employee**, **SalesOrderHeader** 및 **SalesOrderDetail** 테이블의 하위 집합을 게시합니다. 이러한 테이블은 각 구독에 고유한 데이터 파티션이 포함되도록 매개 변수가 있는 행 필터로 필터링됩니다. 또한 병합 에이전트에 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 PAL(게시 액세스 목록)에 추가합니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "52545540"
     !["게시 유형" 및 "구독자 유형" 페이지](media/tutorial-replicating-data-with-mobile-clients/mergerpl.png)
   
    
-6. **문서** 페이지에서 **테이블** 노드를 확장합니다. 세 테이블(**직원**, **SalesOrderHeader** 및 **SalesOrderDetail**)을 선택합니다. **다음**을 선택합니다.  
+6. **문서** 페이지에서 **테이블** 노드를 확장합니다. 다음 세 개의 테이블을 선택합니다. **Employee**, **SalesOrderHeader** 및 **SalesOrderDetail**. **다음**을 선택합니다.  
 
    !["문서" 페이지에서 테이블 선택 항목](media/tutorial-replicating-data-with-mobile-clients/mergearticles.png)
 
@@ -251,7 +251,7 @@ ms.locfileid: "52545540"
 참조 항목:  
 - [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)  
 - [끌어오기 구독 만들기](../../relational-databases/replication/create-a-pull-subscription.md)  
-- [매개 변수가 있는 필터를 사용하는 병합 게시의 스냅숏](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+- [매개 변수가 있는 필터를 사용하는 병합 게시의 스냅숏](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
 
 ## <a name="synchronize-the-subscription-to-the-merge-publication"></a>병합 게시에 구독 동기화
 

@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 4256efa5952870ede608d96fa2659ce9d88f35da
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 279a5c55ddc305d62e3e09f1f8073057b4ff226b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668422"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124613"
 ---
 # <a name="upgrade-replicated-databases"></a>복제된 데이터베이스 업그레이드
 
@@ -37,7 +37,7 @@ ms.locfileid: "51668422"
     - 병합 게시에 대한 구독자는 버전 수명 주기 지원 주기에 따라 지원되는 게시자 버전과 같거나 낮은 모든 버전이 될 수 있습니다.  
  
 SQL Server로의 업그레이드 경로는 배포 패턴에 따라 다릅니다. SQL Server는 일반적으로 다음 두 가지 업그레이드 경로를 제공합니다.
-- 병렬 업그레이드: 병렬 환경을 배포하고, 로그인, 작업 등 연결된 인스턴스 수준 개체와 함께 데이터베이스를 새 환경으로 이동합니다. 
+- 함께 실행: 병렬 환경을 배포하고 로그인, 작업 등 연결된 인스턴스 수준 개체와 함께 데이터베이스를 새 환경으로 이동합니다. 
 - 현재 위치 업그레이드: SQL Server 설치 미디어를 통해 SQL Server 비트를 바꾸고 데이터베이스 개체를 업그레이드하여 기존 SQL Server 설치를 업그레이드하도록 허용합니다. Always On 가용성 그룹 또는 장애 조치 클러스터 인스턴스를 실행하는 환경의 경우 현재 위치 업그레이드는 [롤링 업그레이드](choose-a-database-engine-upgrade-method.md#rolling-upgrade)와 결합되어 가동 중지 시간을 최소화합니다. 
 
 복제 토폴로지를 병렬로 업그레이드하기 위해 채택된 일반적인 방법은 전체 토폴로지의 이동과 달리 일부 게시자-구독자 쌍을 새 병렬 새 환경으로 이동하는 것입니다. 이러한 단계별 방법은 가동 중지 시간을 제어하고 복제를 사용하는 비즈니스에 미치는 영향을 어느 정도 최소화할 수 있습니다.  
@@ -132,9 +132,9 @@ SQL Server 인스턴스를 SQL 2016 이상으로 업그레이드하려고 하고
  이전 버전에서 복제된 데이터베이스의 백업을 복원할 때 복제 설정이 유지되게 하려면 백업 당시의 서버 및 데이터베이스와 같은 이름의 서버 및 데이터베이스에 복원합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [관리&#40;복제&#41;](../../relational-databases/replication/administration/administration-replication.md)   
+ [SQL Server 복제](../../relational-databases/replication/sql-server-replication.md)  
+ [복제 관리 FAQ](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [복제의 이전 버전과의 호환성](../../relational-databases/replication/replication-backward-compatibility.md)   
- [새로운 기능&#40;복제&#41;](../../relational-databases/replication/what-s-new-replication.md)   
  [지원되는 버전 및 에디션 업그레이드](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [SQL Server 업그레이드](../../database-engine/install-windows/upgrade-sql-server.md)  
  [SQL Server 2016으로 복제 토폴로지 업그레이드](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)

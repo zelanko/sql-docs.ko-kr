@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019의 새로운 기능 | Microsoft Docs
-ms.date: 12/07/2018
+ms.date: 01/09/2019
 ms.prod: sql-server-2018
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,16 +9,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0d36e43d4015d0edf2271ee86ea0d2f7a761ce8d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e0a5dab4eeccc5c4e31a151ec9611d7ed8367a78
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207782"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300180"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>SQL Server 2019의 새로운 기능
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+  > [!div class="nextstepaction"]
+  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 이전 릴리스를 토대로 하여 SQL Server로 구축되었으며 개발 언어, 데이터 형식, 온-프레미스 또는 클라우드, 운영 체제를 선택할 수 있는 플랫폼으로 개선되었습니다. 이 문서에서는 SQL Server 2019의 새로운 기능을 요약해서 설명합니다. 자세한 내용 및 알려진 문제에 대해서는 [SQL Server 2019 릴리스 정보](sql-server-ver15-release-notes.md)를 참조하세요.
 
@@ -39,7 +42,7 @@ CTP(Community Technology Preview) 2.2는 [!INCLUDE[sql-server-2019](../includes/
 
 ## <a name="previous-ctps"></a>이전 CTP
 
-이전 CTP 릴리스는 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]에 대해 다음 기능을 추가하거나 향상시켰습니다.
+이전 CTP 릴리스는 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에 대해 다음 기능을 추가하거나 향상시켰습니다.
 
 - [빅 데이터 클러스터](#bigdatacluster) 
   - Kubernetes에서 SQL 및 Spark Linux 컨테이너를 사용하여 빅 데이터 클러스터 배포(CTP 2.0)
@@ -296,7 +299,7 @@ CTP 2.2는 SQL Server 복제에서 UTF-8 문자 인코딩을 사용하도록 지
 
 ### <a name="expanded-support-for-persistent-memory-devices-ctp-20"></a>영구 메모리 디바이스에 대한 확장 지원(CTP 2.0)
 
-이제 영구 메모리 디바이스에 배치되는 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 파일은 *지원* 모드로 작동될 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 효율적인 memcpy 작업을 사용하여 운영 체제 저장소 스택을 우회하고 디바이스에 직접 액세스합니다. 이 모드는 이러한 디바이스에 대해 낮은 대기 시간의 입/출력을 허용하므로 성능을 향상시킵니다.
+이제 영구 메모리 디바이스에 배치되는 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 파일은 *지원* 모드로 작동될 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 효율적인 memcpy 작업을 사용하여 운영 체제 스토리지 스택을 우회하고 장치에 직접 액세스합니다. 이 모드는 이러한 디바이스에 대해 낮은 대기 시간의 입/출력을 허용하므로 성능을 향상시킵니다.
     - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 파일의 예에는 다음이 포함됩니다.
         - 데이터베이스 파일
         - 트랜잭션 로그 파일

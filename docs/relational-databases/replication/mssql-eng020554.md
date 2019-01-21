@@ -13,12 +13,12 @@ ms.assetid: ef1a1b88-b2ab-43e8-99cd-163a973262d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 849fc7c55957fa0f404f2886b983b548282fa7a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2067c4c267cf1b010a2a72a92b402d3f02034a7e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811011"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126633"
 ---
 # <a name="mssqleng020554"></a>MSSQL_ENG020554
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,17 +52,13 @@ ms.locfileid: "47811011"
   
 -   이 오류가 발생된 모든 경우  
   
-     복제 모니터에서 오류 정보를 확인한 다음 중지된 에이전트를 다시 시작합니다. 오류 정보에는 에이전트가 제대로 실행되지 않는 원인에 대한 추가 정보가 포함될 수 있습니다. 에이전트가 실행 중이면 에이전트를 중지했다가 다시 시작하지 마십시오. 이렇게 하면 문제를 악화시킬 수 있습니다. 복제 모니터에서 에이전트 상태 및 오류 정보를 보는 방법은 다음 항목을 참조하십시오.  
-  
-    -   스냅숏 에이전트, 로그 판독기 에이전트 및 큐 판독기 에이전트에 대해서는 [게시 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)을 참조하세요.  
-  
-    -   배포 에이전트 및 병합 에이전트에 대해서는 [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)을 참조하세요.  
+     복제 모니터에서 오류 정보를 확인한 다음 중지된 에이전트를 다시 시작합니다. 오류 정보에는 에이전트가 제대로 실행되지 않는 원인에 대한 추가 정보가 포함될 수 있습니다. 에이전트가 실행 중이면 에이전트를 중지했다가 다시 시작하지 마십시오. 이렇게 하면 문제를 악화시킬 수 있습니다. 복제 모니터에서 에이전트 상태 및 오류 정보를 보는 방법에 대한 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 작업 수행](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.    
   
 -   에이전트에서 많은 작업이 수행되고 있어 이 오류가 자주 발생하는 경우  
   
      에이전트에서의 처리 시간을 줄이도록 애플리케이션을 다시 설계해야 할 수 있습니다.  
   
-     **작업 속성** 대화 상자를 사용하여 에이전트 상태의 점검 간격을 늘일 수 있습니다. 복제 작업에 대한 이 대화 상자에 액세스하는 방법에 대한 자세한 내용은 [게시자에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)을 참조하세요.  
+     **작업 속성** 대화 상자를 사용하여 에이전트 상태의 점검 간격을 늘일 수 있습니다. 복제 작업에 대한 이 대화 상자에 액세스하는 방법에 대한 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
 -   에이전트가 토폴로지의 한 컴퓨터에 로그인할 수 없는 경우  
   
@@ -81,6 +77,6 @@ ms.locfileid: "47811011"
  [복제 로그 판독기 에이전트](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
  [복제 병합 에이전트](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [복제 큐 판독기 에이전트](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+ [복제 스냅숏 에이전트](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
   

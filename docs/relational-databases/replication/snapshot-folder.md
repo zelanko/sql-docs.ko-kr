@@ -13,12 +13,12 @@ ms.assetid: 3eb1b73f-ddb3-4d09-be6e-811c414698e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b2ad52310599d178fd5bf52bab0edd08c2886f2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f8e3050afe889fd1c7f7de489b7ed6d22d3a50f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714851"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133203"
 ---
 # <a name="snapshot-folder"></a>스냅숏 폴더
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47714851"
   
  스냅숏 폴더는 공유하도록 지정된 디렉터리일 뿐이며 이 폴더에 읽기/쓰기 작업을 수행하려면 에이전트에게 충분한 액세스 권한이 있어야 합니다. 폴더의 적절한 보안 유지 방법에 대한 자세한 내용은 [스냅숏 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요. 복제를 구현하기 전에 복제 에이전트에서 스냅숏 폴더에 연결할 수 있는지 테스트합니다. 각 에이전트에서 사용할 계정으로 로그온한 다음 스냅숏 폴더에 액세스해 봅니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **Snapshot folder**  
  스냅숏 파일을 저장할 폴더의 경로를 입력합니다.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "47714851"
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 은(는) 네트워크 공유를 스냅숏 폴더 위치로 사용하는 것을 권장합니다. 다른 컴퓨터의 에이전트는 로컬 경로(C:\\와 같이 드라이브 문자로 시작하는 경로)에 액세스할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [대체 스냅숏 폴더 위치](../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
+ [스냅숏 옵션 수정](../../relational-databases/replication/snapshot-options.md)   
  [배포 구성](../../relational-databases/replication/configure-distribution.md)   
  [게시 및 배포 구성](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [배포자 및 게시자 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

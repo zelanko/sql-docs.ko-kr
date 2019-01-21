@@ -11,23 +11,23 @@ ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b4e9112840f6329bd846c62bd7f8dbb8b5d99340
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 128e1feeb3b344a21dbb682d4d41d402060ab1ff
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520948"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256948"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>dbSqlPackage 공급자와 함께 MSDeploy 사용
 **DbSqlPackage**는 SQL Server/SQL Azure 데이터베이스와 상호 작용할 수 있는 **MSDeploy** 공급자입니다. **DbSqlPackage**에서는 다음 작업을 지원합니다.  
   
--   **Extract**: 라이브 SQL Server 또는 SQL Azure 데이터베이스에서 데이터베이스 스냅숏(.dacpac) 파일을 만듭니다.  
+-   **추출**: 라이브 SQL Server 또는 SQL Azure 데이터베이스에서 데이터베이스 스냅숏(.dacpac) 파일을 만듭니다.  
   
--   **Publish**: 원본 .dacpac 파일의 스키마와 일치하도록 데이터베이스 스키마를 증분식으로 업데이트합니다.  
+-   **게시**: 원본 .dacpac 파일의 스키마와 일치하도록 데이터베이스 스키마를 증분식으로 업데이트합니다.  
   
 -   **DeployReport**: 게시 작업으로 변경된 사항의 XML 보고서를 만듭니다.  
   
--   **Script**: 게시 작업에서 실행하는 스크립트와 같은 Transact\-SQL 스크립트를 만듭니다.  
+-   **스크립트**: 게시 작업에서 실행하는 스크립트와 같은 Transact\-SQL 스크립트를 만듭니다.  
   
 DACFx에 대한 자세한 내용은 [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx)의 DACFx 관리되는 API 설명서 또는 [SqlPackage.exe](../tools/sqlpackage.md)(DACFx 명령줄 도구)를 참조하세요.  
   
@@ -47,8 +47,8 @@ MS-Deploy 명령줄에서 **–verb** 스위치를 사용하여 MS-Deploy 동사
   
 |동사|설명|  
 |--------|---------------|  
-|덤프(dump)|.dacpac 파일에 포함된 원본 데이터베이스에 대한 이름, 버전 번호 및 설명 등의 정보를 제공합니다. 명령줄에 다음 형식을 사용하여 원본 데이터베이스를 지정합니다.<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="***.dacpac-file-path***"**|  
-|동기화|명령줄에 다음 형식을 사용하여 dbSqlPackage 작업을 지정합니다.<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" *[,DbSqlPackage-source-parameters] -***dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />동기화 동사의 올바른 원본 및 대상 매개 변수는 아래 단원을 참조하십시오.|  
+|덤프(dump)|.dacpac 파일에 포함된 원본 데이터베이스에 대한 이름, 버전 번호 및 설명 등의 정보를 제공합니다. 명령줄에 다음 형식을 사용하여 원본 데이터베이스를 지정합니다.<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="**_.dacpac-file-path_**"**|  
+|동기화|명령줄에 다음 형식을 사용하여 dbSqlPackage 작업을 지정합니다.<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,DbSqlPackage-source-parameters] -_**dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />동기화 동사의 올바른 원본 및 대상 매개 변수는 아래 단원을 참조하십시오.|  
   
 ## <a name="dbsqlpackage-source"></a>dbSqlPackage 원본  
 **dbSqlPackage** 공급자는 유효한 SQL Server 또는 SQL Azure 연결 문자열 또는 디스크의 .dacpac 파일에 대한 경로인 입력을 받아들입니다.  공급자의 입력 원본을 지정하는 구문은 다음과 같습니다.  
@@ -68,7 +68,7 @@ MS-Deploy 명령줄에서 **–verb** 스위치를 사용하여 MS-Deploy 동사
 |**DacMajorVersion** ={*integer*}|**1**|DACPAC 메타데이터에 저장할 주 버전을 정의합니다.|  
 |**DacMinorVersion**={*integer*}|**0**|DACPAC 메타데이터에 저장할 부 버전을 정의합니다.|  
 |**DacApplicationDescription**={ *string* }|해당 사항 없음|DACPAC 메타데이터에 저장할 응용 프로그램 설명을 정의합니다.|  
-|**ExtractApplicationScopedObjectsOnly={True &#124; False}**|**True**|**True**인 경우 원본에서 응용 프로그램 범위의 개체만 추출합니다. **False**인 경우 응용 프로그램 범위의 개체 및 응용 프로그램 범위 밖의 개체를 모두 추출합니다.|  
+|**ExtractApplicationScopedObjectsOnly={True &#124; False}**|**True**|**True**인 경우 원본에서 애플리케이션 범위의 개체만 추출합니다. **False**인 경우 애플리케이션 범위의 개체 및 애플리케이션 범위 밖의 개체를 모두 추출합니다.|  
 |**ExtractReferencedServerScopedElements={True &#124; False}**|**True**|**True**인 경우 원본 데이터베이스 개체에서 참조하는 로그인, 서버 감사 및 자격 증명 개체를 추출합니다.|  
 |**ExtractIgnorePermissions={True &#124; False}**|**False**|**True**인 경우 추출된 모든 개체에서 추출 권한을 무시하며, **False**인 경우는 그렇지 않습니다.|  
 |**ExtractStorage={File&#124;Memory}**|**최근에 사용한 파일**|추출 중에 사용되는 스키마 모델에 대한 지원 저장소 유형을 지정합니다.|  

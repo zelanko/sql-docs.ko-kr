@@ -15,12 +15,12 @@ ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: acd6c8da6560b0daed5eb1f029c71619b2e5d0fc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e25084fc5c472021b3159204116a04d1c3fb0174
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502587"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126353"
 ---
 # <a name="database-mirroring-monitor-overview"></a>데이터베이스 미러링 모니터 개요
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "52502587"
   
  등록된 각 데이터베이스에 대해 다음 정보가 표시됩니다.  
   
- *<Database_name>* **(** *\<상태>* **,** *<PRINCIPAL_SERVER>* **->** *<MIRROR_SERVER>* **)**  
+ _<Database_name>_ **(** _\<상태>_ **,** _<PRINCIPAL_SERVER>_ **->** _<MIRROR_SERVER>_ **)**  
   
  *<Database_name>*  
  데이터베이스 미러링 모니터에 등록한 미러된 데이터베이스의 이름입니다.  
@@ -66,9 +66,9 @@ ms.locfileid: "52502587"
  *<PRINCIPAL_SERVER>*  
  현재 주 서버 인스턴스인 파트너의 이름입니다. 이름의 형식은 다음과 같습니다.  
   
- *<SYSTEM_NAME>*[**\\***<instance_name>*]  
+ *<SYSTEM_NAME>*[**\\**_<instance_name>_]  
   
- 여기서 *<SYSTEM_NAME>* 은 서버 인스턴스가 있는 시스템의 이름입니다. 기본이 아닌 서버 인스턴스의 경우에도 인스턴스 이름이 *<SYSTEM_NAME>***\\***<instance_name>* 으로 표시됩니다.  
+ 여기서 *<SYSTEM_NAME>* 은 서버 인스턴스가 있는 시스템의 이름입니다. 기본이 아닌 서버 인스턴스의 경우에도 인스턴스 이름이 _<SYSTEM_NAME>_**\\**_<instance_name>_ 으로 표시됩니다.  
   
  *<MIRROR_SERVER>*  
  현재 미러 서버 인스턴스인 파트너의 이름입니다. 형식은 주 서버와 동일합니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "52502587"
   
  시스템 관리자는 **경고** 탭 페이지를 선택하여 데이터베이스에 대한 현재의 경고 구성을 볼 수 있습니다. 관리자는 이 페이지에서 **경고 임계값 설정** 대화 상자를 실행하여 하나 이상의 경고 임계값을 설정 및 구성할 수 있습니다.  
   
- 세부 정보 창에서 탭 위의 배너에는 모니터가 상태 정보를 마지막으로 새로 고친 시간이 **마지막 새로 고침:***\<date>**\<time>*으로 표시됩니다. 일반적으로 데이터베이스 미러링 모니터는 서로 다른 시간에 주 서버 인스턴스 및 미러 서버 인스턴스에서 상태 정보를 검색합니다. 이러한 두 새로 고침 시간 중에서 이전 시간이 표시됩니다.  
+ 세부 정보 창에서 탭 위의 배너에는 모니터가 상태 정보를 마지막으로 새로 고친 시간이 **마지막 새로 고침:**_\<date>\<time>_ 으로 표시됩니다. 일반적으로 데이터베이스 미러링 모니터는 서로 다른 시간에 주 서버 인스턴스 및 미러 서버 인스턴스에서 상태 정보를 검색합니다. 이러한 두 새로 고침 시간 중에서 이전 시간이 표시됩니다.  
   
 ## <a name="action-menu"></a>동작 메뉴  
  **동작** 메뉴에는 항상 다음 명령이 포함됩니다.  

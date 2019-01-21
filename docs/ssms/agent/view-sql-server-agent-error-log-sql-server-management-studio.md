@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: becdad9b10bb5632ecefe96bcef2fa9e7ebaf29e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 30b7c524a47459354f6e42e734fbbe4c8faec4ea
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530398"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256998"
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "52530398"
   
 4.  보려는 오류 로그를 마우스 오른쪽 단추로 클릭하고 **에이전트 로그 보기**를 선택합니다.  
   
-    다음 옵션은 **로그 파일 뷰어-***server_name* 대화 상자에서 사용할 수 있습니다.  
+    다음 옵션은 **로그 파일 뷰어-**_server_name_ 대화 상자에서 사용할 수 있습니다.  
   
     **로그 로드**  
     로드할 로그 파일을 지정할 수 있는 대화 상자를 엽니다.  

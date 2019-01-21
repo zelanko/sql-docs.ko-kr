@@ -14,15 +14,15 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], quantity needed for restore sequence
 - backups [SQL Server], log backups
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ea3ebc57689e6dd0a3da1b0cde158354d7309f2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1e4927c1eb0dba333091f231a624db3c8cb7e45
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618081"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242174"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>트랜잭션 로그 백업 적용(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "47618081"
 ##  <a name="Requirements"></a> 트랜잭션 로그 백업 복원을 위한 요구 사항  
  트랜잭션 로그 백업을 적용하려면 다음 요구 사항을 충족해야 합니다.  
   
--   **복원 순서를 위한 충분한 로그 백업:** 복원 순서를 완료하려면 백업된 로그 레코드가 충분히 있어야 합니다. 복원 시퀀스를 시작하려면 필요한 로그 백업(필요한 경우 [비상 로그 백업](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) 을 포함)을 반드시 확보해야 합니다.  
+-   **복원 시퀀스를 위한 충분한 로그 백업:** 복원 시퀀스를 완료하려면 백업된 로그 레코드가 충분히 있어야 합니다. 복원 시퀀스를 시작하려면 필요한 로그 백업(필요한 경우 [비상 로그 백업](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) 을 포함)을 반드시 확보해야 합니다.  
   
 -   **올바른 복원 순서:**  바로 이전의 전체 데이터베이스 백업 또는 차등 데이터베이스 백업을 먼저 복원해야 합니다. 그런 후 전체 또는 차등 데이터베이스 백업 후에 생성된 모든 트랜잭션 로그를 시간순으로 복원해야 합니다. 이 로그 체인의 트랜잭션 로그 백업이 손실되거나 손상된 경우 손실된 트랜잭션 로그 이전의 트랜잭션 로그만 복원할 수 있습니다.  
   
--   **데이터베이스가 아직 복구되지 않음:**  마지막 트랜잭션 로그가 적용될 때까지 데이터베이스를 복구할 수 없습니다. 로그 체인이 끝나기 이전의 중간 트랜잭션 로그 백업 중 하나를 복원한 후 데이터베이스를 복구할 경우 해당 시점 이후의 데이터베이스를 복원하려면 전체 데이터베이스 백업부터 시작하여 전체 복원 시퀀스를 다시 시작해야 합니다.  
+-   **아직 복구되지 않은 데이터베이스:**  마지막 트랜잭션 로그가 적용될 때까지 데이터베이스를 복구할 수 없습니다. 로그 체인이 끝나기 이전의 중간 트랜잭션 로그 백업 중 하나를 복원한 후 데이터베이스를 복구할 경우 해당 시점 이후의 데이터베이스를 복원하려면 전체 데이터베이스 백업부터 시작하여 전체 복원 시퀀스를 다시 시작해야 합니다.  
   
     > **팁** 최선의 방법은 모든 로그 백업을 복원하는 것입니다(RESTORE LOG *database_name* WITH NORECOVERY). 그런 후 마지막 로그 백업을 복원한 후 데이터베이스를 별도의 작업으로 복구합니다(RESTORE DATABASE *database_name* WITH RECOVERY).  
   
@@ -61,7 +61,7 @@ ms.locfileid: "47618081"
 |8:00 P.M.|트랜잭션 로그를 백업합니다.|  
 |9:45 P.M.|오류가 발생합니다.|  
   
-> **참고**: 이 백업 시퀀스의 예제에 대한 설명은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)을 참조하세요.  
+> **참고:** 이 백업 시퀀스의 예제에 대한 설명은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)을 참조하세요.  
   
  데이터베이스를 오류 발생 시점인 오후 9:45의 상태로 복원하려면 다음 대체 절차 중 하나를 사용하십시오.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "47618081"
   
  **대체 2: 이전의 전체 데이터베이스 백업을 사용하여 데이터베이스 복원**  
   
-> **참고:** 이 대체 프로세스는 문제로 인해 6:00 P.M.의 전체 데이터베이스 백업을 사용할 수 없는 경우에 유용합니다. 시간이 오래 걸립니다. 6:00 P.M.의 전체 데이터베이스 백업에서 복원하는 것보다 시간이 오래 걸립니다.  
+> **참고:** 이 대체 프로세스는 문제로 인해 6:00 P.M.의 전체 데이터베이스 백업을 사용할 수 없는 경우에 시간이 오래 걸립니다. 6:00 P.M.의 전체 데이터베이스 백업에서 복원하는 것보다 시간이 오래 걸립니다.  
   
 1.  오류 발생 시점에 활성화되어 있던 트랜잭션 로그의 비상 로그 백업을 만듭니다.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "47618081"
   
 > **참고:** 경우에 따라 트랜잭션 로그를 사용하여 데이터베이스를 지정 시간으로 복원할 수도 있습니다. 자세한 내용은 [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)라고 합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="RelatedTasks"></a> Related tasks  
  **트랜잭션 로그 백업을 적용하려면**  
   
 -   [트랜잭션 로그 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  

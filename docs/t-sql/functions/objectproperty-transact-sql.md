@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd3811f05891f7a270e059a7d36296f9d9ab3eae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 157d307187333cdde730bfb6657ae9927db060c1
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638721"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100898"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -107,22 +107,23 @@ OBJECTPROPERTY ( id , property )
 |IsRule|임의의 스키마 범위 개체|바운드 규칙입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsScalarFunction|함수|스칼라 반환 함수입니다.<br /><br /> 1 = 스칼라 반환 함수<br /><br /> 0 = 스칼라 반환 함수 아님|  
 |IsSchemaBound|함수, 뷰|SCHEMABINDING을 사용하여 만든 스키마 바운드 함수 또는 뷰입니다.<br /><br /> 1 = 스키마 바운드<br /><br /> 0 = 스키마 바운드가 아닙니다.|  
-|IsSystemTable|Table|시스템 테이블입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|IsSystemTable|Table|시스템 테이블입니다.<br /><br /> 1 = True<br /><br /> 0 = False| 
+|IsSystemVerified|Object|SQL Server에서 개체의 결정성과 정확성 속성을 확인할 수 있습니다.<br /><br /> 1 = True<br /><br /> 0 = False| 
 |IsTable|Table|테이블.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsTableFunction|함수|테이블 반환 함수입니다.<br /><br /> 1 = 테이블 반환 함수<br /><br /> 0 = 테이블 반환 함수 아님|  
 |IsTrigger|임의의 스키마 범위 개체|트리거입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUniqueCnst|임의의 스키마 범위 개체|UNIQUE 제약 조건입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUserTable|Table|사용자 정의 테이블입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsView|보기|뷰입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|OwnerId|임의의 스키마 범위 개체|개체의 소유자입니다.<br /><br /> **참고:** 스키마 소유자가 반드시 개체 소유자일 필요는 없습니다. 예를 들어 자식 개체(*parent_object_id*가 Null이 아닌 개체)는 항상 부모 개체와 같은 소유자 ID를 반환합니다.<br /><br /> Null이 아닌 경우 = 개체 소유자의 데이터베이스 사용자 ID입니다.|  
+|OwnerId|임의의 스키마 범위 개체|개체의 소유자입니다.<br /><br /> **참고:**  스키마 소유자가 반드시 개체 소유자일 필요는 없습니다. 예를 들어 자식 개체(*parent_object_id*가 Null이 아닌 개체)는 항상 부모 개체와 같은 소유자 ID를 반환합니다.<br /><br /> Null이 아닌 경우 = 개체 소유자의 데이터베이스 사용자 ID입니다.|  
 |TableDeleteTrigger|Table|테이블에 DELETE 트리거가 있습니다.<br /><br /> >1 = 지정된 유형의 첫 번째 트리거 ID.|  
 |TableDeleteTriggerCount|Table|테이블에 지정된 개수의 DELETE 트리거가 있습니다.<br /><br /> >0 = DELETE 트리거의 수입니다.|  
 |TableFullTextMergeStatus|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 테이블에 현재 병합 중인 전체 텍스트 인덱스가 있는지를 나타냅니다.<br /><br /> 0 = 테이블에 전체 텍스트 인덱스가 없거나 병합 중인 전체 텍스트 인덱스가 없습니다.<br /><br /> 1 = 전체 텍스트 인덱스가 병합 중입니다.|  
 |TableFullTextBackgroundUpdateIndexOn|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 테이블이 활성화된 전체 텍스트 백그라운드 업데이트 인덱스(자동 변경 추적)를 가집니다.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
 |TableFulltextCatalogId|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 테이블의 전체 텍스트 인덱스 데이터가 있는 전체 텍스트 카탈로그 ID입니다.<br /><br /> 0이 아닌 값 = 전체 텍스트 인덱싱된 테이블의 행을 식별하는 고유 인덱스와 연결된 전체 텍스트 카탈로그 ID입니다.<br /><br /> 0 = 테이블에 전체 텍스트 인덱스가 없습니다.|  
 |TableFulltextChangeTrackingOn|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 테이블의 전체 텍스트 변경 내용 추적이 활성화되었습니다.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
-|TableFulltextDocsProcessed|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 전체 텍스트 인덱싱이 시작된 이후에 처리된 행의 수입니다. 전체 텍스트 검색을 위해 인덱싱 중인 테이블에서 한 행의 모든 열은 인덱싱할 한 문서의 일부로 간주됩니다.<br /><br /> 0 = 활성 탐색 또는 전체 텍스트 인덱싱이 완료되지 않았습니다.<br /><br /> > 0 = 다음 중(A 또는 B) 하나입니다. 전체, 증분 또는 수동 변경 내용 추적 채우기가 시작된 이후에 삽입 또는 업데이트 작업으로 처리된 문서의 수입니다. B) 백그라운드 업데이트 인덱스 채우기로 변경 내용 추적이 활성화되고 전체 텍스트 인덱스 스키마가 변경되고 전체 텍스트 카탈로그 다시 작성되고 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스가 다시 시작된 이후에 삽입 또는 업데이트 작업에 의해 처리된 행의 수입니다.<br /><br /> NULL = 테이블에 전체 텍스트 인덱스가 없습니다.<br /><br /> 이 속성은 삭제된 행을 모니터링하거나 세지 않습니다.|  
-|TableFulltextFailCount|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 전체 텍스트 검색이 인덱싱하지 않은 행의 수입니다.<br /><br /> 0 = 채우기가 완료되었습니다.<br /><br /> > 0 = 다음 중(A 또는 B) 하나입니다. 전체, 증분 및 수동 업데이트 변경 내용 추적 채우기가 시작된 이후에 인덱싱되지 않은 문서의 수입니다. B) 백그라운드 업데이트 인덱스가 지정된 변경 내용 추적에서 채우기가 시작 또는 다시 시작된 이후에 인덱싱되지 않은 행의 수입니다. 그 원인은 스키마 변경, 카탈로그 다시 작성, 서버 다시 시작 등이 될 수 있습니다.<br /><br /> NULL = 테이블에 전체 텍스트 인덱스가 없습니다.|  
+|TableFulltextDocsProcessed|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 전체 텍스트 인덱싱이 시작된 이후에 처리된 행의 수입니다. 전체 텍스트 검색을 위해 인덱싱 중인 테이블에서 한 행의 모든 열은 인덱싱할 한 문서의 일부로 간주됩니다.<br /><br /> 0 = 활성 탐색 또는 전체 텍스트 인덱싱이 완료되지 않았습니다.<br /><br /> >0 = 다음 중 하나(A 또는 B): A) 전체, 증분 또는 수동 변경 내용 추적 채우기가 시작된 이후에 삽입 또는 업데이트 작업으로 처리된 문서의 수입니다. B) 백그라운드 업데이트 인덱스 채우기로 변경 내용 추적이 활성화되고 전체 텍스트 인덱스 스키마가 변경되고 전체 텍스트 카탈로그 다시 작성되고 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스가 다시 시작된 이후에 삽입 또는 업데이트 작업에 의해 처리된 행의 수입니다.<br /><br /> NULL = 테이블에 전체 텍스트 인덱스가 없습니다.<br /><br /> 이 속성은 삭제된 행을 모니터링하거나 세지 않습니다.|  
+|TableFulltextFailCount|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 전체 텍스트 검색이 인덱싱하지 않은 행의 수입니다.<br /><br /> 0 = 채우기가 완료되었습니다.<br /><br /> >0 = 다음 중 하나(A 또는 B): A) 전체, 증분 및 수동 업데이트 변경 내용 추적 채우기가 시작된 이후에 인덱싱되지 않은 문서의 수입니다. B) 백그라운드 업데이트 인덱스가 지정된 변경 내용 추적에서 채우기가 시작 또는 다시 시작된 이후에 인덱싱되지 않은 행의 수입니다. 그 원인은 스키마 변경, 카탈로그 다시 작성, 서버 다시 시작 등이 될 수 있습니다.<br /><br /> NULL = 테이블에 전체 텍스트 인덱스가 없습니다.|  
 |TableFulltextItemCount|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 성공적으로 전체 텍스트 인덱싱된 행의 수입니다.|  
 |TableFulltextKeyColumn|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 전체 텍스트 인덱스 정의에 사용되는 단일 열의 고유 인덱스와 관련된 열의 ID입니다.<br /><br /> 0 = 테이블에 전체 텍스트 인덱스가 없습니다.|  
 |TableFulltextPendingChanges|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 처리할 보류 중인 변경 내용 추적 항목의 수입니다.<br /><br /> 0 = 변경 내용 추적이 활성화되지 않았습니다.<br /><br /> NULL = 테이블에 전체 텍스트 인덱스가 없습니다.|  
@@ -216,7 +217,7 @@ GO
 0
 ```  
   
-### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>3. 특정 스키마에 속하는 테이블 찾기  
+### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C: 특정 스키마에 속하는 테이블 찾기  
  다음 예에서는 dbo 스키마에 있는 모든 테이블을 반환합니다.  
   
 ```  
@@ -231,7 +232,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-verifying-that-an-object-is-a-table"></a>4. 개체가 테이블인지 확인  
+### <a name="d-verifying-that-an-object-is-a-table"></a>D: 개체가 테이블인지 확인  
  다음 예에서는 `dbo.DimReseller`가 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 데이터베이스에 있는 테이블인지 테스트하는 방법을 보여 줍니다.  
   
 ```  

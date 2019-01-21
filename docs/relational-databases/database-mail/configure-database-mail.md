@@ -40,12 +40,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d0f86f70a4cd496c4f4f32dd0a88077337cf645
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e16bca2aabbf35c3bd75dd7a0c75e81c13efcfbd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505140"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127663"
 ---
 # <a name="configure-database-mail"></a>데이터베이스 메일 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "52505140"
   
 -   **시작하기 전 주의 사항:**  [제한 사항](#Restrictions), [보안](#Security)  
   
--   **데이터베이스 메일을 구성하려면:**  [데이터베이스 메일 구성 마법사](#DBWizard), [템플릿 사용](#Template)  
+-   **데이터베이스 메일을 구성하려면 다음을 사용합니다.**  [데이터베이스 메일 구성 마법사](#DBWizard), [템플릿 사용](#Template)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
  **DatabaseMail XPs** 옵션을 사용하여 서버에서 데이터베이스 메일을 활성화할 수 있습니다. 자세한 내용은 [Database Mail XPs 서버 구성 옵션](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 을 참조하세요.  
@@ -155,7 +155,7 @@ ms.locfileid: "52505140"
  이 계정에서 보낸 전자 메일 메시지에 대한 회신에 사용할 전자 메일 주소를 입력합니다. 회신 전자 메일은 선택 사항입니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 계정에 대한 회신은 데이터베이스 관리자인 danw@Adventure-Works.com을 클릭합니다.  
   
  **서버 이름**  
- 계정에서 전자 메일을 보내기 위해 사용하는 SMTP 서버의 이름 또는 IP 주소를 입력합니다. 일반적으로 이 주소는 **smtp.***<your_company>***.com**과 유사한 형식으로 구성됩니다. 이에 대한 도움을 얻으려면 메일 관리자에게 문의하십시오.  
+ 계정에서 전자 메일을 보내기 위해 사용하는 SMTP 서버의 이름 또는 IP 주소를 입력합니다. 일반적으로 이 주소는 **smtp.**_<your_company>_**.com**과 유사한 형식으로 구성됩니다. 이에 대한 도움을 얻으려면 메일 관리자에게 문의하십시오.  
   
  **포트 번호**  
  이 계정에 대한 SMTP 서버의 포트 번호를 입력합니다. 대부분의 SMTP 서버에서는 포트 25를 사용합니다.  
@@ -420,7 +420,7 @@ ms.locfileid: "52505140"
  [데이터베이스 메일 구성 마법사](#DBWizard)  
   
 ###  <a name="TestEmail"></a> Send Test E-Mail Page  
- *****<instance_name>에서 테스트 이메일 보내기* 페이지를 사용하여 지정된 데이터베이스 메일 프로필을 통해 이메일 메시지를 보낼 수 있습니다. **sysadmin** 고정 서버 역할의 멤버만 이 페이지를 사용하여 테스트 메일을 보낼 수 있습니다.  
+ _<instance_name>_ 에서 **테스트 메일 보내기** 페이지를 사용하여 지정된 데이터베이스 메일 프로필을 통해 메일 메시지를 보낼 수 있습니다. **sysadmin** 고정 서버 역할의 멤버만 이 페이지를 사용하여 테스트 메일을 보낼 수 있습니다.  
   
  **데이터베이스 메일 프로필**  
  목록에서 데이터베이스 메일 프로필을 선택합니다. 이 이름은 반드시 입력해야 합니다. 아무 프로필도 나타나지 않으면 프로필이 없거나 프로필에 대한 권한이 없음을 나타냅니다. **데이터베이스 메일 구성 마법사** 를 사용하여 프로필을 만들고 구성할 수 있습니다. 나열되는 프로필이 없을 경우 데이터베이스 메일 구성 마법사를 통해 사용할 프로필을 만드십시오.  

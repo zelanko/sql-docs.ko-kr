@@ -15,12 +15,12 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8738e882455cfdb05630754e94f349d2e5f0204a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3a40d8209fd01c6f5e3c4ec2c3d4344d2b62ee35
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512116"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125953"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>복제, 변경 내용 추적 및 변경 데이터 캡처 - Always On 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "52512116"
   
      CDC에 대해 테이블이 사용하도록 설정된 경우 데이터베이스 역할을 캡처 인스턴스와 연결할 수 있습니다. 역할이 지정된 경우 테이블 변경 사항에 액세스하기 위해 CDC 테이블 반환 함수를 사용하려는 사용자는 추적된 테이블 열에 대한 액세스를 선택해야 할 뿐만 아니라 명명된 역할의 멤버여야 합니다. 지정된 역할이 아직 없으면 역할이 만들어집니다. Always On 주 데이터베이스에 데이터베이스 역할이 자동으로 추가된 경우 가용성 그룹의 보조 데이터베이스에도 해당 역할이 전파됩니다.  
   
--   **CDC 변경 데이터 및 Always On에 액세스하는 클라이언트 응용 프로그램**  
+-   **CDC 변경 데이터 및 Always On에 액세스하는 클라이언트 애플리케이션**  
   
      또한 TVF(테이블 반환 함수) 또는 연결된 서버를 사용하여 변경 테이블 데이터에 액세스하는 클라이언트 애플리케이션은 장애 조치(Failover) 후 적합한 CDC 호스트를 찾는 기능이 필요합니다. 가용성 그룹 수신기 이름은 연결 대상을 다른 호스트로 투명하게 다시 지정할 수 있도록 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에서 제공하는 메커니즘입니다. 가용성 그룹 수신기 이름을 가용성 그룹에 연결한 다음에는 TCP 연결 문자열에서 이를 사용할 수 있습니다. 가용성 그룹 수신기 이름은 서로 다른 두 가지 연결 시나리오에서 사용할 수 있습니다.  
   
@@ -196,9 +196,9 @@ Always On 가용성 그룹의 일부인 데이터베이스에서 변경 데이�
   
 -   병합 복제를 사용할 때 게시 데이터베이스가 가용성 그룹에 있는 경우:  
   
-    -   밀어넣기 구독: 게시자와 배포자 모두 최소한 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]를 실행해야 합니다.  
+    -   밀어넣기 구독인 경우. 게시자와 배포자 모두 최소한 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]를 실행해야 합니다.  
   
-    -   끌어오기 구독: 게시자, 배포자 및 구독자 데이터베이스는 최소한 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에 있어야 합니다. 구독자의 병합 에이전트가 가용성 그룹이 보조 그룹으로 장애 조치(Failover)하는 방법을 이해해야 하기 때문입니다.  
+    -   끌어오기 구독인 경우. 게시자, 배포자 및 구독자 데이터베이스는 최소한 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에 있어야 합니다. 구독자의 병합 에이전트가 가용성 그룹이 보조 그룹으로 장애 조치(Failover)하는 방법을 이해해야 하기 때문입니다.  
   
 -   게시자 인스턴스는 Always On 가용성 그룹에 참여하는 데 필요한 모든 사전 요구 사항을 충족합니다. 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)에서 지원됩니다.  
   
@@ -230,7 +230,7 @@ Always On 가용성 그룹의 일부인 데이터베이스에서 변경 데이�
   
 -   [Always On 게시 데이터베이스 유지 관리&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [관리&#40;복제&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [복제 관리 FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **Change data capture**  
   

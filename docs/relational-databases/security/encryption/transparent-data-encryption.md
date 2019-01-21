@@ -1,7 +1,7 @@
 ---
 title: TDE(투명한 데이터 암호화) | Microsoft 문서
 ms.custom: ''
-ms.date: 03/09/2017
+ms.date: 01/08/2019
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
@@ -19,12 +19,12 @@ ms.author: aliceku
 ms.reviewer: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2fda42994bb86d1087f22024205f8a521ec530d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: bb61a9c18c8e0f2b164c8df01a8b84cebd5c8ab8
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210582"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185129"
 ---
 # <a name="transparent-data-encryption-tde"></a>투명한 데이터 암호화
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "53210582"
   
  **[!INCLUDE[ssSDS](../../../includes/sssds-md.md)]에 적용되는 정보**  
   
- [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12에서 TDE를 사용하는 경우, master 데이터베이스에 저장된 서버 수준 인증서가 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]에 의해 자동으로 생성됩니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 의 TDE 데이터베이스를 이동하려면 데이터베이스 암호를 해독하고, 데이터베이스를 이동한 후, 대상 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]에서 TDE를 다시 사용하도록 해야 합니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]의 TDE에 대한 단계별 지침은 [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)를 참조하십시오.  
+ [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12에서 TDE를 사용하는 경우, master 데이터베이스에 저장된 서버 수준 인증서가 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]에 의해 자동으로 생성됩니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]에서 TDE 데이터베이스를 이동하기 위해 이동 작업에 대한 데이터베이스의 암호를 해독할 필요가 없습니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]에서 TDE를 활용하는 방법에 대한 자세한 내용은 [Azure SQL Database를 사용한 투명한 데이터 암호화](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)를 참조하세요.  
   
  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 적용되는 정보**  
   

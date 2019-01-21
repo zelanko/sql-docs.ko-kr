@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fd1a43b50d0d36efacfe3c5a93a9bf0a169c4ede
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed0dd384b3ca1a90b1a40bbb23d63feabf2ae85d
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760341"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143293"
 ---
 # <a name="set-ansipadding-transact-sql"></a>SET ANSI_PADDING(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ SET ANSI_PADDING ON
  이 설정은 새 열의 정의에만 영향을 줍니다. 열이 생성된 다음에는 열을 만들 때의 설정에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 값을 저장합니다. 나중에 이 설정을 변경해도 기존의 열은 영향을 받지 않습니다.  
   
 > [!NOTE]  
->  ANSI_PADDING은 항상 ON으로 설정하는 것이 좋습니다.  
+> ANSI_PADDING은 항상 ON으로 설정해야 합니다.  
   
  다음 표에서는 **char**, **varchar**, **binary** 및 **varbinary** 데이터 형식의 열에 값을 삽입할 때 SET ANSI_PADDING 설정의 결과를 보여 줍니다.  
   
@@ -69,34 +69,35 @@ SET ANSI_PADDING ON
 |OFF|열의 크기만큼 오른쪽으로 원래 값(**char** 열에 대해서는 후행 공백으로, **binary** 열에 대해서는 후행 0으로)을 채웁니다.|SET ANSI_PADDING 옵션이 OFF일 때 **varchar** 또는 **varbinary**의 경우와 같은 규칙을 따릅니다.|**varchar** 열에 삽입된 문자 값의 후행 공백은 잘립니다. **varbinary** 열에 삽입된 이진 값 뒤에 오는 0은 잘립니다.|  
   
 > [!NOTE]  
->  채워질 때 **char** 열은 공백으로, **binary** 열은 0으로 채워집니다. 잘릴 때 **char** 열에서는 후행 공백이, **binary** 열에서는 뒤에 오는 0이 잘립니다.  
+> 채워질 때 **char** 열은 공백으로, **binary** 열은 0으로 채워집니다. 잘릴 때 **char** 열에서는 후행 공백이, **binary** 열에서는 뒤에 오는 0이 잘립니다.  
   
- 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 변경할 때는 SET ANSI_PADDING을 ON으로 설정해야 합니다. 인덱싱된 뷰 및 계산 열의 인덱스에 사용되는 필수 SET 옵션 설정에 대한 자세한 내용은 [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)에서 "SET 문 사용 시 고려 사항"을 참조하세요.  
+계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 변경할 때는 ANSI_PADDING을 ON으로 설정해야 합니다. 인덱싱된 뷰 및 계산 열의 인덱스에 사용되는 필수 SET 옵션 설정에 대한 자세한 내용은 [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)에서 "SET 문 사용 시 고려 사항"을 참조하세요.  
   
- SET ANSI_PADDING의 기본값은 ON입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 연결될 때 자동으로 ANSI_PADDING을 ON으로 설정합니다. ODBC 데이터 원본과 ODBC 연결 특성 또는, SQL Server에 연결하기 전에 응용 프로그램에 설정된 OLE DB 연결 속성에서 이 옵션을 구성할 수 있습니다. DB-Library 응용 프로그램에서 연결하는 경우 SET ANSI_PADDING의 기본값은 OFF입니다.  
+SET ANSI_PADDING의 기본값은 ON입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 연결될 때 자동으로 ANSI_PADDING을 ON으로 설정합니다. ODBC 데이터 원본과 ODBC 연결 특성 또는, SQL Server에 연결하기 전에 응용 프로그램에 설정된 OLE DB 연결 속성에서 이 옵션을 구성할 수 있습니다. DB-Library 응용 프로그램에서 연결하는 경우 SET ANSI_PADDING의 기본값은 OFF입니다.  
   
  SET ANSI_PADDING 설정은 **nchar**, **nvarchar**, **ntext**, **text**, **image**, **varbinary(max)**, **varchar(max)** 및 **nvarchar(max)** 데이터 형식에는 영향을 주지 않습니다. 이 설정은 항상 SET ANSI_PADDING ON 동작을 표시합니다. 즉, 후행 공백과 뒤에 오는 0은 잘리지 않는다는 의미입니다.  
   
- SET ANSI_DEFAULTS가 ON이면 SET ANSI_PADDING이 설정됩니다.  
+ANSI_DEFAULTS가 ON이면 ANSI_PADDING이 활성화됩니다.  
   
- SET ANSI_PADDING은 실행 시간이나 런타임에 설정되며 구문 분석 시간에는 설정되지 않습니다.  
+ANSI_PADDING의 설정은 실행 시 또는 런타임에 정의되며 구문 분석 시에는 정의되지 않습니다.  
   
- 이 설정에 대한 현재 설정을 보려면 다음 쿼리를 실행합니다.  
+이 설정에 대한 현재 설정을 보려면 다음 쿼리를 실행합니다.  
   
-```  
+```sql  
 DECLARE @ANSI_PADDING VARCHAR(3) = 'OFF';  
 IF ( (16 & @@OPTIONS) = 16 ) SET @ANSI_PADDING = 'ON';  
 SELECT @ANSI_PADDING AS ANSI_PADDING;  
-  
 ```  
   
 ## <a name="permissions"></a>Permissions  
- public 역할의 멤버 자격이 필요합니다.  
+**public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 설정이 다음과 같은 각 데이터 형식에 영향을 미치는 방법을 보여 줍니다.  
-  
-```  
+다음 예에서는 설정이 다음과 같은 각 데이터 형식에 영향을 미치는 방법을 보여 줍니다.  
+
+ANSI_PADDING을 ON으로 설정하고 테스트합니다.
+
+```sql  
 PRINT 'Testing with ANSI_PADDING ON'  
 SET ANSI_PADDING ON;  
 GO  
@@ -114,7 +115,11 @@ SELECT 'CHAR' = '>' + charcol + '\<', 'VARCHAR'='>' + varcharcol + '\<',
    varbinarycol  
 FROM t1;  
 GO  
-  
+```
+
+이제 ANSI_PADDING을 OFF로 설정하고 테스트합니다.
+
+```sql
 PRINT 'Testing with ANSI_PADDING OFF';  
 SET ANSI_PADDING OFF;  
 GO  

@@ -35,15 +35,18 @@ ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: adb6c91dfdbec4bc9e09d83f2adbf0aba6dab998
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: dccf940867666cf9d3a6ca88c2e6980cc4db0dc7
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531729"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300260"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 특정 단어 또는 구와 정확히 일치하거나 비슷하게 일치하는 단어를 검색하거나 서로 근접한 단어를 검색하거나 가중치 검색을 수행합니다. CONTAINS는 문자 기반 데이터 형식이 포함된 전체 텍스트 인덱싱된 열에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 검색을 수행하기 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문의 [WHERE 절](../../t-sql/queries/where-transact-sql.md)에 사용되는 조건자입니다.  
   
@@ -408,7 +411,7 @@ WHERE CONTAINS(Name, ' "Chain*" ');
 GO  
 ```  
   
-### <a name="d-using-contains-and-or-with-prefixterm"></a>4. \<prefix_term>에 CONTAINS 및 OR 사용  
+### <a name="d-using-contains-and-or-with-prefixterm"></a>D. \<prefix_term>에 CONTAINS 및 OR 사용  
  다음 예에서는 접두사가 `chain` 또는 `full`인 문자열을 포함하는 모든 범주 설명을 반환합니다.  
   
 ```sql  
@@ -420,7 +423,7 @@ WHERE CONTAINS(Name, '"chain*" OR "full*"');
 GO  
 ```  
   
-### <a name="e-using-contains-with-proximityterm"></a>5. \<proximity_term>에 CONTAINS 사용  
+### <a name="e-using-contains-with-proximityterm"></a>E. \<proximity_term>에 CONTAINS 사용  
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 
   
@@ -435,7 +438,7 @@ WHERE CONTAINS(Comments , 'NEAR((bike,control), 10, TRUE)');
 GO  
 ```  
   
-### <a name="f-using-contains-with-generationterm"></a>6. \<generation_term>에 CONTAINS 사용  
+### <a name="f-using-contains-with-generationterm"></a>F. \<generation_term>에 CONTAINS 사용  
  다음 예에서는 riding, ridden 등 `ride`에서 파생된 단어가 있는 모든 제품을 검색합니다.  
   
 ```sql  
@@ -447,7 +450,7 @@ WHERE CONTAINS(Description, ' FORMSOF (INFLECTIONAL, ride) ');
 GO  
 ```  
   
-### <a name="g-using-contains-with-weightedterm"></a>7. \<weighted_term>에 CONTAINS 사용  
+### <a name="g-using-contains-with-weightedterm"></a>G. \<weighted_term>에 CONTAINS 사용  
  다음 예에서는 `performance`, `comfortable` 또는 `smooth` 단어가 포함된 모든 제품 이름을 검색하며 각 단어에는 다른 가중치가 지정됩니다.  
   
 ```sql  
@@ -460,7 +463,7 @@ comfortable weight (.4), smooth weight (.2) )' );
 GO  
 ```  
   
-### <a name="h-using-contains-with-variables"></a>8. 변수에 CONTAINS 사용  
+### <a name="h-using-contains-with-variables"></a>H. 변수에 CONTAINS 사용  
  다음 예에서는 특정 검색 용어 대신 변수를 사용합니다.  
   
 ```sql  
@@ -487,7 +490,7 @@ WHERE ProductDescriptionID <> 5 AND
 GO  
 ```  
   
-### <a name="j-using-contains-to-verify-a-row-insertion"></a>10. CONTAINS를 사용하여 행 삽입 확인  
+### <a name="j-using-contains-to-verify-a-row-insertion"></a>J. CONTAINS를 사용하여 행 삽입 확인  
  다음 예에서는 SELECT 하위 쿼리 내에 CONTAINS를 사용합니다. 이 쿼리는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용하여 특정 주기에 대한 ProductReview 테이블의 모든 설명 값을 얻습니다. 검색 조건에는 AND 부울 연산자가 사용됩니다.  
   
 ```sql  

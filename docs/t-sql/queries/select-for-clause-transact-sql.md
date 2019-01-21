@@ -1,7 +1,7 @@
 ---
 title: FOR 절(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2017
+ms.date: 01/08/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,30 +22,30 @@ ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0db7176da41eec27cfffc4db5a9cbcc0835196a9
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: a8f1ce1c1c5a572874b301f326a711bbcfbda8a1
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906273"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143553"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR 절(Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  FOR 절을 사용하여 쿼리 결과에 대해 다음 옵션 중 하나를 지정합니다.  
+FOR 절을 사용하여 쿼리 결과에 대해 다음 옵션 중 하나를 지정합니다.
   
 -   **FOR BROWSE**를 지정하여 찾아보기 모드 커서에서 쿼리 결과를 보는 동안 업데이트 할 수 있습니다.  
   
 -   **FOR XML**을 지정하여 쿼리 결과를 XML로 서식 지정합니다.  
   
 -   **FOR JSON**을 지정하여 쿼리 결과를 JSON으로 서식 저정합니다.  
-  
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```
 [ FOR { BROWSE | <XML> | <JSON>} ]  
   
 <XML> ::=  
@@ -84,20 +84,21 @@ JSON
         [ , WITHOUT_ARRAY_WRAPPER ]  
     ]  
   
-}  
-```  
+}
+```
   
-## <a name="for-browse"></a>FOR BROWSE  
+## <a name="for-browse"></a>FOR BROWSE
+
  BROWSE  
  DB-Library 찾아보기 모드 커서에서 데이터를 표시하는 동안 업데이트를 허용하도록 지정합니다. 테이블에 **timestamp** 열이 있고 고유한 인덱스가 있으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 전송된 SELECT 문의 끝에 FOR BROWSE 옵션이 있으면 애플리케이션에서 테이블을 찾아볼 수 있습니다.  
   
-> [!NOTE]  
->  FOR BROWSE 옵션을 포함하는 SELECT 문에서는 \<lock_hint> HOLDLOCK을 사용할 수 없습니다.
+> [!NOTE]
+> FOR BROWSE 옵션을 포함하는 SELECT 문에서는 \<lock_hint> HOLDLOCK을 사용할 수 없습니다.
   
  FOR BROWSE는 UNION 연산자로 조인된 SELECT 문에는 표시되지 않습니다.  
   
-> [!NOTE]  
->  테이블의 고유 인덱스 키 열이 Null을 허용하고 테이블이 외부 조인의 내부 측면에 있으면 해당 인덱스는 찾아보기 모드에서 지원되지 않습니다.  
+> [!NOTE]
+> 테이블의 고유 인덱스 키 열이 Null을 허용하고 테이블이 외부 조인의 내부 측면에 있으면 해당 인덱스는 찾아보기 모드에서 지원되지 않습니다.  
   
  찾아보기 모드에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블의 행을 검색하고 테이블의 데이터를 한 번에 한 행씩 업데이트할 수 있습니다. 애플리케이션에서 찾아보기 모드로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 액세스하려면 다음 두 가지 옵션 중 하나를 사용해야 합니다.  
   
@@ -155,8 +156,7 @@ JSON
     FROM tleft   
     RIGHT JOIN tright   
     ON tleft.c1 = tright.c1   
-    WHERE tright.c1 <> 2 ;  
-  
+    WHERE tright.c1 <> 2 ;
     ```  
   
      결과 창에서 다음과 같은 출력을 확인합니다.  
@@ -171,14 +171,15 @@ JSON
   
  찾아보기 모드에서 SELECT 쿼리를 실행하여 테이블에 액세스한 후에는 오른쪽 우선 외부 조인 문의 정의로 인해 SELECT 쿼리의 결과 집합에 tleft 테이블의 c1 열에 대한 두 Null 값이 포함됩니다. 따라서 결과 집합에서는 테이블에서 가져온 Null 값과 오른쪽 우선 외부 조인 문으로 인해 발생한 Null 값을 구분할 수 없습니다. 결과 집합의 Null 값을 무시하면 잘못된 결과를 얻을 수 있습니다.  
   
-> [!NOTE]  
->  고유 인덱스에 포함된 열이 Null 값을 허용하지 않는 경우 결과 집합의 모든 Null 값은 오른쪽 우선 외부 조인 문으로 인해 발생된 것입니다.  
+> [!NOTE]
+> 고유 인덱스에 포함된 열이 Null 값을 허용하지 않는 경우 결과 집합의 모든 Null 값은 오른쪽 우선 외부 조인 문으로 인해 발생된 것입니다.  
   
-## <a name="for-xml"></a>FOR XML  
+## <a name="for-xml"></a>FOR XML
+
  XML  
- 쿼리 결과를 XML 문서로 반환하도록 지정합니다. 다음 XML 모드 중 하나를 지정해야 합니다. RAW, AUTO, EXPLICIT. FOR XML 데이터 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 자세한 내용은 [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)을 참조하세요.  
+ 쿼리 결과를 XML 문서로 반환하도록 지정합니다. XML 모드는 RAW, AUTO, EXPLICIT 중 하나로 지정해야 합니다. FOR XML 데이터 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 자세한 내용은 [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)을 참조하세요.  
   
- RAW [ **('***ElementName***')** ]  
+ RAW [ **('**_ElementName_**')** ]  
  쿼리 결과를 사용하여 결과 집합의 각 행을 요소 태그로 \<row /> 일반 식별자를 갖는 XML 요소로 변환합니다. 필요에 따라 행 요소에 대한 이름을 지정할 수 있습니다. 결과 XML 출력은 각 행에 대해 행 요소가 생성될 때 지정된 *ElementName* 을 사용합니다. 자세한 내용은 [FOR XML에서 RAW 모드 사용](../../relational-databases/xml/use-raw-mode-with-for-xml.md)을 참조하세요.
   
  AUTO  
@@ -190,10 +191,26 @@ JSON
  XMLDATA  
  인라인 XDR 스키마를 반환하지만 결과에 루트 요소를 추가하지는 않습니다. XMLDATA를 지정하면 문서에 XDR 스키마가 첨부됩니다.  
   
-> [!IMPORTANT]  
->  XMLDATA 지시문은 더 이상 사용되지 않습니다. RAW 및 AUTO 모드의 경우 XSD 생성을 사용하세요. EXPLICIT 모드의 XMLDATA 지시어의 경우에는 대체할 옵션이 없습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
-  
- XMLSCHEMA [ **('***TargetNameSpaceURI***')** ]  
+> [!IMPORTANT]
+> XMLDATA 지시문은 **더 이상 사용되지 않습니다**. RAW 및 AUTO 모드의 경우 XSD 생성을 사용하세요. EXPLICIT 모드의 XMLDATA 지시어의 경우에는 대체할 옵션이 없습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+
+_원치 않는 줄 바꿈을 표시 안 함:_ SSMS(SQL Server Management Studio)를 사용하여 FOR XML 절을 사용하는 쿼리를 실행할 수 있습니다. 때로는 많은 양의 XML이 반환되어 하나의 그리드 셀에 표시됩니다. XML 문자열은 단일 줄에 보유할 수 있는 하나의 SSMS 그리드 셀보다 길 수 있습니다. 이러한 경우 SSMS는 전체 XML 문자열의 긴 세그먼트 사이에 줄 바꿈 문자를 삽입할 수 있습니다. 이러한 줄 바꿈은 줄을 분할하지 않아야 하는 하위 문자열의 중간에서 발생할 수 있습니다. 캐스트 AS XMLDATA를 사용하여 줄 바꿈을 방지할 수 있습니다. FOR JSON PATH를 사용하는 경우에 이 솔루션을 적용할 수도 있습니다. 이 기술은 Stack Overflow에서 설명되고 다음 Transact-SQL 샘플 SELECT 문에 표시됩니다.
+
+- [SQL Server FOR XML 사용: 결과 데이터 형식을 Text/varchar/string으로 변환하시겠습니까?](https://stackoverflow.com/questions/5655332/using-sql-server-for-xml-convert-result-datatype-to-text-varchar-string-whate/5658758#5658758)
+
+    ```sql
+    SELECT CAST(
+        (SELECT column1, column2
+            FROM my_table
+            FOR XML PATH('')
+        )
+            AS VARCHAR(MAX)
+    ) AS XMLDATA ;
+    ```
+
+<!-- The preceding Stack Overflow example is per MicrosoftDocs/sql-docs Issue 1501.  2019-01-06 -->
+
+ XMLSCHEMA [ **('**_TargetNameSpaceURI_**')** ]  
  인라인 XSD 스키마를 반환합니다. 이 지시어를 지정할 때 스키마에 지정된 네임스페이스를 반환하는 대상 네임스페이스 URI를 필요에 따라 지정할 수 있습니다. 자세한 내용은 [인라인 XSD 스키마 생성](../../relational-databases/xml/generate-an-inline-xsd-schema.md)을 참조하세요.  
   
  ELEMENTS  
@@ -205,7 +222,7 @@ JSON
  ABSENT  
  Null 열 값에서는 해당 XML 요소가 XML 결과에 추가되지 않음을 나타냅니다. 이 옵션은 ELEMENTS에만 지정하세요.  
   
- PATH [ **('***ElementName***')** ]  
+ PATH [ **('**_ElementName_**')** ]  
  결과 집합의 각 행에 대해 \<row> 요소 래퍼를 생성합니다. 필요에 따라 \<row> 요소 래퍼에 대한 요소 이름을 지정할 수 있습니다. FOR XML PATH(**''**)와 같은 빈 문자열이 지정된 경우 래퍼 요소가 생성되지 않습니다. EXPLICIT 지시어를 사용하여 작성된 쿼리 대신 PATH를 사용하는 것이 더 간단한 방법일 수 있습니다. 자세한 내용은 [FOR XML에서 PATH 모드 사용](../../relational-databases/xml/use-path-mode-with-for-xml.md)을 참조하세요.  
   
  BINARY BASE64  
@@ -214,7 +231,7 @@ JSON
  TYPE  
  쿼리가 결과를 **xml** 형식으로 반환하도록 지정합니다. 자세한 내용은 [TYPE Directive in FOR XML Queries](../../relational-databases/xml/type-directive-in-for-xml-queries.md)를 참조하세요.  
   
- ROOT [ **('***RootName***')** ]  
+ ROOT [ **('**_RootName_**')** ]  
  단일 최상위 요소가 결과 XML에 추가되도록 지정합니다. 필요에 따라 생성할 루트 요소 이름을 지정할 수 있습니다. 선택 사항인 루트 이름을 지정하지 않으면 기본 \<root> 요소가 추가됩니다.  
   
  자세한 내용은 [FOR XML&#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)을 참조하세요.  
@@ -234,7 +251,8 @@ ORDER BY LastName, FirstName
 FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;  
 ```  
   
-## <a name="for-json"></a>FOR JSON  
+## <a name="for-json"></a>FOR JSON
+
  JSON  
  JSON 텍스트로 서식 지정된 쿼리의 결과를 반환하려면 FOR JSON을 지정합니다. 또한 다음 JSON 모드 중 하나를 지정해야 합니다. AUTO 또는 PATH. 자세한 내용은 **FOR JSON**을 사용하여 [쿼리 결과 서식을 JSON으로 지정&#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)을 참조하세요.  
   
@@ -249,7 +267,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
  INCLUDE_NULL_VALUES  
  **FOR JSON** 절과 함께 **INCLUDE_NULL_VALUES** 옵션을 지정하여 JSON 출력에 null 값을 포함합니다. 이 옵션을 지정하지 않은 경우 쿼리 결과의 NULL 값에 대해서는 출력에 JSON 속성을 포함하지 않습니다. 자세한 내용 및 예제는 [INCLUDE_NULL_VALUES 옵션을 사용하여 JSON 출력에 Null 값 포함&#40;SQL Server&#41;](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md)을 참조하세요.  
   
- ROOT [ **('***RootName***')** ]  
+ ROOT [ **('**_RootName_**')** ]  
  단일 최상위 요소를 JSON 출력에 추가하려면 **FOR JSON** 절을 사용하여 **ROOT** 옵션을 지정합니다. **ROOT** 옵션을 지정하지 않은 경우 JSON 출력에는 루트 요소가 없습니다. 자세한 내용 및 예제는 [ROOT 옵션을 사용하여 JSON 출력에 루트 노드 추가&#40;SQL Server&#41;](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md).  
   
  WITHOUT_ARRAY_WRAPPER  
@@ -257,7 +275,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
   
  자세한 내용은 [FOR JSON을 사용하여 쿼리 결과를 JSON으로 서식 지정&#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
- [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>참고 항목
+
+ [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
+

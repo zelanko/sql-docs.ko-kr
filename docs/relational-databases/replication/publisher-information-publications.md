@@ -13,18 +13,18 @@ ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 47cc4ba5cb66cd810f536940bc896938734dda65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: deb1f9af6d006ff9e524d2f91d61af6269737079
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643361"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129663"
 ---
 # <a name="publisher-information-publications"></a>게시자 정보, 게시
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **게시** 탭은 왼쪽 창에서 선택한 게시자에서의 모든 게시에 대한 요약 정보를 제공합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  표에서 데이터를 표시하는 방식을 변경하려면 표를 마우스 오른쪽 단추로 클릭한 후 다음 옵션 중 하나를 클릭합니다.  
   
 -   **정렬**: **열 정렬** 대화 상자에서 한 개 이상의 열에 대해 정렬합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "47643361"
  상태 값 **성능 심각** 은 트랜잭션 구독과 병합 구독에 적용되며 트랜잭션 구독의 경우 임계값이 설정된 경우에만 표시할 수 있습니다. 성능 측정 및 임계값 설정에 대한 자세한 내용은 [복제 모니터로 성능 모니터링](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md) 및 [복제 모니터에 임계값 및 경고 설정](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)을 참조하세요.  
   
  **게시**  
- *PublicationDatabaseName: PublicationName*형식의 각 게시의 이름입니다.  
+ 각 게시의 이름입니다. 형식은 *PublicationDatabaseName: PublicationName*입니다.  
   
  **구독**  
  각 게시에 대한 구독 수입니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "47643361"
   
 ## <a name="see-also"></a>참고 항목  
  [복제 모니터 시작](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [게시자에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [게시자에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

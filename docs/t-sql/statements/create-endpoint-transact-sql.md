@@ -32,12 +32,12 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c3920cdf30575d5b51948fe7789d568a1dacc961
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41b6c0009c2cfc3c83a4326875c13083875166b3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596222"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124583"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47596222"
   
      이 부분에서는 엔드포인트에서 지원되는 페이로드를 정의합니다. 지원되는 페이로드 유형인 [!INCLUDE[tsql](../../includes/tsql-md.md)], Service Broker, 데이터베이스 미러링 중에서 하나를 정의할 수 있습니다. 또한 이 부분에는 언어별 정보도 포함됩니다.  
   
-> **참고:**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서는 네이티브 XML 웹 서비스(SOAP/HTTP 엔드포인트)가 제거되었습니다.  
+> **참고:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서는 네이티브 XML 웹 서비스(SOAP/HTTP 엔드포인트)가 제거되었습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -145,10 +145,10 @@ FOR DATABASE_MIRRORING (
   
  다음 인수는 TCP 프로토콜 옵션에만 적용됩니다.  
   
- LISTENER_PORT **=***listenerPort*  
+ LISTENER_PORT **=**_listenerPort_  
  Service Broker TCP/IP 프로토콜을 통한 연결을 수신하는 포트 번호를 지정합니다. 규칙에 따라 4022가 사용되지만 1024와 32767 사이의 모든 번호를 사용할 수 있습니다.  
   
- LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "* ip_address_v6*" **)**  
+ LISTENER_IP **=** ALL | **(**_4-part-ip_ **)** | **(** "*ip_address_v6*" **)**  
  엔드포인트가 수신하는 IP 주소를 지정합니다. 기본값은 ALL입니다. 이는 수신기가 모든 유효한 IP 주소에 대한 연결을 허용함을 의미합니다.  
   
  정규화된 도메인 이름(`ALTER DATABASE SET PARTNER = partner_IP_address` 또는 `ALTER DATABASE SET WITNESS = witness_IP_address`) 대신 IP 주소를 사용하여 데이터베이스 미러링을 구성하는 경우 미러링 엔드포인트를 만들 때 `LISTENER_IP =IP_address` 대신 `LISTENER_IP=ALL`를 지정해야 합니다.  
@@ -230,7 +230,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  다른 위치에 있는 서비스에 대한 메시지를 무시합니다. 기본값입니다.  
   
- MESSAGE_FORWARD_SIZE **=***forward_size*  
+ MESSAGE_FORWARD_SIZE **=**_forward_size_  
  엔드포인트가 전달할 메시지를 저장할 때 사용할 수 있는 최대 저장 크기(MB)를 지정합니다.  
   
  **DATABASE_MIRRORING 옵션**  
@@ -269,7 +269,7 @@ FOR DATABASE_MIRRORING (
 -   엔드포인트에 대한 CONNECT 권한이 부여된 사용자 또는 그룹  
   
 ## <a name="permissions"></a>Permissions  
- CREATE ENDPOINT 권한 또는 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다. 자세한 내용은 [GRANT 엔드포인트 사용 권한&amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)을 참조하세요.  
+ CREATE ENDPOINT 권한 또는 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다. 자세한 내용은 [GRANT 엔드포인트 사용 권한 &#40;Transact-SQL &#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
   

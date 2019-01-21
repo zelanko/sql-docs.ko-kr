@@ -17,15 +17,15 @@ helpviewer_keywords:
 - pages [SQL Server], damaged
 - restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: de03858d60e5a8ad21232b2f13d17b880f106ed2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d2e5e0cad34fdd9364868e5f9c2e4a02d460dba
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761991"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242266"
 ---
 # <a name="restore-pages-sql-server"></a>페이지 복원(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47761991"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 ###  <a name="WhenUseful"></a> 페이지 복원이 유용한 경우  
  페이지 복원은 격리된 손상 페이지를 복구하기 위한 기능입니다. 몇몇 페이지를 각각 복원하고 복구하면 복원 작업 도중 오프라인 상태인 데이터의 양이 줄어들어 파일 복원보다 빠를 수 있습니다. 그러나 파일에 있는 여러 페이지를 복원할 경우에는 일반적으로 전체 파일을 복원하는 것이 효율적입니다. 예를 들어 디바이스의 여러 페이지에서 디바이스 오류의 가능성을 나타내는 경우 파일을 다른 위치로 복원한 다음 해당 디바이스를 복구해 보세요.  
@@ -128,7 +128,7 @@ ms.locfileid: "47761991"
     >  암호로 보호된 백업을 복원하려면 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 문을 사용해야 합니다.  
   
      **비상 로그 백업**  
-     **백업 장치** 에서 데이터베이스에 대한 비상 로그 백업이 저장될 파일 이름을 입력하거나 선택합니다.  
+     **백업 디바이스** 에서 데이터베이스에 대한 비상 로그 백업이 저장될 파일 이름을 입력하거나 선택합니다.  
   
      **백업 세트**  
      이 섹션에는 복원에 관련된 백업 세트가 표시됩니다.  
@@ -136,8 +136,8 @@ ms.locfileid: "47761991"
     |머리글|값|  
     |------------|------------|  
     |**이름**|백업 세트의 이름입니다.|  
-    |**구성 요소**|백업된 구성 요소: **데이터베이스**, **파일** 또는 **\<비어 있음>**(트랜잭션 로그의 경우)이 될 수 있습니다.|  
-    |**형식**|수행된 백업 유형입니다. **전체**, **차등**또는 **트랜잭션 로그**일 수 있습니다.|  
+    |**구성 요소**|백업된 구성 요소입니다. **데이터베이스**, **파일** 또는 **\<blank>**(트랜잭션 로그의 경우)가 될 수 있습니다.|  
+    |**형식**|수행된 백업 유형입니다. **전체**, **차등** 또는 **트랜잭션 로그**가 될 수 있습니다.|  
     |**Server**|백업 작업을 수행한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 이름입니다.|  
     |**데이터베이스 백업**|백업 작업과 관련된 데이터베이스의 이름입니다.|  
     |**위치**|볼륨에 있는 백업 세트의 위치입니다.|  

@@ -15,12 +15,12 @@ ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35fbe2c739ac8dafcedf18a4873bc7235469648b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d33dc0d7103e821eaf2796630cada56f199eebd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857129"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133933"
 ---
 # <a name="article-properties---ltarticlegt"></a>아티클 속성 - &lt;Article&gt;
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "47857129"
  이 대화 상자의 **문 배달** 섹션에서 저장 프로시저를 사용하여 변경 내용을 구독자(기본값)로 전파하도록 선택한 경우 해당 프로시저를 각 구독자에 복사할지 여부를 선택합니다. **False**를 선택할 경우 수동으로 프로시저를 복사해야 하며, 수동으로 복사하지 않을 경우 배포 에이전트에서 변경 내용을 배달하려고 하면 오류가 발생합니다.  
   
  **Statement delivery**  
- 이 섹션의 옵션은 테이블로 복제된 인덱싱된 뷰를 포함하여 모든 테이블에 적용됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 는 응용 프로그램에 다른 기능이 필요 하지 않는 한 기본 옵션을 사용할 것을 권장합니다. 기본적으로 트랜잭션 복제는 각 구독자에 설치된 저장 프로시저 집합를 통하여 변경 내용을 구독자로 전파합니다. 게시자에서 테이블에 삽입, 업데이트 또는 삭제 작업을 수행하면 구독자에서 저장 프로시저 호출로 변환됩니다.  
+ 이 섹션의 옵션은 테이블로 복제된 인덱싱된 뷰를 포함하여 모든 테이블에 적용됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 는 애플리케이션에 다른 기능이 필요 하지 않는 한 기본 옵션을 사용할 것을 권장합니다. 기본적으로 트랜잭션 복제는 각 구독자에 설치된 저장 프로시저 집합를 통하여 변경 내용을 구독자로 전파합니다. 게시자에서 테이블에 삽입, 업데이트 또는 삭제 작업을 수행하면 구독자에서 저장 프로시저 호출로 변환됩니다.  
   
  **문 배달** 옵션은 저장 프로시저 사용 여부를 지정하며, 사용할 경우 이 형식이 해당 프로시저로 전달되는 매개 변수에 사용됩니다. **저장 프로시저** 옵션을 사용하여 복제에서 자동으로 만든 프로시저 또는 사용자가 만든 대체 사용자 지정 프로시저를 사용할 수 있습니다.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "47857129"
  이 옵션은 저장 프로시저에만 적용됩니다. 저장 프로시저의 정의(CREATE PROCEDURE 문)를 복제할 것인지 아니면 저장 프로시저의 실행을 복제할 것인지를 결정합니다. 저장 프로시저의 실행을 복제하면 구독이 초기화될 때 프로시저 정의가 구독자로 복제됩니다. 게시자에서 이 프로시저를 실행하면 이러한 복제의 결과로 구독자에서 해당 프로시저가 실행됩니다. 이렇게 하면 대규모 일괄 처리 작업이 수행되는 경우 성능을 크게 향상시킬 수 있습니다. 자세한 내용은 [Publishing Stored Procedure Execution in Transactional Replication](../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md)을 참조하세요.  
   
 ## <a name="options-for-merge-publications"></a>병합 게시에 대한 옵션  
- 병합 게시의 **아티클 속성** 대화 상자에는 **속성** 및 **해결 프로그램**탭이 있습니다.  
+ 병합 게시의 **문서 속성** 대화 상자에는 **속성**과 **해결 프로그램**의 두 가지 탭이 있습니다.  
   
 ### <a name="properties-tab"></a>속성 탭  
  **동기화 방향**  
@@ -123,7 +123,7 @@ ms.locfileid: "47857129"
   
 ### <a name="resolver-tab"></a>해결 프로그램 탭  
  **기본 해결 프로그램 사용**  
- 기본 해결 프로그램을 선택한 경우 사용된 구독 유형에 따라 각 구독자에 할당된 우선 순위나 게시자에 기록된 첫 번째 변경 내용을 기준으로 충돌을 해결합니다. 자세한 내용은 [병합 복제 충돌 감지 및 해결](../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)을 참조하세요.  
+ 기본 해결 프로그램을 선택한 경우 사용된 구독 유형에 따라 각 구독자에 할당된 우선 순위나 게시자에 기록된 첫 번째 변경 내용을 기준으로 충돌을 해결합니다. 자세한 내용은 [병합 복제 충돌 감지 및 해결](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
   
  **사용자 지정 해결 프로그램 사용(배포자에 등록됨)**  
  아티클 해결 프로그램( [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 제공하는 해결 프로그램 또는 사용자가 작성한 해결 프로그램) 사용을 선택한 경우 목록 상자에서 해결 프로그램을 선택해야 합니다. 자세한 내용은 [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
@@ -137,7 +137,7 @@ ms.locfileid: "47857129"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 제공하는 모든 COM 기반 해결 프로그램이 서명됩니다. 동기화할 때 해결 프로그램이 유효한지 확인하려면 이 옵션을 선택합니다.  
   
 ## <a name="options-for-oracle-publications"></a>Oracle 게시에 대한 옵션  
- Oracle 게시의 **아티클 속성** 대화 상자에는 **속성** 및 **데이터 매핑**탭이 있습니다. Oracle 게시는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시에서 지원하는 속성 중 일부만 지원합니다. 자세한 내용은 [Design Considerations and Limitations for Oracle Publishers](../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)을 참조하세요.  
+ Oracle 게시의 **문서 속성** 대화 상자에는 **속성**과 **데이터 매핑**의 두 가지 탭이 있습니다. Oracle 게시는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시에서 지원하는 속성 중 일부만 지원합니다. 자세한 내용은 [Design Considerations and Limitations for Oracle Publishers](../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)을 참조하세요.  
   
 ### <a name="properties-tab"></a>속성 탭  
  **INSERT, UPDATE 및 DELETE 저장 프로시저 복사**  
@@ -154,7 +154,7 @@ ms.locfileid: "47857129"
  Oracle 서버 인스턴스에서 복제 변경 추적 테이블을 만들 테이블스페이스입니다. 자세한 내용은 [Oracle 테이블스페이스 관리](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)를 참조하세요.  
   
  **Statement delivery**  
- 이 섹션의 옵션은 트랜잭션 게시의 모든 테이블에 적용됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 는 응용 프로그램에 다른 기능이 필요 하지 않는 한 기본 옵션을 사용할 것을 권장합니다. 기본적으로 트랜잭션 복제는 각 구독자에 설치된 저장 프로시저 집합를 통하여 변경 내용을 구독자로 전파합니다. 게시자에서 테이블에 삽입, 업데이트 또는 삭제 작업을 수행하면 구독자에서 저장 프로시저 호출로 변환됩니다.  
+ 이 섹션의 옵션은 트랜잭션 게시의 모든 테이블에 적용됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 는 애플리케이션에 다른 기능이 필요 하지 않는 한 기본 옵션을 사용할 것을 권장합니다. 기본적으로 트랜잭션 복제는 각 구독자에 설치된 저장 프로시저 집합를 통하여 변경 내용을 구독자로 전파합니다. 게시자에서 테이블에 삽입, 업데이트 또는 삭제 작업을 수행하면 구독자에서 저장 프로시저 호출로 변환됩니다.  
   
  **문 배달** 옵션은 저장 프로시저 사용 여부를 지정하며, 사용할 경우 이 형식이 해당 프로시저로 전달되는 매개 변수에 사용됩니다. **저장 프로시저** 옵션을 사용하여 복제에서 자동으로 만든 프로시저 또는 사용자가 만든 대체 사용자 지정 프로시저를 사용할 수 있습니다.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "47857129"
   
 -   하나의 매핑만 사용할 수 있는 데이터 형식의 경우 속성 표의 열이 읽기 전용입니다.  
   
--   일부 형식의 경우 두 개 이상의 매핑을 선택할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 는 응용 프로그램에 다른 매핑이 필요 하지 않는 한 기본 매핑을 사용할 것을 권장합니다. 자세한 내용은 [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)을 참조하세요.  
+-   일부 형식의 경우 두 개 이상의 매핑을 선택할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 는 애플리케이션에 다른 매핑이 필요 하지 않는 한 기본 매핑을 사용할 것을 권장합니다. 자세한 내용은 [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   

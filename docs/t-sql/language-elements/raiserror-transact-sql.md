@@ -30,15 +30,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23294229be50c987be4b2f59568889910b605596
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0875e5013e2a5f12468d99414ff94252ac66453a
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502857"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300300"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
   오류 메시지를 생성하고 세션에 대한 오류 처리를 시작합니다. RAISERROR는 sys.messages 카탈로그 뷰에 저장된 사용자 정의 메시지를 참조하거나 동적으로 메시지를 작성할 수 있습니다. 메시지는 호출하는 애플리케이션 또는 연결된 TRY...CATCH 구문의 CATCH 블록에 서버 오류 메시지로 반환됩니다. 새 애플리케이션에서는 [THROW](../../t-sql/language-elements/throw-transact-sql.md)를 대신 사용해야 합니다.  
   
@@ -160,7 +163,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
   
 |값|설명|  
 |-----------|-----------------|  
-|LOG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스용 오류 로그 및 응용 프로그램 로그에 오류를 기록합니다. 오류 로그에 기록되는 오류는 현재 최대 440바이트로 제한됩니다. sysadmin 고정 서버 역할의 멤버 또는 ALTER TRACE 권한을 가진 사용자만 WITH LOG를 지정할 수 있습니다.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
+|LOG|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스용 오류 로그 및 애플리케이션 로그에 오류를 기록합니다. 오류 로그에 기록되는 오류는 현재 최대 440바이트로 제한됩니다. sysadmin 고정 서버 역할의 멤버 또는 ALTER TRACE 권한을 가진 사용자만 WITH LOG를 지정할 수 있습니다.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |NOWAIT|즉시 클라이언트에게 메시지를 전송합니다.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |SETERROR|심각도에 상관없이 @@ERROR과 ERROR_NUMBER 값을 *msg_id*나 50000으로 설정합니다.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
   

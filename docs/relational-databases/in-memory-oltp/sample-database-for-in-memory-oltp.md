@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d7adb7156a6f61ef76f62d1eeff9a4689208815
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: ddbafb58662497dc2ee9c513aa206d826d5db8c1
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712484"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226700"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 예제 데이터베이스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "52712484"
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   성능 테스트에 사용할, 프로덕션 환경과 유사한 사양을 가진 서버 이 특정 샘플의 경우 SQL Server에 사용할 수 있는 메모리가 16GB 이상 있어야 합니다. 메모리 내 OLTP에 사용할 하드웨어에 대한 일반 지침은 [SQL Server 2014의 메모리 내 OLTP에 대한 하드웨어 고려 사항](blog-hardware-in-memory-oltp.md) 블로그 게시물을 참조하세요.
+-   성능 테스트에 사용할, 프로덕션 환경과 유사한 사양을 가진 서버 이 특정 샘플의 경우 SQL Server에 사용할 수 있는 메모리가 16GB 이상 있어야 합니다. 메모리 내 OLTP용 하드웨어에 대한 일반적인 지침은 다음 블로그 게시물을 참조하세요. [SQL Server 2014의 메모리 내 OLTP에 대한 하드웨어 고려 사항](blog-hardware-in-memory-oltp.md)
 
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> AdventureWorks 기반의 메모리 내 OLTP 샘플 설치  
  다음 단계를 수행하여 예제를 설치합니다.  
@@ -148,7 +148,7 @@ ms.locfileid: "52712484"
   
 -   *계산 열* - [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 에서는 메모리 최적화 테이블에서 계산 열을 지원하지 않기 때문에 계산 열 SalesOrderNumber 및 TotalDue가 생략되었습니다. 새로운 뷰 Sales.vSalesOrderHeader_extended_inmem이 SalesOrderNumber 및 TotalDue 열을 반영하므로 이러한 열이 필요한 경우 이 뷰를 사용할 수 있습니다.  
 
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1부터 계산 열이 메모리 최적화 테이블 및 인덱스에서 지원됩니다.
 
   
@@ -313,7 +313,7 @@ ms.locfileid: "52712484"
   
  설치 단계:  
   
-1.  [SQL Server용 RML(Report Markup Language) 다운로드](https://www.microsoft.com/en-us/download/details.aspx?id=4511) 페이지에서 RML 유틸리티의 x64 설치 패키지를 다운로드하고 실행합니다.
+1.  다음 페이지에서 RML 유틸리티의 x64 설치 패키지를 다운로드하고 실행합니다. [SQL Server용 RML(Report Markup Language) 다운로드](https://www.microsoft.com/en-us/download/details.aspx?id=4511)
 
 2.  특정 파일이 사용 중이라는 대화 상자가 나타나면 'Continue'를 클릭합니다.  
   
@@ -387,7 +387,7 @@ END
  아래 지침과 측정값에서는 1000만 개의 판매 주문을 삽입하는 작업을 사용합니다. 100만 개의 판매 주문을 삽입하는 축소된 워크로드를 실행하는 지침은 SQLServer2016CTP3Samples.zip 보관 파일의 일부인 'In-Memory OLTP\readme.txt'에 있는 지침을 참조하세요.  
   
 ##### <a name="memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블  
- 메모리 최적화 테이블에서 작업을 실행하는 것부터 시작합니다. 다음 명령은 각각 5,000회의 반복을 위해 실행되는 100개의 스레드를 엽니다.  각 반복에서는 별도의 트랜잭션에서 20개의 판매 주문을 삽입합니다. 데이터베이스가 삽입될 데이터를 생성하는 데 사용된다는 사실을 보완하기 위해 반복당 20개의 삽입이 있습니다. 이에 따라 총 20 * 5,000 \* 100 = 10,000,000개의 판매 주문 삽입이 생성됩니다.  
+ 메모리 최적화 테이블에서 작업을 실행하는 것부터 시작합니다. 다음 명령은 각각 5,000회의 반복을 위해 실행되는 100개의 스레드를 엽니다.  각 반복에서는 별도의 트랜잭션에서 20개의 판매 주문을 삽입합니다. 데이터베이스가 삽입될 데이터를 생성하는 데 사용된다는 사실을 보완하기 위해 반복당 20개의 삽입이 있습니다. 이에 따라 총 20 \* 5,000 \* 100 = 10,000,000개의 판매 주문 삽입이 생성됩니다.  
   
  RML Cmd Prompt를 열고 다음 명령을 실행합니다.  
   
@@ -434,7 +434,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="Troubleshootingslow-runningtests"></a> 느리게 실행되는 테스트 문제 해결  
  테스트 결과는 일반적으로 하드웨어와 테스트 실행에서 사용되는 동시성 수준에 따라 달라집니다. 결과가 예상과 다른 경우 확인할 몇 가지 사항은 다음과 같습니다.  
   
--   동시 트랜잭션 수: 단일 스레드에서 작업을 실행할 때 메모리 내 OLTP를 사용한 성능 이점은 두 배보다 적을 수 있습니다. 래치 경합은 동시성 수준이 높은 경우에만 큰 문제가 됩니다.  
+-   동시 트랜잭션 수: 단일 스레드에서 작업을 실행할 때 메모리 내 OLTP를 사용한 성능 이점은 2배보다 적을 수 있습니다. 래치 경합은 동시성 수준이 높은 경우에만 큰 문제가 됩니다.  
   
 -   SQL Server에서 사용할 수 있는 적은 코어 수: 즉, 동시에 실행되는 트랜잭션이 SQL에서 사용할 수 있는 코어 수만큼만 있을 수 있으므로 시스템에서 동시성 수준이 낮습니다.  
   

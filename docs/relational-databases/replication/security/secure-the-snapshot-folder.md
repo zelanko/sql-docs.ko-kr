@@ -13,12 +13,12 @@ ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 831d1b43f54e64dd52226f3bc9504e622ce7b99e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a73ae886682890c68c34ac90af33438d7f7b9644
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617781"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124183"
 ---
 # <a name="secure-the-snapshot-folder"></a>스냅숏 폴더 보안 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47617781"
 > [!NOTE]  
 >  UAC(사용자 계정 컨트롤)는 관리자가 승격된 사용자 권한( *권한*이라고도 함)을 관리하는 데 유용합니다. UAC를 사용하도록 설정된 운영 체제에서 실행할 때는 관리자가 해당 관리자 권한을 사용하지 않습니다. 대신 대부분의 동작을 관리 권한이 없는 일반 사용자로 수행하며 필요한 경우에만 임시로 해당 관리자 권한을 사용합니다. UAC에서는 스냅숏 공유에 대한 관리 액세스를 거부할 수 있습니다. 따라서 스냅숏 에이전트, 배포 에이전트 및 병합 에이전트에서 사용하는 Windows 계정에 스냅숏 공유 권한을 명시적으로 부여해야 합니다. Windows 계정이 Administrators 그룹의 멤버인 경우에도 이 작업을 수행해야 합니다.  
   
- 배포 구성 마법사나 새 게시 마법사를 사용하여 배포자를 구성할 때 스냅숏 폴더의 기본값은 로컬 경로인 X:\Program Files\Microsoft SQL Server\\\*\<instance>* \MSSQL\ReplData입니다. 원격 배포자나 끌어오기 구독을 사용하는 경우에는 로컬 경로 대신 UNC 네트워크 공유(예: \\\\<*computername>* \snapshot)를 지정해야 합니다.  
+ 배포 구성 마법사나 새 게시 마법사를 사용하여 배포자를 구성할 때 스냅숏 폴더의 기본값은 로컬 경로인 X:\Program Files\Microsoft SQL Server\\*\<instance>* \MSSQL\ReplData입니다. 원격 배포자나 끌어오기 구독을 사용하는 경우에는 로컬 경로 대신 UNC 네트워크 공유(예: \\\\<*computername>* \snapshot)를 지정해야 합니다.  
   
  스냅숏 폴더에 대한 액세스 권한을 부여할 때는 폴더가 액세스되는 방법에 따라 권한을 부여해야 합니다. 다음 대화 상자 탭은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 2003에서 사용됩니다.  
   
@@ -53,10 +53,10 @@ ms.locfileid: "47617781"
  FTP를 통해 스냅숏에 액세스하는 데 필요한 암호를 설정하고 변경하는 방법은 [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md)항목의 "FTP 스냅숏 배달" 섹션을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- [대체 스냅숏 폴더 위치](../../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
+ [스냅숏 옵션 수정](../../../relational-databases/replication/snapshot-options.md)   
  [스냅숏으로 구독 초기화](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [보안 및 보호&#40;복제&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)   
- [FTP를 통해 스냅숏 전송](../../../relational-databases/replication/transfer-snapshots-through-ftp.md)  
+ [복제 보안 설정 보기 및 수정](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
+ [FTP를 통해 스냅숏 전송](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md)  
   
   

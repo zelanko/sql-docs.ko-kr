@@ -14,12 +14,12 @@ ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b85e937dc16ffe3e9561a6344829c9aae5af508c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1d5269b19f8bfb04321ac23e01d1f85b8c0861e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791171"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129463"
 ---
 # <a name="transactional-replication"></a>트랜잭션 복제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47791171"
   
  ![트랜잭션 복제 구성 요소 및 데이터 흐름](../../../relational-databases/replication/transactional/media/trnsact.gif "Transactional replication components and data flow")  
   
-##  <a name="Dataset"></a> 초기 데이터 집합  
+##  <a name="Dataset"></a> 초기 데이터 세트  
  새 트랜잭션 복제 구독자가 게시자에서 증분 변경 내용을 받으려면 구독자의 테이블에 게시자의 테이블과 같은 스키마 및 데이터가 포함되어야 합니다. 초기 데이터 세트는 일반적으로 스냅숏 에이전트에서 만들고 배포 에이전트에서 배포 및 적용한 스냅숏입니다. 초기 데이터 세트는 백업이나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Integration Services와 같은 다른 방법으로 지정할 수도 있습니다.  
   
  스냅숏을 구독자에게 배포 및 적용한 경우 초기 스냅숏을 기다리는 구독자만 영향을 받습니다. 해당 게시에 대한 다른 구독자(이미 초기화된 구독자)는 영향을 받지 않습니다.  
@@ -72,5 +72,15 @@ ms.locfileid: "47791171"
   
 ##  <a name="DistributionAgent"></a> 배포 에이전트  
  배포 에이전트는 밀어넣기 구독을 위한 배포자 또는 끌어오기 구독을 위한 구독자에서 실행됩니다. 이 에이전트는 트랜잭션을 배포 데이터베이스에서 구독자로 이동합니다. 구독이 유효성 검사용으로 표시된 경우에 배포 에이전트는 게시자와 구독자의 데이터가 일치하는지 확인하는 작업도 수행합니다.  
+
+## <a name="publication-types"></a>게시 유형 
+트랜잭션 복제는 다음과 같은 네 가지 게시 유형을 제공합니다.  
+  
+|게시 유형|설명|  
+|----------------------|-----------------|  
+|표준 트랜잭션 게시|구독자의 모든 데이터가 읽기 전용인 토폴로지에 적합합니다. 트랜잭션 복제는 구독자의 모든 데이터를 읽기 전용으로 변경하지 않습니다.<br /><br /> 표준 트랜잭션 게시는 Transact-SQL 또는 RMO(복제 관리 개체)를 사용하는 경우 기본적으로 생성됩니다. 새 게시 마법사를 사용하는 경우에는 **게시 유형** 페이지에서 **트랜잭션 게시** 를 선택하면 해당 게시가 생성됩니다.<br /><br /> 게시를 만드는 방법은 [데이터 및 데이터베이스 개체 게시](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)를 참조하세요.|  
+|업데이트할 수 있는 구독이 있는 트랜잭션 게시|이 게시 유형의 특성은 다음과 같습니다.<br /><br /> -각 위치에는 하나의 게시자와 하나의 구독자가 동일한 데이터를 가지고 있습니다. <br /> -구독자에서 행을 업데이트 할 수 있습니다.<br /> -이 토폴로지는 고가용성 및 읽기 확장성이 필요한 서버 환경에 가장 적합합니다.<br /><br />자세한 내용은 [업데이트할 수 있는 구독](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)을 참조하세요.|  
+|피어 투 피어 토폴로지|이 게시 유형의 특성은 다음과 같습니다.<br /> - 각 위치가 동일한 데이터를 가지며 게시자와 구독자 역할을 합니다.<br /> - 같은 행은 한 번에 한 위치에서만 변경될 수 있습니다.<br /> - [충돌 검색](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md) 지원  <br />- 이 토폴로지는 고가용성 및 읽기 확장성이 필요한 서버 환경에 가장 적합합니다.<br /><br />자세한 내용은 [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)을 참조하세요.|  
+|양방향 트랜잭션 복제|이 게시 유형의 특성은 다음과 같습니다.<br />양방향 복제 피어 투 피어 복제와 유사하지만 충돌 해결은 제공하지 않습니다. 또한 양방향 복제는 2개의 서버로 제한됩니다. <br /><br /> 자세한 내용은 [양방향 트랜잭션 복제](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)를 참조하세요. |  
   
   

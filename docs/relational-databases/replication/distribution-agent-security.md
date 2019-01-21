@@ -15,12 +15,12 @@ ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 836cbd7d2655b137e76bd8e6616aaaf05657bf6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f13f8769a5f97bab03b9466974c649dd2c5e7129
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662631"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135013"
 ---
 # <a name="distribution-agent-security"></a>배포 에이전트 보안
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,11 +28,11 @@ ms.locfileid: "47662631"
   
 -   새 구독 마법사에서 이 대화 상자에 액세스하는 경우 배포 에이전트를 구독자(밀어넣기 구독의 경우) 또는 배포자(끌어오기 구독의 경우)에 연결하는 컨텍스트도 지정할 수 있습니다. Windows 계정을 가장하거나 지정한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정의 컨텍스트에서 연결을 설정할 수 있습니다.  
   
--   **구독 속성** 대화 상자에서 이 대화 상자에 액세스하는 경우 해당 대화 상자의**구독자 연결**또는 **배포자 연결** 행의 속성 단추 ( **...** )를 클릭하여 배포 에이전트를 연결하는 컨텍스트를 지정합니다. **구독 속성** 대화 상자에 액세스하는 방법은 [밀어넣기 구독 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) 및 방법: [끌어오기 구독 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)을 참조하세요.  
+-   **구독 속성** 대화 상자에서 이 대화 상자에 액세스하는 경우 해당 대화 상자의**구독자 연결**또는 **배포자 연결** 행의 속성 단추 ( **...** )를 클릭하여 배포 에이전트를 연결하는 컨텍스트를 지정합니다. **구독 속성** 대화 상자에 액세스하는 방법에 대한 자세한 내용은 [밀어넣기 구독 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) 및 방법: [끌어오기 구독 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)을 참조하세요.  
   
  모든 계정이 유효해야 하며 각 계정에 대해 올바른 암호를 지정해야 합니다. 계정 및 암호의 유효성은 에이전트를 실행할 때 검사합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **Process Account**  
  배포 에이전트를 실행하는 Windows 계정을 입력합니다.  
   
@@ -96,7 +96,7 @@ Persist Security Info=False;Connection Pooling=True;
  이 문자열의 옵션 대부분은 구성 중인 DB2 서버와만 관련이 있지만 **Process Binary as Character** 옵션은 항상 **False**로 설정해야 합니다. 구독 데이터베이스를 식별하려면 **Initial Catalog** 옵션 값을 지정해야 합니다. 자세한 내용은 [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [복제의 로그인 및 암호 관리](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
+ [복제에 대한 ID 및 액세스 제어](../../relational-databases/replication/security/identity-and-access-control-replication.md)   
  [복제 에이전트 보안 모델](../../relational-databases/replication/security/replication-agent-security-model.md)   
  [복제 에이전트 개요](../../relational-databases/replication/agents/replication-agents-overview.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   

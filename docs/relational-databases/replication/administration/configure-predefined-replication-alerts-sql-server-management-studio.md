@@ -14,12 +14,12 @@ ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5738e4c46d7223561162d970a2ae9137df721191
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b90293de93fd032f7ebc1ee77d839cc2211a7e9d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505336"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136143"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>미리 정의된 복제 경고 구성(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "52505336"
   
 -   **복제: 만료된 구독 삭제**  
   
--   **복제: 유효성 검사 실패 후에 구독이 다시 초기화되었습니다.**  
+-   **복제: 유효성 검사 실패 후 구독이 다시 초기화되었습니다.**  
   
 -   **복제: 구독자가 데이터 유효성 검사에 실패했습니다.**  
   
@@ -41,7 +41,7 @@ ms.locfileid: "52505336"
   
 -   **복제: 에이전트 사용자 지정 종료**  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]의 **경고** 폴더 또는 복제 모니터의 **경고** 탭에서 이러한 경고를 구성합니다. 이 탭에 액세스하는 방법에 대한 자세한 내용은 [구독에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)을 참조하세요.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]의 **경고** 폴더 또는 복제 모니터의 **경고** 탭에서 이러한 경고를 구성합니다. 이 탭에 액세스하는 방법에 대한 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
  복제 모니터는 이러한 경고 외에도 상태 및 성능과 관련된 일련의 경고를 제공합니다. 자세한 내용은 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)를 참조하세요. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 경고 인프라를 사용하여 다른 복제 이벤트에 대한 경고도 정의할 수 있습니다. 자세한 내용은 [사용자 정의 이벤트 만들기](https://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879)를 참조하세요.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "52505336"
   
     -   **응답** 페이지에서 전자 메일의 발송 여부 및/또는 작업의 실행 여부를 지정합니다.  
   
-         **복제: 구독자가 데이터 유효성 검사에 실패했습니다**라는 경고가 표시되면 이 경고에 대한 복제에서 제공하는 응답 작업을 지정할 수 있습니다. **작업 실행**을 선택한 다음, 찾아보기 단추(**...**)를 클릭합니다. **작업 찾기** 대화 상자에서 **찾아보기**를 클릭합니다. **개체 찾아보기** 대화 상자에서 **데이터 유효성 검사에 실패한 구독 다시 초기화**를 선택합니다. 열린 두 대화 상자에서 **확인** 을 클릭합니다. 실행 시 이 작업은 구독을 다시 초기화하는 저장 프로시저에 대한 RPC(원격 프로시저 호출)를 사용합니다. 게시자가 원격 배포자를 사용하는 경우 배포자에서 게시자로의 RPC를 설정할 수 있도록 게시자에서 원격 서버 로그인을 정의해야 합니다.  
+         **복제: 구독자가 데이터 유효성 검사에 실패했습니다**라는 경고가 발생하면 복제가 이 경고에 대해 제공하는 응답 작업을 지정할 수 있습니다. **작업 실행**을 선택한 다음, 찾아보기 단추(**...**)를 클릭합니다. **작업 찾기** 대화 상자에서 **찾아보기**를 클릭합니다. **개체 찾아보기** 대화 상자에서 **데이터 유효성 검사에 실패한 구독 다시 초기화**를 선택합니다. 열린 두 대화 상자에서 **확인** 을 클릭합니다. 실행 시 이 작업은 구독을 다시 초기화하는 저장 프로시저에 대한 RPC(원격 프로시저 호출)를 사용합니다. 게시자가 원격 배포자를 사용하는 경우 배포자에서 게시자로의 RPC를 설정할 수 있도록 게시자에서 원격 서버 로그인을 정의해야 합니다.  
   
     -   **옵션** 페이지에서 응답 텍스트를 사용자 지정합니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "52505336"
   
     -   **응답** 페이지에서 전자 메일의 발송 여부 및/또는 작업의 실행 여부를 지정합니다.  
   
-         **복제: 구독자가 데이터 유효성 검사에 실패했습니다**라는 경고가 표시되면 이 경고에 대한 복제에서 제공하는 응답 작업을 지정할 수 있습니다. **작업 실행**을 선택한 다음, 찾아보기 단추(**...**)를 클릭합니다. **작업 찾기** 대화 상자에서 **찾아보기**를 클릭합니다. **개체 찾아보기** 대화 상자에서 **데이터 유효성 검사에 실패한 구독 다시 초기화**를 선택합니다. 열린 두 대화 상자에서 **확인** 을 클릭합니다. 실행 시 이 작업은 구독을 다시 초기화하는 저장 프로시저에 대한 RPC(원격 프로시저 호출)를 사용합니다. 게시자가 원격 배포자를 사용하는 경우 배포자에서 게시자로의 RPC를 설정할 수 있도록 게시자에서 원격 서버 로그인을 정의해야 합니다.  
+         **복제: 구독자가 데이터 유효성 검사에 실패했습니다**라는 경고가 발생하면 복제가 이 경고에 대해 제공하는 응답 작업을 지정할 수 있습니다. **작업 실행**을 선택한 다음, 찾아보기 단추(**...**)를 클릭합니다. **작업 찾기** 대화 상자에서 **찾아보기**를 클릭합니다. **개체 찾아보기** 대화 상자에서 **데이터 유효성 검사에 실패한 구독 다시 초기화**를 선택합니다. 열린 두 대화 상자에서 **확인** 을 클릭합니다. 실행 시 이 작업은 구독을 다시 초기화하는 저장 프로시저에 대한 RPC(원격 프로시저 호출)를 사용합니다. 게시자가 원격 배포자를 사용하는 경우 배포자에서 게시자로의 RPC를 설정할 수 있도록 게시자에서 원격 서버 로그인을 정의해야 합니다.  
   
     -   **옵션** 페이지에서 응답 텍스트를 사용자 지정합니다.  
   

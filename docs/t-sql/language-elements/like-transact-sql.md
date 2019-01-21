@@ -32,15 +32,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05489fa8c36f037ecde7d15f1e1109299bbec7f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7d8bfaf8e2b07bd34843893a67a823e6841b6d6
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625091"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299990"
 ---
 # <a name="like-transact-sql"></a>LIKE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
   특정 문자열이 지정된 패턴과 일치하는지를 확인합니다. 패턴은 일반 문자와 와일드카드 문자를 포함할 수 있습니다. 패턴 일치에서 일반 문자는 문자열에 지정된 문자와 정확하게 일치해야 합니다. 그러나 와일드카드 문자는 문자열에서 어느 한 부분만 일치하면 됩니다. LIKE 연산자에 와일드카드 문자를 사용할 경우 = 및 != 문자열 비교 연산자를 사용하는 것보다 훨씬 융통성이 있습니다. 문자열 데이터 형식의 인수가 하나라도 있을 경우 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 가능한 한 이를 문자열 데이터 형식으로 변환합니다.  
   
@@ -122,17 +125,17 @@ EXEC FindEmployee @EmpLName = 'Barb';
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
  ```
- FirstName      LastName            City
+ FirstName      LastName            City
  ----------     -------------------- --------------- 
  Angela         Barbariol            Snohomish
  David          Barber               Snohomish
  (2 row(s) affected)  
- ``` 
+ ``` 
  
-## <a name="pattern-matching-by-using-like"></a>LIKE를 사용한 패턴 일치  
- LIKE는 ASCII 패턴 일치와 유니코드 패턴 일치를 지원합니다. 모든 인수(있는 경우 *match_expression*, *pattern* 및 *escape_character* 등)가 ASCII 문자 데이터 형식인 경우 ASCII 패턴 일치가 수행됩니다. 반면에 인수 중 유니코드 데이터 형식이 있으면 모든 인수를 유니코드로 변환하고 유니코드 패턴 일치를 수행합니다. LIKE에서 유니코드 데이터(**nchar** 또는 **nvarchar** 데이터 형식)를 사용하면 후행 공백이 의미를 갖지만 유니코드 데이터가 아닌 경우에는 후행 공백에 의미가 없습니다. 유니코드 LIKE는 ISO 표준과 호환되며 ASCII LIKE는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전과 호환됩니다.  
+## Pattern Matching by Using LIKE  
+ LIKE supports ASCII pattern matching and Unicode pattern matching. When all arguments (*match_expression*, *pattern*, and *escape_character*, if present) are ASCII character data types, ASCII pattern matching is performed. If any one of the arguments are of Unicode data type, all arguments are converted to Unicode and Unicode pattern matching is performed. When you use Unicode data (**nchar** or **nvarchar** data types) with LIKE, trailing blanks are significant; however, for non-Unicode data, trailing blanks are not significant. Unicode LIKE is compatible with the ISO standard. ASCII LIKE is compatible with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- 다음 예에서는 ASCII 패턴 일치 및 유니코드 LIKE 패턴 일치가 반환하는 행의 차이를 보여 줍니다.  
+ The following is a series of examples that show the differences in rows returned between ASCII and Unicode LIKE pattern matching.  
   
 ```sql  
 -- ASCII pattern matching with char column  
@@ -219,7 +222,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
  
  ```
- FirstName             LastName             Phone
+ FirstName             LastName             Phone
  -----------------     -------------------  ------------
  Ruben                 Alonso               415-555-124  
  Shelby                Cook                 415-555-0121  
@@ -233,10 +236,10 @@ GO
  Gabrielle              Russell             415-555-0197  
  Dalton                 Simmons             415-555-0115  
  (11 row(s) affected)  
- ``` 
+ ``` 
  
-### <a name="b-using-not-like-with-the--wildcard-character"></a>2. NOT LIKE와 % 와일드카드 문자 사용  
- 다음 예에서는 `PersonPhone` 테이블에서 `415` 외의 다른 지역 번호를 포함하는 모든 전화 번호를 찾는 방법을 보여 줍니다.  
+### B. Using NOT LIKE with the % wildcard character  
+ The following example finds all telephone numbers in the `PersonPhone` table that have area codes other than `415`.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -253,7 +256,7 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
  
  ```
-FirstName              LastName            Phone
+FirstName              LastName            Phone
 ---------------------- -------------------- -------------------
 Gail                  Alexander            1 (11) 500 555-0120  
 Gail                  Butler               1 (11) 500 555-0191  
@@ -263,11 +266,11 @@ Gail                  Griffin              450-555-0171
 Gail                  Moore                155-555-0169  
 Gail                  Russell              334-555-0170  
 Gail                  Westover             305-555-0100  
-(8 row(s) affected)  
-```  
+(8 row(s) affected)  
+```  
 
-### <a name="c-using-the-escape-clause"></a>3. ESCAPE 절 사용  
- 다음 예에서는 `ESCAPE` 절과 이스케이프 문자를 사용하여 `10-15%` 테이블의 `c1` 열에서 `mytbl2`와 정확히 일치하는 문자열을 찾는 방법을 보여 줍니다.  
+### C. Using the ESCAPE clause  
+ The following example uses the `ESCAPE` clause and the escape character to find the exact character string `10-15%` in column `c1` of the `mytbl2` table.  
   
 ```sql
 USE tempdb;  
@@ -291,7 +294,7 @@ WHERE c1 LIKE '%10-15!% off%' ESCAPE '!';
 GO  
 ```  
   
-### <a name="d-using-the---wildcard-characters"></a>4. [ ] 와일드카드 문자 사용  
+### <a name="d-using-the---wildcard-characters"></a>D. [ ] 와일드카드 문자 사용  
  다음 예에서는 `Person` 테이블에서 이름이 `Cheryl` 또는 `Sheryl`인 직원을 찾습니다.  
   
 ```sql  
@@ -317,7 +320,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-like-with-the--wildcard-character"></a>5. LIKE와 % 와일드카드 문자 사용  
+### <a name="e-using-like-with-the--wildcard-character"></a>E. LIKE와 % 와일드카드 문자 사용  
  다음 예에서는 `DimEmployee` 테이블에서 전화 번호가 `612`로 시작하는 모든 직원을 찾습니다.  
   
 ```sql  
@@ -329,7 +332,7 @@ WHERE phone LIKE '612%'
 ORDER by LastName;  
 ```  
   
-### <a name="f-using-not-like-with-the--wildcard-character"></a>6. NOT LIKE와 % 와일드카드 문자 사용  
+### <a name="f-using-not-like-with-the--wildcard-character"></a>F. NOT LIKE와 % 와일드카드 문자 사용  
  다음 예에서는 `DimEmployee` 테이블에서 `612`로 시작하지 않는 모든 전화번호를 찾습니다.  의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.  
   
 ```sql  
@@ -341,7 +344,7 @@ WHERE phone NOT LIKE '612%'
 ORDER by LastName;  
 ```  
   
-### <a name="g-using-like-with-the--wildcard-character"></a>7. LIKE와 _ 와일드 카드 문자 사용  
+### <a name="g-using-like-with-the--wildcard-character"></a>G. LIKE와 _ 와일드 카드 문자 사용  
  다음 예제에서는 `DimEmployee` 테이블에서 지역 코드가 `6`으로 시작해 `2`로 끝나는 모든 전화 번호를 찾습니다. 지역 코드가 전화 번호의 첫 부분이며 추가 문자는 열 값 다음에 존재하므로 % 와일드 카드 문자는 검색 패턴의 마지막에도 포함됩니다.  
   
 ```sql  

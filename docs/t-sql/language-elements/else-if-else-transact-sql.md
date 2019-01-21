@@ -21,15 +21,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d6e241d73040a30fcca5de3114110089259ab8b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 15c28ceccbdaf6d4c4b69e9e15c356cffc0c085c
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532746"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298450"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE(IF...ELSE)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하기 위한 조건을 설정합니다. *Boolean_expression*이 TRUE로 평가되면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문(*sql_statement*) 다음의 *Boolean_expression*가 실행됩니다. 선택적인 ELSE 키워드는 *Boolean_expression*이 FALSE 또는 NULL로 평가될 때 실행되는 대체 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.  
   
@@ -117,7 +120,7 @@ END ;
 GO  
 ```  
   
-### <a name="d-using-nested-ifelse-statements"></a>4. 중첩된 IF...ELSE 문 사용  
+### <a name="d-using-nested-ifelse-statements"></a>D. 중첩된 IF...ELSE 문 사용  
  다음 예제에서는 IF... ELSE 문이 어떻게 다른 문에 중첩될 수 있는지를 보여 줍니다. `@Number` 변수를 `5`, `50` 및 `500`으로 설정하여 각 문을 테스트해 보십시오.  
   
 ```  
@@ -137,7 +140,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E. 쿼리를 부울 식의 일부로 사용  
+### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E: 쿼리를 부울 식의 일부로 사용  
  다음 예에서는 `IF...ELSE`를 사용하여 `DimProduct` 테이블에 있는 항목의 가중치에 따라 두 응답 중 사용자를 표시할 응답을 결정합니다.  
   
 ```  

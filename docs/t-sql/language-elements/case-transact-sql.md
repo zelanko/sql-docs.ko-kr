@@ -22,18 +22,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce7020eb7270ffb24f1926c165a71e8db33774e0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cf5737166a8613cbf20df5b6c48a720c4d366a64
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400727"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299682"
 ---
 # <a name="case-transact-sql"></a>CASE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 조건 목록을 평가하고 가능한 여러 결과 식 중 하나를 반환합니다.  
   
@@ -203,7 +203,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
   
 ```  
   
-### <a name="d-using-case-in-an-update-statement"></a>4. UPDATE 문에 CASE 사용  
+### <a name="d-using-case-in-an-update-statement"></a>D. UPDATE 문에 CASE 사용  
  다음 예에서는 UPDATE 문에 CASE 식을 사용하여 `VacationHours`가 0으로 설정된 직원의 열 `SalariedFlag`에 설정된 값을 확인합니다. `VacationHours`에서 10시간을 뺀 결과 음수 값이 되면 `VacationHours`가 40시간 증가되고, 그렇지 않으면 `VacationHours`가 20시간 증가됩니다. OUTPUT 절은 휴가의 이전 값과 이후 값을 표시하는 데 사용됩니다.  
   
 ```  
@@ -222,7 +222,7 @@ WHERE SalariedFlag = 0;
   
 ```  
   
-### <a name="e-using-case-in-a-set-statement"></a>5. SET 문에 CASE 사용  
+### <a name="e-using-case-in-a-set-statement"></a>E. SET 문에 CASE 사용  
  다음 예에서는 테이블 반환 함수 `dbo.GetContactInfo`에서 SET 문에 CASE 식을 사용합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 사용자와 관련된 모든 데이터는 `Person.Person` 테이블에 저장됩니다. 예를 들어 사용자는 직원, 공급업체 담당자 또는 고객일 수 있습니다. 함수는 지정된 `BusinessEntityID`의 성과 이름 및 해당 사용자에 대한 연락처 유형을 반환합니다. SET 문의 CASE 식은 `Employee`, `Vendor` 또는 `Customer` 테이블에 `BusinessEntityID` 열이 있는지 여부에 따라 `ContactType` 열에 대해 표시할 값을 결정합니다.  
   
 ```  
@@ -296,7 +296,7 @@ FROM dbo.GetContactInformation(5);
   
 ```  
   
-### <a name="f-using-case-in-a-having-clause"></a>6. HAVING 절에 CASE 사용  
+### <a name="f-using-case-in-a-having-clause"></a>F. HAVING 절에 CASE 사용  
  다음 예에서는 HAVING 절에 CASE 식을 사용하여 SELECT 문에서 반환하는 행을 제한합니다. 이 명령문은 `HumanResources.Employee` 테이블에서 각 직함에 대한 최대 시간당 급여를 반환합니다. HAVING 절은 직함을 최대 급여가 40달러가 넘는 남자 직원의 직함 또는 최대 급여가 42달러가 넘는 여자 직원의 직함으로 제한합니다.  
   
 ```  
@@ -318,7 +318,7 @@ ORDER BY MaximumRate DESC;
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="g-using-a-select-statement-with-a-case-expression"></a>7. CASE 식이 포함된 SELECT 문 사용  
+### <a name="g-using-a-select-statement-with-a-case-expression"></a>G. CASE 식이 포함된 SELECT 문 사용  
  SELECT 문 내에서 CASE 식을 사용하면 비교 값에 따라 결과 집합에서 값을 바꿀 수 있습니다. 다음 예제에서는 CASE 식을 사용하여 제품 라인 범주의 표시를 더 쉽게 이해할 수 있도록 변경합니다. 값이 없으면 "Not for sale"(판매하지 않음) 텍스트가 표시됩니다.  
   
 ```  
@@ -337,7 +337,7 @@ FROM dbo.DimProduct
 ORDER BY ProductKey;  
 ```  
   
-### <a name="h-using-case-in-an-update-statement"></a>8. UPDATE 문에 CASE 사용  
+### <a name="h-using-case-in-an-update-statement"></a>H. UPDATE 문에 CASE 사용  
  다음 예에서는 UPDATE 문에 CASE 식을 사용하여 `VacationHours`가 0으로 설정된 직원의 열 `SalariedFlag`에 설정된 값을 확인합니다. `VacationHours`에서 10시간을 뺀 결과 음수 값이 되면 `VacationHours`가 40시간 증가되고, 그렇지 않으면 `VacationHours`가 20시간 증가됩니다.  
   
 ```  

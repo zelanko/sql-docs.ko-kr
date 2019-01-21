@@ -18,12 +18,12 @@ ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e20f280df7054596f357c4864ef95177ca3e9cf5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3783bbaa861ad857efce87b82c50536757fd499
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749640"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135474"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>복제 모니터에 임계값 및 경고 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "47749640"
   
 2.  **경고** 탭을 클릭합니다. 이 탭의 옵션에 대한 자세한 내용을 보려면 메뉴 모음의 **도움말** 을 클릭하세요.  
   
-3.  **구독이 임계값 내에 만료되는 경우 경고** 또는 **대기 시간이 임계값을 초과하는 경우 경고**중 해당 확인란을 선택하여 경고를 설정합니다.  
+3.  다음 중 해당 확인란을 선택하여 경고를 설정합니다. **구독이 임계값 내에 만료되는 경우 경고** 또는 **대기 시간이 임계값을 초과하는 경우 경고** 중 해당 사항을 선택하여 경고를 설정합니다.  
   
 4.  **임계값** 열에서 경고에 대한 임계값을 설정합니다. 예를 들어 3단계에서 **대기 시간이 임계값을 초과하는 경우 경고** 를 선택한 경우 **임계값** 열에서 대기 시간에 대해 **60초** 를 선택할 수 있습니다.  
   
@@ -164,6 +164,6 @@ ms.locfileid: "47749640"
 5.  **닫기**를 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [복제 모니터링](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [복제 모니터링](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

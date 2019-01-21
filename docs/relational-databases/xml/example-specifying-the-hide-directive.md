@@ -1,5 +1,5 @@
 ---
-title: '예제: HIDE 지시어 지정 | Microsoft 문서'
+title: '예: HIDE 지시어 지정 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2a82be80206ef29b5e19fdad61b30621f3f4df1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 68330bfbb58bb356f055ad016245e05b5d3d029d
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662222"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254718"
 ---
-# <a name="example-specifying-the-hide-directive"></a>예제: HIDE 지시어 지정
+# <a name="example-specifying-the-hide-directive"></a>예: HIDE 지시어 지정
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   이 예에서는 **HIDE** 지시어 사용 방법을 보여 줍니다. 이 지시어는 쿼리에 의해 반환된 범용 테이블의 행을 정렬하기 위한 특성은 쿼리가 반환하게 하고 최종 결과 XML 문서에는 그 특성이 포함되지 않게 하려는 경우에 유용합니다.  
   
@@ -76,7 +76,7 @@ go
   <Summary>  
     <SummaryDescription>  
       <pd:Summary xmlns:pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription" xmlns="">  
-        <p1:p xmlns:p1="https://www.w3.org/1999/xhtml">Our top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain. </p1:p>  
+        <p1:p xmlns:p1="http://www.w3.org/1999/xhtml">Our top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain. </p1:p>  
       </pd:Summary>  
     </SummaryDescription>  
   </Summary>  

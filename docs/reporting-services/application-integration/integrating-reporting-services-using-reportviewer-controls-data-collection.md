@@ -1,19 +1,21 @@
 ---
-title: ReportViewer 컨트롤 2016에서 데이터 수집 | Microsoft Docs
-ms.date: 09/18/2018
+title: ReportViewer 컨트롤 2016에서 데이터 수집
+uthor: markingmyname
+ms.author: maghan
+manager: kfile
+ms.reviewer: ''
 ms.prod: reporting-services
-ms.prod_service: reporting-services-native
+ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.technology: application-integration
 ms.topic: reference
-ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 69cc665274d7463982cdfddd32d2b979e25a156e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.custom: ''
+ms.date: 09/18/2018
+ms.openlocfilehash: 52f23cd615179b774392920c84ab4370892e1dd5
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028152"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100198"
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>ReportViewer 컨트롤을 사용하여 Reporting Services 통합 - 데이터 수집
 

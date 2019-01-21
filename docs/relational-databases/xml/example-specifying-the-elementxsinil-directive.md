@@ -1,5 +1,5 @@
 ---
-title: '예제: ELEMENTXSINIL 지시어 지정 | Microsoft 문서'
+title: '예: ELEMENTXSINIL 지시어 지정 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d8a45b8142a9788ea1aae5bc81193c8a7a3120f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 050681b0b215d8dc8625bf6a4480d47c50c89b55
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660322"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256588"
 ---
-# <a name="example-specifying-the-elementxsinil-directive"></a>예제: ELEMENTXSINIL 지시어 지정
+# <a name="example-specifying-the-elementxsinil-directive"></a>예: ELEMENTXSINIL 지시어 지정
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   요소 중심 XML을 검색하기 위해 ELEMENT 지시어를 지정할 때 열에 NULL 값이 있으면 EXPLICIT 모드에서 해당 요소가 생성되지 않습니다. **xsi:nil** 특성이 TRUE 값으로 설정된 경우 NULL 값에 대한 요소를 생성하도록 요청하기 위해 선택적으로 ELEMENTXSINIL 지시어를 지정할 수 있습니다.  
   
@@ -61,7 +61,7 @@ FOR XML EXPLICIT;
   
  다음은 결과의 일부입니다.  
   
- `<Employee xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"`  
+ `<Employee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"`  
   
  `EmpID="1" AddressID="249">`  
   

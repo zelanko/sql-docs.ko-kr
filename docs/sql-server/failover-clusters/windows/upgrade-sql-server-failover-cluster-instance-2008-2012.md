@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c72f5294a7727b7d5a7903e0c12f8daa8c93cbf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a63d6e347f83e63f7f99a2e06e1122b1c93934b0
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394154"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257058"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Windows Server 2008/2008 R2/2012 클러스터에서 실행 중인 SQL Server 인스턴스 업그레이드
 
@@ -46,7 +46,7 @@ ms.locfileid: "52394154"
 
 |                                   | 모든 서버 개체와 VNN 필요 | 모든 서버 개체와 VNN 필요 | 서버 개체/VNN이 필요하지 않음\* | 서버 개체/VNN이 필요하지 않음\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
-| ***가용성 그룹? (예/아니요)***                  | ***예***                              | ***아니요***                                                            | ***예***    | ***아니요***    |
+| **_가용성 그룹? (예/아니요)_**                  | **_Y_**                              | **_N_**                                                            | **_Y_**    | **_N_**    |
 | **클러스터에서 SQL FCI만 사용**         | [시나리오 3](#scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups)                           | [시나리오 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag)                                                        | [시나리오 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [시나리오 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag) |
 | **클러스터에서 독립 실행형 인스턴스 사용** | [시나리오 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [시나리오 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [시나리오 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [시나리오 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
 \* 가용성 그룹 수신기 이름 제외
@@ -242,7 +242,7 @@ SQL FCI 인스턴스만 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnovers
 
 ### [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)]
 
--   **데이터베이스** **미러링** **엔드포인트**
+-   **데이터베이스 미러링 엔드포인트**
 
     SQL 관점에서 데이터베이스 미러링 엔드포인트는 시스템 테이블과 함께 새로운 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스로 마이그레이션됩니다. 마이그레이션 전에 방화벽에 적절한 규칙이 적용되어 있고 동일한 포트에서 다른 프로세스가 수신 대기하고 있지 않은지 확인하세요.
 
@@ -256,17 +256,17 @@ SQL FCI 인스턴스만 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnovers
 
 ### <a name="replication"></a>복제
 
--   **원격** **배포자,** **게시자,** **구독자**
+-   **원격 배포자, 게시자, 구독자**
 
     배포자와 게시자 간의 관계는 새 컴퓨터로 올바르게 확인되는, 둘을 호스팅하는 컴퓨터의 VNN에만 좌우됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업도 시스템 테이블과 함께 올바르게 마이그레이션되므로 다양한 복제 에이전트가 계속 평상시처럼 실행될 수 있습니다. 마이그레이션을 수행하기 전에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 자체나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업을 실행 중인 Windows 계정은 대상 환경에서 동일한 권한을 가져야 합니다. 게시자와 구독자와의 통신은 평상시처럼 실행됩니다.
 
--   **스냅숏** **폴더**
+-   **스냅숏 폴더**
 
     마이그레이션 전에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능이 사용하는 모든 네트워크 공유는 대상 환경의 컴퓨터가 원본 환경과 동일한 권한으로 액세스할 수 있어야 합니다. 마이그레이션 전에 이 사실을 확인해야 합니다.
 
 ### <a name="service-broker"></a>Service Broker
 
--   **Service** **Broker** **엔드포인트**
+-   **Service broker 엔드포인트**
 
     [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관점에서 엔드포인트와 관련된 문제는 없습니다. 마이그레이션 전에 동일한 포트에서 이미 수신 대기하고 있는 프로세스가 없고, 방화벽 규칙이 해당 포트를 차단하고 있지 않은지, 명시적으로 포트를 허용하는 방화벽 규칙이 있는지 확인해야 합니다.
 
@@ -278,7 +278,7 @@ SQL FCI 인스턴스만 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnovers
 
     경로는 대상의 가상 네트워크 이름에 따라 달라집니다. 컴퓨터 이름과 SQL FCI 네트워크 이름의 경우 새 환경의 올바른 컴퓨터로 올바르게 확인됩니다. 다른 모든 참조된 VNN도 새 컴퓨터로 리디렉션되어야 합니다.
 
--   **원격** **서비스** **바인딩**
+-   **원격 서비스 바인딩**
 
     원격 서비스 바인딩을 사용하는 모든 사용자는 올바르게 마이그레이션되기 때문에 원격 서비스 바인딩은 마이그레이션 후에 올바르게 작동합니다.
 
@@ -288,7 +288,7 @@ SQL FCI 인스턴스만 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnovers
 
     작업은 시스템 데이터베이스와 함께 올바르게 마이그레이션됩니다. SQL 에이전트 작업 또는 SQL 에이전트 자체를 실행하는 모든 사용자는 대상 컴퓨터에 대해 필수 구성 요소에 지정된 것과 동일한 사용 권한을 갖습니다.
 
--   **경고 및** **연산자**
+-   **경고 및 연산자**
 
     경고 및 연산자는 시스템 데이터베이스와 함께 올바르게 마이그레이션됩니다.
 

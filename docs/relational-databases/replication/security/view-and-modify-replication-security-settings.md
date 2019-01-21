@@ -17,12 +17,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 21008fca4e8bb75b9daace2d83cd166dafc79eb9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9c15f88e1bf3e7d07d09c5d92ceff5a3face1ade
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521607"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135413"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>복제 보안 설정 보기 및 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "52521607"
   
      [RMO(복제 관리 개체)](#RMOProcedure)  
   
--   **Follow Up:**  [After you modify replication security settings](#FollowUp)  
+-   **후속 작업:**  [복제 보안 설정 수정 후](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
@@ -144,9 +144,9 @@ ms.locfileid: "52521607"
   
 1.  게시자의 **구독 속성 - \<Subscription>** 대화 상자에서 다음과 같이 변경할 수 있습니다.  
   
-    -   배포 에이전트를 실행하고 배포자에 배포 에이전트를 연결하는 계정을 변경하려면 **에이전트 프로세스 계정** 행을 클릭한 다음, 행에 있는 속성 단추(**...**)를 클릭합니다. **배포 에이전트 보안** 대화 상자에서 계정과 암호를 지정합니다.  
+    -   배포 에이전트를 실행하고 배포자에 배포 에이전트를 연결하는 계정을 변경하려면 **에이전트 프로세스 계정** 행을 클릭한 다음 행에 있는 속성 단추 (**...**)를 클릭합니다. **배포 에이전트 보안** 대화 상자에서 계정과 암호를 지정합니다.  
   
-    -   구독자에 배포 에이전트를 연결하는 컨텍스트를 변경하려면 **구독자 연결** 행을 클릭한 다음, 행에 있는 속성 단추(**...**)를 클릭합니다. **연결 정보 입력** 대화 상자에서 컨텍스트를 지정합니다.  
+    -   구독자에 배포 에이전트를 연결하는 컨텍스트를 변경하려면 **구독자 연결** 행을 클릭한 다음 행에 있는 속성 단추 (**...**)를 클릭합니다. **연결 정보 입력** 대화 상자에서 컨텍스트를 지정합니다.  
   
          지연 업데이트 구독을 사용할 경우 큐 판독기 에이전트도 구독자에 연결하기 위해 여기에서 지정한 컨텍스트를 사용합니다.  
   
@@ -156,11 +156,11 @@ ms.locfileid: "52521607"
   
 1.  구독자의 **구독 속성 - \<Subscription>** 대화 상자에서 다음과 같이 변경할 수 있습니다.  
   
-    -   배포 에이전트를 실행하고 구독자에 배포 에이전트를 연결하는 계정을 변경하려면 **에이전트 프로세스 계정** 행을 클릭한 다음, 행에 있는 속성 단추(**...**)를 클릭합니다. **배포 에이전트 보안** 대화 상자에서 계정과 암호를 지정합니다.  
+    -   배포 에이전트를 실행하고 구독자에 배포 에이전트를 연결하는 계정을 변경하려면 **에이전트 프로세스 계정** 행을 클릭한 다음 행에 있는 속성 단추 (**...**)를 클릭합니다. **배포 에이전트 보안** 대화 상자에서 계정과 암호를 지정합니다.  
   
          지연 업데이트 구독을 사용할 경우 큐 판독기 에이전트도 구독자에 연결하기 위해 여기에서 지정한 컨텍스트를 사용합니다.  
   
-    -   배포자에 배포 에이전트를 연결하는 컨텍스트를 변경하려면 **배포자 연결** 행을 클릭한 다음, 행에 있는 속성 단추(**...**)를 클릭합니다. **연결 정보 입력** 대화 상자에서 컨텍스트를 지정합니다.  
+    -   배포자에 배포 에이전트를 연결하는 컨텍스트를 변경하려면 **배포자 연결** 행을 클릭한 다음 행에 있는 속성 단추 (**...**)를 클릭합니다. **연결 정보 입력** 대화 상자에서 컨텍스트를 지정합니다.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -168,9 +168,9 @@ ms.locfileid: "52521607"
   
 1.  게시자의 **구독 속성 - \<Subscription>** 대화 상자에서 다음과 같이 변경할 수 있습니다.  
   
-    -   병합 에이전트를 실행하고 게시자 및 배포자에 병합 에이전트를 연결하는 계정을 변경하려면 **에이전트 프로세스 계정** 행을 클릭한 다음, 행에 있는 속성 단추(**...**)를 클릭합니다. **병합 에이전트 보안** 대화 상자에서 계정과 암호를 지정합니다.  
+    -   병합 에이전트를 실행하고 게시자 및 배포자에 병합 에이전트를 연결하는 계정을 변경하려면 **에이전트 프로세스 계정** 행을 클릭한 다음 행에 있는 속성 단추 (**...**)를 클릭합니다. **병합 에이전트 보안** 대화 상자에서 계정과 암호를 지정합니다.  
   
-    -   구독자에 병합 에이전트를 연결하는 컨텍스트를 변경하려면 **구독자 연결** 행을 클릭한 다음, 행에 있는 속성 단추(**...**)를 클릭합니다. **연결 정보 입력** 대화 상자에서 컨텍스트를 지정합니다.  
+    -   구독자에 병합 에이전트를 연결하는 컨텍스트를 변경하려면 **구독자 연결** 행을 클릭한 다음 행에 있는 속성 단추 (**...**)를 클릭합니다. **연결 정보 입력** 대화 상자에서 컨텍스트를 지정합니다.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -178,15 +178,15 @@ ms.locfileid: "52521607"
   
 1.  구독자의 **구독 속성 - \<Subscription>** 대화 상자에서 다음과 같이 변경할 수 있습니다.  
   
-    -   병합 에이전트를 실행하고 구독자에 병합 에이전트를 연결하는 계정을 변경하려면 **에이전트 프로세스 계정** 행을 클릭한 다음, 행에 있는 속성 단추(**...**)를 클릭합니다. **병합 에이전트 보안** 대화 상자에서 계정과 암호를 지정합니다.  
+    -   병합 에이전트를 실행하고 구독자에 병합 에이전트를 연결하는 계정을 변경하려면 **에이전트 프로세스 계정** 행을 클릭한 다음 행에 있는 속성 단추 (**...**)를 클릭합니다. **병합 에이전트 보안** 대화 상자에서 계정과 암호를 지정합니다.  
   
-    -   게시자 및 배포자에 병합 에이전트를 연결하는 컨텍스트를 변경하려면 **게시자 연결** 행을 클릭한 다음, 행에 있는 속성 단추(**...**)를 클릭합니다. **연결 정보 입력** 대화 상자에서 컨텍스트를 지정합니다.  
+    -   게시자 및 배포자에 병합 에이전트를 연결하는 컨텍스트를 변경하려면 **게시자 연결** 행을 클릭한 다음 행에 있는 속성 단추 (**...**)를 클릭합니다. **연결 정보 입력** 대화 상자에서 컨텍스트를 지정합니다.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-change-the-account-under-which-the-queue-reader-agent-runs"></a>큐 판독기 에이전트가 실행되는 계정을 변경하려면  
   
-1.  **배포자 속성 - \<Distributor>** 대화 상자의 **일반** 페이지에서 배포 데이터베이스 옆에 있는 속성(**…**)단추를 클릭합니다.  
+1.  **배포자 속성 - \<Distributor>** 대화 상자의 **일반** 페이지에서 배포 데이터베이스 옆에 있는 속성(**…**) 단추를 클릭합니다.  
   
 2.  **배포 데이터베이스 속성 - \<Database>** 대화 상자에서 **에이전트 프로세스 계정** 입력란 옆에 있는 **보안 설정** 단추를 클릭합니다.  
   
@@ -218,7 +218,7 @@ ms.locfileid: "52521607"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>끌어오기 구독 즉시 업데이트에 대한 보안 설정을 변경하려면  
   
-1.  구독자의 **구독 속성 - \<Subscription>** 대화 상자에서 **게시자 연결** 행을 클릭한 다음, 행에 있는 속성(**…**) 단추를 클릭합니다.  
+1.  구독자의 **구독 속성 - \<Subscription>** 대화 상자에서 **게시자 연결** 행을 클릭한 다음 행에 있는 속성(**…**) 단추를 클릭합니다.  
   
 2.  **연결 정보 입력** 대화 상자에서 다음 옵션 중 하나를 선택합니다.  
   
@@ -574,10 +574,10 @@ ms.locfileid: "52521607"
 ## <a name="see-also"></a>참고 항목  
  [Replication Management Objects Concepts](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [복제 스크립트 업그레이드&#40;복제 Transact-SQL 프로그래밍&#41;](../../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
- [복제의 로그인 및 암호 관리](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
+ [복제에 대한 ID 및 액세스 제어](../../../relational-databases/replication/security/identity-and-access-control-replication.md)   
  [복제 에이전트 보안 모델](../../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [보안 및 보호&#40;복제&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)   
+ [복제 보안 설정 보기 및 수정](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
   
   

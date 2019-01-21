@@ -9,23 +9,24 @@ ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.monitor.subscription.synchhistory.f1
+- sql13.rep.monitor.subscription.downlevelsynchhistory.f1
 ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f283cc069a5849804b078d1d36697e42c4df2d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b19c1a55e81973ee5f0ad196d6ba5c9cd89f8a4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821821"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134653"
 ---
 # <a name="subscription-synchronization-history"></a>구독, 동기화 기록
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **동기화 기록** 탭은 상태, 아티클 통계, 기록, 정보 메시지, 모든 오류 메시지 등 병합 에이전트에 대한 자세한 정보를 표시합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **보기** 메뉴에서 보려는 병합 에이전트 세션을 선택한 다음 **병합 에이전트의 세션**표에서 특정 세션을 선택합니다. **선택한 세션에서 처리한 아티클**표에 이 세션에 대한 자세한 정보가 표시됩니다.  
   
  **보기**  
@@ -99,8 +100,8 @@ ms.locfileid: "47821821"
   
 ## <a name="see-also"></a>참고 항목  
  [복제 모니터 시작](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
- [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
+ [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication.md)   
  [복제 에이전트 개요](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

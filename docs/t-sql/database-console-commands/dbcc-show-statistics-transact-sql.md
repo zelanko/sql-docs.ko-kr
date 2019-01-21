@@ -34,12 +34,12 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f144425f3fffa90d9c123a2c7c8013ac43babcb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 234d124260e007cd43a52cc9baa8d2475d1db91a
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726973"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206339"
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,7 +87,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  심각도가 0에서 10 사이인 모든 정보 메시지를 표시하지 않습니다.  
   
- STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,***n* ]  
+ STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,**_n_ ]  
  이 옵션 중 하나 이상을 지정하면 문에서 반환하는 결과 집합이 지정한 옵션으로 제한됩니다. 옵션을 지정하지 않으면 모든 통계 정보가 반환됩니다.  
   
  STATS_STREAM은 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]입니다.  
@@ -113,7 +113,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 |열 이름|설명|  
 |-----------------|-----------------|  
-|모든 밀도|밀도는 1/ *고유 값*입니다. 결과에는 통계 개체에 있는 각 열 접두사의 밀도가 한 행씩 표시됩니다. 고유 값은 행별 및 열 접두사별 열 값의 고유한 목록입니다. 예를 들어 통계 개체가 키 열 (A, B, C)를 포함하는 경우 결과에서 밀도는 이러한 각 열 접두사의 고유 값 목록인 (A), (A,B) 및 (A, B, C)로 보고됩니다. 접두사 (A, B, C)를 사용하면 이러한 각 목록은 고유 값 목록 (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7)입니다. 접두사 (A, B)를 사용하면 동일한 열 값은 이러한 고유 값 목록 (3, 5), (4, 4) 및 (4, 5)를 가집니다.|  
+|모든 밀도|밀도는 1/ *고유 값*입니다. 결과에는 통계 개체에 있는 각 열 접두사의 밀도가 한 행씩 표시됩니다. 고유 값은 행별 및 열 접두사별 열 값의 고유한 목록입니다. 예를 들어 통계 개체가 키 열 (A, B, C)를 포함하는 경우 결과에서 밀도는 이러한 각 열 접두사의 고유 값 목록인 (A), (A,B) 및 (A, B, C)로 보고됩니다. 접두사 (A, B, C)를 사용하면 이러한 각 목록은 다음과 같은 고유 값 목록입니다. (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). 접두사 (A, B)를 사용하면 동일한 열 값은 고유 값 목록 (3, 5), (4, 4) 및 (4, 5)를 가집니다.|  
 |평균 길이|열 접두사의 열 값 목록을 저장하기 위한 평균 길이(바이트)입니다. 예를 들어 목록 (3, 5, 6)의 각 값에 4바이트가 필요한 경우 길이는 12바이트입니다.|  
 |열|모든 밀도 및 평균 길이가 표시되는 접두사의 열 이름입니다.|  
   
@@ -125,7 +125,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |RANGE_ROWS|상한을 제외한 히스토그램 단계 내에 열 값이 있는 예상 행 수입니다.|  
 |EQ_ROWS|히스토그램 단계에서 상한과 열 값이 동일한 예상 행 수입니다.|  
 |DISTINCT_RANGE_ROWS|상한을 제외한 히스토그램 단계 내에 고유한 열 값이 있는 예상 행 수입니다.|  
-|AVG_RANGE_ROWS|상한을 제외한 히스토그램 단계 내에 중복 열 값이 있는 평균 행 수입니다(DISTINCT_RANGE_ROWS > 0인 경우 RANGE_ROWS/DISTINCT_RANGE_ROWS).| 
+|AVG_RANGE_ROWS|히스토그램 단계 내에 중복된 열 값이 있는 평균 행 수(상한 제외)입니다. DISTINCT_RANGE_ROWS가 0보다 크면 AVG_RANGE_ROWS는 RANGE_ROWS를 DISTINCT_RANGE_ROWS로 나누어 계산합니다. DISTINCT_RANGE_ROWS가 0이면 AVG_RANGE_ROWS는 히스토그램 단계에 대해 1을 반환합니다.| 
   
 ## <a name="Remarks"></a> 주의 
 

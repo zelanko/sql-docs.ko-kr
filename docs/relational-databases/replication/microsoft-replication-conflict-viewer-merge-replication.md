@@ -13,12 +13,12 @@ ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 10b67088d8c7fde760db975070bf7bc53860d107
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d27c90646aa8bae800780af97f9100427ccc06b6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545678"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124483"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Microsoft 복제 충돌 뷰어(병합 게시)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "52545678"
 > [!NOTE]  
 >  논리적 레코드와 관련된 충돌은 충돌 뷰어에 표시되지 않습니다. 이러한 충돌에 대한 정보를 보려면 복제 저장 프로시저를 사용합니다. 자세한 내용은 [병합 게시에 대한 충돌 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)을 참조하세요.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  복제 충돌 뷰어는 두 개의 섹션으로 나뉘어져 있습니다. 대화 상자의 위쪽 섹션에 선택한 테이블의 충돌 목록이 표시됩니다. 충돌 목록에서 항목을 클릭하면 대화 상자의 아래쪽 섹션에 해당 충돌에 대한 세부 정보가 표시됩니다.  
   
  충돌이 발생한 원인(예: 게시자 및 구독자 모두에서 같은 행 업데이트)에 대한 정보는 대화 상자의 아래쪽 섹션에 표시됩니다. 아래쪽 섹션에서 충돌 데이터는**충돌 시 적용되는 내용** 및 **충돌 시 변경 내용 무시**중 해당하는 열에 표시됩니다. 업데이트된 데이터와 삭제된 데이터 간에 충돌이 있다면 충돌 시 삭제된 쪽을 표시하는 데이터는 없습니다. 이 경우 복제 충돌 뷰어에서는 행이 한 위치에서 삭제되었고 다른 위치에서는 업데이트되었음을 나타내는 메시지를 열 중 하나에 표시합니다. 권장 해결 방법도 표시됩니다.  
@@ -72,8 +72,8 @@ ms.locfileid: "52545678"
  **처음 다섯 개의 열 및 충돌하는 데이터를 포함하는 기타 열 표시**  
  처음 5개 열과 충돌이 발생한 기타 모든 열을 표시하려면 선택합니다. 이 옵션은 테이블에 많은 열이 있지만 충돌 해결에 가장 도움이 되는 열만 보려는 경우에 유용합니다. 기본 키 또는 이름 필드와 같이 행을 식별하는 필드가 테이블의 앞쪽 열에 포함되어 있는 경우가 많으므로 처음 5개 열은 항상 이 뷰에 포함됩니다.  
   
- **열 정보 표시**(**…**)  
- 열 정보를 보려면 **테이블 이름**, **열 이름**, **데이터 형식**및 **열 값**을 클릭합니다. **열 값** 은 읽기 전용으로 표시되지 않는 경우 편집할 수 있습니다.  
+ **열 정보 표시** (**…**)  
+ 테이블 이름, 열 이름, **데이터 이름**, **열 이름**, **데이터 형식** 및 **열 값**과 같은 열 정보를 보려면 클릭합니다. **열 값** 은 읽기 전용으로 표시되지 않는 경우 편집할 수 있습니다.  
   
  **적용되는 내용 전송**  
  충돌 해결 프로그램에서 적용되는 내용으로 결정한 행을 유지하려면 클릭합니다. 이 단추를 클릭하기 전에 읽기 전용으로 표시되지 않은 모든 열의 값을 변경할 수 있습니다.  

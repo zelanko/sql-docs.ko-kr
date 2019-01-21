@@ -31,18 +31,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4253de9ed6c538640762ac415acf4759ea83567c
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: a80ecfd82a50f7c69645901733ad74234f0dfd9d
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50969954"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298580"
 ---
 # <a name="getdate-transact-sql"></a>GETDATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 현재 데이터베이스 시스템 타임스탬프를 데이터베이스 표준 시간대 오프셋 없이 **datetime** 값으로 반환합니다. 이 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 운영 체제에서 파생됩니다.  
 
@@ -150,7 +150,7 @@ GETUTCDATE()       20:18:45.3470000
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예에서는 현재 날짜 및 시간을 반환하는 3개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 함수를 사용하여 시간, 날짜 또는 두 가지 모두 반환합니다. 값은 순차적으로 반환되므로 소수 자릿수 초가 서로 다를 수 있습니다.  
   
-### <a name="d-getting-the-current-system-date-and-time"></a>4. 현재 시스템의 날짜 및 시간 가져오기  
+### <a name="d-getting-the-current-system-date-and-time"></a>D. 현재 시스템의 날짜 및 시간 가져오기  
   
 ```  
 SELECT SYSDATETIME()  
@@ -158,7 +158,7 @@ SELECT SYSDATETIME()
     ,GETDATE();  
 ```  
   
-### <a name="e-getting-the-current-system-date"></a>5. 현재 시스템의 날짜 가져오기  
+### <a name="e-getting-the-current-system-date"></a>E. 현재 시스템의 날짜 가져오기  
   
 ```  
 SELECT CONVERT (date, SYSDATETIME())  
@@ -167,7 +167,7 @@ SELECT CONVERT (date, SYSDATETIME())
   
 ```  
   
-### <a name="f-getting-the-current-system-time"></a>6. 현재 시스템의 시간 가져오기  
+### <a name="f-getting-the-current-system-time"></a>F. 현재 시스템의 시간 가져오기  
   
 ```  
 SELECT CONVERT (time, SYSDATETIME())  

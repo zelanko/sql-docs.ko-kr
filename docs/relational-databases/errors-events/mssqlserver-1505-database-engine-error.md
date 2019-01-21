@@ -12,12 +12,12 @@ ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e63f83970eaf4d96f4d4f02494716914e8ca6a9c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8f5db32be5b749ad2f9b83050c3d4edb0ae30c27
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662932"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226480"
 ---
 # <a name="mssqlserver1505"></a>MSSQLSERVER_1505
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51662932"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|DUP_KEY|  
-|메시지 텍스트|개체 이름 '%.*ls' 및 인덱스 이름 '%.\*ls'에 키가 중복되므로 CREATE UNIQUE INDEX 문이 종료되었습니다.  중복 키 값은 %ls입니다.|  
+|메시지 텍스트|개체 이름 '%.\*ls' 및 인덱스 이름 '%.\*ls'에 키가 중복되므로 CREATE UNIQUE INDEX 문이 종료되었습니다.  중복 키 값은 %ls입니다.|  
   
 ## <a name="explanation"></a>설명  
 이 오류는 고유 인덱스를 만들려고 했지만 테이블에 지정된 중복 값을 가진 행이 두 개 이상 있는 경우에 발생합니다. 고유 인덱스는 인덱스를 만들고 UNIQUE 키워드를 지정하거나 UNIQUE 제약 조건을 만들 때 생성됩니다. 테이블은 인덱스 또는 제약 조건에 정의된 열에 중복 값이 있는 행을 포함할 수 없습니다.  
@@ -60,7 +60,7 @@ SELECT LastName, FirstName, count(*) FROM dbo.Employee GROUP BY LastName, FirstN
   
 -   고유 인덱스 또는 제약 조건을 만들 열을 선택할 때는 NOT NULL로 정의된 열을 선택합니다. 이렇게 하면 둘 이상의 행에서 키 값이 NULL인 경우 발생하는 고유성 위반의 가능성을 없앨 수 있습니다.  
   
--   중복 값이 데이터 입력 오류로 인한 것이면 데이터를 직접 수정한 다음 인덱스나 제약 조건을 만듭니다. 테이블에서 중복 행을 제거하는 방법에 대한 자세한 내용은 기술 자료 문서 139444 [SQL Server의 테이블에서 중복 행을 제거하는 방법](https://support.microsoft.com/kb/139444)을 참조하세요.  
+-   중복 값이 데이터 입력 오류로 인한 것이면 데이터를 직접 수정한 다음 인덱스나 제약 조건을 만듭니다. 테이블에서 중복 행을 제거하는 방법은 기술 자료 문서 139444: [SQL Server의 테이블에서 중복 행을 제거하는 방법](https://support.microsoft.com/kb/139444)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
 [CREATE INDEX&#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)  

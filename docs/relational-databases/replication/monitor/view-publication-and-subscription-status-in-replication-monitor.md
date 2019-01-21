@@ -22,12 +22,12 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 851431754767545977c43c19b44880c54543872d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b11a1206e691e834c3ed44d7ab83c73ffc002ec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613442"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127739"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>복제 모니터에서 게시 및 구독 상태 보기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,11 +55,11 @@ ms.locfileid: "47613442"
   
  **게시 및 구독 상태를 보려면**  
   
--   복제 모니터: [게시에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md) 및 [구독에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
+-   복제 모니터: [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md) 
   
  **에이전트에 대한 자세한 정보를 보려면**  
   
--   복제 모니터: [게시 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md) 및 [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)  
+-   복제 모니터: [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).
   
 ## <a name="publication-status-values"></a>게시 상태 값  
  다음 표에서는 게시 상태 값과 해당 아이콘을 우선 순위순으로 보여 줍니다.  
@@ -113,6 +113,6 @@ ms.locfileid: "47613442"
 |비동기화 중|![UI 아이콘: 복제 에이전트 중지됨](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "UI icon: replication agent stopped")|  
   
 ## <a name="see-also"></a>참고 항목  
- [복제 모니터링](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [복제 모니터링](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

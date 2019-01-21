@@ -1,5 +1,5 @@
 ---
-title: 게시자 설정 | Microsoft 문서
+title: SQL Server 복제 '게시자 설정' 대화 상자 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,18 +15,18 @@ ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9bfb4b85bddf33ee4631f2fa2f1799fa8cb593cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24def3d19d38356bb48886a64a0566254aeb1aec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827361"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132563"
 ---
-# <a name="publisher-settings"></a>게시자 설정
+# <a name="sql-server-replication-publisher-settings-dialog-box"></a>SQL Server 복제 '게시자 설정' 대화 상자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **게시자 설정** 대화 상자에서 복제 모니터의 왼쪽 창에 추가된 게시자에 대한 설정을 변경할 수 있습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **게시자 연결**  
  복제 모니터에서 게시자에 연결하기 위해 사용하는 연결 속성 및 자격 증명을 보고 변경할 수 있는 **서버에 연결** 대화 상자를 시작하려면 클릭합니다.  
   
@@ -50,6 +50,6 @@ ms.locfileid: "47827361"
   
 ## <a name="see-also"></a>참고 항목  
  [복제 모니터 시작](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

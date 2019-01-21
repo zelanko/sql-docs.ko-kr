@@ -19,12 +19,12 @@ ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fd7cf407f3634824f18137ec4539c56d930221c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6818a3ea8879b0fe49743e83261e120894cc359
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800201"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130753"
 ---
 # <a name="deny-full-text-permissions-transact-sql"></a>DENY 전체 텍스트 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ DENY permission [ ,...n ] ON
  *permission*  
  사용 권한의 이름입니다. 보안 개체에 대한 사용 권한의 올바른 매핑에 대해서는 이 항목 뒷부분의 "주의" 섹션에 설명되어 있습니다.  
   
- ON FULLTEXT CATALOG **::***full-text_catalog_name*  
+ ON FULLTEXT CATALOG **::**_full-text_catalog_name_  
  사용 권한을 거부할 전체 텍스트 카탈로그를 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
- ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
+ ON FULLTEXT STOPLIST **::**_full-text_stoplist_name_  
  사용 권한을 거부할 전체 텍스트 중지 목록을 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
  *database_principal*  

@@ -1,7 +1,7 @@
 ---
 title: CREATE SERVER AUDIT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 01/07/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 624e20f25deda3e226cf060f0793c33022289b1c
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 150f5f4ee5b15f31cdc793001874e3c1e7a9f9e3
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979949"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100708"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "53979949"
 ```  
 CREATE SERVER AUDIT audit_name  
 {  
-    TO { [ FILE (<file_options> [ , ...n ] ) ] | APPLICATION_LOG | SECURITY_LOG | URL}  
+    TO { [ FILE (<file_options> [ , ...n ] ) ] | APPLICATION_LOG | SECURITY_LOG | URL | EXTERNAL_MONITOR }  
     [ WITH ( <audit_options> [ , ...n ] ) ]   
     [ WHERE <predicate_expression> ]  
 }  
@@ -75,11 +75,10 @@ CREATE SERVER AUDIT audit_name
 ```  
   
 ## <a name="arguments"></a>인수  
- TO { FILE | APPLICATION_LOG | SECURITY_LOG | URL  
- 감사 대상의 위치를 결정합니다. 이 옵션은 이진 파일, Windows 응용 프로그램 로그 또는 Windows 보안 로그입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 Windows 보안 로그에 쓸 수 없습니다. 자세한 내용은 [보안 로그에 SQL Server Audit 이벤트 쓰기](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)를 참조하세요.  
+ { FILE | APPLICATION_LOG | SECURITY_LOG | URL | EXTERNAL_MONITOR } 감사 대상의 위치를 결정합니다. 이 옵션은 이진 파일, Windows 응용 프로그램 로그 또는 Windows 보안 로그입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 Windows 보안 로그에 쓸 수 없습니다. 자세한 내용은 [보안 로그에 SQL Server Audit 이벤트 쓰기](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)를 참조하세요.  
 
 > [!IMPORTANT]
-> Azure SQL Database Managed Instance에서 SQL Audit은 서버 수준에서 작동하며 Azure Blob Storage에 `.xel` 파일을 저장합니다.
+> Azure SQL Database Managed Instance에서 SQL Audit는 서버 수준에서 작동합니다. 위치는 `URL` 또는 `EXTERNAL_MONITOR`만 될 수 있습니다.
   
  FILEPATH ='*os_file_path*'  
  감사 로그의 경로입니다. 파일 이름은 감사 이름과 감사 GUID를 기준으로 생성됩니다.  

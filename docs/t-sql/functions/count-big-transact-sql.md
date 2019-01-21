@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26a078bd0e34344cfa84abc336a125e79af18bab
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: e4e1fef3fdaad1b7c8a1bd2b82f8ee1f1da8f76d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336222"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130843"
 ---
 # <a name="countbig--sql"></a>COUNT_BIG(-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -74,7 +74,7 @@ COUNT_BIG(ALL *식*)은 그룹에 포함된 각 행의 *식*을 계산하여 Nul
   
 COUNT_BIG(DISTINCT *식*)은 그룹에 포함된 각 행의 *식*을 계산하여 Null이 아닌 고유 값의 수를 반환합니다.
   
-COUNT_BIG은 OVER 및 ORDER BY 절 ***없이*** 사용되는 경우 결정적 함수이고, COUNT_BIG은 OVER 및 ORDER BY 절과 ‘함께’ 사용되는 경우 비결정적 함수입니다.**** 자세한 내용은 [결정적 및 비결정 함수](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)를 참조하세요.
+COUNT_BIG은 OVER 및 ORDER BY 절 **_없이_** 사용되는 경우 결정적 함수입니다. COUNT_BIG은 OVER 및 ORDER BY 절과 **_함께_** 사용되는 경우 비결정적 함수입니다. 자세한 내용은 [결정적 및 비결정 함수](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)를 참조하세요.
   
 ## <a name="examples"></a>예  
 예제는 [COUNT&#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md)을 참조하세요.

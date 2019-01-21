@@ -1,7 +1,7 @@
 ---
-title: '자습서: SQL Server 2016에서 Azure Blob Storage 서비스 사용 | Microsoft 문서'
+title: '자습서: SQL Server 2016에서 Azure Blob 스토리지 서비스 사용 | Microsoft Docs'
 ms.custom: ''
-ms.date: 01/07/2016
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -15,14 +15,15 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: abbccb66ca86fb80991c6f0733e1cbfa0ee8a8e8
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: 1af4926f367b79c7e4cc9117042d0b21e4f47b77
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302846"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206356"
 ---
-# <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>자습서: SQL Server 2016에서 Azure Blob Storage 서비스 사용
+# <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>자습서: SQL Server 2016에서 Azure Blob 스토리지 서비스 사용
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Microsoft Azure Blob Storage 서비스에서 SQL Server 2016 사용 자습서를 시작합니다. 이 자습서는 SQL Server 데이터 파일 및 SQL Server 백업에 Microsoft Azure Blob Storage 서비스를 사용하는 방법을 이해하는 데 도움이 됩니다.  
   
@@ -30,7 +31,8 @@ Microsoft Azure Blob Storage 서비스에 대한 SQL Server 통합 지원은 SQL
 
 이 자습서에서는 여러 섹션을 통해 Microsoft Azure Blob Storage 서비스에서 SQL Server 데이터 파일을 사용하는 방법을 보여 줍니다. 각 섹션은 특정 작업을 중심으로 하며, 섹션을 순서대로 완료해야 합니다. 먼저 저장된 액세스 정책과 공유 액세스 서명을 사용하여 Blob Storage에 새 컨테이너를 만드는 방법을 알아봅니다. 그런 다음 SQL Server 자격 증명을 만들어 Azure Blob Storage에 SQL Server를 통합하는 방법을 살펴봅니다. 데이터베이스를 Blob 스토리지에 백업하고 Azure 가상 머신에 복원합니다. SQL Server 2016 파일-스냅숏 트랜잭션 로그 백업을 사용하여 특정 시점 및 새 데이터베이스로 복원합니다. 최종적으로, 이 자습서에서는 파일-스냅숏 백업 이해와 작업에 도움이 되도록 메타데이터 시스템 저장 프로시저 및 함수를 사용하는 방법을 보여 줍니다.
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>사전 요구 사항
+
 이 자습서를 완료하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 백업 및 복원 개념과 T-SQL 구문에 대해 잘 알고 있어야 합니다. 이 자습서를 사용하려면 Azure Storage 계정, SSMS(SQL Server Management Studio), SQL Server 온-프레미스의 인스턴스에 대한 액세스, SQL Server 2016을 실행하는 Azure VM(가상 머신)에 대한 액세스 및 AdventureWorks2016 데이터베이스가 필요합니다. 또한 BACKUP 및 RESTORE 명령을 실행하는 데 사용하는 계정은 **모든 자격 증명 변경** 권한이 있는 **db_backup operator** 데이터베이스 역할에 있어야 합니다. 
 
 - 체험 [Azure 계정](https://azure.microsoft.com/offers/ms-azr-0044p/)을 받습니다.
@@ -42,6 +44,7 @@ Microsoft Azure Blob Storage 서비스에 대한 SQL Server 통합 지원은 SQL
 - 사용자 계정에 [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) 역할을 할당하고 [모든 자격 증명 변경](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) 권한을 부여합니다. 
  
 ## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1 - 저장된 액세스 정책 및 공유 액세스 스토리지 만들기
+
 이 섹션에서는 [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) 스크립트를 사용하여 저장된 액세스 정책을 통해 Azure Blob 컨테이너에 공유 액세스 서명을 만듭니다.  
   
 > [!NOTE]  
@@ -129,6 +132,7 @@ Azure PowerShell, Azure Storage SDK, Azure REST API 또는 타사 유틸리티�
 
 
 ## <a name="2---create-a-sql-server-credential-using-a-shared-access-signature"></a>2 - 공유 액세스 서명을 사용하여 SQL Server 자격 증명 만들기
+
 이 섹션에서는 SQL Server가 이전 단계에서 만든 Azure 컨테이너에 쓰고 읽을 때 사용할 보안 정보를 저장하기 위한 자격 증명을 만듭니다.  
   
 SQL Server 자격 증명은 SQL Server 외부의 리소스에 연결하는 데 필요한 인증 정보를 저장하는 데 사용되는 개체입니다. 자격 증명에는 스토리지 컨테이너의 URI 경로와 이 컨테이너에 대한 공유 액세스 서명이 저장됩니다.  
@@ -169,6 +173,7 @@ SQL Server 자격 증명을 만들려면 다음 단계를 수행합니다.
 7.  Azure 컨테이너에 액세스할 수 있게 하려는 추가 SQL Server 인스턴스에 대해 5단계와 6단계를 반복합니다.  
 
 ## <a name="3---database-backup-to-url"></a>3 - URL에 데이터베이스 백업
+
 이 섹션에서는 온-프레미스 SQL Server 2016 인스턴스의 AdventureWorks2016 데이터베이스를 [섹션 1](#1---create-stored-access-policy-and-shared-access-storage)에서 만든 Azure 컨테이너로 백업합니다.
   
 > [!NOTE]  
@@ -200,6 +205,7 @@ Blob Storage에 데이터베이스를 백업하려면 다음 단계를 따르세
 
 
 ## <a name="4----restore-database-to-virtual-machine-from-url"></a>4 - URL에서 가상 머신으로 데이터베이스 복원
+
 이 섹션에서는 Azure 가상 머신의 SQL Server 2016 인스턴스로 AdventureWorks2016 데이터베이스를 복원합니다.
   
 > [!NOTE]  
@@ -235,7 +241,8 @@ Azure Blob 스토리지에서 Azure 가상 머신의 SQL Server 2016 인스턴�
   
    ![Azure의 컨테이너 내 데이터 파일](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/data-files-in-container.png)
 
-# <a name="5---backup-database-using-file-snapshot-backup"></a>5 - 파일-스냅숏 백업을 사용하여 데이터베이스 백업
+## <a name="5---backup-database-using-file-snapshot-backup"></a>5 - 파일-스냅숏 백업을 사용하여 데이터베이스 백업
+
 이 섹션에서는 Azure 스냅숏을 사용하여 거의 즉시 백업을 수행하기 위해 파일-스냅숏 백업을 사용하여 Azure 가상 머신에서 AdventureWorks2016 데이터베이스를 백업합니다. 파일-스냅숏 백업에 대한 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
   
 파일-스냅숏 백업을 사용하여 AdventureWorks2016 데이터베이스를 백업하려면 다음 단계를 따르세요.  
@@ -275,6 +282,7 @@ Azure Blob 스토리지에서 Azure 가상 머신의 SQL Server 2016 인스턴�
     ![Azure에서 스냅숏 백업](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/snapshot-backup-on-azure.PNG)
 
 ## <a name="6----generate-activity-and-backup-log-using-file-snapshot-backup"></a>6 - 파일-스냅숏 백업을 사용하여 작업 및 백업 로그 생성
+
 이 섹션에서는 AdventureWorks2016 데이터베이스에 작업을 생성하고 파일-스냅숏 백업을 사용하여 정기적으로 트랜잭션 로그 백업을 만듭니다. 파일 스냅숏 백업 사용 방법에 대한 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
   
 AdventureWorks2016 데이터베이스에 작업을 생성하고 파일-스냅숏 백업을 사용하여 정기적으로 트랜잭션 로그 백업을 만들려면 다음 단계를 따르세요.  
@@ -340,6 +348,7 @@ AdventureWorks2016 데이터베이스에 작업을 생성하고 파일-스냅숏
     ![Azure 컨테이너 여러 스냅숏](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/tutorial-snapshots-in-container.png)
 
 ## <a name="7---restore-a-database-to-a-point-in-time"></a>7 - 데이터베이스를 지정 시간으로 복원
+
 이 섹션에서는 두 트랜잭션 로그 백업 사이의 특정 시점으로 AdventureWorks2016 데이터베이스를 복원합니다.  
   
 기존의 백업에서 특정 시점 복원을 수행하려면 전체 데이터베이스 백업, 차등 백업 및 복원하려는 시점 바로 다음까지의 모든 트랜잭션 로그 파일을 사용해야 합니다. 파일-스냅숏 백업을 사용할 경우 복원하려는 시간을 프레이밍하는 골대를 제공하는 두 개의 인접한 로그 백업 파일만 있으면 됩니다. 각 로그 백업이 각 데이터베이스 파일(각 데이터 파일 및 로그 파일)의 파일 스냅숏을 만들기 때문에 두 개의 로그 파일 스냅숏 백업 세트만 있으면 됩니다.  
@@ -378,6 +387,7 @@ AdventureWorks2016 데이터베이스에 작업을 생성하고 파일-스냅숏
     ![18-thousand-rows.JPG](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/18-thousand-rows.png)
 
 ## <a name="8----restore-as-new-database-from-log-backup"></a>8 - 로그 백업에서 새 데이터베이스로 복원
+
 이 섹션에서는 파일-스냅숏 트랜잭션 로그 백업에서 AdventureWorks2016 데이터베이스를 새 데이터베이스로 복원합니다.  
   
 이 시나리오에서는 비즈니스 분석 및 보고를 위해 다른 가상 머신의 SQL Server 인스턴스로 복원을 수행합니다. 다른 가상 머신의 다른 인스턴스로 복원할 경우 이 목적을 위한 큰 전용 가상 머신에 작업이 오프로드되므로 트랜잭션 시스템의 리소스를 사용할 필요가 없습니다.  
@@ -411,6 +421,7 @@ AdventureWorks2016 데이터베이스에 작업을 생성하고 파일-스냅숏
     ![새 데이터베이스에 대한 데이터 및 로그 파일을 보여 주는 Azure 컨테이너](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/new-db-in-azure-container.png)
 
 ## <a name="9---manage-backup-sets-and-file-snapshot-backups"></a>9 - 백업 세트 및 파일-스냅숏 백업 관리
+
 이 섹션에서는 [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md) 시스템 저장 프로시저를 사용하여 백업 세트를 삭제합니다. 이 시스템 저장 프로시저는 이 백업 세트와 연결된 각 데이터베이스 파일에서 백업 파일 및 파일 스냅숏을 삭제합니다.  
   
 > [!NOTE]  
@@ -440,6 +451,7 @@ AdventureWorks2016 데이터베이스에 작업을 생성하고 파일-스냅숏
     ![2개의 파일 스냅숏이 삭제되었음을 보여 주는 결과 창](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/results-of-two-deleted-snapshot-files.png)
 
 ## <a name="10---remove-resources"></a>10 - 리소스 제거
+
 이 자습서를 완료하고 리소스를 보존하려면 이 자습서에서 생성된 리소스 그룹을 삭제해야 합니다. 
 
 리소스 그룹을 삭제하려면 다음 powershell 코드를 실행합니다.
@@ -463,7 +475,8 @@ AdventureWorks2016 데이터베이스에 작업을 생성하고 파일-스냅숏
 
 
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고 항목
+
 [Microsoft Azure의 SQL Server 데이터 파일](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
 [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [URL에 SQL Server 백업](../relational-databases/backup-restore/sql-server-backup-to-url.md) 

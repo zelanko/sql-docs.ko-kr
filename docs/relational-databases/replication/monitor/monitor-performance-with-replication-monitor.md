@@ -20,12 +20,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc8f5b10cd0dce7b3d9b6e8acc5b6018eff0e85a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0881bb74dbd5018d194464d6a8ce58161062a901
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515459"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130583"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>복제 모니터로 성능 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "52515459"
   
     |최고|좋음|보통|나쁨|심각|  
     |---------------|----------|----------|----------|--------------|  
-    |0 - 34%|35 - 59%|60 - 84%|85 - 99%|100% +|  
+    |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
   
 -   병합 복제의 경우 성능 품질은 임계값과 관련이 없습니다. 행 처리 임계값은 **성능 심각** 값이 **상태** 열에 표시되는지 여부를 확인합니다. 성능 품질은 개별 구독 성능과 게시에 대한 구독(연결 유형이 전화 접속 또는 LAN 등으로 동일한 구독)의 평균 기록 성능을 비교하여 결정됩니다. 복제 모니터는 같은 유형의 연결별로 50개 이상의 변경 사항을 5번 동기화한 후에 값을 표시합니다. 50개 이상 변경 내용이 포함된 동기화가 5회 미만이거나 최신 동기화의 변경 내용 수가 50개 미만이면 복제 모니터에서 값을 표시하지 않습니다.  
   
@@ -85,21 +85,21 @@ ms.locfileid: "52515459"
   
     |최고|좋음|보통|나쁨|  
     |---------------|----------|----------|----------|  
-    |151+%|76 - 150%|26 - 75%|0 - 25%|  
+    |151+%|76 – 150%|26 – 75%|0 – 25%|  
   
- 구독 정보를 표시하는 방법에 대한 자세한 내용은 [구독에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)을 참조하세요.  
+ 구독 정보를 표시하는 방법에 대한 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
 ## <a name="determine-latency-with-tracer-tokens"></a>추적 프로그램 토큰으로 대기 시간 결정  
  트랜잭션 복제를 사용하면 게시 데이터베이스의 트랜잭션 로그에 토큰(소량 데이터)을 삽입하고 배포자 및 구독자에 트랜잭션 로그가 전달되는 시간을 기록하여 시스템의 대기 시간을 측정할 수 있습니다. 또한 데이터가 배포자나 구독자에 도달하지 않았는지 여부를 확인하는 데도 토큰을 사용할 수 있습니다. 자세한 내용은 [트랜잭션 복제에 대한 대기 시간 측정 및 연결 유효성 검사](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)을 참조하세요.  
   
 ## <a name="view-detailed-synchronization-performance-for-merge-replication"></a>병합 복제에 대한 자세한 동기화 성능 보기  
- 병합 복제의 경우 복제 모니터는 각 처리 단계(변경 내용 업로드, 변경 내용 다운로드 등)에 소요된 시간을 포함하여 동기화 중에 처리된 각 아티클에 대한 자세한 통계를 표시합니다. 이 통계는 속도 저하의 원인이 되고 병합 구독의 성능 문제를 해결하기에 가장 적합한 특정 테이블을 정확히 찾아내는 데 도움이 될 수 있습니다. 자세한 통계를 보는 방법은 [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)을 참조하세요.  
+ 병합 복제의 경우 복제 모니터는 각 처리 단계(변경 내용 업로드, 변경 내용 다운로드 등)에 소요된 시간을 포함하여 동기화 중에 처리된 각 아티클에 대한 자세한 통계를 표시합니다. 이 통계는 속도 저하의 원인이 되고 병합 구독의 성능 문제를 해결하기에 가장 적합한 특정 테이블을 정확히 찾아내는 데 도움이 될 수 있습니다. 자세한 통계 보기에 대한 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
 ## <a name="view-transactions-and-delivery-time-for-transactional-replication"></a>트랜잭션 복제에 대한 트랜잭션 및 배달 시간 보기  
- 트랜잭션 복제의 경우 복제 모니터는 구독자로 아직 배포되지 않은 배포 데이터베이스의 트랜잭션 수와 이러한 트랜잭션에 대한 예상 배포 시간에 대한 정보를 표시합니다. 자세한 내용은 [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)을 참조하세요.  
+ 트랜잭션 복제의 경우 복제 모니터는 구독자로 아직 배포되지 않은 배포 데이터베이스의 트랜잭션 수와 이러한 트랜잭션에 대한 예상 배포 시간에 대한 정보를 표시합니다. 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [복제 모니터링](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
+ [복제 모니터링](../../../relational-databases/replication/monitor/monitoring-replication.md)   
  [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

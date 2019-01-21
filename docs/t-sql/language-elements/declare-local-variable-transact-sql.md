@@ -22,15 +22,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01de83dc56a14fca265bd73b5d5df357f869a50a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cfe135d53fafa22df7d967f495a7bcfd87dbb2f7
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609249"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299980"
 ---
 # <a name="declare-localvariable-transact-sql"></a>DECLARE @local_variable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
   DECLARE 문을 사용하여 일괄 처리나 프로시저의 본문에 변수를 선언하고 SET 또는 SELECT 문을 사용하여 값을 할당합니다. 이 문을 사용하여 커서 변수를 선언하고 다른 커서 관련 문과 함께 사용할 수 있습니다. 선언의 일부로 값을 지정하지 않으면 선언 후 모든 변수가 NULL로 초기화됩니다.  
   
@@ -271,7 +274,7 @@ FROM HumanResources.Employee;
 GO  
 ```  
   
-### <a name="d-declaring-a-variable-of-user-defined-table-type"></a>4. 사용자 정의 테이블 형식의 변수 선언  
+### <a name="d-declaring-a-variable-of-user-defined-table-type"></a>D. 사용자 정의 테이블 형식의 변수 선언  
  다음 예에서는 `@LocationTVP`라고 하는 테이블 반환 매개 변수 또는 테이블 변수를 만듭니다. 이렇게 하려면 `LocationTableType`이라고 하는 해당 사용자 정의 테이블 형식이 필요합니다. 사용자 정의 테이블 형식을 만드는 방법은 [CREATE TYPE&#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)을 참조하세요. 테이블 반환 매개 변수에 관한 자세한 내용은 [Use Table-Valued Parameters&#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)를 참조하세요.  
   
 ```  
@@ -281,7 +284,7 @@ AS LocationTableType;
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-declare"></a>5. DECLARE 사용  
+### <a name="e-using-declare"></a>E. DECLARE 사용  
  다음 예에서는 `@find`라는 지역 변수를 사용하여 성이 `Walt`으로 시작하는 모든 연락처 정보를 검색합니다.  
   
 ```  
@@ -298,7 +301,7 @@ FROM DimEmployee
 WHERE LastName LIKE @find;  
 ```  
   
-### <a name="f-using-declare-with-two-variables"></a>6. 두 변수가 있는 DECLARE 사용  
+### <a name="f-using-declare-with-two-variables"></a>F. 두 변수가 있는 DECLARE 사용  
  다음 예는 `DimEmployee` 테이블에 있는 직원의 성과 이름을 지정하기 위해 변수를 검색하여 사용합니다.  
   
 ```  

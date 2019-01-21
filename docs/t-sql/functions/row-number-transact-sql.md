@@ -22,18 +22,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fae417c2078be09ebe87a4d816c829fa61831bb6
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 2992aa204320379866c32e02ac2a57c68b59be40
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970904"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299190"
 ---
 # <a name="rownumber-transact-sql"></a>ROW_NUMBER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [SQL Server 문서 개선에 참여해주세요.](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 결과 집합의 출력 번호를 지정합니다. 보다 구체적으로는, 결과 집합 파티션 내의 행 일련 번호를 반환합니다. 각 파티션의 첫 번째 행은 1로 시작합니다. 
   
@@ -186,7 +186,7 @@ FROM OrderedOrders
 WHERE RowNumber BETWEEN 50 AND 60;  
 ```  
   
-### <a name="d-using-rownumber-with-partition"></a>4. PARTITION에 ROW_NUMBER() 사용  
+### <a name="d-using-rownumber-with-partition"></a>D. PARTITION에 ROW_NUMBER() 사용  
  다음 예에서는 `PARTITION BY` 인수를 사용하여 `TerritoryName` 열을 기준으로 쿼리 결과 집합을 분할합니다. `ORDER BY` 절에 지정된 `OVER` 절은 각 파티션의 행을 `SalesYTD` 열을 기준으로 정렬합니다. `ORDER BY` 문의 `SELECT` 절은 전체 쿼리 결과 집합을 `TerritoryName`을 기준으로 정렬합니다.  
   
 ```sql  
@@ -224,7 +224,7 @@ Jae        Pak                  United Kingdom       4116871.22    1
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-returning-the-row-number-for-salespeople"></a>5. 영업 사원의 행 번호 반환  
+### <a name="e-returning-the-row-number-for-salespeople"></a>E. 영업 사원의 행 번호 반환  
  다음 예는 담당자의 판매 할당량을 기반으로 영업 담당자의 `ROW_NUMBER`를 반환합니다.  
   
 ```sql  
@@ -253,7 +253,7 @@ RowNumber  FirstName  LastName            SalesQuota
 4          Jae        Pak                 10,514,000.00  
 ```
 
-### <a name="f-using-rownumber-with-partition"></a>6. PARTITION에 ROW_NUMBER() 사용  
+### <a name="f-using-rownumber-with-partition"></a>F. PARTITION에 ROW_NUMBER() 사용  
  다음 예에서는 `ROW_NUMBER` 인수에 `PARTITION BY` 함수를 사용하는 방법을 보여 줍니다. 이로 인해 `ROW_NUMBER` 함수가 각 파티션의 행에 번호를 매기게 됩니다.  
   
 ```sql  

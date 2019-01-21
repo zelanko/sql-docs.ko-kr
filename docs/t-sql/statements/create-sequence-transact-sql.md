@@ -23,12 +23,12 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d26d4d303ffb312a2dc289e9f7426fbc6d191de8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9bfeddd0aad93427a3f65c44364d3749981ccbae
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629043"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226530"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -56,52 +56,48 @@ CREATE SEQUENCE [schema_name . ] sequence_name
 ```  
   
 ## <a name="arguments"></a>인수  
- *sequence_name*  
- 데이터베이스에서 시퀀스를 식별하는 고유 이름을 지정합니다. 형식은 **sysname**입니다.  
+*sequence_name*  
+데이터베이스에서 시퀀스를 식별하는 고유 이름을 지정합니다. 형식은 **sysname**입니다.  
   
- [ built_in_integer_type | user-defined_integer_type  
- 시퀀스는 모든 정수 유형으로 정의할 수 있습니다. 다음 형식이 허용됩니다.  
+[ built_in_integer_type | user-defined_integer_type  
+시퀀스는 모든 정수 유형으로 정의할 수 있습니다. 다음 형식이 허용됩니다.  
   
 -   **tinyint** - 0에서 255 사이의 범위  
-  
 -   **smallint** - -32,767에서 32,768 사이의 범위  
-  
 -   **int** - -2,147,483,648에서 2,147,483,647 사이의 범위  
-  
 -   **bigint** - -9,223,372,036,854,775,808에서 9,223,372,036,854,775,807 사이의 범위  
-  
 -   소수 자릿수가 0인 **decimal** 또는 **numeric**.  
-  
 -   허용되는 형식 중 하나에 기반을 둔 사용자 정의 데이터 형식(별칭 유형)  
   
- 데이터 형식을 제공하지 않은 경우 **bigint** 데이터 형식이 기본값으로 사용됩니다.  
+데이터 형식을 제공하지 않은 경우 **bigint** 데이터 형식이 기본값으로 사용됩니다.  
   
- START WITH \<constant>  
- 시퀀스 개체가 반환하는 첫 번째 값입니다. **START** 값은 시퀀스 개체의 최대값보다 작거나 같고 최소값보다 크거나 같은 값이어야 합니다. 새 시퀀스 개체의 기본 시작 값은 오름차순 시퀀스 개체에 대해서는 최소값이고, 내림차순 시퀀스 개체에 대해서는 최대값입니다.  
+START WITH \<constant>  
+시퀀스 개체가 반환하는 첫 번째 값입니다. **START** 값은 시퀀스 개체의 최대값보다 작거나 같고 최소값보다 크거나 같은 값이어야 합니다. 새 시퀀스 개체의 기본 시작 값은 오름차순 시퀀스 개체에 대해서는 최소값이고, 내림차순 시퀀스 개체에 대해서는 최대값입니다.  
   
- INCREMENT BY \<constant>  
- 각각의 **NEXT VALUE FOR** 함수 호출에 대해 시퀀스 개체의 값을 증가시키거나 감소시키는(음수인 경우) 데 사용되는 값입니다. 증가값이 음수이면 시퀀스 개체가 내림차순이고, 그렇지 않으면 오름차순입니다. 증가값은 0일 수 없습니다. 새 시퀀스 개체의 기본 증가분은 1입니다.  
+INCREMENT BY \<constant>  
+각각의 **NEXT VALUE FOR** 함수 호출에 대해 시퀀스 개체의 값을 증가시키거나 감소시키는(음수인 경우) 데 사용되는 값입니다. 증가값이 음수이면 시퀀스 개체가 내림차순이고, 그렇지 않으면 오름차순입니다. 증가값은 0일 수 없습니다. 새 시퀀스 개체의 기본 증가분은 1입니다.  
   
- [ MINVALUE \<constant> | **NO MINVALUE** ]  
- 시퀀스 개체의 경계를 지정합니다. 새 시퀀스 개체의 기본 최소값은 해당 시퀀스 개체의 데이터 형식에 대한 최소값입니다. **tinyint** 형식에 대해서는 0이고 다른 모든 데이터 형식에 대해서는 음수입니다.  
+[ MINVALUE \<constant> | **NO MINVALUE** ]  
+시퀀스 개체의 경계를 지정합니다. 새 시퀀스 개체의 기본 최소값은 해당 시퀀스 개체의 데이터 형식에 대한 최소값입니다. **tinyint** 형식에 대해서는 0이고 다른 모든 데이터 형식에 대해서는 음수입니다.  
   
- [ MAXVALUE \<constant> | **NO MAXVALUE**  
- 시퀀스 개체의 경계를 지정합니다. 새 시퀀스 개체의 기본 최대값은 해당 시퀀스 개체의 데이터 형식에 대한 최대값입니다.  
+[ MAXVALUE \<constant> | **NO MAXVALUE**  
+시퀀스 개체의 경계를 지정합니다. 새 시퀀스 개체의 기본 최대값은 해당 시퀀스 개체의 데이터 형식에 대한 최대값입니다.  
   
- [ CYCLE | **NO CYCLE** ]  
- 시퀀스 개체를 최소값 또는 최대값(내림차순 시퀀스 개체의 경우)에서 다시 시작해야 하는지, 아니면 최소값 또는 최대값을 초과하는 경우 예외를 발생시켜야 하는지를 지정하는 속성입니다. 새 시퀀스 개체의 기본 순환 옵션은 NO CYCLE입니다.  
+[ CYCLE | **NO CYCLE** ]  
+시퀀스 개체를 최소값 또는 최대값(내림차순 시퀀스 개체의 경우)에서 다시 시작해야 하는지, 아니면 최소값 또는 최대값을 초과하는 경우 예외를 발생시켜야 하는지를 지정하는 속성입니다. 새 시퀀스 개체의 기본 순환 옵션은 NO CYCLE입니다.  
   
- 시작 값이 아니라 최소값 또는 최대값에서 순환이 다시 시작됩니다.  
+> [!NOTE]
+> SEQUENCE 순환은 시작 값이 아니라 최솟값 또는 최댓값에서 다시 시작됩니다.  
   
- [ **CACHE** [\<constant> ] | NO CACHE ]  
- 시스템 번호를 생성하는 데 필요한 디스크 IO 수를 최소화하여 시퀀스 개체를 사용하는 응용 프로그램의 성능을 향상시킵니다. 기본값으로 CACHE가 됩니다.  
+[ **CACHE** [\<constant> ] | NO CACHE ]  
+시스템 번호를 생성하는 데 필요한 디스크 IO 수를 최소화하여 시퀀스 개체를 사용하는 응용 프로그램의 성능을 향상시킵니다. 기본값으로 CACHE가 됩니다.  
   
- 예를 들어 캐시 크기 50을 선택한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 50개의 개별 값을 캐시된 상태로 유지하지 않습니다. 현재 값 및 캐시에 남아 있는 값의 개수만 캐시합니다. 따라서 캐시 저장에 필요한 메모리 양은 항상 시퀀스 개체 데이터 형식의 인스턴스 두 개입니다.  
+예를 들어 캐시 크기 50을 선택한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 50개의 개별 값을 캐시된 상태로 유지하지 않습니다. 현재 값 및 캐시에 남아 있는 값의 개수만 캐시합니다. 따라서 캐시 저장에 필요한 메모리 양은 항상 시퀀스 개체 데이터 형식의 인스턴스 두 개입니다.  
   
 > [!NOTE]  
->  캐시 크기를 지정하지 않고 캐시 옵션을 설정하면 데이터베이스 엔진에서 크기를 선택합니다. 그러나 선택의 일관성이 보장되지 않습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 는 캐시 크기 계산 방법을 예고 없이 변경할 수 있습니다.  
+> 캐시 크기를 지정하지 않고 캐시 옵션을 설정하면 데이터베이스 엔진에서 크기를 선택합니다. 그러나 선택의 일관성이 보장되지 않습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 는 캐시 크기 계산 방법을 예고 없이 변경할 수 있습니다.  
   
- **CACHE** 옵션을 사용하여 만들 경우 전원 오류와 같은 예기치 않은 종료로 인해 캐시에 남아 있는 시퀀스 번호가 손실될 수 있습니다.  
+**CACHE** 옵션을 사용하여 만들 경우 전원 오류와 같은 예기치 않은 종료로 인해 캐시에 남아 있는 시퀀스 번호가 손실될 수 있습니다.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  시퀀스 번호는 현재 트랜잭션 범위 외부에서 생성되며, 시퀀스 번호를 사용하는 트랜잭션이 커밋되는지 또는 롤백되는지 여부에 관계없이 사용됩니다.  
@@ -167,7 +163,7 @@ CREATE SEQUENCE [schema_name . ] sequence_name
   
  다음 예에서는 사용자 AdventureWorks\Larry에 대해 테스트 스키마의 시퀀스를 만들 수 있는 권한을 부여합니다.  
   
-```  
+```sql  
 GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]  
 ```  
   
@@ -185,7 +181,7 @@ GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]
   
  테스트 스키마를 만들려면 다음 명령문을 실행합니다.  
   
-```  
+```sql  
 CREATE SCHEMA Test ;  
 GO  
 ```  
@@ -193,7 +189,7 @@ GO
 ### <a name="a-creating-a-sequence-that-increases-by-1"></a>1. 1씩 증가하는 시퀀스 만들기  
  다음 예에서는 Thierry라는 사용자가 사용할 때마다 1씩 증가하는 CountBy1이라는 시퀀스를 만듭니다.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountBy1  
     START WITH 1  
     INCREMENT BY 1 ;  
@@ -203,7 +199,7 @@ GO
 ### <a name="b-creating-a-sequence-that-decreases-by-1"></a>2. 1씩 감소하는 시퀀스 만들기  
  다음 예에서는 0부터 시작하여 사용할 때마다 1씩 음수를 계산합니다.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountByNeg1  
     START WITH 0  
     INCREMENT BY -1 ;  
@@ -213,33 +209,33 @@ GO
 ### <a name="c-creating-a-sequence-that-increases-by-5"></a>3. 5씩 증가하는 시퀀스 만들기  
  다음 예에서는 사용할 때마다 5씩 증가하는 시퀀스를 만듭니다.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountBy1  
     START WITH 5  
     INCREMENT BY 5 ;  
 GO  
 ```  
   
-### <a name="d-creating-a-sequence-that-starts-with-a-designated-number"></a>4. 지정된 번호에서 시작하는 시퀀스 만들기  
+### <a name="d-creating-a-sequence-that-starts-with-a-designated-number"></a>D. 지정된 번호에서 시작하는 시퀀스 만들기  
  Thierry는 테이블을 가져온 후 지금까지 사용된 가장 높은 ID 번호가 24,328임을 알게 됩니다. Thierry에게는 24,329부터 번호를 생성하는 시퀀스가 필요합니다. 다음 코드에서는 24,329부터 시작하여 1씩 증가하는 시퀀스를 만듭니다.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.ID_Seq  
     START WITH 24329  
     INCREMENT BY 1 ;  
 GO  
 ```  
   
-### <a name="e-creating-a-sequence-using-default-values"></a>5. 기본값을 사용하여 시퀀스 만들기  
+### <a name="e-creating-a-sequence-using-default-values"></a>E. 기본값을 사용하여 시퀀스 만들기  
  다음 예에서는 기본값을 사용하여 시퀀스를 만듭니다.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.TestSequence ;  
 ```  
   
  시퀀스 속성을 보려면 다음 문을 실행합니다.  
   
-```  
+```sql  
 SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;  
 ```  
   
@@ -255,18 +251,18 @@ SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;
 |`is_cached`|`1`|  
 |`current_value`|`-9223372036854775808`|  
   
-### <a name="f-creating-a-sequence-with-a-specific-data-type"></a>6. 지정한 데이터 형식으로 시퀀스 만들기  
+### <a name="f-creating-a-sequence-with-a-specific-data-type"></a>F. 지정한 데이터 형식으로 시퀀스 만들기  
  다음 예에서는 **smallint** 데이터 형식을 사용하여 -32,768부터 32,767까지의 시퀀스를 만듭니다.  
   
-```  
-CREATE SEQUENCE SmallSeq  
+```sql  
+CREATE SEQUENCE SmallSeq 
     AS smallint ;  
 ```  
   
-### <a name="g-creating-a-sequence-using-all-arguments"></a>7. 모든 인수를 사용하여 시퀀스 만들기  
+### <a name="g-creating-a-sequence-using-all-arguments"></a>G. 모든 인수를 사용하여 시퀀스 만들기  
  다음 예에서는 **decimal** 데이터 형식을 사용하여 0부터 255 사이 범위의 DecSeq라는 시퀀스를 만듭니다. 시퀀스는 125부터 시작하여 번호가 생성될 때마다 25씩 증가합니다. 시퀀스가 순환하도록 구성되었기 때문에 값이 최대값 200을 초과하는 경우 최소값 100에서 시퀀스가 다시 시작됩니다.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.DecSeq  
     AS decimal(3,0)   
     START WITH 125  
@@ -280,7 +276,7 @@ CREATE SEQUENCE Test.DecSeq
   
  첫 번째 값(`START WITH` 옵션 125)을 보려면 다음 문을 실행합니다.  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.DecSeq;  
 ```  
   
@@ -290,7 +286,7 @@ SELECT NEXT VALUE FOR Test.DecSeq;
   
  캐시 크기를 확인하고 현재 값을 보려면 다음 코드를 실행합니다.  
   
-```  
+```sql  
 SELECT cache_size, current_value   
 FROM sys.sequences  
 WHERE name = 'DecSeq' ;  

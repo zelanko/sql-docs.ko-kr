@@ -13,12 +13,12 @@ ms.assetid: 405b2655-acb4-4e15-bcc6-b8f86bb22b37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e05a58c9a88ffaa4292fd4d103cd56f5b827e9b5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ecdd4da637f8f29df60b6815d2f8231b8ba941c5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665652"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130113"
 ---
 # <a name="mssqleng018752"></a>MSSQL_ENG018752
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "51665652"
 ## <a name="user-action"></a>사용자 동작  
  다음 단계를 수행하면 문제를 해결하는 데 도움이 됩니다. 다음 단계를 수행하는 중 로그 판독기 에이전트가 오류 없이 시작되면 나머지 단계를 완료할 필요가 없습니다.  
   
--   로그 판독기 에이전트의 기록에서 이 오류의 원인이 될 수 있는 다른 오류가 있는지 확인합니다. 복제 모니터에서 에이전트 상태 및 오류 정보를 보는 방법에 대한 자세한 내용은 [게시 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)을 참조하세요.  
+-   로그 판독기 에이전트의 기록에서 이 오류의 원인이 될 수 있는 다른 오류가 있는지 확인합니다. 복제 모니터에서 에이전트 상태 및 오류 정보를 보는 방법에 대한 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 작업 수행](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
 -   [sp_who&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)의 출력에서 게시된 데이터베이스에 연결된 특정 프로세스 ID 번호(SPID)를 확인합니다. **sp_repldone**, **sp_replcmds**또는 **sp_replshowcmds**를 실행했을 가능성이 있는 연결을 모두 닫습니다.  
   

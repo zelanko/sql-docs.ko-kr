@@ -1,7 +1,7 @@
 ---
 title: 보안 Enclave를 사용한 Always Encrypted 구성 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,14 +11,15 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 246fa155a8de930cd81d65df633d3f47bed9f56e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0cfe8b4bf09b545a5141a2896eb757254265e092
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534767"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206409"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted 구성
+
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 [보안 Enclave를 사용한 Always Encrypted](always-encrypted-enclaves.md)는 기존 [Always Encrypted](always-encrypted-database-engine.md) 기능을 확장하여 데이터 기밀성을 유지하면서 중요한 데이터에 대해 보다 풍부한 기능을 사용하도록 설정합니다.
@@ -26,14 +27,14 @@ ms.locfileid: "52534767"
 보안 Enclave를 사용한 Always Encrypted를 설정하려면 다음 워크플로를 사용합니다.
 
 1. HGS(호스트 보호 서비스) 증명을 구성합니다.
-2. SQL Server 컴퓨터에 [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)]를 설치합니다.
+2. SQL Server 컴퓨터에 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]를 설치합니다.
 3. 클라이언트/개발 컴퓨터에 도구를 설치합니다.
 4. SQL Server 인스턴스에서 Enclave 형식을 구성합니다.
 5. Enclave 사용 키를 프로비전합니다.
 6. 중요한 데이터가 포함된 열을 암호화합니다.
 
->[!NOTE]
->테스트 환경을 설정하고 SSMS에서 보안 enclave를 사용하여 Always Encrypted 기능을 사용하는 방법에 대한 단계별 자습서는 [자습서: SSMS를 사용하여 보안 enclave로 Always Encrypted 시작하기](../tutorial-getting-started-with-always-encrypted-enclaves.md)를 참조하세요.
+> [!NOTE]
+> 테스트 환경을 설정하고 SSMS에서 보안 enclave를 사용하여 Always Encrypted 기능을 사용하는 방법에 대한 단계별 자습서는 [자습서: SSMS를 사용하여 보안 enclave로 Always Encrypted 시작](../tutorial-getting-started-with-always-encrypted-enclaves.md)을 참조하세요.
 
 ## <a name="configure-your-environment"></a>환경 구성
 
@@ -45,7 +46,7 @@ SQL Server를 실행하는 컴퓨터에는 다음 운영 체제 및 SQL Server �
 
 *SQL Server*:
 
-- [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] 이상
+- [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 이상
 
 *Windows*:
 
@@ -134,7 +135,7 @@ NuGet 패키지는 보안 Enclave에서 Always Encrypted를 사용하여 애플�
    ```
 
     > [!NOTE]
-    > 리치 계산은 [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)]에서 기본적으로 사용되지 않도록 설정됩니다. SQL Server 인스턴스를 다시 시작한 후에 매번 위의 문을 사용하여 리치 계산을 사용하도록 설정해야 합니다.
+    > 리치 계산은 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]에서 기본적으로 사용되지 않도록 설정됩니다. SQL Server 인스턴스를 다시 시작한 후에 매번 위의 문을 사용하여 리치 계산을 사용하도록 설정해야 합니다.
 
 ## <a name="provision-enclave-enabled-keys"></a>Enclave 사용 키 프로비전
 
@@ -496,13 +497,13 @@ GO
 
 Enclave 사용 열이 아닌 기존 열의 Enclave 기능을 사용하도록 설정하는 여러 가지 방법이 있습니다. 어떤 방법을 선택하는지는 다음과 같은 몇 가지 요인에 따라 다릅니다.
 
-- **범위/세분성:** 열 하위 집합 또는 지정된 열 마스터 키로 보호되는 모든 열의 Enclave 기능을 사용하도록 설정하고 싶나요?
-- **데이터 크기:** Enclave 사용 열로 지정하려는 열이 포함된 테이블의 크기는 얼마나 되나요?
+- **범위/세분성:** 열 하위 집합 또는 지정된 열 마스터 키로 보호되는 모든 열의 enclave 기능을 사용하도록 설정하고 싶나요?
+- **데이터 크기:** enclave 사용 열로 지정하려는 열이 포함된 테이블의 크기는 얼마나 되나요?
 - 열의 암호화 유형을 변경하고 싶나요? 임의 암호화만 리치 계산(패턴 일치, 비교 연산자)을 지원한다는 점에 유의합니다. 결정적 암호화를 사용하여 열을 암호화한 경우에도 임의 암호화로 다시 암호화하여 Enclave의 전체 기능을 잠금 해제해야 합니다.
 
 다음은 기존 열에 Enclave를 사용하도록 설정하는 세 가지 방법입니다.
 
-#### <a name="option-1-rotate-the-column-master-key-to-replace-it-with-an-enclave-enabled-column-master-key"></a>옵션 1: 열 마스터 키를 순환하여 Enclave 사용 열 마스터 키로 바꿉니다.
+#### <a name="option-1-rotate-the-column-master-key-to-replace-it-with-an-enclave-enabled-column-master-key"></a>옵션 1: 열 마스터 키를 순환하여 enclave 사용 열 마스터 키로 바꿉니다.
   
 - 장점:
   - 데이터를 다시 암호화하지 않으므로 일반적으로 가장 빠른 방법입니다. 많은 양의 데이터를 포함하는 열에 권장되는 방식입니다. 모든 열을 제공하는 경우 리치 계산을 사용하도록 설정하고, 결정적 암호화를 이미 사용하고 있어야 하므로 다시 암호화할 필요가 없습니다.
@@ -514,7 +515,7 @@ Enclave 사용 열이 아닌 기존 열의 Enclave 기능을 사용하도록 설
   - 키 관리 오버헤드가 발생하므로 새 열 마스터 키를 만들고 영향을 받는 열을 쿼리하는 애플리케이션에서 사용하도록 해야 합니다.  
 
 
-#### <a name="option-2-this-approach-involves-two-steps-1-rotating-the-column-master-key-as-in-option-1-and-2-re-encrypting-a-subset-of-deterministically-encrypted-columns-using-randomized-encryption-to-enable-rich-computations-for-those-columns"></a>옵션 2: 이 방법은 1) 열 마스터 키 순환(옵션 1과 같음) 및 2) 임의 암호화를 사용하여 확실히 암호화된 열의 하위 집합 다시 암호화의 두 단계를 수행하여 해당 열에 대해 리치 계산을 사용하도록 설정합니다.
+#### <a name="option-2-this-approach-involves-two-steps-1-rotating-the-column-master-key-as-in-option-1-and-2-re-encrypting-a-subset-of-deterministically-encrypted-columns-using-randomized-encryption-to-enable-rich-computations-for-those-columns"></a>옵션 2: 이 방법은 두 단계로 이루어집니다. 1) 열 마스터 키 순환(옵션 1과 같음) 및 2) 임의 암호화를 사용하여 확실히 암호화된 열의 하위 집합을 다시 암호화하여 해당 열에 대한 리치 계산을 사용하도록 설정합니다.
   
 - 장점:
   - 데이터를 바로 암호화하므로, 대량의 데이터를 포함하는 열을 확실히 암호화하기 위해 리치 쿼리를 사용하도록 설정하는 데 권장되는 방법입니다. 1단계는 결정적 암호화를 사용하여 열의 바로 암호화를 잠금 해제하므로 2단계를 바로 수행할 수 있습니다.
@@ -524,7 +525,7 @@ Enclave 사용 열이 아닌 기존 열의 Enclave 기능을 사용하도록 설
   - 지정된 열 마스터 키와 연결된 일부 열만 선택적으로 변환할 수 없습니다.
   - 키 관리 오버헤드가 발생하므로 새 열 마스터 키를 만들고 영향을 받는 열을 쿼리하는 애플리케이션에서 사용하도록 해야 합니다.
 
-#### <a name="option-3-re-encrypting-selected-columns-with-a-new-enclave-enabled-column-encryption-key-and-randomized-encryption-if-needed-on-the-client-side"></a>옵션 3: 클라이언트 쪽에서 새 Enclave 사용 열 암호화 키 및 임의 암호화(필요한 경우)를 사용하여 선택한 열을 다시 암호화
+#### <a name="option-3-re-encrypting-selected-columns-with-a-new-enclave-enabled-column-encryption-key-and-randomized-encryption-if-needed-on-the-client-side"></a>옵션 3: 클라이언트 쪽에서 새 enclave 사용 열 암호화 키 및 임의 암호화(필요한 경우)를 사용하여 선택한 열을 다시 암호화합니다.
   
 - 장점 - 이 방법에는 다음이 적용됩니다.
   - 하나의 열 또는 소규모 열 하위 집합에 대해 Enclave 기능을 선택적으로 사용하도록 설정할 수 있습니다.

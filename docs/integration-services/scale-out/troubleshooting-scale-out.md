@@ -2,7 +2,7 @@
 title: SSIS(SQL Server Integration Services) Scale Out 문제 해결 | Microsoft Docs
 description: 이 문서에서는 SSIS Scale Out을 사용하여 일반적인 문제를 해결하는 방법 설명
 ms.custom: performance
-ms.date: 05/09/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 20473c4555a0f0a98484bd66ef93ce659d51a2a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1afc1a2fbb8777df0c4bf5a488cde951fd4e32c
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732497"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206329"
 ---
 # <a name="troubleshoot-scale-out"></a>Scale Out 문제 해결
 
@@ -38,7 +38,7 @@ SSIS Scale Out에는 SSIS 카탈로그 데이터베이스인 `SSISDB`, Scale Out
 
     SSMS의 개체 탐색기에서 **SSISDB**를 마우스 오른쪽 단추로 클릭하고 **Scale Out 기능이 사용하도록 설정됨**을 선택합니다.
 
-    ![사용하도록 설정된 Scale Out](media\isenabled.PNG)
+    ![사용하도록 설정된 Scale Out](media/isenabled.PNG)
 
     속성 값이 False이면 `[catalog].[enable_scaleout]` 저장 프로시저를 호출하여 Scale Out을 사용하도록 설정합니다.
 
@@ -62,7 +62,7 @@ SSIS Scale Out에는 SSIS 카탈로그 데이터베이스인 `SSISDB`, Scale Out
 
 ### <a name="symptoms"></a>증상
 
-*"System.ServiceModel.EndpointNotFoundException: 메시지를 수락할 수 있는 https://*[컴퓨터 이름]:[포트]*/ClusterManagement/에서 수신 대기 중인 엔드포인트가 없습니다."*
+*"System.ServiceModel.EndpointNotFoundException: 메시지를 수락할 수 있는 https://*[MachineName]:[Port]*/ClusterManagement/에서 수신 대기 중인 엔드포인트가 없습니다."*
 
 ### <a name="solution"></a>해결 방법
 
@@ -77,9 +77,9 @@ SSIS Scale Out에는 SSIS 카탈로그 데이터베이스인 `SSISDB`, Scale Out
 ## <a name="could-not-establish-trust-relationship"></a>트러스트 관계를 설정할 수 없는 경우
 
 ### <a name="symptoms"></a>증상
-*"System.ServiceModel.Security.SecurityNegotiationException: '[컴퓨터 이름]:[포트]' 권한이 있는 SSL/TLS 보안 채널에 대해 트러스트 관계를 설정할 수 없습니다."*
+*""System.ServiceModel.Security.SecurityNegotiationException: '[Machine Name]:[Port]' 권한이 있는 SSL/TLS 보안 채널에 대해 트러스트 관계를 설정할 수 없습니다."*
 
-*"System.Net.WebException: 기본 연결이 닫혔습니다. SSL/TLS 보안 채널에 대한 트러스트 관계를 설정할 수 없습니다."*
+*"System.Net.WebException: 기본 연결이 닫혔습니다. SSL/TLS 보안 채널에 대해 트러스트 관계를 설정할 수 없습니다."*
 
 *"System.Security.Authentication.AuthenticationException: 유효성 검사 절차에 따르면 원격 인증서가 잘못되었습니다."*
 
@@ -97,9 +97,9 @@ SSIS Scale Out에는 SSIS 카탈로그 데이터베이스인 `SSISDB`, Scale Out
 
 ### <a name="symptoms"></a>증상
 
-*"System.ServiceModel.Security.SecurityNegotiationException: '[컴퓨터 이름]:[포트]' 권한이 있는 SSL/TLS에 대한 보안 채널을 설정할 수 없습니다."*
+*"System.ServiceModel.Security.SecurityNegotiationException: '[Machine Name]:[Port]' 권한이 있는 SSL/TLS에 대한 보안 채널을 설정할 수 없습니다."*
 
-*"System.Net.WebException: 요청이 중단되었습니다, SSL/TLS 보안 채널을 만들 수 없습니다."*
+*"System.Net.WebException: 요청이 중단되었습니다. SSL/TLS 보안 채널을 만들 수 없습니다."*
 
 ### <a name="solution"></a>해결 방법
 아래 명령으로 Scale Out 작업자 서비스를 실행하는 계정에 Scale Out 작업자 인증서에 대한 액세스 권한이 있는지 확인합니다.
@@ -118,9 +118,9 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 ### <a name="symptoms"></a>증상
 
-*"System.ServiceModel.Security.MessageSecurityException: HTTP 요청이 클라이언트 인증 체계 'Anonymous'에서 금지되었습니다."*
+*"System.ServiceModel.Security.MessageSecurityException: HTTP 요청은 클라이언트 인증 스키마 '익명'으로 사용할 수 없습니다."*
 
-*"System.Net.WebException: 원격 서버에서 (403) 사용할 수 없음 오류를 반환했습니다."*
+*"System.Net.WebException: 원격 서버에서 (403) 사용할 수 없습니다."* 오류를 반환합니다.
 
 ### <a name="solution"></a>해결 방법
 1.  인증서가 아직 설치되지 않은 경우 Scale Out 마스터 노드에서 로컬 컴퓨터의 루트 인증서 저장소에 Scale Out 작업자 인증서를 설치하고 Worker Scale 작업자 서비스를 다시 시작합니다.
@@ -133,7 +133,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
     값 이름: **SendTrustedIssuerList** 
 
-    값 형식: **REG_DWORD** 
+    값 유형: **REG_DWORD** 
 
     값 데이터: **0(False)**
 
@@ -143,7 +143,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
     값 이름: **ClientAuthTrustMode** 
 
-    값 형식: **REG_DWORD** 
+    값 유형: **REG_DWORD** 
 
     값 데이터: **2**
 
@@ -154,7 +154,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 ### <a name="symptoms"></a>증상
 
-*"System.ServiceModel.CommunicationException: https://[컴퓨터 이름]:[포트]/ClusterManagement/에 대한 HTTP 요청을 수행하는 동안 오류가 발생했습니다. 이것은 HTTPS 경우에 서버 인증서가 HTTP.SYS로 제대로 구성되지 않았기 때문일 수 있습니다. 클라이언트와 서버 사이에 보안 바인딩이 불일치하기 때문일 수도 있습니다."*
+*"System.ServiceModel.CommunicationException: https://[Machine Name]:[Port]/ClusterManagement/에 대한 HTTP 요청을 수행하는 동안 오류가 발생했습니다. 이것은 HTTPS 경우에 서버 인증서가 HTTP.SYS로 제대로 구성되지 않았기 때문일 수 있습니다. 클라이언트와 서버 사이에 보안 바인딩이 불일치하기 때문일 수도 있습니다."*
 
 ### <a name="solution"></a>해결 방법
 1.  다음 명령을 실행하여 Scale Out 마스터 인증서가 마스터 노드의 마스터 엔드포인트의 포트에 올바르게 바인딩되어 있는지 확인합니다.
@@ -224,4 +224,4 @@ WHERE executions.execution_id = *Your Execution Id* AND tasks.JobId = executions
 ## <a name="next-steps"></a>다음 단계
 자세한 내용은 SSIS Scale Out 설정 및 구성에 대한 다음 문서를 참조하세요.
 -   [단일 컴퓨터에서 Integration Services(SSIS) Scale Out 시작](get-started-with-ssis-scale-out-onebox.md)
--   [연습: Integration Services(SSIS) Scale Out 설정](walkthrough-set-up-integration-services-scale-out.md)
+-   [연습: Integration Services(SSIS) 규모 확장 설정](walkthrough-set-up-integration-services-scale-out.md)

@@ -16,12 +16,12 @@ ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9705b867d8f12c83b0c3e3c0d1ec6a8461e7a2dd
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: dd24314a8948e5893e4e4625c695485c7611c5bb
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559930"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130283"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>데이터베이스 메일 메시지 및 이벤트 로그 보관을 처리하는 SQL Server 에이전트 작업 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "51559930"
   
 -   **시작하기 전에:**  , [필수 구성 요소](#Prerequisites), [권장 사항](#Recommendations), [권한](#Permissions)  
   
--   **[SQL Server 에이전트](#Process_Overview)를 사용하여 데이터베이스 메일 메시지 및 로그를 보관하려면:**  
+-   **데이터베이스 메일 메시지 및 로그를 보관하려면 다음을 사용합니다.**  [SQL Server 에이전트](#Process_Overview)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
@@ -48,11 +48,11 @@ ms.locfileid: "51559930"
   
 -   첫 번째 절차에서는 다음 단계를 사용하여 Archive Database Mail이라는 작업을 만듭니다.  
   
-    1.  모든 메시지를 데이터베이스 메일 테이블에서 **DBMailArchive_***<year_month>* 형식으로 이전 달 이름에 따라 명명된 새 테이블로 복사합니다.  
+    1.  모든 메시지를 데이터베이스 메일 테이블에서 **DBMailArchive_**_<year_month>_ 형식으로 이전 달 이름에 따라 명명된 새 테이블로 복사합니다.  
   
-    2.  첫 번째 단계에서 복사된 메시지와 관련된 첨부 파일을 데이터베이스 메일 테이블에서 **DBMailArchive_Attachments_***<year_month>* 형식으로 이전 달 이름에 따라 명명된 새 테이블로 복사합니다.  
+    2.  첫 번째 단계에서 복사된 메시지와 관련된 첨부 파일을 데이터베이스 메일 테이블에서 **DBMailArchive_Attachments_**_<year_month>_ 형식으로 이전 달 이름에 따라 명명된 새 테이블로 복사합니다.  
   
-    3.  첫 번째 단계에서 복사한 메시지와 관련된 데이터베이스 메일 이벤트 로그에서 **DBMailArchive_Log_***<year_month>* 형식으로 이전 달 이름을 따라 명명된 새 테이블로 이벤트를 복사합니다.  
+    3.  첫 번째 단계에서 복사한 메시지와 관련된 데이터베이스 메일 이벤트 로그에서 **DBMailArchive_Log_**_<year_month>_ 형식으로 이전 달 이름을 따라 명명된 새 테이블로 이벤트를 복사합니다.  
   
     4.  전송된 메일 항목의 레코드를 데이터베이스 메일 테이블에서 삭제합니다.  
   
