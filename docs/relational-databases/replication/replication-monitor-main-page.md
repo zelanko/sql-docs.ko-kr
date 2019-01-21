@@ -13,18 +13,18 @@ ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7eb5a872b713571c544a03039010aa3dbdc4aa1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: adbece38622571eecc0e3bcb00c8f69f022919b6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639951"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135603"
 ---
 # <a name="replication-monitor-main-page"></a>복제 모니터, 주 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   복제 모니터를 사용하여 복제 토폴로지상에서 게시 및 구독의 상태 및 성능을 추적할 수 있습니다. 다음 항목에서는 보다 자세한 정보를 제공합니다.  
   
--   복제 모니터의 개요는 [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication-overview.md)을 참조하세요.  
+-   복제 모니터의 개요는 [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication.md)을 참조하세요.  
   
 -   복제 모니터의 왼쪽 창에는 게시자 및 게시자 그룹이 있습니다. 게시 및 구독 정보를 표시하려면 하나 이상의 게시자를 복제 모니터에 추가합니다. 자세한 내용은 [복제 모니터에서 게시자 추가 및 제거](../../relational-databases/replication/monitor/add-and-remove-publishers-from-replication-monitor.md)를 참조하세요.  
   
@@ -32,15 +32,7 @@ ms.locfileid: "47639951"
   
     -   [복제 모니터에서 데이터 새로 고침](../../relational-databases/replication/monitor/refresh-data-in-replication-monitor.md)  
   
-    -   [게시자에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
-  
-    -   [게시에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  
-  
-    -   [게시 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)  
-  
-    -   [구독에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
-  
-    -   [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)  
+    -   [복제 모니터를 사용하여 정보 보기 및 태스크 수행;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)    
   
     -   [트랜잭션 복제에 대한 대기 시간 측정 및 연결 유효성 검사](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
@@ -50,6 +42,6 @@ ms.locfileid: "47639951"
   
 ## <a name="see-also"></a>참고 항목  
  [복제 모니터 시작](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   
