@@ -14,18 +14,18 @@ ms.assetid: dfac8ade-eebe-4ebe-a199-feb740ed5bae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0aba0eeb6d3d6450a0493a4cf06a8c58bb21d23a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6737a995db78f2a5ba625ddf200a0171582026ae
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656001"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419738"
 ---
 # <a name="installing-the-software-odbc"></a>소프트웨어 설치(ODBC)
 > [!IMPORTANT]  
 >  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
   
- Oracle 용 ODBC 드라이버는 데이터 액세스 구성 요소 중 하나입니다. ODBC 데이터 원본 관리자와 같은 다른 ODBC 구성 요소를 포함 하 고 설치 해야 합니다. 드라이버 수도 있습니다 "드라이버 및 기타 다운로드 에서" www.microsoft.com에서 Microsoft 기술 지원 서비스 온라인 웹 사이트에서.  
+ Oracle 용 ODBC 드라이버는 데이터 액세스 구성 요소 중 하나입니다. ODBC 데이터 원본 관리자와 같은 다른 ODBC 구성 요소를 포함 하 고 설치 해야 합니다. 드라이버 수도 있습니다 "드라이버 및 기타 다운로드 에서" Microsoft 기술 지원 서비스 온라인 웹 사이트에서 [www.microsoft.com](https://www.microsoft.com)합니다.  
   
  자체 설명서에 따라 네트워크 소프트웨어를 설치 해야 합니다. Oracle 용 ODBC 드라이버에 필요한 특별 한 설치 고려 사항 없이 네트워크 소프트웨어는 지원 됩니다.  
   

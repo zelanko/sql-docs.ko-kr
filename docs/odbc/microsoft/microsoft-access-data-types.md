@@ -1,7 +1,7 @@
 ---
 title: Microsoft Access 데이터 형식 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,19 +18,19 @@ ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11f45698a5ad8b7fd05052cbb2d23520790c425a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b99fd70e0119aa01d384066aaa2f3b91eed152b4
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692981"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420178"
 ---
 # <a name="microsoft-access-data-types"></a>Microsoft Access 데이터 형식
 다음 표에서 Microsoft Access 데이터 형식, 테이블을 만드는 데 사용 되는 데이터 형식 및 ODBC SQL 데이터 형식을 보여 줍니다.  
   
 |Microsoft Access 데이터 형식|데이터 형식 (CREATETABLE)|ODBC SQL 데이터 형식|  
 |--------------------------------|-------------------------------|------------------------|  
-|BIGBINARY [1]|LONGBINARY|SQL_LONGVARBINARY|  
+|BIGBINARY[1]|LONGBINARY|SQL_LONGVARBINARY|  
 |BINARY|BINARY|SQL_BINARY|  
 |BIT|BIT|SQL_BIT|  
 |카운터|카운터|SQL_INTEGER|  
@@ -38,8 +38,8 @@ ms.locfileid: "47692981"
 |날짜/시간|DATETIME|SQL_TIMESTAMP|  
 |GUID|GUID|SQL_GUID|  
 |긴 이진|LONGBINARY|SQL_LONGVARBINARY|  
-|긴 텍스트|LONGTEXT|[2] SQL_LONGVARCHAR SQL_WLONGVARCHAR [3]|  
-|메모|LONGTEXT|[2] SQL_LONGVARCHAR SQL_WLONGVARCHAR [3]|  
+|긴 텍스트|LONGTEXT|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
+|메모|LONGTEXT|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
 |수 (FieldSize = 미혼)|단일|SQL_REAL|  
 |수 (FieldSize DOUBLE =)|DOUBLE|SQL_DOUBLE|  
 |수 (FieldSize 바이트 =)|부호 없는 바이트|SQL_TINYINT|  
@@ -47,8 +47,8 @@ ms.locfileid: "47692981"
 |수 (FieldSize 정수 (LONG) =)|LONG|SQL_INTEGER|  
 |NUMERIC|NUMERIC|SQL_NUMERIC|  
 |OLE|LONGBINARY|SQL_LONGVARBINARY|  
-|TEXT|VARCHAR|[1] SQL_VARCHAR SQL_WVARCHAR [2]|  
-ARBINARY|VARBINARY|SQL_VARBINARY|  
+|TEXT|VARCHAR|SQL_VARCHAR[1] SQL_WVARCHAR[2]|  
+|VARBINARY|VARBINARY|SQL_VARBINARY|  
   
  [1] 4.0 응용 프로그램에 액세스 합니다. 최대 길이 4000 바이트입니다. LONGBINARY 비슷하게 사용 되는 동작입니다.  
   

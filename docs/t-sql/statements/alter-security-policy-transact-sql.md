@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - ALTER SECURITY POLICY statement
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1476efcf0060344279a1bd78a25057e25c54bb2a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5eb2b34e078d6fa48b3b9bc8e0be6b1b6c367732
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519785"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361513"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  차단 조건자가 적용될 작업은 조건자를 고유하게 식별하는 데 사용되기 때문에 변경(ALTER)할 수 없습니다. 대신 조건자를 삭제하고 새 작업에 새 조건자를 추가해야 합니다.  
   
  WITH ( STATE = { ON | OFF } )  
- 대상 테이블에 대해 해당 보안 조건자를 강제 적용하여 보안 정책을 사용하거나 사용하지 않도록 설정합니다. 지정되지 않으면 생성되는 보안 정책이 사용되지 않도록 설정됩니다.  
+ 대상 테이블에 대해 해당 보안 조건자를 강제 적용하여 보안 정책을 사용하거나 사용하지 않도록 설정합니다. 지정되지 않으면 생성되는 보안 정책이 사용되도록 설정됩니다.  
   
  NOT FOR REPLICATION  
  복제 에이전트가 대상 개체를 수정할 때 보안 정책을 실행하면 안 됨을 나타냅니다. 자세한 내용은 [동기화하는 동안 트리거 및 제약 조건 동작 제어&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md)를 참조하세요.  
@@ -137,7 +137,7 @@ ADD FILTER PREDICATE schema_preds.SecPredicate2(column2, 1)
     ON myschema.mytable3;  
 ```  
   
-### <a name="d-changing-the-predicate-on-a-table"></a>4. 테이블의 조건자 변경  
+### <a name="d-changing-the-predicate-on-a-table"></a>D. 테이블의 조건자 변경  
  다음 구문에서는 mytable 테이블의 기존 필터 조건자를 변경하여 SecPredicate2 함수가 되게 합니다.  
   
 ```  
@@ -146,7 +146,7 @@ ALTER SECURITY POLICY pol1
         ON myschema.mytable;  
 ```  
   
-### <a name="e-changing-a-block-predicate"></a>5. 차단 조건자 변경  
+### <a name="e-changing-a-block-predicate"></a>E. 차단 조건자 변경  
  테이블 작업에 대한 차단 조건자 함수를 변경합니다.  
   
 ```  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - revoking permissions to access tables
 - object permissions [SQL Server], revoking
 ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 55c06191de80cf76f6ced789f2fe10ff8c1c79ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e7c288fb10eb1473835f29fa538c49d2fe47585
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623461"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327704"
 ---
 # <a name="revoke-object-permissions-transact-sql"></a>REVOKE 개체 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,15 +63,15 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
  ALL  
  ALL을 취소해도 일부 가능한 사용 권한은 취소되지 않습니다. ALL을 취소하는 것은 지정된 개체에 적용할 수 있는 모든 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 사용 권한을 취소하는 것과 동일합니다. ALL의 의미는 다음과 같이 달라집니다.  
   
- 스칼라 함수 사용 권한: EXECUTE, REFERENCES.  
+ 스칼라 함수 사용 권한: EXECUTE, REFERENCES  
   
- 테이블 반환 함수 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ 테이블 반환 함수 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE  
   
- 저장 프로시저 사용 권한: EXECUTE.  
+ 저장 프로시저 사용 권한: EXECUTE  
   
- 테이블 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ 테이블 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE  
   
- 뷰 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ 뷰 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE  
   
  PRIVILEGES  
  [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 호환성을 위해 포함되었습니다. ALL의 동작을 변경하지 않습니다.  

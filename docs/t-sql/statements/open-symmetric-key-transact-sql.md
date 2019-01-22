@@ -16,15 +16,15 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], opening
 - OPEN SYMMETRIC KEY statement
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b5fbd7c16e5150c9d547699c26038e435f1e96c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf608c46a176e53c76a3ca67c8707beea76a2205
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749638"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327594"
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,9 +82,9 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
 ## <a name="permissions"></a>Permissions  
  호출자는 키에 대한 일부 사용 권한을 가지고 있어야 하며 키에 대한 VIEW DEFINITION 권한이 거부되지 않은 상태여야 합니다. 해독 메커니즘에 따라 추가 요구 사항이 따를 수도 있습니다.  
   
--   인증서에 의한 암호 해독: 인증서에 대한 CONTROL 권한이 있어야 하고 인증서의 개인 키를 암호화하는 데 사용된 암호를 알고 있어야 합니다.  
+-   인증서로 해독: 인증서에 대한 CONTROL 권한이 있어야 하고 인증서의 개인 키를 암호화하는 데 사용된 암호를 알고 있어야 합니다.  
   
--   비대칭 키에 의한 암호 해독: 비대칭 키에 대한 CONTROL 권한이 있어야 하고 비대칭 키의 개인 키를 암호화하는 데 사용된 암호를 알고 있어야 합니다.  
+-   비대칭 키로 해독: 비대칭 키에 대한 CONTROL 권한이 있어야 하고 비대칭 키의 개인 키를 암호화하는 데 사용된 암호를 알고 있어야 합니다.  
   
 -   DECRYPTION BY PASSWORD: 대칭 키를 암호화하는 데 사용된 암호 중 하나를 알고 있어야 합니다.  
   

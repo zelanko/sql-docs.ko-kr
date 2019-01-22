@@ -15,15 +15,15 @@ helpviewer_keywords:
 - system objects [SQL Server]
 - cryptography [SQL Server], system objects
 ms.assetid: 4e43f954-0982-470b-a239-08a13c61563a
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2ee491fc98c87b694dfd78a44d8c3dbd44bb84cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4e48f12ce988ae66a6cba24c658c10b76d3272b2
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715481"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361329"
 ---
 # <a name="deny-system-object-permissions-transact-sql"></a>DENY 시스템 개체 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

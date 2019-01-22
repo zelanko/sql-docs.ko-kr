@@ -1,7 +1,7 @@
 ---
 title: Integration Services 프로그래밍 개요 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/09/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: integration-services
@@ -20,12 +20,12 @@ ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f2abb71a0c70a8caaacfee79d346f6c7101846a2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5a861a1688748fa20f9a160f69fd06d5903e4fb5
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357814"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420148"
 ---
 # <a name="integration-services-programming-overview"></a>Integration Services 프로그래밍 개요
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 데이터 이동 및 변환을 패키지 제어 흐름 및 관리와 분리하는 아키텍처가 있습니다. 또한 이 아키텍처를 정의하며 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 프로그래밍할 때 자동화하고 확장할 수 있는 두 가지 엔진이 있습니다. 런타임 엔진은 개발자가 실행 흐름을 제어하고 로깅, 이벤트 처리기 및 변수에 대한 옵션을 설정할 수 있게 해 주는 제어 흐름 및 패키지 관리 인프라를 구현합니다. 데이터 흐름 엔진은 데이터 추출, 변환 및 로드에만 사용되는 특수한 고성능 엔진입니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 프로그래밍할 때 실제 프로그래밍 작업은 이러한 두 엔진에 대해 수행됩니다.  
@@ -71,9 +71,7 @@ ms.locfileid: "53357814"
 |Microsoft.SqlServer.RuntimeWrapper.dll|네이티브 런타임 엔진에 대한 PIA(주 interop 어셈블리) 또는 래퍼를 포함합니다.|  
 |Microsoft.SqlServer.PipelineHost.dll|관리되는 데이터 흐름 엔진을 포함합니다.|  
 |Microsoft.SqlServer.PipelineWrapper.dll|네이티브 데이터 흐름 엔진에 대한 PIA(주 interop 어셈블리) 또는 래퍼를 포함합니다.|  
-  
-||  
-|-|  
+
 ![Integration Services 아이콘 (작은)](media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
   

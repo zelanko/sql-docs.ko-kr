@@ -1,7 +1,7 @@
 ---
 title: SQLSetDescField 함수 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -20,14 +20,15 @@ ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a8704d28fb8ae39cf7d8f6bb595c884b70a6721a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: fb6061adf707a58737fd34d7cb7bbe33b2e9579a
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204162"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420238"
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField 함수
+
 **규칙**  
  도입 된 버전: ODBC 3.0 표준 준수 합니다. ISO 92  
   
@@ -36,8 +37,7 @@ ms.locfileid: "53204162"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```cpp  
 SQLRETURN SQLSetDescField(  
      SQLHDESC      DescriptorHandle,  
      SQLSMALLINT   RecNumber,  
@@ -143,12 +143,12 @@ SQLRETURN SQLSetDescField(
 |헤더 필드 이름|형식|R/W|Default|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|카드가: R APD: R IRD: R IPD: R|카드가: 에 대 한 SQL_DESC_ALLOC_AUTO 암시적 또는 SQL_DESC_ALLOC_USER에 대 한 명시적<br /><br /> APD: 에 대 한 SQL_DESC_ALLOC_AUTO 암시적 또는 SQL_DESC_ALLOC_USER에 대 한 명시적<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> IPD: SQL_DESC_ALLOC_AUTO|  
-|SQL_DESC_ARRAY_SIZE|SQLULEN|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 되지 않는|카드가: [1] APD: [1] IRD: 사용 되지 않는 IPD: 사용 되지 않는|  
-|SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT *|카드가: R/W APD: R/W IRD: R/W IPD: R/W|카드가: Ptr APD null. Ptr IRD null. Null ptr IPD: Null ptr|  
-|SQL_DESC_BIND_OFFSET_PTR|SQLLEN *|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 되지 않는|카드가: Ptr APD null. Ptr IRD null. 사용 되지 않는 IPD: 사용 되지 않는|  
-|SQL_DESC_BIND_TYPE|SQLINTEGER|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 되지 않는|카드가: SQL_BIND_BY_COLUMN으로 설정<br /><br /> APD: SQL_BIND_BY_COLUMN으로 설정<br /><br /> IRD: 사용 되지 않는<br /><br /> IPD: 사용 되지 않는|  
+|SQL_DESC_ARRAY_SIZE|SQLULEN|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 되지 않는|ARD:[1] APD:[1] IRD: 사용 되지 않는 IPD: 사용 되지 않는|  
+|SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT*|카드가: R/W APD: R/W IRD: R/W IPD: R/W|카드가: Ptr APD null. Null ptr IRD: Null ptr IPD: Null ptr|  
+|SQL_DESC_BIND_OFFSET_PTR|SQLLEN*|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 되지 않는|카드가: Ptr APD null. Null ptr IRD: 사용 되지 않는 IPD: 사용 되지 않는|  
+|SQL_DESC_BIND_TYPE|SQLINTEGER|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 되지 않는|카드가: SQL_BIND_BY_COLUMN<br /><br /> APD: SQL_BIND_BY_COLUMN<br /><br /> IRD: 사용 되지 않는<br /><br /> IPD: 사용 되지 않는|  
 SQL_DESC_COUNT|SQLSMALLINT|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: 0 APD: 0 IRD: D IPD: 0|  
-|SQL_DESC_ROWS_PROCESSED_PTR|SQLULEN *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R/W IPD: R/W|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: Null ptr IPD: Null ptr|  
+|SQL_DESC_ROWS_PROCESSED_PTR|SQLULEN*|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R/W IPD: R/W|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: Null ptr IPD: Null ptr|  
   
  [1]이이 필드는 IPD 드라이버에 의해 자동으로 채워지는 경우에 정의 됩니다. 그렇지 않은 경우 정의 되지 않습니다. 응용 프로그램에서 SQLSTATE HY091 이러한 필드를 설정 하려고 하는 경우 (잘못 된 설명자 필드 식별자)가 반환 됩니다.  
   
@@ -159,26 +159,26 @@ SQL_DESC_COUNT|SQLSMALLINT|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: 0 
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  
 |SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  
 |SQL_DESC_BASE_TABLE_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  
-|SQL_DESC_CASE_SENSITIVE|SQLINTEGER|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: D [1]|  
+|SQL_DESC_CASE_SENSITIVE|SQLINTEGER|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: D[1]|  
 |SQL_DESC_CATALOG_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  
-|SQL_DESC_CONCISE_TYPE|SQLSMALLINT|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: SQL_C_ 기본 APD: SQL_C_ 기본 IRD: D IPD: ND|  
-|SQL_DESC_DATA_PTR|대 SQLPOINTER|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 되지 않는|카드가: Ptr APD null. Ptr IRD null. 사용 되지 않는 IPD: [2] 사용 안 함|  
+|SQL_DESC_CONCISE_TYPE|SQLSMALLINT|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: SQL_C_ DEFAULT APD: SQL_C_ DEFAULT IRD: D IPD: ND|  
+|SQL_DESC_DATA_PTR|대 SQLPOINTER|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 되지 않는|카드가: Ptr APD null. Null ptr IRD: 사용 되지 않는 IPD: [2] 사용 안 함|  
 |SQL_DESC_DATETIME_INTERVAL_CODE|SQLSMALLINT|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
 |SQL_DESC_DATETIME_INTERVAL_PRECISION|SQLINTEGER|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
-SQL_DESC_DISPLAY_SIZE|SQLLEN|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  
-|SQL_DESC_FIXED_PREC_SCALE|SQLSMALLINT|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: D [1]|  
-|SQL_DESC_INDICATOR_PTR|SQLLEN *|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 되지 않는|카드가: Ptr APD null. Ptr IRD null. 사용 되지 않는 IPD: 사용 되지 않는|  
+|SQL_DESC_DISPLAY_SIZE|SQLLEN|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  
+|SQL_DESC_FIXED_PREC_SCALE|SQLSMALLINT|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: D[1]|  
+|SQL_DESC_INDICATOR_PTR|SQLLEN *|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 되지 않는|카드가: Ptr APD null. Null ptr IRD: 사용 되지 않는 IPD: 사용 되지 않는|  
 |SQL_DESC_LABEL|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  
 |SQL_DESC_LENGTH|SQLULEN|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
 |SQL_DESC_LITERAL_PREFIX|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  
 |SQL_DESC_LITERAL_SUFFIX|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  
-|SQL_DESC_LOCAL_TYPE_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: D [1]|  
+|SQL_DESC_LOCAL_TYPE_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: D[1]|  
 |SQL_DESC_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
 |SQL_DESC_NULLABLE|SQLSMALLINT|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|카드가: ND APD: ND IRD: D IPD: ND|  
 |SQL_DESC_NUM_PREC_RADIX|SQLINTEGER|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
-SQL_DESC_OCTET_LENGTH|SQLLEN|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_OCTET_LENGTH_PTR|SQLLEN *|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 되지 않는|카드가: Ptr APD null. Ptr IRD null. 사용 되지 않는 IPD: 사용 되지 않는|  
-|DESC_PARAMETER_TYPE|SQLSMALLINT|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: 사용 되지 않는 IPD: R/W|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: 사용 되지 않는 IPD: D = SQL_PARAM_INPUT|  
+|SQL_DESC_OCTET_LENGTH|SQLLEN|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
+|SQL_DESC_OCTET_LENGTH_PTR|SQLLEN *|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 되지 않는|카드가: Ptr APD null. Null ptr IRD: 사용 되지 않는 IPD: 사용 되지 않는|  
+|SQL_DESC_PARAMETER_TYPE|SQLSMALLINT|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: 사용 되지 않는 IPD: R/W|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: 사용 되지 않는 IPD: D=SQL_PARAM_INPUT|  
 |SQL_DESC_PRECISION|SQLSMALLINT|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
 |SQL_DESC_ROWVER|SQLSMALLINT|카드가: 사용 되지 않는<br /><br /> APD: 사용 되지 않는<br /><br /> IRD: R<br /><br /> IPD: R|카드가: 사용 되지 않는<br /><br /> APD: 사용 되지 않는<br /><br /> IRD: ND<br /><br /> IPD: ND|  
 |SQL_DESC_SCALE|SQLSMALLINT|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
@@ -186,9 +186,9 @@ SQL_DESC_OCTET_LENGTH|SQLLEN|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: 
 |SQL_DESC_SEARCHABLE|SQLSMALLINT|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  
 |SQL_DESC_TABLE_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  
 |SQL_DESC_TYPE|SQLSMALLINT|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: SQL_C_DEFAULT APD: SQL_C_DEFAULT IRD: D IPD: ND|  
-SQL_DESC_TYPE_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: D [1]|  
+|SQL_DESC_TYPE_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: D[1]|  
 |SQL_DESC_UNNAMED|SQLSMALLINT|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_UNSIGNED|SQLSMALLINT|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: D [1]|  
+|SQL_DESC_UNSIGNED|SQLSMALLINT|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: D[1]|  
 |SQL_DESC_UPDATABLE|SQLSMALLINT|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  
   
  [1]이이 필드는 IPD 드라이버에 의해 자동으로 채워지는 경우에 정의 됩니다. 그렇지 않은 경우 정의 되지 않습니다. 응용 프로그램에서 SQLSTATE HY091 이러한 필드를 설정 하려고 하는 경우 (잘못 된 설명자 필드 식별자)가 반환 됩니다.  
@@ -201,10 +201,10 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 
 ## <a name="header-fields"></a>헤더 필드  
  각 설명자에는 다음 필드로 구성 된 헤더에 있습니다.  
   
- **[All] SQL_DESC_ALLOC_TYPE**  
+ **SQL_DESC_ALLOC_TYPE [All]**  
  이 읽기 전용 SQLSMALLINT 헤더 필드 드라이버 또는 응용 프로그램에서 명시적으로 설명자를 자동으로 할당 된 여부를 지정 합니다. 응용 프로그램을 수 있지만 수정할 수 없으며이 필드. 필드는 설명자를 드라이버에 의해 자동으로 할당 된 경우 드라이버에서 SQL_DESC_ALLOC_AUTO에 설정 됩니다. 설정은 SQL_DESC_ALLOC_USER 드라이버에서 설명자 응용 프로그램에서 명시적으로 할당 된 경우.  
   
- **SQL_DESC_ARRAY_SIZE [응용 프로그램 설명자]**  
+ **SQL_DESC_ARRAY_SIZE [Application descriptors]**  
  ARDs,이 SQLULEN 헤더 필드를 행 집합의 행 수를 지정합니다. 호출 하 여 반환할 행의 수입니다 **SQLFetch** 하거나 **SQLFetchScroll** 를 호출 하 여 작업할 수 나 **SQLBulkOperations** 또는 **SQLSetPos** .  
   
  Apd,이 SQLULEN 헤더 필드는 각 매개 변수에 대해 값의 개수를 지정합니다.  
@@ -213,7 +213,7 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 
   
  이 필드는 카드가에서 호출 하 여 설정할 수도 있습니다 **SQLSetStmtAttr** SQL_ATTR_ROW_ARRAY_SIZE 특성을 사용 합니다. APD의이 필드를 호출 하 여 설정할 수도 있습니다 **SQLSetStmtAttr** SQL_ATTR_PARAMSET_SIZE 특성을 사용 합니다.  
   
- **[All] SQL_DESC_ARRAY_STATUS_PTR**  
+ **SQL_DESC_ARRAY_STATUS_PTR [All]**  
  이 SQLUSMALLINT 각 설명자 형식에 대해 * SQLUSMALLINT 값의 배열에 헤더 필드 지점입니다. 이러한 배열은 다음과 같은 이름이 지정 됩니다: 행 상태 배열 (IRD), 매개 변수 상태 배열을 (IPD), 행 작업 배열을 () 매개 변수 작업 배열 (APD).  
   
  IRD이 헤더 필드를 호출한 후 상태 값을 포함 하는 행 상태 배열 가리킵니다 **SQLBulkOperations**, **SQLFetch**합니다 **SQLFetchScroll**, 또는 **SQLSetPos**합니다. 배열에 행 집합의 행이 있는 만큼의 요소가 있습니다. 응용 프로그램 SQLUSMALLINTs 배열을 할당 하 고이 필드는 배열을 가리키도록 설정 해야 합니다. 필드는 기본적으로 null 포인터로 설정 됩니다. 드라이버는 SQL_DESC_ARRAY_STATUS_PTR 필드 없음 상태 값이 생성 되는 경우에 null 포인터로 설정 되 고 배열 채워지지 않는 경우가 아니면 배열을-채워집니다.  
@@ -301,7 +301,7 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 
   
  APD의이 필드를 호출 하 여 설정할 수도 있습니다 **SQLSetStmtAttr** 를 SQL_ATTR_PARAM_BIND_TYPE로 *특성*합니다.  
   
- **[All] SQL_DESC_COUNT**  
+ **SQL_DESC_COUNT [All]**  
  이 SQLSMALLINT 헤더 필드 지정 데이터를 포함 하는 번호가 가장 큰 레코드의 인덱스 1부터 시작 합니다. 드라이버는 설명자에 대 한 데이터 구조를 설정 하면 상당한 수 있는 레코드 수를 표시 하려면 SQL_DESC_COUNT 필드를 설정할 수도 있어야 합니다. 응용 프로그램에서이 데이터 구조체의 인스턴스를 할당 하는 경우를 위한 공간을 예약 하는 레코드 수를 지정 하는 것이 없습니다. 응용 프로그램 레코드의 콘텐츠를 지정 하는 대로 드라이버는 설명자 핸들을 적절 한 크기의 데이터 구조를 가리키는지 확인에 필요한 모든 작업을 수행 합니다.  
   
  SQL_DESC_COUNT (필드는 카드가 경우)에 바인딩되는 모든 데이터 열 또는 (필드는 APD 경우)에 바인딩되어 있는 모든 매개 변수의 수 없는 있지만 번호가 가장 큰 레코드의 수입니다. 번호가 가장 높은 열 또는 매개 변수 바인딩 해제 되는 경우에 다음 번호가 가장 높은 열 또는 매개 변수의 수 SQL_DESC_COUNT 변경 됩니다. 열 또는 여러 매개 변수가 하는 경우 가장 높은 열 수가 바인딩되지 미만 (호출 하 여 **SQLBindCol** 사용 하 여 합니다 *TargetValuePtr* 인수가 null 포인터 이거나 로**SQLBindParameter** 사용 하 여는 *ParameterValuePtr* 인수가 null 포인터로 설정), SQL_DESC_COUNT 변경 되지 않습니다. 추가 열 또는 매개 변수 데이터를 포함 하는 번호가 가장 높은 레코드 보다 큰 숫자를 사용 하 여 바인딩된 경우 드라이버 SQL_DESC_COUNT 필드의 값을 자동으로 증가 합니다. 호출 하 여 모든 열은 바인딩되지 않은 경우 **SQLFreeStmt** SQL_UNBIND 옵션과 카드가 및 IRD SQL_DESC_COUNT 필드를 0으로 설정 됩니다. 하는 경우 **SQLFreeStmt** 라고 SQL_RESET_PARAMS 옵션을 사용 하 여 APD IPD의 SQL_DESC_COUNT 필드는 0으로 설정 됩니다.  
@@ -339,7 +339,7 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 
  **SQL_DESC_CATALOG_NAME [IRDs]**  
  이 읽기 전용 SQLCHAR * 레코드 필드 열이 포함 된 기본 테이블에 대 한 카탈로그를 포함 합니다. 반환 값 또는 열이 뷰의 일부 열이 식이면 드라이버에 따라 다릅니다는입니다. 데이터 소스는 카탈로그를 지원 하지 않습니다 또는 카탈로그를 확인할 수 없는 경우이 변수는 빈 문자열을 포함 합니다.  
   
- **[All] SQL_DESC_CONCISE_TYPE**  
+ **SQL_DESC_CONCISE_TYPE [All]**  
  이 SQLSMALLINT 헤더 필드에 날짜/시간 및 간격 데이터 유형을 포함 하는 모든 데이터 형식에 대해 간결한 데이터 형식을 지정 합니다.  
   
  SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE을 SQL_DESC_DATETIME_INTERVAL_CODE 필드의 값은 상호 종속적입니다. 다른 설정 해야 하는 필드 중 각 시간 설정 됩니다. SQL_DESC_CONCISE_TYPE를 호출 하 여 설정할 수 있습니다 **SQLBindCol** 하거나 **SQLBindParameter**, 또는 **SQLSetDescField**합니다. 호출 하 여 SQL_DESC_TYPE을 설정할 수 있습니다 **SQLSetDescField** 하거나 **SQLSetDescRec**합니다.  
@@ -357,7 +357,7 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 
   
  IPD, 카드가, APD의 SQL_DESC_DATA_PTR 필드가 설정 될 때마다 드라이버 SQL_DESC_TYPE 필드의 값이 유효한 ODBC C 데이터 형식 또는 드라이버별 데이터 형식 중 하나에 및 데이터 형식에 영향을 주는 다른 모든 필드는 일치를 확인 합니다. 일관성 확인 메시지를 표시는 IPD의 SQL_DESC_DATA_PTR 필드가 사용 하는 것입니다. 특히, 응용 프로그램을 IPD 및 나중에 호출 SQL_DESC_DATA_PTR 필드가 설정 **SQLGetDescField** 이 필드에서 반환 되지 않습니다 반드시 설정 해야 하는 값입니다. 자세한 내용은 "일관성 확인"의 참조 [SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)합니다.  
   
- **[All] 값을 SQL_DESC_DATETIME_INTERVAL_CODE**  
+ **SQL_DESC_DATETIME_INTERVAL_CODE [All]**  
  이 SQLSMALLINT 레코드 필드 SQL_DESC_TYPE 필드 SQL_DATETIME 또는 sql_interval 인 경우 특정 날짜/시간 또는 간격 데이터 형식에 대 한 하위 코드를 포함 합니다. 이것이 SQL 및 C 데이터 형식에 대해 true입니다. 코드는 데이터 형식 이름 (날짜/시간 형식)에 대 한 "TYPE" 또는 "C_TYPE" 대체 "코드" 또는 "CODE" (간격 유형)에 대 한 "INTERVAL" 또는 "C_INTERVAL"에 대 한 대체를 사용 하 여 구성 됩니다.  
   
  SQL_DESC_TYPE 및 응용 프로그램 설명자를에서 SQL_DESC_CONCISE_TYPE SQL_C_DEFAULT로 설명자를 문 핸들을 사용 하 여 연결 되지 경우 값을 SQL_DESC_DATETIME_INTERVAL_CODE의 내용을 정의 되지 않습니다.  
@@ -368,29 +368,29 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 
 |--------------------|------------------------------|  
 |SQL_TYPE_DATE/SQL_C_TYPE_DATE|SQL_CODE_DATE|  
 |SQL_TYPE_TIME/SQL_C_TYPE_TIME|SQL_CODE_TIME|  
-|SQL_TYPE_TIMESTAMP / SQL_C_TYPE_TIMESTAMP|SQL_CODE_TIMESTAMP|  
+|SQL_TYPE_TIMESTAMP/ SQL_C_TYPE_TIMESTAMP|SQL_CODE_TIMESTAMP|  
   
  이 필드는 다음 표에 나열 된 간격 데이터 형식에 대해 설정할 수 있습니다.  
   
 |간격 유형|DATETIME_INTERVAL_CODE|  
 |-------------------|------------------------------|  
-|SQL_INTERVAL_DAY / SQL_C_INTERVAL_DAY|SQL_CODE_DAY|  
-|SQL_INTERVAL_DAY_TO_HOUR / SQL_C_INTERVAL_DAY_TO_HOUR|SQL_CODE_DAY_TO_HOUR|  
-|SQL_INTERVAL_DAY_TO_MINUTE / SQL_C_INTERVAL_DAY_TO_MINUTE|SQL_CODE_DAY_TO_MINUTE|  
-|SQL_INTERVAL_DAY_TO_SECOND / SQL_C_INTERVAL_DAY_TO_SECOND|SQL_CODE_DAY_TO_SECOND|  
+|SQL_INTERVAL_DAY/ SQL_C_INTERVAL_DAY|SQL_CODE_DAY|  
+|SQL_INTERVAL_DAY_TO_HOUR/ SQL_C_INTERVAL_DAY_TO_HOUR|SQL_CODE_DAY_TO_HOUR|  
+|SQL_INTERVAL_DAY_TO_MINUTE/ SQL_C_INTERVAL_DAY_TO_MINUTE|SQL_CODE_DAY_TO_MINUTE|  
+|SQL_INTERVAL_DAY_TO_SECOND/ SQL_C_INTERVAL_DAY_TO_SECOND|SQL_CODE_DAY_TO_SECOND|  
 |SQL_INTERVAL_HOUR / SQL_C_INTERVAL_HOUR|SQL_CODE_HOUR|  
-QL_INTERVAL_HOUR_TO_MINUTE / SQL_C_INTERVAL_HOUR_TO_MINUTE|SQL_CODE_HOUR_TO_MINUTE|  
+|SQL_INTERVAL_HOUR_TO_MINUTE/ SQL_C_INTERVAL_HOUR_TO_MINUTE|SQL_CODE_HOUR_TO_MINUTE|  
 |SQL_INTERVAL_HOUR_TO_SECOND / SQL_C_INTERVAL_HOUR_TO_SECOND|SQL_CODE_HOUR_TO_SECOND|  
-|SQL_INTERVAL_MINUTE / SQL_C_INTERVAL_MINUTE|SQL_CODE_MINUTE|  
-|SQL_INTERVAL_MINUTE_TO_SECOND / SQL_C_INTERVAL_MINUTE_TO_SECOND|SQL_CODE_MINUTE_TO_SECOND|  
-|SQL_INTERVAL_MONTH / SQL_C_INTERVAL_MONTH|SQL_CODE_MONTH|  
-QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|  
+|SQL_INTERVAL_MINUTE/ SQL_C_INTERVAL_MINUTE|SQL_CODE_MINUTE|  
+|SQL_INTERVAL_MINUTE_TO_SECOND/ SQL_C_INTERVAL_MINUTE_TO_SECOND|SQL_CODE_MINUTE_TO_SECOND|  
+|SQL_INTERVAL_MONTH/ SQL_C_INTERVAL_MONTH|SQL_CODE_MONTH|  
+|SQL_INTERVAL_SECOND/ SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|  
 |SQL_INTERVAL_YEAR / SQL_C_INTERVAL_YEAR|SQL_CODE_YEAR|  
 |SQL_INTERVAL_YEAR_TO_MONTH / SQL_C_INTERVAL_YEAR_TO_MONTH|SQL_CODE_YEAR_TO_MONTH|  
   
  데이터 간격으로이 필드에 대 한 자세한 내용은 참조 하세요. [데이터 형식 식별자 및 설명자](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)합니다.  
   
- **[All] SQL_DESC_DATETIME_INTERVAL_PRECISION**  
+ **SQL_DESC_DATETIME_INTERVAL_PRECISION [All]**  
  이 SQLINTEGER 레코드 필드 SQL_DESC_TYPE 필드 sql_interval 인 경우 전체 자릿수를 유도 하는 간격을 포함 합니다. 값을 SQL_DESC_DATETIME_INTERVAL_CODE 필드 간격 데이터 형식으로 설정 되 면이 필드는 전체 자릿수를 유도 기본 간격으로 설정 됩니다.  
   
  **SQL_DESC_DISPLAY_SIZE [IRDs]**  
@@ -439,10 +439,10 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
   
  IPDs,이 필드 동적 매개 변수는 항상 null을 허용 하 고 응용 프로그램에서 설정할 수 없습니다 때문에 메시지가 SQL_NULLABLE를 항상 설정 됩니다.  
   
- **[All] SQL_DESC_NUM_PREC_RADIX**  
+ **SQL_DESC_NUM_PREC_RADIX [All]**  
  이 SQLINTEGER 필드에 값 2의 SQL_DESC_TYPE 필드의 데이터 형식이 근사 숫자 데이터 형식, SQL_DESC_PRECISION 필드 비트 수 있기 때문에 있습니다. 이 필드에 값 10의 SQL_DESC_TYPE 필드에서 해당 데이터 형식의 경우 정확한 숫자 데이터 형식의 경우 SQL_DESC_PRECISION 필드 10 진수 수 있기 때문에 합니다. 이 필드는 모든 숫자가 아닌 데이터 형식에 대해 0으로 설정 됩니다.  
   
- **[All] SQL_DESC_OCTET_LENGTH**  
+ **SQL_DESC_OCTET_LENGTH [All]**  
  이 SQLLEN 레코드 필드에 문자열 또는 이진 데이터 형식의 길이 (바이트)를 포함합니다. 고정 길이 문자 또는 이진 형식의 실제 길이 (바이트)입니다. 가변 길이 문자 또는 이진 형식의 최대 길이 (바이트)입니다. 이 값이 항상 구현 설명자에 대 한 null 종료 문자에 대 한 공간을 제외 하 고 항상 응용 프로그램 설명자에 대 한 null 종료 문자에 대 한 공간을 포함 합니다. 응용 프로그램 데이터에 대 한이 필드는 버퍼의 크기를 포함합니다. Apd, 출력 또는 입출력 매개 변수에만이 필드 정의 됩니다.  
   
  **[응용 프로그램 설명자] SQL_DESC_OCTET_LENGTH_PTR**  
@@ -454,12 +454,12 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
   
  경우에 대 한 호출 **SQLFetch** 하거나 **SQLFetchScroll** 는 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를 입력 한 후가이 필드에서 가리키는 버퍼에 반환 하지 않았습니다, 버퍼의 내용을 정의 되지 않습니다. 이 필드를 *지연 된 필드*합니다. 설정 되어 있지만 확인 하거나 데이터의 8 진수 길이 나타냅니다 드라이버에 의해 나중에 사용 시 사용 되지 않습니다.  
   
- **Desc_parameter_type [IPDs]**  
+ **SQL_DESC_PARAMETER_TYPE [IPDs]**  
  이 SQLSMALLINT 레코드 필드를 입력 매개 변수를 입/출력 매개 변수, 출력 매개 변수를 입/출력 스트리밍 매개 변수를 SQL_PARAM_INPUT_OUTPUT_STREAM 또는 SQL_ SQL_PARAM_OUTPUT SQL_PARAM_INPUT_OUTPUT SQL_PARAM_INPUT로 PARAM_OUTPUT_STREAM 스트리밍되는 출력 매개 변수입니다. 기본적으로 SQL_PARAM_INPUT에 설정 됩니다.  
   
  IPD에 대 한 필드는 IPD (SQL_ATTR_ENABLE_AUTO_IPD 문 특성이 SQL_FALSE) 드라이버에 의해 자동으로 채워지지 않는 경우 기본적으로 SQL_PARAM_INPUT에 설정 됩니다. 응용 프로그램은 입력된 매개 변수 없는 매개 변수에 대해 IPD의이 필드를 설정 해야 합니다.  
   
- **[All] SQL_DESC_PRECISION**  
+ **SQL_DESC_PRECISION [All]**  
  정확한 숫자 형식가 수 (이진 정밀도)는 근사 숫자 형식에 대 한 비트 수 또는 자릿수 SQL_TYPE SQL_TYPE_TIME, 소수 자릿수 초 구성 요소에서 숫자 자릿수를 포함 하는이 SQLSMALLINT 레코드 필드 _TIMESTAMP, 또는 SQL_INTERVAL_SECOND 데이터 형식입니다. 이 필드를 다른 모든 데이터 형식에 대 한 정의 되지 않습니다.  
   
  이 필드의 값이 "precision"로 ODBC 2에 정의 된 값에서 다를 수 있습니다 *.x*합니다. 자세한 내용은 참조 하세요. [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)합니다.  
@@ -467,7 +467,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **SQL_DESC_ROWVER [구현 설명자]**  
  이 SQLSMALLINTrecord 필드 열 수정 되었는지 여부를 자동으로 DBMS에 의해 (예: SQL Server에서 "timestamp" 형식의 열) 행이 업데이트 될 때를 나타냅니다. 그렇지 않은 경우이 레코드 필드의 값은 SQL_FALSE 하는 열이 행 버전 관리 열 이면 SQL_TRUE로 설정 됩니다. 이 열 특성은 호출과 비슷하지만 **SQLSpecialColumns** IdentifierType의 SQL_ROWVER 열을 자동으로 업데이트 되는지 여부를 확인 하려면를 사용 하 여 합니다.  
   
- **[All] 자릿수가 SQL_DESC_SCALE**  
+ **SQL_DESC_SCALE [All]**  
  이 SQLSMALLINT 레코드 필드 decimal 및 numeric 데이터 형식에 대해 정의 된 확장을 포함합니다. 필드를 다른 모든 데이터 형식에 대 한 정의 되지 않습니다.  
   
  이 필드의 값이 "scale" ODBC 2에 정의 된 값에서 다를 수 있습니다 *.x*합니다. 자세한 내용은 참조 하세요. [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)합니다.  
@@ -489,7 +489,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **SQL_DESC_TABLE_NAME [IRDs]**  
  이 읽기 전용 SQLCHAR * 레코드 필드에는이 열이 포함 된 기본 테이블의 이름을 포함 합니다. 반환 값 또는 열이 뷰의 일부 열이 식이면 드라이버에 따라 다릅니다는입니다.  
   
- **[All] SQL_DESC_TYPE**  
+ **SQL_DESC_TYPE [All]**  
  이 SQLSMALLINT 레코드 필드에 날짜/시간 및 간격 데이터 형식 제외한 모든 데이터 형식에 대 한 간단한 SQL 또는 C 데이터 형식을 지정합니다. 날짜/시간 및 간격 데이터 형식에 대 한이 필드는 자세한 데이터 형식을 SQL_DATETIME 또는 sql_interval 인을 지정 합니다.  
   
  이 필드에 SQL_DATETIME 또는 sql_interval 인 때마다 값을 SQL_DESC_DATETIME_INTERVAL_CODE 필드 간결한 형식에 대 한 적절 한 하위 코드를 포함 해야 합니다. 날짜/시간 데이터 형식에 대 한 SQL_DESC_TYPE SQL_DATETIME, 있어서 값을 SQL_DESC_DATETIME_INTERVAL_CODE 필드에 특정 날짜/시간 데이터 형식에 대 한 하위 코드가 포함 되어 있습니다. 간격 데이터 형식에 대 한 SQL_DESC_TYPE SQL_INTERVAL 있어서 값을 SQL_DESC_DATETIME_INTERVAL_CODE 필드에 특정 간격 데이터 형식에 대 한 하위 코드가 포함 되어 있습니다.  
@@ -504,9 +504,9 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
   
 |SQL_DESC_TYPE 값|다른 필드 암시적으로 설정합니다.|  
 |------------------------------|---------------------------------|  
-|SQL_CHAR, SQL_VARCHAR, SQL_C_CHAR 라는 SQL_C_VARCHAR|SQL_DESC_LENGTH 1로 설정 됩니다. SQL_DESC_PRECISION 0으로 설정 됩니다.|  
+|SQL_CHAR, SQL_VARCHAR, SQL_C_CHAR, SQL_C_VARCHAR|SQL_DESC_LENGTH 1로 설정 됩니다. SQL_DESC_PRECISION 0으로 설정 됩니다.|  
 |SQL_DATETIME|값을 SQL_DESC_DATETIME_INTERVAL_CODE SQL_CODE_DATE SQL_CODE_TIME에 설정 되 면 SQL_DESC_PRECISION 0으로 설정 됩니다. 설정은 SQL_DESC_TIMESTAMP, SQL_DESC_PRECISION 6으로 설정 됩니다.|  
-|SQL_DECIMAL, SQL_NUMERIC SQL_C_NUMERIC|자릿수가 SQL_DESC_SCALE 0으로 설정 됩니다. SQL_DESC_PRECISION 각 데이터 형식에 대 한 구현 시 정의 된 정밀도로 설정 됩니다.<br /><br /> 참조 [c: SQL 숫자](../../../odbc/reference/appendixes/sql-to-c-numeric.md) 수동으로 SQL_C_NUMERIC 값을 바인딩하는 방법에 대 한 정보에 대 한 합니다.|  
+|SQL_DECIMAL, SQL_NUMERIC, SQL_C_NUMERIC|자릿수가 SQL_DESC_SCALE 0으로 설정 됩니다. SQL_DESC_PRECISION 각 데이터 형식에 대 한 구현 시 정의 된 정밀도로 설정 됩니다.<br /><br /> 참조 [c: SQL 숫자](../../../odbc/reference/appendixes/sql-to-c-numeric.md) 수동으로 SQL_C_NUMERIC 값을 바인딩하는 방법에 대 한 정보에 대 한 합니다.|  
 |SQL_FLOAT, SQL_C_FLOAT|SQL_DESC_PRECISION SQL_FLOAT 구현 시 정의 된 기본 정밀도로 설정 됩니다.|  
 |SQL_INTERVAL|값을 SQL_DESC_DATETIME_INTERVAL_CODE 간격 데이터 형식으로 설정 되 면 SQL_DESC_DATETIME_INTERVAL_PRECISION 2 (기본 간격 선행 정밀도)으로 설정 됩니다. 간격의 초 구성 요소에 있는 경우 자릿수가 SQL_DESC_PRECISION (기본 간격 초 전체 자릿수) 6으로 설정 됩니다.|  
   

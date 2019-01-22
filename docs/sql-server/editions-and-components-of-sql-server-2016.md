@@ -33,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a5a265f75e983ec6994114196b6890f13d94e850
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 31e280cd389bdfd7985bfa995aecbf8ed020417d
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299970"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420228"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016의 버전 및 지원하는 기능
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |데이터베이스 미러링|예|예<br /><br /> Full 보안만|미러링 모니터만|미러링 모니터만|미러링 모니터만| 
 |백업 압축|예|예|아니오|아니오|아니오| 
 |데이터베이스 스냅숏|예|예 <sup>3</sup>|예 <sup>3</sup>|예 <sup>3</sup>|예 <sup>3</sup>|
-|Always On 장애 조치(failover) 클러스터 인스턴스|예<br /><br /> 운영 체제가 지원하는 최대 크기의 노드 수|예<br /><br /> 노드 2개 지원|아니오|아니오|아니오|  
+|Always On 장애 조치(failover) 클러스터 인스턴스|예<br /><br /> 16|예<br /><br /> 노드 2개 지원|아니오|아니오|아니오|  
 |Always On 가용성 그룹|예<br /><br /> 2개의 동기 보조 복제본을 포함하여 최대 8개까지 보조 복제본 지원|아니오|아니오|아니오|아니오|
 |기본 가용성 그룹 <sup>2</sup>|아니오|예<br /><br /> 노드 2개 지원|아니오|아니오|아니오|
 |온라인 페이지 및 파일 복원|예|아니오|아니오|아니오|아니오|

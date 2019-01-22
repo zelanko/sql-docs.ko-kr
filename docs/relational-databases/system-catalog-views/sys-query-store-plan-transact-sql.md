@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60b9137e52b34b79fa4faddbef7b9e4da8734142
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: ea7c955718dbe6d2437b44b915057fc095151dc4
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397612"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419798"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "54397612"
   쿼리와 관련 된 각 실행 계획에 대 한 정보를 포함 합니다.  
   
 |열 이름|데이터 형식|Description|  
-|-----------------|---------------|-----------------|  
+|-----------------|---------------|-----------------|
 |**plan_id**|**bigint**|기본 키입니다.|  
 |**query_id**|**bigint**|외래 키입니다. 에 조인 [sys.query_store_query &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)합니다.|  
 |**plan_group_id**|**bigint**|계획 그룹의 ID입니다. 커서 쿼리에 일반적으로 여러 필요 (채우고 인출) 계획 합니다. 채우고 함께 컴파일되는 인출 계획은 동일한 그룹에 있습니다.<br /><br /> 0 계획 그룹에 없는 것을 의미 합니다.|  
@@ -57,13 +57,8 @@ ms.locfileid: "54397612"
 |**last_execution_time**|**datetimeoffset**|마지막 실행 시간을 참조 마지막 쿼리/계획의 종료 시간입니다.|  
 |**avg_compile_duration**|**float**|컴파일 통계를 계획 합니다.|  
 |**last_compile_duration**|**bigint**|컴파일 통계를 계획 합니다.|  
-|**plan_forcing_type**|**int**|형식 강제 계획입니다.<br /><br />
-0: 없음<br /><br />
-1: MANUAL<br /><br />
-2: 자동 | | **plan_forcing_type_desc**|**nvarchar(60)**| Plan_forcing_type의 텍스트 설명입니다.<br /><br />
-NONE: 계획 강제 적용 되지 않습니다<br /><br />
-수동: 사용자가 강제 적용 된 계획<br /><br />
-자동: 자동 조정에서 강제 계획 |
+|**plan_forcing_type**|**int**|형식 강제 계획입니다.<br /><br />0: 없음<br /><br />1: MANUAL<br /><br />2: AUTO|  
+|**plan_forcing_type_desc**|**nvarchar(60)**|Plan_forcing_type의 텍스트 설명입니다.<br /><br />NONE: 계획 강제 적용 되지 않습니다<br /><br />수동: 사용자가 강제 적용 된 계획<br /><br />자동: 자동 조정에서 강제 계획|  
 
 ## <a name="plan-forcing-limitations"></a>계획 강제 적용 제한 사항
 쿼리 저장소에는 쿼리 최적화 프로그램이 특정 실행 계획을 사용하도록 적용하는 메커니즘이 있습니다. 그러나 계획이 적용되지 않도록 하는 몇 가지 제한 사항이 있습니다. 

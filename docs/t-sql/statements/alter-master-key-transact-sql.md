@@ -24,16 +24,16 @@ helpviewer_keywords:
 - service master key [SQL Server], modifying
 - DROP ENCRYPTION BY SERVICE MASTER KEY phrase
 ms.assetid: 8ac501c3-4280-4d5b-b58a-1524fa715b50
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d4c4f0e7f2ffce588d01f0544263a398ea4549a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7190892a06eb7684b549e38d6cb417b8bddb6ff0
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746231"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361483"
 ---
 # <a name="alter-master-key-transact-sql"></a>ALTER MASTER KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -99,7 +99,7 @@ ALTER MASTER KEY <alter_option>
 ## <a name="remarks"></a>Remarks  
  REGENERATE 옵션은 데이터베이스 마스터 키와 이 키가 보호하는 모든 키를 다시 만듭니다. 키는 먼저 이전 마스터 키로 암호 해독된 다음 새 마스터 키로 암호화됩니다. 마스터 키가 손상된 경우가 아니면 이 리소스를 많이 사용하는 작업은 사용량이 낮은 기간 동안에만 수행하도록 예약해야 합니다.  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에서는 AES 암호화 알고리즘을 사용하여 SMK(서비스 마스터 키) 및 DMK(데이터베이스 마스터 키)를 보호합니다. AES는 이전 버전에서 사용하는 3DES보다 최신 암호화 알고리즘입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]로 업그레이드한 후 SMK와 DMK를 다시 생성해야 마스터 키가 AES로 업그레이드됩니다. SMK를 다시 생성하는 방법은 [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)를 참조하세요.  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에서는 AES 암호화 알고리즘을 사용하여 SMK(서비스 마스터 키) 및 DMK(데이터베이스 마스터 키)를 보호합니다. AES는 이전 버전에서 사용하는 3DES보다 최신 암호화 알고리즘입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 로 업그레이드한 후 SMK와 DMK를 다시 생성해야 마스터 키가 AES로 업그레이드됩니다. SMK를 다시 생성하는 방법은 [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)를 참조하세요.  
   
  FORCE 옵션을 사용할 경우에는 마스터 키를 사용할 수 없거나 서버에서 모든 암호화된 개인 키의 암호를 해독할 수 없는 경우에도 키 다시 만들기 작업이 계속됩니다. 마스터 키를 열 수 없으면 [RESTORE MASTER KEY](../../t-sql/statements/restore-master-key-transact-sql.md) 문을 사용하여 백업에서 마스터 키를 복원합니다. 마스터 키를 검색할 수 없거나 암호 해독에 실패한 경우에만 FORCE 옵션을 사용합니다. 검색할 수 없는 키로만 암호화된 정보는 손실됩니다.  
   

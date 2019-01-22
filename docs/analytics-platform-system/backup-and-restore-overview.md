@@ -6,28 +6,28 @@ manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
-ms.date: 04/17/2018
+ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 01585c399d648bbc72d7d2811d24b2558b947bff
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: e95415c689fda43c2a9d118713c96d0a1d531904
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400606"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419998"
 ---
 # <a name="backup-and-restore"></a>Backup 및 Restore 메서드
+
 데이터 백업 및 복원에 대 한 병렬 데이터 웨어하우스 (PDW)을 작동 하는 방법을 설명 합니다. 백업 및 복원 작업은 재해 복구에 사용 됩니다. 백업 및 복원 하나의 어플라이언스에서 다른 어플라이언스로 데이터베이스를 복사를 사용할 수 있습니다.  
     
-## <a name="BackupRestoreBasics"></a>백업 및 복원 기본 사항  
+## <a name="BackupRestoreBasics"></a>백업 및 복원 기본 사항
+
 PDW *데이터베이스 백업* 어플라이언스에 원래 데이터베이스를 복원할 수 있도록 형식으로 저장 하는 어플라이언스 데이터베이스의 복사본입니다.  
   
 PDW 데이터베이스 백업을 사용 하 여 만들어집니다 합니다 [데이터베이스 백업](../t-sql/statements/backup-database-parallel-data-warehouse.md) t-sql 문 및 사용에 대 한 서식이 지정 된는 [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md) 문과 사용할 수 없는 다른 목적을 위해. 만 백업이 동일한 수 또는 더 많은 계산 노드를 사용 하 여 어플라이언스에 복원할 수 있습니다.  
   
 <!-- MISSING LINKS
-
 The [master database](master-database.md) is a SMP SQL Server database. It is backed up with the BACKUP DATABASE statement. To restore master, use the [Restore the Master Database](configuration-manager-restore-master-database.md) page of the Configuration Manager tool.  
-
 -->
   
 PDW는 어플라이언스 데이터베이스 백업 및 복원 하려면 SQL Server 백업 기술을 사용 합니다. SQL Server 백업 옵션은 백업 압축을 사용 하도록 미리 구성 됩니다. 압축, 체크섬, 블록 크기 및 버퍼 개수 등의 백업 옵션을 설정할 수 없습니다.  
@@ -36,7 +36,8 @@ PDW는 어플라이언스 데이터베이스 백업 및 복원 하려면 SQL Ser
   
 백업은은 Windows 파일 시스템에서 백업 서버에서 파일의 집합으로 저장 됩니다. PDW 데이터베이스 백업은 PDW에만 복원할 수 있습니다. 그러나 표준 Windows 파일 백업 프로세스를 사용 하 여 데이터베이스 백업을 백업 서버에서 다른 위치에 보관할 수 있습니다. Backup server에 대 한 자세한 내용은 참조 하세요. [Acquire 백업 서버를 구성 하 고](acquire-and-configure-backup-server.md)입니다.  
   
-## <a name="BackupTypes"></a>데이터베이스 백업 유형  
+## <a name="BackupTypes"></a>데이터베이스 백업 유형
+
 백업이 필요한 데이터의 두 종류가 있습니다: 사용자 데이터베이스 및 시스템 데이터베이스 (예: master 데이터베이스). PDW는 트랜잭션 로그를 백업 하지 않습니다.  
   
 전체 데이터베이스 백업에 전체 PDW 데이터베이스의 백업이입니다. 기본 백업 형식입니다. 사용자 데이터베이스의 전체 백업을 데이터베이스 사용자 및 데이터베이스 역할에 포함 되어 있습니다. 백업 마스터의 로그인을 포함합니다.  
@@ -49,7 +50,8 @@ PDW는 어플라이언스 데이터베이스 백업 및 복원 하려면 SQL Ser
   
 전체 기기를 백업 하기 위해 모든 사용자 데이터베이스의 백업 및 master 데이터베이스의 백업을 수행 해야 합니다.  
   
-## <a name="BackupProc"></a>데이터베이스 백업 프로세스  
+## <a name="BackupProc"></a>데이터베이스 백업 프로세스
+
 다음 다이어그램에는 데이터베이스를 백업 하는 동안 데이터 흐름을 보여 줍니다.  
   
 ![PDW 백업 프로세스](media/backup-process.png "PDW 백업 프로세스")  
@@ -82,14 +84,16 @@ PDW는 어플라이언스 데이터베이스 백업 및 복원 하려면 SQL Ser
   
     -   복원을 수행 하기 전에 백업의 이름을 변경할 수 없습니다. 백업 디렉터리의 이름에는 원래 백업의 이름을 일치 해야 합니다. 백업의 원래 이름은 백업 디렉터리 내에 있는 backup.xml 파일에 있습니다. 다른 이름으로 데이터베이스를 복원 하려면 복원 명령에서 새 이름을 지정할 수 있습니다. 예를 들어 `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`을 참조하십시오.  
   
-## <a name="RestoreModes"></a>데이터베이스 복원 모드  
+## <a name="RestoreModes"></a>데이터베이스 복원 모드
+
 전체 데이터베이스 복원이 데이터베이스 백업에서 데이터를 사용 하 여 PDW 데이터베이스를 다시 만듭니다. 먼저 전체 백업을 복원 및 필요에 따라 하나의 차등 백업을 복원 하 여 데이터베이스 복원 수행 됩니다. 데이터베이스 복원에는 데이터베이스 사용자 및 데이터베이스 역할을 포함합니다.  
   
 헤더만 복원 데이터베이스에 대 한 헤더 정보를 반환합니다. 어플라이언스로 데이터를 복원 하지 않습니다.  
   
 어플라이언스 복원은 전체 어플라이언스에 복원 합니다. 여기에 모든 사용자 데이터베이스 및 master 데이터베이스를 복원 합니다.  
   
-## <a name="RestoreProc"></a>복원 프로세스  
+## <a name="RestoreProc"></a>복원 프로세스
+
 다음 다이어그램에는 데이터베이스를 복원 하는 동안 데이터 흐름을 보여 줍니다.  
   
 ![복원 프로세스](media/restore-process.png "복원 프로세스")  
@@ -131,6 +135,7 @@ PDW는 어플라이언스 데이터베이스 백업 및 복원 하려면 SQL Ser
 |백업 서버로 서버를 준비 합니다.|[백업 서버 획득 및 구성 ](acquire-and-configure-backup-server.md)|  
 |데이터베이스를 백업 합니다.|[데이터베이스 백업](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
 |데이터베이스를 복원 합니다.|[데이터베이스 복원](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
+
 <!-- MISSING LINKS
 |Create a disaster recovery plan.|[Create a Disaster Recovery Plan](create-disaster-recovery-plan.md)|
 |Restore the master database.|To restore the master database, use the [Restore the master database](configuration-manager-restore-master-database.md) page in the Configuration Manager tool.| 

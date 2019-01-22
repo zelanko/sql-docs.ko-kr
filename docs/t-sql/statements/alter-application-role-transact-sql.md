@@ -18,15 +18,15 @@ helpviewer_keywords:
 - ALTER APPLICATION ROLE statement
 - application roles [SQL Server], modifying
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 58cac793f7bcf356f8055c27b598c9521f0c7bce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b272b3b5df01931cfabf1f19945bba477cc680bc
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690231"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326714"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [응용 프로그램 역할](../../relational-databases/security/authentication-access/application-roles.md)   
+ [애플리케이션 역할](../../relational-databases/security/authentication-access/application-roles.md)   
  [CREATE APPLICATION ROLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

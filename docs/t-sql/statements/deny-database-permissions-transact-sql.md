@@ -15,16 +15,16 @@ helpviewer_keywords:
 - database permissions [SQL Server], denying
 - denying permissions [SQL Server], databases
 ms.assetid: 36cc4e2c-5a24-4975-9920-9305f12c6e7c
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 046ce8ab9b87f30c74df87ab7dd21819594f8aef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4335061c2783acc898de1e076db6ccd30cbc6b36
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731951"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326724"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>DENY 데이터베이스 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +59,7 @@ DENY <permission> [ ,...n ]
  데이터베이스에 대해 거부할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
  ALL  
- 이 옵션은 모든 가능한 사용 권한을 거부하지 않습니다. ALL을 거부하는 것은 BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE, CREATE VIEW 사용 권한을 거부하는 것과 같습니다.  
+ 이 옵션은 모든 가능한 사용 권한을 거부하지 않습니다. ALL을 거부하는 것은 다음 사용 권한을 거부하는 것과 동일합니다. BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE 및 CREATE VIEW.  
   
  PRIVILEGES  
  ISO 호환성을 위해 포함됩니다. ALL의 동작을 변경하지 않습니다.  

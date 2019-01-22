@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.column_master_keys catalog view
 ms.assetid: fd5e77c8-a3ae-4795-bb46-b322c0500041
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d6272567d4aab9a078fe35b1bcc07e9617c2ed36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89ff78ad0c8cd82b4235adaa247a34a4a6442db5
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608647"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361403"
 ---
 # <a name="drop-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

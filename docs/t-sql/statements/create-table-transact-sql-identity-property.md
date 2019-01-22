@@ -18,16 +18,16 @@ helpviewer_keywords:
 - identity columns [SQL Server], IDENTITY property
 - autonumbers, identity numbers
 ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 09422e46babcb966fdc4c86153e91439a5e46c88
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: af536ef3867d3f74ce04a8a8fef8b93e224f09c0
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507388"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326644"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE(Transact-SQL) IDENTITY (Property)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -78,7 +78,7 @@ IDENTITY [ (seed , increment) ]
   
  ID 열은 테이블당 하나만 만들 수 있습니다.  
   
- 메모리 최적화 테이블에서 초기값과 증가값은 둘 다 1,1로 설정되어야 합니다. 시드 또는 증분 값을 1이 아닌 값으로 설정하면 다음 오류가 발생합니다. 1 이외의 시드 및 증분 값 사용은 메모리 최적화 테이블에서는 지원되지 않습니다.  
+ 메모리 최적화 테이블에서 초기값과 증가값은 둘 다 1,1로 설정되어야 합니다. 초기값 또는 증가값을 1 이외의 값으로 설정하면 다음과 같은 오류가 발생합니다. 1 이외의 초기값 및 증가값 사용은 메모리 액세스에 최적화된 테이블에서 지원되지 않습니다.  
   
 ## <a name="examples"></a>예  
   

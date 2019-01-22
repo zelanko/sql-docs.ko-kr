@@ -13,12 +13,12 @@ ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c47ecfcb9f7c3c321ad91e45fd3db1e4033e680
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e8682d8bf38dc32f9eddc50c8bf32113ebf9e516
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677372"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397532"
 ---
 # <a name="example-application-sqlsrv-driver"></a>예제 애플리케이션(SQLSRV 드라이버)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,7 +30,7 @@ AdventureWorks 제품 검토 예제 애플리케이션은 [!INCLUDE[ssDriverPHP]
 1.  [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 설치합니다. 자세한 내용은 [시작 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)합니다.
 2.  이 문서의 뒷부분에 나열된 코드를 adventureworks_demo.php 및 photo.php 두 파일에 복사합니다.  
 3.  adventureworks_demo.php 및 photo.php 파일을 웹 서버의 루트 디렉터리에 배치합니다.  
-4.  시작 하 여 응용 프로그램을 실행 https://localhost/adventureworks_demo.php 브라우저에서 합니다.  
+4.  시작 하 여 응용 프로그램을 실행 `https://localhost/adventureworks_demo.php` 브라우저에서 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
 AdventureWorks 제품 검토 예제 애플리케이션을 실행하려면 해당 컴퓨터에 대해 다음 조건을 만족해야 합니다.  

@@ -1,7 +1,7 @@
 ---
 title: SQLGetDiagField 함수 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -20,14 +20,15 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 386b2352db8912c0af4a1571cbfc2d7e7f5384c6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f975b15d07bf837c0f5fe5d2649cc78b341d23c6
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203982"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420168"
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 함수(SQLGetDiagField Function)
+
 **규칙**  
  도입 된 버전: ODBC 3.0 표준 준수 합니다. ISO 92  
   
@@ -36,8 +37,7 @@ ms.locfileid: "53203982"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```cpp
 SQLRETURN SQLGetDiagField(  
      SQLSMALLINT     HandleType,  
      SQLHANDLE       Handle,  
@@ -60,7 +60,7 @@ SQLRETURN SQLGetDiagField(
   
 -   SQL_HANDLE_ENV  
   
--   호출 하 여  
+-   SQL_HANDLE_STMT  
   
  드라이버 관리자 및 드라이버에 의해서만 SQL_HANDLE_DBC_INFO_TOKEN 핸들을 사용 합니다. 응용 프로그램에는이 핸들 형식은 사용 하지 마십시오. SQL_HANDLE_DBC_INFO_TOKEN에 대 한 자세한 내용은 참조 하세요. [ODBC 드라이버에서 연결 풀 인식 개발](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)합니다.  
   
@@ -100,7 +100,7 @@ SQLRETURN SQLGetDiagField(
 ## <a name="diagnostics"></a>진단  
  **SQLGetDiagField** 자체에 대 한 진단 레코드를 게시 하지 않습니다. 자체 실행의 결과 보고 하는 다음 반환 값을 사용 합니다.  
   
--   관계 없이 SQL_SUCCESS: 함수는 진단 정보를 반환 했습니다.  
+-   SQL_SUCCESS: 함수는 진단 정보를 반환 했습니다.  
   
 -   SQL_SUCCESS_WITH_INFO: \**DiagInfoPtr* 가 너무 작아서 요청 된 진단 필드를 저장할 수 있습니다. 따라서 진단 필드에 데이터가 잘렸습니다. 잘림이 발생을 응용 프로그램을 비교 해야 결정할 *BufferLength* 에 기록 되는 사용 가능한 바이트의 실제 수 **StringLengthPtr*합니다.  
   
@@ -189,38 +189,59 @@ SQLRETURN SQLGetDiagField(
   
 |SQL 문<br /><br /> 실행|값<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION|값<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION_CODE|  
 |--------------------------------|-----------------------------------------------|-----------------------------------------------------|  
-|*변경-도메인-문*|"ALTER 도메인"|SQL_DIAG_ALTER_DOMAIN|  
-|*alter table-문*|"ALTER TABLE"|SQL_DIAG_ALTER_TABLE|  
-|*어설션이 정의*|"어설션을 만들지"|SQL_DIAG_CREATE_ASSERTION|  
-|*문자 집합 정의*|"문자 집합 만들기"|SQL_DIAG_CREATE_CHARACTER_SET|  
-|*데이터 정렬 정의*|"데이터 정렬 만들기"|SQL_DIAG_CREATE_COLLATION|  
-|*인덱스 생성-문*|"인덱스 만들기"|SQL_DIAG_CREATE_INDEX|  
-|*테이블 생성-문*|"테이블 만들기"|SQL_DIAG_CREATE_TABLE|  
-|*만들기-보기-문*|"뷰 만들기"|SQL_DIAG_CREATE_VIEW|  
-|*커서 사양이*|"커서 선택"|SQL_DIAG_SELECT_CURSOR|  
-|*delete 문 배치*|"동적 삭제 커서"|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
-|*delete 문은 검색*|"WHERE 삭제"|SQL_DIAG_DELETE_WHERE|  
-n-정의 *|"도메인 만들기"|SQL_DIAG_CREATE_DOMAIN|  
-|*drop 어설션 문*|"DROP 어설션"|SQL_DIAG_DROP_ASSERTION|  
-|*문자 집합 stmt 놓기*|"DROP 문자 집합"|SQL_DIAG_DROP_CHARACTER_SET|  
-|*문-데이터 정렬-삭제*|"DROP 데이터 정렬"|SQL_DIAG_DROP_COLLATION|  
-|*drop 도메인 문*|"DROP 도메인"|SQL_DIAG_DROP_DOMAIN|  
-|*drop index 문*|"DROP INDEX"|SQL_DIAG_DROP_INDEX|  
-|*drop schema-문*|"삭제 스키마"|SQL_DIAG_DROP_SCHEMA|  
-|*drop table 문*|"DROP TABLE"|SQL_DIAG_DROP_TABLE|  
-|*삭제-변환-문*|"DROP 변환"|SQL_DIAG_DROP_TRANSLATION|  
-|*drop view 문*|"DROP VIEW"|SQL_DIAG_DROP_VIEW|  
--문을 *|"권한 부여"|SQL_DIAG_GRANT|  
-|*insert 문*|"INSERT"|SQL_DIAG_INSERT|  
-|*ODBC 프로시저 확장*|"CALL"|SQL_DIAG_ 호출|  
-|*revoke 문*|"REVOKE"|SQL_DIAG_REVOKE|  
-|*스키마 정의*|"스키마 만들기"|SQL_DIAG_CREATE_SCHEMA|  
-|*번역 정의*|"번역을 작성 합니다."|SQL_DIAG_CREATE_TRANSLATION|  
-|*update 문 배치*|"동적 업데이트 커서"|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
-|*업데이트-문-검색*|"WHERE 업데이트"|SQL_DIAG_UPDATE_WHERE|  
+|*alter-domain-statement*|"ALTER 도메인"|SQL_DIAG_ALTER_DOMAIN|  
+|*alter-table-statement*|"ALTER TABLE"|SQL_DIAG_ALTER_TABLE|  
+|*assertion-definition*|"어설션을 만들지"|SQL_DIAG_CREATE_ASSERTION|  
+|*character-set-definition*|"문자 집합 만들기"|SQL_DIAG_CREATE_CHARACTER_SET|  
+|*collation-definition*|"데이터 정렬 만들기"|SQL_DIAG_CREATE_COLLATION|  
+|*domainn-definition*|"도메인 만들기"|SQL_DIAG_CREATE_DOMAIN|
+|*create-index-statement*|"인덱스 만들기"|SQL_DIAG_CREATE_INDEX|  
+|*create-table-statement*|"테이블 만들기"|SQL_DIAG_CREATE_TABLE|  
+|*create-view-statement*|"뷰 만들기"|SQL_DIAG_CREATE_VIEW|  
+|*cursor-specification*|"커서 선택"|SQL_DIAG_SELECT_CURSOR|  
+|*delete-statement-positioned*|"동적 삭제 커서"|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
+|*delete-statement-searched*|"WHERE 삭제"|SQL_DIAG_DELETE_WHERE|  
+|*drop-assertion-statement*|"DROP 어설션"|SQL_DIAG_DROP_ASSERTION|  
+|*drop-character-set-stmt*|"DROP 문자 집합"|SQL_DIAG_DROP_CHARACTER_SET|  
+|*drop-collation-statement*|"DROP 데이터 정렬"|SQL_DIAG_DROP_COLLATION|  
+|*drop-domain-statement*|"DROP 도메인"|SQL_DIAG_DROP_DOMAIN|  
+|*drop-index-statement*|"DROP INDEX"|SQL_DIAG_DROP_INDEX|  
+|*drop-schema-statement*|"삭제 스키마"|SQL_DIAG_DROP_SCHEMA|  
+|*drop-table-statement*|"DROP TABLE"|SQL_DIAG_DROP_TABLE|  
+|*drop-translation-statement*|"DROP 변환"|SQL_DIAG_DROP_TRANSLATION|  
+|*drop-view-statement*|"DROP VIEW"|SQL_DIAG_DROP_VIEW|  
+|*grantstatement*|"권한 부여"|SQL_DIAG_GRANT|
+|*insert-statement*|"INSERT"|SQL_DIAG_INSERT|  
+|*ODBC-procedure-extension*|"CALL"|SQL_DIAG_ CALL|  
+|*revoke-statement*|"REVOKE"|SQL_DIAG_REVOKE|  
+|*schema-definition*|"스키마 만들기"|SQL_DIAG_CREATE_SCHEMA|  
+|*translation-definition*|"번역을 작성 합니다."|SQL_DIAG_CREATE_TRANSLATION|  
+|*update-statement-positioned*|"동적 업데이트 커서"|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
+|*update-statement-searched*|"WHERE 업데이트"|SQL_DIAG_UPDATE_WHERE|  
 |알 수 없음|*빈 문자열*|SQL_DIAG_UNKNOWN_STATEMENT|  
-  
-## <a name="sequence-of-status-records"></a>상태 레코드의 시퀀스  
+
+<!--
+These two malformed table rows were fixed by educated GUESS only.
+Each pair starts with the original flawed row.
+Flawed because treated as only two cells by HTML render,
+and because missing info anyway.
+Also, these flawed rows lacked '|' as their first nonWhitespace character (although markdown technically allows this omission, unfortunately).
+Arguably the following SQL.H file shows the sequence of the flawed rows in the table was suboptimal also.
+
+ftp://www.fpc.org/fpc32/VS6Disk1/VC98/INCLUDE/SQL.H
+
+GeneMi , 2019/01/19
+- - - - - - - - - - - - - -
+
+n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|  
+|*domain-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
+
+-statement*|"GRANT"|SQL_DIAG_GRANT|  
+|*grant-statement*|"GRANT"|SQL_DIAG_GRANT|
+-->
+
+## <a name="sequence-of-status-records"></a>상태 레코드의 시퀀스
+
  상태 레코드에 행 번호 및 진단의 형식을 기반으로 하는 순서로 배치 됩니다. 드라이버 관리자를 생성 하는 상태 레코드를 반환 하는 최종 순서를 결정 합니다. 드라이버 생성 하는 상태 레코드를 반환 하는 최종 순서를 결정 합니다.  
   
  진단 레코드 드라이버 관리자와 드라이버에서 게시 되는 경우 드라이버 관리자는 순서를 지정 하는 일을 담당 합니다.  
@@ -254,7 +275,7 @@ n-정의 *|"도메인 만들기"|SQL_DIAG_CREATE_DOMAIN|
   
 |내용|참조 항목|  
 |---------------------------|---------|  
-|진단 데이터 구조체의 여러 필드 가져오기|[SQLGetDiagRec 함수](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|  
+|진단 데이터 구조체의 여러 필드 가져오기|[SQLGetDiagRec 함수](sqlgetdiagrec-function.md)|  
   
 ## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   

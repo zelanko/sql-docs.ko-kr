@@ -15,15 +15,15 @@ helpviewer_keywords:
 - revoking permissions [SQL Server]
 - REVOKE statement, search property list permissions
 ms.assetid: a6b8b37c-0015-4596-898c-51a567659e2e
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2c98aba65ca173c0656dd56a844327c07b86a8ce
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 1270cc8f84113433954a5178f791f3795ed419fc
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588857"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326654"
 ---
 # <a name="revoke-search-property-list-permissions-transact-sql"></a>REVOKE 검색 속성 목록 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -1,7 +1,7 @@
 ---
 title: 관계 표현 (테이블 형식) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -12,17 +12,17 @@ ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c62af4be43978f36f46594757964a9fcdae58ce5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d11d0b6a1e1be93cb3c521bb32782dcb127e822
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058903"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420158"
 ---
 # <a name="relationship-representation-tabular"></a>관계 표현(테이블 형식)
   관계는 두 테이블 데이터 간의 연결입니다. 관계는 두 테이블의 데이터 간에 상관 관계를 설정합니다.  
   
- 참조 [Relationship Representation (Tabular)](relationship-representation-tabular.md) 관계 표현을 만들고 조작 하는 방법에 대해서는 설명에 대 한 합니다.  
+ 관계 표현을 만들고 조작하는 방법에 대한 자세한 내용은 [Relationship Representation (Tabular)](relationship-representation-tabular.md) 을 참조하십시오.  
   
 ## <a name="relationship-representation"></a>관계 표현  
  테이블 형식 모델에서는 두 테이블 간에 여러 관계를 정의할 수 있습니다. 두 테이블 간에 여러 관계가 정의되어 있는 경우 하나의 관계만 모델에 대한 기본 관계로 정의할 수 있으며 해당 관계는 활성 관계로 명명됩니다. 나머지 모든 관계는 비활성 관계로 명명됩니다.  
@@ -32,8 +32,7 @@ ms.locfileid: "48058903"
   
  다음 코드 조각에서는 테이블 형식 모델에서 관계를 만드는 방법, 관계를 활성화하는 방법 및 테이블에서 기본 키를 정의하는 방법("RowNumber"가 아님)을 보여 줍니다. 활성 관계를 만들려면 관계(관계의 한쪽)의 기본 키 테이블(PKTableName)에 기본 키가 정의되어야 합니다. 아래 예제에서는 이 열에서 기본 키가 정의되어 있지 않은 경우 PKColumnName에 기본 키를 만드는 방법을 보여 줍니다. 비활성 관계는 기본 키 열에 기본 키가 없어도 만들 수 있습니다.  
   
-```  
-  
+```cs
 private Boolean createRelationship(string PKTableName, string PKColumnName, string MVTableName, string MVColumnName, AMO.Database tabularDb, string cubeName, Boolean forceActive)  
 {  
     //verify input parameters  

@@ -1,7 +1,7 @@
 ---
 title: 기본 SQL Server 네트워크 프로토콜 구성 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 197b694f0ff68b459bff7517bbf5701a0452d48f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f98a6e019790e7bc4e102a400c6f28f53c344e92
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622091"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419619"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>기본 SQL Server 네트워크 프로토콜 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,16 +32,16 @@ ms.locfileid: "47622091"
 
 다음 표에서는 설치 후의 구성에 대해 설명합니다.
 
-버전 | 새로 설치 또는 이전 설치 | 공유 메모리 | TCP/IP    | 명명된 파이프
+|버전 | 새로 설치 또는 이전 설치 | 공유 메모리 | TCP/IP | 명명된 파이프|
 | -------- | -- | -- | -- | --  |  
-Enterprise  | 새로 설치  | 설정   | 설정   | 네트워크 연결 사용 안 함
-표준    | 새로 설치  | 설정   | 설정   | 네트워크 연결 사용 안 함
-Web | 새로 설치  | 설정   | 설정   | 네트워크 연결 사용 안 함
-개발자   | 새로 설치  | 설정   | 사용 안 함  | 네트워크 연결 사용 안 함
-Evaluation  | 새로 설치  | 설정   | 설정   | 네트워크 연결 사용 안 함
-SQL Server Express  | 새로 설치  | 설정   | 사용 안 함  | 네트워크 연결 사용 안 함
-모든 버전    | 이전 설치가 있지만 업그레이드 중이 아님   | 새로 설치와 같음  | 새로 설치와 같음  | 새로 설치와 같음
-모든 버전    | 업그레이드   | 설정   | 이전 설치의 설정이 유지됨    | 이전 설치의 설정이 유지됨
+|Enterprise | 새로 설치 | 설정 | 설정 | 네트워크 연결 사용 안 함|
+|Standard | 새로 설치 | 설정 | 설정 | 네트워크 연결 사용 안 함|
+|Web | 새로 설치 | 설정 | 설정 | 네트워크 연결 사용 안 함|
+|Developer | 새로 설치 | 설정 | 사용 안 함 | 네트워크 연결 사용 안 함|
+|Evaluation | 새로 설치 | 설정 | 설정 | 네트워크 연결 사용 안 함|
+|SQL Server Express | 새로 설치 | 설정 | 사용 안 함 | 네트워크 연결 사용 안 함|
+|모든 버전 | 이전 설치가 있지만 업그레이드 중이 아님 | 새로 설치와 같음 | 새로 설치와 같음 | 새로 설치와 같음|
+|모든 버전 | 업그레이드 | 설정 | 이전 설치의 설정이 유지됨 | 이전 설치의 설정이 유지됨|
 
 
 >[!NOTE]

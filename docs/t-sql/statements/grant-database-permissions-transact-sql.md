@@ -17,16 +17,16 @@ helpviewer_keywords:
 - database permissions [SQL Server], granting
 - GRANT statement, databases
 ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34a23cc197b1720df2e2a1dae4cbc28c4bf70554
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07680455783316fd3854b9b45ba7f5077a58d3f9
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682241"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327494"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT 데이터베이스 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +63,7 @@ permission | ALL [ PRIVILEGES ]
  데이터베이스에 대해 부여할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
  ALL  
- 이 옵션은 모든 가능한 사용 권한을 부여하지 않습니다. ALL을 부여하는 것은 BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE, CREATE VIEW 사용 권한을 부여하는 것과 같습니다.  
+ 이 옵션은 모든 가능한 사용 권한을 부여하지 않습니다. ALL을 부여하는 것은 다음 사용 권한을 부여하는 것과 동일합니다. BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE 및 CREATE VIEW.  
   
  PRIVILEGES  
  ISO 호환성을 위해 포함됩니다. ALL의 동작을 변경하지 않습니다.  
@@ -110,7 +110,7 @@ permission | ALL [ PRIVILEGES ]
 ## <a name="remarks"></a>Remarks
   
 > [!IMPORTANT]  
->  일부 경우에서 ALTER 사용 권한과 REFERENCE 사용 권한의 조합을 사용하면 피부여자가 데이터를 보거나 권한 없는 함수를 실행할 수 있습니다. 예를 들어, 테이블에 대한 ALTER 사용 권한과 함수에 대한 REFERENCE 사용 권한을 가진 사용자는 함수를 통해 계산 열을 만들고 실행할 수 있습니다. 이 경우 계산 열에 대한 SELECT 사용 권한도 있어야 합니다.
+>  일부 경우에서 ALTER 사용 권한과 REFERENCE 사용 권한의 조합을 사용하면 피부여자가 데이터를 보거나 권한 없는 함수를 실행할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다. 테이블에 대한 ALTER 권한과 함수에 대한 REFERENCE 권한을 가진 사용자는 함수를 통해 계산 열을 만들고 실행할 수 있습니다. 이 경우 계산 열에 대한 SELECT 사용 권한도 있어야 합니다.
   
  데이터베이스는 사용 권한 계층에서 해당 데이터베이스의 부모인 서버에 포함된 보안 개체입니다. 다음 표에는 데이터베이스에 대해 부여할 수 있는 가장 제한적인 특정 사용 권한이 의미상 이러한 사용 권한을 포함하는 보다 일반적인 사용 권한과 함께 나열되어 있습니다.  
   
@@ -246,7 +246,7 @@ GRANT CREATE VIEW TO CarmineEs WITH GRANT OPTION;
 GO  
 ```  
 
-### <a name="d-granting-control-permission-to-a-database-user"></a>4. 데이터베이스 사용자에게 CONTROL 권한 부여.
+### <a name="d-granting-control-permission-to-a-database-user"></a>D. 데이터베이스 사용자에게 CONTROL 권한 부여.
  다음 예에서는 데이터베이스 사용자 `Sarah`에게 `AdventureWorks2012` 데이터베이스의 `CONTROL` 권한을 부여합니다. 사용자가 데이터베이스에 존재해야 하며 컨텍스트가 데이터베이스로 설정되어야 합니다.
  
 ```  

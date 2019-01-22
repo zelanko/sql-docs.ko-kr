@@ -17,15 +17,15 @@ helpviewer_keywords:
 - cryptography [SQL Server], symmetric keys
 - granting permissions [SQL Server], symmetric keys
 ms.assetid: 5c61557f-67ae-4e55-b86d-713575b27cea
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 7975e0fd4a3a429a324679d1761de8fbc518ca76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d105d91926c123670f63102d4b7dbb31a4b2ecc7
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665001"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327444"
 ---
 # <a name="grant-symmetric-key-permissions-transact-sql"></a>GRANT 대칭 키 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

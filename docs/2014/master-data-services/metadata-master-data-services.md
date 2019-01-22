@@ -1,7 +1,7 @@
 ---
 title: 메타 데이터 (Master Data Services) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2050e1fe428108713d4cfed8473feec592bc1daa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 186329f71e19f23801fb366fe2117067fbf70c6c
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185013"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419889"
 ---
 # <a name="metadata-master-data-services"></a>메타데이터(MDS(Master Data Services))
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 사용자 정의 메타데이터는 모델 개체를 설명하는 데 사용되는 정보입니다. 예를 들어 특정 모델이나 엔터티의 소유자를 추적하거나 엔터티에 데이터를 제공하는 원본 시스템을 추적해야 하는 경우가 있을 수 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "48185013"
 ## <a name="metadata-entities"></a>메타데이터 엔터티  
  메타데이터 모델에는 5개의 엔터티가 포함되며, 각각 사용자 정의 메타데이터를 지원하는 마스터 데이터 모델 개체의 유형을 나타냅니다. 예를 들어 합니다 **모델 메타 데이터 정의** 엔터티 모델을 나타내는 멤버가 포함 및 **특성 메타 데이터 정의** 엔터티 모든 모델의 모든 특성을 나타내는 멤버가 있습니다.  
   
- 모델 개체에 대한 메타데이터를 정의하려면 이러한 멤버의 특성 중 하나를 채웁니다. 예를 들어 합니다 **엔터티 메타 데이터 정의** 엔터티를 텍스트로 Price 멤버의 Description 특성을 채울 수 있습니다: **고객에 게 판매 될 때의 제품 가격**합니다.  
+ 모델 개체에 대한 메타데이터를 정의하려면 이러한 멤버의 특성 중 하나를 채웁니다. 예를 들어, 합니다 **엔터티 메타 데이터 정의** 엔터티를 텍스트로 Price 멤버의 Description 특성을 채울 수 있습니다. **고객에 게 판매 될 때의 제품 가격**합니다.  
   
  메타데이터 모델의 멤버는 사용자 정의 메타데이터를 지원하는 모델 개체가 추가되거나 삭제될 때마다 자동으로 업데이트됩니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48185013"
 |태스크 설명|항목|  
 |----------------------|-----------|  
 |모델 개체에 메타데이터를 추가합니다.|[메타 데이터 추가 &#40;Master Data Services&#41;](add-metadata-master-data-services.md)
-)|  
+|&nbsp;|&nbsp;|
   
 ## <a name="related-content"></a>관련 내용  
   

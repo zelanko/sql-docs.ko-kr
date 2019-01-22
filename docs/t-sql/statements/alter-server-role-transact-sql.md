@@ -16,16 +16,16 @@ helpviewer_keywords:
 - SERVER ROLE, ALTER
 - ALTER SERVER ROLE statement
 ms.assetid: 7a4db7bb-c442-4e12-9a8a-114da5bc7710
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1b80f0d2ee798eea6aafb92d10aae50c14ceee2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: df9cc3231b9e883857563b2f7ed0bf8bc8d1a2f3
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541254"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327334"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -120,14 +120,14 @@ ALTER SERVER ROLE diskadmin ADD MEMBER Ted ;
 GO  
 ```  
   
-### <a name="d-removing-a-domain-account-from-a-server-role"></a>4. 서버 역할에서 도메인 계정 제거  
+### <a name="d-removing-a-domain-account-from-a-server-role"></a>D. 서버 역할에서 도메인 계정 제거  
 다음 예에서는 `adventure-works\roberto0`이라는 도메인 계정을 `Production`이라는 사용자 정의 서버 역할에서 제거합니다.  
   
 ```  
 ALTER SERVER ROLE Production DROP MEMBER [adventure-works\roberto0] ;  
 ```  
   
-### <a name="e-removing-a-sql-server-login-from-a-server-role"></a>5. 서버 역할에서 SQL Server 로그인 제거  
+### <a name="e-removing-a-sql-server-login-from-a-server-role"></a>E. 서버 역할에서 SQL Server 로그인 제거  
 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `Ted`를 `diskadmin` 고정 서버 역할에서 제거합니다.  
   
 ```  
@@ -135,7 +135,7 @@ ALTER SERVER ROLE Production DROP MEMBER Ted ;
 GO  
 ```  
   
-### <a name="f-granting-a-login-the-permission-to-add-logins-to-a-user-defined-server-role"></a>6. 로그인에 사용 권한을 부여하여 사용자 정의 서버 역할에 로그인 추가  
+### <a name="f-granting-a-login-the-permission-to-add-logins-to-a-user-defined-server-role"></a>F. 로그인에 사용 권한을 부여하여 사용자 정의 서버 역할에 로그인 추가  
 다음 예에서는 `Ted`가 `Production` 사용자 정의 서버 역할에 다른 로그인을 추가할 수 있도록 허용합니다.  
   
 ```  
@@ -143,7 +143,7 @@ GRANT ALTER ON SERVER ROLE::Production TO Ted ;
 GO  
 ```  
   
-### <a name="g-to-view-role-membership"></a>7. 역할 멤버 자격 보기  
+### <a name="g-to-view-role-membership"></a>G. 역할 멤버 자격 보기  
 역할 멤버 자격을 보려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **서버 역할(멤버)** 페이지를 사용하거나 다음 쿼리를 실행합니다.  
   
 ```  
@@ -159,7 +159,7 @@ ORDER BY  SP.name,  SP2.name
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
   
-### <a name="h-basic-syntax"></a>8. 기본 구문  
+### <a name="h-basic-syntax"></a>H. 기본 구문  
 다음 예는 Windows 로그인 `Anna`을 `LargeRC` 서버 역할에 추가합니다.  
   
 ```  

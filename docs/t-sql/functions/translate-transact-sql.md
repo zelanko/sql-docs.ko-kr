@@ -1,7 +1,7 @@
 ---
 title: TRANSLATE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/16/2016
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -17,19 +17,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a72ef38b960e00a88c7d4e1e0038e32a897a46d9
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 591d2dcbb8a14cff7e4595bdeeab93787f51c5cf
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980119"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419878"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE(Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 두 번째 인수에 지정된 일부 문자가 세 번째 인수에 지정된 문자의 대상 세트로 변환된 이후 첫 번째 인수로 제공된 문자열을 반환합니다.
 
-## <a name="syntax"></a>구문   
+## <a name="syntax"></a>구문
+
 ```
 TRANSLATE ( inputString, characters, translations) 
 ```
@@ -45,7 +47,8 @@ TRANSLATE ( inputString, characters, translations)
 *translations*   
  대체 문자를 포함하는 문자열 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *translations*는 *characters*와 데이터 종류 및 길이가 같아야 합니다.
 
-## <a name="return-types"></a>반환 형식   
+## <a name="return-types"></a>반환 형식
+
 `inputString`과 데이터 형식이 동일하면서 두 번째 인수의 문자가 세 번째 인수에서 일치하는 문자로 대체되는 문자 식을 반환합니다.
 
 ## <a name="remarks"></a>Remarks   
@@ -57,15 +60,19 @@ TRANSLATE ( inputString, characters, translations)
 
 `TRANSLATE`은 언제나 SC 데이터 정렬을 인식합니다.
 
-## <a name="examples"></a>예   
+## <a name="examples"></a>예
 
-### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>1. 대괄호 및 중괄호를 일반 괄호로 대체합니다.    
+### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>1. 대괄호 및 중괄호를 일반 괄호로 대체합니다.
+
 다음 쿼리는 입력 문자열의 대괄호와 중괄호를 괄호로 대체합니다.
-```
+
+```sql
 SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 ```
+
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
-```
+
+```plain_text
 2*(3+4)/(7-2)
 ```
 
@@ -98,8 +105,10 @@ REPLACE
 );
 ```
 
-###  <a name="b-convert-geojson-points-into-wkt"></a>2. GeoJSON 포인트를 WKT로 변환    
-GeoJSON은 다양한 지리 데이터 구조를 인코딩하는 형식입니다. `TRANSLATE` 함수에서는 개발자가 GeoJSON 포인트를 WKT 형식으로 변환하거나 그 반대로 쉽게 변환할 수 있습니다. 다음 쿼리는 입력 문자열의 대괄호와 중괄호를 괄호로 대체합니다.   
+###  <a name="b-convert-geojson-points-into-wkt"></a>2. GeoJSON 포인트를 WKT로 변환
+
+GeoJSON은 다양한 지리 데이터 구조를 인코딩하는 형식입니다. `TRANSLATE` 함수에서는 개발자가 GeoJSON 포인트를 WKT 형식으로 변환하거나 그 반대로 쉽게 변환할 수 있습니다. 다음 쿼리는 입력 문자열의 대괄호와 중괄호를 괄호로 대체합니다.
+
 ```sql
 SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
@@ -107,11 +116,9 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]   
 
-
 |점  |좌표 |  
----------|--------- |
-(137.4  72.3) |[137.4,72.3] |
-
+|---------|--------- |
+|(137.4  72.3) |[137.4,72.3] |
 
 ### <a name="c-use-the-translate-function"></a>3. TRANSLATE 함수 사용
 
@@ -128,6 +135,7 @@ SELECT TRANSLATE('abcdef','abc','bcd') AS Translated,
 
 
 ## <a name="see-also"></a>참고 항목
+
  [CONCAT&#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS&#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE&#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  

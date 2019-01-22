@@ -1,7 +1,7 @@
 ---
 title: AlwaysOn 정책을 사용 하 여 가용성 그룹 (SQL Server)의 상태 보기 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: high-availability
@@ -12,12 +12,12 @@ ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9ff043a40449664385360b073451b0217727a5c0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 12a183718ee13915fd6236caf943fea03819e723
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355237"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420128"
 ---
 # <a name="use-alwayson-policies-to-view-the-health-of-an-availability-group-sql-server"></a>AlwaysOn 정책을 사용하여 가용성 그룹의 상태 보기(SQL Server)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 의 AlwaysOn 정책 또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 PowerShell을 사용하여 AlwaysOn 가용성 그룹의 작동 상태를 확인하는 방법에 대해 설명합니다. AlwaysOn 정책 기반 관리에 대 한 정보를 참조 하세요 [AlwaysOn 가용성 그룹 (SQL Server)를 사용 하 여 운영 문제에 대 한 AlwaysOn 정책](always-on-policies-for-operational-issues-always-on-availability.md)합니다.  
@@ -61,9 +61,10 @@ ms.locfileid: "53355237"
   
      예를 들어 다음 명령은 서버 인스턴스 `Computer\Instance`에서 상태가 "오류"인 모든 가용성 그룹을 보여 줍니다.  
   
-    ```  
-    Get-ChildItem SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups `   
-    | Test-SqlAvailabilityGroup | Where-Object { $_.HealthState -eq "Error" }  
+    ```powershell
+    Get-ChildItem SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups |
+        Test-SqlAvailabilityGroup |
+        Where-Object { $_.HealthState -eq "Error" }  
     ```  
   
      `Test-SqlAvailabilityReplica`  
@@ -71,7 +72,7 @@ ms.locfileid: "53355237"
   
      예를 들어 다음 명령은 `MyReplica` 가용성 그룹에서 `MyAg` 라는 가용성 복제본의 상태를 평가하고 간단한 요약을 출력합니다.  
   
-    ```  
+    ```powershell
     Test-SqlAvailabilityReplica `   
     -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\AvailabilityReplicas\MyReplica  
     ```  
@@ -81,9 +82,9 @@ ms.locfileid: "53355237"
   
      예를 들어 다음 명령은 `MyAg` 가용성 그룹에서 모든 가용성 데이터베이스의 상태를 평가하고 각 데이터베이스에 대해 간단한 요약을 출력합니다.  
   
-    ```  
-    Get-ChildItem SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\DatabaseReplicaStates `   
-     | Test-SqlDatabaseReplicaState  
+    ```powershell
+    Get-ChildItem SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\DatabaseReplicaStates |
+        Test-SqlDatabaseReplicaState  
     ```  
   
      이러한 cmdlet은 다음 옵션을 사용합니다.  
@@ -98,11 +99,10 @@ ms.locfileid: "53355237"
   
      예를 들어 다음 `Test-SqlAvailabilityGroup` 명령은 `-ShowPolicyDetails` 매개 변수를 지정하고 `MyAg`라는 가용성 그룹에서 실행된 각 PBM(정책 기반 관리) 정책에 대해 이 cmdlet에서 수행한 정책 평가 결과를 각각 표시합니다.  
   
-    ```  
+    ```powershell
     Test-SqlAvailabilityGroup `   
     -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\AgName `  
     -ShowPolicyDetails  
-  
     ```  
   
     > [!NOTE]  
@@ -121,11 +121,11 @@ ms.locfileid: "53355237"
   
 -   [2 부: 고급 Cmdlet 사용](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)  
   
--   [3 부: 간단한 모니터링 응용 프로그램](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
+-   [3 부: 간단한 모니터링 애플리케이션](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
   
 -   [4 부: SQL Server 에이전트와의 통합](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [가용성 그룹 관리&#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)   
  [가용성 그룹 모니터링&#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   

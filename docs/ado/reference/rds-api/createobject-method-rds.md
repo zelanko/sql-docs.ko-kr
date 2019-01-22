@@ -14,12 +14,12 @@ ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed2d80793d70418e02d22bf104d21b6d3bec6c4d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d220a9abc0e2dc72d7ab65306b514a9925b4fc43
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599535"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419928"
 ---
 # <a name="createobject-method-rds"></a>CreateObject 메서드(RDS)
 대상 비즈니스 개체에 대 한 프록시를 만들고에 대 한 포인터를 반환 합니다. 인터넷을 통해 요청 및 데이터를 보낼 비즈니스 개체와의 통신에 대 한 서버 쪽 스텁에 프록시 패키징하고 데이터입니다. In-process 구성 요소 개체에 대 한 프록시 사용 되 고, 개체에 대 한 포인터만 제공 됩니다.  
@@ -28,14 +28,14 @@ ms.locfileid: "51599535"
 >  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
 ## <a name="syntax"></a>구문  
- 원격 데이터 서비스는 다음 프로토콜을 지원 합니다: HTTP, HTTPS (HTTP over Secure Socket Layer), DCOM 및 처리 합니다.  
+ 원격 데이터 서비스는 다음 프로토콜을 지원합니다. HTTP, HTTPS (HTTP over Secure Socket Layer), DCOM 및 진행 합니다.  
   
 |프로토콜|구문|  
 |--------------|------------|  
-|HTTP|Set 개체 DataSpace.CreateObject = ("ProgId", "https://awebsrvr")|  
-|HTTPS|Set 개체 DataSpace.CreateObject = ("ProgId", "https://awebsrvr")|  
-|DCOM|Set 개체 DataSpace.CreateObject ("ProgId", "computername") =|  
-|In-process|Set 개체 DataSpace.CreateObject = ("ProgId", "")|  
+|HTTP|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  
+|HTTPS|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  
+|DCOM|Set object = DataSpace.CreateObject("ProgId", "computername")|  
+|In-process|Set object = DataSpace.CreateObject("ProgId", "")|  
   
 ## <a name="parameters"></a>매개 변수  
  *개체*  

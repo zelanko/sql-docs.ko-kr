@@ -21,15 +21,15 @@ helpviewer_keywords:
 - CREATE APPLICATION ROLE statement
 - application roles [SQL Server], creating
 ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f434bd06f06071b61d037ce68f8a69edbb8c2977
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: d78cd012d2a66dff8b3cfb2a4d3fba5745dfbe36
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168938"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327634"
 ---
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [응용 프로그램 역할](../../relational-databases/security/authentication-access/application-roles.md)   
+ [애플리케이션 역할](../../relational-databases/security/authentication-access/application-roles.md)   
  [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
  [ALTER APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-application-role-transact-sql.md)   
  [DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   

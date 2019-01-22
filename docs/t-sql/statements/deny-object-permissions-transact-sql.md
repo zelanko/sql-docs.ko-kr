@@ -13,15 +13,15 @@ helpviewer_keywords:
 - DENY statement, objects
 - table permissions [SQL Server]
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 01c2e711b68cf8bd143c19be0567bb6de8265701
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3d5bea06c12da29eb38c3190682d2fcfe344fe4
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662791"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326774"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY 개체 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,11 +61,11 @@ DENY <permission> [ ,...n ] ON
  ALL  
  ALL을 거부하더라도 일부 가능한 사용 권한은 거부되지 않습니다. ALL을 거부하는 것은 지정된 개체에 적용할 수 있는 모든 ANSI-92 사용 권한을 거부하는 것과 동일합니다. ALL의 의미는 다음과 같이 달라집니다.  
   
- - 스칼라 함수 사용 권한: EXECUTE, REFERENCES.  
- - 테이블 반환 함수 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
- - 저장 프로시저 사용 권한: EXECUTE.  
- - 테이블 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
- - 뷰 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ - 스칼라 함수 사용 권한: EXECUTE, REFERENCES  
+ - 테이블 반환 함수 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE  
+ - 저장 프로시저 사용 권한: EXECUTE  
+ - 테이블 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE  
+ - 뷰 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE  
   
 PRIVILEGES  
  ANSI-92 호환성을 위해 포함되었습니다. ALL의 동작을 변경하지 않습니다.  
