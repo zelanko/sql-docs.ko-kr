@@ -19,16 +19,16 @@ helpviewer_keywords:
 - DATABASE SCOPED CREDENTIAL statement
 - credentials [SQL Server], DATABASE SCOPED CREDENTIAL statement
 ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7544e79400c2b85b11330825866909a05acdfd09
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 84a2318f89872f490d8d3fc08902438f7a189443
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213762"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326494"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ WITH IDENTITY = 'identity_name'
  서버 외부에 연결할 때 사용할 계정의 이름을 지정합니다. Azure Blob Storage에서 공유 키를 사용하여 파일을 가져오려면 ID 이름이 `SHARED ACCESS SIGNATURE`여야 합니다. SQL DW로 데이터를 로드하기 위해 ID에 모든 유효한 값을 사용할 수 있습니다. 공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)을 참조하세요.  
   
  SECRET **='**_secret_**'**  
- 나가는 인증에 필요한 암호를 지정합니다. `SECRET`은 Azure Blob 저장소에서 파일을 가져오는 데 필요합니다. Azure Blob Storage에서 SQL DW 또는 병렬 데이터 웨어하우스로 로드하려면 Azure Storage Key가 암호여야 합니다.  
+ 나가는 인증에 필요한 암호를 지정합니다. `SECRET`은 Azure Blob 스토리지에서 파일을 가져오는 데 필요합니다. Azure Blob Storage에서 SQL DW 또는 병렬 데이터 웨어하우스로 로드하려면 Azure Storage Key가 암호여야 합니다.  
 > [!WARNING]
 >  SAS 키 값은 '?'(물음표)로 시작될 수 있습니다. SAS 키를 사용할 때는 앞의 '?'를 제거해야 합니다. 그렇지 않으면 작업이 차단될 수 있습니다.  
   
@@ -71,17 +71,17 @@ WITH IDENTITY = 'identity_name'
  
  다음은 몇 가지 데이터베이스 범위 자격 증명 애플리케이션입니다.  
   
-- [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 데이터베이스 범위 자격 증명을 사용하여 PolyBase로 비공개 Azure BLOB 저장소 또는 Kerberos 보안 Hadoop 클러스터에 액세스합니다. 자세한 내용은 [CREATE EXTERNAL DATA SOURCE(Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)를 참조하세요.  
+- [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 데이터베이스 범위 자격 증명을 사용하여 PolyBase로 비공개 Azure BLOB 스토리지 또는 Kerberos 보안 Hadoop 클러스터에 액세스합니다. 자세한 내용은 [CREATE EXTERNAL DATA SOURCE(Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)를 참조하세요.  
 
-- [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]는 데이터베이스 범위 자격 증명을 사용하여 PolyBase로 비공개 Azure BLOB 저장소에 액세스합니다. 자세한 내용은 [CREATE EXTERNAL DATA SOURCE(Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)를 참조하세요.
+- [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]는 데이터베이스 범위 자격 증명을 사용하여 PolyBase로 비공개 Azure BLOB 스토리지에 액세스합니다. 자세한 내용은 [CREATE EXTERNAL DATA SOURCE(Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)를 참조하세요.
   
 - [!INCLUDE[ssSDS](../../includes/sssds-md.md)]는 전역 쿼리 기능에 데이터베이스 범위 자격 증명을 사용합니다. 이것은 다수의 분할된 데이터베이스에서 쿼리를 수행할 수 있는 기능입니다.  
   
-- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]는 데이터베이스 범위 자격 증명을 사용하여 확장 이벤트 파일을 Azure BLOB 저장소에 씁니다.  
+- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]는 데이터베이스 범위 자격 증명을 사용하여 확장 이벤트 파일을 Azure BLOB 스토리지에 씁니다.  
   
 - [!INCLUDE[ssSDS](../../includes/sssds-md.md)]는 탄력적 풀에 데이터베이스 범위 자격 증명을 사용합니다. 자세한 내용은 [탄력적 데이터베이스로 폭발적인 증가에 대처하기](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)를 참조하세요.  
 
-- [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)와 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)은 데이터베이스 범위 자격 증명을 사용하여 Azure BLOB 저장소의 데이터에 액세스합니다. 자세한 내용은 [Azure Blob Storage의 데이터에 대량 액세스 예제](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)를 참조하세요. 
+- [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)와 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)은 데이터베이스 범위 자격 증명을 사용하여 Azure BLOB 스토리지의 데이터에 액세스합니다. 자세한 내용은 [Azure Blob Storage의 데이터에 대량 액세스 예제](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)를 참조하세요. 
   
 ## <a name="permissions"></a>Permissions  
  데이터베이스에 대한 **CONTROL** 권한이 필요합니다.  

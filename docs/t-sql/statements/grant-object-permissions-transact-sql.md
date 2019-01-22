@@ -13,16 +13,16 @@ helpviewer_keywords:
 - granting permissions [SQL Server], objects
 - GRANT statement, objects
 ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a03e07f20c2e33c4ffad59d7050793cd1b52b9c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed580cb28c65eab7f0abd7702cab623bcf9fcd2e
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621221"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326324"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT 개체 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,11 +63,11 @@ GRANT <permission> [ ,...n ] ON
  ALL  
  ALL을 부여하더라도 일부 가능한 사용 권한은 부여되지 않습니다. ALL을 부여하는 것은 지정된 개체에 적용할 수 있는 모든 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 사용 권한을 부여하는 것과 동일합니다. ALL의 의미는 다음과 같이 달라집니다.  
   
-- 스칼라 함수 사용 권한: EXECUTE, REFERENCES.  
-- 테이블 반환 함수 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
-- 저장 프로시저 사용 권한: EXECUTE.  
-- 테이블 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
-- 뷰 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+- 스칼라 함수 사용 권한: EXECUTE, REFERENCES  
+- 테이블 반환 함수 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE  
+- 저장 프로시저 사용 권한: EXECUTE  
+- 테이블 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE  
+- 뷰 사용 권한: DELETE, INSERT, REFERENCES, SELECT, UPDATE  
   
 PRIVILEGES  
  [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 호환성을 위해 포함되었습니다. ALL의 동작을 변경하지 않습니다.  
@@ -116,7 +116,7 @@ PRIVILEGES
 ## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  일부 경우에서 ALTER 사용 권한과 REFERENCE 사용 권한의 조합을 사용하면 피부여자가 데이터를 보거나 권한 없는 함수를 실행할 수 있습니다. 예를 들어, 테이블에 대한 ALTER 사용 권한과 함수에 대한 REFERENCE 사용 권한을 가진 사용자는 함수를 통해 계산 열을 만들고 실행할 수 있습니다. 이 경우 계산 열에 대한 SELECT 사용 권한도 필요합니다.  
+>  일부 경우에서 ALTER 사용 권한과 REFERENCE 사용 권한의 조합을 사용하면 피부여자가 데이터를 보거나 권한 없는 함수를 실행할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다. 테이블에 대한 ALTER 권한과 함수에 대한 REFERENCE 권한을 가진 사용자는 함수를 통해 계산 열을 만들고 실행할 수 있습니다. 이 경우 계산 열에 대한 SELECT 사용 권한도 필요합니다.  
   
  개체에 대한 정보는 다양한 카탈로그 뷰에 표시됩니다. 자세한 내용은 [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)을 참조하세요.  
   
@@ -182,7 +182,7 @@ GRANT REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee
 GO  
 ```  
   
-### <a name="d-granting-select-permission-on-a-table-without-using-the-object-phrase"></a>4. OBJECT 구를 사용하지 않고 테이블에 대한 SELECT 사용 권한 부여  
+### <a name="d-granting-select-permission-on-a-table-without-using-the-object-phrase"></a>D. OBJECT 구를 사용하지 않고 테이블에 대한 SELECT 사용 권한 부여  
  다음 예에서는 사용자 `SELECT`에게 `RosaQdM` 데이터베이스의 `Person.Address` 테이블에 대한 `AdventureWorks2012` 사용 권한을 부여합니다.  
   
 ```  
@@ -190,7 +190,7 @@ GRANT SELECT ON Person.Address TO RosaQdM;
 GO  
 ```  
   
-### <a name="e-granting-select-permission-on-a-table-to-a-domain-account"></a>5. 도메인 계정에 테이블에 대한 SELECT 사용 권한 부여  
+### <a name="e-granting-select-permission-on-a-table-to-a-domain-account"></a>E. 도메인 계정에 테이블에 대한 SELECT 사용 권한 부여  
  다음 예에서는 사용자 `SELECT`에게 `AdventureWorks2012\RosaQdM` 데이터베이스의 `Person.Address` 테이블에 대한 `AdventureWorks2012` 사용 권한을 부여합니다.  
   
 ```  
@@ -198,7 +198,7 @@ GRANT SELECT ON Person.Address TO [AdventureWorks2012\RosaQdM];
 GO  
 ```  
   
-### <a name="f-granting-execute-permission-on-a-procedure-to-a-role"></a>6. 역할에 프로시저에 대한 EXECUTE 사용 권한 부여  
+### <a name="f-granting-execute-permission-on-a-procedure-to-a-role"></a>F. 역할에 프로시저에 대한 EXECUTE 사용 권한 부여  
  다음 예에서는 역할을 만든 다음 이 역할에 `EXECUTE` 데이터베이스의 `uspGetBillOfMaterials` 프로시저에 대한 `AdventureWorks2012` 사용 권한을 부여합니다.  
   
 ```  

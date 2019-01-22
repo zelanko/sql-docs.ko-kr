@@ -1,7 +1,7 @@
 ---
 title: bcp 유틸리티 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/27/2018
+ms.date: 01/14/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -29,18 +29,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 375a20488c8f887a89538ee640e059a96da72a99
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: b5198ed4dda2efc350d3ef956a1dda0e3766ca15
+ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300580"
+ms.locfileid: "54317833"
 ---
 # <a name="bcp-utility"></a>bcp 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   > [!div class="nextstepaction"]
-  > [SQL 문서 내용 테이블에 대 한 의견을 공유 하세요!](https://aka.ms/sqldocsurvey)
+  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 > Bcp를 사용 하 여 linux에 대해서 [Linux에서 sqlcmd 및 bcp 설치](../linux/sql-server-linux-setup-tools.md)합니다.
 > 
@@ -62,9 +62,9 @@ ms.locfileid: "54300580"
 
 **버전 정보**
 
-릴리스 번호: 17.6 15.0 <br>
+릴리스 번호: 15.0 <br>
 빌드 번호: 15.0.1000.34<br>
-릴리스 날짜 2018 년 10 월 18 일
+릴리스 날짜: 2018 년 10 월 18 일
 
 새 버전의 SQLCMD에 SQL Database, SQL Data Warehouse 및 상시 암호화 기능에 대 한 Multi-factor Authentication (MFA) 지원을 비롯 하 여 Azure AD 인증을 지원 합니다.
 새 BCP는 SQL Database 및 SQL Data Warehouse에 대 한 Multi-factor Authentication (MFA) 지원을 비롯 하 여 Azure AD 인증을 지원 합니다.
@@ -110,8 +110,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     [<a href="#w">-w</a>]
     [<a href="#x">-x</a>]
 </pre></td></tr></table>  
-  
-## <a name="arguments"></a>인수  
+
+## <a name="arguments"></a>인수
+
  _**data\_file**_<a name="data_file"></a>  
  데이터 파일의 전체 경로입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로 데이터를 대량으로 가져오는 경우 데이터 파일에는 지정한 테이블 또는 뷰로 복사할 데이터가 포함됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 데이터를 대량으로 내보내는 경우 데이터 파일에는 테이블 또는 뷰에서 복사한 데이터가 포함됩니다. 데이터 파일 경로는 1에서 255자까지 포함할 수 있습니다. 데이터 파일에는 최대 2^63 - 1개의 행이 포함될 수 있습니다.  
   
@@ -428,8 +429,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  **-x**<a name="x"></a>  
  **format** 및 **-f** *format_file* 옵션과 함께 사용되며 기본 비 XML 서식 파일 대신 XML 기반 서식 파일을 생성합니다. 데이터를 가져오거나 내보낼 때 **-x** 는 작동하지 않습니다. **format** 및 **-f** *format_file*을 함께 사용하지 않으면 오류가 생성됩니다.  
-  
+
 ## 주의<a name="remarks"></a>
+
  총 **bcp** 도구를 설치하면 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 13.0 클라이언트가 설치됩니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 와 이전 버전 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]둘 다에 대해 도구가 설치된 경우 PATH 환경 변수의 값에 따라 **bcp** 13.0 클라이언트 대신 이전 **bcp** 클라이언트를 사용하게 될 수 있습니다. 이 환경 변수는 실행 파일을 검색하기 위해 Windows에서 사용하는 디렉터리 집합을 정의합니다. 사용 중인 버전을 확인하려면 Windows 명령 프롬프트에서 **bcp /v** 명령을 실행합니다. PATH 환경 변수에서 명령 경로를 설정하는 방법은 Windows 도움말을 참조하십시오.  
  
 bcp 유틸리티는 [Microsoft SQL Server 2016 기능 팩](https://www.microsoft.com/download/details.aspx?id=52676)에서 별도로 다운로드할 수도 있습니다.  `ENU\x64\MsSqlCmdLnUtils.msi` 또는 `ENU\x86\MsSqlCmdLnUtils.msi`중에 선택합니다.
@@ -442,16 +444,19 @@ bcp 유틸리티는 [Microsoft SQL Server 2016 기능 팩](https://www.microsoft
  대량 가져오기 또는 내보내기 작업을 위해 데이터를 준비하는 방법은 [대량 내보내기 또는 가져오기를 위한 데이터 준비&#40;SQL Server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)를 참조하세요.  
   
  대량 가져오기로 수행된 행 삽입 작업이 트랜잭션 로그에 기록되는 경우에 대한 자세한 내용은 [대량 가져오기의 최소 로깅을 위한 선행 조건](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)을 참조하세요.  
-  
-## <a name="native-data-file-support"></a>네이티브 데이터 파일 지원  
+
+## <a name="native-data-file-support"></a>네이티브 데이터 파일 지원
+
  In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서 **bcp** 유틸리티는 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]및 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]와 호환되는 네이티브 데이터 파일만 지원합니다.  
-  
-## <a name="computed-columns-and-timestamp-columns"></a>계산 열 및 타임스탬프 열  
+
+## <a name="computed-columns-and-timestamp-columns"></a>계산 열 및 타임스탬프 열
+
  가져올 데이터 파일에 있는 계산 열 또는 **timestamp** 열의 값은 무시되며 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 자동으로 이 값을 할당합니다. 데이터 파일의 테이블에 계산 열 또는 **timestamp** 열의 값이 없으면 데이터를 가져올 때 서식 파일을 사용하여 테이블에 있는 계산 열 또는 **timestamp** 열을 건너뛰도록 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 해당 열에 자동으로 값을 할당합니다.  
   
  계산 열 및 **timestamp** 열은 보통 때와 같이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 데이터 파일로 대량 복사됩니다.  
-  
-## <a name="specifying-identifiers-that-contain-spaces-or-quotation-marks"></a>공백 또는 따옴표를 포함하는 식별자 지정  
+
+## <a name="specifying-identifiers-that-contain-spaces-or-quotation-marks"></a>공백 또는 따옴표를 포함하는 식별자 지정
+
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 식별자에 중간 공백이나 따옴표와 같은 문자가 포함될 수 있습니다. 이러한 식별자는 다음과 같이 처리해야 합니다.  
   
 -   명령 프롬프트에서 공백 또는 따옴표가 포함된 식별자나 파일 이름을 지정할 때는 식별자를 큰따옴표("")로 묶습니다.  
@@ -469,8 +474,9 @@ bcp 유틸리티는 [Microsoft SQL Server 2016 기능 팩](https://www.microsoft
     -   **-q** 옵션을 지정합니다. 또는  
   
     -   따옴표 안에서 소유자, 테이블 또는 뷰 이름을 대괄호([])로 묶습니다.  
-  
-## <a name="data-validation"></a>데이터 유효성 검사  
+
+## <a name="data-validation"></a>데이터 유효성 검사
+
  **bcp** 는 이제 데이터 유효성 검사 및 데이터 검사를 강제로 실행하므로 스크립트를 데이터 파일의 잘못된 데이터에 대해 실행할 경우 오류가 발생할 수 있습니다. 예를 들어 **bcp** 는 이제 다음을 확인합니다.  
   
 -   **float** 또는 **real** 데이터 형식의 네이티브 표시가 유효한지 여부  
@@ -478,8 +484,9 @@ bcp 유틸리티는 [Microsoft SQL Server 2016 기능 팩](https://www.microsoft
 -   유니코드 데이터의 길이가 짝수 바이트인지 여부  
   
  이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 대량으로 가져올 수 있었던 잘못된 데이터 형식은 이제 로드되지 않습니다. 이전 버전에서는 클라이언트가 잘못된 데이터에 액세스해야 오류가 발생했습니다. 추가 유효성 검사를 수행하면 대량 로드 이후 데이터를 쿼리할 때 발생할 수 있는 예상치 못한 문제가 최소화됩니다.  
-  
-## <a name="bulk-exporting-or-importing-sqlxml-documents"></a>SQLXML 문서 대량 내보내기 또는 가져오기  
+
+## <a name="bulk-exporting-or-importing-sqlxml-documents"></a>SQLXML 문서 대량 내보내기 또는 가져오기
+
  SQLXML 데이터를 대량으로 내보내거나 가져오려면 서식 파일에서 다음 데이터 형식 중 하나를 사용합니다.  
   
 |데이터 형식|영향|  
@@ -487,8 +494,9 @@ bcp 유틸리티는 [Microsoft SQL Server 2016 기능 팩](https://www.microsoft
 |SQLCHAR 또는 SQLVARYCHAR|데이터를 클라이언트 코드 페이지나 데이터 정렬에 포함된 코드 페이지로 보냅니다. 이는 서식 파일을 지정하지 않고 **-c** 스위치를 지정하는 것과 효과가 동일합니다.|  
 |SQLNCHAR 또는 SQLNVARCHAR|데이터를 유니코드로 보냅니다. 이는 서식 파일을 지정하지 않고 **-w** 스위치를 지정하는 것과 효과가 동일합니다.|  
 |SQLBINARY 또는 SQLVARYBIN|데이터를 변환하지 않고 보냅니다.|  
-  
-## <a name="permissions"></a>Permissions  
+
+## <a name="permissions"></a>Permissions
+
  **bcp out** 작업을 수행하려면 원본 테이블에 대한 SELECT 권한이 있어야 합니다.  
   
  **bcp in** 작업을 수행하려면 적어도 대상 테이블에 대한 SELECT/INSERT 권한이 있어야 합니다. 또한 다음과 같은 경우 ALTER TABLE 권한이 있어야 합니다.  
@@ -507,8 +515,9 @@ bcp 유틸리티는 [Microsoft SQL Server 2016 기능 팩](https://www.microsoft
   
 > [!NOTE]
 > 대상 테이블에 대해 ALTER TABLE 권한이 필요하게 된 것은 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]부터였습니다. 이 요구 사항으로 인해 사용자 계정에 대상 테이블에 대한 ALTER 테이블 권한이 없을 경우 트리거 및 제약 조건 검사를 실행하지 않는 **bcp** 스크립트가 실패할 수 있습니다.
-  
-## <a name="character-mode--c-and-native-mode--n-best-practices"></a>문자 모드(-c) 및 기본 모드(-n) 최선의 구현 방법  
+
+## <a name="character-mode--c-and-native-mode--n-best-practices"></a>문자 모드(-c) 및 기본 모드(-n) 최선의 구현 방법
+
  이 섹션에는 문자 모드(-c) 및 기본 모드(-n) 사용 시의 권장 사항이 나와 있습니다.  
   
 -   (관리자/사용자) 가능하면 구분 기호 문제를 방지하기 위해 기본 모드(-n)를 사용하십시오. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 사용하여 내보내기 및 가져오기를 수행하려면 기본 형식을 사용합니다. 데이터를 비 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스로 가져오려는 경우에는 -c 또는 -w 옵션을 사용하여[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 데이터를 내보냅니다.  
@@ -516,8 +525,9 @@ bcp 유틸리티는 [Microsoft SQL Server 2016 기능 팩](https://www.microsoft
 -   (관리자) BCP OUT를 사용할 때는 데이터를 확인합니다. 예를 들어 BCP OUT, BCP IN, BCP OUT을 차례로 사용하는 경우에는 데이터가 정상적으로 내보내기되었으며 몇몇 데이터 값의 일부분으로 종결자 값이 사용되지 않았는지 확인해야 합니다. 종결자 값과 데이터 값 간의 충돌을 방지하려면 임의의 16진수 값을 사용하여 기본 종결자를 무시할 수 있습니다(-t 및 -r 옵션 사용).  
   
 -   (사용자) 실제 문자열 값 간의 충돌 가능성을 최소화하려면 길고 고유한 종결자(바이트 또는 문자 시퀀스)를 사용합니다. 이렇게 하려면 -t 및 -r 옵션을 사용하면 됩니다.  
-  
-## <a name="examples"></a>예  
+
+## <a name="examples"></a>예
+
  이 섹션에서는 다음과 같은 예를 보여 줍니다.  
  
 -   1. **bcp** 유틸리티 버전 식별
@@ -540,6 +550,7 @@ bcp 유틸리티는 [Microsoft SQL Server 2016 기능 팩](https://www.microsoft
 
 
 ### <a name="example-test-conditions"></a>**예제 테스트 조건**
+
 아래 예에서는 SQL Server(2016 시작) 및 Azure SQL Database에 대한 `WideWorldImporters` 샘플 데이터베이스를 사용합니다.  `WideWorldImporters` 다운로드할 수 있습니다 [ https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0 ](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0)합니다.  샘플 데이터베이스를 복원하는 구문은 [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) 을 참조하세요.  다르게 지정되지 않는 한 이 예에서는 Windows 인증을 사용하고 있고 **bcp** 명령을 실행 중인 서버 인스턴스에 트러스트된 연결이 설정되어 있다고 가정합니다.  이름이 `D:\BCP` 인 디렉터리는 많은 예제에서 사용됩니다.
 
 다음 스크립트에서는 `WideWorldImporters.Warehouse.StockItemTransactions` 테이블의 빈 복사본을 만들고 기본 키 제약 조건을 추가합니다.  SSMS(SQL Server Management Studio)에서 다음 T-SQL 스크립트를 실행합니다.
@@ -694,22 +705,23 @@ bcp.exe MyTable in "D:\data.csv" -T -c -C 65001 -t , ...
 ```  
 bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...  
 ```  
-  
-## <a name="additional-examples"></a>추가 예  
+
+## <a name="additional-examples"></a>추가 예
+
 |다음 항목에는 bcp를 사용하는 예제가 포함되어 있습니다. |
 |---|
-|대량 가져오기 또는 대량 내보내기를 위한 데이터 형식(SQL Server)<br />&emsp;&#9679;&emsp;[네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기(SQL Server)](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[문자 형식을 사용하여 데이터 가져오기 또는 내보내기(SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[데이터를 가져오거나 내보내기 위해 유니코드 네이티브 형식 사용(SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[유니코드 문자 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br /><br />[필드 및 행 종결자 지정(SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)<br /><br />[대량 가져오기 수행 중 Null 유지 또는 기본값 사용(SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)<br /><br />[데이터 대량 가져오기 중 ID 값 유지(SQL Server)](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)<br /><br />데이터를 가져오거나 내보내기 위한 서식 파일(SQL Server)<br />&emsp;&#9679;&emsp;[서식 파일 만들기(SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[서식 파일을 사용하여 데이터 대량 가져오기(SQL Server)](../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[서식 파일을 사용하여 테이블 열 건너뛰기(SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[서식 파일을 사용하여 데이터 필드 건너뛰기(SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[서식 파일을 사용하여 테이블 열을 데이터 파일 필드에 매핑(SQL Server)](../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<br /><br />[XML 문서 대량 가져오기 및 내보내기 예(SQL Server)](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)<br /><p>                                                                                                                                                                                                                  </p>|
+|대량 가져오기 또는 대량 내보내기를 위한 데이터 형식(SQL Server)<br />&emsp;&#9679;&emsp;[네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기(SQL Server)](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[문자 형식을 사용하여 데이터 가져오기 또는 내보내기(SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[데이터를 가져오거나 내보내기 위해 유니코드 네이티브 형식 사용(SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[유니코드 문자 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br /><br />[필드 및 행 종결자 지정(SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)<br /><br />[대량 가져오기 수행 중 Null 유지 또는 기본값 사용(SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)<br /><br />[데이터 대량 가져오기 중 ID 값 유지(SQL Server)](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)<br /><br />데이터를 가져오거나 내보내기 위한 서식 파일(SQL Server)<br />&emsp;&#9679;&emsp;[서식 파일 만들기(SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[서식 파일을 사용하여 데이터 대량 가져오기(SQL Server)](../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[서식 파일을 사용하여 테이블 열 건너뛰기(SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[서식 파일을 사용하여 데이터 필드 건너뛰기(SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[서식 파일을 사용하여 테이블 열을 데이터 파일 필드에 매핑(SQL Server)](../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<br /><br />[XML 문서 대량 가져오기 및 내보내기 예(SQL Server)](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)<br /><p>  </p>|
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고 항목
+
  [대량 내보내기 또는 가져오기를 위한 데이터 준비&#40;SQL Server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
  [BULK INSERT&#40;Transact-SQL&#41;](../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET&#40;Transact-SQL&#41;](../t-sql/functions/openrowset-transact-sql.md)   
  [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [sp_tableoption&#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
- [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
-  
-  
+ [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
+
 ## <a name="feedback"></a>피드백
 
 ![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 클라이언트 도구 포럼](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)

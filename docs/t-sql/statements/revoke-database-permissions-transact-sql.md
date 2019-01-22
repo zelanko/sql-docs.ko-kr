@@ -14,16 +14,16 @@ helpviewer_keywords:
 - database permissions [SQL Server], revoking
 - REVOKE statement, databases
 ms.assetid: 442acfc6-af97-40a3-b546-91cd485ee2be
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f20ccd8161e887a40848c2304d9ce098453bf82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e746730f0a2da408bc838e9074b9049d748a1682
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676521"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326414"
 ---
 # <a name="revoke-database-permissions-transact-sql"></a>REVOKE 데이터베이스 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +60,7 @@ permission | ALL [ PRIVILEGES ]
  데이터베이스에 대해 거부할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
  ALL  
- 이 옵션은 모든 가능한 사용 권한을 취소하지 않습니다. ALL을 취소하는 것은 BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE, CREATE VIEW 사용 권한을 취소하는 것과 같습니다.  
+ 이 옵션은 모든 가능한 사용 권한을 취소하지 않습니다. ALL을 취소하는 것은 다음 사용 권한을 취소하는 것과 동일합니다. BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE 및 CREATE VIEW.  
   
  PRIVILEGES  
  ISO 호환성을 위해 포함됩니다. ALL의 동작을 변경하지 않습니다.  

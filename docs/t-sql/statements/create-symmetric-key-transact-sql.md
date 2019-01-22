@@ -20,15 +20,15 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], creating
 - symmetric keys [SQL Server]
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d2d54483e85e92915182593140ca74bf8e872991
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54c25b504befc151b31bf6f0727838170b6d5a9b
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849530"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326504"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -181,7 +181,7 @@ GO
 ```  
   
 ### <a name="c-creating-a-symmetric-key-using-an-extensible-key-management-ekm-device"></a>3. EKM(확장 가능 키 관리) 장치를 사용하여 대칭 키 만들기  
- 다음 예에서는 `MySymKey`라는 공급자와 `MyEKMProvider`의 키 이름을 사용하여 `KeyForSensitiveData`라는 대칭 키를 만듭니다. `User1`에 인증을 할당하고 시스템 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 `MyEKMProvider`라는 공급자를 이미 등록했다고 가정합니다.  
+ 다음 예에서는 `MySymKey`라는 공급자와 `MyEKMProvider`의 키 이름을 사용하여 `KeyForSensitiveData`라는 대칭 키를 만듭니다. `User1`에 인증을 할당하고 시스템 관리자가 `MyEKMProvider`의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]라는 공급자를 이미 등록했다고 가정합니다.  
   
 ```  
 CREATE SYMMETRIC KEY MySymKey  
