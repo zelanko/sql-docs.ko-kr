@@ -11,12 +11,12 @@ ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 19e8cf2e5c4aeaa2eab8c49d61a05a0eaa434e3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f28175eab5219a6181bf241fc60fec576a6ef50
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611041"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405723"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>SQL Server용 Microsoft JDBC Driver
 
@@ -27,28 +27,33 @@ ms.locfileid: "47611041"
 Microsoft JDBC Driver for SQL Server는 IBM WebSphere 및 SAP NetWeaver 등의 주요 애플리케이션 서버에 대해 테스트되었습니다.
   
 ## <a name="getting-started"></a>시작  
+
 * [1단계: Java 개발을 위한 개발 환경 구성](step-1-configure-development-environment-for-java-development.md)  
 * [2단계: Java 개발을 위한 SQL 데이터베이스 만들기](step-2-create-a-sql-database-for-java-development.md)  
 * [3단계: Java를 사용하여 SQL에 연결하는 개념 증명](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
   
 ## <a name="documentation"></a>설명서  
+
 * [시작](getting-started-with-the-jdbc-driver.md)
 * [개요](overview-of-the-jdbc-driver.md)  
 * [프로그래밍 가이드](programming-guide-for-jdbc-sql-driver.md)
 * [보안](securing-jdbc-driver-applications.md)  
 * [성능 및 안정성](improving-performance-and-reliability-with-the-jdbc-driver.md)  
 * [문제 해결](diagnosing-problems-with-the-jdbc-driver.md)
-* [코드 샘플](sample-jdbc-driver-applications.md) 
+* [코드 샘플](sample-jdbc-driver-applications.md)
 * [준수 및 법적 고 지](compliance-and-legal-for-the-jdbc-sql-driver.md)  
   
 ## <a name="community"></a>커뮤니티
-[추가 JDBC 드라이버 정보 찾기](finding-additional-jdbc-driver-information.md)  
+
+[피드백 및 추가 JDBC 드라이버 정보 찾기](finding-additional-jdbc-driver-information.md)  
   
 ## <a name="download"></a>다운로드
+
 [SQL Server 용 Microsoft JDBC Driver 다운로드](download-microsoft-jdbc-driver-for-sql-server.md) -Maven 프로젝트 등에 대 한 추가 정보가 있습니다.
   
 ## <a name="samples"></a>샘플  
-* [샘플 JDBC 드라이버 응용 프로그램](sample-jdbc-driver-applications.md)  
+
+* [샘플 JDBC 드라이버 애플리케이션](sample-jdbc-driver-applications.md)  
 * [Windows에서 Java를 사용 하 여 시작](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
 * [MacOS에서 Java를 사용 하 여 시작](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
 * [Ubuntu에서 Java를 사용 하 여 시작](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)

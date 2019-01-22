@@ -11,17 +11,17 @@ ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1605b608550446ecb31a79e6074a7e8cfa7ea916
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 66f659f5fbb2daa0b0a9969c3e7cde75dccc53d0
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420705"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361673"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>JDBC 드라이버에 대해 Always Encrypted API 참조
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  상시 암호화를 사용하면 클라이언트가 클라이언트 응용 프로그램의 중요한 데이터를 암호화하고 암호화 키를 SQL Server에 표시하지 않을 수 있습니다. 클라이언트 컴퓨터에 설치된 상시 암호화 지원 드라이버가 SQL Server 클라이언트 응용 프로그램의 중요한 데이터를 자동으로 암호화하고 암호 해독하여 이 기능을 구현합니다. 드라이버는 데이터를 SQL Server로 전달하기 전에 중요한 열의 데이터를 암호화하고 응용 프로그램에 대한 의미 체계가 유지되도록 자동으로 쿼리를 다시 작성합니다. 마찬가지로, 드라이버는 쿼리 결과에 있는 암호화된 데이터베이스 열에 저장된 데이터의 암호를 투명하게 해독합니다. 자세한 내용은 [상시 암호화 (데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 하 고 [상시 암호화와 JDBC 드라이버를 사용 하 여](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)입니다.  
+  상시 암호화를 사용하면 클라이언트가 클라이언트 애플리케이션의 중요한 데이터를 암호화하고 암호화 키를 SQL Server에 표시하지 않을 수 있습니다. 클라이언트 컴퓨터에 설치된 상시 암호화 지원 드라이버가 SQL Server 클라이언트 애플리케이션의 중요한 데이터를 자동으로 암호화하고 암호 해독하여 이 기능을 구현합니다. 드라이버는 데이터를 SQL Server로 전달하기 전에 중요한 열의 데이터를 암호화하고 애플리케이션에 대한 의미 체계가 유지되도록 자동으로 쿼리를 다시 작성합니다. 마찬가지로, 드라이버는 쿼리 결과에 있는 암호화된 데이터베이스 열에 저장된 데이터의 암호를 투명하게 해독합니다. 자세한 내용은 [상시 암호화 (데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 하 고 [상시 암호화와 JDBC 드라이버를 사용 하 여](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)입니다.  
   
 > [!NOTE]  
 >  상시 암호화는 SQL Server용 Microsoft JDBC Driver 6.0 이상과 SQL Server 2016을 함께 사용할 때 지원됩니다.  
@@ -35,13 +35,14 @@ ms.locfileid: "52420705"
 |속성|설명|  
 |----------|-----------------|  
 |새 연결 문자열 키워드:<br /><br /> columnEncryptionSetting|columnEncryptionSetting=Enabled로 설정하면 연결에 대해 상시 암호화 기능이 사용되고 columnEncryptionSetting=Disabled로 설정하면 상시 암호화 기능이 사용되지 않습니다. 허용되는 값이 사용/사용 안 함으로 설정되었습니다. 기본값은 Disabled입니다.|  
-|새 메서드:<br /><br /> `public static void setColumnEncryptionTrustedMasterKeyPaths(Map<String, List\<String>> trustedKeyPaths)`<br /><br /> `public static void updateColumnEncryptionTrustedMasterKeyPaths(String server, List\<String> trustedKeyPaths)`<br /><br /> `public static void removeColumnEncryptionTrustedMasterKeyPaths(String server)`|데이터베이스 서버에 대해 신뢰할 수 있는 키 경로 목록을 설정/업데이트/제거할 수 있습니다. 응용 프로그램 쿼리를 처리하는 동안 드라이버에서 목록에 없는 키 경로를 수신하면 쿼리가 실패합니다. 이 속성은 손상된 SQL Server가 가짜 키 경로를 보내고 키 저장소 자격 증명을 유출하는 보안 공격에 대한 추가 보호 기능을 제공합니다.|  
+|새 메서드:<br /><br /> `public static void setColumnEncryptionTrustedMasterKeyPaths(Map<String, List\<String>> trustedKeyPaths)`<br /><br /> `public static void updateColumnEncryptionTrustedMasterKeyPaths(String server, List\<String> trustedKeyPaths)`<br /><br /> `public static void removeColumnEncryptionTrustedMasterKeyPaths(String server)`|데이터베이스 서버에 대해 신뢰할 수 있는 키 경로 목록을 설정/업데이트/제거할 수 있습니다. 애플리케이션 쿼리를 처리하는 동안 드라이버에서 목록에 없는 키 경로를 수신하면 쿼리가 실패합니다. 이 속성은 손상된 SQL Server가 가짜 키 경로를 보내고 키 저장소 자격 증명을 유출하는 보안 공격에 대한 추가 보호 기능을 제공합니다.|  
 |새 메서드:<br /><br /> `public static Map<String, List\<String>> getColumnEncryptionTrustedMasterKeyPaths()`|데이터베이스 서버에 대한 신뢰할 수 있는 키 경로 목록을 반환합니다.|  
 |새 메서드:<br /><br /> `public static void registerColumnEncryptionKeyStoreProviders (Map\<String, SQLServerColumnEncryptionKeyStoreProvider> clientKeyStoreProviders)`|사용자 지정 키 저장소 공급자를 등록할 수 있습니다. 키 저장소 공급자 이름을 키 저장소 공급자 구현에 매핑하는 사전입니다.<br /><br /> JVM 키 저장소를 사용하려면 JVM 키 저장소 자격 증명으로 SQLServerColumnEncryptionJVMKeyStoreProvider 개체를 인스턴스화하고 드라이버에 등록해야 합니다. 이 공급자의 이름은 'MSSQL_JVM_KEYSTORE'여야 합니다.<br /><br /> Azure Key Vault 저장소를 사용 하려면 SQLServerColumnEncryptionAzureKeyStoreProvider 개체를 인스턴스화하고 드라이버를 사용 하 여 등록 해야 합니다. 이 공급자의 이름을 '위해 AZURE_KEY_VAULT' 이어야 합니다.|
 |`public final boolean getSendTimeAsDatetime()`|SendTimeAsDatetime 연결 속성의 설정을 반환 합니다.|
 |`public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)`|SendTimeAsDatetime 연결 속성의 설정을 수정합니다.|
 
  **SQLServerConnectionPoolProxy 클래스**
+ 
 |속성|설명|  
 |----------|-----------------|  
 |`public final boolean getSendTimeAsDatetime()` | SendTimeAsDatetime 연결 속성의 설정을 반환 합니다.|
@@ -74,8 +75,8 @@ ms.locfileid: "52420705"
   
 |속성|설명|  
 |----------|-----------------|  
-|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|열 암호화 키의 지정된 암호화 값을 암호 해독합니다. 암호화 값은 지정된 키 경로가 있는 인증서와 지정된 알고리즘을 사용하여 암호화해야 합니다.<br /><br /> **키 경로 형식은 다음 중 하나여야 합니다.**<br /><br /> 지문:<certificate_thumbprint><br /><br /> 별칭:<certificate_alias><br /><br /> (SQLServerColumnEncryptionKeyStoreProvider를 재정의합니다. (String, String, Byte[]).) decryptColumnEncryptionKey|  
-|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|지정된 키 경로가 있는 인증서와 지정된 알고리즘을 사용하여 열 암호화 키를 암호화합니다.<br /><br /> **키 경로 형식은 다음 중 하나여야 합니다.**<br /><br /> 지문:<certificate_thumbprint><br /><br /> 별칭:<certificate_alias><br /><br /> (SQLServerColumnEncryptionKeyStoreProvider를 재정의합니다. (String, String, Byte[]).) encryptColumnEncryptionKey|  
+|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|열 암호화 키의 지정된 암호화 값을 암호 해독합니다. 암호화 값은 지정된 키 경로가 있는 인증서와 지정된 알고리즘을 사용하여 암호화해야 합니다.<br /><br /> **키 경로 형식은 다음 중 하나여야 합니다.**<br /><br /> 지문:<certificate_thumbprint><br /><br /> 별칭:<certificate_alias><br /><br /> (SQLServerColumnEncryptionKeyStoreProvider를 재정의합니다. decryptColumnEncryptionKey(String, String, Byte[]).)|  
+|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|지정된 키 경로가 있는 인증서와 지정된 알고리즘을 사용하여 열 암호화 키를 암호화합니다.<br /><br /> **키 경로 형식은 다음 중 하나여야 합니다.**<br /><br /> 지문:<certificate_thumbprint><br /><br /> 별칭:<certificate_alias><br /><br /> (SQLServerColumnEncryptionKeyStoreProvider를 재정의합니다. encryptColumnEncryptionKey(String, String, Byte[]).)|  
 |`public void setName (String name)`|이 키 저장소 공급자의 이름을 설정합니다.|
 |`public String getName ()`|이 키 저장소 공급자의 이름을 가져옵니다.|
   
@@ -93,13 +94,13 @@ ms.locfileid: "52420705"
   
 |속성|설명|  
 |----------|-----------------|  
-| `public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)` | Decryptes 암호화 된 열 암호화 키 (CEK). 이 암호 해독 마스터 키 경로 지정 된 비대칭 키를 사용 하는 RSA 암호화 알고리즘을 사용 하 여 수행 됩니다.<br />(SQLServerColumnEncryptionKeyStoreProvider를 재정의합니다. (String, String, Byte[]).) decryptColumnEncryptionKey |  
-| `public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey)` | 지정된 된 알고리즘에 지정 된 열 마스터 키를 부여 하 여 열 암호화 키를 암호화 합니다.<br />(SQLServerColumnEncryptionKeyStoreProvider를 재정의합니다. (String, String, Byte[]).) encryptColumnEncryptionKey |  
+| `public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)` | Decryptes 암호화 된 열 암호화 키 (CEK). 이 암호 해독 마스터 키 경로 지정 된 비대칭 키를 사용 하는 RSA 암호화 알고리즘을 사용 하 여 수행 됩니다.<br />(SQLServerColumnEncryptionKeyStoreProvider를 재정의합니다. decryptColumnEncryptionKey(String, String, Byte[]).) |  
+| `public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey)` | 지정된 된 알고리즘에 지정 된 열 마스터 키를 부여 하 여 열 암호화 키를 암호화 합니다.<br />(SQLServerColumnEncryptionKeyStoreProvider를 재정의합니다. encryptColumnEncryptionKey(String, String, Byte[]).) |  
 |`public void setName (String name)`|이 키 저장소 공급자의 이름을 설정합니다.|
 |`public String getName ()`|이 키 저장소 공급자의 이름을 가져옵니다.|  
   
   
- **SQLServerKeyVaultAuthenticationCallback 인터페이스**  
+ **SQLServerKeyVaultAuthenticationCallback Interface**  
   
  이 인터페이스는 사용자가 구현 하는 Azure Key Vault 인증에 대 한 하나의 메서드를 포함 합니다.  
   
@@ -115,7 +116,7 @@ ms.locfileid: "52420705"
   
 |속성|설명|  
 |----------|-----------------|  
-|SQLServerColumnEncryptionKeyStoreProvider|모든 키 저장소 공급자에 대한 기본 클래스입니다. 사용자 지정 공급자는 이 클래스에서 파생되어 해당 멤버 함수를 재정의한 다음, SQLServerConnection을 사용하여 등록해야 합니다. registerColumnEncryptionKeyStoreProviders() 합니다.|  
+|SQLServerColumnEncryptionKeyStoreProvider|모든 키 저장소 공급자에 대한 기본 클래스입니다. 사용자 지정 공급자는 이 클래스에서 파생되어 해당 멤버 함수를 재정의한 다음, SQLServerConnection을 사용하여 등록해야 합니다. registerColumnEncryptionKeyStoreProviders().|  
   
  메서드  
   
@@ -152,6 +153,7 @@ ms.locfileid: "52420705"
 
   
 새 종류 **microsoft.sql.Types** 클래스
+
 |속성|설명|  
 |----------|-----------------|  
 |DATETIME, SMALLDATETIME, MONEY, SMALLMONEY, GUID|매개 변수 값을 보낼 때 이러한 형식을 대상 SQL 형식으로 사용할 **암호화** datetime, smalldatetime, money, smallmoney, 사용 하 여 uniqueidentifier 열 `setObject()/updateObject()` API 메서드.|  
