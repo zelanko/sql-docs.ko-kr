@@ -4,17 +4,17 @@ description: 이 문서에서는 Linux에서 실행 되는 SQL Server에 대 한
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/25/2018
+ms.date: 01/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: c45203e8524fe2df9301250afd1bef40df37bc3d
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: b17f232fc9dfb2c9d1ac663e831b8e9f78aaa3bb
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419358"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457666"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux의 SQL Server에는 질문과 대답 (FAQ)
 
@@ -32,10 +32,6 @@ ms.locfileid: "49419358"
 
    SQL Server는 테스트 하 고 앞에 나열 된 배포에 대 한 Linux 지원 합니다. 다른 Linux 배포판 밀접 한 관련이 및 SQL Server를 실행 하는 일을 할 수 있습니다 (예를 들어 CentOS는 밀접 하 Red Hat Enterprise Server). 지원 되지 않는 운영 체제에서 SQL Server를 설치 하려는 경우 살펴보시기 하지만 **지원 정책** 섹션을 [Microsoft SQL Server에 대 한 기술 지원 정책](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) 지원 이해 영향을 줍니다. 일부 커뮤니티에서 유지 관리 되며 Linux 배포판에 정식 기본 운영 체제 문제 이면 지원을 받을 수 없는 note도 합니다.
 
-1. **Linux에서 라이선스 작업 어떻게 하나요?**
-
-   SQL Server는 Windows 및 Linux 모두에 대해 동일한 방식으로 허가 되어 있습니다. 사실, SQL Server의 라이선스 수 및 다음 원하는 플랫폼에서 해당 라이선스를 사용 하도록 선택할 수 있습니다. 자세한 내용은 [SQL Server 라이선스 방법](https://www.microsoft.com/sql-server/sql-server-2017-pricing)합니다.
-
 1. **Windows에서와 같은 Linux의 SQL Server를 입니까?**
 
    SQL Server 용 데이터베이스 엔진의 핵심 이므로 Windows에서 Linux에서 동일 합니다. 그러나 일부 기능은 현재 사용할 수 없습니다 linux. Linux에서 지원 되지 않는 기능의 목록을 보려면 참조는 [기능 및 서비스를 지원 되지 않는](sql-server-linux-release-notes.md#Unsupported)합니다. 또한 검토 해야 합니다 [알려진 문제](sql-server-linux-release-notes.md#known-issues)합니다. 이러한 목록에 지정 되지 않으면 다른 SQL Server 기능 및 서비스는 Linux에서 지원 됩니다.
@@ -47,6 +43,39 @@ ms.locfileid: "49419358"
 1. **Windows SQL Server에서 어. 리소스 Linux에서 SQL Server를 사용 하는 방법을 알아볼 수 있습니까?**
 
    합니다 [퀵 스타트](sql-server-linux-setup.md#platforms) Linux에서 SQL Server를 설치 하 고 TRANSACT-SQL 쿼리를 실행 하는 방법에 대 한 단계별 지침을 제공 합니다. 다른 자습서는 Linux에서 SQL Server를 사용 하 여 추가 지침을 제공 합니다. 제 3 자 목록은 팁을 참조 하세요.를 [SQL Server Linux 팁에서 동료 목록](https://www.mssqltips.com/sql-server-tip-category/226/sql-server-on-linux/)합니다.
+
+## <a name="licensing"></a>라이선스
+
+1. **Linux에서 라이선스 작업 어떻게 하나요?**
+
+   SQL Server는 Windows 및 Linux 모두에 대해 동일한 방식으로 허가 되어 있습니다. 사실, SQL Server의 라이선스 수 및 다음 원하는 플랫폼에서 해당 라이선스를 사용 하도록 선택할 수 있습니다. 자세한 내용은 [SQL Server 라이선스 방법](https://www.microsoft.com/sql-server/sql-server-2017-pricing)합니다.
+
+1. **어떤 버전의 SQL Server 선택 해야 하나요 이미 구매한 경우?**
+
+   Mssql-conf를 실행 하면 다음 옵션이 표시 됩니다.
+   
+   ```
+   Choose an edition of SQL Server:
+      1. Evaluation (free, no production use rights, 180-day limit)
+      2. Developer (free, no production use rights)
+      3. Express (free)
+      4. Web (PAID)
+      5. Standard (PAID)
+      6. Enterprise (PAID)
+      7. Enterprise Core (PAID)
+      8. I bought a license through a retail sales channel and have a product key to enter.
+   ```
+     
+   엔터프라이즈 규약의 일부분으로 볼륨 라이선스를 통해 또는 MSDN 구독을 통해 라이선스를 구입한 경우에 4 ~ 7 옵션을 선택 해야 합니다. 이 단계에서는 라이선스를 입력 하도록 요청 하지 않지만 해야 이전에 구입한 적절 한 라이선스가 구성에 대 한 합니다. 소매 채널을 통해 Standard edition을 구매한 경우 8 옵션을 선택 합니다. 이 옵션은 키를 입력 하 라는 메시지가 표시 됩니다. 
+
+1. **설치 된 버전 및 Linux에서 SQL Server의 에디션 확인 방법**
+
+   와 같은 클라이언트 도구를 사용 하 여 SQL Server 인스턴스에 연결할 **sqlcmd**를 **mssql cli**, 또는 Visual Studio Code. 다음 버전 및 실행 중인 SQL Server 버전을 확인 하려면 다음 TRANSACT-SQL 쿼리를 실행 합니다. 
+
+   ```sql
+   SELECT @@VERSION
+   SELECT SERVERPROPERTY('Edition')
+   ```
 
 ## <a name="installation"></a>설치
 
@@ -69,22 +98,6 @@ ms.locfileid: "49419358"
 1. **Linux의 SQL Server의 무인된 설치를 수행할 수 있습니까?**
 
    예 무인된 설치의 논의 참조 하세요 [Linux의 SQL Server에 대 한 설치 지침은](sql-server-linux-setup.md#unattended)합니다. 에 대 한 샘플 스크립트를 참조 하세요 [Red Hat](sample-unattended-install-redhat.md)를 [SUSE Linux Enterprise Server](sample-unattended-install-suse.md), 및 [Ubuntu](sample-unattended-install-ubuntu.md)합니다. 또한 검토할 수 있습니다 [이 샘플 스크립트](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/) SQL Server 고객 자문 팀에서 만든 합니다.
-
-1. **어떤 버전의 SQL Server 선택 해야 하나요 이미 구매한 경우?**
-
-   Mssql-conf를 실행 하는 경우 이러한 옵션 제공 됩니다.  
-   `Choose an edition of SQL Server:` <br>
-`     1. Evaluation (free, no production use rights, 180-day limit)` <br>
-`     2. Developer (free, no production use rights)` <br>
-`     3. Express (free)` <br>
-`     4. Web (PAID)` <br>
-`     5. Standard (PAID)` <br>
-`     6. Enterprise (PAID)` <br>
-`     7. Enterprise Core (PAID)` <br>
-`     8. I bought a license through a retail sales channel and have a product key to enter.`
-     
-   기업 계약의 일부로 볼륨 라이선스를 통해 또는 MSDN 구독을 통해 라이선스를 얻은 경우 4 ~ 7 선택 해야 합니다. 소매 채널을 통해 Standard edition을 구매한 경우에 8을 선택 해야 합니다. 
-
 
 ## <a name="tools"></a>Tools
 
@@ -139,7 +152,7 @@ ms.locfileid: "49419358"
 
 1. **마이그레이션할 수 데이터를 Oracle 및 기타 데이터베이스 엔진에서 Linux의 SQL server?**
 
-   예 SSMA에서 여러 유형의 데이터베이스 엔진 마이그레이션 지원: Microsoft Access, DB2, MySQL, Oracle 및 SAP ASE (이전의 SAP Sybase ASE). SSMA를 사용 하는 방법의 예제를 참조 하세요 [Oracle 스키마를 SQL Server Migration Assistant를 사용 하 여 Linux에서 SQL Server로 마이그레이션할](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json)합니다.
+   예 SSMA는 여러 유형의 데이터베이스 엔진에서 마이그레이션을 지원합니다. Microsoft Access, DB2, MySQL, Oracle 및 SAP ASE (이전의 SAP Sybase ASE). SSMA를 사용 하는 방법의 예제를 참조 하세요 [Oracle 스키마를 SQL Server Migration Assistant를 사용 하 여 Linux에서 SQL Server로 마이그레이션할](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json)합니다.
 
 1. **SQL Server 파일에 필요한 권한은 무엇입니까?**
 
