@@ -7,8 +7,8 @@ ms.technology: t-sql
 ms.topic: language-reference
 ms.custom: ''
 ms.manager: craigg
-ms.author: giladm
-author: giladmit
+ms.author: arib
+author: vainolo
 f1_keywords:
 - 'sys.sensitivity_classifications '
 dev_langs:
@@ -23,12 +23,12 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1b189aa97616a265785a369c0ec7cccfc3b80d56
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 478ab8dd464541c08252eac049a840a789615971
+ms.sourcegitcommit: e6e5da19b393f30b068552a18c911495cbc32952
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979469"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54443689"
 ---
 # <a name="syssensitivityclassifications-transact-sql"></a>sys.sensitivity_classifications (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -73,10 +73,13 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
                          and sys.sensitivity_classifications.minor_id = sys.all_columns.column_id
 ```
 
+## <a name="permissions"></a>사용 권한  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
+
 ## <a name="see-also"></a>관련 항목  
 
 [ADD SENSITIVITY CLASSIFICATION(Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 
-[DROP 민감도 분류 (Transact SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
+[DROP SENSITIVITY CLASSIFICATION(Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
 [SQL Information Protection 시작](https://aka.ms/sqlip)
