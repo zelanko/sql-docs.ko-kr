@@ -1,7 +1,7 @@
 ---
 title: 데이터베이스 수준 역할 | Microsoft 문서
 ms.custom: ''
-ms.date: 06/29/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -39,14 +39,15 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f90a0ac06ed8852410874ffc2fb4a26b04ebf3c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8d205e184f31e628cf9629b702e21e43c200e38
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780831"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420098"
 ---
 # <a name="database-level-roles"></a>데이터베이스 수준 역할
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   데이터베이스에서 사용 권한을 쉽게 관리하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 다른 보안 주체를 그룹핑하는 보안 주체인 다양한 *역할* 을 제공합니다. 역할은 ***Windows 운영 체제의*** 그룹 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 과 같습니다. 데이터베이스 수준 역할은 데이터베이스 측 사용 권한 범위에 속합니다.  
@@ -92,8 +93,8 @@ ms.locfileid: "47780831"
 
 |역할 이름|설명|  
 |--------------------|-----------------|
-**dbmanager** | 데이터베이스를 만들고 삭제할 수 있습니다. 데이터베이스를 만드는 dbmanager 역할의 멤버는 해당 데이터베이스 소유자가 되어 사용자가 dbo 사용자로 데이터베이스에 연결할 수 있게 합니다. dbo 사용자는 해당 데이터베이스에서 모든 데이터베이스 사용 권한을 가집니다. dbmanager 역할의 멤버는 소유하지 않은 데이터베이스에 액세스할 권한이 반드시 필요하지는 않습니다.
-**loginmanager** | 가상 master 데이터베이스에서 로그인을 만들고 삭제할 수 있습니다.  
+|**dbmanager** | 데이터베이스를 만들고 삭제할 수 있습니다. 데이터베이스를 만드는 dbmanager 역할의 멤버는 해당 데이터베이스 소유자가 되어 사용자가 dbo 사용자로 데이터베이스에 연결할 수 있게 합니다. dbo 사용자는 해당 데이터베이스에서 모든 데이터베이스 사용 권한을 가집니다. dbmanager 역할의 멤버는 소유하지 않은 데이터베이스에 액세스할 권한이 반드시 필요하지는 않습니다.|
+|**loginmanager** | 가상 master 데이터베이스에서 로그인을 만들고 삭제할 수 있습니다.|
 
 > [!NOTE]
 > 서버 수준 보안 주체 및 Azure Active Directory 관리자(구성된 경우)는 역할 멤버가 아니더라도 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] 의 모든 권한이 있습니다. 자세한 내용은 [SQL Database 인증 및 권한 부여: 액세스 부여](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/)를 참조하세요. 
@@ -114,7 +115,7 @@ ms.locfileid: "47780831"
 
 ## <a name="working-with-r-services"></a>R Services 작업  
 
-**적용 대상:** [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)] 이상의 SQL Server   
+**적용 대상:** SQL Server([!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]부터)   
 
 R Services가 설치된 경우 추가 데이터베이스 역할을 패키지 관리에 사용할 수 있습니다. 자세한 내용은 [SQL Server에 대한 R 패키지 관리](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md)를 참조하세요.
 
