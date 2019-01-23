@@ -14,12 +14,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5930a5fb03fdab282e575049cf026dd23f17c6f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06c73cfa612b5348659fec9c8a2022b11ddc5936
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830811"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405583"
 ---
 # <a name="use-the-eventdata-function"></a>EVENTDATA 함수 사용
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ AS
 >   
 >  `CREATE TABLE t1 (col1 int)`  
 >   
->  애플리케이션에서 CREATE_TABLE 이벤트의 `TSQLCommand` 데이터를 검색하면 이 데이터는 CREATE_SCHEMA 이벤트가 발생할 때와 CREATE_TABLE 이벤트가 발생할 때 각각 한 번씩, 두 번 표시될 수 있습니다. CREATE_SCHEMA 이벤트 및 해당하는 CREATE SCHEMA 정의의 <schema_element> 텍스트 둘 다에서 DDL 트리거를 만드는 경우를 방지하거나 같은 이벤트가 두 번 처리되지 않도록 하는 논리를 응용 프로그램에 구축합니다.  
+>  애플리케이션에서 CREATE_TABLE 이벤트의 `TSQLCommand` 데이터를 검색하면 이 데이터는 CREATE_SCHEMA 이벤트가 발생할 때와 CREATE_TABLE 이벤트가 발생할 때 각각 한 번씩, 두 번 표시될 수 있습니다. CREATE_SCHEMA 이벤트 및 해당하는 CREATE SCHEMA 정의의 &lt;schema_element&gt; 텍스트 둘 다에서 DDL 트리거를 만드는 경우를 방지하거나 같은 이벤트가 두 번 처리되지 않도록 하는 논리를 애플리케이션에 구축합니다.  
   
 ## <a name="alter-table-and-alter-database-events"></a>ALTER TABLE 및 ALTER DATABASE 이벤트  
  ALTER_TABLE 및 ALTER_DATABASE 이벤트에 대한 이벤트 데이터에는 DDL 문의 영향을 받는 다른 개체의 이름 및 유형과 이러한 개체에서 수행되는 동작도 포함됩니다. ALTER_TABLE 이벤트 데이터에는 ALTER TABLE 문의 영향을 받는 열, 제약 조건 또는 트리거의 이름과 영향을 받는 개체에서 수행되는 동작(만들기, 변경, 삭제, 설정 또는 해제)이 포함됩니다. ALTER DATABASE 이벤트 데이터에는 ALTER DATABASE 문의 영향을 받는 파일 또는 파일 그룹의 이름과 영향을 받는 개체에서 수행되는 동작(만들기, 변경, 또는 삭제)이 포함됩니다.  
@@ -129,7 +129,7 @@ GO
 > [!NOTE]  
 >  이벤트 데이터를 반환하려면 **query()** 메서드보다 XQuery의 **value()** 메서드를 사용하는 것이 좋습니다. **query()** 메서드는 XML 및 출력에서 앰퍼샌드로 이스케이프된 CR/LF(캐리지 리턴 및 줄 바꿈) 인스턴스를 반환하지만 **value()** 메서드는 출력에서는 볼 수 없는 CR/LF 인스턴스를 표시합니다.  
   
- 이와 유사한 DDL 트리거 예가 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스와 함께 제공됩니다. 이 예를 사용하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 데이터베이스 트리거 폴더를 찾으십시오. 이 폴더는 **데이터베이스의** 프로그래밍 기능 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 폴더 아래에 있습니다. **ddlDatabseTriggerLog** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 트리거 스크립팅**을 선택합니다. DDL 트리거 **ddlDatabseTriggerLog** 는 기본적으로 해제되어 있습니다.  
+ 이와 유사한 DDL 트리거 예가 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스와 함께 제공됩니다. 이 예를 사용하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 데이터베이스 트리거 폴더를 찾으십시오. 이 폴더는 **데이터베이스의** 프로그래밍 기능 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 폴더 아래에 있습니다. **ddlDatabaseTriggerLog**를 마우스 오른쪽 단추로 클릭한 다음 **데이터베이스 트리거 스크립팅**을 선택합니다. DDL 트리거 **ddlDatabaseTriggerLog**는 기본적으로 해제되어 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [DDL 이벤트](../../relational-databases/triggers/ddl-events.md)   

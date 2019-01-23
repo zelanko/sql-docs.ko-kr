@@ -21,16 +21,16 @@ helpviewer_keywords:
 - CREATE CREDENTIAL statement
 - credentials [SQL Server], CREATE CREDENTIAL statement
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e0481611eb666b893395581805c923cf03921ad9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 91cc75f835320b6cf15c20cbb7d72101dc2868df
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509379"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327784"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ WITH IDENTITY = 'identity_name'
  SECRET **='**_secret_**'**  
  나가는 인증에 필요한 암호를 지정합니다.  
   
- Azure Key Vault에 액세스하기 위해 자격 증명을 사용하는 경우, **CREATE CREDENTIAL**의 **SECRET** 인수에는 사이에 공백 없이 함께 전달할 Azure Active Directory에 포함된 **Service Principal**의 *\<Client ID>*(하이픈 없이) 및 *\<Secret>* 가 필요합니다. 아래의 예 3을 참조하세요. 자격 증명이 SAS(공유 액세스 서명)를 사용하는 경우 **IDENTITY**는 SAS 토큰입니다. 아래의 예 4를 참조하십시오.  Azure 컨테이너에 저장된 액세스 정책 및 공유 액세스 서명을 만드는 방법은 [1 단원: Azure 컨테이너에 저장 된 액세스 정책 및 공유 액세스 서명 만들기](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)를 참조합니다.  
+ Azure Key Vault에 액세스하기 위해 자격 증명을 사용하는 경우, **CREATE CREDENTIAL**의 **SECRET** 인수에는 사이에 공백 없이 함께 전달할 Azure Active Directory에 포함된 **Service Principal**의 *\<Client ID>*(하이픈 없이) 및 *\<Secret>* 가 필요합니다. 아래의 예 3을 참조하세요. 자격 증명이 SAS(공유 액세스 서명)를 사용하는 경우 **IDENTITY**는 SAS 토큰입니다. 아래의 예 4를 참조하십시오.  Azure 컨테이너에 저장된 액세스 정책 및 공유 액세스 서명 만들기에 대한 자세한 내용은 [1단원: Azure 컨테이너에 저장된 액세스 정책 및 공유 액세스 서명 만들기](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)를 참조하세요.  
   
  CRYPTOGRAPHIC PROVIDER에 대해서는 *cryptographic_provider_name*  
  *EKM(Enterprise Key Management) 공급자*의 이름을 지정합니다. Key Management에 대한 자세한 내용은 [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)를 참조하세요.  
@@ -143,10 +143,10 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov ;');  
 ```  
   
-### <a name="d-creating-a-credential-using-a-sas-token"></a>4. SAS 토큰을 사용하여 자격 증명 만들기  
+### <a name="d-creating-a-credential-using-a-sas-token"></a>D. SAS 토큰을 사용하여 자격 증명 만들기  
  **적용 대상**: [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)을 통한 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]입니다.  
   
- 다음 예제에서는 SAS 토큰을 사용하여 공유 액세스 서명 자격 증명을 만듭니다.  Azure 컨테이너에 저장된 액세스 정책과 공유 액세스 서명을 만든 다음, 공유 액세스 서명을 사용하여 자격 증명을 만드는 방법에 대한 자습서는 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob Storage 서비스 사용하기](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)를 참조합니다.  
+ 다음 예제에서는 SAS 토큰을 사용하여 공유 액세스 서명 자격 증명을 만듭니다.  Azure 컨테이너에 저장된 액세스 정책과 공유 액세스 서명을 만든 다음, 공유 액세스 서명을 사용하여 자격 증명을 만드는 방법에 대한 자습서는 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 스토리지 서비스 사용](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)에서 참조하세요.  
   
 > [!IMPORTANT]  
 >  **CREDENTIAL NAME** 인수는 이름이 컨테이너 경로와 일치하고 https로 시작하고 후행 슬래시를 포함하지 않을 것을 요구합니다. **IDENTITY** 인수는 이름, *공유 액세스 서명*을 요구합니다. **SECRET** 인수는 공유 액세스 서명 토큰을 요구합니다.  

@@ -38,20 +38,20 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5642af0a47cff5ffa7c45aa910fb3101ad831df0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d0ba661f6cc2c19b00dd5c51be9b3dfeb1d47a6e
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532554"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327889"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
-새 데이터베이스를 만듭니다. 
+새 데이터베이스를 만듭니다.
 
 작업 중인 특정 SQL 버전에 대한 구문, 인수, 설명, 사용 권한 및 예제를 보려면 다음 탭 중 하나를 클릭합니다.
 
-구문 표기 규칙에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하십시오. 
+구문 표기 규칙에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하십시오.
 
 ## <a name="click-a-product"></a>제품을 클릭하세요.
 
@@ -72,12 +72,11 @@ ms.locfileid: "52532554"
 
 SQL Server에서 이 문은 새 데이터베이스 및 사용되는 파일과 해당 파일 그룹을 만듭니다. 또한 데이터베이스 스냅숏을 만드는 데 사용하거나, 데이터베이스 파일을 첨부하여 다른 데이터베이스의 분리된 파일에서 데이터베이스를 만드는 데 사용할 수도 있습니다. 
 
-
 ## <a name="syntax"></a>구문  
 
 데이터베이스를 만듭니다.  
 
-```  
+```
 CREATE DATABASE database_name   
 [ CONTAINMENT = { NONE | PARTIAL } ]  
 [ ON   
@@ -164,7 +163,8 @@ CREATE DATABASE database_snapshot_name
 [;]  
 ```  
   
-## <a name="arguments"></a>인수  
+## <a name="arguments"></a>인수
+
  *database_name*  
  새 데이터베이스의 이름입니다. 데이터베이스 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 고유해야 하고 [식별자](../../relational-databases/databases/database-identifiers.md) 규칙을 따라야 합니다.  
   
@@ -272,7 +272,7 @@ CREATE DATABASE database_snapshot_name
   
 -   **PERSISTENT_LOG_BUFFER=ON ( DIRECTORY_NAME='' )**
 
-     이 옵션을 지정하면 트랜잭션 로그 버퍼는 저장소 클래스 메모리(NVDIMM-N 비휘발성 저장소)로 지원되는 디스크 디바이스에 있는 볼륨에서 생성되며 영구적 로그 버퍼라고도 합니다. 자세한 내용은 [스토리지 클래스 메모리를 사용하는 트랜잭션 커밋 대기 시간 가속화](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/) 를 참조하세요. **적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 이상.
+     이 옵션을 지정하면 트랜잭션 로그 버퍼는 스토리지 클래스 메모리(NVDIMM-N 비휘발성 스토리지)로 지원되는 디스크 장치에 있는 볼륨에서 생성되며 영구적 로그 버퍼라고도 합니다. 자세한 내용은 [스토리지 클래스 메모리를 사용하는 트랜잭션 커밋 대기 시간 가속화](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/) 를 참조하세요. **적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 이상.
   
  FOR ATTACH [ WITH \< attach_database_option > ] 기존 운영 체제 파일 집합을 [연결](../../relational-databases/databases/database-detach-and-attach-sql-server.md)하여 데이터베이스를 만들도록 지정합니다. 여기에는 주 파일을 지정하는 \<filespec> 항목이 반드시 필요합니다. 또한 데이터베이스를 처음 만들었거나 마지막으로 연결했을 때 경로가 다른 파일에 대한 \<filespec> 항목이 필요합니다. 이러한 파일에는 반드시 \<filespec> 항목을 지정해야 합니다.  
   
@@ -317,7 +317,7 @@ CREATE DATABASE database_snapshot_name
 -   데이터베이스를 버전에 관계없이 다른 서버 인스턴스에 연결하는 경우에는 연결 작업이 완료된 다음, [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)을 실행하여 복제를 제거해야 합니다.  
   
 > [!NOTE]  
-> **vardecimal** 저장소 형식으로 연결 작업을 수행할 수는 있지만 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서비스 팩 2 이상으로 업그레이드해야 합니다. vardecimal 저장소 형식을 사용하는 데이터베이스는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 수 없습니다. **vardecimal** 저장소 형식에 대한 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하십시오.  
+> **vardecimal** 스토리지 형식으로 연결 작업을 수행할 수는 있지만 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서비스 팩 2 이상으로 업그레이드해야 합니다. vardecimal 저장소 형식을 사용하는 데이터베이스는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 수 없습니다. **vardecimal** 스토리지 형식에 대한 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하십시오.  
   
  데이터베이스가 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 처음으로 연결되거나 복원될 때 데이터베이스 마스터 키(서비스 마스터 키로 암호화됨)의 복사본은 서버에 아직 저장되지 않은 상태입니다. 데이터베이스 마스터 키를 암호 해독하려면 **OPEN MASTER KEY** 문을 사용해야 합니다. DMK를 암호 해독한 후에는 **ALTER MASTER KEY REGENERATE** 문을 사용하여 SMK(서비스 마스터 키)로 암호화된 DMK의 복사본을 서버에 프로비전함으로써 앞으로 자동 암호 해독을 사용하도록 설정할 수 있습니다. 데이터베이스가 이전 버전에서 업그레이드되지 않은 경우에는 DMK를 다시 생성해야 최신 AES 알고리즘을 사용할 수 있습니다. DMK를 다시 생성하는 방법은 [ALTER MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)를 참조하세요. AES로 업그레이드하기 위해 DMK 키를 다시 생성하는 데 소요되는 시간은 DMK에서 보호하는 개체 수에 따라 달라집니다. AES로 업그레이드하기 위해 DMK 키를 다시 생성하는 작업은 한 번만 필요하며 키 회전 전략의 일부로 이후에 수행하는 다시 생성 작업에 영향을 주지 않습니다. 연결을 사용하여 데이터베이스를 업그레이드하는 방법은 [분리 및 연결을 사용하여 데이터베이스 업그레이드&#40;Transact-SQL&#41;](../../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md)를 참조하세요.  
   
@@ -361,7 +361,7 @@ CREATE DATABASE database_snapshot_name
  운영 체제(물리적) 파일 이름을 지정합니다.  
   
  **'** *os_file_name* **'**  
- 파일을 만들 때 운영 체제에서 사용한 경로와 파일 이름입니다. 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 설치된 로컬 서버, SAN(저장 영역 네트워크) 또는 iSCSI 기반 네트워크 중 하나의 디바이스에 있어야 합니다. 지정한 경로는 CREATE DATABASE 문을 실행하기 전에 반드시 존재해야 합니다. 자세한 내용은 주의 사항 섹션의 "데이터베이스 파일 및 파일 그룹"을 참조하십시오.  
+ 파일을 만들 때 운영 체제에서 사용한 경로와 파일 이름입니다. 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 설치된 로컬 서버, SAN(스토리지 영역 네트워크) 또는 iSCSI 기반 네트워크 중 하나의 장치에 있어야 합니다. 지정한 경로는 CREATE DATABASE 문을 실행하기 전에 반드시 존재해야 합니다. 자세한 내용은 주의 사항 섹션의 "데이터베이스 파일 및 파일 그룹"을 참조하십시오.  
   
  파일에 UNC 경로가 지정되면 SIZE, MAXSIZE 및 FILEGROWTH 매개 변수를 설정할 수 있습니다.  
   
@@ -455,7 +455,8 @@ CREATE DATABASE database_snapshot_name
   
  자세한 내용은 주의 사항 섹션의 "데이터베이스 스냅숏"을 참조하십시오.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
+
  사용자 데이터베이스를 생성, 수정 또는 삭제할 때마다 [마스터 데이터베이스](../../relational-databases/databases/master-database.md)를 백업해야 합니다.  
   
  CREATE DATABASE 문은 기본 트랜잭션 관리 모드인 자동 커밋 모드에서 실행해야 하며 명시적 또는 암시적 트랜잭션에서는 허용되지 않습니다.  
@@ -479,14 +480,16 @@ CREATE DATABASE database_snapshot_name
 - 데이터베이스 스냅숏 생성
 - 메모리 최적화 데이터 파일 그룹
    
-## <a name="database-files-and-filegroups"></a>데이터베이스 파일 및 파일 그룹  
+## <a name="database-files-and-filegroups"></a>데이터베이스 파일 및 파일 그룹
+
  모든 데이터베이스에는 *주 파일*과 *트랜잭션 로그 파일*이라는 2개의 파일과 하나 이상의 파일 그룹이 있습니다. 각 데이터베이스에 최대 32,767개의 파일과 32,767개의 파일 그룹을 지정할 수 있습니다.  
   
  데이터베이스를 만들 때는 데이터베이스에서 예상되는 최대 데이터 크기를 고려하여 데이터 파일을 가능한 한 크게 만드는 것이 좋습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 성능과 안정성을 최적화하는 구성을 위해 SAN(저장 영역 네트워크), iSCSI 기반 네트워크 또는 로컬로 연결된 디스크에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 파일을 저장하는 것이 좋습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 성능과 안정성을 최적화하는 구성을 위해 SAN(스토리지 영역 네트워크), iSCSI 기반 네트워크 또는 로컬로 연결된 디스크에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 파일을 스토리지하는 것이 좋습니다.  
   
-## <a name="database-snapshots"></a>데이터베이스 스냅숏  
+## <a name="database-snapshots"></a>데이터베이스 스냅숏
+
  CREATE DATABASE 문을 사용하여 *원본 데이터베이스*의 읽기 전용 정적 뷰인 *데이터베이스 스냅숏*을 만들 수 있습니다. 데이터베이스 스냅숏은 스냅숏을 만들었을 당시의 원본 데이터베이스와 트랜잭션 측면에서 일관성을 가집니다. 원본 데이터베이스 하나에 스냅숏이 여러 개 있을 수 있습니다.  
   
 > [!NOTE]  
@@ -498,20 +501,24 @@ CREATE DATABASE database_snapshot_name
   
  자세한 내용은 [데이터베이스 스냅숏&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)을 참조하세요.  
   
-## <a name="database-options"></a>데이터베이스 옵션  
+## <a name="database-options"></a>데이터베이스 옵션
+
  데이터베이스를 만들 때마다 몇 가지 데이터베이스 옵션이 자동으로 설정됩니다. 이러한 옵션에 대한 자세한 내용은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.  
   
-## <a name="the-model-database-and-creating-new-databases"></a>새 데이터베이스 만들기 및 model 데이터베이스  
+## <a name="the-model-database-and-creating-new-databases"></a>새 데이터베이스 만들기 및 model 데이터베이스
+
  [model 데이터베이스](../../relational-databases/databases/model-database.md)에 있는 모든 사용자 정의 개체는 새로 만든 데이터베이스에 복사됩니다. 테이블, 뷰, 저장 프로시저, 데이터 형식 등의 모든 개체를 model 데이터베이스에 추가하여 새로 만든 모든 데이터베이스에 포함할 수 있습니다.  
   
  크기 매개 변수를 추가하지 않고 CREATE DATABASE *database_name* 문을 지정하면 model 데이터베이스의 주 파일과 크기가 같은 주 데이터 파일이 만들어집니다.  
   
  FOR ATTACH를 지정하지 않은 경우 모든 새 데이터베이스는 model 데이터베이스에서 데이터베이스 옵션 설정을 상속합니다. 예를 들어 자동 축소와 같은 데이터베이스 옵션은 model 데이터베이스와 새로 만드는 모든 데이터베이스에서 **true**로 설정됩니다. model 데이터베이스에서 옵션을 변경하면 새로 만드는 모든 데이터베이스에 이러한 새 옵션 설정이 사용됩니다. 기존 데이터베이스는 model 데이터베이스 변경 내용의 영향을 받지 않습니다. CREATE DATABASE 문에 FOR ATTACH를 지정하는 경우 새 데이터베이스는 원본 데이터베이스의 데이터베이스 옵션 설정을 상속합니다.  
   
-## <a name="viewing-database-information"></a>데이터베이스 정보 보기  
+## <a name="viewing-database-information"></a>데이터베이스 정보 보기
+
  카탈로그 뷰, 시스템 함수 및 시스템 저장 프로시저를 사용하여 데이터베이스, 파일 및 파일 그룹에 대한 정보를 반환할 수 있습니다. 자세한 내용은 [시스템 뷰&#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)를 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
  CREATE DATABASE, CREATE ANY DATABASE 또는 ALTER ANY DATABASE 권한이 필요합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 디스크 사용을 제어하기 위해 일반적으로 데이터베이스를 만들 수 있는 사용 권한은 일부 로그인 계정으로 제한됩니다.  
@@ -525,7 +532,8 @@ GRANT CREATE DATABASE TO [Fay];
 GO  
 ```  
   
-### <a name="permissions-on-data-and-log-files"></a>데이터 및 로그 파일에 대한 사용 권한  
+### <a name="permissions-on-data-and-log-files"></a>데이터 및 로그 파일에 대한 사용 권한
+
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 각 데이터베이스의 데이터 및 로그 파일에 특정 사용 권한이 설정됩니다. 데이터베이스에 다음 작업이 적용될 때마다 다음과 같은 사용 권한이 설정됩니다.  
   
 |||  
@@ -541,8 +549,9 @@ GO
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-database-without-specifying-files"></a>1. 파일을 지정하지 않고 데이터베이스 만들기  
- 다음 예에서는 `mytest` 데이터베이스를 만들고 해당 주 파일 및 트랜잭션 로그 파일을 만듭니다. 문에 \<filespec> 항목이 없으므로 주 데이터베이스 파일의 크기는 model 데이터베이스 주 파일의 크기와 같습니다. 트랜잭션 로그는 512KB와 주 데이터 파일 크기의 25% 중 더 큰 값으로 설정됩니다. MAXSIZE를 지정하지 않았으므로 사용 가능한 디스크 공간을 모두 채울 때까지 파일 크기가 증가할 수 있습니다. 이 예에서는 `mytest` 데이터베이스를 만들기 전에 `mytest`라는 데이터베이스(있는 경우)를 삭제하는 방법도 보여 줍니다.  
+### <a name="a-creating-a-database-without-specifying-files"></a>1. 파일을 지정하지 않고 데이터베이스 만들기
+
+ 다음 예에서는 `mytest` 데이터베이스를 만들고 해당 주 파일 및 트랜잭션 로그 파일을 만듭니다. 문에 \<filespec> 항목이 없으므로 주 데이터베이스 파일의 크기는 model 데이터베이스 주 파일의 크기와 같습니다. 트랜잭션 로그는 주 데이터 파일의 25% 크기 또는 512KB 중 큰 값으로 설정됩니다. MAXSIZE를 지정하지 않았으므로 사용 가능한 디스크 공간을 모두 채울 때까지 파일 크기가 증가할 수 있습니다. 이 예에서는 `mytest` 데이터베이스를 만들기 전에 `mytest`라는 데이터베이스(있는 경우)를 삭제하는 방법도 보여 줍니다.  
   
 ```sql  
 USE master;  
@@ -559,7 +568,8 @@ WHERE name = N'mytest';
 GO  
 ```  
   
-### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>2. 데이터 파일 및 트랜잭션 로그 파일을 지정하는 데이터베이스 만들기  
+### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>2. 데이터 파일 및 트랜잭션 로그 파일을 지정하는 데이터베이스 만들기
+
  다음 예에서는 `Sales` 데이터베이스를 만듭니다. 주 키워드를 사용하지 않았으므로 첫 번째 파일(`Sales_dat`)이 주 파일이 됩니다. `Sales_dat` 파일의 SIZE 매개 변수에 MB 또는 KB를 지정하지 않았으므로 기본값 MB를 사용하여 할당됩니다. 사용자 데이터베이스를 생성, 수정 또는 삭제할 때마다 `Sales_log` 파일은 `MB` 매개 변수에 명시적으로 `SIZE` 접미사를 지정했으므로 메가바이트(MB)로 공간이 할당됩니다.  
   
 ```sql  
@@ -581,7 +591,8 @@ LOG ON
 GO  
 ```  
   
-### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>3. 데이터 파일 및 트랜잭션 로그 파일을 여러 개 지정하여 데이터베이스 만들기  
+### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>3. 데이터 파일 및 트랜잭션 로그 파일을 여러 개 지정하여 데이터베이스 만들기
+
  다음 예에서는 3개의 `Archive` 데이터 파일과 2개의 `100-MB` 트랜잭션 로그 파일을 가진 `100-MB` 데이터베이스를 만듭니다. 주 파일은 목록의 첫 번째 파일이며 `PRIMARY` 키워드로 명시적으로 지정되어 있습니다. 트랜잭션 로그 파일은 `LOG ON` 키워드 다음에 지정됩니다. `FILENAME` 옵션에서 파일에 사용된 확장명에 유의하십시오. 주 데이터 파일에는 `.mdf`, 보조 데이터 파일에는 `.ndf`, 트랜잭션 로그 파일에는 `.ldf`가 각각 사용됩니다. 이 예에서는 데이터베이스를 `D:` 데이터베이스와 함께 배치하는 대신 `master` 드라이브에 배치합니다.  
   
 ```sql  
@@ -619,7 +630,8 @@ LOG ON
 GO  
 ```  
   
-### <a name="d-creating-a-database-that-has-filegroups"></a>4. 파일 그룹이 있는 데이터베이스 만들기  
+### <a name="d-creating-a-database-that-has-filegroups"></a>D. 파일 그룹이 있는 데이터베이스 만들기
+
  다음 예에서는 아래에 나열된 파일 그룹을 포함하는 `Sales` 데이터베이스를 만듭니다.  
   
 -   `Spri1_dat` 및 `Spri2_dat` 파일을 포함하는 주 파일 그룹. 이러한 파일의 FILEGROWTH 증가분은 `15%`로 지정됩니다.  
@@ -676,7 +688,8 @@ LOG ON
 GO  
 ```  
   
-### <a name="e-attaching-a-database"></a>5. 데이터베이스 연결  
+### <a name="e-attaching-a-database"></a>E. 데이터베이스 연결
+
  다음 예에서는 예 4에서 만든 `Archive` 데이터베이스를 분리한 다음, `FOR ATTACH` 절을 사용하여 데이터베이스를 연결합니다. `Archive`는 데이터 파일과 로그 파일을 여러 개 포함하도록 정의되었습니다. 그러나 파일을 만든 후 위치를 변경하지 않았으므로 `FOR ATTACH` 절에 주 파일만 지정해야 합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터는 연결 중인 데이터베이스에 속한 모든 전체 텍스트 파일이 데이터베이스에 연결됩니다.  
   
 ```sql  
@@ -690,7 +703,8 @@ CREATE DATABASE Archive
 GO  
 ```  
   
-### <a name="f-creating-a-database-snapshot"></a>6. 데이터베이스 스냅숏 만들기  
+### <a name="f-creating-a-database-snapshot"></a>F. 데이터베이스 스냅숏 만들기
+
  다음 예에서는 `sales_snapshot0600` 데이터베이스 스냅숏을 만듭니다. 데이터베이스 스냅숏은 읽기 전용이므로 로그 파일을 지정할 수 없습니다. 구문에 맞게 원본 데이터베이스의 모든 파일을 지정하며 파일 그룹은 지정하지 않습니다.  
   
  이 예의 원본 데이터베이스는 예 4에서 만든 `Sales` 데이터베이스입니다.  
@@ -709,7 +723,8 @@ AS SNAPSHOT OF Sales ;
 GO  
 ```  
   
-### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>7. 데이터베이스 만들기 및 데이터 정렬 이름과 옵션 지정  
+### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>G. 데이터베이스 만들기 및 데이터 정렬 이름과 옵션 지정
+
  다음 예에서는 `MyOptionsTest` 데이터베이스를 만듭니다. 데이터 정렬 이름을 지정하고 `TRUSTYWORTHY` 및 `DB_CHAINING` 옵션을 `ON`으로 설정합니다.  
   
 ```sql  
@@ -729,7 +744,8 @@ WHERE name = N'MyOptionsTest';
 GO  
 ```  
   
-### <a name="h-attaching-a-full-text-catalog-that-has-been-moved"></a>8. 이동된 전체 텍스트 카탈로그 연결  
+### <a name="h-attaching-a-full-text-catalog-that-has-been-moved"></a>H. 이동된 전체 텍스트 카탈로그 연결
+
  다음 예에서는 `AdvWksFtCat` 전체 텍스트 카탈로그를 `AdventureWorks2012` 데이터 및 로그 파일과 연결합니다. 이 예에서는 전체 텍스트 카탈로그를 기본 위치에서 새 위치 `c:\myFTCatalogs`로 이동하고 데이터 및 로그 파일은 기본 위치에 그대로 남아 있습니다.  
   
 ```sql  
@@ -748,7 +764,8 @@ FOR ATTACH;
 GO  
 ```  
   
-### <a name="i-creating-a-database-that-specifies-a-row-filegroup-and-two-filestream-filegroups"></a>9. 행 파일 그룹 하나와 FILESTREAM 파일 그룹 두 개를 지정하는 데이터베이스 만들기  
+### <a name="i-creating-a-database-that-specifies-a-row-filegroup-and-two-filestream-filegroups"></a>9. 행 파일 그룹 하나와 FILESTREAM 파일 그룹 두 개를 지정하는 데이터베이스 만들기
+
  다음 예에서는 `FileStreamDB` 데이터베이스를 만듭니다. 이 데이터베이스에는 행 파일 그룹 하나와 FILESTREAM 파일 그룹 두 개가 있습니다. 각 파일 그룹에는 다음과 같이 하나의 파일이 포함됩니다.  
   
 -   `FileStreamDB_data`는 행 데이터를 포함합니다. 여기에는 기본 경로가 지정된 `FileStreamDB_data.mdf` 파일 하나가 포함됩니다.  
@@ -806,7 +823,8 @@ LOG ON
 GO  
 ```  
   
-### <a name="j-creating-a-database-that-has-a-filestream-filegroup-with-multiple-files"></a>10. 여러 파일이 포함된 FILESTREAM 파일 그룹이 있는 데이터베이스 만들기  
+### <a name="j-creating-a-database-that-has-a-filestream-filegroup-with-multiple-files"></a>J. 여러 파일이 포함된 FILESTREAM 파일 그룹이 있는 데이터베이스 만들기
+
  다음 예에서는 `BlobStore1` 데이터베이스를 만듭니다. 이 데이터베이스에는 행 파일 그룹 하나와 FILESTREAM 파일 그룹 하나(`FS`)가 있습니다. FILESTREAM 파일 그룹에는 두 개의 파일(`FS1` 및 `FS2`)이 포함됩니다. 그런 다음 세 번째 파일(`FS3`)을 FILESTREAM 파일 그룹에 추가하여 데이터베이스를 변경합니다.  
   
 ```sql  
@@ -855,8 +873,9 @@ TO FILEGROUP [FS];
 GO  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+## <a name="see-also"></a>참고 항목
+
+ [ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [DROP DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
@@ -887,6 +906,7 @@ Azure SQL Database 논리 서버에서 이 문은 Azure SQL Server와 함께 사
 ## <a name="syntax"></a>구문 
 
 ### <a name="create-a-database"></a>데이터베이스 만들기
+
 ```  
 CREATE DATABASE database_name [ COLLATE collation_name ]  
 {  
@@ -966,7 +986,7 @@ MAXSIZE
 
 **논리 서버의 단일 및 풀링된 데이터베이스에 대한 DTU 기반 모델입니다.**
 
-|**MAXSIZE**|**기본**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** | 
+|**MAXSIZE**|**기본**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** |
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------| 
 |100MB|√|√|√|√|√|  
 |250MB|√|√|√|√|√|
@@ -990,28 +1010,32 @@ MAXSIZE
 |1024GB|해당 사항 없음|해당 사항 없음|√|√|√ (D)|
 |1024GB에서 최대 4096GB(256 GB*로 증분) |해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|√|√|  
   
-\* P11과 P15는 기본 크기인 1024를 사용하여 MAXSIZE를 최대 4TB까지 허용합니다.  P11 및 P15는 추가 비용 없이 최대 4TB가 포함된 스토리지를 사용할 수 있습니다. 프리미엄 계층에서 1TB 초과의 MAXSIZE는 현재 미국 동부2, 미국 서부, 미국 버지니아 주 정부, 서부 유럽, 독일 중앙, 동남 아시아, 일본 동부, 오스트레일리아 동부, 캐나다 중앙 및 캐나다 동부에서 사용할 수 있습니다. DTU 기반 모델에 대한 리소스 제한에 대한 자세한 내용은 [DTU 기반 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요.  
+\* P11과 P15는 기본 크기인 1024를 사용하여 MAXSIZE를 최대 4TB까지 허용합니다.  P11 및 P15는 추가 비용 없이 최대 4TB가 포함된 스토리지를 사용할 수 있습니다. 프리미엄 계층에서 1TB 초과 MAXSIZE는 현재 다음 지역에서 사용할 수 있습니다. 미국 동부2, 미국 서부, 미국 버지니아 주 정부, 유럽 서부, 독일 중부, 동남 아시아, 일본 동부, 오스트레일리아 동부, 캐나다 중부 및 캐나다 동부. DTU 기반 모델에 대한 리소스 제한에 대한 자세한 내용은 [DTU 기반 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요.  
 
 DTU 기반 모델에 대한 MAXSIZE 값은 지정된 경우 지정된 서비스 계층에 대한 위의 표에 표시된 유효한 값이어야 합니다.
  
 **논리 서버의 단일 및 풀링된 데이터베이스에 대한 vCore 기반 모델입니다.**
 
 **범용 서비스 계층 - 4세대 계산 플랫폼**
+
 |MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_4|GP_Gen4_8|GP_Gen4_16|GP4_24|
 |:--- | --: |--: |--: |--: |--: |--:|
 |최대 데이터 크기(GB)|1024|1024|1536|3072|4096|4096|
 
 **범용 서비스 계층 - 5세대 계산 플랫폼**
+
 |MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_8|GP_Gen5_16|GP_Gen5_24|GP_Gen5_32|GP_Gen5_48|GP_Gen5_80|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |최대 데이터 크기(GB)|1024|1024|1536|3072|4096|4096|4096|4096|
 
 **중요 비즈니스용 서비스 계층 - 4세대 계산 플랫폼**
+
 |성능 수준|BC_Gen4_1|BC_Gen4_2|BC_Gen4_4|BC_Gen4_8|BC_Gen4_16|
 |:--- | --: |--: |--: |--: |--: |--: |
 |최대 데이터 크기(GB)|1024|1024|1024|1024|1024|1024|
 
 **중요 비즈니스용 서비스 계층 - 5세대 계산 플랫폼**
+
 |MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_8|BC_Gen5_16|BC_Gen5_24|BC_Gen5_32|BC_Gen5_48|BC_Gen5_80|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |최대 데이터 크기(GB)|1024|1024|1024|1024|2048|4096|4096|4096|
@@ -1021,16 +1045,19 @@ vCore 모델을 사용할 때 `MAXSIZE`값이 설정되지 않은 경우 기본�
 **Managed Instance의 데이터베이스에 대한 vCore 기반 모델입니다.**
 
 **범용 서비스 계층 - 4세대 계산 플랫폼**
+
 |MAXSIZE|GP_Gen4_8|GP_Gen4_16|GP4_24|
 |:--- | --: |--: |
 |최대 데이터 크기(TB)|8|8|8|
 
 **범용 서비스 계층 - 5세대 계산 플랫폼**
+
 |MAXSIZE|GP_Gen5_8|GP_Gen5_16|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|
 |최대 데이터 크기(TB)|8|8|8|8|8|
 
 MAXSIZE 및 EDITION 인수에는 다음과 같은 규칙이 적용됩니다.  
+
 - EDITION이 지정되었지만 MAXSIZE가 지정되지 않은 경우 해당 버전에 대한 기본값이 사용됩니다. 예를 들어 EDITION이 Standard로 설정되었고 MAXSIZE가 지정되지 않았으면 MAXSIZE가 자동으로 250MB로 설정됩니다.  
 - MAXSIZE 또는 EDITION이 모두 지정되지 않았으면 EDITION이 Standard(S0)로 설정되고, MAXSIZE는 250GB로 설정됩니다.  
 
@@ -1103,25 +1130,28 @@ CATALOG_COLLATION 인수는 데이터베이스를 생성하는 동안에만 사�
   
  자세한 내용은 [Transact-SQL을 사용하여 Azure SQL 데이터베이스의 복사본 만들기](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/)를 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
 데이터베이스를 만들려면 로그인은 다음 중 하나여야 합니다. 
   
 - 서버 수준 보안 주체 로그인  
   
 - 로컬 Azure SQL Server에 대한 Azure AD 관리자  
 - 로그인은 `dbmanager` 데이터베이스 역할의 멤버입니다.    
-`CREATE DATABASE ... AS COPY OF` 구문 사용에 대한 **추가 요구 사항: 로컬 서버에는 문을 실행 하는**  로그인은 적어도 `db_owner` 원본 서버에 있어야 합니다. 로그인이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 기반으로 하는 경우, 로컬 서버의 문을 실행하는 로그인에는 동일한 이름과 암호를 사용하여 원본 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서버에서 일치하는 로그온이 있어야 합니다.  
+**`CREATE DATABASE ... AS COPY OF` 구문 사용 관련 추가 요구 사항:** 로컬 서버에 문을 실행하는 로그인은 적어도 `db_owner` 원본 서버에 있어야 합니다. 로그인이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 기반으로 하는 경우, 로컬 서버의 문을 실행하는 로그인에는 동일한 이름과 암호를 사용하여 원본 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서버에서 일치하는 로그온이 있어야 합니다.  
   
 ## <a name="examples"></a>예
   
-### <a name="simple-example"></a>간단한 예  
+### <a name="simple-example"></a>간단한 예
+
  데이터베이스를 만드는 간단한 예  
   
 ```sql  
 CREATE DATABASE TestDB1;  
 ```  
   
-### <a name="simple-example-with-edition"></a>에디션을 사용하는 간단한 예  
+### <a name="simple-example-with-edition"></a>에디션을 사용하는 간단한 예
+
  표준 데이터베이스를 만드는 간단한 예  
   
 ```sql  
@@ -1129,7 +1159,8 @@ CREATE DATABASE TestDB2
 ( EDITION = 'GeneralPurpose' );  
 ```  
   
-### <a name="example-with-additional-options"></a>추가 옵션이 있는 예  
+### <a name="example-with-additional-options"></a>추가 옵션이 있는 예
+
  여러 옵션을 사용하는 예  
   
 ```sql  
@@ -1138,7 +1169,8 @@ COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS
 ( MAXSIZE = 500 MB, EDITION = 'GeneralPurpose', SERVICE_OBJECTIVE = 'GP_GEN4_8' ) ;  
 ```  
   
-### <a name="creating-a-copy"></a>복사본 만들기  
+### <a name="creating-a-copy"></a>복사본 만들기
+
  데이터베이스의 복사본을 만드는 예  
   
 **적용 대상:** 단일 및 풀링된 데이터베이스만.
@@ -1158,7 +1190,8 @@ S3M100이라는 풀에 새 데이터베이스를 만듭니다.
 CREATE DATABASE db1 ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = S3M100 ) ) ;  
 ```  
   
-### <a name="creating-a-copy-of-a-database-on-another-server"></a>다른 서버에서 데이터베이스 복사본 만들기  
+### <a name="creating-a-copy-of-a-database-on-another-server"></a>다른 서버에서 데이터베이스 복사본 만들기
+
 다음 예에서는 단일 데이터베이스의 P2 성능 수준에 db_copy라는 이름의 db_original 데이터베이스의 복사본을 만듭니다.  이것은 db_original이 단일 데이터베이스의 탄력적 풀 또는 성능 수준에 관계없이 적용됩니다.  
   
 **적용 대상:** 단일 및 풀링된 데이터베이스만.
@@ -1244,7 +1277,8 @@ Windows 및 SQL 데이터 정렬 이름에 대한 자세한 내용은 [COLLATE(T
    > [!TIP]
    > 해결 방법으로 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldbmi)를 `CREATE DATABASE` 뒤에 사용하여 데이터베이스 옵션을 설정하고 파일을 추가합니다.  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
 데이터베이스를 만들려면 로그인은 다음 중 하나여야 합니다. 
   
 - 서버 수준 보안 주체 로그인  
@@ -1253,7 +1287,8 @@ Windows 및 SQL 데이터 정렬 이름에 대한 자세한 내용은 [COLLATE(T
   
 ## <a name="examples"></a>예
   
-### <a name="simple-example"></a>간단한 예  
+### <a name="simple-example"></a>간단한 예
+
  데이터베이스를 만드는 간단한 예  
   
 ```sql  
@@ -1302,7 +1337,8 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 [;]  
 ```  
   
-## <a name="arguments"></a>인수  
+## <a name="arguments"></a>인수
+
 *database_name*  
 새 데이터베이스의 이름입니다. 이 이름은 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 데이터베이스 및 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 데이터베이스를 모두 호스트할 수 있고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자에 대한 규칙을 준수할 수 있는 SQL 서버에서 고유해야 합니다. 자세한 내용은 [식별자](https://go.microsoft.com/fwlink/p/?LinkId=180386)를 참조하세요.  
   
@@ -1317,35 +1353,38 @@ Windows 및 SQL 데이터 정렬 이름에 대한 자세한 내용은 [COLLATE(T
 *MAXSIZE*  
 기본값은 245,760GB(240TB)입니다.  
 
-**적용 대상:** 컴퓨팅 Gen1에 최적화됨
+**적용 대상:** Compute Gen1에 최적화됨
 
 데이터베이스의 최대 허용 크기입니다. 데이터베이스는 MAXSIZE 이상으로 커질 수 없습니다. 
 
-**적용 대상:** 컴퓨팅 Gen2에 최적화됨
+**적용 대상:** Compute Gen2에 최적화됨
 
 데이터베이스의 rowstore 데이터에 허용되는 최대 크기입니다. Rowstore 테이블, columnstore 인덱스의 deltastore 또는 클러스터된 columnstore 인덱스의 비클러스터된 인덱스에 저장된 데이터는 MAXSIZE 보다 커질 수 없습니다.  columnstore 형식으로 압축된 데이터에는 크기 제한이 없으며 MAXSIZE에 의해 제한되지 않습니다.
   
 SERVICE_OBJECTIVE  
 성능 수준을 지정합니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]의 서비스 목표에 대한 자세한 내용은 [성능 계층](https://azure.microsoft.com/documentation/articles/performance-tiers/)을 참조하세요.  
   
-## <a name="general-remarks"></a>일반적인 주의 사항  
+## <a name="general-remarks"></a>일반적인 주의 사항
+
 [DATABASEPROPERTYEX&#40; Transact -SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)을 사용하여 데이터베이스 속성을 참조합니다.  
   
 나중에 최대 크기, 또는 서비스 목표 값을 변경하려면, [ALTER DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldw)를 사용하세요.   
 
 SQL Data Warehouse가 COMPATIBILITY_LEVEL 130으로 설정되어 있으며 변경할 수 없습니다. 자세한 내용은 [Azure SQL Database의 호환성 수준 130으로 향상된 쿼리 성능](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)을 참조하세요.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
 필요한 권한  
   
 -   프로비전 프로세스에 의해 생성된 서버 수준 보안 주체 로그인 또는  
   
 -   `dbmanager` 데이터 베이스 역할의 멤버  
   
-## <a name="error-handling"></a>오류 처리  
+## <a name="error-handling"></a>오류 처리
 데이터베이스 크기가 MAXSIZE에 도달하면 40544 오류 코드가 나타납니다. 이 경우, 데이터를 삽입 및 업데이트하거나 새 개체(예: 테이블, 저장된 프로시저, 뷰 및 함수)를 만들 수 없습니다. 데이터 읽기 및 삭제, 테이블 자르기, 테이블 및 인덱스 삭제 및 인덱스 다시 작성은 여전히 가능합니다. 그런 다음 MAXSIZE를 현재 데이터베이스 크기보다 큰 값으로 업데이트하거나 일부 데이터를 삭제하여 저장소 공간을 비울 수 있습니다. 새 데이터 삽입까지 최대 15분을 지연시킬 수 있습니다.  
   
-## <a name="limitations-and-restrictions"></a>제한 사항  
+## <a name="limitations-and-restrictions"></a>제한 사항
+
 새 데이터베이스를 만들려면 master 데이터베이스에 연결해야 합니다.  
   
 `CREATE DATABASE` 문은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리의 유일한 문이어야 합니다.
@@ -1354,7 +1393,8 @@ SQL Data Warehouse가 COMPATIBILITY_LEVEL 130으로 설정되어 있으며 변�
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]   
   
-### <a name="a-simple-example"></a>1. 간단한 예  
+### <a name="a-simple-example"></a>1. 간단한 예
+
 데이터 웨어하우스 데이터베이스를 만드는 간단한 예 그러면 10240 GB의 가장 작은 최대 크기, SQL_Latin1_General_CP1_CI_AS의 기본 데이터 정렬 및 DW100인 가장 작은 계산 능력을 가진 데이터베이스가 생성됩니다.  
   
 ```  
@@ -1362,7 +1402,8 @@ CREATE DATABASE TestDW
 (EDITION = 'datawarehouse', SERVICE_OBJECTIVE='DW100');  
 ```  
   
-### <a name="b-create-a-data-warehouse-database-with-all-the-options"></a>2. 모든 옵션을 사용하여 데이터 웨어하우스 데이터베이스 만들기  
+### <a name="b-create-a-data-warehouse-database-with-all-the-options"></a>2. 모든 옵션을 사용하여 데이터 웨어하우스 데이터베이스 만들기
+
 모든 옵션을 사용하여 10테라바이트 데이터 웨어하우스를 생성하는 예입니다.  
   
 ```  
@@ -1370,7 +1411,8 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 (MAXSIZE = 10240 GB, EDITION = 'datawarehouse', SERVICE_OBJECTIVE = 'DW1000');  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고 항목
+
 [ALTER DATABASE &#40;Azure SQL Data Warehouse&#40;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldw)
 [CREATE TABLE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) 
 [DROP DATEBASE &#40;Transact-SQL&#40;](../../t-sql/statements/drop-database-transact-sql.md) 
@@ -1440,7 +1482,8 @@ WITH (
   
  AUTOGROW가 OFF인 경우 *log_size*를 초과한 개별 계산 노드에서 로그 크기를 증가시키는 모든 작업에 대해서 사용자에게 오류가 반환됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
  master 데이터베이스에서 **CREATE ANY DATABASE** 권한 또는 **sysadmin** 고정 서버 역할에서 멤버자격이 필요합니다.  
   
  다음 예에서는 데이터베이스 사용자 Fay에게 데이터베이스를 만들 수 있는 권한을 제공합니다.  
@@ -1452,10 +1495,12 @@ GRANT CREATE ANY DATABASE TO [Fay];
 GO  
 ```  
   
-## <a name="general-remarks"></a>일반적인 주의 사항  
+## <a name="general-remarks"></a>일반적인 주의 사항
+
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에 대한 호환성 수준인 데이터베이스 호환성 수준 120으로 데이터베이스를 만듭니다. 이렇게 하면 데이터베이스는 PDW가 사용하는 모든 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 기능을 사용할 수 있습니다.  
   
-## <a name="limitations-and-restrictions"></a>제한 사항  
+## <a name="limitations-and-restrictions"></a>제한 사항
+
  명시적 트랜잭션에서는 CREATE DATABASE 문을 사용할 수 없습니다. 자세한 내용은 [문](../../t-sql/statements/statements.md)을 참조하십시오.  
   
  데이터베이스에 대한 최소 및 최대 제약 조건에 관한 자세한 내용은 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]에서 “최소 및 최대 값”을 참조합니다.  
@@ -1468,15 +1513,18 @@ GO
   
 -   (*log_size* / 계산 노드 수) 크기의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그입니다.  
   
-## <a name="locking"></a>잠금  
+## <a name="locking"></a>잠금
+
  DATABASE 개체에 대한 공유 잠금을 사용합니다.  
   
-## <a name="metadata"></a>메타데이터  
+## <a name="metadata"></a>메타데이터
+
  이 작업이 성공한 후 이 데이터베이스에 대한 항목이 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 및 [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)메타 데이터 보기에 표시됩니다.  
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
   
-### <a name="a-basic-database-creation-examples"></a>1. 기본 데이터베이스 만들기 예제  
+### <a name="a-basic-database-creation-examples"></a>1. 기본 데이터베이스 만들기 예제
+
  다음 예제에서는 복제된 테이블에 대해 계산 노드당 100GB, 분산된 테이블에 대해 어플라이언스당 500GB, 트랜잭션 로그에 대해 어플라이언스당 100GB의 스토리지 용량이 있는 `mytest` 데이터베이스를 만듭니다. 이 예제에서는 AUTOGROW가 기본으로 Off로 설정돼 있습니다.  
   
 ```  
@@ -1498,7 +1546,8 @@ CREATE DATABASE mytest
    LOG_SIZE = 100 GB);  
 ```  
   
-### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>2. 부분 기가바이트 크기를 사용하여 데이터베이스 만들기  
+### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>2. 부분 기가바이트 크기를 사용하여 데이터베이스 만들기
+
  다음 예제에서는 복제된 테이블에 대해 계산 노드당 1.5GB, 분산된 테이블에 대해 어플라이언스당 5.25GB, 트랜잭션 로그에 대해 어플라이언스당 10GB의 스토리지 용량을 가진 그리고 AUTOGROW가 Off로 설정된 `mytest` 데이터베이스를 만듭니다.  
   
 ```  
@@ -1509,7 +1558,8 @@ CREATE DATABASE mytest
    LOG_SIZE = 10 GB);  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고 항목
+
  [ALTER DATABASE &#40;병렬 데이터 웨어하우스&#41;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqlpdw)   
  [DROP DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
   

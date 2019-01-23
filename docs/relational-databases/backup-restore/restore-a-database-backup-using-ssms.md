@@ -20,12 +20,12 @@ ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dd018941567ec56619177928d55b83681c07a039
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: a97bee55c0f23a82470091c1c9ea7b44463221e0
+ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302906"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54317813"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "52302906"
     
 이전 버전 데이터베이스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 복원하면 해당 데이터베이스가 자동으로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드됩니다. 데이터베이스가 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]의 이전 버전으로 사용되지 않도록 합니다. 그러나 이는 메타데이터 업그레이드와 관련되어 있으며 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)에 영향을 주지 않습니다. 사용자 데이터베이스의 호환성 수준이 업그레이드 이전에 100 이상이면 업그레이드 후에도 동일하게 유지됩니다. 업그레이드 이전에 호환성 수준이 90이면 업그레이드된 데이터베이스에서는 호환성 수준이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 지원되는 가장 낮은 호환성 수준인 100으로 설정됩니다. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.  
   
-일반적으로 데이터베이스는 즉시 사용할 수 있습니다. 그러나 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스에 전체 텍스트 인덱스가 있는 경우 업그레이드 프로세스는 **전체 텍스트 업그레이드 옵션** 서버 속성의 설정에 따라 인덱스를 가져오거나, 다시 설정하거나, 다시 작성합니다. 업그레이드 옵션을 **가져오기** 또는 **다시 작성**으로 설정하면 업그레이드하는 동안 전체 텍스트 인덱스를 사용할 수 없습니다. 인덱싱되는 데이터 양에 따라 가져오기 작업은 몇 시간씩 걸릴 수 있으며 다시 작성 작업은 10배 정도 더 걸립니다.     
+일반적으로 데이터베이스는 즉시 사용할 수 있습니다. 그러나 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스에 전체 텍스트 인덱스가 있는 경우 업그레이드 프로세스는 **전체 텍스트 업그레이드 옵션** 서버 속성의 설정에 따라 인덱스를 가져오거나, 다시 설정하거나, 다시 작성합니다. 업그레이드 옵션을 **가져오기** 또는 **다시 작성**으로 설정하면 업그레이드하는 동안 전체 텍스트 인덱스를 사용할 수 없습니다. 인덱싱되는 데이터양에 따라 가져오기 작업은 몇 시간씩 걸릴 수 있으며 다시 작성 작업은 10배 정도 더 걸립니다.     
     
 업그레이드 옵션을 **가져오기**로 설정하면 전체 텍스트 카탈로그를 사용할 수 없는 경우 관련된 전체 텍스트 인덱스가 다시 작성됩니다. **전체 텍스트 업그레이드 옵션** 속성 설정을 보거나 변경하는 방법은 [서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)을 참조하세요.    
 
@@ -53,7 +53,7 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 복원 방법에 대한 
     
 1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
     
-2.   **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...** 을 선택합니다.    
+2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...** 을 선택합니다.    
     
 3.  **일반** 페이지에서 **원본** 섹션을 사용하여 복원할 백업 집합의 원본과 위치를 지정합니다. 다음 옵션 중 하나를 선택합니다.    
     
@@ -64,11 +64,11 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 복원 방법에 대한 
         > [!NOTE]
         > 백업을 다른 서버에서 가져온 경우 대상 서버에 지정한 데이터베이스에 대한 백업 기록 정보가 없습니다. 이 경우 **디바이스** 를 선택하여 복원할 파일이나 디바이스를 수동으로 지정합니다. 
     
-    -   **장치**    
+    -   **디바이스**    
     
          찾아보기(**...**) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. 
          
-        -   **백업 장치 선택** 대화 상자  
+        -   **백업 디바이스 선택** 대화 상자  
         
             **백업 미디어 유형**  
          **백업 미디어 유형** 드롭다운 목록에서 미디어 유형을 선택합니다.  참고: **테이프** 옵션은 컴퓨터에 테이프 드라이브가 탑재된 경우에만 나타나고 **백업 디바이스** 옵션은 적어도 하나의 백업 디바이스가 있는 경우에만 나타납니다.
@@ -78,10 +78,10 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 복원 방법에 대한 
 
             |미디어 유형|대화 상자|설명|    
             |----------------|----------------|-----------------|    
-            |**최근에 사용한 파일**|**백업 파일 찾기**|이 대화 상자에서는 트리에서 로컬 파일을 선택하거나 정규화된 UNC(Universal Naming Convention) 이름을 사용하여 원격 파일을 지정할 수 있습니다. 자세한 내용은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)인스턴스에서 가져온 경우에 필요합니다.|    
-            |**장치**|**백업 장치 선택**|이 대화 상자에서는 서버 인스턴스에 정의된 논리적 백업 디바이스의 목록에서 디바이스를 선택할 수 있습니다.|    
+            |**최근에 사용한 파일**|**백업 파일 찾기**|이 대화 상자에서는 트리에서 로컬 파일을 선택하거나 정규화된 UNC(Universal Naming Convention) 이름을 사용하여 원격 파일을 지정할 수 있습니다. 자세한 내용은 [백업 디바이스&amp;#40;SQL Server&amp;#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.|    
+            |**디바이스**|**백업 디바이스 선택**|이 대화 상자에서는 서버 인스턴스에 정의된 논리적 백업 디바이스의 목록에서 디바이스를 선택할 수 있습니다.|    
             |**테이프**|**백업 테이프 선택**|이 대화 상자에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 실행하는 컴퓨터에 물리적으로 연결된 테이프 드라이브의 목록에서 백업 테이프를 선택할 수 있습니다.|    
-            |**URL**|**백업 파일 위치 선택**|이 대화 상자에서 기존 SQL Server 자격 증명/Azure Storage 컨테이너를 선택하거나, 공유 액세스 서명을 사용하여 새 Azure Storage 컨테이너를 추가하거나, 기존 스토리지 컨테이너에 대한 공유 액세스 서명 및 SQL Server 자격 증명을 생성할 수 있습니다.   [Microsoft Azure 구독에 연결](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)을 참조하세요.|  
+            |**URL**|**백업 파일 위치 선택**|이 대화 상자에서 기존 SQL Server 자격 증명/Azure Storage 컨테이너를 선택하거나, 공유 액세스 서명을 사용하여 새 Azure Storage 컨테이너를 추가하거나, 기존 스토리지 컨테이너에 대한 공유 액세스 서명 및 SQL Server 자격 증명을 생성할 수 있습니다.  [Microsoft Azure 구독에 연결](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)을 참조하세요.|  
          
              **제거**    
              선택한 파일, 테이프 또는 논리적 백업 디바이스를 하나 이상 제거합니다.    
@@ -137,15 +137,15 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 복원 방법에 대한 
 다음 예제에서는 `Sales`의 이전 디스크 백업을 복원하고 기존 `Sales` 데이터베이스를 덮어씁니다.
 
 1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
-2.   **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...** 을 선택합니다.  
-3.  **일반** 페이지의 **원본** 섹션에서 **장치** 를 선택합니다.
+2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...** 을 선택합니다.  
+3.  **일반** 페이지의 **원본** 섹션에서 **디바이스** 를 선택합니다.
 4.  찾아보기(**...**) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **추가** 를 클릭하고 백업으로 이동합니다. 디스크 백업 파일을 선택한 후 **확인** 을 클릭합니다.
 5.  **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.
 6.  **페이지 선택** 창에서 **옵션** 을 클릭합니다.
 7.  **복원 옵션** 섹션에서 **기존 데이터베이스 덮어쓰기(WITH REPLACE)** 를 선택합니다.
 
     > [!NOTE]
-    > 이 옵션을 선택하면 다음과 같은 오류 메시지가 표시될 수 있습니다. "System.Data.SqlClient.SqlError: 백업 세트에 기존 '`Sales`' 데이터베이스가 아닌 데이터베이스의 백업이 있습니다. (Microsoft.SqlServer.SmoExtended)"
+    > 이 옵션을 선택하지 않으면 다음과 같은 오류 메시지가 발생할 수 있습니다. "System.Data.SqlClient.SqlError: 백업 세트에 기존 '`Sales`' 데이터베이스가 아닌 데이터베이스의 백업이 있습니다. (Microsoft.SqlServer.SmoExtended)"
 
 8.  **비상 로그 백업** 섹션에서 **복원 전 비상 로그 백업 수행**의 선택을 취소합니다.
 
@@ -157,7 +157,7 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 복원 방법에 대한 
 9.  **서버 연결** 섹션에서 **대상 데이터베이스에 대한 기존 연결 닫기**를 선택합니다.
 
     > [!NOTE]
-    > 이 옵션을 선택하면 다음과 같은 오류 메시지가 표시될 수 있습니다. "System.Data.SqlClient.SqlError: 데이터베이스가 사용 중이어서 배타적으로 액세스할 수 없습니다. (Microsoft.SqlServer.SmoExtended)"
+    > 이 옵션을 선택하지 않으면 다음과 같은 오류 메시지가 발생할 수 있습니다. "System.Data.SqlClient.SqlError: 데이터베이스가 사용 중이어서 배타적으로 액세스할 수 없습니다. (Microsoft.SqlServer.SmoExtended)"
     
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
@@ -165,8 +165,8 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 복원 방법에 대한 
 다음 예제에서는 `Sales`의 이전 디스크 백업을 복원하고 `SalesTest`라는 새 데이터베이스를 만듭니다.  원본 데이터베이스인 `Sales`가 서버에 여전히 있습니다.
 
 1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
-2.   **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...** 을 선택합니다.  
-3.  **일반** 페이지의 **원본** 섹션에서 **장치** 를 선택합니다.
+2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...** 을 선택합니다.  
+3.  **일반** 페이지의 **원본** 섹션에서 **디바이스** 를 선택합니다.
 4.  찾아보기(**...**) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **추가** 를 클릭하고 백업으로 이동합니다. 디스크 백업 파일을 선택한 후 **확인** 을 클릭합니다.
 5.  **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.
 6.  **대상** 섹션의 **데이터베이스** 상자에는 복원할 데이터베이스의 이름이 자동으로 채워집니다. 데이터베이스의 이름을 변경하려면 **데이터베이스** 상자에 새 이름을 입력합니다.
@@ -183,12 +183,12 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 복원 방법에 대한 
     > "System.Data.SqlClient.SqlError: 데이터베이스 "`Sales`"의 비상 로그 백업이 수행되지 않았습니다. 로그에 포함된 작업이 손실되지 않도록 하려면 `BACKUP LOG WITH NORECOVERY`를 사용하여 로그를 백업합니다. 로그 내용을 덮어쓰려면 `RESTORE` 문의 `WITH REPLACE` 또는 `WITH STOPAT` 절을 사용합니다. (Microsoft.SqlServer.SmoExtended)"라는 오류 메시지가 표시되면      
     > 위의 6단계에서 사용한 새 데이터베이스 이름을 입력하지 않은 것입니다. 복원은 보통 실수로 복원 중 다른 데이터베이스로 현재 데이터베이스를 덮어쓰는 일을 방지합니다. `RESTORE` 문에서 지정된 데이터베이스가 현재 서버에 이미 존재하고 지정된 데이터베이스 패밀리 GUID가 백업 세트에 기록된 데이터베이스 패밀리 GUID와 다르면 해당 데이터베이스는 복원되지 않습니다. 이것은 중요한 보호 수단입니다.
 
-### <a name="d--restore-earlier-disk-backups-to-a-point-in-time"></a>4.  이전 디스크 백업을 특정 시점으로 복원
+### <a name="d--restore-earlier-disk-backups-to-a-point-in-time"></a>D.  이전 디스크 백업을 특정 시점으로 복원
 다음 예에서는 `1:23:17 PM` , `May 30, 2016` 상태로 데이터베이스를 복원하고 여러 로그 백업이 연관된 복원 작업을 보여 줍니다. 데이터베이스가 현재 서버에 없습니다.
 
 1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
-2.   **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...** 을 선택합니다.  
-3.  **일반** 페이지의 **원본** 섹션에서 **장치** 를 선택합니다.
+2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...** 을 선택합니다.  
+3.  **일반** 페이지의 **원본** 섹션에서 **디바이스** 를 선택합니다.
 4.  찾아보기(**...**) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **추가** 를 클릭하고 전체 백업 및 관련된 모든 트랜잭션 로그 백업으로 이동합니다.  디스크 백업 파일을 선택한 후 **확인** 을 클릭합니다.
 5.  **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.
 6.  **대상** 섹션에서 **시간대** 를 클릭하여 **백업 시간대** 대화 상자에 액세스하고 복구 동작을 중지할 특정 시점을 수동으로 선택합니다.
@@ -198,13 +198,13 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 복원 방법에 대한 
 10. **확인**을 클릭하여 일반 페이지로 돌아갑니다.
 11. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
-### <a name="e--restore-a-backup-from-the-microsoft-azure-storage-service"></a>5.  Microsoft Azure Storage 서비스에서 백업 복원
+### <a name="e--restore-a-backup-from-the-microsoft-azure-storage-service"></a>E.  Microsoft Azure Storage 서비스에서 백업 복원
 
 #### <a name="common-steps"></a>공통 단계
 아래의 두 예제에서는 Microsoft Azure Storage 서비스에 있는 백업에서 `Sales` 복원을 수행합니다.  스토리지 계정 이름은 `mystorageaccount`입니다.  컨테이너는 `myfirstcontainer`입니다.  간단히 말해 처음 6단계는 여기에 한 번 나열되며 모든 예제는 **7단계**에서 시작됩니다.
 1.  **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
 2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...** 을 선택합니다.
-3.  **일반** 페이지의 **원본** 섹션에서 **장치** 를 선택합니다.
+3.  **일반** 페이지의 **원본** 섹션에서 **디바이스** 를 선택합니다.
 4.  찾아보기(...) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다.    
 5.  **백업 미디어 유형:** 드롭다운 목록에서 **URL** 을 선택합니다.
 6.  **추가**를 클릭하면 **백업 파일 위치 선택** 대화 상자가 열립니다.
@@ -235,11 +235,11 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 복원 방법에 대한 
 12. **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.
 13. **확인**을 클릭합니다.
 
-#### <a name="f-restore-local-backup-to-microsoft-azure-storage-url"></a>6. Microsoft Azure Storage(URL)에 로컬 백업 복원
-`Sales` 데이터베이스가 `E:\MSSQL\BAK`에 있는 백업에서 Microsoft Azure Storage 컨테이너 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`로 복원됩니다.  Azure 컨테이너에 대한 SQL Server 자격 증명이 이미 생성되었습니다.  **복원** 태스크를 통해 만들 수 없으므로 대상 컨테이너에 대한 SQL Server 자격 증명이 이미 있어야 합니다.  `Sales` 데이터베이스가 현재 서버에 없습니다.
+#### <a name="f-restore-local-backup-to-microsoft-azure-storage-url"></a>F. Microsoft Azure Storage(URL)에 로컬 백업 복원
+`Sales` 데이터베이스가 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` 에 있는 백업에서 Microsoft Azure Storage 컨테이너 `E:\MSSQL\BAK`로 복원됩니다.  Azure 컨테이너에 대한 SQL Server 자격 증명이 이미 생성되었습니다.  **복원** 태스크를 통해 만들 수 없으므로 대상 컨테이너에 대한 SQL Server 자격 증명이 이미 있어야 합니다.  `Sales` 데이터베이스가 현재 서버에 없습니다.
 1.  **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
 2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...** 을 선택합니다.
-3.  **일반** 페이지의 **원본** 섹션에서 **장치** 를 선택합니다.
+3.  **일반** 페이지의 **원본** 섹션에서 **디바이스** 를 선택합니다.
 4.  찾아보기(...) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다.  
 5.  **백업 미디어 유형:** 드롭다운 목록에서 **파일** 을 선택합니다.
 6.  **추가** 를 클릭하면 **백업 파일 찾기** 대화 상자가 열립니다.

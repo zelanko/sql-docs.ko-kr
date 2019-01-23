@@ -15,12 +15,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd046f665745ca9456acb6a2c30e28ff9a6fc082
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 9406b4afe6ed3c99bf729b0598020413b4a1c045
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626402"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361663"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>쿼리 저장소를 사용하여 성능 모니터링
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,14 +44,14 @@ ms.locfileid: "53626402"
   
 2.  **데이터베이스 속성** 대화 상자에서 **쿼리 저장소** 페이지를 선택합니다.  
   
-3.  **작업 모드(요청)** 상자에서 **On**을 선택합니다.  
+3.  **작업 모드(요청)** 상자에서 **읽기/쓰기**를 선택합니다.  
   
 #### <a name="use-transact-sql-statements"></a>Transact-SQL 문 사용  
   
 **ALTER DATABASE** 문을 사용하여 쿼리 저장소를 사용하도록 설정합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```sql  
-ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
+ALTER DATABASE AdventureWorks2012 SET QUERY_STORE (OPERATION_MODE = READ_WRITE); 
 ```  
   
 쿼리 저장소와 관련된 구문 옵션에 대한 자세한 내용은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.  
@@ -252,7 +252,7 @@ SELECT current_storage_size_mb, max_storage_size_mb
 FROM sys.database_query_store_options;  
 ```  
   
- 쿼리 저장소 저장 공간이 꽉 차는 경우 다음 문을 사용하여 저장소를 확장합니다.  
+ 쿼리 스토리지 저장 공간이 꽉 차는 경우 다음 문을 사용하여 스토리지를 확장합니다.  
   
 ```sql  
 ALTER DATABASE <database_name>   

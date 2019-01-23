@@ -23,12 +23,12 @@ ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca04967d4230ce6693736b53c99a21bbfd07eae6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: cd5f5aac2f12cd20b5459f4b1f725b975b4dd1e7
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125692"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419828"
 ---
 # <a name="replication-agent-administration"></a>복제 에이전트 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "54125692"
   
     -   큐 판독기 에이전트  
   
-     이러한 에이전트와 연결된 정보 및 태스크는 **에이전트** 탭을 통해 액세스할 수 있습니다. 자세한 내용은 복제 모니터](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)를 사용하여 정보 보기 및 태스크 수행을 참조하세요.  
+     이러한 에이전트와 연결된 정보 및 태스크는 **에이전트** 탭을 통해 액세스할 수 있습니다. 자세한 내용은 [복제 모니터](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)를 사용하여 정보 보기 및 태스크 수행을 참조하세요.  
   
 -   다음 에이전트는 복제 모니터에서 구독과 연결됩니다.  
   

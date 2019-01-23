@@ -23,12 +23,12 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 483696e8ecc717e0ead5c7be16a627c046cb47ca
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 96c6292c4c14f97ce0cf0dda17f107a5d5e1bb15
+ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300070"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54395428"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -102,6 +102,8 @@ ms.locfileid: "54300070"
     -   ["netsh firewall" 컨텍스트 대신 "netsh advfirewall firewall" 컨텍스트를 사용하여 Windows Server 2008 및 Windows Vista의 Windows 방화벽 동작을 제어하는 방법](https://support.microsoft.com/kb/947709)  
   
     -   ["netsh firewall" 명령에 "profile=all" 매개 변수를 사용해도 Windows Vista 기반 컴퓨터에서 공개 프로필이 구성되지 않는다(The "netsh firewall" command together with the "profile=all" parameter does not configure the public profile on a Windows Vista-based computer)](https://support.microsoft.com/kb/947213)  
+    
+- **Linux**: Linux에서는 액세스 권한이 필요한 서비스와 연결된 포트도 열어야 합니다. 서로 다른 Linux 배포와 다양한 방화벽에는 고유한 프로시저가 있습니다. 두 가지 예를 [SQL Server on Red Hat](https://review.docs.microsoft.com/sql/linux/quickstart-install-connect-red-hat?view=sqlallproducts-allversions)(Red Hat의 SQL Server) 및 [SQL Server on SUSE](https://review.docs.microsoft.com/sql/linux/quickstart-install-connect-suse?view=sqlallproducts-allversions)(SUSE의 SQL Server)에서 참조하세요. 
   
 ## <a name="ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>다음에서 사용하는 포트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  다음 표를 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 포트를 확인할 수 있습니다.  

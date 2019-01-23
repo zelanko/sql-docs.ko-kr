@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 33faa406912e2f80d6911e9e4f94b27397e89cef
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3893672f6d253bf3f428198dd58d63e3cac30baa
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534759"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326424"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>열 마스터 키 만들기 및 저장(상시 암호화)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,9 +34,9 @@ ms.locfileid: "52534759"
 
 ###  <a name="local-or-centralized-key-store"></a>로컬 또는 중앙 집중식 키 저장소
 
-* **로컬 키 저장소** - 로컬 키 저장소가 포함된 컴퓨터의 응용 프로그램에서만 사용할 수 있습니다. 즉, 키 저장소 및 키를 애플리케이션이 실행 중인 각 컴퓨터에 복제해야 합니다. 로컬 키 저장소의 예는 Windows 인증서 저장소입니다. 로컬 키 저장소를 사용할 경우 애플리케이션을 호스트하는 각 컴퓨터에 키 저장소가 있고, 애플리케이션에서 상시 암호화를 사용하여 보호된 데이터에 액세스할 때 필요한 열 마스터 키가 컴퓨터에 있는지 확인해야 합니다. 열 마스터 키를 처음 프로비전하거나 키를 변경(순환)하는 경우 애플리케이션을 호스트하는 모든 컴퓨터에 키가 배포되었는지 확인해야 합니다.
+* **로컬 키 저장소** - 로컬 키 저장소가 포함된 컴퓨터의 애플리케이션에서만 사용할 수 있습니다. 즉, 키 저장소 및 키를 애플리케이션이 실행 중인 각 컴퓨터에 복제해야 합니다. 로컬 키 저장소의 예는 Windows 인증서 저장소입니다. 로컬 키 저장소를 사용할 경우 애플리케이션을 호스트하는 각 컴퓨터에 키 저장소가 있고, 애플리케이션에서 상시 암호화를 사용하여 보호된 데이터에 액세스할 때 필요한 열 마스터 키가 컴퓨터에 있는지 확인해야 합니다. 열 마스터 키를 처음 프로비전하거나 키를 변경(순환)하는 경우 애플리케이션을 호스트하는 모든 컴퓨터에 키가 배포되었는지 확인해야 합니다.
 
-* **중앙 집중식 키 저장소** - 여러 컴퓨터의 응용 프로그램에 제공합니다. 중앙 집중식 키 저장소의 예로는 [Azure 주요 자격 증명 모음](https://azure.microsoft.com/services/key-vault/)이 있습니다. 중앙 집중식 키 저장소는 여러 컴퓨터에서 열 마스터 키의 복사본을 여러 개 관리할 필요가 없으므로 일반적으로 키 관리가 더 쉬워집니다. 애플리케이션이 중앙 집중식 키 저장소에 연결하도록 구성되어 있는지 확인해야 합니다.
+* **중앙 집중식 키 저장소** - 여러 컴퓨터의 애플리케이션에 제공합니다. 중앙 집중식 키 저장소의 예로는 [Azure 주요 자격 증명 모음](https://azure.microsoft.com/services/key-vault/)이 있습니다. 중앙 집중식 키 저장소는 여러 컴퓨터에서 열 마스터 키의 복사본을 여러 개 관리할 필요가 없으므로 일반적으로 키 관리가 더 쉬워집니다. 애플리케이션이 중앙 집중식 키 저장소에 연결하도록 구성되어 있는지 확인해야 합니다.
 
 ### <a name="which-key-stores-are-supported-in-always-encrypted-enabled-client-drivers"></a>상시 암호화 지원 클라이언트 드라이버에서 지원하는 키 저장소
 
@@ -44,7 +44,7 @@ ms.locfileid: "52534759"
 
 사용 가능한 기본 제공 공급자는 선택된 드라이버, 드라이버 버전 및 운영 체제에 따라 달라집니다.  특정 드라이버에서 기본적으로 지원하는 키 저장소와 사용 중인 드라이버가 사용자 지정 키 저장소 공급자를 지원하는지 여부는 상시 암호화 설명서를 참조하세요.
 
-- [.NET Framework Data Provider for SQL Server와 상시 암호화를 사용하여 응용 프로그램 개발](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
+- [.NET Framework Data Provider for SQL Server와 상시 암호화를 사용하여 애플리케이션 개발](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 
 
 ### <a name="supported-tools"></a>지원되는 도구
@@ -120,16 +120,16 @@ Azure 주요 자격 증명 모음은 암호화 키 및 암호를 보호하고 �
 
 ```
 # Create a column master key in Azure Key Vault.
-Login-AzureRmAccount
+Connect-AzAccount
 $SubscriptionId = "<Azure subscription ID>"
 $resourceGroup = "<resource group name>"
 $azureLocation = "<key vault location>"
 $akvName = "<key vault name>"
 $akvKeyName = "<column master key name>"
-$azureCtx = Set-AzureRMContext -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
-New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
-New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation -SKU premium # Creates a new key vault - skip if your vault already exists.
-Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey, unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
+$azureCtx = Set-AzContext -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
+New-AzResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
+New-AzKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation -SKU premium # Creates a new key vault - skip if your vault already exists.
+Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey, unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
 ```
 
@@ -145,7 +145,7 @@ Azure 주요 자격 증명 모음에 저장된 열 마스터 키를 사용하여
 
 #### <a name="using-powershell"></a>PowerShell 사용
 
-사용자와 애플리케이션에서 Azure 주요 자격 증명 모음의 실제 키에 액세스할 수 있게 하려면 자격 증명 모음 액세스 정책([Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx))을 설정해야 합니다.
+사용자와 애플리케이션에서 Azure Key Vault의 실제 키에 액세스할 수 있게 하려면 자격 증명 모음 액세스 정책([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy))을 설정해야 합니다.
 
 ```
 $vaultName = "<vault name>"
@@ -154,18 +154,18 @@ $userPrincipalName = "<user to grant access to>"
 $clientId = "<client Id>"
 
 # grant users permissions to the keys:
-Set-AzureRmKeyVaultAccessPolicy -VaultName $vaultName -ResourceGroupName $resourceGroupName -PermissionsToKeys create,get,wrapKey,unwrapKey,sign,verify,list -UserPrincipalName $userPrincipalName
+Set-AzKeyVaultAccessPolicy -VaultName $vaultName -ResourceGroupName $resourceGroupName -PermissionsToKeys create,get,wrapKey,unwrapKey,sign,verify,list -UserPrincipalName $userPrincipalName
 # grant applications permissions to the keys:
-Set-AzureRmKeyVaultAccessPolicy  -VaultName $vaultName  -ResourceGroupName $resourceGroupName -ServicePrincipalName $clientId -PermissionsToKeys get,wrapKey,unwrapKey,sign,verify,list
+Set-AzKeyVaultAccessPolicy  -VaultName $vaultName  -ResourceGroupName $resourceGroupName -ServicePrincipalName $clientId -PermissionsToKeys get,wrapKey,unwrapKey,sign,verify,list
 ```
 
 ## <a name="creating-column-master-keys-in-hardware-security-modules-using-cng"></a>CNG를 사용하여 하드웨어 보안 모듈에서 열 마스터 키 만들기
 
 상시 암호화를 위한 열 마스터 키를 CNG(Cryptography Next Generation) API를 구현하는 키 저장소에 저장할 수 있습니다. 일반적으로 이 유형의 저장소는 HSM(하드웨어 보안 모듈)입니다. HSM은 디지털 키를 보호 및 관리하고 암호화 처리를 제공하는 물리적 디바이스입니다. HSM은 일반적으로 컴퓨터(로컬 HSM) 또는 네트워크 서버에 직접 연결되는 플러그 인 카드 또는 외부 디바이스 형태입니다.
 
-특정 컴퓨터의 애플리케이션에서 HSM을 사용할 수 있도록 하려면 CNG를 구현하는 KSP(키 저장소 공급자)를 컴퓨터에서 설치 및 구성해야 합니다. 상시 암호화 클라이언트 드라이버(드라이버 내의 열 마스터 키 저장소 공급자)는 KSP를 사용하여 키 저장소에 저장된 열 마스터 키로 보호되는 열 암호화 키를 암호화 및 암호 해독합니다.
+특정 컴퓨터의 애플리케이션에서 HSM을 사용할 수 있도록 하려면 CNG를 구현하는 KSP(키 스토리지 공급자)를 컴퓨터에서 설치 및 구성해야 합니다. 상시 암호화 클라이언트 드라이버(드라이버 내의 열 마스터 키 저장소 공급자)는 KSP를 사용하여 키 저장소에 저장된 열 마스터 키로 보호되는 열 암호화 키를 암호화 및 암호 해독합니다.
 
-Windows에는 테스트 용도로 사용할 수 있는 Microsoft 소프트웨어 키 스토리지 공급 기업(소프트웨어 기반 KSP)이 있습니다. [CNG 키 저장소 공급자](/windows/desktop/SecCertEnroll/cng-key-storage-providers)를 참조하세요.
+Windows에는 테스트 용도로 사용할 수 있는 Microsoft 소프트웨어 키 스토리지 공급 기업(소프트웨어 기반 KSP)이 있습니다. [CNG 키 스토리지 공급자](/windows/desktop/SecCertEnroll/cng-key-storage-providers)를 참조하세요.
 
 ### <a name="creating-column-master-keys-in-a-key-store-using-cngksp"></a>CNG/KSP를 사용하여 키 저장소에서 열 마스터 키 만들기
 
@@ -239,7 +239,7 @@ SQL Server Management Studio를 사용하여 상시 암호화 구성의 열 마�
 
 - [상시 암호화를 위한 키 관리 개요](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [Always Encrypted(데이터베이스 엔진)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [.NET Framework Data Provider for SQL Server와 상시 암호화를 사용하여 응용 프로그램 개발](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
+- [.NET Framework Data Provider for SQL Server와 상시 암호화를 사용하여 애플리케이션 개발](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 - [상시 암호화 블로그](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
     
 

@@ -12,17 +12,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f84b4801446fd970c0d1e42054782d533b18574
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fab75b8f4550f30e8448bc427ab41a158c1656ee
+ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670722"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54395420"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 트랜잭션
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  
 이 문서에서는 메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저에 관련된 트랜잭션의 모든 측면을 설명합니다.  
   
 SQL Server의 트랜잭션 격리 수준은 메모리 최적화 테이블과 디스크 기반 테이블에 서로 다르게 적용되며 기본 메커니즘이 서로 다릅니다. 이러한 차이점을 이해하면 프로그래머가 처리량이 높은 시스템을 디자인하는 데 도움이 됩니다. 트랜잭션 무결성의 목표는 모든 경우에서 공유됩니다.  
@@ -30,9 +29,6 @@ SQL Server의 트랜잭션 격리 수준은 메모리 최적화 테이블과 디
 메모리 최적화 테이블의 트랜잭션에 대한 오류 조건을 보려면 [충돌 검색 및 다시 시도 논리](#confdetretry34ni)섹션을 참조하세요.
   
 일반적인 정보는 [SET TRANSACTION ISOLATION LEVEL(Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하세요.  
-  
-  
-<a name="pessvoptim22ni"/>  
   
 ## <a name="pessimistic-versus-optimistic"></a>비관적 및 낙관적  
   
@@ -44,8 +40,6 @@ SQL Server의 트랜잭션 격리 수준은 메모리 최적화 테이블과 디
   - 오류 1205 교착 상태는 메모리 최적화 테이블에 발생할 수 없습니다.  
   
 낙관적 접근 방식은 오버헤드가 적고 일반적으로 보다 효율적입니다. 대부분의 애플리케이션에서 트랜잭션 충돌이 거의 발생하지 않기 때문입니다. 낙관적 접근 방식과 비관적 접근 방식 간의 주요 기능 차이점은 충돌이 발생할 경우 비관적 접근 방식에서는 대기하고 낙관적 접근 방식에서는 트랜잭션 중 하나가 실패하므로 클라이언트에서 다시 시도해야 한다는 점입니다. 기능 차이는 REPEATABLE READ 격리 수준이 적용되는 경우에 더 크고 SERIALIZABLE 수준에서 가장 큽니다.  
-  
-<a name="txninitmodes24ni"/>  
   
 ## <a name="transaction-initiation-modes"></a>트랜잭션 시작 모드  
   
@@ -60,8 +54,6 @@ SQL Server에는 다음과 같은 트랜잭션 시작 모드가 있습니다.
 - **암시적** - SET IMPLICIT_TRANSACTION ON이 적용되는 경우입니다. 이 옵션은 모두 0 = @@trancount인 경우 각 UPDATE 문 전에 명시적 BEGIN TRANSACTION에 해당하는 작업을 암시적으로 수행하기 때문에 IMPLICIT_BEGIN_TRANSACTION이 더 나은 이름일 수 있습니다. 따라서 최종적으로 명시적 COMMIT TRANSACTION을 실행하는 것은 사용자의 T-SQL 코드에 달려 있습니다.   
   
 - **Atomic 블록** - Atomic 블록의 모든 문은 항상 단일 트랜잭션의 일부로 실행됩니다. Atomic 블록의 작업은 각각 전체로써 성공 시 커밋되거나 오류가 발생할 때 모두 롤백됩니다. 고유하게 컴파일된 저장 프로시저에는 각각 Atomic 블록이 필요합니다.  
-  
-<a name="codeexamexpmode25ni"/>  
   
 ### <a name="code-example-with-explicit-mode"></a>명시적 모드의 코드 예제  
   
@@ -87,10 +79,9 @@ BEGIN TRANSACTION;  -- Explicit transaction.
 SELECT * FROM  
            dbo.Order_mo  as o  WITH (SNAPSHOT)  -- Table hint.  
       JOIN dbo.Customer  as c  on c.CustomerId = o.CustomerId;  
-     
 COMMIT TRANSACTION;
 ```
-  
+
 데이터베이스 옵션 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`을 사용할 경우 `WITH (SNAPSHOT)` 힌트를 사용하지 않아도 됩니다. 이 옵션이 `ON`으로 설정되면 더 낮은 격리 수준에서 메모리 최적화 테이블의 격리 수준이 자동으로 SNAPSHOT 격리로 승격됩니다.  
 
 ```sql
@@ -98,15 +89,11 @@ ALTER DATABASE CURRENT
     SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT = ON;
 ```
 
-<a name="rowver28ni"/>  
-  
 ## <a name="row-versioning"></a>행 버전 관리  
   
 메모리 액세스에 최적화된 테이블에서는 가장 엄격한 격리 수준(SERIALIZABLE)에서도 난관적 접근 방식이 효율적인 매우 정교한 행 버전 관리 시스템을 사용합니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블 소개](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)를 참조하세요.  
   
 디스크 기반 테이블에서는 READ_COMMITTED_SNAPSHOT 또는 SNAPSHOT 격리 수준이 적용되는 경우 행 버전 관리 시스템이 간접적으로 적용됩니다. 효율성을 최대로 하기 위해 이 시스템은 tempdb를 기반으로 하는 반면 메모리 최적화 데이터 구조에는 행 버전 관리가 기본 적용됩니다.  
-  
-<a name="confdegreeiso30ni"/>  
   
 ## <a name="isolation-levels"></a>격리 수준 
   
@@ -120,11 +107,6 @@ ALTER DATABASE CURRENT
 | REPEATABLE READ | 메모리 최적화 테이블에 지원됩니다. REPEATABLE READ 격리를 사용하면 커밋 시 동시 트랜잭션이 이 트랜잭션에서 읽은 행을 업데이트하지 않습니다. <br/><br/> 낙관적 모델로 인해 동시 트랜잭션이 이 트랜잭션에서 읽은 행을 업데이트하는 것을 방지할 수 없습니다. 대신, 이 트랜잭션은 커밋 시 REPEATABLE READ 격리를 위반하지 않는지 확인합니다. REPEATABLE READ 격리를 위반하는 경우 이 트랜잭션이 롤백되므로 다시 시도해야 합니다. | 
 | SERIALIZABLE | 메모리 최적화 테이블에 지원됩니다. <br/><br/> *Serializable* 이라고 명명된 것은 트랜잭션이 동시에 실행되는 것이 아니라 연속적으로 실행되는 것과 유사할 정도로 격리가 엄격하기 때문입니다. | 
 
-
-
-
-<a name="txnphaslife32ni"/>  
-  
 ## <a name="transaction-phases-and-lifetime"></a>트랜잭션 단계 및 수명  
   
 메모리 최적화 테이블이 포함된 경우 트랜잭션 수명은 다음 이미지에 표시된 단계를 거칩니다.
@@ -150,8 +132,6 @@ ALTER DATABASE CURRENT
   
 항상 작업의 트랜잭션 단위를 데이터 요구 사항에 유효한 최소 단위로 간략하게 유지해야 합니다.  
   
-<a name="confdetretry34ni"/>  
-  
 ## <a name="conflict-detection-and-retry-logic"></a>충돌 검색 및 다시 시도 논리 
 
 트랜잭션 실패 및 롤백이 발생할 수 있는 트랜잭션 관련 오류 조건은 두 가지입니다. 대부분의 경우 이러한 오류가 발생하면 교착 상태가 발생할 때와 마찬가지로 트랜잭션을 다시 시도해야 합니다.
@@ -168,15 +148,12 @@ ALTER DATABASE CURRENT
 | **41301** | 종속성 오류: 나중에 커밋이 실패한 다른 트랜잭션에 종속되어 있습니다. | 이 트랜잭션(Tx1)은 다른 트랜잭션(Tx2)에 종속되어 있는데 해당 트랜잭션(Tx2)이 Tx2에서 쓰여진 데이터를 읽어 유효성 검사 또는 커밋 처리 단계였습니다. 이후에 Tx2 커밋에 실패했습니다. Tx2가 커밋에 실패하는 가장 일반적인 원인은 반복 읽기(41305) 및 직렬화(41325) 유효성 검사 실패이며 그 외에 로그 IO 실패 등이 있습니다. |
 | **41823** 및 **41840** | 메모리 최적화 테이블 및 테이블 변수의 사용자 데이터 할당량에 도달했습니다. | 오류 41823은 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]의 독립 실행형 데이터베이스뿐만 아니라 SQL Server Express/Web/Standard Edition에도 적용됩니다. 오류 41840은 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]의 탄력적 풀에 적용됩니다. <br/><br/> 대부분의 경우 이러한 오류는 최대 사용자 데이터 크기에 도달했음을 나타내며, 오류를 해결하는 방법은 메모리 최적화 테이블에서 데이터를 삭제하는 것입니다. 그러나 이 오류가 일시적인 경우는 거의 없습니다. 따라서 이러한 오류가 처음 발생할 때 다시 시도하는 것이 좋습니다.<br/><br/> 이 목록의 다른 오류와 같이 오류 41823 및 41840은 활성 트랜잭션을 중단시킵니다. |
 | **41839** | 트랜잭션이 최대 커밋 종속성 수를 초과했습니다. |**적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]을 참조하세요. [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]의 이후 버전에는 커밋 종속성 수에 제한이 없습니다.<br/><br/> 지정된 트랜잭션(Tx1)이 종속될 수 있는 트랜잭션 수는 제한됩니다. 이러한 트랜잭션은 보내는 종속성입니다. 또한 지정된 트랜잭션(Tx1)에 종속될 수 있는 트랜잭션 수도 제한됩니다. 이러한 트랜잭션은 들어오는 종속성입니다. 두 제한 모두 8입니다. <br/><br/> 이 오류는 일반적으로 단일 쓰기 트랜잭션에서 쓴 데이터에 액세스하는 읽기 트랜잭션 수가 많은 경우 발생합니다. 읽기 트랜잭션이 모두 동일한 데이터의 대량 스캔을 수행하고 쓰기 트랜잭션의 커밋 처리 또는 유효성 검사 시간이 긴 경우 이 조건을 만족시킬 가능성이 높아집니다. 예를 들어 쓰기 트랜잭션이 직렬화 격리에서 많은 스캔을 수행하거나(유효성 검사 단계의 길이가 늘어남) 트랜잭션 로그가 속도가 느린 로그 IO 디바이스에 저장될 때(커밋 처리 길이가 길어짐) 발생합니다. 읽기 트랜잭션이 대량 스캔을 수행하고 몇 개의 행에만 액세스해야 하는 경우 인덱스가 누락될 수 있습니다. 마찬가지로 쓰기 트랜잭션에서 직렬화 격리를 사용하고 대량 스캔을 수행하지만 몇 개의 행만 액세스해야 하는 경우에도 인덱스 누락을 의미할 수 있습니다. <br/><br/> 커밋 종속성 수에 대한 제한은 추적 플래그 **9926**을 사용하여 늘릴 수 있습니다. 위에서 언급한 경우에서 이러한 문제를 마스킹할 수 있으므로 이 추적 플래그는 인덱스 누락이 없는 것을 확인한 후 이 오류 조건을 만족하는 경우에만 사용합니다. 또 다른 주의 사항은 복잡한 종속성 그래프입니다. 각 트랜잭션에 들어오는 종속성과 나가는 종속성이 많고 개별 트랜잭션에 많은 종속성 계층이 있으면 시스템의 효율성이 저하될 수 있습니다.  |
- 
   
 ### <a name="retry-logic"></a>재시도 논리 
 
 위에서 언급한 조건으로 인해 트랜잭션이 실패하면 트랜잭션이 재시도되어야 합니다.
   
 클라이언트 또는 서버 쪽에서 재시도 논리를 구현할 수 있습니다. 일반적인 권장 사항은 클라이언트 쪽에서 재시도 논리를 구현하는 것입니다. 이 방법이 더 효율적이며 실패가 발생하기 전에 트랜잭션에서 반환된 결과 집합을 처리할 수 있기 때문입니다.  
-  
-<a name="retrytsqlcodeexam35ni"/>  
   
 #### <a name="retry-t-sql-code-example"></a>다시 시도 T-SQL 코드 예제  
   
@@ -238,17 +215,13 @@ GO
 --  EXECUTE usp_update_salesorder_dates;
 ```
 
-
-<a name="crossconttxn38ni"/>  
-  
 ## <a name="cross-container-transaction"></a>크로스 컨테이너 트랜잭션  
-  
   
 트랜잭션이 다음을 수행하는 경우 크로스 컨테이너 트랜잭션이라고 합니다.  
   
 - 해석된 Transact-SQL에서 메모리 최적화 테이블에 액세스하는 경우  
-- 트랜잭션이 이미 열려 있을 때 기본 프로시저를 실행하는 경우(XACT_STATE() = 1)  
-  
+- 트랜잭션이 이미 열려 있을 때 기본 프로시저를 실행하는 경우(XACT_STATE() = 1) 
+
 "크로스 컨테이너"라는 용어는 트랜잭션이 두 트랜잭션 관리 컨테이너(디스크 기반 테이블용과 메모리 최적화 테이블용)에서 실행된다는 팩트에서 파생된 것입니다.  
   
 단일 크로스 컨테이너 트랜잭션 내에서 디스크 기반 및 메모리 최적화 테이블에 액세스하기 위해 다른 격리 수준이 사용될 수 있습니다. 이 차이점은 WITH (SERIALIZABLE) 등의 명시적 테이블 힌트 또는 데이터베이스 옵션 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT을 통해 표현됩니다. 이렇게 하면 TRANSACTION ISOLATION LEVEL이 READ COMMITTED 또는 READ UNCOMMITTED로 구성된 경우 메모리 최적화 테이블의 격리 수준이 명시적으로 스냅샷 수준으로 상승됩니다.  
@@ -285,20 +258,13 @@ COMMIT TRANSACTION;
 go
 ```
 
-
-<a name="limitations40ni"/>  
-  
 ## <a name="limitations"></a>제한 사항  
-  
   
 - 데이터베이스간 트랜잭션은 메모리 최적화 테이블에 지원되지 않습니다. 트랜잭션이 메모리 최적화 테이블에 액세스하는 경우 다음을 제외하고는 다른 데이터베이스에 액세스할 수 없습니다.  
   - tempdb 데이터베이스  
   - 마스터 데이터베이스에서 읽기 전용  
   
 - 분산 트랜잭션은 지원되지 않습니다. BEGIN DISTRIBUTED TRANSACTION이 사용되는 경우 트랜잭션은 메모리 최적화 테이블에 액세스할 수 없습니다.  
-  
-  
-<a name="natcompstorprocs42ni"/>  
   
 ## <a name="natively-compiled-stored-procedures"></a>Natively Compiled Stored Procedures  
   
@@ -308,8 +274,6 @@ go
 - 기본 프로시저 본문에는 명시적 트랜잭션 제어 문을 사용할 수 없습니다. BEGIN TRANSACTION, ROLLBACK TRANSACTION 등은 모두 허용되지 않습니다.  
   
 - Atomic 블록을 사용한 트랜잭션 제어에 대한 자세한 내용은 [Atomic 블록](atomic-blocks-in-native-procedures.md)을 참조하세요.  
-  
-<a name="othertxnlinks44ni"/>  
   
 ## <a name="other-transaction-links"></a>다른 트랜잭션 링크  
   

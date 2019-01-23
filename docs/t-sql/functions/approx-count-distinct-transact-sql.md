@@ -1,7 +1,7 @@
 ---
 title: APPROX_COUNT_DISTINCT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/23/2018
+ms.date: 01/17/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b0eb2db49a4bda6fc8be884790c3caf9cfdb7bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 718d03619165f94ae9b0820a7c2c6319549069be
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836731"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372645"
 ---
 # <a name="approxcountdistinct-transact-sql"></a>APPROX_COUNT_DISTINCT(Transact-SQL)
 [!INCLUDE[appliesto-xx-asdb-asdw-pdw-md](../../includes/appliesto-xx-asdb-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ APPROX_COUNT_DISTINCT ( expression )
 
 함수 구현은 최대 97% 확률 중에 최대 2% 오류 비율을 보장합니다. 
 
-`APPROX_COUNT_DISTINCT`에는 완전한 COUNT DISTINCT 작업보다 적은 메모리가 필요합니다.  메모리 사용 공간이 작을 경우 `APPROX_COUNT_DISTINCT`는 정확한 COUNT DISTINCT 작업에 비해 메모리를 디스크에 분산시킬 가능성이 적습니다. 
+`APPROX_COUNT_DISTINCT`에는 완전한 COUNT DISTINCT 작업보다 적은 메모리가 필요합니다.  메모리 사용 공간이 작을 경우 `APPROX_COUNT_DISTINCT`는 정확한 COUNT DISTINCT 작업에 비해 메모리를 디스크에 분산시킬 가능성이 적습니다. 이를 수행하는 데 사용되는 알고리즘에 대한 자세한 내용은 [HyperLogLog](https://en.wikipedia.org/wiki/HyperLogLog)를 참조하세요.
 
 > [!NOTE]
 > 데이터 정렬이 중요한 문자열을 사용하면 APPROX_COUNT_DISTINCT의 공개 미리 보기 버전은 이진 일치를 사용하고 BIN2가 아닌 BIN 데이터 정렬에서 생성된 결과를 제공합니다. 

@@ -23,16 +23,16 @@ helpviewer_keywords:
 - search property lists [SQL Server], permissions
 - TAKE OWNERSHIP
 ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6855f45379f113f91c54b46e3d1c77a913c853f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c7f31849aa75d0102f1406a49faf0d1c8c6a8e9
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730711"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327549"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -322,7 +322,7 @@ ALTER AUTHORIZATION ON SCHEMA::SeattleProduction11 TO SandraAlayo;
 GO    
 ```    
     
-### <a name="d-transfer-ownership-of-an-endpoint-to-a-sql-server-login"></a>4. 엔드포인트의 소유권을 SQL Server 로그인에게 이전    
+### <a name="d-transfer-ownership-of-an-endpoint-to-a-sql-server-login"></a>D. 엔드포인트의 소유권을 SQL Server 로그인에게 이전    
  다음 예에서는 `CantabSalesServer1` 엔드포인트의 소유권을 `JaePak`에게 이전합니다. 엔드포인트는 서버 수준의 보안 개체이므로 서버 수준 보안 주체에게만 소유권을 이전할 수 있습니다.    
     
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지    
@@ -332,7 +332,7 @@ ALTER AUTHORIZATION ON ENDPOINT::CantabSalesServer1 TO JaePak;
 GO    
 ```    
     
-### <a name="e-changing-the-owner-of-a-table"></a>5. 테이블의 소유자 변경    
+### <a name="e-changing-the-owner-of-a-table"></a>E. 테이블의 소유자 변경    
  다음 각 예제는 `Parts` 데이터베이스에서 `Sprockets` 테이블의 소유자를 `MichikoOsada` 데이터베이스 사용자로 변경합니다.    
 ```    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    
@@ -341,7 +341,7 @@ ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;
 ALTER AUTHORIZATION ON OBJECT::dbo.Sprockets TO MichikoOsada;    
 ```    
     
-### <a name="f-changing-the-owner-of-a-database"></a>6. 데이터베이스의 소유자 변경    
+### <a name="f-changing-the-owner-of-a-database"></a>F. 데이터베이스의 소유자 변경    
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]까지.    
     
  다음 예에서는 `Parts` 데이터베이스의 소유자를 로그인 `MichikoOsada`로 변경합니다.    
@@ -350,7 +350,7 @@ ALTER AUTHORIZATION ON OBJECT::dbo.Sprockets TO MichikoOsada;
 ALTER AUTHORIZATION ON DATABASE::Parts TO MichikoOsada;    
 ```    
   
-### <a name="g-changing-the-owner-of-a-sql-database-to-an-azure-ad-user"></a>7. SQL 데이터베이스의 소유자를 Azure AD 사용자로 변경  
+### <a name="g-changing-the-owner-of-a-sql-database-to-an-azure-ad-user"></a>G. SQL 데이터베이스의 소유자를 Azure AD 사용자로 변경  
 다음 예에서는 `cqclinic.onmicrosoft.com` Active Directory로 지명된 조직에서 SQL Server용 Azure Active Directory 관리자가 현재 데이터베이스의 소유권을 `targetDB` 변경하고, 다음 명령을 사용해 AAD 사용자를 `richel@cqclinic.onmicorsoft.com` 새 데이터베이스 소유자로 만들 수 있습니다.  
     
 ```    

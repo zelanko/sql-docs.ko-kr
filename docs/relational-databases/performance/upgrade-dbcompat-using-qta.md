@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 2270917dad9f366b09fbc7cbc0d88c286fe6761c
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: f2df34057c02171701aefb878cfb79c56f97a699
+ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257098"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54317803"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>쿼리 튜닝 길잡이를 사용하여 데이터베이스 업그레이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ QTA는 세션이 처음으로 만들어진 사용자 데이터베이스의 `msqt
        ![새 데이터베이스 업그레이드 세션 설치 창](../../relational-databases/performance/media/qta-new-session-setup.png "새 데이터베이스 업그레이드 설치 창")  
   
     2.  **설정** 창에서 두 개의 열에는 대상 데이터베이스에 있는 쿼리 저장소의 **현재** 상태가 **권장** 설정과 함께 표시됩니다. 
-        -  권장 설정은 기본적으로 선택되어 있지만 현재 열 위에 있는 라디오 버튼을 클릭하면 현재 설정이 수락되며, 현재 쿼리 저장소 구성을 미세 조정할 수도 있습니다. 
+        -  권장 설정은 기본적으로 선택되어 있지만, 현재 열 위에 있는 라디오 단추를 클릭하면 현재 설정이 수락되며, 현재 쿼리 저장소 구성을 미세 조정할 수도 있습니다. 
         -  제안된 *부실 쿼리 임계값* 설정은 예상되는 워크로드 기간(일)의 두 배입니다. 쿼리 저장소가 기준 워크로드 및 데이터베이스 업그레이드 후 워크로드에 대한 정보를 유지해야 하기 때문입니다.
         완료되면 **다음**을 클릭합니다.
 
@@ -138,7 +138,7 @@ QTA는 세션이 처음으로 만들어진 사용자 데이터베이스의 `msqt
     > [!NOTE]
     > **세션** 단추는 활성 세션을 유지한 채 **세션 관리** 페이지로 돌아갑니다.
 
-    이 단계에는 3개의 하위 단계가 있습니다.
+    이 단계에는 세 개의 하위 단계에 있습니다.
 
     1.  **기준 데이터 수집**은 쿼리 저장소가 기준을 수집할 수 있도록 대표적인 워크로드 주기를 실행할 것을 사용자에게 요청합니다. 워크로드가 완료되면 **워크로드 실행 완료**를 선택하고 **다음**을 클릭합니다.
 
@@ -207,7 +207,7 @@ QTA는 세션이 처음으로 만들어진 사용자 데이터베이스의 `msqt
     > 대신 [sys.plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) 시스템 테이블을 사용하여 계획 지침을 검색하고 [sp_control_plan_guide](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)를 사용하여 수동으로 삭제합니다.  
   
 ## <a name="permissions"></a>Permissions  
-**db_owner** 역할 멤버 자격의 멤버 자격이 필요합니다.
+**db_owner** 역할의 멤버 자격이 필요합니다.
   
 ## <a name="see-also"></a>참고 항목  
  [호환성 수준 및 SQL Server 업그레이드](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)    

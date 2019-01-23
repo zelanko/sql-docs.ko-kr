@@ -17,19 +17,19 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 38077378d0980d351c4c65ca25b1574b7a7d7bc2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: db55b4763dc0a5956d419fd45ced58073e2affbb
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673582"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327874"
 ---
 # <a name="always-encrypted-wizard"></a>상시 암호화 마법사
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 **상시 암호화 마법사** 를 사용하여 SQL Server 데이터베이스에 저장된 중요 데이터를 보호할 수 있습니다. 상시 암호화를 사용하면 클라이언트가 클라이언트 애플리케이션의 중요한 데이터를 암호화하고 암호화 키를 SQL Server에 표시하지 않을 수 있습니다. 따라서 상시 암호화는 데이터를 소유하고 볼 수 있는 사람과 데이터를 관리하지만 액세스 권한이 없어야 하는 사람을 분리합니다.  기능에 대한 자세한 내용은 [상시 암호화&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)를 참조하세요.  
  
- - 마법사를 사용하여 상시 암호화를 구성하고 클라이언트 애플리케이션에서 사용하는 방법을 보여 주는 종합 연습은 [SQL 데이터베이스 자습서: 상시 암호화로 중요한 데이터 보호](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)를 참조하세요.  
+ - 마법사를 사용하여 Always Encrypted를 구성하고 클라이언트 애플리케이션에서 사용하는 방법을 보여 주는 종합 연습은 [SQL Database 자습서: Always Encrypted로 중요한 데이터 보호](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)를 참조하세요.  
  
  - 마법사 사용이 포함된 비디오는 [상시 암호화를 사용하여 중요 데이터 보안 유지](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)를 참조하세요. 그리고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보안 팀 블로그 [SSMS 암호화 마법사 - 간단한 몇 단계로 상시 암호화 설정](https://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx)을 참조하세요.  
  
@@ -49,7 +49,7 @@ ms.locfileid: "51673582"
  
  - 열 선택 페이지에서 자동 생성되는 열 암호화 키를 선택한 경우 생성된 열 암호화 키를 암호화할 때 적용할 열 마스터 키를 구성해야 합니다. 데이터베이스에 이미 열 마스터 키를 정의한 경우 해당 키를 선택할 수 있습니다. (기존 열 마스터 키를 사용하려면 사용자가 키에 대한 액세스 권한이 있어야 합니다.) 또는 선택한 열 저장소(Windows 인증서 저장소 또는 Azure 키 자격 증명 모음)에 열 마스터 키를 만들고 데이터베이스에서 키를 정의할 수 있습니다.  
  
- ### <a name="key-storage"></a>**키 저장소**  
+ ### <a name="key-storage"></a>**키 스토리지**  
  
  - 열 마스터 키를 저장할 위치를 선택합니다.  
  
@@ -57,7 +57,7 @@ ms.locfileid: "51673582"
  
    - **AKV에 마스터 키 저장** 자세한 내용은 [Azure 키 자격 증명 모음 시작하기](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)를 참조하세요.  
  
- - Azure 키 자격 증명 모음에 열 마스터 키를 생성하려면 사용자가 키 자격 증명 모음에 대해 **WrapKey**, **UnwrapKey**, **확인**, **서명** 권한이 있어야 합니다. 사용자는 **가져오기**, **목록**, **만들기**, **삭제**, **업데이트**, **가져오기**, **백업**, **복원** 권한이 필요할 수도 있습니다. 자세한 내용은 [Azure 주요 자격 증명 모음이란?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) 및   [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx)를 참조하세요.  
+ - Azure 키 자격 증명 모음에 열 마스터 키를 생성하려면 사용자가 키 자격 증명 모음에 대해 **WrapKey**, **UnwrapKey**, **확인**, **서명** 권한이 있어야 합니다. 사용자는 **가져오기**, **목록**, **만들기**, **삭제**, **업데이트**, **가져오기**, **백업**, **복원** 권한이 필요할 수도 있습니다. 자세한 내용은 [Azure Key Vault란?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) 및 [Set-AzKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx)를 참조하세요.  
  
  - 이 마법사는 두 가지 옵션만 지원합니다. 하드웨어 보안 모듈 및 고객 저장소는 [CREATE COLUMN MASTER KEY&#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)]를 사용하여 구성해야 합니다.  
  

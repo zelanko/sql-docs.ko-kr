@@ -1,7 +1,7 @@
 ---
 title: 가용성 그룹에서 SQL Server 배포 데이터베이스 구성 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/13/2018
+ms.date: 01/16/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5b2f6defed7ad897f3464aec1b8b99391a2b9149
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d23495f210a2c5979a5e5abecd9f43e4f5b62c02
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126453"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372684"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Always On 가용성 그룹에서 복제 배포 데이터베이스 설정
 
@@ -34,7 +34,9 @@ ms.locfileid: "54126453"
 SQL Server 2017 CU6 및 SQL Server 2016 SP2-CU3에서는 다음 메커니즘을 통해 AG에서 복제 배포 데이터베이스를 지원합니다.
 
 - 배포 데이터베이스 AG에 수신기가 있어야 합니다. 게시자가 배포자를 추가할 때는 수신기 이름을 배포자의 이름으로 사용합니다.
-- 수신기 이름을 배포자의 이름으로 사용하여 복제 작업을 만듭니다.
+- 수신기 이름을 배포자의 이름으로 사용하여 복제 작업을 만듭니다. 배포 서버에서 생성되는 복제 스냅숏, 로그 판독기 및 배포 에이전트(밀어넣기 구독) 작업이 배포 DB용 AG의 모든 보조 복제본에서 생성됩니다.
+ >[!NOTE]
+ >풀 구독용 배포 에이전트 작업은 배포 서버가 아니라 구독자 서버에서 생성됩니다. 
 - 새 작업은 배포 데이터베이스의 상태(AG에서 주 또는 보조)를 모니터하며 배포 데이터베이스 상태에 따라 복제 작업을 사용하거나 사용하지 않도록 설정합니다.
 
 아래 설명한 단계에 따라 AG의 배포 데이터베이스를 구성한 후에는 복제 구성과 런타임 작업이 배포 데이터베이스 AG 장애 조치(failover) 전후에 올바르게 실행될 수 있습니다.

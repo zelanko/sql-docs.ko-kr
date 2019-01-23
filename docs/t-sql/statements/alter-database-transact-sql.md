@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9eb95a89fa8539eede53a154f7e7087a3f31f71b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 64c4819bd307afe3b7e4b310949148deabb8c938
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135323"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327815"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL)
 
@@ -82,7 +82,7 @@ Always On 가용성 그룹의 보조 복제본에서 보조 데이터베이스�
 데이터베이스 호환성 수준과 관련된 ALTER DATABASE의 SET 옵션에 대한 구문 및 관련 정보를 제공합니다.  
   
 ## <a name="syntax"></a>구문  
-  
+
 ```
 -- SQL Server Syntax  
 ALTER DATABASE { database_name  | CURRENT }  
@@ -124,14 +124,15 @@ ALTER DATABASE { database_name  | CURRENT }
  
 <compatibility_level>
    { 140 | 130 | 120 | 110 | 100 | 90 }   
-```  
-  
+```
+
 ## <a name="arguments"></a>인수  
+
 *database_name*  
 수정할 데이터베이스의 이름입니다.  
   
-> [!NOTE]  
->  포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.  
+> [!NOTE]
+> 포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.
   
 CURRENT  
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
@@ -159,7 +160,8 @@ Windows 데이터 정렬 이름 및 SQL 데이터 정렬 이름에 대한 자세
 **\<file_and_filegroup_options>::=**  
 자세한 내용은 [ALTER DATABASE 파일 및 파일 그룹 옵션](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)을 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
+
 데이터베이스를 제거하려면 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)를 사용합니다.  
   
 데이터베이스의 크기를 줄이려면 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)를 사용합니다.  
@@ -191,7 +193,8 @@ ALTER DATABASE 문은 자동 커밋 모드(기본 트랜잭션 관리 모드)에
 - 데이터베이스 백업을 복원합니다.  
 - 데이터베이스를 분리합니다.  
   
-## <a name="changing-the-database-collation"></a>데이터베이스 데이터 정렬 변경  
+## <a name="changing-the-database-collation"></a>데이터베이스 데이터 정렬 변경
+
 데이터베이스에 다른 데이터 정렬을 적용하기 전에 다음 조건이 충족되었는지 확인하세요.  
   
 - 현재 데이터베이스를 사용하고 있는 다른 사용자가 없습니다.  
@@ -221,31 +224,35 @@ ALTER DATABASE 문은 자동 커밋 모드(기본 트랜잭션 관리 모드)에
   
 새로운 데이터 정렬로 중복 이름이 생성되는 경우 변경 동작은 실패하게 되며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 중복이 발견된 네임스페이스를 지정하는 오류 메시지를 반환합니다.  
   
-## <a name="viewing-database-information"></a>데이터베이스 정보 보기  
+## <a name="viewing-database-information"></a>데이터베이스 정보 보기
+
 카탈로그 뷰, 시스템 함수 및 시스템 저장 프로시저를 사용하여 데이터베이스, 파일 및 파일 그룹에 대한 정보를 반환할 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
 데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-changing-the-name-of-a-database"></a>1. 데이터베이스의 이름 변경  
+### <a name="a-changing-the-name-of-a-database"></a>1. 데이터베이스의 이름 변경
+
 다음 예에서는 `AdventureWorks2012` 데이터베이스의 이름을 `Northwind`로 변경합니다.  
-  
-```sql  
+
+```sql
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  
 Modify Name = Northwind ;  
 GO  
-```  
-  
-### <a name="b-changing-the-collation-of-a-database"></a>2. 데이터베이스 데이터 정렬 변경  
+```
+
+### <a name="b-changing-the-collation-of-a-database"></a>2. 데이터베이스 데이터 정렬 변경
+
 다음 예에서는 `testdb`S 데이터 정렬을 사용하여 `SQL_Latin1_General_CP1_CI_A`라는 데이터베이스를 만든 다음 `testdb` 데이터베이스의 데이터 정렬을 `COLLATE French_CI_AI`로 변경합니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
-  
-```sql  
+
+```sql
 USE master;  
 GO  
   
@@ -256,9 +263,10 @@ GO
 ALTER DATABASE testDB  
 COLLATE French_CI_AI ;  
 GO  
-```  
-  
-## <a name="see-also"></a>참고 항목  
+```
+
+## <a name="see-also"></a>참고 항목
+
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)   
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)   
@@ -367,8 +375,8 @@ ALTER DATABASE { database_name | CURRENT }
   | <temporal_history_retention>  
 }  
 ```
-  
-## <a name="arguments"></a>인수  
+
+## <a name="arguments"></a>인수
 
 *database_name*  
 
@@ -392,11 +400,11 @@ MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'Bus
 데이터베이스의 서비스 계층을 변경합니다. 
 
 다음 예제에서는 버전을 `premium`으로 변경합니다.
-  
-```sql  
+
+```sql
 ALTER DATABASE current 
     MODIFY (EDITION = 'premium');
-``` 
+```
 
 데이터베이스의 MAXSIZE 속성이 해당 버전에서 지원되는 유효 범위 밖의 값으로 설정되면 EDITION 변경이 실패합니다.  
 
@@ -440,22 +448,25 @@ DTU 기반 모델에 대한 MAXSIZE 값은 지정된 경우 지정된 서비스 
 **vCore 기반 모델**
 
 **범용 서비스 계층 - 4세대 계산 플랫폼**
+
 |MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_4|GP_Gen4_8|GP_Gen4_16|GP4_24|
 |:--- | --: |--: |--: |--: |--: |--:|
 |최대 데이터 크기(GB)|1024|1024|1536|3072|4096|4096|
 
 **범용 서비스 계층 - 5세대 계산 플랫폼**
+
 |MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_8|GP_Gen5_16|GP_Gen5_24|GP_Gen5_32|GP_Gen5_48|GP_Gen5_80|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |최대 데이터 크기(GB)|1024|1024|1536|3072|4096|4096|4096|4096|
 
-
 **중요 비즈니스용 서비스 계층 - 4세대 계산 플랫폼**
+
 |성능 수준|BC_Gen4_1|BC_Gen4_2|BC_Gen4_4|BC_Gen4_8|BC_Gen4_16|
 |:--- | --: |--: |--: |--: |--: |--: |
 |최대 데이터 크기(GB)|1024|1024|1024|1024|1024|1024|
 
 **중요 비즈니스용 서비스 계층 - 5세대 계산 플랫폼**
+
 |MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_8|BC_Gen5_16|BC_Gen5_24|BC_Gen5_32|BC_Gen5_48|BC_Gen5_80|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |최대 데이터 크기(GB)|1024|1024|1024|1024|2048|4096|4096|4096|
@@ -471,13 +482,13 @@ MAXSIZE 및 EDITION 인수에는 다음과 같은 규칙이 적용됩니다.
 MODIFY (SERVICE_OBJECTIVE = \<service-objective>)  
 
 성능 수준을 지정합니다. 다음 예제에서는 프리미엄 데이터베이스의 서비스 목표를 `P6`으로 변경합니다.
- 
-```sql  
+
+```sql
 ALTER DATABASE current 
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```  
 
-성능 수준을 지정합니다. 서비스 목표에 사용 가능한 값은  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_48`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_8`, `BC_Gen5_16`, `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_48`, `BC_Gen5_80`, `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`입니다.  
+성능 수준을 지정합니다. 서비스 목표에 사용 가능한 값은 `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`,`GP_Gen5_32`, `GP_Gen5_48`, `GP_Gen5_80`, `BC_Gen5_2`,`BC_Gen5_4`,`BC_Gen5_8`,`BC_Gen5_16`,`BC_Gen5_24`,`BC_Gen5_32`,`BC_Gen5_48`,`BC_Gen5_80`, `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`,`HS_Gen5_4`,`HS_Gen5_8`,`HS_Gen5_16`,`HS_Gen5_24`,`HS_Gen5_32`,`HS_Gen5_48`,`HS_Gen5_80`입니다.  
 
 서비스 목표 설명과 크기, 버전 및 서비스 목표 조합 등의 정보에 대한 자세한 내용은 [Azure SQL Database 서비스 계층 및 성능 수준](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) 및 [DTU 기반 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) 및 [vCore 기반 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요. PRS 서비스 목표에 대한 지원이 제거되었습니다. 질문에 대해서는, 이메일 별칭(premium-rs@microsoft.com)을 사용하세요. 
   
@@ -499,7 +510,7 @@ WITH ALLOW_CONNECTIONS { **ALL** | NO }
 
 ALLOW_CONNECTIONS를 지정하지 않으면 기본적으로 ALL로 설정됩니다. ALL로 설정된 경우 연결할 적절한 권한이 있는 모든 로그인을 허용하는 읽기 전용 데이터베이스입니다.  
   
-WITH SERVICE_OBJECTIVE {`S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_4`, `BC_GEN4_8`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_48`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_8`, `BC_Gen5_16`, `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_48`, `BC_Gen5_80`}  
+WITH SERVICE_OBJECTIVE {  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`,`GP_Gen5_4`,`GP_Gen5_8`,`GP_Gen5_16`,`GP_Gen5_24`,`GP_Gen5_32`,`GP_Gen5_48`,`GP_Gen5_80`, `BC_Gen5_2`,`BC_Gen5_4`,`BC_Gen5_8`,`BC_Gen5_16`,`BC_Gen5_24`,`BC_Gen5_32`,`BC_Gen5_48`,`BC_Gen5_80` }  
 
 SERVICE_OBJECTIVE를 지정하지 않으면 보조 데이터베이스가 주 데이터베이스와 동일한 서비스 수준에서 생성됩니다. SERVICE_OBJECTIVE를 지정하면 보조 데이터베이스가 지정된 수준에서 생성됩니다. 이 옵션은 보다 저렴한 서비스 수준에서 지역 복제된 보조 데이터베이스를 만들도록 지원합니다. 지정된 SERVICE_OBJECTIVE를 소스와 동일한 버전 내에 있어야 합니다. 예를 들어 버전이 프리미엄인 경우 S0를 지정할 수 없습니다.  
   
@@ -796,9 +807,10 @@ ALTER DATABASE database_name
           | 'DW2500c' | 'DW3000c' | 'DW5000c' | 'DW6000c' | 'DW7500c' 
           | 'DW10000c' | 'DW15000c' | 'DW30000c'
       }  
-```  
-  
-## <a name="arguments"></a>인수  
+```
+
+## <a name="arguments"></a>인수
+
 *database_name*  
 수정할 데이터베이스의 이름을 지정합니다.  
 
@@ -819,7 +831,8 @@ MAXSIZE
 SERVICE_OBJECTIVE  
 성능 수준을 지정합니다. [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]의 서비스 목표에 대한 자세한 내용은 [성능 계층](https://azure.microsoft.com/documentation/articles/performance-tiers/)을 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
 다음과 같은 사용 권한이 필요합니다.  
   
 - 서버 수준 보안 주체 로그인(프로비전 프로세스에 의해 생성됨) 또는  
@@ -827,14 +840,16 @@ SERVICE_OBJECTIVE
   
 데이터베이스의 소유자가 `dbmanager` 역할의 멤버가 아니면 데이터베이스를 변경할 수 있습니다.  
   
-## <a name="general-remarks"></a>일반적인 주의 사항  
+## <a name="general-remarks"></a>일반적인 주의 사항
+
 현재 데이터베이스는 변경된 것과 다른 데이터베이스여야 합니다. 따라서 **ALTER는 master 데이터베이스에 연결되어 있는 동안 실행되어야 합니다**.  
   
 SQL Data Warehouse가 COMPATIBILITY_LEVEL 130으로 설정되어 있으며 변경할 수 없습니다. 자세한 내용은 [Azure SQL Database의 호환성 수준 130으로 향상된 쿼리 성능](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)을 참조하세요.
   
 데이터베이스의 크기를 줄이려면 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)를 사용합니다.  
   
-## <a name="limitations-and-restrictions"></a>제한 사항  
+## <a name="limitations-and-restrictions"></a>제한 사항
+
 ALTER DATABASE를 실행하려면 데이터베이스가 온라인이어야 하며 일시 중지된 상태일 수 없습니다.  
   
 ALTER DATABASE 문은 기본 트랜잭션 관리 모드인 자동 커밋 모드에서 실행해야 합니다. 이 항목은 연결 설정에서 설정됩니다.  
@@ -843,7 +858,8 @@ ALTER DATABASE 문은 사용자 정의 트랜잭션에 포함될 수 없습니�
 
 데이터베이스 데이터 정렬을 변경할 수 없습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예
+
 이러한 예제를 실행하기 전에 변경하는 데이터베이스가 현재 데이터베이스가 아닌지 확인합니다. 현재 데이터베이스는 변경된 것과 다른 데이터베이스여야 합니다. 따라서 **ALTER는 master 데이터베이스에 연결되어 있는 동안 실행되어야 합니다**.  
 
 ### <a name="a-change-the-name-of-the-database"></a>1. 데이터베이스의 이름을 변경합니다.  
@@ -871,7 +887,8 @@ ALTER DATABASE dw1 MODIFY ( SERVICE_OBJECTIVE= 'DW1200' );
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고 항목
+
 [CREATE DATABASE(Azure SQL Data Warehouse)](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldw.md)
 [참조 아티클의 SQL Data Warehouse 목록](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/) 
  
@@ -914,7 +931,8 @@ ALTER DATABASE database_name
     ENCRYPTION { ON | OFF }  
 ```  
   
-## <a name="arguments"></a>인수  
+## <a name="arguments"></a>인수
+
 *database_name*  
 수정할 데이터베이스의 이름입니다. 데이터베이스 목록을 어플라이언스에 표시하려면 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)을 사용합니다.  
   
@@ -952,32 +970,39 @@ SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } 비동기 통계 업데이트 옵�
 
 통계에 대한 자세한 내용은 [통계](/sql/relational-databases/statistics/statistics)를 참조하세요.
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
 데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="error-messages"></a>오류 메시지
+
 자동 통계를 사용하지 않고 통계 설정을 변경하려는 경우 PDW에는 "이 옵션은 PDW에서 지원되지 않습니다"라는 오류가 표시됩니다. 시스템 관리자는 기능 스위치[AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md)를 사용하여 자동 통계를 사용할 수 있습니다.
 
-## <a name="general-remarks"></a>일반적인 주의 사항  
+## <a name="general-remarks"></a>일반적인 주의 사항
+
 REPLICATED_SIZE, DISTRIBUTED_SIZE 및 LOG_SIZE에 대한 값이 데이터베이스에 대한 현재 값 보다 크거나 작거나 같을 수 있습니다.  
   
-## <a name="limitations-and-restrictions"></a>제한 사항  
+## <a name="limitations-and-restrictions"></a>제한 사항
+
 확장 및 축소 작업은 근사치입니다. 결과로 생성된 실제 크기는 매개 변수에 따라 다를 수 있습니다.  
   
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]은 원자 조작으로서 ALTER DATABASE 문을 수행 하지 않습니다. 실행 동안 이 문이 중단되는 경우 이미 발생한 변경 내용은 유지됩니다.  
 
 통계 설정은 관리자가 자동 통계를 사용하는 경우에만 작동합니다.  사용자가 관리자인 경우 기능 스위치[AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md)를 사용하여 자동 통계를 사용하거나 사용하지 않도록 설정합니다. 
   
-## <a name="locking-behavior"></a>잠금 동작  
+## <a name="locking-behavior"></a>잠금 동작
+
 DATABASE 개체에 대한 공유 잠금을 사용합니다. 읽기 또는 쓰기를 위해 다른 사용자가 사용 중인 데이터베이스는 변경할 수 없습니다. 여기에는 해당 데이터베이스에서 [USE](../language-elements/use-transact-sql.md) 문을 발급한 세션이 포함됩니다.  
   
-## <a name="performance"></a>성능  
+## <a name="performance"></a>성능
+
 데이터베이스 축소는 해당 데이터베이스 내의 실제 데이터의 크기와 디스크의 조각화 양에 따라 많은 시간 및 시스템 리소스가 필요할 수 있습니다. 예를 들어 데이터베이스를 축소하면 여러 시간 이상이 걸릴 수 있습니다.  
   
-## <a name="determining-encryption-progress"></a>암호화 진행률 결정  
+## <a name="determining-encryption-progress"></a>암호화 진행률 결정
+
 다음 쿼리를 사용하여 데이터베이스 TDE(투명한 데이터 암호화) 진행률을 백분율로 확인하십시오.  
   
-```sql  
+```sql
 WITH  
 database_dek AS (  
     SELECT ISNULL(db_map.database_id, dek.database_id) AS database_id,  
@@ -1023,7 +1048,8 @@ TDE를 구현하는 모든 단계를 보여주는 포괄적인 예제는 [투명
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
   
-### <a name="a-altering-the-autogrow-setting"></a>1. AUTOGROW 설정 변경  
+### <a name="a-altering-the-autogrow-setting"></a>1. AUTOGROW 설정 변경
+
 데이터베이스에 대해 AUTOGROW를 ON으로 설정합니다 `CustomerSales`.  
   
 ```sql  
@@ -1031,7 +1057,8 @@ ALTER DATABASE CustomerSales
     SET ( AUTOGROW = ON );  
 ```  
   
-### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>2. 복제된 테이블에 대해 최대 스토리지 변경  
+### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>2. 복제된 테이블에 대해 최대 스토리지 변경
+
 다음 예제에서는 데이터베이스 `CustomerSales`에 대해 복제된 테이블 스토리지 용량 한도를 1GB로 설정. 계산 노드당 스토리지 용량 한도입니다.  
   
 ```sql  
@@ -1039,7 +1066,8 @@ ALTER DATABASE CustomerSales
     SET ( REPLICATED_SIZE = 1 GB );  
 ```  
   
-### <a name="c-altering-the-maximum-storage-for-distributed-tables"></a>3. 분산된 테이블에 대해 최대 스토리지 변경  
+### <a name="c-altering-the-maximum-storage-for-distributed-tables"></a>3. 분산된 테이블에 대해 최대 스토리지 변경
+
  다음 예제에서는 데이터베이스 `CustomerSales`에 대해 분산된 테이블 스토리지 용량 한도를 1000GB(1테라바이트)로 설정합니다. 계산 노드당 스토리지 용량 한도가 아닌 모든 계산 노드에 대해 어플라이언스에서 결합된 스토리지 용량 한도입니다.  
   
 ```sql  
@@ -1047,7 +1075,8 @@ ALTER DATABASE CustomerSales
     SET ( DISTRIBUTED_SIZE = 1000 GB );  
 ```  
   
-### <a name="d-altering-the-maximum-storage-for-the-transaction-log"></a>D. 트랜잭션 로그에 대해 최대 스토리지 변경  
+### <a name="d-altering-the-maximum-storage-for-the-transaction-log"></a>D. 트랜잭션 로그에 대해 최대 스토리지 변경
+
  다음 예제에서는 어플라이언스에 대해 10GB의 트랜잭션 로그 크기가 최대값[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 갖도록 데이터베이스 `CustomerSales`를 업데이트합니다.  
   
 ```sql  
@@ -1067,6 +1096,7 @@ SELECT NAME,
 FROM sys.databases;
 ```
 ### <a name="f-enable-auto-create-and-auto-update-stats-for-a-database"></a>F. 데이터베이스에 대한 통계 자동 작성 및 자동 업데이트 사용
+
 다음 명령문을 사용하여 CustomerSales 데이터베이스에 대한 통계를 자동 및 비동기적으로 만들고 업데이트할 수 있습니다.  이렇게 하면 고품질의 쿼리 계획을 만들기 위한 필요에 따라 단일 열 통계를 만들고 업데이트합니다.
 
 ```sql
@@ -1074,11 +1104,12 @@ ALTER DATABASE CustomerSales
     SET AUTO_CREATE_STATISTICS ON;
 ALTER DATABASE CustomerSales
     SET AUTO_UPDATE_STATISTICS ON; 
-ALTER DATABASE CustomerSales
+ALTER DATABASE 
     SET AUTO_UPDATE_STATISTICS_ASYNC ON;
 ```
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고 항목
+
  [CREATE DATABASE &#40;병렬 데이터 웨어하우스&#41;](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlpdw)   
  [DROP DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
 

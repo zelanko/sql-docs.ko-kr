@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 253dd918fb3fec410e2bcf28d6fba7cd24786d04
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3bdc541e919e9a30d4ab043ef9c13d78a2f4b445
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522920"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327354"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Azure Key Vault를 사용한 SQL Server TDE 확장 가능 키 관리 - 설정 단계
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "52522920"
 
 -   Azure Active Directory 만들기  
 
--   [Azure Key Vault를 사용한 확장 가능 키 관리 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)를 검토하여 Azure Key Vault를 사용하는 EKM 저장소의 보안 주체를 파악합니다.  
+-   [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 &amp;#40;SQL Server&amp;#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)를 검토하여 Azure 주요 자격 증명 모음을 사용하는 EKM 스토리지의 보안 주체를 파악합니다.  
 
 -   실행 중인 SQL Server 버전에 적절한 재배포 가능한 Visual Studio C++의 최신 버전이 설치되어 있는지 확인하세요.
   
@@ -69,7 +69,7 @@ SQL Server 버전  |재배포 가능 설치 링크
      [최신 Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)(5.2.0 이상)을 설치하고 시작합니다. 다음 명령을 사용하여 Azure 계정에 로그인합니다.  
   
     ```powershell  
-    Login-AzureRmAccount  
+    Connect-AzAccount  
     ```  
   
      문은 다음을 반환합니다.  
@@ -83,14 +83,14 @@ SQL Server 버전  |재배포 가능 설치 링크
     ```  
   
     > [!NOTE]  
-    >  구독이 여러 개 있는 상황에서 자격 증명 모음에 특정 구독 하나만 사용하도록 지정하려면 `Get-AzureRmSubscription` 을 사용하여 구독을 표시하고, `Select-AzureRmSubscription` 을 사용하여 올바른 구독을 선택합니다. 그러지 않으면 PowerShell에서 기본적으로 구독을 하나 선택합니다.  
+    >  구독이 여러 개 있는 상황에서 자격 증명 모음에 특정 구독 하나만 사용하도록 지정하려면 `Get-AzSubscription` 을 사용하여 구독을 표시하고, `Select-AzSubscription` 을 사용하여 올바른 구독을 선택합니다. 그러지 않으면 PowerShell에서 기본적으로 구독을 하나 선택합니다.  
   
 2.  **새 리소스 그룹 만들기**  
   
      Azure Resource Manager를 통해 생성된 모든 Azure 리소스는 리소스 그룹에 포함되어야 합니다. 주요 자격 증명 모음을 보관하는 리소스 그룹을 만듭니다. 이 예에서는 `ContosoDevRG`를 사용합니다. 모든 주요 자격 증명 모음 이름은 전역적으로 고유하므로 **고유한** 리소스 그룹 및 주요 자격 증명 모음 이름을 선택합니다.  
   
     ```powershell  
-    New-AzureRmResourceGroup -Name ContosoDevRG -Location 'East Asia'  
+    New-AzResourceGroup -Name ContosoDevRG -Location 'East Asia'  
     ```  
   
      문은 다음을 반환합니다.  
@@ -109,10 +109,10 @@ SQL Server 버전  |재배포 가능 설치 링크
   
 3.  **주요 자격 증명 모음 만들기**  
   
-     `New-AzureRmKeyVault` cmdlet에는 리소스 그룹 이름, 주요 자격 증명 모음 이름, 지리적 위치가 필요합니다. 예를 들어 `ContosoDevKeyVault`라고 이름이 지정된 주요 자격 증명 모음의 경우 다음을 입력합니다.  
+     `New-AzKeyVault` cmdlet에는 리소스 그룹 이름, 주요 자격 증명 모음 이름, 지리적 위치가 필요합니다. 예를 들어 `ContosoDevKeyVault`라고 이름이 지정된 주요 자격 증명 모음의 경우 다음을 입력합니다.  
   
     ```powershell  
-    New-AzureRmKeyVault -VaultName 'ContosoDevKeyVault' `  
+    New-AzKeyVault -VaultName 'ContosoDevKeyVault' `  
        -ResourceGroupName 'ContosoDevRG' -Location 'East Asia'  
     ```  
   
@@ -152,20 +152,20 @@ SQL Server 버전  |재배포 가능 설치 링크
     > [!IMPORTANT]  
     >  Azure Active Directory 서비스 사용자는 Key Vault에 대해 적어도 `get`, `wrapKey` 및 `unwrapKey` 권한이 있어야 합니다.  
   
-     아래와 같이 **매개 변수에 대해 1부의** 클라이언트 ID `ServicePrincipalName` 를 사용합니다. 성공적으로 실행되는 경우 `Set-AzureRmKeyVaultAccessPolicy` 가 출력 없이 자동으로 실행됩니다.  
+     아래와 같이 **매개 변수에 대해 1부의** 클라이언트 ID `ServicePrincipalName` 를 사용합니다. 성공적으로 실행되는 경우 `Set-AzKeyVaultAccessPolicy` 가 출력 없이 자동으로 실행됩니다.  
   
     ```powershell  
-    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
+    Set-AzKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
       -ServicePrincipalName EF5C8E09-4D2A-4A76-9998-D93440D8115D `  
       -PermissionsToKeys get, wrapKey, unwrapKey  
     ```  
   
-     `Get-AzureRmKeyVault` cmdlet을 호출하여 권한을 확인합니다. 이 주요 자격 증명 모음에 대한 액세스 권한이 있는 다른 테넌트로 나열되는 AAD 애플리케이션 이름이 '액세스 정책' 아래의 명령문 출력에 표시되어야 합니다.  
+     `Get-AzKeyVault` cmdlet을 호출하여 권한을 확인합니다. 이 주요 자격 증명 모음에 대한 액세스 권한이 있는 다른 테넌트로 나열되는 AAD 애플리케이션 이름이 '액세스 정책' 아래의 명령문 출력에 표시되어야 합니다.  
   
        
 5.  **주요 자격 증명 모음에서 비대칭 키 생성**  
   
-     Azure Key Vault에서 키를 생성하는 방법은 두 가지입니다. 1) 기존 키 가져오기 또는 2) 새 키 만들기  
+     Azure Key Vault에서 키를 생성하는 방법은 1) 기존 키 가져오기 또는 2) 새 키 만들기 등 두 가지가 있습니다.  
                   
       > [!NOTE]
         >  SQL Server는 2048비트 RSA 키만 지원합니다.
@@ -262,7 +262,7 @@ SQL Server 버전  |재배포 가능 설치 링크
 -   [C. SQL Server 커넥터에 대한 오류 코드 설명](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixC)  
   
   
-## <a name="part-iv-configure-includessnoversionincludesssnoversion-mdmd"></a>4부: 구성 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+## <a name="part-iv-configure-includessnoversionincludesssnoversion-mdmd"></a>4부: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성  
  이 섹션의 각 작업에 필요한 최소 권한 수준에 대한 정보를 보려면 [B. 질문과 대답](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB)을 참조하세요.  
   
 1.  **sqlcmd.exe 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio 실행**  

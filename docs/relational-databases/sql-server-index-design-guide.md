@@ -1,7 +1,7 @@
 ---
 title: SQL Server 인덱스 아키텍처 및 디자인 가이드 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/06/2018
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 217fe5bc510d5f25eaddfad69fa08ad4dd760c8f
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: e294759588beeb5d79f4613848ca49634d8e40cf
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712704"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420188"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 인덱스 아키텍처 및 디자인 가이드  
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ XML 인덱스에 대한 자세한 내용은 [XML 인덱스 개요](../relational
   
  인덱스 사용이 항상 좋은 성능을 의미하지 않으며 마찬가지로 좋은 성능이 항상 효율적인 인덱스 사용을 나타내는 것은 아닙니다. 인덱스 사용이 최상의 성능을 내는 데 항상 도움이 된다면 쿼리 최적화 프로그램의 작업은 간단할 것입니다. 실제로 인덱스를 잘못 선택하면 최상의 성능을 얻지 못할 수 있습니다. 따라서 쿼리 최적화 프로그램에서는 성능을 향상시킬 경우에만 인덱스나 인덱스 조합을 선택하고 성능을 저하시킬 경우에는 인덱싱된 검색을 피해야 합니다.  
 
- <sup>1</sup> Rowstore는 관계형 테이블 데이터를 저장하는 전통적인 방법이었습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 rowstore는 기본 데이터 저장소 형식이 힙, B-트리([클러스터형 인덱스](#Clustered)) 또는 메모리 최적화인 테이블을 참조합니다.
+ <sup>1</sup> Rowstore는 관계형 테이블 데이터를 저장하는 전통적인 방법이었습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 rowstore는 기본 데이터 스토리지 형식이 힙, B-트리([클러스터형 인덱스](#Clustered)) 또는 메모리 최적화인 테이블을 참조합니다.
 
 ### <a name="index-design-tasks"></a>인덱스 디자인 태스크  
  권장되는 인덱스 디자인 전략은 다음과 같은 태스크로 이루어집니다.  
@@ -218,7 +218,7 @@ ON Purchasing.PurchaseOrderDetail
 |-|-|
 |[sys.indexes&#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)|[sys.index_columns&#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)|  
 |[sys.partitions&#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)|[sys.internal_partitions &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|
-[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
+|[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
 |[sys.column_store_segments&#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)|[sys.column_store_dictionaries&#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)|  
 |[sys.column_store_row_groups&#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_db_column_store_row_group_operational_stats&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|
 |[sys.dm_db_column_store_row_group_physical_stats&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)|[sys.dm_column_store_object_pool&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
@@ -509,7 +509,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
      인덱스의 DML(데이터 조작 언어) 문이 데이터에 영향을 줄 때에만 인덱스가 유지 관리됩니다. 필터링된 인덱스는 크기가 더 작고 인덱스의 데이터가 영향을 받을 때에만 유지 관리되기 때문에 전체 테이블 비클러스터형 인덱스에 비해 인덱스 유지 관리 비용이 줄어듭니다. 특히 영향을 자주 받지 않는 데이터를 포함하는 경우에는 수많은 필터링된 인덱스가 있을 수 있습니다. 마찬가지로 필터링된 인덱스에는 자주 영향을 받는 데이터만 들어 있을 경우 보다 작은 크기의 인덱스가 통계를 업데이트하는 비용을 줄입니다.  
   
--   **줄어든 인덱스 저장소 비용**  
+-   **줄어든 인덱스 스토리지 비용**  
   
      필터링된 인덱스를 만들면 전체 테이블 인덱스가 필요하지 않은 경우 비클러스터형 인덱스의 디스크 스토리지를 줄일 수 있습니다. 스토리지 요구 사항을 크게 증가시키지 않고 전체 테이블 비클러스터형 인덱스를 여러 필터링된 인덱스로 바꿀 수 있습니다.  
   
@@ -584,7 +584,7 @@ WHERE ProductSubcategoryID = 33 AND ListPrice > 25.00 ;
   
  경우에 따라 필터링된 인덱스는 필터링된 인덱스 식에 필터링된 인덱스 정의의 포괄 열 또는 키로 열을 포함하지 않고 쿼리를 처리합니다. 다음 지침은 필터링된 인덱스 식의 열이 필터링된 인덱스 정의의 포괄 열 또는 키여야 하는 경우에 대해 설명합니다. 이 예에서는 앞에서 만든 필터링된 인덱스 `FIBillOfMaterialsWithEndDate` 를 참조합니다.  
   
- 필터링된 인덱스 식이 쿼리 조건자와 같고 쿼리가 쿼리 결과로 필터링된 인덱스 식의 열을 반환하지 않는다면 필터링된 인덱스 식의 열이 필터링된 인덱스 정의의 포괄 열 또는 키여야 할 필요는 없습니다. 예를 들어 다음 쿼리 조건자가 필터 식과 같고 `FIBillOfMaterialsWithEndDate`가 쿼리 결과로 반환되지 않기 때문에 `EndDate`는 이 쿼리를 처리합니다. `FIBillOfMaterialsWithEndDate` 는 필터링된 인덱스 정의의 포괄 열 또는 키로 `EndDate` 가 필요하지 않습니다.  
+ 필터링된 인덱스 식이 쿼리 조건자와 같고 쿼리가 쿼리 결과로 필터링된 인덱스 식의 열을 반환하지 않는다면 필터링된 인덱스 식의 열이 필터링된 인덱스 정의의 포괄 열 또는 키여야 할 필요는 없습니다. 예를 들어 다음 쿼리 조건자가 필터 식과 같고 `FIBillOfMaterialsWithEndDate` 가 쿼리 결과로 반환되지 않기 때문에 `EndDate` 는 이 쿼리를 처리합니다. `FIBillOfMaterialsWithEndDate` 는 필터링된 인덱스 정의의 포괄 열 또는 키로 `EndDate` 가 필요하지 않습니다.  
   
 ```sql  
 SELECT ComponentID, StartDate FROM Production.BillOfMaterials  
@@ -824,7 +824,7 @@ HASH (Column2) WITH (BUCKET_COUNT = 64);
 
 ### <a name="in-memory-nonclustered-index-architecture"></a>메모리 내 비클러스터형 인덱스 아키텍처
 
-메모리 내 비클러스터형 인덱스는 Bw-트리라고 하는 데이터 구조를 사용하여 구현되며, 2011에 Microsoft Research를 통해 처음으로 고안 및 설명되었습니다. Bw-트리는 잠금 및 래치 없는 B-트리의 변형입니다. 자세한 내용은 [Bw-트리: 새 하드웨어 플랫폼을 위한 B-트리](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/)를 참조하세요. 
+메모리 내 비클러스터형 인덱스는 Bw-트리라고 하는 데이터 구조를 사용하여 구현되며, 2011에 Microsoft Research를 통해 처음으로 고안 및 설명되었습니다. Bw-트리는 잠금 및 래치 없는 B-트리의 변형입니다. 자세한 내용은 [The Bw-Tree: A B-tree for New Hardware Platforms](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/)(Bw-트리: 새 하드웨어 플랫폼에 대한 B-트리)를 참조하세요. 
 
 상위 수준에서 살펴보자면, Bw-트리는 페이지 ID를 통해 구성되는 페이지 맵(PidMap)이자, 페이지 ID를 할당 및 재사용하기 위한 기능(PidAlloc)이자, 페이지 맵에서 연결된 그리고 서로 연결된 페이지 집합으로 이해할 수 있습니다. 이러한 세 가지 상위 수준의 하위 구성 요소가 Bw-트리의 기본 내부 구조를 구성합니다.
 
@@ -858,7 +858,7 @@ Bw-트리의 인덱스 페이지는 단일 행부터 최대 8KB까지 저장하�
 
 **1단계:** 새 페이지 P1 및 P2를 할당하고, 새로 삽입된 행을 포함하여 기존 P1 페이지의 행을 새 페이지로 분할합니다. 페이지 매핑 테이블의 새 슬롯은 페이지 P2의 실제 주소를 저장하는 데 사용됩니다. 이러한 P1 및 P2 페이지는 아직 동시 작업에 액세스할 수 없습니다. 또한 P1에서 P2로 논리 포인터가 설정됩니다. 그런 다음 한 원자성 단계에서 페이지 매핑 테이블을 업데이트하여 포인터를 기존 P1에서 새 P1으로 변경합니다. 
 
-**2단계:** 비-리프 페이지는 P1을 가리키지만 비-리프 페이지에서 P2로 이어지는 직접 포인터는 없습니다. P2는 P1을 통해서만 도달할 수 있습니다. 비-리프 페이지에서 P2로 이어지는 포인터를 만들려면 새로운 비-리프 페이지(내부 인덱스 페이지)를 할당하고, 이전 비-리프 페이지의 모든 행을 복사하고, P2를 가리키는 새 행을 추가합니다. 이 작업이 완료되면 한 원자성 단계에서 페이지 매핑 테이블을 업데이트하여 기존 비-리프 페이지에서 새 비-리프 페이지로 포인터를 변경합니다.
+**2단계:** 비-리프 페이지는 P1을 가리키지만, 비-리프 페이지에서 P2로 이어지는 직접 포인터는 없습니다. P2는 P1을 통해서만 도달할 수 있습니다. 비-리프 페이지에서 P2로 이어지는 포인터를 만들려면 새로운 비-리프 페이지(내부 인덱스 페이지)를 할당하고, 이전 비-리프 페이지의 모든 행을 복사하고, P2를 가리키는 새 행을 추가합니다. 이 작업이 완료되면 한 원자성 단계에서 페이지 매핑 테이블을 업데이트하여 기존 비-리프 페이지에서 새 비-리프 페이지로 포인터를 변경합니다.
 
 #### <a name="merge-page"></a>페이지 병합
 `DELETE` 작업의 결과로 최대 페이지 크기의 10% 미만인 페이지(현재 8KB) 또는 단일 행이 포함된 페이지가 생성되는 경우 해당 페이지는 인접한 페이지와 병합됩니다.

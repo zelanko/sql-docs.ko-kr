@@ -1,7 +1,7 @@
 ---
 title: 추적 플래그(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2019
+ms.date: 01/15/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 90f27a36b455b4c0b497b43d5b302684a1a7a9ba
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: f57bd4ef770d4958c09bd54fb19718e8e8c641df
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206469"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361693"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 추적 플래그(Transact-SQL)
 
@@ -145,6 +145,7 @@ ms.locfileid: "54206469"
 |**9488**|<a name="9488"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지의 버전에 있는 쿼리 최적화 프로그램 카디널리티 추정 모델을 사용하는 경우 테이블 반환 함수에 대한 고정 추정값을 기본값인 1([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 및 이전 버전의 쿼리 최적화 프로그램 카디널리티 추정 모델에서의 기본값에 해당)로 설정합니다.<br /><br />**범위**: 전역, 세션 또는 쿼리|
 |**9495**|INSERT...SELECT 작업에 대한 삽입 중에 병렬 처리를 사용하지 않도록 설정하고, 사용자 및 임시 테이블 모두에 적용됩니다. 자세한 내용은 [Microsoft 지원 문서](https://support.microsoft.com/kb/3180087)를 참조하세요.<br /><br />**범위**: 전역 또는 세션| 
 |**9567**|자동 시드 중에 Always On 가용성 그룹에 대한 데이터 스트림 압축을 사용하도록 설정합니다. 압축은 자동 시드 중에 전송 시간을 크게 줄일 수 있으며 프로세서에 대한 로드를 늘려줍니다. 자세한 내용은 [Always On 가용성 그룹 자동 초기화](../../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md) 및 [가용성 그룹에 대한 압축 조정](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)을 참조하세요.<br /><br />**범위**: 전역 또는 세션|
+|**9571**|기본 데이터베이스 경로에 대한 가용성 그룹 자동 시딩을 사용하지 않도록 설정합니다. 자세한 내용은 [디스크 레이아웃](../../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md)을 참조하세요.<br /><br />**범위**: 전역 또는 세션| 
 |**9591**|Always On 가용성 그룹에서 로그 블록 압축을 사용하지 않도록 설정합니다. 로그 블록 압축은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 동기 및 비동기 복제본 모두에 사용되는 기본 동작입니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 압축은 비동기 복제에서만 사용됩니다. <br /><br />**범위**: 전역 또는 세션|
 |**9592**|동기 가용성 그룹에 대해 로그 스트림 압축을 사용하도록 설정합니다. 압축은 대기 시간을 추가하므로 이 기능은 기본적으로 동기 가용성 그룹에서 사용하지 않도록 해제되어 있습니다. 자세한 내용은 [가용성 그룹에 대한 압축 조정](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)을 참조하세요.<br /><br />**범위**: 전역 또는 세션| 
 |**9929**|메모리 내(In-Memory) 검사점 파일을 각각 1MB로 줄입니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/3147012)를 참조하세요.<br /><br />**범위**: 전역만|  

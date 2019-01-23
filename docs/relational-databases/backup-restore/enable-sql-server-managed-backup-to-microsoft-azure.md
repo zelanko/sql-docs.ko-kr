@@ -11,12 +11,12 @@ ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7ef52db1ccafaeaf9539974032da3622b23838c4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ab667a25583a8415d44cbc40f1116cac2fb254c3
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787095"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326624"
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure에 대한 SQL Server Managed Backup 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "52787095"
   
 1.  **Azure에 등록:** 이미 Azure 구독이 있는 경우 다음 단계로 이동합니다. 그렇지 않을 경우 [무료 평가판](https://azure.microsoft.com/pricing/free-trial/) 으로 시작한 후에 [구매 옵션](https://azure.microsoft.com/pricing/purchase-options/)을 살펴볼 수 있습니다.  
   
-2.  **Azure 스토리지 계정 만들기:** 이미 스토리지 계정이 있는 경우 다음 단계로 이동합니다. 그렇지 않을 경우 [Azure 관리 포털](https://manage.windowsazure.com/) 또는 Azure PowerShell을 사용하여 저장소 계정을 만들 수 있습니다. 다음 `New-AzureStorageAccount` 명령은 미국 동부 지역에 `managedbackupstorage` 라는 저장소 계정을 만듭니다.  
+2.  **Azure 스토리지 계정 만들기:** 이미 스토리지 계정이 있는 경우 다음 단계로 이동합니다. 그렇지 않을 경우 [Azure 관리 포털](https://manage.windowsazure.com/) 또는 Azure PowerShell을 사용하여 스토리지 계정을 만들 수 있습니다. 다음 `New-AzureStorageAccount` 명령은 미국 동부 지역에 `managedbackupstorage` 라는 스토리지 계정을 만듭니다.  
   
     ```powershell  
     New-AzureStorageAccount -StorageAccountName "managedbackupstorage" -Location "EAST US"  
     ```  
   
-     저장소 계정에 대한 자세한 내용은 [Azure Storage 계정](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)을 참조하세요.  
+     스토리지 계정에 대한 자세한 내용은 [Azure Storage 계정](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)을 참조하세요.  
   
-3.  **백업 파일에 대한 Blob 컨테이너 만들기:** Azure Management Portal 포털에서 또는 Azure PowerShell을 사용하여 Blob 컨테이너를 만들 수 있습니다. 다음 `New-AzureStorageContainer` 명령은 `backupcontainer` 저장소 계정에 `managedbackupstorage` 라는 Blob 컨테이너를 만듭니다.  
+3.  **백업 파일에 대한 Blob 컨테이너 만들기:** Azure Management Portal 포털에서 또는 Azure PowerShell을 사용하여 Blob 컨테이너를 만들 수 있습니다. 다음 `New-AzureStorageContainer` 명령은 `backupcontainer` 스토리지 계정에 `managedbackupstorage` 라는 Blob 컨테이너를 만듭니다.  
   
     ```powershell  
     $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary  
@@ -54,11 +54,11 @@ ms.locfileid: "52787095"
     $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary   
     New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context  
     ```  
-    AzureRM의 경우 다음 명령을 사용합니다.
+    Azure에서 다음 명령을 사용합니다.
        ```powershell
-    Connect-AzureRmAccount
-    Set-AzureRmContext -SubscriptionId "YOURSUBSCRIPTIONID"
-    $StorageAccountKey = (Get-AzureRmStorageAccountKey -ResourceGroupName YOURRESOURCEGROUPFORTHESTORAGE -Name managedbackupstorage)[0].Value
+    Connect-AzAccount
+    Set-AzContext -SubscriptionId "YOURSUBSCRIPTIONID"
+    $StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName YOURRESOURCEGROUPFORTHESTORAGE -Name managedbackupstorage)[0].Value
     $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey $StorageAccountKey 
     New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context
    ```  
