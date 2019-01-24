@@ -1,57 +1,76 @@
-- name: 고가용성 솔루션
-  href: high-availability-solutions-sql-server.md
-- name: '자동 페이지 복구(가용성 그룹: 데이터베이스 미러링)'
-  href: automatic-page-repair-availability-groups-database-mirroring.md
-- name: 역할 전환 후 로그인 및 작업 관리
-  href: management-of-logins-and-jobs-after-role-switching-sql-server.md
-- name: 분리된 사용자 문제 해결
-  href: troubleshoot-orphaned-users-sql-server.md
-- name: 장애 조치 클러스터 설치
-  href: install/sql-server-failover-cluster-installation.md
-- name: SQL Server의 WSFC(Windows Server 장애 조치(Failover) 클러스터링)
+- name: 개요
   href: windows/windows-server-failover-clustering-wsfc-with-sql-server.md
   items:
-    - name: WSFC 쿼럼 모드 및 투표 구성
-      href: windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
+    - name: Always On 장애 조치(failover) 클러스터 인스턴스
+      href: windows/always-on-failover-cluster-instances-sql-server.md
+- name: 방법
+  items:
+    - name: 배포
       items:
-        - name: 클러스터 쿼럼 NodeWeight 설정 보기
-          href: windows/view-cluster-quorum-nodeweight-settings.md
+        - name: 설치 전
+          href: install/before-installing-failover-clustering.md
+        - name: 설치
+          href: install/sql-server-failover-cluster-installation.md
+        - name: 클러스터 만들기
+          href: install/create-a-new-sql-server-failover-cluster-setup.md
+        - name: 장애 조치(failover) 클러스터에 클라이언트 도구 설치
+          href: install/install-client-tools-on-a-sql-server-failover-cluster.md
+        - name: 노드 추가 또는 제거
+          href: install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md
+        - name: 장애 조치(Failover) 클러스터 제거
+          href: install/remove-a-sql-server-failover-cluster-instance-setup.md
+        - name: 장애 조치(Failover) 클러스터 인스턴스 업그레이드
+          href: windows/upgrade-a-sql-server-failover-cluster-instance.md
+          items:
+            - name: SQL Server 장애 조치(failover) 클러스터 인스턴스 업그레이드
+              href: windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
+            - name: SQL Server 장애 조치(Failover) 클러스터 인스턴스 업그레이드(Windows Server 2008/2008 R2/2012)
+              href: windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md
+    - name: Configuration
+      items:
+        - name: 장애 조치(failover) 클러스터 이름 바꾸기
+          href: install/rename-a-sql-server-failover-cluster-instance.md
+        - name: SQL Server 리소스에 종속성 추가
+          href: windows/add-dependencies-to-a-sql-server-resource.md
         - name: 클러스터 쿼럼 NodeWeight 설정 구성
           href: windows/configure-cluster-quorum-nodeweight-settings.md
-    - name: 강제 쿼럼을 통해 WSFC 재해 복구
-      href: windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md
-      items:
-        - name: 쿼럼 없이 WSFC 클러스터 강제 시작
-          href: windows/force-a-wsfc-cluster-to-start-without-a-quorum.md
-    - name: SQL Server 다중 서브넷 클러스터링
-      href: windows/sql-server-multi-subnet-clustering-sql-server.md
-    - name: 장애 조치(Failover) 클러스터 문제 해결
-      href: windows/failover-cluster-troubleshooting.md
-- name: Always On 장애 조치(failover) 클러스터 인스턴스
-  href: windows/always-on-failover-cluster-instances-sql-server.md
-  items:
-    - name: 장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책
-      href: windows/failover-policy-for-failover-cluster-instances.md
-      items:
+        - name: 장애 조치(failover) 클러스터 인스턴스의 IP 주소 변경
+          href: windows/change-the-ip-address-of-a-failover-cluster-instance.md
         - name: HealthCheckTimeout 속성 설정 구성
           href: windows/configure-healthchecktimeout-property-settings.md
         - name: FailureConditionLevel 속성 설정 구성
           href: windows/configure-failureconditionlevel-property-settings.md
+    - name: 관리
+      items:
+        - name: 클러스터 쿼럼 NodeWeight 설정 보기
+          href: windows/view-cluster-quorum-nodeweight-settings.md
+        - name: 강제 쿼럼을 통해 WSFC 재해 복구
+          href: windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md
+        - name: 쿼럼 없이 WSFC 클러스터 강제 시작
+          href: windows/force-a-wsfc-cluster-to-start-without-a-quorum.md
+        - name: 장애 조치(Failover) 클러스터 문제 해결
+          href: windows/failover-cluster-troubleshooting.md
+        - name: 분리된 사용자 문제 해결
+          href: troubleshoot-orphaned-users-sql-server.md
         - name: 장애 조치(failover) 클러스터 인스턴스 진단 로그 보기 및 읽기
           href: windows/view-and-read-failover-cluster-instance-diagnostics-log.md
-    - name: 장애 조치(failover) 클러스터 인스턴스 관리 및 유지 관리
-      href: windows/failover-cluster-instance-administration-and-maintenance.md
-      items:
-        - name: SQL Server 리소스에 종속성 추가
-          href: windows/add-dependencies-to-a-sql-server-resource.md
+        - name: 장애 조치(failover) 클러스터 인스턴스 관리 및 유지 관리
+          href: windows/failover-cluster-instance-administration-and-maintenance.md
         - name: 장애 조치(failover) 클러스터 인스턴스 오류 복구
           href: windows/recover-from-failover-cluster-instance-failure.md
-        - name: 장애 조치(failover) 클러스터 인스턴스의 IP 주소 변경
-          href: windows/change-the-ip-address-of-a-failover-cluster-instance.md
-    - name: SQL Server 장애 조치(failover) 클러스터 인스턴스 업그레이드
-      href: windows/upgrade-a-sql-server-failover-cluster-instance.md
+- name: 개념
+  items:
+    - name: Configuration
       items:
-        - name: SQL Server 장애 조치(Failover) 클러스터 인스턴스 업그레이드(설치)
-          href: windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
-        - name: SQL Server 장애 조치(Failover) 클러스터 인스턴스 업그레이드(Windows Server 2008/2008 R2/2012)
-          href: windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md
+        - name: WSFC 쿼럼 모드 및 투표 구성
+          href: windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
+        - name: SQL Server 다중 서브넷 클러스터링
+          href: windows/sql-server-multi-subnet-clustering-sql-server.md
+        - name: 장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책
+          href: windows/failover-policy-for-failover-cluster-instances.md
+    - name: 관리
+      items:
+        - name: 자동 페이지 복구
+          href: automatic-page-repair-availability-groups-database-mirroring.md
+        - name: 역할 전환 후 로그인 및 작업 관리
+          href: management-of-logins-and-jobs-after-role-switching-sql-server.md

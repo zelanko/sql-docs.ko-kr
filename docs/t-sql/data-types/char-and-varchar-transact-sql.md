@@ -52,7 +52,7 @@ ms.locfileid: "54299390"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 멀티바이트 인코딩에는 다음이 포함됩니다.
 -   코드 페이지 936 및 950(중국어), 932(일본어) 또는 949(한국어)를 사용하는 일부 동아시아 언어의 경우 DBCS(더블바이트 문자 집합)입니다.
--   코드 페이지가 65001인 UTF-8입니다. **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작))
+-   코드 페이지가 65001인 UTF-8입니다. **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작))
 
 여러 언어를 지원하는 사이트가 있는 경우:
 - [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 부터 UTF-8 사용 데이터 정렬을 사용하여 유니코드를 지원하고 문자 변환 문제를 최소화하세요. 

@@ -215,13 +215,13 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 
 DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 또는 명령문 범위에서 다중 명령문 테이블 값 함수에 대해 인터리브된 실행을 사용하거나 사용하지 않도록 설정할 수 있습니다. 인터리브된 실행은 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]의 적응 쿼리 처리의 일부인 기능입니다. 자세한 내용은 [적응 쿼리 처리](../../relational-databases/performance/adaptive-query-processing.md)를 참조하세요.
 
 DISABLE_BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 또는 명령문 범위에서 적응형 조인을 사용하거나 사용하지 않도록 설정할 수 있습니다. 적응형 조인은 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에서 도입된 [적응 쿼리 처리](../../relational-databases/performance/adaptive-query-processing.md)의 일부인 기능입니다.
 
@@ -271,7 +271,7 @@ ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 ### <a name="dacfx"></a>DacFx
 
-`ALTER DATABASE SCOPED CONFIGURATION`은 데이터베이스 스키마에 영향을 주는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 시작)의 새 기능이므로 스키마(데이터 유무에 상관없이)를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이전 버전(예: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])으로 내보낼 수 없습니다. 예를 들어 이 새로운 기능이 사용되는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 데이터베이스에서 [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) 또는 [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4)로 내보내기를 하위 수준 서버로 가져올 수 없게 됩니다.
+`ALTER DATABASE SCOPED CONFIGURATION`은 데이터베이스 스키마에 영향을 주는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 시작)의 새 기능이므로 스키마(데이터 유무에 상관없이)를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이전 버전(예: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])으로 내보낼 수 없습니다. 예를 들어 이 새로운 기능이 사용되는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 데이터베이스에서 [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) 또는 [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4)로 내보내기를 하위 수준 서버로 가져올 수 없게 됩니다.
 
 ### <a name="elevateonline"></a>ELEVATE_ONLINE
 
@@ -356,7 +356,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 ```
 
 ### <a name="g-set-identitycache"></a>G. IDENTITY_CACHE 설정
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
 
 이 예제는 ID 캐시를 비활성화합니다.
 
