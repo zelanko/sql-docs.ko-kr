@@ -1,7 +1,7 @@
 ---
 title: sys.query_store_plan (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 01/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea7c955718dbe6d2437b44b915057fc095151dc4
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 8a1b27787c1b987c4fc881c3d1e170efae937670
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419798"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838100"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -43,20 +43,20 @@ ms.locfileid: "54419798"
 |**compatibility_level**|**smallint**|쿼리에서 참조 하는 데이터베이스의 데이터베이스 호환성 수준입니다.|  
 |**query_plan_hash**|**binary(8)**|개별 계획의 MD5 해시입니다.|  
 |**query_plan**|**nvarchar(max)**|쿼리 계획에 대 한 Showplan XML입니다.|  
-|**is_online_index_plan**|**bit**|온라인 인덱스 작성 중 계획 사용 되었습니다.|  
-|**is_trivial_plan**|**bit**|계획은 간단한 계획 (쿼리 최적화 프로그램의 0 단계에서 출력).|  
-|**is_parallel_plan**|**bit**|계획은 병렬입니다.|  
-|**is_forced_plan**|**bit**|계획에는 사용자는 저장된 프로시저를 실행 하는 경우 강제 하는 것으로 표시 됩니다 **sys.sp_query_store_force_plan**합니다. 적용 메커니즘 *보장 하지 않습니다* 정확 하 게이 계획에서 참조 하는 쿼리에 대 한 사용할 수 있는지 **query_id**합니다. 계획 강제 적용 하면 다시 컴파일해야 하는 쿼리 및 일반적으로 정확 하 게 동일 하거나 유사한 계획을 참조 하는 계획을 생성 **plan_id**합니다. 계획 강제 적용 성공 하지 못하면 **force_failure_count** 증가 하 고 **last_force_failure_reason** 실패 이유를 사용 하 여 채워집니다.|  
-|**is_natively_compiled**|**bit**|계획에 고유 하 게 컴파일된 메모리 액세스에 최적화 된 프로시저를 포함 합니다. (0 = FALSE, 1 = TRUE).|  
-|**force_failure_count**|**bigint**|이 계획을 강제 적용에 실패 한 횟수 만큼 합니다. 쿼리를 다시 컴파일할 때에 증가할 수 있습니다 (*모든 실행에 없는*). 이 0으로 다시 설정 될 때마다 **is_plan_forced** 에서 변경 되었습니다 **FALSE** 하 **TRUE**합니다.|  
-|**last_force_failure_reason**|**int**|계획 강제 적용에 실패 한 이유입니다.<br /><br /> 0: 없음 오류, 실패를 강제로 발생 시킨 오류의 오류 번호가 고 그렇지<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<다른 값 >: GENERAL_FAILURE|  
-|**last_force_failure_reason_desc**|**nvarchar(128)**|Last_force_failure_reason_desc의 텍스트 설명입니다.<br /><br /> 대상 테이블에 인덱스가 온라인 빌드되는 동안 데이터를 수정 하 ONLINE_INDEX_BUILD: 쿼리 시도<br /><br /> INVALID_STARJOIN: 계획 잘못 StarJoin 사양이 들어 있습니다.<br /><br /> TIME_OUT: 강제 계획에 의해 지정 된 계획을 검색 하는 동안 허용된 작업 수를 초과 하는 최적화 프로그램은<br /><br /> NO_DB: 계획에 지정 된 데이터베이스가 존재 하지 않는<br /><br /> HINT_CONFLICT: 계획 쿼리 힌트와 충돌 하므로 쿼리를 컴파일할 수 없습니다.<br /><br /> DQ_NO_FORCING_SUPPORTED: 계획의 분산된 쿼리 또는 전체 텍스트 작업 사용과 충돌 하므로 쿼리를 실행할 수 없습니다.<br /><br /> NO_PLAN: 쿼리에 대 한 유효한 것으로 강제 계획을 확인할 수 없습니다. 때문에 쿼리 프로세서에서 쿼리 계획 생성할 수 없습니다.<br /><br /> NO_INDEX: 더 이상 계획에 지정 된 인덱스에 있습니다<br /><br /> VIEW_COMPILE_FAILED: 계획에서 참조 된 인덱싱된 뷰에 문제가 있으므로 쿼리 계획을 적용할 수 없습니다.<br /><br /> GENERAL_FAILURE: 일반 강제 오류 (위의 이유를 사용 하 여 다루지 않음)|  
+|**is_online_index_plan**|**bit**|온라인 인덱스 작성 중 계획 사용 되었습니다. <br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|  
+|**is_trivial_plan**|**bit**|계획은 간단한 계획 (쿼리 최적화 프로그램의 0 단계에서 출력). <br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|  
+|**is_parallel_plan**|**bit**|계획은 병렬입니다. <br/>**참고:** Azure SQL Data Warehouse는 (1)는 항상 반환 됩니다.|  
+|**is_forced_plan**|**bit**|계획에는 사용자는 저장된 프로시저를 실행 하는 경우 강제 하는 것으로 표시 됩니다 **sys.sp_query_store_force_plan**합니다. 적용 메커니즘 *보장 하지 않습니다* 정확 하 게이 계획에서 참조 하는 쿼리에 대 한 사용할 수 있는지 **query_id**합니다. 계획 강제 적용 하면 다시 컴파일해야 하는 쿼리 및 일반적으로 정확 하 게 동일 하거나 유사한 계획을 참조 하는 계획을 생성 **plan_id**합니다. 계획 강제 적용 성공 하지 못하면 **force_failure_count** 증가 하 고 **last_force_failure_reason** 실패 이유를 사용 하 여 채워집니다. <br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|  
+|**is_natively_compiled**|**bit**|계획에 고유 하 게 컴파일된 메모리 액세스에 최적화 된 프로시저를 포함 합니다. (0 = FALSE, 1 = TRUE). <br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|  
+|**force_failure_count**|**bigint**|이 계획을 강제 적용에 실패 한 횟수 만큼 합니다. 쿼리를 다시 컴파일할 때에 증가할 수 있습니다 (*모든 실행에 없는*). 이 0으로 다시 설정 될 때마다 **is_plan_forced** 에서 변경 되었습니다 **FALSE** 하 **TRUE**합니다. <br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|  
+|**last_force_failure_reason**|**int**|계획 강제 적용에 실패 한 이유입니다.<br /><br /> 0: 없음 오류, 실패를 강제로 발생 시킨 오류의 오류 번호가 고 그렇지<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<다른 값 >: GENERAL_FAILURE <br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|  
+|**last_force_failure_reason_desc**|**nvarchar(128)**|Last_force_failure_reason_desc의 텍스트 설명입니다.<br /><br /> 대상 테이블에 인덱스가 온라인 빌드되는 동안 데이터를 수정 하 ONLINE_INDEX_BUILD: 쿼리 시도<br /><br /> INVALID_STARJOIN: 계획 잘못 StarJoin 사양이 들어 있습니다.<br /><br /> TIME_OUT: 강제 계획에 의해 지정 된 계획을 검색 하는 동안 허용된 작업 수를 초과 하는 최적화 프로그램은<br /><br /> NO_DB: 계획에 지정 된 데이터베이스가 존재 하지 않는<br /><br /> HINT_CONFLICT: 계획 쿼리 힌트와 충돌 하므로 쿼리를 컴파일할 수 없습니다.<br /><br /> DQ_NO_FORCING_SUPPORTED: 계획의 분산된 쿼리 또는 전체 텍스트 작업 사용과 충돌 하므로 쿼리를 실행할 수 없습니다.<br /><br /> NO_PLAN: 쿼리에 대 한 유효한 것으로 강제 계획을 확인할 수 없습니다. 때문에 쿼리 프로세서에서 쿼리 계획 생성할 수 없습니다.<br /><br /> NO_INDEX: 더 이상 계획에 지정 된 인덱스에 있습니다<br /><br /> VIEW_COMPILE_FAILED: 계획에서 참조 된 인덱싱된 뷰에 문제가 있으므로 쿼리 계획을 적용할 수 없습니다.<br /><br /> GENERAL_FAILURE: 일반 강제 오류 (위의 이유를 사용 하 여 다루지 않음) <br/>**참고:** Azure SQL Data Warehouse는 항상 반환 *NONE*합니다.|  
 |**count_compiles**|**bigint**|컴파일 통계를 계획 합니다.|  
 |**initial_compile_start_time**|**datetimeoffset**|컴파일 통계를 계획 합니다.|  
 |**last_compile_start_time**|**datetimeoffset**|컴파일 통계를 계획 합니다.|  
 |**last_execution_time**|**datetimeoffset**|마지막 실행 시간을 참조 마지막 쿼리/계획의 종료 시간입니다.|  
-|**avg_compile_duration**|**float**|컴파일 통계를 계획 합니다.|  
-|**last_compile_duration**|**bigint**|컴파일 통계를 계획 합니다.|  
+|**avg_compile_duration**|**float**|컴파일 통계를 계획 합니다. <br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|  
+|**last_compile_duration**|**bigint**|컴파일 통계를 계획 합니다. <br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|  
 |**plan_forcing_type**|**int**|형식 강제 계획입니다.<br /><br />0: 없음<br /><br />1: MANUAL<br /><br />2: AUTO|  
 |**plan_forcing_type_desc**|**nvarchar(60)**|Plan_forcing_type의 텍스트 설명입니다.<br /><br />NONE: 계획 강제 적용 되지 않습니다<br /><br />수동: 사용자가 강제 적용 된 계획<br /><br />자동: 자동 조정에서 강제 계획|  
 

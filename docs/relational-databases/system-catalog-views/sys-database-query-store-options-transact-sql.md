@@ -1,7 +1,7 @@
 ---
 title: sys.database_query_store_options (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 01/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,30 +22,30 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cef670e97387c2eb4b9493fc1303e36a742f89bc
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: ca46886ab9648142bb79863dad0818033c2ce0a1
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53265931"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838110"
 ---
 # <a name="sysdatabasequerystoreoptions-transact-sql"></a>sys.database_query_store_options (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   이 데이터베이스에 대 한 쿼리 저장소 옵션을 반환 합니다.  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**desired_state**|**smallint**|사용자가 명시적으로 설정 되는 쿼리 저장소의 원하는 작업 모드를 나타냅니다.<br /> 0 = OFF <br /> 1 = READ_ONLY<br /> 2 = READ_WRITE|  
 |**desired_state_desc**|**nvarchar(60)**|쿼리 저장소의 원하는 작업 모드의 텍스트 설명:<br />OFF<br />READ_ONLY<br />READ_WRITE|  
-|**actual_state**|**smallint**|쿼리 저장소의 작업 모드를 나타냅니다. 사용자가 필요한 원하는 상태의 목록 외에도 실제 상태는 오류 상태를 수 있습니다.<br /> 0 = OFF <br /> 1 = READ_ONLY<br /> 2 = READ_WRITE<br /> 3 = 오류|  
-|**actual_state_desc**|**nvarchar(60)**|쿼리 저장소의 실제 작업 모드의 텍스트 설명입니다.<br />OFF<br />READ_ONLY<br />READ_WRITE<br />error<br /><br /> 실제 상태가 필요한 상태에서 다른 경우가 있습니다.<br /><br /> 쿼리 저장소는 읽기 / 쓰기 사용자가 지정 된 경우에 읽기 전용 모드에서 작동할 수 있습니다. 예를 들어, 쿼리 저장소 크기 할당량을 초과 하는 경우 또는 데이터베이스 읽기 전용 모드인 경우에 발생할 수 있습니다.<br /><br /> 매우 드물게 쿼리 저장소에에서 놓일 수도 오류 상태 내부 오류가 발생 합니다. 이 경우 쿼리 저장소를 실행 하 여 복구할 수 없어서 **sp_query_store_consistency_check** 영향을 받는 데이터베이스 내에서 프로시저를 저장 합니다.|  
+|**actual_state**|**smallint**|쿼리 저장소의 작업 모드를 나타냅니다. 사용자가 필요한 원하는 상태의 목록 외에도 실제 상태는 오류 상태를 수 있습니다.<br /> 0 = OFF <br /> 1 = READ_ONLY<br /> 2 = READ_WRITE<br /> 3 = ERROR|  
+|**actual_state_desc**|**nvarchar(60)**|쿼리 저장소의 실제 작업 모드의 텍스트 설명입니다.<br />OFF<br />READ_ONLY<br />READ_WRITE<br />ERROR<br /><br /> 실제 상태가 필요한 상태에서 다른 경우가 있습니다.<br /><br /> 쿼리 저장소는 읽기 / 쓰기 사용자가 지정 된 경우에 읽기 전용 모드에서 작동할 수 있습니다. 예를 들어, 쿼리 저장소 크기 할당량을 초과 하는 경우 또는 데이터베이스 읽기 전용 모드인 경우에 발생할 수 있습니다.<br /><br /> 매우 드물게 쿼리 저장소에에서 놓일 수도 오류 상태 내부 오류가 발생 합니다. 이 경우 쿼리 저장소를 실행 하 여 복구할 수 없어서 **sp_query_store_consistency_check** 영향을 받는 데이터베이스 내에서 프로시저를 저장 합니다.|  
 |**readonly_reason**|**int**|경우는 **desired_state_desc** READ_WRITE입니다와 **actual_state_desc** READ_ONLY,입니다 **readonly_reason** 반환 쿼리 저장소에 이유를 나타내려면 매핑할 약간 읽기 전용 모드입니다.<br /><br /> 1-데이터베이스가 읽기 전용 모드<br /><br /> 2-데이터베이스가 단일 사용자 모드<br /><br /> 4-데이터베이스가 응급 모드<br /><br /> 8-데이터베이스는 보조 복제본 (Always On 및 Azure에 적용 됩니다 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 지역에서 복제). 이 값에만 효과적으로 확인할 수 있습니다 **읽을 수 있는** 보조 복제본<br /><br /> 65536-쿼리 저장소 MAX_STORAGE_SIZE_MB 옵션으로 설정 된 크기 제한에 도달 했습니다.<br /><br /> 131072 쿼리 저장소에서 다른 문-수에는 내부 메모리 제한에 도달 했습니다. 필요 하지 않은 쿼리를 제거 하거나 쿼리 저장소를 읽기-쓰기 모드로 전송할 수 있도록 더 높은 서비스 계층으로 업그레이드 하는 것이 좋습니다.<br />[!INCLUDE[ssSDS](../../includes/sssds-md.md)]에만 적용됩니다.<br /><br /> 262144-디스크에 유지 하려고 대기 하는 메모리 내 항목의 크기에는 내부 메모리 제한에 도달 했습니다. 쿼리 저장소 디스크에 유지 되는 메모리 내 항목이 때까지 일시적으로 읽기 전용 모드로 됩니다. <br />[!INCLUDE[ssSDS](../../includes/sssds-md.md)]에만 적용됩니다.<br /><br />524288 데이터베이스에는 디스크 크기 제한에 도달 했습니다. 쿼리 저장소 이므로 사용자 데이터베이스에 포함 하는 것을 의미 하는 데이터베이스에 더 이상 사용 가능한 공간이 쿼리 저장소가 더 커질 수 없습니다 더 이상.<br />[!INCLUDE[ssSDS](../../includes/sssds-md.md)]에만 적용됩니다. <br /> <br /> 쿼리 저장소 작업을 전환할 모드로 다시 읽기 / 쓰기를 참조 하십시오 **확인 쿼리 저장소에서 쿼리 데이터가 계속 수집** 부분 [쿼리 저장소 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md)합니다.|  
 |**current_storage_size_mb**|**bigint**|쿼리 저장소의 디스크 크기를 메가바이트에서입니다.|  
 |**flush_interval_seconds**|**bigint**|디스크에 쿼리 저장소 데이터의 일반 플러시에 대 한 기간을 정의 합니다. 기본값은 900 (15 분)입니다.<br /><br /> 사용 하 여 변경 된 `ALTER DATABASE <database> SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS  = <interval>)` 문입니다.|  
-|**interval_length_minutes**|**bigint**|통계 집계 간격입니다. 임의의 값이 허용 되지 않습니다. 다음 중 하나를 사용 합니다. 1, 5, 10, 15, 30, 60 및 1440 분. 기본값은 60 분입니다.|  
+|**interval_length_minutes**|**bigint**|통계 집계 간격입니다. 임의의 값이 허용 되지 않습니다. 다음 중 하나를 사용합니다. 1, 5, 10, 15, 30, 60 및 1440 분. 기본값은 60 분입니다.|  
 |**max_storage_size_mb**|**bigint**|쿼리 저장소에 대 한 최대 디스크 크기입니다. 기본값은 100MB입니다.<br />[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition의 경우 기본값은 1Gb이고, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition의 경우 기본값은 10Mb입니다.<br /><br /> 사용 하 여 변경 된 `ALTER DATABASE <database> SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <size>)` 문입니다.|  
 |**stale_query_threshold_days**|**bigint**|정책 설정이 없는지를 사용 하 여 쿼리 하는 일 수는 쿼리 저장소에 보관 됩니다. 기본값은 30입니다. 보존 정책을 사용 하지 않으려면 0으로 설정 합니다.<br />[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 버전의 경우 기본값은 7일입니다.<br /><br /> 사용 하 여 변경 된 `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` 문입니다.|  
 |**max_plans_per_query**|**bigint**|저장 된 계획의 최대 수를 제한합니다. 기본값은 200입니다. 최 댓 값에 도달 하는 경우 쿼리 저장소는 쿼리에 대 한 새 계획을 캡처를 중지 합니다. 캡처된 계획의 수와 관련 하 여 제한 사항을 제거 하는 0으로 설정 합니다.<br /><br /> 사용 하 여 변경 된 `ALTER DATABASE<database> SET QUERY_STORE (MAX_PLANS_PER_QUERY = <n>)` 문입니다.|  
@@ -69,7 +69,7 @@ ms.locfileid: "53265931"
  [sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [관련된 뷰, 함수 및 프로시저](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [sys.fn_stmt_sql_handle_from_sql_stmt &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
+ [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
  [쿼리 저장소 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

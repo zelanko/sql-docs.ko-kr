@@ -1,7 +1,7 @@
 ---
-title: sys.query_store_query_text (TRANSACT-SQL) | Microsoft Docs
+title: sys.query_store_query_text (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 01/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b5fe04b5852eeebc858067505eaa0342ad8cb87
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: e41eca10cf5db5e34b5e9e9122eb56a1a236315e
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712244"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838080"
 ---
-# <a name="sysquerystorequerytext-transact-sql"></a>sys.query_store_query_text (Transact SQL)
+# <a name="sysquerystorequerytext-transact-sql"></a>sys.query_store_query_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   포함 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 텍스트 및 쿼리의 SQL 핸들입니다.  
@@ -39,8 +39,8 @@ ms.locfileid: "52712244"
 |**query_text_id**|**bigint**|기본 키입니다.|  
 |**query_sql_text**|**nvarchar(max)**|사용자가 제공한 쿼리의 SQL 텍스트입니다. 공백, 힌트 및 주석을 포함합니다.|  
 |**statement_sql_handle**|**vabinary(64)**|개별 쿼리의 SQL 핸들입니다.|  
-|**is_part_of_encrypted_module**|**bit**|쿼리 텍스트는 암호화 된 모듈의 일부입니다.|  
-|**has_restricted_text**|**bit**|쿼리 텍스트는 암호 또는 기타 unmentionable 단어를 포함합니다.|  
+|**is_part_of_encrypted_module**|**bit**|쿼리 텍스트는 암호화 된 모듈의 일부입니다.<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|
+|**has_restricted_text**|**bit**|쿼리 텍스트는 암호 또는 기타 unmentionable 단어를 포함합니다.<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|
   
 ## <a name="permissions"></a>사용 권한  
  필요 합니다 **VIEW DATABASE STATE** 권한.  

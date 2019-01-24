@@ -1,7 +1,7 @@
 ---
 title: sys.query_store_runtime_stats_interval (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 01/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,24 +22,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d2e7e8805b97c37893f558c0083849f5ed333e0
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: c9c494ab580d94f82587041c5c28ec60e2481e98
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710984"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838030"
 ---
-# <a name="sysquerystoreruntimestatsinterval-transact-sql"></a>sys.query_store_runtime_stats_interval (Transact SQL)
+# <a name="sysquerystoreruntimestatsinterval-transact-sql"></a>sys.query_store_runtime_stats_interval (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   수집 쿼리에 대 한 실행 통계 정보는 런타임 동안 각 간격의 시작 시간과 종료 시간에 대 한 정보가 들어 있습니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**runtime_stats_interval_id**|**bigint**|기본 키입니다.|  
-|**start_time**|**datetimeoffset**|시작 시간 간격입니다.|  
-|**end_time**|**datetimeoffset**|간격의 종료 시간입니다.|  
-|**주석**|**nvarchar(32)**|항상 NULL입니다.|  
+|**runtime_stats_interval_id**|**bigint**|기본 키입니다.|
+|**start_time**|**datetimeoffset**|시작 시간 간격입니다.|
+|**end_time**|**datetimeoffset**|간격의 종료 시간입니다.|
+|**comment**|**nvarchar(32)**|항상 NULL입니다.|
   
 ## <a name="permissions"></a>사용 권한  
  필요 합니다 **VIEW DATABASE STATE** 권한.  
