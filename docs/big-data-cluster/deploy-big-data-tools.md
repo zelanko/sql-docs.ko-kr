@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ab8633ef6741ae1d1a3a973796eec1de0cc12c37
-ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
+ms.openlocfilehash: 0413da85b4f213eb75a1b9ed5d80852663870c74
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54372635"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898959"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>SQL Server 2019 빅 데이터 도구 설치
 
-이 문서에서는 관리를 만들기 위해 설치 해야 하는 클라이언트 도구를 설명 하 고 SQL Server 2019를 사용 하 여 빅 데이터 클러스터 (미리 보기).
+이 문서에서는 관리를 만들기 위해 설치 해야 하는 클라이언트 도구를 설명 하 고 SQL Server 2019를 사용 하 여 빅 데이터 클러스터 (미리 보기). 다음 섹션에는 도구 및 설치 지침에 대 한 링크 목록을 제공합니다. 빅 데이터 클러스터를 배포 하기 전에 구성 도구에 필요 하 고 Windows 또는 Linux를 표시 합니다.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -63,5 +63,10 @@ ms.locfileid: "54372635"
 나머지 도구는 특정 시나리오 에서만 필요 합니다. **Azure CLI** AKS 배포와 관련 된 Azure 서비스 관리에 사용할 수 있습니다. **mssql cli** 는 클러스터의 마스터 SQL Server 인스턴스에 연결 하 고 명령줄에서 쿼리를 실행할 수 있는 선택 사항 이지만 유용한 도구입니다. 및 **sqlcmd** 하 고 **curl** GitHub 스크립트를 사용 하 여 샘플 데이터를 설치 하려는 경우이 필요 합니다.
 
 ## <a name="next-steps"></a>다음 단계
+
+도구를 구성한 후 SQL Server 2019 빅 데이터 클러스터를 클라우드 또는 온-프레미스에서 Kubernetes에 배포 합니다. 자세한 내용은 다음 배포 문서를 참조 하세요.
+
+- [빠른 시작: Azure Kubernetes Service (AKS)에서 SQL Server 빅 데이터 클러스터를 배포 합니다.](quickstart-big-data-cluster-deploy.md)
+- [Kubernetes에서 SQL Server 빅 데이터 클러스터를 배포 하는 방법](deployment-guidance.md)
 
 빅 데이터 클러스터에 대 한 자세한 내용은 참조 하세요. [SQL Server 2019 빅 데이터 클러스터 이란?](big-data-cluster-overview.md)합니다.

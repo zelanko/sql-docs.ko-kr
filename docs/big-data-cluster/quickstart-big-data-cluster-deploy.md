@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 39c79c39c04d64656b83004425d476896cbc75db
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 3495d41028f72093b58f546d3da2139ff02b848d
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241704"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898988"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>빠른 시작: Azure Kubernetes Service (AKS)에서 SQL Server 빅 데이터 클러스터를 배포 합니다.
 
@@ -33,7 +33,7 @@ ms.locfileid: "54241704"
 - Azure 구독입니다.
 - [빅 데이터 도구도](deploy-big-data-tools.md):
    - **mssqlctl**
-   - **Kubectl**
+   - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 확장**
    - **Azure CLI**
@@ -85,7 +85,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **컨트롤러 사용자** | 컨트롤러 사용자의 사용자 이름 (기본값: **관리자**). |
 
    > [!IMPORTANT]
-   > 클러스터의 각 영구적 볼륨 클레임에는 연결된 된 디스크에 필요합니다. 현재 빅 데이터 클러스터 21 영구적 볼륨 클레임을 필요합니다. Azure 가상 머신 크기 및 노드 수를 선택할 때 노드에서 연결할 수 있는 디스크의 총 21 보다 크거나 같은 경우 인지 확인 합니다. 예를 들어, 합니다 [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) 48 디스크를 연결할 수는 3 개의 노드가 의미 하므로 컴퓨터 크기 16 개의 연결 된 디스크를 지원 합니다.
+   > 기본값 **Standard_L4s** 모든 Azure 지역에서 인해 컴퓨터 크기를 사용할 수 있습니다. 다른 컴퓨터 크기 선택 않으면, 클러스터의 노드에서 연결할 수 있는 디스크의 총 21 보다 크거나 같은 경우 인지 확인 합니다. 클러스터의 각 영구적 볼륨 클레임에는 연결된 된 디스크에 필요합니다. 현재 빅 데이터 클러스터 21 영구적 볼륨 클레임을 필요합니다. 예를 들어, 합니다 [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) 48 디스크를 연결할 수는 3 개의 노드가 의미 하므로 컴퓨터 크기 16 개의 연결 된 디스크를 지원 합니다.
 
    > [!NOTE]
    > `sa` 계정은 설치 중에 생성 되는 SQL Server 마스터 인스턴스에서 시스템 관리자입니다. 배포를 만든 후 합니다 `MSSQL_SA_PASSWORD` 실행 하 여 환경 변수를 검색할 수 `echo $MSSQL_SA_PASSWORD` 마스터 인스턴스 컨테이너에 있습니다. 보안상의 이유로 변경에 `sa` 마스터 인스턴스 배포 후에 암호입니다. 자세한 내용은 [SA 암호 변경](../linux/quickstart-install-connect-docker.md#sapassword)합니다.
@@ -236,6 +236,8 @@ az group delete -n <resource group name>
 ```
 
 ## <a name="next-steps"></a>다음 단계
+
+배포 스크립트는 Azure Kubernetes Service를 구성 하 고도 SQL Server 2019 빅 데이터 클러스터를 배포 합니다. 또한 수동 설치를 통해 향후 배포를 사용자 지정할 수 있습니다. 더 어떻게 빅 데이터에 대 한 클러스터 배포 된 배포를 사용자 지정 하는 방법에 대해 알아보려면 [빅 데이터를 SQL Server를 배포 하는 방법에서 kubernetes 클러스터](deployment-guidance.md)합니다.
 
 이제 SQL Server 빅 데이터 클러스터를 배포한 샘플 데이터를 로드 하 고 수 있는 자습서를 탐색 합니다.
 

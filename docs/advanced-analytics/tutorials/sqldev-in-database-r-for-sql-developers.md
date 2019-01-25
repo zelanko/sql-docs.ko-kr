@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8d3235c585d3ea56a64776fde841ccc6d71b1a4d
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 2c9cce03a5a2255353702fd99b8efb6e3e598ad5
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405603"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898978"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>자습서: SQL 개발자를 위한 R 데이터 분석
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -65,4 +65,4 @@ Machine learning 솔루션을 구축 하는 과정이 포함 될 수 있는 여�
 ## <a name="next-steps"></a>다음 단계
 
 > [!div class="nextstepaction"]
-> [NYC Taxi 데이터베이스 설정](demo-data-nyctaxi-in-sql.md)
+> [저장된 프로시저에서 R 함수를 사용 하 여 데이터 탐색 및 시각화](../tutorials/sqldev-explore-and-visualize-the-data.md)
