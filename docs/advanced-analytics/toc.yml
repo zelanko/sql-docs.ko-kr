@@ -94,7 +94,7 @@ items:
     items:
     - name: 파티션 기반 모델 만들기
       href: tutorials/r-tutorial-create-models-per-partition.md
-    - name: SQL 개발자를 위한 데이터베이스 내 분석
+    - name: SQL 개발자를 위한 R
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
       - name: 1 - 데이터 살펴보기
@@ -105,7 +105,7 @@ items:
         href: tutorials/sqldev-train-and-save-a-model-using-t-sql.md
       - name: 4 - 예측
         href: tutorials/sqldev-operationalize-the-model.md
-    - name: 데이터 과학자를 위한 데이터베이스 내 분석
+    - name: R 데이터 과학자를 위한 SQL
       href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
       items:
       - name: 1 - 데이터 살펴보기
@@ -154,7 +154,7 @@ items:
     items:
     - name: revoscalepy를 사용하여 Python 모델 만들기
       href: tutorials/use-python-revoscalepy-to-create-model.md
-    - name: 데이터베이스 내 분석 알아보기
+    - name: SQL 개발자를 위한 Python
       href: tutorials/sqldev-in-database-python-for-sql-developers.md
       items:
       - name: 1 - 데이터 살펴보기
@@ -329,9 +329,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=MicrosoftR
-ms.openlocfilehash: 9e76e68b7b970c64050136b3ae9cb9c486c297c2
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 2f3ba355f5d2cb9a7ddcb60cfa8a59e93a1203de
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046603"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405694"
