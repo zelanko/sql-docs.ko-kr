@@ -186,7 +186,7 @@ CREATE SCHEMA Test ;
 GO  
 ```  
   
-### <a name="a-creating-a-sequence-that-increases-by-1"></a>1. 1씩 증가하는 시퀀스 만들기  
+### <a name="a-creating-a-sequence-that-increases-by-1"></a>A. 1씩 증가하는 시퀀스 만들기  
  다음 예에서는 Thierry라는 사용자가 사용할 때마다 1씩 증가하는 CountBy1이라는 시퀀스를 만듭니다.  
   
 ```sql  
@@ -196,7 +196,7 @@ CREATE SEQUENCE Test.CountBy1
 GO  
 ```  
   
-### <a name="b-creating-a-sequence-that-decreases-by-1"></a>2. 1씩 감소하는 시퀀스 만들기  
+### <a name="b-creating-a-sequence-that-decreases-by-1"></a>B. 1씩 감소하는 시퀀스 만들기  
  다음 예에서는 0부터 시작하여 사용할 때마다 1씩 음수를 계산합니다.  
   
 ```sql  
@@ -206,7 +206,7 @@ CREATE SEQUENCE Test.CountByNeg1
 GO  
 ```  
   
-### <a name="c-creating-a-sequence-that-increases-by-5"></a>3. 5씩 증가하는 시퀀스 만들기  
+### <a name="c-creating-a-sequence-that-increases-by-5"></a>C. 5씩 증가하는 시퀀스 만들기  
  다음 예에서는 사용할 때마다 5씩 증가하는 시퀀스를 만듭니다.  
   
 ```sql  
