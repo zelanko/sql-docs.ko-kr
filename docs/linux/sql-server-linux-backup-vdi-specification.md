@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: c43ec2c3b010d43c25b1b9f2740480952a9e9ff8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d1b002df5c526c4b888bac1b203b54af4e21a3e0
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402328"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044979"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server Linux VDI 클라이언트 SDK 사양
 
@@ -298,6 +298,7 @@ Linux에서 POSIX 기본 형식 및 해당 기본 그룹을 만드는 사용자�
 | |**NOERROR** |함수가 성공했습니다.
 | |**VD_E_PROTOCOL** |가상 장치 집합을 현재 열려 있지 않습니다.
 | |**VD_E_INVALID** |PBuffer를 유효한 주소가 아닙니다.
+
 GetBufferHandle 함수를 호출 하는 프로세스는 데이터 전송이 완료 되 면 ClientVirtualDevice::CompleteCommand 호출에 대 한 설명입니다.
 
 ## <a name="clientvirtualdevicesetmapbufferhandle"></a>ClientVirtualDeviceSet::MapBufferHandle

@@ -13,14 +13,15 @@ ms.assetid: 98db9631-eb9b-4962-abe4-96f495133a5d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d946178453e3db317c92031a34e2a345e9060a8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48dc5dff83e942b894548d44e3673c19ca0746c5
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809621"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044876"
 ---
 # <a name="sqlsetstmtoption-desktop-database-drivers"></a>SQLSetStmtOption(데스크톱 데이터베이스 드라이버)
+
 |*fOption*|주석|  
 |---------------|--------------|  
 |SQL_ASYNC_ENABLE|비동기 처리가 지원 되지 않습니다. SQL_ASYNC_ENABLE fOption SQLSTATE S1C00 반환 됩니다 (드라이버를 사용할 수 없습니다.).|  

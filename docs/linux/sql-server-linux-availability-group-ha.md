@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a76cadf3fafc1980d6600d406b30492b6a6bc2fa
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: a9d09f9f769d195600c8af97b347831340837d91
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031026"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044936"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호
 
@@ -59,12 +59,13 @@ SQL Server 2017 소개를 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 클러�
 
 가용성 그룹 동기 복제본 3 개 읽기-배율, 고가용성 및 데이터 보호를 제공할 수 있습니다. 다음 표에서 가용성 문제를 설명합니다. 
 
-| |읽기-배율|고가용성 & </br> 데이터 보호 | 데이터 보호
-|:---|---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
-|주 중단 | 수동 장애 조치(failover). 데이터 손실이 있을 수 있습니다. 새 주 복제본은 R / W. |자동 장애 조치(failover). 새 주 복제본은 R / W. |자동 장애 조치(failover). 이전의 주 데이터베이스를 복구 하 고 보조로 가용성 그룹에 조인 될 때까지 새 기본 사용자 트랜잭션에 대 한 사용할 수 없는 경우 
-|1개 보조 복제본 중단  | 기본 R은 / W. 기본 경우 자동 장애 조치가 실패 합니다. |기본 R은 / W. 기본 경우 자동 장애 조치가 실패 합니다. | 기본은 사용자 트랜잭션에 대 한 제공 되지 않습니다. 
-<sup>*</sup> 기본
+| |read-scale|고가용성 & </br> 데이터 보호 | 데이터 보호|
+|:---|---|---|---|
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
+|주 중단 | 수동 장애 조치(failover). 데이터 손실이 있을 수 있습니다. 새 주 복제본은 R / W. |자동 장애 조치(failover). 새 주 복제본은 R / W. |자동 장애 조치(failover). 이전의 주 데이터베이스를 복구 하 고 보조로 가용성 그룹에 조인 될 때까지 새 기본 사용자 트랜잭션에 대 한 사용할 수 없는 경우 |
+|1개 보조 복제본 중단  | 기본 R은 / W. 기본 경우 자동 장애 조치가 실패 합니다. |기본 R은 / W. 기본 경우 자동 장애 조치가 실패 합니다. | 기본은 사용자 트랜잭션에 대 한 제공 되지 않습니다. |
+
+<sup>\*</sup> 기본
 
 <a name="twoSynch"></a>
 
@@ -76,15 +77,16 @@ SQL Server 2017 소개를 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 클러�
 
 두 개의 동기 복제본을 사용 하 여 가용성 그룹을 읽기-배율 및 데이터 보호를 제공합니다. 다음 표에서 가용성 문제를 설명합니다. 
 
-| |읽기-배율 |데이터 보호
-|:---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
-|주 중단 | 수동 장애 조치(failover). 데이터 손실이 있을 수 있습니다. 새 주 복제본은 R / W.| 자동 장애 조치(failover). 이전의 주 데이터베이스를 복구 하 고 보조로 가용성 그룹에 조인 될 때까지 새 기본 사용자 트랜잭션에 대 한 사용할 수 없는 경우
-|1개 보조 복제본 중단  |기본은 읽기/쓰기, 데이터 손실 위험에 노출 실행 합니다. |보조 복제본이 복구 될 때까지 기본 사용자 트랜잭션에 대 한 제공 되지 않습니다.
-<sup>*</sup> 기본
+| |read-scale |데이터 보호|
+|:---|---|---|
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
+|주 중단 | 수동 장애 조치(failover). 데이터 손실이 있을 수 있습니다. 새 주 복제본은 R / W.| 자동 장애 조치(failover). 이전의 주 데이터베이스를 복구 하 고 보조로 가용성 그룹에 조인 될 때까지 새 기본 사용자 트랜잭션에 대 한 사용할 수 없는 경우|
+|1개 보조 복제본 중단  |기본은 읽기/쓰기, 데이터 손실 위험에 노출 실행 합니다. |보조 복제본이 복구 될 때까지 기본 사용자 트랜잭션에 대 한 제공 되지 않습니다.|
 
->[!NOTE]
->앞의 시나리오에는 SQL Server 2017 CU 1 하기 전에 동작입니다. 
+<sup>\*</sup> 기본
+
+> [!NOTE]
+> 앞의 시나리오에는 SQL Server 2017 CU 1 하기 전에 동작입니다. 
 
 <a name = "configOnly"></a>
 
@@ -99,38 +101,39 @@ SQL Server 2017 소개를 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 클러�
 
 다이어그램은 가용성 그룹 주 복제본 구성 전용 복제본 및 보조 복제본에 구성 데이터를 푸시합니다. 보조 복제본은 또한 사용자 데이터를 받습니다. 구성 전용 복제본에서 사용자 데이터를 수신 하지 않습니다. 보조 복제본을 동기 가용성 모드입니다. 구성 전용 복제본에서 가용성 그룹-가용성 그룹에 대 한 메타 데이터만의 데이터베이스를 포함 하지 않습니다. 구성 전용 복제본의 구성 데이터가 동기적으로 커밋 되었습니다.
 
->[!NOTE]
->구성 전용 복제본을 사용 하 여 availabilility 그룹을 SQL Server 2017 CU1에 대 한 새로운 기능입니다. SQL Server 가용성 그룹의 모든 인스턴스는 SQL Server 2017 CU1 해야 이상. 
+> [!NOTE]
+> 구성 전용 복제본을 사용 하 여 availabilility 그룹을 SQL Server 2017 CU1에 대 한 새로운 기능입니다. SQL Server 가용성 그룹의 모든 인스턴스는 SQL Server 2017 CU1 해야 이상. 
 
 에 대 한 기본값 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 은 0입니다. 다음 표에서 가용성 문제를 설명합니다. 
 
-| |고가용성 & </br> 데이터 보호 | 데이터 보호
-|:---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
-|주 중단 | 자동 장애 조치(failover). 새 주 복제본은 R / W. | 자동 장애 조치(failover). 새 기본 사용자 트랜잭션에 대 한 제공 되지 않습니다. 
-|보조 복제본 중단 | 주 복제본이 읽기/쓰기를 (기본 실패 하 고 복구할 수 없는) 경우 데이터 손실 위험에 노출 실행입니다. 기본 경우 자동 장애 조치가 실패 합니다. | 기본은 사용자 트랜잭션에 대 한 제공 되지 않습니다. 장애 조치 하는 경우 주 복제본이 없는 실패 합니다. 
-|구성 전용 복제본 중단 | 기본 R은 / W. 기본 경우 자동 장애 조치가 실패 합니다. | 기본 R은 / W. 기본 경우 자동 장애 조치가 실패 합니다. 
-|동기 보조 + 구성만 복제본 중단| 기본은 사용자 트랜잭션에 대 한 제공 되지 않습니다. 자동 장애 조치 합니다. | 기본은 사용자 트랜잭션에 대 한 제공 되지 않습니다. 복제본이 없는 경우 장애 조치에도 기본 실패 합니다. 
-<sup>*</sup> 기본
+| |고가용성 & </br> 데이터 보호 | 데이터 보호|
+|:---|---|---|
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
+|주 중단 | 자동 장애 조치(failover). 새 주 복제본은 R / W. | 자동 장애 조치(failover). 새 기본 사용자 트랜잭션에 대 한 제공 되지 않습니다. |
+|보조 복제본 중단 | 주 복제본이 읽기/쓰기를 (기본 실패 하 고 복구할 수 없는) 경우 데이터 손실 위험에 노출 실행입니다. 기본 경우 자동 장애 조치가 실패 합니다. | 기본은 사용자 트랜잭션에 대 한 제공 되지 않습니다. 장애 조치 하는 경우 주 복제본이 없는 실패 합니다. |
+|구성 전용 복제본 중단 | 기본 R은 / W. 기본 경우 자동 장애 조치가 실패 합니다. | 기본 R은 / W. 기본 경우 자동 장애 조치가 실패 합니다. |
+|동기 보조 + 구성만 복제본 중단| 기본은 사용자 트랜잭션에 대 한 제공 되지 않습니다. 자동 장애 조치 합니다. | 기본은 사용자 트랜잭션에 대 한 제공 되지 않습니다. 복제본이 없는 경우 장애 조치에도 기본 실패 합니다. |
 
->[!NOTE]
->구성 전용 복제본을 호스팅하는 SQL Server 인스턴스의 다른 데이터베이스를 호스팅할 수도 있습니다. 이 둘 이상의 가용성 그룹에 대 한 구성만 데이터베이스로 참여할 수 있습니다. 
+<sup>\*</sup> 기본
+
+> [!NOTE]
+> 구성 전용 복제본을 호스팅하는 SQL Server 인스턴스의 다른 데이터베이스를 호스팅할 수도 있습니다. 이 둘 이상의 가용성 그룹에 대 한 구성만 데이터베이스로 참여할 수 있습니다. 
 
 ## <a name="requirements"></a>요구 사항
 
-* 구성 전용 복제본을 사용 하 여 가용성 그룹의 모든 복제본에는 SQL Server 2017 CU 1 이상 이어야 합니다.
-* 모든 버전의 SQL Server는 SQL Server Express를 비롯 한 구성 전용 복제본을 호스팅할 수 있습니다. 
-* 가용성 그룹에 보조 복제본이 하나 이상-주 복제본 하는 것 외에도 필요합니다.
-* 구성 전용 복제본 SQL Server 인스턴스당 복제본의 최대 수를 계산 되지 않습니다. 최대 3 개의 복제본을 허용 하는 SQL Server standard edition, SQL Server Enterprise Edition에는 최대 9 수 있습니다.
+- 구성 전용 복제본을 사용 하 여 가용성 그룹의 모든 복제본에는 SQL Server 2017 CU 1 이상 이어야 합니다.
+- 모든 버전의 SQL Server는 SQL Server Express를 비롯 한 구성 전용 복제본을 호스팅할 수 있습니다. 
+- 가용성 그룹에 보조 복제본이 하나 이상-주 복제본 하는 것 외에도 필요합니다.
+- 구성 전용 복제본 SQL Server 인스턴스당 복제본의 최대 수를 계산 되지 않습니다. 최대 3 개의 복제본을 허용 하는 SQL Server standard edition, SQL Server Enterprise Edition에는 최대 9 수 있습니다.
 
 ## <a name="considerations"></a>고려 사항
 
-* 가용성 그룹당 둘 이상의 구성 전용 복제본입니다. 
-* 구성 전용 복제본은 주 복제본 일 수 없습니다.
-* 구성 전용 복제본의 가용성 모드를 수정할 수 없습니다. 구성 전용 복제본에서 동기 또는 비동기 보조 복제본을 변경 하려면 구성 전용 복제본을 제거 하 고 필요한 가용성 모드를 사용 하 여 보조 복제본을 추가 합니다. 
-* 구성 전용 복제본을 가용성 그룹 메타 데이터를 사용 하 여 동기화 됩니다. 사용자 데이터가 없습니다. 
-* 하나의 주 복제본 및 하나의 구성 전용 복제본에 있지만 보조 복제본을 사용 하 여 가용성 그룹 올바르지 않습니다. 
-* SQL Server Express edition의 인스턴스에서 가용성 그룹을 만들 수 없습니다. 
+- 가용성 그룹당 둘 이상의 구성 전용 복제본입니다. 
+- 구성 전용 복제본은 주 복제본 일 수 없습니다.
+- 구성 전용 복제본의 가용성 모드를 수정할 수 없습니다. 구성 전용 복제본에서 동기 또는 비동기 보조 복제본을 변경 하려면 구성 전용 복제본을 제거 하 고 필요한 가용성 모드를 사용 하 여 보조 복제본을 추가 합니다. 
+- 구성 전용 복제본을 가용성 그룹 메타 데이터를 사용 하 여 동기화 됩니다. 사용자 데이터가 없습니다. 
+- 하나의 주 복제본 및 하나의 구성 전용 복제본에 있지만 보조 복제본을 사용 하 여 가용성 그룹 올바르지 않습니다. 
+- SQL Server Express edition의 인스턴스에서 가용성 그룹을 만들 수 없습니다. 
 
 <a name="pacemakerNotify"></a>
 
@@ -150,8 +153,8 @@ Pacemaker를 주 복제본을 승격 하기로 하면 먼저 보냅니다를 *�
 
 이 시나리오에서는 두 개의 복제본을 장애 조치를 트리거할 수에 대 한 응답 해야 합니다. 주 복제본 중단 후 성공적으로 자동 장애 조치를 보조 복제본 모두 최신 상태 여야 하 고 응답할 해야는 수준 올리기 전 알림에 합니다. 온라인 상태이 고 동기 인 있는지 동일한 시퀀스 번호입니다. 가용성 그룹 중 하나를 승격합니다. 경우에 응답 하는 보조 복제본 중 하나는 수준 올리기 전 작업, 리소스 에이전트는 응답 하는 보조 복제본에는 가장 높은 sequence_number 및 장애 조치는 트리거되지 않습니다 보장할 수 없습니다.
 
->[!IMPORTANT]
->`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`이 0이면 데이터가 손실될 위험이 있습니다. 주 복제본을 작동 중단 시 리소스 에이전트가 자동으로 장애 조치를 트리거하지 않습니다. 기본 사이트를 복구에 대 한 대기 하거나 수동으로 장애 조치를 사용 하 여 `FORCE_FAILOVER_ALLOW_DATA_LOSS`입니다.
+> [!IMPORTANT]
+> `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`이 0이면 데이터가 손실될 위험이 있습니다. 주 복제본을 작동 중단 시 리소스 에이전트가 자동으로 장애 조치를 트리거하지 않습니다. 기본 사이트를 복구에 대 한 대기 하거나 수동으로 장애 조치를 사용 하 여 `FORCE_FAILOVER_ALLOW_DATA_LOSS`입니다.
 
 기본 동작을 재정의 하 고 설정에서 가용성 그룹 리소스를 방지 하도록 선택할 수 있습니다 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 자동으로 합니다.
 
@@ -167,8 +170,8 @@ sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=0
 sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=
 ```
 
->[!NOTE]
->이전 명령은 실행 하면 주 복제본이 일시적으로 강등 보조 다시 승격 한 다음. 리소스 업데이트 하면 모든 복제본을 중지 했다가 다시 시작 합니다. 에 대 한 새 값을`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 복제본이 다시 시작, 즉시 없습니다만 설정 됩니다.
+> [!NOTE]
+> 이전 명령은 실행 하면 주 복제본이 일시적으로 강등 보조 다시 승격 한 다음. 리소스 업데이트 하면 모든 복제본을 중지 했다가 다시 시작 합니다. 에 대 한 새 값을`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 복제본이 다시 시작, 즉시 없습니다만 설정 됩니다.
 
 ## <a name="see-also"></a>참고자료
 

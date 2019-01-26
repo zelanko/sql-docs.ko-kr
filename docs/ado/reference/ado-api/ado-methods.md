@@ -14,14 +14,15 @@ ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12b78faed3c45a92c1b20796ade5ce0a6844a84e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 494de627d6e76ba59f1bfb0684c31afe4bf07e68
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530239"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044759"
 ---
 # <a name="ado-methods"></a>ADO 메서드
+
 |||  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|업데이트할 수 있는 작업에 대 한 새 레코드를 만듭니다 **레코드 집합** 개체입니다.|  
@@ -67,7 +68,7 @@ ms.locfileid: "52530239"
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|텍스트에서 지정한 개수의 문자를 읽고 **Stream** 개체입니다.|  
 |[새로 고침](../../../ado/reference/ado-api/refresh-method-ado.md)|공급자를 컬렉션에서 사용할 수 있는 개체를 반영 하도록 및 관련 개체를 업데이트 합니다.|  
 |[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|데이터를 업데이트 한 **레코드 집합** 다시 개체의 기반이 되는 쿼리를 실행 하 여 개체입니다.|  
-|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|현재 데이터를 새로 고칩니다 **레코드 집합** 개체 또는 **필드** 의 컬렉션을 **레코드** 기본 데이터베이스 개체입니다.|  
+|[Resync](../../../ado/reference/ado-api/resync-method.md)|현재 데이터를 새로 고칩니다 **레코드 집합** 개체 또는 **필드** 의 컬렉션을 **레코드** 기본 데이터베이스 개체입니다.|  
 |[저장](../../../ado/reference/ado-api/save-method.md)|저장 합니다 **Recordset** 파일에서 또는 **Stream** 개체입니다.|  
 |[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)|이진 내용을 저장 한 **Stream** 파일로.|  
 |[검색](../../../ado/reference/ado-api/seek-method.md)|인덱스를 검색 하는 **레코드 집합** 신속 하 게 지정 된 값과 일치 하 고 행에 현재 행 위치를 변경 하는 행을 찾을 수 있습니다.|  
@@ -77,7 +78,7 @@ ms.locfileid: "52530239"
 |[지원](../../../ado/reference/ado-api/supports-method.md)|지정 된 결정 **레코드 집합** 개체는 특정 종류의 기능을 지원 합니다.|  
 |[Update](../../../ado/reference/ado-api/update-method.md)|현재 행에 수행한 변경 내용 저장을 **레코드 집합** 개체 또는 **필드** 의 컬렉션을 **레코드** 개체입니다.|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|모든 보류 중인 일괄 처리 업데이트를 디스크에 씁니다.|  
-|[쓰기](../../../ado/reference/ado-api/write-method.md)|이진 데이터를 쓰는 **Stream** 개체입니다.|  
+|[Write](../../../ado/reference/ado-api/write-method.md)|이진 데이터를 쓰는 **Stream** 개체입니다.|  
 |[WriteText](../../../ado/reference/ado-api/writetext-method.md)|에 지정 된 텍스트 문자열을 쓰고를 **Stream** 개체입니다.|  
   
 ## <a name="see-also"></a>관련 항목  

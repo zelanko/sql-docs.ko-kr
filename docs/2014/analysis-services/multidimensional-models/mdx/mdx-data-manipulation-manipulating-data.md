@@ -15,12 +15,12 @@ ms.assetid: 4865192e-f46b-4ce5-b51c-9e08dbad5b85
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02841248c28561183543b4edef1fb97b3f55f6c9
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 0db6ba98ec318cfc9780984f54ff04a3cedd20cf
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419768"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044449"
 ---
 # <a name="manipulating-data-mdx"></a>데이터 조작(MDX)
 
@@ -35,6 +35,7 @@ MDX를 사용하여 다양한 방법으로 데이터를 조작할 수 있습니�
 |[패스 순서 및 계산 순서 이해&#40;MDX&#41;](mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|계산 순서의 개념과 이 기능이 MDX 식, 문 및 스크립트에 어떤 영향을 주는지 자세히 설명합니다.|  
 
 <!-- ??
+
 |[Script for Search and Replace] function on the analysis of multidimensional data.|
 
 GeneMi is removing this commented row because it is unclear what article its link meant to link to.

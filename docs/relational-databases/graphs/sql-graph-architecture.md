@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e742e1b5c8ed1b0149292aeee5a3c0e518d9783
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: e4c7c5bae386f142dff45be8a1b1371f104cfab3
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300190"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044549"
 ---
 # <a name="sql-graph-architecture"></a>SQL 그래프 아키텍처  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -135,6 +135,7 @@ Edge 테이블에 암시적 열
 에 대해 알아봅니다는 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] SQL Server 및 Azure SQL Database에 도입 된 확장 수 있도록 만들고 그래프 개체를 쿼리 합니다. 쿼리 언어 확장 쿼리 도움말과 ASCII art 구문을 사용 하 여 그래프를 트래버스 합니다.
  
 ### <a name="data-definition-language-ddl-statements"></a>DDL (데이터 정의 언어) 문이
+
 |태스크   |관련된 문서  |참고
 |---  |---  |---  |
 |CREATE TABLE |[CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` 가 이제 AS 노드 또는 지 AS 테이블 만들기를 지원 하도록 확장 됩니다. 참고 하는 edge 테이블 되거나 사용자 정의 특성이 없을 수 있습니다.  |
@@ -145,6 +146,7 @@ Edge 테이블에 암시적 열
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>데이터 조작 언어 (DML) 문
+
 |태스크   |관련된 문서  |참고
 |---  |---  |---  |
 |INSERT |[INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|노드 테이블에 삽입 관계형 테이블에 삽입 하는 데 다르지 않습니다. 값 `$node_id` 열이 자동으로 생성 됩니다. 값을 삽입 하려고 `$node_id` 또는 `$edge_id` 열 오류가 발생 합니다. 사용자에 대 한 값을 제공 해야 합니다 `$from_id` 고 `$to_id` edge 테이블에 삽입 하는 동안 열입니다. `$from_id` 및 `$to_id` 되는 `$node_id` 지정 된 가장자리를 연결 하는 노드의 값입니다.  |
@@ -154,6 +156,7 @@ Edge 테이블에 암시적 열
 
 
 ### <a name="query-statements"></a>쿼리 문
+
 |태스크   |관련된 문서  |참고
 |---  |---  |---  |
 |SELECT |[SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|노드 및 가장자리 내부 테이블로 저장 됩니다., 그리고 노드와 지 테이블에 대부분의 SQL Server 또는 Azure SQL Database의 테이블에서 지원 되는 작업 이므로 지원 됩니다.  |

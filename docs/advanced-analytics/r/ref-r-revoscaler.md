@@ -8,14 +8,15 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 92992847e2806e18014d2d6828a5f5019ad100b3
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: c67fd63af6ed3492b8064be037ed4f8f5dff338f
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645432"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044410"
 ---
 # <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR (SQL Server의 R 라이브러리)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 **RevoScaleR** Microsoft의 고성능 데이터 과학 함수 라이브러리입니다. 함수는 데이터 가져오기, 데이터 변환, 요약, 시각화 및 분석을 지원 합니다.
@@ -35,7 +36,7 @@ RevoScaleR 분산된 데이터 과학을 위한 플랫폼으로 사용 됩니다
 합니다 **RevoScaleR** 라이브러리 이며 R 3.4.3에 따라 사용 가능한 다음 Microsoft 제품 또는 다운로드 중 하나를 설치 하는 경우에:
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
-+ [SQL Server 2017 Machine Learning 서비스](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 이상](https://docs.microsoft.com/machine-learning-server/)
 + [Microsoft R client](set-up-a-data-science-client.md)
 
@@ -55,7 +56,7 @@ SQL Server 및 R에 따라서는 다른 데이터 형식을 사용합니다. SQL
 | 기능| Description|
 | ------- | ---------- |
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) |  푸시 계산을 원격 인스턴스를 SQL Server 계산 컨텍스트 개체를 만듭니다. 몇 가지 **RevoScaleR** 함수 인수로 계산 컨텍스트를 고려 합니다. |
-[rxGetComputeContext / rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | Get 또는 활성 계산 컨텍스트를 설정 합니다. |
+|[rxGetComputeContext / rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | Get 또는 활성 계산 컨텍스트를 설정 합니다. |
 | [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) | SQL Server 쿼리 또는 테이블 기반 데이터 개체를 만듭니다. |
 | [RxOdbcData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxodbcdata) | ODBC 연결에 따라 데이터 원본을 만듭니다. |
 | [RxXdfData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxxdfdata) | 로컬 XDF 파일을 기반으로 데이터 원본을 만듭니다. XDF 파일을 메모리 내 데이터 디스크를 오프 로드 자주 사용 됩니다. XDF 파일을 하나의 일괄 처리를 데이터베이스에서 전송할 수 있습니다 보다 더 많은 데이터 또는 메모리에 맞출 수 있는 수보다 더 많은 데이터를 작업할 때 유용할 수 있습니다. 예를 들어, 주기적으로 이동 하면 많은 양의 데이터를 데이터베이스에서 로컬 워크스테이션, 쿼리 하는 대신 각 R 작업에 대해 반복 해 서 데이터베이스 사용할 수 있습니다 XDF 파일 캐시의 한 종류로 로컬로 데이터를 저장 하 고 다음 R 작업 영역에서 작업에.|
@@ -78,7 +79,7 @@ SQL Server 및 R에 따라서는 다른 데이터 형식을 사용합니다. SQL
 
 | 기능 | Description |
 |----------|-------------|
-| [rxOpen 메서드](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxopen-methods) | 데이터 소스는 개방적이 고 사용할 수 있는지 여부를 확인 또는 데이터 원본을 닫습니다, 그리고 원본에서 데이터 읽기, 대상에 데이터를 작성 및 데이터 원본을 닫습니다.|
+| [rxOpen-methods](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxopen-methods) | 데이터 소스는 개방적이 고 사용할 수 있는지 여부를 확인 또는 데이터 원본을 닫습니다, 그리고 원본에서 데이터 읽기, 대상에 데이터를 작성 및 데이터 원본을 닫습니다.|
 | [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) | File storage로 또는 데이터 프레임으로 데이터 원본에서 데이터를 이동 합니다.|
 | [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) | 데이터 원본 간에 이동 하는 동안 데이터를 변환 합니다.|
 

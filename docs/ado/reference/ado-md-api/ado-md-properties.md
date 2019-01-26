@@ -14,14 +14,15 @@ ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d37b1a07566943038bd73b0d79eb2dcd4655fda6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 522c563a113bab599481821dbb5d79422126a901
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696932"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044775"
 ---
 # <a name="ado-md-properties"></a>ADO MD 속성
+
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|에 ADO **연결** 카탈로그 현재 속한 또는 현재 셀 집합 개체입니다.|  
@@ -30,7 +31,7 @@ ms.locfileid: "47696932"
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|컬렉션을 반환 **멤버** 는 현재 **멤버** 계층의 부모입니다.|  
 |[개수](../../../ado/reference/ado-api/count-property-ado.md)|컬렉션의 개체 수를 나타냅니다.|  
 |[깊이](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|사이의 수준 수가 표시 된 **수준** 및 계층 구조의 루트입니다.|  
-|[Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)|현재 개체의 텍스트 설명을 반환 합니다.|  
+|[설명](../../../ado/reference/ado-md-api/description-property-ado-md.md)|현재 개체의 텍스트 설명을 반환 합니다.|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|축에는 차원 수를 나타냅니다.|  
 |[DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)|축에서 멤버 바로 다음에 오는 자식이 없는지 여부를 나타냅니다.|  
 |[FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)|현재 셀 집합에 대 한 필터 정보를 나타냅니다.|  

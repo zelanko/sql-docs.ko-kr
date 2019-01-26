@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_statistics_xml (TRANSACT-SQL) | Microsoft Docs
+title: sys.dm_exec_query_statistics_xml (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
@@ -17,14 +17,14 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 99e51be32264dd90b126860b33abe35c7a27781a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8bb66c5bb9b4f69b32efd7761ae08677ee243fee
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819105"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044629"
 ---
-# <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact SQL)
+# <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 반환 진행 중인 요청에 대 한 실행 계획을 쿼리 합니다. 이 DMV를 사용 하 여 실행 계획 XML 임시 통계를 사용 하 여 검색 합니다. 
@@ -46,6 +46,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
 
 ## <a name="table-returned"></a>반환된 테이블
+
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|
 |session_id|**smallint**|세션의 ID입니다. Null을 허용하지 않습니다.|
@@ -105,7 +106,7 @@ CROSS APPLY sys.dm_exec_query_statistics_xml(session_id);
 GO  
 ```   
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>관련 항목
   [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [데이터베이스 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  

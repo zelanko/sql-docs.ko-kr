@@ -16,14 +16,15 @@ ms.assetid: cbde2ca1-5d4e-4444-a371-a72f3ac4d92a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7cd6188de21c40b1edb5a365724451b44189e462
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04bd9a37d87c91fe3f42cbb1fdf464660ba5a299
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821311"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044420"
 ---
 # <a name="setting-options-programmatically-for-the-text-file-driver"></a>텍스트 파일 드라이버에 프로그래밍 방식으로 옵션 설정
+
 |옵션|Description|메서드|  
 |------------|-----------------|------------|  
 |Data Source Name|직원 급여 등, 데이터 소스를 식별 하는 이름입니다.|이 옵션을 동적으로 설정 하려면 합니다 **DSN** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)합니다.|  

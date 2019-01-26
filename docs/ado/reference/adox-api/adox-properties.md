@@ -14,19 +14,20 @@ ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6218ef0c0d39aa1393c5b467c4d8d96960c487f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 176afb0ed710087ec150838e1e6bc6c49eb9e908
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637231"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044667"
 ---
 # <a name="adox-properties"></a>ADOX 속성
+
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|ADO 나타냅니다 **연결** 카탈로그 속한 개체입니다.|  
 |[특성](../../../ado/reference/adox-api/attributes-property-adox.md)|열 특징을 설명 합니다.|  
-|[클러스터](../../../ado/reference/adox-api/clustered-property-adox.md)|인덱스가 클러스터형 인지 여부를 나타냅니다.|  
+|[클러스터형](../../../ado/reference/adox-api/clustered-property-adox.md)|인덱스가 클러스터형 인지 여부를 나타냅니다.|  
 |[Command](../../../ado/reference/adox-api/command-property-adox.md)|ADO 지정 **명령** 만들거나 프로시저를 실행 하는 데 사용할 수 있습니다.|  
 |[개수](../../../ado/reference/ado-api/count-property-ado.md)|컬렉션의 개체 수를 나타냅니다.|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|개체를 만든 날짜를 나타냅니다.|  
@@ -38,7 +39,7 @@ ms.locfileid: "47637231"
 |[이름](../../../ado/reference/adox-api/name-property-adox.md)|개체의 이름을 나타냅니다.|  
 |[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)|열에 숫자 값의 소수 자릿수를 나타냅니다.|  
 |[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)|공급자별 속성에 대 한 액세스를 제공 하는 열 또는 테이블의 부모 카탈로그를 지정 합니다.|  
-|[정밀도](../../../ado/reference/adox-api/precision-property-adox.md)|열의 데이터 값의 최대 전체 자릿수를 나타냅니다.|  
+|[전체 자릿수](../../../ado/reference/adox-api/precision-property-adox.md)|열의 데이터 값의 최대 전체 자릿수를 나타냅니다.|  
 |[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)|인덱스 테이블에 기본 키를 나타내는지 여부를 나타냅니다.|  
 |[RelatedColumn](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)|관련된 테이블 (키 열에만 해당)의 관련 열 이름을 나타냅니다.|  
 |[RelatedTable](../../../ado/reference/adox-api/relatedtable-property-adox.md)|관련된 테이블의 이름을 나타냅니다.|  

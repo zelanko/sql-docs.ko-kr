@@ -14,14 +14,15 @@ ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 696685a4c1550ab503b7847ae676ee7c41c679c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f24ffa490ac8ae5b88809b89eed8a188b86fabb
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611501"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044678"
 ---
 # <a name="ado-properties"></a>ADO 속성
+
 |||  
 |-|-|  
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|현재 레코드가 있는 페이지를 나타냅니다.|  
@@ -48,7 +49,7 @@ ms.locfileid: "47611501"
 |[DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)|로 나타낼 수 있는 데이터가 포함 된 개체를 나타냅니다는 **레코드 집합** 개체입니다.|  
 |[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)|에 대 한 기본 데이터베이스 지정을 **연결** 개체입니다.|  
 |[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)|데이터 용량을 나타냅니다는 **필드** 개체입니다.|  
-|[Description](../../../ado/reference/ado-api/description-property.md)|에 대해 설명 합니다는 **오류** 개체입니다.|  
+|[설명](../../../ado/reference/ado-api/description-property.md)|에 대해 설명 합니다는 **오류** 개체입니다.|  
 |[언어](../../../ado/reference/ado-api/dialect-property.md)|구문 및 구문 분석에 공급자가 사용 되는 일반 규칙을 나타내는 합니다 **CommandText** 또는 **CommandStream** 속성입니다.|  
 |[Direction](../../../ado/reference/ado-api/direction-property.md)|나타냅니다 여부를 **매개 변수** 입력된 매개 변수, 출력 매개 변수, 또는 둘 다 나타냅니다 아니면 매개 변수는 저장된 프로시저에서 반환 값입니다.|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|현재 레코드의 편집 상태를 나타냅니다.|  
@@ -73,12 +74,12 @@ ms.locfileid: "47611501"
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|OLE DB의 컨테이너를 설정 **행** 에서 개체를 **ADORecordConstruction** 개체를 부모 행의 ADO에 켜져 있도록 **레코드** 개체입니다.|  
 |[ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md)|부모를 가리키는 절대 URL 문자열을 나타냅니다 **레코드** 현재 **레코드** 개체입니다.|  
 |[위치](../../../ado/reference/ado-api/position-property-ado.md)|내 현재 위치를 나타내는 **Stream** 개체입니다.|  
-|[정밀도](../../../ado/reference/ado-api/precision-property-ado.md)|숫자 값에 대 한 전체 자릿수를 나타냅니다는 **매개 변수** 개체 또는 숫자 **필드** 개체입니다.|  
+|[전체 자릿수](../../../ado/reference/ado-api/precision-property-ado.md)|숫자 값에 대 한 전체 자릿수를 나타냅니다는 **매개 변수** 개체 또는 숫자 **필드** 개체입니다.|  
 |[준비](../../../ado/reference/ado-api/prepared-property-ado.md)|명령 실행 하기 전에 컴파일된 버전을 저장할 것인지 여부를 나타냅니다.|  
 |[공급자](../../../ado/reference/ado-api/provider-property-ado.md)|에 대 한 공급자의 이름을 나타내는 **연결** 개체입니다.|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|레코드 수가 표시를 **레코드 집합** 개체입니다.|  
 |[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)|유형을 나타냅니다 **레코드** 개체입니다.|  
-|[행](../../../ado/reference/ado-api/row-property-ado.md)|OLE DB를 가져오거나 설정 합니다. **행** 간에에서 개체를 **ADORecordConstruction** 개체입니다.|  
+|[Row](../../../ado/reference/ado-api/row-property-ado.md)|OLE DB를 가져오거나 설정 합니다. **행** 간에에서 개체를 **ADORecordConstruction** 개체입니다.|  
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|OLE DB를 가져오거나 설정 합니다. **RowPosition** 간에에서 개체를 **ADORecordsetConstruction** 개체입니다.|  
 |[행 집합](../../../ado/reference/ado-api/rowset-property-ado.md)|OLE DB를 가져오거나 설정 합니다. **행 집합** 간에에서 개체를 **ADORecordsetConstruction** 개체입니다.|  
 |[원본 (ADO 오류)](../../../ado/reference/ado-api/source-property-ado-error.md)|개체 또는 원래 오류를 생성 한 응용 프로그램의 이름을 나타냅니다.|  
@@ -94,7 +95,7 @@ ms.locfileid: "47611501"
 |[유형 (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)|에 포함 된 데이터의 형식을 나타내는 합니다 **Stream** (이진 또는 텍스트)입니다.|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|데이터베이스의 현재 값을 나타내는 **필드** 개체입니다.|  
 |[Value](../../../ado/reference/ado-api/value-property-ado.md)|에 할당 된 값을 나타내는 **필드**를 **매개 변수**, 또는 **속성** 개체입니다.|  
-|[버전](../../../ado/reference/ado-api/version-property-ado.md)|ADO 버전 번호를 나타냅니다.|  
+|[버전(Version)](../../../ado/reference/ado-api/version-property-ado.md)|ADO 버전 번호를 나타냅니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md)   

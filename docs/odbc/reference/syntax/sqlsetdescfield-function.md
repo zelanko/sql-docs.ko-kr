@@ -20,12 +20,12 @@ ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb6061adf707a58737fd34d7cb7bbe33b2e9579a
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: ce80e7b9c6e8cfcf15c0810986c1a34e8d881ade
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420238"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044360"
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField 함수
 
@@ -147,7 +147,7 @@ SQLRETURN SQLSetDescField(
 |SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT*|카드가: R/W APD: R/W IRD: R/W IPD: R/W|카드가: Ptr APD null. Null ptr IRD: Null ptr IPD: Null ptr|  
 |SQL_DESC_BIND_OFFSET_PTR|SQLLEN*|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 되지 않는|카드가: Ptr APD null. Null ptr IRD: 사용 되지 않는 IPD: 사용 되지 않는|  
 |SQL_DESC_BIND_TYPE|SQLINTEGER|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 되지 않는|카드가: SQL_BIND_BY_COLUMN<br /><br /> APD: SQL_BIND_BY_COLUMN<br /><br /> IRD: 사용 되지 않는<br /><br /> IPD: 사용 되지 않는|  
-SQL_DESC_COUNT|SQLSMALLINT|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: 0 APD: 0 IRD: D IPD: 0|  
+|SQL_DESC_COUNT|SQLSMALLINT|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: 0 APD: 0 IRD: D IPD: 0|  
 |SQL_DESC_ROWS_PROCESSED_PTR|SQLULEN*|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R/W IPD: R/W|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: Null ptr IPD: Null ptr|  
   
  [1]이이 필드는 IPD 드라이버에 의해 자동으로 채워지는 경우에 정의 됩니다. 그렇지 않은 경우 정의 되지 않습니다. 응용 프로그램에서 SQLSTATE HY091 이러한 필드를 설정 하려고 하는 경우 (잘못 된 설명자 필드 식별자)가 반환 됩니다.  
