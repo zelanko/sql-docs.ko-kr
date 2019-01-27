@@ -10,20 +10,20 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 3806621fcc6ebfc696b57f84eac8a067b83ee33d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e84fc2a6032e5886c4d82d630dc36a5bde338ed1
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719111"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044509"
 ---
-# <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Linux의 SQL Server 장애 조치 클러스터 인스턴스-작동
+# <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>장애 조치(failover) 클러스터 인스턴스 작동 - SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 문서에서는 Linux에서 SQL Server 장애 조치 클러스터 인스턴스 (FCI)를 운영 하는 방법을 설명 합니다. Linux의 SQL Server FCI를 만들지 않은 경우 [구성 장애 조치 클러스터 인스턴스-Linux의 SQL Server](sql-server-linux-shared-disk-cluster-configure.md)합니다. 
 
-## <a name="failover"></a>장애 조치 
+## <a name="failover"></a> 장애 조치 
 
 Fci에 대 한 장애 조치는 Windows Server 장애 조치 클러스터 (WSFC)와 비슷합니다. 일종의 오류가 발생 하는 FCI를 호스팅하는 클러스터 노드의 하는 경우 FCI 자동으로 장애 조치를 다른 노드로 합니다. WSFC와 달리 Pacemaker FCI에 대 한 새 호스트 되는 노드를 선택 하도록 기본 설정된 소유자를 설정 하 방법이 있습니다.
 
@@ -70,10 +70,12 @@ crm resource migrate <FCIResourceName> <NewHostNode>
 
 
 <!---
+
 |Distribution |Topic 
 |----- |-----
 |**Red Hat Enterprise Linux with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)<br/>[Operate](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
 |**SUSE Linux Enterprise Server with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-sles-configure.md)
+
 --->
 
 ## <a name="next-steps"></a>다음 단계
