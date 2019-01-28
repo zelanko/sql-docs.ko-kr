@@ -5,10 +5,28 @@ items:
     href: big-data-cluster-overview.md
   - name: 릴리스 정보
     href: big-data-cluster-release-notes.md
-- name: 빠른 시작
+- name: Install
   items:
-  - name: SQL Server 빅 데이터 클러스터 배포
-    href: quickstart-big-data-cluster-deploy.md
+  - name: 도구 설치
+    items:
+    - name: 빅 데이터 도구 설치
+      href: deploy-big-data-tools.md
+    - name: mssqlctl 설치
+      href: deploy-install-mssqlctl.md
+  - name: 배포 스크립트
+    items:
+    - name: Azure Kubernetes Service
+      href: quickstart-big-data-cluster-deploy.md
+  - name: 배포 지침
+    items:
+    - name: 배포 지침
+      href: deployment-guidance.md
+    - name: Azure Kubernetes Service
+      href: deploy-on-aks.md
+    - name: Kubeadm
+      href: deploy-with-kubeadm.md
+    - name: Minikube
+      href: deploy-on-minikube.md
 - name: 자습서
   items:
   - name: 1_샘플 데이터 로드
@@ -41,24 +59,6 @@ items:
     href: concept-security.md
 - name: 방법 가이드
   items:
-  - name: Install
-    items:
-    - name: 빅 데이터 클러스터 배포
-      items:
-      - name: 배포 지침
-        href: deployment-guidance.md
-      - name: Minikube에 배포
-        href: deploy-on-minikube.md
-      - name: AKS에 배포
-        href: deploy-on-aks.md
-      - name: Kubeadm을 사용하여 배포
-        href: deploy-with-kubeadm.md
-    - name: 도구 설치
-      items:
-      - name: 빅 데이터 도구 설치
-        href: deploy-big-data-tools.md
-      - name: mssqlctl 설치
-        href: deploy-install-mssqlctl.md
   - name: 데이터 가상화
     items:
     - name: 관계형 데이터 가상화
@@ -109,9 +109,9 @@ items:
     href: ../relational-databases/polybase/polybase-guide.md
   - name: 빅 데이터 클러스터 액세스 권한 요청
     href: https://aka.ms/eapsignup
-ms.openlocfilehash: 0878ec62a789072b9796c928aad8e7c0b6af6e65
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: d9229242d1c56e36c854ef8f7ecdd94145398b87
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405563"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898918"

@@ -8,19 +8,19 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 76e3fdca639ed576b6b0664042aea5df2b5a9f74
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: b6822892547b8fa4ff3ad4dced02908d10cd39ec
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405783"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898998"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>1단원: 데이터 탐색 및 시각화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 SQL Server에서 R을 사용 하는 방법에 대 한 SQL 개발자를 위한 자습서의 일부입니다.
 
-이 단원에서는 샘플 데이터를 검토 하를 사용 하 여 몇 개의 그림을 생성 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) 에서 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 과 제네릭 [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) 기본 R에서 함수 이러한 R 함수에 이미 포함 된 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]합니다.
+이 단계에서는 샘플 데이터를 검토 및 다음 몇 개의 그림을 사용 하 여 생성 됩니다 [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) 에서 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 과 제네릭 [Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) 기본 R에서 함수 이러한 R 함수에 이미 포함 된 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]합니다.
 
 이 단원의 주요 목적은에서 R 함수를 호출 하는 방법을 보여 주는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장된 프로시저에 응용 프로그램 파일 형식으로 결과 저장:
 
@@ -48,7 +48,7 @@ ms.locfileid: "54405783"
   
 -   각 요금 레코드에는 지불 유형, 총 지불 금액, 팁 금액 등의 지불 정보가 포함됩니다.
   
--   마지막 세 열은 다양한 Machine Learning 작업에 사용할 수 있습니다. _tip\_amount_ 열은 연속적인 숫자 값을 포함하며 회귀 분석의 레이블 열로 사용할 수 있습니다.  _tipped_ 열은 예 / 아니오 값만 있고 이진 분류에 사용됩니다. _tip\_class_ 열은 여러 개의 **클래스** 레이블을 가지므로 다중 클래스 분류 작업의 레이블로 사용할 수 있습니다.
+-   마지막 세 열은 다양한 Machine Learning 작업에 사용할 수 있습니다. _tip\_amount_ 열은 연속적인 숫자 값을 포함하며 회귀 분석의 **레이블** 열로 사용할 수 있습니다. _tipped_ 열은 예 / 아니오 값만 있고 이진 분류에 사용됩니다. _tip\_class_ 열은 여러 개의 **클래스** 레이블을 가지므로 다중 클래스 분류 작업의 레이블로 사용할 수 있습니다.
   
     이 연습에서는 이진 분류 작업만 보여 주지만, 다른 두 가지 Machine Learning 작업인 회귀 및 다중 클래스 분류 모델도 구축해 보세요.
   

@@ -9,28 +9,29 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5467362b32733e6ef10036bf9b45d38fe3150a1e
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 44ed335524d21cd4931722a20be4eb0da5681603
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626357"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044710"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System에서는 스케일 아웃 MPP 데이터 웨어하우스의에서 새로운 기능
 Microsoft Analytics Platform System (APS)에 대 한 최신 어플라이언스 업데이트의 새로운 기능을 참조 하세요. AP는 MPP SQL Server 병렬 데이터 웨어하우스를 호스트 하는 스케일 아웃 온-프레미스 어플라이언스입니다. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 <a name="h2-aps-cu7.3"></a>
-## <a name="aps-cu73"></a>AP CU7.3
+## <a name="aps-cu73"></a>APS CU7.3
 릴리스 날짜-2018 년 12 월
 
-### <a name="common-subexpression-elimination"></a>공용 부분식 제거
+### <a name="common-subexpression-elimination"></a>일반 하위 식 제거
 AP CU7.3 SQL 쿼리 최적화 프로그램의 공용 부분식 제거를 사용 하 여 쿼리 성능을 향상 시킵니다. 향상 두 가지 방법으로 쿼리를 개선합니다. 첫 번째 이점은 식별 하 고 제거 하는 등 있다는 점입니다 식 SQL 컴파일 시간을 줄이는 데 도움이 됩니다. 두 번째 및 더 중요 한 장점은 쿼리가 더 빠르게 됩니다에 대 한 이러한 중복 하위 식에 대 한 데이터 이동 작업 실행 시간에 따라서 제거 됩니다. 자세한 설명은이 기능을 찾을 수 있습니다 [여기](common-sub-expression-elimination.md)합니다.
 
 ### <a name="aps-informatica-connector-for-informatica-1020-published"></a>APS Informatica connector informatica 10.2.0 게시
 APS Informatica 10.2.0 버전을 사용 하 여 작동 하는 대 한 Informatica 커넥터의 새 버전을 릴리스 했습니다. 새 커넥터에서 다운로드할 수 있습니다 [다운로드 사이트](https://www.microsoft.com/download/details.aspx?id=57472)합니다.
 
 #### <a name="supported-versions"></a>Supported Versions
+
 | AP 버전 | Informatica PowerCenter | 드라이버 |
 |:---|:---|:---|
 | APS 2016 | 9.6.1 | SQL Server Native Client 11.x |
@@ -153,9 +154,9 @@ AP AU6 T-SQL 호환성 향상 된 기능을 지원합니다.  이러한 추가 �
 
 **데이터 형식**
 
-- [VARCHAR(MAX)][]하십시오 [NVARCHAR(MAX)][] 하 고 [varbinary (max)][]합니다. 이러한 LOB 데이터 형식에 최대 크기는 2GB입니다. 이러한 로드를 사용 하 여 개체 [bcp 유틸리티][]합니다. PolyBase 및 dwloader 지원 하지 않습니다 현재 다음 데이터 형식. 
+- [VARCHAR(MAX)][]하십시오 [NVARCHAR(MAX)][] 하 고 [VARBINARY(MAX)][]합니다. 이러한 LOB 데이터 형식에 최대 크기는 2GB입니다. 이러한 로드를 사용 하 여 개체 [bcp 유틸리티][]합니다. PolyBase 및 dwloader 지원 하지 않습니다 현재 다음 데이터 형식. 
 - [SYSNAME][]
-- [고유 식별자][]
+- [UNIQUEIDENTIFIER][]
 - [NUMERIC][] 및 DECIMAL 데이터 형식입니다.
 
 **창 함수**
@@ -168,13 +169,13 @@ AP AU6 T-SQL 호환성 향상 된 기능을 지원합니다.  이러한 추가 �
 
 **보안 함수**
 
-- [CHECKSUM()][] 고 [BINARY_CHECKSUM()][]
+- [CHECKSUM()][] and [BINARY_CHECKSUM()][]
 - [HAS_PERMS_BY_NAME()][]
 
 **추가 기능**
 
 - [NEWID()][]
-- [RAND)][]
+- [RAND()][]
 
 ### <a name="polybasehadoop-enhancements"></a>PolyBase Hadoop/향상 된 기능
 
@@ -217,14 +218,14 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [클러스터형된 columnstore 인덱스의 비클러스터형 인덱스]:/sql/t-sql/statements/create-index-transact-sql
 [VARCHAR(MAX)]:/sql/t-sql/data-types/char-and-varchar-transact-sql
 [NVARCHAR(MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
-[VARBINARY (MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
+[VARBINARY(MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
 [SYSNAME]:/sql/relational-databases/system-catalog-views/sys-types-transact-sql
 [SELECT...INTO]:/sql/t-sql/queries/select-into-clause-transact-sql
 [sp_spaceused()]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql
 [넓은 테이블]:/sql/sql-server/maximum-capacity-specifications-for-sql-server
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
 [bcp 유틸리티]:/sql/tools/bcp-utility
-[고유 식별자]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
+[UNIQUEIDENTIFIER]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
 [NUMERIC]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
 [ROWS 또는 RANGE]:/sql/t-sql/queries/select-over-clause-transact-sql
 [FIRST_VALUE]:/sql/t-sql/functions/first-value-transact-sql
@@ -235,7 +236,7 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [BINARY_CHECKSUM()]:/sql/t-sql/functions/binary-checksum-transact-sql
 [HAS_PERMS_BY_NAME()]:/sql/t-sql/functions/has-perms-by-name-transact-sql
 [NEWID()]:/sql/t-sql/functions/newid-transact-sql
-[RAND)]:/sql/t-sql/functions/rand-transact-sql
+[RAND()]:/sql/t-sql/functions/rand-transact-sql
 
 
   
