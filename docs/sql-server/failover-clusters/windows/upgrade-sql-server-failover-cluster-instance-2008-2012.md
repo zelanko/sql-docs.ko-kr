@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a63d6e347f83e63f7f99a2e06e1122b1c93934b0
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 6c669932929f690a1d3f01968bbaaa482aa4d568
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257058"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044559"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Windows Server 2008/2008 R2/2012 클러스터에서 실행 중인 SQL Server 인스턴스 업그레이드
 
@@ -49,6 +49,7 @@ ms.locfileid: "54257058"
 | **_가용성 그룹? (예/아니요)_**                  | **_Y_**                              | **_N_**                                                            | **_Y_**    | **_N_**    |
 | **클러스터에서 SQL FCI만 사용**         | [시나리오 3](#scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups)                           | [시나리오 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag)                                                        | [시나리오 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [시나리오 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag) |
 | **클러스터에서 독립 실행형 인스턴스 사용** | [시나리오 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [시나리오 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [시나리오 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [시나리오 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
+
 \* 가용성 그룹 수신기 이름 제외
 
 ## <a name="scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis"></a>시나리오 1: SQL Server 가용성 그룹이 있고 FCI(장애 조치(Failover) 클러스터 인스턴스)가 없는 Windows 클러스터

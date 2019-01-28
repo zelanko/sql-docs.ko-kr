@@ -9,12 +9,12 @@ ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 46cbbaa2654e18f0aef5d5a3b904f41ce5a88219
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: f9ee612238f9e8208de48b6d52256141d1ed638d
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596584"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457636"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>스트레치 사용 데이터베이스 복원(Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "53596584"
   백업에 대한 자세한 내용은 [스트레치 사용 데이터베이스 백업](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)을 참조하세요.
 
 > [!TIP]
-> 백업은 전체 고가용성 및 무중단 업무 방식 솔루션의 한 부분일 뿐입니다. 고가용성에 대한 자세한 내용은 [고가용성 솔루션](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)을 참조하세요.
+> 백업은 전체 고가용성 및 무중단 업무 방식 솔루션의 한 부분일 뿐입니다. 고가용성에 대한 자세한 내용은 [고가용성 솔루션](../../database-engine/sql-server-business-continuity-dr.md)을 참조하세요.
 
 ## <a name="restore-your-sql-server-data"></a>SQL Server 데이터 복원
 하드웨어 오류 또는 손상을 복구하려면 백업에서 스트레치 사용 SQL Server 데이터베이스를 복원합니다. 현재 사용하는 SQL Server 복원 방법을 계속 사용할 수 있습니다. 자세한 내용은 [복원 및 복구 개요](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)를 참조하세요.

@@ -13,12 +13,12 @@ ms.assetid: 18f0dff0-d8ce-4bee-a935-76ed6dfb3208
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f4f26b5de16185f7c19601cd91a88e9bda23b895
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 094a5f631b6a1cb146e46a6c4f1170fc56ca63f2
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596724"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457586"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>스트레치 사용 데이터베이스 백업(Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "53596724"
  -   Microsoft Azure는 스트레치 데이터베이스가 SQL Server에서 Azure로 마이그레이션한 원격 데이터를 자동으로 백업합니다.  
 
 > [!TIP]
-> 백업은 전체 고가용성 및 무중단 업무 방식 솔루션의 한 부분일 뿐입니다. 고가용성에 대한 자세한 내용은 [고가용성 솔루션](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)을 참조하세요.
+> 백업은 전체 고가용성 및 무중단 업무 방식 솔루션의 한 부분일 뿐입니다. 고가용성에 대한 자세한 내용은 [고가용성 솔루션](../../database-engine/sql-server-business-continuity-dr.md)을 참조하세요.
    
 ## <a name="back-up-your-sql-server-data"></a>SQL Server 데이터 백업  
   

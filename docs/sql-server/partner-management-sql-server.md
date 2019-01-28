@@ -9,18 +9,19 @@ ms.technology: ''
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: efb72426b1eceff0dbbf88676fb0aa9a83134cae
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 35243a3f983f711968f8012eaa23eefdacb11a31
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701841"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044989"
 ---
 # <a name="sql-server-managing-partners"></a>SQL Server 관리 파트너
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 SQL Server 서비스를 관리하려면 다양한 업계 최고의 도구 중에서 선택합니다.  이 문서에서는 Microsoft SQL Server를 지원하는 관리 솔루션이 있는 Microsoft 파트너 회사를 강조 표시합니다.
 
 ## <a name="our-management-partners"></a>관리 파트너
+
 | 파트너 | 설명 | 링크 |
 | --- | --- | --- | --- |
 |![idera][1] |**IDERA**<br>SQL 준수 관리자는 규정 준수 및 데이터 보안 요구 사항 준수를 보장하기 위해 누가, 무엇을, 언제, 어떻게 SQL Server에서 작업했는지 표시하는 포괄적인 감사 솔루션입니다.<br><br>[시스템 요구 사항][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[웹 사이트][idera_website]<br>[Twitter][idera_twitter]<br>[비디오][idera_youtube] | |
