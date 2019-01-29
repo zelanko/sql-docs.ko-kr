@@ -10,12 +10,12 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b4ac8b044308ad7bfb2431e35429558b9deb3cf5
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: bd33483d148b3f94ae54c1a1b94dbaf21acbac27
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405883"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55045086"
 ---
 # <a name="database-engine-errors"></a>데이터베이스 엔진 오류
 
@@ -578,6 +578,7 @@ ms.locfileid: "54405883"
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-1000-to-1999"></a>오류 1000~1999
+
 | Error| Severity | 이벤트 로깅 여부 | 설명|
 | :------ | :------| :------| :----------------------------- |
 |   1001    |   16  |   아니오  |   줄 %d: 길이 또는 전체 자릿수 지정 %d이(가) 잘못되었습니다.   |
@@ -1009,6 +1010,7 @@ ms.locfileid: "54405883"
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-2000-to-2999"></a>오류 2000~2999
+
 | Error| Severity | 이벤트 로깅 여부 | 설명|
 | :------ | :------| :------| :----------------------------- |
 |   2002    |   16  |   아니오  |   1보다 큰 그룹 번호로 복제용 프로시저를 만들 수 없습니다.   |
@@ -1381,6 +1383,7 @@ ms.locfileid: "54405883"
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-3000---3999"></a>오류 3000~3999
+
 | Error| Severity | 이벤트 로깅 여부 | 설명|
 | :------ | :------| :------| :----------------------------- |
 |   3002    |   16  |   아니오  |   데이터베이스 스냅숏을 백업하거나 복원할 수 없습니다.   |
@@ -1821,6 +1824,7 @@ ms.locfileid: "54405883"
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-4000-to-4999"></a>오류 4000~4999
+
 | Error| Severity | 이벤트 로깅 여부 | 설명|
 | :------ | :------| :------| :----------------------------- |
 |   4001    |   10  |   아니오  |   보류 중인 요청이 있는 동안 클라이언트가 sp_reset_connection을 보냅니다. 서버에서 연결을 끊습니다.  |
@@ -3155,6 +3159,7 @@ ms.locfileid: "54405883"
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-7000-to-7999"></a>오류 7000~7999
+
 | Error| Severity | 이벤트 로깅 여부 | 설명|
 | :------ | :------| :------| :----------------------------- |
 |   7000    |   16  |   아니오  |   OPENXML 문서 핸들 매개 변수의 데이터 형식은 int여야 합니다. |
@@ -3598,6 +3603,7 @@ ms.locfileid: "54405883"
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-8000-to-8999"></a>오류 8000~8999
+
 | Error| Severity | 이벤트 로깅 여부 | 설명|
 | :------ | :------| :------| :----------------------------- |
 |   8001    |   16  |   아니오  |   들어오는 TDS(Tabular Data Stream)의 RPC(원격 프로시저 호출) 프로토콜 스트림이 잘못되었습니다. Sql Variant 매개 변수의 메타 정보가 잘못되었습니다. |

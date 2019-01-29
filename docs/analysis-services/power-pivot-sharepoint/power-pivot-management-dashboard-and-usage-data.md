@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7158c0c441c11f87c4cc4989ca66061318a60df4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f53c8835da14fc3ee41eb9598303f80c062a0e82
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419704"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087752"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Power Pivot 관리 대시보드 및 사용 데이터
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "52419704"
 ### <a name="change-the-current-service-application"></a>현재 서비스 애플리케이션을 변경합니다.  
  관리 대시보드에서 현재 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스 애플리케이션을 변경하려면  
   
-1.  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 관리 대시보드의 위쪽에 표시된 현재 서비스 응용 프로그램의 이름(예: **기본 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스 응용 프로그램**)을 기록해 둡니다.  
+1.  맨 위에 있는 합니다 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 관리 대시보드, 예를 들어 현재 서비스 응용 프로그램의 이름을 기록해 둡니다 **기본 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 서비스 응용 프로그램**합니다.  
   
 2.  **동작** 대시보드에서 **서비스 응용 프로그램을 나열합니다.** 를 클릭합니다.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "52419704"
   
     4.  표시되는 .ODC 파일을 클릭합니다. .ODC 파일이 표시되지 않으면 **더 찾아보기** 를 클릭하고 파일 경로에 .odc 파일을 지정합니다.  
   
-    5.   **열기**를 클릭합니다.  
+    5.  **열기**를 클릭합니다.  
   
     6.  연결되는지 확인하려면 **연결 테스트** 를 클릭합니다.  
   

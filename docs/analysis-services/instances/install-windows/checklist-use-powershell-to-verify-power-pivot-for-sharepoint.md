@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9ccfcd29c7389ee1724994561bca382ae98e13b9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 46cfdd9075bd950b287bef399ca3a505a1261f5d
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516379"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087832"
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>검사 목록: PowerShell을 사용 하 여 SharePoint 용 파워 피벗을 확인 하려면
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0
   
 |증상|섹션 참조|  
 |-------------|-----------------|  
-|데이터 새로 고침이 실행되지 않음| [타이머 작업](#bkmk_timer_jobs) 섹션을 참고하여 **온라인 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터 새로 고침 타이머 작업** 이 온라인인지 확인합니다.|  
+|데이터 새로 고침이 실행되지 않음|[타이머 작업](#bkmk_timer_jobs) 섹션을 참고하여 **온라인 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터 새로 고침 타이머 작업** 이 온라인인지 확인합니다.|  
 |관리 대시보드 데이터가 오래됨|[타이머 작업](#bkmk_timer_jobs) 섹션을 참고하여 **관리 대시보드 처리 타이머 작업** 이 온라인인지 확인합니다.|  
 |관리 대시보드의 일부|Excel Services 또는 SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 이 없는 중앙 관리의 토폴로지가 포함된 팜에 SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 을 설치하는 경우 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 관리 대시보드의 기본 제공 보고서에 대한 모든 권한을 사용하려면 Microsoft ADOMD.NET 클라이언트 라이브러리를 다운로드하여 설치해야 합니다. 대시보드의 일부 보고서는 ADOMD.NET을 사용하여 팜의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 쿼리 처리 및 서버 상태에 대한 보고 데이터를 제공하는 내부 데이터에 액세스합니다. [ADOMD.Net 클라이언트 라이브러리](#bkmk_adomd) 섹션 및 [중앙 관리를 실행하는 웹 프런트 엔드 서버에 ADOMD.NET 설치](http://msdn.microsoft.com/c2372180-e847-4cdb-b267-4befac3faf7e)항목을 참조하세요.|  
   
@@ -74,7 +74,7 @@ Name              DisplayName                                Status
 MSOLAP$POWERPIVOT SQL Server Analysis Services (POWERPIVOT) Running  
 ```  
   
-##  <a name="bkmk_engine_and_system_service"></a> PowerPivotSystemService 및 PowerPivotEngineSerivce  
+##  <a name="bkmk_engine_and_system_service"></a> PowerPivotSystemService 및 PowerPivotEngineService  
  이 섹션의 스크립트는 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 시스템 서비스 확인합니다. SharePoint 2013 배포를 위한 시스템 서비스 하나와 SharePoint 2010 배포를 위한 서비스 2개가 있습니다.  
   
  **PowerPivotSystemService**  
@@ -93,7 +93,7 @@ TypeName                                  Status Applications                   
 SQL Server PowerPivot Service Application Online {Default PowerPivot Service Application} SPFarm Name=SharePoint_Config_77d8ab0744a34e8aa27c806a2b8c760c  
 ```  
   
- **PowerPivotEngineSerivce**  
+ **PowerPivotEngineService**  
   
 > [!NOTE]  
 >  SharePoint 2013을 사용 중인 경우**이 스크립트를 건너뜁니다** . PowerPivotEngineService는 SharePoint 2013 배포의 일부입니다. SharePoint 2013에서 Get-PowerPivotEngineService cmdlet을 실행하는 경우 다음과 유사한 오류 메시지가 표시됩니다. 이 항목의 사전 요구 사항 섹션에 명시된 Add-PSSnapin 명령을 실행한 경우에도 이 오류 메시지가 반환됩니다.  
@@ -454,7 +454,7 @@ Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 get-service | select name, displayname, status | where {$_.Name -eq "msolap`$powerpivot"} | format-table -property * -autosize | out-default  
   
 #Write-Host ""  
-Write-Host -ForegroundColor Green "PowerPivotEngineSerivce and PowerPivotSystemService"  
+Write-Host -ForegroundColor Green "PowerPivotEngineService and PowerPivotSystemService"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
   
 Get-PowerPivotSystemService | select typename, status, applications, farm | format-table -property * -autosize | out-default  

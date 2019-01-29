@@ -11,12 +11,12 @@ ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9a2172bdefebdbfd327d8d253e32cd63c254d8e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cf132a6cd6e15002b36ba7ecdced512e3686e433
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419875"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087714"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot 관리 대시보드 및 사용 데이터
   PowerPivot 관리 대시보드는 SharePoint 중앙 관리의 미리 정의된 보고서 및 웹 파트 컬렉션으로 이를 통해 SharePoint용 SQL Server PowerPivot 배포를 관리할 수 있습니다. 관리 대시보드는 서버 상태, 통합 문서 작업 및 데이터 새로 고침과 관련된 정보를 제공합니다. 대시보드는 SharePoint 사용 데이터 컬렉션의 데이터를 사용합니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "52419875"
 ### <a name="change-the-current-service-application"></a>현재 서비스 애플리케이션을 변경합니다.  
  관리 대시보드에서 현재 PowerPivot 서비스 애플리케이션을 변경하려면  
   
-1.  PowerPivot 관리 대시보드의 위쪽에 표시된 현재 서비스 애플리케이션의 이름(예: **기본 PowerPivot 서비스 애플리케이션)** 을 기록해 둡니다.  
+1.  PowerPivot 관리 대시보드의 맨 위에 있는 현재 서비스 응용 프로그램의 이름에 예를 들어 유의 **기본 PowerPivot 서비스 응용 프로그램**합니다.  
   
 2.  **동작** 대시보드에서 **서비스 응용 프로그램을 나열합니다.** 를 클릭합니다.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "52419875"
   
     4.  표시되는 .ODC 파일을 클릭합니다. .ODC 파일이 표시되지 않으면 **더 찾아보기** 를 클릭하고 파일 경로에 .odc 파일을 지정합니다.  
   
-    5.   **열기**를 클릭합니다.  
+    5.  **열기**를 클릭합니다.  
   
     6.  연결되는지 확인하려면 **연결 테스트** 를 클릭합니다.  
   
