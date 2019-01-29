@@ -14,12 +14,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: fabd4b6da2a6c7016d00e503918062f86f6ce147
-ms.sourcegitcommit: 7ea015dc8527de14e7bd4401f5c74c8402fab3d6
+ms.openlocfilehash: 4a76d8d657f2451c52aea74c99576ffd89b30c8c
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53738119"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044489"
 ---
 # <a name="system-settings-master-data-services"></a>시스템 설정(Master Data Services)
 
@@ -130,6 +130,7 @@ ms.locfileid: "53738119"
 ||**SecurityMemberProcessInterval**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **사용자 및 그룹 권한** 기능 영역에서 **계층 멤버** 탭에 설정된 해당 사용자 및 그룹 권한이 적용되는 빈도(초)입니다. 기본값은 **3600** 초(60분)입니다.|  
 
 ##  <a name="Performance"></a> 성능 설정  
+
 |구성 관리자 설정|시스템 설정|설명|  
 |-----------------------------------|--------------------|-----------------|  
 |**성능 개선 설정 사용**|**PerformanceImprovementEnable**|기본적으로 로드 권한 관련 페이지의 성능이 좋은 이 설정(**1로 설정**)을 사용하도록 설정했습니다. 그러나 이 상황에서 엔터티, 특성, 사용자 또는 그룹을 만들거나 수정하며 성능이 떨어집니다. 이를 방지하기 위해 이 설정을 비활성화할 수 있습니다(**0으로 설정**). 이 설정을 변경한 후 "**EXEC [mdm].[udpPerformanceToggleSwitch];**" 명령을 실행하여 보기와 데이터가 올바른지 확인해야 합니다.|  

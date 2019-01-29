@@ -41,12 +41,12 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2022064cd1f9db8ae61d4480266278854bf0bc8c
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 72d978967591fbffa8d25b3954c78256149f7592
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242236"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55045096"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 문(Transact-SQL)
 BACKUP 명령을 사용하여 만든 SQL 데이터베이스 백업을 복원합니다. 
@@ -294,6 +294,7 @@ Note: URL is the format used to specify the location and the file name for the M
   
 ### <a name="discontinued-restore-keywords"></a>지원되지 않는 RESTORE 키워드  
 다음 키워드는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서 더 이상 지원되지 않습니다.  
+
 |지원되지 않는 키워드|다음으로 대체됩니다...|대체 키워드 예|  
 |--------------------------|------------------|------------------------------------|  
 |LOAD|RESTORE|`RESTORE DATABASE`|  
@@ -429,7 +430,7 @@ RESTORE 예에는 다음이 포함됩니다.
   
 - 1. [전체 데이터베이스 복원](#restoring_full_db)  
 - 2. [전체 및 차등 데이터베이스 백업 복원](#restoring_full_n_differential_db_backups)  
-- 3. [RESTART 구문을 사용하여 데이터베이스 복원](#restoring_db_using_RESTART)  
+- C. [RESTART 구문을 사용하여 데이터베이스 복원](#restoring_db_using_RESTART)  
 - D. [데이터베이스 복원 및 파일 이동](#restoring_db_n_move_files)  
 - E. [BACKUP 및 RESTORE를 사용하여 데이터베이스 복사](#copying_db_using_bnr)  
 - F. [STOPAT를 사용하여 지정 시간으로 복원](#restoring_to_pit_using_STOPAT)  
@@ -973,7 +974,7 @@ RESTORE DATABASE SalesInvoices2013
   
 ```  
   
-### <a name="c-restoring-the-backup-header"></a>3. 백업 헤더 복원  
+### <a name="c-restoring-the-backup-header"></a>C. 백업 헤더 복원  
 이 예제는 데이터베이스 백업 ‘\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full’에 대한 헤더 정보를 복원합니다. 명령은 Invoices2013Full 백업에 대한 정보에서 하나의 행에 발생합니다.  
   
 ```sql  

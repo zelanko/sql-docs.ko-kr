@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 758917c8f3fd11d79162ac650cd29efd709e9dd3
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 1f604f75c685e1d06edf4287ea86a71020197188
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813127"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457456"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>원격 오류 활성화(Reporting Services)
   원격 서버에서 발생되는 오류 조건에 대한 추가 정보를 반환하도록 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 대한 서버 속성을 설정할 수 있습니다. 오류 메시지에 "이 오류에 대한 자세한 내용을 보려면 로컬 서버 컴퓨터의 보고서 서버를 탐색하거나 원격 오류를 활성화하십시오"라는 텍스트가 포함되어 있으면 문제 해결에 도움이 되는 추가 정보에 액세스할 수 있도록 **EnableRemoteErrors** 속성을 설정할 수 있습니다. 자세한 내용은 [온라인 설명서에서](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) 보고서 서버 시스템 속성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
@@ -32,15 +32,15 @@ ms.locfileid: "51813127"
 -   [ConfigurationInfo 테이블 수정(기본 모드)](#bkmk_ConfigurationInfo)  
   
 ##  <a name="bkmk_sharepoint"></a> SharePoint 모드에 대한 원격 오류 사용  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드에 대한 원격 오류 사용에는 두 가지 다른 프로시저가 있습니다. 서로 다른 두 보고서 서버 아키텍처에 따라 프로시저가 달라집니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 릴리스에서 도입된 새 SharePoint 서비스 기반 아키텍처는 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 대해 구성될 수 있는 설정을 활용합니다. 이전 아키텍처는 단일 사이트 수준 설정을 활용합니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드에 대한 원격 오류 사용에는 두 가지 다른 프로시저가 있습니다. 서로 다른 두 보고서 서버 아키텍처에 따라 프로시저가 달라집니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 릴리스에서 도입된 새 SharePoint 서비스 기반 아키텍처는 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 대해 구성될 수 있는 설정을 활용합니다. 이전 아키텍처는 단일 사이트 수준 설정을 활용합니다.  
   
 #### <a name="enable-remote-errors-for-a-reporting-services-service-application"></a>Reporting Services 서비스 애플리케이션에 대한 원격 오류 사용  
   
-1.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 새 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 함께 설치되는 SharePoint 모드 보고서 서버의 경우 서비스 응용 프로그램 설정 **원격 오류 사용**을 설정합니다. 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 대해 이 설정을 구성할 수 있습니다.  
+1.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 새 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 함께 설치되는 SharePoint 모드 보고서 서버의 경우 서비스 애플리케이션 설정 **원격 오류 사용**을 설정합니다. 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 대해 이 설정을 구성할 수 있습니다.  
   
 2.  SharePoint 중앙 관리의 **애플리케이션 관리** 그룹에서 **서비스 애플리케이션 관리** 를 클릭합니다.  
   
-3.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 찾아 해당 서비스 응용 프로그램의 이름을 클릭합니다.  
+3.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 찾아 해당 서비스 애플리케이션의 이름을 클릭합니다.  
   
 4.  **시스템 설정**을 클릭합니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "51813127"
   
 4.  **로컬 모드에서 원격 오류 사용**을 클릭합니다.  
   
-5.   **확인**을 클릭합니다.  
+5.  **확인**을 클릭합니다.  
   
 ##  <a name="bkmk_mgtStudio"></a> SQL Server Management Studio를 통한 원격 오류 사용(기본 모드)  
   
@@ -108,7 +108,7 @@ ms.locfileid: "51813127"
   
 ##  <a name="bkmk_ConfigurationInfo"></a> ConfigurationInfo 테이블 수정(기본 모드)  
   
-1.  > [!NOTE]  
-    >  보고서 서버 데이터베이스의 **ConfigurationInfo** 테이블을 편집하여 **EnableRemoteErrors** 를 **True**로 설정할 수 있지만 보고서 서버가 현재 사용 중인 경우 SQL Server Management Studio 또는 스크립트를 사용하여 설정을 수정해야 합니다. 데이터베이스에서 이 설정을 수정하는 경우 변경 내용을 적용하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 다시 시작해야 합니다.  
+> [!NOTE]  
+>  보고서 서버 데이터베이스의 **ConfigurationInfo** 테이블을 편집하여 **EnableRemoteErrors** 를 **True**로 설정할 수 있지만 보고서 서버가 현재 사용 중인 경우 SQL Server Management Studio 또는 스크립트를 사용하여 설정을 수정해야 합니다. 데이터베이스에서 이 설정을 수정하는 경우 변경 내용을 적용하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 다시 시작해야 합니다.  
   
   

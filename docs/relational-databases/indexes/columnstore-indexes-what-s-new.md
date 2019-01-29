@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5fd38e30039ee174ed2558a88c1ddc1e3785238d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4601435dcaf7cbc82cb4fb6e6e00ea911ef12f9f
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514553"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044390"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Columnstore 인덱스 - 새로운 기능
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -99,6 +99,7 @@ ms.locfileid: "52514553"
   
 ### <a name="supportability"></a>지원 가능성  
 이러한 시스템 뷰는 columnstore의 새로운 특징임:  
+
 ||| 
 |-|-|
 |[sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_column_store_object_pool &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
@@ -107,6 +108,7 @@ ms.locfileid: "52514553"
 |[sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)||  
   
 이러한 메모리 내 OLTP 기반 DMV는 columnstore에 대한 업데이트를 포함합니다.  
+
 ||| 
 |-|-|
 |[sys.dm_db_xtp_hash_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql.md)|[sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)|  
@@ -121,7 +123,7 @@ ms.locfileid: "52514553"
 -   메모리 내 테이블의 경우 columnstore 인덱스에 대한 쿼리는 InterOP 모드에서만 실행되며 메모리 내 고유 모드에서는 실행되지 않습니다. 병렬 실행은 지원됩니다.  
   
 ## [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서는 클러스터형 columnstore 인덱스를 기본 저장 형식으로 도입하였습니다. 이를 통해 일반 부하뿐만 아니라 업데이트, 삭제 및 삽입 작업도 사용할 수 있습니다.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서는 클러스터형 columnstore 인덱스를 기본 스토리지 형식으로 도입하였습니다. 이를 통해 일반 부하뿐만 아니라 업데이트, 삭제 및 삽입 작업도 사용할 수 있습니다.  
   
 -   테이블에서 클러스터형 columnstore 인덱스를 기본 테이블 스토리지로 사용할 수 있습니다. 테이블에 다른 인덱스는 허용되지 않지만 클러스터형 columnstore 인덱스는 업데이트가 가능하므로 일반 부하를 수행하고 개별 행을 변경할 수 있습니다.  
 -   비클러스터형 columnstore 인덱스는 이제 일괄 처리 모드로 실행될 수 있는 추가 연산자를 제외하고 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서와 같은 기능을 계속 가지고 있습니다. 다시 만들기 및 파티션 전환의 사용을 제외하고 여전히 업데이트는 불가능합니다. 비클러스터형 columnstore 인덱스는 디스크 기반 테이블에 대해서만 지원되며 메모리 내 테이블에 대해서는 지원되지 않습니다.  

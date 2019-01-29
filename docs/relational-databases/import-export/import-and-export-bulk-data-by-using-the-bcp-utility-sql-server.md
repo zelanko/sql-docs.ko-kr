@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c837af5672d588ebf2503b479c5c978c4885ee4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86652126be5c58068de4aaff5d7500d91f3c6f02
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853006"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55045529"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>bcp 유틸리티를 사용하여 대량 데이터 가져오기 및 내보내기(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,6 +49,7 @@ ms.locfileid: "47853006"
  **bcp** 명령 구문에 대한 자세한 내용은 [bcp Utility](../../tools/bcp-utility.md)를 참조하십시오.  
   
 ## <a name="examples"></a>예  
+
 |다음 항목에는 bcp를 사용하는 예제가 포함되어 있습니다. |
 |---|
 |[bcp Utility](../../tools/bcp-utility.md)<br /><br />대량 가져오기 또는 대량 내보내기를 위한 데이터 형식(SQL Server)<br />&emsp;&#9679;&emsp;[네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기(SQL Server)](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[문자 형식을 사용하여 데이터 가져오기 또는 내보내기(SQL Server)](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[데이터를 가져오거나 내보내기 위해 유니코드 네이티브 형식 사용(SQL Server)](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[유니코드 문자 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br /><br />[필드 및 행 종결자 지정(SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)<br /><br />[대량 가져오기 수행 중 Null 유지 또는 기본값 사용(SQL Server)](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)<br /><br />[데이터 대량 가져오기 중 ID 값 유지(SQL Server)](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)<br /><br />데이터를 가져오거나 내보내기 위한 서식 파일(SQL Server)<br />&emsp;&#9679;&emsp;[서식 파일 만들기(SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[서식 파일을 사용하여 데이터 대량 가져오기(SQL Server)](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[서식 파일을 사용하여 테이블 열 건너뛰기(SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[서식 파일을 사용하여 데이터 필드 건너뛰기(SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[서식 파일을 사용하여 테이블 열을 데이터 파일 필드에 매핑(SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<br /><br />[XML 문서 대량 가져오기 및 내보내기 예(SQL Server)](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)<br /><p>                                                                                                                                                                                                                  </p>|
@@ -57,7 +58,7 @@ ms.locfileid: "47853006"
 ## <a name="more-examples-and-information"></a>추가 예제 및 정보  
  [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-clause-transact-sql.md)   
- [bcp 유틸리티](../../tools/bcp-utility.md)   
+ [bcp Utility](../../tools/bcp-utility.md)   
  [대량 데이터 가져오기 준비&#40;SQL Server&#41;](../../relational-databases/import-export/prepare-to-bulk-import-data-sql-server.md)   
  [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [데이터 대량 가져오기 및 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   

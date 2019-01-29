@@ -23,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e294759588beeb5d79f4613848ca49634d8e40cf
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 4214bcf8d2dcd3c8b00d51580ea71eae0e40e96e
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420188"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880546"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 인덱스 아키텍처 및 디자인 가이드  
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -362,7 +362,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   쿼리에 사용되는 열 모두 포함  
   
-     인덱스에 쿼리의 모든 열이 포함될 경우 성능이 향상됩니다. 쿼리 최적화 프로그램이 인덱스에서 모든 열 값을 찾을 수 있으므로 테이블이나 클러스터형 인덱스에 액세스하지 않아 디스크 I/O 작업이 줄어듭니다. 넓은 인덱스 키를 만드는 대신 [포함된 열](#Included_Columns)이 있는 인덱스를 사용하여 포함 인덱스를 추가합니다.  
+     인덱스에 쿼리의 모든 열이 포함되어 있으면 성능이 향상됩니다. 쿼리 최적화 프로그램이 인덱스에서 모든 열 값을 찾을 수 있으므로 테이블이나 클러스터형 인덱스에 액세스하지 않아 디스크 I/O 작업이 줄어듭니다. 넓은 인덱스 키를 만드는 대신 [포함된 열](#Included_Columns)이 있는 인덱스를 사용하여 포함 인덱스를 추가합니다.  
   
      테이블에 클러스터형 인덱스가 있으면 클러스터형 인덱스에 정의된 열이 자동으로 테이블의 각 비클러스터형 인덱스 끝에 추가됩니다. 이를 통해 비클러스터형 인덱스 정의에 클러스터형 인덱스 열을 지정하지 않고도 쿼리에 사용되는 열이 모두 포함될 수 있습니다. 예를 들어 테이블 `C`열에 대한 클러스터형 인덱스가 있을 경우 `B` 및 `A` 열에 대한 비클러스터형 인덱스의 키 값 열은 `B`, `A`, 및 `C`가 됩니다.  
       

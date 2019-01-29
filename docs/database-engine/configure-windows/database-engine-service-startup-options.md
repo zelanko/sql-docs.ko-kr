@@ -26,12 +26,12 @@ ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a4a31e52cbaa9e91219c2e67341de968d5c7e2c
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: e0c9cf64fa8e2b4304e2ba25536a298edbd306ac
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626333"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044330"
 ---
 # <a name="database-engine-service-startup-options"></a>데이터베이스 엔진 서비스 시작 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,6 +49,7 @@ ms.locfileid: "53626333"
   
 ## <a name="list-of-startup-options"></a>시작 옵션 목록  
 ### <a name="default-startup-options"></a>기본 시작 옵션  
+
 |옵션|설명|  
 |-----------------------------|-----------------|  
 |**-d**  *master_file_path*|master 데이터베이스 파일의 정규화된 경로입니다. 일반적으로 C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\master.mdf입니다. 이 옵션이 제공되지 않으면 기존의 레지스트리 매개 변수를 사용합니다.|  
@@ -56,6 +57,7 @@ ms.locfileid: "53626333"
 |**-l**  *master_log_path*|master 데이터베이스 로그 파일의 정규화된 경로입니다. 일반적으로 C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\mastlog.ldf입니다. 이 옵션을 지정하지 않으면 기존의 레지스트리 매개 변수가 사용됩니다.|  
   
 ### <a name="other-startup-options"></a>다른 시작 옵션   
+
 |옵션 |설명|   
 |---------------------------|-----------------|  
 |**-c**|명령 프롬프트에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작할 때 시작 시간을 단축시킵니다. 일반적으로 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 서비스 제어 관리자를 호출하여 서비스로 시작됩니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 명령 프롬프트에서 시작하는 경우 서비스로 시작되지 않으므로 **-c** 를 사용하여 이 단계를 건너뛸 수 있습니다.|  

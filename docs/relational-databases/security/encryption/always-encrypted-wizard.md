@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db55b4763dc0a5956d419fd45ced58073e2affbb
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 696d3bfc454e396f8cc590d3178f8ae54b89128a
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327874"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805719"
 ---
 # <a name="always-encrypted-wizard"></a>상시 암호화 마법사
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "54327874"
  
  - **사용 권한:** 이 마법사를 사용하여 암호화된 열을 쿼리하고 키를 선택하려면 `VIEW ANY COLUMN MASTER KEY DEFINITION` 및 `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` 사용 권한이 있어야 합니다. 새 키를 만들려면 `ALTER ANY COLUMN MASTER KEY` 및 `ALTER ANY COLUMN ENCRYPTION KEY` 사용 권한이 있어야 합니다.  
  
- #### <a name="to-open-the-always-encrypted-wizard"></a>상시 암호화 마법사를 열려면  
+ #### <a name="to-open-the-always-encrypted-wizard"></a>상시 암호화 마법사를 열려면
  
  1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 개체 탐색기 구성 요소를 사용하여 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에 연결합니다.  
    
  2.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 가리킨 다음 **열 암호화**를 클릭합니다.  
    
- ## <a name="column-selection-page"></a>열 선택 페이지  
+ ## <a name="column-selection-page"></a>열 선택 페이지
  - 테이블과 열을 찾은 다음 선택한 열의 암호화 유형(결정적 또는 임의)과 암호화 키를 선택합니다. 현재 암호화된 열의 암호화를 해제하려면 **일반 텍스트**를 선택합니다. 열 암호화 키를 회전하려면 다른 암호화 키를 선택합니다. 그러면 마법사가 열의 암호화를 해제하고 새 키로 열을 다시 암호화합니다. ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 메모리 내 임시 테이블을 암호화할 수 있지만 이 마법사로 구성할 수는 없습니다.)  
  
 ## <a name="master-key-configuration-page"></a>마스터 키 구성 페이지  

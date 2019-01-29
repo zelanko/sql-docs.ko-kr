@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4cb25fff7ac946808ecad9cb4d0e8594f32ad5a2
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: cbf03f09ce4d72a738fe018bd0ca0cd67af3d107
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300570"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838150"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -479,8 +479,6 @@ column_name <data_type>
   
  IDENTITY  
  새 열이 ID 열임을 나타냅니다. 테이블에 새 행이 추가되면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 열에 대해 고유한 증가값을 제공합니다. ID 열은 일반적으로 PRIMARY KEY 제약 조건과 함께 사용되어 테이블에 대한 고유한 행 식별자 역할을 합니다. IDENTITY 속성은 **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** 또는 **numeric(p,0)** 열에 할당할 수 있습니다. ID 열은 테이블당 하나만 만들 수 있습니다. ID 열에는 바인딩된 기본값 및 DEFAULT 제약 조건을 사용할 수 없습니다. 초기값과 증가값은 둘 다 지정하거나 또는 둘 다 지정하지 않아야 합니다. 둘 다 지정하지 않은 경우에는 기본값 (1,1)이 사용됩니다.  
-  
- 메모리 최적화 테이블에서 *seed*와 *increment*에 대해 모두 허용되는 유일한 값은 1이며, (1,1)은 *seed* 및 *increment*의 기본값입니다.  
   
  *seed*  
  테이블에 로드되는 첫 번째 행에 사용하는 값입니다.  
@@ -1286,7 +1284,7 @@ CONSTRAINT FK_SpecialOfferProduct_SalesOrderDetail FOREIGN KEY
 REFERENCES SpecialOfferProduct (ProductID, SpecialOfferID)  
 ```  
   
-### <a name="c-using-unique-constraints"></a>3. UNIQUE 제약 조건 사용  
+### <a name="c-using-unique-constraints"></a>C. UNIQUE 제약 조건 사용  
  UNIQUE 제약 조건은 기본 키가 아닌 열에 고유성을 적용합니다. 다음 예에서는 `Name` 테이블의 `Product` 열이 고유한 것이어야 한다는 제한을 적용합니다.  
   
 ```sql  

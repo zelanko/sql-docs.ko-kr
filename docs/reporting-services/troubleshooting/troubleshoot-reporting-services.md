@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6eeed553-512d-4603-9b14-0492a9d052b5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 40f54f79c918f580d758dec342508dec96ae5b45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13a85c169421f4ab794ed95f8696d32e5215f6c9
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686131"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087932"
 ---
 # <a name="troubleshoot-reporting-services"></a>Reporting Services 문제 해결
   이 섹션의 항목은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 관련된 문제를 식별하고 해결하는 데 도움이 됩니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "47686131"
 
 +  [기본 모드 보고서 서버에서 보고서 게시 또는 보기 문제 해결](../../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md)  
 
-+  [Reporting Services에서 서버 및 데이터베이스 연결 문제 해결](troubleshoot-server-and-database-connection-problems-with-reporting-services.md)  
++  [Reporting Services의 서버 및 데이터베이스 연결 문제 해결](troubleshoot-server-and-database-connection-problems-with-reporting-services.md)  
 
  ![작은 파일 폴더 아이콘](../../reporting-services/troubleshooting/media/filefolder-small.png) **오류 및 이벤트 참조**  
  + [오류 및 이벤트 참조&#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

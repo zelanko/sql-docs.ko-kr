@@ -47,12 +47,12 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bb9f7368f9250bd96adb62c6af7e7711213e4fc
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 1237e85271949279a96ddd149536189b9940a919
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242286"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805779"
 ---
 # <a name="backup-transact-sql"></a>BACKUP(Transact-SQL)
 
@@ -772,7 +772,7 @@ BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서
   
 - 1. [전체 데이터베이스 백업](#backing_up_db)  
 - 2. [데이터베이스 및 로그 백업](#backing_up_db_and_log)  
-- 3. [보조 파일 그룹의 전체 파일 백업 만들기](#full_file_backup)  
+- C. [보조 파일 그룹의 전체 파일 백업 만들기](#full_file_backup)  
 - D. [보조 파일 그룹의 차등 파일 백업 만들기](#differential_file_backup)  
 - E. [미러된 단일 패밀리 미디어 세트 만들기 및 백업](#create_single_family_mirrored_media_set)  
 - F. [미러된 다중 패밀리 미디어 세트 만들기 및 백업](#create_multifamily_mirrored_media_set)  
@@ -1132,9 +1132,9 @@ URL에서 발생하는 소유권과 사용 권한 문제는 백업 작업에 영
 이 예제에서는 Microsoft Azure Blob Storage 서비스에 `Sales`의 COPY_ONLY 백업을 수행합니다.  스토리지 계정 이름은 `mystorageaccount`입니다.  컨테이너는 `myfirstcontainer`입니다.  읽기, 쓰기, 삭제 및 나열 권한이 있는 저장된 액세스 정책을 만들었습니다.  저장된 액세스 정책에 연결된 공유 액세스 서명을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명인 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`를 만들었습니다.  Microsoft Azure Blob Storage 서비스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업의 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 및 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.
 
 ```sql  
-BACKUP DATABASE Sales WITH COPY_ONLY
+BACKUP DATABASE Sales
 TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_20160726.bak'
-WITH STATS = 5;
+WITH STATS = 5, COPY_ONLY;
 ```
 
   
@@ -1315,7 +1315,7 @@ EXEC sp_pdw_add_network_credentials 'xxx.xxx.xxx.xxx', 'domain1\backupuser', '**
 EXEC sp_pdw_remove_network_credentials 'xxx.xxx.xxx.xxx';  
 ```  
   
-### <a name="c-create-a-full-backup-of-a-user-database"></a>3. 사용자 데이터베이스의 전체 백업 만들기  
+### <a name="c-create-a-full-backup-of-a-user-database"></a>C. 사용자 데이터베이스의 전체 백업 만들기  
 다음 예에서는 송장 사용자 데이터베이스의 전체 백업을 만듭니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]은 Invoices2013 디렉토리를 만들고 백업 파일을 \\\10.192.63.147\backups\yearly\Invoices2013Full 디렉토리에 저장합니다.  
   
 ```sql  

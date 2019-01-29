@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 98e06e3199d4ce8750a4a5956aec6d97c141b33b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3cb5efcb4c4abdc29aa71bf4a5e59ebe039d8a9e
+ms.sourcegitcommit: ee76381cfb1c16e0a063315c9c7005f10e98cfe6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214262"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55072848"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>SQL Server의 외부 데이터에 액세스하도록 PolyBase 구성
 
@@ -84,7 +84,8 @@ ODBC 데이터 원본의 데이터를 쿼리하려면 외부 데이터를 참조
     CREATE EXTERNAL DATA SOURCE external_data_source_name
     WITH ( 
     LOCATION = odbc://<ODBC server address>[:<port>],
-    CONNECTION_OPTIONS = 'SSL=0;sslAllowInvalidCertificates=1;Driver={<Name of Installed Driver>};HOST=%s;AUTHMECH=0',
+    CONNECTION_OPTIONS = 'Driver={<Name of Installed Driver>};
+    ServerNode = <name of server  address>:<Port>',
     -- PUSHDOWN = ON | OFF,
       CREDENTIAL = credential_name
     );

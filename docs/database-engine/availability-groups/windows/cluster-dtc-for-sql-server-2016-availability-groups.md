@@ -12,12 +12,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0bcbbd26ed97fd0df20abfb997495105fe2f726a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0b5003b20a1cfa477cde724a7ddfa32914eab9ef
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203312"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044459"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 DTC 서비스를 클러스터링하는 방법
 
@@ -26,12 +26,14 @@ ms.locfileid: "53203312"
 이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 Microsoft DTC(Distributed Transaction Coordinator) 서비스를 클러스터링하는 데 필요한 요구 사항 및 단계에 대해 설명합니다. 분산 트랜잭션과 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 자세한 내용은 [데이터베이스 미러링 또는 Always On 가용성 그룹에 대해 지원되지 않는 데이터베이스 간 트랜잭션(SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)을 참조하세요.
 
  ## <a name="checklist-preliminary-requirements"></a>검사 목록: 사전 요구 사항
+
 ||태스크|참조|  
 |------|-----------------|----------|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|모든 노드, 서비스 및 가용성 그룹이 제대로 구성되었는지 확인합니다.|[Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항(SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)|
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|가용성 그룹 DTC 요구 사항이 충족되었는지 확인합니다.|[Always On 가용성 그룹 및 데이터베이스 미러링에 대한 데이터베이스 간 트랜잭션 및 분산 트랜잭션(SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 
 ## <a name="checklist-clustered-dtc-resource-dependencies"></a>검사 목록: 클러스터형 DTC 리소스 종속성
+
 ||태스크|참조|  
 |------|-----------------|----------|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|공유 저장소 드라이브입니다.|[공유 저장소 드라이브 구성](https://msdn.microsoft.com/library/cc982358(v=bts.10).aspx). 드라이브 문자 **M**을 사용하는 것이 좋습니다.|
@@ -43,6 +45,7 @@ ms.locfileid: "53203312"
 
 
 ## <a name="checklist-post-clustered-dtc-resource-configurations"></a>검사 목록: 사후 클러스터형 DTC 리소스 구성
+
 ||태스크|참조|  
 |------|-----------------|----------|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|클러스터형 DTC 서비스에 대한 네트워크 DTC 액세스를 안전하게 사용하도록 설정합니다.|[MS DTC에 안전하게 네트워크 액세스 사용(영문)](https://technet.microsoft.com/library/cc753620(v=ws.10).aspx)|

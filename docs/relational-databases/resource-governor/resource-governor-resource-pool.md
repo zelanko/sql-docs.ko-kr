@@ -14,12 +14,12 @@ ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 37d6a896057085353d81e8c9acbd161a25014d51
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 891e3e41bab9be82145bfeb905e9243b7bf31340
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380954"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044350"
 ---
 # <a name="resource-governor-resource-pool"></a>리소스 관리자 리소스 풀
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,6 +61,7 @@ CPU 또는 메모리를 구성할 때 모든 풀의 MIN 값의 합은 서버 리
 |기본|0|100|30|30|유효 MAX 값은 min(100,100-(20+50)) = 30으로 계산됩니다. 계산된 공유 백분율(%)은 유효 MAX - MIN = 30입니다.|  
 |풀 1|20|100|50|30|유효 MAX 값은 min(100,100-50) = 50으로 계산됩니다. 계산된 공유 백분율(%)은 유효 MAX - MIN = 30입니다.|  
 |풀 2|50|70|70|20|유효 MAX 값은 min(70,100-20) = 70으로 계산됩니다. 계산된 공유 백분율(%)은 유효 MAX - MIN = 20입니다.|  
+
 다음 공식은 위의 표에서 유효한 MAX % 및 공유 %를 계산하는 데 사용됩니다.  
   
 -   Min(X,Y)은 X와 Y 중에서 더 작은 값을 의미합니다.  
