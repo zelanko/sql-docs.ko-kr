@@ -9,29 +9,32 @@ ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 1dbe3213ae6b5774cd08efa6f6a24b799f74a6a7
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: 426b0eed5b53760e872ebd18b11fce4de5ff22b9
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53732000"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044926"
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server 모니터링 파트너
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 SQL Server 서비스를 모니터링하려면 다양한 업계 최고의 도구 중에서 선택합니다. 이 문서에서는 Microsoft SQL Server를 지원하는 모니터링 솔루션이 있는 Microsoft 파트너 회사를 강조 표시합니다.
 
 <!--
+
 |![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros Server 2005 SP4 - SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
+
 -->
 
 ## <a name="microsoft-monitoring-partners"></a>Microsoft 모니터링 파트너
+
 | 파트너 | 설명 | 링크 |
 | --- | --- | --- | --- |
 |[![idera][1]][idera_website] |**IDERA**<br>SQL 진단 관리자는 SQL Server 환경 내의 상태, 성능 및 가용성 문제를 중앙 콘솔에서 모두 관리자에게 사전에 알려 주는 강력한 성능 모니터링 및 진단 솔루션입니다.<br><br>[시스템 요구 사항][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[웹 사이트][idera_website]<br>[Twitter][idera_twitter]<br>[비디오][idera_youtube] | |
 |[![quest][3]][quest_website] |**Quest**<br>SQL Server Enterprise의 스포트라이트 - SQL Server의 비교할 수 없는 모니터링, 진단 및 최적화로 24시간 연속 최고 성능을 보장합니다. 스포트라이트는 SQL Server 데이터베이스의 최적 적합도에 필요한 세부 정보에 대한 액세스를 제공합니다. 상태 및 성능, 자동화된 경고 및 동작, 모바일 디바이스 지원에 대한 직관적인 개요를 확인하세요.|[Marketplace][quest_marketplace]<br>[웹 사이트][quest_website]<br>[비디오][quest_video] | |
 |[![redgate][4]][redgate_website]| **Redgate**<br>Redgate의 SQL Monitor는 SQL Server를 모니터링하는 팀이 보다 적극적으로 대응할 수 있도록 도와주는 SQL Server 모니터링 도구입니다. SQL Monitor는 현재의 문제에 대해 경고할 뿐만 아니라 앞으로 발생할 문제를 방지하는 데 필요한 정보도 제공합니다. 대규모 SQL Server 자산에 이상적인 SQL Monitor는 성능 관련 질문에 대한 답변을 항상 제공합니다. |[웹 사이트][redgate_website]<br>[Twitter][redgate_twitter]<br>[LinkedIn][redgate_linkedin] <br>[비디오][redgate_video]| |
 |[![sentryone][2]][sentryone_website] |**SentryOne**<br>SentryOne 솔루션은 Microsoft 데이터 전문가가 물리적, 가상 및 클라우드 환경 전반에 걸쳐 획기적인 성능을 달성할 수 있도록 지원합니다. 데이터 전문가는 SentryOne을 사용하여 도구 집합을 통합하고, 인프라 비용을 줄이며, 크기와 복잡성에 관계없이 Microsoft 데이터 플랫폼 환경에서 최고의 성능을 발휘할 수 있도록 데이터베이스 속도와 효율성을 높일 수 있습니다.|<!--[Marketplace][idera_marketplace]<br>-->[웹 사이트][sentryone_website]<br>[데이터시트][sentryone_datasheet]<br>[Twitter][sentryone_twitter]<br>[LinkedIn][sentryone_linkedin] | |
-|[![solarwinds][5]][solarwinds_website] |**Solarwinds**<br>Database Performance Analyzer는 애플리케이션 요청, SQL 문, 데이터베이스 리소스, 호스트/OS, 네트워크, 가상화 및 저장소 성능 전반에 대한 가시성을 제공합니다. DPA는 대기 시간 분석을 통합하여 상태뿐만 아니라 데이터베이스가 애플리케이션 요청에 응답하는 속도에 집중하도록 합니다. DPA는 배포 방법에 관계없이 데이터베이스를 완벽하게 제공합니다. 물리적, 가상, 클라우드 또는 DBaaS를 사용하여 하나의 창에서 작업할 수 있습니다.|[Marketplace][solarwinds_marketplace]<br>[웹 사이트][solarwinds_website]<br>[데이터시트][solarwinds_datasheet]<br>[LinkedIn][solarwinds_linkedin]<br>[비디오][solarwinds_video]| |
+|[![solarwinds][5]][solarwinds_website] |**Solarwinds**<br>Database Performance Analyzer는 애플리케이션 요청, SQL 문, 데이터베이스 리소스, 호스트/OS, 네트워크, 가상화 및 스토리지 성능 전반에 대한 가시성을 제공합니다. DPA는 대기 시간 분석을 통합하여 상태뿐만 아니라 데이터베이스가 애플리케이션 요청에 응답하는 속도에 집중하도록 합니다. DPA는 배포 방법에 관계없이 데이터베이스를 완벽하게 제공합니다. 물리적, 가상, 클라우드 또는 DBaaS를 사용하여 하나의 창에서 작업할 수 있습니다.|[Marketplace][solarwinds_marketplace]<br>[웹 사이트][solarwinds_website]<br>[데이터시트][solarwinds_datasheet]<br>[LinkedIn][solarwinds_linkedin]<br>[비디오][solarwinds_video]| |
 
 
 
