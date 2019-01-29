@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d0b91668141b73b8ce5e4708cb403b7cc09b4ce9
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 8ef383a0f2c85525e408607c22513065dd5bcb50
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432836"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087742"
 ---
 # <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>SQL Server 2019에 SQL Server Machine Learning Services 설치의 차이점  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -58,7 +58,7 @@ AppContainers 이동의 일부로, 가지 AppContainer Sid에 따라 새 방화�
 
 ## <a name="symbolic-link-created-by-setup"></a>설치 프로그램에서 생성 하는 기호화 된 링크
 
-기호화 된 링크를 현재 기본값으로 만들어집니다 **R_SERVICES** 하 고 **PYTHON_SERIVCES** SQL Server 설치의 일부로. 이 링크를 만들려면 않으려면 대안 폴더에 이르는 계층에 '모든 응용 프로그램 패키지' 읽기 권한을 부여 하는 것입니다.
+기호화 된 링크를 현재 기본값으로 만들어집니다 **R_SERVICES** 하 고 **PYTHON_SERVICES** SQL Server 설치의 일부로. 이 링크를 만들려면 않으려면 대안 폴더에 이르는 계층에 '모든 응용 프로그램 패키지' 읽기 권한을 부여 하는 것입니다.
 
 
 ## <a name="see-also"></a>참고자료

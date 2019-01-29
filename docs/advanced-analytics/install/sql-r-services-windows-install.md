@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 69b3b9a57b2a4f6120c88552ca3100b288968b69
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 0cfe6b67217521f829f7b4745d42283e70a411fe
+ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645322"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55147031"
 ---
 # <a name="install-sql-server-2016-r-services"></a>SQL Server 2016 R Services 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,6 +27,8 @@ SQL Server 2017에서 R 통합으로 제공 됩니다 [Machine Learning Services
 ## <a name="pre-install-checklist"></a>설치 전 검사 목록
 
 + 데이터베이스 엔진 인스턴스를 반드시 입력 해야 합니다. 기존 인스턴스에 증분 방식으로 추가할 수는 있지만 방금 R을 설치할 수 없습니다.
+
++ 비즈니스 연속성을 위한 [Always On 가용성 그룹](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) R Services에 대해 지원 됩니다. R Services를 설치 하 고 각 노드에서 패키지를 구성 해야 합니다.
 
 + 장애 조치 클러스터에 R Services를 설치 하지 마세요. R 프로세스 격리에 사용 되는 보안 메커니즘이 Windows Server 장애 조치 클러스터 환경과 호환 되지 않습니다.
 

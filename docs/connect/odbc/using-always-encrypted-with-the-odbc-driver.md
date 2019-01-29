@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: f91ba6d5e7120f26c4ce4f8572eea779cdddebfc
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 72ff999a4b88bff5d8b78f8e8b936da18b8a4e16
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226690"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044950"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server용 ODBC 드라이버와 함께 상시 암호화 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -417,6 +417,7 @@ ODBC Driver for SQL Server는 또한 CEKeystoreProvider 인터페이스를 사�
 ```
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
+
 | 인수 | 설명 |
 |:---|:---|
 |`ConnectionHandle`|[입력] 연결 핸들입니다. 올바른 연결 핸들을 해야 되지만 하나의 연결 핸들을 통해 로드할 공급자 동일한 프로세스에서 다른 액세스할 수 있습니다.|
@@ -451,6 +452,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 ```
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
+
 | 인수 | 설명 |
 |:---|:---|
 |`ConnectionHandle`|[입력] 연결 핸들입니다. 올바른 연결 핸들을 해야 되지만 하나의 연결 핸들을 통해 로드할 공급자 동일한 프로세스에서 다른 액세스할 수 있습니다.|
@@ -477,6 +479,7 @@ unsigned int dataSize;
 char data[];
 } CEKEYSTOREDATA;
 ```
+
 | 인수 | 설명 |
 |:---|:---|
 |`name`|[입력] 공급자의 이름 집합으로 데이터 전송 됩니다. 가져오기 시 무시 됩니다. Null로 종료 되는 와이드 문자 문자열입니다.|
@@ -489,6 +492,7 @@ A `SQLSetConnectAttr` 를 사용 하 여 호출 된 `SQL_COPT_SS_CEKEYSTOREDATA`
 ```
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
+
 | 인수 | 설명 |
 |:---|:---|
 |`ConnectionHandle`| [입력] 연결 핸들입니다. 올바른 연결 핸들을 해야 되지만 하나의 연결 핸들을 통해 로드할 공급자 동일한 프로세스에서 다른 액세스할 수 있습니다.|
@@ -508,6 +512,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 ```
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
+
 | 인수 | 설명 |
 |:---|:---|
 |`ConnectionHandle`|[입력] 연결 핸들입니다. 올바른 연결 핸들을 해야 되지만 하나의 연결 핸들을 통해 로드할 공급자 동일한 프로세스에서 다른 액세스할 수 있습니다.|

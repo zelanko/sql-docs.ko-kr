@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2f323ac135ed41ff15c1d41a17407d03138e4807
-ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
+ms.openlocfilehash: 6fd14582fdae0d76463b8d8739d214882b78f999
+ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54372695"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55147011"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Windows에 SQL Server Machine Learning를 설치합니다.
 
@@ -29,7 +29,9 @@ SQL Server 2017부터 R 및 Python에 대 한 지원이 데이터베이스 내 �
 
 + 데이터베이스 엔진 인스턴스를 반드시 입력 해야 합니다. 기존 인스턴스를 증분 방식으로 추가할 수는 있지만 방금 R 또는 Python 기능을 설치할 수 없습니다.
 
-- Machine Learning Services를 설치 *지원 되지 않습니다* SQL Server 2017에서 장애 조치 클러스터입니다. 그러나 그 *는* SQL Server 2019를 사용 하 여 합니다. 
++ 비즈니스 연속성을 위한 [Always On 가용성 그룹](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) Machine Learning 서비스에 대해 지원 됩니다. Machine Learning 서비스를 설치 하 고 각 노드에서 패키지를 구성 해야 합니다.
+
++ Machine Learning Services를 설치 *지원 되지 않습니다* SQL Server 2017에서 장애 조치 클러스터입니다. 그러나 그 *는* SQL Server 2019를 사용 하 여 합니다. 
  
 + 도메인 컨트롤러에서 Machine Learning 서비스를 설치 하지 마세요. Machine Learning 서비스에 대 한 부분 설치 하지 못합니다.
 

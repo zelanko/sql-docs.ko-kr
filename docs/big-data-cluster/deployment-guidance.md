@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 900bd5fea075e304dae73a20168da952433f20be
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 422c09654f214d067b7d1ad7fd8bcca1dfe8f7e8
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405823"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087862"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 배포 하는 방법
 
@@ -256,10 +256,27 @@ kubectl get svc -n <your-cluster-name>
     mssqlctl delete cluster <old-cluster-name>
    ```
 
-1. 최신 버전의 설치 **mssqlctl**합니다.
+1. 이전 버전을 모두 제거 **mssqlctl**합니다.
+
+   ```bash
+   pip3 uninstall mssqlctl
+   ```
+
+   > [!IMPORTANT]
+   > 새 버전을 설치 하지 해야 **mssqlctl** 이전 버전을 먼저 제거 하지 않고 있습니다.
+
+1. 최신 버전의 설치 **mssqlctl**합니다. 
+   
+   **Windows:**
+
+   ```powershell
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   ```
+
+   **Linux:**
    
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --user
    ```
 
    > [!IMPORTANT]

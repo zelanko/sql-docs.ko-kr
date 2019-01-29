@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ee8f8c4a222b2949f49c8be019b6e4f6724cfa04
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: d46ff8318543d4e2a4b4dc547c9f19640d463f49
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785964"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087872"
 ---
 # <a name="thread-pool-properties"></a>스레드 풀 속성
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -173,13 +173,13 @@ ms.locfileid: "53785964"
   
  NUMA 노드가 무시됩니다. IOProcess 스레드 풀이 하나만 있고 이 스레드 풀의 모든 스레드는 모든 논리적 프로세서로 선호도가 설정됩니다. 기본적으로(PerNumaNode=-1) 이 설정은 컴퓨터에 4개 미만의 NUMA 노드가 있는 경우 작동 가능한 설정입니다.  
   
- ![Numa, 프로세서 및 스레드 풀 항목](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "Numa, 프로세서 및 스레드 풀 항목")  
+ ![Numa, 프로세서 및 스레드 풀로 대응](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "Numa, 프로세서 및 스레드 풀로 대응")  
   
  **PerNumaNode=1 설정**  
   
  IOProcess 스레드 풀이 각 NUMA 노드에 대해 만들어집니다. 스레드 풀을 별도로 지정하면 NUMA 노드의 로컬 캐시와 같이 로컬 리소스에 대한 액세스 조정 성능이 향상됩니다.  
   
- ![Numa, 프로세서 및 스레드 풀 항목](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "Numa, 프로세서 및 스레드 풀 항목")  
+ ![Numa, 프로세서 및 스레드 풀로 대응](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "Numa, 프로세서 및 스레드 풀로 대응")  
   
  **PerNumaNode=2 설정**  
   
@@ -187,7 +187,7 @@ ms.locfileid: "53785964"
   
  다음 예에서,  NUMA  노드 4개와 논리적 프로세서 32개가 포함된 시스템에서 **PerNumaNode** 를 2로 설정하면 IOProcess  스레드 풀이 32개가 됩니다. 처음 8개 스레드 풀의 스레드는 NUMA 노드 0의 모든 논리적 프로세서로 선호도가 설정되지만 이상적인 프로세서 설정은 0, 1, 2부터 최대 7까지입니다. 다음 8개 스레드 풀은 NUMA 노드 1의 모든 논리적 프로세서로 선호도가 설정되며, 이상적인 프로세서 설정은 8, 9, 10부터 최대 15까지입니다.  
   
- ![Numa, 프로세서 및 스레드 풀 항목](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "Numa, 프로세서 및 스레드 풀 항목")  
+ ![Numa, 프로세서 및 스레드 풀로 대응](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "Numa, 프로세서 및 스레드 풀로 대응")  
   
  이러한 선호도 수준에서 스케줄러는 항상 선호되는 NUMA 노드 내에서 이상적인 논리적 프로세서를 먼저 사용하도록 시도합니다. 논리적 프로세서를 사용할 수 없으면, 스케줄러가 동일한 노드 내에서 또는 동일한 프로세서 그룹 내에서(다른 스레드를 사용할 수 없는 경우) 다른 프로세서를 선택합니다. 자세한 내용 및 예제를 보려면 [Analysis Services 2012 구성 설정(Wordpress 블로그)](http://go.microsoft.com/fwlink/?LinkId=330387)을 참조하세요.  
   

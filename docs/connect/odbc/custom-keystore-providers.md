@@ -11,12 +11,12 @@ ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: fa75def4572fa5d5b9b5eafaafde5d57bc21a81e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59a1458c98fb12f2f053bfd71649f40ddc5d1e4e
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666661"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55047217"
 ---
 # <a name="custom-keystore-providers"></a>사용자 지정 키 저장소 공급자
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -223,6 +223,7 @@ void *dbcCtx;
 void *stmtCtx;
 } CEKEYSTORECONTEXT;
 ```
+
 |필드|설명|
 |:--|:--|
 |`envCtx`|환경 컨텍스트입니다.|

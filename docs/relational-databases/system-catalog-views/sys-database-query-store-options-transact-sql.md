@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24222ed24da0fea385e27aa13bd518efa15a32c3
-ms.sourcegitcommit: ee76381cfb1c16e0a063315c9c7005f10e98cfe6
+ms.openlocfilehash: e8f1169e430a9ab6295862a3434f08967e01f33f
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55071340"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087782"
 ---
 # <a name="sysdatabasequerystoreoptions-transact-sql"></a>sys.database_query_store_options (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "55071340"
 |**desired_state_desc**|**nvarchar(60)**|쿼리 저장소의 원하는 작업 모드의 텍스트 설명:<br />OFF<br />READ_ONLY<br />READ_WRITE|  
 |**actual_state**|**smallint**|쿼리 저장소의 작업 모드를 나타냅니다. 사용자가 필요한 원하는 상태의 목록 외에도 실제 상태는 오류 상태를 수 있습니다.<br /> 0 = OFF <br /> 1 = READ_ONLY<br /> 2 = READ_WRITE<br /> 3 = ERROR|  
 |**actual_state_desc**|**nvarchar(60)**|쿼리 저장소의 실제 작업 모드의 텍스트 설명입니다.<br />OFF<br />READ_ONLY<br />READ_WRITE<br />ERROR<br /><br /> 실제 상태가 필요한 상태에서 다른 경우가 있습니다.<br />-데이터베이스 읽기 전용 모드로 설정 된 경우, 쿼리 저장소 크기가 구성 된 할당량을 초과 하는 경우 쿼리 저장소는 읽기 / 쓰기 사용자가 지정 된 경우에 읽기 전용 모드에서 작동할 수 있습니다.<br />-극단적인 시나리오에서 쿼리 저장소 내부 오류로 인해 오류 상태를 입력할 수 있습니다. 이 경우 쿼리 저장소를 실행 하 여 복구할 수 있습니다는 `sp_query_store_consistency_check` 영향을 받는 데이터베이스에서 저장 프로시저입니다.|  
-|**readonly_reason**|**int**|경우는 **desired_state_desc** READ_WRITE입니다와 **actual_state_desc** READ_ONLY,입니다 **readonly_reason** 반환 쿼리 저장소에 이유를 나타내려면 매핑할 약간 읽기 전용 모드입니다.<br /><br /> **1** -데이터베이스가 읽기 전용 모드<br /><br /> **2** -데이터베이스가 단일 사용자 모드<br /> **4** -데이터베이스가 응급 모드<br /> **8** -데이터베이스가 보조 복제본 (Always On에 적용 됩니다 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 지역에서 복제). 이 값에만 효과적으로 확인할 수 있습니다 **읽을 수 있는** 보조 복제본<br /> **65536** -쿼리 저장소 MAX_STORAGE_SIZE_MB 옵션으로 설정 된 크기 제한에 도달 했습니다.<br /> **131072** -쿼리 저장소에서 다른 문 수에는 내부 메모리 제한에 도달 했습니다. 필요 하지 않은 쿼리를 제거 하거나 쿼리 저장소를 읽기-쓰기 모드로 전송할 수 있도록 더 높은 서비스 계층으로 업그레이드 하는 것이 좋습니다.<br />**적용 대상:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]을 참조하세요.<br /> **262144** -디스크에 유지 하려고 대기 하는 메모리 내 항목의 크기에는 내부 메모리 제한에 도달 했습니다. 쿼리 저장소 디스크에 유지 되는 메모리 내 항목이 때까지 일시적으로 읽기 전용 모드로 됩니다. <br />**적용 대상:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]을 참조하세요.<br /><br /> **524288** -데이터베이스에는 디스크 크기 제한에 도달 했습니다. 쿼리 저장소 이므로 사용자 데이터베이스에 포함 하는 것을 의미 하는 데이터베이스에 더 이상 사용 가능한 공간이 쿼리 저장소가 더 커질 수 없습니다 더 이상.<br />**적용 대상:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]을 참조하세요. <br /> <br /> 쿼리 저장소 작업을 전환할 모드로 다시 읽기 / 쓰기를 참조 하십시오 **확인 쿼리 저장소에서 쿼리 데이터가 계속 수집** 부분 [쿼리 저장소 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md#Verify)합니다.|  
+|**readonly_reason**|**int**|경우는 **desired_state_desc** READ_WRITE입니다와 **actual_state_desc** READ_ONLY,입니다 **readonly_reason** 반환 쿼리 저장소에 이유를 나타내려면 매핑할 약간 읽기 전용 모드입니다.<br /><br /> **1** -데이터베이스가 읽기 전용 모드<br /><br /> **2** -데이터베이스가 단일 사용자 모드<br /><br /> **4** -데이터베이스가 응급 모드<br /><br /> **8** -데이터베이스가 보조 복제본 (Always On에 적용 됩니다 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 지역에서 복제). 이 값에만 효과적으로 확인할 수 있습니다 **읽을 수 있는** 보조 복제본<br /><br /> **65536** -쿼리 저장소 MAX_STORAGE_SIZE_MB 옵션으로 설정 된 크기 제한에 도달 했습니다.<br /><br /> **131072** -쿼리 저장소에서 다른 문 수에는 내부 메모리 제한에 도달 했습니다. 필요 하지 않은 쿼리를 제거 하거나 쿼리 저장소를 읽기-쓰기 모드로 전송할 수 있도록 더 높은 서비스 계층으로 업그레이드 하는 것이 좋습니다.<br />**적용 대상:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]을 참조하세요.<br /><br /> **262144** -디스크에 유지 하려고 대기 하는 메모리 내 항목의 크기에는 내부 메모리 제한에 도달 했습니다. 쿼리 저장소 디스크에 유지 되는 메모리 내 항목이 때까지 일시적으로 읽기 전용 모드로 됩니다. <br />**적용 대상:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]을 참조하세요.<br /><br /> **524288** -데이터베이스에는 디스크 크기 제한에 도달 했습니다. 쿼리 저장소 이므로 사용자 데이터베이스에 포함 하는 것을 의미 하는 데이터베이스에 더 이상 사용 가능한 공간이 쿼리 저장소가 더 커질 수 없습니다 더 이상.<br />**적용 대상:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]을 참조하세요. <br /> <br /> 쿼리 저장소 작업을 전환할 모드로 다시 읽기 / 쓰기를 참조 하십시오 **확인 쿼리 저장소에서 쿼리 데이터가 계속 수집** 부분 [쿼리 저장소 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md#Verify)합니다.|  
 |**current_storage_size_mb**|**bigint**|쿼리 저장소의 디스크 크기를 메가바이트에서입니다.|  
 |**flush_interval_seconds**|**bigint**|일반 쿼리 저장소 데이터를 디스크에 플러시하기 (초)에서에 대 한 기간입니다. 기본값은 **900** (15 분)입니다.<br /><br /> 사용 하 여 변경 된 `ALTER DATABASE <database> SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS  = <interval>)` 문입니다.|  
 |**interval_length_minutes**|**bigint**|통계 집계 간격 (분)입니다. 임의의 값이 허용 되지 않습니다. 다음 중 하나를 사용합니다. 1, 5, 10, 15, 30, 60 및 1440 분. 기본값은 **60** 분입니다.|  

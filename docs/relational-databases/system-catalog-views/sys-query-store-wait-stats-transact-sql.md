@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 620413448f7bd6c10af2d0e7333cd9eb793ef41a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 43cd85210c437520d2f72b7e9a16fbe2aab84514
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521247"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087842"
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (Transact SQL)
 
@@ -41,12 +41,12 @@ ms.locfileid: "52521247"
 |**wait_category**|**tinyint**|아래 테이블을 사용 하 여 대기 유형을 분류 되며 대기 시간 집계 한 다음 이러한 대기 범주. 대기 범주 마다 문제를 해결 하지만 유사한 문제 해결 환경의 형식을 동일한 범주 잠재 고객에서 대기 하는 다른 후속 분석 하며 완료 하려면 누락 된 부분에는 또한 대기에 영향을 받는 쿼리를 제공 합니다 대부분의 조사 했습니다.|
 |**wait_category_desc**|**nvarchar(128)**|대기 범주 필드의 텍스트 설명에 대 한 아래 표를 검토 합니다.|
 |**execution_type**|**tinyint**|쿼리 실행의 유형을 결정 합니다.<br /><br /> 0-일반 실행 (완료)<br /><br /> 3-클라이언트에서 시작한 실행을 중단 했습니다.<br /><br /> 4-예외 실행이 중단 됨|  
-|**execution_type_desc**|**nvarchar(128)**|실행 형식 필드의 텍스트 설명:<br /><br /> 0-일반<br /><br /> 3-중단<br /><br /> 4-예외|  
+|**execution_type_desc**|**nvarchar(128)**|실행 형식 필드의 텍스트 설명:<br /><br /> 0-일반<br /><br /> 3-중단<br /><br /> 4 -  Exception|  
 |**total_query_wait_time_ms**|**bigint**|총 `CPU wait` 집계 간격 내에서 쿼리 계획에 대 한 시간 및 대기 범주 (밀리초 단위로 보고 됨).|
 |**avg_query_wait_time_ms**|**float**|평균 대기 시간 (밀리초 단위로 보고 됨)는 집계 간격 및 대기 범주 내에서 실행 당 쿼리 계획에 대 한입니다.|
 |**last_query_wait_time_ms**|**bigint**|마지막으로 집계 간격 내에서 쿼리 계획에 대 한 기간 대기 및 대기 범주 (밀리초 단위로 보고 됨).|
 |**min_query_wait_time_ms**|**bigint**|최소 `CPU wait` 집계 간격 내에서 쿼리 계획에 대 한 시간 및 대기 범주 (밀리초 단위로 보고 됨).|
-|**max_query_wait_time_ms**|**bigint**|최대 'CPU 대기' 집계 간격 내에서 쿼리 계획에 대 한 시간 및 대기 범주 (밀리초 단위로 보고 됨).|
+|**max_query_wait_time_ms**|**bigint**|최대 `CPU wait` 집계 간격 내에서 쿼리 계획에 대 한 시간 및 대기 범주 (밀리초 단위로 보고 됨).|
 |**stdev_query_wait_time_ms**|**float**|`Query wait` 쿼리에 대 한 표준 편차 기간 집계 간격 내에서 계획 하 고 대기 범주 (밀리초 단위로 보고 됨).|
 
 ## <a name="wait-categories-mapping-table"></a>대기 범주 테이블 매핑
@@ -59,20 +59,20 @@ ms.locfileid: "52521247"
 |**1**|**CPU**|SOS_SCHEDULER_YIELD|
 |**2**|**작업자 스레드**|THREADPOOL|
 |**3**|**잠금**|LCK_M_%|
-|**4**|**래치**|LATCH_%|
+|**4**|**Latch**|LATCH_%|
 |**5**|**버퍼 래치**|PAGELATCH_%|
 |**6**|**버퍼 IO**|PAGEIOLATCH_%|
 |**7**|**컴파일***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
 |**8**|**SQL CLR**|CLR%, SQLCLR%|
-|**9**|**미러링**|DBMIRROR %|
+|**9**|**미러링**|DBMIRROR%|
 |**10**|**트랜잭션**|XACT%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_%, TRANSACTION_MUTEX|
 |**11**|**Idle**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_QUEUE, XE_TIMER_EVENT|
-|**12**|**선점형**|PREEMPTIVE_%|
+|**12**|**Preemptive**|PREEMPTIVE_%|
 |**13**|**Service Broker**|BROKER_ % **(하지만 하지 BROKER_RECEIVE_WAITFOR)**|
-|**14**|**트랜잭션 로그 IO**|LOGMGR, LOGBUFFER, LOGMGR_RESERVE_APPEND, LOGMGR_FLUSH, LOGMGR_PMM_LOG, CHKPT, WRITELOGF|
+|**14**|**Tran Log IO**|LOGMGR, LOGBUFFER, LOGMGR_RESERVE_APPEND, LOGMGR_FLUSH, LOGMGR_PMM_LOG, CHKPT, WRITELOGF|
 |**15**|**네트워크 IO**|ASYNC_NETWORK_IO, NET_WAITFOR_PACKET, PROXY_NETWORK_IO, EXTERNAL_SCRIPT_NETWORK_IOF|
 |**16**|**Parallelism**|CXPACKET, EXCHANGE|
-|**17**|**메모리**|RESOURCE_SEMAPHORE CMEMTHREAD, CMEMPARTITIONED, EE_PMOLOCK, MEMORY_ALLOCATION_EXT, RESERVED_MEMORY_ALLOCATION_EXT, MEMORY_GRANT_UPDATE|
+|**17**|**메모리**|RESOURCE_SEMAPHORE, CMEMTHREAD, CMEMPARTITIONED, EE_PMOLOCK, MEMORY_ALLOCATION_EXT, RESERVED_MEMORY_ALLOCATION_EXT, MEMORY_GRANT_UPDATE|
 |**18**|**사용자의 대기 시간**|WAITFOR, WAIT_FOR_RESULTS, BROKER_RECEIVE_WAITFOR|
 |**19**|**추적**|TRACEWRITE, SQLTRACE_LOCK, SQLTRACE_FILE_BUFFER, SQLTRACE_FILE_WRITE_IO_COMPLETION, SQLTRACE_FILE_READ_IO_COMPLETION, SQLTRACE_PENDING_BUFFER_WRITERS, SQLTRACE_SHUTDOWN, QUERY_TRACEOUT, TRACE_EVTNOTIFF|
 |**20**|**전체 텍스트 검색**|FT_RESTART_CRAWL, 전체 텍스트 GATHERER, MSSEARCH, FT_METADATA_MUTEX, FT_IFTSHC_MUTEX, FT_IFTSISM_MUTEX, FT_IFTS_RWLOCK, FT_COMPROWSET_RWLOCK, FT_MASTER_MERGE, FT_PROPERTYLIST_CACHE FT_MASTER_MERGE_COORDINATOR, PWAIT_RESOURCE_SEMAPHORE_FT_ PARALLEL_QUERY_SYNC|
@@ -84,7 +84,7 @@ ms.locfileid: "52521247"
 
 ## <a name="permissions"></a>사용 권한
 
- 필요 합니다 **VIEW DATABASE STATE** 권한.  
+ `VIEW DATABASE STATE` 권한이 필요합니다.  
   
 ## <a name="see-also"></a>관련 항목
 

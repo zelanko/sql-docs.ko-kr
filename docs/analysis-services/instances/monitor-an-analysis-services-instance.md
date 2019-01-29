@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1ac0f94b7f12cdba6237b2694114580f56dc6597
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 39cc5a22165d07aafce29e4216548c4e8d226892
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540465"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087632"
 ---
 # <a name="monitoring-overview"></a>모니터링 개요
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-Analysis Services에 모니터링 하려면 다양 한 도구 및 서버의 성능을 조정 합니다. 도구를 선택하는 기준은 수행된 모니터링 또는 튜닝 유형과 모니터링할 이벤트에 따라 결정됩니다.
+Analysis Services 모니터링 하 고 서버 성능을 튜닝 하는 데 다양 한 도구에 있습니다. 도구를 선택하는 기준은 수행된 모니터링 또는 튜닝 유형과 모니터링할 이벤트에 따라 결정됩니다.
 
 SQL Server Analysis Services를 모니터링 하는 방법에 대 한 자세한 내용은 참조는 [SQL Server 2008 R2 작업 가이드](http://go.microsoft.com/fwlink/?LinkID=225539)합니다.  
   
