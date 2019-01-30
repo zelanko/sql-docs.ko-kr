@@ -11,12 +11,12 @@ ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7459e99e64bddaa0e971666edb8bb9c7c67c009
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1dc50fb96c6ff5e88119186ec81f9608f25f42c3
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727491"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044836"
 ---
 # <a name="connection-options"></a>연결 옵션
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,13 +24,14 @@ ms.locfileid: "47727491"
 이 항목에서는 결합형 배열에 허용되는 옵션(SQLSRV 드라이버에서 [sqlsrv_connect](../../connect/php/sqlsrv-connect.md)를 사용할 때) 또는 데이터 원본 이름(dsn)에 허용되는 키워드(PDO_SQLSRV 드라이버에서 [PDO::__construct](../../connect/php/pdo-construct.md)를 사용할 때)를 나열합니다.  
 
 ## <a name="table-of-connection-options"></a>연결 옵션 표
+
 |Key|값|설명|Default|  
 |-------|---------|---------------|-----------|  
 |APP|String|추적에서 사용되는 애플리케이션 이름을 지정합니다.|설정된 값이 없습니다.|  
 |애플리케이션 의도|String|서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 가능한 값은 ReadOnly 및 ReadWrite입니다.<br /><br />에 대 한 자세한 내용은 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 에 대 한 지원 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]를 참조 하십시오 [High Availability, Disaster Recovery에 대 한 지원](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)합니다.|ReadWrite|  
 |AttachDBFileName|String|서버를 연결해야 하는 데이터베이스 파일을 지정합니다.|설정된 값이 없습니다.|  
-|인증|Key, Input, Predict, PredictOnly, None<br /><br />'SqlPassword'<br /><br />' ActiveDirectoryPassword'|인증 모드를 지정합니다.|설정 안 됨.|  
-|CharacterSet<br /><br />(PDO_SQLSRV 드라이버에서 지원되지 않음)|String|서버에 데이터를 보내는 데 사용되는 문자 집합을 지정합니다.<br /><br />가능한 값은 SQLSRV_ENC_CHAR 및 UTF-8입니다. 자세한 내용은 [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)을 참조하세요.|SQLSRV_ENC_CHAR|  
+|인증|Key, Input, Predict, PredictOnly, None<br /><br />'SqlPassword'<br /><br />'ActiveDirectoryPassword'|인증 모드를 지정합니다.|설정 안 됨.|  
+|CharacterSet<br /><br />(PDO_SQLSRV 드라이버에서 지원되지 않음)|String|서버에 데이터를 보내는 데 사용되는 문자 집합을 지정합니다.<br /><br />가능한 값은 SQLSRV_ENC_CHAR 및 UTF-8입니다. 자세한 내용은 [방법: 기본 제공 UTF-8 지원을 사용하여 UTF-8 데이터 보내기 및 검색](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)을 참조하세요.|SQLSRV_ENC_CHAR|  
 |ColumnEncryption|**사용** 또는 **사용 안 함**|Always Encrypted 기능 사용 여부를 지정 합니다. |사용 안 함|  
 |ConnectionPooling|연결 풀링이 설정되면 1 또는 **true** 입니다.<br /><br />연결 풀링이 해제되면 0 또는 **false** 입니다.|연결이 연결 풀에서 할당되는지(1 또는 **true**) 할당되지 않는지(0 또는 **false**)를 지정합니다.<sup>1</sup>|**true**(1)|  
 |ConnectRetryCount|0에서 255 (포함) 사이의 정수|포기 하기 전에 끊어진된 연결을 다시 시도의 최대 수입니다. 기본적으로 단일 시도 분할 하는 경우 연결 다시 설정 하도록 합니다. 0 이면 없습니다 다시 연결 하려고 하는 값입니다.|1|  
@@ -43,7 +44,7 @@ ms.locfileid: "47727491"
 |KeyStorePrincipalId|String|Azure Key Vault에 액세스 하려는 계정에 대 한 식별자입니다. <br /><br />KeyStoreAuthentication 이면 **KeyVaultPassword**,이 Azure Active Directory 사용자 이름 이어야 합니다. <br /><br />KeyStoreAuthentication 이면 **KeyVaultClientSecret**, 응용 프로그램 클라이언트 ID는 이어야 합니다|설정 안 됨.|
 |KeyStoreSecret|String|Azure Key Vault에 액세스 하려는 계정에 대 한 자격 증명 암호입니다. <br /><br />KeyStoreAuthentication 이면 **KeyVaultPassword**, Azure Active Directory 암호를 이어야 합니다. <br /><br />KeyStoreAuthentication 이면 **KeyVaultClientSecret**, 응용 프로그램 클라이언트 암호 여야 합니다.|설정 안 됨.|
 |LoginTimeout|정수(SQLSRV 드라이버)<br /><br />문자열(PDO_SQLSRV 드라이버)|연결 시도가 실패할 때까지 기다리는 시간(초)을 지정합니다.|시간 제한이 없습니다.|  
-|MultipleActiveResultSets|MARS(Multiple Active Result Set)를 사용하려면 1 또는 **true** 입니다.<br /><br />MARS(Multiple Active Result Set)를 사용하지 않으려면 0 또는 **false** 입니다.|MARS(Multiple Active Result Set)에 대한 지원을 사용하지 않도록 설정하거나 명시적으로 사용하도록 설정합니다.<br /><br />자세한 내용은 [방법: MARS&#40;Multiple Active Resultsets&#41;를 사용하지 않도록 설정](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)을 참조하세요.|true(1)|  
+|MultipleActiveResultSets|MARS(Multiple Active Result Set)를 사용하려면 1 또는 **true** 입니다.<br /><br />MARS(Multiple Active Result Set)를 사용하지 않으려면 0 또는 **false** 입니다.|MARS(Multiple Active Result Set)에 대한 지원을 사용하지 않도록 설정하거나 명시적으로 사용하도록 설정합니다.<br /><br />자세한 내용은 [방법: 여러 활성 결과 집합을 사용 하지 않도록 설정 &#40;MARS&#41;](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)합니다.|true(1)|  
 |MultiSubnetFailover|String|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 가용성 그룹 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **multiSubnetFailover=yes**를 지정합니다. **multiSubnetFailover=yes**는 현재 활성 상태인 서버를 더 빠르게 검색하고 연결할 수 있도록 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 구성합니다. 가능한 값은 예 및 아니요입니다.<br /><br />에 대 한 자세한 내용은 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 에 대 한 지원 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]를 참조 하십시오 [High Availability, Disaster Recovery에 대 한 지원](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)합니다.|아니오|  
 |PWD<br /><br />(PDO_SQLSRV 드라이버에서 지원되지 않음)|String|SQL Server 인증<sup>4</sup>에 연결될 때 사용할 사용자 ID와 연결된 암호를 지정합니다.|설정된 값이 없습니다.|  
 |QuotedId|SQL-92 규칙을 사용하려면 1 또는 **true**입니다.<br /><br />레거시 규칙을 사용하려면 0 또는 **false** 입니다.|따옴표로 묶은 식별자에 대해 SQL-92 규칙을 사용할지(1 또는 **true**) 레거시 Transact-SQL 규칙을 사용할지(0 또는 **false**) 여부를 지정합니다.|**true**(1)|  
@@ -62,7 +63,7 @@ ms.locfileid: "47727491"
 
 2. 설정된 연결에서 실행되는 모든 쿼리는 *데이터베이스* 특성에서 지정하는 데이터베이스에 대해 만들어집니다. 그러나 사용자에게 적절한 권한이 있는 경우 정규화된 이름을 사용하여 다른 데이터베이스의 데이터에 액세스할 수 있습니다. 예를 들어 *마스터* 데이터베이스가 *데이터베이스* 연결 특성으로 설정된 경우 정규화된 이름을 사용하여 *AdventureWorks.HumanResources.Employee* 테이블에 액세스하는 Transact-SQL 쿼리를 계속 실행할 수 있습니다.  
 
-3. *암호화* 를 사용하도록 설정하면 데이터를 암호화하는 데 필요한 계산 오버헤드로 인해 일부 응용 프로그램의 성능에 영향을 줄 수 있습니다.  
+3. *암호화* 를 사용하도록 설정하면 데이터를 암호화하는 데 필요한 계산 오버헤드로 인해 일부 애플리케이션의 성능에 영향을 줄 수 있습니다.  
 
 4. 연결할 *UID*와 *PWD* 특성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증과 연결될 때 둘 다 설정되어야 합니다.  
 
