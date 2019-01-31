@@ -104,7 +104,7 @@ ms.locfileid: "47756861"
   
     -   **미디어에 쓰기 전에 체크섬 수행**및 필요에 따라 **체크섬 오류 발생 시 계속**. 체크섬에 대한 자세한 내용은 [백업 및 복원 중 발생 가능한 미디어 오류&#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)를 참조하세요.  
   
-15.  **트랜잭션 로그** 섹션에서 다음을 수행합니다.  
+15. **트랜잭션 로그** 섹션에서 다음을 수행합니다.  
   
     -   일상적인 로그 백업의 경우 기본 선택인 **비활성 항목을 제거하여 트랜잭션 로그 잘라내기**를 유지합니다.  
   

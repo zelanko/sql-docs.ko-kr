@@ -47,7 +47,7 @@ ms.locfileid: "52545689"
   
 -   **SQLBindParameter**를 사용하여 매개 변수를 바인딩합니다.  
   
--    **SQLPrepare.** 을 사용하여 프로시저 호출을 준비합니다.  
+-   **SQLPrepare.** 을 사용하여 프로시저 호출을 준비합니다.  
   
 -   **SQLExecute**를 사용하여 저장 프로시저를 여러 번 실행합니다.  
   
