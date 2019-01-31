@@ -8,14 +8,14 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3ed9f661a49e6ad64642938672f6355a1d19d9f6
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: 4de4f510bcb584e0ec409f89eaba8c13ba6d8c6e
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302563"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457656"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>3단원: 데이터 기반 구독 정의
 이 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 자습서 단원에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 웹 포털 데이터 기반 구독 페이지를 사용하여 구독 데이터 원본에 연결하고 구독 데이터를 검색하는 쿼리를 작성하며 결과 집합을 보고서 및 배달 옵션에 매핑합니다.  
   
 > [!NOTE]  
@@ -47,7 +47,7 @@ ms.locfileid: "52302563"
 1.  대상 섹션에서 배달 방법으로 **Windows 파일 공유** 를 선택합니다.  
 
 ## <a name="dataset"></a>데이터 세트
-1. **데이터 집합 편집**을 클릭합니다.
+1. **데이터 세트 편집**을 클릭합니다.
 2. **사용자 지정 데이터 원본**을 선택합니다.
 3. 데이터 원본 **연결** 유형으로 **Microsoft SQL Server** 를 선택합니다.
 4. 연결 문자열에 다음 연결 문자열을 입력합니다. *구독자* 는 1단원에서 만든 데이터베이스입니다. 
@@ -60,8 +60,9 @@ ms.locfileid: "52302563"
 1. **다음 자격 증명 사용**을 선택합니다.
 2. **Windows 사용자 이름 및 암호**를 선택합니다.
 3.  **사용자 이름** 및 **암호**에 도메인 사용자 이름 및 암호를 입력합니다. **사용자 이름**을 지정할 때는 도메인 계정과 사용자 계정을 모두 포함합니다.
-    > [!NOTE]  
-    > 구독자 데이터 원본에 연결하는 데 사용된 자격 증명은 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]로 다시 전달되지 않습니다. 나중에 구독을 수정할 경우 데이터 원본에 연결하는 데 사용된 암호를 다시 입력해야 합니다.
+
+> [!NOTE]  
+> 구독자 데이터 원본에 연결하는 데 사용된 자격 증명은 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]로 다시 전달되지 않습니다. 나중에 구독을 수정할 경우 데이터 원본에 연결하는 데 사용된 암호를 다시 입력해야 합니다.
 
 ## <a name="query"></a>쿼리      
 1.  쿼리 상자에 다음 쿼리를 입력합니다.  
@@ -88,7 +89,7 @@ ms.locfileid: "52302563"
 **암호** | 값 입력 | 암호 입력
 
 ## <a name="report-parameters"></a>보고서 매개 변수
- 1. **OrderNumber** 필드에서 **데이터 집합에서 값 가져오기**를 선택합니다. 값에서 **Order**를 선택합니다. 
+ 1. **OrderNumber** 필드에서 **데이터 세트에서 값 가져오기**를 선택합니다. 값에서 **Order**를 선택합니다. 
  2. **구독 만들기**를 클릭합니다.
    
 ## <a name="next-steps"></a>Next Steps  

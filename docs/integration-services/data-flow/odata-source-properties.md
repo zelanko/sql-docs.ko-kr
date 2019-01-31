@@ -11,17 +11,18 @@ ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9249cac94f2e066d0502e16e40656de4e8b8bdc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19b7bf852fcebd390d3659fcd2bff53fa0446d0c
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848321"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55045056"
 ---
 # <a name="odata-source-properties"></a>OData 원본 속성
 데이터 흐름에서 **OData 원본**을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭하면 **속성** 창에 **OData 원본** 구성 요소의 속성이 표시됩니다.  
 
 ## <a name="properties"></a>속성 
+
 |속성|설명|  
 |-|-|  
 |CollectionName|OData 서비스에서 검색할 컬렉션의 이름입니다. **CollectionName** 속성은 **UseResourcePath** 가 False인 경우 사용됩니다.<br /><br /> 이 속성에는 식이 적용될 수 있으며 값을 런타임에 설정할 수 있습니다. 그러나 컬렉션의 메타데이터가 디자인 타임에 있던 메타데이터와 일치하지 않는 경우 유효성 검사 오류가 발생하여 데이터 흐름 실행이 실패합니다.|  

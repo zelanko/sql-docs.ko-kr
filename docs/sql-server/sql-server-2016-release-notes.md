@@ -14,12 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f7252b672eb29206bbd77cc92cdb3de68f3d6c91
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c243af9bdc0963ba83e94f8e35d90b68c5874a2c
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524333"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044380"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +39,7 @@ ms.locfileid: "52524333"
 SQL Server 2016 SP2를 설치하면 설치 후 다시 부팅이 필요할 수 있습니다. SQL Server 2016 SP2 설치 후 다시 부팅을 계획하고 설치를 수행하는 것이 가장 좋습니다.
 
 SQL Server 2016 SP2에 포함된 성능 및 확장성 관련 개선 사항.
+
 |기능|설명|자세한 정보|
 |   --- |   --- |   --- |
 |향상된 배포 DB 정리 프로시저 |   대형 배포 데이터베이스 테이블로 인해 차단 및 교착 상태가 발생했었습니다. 향상된 정리 프로시저는 이러한 일부 차단 또는 교착 상태 시나리오를 제거하려고 합니다. |   [KB4040276](https://support.microsoft.com/help/4040276/fix-indirect-checkpoints-on-the-tempdb-database-cause-non-yielding)  |
@@ -53,6 +54,7 @@ SQL Server 2016 SP2에 포함된 성능 및 확장성 관련 개선 사항.
 |증분 통계를 위한 자동 통계 업데이트 향상 |    특정 시나리오 즉, 테이블의 여러 파티션에서 증분된 통계에 대한 총 수정 카운터가 자동 업데이트 임계값을 초과할 만큼 데이터 변경이 많이 발생했지만 자동 업데이트 임계값을 초과하는 개별 파티션이 없는 경우, 테이블에서 훨씬 더 많은 수정이 발생할 때까지 통계 업데이트가 지연될 수 있습니다. 이 동작은 추적 플래그 11024에서 수정되었습니다.   |       |
 
 SQL Server 2016 SP2에는 지원 가능성 및 진단 관련 개선 사항이 포함되어 있습니다.
+
 |기능 |설명   |자세한 정보   |
 |   --- |   --- |   --- |
 |가용성 그룹의 데이터베이스에 완벽한 DTC 지원    |   가용성 그룹의 일부인 데이터베이스에 대한 데이터베이스 간 트랜잭션은 현재 SQL Server 2016에서 지원되지 않습니다. SQL Server 2016 SP2에서는 가용성 그룹 데이터베이스를 사용한 분산 트랜잭션을 완벽하게 지원합니다.   |       |
@@ -143,7 +145,7 @@ SQL Server 2016 SP1 설치는 설치 후에 다시 부팅해야 합니다. 모�
 ### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA) 
 **문제 및 고객에게 미치는 영향:** Microsoft는 SQL Server 2016에서 필수 구성 요소로 설치되는 Microsoft VC++ 2013 런타임 이진 파일에 영향을 주는 문제를 확인했습니다. 업데이트로 이 문제를 해결할 수 있습니다. VC 런타임 이진 파일에 대한 이 업데이트가 없으면 SQL Server 2016의 특정 시나리오에서 안정성 문제를 발생할 수 있습니다. SQL Server 2016을 설치하기 전에 컴퓨터에 [KB 3164398](https://support.microsoft.com/kb/3164398)에서 설명한 패치가 필요한지 확인합니다. 패치는 [SQL Server 2016 RTM용 누적 업데이트 패키지 1(CU1)](https://www.microsoft.com/download/details.aspx?id=53338)에도 포함되어 있습니다. 
 
-**해결 방법:** 다음 솔루션 중 하나를 사용합니다.
+**해결 방법:** 다음 솔루션 중 하나를 사용하세요.
 
 - [KB 3138367 - Visual C++ 2013 및 Visual C++ 재배포 가능 패키지 업데이트](https://support.microsoft.com/kb/3138367)를 설치합니다. KB는 기본적으로 사용되는 해결 방법입니다. SQL Server 2016 설치 전 또는 설치 후에 이 업데이트를 설치할 수 있습니다. 
 
@@ -159,11 +161,11 @@ SQL Server 2016 SP1 설치는 설치 후에 다시 부팅해야 합니다. 모�
  
     **KB 3164398**을 사용하는 경우 Microsoft 업데이트를 통해 또는 Microsoft 다운로드 센터에서 SQL Server 설치 중에 설치할 수 있습니다. 
 
-    - **SQL Server 2016 설치 중:** SQL Server 설치 프로그램을 실행하는 컴퓨터가 인터넷에 액세스하는 경우 전체 SQL ServeR을 설치할 때 업데이트를 검사합니다. 업데이트를 수락하면 설치 프로그램이 다운로드되고 설치하는 동안 이진 파일을 업데이트합니다.
+    - **SQL Server 2016 설치 중:** SQL Server 설치 프로그램을 실행하는 컴퓨터가 인터넷에 액세스하는 경우 SQL Server 설치 프로그램이 전체 SQL Server 설치의 일부로 업데이트를 검사합니다. 업데이트를 수락하면 설치 프로그램이 다운로드되고 설치하는 동안 이진 파일을 업데이트합니다.
 
     - **Microsoft 업데이트:** 업데이트는 중요한 비보안 SQL Server 2016 업데이트로 Microsoft 업데이트에서 제공합니다. Microsoft 업데이트를 통해 SQL Server 2016을 설치하면 업데이트를 수행하기 위해 서버를 다시 시작해야 합니다. 
 
-    - **다운로드 센터:** 마지막으로 업데이트는 Microsoft 다운로드 센터에서 제공합니다. SQL Server 2016을 설치한 후 업데이트 소프트웨어를 다운로드하고 서버에 설치할 수 있습니다. 
+    - **다운로드 센터:** 마지막으로, 업데이트는 Microsoft 다운로드 센터에서 제공합니다. SQL Server 2016을 설치한 후 업데이트 소프트웨어를 다운로드하고 서버에 설치할 수 있습니다. 
 
 
 ### <a name="bkmk_ga_stretch"></a>Stretch Database
@@ -176,15 +178,15 @@ SQL Server 2016 SP1 설치는 설치 후에 다시 부팅해야 합니다. 모�
 
 #### <a name="problem-with-an-index-that-uses-the-include-keyword"></a>INCLUDE 키워드를 사용하는 인덱스 문제
 
-**문제 및 고객에게 미치는 영향:** 인덱스에서 추가 열을 포함하기 위해 INCLUDE 키워드를 사용하는 인덱스가 있는 테이블에서 Stretch Database를 사용하도록 설정하려고 하면 오류가 발생합니다.
+**문제 및 고객에게 미치는 영향:** 인덱스에서 추가 열을 포함하기 위해 INCLUDE 키워드를 사용하는 인덱스가 있는 테이블에서 Stretch Database를 사용하도록 설정하는 작업이 오류로 인해 실패했습니다.
 
-**해결 방법:** INCLUDE 키워드를 사용하는 인덱스를 삭제하고 테이블에서 Stretch Database를 사용하도록 설정한 다음 인덱스를 다시 만듭니다. 이 작업을 수행하는 경우 영향을 받는 테이블의 사용자에게 영향을 주지 않거나 최소화하기 위해 조직의 유지 관리 방법 및 정책을 따라야 합니다.
+**해결 방법:** INCLUDE 키워드를 사용하는 인덱스를 삭제하고, 테이블에서 Stretch Database를 사용하도록 설정한 다음, 인덱스를 다시 만듭니다. 이 작업을 수행하는 경우 영향을 받는 테이블의 사용자에게 영향을 주지 않거나 최소화하기 위해 조직의 유지 관리 방법 및 정책을 따라야 합니다.
 
 ### <a name="bkmk_ga_query_store"></a>Query Store
 
 #### <a name="problem-with-automatic-data-cleanup-on-editions-other-than-enterprise-and-developer"></a>Enterprise 및 Developer 이외 버전의 자동 데이터 정리 문제
 
- **문제 및 고객에게 미치는 영향:** Enterprise 및 Developer 이외의 버전에서 자동 데이터 정리를 수행하지 못합니다. 따라서 데이터를 수동으로 제거하지 않으면 쿼리 저장소 사용 공간이 시간이 갈수록 증가하여 한계에 도달합니다. 이 문제가 완화되지 않으면 정리를 실행하려고 할 때마다 덤프 파일을 생성하므로 할당된 디스크 공간이 오류 로그로 채워지게 됩니다. 정리 활성화 기간은 워크로드 빈도에 따라 다르지만 15분 이하입니다.
+ **문제 및 고객에게 미치는 영향:** Enterprise 및 Developer 이외의 버전에서 자동 데이터 정리에 실패했습니다. 따라서 데이터를 수동으로 제거하지 않으면 쿼리 저장소 사용 공간이 시간이 갈수록 증가하여 한계에 도달합니다. 이 문제가 완화되지 않으면 정리를 실행하려고 할 때마다 덤프 파일을 생성하므로 할당된 디스크 공간이 오류 로그로 채워지게 됩니다. 정리 활성화 기간은 워크로드 빈도에 따라 다르지만 15분 이하입니다.
 
  **해결 방법:** Enterprise 및 Developer 이외의 버전에서 쿼리 저장소를 사용하려면 정리 정책을 명시적으로 해제해야 합니다. 이 작업은 SQL Server Management Studio(데이터베이스 속성 페이지)에서 또는 Transact-SQL 스크립트를 통해 수행할 수 있습니다.
 
@@ -212,11 +214,11 @@ SQL Server 2016 SP1 설치는 설치 후에 다시 부팅해야 합니다. 모�
     
 -   **온라인 또는 로컬 도움말 선택** 옵션을 사용하고 "온라인 도움말 사용"을 적용하도록 도움말을 구성합니다.    
     
--    **온라인에서 콘텐츠 설치** 옵션을 사용하고 SQL Server 2014 콘텐츠를 다운로드합니다.    
+-   **온라인에서 콘텐츠 설치** 옵션을 사용하고 SQL Server 2014 콘텐츠를 다운로드합니다.    
 
  **F1 도움말:** 기본적으로 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 F1 키를 누르면 F1 도움말 문서의 온라인 버전이 브라우저에 표시됩니다. 문제는 로컬 도움말을 구성하고 설치한 경우에도 브라우저 기반 도움말입니다. 
 
-**콘텐츠 업데이트:** SQL Server Management Studio 및 Visual Studio에서 설명서를 추가하는 프로세스 중에 도움말 뷰어 응용 프로그램이 중단(정지)될 수 있습니다. 이 문제를 해결하려면 다음 단계를 완료하세요. 이 문제에 대한 자세한 내용은 [Visual Studio 도움말 뷰어가 중단됨](https://msdn.microsoft.com/library/mt654096.aspx)을 참조하세요.    
+**콘텐츠 업데이트:** SQL Server Management Studio 및 Visual Studio에서 설명서를 추가하는 프로세스 중에 도움말 뷰어 애플리케이션이 중단(정지)될 수 있습니다. 이 문제를 해결하려면 다음 단계를 완료하세요. 이 문제에 대한 자세한 내용은 [Visual Studio 도움말 뷰어가 중단됨](https://msdn.microsoft.com/library/mt654096.aspx)을 참조하세요.    
     
 * 메모장에서 %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en US.settings 파일을 열고 다음 코드의 날짜를 미래의 날짜로 변경합니다.
 

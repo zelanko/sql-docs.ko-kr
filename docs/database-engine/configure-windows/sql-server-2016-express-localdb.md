@@ -46,7 +46,7 @@ Microsoft SQL Server 2016 Express **LocalDB** 는 개발자를 대상으로 하�
  
 설치 중에 **기능 선택/공유 기능** 페이지에서 **LocalDB** 를 선택합니다. 각 주요 **버전에 대해** LocalDB [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이진 파일을 하나만 설치할 수 있습니다. 여러 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 프로세스를 시작할 수 있으며, 이러한 프로세스에는 모두 동일한 이진 파일이 사용됩니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]LocalDB**로 시작된**  인스턴스는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]과(와) 동일한 제한 사항을 갖습니다.   
 
-  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** 인스턴스는 **SqlLocalDB.exe** 유틸리티를 사용하여 관리됩니다. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** LocalDB [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 를 사용해야 합니다. 
+ [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** 인스턴스는 **SqlLocalDB.exe** 유틸리티를 사용하여 관리됩니다. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** LocalDB [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 를 사용해야 합니다. 
   
 ## <a name="description"></a>설명  
  **LocalDB** 설치 프로그램은 SqlLocalDB.msi 프로그램을 사용하여 컴퓨터에 필요한 파일을 설치합니다. 설치가 끝나면 **LocalDB** 는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 데이터베이스를 만들고 열 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 됩니다. 데이터베이스의 시스템 데이터베이스 파일은 사용자의 로컬 AppData 경로에 저장되는데, 이 경로는 일반적으로 숨겨져 있습니다. 예를 들어 **C:\Users\\<사용자\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**입니다. 사용자 데이터베이스 파일은 사용자가 지정하는 위치(일반적으로 **C:\Users\\<사용자\>\Documents\\** 폴더 내 임의 위치)에 저장됩니다.  

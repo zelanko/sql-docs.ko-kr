@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c854d2e332d38443646de560a906826c419705b7
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 8f7de9a4f6e99c60b0bbe560d57f6e7adf397c2e
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300550"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087912"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -314,7 +314,7 @@ ms.locfileid: "54300550"
   - 작업 활동 모니터(필터 포함)를 사용하는 동안 발생하는 작업 중단 문제를 해결했습니다.
 
 - **Managed Instance**
-  - Managed Instances에 대한 지원 개선/수정: UI에서 지원되지 않는 옵션을 사용할 수 없도록 설정하고 URL 감사 대상을 처리하도록 감사 로그 보기 옵션을 수정했습니다.
+  - 관리되는 인스턴스 지원을 개선했습니다. UI에서 지원되지 않는 옵션을 사용할 수 없도록 설정하고 URL 감사 대상을 처리하도록 [감사 로그 보기] 옵션을 수정했습니다.
   - “스크립트 생성 및 게시” 마법사는 지원되지 않는 CREATE DATABASE 절을 스크립팅합니다.
   - CL 인스턴스에 대해 실시간 쿼리 통계를 사용하지 않도록 설정했습니다.
   - 데이터베이스 속성->파일이 ALTER DB ADD FILE을 잘못 스크립팅했습니다.

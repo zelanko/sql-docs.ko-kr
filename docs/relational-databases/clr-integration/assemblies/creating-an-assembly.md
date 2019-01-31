@@ -75,7 +75,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  **UNSAFE** 코드 권한은 어셈블리가 안전한지 확인할 수 없거나 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Win32 API 같은 제한된 리소스에 대한 추가 액세스가 필요한 경우에 사용합니다.  
   
-  **EXTERNAL_ACCESS** 에 **UNSAFE** 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]어셈블리를 만들려면 다음 두 조건 중 하나를 만족해야 합니다.  
+ **EXTERNAL_ACCESS** 에 **UNSAFE** 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]어셈블리를 만들려면 다음 두 조건 중 하나를 만족해야 합니다.  
   
 1.  어셈블리가 서명된 강력한 이름이거나 인증서로 서명된 Authenticode입니다. 이 강력한 이름(또는 인증서)이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 내에서 비대칭 키(또는 인증서)로 생성되었고 **EXTERNAL ACCESS ASSEMBLY** 권한(외부 액세스 어셈블리의 경우) 또는 **UNSAFE ASSEMBLY** 권한(안전하지 않은 어셈블리의 경우)이 있는 해당 로그인을 가지고 있습니다.  
   

@@ -26,7 +26,7 @@ ms.locfileid: "52532785"
 ---
 # <a name="understanding-database-engine-errors"></a>데이터베이스 엔진 오류 이해
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 발생한 오류에는 다음 표에 설명된 것과 같은 특성이 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 발생한 오류에는 다음 표에 설명된 것과 같은 특성이 있습니다.  
   
 |attribute|설명|  
 |---------------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "52532785"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 모든 시스템 및 사용자 정의 오류 메시지는 **sys.messages** 카탈로그 뷰에 포함되어 있습니다. RAISERROR 문을 사용하여 애플리케이션에 사용자 정의 오류를 반환할 수 있습니다.  
   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **SQLClient** 네임스페이스, ADO(ActiveX Data Objects), OLE DB 및 ODBC(Open Database Connectivity)를 비롯한 모든 데이터베이스 API는 기본 오류 특성을 보고합니다. 이 정보에는 오류 번호와 메시지 문자열이 포함됩니다. 그러나 일부 API는 일부 오류 특성을 보고하지 않을 수 있습니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **SQLClient** 네임스페이스, ADO(ActiveX Data Objects), OLE DB 및 ODBC(Open Database Connectivity)를 비롯한 모든 데이터베이스 API는 기본 오류 특성을 보고합니다. 이 정보에는 오류 번호와 메시지 문자열이 포함됩니다. 그러나 일부 API는 일부 오류 특성을 보고하지 않을 수 있습니다.  
   
  TRY...CATCH 구문의 TRY 블록 범위 내에서 발생하는 오류에 대한 정보는 관련 CATCH 블록 범위 내에서 ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY 및 ERROR_STATE와 같은 함수를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드에서 얻을 수 있습니다. 자세한 내용은 [TRY...CATCH&#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)를 참조하세요.  
   

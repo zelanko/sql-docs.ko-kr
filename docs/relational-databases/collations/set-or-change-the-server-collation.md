@@ -1,7 +1,7 @@
 ---
 title: 서버 데이터 정렬 설정 또는 변경 | Microsoft 문서
 ms.custom: ''
-ms.date: 12/03/2017
+ms.date: 01/22/2019
 ms.prod: sql
 ms.reviewer: carlrab
 ms.technology: ''
@@ -13,12 +13,12 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 231cc69c164e9ac4d91477710f959b073420c08e
-ms.sourcegitcommit: 4df7db58095384152195039d91a01d2bee6bd07d
+ms.openlocfilehash: 629ab86b869e36ec816dc99070f11a88147a1ca8
+ms.sourcegitcommit: e6e5da19b393f30b068552a18c911495cbc32952
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52954397"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54443699"
 ---
 # <a name="set-or-change-the-server-collation"></a>서버 데이터 정렬 설정 또는 변경
 
@@ -61,8 +61,8 @@ ms.locfileid: "52954397"
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>Managed Instance에서 서버 데이터 정렬 설정
 
-Azure SQL Managed Instance(미리 보기)의 서버 데이터 정렬은 인스턴스가 생성될 때 지정될 수 있습니다(PowerShell을 통해서만). 기본 서버 수준 데이터 정렬은 **SQL_Latin1_General_CP1_CI_AS**입니다. 유니코드 전용 및 새 UTF-8 데이터 정렬은 서버 수준 데이터 정렬로 지정할 수 없습니다.
-Azure SQL Database Managed 인스턴스에서 서버 수준 데이터 정렬을 설정하는 방법을 보여주는 스크립트 템플릿은 [Resource Manager 템플릿을 사용하여 Managed Instance 데이터 정렬 설정](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template)을 참조합니다. 데이터베이스를 SQL Server에서 Managed Instance로 마이그레이션하는 경우 `SERVERPROPERTY(N'Collation')` 함수를 사용하여 원본 SQL Server에서 서버 데이터 정렬을 확인하고 SQL Server의 데이터 정렬과 일치하는 Managed Instance를 만듭니다. 일치하지 않는 서버 수준 데이터 정렬을 사용하여 SQL Server에서 Managed Instance로 데이터베이스를 마이그레이션하면 쿼리에서 몇 가지 예기치 않은 오류가 발생할 수 있습니다. 기존 Managed Instance에서 서버 수준 데이터 정렬을 변경할 수 없습니다.
+Azure SQL Managed Instance의 서버 수준 데이터 정렬(미리 보기)은 인스턴스가 생성될 때 지정될 수 있고 나중에 변경될 수 없습니다. 인스턴스를 만드는 동안 [Azure Portal](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) 또는 [PowerShell 및 Resource Manager 템플릿](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template)을 통해 서버 수준 데이터 정렬을 설정할 수 있습니다. 기본 서버 수준 데이터 정렬은 **SQL_Latin1_General_CP1_CI_AS**입니다. 유니코드 전용 및 새 UTF-8 데이터 정렬은 서버 수준 데이터 정렬로 지정할 수 없습니다.
+데이터베이스를 SQL Server에서 Managed Instance로 마이그레이션하는 경우 `SERVERPROPERTY(N'Collation')` 함수를 사용하여 원본 SQL Server에서 서버 데이터 정렬을 확인하고 SQL Server의 데이터 정렬과 일치하는 Managed Instance를 만듭니다. 일치하지 않는 서버 수준 데이터 정렬을 사용하여 SQL Server에서 Managed Instance로 데이터베이스를 마이그레이션하면 쿼리에서 몇 가지 예기치 않은 오류가 발생할 수 있습니다. 기존 Managed Instance에서 서버 수준 데이터 정렬을 변경할 수 없습니다.
 
 ## <a name="see-also"></a>참고 항목
 

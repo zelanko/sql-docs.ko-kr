@@ -21,12 +21,12 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 316becea16562fda0e1ba05623f09018367254af
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 6fd3c164b539c8c6fc2dcce24f8ea1ad479ddee6
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589297"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087692"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>데이터베이스 엔진에 암호화된 연결 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,6 +48,9 @@ ms.locfileid: "53589297"
   
  
 ##  <a name="Provision"></a> 서버에 인증서를 구축(설치)하려면  
+
+>[!NOTE]
+>[인증서 관리(SQL Server 구성 관리자)](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates.md)를 참조하여 단일 서버에 인증서를 추가합니다.
   
 1.  **시작** 메뉴에서 **실행**을 클릭하고 **열기** 입력란에 **MMC** 를 입력한 다음 **확인**을 클릭합니다.  
   
@@ -59,7 +62,7 @@ ms.locfileid: "53589297"
   
 5.  **인증서 스냅인** 대화 상자에서 **컴퓨터 계정**을 클릭한 다음 **마침**을 클릭합니다.  
   
-6.   **독립 실행형 스냅인 추가** 대화 상자에서 **닫기**를 클릭합니다.  
+6.  **독립 실행형 스냅인 추가** 대화 상자에서 **닫기**를 클릭합니다.  
   
 7.  **스냅인 추가/제거** 대화 상자에서 **확인**을 클릭합니다.  
   
@@ -69,6 +72,10 @@ ms.locfileid: "53589297"
   
 10. **인증서 가져오기 마법사**를 완료하여 컴퓨터에 인증서를 추가하고 MMC 콘솔을 닫습니다. 컴퓨터에 인증서를 추가하는 방법은 Windows 설명서를 참조하세요.  
   
+## <a name="to-provision-install-a-certificate-across-multiple-servers"></a>여러 서버에 인증서를 프로비전(설치)하려면
+
+[인증서 관리(SQL Server 구성 관리자)](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates.md)를 참조하여 여러 서버에 인증서를 추가합니다.
+
 ##  <a name="Export"></a> 서버 인증서를 내보내려면  
   
 1.  **인증서** 스냅인의 **인증서** / **개인** 폴더에서 인증서를 찾은 다음 **인증서**를 마우스 오른쪽 단추로 클릭하고 **모든 태스크**를 가리킨 다음 **내보내기**를 클릭합니다.  
@@ -89,15 +96,15 @@ ms.locfileid: "53589297"
 > [!NOTE]
 > 클라이언트와 서버 간에 보안 연결을 보장하려면 암호화된 연결을 요청하도록 클라이언트를 구성합니다. 자세한 내용은 [이 문서의 뒷부분](#client-request-encrypt-connect-23h)에 설명되어 있습니다.
 
-
-
 ### <a name="wildcard-certificates"></a>와일드카드 인증서  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원시 클라이언트는 와일드카드 인증서를 지원합니다. 다른 클라이언트에서는 와일드카드 인증서를 지원하지 않습니다. 자세한 내용은 클라이언트 설명서를 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager를 사용하여 와일드카드 인증서를 선택할 수 없습니다. 와일드카드 인증서를 사용하려면 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` 레지스트리 키를 편집하고 **인증서** 값에 공백 없이 인증서의 지문을 입력해야 합니다.  
+
 > [!WARNING]  
 > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry-md.md)]  
 
-<a name="client-request-encrypt-connect-23h"/>
-##  <a name="ConfigureClientConnections"></a> 암호화된 연결을 요청하도록 클라이언트를 구성하려면  
+<a name="client-request-encrypt-connect-23h"/></a>
+
+## <a name="ConfigureClientConnections"></a> 암호화된 연결을 요청하도록 클라이언트를 구성하려면  
   
 1.  원래 인증서 또는 내보낸 인증서 파일을 클라이언트 컴퓨터로 복사합니다.  
   
@@ -107,7 +114,7 @@ ms.locfileid: "53589297"
   
 4.  **플래그** 페이지의 **프로토콜 암호화 강제 사용** 상자에서 **예**를 클릭합니다.  
   
-##  <a name="EncryptConnection"></a> SQL Server Management Studio의 연결을 암호화하려면  
+## <a name="EncryptConnection"></a> SQL Server Management Studio의 연결을 암호화하려면  
   
 1.  개체 탐색기 도구 모음에서 **연결**, **데이터베이스 엔진**을 차례로 클릭합니다.  
   

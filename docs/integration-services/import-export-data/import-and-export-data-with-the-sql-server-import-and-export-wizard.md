@@ -24,12 +24,12 @@ ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 60d4bf5487a2d6e851103d6cfd71bfc69af9036f
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 2ad46c5419bd3fcea3741c69fab8c2fa9eec7862
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383778"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087762"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기
 

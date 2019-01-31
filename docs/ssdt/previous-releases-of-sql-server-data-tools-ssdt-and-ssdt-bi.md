@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 39f2ebeca9f19c8c00707c9e5427c797dfc09881
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5121af5edf195454ec6a27d5a586a921c2853b4c
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519757"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087642"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>SQL Server Data Tools(SSDT 및 SSDT-BI)의 이전 릴리스
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,10 +34,12 @@ SSDT는 이전 버전과 호환되므로 항상 [최신 SSDT](download-sql-serve
 
 |SSDT 릴리스| Visual Studio 2017|
 |:---|:---|
+|15.8.2|[VS2017 15.8.2용 SSDT](https://go.microsoft.com/fwlink/?linkid=2038031)|
 |15.8.0|[VS2017 15.8.0용 SSDT](https://go.microsoft.com/fwlink/?linkid=2014060)|
 |15.7.1|[VS2017 15.7.1용 SSDT](https://go.microsoft.com/fwlink/?LinkId=875613)|
 |15.7.0|[VS2017 15.7.0용 SSDT](https://go.microsoft.com/fwlink/?LinkId=874716)|
 |15.6.0|[VS2017 15.6.0용 SSDT](https://go.microsoft.com/fwlink/?LinkId=871368)|
+
 <br>
 
 |SSDT 릴리스| Visual Studio 2015|
@@ -45,11 +47,13 @@ SSDT는 이전 버전과 호환되므로 항상 [최신 SSDT](download-sql-serve
 |17.4|[VS2015 17.4용 SSDT](https://go.microsoft.com/fwlink/?linkid=863440)|
 |17.3|[VS2015 17.3용 SSDT](https://go.microsoft.com/fwlink/?linkid=858660)|
 |16.5|[VS2015 16.5용 SSDT](https://go.microsoft.com/fwlink/?LinkID=832313)|  
+
 <br>
 
 |SSDT 릴리스| Visual Studio 2013|
 |:---|:---|
 |16.5|[VS2013 16.5용 SSDT](https://go.microsoft.com/fwlink/?LinkID=832308)|  
+
 <br>
 
 
@@ -71,7 +75,7 @@ RDBMS 및 Azure SQL 데이터베이스에 대한 관계형 데이터베이스를
   
 Visual Studio 2013 고객은 SSDT의 미리 보기 버전을 다운로드하여 제품 릴리스 버전에 아직 없는 새 기능을 체험해 볼 수 있습니다.  
   
-**SQL BI: Analysis Services, Reporting Services, Integration services**  
+**SQL BI: Analysis Services, Reporting Services, Integration Services**  
   
 BI 템플릿은 SSAS 모델, SSRS 보고서 및 SSIS 패키지를 만드는 데 사용됩니다. BI Designer는 특정 버전의 SQL Server에 연결되어 있습니다. 최신 BI 기능을 사용하려면 최신 버전이 있는 BI Designer를 설치하세요.  
   

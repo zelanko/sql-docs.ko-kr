@@ -6,13 +6,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 08/16/2018
-ms.openlocfilehash: 49058b7c6ef7bc3fce9997c5492a1551b94f46dd
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.date: 01/15/2019
+ms.openlocfilehash: b041e4a7f672468f5c2959f8ecb86ddaa62f09fd
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021698"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805749"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>서버 속성(고급 페이지) - Reporting Services
 
@@ -22,7 +22,7 @@ ms.locfileid: "50021698"
 
 이 페이지를 열려면 SQL Server Management Studio를 시작하고, 보고서 서버 인스턴스에 연결한 다음, 보고서 서버 이름을 마우스 오른쪽 단추로 클릭하고, **속성**을 선택합니다. **고급**을 선택하여 이 페이지를 엽니다.
 
-## <a name="options"></a>Options
+## <a name="options"></a>옵션
 
 **EnableMyReports**  
 내 보고서 기능이 설정되어 있는지 여부를 나타냅니다. **true** 값은 이 기능이 설정되어 있음을 나타냅니다.  
@@ -80,6 +80,28 @@ ms.locfileid: "50021698"
 **SystemSnapshotLimit**  
 하나의 보고서에 대해 저장되는 최대 스냅숏 수입니다. 유효한 값은 **-1** 에서 **2**까지,**147**,**483**,**647**입니다. 값이 **-1**이면 스냅숏 제한이 없습니다.  
 
+**AccessControlAllowCredentials**  
+'자격 증명' 플래그가 true로 설정되면 클라이언트 요청에 대한 응답이 노출될 수 있는지를 나타냅니다. 기본 값은 **false**입니다.
+
+**AccessControlAllowHeaders** 클라이언트가 요청하면 서버에서 허용하는 헤더의 쉼표로 구분된 목록입니다. 이 속성은 빈 문자열일 수 있고 *를 지정하면 모든 헤더를 허용합니다.
+
+**AccessControlAllowMethods** 클라이언트가 요청하면 서버에서 허용하는 HTTP 메서드의 쉼표로 구분된 목록입니다. 기본값은 (GET, PUT, POST, PATCH, DELETE)이며 *를 지정하면 모든 메서드를 허용합니다.
+
+**AccessControlAllowOrigin** 클라이언트가 요청하면 서버에서 허용하는 원본의 쉼표로 구분된 목록입니다. 기본값이 비어 있어서 모든 요청을 방지하며, *를 지정하면 자격 증명이 설정되지 않은 경우 모든 원본을 허용합니다. 자격 증명이 지정된 경우 원본의 자세한 목록을 지정해야 합니다.
+
+**AccessControlExposeHeaders** 서버가 클라이언트에 노출하는 헤더의 쉼표로 구분된 목록입니다. 기본값은 공백입니다.
+
+**AccessControlMaxAge** 실행 전 요청 결과를 캐시할 수 있는 시간(초)을 지정합니다. 기본값은 600초(10분)입니다.
+
+**AllowedResourceExtensionsForUpload** ***(Power BI Report Server 전용)*** 보고서 서버에 업로드할 수 있는 리소스의 확장 기능을 설정합니다. &ast;.rdl 및 &ast;.pbix와 같은 기본 제공 파일 형식에 대한 확장 기능을 포함할 필요가 없습니다. 기본값은 “&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx”입니다. 
+
+
+**EditSessionCacheLimit**  
+보고서 편집 세션에서 활성화될 수 있는 데이터 캐시 항목 수를 지정합니다. 기본값은 5입니다.  
+
+**EditSessionTimeout**  
+보고서 편집 세션이 시간 초과될 때까지 걸리는 시간(초)을 지정합니다. 기본값은 7200초(2시간)입니다.  
+
 **EnableIntegratedSecurity**  
 보고서 데이터 원본 연결에 Windows 통합 보안이 지원되는지 여부를 지정합니다. 기본값은 **True**입니다. 유효한 값은 다음과 같습니다.
 
@@ -97,25 +119,6 @@ ms.locfileid: "50021698"
 
 **EnableRemoteErrors**  
 원격 컴퓨터에서 보고서를 요청하는 사용자에 대해 반환되는 오류 메시지에 외부 오류 정보(예: 보고서 데이터 원본에 대한 오류 정보)를 포함합니다. 유효한 값은 **true** 및 **false**입니다. 기본 값은 **false**입니다. 자세한 내용은 [원격 오류 사용&#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md)을 참조하세요.  
-
-**AccessControlAllowCredentials**  
-'자격 증명' 플래그가 true로 설정되면 클라이언트 요청에 대한 응답이 노출될 수 있는지를 나타냅니다. 기본 값은 **false**입니다.
-
-**AccessControlAllowHeaders** 클라이언트가 요청하면 서버에서 허용하는 헤더의 쉼표로 구분된 목록입니다. 이 속성은 빈 문자열일 수 있고 *를 지정하면 모든 헤더를 허용합니다.
-
-**AccessControlAllowMethods** 클라이언트가 요청하면 서버에서 허용하는 HTTP 메서드의 쉼표로 구분된 목록입니다. 기본값은 (GET, PUT, POST, PATCH, DELETE)이며 *를 지정하면 모든 메서드를 허용합니다.
-
-**AccessControlAllowOrigin** 클라이언트가 요청하면 서버에서 허용하는 원본의 쉼표로 구분된 목록입니다. 기본값이 비어 있어서 모든 요청을 방지하며, *를 지정하면 자격 증명이 설정되지 않은 경우 모든 원본을 허용합니다. 자격 증명이 지정된 경우 원본의 자세한 목록을 지정해야 합니다.
-
-**AccessControlExposeHeaders** 서버가 클라이언트에 노출하는 헤더의 쉼표로 구분된 목록입니다. 기본값은 공백입니다.
-
-**AccessControlMaxAge** 실행 전 요청 결과를 캐시할 수 있는 시간(초)을 지정합니다. 기본값은 600초(10분)입니다.
-
-**EditSessionCacheLimit**  
-보고서 편집 세션에서 활성화될 수 있는 데이터 캐시 항목 수를 지정합니다. 기본값은 5입니다.  
-
-**EditSessionTimeout**  
-보고서 편집 세션이 시간 초과될 때까지 걸리는 시간(초)을 지정합니다. 기본값은 7200초(2시간)입니다.  
 
 **EnableCustomVisuals** ***(Power BI Report Server 전용)*** Power BI 사용자 지정 시각적 개체의 표시를 사용하려면 값은 true/false입니다. *기본값은 True입니다.*  
 
@@ -136,6 +139,8 @@ ms.locfileid: "50021698"
 **ScheduleRefreshTimeoutMinutes** ***(Power BI Report Server 전용)*** 일정 새로 고침 제한 시간을 설정합니다. *기본값은 120입니다.*
 
 **ShowDownloadMenu** 클라이언트 도구 다운로드 메뉴를 사용하도록 설정합니다. *기본값은 true입니다.*
+
+**SupportedHyperlinkSchemes** ***(Power BI Report Server 전용)*** 허용된 URI 체계의 쉼표로 구분된 목록을 렌더링될 수 있는 하이퍼링크 작업에서 정의되도록 설정하거나 "&ast;"를 모든 하이퍼링크 체계를 사용하도록 설정할 수 있습니다. 예를 들어 "http, https"를 설정하면 "https://www contoso.com"에 대한 하이퍼링크를 허용하지만, "mailto:bill@contoso.com" 또는 "javascript:window.open(‘www.contoso.com’, ‘_blank’)"에 대한 하이퍼링크를 제거합니다. 기본값은 "&ast;"입니다.
 
 **TimeInitialDelaySeconds** 초기 시간을 지연할 시간(초)을 설정합니다. *기본값은 60입니다.*
 

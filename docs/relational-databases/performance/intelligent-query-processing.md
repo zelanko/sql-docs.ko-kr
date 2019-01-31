@@ -13,20 +13,20 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 768f9d00e1eea9b97c32d35c240befdaf555122f
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: e07bfa316330a24e9a7b9db5a2486ddd7cad470c
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254928"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087803"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 데이터베이스의 지능형 쿼리 처리
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-**지능형 쿼리 처리** 기능 제품군에는 최소한의 구현 노력으로 기존 워크로드의 성능을 개선하는 광범위한 영향을 가진 기능이 포함됩니다.
+**지능형 쿼리 처리** 기능 제품군에는 최소한의 구현 노력으로 기존 워크로드의 성능을 개선하는 광범위한 영향을 가진 기능이 포함됩니다.  해당하는 데이터베이스 호환성 수준으로 이동하여 자동으로 이 기능 제품군의 혜택을 얻을 수 있습니다.
 
-![지능형 쿼리 처리 기능](./media/3_IQPFeatureFamily2.png)
+![지능형 쿼리 처리 기능](./media/3_IQPFeatureFamily.png)
 
 ## <a name="adaptive-query-processing"></a>적응 쿼리 처리
 

@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/02/2018
+ms.date: 01/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e50b19daefc7f765a4d24850c6557af419c0a345
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: d7bb8abac5765265e93282ae88266ece24d8a8a5
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226600"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838123"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 
@@ -73,6 +73,12 @@ ALTER DATABASE SCOPED CONFIGURATION
     | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
     | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+    | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
+    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
+    | DEFERRED_COMPILATION_TV = { ON | OFF }
+    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
+    | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
 }
 ```
 
@@ -229,7 +235,31 @@ ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 **적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](기능은 공개 미리 보기 상태)
 
-데이터베이스 호환성 수준 150 이상을 유지하면서 데이터베이스 또는 명령문 범위에서 행 모드 메모리 부여 피드백을 사용하거나 사용하지 않도록 설정할 수 있습니다. 행 모드 메모리는 SQL Server 2019에 도입된 [적응 쿼리 처리](../../relational-databases/performance/adaptive-query-processing.md)의 일부인 기능에 피드백을 제공합니다.
+데이터베이스 호환성 수준 150 이상을 유지하면서 데이터베이스 범위에서 행 모드 메모리 부여 피드백을 사용하거나 사용하지 않도록 설정할 수 있습니다. 행 모드 메모리 부여 피드백은 SQL Server 2017에 제공된 [적응형 쿼리 처리](../../relational-databases/performance/adaptive-query-processing.md)의 일부 기능입니다(행 모드는 SQL Server 2019 및 Azure SQL Database에서 지원됨).
+
+BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
+
+**적용 대상:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 범위에서 일괄 처리 모드 메모리 부여 피드백을 사용하거나 사용하지 않도록 설정할 수 있습니다. 일괄 처리 모드 메모리 부여 피드백은 SQL Server 2017에 제공된 [적응형 쿼리 처리](../../relational-databases/performance/adaptive-query-processing.md)의 일부 기능입니다.
+
+BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}
+
+**적용 대상:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 범위에서 일괄 처리 모드 적응형 조인을 사용하거나 사용하지 않도록 설정할 수 있습니다. 일괄 처리 모드 적응형 조인은 SQL Server 2017에서 제공된 [적응형 쿼리 처리](../../relational-databases/performance/adaptive-query-processing.md)의 일부 기능입니다.
+
+BATCH_MODE_ON_ROWSTORE = { ON | OFF}
+
+**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](기능은 공개 미리 보기 상태)
+
+데이터베이스 호환성 수준 150 이상을 유지하면서 데이터베이스 범위에서 행 저장소의 일괄 처리 모드를 사용하거나 사용하지 않도록 설정할 수 있습니다. 행 저장소의 일괄 처리 모드는 [인텔리전트 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md) 기능 제품군의 일부 기능입니다.
+
+DEFERRED_COMPILATION_TV = { ON | OFF}
+
+**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](기능은 공개 미리 보기 상태)
+
+데이터베이스 호환성 수준 150 이상을 유지하면서 데이터베이스 범위에서 테이블 변수 지연 컴파일을 사용하거나 사용하지 않도록 설정할 수 있습니다. 테이블 변수 지연 컴파일은 [인텔리전트 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md) 기능 제품군의 일부 기능입니다.
 
 ## <a name="Permissions"></a> Permissions
 
@@ -309,7 +339,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = 4 ;
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = PRIMARY ;
 ```
 
-### <a name="c-set-legacycardinalityestimation"></a>3. LEGACY_CARDINALITY_ESTIMATION 설정
+### <a name="c-set-legacycardinalityestimation"></a>C. LEGACY_CARDINALITY_ESTIMATION 설정
 이 예제는 지역에서 복제 시나리오에서 보조 데이터베이스에 대해 LEGACY_CARDINALITY_ESTIMATION을 ON으로 설정합니다.
 
 ```sql

@@ -10,12 +10,12 @@ ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 59bca7e526dff250873cd7de2912b1b69f775bc9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: bacf9a8a08008b23309d2d8c08b9310c491abf2a
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369305"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087682"
 ---
 # <a name="monitor-sql-server-components"></a>SQL Server 구성 요소 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,7 +131,7 @@ Windows Server 또는 Windows 도구에 대한 자세한 내용은 Windows 설�
   
      데이터 분석을 위해 캡처한 이벤트 데이터가 해당 데이터를 캡처한 애플리케이션으로 로드됩니다. 
      
-     예를 들어 확인 및 분석을 위해 캡처한 확장 이벤트 추적을 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]로 다시 로드할 수 있습니다. 자세한 내용은 [SQL Server 확장 이벤트의 대상 데이터 고급 보기](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)를 참조하세요.
+     예를 들어 확인 및 분석을 위해 캡처된 확장 이벤트 추적을 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]로 다시 로드할 수 있습니다. 자세한 내용은 [SQL Server 확장 이벤트의 대상 데이터 고급 보기](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)를 참조하세요.
 
      확인 및 분석을 위해 SQL 추적 데이터를 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]로 다시 로드할 수 있습니다. 자세한 내용은 [SQL Server Profiler를 사용하여 추적 보기 및 분석](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)을 참조하세요.  
   

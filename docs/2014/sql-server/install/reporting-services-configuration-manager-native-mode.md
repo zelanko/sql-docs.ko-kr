@@ -125,7 +125,7 @@ ms.locfileid: "48209793"
   
 4.  원격 컴퓨터를 지정하는 경우 **찾기** 를 클릭하여 연결을 설정합니다.  
   
-5.   **Report Server stance**에서 구성할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 선택합니다. 목록에 이 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보고서 서버 인스턴스만 표시됩니다. 이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 구성할 수 없습니다.  
+5.  **Report Server stance**에서 구성할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 선택합니다. 목록에 이 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보고서 서버 인스턴스만 표시됩니다. 이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 구성할 수 없습니다.  
   
 6.  **연결**을 클릭합니다.  
   

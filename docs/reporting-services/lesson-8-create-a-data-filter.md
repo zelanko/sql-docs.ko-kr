@@ -121,7 +121,7 @@ ms.locfileid: "47700377"
   
     1.  *DrillthroughEventArgs* 매개 변수에서 자식 보고서 개체 참조를 인출합니다.  
   
-    2.   **GetPurchaseOrderDetail**함수를 호출합니다.  
+    2.  **GetPurchaseOrderDetail**함수를 호출합니다.  
   
     3.  **PurchaseOrderDetail** DataTable을 보고서의 해당 데이터 원본과 바인딩합니다.  
   

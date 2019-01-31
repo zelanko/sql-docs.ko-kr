@@ -1,7 +1,7 @@
 ---
 title: '6단원: SSIS에서 프로젝트 배포 모델에 매개 변수 사용 | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,25 +11,26 @@ ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 51e6bc7f3bb1a1326245a4e7cfee67402d816a8e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: dba1354e7bbd61db29330503aa28fdfe0cae8860
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638111"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880406"
 ---
-# <a name="lesson-6-using-parameters-with-the-project-deployment-model-in-ssis"></a>6단원: SSIS에서 프로젝트 배포 모델에 매개 변수 사용
-SQL Server 2012에는 Integration Services 서버에 프로젝트를 배포할 수 있는 새로운 배포 모델이 도입되었습니다. Integration Services 서버에서는 패키지를 관리 및 실행하고 패키지에 대한 런타임 값을 구성할 수 있습니다.  
+# <a name="lesson-6-use-parameters-with-the-project-deployment-model-in-ssis"></a>6단원: SSIS에서 프로젝트 배포 모델에 매개 변수 사용
+
+SQL Server 2012는 Integration Services 서버에 프로젝트를 배포할 수 있는 새로운 배포 모델을 제공하고 있습니다. Integration Services 서버에서는 패키지를 관리 및 실행하고 패키지에 대한 런타임 값을 구성할 수 있습니다.  
   
-이 단원에서는 프로젝트 배포 모델을 사용하도록 [5단원: 패키지 배포 모델을 위한 SSIS 패키지 구성 추가](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md) 에서 만든 패키지를 수정합니다. 구성 값을 예제 데이터 위치를 지정하는 매개 변수로 바꿉니다. 또한 자습서에 포함된 완료된 5단원 패키지를 복사할 수도 있습니다.  
+이 단원에서는 [5단원: 패키지 배포 모델에 대한 SSIS 패키지 구성 추가](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)에서 만든 패키지를 수정하여 프로젝트 배포 모델을 사용합니다. 구성 값을 예제 데이터 위치를 지정하는 매개 변수로 바꿉니다. 또한 자습서에 포함된 완료된 5단원 패키지를 복사할 수도 있습니다.  
   
-Integration Services 프로젝트 구성 마법사를 사용하여 프로젝트를 프로젝트 배포 모델로 변환하고 구성 값이 아닌 매개 변수를 사용해서 디렉터리 속성을 설정합니다. 이 단원에서는 기존 SSIS 패키지를 새로운 프로젝트 배포 모델로 변환하기 위해 수행해야 하는 단계에 대해 일부 설명합니다.  
+Integration Services 프로젝트 구성 마법사를 사용하여 프로젝트를 프로젝트 배포 모델로 변환합니다. 이 모델은 디렉터리 속성을 설정하는 데 구성 값이 아닌 매개 변수를 사용합니다. 이 단원에서는 기존 SSIS 패키지를 새로운 프로젝트 배포 모델로 변환하기 위해 수행해야 하는 단계에 대해 일부 설명합니다.  
   
-패키지를 다시 실행하면 Integration Services 서비스가 매개 변수를 사용해서 변수 값을 채우고, 이 변수는 다시 디렉터리 속성을 업데이트합니다. 따라서 패키지 구성 파일에 설정된 폴더가 아니라 매개 변수 값으로 지정된 새 데이터 폴더의 파일이 패키지에서 반복 처리됩니다.  
+패키지를 다시 실행하는 경우 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버는 매개 변수를 사용하여 변수 값을 채웁니다. 변수는 다시 Directory 속성을 업데이트합니다. 패키지는 새 매개 변수에서 지정된 데이터 폴더의 파일을 반복합니다.  
   
-> [!IMPORTANT]  
-> 이 자습서를 실행하려면 **AdventureWorksDW2012** 예제 데이터베이스가 필요합니다. **AdventureWorksDW2012**설치 및 배포 방법에 대한 자세한 내용은 [SQL Server 예제 및 예제 데이터베이스 설치 시 고려 사항](https://technet.microsoft.com/library/ms161556%28v=sql.105%29)을 참조하십시오.  
-  
+> [!NOTE]
+> 아직 준비가 되지 않았다면 [1단원 필수 구성 요소](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites)를 참조하세요.
+    
 ## <a name="lesson-tasks"></a>단원 태스크  
 이 단원에서는 다음 태스크를 다룹니다.  
   

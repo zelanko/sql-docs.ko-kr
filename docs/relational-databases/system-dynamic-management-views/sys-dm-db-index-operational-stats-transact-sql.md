@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8827614f494702d4e738d336e96cd96b92f949d1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3d52fb28dd1093b81d8a46ec6a8d2dd3cce49807
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514310"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428660"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,7 +72,7 @@ sys.dm_db_index_operational_stats (
     
  기본 테이블 또는 뷰의 모든 인덱스에 대한 캐시된 정보를 반환하려면 NULL을 지정합니다. NULL을 지정 하는 경우 *index_id*에 NULL을 지정 해야 *partition_number*합니다.    
     
- *partition_number* | NULL | 0 | 기본    
+ *partition_number* | NULL | 0 | DEFAULT    
  개체의 파티션 번호입니다. *partition_number* 됩니다 **int**합니다. 유효한 입력은는 *partion_number* 인덱스 또는 힙의 경우 NULL, 0 또는 DEFAULT입니다. 기본값은 0입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다.    
     
  인덱스 또는 힙의 모든 파티션에 대한 캐시된 정보를 반환하려면 NULL을 지정합니다.    
@@ -85,9 +85,9 @@ sys.dm_db_index_operational_stats (
 |-----------------|---------------|-----------------|    
 |**database_id**|**smallint**|데이터베이스 ID입니다.|    
 |**object_id**|**int**|테이블 또는 뷰의 ID입니다.|    
-|**index_id**|**int**|인덱스 또는 힙의 ID입니다.<br /><br /> 0 = 힙|    
-|**hobt_id**|**bigint**|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 데이터 힙 또는 columnstore 인덱스에 대 한 내부 데이터를 추적 하는 B-트리 행 집합 ID입니다.<br /><br /> NULL-내부 columnstore 행 집합을이 아닙니다.<br /><br /> 자세한 내용은 참조 하세요. [sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
-|**partition_number**|**int**|인덱스 또는 힙 내의 1부터 시작하는 파티션 번호입니다.|    
+|**index_id**|**int**|인덱스 또는 힙의 ID입니다.<br /><br /> 0 = 힙| 
+|**partition_number**|**int**|인덱스 또는 힙 내의 1부터 시작하는 파티션 번호입니다.| 
+|**hobt_id**|**bigint**|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 데이터 힙 또는 columnstore 인덱스에 대 한 내부 데이터를 추적 하는 B-트리 행 집합 ID입니다.<br /><br /> NULL-내부 columnstore 행 집합을이 아닙니다.<br /><br /> 자세한 내용은 참조 하세요. [sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
 |**leaf_insert_count**|**bigint**|리프 수준 삽입의 누적 횟수입니다.|    
 |**leaf_delete_count**|**bigint**|리프 수준 삭제의 누적 횟수입니다. 삭제 된 레코드를 먼저 삭제할 변수로 표시 되지 않는 leaf_delete_count만 증가 됩니다. 먼저 고스팅는 삭제 된 레코드에 대 한 **leaf_ghost_count** 대신 증분됩니다.|    
 |**leaf_update_count**|**bigint**|리프 수준 업데이트의 누적 횟수입니다.|    
@@ -241,9 +241,9 @@ GO
  [인덱스 관련 동적 관리 뷰 및 함수 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
  [성능 모니터링 및 튜닝](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [sys.dm_db_index_physical_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     
- [sys.dm_db_index_usage_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
+ [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
  [sys.dm_os_latch_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
- [sys.dm_db_partition_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
+ [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
  [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)    
     

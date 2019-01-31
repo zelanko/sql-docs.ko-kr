@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba2842966623d1f820bcb0d8df969634922da57d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d92ef10b48115ddb26307a9d89260185d8d65b4a
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669022"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044529"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>전체 텍스트 인덱스 만들기 및 관리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,6 +51,7 @@ ms.locfileid: "51669022"
 
 ##  <a name="view"></a> 전체 텍스트 인덱스의 속성 보기
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>Transact-SQL을 사용하여 전체 텍스트 인덱스의 속성 보기
+
 |카탈로그 뷰 또는 동적 관리 뷰|설명|  
 |----------------------------------------|-----------------|  
 |[sys.fulltext_index_catalog_usages&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)|전체 텍스트 인덱스 참조에 대한 각 전체 텍스트 카탈로그에 대해 행을 반환합니다.|  
@@ -76,7 +77,7 @@ ms.locfileid: "51669022"
     |----------|-----------------|  
     |**일반**|전체 텍스트 인덱스의 기본 속성을 표시합니다. 이러한 속성으로는 데이터베이스 이름, 테이블 이름 및 전체 텍스트 키 열의 이름과 같이 변경할 수 없는 많은 속성과 여러 가지 수정 가능한 속성이 있습니다. 수정 가능한 속성은 다음과 같습니다.<br /><br /> **전체 텍스트 인덱스 중지 목록**<br /><br /> **전체 텍스트 인덱싱 설정**<br /><br /> **변경 내용 추적**<br /><br /> **검색 속성 목록**<br /><br />자세한 내용은 [전체 텍스트 인덱스 속성&#40;일반 페이지&#41;](https://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f)을 참조하세요.|  
     |**열**|전체 텍스트 인덱싱에 사용할 수 있는 테이블 열을 표시합니다. 열을 선택하면 선택한 열이 전체 텍스트 인덱싱됩니다. 이때 전체 텍스트 인덱스에 포함하려는 만큼 사용 가능한 열을 선택할 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 속성&#40;열 페이지&#41;](https://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35)을 참조하세요.|  
-    |**일정**|이 페이지를 사용하여 전체 텍스트 인덱스 채우기에 대한 증분 테이블 채우기를 시작하는 SQL Server 에이전트 작업의 일정을 만들거나 관리할 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 채우기](../../relational-databases/search/populate-full-text-indexes.md)를 참조하세요.<br /><br /> 참고: **전체 텍스트 인덱스 속성** 대화 상자를 닫으면 새로 만든 일정이 SQL Server 에이전트 작업( *database_name*.*table_name*에 대한 증분 테이블 채우기 시작)에 연결됩니다.|  
+    |**일정**|이 페이지를 사용하여 전체 텍스트 인덱스 채우기에 대한 증분 테이블 채우기를 시작하는 SQL Server 에이전트 작업의 일정을 만들거나 관리할 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 채우기](../../relational-databases/search/populate-full-text-indexes.md)를 참조하세요.<br /><br /> 참고: **전체 텍스트 인덱스 속성** 대화 상자를 닫으면 새로 만든 일정이 SQL Server 에이전트 작업에 연결됩니다(*database_name*.*table_name*에 대한 증분 테이블 채우기 시작).|  
   
 6.  변경 내용을 저장하고 **전체 텍스트 인덱스 속성** 대화 상자를 닫으려면 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

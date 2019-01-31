@@ -23,12 +23,12 @@ ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a87156a7987b3386f452944c49076d47fdaffa59
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c2335efbd97872975fd6779081e7a5a693266e02
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401328"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457676"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -181,7 +181,7 @@ ON SERVER
  WITH ( \<event_session_options> [ ,...*n*] ) 는 이벤트 세션에 사용할 옵션을 지정합니다.  
   
  MAX_MEMORY =*size* [ KB | **MB** ]  
- 이벤트 버퍼링을 위해 세션에 할당할 최대 메모리 양을 지정하며 기본값은 4MB입니다. *크기*는 정수이며 KB 또는 MB 값일 수 있습니다.  
+ 이벤트 버퍼링을 위해 세션에 할당할 최대 메모리 양을 지정하며 기본값은 4MB입니다. *크기*는 정수이며 KB 또는 MB 값일 수 있습니다. 최대 크기는 2GB(2048MB보다 작음)를 초과할 수 없습니다. 그러나 GB 범위에서 메모리 값을 사용하도록 권장되지 않습니다.
   
  EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** | ALLOW_MULTIPLE_EVENT_LOSS | NO_EVENT_LOSS }  
  이벤트 소실을 처리하는 데 사용할 이벤트 보존 모드를 지정합니다.  

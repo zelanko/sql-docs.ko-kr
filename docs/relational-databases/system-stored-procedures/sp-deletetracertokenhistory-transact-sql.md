@@ -16,12 +16,12 @@ ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 70853b86d60eab82feb1fe12b03fabbd61dafb6e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f8f1a91210cbd263a9225cef54bcf27a81bf2bf4
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211922"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428600"
 ---
 # <a name="spdeletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,24 +42,27 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=** ] **'***게시***'**  
+ [ **@publication=** ] **'***publication***'**  
  추적 프로그램 토큰이 삽입된 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@tracer_id=** ] *tracer_id*  
+ [ **@tracer_id=** ] *tracer_id*  
  삭제할 추적 프로그램 토큰의 ID입니다. *tracer_id* 됩니다 **int**, 기본값은 NULL입니다. 하는 경우 **null**, 게시에 속한 모든 추적 프로그램 토큰이 삭제 됩니다.  
   
- [  **@cutoff_date=** ] *cutoff_date*  
+ [ **@cutoff_date=** ] *cutoff_date*  
  해당 날짜 이전에 게시에 삽입된 모든 추적 프로그램 토큰이 제거되도록 구분 날짜를 지정합니다. *cutoff_date* 는 datetime 이며 기본값은 NULL입니다.  
   
- [  **@publisher=** ] **'***게시자***'**  
+ [ **@publisher=** ] **'***publisher***'**  
  게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]
->  에 대 한에이 매개 변수를 지정 해야 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  
+>  에 대 한에이 매개 변수를 지정 해야 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자 또는 배포자에서 저장된 프로시저를 실행 하는 경우.  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
+ [ **@publisher_db=** ] **'***publisher_db***'**  
  게시 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 NULL입니다. 이 매개 변수는 게시자에서 저장 프로시저가 실행될 경우 무시됩니다.  
   
+> [!NOTE]
+>  배포자에서 저장된 프로시저를 실행할 때이 매개 변수를 지정 해야 합니다.  
+
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   

@@ -103,7 +103,7 @@ ms.locfileid: "47670251"
     > [!NOTE]  
     >  XML 데이터 원본 유형에서는 연결 테스트 단추를 지원하지 않습니다.  
   
-10.  **확인**을 클릭합니다.  
+10. **확인**을 클릭합니다.  
   
  **웹 포털에서 공유 데이터 원본을 수정하려면**  
   
@@ -158,7 +158,7 @@ ms.locfileid: "47670251"
   
 1.  라이브러리 리본 메뉴에 있는 **문서** 탭을 클릭합니다.  
   
-2.   **새 문서** 메뉴에서 **보고서 데이터 원본**을 클릭합니다.  
+2.  **새 문서** 메뉴에서 **보고서 데이터 원본**을 클릭합니다.  
   
     > [!NOTE]  
     >  메뉴에 **보고서 데이터 원본** 항목이 표시되지 않는 경우 보고서 데이터 원본의 콘텐츠 형식이 설정되어 있지 않은 것입니다. 자세한 내용은 [SharePoint 라이브러리에 Reporting Services 콘텐츠 형식 추가](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)를 참조하세요.  

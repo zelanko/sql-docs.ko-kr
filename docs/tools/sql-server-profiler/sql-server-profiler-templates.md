@@ -56,7 +56,7 @@ ms.locfileid: "47689531"
 ## <a name="default-template"></a>기본 템플릿  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 **Standard** 템플릿을 새 추적에 적용되는 기본 템플릿으로 자동 지정합니다. 하지만 미리 정의된 템플릿 또는 사용자 정의 템플릿으로 기본 템플릿을 변경할 수 있습니다. 기본 템플릿을 변경하려면 템플릿을 만들거나 편집할 때 **추적 템플릿 속성** 대화 상자의 **일반** 탭에서 **선택한 서버 유형에 대한 기본 템플릿으로 사용** 확인란을 선택합니다.  
   
-  **추적 템플릿 속성** 대화 상자는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **파일** 메뉴에서 **템플릿**을 선택한 다음 **새 템플릿** 또는 **템플릿 편집**을 클릭하면 열 수 있습니다.  
+ **추적 템플릿 속성** 대화 상자는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **파일** 메뉴에서 **템플릿**을 선택한 다음 **새 템플릿** 또는 **템플릿 편집**을 클릭하면 열 수 있습니다.  
   
 > [!NOTE]  
 >  기본 템플릿은 지정된 서버 유형에만 사용할 수 있습니다. 한 가지 서버 유형의 기본값을 변경해도 다른 서버 유형의 기본 템플릿에는 영향을 미치지 않습니다. 특정 서버용 기본 템플릿을 설정하는 방법은 [추적 정의 기본값 설정&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md)을 참조하세요.  

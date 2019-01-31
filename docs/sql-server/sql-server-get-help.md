@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 746150438e87746c6fefc81fa7c0bff354147ed6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3a24215479af1aca6e1e742d5c62ba8995aaa4a8
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205332"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087672"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server 도움말 및 피드백
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,6 +28,9 @@ SQL Server 엔지니어링 팀은 SQL Server [사용자 의견](https://feedback
 
 ## <a name="i-want-to-make-a-suggestion-about-sql-server-management-studio"></a>SQL Server Management Studio에 대해 제안하려면
 또한 SSMS(SQL Server Management Studio) 팀이 SQL Server [사용자 의견](https://feedback.azure.com/forums/908035-sql-server)을 모니터하므로 보고하거나 제안할 문제가 있는 경우에는 사용자 의견에 알려주세요. 
+
+## <a name="i-want-to-make-a-suggestion-about-azure-data-studio"></a>Azure Data Studio에 대해 제안하려고 합니다.
+Azure Data Studio 팀은 [Azure Data Studio Github](https://github.com/microsoft/azuredatastudio/issues)에 대한 문제 및 기능 요청을 자세히 모니터링하고 있습니다. 여기에서 문제 또는 기능 요청을 제출하세요. 그러면 문제/기능이 수정되거나 추가될 시기를 알 수 있습니다.
 
 ## <a name="i-want-to-access-the-sql-server-technical-documentation-offline"></a>SQL Server 기술 설명서에 오프라인으로 액세스하려는 경우
 SQL Server 설명서를 오프라인 시스템에서 보려는 경우 두 가지 옵션이 있습니다. SQL Server 기술 설명서의 어느 부분이든 PDF로 만들거나 [SQL Server 오프라인 도움말 뷰어](sql-server-help-installation.md)를 사용하여 오프라인 콘텐츠를 다운로드할 수 있습니다. 
@@ -68,20 +71,21 @@ SQL Server 질문에 도움이 될 수 있는 많은 MSDN 포럼이 있습니다
 - [SSAS(SQL Server Analysis Services)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlanalysisservices&filter=alltypes&sort=lastpostdesc)
 - [SQL Server 데이터 웨어하우스](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldatawarehousing&filter=alltypes&sort=lastpostdesc)
 
-### <a name="developer-communities"></a>개발자 커뮤니티
-SQL Server 문제를 해결하는 데 도움이 되는 몇 가지 개발자 커뮤니티가 있습니다. 
+### <a name="social-media-and-communities"></a>소셜 미디어 및 커뮤니티
+SQL Server 문제에 도움이 될 수 있는 몇 가지 커뮤니티가 있습니다. 
 
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/sql-server)
 - [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
-
-### <a name="social-media"></a>소셜 미디어
-SQL 팀에게 연결할 수 있는 여러 소셜 미디어가 있습니다. 
-
 - [Reddit](https://www.reddit.com/r/SQLServer/)
+- [Twitter에서 #sqlhelp 해시 태그를 사용하여 커뮤니티의 도움 받기](https://twitter.com/hashtag/sqlhelp?src=hash) 
+
+### <a name="updates-via-twitter"></a>Twitter를 통한 업데이트
+SQL Server에 대한 업데이트를 제공하는 몇 가지 Twitter 계정이 있습니다. 
+
 - [SQL Docs Twitter](https://twitter.com/sqldocs)
 - [SQL Tiger 팀 Twitter](https://twitter.com/mssqltiger)
 - [MashaMSFT Twitter](https://twitter.com/mashamsft)
-- [MikeRayMSFT Twitter](https://twitter.com/mncray)
+
 
 ## <a name="i-want-to-contribute-to-sql-server-documentation"></a>SQL Server 설명서에 기여하려는 경우
 

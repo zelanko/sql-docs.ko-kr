@@ -12,18 +12,43 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 53a3a9b85b0f125e2c0ceb4cf882bbb86a962619
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 53a852b5293cfc013c170723f0e031cc3800e27c
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213452"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087892"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)에 대한 변경 로그
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 다음은 [SSDT(SQL Server Data Tools)](download-sql-server-data-tools-ssdt.md)에 대한 변경 로그입니다.  
   
 새로운 기능과 변경된 기능에 대한 자세한 게시물은 [SSDT 팀 블로그](https://blogs.msdn.microsoft.com/ssdt/)를 참조하세요.
+
+
+## <a name="ssdt-for-visual-studio-2017-1590"></a>Visual Studio 2017용 SSDT(15.9.0)
+빌드 번호: 14.0.16186.0  
+릴리스 날짜: 2019년 1월 28일
+
+### <a name="whats-new"></a>새로운 기능
+**SSIS:**
+1. SSIS 2017용 파워 쿼리 원본(미리 보기)을 추가합니다.
+2. SSIS 2012에 대한 지원을 다시 추가합니다.
+3. SSIS 2019에 대한 Oracle 원본 및 대상을 추가합니다.
+4. 이전 SSIS 버전에서 마이그레이션하면 스크립트 작업/구성 요소를 로드할 수 없음 문제가 해결되었습니다.
+5. 데이터는 뷰어가 Windows 7 SP1 및 Windows 8.1에서 작동하지 않음 문제가 해결되었습니다.
+6. 일부 경우에 패키지를 저장하면 Visual Studio에서 충돌이 발생함 문제가 해결되었습니다. 
+7. 일부 경우에 보호 수준이 EncryptSensitiveWithPassword이고 대상 서버 버전이 SQL 2017보다 이전이면 패키지를 실행할 수 없음 문제가 해결되었습니다.
+8. 기본 글꼴을 사용하는 주석이 SSDT에서 표시되지 않음 문제가 해결되었습니다.
+9. ISDeploymentWizard는 명령줄 모드에서 SQL 인증, Azure Active Directory 통합 인증 및 Azure Active Directory 암호 인증을 지원합니다.
+
+### <a name="known-issues"></a>알려진 문제:
+
+- SSIS 패키지 실행 태스크는 ExecuteOutOfProcess가 True로 설정되었을 때 디버깅을 지원하지 않습니다. 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다.
+- Visual Studio 2017용 SSDT 15.8 이상은 Teradata 원본/대상이 포함된 패키지 디자인을 지원하지 않습니다. Visual Studio 2017용 SSDT(15.8)를 사용하세요.
+- SSIS 및 SSAS가 동일한 Visual Studio 인스턴스에 설치되면 파워 쿼리 원본은 OData v4를 지원하지 않습니다.
+- SSIS 및 SSAS가 동일한 Visual Studio 인스턴스에 설치되면 파워 쿼리 원본은 Oracle에 연결하는 데 ODBC를 사용하도록 지원하지 않습니다.
+- 파워 쿼리 원본은 지역화되지 않습니다.
 
 
 ## <a name="ssdt-for-visual-studio-2017-1582"></a>Visual Studio 2017용 SSDT(15.8.2)

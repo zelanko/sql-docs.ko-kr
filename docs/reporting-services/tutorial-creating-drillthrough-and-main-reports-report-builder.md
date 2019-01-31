@@ -541,7 +541,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 3.  **동작** 탭을 클릭합니다.  
   
-4.   **보고서로 이동**을 선택합니다.  
+4.  **보고서로 이동**을 선택합니다.  
   
 5.  **보고서 지정**에서 **찾아보기**를 클릭한 다음 이름이 ResellerVSOnlineDrillthrough인 드릴스루 보고서를 찾습니다.  
   
