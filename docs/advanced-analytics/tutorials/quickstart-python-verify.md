@@ -8,14 +8,14 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 7a2e9bf58839832ba29b103d2e862a845090a9f1
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: b0ef5d33757d9f8c4e3aed53d3867bfd5b1297b2
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046916"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513763"
 ---
-# <a name="quickstart-verify-python-exists-in-sql-server"></a>빠른 시작: Python SQL Server에 있는지 확인 
+# <a name="quickstart-verify-python-exists-in-sql-server"></a>빠른 시작: SQL Server에 Python이 있는지 확인 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server에 있는 SQL Server 데이터에 대 한 데이터 과학 분석에 대 한 Python 언어 지원이 포함 됩니다. 다음 방법 중 하나를 사용 하 여 저장된 프로시저를 통해 스크립트 실행이 됩니다.

@@ -13,12 +13,12 @@ ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e8f0eaa3be9d6dbdd27eb52ce66ebc652dd19f7d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5f505d46526aede97ac01c8f3de1b11450aeed8d
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127004"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513880"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>로그 전달 및 복제(SQL Server)
   로그 전달에는 일반적으로 서로 다른 컴퓨터에 있는 두 개의 단일 데이터베이스 복사본이 사용됩니다. 클라이언트는 항상 하나의 데이터베이스 복사본만 사용할 수 있습니다. 이 복사본을 주 데이터베이스라고 합니다. 클라이언트가 주 데이터베이스에 업데이트한 내용은 로그 전달을 사용하여 보조 데이터베이스라고 부르는 다른 데이터베이스 복사본에 전달됩니다. 로그 전달에는 주 데이터베이스에 대해 수행된 모든 삽입, 업데이트 또는 삭제 작업의 트랜잭션 로그를 보조 데이터베이스에 적용하는 작업이 포함됩니다.  
@@ -111,7 +111,7 @@ ms.locfileid: "54127004"
   
     -   게시가 필터링된 경우 게시 데이터베이스를 최신 상태로 만들 수 없을 수도 있습니다. 각 구독이 동부, 서부, 남부 및 북부 중 한 지역에 대한 고객 데이터만 수신하도록 분할된 테이블을 고려해 봅시다. 각 데이터 파티션에 대해 최소 하나의 구독자가 있는 경우 각 파티션에 대해 구독자와 동기화하면 게시 데이터베이스가 최신 상태가 됩니다. 그러나 예를 들어 서부 파티션의 데이터가 구독자에 복제되지 않은 경우에는 게시자에서 이 데이터를 최신 상태로 만들 수 없습니다. 이 경우에는 게시자 및 구독자의 데이터가 일치하도록 모든 구독을 다시 초기화하는 것이 좋습니다. 자세한 내용은 [구독 다시 초기화](../../relational-databases/replication/reinitialize-subscriptions.md)를 참조하세요.  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]를 실행하는 구독자와 동기화할 경우에 해당 구독은 익명일 수 없습니다. 구독은 클라이언트 구독 또는 서버 구독(이전 버전에서는 로컬 구독 및 전역 구독)이어야 합니다. 자세한 내용은 [데이터 동기화](../../relational-databases/replication/synchronize-data.md)를 참조하세요.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]를 실행하는 구독자와 동기화할 경우에 해당 구독은 익명일 수 없습니다. 구독은 클라이언트 구독 또는 서버 구독(이전 버전에서는 로컬 구독 및 전역 구독)이어야 합니다. 자세한 내용은 [데이터 동기화](../../relational-databases/replication/synchronize-data.md)를 참조하세요.   
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 복제](../../relational-databases/replication/sql-server-replication.md)   
