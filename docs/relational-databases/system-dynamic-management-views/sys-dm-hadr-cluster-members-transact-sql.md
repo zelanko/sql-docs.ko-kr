@@ -1,7 +1,7 @@
 ---
 title: sys.dm_hadr_cluster_members (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/23/2017
+ms.date: 01/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 71493b066385840d065ff51e1f202c547686f774
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e19451a24d35e63fa84a17d409d19b5c9b02ccc3
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857115"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570726"
 ---
 # <a name="sysdmhadrclustermembers-transact-sql"></a>sys.dm_hadr_cluster_members(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -49,11 +49,11 @@ ms.locfileid: "47857115"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**member_name**|**nvarchar(128)**|구성원 이름이며, 컴퓨터 이름, 드라이브 문자 또는 파일 공유 경로일 수 있습니다.|  
-|**member_type**|**tinyint**|구성원의 유형이며 다음 중 하나입니다.<br /><br /> 0 = WSFC 노드<br /><br /> 1 = 디스크 미러링 모니터<br /><br /> 2 = 파일 공유 미러링 모니터|  
-|**member_type_desc**|**nvarchar(50)**|에 대 한 설명을 **member_type**하나씩입니다.<br /><br /> CLUSTER_NODE<br /><br /> DISK_WITNESS<br /><br /> FILE_SHARE_WITNESS|  
+|**member_type**|**tinyint**|구성원의 유형이며 다음 중 하나입니다.<br /><br /> 0 = WSFC 노드<br /><br /> 1 = 디스크 미러링 모니터<br /><br /> 2 = 파일 공유 미러링 모니터<br /><br /> 3 = 클라우드 감시|  
+|**member_type_desc**|**nvarchar(50)**|에 대 한 설명을 **member_type**하나씩입니다.<br /><br /> CLUSTER_NODE<br /><br /> DISK_WITNESS<br /><br /> FILE_SHARE_WITNESS<br /><br /> CLOUD_WITNESS|  
 |**member_state**|**tinyint**|구성원 상태이며 다음 중 하나입니다.<br /><br /> 0 = 오프라인<br /><br /> 1 = 온라인|  
 |**member_state_desc**|**nvarchar(60)**|에 대 한 설명을 **member_state**하나씩입니다.<br /><br /> UP<br /><br /> 아래로|  
-|**number_of_quorum_votes**|**tinyint**|이 쿼럼 구성원이 소유한 쿼럼 투표의 수입니다. 과반수 없음: 디스크만 쿼럼이 며,이 값이 기본값이 0입니다. 다른 쿼럼 유형의 경우 기본값은 1입니다.|  
+|**number_of_quorum_votes**|**tinyint**|이 쿼럼 구성원이 소유한 쿼럼 투표의 수입니다. No Majority의 경우: 디스크만 쿼럼이며, 기본값은 0입니다. 다른 쿼럼 유형의 경우 기본값은 1입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  

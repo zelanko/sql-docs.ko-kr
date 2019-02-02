@@ -1,7 +1,7 @@
 ---
 title: sp_addrolemember (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/20/2017
+ms.date: 01/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 610c4c6a5692496ff8bcf6bd2650557264f70862
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d7b47670d56ab916a8c2f263f9ddee3dc85c0a6
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659651"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652542"
 ---
 # <a name="spaddrolemember-transact-sql"></a>sp_addrolemember(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,24 +38,16 @@ ms.locfileid: "47659651"
   
 ## <a name="syntax"></a>구문  
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-sp_addrolemember [ @rolename = ] 'role',  
-    [ @membername = ] 'security_account'  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-sp_addrolemember 'role', 'security_account'  
-```  
+```
+sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'  
+
+```    
   
 ## <a name="arguments"></a>인수  
- [ @rolename=] '*역할*'  
+ [ @rolename= ] '*role*'  
  현재 데이터베이스에 있는 데이터베이스 역할의 이름입니다. *역할* 되는 **sysname**, 기본값은 없습니다.  
   
- [ @membername=] '*security_account*'  
+ [ @membername= ] '*security_account*'  
  역할에 추가될 보안 계정입니다. *security_account* 되는 **sysname**, 기본값은 없습니다. *security_account* 데이터베이스 사용자, 데이터베이스 역할, Windows 로그인 또는 Windows 그룹 일 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -103,7 +95,7 @@ GO
 EXEC sp_addrolemember 'Production', 'Mary5';  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
   
 ### <a name="c-adding-a-windows-login"></a>3. Windows 로그인 추가  
  다음 예에서는 로그인에 추가 합니다 `LoginMary` 에 `AdventureWorks2008R2` 사용자로 데이터베이스 `UserMary`합니다. 그런 다음 `UserMary` 사용자를 `Production` 역할에 추가합니다.  
