@@ -1,7 +1,7 @@
 ---
 title: Microsoft JDBC Driver를 재배포 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/19/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,18 +11,18 @@ ms.assetid: 625d64d3-6e7c-41c2-912a-38fdf6695922
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8a6847408584283e9796c57633f3b79b7f2c9f2d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c9bd82cc6b6de3fed5acfe9fd496e457f2cef381
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395926"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736864"
 ---
 # <a name="redistributing-the-microsoft-jdbc-driver"></a>Microsoft JDBC Driver 재배포
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-## <a name="redistribute-the-microsoft-jdbc-41-42-60-62-64-and-70-driver"></a>4.1, 4.2, 6.0, 6.2, 6.4 및 7.0 Microsoft JDBC Driver를 재배포
-JDBC 드라이버 4.1, 4.2, 6.0, 6.2, 6.4 및 7.0을 재배포할 수 있습니다. 고 4.1, 4.2, 6.0, 6.2, 6.4 및 7.0 버전의 드라이버에 대 한 사용권 계약에서 "배포 가능 코드" 절을 검토 하세요.
+## <a name="redistribute-the-microsoft-jdbc-41-42-60-62-64-70-and-72-driver"></a>4.1, 4.2, 6.0, 6.2, 6.4, 7.0 및 7.2 Microsoft JDBC Driver를 재배포
+JDBC 드라이버 4.1, 4.2, 6.0, 6.2, 6.4, 7.0 및 7.2를 재배포할 수 있습니다. 고 4.1, 4.2, 6.0, 6.2, 6.4, 사용권 계약에서 "배포 가능 코드" 절 살펴보시기 7.0 및 7.2 버전의 드라이버입니다.
     
 ## <a name="register-to-redistribute-the-microsoft-jdbc-40-driver"></a>Microsoft JDBC 4.0 Driver를 재배포하도록 등록  
  Microsoft JDBC 4.0 Driver 재배포할 수 전에 등록이 필요 합니다. 4.0 버전의 드라이버에 대한 사용권 계약을 검토하려면 다음 링크를 클릭합니다.  원할 경우 기록을 위해 사용권 계약의 사본을 인쇄하여 보관할 수 있습니다.  
@@ -31,7 +31,7 @@ JDBC 드라이버 4.1, 4.2, 6.0, 6.2, 6.4 및 7.0을 재배포할 수 있습니�
   
  [SQL Server용 Microsoft JDBC Driver 4.0에 대한 재배포 라이선스](https://msdn.microsoft.com/sqlserver/jj589698)  
   
- 참고: Microsoft 보안 인증 및 등록에 대 한 Microsoft 계정을 사용합니다. Microsoft 계정을 통해 SQL Server JDBC Driver 재배포를 위한 재배포 권한을 등록하면 보안 프로필에 포함될 정보를 제공하라는 메시지가 표시됩니다.  
+ 참고: Microsoft는 보안 인증 및 등록에 대 한 Microsoft 계정을 사용 합니다. Microsoft 계정을 통해 SQL Server JDBC Driver 재배포를 위한 재배포 권한을 등록하면 보안 프로필에 포함될 정보를 제공하라는 메시지가 표시됩니다.  
   
  가져올 수 있습니다 하지 않은 경우 하나 이미,는 [Microsoft 계정](https://signup.live.com/)  
   
