@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 6bf09159c8b7384a835a06bfafe744ea2f90f0c2
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 8983e874e9f1a7a5dc875774304c87ad23fa60ea
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030507"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689856"
 ---
 # <a name="modify-user-and-workspace-settings"></a>사용자 및 작업 영역 설정 수정
 
@@ -45,9 +45,9 @@ ms.locfileid: "53030507"
 
 플랫폼에 따라 사용자 설정 파일은 여기 있습니다.
 
-* **Windows** `%APPDATA%\sqlops\User\settings.json`
-* **Mac** `$HOME/Library/Application Support/sqlops/User/settings.json`
-* **Linux** `$HOME/.config/sqlops/User/settings.json`
+* **Windows** `%APPDATA%\azuredatastudio\User\settings.json`
+* **Mac** `$HOME/Library/Application Support/azuredatastudio/User/settings.json`
+* **Linux** `$HOME/.config/azuredatastudio/User/settings.json`
 
 작업 영역 설정 파일을 아래에 있는 `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` 프로젝트 폴더에에서 있습니다.
 

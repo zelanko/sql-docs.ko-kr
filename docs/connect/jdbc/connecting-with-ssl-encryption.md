@@ -1,7 +1,7 @@
 ---
 title: SSL 암호화를 사용 하 여 연결 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78cdeb64cbd0bc76109c7bd3db784c2262ae80ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14f33ac9e6ab8d17954039f4ae0fca1f11e46af5
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812191"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737134"
 ---
 # <a name="connecting-with-ssl-encryption"></a>SSL 암호화를 사용한 연결
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -64,10 +64,9 @@ String connectionUrl =
 > [!NOTE]  
 >  또는 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스에서 제공하는 적절한 **setter** 메서드를 사용하여 연결 속성의 값을 설정할 수 있습니다.  
   
- **encrypt** 속성이 **true**로 설정되고 **trustServerCertificate** 속성이 **false**로 설정되며 연결 문자열의 서버 이름이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSL 인증서의 서버 이름과 일치하지 않는 경우 다음 오류가 발생합니다. 드라이버가 SSL(Secure Sockets Layer) 암호화를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 보안 연결을 설정할 수 없습니다. 오류: "java.security.cert.CertificateException: SSL(Secure Sockets Layer)을 초기화하는 동안 인증서의 서버 이름에 대해 유효성 검사를 수행하지 못했습니다."  
-  
+ 경우는 **암호화** 속성이 **true** 및 **trustServerCertificate** 속성이 **false** 에서 서버 이름을 지정 하는 경우는 다음 오류가 발생 하는, 연결 문자열에는 SSL 인증서의 서버 이름과 일치 하지 않습니다: `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`합니다. 7.2 버전을 기준으로 드라이버는 SSL 인증서에서 서버 이름의 맨 왼쪽 레이블과 일치 하는 와일드 카드 패턴을 지원 합니다.
 ## <a name="see-also"></a>참고 항목  
  [SSL 암호화 사용](../../connect/jdbc/using-ssl-encryption.md)   
- [JDBC 드라이버 응용 프로그램 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+ [JDBC 드라이버 애플리케이션 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   
