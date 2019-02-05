@@ -12,15 +12,15 @@ ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 5f564b281ce65462cd8c6305c5989f6ac2b884d8
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 0053db2d88c63a4ea7d5a49dc88048b218a6c517
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53379911"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689746"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>템플릿을 사용하여 리소스 관리자 구성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 제공된 템플릿을 사용하여 리소스 관리자를 구성할 수 있습니다.  
   
 -   **시작하기 전 주의 사항:**  [사용 권한](#Permissions)  

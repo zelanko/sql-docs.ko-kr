@@ -12,15 +12,15 @@ ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 38d4d5cadf23e70d636fc74cb0cb67a820875192
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 86298faa86bf439c7efcaddcce35033eeb2e63cc
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380984"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689756"
 ---
 # <a name="disable-resource-governor"></a>리소스 관리자 사용 안 함
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 Transact-SQL을 사용하여 리소스 관리자를 사용하지 않도록 설정할 수 있습니다.  
   
 -   **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions), [사용 권한](#Permissions)  

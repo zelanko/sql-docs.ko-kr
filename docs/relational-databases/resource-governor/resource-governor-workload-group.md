@@ -14,15 +14,15 @@ ms.assetid: a84c3c3f-55b6-4a30-9c42-13f082d9281e
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 3ec802a1d2dce89549c252cb6218e0bd8084be18
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 7a2a900bdb72e13d2521e8da0a3b971c2b9edccb
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380488"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689886"
 ---
 # <a name="resource-governor-workload-group"></a>리소스 관리자 작업 그룹
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 관리자에서 작업 그룹은 분류 기준이 유사한 세션 요청에 대한 컨테이너의 역할을 합니다. 작업 그룹을 사용하면 세션의 집계 모니터링이 가능하며 작업 그룹으로 세션의 정책을 정의할 수 있습니다. 각 작업 그룹은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스의 물리적 리소스의 하위 집합을 나타내는 리소스 풀에 있습니다. 세션이 시작되면 리소스 관리자 분류자가 세션을 특정 작업 그룹에 할당하고, 세션은 작업 그룹에 할당된 정책 및 리소스 풀에 정의된 리소스를 사용하여 실행해야 합니다.  
   
 ## <a name="workload-group-concepts"></a>작업 그룹 개념  

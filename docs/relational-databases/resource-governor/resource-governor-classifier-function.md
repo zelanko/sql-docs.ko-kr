@@ -15,15 +15,15 @@ ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 517a07d539c8ca4d775f270cf16fdeee1967361c
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 0a17a0708621a01c101cb29786d61ceda192b5b8
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380574"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689796"
 ---
 # <a name="resource-governor-classifier-function"></a>Resource Governor Classifier Function
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 관리자 분류 프로세스는 세션 특징에 기초하여 들어오는 세션을 작업 그룹에 할당합니다. 분류자 함수라고 하는 사용자 정의 함수를 작성하여 원하는 분류 논리를 지정할 수 있습니다.  
   
 ## <a name="classification"></a>분류  

@@ -14,15 +14,15 @@ ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 891e3e41bab9be82145bfeb905e9243b7bf31340
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 7132cacb79266243aab94e0b71e18b4a8cdcbb0f
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044350"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689926"
 ---
 # <a name="resource-governor-resource-pool"></a>리소스 관리자 리소스 풀
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 관리자에서 리소스 풀은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스의 물리적 리소스의 하위 집합을 나타냅니다. 리소스 관리자를 사용하면 들어오는 애플리케이션 요청이 리소스 풀에서 사용할 수 있는 CPU, 물리적 IO 및 메모리 양을 제한할 수 있습니다. 각 리소스 풀에는 하나 이상의 작업 그룹이 포함될 수 있습니다. 세션이 시작되면 리소스 관리자 분류자가 세션을 특정 작업 그룹에 할당하고 세션은 작업 그룹에 할당된 리소스를 사용하여 실행해야 합니다.  
   

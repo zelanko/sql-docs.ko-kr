@@ -13,15 +13,15 @@ ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: c851ecad687008d303ff9b228d27f9fbcc96e58c
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 1fcf2b3c6f6b516d34f2d1c8658acd61549650b6
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380596"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689866"
 ---
 # <a name="change-resource-pool-settings"></a>리소스 풀 설정 변경
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 리소스 풀 설정을 변경할 수 있습니다.  
   

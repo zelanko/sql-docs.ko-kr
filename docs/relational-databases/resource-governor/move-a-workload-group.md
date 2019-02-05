@@ -15,15 +15,15 @@ ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: c85cbe7f0c29ad9e2e6fb410ae1f3cc30ab0921c
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 5f9be8fb680fcc3ccb0138318c21bb3072035338
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380364"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689876"
 ---
 # <a name="move-a-workload-group"></a>작업 그룹 이동
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 Transact-SQL을 사용하여 리소스 관리자 작업 그룹을 다른 리소스 풀로 이동할 수 있습니다.  
   
 -   **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions), [사용 권한](#Permissions)  

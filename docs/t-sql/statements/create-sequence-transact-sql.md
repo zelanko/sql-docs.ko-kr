@@ -23,12 +23,12 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9bfeddd0aad93427a3f65c44364d3749981ccbae
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: a44c62bfa8c85999112887dcacd54bfd176dfaa1
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226530"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428650"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ INCREMENT BY \<constant>
   
 3.  문 호출 시 계산된 값이 반환됩니다.  
   
- **캐시가 모두 사용된 경우의 CACHE 옵션**  
+**캐시가 모두 사용된 경우의 CACHE 옵션**  
   
  다음 프로세스는 캐시가 모두 사용된 경우 **CACHE** 옵션의 다음 값을 생성하도록 시퀀스 개체를 요청할 때마다 발생합니다.  
   
@@ -139,7 +139,7 @@ INCREMENT BY \<constant>
   
 3.  시퀀스 개체에 대한 시스템 테이블 행이 잠기고, 2단계에서 계산된 값(마지막 값)이 시스템 테이블에 기록됩니다. 유지되는 새 값을 사용자에게 알리기 위해 캐시가 모두 사용된 xevent가 실행됩니다.  
   
- **NO CACHE 옵션**  
+**NO CACHE 옵션**  
   
  다음 프로세스는 **NO CACHE** 옵션의 다음 값을 생성하도록 시퀀스 개체를 요청할 때마다 발생합니다.  
   

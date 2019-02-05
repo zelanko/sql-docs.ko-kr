@@ -13,15 +13,15 @@ ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 8e95c665cc96d98de6664e5af58ed90d4cf70d02
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 94a559d7486263d1edf50383e3a8af39fe93689d
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380564"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689806"
 ---
 # <a name="delete-a-resource-pool"></a>리소스 풀 삭제
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 Transact-SQL을 사용하여 리소스 풀을 삭제할 수 있습니다.  
   

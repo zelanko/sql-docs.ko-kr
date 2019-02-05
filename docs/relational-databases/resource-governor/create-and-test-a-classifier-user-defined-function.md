@@ -15,15 +15,15 @@ ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: a9cbbfa627d386409e31225470ca543668139ed5
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: fdb5e407c690ef7dd9a3bdfb4c77fe6897d66585
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380124"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689786"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>분류자 사용자 정의 함수 만들기 및 테스트
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   이 항목에서는 분류자 사용자 정의 함수(Transact-UDF)를 만들고 테스트하는 방법을 보여 줍니다. 이 단계에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 문을 실행하는 작업이 포함되어 있습니다.  
   
  아래 절차에 나오는 예에서는 매우 복잡한 분류자 사용자 정의 함수를 만드는 경우에 대해 설명합니다.  

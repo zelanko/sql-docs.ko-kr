@@ -13,15 +13,15 @@ ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 99e93baf0ee07f7d60de147c90b52de9322b1805
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: c2addb0ed4dea6114b1abaa5e7474d6de6912f75
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380505"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689816"
 ---
 # <a name="change-workload-group-settings"></a>작업 그룹 설정 변경
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용하여 작업 그룹 설정을 변경할 수 있습니다.  
   
 -   **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions), [사용 권한](#Permissions)  
