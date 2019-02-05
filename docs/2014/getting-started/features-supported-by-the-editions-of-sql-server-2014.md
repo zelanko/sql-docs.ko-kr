@@ -259,7 +259,7 @@ ms.locfileid: "54300590"
 |Attunity Oracle CDC Service|사용자 계정 컨트롤|||||||  
 |Change Data Capture Designer for Oracle by Attunity|사용자 계정 컨트롤|||||||  
   
-###  <a name="SSIS_AA">Integration Services - 고급 어댑터</a>  
+###  <a name="SSIS_AA"></a> Integration Services - 고급 어댑터  
   
 |기능 이름|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  

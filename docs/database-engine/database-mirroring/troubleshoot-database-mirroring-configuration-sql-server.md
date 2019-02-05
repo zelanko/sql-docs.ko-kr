@@ -51,12 +51,12 @@ ms.locfileid: "54257188"
   
     2.  계정이 서로 다른 도메인에서 실행되거나 도메인 계정이 아닐 경우 다른 컴퓨터의 **master** 에 한 계정의 로그인을 만들고 엔드포인트에 대한 CONNECT 권한을 해당 로그인에 부여해야 합니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)을 참조하세요. 여기에는 네트워크 서비스 계정이 포함됩니다.  
   
-2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 로컬 시스템 계정을 사용하는 서비스로 실행되는 경우 인증서를 사용하여 인증해야 합니다. 자세한 내용은 [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)을 참조하세요.  
+2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 로컬 시스템 계정을 사용하는 서비스로 실행되는 경우 인증서를 사용하여 인증해야 합니다. 자세한 내용은 [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)을 참조하세요.  
   
 ##  <a name="Endpoints"></a> 엔드포인트  
  엔드포인트를 올바르게 구성해야 합니다.  
   
-1.  각 서버 인스턴스(주 서버, 미러 서버 및 미러링 모니터 서버)에는 데이터베이스 미러링 엔드포인트가 있어야 합니다. 자세한 내용은 [sys.database_mirroring_endpoints&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) 및 인증 형식에 따라 [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) 또는 [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)을 참조하세요.  
+1.  각 서버 인스턴스(주 서버, 미러 서버 및 미러링 모니터 서버)에는 데이터베이스 미러링 엔드포인트가 있어야 합니다. 자세한 내용은 [sys.database_mirroring_endpoints&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) 및 인증 형식에 따라 [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) 또는 [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)을 참조하세요.  
   
 2.  포트 번호가 정확한지 확인합니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "54257188"
     GO  
     ```  
   
-     자세한 내용은 [ALTER ENDPOINT&amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)을 참조하세요.  
+     자세한 내용은 [ALTER ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)을 참조하세요.  
   
 5.  ROLE이 정확한지 확인합니다. 각 서버 인스턴스에서 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용합니다.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "54257188"
   
 3.  새 미러링 세션에 대비해서 데이터베이스를 준비하려면 소유자가 주 서버에서 WITH NO RECOVERY 및 기타 처리 중인 로그 백업도 복원해야 합니다.  
   
- 자세한 내용은 [데이터베이스 미러링 제거&amp;#40;SQL Server&amp;#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md), [미러 데이터베이스의 미러링 준비&amp;#40;SQL Server&amp;#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md), [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md), [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md) 또는 [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&amp;#40;SQL Server Management Studio&amp;#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)을 참조하세요.  
+ 자세한 내용은 [데이터베이스 미러링 제거&#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md), [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md), [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md), [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md) 또는 [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)을 참조하세요.  
   
 ##  <a name="StartDbm"></a> Transact-SQL을 사용하여 미러링 시작  
  ALTER DATABASE *database_name* SET PARTNER **='**_partner_server_**'** 문을 실행하는 순서는 매우 중요합니다.  
