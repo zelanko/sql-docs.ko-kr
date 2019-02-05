@@ -172,6 +172,8 @@ items:
         href: using-basic-data-types.md
       - name: 공간 데이터 형식 사용
         href: use-spatial-datatypes.md
+      - name: Sql_variant 데이터 형식 사용
+        href: using-sql-variant-datatype.md
       - name: 트랜잭션 이해
         href: understanding-transactions.md
       - name: 연결 사용
@@ -269,10 +271,10 @@ items:
       - name: Azure Key Vault 샘플 버전 6.2.2
         href: azure-key-vault-sample-version-6.2.2.md
       - name: Azure Key Vault 샘플 버전 7.0.0
-        href: azure-key-vault-sample-version-7-0-0.md
-ms.openlocfilehash: 3c63ab259dc117d5f0d7a5193dacdcd4cdc90f9d
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+        href: azure-key-vault-sample.md
+ms.openlocfilehash: 0cbb07039cfce807ee3223b52bdc41fe77409773
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051135"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736804"

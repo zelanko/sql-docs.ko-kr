@@ -16,89 +16,89 @@ items:
       href: sql-data-discovery-and-classification.md
     - name: SQL Server 커넥터 문제 해결
       href: encryption/sql-server-connector-maintenance-troubleshooting.md
-    - name: 인증 액세스
+  - name: 인증 액세스
+    items:
+    - name: 유효 사용 권한 결정
+      href: authentication-access/determining-effective-database-engine-permissions.md
+    - name: 로그인을 만듭니다.
+      href: authentication-access/create-a-login.md
+    - name: 데이터베이스 사용자 만들기
+      href: authentication-access/create-a-database-user.md
+    - name: 데이터베이스 스키마 만들기
+      href: authentication-access/create-a-database-schema.md
+    - name: 역할 조인
+      href: authentication-access/join-a-role.md
+    - name: 보안 주체에게 사용 권한 부여
+      href: authentication-access/grant-a-permission-to-a-principal.md
+    - name: 서버 역할 만들기
+      href: authentication-access/create-a-server-role.md
+    - name: 애플리케이션 역할 만들기
+      href: authentication-access/create-an-application-role.md
+    - name: 자격 증명 만들기
+      href: authentication-access/create-a-credential.md
+  - name: 암호화
+    items:
+    - name: 알고리즘 선택
+      href: encryption/choose-an-encryption-algorithm.md
+    - name: 보안 Enclave를 사용한 Always Encrypted 구성
+      href: encryption/configure-always-encrypted-enclaves.md
       items:
-      - name: 유효 사용 권한 결정
-        href: authentication-access/determining-effective-database-engine-permissions.md
-      - name: 로그인 만들기
-        href: authentication-access/create-a-login.md
-      - name: 데이터베이스 사용자 만들기
-        href: authentication-access/create-a-database-user.md
-      - name: 데이터베이스 스키마 만들기
-        href: authentication-access/create-a-database-schema.md
-      - name: 역할 조인
-        href: authentication-access/join-a-role.md
-      - name: 보안 주체에게 사용 권한 부여
-        href: authentication-access/grant-a-permission-to-a-principal.md
-      - name: 서버 역할 만들기
-        href: authentication-access/create-a-server-role.md
-      - name: 애플리케이션 역할 만들기
-        href: authentication-access/create-an-application-role.md
-      - name: 자격 증명 만들기
-        href: authentication-access/create-a-credential.md
-    - name: 암호화
-      items:
-      - name: 알고리즘 선택
-        href: encryption/choose-an-encryption-algorithm.md
-      - name: 보안 Enclave를 사용한 Always Encrypted 구성
-        href: encryption/configure-always-encrypted-enclaves.md
-        items:
-        - name: SQL Server Management Studio를 사용하여 구성
-          href: encryption/configure-always-encrypted-using-sql-server-management-studio.md
-        - name: PowerShell을 사용하여 구성
-          href: encryption/configure-always-encrypted-using-powershell.md
-        - name: 열 마스터 키 만들기 및 저장
-          href: encryption/create-and-store-column-master-keys-always-encrypted.md
-        - name: PowerShell을 사용하여 키 구성
-          href: encryption/configure-always-encrypted-keys-using-powershell.md
-        - name: PowerShell을 사용하여 키 회전
-          href: encryption/rotate-always-encrypted-keys-using-powershell.md
-        - name: PowerShell을 사용하여 열 암호화 구성
-          href: encryption/configure-column-encryption-using-powershell.md
-        - name: 중요한 데이터 마이그레이션
-          href: encryption/migrate-sensitive-data-protected-by-always-encrypted.md
-        - name: .NET Framework를 사용하여 애플리케이션 개발
-          href: encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
-      - name: TDE로 보호되는 데이터베이스 이동
-        href: encryption/move-a-tde-protected-database-to-another-sql-server.md
-      - name: EKM를 사용하여 TDE 활성화
-        href: encryption/enable-tde-on-sql-server-using-ekm.md
-      - name: 서비스 마스터 키 백업
-        href: encryption/back-up-the-service-master-key.md
-      - name: 서비스 마스터 키 복원
-        href: encryption/restore-the-service-master-key.md
-      - name: 데이터베이스 마스터 키 만들기
-        href: encryption/create-a-database-master-key.md
-      - name: 데이터베이스 마스터 키 백업
-        href: encryption/back-up-a-database-master-key.md
-      - name: 데이터베이스 마스터 키 복원
-        href: encryption/restore-a-database-master-key.md
-      - name: 두 서버에서 동일한 대칭 키 만들기
-        href: encryption/create-identical-symmetric-keys-on-two-servers.md
-      - name: 데이터 열 암호화
-        href: encryption/encrypt-a-column-of-data.md
-    - name: Azure SQL Database 보호
-      items:
-      - name: 암호화를 사용하여 SQL Server 커넥터
-        href: encryption/use-sql-server-connector-with-sql-encryption-features.md
-      - name: 사용자 고유 키 가져오기
-        href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?toc=/docs/relational-databases/security/encryption/toc.json
-      - name: TDE BYOK 키 순환
-        href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation?toc=/docs/relational-databases/security/encryption/toc.json
-      - name: TDE 보호기 제거
-        href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector?toc=/docs/relational-databases/security/encryption/toc.json
-      - name: Azure Key Vault를 사용한 EKM
-        href: encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
-    - name: 감사
-      items:
-      - name: 서버 감사 사양 만들기
-        href: auditing/create-a-server-audit-and-server-audit-specification.md
-      - name: 데이터베이스 감사 사양 만들기
-        href: auditing/create-a-server-audit-and-database-audit-specification.md
-      - name: 감사 로그 보기
-        href: auditing/view-a-sql-server-audit-log.md
-      - name: Windows 로그에 감사 이벤트 쓰기
-        href: auditing/write-sql-server-audit-events-to-the-security-log.md
+      - name: SQL Server Management Studio를 사용하여 구성
+        href: encryption/configure-always-encrypted-using-sql-server-management-studio.md
+      - name: PowerShell을 사용하여 구성
+        href: encryption/configure-always-encrypted-using-powershell.md
+      - name: 열 마스터 키 만들기 및 저장
+        href: encryption/create-and-store-column-master-keys-always-encrypted.md
+      - name: PowerShell을 사용하여 키 구성
+        href: encryption/configure-always-encrypted-keys-using-powershell.md
+      - name: PowerShell을 사용하여 키 회전
+        href: encryption/rotate-always-encrypted-keys-using-powershell.md
+      - name: PowerShell을 사용하여 열 암호화 구성
+        href: encryption/configure-column-encryption-using-powershell.md
+      - name: 중요한 데이터 마이그레이션
+        href: encryption/migrate-sensitive-data-protected-by-always-encrypted.md
+      - name: .NET Framework를 사용하여 애플리케이션 개발
+        href: encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
+    - name: TDE로 보호되는 데이터베이스 이동
+      href: encryption/move-a-tde-protected-database-to-another-sql-server.md
+    - name: EKM를 사용하여 TDE 활성화
+      href: encryption/enable-tde-on-sql-server-using-ekm.md
+    - name: 서비스 마스터 키 백업
+      href: encryption/back-up-the-service-master-key.md
+    - name: 서비스 마스터 키 복원
+      href: encryption/restore-the-service-master-key.md
+    - name: 데이터베이스 마스터 키 만들기
+      href: encryption/create-a-database-master-key.md
+    - name: 데이터베이스 마스터 키 백업
+      href: encryption/back-up-a-database-master-key.md
+    - name: 데이터베이스 마스터 키 복원
+      href: encryption/restore-a-database-master-key.md
+    - name: 두 서버에서 동일한 대칭 키 만들기
+      href: encryption/create-identical-symmetric-keys-on-two-servers.md
+    - name: 데이터 열 암호화
+      href: encryption/encrypt-a-column-of-data.md
+  - name: Azure SQL Database 보호
+    items:
+    - name: 암호화를 사용하여 SQL Server 커넥터
+      href: encryption/use-sql-server-connector-with-sql-encryption-features.md
+    - name: 사용자 고유 키 가져오기
+      href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?toc=/docs/relational-databases/security/encryption/toc.json
+    - name: TDE BYOK 키 순환
+      href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation?toc=/docs/relational-databases/security/encryption/toc.json
+    - name: TDE 보호기 제거
+      href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector?toc=/docs/relational-databases/security/encryption/toc.json
+    - name: Azure Key Vault를 사용한 EKM
+      href: encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
+  - name: 감사
+    items:
+    - name: 서버 감사 사양 만들기
+      href: auditing/create-a-server-audit-and-server-audit-specification.md
+    - name: 데이터베이스 감사 사양 만들기
+      href: auditing/create-a-server-audit-and-database-audit-specification.md
+    - name: 감사 로그 보기
+      href: auditing/view-a-sql-server-audit-log.md
+    - name: Windows 로그에 감사 이벤트 쓰기
+      href: auditing/write-sql-server-audit-events-to-the-security-log.md
 - name: 개념
   items:
   - name: SQL Server 지적 재산 보호
@@ -139,7 +139,7 @@ items:
       href: choose-an-authentication-mode.md
     - name: 메타데이터 표시
       href: metadata-visibility-configuration.md
-    - name: 권한
+    - name: Permissions
       href: permissions-database-engine.md
     - name: 사용 권한 계층 구조
       href: permissions-hierarchy-database-engine.md
@@ -159,7 +159,7 @@ items:
         href: encryption/always-encrypted-cryptography.md
       - name: 클라이언트 개발
         href: encryption/always-encrypted-client-development.md
-    - name: TDE(투명한 데이터 암호화)
+    - name: 투명한 데이터 암호화
       href: encryption/transparent-data-encryption.md
     - name: Azure SQL Database를 사용한 TDE
       href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?toc=/docs/relational-databases/security/encryption/toc.json
@@ -175,13 +175,13 @@ items:
         href: encryption/extensible-key-management-ekm.md
       - name: Azure Key Vault를 사용한 EKM
         href: encryption/extensible-key-management-using-azure-key-vault-sql-server.md
-    - name: 감사
-      href: auditing/sql-server-audit-database-engine.md
-      items:
-      - name: 작업 그룹 및 작업
-        href: auditing/sql-server-audit-action-groups-and-actions.md
-      - name: 감사 레코드
-        href: auditing/sql-server-audit-records.md
+  - name: 감사
+    href: auditing/sql-server-audit-database-engine.md
+    items:
+    - name: 작업 그룹 및 작업
+      href: auditing/sql-server-audit-action-groups-and-actions.md
+    - name: 감사 레코드
+      href: auditing/sql-server-audit-records.md
 - name: 자습서
   items:
   - name: SSMS를 사용하여 보안 Enclave를 사용한 Always Encrypted
@@ -192,9 +192,9 @@ items:
     href: permissions-or-securables-page.md
   - name: 상시 암호화 마법사
     href: encryption/always-encrypted-wizard.md
-ms.openlocfilehash: 07f901c76f2f1c1e0570df85bf066e084390688b
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: 774564c5eed9bf7c531ef1ed0c49f73c95f490cf
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513893"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689916"
