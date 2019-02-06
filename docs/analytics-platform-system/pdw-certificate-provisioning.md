@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4876b890067bd851167bc1e3e3c355c9701569d5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: af6d4df964820ced9f4d79b67859e010a895bc29
+ms.sourcegitcommit: 99847f34e949a5c3c58565d76be3abf5b80f9632
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405098"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742123"
 ---
 # <a name="pdw-certificate-provisioning---analytics-platform-system"></a>PDW 인증서 프로 비전-Analytics Platform System
 합니다 **PDW 인증서 프로 비전** Analytics Platform System의 페이지 **Configuration Manager** 가져옵니다 또는 PDW 영역에 의해 사용 된 인증서를 제거 합니다. 를 사용 하 여 연결을 암호화 하려면 인증서 수 통신 보호 도움말 SQL Server 클라이언트, SQL Server PDW 드라이버를 사용 하는 도구를 통해 제어 노드에 [관리 콘솔](monitor-the-appliance-by-using-the-admin-console.md), Integration Services를 로드 합니다.  
@@ -41,7 +41,10 @@ SQL Server PDW에서는 인증서를 사용 하 여 제어 노드에;에 대 한
 Analytics Platform System을 사용 하 여**Configuration Manager** 를 추가 하 여 신뢰할 수 있는 인증서를 제거 합니다. Microsoft Windows HTTP 서비스 인증서 구성 도구를 사용 하 여 직접 (**winHttpCertCfg.exe**) 인증서를 관리 하도록 지원 되지 않습니다.  
   
 ## <a name="import-or-remove-the-certificate"></a>가져오기 또는 인증서를 제거 합니다.  
-다음 지침을 가져오거나 어플라이언스 인증서를 제거 하는 방법을 보여 줍니다.  
+다음 지침을 가져오거나 어플라이언스 인증서를 제거 하는 방법을 보여 줍니다.
+
+> [!WARNING]
+> 만료 된 인증서를 갱신 하려면 새 가져오기 전에 기존 인증서를 제거 해야 합니다.
   
 ### <a name="to-import-the-certificate"></a>인증서를 가져오려면  
   
@@ -71,7 +74,7 @@ SQL Server PDW 현재 연결을 암호화는 계속 되지만 새 연결에 대 
   
 ![DWConfig 어플라이언스 PDW 인증서](./media/pdw-certificate-provisioning/SQL_Server_PDW_DWConfig_ApplPDWCert.png "SQL_Server_PDW_DWConfig_ApplPDWCert")  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [Configuration Manager 시작 &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
 <!-- MISSING LINKS [HDInsight Certificate Provisioning &#40;Analytics Platform System&#41;](hdinsight-certificate-provisioning.md)  -->  
   
