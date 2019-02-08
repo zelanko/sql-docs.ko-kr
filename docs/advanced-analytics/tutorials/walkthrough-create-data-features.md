@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 40bd2140ba28307cca30befb7cdad8b180cc856a
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 527f88ed14adc0140cbca179177e85670f72cafd
+ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645142"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55890014"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>R 및 SQL Server (연습)를 사용 하 여 데이터 기능 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -130,7 +130,7 @@ R 언어는 풍부하고 다양한 통계 라이브러리로 잘 알려져 있�
 
 1. 명명 된 SQL 함수를 사용 하 여 *fnCalculateDistance*합니다. 함수는 NYCTaxi_Sample 데이터베이스에 이미 존재 해야 합니다. 개체 탐색기에서이 경로 이동 하 여 함수가 존재를 확인 합니다. 데이터베이스 > NYCTaxi_Sample > 프로그래밍 기능 > 함수 > 스칼라 반환 함수 > dbo.fnCalculateDistance 합니다.
 
-  함수가 없으면 NYCTaxi_Sample 데이터베이스에 함수를 생성 하려면 SQL Server Management Studio를 사용 합니다.
+    함수가 없으면 NYCTaxi_Sample 데이터베이스에 함수를 생성 하려면 SQL Server Management Studio를 사용 합니다.
 
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)

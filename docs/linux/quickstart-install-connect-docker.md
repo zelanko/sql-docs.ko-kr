@@ -13,12 +13,13 @@ ms.custom: sql-linux, seodec18
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: f7c9612bac16463c1ea82d9e5a83bbad9f371700
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+zone_pivot_groups: cs1-command-shell
+ms.openlocfilehash: d6d8a20044d60ab83f9d649827397bf363dd2696
+ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397632"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55832125"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>빠른 시작: Docker를 사용 하 여 SQL Server 컨테이너 이미지 실행
 
@@ -58,13 +59,17 @@ any changes to one section should be duplicated in the other-->
 
 1. Microsoft 컨테이너 레지스트리에서 SQL Server 2017 Linux 컨테이너 이미지를 끌어옵니다.
 
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker pull mcr.microsoft.com/mssql/server:2017-latest
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker pull mcr.microsoft.com/mssql/server:2017-latest
    ```
+   ::: zone-end
 
    > [!TIP]
    > SQL Server 2019 미리 보기 이미지를 시도 하려는 경우 참조를 [이 문서의 미리 보기 버전 SQL Server 2019](quickstart-install-connect-docker.md?view=sql-server-linux-ver15#pullandrun2019)합니다.
@@ -75,17 +80,22 @@ any changes to one section should be duplicated in the other-->
 
 2. Docker를 사용하여 컨테이너 이미지를 실행하려면 bash 셸(Linux/macOS) 또는 상승된 권한 PowerShell 명령 프롬프트에서 다음 명령을 사용할 수 있습니다.
 
+
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
       -d mcr.microsoft.com/mssql/server:2017-latest
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
       -d mcr.microsoft.com/mssql/server:2017-latest
    ```
+   ::: zone-end
 
    > [!NOTE]
    > 암호는 SQL Server 기본 암호 정책이 따라야 합니다. 그렇지 않으면 컨테이너는 SQL 서버를 설정할 수 없어 작동이 중지됩니다. 기본적으로 암호는 적어도 8 자 이상 이어야 하며 다음 네 집합 중 세 범주의 문자를 포함 해야 합니다. 대문자, 소문자, 십진수 숫자 및 기호입니다. [docker 로그](https://docs.docker.com/engine/reference/commandline/logs/) 명령을 실행하여 오류 로그를 검사할 수 있습니다.
@@ -105,13 +115,18 @@ any changes to one section should be duplicated in the other-->
 
 3. Docker 컨테이너를 보려면 `docker ps` 명령을 사용합니다.
 
+
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker ps -a
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker ps -a
    ```
+   ::: zone-end
 
    다음 스크린샷과 비슷한 내용이 출력됩니다.
 
@@ -140,13 +155,17 @@ SELECT @@SERVERNAME,
 
 1. Docker 허브에서 SQL Server 2019 미리 보기 Linux 컨테이너 이미지를 끌어옵니다.
 
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker pull mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
+   ::: zone-end
 
    > [!TIP]
    > 이 빠른 시작에서는 SQL Server 2019 미리 보기 Docker 이미지를 사용합니다. SQL Server 2017 이미지를 실행 하려는 경우 참조를 [이 문서의 SQL Server 2017 버전](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017)합니다.
@@ -157,17 +176,21 @@ SELECT @@SERVERNAME,
 
 2. Docker를 사용하여 컨테이너 이미지를 실행하려면 bash 셸(Linux/macOS) 또는 상승된 권한 PowerShell 명령 프롬프트에서 다음 명령을 사용할 수 있습니다.
 
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
       -d mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
       -d mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
+   ::: zone-end
 
    > [!NOTE]
    > 암호는 SQL Server 기본 암호 정책이 따라야 합니다. 그렇지 않으면 컨테이너는 SQL 서버를 설정할 수 없어 작동이 중지됩니다. 기본적으로 암호는 적어도 8 자 이상 이어야 하며 다음 네 집합 중 세 범주의 문자를 포함 해야 합니다. 대문자, 소문자, 십진수 숫자 및 기호입니다. [docker 로그](https://docs.docker.com/engine/reference/commandline/logs/) 명령을 실행하여 오류 로그를 검사할 수 있습니다.
@@ -187,13 +210,17 @@ SELECT @@SERVERNAME,
 
 3. Docker 컨테이너를 보려면 `docker ps` 명령을 사용합니다.
 
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker ps -a
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker ps -a
    ```
+   ::: zone-end
 
    다음 스크린샷과 비슷한 내용이 출력됩니다.
 
@@ -225,24 +252,30 @@ SELECT @@SERVERNAME,
 
 1. `docker exec -it` 명령을 사용하여 실행 중인 컨테이너 내에서 대화형 bash 셸을 시작합니다. 다음 예에서 `sql1`은 컨테이너를 만들 때 `--name` 매개 변수가 지정한 이름입니다.
 
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker exec -it sql1 "bash"
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker exec -it sql1 "bash"
    ```
+   ::: zone-end
 
-1. 컨테이너 내부로 들어가면 sqlcmd를 사용하여 로컬로 연결합니다. Sqlcmd는 기본적으로 경로에 있지 않으므로 전체 경로를 지정해야 합니다.
+2. 컨테이너 내부로 들어가면 sqlcmd를 사용하여 로컬로 연결합니다. Sqlcmd는 기본적으로 경로에 있지 않으므로 전체 경로를 지정해야 합니다.
 
+   ::: zone pivot="cs1-bash"
    ```bash
    /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourNewStrong!Passw0rd>'
    ```
+   ::: zone-end
 
    > [!TIP]
    > 명령줄에서 암호를 생략하여 입력하라는 메시지가 표시되도록 할 수 있습니다.
 
-1. 성공하면 **sqlcmd** 명령 프롬프트 `1>`이 표시됩니다.
+3. 성공하면 **sqlcmd** 명령 프롬프트 `1>`이 표시됩니다.
 
 ## <a name="create-and-query-data"></a>데이터 만들기 및 쿼리
 
@@ -258,13 +291,13 @@ SELECT @@SERVERNAME,
    CREATE DATABASE TestDB
    ```
 
-1. 다음 줄에 서버에 있는 모든 데이터베이스의 이름을 반환하는 쿼리를 작성합니다.
+2. 다음 줄에 서버에 있는 모든 데이터베이스의 이름을 반환하는 쿼리를 작성합니다.
 
    ```sql
    SELECT Name from sys.Databases
    ```
 
-1. 앞의 두 명령은 즉시 실행되지 않았습니다. 앞의 명령을 실행하려면 새 줄에 `GO`를 입력해야 합니다.
+3. 앞의 두 명령은 즉시 실행되지 않았습니다. 앞의 명령을 실행하려면 새 줄에 `GO`를 입력해야 합니다.
 
    ```sql
    GO
@@ -280,19 +313,19 @@ SELECT @@SERVERNAME,
    USE TestDB
    ```
 
-1. `Inventory`라는 새 테이블을 만듭니다.
+2. `Inventory`라는 새 테이블을 만듭니다.
 
    ```sql
    CREATE TABLE Inventory (id INT, name NVARCHAR(50), quantity INT)
    ```
 
-1. 새 테이블에 데이터를 삽입합니다.
+3. 새 테이블에 데이터를 삽입합니다.
 
    ```sql
    INSERT INTO Inventory VALUES (1, 'banana', 150); INSERT INTO Inventory VALUES (2, 'orange', 154);
    ```
 
-1. `GO`를 입력하여 앞의 명령을 실행합니다.
+4. `GO`를 입력하여 앞의 명령을 실행합니다.
 
    ```sql
    GO
@@ -308,7 +341,7 @@ SELECT @@SERVERNAME,
    SELECT * FROM Inventory WHERE quantity > 152;
    ```
 
-1. 명령을 실행합니다.
+2. 명령을 실행합니다.
 
    ```sql
    GO
@@ -322,7 +355,7 @@ SELECT @@SERVERNAME,
    QUIT
    ```
 
-1. 컨테이너에서 대화형 명령 프롬프트를 종료하려면 `exit`을 입력합니다. 컨테이너는 대화형 bash 셸을 종료한 후에도 계속 실행됩니다.
+2. 컨테이너에서 대화형 명령 프롬프트를 종료하려면 `exit`을 입력합니다. 컨테이너는 대화형 bash 셸을 종료한 후에도 계속 실행됩니다.
 
 ## <a id="connectexternal"></a> 컨테이너 외부에서 연결
 
@@ -332,17 +365,21 @@ SQL 연결을 지원하는 모든 외부 Linux, Windows 또는 macOS 도구에�
 
 1. 컨테이너를 호스팅하는 컴퓨터에 대한 IP 주소를 찾습니다. Linux에서 **ifconfig** 또는 **ip 주소**를 사용합니다. Windows에서 **ipconfig**를 사용합니다.
 
-1. 컨테이너의 포트 1433에 매핑된 IP 주소와 포트를 지정하는 sqlcmd를 실행합니다. 이 예제에서는 동일한 포트를 1433으로, 호스트 컴퓨터입니다. 호스트 컴퓨터에서 다른 매핑된 포트를 지정 하는 경우 여기 사용할는 있습니다.
+2. 컨테이너의 포트 1433에 매핑된 IP 주소와 포트를 지정하는 sqlcmd를 실행합니다. 이 예제에서는 동일한 포트를 1433으로, 호스트 컴퓨터입니다. 호스트 컴퓨터에서 다른 매핑된 포트를 지정 하는 경우 여기 사용할는 있습니다.
 
+   ::: zone pivot="cs1-bash"
    ```bash
    sqlcmd -S 10.3.2.4,1433 -U SA -P '<YourNewStrong!Passw0rd>'
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    sqlcmd -S 10.3.2.4,1433 -U SA -P "<YourNewStrong!Passw0rd>"
    ```
+   ::: zone-end
 
-1. Transact-SQL 명령을 실행합니다. 완료되면 `QUIT`을 입력합니다.
+3. Transact-SQL 명령을 실행합니다. 완료되면 `QUIT`을 입력합니다.
 
 SQL Server에 연결할 다른 일반적인 도구는 다음과 같습니다.
 
@@ -355,15 +392,19 @@ SQL Server에 연결할 다른 일반적인 도구는 다음과 같습니다.
 
 이 자습서에 사용되는 SQL Server 컨테이너를 제거하려면 다음 명령을 실행합니다.
 
-```bash
+   ::: zone pivot="cs1-bash"
+   ```bash
 sudo docker stop sql1
 sudo docker rm sql1
-```
+   ```
+   ::: zone-end
 
-```PowerShell
+   ::: zone pivot="cs1-powershell"
+   ```PowerShell
 docker stop sql1
 docker rm sql1
-```
+   ```
+   ::: zone-end
 
 > [!WARNING]
 > 컨테이너를 영구적으로 중지하고 제거하면 컨테이너의 모든 SQL Server 데이터가 삭제됩니다. 데이터를 보존해야 하는 경우 [컨테이너에서 백업 파일을 만들고 복사](tutorial-restore-backup-in-sql-server-container.md)하거나 [컨테이너 데이터 지속성 기술](sql-server-linux-configure-docker.md#persist)을 사용합니다.
