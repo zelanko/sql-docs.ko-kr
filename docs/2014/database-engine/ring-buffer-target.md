@@ -14,27 +14,27 @@ ms.assetid: 54494e11-b56b-43b7-aa5e-c8724e56b251
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d52dc4ba85ec3b65ddf3e1c703befd0ee32d78a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d042ef49a82d16eb33cb27d80c8083a68ea69092
+ms.sourcegitcommit: 4b5ea5fa3253fea028e1adbd46bd18b89f0a115b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182544"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55905658"
 ---
 # <a name="ring-buffer-target"></a>링 버퍼 대상
   간단히 말해 링 버퍼 대상은 메모리에 이벤트 데이터를 보관합니다. 이 대상은 다음 두 모드 중 하나로 이벤트를 관리할 수 있습니다.  
   
 -   첫째 모드는 엄격한 FIFO(선입선출) 모드로서 대상에 할당된 모든 메모리가 사용되면 가장 오래된 이벤트가 삭제됩니다. 기본 모드인 이 모드에서는 occurrence_number 옵션이 0으로 설정됩니다.  
   
--   둘째 모드는 이벤트별 FIFO 모드로서 각 유형별로 지정된 이벤트 수가 유지됩니다. 이 모드에서는 대상에 할당된 모든 메모리가 사용되면 각 유형별로 가장 오래된 이벤트가 삭제됩니다. occurrence_number 옵션을 구성하여 각 유형별로 보존할 이벤트 수를 지정할 수 있습니다.  
+-   둘째 모드는 이벤트별 FIFO 모드로서 각 유형별로 지정된 이벤트 수가 유지됩니다. 이 모드에서는 대상에 할당 된 모든 메모리가 사용 되 면 각 유형별로 가장 오래 된 이벤트가 삭제 됩니다. occurrence_number 옵션을 구성하여 각 유형별로 보존할 이벤트 수를 지정할 수 있습니다.  
   
  다음 표에서는 링 버퍼 대상을 구성하는 데 사용할 수 있는 옵션에 대해 설명합니다.  
   
 |옵션|허용된 값|Description|  
 |------------|--------------------|-----------------|  
-|max_memory|32비트 정수. 이 값은 선택 사항입니다.|사용 가능한 최대 메모리 크기(KB)입니다. 기존 이벤트는 처음 도달한 제한인 max_event_limit 또는 max_memory에 따라 삭제됩니다.|  
-|max_event_limit|32비트 정수. 이 값은 선택 사항입니다.|ring_buffer에 보관되는 최대 이벤트 수입니다. 기존 이벤트는 처음 도달한 제한인 max_event_limit 또는 max_memory에 따라 삭제됩니다. 기본값 = 1000입니다.|  
-|occurrence_number|다음 값 중 하나입니다.<br /><br /> 0(기본값) = 대상에 할당된 모든 메모리가 사용되면 가장 오래된 이벤트가 삭제됩니다.<br /><br /> 임의의 32비트 정수 = 이벤트별 FIFO 기준에 따라 이벤트를 삭제하기 전까지 각 유형별로 보존할 이벤트의 수입니다.<br /><br /> <br /><br /> 이 값은 선택 사항입니다.|사용할 FIFO 모드 및 각 유형별로 버퍼에 기본적으로 보존할 이벤트의 수(0보다 큰 값을 설정한 경우)입니다.|
+|max_memory|모든 32 비트 정수입니다. 이 값은 선택 사항입니다.|사용 가능한 최대 메모리 크기(KB)입니다. 기존 이벤트는 처음 도달한 제한인 max_event_limit 또는 max_memory에 따라 삭제됩니다. 최대값은 4194303 (kb)입니다. SQL Server의 다른 메모리 소비자에 게 영향을 줄 수 있으므로 제한 GB 범위의 링 버퍼 크기를 설정 하기 전에 신중 하 게 고려 이루어져야|  
+|max_event_limit|모든 32 비트 정수입니다. 이 값은 선택 사항입니다.|ring_buffer에 보관되는 최대 이벤트 수입니다. 기존 이벤트는 처음 도달한 제한인 max_event_limit 또는 max_memory에 따라 삭제됩니다. 기본값 = 1000입니다.|  
+|occurrence_number|다음 값 중 하나입니다.<br /><br /> 0(기본값) = 대상에 할당된 모든 메모리가 사용되면 가장 오래된 이벤트가 삭제됩니다.<br /><br /> 32 비트 정수 = 이벤트별 fifo 방식으로 삭제 하기 전까지 유지할 각 유형의 이벤트 개수입니다.<br /><br /> <br /><br /> 이 값은 선택 사항입니다.|사용할 FIFO 모드 및 각 유형별로 버퍼에 기본적으로 보존할 이벤트의 수(0보다 큰 값을 설정한 경우)입니다.|
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="adding-the-target-to-a-session"></a>세션에 대상 추가  

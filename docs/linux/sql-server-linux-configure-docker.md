@@ -4,19 +4,19 @@ description: 사용 하 여 SQL Server 2017 및 2019 미리 보기 컨테이너 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/31/2018
+ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: ae57a6f453cf15dbb22158b49aad990cc0c3df67
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: e143ba46fd4c288367b3eb75c15b073ebfb9cf34
+ms.sourcegitcommit: 428b0d2951a785bc72f8dac9ac7cea7cda4dc059
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100738"
+ms.lasthandoff: 02/09/2019
+ms.locfileid: "55972206"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker에서 SQL Server 컨테이너 이미지를 구성 합니다.
 
@@ -323,7 +323,7 @@ docker exec -ti <Container ID> /bin/bash
 docker cp <Container ID>:<Container path> <host path>
 ```
 
-**예:**
+**예제:**
 
 ```bash
 docker cp d6b75213ef80:/var/opt/mssql/log/errorlog /tmp/errorlog
@@ -341,7 +341,7 @@ docker cp d6b75213ef80:/var/opt/mssql/log/errorlog C:\Temp\errorlog
 docker cp <Host path> <Container ID>:<Container path>
 ```
 
-**예:**
+**예제:**
 
 ```bash
 docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
@@ -350,6 +350,62 @@ docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```PowerShell
 docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```
+## <a id="tz"></a> 표준 시간대를 구성 합니다.
+
+특정 표준 시간대를 사용 하 여 Linux 컨테이너에서 SQL Server를 실행 하려면 다음을 구성 합니다 **TZ** 환경 변수입니다. 올바른 표준 시간대 값을 찾으려면 다음을 실행 합니다 **tzselect** Linux bash 프롬프트에서 명령을 합니다.
+
+```bash
+tzselect
+```
+
+표준 시간대를 선택한 후 **tzselect** 다음과 유사한 출력이 표시 됩니다.
+
+```bash
+The following information has been given:
+
+        United States
+        Pacific
+
+Therefore TZ='America/Los_Angeles' will be used.
+```
+
+Linux 컨테이너에서 동일한 환경 변수를 설정 하려면이 정보를 사용할 수 있습니다. 다음 예제에서는 컨테이너에서 SQL Server를 실행 하는 방법의 `Americas/Los_Angeles` 표준 시간대:
+
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
+```bash
+sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+   -p 1433:1433 --name sql1 \
+   -e 'TZ=America/Los_Angeles'\
+   -d mcr.microsoft.com/mssql/server:2017-latest 
+```
+
+```PowerShell
+sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+   -p 1433:1433 --name sql1 `
+   -e "TZ=America/Los_Angeles" `
+   -d mcr.microsoft.com/mssql/server:2017-latest 
+```
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+```bash
+sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+   -p 1433:1433 --name sql1 \
+   -e 'TZ=America/Los_Angeles'\
+   -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+```
+
+```PowerShell
+sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+   -p 1433:1433 --name sql1 `
+   -e "TZ=America/Los_Angeles" `
+   -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+```
+::: moniker-end
 
 ## <a id="tags"></a> 특정 SQL Server 컨테이너 이미지 실행
 
