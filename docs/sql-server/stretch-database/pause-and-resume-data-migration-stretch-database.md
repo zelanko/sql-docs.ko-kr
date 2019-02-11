@@ -3,6 +3,7 @@ title: 데이터 마이그레이션 일시 중지 및 다시 시작(Stretch Data
 ms.custom: ''
 ms.date: 06/14/2016
 ms.prod: sql
+ms.technology: ''
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,15 +11,15 @@ helpviewer_keywords:
 - pausing Stretch Database
 - resuming Stretch Database
 ms.assetid: 65d6a990-b295-41b2-97f9-7b6bf3000e4d
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 493a3d02d792f10241374db29ea60489ae5b8e82
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 213292bbeb8500f33a80053318b23b4b4eadbd4f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596754"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042675"
 ---
 # <a name="pause-and-resume-data-migration-stretch-database"></a>데이터 마이그레이션 일시 중지 및 다시 시작(Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

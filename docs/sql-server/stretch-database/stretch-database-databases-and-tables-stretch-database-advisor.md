@@ -3,6 +3,7 @@ title: Stretch Database에 적합한 데이터베이스 및 테이블 식별 | M
 ms.custom: ''
 ms.date: 10/30/2017
 ms.prod: sql
+ms.technology: ''
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +12,15 @@ helpviewer_keywords:
 - identifying databases for Stretch Database
 - identifying tables for Stretch Database
 ms.assetid: 81bd93d8-eef8-4572-88d7-5c37ab5ac2bf
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9adc861d24713204c819787dce3b79a38230c08c
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 09c5d4d2f6e9732eaae17c8bbc6aad684b290e9b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53597144"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024924"
 ---
 # <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>Data Migration Assistant를 사용하여 Stretch Database용 데이터베이스 및 테이블 식별
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
