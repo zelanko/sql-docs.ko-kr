@@ -343,7 +343,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="remarks"></a>Remarks  
  **sp_addmergepullsubscription_agent** 병합 복제에 사용 되 고와 유사한 기능을 사용 하 여 [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)합니다.  
   
- 실행할 때 보안 설정이 올바르게 지정 하는 방법의 예 **sp_addmergepullsubscription_agent**를 참조 하십시오 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)합니다.  
+ 실행할 때 보안 설정이 올바르게 지정 하는 방법의 예 **sp_addmergepullsubscription_agent**를 참조 하십시오 [끌어오기 구독 만들기](../../relational-databases/replication/create-a-pull-subscription.md)합니다.  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_addmergepullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepullsubscript_1_1.sql)]  
@@ -352,8 +352,8 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_addmergepullsubscription_agent**합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [끌어오기 구독 만들기](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_changemergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
  [sp_dropmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
