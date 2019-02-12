@@ -58,7 +58,7 @@ ms.locfileid: "56023044"
   
  업데이트 된 열 기본 키 열을 지정 하 여 이러한 수준의 보호를 얻을 수 있는  **\<전에 >** 블록.  
   
- 예를 들어 다음 updategram은 ContactID가 1인 연락처의 Person.Contact 테이블의 Phone 열 값을 변경합니다.  **\<전에 >** 블록 지정 된 **전화** 특성을 특성 값이 값이 업데이트를 적용 하기 전에 데이터베이스의 해당 열에 있는 값을 일치 하는지 확인 합니다. .  
+ 예를 들어 다음 updategram은 ContactID가 1인 연락처의 Person.Contact 테이블의 Phone 열 값을 변경합니다. **\<전에 >** 블록 지정 된 **전화** 특성을 특성 값이 값이 업데이트를 적용 하기 전에 데이터베이스의 해당 열에 있는 값을 일치 하는지 확인 합니다. .  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
