@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: f57bd4ef770d4958c09bd54fb19718e8e8c641df
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: d4d3d7488e60c95766c64d2b9d0ec3646b978c63
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361693"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652602"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 추적 플래그(Transact-SQL)
 
@@ -126,7 +126,7 @@ ms.locfileid: "54361693"
 |**8019**|예외 링 버퍼에 대한 스택 수집을 사용하지 않도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/920093)를 참조하세요.<br /><br />**범위**: 전역만|
 |**8020**|작업 집합 모니터링을 사용하지 않도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/920093)를 참조하세요.<br /><br />**범위**: 전역만|
 |**8032**|일반적으로 캐시가 더 커지도록 허용하는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] RTM 설정으로 캐시 제한 매개 변수를 복구합니다. 자주 재사용되는 캐시 항목이 캐시에 맞지 않고 [optimize for ad hoc workloads Server Configuration Option](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) 으로 계획 캐시 관련 문제를 해결하지 못한 경우 이 설정을 사용합니다.<br /><br />**경고:** 추적 플래그 8032는 대형 캐시로 버퍼 풀과 같은 다른 메모리 소비자에 제공되는 메모리가 줄어들 수 있는 성능 문제를 일으킬 수 있습니다.<br /><br />**범위**: 전역만|   
-|**8048**|NUMA 분할 메모리 개체를 CPU 분할로 변환합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/2809338)를 참조하세요.<br /><br />**참고:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 이 동작은 엔진에서 제어되며, 8048 추적 플래그는 아무 효과가 없습니다.<br /><br />**범위**: 전역만|  
+|**8048**|NUMA 분할 메모리 개체를 CPU 분할로 변환합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/2809338)를 참조하세요.<br /><br />**참고:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 이 동작은 동적이며 엔진에서 제어됩니다.<br /><br />**범위**: 전역만|  
 |**8075**|64비트 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 메모리 페이지 할당 오류가 발생하면 [VAS](../../relational-databases/memory-management-architecture-guide.md#changes-to-memory-management-starting-2012-11x-gm) 조각화가 감소합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/3074434)를 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] RTM CU10 및 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 CU3에 적용됩니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 이 동작은 엔진에서 제어되며, 8075 추적 플래그는 아무 효과가 없습니다.<br /><br />**범위**: 전역만|
 |**8079**|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2에서 하드웨어 레이아웃을 조사하고 NUMA 노드당 8개 이상의 CPU를 보고하는 시스템에 Soft-NUMA를 자동으로 구성할 수 있도록 허용합니다. 자동 Soft-NUMA 동작은 하이퍼스레드(HT/논리 프로세서)를 인식합니다. 추가 노드를 분할하고 만드는 경우 수신기 수, 크기 조정, 네트워크 및 암호화 기능을 늘려서 백그라운드 처리의 크기를 조정합니다.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2에 적용됩니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 이 동작은 엔진에서 제어되며, 8079 추적 플래그는 아무 효과가 없습니다.<br /><br />**범위**: 전역만| 
 |**8207**|트랜잭션 복제 및 CDC에 대한 싱글톤 업데이트를 설정할 수 있습니다. 구독자에 대한 업데이트는 DELETE 및 INSERT 쌍으로 복제할 수 있습니다. 이렇게 하면 UPDATE 트리거 실행과 같은 비즈니스 규칙이 충족되지 않을 수 있습니다. 8207 추적 플래그를 사용하면 단일 행(싱글톤 업데이트)에만 영향을 주는 고유 열에 대한 업데이트가 DELETE 또는 INSERT 쌍이 아닌 UPDATE로 복제됩니다. 업데이트가 unique 제약 조건이 있는 열에 영향을 주거나 업데이트가 여러 행에 영향을 주는 경우에도 업데이트는 여전히 DELETE 또는 INSERT 쌍으로 복제됩니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/302341)를 참조하세요.<br /><br />**범위**: 전역만|

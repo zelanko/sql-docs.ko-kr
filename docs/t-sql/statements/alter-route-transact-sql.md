@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 19b533df8417345796f76f4e365d633e5b707eda
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 304e5ec2722f8556c2d9c873f4ff5c3cfab4b7d2
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169032"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421090"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ WHERE database_id = DB_ID();
   
  ADDRESS **=‘**_next\_hop\_address_’  
 
- Azure SQL Database Managed Instance의 경우 `ADDRESS`는 로컬이어야 합니다.
+ Azure SQL Database 관리되는 인스턴스의 경우 `ADDRESS`는 로컬이어야 합니다.
 
  이 경로에 대한 네트워크 주소를 지정합니다. *next_hop_address*는 다음과 같은 형식으로 TCP/IP 주소를 지정합니다.  
   
@@ -163,7 +163,7 @@ ALTER ROUTE ExpenseRoute
      BROKER_INSTANCE = 'D8D4D268-00A3-4C62-8F91-634B89B1E317';  
 ```  
   
-### <a name="c-changing-the-address-for-a-route"></a>3. 경로의 주소 변경  
+### <a name="c-changing-the-address-for-a-route"></a>C. 경로의 주소 변경  
  다음 예에서는 `ExpenseRoute` 경로의 네트워크 주소를 IP 주소가 `1234`인 호스트의 TCP 포트 `10.2.19.72`로 변경합니다.  
   
 ```  
@@ -172,7 +172,7 @@ ALTER ROUTE ExpenseRoute
      ADDRESS = 'TCP://10.2.19.72:1234';  
 ```  
   
-### <a name="d-changing-the-database-and-address-for-a-route"></a>4. 경로의 데이터베이스 및 주소 변경  
+### <a name="d-changing-the-database-and-address-for-a-route"></a>D. 경로의 데이터베이스 및 주소 변경  
  다음 예에서는 `ExpenseRoute` 경로의 네트워크 주소를 DNS 이름이 `1234`인 호스트의 TCP 포트 `www.Adventure-Works.com`로 변경합니다. 또한 대상 데이터베이스를 고유 식별자 `D8D4D268-00A3-4C62-8F91-634B89B1E317`로 식별되는 데이터베이스로 변경합니다.  
   
 ```  

@@ -23,12 +23,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7d1607e46888c4ea42f2e9e01fc9086a947045e2
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 6bac04d2c3e60496c73f1cc91c1adb89c82b606a
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327504"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421100"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ CREATE SERVER AUDIT audit_name
  { FILE | APPLICATION_LOG | SECURITY_LOG | URL | EXTERNAL_MONITOR } 감사 대상의 위치를 결정합니다. 이 옵션은 이진 파일, Windows 응용 프로그램 로그 또는 Windows 보안 로그입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 Windows 보안 로그에 쓸 수 없습니다. 자세한 내용은 [보안 로그에 SQL Server Audit 이벤트 쓰기](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)를 참조하세요.  
 
 > [!IMPORTANT]
-> Azure SQL Database Managed Instance에서 SQL Audit는 서버 수준에서 작동합니다. 위치는 `URL` 또는 `EXTERNAL_MONITOR`만 될 수 있습니다.
+> Azure SQL Database 관리되는 인스턴스에서 SQL Audit은 서버 수준에서 작동합니다. 위치는 `URL` 또는 `EXTERNAL_MONITOR`만 될 수 있습니다.
   
  FILEPATH ='*os_file_path*'  
  감사 로그의 경로입니다. 파일 이름은 감사 이름과 감사 GUID를 기준으로 생성됩니다.  

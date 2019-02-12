@@ -2,7 +2,7 @@
 title: ALTER DATABASE SET 옵션(Transact-SQL) | Microsoft Docs
 description: SQL Server 및 Azure SQL Database에서 자동 튜닝, 암호화, 쿼리 저장소와 같은 데이터베이스 옵션을 설정하는 방법 알아보기
 ms.custom: ''
-ms.date: 1/10/2019
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1dee3b66253935a979aa483de87c42dc4bb53e3f
-ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
+ms.openlocfilehash: 077af312704185c66c2aa2cd5d8c777af2b90776
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54211134"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421460"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL) 
 
@@ -54,7 +54,7 @@ ms.locfileid: "54211134"
 > [!div class="mx-tdCol2BreakAll"]  
 > |||
 > |---|---| 
-> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />논리 서버](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|||  
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|||  
 
 &nbsp;
 
@@ -1195,7 +1195,7 @@ GO
   
 ```  
   
-### <a name="c-enabling-snapshot-isolation-on-a-database"></a>3. 데이터베이스에서 스냅숏 격리 활성화  
+### <a name="c-enabling-snapshot-isolation-on-a-database"></a>C. 데이터베이스에서 스냅숏 격리 활성화  
 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 스냅숏 격리 프레임워크 옵션을 활성화합니다.  
   
 ```sql  
@@ -1282,11 +1282,11 @@ SET QUERY_STORE = ON
 > [!div class="mx-tdCol2BreakAll"]  
 > |||
 > |---|---| 
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|**_\* SQL Database<br />논리 서버 \*_** &nbsp;|[SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|**_\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_**&nbsp;|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|
 
 &nbsp;
 
-## <a name="azure-sql-database-logical-server"></a>Azure SQL Database 논리 서버
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL Database 단일 데이터베이스/탄력적 풀
 
 호환성 수준은 `SET` 옵션이지만 [ALTER DATABASE 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)에서 설명합니다.  
   
@@ -1629,7 +1629,7 @@ READ_WRITE
 데이터베이스에 대한 사용자 액세스를 제어합니다.  
   
 RESTRICTED_USER  
-RESTRICTED_USER는 db_owner 고정 데이터베이스 역할 및 dbcreator와 sysadmin 고정 서버 역할의 멤버만 데이터베이스로의 연결을 허용하지만 연결되는 수는 제한하지 않습니다. 데이터베이스에 대한 모든 연결은 ALTER DATABASE 문의 termination 절에 지정된 시간대에 끊어집니다. 데이터베이스가 RESTRICTED_USER 상태로 바뀐 후 자격이 없는 사용자의 연결 시도는 거부됩니다.  SQL Database Managed instance를 사용하여**RESTRICTED_USER**를 수정할 수 없습니다.
+RESTRICTED_USER는 db_owner 고정 데이터베이스 역할 및 dbcreator와 sysadmin 고정 서버 역할의 멤버만 데이터베이스로의 연결을 허용하지만 연결되는 수는 제한하지 않습니다. 데이터베이스에 대한 모든 연결은 ALTER DATABASE 문의 termination 절에 지정된 시간대에 끊어집니다. 데이터베이스가 RESTRICTED_USER 상태로 바뀐 후 자격이 없는 사용자의 연결 시도는 거부됩니다.  SQL Database 관리되는 인스턴스를 사용하여**RESTRICTED_USER**를 수정할 수 없습니다.
   
 MULTI_USER  
 데이터베이스에 연결할 수 있는 적절한 권한이 있는 모든 사용자의 연결을 허용합니다.  
@@ -2010,7 +2010,7 @@ GO
 |-------------------- |------------------------  |----------|  
 |AdventureWorks2012   |1                        | ON |  
   
-### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>3. 변경 내용 추적 설정, 수정 및 해제  
+### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>C. 변경 내용 추적 설정, 수정 및 해제  
 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 변경 내용 추적을 설정하고 보존 기간을 `2` 일로 설정합니다.  
   
 ```sql  
@@ -2069,13 +2069,13 @@ SET QUERY_STORE = ON
 > [!div class="mx-tdCol2BreakAll"]  
 > |||
 > |---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|[SQL Database<br />논리 서버](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* SQL Database<br />Managed Instance \*_** &nbsp;|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\*SQL Database<br />관리되는 인스턴스\*_** &nbsp;|
 
 
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 관리되는 인스턴스
 
 호환성 수준은 `SET` 옵션이지만 [ALTER DATABASE 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)에서 설명합니다.  
   
@@ -2357,7 +2357,7 @@ READ_WRITE
 데이터베이스에 대한 사용자 액세스를 제어합니다.  
   
 RESTRICTED_USER  
-RESTRICTED_USER는 db_owner 고정 데이터베이스 역할 및 dbcreator와 sysadmin 고정 서버 역할의 멤버만 데이터베이스로의 연결을 허용하지만 연결되는 수는 제한하지 않습니다. 데이터베이스에 대한 모든 연결은 ALTER DATABASE 문의 termination 절에 지정된 시간대에 끊어집니다. 데이터베이스가 RESTRICTED_USER 상태로 바뀐 후 자격이 없는 사용자의 연결 시도는 거부됩니다.  SQL Database Managed instance를 사용하여**RESTRICTED_USER**를 수정할 수 없습니다.
+RESTRICTED_USER는 db_owner 고정 데이터베이스 역할 및 dbcreator와 sysadmin 고정 서버 역할의 멤버만 데이터베이스로의 연결을 허용하지만 연결되는 수는 제한하지 않습니다. 데이터베이스에 대한 모든 연결은 ALTER DATABASE 문의 termination 절에 지정된 시간대에 끊어집니다. 데이터베이스가 RESTRICTED_USER 상태로 바뀐 후 자격이 없는 사용자의 연결 시도는 거부됩니다.  SQL Database 관리되는 인스턴스를 사용하여**RESTRICTED_USER**를 수정할 수 없습니다.
   
 MULTI_USER  
 데이터베이스에 연결할 수 있는 적절한 권한이 있는 모든 사용자의 연결을 허용합니다.  
@@ -2712,7 +2712,7 @@ GO
 |-------------------- |------------------------  |----------|  
 |AdventureWorks2012   |1                        | ON |  
   
-### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>3. 변경 내용 추적 설정, 수정 및 해제  
+### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>C. 변경 내용 추적 설정, 수정 및 해제  
 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 변경 내용 추적을 설정하고 보존 기간을 `2` 일로 설정합니다.  
   
 ```sql  

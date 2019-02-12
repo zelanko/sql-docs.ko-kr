@@ -1,7 +1,7 @@
 ---
 title: master 데이터베이스 | Microsoft 문서
 ms.custom: ''
-ms.date: 07/30/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,21 +14,23 @@ ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b14a63222721f21848518cbee5acfe99feb4d0f
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 7369d4793b803b538435267399b2deaff777ba21
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405863"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421170"
 ---
 # <a name="master-database"></a>master 데이터베이스
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **master** 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템에 대한 모든 시스템 수준 정보를 기록합니다. 이 정보에는 로그온 계정, 엔드포인트, 연결된 서버 및 시스템 구성 설정 등 인스턴스 차원의 메타데이터가 포함됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 시스템 개체가 **master** 데이터베이스에 저장되지 않고 [리소스 데이터베이스](../../relational-databases/databases/resource-database.md)에 저장됩니다. **master** 는 다른 모든 데이터베이스의 존재 여부와 해당 데이터베이스 파일의 위치를 기록하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 초기화 정보를 기록하는 데이터베이스이기도 합니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] master **데이터베이스를 사용할 수 없는 경우에는** 를 시작할 수 없습니다.  
 
 > [!IMPORTANT]
-> Azure SQL Database 논리 서버의 경우 master 데이터베이스 및 tempdb 데이터베이스만 적용됩니다. 논리 서버 및 논리적 master 데이터베이스의 개념은 [Azure SQL 논리 서버란?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server)을 참조하세요. Azure SQL Database의 컨텍스트에서 tempdb의 설명은 [Azure SQL Database의 tempdb 데이터베이스](tempdb-database.md#tempdb-database-in-sql-database)를 참조하세요. Azure SQL Database Managed Instance의 경우 모든 시스템 데이터베이스가 적용됩니다. Azure SQL Database Managed Instance에 대한 자세한 내용은 [Managed Instance란?](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)을 참조하세요.
+> Azure SQL Database 단일 데이터베이스와 탄력적 풀의 경우 master 데이터베이스 및 tempdb 데이터베이스만 적용됩니다. 자세한 내용은 [Azure SQL Database 서버란?](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server)을 참조하세요. Azure SQL Database의 컨텍스트에서 tempdb의 설명은 [Azure SQL Database의 tempdb 데이터베이스](tempdb-database.md#tempdb-database-in-sql-database)를 참조하세요. Azure SQL Database Managed Instance의 경우 모든 시스템 데이터베이스가 적용됩니다. Azure SQL Database Managed Instance에 대한 자세한 내용은 [Managed Instance란?](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)을 참조하세요.
   
-## <a name="physical-properties-of-master"></a>master의 물리적 속성  
+## <a name="physical-properties-of-master"></a>master의 물리적 속성
+
 다음 표에서는 SQL Server 및 Azure SQL Database Managed Instance의 **master** 데이터와 로그 파일의 초기 구성 값을 나열합니다. 이러한 파일의 크기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에 따라 조금씩 다를 수 있습니다.  
   
 |파일|논리적 이름|물리적 이름|파일 증가|  
@@ -39,13 +41,14 @@ ms.locfileid: "54405863"
 **master** 데이터 및 로그 파일의 이동 방법은 [시스템 데이터베이스 이동](../../relational-databases/databases/move-system-databases.md)을 참조하세요.  
 
 > [!IMPORTANT]
-> Azure SQL Database논리 서버의 경우 사용자는 **master** 데이터베이스의 크기를 제어할 수 없습니다.
+> Azure SQL Database 서버의 경우 사용자는 **master** 데이터베이스의 크기를 제어할 수 없습니다.
   
-### <a name="database-options"></a>데이터베이스 옵션  
+### <a name="database-options"></a>데이터베이스 옵션
+
 다음 표에서는 SQL Server 및 Azure SQL Database Managed Instance에 대한 **master** 데이터베이스의 각 데이터베이스 옵션에 대한 기본값과 수정 가능 여부를 나열합니다. 이러한 옵션의 현재 설정을 보려면 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰를 사용하세요.  
   
 > [!IMPORTANT]
-> Azure SQL Database 논리 서버의 경우 사용자는 다음의 데이터베이스 옵션을 제어할 수 없습니다.
+> Azure SQL Database 단일 데이터베이스 및 탄력적 풀의 경우 사용자는 다음 데이터베이스 옵션을 제어할 수 없습니다.
 
 |데이터베이스 옵션|기본값|수정 가능|  
 |---------------------|-------------------|---------------------|  

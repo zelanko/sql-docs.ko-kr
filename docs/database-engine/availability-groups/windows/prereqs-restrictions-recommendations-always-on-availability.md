@@ -2,7 +2,7 @@
 title: 가용성 그룹에 대한 필수 구성 요소, 제한 사항 및 권장 사항
 description: Always On 가용성 그룹을 배포하기 위한 필수 구성 조건, 제한 사항 및 권장 사항에 대한 설명입니다.
 ms.custom: seodec18
-ms.date: 06/05/2018
+ms.date: 01/31/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -20,12 +20,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e4aa84ac344bc9ca6d698f1ae3aa26f2a11f8072
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 28d0e3c791fc838a292d1846613af34fdabd32a4
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202992"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570806"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,7 +160,7 @@ ms.locfileid: "53202992"
     -   SQL Server 인스턴스에서는 보조 복제본에 대한 병렬 다시 실행을 위해 최대 100개의 스레드를 사용합니다. 각 데이터베이스는 최대 총 CPU 코어 수의 절반을 사용하지만 데이터베이스당 스레드는 16개까지 사용됩니다. 단일 인스턴스에 필요한 총 스레드 수가 100개를 넘으면 SQL Server에서는 나머지 모든 데이터베이스에 대해 단일 다시 실행 스레드를 사용합니다. 직렬 다시 실행 스레드는 아무 작업이 없는 상태가 지속된 지 15초 이내에 해제됩니다. 
     
     > [!NOTE]
-    > 데이터베이스는 오름차순 데이터베이스 ID를 기준으로 단일 스레드가 됩니다. 따라서, 사용할 수 있는 작업자 스레드보다 더 많은 가용성 그룹 데이터베이스를 호스트하는 SQL Server 인스턴스에 대해 데이터베이스 생성 순서를 고려해야 합니다. 예를 들어 가용성 그룹을 조인한 7번째 데이터베이스를 기점으로 모든 데이터베이스는 32개 이상의 CPU 코어가 사용된 시스템에서 각 데이터베이스의 실제 다시 실행 워크로드와 관계없이 직렬 다시 실행 모드가 됩니다. 병렬 다시 실행이 필요한 데이터베이스는 가용성 그룹에 먼저 추가되어야 합니다.    
+    > 데이터베이스는 오름차순 데이터베이스 ID를 기준으로 단일 스레드가 됩니다. 따라서, 사용할 수 있는 작업자 스레드보다 더 많은 가용성 그룹 데이터베이스를 호스트하는 SQL Server 인스턴스에 대해 데이터베이스 생성 순서를 고려해야 합니다. 예를 들어 32개 이상의 CPU 코어가 있는 시스템에서는 가용성 그룹 또는 그룹에 있는 처음 6개의 데이터베이스(데이터베이스 ID별로 정렬됨)가 병렬 다시 실행 모드를 사용하고 모든 후속 데이터베이스는 단일 다시 실행 모드를 사용합니다.
   
 -   또한 가용성 그룹은 다음과 같이 비공유 스레드를 사용합니다.  
   
@@ -229,7 +229,7 @@ ms.locfileid: "53202992"
   
 ||사전 요구 사항|링크|  
 |-|------------------|----------|  
-|![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|각 SQL Server FCI(장애 조치(Failover) 클러스터 인스턴스)에 SQL Server FCI(장애 조치(Failover) 클러스터 인스턴스 설치별로 필요한 공유 저장소가 있는지 확인합니다.||  
+|![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|각 SQL Server FCI(장애 조치(Failover) 클러스터 인스턴스)에 SQL Server FCI(장애 조치(Failover) 클러스터 인스턴스 설치별로 필요한 공유 스토리지가 있는지 확인합니다.||  
   
 ###  <a name="RelatedTasksFCIs"></a> 관련 태스크(FCI)  
   

@@ -1,7 +1,7 @@
 ---
 title: 쿼리 힌트(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/22/2018
+ms.date: 02/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a4eb946a9b851342b1f997f2b491b0b0708138c
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+ms.openlocfilehash: 96f34d4ececcb05f91e5fc6329a598907269501e
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306280"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736972"
 ---
 # <a name="hints-transact-sql---query"></a>힌트(Transact-SQL) - 쿼리
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -264,7 +264,9 @@ ms.locfileid: "53306280"
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'       
    일괄 처리 모드 적응 조인을 사용 하지 않습니다. 자세한 내용은 [일괄 처리 모드 적응 조인](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)을 참조하세요.
 *  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'       
-   일괄 처리 모드 메모리 부여 피드백을 사용하지 않습니다. 자세한 내용은 [일괄 처리 모드 메모리 부여 피드백](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback)을 참조합니다.
+   일괄 처리 모드 메모리 부여 피드백을 사용하지 않습니다. 자세한 내용은 [일괄 처리 모드 메모리 부여 피드백](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback)을 참조합니다.   
+* 'DISABLE_DEFERRED_COMPILATION_TV'    
+  테이블 변수 지연 컴파일을 사용하지 않도록 설정합니다. 자세한 내용은 [테이블 변수 지연 컴파일](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation)을 참조하세요.
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
    다중 명령문 테이블 반환 함수에 대한 인터리브 실행을 사용하지 않습니다. 자세한 내용은 [다중 명령문 테이블 반환 함수에 대한 인터리브 실행](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions)을 참조하세요.
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'      
@@ -292,11 +294,11 @@ ms.locfileid: "53306280"
 *  'QUERY_PLAN_PROFILE'      
  쿼리에 대해 간단한 프로파일링을 사용합니다. 이 새 힌트가 포함된 쿼리가 완료되면 새 확장 이벤트 query_plan_profile이 발생합니다. 이 확장 이벤트는 query_post_execution_showplan 확장 이벤트와 유사한 실행 통계 및 실제 실행 계획 XML을 표시하지만 새 힌트가 포함된 쿼리에 대해서만 표시합니다. **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11부터 시작). 
 
-  > [!NOTE]
-  > query_post_execution_showplan 확장 이벤트 수집을 사용하도록 설정하는 경우 서버에서 실행되는 모든 쿼리에 표준 프로파일링 인프라가 추가되므로 전체 서버 성능에 영향을 미칠 수 있습니다.      
-  > 대신 *query_thread_profile* 확장 이벤트의 컬렉션을 사용하도록 설정하여 간단한 프로파일링 인프라를 사용하는 경우 성능 오버헤드가 훨씬 감소하지만 전체 서버 성능에는 여전히 영향을 미칩니다.       
-  > query_plan_profile 확장 이벤트를 사용하도록 설정하는 경우 QUERY_PLAN_PROFILE로 실행된 쿼리의 간단한 프로파일링 인프라만 사용하므로 서버의 다른 워크로드에는 영향을 미치지 않습니다. 이 힌트를 사용하여 서버 워크로드의 다른 부분에 영향을 미치지 않고 특정 쿼리를 프로파일링하세요.
-  > 간단한 프로파일링에 대한 자세한 내용은 [쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조하세요.
+   > [!NOTE]
+   > query_post_execution_showplan 확장 이벤트 수집을 사용하도록 설정하는 경우 서버에서 실행되는 모든 쿼리에 표준 프로파일링 인프라가 추가되므로 전체 서버 성능에 영향을 미칠 수 있습니다.      
+   > 대신 *query_thread_profile* 확장 이벤트의 컬렉션을 사용하도록 설정하여 간단한 프로파일링 인프라를 사용하는 경우 성능 오버헤드가 훨씬 감소하지만 전체 서버 성능에는 여전히 영향을 미칩니다.       
+   > query_plan_profile 확장 이벤트를 사용하도록 설정하는 경우 QUERY_PLAN_PROFILE로 실행된 쿼리의 간단한 프로파일링 인프라만 사용하므로 서버의 다른 워크로드에는 영향을 미치지 않습니다. 이 힌트를 사용하여 서버 워크로드의 다른 부분에 영향을 미치지 않고 특정 쿼리를 프로파일링하세요.
+   > 간단한 프로파일링에 대한 자세한 내용은 [쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조하세요.
  
 지원되는 모든 USE HINT 이름 목록은 동적 관리 뷰 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)를 사용하여 쿼리할 수 있습니다.    
 
@@ -373,7 +375,7 @@ OPTION ( OPTIMIZE FOR (@city_name = 'Seattle', @postal_code UNKNOWN) );
 GO  
 ```  
   
-### <a name="c-using-maxrecursion"></a>3. MAXRECURSION 사용  
+### <a name="c-using-maxrecursion"></a>C. MAXRECURSION 사용  
  잘못 구성된 재귀 공통 테이블 식이 무한 루프에 진입하는 것을 방지하는 데 MAXRECURSION을 사용할 수 있습니다. 다음 예에서는 의도적으로 무한 루프를 만들고 MAXRECURSION 힌트를 사용하여 재귀 수준을 2로 제한하는 방법을 보여 줍니다. 이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용합니다.  
   
 ```sql  

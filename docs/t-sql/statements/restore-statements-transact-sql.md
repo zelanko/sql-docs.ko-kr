@@ -41,12 +41,12 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 72d978967591fbffa8d25b3954c78256149f7592
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: a3257e1c92460f29eef8a9f82749746d18ee8a28
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55045096"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421420"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 문(Transact-SQL)
 BACKUP 명령을 사용하여 만든 SQL 데이터베이스 백업을 복원합니다. 
@@ -64,7 +64,7 @@ BACKUP 명령을 사용하여 만든 SQL 데이터베이스 백업을 복원합�
 > [!div class="mx-tdCol2BreakAll"]
 > ||||
 > |-|-|-|
-> |**_\* SQL Server \*_**|[SQL Database<br />Managed Instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Parallel<br />Data Warehouse](restore-statements-transact-sql.md?view=aps-pdw-2016)
+> |**_\* SQL Server \*_**|[SQL Database<br />관리되는 인스턴스](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Parallel<br />Data Warehouse](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -708,11 +708,11 @@ RESTORE DATABASE Sales
 > [!div class="mx-tdCol2BreakAll"]
 > ||||
 > |-|-|-|
-> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />Managed Instance \*_**|[Parallel<br />Data Warehouse](restore-statements-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|**_\*SQL Database<br />관리되는 인스턴스\*_**|[Parallel<br />Data Warehouse](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 관리되는 인스턴스
 
 이 명령을 사용하면 Azure Blob Storage 계정의 전체 데이터베이스 백업(전체 복원)에서 전체 데이터베이스를 복원할 수 있습니다.
 
@@ -723,7 +723,7 @@ RESTORE DATABASE Sales
 - [RESTORE VERIFYONLY(Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
 
 > [!IMPORTANT]
-> Azure SQL Database Managed Instance 자동 백업에서 복원하려면 [SQL Database 복원](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups)을 참조하세요.
+> Azure SQL Database 관리되는 인스턴스 자동 백업에서 복원하려면 [SQL Database 복원](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups)을 참조하세요.
   
 ## <a name="syntax"></a>구문  
   
@@ -766,7 +766,7 @@ RESTORE 작업은 비동기식으로, 클라이언트 연결을 중단하는 경
 - 메모리에 최적화된 파일 그룹이 추가되고 원본 .bak 파일에 없는 경우 XTP를 호출합니다. 모든 기존 메모리에 최적화된 파일 그룹은 XTP로 이름이 변경됩니다.
 - SINGLE_USER 및 RESTRICTED_USER 옵션은 MULTI_USER로 변환됩니다.
 
-## <a name="limitations---sql-database-managed-instance"></a>제한 사항 - SQL Database Managed Instance
+## <a name="limitations---sql-database-managed-instance"></a>제한 사항 - SQL Database 관리되는 인스턴스
 다음과 같은 제한이 적용됩니다.
 
 - 여러 백업 세트를 포함하는 .BAK 파일은 복원할 수 없습니다.
@@ -775,7 +775,7 @@ RESTORE 작업은 비동기식으로, 클라이언트 연결을 중단하는 경
 - 활성 메모리 내 개체가 있는 데이터베이스를 포함하는 백업은 범용 관리되는 인스턴스로 복원될 수 없습니다.
 - 읽기 전용 모드인 데이터베이스를 포함하는 백업은 현재 복원할 수 없습니다. 이 제한 사항은 곧 삭제될 예정입니다.
 
-자세한 내용은 [관리되는 인스턴스](/azure/sql-database/sql-database-managed-instance)를 참조하세요.
+자세한 내용은 [관리되는 인스턴스](/azure/sql-database/sql-database-managed-instance) 참조
 
 ## <a name="restoring-an-encrypted-database"></a>암호화된 데이터베이스 복원  
 암호화된 데이터베이스를 복원하려면 데이터베이스를 암호화하는 데 사용된 인증서 또는 비대칭 키에 대한 액세스 권한이 있어야 합니다. 인증서 또는 비대칭 키가 없으면 데이터베이스를 복원할 수 없습니다. 따라서 데이터베이스 암호화 키를 암호화하는 데 사용되는 인증서는 백업이 필요한 동안에는 유지되어야 합니다. 자세한 내용은 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)을 참조하세요.  
@@ -840,7 +840,7 @@ WHERE r.command = 'RESTORE DATABASE'
 > [!div class="mx-tdCol2BreakAll"]
 > ||||
 > |-|-|-|
-> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|[SQL Database<br />Managed Instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|**_\* 병렬<br />데이터 웨어하우스 \*_**
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|[SQL Database<br />관리되는 인스턴스](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|**_\* 병렬<br />데이터 웨어하우스 \*_**
 
 &nbsp;
 

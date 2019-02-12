@@ -17,12 +17,12 @@ ms.assetid: f95813a5-26c0-48aa-bfb8-56d2a0980788
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 89bbf3581f8a62750338d1d7ea360fc46ea36479
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b861d170316dbc9d66c7f8e7954910438031f1b
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682031"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513803"
 ---
 # <a name="isnull-geometry-data-type"></a>IsNull(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47682031"
  CLR 형식: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- `IsNull`을 사용하여 **geometry** 인스턴스가 Null인지 여부를 테스트할 수 있습니다. 이 속성은 인스턴스가 Null이 아니면 0을 반환하고 인스턴스가 Null이면 Null을 반환하므로 결과가 다소 혼동스러울 수 있습니다.  
+ `IsNull`을 사용하여 **geometry** 인스턴스가 Null인지 여부를 테스트할 수 있습니다. `IsNull`은 인스턴스가 Null이 아니면 0을 반환하고, Null이면 Null을 반환합니다.  
   
  이 메서드는 주로 SQL Server 인프라에서 사용되지만 인스턴스가 Null인지 여부를 테스트하는 데 `IsNull`을 사용하는 것은 좋지 않습니다.  
   

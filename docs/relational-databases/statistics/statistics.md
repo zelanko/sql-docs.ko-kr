@@ -24,12 +24,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 302ad4ce50e3e1bd1b63bd734dcdc4e88cb83fdc
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 768ffcece8525d36eb7ab3576f28596430941caa
+ms.sourcegitcommit: 3a1e0b92cbe53ccf3b233faf8629d16bbf673b30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380734"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55229044"
 ---
 # <a name="statistics"></a>통계
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -202,7 +202,7 @@ GO
   
 예를 들어 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]를 사용하면 `Production.Product` 테이블의 각 제품이 `Production.ProductCategory` 테이블의 4가지 범주인 자전거, 구성 요소, 의류 및 액세서리 중 하나에 포함됩니다. 각 범주의 데이터 배포는 서로 다른 가중치를 가집니다. 자전거 가중치는 13.77에서 30.0이고 구성 요소 가중치는 2.12에서 1050.00이면서 일부 NULL 값을 가지며 의류 가중치는 모두 NULL이고 액세서리 가중치 또한 NULL입니다.  
   
-자전거를 예로 사용할 때 모든 자전거 가중치에 대한 필터링된 통계는 쿼리 최적화 프로그램에 더욱 정확한 통계를 제공하므로 전체 테이블 통계 또는 Weight 열에 대한 존재하지 않는 통계에 비해 쿼리 계획의 품질을 향상할 수 있습니다. 자전거 가중치 열은 필터링된 통계의 경우에는 좋지만 가중치 조회 수가 상대적으로 적을 때 필터링된 인덱스의 경우에는 반드시 좋은 것은 아닙니다. 필터링된 인덱스에서 제공하는 조회 성능의 향상은 장점이지만 필터링된 인덱스를 데이터베이스에 추가하는 것으로 인한 추가 유지 관리 및 저장 비용은 부담이 될 수 있습니다.  
+자전거를 예로 사용할 때 모든 자전거 가중치에 대한 필터링된 통계는 쿼리 최적화 프로그램에 더욱 정확한 통계를 제공하므로 전체 테이블 통계 또는 Weight 열에 대한 존재하지 않는 통계에 비해 쿼리 계획의 품질을 향상할 수 있습니다. 자전거 가중치 열은 필터링된 통계의 경우에는 좋지만 가중치 조회 수가 상대적으로 적을 때 필터링된 인덱스의 경우에는 반드시 좋은 것은 아닙니다. 필터링된 인덱스에서 제공하는 조회 성능의 향상은 장점이지만 필터링된 인덱스를 데이터베이스에 추가하는 것으로 인한 추가 유지 관리 및 스토리지 비용은 부담이 될 수 있습니다.  
   
 다음 문에서는 Bikes의 모든 하위 범주에 대해 `BikeWeights` 로 필터링된 통계를 작성합니다. 필터링된 조건자 식에서는 `Production.ProductSubcategoryID IN (1,2,3)`비교를 통해 모든 자전거 하위 범주를 열거하는 방법으로 자전거를 정의합니다. Bikes 범주 이름은 Production.ProductCategory 테이블에 저장되고 필터 식의 모든 열은 동일한 테이블에 있어야 하므로 조건자에서 해당 이름을 사용할 수 없습니다.  
   

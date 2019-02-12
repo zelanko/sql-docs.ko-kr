@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a25ec8508701f99602392176ef8210588e872b36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8a0d6bedfb15334850e3cf21eed6dadfd21abf1f
+ms.sourcegitcommit: 31c8f9eab00914e056e9219093dbed1b0b4542a6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517715"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55484852"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -104,7 +104,7 @@ WITH (
  *file_format_name*  
  외부 파일 형식의 이름을 지정합니다.
   
- FORMAT_TYPE = [ PARQUET | ORC | RCFILE | PARQUET] 외부 데이터 형식을 지정합니다.
+ FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT] 외부 데이터 형식을 지정합니다.
   
    -   PARQUET Parquet 형식을 지정합니다.
   
@@ -171,7 +171,7 @@ PolyBase는 데이터를 가져오기 위해서만 사용자 지정 날짜 형�
   
 -   DateTimeOffset: 'yyyy-MM-dd HH:mm:ss'  
   
--   Time: 'HH:mm:ss'  
+-   시간: 'HH:mm:ss'  
   
 **날짜 형식 예**는 다음 표에 있습니다.
   
@@ -332,7 +332,7 @@ WITH (
 );  
 ```  
   
-### <a name="c-create-an-orc-external-file-format"></a>3. ORC 외부 파일 형식 만들기  
+### <a name="c-create-an-orc-external-file-format"></a>C. ORC 외부 파일 형식 만들기  
  이 예제에서는 org.apache.io.compress.SnappyCodec 압축 메서드를 사용하여 데이터를 압축하는 ORC 파일에 대한 외부 파일 형식을 만듭니다. DATA_COMPRESSION을 지정하지 않은 경우 압축되지 않는 것이 기본값입니다.
   
 ```  
@@ -343,7 +343,7 @@ WITH (
 );  
 ```  
   
-### <a name="d-create-a-parquet-external-file-format"></a>4. PARQUET 외부 파일 형식 만들기  
+### <a name="d-create-a-parquet-external-file-format"></a>D. PARQUET 외부 파일 형식 만들기  
  이 예제에서는 org.apache.io.compress.SnappyCodec 압축 메서드를 사용하여 데이터를 압축하는 Parquet 파일에 대한 외부 파일 형식을 만듭니다. DATA_COMPRESSION을 지정하지 않은 경우 압축되지 않는 것이 기본값입니다.  
   
 ```  
@@ -353,7 +353,7 @@ WITH (
     DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
 );  
 ```  
-### <a name="e-create-a-delimited-text-file-skipping-header-row-azure-sql-dw-only"></a>5. 헤더 행을 건너뛰는 구분 기호로 분리된 텍스트 파일 만들기(Azure SQL DW만 해당)
+### <a name="e-create-a-delimited-text-file-skipping-header-row-azure-sql-dw-only"></a>E. 헤더 행을 건너뛰는 구분 기호로 분리된 텍스트 파일 만들기(Azure SQL DW만 해당)
  이 예제에서는 단일 헤더 행이 있는 CSV 파일에 대한 외부 파일 형식을 만듭니다. 
   
 ```  

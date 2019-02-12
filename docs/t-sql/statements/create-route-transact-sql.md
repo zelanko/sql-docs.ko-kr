@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a24090fdcb1bd8b8576f545dfef11764f22a192f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8c027df69ca11c88c82195c2d621ecd33f470d6
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595691"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421151"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -85,7 +85,7 @@ WHERE database_id = DB_ID()
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 라우팅 테이블에 경로를 유지하는 시간(초)을 지정합니다. 수명이 다되어 경로가 만료되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 새 대화를 위한 경로를 선택할 때 더 이상 해당 경로를 고려하지 않습니다. 이 절을 생략하면 *route_lifetime*은 NULL이고 경로는 만료되지 않습니다.  
   
  ADDRESS **='**_next\_hop\_address_**'**  
-SQL Database Managed Instance의 경우 `ADDRESS`는 로컬이어야 합니다. 
+SQL Database 관리되는 인스턴스의 경우 `ADDRESS`는 로컬이어야 합니다. 
 
 이 경로에 대한 네트워크 주소를 지정합니다. *next_hop_address*는 다음과 같은 형식으로 TCP/IP 주소를 지정합니다.  
   
@@ -164,7 +164,7 @@ CREATE ROUTE ExpenseRoute
     ADDRESS = 'TCP://SERVER02:1234' ;  
 ```  
   
-### <a name="c-creating-a-tcpip-route-by-using-an-ip-address"></a>3. IP 주소를 사용하여 TCP/IP 경로 만들기  
+### <a name="c-creating-a-tcpip-route-by-using-an-ip-address"></a>C. IP 주소를 사용하여 TCP/IP 경로 만들기  
  다음 예에서는 `//Adventure-Works.com/Expenses` 서비스에 대한 경로를 만듭니다. 경로는 이 서비스에 대한 메시지가 TCP를 통해 IP 주소가 `1234`인 호스트의 포트 `192.168.10.2`로 이동되도록 지정합니다. 메시지 도착 시 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 고유 식별자 `D8D4D268-00A3-4C62-8F91-634B89C1E315`로 식별되는 Broker 인스턴스로 메시지를 배달합니다.  
   
 ```  
@@ -175,7 +175,7 @@ CREATE ROUTE ExpenseRoute
     ADDRESS = 'TCP://192.168.10.2:1234' ;  
 ```  
   
-### <a name="d-creating-a-route-to-a-forwarding-broker"></a>4. 전달 Broker에 대한 경로 만들기  
+### <a name="d-creating-a-route-to-a-forwarding-broker"></a>D. 전달 Broker에 대한 경로 만들기  
  다음 예에서는 `dispatch.Adventure-Works.com` 서버의 전달 Broker에 대한 경로를 만듭니다. 서비스 이름과 broker 인스턴스 식별자를 둘 다 지정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 다른 경로가 정의되지 않은 서비스에 이 경로를 사용합니다.  
   
 ```  
@@ -184,7 +184,7 @@ CREATE ROUTE ExpenseRoute
     ADDRESS = 'TCP://dispatch.Adventure-Works.com' ;   
 ```  
   
-### <a name="e-creating-a-route-to-a-local-service"></a>5. 로컬 서비스에 대한 경로 만들기  
+### <a name="e-creating-a-route-to-a-local-service"></a>E. 로컬 서비스에 대한 경로 만들기  
  다음 예에서는 경로와 같은 인스턴스의 `//Adventure-Works.com/LogRequests` 서비스에 대한 경로를 만듭니다.  
   
 ```  
@@ -194,7 +194,7 @@ CREATE ROUTE LogRequests
     ADDRESS = 'LOCAL' ;  
 ```  
   
-### <a name="f-creating-a-route-with-a-specified-lifetime"></a>6. 지정한 유효 기간으로 경로 만들기  
+### <a name="f-creating-a-route-with-a-specified-lifetime"></a>F. 지정한 유효 기간으로 경로 만들기  
  다음 예에서는 `//Adventure-Works.com/Expenses` 서비스에 대한 경로를 만듭니다. 경로의 유효 기간은 `259200`초(72시간)입니다.  
   
 ```  
@@ -205,7 +205,7 @@ CREATE ROUTE ExpenseRoute
     ADDRESS = 'TCP://services.Adventure-Works.com:1234' ;  
 ```  
   
-### <a name="g-creating-a-route-to-a-mirrored-database"></a>7. 미러된 데이터베이스에 대한 경로 만들기  
+### <a name="g-creating-a-route-to-a-mirrored-database"></a>G. 미러된 데이터베이스에 대한 경로 만들기  
  다음 예에서는 `//Adventure-Works.com/Expenses` 서비스에 대한 경로를 만듭니다. 서비스는 미러된 데이터베이스에서 호스팅됩니다. 미러된 데이터베이스 중 하나는 주소 `services.Adventure-Works.com:1234`에 있으며 다른 데이터베이스는 주소 `services-mirror.Adventure-Works.com:1234`에 있습니다.  
   
 ```  
@@ -217,7 +217,7 @@ CREATE ROUTE ExpenseRoute
     MIRROR_ADDRESS = 'TCP://services-mirror.Adventure-Works.com:1234' ;  
 ```  
   
-### <a name="h-creating-a-route-that-uses-the-service-name-for-routing"></a>8. 라우팅에 서비스 이름을 사용하는 경로 만들기  
+### <a name="h-creating-a-route-that-uses-the-service-name-for-routing"></a>H. 라우팅에 서비스 이름을 사용하는 경로 만들기  
  다음 예에서는 메시지를 보낼 네트워크 주소를 확인하는 데 서비스 이름을 사용하는 경로를 만듭니다. 네트워크 주소로 `'TRANSPORT'`를 지정하는 경로는 다른 경로보다 일치 시 우선 순위가 낮습니다.  
   
 ```  

@@ -1,7 +1,7 @@
 ---
 title: 데이터 원본 선택(SQL Server 가져오기 및 내보내기 마법사) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,20 +13,23 @@ ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8e337704f95b432c30a6451aabe8a85b4609d5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a93eb928b8d9a756380879ad8cc30475ffd223e9
+ms.sourcegitcommit: 92c524119d7df5daf69ec144d532ddcb2e46abc0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806023"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290423"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>데이터 원본 선택(SQL Server 가져오기 및 내보내기 마법사)
   시작 페이지 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사가 **데이터 원본 선택**을 표시합니다. 이 페이지에서는 데이터 원본 및 데이터 원본에 연결하는 방법에 대한 정보를 제공합니다.
   
 사용할 수 있는 데이터 원본에 대한 자세한 내용은 [어떤 데이터 원본 및 대상을 사용할 수 있나요?](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)를 참조하세요.
 
+> [!NOTE]
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사는 SSIS(SQL Server Integration Services)를 이용합니다. 따라서 SSIS에 적용되는 동일한 제한 사항이 마법사에도 적용됩니다.  예를 들어 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)에 설명된 대로 기본적으로 추가되는 ErrorCode 및 ErrorColumn열이 있습니다.
+
 ## <a name="screen-shot-of-the-choose-a-data-source-page"></a>데이터 원본 선택 페이지의 스크린샷 
-다음 스크린샷은 마법사의 **데이터 원본 선택** 페이지의 첫 번째 부분을 보여 줍니다. 페이지의 나머지 부분에는 여기에서 선택한 데이터 원본에 따라 다양한 옵션이 있습니다.
+다음 이미지는 마법사의 **데이터 원본 선택** 페이지의 첫 번째 부분을 보여 줍니다. 페이지의 나머지 부분에는 여기에서 선택한 데이터 원본에 따라 다양한 옵션이 있습니다.
 
 ![원본 선택](../../integration-services/import-export-data/media/choose-source.png)
 
@@ -66,10 +69,12 @@ ms.locfileid: "47806023"
 
 여기에 나열되지 않은 데이터 원본에 연결하는 방법에 대한 자세한 내용은 [연결 문자열 참조](https://www.connectionstrings.com/)를 참조하세요. 이 타사 사이트에는 샘플 연결 문자열과 필요한 데이터 공급자 및 연결 정보에 대한 추가 정보가 포함되어 있습니다.
 
-## <a name="whats-next"></a>다음 단계  
+## <a name="whats-next"></a>다음 단계
  데이터 원본 및 연결하는 방법에 대한 정보를 제공한 후 다음 페이지는 **대상 선택**입니다. 이 페이지에서는 데이터 대상 및 연결하는 방법에 대한 정보를 제공합니다. 자세한 내용은 [대상 선택](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)을 참조하세요.
- 
+
 ## <a name="see-also"></a>관련 항목:
 [가져오기 및 내보내기 마법사의 이 간단한 예제로 시작](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
+[!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
 
+[!INCLUDE[contribute-to-content](../../includes/paragraph-content/contribute-to-content.md)]

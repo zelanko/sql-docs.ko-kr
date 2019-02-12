@@ -25,12 +25,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ef7e85b7ae4734c78c40723abc11594c416d524
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: f3e8c812f90f92c70efc4fe0fd28481f2be658d0
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53265954"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428590"
 ---
 # <a name="sysutcdatetime-transact-sql"></a>SYSUTCDATETIME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "53265954"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된 **datetime2** 값을 반환합니다. 날짜와 시간은 UTC 시간(Coordinated Universal Time)으로 반환됩니다. 소수 자릿수 초의 전체 자릿수는 1-7자리입니다. 기본 전체 자릿수는 7자리입니다.  
   
 > [!NOTE]  
->  SYSDATETIME 및 SYSUTCDATE에는 GETDATE 및 GETUTCDATE보다 많은 소수 자릿수 초의 전체 자릿수가 있습니다. SYSDATETIMEOFFSET에는 시스템 표준 시간대 오프셋이 포함되어 있습니다. SYSDATETIME, SYSUTCDATE 및 SYSDATETIMEOFFSET은 모든 날짜 및 시간 유형의 변수에 할당할 수 있습니다.  
+>  SYSDATETIME 및 SYSUTCDATETIME에는 GETDATE 및 GETUTCDATE보다 많은 소수 자릿수 초의 전체 자릿수가 있습니다. SYSDATETIMEOFFSET에는 시스템 표준 시간대 오프셋이 포함되어 있습니다. SYSDATETIME, SYSUTCDATETIME 및 SYSDATETIMEOFFSET은 날짜 및 시간 유형 중 하나의 변수에 할당할 수 있습니다.  
   
  모든 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 날짜 및 시간 데이터 형식과 함수에 대한 개요는 [날짜 및 시간 데이터 형식과 함수](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)를 참조하세요.  
   
@@ -110,7 +110,7 @@ SELECT CONVERT (date, SYSDATETIME())
 2007-04-30
 ```  
   
-### <a name="c-converting-date-and-time-values-to-time"></a>3. 날짜 및 시간을 시간으로 변환  
+### <a name="c-converting-date-and-time-values-to-time"></a>C. 날짜 및 시간을 시간으로 변환  
  다음 예에서는 날짜 및 시간 값을 `time`으로 변환하는 방법을 보여 줍니다.  
   
  ```

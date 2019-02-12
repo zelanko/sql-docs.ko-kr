@@ -21,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: cf4bb3c82b4bc7a4bbf047e3ac9457ae3ef262c3
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 14ee8d172f48640f414bb27d4c600248acac99cb
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326584"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55420990"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ ALTER SERVER AUDIT audit_name
  감사 대상의 위치를 결정합니다. 이 옵션은 이진 파일, Windows 응용 프로그램 로그 또는 Windows 보안 로그가 될 수 있습니다.  
 
 > [!IMPORTANT]
-> Azure SQL Database Managed Instance에서 SQL Audit은 서버 수준에서 작동하며 Azure Blob Storage에 `.xel` 파일을 저장합니다.
+> Azure SQL Database 관리되는 인스턴스에서 SQL Audit은 서버 수준에서 작동하며 Azure Blob Storage에 `.xel` 파일을 저장합니다.
   
  FILEPATH **= ‘**_os\_파일\_경로_**’**  
  감사 내역의 경로입니다. 파일 이름은 감사 이름과 감사 GUID를 기준으로 생성됩니다.  
@@ -188,7 +188,7 @@ WITH (STATE = ON);
 GO  
 ```  
   
-### <a name="c-changing-a-server-audit-where-clause"></a>3. 서버 감사 WHERE 절 변경  
+### <a name="c-changing-a-server-audit-where-clause"></a>C. 서버 감사 WHERE 절 변경  
  다음 예에서는 [CREATE SERVER AUDIT&#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)의 예 C에서 만든 WHERE 절을 수정합니다. 새 WHERE 절은 사용자 정의 이벤트가 27인 경우 필터링합니다.  
   
 ```sql  

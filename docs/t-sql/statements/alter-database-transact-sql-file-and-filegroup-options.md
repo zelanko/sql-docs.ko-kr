@@ -43,12 +43,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 5a91f7bf27dea953cde7186262c8b28b2cd0cf7e
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 3ed1de27dacbd8104a9125fe105b50689a4fd9c9
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53329020"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421250"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE(Transact-SQL) 파일 및 파일 그룹 옵션 
 
@@ -65,7 +65,7 @@ ms.locfileid: "53329020"
 > [!div class="mx-tdCol2BreakAll"]
 > |||
 > |-|-|-|
-> |**_\* SQL Server \*_**<br />&nbsp;|[SQL Database<br />Managed Instance](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+> |**_\* SQL Server \*_**<br />&nbsp;|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 
 &nbsp;
 
@@ -322,7 +322,7 @@ AUTOGROW_SINGLE_FILE
   
 AUTOGROW_ALL_FILES  
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
 파일 그룹의 파일이 자동 증가 임계값을 충족하면 파일 그룹의 모든 파일이 커집니다. 
 
@@ -709,15 +709,15 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > |||
 > |-|-|-|
-> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2016)|**_\* SQL Database<br />Managed Instance \*_**<br />&nbsp;|
+> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2016)|**_\*SQL Database<br />관리되는 인스턴스\*_**<br />&nbsp;|
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 관리되는 인스턴스
 
-Azure SQL Database Managed Instance의 데이터베이스에 이 문을 사용합니다.
+Azure SQL Database 관리되는 인스턴스의 데이터베이스에 이 문을 사용합니다.
 
-## <a name="syntax-for-databases-in-a-managed-instance"></a>Managed Instance의 데이터베이스 구문
+## <a name="syntax-for-databases-in-a-managed-instance"></a>관리되는 인스턴스의 데이터베이스 구문
 
 ```  
 ALTER DATABASE database_name   
@@ -953,7 +953,7 @@ GO
   
 ```  
   
-### <a name="c-removing-a-file-from-a-database"></a>3. 데이터베이스에서 파일 제거  
+### <a name="c-removing-a-file-from-a-database"></a>C. 데이터베이스에서 파일 제거  
 다음 예에서는 2번 예에서 추가한 파일 중 하나를 제거합니다.  
   
 ```sql  

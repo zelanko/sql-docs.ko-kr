@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12ca90e681e82e56485fa0feb33326aba49fac97
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: edaaf496dc8f58c2db8b3e01938b43d2437b39f8
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133753"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428630"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -247,7 +247,7 @@ MAXDOP = *max_degree_of_parallelism*
 ### <a name="examples-use-the-adventureworks-database"></a>예제에서는 AdventureWorks 데이터베이스를 사용합니다.  
 
 ### <a name="a-using-create-statistics-with-sample-number-percent"></a>1. CREATE STATISTICS에 SAMPLE number PERCENT 사용  
- 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `ContactMail1` 테이블에서 `BusinessEntityID` 및 `EmailPromotion` 열에 대해 5% 무작위 샘플링을 사용하여 `Contact` 통계를 만듭니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `ContactMail1` 테이블에서 `BusinessEntityID` 및 `EmailPromotion` 열에 대해 5% 무작위 샘플을 사용하여 `Person` 통계를 만듭니다.  
   
 ```sql  
 CREATE STATISTICS ContactMail1  
@@ -256,7 +256,7 @@ CREATE STATISTICS ContactMail1
 ```  
   
 ### <a name="b-using-create-statistics-with-fullscan-and-norecompute"></a>2. CREATE STATISTICS에 FULLSCAN 및 NORECOMPUTE 사용  
- 다음 예에서는 `ContactMail2` 테이블의 `BusinessEntityID` 및 `EmailPromotion` 열에서 모든 행에 대한 `Contact` 통계를 만듭니다. 통계의 자동 다시 계산 기능은 사용하지 않습니다.  
+ 다음 예에서는 `NamePurchase` 테이블의 `BusinessEntityID` 및 `EmailPromotion` 열에서 모든 행에 대한 `Person` 통계를 만듭니다. 통계의 자동 다시 계산 기능은 사용하지 않습니다.  
   
 ```sql  
 CREATE STATISTICS NamePurchase  
@@ -264,7 +264,7 @@ CREATE STATISTICS NamePurchase
     WITH FULLSCAN, NORECOMPUTE;  
 ```  
   
-### <a name="c-using-create-statistics-to-create-filtered-statistics"></a>3. CREATE STATISTICS를 사용하여 필터링된 통계 만들기  
+### <a name="c-using-create-statistics-to-create-filtered-statistics"></a>C. CREATE STATISTICS를 사용하여 필터링된 통계 만들기  
  다음 예에서는 필터링된 통계 `ContactPromotion1`을 만듭니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 데이터의 50%를 샘플링한 다음 `EmailPromotion`이 2인 행을 선택합니다.  
   
 ```sql  
@@ -289,7 +289,7 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 ```  
 
 ### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. FULLSCAN 및 PERSIST_SAMPLE_PERCENT와 함께 CREATE STATISTICS 사용  
- 다음 예제에서는 `Contact` 테이블의 `BusinessEntityID` 및 `EmailPromotion` 열에 있는 모든 행에 대한 `ContactMail2` 통계를 만들고 샘플링 비율을 명시적으로 지정하지 않은 모든 이후 업데이트에 대해 100% 샘플링 비율을 설정합니다.  
+ 다음 예제에서는 `Person` 테이블의 `BusinessEntityID` 및 `EmailPromotion` 열에 있는 모든 행에 대한 `NamePurchase` 통계를 만들고 샘플링 비율을 명시적으로 지정하지 않은 모든 이후 업데이트에 대해 100% 샘플링 비율을 설정합니다.  
   
 ```sql  
 CREATE STATISTICS NamePurchase  

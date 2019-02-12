@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0fba28ddaa76fc441bff847f19633ccbfbfef91e
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.openlocfilehash: 2cccd8e2237b09e438ce19ff4bc2e4874e927334
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411793"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079429"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>저장 프로시저에서 데이터 반환
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -104,7 +104,7 @@ GO
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저는 OUTPUT 매개 변수에만 **cursor** 데이터 형식을 사용할 수 있습니다. 매개 변수에 **cursor** 데이터 형식을 지정한 경우에는 프로시저 정의에서 해당 매개 변수에 대해 VARYING 및 OUTPUT 키워드 모두 지정되어야 합니다. 매개 변수는 OUTPUT으로만 지정될 수 있지만 매개 변수 선언 시 VARYING 키워드가 지정된 경우에는 데이터 형식은 **cursor** 여야 하고 OUTPUT 키워드도 지정되어야 합니다.  
   
 > [!NOTE]  
->  **cursor** 데이터 형식은 OLE DB, ODBC, ADO, DB-Library 등의 데이터베이스 API를 통해 응용 프로그램 변수에 바인딩할 수 없습니다. OUTPUT 매개 변수는 애플리케이션이 프로시저를 실행하기 전에 바인딩되어야 하므로 **cursor** OUTPUT 매개 변수가 있는 프로시저는 데이터베이스 API에서 호출할 수 없습니다. 이러한 프로시저는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 로컬 **cursor** 변수에 [!INCLUDE[tsql](../../includes/tsql-md.md)] cursor **OUTPUT 변수가 할당된 경우에만** 일괄 처리, 프로시저 또는 트리거에서 호출할 수 있습니다.  
+>  **cursor** 데이터 형식은 OLE DB, ODBC, ADO, DB-Library 등의 데이터베이스 API를 통해 애플리케이션 변수에 바인딩할 수 없습니다. OUTPUT 매개 변수는 애플리케이션이 프로시저를 실행하기 전에 바인딩되어야 하므로 **cursor** OUTPUT 매개 변수가 있는 프로시저는 데이터베이스 API에서 호출할 수 없습니다. 이러한 프로시저는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 로컬 **cursor** 변수에 [!INCLUDE[tsql](../../includes/tsql-md.md)] cursor **OUTPUT 변수가 할당된 경우에만** 일괄 처리, 프로시저 또는 트리거에서 호출할 수 있습니다.  
   
 ### <a name="rules-for-cursor-output-parameters"></a>Cursor Output 매개 변수 규칙  
  프로시저 실행 시 **cursor** Output 매개 변수에는 다음 규칙이 적용됩니다.  
@@ -274,7 +274,7 @@ END
 ELSE IF @ret_code = 1  
    PRINT 'ERROR: You must specify a last name for the sales person.'  
 ELSE IF @ret_code = 2   
-   PRINT 'EERROR: You must enter a valid last name for the sales person.'  
+   PRINT 'ERROR: You must enter a valid last name for the sales person.'  
 ELSE IF @ret_code = 3  
    PRINT 'ERROR: An error occurred getting sales value.'  
 ELSE IF @ret_code = 4  

@@ -1,7 +1,7 @@
 ---
 title: 시스템 데이터베이스 | Microsoft 문서
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -17,14 +17,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64b32a4b46ac1d86d358881b99d9988b902a4a47
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 4da57264ca48a53f29485bf279a4c50b3d2f0e81
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558766"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421070"
 ---
 # <a name="system-databases"></a>시스템 데이터베이스
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 포함된 시스템 데이터베이스는 다음과 같습니다.  
   
@@ -37,7 +38,7 @@ ms.locfileid: "51558766"
 |[tempdb 데이터베이스](../../relational-databases/databases/tempdb-database.md)|임시 개체나 중간 결과 집합을 보관하기 위한 작업 영역입니다.|  
 
 > [!IMPORTANT]
-> Azure SQL Database 논리 서버의 경우 master 데이터베이스 및 tempdb 데이터베이스만 적용됩니다. 논리 서버 및 논리적 master 데이터베이스의 개념은 [Azure SQL 논리 서버란?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server)을 참조하세요. Azure SQL Database의 컨텍스트에서 tempdb의 설명은 [Azure SQL Database의 tempdb 데이터베이스](tempdb-database.md#tempdb-database-in-sql-database)를 참조하세요. Azure SQL Database Managed Instance의 경우 모든 시스템 데이터베이스가 적용됩니다. Azure SQL Database Managed Instance에 대한 자세한 내용은 [Managed Instance란?](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)을 참조하세요.
+> Azure SQL Database 단일 데이터베이스와 탄력적 풀의 경우 master 데이터베이스 및 tempdb 데이터베이스만 적용됩니다. 자세한 내용은 [Azure SQL Database 서버란?](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server)을 참조하세요. Azure SQL Database의 컨텍스트에서 tempdb의 설명은 [Azure SQL Database의 tempdb 데이터베이스](tempdb-database.md#tempdb-database-in-sql-database)를 참조하세요. Azure SQL Database Managed Instance의 경우 모든 시스템 데이터베이스가 적용됩니다. Azure SQL Database Managed Instance에 대한 자세한 내용은 [Managed Instance란?](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)을 참조하세요.
   
 ## <a name="modifying-system-data"></a>시스템 데이터 수정  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 사용자가 시스템 테이블, 시스템 저장 프로시저 및 카탈로그 뷰와 같은 시스템 개체의 정보를 직접 업데이트할 수 없습니다. 대신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 사용자가 시스템을 완전히 관리하고 데이터베이스의 모든 사용자와 개체를 관리하는 데 사용할 수 있는 완전한 관리 도구 집합을 제공합니다. 여기에는 다음과 같은 옵션이 포함됩니다.  

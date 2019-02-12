@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cbf03f09ce4d72a738fe018bd0ca0cd67af3d107
-ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
+ms.openlocfilehash: 81d4a9bf01c4c9a958d8ae2b7292a1130250bbf4
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54838150"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421400"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -926,7 +926,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  MEMORY_OPTIMIZED  
    
-**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지 Azure SQL Database Managed Instance는 메모리 최적화된 테이블을 지원하지 않습니다. 
+**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지 Azure SQL Database 관리되는 인스턴스는 메모리 최적화 테이블을 지원하지 않습니다. 
   
  값 ON은 테이블이 메모리 최적화된 형식임을 나타냅니다. 메모리 최적화된 테이블은 트랜잭션 처리의 성능을 최적화하기 위해 사용되는 메모리 내 OLTP 기능의 일부입니다. 메모리 내 OLTP를 시작하려면 [빠른 시작 1: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)을 참조하세요. 메모리 최적화 테이블에 대한 더 심층적인 내용은 [메모리 최적화 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)을 참조하세요.  
   

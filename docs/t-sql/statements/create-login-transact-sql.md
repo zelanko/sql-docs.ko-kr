@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/03/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c29c19a67e3cbbfa4131e25151e33c67fe667169
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 8448d5fd564ff001d847e7af981bc34734cef727
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327904"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421410"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN(Transact-SQL)
 
@@ -50,7 +50,7 @@ SQL Server, SQL Database, SQL Data Warehouse 또는 병렬 데이터 웨어하�
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |**_\* SQL Server \*_**|[SQL Database<br />논리 서버](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |**_\* SQL Server \*_**|[SQL Database<br />단일 데이터베이스/탄력적 풀](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -188,7 +188,7 @@ GO
 > [!NOTE]
 > CHECK_EXPIRATION이 해제되어 있을 때는 MUST_CHANGE 옵션을 사용할 수 없습니다.
   
-### <a name="c-creating-a-login-mapped-to-a-credential"></a>3. 자격 증명에 매핑된 로그인 만들기  
+### <a name="c-creating-a-login-mapped-to-a-credential"></a>C. 자격 증명에 매핑된 로그인 만들기  
  다음 예에서는 사용자를 사용하여 특정 사용자에 대한 로그인을 만듭니다. 이 로그인은 자격 증명에 매핑됩니다. 
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 
@@ -262,11 +262,11 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />논리 서버 \*_**|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|**_\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_**|[SQL Database<br />관리되는 인스턴스](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-database-logical-server"></a>Azure SQL Database 논리 서버
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL Database 단일 데이터베이스/탄력적 풀
   
 ## <a name="syntax"></a>구문 
   
@@ -282,7 +282,7 @@ CREATE LOGIN login_name
 
 ## <a name="arguments"></a>인수  
 *login_name*  
-만들 로그인 이름을 지정합니다. Azure SQL Database 논리 서버는 SQL 로그인만 지원합니다. 
+만들 로그인 이름을 지정합니다. Azure SQL Database 단일 데이터베이스/탄력적 풀은 SQL 로그인만 지원합니다. 
 
 PASSWORD **='** password**'*  
 만들 SQL 로그인의 암호를 지정합니다. 강력한 암호를 사용하세요. 자세한 내용은 [강력한 암호](../../relational-databases/security/strong-passwords.md) 및 [암호 정책](../../relational-databases/security/password-policy.md)을 참조하세요. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 저장된 암호 정보는 솔트 암호의 SHA-512를 사용하여 계산됩니다. 
@@ -320,7 +320,7 @@ SQL Database에서 연결을 인증하는 데 필요한 로그인 데이터 및 
 
 ## <a name="logins"></a>로그인
 - 서버의 **ALTER ANY LOGIN** 권한 또는 **securityadmin** 고정 서버 역할의 멤버 자격이 있어야 합니다. 서버의 **ALTER ANY LOGIN** 권한 또는 securityadmin 고정 서버 역할의 멤버 자격이 있는 Azure AD(Azure Active Directory) 계정만 이 명령을 실행할 수 있음
-- Azure SQL 논리 서버에 사용된 동일한 디렉터리 내에서 Azure AD의 구성원이어야 함
+- Azure SQL Database 서버에 사용된 동일한 디렉터리 내에서 Azure AD의 구성원이어야 함
   
 ## <a name="after-creating-a-login"></a>로그인을 만든 후  
 로그인을 만든 후 해당 로그인으로 SQL Database에 연결할 수 있지만 이 로그인은 **public** 역할에 부여된 권한만 있습니다. 다음 작업 중 일부를 수행하는 것이 좋습니다. 
@@ -378,16 +378,16 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />논리 서버](create-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />Managed Instance \*_**|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />단일 데이터베이스/탄력적 풀](create-login-transact-sql.md?view=azuresqldb-current)|**_\*SQL Database<br />관리되는 인스턴스\*_**|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 관리되는 인스턴스
 
 ## <a name="syntax"></a>구문 
   
 ```sql
--- Syntax for Azure SQL Database Managed Instance
+-- Syntax for Azure SQL Database managed instance
 CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
   
 <option_list> ::=
@@ -398,7 +398,7 @@ CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 ```  
 
 > [!IMPORTANT]
-> SQL Database Managed Instance에 대한 Azure AD 로그인은 **공개 미리 보기**에 있습니다. 이 구문은 **FROM EXTERNAL PROVIDER** 구문과 함께 도입되었습니다.
+> SQL Database 관리되는 인스턴스에 대한 Azure AD 로그인은 **공개 미리 보기**로 제공됩니다. 이 구문은 **FROM EXTERNAL PROVIDER** 구문과 함께 도입되었습니다.
 
 ## <a name="arguments"></a>인수
 *login_name*  
@@ -420,10 +420,10 @@ SID **=** *sid*
 - 암호는 대소문자를 구분합니다.
 - Azure AD 계정에 매핑된 서버 수준 보안 주체를 만들기 위한 새 구문이 도입되었습니다(**FROM EXTERNAL PROVIDER**).
 - **FROM EXTERNAL PROVIDER**가 지정된 경우:
-    - login_name은 현재 Azure SQL Managed Instance로 Azure AD에서 액세스할 수 있는 기존 Azure AD 계정(사용자, 그룹 또는 애플리케이션)을 나타내야 합니다.
+    - login_name은 현재 Azure SQL 관리되는 인스턴스로 Azure AD에서 액세스할 수 있는 기존 Azure AD 계정(사용자, 그룹 또는 애플리케이션)을 나타내야 합니다.
     - **PASSWORD** 옵션은 사용할 수 없습니다.
     - 현재 첫 번째 Azure AD 로그인은 위의 구문을 사용하여 `sysadmin`인 표준 SQL Server 계정(비 Azure AD)에 의해 생성되어야 합니다.
-        - SQL Database Managed Instance에 대한 Azure AD 관리자를 사용하여 Azure AD 로그인을 만들 때 다음 오류가 발생합니다.</br>
+        - SQL Database 관리되는 인스턴스에 대한 Azure AD 관리자를 사용하여 Azure AD 로그인을 만들 때 다음 오류가 발생합니다.</br>
         `Msg 15247, Level 16, State 1, Line 1
         User does not have permission to perform this action.`
         - 이는 **공개 미리 보기**의 알려진 제한 사항이며 나중에 수정될 예정입니다.
@@ -440,14 +440,14 @@ SID **=** *sid*
 기본적으로 마스터에 새로 생성된 Azure AD 로그인에 부여된 표준 권한은 다음과 같습니다.
 - **SQL 연결** 및 **모든 데이터베이스 보기**.
 
-### <a name="sql-database-managed-instance-logins"></a>SQL Database Managed Instance 로그인
+### <a name="sql-database-managed-instance-logins"></a>SQL Database 관리되는 인스턴스 로그인
 
 - 서버의 **ALTER ANY LOGIN** 권한이나 고정 서버 역할 `securityadmin` 또는 `sysadmin` 중 하나의 멤버 자격이 있어야 합니다. 서버의 **ALTER ANY LOGIN** 권한 또는 해당 역할 중 하나의 멤버 자격이 있는 Azure AD(Azure Active Directory) 계정만 create 명령을 실행할 수 있습니다.
 - 로그인이 SQL 보안 주체인 경우 `sysadmin` 역할의 일부인 로그인만 create 명령을 사용하여 Azure AD 계정에 대한 로그인을 만들 수 있습니다.
-- Azure SQL Managed Instance에 사용된 동일한 디렉터리 내에서 Azure AD의 구성원이어야 합니다.
+- Azure SQL 관리되는 인스턴스에 사용된 동일한 디렉터리 내에서 Azure AD의 구성원이어야 합니다.
 
 ## <a name="after-creating-a-login"></a>로그인을 만든 후  
-로그인을 만든 후 해당 로그인으로 SQL Database Managed Instance에 연결할 수 있지만 이 로그인은 **public** 역할에 부여된 권한만 있습니다. 다음 작업 중 일부를 수행하는 것이 좋습니다. 
+로그인을 만든 후 해당 로그인으로 SQL Database 관리되는 인스턴스에 연결할 수 있지만 이 로그인은 **public** 역할에 부여된 권한만 있습니다. 다음 작업 중 일부를 수행하는 것이 좋습니다. 
   
 - Azure AD 로그인으로 Azure AD 사용자를 만들려면 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)를 참조하세요. 
 - 데이터베이스에서 사용자에게 권한을 부여하려면 **ALTER SERVER ROLE** ... **ADD MEMBER** 문을 사용하여 기본 제공 데이터베이스 역할 중 하나 또는 사용자 지정 역할에 사용자를 추가하거나 [GRANT](../../t-sql/statements/grant-transact-sql.md) 문을 사용하여 사용자에게 권한을 직접 부여합니다. 자세한 내용은 [비관리자 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 및 [GRANT](grant-transact-sql.md) 문을 참조합니다.
@@ -496,7 +496,7 @@ SID **=** *sid*
  GO  
  ```
 
-### <a name="c-creating-a-login-for-a-local-azure-ad-account"></a>3. 로컬 Azure AD 계정에 대한 로그인 만들기
+### <a name="c-creating-a-login-for-a-local-azure-ad-account"></a>C. 로컬 Azure AD 계정에 대한 로그인 만들기
  다음 예제에서는 *myaad*의 Azure AD에 있는 Azure AD 계정 joe@myaad.onmicrosoft.com에 대한 로그인을 만듭니다.
 
 ```sql
@@ -553,7 +553,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />논리 서버](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />단일 데이터베이스/탄력적 풀](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -665,7 +665,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />논리 서버](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* 병렬<br />데이터 웨어하우스 \*_**
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />단일 데이터베이스/탄력적 풀](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* 병렬<br />데이터 웨어하우스 \*_**
 
 &nbsp;
 

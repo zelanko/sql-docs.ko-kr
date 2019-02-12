@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/22/2019
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d7bb8abac5765265e93282ae88266ece24d8a8a5
-ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
+ms.openlocfilehash: d8d0a557640795462f4da21345f07df9db96be97
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54838123"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421320"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 
@@ -216,8 +216,8 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 
 [전역 임시 테이블](create-table-transact-sql.md)에 대한 자동 삭제 기능을 설정할 수 있습니다. 기본값은 ON입니다. 이는 전역 임시 테이블이 세션에서 사용되지 않을 때 자동으로 삭제됨을 의미합니다. OFF로 설정하면 DROP TABLE 문을 사용하여 전역 임시 테이블을 명시적으로 삭제하거나 서버를 다시 시작할 때 자동으로 삭제됩니다.
 
-- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 논리 서버에서 이 옵션은 논리 서버의 개별 사용자 데이터베이스에서 설정할 수 있습니다.
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Managed Instance에서 이 옵션은 `TempDB`에 설정되며 개별 사용자 데이터베이스의 설정은 영향을 미치지 않습니다.
+- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 단일 데이터베이스와 탄력적 풀을 사용하면 SQL Database 서버의 개별 사용자 데이터베이스에서 이 옵션을 설정할 수 있습니다.
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 관리되는 인스턴스에서 이 옵션은 `TempDB`에 설정되며 개별 사용자 데이터베이스의 설정은 영향을 미치지 않습니다.
 
 DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
 

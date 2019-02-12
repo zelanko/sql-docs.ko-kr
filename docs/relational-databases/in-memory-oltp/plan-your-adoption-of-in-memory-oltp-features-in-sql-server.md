@@ -1,7 +1,7 @@
 ---
 title: SQL Server에 메모리 내 OLTP 기능 채택 계획 | Microsoft 문서
 ms.custom: ''
-ms.date: 11/21/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4adfad731797d7c210787bdfaae3defa3e0a12ea
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e3671c2b89c60a48431d52e631c11e9f06971a55
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519559"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421190"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>SQL Server에 메모리 내 OLTP 기능 채택 계획
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "52519559"
 
 다음 하위 섹션에서는 메모리 내 기능을 채택하고 구현하려는 경우 고려해야 할 요소를 설명합니다. 다음에서 많은 설명 정보를 확인할 수 있습니다.
 
-- [메모리 내 OLTP를 사용하여 Azure SQL Database에서 응용 프로그램의 성능 향상](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-migration/)
+- [메모리 내 OLTP를 사용하여 Azure SQL Database에서 애플리케이션의 성능 향상](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-migration/)
 
 
 
@@ -59,8 +59,8 @@ ms.locfileid: "52519559"
 
 Azure SQL Database 클라우드 서비스에 호스트된 데이터베이스의 경우 선택한 서비스 계층이 데이터베이스에서 사용할 수 있는 활성 메모리의 양에 영향을 줍니다. 경고를 사용하여 데이터베이스의 메모리 사용량 모니터링을 계획해야 합니다. 자세한 내용은 다음을 참조하세요.
 
-- [가격 책정 계층](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)에 대한 메모리 내 OLTP 저장소 제한 검토
-- [메모리 내 OLTP 저장소 모니터링](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
+- [가격 책정 계층](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#standalone-database-service-tiers-and-performance-levels)에 대한 메모리 내 OLTP 스토리지 제한 검토
+- [메모리 내 OLTP 스토리지 모니터링](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>메모리 액세스에 최적화된 테이블 변수
 
@@ -106,7 +106,7 @@ SSDT에서 관리하는 .dacpac 파일을 사용하여 데이터베이스를 현
 
 *데이터베이스*형식의 Visual Studio 프로젝트 컨텍스트에서 .dacpac 파일을 사용합니다.
 
-- [데이터 계층 응용 프로그램](../../relational-databases/data-tier-applications/data-tier-applications.md) 및 .dacpac 파일
+- [데이터 계층 애플리케이션](../../relational-databases/data-tier-applications/data-tier-applications.md) 및 .dacpac 파일
 
 
 
@@ -160,7 +160,7 @@ READPAST 힌트는 여러 세션이 각각 큐 처리 등 같은 작은 행 집�
 - [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md)는 메모리 최적화 테이블의 제약 조건과 함께 사용할 수 없습니다. 예를 들어 NEXT VALUE FOR 절에 DEFAULT 제약 조건을 만들 수 없습니다. SEQUENCE는 INSERT 및 UPDATE 문에서 사용할 수 있습니다.
 
 
-## <a name="c-administrative-maintenance"></a>3. 유지 관리
+## <a name="c-administrative-maintenance"></a>C. 유지 관리
 
 
 이 섹션에서는 메모리 최적화 테이블이 사용되는 경우 데이터베이스 관리의 차이점을 설명합니다.
@@ -194,7 +194,7 @@ READPAST 힌트는 여러 세션이 각각 큐 처리 등 같은 작은 행 집�
 
 
 
-## <a name="d-performance"></a>4. 성능
+## <a name="d-performance"></a>D. 성능
 
 이 섹션에서는 메모리 최적화 테이블의 우수한 성능을 최대 성능 아래로 유지할 수 있는 상황을 설명합니다.
 
@@ -252,7 +252,7 @@ LOB 및 행 외부 열에 대한 자세한 내용은 다음을 참조하세요.
 
 
 
-## <a name="e-limitations-of-native-procs"></a>5. 네이티브 프로시저의 제한 사항
+## <a name="e-limitations-of-native-procs"></a>E. 네이티브 프로시저의 제한 사항
 
 
 Transact-SQL의 특정 요소는 저장 프로시저를 포함하여 고유하게 컴파일된 T-SQL 모듈에서 지원되지 않습니다. 지원되는 기능에 대한 세부 정보는 다음을 참조하세요.
@@ -284,7 +284,7 @@ Transact-SQL의 특정 요소에 대한 제한 사항 외에도 고유하게 컴
 
 
 
-## <a name="f-application-design-transactions-and-retry-logic"></a>6. 애플리케이션 디자인: 트랜잭션 및 재시도 논리
+## <a name="f-application-design-transactions-and-retry-logic"></a>F. 애플리케이션 디자인: 트랜잭션 및 재시도 논리
 
 메모리 최적화 테이블과 관련된 트랜잭션은 같은 테이블과 관련된 다른 트랜잭션에 종속될 수 있습니다. 종속 트랜잭션 수가 허용된 최대값을 초과하면 모든 종속 트랜잭션이 실패합니다.
 

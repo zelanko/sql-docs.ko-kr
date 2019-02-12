@@ -22,12 +22,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c72da307abd6de30cfb188128eeea52f64b074e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f5b04781959218d9044f1bf032156ce6ec65946
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841161"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55420961"
 ---
 # <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;버전 - Transact SQL 구성 함수
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,14 +77,14 @@ ms.locfileid: "47841161"
 > [!NOTE]  
 > @@VERSION에서 보고한 제품 버전이 Azure SQL Database에 올바르지 않은 문제를 알고 있습니다. Azure SQL Database에서 실행하는 SQL Server 데이터베이스 엔진의 버전은 SQL Server의 온-프레미스 이상 버전으로 최신 보안 수정이 포함되어 있습니다. 즉, 패치 수준이 항상 SQL Server의 온-프레미스 버전 이상으로 SQL Server에서 사용할 수 있는 최신 기능이 Azure SQL Database에서 제공됩니다.
 >
-> 엔진 버전을 프로그래밍 방식으로 결정하려면 SELECT SERVERPROPERTY('EngineEdition')를 사용합니다. 이 쿼리는 독립 실행형 데이터베이스에 '5'를 반환하고, Azure SQL Database의 관리되는 인스턴스에 '8'을 반환합니다. 
+> 엔진 버전을 프로그래밍 방식으로 결정하려면 SELECT SERVERPROPERTY('EngineEdition')를 사용합니다. 이 쿼리는 단일 데이터베이스/탄력적 풀에 '5'를 반환하고, Azure SQL Database의 관리되는 인스턴스에 '8'을 반환합니다. 
 >
 > 이 문제를 해결한 후에 설명서를 업데이트할 예정입니다.
 
   
 ## <a name="examples"></a>예  
   
-### <a name="a-return-the-current-version-of-includessnoversionincludesssnoversion-mdmd"></a>1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 현재 버전 반환  
+### <a name="a-return-the-current-version-of-includessnoversionincludesssnoversion-mdmd"></a>A: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 현재 버전 반환  
  다음 예에서는 현재 설치의 버전 정보를 반환합니다.  
   
 ```  

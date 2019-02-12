@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7dae0b33b2b3a9100aada7505e61f3e75f8bf66c
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 48044f9c24942079f66ee4675c1aa01bb6549532
+ms.sourcegitcommit: 31c8f9eab00914e056e9219093dbed1b0b4542a6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980486"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55484862"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE(Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -163,7 +163,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  예제 섹션의 [분할된 테이블 만들기](#PartitionedTable)를 참조하세요.
 
 ### <a name="DataTypes"></a> 데이터 형식
-[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 가장 일반적으로 사용되는 데이터 형식을 지원합니다. 다음은 세부 정보 및 저장소 바이트가 포함된 지원되는 데이터 형식의 목록입니다. 데이터 형식 및 사용 방법을 더 잘 이해하려면 [SQL Data Warehouse의 테이블에 대한 데이터 형식](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types)을 참조하세요.
+[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 가장 일반적으로 사용되는 데이터 형식을 지원합니다. 다음은 세부 정보 및 스토리지 바이트가 포함된 지원되는 데이터 형식의 목록입니다. 데이터 형식 및 사용 방법을 더 잘 이해하려면 [SQL Data Warehouse의 테이블에 대한 데이터 형식](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types)을 참조하세요.
 
 데이터 형식 변환의 테이블의 경우 [CAST 및 CONVERT(Transact-SQL)](https://msdn.microsoft.com/library/ms187928/)에 있는 암시적 변환 섹션을 참조하세요.
 
@@ -188,18 +188,18 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  그레고리력에 따라 19-23자로 하루의 시간과 날짜를 저장합니다. 날짜는 연도, 월 및 일을 포함할 수 있습니다. 시간에는 시간, 분, 초를 포함합니다. 선택적으로 세 자리 소수 자릿수 초를 표시할 수 있습니다. 저장소 크기는 8바이트입니다.  
   
  `smalldatetime`  
- 날짜 및 시간을 저장합니다. 저장소 크기는 4바이트입니다.  
+ 날짜 및 시간을 저장합니다. 스토리지 크기는 4바이트입니다.  
   
  `date`  
- 그레고리력에 따라 연도, 월 및 일에 대해 최대 10자를 사용하여 날짜를 저장합니다. 저장소 크기는 3바이트입니다. 날짜는 정수로 저장됩니다.  
+ 그레고리력에 따라 연도, 월 및 일에 대해 최대 10자를 사용하여 날짜를 저장합니다. 스토리지 크기는 3바이트입니다. 날짜는 정수로 저장됩니다.  
   
  `time` [ ( *n* ) ]  
  *n*의 기본값은 `7`입니다.  
   
  `float` [ ( *n* ) ]  
- 부동 소수점 숫자 데이터에 사용하는 근사 숫자 데이터 형식입니다. 부동 소수점 데이터는 근사값이므로 해당 데이터 형식 범위에 있는 모든 값을 정확하게 표현할 수는 없습니다. *n*은 과학적 표기법으로 `float`의 가수를 저장하는 데 사용되는 비트 수를 지정합니다. 따라서 *n*은 전체 자릿수 및 저장소 크기를 결정합니다. *n*이 지정된 경우 그 값은 `1`에서 `53` 사이여야 합니다. *n*의 기본값은 `53`입니다.  
+ 부동 소수점 숫자 데이터에 사용하는 근사 숫자 데이터 형식입니다. 부동 소수점 데이터는 근사값이므로 해당 데이터 형식 범위에 있는 모든 값을 정확하게 표현할 수는 없습니다. *n*은 과학적 표기법으로 `float`의 가수를 저장하는 데 사용되는 비트 수를 지정합니다. 따라서 *n*은 전체 자릿수 및 스토리지 크기를 결정합니다. *n*이 지정된 경우 그 값은 `1`에서 `53` 사이여야 합니다. *n*의 기본값은 `53`입니다.  
   
-| *n* 값 | 전체 자릿수 | 저장소 크기 |  
+| *n* 값 | 전체 자릿수 | 스토리지 크기 |  
 | --------: | --------: | -----------: |  
 | 1-24   | 7자리  | 4바이트      |  
 | 25-53  | 15자리 | 8바이트      |  
@@ -220,7 +220,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  *scale*  
  소수점 오른쪽에 저장할 수 있는 10진수의 최대 수입니다. *Scale* 값은 `0`에서 *precision* 사이여야 합니다. *precision*이 지정된 경우 *scale*만 지정할 수 있습니다 기본 비율은 `0`이므로 `0` <= *scale* <= *precision*입니다. 전체 자릿수에 따라 최대 저장소 크기가 달라집니다.  
   
-| 전체 자릿수 | 저장소 크기(바이트)  |  
+| 전체 자릿수 | 스토리지 크기(바이트)  |  
 | ---------: |-------------: |  
 |  1-9       |             5 |  
 | 10-19      |             9 |  
@@ -230,15 +230,15 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  `money` | `smallmoney`  
  통화 값을 나타내는 데이터 형식입니다.  
   
-| 데이터 형식 | 저장소 크기(바이트) |  
+| 데이터 형식 | 스토리지 크기(바이트) |  
 | --------- | ------------: |  
 | `money`|8|  
 | `smallmoney` |4|  
   
  `bigint` | `int` | `smallint` | `tinyint`  
- 정수 데이터를 사용하는 정확한 숫자 데이터 형식입니다. 다음 표에 저장 용량이 나와 있습니다.  
+ 정수 데이터를 사용하는 정확한 숫자 데이터 형식입니다. 다음 표에 스토리지 용량이 나와 있습니다.  
   
-| 데이터 형식 | 저장소 크기(바이트) |  
+| 데이터 형식 | 스토리지 크기(바이트) |  
 | --------- | ------------: |  
 | `bigint`|8|  
 | `int` |4|  
@@ -246,25 +246,25 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 | `tinyint` |1|  
   
  `bit`  
- `1`, `0` 또는 NULL 값을 가질 수 있는 정수 데이터 형식입니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서는 bit 열의 저장소를 최적화합니다. 테이블에 8개 이하의 bit 열이 있는 경우 열은 1바이트로 저장되고, 9-16개의 bit 열이 있을 경우 2바이트로 저장되는 식입니다.  
+ `1`, `0` 또는 NULL 값을 가질 수 있는 정수 데이터 형식입니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서는 bit 열의 스토리지를 최적화합니다. 테이블에 8개 이하의 bit 열이 있는 경우 열은 1바이트로 저장되고, 9-16개의 bit 열이 있을 경우 2바이트로 저장되는 식입니다.  
   
  `nvarchar` [ ( *n* | `max` ) ]  -- `max`는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에만 적용됩니다.  
- 가변 길이 유니코드 문자 데이터입니다. *n*은 1부터 4000 사이의 값이 될 수 있습니다. `max`는 최대 저장소 크기가 2^31-1바이트(2GB)임을 나타냅니다. 저장소 크기(바이트)는 입력된 문자 수의 두 배 + 2바이트입니다. 입력된 데이터의 길이가 0일수도 있습니다.  
+ 가변 길이 유니코드 문자 데이터입니다. *n*은 1부터 4000 사이의 값이 될 수 있습니다. `max`는 최대 저장소 크기가 2^31-1바이트(2GB)임을 나타냅니다. 스토리지 크기(바이트)는 입력된 문자 수의 두 배 + 2바이트입니다. 입력된 데이터의 길이가 0일수도 있습니다.  
   
  `nchar` [ ( *n* ) ]  
- 길이가 *n*자인 고정 길이의 유니코드 문자 데이터입니다. *n*은 `1`과 `4000` 사이의 값이어야 합니다. 저장소 크기는 *n*바이트의 두 배입니다.  
+ 길이가 *n*자인 고정 길이의 유니코드 문자 데이터입니다. *n*은 `1`과 `4000` 사이의 값이어야 합니다. 스토리지 크기는 *n*바이트의 두 배입니다.  
   
  `varchar` [ ( *n*  | `max` ) ]  -- `max`는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에만 적용됩니다.   
- 길이가 *n*바이트인 가변 길이의 비 유니코드 문자 데이터입니다. *n*은 `1`과 `8000` 사이의 값이어야 합니다. `max`는 최대 저장소 크기가 2^31-1바이트(2GB)임을 나타냅니다. 저장소 크기는 입력된 데이터의 실제 길이 + 2바이트입니다.  
+ 길이가 *n*바이트인 가변 길이의 비 유니코드 문자 데이터입니다. *n*은 `1`과 `8000` 사이의 값이어야 합니다. `max`는 최대 스토리지 크기가 2^31-1바이트(2GB)임을 나타냅니다. 스토리지 크기는 입력된 데이터의 실제 길이 + 2바이트입니다.  
   
  `char` [ ( *n* ) ]  
- 길이가 *n*바이트인 고정 길이의 비 유니코드 문자 데이터입니다. *n*은 `1`과 `8000` 사이의 값이어야 합니다. 저장소 크기는 *n* 바이트입니다. *n*에 대한 기본값은 `1`입니다.  
+ 길이가 *n*바이트인 고정 길이의 비 유니코드 문자 데이터입니다. *n*은 `1`과 `8000` 사이의 값이어야 합니다. 스토리지 크기는 *n* 바이트입니다. *n*에 대한 기본값은 `1`입니다.  
   
  `varbinary` [ ( *n*  | `max` ) ]  -- `max`는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에만 적용됩니다.  
  가변 길이 이진 데이터입니다. *n*은 `1`과 `8000` 사이의 값이어야 합니다. `max`는 최대 저장소 크기가 2^31-1바이트(2GB)임을 나타냅니다. 저장소 크기는 실제 입력된 데이터의 길이 + 2바이트입니다. *n*의 기본값은 7입니다.  
   
  `binary` [ ( *n* ) ]  
- 길이가 *n*바이트인 고정 길이 이진 데이터입니다. *n*은 `1`과 `8000` 사이의 값이어야 합니다. 저장소 크기는 *n* 바이트입니다. *n*의 기본값은 `7`입니다.  
+ 길이가 *n*바이트인 고정 길이 이진 데이터입니다. *n*은 `1`과 `8000` 사이의 값이어야 합니다. 스토리지 크기는 *n* 바이트입니다. *n*의 기본값은 `7`입니다.  
   
  `uniqueidentifier`  
  16바이트 GUID입니다.  
@@ -289,7 +289,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="determining-the-number-of-table-partitions"></a>테이블 파티션 수 확인
 각 사용자 정의 테이블은 배포라고 하는 개별 위치에 저장된 더 작은 테이블 여러 개로 나누어집니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 60개 배포를 사용합니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 배포 수는 계산 노드 수에 따라 다릅니다.
  
-각 배포에는 모든 테이블 파티션이 포함됩니다. 예를 들어 60개 배포와 4개 테이블 파티션이 있는 경우 320개의 파티션이 됩니다. 테이블이 클러스터형 columnstore 인덱스인 경우 파티션당 하나의 columnstore 인덱스가 됩니다. 즉, 320개의 columnstore 인덱스를 가지게 됩니다.
+각 배포에는 모든 테이블 파티션이 포함됩니다. 예를 들어 배포 60개 및 테이블 파티션 4개와 빈 파티션 1개가 있으면 300개의 파티션이 있는 것입니다(5 x 60= 300). 테이블이 클러스터형 columnstore 인덱스인 경우 파티션당 하나의 columnstore 인덱스가 됩니다. 즉, 300개의 columnstore 인덱스를 가지게 됩니다.
 
 columnstore 인덱스의 이점 활용하기 위해 더 적은 테이블 파티션을 사용하여 각 columnstore 인덱스에 충분한 행이 있는지 확인하는 것이 좋습니다. 추가 지침의 경우 [SQL Data Warehouse에서 테이블 분할](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) 및 [SQL Data Warehouse에서 테이블 인덱싱](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)을 참조하세요.  
 

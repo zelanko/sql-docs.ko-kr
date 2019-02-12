@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 64c4819bd307afe3b7e4b310949148deabb8c938
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: d393b8f634290069bfe12d3b69c1917fb6ac559f
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327815"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421470"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL)
 
@@ -51,7 +51,7 @@ ms.locfileid: "54327815"
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />논리 서버](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -288,15 +288,15 @@ GO
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />논리 서버 \*_** &nbsp;|[SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|**_\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_**&nbsp;|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-## <a name="azure-sql-database-logical-server"></a>Azure SQL Database 논리 서버
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL Database 단일 데이터베이스/탄력적 풀
 
 ## <a name="overview"></a>개요
 
-Azure SQL Database에서 이 문을 사용하여 논리 서버에서 데이터베이스를 수정합니다. 이 문을 사용하여 데이터베이스 이름을 변경하고, 데이터베이스의 버전 및 서비스 목표를 변경하고, 데이터베이스를 탄력적 풀에 연결하거나 탄력적 풀에서 제거하고, 데이터베이스 옵션을 설정하고, 데이터베이스를 지역 복제 관계의 보조로 추가 또는 제거하고, 데이터베이스 호환성 수준을 설정합니다.
+Azure SQL Database에서 이 문을 사용하여 단일 데이터베이스/탄력적 풀에서 데이터베이스를 수정합니다. 이 문을 사용하여 데이터베이스 이름을 변경하고, 데이터베이스의 버전 및 서비스 목표를 변경하고, 데이터베이스를 탄력적 풀에 연결하거나 탄력적 풀에서 제거하고, 데이터베이스 옵션을 설정하고, 데이터베이스를 지역 복제 관계의 보조로 추가 또는 제거하고, 데이터베이스 호환성 수준을 설정합니다.
 
 ALTER DATABASE 구문은 설명할 항목이 많기 때문에 여러 아티클로 구분하여 설명됩니다.  
 
@@ -603,7 +603,7 @@ ALTER DATABASE db1
 MODIFY ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = pool1 ) ) ;  
 ```  
   
-### <a name="c-add-a-geo-replication-secondary"></a>3. 지역 복제 보조 데이터베이스 추가  
+### <a name="c-add-a-geo-replication-secondary"></a>C. 지역 복제 보조 데이터베이스 추가  
 
 로컬 서버에 있는 db1의 `secondaryserver` 서버에서 읽기 가능한 보조 데이터베이스 db1을 만듭니다.  
   
@@ -653,15 +653,15 @@ ALTER DATABASE db1 FAILOVER
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />논리 서버](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />Managed Instance \*_** &nbsp;|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|**_\*SQL Database<br />관리되는 인스턴스\*_** &nbsp;|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 관리되는 인스턴스
 
 ## <a name="overview"></a>개요
 
-Azure SQL Database Managed Instance에서 이 문을 사용하여 데이터베이스 옵션을 설정합니다.
+Azure SQL Database 관리되는 인스턴스에서 이 문을 사용하여 데이터베이스 옵션을 설정합니다.
 
 ALTER DATABASE 구문은 설명할 항목이 많기 때문에 여러 아티클로 구분하여 설명됩니다.  
 
@@ -776,7 +776,7 @@ ALTER DATABASE WideWorldImporters
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />논리 서버](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -875,7 +875,7 @@ MODIFY NAME = Northwind;
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB );  
 ```  
   
-### <a name="c-change-the-performance-level"></a>3. 성능 수준을 변경합니다.  
+### <a name="c-change-the-performance-level"></a>C. 성능 수준을 변경합니다.  
   
 ```sql  
 ALTER DATABASE dw1 MODIFY ( SERVICE_OBJECTIVE= 'DW1200' );  
@@ -898,7 +898,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />논리 서버](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* 병렬<br />데이터 웨어하우스 \*_** &nbsp;|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* 병렬<br />데이터 웨어하우스 \*_** &nbsp;|  
 
 &nbsp;
 
@@ -1066,7 +1066,7 @@ ALTER DATABASE CustomerSales
     SET ( REPLICATED_SIZE = 1 GB );  
 ```  
   
-### <a name="c-altering-the-maximum-storage-for-distributed-tables"></a>3. 분산된 테이블에 대해 최대 스토리지 변경
+### <a name="c-altering-the-maximum-storage-for-distributed-tables"></a>C. 분산된 테이블에 대해 최대 스토리지 변경
 
  다음 예제에서는 데이터베이스 `CustomerSales`에 대해 분산된 테이블 스토리지 용량 한도를 1000GB(1테라바이트)로 설정합니다. 계산 노드당 스토리지 용량 한도가 아닌 모든 계산 노드에 대해 어플라이언스에서 결합된 스토리지 용량 한도입니다.  
   

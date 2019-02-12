@@ -2,7 +2,7 @@
 title: CREATE DATABASE(Transact-SQL) | Microsoft Docs
 description: SQL Server, Azure SQL Database, Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스의 데이터베이스 구문 만들기
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0ba661f6cc2c19b00dd5c51be9b3dfeb1d47a6e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 76f0d24c3c8eb0c2cfa77b69d45d8f5d88517a4f
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327889"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570846"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -62,7 +62,7 @@ ms.locfileid: "54327889"
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |**_\* SQL Server \*_** | [SQL Database<br />논리 서버](create-database-transact-sql.md?view=azuresqldb-current) | [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |**_\* SQL Server \*_** | [SQL Database<br />단일 데이터베이스/탄력적 풀](create-database-transact-sql.md?view=azuresqldb-current) | [SQL Database<br />관리되는 인스턴스](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -591,7 +591,7 @@ LOG ON
 GO  
 ```  
   
-### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>3. 데이터 파일 및 트랜잭션 로그 파일을 여러 개 지정하여 데이터베이스 만들기
+### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>C. 데이터 파일 및 트랜잭션 로그 파일을 여러 개 지정하여 데이터베이스 만들기
 
  다음 예에서는 3개의 `Archive` 데이터 파일과 2개의 `100-MB` 트랜잭션 로그 파일을 가진 `100-MB` 데이터베이스를 만듭니다. 주 파일은 목록의 첫 번째 파일이며 `PRIMARY` 키워드로 명시적으로 지정되어 있습니다. 트랜잭션 로그 파일은 `LOG ON` 키워드 다음에 지정됩니다. `FILENAME` 옵션에서 파일에 사용된 확장명에 유의하십시오. 주 데이터 파일에는 `.mdf`, 보조 데이터 파일에는 `.ndf`, 트랜잭션 로그 파일에는 `.ldf`가 각각 사용됩니다. 이 예에서는 데이터베이스를 `D:` 데이터베이스와 함께 배치하는 대신 `master` 드라이브에 배치합니다.  
   
@@ -893,15 +893,15 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| **_\* SQL Database<br />논리 서버 \*_**  | [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| **_\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_**  | [SQL Database<br />관리되는 인스턴스](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-## <a name="azure-sql-database-logical-server"></a>Azure SQL Database 논리 서버
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL Database 단일 데이터베이스/탄력적 풀
 
 ## <a name="overview"></a>개요
 
-Azure SQL Database 논리 서버에서 이 문은 Azure SQL Server와 함께 사용하여 단일 데이터베이스 또는 탄력적 풀의 데이터베이스를 만들 수 있습니다. 이 문을 사용하여 데이터베이스 이름, 데이터 정렬, 최대 크기, 버전, 서비스 목표 및 새 데이터베이스의 탄력적 풀(해당하는 경우)을 지정합니다. 탄력적 풀에서 데이터베이스를 만드는 데 사용할 수도 있습니다. 또한 다른 논리 서버에서 데이터베이스 복사본을 만드는 데 사용할 수 있습니다.
+Azure SQL Database 단일 데이터베이스/탄력적 풀에서 이 문은 Azure SQL Server와 함께 사용하여 단일 데이터베이스 또는 탄력적 풀의 데이터베이스를 만들 수 있습니다. 이 문을 사용하여 데이터베이스 이름, 데이터 정렬, 최대 크기, 버전, 서비스 목표 및 새 데이터베이스의 탄력적 풀(해당하는 경우)을 지정합니다. 탄력적 풀에서 데이터베이스를 만드는 데 사용할 수도 있습니다. 또한 다른 SQL Database 서버에서 데이터베이스 복사본을 만드는 데 사용할 수 있습니다.
 
 ## <a name="syntax"></a>구문 
 
@@ -973,7 +973,7 @@ CATALOG_COLLATION
  
 데이터베이스의 서비스 계층을 지정합니다. 
 
-논리 서버의 단일 및 풀링된 데이터베이스입니다. 사용 가능한 값은 ‘기본’, ‘표준’, ‘프리미엄’, ‘GeneralPurpose’, ‘BusinessCritical’ 및 ‘Hyperscale’입니다. 
+단일 데이터베이스/탄력적 풀의 단일 및 풀링된 데이터베이스입니다. 사용 가능한 값은 ‘기본’, ‘표준’, ‘프리미엄’, ‘GeneralPurpose’, ‘BusinessCritical’ 및 ‘Hyperscale’입니다. 
   
 EDITION이 지정되고 MAXSIZE는 지정되지 않은 경우, MAXSIZE는 버전에서 지원되는 가장 제한적인 크기로 설정됩니다.  
   
@@ -984,7 +984,7 @@ MAXSIZE
 > [!NOTE]
 > **MAXSIZE** 인수는 하이퍼스케일 서비스 계층의 단일 데이터베이스에 적용되지 않습니다. 하이퍼스케일 계층 데이터베이스는 필요에 따라 100TB까지 증가합니다. SQL Database 서비스는 스토리지를 자동으로 추가하므로 최대 크기를 설정할 필요가 없습니다.
 
-**논리 서버의 단일 및 풀링된 데이터베이스에 대한 DTU 기반 모델입니다.**
+**SQL Database 서버의 단일 및 풀링된 데이터베이스에 대한 DTU 기반 모델**
 
 |**MAXSIZE**|**기본**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** |
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------| 
@@ -1014,7 +1014,7 @@ MAXSIZE
 
 DTU 기반 모델에 대한 MAXSIZE 값은 지정된 경우 지정된 서비스 계층에 대한 위의 표에 표시된 유효한 값이어야 합니다.
  
-**논리 서버의 단일 및 풀링된 데이터베이스에 대한 vCore 기반 모델입니다.**
+**SQL Database 서버의 단일 및 풀링된 데이터베이스에 대한 vCore 기반 모델**
 
 **범용 서비스 계층 - 4세대 계산 플랫폼**
 
@@ -1063,12 +1063,12 @@ MAXSIZE 및 EDITION 인수에는 다음과 같은 규칙이 적용됩니다.
 
 SERVICE_OBJECTIVE
 
-- **논리 서버의 단일 및 풀링된 데이터베이스의 경우**
+- **단일 및 풀링된 데이터베이스**
 
   - 성능 수준을 지정합니다. 서비스 목표에 사용 가능한 값은 `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_4`, `BC_GEN4_8`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_48`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_8`, `BC_Gen5_16`, `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_48`, `BC_Gen5_80`입니다. 
- - **하이퍼스케일 서비스 계층에 있는 논리 서버의 단일 데이터베이스** 성능 수준을 지정합니다. 서비스 목표의 사용 가능한 값은 `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`입니다. 
+ - **하이퍼스케일 서비스 계층에 있는 단일 데이터베이스** 성능 수준을 지정합니다. 서비스 목표의 사용 가능한 값은 `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`입니다. 
  
-- **Managed Instance의 데이터베이스의 경우**
+- **관리되는 인스턴스의 데이터베이스**
 
   성능 수준을 지정합니다. 서비스 목표에 사용 가능한 값은 `GP_GEN4_8`, `GP_GEN4_16`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`입니다. 
 
@@ -1232,15 +1232,15 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />논리 서버](create-database-transact-sql.md?view=azuresqldb-current)| **_\* SQL Database<br />Managed Instance \*_**   | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />단일 데이터베이스/탄력적 풀](create-database-transact-sql.md?view=azuresqldb-current)| **_\*SQL Database<br />관리되는 인스턴스\*_**   | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 관리되는 인스턴스
 
 ## <a name="overview"></a>개요
 
-Azure SQL Database Managed Instance에서 이 문은 데이터베이스를 만드는 데 사용됩니다. Managed Instance에서 데이터베이스를 만들 때 데이터베이스 이름 및 데이터 정렬을 지정합니다. 
+Azure SQL Database 관리되는 인스턴스에서 이 문은 데이터베이스를 만드는 데 사용됩니다. 관리되는 인스턴스에서 데이터베이스를 만들 때 데이터베이스 이름 및 데이터 정렬을 지정합니다. 
 
 ## <a name="syntax"></a>구문
 
@@ -1249,7 +1249,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 [;]  
 ```
 > [!IMPORTANT]
-> Managed Instance에서 데이터베이스에 대한 파일을 추가하거나 포함을 설정하려면 [ALTER DATABASE](alter-database-transact-sql.md?view=sqlallproducts-allversions&tabs=sqldbmi) 문을 사용합니다.
+> 관리되는 인스턴스에서 데이터베이스에 대한 파일을 추가하거나 포함을 설정하려면 [ALTER DATABASE](alter-database-transact-sql.md?view=sqlallproducts-allversions&tabs=sqldbmi) 문을 사용합니다.
   
 ## <a name="arguments"></a>인수  
   
@@ -1305,7 +1305,7 @@ CREATE DATABASE TestDB1;
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />논리 서버](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* SQL Data<br />Warehouse \*_**    | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />단일 데이터베이스/탄력적 풀](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />관리되는 인스턴스](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* SQL Data<br />Warehouse \*_**    | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1313,7 +1313,7 @@ CREATE DATABASE TestDB1;
 
 ## <a name="overview"></a>개요
 
-Azure SQL Data Warehouse에서 이 문을 Azure SQL 논리 서버와 함께 사용하여 SQL Data Warehouse 데이터베이스를 만들 수 있습니다. 이 문을 사용하여 데이터베이스 이름, 데이터 정렬, 최대 크기, 버전 및 서비스 목표를 지정합니다.
+Azure SQL Data Warehouse에서 이 문을 Azure SQL Database 서버와 함께 사용하여 SQL Data Warehouse 데이터베이스를 만들 수 있습니다. 이 문을 사용하여 데이터베이스 이름, 데이터 정렬, 최대 크기, 버전 및 서비스 목표를 지정합니다.
 
 ## <a name="syntax"></a>구문  
   
@@ -1330,6 +1330,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
     SERVICE_OBJECTIVE = { 
          'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' | 'DW600' 
         | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' | 'DW3000' | 'DW6000' 
+        |'DW100c' | 'DW200c' | 'DW300c' | 'DW400c' | 'DW500c'
         | 'DW1000c' | 'DW1500c' | 'DW2000c' | 'DW2500c' | 'DW3000c' | 'DW5000c' 
         | 'DW6000c' | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
     }  
@@ -1423,7 +1424,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />논리 서버](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|  **_\* 병렬<br />데이터 웨어하우스 \*_** |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />단일 데이터베이스/탄력적 풀](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />관리되는 인스턴스](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|  **_\* 병렬<br />데이터 웨어하우스 \*_** |
 
 &nbsp;
 

@@ -2,7 +2,7 @@
 title: tempdb 데이터베이스 | Microsoft 문서
 description: 이 항목에서는 SQL Server 및 Azure SQL Database의 구성과 사용에 대한 세부 정보를 제공합니다.
 ms.custom: P360
-ms.date: 07/17/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -18,14 +18,15 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 29682619886dc257ba2b2583f4c4d256158df797
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: df57b6d99e07b107770db1a98a7a97e76c392254
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535308"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421275"
 ---
 # <a name="tempdb-database"></a>tempdb 데이터베이스
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **tempdb** 시스템 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 또는 SQL Database에 연결된 모든 사용자가 사용할 수 있는 전역 리소스로서 다음 항목을 보관하는 데 사용됩니다.  
   
@@ -39,7 +40,7 @@ ms.locfileid: "52535308"
   > 각 내부 개체는 IAM 페이지와 8페이지 익스텐트를 포함하여 최소 9페이지를 사용합니다. 페이지 및 익스텐트에 대한 자세한 내용은 [페이지 및 익스텐트](../../relational-databases/pages-and-extents-architecture-guide.md#pages-and-extents)를 참조하세요.
 
   > [!IMPORTANT]
-  > Azure SQL Database 논리 서버는 tempdb에 저장되고 데이터베이스 수준을 범위로 하는 전역 임시 테이블 및 전역 임시 저장 프로시저를 지원합니다. 글로벌 임시 테이블 및 글로벌 임시 저장 프로시저는 동일한 Azure SQL 데이터베이스 내의 모든 사용자 세션에 대해 공유됩니다. 다른 Azure SQL 데이터베이스의 사용자 세션은 전역 임시 테이블에 액세스할 수 없습니다. 자세한 내용은 [데이터베이스 범위 전역 임시 테이블(Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)을 참조하세요. [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance))는 SQL Server에서 지원하는 것과 동일한 임시 개체를 지원합니다. Azure SQL Database 논리 서버의 경우 master 데이터베이스 및 tempdb 데이터베이스만 적용됩니다. 논리 서버 및 논리적 master 데이터베이스의 개념은 [Azure SQL 논리 서버란?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server)을 참조하세요. Azure SQL Database 논리 서버의 컨텍스트에서 tempdb의 설명은 [Azure SQL Database 논리 서버의 tempdb 데이터베이스](#tempdb-database-in-sql-database)를 참조하세요. Azure SQL Database Managed Instance의 경우 모든 시스템 데이터베이스가 적용됩니다. 
+  > Azure SQL Database 단일 데이터베이스 및 탄력적 풀은 tempdb에 저장되고 데이터베이스 수준을 범위로 하는 전역 임시 테이블 및 전역 임시 저장 프로시저를 지원합니다. 글로벌 임시 테이블 및 글로벌 임시 저장 프로시저는 동일한 Azure SQL 데이터베이스 내의 모든 사용자 세션에 대해 공유됩니다. 다른 Azure SQL 데이터베이스의 사용자 세션은 전역 임시 테이블에 액세스할 수 없습니다. 자세한 내용은 [데이터베이스 범위 전역 임시 테이블(Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)을 참조하세요. [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance))는 SQL Server에서 지원하는 것과 동일한 임시 개체를 지원합니다. Azure SQL Database 단일 데이터베이스와 탄력적 풀의 경우 master 데이터베이스 및 tempdb 데이터베이스만 적용됩니다. 자세한 내용은 [Azure SQL Database 서버란?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server)을 참조하세요. Azure SQL Database 단일 데이터베이스와 탄력적 풀의 컨텍스트에서 tempdb의 설명은 [Azure SQL Database 단일 데이터베이스와 탄력적 풀의 tempdb 데이터베이스](#tempdb-database-in-sql-database)를 참조하세요. Azure SQL Database Managed Instance의 경우 모든 시스템 데이터베이스가 적용됩니다.
 
 - **버전 저장소**는 행 버전 관리를 사용하는 기능을 지원하는 데 필요한 데이터 행을 보관하는 데이터 페이지 모음입니다. 버전 저장소에는 일반 버전 저장소와 온라인 인덱스 작성 버전 저장소가 있습니다. 버전 저장소에는 다음 정보가 포함됩니다.
   - 행 버전 관리 격리를 사용하여 커밋된 읽기 또는 스냅숏 격리 트랜잭션을 사용하는 데이터베이스의 데이터 수정 트랜잭션에서 생성된 행 버전  
@@ -48,6 +49,7 @@ ms.locfileid: "52535308"
 트랜잭션을 롤백할 수 있도록 **tempdb** 내의 작업은 최소한으로 로깅됩니다. 시스템이 항상 깨끗한 데이터베이스 복사본으로 시작되도록**를 시작할 때마다** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 다시 생성됩니다. 연결이 끊길 때 임시 테이블 및 저장 프로시저는 자동으로 제거되고 시스템이 종료될 때 활성 상태인 연결이 없습니다. 따라서 **tempdb** 에 있는 어떠한 내용도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 한 세션에서 다른 세션으로 저장되지 않습니다. **tempdb**에서는 백업 및 복원 작업이 허용되지 않습니다.  
   
 ## <a name="physical-properties-of-tempdb-in-sql-server"></a>SQL Server에서 tempdb의 물리적 속성
+
  다음 표에는 Model 데이터베이스에 대한 기본값을 기반으로 하는 SQL Server의 **tempdb** 데이터 및 로그 파일의 초기 구성 값이 나열되어 있습니다. 이러한 파일의 크기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에 따라 조금씩 다를 수 있습니다.  
   
 |파일|논리적 이름|물리적 이름|처음 크기|파일 증가|  
@@ -61,10 +63,12 @@ ms.locfileid: "52535308"
 > [!NOTE]
 > 데이터 파일 수의 기본값은 [KB 2154845](https://support.microsoft.com/kb/2154845/)의 일반 지침을 기준으로 합니다.  
   
-### <a name="moving-the-tempdb-data-and-log-files-in-sql-server"></a>SQL Server에서 tempdb 데이터 및 로그 파일 이동  
+### <a name="moving-the-tempdb-data-and-log-files-in-sql-server"></a>SQL Server에서 tempdb 데이터 및 로그 파일 이동 
+ 
  **tempdb** 데이터 및 로그 파일을 이동하려면 [시스템 데이터베이스 이동](../../relational-databases/databases/move-system-databases.md)을 참조하세요.  
   
-### <a name="database-options-for-tempdb-in-sql-server"></a>SQL Server에서 tempdb에 대한 데이터베이스 옵션  
+### <a name="database-options-for-tempdb-in-sql-server"></a>SQL Server에서 tempdb에 대한 데이터베이스 옵션 
+ 
  다음 표에는 **tempdb** 데이터베이스에 있는 각 데이터베이스 옵션의 기본값과 해당 옵션의 수정 가능 여부가 나열되어 있습니다. 이러한 옵션의 현재 설정을 보려면 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰를 사용하세요.  
   
 |데이터베이스 옵션|기본값|수정 가능|  

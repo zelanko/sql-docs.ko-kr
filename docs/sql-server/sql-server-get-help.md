@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3a24215479af1aca6e1e742d5c62ba8995aaa4a8
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: fca6676b5cb7532faf7bf88cf04159c28b0fa36b
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087672"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570696"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server 도움말 및 피드백
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,6 +25,21 @@ ms.locfileid: "55087672"
 SQL Server 엔지니어링 팀은 SQL Server [사용자 의견](https://feedback.azure.com/forums/908035-sql-server)을 기다립니다. 충돌, 느린 성능, 예기치 않은 동작 등과 같은 SQL Server 관련 문제를 보고하려는 경우 사용자 의견이 가장 적합한 곳입니다. 
 
 [사용자 의견](https://feedback.azure.com/forums/908035-sql-server)은 엔지니어링 팀에서 더 잘 수행할 수 있는 작업을 알 수 있는 적합한 곳입니다. 추천 또는 기능 제안이 있는 경우 여기에도 보고해 주세요. 
+
+## <a name="i-want-to-give-feedback-about-sql-server-documentation"></a>SQL Server 설명서에 대한 피드백을 제공하려면
+SQL Server 콘텐츠 팀에 문의하는 가장 좋은 방법은 Git 문제를 사용하는 것입니다. 대부분의 페이지 아래쪽에서 Git 문제를 제출하는 옵션을 찾을 수 있습니다. 
+
+![Git 문제 콘텐츠 피드백](media/sql-server-get-help/git-issues.png)
+
+아이디어, 제안, 피드백 등 공유할 다른 항목이 있다면 [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback)에서 일반 Git 문제를 작성하여 공유할 수 있습니다. 
+
+시작하려면 '새 문제' 단추를 선택하면 됩니다. 
+
+![새 Git 문제](media/sql-server-get-help/new-git-issue.png)
+
+
+SQL Server 콘텐츠 팀은 설문 조사 피드백을 자주 요청하기도 합니다. 잠시 시간이 괜찮으시면 [https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey)에서 경험을 공유해 주세요.
+
 
 ## <a name="i-want-to-make-a-suggestion-about-sql-server-management-studio"></a>SQL Server Management Studio에 대해 제안하려면
 또한 SSMS(SQL Server Management Studio) 팀이 SQL Server [사용자 의견](https://feedback.azure.com/forums/908035-sql-server)을 모니터하므로 보고하거나 제안할 문제가 있는 경우에는 사용자 의견에 알려주세요. 
@@ -94,7 +109,5 @@ SQL Server에 대한 업데이트를 제공하는 몇 가지 Twitter 계정이 �
 
 모든 공용 기여의 기술적 정확성 및 일관성에 대해 SQL 콘텐츠 팀에서 검토합니다. 
 
-## <a name="i-want-to-provide-feedback-for-sql-docs-content"></a>SQL 문서 콘텐츠에 대한 피드백을 제공하려면
-SQL Docs 경험에 관한 의견을 공유하려는 경우 설문 조사를 진행해 주세요. 이 설문 조사는 [https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey)에 있으며 약 10~15분이 소요됩니다. 
 
-SQL 콘텐츠 팀과 공유할 아이디어, 제안, 피드백 등이 있는 경우 [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback)에서 수행할 수 있습니다. 
+

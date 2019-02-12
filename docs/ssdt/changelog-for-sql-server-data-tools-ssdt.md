@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 53a852b5293cfc013c170723f0e031cc3800e27c
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: a82fe061c8886dc88af8b44faf4b4fb86ccda2e6
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087892"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428680"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)에 대한 변경 로그
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "55087892"
 
 ### <a name="whats-new"></a>새로운 기능
 **SSIS:**
-1. SSIS 2017용 파워 쿼리 원본(미리 보기)을 추가합니다.
-2. SSIS 2012에 대한 지원을 다시 추가합니다.
-3. SSIS 2019에 대한 Oracle 원본 및 대상을 추가합니다.
+1. ADF 2017의 SSIS용 파워 쿼리 원본(미리 보기)을 추가합니다.
+2. SQL Server 2012에 대한 지원을 다시 추가합니다.
+3. SQL Server 2019에 대한 Oracle 원본 및 대상을 추가합니다.
 4. 이전 SSIS 버전에서 마이그레이션하면 스크립트 작업/구성 요소를 로드할 수 없음 문제가 해결되었습니다.
 5. 데이터는 뷰어가 Windows 7 SP1 및 Windows 8.1에서 작동하지 않음 문제가 해결되었습니다.
 6. 일부 경우에 패키지를 저장하면 Visual Studio에서 충돌이 발생함 문제가 해결되었습니다. 
-7. 일부 경우에 보호 수준이 EncryptSensitiveWithPassword이고 대상 서버 버전이 SQL 2017보다 이전이면 패키지를 실행할 수 없음 문제가 해결되었습니다.
+7. 일부 경우에 보호 수준이 EncryptSensitiveWithPassword이고 대상 서버 버전이 SQL Server 2017보다 이전이면 패키지를 실행할 수 없음 문제가 해결되었습니다.
 8. 기본 글꼴을 사용하는 주석이 SSDT에서 표시되지 않음 문제가 해결되었습니다.
 9. ISDeploymentWizard는 명령줄 모드에서 SQL 인증, Azure Active Directory 통합 인증 및 Azure Active Directory 암호 인증을 지원합니다.
 

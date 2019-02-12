@@ -30,12 +30,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f3f0b40e022db23cfcd650c5f2da4a5a14082d1
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: c43e8ae5b32753eccb42e1e706bbe13b9bf4f8d9
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327584"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421220"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "54327584"
 ## <a name="syntax"></a>구문  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, and Azure SQL Database Managed Instance
+-- Syntax for SQL Server, Azure SQL Database, and Azure SQL Database managed instance
   
 -- Syntax Users based on logins in master  
 CREATE USER user_name   
@@ -127,7 +127,7 @@ CREATE USER user_name
 CREATE USER user_name  
 [;]
 
--- Syntax for users based on Azure AD logins for Azure SQL Database Managed Instance
+-- Syntax for users based on Azure AD logins for Azure SQL Database managed instance
 CREATE USER user_name   
     [   { FOR | FROM } LOGIN login_name  ]  
     | FROM EXTERNAL PROVIDER
@@ -141,7 +141,7 @@ CREATE USER user_name
 ```
 
 > [!IMPORTANT]
-> SQL Database Managed Instance에 대한 Azure AD 로그인은 **공개 미리 보기**에 있습니다.
+> SQL Database 관리되는 인스턴스에 대한 Azure AD 로그인은 **공개 미리 보기**로 제공됩니다.
 
 ```  
 -- Syntax for Azure SQL Data Warehouse  
@@ -269,11 +269,11 @@ GO
   
  데이터베이스 사용자 정보는 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 카탈로그 뷰에 표시됩니다.
 
-SQL Database Managed Instance에서 서버 수준 Azure AD 로그인을 생성하기 위해 새 구문 확장인 **FROM EXTERNAL PROVIDER**를 사용할 수 있습니다. Azure AD 로그인은 데이터베이스 수준 Azure AD 보안 주체를 서버 수준 Azure AD 로그인에 매핑되도록 합니다. Azure AD 로그인으로 Azure AD 사용자를 만들려면 다음 구문을 사용합니다.
+SQL Database 관리되는 인스턴스에서 서버 수준 Azure AD 로그인을 생성하기 위해 새 구문 확장인 **FROM EXTERNAL PROVIDER**를 사용할 수 있습니다. Azure AD 로그인은 데이터베이스 수준 Azure AD 보안 주체를 서버 수준 Azure AD 로그인에 매핑되도록 합니다. Azure AD 로그인으로 Azure AD 사용자를 만들려면 다음 구문을 사용합니다.
 
 `CREATE USER [AAD_principal] FROM LOGIN [Azure AD login]`
 
-Azure SQL Database Managed Instance 인스턴스에서 사용자를 만들 때 login_name은 기존 Azure AD 로그인과 일치해야 하며, 그렇지 않으면 **FROM EXTERNAL PROVIDER** 절을 사용하면 마스터 에서 마스터 데이터베이스에 로그인하지 않고 Azure AD 사용자만 생성됩니다. 예를 들어 이 명령은 다음이 포함된 사용자를 만듭니다.
+Azure SQL Database 관리되는 인스턴스 데이터베이스에서 사용자를 만들 때 login_name은 기존 Azure AD 로그인과 일치해야 합니다. 일치하지 않을 경우 **FROM EXTERNAL PROVIDER** 절을 사용하면 master 데이터베이스에 로그인 없이 Azure AD 사용자만 생성됩니다. 예를 들어 이 명령은 다음이 포함된 사용자를 만듭니다.
 
 `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`
   
@@ -373,7 +373,7 @@ CREATE USER Wanida FOR LOGIN WanidaBenshoof
 GO  
 ```  
   
-### <a name="c-creating-a-database-user-from-a-certificate"></a>3. 인증서에서 데이터베이스 사용자 만들기  
+### <a name="c-creating-a-database-user-from-a-certificate"></a>C. 인증서에서 데이터베이스 사용자 만들기  
  다음 예에서는 `JinghaoLiu` 인증서에서 데이터베이스 사용자 `CarnationProduction50`를 만듭니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
@@ -464,11 +464,11 @@ WITH
     , ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON ;  
 ```
 
-### <a name="i-create-an-azure-ad-user-from-an-azure-ad-login-in-sql-database-managed-instance"></a>9. SQL Database Managed Instance의 Azure AD 로그인에서 Azure AD 사용자 만들기
+### <a name="i-create-an-azure-ad-user-from-an-azure-ad-login-in-sql-database-managed-instance"></a>9. SQL Database 관리되는 인스턴스의 Azure AD 로그인에서 Azure AD 사용자 만들기
 
  Azure AD 로그인으로 Azure AD 사용자를 만들려면 다음 구문을 사용합니다.
 
- `sysadmin` 역할로 부여된 Azure AD 로그인을 사용하여 Managed Instance에 로그인합니다. 다음은 로그인 bob@contoso.com에서 Azure AD 사용자 bob@contoso.com을 만듭니다. 이 로그인은 [CREATE LOGIN](create-login-transact-sql.md#d-creating-a-login-for-a-federated-azure-ad-account) 예제에서 생성되었습니다.
+ `sysadmin` 역할로 부여된 Azure AD 로그인을 사용하여 관리되는 인스턴스에 로그인합니다. 다음은 로그인 bob@contoso.com에서 Azure AD 사용자 bob@contoso.com을 만듭니다. 이 로그인은 [CREATE LOGIN](create-login-transact-sql.md#d-creating-a-login-for-a-federated-azure-ad-account) 예제에서 생성되었습니다.
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];
@@ -494,7 +494,7 @@ GO
 
 ### <a name="j-create-an-azure-ad-user-without-an-aad-login-for-the-database"></a>J. 데이터베이스에 대한 AAD 로그인 없이 Azure AD 사용자 만들기
 
-다음 구문은 SQL Database Managed Instance 데이터베이스(포함된 사용자)에서 Azure AD 사용자 bob@contoso.com을 만드는 데 사용됩니다.
+다음 구문은 SQL Database 관리되는 인스턴스 데이터베이스(포함된 사용자)에서 Azure AD 사용자 bob@contoso.com을 만드는 데 사용됩니다.
 
 ```sql
 CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;

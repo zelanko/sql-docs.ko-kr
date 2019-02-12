@@ -21,12 +21,12 @@ ms.assetid: 8cc798ad-c395-461c-b7ff-8c561c098808
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
-ms.openlocfilehash: c74b693bb813970aa795837b568af66a04847c61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49baad50d950578b9d2bbb96b4168c730056b307
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805561"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570676"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +35,10 @@ ms.locfileid: "47805561"
 
 + [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]에서 [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]의 경우 외부 풀은 `rterm.exe`, `BxlServer.exe`, 이들에 의해 생성된 기타 프로세스를 제어합니다.
 
-+ [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]에 있는 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]의 경우 외부 풀은 `rterm.exe`, `python.exe`, `BxlServer.exe`, 이들에 의해 생성된 기타 프로세스를 제어합니다.
++ [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]에서 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]의 경우 외부 풀은 `rterm.exe`, `python.exe`, `BxlServer.exe` 및 이들에 의해 생성된 기타 프로세스를 제어합니다.
 
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -65,7 +65,7 @@ CREATE EXTERNAL RESOURCE POOL pool_name
 ## <a name="arguments"></a>인수
 
 *pool_name*  
-외부 리소스 풀에 대한 사용자 정의 이름입니다. *pool_name*은 영숫자로 최대 128자를 사용할 수 있으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스 내에서 중복되지 않아야 하고 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다.  
+외부 리소스 풀에 대한 사용자 정의 이름입니다. *pool_name*은 영숫자이며 최대 128자를 포함할 수 있습니다. 이 인수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 고유해야 하며 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다.  
 
 MAX_CPU_PERCENT =*value*  
 CPU 경합이 있을 때 이 외부 리소스 풀의 모든 요청이 받을 수 있는 최대 평균 CPU 대역폭을 지정합니다. *value*는 기본 설정이 100인 정수입니다. 허용되는 *value*의 범위는 1에서 100까지입니다.
@@ -86,9 +86,9 @@ MAX_PROCESSES =*value*
 
 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 [ALTER RESOURCE GOVERNOR RECONFIGURE](../../t-sql/statements/alter-resource-governor-transact-sql.md) 문을 실행하면 리소스 풀을 구현합니다.
 
- 리소스 풀에 대한 일반 정보는 [Resource Governor 리소스 풀](../../relational-databases/resource-governor/resource-governor-resource-pool.md), [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md) 및 [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)을 참조합니다.
+리소스 풀에 대한 일반 정보는 [Resource Governor 리소스 풀](../../relational-databases/resource-governor/resource-governor-resource-pool.md), [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md) 및 [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)을 참조합니다.
 
-컴퓨터 학습에 사용된 외부 리소스 풀 관리 관련 정보는 [SQL Server에서의 기계 학습에 대한 리소스 관리](../../advanced-analytics/r/resource-governance-for-r-services.md)를 참조 하십시오... 
+기계 학습에 사용된 외부 리소스 풀 관리 관련 정보는 [SQL Server에서 기계 학습을 위한 리소스 거버넌스](../../advanced-analytics/r/resource-governance-for-r-services.md)를 참조하세요. 
 
 ## <a name="permissions"></a>Permissions
 
@@ -96,7 +96,7 @@ MAX_PROCESSES =*value*
 
 ## <a name="examples"></a>예
 
-다음 명령문은 CPU 사용량을 75% 및 최대 메모리를 컴퓨터에서 사용 가능한 메모리의 30%로 제한하는 외부 풀을 정의합니다.
+다음 문은 CPU 사용량을 75%로 제한하는 외부 풀을 정의합니다. 또한 최대 메모리를 컴퓨터에서 사용 가능한 메모리의 30%로 정의합니다.
 
 ```sql
 CREATE EXTERNAL RESOURCE POOL ep_1
@@ -112,13 +112,13 @@ GO
   
 ## <a name="see-also"></a>관련 항목:
 
- [External Scripts Enabled 서버 구성 옵션](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
- [sp_execute_external_script&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)   
- [ALTER EXTERNAL RESOURCE POOL&#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)   
- [DROP EXTERNAL RESOURCE POOL&#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)   
- [CREATE RESOURCE POOL&#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
- [CREATE WORKLOAD GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
- [리소스 관리자 리소스 풀](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
- [sys.resource_governor_external_resource_pools&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)   
- [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)   
- [ALTER RESOURCE GOVERNOR&#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md) 
+[외부 스크립트 사용 가능 서버 구성 옵션](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
+[sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
+[ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)
+[DROP EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)
+[CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)
+[CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)
+[Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
+[sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)
+[sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)
+[ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)

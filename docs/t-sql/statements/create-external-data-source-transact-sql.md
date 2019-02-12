@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51e75f21dbaa518e344ec8c43fc8c9a087cea959
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 7f3c92067adfc0469802c81d78a7267af2cd28cc
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980009"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421200"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -167,7 +167,7 @@ Azure Data Lake Store의 경우 위치는 Azure Data Lake Store에 연결하기 
 
 
 **SHARD_MAP_MANAGER**   
- SHARD_MAP_MANAGER의 경우 Azure 가상 머신의 Azure SQL Database 또는 SQL Server Database에서 분할된 데이터베이스 맵 관리자를 호스팅하는 논리 서버 이름을 지정합니다.
+ SHARD_MAP_MANAGER의 경우 Azure 가상 머신의 Azure SQL Database 또는 SQL Server 데이터베이스에서 분할된 데이터베이스 맵 관리자를 호스트하는 SQL Database 서버 이름을 지정합니다.
  
  ```
  CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
@@ -188,7 +188,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 단계별 자습서는 [분할을 위한 탄력적 쿼리 시작(수평 분할)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/)을 참조하세요.
   
 **RDBMS**   
-RDBMS의 경우 Azure SQL Database에 있는 원격 데이터베이스의 논리 서버 이름을 지정합니다.  
+RDBMS의 경우 Azure SQL Database에 있는 원격 데이터베이스의 SQL Database 서버 이름을 지정합니다.  
 
 ```  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';  
@@ -208,7 +208,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 RDBMS에 대한 단계별 자습서는 [데이터베이스 간 쿼리 시작(수직 분할)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/)을 참조하세요.  
 
 **BLOB_STORAGE**   
-이 유형은 대량 작업의 경우에만 사용되며, `LOCATION`은 Azure Blob 저장소 및 컨테이너에 유효한 URL이어야 합니다. `LOCATION` URL 끝에 **/**, 파일 이름 또는 공유 액세스 서명 매개 변수를 두지 마십시오. Blob 개체가 public이 아닌 경우 `CREDENTIAL`이 필요합니다. 예를 들어 다음과 같이 사용할 수 있습니다. 
+이 유형은 대량 작업의 경우에만 사용되며, `LOCATION`은 Azure Blob 스토리지 및 컨테이너에 유효한 URL이어야 합니다. `LOCATION` URL 끝에 **/**, 파일 이름 또는 공유 액세스 서명 매개 변수를 두지 마십시오. Blob 개체가 public이 아닌 경우 `CREDENTIAL`이 필요합니다. 예를 들어 다음과 같이 사용할 수 있습니다. 
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
 WITH (  TYPE = BLOB_STORAGE, 
@@ -223,7 +223,7 @@ CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential
  SECRET = '******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
 ```
 
-공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)을 참조하세요. Blob 저장소에 액세스하는 예는 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)의 예제 F를 참조하세요. 
+공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)을 참조하세요. Blob 스토리지에 액세스하는 예는 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)의 예제 F를 참조하세요. 
 >[!NOTE] 
 >Azure Blob Storage에서 SQL DW 또는 병렬 데이터 웨어하우스로 로드하려면 Azure Storage Key가 암호여야 합니다.
 
@@ -404,7 +404,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ## <a name="examples-azure-sql-database"></a>예: Azure SQL 데이터베이스
 
 ### <a name="e-create-a-shard-map-manager-external-data-source"></a>E. 분할된 데이터베이스 맵 관리자 외부 데이터 원본 만들기
-SHARD_MAP_MANAGER를 참조하는 외부 데이터 원본을 만들려면 Azure 가상 머신의 Azure SQL Database 또는 SQL Server Database에서 분할된 데이터베이스 맵 관리자를 호스팅하는 논리 서버 이름을 지정합니다.
+SHARD_MAP_MANAGER를 참조하는 외부 데이터 원본을 만들려면 Azure 가상 머신의 Azure SQL Database 또는 SQL Server 데이터베이스에서 분할된 데이터베이스 맵 관리자를 호스트하는 SQL Database 서버 이름을 지정합니다.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
@@ -424,7 +424,7 @@ WITH (
 ```
 
 ### <a name="f-create-an-rdbms-external-data-source"></a>F. RDBMS 외부 데이터 원본 만들기
-RDBMS를 참조하는 외부 데이터 원본을 만들려면 Azure SQL Database에 있는 원격 데이터베이스의 논리 서버 이름을 지정합니다.
+RDBMS를 참조하는 외부 데이터 원본을 만들려면 Azure SQL Database에 있는 원격 데이터베이스의 SQL Database 서버 이름을 지정합니다.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';

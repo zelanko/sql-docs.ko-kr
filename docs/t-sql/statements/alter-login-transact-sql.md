@@ -1,7 +1,7 @@
 ---
 title: ALTER LOGIN(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/06/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a373c46a00f6e83461f41974bafa269e50468bca
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 3475aa24fe585c5f3133e5116573915c0462612f
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327824"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421360"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN(Transact-SQL)
 
@@ -47,7 +47,7 @@ ms.locfileid: "54327824"
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |**_\* SQL Server \*_**|[SQL Database<br />논리 서버](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |**_\* SQL Server \*_**|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -210,7 +210,7 @@ ALTER LOGIN Mary5 ENABLE;
 ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';  
 ```  
 
-### <a name="c-changing-the-password-of-a-login-when-logged-in-as-the-login"></a>3. 로그인으로 로그인할 때 로그인 암호 변경 
+### <a name="c-changing-the-password-of-a-login-when-logged-in-as-the-login"></a>C. 로그인으로 로그인할 때 로그인 암호 변경 
  현재 로그인되어 있는 로그인 암호의 변경을 시도하지만 `ALTER ANY LOGIN` 권한이 없는 경우 `OLD_PASSWORD` 옵션을 지정해야 합니다.    
   
 ```sql  
@@ -285,11 +285,11 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />논리 서버 \*_**|[SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|**_\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_**|[SQL Database<br />관리되는 인스턴스](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-database-logical-server"></a>Azure SQL Database 논리 서버
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL Database 단일 데이터베이스/탄력적 풀
 
 ## <a name="sql-server"></a>SQL Server
  
@@ -375,7 +375,7 @@ ALTER LOGIN Mary5 ENABLE;
 ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';  
 ```  
   
-### <a name="c-changing-the-name-of-a-login"></a>3. 로그인 이름 변경  
+### <a name="c-changing-the-name-of-a-login"></a>C. 로그인 이름 변경  
  다음 예에서는 `Mary5` 로그인의 이름을 `John2`로 변경합니다.  
   
 ```sql  
@@ -446,16 +446,16 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />논리 서버](alter-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />Managed Instance \*_**|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-login-transact-sql.md?view=azuresqldb-current)|**_\*SQL Database<br />관리되는 인스턴스\*_**|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 관리되는 인스턴스
 
 ## <a name="syntax"></a>구문  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database Managed Instance
+-- Syntax for SQL Server and Azure SQL Database managed instance
   
 ALTER LOGIN login_name   
     {   
@@ -491,10 +491,10 @@ ALTER LOGIN login_name
 ```  
 
 > [!IMPORTANT]
-> SQL Database Managed Instance에 대한 Azure AD 로그인은 **공개 미리 보기**에 있습니다.
+> SQL Database 관리되는 인스턴스에 대한 Azure AD 로그인은 **공개 미리 보기**로 제공됩니다.
   
 ```  
--- Syntax for Azure SQL Database Managed Instance using Azure AD logins
+-- Syntax for Azure SQL Database managed instance using Azure AD logins
   
 ALTER LOGIN login_name   
   {   
@@ -635,7 +635,7 @@ ALTER LOGIN Mary5 ENABLE;
 ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';  
 ```  
   
-### <a name="c-changing-the-name-of-a-login"></a>3. 로그인 이름 변경  
+### <a name="c-changing-the-name-of-a-login"></a>C. 로그인 이름 변경  
  다음 예에서는 `Mary5` 로그인의 이름을 `John2`로 변경합니다.  
   
 ```sql  
@@ -653,7 +653,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
  다음 예에서는 `Mary5` 로그인을 `EKMProvider1` EKM 자격 증명에 매핑합니다.  
   
  
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 SQL Database Managed Instance.
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 Azure SQL Database 관리되는 인스턴스.
   
 ```sql  
 ALTER LOGIN Mary5  
@@ -682,7 +682,7 @@ GO
 ### <a name="g-changing-the-password-of-a-login-using-hashed"></a>G. HASHED를 사용하여 로그인 암호 변경  
  다음 예에서는 `TestUser` 로그인의 암호를 이미 해시된 값으로 변경합니다.  
   
-**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 SQL Database Managed Instance.
+**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 Azure SQL Database 관리되는 인스턴스.
   
 ```sql  
 ALTER LOGIN TestUser WITH   
@@ -711,7 +711,7 @@ ALTER LOGIN [joe@contoso.com] DISABLE
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />논리 서버](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Parallel<br />Data Warehouse](alter-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Parallel<br />Data Warehouse](alter-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -801,7 +801,7 @@ ALTER LOGIN Mary5 ENABLE;
 ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';  
 ```  
   
-### <a name="c-changing-the-name-of-a-login"></a>3. 로그인 이름 변경  
+### <a name="c-changing-the-name-of-a-login"></a>C. 로그인 이름 변경  
  다음 예에서는 `Mary5` 로그인의 이름을 `John2`로 변경합니다.  
   
 ```sql  
@@ -872,7 +872,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />논리 서버](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|**_\* 병렬<br />데이터 웨어하우스 \*_**
+> |[SQL Server](alter-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|**_\* 병렬<br />데이터 웨어하우스 \*_**
 
 &nbsp;
 
@@ -1001,7 +1001,7 @@ ALTER LOGIN Mary5 ENABLE;
 ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';  
 ```  
   
-### <a name="c-changing-the-name-of-a-login"></a>3. 로그인 이름 변경  
+### <a name="c-changing-the-name-of-a-login"></a>C. 로그인 이름 변경  
  다음 예에서는 `Mary5` 로그인의 이름을 `John2`로 변경합니다.  
   
 ```sql  

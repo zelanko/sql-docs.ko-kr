@@ -17,12 +17,12 @@ ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 482177b87fb4d62cbebb64361e0b26ed9a681c1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4672b899b51f109b18f157851e479d3e9ba4755f
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816561"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513793"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>데이터 형식 동의어(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,23 +35,27 @@ ms.locfileid: "47816561"
 |**char varying**|**varchar**|  
 |**character**|**char**|  
 |**character**|**char(1)**|  
-|**character(** *n* **)**|**char(n)**|  
-|**character varying(** *n* **)**|**varchar(n)**|  
+|**character(**_n_**)**|**char(n)**|  
+|**character varying(**_n_**)**|**varchar(n)**|  
 |**Dec**|**decimal**|  
 |**Double precision**|**float**|  
-|**float**[**(***n***)**] for *n* = 1-7|**real**|  
-|**float**[**(***n***)**] for *n* = 8-15|**float**|  
+|**float**[**(**_n_**)**] for _n_ = 1-7|**real**|  
+|**float**[**(**_n_**)**] for _n_ = 8-15|**float**|  
 |**integer**|**int**|  
-|**national character(** *n* **)**|**nchar(n)**|  
-|**national char(** *n* **)**|**nchar(n)**|  
-|**national character varying(** *n* **)**|**nvarchar(n)**|  
-|**national char varying(** *n* **)**|**nvarchar(n)**|  
+|**national character(**_n_**)**|**nchar(n)**|  
+|**national char(**_n_**)**|**nchar(n)**|  
+|**national character varying(**_n_**)**|**nvarchar(n)**|  
+|**national char varying(**_n_**)**|**nvarchar(n)**|  
 |**national text**|**ntext**|  
 |**timestamp**|rowversion|  
   
-데이터 형식 동의어는 CREATE TABLE, CREATE PROCEDURE, DECLARE *@variable* 등의 DDL(데이터 정의 언어) 문에서 해당 기본 데이터 형식 이름 대신 사용할 수 있습니다. 그러나 개체가 만들어진 후에는 동의어가 표시되지 않습니다. 개체가 만들어질 때 동의어에 연결된 기본 데이터 형식이 개체에 할당되기 때문입니다. 개체를 만든 문에 동의어가 지정되었다는 기록은 남지 않습니다.
+데이터 형식 동의어는 DDL(데이터 정의 언어) 문에서 해당 기본 데이터 형식 이름 대신 사용할 수 있습니다. 해당 문에는 CREATE TABLE, CREATE PROCEDURE 및 DECLARE *@variable*이 포함됩니다. 그러나 개체가 만들어진 후에는 동의어가 표시되지 않습니다. 개체가 만들어질 때 동의어에 연결된 기본 데이터 형식이 개체에 할당되기 때문입니다. 개체를 만든 문에 동의어가 지정되었다는 기록은 남지 않습니다.
   
-결과 집합 열이나 식 등 원래 개체에서 파생된 모든 개체에는 기본 데이터 형식이 할당됩니다. 이로 인해 원래 개체와 파생된 모든 개체에서 수행되는 모든 후속 메타데이터 함수는 동의어가 아니라 기본 데이터 형식을 보고하게 됩니다. 이 동작은 **sp_help**와 그 밖의 시스템 저장 프로시저, 정보 스키마 뷰 또는 다양한 데이터 액세스 API 등 테이블이나 결과 집합 열의 데이터 형식을 보고하는 메타데이터 작업 시 나타납니다.
+결과 집합 열이나 식 등 원래 개체에서 파생된 개체에는 기본 데이터 형식이 할당됩니다. 원래 개체와 파생된 개체를 사용하는 모든 메타데이터 함수는 다음을 포함하여 동의어가 아니라 기본 데이터 형식을 보고하게 됩니다.
+
+* 메타데이터 작업(예: **sp_help**) 및 기타 시스템 저장 프로시저,
+* 정보 스키마 뷰 및
+* 테이블 또는 결과 세트 열의 데이터 형식을 보고하는 데이터 액세스 API 메타데이터 작업.
   
 예를 들어 다음과 같이 `national character varying`을 지정하여 테이블을 만들 수 있습니다.
   
@@ -59,7 +63,7 @@ ms.locfileid: "47816561"
 CREATE TABLE ExampleTable (PriKey int PRIMARY KEY, VarCharCol national character varying(10))  
 ```  
   
-`VarCharCol`에는 실제로 **nvarchar(10)** 데이터 형식이 할당되며 모든 후속 메타데이터 함수는 해당 열을 **nvarchar(10)** 열로 보고합니다. 메타데이터 함수가 이 열을 **national character varying(10)** 열로 보고하는 경우는 없습니다.
+`VarCharCol`에는 **nvarchar(10)** 데이터 형식이 할당되며 모든 다음 메타데이터 함수는 해당 열을 **nvarchar(10)** 열로 보고합니다. 메타데이터 함수가 이 열을 **national character varying(10)** 열로 보고하는 경우는 없습니다.
   
 ## <a name="see-also"></a>관련 항목:
 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)

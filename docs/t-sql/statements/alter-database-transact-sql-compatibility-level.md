@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55d919cefd20ef4b139dbf30a053bbda568f6e38
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 40c7f7002bee5567037fbc2de223c292e46e4eba
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242164"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421390"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE(Transact-SQL) 호환성 수준
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,8 +57,8 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|  
 |[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|15|150|150, 140, 130, 120, 110, 100| 
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|14|140|140, 130, 120, 110, 100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 논리 서버|12|130|150, 140, 130, 120, 110, 100|  
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Managed Instance|12|130|150, 140, 130, 120, 110, 100|  
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 단일 데이터베이스/탄력적 풀|12|130|150, 140, 130, 120, 110, 100|  
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 관리되는 인스턴스|12|130|150, 140, 130, 120, 110, 100|  
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130, 120, 110, 100|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|12|120|120, 110, 100|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|11|110|110, 100, 90|  
@@ -317,7 +317,7 @@ SELECT CONVERT(varchar(11), @t2, 106);
 12 mei 2011  
 ```  
   
-### <a name="c"></a>3.  
+### <a name="c"></a>C.  
  110 이하의 호환성 수준 설정의 경우 EXCEPT 절의 오른쪽에 있는 재귀 참조는 무한 루프를 만듭니다.  
   
 ```sql  

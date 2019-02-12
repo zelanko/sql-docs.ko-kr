@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f962d98bc60ea8fedc585add7617ddf938db6f4
-ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
+ms.openlocfilehash: 23f7329c6964f59cb0b7cb9f0d2db6d3b4b825ad
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49960767"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55420950"
 ---
 # <a name="collate-transact-sql"></a>COLLATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -99,7 +99,7 @@ FROM fn_helpcollations();
 -   데이터베이스를 복원하거나 연결할 때 데이터베이스의 기본 데이터 정렬과 데이터베이스 내의 모든 **char**, **varchar** 및 **text** 열 또는 매개 변수의 데이터 정렬은 반드시 운영 체제에서 지원되는 것이어야 합니다.  
   
 > [!NOTE]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Managed Instance 서버 데이터 정렬은 **SQL_Latin1_General_CP1_CI_AS**이며 변경될 수 없습니다.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 관리되는 인스턴스 서버 데이터 정렬은 **SQL_Latin1_General_CP1_CI_AS**이며 변경될 수 없습니다.
 
 > [!NOTE]
 > **char** 및 **varchar** 데이터 형식에 대해서는 코드 페이지 변환이 지원되지만 **text** 데이터 형식에 대해서는 지원되지 않습니다. 코드 페이지 변환 중 데이터가 손실되어도 보고되지 않습니다.  

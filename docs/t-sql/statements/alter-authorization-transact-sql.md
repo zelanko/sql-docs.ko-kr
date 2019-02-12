@@ -1,7 +1,7 @@
 ---
 title: ALTER AUTHORIZATION(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/07/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,14 +27,15 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c7f31849aa75d0102f1406a49faf0d1c8c6a8e9
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 4960dae2aad32a75f612b1b07e4aacdeb6a3d4d9
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327549"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421230"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION(Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   보안 개체의 소유권을 변경합니다.    
@@ -196,6 +197,7 @@ ALTER AUTHORIZATION ON
 ### <a name="for-sql-server"></a>SQL Server의 경우.  
 **새 소유자 요구 사항:**   
 새 소유자 보안 주체는 다음 중 하나여야 합니다.  
+
 -   SQL Server 인증 로그인입니다.  
 -   Windows 사용자(그룹이 아닌)를 나타내는 Windows 인증 로그인입니다.  
 -   Windows 그룹을 나타내는 Windows 인증 로그인을 통해 인증하는 Windows 사용자입니다.  
@@ -206,6 +208,7 @@ ALTER AUTHORIZATION ON
 ### <a name="for-azure-sql-database"></a>Azure SQL 데이터베이스의 경우.  
 **새 소유자 요구 사항:**   
 새 소유자 보안 주체는 다음 중 하나여야 합니다.  
+
 -   SQL Server 인증 로그인입니다.  
 -   Azure AD에 있는 페더레이션 사용자(그룹이 아닌)입니다.  
 -   Azure AD에 있는 애플리케이션 또는 관리 사용자(그룹이 아닌)입니다.    
@@ -217,7 +220,8 @@ ALTER AUTHORIZATION ON
 해당 데이터베이스의 소유자를 변경하려면 대상 데이터베이스에 연결해야 합니다.  
 
 다음과 같은 형식의 계정이 데이터베이스의 소유자를 변경할 수 있습니다. 
-* 서버 수준 보안 주체 로그인입니다. (논리 서버를 만들 때 SQL Azure 관리자가 프로비전합니다.)  
+
+* 서버 수준 보안 주체 로그인입니다. (SQL Database 서버를 만들 때 SQL Azure 관리자가 프로비전합니다.)  
 * Azure SQL Server용 Azure Active Directory 관리자입니다.   
 * 현재 데이터베이스 소유자입니다.   
  
@@ -314,7 +318,7 @@ ALTER AUTHORIZATION ON OBJECT::Production.ProductionView06 TO SCHEMA OWNER;
 GO    
 ```    
     
-### <a name="c-transfer-ownership-of-a-schema-to-a-user"></a>3. 스키마의 소유권을 사용자에게 이전    
+### <a name="c-transfer-ownership-of-a-schema-to-a-user"></a>C. 스키마의 소유권을 사용자에게 이전    
  다음 예에서는 `SeattleProduction11` 스키마의 소유권을 `SandraAlayo` 사용자에게 이전합니다.    
     
 ```    
