@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 764f4a6f84b710be9ac0b6a7c6a8f4989530ca8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 13383c305b9e2e8f1c1ece754c55e5d0f0bd6955
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179543"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022820"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions-report-builder-and-ssrs"></a>드릴스루, 드릴다운, 하위 보고서 및 중첩 데이터 영역(보고서 작성기 및 SSRS)
   일반 데이터와 세부 데이터 간의 관계를 표시하기 위해 여러 가지 방법으로 데이터를 구성할 수 있습니다.  보고서에 데이터를 모두 넣을 수 있지만 사용자가 세부 사항을 표시하기 위해 클릭( *드릴다운* 동작)할 때까지 표시되지 않도록 설정할 수 있습니다. 데이터 영역에 테이블이나 행렬처럼 다른 데이터 영역에 *중첩된* 테이블이나 차트와 같은 데이터를 데이터 영역에 표시할 수 있습니다. 주 보고서 내에 포함되어 있는 *하위 보고서* 에 데이터를 표시할 수 있습니다. 또는 사용자가 링크를 클릭했을 때 표시되는 별도의 보고서인 *드릴스루* 보고서에 세부 데이터를 지정할 수 있습니다.  
@@ -83,19 +83,19 @@ ms.locfileid: "48179543"
 
   
 ##  <a name="InThisSection"></a> 섹션 내용  
- [드릴스루 보고서 &#40;보고서 작성기 및 SSRS&#41;](drillthrough-reports-report-builder-and-ssrs.md)  
+ [드릴스루 보고서&#40;보고서 작성기 및 SSRS&#41;](drillthrough-reports-report-builder-and-ssrs.md)  
  사용자가 주 보고서에서 링크를 클릭할 때 열리는 보고서를 설명합니다.  
   
- [하위 보고서 &#40;보고서 작성기 및 SSRS&#41;](subreports-report-builder-and-ssrs.md)  
+ [하위 보고서&#40;보고서 작성기 및 SSRS&#41;](subreports-report-builder-and-ssrs.md)  
  주 보고서 본문 내에 표시되는 이러한 보고서를 설명합니다.  
   
- [중첩 된 데이터 영역 &#40;보고서 작성기 및 SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)  
+ [중첩된 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)  
  행렬 내에 중첩된 차트와 같이 한 데이터 영역을 다른 데이터 영역에 중첩시키는 작업에 대해 설명합니다.  
   
- [드릴 다운 동작 &#40;보고서 작성기 및 SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)  
+ [드릴다운 동작&#40;보고서 작성기 및 SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)  
  드릴다운 동작을 사용하여 보고서 항목을 숨기고 표시하는 방법을 설명합니다.  
   
- [외부 항목에 대 한 경로 지정 &#40;보고서 작성기 및 SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)  
+ [외부 항목에 대한 경로 지정&#40;보고서 작성기 및 SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)  
  보고서 정의 파일 외부에 있는 항목을 참조하는 방법을 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목  

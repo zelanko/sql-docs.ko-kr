@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0426c117011ed812d9c2d4e1fc9f4e76b06a989a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 421c499b5135bc6022eafbc8d7fa6bf4456ca19a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182453"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020205"
 ---
 # <a name="configure-report-builder-access"></a>보고서 작성기 액세스 구성
   보고서 작성기는 기본 모드 또는 SharePoint 통합 모드용으로 구성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버와 함께 설치되는 임시 보고 도구입니다.  
@@ -45,13 +45,13 @@ ms.locfileid: "48182453"
  보고서 작성기는 항상 완전 신뢰 수준에서 실행되며 부분 신뢰 수준에서 실행되도록 구성할 수 없습니다. 이전 릴리스에서는 보고서 작성기를 부분 신뢰 수준에서 실행할 수 있었지만 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상의 버전에서는 해당 옵션이 지원되지 않습니다.  
   
 ## <a name="enabling-and-disabling-report-builder"></a>보고서 작성기 설정 및 해제  
- 보고서 작성기는 기본적으로 설정되어 있습니다. 보고서 서버 관리자는 보고서 서버 시스템 속성을 설정 하 여 보고서 작성기 기능을 사용 하지 않도록 설정 옵션이 `EnableReportDesignClientDownload` 에 `false`입니다. 이 속성을 설정하면 해당 보고서 서버에 대한 보고서 작성기 다운로드가 해제됩니다.  
+ 보고서 작성기는 기본적으로 설정되어 있습니다. 보고서 서버 관리자는 보고서 서버 시스템 속성인 `EnableReportDesignClientDownload`를 `false`로 설정하여 보고서 작성기 기능을 해제할 수 있습니다. 이 속성을 설정하면 해당 보고서 서버에 대한 보고서 작성기 다운로드가 해제됩니다.  
   
  보고서 서버 시스템 속성을 설정하려면 Management Studio 또는 스크립트를 사용합니다.  
   
 -   Management Studio를 사용하려면 보고서 서버에 연결하고 고급 서버 속성 페이지를 사용하여 `EnableReportDesignClientDownload`를 `false`로 설정합니다. 이 페이지를 여는 방법에 대한 자세한 내용은 [보고서 서버 속성 설정&#40;Management Studio&#41;](../tools/set-report-server-properties-management-studio.md)를 참조하세요.  
   
--   보고서 서버 속성을 설정 하는 샘플 스크립트를 보려면 [배포 및 관리 태스크 스크립팅](../tools/script-deployment-and-administrative-tasks.md)합니다.  
+-   보고서 서버 속성을 설정하는 샘플 스크립트를 보려면 [배포 및 관리 태스크 스크립팅](../tools/script-deployment-and-administrative-tasks.md)을 참조하세요.  
   
 ## <a name="role-assignments-granting-report-builder-access-on-a-native-mode-report-server"></a>기본 모드 보고서 서버에서 보고서 작성기 액세스 권한을 부여하는 역할 할당  
  기본 모드 보고서 서버에서 보고서 작성기를 사용하기 위한 태스크를 포함하는 사용자 역할 할당을 만듭니다. 항목 단위 및 사이트 수준에서 역할 정의와 역할 할당을 만들거나 수정하려면 내용 관리자 및 시스템 관리자여야 합니다.  
@@ -108,7 +108,7 @@ ms.locfileid: "48182453"
   
     4.  보고서 관리자 사용자가 역할의 용도를 파악할 수 있도록 설명에 역할에 대한 설명을 입력합니다.  
   
-    5.  이 역할에 **보고서 사용**, **보고서 보기**, **모델 보기**, **리소스 보기**, **폴더 보기**및 **개별 구독 관리**태스크를 추가합니다.  
+    5.  이 역할에 **보고서 사용**, **보고**를 **모델 보기**를 **리소스 보기**를 **폴더 보기**, 및  **개별 구독 관리**s입니다.  
   
     6.  **확인** 을 클릭하여 역할을 저장합니다.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "48182453"
 ## <a name="permissions-granting-report-builder-access-on-a-sharepoint-integrated-mode-report-server"></a>SharePoint 통합 모드 보고서 서버에서 보고서 작성기 액세스 권한을 부여하는 사용 권한  
  SharePoint 통합 모드 보고서 서버에서 보고서 작성기 액세스 권한은 Contribute 또는 Full Control 권한 수준을 갖는 SharePoint 사용자에게 부여됩니다.  
   
- 사용자 지정 권한 수준을 사용하는 경우 권한 수준에 항목 추가 및 항목 편집을 포함해야 합니다. 기본 제공 권한 수준 통한 보고서 작성기 액세스에 대 한 자세한 내용은 참조 하세요. [보고서 서버 항목에 대해 Windows SharePoint Services의 기본 제공 보안 사용](../security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)합니다. 사용자 지정 권한 수준의 사용 권한 요구 사항에 대 한 자세한 내용은 참조 하세요. [Set Permissions for SharePoint 웹 응용 프로그램에서 보고서 서버 작업](../security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)합니다.  
+ 사용자 지정 권한 수준을 사용하는 경우 권한 수준에 항목 추가 및 항목 편집을 포함해야 합니다. 기본 제공 권한 수준을 통한 보고서 작성기 액세스에 대한 자세한 내용은 [보고서 서버 항목에 대해 Windows SharePoint Services의 기본 제공 보안 사용](../security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)을 참조하세요. 사용자 지정 권한 수준의 권한 요구 사항에 대한 자세한 내용은 [SharePoint 웹 애플리케이션에서 보고서 서버 작업에 대한 사용 권한 설정](../security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)을 참조하세요.  
   
 ## <a name="authentication-considerations-and-credential-reuse"></a>인증 고려 사항 및 자격 증명 다시 사용  
  보고서 작성기는 ClickOnce 기술을 사용하여 해당 애플리케이션 파일을 클라이언트 컴퓨터로 다운로드하고 설치합니다. ClickOnce 기술은 프로그램 파일을 클라이언트 컴퓨터에 배치하고 애플리케이션을 기본 사용자의 ID를 사용하여 별도의 프로세스로 실행하는 단방향 애플리케이션 배포를 위해 제공됩니다. 보고서 작성기는 애플리케이션 파일 및 보고서 서버 데이터를 가져오기 위해 보고서 서버에 다시 연결해야 하므로 다양한 시나리오에서 ClickOnce가 보안 컨텍스트를 설정하고 원격 컴퓨터에 대한 요청을 실행하는 방법을 이해해야 합니다.  
@@ -160,14 +160,14 @@ ms.locfileid: "48182453"
 |---------------------------------------|--------------------------------------------------------------------|  
 |Negotiate(기본값)<br /><br /> NTLM(기본값)|Windows 통합 보안에서는 클라이언트와 서버가 동일한 도메인에 배포되어 있고, 사용자가 보고서 작성기에 액세스할 수 있는 권한이 있는 도메인 계정을 사용하여 클라이언트 컴퓨터에 로그인하고, 보고서 서버에 Windows 인증이 구성된 경우 일반적으로 ClickOnce 및 보고서 작성기의 인증된 요청이 성공적으로 수행됩니다.<br /><br /> 보고서 서버에 대한 ClickOnce 및 브라우저 연결의 사용자 ID가 동일하므로 요청이 성공적으로 수행됩니다.<br /><br /> 사용자가 Internet Explorer를 다음 계정으로 실행을 사용하여 열고 기본값이 아닌 자격 증명을 지정한 경우 요청이 실패합니다. 보고서 서버의 사용자 세션이 특정 계정으로 설정되어 있고 ClickOnce가 다른 계정으로 실행되는 경우 보고서 서버에서 파일에 대한 액세스를 거부합니다.|  
 |Kerberos|보고서 작성기를 사용하기 위해 필요한 Internet Explorer는 Kerberos를 직접 지원하지 않습니다.|  
-|기본 인증|ClickOnce는 기본 인증을 지원하지 않습니다. ClickOnce는 인증 헤더에 기본 인증을 지정하는 요청을 작성하지 않으며 자격 증명을 전달하거나 자격 증명을 지정하라는 메시지를 표시하지 않습니다. 보고서 작성기 애플리케이션 파일에 대한 익명 액세스를 사용하여 이러한 문제를 해결할 수 있습니다.<br /><br /> 보고서 작성기 애플리케이션 파일에 대한 익명 액세스를 사용하는 경우 보고서 서버에서 인증 헤더를 무시하므로 요청이 성공적으로 수행됩니다. 보고서 작성기에 대 한 익명 액세스를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [보고서 서버의 기본 인증 구성](../security/configure-basic-authentication-on-the-report-server.md)합니다.<br /><br /> ClickOnce가 애플리케이션 파일을 검색한 후 보고서 작성기는 보고서 서버에 대한 별도의 연결을 엽니다. 보고서 작성기가 보고서 서버에 연결하려면 사용자가 자격 증명을 다시 입력해야 합니다. 보고서 작성기는 Internet Explorer 또는 ClickOnce에서 자격 증명을 수집하지 않습니다.<br /><br /> 보고서 서버가 기본 인증용으로 구성되어 있고 보고서 작성기 프로그램 파일에 대한 익명 액세스를 사용하지 않는 경우 요청이 실패합니다. ClickOnce가 해당 요청에 대해 Windows 통합 보안을 지정하기 때문에 요청이 실패합니다. 보고서 서버를 기본 인증용으로 구성하는 경우 요청에서 잘못된 보안 패키지를 지정하고 보고서 서버에 필요한 자격 증명이 없기 때문에 서버에서 요청을 거부합니다.<br /><br /> 또한 보고서 서버가 SharePoint 통합 모드를 사용하도록 구성되어 있고 SharePoint 사이트에서 기본 인증을 사용하는 경우 ClickOnce를 사용하여 클라이언트 컴퓨터에 보고서 작성기를 설치하려고 하면 401 오류가 발생합니다. 이는 SharePoint에서는 쿠키를 사용하여 세션이 지속되는 동안 사용자를 인증된 상태로 유지하지만 ClickOnce에서는 쿠키를 지원하지 않기 때문입니다. 사용자가 보고서 작성기 등의 ClickOnce 애플리케이션을 실행하면 애플리케이션에서 SharePoint에 쿠키를 전달하지 않으므로 SharePoint에서 액세스를 거부하고 401 오류를 반환합니다.<br /><br /> 다음 방법 중 하나를 사용하여 이 문제를 해결할 수 있습니다.<br /><br /> 선택 된 **암호를 기억할** 사용자 자격 증명을 제공 하는 경우 옵션입니다.<br /><br /> SharePoint 사이트 모음에 대한 익명 액세스를 허용합니다.<br /><br /> 사용자가 자격 증명을 제공하지 않도록 환경을 구성합니다. 예를 들어 인트라넷 환경에서는 SharePoint 서버가 작업 그룹에 속하도록 구성한 다음 로컬 컴퓨터에 사용자 계정을 만들 수 있습니다.|  
+|기본 인증|ClickOnce는 기본 인증을 지원하지 않습니다. ClickOnce는 인증 헤더에 기본 인증을 지정하는 요청을 작성하지 않으며 자격 증명을 전달하거나 자격 증명을 지정하라는 메시지를 표시하지 않습니다. 보고서 작성기 애플리케이션 파일에 대한 익명 액세스를 사용하여 이러한 문제를 해결할 수 있습니다.<br /><br /> 보고서 작성기 애플리케이션 파일에 대한 익명 액세스를 사용하는 경우 보고서 서버에서 인증 헤더를 무시하므로 요청이 성공적으로 수행됩니다. 보고서 작성기에 대한 익명 액세스를 사용하도록 설정하는 방법에 대한 자세한 내용은 [보고서 서버의 기본 인증 구성](../security/configure-basic-authentication-on-the-report-server.md)을 참조하세요.<br /><br /> ClickOnce가 애플리케이션 파일을 검색한 후 보고서 작성기는 보고서 서버에 대한 별도의 연결을 엽니다. 보고서 작성기가 보고서 서버에 연결하려면 사용자가 자격 증명을 다시 입력해야 합니다. 보고서 작성기는 Internet Explorer 또는 ClickOnce에서 자격 증명을 수집하지 않습니다.<br /><br /> 보고서 서버가 기본 인증용으로 구성되어 있고 보고서 작성기 프로그램 파일에 대한 익명 액세스를 사용하지 않는 경우 요청이 실패합니다. ClickOnce가 해당 요청에 대해 Windows 통합 보안을 지정하기 때문에 요청이 실패합니다. 보고서 서버를 기본 인증용으로 구성하는 경우 요청에서 잘못된 보안 패키지를 지정하고 보고서 서버에 필요한 자격 증명이 없기 때문에 서버에서 요청을 거부합니다.<br /><br /> 또한 보고서 서버가 SharePoint 통합 모드를 사용하도록 구성되어 있고 SharePoint 사이트에서 기본 인증을 사용하는 경우 ClickOnce를 사용하여 클라이언트 컴퓨터에 보고서 작성기를 설치하려고 하면 401 오류가 발생합니다. 이는 SharePoint에서는 쿠키를 사용하여 세션이 지속되는 동안 사용자를 인증된 상태로 유지하지만 ClickOnce에서는 쿠키를 지원하지 않기 때문입니다. 사용자가 보고서 작성기 등의 ClickOnce 애플리케이션을 실행하면 애플리케이션에서 SharePoint에 쿠키를 전달하지 않으므로 SharePoint에서 액세스를 거부하고 401 오류를 반환합니다.<br /><br /> 다음 방법 중 하나를 사용하여 이 문제를 해결할 수 있습니다.<br /><br /> 선택 된 **암호를 기억할** 사용자 자격 증명을 제공 하는 경우 옵션입니다.<br /><br /> SharePoint 사이트 모음에 대한 익명 액세스를 허용합니다.<br /><br /> 사용자가 자격 증명을 제공하지 않도록 환경을 구성합니다. 예를 들어 인트라넷 환경에서는 SharePoint 서버가 작업 그룹에 속하도록 구성한 다음 로컬 컴퓨터에 사용자 계정을 만들 수 있습니다.|  
 |사용자 지정|보고서 서버가 사용자 지정 인증을 사용하도록 구성하는 경우 보고서 서버에서 익명 액세스가 사용되고 인증 검사 없이 요청이 허용됩니다.<br /><br /> ClickOnce가 애플리케이션 파일을 검색한 후 보고서 작성기는 보고서 서버에 대한 별도의 연결을 엽니다. 보고서 작성기가 보고서 서버에 연결하려면 사용자가 자격 증명을 다시 입력해야 합니다. 보고서 작성기는 Internet Explorer 또는 ClickOnce에서 자격 증명을 수집하지 않습니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 서버 인증](../security/authentication-with-the-report-server.md)   
  [Reporting Services 및 파워 뷰 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [보고서 작성기를 시작 &#40;보고서 작성기&#41;](../report-builder/start-report-builder.md)   
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)   
  [Management Studio에서 보고서 서버에 연결](../tools/connect-to-a-report-server-in-management-studio.md)   
  [보고서 서버 시스템 속성](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   

@@ -31,15 +31,15 @@ f1_keywords:
 - "10244"
 - sql12.rtp.rptdesigner.seriesproperties.action.f1
 ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f68471e05ea1fd8e3b2680e81bd3e8512a2c79bf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 63c9b4e601faad155d6f843b6ccef2f1cac7698a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370655"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017985"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>동작 속성 대화 상자(보고서 작성기 및 SSRS)
   **동작** 대화 상자를 사용하여 링크를 지원하는 차트, 계기 및 지도 요소에 대한 하이퍼링크 옵션을 활성화할 수 있습니다. 사용자가 보고서를 클릭하여 URL로 이동하거나, 동일한 보고서 서버 또는 보고서 서버와 통합된 SharePoint 사이트에 있는 다른 보고서로 이동하거나, 동일한 보고서 내의 다른 위치로 이동할 수 있는 동작을 정의합니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "53370655"
  **Value**  
  드릴스루 보고서의 명명된 매개 변수에 전달할 값을 입력하거나 선택합니다. 식을 편집하려면 **식** 단추(*fx*)를 클릭합니다.  
   
- **생략**  
+ **Omit**  
  매개 변수가 실행되지 않도록 하려면 이를 선택합니다. 기본적으로 이 확인란은 선택 취소하여 비활성화되어 있습니다. 확인란을 선택하려면 **식** 단추(*fx*)를 클릭하고 **True** 을 입력하거나 식을 만듭니다. **식** 대화 상자에서 **확인** 을 클릭하면 확인란이 선택됩니다.  
   
  **책갈피로 이동**  
@@ -101,7 +101,7 @@ ms.locfileid: "53370655"
  **URL 선택**  
  항목의 URL을 입력합니다. 기본 모드로 구성된 보고서 서버에 게시된 항목의 경우 전체 경로나 상대 경로를 사용합니다. 예를 들어, http://*\<서버 이름 >*  /images/image1.jpg입니다. SharePoint 통합 모드로 구성 된 보고서 서버에 게시 하는 항목에 대 한 정규화 된 URL을 사용 하 여 (예를 들어, http://*\<SharePointservername > /\<사이트 >* 문서/이미지 / / image1.jpg)입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [차트&#40;보고서 작성기 및 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   

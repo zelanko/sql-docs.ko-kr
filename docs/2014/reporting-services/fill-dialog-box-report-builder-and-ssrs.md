@@ -18,14 +18,14 @@ f1_keywords:
 - "10124"
 ms.assetid: 93a91d02-d558-4a0e-8d17-3fdf21e208d3
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 329cad1c2d60b40d3f8e448a1ea92b8ee5bebfb9
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 08451c74c9227fa76eb78c695908d96066015361
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591437"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018225"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>채우기 대화 상자(보고서 작성기 및 SSRS)
   **채우기** 탭에서 데이터 영역이나 입력란 내의 단일 셀 또는 여러 셀의 배경에 대한 색 옵션을 지정할 수 있습니다.  

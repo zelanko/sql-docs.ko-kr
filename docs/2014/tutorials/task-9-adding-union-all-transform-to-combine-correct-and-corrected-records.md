@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 24ba466d-a7d3-49e7-9111-b348399c9e58
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8900b595bcb90eb7ca0712d2b6e7e3010c4a7b24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a3861e7de24e4fdf43ea11cf447b448c9d17b48
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180913"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022864"
 ---
 # <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>태스크 9: UNION ALL 변환을 추가하여 수정 및 수정된 레코드 결합
   이 작업에서는 UNION ALL 변환을 데이터 흐름에 추가합니다. UNION ALL 변환은 여러 개의 입력을 하나의 출력으로 결합합니다. 이 시나리오에서는 Correct 및 Corrected 레코드를 모두 하나의 스트림에 결합합니다.  
@@ -46,6 +43,6 @@ ms.locfileid: "48180913"
 7.  이렇게 **connector** 이름이 **수정**합니다. 두 조건을 했으므로 **올바름** 및 **수정 됨**, 하나의 조건이 이미 사용 되었으며 및, **입/출력 선택** 대화 상자가이 현재 표시 되지 않습니다. 커넥터가 겹치면 커넥터를 왼쪽 또는 오른쪽으로 끌어서 왼쪽과 오른쪽으로 각각 이동합니다.  
   
 ## <a name="next-step"></a>다음 단계  
- [태스크 10: 유사 항목 그룹화 변환을 추가하여 중복 항목 식별](../../2014/tutorials/task-10-adding-fuzzy-group-transform-to-identify-duplicates.md)  
+ [태스크 10: 유사 항목 그룹화 변환을 추가 하 여 중복 항목 식별](../../2014/tutorials/task-10-adding-fuzzy-group-transform-to-identify-duplicates.md)  
   
   

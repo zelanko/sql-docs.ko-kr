@@ -12,14 +12,14 @@ f1_keywords:
 - "10530"
 ms.assetid: 3c5eb1c5-d40a-424f-aa7c-43b112f42dec
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3553a338bf1d5a9263d1d4eadc5975784517a559
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 8d3006469ef9b9d84fcbbff1a05339930134dbc6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192094"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018175"
 ---
 # <a name="map-embedded-point-properties-dialog-box-marker"></a>지도 포함 점 속성 대화 상자, 표식
   **포함 점 속성** 대화 상자에서 **표식** 을 선택하여 다음 지도 요소의 표식 유형 및 표식 크기 옵션을 변경할 수 있습니다.  

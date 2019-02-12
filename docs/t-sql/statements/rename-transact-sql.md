@@ -2,8 +2,7 @@
 title: RENAME(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/21/2018
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
@@ -11,12 +10,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 616bf8096b8632eb357e65816bda21eabe0d6e4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8930c37da669565a6ea5d7e03444a3d173d2622c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821971"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019084"
 ---
 # <a name="rename-transact-sql"></a>RENAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -130,7 +129,7 @@ RENAME OBJECT mydb.dbo.Customer TO Customer1;
  테이블 이름을 바꿀 때 해당 테이블과 연결된 모든 개체 및 속성은 새 테이블 이름을 참조하도록 업데이트됩니다. 예를 들어, 테이블 정의, 인덱스, 제약 조건 및 권한이 업데이트됩니다. 뷰는 업데이트되지 않습니다.  
    
   
-### <a name="c-move-a-table-to-a-different-schema"></a>3. 다른 스키마로 테이블 이동  
+### <a name="c-move-a-table-to-a-different-schema"></a>C. 다른 스키마로 테이블 이동  
  **적용 대상:**  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
  개체를 다른 스키마로 이동하려는 경우 [ALTER SCHEMA&#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md)를 사용합니다. 예를 들어 다음 명령문은 테이블 항목을 제품 스키마에서 dbo 스키마로 이동시킵니다.  
@@ -139,7 +138,7 @@ RENAME OBJECT mydb.dbo.Customer TO Customer1;
 ALTER SCHEMA dbo TRANSFER OBJECT::product.item;  
 ```  
   
-### <a name="d-terminate-sessions-before-renaming-a-table"></a>4. 테이블 이름 변경 전에 세션 종료  
+### <a name="d-terminate-sessions-before-renaming-a-table"></a>D. 테이블 이름 변경 전에 세션 종료  
  **적용 대상:**  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
  테이블은 사용하는 동안에는 이름을 바꿀 수 없습니다. 테이블의 이름을 변경하려면 테이블에 대해 배타적 잠금이 필요합니다. 테이블이 사용 중인 경우 테이블을 사용 중인 세션을 종료해야 합니다. KILL 명령을 사용하여 세션을 종료할 수 있습니다. 세션이 종료될 때 커밋되지 않은 모든 작업은 롤백될 수 있으므로 KILL은 신중하게 사용합니다. SQL Data Warehouse의 세션 앞에 ‘SID’를 붙입니다. KILL 명령을 호출할 때 'SID'와 세션 수를 포함해야 합니다. 이 예제에서는 활성 또는 유휴 세션의 목록을 본 다음, ‘SID1234’ 세션을 종료합니다.  

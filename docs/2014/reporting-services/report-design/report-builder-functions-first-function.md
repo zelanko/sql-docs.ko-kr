@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 517ee5ae6690e2c2cc835c3f44862545e5ea94e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e3aad13a60182b4fe040d21ce132763e55f412f3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208673"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026074"
 ---
 # <a name="first-function-report-builder-and-ssrs"></a>First 함수(보고서 작성기 및 SSRS)
   지정된 식의 지정된 범위에서 첫 번째 값을 반환합니다.  
@@ -33,7 +33,7 @@ First(expression, scope)
   
 #### <a name="parameters"></a>매개 변수  
  *expression*  
- (`Variant` 나 `Binary`) 식의 예를 들어 집계를 수행할 `=Fields!FieldName.Value`합니다.  
+ (`Variant` 또는 `Binary`) 집계를 수행할 식의 예는 `=Fields!FieldName.Value`와 같습니다.  
   
  *범위*  
  (`String`) 선택 사항입니다. 집계 함수를 적용할 보고서 항목을 포함하는 데이터 세트, 그룹 또는 데이터 영역의 이름입니다. *scope* 를 지정하지 않은 경우 현재 범위가 사용됩니다.  
@@ -44,9 +44,9 @@ First(expression, scope)
 ## <a name="remarks"></a>Remarks  
  `First` 함수는 지정된 범위에 모든 정렬 및 필터링을 적용한 후 데이터 집합에서 첫 번째 값을 반환합니다.  
   
- `First` 현재 (기본) 범위 외 그룹 필터 식에서 함수를 사용할 수 없습니다.  
+ `First` 함수는 그룹 필터 식에서 현재(기본) 범위 외에는 사용할 수 없습니다.  
   
- 사용할 수도 있습니다 `First` 에서 첫 번째 값을 반환 하려면 페이지 머리글에는 `ReportItems` 페이지에서 첫 번째와 마지막 항목을 표시 하는 사전 스타일의 머리글을 만들기 위해 페이지에 대 한 컬렉션입니다.  
+ 페이지의 첫 번째와 마지막 항목을 표시하는 사전 스타일의 머리글을 만들기 위해 페이지 머리글에 `First`를 사용하여 페이지에 대한 `ReportItems` 컬렉션의 첫 번째 값을 반환할 수도 있습니다.  
   
  *scope* 의 값은 문자열 상수여야 하고 식일 수 없습니다. 외부 집계나 다른 집계를 지정하지 않는 집계의 경우 *scope* 는 현재 범위나 포함하는 범위를 참조해야 합니다. 집계의 집계의 경우 중첩 집계는 자식 범위를 지정할 수 있습니다.  
   
@@ -72,9 +72,9 @@ First(expression, scope)
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서에 사용 되는 식 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [합계, 집계 및 기본 제공 컬렉션의 식 범위 &#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

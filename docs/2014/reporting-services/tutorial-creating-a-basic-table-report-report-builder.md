@@ -1,5 +1,5 @@
 ---
-title: '자습서: 기본 테이블 보고서 만들기(보고서 작성기) | Microsoft Docs'
+title: '자습서: 기본 테이블 보고서 (보고서 작성기) 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 438ea8d61900a78c6522cf8897b960598d8d3976
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fa3c6f3f6d1a0870fca88871ad3effe642f547e6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189113"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020434"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>자습서: 기본 테이블 보고서 만들기(보고서 작성기)
   이 자습서에서는 예제 판매 데이터를 기반으로 기본 테이블 보고서를 만드는 방법을 배웁니다. 다음 그림에서는 만들려는 보고서를 보여 줍니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "48189113"
   
 7.  [보고서 내보내기](#Export)  
   
- 이 자습서에 소요되는 예상 시간: 20분  
+ 이 자습서에 소요되는 예상 시간: 20분.  
   
 ## <a name="requirements"></a>요구 사항  
  요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/report-builder-tutorials.md)을 참조하세요.  
@@ -71,7 +71,7 @@ ms.locfileid: "48189113"
   
 3.  오른쪽 창에서 **테이블 또는 행렬 마법사** 가 선택되어 있는지 확인합니다.  
   
-##  <a name="DataConnection"></a> 1a 합니다. 테이블 마법사에서 데이터 연결 지정  
+##  <a name="DataConnection"></a> 1a. 테이블 마법사에서 데이터 연결 지정  
  데이터 연결은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스와 같은 외부 데이터 원본에 연결하는 데 필요한 정보를 포함합니다. 일반적으로 데이터 원본 소유자로부터 사용할 자격 증명 유형과 연결 정보를 가져옵니다. 데이터 연결을 지정하기 위해 보고서 서버의 공유 데이터 원본을 사용하거나 이 보고서에만 사용되는 포함된 데이터 원본을 만들 수 있습니다.  
   
  이 자습서에서는 포함된 데이터 원본을 사용합니다. 공유 데이터 원본 사용 방법에 대한 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)을 참조하세요.  
@@ -108,7 +108,7 @@ ms.locfileid: "48189113"
   
 10. **다음**을 클릭합니다.  
   
-##  <a name="Query"></a> 1b 합니다. 테이블 마법사에서 쿼리 만들기  
+##  <a name="Query"></a> 1b. 테이블 마법사에서 쿼리 만들기  
  보고서에서는 미리 정의된 쿼리가 포함된 공유 데이터 세트를 사용하거나 해당 보고서에만 사용할 포함된 데이터 세트를 만들 수 있습니다. 이 자습서에서는 포함된 데이터 세트를 만듭니다.  
   
 > [!NOTE]  
@@ -164,7 +164,7 @@ ms.locfileid: "48189113"
   
 4.  **다음**을 클릭합니다.  
   
-##  <a name="Groups"></a> 1c 합니다. 테이블 마법사에서 데이터를 그룹으로 구성  
+##  <a name="Groups"></a> 1c. 테이블 마법사에서 데이터를 그룹으로 구성  
  그룹화할 필드를 선택할 때 세부 데이터와 집계 데이터가 표시되는 행과 열이 포함된 테이블을 디자인합니다.  
   
 #### <a name="to-organize-data-into-groups"></a>데이터를 그룹으로 구성하려면  
@@ -191,7 +191,7 @@ ms.locfileid: "48189113"
   
 6.  **다음**을 클릭합니다.  
   
-##  <a name="Subtotals"></a> 1d입니다. 테이블 마법사에서 부분합 및 합계 행 추가  
+##  <a name="Subtotals"></a> 1d. 테이블 마법사에서 부분합 및 합계 행 추가  
  그룹을 만든 후 필드에 대한 집계 값을 표시할 행을 추가하고 행 서식을 지정할 수 있습니다. 모든 데이터를 표시할지 또는 사용자가 그룹화된 데이터를 대화형으로 확장하거나 축소할 수 있도록 할지 여부를 선택할 수 있습니다.  
   
 #### <a name="to-add-subtotals-and-totals"></a>부분합 및 합계를 추가하려면  
@@ -216,7 +216,7 @@ ms.locfileid: "48189113"
   
 4.  **다음**을 클릭합니다.  
   
-##  <a name="Style"></a> 1e입니다. 테이블 마법사에서 스타일 선택  
+##  <a name="Style"></a> 1e. 테이블 마법사에서 스타일 선택  
  스타일은 글꼴 스타일, 색 집합 및 테두리 스타일을 지정합니다.  
   
 #### <a name="to-specify-a-table-style"></a>테이블 스타일을 지정하려면  

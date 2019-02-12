@@ -12,15 +12,15 @@ f1_keywords:
 - sql12.dqs.kb.kbmap.f1
 - sql12.dqs.kb.kbterms.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 627c3d071609b1b0053e7f8b79d20b9bff08c921
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1577fbdfd4133e419ab5dfe6520efd5e19893cb8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505585"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019674"
 ---
 # <a name="perform-knowledge-discovery"></a>기술 자료 검색 수행
   이 항목에서는 기술 자료 검색을 통해 기술 자료를 구축하는 방법에 대해 설명합니다. 검색 프로세스에서 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )는 컴퓨터 기반 프로세스를 통해 예제 데이터 원본의 데이터를 분석해서 얻은 정보를 기술 자료에 추가합니다. 이러한 정보는 기술 자료 검색 작업의 **도메인 값 관리** 단계 또는 도메인 관리 작업에서 수정하고 개선할 수 있습니다.  
@@ -200,7 +200,7 @@ ms.locfileid: "52505585"
   
     -   **검색** 페이지로 돌아가려면 **뒤로** 를 클릭합니다. 클릭 한 후 **닫기**, 도메인 관리 작업을 수행 하려면 클릭 해야 **기술 자료 검색** 에서 합니다 **기술 자료 열기** 화면에서 이동 합니다 **기술 자료 관리: 도메인 용어 관리** 화면에서 **완료**, 중 하나를 클릭 하 고 **예** 기술 자료를 게시 하 또는 **아니요** 기술 자료에 대 한 작업 내용을 저장 하 고 종료 합니다.  
   
-##  <a name="FollowUp"></a> 후속편: 기술 자료 검색을 수행한 후  
+##  <a name="FollowUp"></a> 후속 작업: 기술 자료 검색을 수행한 후  
  컴퓨터 기반 기술 자료 검색 프로세스에서 기술 자료에 정보를 추가한 후에는 기술 자료를 사용하여 프로젝트를 즉시 정리하거나 정리를 수행하기 전에 도메인 관리를 수행할 수 있습니다. 데이터 정리 또는 도메인 관리에 대한 자세한 내용은 [데이터 정리](../../2014/data-quality-services/data-cleansing.md) 또는 [도메인 관리](../../2014/data-quality-services/managing-a-domain.md)를 참조하세요.  
   
 ##  <a name="Meaning"></a> 올바름, 오류, 유효하지 않음 값의 의미  

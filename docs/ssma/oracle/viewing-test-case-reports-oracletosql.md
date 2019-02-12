@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 8da14323-9dd6-4019-bf79-3e8b972a9bc0
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: ce59e126ce24e30e091b4a5456d8b78c84355e88
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: craigg
+ms.openlocfilehash: 2d40fd986c68968680bcd39821d762101723b87b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641772"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026733"
 ---
 # <a name="viewing-test-case-reports-oracletosql"></a>테스트 사례 보고서 보기(OracleToSQL)
 테스트 사례 보고서에는 테스트 확인 결과 정보와 일반 테스트 보여 줍니다. 테스트 실패 시 확인 된 개체에 일치 하지 않는 데이터에 대 한 내용은 표시 됩니다.  

@@ -1,5 +1,5 @@
 ---
-title: '자습서: 보고서에 매개 변수 추가(보고서 작성기) | Microsoft Docs'
+title: '자습서: 매개 변수 보고서에 추가 (보고서 작성기) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0ec3f74d9237d917fd4b5d94e029cb5a15ea6e59
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cf5f7a4bee10b58f644d98fe03ada0a9e8d0faa3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190303"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018884"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>자습서: 보고서에 매개 변수 추가(보고서 작성기)
   보고서에 매개 변수를 추가하면 사용자가 데이터 원본이나 보고서에서 보고서 데이터를 필터링할 수 있습니다. 보고서 매개 변수는 데이터 세트 쿼리에 포함하는 각 쿼리 매개 변수에 대해 자동으로 만들어집니다. 매개 변수 데이터 형식에 따라 보고서 뷰 도구 모음에 매개 변수가 표시되는 방식이 결정됩니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "48190303"
 10. [보고서 저장](#Save)  
   
 > [!NOTE]  
->  이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고, 데이터 원본을 선택하고, 데이터 집합을 만드는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)를 참조하세요.  
+>  이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고 데이터 원본을 선택하고 데이터 집합을 만드는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 다음 자습서를 참조하십시오. [자습서: 기본 테이블 보고서 만들기 &#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)합니다.  
   
  이 자습서에 소요되는 예상 시간: 25분  
   
@@ -119,7 +119,7 @@ ms.locfileid: "48190303"
   
      이 쿼리에는 쿼리 매개 변수가 포함되어 있지 않습니다. 이 자습서의 뒷부분에서 쿼리 매개 변수를 추가합니다.  
   
-11. 쿼리 디자이너 도구 모음에서 **실행** (**!**)을 클릭합니다. 결과 집합은 네 상점의 각 하위 범주에 대 한 판매 항목의 수량을 표시 하는 데이터의 11 개 행을 표시 하 고 다음 열이 포함 됩니다: StoreID, Subcategory, Quantity 합니다.  
+11. 쿼리 디자이너 도구 모음에서 **실행** (**!**)을 클릭합니다. 결과 집합은 네 상점의 각 하위 범주에 대한 판매 항목의 수량을 표시하는 11개 데이터 행을 표시하고 StoreID, Subcategory, Quantity 열을 포함합니다.  
   
 12. **다음**을 클릭합니다.  
   
@@ -208,7 +208,7 @@ ms.locfileid: "48190303"
   
 7.  보고서 뷰어 도구 모음에서 Store ID 옆에 **200**을 입력한 다음 **보고서 보기**를 클릭합니다.  
   
-##  <a name="AddDataset"></a> 4a 합니다. 사용 가능한 값과 표시 이름을 제공하는 데이터 세트 추가  
+##  <a name="AddDataset"></a> 4a. 사용 가능한 값과 표시 이름을 제공하는 데이터 세트 추가  
  선택할 값에 대한 드롭다운 목록을 만들어 사용자가 매개 변수에 대한 유효한 값만 입력하도록 할 수 있습니다. 지정한 목록이나 데이터 세트의 값을 사용할 수 있습니다. 쿼리에 매개 변수에 대한 참조가 포함되지 않은 데이터 집합에서 사용 가능한 값을 제공해야 합니다.  
   
 #### <a name="to-create-a-dataset-for-valid-values-for-a-parameter"></a>매개 변수에 대한 유효한 값의 데이터 세트를 만들려면  
@@ -238,7 +238,7 @@ ms.locfileid: "48190303"
   
      보고서 데이터 창의 **Stores** 데이터 세트 노드 아래에 StoreID 및 StoreName 필드가 표시됩니다.  
   
-##  <a name="AvailableValues"></a> 4b 합니다. 드롭다운 값 목록을 만드는 데 사용 가능한 값 지정  
+##  <a name="AvailableValues"></a> 4b. 드롭다운 값 목록을 만드는 데 사용 가능한 값 지정  
  사용 가능한 값을 제공하는 데이터 집합을 만든 후 보고서 속성을 변경하여 보고서 뷰어 도구 모음의 유효한 값의 드롭다운 목록을 채우는 데 사용할 데이터 집합과 필드를 지정해야 합니다.  
   
 #### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>데이터 세트의 매개 변수에 사용 가능한 값을 제공하려면  
@@ -269,7 +269,7 @@ ms.locfileid: "48190303"
   
  보고서에는 상점 식별자 **200**에 대한 Accessories, Camcorders 및 Digital SLR Cameras의 판매 수량이 표시됩니다.  
   
-##  <a name="DefaultValues"></a> 4 코어입니다. 보고서가 자동으로 실행되도록 기본값 지정  
+##  <a name="DefaultValues"></a> 4c. 보고서가 자동으로 실행되도록 기본값 지정  
  보고서가 자동으로 실행되도록 각 매개 변수의 기본값을 지정할 수 있습니다.  
   
 #### <a name="to-specify-a-default-value-from-a-dataset"></a>데이터 세트에서 기본값을 지정하려면  
@@ -306,7 +306,7 @@ ms.locfileid: "48190303"
   
  에 대 한 *@StoreID*, 보고서 뷰어에 "Contoso Catalog Store" 값을 표시 합니다. 이 상점 식별자에 대 한 표시 이름 **200**합니다. 보고서에는 상점 식별자 **200**에 대한 Accessories, Camcorders 및 Digital SLR Cameras의 판매 수량이 표시됩니다.  
   
-##  <a name="NameValue"></a> 4d 합니다. 이름/값 쌍이 있는 데이터 집합에서 값 조회  
+##  <a name="NameValue"></a> 4d. 이름/값 쌍이 있는 데이터 집합에서 값 조회  
  데이터 세트에는 식별자 및 해당 이름 필드가 포함되어 있을 수 있습니다. 식별자만 있는 경우 이름/값 쌍이 포함된 만든 데이터 세트에서 해당 이름을 조회할 수 있습니다.  
   
 #### <a name="to-look-up-a-value-from-a-dataset"></a>데이터 세트에서 값을 조회하려면  
@@ -327,7 +327,7 @@ ms.locfileid: "48190303"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     상점 열 머리글에 복잡 한 식의 표시 텍스트를 포함 합니다.  **< \<Expr >>** 합니다.  
+     상점 열 머리글에 복잡한 식의 표시 텍스트인 **<\<Expr>>**.  
   
 8.  보고서를 미리 봅니다.  
   
@@ -422,7 +422,7 @@ ms.locfileid: "48190303"
   
 14. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-15. 방금 만든 후 다음을 입력 하는 식 앞에 있는 텍스트 상자를 클릭 합니다: 선택한 매개 변수 값:입니다.  
+15. 방금 만든 식 앞의 입력란을 클릭한 다음 Parameter Values Selected:를 입력합니다.  
   
 16. 보고서를 미리 봅니다.  
   
@@ -436,7 +436,7 @@ ms.locfileid: "48190303"
   
 19. 드롭다운 목록에서 **모두 선택** 을 클릭하여 목록을 지우고 "Contoso Catalog Store"와 "Contoso Asia Online Store"를 차례로 클릭한 다음 **보고서 보기**를 클릭합니다.  
   
-##  <a name="Boolean"></a> 8입니다. 조건부 표시에 대한 부울 매개 변수 추가  
+##  <a name="Boolean"></a> 8. 조건부 표시에 대한 부울 매개 변수 추가  
   
 #### <a name="to-add-a-boolean-parameter"></a>부울 매개 변수를 추가하려면  
   
@@ -482,7 +482,7 @@ ms.locfileid: "48190303"
   
  페이지 바닥글의 입력란에 선택한 모든 상점 이름이 표시됩니다.  
   
-##  <a name="Title"></a> 9입니다. 보고서 제목 추가  
+##  <a name="Title"></a> 9. 보고서 제목 추가  
   
 #### <a name="to-add-a-report-title"></a>보고서 제목을 추가하려면  
   
@@ -490,7 +490,7 @@ ms.locfileid: "48190303"
   
 2.  Parameterized Product Sales를 입력한 다음 입력란 바깥쪽을 클릭합니다.  
   
-##  <a name="Save"></a> 10입니다. 보고서 저장  
+##  <a name="Save"></a> 10. 보고서 저장  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>보고서를 보고서 서버에 저장하려면  
   

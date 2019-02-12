@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 39df58b1-86e0-438e-a22b-280feb3ac033
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3c26157aac5eae0e5e01213d4d52aff089611d33
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 20fa6a79f2ee56ad39af3da31af7d3a3a5f63b34
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085405"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019594"
 ---
 # <a name="installationid-property-wmi-msreportserverconfigurationsetting"></a>InstallationID 속성(WMI MSReportServer_ConfigurationSetting)
   이 속성은 특정 보고서 서버 인스턴스의 고유 식별자를 반환합니다.  

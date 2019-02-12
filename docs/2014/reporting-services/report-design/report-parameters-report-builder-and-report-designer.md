@@ -17,13 +17,13 @@ f1_keywords:
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3baf73ba7f2c9e5d4d206234b1c9b874fbb15c59
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: bb45eb7274763446358a0336a9b2a415bc4543b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366265"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023504"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>보고서 매개 변수(보고서 작성기 및 보고서 디자이너)
   이 항목에서는 SSRS 보고서 매개 변수의 일반적인 용도, 설정할 수 있는 속성 및 매개 변수에 대한 기타 정보를 설명합니다. 보고서 매개 변수를 사용하면 보고서 데이터를 제어하고, 관련된 보고서를 서로 연결하고, 다양하게 보고서를 표현할 수 있습니다.  
@@ -227,7 +227,7 @@ ms.locfileid: "53366265"
 ##  <a name="bkmk_Related_Topics"></a> 관련 내용  
  [SSRS 보고서 매개 변수(퀴즈) 구성(영문)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
   
- [자습서: 보고서 매개 변수를 추가 &#40;보고서 작성기&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [자습서: 보고서에 매개 변수 추가&#40;보고서 작성기&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
  [보고 서비스에서 InvalidReportParameterException의 발생을 버스팅](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
   

@@ -12,21 +12,21 @@ f1_keywords:
 - "10519"
 ms.assetid: 4560a7e4-e19b-4a6e-8ef4-e963497e01ae
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ba603b2b05108f6b7cd0b4cb7b6a4d65904af678
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: f82b38efac61ca6cdddb10c13e584c0c8f79a346
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097293"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018105"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>지도 위도선 속성 대화 상자, 레이블
   사용 된 **MapParallel 속성** 지도 뷰포트의 가로 격자 눈금에 대 한 레이블 옵션을 변경 하려면 대화 상자. 위도선은 뷰포트에 지정된 좌표계에 따라 다음 값을 나타냅니다.  
   
 -   **평면입니다.** X 좌표입니다.  
   
--   **지리적 합니다.** 현재 도법의 위도입니다.  
+-   **Geographic.** 현재 도법의 위도입니다.  
   
  옵션의 값을 설정하는 식을 편집하려면 **식** 단추(*fx*)를 클릭합니다.  
   
@@ -52,6 +52,6 @@ ms.locfileid: "48097293"
   
 ## <a name="see-also"></a>관련 항목  
  [지도&#40;보고서 작성기 및 SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [지도 범례를 변경, 색 눈금 및 관련 규칙 &#40;보고서 작성기 및 SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [지도 범례, 색 눈금 및 관련 규칙 변경&#40;보고서 작성기 및 SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
   

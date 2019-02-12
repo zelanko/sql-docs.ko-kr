@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 23898fcc3ae33fa24e0cac035cca4ed177a3e8e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2cf5c9b37fbf6e5d213d35ec9837943e2dfb95ef
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188683"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020265"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Reporting Services 오류의 원인 및 해결 방법
   이 항목에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 관련한 몇 가지 오류의 원인 및 해결 방법 정보가 포함되어 있습니다. 이 섹션의 오류 메시지 항목에서는 오류 메시지, 가능한 원인 및 문제 해결을 위해 수행할 수 있는 동작에 대해 설명합니다.  
@@ -35,10 +35,10 @@ ms.locfileid: "48188683"
 |[rsProcessingError - Reporting Services 오류](rsprocessingerror-reporting-services-error.md)|보고서를 처리하는 동안 오류가 발생했습니다.|  
 |[rsServerConfigurationError - Reporting Services 오류](rsserverconfigurationerror-reporting-services-error.md)|보고서 서버에서 구성 오류가 발생했습니다.|  
 |[rrRenderingError - Reporting Services 오류](rrrenderingerror-reporting-services-error.md)|보고서를 렌더링하는 동안 오류가 발생했습니다. (rrRenderingError) %1.|  
-|[보고서 서버 Windows 서비스 &#40;MSSQLServer&#41; 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|Report Server Windows service (MSSQLSERVER)에서 보고서 서버 데이터베이스에 연결할 수 없습니다.|  
+|[보고서 서버 Windows 서비스&#40;MSSQLServer&#41; 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|Report Server Windows service (MSSQLSERVER)에서 보고서 서버 데이터베이스에 연결할 수 없습니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services 로그 파일 및 소스](../report-server/reporting-services-log-files-and-sources.md)   
- [오류 및 이벤트 참조 &#40;Reporting Services&#41;](errors-and-events-reference-reporting-services.md)  
+ [오류 및 이벤트 참조&#40;Reporting Services&#41;](errors-and-events-reference-reporting-services.md)  
   
   

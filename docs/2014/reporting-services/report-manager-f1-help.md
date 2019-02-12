@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e0137273-85b8-45f0-83e5-38a50481768f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7a3e1d824567358d54afef75c22d78613b883b5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ca003e937f5e9547fa1bda0243967a8ff1d8331a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133293"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019324"
 ---
 # <a name="report-manager-f1-help"></a>보고서 관리자 F1 도움말
   다음 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 관리자에 대한 페이지 수준 도움말을 제공합니다. 애플리케이션의 각 페이지에 대해 항목이 하나씩 있습니다. 일부 페이지에 대한 설명은 제공되지 않을 수 있습니다. 보안 설정에 따라 액세스할 수 있는 페이지가 다릅니다. 보고서 관리자에서 이 항목에 액세스하려면 기본 도구 모음에서 **도움말** 을 클릭합니다.  
@@ -104,9 +104,9 @@ ms.locfileid: "48133293"
  보고서 관리자 및 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에 대한 자세한 내용은 MSDN의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서를 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 서버 콘텐츠 관리 &#40;SSRS 기본 모드&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [기능 참조 (Reporting Services)](feature-reference-reporting-services.md)   
- [보고서 서버 콘텐츠 관리 &#40;SSRS 기본 모드&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [보고서 관리자](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Reporting Services 구성 요소 개요](tools/reporting-services-tools.md)  
   

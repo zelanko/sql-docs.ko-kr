@@ -3,7 +3,6 @@ title: xml_schema_namespace(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2017
 ms.prod: sql
-ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - schemas [SQL Server], XML
 - schema collections [SQL Server], reconstructing schemas
 ms.assetid: ee9873d8-dd3a-4bff-a10c-68bbadbdf1a6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 02139927b133d65816881b4ea9f2f2c018511cb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d01697fe773de96c80dc9ea79e4e0c9ac4f253d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763191"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024014"
 ---
 # <a name="xmlschemanamespace"></a>xml_schema_namespace
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ xml_schema_namespace( Relational_schema , XML_schema_collection_name , [ Namespa
  *XML_schema_collection_name*  
  다시 만들 XML 스키마 컬렉션의 이름입니다. *XML_schema_collection_name*은 **sysname**입니다.  
   
- *네임스페이스*  
+ *Namespace*  
  다시 만들 XML 스키마의 네임스페이스 URI입니다. 1,000자로 제한됩니다. 네임스페이스 URI를 제공하지 않으면 전체 XML 스키마 컬렉션이 다시 생성됩니다. *Namespace*는 **nvarchar(4000)** 입니다.  
   
 ## <a name="return-types"></a>반환 형식  

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: b494fd52-22f0-46af-be35-a1de8a138d95
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7fa5535d9ea44390312d9db535bbea7a7a5a7d5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 50e89bfa0ec9f8d4d792ed655eef40d9f4d47dcb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062723"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023014"
 ---
 # <a name="msreportserverinstance-properties"></a>MSReportServer_Instance 속성
   MSReportServer_Instance 클래스는 클라이언트에서 설치된 보고서 서버에 연결하는 데 필요한 기본 정보를 제공합니다.  
@@ -33,8 +33,8 @@ ms.locfileid: "48062723"
   
 |||  
 |-|-|  
-|[EditionID 속성 &#40;WMI MSReportServer_Instance&#41;](msreportserver-instance-properties-editionid.md)|보고서 서버의 버전을 반환합니다.|  
-|[EditionName 속성 &#40;WMI MSReportServer_Instance&#41;](msreportserver-instance-properties-editionname.md)|사람이 읽을 수 있는 보고서 서버 버전의 이름을 반환합니다.|  
+|[EditionID 속성&#40;WMI MSReportServer_Instance&#41;](msreportserver-instance-properties-editionid.md)|보고서 서버의 버전을 반환합니다.|  
+|[EditionName 속성&#40;WMI MSReportServer_Instance&#41;](msreportserver-instance-properties-editionname.md)|사람이 읽을 수 있는 보고서 서버 버전의 이름을 반환합니다.|  
 |[InstanceID](msreportserver-instance-properties-instanceid.md)|이 개체는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.|  
 |[InstanceName](msreportserver-instance-properties-instancename.md)|특정 컴퓨터의 보고서 서버 인스턴스 이름을 반환합니다. 읽기 전용입니다.|  
 |[IsSharePointIntegrated](msreportserver-instance-properties-issharepointintegrated.md)|보고서 서버가 SharePoint 통합 모드로 구성되어 있는지 여부를 나타냅니다.|  

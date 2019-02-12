@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 3319ced0-4b86-42af-b18d-da41a625113c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e9b964ba4be7587836da9e8852261a43f1e8f43c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fc92d5e8bba2200bb1a88739cd83c12b2f0bdd12
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181793"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025554"
 ---
-# <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>새 역할 할당: 역할 할당 편집 페이지(보고서 관리자)
+# <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>새 역할 할당: 역할 할당 편집 페이지 (보고서 관리자)
   새 역할 할당 또는 역할 할당 편집 페이지를 사용하여 보고서 서버 항목 및 작업에 대한 권한을 부여할 수 있습니다. 보고서 서버에 액세스해야 하는 각 사용자에게는 액세스의 수준을 정의하는 역할 할당이 필요합니다. 루트 노드 또는 특정 보고서, 모델, 폴더, 리소스 또는 공유 데이터 원본에 대해 역할 할당을 만들 수 있습니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보안은 항목에 적용하는 역할 할당을 통해 적용됩니다. 역할 할당에 따라 역할 정의가 그룹이나 사용자에 대응되며 각 역할 정의는 그룹이나 사용자가 특정 항목과 관련하여 수행할 수 있는 태스크를 식별합니다.  
   
  항목 수준 역할 할당은 광범위한 영향을 줄 수 있습니다. 이러한 할당은 단일 보고서나 폴더에 연결될 수도 있지만 폴더 계층 구조의 상위 수준에서 정의되어 트리의 하위 항목 및 폴더로 상속될 수도 있습니다. 자세한 내용은 [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](security/grant-user-access-to-a-report-server.md)를 참조하세요.  
@@ -47,7 +47,7 @@ ms.locfileid: "48181793"
 >  이 입력란은 새 역할 할당 페이지에서만 사용할 수 있습니다.  
   
  **역할**  
- 항목의 보안을 정의하는 데 사용할 수 있는 보고서 서버에 정의된 모든 역할을 표시합니다. 보고서 또는 폴더에 대한 역할 할당을 만들거나 변경할 경우에는 하나 이상의 역할을 선택하면서 태스크 조합에 사용자가 수행할 수 있는 동작이 나타나도록 합니다. 각 역할이 지 원하는 태스크 집합을 보려면 사용 하 여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]합니다. 보고서 관리자에서 역할을 확인, 작성, 수정 또는 삭제할 수 없습니다. 자세한 내용은 [만들기, 삭제 또는 역할을 수정 &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)합니다.  
+ 항목의 보안을 정의하는 데 사용할 수 있는 보고서 서버에 정의된 모든 역할을 표시합니다. 보고서 또는 폴더에 대한 역할 할당을 만들거나 변경할 경우에는 하나 이상의 역할을 선택하면서 태스크 조합에 사용자가 수행할 수 있는 동작이 나타나도록 합니다. 각 역할에서 지원하는 태스크 집합을 보려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]를 사용합니다. 보고서 관리자에서 역할을 확인, 작성, 수정 또는 삭제할 수 없습니다. 자세한 내용은 [만들기, 삭제 또는 역할을 수정 &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)합니다.  
   
  **설명**  
  역할에 대한 추가 정보를 표시합니다. **브라우저** 또는 **내용 관리자**와 같은 미리 정의된 역할의 설명에는 각 역할이 지원하는 태스크가 요약되어 있습니다.  
@@ -61,9 +61,9 @@ ms.locfileid: "48181793"
 ## <a name="see-also"></a>관련 항목  
  [역할 만들기, 삭제 또는 수정&#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)   
  [기본 모드 보고서 서버에 대한 사용 권한 부여](security/granting-permissions-on-a-native-mode-report-server.md)   
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)   
  [역할 할당](security/role-assignments.md)   
- [사용자 액세스 권한 부여는 보고서 서버에 &#40;보고서 관리자&#41;](security/grant-user-access-to-a-report-server.md)  
+ [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](security/grant-user-access-to-a-report-server.md)  
   
   

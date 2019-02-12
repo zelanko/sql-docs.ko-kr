@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 94095fd1879b4f4343a7a65dfd9d018ca355084f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 75136807b3bf87d143ef037dcdf4c865f73a1f48
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154223"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026185"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가(보고서 작성기 및 SSRS)
   보고서에서 필터는 보고서에 사용된 데이터를 제한하기 위해 만든 데이터 세트, 데이터 영역 또는 데이터 영역 그룹의 일부입니다. 공유 데이터 세트를 사용하는 경우와 같이 데이터 세트 쿼리를 변경할 수 없는 경우 필터를 사용하여 보고서 데이터를 제어할 수 있습니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "48154223"
 |--------------|------------|  
 |**Equal, Like, NotEqual, GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual**|식을 하나의 값과 비교합니다.|  
 |**TopN, BottomN**|식을 하나의 `Integer` 값과 비교합니다.|  
-|**TopPercent, BottomPercent**|하나에 해당 식을 `Integer` 또는 `Float` 값입니다.|  
+|**TopPercent, BottomPercent**|식을 하나의 `Integer` 또는 `Float` 값과 비교합니다.|  
 |**사이**|식이 두 값 사이에 있는지(해당 값 포함) 여부를 테스트합니다.|  
 |**입력**|식이 일련의 값에 포함되어 있는지 여부를 테스트합니다.|  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48154223"
  이 값에는 사용자가 필터링할 값을 대화형으로 선택할 수 있게 해 주는 매개 변수 참조도 포함될 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서에 사용 되는 식 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](report-parameters-report-builder-and-report-designer.md)  
   
   

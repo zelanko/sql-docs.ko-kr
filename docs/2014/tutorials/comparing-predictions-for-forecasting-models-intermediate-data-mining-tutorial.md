@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ead8a1fe-60d8-4017-8fb8-6fe32168e46d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eb208d3b19e7ca2d49198a2f57edaf48214bb78f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 26cc445d3bad5c628628353d5c0c84ffa4755e97
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395376"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025118"
 ---
 # <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>예측 모델에 대한 예측 비교(중급 데이터 마이닝 자습서)
   이 자습서의 이전 단계에서는 다음과 같은 여러 시계열 모델을 만들었습니다.  
@@ -47,10 +46,10 @@ ms.locfileid: "52395376"
 |**M200 Pacific**|업데이트된 실제 판매 데이터|데이터 추가 전의 예측|확장된 예측|  
 |----------------------|-----------------------------|------------------------------------|-------------------------|  
 |7-25-2008|**65**|32|**65**|  
-|2008 년 8 월 25-|**54**|37|**54**|  
-|2008 년 9 월 25-|**61**|32|**61**|  
+|8-25-2008|**54**|37|**54**|  
+|9-25-2008|**61**|32|**61**|  
 |10-25-2008|데이터 없음|36|32|  
-|2008 년 11 월 25-|데이터 없음|31|41|  
+|11-25-2008|데이터 없음|31|41|  
 |12-25-2008|데이터 없음|34|32|  
   
  확장 데이터를 사용한 예측(여기에서 굵게 표시됨)이 실제 데이터 요소를 그대로 반복하고 있음을 알 수 있습니다. 반복은 의도된 것입니다. 사용할 실제 데이터 요소가 남아 있는 한, 예측 쿼리는 실제 값을 반환하며 새로운 실제 데이터 요소를 모두 사용한 후에만 새 예측 값을 출력합니다.  

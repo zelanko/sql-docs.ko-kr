@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d8afa405-1012-4349-a72d-e10d94f8453d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 16c0f4451b66b0aa0c004476a4dc332acf973a1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 97d59933a1df11123b153e11f7ae75d926829dcb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116013"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023444"
 ---
 # <a name="developer39s-guide-reporting-services"></a>개발자&#39;가이드 (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]는 응용 프로그램에서 활용할 수 있는 프로그래밍 인터페이스를 다수 제공합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 기존 기능을 사용하여 웹 사이트와 Windows 응용 프로그램에 사용자 지정 보고 및 관리 도구를 작성할 수 있으며 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 플랫폼을 확장할 수도 있습니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "48116013"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] WMI 공급자를 사용하여 보고서 서버 배포를 관리하는 방법을 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Reporting Services&#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [보고서 정의 언어&#40;SSRS&#41;](reports/report-definition-language-ssrs.md)   
  [기술 참조&#40;SSRS&#41;](technical-reference-ssrs.md)   
  [안전한 개발&#40;Reporting Services&#41;](extensions/secure-development/secure-development-reporting-services.md)  

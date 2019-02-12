@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 7ad59850-8135-4c4d-95e9-6d705b6d77a8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3f3756fb68ba46b1ac7b34237753dbd57d0b6775
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bdc8abebbf713372caf31429082f9d3fda4cfc42
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146253"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018245"
 ---
 # <a name="general-properties-page-models-report-manager"></a>일반 속성 페이지, 모델(보고서 관리자)
   보고서 모델의 일반 속성 페이지를 사용하여 모델 정의 파일(.smdl)의 이름을 바꾸거나 파일을 삭제, 이동 또는 대체할 수 있습니다. 모델을 만들거나 수정한 사람 및 변경된 시간에 대한 자세한 내용은 페이지 맨 위에 표시됩니다.  
@@ -38,13 +38,13 @@ ms.locfileid: "48146253"
  **이름**  
  모델의 이름을 지정합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 이름 지정 시에는 다음 문자를 사용하지 마십시오.  
   
- ; ? : \@ & = +, $ / * \< > | " /  
+ ; ? : \@ & = + , $ / * \< > | " /  
   
  **설명**  
  모델에 대한 설명을 입력합니다. 이 설명은 해당 모델 액세스 권한이 있는 사용자의 내용 페이지에 표시됩니다.  
   
  **목록 뷰에서 숨기기**  
- 폴더의 뷰 모드가 목록 뷰인 경우 항목을 숨기려면 이 확인란을 선택합니다. 목록 뷰는 보고서 관리자에서 지원되는 폴더 내용을 보기 위한 모드입니다. 이 옵션을 설정할 수 있습니다 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 이 항목을 보고서 관리자에서가 표시 하는 방법을 정의 합니다. 보기 모드에서 보고서 관리자에 대 한 자세한 내용은 참조 하세요. [콘텐츠 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/contents-page-report-manager.md)합니다.  
+ 폴더의 뷰 모드가 목록 뷰인 경우 항목을 숨기려면 이 확인란을 선택합니다. 목록 뷰는 보고서 관리자에서 지원되는 폴더 내용을 보기 위한 모드입니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 에서 이 옵션을 설정하여 해당 항목이 보고서 관리자에 표시되는 방법을 정의할 수 있습니다. 보기 모드에서 보고서 관리자에 대 한 자세한 내용은 참조 하세요. [콘텐츠 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/contents-page-report-manager.md)합니다.  
   
  **적용**  
  클릭하여 변경 내용을 저장합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "48146253"
   
  사용자가 여는 복사본은 보고서 서버에 초기에 게시된 원래 모델 정의와 동일합니다. 모델이 게시된 후 모델에 설정된 모든 속성(예: 데이터 원본 속성)은 여는 파일에 반영되지 않습니다.  
   
- 모델 정의를 수정하고 공유 폴더에 새 파일로 저장한 다음 보고서 서버에 새 항목으로 업로드할 수 있습니다. 열려 있는 동안에 모델 정의를 확인 하는 수정 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (또는 다른 응용 프로그램) 보고서 서버에 직접 저장 되지 않습니다. 수정한 모델을 보고서 서버에 게시하려면 해당 파일을 업로드해야 합니다.  
+ 모델 정의를 수정하고 공유 폴더에 새 파일로 저장한 다음 보고서 서버에 새 항목으로 업로드할 수 있습니다. 모델 정의가 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 또는 다른 애플리케이션에서 열려 있는 동안 수정한 내용은 보고서 서버에 직접 저장되지 않습니다. 수정한 모델을 보고서 서버에 게시하려면 해당 파일을 업로드해야 합니다.  
   
  모델 디자이너에서 보고서 모델을 열려면 모델을 .smdl 파일로 저장한 다음 이 .smdl 파일을 모델 디자이너의 프로젝트에 추가해야 합니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48146253"
  클릭하여 현재 버전을 대체하는 기본 모델을 다시 생성합니다. 이 옵션은 모델이 생성된 후에 나타납니다. 생성된 모델은 공유 데이터 원본을 기반으로 합니다. 모델을 사용자 지정하려면 먼저 생성해야 합니다. 모델을 생성한 후에는 **편집** 을 클릭하여 모델 정의를 열고 파일 시스템에 이를 저장한 다음 모델 디자이너의 프로젝트에 추가할 수 있습니다. 모델을 구체화한 후에는 보고서 서버에 새 항목으로 업로드하거나 이 페이지의 **업데이트** 를 클릭하여 모델 디자이너에서 수정한 버전으로 생성된 버전을 대체할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [공유 데이터 원본을 보고서 또는 모델을 바인딩할 &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
+ [보고서 또는 모델을 공유 데이터 원본에 바인딩&#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [Management Studio의 보고서 서버 F1 도움말](tools/report-server-in-management-studio-f1-help.md)  
   
   

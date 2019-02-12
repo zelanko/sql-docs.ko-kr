@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Select Color dialog box
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 42dc3c37a93bf3240b4332915488ad293b68ec66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 59f66df0022d81c3aa12015b265ccd8b7d735190
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184663"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031454"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>색 선택 대화 상자(보고서 작성기 및 SSRS)
   **색 선택** 대화 상자를 사용하여 데이터 영역이나 입력란 내의 단일 셀 또는 여러 셀의 배경에 대한 색 옵션을 지정하거나 차트의 색 옵션을 지정할 수 있습니다.  
@@ -60,10 +60,10 @@ ms.locfileid: "48184663"
  **녹색**  
  RGB 색의 녹색 부분을 나타내는 10진수 값입니다. 스핀 상자를 사용하여 값을 변경하거나 0에서 255 사이의 값을 입력합니다.  
   
- **파랑**  
+ **Blue**  
  RGB 색의 파랑 부분을 나타내는 10진수 값입니다. 스핀 상자를 사용하여 값을 변경하거나 0에서 255 사이의 값을 입력합니다.  
   
- **알파**  
+ **Alpha**  
  색의 알파, 즉 투명도 부분을 나타내는 10진수 값입니다. 이 값이 활성화된 경우 슬라이더 스위치를 사용하여 투명도를 원하는 정도로 조정할 수 있습니다.  
   
  **색상**  
@@ -80,6 +80,6 @@ ms.locfileid: "48184663"
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 항목 서식 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [텍스트 및 자리 표시자 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [텍스트 및 자리 표시자 서식 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

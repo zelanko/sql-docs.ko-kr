@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: b54ec058-b910-450b-a634-6092a4f6d840
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5299d9deccbec3d9ba842961d408f72767fa5b04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 571e95646caa58a94e92768e1a5fbcc8ed7656b3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080913"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020544"
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>데이터 원본 자격 증명 입력 대화 상자(보고서 작성기)
   **데이터 원본 자격 증명 입력** 대화 상자를 사용하여 데이터 원본에서 데이터를 가져오기 위한 자격 증명을 제공할 수 있습니다.  
@@ -31,9 +31,9 @@ ms.locfileid: "48080913"
  데이터 원본 로그온에 사용할 암호를 입력합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 연결, 데이터 원본 및 보고서 작성기에서 연결 문자열](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [데이터 원본 속성 대화 상자, 일반&#40;보고서 작성기&#41;](../data-source-properties-dialog-box-general-report-builder.md)   
  [보고서 작성기에 자격 증명 지정](../specify-credentials-in-report-builder.md)   
- [대화 상자, 창 및 마법사에 대 한 보고서 작성기 도움말](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

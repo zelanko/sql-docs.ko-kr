@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2330060b0a659715f8a8b80c3d2e1fbe24e93d04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1b1bed586c6ec2878fd2a63f7d9ca8bce46bab53
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050908"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017703"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>보고서 항목 렌더링(보고서 작성기 및 SSRS)
   보고서 항목의 숫자, 크기 및 위치는 렌더러에서 보고서 본문에 페이지를 매기는 방식에 영향을 줍니다. 아래에는 다양한 보고서 항목이 렌더링되는 방식에 대해 설명되어 있습니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "48050908"
   
 -   반복되는 열 머리글 및 행 머리글  
   
-     머리글이 바닥글보다 우선 순위가 높습니다. 반복되는 내부 그룹이 외부 그룹보다 우선 순위가 높습니다. 항목 위치를 `RepeatWith` 대상 데이터 영역에 더 가까운 속성이 설정 되어 데이터 영역에서 멀리 떨어져 있는 항목 보다 우선 순위가 있습니다.  
+     머리글이 바닥글보다 우선 순위가 높습니다. 반복되는 내부 그룹이 외부 그룹보다 우선 순위가 높습니다. `RepeatWith` 속성이 설정되어 있고 대상 데이터 영역에 보다 가까이 있는 항목이 데이터 영역에서 멀리 떨어져 있는 항목보다 우선 순위가 높습니다.  
   
 -   입력란 또는 사각형으로 설정 하는 명시적인 KeepTogether 속성이 등의 작은 보고서 항목 `true`합니다.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48050908"
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
- [여러 보고서 렌더링 확장 프로그램의 대화형 기능 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [목록&#40;보고서 작성기 및 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

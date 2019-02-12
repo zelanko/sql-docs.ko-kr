@@ -11,14 +11,14 @@ f1_keywords:
 - "10080"
 ms.assetid: eb3b5d01-7b82-4808-a58b-9e096742f8c6
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 496b94444e79666c0ce57904f5ef6d7da81ed26f
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c42d509f3ef228b08555c26f5fdfc6ddd62a0c8d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905083"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022134"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>보고서 속성 대화 상자, 페이지 설정(보고서 작성기)
   선택 **페이지 설정** 에 **보고서 속성**, 대화 상자는 전체 보고서 페이지 옵션을 설정 합니다.  
@@ -39,10 +39,10 @@ ms.locfileid: "48905083"
  **용지 크기**  
  목록에서 크기를 선택하면 너비 및 높이 컨트롤에 자동으로 치수가 입력됩니다. 또는 **사용자 지정 크기** 를 선택한 다음 사용하려는 크기에 맞게 너비와 높이 컨트롤을 변경합니다.  
   
- **Width**  
+ **너비**  
  **용지 종류** 목록에서 선택한 용지 크기의 너비를 표시합니다.  
   
- **Height**  
+ **높이**  
  **용지 종류** 목록에서 선택한 용지 크기의 높이를 표시합니다.  
   
  **Top**  
@@ -51,10 +51,10 @@ ms.locfileid: "48905083"
  **아래쪽**  
  보고서의 아래쪽과 보고서 마지막 줄의 아래쪽 간 거리를 설정합니다.  
   
- **왼쪽**  
+ **Left**  
  보고서의 왼쪽 가장자리와 보고서 행의 왼쪽 가장자리 간 거리를 설정합니다.  
   
- **오른쪽**  
+ **Right**  
  보고서의 오른쪽 가장자리와 보고서 행의 오른쪽 가장자리 간 거리를 설정합니다.  
   
 ## <a name="see-also"></a>관련 항목  

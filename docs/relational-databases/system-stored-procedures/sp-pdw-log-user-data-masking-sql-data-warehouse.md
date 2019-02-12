@@ -2,8 +2,7 @@
 title: sp_pdw_log_user_data_masking (SQL Data Warehouse) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 23d7846bd72329a62579765679687204a8e14ec5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0d9a6ec090e799b4b6f0aad7e7335d1e36999dd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630241"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022985"
 ---
 # <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47630241"
 > [!IMPORTANT]  
 >  합니다 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 활동 로그의 영향을 받는 **sp_pdw_log_user_data_masking** 확신 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 활동 로그. **sp_pdw_log_user_data_masking** 데이터베이스 트랜잭션 로그 영향을 주지 않습니다 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그입니다.  
   
- **백그라운드** 기본 구성에서 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 활동 로그는 전체 포함 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 일부 경우에는 수와 같은 작업에 포함 된 사용자 데이터를 포함 **삽입**,  **업데이트**, 및 **선택** 문입니다. 어플라이언스에서 문제가 발생할 경우 이렇게 하면 분석 문제를 재현 하지 않고도 문제를 발생 시킨 조건에 있습니다. 사용자 데이터에 기록 되지 않도록 하기 위해 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 활동 로그, 고객은이 저장된 프로시저를 사용 하 여 사용자 데이터 마스킹 설정 하도록 선택할 수 있습니다. 문을 계속 쓸 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 활동 로그에 있지만 전부는 몇 가지 미리 정의 된 상수 값으로 대체 사용자 데이터를 포함할 수 있는 문의 리터럴; 마스킹됩니다.  
+ **배경:** 기본 구성에서 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 활동 로그는 전체 포함 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 일부 경우에는 수와 같은 작업에 포함 된 사용자 데이터를 포함 **삽입**합니다 **업데이트**, 및 **선택** 문입니다. 어플라이언스에서 문제가 발생할 경우 이렇게 하면 분석 문제를 재현 하지 않고도 문제를 발생 시킨 조건에 있습니다. 사용자 데이터에 기록 되지 않도록 하기 위해 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 활동 로그, 고객은이 저장된 프로시저를 사용 하 여 사용자 데이터 마스킹 설정 하도록 선택할 수 있습니다. 문을 계속 쓸 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 활동 로그에 있지만 전부는 몇 가지 미리 정의 된 상수 값으로 대체 사용자 데이터를 포함할 수 있는 문의 리터럴; 마스킹됩니다.  
   
  어플라이언스에서 투명 한 데이터 암호화를 사용 하는 경우의 사용자 데이터 마스킹 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 활동 로그는 자동으로 켜 집니다.  
   

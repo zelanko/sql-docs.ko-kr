@@ -19,15 +19,15 @@ helpviewer_keywords:
 - XML [SQL Server], construction
 - XQuery, XML construction
 ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3ca45caed31d31b1614947cbcbf3fbf6c4c27273
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d5c63b6e2f128871740f816cf0772f44646e31f3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515375"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024604"
 ---
 # <a name="xml-construction-xquery"></a>XML 생성(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -584,7 +584,7 @@ where ProductModelID=7;
 ```  
   
 ## <a name="using-computed-constructors"></a>계산된 생성자 사용  
- . 이 경우 생성할 노드 유형을 나타내는 키워드를 지정합니다. 다음 키워드만 지원됩니다.  
+ 의 동일한 원격 인스턴스에 있는 경우 master 데이터베이스는 여러 보조 데이터베이스를 사용할 수 있습니다. 이 경우 생성할 노드 유형을 나타내는 키워드를 지정합니다. 다음 키워드만 지원됩니다.  
   
 -   element  
   

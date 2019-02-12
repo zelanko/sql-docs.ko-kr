@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6118c1f6be29dd47f2df49371274bbfb93100f5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a0017be7f7ac6117c1512cbaf3e46b662f0a06f0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064733"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021685"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Reporting Services 오류
     

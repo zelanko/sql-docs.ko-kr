@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e9a7ddcf-2b01-485f-bbb5-62638b303bc6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f942b40959d5f3af1ede0ddb8dbc11161f796eb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 88a9d564b297d277d1566152cc11599bec912ddc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392936"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025624"
 ---
 # <a name="lesson-5-testing-models-basic-data-mining-tutorial"></a>5단원: 모델 테스트(기본 데이터 마이닝 자습서)
   타겟 메일링 시나리오 학습 집합을 사용하여 모델을 처리했으므로 이제 학습 집합에 대해 모델을 테스트합니다. 유효성 검사는 데이터 마이닝 프로세스에서 중요한 단계입니다. 타겟 메일링 마이닝 모델을 프로덕션 환경에 배포하기 전에 실제 데이터에 대한 타겟 메일링 마이닝 모델의 성능을 아는 것이 중요합니다.  
@@ -39,10 +38,10 @@ ms.locfileid: "52392936"
  [리프트 차트를 사용하여 정확도 테스트&#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 ## <a name="previous-lesson"></a>이전 단원  
- [4 단원: 타겟된 메일링 모델 탐색 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
+ [4단원: 타겟된 메일링 모델 탐색 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>다음 단원  
- [6 단원: 만들기 및 예측 작업 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [6단원: 만들기 및 예측 작업 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [리프트 차트 탭 &#40;마이닝 정확도 차트 뷰&#41;](../../2014/analysis-services/lift-chart-tab-mining-accuracy-chart-view.md)   

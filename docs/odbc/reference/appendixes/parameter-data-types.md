@@ -3,8 +3,6 @@ title: 매개 변수 데이터 형식 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,13 +13,14 @@ helpviewer_keywords:
 ms.assetid: fd7e99d8-d26a-408c-9733-6ffccde99f75
 author: MightyPen
 ms.author: genemi
+ms.reviewer: ''
 manager: craigg
-ms.openlocfilehash: e6c2a73aec119b7572cad93dedb2994235329cb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1f1097927f61355cf4a50f4287397d823fd3177
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826033"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020118"
 ---
 # <a name="parameter-data-types"></a>매개 변수 데이터 형식
 각 매개 변수에 지정 된 경우에 **SQLBindParameter** 은 입력 내장 데이터가 없을 경우 SQL 데이터 형식의 SQL 문에서 매개 변수를 사용 하 여 정의 합니다. 따라서 문에서 다른 피연산자에서 해당 데이터 형식을 유추할 수 있습니다. 경우에 매개 변수 표식은 SQL 문에 포함할 수 있습니다. 와 같은 산술 식의 예를 들어? + 열 1을 나타내는 명명 된 열의 데이터 형식에서 COLUMN1, 매개 변수의 데이터 형식을 유추할 수 있습니다. 응용 프로그램 데이터 형식을 확인할 수 없는 경우 매개 변수 표식을 사용할 수 없습니다.  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: daaae13c2bda044a304fbe9c8b8602174b05a679
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 33710b2ee804f299d5769c5e2443bdd68ce77be2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057653"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020375"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>데이터 영역 렌더링(보고서 작성기 및 SSRS)
   모든 보고서 항목에 적용되는 일반적인 렌더링 동작 이외에도 데이터 영역에는 고유한 페이지 매김 및 렌더링 동작이 추가로 적용됩니다. 데이터 영역과 관련된 렌더링 규칙에는 데이터 영역을 늘리는 방법, 모퉁이 셀이나 머리글 셀 같은 특수 셀의 렌더링 방법, 오른쪽에서 왼쪽으로 읽어야 하는 자료에 대한 데이터 영역의 렌더링 방법 등이 포함됩니다. 이 항목에서는 데이터 영역의 여러 부분이 어떻게 렌더링되는지 설명합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "48057653"
  왼쪽 위 모퉁이를 테이블릭스 모퉁이라고 합니다. 테이블릭스 모퉁이에는 다른 보고서 항목이 포함될 수 있지만 모퉁이에 논리적 페이지 나누기를 삽입한 경우 이러한 페이지 나누기는 테이블릭스 데이터 영역을 렌더링할 때 무시됩니다.  
   
 ### <a name="tablix-body"></a>테이블릭스 본문  
- 테이블릭스 본문은 테이블릭스 셀로 구성됩니다. 테이블릭스 본문은 페이지 매김 규칙과 보고서 항목의 렌더링 동작을 기준으로 렌더링됩니다. 자세한 내용은 [보고서 항목 렌더링 &#40;보고서 작성기 및 SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md)합니다.  
+ 테이블릭스 본문은 테이블릭스 셀로 구성됩니다. 테이블릭스 본문은 페이지 매김 규칙과 보고서 항목의 렌더링 동작을 기준으로 렌더링됩니다. 자세한 내용은 [보고서 항목 렌더링&#40;보고서 작성기 및 SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md)을 참조하세요.  
   
 ## <a name="chart-gauge-and-map-data-regions"></a>차트, 계기 및 지도 데이터 영역  
  차트, 계기 및 지도 데이터 영역은 이를 렌더링하고 보고서 본문에 표시할 때 이미지와 같은 방식으로 동작합니다. 다른 보고서에 연결하거나 책갈피로 이동하는 것과 같은 동작을 데이터 영역 내의 값에 연결할 수 있고, 렌더러가 지원하는 경우 이러한 동작도 함께 렌더링할 수 있습니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "48057653"
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
- [여러 보고서 렌더링 확장 프로그램의 대화형 기능 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [보고서 항목 렌더링&#40;보고서 작성기 및 SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md)   
  [목록&#40;보고서 작성기 및 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   

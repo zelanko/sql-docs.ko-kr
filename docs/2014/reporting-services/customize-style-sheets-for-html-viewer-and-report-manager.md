@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: df805cff-b1de-4062-b2ac-423f37390fbd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7903489a3fc34900ed8f717cc5a292f9af686af0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 45b7973dd7711f09b6bf187f7c2798e44e91c375
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076983"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017955"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>HTML 뷰어 및 보고서 관리자에 대한 스타일시트 사용자 지정
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기본 연계 스타일 시트 파일 (.css) 스타일을 정의 하는 제공 된 **보고서** HTML 뷰어 및 보고서 관리자 도구 모음입니다. 웹 개발자나 CSS 스타일시트 파일을 만드는 전문가인 경우 기본 스타일을 수정하여 도구 모음이나 보고서 관리자의 색, 글꼴 및 레이아웃을 변경할 수 있습니다. 단, 이로 인해 발생하는 모든 문제에 대한 책임은 자신에게 있습니다. 이 릴리스에서는 기본 스타일시트나 스타일시트 수정 지침을 다루지 않습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "48076983"
 >  미리 정의된 보고서 스타일을 사용하려는 경우 보고서 마법사를 사용하여 보고서를 만듭니다. 보고서 마법사는 서로 다른 색 조합과 글꼴을 사용하도록 스타일이 지정된 보고서를 만드는 데 사용할 수 있는 다양한 테마를 제공합니다. 보고서의 테마를 정의하는 스타일 템플릿은 수정할 수 있습니다.  
   
 ## <a name="reporting-services-style-sheets"></a>Reporting Services 스타일시트  
- 다음 표에서 설명에 사용 되는 스타일 시트 (.css) 파일을 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 설치 합니다.  
+ 다음 표에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 설치에서 사용되는 스타일시트 파일(.css)에 대해 설명합니다.  
   
 |스타일시트|Description|  
 |-----------------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "48076983"
 |ReportingServices.css|보고서 관리자의 스타일을 정의합니다.|  
   
 > [!NOTE]  
->  Sql.css와 Mailto.css 스타일시트는 보고서 관리자 온라인 설명서에서 사용되므로 수정해서는 안 됩니다. 다른 스타일시트는 SharePoint 웹 파트에서 열리는 보고서와 보고서 관리자에 대한 스타일을 정의합니다. 이러한 스타일시트에는 Rswebparts.css, Sp_full.css 및 Sp_small.css 등이 있습니다. SharePoint 스타일 시트는 수정하지 않는 것이 좋습니다. 웹 파트를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [보기 및 탐색 기본 모드 보고서를 사용 하 여 SharePoint 웹 파트 &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)합니다.  
+>  Sql.css와 Mailto.css 스타일시트는 보고서 관리자 온라인 설명서에서 사용되므로 수정해서는 안 됩니다. Sql.css 및 Mailto.css. 다른 스타일시트는 SharePoint 웹 파트에서 열리는 보고서와 보고서 관리자에 대한 스타일을 정의합니다. 이러한 스타일시트에는 Rswebparts.css, Sp_full.css 및 Sp_small.css 등이 있습니다. SharePoint 스타일 시트는 수정하지 않는 것이 좋습니다. 웹 파트를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [보기 및 탐색 기본 모드 보고서를 사용 하 여 SharePoint 웹 파트 &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)합니다.  
   
 ## <a name="configuring-reporting-services-to-use-a-custom-style-sheet"></a>사용자 지정 스타일시트를 사용하도록 Reporting Services 구성  
  스타일시트는 유효한 CSS 스타일시트 파일(.css)이어야 하며 Styles 폴더에 있어야 합니다. 기본적으로 Styles 폴더에 위치한 \< *드라이브*>: \Program Files\Microsoft SQL Server\MSSQL. *n*\Reporting Services\ReportServer\Styles 합니다.  
@@ -73,7 +73,7 @@ http://localhost/reportserver?/AdventureWorksSampleReports/Product+Line+Sales&rs
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [HTML 뷰어 및 보고서 도구 모음](html-viewer-and-the-report-toolbar.md)   
  [RSReportServer 구성 파일](report-server/rsreportserver-config-configuration-file.md)  
   

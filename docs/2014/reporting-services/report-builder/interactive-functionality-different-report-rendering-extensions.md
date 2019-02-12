@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: eb066c069d9cc1e15d442627e018818b35097e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b566b27ca060f84fe976a3827e5f657ca43bf741
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174013"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022604"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>여러 보고서 렌더링 확장 프로그램의 대화형 기능(보고서 작성기 및 SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 런타임에 보고서 작업에 사용할 수 있는 대화형 보고 기능을 제공 합니다. 모든 보고서 렌더링 형식에 대화형 기능을 전부 사용할 수 있는 것은 아닙니다. 다음 표에는 각 대화형 기능이 특정 형식에서 어떻게 작동하는지 이해하는 데 도움이 되는 정보가 나와 있습니다.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 런타임에 보고서 작업을 수행하는 데 사용할 수 있는 대화형 보고 기능을 제공합니다. 모든 보고서 렌더링 형식에 대화형 기능을 전부 사용할 수 있는 것은 아닙니다. 다음 표에는 각 대화형 기능이 특정 형식에서 어떻게 작동하는지 이해하는 데 도움이 되는 정보가 나와 있습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -75,7 +75,7 @@ ms.locfileid: "48174013"
 |-------------------|-------------------------|  
 |미리 보기/보고서 뷰어, HTML|링크를 클릭하여 새 브라우저 창에서 외부 웹 페이지를 열 수 있습니다.|  
 |PDF|하이퍼링크는 PDF 렌더링 확장 프로그램에서 렌더링됩니다. 사용자가 하이퍼링크를 클릭하면 링크된 페이지가 브라우저에 열립니다.|  
-|Excel|하이퍼링크는 Excel에서 렌더링됩니다.|  
+|내보내기|하이퍼링크는 Excel에서 렌더링됩니다.|  
 |Word|하이퍼링크는 Word에서 렌더링됩니다.|  
 |기타|MHTML, XML, CSV 또는 이미지에서는 하이퍼링크를 사용할 수 없습니다.<br /><br /> MHTML 및 이미지의 경우 외부 이미지는 정적 그림으로 렌더링됩니다.|  
   
@@ -114,6 +114,6 @@ ms.locfileid: "48174013"
  [대화형 정렬, 문서 구조 및 링크&#40;보고서 작성기 및 SSRS&#41;](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [행렬&#40;보고서 작성기 및 SSRS&#41;](../report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [차트 &#40;보고서 작성기 및 SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+ [차트&#40;보고서 작성기 및 SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
   

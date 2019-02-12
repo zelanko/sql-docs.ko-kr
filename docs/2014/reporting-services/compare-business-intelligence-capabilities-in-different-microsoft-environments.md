@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1fb759ee-8172-4c4c-9f7d-49af2c731006
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8dcd0f49e59a95396e25f9504abc37e58e6ec4b7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 4f4339b91573aad752460b71fb4cce2181c9b880
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374875"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018165"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>다양한 Microsoft 환경에서 비즈니스 인텔리전스 기능 비교
   Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence는 SharePoint Server 포함 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , SharePoint Online 및 Office 365용 Power BI 등을 망라한 다양한 환경에서 배포할 수 있습니다. 이 항목에서는 구성 요소 및 각 환경에서 지원되는 기능을 비교합니다.  
@@ -40,9 +40,9 @@ ms.locfileid: "53374875"
 |사용 현황 모니터링|사용자 계정 컨트롤|아니요|사용자 계정 컨트롤|  
 |[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 큐브의 행 기반 보안 활용|사용자 계정 컨트롤|아니오|아니요|  
   
- **<sup>1</sup>**[데이터 관리에서 데이터 관리자의 역할 이해](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) 고 [비디오:   Power BI 정보 관리 및 데이터 관리](https://www.youtube.com/watch?v=8dHOj68ts7c)합니다.  
+ **<sup>1</sup>**[데이터 관리에서 데이터 관리자의 역할 이해](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) 고 [비디오: Power BI 정보 관리 및 데이터 관리](https://www.youtube.com/watch?v=8dHOj68ts7c)합니다.  
   
- **<sup>2</sup>**[power BI q&a   Power BI 통합 문서 최적화 (클라우드 모델링)](https://support.office.com/article/Power-BI-Q-A-Optimize-a-Power-BI-workbook-cloud-modeling--96dc5941-d0f1-44e2-9d9d-c038a3a55849?ui=en-US&rs=en-US&ad=US)합니다.  
+ **<sup>2</sup>**  [Power BI Q&A: Power BI 통합 문서 최적화 (클라우드 모델링)](https://support.office.com/article/Power-BI-Q-A-Optimize-a-Power-BI-workbook-cloud-modeling--96dc5941-d0f1-44e2-9d9d-c038a3a55849?ui=en-US&rs=en-US&ad=US)합니다.  
   
  **<sup>3</sup>**  [Office 365용 Power View에서 새로운 예측 기능 도입](https://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx)(영문).  
   

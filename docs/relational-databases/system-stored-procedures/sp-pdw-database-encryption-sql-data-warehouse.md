@@ -2,8 +2,7 @@
 title: 가 sp_pdw_database_encryption (SQL Data Warehouse) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: eeb1263c02b9b06ffe747b78f8dae5691b7f92fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a76b34f09fb78bb63dca88947eef044acb6cd304
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846621"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019024"
 ---
 # <a name="sppdwdatabaseencryption-sql-data-warehouse"></a>가 sp_pdw_database_encryption (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -41,7 +40,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
   
 -   1 = 사용  
   
- 실행 **가 sp_pdw_database_encryption** 스칼라 결과 집합으로 어플라이언스에 TDE의 현재 상태를 반환 하는 매개 변수 없이: 사용 안 함, 0 또는 1을 사용 하도록 설정 합니다.  
+ 실행 **가 sp_pdw_database_encryption** 스칼라 결과 집합으로 어플라이언스에 TDE의 현재 상태를 반환 하는 매개 변수 없이 합니다. 사용 안 함, 0 또는 1을 사용할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

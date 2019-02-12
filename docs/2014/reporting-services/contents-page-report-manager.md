@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6b16869b-158a-4934-9c85-bee934b35378
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b4b342251e2b7bac68aa8c7015be82ec9dc1df19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 96092da800b6df640ffa9f99b2fe851460edacc8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056253"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019435"
 ---
 # <a name="contents-page-report-manager"></a>내용 페이지(보고서 관리자)
   내용 페이지를 사용하여 현재 폴더의 내용을 보거나, 볼 항목을 선택하거나, 다른 폴더로 이동할 수 있습니다. 폴더를 선택하면 열리는 이 페이지는 보고서 관리자의 홈 페이지이기도 합니다.  
@@ -56,8 +56,8 @@ ms.locfileid: "48056253"
  폴더 계층 구조 내에서 항목의 위치를 다시 지정하려면 클릭합니다. **이동**을 클릭하기 전에 이동할 각 항목 옆의 확인란을 선택하십시오. 이렇게 하면 폴더를 이동하여 새 위치를 선택할 수 있는 항목 이동 페이지가 열립니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [보고서 서버 콘텐츠 관리 &#40;SSRS 기본 모드&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

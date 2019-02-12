@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dqs.kb.kbmatchingmap.f1
 - sql12.dqs.kb.kbmatchingpolicy.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 37a65dc6a237803822f2d3214e7209f60e89d6bb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b5fff7c8804feab436271d60f3e5542b372ada60
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539636"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025354"
 ---
 # <a name="create-a-matching-policy"></a>일치 정책 만들기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에 일치 정책을 만드는 방법에 대해 설명합니다. 예제 데이터에서 일치 정책 작업을 실행하여 DQS에서 일치 프로세스를 준비할 수 있습니다. 이 작업에서는 정책에서 하나 이상의 일치 규칙을 만들고 테스트한 다음, 일치 규칙을 공개적으로 사용할 수 있도록 기술 자료를 게시합니다. 기술 자료에는 하나의 일치 정책만 있을 수 있지만 해당 정책에 여러 일치 규칙이 포함되어 있을 수 있습니다.  
@@ -186,7 +186,7 @@ ms.locfileid: "52539636"
   
 9. **취소** 를 클릭하면 일치 정책 작업이 저장되지 않고 종료되며 DQS 홈 페이지로 돌아갑니다.  
   
-##  <a name="FollowUp"></a> 후속편: 일치 정책을 만든 후  
+##  <a name="FollowUp"></a> 후속 작업: 일치 정책을 만든 후  
  일치 정책을 만든 후 해당 일치 정책이 포함된 기술 자료를 기반으로 일치 프로젝트를 실행할 수 있습니다. 자세한 내용은 [일치 프로젝트 실행](../../2014/data-quality-services/run-a-matching-project.md)을 참조하세요.  
   
 ##  <a name="Tabs"></a> Profiler and Results Tabs  

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 644454c4-3c5a-469a-90ec-e51dc7fb99fc
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: abded209f6367308c23e548962e1d4a5362791f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9424f2ba21fb4b93e359c8662974a82c62b4895
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127633"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020444"
 ---
 # <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>작업 4: 일치 작업의 결과를 Excel 파일로 내보내기
   이 작업에서는 일치 작업의 결과를 Excel 파일로 내보냅니다.  
@@ -33,11 +30,11 @@ ms.locfileid: "48127633"
   
 5.  **Survivorship 규칙** 에 대해 **피벗 레코드**가 선택되었는지 확인합니다. 이 옵션을 선택하면 각 클러스터의 피벗 레코드가 클러스터의 출력으로 선택됩니다. Survivorship 규칙의 다른 옵션은 다음과 같습니다.  
   
-    1.  **가장 완전한 레코드:** 채워진 필드가 가장 많은 레코드가 Survivor 레코드가 됩니다.  
+    1.  **가장 완전 한 레코드:** 채워진 필드가 가장 많은 레코드가 Survivor 레코드가 됩니다.  
   
     2.  **가장 긴 레코드:** 원본 필드에서 용어 수가 가장 많은 레코드가 Survivor 레코드가 됩니다.  
   
-    3.  **가장 완전하고 가장 긴 레코드:** 채워진 필드가 가장 많고 각 필드의 용어 수가 가장 많은 레코드가 Survivor 레코드가 됩니다.  
+    3.  **가장 완전 하 고 가장 긴 레코드:** 채워진 필드가 가장 많고 각 필드의 용어 수가 가장 많은 레코드가 Survivor 레코드가 됩니다.  
   
      ![일치 페이지에서 결과 내보낼](../../2014/tutorials/media/et-exportingtheresultsfrommatoanexcelfile.jpg "일치 페이지에서 결과 내보내기")  
   

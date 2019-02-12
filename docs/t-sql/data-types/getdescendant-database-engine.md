@@ -1,7 +1,7 @@
 ---
 title: GetDescendant(데이터베이스 엔진) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/22/2017
+ms.date: 07/22/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 64e16514d4f78009522de651f55f8749d6b70319
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 28face7dd893a43b9167ff162a3c741b99c65eab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695779"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018874"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ VALUES
 'adventure-works\SecondNewEmployee', 'Application Intern', '3/11/07') ;  
 ```  
   
-### <a name="c-inserting-a-row-between-two-existing-nodes"></a>3. 행을 기존의 두 노드 사이에 삽입  
+### <a name="c-inserting-a-row-between-two-existing-nodes"></a>C. 행을 기존의 두 노드 사이에 삽입  
 예 1과 같은 관리자에게 보고하는 세 번째 직원을 고용합니다. 이 예에서는 예 1의 `FirstNewEmployee`보다 크고 예 2의 `SecondNewEmployee`보다 작은 노드에 새 행을 삽입니다. GetDescendant 메서드를 사용하여 다음 코드를 실행합니다. child1 인수와 child2 인수를 모두 사용하여 새 행의 노드가 노드 `/3/1/1.1/`이 되도록 지정합니다.
   
 ```sql
@@ -124,7 +124,7 @@ VALUES
   
 노드 `/3/1/1.1/`은 노드 `/3/1/1/`보다 크지만 같은 계층 수준에 있습니다.
   
-### <a name="d-scalar-examples"></a>4. 스칼라 예  
+### <a name="d-scalar-examples"></a>D. 스칼라 예  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 모든 **hierarchyid** 노드의 임의 삽입과 삭제를 지원합니다. GetDescendant()를 사용하면 두 개의 **hierarchyid** 노드 사이에 노드를 항상 생성할 수 있습니다. 다음 코드에서는 `GetDescendant`를 사용하여 예제 노드를 생성합니다.
   
 ```sql
@@ -141,7 +141,7 @@ SET @c2 = @h.GetDescendant(@c, @c2);
 SELECT @c2.ToString();  
 ```  
   
-### <a name="e-clr-example"></a>5. CLR 예  
+### <a name="e-clr-example"></a>E. CLR 예  
 다음 코드 조각에서는 `GetDescendant()` 메서드를 호출합니다.
   
 ```sql

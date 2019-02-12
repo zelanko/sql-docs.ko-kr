@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a68fb27df3c1a00ca5b4cf615963d7d9ce4bf2d3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 16233754f8e0eaca8d068ddd276b96d9ab6ad73c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357158"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023564"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 개념(SSRS)
   이 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 개념에 대해 간략하게 설명합니다.  
@@ -75,11 +75,11 @@ ms.locfileid: "53357158"
   
 ##  <a name="bkmk_ReportsandRelatedItemConcepts"></a> 보고서 및 관련 항목 개념  
  **보고서 및 보고서 정의**  
- **RDL입니다.** 보고서 정의는 RDL(Report Definition Language)이라는 XML 문법에 맞는 XML 파일입니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 보고서 작성기나 보고서 디자이너와 같은 도구에서 보고서 정의를 만듭니다. 이 파일은 데이터 원본 연결을 정의하는 요소, 데이터 검색에 사용되는 쿼리, 식, 매개 변수, 이미지, 입력란, 테이블 및 기타 디자인 타임 레이아웃을 제공합니다. 자세한 내용은 [RDL(Report Definition Language)&#40;SSRS&#41;](reports/report-definition-language-ssrs.md)을 참조하세요.  
+ **RDL.** 보고서 정의는 RDL(Report Definition Language)이라는 XML 문법에 맞는 XML 파일입니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 보고서 작성기나 보고서 디자이너와 같은 도구에서 보고서 정의를 만듭니다. 이 파일은 데이터 원본 연결을 정의하는 요소, 데이터 검색에 사용되는 쿼리, 식, 매개 변수, 이미지, 입력란, 테이블 및 기타 디자인 타임 레이아웃을 제공합니다. 자세한 내용은 [RDL(Report Definition Language)&#40;SSRS&#41;](reports/report-definition-language-ssrs.md)을 참조하세요.  
   
- **RDLX입니다.** RDLX로 된 보고서 정의는 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 시각화 환경을 활성화하는 내부 확장 프로그램을 사용한 RDL 파일입니다. 자세한 내용은 [Power View 개요](https://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx)(영문)를 참조하세요.  
+ **RDLX.** RDLX로 된 보고서 정의는 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 시각화 환경을 활성화하는 내부 확장 프로그램을 사용한 RDL 파일입니다. 자세한 내용은 [Power View 개요](https://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx)(영문)를 참조하세요.  
   
- **RDLC 합니다.** Visual Studio 보고서 디자이너는 ReportViewer 컨트롤에 사용할 XML 형식의 클라이언트 보고서 정의 파일(.rdlc)을 생성합니다.  
+ **RDLC.** Visual Studio 보고서 디자이너는 ReportViewer 컨트롤에 사용할 XML 형식의 클라이언트 보고서 정의 파일(.rdlc)을 생성합니다.  
   
  **보고서 데이터 연결 및 데이터 원본**  
  보고서는 쿼리가 실행되거나 보고서가 처리될 때 데이터 연결을 사용하여 보고서에 대한 데이터를 검색합니다. 보고서 정의에서 데이터 연결은 데이터 원본과 동일합니다. 기본 제공 데이터 연결 형식 목록에서 선택하여 관계형 데이터베이스, 다차원 데이터베이스, 웹 서비스 또는 다른 데이터 원본에 연결할 수 있습니다. 데이터 연결 설명에는 다음과 같은 용어가 사용됩니다.  
@@ -156,7 +156,7 @@ ms.locfileid: "53357158"
  **드릴 다운 보고서**  
  드릴다운 보고서는 처음에 복잡한 항목을 숨기고 사용자가 경우에 따라 숨겨진 보고서 항목을 보이거나 숨기는 방식으로 보려는 데이터의 양을 조절할 수 있도록 지원하는 레이아웃 디자인입니다. 드릴다운 보고서는 보고서에 표시할 수 있는 가능한 모든 데이터를 검색해야 합니다. 대량 데이터가 사용되는 보고서의 경우에는 드릴다운 보고서 대신 드릴스루 보고서를 사용하는 것이 좋습니다. 자세한 내용은 [드릴다운 동작&#40;보고서 작성기 및 SSRS&#41;](report-design/drilldown-action-report-builder-and-ssrs.md)을 참조하세요.  
   
- **하위 보고서**  
+ **Subreports**  
  하위 보고서는 보고서에 레이아웃 요소로 추가하는 보고서 항목입니다. 하위 보고서는 다른 보고서를 가리키며 이를 주 보고서 본문 안에 하위 보고서 인스턴스로 표시합니다. 하위 보고서는 주 보고서 이외에도 여러 데이터 원본을 사용할 수 있습니다. 하위 보고서의 각 인스턴스에서 데이터를 필터링하는 매개 변수를 사용하여 데이터 영역 내에서 하위 보고서를 반복할 수도 있지만 하위 보고서는 일반적으로 주 보고서에서 요약 책 또는 관련 보고서의 모음에 대한 컨테이너로 사용됩니다. 각 하위 보고서 인스턴스는 보고서 처리를 위해 주 보고서와 하위 보고서 간에 컨텍스트를 전환합니다. 하위 보고서 인스턴스가 많은 보고서의 경우 드릴다운 보고서 대신 드릴스루 보고서를 사용하는 것이 좋습니다. 자세한 내용은 [하위 보고서&#40;보고서 작성기 및 SSRS&#41;](report-design/subreports-report-builder-and-ssrs.md)를 참조하세요.  
   
  **주/세부 정보 보고서 및 드릴스루 보고서**  

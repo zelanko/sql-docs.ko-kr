@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 28e95e0afe1e2667bd962f6c41fa53e622b4962b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 728d69dcf44e0cab436c73396d833f754891a3f5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371435"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019642"
 ---
 # <a name="install-data-quality-services"></a>Data Quality Services 설치
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS)에는 **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** 및 **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]** 의 두 가지 구성 요소가 포함됩니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "53371435"
 |사용자에게 DQS 역할 부여|에 로그온 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 를 사용 하 여 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)], 사용자는 다음 세 가지 역할 중 DQS_MAIN 데이터베이스에 있어야 합니다. **dqs_administrator**, **dqs_kb_editor**, 또는 **dqs_kb_ 연산자**합니다. 기본적으로 사용자 계정이 sysadmin 고정 서버 역할의 멤버인 경우 사용자 계정에게 할당된 DQS 역할이 없더라도 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 를 사용하여 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 에 로그온할 수 있습니다. 세 가지 DQS 역할에 대한 자세한 내용은 [DQS 보안](../dqs-security.md)을 참조하십시오.<br /><br /> 참고: DQS_PROJECTS 및 DQS_STAGING_DATA 데이터베이스의 경우 이 세 가지 역할을 사용할 수 없습니다.|[사용자에게 DQS 역할 부여](grant-dqs-roles-to-users.md)|  
 |DQS 작업에 데이터를 사용할 수 있도록 설정|DQS 작업을 위해 원본 데이터에 액세스할 수 있고 처리된 데이터를 데이터베이스 테이블로 내보낼 수 있는지 확인합니다.|[DQS 작업을 위해 데이터 액세스](access-data-for-the-dqs-operations.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [비디오: DQS 설치 및 구성](https://go.microsoft.com/fwlink/?LinkId=238241)   
  [.NET Framework 업데이트 후 SQLCLR 어셈블리 업그레이드](upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [DQSInstaller.exe를 사용하여 DQS 기술 자료 내보내기 및 가져오기](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   

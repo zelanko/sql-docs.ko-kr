@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 52b5704b-27f9-400a-a821-d8fa0786afe4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cf34475a4b2b79251284db6d36018b0c6d243d8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5351b052a26b2a4f5b9bc9d91f93aa2e4cdc5357
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106063"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020285"
 ---
 # <a name="report-server-windows-service-mssqlserver-107"></a>Report Server Windows Service (MSSQLServer) 107
     
@@ -51,8 +51,8 @@ ms.locfileid: "48106063"
 ## <a name="internal-only"></a>내부 전용  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 서버 서비스 계정 구성 &#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Reporting Services 구성 관리자 &#40;기본 모드&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [보고서 서버 서비스 시작 및 중지](../report-server/start-and-stop-the-report-server-service.md)  
   
   

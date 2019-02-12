@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.pictureproperties.general.f1
 ms.assetid: c2218b93-f7fe-46ef-995f-d7dadf9752ec
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: afd91dda1a6a4694980d0976f1ceae9db928c36a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: cbbe4fe5917419bc07cef81629c7b2e38b7cff15
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108433"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019641"
 ---
 # <a name="image-properties-dialog-box-general-report-builder-and-ssrs"></a>이미지 속성 대화 상자, 일반(보고서 작성기 및 SSRS)
   **이미지 속성** 대화 상자에서 **일반** 을 선택하여 그림을 추가하고, 이미지의 기본 이름을 변경하고, 도구 설명 텍스트를 추가할 수 있습니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "48108433"
  **이름**  
  항목의 이름을 입력합니다. 이름은 보고서 내에서 고유해야 합니다. 기본적으로 Image1 또는 Image2 같은 일반적인 이름이 할당됩니다.  
   
- **도구 설명**  
+ **Tooltip**  
  도구 설명을 반환하는 식 또는 텍스트를 입력합니다. 식을 편집하려면 식(*fx*) 단추를 클릭합니다. HTML 보고서의 항목 위에 포인터를 놓으면 **도구 설명** 이 나타납니다.  
   
  **이미지 원본 선택**  
@@ -58,7 +58,7 @@ ms.locfileid: "48108433"
   
 ## <a name="see-also"></a>관련 항목  
  [식 예&#40;보고서 작성기 및 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [이미지 &#40;보고서 작성기 및 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
- [대화 상자, 창 및 마법사에 대 한 보고서 작성기 도움말](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [이미지&#40;보고서 작성기 및 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

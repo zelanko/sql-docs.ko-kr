@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.rtp.rptwizard.finish.f1
 ms.assetid: d430bc08-61b4-439f-956e-2e825ca7113b
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f997ab99213f23c6220867b1105e0a5e71b97f38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: fb5457f94aa630bab4e005b26d1f375886004953
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180933"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019394"
 ---
 # <a name="complete-the-report-wizard"></a>보고서 마법사 완료
   보고서 마법사 완료 페이지를 사용하여 보고서에 이름을 지정하거나 보고서에 적용할 옵션을 검토할 수 있습니다.  

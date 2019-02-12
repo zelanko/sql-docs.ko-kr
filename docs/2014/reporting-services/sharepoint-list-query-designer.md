@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 593de30c-69f0-42a8-8467-16e78647b74c
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a68cc175ec8339fc9af0554a6b9c5c5b6f7386ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: ee2dd2c9776402dd639858e2a330f31d02b04635
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135169"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017714"
 ---
 # <a name="sharepoint-list-query-designer"></a>SharePoint 목록 쿼리 디자이너
   보고서 디자이너는 SharePoint 사이트에서 보고서 데이터 세트에 대해 검색할 데이터를 지정하는 쿼리를 만들 수 있도록 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 모두 제공합니다. 그래픽 쿼리 디자이너를 사용하면 SharePoint 목록 메타데이터를 탐색하고, 쿼리를 대화형으로 작성하고, 쿼리 결과를 볼 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하면 그래픽 쿼리 디자이너로 만든 쿼리를 보거나 쿼리를 수정하거나 쿼리 명령을 입력할 수 있습니다. 파일 또는 보고서에서 기존 쿼리를 가져올 수도 있습니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "48135169"
  선택한 필드 창에 필드를 추가하거나 제거하려면 SharePoint 목록 창에서 해당 테이블 또는 뷰 필드의 확인란을 선택하거나 선택 취소합니다.  
   
 ###  <a name="AppliedFilters"></a> 적용된 필터 창  
- 적용된 필터 창에는 런타임에 검색되는 데이터 행 수를 제한하는 데 사용되는 조건이 표시됩니다. 이 창에 지정 된 조건을 생성할 때 사용 된 [!INCLUDE[tsql](../includes/tsql-md.md)] WHERE 절. 매개 변수 옵션을 선택하면 보고서 매개 변수가 자동으로 생성됩니다. 쿼리 매개 변수에 기반을 둔 보고서 매개 변수를 사용하면 사용자가 쿼리 값을 지정하여 보고서의 데이터를 제어할 수 있습니다.  
+ 적용된 필터 창에는 런타임에 검색되는 데이터 행 수를 제한하는 데 사용되는 조건이 표시됩니다. 이 창에 지정된 조건을 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] WHERE 절이 생성됩니다. 매개 변수 옵션을 선택하면 보고서 매개 변수가 자동으로 생성됩니다. 쿼리 매개 변수에 기반을 둔 보고서 매개 변수를 사용하면 사용자가 쿼리 값을 지정하여 보고서의 데이터를 제어할 수 있습니다.  
   
  표시되는 열은 다음과 같습니다.  
   

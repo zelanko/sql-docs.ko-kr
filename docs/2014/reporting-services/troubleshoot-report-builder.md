@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 3806fc48-56f8-44d1-a3c1-df8c33cce0a3
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 61965f9d07ebef7d3f30623df318125e67587890
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 22eb90e4fc162d2805f760e8f0b3152c3791111f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349391"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017694"
 ---
 # <a name="troubleshoot-report-builder"></a>보고서 작성기 문제 해결
   보고서 작성기는 다양한 종류의 데이터 원본을 기반으로 보고서를 작성하고, 보고서 서버 또는 SharePoint 사이트에 보고서를 게시하는 데 사용할 수 있는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 제작 도구입니다. 일부로 또는 웹 브라우저에서 보고서 작성기에서 만든 보고서를 볼 수 있습니다는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 응용 프로그램 또는 SharePoint 사이트입니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "53349391"
   
  아직 답변을 찾지 못할 경우 [피드백 보내기](https://go.microsoft.com/fwlink/?LinkId=118791)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [설치, 제거 및 보고서 작성기 지원](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  
   
   

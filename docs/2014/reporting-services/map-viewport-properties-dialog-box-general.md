@@ -12,14 +12,14 @@ f1_keywords:
 - "10505"
 ms.assetid: 6c9c773e-5c56-4571-95ed-8a157cfdfe52
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 62d20c36271bd6dd1bfa591edf606c3e295d1adb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 33849743e47ad910fad44938e7537d7b4be8624a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138643"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018185"
 ---
 # <a name="map-viewport-properties-dialog-box-general"></a>지도 뷰포트 속성 대화 상자, 일반
   **지도 뷰포트 속성** 대화 상자에서 **일반** 을 선택하여 좌표계, 도법 및 경계 옵션을 변경할 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "48138643"
   
 -   **지리** 도시 위치와 같이 지도 데이터가 경도 및 위도 좌표에 있는 경우 이 옵션을 선택합니다.  
   
- **프로젝션**  
+ **Projection**  
  지리 좌표를 2차원 표면에 투영하는 데 사용할 방법을 지정합니다. 시각화하는 데이터와 호환되는 도법을 선택합니다. 도법의 영향을 받는 4가지 공간 속성은 영역, 모양, 거리 및 방향입니다. 지구를 보는 경우 도법에 적합한 선택은 보기 중심, 지도 경계 및 확대/축소 비율에 따라 달라집니다.  
   
  아래에 있는 각 도법은 이러한 공간 속성 중 하나 이상을 유지합니다.  
@@ -73,13 +73,13 @@ ms.locfileid: "48138643"
  **최대 Y**  
  가장 큰 Y 값입니다. **평면** 에만 사용할 수 있습니다.  
   
- **최소 경도**  
+ **Minimum Longitude**  
  가장 작은 경도 값입니다. **지리** 에만 사용할 수 있습니다.  
   
  **최대 경도**  
  가장 큰 경도 값입니다. **지리** 에만 사용할 수 있습니다.  
   
- **최소 위도**  
+ **Minimum Latitude**  
  가장 작은 위도 값입니다. **지리** 에만 사용할 수 있습니다.  
   
  **최대 위도**  

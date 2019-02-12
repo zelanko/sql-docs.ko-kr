@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 763d33dd182883f3b781b3e7e70cf91eda906044
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9138f2b27518a3b271bd14628b753ba5f729b3f6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157933"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026534"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>SharePoint 모드의 보고서 서버에 게시된 보고서 항목에 대한 URL 예(SSRS)
   SharePoint 라이브러리에 보고서 및 관련 항목을 게시하려면 보고서 디자이너와 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 제작 도구를 사용하여 내용을 게시하거나 SharePoint 사이트 동작을 사용하여 내용을 업로드합니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "48157933"
  보고서 정의는 외부 파일로 저장된 이미지 파일을 포함할 수 있습니다. 이미지 파일에 대한 정규화된 URL을 설정하여 보고서 정의에서 해당 파일을 참조할 수 있습니다. 이러한 외부 파일은 SharePoint 사이트나 원격 컴퓨터에 저장될 수 있습니다.  
   
 > [!IMPORTANT]  
->  외부 URL이 SharePoint 사이트의 이미지에 대한 URL인 경우 보고서 작성기에서 보고서를 미리 보면 깨진 이미지 아이콘이 표시됩니다. 만 있으면 깨진된 이미지 아이콘이 표시 됩니다 보고서를 SharePoint 사이트에 업로드 하 고 연결 된 모드에서 보고서를 렌더링 하는 경우 `View Items` 권한.  
+>  외부 URL이 SharePoint 사이트의 이미지에 대한 URL인 경우 보고서 작성기에서 보고서를 미리 보면 깨진 이미지 아이콘이 표시됩니다. SharePoint 사이트에 보고서를 업로드하고 연결된 모드에서 보고서를 렌더링하는 경우 `View Items` 권한만 있으면 깨진 이미지 아이콘이 표시됩니다.  
   
  보고서 서버 모드에 관계없이 보고서의 외부 이미지에 대한 참조는 정규화된 URL이어야 합니다. 또한 외부 이미지 파일을 참조하는 경우 일반적으로 무인 보고서 처리 계정을 구성해야 합니다.  
   

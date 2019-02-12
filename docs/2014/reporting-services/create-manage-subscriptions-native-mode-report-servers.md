@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 7f46cbdb-5102-4941-bca2-5e0ff9012c6b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e531467e69271eacd535fbfd59e127d73513cf2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 44bf77f23724f51ddc75f708e5663b43e607df0e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115135"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023914"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>기본 모드 보고서 서버 구독 만들기 및 관리
   이 섹션에는 구독 처리, 감독 및 제어 항목이 포함되어 있습니다. 표준 구독인지 데이터 기반 구독인지에 따라 구독 관리가 달라집니다. 표준 구독은 일반적으로 사용자가 소유하고 관리합니다. 반대로 데이터 기반 구독은 보고서 서버 관리자가 만들어 유지 관리합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "48115135"
   
  배달 확장 프로그램을 제거한 후에는 보고서 관리자나 SharePoint 사이트에서 더 이상 사용할 수 없습니다. 배달 확장 프로그램을 제거하면 비활성 구독이 생성될 수 있습니다. 확장 프로그램을 제거하기 전에 구독이 다른 배달 확장 프로그램을 사용하도록 구성하거나 구독을 삭제하십시오.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [내 구독 사용](subscriptions/use-my-subscriptions-native-mode-report-server.md)  
  내 구독 페이지를 사용하여 자신이 소유한 구독을 관리하는 방법을 설명합니다.  
   

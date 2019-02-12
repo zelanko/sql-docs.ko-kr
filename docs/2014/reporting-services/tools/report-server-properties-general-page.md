@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: af0db1ac3d03fa03ea7bb3267656597d164c5302
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4f92c0886bf3e1e5d5022cde96ad39671588225d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222219"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019344"
 ---
 # <a name="server-properties-general-page"></a>서버 속성(일반 페이지)
   이 페이지를 사용하여 보고서 관리자에 사용된 제목을 보거나 수정하고, 내 보고서를 설정 또는 해제하고, 내 보고서의 보안에 대한 역할 정의를 선택하고 클라이언트 인쇄 컨트롤을 설정 또는 해제할 수 있습니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "48222219"
  내 보고서의 보안에 사용할 역할 정의를 지정합니다. 역할 정의는 각 내 보고서 폴더에서 지원되는 태스크 집합을 식별합니다.  
   
  **ActiveX 클라이언트 인쇄 컨트롤에 대 한 다운로드 설정**  
- 집합의 `EnableClientPrinting` 보고서 서버 시스템 속성이 있습니다. 클라이언트 인쇄를 설정하는 경우 로컬 관리자 권한을 가진 사용자는 HTML 보고서 인쇄를 위한 서명된 ActiveX 컨트롤을 다운로드할 수 있습니다. 자세한 내용은 [설정 및 Reporting Services에 대 한 클라이언트 쪽 인쇄 사용 안 함](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)합니다.  
+ `EnableClientPrinting` 보고서 서버 시스템 속성을 설정합니다. 클라이언트 인쇄를 설정하는 경우 로컬 관리자 권한을 가진 사용자는 HTML 보고서 인쇄를 위한 서명된 ActiveX 컨트롤을 다운로드할 수 있습니다. 자세한 내용은 [Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 서버 속성 설정&#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   

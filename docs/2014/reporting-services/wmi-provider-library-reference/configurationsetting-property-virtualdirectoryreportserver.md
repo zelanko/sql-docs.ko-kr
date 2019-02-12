@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3e0e860a-afe9-47ce-ae6a-f8c7ca26494f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2e031e0e1dacc072308dbec80675a2bef8cc3350
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 42366a4163fd1a231f6a2a6db3ae092fb3dc20d2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115863"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020395"
 ---
 # <a name="virtualdirectoryreportserver-property-wmi-msreportserverconfigurationsetting"></a>VirtualDirectoryReportServer 속성(WMI MSReportServer_ConfigurationSetting)
   보고서 서버 애플리케이션에 대한 가상 디렉터리를 반환합니다. 읽기 전용입니다.  
@@ -34,7 +34,7 @@ public string VirtualDirectoryReportServer;
 ```  
   
 ## <a name="property-values"></a>속성 값  
- `string` 가상 디렉터리를 포함 합니다.  
+ 가상 디렉터리가 들어 있는 `string`입니다.  
   
 ## <a name="example-code"></a>코드 예  
  [MSReportServer_ConfigurationSetting 클래스](msreportserver-configurationsetting-class.md)  

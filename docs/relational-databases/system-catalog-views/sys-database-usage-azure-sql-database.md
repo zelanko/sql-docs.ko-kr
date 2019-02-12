@@ -2,10 +2,9 @@
 title: sys.database_usage (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
+ms.service: sql-database
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - database_usage
@@ -22,26 +21,26 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f17e34de7c230b111652ea57a3baa072a442a6a5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 62942e939c1221b90b623db12c922f3dcc580c99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656742"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024904"
 ---
 # <a name="sysdatabaseusage-azure-sql-database"></a>sys.database_usage(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **참고:이 Azure SQL Database V11에만 적용 합니다.**  
+  **참고: 이 Azure SQL Database V11에만 적용 됩니다.**  
   
  개수, 형식 및 데이터베이스의 기간에 나열 된 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서버.  
   
  합니다 **sys.database_usage** 뷰는 다음 열을 포함 합니다.  
   
-|열 이름|설명|  
+|열 이름|Description|  
 |-----------------|-----------------|  
 |Time|사용 이벤트가 발생한 날짜입니다.|  
-|sku|데이터베이스에 대 한 서비스 계층의 형식: **웹**를 **비즈니스**를 **기본**를 **표준**, **Premium**|  
+|sku|데이터베이스의 서비스 계층 유형은 다음과 같습니다. **Web**, **Business**, **Basic**, **Standard**, **Premium**|  
 |quantity|하루 동안 존재한 SKU 형식 데이터베이스의 최대 수입니다.|  
   
 ## <a name="permissions"></a>사용 권한  

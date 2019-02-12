@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c4df8b4f17c006d51bdfc5bba6e7cb13b7cc69eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a3bea101bf16376ffc02699dc700f500f08f7222
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202973"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017724"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>표시기 추가 또는 삭제(보고서 작성기 및 SSRS)
   표시기는 단일 데이터 값의 상태를 한 눈에 볼 수 있도록 제공하는 최소 계기입니다. 자세한 내용은 [표시기&#40;보고서 작성기 및 SSRS&#41;](indicators-report-builder-and-ssrs.md)를 참조하세요.  
@@ -27,11 +27,11 @@ ms.locfileid: "48202973"
   
  표시기의 값과 상태를 업데이트할 수 있습니다. 자세한 내용은 다음 항목을 참조하십시오.  
   
--   [표시기 아이콘 및 표시기 집합 변경 &#40;보고서 작성기 및 SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [표시기 아이콘 및 표시기 집합 변경&#40;보고서 작성기 및 SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [집합과 측정 단위를 구성 &#40;보고서 작성기 및 SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [단위 설정 및 구성&#40;보고서 작성기 및 SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [동기화 범위 설정 &#40;보고서 작성기 및 SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [동기화 범위 설정&#40;보고서 작성기 및 SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
   
  표시기가 계기 패널 내부에 배치되기 때문에 **표시기 속성** 대화 상자나 **속성** 창을 사용하여 표시기를 구성할 때 패널 대신 표시기를 선택해야 합니다. 다음 그림에서는 계기 패널에서 선택된 표시기를 보여 줍니다.  
   

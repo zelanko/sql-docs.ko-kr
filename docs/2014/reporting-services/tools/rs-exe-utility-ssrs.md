@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3cbc3a76c1f6e5c67297f44c312fe0497666a9b8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 859c7d2cb6545c6a15e1e3e40aff28720921fb27
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505639"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023124"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe 유틸리티(SSRS)
   RS.exe 유틸리티에서는 입력 파일에 제공된 스크립트를 처리합니다. 이 유틸리티를 사용하여 보고서 서버 배포 및 관리 태스크를 자동화할 수 있습니다.  
@@ -71,10 +71,10 @@ ms.locfileid: "52505639"
  `-s` *serverURL*  
  파일을 실행할 웹 서버 이름 및 보고서 서버 가상 디렉터리를 지정합니다(필수). 보고서 서버 URL의 예는 `http://examplewebserver/reportserver`입니다. 서버 이름의 시작 부분에 붙는 접두사 http:// 또는 https://는 옵션입니다. 이를 생략하면 보고서 서버 스크립트 호스트에서 https를 먼저 사용해 본 다음 작동하지 않는 경우 http를 사용합니다.  
   
- `-u` [*도메인*\\]*사용자 이름*  
+ `-u` [*domain*\\]*username*  
  보고서 서버에 연결하는 데 사용되는 사용자 계정을 지정합니다(옵션). `-u`와 `-p`를 생략하면 현재 Windows 사용자 계정이 사용됩니다.  
   
- `-p` *암호*  
+ `-p` *password*  
  `-u` 인수에 사용할 암호를 지정합니다(`-u`를 지정한 경우 필수). 이 값은 대/소문자를 구분합니다.  
   
  `-e`  

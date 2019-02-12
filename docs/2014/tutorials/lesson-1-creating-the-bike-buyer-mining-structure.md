@@ -1,22 +1,21 @@
 ---
-title: '1 단원: Bike Buyer 마이닝 구조 만들기 | Microsoft Docs'
+title: '1단원: Bike Buyer 마이닝 구조 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a73ac60b-660f-458a-bd2f-993fbeba7226
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d6aa8d340b64f98193b31b6ebc6321407cff8368
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082683"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025804"
 ---
 # <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>1단원: Bike Buyer 마이닝 구조 만들기
   이 단원에서는 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]의 잠재 고객이 자전거를 구입할 것인지 여부를 예측할 수 있는 마이닝 구조를 만듭니다. 마이닝 구조 및 데이터 마이닝에 해당 역할을 사용 하 여 잘 모르는 경우 [마이닝 구조 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)합니다.  

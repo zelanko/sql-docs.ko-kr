@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b81c8eb53247caa2a0f0a4d931df10f9f43cd602
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 368ee35385a7147c849a4800cf9419b19986545d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221283"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020504"
 ---
 # <a name="report-server-item-properties"></a>보고서 서버 항목 속성
   항목 속성은 보고서 서버 데이터베이스의 항목에 대한 특정 속성입니다. 이러한 항목에는 보고서, 링크된 보고서, 폴더, 리소스, 모델 및 데이터 원본이 포함됩니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "48221283"
 |속성|Description|  
 |--------------|-----------------|  
 |**언어**|보고서에서 사용된 언어입니다. 값은 IETF(Internet Engineering Task Force) RFC1766 사양에 정의된 언어 코드입니다. 첫 번째 부분은 기본 언어를 지정하며 2자로 구성되어 있습니다. 하이픈으로 구분된 두 번째 부분은 해당 언어의 변형 또는 방언을 지정합니다. 보고서 정의에서 `Style` 요소와 연관된 `Body` 요소에 값이 지정되지 않은 경우 기본값은 보고서 서버의 언어입니다.|  
-|`ReportProcessingTimeout`|개별 보고서에 대한 제한 시간(초)입니다. 이 값이 설정된 경우 지정된 시간이 경과하면 보고서 서버에서 보고서 처리를 중지합니다. 유효한 값은 `-1` 를 통해 `2`,`147`합니다`483`,`647`합니다. 값이 `-1`이면 보고서 처리 중 시간 제한으로 인한 중지가 발생하지 않습니다. 값이 `null`이면 보고서 처리 제한 시간에 시스템 속성 `ReportProcessingTimeout`의 값이 사용됩니다. 기본값은 `null`입니다. 자세한 내용은 [보고서 서버 시스템 속성](reporting-services-properties-report-server-system-properties.md)을 참조하세요.|  
+|`ReportProcessingTimeout`|개별 보고서에 대한 제한 시간(초)입니다. 이 값이 설정된 경우 지정된 시간이 경과하면 보고서 서버에서 보고서 처리를 중지합니다. 유효한 값은 `-1`부터 `2`,`147`,`483`,`647`까지입니다. 값이 `-1`이면 보고서 처리 중 시간 제한으로 인한 중지가 발생하지 않습니다. 값이 `null`이면 보고서 처리 제한 시간에 시스템 속성 `ReportProcessingTimeout`의 값이 사용됩니다. 기본값은 `null`입니다. 자세한 내용은 [보고서 서버 시스템 속성](reporting-services-properties-report-server-system-properties.md)을 참조하세요.|  
 |**ExecutionDate**|보고서에 대해 마지막으로 보고서 스냅숏이 만들어진 날짜와 시간입니다.|  
 |**CanRunUnattended**|보고서를 일정에 따라 무인 모드로 실행할 수 있는지 여부를 나타내는 값입니다. 이 속성을 `true`로 설정하면 보고서 매개 변수에 대한 기본값이 정의되고 데이터 원본 자격 증명이 보고서에 저장되거나 자격 증명 검색 옵션이 `None`으로 설정됩니다. 이 속성을 `false`로 설정하면 보고서를 무인 모드로 실행하기 위한 선행 조건이 충족되지 않습니다. 자세한 내용은 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.|  
 |**HasParameterDefaultValues**|보고서에 모든 보고서 매개 변수에 대해 설정된 유효한 기본값이 있는지 여부를 나타내는 값입니다. 이 값은 보고서에 보고서 매개 변수가 없는 경우에도 `true`입니다. 이 속성을 `false`로 설정하면 보고서 매개 변수 하나 이상에 유효한 기본값이 없습니다.|  

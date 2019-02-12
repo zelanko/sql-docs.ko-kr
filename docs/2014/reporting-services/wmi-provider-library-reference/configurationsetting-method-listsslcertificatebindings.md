@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: d12d280c-9b6f-47a8-bcd9-34cde31c8886
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bf0405b5afb732a04b524469fb507f1c44bae9a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9802176b5f5c82ba60a4e47d85445b54eaa1a5f0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136093"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031624"
 ---
 # <a name="listsslcertificatebindings-method-wmi-msreportserverconfigurationsetting"></a>ListSSLCertificateBindings 메서드(WMI MSReportServer_ConfigurationSetting)
   컴퓨터에 설치된 SSL 인증서 목록을 반환합니다.  

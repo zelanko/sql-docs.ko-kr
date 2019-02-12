@@ -11,14 +11,14 @@ helpviewer_keywords:
 - query designers
 ms.assetid: 553f0d4e-8b1d-4148-9321-8b41a1e8e1b9
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a13f04338eb780a8d5efa839a5570ea0c5737752
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 5d8ce7b33fe281b32b1fc7758d1f7340884e492f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155973"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020626"
 ---
 # <a name="query-designers-report-builder"></a>쿼리 디자이너(보고서 작성기)
   보고서 작성기에서는 보고서에 대한 쿼리를 작성하는 데 도움이 되는 그래픽 및 텍스트 기반 쿼리 디자이너를 제공합니다. 각 데이터 원본 유형에는 연결된 쿼리 디자이너가 있습니다. 일부 데이터 원본은 쿼리를 대화형으로 작성하는 데 도움이 되는 그래픽 디자이너를 지원하고 다른 데이터 원본은 텍스트 기반 쿼리 디자이너를 사용합니다. SQL Server 데이터 원본은 그래픽 기반 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 모두 지원합니다.  

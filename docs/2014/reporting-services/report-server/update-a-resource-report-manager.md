@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5482a935a5357d4557a6ffd202feac6be07900e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 71ccf123b9c8f5dba751affaae0374c90b5a8d99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130363"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020225"
 ---
 # <a name="update-a-resource-report-manager"></a>리소스 업데이트(보고서 관리자)
   리소스를 최신 버전으로 바꾸어 업데이트할 수 있습니다. 리소스는 보고서 서버에 저장된 항목이며 사용자가 업로드한 파일의 내용을 포함합니다. 새롭거나 다른 파일 내용을 기존 리소스에 가져와 기존 리소스를 바꿀 수 있습니다. 리소스를 업데이트하면 리소스에 대한 기존 속성과 보안 설정을 유지하면서 내용을 업데이트할 수 있습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "48130363"
  업데이트하는 리소스가 보고서에 사용된 이미지를 포함하는 경우 업데이트된 이미지를 보려면 보고서를 새로 고쳐야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [페이지 콘텐츠를 &#40;보고서 관리자&#41;](../contents-page-report-manager.md)   
+ [내용 페이지&#40;보고서 관리자&#41;](../contents-page-report-manager.md)   
  [파일 업로드 페이지&#40;보고서 관리자&#41;](../upload-file-page-report-manager.md)   
  [폴더에 파일 업로드](upload-files-to-a-folder.md)   
  [보고서 관리자 F1 도움말](../report-manager-f1-help.md)  

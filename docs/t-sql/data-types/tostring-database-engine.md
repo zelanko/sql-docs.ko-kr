@@ -1,7 +1,7 @@
 ---
 title: ToString(데이터베이스 엔진) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/23/2017
+ms.date: 07/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7501cabbbf4f4270f482f90da10018256ebb9808
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3b278f5147cad9fbd86a5f1d241ea77b9b15017a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209692"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018994"
 ---
 # <a name="tostring-database-engine"></a>ToString(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ hierarchyidRepresentation    StringRepresentation
 0x5ADE                       /1/1/3/
 ```
   
-### <a name="c-clr-example"></a>3. CLR 예  
+### <a name="c-clr-example"></a>C. CLR 예  
 다음 코드 조각은 ToString() 메서드를 호출합니다.
   
 ```sql

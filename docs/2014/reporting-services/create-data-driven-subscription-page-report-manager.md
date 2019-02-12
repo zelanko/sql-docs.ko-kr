@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 814b4653-572a-48c7-847f-b310ba0f3046
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 041553621a9f85cf4ca4f409f25b05cb2660c12b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d3abebe357646aab1a09e3bc6a59130461d268bd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116871"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027044"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>데이터 기반 구독 만들기 페이지(보고서 관리자)
   데이터 기반 구독 만들기 페이지를 사용하여 구독이 실행될 때마다 구독 정보에 대한 구독자 데이터베이스를 쿼리하는 구독을 작성하거나 수정할 수 있습니다. 데이터 기반 구독은 쿼리 결과를 사용하여 구독을 받는 사람, 배달 설정 및 보고서 매개 변수 값을 확인합니다. 실행할 때 보고서 서버는 쿼리를 실행하여 구독 설정에 사용된 값을 가져옵니다. 데이터 기반 구독 만들기 페이지를 사용하여 쿼리를 정의하고 구독 설정에 쿼리 값을 할당할 수 있습니다. 데이터 기반 구독에 지정하는 값과 옵션은 마법사처럼 여러 페이지(총 7페이지)로 나뉩니다.  
@@ -151,10 +151,10 @@ ms.locfileid: "48116871"
  **시간당**  
  시간 간격으로 실행되는 일정을 정의합니다.  
   
- **매일**  
- 선택하는 요일의 특정 시간과 분에 실행되는 일정의 정의합니다. 다음과 같은 방법으로 일을 지정할 수 있습니다: 모든  *\<일 >*, 주중 매일, 매  *\<번호 >* 일입니다. 한 가지 방법을 선택하면 다른 날이 선택된 것처럼 보이더라도 다른 방법은 사용할 수 없게 됩니다.  
+ **Daily**  
+ 선택하는 요일의 특정 시간과 분에 실행되는 일정의 정의합니다. 날짜는 모든  *\<날짜 >*, 주중 매일, 매  *\<번호 >* 일입니다. 한 가지 방법을 선택하면 다른 날이 선택된 것처럼 보이더라도 다른 방법은 사용할 수 없게 됩니다.  
   
- **매주**  
+ **Weekly**  
  주별 간격으로 특정 시간과 분에 실행되는 일정을 정의합니다. 간격은 주 전체(예: 격주간)나 주 중 요일로 지정할 수 있습니다.  
   
  **월간**  
@@ -170,11 +170,11 @@ ms.locfileid: "48116871"
  구독에 대해 충분한 정보가 있어야 **마침** 단추를 설정할 수 있습니다. 구독을 완료하려면 **마침** 을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [데이터 기반 구독](subscriptions/data-driven-subscriptions.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [구독 및 배달 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [구독 및 배달&#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

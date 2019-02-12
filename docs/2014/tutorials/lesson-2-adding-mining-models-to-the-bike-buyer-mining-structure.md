@@ -1,25 +1,24 @@
 ---
-title: '2 단원: Bike Buyer 마이닝 구조에 마이닝 모델 추가 | Microsoft Docs'
+title: '2단원: Bike Buyer 마이닝 구조에 마이닝 모델 추가 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 03fe44c5-6452-4ed0-95f6-9682670c0f52
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7bcc33e35ff0cdfcd46a73f939083ea23091673d
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+manager: kfile
+ms.openlocfilehash: de65fb7a85154f607cd8f266faec4621cdc41476
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462049"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025224"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>2단원: Bike Buyer 마이닝 구조에 마이닝 모델 추가
-  이 단원에서는 사용자가 만든 Bike Buyer 마이닝 구조에 두 개의 마이닝 모델 추가 합니다 [1 단원: Bike Buyer 마이닝 구조 만들기](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)합니다. 이러한 마이닝 모델을 추가하면 한 모델을 사용하여 데이터를 탐색하고 다른 모델을 사용하여 예측을 만들 수 있습니다.  
+  이 단원에서는 사용자가 만든 Bike Buyer 마이닝 구조에 두 개의 마이닝 모델 추가 [1 단원: Bike Buyer 마이닝 구조 만들기](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)합니다. 이러한 마이닝 모델을 추가하면 한 모델을 사용하여 데이터를 탐색하고 다른 모델을 사용하여 예측을 만들 수 있습니다.  
   
  탐색을 기반으로 마이닝 모델을 만들면는 잠재 고객 특성 별로 분류할 수, 하는 방법의 [Microsoft 클러스터링 알고리즘](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)합니다. 이후 단원에서는 이 알고리즘에서 비슷한 특징을 공유하는 고객 집단을 찾는 방법을 알아 봅니다. 예를 들어 여러 특정 고객이 서로 근처에 살고 자전거로 출퇴근하며 비슷한 학력을 갖는 경향이 있음을 알게 될 수 있습니다.  이러한 집단을 사용하여 고객 간의 상호 연관성을 보다 잘 파악할 수 있으며 이러한 정보를 사용하여 특정 고객을 대상으로 하는 마케팅 전략을 세울 수 있습니다.  
   
