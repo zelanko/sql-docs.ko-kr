@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: a5560581-fd57-4a45-b7ea-43b21a8a7419
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b68fdf49527e83965a5c1a5c41ab185bdba0c463
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 28dcf8712214e7240eb60ef3caa6b28cda31c38e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185893"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031921"
 ---
 # <a name="print-reports-from-other-applications-report-builder-and-ssrs"></a>다른 애플리케이션에서 보고서 인쇄(보고서 작성기 및 SSRS)
-  보고서 작성기는 다른 애플리케이션에서 보고서를 쉽게 볼 수 있도록 내보내기 옵션을 제공합니다. `Export` 브라우저 또는 웹 기반 응용 프로그램에서 열면 보고서 위쪽에 표시 되는 보고서 도구 모음에서 사용할 수 있는 명령입니다. 보고서를 내보내면 다른 애플리케이션에서 보고서가 표시됩니다. 예를 들어 보고서를 Excel로 내보내면 해당 보고서가 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]에서 열립니다. 애플리케이션에 사용하려는 특정 인쇄 기능이 있는 경우에만 인쇄 목적으로 보고서를 내보내는 것이 좋습니다.  
+  보고서 작성기는 다른 애플리케이션에서 보고서를 쉽게 볼 수 있도록 내보내기 옵션을 제공합니다. 브라우저나 웹 기반의 응용 프로그램에서 보고서를 열면 보고서 위쪽에 나타나는 보고서 도구 모음에서 `Export` 명령을 사용할 수 있습니다. 보고서를 내보내면 다른 애플리케이션에서 보고서가 표시됩니다. 예를 들어 보고서를 Excel로 내보내면 해당 보고서가 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]에서 열립니다. 애플리케이션에 사용하려는 특정 인쇄 기능이 있는 경우에만 인쇄 목적으로 보고서를 내보내는 것이 좋습니다.  
   
  다른 애플리케이션으로 보고서를 내보내려면 해당 애플리케이션이 설치되어 있어야 합니다. 예를 들어 Acrobat(PDF) 형식으로 보고서를 내보내려면 컴퓨터에 Adobe Acrobat Reader가 설치되어 있어야 합니다. TIFF 형식으로 보고서를 내보내도록 선택하면 TIFF 파일 형식에 연결된 보기 애플리케이션에서 보고서가 열립니다. 사용되는 애플리케이션은 설치되어 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 버전에 따라 다르지만 일반적으로 Windows 사진 및 팩스 뷰어가 사용됩니다. 기본 해상도는 96DPI의 화면 해상도에 해당합니다. 프린터의 기능에 맞도록 Windows 사진 및 팩스 뷰어에서 해상도를 300DPI나 600DPI로 높일 수 있습니다. 해상도를 조정하는 방법은 Windows 제품 설명서를 참조하십시오.  
   

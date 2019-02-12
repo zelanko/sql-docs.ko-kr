@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a81c87f1-7977-4b30-b6ac-b38b3e2b6398
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 818400a678b16f524e79da607a25775ad756ca5d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: f5f74c6621d329885e9149fce9a37c7418d9c37b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374495"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025204"
 ---
 # <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>2단원: xsd 도구를 사용하여 RDL 스키마에서 클래스 생성
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 프로젝트를 만든 후 다음 단계는 보고서 정의 스키마의 로컬 복사본을 검색하고 XML 스키마 정의 도구(Xsd.exe)를 실행하는 것입니다.  
@@ -55,7 +54,7 @@ ms.locfileid: "53374495"
 ## <a name="next-lesson"></a>다음 단원  
  다음 단원에서는 RDL 스키마에서 생성한 클래스를 사용하여 보고서 서버에서 보고서 정의를 로드하는 코드를 작성합니다. 참조 [3 단원: 보고서 서버에서 보고서 정의 로드](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [RDL 스키마에서 생성 된 클래스를 사용 하 여 보고서를 업데이트 하는 중 &#40;SSRS 자습서&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [RDL(Report Definition Language)&#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   

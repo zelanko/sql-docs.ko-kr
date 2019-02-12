@@ -11,14 +11,14 @@ f1_keywords:
 - "10025"
 ms.assetid: 933a6f44-4eb7-4e73-9c40-ac0fd17b23d3
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ff8ae37c2caf34432acde8fab2235a3b83b372a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 58abc975b461c6d12778c95620eadedd4e6caf8a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172153"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030224"
 ---
 # <a name="dataset-properties-dialog-box-filters-report-builder"></a>데이터 세트 속성 대화 상자, 필터(보고서 작성기)
   **데이터 집합 속성** 대화 상자에서 **필터** 를 선택하여 데이터 집합에 대한 필터를 만들 수 있습니다.  
@@ -62,6 +62,6 @@ ms.locfileid: "48172153"
  [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [데이터 집합에 필터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
- [보고서에 사용 되는 식 &#40;보고서 작성기 및 SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   
   

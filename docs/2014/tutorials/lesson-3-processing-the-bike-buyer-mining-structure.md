@@ -1,25 +1,24 @@
 ---
-title: '3 단원: Bike Buyer 마이닝 구조 처리 | Microsoft Docs'
+title: '3단원: Bike Buyer 마이닝 구조 처리 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e748c2cd-339d-4e82-82f1-be2d0fc41b61
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 77c49a7b1616d1a54c652efee05ff1e827d07caf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2e3f85016b32884b9a6b809e28d20d9985f97cd9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053833"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025334"
 ---
 # <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>3단원: Bike Buyer 마이닝 구조 처리
-  이 단원에서는 사용 하 여 INSERT INTO 문과의 vTargetMail 뷰를 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 샘플 데이터베이스에서 만든 마이닝 모델과 마이닝 구조를 처리 하는 데 [1 단원:BikeBuyer마이닝구조만들기](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md) 하 고 [2 단원: Bike Buyer 마이닝 구조에 마이닝 모델 추가](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)합니다.  
+  이 단원에서는 사용 하 여 INSERT INTO 문과의 vTargetMail 뷰를 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 샘플 데이터베이스에서 만든 마이닝 모델과 마이닝 구조를 처리 하는 데 [1 단원: Bike Buyer 마이닝 구조를 만드는](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md) 고 [2 단원: Bike Buyer 마이닝 구조에 마이닝 모델 추가](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)합니다.  
   
  마이닝 구조를 처리하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 원본 데이터를 읽은 다음 마이닝 모델을 지원하는 구조를 작성합니다. 마이닝 모델을 처리하면 마이닝 구조에서 정의한 데이터가 사용자가 선택한 데이터 마이닝 알고리즘을 통해 전달됩니다. 이 알고리즘에서는 경향 및 패턴을 검색한 다음 마이닝 모델에 이 정보를 저장합니다. 따라서 마이닝 모델은 실제 원본 데이터 대신 알고리즘에서 발견한 정보를 포함합니다. 마이닝 모델을 처리 하는 방법에 대 한 자세한 내용은 참조 하세요. [처리 요구 사항 및 고려 사항 &#40;데이터 마이닝&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)합니다.  
   
@@ -75,7 +74,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
   
 #### <a name="to-process-the-mining-structure-by-using-insert-into"></a>INSERT INTO를 사용하여 마이닝 구조를 처리하려면  
   
-1.  **개체 탐색기**의 인스턴스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 가리킨 **새 쿼리**를 클릭 하 고 **DMX**합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   

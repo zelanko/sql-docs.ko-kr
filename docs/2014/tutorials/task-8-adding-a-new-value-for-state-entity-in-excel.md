@@ -1,24 +1,21 @@
 ---
-title: '태스크 8: Excel에서 State 엔터티에 새 값 추가 | Microsoft Docs'
+title: '태스크 8: Excel에서 State 엔터티에 새 값을 추가 합니다. | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a763d76b-06a3-4d51-9614-01fc9fb1c158
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 04fe6fa0a9036ca3835fd4bc0afcb0e35854fd85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04ed80887a2a81a2179dcec423b9e22b3f9d43ef
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222163"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032034"
 ---
 # <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>태스크 8: Excel에서 State 엔터티에 새 값 추가
   이 작업에서는 Excel에서 State 엔터티에 대한 값을 추가하고 변경 내용을 MDS 서버에 게시합니다.  
@@ -29,11 +26,11 @@ ms.locfileid: "48222163"
   
 2.  **Excel**를 클릭 합니다 **마스터 데이터** 메뉴의 탭을 클릭 **탐색기 표시** 리본의.  
   
-3.  에 **마스터 데이터 탐색기**를 선택 **Suppliers** 에 대 한 **모델**합니다. 두 엔터티를 표시 합니다. **공급 업체** 및 **상태** 엔터티 목록에서.  
+3.  에 **마스터 데이터 탐색기**를 선택 **Suppliers** 에 대 한 **모델**합니다. 엔터티 목록에는 **공급 업체** 하 고 **상태** 엔터티 목록에서.  
   
 4.  두 번 클릭 **상태** 목록에서입니다. 모든 멤버를 **상태** 워크시트에 MDS에서 엔터티를 표시 해야 합니다.  
   
-5.  이제 다음 값을 사용 하 여 끝에 행을 추가 합니다. **North Carolina** 에 대 한 **이름** 및 **NC** 에 대 한 **코드**합니다. 색 구분에 따라 새 레코드/업데이트된 레코드가 다른 레코드와 구분됩니다.  
+5.  이제 마지막 행에서 **North Carolina** 에 대 한 **이름** 하 고 **NC** 에 대 한 **코드**합니다. 색 구분에 따라 새 레코드/업데이트된 레코드가 다른 레코드와 구분됩니다.  
   
      ![Excel-상태에 North Carolina 추가](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-02.jpg "Excel-상태에 North Carolina 추가")  
   
@@ -51,11 +48,11 @@ ms.locfileid: "48222163"
   
 10. 있음을 **색 코딩** 행에 대 한 **North Carolina** 으로 **상태** 이제 다른 레코드와 동일 하 게 됩니다.  
   
-11. **선택 사항:** 새 멤버 (NC)에 추가 되는 확인 합니다 **상태** 사용 하 여 엔터티를 **탐색기** 에서 **마스터 데이터 관리자**합니다.  
+11. **선택 사항:** 새 멤버 (NC)에 추가 되었는지 확인 합니다 **상태** 사용 하 여 엔터티를 **탐색기** 에서 **마스터 데이터 관리자**합니다.  
   
 12. Excel에서 마우스 오른쪽 단추로 클릭 합니다 **상태** 아래쪽과 클릭 워크시트 **삭제** 워크시트를 삭제 하려면. 워크시트를 삭제해도 MDS 서버에서는 데이터가 삭제되지 않습니다.  
   
 ## <a name="next-step"></a>다음 단계  
- [태스크 9: 마스터 데이터 관리자를 사용하여 파생 계층 만들기](../../2014/tutorials/task-9-creating-a-derived-hierarchy-using-master-data-manager.md)  
+ [태스크 9: 마스터 데이터 관리자를 사용 하 여 파생 계층 만들기](../../2014/tutorials/task-9-creating-a-derived-hierarchy-using-master-data-manager.md)  
   
   

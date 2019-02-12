@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 00094e630c9beaf7f5093d944f267a2884c22da7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7c6cb19da853387f4684c301e183276a0f4b7e96
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059349"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027674"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>보고서 작성기의 보고서 파트 및 데이터 세트
   보고서 작성기에서 보고서에 데이터를 포함하는 가장 쉬운 방법은 보고서 파트 갤러리에서 보고서 파트를 추가하는 것입니다. 보고서 파트에는 파트가 종속되는 *종속 데이터 세트*라는 데이터 세트가 들어 있습니다. 종속 데이터 세트는 공유 데이터 원본을 기반으로 하며 포함된 데이터 세트 또는 공유 데이터 세트일 수 있습니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "48059349"
 ## <a name="see-also"></a>관련 항목  
  [보고서 디자인 뷰&#40;보고서 작성기&#41;](../report-builder/report-design-view-report-builder.md)   
  [보안&#40;보고서 작성기&#41;](../report-builder/security-report-builder.md)   
- [보고서 파트 &#40;보고서 작성기 및 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [보고서 파트&#40;보고서 작성기 및 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

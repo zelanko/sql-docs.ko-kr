@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 88cd7f9323740df84f9123a37c69765f37fb14ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 055c0b60ae13f1933d0de753a3096f9b48786aa2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182713"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034824"
 ---
 # <a name="secure-folders"></a>보안 폴더
   폴더 보안 설정은 보고서 서버의 모든 내용에 보안을 설정하기 위한 기본 토대입니다. 보안 설정은 폴더 구조를 통해 상속되므로 폴더 계층의 큰 부분이나 작은 부분을 지정하여 특정 종류의 액세스를 허용할 수 있습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "48182713"
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 및 리소스 보안](secure-reports-and-resources.md)   
- [공유 데이터 원본 항목 보안](secure-shared-data-source-items.md)   
+ [공유 데이터 원본 항목 보안 설정](secure-shared-data-source-items.md)   
  [기본 모드 보고서 서버에 대한 사용 권한 부여](granting-permissions-on-a-native-mode-report-server.md)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0001b04a93c1aacfbf2e7701faada815cb6316ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: b32ffb832baf12a72df6e32b07386f24448b3c35
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515451"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035264"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>예측 만들기(기본 데이터 마이닝 자습서)
   예측 쿼리 작성기를 사용 하 여 예측을 생성 한 다음 수 마이닝 모델의 정확도 테스트 하 고 결과 만족 했으면, 후 합니다 **마이닝 모델 예측** 데이터 마이닝에서 탭 디자이너입니다.  
@@ -133,7 +132,7 @@ ms.locfileid: "52515451"
   
      선택한 줄의 시작 부분에 여는(왼쪽) 괄호를 삽입하거나 현재 줄의 끝에 닫는(오른쪽) 괄호를 삽입합니다.  
   
--   **및/또는**  
+-   **AND/OR**  
   
      현재 함수나 열 바로 뒤에 `AND` 연산자 또는 `OR` 연산자를 삽입합니다.  
   

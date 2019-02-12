@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9a5d1b52-d505-4e6f-8a89-569329c094e2
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 75529b9880183a644abdbdce1f6174c375245ba2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: cf0a02e973d046f3dff2b2df95327cf38e88443c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355841"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027974"
 ---
 # <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>태스크 14: 제어 흐름에 SQL 실행 태스크를 추가하여 MDS에 대한 저장 프로시저 실행
   데이터를 MDS의 준비 테이블에 로드한 다음에는 준비 테이블의 데이터를 MDS 데이터베이스의 적합한 테이블로 로드하기 위해 해당 테이블과 연관된 저장 프로시저를 실행합니다. 이 저장 프로시저에는 전달해야 하는 두 개의 필수 매개변수(LogFlag 및 VersionName)가 있습니다. LogFlag는 준비 프로세스 중 트랜잭션을 기록할지 여부를 지정하고, VersionName은 모델의 버전을 나타냅니다. 참조 [준비 된 저장 프로시저](https://msdn.microsoft.com/library/hh231028.aspx) 자세한 세부 정보에 대 한 항목입니다.  
@@ -40,7 +37,7 @@ ms.locfileid: "53355841"
     |이름|데이터 형식|값|  
     |----------|---------------|-----------|  
     |LogFlag|Int32|1|  
-    |VersionName|String|VERSION_1|  
+    |VersionName|문자열|VERSION_1|  
   
      ![SSIS 변수 창](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-02.jpg "SSIS 변수 창")  
   
@@ -48,7 +45,7 @@ ms.locfileid: "53355841"
   
 7.  에 **SQL 실행 태스크 편집기** 대화 상자에서 **(local). MDS** (또는 **localhost입니다. MDS**)에 대 한 **연결**합니다.  
   
-8.  형식 **EXEC [stg]. [ udp_Supplier_Leaf]???** 에 대 한 **SQL 문을**합니다. SQL Server Management Studio를 사용해서 이름을 확인할 수 있습니다.  
+8.  Type **EXEC [stg].[udp_Supplier_Leaf] ?, ?, ?** 에 대 한 **SQL 문을**합니다. SQL Server Management Studio를 사용해서 이름을 확인할 수 있습니다.  
   
      ![실행 SQL 편집기 대화 상자-일반 설정](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-03.jpg "실행 SQL 편집기 대화 상자-일반 설정")  
   

@@ -1,24 +1,21 @@
 ---
-title: '태스크 11: 기술 자료를 게시 | Microsoft Docs'
+title: '태스크 11: 기술 자료를 게시 합니다. | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9ba826a0-11c5-4819-9435-3e17d53cffa7
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: b498a4ace8afe504d8257e4ecdb3bc155b269068
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 345dd3670fe42789907a567fce4df4ad34ce3cd3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137113"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031964"
 ---
 # <a name="task-11-publishing-the-knowledge-base"></a>태스크 11: 기술 자료 게시
   이 작업에서는 기술 자료를 게시합니다. 게시된 기술 자료는 데이터 품질 프로젝트에서 정리 또는 일치 작업에 사용할 수 있습니다.  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d5004ad7cb8283be11d7e89f96ee46bd29ccccd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 581da37baeead00355e6ada1b822731833e5adaf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189923"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037070"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>8단원: 데이터 필터 만들기
   부모 보고서에 드릴스루 동작을 추가한 후에는 자식 보고서에 대해 정의한 데이터 테이블에 대한 데이터 필터를 만듭니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "48189923"
   
 5.  등호를 클릭 합니다. (**=**) 연산자를 **연산자** 드롭 다운 목록.  
   
-6.  옆의 식 단추를 클릭 합니다 **값** 필드를 클릭 **매개 변수** 에 **범주** 영역에서 마우스 두 번 클릭 `productid` 에  **값** 영역입니다. 이제 **다음에 대한 식 설정: 값** 필드에 **=Parameters!productid.Value**와 비슷한 식이 포함됩니다.  
+6.  옆의 식 단추를 클릭 합니다 **값** 필드를 클릭 **매개 변수** 에 **범주** 영역에서 마우스 두 번 클릭 `productid` 에  **값** 영역입니다. 이제 **다음에 대한 식 설정: 값** 필드에 비슷한 식이 포함 **매개 변수 =! productid 합니다. 값**합니다.  
   
 7.  클릭 **확인** 하 고 **확인** 다시 합니다 **테이블 릭 스 속성** 대화 상자.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48189923"
   
     1.  데이터 집합의 인스턴스를 만듭니다 `DataSet2`의 2 단계에서에서 만든 [4 단원: 자식 보고서에 대 한 데이터 연결 및 데이터 테이블 정의](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)합니다.  
   
-    2.  SqlServer 데이터베이스에 대한 연결을 만들어 **4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의**에서 정의된 쿼리를 실행합니다.  
+    2.  SqlServer 데이터베이스에 대한 연결을 만들어 **4단원: 데이터를 정의 합니다. 연결 및 DataTable 자식 보고서에 대 한**합니다.  
   
     3.  쿼리는 필터링되지 않은 데이터를 반환합니다.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "48189923"
   
     1.  데이터 집합의 인스턴스를 만듭니다 `DataSet2`의 2 단계에서에서 만든 [4 단원: 자식 보고서에 대 한 데이터 연결 및 데이터 테이블 정의](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)합니다.  
   
-    2.  SqlServer 데이터베이스에 대한 연결을 만들어 **4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의**에서 정의된 쿼리를 실행합니다.  
+    2.  SqlServer 데이터베이스에 대한 연결을 만들어 **4단원: 데이터를 정의 합니다. 연결 및 DataTable 자식 보고서에 대 한**합니다.  
   
     3.  쿼리에는 반환된 데이터가 부모 보고서에서 선택한 `productid`를 기반으로 필터링되어 있는지 확인하는 `ProductID` 매개 변수가 포함됩니다.  
   

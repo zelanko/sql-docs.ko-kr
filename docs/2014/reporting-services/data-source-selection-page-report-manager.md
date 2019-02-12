@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: db1e01a18d755076585c64ee3518492c8f5de561
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1bfcb23c4ed497d2705ece469e2949c332cdfcdf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091143"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032324"
 ---
 # <a name="data-source-selection-page-report-manager"></a>데이터 원본 선택 페이지(보고서 관리자)
   데이터 원본 선택 페이지를 사용하여 보고서나 보고서 모델에서 사용할 기존의 공유 데이터 원본 항목을 선택할 수 있습니다. 다른 데이터 원본을 선택할 수도 있습니다. 데이터 원본 유형 또는 연결 문자열을 보려면 공유 데이터 원본을 탐색하고 속성 페이지를 열어야 합니다.  
