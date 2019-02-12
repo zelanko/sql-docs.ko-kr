@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a35e16107d926bc9815e2e6de2d43a35172bd2e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a1bc66e2d415b9f46193e1fce0b18a58bc570d34
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070283"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042964"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>공유 일정 일시 중지 및 다시 시작
   사용 중인 공유 일정을 일시 중지하고 다시 시작할 수 있습니다. 공유 일정을 일시 중지하여 보고서 처리 및 구독을 트리거하는 데 사용되는 일정을 일시적으로 중지할 수 있습니다. 공유 일정만 일시 중지하고 다시 시작할 수 있습니다. 보고서별 일정은 일시 중지할 수 없습니다.  
   
- 진행 중인 보고서의 처리는 일시 중지하고 다시 시작할 수 없습니다. SQL Server 에이전트 서비스의 일정 큐에 있는 일정만 일시 중지하고 다시 시작할 수 있습니다. 처리 중인 작업은 일정 예약 엔진 범위 밖에 있습니다. 자세한 내용은 참조 하세요. [실행 중인 프로세스 관리](manage-a-running-process.md)  
+ 진행 중인 보고서의 처리는 일시 중지하고 다시 시작할 수 없습니다. SQL Server 에이전트 서비스의 일정 큐에 있는 일정만 일시 중지하고 다시 시작할 수 있습니다. 처리 중인 작업은 일정 예약 엔진 범위 밖에 있습니다. 자세한 내용은 [실행 중인 프로세스 관리](manage-a-running-process.md)를 참조하세요.  
   
  공유 일정이 일시 중지된 동안 수행되었어야 하는 모든 작업은 건너뛸 수 있습니다. 공유 일정을 다시 시작하면 서버의 현지 시간을 사용하여 다음 예약된 시간에 보고서 및 구독 처리가 수행됩니다. 기본 모드 보고서 서버 또는 SharePoint 서비스 애플리케이션은 일정을 일시 중지하지 않았으면 수행되었을 예약된 작업을 만회하려고 하지 않습니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48070283"
 -   [공유 일정 일시 중지 및 다시 시작(SharePoint 모드)](#bkmk_sharepoint)  
   
 ##  <a name="bkmk_native"></a> 공유 일정 일시 중지 및 다시 시작(기본 모드)  
- 공유 일정을 일시 중지하고 다시 시작하려면 보고서 관리자에서 일정 페이지를 사용합니다. 여기에는 일정을 일시 중지하고 다시 시작하는 옵션이 없으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용할 수 없습니다. 자세한 내용은 [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md)합니다.  
+ 공유 일정을 일시 중지하고 다시 시작하려면 보고서 관리자에서 일정 페이지를 사용합니다. 여기에는 일정을 일시 중지하고 다시 시작하는 옵션이 없으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용할 수 없습니다. 자세한 내용은 [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md)을 참조하세요.  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>공유 일정을 일시 중지 또는 다시 시작하려면  
   

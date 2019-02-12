@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e1ffb6d7-fbc5-4695-b538-cc2302d1a17d
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 17723cfd2c1c694f21130e985b6bd65736f90236
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 21f0cf5a4d096bfa0f4b673fdd716e2e48ee1396
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373941"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040764"
 ---
 # <a name="task-2-testing-and-publishing-the-matching-policy"></a>작업 2: 일치 정책 테스트 및 게시
   이 태스크에서는 테스트 하 고이 게시 합니다 **Remove Duplicate Suppliers** 일치 정책입니다.  

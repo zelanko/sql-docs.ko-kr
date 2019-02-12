@@ -1,24 +1,23 @@
 ---
-title: '3 단원: Windows Azure Blob Storage 서비스에 전체 데이터베이스 백업을 작성 하 | Microsoft Docs'
+title: '3단원: Windows Azure Blob Storage 서비스에 전체 데이터베이스 백업을 작성 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: 454c8296-64e9-46ed-b141-5ebfbc8a4fe2
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f0de77c43dc2a18bbbb4496f6c1d1c3aab21de96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 242e32b08ec6346c39e149628e773b33554c95d4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172273"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029794"
 ---
-# <a name="lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>3 단원 : Windows Azure Blob Storage 서비스에 전체 데이터베이스 백업 작성
+# <a name="lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>3단원: Microsoft Azure Blob Storage Service로 전체 데이터베이스 백업 작성
   이 단원에서는 Windows Azure Blob 스토리지 서비스로 전체 데이터베이스 백업을 수행하는 tsql 문을 사용하는 방법을 보여 줍니다.  
   
 ## <a name="perform-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>Microsoft Azure Blob Storage Service로 전체 데이터베이스 백업 수행  
@@ -45,6 +44,6 @@ ms.locfileid: "48172273"
 5.  개체 탐색기에서 Azure Storage에 연결합니다. 컨테이너 및 새로 만든 백업 파일을 찾아봅니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [4단원: 전체 데이터베이스 백업에서 복원 수행](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)입니다.  
+ [4단원: 전체 데이터베이스 백업에서 복원을 수행](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)합니다.  
   
   

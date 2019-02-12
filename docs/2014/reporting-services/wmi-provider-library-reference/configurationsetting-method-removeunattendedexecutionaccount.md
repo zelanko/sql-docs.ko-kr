@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 77e371c1-7c26-44f9-9119-7c8dc838db32
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e348aa6dec1488af16cd6948b1f7132c5d3a7387
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ed69a02ddf8a02c1256c8f468e9ee75c573c2797
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196479"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031674"
 ---
 # <a name="removeunattendedexecutionaccount-method-wmi-msreportserverconfigurationsetting"></a>RemoveUnattendedExecutionAccount 메서드(WMI MSReportServer_ConfigurationSetting)
   보고서 서버 구성 파일에서 무인 실행 계정 항목을 삭제합니다.  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 92256240-0cd5-4be4-8904-d1e3b93cb6b3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 25d7df59d182c7183fb843a0eb2763bc19b1eefb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 88c798ce1bd5f25b1a844894b8aa609a4c641e4c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223343"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013534"
 ---
 # <a name="hide-legend-items-on-the-chart-report-builder-and-ssrs"></a>차트에서 범례 항목 숨기기(보고서 작성기 및 SSRS)
   기본적으로 셰이프 차트가 아닌 차트에 추가된 모든 계열은 범례에서 항목으로 추가됩니다. 원형, 도넛형, 깔때기형 및 피라미드형 차트의 경우 차트에 계열을 추가하면 범례에 개별 데이터 요소가 추가됩니다.  
@@ -36,8 +36,8 @@ ms.locfileid: "48223343"
     >  한 그룹에서 계열을 숨기고 다른 그룹에서는 표시하는 기능은 지원되지 않습니다. **계열 그룹** 영역에 필드를 추가하면 해당 그룹에 속한 모든 계열이 숨겨집니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [차트의 범례 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](chart-legend-formatting-report-builder.md)   
- [차트의 데이터 요소에 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [차트의 범례 서식 지정&#40;보고서 작성기 및 SSRS&#41;](chart-legend-formatting-report-builder.md)   
+ [차트의 데이터 요소에 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [범례 항목의 텍스트 변경&#40;보고서 작성기 및 SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
  [차트에 이동 평균 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)   
  [범례 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)  

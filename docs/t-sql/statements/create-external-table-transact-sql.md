@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL TABLE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 6/12/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7d0e18e67720b301f97cc212f7b3b5de0d08e29
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 0a5d941a273925c6f1a523f3f7ce91f387da9564
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980539"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039564"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "53980539"
 >  PolyBase는 SQL Server 2016(또는 그 이상), Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스에서만 지원됩니다. Elastic Database 쿼리는 Azure SQL Database v12 이상에서만 지원됩니다.  
 
 
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 외부 테이블을 사용하여 Hadoop 클러스터나 Azure Blob 저장소에 저장된 데이터를 참조하는 Hadoop 클러스터나 Azure Blob 저장소 PolyBase 외부 테이블에 저장된 데이터에 액세스합니다. [Elastic Database 쿼리](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)에 대한 외부 테이블을 만드는 데에도 사용할 수 있습니다.  
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 외부 테이블을 사용하여 Hadoop 클러스터나 Azure Blob 스토리지에 저장된 데이터를 참조하는 Hadoop 클러스터나 Azure Blob 스토리지 PolyBase 외부 테이블에 저장된 데이터에 액세스합니다. [Elastic Database 쿼리](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)에 대한 외부 테이블을 만드는 데에도 사용할 수 있습니다.  
   
  외부 테이블을 사용하여 다음을 수행합니다.  
   
@@ -373,7 +373,7 @@ WITH (
   
 ```  
   
-### <a name="c-create-an-external-table-with-data-in-orc-format"></a>3. ORC 형식의 데이터를 사용하여 외부 테이블을 만듭니다.  
+### <a name="c-create-an-external-table-with-data-in-orc-format"></a>C. ORC 형식의 데이터를 사용하여 외부 테이블을 만듭니다.  
  이 예제에서는 ORC 형식의 데이터를 가진 외부 테이블을 만드는 데 필요한 모든 단계를 보여 줍니다. 즉, 외부 데이터 원본 mydatasource_orc 및 외부 파일 형식 myfileformat_orc를 만듭니다. 이러한 데이터베이스 수준 개체는 나중에 CREATE EXTERNAL TABLE 문에 참조됩니다. 자세한 내용은 [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md) 및 [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)을 참조하세요.  
   
 ```  

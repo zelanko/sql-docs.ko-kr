@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: f551b8e8-3668-4ed4-852f-bae826254f4f
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6f69addfdda05b00ff1f322b526bb656c2c9b317
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518619"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016724"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>여러 인스턴스에 예약된 정책 배포
   등록된 서버를 사용하면 중앙 위치에서 관리되는 서버로 예약된 정책을 배포할 수 있습니다. 로컬 서버 그룹 또는 중앙 관리 서버에서 예약된 정책을 배포할 수 있습니다.  
@@ -98,7 +97,7 @@ ms.locfileid: "52518619"
   
  목록을 보려면 [!INCLUDE[ssDE](../includes/ssde-md.md)] 자습서, 클릭 [데이터베이스 엔진 자습서](../relational-databases/database-engine-tutorials.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [정책 기반 관리를 사용하여 서버 관리](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

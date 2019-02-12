@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f8439c48f7379b983b46edcaf1111606c1a3fbcc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e53af8ff7de611f00af6e38553f21885597e7232
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193203"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040644"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>SharePoint 모드 보고서 서버 구독 만들기 및 관리
   SharePoint 모드 보고서 서버와 통합된 SharePoint 웹 애플리케이션에서 보고서를 배달하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 만들 수 있습니다. 구독은 보고서를 문서 라이브러리, 파일 폴더 또는 전자 메일로 배달할 수 있습니다. 이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 만들기 위한 요구 사항 및 단계를 요약합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48193203"
   
 -   **파일 폴더:** 원래 보고서 기반의 문서를 파일 시스템의 공유 폴더로 배달할 수 있습니다. 이때 네트워크 연결을 통해 액세스할 수 있는 기존 폴더를 선택해야 합니다.  
   
--   **메일:** 보고서 서버 메일 배달 확장 프로그램을 사용하도록 보고서 서버가 구성되어 있는 경우 보고서 또는 내보낸 보고서 파일(출력 형식으로 저장됨)을 받은 편지함으로 보내는 구독을 만들 수 있습니다. 보고서 또는 보고서 URL 없이 알림만 받으려면 **보고서에 대한 링크 포함** 및 **메시지 내에 보고서 표시** 확인란의 선택을 취소합니다.  
+-   **전자 메일:** 보고서 서버 전자 메일 배달 확장 프로그램을 사용하도록 보고서 서버가 구성되어 있는 경우 보고서 또는 내보낸 보고서 파일(출력 형식으로 저장됨)을 받은 편지함으로 보내는 구독을 만들 수 있습니다. 보고서 또는 보고서 URL 없이 알림만 받으려면 **보고서에 대한 링크 포함** 및 **메시지 내에 보고서 표시** 확인란의 선택을 취소합니다.  
   
  **항목 내용**  
   
@@ -158,7 +158,7 @@ ms.locfileid: "48193203"
 3.  구독 옆에 있는 확인란을 클릭하고 **삭제**를 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [구독 및 배달 &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [구독 및 배달&#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Reporting Services의 전자 메일 배달](e-mail-delivery-in-reporting-services.md)   
  [Reporting Services의 파일 공유 배달](file-share-delivery-in-reporting-services.md)   
  [Reporting Services의 SharePoint 라이브러리 배달](sharepoint-library-delivery-in-reporting-services.md)   

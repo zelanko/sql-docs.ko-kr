@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9a6f3951ac5b23a84424813b699b2512c15def9a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: beec46edc483bee002f8fc2605c22b59a63d7048
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372825"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041204"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조(SSRS)
   보고서에 포함된 사용자 지정 코드 또는 직접 작성한 사용자 지정 어셈블리에 대한 참조를 추가한 다음 컴퓨터에 저장하고 보고서 서버로 배포할 수 있습니다. 단일 보고서에서 여러 번 사용된 함수, 사용자 지정 상수 또는 복잡한 함수에는 포함 코드를 사용합니다. 코드를 한 위치에서 관리하면서 여러 보고서에서 사용할 수 있도록 공유하려면 사용자 지정 코드 어셈블리를 사용합니다. 사용자 지정 코드에는 새로운 사용자 지정 상수, 변수, 함수 또는 서브루틴이 포함될 수 있습니다. Parameters 컬렉션과 같은 기본 제공 컬렉션에 대한 읽기 전용 참조를 포함할 수 있습니다. 그러나 사용자 지정 함수에 보고서 데이터 값 집합을 전달할 수 없으며 특히 사용자 지정 집계는 지원되지 않습니다.  

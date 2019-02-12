@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 671f574f81bdceb35c1ee235f8ae545b5ae60296
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 6b50d6757c4ea635da35e881219dd63871dc0967
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372835"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039314"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server 병렬 데이터 웨어하우스 연결 형식(SSRS)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] 는 방대한 병렬 처리를 통해 성능 및 확장성을 제공하는 확장 가능한 데이터 웨어하우스 어플라이언스입니다. [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 는 분산 처리 및 데이터 저장을 위해 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 데이터베이스를 사용합니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] 는 방대한 병렬 처리를 통해 성능 및 확장성을 제공하는 확장 가능한 데이터 웨어하우스 어플라이언스입니다. [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 는 분산 처리 및 데이터 스토리지를 위해 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 데이터베이스를 사용합니다.  
   
  이 어플라이언스는 고유한 인스턴스의 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 실행하는 각 노드로 구성된 여러 물리적 노드에서 큰 데이터베이스 테이블을 분할합니다. 보고서는 보고서 데이터를 검색하기 위해 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 에 연결될 때 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 어플라이언스에서 쿼리 처리를 관리하는 제어 노드에 연결됩니다. 연결이 설정되면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 환경이 아니더라도 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 인스턴스를 사용할 때와 아무런 차이가 없습니다.  
   

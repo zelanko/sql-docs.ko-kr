@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ff0a14a546a14d37461193b71b4d682deb25925a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 9e509fb84ffd35085e7930925fd71499a6c96c87
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350101"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030626"
 ---
 # <a name="tutorial-format-text-report-builder"></a>자습서: 텍스트 서식 지정(보고서 작성기)
   이 자습서에서는 텍스트에 서식을 지정하는 다양한 방법을 연습해 볼 수 있습니다. 빈 보고서와 함께 데이터 원본 및 데이터 집합을 설정한 후 탐색할 단계를 선택할 수 있습니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "53350101"
   
  [보고서 저장](#Save)  
   
- 이 자습서에 소요되는 예상 시간: 20 분입니다.  
+ 이 자습서에 소요되는 예상 시간: 20분.  
   
 ## <a name="requirements"></a>요구 사항  
  요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/report-builder-tutorials.md)을 참조하세요.  
@@ -71,11 +71,11 @@ ms.locfileid: "53350101"
   
 1.  보고서 데이터 창에서 **새로 만들기**를 클릭하고 **데이터 원본**을 클릭합니다.  
   
-2.  에 **이름을** 상자에 입력 합니다. **TextDataSource**  
+2.  **이름** 상자에 다음을 입력합니다. **TextDataSource**  
   
 3.  **내 보고서에 포함된 연결 사용**을 클릭합니다.  
   
-4.  연결 형식이 Microsoft SQL Server인지 확인한 다음 **연결 문자열** 상자에 다음을 입력합니다. **데이터 원본 = \<서버 이름 >**  
+4.  연결 형식이 Microsoft SQL Server인지 확인한 다음 **연결 문자열** 상자에 다음을 입력합니다. **데이터 원본 = \<servername>**  
   
     > [!NOTE]  
     >  식 \<서버 이름 >에는 SQL Server 데이터베이스 엔진 인스턴스의 설치 된 컴퓨터를 지정 하는 예제 Report001, 합니다. 이 자습서를 사용하기 위해 특정 데이터가 필요하지는 않습니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 데이터베이스에 연결하기만 하면 됩니다. **데이터 원본 연결**에 나열된 데이터 원본 연결이 이미 있는 경우 해당 데이터 원본 연결을 선택하고 다음 절차인 "데이터 집합을 만들려면"으로 이동할 수 있습니다. 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)를 참조하세요.  
@@ -88,7 +88,7 @@ ms.locfileid: "53350101"
   
 2.  데이터 원본이 **TextDataSource**인지 확인합니다.  
   
-3.  에 **이름을** 상자에 입력 합니다. **TextDataset 합니다.**  
+3.  **이름** 상자에 다음을 입력합니다. **TextDataset.**  
   
 4.  **텍스트** 쿼리 유형이 선택되어 있는지 확인한 다음 **쿼리 디자이너**를 클릭합니다.  
   

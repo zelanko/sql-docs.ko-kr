@@ -3,6 +3,7 @@ title: 날짜 및 시간 기능 향상 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.reviewer: ''
+ms.prod: sql
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
@@ -10,18 +11,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ba3c6bfb78656226745dc8267077749ca46ff3a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 56df8dd8a0f8341180ad094e58868636b8d5a37d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661692"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029174"
 ---
 # <a name="date-and-time-improvements"></a>날짜 및 시간 기능 향상
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 추가된 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]Native Client의 date 및 time 데이터 형식 지원에 대해 설명합니다.  
+  이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 추가된 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client의 date 및 time 데이터 형식 지원에 대해 설명합니다.  
   
  날짜/시간 기능 향상에 대 한 자세한 내용은 참조 하세요. [날짜 및 시간 기능 향상 &#40;OLE DB&#41; ](../../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md) 하 고 [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   

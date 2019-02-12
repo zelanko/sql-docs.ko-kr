@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 30e4be2e-e65d-462c-895a-5a0a636d042f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8984f0a1057bfa7eb3cb9cf2372de75e7da36852
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2905bdf64b33ee54e5eba474433c3d111eb34736
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153803"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043105"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>URL 예약 구문(SSRS 구성 관리자)
   이 항목에서는 보고서 서버 웹 서비스 및 보고서 관리자에서 사용하는 URL 문자열 부분에 대해 설명합니다. 내부적으로 저장되는 URL 문자열의 구조는 브라우저 창의 주소 표시줄에 입력하는 URL과는 다릅니다. URL 예약 문자열은 URL을 구성할 때 Reporting Services 구성 도구의 결과 창 및 RSReportServer.config 파일에 표시됩니다. URL 문자열이 정의되는 방식을 알면 URL 예약 문제를 해결하거나 HTTP.SYS를 쿼리하여 서버에 정의된 내부 URL 문자열 예약을 보는 경우 도움이 됩니다.  
   
 ## <a name="url-syntax"></a>URL 구문  
- 보고서 서버 URL은 `UrlString` 요소와 `VirtualDirectory` 요소에 저장됩니다. 구분 `UrlString` 하 고 `VirtualDirectory` 은 별도 요소로 수 있지만 각각에 대해 하나의 가상 디렉터리 이름은 URL 문자열은 여러 있다는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 응용 프로그램입니다.  
+ 보고서 서버 URL은 `UrlString` 요소와 `VirtualDirectory` 요소에 저장됩니다. `UrlString`과 `VirtualDirectory`가 별도의 요소로 구분되는 것은 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 응용 프로그램에서 URL 문자열은 여러 개일 수 있지만 가상 디렉터리 이름은 하나뿐이기 때문입니다.  
   
  HTTP.SYS에서 URL 예약은 `UrlString`과 `VirtualDirectory`를 모두 포함합니다. URL 예약 구문은 다음 부분으로 구성됩니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48153803"
 |VirtualDirectory|ReportServer *[_InstanceName]*<br /><br /> Reports *[_InstanceName]*<br /><br /> \<custom>|애플리케이션의 이름을 지정합니다. 이 값은 문자열입니다. 기본적으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서 서버 웹 서비스 및 보고서 관리자 애플리케이션에 대한 애플리케이션 이름으로 ReportServer와 Reports를 사용합니다. 원하는 경우 다른 이름을 사용할 수도 있습니다.<br /><br /> 이 값은 필수 사항입니다. 애플리케이션을 식별합니다.<br /><br /> 각 애플리케이션 인스턴스에 대해 하나의 가상 디렉터리만 지정합니다. 같은 인스턴스에 있는 같은 응용 프로그램에 대해 여러 개의 URL을 만들려면 여러 개의 `UrlString` 버전을 만듭니다. 여러 애플리케이션 인스턴스에 대해 고유한 가상 디렉터리 이름을 만들려면 인스턴스 이름에 밑줄 문자(_)를 추가하여 가상 디렉터리 이름에 인스턴스 이름을 포함하면 됩니다. *InstanceName* 은 선택 사항이지만 같은 컴퓨터에 여러 개의 인스턴스가 있는 경우 권장됩니다. 명명된 인스턴스에 대한 URL 예약을 설정하는 방법은 [다중 인스턴스 보고서 서버 배포를 위한 URL 예약&#40;SSRS 구성 관리자&#41;](url-reservations-for-multi-instance-report-server-deployments.md)을 참조하세요.<br /><br /> 가상 디렉터리에 대한 값은 대/소문자를 구분하지 않습니다. URL 구분 기호 문자 또는 URL 인코딩을 포함하지 않는다면 어떠한 문자열이라도 사용할 수 있습니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 서버 Url 구성 &#40;SSRS 구성 관리자&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
- [URL 구성 &#40;SSRS 구성 관리자&#41;](configure-a-url-ssrs-configuration-manager.md)  
+ [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
+ [URL 구성&#40;SSRS 구성 관리자&#41;](configure-a-url-ssrs-configuration-manager.md)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: c1e68a88-0f82-415d-becc-78d180d4f845
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9ca2338983aae168dce33bd0cd21b37ccac6e9fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b11844e6b184099a9c6146d290a0dc081429f5d0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051344"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042770"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>데이터 원본 뷰 만들기(기본 데이터 마이닝 자습서)
   데이터 원본 뷰는 데이터 원본을 기반으로 하고, 마이닝 구조에 사용할 수 있는 데이터 하위 집합을 정의합니다. 데이터 원본 뷰를 사용하여 열을 추가하고 계산 열 및 집계를 만들고 명명된 뷰를 추가할 수도 있습니다. 데이터 원본 뷰를 사용하면 원래 데이터 원본을 수정하지 않고도 프로젝트와 관련된 테이블을 선택하고 테이블 간의 관계를 설정하며 데이터 구조를 수정할 수 있습니다. 자세한 내용은 [다차원 모델의 데이터 원본 뷰](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)를 참조하세요.  
@@ -48,9 +47,9 @@ ms.locfileid: "48051344"
  [데이터 원본 만들기 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>다음 단원  
- [2 단원: 타겟된 메일링 구조 구축 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [2단원: 타겟된 메일링 구조 구축 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [정의 된 데이터 원본 뷰 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)  
+ [데이터 원본 뷰 정의&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)  
   
   

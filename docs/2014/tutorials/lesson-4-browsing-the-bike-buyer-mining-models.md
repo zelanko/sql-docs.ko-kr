@@ -1,25 +1,24 @@
 ---
-title: '4 단원: Bike Buyer 마이닝 모델을 찾아보기 | Microsoft Docs'
+title: '4단원: Bike Buyer 마이닝 모델 찾아보기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 8de3c500-f881-42da-a096-b6c03300d58d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f04abc5506e78e332b188cfc87c727b0000ca621
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+manager: kfile
+ms.openlocfilehash: 709df371d840d4b24e420b4fcd08750fd31e8075
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147348"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011532"
 ---
 # <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>4단원: Bike Buyer 마이닝 모델 찾아보기
-  이 단원에서는 사용할지는 [SELECT (DMX)](/sql/dmx/select-dmx) 문을에서는 의사 결정 트리 및 클러스터링 마이닝 모델에서 만든 [2 단원: 예측마이닝구조에마이닝모델추가](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
+  이 단원에서는 사용할지 합니다 [SELECT (DMX)](/sql/dmx/select-dmx) 문을에서는 의사 결정 트리 및 클러스터링 마이닝 모델에서 만든 [단원 2: 예측 마이닝 구조에 마이닝 모델 추가](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)합니다.  
   
  마이닝 모델에 포함된 열은 마이닝 구조에서 정의한 열이 아니라 알고리즘에서 찾은 경향 및 패턴을 설명하는 특정 열 집합입니다. 이러한 마이닝 모델 열에 설명 되어는 [DMSCHEMA_MINING_MODEL_CONTENT 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset) 스키마 행 집합입니다. 예를 들어 내용 스키마 행 집합의 MODEL_NAME 열에는 마이닝 모델의 이름이 포함되어 있습니다. 클러스터링 마이닝 모델의 경우 NODE_CAPTION 열에는 각 클러스터의 이름이 포함되어 있으며 NODE_DESCRIPTION 열에는 각 클러스터의 특징에 대한 설명이 포함되어 있습니다. SELECT를 사용 하 여 이러한 열을 찾아보면 \<모델 >. DMX에서 콘텐츠 문입니다. 이 문을 사용하여 마이닝 모델 생성에 사용된 데이터도 탐색할 수 있습니다. 이 문을 사용하려면 마이닝 구조에 드릴스루를 설정해야 합니다. 문에 대 한 자세한 내용은 참조 하세요. [선택에서 &#60;모델&#62;합니다. 경우 &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx)합니다.  
   
@@ -258,6 +257,6 @@ SELECT DISTINCT [<column>]
  다음 단원에서는 의사 결정 트리 마이닝 모델을 사용하여 잠재 고객이 자전거 구매자가 될 것인지 여부를 예측합니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [5단원: 예측 쿼리 실행](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
+ [5단원: 예측 쿼리를 실행합니다.](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
   
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 921927f5-1b1e-452a-a79e-c691829fd826
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: b4d5cbc3f9fe76b90e927826adaa1fb9f15fef48
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 8ff745dfbbae04132e8ea7f3565eee804e9de0e9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031951"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041384"
 ---
 # <a name="dqs-security"></a>DQS 보안
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ) 보안 인프라는 SQL Server 보안 인프라를 기반으로 합니다. 데이터베이스 관리자는 사용자와 DQS 역할을 연결하여 사용자에게 사용 권한 집합을 부여합니다. 이러한 방식으로 사용자가 액세스할 수 있는 DQS 리소스와 사용자가 수행할 수 있는 기능 작업이 결정됩니다.  

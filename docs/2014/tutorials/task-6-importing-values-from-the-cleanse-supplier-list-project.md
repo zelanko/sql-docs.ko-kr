@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5ac003c18ae36f4cd2d58a1355df16d6d2f9b066
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0780636d3bcaecfe0519192bd450bb538d78bbf9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359855"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042924"
 ---
 # <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>태스크 6: Cleanse Supplier List 프로젝트에서 값 가져오기
   이 작업에서는 정리 프로세스 중에 수집된 데이터 품질 기술 자료를 가져옵니다. 자세한 내용은 [정리 프로젝트 값을 도메인으로 가져오기](https://msdn.microsoft.com/library/hh479581.aspx) 항목을 참조하십시오. 또한 업데이트된 **Suppliers** 기술 자료를 게시하기 전에 기술 자료를 DQS로 내보냅니다.  
@@ -68,6 +65,6 @@ ms.locfileid: "53359855"
 14. 메시지 상자에서 **확인** 을 클릭합니다.  
   
 ## <a name="next-step"></a>다음 단계  
- [3 단원: 공급자 목록에서 중복 제거할 데이터 일치](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)  
+ [3단원: 공급자 목록에서 중복 제거할 데이터 일치](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)  
   
   

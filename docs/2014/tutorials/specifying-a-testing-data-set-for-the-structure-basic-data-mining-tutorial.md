@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 75cd508f-b126-418b-848d-3c4c3e6c303f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1e0bee469bd6dbbc93a48051e7c2e236c6c65c74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 21eaa86fb1ff594e8b9d2b779b787276ee13ab4b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180923"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028894"
 ---
 # <a name="specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial"></a>구조에 대한 테스트 데이터 집합 지정(기본 데이터 마이닝 자습서)
   데이터 마이닝 마법사의 마지막 화면에서 데이터를 테스트 집합과 학습 집합으로 나눕니다. 그런 다음 구조에 이름을 지정하고 모델에 드릴스루를 사용합니다.  
@@ -57,7 +56,7 @@ ms.locfileid: "48180923"
   
 ## <a name="see-also"></a>관련 항목  
  [마이닝 모델에 드릴스루 사용](../../2014/analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)   
- [드릴스루 쿼리 &#40;데이터 마이닝&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)   
+ [드릴스루 쿼리&#40;데이터 마이닝&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)   
  [학습 데이터 지정 &#40;데이터 마이닝 마법사&#41;](../../2014/analysis-services/specify-the-training-data-data-mining-wizard.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: SQL Server Native Client Support for High Availability, 재해 복구 | Microsoft 문서
 ms.custom: ''
-ms.date: 2016-08-31
+ms.date: 08/31/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: native-client
@@ -10,12 +10,12 @@ ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 267d39335cd0bf74134030f3bb2af4a11e652319
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4bd73d32a58e156a3ae8577d41bbdd4725f85656
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391067"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040234"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>고가용성 재해 복구를 위한 SQL Server Native Client 지원
   이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client 지원([!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 추가됨)에 대해 설명합니다. 에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]를 참조 하세요 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치 &#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md)를 [생성 및 구성의 가용성 그룹 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)하십시오 [장애 조치 클러스터링 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), 및 [활성 보조: 읽기 가능한 보조 복제본 (AlwaysOn 가용성 그룹)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)합니다.  

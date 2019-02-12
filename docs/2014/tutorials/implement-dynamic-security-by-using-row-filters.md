@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c70d749a560ff5dcc39d36d84e8c9ff09b44894f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 5a26f9c950dd09b8e47c83089415bd2b3d47458f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404198"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041054"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>행 필터를 사용하여 동적 보안 구현
   이 추가 단원에서는 동적 보안을 구현하는 추가 역할을 만들어 봅니다. 동적 보안은 현재 로그온한 사용자의 사용자 이름 또는 로그인 ID를 기반으로 하는 행 수준 보안을 제공합니다. 자세한 내용은 [역할&#40;SSAS 테이블 형식&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md)을 참조하세요.  
@@ -86,10 +85,10 @@ ms.locfileid: "52404198"
   
     |Employee Id|Sales Territory Id|First Name|Last Name|Login Id|  
     |-----------------|------------------------|----------------|---------------|--------------|  
-    |1|2|\<사용자 이름 >|\<마지막 사용자 이름 >|\<도메인 \ 사용자 이름 >|  
-    |1|3|\<사용자 이름 >|\<마지막 사용자 이름 >|\<도메인 \ 사용자 이름 >|  
-    |2|4|\<사용자 이름 >|\<마지막 사용자 이름 >|\<도메인 \ 사용자 이름 >|  
-    |3|5|\<사용자 이름 >|\<마지막 사용자 이름 >|\<도메인 \ 사용자 이름 >|  
+    |1|2|\<사용자 이름 >|\<마지막 사용자 이름 >|\<domain\username>|  
+    |1|3|\<사용자 이름 >|\<마지막 사용자 이름 >|\<domain\username>|  
+    |2|4|\<사용자 이름 >|\<마지막 사용자 이름 >|\<domain\username>|  
+    |3|5|\<사용자 이름 >|\<마지막 사용자 이름 >|\<domain\username>|  
   
 3.  새 워크시트에서 이름, 성 및 domain\username을 사용자 조직에 있는 사용자 세 명의 이름과 로그인 ID로 바꿉니다. Employee Id 1의 처음 두 행에 동일한 사용자 이름을 입력합니다. 이렇게 하면 사용자가 두 개 이상의 영업 지역에 속해 있음을 표시할 수 있습니다. Employee Id 및 Sales Territory Id 필드를 그대로 둡니다.  
   

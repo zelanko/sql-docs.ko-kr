@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 277ee4ff416ad9710eecf501651b5a5143b0fa68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0ad789a8246479c16ed5ceba17c3e7d9cf19d6ea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210212"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010894"
 ---
 # <a name="create-a-linked-report"></a>링크된 보고서 만들기
   링크된 보고서는 기존 보고서에 대한 액세스 지점을 제공하는 보고서 서버 항목입니다. 개념적으로 링크된 보고서는 프로그램을 실행하거나 파일을 열 때 사용하는 프로그램 바로 가기와 비슷합니다.  
@@ -35,16 +35,16 @@ ms.locfileid: "48210212"
   
 2.  새 링크된 보고서의 이름을 입력합니다. 설명을 입력합니다(옵션).  
   
-3.  보고서를 다른 폴더에 만들려면 **위치 변경**을 클릭합니다. 사용할 폴더를 클릭하거나 **위치** 상자에 폴더 이름을 입력합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 다른 폴더를 선택 하지 않으면 현재 폴더 (기반이 되는 보고서가 저장 하는 곳)에 링크 된 보고서 생성 됩니다.  
+3.  보고서를 다른 폴더에 만들려면 **위치 변경**을 클릭합니다. 사용할 폴더를 클릭하거나 **위치** 상자에 폴더 이름을 입력합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 다른 폴더를 선택하지 않으면 현재 폴더(기반이 되는 보고서가 저장되어 있는 폴더)에 링크된 보고서가 만들어집니다.  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 링크 된 보고서가 열립니다.  
+4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 링크된 보고서가 열립니다.  
   
      링크된 보고서의 아이콘은 보고서 서버가 관리하는 다른 항목의 아이콘과 다릅니다. 다음 아이콘은 링크된 보고서를 나타냅니다.  
   
      ![링크된 보고서 아이콘](../media/hlp-16linked.gif "링크된 보고서 아이콘")  
   
 ## <a name="see-also"></a>관련 항목  
- [열기 및 닫기 보고서 &#40;보고서 관리자&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [보고서 열기 및 닫기&#40;보고서 관리자&#41;](../reports/open-and-close-a-report-report-manager.md)   
  [새 링크된 보고서 페이지&#40;보고서 관리자&#41;](../new-linked-report-page-report-manager.md)   
  [항목 위치 선택 페이지&#40;보고서 관리자&#41;](../choose-item-location-page-report-manager.md)   
  [일반 속성 페이지, 보고서&#40;보고서 관리자&#41;](../general-properties-page-reports-report-manager.md)   

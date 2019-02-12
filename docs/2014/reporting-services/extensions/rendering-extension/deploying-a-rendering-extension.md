@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f2f0c56138572873c51de852f282edcfbae1c104
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 302f00feeb5b240a80d6ce969343797202ebe484
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190883"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040054"
 ---
 # <a name="deploying-a-rendering-extension"></a>렌더링 확장 프로그램 배포
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 렌더링 확장 프로그램을 작성하고 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 라이브러리에 컴파일한 후에는 보고서 서버 및 보고서 디자이너에서 이를 찾을 수 있도록 해야 합니다. 이 작업을 수행하려면 확장 프로그램을 적절한 디렉터리에 복사하고 해당하는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 파일에 항목을 추가합니다.  
   
 ## <a name="configuration-file-rendering-extension-element"></a>구성 파일 렌더링 확장 프로그램 요소  
- 렌더링 확장 프로그램이 .DLL로 컴파일되었으면 항목을 rsreportserver.config 파일에 추가합니다. 기본적으로 이 파일은 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer에 있습니다. 부모 요소는 \<Render>입니다. Render 요소 아래에 각 렌더링 확장 프로그램에 대한 Extension 요소가 있습니다. `Extension` 요소 두 개의 특성 이름 및 형식을 포함 합니다.  
+ 렌더링 확장 프로그램이 .DLL로 컴파일되었으면 항목을 rsreportserver.config 파일에 추가합니다. 기본적으로 이 파일은 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<InstanceName>\Reporting Services\ReportServer에 있습니다. 부모 요소는 \<Render>입니다. Render 요소 아래에 각 렌더링 확장 프로그램에 대한 Extension 요소가 있습니다. `Extension` 요소에는 Name 및 Type의 두 가지 특성이 포함됩니다.  
   
  다음 표에서 특성을 설명 합니다 `Extension` 렌더링 확장 프로그램에 대 한 요소:  
   
@@ -34,8 +34,8 @@ ms.locfileid: "48190883"
 |---------------|-----------------|  
 |**이름**|확장 프로그램의 고유한 이름입니다. **Name** 특성의 최대 길이는 255자입니다. 이름은 구성 파일의 **Extensions** 요소 내 모든 항목에서 고유해야 합니다. 중복된 이름이 있을 경우 보고서 서버에서 오류를 반환합니다.|  
 |**형식**|정규화된 네임스페이스와 어셈블리 이름을 포함하는 쉼표로 구분된 목록입니다.|  
-|**Visible**|`false` 값은 렌더링 확장 프로그램이 사용자 인터페이스에 표시되지 않음을 나타냅니다. 기본값은 특성이 포함 되지 않은 경우 `true`합니다.|  
-|**LogAllExecutionRequests**|`false` 값은 세션의 첫 번째 보고서 실행에 대해서만 로그 항목이 기록됨을 나타냅니다. 기본값은 특성이 포함 되지 않은 경우 `true`합니다.<br /><br /> 예를 들어 이 설정은 보고서에서 렌더링되는 첫 페이지에 대해서만 로그 항목을 기록할지(`false`인 경우) 또는 보고서에서 렌더링되는 각 페이지에 대해 로그 항목을 기록할지(`true`인 경우) 여부를 결정합니다.|  
+|**Visible**|`false` 값은 렌더링 확장 프로그램이 사용자 인터페이스에 표시되지 않음을 나타냅니다. 이 특성이 포함되지 않을 경우 기본값은 `true`입니다.|  
+|**LogAllExecutionRequests**|`false` 값은 세션의 첫 번째 보고서 실행에 대해서만 로그 항목이 기록됨을 나타냅니다. 이 특성이 포함되지 않을 경우 기본값은 `true`입니다.<br /><br /> 예를 들어 이 설정은 보고서에서 렌더링되는 첫 페이지에 대해서만 로그 항목을 기록할지(`false`인 경우) 또는 보고서에서 렌더링되는 각 페이지에 대해 로그 항목을 기록할지(`true`인 경우) 여부를 결정합니다.|  
   
  자세한 내용은 [RSReportServer Configuration File](../../report-server/rsreportserver-config-configuration-file.md)을 참조하세요.  
   

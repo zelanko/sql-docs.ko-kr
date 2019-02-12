@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 97abb77a-346c-44fa-8959-688dee1af6a8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b4afe3881d8e5eafaeffbd45aa7f64a514d8c70a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 32e66a84dea20964c11c7de0aa568530aa8c28c5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208209"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015514"
 ---
 # <a name="adding-a-logistic-regression-model-to-the-call-center-structure-intermediate-data-mining-tutorial"></a>콜 센터 구조에 로지스틱 회귀 모델 추가(중급 데이터 마이닝 자습서)
   콜 센터 운영에 영향을 줄 수 있는 요인을 분석하는 것 외에 직원이 서비스 품질을 향상시킬 수 있는 방법에 대한 일부 특정 권장 사항을 제공할 것도 요청받았습니다. 이 작업에서는 탐색 모델을 작성하는 데 사용한 마이닝 구조를 그대로 사용하고 예측을 만드는 데 사용될 마이닝 모델을 추가합니다.  
@@ -70,6 +69,6 @@ ms.locfileid: "48208209"
  [콜 센터 모델에 대 한 예측을 만드는 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [처리 요구 사항 및 고려 사항 &#40;데이터 마이닝&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [처리 요구 사항 및 고려 사항 & #40; 데이터 마이닝 & #41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

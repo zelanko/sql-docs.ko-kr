@@ -16,15 +16,15 @@ helpviewer_keywords:
 - tutorials [Policy-Based Management]
 - Policy-Based Management, tutorials
 ms.assetid: c7867f9b-7acc-4fae-bde1-63808c403ebc
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 663fb563f5fa8b80945f70f7086262a56b059dea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72d4d0863c516fed3a318aca45e8ec478af46a58
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206923"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013154"
 ---
 # <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>자습서: 정책 기반 관리를 사용하여 최선의 구현 방법 평가
   정책 기반 관리를 사용한 최선의 구현 방법 평가 자습서입니다. 이 자습서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용에는 익숙하지만 정책 기반 관리는 사용 경험이 없는 사용자를 위한 것입니다. 정책 기반 관리는 사이트 관리 표준을 강화하는 데 사용할 수 있는 정책을 정의하기 위한 시스템입니다. 정책 기반 관리에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 분석하여 인스턴스가 최선의 구현 방법 지침과 권장 사항을 충족하는지 여부를 확인하는 데 사용할 수 있는 최선의 구현 방법 정책 집합이 포함되어 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "48206923"
   
  이 자습서는 다음 두 단원으로 이루어져 있습니다.  
   
- [1단원: 요청 시 최선의 구현 방법 평가](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
+ [1단원: 주문형으로 최선의 구현 방법 평가](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
  이 단원에서는 하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 대해 정책의 요청 시 평가를 수행합니다.  
   
  [2단원: 일정에 따라 최선의 구현 방법 정책 평가](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
@@ -46,7 +46,7 @@ ms.locfileid: "48206923"
  이 자습서를 사용하려면 서버에 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]가 설치되어 있어야 합니다.  
   
 ## <a name="start-the-tutorial"></a>자습서 시작  
- [1단원: 요청 시 최선의 구현 방법 평가](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
+ [1단원: 주문형으로 최선의 구현 방법 평가](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [정책 기반 관리를 사용하여 서버 관리](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 512c6888-60f1-46e4-9639-bc448395b8d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 790809a04e4a322901a5f7398a02226cf984e2a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 285ee82110ffdef521d75fb43343f4889663e981
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206973"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015458"
 ---
 # <a name="adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>대상 메일 구조에 새 모델 추가(기본 데이터 마이닝 자습서)
   이 작업에서 사용 하 여 두 개의 추가 모델 정의 합니다는 **마이닝 모델** 데이터 마이닝 디자이너의 탭 합니다. Microsoft 클러스터링 및 Microsoft Naive Bayes 알고리즘을 사용하여 모델을 만듭니다. 이 두 알고리즘의 기능으로 불연속 값(예: 자전거 구매)을 예측할 수 있으므로 이 알고리즘이 선택되었습니다. 이러한 알고리즘에 대 한 자세한 내용은 참조 하세요. [Microsoft Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md) 고 [Microsoft Naive Bayes 알고리즘](../../2014/analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)  

@@ -1,22 +1,21 @@
 ---
-title: '2 단원: Market Basket 마이닝 구조에 마이닝 모델 추가 | Microsoft Docs'
+title: '2단원: Market Basket 마이닝 구조에 마이닝 모델 추가 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d96a7a7d-35d7-4b34-abb5-f0822c256253
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2265baf4c4a342692ae67afcbcc50a0bb0d0a283
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+manager: kfile
+ms.openlocfilehash: b9573d9359983e33cf23533787c26039572710ea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461979"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041454"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>2단원: Market Basket 마이닝 구조에 마이닝 모델 추가
   이 단원에서는 두 개의 마이닝 모델 추가에서 만든 Market Basket 마이닝 구조를 [1 단원: Market Basket 마이닝 구조 만들기](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)합니다. 이러한 마이닝 모델을 사용하여 예측을 만들 수 있습니다.  

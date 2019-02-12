@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8311ed32-00f3-451d-8279-946429f5fee1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 19d1fdd45018e436dddab95cfe01173ec63f794d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 43a591e8fa9f590550b53a16891f8c1880cbcf99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511666"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029234"
 ---
 # <a name="error-page-report-manager"></a>오류 페이지(보고서 관리자)
   오류 페이지를 사용하여 오류 상태에 대한 정보를 볼 수 있습니다. 서버 기반 또는 세션 기반 오류가이 페이지에 나타납니다. 특정 페이지 컨트롤과 관련된 유효성 검사 오류는 컨트롤 옆에 인라인으로 표시됩니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "52511666"
   
 -   원격 서버에서 발생되는 오류 조건에 대한 추가 정보를 반환하도록 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버에 대한 서버 속성을 설정할 수 있습니다. 오류 메시지에 텍스트가 포함 된 "이이 오류에 대 한 자세한 내용은 로컬 서버 컴퓨터의 보고서 서버를 탐색 하거나 원격 오류 사용"을 참조 하세요 [원격 오류 사용 &#40;Reporting Services&#41;](report-server/enable-remote-errors-reporting-services.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [보고서 관리자 구성&#40;기본 모드&#41;](report-server/configure-web-portal.md)   
  [오류 및 이벤트 참조&#40;Reporting Services&#41;](troubleshooting/errors-and-events-reference-reporting-services.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)  

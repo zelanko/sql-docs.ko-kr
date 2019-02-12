@@ -14,15 +14,15 @@ helpviewer_keywords:
 - operators [XQuery]
 - xml data type [SQL Server], XQuery
 ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5ba69530f6c9cb8451211a2dcec333d347062b74
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2786295b344cfc2df6ae613e42a39f71aee4d3d8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671862"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038894"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>xml 데이터 형식에 대한 XQuery 연산자
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ WHERE  AdditionalContactInfo.value('
       'bit')= cast(1 as bit)  
 ```  
   
- 이전 쿼리의 작동 방식을 확인 하는 다른 방법은: 각 전화 번호 값에서 검색 된 **AdditionalContactInfo** 열 두 개의 전화 번호 집합과 비교 됩니다. 값이 집합에 있는 경우 각 해당 고객이 결과에 반환됩니다.  
+ 이전 쿼리의 작동 방식을 다음과 같이 관측할 수도 있습니다. 각 전화 번호 값에서 검색 된 **AdditionalContactInfo** 열 두 개의 전화 번호 집합과 비교 됩니다. 값이 집합에 있는 경우 각 해당 고객이 결과에 반환됩니다.  
   
 ### <a name="b-using-a-numeric-operator"></a>2. 숫자 연산자 사용  
  이 쿼리의 + 연산자는 단일 항목에 적용되기 때문에 값 연산자입니다. 예를 들어 쿼리에 의해 반환되는 로트 크기에 값 1이 추가됩니다.  

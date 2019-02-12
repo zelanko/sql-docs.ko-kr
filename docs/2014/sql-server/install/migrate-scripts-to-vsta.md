@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Script task [Integration Services], converting scripts
 - SSIS Script component, converting scripts
 ms.assetid: d685098b-86a1-46bf-939a-63d56951e009
-author: mashamsft
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: b23d85aa038acae6631dedf64417c65e745baf90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad248407922506e999c21480f8ce277f20d32b6b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084437"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014494"
 ---
 # <a name="migrate-scripts-to-vsta"></a>VSTA로 스크립트 마이그레이션
   업그레이드 하는 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 패키지를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 모든 스크립트 태스크 또는 스크립트 구성 요소를로 마이그레이션합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA). VSTA는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 사용하는 스크립팅 환경입니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]를 위한 스크립팅 환경인 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 됩니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 응용 프로그램 (VSA).  

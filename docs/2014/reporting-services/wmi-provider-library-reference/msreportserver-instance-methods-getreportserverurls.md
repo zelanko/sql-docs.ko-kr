@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 148e0ece44e97bd4c559bbed9cc95aa97092dffb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fc9427e01f320778eafc1bac738daed0e80ce3c8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171053"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014004"
 ---
 # <a name="getreportserverurls-method-wmi-msreportserverinstance"></a>GetReportServerUrls 메서드(WMI MSReportServer_Instance)
   사용자가 보고서 서버 및 보고서 관리자에 액세스하는 데 사용할 수 있는 URL 목록을 반환합니다.  
@@ -37,7 +37,7 @@ public void GetReportServerUrls(out string[] applicationName,
   
 ## <a name="parameters"></a>매개 변수  
  *ApplicationName[]*  
- 설치된 애플리케이션이 들어 있는 배열입니다. 값은 `ReportServerWebService` 또는 `ReportManager`합니다.  
+ 설치된 애플리케이션이 들어 있는 배열입니다. 값은 `ReportServerWebService` 또는 `ReportManager`입니다.  
   
  *URLs[]*  
  성공적으로 등록된 URL이 들어 있는 배열입니다.  

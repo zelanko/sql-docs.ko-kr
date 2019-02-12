@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 30bd631a-f774-48e7-a13a-b6c2eb54d9bb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ebee6948403822d7e4a9f8d406d1000b27ee2468
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 147daad87bf9ec77d2c686d44d367e85a07ab4c8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182033"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043024"
 ---
 # <a name="add-html-into-a-report-report-builder-and-ssrs"></a>보고서에 HTML 추가(보고서 작성기 및 SSRS)
   자리 표시자를 사용하여 데이터 세트의 필드에서 보고서에 사용할 HTML을 가져올 수 있습니다. 기본적으로 자리 표시자는 일반 텍스트를 나타내므로 자리 표시자 태그 형식을 HTML로 변경해야 합니다. 자세한 내용은 [보고서로 HTML 가져오기&#40;보고서 작성기 및 SSRS&#41;](importing-html-into-a-report-report-builder-and-ssrs.md)를 참조하세요.  
@@ -43,7 +43,7 @@ ms.locfileid: "48182033"
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>관련 항목  
- [숫자 및 날짜 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [숫자 및 날짜 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [선, 색 및 이미지 서식 지정&#40;보고서 작성기 및 SSRS&#41;](images-report-builder-and-ssrs.md)   
  [자리 표시자 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)  
   

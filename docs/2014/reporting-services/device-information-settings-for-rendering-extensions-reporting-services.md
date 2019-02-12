@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 947b0ee1-bb35-4b4e-9527-dc501566e7d1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1dca610c7d18f43552b02340f81455910927a633
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fd9eaf6c8fc7bc29ddf6ba84745fed69fe6cc569
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114023"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013124"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>렌더링 확장 프로그램에 대한 디바이스 정보 설정(Reporting Services)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 장치 정보 설정을 사용하여 렌더링 매개 변수를 렌더링 확장 프로그램으로 전달할 수 있습니다. 각 렌더링 확장 프로그램에서 특정 설정 집합을 사용할 수 있습니다.  

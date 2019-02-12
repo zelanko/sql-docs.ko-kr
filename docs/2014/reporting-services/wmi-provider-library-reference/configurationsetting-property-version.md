@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 10266c94-d4da-4f4a-8cdd-5a64f57ada5e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4658a709e21e101d35f49424f218ea73a21e27e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 69035945199fa1b07c2d778ffd581f83827cfb0b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070413"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040804"
 ---
 # <a name="version-property--wmi-msreportserverconfigurationsetting"></a>Version 속성(WMI MSReportServer_ConfigurationSetting)
   Major.Minor.Build.Revision 형식으로 보고서 서버의 버전을 반환합니다. 읽기 전용입니다.  
@@ -34,7 +34,7 @@ public string Version;
 ```  
   
 ## <a name="property-value"></a>속성 값  
- `string` 보고서 서버의 버전이 들어 있는입니다.  
+ 보고서 서버의 버전이 들어 있는 `string`입니다.  
   
 ## <a name="example-code"></a>코드 예  
  [MSReportServer_ConfigurationSetting 클래스](msreportserver-configurationsetting-class.md)  

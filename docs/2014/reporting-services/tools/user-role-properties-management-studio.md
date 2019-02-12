@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cfe2b65ec8f8260d87636384953101e3c674a0d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bb8c7b6467b862d13f242debf0d963012b44bb61
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149703"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015489"
 ---
 # <a name="user-role-properties-management-studio"></a>사용자 역할 속성(Management Studio)
   이 페이지를 사용하여 항목 수준의 역할 정의에 포함된 태스크를 볼 수 있으며 태스크 목록을 변경하거나 역할 설명을 수정할 수 있습니다.  

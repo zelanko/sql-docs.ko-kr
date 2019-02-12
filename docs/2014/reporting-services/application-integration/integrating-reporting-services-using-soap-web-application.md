@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3853fd48c75cfeb6ec786b0d7d7518112fe07f61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a68100af72b7680ed1a9212f5d7c6c54ed07bec1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056325"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013026"
 ---
 # <a name="using-the-soap-api-in-a-web-application"></a>웹 응용 프로그램에서 SOAP API 사용
   Reporting Services SOAP API를 통해 보고서 서버의 전체 기능에 액세스할 수 있습니다. SOAP API는 웹 서비스이므로 쉽게 액세스하여 사용자 지정 비즈니스 응용 프로그램에 엔터프라이즈 보고 기능을 제공할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 응용 프로그램에서 SOAP API에 액세스하는 것과 동일한 방법으로 웹 응용 프로그램에서 보고서 서버 웹 서비스에 액세스합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 보고서 서버 웹 서비스의 속성 및 메서드를 표시하는 프록시 클래스를 생성할 수 있으며 친숙한 인프라와 도구를 통해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기술 기반의 비즈니스 응용 프로그램을 빌드할 수도 있습니다.  
@@ -87,7 +87,7 @@ private void Page_Load(object sender, System.EventArgs e)
 ## <a name="see-also"></a>관련 항목  
  [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [응용 프로그램에 Reporting Services 통합](../application-integration/integrating-reporting-services-into-applications.md)   
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)   
  [Windows 응용 프로그램에서 SOAP API 사용](integrating-reporting-services-using-soap-windows-application.md)  
   
   

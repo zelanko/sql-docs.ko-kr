@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 707a18ee54776bee46c58fc9db843c06d14a2ff4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: fcbf2d23dc543edbd6fc6fc20136f0ff4e81bd90
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544596"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031734"
 ---
 # <a name="url-access-parameter-reference"></a>URL 액세스 매개 변수 참조
   보고서의 모양과 느낌을 구성하는 URL의 일부로 다음 매개 변수를 사용할 수 있습니다. 이 섹션에는 가장 일반적인 매개 변수가 나열됩니다. 매개 변수는 대/소문자를 구분하지 않으며, 매개 변수 접두사는 보고서 서버로 전달되는 경우 *rs:* 로 시작하고 HTML 뷰어로 전달되는 경우 *rc:* 로 시작합니다. 디바이스 또는 렌더링 확장 프로그램에 특정하는 매개 변수를 지정할 수도 있습니다. 디바이스별 매개 변수에 대한 자세한 내용은 [URL에 디바이스 정보 설정 지정](specify-device-information-settings-in-a-url.md)을 참조하세요.  
@@ -63,7 +63,7 @@ ms.locfileid: "52544596"
 |*스냅숏*|보고서 기록 스냅숏을 기반으로 보고서를 렌더링합니다. 자세한 내용은 [URL 액세스를 사용하여 보고서 기록 스냅숏 렌더링](render-a-report-history-snapshot-using-url-access.md)을 참조하세요.<br /><br /> 타임스탬프가 13:40:02인 2003-04-07 날짜의 보고서 기록 스냅숏을 검색하는 `Native` 모드의 예제입니다.<br /><br /> `http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02`|  
 |*PersistStreams*|보고서를 단일 지속형 스트림에서 렌더링합니다. 이 매개 변수는 이미지 렌더러에서 렌더링된 보고서를 한 번에 한 청크씩 전송하는 데 사용됩니다. 이 매개 변수를 URL 액세스 문자열에 사용한 후에는 *GetNextStream* 매개 변수 대신 *PersistStreams* 매개 변수를 사용하여 지속형 스트림의 다음 청크를 가져옵니다. 이 URL 명령은 결과적으로 지속형 스트림의 끝을 나타내는 0바이트 스트림을 반환합니다. 기본값은 `false`입니다.|  
 |*GetNextStream*|*PersistStreams* 매개 변수를 사용하여 액세스하는 지속형 스트림의 다음 데이터 청크를 가져옵니다. 자세한 내용은 *PersistStreams*에 대한 설명을 참조하십시오. 기본값은 `false`입니다.|  
-|*세션 Id*|클라이언트 애플리케이션과 보고서 서버 간에 설정된 활성 보고서 세션을 지정합니다. 이 매개 변수의 값은 세션 식별자로 설정됩니다.<br /><br /> 세션 ID를 쿠키로 지정하거나 URL의 일부로 지정할 수 있습니다. 보고서 서버가 세션 쿠키를 사용하지 않도록 구성된 경우 지정된 세션 ID가 없는 첫 번째 요청은 세션 ID가 있는 항목으로 리디렉션됩니다. 보고서 서버 세션에 대한 자세한 내용은 [Identifying Execution State](report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)을 참조하십시오.|  
+|*SessionID*|클라이언트 애플리케이션과 보고서 서버 간에 설정된 활성 보고서 세션을 지정합니다. 이 매개 변수의 값은 세션 식별자로 설정됩니다.<br /><br /> 세션 ID를 쿠키로 지정하거나 URL의 일부로 지정할 수 있습니다. 보고서 서버가 세션 쿠키를 사용하지 않도록 구성된 경우 지정된 세션 ID가 없는 첫 번째 요청은 세션 ID가 있는 항목으로 리디렉션됩니다. 보고서 서버 세션에 대한 자세한 내용은 [Identifying Execution State](report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)을 참조하십시오.|  
 |*ClearSession*|`true` 값은 보고서 서버가 보고서 세션에서 보고서를 제거하도록 합니다. 인증된 사용자와 연관된 모든 보고서 인스턴스가 보고서 세션에서 제거됩니다. 보고서 인스턴스는 다양한 보고서 매개 변수 값을 사용하여 여러 번 실행되는 동일한 보고서로 정의됩니다. 기본값은 `false`입니다.|  
 |*ResetSession*|`true` 값은 보고서 서버가 보고서 세션과 모든 보고서 스냅숏의 연결을 제거하여 보고서 세션을 다시 설정하도록 합니다. 기본값은 `false`입니다.|  
 |*ShowHideToggle*|보고서의 섹션의 표시/숨기기 상태를 토글합니다. 토글할 섹션을 나타내는 양의 정수를 지정합니다.|  

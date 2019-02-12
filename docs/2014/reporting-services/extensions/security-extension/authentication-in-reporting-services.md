@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5088cabad39f75fb1becd65a21c84133608e9a2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2ce82cc9bfb8b3f88934499db4e9295903b67702
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093323"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043204"
 ---
 # <a name="authentication-in-reporting-services"></a>Reporting Services의 인증
   인증은 사용자의 권한을 ID에 설정하는 과정입니다. 사용자를 인증하는 데 사용할 수 있는 많은 방법이 있습니다. 가장 일반적인 방법은 암호를 사용하는 것입니다. 예를 들어 폼 인증을 구현하는 경우 사용자에게 자격 증명을 요구(대개 로그인 이름과 암호를 요구하는 인터페이스를 통해 이루어짐)한 다음 데이터베이스 테이블이나 구성 파일과 같은 데이터 저장소와 대조하여 사용자를 검사하도록 구현합니다. 자격 증명을 확인할 수 없는 경우 인증 프로세스가 실패하고 사용자는 익명 ID를 가집니다.  

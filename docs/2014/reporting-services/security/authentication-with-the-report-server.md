@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 712ae71efdf9ac4faea36dcacd6842406dff358f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 61d397edfe1bb9125c702ad3d568a4425f1c54e3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357111"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043304"
 ---
 # <a name="authentication-with-the-report-server"></a>보고서 서버 인증
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS)는 보고서 서버에 대해 사용자 및 클라이언트 응용 프로그램을 인증하는 몇 가지 구성 가능 옵션을 제공합니다. 기본적으로 보고서 서버는 Windows 통합 인증을 사용하며 클라이언트 및 네트워크 리소스가 같은 도메인 또는 트러스트된 도메인에 있는 트러스트된 관계를 가정합니다. 네트워크 토폴로지 및 조직의 요구에 따라 Windows 통합 인증에 사용되는 인증 프로토콜을 사용자 지정하거나, 기본 인증을 사용하거나, 제공된 폼 기반 인증 확장 프로그램을 사용자 지정할 수 있습니다. 각 인증 유형을 개별적으로 설정 또는 해제할 수 있습니다. 보고서 서버에서 여러 유형의 요청을 수락하도록 두 개 이상의 인증 유형을 설정할 수 있습니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "53357111"
 ## <a name="see-also"></a>관련 항목  
  [기본 모드 보고서 서버에 대한 사용 권한 부여](granting-permissions-on-a-native-mode-report-server.md)   
  [RSReportServer 구성 파일](../report-server/rsreportserver-config-configuration-file.md)   
- (만들기-및-관리-역할-assignments.md)   
+ (create-and-manage-role-assignments.md)   
  [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
  [보안 확장 프로그램 구현](../extensions/security-extension/implementing-a-security-extension.md)   
  [기본 모드 보고서 서버에서 SSL 연결 구성](configure-ssl-connections-on-a-native-mode-report-server.md)   

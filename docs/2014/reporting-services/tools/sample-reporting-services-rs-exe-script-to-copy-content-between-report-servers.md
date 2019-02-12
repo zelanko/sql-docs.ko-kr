@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6b78c77a924c0c301eecddb6592b4339236dffde
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: a4afc42162754c63d5280e7962960800e47b7059
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360845"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012055"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-migrate-content-between-report-servers"></a>보고서 서버 간 콘텐츠 마이그레이션을 위한 예제 Reporting Services rs.exe
   이 항목에는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 서버에서 다른 보고서 서버로 콘텐츠 항목 및 설정을 복사하는 샘플 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]  **보고서 서버에서 다른 보고서 서버로 콘텐츠 항목 및 설정을 복사하는 샘플** RSS 스크립트를 보여 주고 설명합니다. RS.exe는 기본 및 SharePoint 모드에서 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]와 함께 설치됩니다. 이 스크립트는 보고서 및 구독과 같은 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 항목을 한 서버에서 다른 서버로 복사합니다. 스크립트에서는 SharePoint 모드 및 기본 모드 보고서 서버가 모두 지원됩니다.  
@@ -295,7 +295,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/_vti_bin/reportserver -v st="sites/bi" -v f="Shared Documents" -u Domain\User1 -p Password -v ts="http://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_native_to_native_Azure_vm"> 기본 모드에서 기본 모드로 – Microsoft Azure Virtual Machine</a>  
+###  <a name="bkmk_native_to_native_Azure_vm"></a> 기본 모드에서 기본 모드로 – Microsoft Azure Virtual Machine  
  다음 예제는 다음과 같이 콘텐츠를 마이그레이션합니다.  
   
 -   기본 모드 보고서 서버 **SourceServer**에서  
@@ -309,7 +309,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 > [!TIP]  
 >  Microsoft Azure 가상 컴퓨터에서 Windows PowerShell을 사용해서 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 서버를 만드는 방법에 대한 자세한 내용은 [PowerShell을 사용해서 기본 모드 보고서 서버로 Microsoft Azure VM 만들기](https://msdn.microsoft.com/library/dn449661.aspx)를 참조하세요.  
   
-##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"> SharePoint 모드 – ‘bi’ 사이트 컬렉션에서 Microsoft Azure Virtual Machine의 기본 모드로 서버로</a>  
+##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint 모드 – ‘bi’ 사이트 컬렉션에서 Microsoft Azure Virtual Machine의 기본 모드로 서버로  
  다음 예제는 다음과 같이 콘텐츠를 마이그레이션합니다.  
   
 -   "sites/bi" 사이트 모음 및 공유 라이브러리가 포함된 SharePoint 모드 보고서 서버 **SourceServer** 에서  

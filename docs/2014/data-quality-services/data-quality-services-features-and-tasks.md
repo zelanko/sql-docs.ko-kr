@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4886ebb992c00d587ac03e5424255bd6d86cd63e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 90339f33d8bfa7f40db7eaf57ac49b85fde130cd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531644"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041354"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Data Quality Services 기능 및 태스크
   데이터 관리자, Data Quality Services 관리자 또는 SQL Server 관리자가 데이터 품질 프로젝트를 준비하고 실행하는 데 필요한 정보를 찾을 수 있습니다.  

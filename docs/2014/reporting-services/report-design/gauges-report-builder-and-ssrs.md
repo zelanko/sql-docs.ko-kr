@@ -158,13 +158,13 @@ f1_keywords:
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5c643df1d6f8849cc610d9d94a12cfeecde2836d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6da8262cd94a4e685f2baf5f1adb1692cfb3df25
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154173"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016094"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>계기(보고서 작성기 및 SSRS)
   계기 데이터 영역은 데이터 세트에 있는 하나의 값을 표시하는 1차원 데이터 영역입니다. 개별 계기는 항상 자식 또는 인접 계기를 추가할 수 있는 계기 패널 안에 배치됩니다. 계기 패널을 사용하여 필터링, 그룹화, 정렬 등 공통 기능을 공유하는 여러 계기를 한 계기 패널 안에 만들 수 있습니다.  
@@ -181,7 +181,7 @@ ms.locfileid: "48154173"
   
  ![계기 요소 다이어그램](../media/gauge-elements-diagram.gif "계기 요소 다이어그램")  
   
- 계기를 KPI로 사용하는 방법에 대한 자세한 내용은 [자습서: 보고서에 KPI 추가&#40;보고서 작성기&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)를 참조하세요.  
+ 계기를 Kpi로 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [자습서: 보고서에 KPI 추가 &#40;보고서 작성기&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)합니다.  
   
 > [!NOTE]  
 >  계기를 보고서와는 별도로 보고서 파트로 게시할 수 있습니다. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -210,7 +210,7 @@ ms.locfileid: "48154173"
   
  ![rs_LinearGauge](../media/rs-lineargauge.gif "rs_LinearGauge")  
   
- 선형 계기 옵션: 가로, 세로, 여러 막대 포인터, 두 개의 눈금, 세 개의 색 범위, 로그, 온도계, 온도계 화씨/섭씨 및 블릿(Bullet) 그래프  
+ 선형 계기 옵션: 가로, 세로, 여러 막대 포인터, 두 개의 눈금, 세 개의 색 범위, 로그, 온도계, 온도계 화씨/섭씨 및 불릿(Bullet) 그래프  
   
   
 ##  <a name="AddingData"></a> 계기에 데이터 추가  
@@ -244,7 +244,7 @@ ms.locfileid: "48154173"
 -   계기 포인터를 마우스 오른쪽 단추로 클릭하고 **포인터 속성**을 선택합니다. 에 대 한 `Value`드롭 다운 목록에서 필드를 선택 하거나 클릭 하 여 필드 식을 정의 합니다 **식을** (*fx*) 단추입니다.  
   
 ### <a name="aggregating-fields-into-a-single-value"></a>필드를 단일 값으로 집계  
- 계기에 필드를 추가 하는 경우 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 기본적으로 필드에 대 한 집계를 계산 합니다. 숫자 데이터 형식은 SUM 함수를 사용하여 집계합니다. 숫자가 아닌 데이터 형식은 데이터 세트 또는 그룹 내의 특정 값이나 필드의 인스턴스 수를 세는 COUNT 함수로 집계합니다. 값 필드의 데이터 형식이 문자열이면 필드에 숫자가 있더라도 계기에서 숫자 값을 표시할 수 없습니다. 대신 계기에서는 COUNT 함수를 사용하여 문자열 필드를 집계합니다. 이러한 현상을 방지하려면 필드에 서식 지정된 숫자가 포함된 문자열이 아니라 숫자 데이터 형식이 지정되어야 합니다. Visual Basic 식을 사용하여 CDbl 또는 CInt 상수로 문자열 값을 숫자 데이터 형식으로 변환할 수 있습니다. 예를 들어 다음 식은 MyField라는 문자열 필드를 숫자 값으로 변환합니다.  
+ 계기에 필드를 추가하면 기본적으로 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 에서 필드의 집계 값을 계산합니다. 숫자 데이터 형식은 SUM 함수를 사용하여 집계합니다. 숫자가 아닌 데이터 형식은 데이터 세트 또는 그룹 내의 특정 값이나 필드의 인스턴스 수를 세는 COUNT 함수로 집계합니다. 값 필드의 데이터 형식이 문자열이면 필드에 숫자가 있더라도 계기에서 숫자 값을 표시할 수 없습니다. 대신 계기에서는 COUNT 함수를 사용하여 문자열 필드를 집계합니다. 이러한 현상을 방지하려면 필드에 서식 지정된 숫자가 포함된 문자열이 아니라 숫자 데이터 형식이 지정되어야 합니다. Visual Basic 식을 사용하여 CDbl 또는 CInt 상수로 문자열 값을 숫자 데이터 형식으로 변환할 수 있습니다. 예를 들어 다음 식은 MyField라는 문자열 필드를 숫자 값으로 변환합니다.  
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
@@ -287,9 +287,9 @@ ms.locfileid: "48154173"
 ##  <a name="HowTo"></a> 방법 도움말 항목  
  이 섹션에는 보고서에서 계기를 사용하여 작업하는 방법, 데이터를 가져와 계기에서 효율적으로 표시하는 방법 및 계기와 해당 요소를 추가/구성하는 방법을 단계별로 보여 주는 절차가 나열되어 있습니다.  
   
--   [보고서에 계기 추가 &#40;보고서 작성기 및 SSRS&#41;](add-a-gauge-to-a-report-report-builder-and-ssrs.md)  
+-   [보고서에 계기 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-gauge-to-a-report-report-builder-and-ssrs.md)  
   
--   [계기의 최소값 또는 최대값 설정 &#40;보고서 작성기 및 SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
+-   [계기의 최소값 또는 최대값 설정&#40;보고서 작성기 및 SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
 -   [계기의 맞춤 간격 설정 &#40;보고서 작성기 및 SSRS&#41;](../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md)  
   
@@ -302,9 +302,9 @@ ms.locfileid: "48154173"
 |||  
 |-|-|  
 |용어|정의|  
-|[계기의 눈금 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|계기 눈금 서식 지정에 대한 일반적인 정보와 방사형/선형 계기 눈금의 서식 옵션에 대한 자세한 정보를 제공합니다.|  
-|[계기의 포인터 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|계기 포인터 서식 지정에 대한 일반적인 정보와 방사형/선형 계기에서 사용할 수 있는 포인터 스타일의 서식 옵션에 대한 자세한 정보를 제공합니다.|  
-|[계기에서 범위 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|계기에서 중요한 값 하위 섹션을 나타내거나 포인터 값이 특정 값 범위에 속하는지를 시각적으로 나타내기 위해 계기의 범위 서식을 지정하는 방법에 대한 정보를 제공합니다.|  
+|[계기의 눈금 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|계기 눈금 서식 지정에 대한 일반적인 정보와 방사형/선형 계기 눈금의 서식 옵션에 대한 자세한 정보를 제공합니다.|  
+|[계기의 포인터 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|계기 포인터 서식 지정에 대한 일반적인 정보와 방사형/선형 계기에서 사용할 수 있는 포인터 스타일의 서식 옵션에 대한 자세한 정보를 제공합니다.|  
+|[계기에서 범위 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|계기에서 중요한 값 하위 섹션을 나타내거나 포인터 값이 특정 값 범위에 속하는지를 시각적으로 나타내기 위해 계기의 범위 서식을 지정하는 방법에 대한 정보를 제공합니다.|  
   
   
 ## <a name="see-also"></a>관련 항목  

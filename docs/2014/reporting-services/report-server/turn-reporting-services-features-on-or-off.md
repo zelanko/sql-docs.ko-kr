@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2379a62a39453dcde75b39386ab6701a9fba101a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 75845ddac250c70078c8ee43d885b7d2b99a69a1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107223"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031094"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Reporting Services 기능 설정 또는 해제
   프로덕션 보고서 서버의 공격 노출 영역을 줄이기 위한 잠금 전략의 일환으로 사용하지 않는 보고서 서버 기능을 해제할 수 있습니다. 대부분의 경우에는 여러 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 동시에 실행하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 제공하는 모든 기능을 사용해야 합니다. 그러나 배포 모델에 따라서는 필요하지 않은 기능을 비활성화할 수 있습니다. 예를 들어 모든 보고서 처리가 예약된 작업으로 구성된 경우 백그라운드 처리만 활성화할 수 있습니다. 마찬가지로 요청 시 실행되는 대화형 보고서만 원하는 경우에는 보고서 서버 웹 서비스만 실행할 수 있습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "48107223"
   
 1.  텍스트 편집기에서 `RsReportServer.config` 파일을 엽니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md)를 참조하세요.  
   
-2.  보고서 서버 웹 서비스를 설정 `IsWebServiceEnabled` 에 `true`:  
+2.  보고서 서버 웹 서비스를 활성화하려면 `IsWebServiceEnabled`를 `true`로 설정합니다.  
   
     ```  
     <IsWebServiceEnabled>true</IsWebServiceEnabled>  
@@ -124,13 +124,13 @@ ms.locfileid: "48107223"
   
 1.  텍스트 편집기에서 RsReportServer.config 파일을 엽니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요.  
   
-2.  보고서 관리자를 설정 `IsReportManagerEnabled` 에 `true`:  
+2.  보고서 관리자를 활성화하려면 `IsReportManagerEnabled`를 `true`로 설정합니다.  
   
     ```  
     <IsReportManagerEnabled>true</IsReportManagerEnabled>  
     ```  
   
-3.  보고서 관리자 해제를 설정 `IsReportManagerEnabled` 에 `false`:  
+3.  보고서 관리자를 해제하려면 `IsReportManagerEnabled`를 `false`로 설정합니다.  
   
     ```  
     <IsReportManagerEnabled>false</IsReportManagerEnabled>  

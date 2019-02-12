@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: da1d5dae-2517-448e-96fb-5379c93222ea
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 395e3dbb8eb2a48991e897129a91f7b4808fd110
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 268d57207280689bb1c9b2df25013d6eca435f4a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200624"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016124"
 ---
 # <a name="backupencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>BackupEncryptionKey 메서드(WMI MSReportServer_ConfigurationSetting)
   지정된 보고서 서버 인스턴스에 대한 암호화 키를 백업합니다. 암호화 키는 암호로 암호화되어 저장됩니다.  

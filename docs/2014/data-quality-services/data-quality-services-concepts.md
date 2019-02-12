@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: b139ff48d818ad586c029103f8d86e6ff2721af0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 649d687b93a2eeff940c92c79b7b966511a1d79d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414800"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015644"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 개념
   이 항목에서는 기술 자료 관리, 데이터 품질 프로젝트 및 데이터 품질 관리의 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ) 개념을 간단히 요약합니다.  

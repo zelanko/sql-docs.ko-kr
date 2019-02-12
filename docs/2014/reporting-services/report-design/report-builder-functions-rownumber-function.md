@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: abf8cdd0eb4ffceb21061ea0101a42e4b84f3773
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 181670ab62d31fbb7b6815518129dd5b4e8a1b1d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105713"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040504"
 ---
 # <a name="rownumber-function-report-builder-and-ssrs"></a>RowNumber 함수(보고서 작성기 및 SSRS)
   지정한 범위에서 행 개수의 실행 개수를 반환합니다.  
@@ -33,7 +33,7 @@ RowNumber(scope)
   
 #### <a name="parameters"></a>매개 변수  
  *범위*  
- (`String`) 데이터 집합, 데이터 영역 또는 그룹 또는 null의 이름 (`Nothing` 에서 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), 행 개수를 계산할 컨텍스트를 지정 하는 합니다. `Nothing` 보고서 데이터 집합을 일반적으로 하는 가장 바깥쪽 컨텍스트를 지정합니다.  
+ (`String`) 행 개수를 계산할 컨텍스트를 지정하는 데이터 집합, 데이터 영역, 그룹의 이름 또는 Null([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]의 `Nothing`)입니다. `Nothing`은 가장 바깥쪽 컨텍스트를 지정하며 이는 일반적으로 보고서 데이터 집합입니다.  
   
 ## <a name="remarks"></a>Remarks  
  `RowNumber` 것 처럼 지정한 범위 내 행 개수의 실행 값 반환 [RunningValue](report-builder-functions-runningvalue-function.md) 집계 함수의 실행 값을 반환 합니다. 범위를 지정할 때 행 개수를 1로 다시 설정할 시점을 지정합니다.  
@@ -48,16 +48,16 @@ RowNumber(scope)
  자세한 내용은 [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md) 및 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)를 참조하세요.  
   
 ## <a name="code-example"></a>코드 예  
- 다음은 식에 사용할 수 있는 여 `BackgroundColor` 항상 흰색으로 시작 하는 각 그룹에 대 한 세부 정보 행 색을 대체 하는 테이블 릭 스 데이터 영역 정보 행의 속성입니다.  
+ 다음은 항상 흰색으로 시작되는 각 그룹의 정보 행 색을 대체하기 위해 테이블릭스 데이터 영역 정보 행의 `BackgroundColor` 속성에 사용할 수 있는 식입니다.  
   
 ```  
 =IIF(RowNumber("GroupbyCategory") Mod 2, "White", "PaleGreen")  
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서에 사용 되는 식 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [합계, 집계 및 기본 제공 컬렉션의 식 범위 &#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 7b4a0b98-975b-478a-8359-7db39ccbb347
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c9bce266836e1181c1d619d89985d9d461729e83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 44d0318882b619f4f6206f59ba47656f35c38636
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183003"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043364"
 ---
 # <a name="new-system-role-management-studio"></a>새 시스템 역할(Management Studio)
   이 페이지를 사용하여 시스템 수준의 역할 정의를 만들 수 있습니다. 시스템 역할 정의는 보고서 서버 전체에 적용되는 시스템 수준 태스크 집합을 지정합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "48183003"
  **이름**  
  역할 정의의 이름을 입력합니다. 역할 정의 이름은 보고서 서버 네임스페이스 내에서 고유해야 합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 이름 지정 시에는 다음 문자를 사용하지 마십시오.  
   
- ; ? : \@ & = +, $ / * \< >  
+ ; ? : \@ & = + , $ / * \< >  
   
  " /  
   

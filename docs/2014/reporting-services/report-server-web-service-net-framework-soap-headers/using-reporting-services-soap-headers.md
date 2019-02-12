@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 306d2c06-a25a-40f8-8a35-13dd32e8841e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 247233e90e5fa35cbaacd905d208f07f15e850bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3a9e61cc8cc546156d24c209a68c3a523a0f8a29
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083863"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015064"
 ---
 # <a name="using-reporting-services-soap-headers"></a>Reporting Services SOAP 헤더 사용
   SOAP를 사용한 웹 서비스 메서드와의 통신은 표준 형식을 따릅니다. 이 형식의 일부는 XML 문서로 인코딩되는 데이터입니다. XML 문서는 루트 **Envelope** 요소로 구성되고, 이것은 다시 필수 **Body** 요소와 선택적 **Header** 요소로 구성됩니다. **Body** 요소는 메시지 관련 데이터를 포함합니다. 선택적 **Header** 요소는 특정 메시지와 직접 관련되지 않은 추가 정보를 포함할 수 있습니다. **Header** 요소의 각 자식 요소를 SOAP 헤더라고 합니다.  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5aa5aca2f152a66d838fd49662c937932586338a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d0933593220b73b8d57d76645ebea05d733e5661
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181173"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043114"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>사각형 및 선(보고서 작성기 및 SSRS)
   사각형과 선을 사용하여 보고서에서 시각 효과를 만들 수 있습니다. 이러한 보고서 항목에 대한 표시 속성은 홈 탭의 테두리 섹션에서 설정할 수 있으며 다른 속성은 속성 창을 사용하여 설정할 수 있습니다. 사각형에는 배경색, 이미지, 도구 설명 또는 책갈피와 같은 기능을 추가할 수 있습니다.  
@@ -42,18 +42,18 @@ ms.locfileid: "48181173"
 
   
 ##  <a name="ReportBorder"></a> 보고서 테두리 추가  
- 선이나 사각형을 추가하지 않고 머리글, 바닥글 및 보고서 본문 자체에 테두리를 추가하여 보고서에 테두리를 추가할 수 있습니다. 자세한 내용은 [보고서에 테두리 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)를 참조하세요.  
+ 선이나 사각형을 추가하지 않고 머리글, 바닥글 및 보고서 본문 자체에 테두리를 추가하여 보고서에 테두리를 추가할 수 있습니다. 자세한 내용은 [보고서에 테두리 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)에 대해 자세히 알아봅니다.  
   
 
   
 ##  <a name="HowTo"></a> 방법 도움말 항목  
- [보고서에 테두리를 추가 &#40;보고서 작성기 및 SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)  
+ [보고서에 테두리 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)  
   
- [사각형 또는 컨테이너 추가 &#40;보고서 작성기 및 SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
+ [사각형 또는 컨테이너 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
- [추가 및 수정 된 줄 &#40;보고서 작성기 및 SSRS&#41;](add-and-modify-a-line-report-builder-and-ssrs.md)  
+ [선 추가 및 수정&#40;보고서 작성기 및 SSRS&#41;](add-and-modify-a-line-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [사각형 또는 컨테이너 추가 &#40;보고서 작성기 및 SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
+ [사각형 또는 컨테이너 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
   

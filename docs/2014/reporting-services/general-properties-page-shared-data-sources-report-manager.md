@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1b344449-6f7c-47d2-a737-972d88c0faf8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bdbca550f6ecb985248975b6dce332fb9ca05fe9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 990e6b8f74eb2066175bcf92a22e2478ba4ef6de
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218323"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040405"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>일반 속성 페이지, 공유 데이터 원본(보고서 관리자)
   일반 속성 페이지를 사용하여 공유 데이터 원본 항목의 속성을 보거나 수정할 수 있습니다. 속성에 대한 모든 변경 내용은 **적용**을 클릭하면 해당 항목을 참조하는 모든 보고서에 적용됩니다.  
@@ -46,12 +46,12 @@ ms.locfileid: "48218323"
  공유 데이터 원본을 설정 또는 해제하도록 선택합니다. 공유 데이터 원본을 해제하여 항목을 참조하는 모든 보고서, 보고서 모델 및 데이터 기반 구독이 처리되지 않도록 할 수 있습니다.  
   
  **데이터 원본 유형**  
- 데이터 원본의 데이터를 처리하는 데 사용되는 데이터 처리 확장 프로그램을 지정합니다. 보고서 서버에 대 한 데이터 처리 확장 프로그램이 포함 되어 있습니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, XML, SAP [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], ODBC 및 OLE DB입니다. 다른 데이터 처리 확장 프로그램은 관련 공급업체로부터 구할 수 있습니다.  
+ 데이터 원본의 데이터를 처리하는 데 사용되는 데이터 처리 확장 프로그램을 지정합니다. 보고서 서버에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, XML, SAP, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], ODBC 및 OLE DB용 데이터 처리 확장 프로그램이 포함되어 있습니다. 다른 데이터 처리 확장 프로그램은 관련 공급업체로부터 구할 수 있습니다.  
   
  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] Edition with Advanced Services를 사용하는 경우에는 로컬 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 원본만 선택할 수 있습니다.  
   
  **연결 문자열**  
- 보고서 서버가 데이터 원본에 연결하는 데 사용하는 연결 문자열을 지정합니다. 연결 형식에 따라 사용하는 구문이 결정됩니다. 예를 들어 XML 데이터 처리 확장 프로그램에 대한 연결 문자열은 XML 문서에 대한 URL입니다. 대부분의 경우 일반적인 연결 문자열은 데이터베이스 서버와 데이터 파일을 지정합니다. 다음 예제에 연결할 때 사용할 연결 문자열을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] 데이터베이스:  
+ 보고서 서버가 데이터 원본에 연결하는 데 사용하는 연결 문자열을 지정합니다. 연결 형식에 따라 사용하는 구문이 결정됩니다. 예를 들어 XML 데이터 처리 확장 프로그램에 대한 연결 문자열은 XML 문서에 대한 URL입니다. 대부분의 경우 일반적인 연결 문자열은 데이터베이스 서버와 데이터 파일을 지정합니다. 다음 예에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] 데이터베이스에 연결하는 데 사용되는 연결 문자열을 보여 줍니다.  
   
 ```  
 data source=<a SQL Server instance>;initial catalog=AdventureWorks2012  
@@ -71,9 +71,9 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **보고서 서버에 안전 하 게 저장 된 자격 증명**  
  암호화된 사용자 이름 및 암호를 보고서 서버 데이터베이스에 저장합니다. 사용자 동작이 아닌 일정이나 이벤트로 시작되는 보고서와 같이 무인 모드로 보고서를 실행하려는 경우 이 옵션을 선택하십시오. 기본 보안을 사용하는 경우 사용자 이름은 Windows 도메인 계정이어야 합니다. 이 형식으로 계정을 지정 합니다. \<도메인 >\\< 사용자 이름\>합니다. 지정하는 계정에는 보고서에 사용되는 데이터 원본을 호스팅하는 컴퓨터에 대한 로컬 로그온 권한이 있어야 합니다.  
   
- 자격 증명이 Windows 인증 자격 증명인 경우 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용** 을 선택합니다. 데이터베이스 인증을 사용 하는 경우이 확인란을 선택 하지 마십시오 (예를 들어 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증).  
+ 자격 증명이 Windows 인증 자격 증명인 경우 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용** 을 선택합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증과 같은 데이터베이스 인증을 사용하는 경우에는 이 확인란을 선택하지 마십시오.  
   
- 데이터베이스 인증을 사용하는 경우 데이터베이스 자격 증명 위임을 허용하려면 데이터베이스 서버에서 가장을 지원하는 경우에만 **데이터 원본에 연결한 후 인증된 사용자로 가장** 을 선택하십시오. 에 대 한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 경우이 옵션은 SETUSER 함수를 설정 합니다.  
+ 데이터베이스 인증을 사용하는 경우 데이터베이스 자격 증명 위임을 허용하려면 데이터베이스 서버에서 가장을 지원하는 경우에만 **데이터 원본에 연결한 후 인증된 사용자로 가장** 을 선택하십시오. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 경우 이 옵션은 SETUSER 함수를 설정합니다.  
   
  **Windows 통합된 보안**  
  현재 사용자의 Windows 자격 증명을 사용하여 데이터 원본에 액세스합니다. 데이터 원본에 액세스하는 데 사용되는 자격 증명이 네트워크 도메인에 로그온하는 데 사용되는 자격 증명과 같으면 이 옵션을 선택합니다. 이 옵션은 도메인에 Kerberos를 설정한 경우나 데이터 원본이 보고서 서버와 같은 컴퓨터에 있는 경우에 가장 잘 작동합니다. Kerberos를 해제하면 Windows 자격 증명이 다른 컴퓨터로 전달될 수 있습니다. 컴퓨터 연결이 추가로 필요한 경우에는 원하는 데이터가 아닌 오류가 반환됩니다.  
@@ -100,7 +100,7 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  공유 데이터 원본을 기반으로 새 모델을 만들려면 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [새 데이터 원본 페이지&#40;보고서 관리자&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)   
  [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  

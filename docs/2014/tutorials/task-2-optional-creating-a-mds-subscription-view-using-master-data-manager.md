@@ -1,24 +1,21 @@
 ---
-title: '태스크 2 (선택 사항): 마스터 데이터 관리자를 사용 하 여 MDS 구독 뷰 만들기 | Microsoft Docs'
+title: '태스크 2(선택 사항): 마스터 데이터 관리자를 사용 하 여 MDS 구독 뷰 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: f3da8219-e0cb-4848-95ca-285a76ec1ba9
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 09c2402b9168ac99a201afa8e0ebda971614ee4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4596485b4eebeba66028d03f5a54b3ee2461205b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097601"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015284"
 ---
 # <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>태스크 2(선택 사항): 마스터 데이터 관리자를 사용하여 MDS 구독 뷰 만들기
   이 태스크에서는 노출 구독 뷰를 만든 합니다 **공급 업체** 에서 엔터티를 **공급 업체** 다른 응용 프로그램에 모델. 현재 버전의 자습서에서는 이 뷰를 사용하지 않습니다.  

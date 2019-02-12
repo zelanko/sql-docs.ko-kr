@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security"
 ms.topic: conceptual
 ms.assetid: c14034ef-6e0b-4df5-8072-bfb8d90b3172
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 85d4c4d79dbddd59c3208c28b3fea50c0aa857b7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 31282041abe538bd51ba4b1367f70cd3c5fa3d5b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514059"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030794"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>등록된 서버를 사용하여 요청 시 평가 수행
   등록된 서버를 사용하여 하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 대해 최선의 구현 방법 정책의 요청 시 평가를 수행할 수 있습니다. 로컬 서버 그룹 또는 중앙 관리 서버를 사용할 수 있습니다.  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ff2a701c3425fce737c75c6fb0b6bc01698d8277
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8b8a9b295df0cfa4d49e0964a6d6c83e62fefb8e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227143"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031644"
 ---
 # <a name="images-report-builder-and-ssrs"></a>이미지(보고서 작성기 및 SSRS)
   이미지는 보고서에 포함되어 있거나, 데이터베이스에 저장되어 있거나, 보고서 서버에 저장되어 있거나, 웹의 기타 위치에 저장되어 있는 이미지에 대한 참조를 포함하는 보고서 항목입니다. 이미지는 데이터 행이 반복되는 그림이 될 수 있습니다 특정 보고서 항목의 배경으로 이미지를 사용할 수도 있습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "48227143"
 ##  <a name="EmbedImages"></a> 포함 이미지  
  모든 이미지 데이터가 보고서 정의 안에 저장되도록 보고서에 이미지를 포함할 수 있습니다. 이미지를 포함하면 이미지가 MIME로 인코딩되어 보고서 정의에 텍스트로 저장됩니다. 포함 이미지를 사용하면 보고서에서 항상 이미지를 사용할 수 있지만 보고서 정의의 크기도 늘어납니다.  
   
- 이미지를 포함 하는 방법에 대 한 자세한 내용은 참조 하세요. [보고서에 이미지 포함 &#40;보고서 작성기 및 SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)합니다.  
+ 이미지 포함에 대한 자세한 내용은 [보고서에 이미지 포함&#40;보고서 작성기 및 SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)을 참조하세요.  
   
 
   
@@ -56,7 +56,7 @@ ms.locfileid: "48227143"
   
  보고서 작성기 또는 보고서 디자이너에서 보고서를 실행하면 미리 보기 기능은 사용자의 자격 증명을 사용하여 이미지를 표시합니다. 보고서 서버에서 보고서를 실행할 경우 이미지에 액세스하는 데 필요한 서버 자격 증명이 없으면 보고서의 이미지가 표시되지 않을 수 있습니다. 이 경우 시스템 관리자에게 문의하십시오.  
   
- 보고서에 외부 이미지를 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [외부 이미지 추가 &#40;보고서 작성기 및 SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)합니다.  
+ 보고서에 외부 이미지를 추가하는 방법은 [외부 이미지 추가&#40;보고서 작성기 및 SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)을 참조하세요.  
   
  
   
@@ -66,28 +66,28 @@ ms.locfileid: "48227143"
 > [!NOTE]  
 >  HTML 렌더링 확장 프로그램과 같은 일부 렌더링 확장 프로그램은 본문, 페이지 머리글 및 페이지 바닥글에 보고서 본문의 배경 이미지를 렌더링합니다. 페이지 머리글 및 바닥글에 각각 배경 이미지를 정의할 수 있지만 이미지를 정의하지 않으면 보고서에서 본문의 배경 이미지를 사용합니다. 이미지 렌더링 확장 프로그램과 같은 기타 렌더링 확장 프로그램은 페이지 머리글 및 바닥글에 본문의 배경 이미지를 렌더링하지 않습니다.  
   
- 배경 이미지를 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [배경 이미지 추가 &#40;보고서 작성기 및 SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)합니다.  
+ 배경 이미지 추가에 대한 자세한 내용은 [배경 이미지 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)을 참조하세요.  
   
  
   
 ##  <a name="DataboundImages"></a> 데이터 바인딩된 이미지  
- 데이터베이스에 저장된 이미지를 보고서에 추가할 수 있습니다. 정적 이미지에 사용된 것과 같은 이미지 보고서 항목을 이미지가 데이터베이스에 저장되어 있음을 나타내는 속성 집합과 함께 사용합니다. 데이터 바인딩된 이미지 작업에 대 한 지침을 보려면 [데이터 바인딩된 이미지 추가 &#40;보고서 작성기 및 SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)합니다.  
+ 데이터베이스에 저장된 이미지를 보고서에 추가할 수 있습니다. 정적 이미지에 사용된 것과 같은 이미지 보고서 항목을 이미지가 데이터베이스에 저장되어 있음을 나타내는 속성 집합과 함께 사용합니다. 데이터 바인딩된 이미지를 사용하는 방법은 [데이터 바인딩된 이미지 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)을 참조하세요.  
   
 
   
 ##  <a name="HowTo"></a> 방법 도움말 항목  
- [외부 이미지 추가 &#40;보고서 작성기 및 SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)  
+ [외부 이미지 추가&#40;보고서 작성기 및 SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)  
   
- [보고서에 이미지 포함 &#40;보고서 작성기 및 SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)  
+ [보고서에 이미지 포함&#40;보고서 작성기 및 SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)  
   
- [배경 이미지 추가 &#40;보고서 작성기 및 SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)  
+ [배경 이미지 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)  
   
- [데이터 바인딩된 이미지 추가 &#40;보고서 작성기 및 SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)  
+ [데이터 바인딩된 이미지 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md)  
   
   
   
 ## <a name="see-also"></a>관련 항목  
- [이미지 파일로 내보내기 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
+ [이미지 파일로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
  [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

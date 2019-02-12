@@ -19,13 +19,13 @@ f1_keywords:
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 400b7ca37d5eef130df855b3519079e2ccc8799e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: ff184ad75c495d9f18f5e9d9e1d3aa1bdfa7132e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376125"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042773"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>숫자 및 날짜 서식 지정(보고서 작성기 및 SSRS)
   해당 데이터 영역 **속성** 대화 상자의 **숫자** 페이지에서 형식을 선택하여 데이터 영역에 있는 숫자와 날짜의 형식을 지정할 수 있습니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "53376125"
   
 -   **범주** 에서 **통화** 를 선택하고 **값 표시 단위**를 선택한 경우 재무 형식을 사용하여 숫자를 표시하는 단위로 **천**, **백만**또는 **10억** 을 선택할 수 있습니다. 예를 들어 필드 값이 1,789,905,394인 경우 값 표시 단위로 **10억** 을 선택하고 소수 자릿수를 두 자리로 지정하면 보고서에는 1.78이 값으로 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [텍스트 및 자리 표시자 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [선, 색 및 이미지 서식 지정&#40;보고서 작성기 및 SSRS&#41;](images-report-builder-and-ssrs.md)   
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 12626aad-f0be-4653-87d0-60eb3a3fff78
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e3d21be1658d6f638ef8af9abd1f1241c2f459ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e70d3e48df832eb8fc3a6661ed9d4b549922a095
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104153"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040254"
 ---
 # <a name="rendering-and-execution-methods"></a>렌더링 및 실행 메서드
   다음 메서드를 사용하여 항목 실행 및 캐싱과 보고서 렌더링을 관리할 수 있습니다.  

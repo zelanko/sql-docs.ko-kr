@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: dd80a8e6-1e41-4c49-9898-02b1d2505a10
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: cf933017b77bf8f0c1980c00f8f669d92483a1c6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 478634dce86c8ccb0cf36d4d558be3826048983e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367185"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039634"
 ---
 # <a name="task-12-discovering-knowledge-knowledge-discovery"></a>태스크 12: 지식 검색(기술 자료 검색)
   수행한이 태스크에서는 합니다 **기술 자료 검색** 활동을 **Supplier ID** 하 고 **Supplier Name** 도메인. 이 시나리오에서 기술 자료 검색 프로세스는 주로 이러한 두 도메인의 값을 가져옵니다.  

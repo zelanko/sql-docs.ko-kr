@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 35563d4c-a3d5-4f95-bf46-605da9dfcbb8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d4bc08bcf6e56a5f839ebe17a8907bb7ce603d78
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: aa144386222c489e9b682942873794669f5b31d6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349967"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029104"
 ---
 # <a name="new-data-source-page-report-manager"></a>새 데이터 원본 페이지(보고서 관리자)
   새 데이터 원본 페이지를 사용하여 공유 데이터 원본 항목을 만들 수 있습니다. 공유 데이터 원본은 외부 데이터 원본과의 연결을 정의합니다. 공유 데이터 원본을 사용하면 해당 데이터 원본을 사용하는 보고서, 모델 및 데이터 기반 구독과는 별도로 데이터 원본 연결에 대한 설정을 만들고 관리할 수 있습니다.  
@@ -92,7 +92,7 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **확인**  
  클릭하여 변경 내용을 저장합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [공유 데이터 원본 만들기, 삭제 또는 수정&#40;보고서 관리자&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   

@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.datasetproperties.query.f1
 ms.assetid: 1fa34a4b-7de0-4e92-99fa-bc28a206773f
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7a9a15146c6abbcad899f9af3c9fb5e665b76fa9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: f83cde4947e9734aa11a6758d19d056ce7e6a82c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205954"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011804"
 ---
 # <a name="dataset-properties-dialog-box-query"></a>데이터 세트 속성 대화 상자, 쿼리
   선택 **쿼리** 에 **데이터 집합 속성** 대화 상자의 데이터 원본을 선택 하 고 쿼리를 만듭니다.  

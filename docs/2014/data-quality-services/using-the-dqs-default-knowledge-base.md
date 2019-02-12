@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: ae4688108f7e0d2bf045581b7afe50235c7ff012
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 40a69447a0aff678cfd53a75603200b467a542c7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368267"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016314"
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>DQS 기본 기술 자료 사용
   이 항목에서는 DQS( **)와 함께 설치되는 기본 기술 자료인**DQS 데이터 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 에 대해 설명합니다. DQS 데이터는 다음과 같은 도메인이 포함된 미리 작성된 기본 기술 자료입니다.  

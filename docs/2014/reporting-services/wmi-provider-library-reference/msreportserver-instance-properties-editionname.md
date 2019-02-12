@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 983a5f94-f3c7-4b3a-943e-35fcb9822cc6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 08798562f2c7a011e775c46482efa92493311177
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f3e86324f580968df31b15ee12895072895e587
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065083"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040694"
 ---
 # <a name="editionname-property-wmi-msreportserverinstance"></a>EditionName 속성(WMI MSReportServer_Instance)
   사람이 읽을 수 있는 보고서 서버 버전의 이름을 반환합니다. 읽기 전용입니다.  
@@ -34,7 +34,7 @@ public string EditionName;
 ```  
   
 ## <a name="property-value"></a>속성 값  
- `string` 사람이 읽을 수 있는 보고서 서버 버전의 이름이 들어 있는입니다.  
+ 사람이 읽을 수 있는 보고서 서버 버전의 이름이 들어 있는 `string`입니다.  
   
 ## <a name="example-code"></a>코드 예  
  [MSReportServer_ConfigurationSetting 클래스](msreportserver-configurationsetting-class.md)  

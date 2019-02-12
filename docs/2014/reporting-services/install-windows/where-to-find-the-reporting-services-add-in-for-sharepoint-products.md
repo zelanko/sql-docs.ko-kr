@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e005bc36600dbbdb345d43d27aa9ea8bd1031575
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 818b927f403d5d58bef41ce1dac033549e106a4c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362565"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041034"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>SharePoint 제품용 Reporting Services 추가 기능 검색 위치
   SharePoint 제품 및 기술용 SSRS( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ) 추가 기능(rsSharePoint.msi)은 SharePoint 배포와 보고서 서버를 통합하는 기능을 제공하는 웹 다운로드입니다.  

@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 99f83b32-4b86-4d40-973c-9a328d23ac8b
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 78c4b9e0674150c83d79c31a313fc44233f032f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: cb3b78d2770e220f2401bc39ba21c390d6886b4a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132440"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040184"
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>테이블릭스 데이터 영역(보고서 작성기 및 SSRS)
   테이블릭스 데이터 영역은 행과 열로 구성된 셀에 보고서 데이터를 표시하는 일반화된 레이아웃 보고서 항목입니다. 보고서 데이터는 데이터 원본에서 검색된 상태 그대로의 정보 데이터이거나 지정한 그룹으로 구성된 집계 정보 데이터일 수 있습니다. 각 테이블릭스 셀에는 입력란이나 이미지 같은 보고서 항목이나 테이블릭스 영역, 차트 또는 계기 같은 다른 데이터 영역이 들어 있을 수 있습니다. 한 셀에 여러 보고서 항목을 추가하려면 먼저 컨테이너 역할을 할 사각형을 추가한 다음 이 사각형에 보고서 항목을 추가합니다.  

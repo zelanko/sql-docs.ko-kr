@@ -15,13 +15,13 @@ f1_keywords:
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d3be68007b9398b356d86cb0c1395be62c60aac0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d2c8f3d7062f0ab720767c13bb486a4060cec8ab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166820"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016015"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>차트에서 계열 색 서식 지정(보고서 작성기 및 SSRS)
   Reporting Services는 차트에 여러 개의 기본 제공 색상표를 제공하며, 사용자가 사용자 지정 색상표를 정의할 수도 있습니다. 기본적으로 차트는 기본 제공 사용 **BrightPastel** 색상표를 각 계열을 채웁니다. 이 색은 범례에도 나타납니다. 차트에 여러 개의 계열이 추가될 때는 색상표에서 색을 정의한 순서대로 차트가 계열에 색을 할당합니다.  
@@ -46,14 +46,14 @@ ms.locfileid: "48166820"
 ## <a name="using-a-color-fill-on-each-series"></a>각 계열에 색 채우기 사용  
  차트에 있는 각 계열에 대한 색을 지정하여 자신만의 색을 차트에 정의할 수도 있습니다. 이렇게 하려면 **계열 속성** 대화 상자를 열고 **채우기** 의 **색**속성을 설정합니다. 이 방법은 모든 정의된 색상표를 재정의합니다. 일반적으로 보고서 처리 전까지는 데이터 세트에 있는 계열 수를 알지 못할 수도 있기 때문에 사용자 지정 색상표를 사용하여 자신만의 색을 정의하는 것이 좋습니다.  
   
- 이 방법은 식을 기준으로 계열의 색을 조건부로 설정할 때 가장 적합합니다.  자세한 내용은 [차트의 데이터 요소에 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)합니다.  
+ 이 방법은 식을 기준으로 계열의 색을 조건부로 설정할 때 가장 적합합니다.  자세한 내용은 [차트의 데이터 요소에 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)을 클릭합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [여러 셰이프 차트에 일관된 색 지정&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
  [색상표를 사용하여 차트에 대한 색 정의&#40;보고서 작성기 및 SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md))  
   
- [줄무늬 선을 추가 하 여 차트 데이터 강조 표시 &#40;보고서 작성기 및 SSRS&#41;](highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md)  
+ [줄무늬 선을 추가하여 차트 데이터 강조 표시&#40;보고서 작성기 및 SSRS&#41;](highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   

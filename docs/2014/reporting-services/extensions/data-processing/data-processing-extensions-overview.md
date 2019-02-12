@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 283d810adec697ce2a78f60358a2c00e33be5cb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: becdcfd5e975b5d333e7b326adb4d9b7e283c86a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092912"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040134"
 ---
 # <a name="data-processing-extensions-overview"></a>데이터 처리 확장 프로그램 개요
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 데이터 처리 확장 프로그램을 통해 데이터 원본에 연결하고 데이터를 검색할 수 있습니다. 이 프로그램은 데이터 원본과 데이터 집합을 연결하는 역할도 합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 데이터 공급자 인터페이스의 하위 집합을 본떠서 만든 것입니다.  
@@ -76,7 +76,7 @@ Reporting Services 데이터 처리 확장 프로그램 아키텍처
   
 -   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 기능을 자세히 알고 있어야 합니다.  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 아키텍처, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 데이터 공급자, ADO.NET 데이터 집합 개체 및 공통 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 인터페이스에 대해 자세히 알고 있어야 합니다.  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 아키텍처, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 데이터 공급자, ADO.NET 데이터 세트 개체 및 공통 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 인터페이스에 대해 자세히 알고 있어야 합니다.  
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET과 같은 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 언어에 대한 개발 경험이 있어야 합니다.  
   

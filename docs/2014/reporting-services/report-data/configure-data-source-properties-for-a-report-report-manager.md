@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e629b706cec435ac027f7a90f50bf12e1cb81879
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: accae7ea31570550a77e4b73c80e2617ad27fef5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136413"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041514"
 ---
 # <a name="configure-data-source-properties-for-a-report--report-manager"></a>보고서의 데이터 원본 속성 구성(보고서 관리자)
   보고서를 실행하면 보고서 서버가 속성 정보를 검색하여 데이터 원본에 연결하는 방식을 결정합니다. 데이터 원본 유형, 연결 문자열 및 자격 증명 정보가 게시된 보고서의 데이터 원본 속성 페이지에 지정되어 있습니다. 데이터 원본 연결 정보가 보고서 생성 시 지정된 원래 값과 달라지도록 속성을 설정할 수 있습니다.  
@@ -57,14 +57,14 @@ ms.locfileid: "48136413"
   
     -   데이터 원본이 파일 시스템에서 액세스되는 XML 파일인 경우와 같이 데이터 원본이 자격 증명을 사용하지 않는 경우 **자격 증명 필요 없음**을 클릭합니다. 이 자격 증명 유형은 데이터 원본에 대해 유효한 경우에만 지정해야 합니다. 인증이 필요한 데이터 원본에 대해 이 옵션을 선택하면 연결이 실패합니다. 이 옵션을 선택할 때는 사용자 자격 증명을 사용할 수 없는 경우 보고서 서버가 다른 컴퓨터에 연결하여 데이터나 파일을 검색할 수 있도록 허용하는 무인 실행 계정을 구성해야 합니다.  
   
- 자격 증명을 구성 하는 방법에 대 한 자세한 내용은 참조 하세요. [보고서 데이터 원본에 대 한 연결 정보와 자격 증명 지정](specify-credential-and-connection-information-for-report-data-sources.md)합니다. 무인 실행 계정에 대한 자세한 내용은 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.  
+ 자격 증명 구성 방법에 대한 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요. 무인 실행 계정에 대한 자세한 내용은 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [페이지 콘텐츠를 &#40;보고서 관리자&#41;](../contents-page-report-manager.md)   
+ [내용 페이지&#40;보고서 관리자&#41;](../contents-page-report-manager.md)   
  [새 데이터 원본 페이지&#40;보고서 관리자&#41;](../new-data-source-page-report-manager.md)   
- [만들기, 수정 및 공유 데이터 원본 삭제 &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)   
+ [공유 데이터 원본 만들기, 수정 및 삭제&#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)   
  [보고서 데이터 원본 관리](manage-report-data-sources.md)   
- [만들기, 삭제 또는 공유 데이터 원본을 수정 &#40;보고서 관리자&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [공유 데이터 원본 만들기, 삭제 또는 수정&#40;보고서 관리자&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [데이터 원본 속성 페이지&#40;보고서 관리자&#41;](../data-sources-properties-page-report-manager.md)  
   
   

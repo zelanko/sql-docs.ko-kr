@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 49eb539c-d89b-4291-839a-0ec1a65cd270
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 993e6abe1df84f712f107f994b5a824e04d89467
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 33b628894376a909de5ee39b9de5a6e979a679f3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153573"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036074"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>애플리케이션에 Reporting Services 통합
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 개발자에게 솔루션 개발을 위한 포괄적인 API 집합을 제공하도록 디자인된 개방형의 확장 가능한 보고 플랫폼입니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "48153573"
  URL 액세스를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 탐색을 기존 비즈니스 응용 프로그램에 통합하는 방법을 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [URL 액세스와 SOAP 중 선택](../../../2014/reporting-services/application-integration/choosing-between-url-access-and-soap.md)   
  [기술 참조&#40;SSRS&#41;](../../../2014/reporting-services/technical-reference-ssrs.md)   
  [보고서 서버 웹 서비스](../report-server-web-service/report-server-web-service.md)  

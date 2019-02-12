@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 173696f4f75d14cbb0ea1b78104b69db50af7a2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d7c74eb4f69bf40446a4f912ed6673b57890c64b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065563"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029554"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services의 전자 메일 배달
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 개별 사용자 또는 그룹에 보고서를 메일로 보낼 수 있는 메일 배달 확장 프로그램이 포함되어 있습니다. 전자 메일 배달 확장 프로그램은 Reporting Services 구성 관리자를 통해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 파일을 편집하여 구성됩니다.  
@@ -78,11 +78,11 @@ ms.locfileid: "48065563"
   
  SharePoint 모드 보고서 서버를 구성하는 방법에 대한 자세한 내용은 다음을 참조하십시오.  
   
--   [Reporting Services 서비스 응용 프로그램에 대 한 전자 메일을 구성 &#40;SharePoint 2010 및 SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
+-   [Reporting Services 서비스 애플리케이션에 대한 메일 구성&amp;#40;SharePoint 2010 및 SharePoint 2013&amp;#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [태스크 및 권한](../security/tasks-and-permissions.md)   
- [구독 및 배달 &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [구독 및 배달&#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [데이터 기반 구독](data-driven-subscriptions.md)   
  [역할 할당](../security/role-assignments.md)  
   

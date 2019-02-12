@@ -1,7 +1,7 @@
 ---
 title: binary 및 varbinary(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 8/16/2017
+ms.date: 08/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f30837103fcc28075ac65e78c35e787a03de60bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22ea90a5876c6c824f7e80683503f1f8bf863675
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596781"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017074"
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary 및 varbinary(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47596781"
 ## <a name="arguments"></a>인수  
 **binary** [(*n*)] 길이가 *n*바이트인 고정 길이의 이진 데이터입니다. 여기서 *n*은 1부터 8,000까지의 값입니다. 스토리지 크기는 *n* 바이트입니다.
   
-**varbinary** [(*n* | **max**)] 가변 길이 이진 데이터입니다. *n*은 1부터 8000 사이의 값이 될 수 있습니다. **max**는 최대 저장소 크기가 2^31-1바이트임을 나타냅니다. 저장소 크기는 입력된 실제 데이터 길이에 2바이트를 더한 값입니다. 입력된 데이터의 길이가 0바이트일 수 있습니다. **varbinary**의 ANSI SQL 동의어는 **binary varying**입니다.
+**varbinary** [(*n* | **max**)] 가변 길이 이진 데이터입니다. *n*은 1부터 8000 사이의 값이 될 수 있습니다. **max**는 최대 스토리지 크기가 2^31-1바이트임을 나타냅니다. 저장소 크기는 입력된 실제 데이터 길이에 2바이트를 더한 값입니다. 입력된 데이터의 길이가 0바이트일 수 있습니다. **varbinary**의 ANSI SQL 동의어는 **binary varying**입니다.
   
 ## <a name="remarks"></a>Remarks  
 데이터 정의나 변수 선언문에서 *n*을 지정하지 않으면 기본 길이 1이 사용됩니다. CAST 함수에 *n*을 지정하지 않으면 기본 길이 30이 사용됩니다.

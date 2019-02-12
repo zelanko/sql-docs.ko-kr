@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ba16d9d50faaaef740f3aa4c4eaff5122fdff438
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 93a8d8b8c93dc340b4ffa0337f14478bc4bf910a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081043"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015774"
 ---
 # <a name="change-the-text-of-a-legend-item-report-builder-and-ssrs"></a>범례 항목의 텍스트 변경(보고서 작성기 및 SSRS)
   차트의 값 영역에 필드를 배치하면 해당 필드의 이름이 들어 있는 범례 항목이 자동으로 생성됩니다. 모든 범례 항목은 차트의 개별 계열에 연결됩니다. 단, 셰이프 차트의 경우에는 범례가 개별 계열 대신 개별 데이터 요소에 연결됩니다.  
   
- 셰이프 차트에서는 범례 항목의 텍스트를 변경하여 개별 데이터 요소에 대해 추가적인 정보를 표시할 수 있습니다. 예를 들어 데이터 요소의 값을 범례에서 백분율로 표시 하려는 경우 사용할 수는 키워드와 같은 `#PERCENT`합니다. .NET Framework 형식 코드와 키워드를 함께 추가하여 숫자 및 날짜 형식을 적용할 수 있습니다. 키워드에 대한 자세한 내용은 [차트의 데이터 요소에 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)을 참조하세요.  
+ 셰이프 차트에서는 범례 항목의 텍스트를 변경하여 개별 데이터 요소에 대해 추가적인 정보를 표시할 수 있습니다. 예를 들어 데이터 요소의 값을 범례에서 백분율로 표시하려면 `#PERCENT`과 같은 키워드를 사용할 수 있습니다. .NET Framework 형식 코드와 키워드를 함께 추가하여 숫자 및 날짜 형식을 적용할 수 있습니다. 키워드에 대한 자세한 내용은 [차트의 데이터 요소에 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)을 참조하세요.  
   
  ![뾰족한 차트](../media/sharpchart.png "뾰족한 차트")  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48081043"
 2.  **범례** 를 클릭하고 **사용자 지정 범례 텍스트** 상자에서 범례 레이블을 입력합니다. 입력한 텍스트로 계열이 업데이트됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [차트의 범례 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](chart-legend-formatting-report-builder.md)   
+ [차트의 범례 서식 지정&#40;보고서 작성기 및 SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [차트에서 계열 색 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [차트에서 범례 항목 숨기기&#40;보고서 작성기 및 SSRS&#41;](chart-legend-hide-items-report-builder.md)  
   

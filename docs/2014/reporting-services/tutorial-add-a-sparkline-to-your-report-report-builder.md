@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dcadf726623b71daa0f9bf3e699c6bd8ac3ab122
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 72a8778ce3edc2370c08d971703b5db09cd7f38d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376675"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016914"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>자습서: 보고서에 스파크라인 추가(보고서 작성기)
   이 자습서에서는 예제 판매 데이터를 기반으로 하는 기본 테이블 보고서를 만든 다음 테이블의 셀에 스파크라인 차트를 추가합니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "53376675"
   
 8.  **연결 문자열**에 다음 텍스트를 입력합니다.  
   
-     **데이터 원본 =\<서버 이름 >**  
+     **Data Source=\<servername>**  
   
      식 \<서버 이름 >에는 SQL Server 데이터베이스 엔진 인스턴스의 설치 된 컴퓨터를 지정 하는 예제 Report001, 합니다. 보고서 데이터는 SQL Server 데이터베이스에서 추출되지 않았으므로 데이터베이스 이름을 포함하지 않아야 합니다. 지정된 서버의 기본 데이터베이스는 쿼리를 구문 분석하는 데 사용됩니다.  
   
@@ -295,7 +295,7 @@ ms.locfileid: "53376675"
   
 4.  **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
-##  <a name="Title"></a> 8입니다. (선택 사항) 보고서 제목 추가  
+##  <a name="Title"></a> 8. (선택 사항) 보고서 제목 추가  
  보고서 제목은 보고서 맨 위에 나타납니다. 보고서 제목을 보고서 머리글에 배치하거나, 보고서 머리글이 사용되지 않을 경우 보고서 본문의 맨 위에 있는 입력란에 배치할 수 있습니다. 이 자습서에서는 보고서 본문의 맨 위에 자동으로 표시되는 입력란을 사용합니다.  
   
  글꼴 스타일, 크기 및 색을 텍스트의 각 문자나 구 단위로 다르게 적용하여 더 보기 좋게 꾸밀 수 있습니다. 자세한 내용은 [입력란의 텍스트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)을 참조하세요.  
@@ -318,7 +318,7 @@ ms.locfileid: "53376675"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Save"></a> 9입니다. 보고서 저장  
+##  <a name="Save"></a> 9. 보고서 저장  
  보고서 서버 또는 컴퓨터에 보고서를 저장합니다. 보고서를 보고서 서버에 저장하지 않을 경우 보고서 파트 및 하위 보고서와 같은 여러 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능을 사용할 수 없습니다.  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>보고서를 보고서 서버에 저장하려면  

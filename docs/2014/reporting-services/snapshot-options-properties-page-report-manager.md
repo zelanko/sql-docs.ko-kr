@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f6641f59-5267-4f57-8957-63b93d1a9679
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4342504d0d62f2c611c680c58fcdeae1f046f29b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 458a04b87bf8aedd0d772e18ceb9cbc669fe6ba4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078103"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042354"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>스냅숏 옵션 속성 페이지(보고서 관리자)
   스냅숏 옵션 속성 페이지를 사용하여 보고서 스냅숏이 보고서 기록에 추가되는 일정을 예약할 수 있고 보고서 기록에 저장되는 보고서 스냅숏 수에 제한을 설정할 수 있습니다.  
@@ -62,9 +62,9 @@ ms.locfileid: "48078103"
  클릭하여 변경 내용을 저장합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 기록에 스냅숏 추가 &#40;보고서 관리자&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [만들기, 수정 및 보고서 기록에서 스냅숏 삭제](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
+ [보고서 기록에 스냅숏 추가&#40;보고서 관리자&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [보고서 기록에서 스냅숏 만들기, 수정 및 삭제](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

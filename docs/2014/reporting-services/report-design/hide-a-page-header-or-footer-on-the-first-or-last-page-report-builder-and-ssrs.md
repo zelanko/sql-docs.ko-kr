@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 05ea4e197a727db6afffeedc3c26be676e358f73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6bd9094c0b8e14bfc71440b72fb02bd69fd47cfb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101063"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040784"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>첫 페이지 또는 마지막 페이지에서 페이지 머리글 또는 바닥글 숨기기(보고서 작성기 및 SSRS)
   보고서는 각 페이지의 위쪽과 아래쪽에 각각 표시되는 페이지 머리글과 페이지 바닥글을 포함할 수 있습니다. 머리글 또는 바닥글을 추가한 후에는 보고서의 첫 페이지 및 마지막 페이지에서 선택적으로 머리글과 바닥글을 숨길 수도 있습니다.  
@@ -49,8 +49,8 @@ ms.locfileid: "48101063"
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>관련 항목  
- [페이지 머리글 및 바닥글 &#40;보고서 작성기 및 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [페이지 머리글 및 바닥글&#40;보고서 작성기 및 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
  [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [페이지 머리글 / 바닥글 추가 또는 제거 &#40;보고서 작성기 및 SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
+ [페이지 머리글/바닥글 추가 또는 제거&#40;보고서 작성기 및 SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
   
   

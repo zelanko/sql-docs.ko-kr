@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: cb41b6fe5e19d69c68e7942dd1581eb7792a06af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3f740965cdc0b3c17e1a889975fae72bf37a85a6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117853"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043054"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>보고서 페이지에서 테이블릭스 데이터 영역 표시 제어(보고서 작성기 및 SSRS)
   이 항목에서는 보고서에서 테이블릭스 데이터 영역이 표시되는 방법을 변경하기 위해 수정할 수 있는 테이블릭스 데이터 영역의 속성에 대해 설명합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "48117853"
 ## <a name="controlling-how-tablix-row-and-column-groups-render"></a>테이블릭스 행과 열 그룹의 렌더링 방법 제어  
  테이블릭스 데이터 영역 그룹이 렌더링되는 방식을 제어하려면 그룹 구조를 고려해야 합니다. 테이블릭스 데이터 영역은 그림과 같이 네 가지 영역으로 구성될 수 있습니다.  
   
- ![테이블 릭 스 데이터 영역](../media/rs-tablixareas.gif "테이블 릭 스 데이터 영역")  
+ ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
  행 그룹 영역과 열 그룹 영역에는 그룹 머리글이 들어 있습니다. 테이블릭스 데이터 영역에 그룹 머리글이 있는 경우에는 **테이블릭스 속성** 대화 상자의 **일반** 페이지에 있는 속성을 설정하여 행과 열이 반복되는 방식을 제어합니다.  
   
@@ -75,8 +75,8 @@ ms.locfileid: "48117853"
 ## <a name="see-also"></a>관련 항목  
  [동일한 데이터 집합에 여러 데이터 영역 연결&#40;보고서 작성기 및 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [중첩된 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
- [합계, 집계 및 기본 제공 컬렉션의 식 범위 &#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
- [나누기, 머리글, 열 및 행 제어 페이지 &#40;보고서 작성기 및 SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
+ [페이지 나누기, 머리글, 열 및 행 제어&#40;보고서 작성기 및 SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [테이블&#40;보고서 작성기 및 SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [행렬&#40;보고서 작성기 및 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

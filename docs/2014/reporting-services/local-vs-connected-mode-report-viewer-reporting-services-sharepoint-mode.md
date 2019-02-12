@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a230a9bb-6046-401f-b5e5-53ff6edf2264
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b51ca3d0cc9e8716f090677f3e61d1177df746f6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 9393d4c4cdd3e3655a5088d8b1dd2bcfb33285a5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372295"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039624"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer-reporting-services-in-sharepoint-mode"></a>보고서 뷰어의 로컬 모드와 연결 모드 보고서 비교(SharePoint 모드의 Reporting Services)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서는 *로컬 모드* 또는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버를 사용하는 *연결된 모드*로 구성할 수 있습니다. 데이터 확장 프로그램에서 로컬 모드 보고를 지원하는 경우 이제 보고서 뷰어를 사용하여 SharePoint에서 직접 보고서를 렌더링할 수 있습니다. 이 방법을 *로컬 모드*라고 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 이전 버전에서는 보고서 뷰어 컨트롤로 보고서를 렌더링하려면 SharePoint 팜을 사용하여 SharePoint 모드로 구성된 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버에 연결해야 했습니다. 이 방법을 *원격 모드* 또는 *연결된 모드*라고 합니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "53372295"
 ## <a name="connected-mode"></a>연결된 모드  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 연결된 모드에서 ADS 확장 프로그램 사용에 대한 최신 정보는 [데이터 확장 프로그램 'ADS'의 오류를 표시하는 SharePoint 사이트에서 서비스 보고서에 액세스](https://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

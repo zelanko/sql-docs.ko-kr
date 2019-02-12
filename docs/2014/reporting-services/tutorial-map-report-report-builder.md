@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 43135554b1340b92f4801a0f08e002142b443981
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 8fe9eaf39f101e6f64946e7c60a04765e4099d5a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359865"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040164"
 ---
 # <a name="tutorial-map-report-report-builder"></a>자습서: 지도 보고서(보고서 작성기)
   이 자습서는 지리적 배경에 대한 보고서 데이터를 표시하는 데 사용할 수 있는 지도 기능을 이해하는 데 도움을 주기 위해 작성되었습니다.  
@@ -330,7 +330,7 @@ ms.locfileid: "53359865"
   
  다음 단계에서는 특정 색을 각 군의 상점별 판매량 범위와 연결하는 색 규칙을 지정합니다. 빨강-노랑-녹색은 상대적인 높은-중간-낮은 판매량을 나타냅니다. 통화를 표시하도록 색 눈금의 형식을 지정합니다. 새 범례에서 연간 판매량 범위를 표시합니다. 상점이 없는 군의 경우 연결된 데이터가 없음을 표시하기 위해 색을 사용하지 않습니다.  
   
-###  <a name="Relationship"></a> 6a 합니다. 공간 데이터와 분석 데이터 간의 관계 만들기  
+###  <a name="Relationship"></a> 6a. 공간 데이터와 분석 데이터 간의 관계 만들기  
  분석 데이터에 따른 색으로 군 모양을 변경하려면 먼저 분석 데이터를 공간 데이터와 연결해야 합니다. 이 자습서에서는 일치시킬 군 이름을 사용합니다.  
   
 ##### <a name="to-build-a-relationship-between-spatial-data-and-analytical-data"></a>공간 데이터와 분석 데이터 간의 관계를 만들려면  
@@ -359,7 +359,7 @@ ms.locfileid: "53359865"
   
  상점이 있는 각 군은 마법사에서 선택한 스타일의 색상표를 기반으로 하는 색으로 표시됩니다.  
   
-###  <a name="ColorRules"></a> 6b 합니다. 다각형에 대한 색 규칙 지정  
+###  <a name="ColorRules"></a> 6b. 다각형에 대한 색 규칙 지정  
  상점 판매량을 기반으로 각 군의 색을 변경하는 규칙을 만들려면 범위 값, 표시할 범위 내의 하위 범위 수 및 사용할 색을 지정해야 합니다.  
   
 ##### <a name="to-specify-color-rules-for-all-polygons-that-have-associated-data"></a>연결된 데이터가 있는 모든 다각형에 대한 색 규칙을 지정하려면  
@@ -396,7 +396,7 @@ ms.locfileid: "53359865"
   
  색 눈금에 빨강, 주황, 노랑, 황록색 및 녹색이 표시됩니다. 각 색은 군별 판매량에 따라 자동으로 계산되는 판매량 범위를 나타냅니다.  
   
-###  <a name="ColorScale"></a> 6 c입니다. 색 눈금의 데이터 형식을 통화로 지정  
+###  <a name="ColorScale"></a> 6c. 색 눈금의 데이터 형식을 통화로 지정  
  기본적으로 데이터는 일반 형식을 사용하지만 사용자 지정 형식을 적용할 수도 있습니다.  
   
 ##### <a name="to-set-the-format-for-the-color-scale"></a>색 눈금의 형식을 설정하려면  
@@ -415,7 +415,7 @@ ms.locfileid: "53359865"
   
  색 눈금에 각 범위에 대한 통화 형식으로 연간 판매량이 표시됩니다.  
   
-###  <a name="NewLegend"></a> 6 d입니다. 새 범례 만들기  
+###  <a name="NewLegend"></a> 6d. 새 범례 만들기  
  기본적으로 모든 규칙은 첫 번째 범례에 표시됩니다. 지도의 표시를 향상시키기 위해 범례를 추가할 수 있습니다.  
   
  기본 표시를 변경하려면 새 범례를 만들고 지도 계층에 대한 규칙 결과를 새 범례와 연결합니다.  
@@ -438,7 +438,7 @@ ms.locfileid: "53359865"
   
  범례가 확장되어 제목이 표시됩니다.  
   
-###  <a name="Associate"></a> 6e 합니다. 범례와 색 규칙 연결  
+###  <a name="Associate"></a> 6e. 범례와 색 규칙 연결  
  각 범례에는 하나 이상의 규칙 결과 집합이 표시될 수 있습니다.  
   
 ##### <a name="to-associate-a-legend-with-color-rules"></a>범례를 색 규칙과 연결하려면  
@@ -463,7 +463,7 @@ ms.locfileid: "53359865"
   
  연결된 상점과 판매량이 있는 군은 색 규칙에 따라 표시되고 판매량이 없는 군은 무색으로 표시됩니다.  
   
-###  <a name="NoData"></a> 6f 합니다. 데이터가 없는 군의 색 변경  
+###  <a name="NoData"></a> 6f. 데이터가 없는 군의 색 변경  
  계층에 있는 모든 지도 요소의 기본 표시 옵션을 설정할 수 있습니다. 색 규칙은 이러한 표시 옵션보다 우선합니다.  
   
 ##### <a name="to-set-the-display-properties-for-all-elements-on-a-layer"></a>계층의 모든 요소에 대한 표시 속성을 설정하려면  

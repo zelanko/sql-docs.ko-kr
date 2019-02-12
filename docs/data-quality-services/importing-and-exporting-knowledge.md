@@ -8,21 +8,21 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: f5d961931ca85eae1eead3a51eadbecd467bfff3
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: d90cf40ff410f9e79c0d37450b5e50ff48fb4d0d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616613"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016294"
 ---
 # <a name="importing-and-exporting-knowledge"></a>기술 자료 가져오기 및 내보내기
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램에서 직접 기술 자료와 도메인을 만들거나 기술 자료의 정보를 가져오거나 내보낼 수 있습니다. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램에서 가져오기 및 내보내기 작업에 데이터 파일을 사용하거나 가져오기 작업에 Excel 파일을 사용할 수 있습니다. 사용되는 데이터 파일은 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )로 만들어 암호화된 파일로서 확장명이 .dqs입니다. Microsoft Excel에서 만든 파일은 .xlsx, .xls 또는.csv 확장명을 가질 수 있습니다. 이러한 작업을 통해 데이터 정리와 일치를 수행하는 데 사용하는 기술 자료를 보다 융통성 있게 작성하고 공유할 수 있습니다.  
+  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션에서 직접 기술 자료와 도메인을 만들거나 기술 자료의 정보를 가져오거나 내보낼 수 있습니다. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션에서 가져오기 및 내보내기 작업에 데이터 파일을 사용하거나 가져오기 작업에 Excel 파일을 사용할 수 있습니다. 사용되는 데이터 파일은 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )로 만들어 암호화된 파일로서 확장명이 .dqs입니다. Microsoft Excel에서 만든 파일은 .xlsx, .xls 또는.csv 확장명을 가질 수 있습니다. 이러한 작업을 통해 데이터 정리와 일치를 수행하는 데 사용하는 기술 자료를 보다 융통성 있게 작성하고 공유할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  명령 프롬프트에서 DQSInstaller.exe 파일을 실행하여 *의* 모든 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 기술 자료를 한 번에 DQS 백업 파일(.dqsb)로 내보낼 수 있습니다. 마찬가지로 명령 프롬프트에서 DQSInstaller.exe 파일을 실행하여 DQS 백업 파일(.dqsb)의 *모든* 기술 자료를 한 번에 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 로 가져올 수 있습니다. 방법은 DQS 설치 설명서에서 [Dqsinstaller.exe를 사용하여 DQS 기술 자료 내보내기 및 가져오기](../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md) 를 참조하십시오.  

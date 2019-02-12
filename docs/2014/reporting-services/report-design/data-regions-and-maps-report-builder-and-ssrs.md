@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2ba57dbed0ebbd2ad2b6e9e5c5996334d68c2dd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 590cbab5e2b4091c4d0112914631f57d6f7bc8ea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114133"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015834"
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>데이터 영역 및 지도(보고서 작성기 및 SSRS)
   데이터 영역은 보고서 데이터 세트에 있는 데이터를 표시하는 보고서의 개체입니다. 보고서 데이터는 테이블, 행렬 또는 목록에 숫자 및 텍스트로 표시되거나, 차트 또는 계기에 그래픽으로 표시되거나, 지도에 지리적 배경을 바탕으로 표시될 수 있습니다. 테이블, 행렬 및 목록은 모두 데이터 세트의 모든 데이터를 표시하기 위해 필요에 따라 확장되는 *테이블릭스* 데이터 영역을 기반으로 합니다. 테이블릭스 데이터 영역은 정적 행과 열 및 동적 행과 열이 모두 포함된 여러 행 및 열 그룹을 지원합니다. 차트는 여러 계열 및 범주 그룹을 다양한 차트 형식으로 표시하고, 계기는 데이터 세트의 단일 값 또는 집계 값을 표시합니다. 또한 지도는 공간 데이터를 데이터 세트에서 집계한 데이터를 기반으로 모양이 변하는 지도 요소로 표시합니다.  
@@ -47,13 +47,13 @@ ms.locfileid: "48114133"
  지도를 사용하면 지리적 배경을 바탕으로 데이터를 제공할 수 있습니다. 지도 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리의 공간 데이터, ESRI 셰이프 파일 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing 지도 타일일 수 있습니다. 공간 데이터는 모양이나 영역을 나타내는 다각형, 경로나 길을 나타내는 선, 표식으로 나타내는 점 등을 정의하는 좌표 집합으로 구성됩니다. 집계 데이터와 지도 요소를 연결하면 지도 요소의 색과 크기를 자동으로 변경할 수 있습니다. 예를 들어 판매액을 기준으로 상점의 표식 유형을 변경하거나 속도 제한을 기준으로 길의 색을 변경할 수 있습니다. 자세한 내용은 [지도&#40;보고서 작성기 및 SSRS&#41;](maps-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="data-regions-in-the-report-layout"></a>보고서 레이아웃의 데이터 영역  
- 보고서에는 여러 데이터 영역을 추가할 수 있으며, 데이터 영역은 연결된 보고서 데이터 세트의 데이터에 맞게 확장됩니다. 예를 들어 연도별 각 제품의 판매량을 표시하는 행렬에는 제품 이름을 기반으로 하는 행 그룹과 연도를 기반으로 하는 열 그룹이 있습니다. 보고서를 실행하면 행렬은 각 제품에 대해 페이지 아래쪽으로 확장되고, 각 연도에 대해 페이지 가로 방향으로 확장됩니다. 보고서 디자인 화면의 행렬 옆에 있는 차트는 렌더링된 보고서의 확장된 행렬 옆에 표시됩니다. 페이지에서 데이터 영역이 렌더링되는 방식은 보고서 출력 형식을 기반으로 하는 규칙 집합을 따릅니다. 예를 들어 차트 및 행렬이 페이지에서 렌더링되는 방식을 제어하려는 경우 사각형을 컨테이너로 사용하거나 목록에 있는 두 데이터 영역을 중첩할 수 있습니다. 자세한 내용은 [페이지 레이아웃 및 렌더링 &#40;보고서 작성기 및 SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)합니다.  
+ 보고서에는 여러 데이터 영역을 추가할 수 있으며, 데이터 영역은 연결된 보고서 데이터 세트의 데이터에 맞게 확장됩니다. 예를 들어 연도별 각 제품의 판매량을 표시하는 행렬에는 제품 이름을 기반으로 하는 행 그룹과 연도를 기반으로 하는 열 그룹이 있습니다. 보고서를 실행하면 행렬은 각 제품에 대해 페이지 아래쪽으로 확장되고, 각 연도에 대해 페이지 가로 방향으로 확장됩니다. 보고서 디자인 화면의 행렬 옆에 있는 차트는 렌더링된 보고서의 확장된 행렬 옆에 표시됩니다. 페이지에서 데이터 영역이 렌더링되는 방식은 보고서 출력 형식을 기반으로 하는 규칙 집합을 따릅니다. 예를 들어 차트 및 행렬이 페이지에서 렌더링되는 방식을 제어하려는 경우 사각형을 컨테이너로 사용하거나 목록에 있는 두 데이터 영역을 중첩할 수 있습니다. 자세한 내용은 [페이지 레이아웃 및 렌더링&#40;보고서 작성기 및 SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)로 저장할 수 있습니다.  
   
 ## <a name="nested-data-regions"></a>중첩된 데이터 영역  
  다른 데이터 영역에 데이터 영역을 중첩할 수 있습니다. 예를 들어 각 영업 사원의 영업 실적을 데이터베이스로 만들려는 경우 입력란과 이미지를 포함하는 목록을 만들어 직원에 대한 정보를 표시하고 테이블과 차트 데이터 영역을 목록에 추가하여 영업 사원의 영업 실적을 표시할 수 있습니다. 자세한 내용은 [중첩된 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)을 참조하세요.  
   
 ## <a name="multiple-data-regions-linked-to-the-same-dataset"></a>동일한 데이터 세트에 연결된 여러 데이터 영역  
- 동일한 데이터 세트에 둘 이상의 데이터 영역을 연결하여 동일한 데이터에 대한 다양한 뷰를 제공할 수 있습니다. 예를 들어 테이블과 차트에 동일한 데이터를 표시할 수 있습니다. 테이블을 정렬하면 차트도 자동으로 정렬되도록 하기 위해 테이블에 대화형 정렬 단추를 제공하는 보고서를 작성할 수 있습니다. 자세한 내용은 [동일한 데이터 집합에 여러 데이터 영역 연결 &#40;보고서 작성기 및 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)합니다.  
+ 동일한 데이터 세트에 둘 이상의 데이터 영역을 연결하여 동일한 데이터에 대한 다양한 뷰를 제공할 수 있습니다. 예를 들어 테이블과 차트에 동일한 데이터를 표시할 수 있습니다. 테이블을 정렬하면 차트도 자동으로 정렬되도록 하기 위해 테이블에 대화형 정렬 단추를 제공하는 보고서를 작성할 수 있습니다. 자세한 내용은 [동일한 데이터 세트에 여러 데이터 영역 연결&amp;#40;보고서 작성기 및 SSRS&amp;#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)을 참조하세요.  
   
 ## <a name="data-for-a-data-region"></a>데이터 영역의 데이터  
  각 테이블릭스, 차트 및 계기는 단일 데이터 세트의 데이터를 표시하도록 디자인되었습니다. 지도는 같은 데이터 세트 또는 여러 데이터 세트의 공간 데이터와 분석 데이터를 표시합니다. 그 밖에 다음과 같은 방법으로 데이터 영역에 연결되지 않은 데이터 세트의 값을 포함할 수 있습니다.  
@@ -65,8 +65,8 @@ ms.locfileid: "48114133"
  자세한 내용은 [식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 제작 개념 &#40;보고서 작성기 및 SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
- [보고서, 보고서 파트 및 보고서 정의 &#40;보고서 작성기 및 SSRS&#41;](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [보고서 제작 개념&#40;보고서 작성기 및 SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [보고서, 보고서 파트 및 보고서 정의&#40;보고서 작성기 및 SSRS&#41;](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [페이지 레이아웃 및 렌더링&#40;보고서 작성기 및 SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)   
  [자습서 &#40;보고서 작성기&#41;](../report-builder-tutorials.md)   
  [Reporting Services&#40;SSRS&#41; 자습서](../reporting-services-tutorials-ssrs.md)  

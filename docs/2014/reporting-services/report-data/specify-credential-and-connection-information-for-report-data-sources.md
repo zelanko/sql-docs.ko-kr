@@ -28,13 +28,13 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ce1866d4ffde34052a05ec6fbcbcd2c0dacaea42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 52fac65fdc332f6c0868af84fbeb84c195e1b0f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082249"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039264"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정
   보고서 서버에서는 자격 증명을 사용하여 보고서에 내용을 제공하거나 데이터 기반 구독에 받는 사람 정보를 제공하는 외부 데이터 원본에 연결합니다. Windows 인증, 데이터베이스 인증, 인증 안 함 또는 사용자 지정 인증을 사용하는 자격 증명을 지정할 수 있습니다. 네트워크를 통해 연결 요청을 보낼 경우 보고서 서버에서는 사용자 계정 또는 무인 실행 계정을 가장하게 됩니다. 연결 요청이 이루어지는 보안 컨텍스트에 대한 자세한 내용은 이 항목의 [데이터 원본 구성 및 네트워크 연결](#DataSourceConfigurationConnections) 을 더 참조하십시오.  
@@ -111,7 +111,7 @@ ms.locfileid: "48082249"
     2.  계정이 나열되면 계정을 선택한 다음 **제거**를 클릭합니다.  
   
 #### <a name="using-impersonation-with-stored-credentials"></a>저장된 자격 증명으로 가장 사용  
- 자격 증명을 사용하여 다른 사용자의 ID를 가장할 수도 있습니다. SQL Server 데이터베이스에 대 한 가장 옵션을 사용 설정 된 [SETUSER](/sql/t-sql/statements/setuser-transact-sql) 함수입니다.  
+ 자격 증명을 사용하여 다른 사용자의 ID를 가장할 수도 있습니다. SQL Server 데이터베이스의 경우 가장 옵션을 사용하면 [SETUSER](/sql/t-sql/statements/setuser-transact-sql) 함수가 설정됩니다.  
   
 > [!IMPORTANT]  
 >  구독을 지원하거나 일정을 사용하여 보고서 기록을 생성 또는 보고서 실행 스냅숏을 새로 고치는 보고서에 대해서는 가장을 사용하지 마십시오.  
@@ -134,18 +134,18 @@ ms.locfileid: "48082249"
 |--------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|  
 |통합 보안|현재 사용자를 가장합니다.|모든 데이터 원본 유형에 대해 현재 사용자 계정을 사용하여 연결합니다.|  
 |Windows 자격 증명|지정한 사용자를 가장합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC 및 OLE DB의 경우: 가장된 사용자 계정을 사용하여 연결합니다.|  
-|데이터베이스 자격 증명|무인 실행 계정 또는 서비스 계정을 가장합니다.<br /><br /> Reporting Services는 서비스 ID를 사용하여 연결 요청을 보낼 경우 관리자 권한을 제거합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC 및 OLE DB의 경우:<br /><br /> 사용자 이름과 암호를 연결 문자열에 추가합니다.<br /><br /> 에 대 한 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> TCP/IP 프로토콜을 사용할 경우 연결되고 그렇지 않을 경우 연결에 실패합니다.<br /><br /> XML의 경우<br /><br /> 데이터베이스 자격 증명을 사용할 경우 보고서 서버에서 연결에 실패합니다.|  
-|없음|무인 실행 계정을 가장합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC 및 OLE DB의 경우:<br /><br /> 연결 문자열에 정의된 자격 증명을 사용합니다. 무인 실행 계정이 정의되어 있지 않으면 보고서 서버에서 연결에 실패합니다.<br /><br /> 에 대 한 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> 무인 실행 계정이 정의되어 있더라도 자격 증명을 지정하지 않으면 항상 연결에 실패합니다.<br /><br /> XML의 경우<br /><br /> 무인 실행 계정이 정의되어 있는 경우 익명 사용자로 연결하고, 그렇지 않으면 연결에 실패합니다.|  
+|데이터베이스 자격 증명|무인 실행 계정 또는 서비스 계정을 가장합니다.<br /><br /> Reporting Services는 서비스 ID를 사용하여 연결 요청을 보낼 경우 관리자 권한을 제거합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC 및 OLE DB의 경우:<br /><br /> 사용자 이름과 암호를 연결 문자열에 추가합니다.<br /><br /> [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 경우:<br /><br /> TCP/IP 프로토콜을 사용할 경우 연결되고 그렇지 않을 경우 연결에 실패합니다.<br /><br /> XML의 경우<br /><br /> 데이터베이스 자격 증명을 사용할 경우 보고서 서버에서 연결에 실패합니다.|  
+|없음|무인 실행 계정을 가장합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC 및 OLE DB의 경우:<br /><br /> 연결 문자열에 정의된 자격 증명을 사용합니다. 무인 실행 계정이 정의되어 있지 않으면 보고서 서버에서 연결에 실패합니다.<br /><br /> [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 경우:<br /><br /> 무인 실행 계정이 정의되어 있더라도 자격 증명을 지정하지 않으면 항상 연결에 실패합니다.<br /><br /> XML의 경우<br /><br /> 무인 실행 계정이 정의되어 있는 경우 익명 사용자로 연결하고, 그렇지 않으면 연결에 실패합니다.|  
   
 ## <a name="setting-credentials-programmatically"></a>프로그래밍 방식으로 자격 증명 설정  
- 코드에 자격 증명을 설정하여 보고서 및 보고서 서버에 대한 액세스를 제어할 수 있습니다. 자세한 내용은 [데이터 원본 및 연결 메서드](../report-server-web-service/methods/data-sources-and-connection-methods.md)합니다.  
+ 코드에 자격 증명을 설정하여 보고서 및 보고서 서버에 대한 액세스를 제어할 수 있습니다. 자세한 내용은 [Data Sources and Connection Methods](../report-server-web-service/methods/data-sources-and-connection-methods.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [Reporting Services에서 지 원하는 데이터 원본 &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [보고서 데이터 원본 관리](../../integration-services/connection-manager/data-sources.md)   
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)   
- [만들기, 삭제 또는 공유 데이터 원본을 수정 &#40;보고서 관리자&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [보고서의 데이터 원본 속성 구성 &#40;보고서 관리자&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)   
+ [공유 데이터 원본 만들기, 삭제 또는 수정&#40;보고서 관리자&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [보고서의 데이터 원본 속성 구성&#40;보고서 관리자&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

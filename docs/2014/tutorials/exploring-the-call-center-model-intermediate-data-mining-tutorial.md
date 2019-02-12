@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9095212c-9068-4dd8-85ce-17a467adeabb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e6b1995ad715ea529da548f06e0643be076abe96
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: a6aa4074aa04af86e478b57b1870fd0dd855bea8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518896"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037764"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>콜 센터 모델 탐색(중급 데이터 마이닝 자습서)
   지금까지 탐구 모델을 작성했으므로 이제 이 모델을 사용하여 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 제공되는 다음과 같은 도구로 데이터에 대해 보다 자세한 정보를 알 수 있습니다.  
   
--   [Microsoft 신경망 뷰어](#bkmk_NNviewer) **:** 이 뷰어는에서 사용할 수는 **마이닝 모델 뷰어** 데이터 마이닝 디자이너의 데이터에서 상호 작용을 실험할 수 있도록 설계 되었습니다.  
+-   [Microsoft Neural Network Viewer](#bkmk_NNviewer) **:** 이 뷰어는에서 사용할 수는 **마이닝 모델 뷰어** 데이터 마이닝 디자이너의 데이터에서 상호 작용을 실험할 수 있도록 설계 되었습니다.  
   
 -   [Microsoft 일반 콘텐츠 트리 뷰어](#bkmk_genviewer) **:** 이 표준 뷰어에서는 모델을 생성할 때 알고리즘을 통해 발견한 패턴 및 통계를 보다 상세히 볼 수 있습니다.  
   
@@ -110,8 +109,8 @@ ms.locfileid: "52518896"
   
 |attribute|값|유사성 \< 0.07|유사성 >= 0.12|  
 |---------------|-----------|--------------------|----------------------|  
-|Average Time Per Issue|89.087 120.000||점수:  100<br /><br /> 값 1의 확률: 4.45%<br /><br /> 값 2의 확률: 51.94%<br /><br /> 값 1에 대한 리프트: 0.19<br /><br /> 값 2에 대한 리프트: 1.94|  
-|Average Time Per Issue|44.000 70.597|점수: 92.35<br /><br /> 값 1의 확률: 60.06%<br /><br /> 값 2의 확률: 8.30%<br /><br /> 값 1에 대한 리프트: 2.61<br /><br /> 값 2에 대한 리프트: 0.31||  
+|Average Time Per Issue|89.087 - 120.000||점수:  100<br /><br /> 값 1의 확률: 4.45 %<br /><br /> 값 2의 확률: 51.94 %<br /><br /> 값 1에 대한 리프트: 0.19<br /><br /> 값 2에 대한 리프트: 1.94|  
+|Average Time Per Issue|44.000 - 70.597|점수: 92.35<br /><br /> 값 1의 확률: 60.06 %<br /><br /> 값 2의 확률: 8.30 %<br /><br /> 값 1에 대한 리프트: 2.61<br /><br /> 값 2에 대한 리프트: 0.31||  
   
  [맨 위로 이동](#bkmk_NNviewer)  
   
@@ -151,7 +150,7 @@ WHERE NODE_NAME = '10000000000000000'
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [콜 센터 구조에 로지스틱 회귀 모델 추가 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/add-logistic-regression-model-to-call-center-intermediate-data-mining.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [신경망 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [신경망 모델 쿼리 예제](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)   
  [Microsoft 신경망 알고리즘 기술 참조](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 45546e63eff82c5ba4467193811b572756331513
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cb76a3dfff5ec980d94e3ecf27de6b588c98cf1a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201503"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040514"
 ---
 # <a name="add-data-to-a-report-report-builder-and-ssrs"></a>보고서에 데이터 추가(보고서 작성기 및 SSRS)
   보고서에 데이터를 추가하려면 데이터 세트를 만듭니다. 각 데이터 세트는 데이터 원본에 대해 쿼리 명령을 실행하여 얻은 결과 집합을 나타냅니다. 결과 집합의 열은 필드 컬렉션이고, 결과 집합의 행은 데이터입니다. 데이터 세트에는 실제 데이터가 포함되는 것이 아니라 데이터 원본에서 특정 데이터의 세트를 검색하는 데 필요한 정보가 포함됩니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "48201503"
   
  종속되는 데이터 세트를 포함하는 보고서 파트를 추가하여 보고서에 데이터 세트를 추가할 수도 있습니다. [!INCLUDE[ssRBrptparts](../../../includes/ssrbrptparts-md.md)]  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 데이터를 표시하는 보고서를 만드는 방법은 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)를 참조하세요. 자체 데이터를 포함하는 보고서를 작성하려면 [자습서: 오프라인에서 빠른 차트 보고서 만들기&#40;보고서 작성기&#41;](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)를 참조하세요.  
+ 데이터를 표시 하는 보고서를 만드는 방법에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 참조 하십시오 [자습서: 기본 테이블 보고서 만들기 &#40;보고서 작성기&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)합니다. 자체 데이터를 포함 하는 보고서를 작성 하려면 참조 [자습서: 오프 라인에서 빠른 차트 보고서 만들기 &#40;보고서 작성기&#41;](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -66,7 +66,7 @@ ms.locfileid: "48201503"
   
 -   [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
--   [차트 &#40;보고서 작성기 및 SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+-   [차트&#40;보고서 작성기 및 SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
 -   [스파크라인 및 데이터 막대&#40;보고서 작성기 및 SSRS&#41;](../report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
@@ -74,9 +74,9 @@ ms.locfileid: "48201503"
   
 -   [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
--   [보고서 파트 &#40;보고서 작성기 및 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)  
+-   [보고서 파트&#40;보고서 작성기 및 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)  
   
--   [필터링, 그룹화 및 데이터 정렬 &#40;보고서 작성기 및 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+-   [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
@@ -110,17 +110,17 @@ ms.locfileid: "48201503"
   
  [보고서 데이터 창에서 필드 추가, 편집, 새로 고침&#40;보고서 작성기 및 SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
- [관계형 쿼리 디자이너에서 쿼리 작성 &#40;보고서 작성기 및 SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
+ [관계형 쿼리 디자이너에서 쿼리 작성&#40;보고서 작성기 및 SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
   
- [다차원 데이터에 대 한 매개 변수 값에 대해 숨겨진된 데이터 집합을 표시 &#40;보고서 작성기 및 SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
+ [다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 세트 표시&amp;#40;보고서 작성기 및 SSRS&amp;#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
   
  [데이터 집합에 필터 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
- [데이터 영역에 대 한 데이터 없음 메시지 설정 &#40;보고서 작성기 및 SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [데이터 영역에 대한 데이터 없음 메시지 설정&#40;보고서 작성기 및 SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
- [Associate a Query Parameter with a Report Parameter &#40;보고서 작성기 및 SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
+ [보고서 매개 변수와 쿼리 매개 변수 연결&#40;보고서 작성기 및 SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
   
- [Analysis Services 용 MDX 쿼리 디자이너에서 매개 변수 정의 &#40;보고서 작성기 및 SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
+ [Analysis Services용 MDX 쿼리 디자이너에서 매개 변수 정의&#40;보고서 작성기 및 SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
   
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
@@ -139,6 +139,6 @@ ms.locfileid: "48201503"
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 디자인 뷰&#40;보고서 작성기&#41;](../report-builder/report-design-view-report-builder.md)   
- [보고서 제작 개념 &#40;보고서 작성기 및 SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [보고서 제작 개념&#40;보고서 작성기 및 SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

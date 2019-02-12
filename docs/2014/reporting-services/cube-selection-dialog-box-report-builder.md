@@ -11,14 +11,14 @@ f1_keywords:
 - "10027"
 ms.assetid: 2887ad5f-015f-4197-8388-c59f78d32f52
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c3d17a430edf17a0fd9d016e897a28f1526c392d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 26ae33e722e1da42a648248df198c23c4fc4ddf5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180573"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011035"
 ---
 # <a name="cube-selection-dialog-box-report-builder"></a>큐브 선택 대화 상자(보고서 작성기)
   **큐브 선택** 대화 상자를 사용하여 보고서의 데이터 원본으로 다른 큐브를 선택할 수 있습니다. 다른 큐브를 선택하면 사용자 쿼리는 더 이상 유효하지 않을 수 있습니다.  

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: b66cc1cb72e92670b345f0160727d306326208b6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: da1804ffec1ffd5e016590e83ac229c9e888ff97
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368565"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035404"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>SSIS, MDS 및 DQS를 함께 사용하는 엔터프라이즈 정보 관리 [자습서]
   기업의 정보 관리에는 일반적으로 기업 내부 및 외부의 데이터를 통합하고, 데이터를 정리하고, 데이터를 비교해서 중복 항목을 제거하고, 데이터를 표준화하고, 데이터를 강화하고, 데이터에 대한 법적 및 컴플라이언스 요구 사항을 준수하고, 모든 필수 보안 설정을 사용해서 데이터를 중앙 위치에 저장하는 모든 과정이 포함됩니다.  
@@ -79,13 +76,13 @@ ms.locfileid: "53368565"
   
 |단원|간단한 설명|소요되는 예상 시간(분)|  
 |------------|-----------------------|------------------------------------------------|  
-|[1 단원: 공급자 DQS 기술 자료 만들기](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md)|이 단원에서는 라는 DQS 기술 자료를 만든 **공급 업체**합니다.|60|  
+|[1단원: 공급자 DQS 기술 자료 만들기](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md)|이 단원에서는 라는 DQS 기술 자료를 만든 **공급 업체**합니다.|60|  
 |[2단원: Suppliers 기술 자료를 사용 하 여 공급자 데이터 정리](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)|이 단원에서는 만들고 사용 하 여 Excel 파일에서 공급자 데이터를 정리 하기 위한 DQS 프로젝트를 실행 합니다 **공급 업체** 첫 번째 단원에서 만든 기술 자료입니다.|45|  
-|[3 단원: 공급자 목록에서 중복 제거할 데이터 일치](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)|이 단원에서는 정리된 공급자 목록에서 중복 항목을 식별하고 제거하는 일치 작업을 수행하기 위해 DQS 프로젝트를 만듭니다.|45|  
-|[4 단원: MDS에 공급자 데이터 저장](../../2014/tutorials/lesson-4-storing-supplier-data-in-mds.md)|이 단원에서는 있습니다 정리 및 일치 된 공급자 데이터를 MDS Master Data Services () 사용 하 여 업로드 합니다 **MDS 추가 기능에 Excel 용**합니다.|45|  
-|[5 단원: 정리 및 일치 하는 SSIS를 사용 하 여 자동화](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)|이 단원에서는 DQS를 사용해서 입력 데이터를 정리하고, 정리된 데이터를 비교해서 중복 항목을 제거하고, MDS에서 정리 및 일치된 데이터를 자동화된 방식으로 저장하는 SSIS 솔루션을 만듭니다.|75|  
+|[3단원: 공급자 목록에서 중복 제거할 데이터 일치](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)|이 단원에서는 정리된 공급자 목록에서 중복 항목을 식별하고 제거하는 일치 작업을 수행하기 위해 DQS 프로젝트를 만듭니다.|45|  
+|[4단원: MDS에 공급자 데이터 저장](../../2014/tutorials/lesson-4-storing-supplier-data-in-mds.md)|이 단원에서는 있습니다 정리 및 일치 된 공급자 데이터를 MDS Master Data Services () 사용 하 여 업로드 합니다 **MDS 추가 기능에 Excel 용**합니다.|45|  
+|[5단원: 정리 및 일치 하는 SSIS를 사용 하 여 자동화](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)|이 단원에서는 DQS를 사용해서 입력 데이터를 정리하고, 정리된 데이터를 비교해서 중복 항목을 제거하고, MDS에서 정리 및 일치된 데이터를 자동화된 방식으로 저장하는 SSIS 솔루션을 만듭니다.|75|  
   
 ## <a name="next-steps"></a>다음 단계  
- 자습서를 시작하려면 첫 번째 단원으로 이동하십시오. [1 단원: 공급자 DQS 기술 자료 만들기](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md)합니다.  
+ 자습서를 시작하려면 첫 번째 단원으로 이동하십시오. [1단원: 공급자 DQS 기술 자료 만들기](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md)합니다.  
   
   

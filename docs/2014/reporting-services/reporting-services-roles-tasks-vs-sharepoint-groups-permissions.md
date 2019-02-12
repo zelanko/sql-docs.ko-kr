@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1f331902d6bf92c1accb7db8600ff33d96252cb4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 812f9351e294b4af9fb6854937a1a6cd211e8147
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357482"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036644"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>Reporting Services의 역할 및 태스크와 SharePoint 그룹 및 사용 권한 비교
   이 항목에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기본 모드의 역할 및 태스크 기반 권한 부여 기능과 SharePoint 제품의 보안 기능을 비교해서 보여줍니다. 이 항목에서는 역할, 태스크, SharePoint 그룹, 사용 권한 수준 및 사용 권한의 용어와 특징을 비교합니다.  
@@ -51,8 +51,8 @@ ms.locfileid: "53357482"
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기본 모드|SharePoint|  
 |---------------------------------------------|----------------|  
 |**역할:** 예를 들면 "내용 관리자"입니다.|**그룹:** 예를 들면 기본 "뷰어" 그룹입니다.|  
-|---|**권한 수준 그룹:** 예를 들어 "보기만" "뷰어" 그룹에 대 한 합니다.|  
-|**작업:** 예를 들면 "보고서 관리"입니다.|**사용 권한:** 예를 들어 "보기만" 내 가지 그룹에 항목 보기, 버전 보기 및 응용 프로그램 페이지 보기의 관련된 권한이 나열 합니다.|  
+|---|**권한 수준 그룹:** 예를 들면 "뷰어" 그룹의 "보기만"입니다.|  
+|**작업:** 예를 들면 "보고서 관리"입니다.|**사용 권한:** 예를 들어 "보기만" 그룹 내에서는 항목 보기, 버전 보기 및 애플리케이션 페이지 보기의 관련 권한이 나열됩니다.|  
   
  SharePoint 권한에 대한 자세한 내용은 [권한 수준 및 권한](http://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) 및 [SharePoint 2013의 권한 수준 및 그룹 확인](https://technet.microsoft.com/library/cc262690.aspx)을 참조하세요.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "53357482"
 |**내 보고서**|해당하는 그룹이 없습니다. SharePoint 모드로 실행되는 보고서 서버에서는**내 보고서** 가 지원되지 않습니다. 동등한 기능을 사용하려면 [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 의 내 사이트 기능을 사용할 수 있습니다.|  
 |**게시자**<br /><br /> 보고서, 보고서 모델, 공유 데이터 원본 및 리소스를 추가, 업데이트 및 삭제합니다.|**멤버** 그룹을 사용하여 SharePoint 사이트의 항목을 추가 및 편집하고 종속 항목에 대한 참조를 업데이트하는 권한을 부여할 수 있습니다. **멤버** 그룹에는 그룹 멤버가 페이지를 보고, 항목을 추가 및 업데이트하고, 승인을 받기 위해 변경 내용을 제출할 수 있는 참가 수준의 사용 권한이 있습니다.|  
 |**보고서 작성기**<br /><br /> 보고서를 보고, 개별 구독을 자체 관리하고, 보고서 작성기에서 보고서를 엽니다.|보고서 작성기 보고서 정의에 해당하는 미리 정의된 기본 사용 권한 수준이나 SharePoint 그룹이 없습니다. 기본적으로 **멤버** 그룹이나 **소유자** 그룹에 속하는 사용자에게는 보고서 작성기 사용 권한이 있습니다. 더 많은 사용자가 보고서 작성기를 사용할 수 있게 하려면 보고서 작성기 역할이 제공하는 것과 유사한 사용 권한 수준을 제공하는 사용자 지정 보안 설정을 만들어야 합니다. 자세한 내용은 [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)을 참조하세요.|  
-|-|**뷰어** 그룹을 사용하면 렌더링된 보고서를 볼 수 있는 권한을 부여할 수 있습니다. **뷰어** 그룹은 보고서 항목의 내용을 다운로드하거나 볼 수 없습니다.<br /><br /> **참고:** SQL Server 2012부터 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]서 **뷰어** 그룹에 구독을 만들 수 있는 권한이 없습니다.|  
+|-|**뷰어** 그룹을 사용하면 렌더링된 보고서를 볼 수 있는 권한을 부여할 수 있습니다. **뷰어** 그룹은 보고서 항목의 내용을 다운로드하거나 볼 수 없습니다.<br /><br /> **참고:** SQL Server 2012 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]부터는 **뷰어** 그룹에는 구독을 만들 수 있는 권한이 없습니다.|  
 |**시스템 사용자** 및 **시스템 관리자**|이러한 역할은 SharePoint 모드로 실행되는 보고서 서버에는 필요하지 않습니다. **시스템 사용자** 와 **시스템 관리자** 는 SharePoint 팜 또는 웹 애플리케이션 수준의 사용 권한에 해당합니다. 보고서 서버는 해당 수준의 권한 부여에 필요한 기능을 제공하지 않습니다.|  
   
 ##  <a name="bkmk_compare_tasks_permissions"></a> 기본 모드 태스크 및 SharePoint 권한 비교  

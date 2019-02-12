@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a23a6e1d-1d49-41ea-8314-925dc8e4df5e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2b7c23bec5925dbc33d2db7a547daf02f42a6cd7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: c96b70775105ea9446810ac3b064ae7cb07d4337
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419044"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010235"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>대체 데이터를 사용한 시계열 예측(중급 데이터 마이닝 자습서)
   이 태스크에서는 전 세계 판매 데이터를 기준으로 새 모델을 작성합니다. 그런 다음 개별 지역 중 한 곳에 전 세계 판매 모델을 적용하는 예측 쿼리를 만듭니다.  

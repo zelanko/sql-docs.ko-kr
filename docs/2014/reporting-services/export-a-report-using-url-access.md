@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b90f1ad3e67aafa2ee8b967f8a04ddb16daf4e53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 589f1d42936d243bff9aa77740cefce14ab8856e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132911"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014604"
 ---
 # <a name="export-a-report-using-url-access"></a>URL 액세스를 사용하여 보고서 내보내기
   사용 하 여 보고서를 렌더링할 형식을 지정할 수도 있습니다는 *rs: Format* 매개 변수입니다. 예를 들어 기본 모드 보고서 서버에서 직접 보고서 PDF 복사본을 가져오는 경우 다음을 사용합니다.  
@@ -39,7 +39,7 @@ http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/myrereport
  *Format* 매개 변수를 URL의 일부로 포함하지 않으면 보고서 서버가 브라우저를 감지하고 적절한 HTML 형식으로 보고서를 렌더링합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [URL 액세스 &#40;SSRS&#41;](url-access-ssrs.md)   
+ [URL 액세스&#40;SSRS&#41;](url-access-ssrs.md)   
  [URL 액세스 매개 변수 참조](url-access-parameter-reference.md)  
   
   

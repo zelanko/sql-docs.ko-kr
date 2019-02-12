@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 21f641d9bb33c918e8194ac7ed02af8c4c9469db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6870e52124d303b2e04e85158adb98872b78085f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193263"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041254"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>보고서 서버 데이터베이스 관리(SSRS 기본 모드)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 배포는 두 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스를 내부 저장소로 사용합니다. 기본적으로 데이터베이스 이름은 각각 ReportServer와 ReportServerTempdb입니다. ReportServerTempdb는 기본 보고서 서버 데이터베이스로 생성되며 임시 데이터, 세션 정보 및 캐시된 보고서를 저장하는 데 사용됩니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "48193263"
   
 -   기존 데이터베이스 내용을 다른 보고서 서버 데이터베이스에 복사하려면 다른 보고서 서버 인스턴스에 보고서 서버 데이터베이스의 복사본을 연결하여 사용합니다. 또는 SOAP 호출을 사용하는 스크립트를 만들어서 실행하여 새 데이터베이스에 보고서 서버 내용을 다시 만들 수 있습니다. **rs** 유틸리티를 사용하여 스크립트를 실행할 수 있습니다.  
   
--   보고서 서버와 보고서 서버 데이터베이스 간의 연결을 관리하고 특정 보고서 서버 인스턴스에 사용되는 데이터베이스를 알아보려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]구성 도구의 데이터베이스 설치 페이지를 사용합니다. 보고서 서버 데이터베이스에 보고서 서버 연결에 대 한 자세한 내용은 참조 하세요 [보고서 서버 데이터베이스 연결 구성 &#40;SSRS 구성 관리자&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)합니다.  
+-   보고서 서버와 보고서 서버 데이터베이스 간의 연결을 관리하고 특정 보고서 서버 인스턴스에 사용되는 데이터베이스를 알아보려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]구성 도구의 데이터베이스 설치 페이지를 사용합니다. 보고서 서버 데이터베이스에 보고서 서버 연결에 대한 자세한 내용은 [보고서 서버 데이터베이스 연결 구성&#40;SSRS 구성 관리자&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)을 참조하세요.  
   
 ## <a name="sql-server-login-and-database-permissions"></a>SQL Server 로그인 및 데이터베이스 권한  
  보고서 서버 데이터베이스는 보고서 서버에 의해 내부에서 사용됩니다. 두 데이터베이스에 대한 연결은 보고서 서버 서비스에 의해 설정됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 보고서 서버 데이터베이스에 대한 보고서 서버 연결을 구성합니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "48193263"
   
  보고서 서버 데이터베이스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인은 사용자가 지정하는 계정에 대해 자동으로 만들어집니다.  
   
- 데이터베이스 권한도 자동으로 구성됩니다. Reporting Services 구성 도구는 계정이 나 데이터베이스 사용자를 할당 합니다 `Public` 고 `RSExecRole` 보고서 서버 데이터베이스에 대 한 역할입니다. `RSExecRole` 저장된 프로시저를 실행 하는 데이터베이스 테이블에 액세스 권한을 제공 합니다. `RSExecRole` 보고서 서버 데이터베이스를 만들 때 master 및 msdb에 만들어집니다. 합니다 `RSExecRole` 멤버인는 `db_owner` 보고서 서버가 자동 업그레이드 프로세스를 지원 하기 위해 고유한 스키마를 업데이트할 수 있도록 하는 보고서 서버 데이터베이스에 대 한 역할입니다.  
+ 데이터베이스 권한도 자동으로 구성됩니다. Reporting Services 구성 도구는 보고서 서버 데이터베이스에 대한 `Public` 및 `RSExecRole` 역할에 계정이나 데이터베이스 사용자를 할당합니다. `RSExecRole`은 데이터베이스 테이블에 액세스하고 저장 프로시저를 실행할 수 있는 권한을 제공합니다. `RSExecRole` 보고서 서버 데이터베이스를 만들 때 master 및 msdb에 만들어집니다. `RSExecRole`은 보고서 서버 데이터베이스에 대한 `db_owner` 역할의 멤버로, 보고서 서버가 자동 업그레이드 프로세스를 지원하기 위해 고유한 스키마를 업데이트할 수 있도록 합니다.  
   
 ## <a name="naming-conventions-for-the-report-server-databases"></a>보고서 서버 데이터베이스의 명명 규칙  
  주 데이터베이스를 만들 때 데이터베이스의 이름은 [데이터베이스 식별자](../../relational-databases/databases/database-identifiers.md)에 대해 지정된 규칙을 따라야 합니다. 임시 데이터베이스 이름은 항상 주 보고서 서버 데이터베이스와 같은 이름을 사용하되 Tempdb 접미사를 포함합니다. 임시 데이터베이스의 이름은 다르게 선택할 수 없습니다.  
@@ -80,15 +80,15 @@ SET READ_COMMITTED_SNAPSHOT OFF
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 데이터베이스 버전에 대한 명시적인 정보를 사용할 수 없습니다. 그러나 데이터베이스 버전이 항상 제품 버전과 동기화되므로 제품 버전 정보를 사용하여 데이터베이스 버전 변경 여부를 알 수 있습니다. 제품 버전 정보에 대 한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 로그 파일에 있는 모든 SOAP 호출의 헤더에서에 표시 되 고 보고서 서버 URL에 연결할 때 파일 버전 정보를 통해 표시 됩니다 (예를 들어, 브라우저를 열 때 http://localhost/reportserver)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Reporting Services 구성 관리자 &#40;기본 모드&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [기본 모드 보고서 서버 데이터베이스 만들기 &#40;SSRS 구성 관리자&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [보고서 서버 서비스 계정 구성 &#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [보고서 서버 데이터베이스 연결 구성 &#40;SSRS 구성 관리자&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [보고서 서버 데이터베이스 만들기 &#40;SSRS 구성 관리자&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [기본 모드 보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+ [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [보고서 서버 데이터베이스 연결 구성&#40;SSRS 구성 관리자&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Reporting Services 백업 및 복원 작업](../install-windows/backup-and-restore-operations-for-reporting-services.md)   
- [보고서 서버 데이터베이스를 &#40;SSRS 기본 모드&#41;](report-server-database-ssrs-native-mode.md)   
+ [보고서 서버 데이터베이스&#40;SSRS 기본 모드&#41;](report-server-database-ssrs-native-mode.md)   
  [Reporting Services 보고서 서버&#40;기본 모드&#41;](reporting-services-report-server-native-mode.md)   
  [암호화된 보고서 서버 데이터 저장&#40;SSRS 구성 관리자&#41;](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
- [암호화 키 구성 및 관리 &#40;SSRS 구성 관리자&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

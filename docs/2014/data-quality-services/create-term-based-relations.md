@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 871c6acc823606a249f0886864a84300be7f9899
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1b276f913c70619933d5f317f322fc840cc4d672
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396646"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016774"
 ---
 # <a name="create-term-based-relations"></a>용어 기반 관계 만들기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 도메인의 용어 기반 관계를 만드는 방법에 대해 설명합니다. TBR(용어 기반 관계)을 사용하면 도메인 값의 일부인 용어를 수정할 수 있습니다. 이를 통해 공통 부분의 맞춤법을 제외하고 동일한 여러 값을 동일한 동의어로 간주할 수 있습니다. 예를 들어 용어 "Inc."를 "Incorporated"로 변경하는 용어 기반 관계를 설정할 수 있습니다. 용어 "Inc."는 도메인에서 발생할 때마다 변경됩니다. "Contoso, Inc."의 인스턴스는 "Contoso, Incorporated"로 변경되고 두 값은 정확한 동의어로 간주됩니다.  
@@ -99,7 +99,7 @@ ms.locfileid: "52396646"
   
 7.  **마침** 을 클릭하여 [도메인 관리 작업 종료](../../2014/data-quality-services/end-the-domain-management-activity.md)에 설명된 대로 도메인 관리 작업을 완료합니다.  
   
-##  <a name="FollowUp"></a> 후속편: 용어 기반 관계를 만든 후  
+##  <a name="FollowUp"></a> 후속 작업: 용어 기반 관계를 만든 후  
  용어 기반 관계를 만든 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../../2014/data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../../2014/data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../../2014/data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: dc6189daffb2e099023ff6adb0d247c28c922545
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1e5cc37546e72384b0c264e80f5f7501c7e19402
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114363"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016364"
 ---
 # <a name="identifying-execution-state"></a>실행 상태 식별
   HTTP(Hypertext Transfer Protocol)는 연결 없는 상태 비저장 프로토콜이므로 다양한 요청이 동일한 클라이언트에서 나온 것인지 여부 또는 단일 브라우저 인스턴스에서 페이지나 사이트를 계속 사용 중인지 여부를 자동으로 나타내지 않습니다. 다수의 세션에서 논리적 연결이 만들어져 서버와 클라이언트 간의 상태가 HTTP를 통해 유지됩니다. 특정 세션과 관련된 사용자별 정보를 세션 상태라고 합니다.  

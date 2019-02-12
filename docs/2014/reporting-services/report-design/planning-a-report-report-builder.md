@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1de13a23edc8a248008dcdad415e58e108e9d0e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c13019d5845e0c580b28fef750683044d344a9ab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202033"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017284"
 ---
 # <a name="planning-a-report-report-builder"></a>보고서 계획(보고서 작성기)
   보고서 작성기를 사용하여 다양한 종류의 보고서를 만들 수 있습니다. 예를 들어 판매 데이터, 마케팅 및 판매 추세를 요약하거나 자세히 보여 주는 보고서를 만들거나 운영 보고서 또는 대시보드를 만들 수 있습니다. 판매 주문, 제품 카탈로그 또는 양식 편지와 같은 서식 있는 텍스트를 사용한 보고서를 만들 수도 있습니다. 이러한 보고서는 모두 보고서 작성기에 있는 동일한 기본 빌딩 블록을 다르게 조합하여 만듭니다. 보고서를 만들기 전에 먼저 계획을 세우면 보다 유용하고 이해하기 쉬운 보고서를 만들 수 있습니다. 보고서 생성 작업을 시작하기 전에 고려해야 할 사항은 다음과 같습니다.  
@@ -50,11 +50,11 @@ ms.locfileid: "48202033"
   
 -   **보고서 배달 방법**  
   
-     사용자 본인에게만 필요한 정보가 포함된 보고서의 경우 보고서를 로컬 컴퓨터에 저장하고 보고서에 대한 작업을 계속하거나 보고서를 로컬에서 실행할 수 있습니다. 그러나 보고서를 다른 사용자와 공유하려면 보고서를 기본 모드에서 구성한 보고서 서버나 SharePoint 통합 모드에 있는 보고서 서버에 저장해야 합니다. 보고서를 서버에 저장하면 다른 사용자가 필요할 때마다 보고서를 실행할 수 있습니다. 또는 보고서 서버 관리자가 보고서에 대해 구독을 설정하거나 다른 개인 사용자에 대해 전자 메일 보고서 배달을 설정할 수 있습니다. 원하는 경우 특정 내보내기 형식으로 보고서가 배달되도록 할 수도 있습니다. 자세한 내용은 [찾기, 보기 및 보고서 관리 &#40;보고서 작성기 및 SSRS &#41; ](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)합니다.  
+     사용자 본인에게만 필요한 정보가 포함된 보고서의 경우 보고서를 로컬 컴퓨터에 저장하고 보고서에 대한 작업을 계속하거나 보고서를 로컬에서 실행할 수 있습니다. 그러나 보고서를 다른 사용자와 공유하려면 보고서를 기본 모드에서 구성한 보고서 서버나 SharePoint 통합 모드에 있는 보고서 서버에 저장해야 합니다. 보고서를 서버에 저장하면 다른 사용자가 필요할 때마다 보고서를 실행할 수 있습니다. 또는 보고서 서버 관리자가 보고서에 대해 구독을 설정하거나 다른 개인 사용자에 대해 전자 메일 보고서 배달을 설정할 수 있습니다. 원하는 경우 특정 내보내기 형식으로 보고서가 배달되도록 할 수도 있습니다. 자세한 내용은 [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 2014의에서 보고서 작성기](../report-builder/report-builder-in-sql-server-2016.md)   
- [보고서 제작 개념 &#40;보고서 작성기 및 SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [보고서 제작 개념&#40;보고서 작성기 및 SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [자습서 &#40;보고서 작성기&#41;](../report-builder-tutorials.md)  
   
   

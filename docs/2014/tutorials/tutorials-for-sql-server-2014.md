@@ -4,26 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- data-quality-services
-- database-engine
-- integration-services
-- master-data-services
-- replication
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 07ff9e3ed413b3cb73a4dbfb84bac6961acb1759
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 05505b1b53605865bae6856acde8319745688376
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368065"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014286"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>SQL Server 2014 자습서
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 에는 많은 새로운 기술과 기능이 도입되었습니다.  

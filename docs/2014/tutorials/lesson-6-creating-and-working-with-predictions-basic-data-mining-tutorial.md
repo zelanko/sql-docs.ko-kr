@@ -1,22 +1,21 @@
 ---
-title: '6 단원: 만드는 예측 및 작업 (기본 데이터 마이닝 자습서) | Microsoft Docs'
+title: '6단원: 만들기 및 작업 예측 (기본 데이터 마이닝 자습서) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b213cb58-2c40-4c89-b08b-d3c36a4afad3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9ff8c21dd55154d28096fdd98e680bd404be4e38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: df86c46bdae8a40a5fa49d38517e8e5588d50e09
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171603"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041394"
 ---
 # <a name="lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial"></a>6단원: 예측 만들기 및 작업(기본 데이터 마이닝 자습서)
   만든 데이터 마이닝 모델을 학습, 테스트 및 탐색했습니다. 이제 모델을 사용하여 새로운 타겟 메일링 캠페인에 응답할 가능성이 가장 높은 사람을 식별할 준비가 되었습니다.  
@@ -27,7 +26,7 @@ ms.locfileid: "48171603"
   
  이 단원에서는 다음 항목을 다룹니다.  
   
- [예측을 만드는 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [예측 만들기&#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
  [구조 데이터에 드릴스루를 사용 하 여 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/using-drillthrough-on-structure-data-basic-data-mining-tutorial.md)  
   
@@ -35,10 +34,10 @@ ms.locfileid: "48171603"
  [중급 데이터 마이닝 자습서 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)  
   
 ## <a name="previous-lesson"></a>이전 단원  
- [5 단원: 모델을 테스트 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
+ [5단원: 모델을 테스트 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [예측을 만드는 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [예측 만들기&#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [마이닝 모델 콘텐츠 의사 결정 트리 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)   

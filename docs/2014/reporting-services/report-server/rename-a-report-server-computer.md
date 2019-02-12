@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c040f3afade749772ae1560e9f99af8cd4ac0a85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4e145eb63a357c628d46ce4c57218cbac1dfc149
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114293"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029149"
 ---
 # <a name="rename-a-report-server-computer"></a>보고서 서버 컴퓨터 이름 바꾸기
   컴퓨터 이름을 바꾸면 웹 서버 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 같은 컴퓨터에 있는 경우 이에 해당하는 이름이 변경됩니다. 컴퓨터 이름을 변경한 다음에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 액세스할 수 없는 경우도 있습니다. 컴퓨터 이름을 변경한 다음에는 이 항목의 단계를 사용하여 보고서 서버를 다시 구성합니다.  
@@ -39,16 +39,16 @@ ms.locfileid: "48114293"
 ## <a name="renaming-a-report-server-computer"></a>보고서 서버 컴퓨터 이름 바꾸기  
  보고서 서버를 실행하는 컴퓨터의 이름을 바꾸는 경우 다음을 수행하십시오.  
   
-1.  오픈 **RSReportServer.config** 텍스트 편집기에서 수정 하 고는 `UrlRoot` 새 서버 이름을 반영 하도록 설정 합니다. `UrlRoot` 설정은 배달 확장 프로그램에서 보고서 서버에 저장된 항목 액세스에 사용하는 URL을 작성하는 데 사용됩니다. 업데이트 해야 보고서 서버 URL 주소를 변경 합니다 `UrlRoot` 구독 계속 예상 대로 보고서를 제공할 수 있도록 설정 합니다.  
+1.  오픈 **RSReportServer.config** 텍스트 편집기에서 수정 하 고는 `UrlRoot` 새 서버 이름을 반영 하도록 설정 합니다. `UrlRoot` 설정은 배달 확장 프로그램에서 보고서 서버에 저장된 항목 액세스에 사용하는 URL을 작성하는 데 사용됩니다. 보고서 서버 URL 주소를 변경하려면 구독이 계속 보고서를 배달하도록 `UrlRoot` 설정을 업데이트해야 합니다.  
   
-2.  동일한 파일에서이 속성을 설정 하는 경우 수정 된 `ReportServerUrl` 새 서버 이름을 반영 하도록 설정 합니다. 이 설정이 모든 설치에 사용되는 것은 아닙니다. 이 설정이 비어 있는 경우 아무 작업도 수행하지 마십시오.  
+2.  동일한 파일에서 설정하는 경우 `ReportServerUrl` 설정을 수정하여 새 서버 이름을 반영합니다. 이 설정이 모든 설치에 사용되는 것은 아닙니다. 이 설정이 비어 있는 경우 아무 작업도 수행하지 마십시오.  
   
     > [!NOTE]  
     >  회사 네트워크에서 WINS(Windows Internet Naming Service)를 사용하는 경우 보고서 서버와 보고서 관리자가 일정 기간 동안 이전 이름으로 사용 가능하다고 표시될 수 있습니다. WINS에서는 서비스하는 각 컴퓨터에 IP 주소를 매핑합니다. WINS에서 이름이 바뀐 컴퓨터의 IP 주소를 새로 고친 다음에는 더 이상 이전 컴퓨터 이름을 사용하여 보고서 서버나 보고서 관리자에 액세스할 수 없습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [RSReportServer 구성 파일](rsreportserver-config-configuration-file.md)   
- [Reporting Services 구성 관리자 &#40;기본 모드&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Reporting Services 보고서 서버&#40;기본 모드&#41;](reporting-services-report-server-native-mode.md)   
  [보고서 서버 서비스 시작 및 중지](start-and-stop-the-report-server-service.md)   
  [rsconfig 유틸리티&#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md)  

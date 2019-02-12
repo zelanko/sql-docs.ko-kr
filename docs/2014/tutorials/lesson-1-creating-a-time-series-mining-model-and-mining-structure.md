@@ -1,22 +1,21 @@
 ---
-title: '1 단원: 시계열 마이닝 모델 및 마이닝 구조 만들기 | Microsoft Docs'
+title: '1단원: 시계열 마이닝 모델 및 마이닝 구조 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b201f2b8-9ab5-425b-9ff3-fe321a60a7b7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5ea66ce1ef677e150a93fbd873c8b97f939e19e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174023"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014164"
 ---
 # <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>1단원: 시계열 마이닝 모델 및 마이닝 구조 만들기
   이 단원에서는 기록 데이터를 기반으로 시간 경과에 따라 값을 예측할 수 있는 마이닝 모델을 만듭니다. 모델을 만들면 기본 구조가 자동으로 생성되고 추가 마이닝 모델에 대한 기초로 사용될 수 있습니다.  
@@ -84,7 +83,7 @@ CREATE MINING MODEL [Mining Model Name]
   
 2.  **서버에 연결** 대화 상자에서 **서버 유형**으로 **Analysis Services**를 선택합니다. **서버 이름**, 형식 `LocalHost`, 또는 인스턴스의 이름을 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이 단원에 연결 하려는 합니다. **연결**을 클릭합니다.  
   
-3.  **개체 탐색기**의 인스턴스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 가리킨 **새 쿼리**를 클릭 하 고 **DMX**합니다.  
+3.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   

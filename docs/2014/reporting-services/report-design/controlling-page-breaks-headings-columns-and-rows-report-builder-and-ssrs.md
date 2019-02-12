@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4b8fa41f-a727-4f23-8efb-fd9bb0d4cd1d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 742cfa14b1e93632910fca00312379432021246f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 03ac60e59b1859ed4e77f3db5e355a1fb9f556f3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184339"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042934"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>페이지 나누기, 머리글, 열 및 행 제어(보고서 작성기 및 SSRS)
   페이지 나누기를 사용하여 보고서를 개별 페이지로 나누어 보고 인쇄할 수 있습니다. 페이지 나누기는 보고서를 미리 볼 때나 다른 파일 형식으로 내보낼 때 최적의 상태로 표시하기 위해 내용을 보고서 페이지에 맞추는 방식을 결정합니다.  
@@ -34,6 +34,6 @@ ms.locfileid: "48184339"
  [목록&#40;보고서 작성기 및 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [보고서 페이지에서 테이블릭스 데이터 영역 표시 제어&#40;보고서 작성기 및 SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)   
  [그룹화 창&#40;보고서 작성기&#41;](grouping-pane-report-builder.md)   
- [그룹을 함께 머리글 및 바닥글 표시 &#40;보고서 작성기 및 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [그룹과 함께 머리글 및 바닥글 표시&#40;보고서 작성기 및 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
   

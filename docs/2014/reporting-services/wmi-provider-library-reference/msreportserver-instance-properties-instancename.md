@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 98ab86fd-ed94-4cda-9c68-047d589bdea6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 664c86fd8540f51d45c3f72f0454fb6d513eea34
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e02d4074b731de6b6800bc9858d9aa6e5c766bf3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221773"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014994"
 ---
 # <a name="instancename-property-wmi-msreportserverinstance"></a>InstanceName 속성(WMI MSReportServer_Instance)
   특정 컴퓨터의 보고서 서버 인스턴스 이름을 반환합니다. 읽기 전용입니다.  
@@ -40,7 +40,7 @@ public string InstanceName;
 ```  
   
 ## <a name="property-value"></a>속성 값  
- `String` 보고서 서버 인스턴스의 이름을 나타내는 개체입니다.  
+ 보고서 서버 인스턴스의 이름을 나타내는 `String` 개체입니다.  
   
 ## <a name="example-code"></a>코드 예  
  [MSReportServer_ConfigurationSetting 클래스](msreportserver-configurationsetting-class.md)  

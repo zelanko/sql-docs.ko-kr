@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d74a60b-8933-4038-bcbb-4e9dcc4f70e9
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 53b67f363f076108a3b3add6950b14e37e0bd1ca
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: eeaebadd43fe1969ae1c728f8e2f8284ddf7f7ac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373205"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011104"
 ---
 # <a name="task-1-creating-a-knowledge-base-and-domains"></a>작업 1: 기술 자료 및 도메인 만들기
   이 작업을 만듭니다는 **공급 업체** 기술 자료 및 데이터 정리 및 일치 하는 데이터가 중복 제거 하는 데 사용 되는 도메인을 만듭니다.  
@@ -31,7 +28,7 @@ ms.locfileid: "53373205"
   
 3.  Data Quality 클라이언트에서 홈 페이지에는 **기술 자료 관리** 창 클릭 **새 기술 자료**합니다.  
   
-     ![기술 자료 관리-새 KB](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-02.jpg "기술 자료 관리-새 KB")  
+     ![Knowledge Base Management - New KB](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-02.jpg "Knowledge Base Management - New KB")  
   
 4.  입력 **공급 업체** 에 대 한 **이름** 기술 자료입니다.  
   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - expressions
 ms.assetid: e89c4d97-5d41-4b55-8695-79329edac15d
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 44c99dd44a39aa2008f5e276cde79bb51b6d4d51
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 856faf8f35e30343ef322e726e3d0dffc30ebb4a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590617"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040144"
 ---
 # <a name="expression-dialog-box-report-builder"></a>식 대화 상자(보고서 작성기)
   사용 된 **식** 쓸 대화 상자 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 식이 보고서 항목 속성입니다. 식을 사용하여 색, 글꼴 및 테두리를 비롯한 여러 속성을 설정할 수 있습니다. 런타임에 보고서 처리기는 식을 계산하고 그 결과로 속성의 값을 대체합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "53590617"
 ## <a name="expression-constructs"></a>식 생성  
  식은 등호(=)로 시작하며 상수, 리터럴, 연산자, 기본 제공 필드에 대한 참조, 기본 제공 컬렉션, 기본 제공 함수, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 런타임 라이브러리 함수, [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 공용 언어 런타임 클래스 및 사용자 지정 함수를 포함할 수 있습니다. 다음 목록에서는 식에 추가할 수 있는 범주와 값에 대해 설명합니다.  
   
- **에 대 한 식 설정:**  _\<PropertyName >_  
+ **에 대 한 식 설정:**  _\<PropertyName>_  
  식을 정의하는 속성의 이름입니다. 이 속성은 속성 창에서 이름으로 설정할 수도 있습니다.  
   
  **상수**  

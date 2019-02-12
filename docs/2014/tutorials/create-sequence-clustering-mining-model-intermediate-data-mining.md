@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e9339227-6c2e-4c4b-8be2-8c1960bc4a8d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8e91853bba6b33ed57cc0152e266994d4e0ef528
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b7f4f543952fd86cf6c3c66f9f4b2c51019b1869
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092914"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039355"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>시퀀스 클러스터링 마이닝 모델 구조 만들기(중급 데이터 마이닝 자습서)
   시퀀스 클러스터링 마이닝 모델을 만드는 첫 번째 단계는 데이터 마이닝 마법사를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘을 기반으로 하는 새 마이닝 구조 및 마이닝 모델을 만드는 것입니다.  
@@ -70,7 +69,7 @@ ms.locfileid: "48092914"
   
 8.  에 **지정할 열 내용 및 데이터 형식** 페이지, 모눈 열, 콘텐츠 형식 및 다음 표에 표시 된 데이터 형식을 포함 되어 있는지 확인 한 다음 클릭 **다음**합니다.  
   
-    |테이블/열|내용 유형|데이터 형식|  
+    |테이블/열|콘텐츠 형식|데이터 형식|  
     |---------------------|------------------|---------------|  
     |IncomeGroup|불연속|텍스트 모드|  
     |OrderNumber|Key|텍스트 모드|  

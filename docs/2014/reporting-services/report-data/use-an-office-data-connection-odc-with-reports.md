@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c40f02e86f736b96398de4bb9e3d1183de2f9c6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 54082236bed728d81d060b73ecdc03fb53d82825
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162863"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016603"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>보고서에 Office 데이터 연결(.odc) 사용(SharePoint 통합 모드의 Reporting Services)
   제한된 시나리오에서 기존 Office 데이터 연결 파일(.odc)을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서에 연결 정보를 제공할 수 있습니다. 공유 데이터 원본을 만들 때 .rsds 파일 대신 .odc 파일을 사용할 수 있습니다. 보고서 서버는 .rsds 파일과 같은 방식으로 .odc 파일을 사용합니다. 즉, 이 파일을 읽어 데이터 원본 유형, 연결 문자열 및 자격 증명 정보를 확인합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48162863"
   
 -   .odc 파일에서 연결 문자열을 지정해야 합니다.  
   
--   자격 증명 설정할 수 있습니다 `None`, `Stored`, 또는 `Integrated`합니다. 자격 증명 방법을로 설정 된 경우 `Stored`, 보고서 서버에 저장된 된 자격 증명을 사용 하는 대신 자격 증명에 대 한 라는 메시지가 나타납니다. 보고서 서버는 .odc 파일에 정의된 대로 저장된 자격 증명을 사용할 수 없습니다.  
+-   자격 증명은 `None`, `Stored` 또는 `Integrated`로 설정될 수 있습니다. 자격 증명 방법을 `Stored`로 설정하면 보고서 서버가 저장된 자격 증명을 사용하는 대신 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 보고서 서버는 .odc 파일에 정의된 대로 저장된 자격 증명을 사용할 수 없습니다.  
   
 -   보고서를 만드는 데 사용된 스키마와 동일한 스키마가 데이터 원본에 있어야 합니다. 데이터 구조가 다른 경우 보고서가 실행되지 않습니다.  
   
@@ -102,6 +102,6 @@ ms.locfileid: "48162863"
      [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스와 예제 보고서를 사용하여 이러한 단계를 수행하는 경우 Company Sales 보고서만 .odc 파일에서 추가 작업 없이 작동한다는 사실에 유의하십시오. 다른 예제 보고서에는 OLE DB 공급자에서 작동하지 않는 쿼리 매개 변수와 기능이 들어 있습니다. 하지만 먼저 보고서 디자이너에서 이러한 보고서를 수정하면 OLE DB 공급자에서 작동하도록 만들 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [만들기, 수정 및 공유 데이터 원본 삭제 &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)  
+ [공유 데이터 원본 만들기, 수정 및 삭제&#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)  
   
   

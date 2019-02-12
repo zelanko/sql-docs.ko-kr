@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: d9fe1932-46e7-421b-a8a9-4c54d9576e94
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2aa21825563ae94a46a7d9fcda6e52e966f12a9a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 8d76eb115628cc4b63d9eb37494e3fa45e2f7fc2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360255"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013784"
 ---
 # <a name="troubleshoot-report-parts-report-builder-and-ssrs"></a>보고서 파트 문제 해결(보고서 작성기 및 SSRS)
   다음은 보고서 파트로 작업할 때 도움이 되는 정보입니다  
@@ -43,7 +43,7 @@ ms.locfileid: "53360255"
 ## <a name="why-do-i-get-a-circular-reference-error-message-when-i-try-to-publish-my-report-part"></a>보고서 파트를 게시하려고 하면 “순환 참조” 오류 메시지가 표시되는 이유는 무엇입니까?  
  순환 참조가 포함된 보고서 항목은 보고서 파트로 게시할 수 없습니다. 예를 들어 보고서 항목이 가리키는 데이터 집합이 매개 변수를 가리키고 이 매개 변수가 데이터 집합을 다시 가리킬 수 있습니다. 이 경우에는 참조 중 하나를 삭제해야 보고서 파트를 게시할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [보고서 파트&#40;보고서 작성기 및 SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
   

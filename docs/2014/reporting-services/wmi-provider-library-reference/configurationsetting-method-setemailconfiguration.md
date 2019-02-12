@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: b40a2224-2c90-4d32-892f-1fe73a0591ca
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8365b0718f389e6417f8f7e1a76cf403e268b574
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e8ad4dbb79f67591abbd1853757cddc749bf225d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081829"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014724"
 ---
 # <a name="setemailconfiguration-method-wmi-msreportserverconfigurationsetting"></a>SetEmailConfiguration 메서드(WMI MSReportServer_ConfigurationSetting)
   보고서 서버가 전자 메일을 보낼 때 사용할 전자 메일 배달 확장 프로그램을 구성합니다.  

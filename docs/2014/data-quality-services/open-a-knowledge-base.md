@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.openkb.f1
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5baacbca2f7882314ac62c1ef98e22ba6eca9aa8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e7b217d8bc099924e89783492991bd12a2275adb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507538"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031234"
 ---
 # <a name="open-a-knowledge-base"></a>기술 자료 열기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 기존 기술 자료를 열어 도메인 관리, 기술 자료 검색 또는 일치 정책 추가를 수행할 준비를 갖추는 방법에 대해 설명합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "52507538"
   
 -   다른 사용자가 잠근 최근에 사용한 항목 목록에서 기술 자료를 열려면 해당 사용자에게 연락해 기술 자료의 잠금을 해제하도록 요청합니다.  
   
-##  <a name="FollowUp"></a> 후속편: 기술 자료를 연 후  
+##  <a name="FollowUp"></a> 후속 작업: 기술 자료를 연 후  
  기술 자료를 연 후에는 기술 자료가 기술 자료 테이블의 상태 열에 표시된 상태로 전환됩니다. 기술 자료 검색 및 일치 정책 작업의 경우 기술 자료가 특정 마법사 페이지에서 열립니다. 도메인 관리 작업의 경우 기술 자료가 도메인 관리 페이지에서 열립니다. 상태에 대한 자세한 내용은 [기술 자료 검색 수행](../../2014/data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../../2014/data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../../2014/data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
 ##  <a name="Locked"></a> 기술 자료가 잠긴 경우  
@@ -77,7 +77,7 @@ ms.locfileid: "52507538"
 ##  <a name="State"></a> 기술 자료의 상태  
  상태 필드는 기술 자료에 대한 현재 작업 단계를 나타냅니다. 기술 자료를 열면 해당 단계에서 기술 자료가 열립니다.  
   
--   **\<빈 >**: 상태 필드가 비어 기술 자료에 대 한 기술 자료를 클릭 하 여 게시 된 경우 **게시** 도메인 관리 작업에서 클릭 하 고 **Yes-종료 확인 하 고 기술 자료를 게시**합니다.  
+-   **\<Empty>**: 상태 필드가 비어 기술 자료에 대 한 기술 자료를 클릭 하 여 게시 된 경우 **게시** 도메인 관리 작업에서 클릭 하 고 **Yes-종료 확인 하 고 기술 자료를 게시**합니다.  
   
 -   **작업에서**: 기술 자료에서 작업을 클릭 하 여 저장 된 **게시** 도메인 관리 작업에서 클릭 하 고 **기술 자료 및 종료 작업을 저장 하는 아니요-** 합니다.  
   

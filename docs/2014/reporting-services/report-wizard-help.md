@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Report Designer [Reporting Services], wizards
 ms.assetid: 68287bcf-f91a-429f-bb7c-48c029b041fa
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 19f07d48421ab00c0399b4fec299e975931c4838
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 5e08d75c67bf1f335279dd1dcf3885017342e4ad
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161323"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041334"
 ---
 # <a name="report-wizard-help"></a>보고서 마법사 도움말
   이 섹션에서는 보고서 마법사에 대한 F1 도움말을 설명합니다. 보고서 마법사에서는 테이블 형식 보고서 및 행렬 보고서 생성 프로세스를 자동화합니다. 다음 표에서는 이 섹션에서 다루는 항목에 대해 설명합니다.  

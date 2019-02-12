@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3071399edd3a7138d4cee68a162f0c44cfca29ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d4540cdd9d0d8c196e9f304508fd60edd99f2174
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218233"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032974"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>보고서 작성기 옵션 대화 상자, 설정(보고서 작성기)
   **보고서 작성기** 단추를 클릭한 다음 **옵션** 을 클릭하여 최근 파일 및 연결 표시에 대한 옵션을 설정합니다. 기본 보고서 서버를 변경하고 기본값이 없는 경우 새로 추가할 수도 있습니다.  
@@ -47,6 +47,6 @@ ms.locfileid: "48218233"
  최근 사이트 및 서버, 공유 데이터 세트, 공유 데이터 원본 연결 및 문서의 현재 목록을 지웁니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [대화 상자, 창 및 마법사에 대 한 보고서 작성기 도움말](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

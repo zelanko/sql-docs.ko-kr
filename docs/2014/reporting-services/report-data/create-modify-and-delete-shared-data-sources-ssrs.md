@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2757c13236b871eccc91066e064924c27cc19a93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6ead1d37c40a1d0cd2d6ee668bb99d595554006a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056813"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041484"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>공유 데이터 원본 만들기, 수정 및 삭제(SSRS)
   공유 데이터 원본은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 실행되는 여러 보고서, 모델 및 데이터 기반 구독에서 참조할 수 있는 데이터 원본 연결 속성의 집합입니다. 공유 데이터 원본을 사용하면 시간이 지나면서 자주 변경되는 데이터 원본 속성을 쉽게 관리할 수 있습니다. 사용자 계정 또는 암호가 변경되거나 데이터베이스를 다른 서버로 이동하는 경우 한 위치에서 연결 정보를 업데이트할 수 있습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "48056813"
   
  공유 데이터 원본을 만드는 방법에 대한 자세한 내용은 다음을 참조하십시오.  
   
--   [포함 또는 공유 데이터 원본 만들기 &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)  
+-   [포함된 데이터 원본 또는 공유 데이터 원본 만들기&#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)  
   
 -   [공유 데이터 원본 만들기 및 관리&#40;SharePoint 통합 모드의 Reporting Services&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)  
   
@@ -70,13 +70,13 @@ ms.locfileid: "48056813"
  공유 데이터 원본 삭제 작업은 실행 취소할 수 없습니다. 하지만 공유 데이터 원본을 실수로 삭제한 경우에는 삭제된 것과 동일한 속성 값을 사용하여 새 공유 데이터 원본을 만들 수 있습니다. 각 보고서, 모델 및 데이터 기반 구독을 열어 공유 데이터 원본을 이 원본을 사용하는 항목에 다시 바인딩해야 하지만 데이터 원본 속성이 이전과 동일하기만 하면 보고서, 모델 및 구독은 이전과 동일하게 작동하게 됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [공유 데이터 원본을 만들고 관리 &#40;Reporting Services sharepoint에서 통합 모드&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
+ [공유 데이터 원본 만들기 및 관리&#40;SharePoint 통합 모드의 Reporting Services&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
  [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [보고서 데이터 원본 관리](manage-report-data-sources.md)   
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)   
- [포함 된 데이터 원본과 공유 데이터 연결 또는 데이터 원본 &#40;보고서 작성기 및 SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)   
+ [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [데이터 원본 속성 페이지&#40;보고서 관리자&#41;](../data-sources-properties-page-report-manager.md)   
- [만들기, 삭제 또는 공유 데이터 원본을 수정 &#40;보고서 관리자&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [보고서의 데이터 원본 속성 구성 &#40;보고서 관리자&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
+ [공유 데이터 원본 만들기, 삭제 또는 수정&#40;보고서 관리자&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [보고서의 데이터 원본 속성 구성&#40;보고서 관리자&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

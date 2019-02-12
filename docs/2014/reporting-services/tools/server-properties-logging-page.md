@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: b338deab-4868-4951-9f22-0605add2fc95
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 29331f12c0eeb713f36999df239069e4e56c359e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cf85b6fbc2bccab8061ef227b5d0fb10de825477
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082463"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015469"
 ---
 # <a name="server-properties-logging-page"></a>서버 속성(로깅 페이지)
   이 페이지를 사용하여 보고서 서버에서 수집한 보고서 실행 데이터에 대한 제한을 설정할 수 있습니다. 실행 데이터는 보고서 서버 데이터베이스에 내부적으로 저장됩니다. 기본 모드 또는 SharePoint 통합 모드로 실행되는 보고서 서버에 대한 보고서 작업을 추적할 수 있습니다. 보고서 서버가 스케일 아웃 배포에 포함되는 경우 보고서 실행 로그는 단일 로그 파일에 전체 배포에 대한 모든 보고서 작업 기록을 유지합니다.  
   
- 이 페이지를 열려면 시작 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], 보고서 서버에 연결, 보고서 서버 이름을 마우스 오른쪽 단추로 **속성**합니다. **로깅** 을 클릭하여 이 페이지를 엽니다.  
+ 이 페이지를 열려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 열고 보고서 서버에 연결한 다음 보고서 서버 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **로깅** 을 클릭하여 이 페이지를 엽니다.  
   
 ## <a name="options"></a>변수  
  **보고서 실행 로깅 사용**  
