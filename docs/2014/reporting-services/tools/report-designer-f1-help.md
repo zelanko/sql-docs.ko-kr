@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 7c1bc931-d1ec-47fc-8f82-55560ddaf776
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9bde9b551f3a2b8308dc8d87bb9a97cc59c1c2de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d815caf1e67b1dd5b4b40838e8a0ef2dd7eb6d05
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189843"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036554"
 ---
 # <a name="report-designer-f1-help"></a>보고서 디자이너 F1 도움말
-  이 섹션에 대 한 F1 도움말을 제공 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 디자이너 마법사, 뷰 및 대화 상자. 대화 상자에서 작업하는 동안 F1 키를 누르거나 대화 상자에 표시된 도움말 단추를 클릭하여 F1 도움말을 열 수도 있습니다.  
+  이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 디자이너 마법사, 뷰 및 대화 상자에 대한 F1 도움말을 설명합니다. 대화 상자에서 작업하는 동안 F1 키를 누르거나 대화 상자에 표시된 도움말 단추를 클릭하여 F1 도움말을 열 수도 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [기능 참조 &#40;Reporting Services&#41;](../feature-reference-reporting-services.md)   

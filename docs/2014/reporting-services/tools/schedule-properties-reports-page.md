@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 999f0b922705e210e6761d7b534490387c8fef74
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: b1b33bd63dc4351761622bf7e6b51b7f7a616fe9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363235"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032714"
 ---
 # <a name="schedule-properties-reports-page"></a>일정 속성(보고서 페이지)
   이 페이지를 사용하여 이 공유 일정을 사용하는 모든 보고서 목록을 볼 수 있습니다. 일정을 사용하여 보고서 스냅숏을 새로 고치거나, 보고서 기록을 생성하거나, 구독을 트리거하거나, 보고서의 캐시된 복사본을 만료시킬 수 있습니다. 일정 사용 방법을 확인하려면 보고서의 속성 및 구독 정보를 확인하십시오.  

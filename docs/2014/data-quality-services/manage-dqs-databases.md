@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6dda82b297b04f21fe1b4d2b7255c65b5b8a4aef
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: bd5a24a76963532c7fa70100bfccc171ba3c90ff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366235"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023804"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
   이 섹션에서는 백업/복원 또는 분리/연결과 같이 DQS 데이터베이스에서 수행할 수 있는 데이터베이스 관리 작업에 대한 정보를 제공합니다.  

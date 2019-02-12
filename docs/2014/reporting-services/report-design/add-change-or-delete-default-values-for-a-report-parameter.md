@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 6a87e069-b3a9-47b6-bcec-afcdd8aff65f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 294940b2ffdeab57d3cde8f7a1fe8a8b61d6532a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ef88ca9dc7870ad277640b40a02838c78b8dddce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221883"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032275"
 ---
 # <a name="add-change-or-delete-default-values-for-a-report-parameter-report-builder-and-ssrs"></a>보고서 매개 변수의 기본값 추가, 변경 또는 삭제(보고서 작성기 및 SSRS)
   보고서 매개 변수를 만든 후에는 기본값 목록을 제공할 수 있습니다. 모든 매개 변수에 유효한 기본값이 있는 경우 보고서를 처음으로 보거나 미리 볼 때 해당 보고서가 자동으로 실행됩니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "48221883"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- 보고서를 게시한 후에는 보고서 서버에서 매개 변수 속성 값을 설정하여 보고서 제작 도구에서 보고서에 정의한 기본값을 재정의할 수 있습니다. 연결된 보고서를 만들어 여러 기본 매개 변수 값 집합을 제공할 수도 있습니다. 자세한 내용은 [보고서 매개 변수 &#40;보고서 작성기 및 보고서 디자이너&#41;](report-parameters-report-builder-and-report-designer.md)  
+ 보고서를 게시한 후에는 보고서 서버에서 매개 변수 속성 값을 설정하여 보고서 제작 도구에서 보고서에 정의한 기본값을 재정의할 수 있습니다. 연결된 보고서를 만들어 여러 기본 매개 변수 값 집합을 제공할 수도 있습니다. 자세한 내용은  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](report-parameters-report-builder-and-report-designer.md)  
   
 ### <a name="to-add-or-change-the-default-values-for-a-report-parameter"></a>보고서 매개 변수의 기본값을 추가 또는 변경하려면  
   
@@ -65,12 +65,12 @@ ms.locfileid: "48221883"
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](report-parameters-report-builder-and-report-designer.md)   
- [보고서에 연계 매개 변수를 추가 &#40;보고서 작성기 및 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [자습서: 보고서에 매개 변수 추가&#40;보고서 작성기&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [보고서에 연계 매개 변수 추가&#40;보고서 작성기 및 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [자습서: 보고서 매개 변수를 추가 &#40;보고서 작성기&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [매개 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)   
- [보고서 매개 변수의 순서를 변경 &#40;보고서 작성기 및 SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
- [추가, 변경 또는 Delete a Report Parameter &#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [보고서 매개 변수의 순서 변경&#40;보고서 작성기 및 SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
+ [보고서 매개 변수 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   
   

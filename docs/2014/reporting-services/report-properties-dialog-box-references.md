@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.reportproperties.references.f1
 ms.assetid: 4639d368-9918-4bb1-9953-7a724ca78dea
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 628a94ec8e8c79ec88f8427fd2ea41f158ae6c38
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 1b50af41b3430e921002422dfc14a5752af4b4e5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539794"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029644"
 ---
 # <a name="report-properties-dialog-box-references"></a>보고서 속성 대화 상자, 참조
   **보고서 속성** 대화 상자의 **참조** 를 선택하여 보고서 정의의 식에 사용되는 사용자 지정 또는 다른 외부 어셈블리 및 사용자 지정 클래스 인스턴스에 대한 참조를 추가 또는 제거할 수 있습니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "52539794"
  **아래로**  
  종속성이 있는 클래스의 경우 이 참조를 목록에서 더 아래로 이동할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
  [보고서 및 그룹 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](report-design/built-in-collections-report-and-group-variables-references-report-builder.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)  

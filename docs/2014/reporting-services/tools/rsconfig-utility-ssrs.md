@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cd0335165c27487433b0130f5e40ecb1846fe7ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: cebdfdbccf21ca3370cf2670d97d6cea6e4c7836
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505410"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036884"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 유틸리티(SSRS)
   **rsconfig.exe** 유틸리티는 연결 및 계정 값을 암호화하여 RSReportServer.config 파일에 저장합니다. 암호화되는 값에는 무인 보고서 처리에 사용되는 보고서 서버 데이터베이스 연결 정보 및 계정 값이 포함됩니다.  
@@ -51,13 +51,13 @@ ms.locfileid: "52505410"
 |**-?**|(선택 사항)|Rsconfig.exe 인수의 구문을 표시합니다.|  
 |`-c`|`-e` 인수를 사용하지 않은 경우 필요합니다.|보고서 서버에서 보고서 서버 데이터베이스에 연결하는 데 사용되는 연결 문자열, 자격 증명 및 데이터 원본 값을 지정합니다.<br /><br /> 이 인수는 값을 가지지 않습니다. 그러나 모든 필수 연결 값을 제공하려면 이 인수와 함께 추가 인수를 지정해야 합니다.<br /><br /> 인수를 사용 하 여 지정할 수 있습니다 `-c` 포함 `-m`, **-s**, `-i`를`-d`,`-a`를`-u`를`-p`, 및`-t`합니다.|  
 |`-e`|`-c` 인수를 사용하지 않은 경우 필요합니다.|무인 보고서 실행 계정을 지정합니다.<br /><br /> 이 인수는 값을 가지지 않습니다. 그러나 구성 파일에 암호화된 값을 지정하려면 명령줄에 추가 인수를 포함해야 합니다.<br /><br /> `-e`를 사용하여 지정할 수 있는 인수에는 `-u`, `-p` 등이 있습니다. `-t`도 설정할 수 있습니다.|  
-|`-m`  *컴퓨터 이름*|원격 보고서 서버 인스턴스를 구성하는 경우 필요합니다.|보고서 서버를 호스팅하는 컴퓨터의 이름입니다. 이 인수를 생략할 경우 기본값은 `localhost`입니다.|  
+|`-m`  *computername*|원격 보고서 서버 인스턴스를 구성하는 경우 필요합니다.|보고서 서버를 호스팅하는 컴퓨터의 이름입니다. 이 인수를 생략할 경우 기본값은 `localhost`입니다.|  
 |**-s**  *servername*|필수 사항입니다.|보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정합니다.|  
-|`-i`  *인스턴스 이름*|명명된 인스턴스를 사용하는 경우 필요합니다.|명명된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 사용하여 보고서 서버 데이터베이스를 호스팅하는 경우 이 값은 명명된 인스턴스를 지정합니다.|  
-|`-d`  *Databasename*|필수 사항입니다.|보고서 서버 데이터베이스의 이름을 지정합니다.|  
-|`-a`  *인증*|필수 사항입니다.|보고서 서버에서 보고서 서버 데이터베이스에 연결할 때 사용하는 인증 방법을 지정합니다. 유효한 값은 `Windows` 또는 `SQL`입니다. 이 인수는 대/소문자를 구분하지 않습니다.<br /><br /> `Windows`에서는 보고서 서버가 Windows 인증을 사용하도록 지정합니다.<br /><br /> `SQL`에서는 보고서 서버가 SQL Server 인증을 사용하도록 지정합니다.|  
-|`-u`  *[도메인\\] 사용자 이름*|`-e`에는 필수 인수이고 `-c`에는 선택 인수입니다.|보고서 서버 데이터베이스 연결 또는 무인 계정을 위한 사용자 계정을 지정합니다.<br /><br /> **rsconfig -e**의 경우 이 인수는 필수입니다. 도메인 사용자 계정이어야 합니다.<br /><br /> 에 대 한 **rsconfig-c** 하 고 `-a SQL`에이 인수를 지정 해야 합니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 합니다.<br /><br /> 에 대 한 **rsconfig-c** 고 `-a Windows`,이 인수는 도메인 사용자, 기본 제공 계정 또는 서비스 계정 자격 증명에 지정할 수 있습니다. 도메인 계정을 지정하는 경우 *domain* 및 *username* 을 *domain\username*형식으로 지정합니다. 기본 제공 계정을 사용하는 경우 이 인수는 선택 인수입니다. 서비스 계정 자격 증명을 사용하려면 이 인수를 생략합니다.|  
-|`-p`  *암호*|`-u`를 지정하는 경우 필요합니다.|*username* 인수와 함께 사용할 암호를 지정합니다. 계정에 암호가 필요하지 않은 경우에는 이 인수를 비워 둘 수 있습니다. 도메인 계정의 경우 이 값은 대/소문자를 구분합니다.|  
+|`-i`  *instancename*|명명된 인스턴스를 사용하는 경우 필요합니다.|명명된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 사용하여 보고서 서버 데이터베이스를 호스팅하는 경우 이 값은 명명된 인스턴스를 지정합니다.|  
+|`-d`  *databasename*|필수 사항입니다.|보고서 서버 데이터베이스의 이름을 지정합니다.|  
+|`-a`  *authmethod*|필수 사항입니다.|보고서 서버에서 보고서 서버 데이터베이스에 연결할 때 사용하는 인증 방법을 지정합니다. 유효한 값은 `Windows` 또는 `SQL`입니다. 이 인수는 대/소문자를 구분하지 않습니다.<br /><br /> `Windows`에서는 보고서 서버가 Windows 인증을 사용하도록 지정합니다.<br /><br /> `SQL`에서는 보고서 서버가 SQL Server 인증을 사용하도록 지정합니다.|  
+|`-u`  *[domain\\]username*|`-e`에는 필수 인수이고 `-c`에는 선택 인수입니다.|보고서 서버 데이터베이스 연결 또는 무인 계정을 위한 사용자 계정을 지정합니다.<br /><br /> **rsconfig -e**의 경우 이 인수는 필수입니다. 도메인 사용자 계정이어야 합니다.<br /><br /> 에 대 한 **rsconfig-c** 하 고 `-a SQL`에이 인수를 지정 해야 합니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 합니다.<br /><br /> 에 대 한 **rsconfig-c** 고 `-a Windows`,이 인수는 도메인 사용자, 기본 제공 계정 또는 서비스 계정 자격 증명에 지정할 수 있습니다. 도메인 계정을 지정하는 경우 *domain* 및 *username* 을 *domain\username*형식으로 지정합니다. 기본 제공 계정을 사용하는 경우 이 인수는 선택 인수입니다. 서비스 계정 자격 증명을 사용하려면 이 인수를 생략합니다.|  
+|`-p`  *password*|`-u`를 지정하는 경우 필요합니다.|*username* 인수와 함께 사용할 암호를 지정합니다. 계정에 암호가 필요하지 않은 경우에는 이 인수를 비워 둘 수 있습니다. 도메인 계정의 경우 이 값은 대/소문자를 구분합니다.|  
 |`-t`|(선택 사항)|추적 로그에 오류 메시지를 출력합니다. 이 인수는 값을 가지지 않습니다. 자세한 내용은 [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)을 참조하세요.|  
   
 ## <a name="permissions"></a>사용 권한  

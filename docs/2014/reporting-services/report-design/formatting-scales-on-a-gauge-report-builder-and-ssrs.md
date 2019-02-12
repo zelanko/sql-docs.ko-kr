@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3995d85af81e6417e3117c25c1ec06052d60f269
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 36074fe67459cb47f6becfe914fe868baf5d4940
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069003"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021668"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>계기의 눈금 서식 지정(보고서 작성기 및 SSRS)
   계기 눈금은 계기에 표시되는 최대값과 최소값에 바인딩된 숫자 범위입니다. 일반적으로 계기 눈금에는 계기 포인터가 표시하는 값을 정확하게 판독할 수 있도록 계기 레이블과 눈금 표시가 포함됩니다. 계기 눈금은 일반적으로 하나 이상의 계기 포인터와 연결됩니다. 동일한 계기에 둘 이상의 눈금이 있을 수 있습니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "48069003"
 -   선형 계기에서 계기 높이나 너비 값 중 가장 작은 값의 1%  
   
 ## <a name="see-also"></a>관련 항목  
- [계기에서 범위 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
+ [계기에서 범위 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [계기의 포인터 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [축 레이블의 서식을 날짜 또는 통화로 지정&#40;보고서 작성기 및 SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [차트의 축 레이블 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   

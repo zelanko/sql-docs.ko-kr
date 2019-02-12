@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ccabc5546cd61f7b685480cf2c2819d6594aee1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8d3abef04fd707681499d13246f050bc75eeda98
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182675"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015984"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 뷰어 및 보고서 도구 모음
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 보고서 서버의 요청에 따라 보고서를 표시하는 데 사용되는 HTML 뷰어를 제공합니다. HTML 뷰어는 HTML 형식의 보고서를 표시하는 프레임워크, 즉 보고서 도구 모음, 매개 변수 섹션, 자격 증명 섹션 및 문서 구조를 제공합니다. HTML 뷰어의 보고서 도구 모음에는 보고서를 HTML이 아닌 다른 형식으로 표시할 수 있도록 하는 내보내기 옵션을 비롯하여 보고서 작업에 사용할 수 있는 다양한 기능이 있습니다. 매개 변수 섹션과 문서 구조는 매개 변수 및 문서 구조 컨트롤을 사용하도록 구성된 보고서를 열 경우에만 표시됩니다.  
   
 > [!NOTE]  
->  보고서 도구 모음을 수정할 수는 없지만 보고서 URL의 매개 변수를 구성하여 보고서에서 보고서 도구 모음을 숨길 수 있습니다. 보고서 도구 모음을 숨기는 방법에 대 한 자세한 내용은 참조 하십시오 [URL Access Parameter Reference](url-access-parameter-reference.md)합니다.  
+>  보고서 도구 모음을 수정할 수는 없지만 보고서 URL의 매개 변수를 구성하여 보고서에서 보고서 도구 모음을 숨길 수 있습니다. 보고서 도구 모음을 숨기는 방법은 [URL 액세스 매개 변수 참조](url-access-parameter-reference.md)를 참조하세요.  
   
 ## <a name="report-toolbar"></a>보고서 도구 모음  
  보고서 도구 모음은 HTML 렌더링 확장 프로그램에서 렌더링된 보고서에 대해 페이지 탐색, 확대/축소, 새로 고침, 검색, 내보내기, 인쇄 및 데이터 피드 기능을 제공합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "48182675"
   
 |아이콘 또는 컨트롤||수행할 작업|  
 |------------------------------|-|--------|  
-|![페이지 탐색 컨트롤만](media/htmlviewer-pagenav.gif "페이지 탐색 컨트롤")|**페이지 이동 컨트롤**|보고서의 첫 번째 또는 마지막 페이지를 열고, 페이지 단위로 스크롤하고, 특정 페이지를 엽니다. 특정 페이지를 보려면 페이지 번호를 입력한 다음 Enter 키를 누릅니다.|  
+|![페이지 이동 컨트롤](media/htmlviewer-pagenav.gif "페이지 이동 컨트롤")|**페이지 이동 컨트롤**|보고서의 첫 번째 또는 마지막 페이지를 열고, 페이지 단위로 스크롤하고, 특정 페이지를 엽니다. 특정 페이지를 보려면 페이지 번호를 입력한 다음 Enter 키를 누릅니다.|  
 |![페이지 표시 컨트롤](media/htmlviewer-pagesize.gif "페이지 표시 컨트롤")|**페이지 표시 컨트롤**|보고서 페이지의 크기를 확대하거나 축소합니다. 비율에 따라 보고서 페이지 크기를 조정할 수 있을 뿐만 아니라 **페이지 너비** 를 선택하여 페이지의 가로 길이를 브라우저 창에 맞추거나 **전체 페이지** 를 선택하여 페이지의 세로 길이를 브라우저 창에 맞출 수도 있습니다. **확대/축소** 옵션은 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 5.5 이상에서 지원됩니다.|  
 |![검색 필드](media/htmlviewer-search.gif "검색 필드")|**검색 필드**|찾을 단어나 구(최대 256자까지 입력 가능)를 입력하여 보고서 내용을 검색합니다. 검색은 대/소문자를 구분하며 현재 선택한 페이지나 섹션에서 시작됩니다. 표시 가능한 내용만 검색 작업에 포함됩니다. 같은 값을 계속 검색하려면 **다음**을 클릭합니다.|  
 |![내보내기 형식](media/htmlviewer-export.GIF "내보내기 형식")|**내보내기 형식**|새 브라우저 창을 열고 보고서를 선택한 형식으로 렌더링합니다. 사용할 수 있는 형식은 보고서 서버에 설치되어 있는 렌더링 확장 프로그램에 따라 다릅니다. 인쇄할 경우에는 TIFF 형식을 권장합니다. 선택한 형식으로 보고서를 표시하려면 **내보내기** 를 클릭합니다.|  

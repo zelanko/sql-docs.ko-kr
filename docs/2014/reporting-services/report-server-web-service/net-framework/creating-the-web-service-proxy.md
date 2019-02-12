@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f7cddd1a918c1e25ae434b47a737d7d329c94cae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6b4ba7b4775009fe346cbb32473ecf34d2445c9c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080550"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022594"
 ---
 # <a name="creating-the-web-service-proxy"></a>웹 서비스 프록시 만들기
   클라이언트와 웹 서비스는 입력 및 출력 매개 변수를 XML로 캡슐화하는 SOAP 메시지를 사용하여 통신할 수 있습니다. 프록시 클래스는 매개 변수를 XML 요소에 매핑한 다음 네트워크를 통해 SOAP 메시지를 보냅니다. 이와 같이 프록시 클래스 덕분에 SOAP 수준에서 웹 서비스와 통신할 필요가 없으며 SOAP 및 웹 프록시를 지원하는 임의의 개발 환경에서 웹 서비스 메서드를 호출할 수 있습니다.  
@@ -97,7 +97,7 @@ ReportingService2010 service = new ReportingService2010();
   
 5.  보고서 서버 웹 서비스에 프로그래밍 방식으로 액세스하기 위해 코드에 사용할 이름을 **웹 참조 이름** 필드에 입력합니다.  
   
-6.  **참조 추가** 단추를 선택하여 웹 서비스에 대한 응용 프로그램의 참조를 만듭니다.  
+6.  **참조 추가** 단추를 선택하여 웹 서비스에 대한 애플리케이션의 참조를 만듭니다.  
   
      새 참조가 **솔루션 탐색기**에서 활성 프로젝트에 대한 Web References 노드 아래에 **웹 참조 이름** 필드에 지정한 이름으로 나타납니다.  
   
@@ -132,7 +132,7 @@ using myNamespace.myReferenceName;
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 서버 웹 서비스](../report-server-web-service.md)   
- [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](building-applications-using-the-web-service-and-the-net-framework.md)   
+ [웹 서비스와 .NET Framework를 사용하여 애플리케이션 빌드](building-applications-using-the-web-service-and-the-net-framework.md)   
  [기술 참조&#40;SSRS&#41;](../../technical-reference-ssrs.md)  
   
   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0379e0105522caf643d2295070da395df51a41a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6e0bebad59894c150a77dd7b8fc3036fe50029e7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112861"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023654"
 ---
 # <a name="monitoring-report-server-performance"></a>보고서 서버 성능 모니터링
   성능 모니터링 도구를 통해 보고서 서버 성능을 모니터링하여 서버 작업을 평가하고, 추세를 살피고, 시스템 병목 현상을 진단하고, 현재 시스템 구성이 충분한지 여부를 결정하는 데 도움이 되는 데이터를 수집할 수 있습니다. 서버 성능을 튜닝하기 위해 보고서 서버 애플리케이션 도메인의 재활용 빈도를 지정할 수 있습니다. 자세한 내용은 [보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../report-server/configure-available-memory-for-report-server-applications.md)을 참조하세요.  
@@ -40,7 +40,7 @@ ms.locfileid: "48112861"
   
  작업 관리자는 컴퓨터에서 실행되는 프로그램 및 프로세스에 대한 정보를 제공합니다. 작업 관리자를 사용하여 보고서 서버의 성능을 나타내는 주요 표시기를 모니터링할 수 있습니다. 또한 실행 중인 프로세스의 활동을 평가하고 CPU 및 메모리 사용량에 대한 그래프와 데이터를 볼 수 있습니다. 작업 관리자를 사용하는 방법은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 제품 설명서를 참조하십시오.  
   
- 성능 콘솔과 이벤트 뷰어를 사용하여 보고서 처리 및 리소스 소비량에 대한 로그와 경고를 만들 수 있습니다. 생성 되는 Windows 이벤트에 대 한 자세한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 참조 하세요 [Windows 응용 프로그램 로그](windows-application-log.md)합니다. 성능 콘솔에 대한 자세한 내용은 이 항목 뒷부분에서 "Windows 성능 카운터"를 참조하십시오.  
+ 성능 콘솔과 이벤트 뷰어를 사용하여 보고서 처리 및 리소스 소비량에 대한 로그와 경고를 만들 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 생성된 Windows 이벤트에 대한 자세한 내용은 [Windows 애플리케이션 로그](windows-application-log.md)를 참조하세요. 성능 콘솔에 대한 자세한 내용은 이 항목 뒷부분에서 "Windows 성능 카운터"를 참조하십시오.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티는 캐싱 및 세션 관리에 사용되는 보고서 서버 데이터베이스 및 임시 데이터베이스에 대한 정보를 제공합니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48112861"
   
 -   예약된 작업 및 보고서 배달을 모니터링하기 위한 `MSRS 2011 Windows Service` 및 `MSRS 2011 Windows Service SharePoint Mode`. 이러한 성능 개체에는 예약된 작업을 통해 시작된 보고서 처리를 추적하는 데 사용되는 카운터 모음이 들어 있습니다. 예약된 작업에는 구독 및 배달, 보고서 실행 스냅숏 및 보고서 기록이 포함됩니다.  
   
--   `ReportServer:Service` 및 `ReportServerSharePoint:Service` HTTP 관련 이벤트 및 메모리 관리를 모니터링 합니다. 이러한 카운터는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 한정되며 요청, 연결 및 로그온 시도와 같은 보고서 서버에 대한 HTTP 관련 이벤트를 추적합니다. 이 성능 개체에는 메모리 관리 관련 카운터도 들어 있습니다.  
+-   HTTP 관련 이벤트 및 메모리 관리를 모니터링하기 위한 `ReportServer:Service` 및 `ReportServerSharePoint:Service`. 이러한 카운터는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 한정되며 요청, 연결 및 로그온 시도와 같은 보고서 서버에 대한 HTTP 관련 이벤트를 추적합니다. 이 성능 개체에는 메모리 관리 관련 카운터도 들어 있습니다.  
   
  한 시스템에 보고서 서버 인스턴스가 여러 개 있을 경우 인스턴스를 함께 모니터링하거나 별도로 모니터링할 수 있습니다. 카운터 추가 시 포함할 인스턴스를 선택합니다. 성능 콘솔(perfmon.msc) 사용 및 카운터를 추가하는 방법은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 제품 설명서를 참조하세요.  
   

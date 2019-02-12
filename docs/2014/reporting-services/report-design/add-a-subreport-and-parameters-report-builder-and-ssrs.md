@@ -13,20 +13,20 @@ f1_keywords:
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2d7ab908fa5f9696c5db4c49f3d99338c9f01a83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 68165234bcafbb91ef30b45b44fbcf4f64d8657e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166193"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017194"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>하위 보고서 및 매개 변수 추가(보고서 작성기 및 SSRS)
   여러 관련 보고서의 컨테이너인 주 보고서를 만들려는 경우 하위 보고서를 보고서에 추가합니다. 하위 보고서는 다른 보고서에 대한 참조입니다. 여러 보고서에서 동일한 고객에 대한 데이터를 표시하도록 하는 등의 이유로 데이터 값을 통해 여러 보고서를 연결하려면 매개 변수가 있는 보고서(예: 특정 고객에 대한 세부 정보를 표시하는 보고서)를 하위 보고서로 디자인해야 합니다. 하위 보고서를 주 보고서에 추가할 때에는 매개 변수를 지정하여 하위 보고서에 전달할 수 있습니다.  
   
  하위 보고서를 테이블이나 행렬의 동적 행 또는 열에 추가할 수도 있습니다. 주 보고서가 처리되면 하위 보고서가 각 행에 대해 처리됩니다. 이 경우 데이터 영역 또는 중첩된 데이터 영역을 사용하여 원하는 결과를 얻을 수 있는지 생각해 보십시오.  
   
- 보고서에 하위 보고서를 추가하려면 먼저 포함될 보고서 역할을 할 보고서를 만들어야 합니다. 하위 보고서를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [하위 &#40;보고서 작성기 및 SSRS&#41;](subreports-report-builder-and-ssrs.md)합니다.  
+ 보고서에 하위 보고서를 추가하려면 먼저 포함될 보고서 역할을 할 보고서를 만들어야 합니다. 하위 보고서를 만드는 방법은 [하위 보고서&#40;보고서 작성기 및 SSRS&#41;](subreports-report-builder-and-ssrs.md)를 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -73,7 +73,7 @@ ms.locfileid: "48166193"
      하위 보고서 매개 변수의 순서 변경은 하위 보고서의 처리에 아무런 영향도 주지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [하위 보고서 &#40;보고서 작성기 및 SSRS&#41;](subreports-report-builder-and-ssrs.md)   
+ [하위 보고서&#40;보고서 작성기 및 SSRS&#41;](subreports-report-builder-and-ssrs.md)   
  [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

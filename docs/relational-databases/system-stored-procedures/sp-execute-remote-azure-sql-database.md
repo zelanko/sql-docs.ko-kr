@@ -2,10 +2,8 @@
 title: sp_execute_remote (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/01/2017
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: conceptual
 f1_keywords:
 - sp_execute_remote
@@ -18,12 +16,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c61098eabfe58cb1e791dd379cafb5f91d50f247
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a475ba50aa8d3ba140ea551306d8b9f17fe66d22
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837091"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035904"
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -46,10 +44,10 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ```  
   
 ## <a name="arguments"></a>인수  
- [ \@data_source_name =] *datasourcename*  
+ [ \@data_source_name = ] *datasourcename*  
  문이 실행 되는 외부 데이터 원본을 식별 합니다. 참조 [외부 데이터 원본 만들기 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)합니다. 외부 데이터 원본 "RDBMS" 또는 "SHARD_MAP_MANAGER" 형식일 수 있습니다.  
   
- [ \@stmt =] *문*  
+ [ \@stmt= ] *statement*  
  포함 하는 유니코드 문자열을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리 합니다. \@stmt은 유니코드 상수 또는 유니코드 변수 여야 합니다. + 연산자로 두 문자열을 연결한 식처럼 더 복잡한 유니코드 식은 사용할 수 없습니다. 문자 상수도 사용할 수 없습니다. 유니코드 상수를 지정 하면이 접두사로 추가 해야 합니다는 **N**합니다. 예를 들어 유니코드 상수 **N'sp_who '** 유효 하지만 문자 상수 **'sp_who'** 아닙니다. 문자열의 크기는 사용 가능한 데이터베이스 서버 메모리의 용량에 따라서만 제한됩니다. 64 비트 서버의 문자열의 크기는 최대 크기인 2GB로 제한 됩니다 **nvarchar (max)** 합니다.  
   
 > [!NOTE]  
@@ -57,10 +55,10 @@ sp_execute_remote [ @data_source_name = ] datasourcename
   
  에 포함 된 각 매개 변수에 \@stmt는 둘 다에 해당 하는 항목이 있어야 합니다 \@params 매개 변수 정의 목록과 매개 변수 값 목록입니다.  
   
- [ \@params =] N'\@*parameter_name * * data_type* [,... *n* ] '  
+ [ \@params= ] N'\@*parameter_name**data_type* [ ,... *n* ] '  
  에 포함 된 모든 매개 변수의 정의 포함 하는 하나의 문자열 \@stmt 합니다. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. *n* 추가 매개 변수 정의 나타내는 자리 표시자입니다. 에 지정 된 모든 매개 변수에 \@stmtmust 정의 \@매개 변수입니다. 경우는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리 \@stmt 매개 변수는 \@params가 필요 하지 않습니다. 이 매개 변수의 기본값은 NULL입니다.  
   
- [ \@param1 =] '*value1*'  
+ [ \@param1= ] '*value1*'  
  매개 변수 문자열에 정의된 첫 번째 매개 변수의 값입니다. 값은 유니코드 상수 또는 유니코드 변수가 될 수 있습니다. 에 포함 된 모든 매개 변수에 제공 되는 매개 변수 값이 있어야 \@stmt 합니다. 값이 필요한 경우는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리 \@stmt에 매개 변수가 없습니다.  
   
  *n*  
@@ -73,7 +71,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
  첫 번째 SQL 문을에서 결과 집합을 반환 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- `ALTER ANY EXTERNAL DATA SOURCE` 권한이 필요합니다.  
+ 필요한 `ALTER ANY EXTERNAL DATA SOURCE` 권한.  
   
 ## <a name="remarks"></a>Remarks  
  `sp_execute_remote` 위의 구문 섹션에 설명 된 대로 매개 변수를 특정 순서로 입력 되어야 합니다. 매개 변수 순서가 잘못되면 오류 메시지가 나타납니다.  
@@ -106,6 +104,6 @@ EXEC sp_execute_remote @data_source_name  = N'PointToMaster',
 
 ## <a name="see-also"></a>참고 항목:
 
-[만들 데이터베이스 범위 자격 증명](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
+[CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
 [CREATE EXTERNAL DATA SOURCE (TRANSACT-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
     

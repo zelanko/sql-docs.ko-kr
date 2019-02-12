@@ -12,14 +12,14 @@ f1_keywords:
 - "10100"
 ms.assetid: 14c3eeb6-d37b-4fda-967b-43afcdb48119
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a5d1f22d37723545cde9430404a5e414fb1856c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 4fbee37fe2396c533c6cc16528d467f9862d46c3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079043"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032354"
 ---
 # <a name="data-source-properties-dialog-box-credentials"></a>데이터 원본 속성 대화 상자, 자격 증명
   **데이터 원본 속성** 대화 상자의 **자격 증명** 을 선택하여 보고서의 데이터 원본에 연결하는 데 사용할 자격 증명을 표시하고 수정할 수 있습니다. 사용자가 제공하는 자격 증명은 데이터 원본에 액세스하고 보고서를 미리 보기 위해 데이터의 복사본을 캐시하는 데 사용됩니다. 미리 보기 데이터 캐시 방법에 대한 자세한 내용은 [보고서 미리 보기](reports/previewing-reports.md)를 참조하세요. 자격 증명에 대한 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.  

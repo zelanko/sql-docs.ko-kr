@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b987446144cf63651e056cf49a5791bacce705b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e71c7e2c933afc0da1a09adbb26cc5e08bc9747f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085718"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035634"
 ---
 # <a name="data-alert-messages"></a>데이터 경고 메시지
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 데이터 경고는 데이터 경고 결과가 포함된 메시지와 오류 설명이 포함된 메시지의 두 가지 종류의 데이터 경고 메시지를 전자 메일로 제공합니다. 결과가 포함된 메시지는 모든 받는 사람에게 유용하고 비즈니스 의사 결정을 내리는 데 중요한 보고서 데이터 변경 사항에 대해 알려줍니다. 오류가 발생하여 결과를 사용할 수 없는 경우 오류 메시지를 대신 보냅니다.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]데이터 경고는 데이터 경고 결과가 포함된 메시지와 오류 설명이 포함된 메시지의 두 가지 종류의 데이터 경고 메시지를 전자 메일로 제공합니다. 결과가 포함된 메시지는 모든 받는 사람에게 유용하고 비즈니스 의사 결정을 내리는 데 중요한 보고서 데이터 변경 사항에 대해 알려줍니다. 오류가 발생하여 결과를 사용할 수 없는 경우 오류 메시지를 대신 보냅니다.  
   
  또한 데이터 경고 정의 소유자는 데이터 경고 관리자에서 데이터 경고 인스턴스에 대한 정보를 볼 수 있습니다. 자세한 내용은 [Data Alert Manager for SharePoint Users](../../2014/reporting-services/data-alert-manager-for-sharepoint-users.md)을 참조하세요.  
   

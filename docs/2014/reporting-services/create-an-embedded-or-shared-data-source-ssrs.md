@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data sources [Reporting Services], creating
 ms.assetid: b111a8d0-a60d-4c8b-b00a-51644b19c34b
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1ec59d1259cfde65ca31e47c636109bd165c9e91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: d9da0718a6eee5fda00d6418a5b6a624f8380c7d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109443"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033484"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>포함된 데이터 원본 또는 공유 데이터 원본 만들기(SSRS)
   보고서 데이터 원본은 이름 및 연결 정보를 지정합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 두 종류의 데이터 원본 지원 합니다: 포함 된 데이터 원본과 공유 합니다. 포함된 데이터 원본은 보고서 정의에서 정의되고 해당 보고서에서만 사용됩니다. 공유 데이터 원본은 개별 항목으로 정의되고 여러 보고서에서 사용될 수 있습니다. 자세한 내용은 [포함 및 공유 데이터 연결 또는 데이터 원본 &#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)합니다.  
@@ -87,10 +87,10 @@ ms.locfileid: "48109443"
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services 데이터 원본에 자격 증명 저장](report-data/store-credentials-in-a-reporting-services-data-source.md)   
- [포함 된 데이터 원본과 공유 데이터 연결 또는 데이터 원본 &#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [공유 데이터 원본에서 데이터 원본을 포함 하는 변환 &#40;보고서 작성기 및 SSRS&#41;](report-data/convert-data-sources-report-builder-and-ssrs.md)   
- [공유 데이터 원본을 보고서 또는 모델을 바인딩할 &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
+ [보고서 또는 모델을 공유 데이터 원본에 바인딩&#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [보고서의 데이터 원본 속성 구성&#40;보고서 관리자&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)   
- [Reporting Services에서 지 원하는 데이터 원본 &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

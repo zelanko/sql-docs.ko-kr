@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 380a257fd72ec776b92581895f85859a0a622003
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+manager: kfile
+ms.openlocfilehash: 50ff2626108c26ca5cee3845da437b27dbfcade0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617143"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030854"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>Add Report Server Content Types to a Library (Reporting Services in SharePoint Integrated Mode)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 공유 데이터 원본(.rsds) 파일, 보고서 모델(.smdl) 및 보고서 작성기 보고서 정의(.rdl) 파일을 관리하는 데 사용되는 미리 정의된 SharePoint 콘텐츠 형식을 제공합니다. **보고서 작성기 보고서**, **보고서 모델**및 **보고서 데이터 원본** 콘텐츠 형식을 라이브러리에 추가하면 해당 유형의 새 문서를 만들 수 있도록 **새로 만들기** 명령이 활성화됩니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "52617143"
   
 5.  브라우저를 새로 고친 다음 **보고서 서버 통합 기능** 에 대해 **활성화**를 클릭합니다.  
   
-    ![비활성화](media/rs-reportserver-integration-deactivate.gif "rs_reportserver_integration_deactive")  
+    ![Deactivate](media/rs-reportserver-integration-deactivate.gif "rs_reportserver_integration_deactive")  
   
 ##  <a name="bkmk_enable_content_management"></a> 단일 문서 라이브러리에 대해 콘텐츠 형식 관리를 설정하려면(SharePoint 2013)  
   

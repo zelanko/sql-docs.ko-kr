@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bb0768e479c9a308121d99202fea7ea497acd1e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4966841751b7eaf0382cc02d19fd2dac99462386
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182183"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034084"
 ---
 # <a name="publishing-data-sources-and-reports"></a>데이터 원본 및 보고서 게시
   보고서를 게시하기 전에 미리 보기를 수행하여 보고서가 실행되었을 때의 모습을 확인해야 합니다. 만족스러운 결과가 나올 때까지 디자인을 계속 다듬을 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "48182183"
  [보고서 서버에 보고서 게시](publishing-reports-to-a-report-server.md)  
  보고서를 보고서 서버에 게시하는 방법에 대해 설명합니다.  
   
- [SharePoint 모드의 보고서 서버에 게시 된 보고서 항목에 대 한 URL 예 &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
+ [SharePoint 모드의 보고서 서버에 게시된 보고서 항목에 대한 URL 예&#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
  보고서를 SharePoint 사이트에 게시하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목  

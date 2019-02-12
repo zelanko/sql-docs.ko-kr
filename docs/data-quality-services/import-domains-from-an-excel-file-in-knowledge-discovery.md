@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: eafa0e4260548ed90f039bcee71daea8a5b7ac9a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 08f18fb3c97bbbc5ee3ee4afcd2bb942ddbfef58
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617383"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016636"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>기술 자료 검색 시 Excel 파일에서 도메인 가져오기
 
@@ -36,7 +36,7 @@ ms.locfileid: "52617383"
   
 ##  <a name="Import"></a> Excel 파일에서 기술 자료로 도메인 가져오기  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 애플리케이션을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 다음 중 하나를 수행합니다.  
   

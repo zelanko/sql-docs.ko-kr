@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.browseforservers.f1
 - sql12.dqs.connecttoserver.f1
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0ea19b5b56902e3c8fb4fa664b4449c29af2ee41
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 3b40e0243b8ab330a4c865514d6bc047f7b0b2d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032951"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035704"
 ---
 # <a name="run-the-data-quality-client-application"></a>데이터 품질 클라이언트 애플리케이션 실행
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)]를 실행하고 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]에 로그온하면 DQS([!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)])를 사용할 수 있습니다.  

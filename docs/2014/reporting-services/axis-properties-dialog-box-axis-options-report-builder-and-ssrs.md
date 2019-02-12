@@ -12,14 +12,14 @@ f1_keywords:
 - "10138"
 ms.assetid: b276e210-7a12-48ae-971b-7dabae51df11
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c2911f9ac2da57e284bd6841df7b4b1ec5b2b105
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 690f092b98a76ddd9ccc18d15f4250e7e856efa0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144183"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030654"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>축 속성 대화 상자, 축 옵션(보고서 작성기 및 SSRS)
   선택 **축 옵션** 에 **가로** 또는 **VerticalAxis 속성** 대화 상자 차트의 지정 된 축 모양을 정의할 수 있습니다. 이전 버전의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서는 기본적으로 차트의 x축에 모든 레이블이 표시되었습니다. 그러나 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008에서는 보다 깔끔한 차트 이미지를 제공하고 레이블이 겹치는 것을 방지하기 위해 레이블이 표시되지 않습니다. 자세한 내용은 [차트의 축 레이블 서식 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)을 참조하세요.  
@@ -68,6 +68,6 @@ ms.locfileid: "48144183"
  [축 레이블의 서식을 날짜 또는 통화로 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [보조 축에 데이터 표시 &#40;보고서 작성기 및 SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [스파크라인 및 데이터 막대&#40;보고서 작성기 및 SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [여백 추가 또는 제거 차트에서 &#40;보고서 작성기 및 SSRS&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [차트에서 여백 추가 또는 제거&#40;보고서 작성기 및 SSRS&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
   

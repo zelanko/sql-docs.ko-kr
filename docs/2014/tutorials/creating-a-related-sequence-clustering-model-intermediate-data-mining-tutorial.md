@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1fb4f5bc-1756-45ca-9cd7-411a8c5992a9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4dfbb3d917be60ced676882895d70247e4a5f8d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 71db7ba5246e151bbca8a52972a2ba835b80ddb6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202663"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035114"
 ---
 # <a name="creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial"></a>관련된 시퀀스 클러스터링 모델 만들기(중급 데이터 마이닝 자습서)
   시퀀스 클러스터링 모델 탐색을 통해 Region 또는 Income과 같은 다른 특성이 모델에 중요한 영향을 준다는 것을 알게 되었습니다. 따라서 시퀀스를 보다 잘 이해하려면 관련된 시퀀스 클러스터링 모델을 만들고 고객 인구 통계와 관련된 특성을 제거합니다.  
@@ -69,6 +68,6 @@ ms.locfileid: "48202663"
  [시퀀스 클러스터링 모델에서 예측 만들기 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/create-predictions-on-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [처리 요구 사항 및 고려 사항 &#40;데이터 마이닝&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [처리 요구 사항 및 고려 사항 & #40; 데이터 마이닝 & #41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

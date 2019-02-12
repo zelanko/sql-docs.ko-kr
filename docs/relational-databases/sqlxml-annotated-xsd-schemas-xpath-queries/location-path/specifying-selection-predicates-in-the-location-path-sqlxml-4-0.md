@@ -15,16 +15,16 @@ helpviewer_keywords:
 - filtering [SQLXML]
 - location path for XPath query
 ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c19d5e43169142a8e3527fca48bb355e5f1e8f7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ace1b9a52853ed96ccc9cf74099760c30332dfd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713081"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015239"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>위치 경로에서 선택 조건자 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47713081"
 /Customer/Order[@SalesOrderID="1"]  
 ```  
   
-## <a name="selection-predicate-example-3"></a>선택 조건자: 예제 3  
+## <a name="selection-predicate-example-3"></a>선택 조건자: 예 3  
  모든 현재 컨텍스트 노드에서 다음 XPath 식 (위치 경로)를 선택 합니다  **\<고객 >** 하나 이상의 자식을  **\<ContactName >** 자식:  
   
 ```  

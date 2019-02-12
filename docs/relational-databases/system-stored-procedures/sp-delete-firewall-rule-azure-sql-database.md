@@ -2,10 +2,8 @@
 title: sp_delete_firewall_rule (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2016
-ms.prod: ''
-ms.prod_service: sql-database, sql-data-warehouse
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_firewall_rule_TSQL
@@ -21,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: a9f446d9c8645d344cf6c14b886323468e387a72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 406f94ab0ab2d0ebaddf9635448e364bf90ceb8c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781111"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031754"
 ---
 # <a name="spdeletefirewallrule-azure-sql-database"></a>sp_delete_firewall_rule(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -44,7 +42,7 @@ sp_delete_firewall_rule [@name =] 'name'
 ## <a name="arguments"></a>인수  
  저장 프로시저의 인수는 다음과 같습니다.  
   
- [@name =] '*이름을*'  
+ [@name =] '*name*'  
  제거된 서버 수준 방화벽 설정의 이름입니다. *이름을* 됩니다 **nvarchar (128)** 기본값은 없습니다.  
   
 ## <a name="remarks"></a>Remarks  

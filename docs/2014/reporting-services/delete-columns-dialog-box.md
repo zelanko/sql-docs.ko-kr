@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 44587147-1013-4937-a26c-4fd023eea578
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 46bc4a7b3767a18ba6e7f3b5869a56dd259e1285
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6207c9a80ca2a18e182d57127da1fc1133086144
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094963"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026494"
 ---
 # <a name="delete-columns-dialog-box"></a>열 삭제 대화 상자
   **열 삭제** 대화 상자를 사용하여 테이블, 행렬 또는 목록 데이터 영역에서 열을 삭제할 수 있습니다. 그룹과 연결된 열의 경우에는 그룹 정의도 삭제할 수 있습니다.  

@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: da1c9cb7-6c32-4b9b-96ec-ecea772aeb77
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c71dfded020167ddd9d01c458f370882dc493fbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211943"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035304"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>시장 바구니 모델 탐색(중급 데이터 마이닝 자습서)
   만든 했으므로 합니다 `Association` 모델을 탐색할 수 있습니다 사용 하 여는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 연결 뷰어를를 **마이닝 모델 뷰어** 데이터 마이닝 디자이너의 탭 합니다. 이 자습서는 뷰어를 사용하여 항목 간 관계를 탐색하는 단계를 안내합니다. 뷰어에서는 함께 나타나는 경향이 있는 제품을 한 눈에 확인하고, 나타나는 패턴을 파악할 수 있습니다.  
   
- 합니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] 연결 뷰어에: **규칙**를 **항목 집합**, 및 **종속성 네트워크**합니다. 각 탭에서 데이터를 약간씩 다르게 표시하기 때문에 모델을 탐색할 때는 일반적으로 내용을 제대로 파악하기 위해 서로 다른 창을 여러 번 앞뒤로 이동합니다.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 연결 뷰어에는 **규칙**하십시오 **항목 집합**, 및 **종속성 네트워크**합니다. 각 탭에서 데이터를 약간씩 다르게 표시하기 때문에 모델을 탐색할 때는 일반적으로 내용을 제대로 파악하기 위해 서로 다른 창을 여러 번 앞뒤로 이동합니다.  
   
 -   [종속성 네트워크 탭](#bkmk_DepNet)  
   
@@ -81,11 +80,11 @@ ms.locfileid: "48211943"
 ##  <a name="bkmk_Itemsets"></a> 항목 집합 탭  
  다음으로 Touring Tire 및 Touring Tire Tube 제품에 대한 모델로 생성된 규칙 및 항목 집합에 대해 좀 더 자세히 배웁니다. 합니다 **항목 집합** 탭 항목 집합에 관련 된 정보의 세 가지 중요 한 부분을 표시 하는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 연결 알고리즘에서 검색:  
   
--   **지원:** 항목 집합이 발생 하는 트랜잭션의 수입니다.  
+-   **지원:** 항목 집합이 발생하는 트랜잭션 수입니다.  
   
--   **크기:** 항목 집합의 항목 수입니다.  
+-   **크기:** 항목 집합에 있는 항목 수입니다.  
   
--   **항목:** 각 항목 집합에 포함 된 항목의 목록입니다.  
+-   **항목:** 각 항목 집합에 포함된 항목 목록입니다.  
   
  알고리즘 매개 변수가 설정된 방식에 따라 알고리즘에서 많은 항목 집합을 생성할 수 있습니다. 뷰어에 반환되는 각 항목 집합은 항목이 판매된 트랜잭션을 나타냅니다. 맨 위에 있는 컨트롤을 사용 합니다 **항목 집합** 탭 뷰어는 지정된 된 최소 지지도 및 항목 집합 크기를 포함 하는 항목 집합만 표시를 필터링 할 수 있습니다.  
   
@@ -138,13 +137,13 @@ ms.locfileid: "48211943"
 ##  <a name="bkmk_Rules"></a> 규칙 탭  
  합니다 **규칙** 탭 알고리즘에서 찾는 규칙과 관련 된 다음 정보를 표시 합니다.  
   
--   **확률:** 는 *가능성* 왼쪽 항목에 따른 오른쪽 항목의 확률으로 정의 되는 규칙입니다.  
+-   **확률:** 합니다 *가능성* 왼쪽 항목에 따른 오른쪽 항목의 확률으로 정의 되는 규칙입니다.  
   
--   **중요도:** 규칙의 유용성을 측정 합니다. 값이 클수록 더 나은 규칙을 의미합니다.  
+-   **중요도:** 규칙 유용성을 나타내는 척도로 값이 클수록 더 나은 규칙을 의미합니다.  
   
      중요도는 확률만 보면 오해가 발생할 수 있으므로 규칙의 유용성을 측정할 수 있도록 제공됩니다. 예를 들어 모든 트랜잭션에 물병이 포함되어 있는 경우(물병이 홍보의 일환으로 각 고객의 시장 바구니에 자동으로 추가된 경우) 모델은 물병의 확률이 1이라고 예측하는 규칙을 만듭니다. 확률만 봐서는 이 규칙이 매우 정확하지만 유용한 정보를 제공하지는 않습니다.  
   
--   **규칙:** 규칙의 정의 합니다. 시장 바구니 모델의 경우 규칙은 항목의 특정 조합을 설명합니다.  
+-   **규칙:** 규칙에 대한 정의입니다. 시장 바구니 모델의 경우 규칙은 항목의 특정 조합을 설명합니다.  
   
  각 규칙을 사용하여 다른 항목의 존재를 기반으로 트랜잭션에 있는 특정 항목의 존재 여부를 예측할 수 있습니다. 마찬가지로 합니다 **항목 집합** 탭, 가장 관심 있는 규칙만 표시 되도록 규칙을 필터링 할 수 있습니다. 규칙이 없는 마이닝 모델을 사용하고 있는 경우 알고리즘 매개 변수를 변경하여 규칙에 대한 확률 임계값을 낮게 설정할 수 있습니다.  
   
@@ -197,8 +196,8 @@ ms.locfileid: "48211943"
  [마이닝 모델의 중첩된 테이블 필터링 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [3 단원: 시장 바구니 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)   
- [4 단원: 시퀀스 클러스터링 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)   
+ [3단원: 시장 바구니 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)   
+ [4단원: 시퀀스 클러스터링 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)   
  [Microsoft 연결 알고리즘](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Microsoft 연결 알고리즘 기술 참조](../../2014/analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)  
   

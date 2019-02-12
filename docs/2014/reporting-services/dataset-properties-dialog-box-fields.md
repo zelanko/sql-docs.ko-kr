@@ -12,14 +12,14 @@ f1_keywords:
 - "10140"
 ms.assetid: e1367556-736e-4a6b-b9e7-10432a3e50b5
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b2300dc39ec07b25fe79586846929de3954b5631
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 5ef58bedad50c21b17c6ea5ace674480b58a5c2c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128408"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032905"
 ---
 # <a name="dataset-properties-dialog-box-fields"></a>데이터 세트 속성 대화 상자, 필드
   **데이터 집합 속성** 대화 상자에서 **필드** 를 선택하여 보고서 데이터 집합의 필드 컬렉션을 변경할 수 있습니다. 필드 목록은 자동으로 채워지지만 **필드** 를 사용하여 쿼리와 계산 필드를 추가, 편집 및 삭제할 수도 있습니다.  

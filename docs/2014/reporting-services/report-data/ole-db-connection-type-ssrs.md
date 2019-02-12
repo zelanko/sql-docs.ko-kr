@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d00cb13b-e1c2-4300-a195-3da1430a2df1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1cb3c7e8f9be785a93b29e453b5dfc727d747569
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 4afaa2c5c6abe201df23707104889a0f29f617f6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369575"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033044"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>OLE DB 연결 형식(SSRS)
   OLE DB 데이터 공급자의 데이터를 포함하려면 OLE DB 유형의 보고서 데이터 원본에 기초하는 데이터 세트가 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] OLE DB 데이터 처리 확장 프로그램을 기반으로 합니다.  

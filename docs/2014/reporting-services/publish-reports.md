@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ef5a514e-e818-4041-a8b0-15835f9a046b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 39d5c0e2a09926c87669f537710cc44df76b30c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a19db72ae854ae3ffaf4b56587642ddb37e22e0d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200753"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032404"
 ---
 # <a name="publish-reports"></a>보고서 게시
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]게시할 수 있습니다 하거나 모든 보고서 및 공유 데이터 원본을 보고서 서버에 보고서 서버 프로젝트에서 프로젝트를 배포 하 여, 단일 보고서를 게시할 수 있습니다. 보고서를 게시하기 전에 대상 보고서 서버의 URL을 지정해야 합니다. 자세한 내용은 [배포 속성 설정&#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md)을 참조하세요.  
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서는 프로젝트를 배포하여 보고서 서버 프로젝트의 모든 보고서 및 공유 데이터 원본을 보고서 서버에 게시하거나 단일 보고서를 게시할 수 있습니다. 보고서를 게시하기 전에 대상 보고서 서버의 URL을 지정해야 합니다. 자세한 내용은 [배포 속성 설정&#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md)을 참조하세요.  
   
- 사용할 수는 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 버전이 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 를 열려면 수정, 미리 보기, 저장 및 게시 하는 둘 다 [!INCLUDE[ssRSversion2005](../includes/ssrsversion2005-md.md)] 및 [!INCLUDE[ssRSversion10](../includes/ssrsversion10-md.md)] 보고서입니다. 자세한 내용은 [SQL Server Data Tools의 배포 및 버전 지원&#40;SSRS&#41;](tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)에 포함되지 않습니다.  
+ [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 버전의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 를 사용하여 [!INCLUDE[ssRSversion2005](../includes/ssrsversion2005-md.md)] 및 [!INCLUDE[ssRSversion10](../includes/ssrsversion10-md.md)] 보고서 모두에 대해 열기, 수정, 미리 보기, 저장 및 게시를 수행할 수 있습니다. 자세한 내용은 [SQL Server Data Tools의 배포 및 버전 지원&#40;SSRS&#41;](tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)에 포함되지 않습니다.  
   
 ### <a name="to-publish-all-reports-in-a-project"></a>프로젝트의 모든 보고서를 게시하려면  
   

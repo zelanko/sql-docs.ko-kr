@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 23eed41b-283a-49df-a3aa-062dde8d6354
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5b0ae98d40a6f5e1e2c830c2d5aca4cc1c99e230
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 122fb28e82050fc134b86c2dc79559dec8d02478
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181653"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032425"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>일반 속성 페이지, 리소스(보고서 관리자)
   리소스의 일반 속성 페이지를 사용하여 리소스의 이름을 바꾸거나 리소스를 삭제, 이동 또는 대체할 수 있습니다. 리소스를 추가하거나 속성을 수정한 사람에 대한 정보가 페이지의 맨 위에 표시됩니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "48181653"
  파일 공유에서 리소스 파일을 선택할 때 사용되는 리소스 가져오기 페이지를 열려면 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [보기 페이지, 리소스 &#40;보고서 관리자&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)   
  [보안 속성 페이지, 항목&#40;보고서 관리자&#41;](../../2014/reporting-services/security-properties-page-items-report-manager.md)  

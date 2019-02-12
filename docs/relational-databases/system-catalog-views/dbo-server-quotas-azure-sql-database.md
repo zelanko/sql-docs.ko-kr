@@ -2,10 +2,8 @@
 title: dbo.server_quotas (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
-ms.prod: ''
+ms.service: sql-database
 ms.reviewer: ''
-ms.prod_service: sql-database
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - dbo.server_quotas
@@ -21,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e11b4ef7224a622b22c3d7cc15d97175c73625bd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 657376be08e4cd404ce53d78114604cdd11fbda2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671333"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034444"
 ---
 # <a name="dboserverquotas-azure-sql-database"></a>dbo.server_quotas(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -38,7 +36,7 @@ ms.locfileid: "51671333"
   
  서버의 사용 가능한 데이터베이스 할당량 유형을 반환합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |quota_name|**nvarchar**|서버의 할당량 유형입니다. 형식 **Premium_database** 리소스 예약을 사용 하 여 데이터베이스에 해당 합니다.|  
 |quota_value|**int**|서버에서 허용되는 할당량 유형의 수입니다.|  

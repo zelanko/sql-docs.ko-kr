@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: aee1608d-374f-4ad3-bc23-fe07fdaa52b7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5f0e9cb84a2a2052ad22b19367d13e63c259ae2d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d68416588dce94f5b10acef176759228e4af00fe
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160731"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031824"
 ---
 # <a name="preparing-to-implement-a-delivery-extension"></a>배달 확장 프로그램 구현 준비
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 배달 확장 프로그램을 구현하기 전에 먼저 구현할 인터페이스를 정의해야 합니다. 우선 배달 확장 프로그램을 사용할 방식, 배달 확장 프로그램에 필요한 설정, 보고서 알림을 배달하기 위해 구현할 특정 기능 등을 결정해야 합니다.  

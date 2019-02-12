@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7d3e0ab451344b443452052960c16f9ccfdc9462
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 7e043e20af78653fccfa0ed3a2b227a1023e0657
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412950"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016085"
 ---
 # <a name="use-the-dqs-speller"></a>DQS 맞춤법 검사기 사용
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ) 맞춤법 검사기는 도메인에서 문자열 값의 구문, 맞춤법 및 문장 구조를 검사합니다. 맞춤법 검사기는 서버 쪽 엔진에 통합되지 않고 현재 흐름이나 상태에 영향을 주지 않는 독립 실행형의 클라이언트 쪽 기능입니다. 맞춤법 검사기는 잠재적 오류로 간주되는 문자열 값을 식별한 다음 사용자가 도메인 값을 수동으로 변경하는 위치와 동일한 위치에 빨간색 밑줄로 표시합니다. 이러한 위치에는 다음이 포함됩니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "52412950"
   
 6.  사전에 값을 추가하려면 **사전에 추가**를 클릭합니다. 값의 빨간색 밑줄이 사라집니다.  
   
-##  <a name="FollowUp"></a> 후속편: 맞춤법 검사기 사용 후  
+##  <a name="FollowUp"></a> 후속 작업: 맞춤법 검사기 사용 후  
  맞춤법 검사기를 실행한 후 맞춤법 검사기에서 제안한 수정 사항을 사용하려면 현재 진행 중인 도메인 작업을 완료합니다. 기술 자료 검색, 도메인 관리 또는 일치 정책 작업 중인 경우 맞춤법 검사기 분석 결과를 기술 자료에서 사용할 수 있도록 기술 자료를 게시합니다. 자세한 내용은 [기술 자료 검색 수행](../../2014/data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../../2014/data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../../2014/data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
 ##  <a name="How"></a> 맞춤법 검사기 작동 방식  

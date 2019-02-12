@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 245b236d-1d55-4744-b752-80bd133502aa
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 4d19fa1a5aca4ac67be6328646df47267218af42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f8970e77cf6ab77dc5dd4cc0544237d6a1269db2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191003"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034164"
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>영역형 차트(보고서 작성기 및 SSRS)
-  영역형 차트에서 계열은 선으로 연결된 일련의 점(선 아래 영역이 모두 채워짐)으로 표시됩니다. 영역형 차트에 데이터를 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)합니다.  
+  영역형 차트에서 계열은 선으로 연결된 일련의 점(선 아래 영역이 모두 채워짐)으로 표시됩니다. 영역형 차트에 데이터를 추가하는 방법에 대한 자세한 내용은 [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)를 참조하세요.  
   
  다음 그림에서는 누적 영역형 차트의 예를 보여 줍니다. 누적 영역형 차트에서는 모든 계열의 합계를 비롯하여 각 계열이 합계에서 차지하는 비율을 표시할 수 있으므로 이 차트에는 이 예에서와 같은 데이터를 표시하는 것이 적합합니다.  
   
@@ -55,6 +55,6 @@ ms.locfileid: "48191003"
  [차트 종류&#40;보고서 작성기 및 SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [꺾은선형 차트&#40;보고서 작성기 및 SSRS&#41;](line-charts-report-builder-and-ssrs.md)   
  [차트 종류 변경&#40;보고서 작성기 및 SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)   
- [빈 데이터 요소 및 Null 데이터 요소 차트에서 &#40;보고서 작성기 및 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
+ [차트의 빈 데이터 요소 및 Null 데이터 요소&#40;보고서 작성기 및 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

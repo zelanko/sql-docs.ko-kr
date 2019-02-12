@@ -1,22 +1,21 @@
 ---
-title: '3 단원: 처리 된 시계열 구조 및 모델 | Microsoft Docs'
+title: '3단원: 처리 된 시계열 구조 및 모델 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 16e27b57-eae1-47a7-a02c-47b6ed487d87
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 605476076746aafe6336c82a8cd6c5b2a32b30c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 493d27c9836eb765c655eba5bbb004e4d48cde40
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061663"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026274"
 ---
 # <a name="lesson-3-processing-the-time-series-structure-and-models"></a>3단원: 시계열 구조 및 모델 처리
   이 단원에서는 사용할지는 [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) 시계열 마이닝 구조 및 마이닝 사용자가 만든 모델을 처리 하는 문입니다.  
@@ -79,7 +78,7 @@ OPENQUERY (<source data definition>)
   
 #### <a name="to-process-the-mining-structure-and-related-mining-models-by-using-insert-into"></a>INSERT INTO를 사용하여 마이닝 구조 및 관련 마이닝 모델을 처리하려면  
   
-1.  **개체 탐색기**의 인스턴스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 가리킨 **새 쿼리**를 클릭 하 고 **DMX**합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
@@ -123,7 +122,7 @@ OPENQUERY (<source data definition>)
     FROM vTimeSeries ORDER BY [ReportingDate]')  
     ```  
   
-     원본 쿼리 참조는 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 는 IntermediateTutorial 예제 프로젝트에 정의 된 데이터 원본입니다. 원본 쿼리는 이 데이터 원본을 사용하여 vTimeSeries 뷰에 액세스합니다. 이 뷰에는 마이닝 모델의 학습에 사용할 원본 데이터가 포함되어 있습니다. 이 프로젝트 또는이 뷰를 사용 하 여 잘 모르는 경우[2 단원: 예측 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)합니다.  
+     원본 쿼리 참조는 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 는 IntermediateTutorial 예제 프로젝트에 정의 된 데이터 원본입니다. 원본 쿼리는 이 데이터 원본을 사용하여 vTimeSeries 뷰에 액세스합니다. 이 뷰에는 마이닝 모델의 학습에 사용할 원본 데이터가 포함되어 있습니다. 이 프로젝트 또는이 뷰를 사용 하 여 잘 모르는 경우[단원 2: 예측 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)합니다.  
   
      이제 전체 문이 다음과 같아야 합니다.  
   
@@ -147,7 +146,7 @@ OPENQUERY (<source data definition>)
  쿼리 실행이 끝나면 처리된 마이닝 모델을 사용하여 예측을 만들 수 있습니다. 다음 단원에서는 만들어진 마이닝 모델을 기반으로 여러 예측을 만듭니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [4단원: DMX를 사용하여 시계열 예측 만들기](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
+ [4단원: DMX를 사용 하 여 시계열 예측 만들기](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [처리 요구 사항 및 고려 사항 &#40;데이터 마이닝&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)   

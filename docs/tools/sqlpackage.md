@@ -2,19 +2,19 @@
 title: SqlPackage.exe | Microsoft Docs
 ms.prod: sql
 ms.technology: ssdt
-ms.date: 2018-06-27
+ms.date: 06/27/2018
 ms.reviewer: alayu; sstein
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 29d01a54dc8293c46c2ac71b0fd91905ff9174ec
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: d9a3dc9088c833b3448927c1455052c40f185ec7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55045073"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033609"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
