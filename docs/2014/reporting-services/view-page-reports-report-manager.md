@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4874ba29-429b-4dd4-a8cb-d4f087237dc2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8a2697af9ede2b6b72e7f08efd88822101c51d53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 057d2c4c75bbc0d7070992571a80907e811d354e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102803"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031634"
 ---
 # <a name="view-page-reports-report-manager"></a>보기 페이지, 보고서(보고서 관리자)
   보고서의 보기 페이지를 사용하여 보고서를 볼 수 있습니다. 보고서 관리자에서 보고서를 처음 열면 HTML 형식으로 열립니다. HTML 보고서의 맨 위에는 보고서 도구 모음이 포함되어 있어서 보고서 페이지를 탐색하고 보고서 내에서 검색하거나 보고서를 다른 형식으로 내보내는 작업이 가능합니다. 다음 다이어그램에서는 보고서 도구 모음을 보여 줍니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "48102803"
 >  보고서 실행 스냅숏 및 일부 내보내기 형식은 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 없습니다. 자세한 내용은 [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 39fa21f9bb7af15885abdf1d8c78d2651e2fbdab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: effd50dc38610b4a3f059df8609cb9279e268b13
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079163"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017144"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>렌더링 동작(보고서 작성기 및 SSRS)
   보고서를 렌더링하는 경우 선택한 렌더러에 따라 보고서 본문 및 해당 내용에 특정 규칙이 적용됩니다. 여러 보고서 항목이 한 페이지에 함께 포함되는 방식은 다음과 같은 요소의 조합에 따라 결정됩니다.  
@@ -129,8 +129,8 @@ ms.locfileid: "48079163"
 -   테이블 또는 행렬 셀의 항목에 대해 정의한 논리적 페이지 나누기는 유지되지 않습니다. 목록의 항목은 이 규칙에서 예외입니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [여러 보고서 렌더링 확장 프로그램의 대화형 기능 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [HTML로 렌더링&#40;보고서 작성기 및 SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)   
- [페이지 레이아웃 및 렌더링 &#40;보고서 작성기 및 SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [페이지 레이아웃 및 렌더링&#40;보고서 작성기 및 SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

@@ -12,14 +12,14 @@ f1_keywords:
 - "10518"
 ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6b41dd0e97f8a729d2c58b7fd6b8f0d443fe9c3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: b663f9cd95d055fe8736ee2232bbc273fe89798e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115766"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015021"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>지도 자오선 속성 대화 상자, 레이블
   사용 된 **MapMeridian 속성** 지도 뷰포트의 세로 격자 눈금에 대 한 레이블 옵션을 변경 하려면 대화 상자. 자오선은 뷰포트에 지정된 좌표계에 따라 다음 값을 나타냅니다.  

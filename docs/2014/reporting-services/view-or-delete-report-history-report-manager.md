@@ -24,14 +24,14 @@ helpviewer_keywords:
 - report snapshots [Reporting Services], creating
 ms.assetid: 44cb1e6f-a6b8-498a-8e8b-ca28e7ab1007
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: e73924828fcae11908e83f2383e63dd68670071e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: b0f5f3d9c3dc788a4b55932e8a28b43a6b4135bc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117893"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031394"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>보고서 기록 보기 또는 삭제(보고서 관리자)
   보고서 기록은 기반이 되는 보고서와 함께 관리됩니다. 보고서를 볼 수 있는 권한을 가진 모든 사용자는 해당 보고서의 기록을 볼 수 있습니다.  
@@ -55,10 +55,10 @@ ms.locfileid: "48117893"
 3.  를 삭제 하 고 클릭 하려는 기록 스냅숏 옆의 확인란을 선택 **삭제**합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 기록에 스냅숏 추가 &#40;보고서 관리자&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [보고서 기록에 스냅숏 추가&#40;보고서 관리자&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [보고서 기록 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/report-history-page-report-manager.md)   
  [보고서 처리 속성 설정](report-server/set-report-processing-properties.md)   
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [보고서 기록에서 스냅숏 만들기, 수정 및 삭제](report-server/create-modify-and-delete-snapshots-in-report-history.md)  
   
   

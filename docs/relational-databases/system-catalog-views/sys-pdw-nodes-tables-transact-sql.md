@@ -2,8 +2,8 @@
 title: sys.pdw_nodes_tables (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,21 +13,21 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b5413d6900b133cb7a5baf1e80fe4fa5be09b285
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 99693b4261df24a666144f93dc07b8aaa68bc3d4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665892"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031284"
 ---
-# <a name="syspdwnodestables-transact-sql"></a>sys.pdw_nodes_tables (Transact SQL)
+# <a name="syspdwnodestables-transact-sql"></a>sys.pdw_nodes_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   보안 주체에 일부 권한이 부여 또는 보안 주체를 소유 하는 각 테이블 개체에 대 한 행을 포함 합니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|\<열을 상속 >||이 뷰가 상속 하는 열 목록은 참조 하세요 [sys.objects](https://msdn.microsoft.com/c36fa71e-549a-4533-a6cd-1314d26f533f)합니다.||  
+|\<inherited columns>||이 뷰가 상속 하는 열 목록은 참조 하세요 [sys.objects](https://msdn.microsoft.com/c36fa71e-549a-4533-a6cd-1314d26f533f)합니다.||  
 |lob_data_space_id|**int**||항상 0입니다.|  
 |filestream_data_space_id|**int**|FILESTREAM 파일 그룹에 대 한 데이터 공간 ID 또는 [!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
 |max_column_id_used|**int**|이 테이블에서 사용 되는 최대 열 ID입니다.||  
@@ -41,7 +41,7 @@ ms.locfileid: "51665892"
 |text_in_row_limit|**int**|0 = text in row 옵션이 설정되지 않았습니다.|항상 0입니다.|  
 |large_value_types_out_of_row|**bit**|1 = 큰 값 유형은 행 밖에 저장됩니다.|항상 0입니다.|  
 |is_tracked_by_cdc|**bit**|1 = 테이블에 변경 데이터 캡처 설정|항상 0입니다. CDC 지원 되지 않습니다.|  
-|lock_escalation|**tinyint**|테이블에 대 한 LOCK_ESCALATION 옵션의 값: 2 = 자동|항상 2입니다.|  
+|lock_escalation|**tinyint**|테이블에 대한 LOCK_ESCALATION 옵션의 값입니다. 2 = AUTO|항상 2입니다.|  
 |lock_escalation_desc|**nvarchar(60)**|Lock_escalation 옵션의 텍스트 설명입니다.|항상 ꞌAUTOꞌ 합니다.|  
 |pdw_node_id|**int**|고유 식별자를 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 노드.|NOT NULL|  
   
