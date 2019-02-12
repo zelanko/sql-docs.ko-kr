@@ -228,7 +228,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [가용성 그룹 만들기&#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md)  
   
--   [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정 &#40;SQL Server &#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
 -   [Always On 가용성 그룹에 대한 데이터베이스 미러링 엔드포인트 만들기 &#40;SQL Server PowerShell &#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   

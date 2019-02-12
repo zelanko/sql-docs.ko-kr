@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.openlocfilehash: 531286af24740e37e125708a4b874b6aba27c3dc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5c82c32922712b377fd732b6745b1761e9f32a82
+ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403428"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55890004"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>SQL Server용 PHP 드라이버와 함께 Always Encrypted 사용
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "52403428"
 
 이 문서를 사용 하 여 PHP 응용 프로그램을 개발 하는 방법에 대해 설명 [상시 암호화 (데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 하며 [SQL Server 용 PHP 드라이버](../../connect/php/Microsoft-php-driver-for-sql-server.md)합니다.
 
-Always Encrypted를 사용하면 클라이언트 응용 프로그램이 중요한 데이터를 암호화하고 해당 데이터 또는 암호화 키를 SQL Server 또는 Azure SQL Database에 표시하지 않을 수 있습니다. ODBC Driver for SQL Server와 같은 Always Encrypted 사용 드라이버는 클라이언트 응용 프로그램의 중요한 데이터를 투명하게 암호화하고 암호 해독합니다. 이 드라이버는 중요 데이터베이스 열에 해당하는 쿼리 매개 변수를 자동으로 확인하고(Always Encrypted를 사용하여 보호) 데이터를 SQL Server 또는 Azure SQL Database로 전달하기 전에 이러한 매개 변수의 값을 암호화합니다. 마찬가지로, 이 드라이버는 쿼리 결과의 암호화된 데이터베이스 열에서 검색한 데이터의 암호를 투명하게 해독합니다. 자세한 내용은 [상시 암호화(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)를 참조하세요. SQL Server 용 PHP 드라이버는 ODBC Driver for SQL Server 중요 한 데이터 암호화를 활용 합니다.
+Always Encrypted를 사용하면 클라이언트 애플리케이션이 중요한 데이터를 암호화하고 해당 데이터 또는 암호화 키를 SQL Server 또는 Azure SQL Database에 표시하지 않을 수 있습니다. ODBC Driver for SQL Server와 같은 Always Encrypted 사용 드라이버는 클라이언트 애플리케이션의 중요한 데이터를 투명하게 암호화하고 암호 해독합니다. 이 드라이버는 중요 데이터베이스 열에 해당하는 쿼리 매개 변수를 자동으로 확인하고(Always Encrypted를 사용하여 보호) 데이터를 SQL Server 또는 Azure SQL Database로 전달하기 전에 이러한 매개 변수의 값을 암호화합니다. 마찬가지로, 이 드라이버는 쿼리 결과의 암호화된 데이터베이스 열에서 검색한 데이터의 암호를 투명하게 해독합니다. 자세한 내용은 [상시 암호화(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)를 참조하세요. SQL Server 용 PHP 드라이버는 ODBC Driver for SQL Server 중요 한 데이터 암호화를 활용 합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -50,7 +50,7 @@ $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
 
 암호화 또는 암호 해독을 성공 하는 데 적합 하지 않은 상시 암호화 사용 있는지 확인 해야 합니다.
- -   응용 프로그램에는 VIEW ANY COLUMN MASTER KEY DEFINITION 및 VIEW ANY COLUMN ENCRYPTION KEY DEFINITION 데이터베이스 권한이 있으며 데이터베이스에서 Always Encrypted 키에 대한 메타데이터에 액세스하는 데 필요합니다. 자세한 내용은 참조 하세요 [Database 권한이](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions)합니다.
+ -   애플리케이션에는 VIEW ANY COLUMN MASTER KEY DEFINITION 및 VIEW ANY COLUMN ENCRYPTION KEY DEFINITION 데이터베이스 권한이 있으며 데이터베이스에서 Always Encrypted 키에 대한 메타데이터에 액세스하는 데 필요합니다. 자세한 내용은 참조 하세요 [Database 권한이](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions)합니다.
  -   응용 프로그램 쿼리 암호화 된 열에 대 한 Cek를 보호 하는 CMK를 액세스할 수 있습니다. 이 요구 사항은 CMK를 저장 하는 키 저장소 공급자에 따라 달라 집니다. 자세한 내용은 [열 마스터 키 저장소를 사용 하 여 작업](#working-with-column-master-key-stores)합니다.
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>암호화된 열에서 데이터 검색 및 수정
@@ -61,10 +61,10 @@ Always Encrypted를 사용하지 않는 경우 암호화된 열을 대상으로 
 
 다음 표에서는 Always Encrypted 사용 여부에 따른 쿼리 동작을 요약합니다.
 
-|쿼리 특성|상시 암호화가 설정되고 응용 프로그램에서 키 및 키 메타데이터에 액세스할 수 있는 경우|상시 암호화가 설정되고 응용 프로그램에서 키 또는 키 메타데이터에 액세스할 수 없는 경우|상시 암호화를 사용하지 않는 경우|
+|쿼리 특성|상시 암호화가 설정되고 애플리케이션에서 키 및 키 메타데이터에 액세스할 수 있는 경우|상시 암호화가 설정되고 애플리케이션에서 키 또는 키 메타데이터에 액세스할 수 없는 경우|상시 암호화를 사용하지 않는 경우|
 |---|---|---|---|
 |암호화 된 열을 대상으로 하는 매개 변수입니다.|매개 변수 값이 투명하게 암호화됩니다.|Error|Error|
-|암호화된 열을 대상으로 하는 매개 변수 없이 암호화된 열에서 데이터를 검색합니다.|암호화된 열의 결과가 투명하게 암호 해독됩니다. 응용 프로그램 일반 텍스트 열 값을 받습니다. |Error|암호화된 열의 결과가 암호 해독되지 않습니다. 응용 프로그램에서 암호화된 값을 바이트 배열로 수신합니다.|
+|암호화된 열을 대상으로 하는 매개 변수 없이 암호화된 열에서 데이터를 검색합니다.|암호화된 열의 결과가 투명하게 암호 해독됩니다. 응용 프로그램 일반 텍스트 열 값을 받습니다. |Error|암호화된 열의 결과가 암호 해독되지 않습니다. 애플리케이션에서 암호화된 값을 바이트 배열로 수신합니다.|
  
 다음 예제에는 암호화된 열에서 데이터를 검색 및 수정하는 방법을 설명합니다. 예제에서는 다음 스키마를 사용 하 여 테이블을 가정합니다. SSN 및 BirthDate 열은 암호화되어 있습니다.
 ```
@@ -87,7 +87,7 @@ CREATE TABLE [dbo].[Patients](
 ### <a name="data-insertion-example"></a>데이터 삽입 예제
 
 다음 예제에서는 환자 테이블을 사용 하 여 행 삽입을 SQLSRV 및 PDO_SQLSRV 드라이버를 사용 하는 방법을 보여 줍니다. 다음 사항을 note 합니다.
- -   샘플 코드에는 암호화에 대한 내용이 없습니다. 드라이버는 자동으로 검색 하 고 암호화 된 열을 대상의 SSN 및 BirthDate 매개 변수의 값을 암호화 합니다. 이 메커니즘을 통해 응용 프로그램에 투명하게 암호화할 수 있습니다.
+ -   샘플 코드에는 암호화에 대한 내용이 없습니다. 드라이버는 자동으로 검색 하 고 암호화 된 열을 대상의 SSN 및 BirthDate 매개 변수의 값을 암호화 합니다. 이 메커니즘을 통해 애플리케이션에 투명하게 암호화할 수 있습니다.
  -   암호화된 열을 포함하여 데이터베이스 열에 삽입된 값은 바인딩된 매개 변수로 전달됩니다. 매개 변수를 사용하여 암호화되지 않은 열에 값을 전달하는 것은 선택 사항이지만(그러나 SQL 삽입을 방지할 수 있으므로 매우 권장됨) 암호화된 열을 대상으로 하는 값에 필요합니다. SSN 또는 BirthDate 열에 삽입 된 값 쿼리 문에 포함 된 리터럴로 전달 하는 경우 드라이버는 암호화 하거나, 쿼리에서 리터럴을 처리 하려고 시도 하지 않습니다 때문에 쿼리가 실패 합니다. 결과적으로, 암호화된 열과 호환 불가능한 것으로 간주하여 서버에서 거부합니다.
  -   바인딩 매개 변수를 사용 하 여 값을 삽입할 때 동일한 데이터 형식의 대상 열 또는 대상 열의 데이터 형식으로 변환 된 지원 되는 SQL 형식 데이터베이스에 전달 되어야 합니다. 상시 암호화는 몇 가지 형식 변환을 지원 하기 때문에이 요구 사항은 (세부 정보를 참조 하세요 [상시 암호화 (데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)). 두 가지 PHP 드라이버를 SQLSRV 및 PDO_SQLSRV, 각 사용자가 SQL 형식의 값을 확인할 수 있도록 하는 메커니즘에 있습니다. 따라서 사용자는 SQL 형식을 명시적으로 제공할 필요가 없습니다.
   -   SQLSRV 드라이버를 사용자에 두 가지 옵션이 있습니다.
@@ -157,7 +157,7 @@ $stmt->execute();
  -   바인딩된 매개 변수를 사용 하 여 쿼리를 실행할 때 SQLSRV 드라이버를 사용 하는 경우 명시적으로 사용자 SQL 형식을 지정 하지 않은 경우 PHP 드라이버를 자동으로 사용자에 대 한 SQL 형식을 결정 합니다.
  -   이 드라이버는 SSN 및 BirthDate 열에서 검색한 데이터의 암호를 투명하게 해독하므로 프로그램에서 인쇄한 모든 값은 일반 텍스트로 표시됩니다.
  
-참고: 쿼리 같음 비교 암호화 된 열에 대해서만 실행할 수는 결정적 암호화. 자세한 내용은 [결정적 또는 임의 암호화 선택](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)을 참조하세요.
+참고: 쿼리는 결정적 암호화 하는 경우에 암호화 된 열에서 같음 비교를 수행할 수 있습니다. 자세한 내용은 [결정적 또는 임의 암호화 선택](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)을 참조하세요.
 
 SQLSRV:
 ```
@@ -213,7 +213,7 @@ $row = $stmt->fetch();
 
 ### <a name="avoiding-common-problems-when-querying-encrypted-columns"></a>암호화된 열 쿼리 시 일반적인 문제 방지
 
-이 섹션에서는 PHP 응용 프로그램에서 암호화된 열을 쿼리할 때 발생하는 일반적인 오류 범주와 이를 방지하는 방법을 설명합니다.
+이 섹션에서는 PHP 애플리케이션에서 암호화된 열을 쿼리할 때 발생하는 일반적인 오류 범주와 이를 방지하는 방법을 설명합니다.
 
 #### <a name="unsupported-data-type-conversion-errors"></a>지원되지 않는 데이터 형식 변환 오류
 
@@ -269,7 +269,7 @@ Microsoft Driver for SQL Server 용 PHP 5.3.0 Windows 인증서 저장소 공급
 
 라는 Windows 인증서 저장소에 대 한 기본 제공 열 마스터 키 저장소 공급자를 포함 하는 Windows의 SQL Server 용 ODBC 드라이버 `MSSQL_CERTIFICATE_STORE`합니다. (이 공급자는 macOS 또는 Linux에서 사용할 수 있습니다.) 이 공급자를 사용 하 여 CMK 클라이언트 컴퓨터에 로컬로 저장 되어 이며 응용 프로그램에서 추가 구성 없이 드라이버와 함께 사용 하는 데 필요한 합니다. 그러나 응용 프로그램 저장소에 인증서 및 개인 키에 액세스할 수 있어야 합니다. 자세한 내용은 [열 마스터 키 만들기 및 저장(상시 암호화)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)를 참조하세요.
 
-### <a name="using-azure-key-vault"></a>Azure Key Vault를 사용 하 여
+### <a name="using-azure-key-vault"></a>Azure Key Vault를 사용한 EKM
 
 Azure Key Vault 암호화 키, 암호 및 Azure를 사용 하 여 다른 암호를 저장 하는 방법을 제공 하 고 Always Encrypted에 대 한 키를 저장 하기 위해 사용할 수 있습니다. ODBC Driver for SQL Server (버전 17 이상)는 Azure Key Vault에 대 한 기본 마스터 키 저장소 공급자를 포함합니다. Azure Key Vault 구성을 처리 하는 다음과 같은 연결 옵션: `KeyStoreAuthentication`, `KeyStorePrincipalId`, 및 `KeyStoreSecret`합니다. 
  -   `KeyStoreAuthentication` 두 개의 가능한 문자열 값 중 하나를 수행 합니다. `KeyVaultPassword` 및 `KeyVaultClientSecret`합니다. 이러한 값은 다른 두 키워드를 사용 하 여 어떤 종류의 인증 자격 증명 되는 제어 합니다.
@@ -288,23 +288,23 @@ SQLSRV:
 
 Azure Active Directory 계정을 사용합니다.
 ```
-$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultPassword", "KeyStorePrincipalId"=>$AADUsername, "KeyStoreAuthentication"=>$AADPassword);
+$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultPassword", "KeyStorePrincipalId"=>$AADUsername, "KeyStoreSecret"=>$AADPassword);
 $conn = sqlsrv_connect($server, $connectionInfo);
 ```
 Azure 응용 프로그램 클라이언트 ID 및 암호를 사용합니다.
 ```
-$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultClientSecret", "KeyStorePrincipalId"=>$applicationClientID, "KeyStoreAuthentication"=>$applicationClientSecret);
+$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultClientSecret", "KeyStorePrincipalId"=>$applicationClientID, "KeyStoreSecret"=>$applicationClientSecret);
 $conn = sqlsrv_connect($server, $connectionInfo);
 ```
 
-PDO_SQLSRV Azure Active Directory 계정을 사용합니다.:
+PDO_SQLSRV: Azure Active Directory 계정을 사용합니다.
 ```
-$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultPassword; KeyStorePrincipalId = $AADUsername; KeyStoreAuthentication = $AADPassword;";
+$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultPassword; KeyStorePrincipalId = $AADUsername; KeyStoreSecret = $AADPassword;";
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
 Azure 응용 프로그램 클라이언트 ID 및 암호를 사용합니다.
 ```
-$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultClientSecret; KeyStorePrincipalId = $applicationClientID; KeyStoreAuthentication = $applicationClientSecret;";
+$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultClientSecret; KeyStorePrincipalId = $applicationClientID; KeyStoreSecret = $applicationClientSecret;";
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
 
