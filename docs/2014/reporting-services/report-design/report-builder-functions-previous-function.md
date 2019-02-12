@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a0c4a4a8f66f00e8446c189bddfe31ed626d0170
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e3e856bf37328c5abaf4edd5bf296c1d557a2be7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118213"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010684"
 ---
 # <a name="previous-function-report-builder-and-ssrs"></a>Previous 함수(보고서 작성기 및 SSRS)
   지정된 범위 내에서 항목의 이전 인스턴스에 대한 지정된 집계 값 또는 값을 반환합니다.  
@@ -33,20 +33,20 @@ Previous(expression, scope)
   
 #### <a name="parameters"></a>매개 변수  
  *expression*  
- (`Variant` 나 `Binary`) 데이터를 식별 하는 데 식 및 예를 들어, 이전 값을 검색할 `Fields!Fieldname.Value` 또는 `Sum(Fields!Fieldname.Value)`합니다.  
+ (`Variant` 또는 `Binary`) 데이터를 식별하거나 이전 값을 검색하기 위한 식입니다(예: `Fields!Fieldname.Value` 또는 `Sum(Fields!Fieldname.Value)`).  
   
  *범위*  
  (`String`) 선택 사항입니다. 그룹 또는 데이터 영역 또는 null의 이름 (`Nothing` 에 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])를 지정 된 이전 값을 검색할 범위를 지정 하는 *식*합니다.  
   
 ## <a name="return-type"></a>반환 형식  
- 반환 된 `Variant` 또는 `Binary`합니다.  
+ `Variant` 또는 `Binary`를 반환합니다.  
   
 ## <a name="remarks"></a>Remarks  
  `Previous` 함수는 모든 정렬 및 필터링이 적용된 다음 지정된 범위에서 계산된 식의 이전 값을 반환합니다.  
   
  하는 경우 *식을* 집계가 포함 되지 않습니다는 `Previous` 함수의 기본값은 보고서 항목에 대 한 현재 범위입니다.  
   
- 세부 정보 그룹을 사용 하 여 `Previous` 자세히 행의 이전 인스턴스에 필드 참조의 값을 지정 합니다.  
+ 세부 정보 그룹에서 `Previous`를 사용하여 세부 행의 이전 인스턴스에 필드 참조 값을 지정합니다.  
   
 > [!NOTE]  
 >  `Previous` 함수 필드 참조 세부 정보 그룹에만 지원 합니다. 예를 들어 세부 정보 그룹의 입력란에서 `=Previous(Fields!Quantity.Value)` 는 이전 행의 `Quantity` 필드에 대한 데이터를 반환합니다. 첫 번째 행에서 이 식은 Null([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]의 경우 `Nothing`)을 반환합니다.  
@@ -82,9 +82,9 @@ Previous(expression, scope)
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서에 사용 되는 식 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [합계, 집계 및 기본 제공 컬렉션의 식 범위 &#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

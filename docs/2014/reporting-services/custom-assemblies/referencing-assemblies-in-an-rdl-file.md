@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 9a48e552-7d47-4243-9be1-894990c506d9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fa861745b4b786e730ff302cf7cfdc53d6035fcd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b15dcac49b4af0df2769080f51e0bf48289c2f60
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097773"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011425"
 ---
 # <a name="referencing-assemblies-in-an-rdl-file"></a>RDL 파일에서 어셈블리 참조
   보고서 정의 파일에서 사용자 지정 코드 어셈블리를 사용할 수 있도록 지원하기 위해 두 가지 RDL(Report Definition Language) 요소인 **CodeModules** 요소와 **Classes** 요소가 RDL 사양에 포함되었습니다.  

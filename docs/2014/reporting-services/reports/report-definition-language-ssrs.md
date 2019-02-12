@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f21bfe746f409b40b2535da231da4dd2725f4f7a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 32442fad5d3d6f265769927d291c3154ff362f38
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367019"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010428"
 ---
 # <a name="report-definition-language-ssrs"></a>SSRS(Report Definition Language)
   RDL(Report Definition Language)은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 정의의 XML 표현입니다. 보고서 정의에는 보고서에 대한 데이터 검색 및 레이아웃 정보가 포함됩니다. RDL은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]용으로 만들어진 XML 문법과 일치하는 XML 요소로 구성됩니다. 보고서 정의 파일 내에서 코드 어셈블리에 액세스하여 보고서 항목 값, 스타일, 서식 등을 제어하는 사용자 지정 함수를 추가할 수 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "53367019"
 ##  <a name="bkmk_RDL_XML_Schema_Definition"></a> RDL XML 스키마 정의  
  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RDL(Report Definition Language) 파일은 XSD(XML 스키마 정의) 파일을 사용하여 검증됩니다. 스키마는 .rdl 파일에 RDL 요소의 발생 규칙을 정의합니다. 요소는 데이터 형식과 카디널리티, 즉 허용되는 발생 횟수를 포함합니다. 요소에는 단순 요소와 복합 요소가 있습니다. 단순 요소에는 자식 요소 또는 특성이 없습니다. 복합 요소에는 자식이 있고 선택적으로 특성도 보유합니다.  
   
- 예를 들어 스키마가 복합 유형 `ReportParameters`인 RDL 요소 `ReportParametersType`를 포함합니다. 규칙에 따라 요소의 복합 유형 이름은 요소 이름 뒤에 `Type`이라는 단어를 붙여 만듭니다. `ReportParameters` 요소는 `Report` 요소(복합 유형)에 포함될 수 있고, `ReportParameter` 요소를 포함할 수 있습니다. `ReportParameterType`은 단순 유형으로 값은 `Boolean`, `DateTime`, `Integer`, `Float` 또는 `String` 중 하나와 같을 수 있습니다. XML 스키마 데이터 형식에 대 한 자세한 내용은 참조 하세요. [XML Schema Part 2: Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871)합니다.  
+ 예를 들어 스키마가 복합 유형 `ReportParameters`인 RDL 요소 `ReportParametersType`를 포함합니다. 규칙에 따라 요소의 복합 유형 이름은 요소 이름 뒤에 `Type`이라는 단어를 붙여 만듭니다. `ReportParameters` 요소는 `Report` 요소(복합 유형)에 포함될 수 있고, `ReportParameter` 요소를 포함할 수 있습니다. `ReportParameterType`은 단순 유형으로 값은 `Boolean`, `DateTime`, `Integer`, `Float` 또는 `String` 중 하나와 같을 수 있습니다. XML 스키마 데이터 형식에 대한 자세한 내용은 [XML 스키마 2부: Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871)을 참조하세요.  
   
  RDL XSD는 제품 CD-ROM의 Extras 폴더에 있는 ReportDefinition.xsd 파일에서 사용할 수 있습니다. 다음 URL을 통해 보고서 서버에서도 사용할 수 있습니다. http://servername/reportserver/reportdefinition.xsd  
   

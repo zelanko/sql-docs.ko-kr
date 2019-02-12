@@ -3,7 +3,6 @@ title: insert(XML DML) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - insert keyword [XML DML]
 - insert XML DML statement
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e4b7193e2b113cdbac330215abc3915c01f1385c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 4cedc8dee9040e198ffc5f229453a10d54065257
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699961"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012114"
 ---
 # <a name="insert-xml-dml"></a>insert(XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -129,7 +128,7 @@ SELECT @myDoc;
 GO  
 ```  
   
-### <a name="c-inserting-attributes-into-a-document"></a>3. 문서에 특성 삽입  
+### <a name="c-inserting-attributes-into-a-document"></a>C. 문서에 특성 삽입  
  다음 예에서는 문서에 특성을 삽입하는 방법을 보여 줍니다. 먼저 문서가 **xml** 형식 변수에 할당됩니다. 그런 다음, 일련의 **insert** XML DML 문을 사용하여 특성을 문서에 삽입합니다. 각 특성 삽입 이후 SELECT 문으로 결과를 표시합니다.  
   
 ```  
@@ -168,7 +167,7 @@ SELECT @myDoc;
 GO  
 ```  
   
-### <a name="d-inserting-a-comment-node"></a>4. 주석 노드 삽입  
+### <a name="d-inserting-a-comment-node"></a>D. 주석 노드 삽입  
  이 쿼리에서는 먼저 XML 문서가 **xml** 형식의 변수에 할당됩니다. 그런 다음 XML DML을 사용하여 첫 번째 <`step`> 요소 다음에 주석 노드를 삽입합니다.  
   
 ```  
@@ -190,7 +189,7 @@ SELECT @myDoc;
 GO  
 ```  
   
-### <a name="e-inserting-a-processing-instruction"></a>5. 처리 명령 삽입  
+### <a name="e-inserting-a-processing-instruction"></a>E. 처리 명령 삽입  
  다음 쿼리에서는 먼저 XML 문서가 **xml** 형식의 변수에 할당됩니다. 그런 다음 XML DML 키워드를 사용하여 문서 시작 부분에 처리 명령을 삽입합니다.  
   
 ```  
@@ -212,7 +211,7 @@ SELECT @myDoc ;
 GO  
 ```  
   
-### <a name="f-inserting-data-using-a-cdata-section"></a>6. CDATA 섹션을 사용하여 데이터 삽입  
+### <a name="f-inserting-data-using-a-cdata-section"></a>F. CDATA 섹션을 사용하여 데이터 삽입  
  < 또는 >와 같이 XML에서 유효하지 않은 문자가 포함된 텍스트를 삽입하는 경우 다음 쿼리에서와 같이 CDATA 섹션을 사용하여 데이터를 삽입할 수 있습니다. 이 쿼리에서는 CDATA 섹션을 지정하지만 엔터티로 변환된 유효하지 않은 문자가 포함된 텍스트 노드로 추가됩니다. 예를 들어 ‘<’는 &lt;로 저장됩니다.  
   
 ```  
@@ -243,7 +242,7 @@ GO
 </Root>       
 ```  
   
-### <a name="g-inserting-text-node"></a>7. 텍스트 노드 삽입  
+### <a name="g-inserting-text-node"></a>G. 텍스트 노드 삽입  
  이 쿼리에서는 먼저 XML 문서가 **xml** 형식의 변수에 할당됩니다. 그런 다음 XML DML을 사용하여 <`Root`> 요소의 첫 번째 자식으로 텍스트 노드를 삽입합니다. 텍스트 생성자는 텍스트를 지정하는 데 사용됩니다.  
   
 ```  
@@ -265,7 +264,7 @@ set @myDoc.modify('
 SELECT @myDoc;  
 ```  
   
-### <a name="h-inserting-a-new-element-into-an-untyped-xml-column"></a>8. 형식화되지 않은 xml 열에 새 요소 삽입  
+### <a name="h-inserting-a-new-element-into-an-untyped-xml-column"></a>H. 형식화되지 않은 xml 열에 새 요소 삽입  
  다음 예에서는 XML DML을 적용하여 **xml** 형식의 열에 저장된 XML 인스턴스를 업데이트합니다.  
   
 ```  
@@ -359,7 +358,7 @@ GO
  </WorkCenter>  
 ```  
   
-### <a name="j-inserting-nodes-in-a-typed-xml-column"></a>10. 형식화된 xml 열에 노드 삽입  
+### <a name="j-inserting-nodes-in-a-typed-xml-column"></a>J. 형식화된 xml 열에 노드 삽입  
  이 예에서는 형식화된 **xml** 열에 저장된 제조 명령 XML에 요소와 특성을 삽입합니다.  
   
  이 예에서는 먼저 AdventureWorks 데이터베이스에서 형식화된 **xml** 열을 가진 테이블(T)을 만듭니다. 그런 다음 ProductModel 테이블의 Instructions 열의 제조 지침 XML 인스턴스를 테이블 T로 복사합니다. 그러면 테이블 T의 XML에 삽입 내용이 적용됩니다.  

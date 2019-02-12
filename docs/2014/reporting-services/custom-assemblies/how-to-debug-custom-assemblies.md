@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3a3215b3-548c-4474-81ba-3a98dd3912bf
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d151641736523457e4c22ea94f50fb0652a73aa3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: da4171b624fd4caf4eabae5cec50c4b6c19578b7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159733"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011495"
 ---
 # <a name="how-to-debug-custom-assemblies"></a>방법: 사용자 지정 어셈블리 디버깅
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]는 사용자 지정 어셈블리 코드를 분석하고 오류를 찾는 데 유용한 디버깅 도구를 다수 제공합니다. 사용하기에 가장 좋은 도구는 수행하려는 작업에 따라 달라집니다. 이 예에서는 [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]를 사용합니다.  

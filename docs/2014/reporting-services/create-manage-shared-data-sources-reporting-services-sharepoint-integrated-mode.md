@@ -12,14 +12,14 @@ helpviewer_keywords:
 - shared data sources [Reporting Services]
 ms.assetid: 2d3428e4-a810-4e66-a287-ff18e57fad76
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 89ac992a05c043dc22dd2ff3ef85d62284b77955
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 3253c8c13b950f661ee7ddc7925aac19221d3173
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181413"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011184"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>공유 데이터 원본 만들기 및 관리(SharePoint 통합 모드의 Reporting Services)
   SharePoint 라이브러리에서 보고서를 실행하는 경우 연결 정보는 보고서에 링크된 외부 파일에 또는 보고서 내에 정의될 수 있습니다. 연결 정보가 보고서 내에 포함되어 있는 경우 사용자 지정 데이터 원본이라고 하며 연결 정보가 외부 파일에 정의되어 있는 경우 공유 데이터 원본이라고 합니다. 외부 파일은 보고서 서버 데이터 원본 파일(.rsds)이나 Office 데이터 연결 파일(.odc)이 될 수 있습니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "48181413"
   
     -   사용자가 보고서를 실행할 때마다 자격 증명을 입력하도록 하려면 **자격 증명 확인** 을 선택합니다. 이 보고서에 대한 구독 또는 데이터 처리를 예약하려는 경우 이 옵션을 선택하지 마십시오.  
   
-    -   단일 자격 증명 집합을 사용하여 데이터에 액세스하려면 **저장된 자격 증명** 을 선택합니다. 자격 증명은 저장되기 전에 암호화됩니다. 저장된 자격 증명의 인증 방법을 결정하는 옵션을 선택할 수 있습니다. 저장된 자격 증명이 Windows 사용자 계정에 속하면 Windows 자격 증명으로 사용을 선택합니다. 데이터베이스 서버에 대한 실행 컨텍스트를 설정하려면 **이 계정에 대한 실행 컨텍스트 설정** 을 선택합니다. 에 대 한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 경우이 옵션은 SETUSER 함수를 설정 합니다. 자세한 내용은 [SETUSER&#40;Transact-SQL&#41;](/sql/t-sql/statements/setuser-transact-sql)를 참조하세요.  
+    -   단일 자격 증명 집합을 사용하여 데이터에 액세스하려면 **저장된 자격 증명** 을 선택합니다. 자격 증명은 저장되기 전에 암호화됩니다. 저장된 자격 증명의 인증 방법을 결정하는 옵션을 선택할 수 있습니다. 저장된 자격 증명이 Windows 사용자 계정에 속하면 Windows 자격 증명으로 사용을 선택합니다. 데이터베이스 서버에 대한 실행 컨텍스트를 설정하려면 **이 계정에 대한 실행 컨텍스트 설정** 을 선택합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 경우 이 옵션은 SETUSER 함수를 설정합니다. 자세한 내용은 [SETUSER&#40;Transact-SQL&#41;](/sql/t-sql/statements/setuser-transact-sql)를 참조하세요.  
   
     -   연결 문자열에 자격 증명을 지정하거나 보고서 서버에서 구성된 최소 권한 계정을 사용하여 보고서를 실행하려면 **자격 증명 필요 없음** 을 선택합니다. 보고서 서버에 이 계정이 구성되어 있지 않으면 사용자에게 자격 증명을 요청하는 메시지가 표시되며 보고서에 대해 정의한 예약된 작업이 실행되지 않습니다.  
   

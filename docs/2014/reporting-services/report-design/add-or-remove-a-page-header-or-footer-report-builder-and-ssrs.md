@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 21cf0a14492c31c33d7923ea34c7cb00fa69bb29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b3b42828eab3a439cb21c6d32ff0881debc663e8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162363"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011894"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>페이지 머리글/바닥글 추가 또는 제거(보고서 작성기 및 SSRS)
   페이지 머리글 또는 바닥글에 정적 텍스트, 이미지, 선, 사각형 및 테두리를 추가할 수 있습니다. 머리글 또는 바닥글에 변수나 계산된 데이터를 포함하려면 입력란에 식 및 데이터 바인딩된 이미지를 배치합니다.  
@@ -64,6 +64,6 @@ ms.locfileid: "48162363"
 >  페이지 머리글 또는 바닥글을 제거하면 보고서에서 삭제됩니다. 이전에 페이지 머리글 또는 바닥글에 추가한 항목은 이후에 페이지 머리글 또는 바닥글을 다시 추가해도 더 이상 표시되지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [페이지 머리글 및 바닥글 &#40;보고서 작성기 및 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
+ [페이지 머리글 및 바닥글&#40;보고서 작성기 및 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
   
   

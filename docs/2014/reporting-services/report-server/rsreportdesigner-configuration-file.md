@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ad5a5660e642c13a604b9fdb1a7e5aac516686ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8c979e7ee3d3dcb2f4dba96e73b1d38c526bcb7a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211711"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012894"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 구성 파일
-  RSReportDesigner.config 파일에는 보고서 디자이너에 사용할 수 있는 렌더링 및 데이터 처리 확장 프로그램에 대한 설정이 저장됩니다. 데이터 처리 확장 프로그램 정보에 저장 되는 `Data` 요소입니다. 렌더링 확장 프로그램 정보는 `Render` 요소에 저장됩니다. `Designer` 요소는 보고서 디자이너에 사용된 쿼리 작성기를 열거합니다.  
+  RSReportDesigner.config 파일에는 보고서 디자이너에 사용할 수 있는 렌더링 및 데이터 처리 확장 프로그램에 대한 설정이 저장됩니다. 데이터 처리 확장 프로그램 정보는 `Data` 요소에 저장됩니다. 렌더링 확장 프로그램 정보는 `Render` 요소에 저장됩니다. `Designer` 요소는 보고서 디자이너에 사용된 쿼리 작성기를 열거합니다.  
   
  보고서 디자이너에서는 포함된 보고서 서버 기능을 사용하여 보고서를 미리 봅니다. 미리 보기 작업에 대한 로컬 서버 쪽 처리를 지원하도록 서버 관련 설정을 지정할 수 있습니다. 보고서 서버 구성 설정에 대 한 자세한 내용은 참조 하세요. [RSReportServer Configuration File](rsreportserver-config-configuration-file.md)합니다.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "48211711"
 ## <a name="editing-guidelines"></a>편집 지침  
  사용자 지정 확장 프로그램을 배포 또는 제거하거나, 미리 보기 중에 캐싱을 해제하거나, 서비스 팩을 업그레이드한 후 새 데이터 처리 확장 프로그램을 등록하는 경우 외에는 이 파일의 설정을 수정하지 마십시오.  
   
- 렌더링 확장 프로그램 설정을 사용자 지정하는 경우 구성 파일 편집에 대한 특정 지침이 제공됩니다. 자세한 내용은 [사용자 지정 렌더링 Extension Parameters in RSReportServer.Config](../customize-rendering-extension-parameters-in-rsreportserver-config.md)합니다.  
+ 렌더링 확장 프로그램 설정을 사용자 지정하는 경우 구성 파일 편집에 대한 특정 지침이 제공됩니다. 자세한 내용은 [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정](../customize-rendering-extension-parameters-in-rsreportserver-config.md)을 참조하세요.  
   
  구성 파일을 편집하는 방법에 대한 일반적인 지침은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요.  
   
@@ -59,12 +59,12 @@ ms.locfileid: "48211711"
 |-------------|-----------------|  
 |`SecureConnectionLevel`|웹 서비스 연결 보안 수준을 지정합니다. 유효한 값은 0에서 3 사이이며 0은 보안 수준이 가장 낮습니다. 자세한 내용은 [Using Secure Web Service Methods](../report-server-web-service/net-framework/using-secure-web-service-methods.md)을 참조하세요.|  
 |`InstanceName`|미리 보기 서버의 식별자입니다. 이 값은 수정하지 마세요.|  
-|`SessionCookies`|보고서 서버가 브라우저 쿠키를 사용하여 세션 정보를 유지 관리할지 여부를 지정합니다. 유효한 값은 `true` 고 `false`입니다. 기본값은 `true`입니다. 이 값을 false로 설정하면 세션 데이터가 **reportservertempdb** 데이터베이스에 저장됩니다.|  
+|`SessionCookies`|보고서 서버가 브라우저 쿠키를 사용하여 세션 정보를 유지 관리할지 여부를 지정합니다. 유효한 값은 `true` 및 `false`이고 기본값은 `true`입니다. 이 값을 false로 설정하면 세션 데이터가 **reportservertempdb** 데이터베이스에 저장됩니다.|  
 |`SessionTimeoutMinutes`|세션 쿠키의 유효 기간을 지정합니다. 기본값은 3분입니다.|  
 |`PolicyLevel`|보안 정책 구성 파일을 지정합니다. 유효한 값은 Rspreviewpolicy.config입니다. 자세한 내용은 [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md)을 참조하세요.|  
-|`CacheDataForPreview`|로 설정 하면 `True`, 보고서 디자이너는 로컬 컴퓨터의 캐시 파일의 데이터를 저장 합니다. 유효한 값은 `True` (기본값) 및 `False`합니다. 자세한 내용은 [Previewing Reports](../reports/previewing-reports.md)를 참조하세요.|  
-|`Render`|미리 보기를 위해 보고서 디자이너에서 사용할 수 있는 렌더링 확장 프로그램을 열거합니다. 미리 보기에 사용된 렌더링 확장 프로그램 집합은 보고서 서버와 함께 설치된 렌더링 확장 프로그램과 동일해야 합니다.<br /><br /> `Name` 렌더링 확장 프로그램을 지정합니다. 코드를 통해 렌더링 확장 프로그램을 호출하는 경우 이 값을 사용하여 특정 확장 프로그램을 호출합니다.<br /><br /> `Type` 확장 클래스의 정규화 된 클래스 이름과 라이브러리 이름을 쉼표로 구분 된을 지정 합니다.<br /><br /> `Visible`은 사용자 인터페이스에 이름을 표시할지 여부를 지정합니다. 이 값은 `True` (기본값) 또는 `False`합니다. `True`이면 사용자 인터페이스에 이름이 나타납니다.|  
-|`Data`|보고서에 데이터를 제공하는 데이터 원본에 연결하기 위해 보고서 디자이너에서 사용할 수 있는 데이터 처리 확장 프로그램을 열거합니다. 보고서 디자이너에 사용된 데이터 처리 확장 프로그램 집합은 보고서 서버와 함께 설치된 데이터 처리 확장 프로그램과 동일해야 합니다. 추가 하거나 사용자 지정 확장 프로그램을 제거 하는 경우 참조 [데이터 처리 확장 프로그램 배포](../extensions/data-processing/deploying-a-data-processing-extension.md)합니다.<br /><br /> `Name`은 데이터 처리 확장 프로그램을 지정합니다.<br /><br /> `Type` 확장 클래스의 정규화 된 클래스 이름과 라이브러리 이름을 쉼표로 구분 된을 지정 합니다.|  
+|`CacheDataForPreview`|`True`로 설정되어 있으면 보고서 디자이너는 로컬 컴퓨터에 캐시 파일의 데이터를 저장합니다. 유효한 값은 `True`(기본값)와 `False`입니다. 자세한 내용은 [Previewing Reports](../reports/previewing-reports.md)를 참조하세요.|  
+|`Render`|미리 보기를 위해 보고서 디자이너에서 사용할 수 있는 렌더링 확장 프로그램을 열거합니다. 미리 보기에 사용된 렌더링 확장 프로그램 집합은 보고서 서버와 함께 설치된 렌더링 확장 프로그램과 동일해야 합니다.<br /><br /> `Name`은 렌더링 확장 프로그램을 지정합니다. 코드를 통해 렌더링 확장 프로그램을 호출하는 경우 이 값을 사용하여 특정 확장 프로그램을 호출합니다.<br /><br /> `Type`은 확장 프로그램 클래스의 정규화된 클래스 이름과 라이브러리 이름을 쉼표로 구분하여 지정합니다.<br /><br /> `Visible`은 사용자 인터페이스에 이름을 표시할지 여부를 지정합니다. 이 값은 `True`(기본값)이거나 `False`입니다. `True`이면 사용자 인터페이스에 이름이 나타납니다.|  
+|`Data`|보고서에 데이터를 제공하는 데이터 원본에 연결하기 위해 보고서 디자이너에서 사용할 수 있는 데이터 처리 확장 프로그램을 열거합니다. 보고서 디자이너에 사용된 데이터 처리 확장 프로그램 집합은 보고서 서버와 함께 설치된 데이터 처리 확장 프로그램과 동일해야 합니다. 사용자 지정 확장 프로그램을 추가 또는 제거하려면 [Deploying a Data Processing Extension](../extensions/data-processing/deploying-a-data-processing-extension.md)을 참조하십시오.<br /><br /> `Name`은 데이터 처리 확장 프로그램을 지정합니다.<br /><br /> `Type`은 확장 프로그램 클래스의 정규화된 클래스 이름과 라이브러리 이름을 쉼표로 구분하여 지정합니다.|  
 |`Designer`|보고서 디자이너에서 사용할 수 있는 쿼리 작성기를 열거합니다. 쿼리 작성기는 보고서에 사용된 데이터를 검색하는 쿼리를 구성할 사용자 인터페이스를 제공합니다. 쿼리 작성기는 데이터 처리 확장 프로그램마다 다를 수 있습니다. 기본적으로 Reporting Services는 제품에 포함된 모든 데이터 처리 확장 프로그램용으로 하나의 시각적 데이터 도구 사용자 인터페이스를 제공합니다. 그러나 타사의 데이터 처리 확장 프로그램을 작성하거나 사용 중이면 다른 쿼리 작성기 인터페이스를 사용할 수 있습니다.|  
 |`PreviewProcessingServiceStartupTimeoutSeconds`|오류 메시지를 표시하기 전에 미리 보기 처리 서비스가 시작될 때까지 기다릴 시간을 지정합니다. 기본값은 15초입니다.|  
   

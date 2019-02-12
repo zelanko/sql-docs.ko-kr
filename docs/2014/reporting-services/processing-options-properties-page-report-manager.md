@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 28f07c70-7132-4d15-9505-4fdf31dc9cc0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cc57e9b4e38377769006738ed44427b4a52c06ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7265c833b5fbfe4c2018de895d7a488501304486
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076493"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013104"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>처리 옵션 속성 페이지(보고서 관리자)
   처리 옵션 속성 페이지를 사용하여 현재 선택한 보고서의 보고서 실행 속성을 설정할 수 있습니다. 이 옵션은 보고서의 데이터 처리가 수행되는 시간을 결정합니다. 이 옵션을 통해 사용량이 적은 시간에 보고서 데이터를 검색하도록 설정할 수 있습니다. 자주 액세스할 보고서가 있으면 이 보고서의 복사본을 임시로 캐시하여 여러 사용자가 같은 보고서를 짧은 시간 간격으로 동시에 액세스할 때 대기 시간을 없앨 수 있습니다.  
   
 > [!NOTE]  
->  보고서 기록, 실행 스냅숏 및 캐싱 기능은 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전에서 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+>  보고서 기록, 실행 스냅숏 및 캐싱 기능은 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
 ## <a name="navigation"></a>탐색  
  사용자 인터페이스(UI)에서 이 위치를 탐색하려면 다음 절차를 사용하십시오.  

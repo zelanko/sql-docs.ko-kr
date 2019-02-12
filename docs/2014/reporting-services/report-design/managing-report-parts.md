@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ea7896e5f7c394539793ca65496824691275963d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: f7564a37766972782a5c118ced64298b7f4ce076
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393756"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010844"
 ---
 # <a name="managing-report-parts"></a>보고서 파트 관리
   부터는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], 보고서 파트는 보고서 서버에 게시 하 고 적절 한 권한이 있는 경우 다른 사용자가 다른 보고서에서 다시 사용할 수 있습니다.  

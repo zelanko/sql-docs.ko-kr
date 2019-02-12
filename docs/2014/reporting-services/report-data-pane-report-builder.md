@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Report Data pane
 ms.assetid: 1492aa39-aeb1-4509-ab97-b9edd0901b7e
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 81ab7f53f546c3b048551a0f3acd3866c29a8eb9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: b73080811e001b67ea52e3cbc9572eb014162e68
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179383"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010354"
 ---
 # <a name="report-data-pane-report-builder"></a>보고서 데이터 창(보고서 작성기)
   **보고서 데이터** 창을 사용하여 보고서의 현재 정의된 매개 변수, 데이터 원본, 데이터 집합, 필드 컬렉션 및 이미지를 볼 수 있습니다. 보고서 데이터는 보고서의 데이터를 나타내는 항목의 계층 뷰를 표시합니다. 최상위 노드는 기본 제공 필드, 매개 변수, 이미지 및 데이터 원본 참조를 나타냅니다. 각 노드를 확장하여 데이터 항목을 볼 수 있습니다. 예를 들어 데이터 원본 노드를 확장하면 해당 데이터 원본에 대해 정의된 데이터 세트가 표시됩니다. 데이터 세트를 확장하면 필드 컬렉션이 표시됩니다. 항목을 보고서 디자인 화면이나 그룹화 창으로 끌어 데이터를 보고서 페이지의 선택된 보고서 항목에 연결합니다. 자세한 내용은 [보고서 디자인 뷰&#40;보고서 작성기&#41;](report-builder/report-design-view-report-builder.md)를 참조하세요.  

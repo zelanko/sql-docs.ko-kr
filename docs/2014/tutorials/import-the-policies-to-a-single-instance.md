@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: bc5bcd87-663f-41d9-bb7b-b3e083cd63df
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 276d37b97cfe0a2a4194aa8aed713834a20c8674
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 410f3a317a9d3ad2f8cab52d9f57fd4a63c1c36c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522848"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014151"
 ---
 # <a name="import-the-policies-to-a-single-instance"></a>단일 인스턴스로 정책 가져오기
   이 태스크에서는 단일 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에서 예약할 최선의 구현 방법 정책을 정책 기반 관리로 가져옵니다.  

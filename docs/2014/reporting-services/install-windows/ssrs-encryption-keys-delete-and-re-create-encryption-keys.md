@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ff8e8792079fcca8ed4affa373964ec6cb39fe1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f036d86b7bcdef97de03a80c0b9b615f08eda82
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111026"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012465"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>암호화 키 삭제 및 다시 만들기(SSRS 구성 관리자)
   암호화 키를 삭제했다가 다시 만드는 작업은 정기적인 암호화 키 유지 관리 작업에 해당되지 않습니다. 보고서 서버가 위협을 받을 때나 보고서 서버 데이터베이스에 더 이상 액세스할 수 없을 때 마지막 수단으로 이러한 태스크를 수행합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "48111026"
   
 #### <a name="how-to-re-create-encryption-keys-reporting-services-configuration-tool"></a>암호화 키를 다시 만드는 방법(Reporting Services 구성 도구)  
   
-1.  사용 안 함 수정 하 여 보고서 서버 웹 서비스 및 HTTP 액세스는 `IsWebServiceEnabled` rsreportserver.config 파일에는 속성입니다. 이 단계에서는 서버를 완전히 종료하지 않고 보고서 서버로 보내는 인증 요청을 임시로 중지합니다. 키를 다시 만들 수 있는 최소한의 서비스가 필요합니다.  
+1.  rsreportserver.config 파일에서 `IsWebServiceEnabled` 속성을 수정하여 보고서 서버 웹 서비스 및 HTTP 액세스를 사용하지 않도록 설정합니다. 이 단계에서는 서버를 완전히 종료하지 않고 보고서 서버로 보내는 인증 요청을 임시로 중지합니다. 키를 다시 만들 수 있는 최소한의 서비스가 필요합니다.  
   
      보고서 서버 스케일 아웃 배포를 위해 암호화 키를 다시 만들 경우 배포의 모든 인스턴스에서 이 속성을 사용하지 않도록 설정합니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48111026"
   
     2.  rsreportserver.config 파일을 엽니다.  
   
-    3.  에 대 한 합니다 `IsWebServiceEnabled` 속성을 지정 `False`, 다음 변경 내용을 저장 하 고 있습니다.  
+    3.  `IsWebServiceEnabled` 속성에 `False`를 지정한 다음 변경 내용을 저장합니다.  
   
 2.  Reporting Services 구성 도구를 시작한 후 구성하려는 보고서 서버 인스턴스에 연결합니다.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48111026"
   
 4.  보고서 서버 Windows 서비스를 다시 시작합니다. 스케일 아웃 배포를 위해 암호화 키를 다시 만들 경우 모든 인스턴스에서 해당 서비스를 다시 시작합니다.  
   
-5.  다시 수정 하 여 웹 서비스 및 HTTP 액세스를 사용 하도록 설정 된 `IsWebServiceEnabled` rsreportserver.config 파일의 속성입니다. 확장 배포 구성에서 작업할 경우에는 모든 인스턴스에 대해 이 작업을 수행합니다.  
+5.  rsreportserver.config 파일에서 `IsWebServiceEnabled` 속성을 수정하여 보고서 서비스 및 HTTP 액세스를 다시 사용하도록 설정합니다. 확장 배포 구성에서 작업할 경우에는 모든 인스턴스에 대해 이 작업을 수행합니다.  
   
 #### <a name="how-to-re-create-encryption-keys-rskeymgmt"></a>암호화 키를 다시 만드는 방법(rskeymgmt)  
   
@@ -110,14 +110,14 @@ ms.locfileid: "48111026"
   
 1.  각 공유 데이터 원본에 대해 연결 문자열을 다시 입력해야 합니다.  
   
-2.  저장된 자격 증명을 사용하는 각 보고서 및 공유 데이터 원본의 경우 사용자 이름과 암호를 다시 입력한 후 저장해야 합니다. 자세한 내용은 [보고서 데이터 원본에 대 한 연결 정보와 자격 증명 지정](../../integration-services/connection-manager/data-sources.md) 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onl 온라인 설명서.  
+2.  저장된 자격 증명을 사용하는 각 보고서 및 공유 데이터 원본의 경우 사용자 이름과 암호를 다시 입력한 후 저장해야 합니다. 자세한 내용은 [온라인 설명서에서](../../integration-services/connection-manager/data-sources.md) 보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
   
 3.  각 데이터 기반 구독에 대해 각 구독을 열고 구독 데이터베이스에 대한 자격 증명을 다시 입력합니다.  
   
 4.  암호화된 데이터(파일 공유 배달 확장 프로그램과 암호화를 사용하는 타사의 배달 확장 프로그램 포함)를 사용하는 구독의 경우 각 구독을 열고 자격 증명을 다시 입력합니다. 보고서 서버 전자 메일 배달을 사용하는 구독은 암호화된 데이터를 사용하지 않으므로 키가 달라져도 영향을 받지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [암호화 키 구성 및 관리 &#40;SSRS 구성 관리자&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
- [암호화 된 보고서 서버 데이터 저장 &#40;SSRS 구성 관리자&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
+ [암호화된 보고서 서버 데이터 저장&#40;SSRS 구성 관리자&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

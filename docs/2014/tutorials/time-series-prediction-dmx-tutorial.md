@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 38ea7c03-4754-4e71-896a-f68cc2c98ce2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4a07f977a01c6107b345892f4ad623b3ca2cb941
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 1623f824c062c270268323fd45ebf0e9533c8788
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367505"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010804"
 ---
 # <a name="time-series-prediction-dmx-tutorial"></a>시계열 예측 DMX 자습서
   이 자습서에서는 시계열 마이닝 구조 및 3개의 사용자 지정 시계열 마이닝 모델을 만든 다음 이러한 모델을 사용하여 예측을 수행하는 방법에 대해 설명합니다.  
@@ -41,19 +40,19 @@ ms.locfileid: "53367505"
   
  이 자습서는 다음 단원으로 이루어져 있습니다.  
   
- [1 단원: 시계열 마이닝 모델 및 마이닝 구조 만들기](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)  
+ [1단원: 시계열 마이닝 모델 및 마이닝 구조 만들기](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)  
  이 단원에서는 `CREATE MINING MODEL` 문을 사용하여 새 예측 모델 및 이와 관련된 마이닝 모델을 추가하는 방법에 대해 설명합니다.  
   
  [2단원: 시계열 마이닝 구조에 마이닝 모델 추가](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
  이 단원에서는 ALTER MINING STRUCTURE 문을 사용하여 시계열 구조에 새 마이닝 모델을 추가하는 방법에 대해 설명합니다. 시계열 분석에 사용된 알고리즘을 사용자 지정하는 방법에 대해서도 설명합니다.  
   
- [3 단원: 처리 된 시계열 구조 및 모델](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
+ [3단원: 처리 된 시계열 구조 및 모델](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
  이 단원에서는 `INSERT INTO` 문을 사용하고 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 데이터베이스의 데이터로 구조를 채워서 모델을 학습하는 방법에 대해 설명합니다.  
   
- [4 단원: DMX를 사용 하 여 시계열 예측 만들기](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
+ [4단원: DMX를 사용 하 여 시계열 예측 만들기](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
  이 단원에서는 시계열 예측을 만드는 방법에 대해 설명합니다.  
   
- [5 단원: 모델의 시계열을 확장](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
+ [5단원: 모델의 시계열을 확장](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
  이 단원에서는 `EXTEND_MODEL_CASES` 매개 변수를 사용하여 예측할 때 새 데이터로 모델을 업데이트하는 방법에 대해 설명합니다.  
   
 ## <a name="requirements"></a>요구 사항  

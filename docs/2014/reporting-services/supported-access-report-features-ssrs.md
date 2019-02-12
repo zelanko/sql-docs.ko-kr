@@ -17,14 +17,14 @@ helpviewer_keywords:
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0d3c218b5e72e231179443c146a6ea3c23747d4e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e33547643adf7345bbbc7c020dcbd11959bb6119
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180613"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012033"
 ---
 # <a name="supported-access-report-features-ssrs"></a>지원되는 Access 보고서 기능(SSRS)
   보고서 디자이너로 보고서를 가져오는 과정에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] Access 보고서가 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] RDL(Report Definition Language) 파일로 변환됩니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서는 Access의 여러 기능을 지원하지만 Access와 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 차이로 인해 일부 항목이 약간 수정되거나 지원되지 않을 수 있습니다. 이 항목에서는 Access 보고서 기능이 RDL로 변환되는 방법에 대해 설명합니다.  
@@ -85,7 +85,7 @@ ms.locfileid: "48180613"
 |IsHyperlink|IsVisible|KeepTogether(그룹)|왼쪽|  
 |LeftMargin|LineSlant|LineSpacing|LinkChildFields|  
 |LinkMasterFields|NewRowOrCol|PageFooter|PageHeader|  
-|페이지|Picture|PictureTiling(보고서)|ReadingOrder|  
+|인쇄할 페이지|Picture|PictureTiling(보고서)|ReadingOrder|  
 |RepeatSection|RightMargin|RunningSum|SizeMode|  
 |TextAlign|TOP|TopMargin|너비|  
   
@@ -95,7 +95,7 @@ ms.locfileid: "48180613"
 |-|-|-|-|  
 |CanGrow(구역)|CanShrink(구역)|DecimalPlaces|FastLaserPrinting|  
 |Assert|FilterOn|형식|FormatConditions|  
-|GrpKeepTogether|KeepTogether(구역)|NumeralShapes|Orientation|  
+|GrpKeepTogether|KeepTogether(구역)|NumeralShapes|방향|  
 |PaintPalette|PaletteSource|PictureAlignment|PicturePages|  
 |PictureSizeMode|PictureTiling(이미지)|ScrollBars|SpecialEffect|  
 |세로||||  
@@ -148,7 +148,7 @@ ms.locfileid: "48180613"
 |||||  
 |-|-|-|-|  
 |CodeDb|CreateControl|CreateForm|CreateGroupLevel|  
-|CreateObject|CreateReportControl|CurrentDb|CurrentUser|  
+|CreateObject 메서드|CreateReportControl|CurrentDb|CurrentUser|  
 |DeleteControl|DeleteReportControl|Eval|IMEStatus|  
 |SysCmd||||  
   
@@ -160,7 +160,7 @@ ms.locfileid: "48180613"
 |Date|Date$|DateAdd|DateDiff|  
 |DatePart|DateSerial|DateValue|Day|  
 |Hour|Minute|Month|MonthName|  
-|지금|둘째|Time|Time$|  
+|지금|Second|Time|Time$|  
 |Timer|TimeSerial|TimeValue|Weekday|  
 |WeekdayName|Year|||  
   
@@ -212,14 +212,14 @@ ms.locfileid: "48180613"
 |Environ$|EOF|FileAttr|FileDateTime|  
 |FileLen|FreeFile|GetAllSettings|GetAttr|  
 |GetSetting|Loc|LOF|QBColor|  
-|RGB|SaveSetting|Seek|SetAttr|  
+|RGB|SaveSetting|검색|SetAttr|  
 |Shell|Spc|탭||  
   
  다음 상호 작용 함수는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 지원되지 않습니다.  
   
 |||||  
 |-|-|-|-|  
-|DoEvents|입력|Input|Input$|  
+|DoEvents|입력|입력|Input$|  
   
 #### <a name="inspection-functions"></a>검사 함수  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서는 다음 검사 함수를 지원합니다.  
@@ -240,7 +240,7 @@ ms.locfileid: "48180613"
 |||||  
 |-|-|-|-|  
 |Abs|Atn|Cos|Exp|  
-|Fix|정수|Log|Rnd|  
+|Fix|Int|Log|Rnd|  
 |반올림|Sgn|Sin|Sqr|  
 |Tan||||  
   
@@ -263,7 +263,7 @@ ms.locfileid: "48180613"
   
 |||||  
 |-|-|-|-|  
-|Avg|개수|최대값|최소값|  
+|Avg|Count|최대값|최소값|  
 |StDev|StDevP|합계|Var|  
 |VarP||||  
   
@@ -276,8 +276,8 @@ ms.locfileid: "48180613"
 |LCase|LCase$|왼쪽|Left$|  
 |Len|LTrim|LTrim$|Mid|  
 |Mid$|바꾸기|오른쪽|Right$|  
-|RTrim|Space|Space$|StrComp|  
-|StrConv|String|String$|StrReverse|  
+|RTrim|공백|Space$|StrComp|  
+|StrConv|문자열|String$|StrReverse|  
 |Trim|Trim$|UCase|UCase$|  
   
 ### <a name="constants"></a>상수  

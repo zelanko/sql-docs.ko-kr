@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3c4ccc300b260c6a0ee7d512756876015f57994f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 89dc9cf211a9ab66c5617b6ef545795f332546f0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123463"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014584"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>차트에서 그룹 추가 또는 삭제(보고서 작성기 및 SSRS)
   차트 데이터 영역을 클릭하여 **차트 데이터** 창을 표시합니다. 데이터 세트 필드를 **범주 그룹** 및 **계열 그룹** 영역으로 끌어서 그룹을 만듭니다. 중첩된 그룹을 추가하려면 영역에 여러 필드를 추가합니다.  
@@ -57,6 +57,6 @@ ms.locfileid: "48123463"
 2.  **범주 그룹** 또는 **계열 그룹** 영역에서 해당 그룹을 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

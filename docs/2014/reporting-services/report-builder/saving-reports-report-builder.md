@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e549fa2b443d0ec634c6d226b79bbcc33d674a3c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 01fcf6ef333a9b7c8a5c99630e6e9573f70d8059
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376135"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011235"
 ---
 # <a name="saving-reports-report-builder"></a>보고서 저장(보고서 작성기)
   보고서 작성기에서 보고서 서버, SharePoint 라이브러리, 쓰기 권한이 있는 파일 공유 또는 컴퓨터에 보고서를 저장할 수 있습니다. 보고서를 연 동일한 위치에 보고서를 저장하거나, 다른 위치에 보고서를 저장하거나, 동일한 위치나 다른 위치에 새 이름으로 보고서를 저장할 수 있습니다. 기본적으로 보고서는 보고서를 연 위치에 다시 저장됩니다. 보고서를 저장할 때 실제로 저장하는 것은 보고서 레이아웃을 설명하는 보고서 정의이며, 데이터를 저장하지는 않습니다. 보고서를 실행할 때마다 보고서 데이터는 새로 고쳐지고 보고서를 이전에 실행했을 때와 다를 수 있습니다.  

@@ -23,15 +23,15 @@ helpviewer_keywords:
 - multiple schema namespaces
 - XML schema collections [SQL Server], creating
 ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 454169d7f67f25f19a382a59892b1d6d5235b067
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: d79f0859a79496878ce0ca257b66bb3635d1380d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255228"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042807"
 ---
 # <a name="create-xml-schema-collection-transact-sql"></a>CREATE XML SCHEMA COLLECTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -229,7 +229,7 @@ DROP XML SCHEMA COLLECTION ProductDescriptionSchemaCollection;
 GO  
 ```  
   
-### <a name="c-importing-a-schema-that-does-not-specify-a-target-namespace"></a>3. 대상 네임스페이스를 지정하지 않는 스키마 가져오기  
+### <a name="c-importing-a-schema-that-does-not-specify-a-target-namespace"></a>C. 대상 네임스페이스를 지정하지 않는 스키마 가져오기  
  **targetNamespace** 특성이 포함되지 않은 스키마를 컬렉션으로 가져오는 경우 이 컬렉션의 구성 요소는 다음 예와 같이 빈 문자열 대상 네임스페이스와 연결됩니다. 컬렉션으로 가져온 하나 이상의 스키마를 연결하지 않으면 잠재적으로 관련되지 않은 여러 스키마 구성 요소가 기본 빈 문자열 네임스페이스와 연결됩니다.  
   
 ```  

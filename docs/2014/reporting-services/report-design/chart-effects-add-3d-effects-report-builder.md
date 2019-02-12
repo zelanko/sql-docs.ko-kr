@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ab9625d8-6557-4a4d-8123-eefa7c066ff5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b554ec2044e95304c995a0dde7d67c444fa2dc05
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: de398500fb9511ae083277e1c23087a743f3d8e3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166123"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009635"
 ---
 # <a name="add-3d-effects-to-a-chart-report-builder-and-ssrs"></a>차트에 3D 효과 추가(보고서 작성기 및 SSRS)
   3D(3차원) 효과를 사용하여 차트에 깊이를 더하고 시각적 효과를 강화할 수 있습니다. 예를 들어 쪼개진 원형 차트에서 특정 조각을 강조하려는 경우 차트를 돌려 원근감을 변경함으로써 해당 조각이 가장 먼저 보이도록 할 수 있습니다. 차트에 3D 효과를 적용할 경우 모든 그라데이션 색과 해칭 스타일이 해제됩니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "48166123"
   
 2.  **3D 옵션**에서 **3D 사용** 옵션을 선택합니다.  
   
-3.  (옵션) **3D 옵션**에서 3D 각도 및 장면 옵션과 관련된 다양한 속성을 설정할 수 있습니다. 이러한 속성에 대 한 자세한 내용은 참조 하세요. [3D, 빗면 및 기타 효과 차트에서 &#40;보고서 작성기 및 SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)합니다.  
+3.  (옵션) **3D 옵션**에서 3D 각도 및 장면 옵션과 관련된 다양한 속성을 설정할 수 있습니다. 이러한 속성에 대한 자세한 내용은 [차트의 3D, 빗면 및 기타 효과&#40;보고서 작성기 및 SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)를 선택합니다.  
   
 4.  **확인**을 클릭합니다.  
   
@@ -85,8 +85,8 @@ ms.locfileid: "48166123"
     4.  **DrawingStyle** 속성에서 **Cylinder** 값을 지정합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [3D, 빗면 및 기타 효과 차트에서 &#40;보고서 작성기 및 SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
+ [차트의 3D, 빗면 및 기타 효과&#40;보고서 작성기 및 SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 86435534-c9fe-4b49-b88c-7fb6d21976b0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 56e58bfdb36e464aa6048343350ea929971989f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0def97e31cb34ac9b764b027b622c5ba605d9a7a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112643"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017134"
 ---
 # <a name="batching-methods"></a>일괄 처리 메서드
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 SOAP 헤더를 사용하면 단일 작업에 여러 웹 서비스 메서드를 포함시킬 수 있습니다. 메서드는 호출된 순서대로 단일 데이터베이스 트랜잭션의 범위 내에서 실행됩니다.  

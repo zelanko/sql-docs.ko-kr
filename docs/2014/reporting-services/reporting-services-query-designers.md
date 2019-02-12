@@ -11,21 +11,21 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: 07efd3f1-804f-45f7-b62a-3e727a3d9835
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1e8a2fabc77b4b2ca5d8a27b83c29c233148032e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 45273aa1bce0e0caec60ce415762f0c52fe67a98
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219499"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010814"
 ---
 # <a name="reporting-services-query-designers"></a>Reporting Services 쿼리 디자이너
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서의 각 데이터 원본 유형에 대 한 쿼리를 빌드할 수 있도록 그래픽 및 텍스트 기반 쿼리 디자이너를 제공 합니다.  
   
  일부 데이터 원본은 쿼리를 대화형으로 작성하는 데 도움이 되는 그래픽 디자이너를 지원하고 다른 데이터 원본은 텍스트 기반 쿼리 디자이너를 사용합니다. 그래픽 쿼리 디자이너를 사용하면 데이터 원본에서 기본 데이터를 나타내는 메타데이터 항목을 쿼리 디자인 화면으로 끌 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하면 쿼리 창에 명령 텍스트를 입력할 수 있습니다. 도구 모음의 텍스트 기반 쿼리 디자이너 아이콘을 클릭하여 그래픽 쿼리 디자이너에서 텍스트 기반 쿼리 디자이너로 변경할 수 있습니다.  
   
- 보고서에 사용할 수 있는 데이터 원본 유형은 클라이언트 또는 보고서 서버에 설치된 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 데이터 확장 프로그램에 따라 다릅니다. 자세한 내용은 [RSReportDesigner Configuration File](report-server/rsreportdesigner-configuration-file.md) 하 고 [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)합니다.  
+ 보고서에 사용할 수 있는 데이터 원본 유형은 클라이언트 또는 보고서 서버에 설치된 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 데이터 확장 프로그램에 따라 다릅니다. 자세한 내용은 [RSReportDesigner Configuration File](report-server/rsreportdesigner-configuration-file.md) 및 [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)을 참조하십시오.  
   
  데이터 처리 확장 프로그램 및 연결된 쿼리 디자이너는 데이터 원본에 대한 지원이 다음과 같이 서로 다를 수 있습니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "48219499"
   
 -   **데이터베이스 개체 이름의 스키마 부분 지원별.** 데이터 원본에서 스키마를 데이터베이스 개체 식별자의 일부로 사용하는 경우 기본 스키마를 사용하지 않는 모든 이름에 대해 스키마 이름을 쿼리의 일부로 제공해야 합니다. `SELECT FirstName, LastName FROM [Person].[Person]`) 을 입력합니다.  
   
--   **쿼리 매개 변수 지원별.** 데이터 공급자에 따라 매개 변수 지원이 다릅니다. 일부 데이터 공급자는 명명된 매개 변수(예: `SELECT Col1, Col2 FROM Table WHERE <parameter identifier><parameter name> = <value>`)를 지원합니다. 다른 데이터 공급자는 명명되지 않은 매개 변수(예: `SELECT Col1, Col2 FROM Table WHERE <column name> = ?`)를 지원합니다. 매개 변수 식별자; 데이터 공급자에 따라 다를 수 있습니다. 예를 들어 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용 하는 "에서" (@) 기호, Oracle은 콜론 (:)을 사용 합니다. 매개 변수를 지원하지 않는 데이터 공급자도 있습니다.  
+-   **쿼리 매개 변수 지원별.** 데이터 공급자에 따라 매개 변수 지원이 다릅니다. 일부 데이터 공급자는 명명된 매개 변수(예: `SELECT Col1, Col2 FROM Table WHERE <parameter identifier><parameter name> = <value>`)를 지원합니다. 다른 데이터 공급자는 명명되지 않은 매개 변수(예: `SELECT Col1, Col2 FROM Table WHERE <column name> = ?`)를 지원합니다. 데이터 공급자에 따라 매개 변수 식별자가 달라질 수 있습니다. 예를 들어 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 @ 기호를 사용하고 Oracle은 콜론(:)을 사용합니다. 매개 변수를 지원하지 않는 데이터 공급자도 있습니다.  
   
 -   **쿼리 가져오기 기능별.** 예를 들어 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 원본의 경우 보고서 정의 파일(.rdl) 또는 .sql 파일에서 쿼리를 가져올 수 있습니다.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "48219499"
 -   [텍스트 기반 쿼리 디자이너 사용자 인터페이스](../../2014/reporting-services/text-based-query-designer-user-interface.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [Reporting Services에서 지 원하는 데이터 원본 &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [외부 데이터 원본의 데이터 추가&#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md)   
  [데이터 처리 확장 프로그램과.NET Framework 데이터 공급자 &#40;SSRS&#41;](report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md)   
- [확장 &#40;SSRS&#41;](extensions-ssrs.md)  
+ [확장 프로그램&#40;SSRS&#41;](extensions-ssrs.md)  
   
   

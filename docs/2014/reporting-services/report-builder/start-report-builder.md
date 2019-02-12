@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 57231f0455a4dafbe7dccf5eac74325411cdfdc8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 70ec1c794e86782551099b4fb5d8459c8bae6191
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375325"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041704"
 ---
 # <a name="start-report-builder-report-builder"></a>보고서 작성기 시작(보고서 작성기)
   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 독립 실행형 포함 및 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 버전의 보고서 작성기. [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 버전은 기본 모드 또는 SharePoint 통합 모드로 설치된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 사용할 수 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "53375325"
   
 1.  웹 브라우저의 주소 표시줄에 다음 URL을 입력합니다.  
   
-     http://\<서버 이름 > /reportserver/reportbuilder/ReportBuilder_3_0_0_0.application  
+     http://\<servername>/reportserver/reportbuilder/ReportBuilder_3_0_0_0.application  
   
 2.  Enter 키를 누릅니다.  
   

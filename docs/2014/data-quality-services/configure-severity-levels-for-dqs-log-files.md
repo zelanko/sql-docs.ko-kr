@@ -15,20 +15,20 @@ helpviewer_keywords:
 - logging,severity levels
 - configure severity levels
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3b4deba7e3aa788bf42be9fbd173a6b20844ac68
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c7b6476b9875b52f6961df20b750e68e5df0858c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202382"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010586"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>DQS 로그 파일에 대한 심각도 수준 구성
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]를 사용하여 다양한 작업 및 모듈의 심각도를 구성하는 방법에 대해 설명합니다. 심각도는 DQS에서 발생하는 이벤트의 강도를 정의합니다. DQS 이벤트의 심각도는 다음과 같습니다(심각도 내림차순 정렬).  
   
--   **심각한**: 심각한/예기치 않은 결과를 일으킬 수 있는 치명적인 런타임 오류입니다.  
+-   **치명적**: 심각한/예기치 않은 결과를 일으킬 수 있는 치명적인 런타임 오류입니다.  
   
 -   **오류**: 그 외 런타임 오류입니다.  
   
@@ -54,9 +54,9 @@ ms.locfileid: "53202382"
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 **구성**을 클릭합니다.  
   
-3.  다음으로, **로그 설정** 탭을 클릭합니다. 심각도를 선택할 수 있는 DQS 작업 **도메인 관리**하십시오 **기술 자료 검색**, **정리 프로젝트 (예: RDS)**, **일치하는 정책 및 프로젝트** 및 **RDS**가 나열됩니다.  
+3.  다음으로, **로그 설정** 탭을 클릭합니다. 심각도를 선택할 수 있는 DQS 작업 **도메인 관리**, **기술 자료 검색**, **정리 프로젝트(예: RDS)**, **일치하는 정책 및 프로젝트** 및 **RDS**가 나열됩니다.  
   
-4.  특정 DQS 작업에 대해 로깅할 심각도를 선택합니다. 심각도 **심각한**, **오류가**를 **경고**를 **정보**, 및 **디버그**합니다. 예를 들어 기술 자료 검색 작업에서 치명적 메시지만 DQS 로그 파일에 기록하려면 **기술 자료 검색** 작업에 대한 드롭다운 목록에서 **치명적** 을 선택합니다.  
+4.  특정 DQS 작업에 대해 로깅할 심각도를 선택합니다. 심각도 **치명적**, **오류**, **경고**, **정보** 및 **디버그** 중 하나를 선택할 수 있습니다. 예를 들어 기술 자료 검색 작업에서 치명적 메시지만 DQS 로그 파일에 기록하려면 **기술 자료 검색** 작업에 대한 드롭다운 목록에서 **치명적** 을 선택합니다.  
   
     > [!NOTE]  
     >  기본적으로 각 작업에 대해 **오류** 가 선택됩니다. 이는 각 작업에 대한 DQS 로그 파일에 기본적으로 오류 및 치명적 메시지가 기록됨을 의미합니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "53202382"
   
 2.  표시된 표에서 **모듈** 열에 있는 드롭다운 목록의 모듈 이름을 선택합니다.  
   
-3.  다음으로, **심각도** 열의 드롭다운 목록에서 모듈의 심각도를 선택합니다. 심각도 **심각한**, **오류가**를 **경고**를 **정보**, 및 **디버그**합니다.  
+3.  다음으로, **심각도** 열의 드롭다운 목록에서 모듈의 심각도를 선택합니다. 심각도 **치명적**, **오류**, **경고**, **정보** 및 **디버그** 중 하나를 선택할 수 있습니다.  
   
      예를 들어 도메인 관리 작업 내에서 **Microsoft.Ssdqs.DomainRules.Define** 모듈을 선택하고 다른 로그 심각도를 선택하여 도메인 규칙 정의 기능의 세분성 수준을 도메인 관리 작업과 다르게 설정할 수 있습니다. 마찬가지로 **Microsoft.Ssdqs.DomainRules.Condition.CrossDomain** 모듈을 선택하고 다른 로그 심각도를 선택하여 도메인 간 규칙 기능의 세분성 수준을 다르게 설정할 수 있습니다.  
   

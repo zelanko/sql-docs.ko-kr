@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: bccdc243-4366-4ce5-8e63-3dd6c463fa52
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 34b6f109ab102f39908639f6182c25ca4cbb60e0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: b21a8b6f0865ae0b8b51f4923809eb3dd5f7e204
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363895"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011814"
 ---
 # <a name="choosing-between-url-access-and-soap"></a>URL 액세스와 SOAP 중 선택
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 응용 프로그램에 통합하는 작업은 까다로울 수 있습니다. 하지만 문제는 프로그래밍 모델이나 API의 복잡성이 아니라 통합에 사용할 수 있는 방법이 다양하다는 점입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 처음부터 개발자 플랫폼으로 디자인되었기 때문에 프로그래밍 유연성을 염두에 두고 만들어졌습니다. 이러한 유연성으로 인해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 탐색 및 관리 기능을 기존 비즈니스 응용 프로그램에 통합하는 데 있어서 중요한 결정이 필요합니다.  

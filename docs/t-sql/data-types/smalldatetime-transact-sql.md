@@ -1,7 +1,7 @@
 ---
 title: smalldatetime(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/22/2017
+ms.date: 07/22/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb5c1b54c33a7d50b695c4cf6f1318e435909e7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2d89750c6ddac45af82824b2449c9e415561814
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737811"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031004"
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47737811"
 날짜와 시간을 정의합니다. 시간은 하루 24시간을 기준으로 하며 초는 항상 소수 자릿수 없이 0(:00)으로 표시됩니다.
   
 > [!NOTE]  
->  새 작업에 대해 **time**, **date**, **datetime2** 및 **datetimeoffset** 데이터 형식을 사용합니다. 이러한 데이터 형식은 SQL 표준에 맞는 형식으로, 이식성이 높습니다. **time**, **datetime2** 및 **datetimeoffset**은 초의 정밀도를 높여줍니다. 전 세계에 배포되는 응용 프로그램의 경우 **datetimeoffset**을 사용하면 표준 시간대가 지원됩니다.  
+>  새 작업에 대해 **time**, **date**, **datetime2** 및 **datetimeoffset** 데이터 형식을 사용합니다. 이러한 데이터 형식은 SQL 표준에 맞는 형식으로, 이식성이 높습니다. **time**, **datetime2** 및 **datetimeoffset**은 초의 정밀도를 높여줍니다. 전 세계에 배포되는 애플리케이션의 경우 **datetimeoffset**을 사용하면 표준 시간대가 지원됩니다.  
   
 ## <a name="smalldatetime-description"></a>smalldatetime 설명
   

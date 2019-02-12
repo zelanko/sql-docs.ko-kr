@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f0e1d1e31588945a12eed2d82ddf05ad2a7977e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4e7f3faff05a318c302f12ded3a6ec4c864b7054
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183133"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012374"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>공유 데이터 세트 캐시(SSRS)
   공유 데이터 세트에 대한 쿼리 결과를 캐시로 복사하여 여러 보고서에 일관성 있는 데이터를 제공하고 데이터 세트 쿼리에 대한 응답 시간을 향상시킬 수 있습니다. 보고서와 마찬가지로 공유 데이터 세트를 처음 사용할 때 또는 일정을 지정하여 공유 데이터 세트가 캐시되도록 구성할 수 있습니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "48183133"
  캐시에 있는 데이터가 만료되기 전까지의 보관 기간을 지정할 수 있습니다. 자세한 내용은 [캐싱 페이지, 공유 데이터 집합&#40;보고서 관리자&#41;](../caching-page-shared-datasets-report-manager.md)을 참조하세요.  
   
 ## <a name="preloading-the-cache"></a>캐시 미리 로드  
- 캐시 새로 고침 계획을 만들어 캐시를 미리 로드할 수 있습니다. 새로 고침 계획을 만들면 항목별 일정 또는 공유 일정을 사용하여 캐시를 새로 고칠 빈도를 지정할 수 있습니다. 동일한 항목에 대해 여러 캐시 항목이 생성되는 것을 방지하려면 지정하는 일정에서 외부 데이터 원본에 대한 쿼리 처리 시간이 충분해야 합니다. 예를 들어 쿼리 실행에 20분이 걸리는 경우 새로 고침 일정은 20분보다 커야 합니다. 자세한 내용은 [일정](../subscriptions/schedules.md)합니다.  
+ 캐시 새로 고침 계획을 만들어 캐시를 미리 로드할 수 있습니다. 새로 고침 계획을 만들면 항목별 일정 또는 공유 일정을 사용하여 캐시를 새로 고칠 빈도를 지정할 수 있습니다. 동일한 항목에 대해 여러 캐시 항목이 생성되는 것을 방지하려면 지정하는 일정에서 외부 데이터 원본에 대한 쿼리 처리 시간이 충분해야 합니다. 예를 들어 쿼리 실행에 20분이 걸리는 경우 새로 고침 일정은 20분보다 커야 합니다. 자세한 내용은 [Schedules](../subscriptions/schedules.md)을(를) 참조하세요.  
   
  공유 데이터 세트에 대한 캐시 새로 고침 계획을 만들려는 경우 다음 조건이 적용됩니다.  
   

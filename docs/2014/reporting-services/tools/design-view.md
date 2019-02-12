@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 32578d4810140314964d3e7e2ceaa8d836aa99bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6d703bc03c6ad715efad06612b06210f8bad4bc1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137393"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010427"
 ---
 # <a name="design-view"></a>디자인 뷰
   디자인 뷰를 사용하여 보고서에서 보고서 항목을 배치할 수 있습니다. 디자인 뷰는 디자인 화면 또는 레이아웃 뷰라고도 합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "48137393"
  속성 창을 사용하여 디자인 화면의 현재 선택된 보고서 항목 또는 그룹화 창의 선택된 그룹에 대한 속성을 볼 수 있습니다. 또는 선택한 보고서 항목 또는 그룹을 마우스 오른쪽 단추로 클릭한 후 **속성** 을 클릭하여 보고서 항목 또는 그룹에 대한 해당 **속성** 대화 상자를 열 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [페이지 머리글 및 바닥글 &#40;보고서 작성기 및 SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [페이지 머리글 및 바닥글&#40;보고서 작성기 및 SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [보고서 디자인 팁&#40;보고서 작성기 및 SSRS&#41;](../report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   

@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.rtp.rptwizard.selectdatasource.f1
 ms.assetid: cdd84ad8-7c6a-41ac-bf51-1b0973434829
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: aa201b447d9263e32aecf7d525e9460b8c0a8b37
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 6afc3b709daf906aec429ae92da785ecff681a48
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166963"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011824"
 ---
 # <a name="select-the-data-source"></a>데이터 원본 선택
   보고서 마법사의 데이터 원본 선택 페이지를 사용하여 보고서의 데이터 원본을 정의할 수 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "48166963"
  데이터 원본을 보고서 대신 공유 데이터 원본으로 프로젝트에 저장하려면 이 옵션을 선택합니다. 이렇게 저장된 공유 데이터 원본은 프로젝트에 있는 다른 보고서의 데이터 원본으로 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [포함 된 데이터 원본과 공유 데이터 연결 또는 데이터 원본 &#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Reporting Services 보고서 서버](../../2014/reporting-services/reporting-services-report-server.md)   
  [RSReportDesigner 구성 파일](report-server/rsreportdesigner-configuration-file.md)   

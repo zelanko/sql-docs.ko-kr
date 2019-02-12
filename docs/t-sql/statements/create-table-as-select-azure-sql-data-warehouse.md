@@ -2,8 +2,7 @@
 title: CREATE TABLE AS SELECT(Azure SQL Data Warehouse) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/07/2016
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 511be25daa32daa1a8d80707043280171f76edbc
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 882f6c9691905d4dd18d7c70a19b3afd9bc86751
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980219"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012664"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT(Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -147,7 +146,7 @@ Azure SQL Data Warehouse는 아직 자동 만들기 또는 자동 업데이트 �
 
 CTAS를 사용하여 테이블을 만드는데 성능이 중요하지 않은 경우 분포 열에 대해 결정을 내릴 필요가 없도록 `ROUND_ROBIN`을 지정할 수 있습니다.
 
-이후 쿼리에서 데이터 이동을 방지하려면 `REPLICATE`를 지정할 수 있지만 각 Compute 노드에 대해 전체 테이블 복사본을 로드하기 위해 저장소가 증가합니다.  
+이후 쿼리에서 데이터 이동을 방지하려면 `REPLICATE`를 지정할 수 있지만 각 Compute 노드에 대해 전체 테이블 복사본을 로드하기 위해 스토리지가 증가합니다.  
 
 
 <a name="examples-copy-table-bk"></a>
@@ -289,7 +288,7 @@ DROP TABLE DimCustomer2_old;
 
 <a name="ctas-change-distribution-method-bk"></a>
 
-### <a name="c-use-ctas-to-change-the-distribution-method-for-a-table"></a>3. CTAS를 사용하여 테이블에 대한 배포 방법 변경
+### <a name="c-use-ctas-to-change-the-distribution-method-for-a-table"></a>C. CTAS를 사용하여 테이블에 대한 배포 방법 변경
 적용 대상: Azure SQL Data Warehouse 및 병렬 Data Warehouse
 
 이 간단한 예제에서는 테이블에 대한 배포 방법을 변경하는 방법을 보여줍니다. 이 작업을 수행하는 방법의 원리를 보여주기 위해 해시 배포 테이블을 라운드 로빈으로 변경한 다음, 라운드 로빈 테이블을 다시 해시 배포로 변경해 보겠습니다. 마지막 테이블은 원본 테이블과 일치합니다. 

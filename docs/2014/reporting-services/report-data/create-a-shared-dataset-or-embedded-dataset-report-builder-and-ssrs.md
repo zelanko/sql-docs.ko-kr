@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 39f8f2b9f8926a81c808e82f57cad13934336902
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 95772746d8f13993962f67bff863865dec519f70
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133263"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011164"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>공유 데이터 세트 또는 포함된 데이터 세트 만들기(보고서 작성기 및 SSRS)
   단일 보고서에 사용할 포함된 데이터 세트를 만들거나 여러 보고서에 사용하기 위해 보고서 서버에 저장할 공유 데이터 세트를 만들 수 있습니다. 데이터 세트를 만들려면 포함된 데이터 원본 또는 공유 데이터 원본이 있어야 합니다.  
@@ -117,7 +117,7 @@ ms.locfileid: "48133263"
  [쿼리 디자이너&#40;보고서 작성기&#41;](../query-designers-report-builder.md)   
  [대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-datasets-ssrs.md)   
- [데이터 연결, 데이터 원본 및 보고서 작성기에서 연결 문자열](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

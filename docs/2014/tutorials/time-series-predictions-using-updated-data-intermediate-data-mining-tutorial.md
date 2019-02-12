@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: af73681d-ce1c-4b6e-b195-6df3d2fb5275
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74bc6afe0c5c3bddd4b36ebe844ae963da8fbe28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2017defaba74071b1a12bee14a5d8907e4c71cda
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185493"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041804"
 ---
 # <a name="time-series-predictions-using-updated-data-intermediate-data-mining-tutorial"></a>업데이트된 데이터를 사용한 시계열 예측(중급 데이터 마이닝 자습서)
     
@@ -70,7 +69,7 @@ ms.locfileid: "48185493"
   
     4.  수량 필드를 끌어에서 **마이닝 모델** 창에는 **조건/인수** 열입니다.  
   
-    5.  에 **조건/인수** 열에서 필드 이름 뒤에 오는 다음 텍스트를 입력: **5, EXTEND_MODEL_CASES**  
+    5.  에 **조건/인수** 열, 필드 이름 뒤에 오는 다음 텍스트를 입력 합니다.  **5,EXTEND_MODEL_CASES**  
   
          전체 텍스트를 **조건/인수** 입력란 다음과 같아야 합니다. `[Forecasting].[Quantity],5,EXTEND_MODEL_CASES`  
   
@@ -103,6 +102,6 @@ ms.locfileid: "48185493"
   
 ## <a name="see-also"></a>관련 항목  
  [Microsoft 시계열 알고리즘 기술 참조](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [마이닝 모델 콘텐츠 시계열 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [시계열 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

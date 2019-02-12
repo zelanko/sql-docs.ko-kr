@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 60b85dd8-b4fb-4ad9-be6a-e7c89ac076fe
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: dd75a21625eb3ab31c9b1655e0f85943470cee54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 014a08a2ce19192835117d1fca44bcd0e67f4eef
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117472"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011952"
 ---
 # <a name="mhtml-device-information-settings"></a>MHTML 디바이스 정보 설정
   다음 표는 웹 보관 파일(MHTML) 형식으로 보고서를 렌더링하기 위한 디바이스 정보 설정을 나열합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "48117472"
   
 ## <a name="see-also"></a>관련 항목  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [장치 정보 설정을 렌더링 확장 프로그램에 전달](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [디바이스 정보 설정을 렌더링 확장 프로그램에 전달](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수를 사용자 지정](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [기술 참조&#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   

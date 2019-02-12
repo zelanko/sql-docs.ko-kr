@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2d72c7991f1ebcf36a3408af344225967c1dc498
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c607291cd2675e454861aa4c79da608d8bcaba1b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144703"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010965"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>보고서 기록에서 스냅숏 만들기, 수정 및 삭제
   보고서 기록은 보고서 스냅숏의 모음입니다. 스냅숏을 추가하고 삭제하거나 보고서 기록 스토리지에 영향을 주는 속성을 수정하여 보고서 기록을 유지 관리할 수 있습니다. 수동으로 또는 예약된 일정을 통해 보고서 기록을 만들 수 있습니다.  
@@ -61,10 +61,10 @@ ms.locfileid: "48144703"
  보고서를 삭제하면 보고서 기록도 삭제됩니다. 예를 들어 월별 판매 보고서를 새 버전으로 바꾸기 위해 삭제하면 이 보고서와 연결된 보고서 기록도 모두 삭제됩니다. 그러나 보고서를 이동하면 모든 보고서 기록도 함께 이동합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 기록 만들기 &#40;Reporting Services sharepoint에서 통합 모드&#41;](create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)   
- [보고서 서버 콘텐츠 관리 &#40;SSRS 기본 모드&#41;](report-server-content-management-ssrs-native-mode.md)   
- [보고서 기록에 스냅숏 추가 &#40;보고서 관리자&#41;](add-a-snapshot-to-report-history-report-manager.md)   
+ [보고서 기록 만들기&#40;SharePoint 통합 모드의 Reporting Services&#41;](create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)   
+ [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](report-server-content-management-ssrs-native-mode.md)   
+ [보고서 기록에 스냅숏 추가&#40;보고서 관리자&#41;](add-a-snapshot-to-report-history-report-manager.md)   
  [보고서 기록 제한&#40;보고서 관리자&#41;](../reports/limit-report-history-report-manager.md)  
   
   

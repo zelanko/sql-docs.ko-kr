@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.browseforservers.f1
 - sql13.dqs.connecttoserver.f1
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: a0ed4ad06e5e2db6594e467cbab392a75797289f
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: add70b6a98a0246b2ad8ae8743ca57763e157f89
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616273"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011516"
 ---
 # <a name="run-the-data-quality-client-application"></a>데이터 품질 클라이언트 애플리케이션 실행
 
@@ -44,7 +44,7 @@ ms.locfileid: "52616273"
   
 2.  **서버에 연결** 대화 상자에서  
   
-    1.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램을 연결할 서버를 지정합니다. **(로컬)** 을 선택하여 로컬 컴퓨터의 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 에 연결할 수 있습니다. 아래쪽 화살표를 클릭하고 **\<네트워크에서 추가 서버 찾아보기>** 를 선택하여 다른 서버에 연결하거나 이름에 따라 로컬 서버에 연결할 수도 있습니다. **서버 찾아보기** 대화 상자가 표시됩니다. **로컬 서버** 탭이나 **네트워크 서버** 탭에서 서버를 선택할 수 있습니다.  
+    1.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션을 연결할 서버를 지정합니다. **(로컬)** 을 선택하여 로컬 컴퓨터의 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 에 연결할 수 있습니다. 아래쪽 화살표를 클릭하고 **\<네트워크에서 추가 서버 찾아보기>** 를 선택하여 다른 서버에 연결하거나 이름에 따라 로컬 서버에 연결할 수도 있습니다. **서버 찾아보기** 대화 상자가 표시됩니다. **로컬 서버** 탭이나 **네트워크 서버** 탭에서 서버를 선택할 수 있습니다.  
   
     2.  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 와 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]사이의 데이터 전송을 암호화하려면 **옵션**을 클릭하고 **연결 암호화** 확인란을 선택합니다.  
   

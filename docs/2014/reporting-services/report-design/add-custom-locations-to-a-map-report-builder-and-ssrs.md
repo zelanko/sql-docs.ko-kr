@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 7d36faae-5bcc-446a-9eba-f42349cafacb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3fcba9c2af2344ca39d2ef781a1384580a7afeaa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e5961a4d4984a4da5abd788903a05789de862db7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108673"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011305"
 ---
 # <a name="add-custom-locations-to-a-map-report-builder-and-ssrs"></a>지도에 사용자 지정 위치 추가(보고서 작성기 및 SSRS)
   보고서에 지도를 추가한 후 점 위치를 추가할 수 있습니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "48108673"
 > [!NOTE]  
 >  포함된 점에 대한 계층 표시 속성을 무시할 때 변경한 내용은 되돌릴 수 없습니다.  
   
- 자세한 내용은 [규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경&#40;보고서 작성기 및 SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)를 참조하세요.  
+ 자세한 내용은 [규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경&#40;보고서 작성기 및 SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

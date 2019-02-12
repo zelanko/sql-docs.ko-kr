@@ -15,14 +15,14 @@ helpviewer_keywords:
 - iOS
 ms.assetid: 2124bcf5-d60a-475f-a4ae-de6df44d2860
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2cc1725bc1cad98033fbc4c47c1611e7c8b35f32
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 89560cb29adfe83435d9b02a4b10e568a79ad352
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360235"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013404"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Microsoft Surface 디바이스 및 Apple iOS 디바이스에서 Reporting Services 보고서 보기
   이 문서에서는 Microsoft Surface 디바이스 및 iPad와 같은 Apple iOS 6 및 Apple Safari 디바이스에서 지원되는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능 및 워크플로를 설명합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "53360235"
 ## <a name="view-and-interact-with-reports"></a>보고서 보기 및 상호 작용  
  [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)]부터 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 Microsoft Surface 디바이스 및 iPad와 같은 Apple iOS 6 및 Apple Safari 브라우저 디바이스에서 보고서 보기 및 기본 상호 작용을 지원합니다. Microsoft Surface 디바이스를 사용하는 보고서를 게시할 수도 있습니다.  
   
- ![IPad 바탕 화면](media/videothumbnail.jpg "IPad 바탕 화면")  
+ ![IPad Desktop](media/videothumbnail.jpg "IPad Desktop")  
 iPad에서 보고서 보기 동작 보기  
   
  Windows Phone 8 디바이스에서 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서를 볼 수도 있습니다.  

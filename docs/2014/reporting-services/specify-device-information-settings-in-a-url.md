@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: cb7f7577-c6a8-4e6f-8e60-5ec0760f29c3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 061fc6edeec6e3970ade638115b3d28389218a3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d769e272792bb4032c2ad2f0d5469e33a512656b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067823"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012574"
 ---
 # <a name="specify-device-information-settings-in-a-url"></a>URL에 디바이스 정보 설정 지정
-  디바이스 정보 설정은 렌더링 확장 프로그램에 전달되는 매개 변수입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 보고서 서버 웹 서비스의 메서드를 사용하여 보고서를 렌더링하는 경우 `DeviceInfo` XML 요소가  입력 매개 변수로 전달됩니다. 자식 요소는 `DeviceInfo` 요소 다른 렌더링 확장 프로그램의 장치 정보 설정에 따라 다릅니다. *rc:tag=value* 매개 변수 문자열을 사용하여 URL에 장치 정보 설정을 포함시킬 수 있습니다. 여기서 *tag* 는 액세스되는 장치 정보 설정 요소의 이름입니다. 장치 정보 설정에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 참조 하십시오 [장치 정보 설정을 렌더링 확장 프로그램에 전달](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)합니다.  
+  디바이스 정보 설정은 렌더링 확장 프로그램에 전달되는 매개 변수입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 보고서 서버 웹 서비스의 메서드를 사용하여 보고서를 렌더링하는 경우 `DeviceInfo` XML 요소가  입력 매개 변수로 전달됩니다. `DeviceInfo` 요소의 자식 요소는 다양한 렌더링 확장 프로그램의 장치 정보 설정마다 다릅니다. *rc:tag=value* 매개 변수 문자열을 사용하여 URL에 장치 정보 설정을 포함시킬 수 있습니다. 여기서 *tag* 는 액세스되는 장치 정보 설정 요소의 이름입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 디바이스 정보 설정에 대한 자세한 내용은 [디바이스 정보 설정을 렌더링 확장 프로그램에 전달](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 이미지 렌더링 확장 프로그램의 *OutputFormat* 디바이스 정보 설정을 사용하여 지정된 보고서의 형식을 JPEG으로 설정합니다(읽기 쉽도록 줄 바꿈 추가됨).  
@@ -34,7 +34,7 @@ Command=Render&rs:Format=IMAGE&rc:OutputFormat=JPEG
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [URL 액세스 &#40;SSRS&#41;](url-access-ssrs.md)   
+ [URL 액세스&#40;SSRS&#41;](url-access-ssrs.md)   
  [URL 액세스 매개 변수 참조](url-access-parameter-reference.md)  
   
   

@@ -2,10 +2,8 @@
 title: sp_delete_database_firewall_rule (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/04/2017
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_database_firewall_rule
@@ -21,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4afb4873f05c1ee2a0c0f55c443070bfbf760706
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: eb8ee3482868f64765e7bf90e962c9756eadbdbc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168921"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015104"
 ---
 # <a name="spdeletedatabasefirewallrule-azure-sql-database"></a>sp_delete_database_firewall_rule(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,7 +41,7 @@ sp_delete_database_firewall_rule [@name =] [N]'name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@name =**] **'**_이름_**'**  
+ [**@name =**] **'**_name_**'**  
  제거할 데이터베이스 수준 방화벽 설정의 이름입니다. *이름을* 됩니다 **nvarchar (128)** 이며 기본값은 없습니다. 유니코드 식별자 `N` 사항임 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]합니다. 
   
 ## <a name="permissions"></a>사용 권한  

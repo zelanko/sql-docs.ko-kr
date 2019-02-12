@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: e96cdeba-452b-45a8-9bcf-b75d76261e31
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: df688c3948c30bae3feef03fefbc1171e5c98491
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: eb1c984abec2667a09587eda673ed02176aa8e8e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220737"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010576"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>클릭 광고 보고서 페이지(보고서 관리자)
   클릭 광고 보고서는 보고서 내에 포함된 대화형 데이터를 클릭하면 관련된 데이터로 작성된 표를 표시합니다. 이러한 보고서는 보고서를 작성할 때 사용한 모델 내에 포함된 정보를 바탕으로 생성됩니다. 보고서 서버가 생성하는 클릭 광고 보고서를 사용하지 않으려면 사용자 지정 보고서를 만들어 보고서 서버에 게시하고 모델에 정의된 대화형 데이터 지점에 매핑하면 됩니다. 사용자 지정 보고서는 보고서 작성기에서 같은 모델을 통해 만든 다음 보고서 서버에 게시해야 합니다. 사용자 지정 보고서를 모델의 항목에 매핑하려면 보고서 관리자의 클릭 광고 보고서 페이지를 사용합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "48220737"
  액세스 권한이 있는 모든 보고서를 선택할 수 있지만 구성하는 모델용으로 만든 보고서만 선택하는 것이 좋습니다.  
   
 > [!NOTE]  
->  클릭 광고 보고서의 모든 버전에서 사용할 수 없는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다. 조직에서 실행 중인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 잘 모를 경우 데이터베이스 관리자에게 문의하십시오.  
+>  클릭 방문 보고서는 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 일부 버전에서만 사용할 수 있습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다. 조직에서 실행 중인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 잘 모를 경우 데이터베이스 관리자에게 문의하십시오.  
   
 ## <a name="navigation"></a>탐색  
  사용자 인터페이스(UI)에서 이 위치를 탐색하려면 다음 절차를 사용하십시오.  

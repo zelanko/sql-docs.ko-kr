@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5f55cbf6-0db4-4cb4-a0f5-e27441873d4f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f762b6c561f96f8ced9f8fe977dceb3b9208d01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6e631a8983705d4f58e4b193823c9a255284f346
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048523"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015254"
 ---
 # <a name="creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial"></a>예측 구조 및 모델 만들기(중급 데이터 마이닝 자습서)
   다음으로 데이터 마이닝 마법사를 사용하여 방금 만든 데이터 원본 뷰를 기반으로 하는 새 마이닝 구조와 마이닝 모델을 만듭니다. 이 태스크에서는 마이닝 모델에 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시계열 알고리즘을 사용하도록 지정합니다.  

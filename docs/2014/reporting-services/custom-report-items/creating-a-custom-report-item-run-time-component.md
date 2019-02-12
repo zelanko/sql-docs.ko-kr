@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3a5c489125d4a35b5c886ba6d6304b22ceec5c4a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: cfaaa8504a018bad1740c1fb381471e9b4b82878
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375355"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011045"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>사용자 지정 보고서 항목 런타임 구성 요소 만들기
   사용자 지정 보고서 항목 런타임 구성 요소는 CLS 호환 언어를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 구성 요소로 구현되며 런타임에 보고서 처리기에 의해 호출됩니다. 사용자 지정 보고서 항목의 해당 디자인 타임 구성 요소를 수정하여 디자인 환경에서 런타임 구성 요소에 대한 속성을 정의합니다.  
@@ -133,7 +133,7 @@ namespace Microsoft.Samples.ReportingServices
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [사용자 지정 보고서 항목 아키텍처](custom-report-item-architecture.md)   
  [사용자 지정 보고서 항목 디자인 타임 구성 요소 만들기](creating-a-custom-report-item-design-time-component.md)   
  [사용자 지정 보고서 항목 클래스 라이브러리](custom-report-item-class-libraries.md)   

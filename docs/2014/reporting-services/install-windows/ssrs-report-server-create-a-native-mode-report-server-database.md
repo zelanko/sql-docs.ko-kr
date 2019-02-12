@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 202d2331364480cfdac89019dfa918c327544b26
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: aace9882e358bcd5e5626cc625ed3dbbe4495cce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090263"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017044"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>기본 모드 보고서 서버 데이터베이스 만들기(SSRS 구성 관리자)
   기본 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 내부 스토리지로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 사용합니다. 이 데이터베이스는 필수 항목이며 게시된 보고서, 모델, 공유 데이터 원본, 세션 데이터, 리소스 및 서버 메타데이터를 저장하는 데 사용됩니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "48090263"
 ## <a name="when-to-create-or-configure-the-report-server-databases"></a>보고서 서버 데이터베이스를 만들거나 구성하는 경우  
  보고서 서버를 파일만 모드에서 설치한 경우 보고서 서버 데이터베이스를 만들고 구성해야 합니다.  
   
- 설치한 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 중 하나를 기본 구성 기본 모드용으로 보고서 서버 데이터베이스를 만든 및 보고서 서버 인스턴스가 설치 되 면 자동으로 구성 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 설치 프로그램이 자동으로 구성한 설정을 확인하거나 수정할 수 있습니다.  
+ 기본 모드용 기본 구성으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치한 경우 보고서 서버 인스턴스가 설치되면 보고서 서버 데이터베이스가 자동으로 만들어지고 구성됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 설치 프로그램이 자동으로 구성한 설정을 확인하거나 수정할 수 있습니다.  
   
 ##  <a name="rsdbrequirements"></a> 시작하기 전에  
  보고서 서버 데이터베이스를 만들거나 구성하려면 여러 단계를 수행해야 합니다. 보고서 서버 데이터베이스를 만들기 전에 다음 항목을 지정하는 방법을 고려해야 합니다.  
@@ -116,12 +116,12 @@ ms.locfileid: "48090263"
   
 7.  요약 페이지에서 설정이 올바른지 확인한 후 **다음**을 클릭합니다.  
   
-8.  보고서 서버 URL 페이지 또는 보고서 관리자 URL 페이지의 URL을 클릭하여 연결을 확인합니다. URL은 이 테스트가 작동하는 순서로 정의되어야 합니다. 보고서 서버 데이터베이스 연결이 유효한 경우 보고서 서버 폴더 계층이나 보고서 관리자가 브라우저 창에 표시됩니다. 자세한 내용은 [Verify a Reporting Services Installation](verify-a-reporting-services-installation.md) 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onl 온라인 설명서.  
+8.  보고서 서버 URL 페이지 또는 보고서 관리자 URL 페이지의 URL을 클릭하여 연결을 확인합니다. URL은 이 테스트가 작동하는 순서로 정의되어야 합니다. 보고서 서버 데이터베이스 연결이 유효한 경우 보고서 서버 폴더 계층이나 보고서 관리자가 브라우저 창에 표시됩니다. 자세한 내용은 [온라인 설명서의](verify-a-reporting-services-installation.md) Reporting Services 설치 확인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 서버 데이터베이스 연결 구성 &#40;SSRS 구성 관리자&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [보고서 서버 데이터베이스 연결 구성&#40;SSRS 구성 관리자&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [데이터베이스 &#40;SSRS 기본 모드&#41;](../../sql-server/install/database-ssrs-native-mode.md)   
- [Reporting Services 기본 모드 보고서 서버를 관리 합니다.](../report-server/manage-a-reporting-services-native-mode-report-server.md)   
+ [Reporting Services 기본 모드 보고서 서버 관리](../report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

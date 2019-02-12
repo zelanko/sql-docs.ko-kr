@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a0f004a2d145356e38816b65fc2cd5c2a1972074
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: aa0ccc9d3b2ca01e1b2279f71ef2815c81e060e3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362915"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011854"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>지도 마법사 및 지도 계층 마법사(보고서 작성기 및 SSRS)
   지도 마법사 및 지도 계층 마법사는 지도를 만들거나 지도 계층을 추가하거나 기존 계층의 지도 계층 옵션을 변경하는 태스크를 자동화합니다.  
@@ -271,7 +271,7 @@ ms.locfileid: "53362915"
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 문제 해결: 지도 보고서 &#40;보고서 작성기 및 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [보고서 문제 해결: 맵 보고서&#40;보고서 작성기 및 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [지도 보고서 계획&#40;보고서 작성기 및 SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)   
  [지도&#40;보고서 작성기 및 SSRS&#41;](maps-report-builder-and-ssrs.md)  
   

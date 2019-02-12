@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fefb46e8-6901-4d50-a3f8-7c49ad72e7b1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: baca8a9c339ff55ad25f390ac73a2957fdd26447
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 11ccc376b2c325056acbe545f8ac7310b4386245
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119373"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010874"
 ---
 # <a name="new-linked-report-page-report-manager"></a>새 링크된 보고서 페이지(보고서 관리자)
   새 링크된 보고서 페이지를 사용하여 링크된 보고서를 만들 수 있습니다. 링크된 보고서는 고유한 설정 및 속성은 있지만 다른 보고서의 보고서 정의에 연결되어 있는 보고서입니다. 링크된 보고서는 특정 그룹이나 사용자에 대해 변경할 기준 보고서가 있는 경우에 유용합니다. 매개 변수로 지정하는 지역 코드에 따라 다른 데이터를 반환하는 지역 보고서를 예로 들 수 있습니다. 링크된 보고서는 일반적으로 매개 변수 있는 보고서에서 내용을 변경한 다음 각 보고서 인스턴스에 다른 매개 변수 값을 저장하면 만들어집니다. 그러나 액세스 가능한 모든 보고서에서 링크된 보고서를 만들 수 있습니다.  

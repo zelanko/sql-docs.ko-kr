@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0ca387618f1b996f620a1697053196926ed9dfd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d75b32b9b1e25c23855d35e0f8e77bbf78c24688
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123013"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010177"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>입력란 추가, 이동 또는 삭제(보고서 작성기 및 SSRS)
   입력란은 보고서에서 가장 일반적으로 사용되는 보고서 항목입니다. 입력란을 보고서 본문에 추가하여 제목, 매개 변수 선택 항목, 기본 제공 필드 및 날짜와 같은 정보를 표시할 수 있습니다.  
@@ -74,8 +74,8 @@ ms.locfileid: "48123013"
     >  입력란을 클릭하여 편집 모드에 있는 경우에는 Esc 키를 눌러 입력란을 선택합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [텍스트 상자 &#40;보고서 작성기 및 SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
+ [입력란&#40;보고서 작성기 및 SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
  [식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [바로 가기 키 &#40;보고서 작성기&#41;](../report-builder/keyboard-shortcuts-report-builder.md)  
+ [바로 가기 키&#40;보고서 작성기&#41;](../report-builder/keyboard-shortcuts-report-builder.md)  
   
   

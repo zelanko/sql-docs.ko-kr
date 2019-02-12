@@ -1,24 +1,21 @@
 ---
-title: '1 단원: 공급자 DQS 기술 자료 만들기 | Microsoft Docs'
+title: '1단원: 공급자 DQS 기술 자료 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 78825ccb-30fc-463c-8140-435532e2ecd2
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: f2b4fa3328f2c504be6c1ff761a558a6102a5299
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7aa0e4755de7f358596c7ce477367d84646fd176
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176493"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010955"
 ---
 # <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>1단원: 공급자 DQS 기술 자료 만들기
   이 단원에서는 공급자 데이터에 대한 지식(메타데이터)이 포함된 **Suppliers** 라는 DQS 기술 자료를 만듭니다. 이 기술 자료는 입력 공급자 데이터에 대해 정리 및 일치 작업을 수행하는 데 사용됩니다. 정리 작업은 잘못된/올바르지 않은 데이터를 식별하고, 잘못된 데이터를 수정하고, 수정/제안을 제공하고, 데이터를 표준화하고, 자세한 정보를 사용해서 데이터를 강화합니다. 일치 작업은 데이터를 비교하고 데이터에서 중복 항목을 제거하는 데 도움이 될 수 있도록 데이터에서 비슷하지만 약간 다른 레코드를 식별합니다.  
@@ -46,6 +43,6 @@ ms.locfileid: "48176493"
 -   정리 및 일치 작업에서 기술 자료를 사용할 수 있도록 기술 자료를 게시합니다.  
   
 ## <a name="next-step"></a>다음 단계  
- [태스크 1: 기술 자료 및 도메인 만들기](../../2014/tutorials/task-1-creating-a-knowledge-base-and-domains.md)  
+ [작업 1: 기술 자료 및 도메인 만들기](../../2014/tutorials/task-1-creating-a-knowledge-base-and-domains.md)  
   
   

@@ -15,12 +15,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5ef89fc257782f7977efbee371a40e188893bc7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 418259da44f85c3dadbadc413affc937991b2974
+ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53216062"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55832105"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>효과적인 데이터베이스 엔진 사용 권한 결정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,12 +63,12 @@ ms.locfileid: "53216062"
 >    ON SRM.member_principal_id = SP2.principal_id
 >  WHERE SP1.is_fixed_role = 1 -- Remove for SQL Server 2008
 >  ORDER BY SP1.name;
-```
+> ```
 > [!NOTE]
->  * All logins are members of the public role and cannot be removed. 
->  * This query checks tables in the master database but it can be executed in any database for the on premises product. 
+>  * 모든 로그인은 public 역할의 멤버이며 제거할 수 없습니다. 
+>  * 이 쿼리는 master 데이터베이스의 테이블을 확인하지만 온-프레미스 제품의 모든 데이터베이스에서 실행할 수 있습니다. 
 
-To determine who is a member of a fixed database role, execute the following query in each database.
+고정 데이터베이스 역할의 멤버를 확인하려면 각 데이터베이스에서 다음 쿼리를 실행합니다.
 ```sql
 SELECT DP1.name AS DatabaseRoleName, 
    isnull (DP2.name, 'No members') AS DatabaseUserName 
@@ -117,11 +117,11 @@ Windows 사용자(예: 엔지니어 및 관리자)는 둘 이상의 Windows 그�
 >    ON pr.principal_id = pe.grantee_principal_id
 >  WHERE is_fixed_role = 0 -- Remove for SQL Server 2008
 >  ORDER BY pr.name, type_desc;
-```
+> ```
 
-### Database Permissions
+### <a name="database-permissions"></a>데이터베이스 권한
 
-The following query returns a list of the permissions that have been granted or denied at the database level. This query should be executed in each database.   
+다음 쿼리는 데이터베이스 수준에서 부여되거나 거부된 권한 목록을 반환합니다. 이 쿼리는 각 데이터베이스에서 실행해야 합니다.   
 ```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 

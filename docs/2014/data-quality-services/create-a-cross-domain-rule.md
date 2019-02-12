@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.dm.testcdrule.f1
 - sql12.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: e413c2a6057476fb44d5a7a106c8374621b9937c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b50eb916b114387f9d80202cf0993e830e79aecd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415680"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012029"
 ---
 # <a name="create-a-cross-domain-rule"></a>도메인 간 규칙 만들기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에서 복합 도메인의 도메인 간 규칙을 만드는 방법에 대해 설명합니다. 도메인 간 규칙은 복합 도메인에 포함된 단일 도메인에서 값 사이의 관계를 테스트합니다. 도메인 값이 정확하고 비즈니스 요구 사항에 맞는 것으로 간주되려면 도메인 간 규칙이 복합 도메인 전체에서 유효해야 합니다. 도메인 간 규칙은 도메인 값의 유효성 검사, 수정 및 표준화에 사용됩니다.  
@@ -94,7 +94,7 @@ ms.locfileid: "52415680"
   
 2.  도메인 간 규칙을 완성하면 **End the Domain Management Activity** 에서 설명한 대로 [마침](../../2014/data-quality-services/end-the-domain-management-activity.md)을 클릭하여 도메인 관리 작업을 완료합니다.  
   
-##  <a name="FollowUp"></a> 후속편: 도메인 간 규칙을 만든 후  
+##  <a name="FollowUp"></a> 후속 작업: 도메인 간 규칙을 만든 후  
  도메인 간 규칙을 만든 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../../2014/data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../../2014/data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../../2014/data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
   

@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: eea42bfc7b02c4964f34ebc6fe5f4b067a33d21e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1905dbe53d5c869c25fcf6f9b07b46bf48dcaf98
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084543"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013253"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>HTML로 렌더링(보고서 작성기 및 SSRS)
   HTML 렌더링 확장 프로그램은 보고서를 HTML 형식으로 렌더링합니다. 완전한 형식의 HTML 페이지 또는 HTML 조각을 만들어 다른 HTML 페이지에 포함시킬 수도 있습니다. 모든 HTML은 UTF-8 인코딩을 사용하여 만들어집니다.  
   
  HTML 렌더링 확장 프로그램은 보고서 관리자에서 실행될 때를 포함하여 브라우저에 표시되는 보고서의 기본 렌더링 확장 프로그램입니다.  
   
- HTML 렌더링 확장 프로그램은 보고서 관리자에서 실행될 때를 포함하여 브라우저에 표시되는 보고서의 기본 렌더링 확장 프로그램입니다. HTML 렌더링 확장 프로그램은 HTML을 조각 또는 전체 HTML 문서로 렌더링할 수 있습니다. HTML이 조각인 경우 합니다 `HEAD`, `HTML`, 및 `BODY` HTML 문서 태그는 제거 됩니다. `BODY` 태그의 내용만 렌더링됩니다. 이 기능은 다른 애플리케이션에서 만든 HTML에 HTML을 포함하는 경우에 유용합니다.  
+ HTML 렌더링 확장 프로그램은 보고서 관리자에서 실행될 때를 포함하여 브라우저에 표시되는 보고서의 기본 렌더링 확장 프로그램입니다. HTML 렌더링 확장 프로그램은 HTML을 조각 또는 전체 HTML 문서로 렌더링할 수 있습니다. HTML이 조각인 경우 HTML 문서의 `HEAD`, `HTML` 및 `BODY` 태그는 제거되고 `BODY` 태그의 내용만 렌더링됩니다. 이 기능은 다른 애플리케이션에서 만든 HTML에 HTML을 포함하는 경우에 유용합니다.  
   
  일부 시나리오에서는 보고서를 HTML로 렌더링할 때 보고서 매개 변수를 사용하여 스크립트 삽입 공격을 시작할 수 있습니다. 보고서를 안전하게 보호하는 방법에 대한 자세한 내용은 [보고서 및 리소스 보안](../security/secure-reports-and-resources.md)을 참조하세요.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48084543"
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [여러 보고서 렌더링 확장 프로그램의 대화형 기능 &#40;보고서 작성기 및 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [보고서 항목 렌더링&#40;보고서 작성기 및 SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

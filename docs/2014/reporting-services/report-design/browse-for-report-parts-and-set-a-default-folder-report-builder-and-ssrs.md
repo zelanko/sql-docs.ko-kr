@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0162c6e640c13e743d3ad816e7fcb3286758f635
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ae8fddf7e008c1c97c30c18deb2d8aec60b77415
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222253"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009585"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>보고서 파트 찾아보기 및 기본 폴더 설정(보고서 작성기 및 SSRS)
   보고서를 만드는 가장 쉬운 방법은 테이블, 차트 등의 기존 보고서 파트를 보고서 파트 갤러리에서 보고서에 추가하는 것입니다. 보고서 파트를 보고서에 추가할 때는 해당 파트가 작동하는 데 필요한 모든 항목도 추가하게 됩니다. 예를 들어 데이터를 표시하는 모든 보고서 파트는 데이터 세트, 즉 쿼리와 데이터 원본에 대한 연결을 사용합니다. 보고서 파트를 보고서에 추가한 후 필요한 만큼 구성 요소를 수정할 수 있습니다.  
@@ -65,9 +65,9 @@ ms.locfileid: "48222253"
   
 ## <a name="see-also"></a>관련 항목  
  [업데이트 확인 또는 업데이트 &#40;보고서 작성기 및 SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
- [보고서 파트 &#40;보고서 작성기 및 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
- [보고서 파트 및 보고서 작성기에서 데이터 집합](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [보고서 파트&#40;보고서 작성기 및 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [보고서 작성기의 보고서 파트 및 데이터 세트](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [보고서 파트 문제 해결 &#40;보고서 작성기 및 SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
- [게시 및 보고서 파트 다시 게시 &#40;보고서 작성기 및 SSRS&#41;](publish-and-republish-report-parts-report-builder-and-ssrs.md)  
+ [보고서 파트 게시 및 다시 게시&#40;보고서 작성기 및 SSRS&#41;](publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   

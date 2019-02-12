@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 30068c028b497b00408ca87cf1e796df8ba34926
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c547558f98d514b73c4613d4e11f8694a6a7a91b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081712"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014954"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>셰이프 차트(보고서 작성기 및 SSRS)
   세이프 차트에서는 값 데이터를 전체의 백분율로 표시합니다. 셰이프 차트는 집합의 서로 다른 값이 차지하는 비율을 비교하여 표시하는 데 주로 사용됩니다. 범주는 셰이프의 개별 세그먼트로 표현됩니다. 세그먼트의 크기는 값에 따라 결정됩니다. 셰이프 차트는 원형 차트와 비슷하지만 범주를 가장 큰 것부터 가장 작은 것 순으로 정렬한다는 점에서 차이가 있습니다.  
   
- 깔대기형 차트에서는 값을 점점 감소하는 비율로 표시합니다. 영역의 크기는 모든 값의 합계에 대한 계열 값의 비율로 결정됩니다. 예를 들어 웹 사이트 방문자 추세를 표시하는 데 깔대기형 차트를 사용할 수 있습니다. 이 경우 홈 페이지 방문자 수가 가장 많았던 시점을 나타내는 제일 넓은 영역이 깔대기형 차트의 맨 위에 표시되고 다른 영역은 크기에 비례하여 그 아래 표시됩니다. 깔때기형 차트에 데이터를 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)합니다.  
+ 깔대기형 차트에서는 값을 점점 감소하는 비율로 표시합니다. 영역의 크기는 모든 값의 합계에 대한 계열 값의 비율로 결정됩니다. 예를 들어 웹 사이트 방문자 추세를 표시하는 데 깔대기형 차트를 사용할 수 있습니다. 이 경우 홈 페이지 방문자 수가 가장 많았던 시점을 나타내는 제일 넓은 영역이 깔대기형 차트의 맨 위에 표시되고 다른 영역은 크기에 비례하여 그 아래 표시됩니다. 깔때기형 차트에 데이터를 추가하는 방법에 대한 자세한 내용은 [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)를 참조하세요.  
   
  다음 그림에서는 깔대기형 차트의 예를 보여 줍니다.  
   

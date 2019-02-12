@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fae03147c4e5364ae7c41590c88c9b6791a6370c
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+manager: kfile
+ms.openlocfilehash: 75123271b73c166f87be0ab1a83242736fa966ca
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119990"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009707"
 ---
 # <a name="report-server-web-service-endpoints"></a>보고서 서버 웹 서비스 엔드포인트
   보고서 서버 웹 서비스는 보고서 서버 관리 및 보고서의 실행과 탐색을 위한 엔드포인트를 다수 제공합니다.  
   
 ## <a name="the-management-endpoints"></a>관리 엔드포인트  
- 보고서 서버에서 개체 관리를 위해 사용할 수 있는 세 가지 엔드포인트에는 <xref:ReportService2005>, <xref:ReportService2006> 및 <xref:ReportService2010>이 있습니다. <xref:ReportService2005> 엔드포인트는 기본 모드로 구성된 보고서 서버에서 개체를 관리하는 데 사용되며, <xref:ReportService2006> 엔드포인트는 SharePoint 통합 모드로 구성된 보고서 서버에서 개체를 관리하는 데 사용됩니다. 합니다 <xref:ReportService2010> 끝점의 기능을 병합 <xref:ReportService2005> 고 <xref:ReportService2006> 기본 모드 또는 SharePoint 통합된 모드로 구성 된 보고서 서버의 개체를 관리할 수 있습니다.  
+ 보고서 서버에서 개체 관리를 위해 사용할 수 있는 세 가지 엔드포인트에는 <xref:ReportService2005>, <xref:ReportService2006> 및 <xref:ReportService2010>이 있습니다. <xref:ReportService2005> 엔드포인트는 기본 모드로 구성된 보고서 서버에서 개체를 관리하는 데 사용되며, <xref:ReportService2006> 엔드포인트는 SharePoint 통합 모드로 구성된 보고서 서버에서 개체를 관리하는 데 사용됩니다. <xref:ReportService2010> 엔드포인트는 <xref:ReportService2005> 및 <xref:ReportService2006>의 기능을 병합하며, 기본 모드 또는 SharePoint 통합 모드용으로 구성된 보고서 서버의 개체를 관리할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  보고서 서버가 SharePoint 통합 모드로 구성된 경우 <xref:ReportService2005> API는 `rsOperationNotSupportedSharePointMode` 오류를 반환합니다. 보고서 서버가 기본 모드로 구성된 경우 <xref:ReportService2006> API는 `rsOperationNotSupportedNativeMode` 오류를 반환합니다. 마찬가지로 <xref:ReportService2010>의 모드별 API를 잘못된 모드에 사용하면 API에서 해당 오류를 반환합니다.  
@@ -67,7 +67,7 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
   
 |프록시 엔드포인트|Description|  
 |--------------------|-----------------|  
-|<xref:ReportService2006>|SharePoint 통합 모드로 구성된 보고서 서버를 관리하기 위한 API를 제공합니다. **참고:** 에서이 끝점은 사용 되지 않습니다. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]합니다.|  
+|<xref:ReportService2006>|SharePoint 통합 모드로 구성된 보고서 서버를 관리하기 위한 API를 제공합니다. **참고:**  이 엔드포인트는 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]에서 더 이상 사용되지 않습니다.|  
 |<xref:ReportService2010>|기본 모드 또는 SharePoint 통합 모드로 구성된 보고서 서버를 관리하기 위한 API를 제공합니다.|  
 |<xref:ReportExecution2005>|보고서 실행 및 탐색을 위한 API를 제공합니다.|  
 |<xref:ReportServiceAuthentication>|폼 인증을 위해 SharePoint 웹 응용 프로그램이 구성된 경우 보고서 서버에 대해 사용자를 인증하기 위한 API를 제공합니다.|  

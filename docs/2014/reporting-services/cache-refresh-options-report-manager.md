@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e1fb1f7f249d8252873eb7ecc879aac05fb496b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b759391592a84d0509a8036277ccb6e0cc92a279
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081553"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011506"
 ---
 # <a name="cache-refresh-options-report-manager"></a>캐시 새로 고침 옵션(보고서 관리자)
   캐시 새로 고침 옵션 페이지를 사용하여 보고서 또는 공유 데이터 세트의 임시 데이터 복사본과 함께 캐시를 사전 로드하는 일정을 계획할 수 있습니다. 새로 고침 계획에는 일정 및 매개 변수 값을 지정하거나 재정의하는 옵션이 포함됩니다. 공유 데이터 세트의 경우 읽기 전용으로 표시된 매개 변수의 값은 재정의할 수 없습니다. 새로 고침 옵션 페이지에서는 새로 고침 계획을 여러 개 만들어 사용할 수 있습니다.  
@@ -66,14 +66,14 @@ ms.locfileid: "48081553"
  **구성**  
  빈도 정보를 지정하는 데 사용되는 일정 페이지를 열려면 클릭합니다.  
   
- 자세한 내용은 [새 일정: 일정 페이지 편집 &#40;보고서 관리자&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)합니다.  
+ 자세한 내용은 참조 하세요. [새 일정: 일정 편집 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)합니다.  
   
  **공유 일정**  
  기존 일정을 선택하려면 이 옵션을 선택합니다.  
   
- 자세한 내용은 [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)합니다.  
+ 자세한 내용은 [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)을 참조하세요.  
   
- **@\<** *매개 변수* **>**  
+ **@\<** *Parameter* **>**  
  매개 변수 값의 한 조합을 지정합니다. 이 섹션은 현재 데이터 세트나 보고서에 매개 변수가 있을 경우에만 나타납니다.  
   
  다음 섹션의 [매개 변수 지정](#Parameters) 을 참조하십시오.  
@@ -103,7 +103,7 @@ ms.locfileid: "48081553"
   
  공유 데이터 세트 정의에서 매개 변수에 대해 **쿼리에서 생략** 옵션을 지정할 경우 기본값을 제공할 필요가 없습니다. 이 플래그는 해당 데이터 세트 매개 변수가 쿼리에 사용되지 않음을 나타냅니다. 예를 들어 이 매개 변수는 데이터 세트 필터에만 사용되는 보고서 매개 변수이기 때문에 공유 데이터 세트 정의에 나타납니다.  
   
- 데이터 세트 매개 변수 옵션을 보거나 변경하려면 공유 데이터 세트 정의를 편집해야 합니다. 자세한 내용은 [공유 데이터 집합 관리](report-data/manage-shared-datasets.md)합니다.  
+ 데이터 세트 매개 변수 옵션을 보거나 변경하려면 공유 데이터 세트 정의를 편집해야 합니다. 자세한 내용은 [공유 데이터 세트 관리](report-data/manage-shared-datasets.md)를 참조하세요.  
   
 ### <a name="report-parameters"></a>보고서 매개 변수  
  보고서의 경우 캐시 새로 고침 계획을 만들려면 각 매개 변수 값이 유효해야 합니다. 각 보고서 매개 변수에 대해 기본값을 입력하거나 선택해야 합니다. 사용자가 설정한 값은 보고서 서버에서 보고서 매개 변수에 대해 정의된 기본값을 재정의합니다.  
@@ -130,7 +130,7 @@ ms.locfileid: "48081553"
   
 ## <a name="see-also"></a>관련 항목  
  [항목 수준의 태스크](security/tasks-and-permissions-item-level-tasks.md)   
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)   
  [보고서 캐시&#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
  [공유 데이터 집합 관리](report-data/manage-shared-datasets.md)  

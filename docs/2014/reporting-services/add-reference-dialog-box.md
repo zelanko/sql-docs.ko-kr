@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Edit References dialog box
 ms.assetid: 7bdd2eee-195a-4a2f-a0aa-56f7e90c1fb4
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d857a936c0c1a25ff54f4b51aa6511a101e96b2d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 72c14cba8580e926eff05dbb5b7644d64e517913
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223293"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009487"
 ---
 # <a name="add-reference-dialog-box"></a>참조 추가 대화 상자
   **참조 추가** 대화 상자를 사용하여 사용자 지정 어셈블리 또는 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 구성 요소에 대한 참조를 보고서에 추가할 수 있습니다. 어셈블리 참조를 추가한 후에는 어셈블리 또는 구성 요소의 클래스나 메서드에 대한 정규화된 참조를 포함하는 식 또는 포함된 사용자 지정 코드를 작성할 수 있습니다. 자세한 내용은 [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md) 또는 [보고서에 어셈블리 참조 추가&#40;SSRS&#41;](report-design/add-an-assembly-reference-to-a-report-ssrs.md)를 참조하세요.  
@@ -39,7 +39,7 @@ ms.locfileid: "48223293"
  최근에 사용된 어셈블리의 이름을 선택하는 데 사용합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서를 사용 하 여 사용자 지정 어셈블리 사용](custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [보고서에서 사용자 지정 어셈블리 사용](custom-assemblies/using-custom-assemblies-with-reports.md)   
  [보고서에 코드 추가&#40;SSRS&#41;](report-design/add-code-to-a-report-ssrs.md)  
   
   

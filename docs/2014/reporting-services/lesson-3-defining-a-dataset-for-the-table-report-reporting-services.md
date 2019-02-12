@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 33a91c27f78e3bbf2dfec3aeb71f2f2230c9376d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 3f57ec59753e7539107c652d60f7a00959f95cbb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528235"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009675"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>3단원: 테이블 보고서에 대한 데이터 집합 정의(Reporting Services)
   데이터 원본을 정의한 후에는 데이터 세트를 정의해야 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 보고서에 사용하는 데이터는 *데이터 집합*에 포함됩니다. 데이터 세트에는 데이터 원본에 대한 포인터와 보고서에서 사용하는 쿼리는 물론 계산된 필드 및 변수도 포함됩니다.  
@@ -71,9 +71,9 @@ ms.locfileid: "52528235"
 ## <a name="next-task"></a>다음 태스크  
  보고서에 대한 데이터를 검색하는 쿼리를 지정했습니다. 다음 단원에서는 보고서 레이아웃을 만듭니다. 참조 [4 단원: 보고서에 테이블 추가 &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [쿼리, 보고서 디자이너 SQL Server Data Tools의 디자인 도구 &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [SQL Server 연결 형식&#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
- [자습서: TRANSACT-SQL 문 작성](../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [자습서: Transact-SQL 문 작성](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

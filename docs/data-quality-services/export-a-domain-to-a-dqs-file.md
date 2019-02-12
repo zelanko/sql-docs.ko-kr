@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9ead5310adef140651057ab02089a9fe6f71fbde
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 1348b0a08f8e3725cc7a3e7d18e97ded02652028
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617013"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010264"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>.dqs 파일로 도메인 내보내기
 
@@ -43,7 +43,7 @@ ms.locfileid: "52617013"
 ##  <a name="Export"></a> Export a domain to a .dqs file  
  모든 도메인 관리 페이지에서 내보낼 수 있습니다. 내보내기 명령은 사용자 인터페이스의 컨트롤과 도메인 목록 창의 상황에 맞는 메뉴에 있는 명령에서 사용할 수 있습니다.  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 애플리케이션을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면의 도메인 관리 작업에서 기술 자료를 엽니다.  
   

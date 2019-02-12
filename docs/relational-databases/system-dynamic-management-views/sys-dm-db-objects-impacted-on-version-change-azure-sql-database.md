@@ -2,10 +2,8 @@
 title: sys.dm_db_objects_impacted_on_version_change (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_objects_impacted_on_version_change_TSQL
@@ -22,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 11445fefd94925f32e40173491f27b8ea0837218
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6f6538aa13b2236c7dca52189b37addad85ae53
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645361"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012942"
 ---
 # <a name="sysdmdbobjectsimpactedonversionchange-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -36,7 +34,7 @@ ms.locfileid: "47645361"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|class|**int** NOT NULL|영향을 받는 개체의 클래스:<br /><br /> **1** = 제약 조건<br /><br /> **7** = 인덱스 및 힙|  
+|class|**int** NOT NULL|영향을 받는 개체의 클래스:<br /><br /> **1** = constraint<br /><br /> **7** = 인덱스 및 힙|  
 |class_desc|**nvarchar(60)** NOT NULL|클래스 설명:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
 |major_id|**int** NOT NULL|제약 조건의 개체 ID 또는 인덱스나 힙을 포함하는 테이블의 개체 ID입니다.|  
 |minor_id|**int** NULL|**NULL** 제약 조건에 대 한<br /><br /> 인덱스 및 힙의 경우 Index_id|  

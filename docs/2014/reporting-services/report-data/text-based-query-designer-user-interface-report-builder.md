@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d2eecd40de68a6678b3011d15fc13f7cf9757022
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 42be2520e6961dcf990635a18fcc7d237876b869
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111873"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010344"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>텍스트 기반 쿼리 디자이너 사용자 인터페이스(보고서 작성기)
   텍스트 기반 쿼리 디자이너에서 데이터 원본에서 지원하는 쿼리 언어를 사용하여 쿼리를 지정하고, 쿼리를 실행하고, 디자인 타임에 결과를 볼 수 있습니다. 여러 개의 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문, 사용자 지정 데이터 처리 확장 프로그램에 대한 쿼리 또는 명령 구문, 식으로 지정된 쿼리를 지정할 수 있습니다. 텍스트 기반 쿼리 디자이너는 쿼리를 전처리하지 않고 모든 종류의 쿼리 구문을 포함할 수 있으므로 많은 데이터 원본 유형에 대한 기본 쿼리 디자이너 도구입니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "48111873"
 |**텍스트로 편집**|텍스트 기반 쿼리 디자이너와 그래픽 쿼리 디자이너 사이를 전환합니다. 모든 데이터 원본 유형에서 그래픽 쿼리 디자이너를 지원하는 것은 아닙니다.|  
 |**가져오기**|파일 또는 보고서에서 기존 쿼리를 가져옵니다. sql 및 rdl 파일 형식만 지원됩니다.|  
 |![쿼리 실행](../../analysis-services/media/rsqdicon-run.gif "쿼리 실행")|쿼리를 실행하고 결과 창에 결과 집합을 표시합니다.|  
-|**명령 유형**|**Text**, **StoredProcedure**또는 **TableDirect**를 선택합니다. 저장 프로시저에 매개 변수가 있을 경우 도구 모음에서 **실행** 을 클릭하면 **쿼리 매개 변수 정의** 대화 상자가 표시되며 필요에 따라 값을 입력할 수 있습니다.<br /><br /> 참고: 저장 프로시저에서 둘 이상의 결과 집합을 반환할 경우 첫 번째 결과 집합만 데이터 세트를 채우는 데 사용됩니다.|  
+|**명령 유형**|**Text**, **StoredProcedure**또는 **TableDirect**를 선택합니다. 저장 프로시저에 매개 변수가 있을 경우 도구 모음에서 **실행** 을 클릭하면 **쿼리 매개 변수 정의** 대화 상자가 표시되며 필요에 따라 값을 입력할 수 있습니다.<br /><br /> 참고: 저장 프로시저에서 둘 이상의 결과 세트를 반환할 경우 첫 번째 결과 집합만 데이터 세트를 채우는 데 사용됩니다.|  
   
 ### <a name="command-type-text"></a>Text 명령 유형  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 집합을 만들 때 기본적으로 관계형 쿼리 디자이너가 열립니다. 텍스트 기반 쿼리 디자이너로 전환하려면 도구 모음에서 **텍스트로 편집** 토글 단추를 클릭합니다. 텍스트 기반 쿼리 디자이너에는 쿼리 창 및 결과 창이 제공됩니다. 다음 그림에서는 레이블과 함께 각 창을 보여 줍니다.  

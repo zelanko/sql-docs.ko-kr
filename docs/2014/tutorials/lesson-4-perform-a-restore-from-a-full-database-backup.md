@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: 580f76e6-9802-4abc-9043-db6de592c733
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 3af76a0ec664a10d5457dc3d106de3727740ce19
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 077fb708f09db0182bc5f1510f0264b139beab13
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523665"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017094"
 ---
 # <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>4단원: 전체 데이터베이스 백업에서 복원 수행
   이 단원에서는 이전 단원에서 만든 전체 데이터베이스 백업에서 복원을 수행하는 tsql 문을 사용하는 방법을 보여 줍니다.  

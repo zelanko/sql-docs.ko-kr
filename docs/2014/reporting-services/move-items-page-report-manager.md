@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fc83b8d2-bc79-4b56-8970-34a1cbbcc176
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a6c4d822448b452cd66cbc59beffb8fe2d6f0fb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 96d3310c489dea5aadc3e9b7e873dbb89ceee9bb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082753"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009688"
 ---
 # <a name="move-items-page-report-manager"></a>항목 이동 페이지(보고서 관리자)
   항목 이동 페이지를 사용하여 보고서, 폴더 또는 기타 항목을 보고서 서버의 새 위치로 이동할 수 있습니다. 새 위치의 경로를 입력하거나 트리 뷰를 사용하여 보고서 서버 네임스페이스에서 새 위치를 찾아볼 수 있습니다. 현재 보고서 서버에 저장되어 있고 이동 권한 있는 항목만 이동할 수 있습니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "48082753"
 4.  항목 도구 모음에서 **이동**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [일반 속성 페이지, 폴더 &#40;보고서 관리자&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
  [일반 속성 페이지, 보고서&#40;보고서 관리자&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [일반 속성 페이지, 리소스 &#40;보고서 관리자&#41;](../../2014/reporting-services/general-properties-page-resources-report-manager.md)   

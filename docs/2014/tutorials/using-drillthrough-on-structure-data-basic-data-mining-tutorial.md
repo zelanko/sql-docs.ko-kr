@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a693979c-0564-4d6d-b35d-cbbc8f350469
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9e12e4c4bcde1887de25e3ed75479da8b4eb5433
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 68d5d29a4aed7380bd7a53c65d140aac24912392
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053049"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012764"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>구조 데이터에 드릴스루 사용(기본 데이터 마이닝 자습서)
-  광고 캠페인의 일부로 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 메일러를 보내는 잠재 고객 34 ~ 40 시대에 인구 통계. 마케팅 부서에에서 자전거를 구매한 고객 에게도 메일러를 보내려고 하고자 했습니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 연수가 5 년 전 합니다. 이 단원에서는 오래 전에 자전거를 구매한 고객을 식별하고 그들의 연락처 정보를 검색합니다. 이 정보는 모델에 포함되어 있지 않지만 구조에는 포함되어 있습니다. 연락처 정보를 검색하려면 먼저 구조에 대해 드릴스루를 사용할 수 있는지 확인한 다음 드릴스루를 사용하여 대상 고객의 이름과 주소를 확인합니다.  
+  광고 캠페인의 일부로 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 메일러를 보내는 잠재 고객 34 ~ 40 시대에 인구 통계. 마케팅 부서에서는 5년 전에 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 에서 자전거를 구매한 고객에게도 메일러를 보내려고 합니다. 이 단원에서는 오래 전에 자전거를 구매한 고객을 식별하고 그들의 연락처 정보를 검색합니다. 이 정보는 모델에 포함되어 있지 않지만 구조에는 포함되어 있습니다. 연락처 정보를 검색하려면 먼저 구조에 대해 드릴스루를 사용할 수 있는지 확인한 다음 드릴스루를 사용하여 대상 고객의 이름과 주소를 확인합니다.  
   
 ### <a name="to-enable-drillthrough-on-a-mining-model"></a>마이닝 모델에서 드릴스루를 사용하려면  
   
@@ -50,7 +49,7 @@ ms.locfileid: "48053049"
  축하합니다. 기본 데이터 마이닝 자습서를 완료했습니다. 이제 데이터 마이닝 도구를 능숙하게 사용할 수 있게 되었으므로 예측, 시장 바구니 분석 및 시퀀스 클러스터링에 대한 모델을 만드는 방법을 보여 주는 중급 데이터 마이닝 자습서도 완료하는 것이 좋습니다.  
   
 ## <a name="previous-task-in-lesson"></a>단원의 이전 태스크  
- [예측을 만드는 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [예측 만들기&#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [예측 쿼리 작성기를 사용하여 예측 쿼리 만들기](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  

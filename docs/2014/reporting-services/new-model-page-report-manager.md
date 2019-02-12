@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 27d5bf66-b0e7-489e-a830-ffe2ec8e5350
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 50df73e41d67b69479782385244031f85baf5652
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: df14375ad8ae54377f7dbbd599d0bcc7b50aa2d6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138793"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010794"
 ---
 # <a name="new-model-page-report-manager"></a>새 모델 페이지(보고서 관리자)
   이 페이지를 사용하여 공유 데이터 원본에서 기본 보고서 모델을 생성할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다차원 데이터 원본, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관계형 데이터 원본, 그리고 Oracle 관계형 데이터 원본에서만 보고서 모델을 생성할 수 있습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "48138793"
  **이름**  
  모델의 이름을 지정합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 이름 지정 시에는 다음 문자를 사용하지 마십시오.  
   
- ; ? : \@ & = +, $ / * \< > | " /  
+ ; ? : \@ & = + , $ / * \< > | " /  
   
  **설명**  
  모델에 대한 설명을 표시합니다. 보고서 관리자를 통해 이 항목을 보는 사용자는 폴더 계층을 검색할 때 이 설명을 볼 수 있습니다.  
