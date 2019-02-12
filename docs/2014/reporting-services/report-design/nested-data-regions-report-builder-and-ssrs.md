@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d3b3ff687b0ac3f9319351b45a49f8f272444ce9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1b35399504c840d81573366401ea8f4978f47f58
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110023"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026055"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>중첩된 데이터 영역(보고서 작성기 및 SSRS)
   일반적으로 데이터 요약을 간결하게 표시하거나 데이터를 테이블이나 행렬 이외에 시각적인 방식으로도 표시하려는 경우 차트와 같은 한 데이터 영역을 행렬과 같은 다른 데이터 영역에 중첩할 수 있습니다.  
@@ -87,10 +87,10 @@ ms.locfileid: "48110023"
  [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [목록&#40;보고서 작성기 및 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [계기 &#40;보고서 작성기 및 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [계기&#40;보고서 작성기 및 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [보고서 항목 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)   
- [자습서: 보고서에 KPI 추가&#40;보고서 작성기&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
- [계기의 눈금 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [자습서: 보고서에 KPI 추가 &#40;보고서 작성기&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [계기의 눈금 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

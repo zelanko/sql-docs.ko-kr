@@ -11,16 +11,16 @@ helpviewer_keywords:
 - XPath queries [SQLXML], XPath variables
 - XPath variables [SQLXML]
 ms.assetid: c11ab816-11b8-4131-8b77-c03fe500fa10
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eba379fa701ef65caaa5478ae298c47c602d0dc2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f6d8bb97da7bd678f23c13f48c6a4c973071b43
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690431"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037514"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 XPath 변수 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

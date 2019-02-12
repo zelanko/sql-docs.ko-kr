@@ -11,13 +11,13 @@ ms.topic: reference
 ms.assetid: d3e658c9-bb22-480b-a3d5-bcde8f537ab2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 30ebf7f456a7359d1723ccacc8e14a74cd29859f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3bfc264fe460b4df9948762287b1a1d67fbb8144
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221733"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027630"
 ---
 # <a name="model-methods"></a>모델 메서드
   다음 메서드를 사용하여 모델을 관리할 수 있습니다.  

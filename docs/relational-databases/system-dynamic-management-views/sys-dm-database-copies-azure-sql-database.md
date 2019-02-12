@@ -2,10 +2,8 @@
 title: sys.dm_database_copies (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - dm_database_copies_TSQL
@@ -22,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d11f152d4d3d929baeab04cbf44e3a4b2848f456
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b5a0a656693d66e701642c9c2202c2862136a54
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640471"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031654"
 ---
 # <a name="sysdmdatabasecopies-azure-sql-database"></a>sys.dm_database_copies(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -53,7 +51,7 @@ ms.locfileid: "47640471"
 |**replication_state**|**tinyint**|이 데이터베이스에 대 한 연속 복사 복제의 상태입니다. 값은 다음과 같습니다.<br /><br /> 0 = 보류 중입니다. 데이터베이스 복사본을 만드는 예약 되었지만 필요한 준비 단계는 아직 완료 되지 않았거나 시드 할당량에 의해 일시적으로 차단 됩니다.<br /><br /> 1 = Seeding 합니다. 시드 되는 데이터베이스 복사는 완벽 하 게를 아직 동기화 하지 원본 데이터베이스입니다. 이 상태의 복사본을 연결할 수 없습니다. 시드 진행 중인 작업을 취소 하려면 데이터베이스 복사를 삭제 해야 합니다.|  
 |**replication_state_desc**|**nvarchar(256)**|replication_state에 대한 설명으로, 다음 중 하나입니다.<br /><br /> PENDING<br /><br /> SEEDING<br />|  
 |**maximum_lag**|**int**|예약 된 필드입니다.|  
-|**is_continuous_copy**|**bit**|0 = 0을 반환 합니다.|  
+|**is_continuous_copy**|**bit**|0 =  Returns 0|  
 |**is_target_role**|**bit**|0 = 원본 데이터베이스<br /><br /> 1 = 데이터베이스 복사|  
 |**is_interlink_connected**|bit|예약 된 필드입니다.|  
 |**is_offline_secondary**|bit|예약 된 필드입니다.|  

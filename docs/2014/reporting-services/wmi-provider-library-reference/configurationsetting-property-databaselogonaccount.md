@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 55f2863f-1ac1-4519-b512-e7f11c0ea5ea
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6f66f21b5c866688bd5c348f26788f4a869aca88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c9192e0845a5a6df9c7b848a3f91368dd15cfc60
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151953"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025064"
 ---
 # <a name="databaselogonaccount-property-wmi-msreportserverconfigurationsetting"></a>DatabaseLogonAccount 속성(WMI MSReportServer_ConfigurationSetting)
   보고서 서버에서 보고서 서버 데이터베이스에 연결할 때 사용하는 로그온 계정을 지정합니다. 읽기 전용입니다.  
@@ -46,7 +46,7 @@ public string DatabaseLogonAccount;
  [MSReportServer_ConfigurationSetting 클래스](msreportserver-configurationsetting-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 속성에 대 한 유효한 값의 값에 따라 달라 집니다 합니다 [DatabaseLogonType](configurationsetting-property-databaselogontype.md) 속성입니다.  
+ 이 속성의 유효 값은 [DatabaseLogonType](configurationsetting-property-databaselogontype.md) 속성 값에 따라 달라집니다.  
   
  경우이 속성은 무시 합니다 [DatabaseLogonType](configurationsetting-property-databaselogontype.md) 속성이 `2 (Service)`.  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 45e488f189cf9068531b927b1b28bfde621555da
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 86bffd9c3cf98732da253e511287a9c9e722f4a7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353391"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033124"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>자습서: 행렬 보고서 만들기(보고서 작성기)
   이 자습서에서는 예제 판매 데이터를 기반으로 기본 행렬 보고서를 만드는 방법을 배웁니다. 행렬에는 중첩 행 및 열 그룹과 인접 열 그룹이 있습니다. 열의 서식을 지정하고 텍스트를 회전하는 방법도 배웁니다. 다음 그림에서는 만들려는 보고서와 비슷한 보고서를 보여 줍니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "53353391"
   
 1.  [입력란 270도 회전](#RotateTextBox)  
   
- 이 자습서에 소요되는 예상 시간: 20 분입니다.  
+ 이 자습서에 소요되는 예상 시간: 20분.  
   
 ## <a name="requirements"></a>요구 사항  
  요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/report-builder-tutorials.md)을 참조하세요.  
@@ -325,7 +325,7 @@ ms.locfileid: "53353391"
   
  보고서의 보고서 머리글에 보고서 제목이 포함됩니다.  
   
-##  <a name="Save"></a> 8입니다. 보고서 저장  
+##  <a name="Save"></a> 8. 보고서 저장  
  보고서를 보고서 서버, SharePoint 라이브러리 또는 컴퓨터에 저장할 수 있습니다.  
   
  이 자습서에서는 보고서를 보고서 서버에 저장합니다. 보고서 서버에 액세스할 수 없는 경우에는 보고서를 컴퓨터에 저장하십시오.  
@@ -356,7 +356,7 @@ ms.locfileid: "53353391"
   
 4.  **저장**을 클릭합니다.  
   
-##  <a name="RotateTextBox"></a> 9입니다. (선택 사항) 입력란 270도 회전  
+##  <a name="RotateTextBox"></a> 9. (선택 사항) 입력란 270도 회전  
  행렬이 있는 보고서는 실행 시 가로 및 세로로 확장될 수 있습니다. 입력란을 세로로 회전하거나 270도 회전하면 가로 공간을 절약할 수 있습니다. 그러면 렌더링된 보고서의 너비가 좁아지며, 보고서가 Microsoft Word 등의 형식으로 내보낼 경우 인쇄되는 페이지에 더 잘 맞게 됩니다.  
   
  입력란에서는 텍스트를 가로 및 세로(위에서 아래로)로 표시할 수도 있습니다. 자세한 내용은 [입력란&#40;보고서 작성기 및 SSRS&#41;](report-design/text-boxes-report-builder-and-ssrs.md)를 참조하세요.  

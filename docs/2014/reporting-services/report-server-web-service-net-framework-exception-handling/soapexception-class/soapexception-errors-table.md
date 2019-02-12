@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3dbf1b5a-bd2a-4385-925d-5d095d72014c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7a9068f74f2c059dd4208e9b5b7228705a522ff5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b2bd827eb6c1ff4abf5e531d54bbdde66b44249c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168213"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027244"
 ---
 # <a name="soapexception-errors-table"></a>SoapException 오류 테이블
   보고서 서버는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 발생하는 오류를 기반으로 SOAP 예외 오류 및 오류 메시지를 생성합니다. 다음 표는 보고서 서버 웹 서비스의 **SoapException**을 통해 메서드에서 액세스할 수 있는 오류를 보여 줍니다. 예외를 throw하는 메서드별로 구성되어 있습니다.  

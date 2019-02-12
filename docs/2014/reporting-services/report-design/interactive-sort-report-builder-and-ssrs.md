@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d096f978b138de32c9aae7cdadd1480484dd095f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5c62d4244b025ab987100a58aef1b2a10a7efa17
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206123"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022977"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>대화형 정렬(보고서 작성기 및 SSRS)
   대화형 정렬 단추를 추가하여 사용자가 테이블의 행 또는 행렬의 행 및 열에 대해 오름차순 및 내림차순 사이를 전환하도록 할 수 있습니다. 대화형 정렬의 일반적인 용도는 열 머리글마다 정렬 단추를 추가하는 것입니다. 그러면 사용자는 정렬할 기준이 되는 열을 선택할 수 있습니다.  
@@ -30,15 +30,15 @@ ms.locfileid: "48206123"
   
 -   **정렬 대상:** 행 또는 열  
   
--   **정렬 기준:** 테이블 열에 표시되는 필드 또는 표시되지 않는 필드  
+-   **정렬 기준으로 대상:** 테이블 열에 표시되는 필드 또는 표시되지 않는 필드  
   
--   **정렬할 컨텍스트:** 예를 들어 행 그룹에 연결된 행, 열 그룹에 연결된 열, 정보 행, 부모 그룹 내 자식 그룹 또는 부모 및 자식 그룹 모두를 기준으로 정렬할 수 있습니다.  
+-   **정렬할 컨텍스트:** 예를 들어 행 그룹에 연결된 행, 열 그룹에 연결된 열, 정보 행, 부모 그룹 내 자식 그룹 또는 부모/자식 그룹 모두를 기준으로 정렬할 수 있습니다.  
   
 -   **정렬 단추를 추가할 입력란:** 열 머리글 또는 그룹 행 머리글  
   
--   **여러 데이터 영역에 대해 정렬을 동기화할지 여부:** 보고서를 디자인하여 사용자가 정렬 순서를 전환할 때 다른 데이터 영역도 같은 순서로 정렬되도록 할 수 있습니다.  
+-   **여러 데이터 영역에 대해 정렬을 동기화할지 여부:** 사용자가 정렬 순서를 전환할 때 상위 항목이 동일한 다른 데이터 영역도 정렬되도록 보고서를 디자인할 수 있습니다.  
   
- 단계별 지침은 [테이블이 나 행렬에 대화형 정렬 추가 &#40;보고서 작성기 및 SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)합니다.  
+ 단계별 지침은 [테이블 또는 행렬에 대화형 정렬 추가&#40;보고서 작성기 및 SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)를 참조하세요.  
   
  다음 표에서는 대화형 정렬 단추를 사용하여 얻을 수 있는 효과에 대해 간략히 설명합니다.  
   
@@ -55,11 +55,11 @@ ms.locfileid: "48206123"
 ## <a name="adding-interactive-sort-for-multiple-groups"></a>여러 그룹에 대한 대화형 정렬 추가  
  단일 데이터 세트 필드 기반의 중첩 행 그룹이 있는 테이블에서 대화형 정렬 단추를 추가하여 부모 그룹 값, 자식 그룹 값 또는 정보 행을 정렬할 수 있습니다. 여러 번 클릭하지 않고도 부모 및 자식 그룹 값 모두를 기준으로 테이블을 정렬할 수 있는 능력을 사용자에게 제공할 수 있습니다.  
   
- 이렇게 하려면 여러 필드를 결합하는 식을 그룹화하여 테이블을 다시 디자인해야 합니다. 예를 들어 재고 수가 들어 있는 데이터 세트의 경우 원래 테이블을 크기 및 색 순서로 그룹화하는 경우 크기 및 색을 결합한 그룹 식으로 단일 그룹을 지정할 수 있습니다. 자세한 내용은 [테이블이 나 행렬에 대화형 정렬 추가 &#40;보고서 작성기 및 SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)합니다.  
+ 이렇게 하려면 여러 필드를 결합하는 식을 그룹화하여 테이블을 다시 디자인해야 합니다. 예를 들어 재고 수가 들어 있는 데이터 세트의 경우 원래 테이블을 크기 및 색 순서로 그룹화하는 경우 크기 및 색을 결합한 그룹 식으로 단일 그룹을 지정할 수 있습니다. 자세한 내용은 [테이블 또는 행렬에 대화형 정렬 추가&#40;보고서 작성기 및 SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 영역의 데이터 정렬&#40;보고서 작성기 및 SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [테이블 또는 행렬에 대화형 정렬 추가 &#40;보고서 작성기 및 SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [테이블 또는 행렬에 대화형 정렬 추가&#40;보고서 작성기 및 SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
   

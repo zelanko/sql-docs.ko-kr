@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7dd75468674f4013c3587f98ef32d112c8442438
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a79771080b1b9c2b7009e7d6228e943e48edbc04
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188663"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027104"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>데이터 경고 관리자에서 내 데이터 경고 관리
   SharePoint 사용자는 자신이 만든 데이터 경고 목록과 경고에 대한 정보를 볼 수 있습니다. 또한 자신의 경고를 삭제하고, 데이터 경고 디자이너에서 편집할 경고 정의를 열고, 자신의 경고를 실행할 수 있습니다. 다음 그림에서는 데이터 경고 관리자에서 사용자에게 제공되는 기능을 보여 줍니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "48188663"
   
 -   경고 정의를 편집할 데이터 경고를 마우스 오른쪽 단추로 클릭하고 **편집**을 클릭합니다.  
   
-     경고 정의가 데이터 경고 디자이너에서 열립니다. 자세한 내용은 [경고 디자이너에서 데이터 경고 편집](edit-a-data-alert-in-alert-designer.md) 하 고 [데이터 경고 디자이너](../../2014/reporting-services/data-alert-designer.md)합니다.  
+     경고 정의가 데이터 경고 디자이너에서 열립니다. 자세한 내용은 [경고 디자이너에서 데이터 경고 편집](edit-a-data-alert-in-alert-designer.md) 및 [데이터 경고 디자이너](../../2014/reporting-services/data-alert-designer.md)를 참조하세요.  
   
     > [!NOTE]  
     >  데이터 경고 정의를 만든 사용자만 해당 정의를 편집할 수 있습니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "48188663"
      데이터 경고 디자이너에서 지정한 일정 옵션에 관계없이 경고 인스턴스가 생성되고 데이터 경고 메시지가 즉시 전송됩니다. 예를 들어 매주, 그리고 결과가 변경된 경우에만 전송되도록 구성된 경고가 전송됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 경고 관리자 용 경고 관리자](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+ [경고 담당자를 위한 데이터 경고 관리자입니다.](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Reporting Services 데이터 경고](../ssms/agent/alerts.md)  
   
   

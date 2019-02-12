@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b6019413-aebd-4ff7-831a-644572ad88b1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9c99945ad1e1d8c5027f7dfc63dcb725b0f0dac7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4987e3497b7d52ff11f8f52bc403105340f7f508
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204383"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035414"
 ---
 # <a name="modifying-and-processing-the-market-basket-model-intermediate-data-mining-tutorial"></a>시장 바구니 모델 수정 및 처리(중급 데이터 마이닝 자습서)
-  사용자가 만든 연결 마이닝 모델을 처리 하기 전에 두 매개 변수의 기본값을 변경 해야 합니다. *지원* 하 고 *확률*합니다.  
+  만든 연결 마이닝 모델을 처리하기 전에 두 매개 변수 즉, *지원* 하 고 *확률*합니다.  
   
 -   *지원* 유효한 간주 되기 전에 규칙 존재 해야 하는 사례의 백분율을 정의 합니다. 적어도 총 사례 수의 1% 이상에서 규칙을 발견하도록 지정합니다.  
   
@@ -63,6 +62,6 @@ ms.locfileid: "48204383"
  [시장 바구니 모델 탐색 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/exploring-the-market-basket-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [처리 요구 사항 및 고려 사항 &#40;데이터 마이닝&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [처리 요구 사항 및 고려 사항 & #40; 데이터 마이닝 & #41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

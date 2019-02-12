@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f6ea6edf61734e794cc588c82aefa4e60141365c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 906cda310ff4478854d2b308332571fa6dbdd155
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093315"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037164"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>데이터 세트 필드 컬렉션 참조(보고서 작성기 및 SSRS)
   보고서의 각 데이터 세트에는 Fields 컬렉션이 하나씩 있습니다. Fields 컬렉션은 데이터 세트 쿼리에서 지정하는 필드와 사용자가 만드는 모든 추가 계산 필드의 집합입니다. 데이터 세트를 만든 후 필드 컬렉션이 **보고서 데이터** 창에 표시됩니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "48093315"
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>런타임에 동적 쿼리에 대해 누락된 필드 검색  
- Fields 컬렉션의 항목에는 기본적으로 Value 및 IsMissing 속성이 있습니다. IsMissing 속성은 디자인 타임에 데이터 세트에 대해 정의된 필드가 런타임에 검색되는 필드에 포함되어 있는지 여부를 나타냅니다. 예를 들어 쿼리에서 입력 매개 변수에 따라 결과 집합이 달라지는 저장 프로시저를 호출하거나 쿼리가 테이블 정의가 변경된 `SELECT * FROM` *\<table>* 일 수 있습니다.  
+ 기본적으로 필드 컬렉션의 항목에는 두 가지 속성이 있습니다. Value 및 IsMissing 합니다. IsMissing 속성은 디자인 타임에 데이터 세트에 대해 정의된 필드가 런타임에 검색되는 필드에 포함되어 있는지 여부를 나타냅니다. 예를 들어 쿼리에서 입력 매개 변수에 따라 결과 집합이 달라지는 저장 프로시저를 호출하거나 쿼리가 테이블 정의가 변경된 `SELECT * FROM` *\<table>* 일 수 있습니다.  
   
 > [!NOTE]  
 >  IsMissing은 모든 유형의 데이터 원본에 대해 디자인 타임과 런타임 간의 데이터 세트 스키마 변경을 검색합니다. IsMissing은 다차원 큐브의 빈 멤버를 검색에 사용할 수 없습니다 및의 MDX 쿼리 언어 개념과 관련이 없는 `EMPTY` 고 `NON EMPTY`입니다.  
@@ -89,7 +89,7 @@ End Function
 ### <a name="using-extended-field-properties"></a>확장 필드 속성 사용  
  확장 필드 속성은 데이터 세트에 대한 데이터 원본 유형에 의해 결정되는 데이터 처리 확장 프로그램에서 필드에 대해 정의하는 추가 속성입니다. 확장 필드 속성은 미리 정의되거나 데이터 원본 유형 관련 속성입니다. 자세한 내용은 [Analysis Services 데이터베이스에 대한 확장 필드 속성 &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)을 참조하세요.  
   
- 해당 필드에 지원 되지 않는 속성을 지정 하는 경우 식이 `null` (`Nothing` 에서 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]). 데이터 공급자가 확장된 필드 속성을 지원 하지 않거나 속성 값이 없으면 필드는 쿼리를 실행할 때 `null` (`Nothing` 에 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) 형식의 속성에 대 한 `String` 고 `Object`, 및 형식 속성의 영 (0) `Integer`합니다. 데이터 처리 확장 프로그램에서는 이 구문이 포함된 쿼리를 최적화하여 미리 정의된 속성을 이용할 수 있습니다.  
+ 해당 필드에 지원되지 않는 속성을 지정하는 경우 식이 `null`([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 `Nothing`)로 계산됩니다. 데이터 공급자가 확장 필드 속성을 지원하지 않거나 쿼리가 실행될 때 해당 필드가 없으면 속성 값은 `null` 및 `Nothing` 형식 속성의 경우 `String`([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 `Object`)이 되고 `Integer` 형식 속성의 경우 0이 됩니다. 데이터 처리 확장 프로그램에서는 이 구문이 포함된 쿼리를 최적화하여 미리 정의된 속성을 이용할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   

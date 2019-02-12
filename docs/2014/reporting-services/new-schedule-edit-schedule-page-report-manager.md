@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 52a4d250-e185-4116-a29c-d809940a00fb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7c69e1d2021e4c92dc87bd866ec851d0a3349fe1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 97af25216bd0f1e30531fcb43e182672cd299ac6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139463"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034552"
 ---
 # <a name="new-schedule-edit-schedule-page-report-manager"></a>새 일정: 일정 편집 페이지 (보고서 관리자)
   새 일정/일정 편집 페이지를 사용하여 보고서에 대한 일정을 만들 수 있습니다. 일정은 캐시된 보고서를 새로 고치고 보고서 기록에 또는 독립 실행 항목으로 스냅숏을 만들기 위해 구독에서 사용됩니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "48139463"
   
 -   **시간** 은 시간 간격으로 실행되는 일정을 정의합니다. 일정을 실행할 날짜를 지정하려면 **시작 및 끝 날짜** 섹션을 사용합니다.  
   
--   **일** 은 선택하는 요일의 특정 시간 및 분에 실행되는 일정을 정의합니다. 다음과 같은 방법으로 일을 지정할 수 있습니다: 모든 \< *일*>, 주중 매일, 매 \< *번호*> 일입니다. 한 가지 방법을 선택하면 다른 날이 선택된 것처럼 보이더라도 다른 방법은 사용할 수 없게 됩니다.  
+-   **일** 은 선택하는 요일의 특정 시간 및 분에 실행되는 일정을 정의합니다. 날짜는 모든 \< *하루*>, 주중 매일, 매 \< *번호*> 일입니다. 한 가지 방법을 선택하면 다른 날이 선택된 것처럼 보이더라도 다른 방법은 사용할 수 없게 됩니다.  
   
 -   **주** 는 주별 간격으로 특정 시간 및 분에 실행되는 일정을 정의합니다. 간격은 주 전체(예: 격주간)나 주 중의 요일로 지정할 수 있습니다.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48139463"
  일정은 별도의 알림 메시지 없이 만료됩니다. 끝 날짜 이후에는 일정이 더 이상 실행되지 않습니다. 만료된 일정은 삭제되지 않습니다. 일정은 수동으로 삭제해야 합니다. 따라서 일정이 계속되도록 선택하면 끝 날짜를 연장할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [일정 만들기, 수정 및 삭제](subscriptions/create-modify-and-delete-schedules.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)  
   

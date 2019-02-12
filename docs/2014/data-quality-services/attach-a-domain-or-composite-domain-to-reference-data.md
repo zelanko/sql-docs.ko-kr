@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.dm.refdata.f1
 - sql12.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: f3990965c78bec153ef87011f152ca0f13881055
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 254e1209a8198a6021222edc0b9b8abc72210884
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519196"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024264"
 ---
 # <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>참조 데이터에 도메인 또는 복합 도메인 연결
   이 항목에서는 데이터 품질 기술 자료의 도메인/복합 도메인을 Windows Azure Marketplace의 참조 데이터 서비스에 연결하여 고품질 데이터 참조 데이터에 대한 정보를 구축하는 방법에 대해 설명합니다. 각 참조 데이터 서비스에는 스키마(데이터 열)가 포함되어 있습니다. 도메인 또는 복합 도메인을 참조 데이터 서비스에 연결한 후 연결된 도메인 또는 연결된 복합 도메인 내의 개별 도메인을 참조 데이터 서비스 스키마의 적절한 열에 매핑해야 합니다. 복합 도메인을 참조 데이터 서비스에 연결하면 한 도메인만 참조 데이터 서비스에 연결한 다음 복합 도메인 내 개별 도메인을 참조 데이터 서비스 스키마의 적절한 열에 매핑할 수 있습니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "52519196"
   
  이제 데이터 품질 프로젝트의 정리 작업에 이 기술 자료를 사용하여 Windows Azure Marketplace를 통해 Melissa Data에서 제공하는 정보를 기반으로 원본 데이터의 미국 주소를 표준화하고 정리할 수 있습니다.  
   
-##  <a name="FollowUp"></a> 후속편: 참조 데이터에 도메인을 매핑한 후  
+##  <a name="FollowUp"></a> 후속 작업: 참조 데이터에 도메인을 매핑한 후  
  데이터 품질 프로젝트를 만들고 미국 주소가 포함된 원본 데이터를 이 항목에서 만든 기술 자료와 비교하여 정리 작업을 실행합니다. [참조 데이터&#40;외부&#41; 기술 자료를 사용하여 데이터 정리](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b40693cd426779f7878c1101fb57efa12ce4e6de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b6413a1cf3e25575078c2f126439cc03ca95a933
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057263"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023894"
 ---
 # <a name="setservicestate-method-wmi-msreportserverconfigurationsetting"></a>SetServiceState 메서드(WMI MSReportServer_ConfigurationSetting)
   보고서 서버 Windows 및 웹 서비스를 설정하거나 해제합니다.  
@@ -44,13 +44,13 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
   
 ## <a name="parameters"></a>매개 변수  
  *EnableWindowsService*  
- `Boolean` Windows 서비스의 상태를 나타내는 값입니다. 값이 `true` 보고서 서버 Windows 시작 서비스를 `false` Windows 서비스를 중지 합니다.  
+ Windows 서비스의 상태를 나타내는 `Boolean` 값입니다. `true` 값은 보고서 서버 Windows 서비스를 시작하고 `false` 값은 Windows 서비스를 중지합니다.  
   
  *EnableWebService*  
  A `Boolean` 의 상태를 나타내는 값을 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 서비스입니다. `true` 값은 보고서 서버 웹 서비스를 시작하고 `false` 값은 웹 서비스를 중지합니다.  
   
  *EnableReportManager*  
- `Boolean` 보고서 관리자의 필요한 상태를 나타내는 값입니다.  
+ 보고서 관리자의 필요한 상태를 나타내는 `Boolean` 값입니다.  
   
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  

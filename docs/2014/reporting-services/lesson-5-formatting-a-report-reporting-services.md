@@ -1,5 +1,5 @@
 ---
-title: '5단원: 보고서 서식 지정(Reporting Services) | Microsoft Docs'
+title: '5단원: 형식 a Report (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: df56110f96364f4cecd3c9d8d25d39e3fca74392
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 37e5ff9cd40dd8c79efcde8c7cb072493a2ff95a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181043"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026292"
 ---
-# <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
+# <a name="lesson-5-formatting-a-report-reporting-services"></a>5단원: 보고서 서식 지정(Reporting Services)
   이제 Sales Orders 보고서에 데이터 영역과 일부 필드를 추가했으므로 날짜 및 통화 필드와 열 머리글의 서식을 지정할 수 있습니다.  
   
  항목 내용  
@@ -93,10 +93,10 @@ ms.locfileid: "48181043"
 5.  **파일** 메뉴에서 **모두 저장** 을 클릭하여 보고서를 저장합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 열 머리글과 날짜 및 통화 값의 서식을 성공적으로 지정했습니다. 그 다음은 보고서에 그룹화 및 합계를 추가하는 단계입니다. [6단원: 그룹화 및 합계 추가&#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)를 참조하세요.  
+ 열 머리글과 날짜 및 통화 값의 서식을 성공적으로 지정했습니다. 그 다음은 보고서에 그룹화 및 합계를 추가하는 단계입니다. 참조 [6 단원: 그룹화 및 합계 추가 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [숫자 및 날짜 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [숫자 및 날짜 서식 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   

@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.dm.rules.f1
 - sql12.dqs.dm.testdomainrule.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 809ac3ce20bbda443840c807ac05fd6ade7cc225
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 750773c728b2cbe026aac404f90a13928802a4bc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365115"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022954"
 ---
 # <a name="create-a-domain-rule"></a>도메인 규칙 만들기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 도메인 규칙을 만드는 방법에 대해 설명합니다. 도메인 규칙은 도메인 값의 유효성 검사, 수정 및 표준화를 수행하는 데 사용되는 조건입니다. 도메인 값이 정확하고 비즈니스 요구 사항에 맞는 것으로 간주되려면 도메인 규칙이 도메인 전체에서 유효해야 합니다. 도메인 규칙은 도메인 값의 유효성을 검사하는 데 사용되는 유효성 검사 규칙을 포함할 수 있지만 데이터 품질 프로젝트의 데이터를 수정하는 데 사용되지는 않습니다. 규칙은 또한 유효한 데이터에 대해 적용되고 데이터 수정에 사용되는 표준화 규칙을 포함합니다.  
@@ -97,7 +97,7 @@ ms.locfileid: "53365115"
   
 3.  **마침** 을 클릭하여 [도메인 관리 작업 종료](../../2014/data-quality-services/end-the-domain-management-activity.md)에 설명된 대로 도메인 관리 작업을 완료합니다.  
   
-##  <a name="FollowUp"></a> 후속편: 도메인 규칙을 만든 후  
+##  <a name="FollowUp"></a> 후속 작업: 도메인 규칙을 만든 후  
  도메인 규칙을 만든 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../../2014/data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../../2014/data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../../2014/data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
 ##  <a name="Conditions"></a> 도메인 규칙 조건  

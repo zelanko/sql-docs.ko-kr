@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: c9402d8f-202a-4cdf-949e-50f5b1d2b885
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 86308d04c45dfdb2bb135d1dc4d8a1da8bb957ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 46e431f85960f0fb5ce93ff80a53a3001c1b666d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056344"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023574"
 ---
 # <a name="polar-charts-report-builder-and-ssrs"></a>극좌표형 차트(보고서 작성기 및 SSRS)
-  극좌표형 차트에서는 360도 원에서 범주별로 그룹화된 점의 집합으로 계열이 표시됩니다. 값은 원의 중심에서 측정한 점까지의 거리로 표현됩니다. 점이 중심에서 멀수록 더 큰 값을 의미합니다. 범주 레이블은 차트의 주위에 표시됩니다. 극좌표 형 차트에 데이터를 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)합니다.  
+  극좌표형 차트에서는 360도 원에서 범주별로 그룹화된 점의 집합으로 계열이 표시됩니다. 값은 원의 중심에서 측정한 점까지의 거리로 표현됩니다. 점이 중심에서 멀수록 더 큰 값을 의미합니다. 범주 레이블은 차트의 주위에 표시됩니다. 극좌표형 차트에 데이터를 추가하는 방법은 [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)를 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -58,6 +58,6 @@ ms.locfileid: "48056344"
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [차트 종류&#40;보고서 작성기 및 SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [꺾은선형 차트&#40;보고서 작성기 및 SSRS&#41;](line-charts-report-builder-and-ssrs.md)   
- [빈 데이터 요소 및 Null 데이터 요소 차트에서 &#40;보고서 작성기 및 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
+ [차트의 빈 데이터 요소 및 Null 데이터 요소&#40;보고서 작성기 및 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

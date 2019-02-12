@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: efb68eefbaff0f984c38393c9bf863f0654716fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 341a5ca0a25729acbf38e961f714f13aedc0dfd4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162573"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031208"
 ---
 # <a name="upload-files-to-a-folder"></a>폴더에 파일 업로드
   파일 시스템에서 파일을 업로드하여 보고서 서버 데이터베이스에 관리되는 항목으로 저장할 수 있습니다. 파일을 업로드할 때 발생하는 상황은 파일 형식에 따라 다릅니다.  

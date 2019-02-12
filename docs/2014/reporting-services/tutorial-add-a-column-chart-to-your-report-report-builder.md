@@ -1,5 +1,5 @@
 ---
-title: '자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기) | Microsoft Docs'
+title: '자습서: 세로 막대형 차트 (보고서 작성기) 보고서에 추가 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ee60121e4356b8b54a943ab7373fafd504e5778f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 24c8e48ef26d3db2bc7662a36d40725c84b1bbc7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104135"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026781"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기)
   세로 막대형 차트에서 계열은 범주별로 그룹화된 일련의 세로 막대로 표시됩니다. 다음과 같은 경우에 세로 막대형 차트가 유용할 수 있습니다.  
@@ -53,9 +53,9 @@ ms.locfileid: "48104135"
 9. [보고서 저장](#Save)  
   
 > [!NOTE]  
->  이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고, 데이터 원본을 선택하고, 데이터 집합을 만드는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)를 참조하세요.  
+>  이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고 데이터 원본을 선택하고 데이터 집합을 만드는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 다음 자습서를 참조하십시오. [자습서: 기본 테이블 보고서 만들기 &#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)합니다.  
   
- 이 자습서에 소요되는 예상 시간: 15분  
+ 이 자습서에 소요되는 예상 시간: 15 분입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/report-builder-tutorials.md)을 참조하세요.  
@@ -79,7 +79,7 @@ ms.locfileid: "48104135"
   
 3.  오른쪽 창에서 **차트 마법사**를 클릭합니다.  
   
-4.  **데이터 집합 선택**페이지에서 **데이터 집합 만들기**를 클릭하고 **다음**을 클릭합니다.  
+4.  **데이터 세트 선택 페이지**에서 **데이터 세트 만들기**를 클릭한 후, **다음**을 클릭합니다.  
   
 5.  **데이터 원본에 대한 연결 선택** 페이지에서 기존 데이터 원본을 선택하거나 보고서 서버를 찾아 데이터 원본을 선택하고 **다음**을 클릭합니다. 사용자 이름과 암호를 입력해야 할 수 있습니다.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "48104135"
   
 1.  보고서 디자인 뷰로 전환합니다.  
   
-2.  선택 단어 **차트 제목** 입력 한 후 다음 텍스트를 확인 하 고 차트의 맨 위에 있는: **Store Sales Order Totals**합니다.  
+2.  선택 단어 **차트 제목** 입력 한 후 다음 텍스트를 확인 하 고 차트의 맨 위에 있는: **판매 주문 합계를 저장**합니다.  
   
 3.  **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
@@ -267,7 +267,7 @@ ms.locfileid: "48104135"
   
  차트에 4일 단위로 평균이 계산된 날짜별 총 판매액의 이동 평균을 나타내는 선이 표시됩니다.  
   
-##  <a name="Title"></a> 8입니다. 보고서 제목 추가  
+##  <a name="Title"></a> 8. 보고서 제목 추가  
   
 #### <a name="to-add-a-report-title"></a>보고서 제목을 추가하려면  
   
@@ -291,7 +291,7 @@ ms.locfileid: "48104135"
   
 7.  **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
-##  <a name="Save"></a> 9입니다. 보고서 저장  
+##  <a name="Save"></a> 9. 보고서 저장  
   
 #### <a name="to-save-the-report"></a>보고서를 저장하려면  
   

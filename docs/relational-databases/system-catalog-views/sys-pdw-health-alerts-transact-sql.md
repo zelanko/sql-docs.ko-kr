@@ -1,25 +1,24 @@
 ---
-title: sys.pdw_health_alerts (TRANSACT-SQL) | Microsoft Docs
+title: sys.pdw_health_alerts (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
-ms.prod_service: pdw
-ms.reviewer: ''
 ms.technology: system-objects
+ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 49c01e5f-ee47-41a0-871d-35a759f50851
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d26b8d9b19b29a92481c3dccf9d4809e74691a44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41ae6d70399dea79a92cbc4fd77ba6e08f660d7c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794471"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025454"
 ---
-# <a name="syspdwhealthalerts-transact-sql"></a>sys.pdw_health_alerts (Transact SQL)
+# <a name="syspdwhealthalerts-transact-sql"></a>sys.pdw_health_alerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   시스템에서 발생할 수 있는 다양 한 경고에 대 한 속성을 저장 합니다. 이 경고에 대 한 카탈로그 테이블입니다.  
@@ -29,9 +28,9 @@ ms.locfileid: "47794471"
 |alert_id|**int**|경고의 고유 식별자입니다.<br /><br /> 이 보기에 대 한 키입니다.|NOT NULL|  
 |component_id|**int**|이 경고 구성 요소의 ID에 적용 됩니다. 구성 요소는 "전원 공급 장치를"와 같은 일반적인 구성 요소 식별자 및 설치에 한정 되지 않습니다. 참조 [sys.pdw_health_components &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md)합니다.|NOT NULL|  
 |alert_name|**nvarchar(255)**|경고의 이름입니다.|NOT NULL|  
-|state|**nvarchar(32)**|경고의 상태입니다.|NOT NULL<br /><br /> 가능한 값은 다음과 같습니다.<br /><br /> ' Operational'<br /><br /> 'NonOperational'<br /><br /> ' 성능이 저하 '<br /><br /> ' 실패 '|  
-|severity|**nvarchar(32)**|경고의 심각도입니다.|NOT NULL<br /><br /> 가능한 값은 다음과 같습니다.<br /><br /> ' 정보 '<br /><br /> ' 경고 '<br /><br /> ' Error'|  
-|유형|**nvarchar(32)**|경고의 형식입니다.|NOT NULL<br /><br /> 가능한 값은 다음과 같습니다.<br /><br /> StatusChange-장치 상태 변경 되었습니다.<br /><br /> 임계값-값이 임계값을 초과 했습니다.|  
+|state|**nvarchar(32)**|경고의 상태입니다.|NOT NULL<br /><br /> 가능한 값:<br /><br /> ' Operational'<br /><br /> 'NonOperational'<br /><br /> ' 성능이 저하 '<br /><br /> 'Failed'|  
+|severity|**nvarchar(32)**|경고의 심각도입니다.|NOT NULL<br /><br /> 가능한 값:<br /><br /> ' 정보 '<br /><br /> ' 경고 '<br /><br /> ' Error'|  
+|유형|**nvarchar(32)**|경고의 형식입니다.|NOT NULL<br /><br /> 가능한 값:<br /><br /> StatusChange-장치 상태 변경 되었습니다.<br /><br /> 임계값-값이 임계값을 초과 했습니다.|  
 |description|**nvarchar(4000)**|경고 설명입니다.|NOT NULL|  
 |condition(조건)|**nvarchar(255)**|경우에 사용 되는 입력 임계값 =. 경고 임계값을 계산 하는 방법을 정의 합니다.|NULL|  
 |상태|**nvarchar(32)**|경고 상태|NULL|  

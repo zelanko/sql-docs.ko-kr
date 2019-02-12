@@ -12,15 +12,15 @@ helpviewer_keywords:
 - notifications,enable
 - notifications,disable
 ms.assetid: e439bb29-60cc-4afd-a79a-f629b8d843c1
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 14b19a2b9174924fd941721f9a7dd1b8764e5bb5
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 583ccac2604216c88f14aa9c460437a2aa24c03c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617043"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022154"
 ---
 # <a name="enable-or-disable-profiling-notifications-in-dqs"></a>DQS에서 프로파일링 알림 설정 또는 해제
 
@@ -37,7 +37,7 @@ ms.locfileid: "52617043"
   
 ##  <a name="Enable"></a> 프로파일링 알림 설정 또는 해제  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 애플리케이션을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 **구성**을 클릭합니다.  
   

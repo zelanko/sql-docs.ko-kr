@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ad14d7005dc01c700b99c4a41cc8f95cac30da02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: adfda7de7c700959e375678a8d45b4c522b59577
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078645"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031466"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site-reporting-services-in-sharepoint-integrated-mode"></a>SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 설정(SharePoint 통합 모드의 Reporting Services)
   기본 보안 설정으로 필요한 액세스 수준을 얻을 수 없는 경우 새 사용 권한 수준을 만들어 특정 보고서 서버 항목이나 작업에 대한 액세스 권한을 제공할 수 있습니다. 사용자 지정 보안 설정은 특정 보고서에 대한 액세스를 제한하려는 경우에 유용할 수 있습니다.  
@@ -75,8 +75,8 @@ ms.locfileid: "48078645"
 ## <a name="see-also"></a>관련 항목  
  [보고서 서버 항목에 대해 Windows SharePoint Services의 기본 제공 보안 사용](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   
  [SharePoint 웹 응용 프로그램에서 보고서 서버 작업에 대한 사용 권한 설정](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
- [Reporting Services SharePoint 그룹 및 사용 권한에서 역할 및 태스크와 비교](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
- [SharePoint Site and List Permission Reference for Report Server Items](sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
+ [Reporting Services의 역할 및 태스크와 SharePoint 그룹 및 사용 권한 비교](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조](sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

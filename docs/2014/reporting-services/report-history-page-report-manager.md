@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4c64e58a-ed83-4e29-a422-9baaac2be4b8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0b5865ecbca2ea5577fccf0c28faeabf27b9573d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cb6d9de69656d40b3a5fd87c5353c6d0b8f0ef5f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053143"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033864"
 ---
 # <a name="report-history-page-report-manager"></a>보고서 기록 페이지(보고서 관리자)
   보고서 기록 페이지를 사용하여 시간에 따라 생성 및 저장된 보고서 스냅숏을 볼 수 있습니다. 보고서 서버에 설정된 옵션에 따라 보고서 기록에 최근 스냅숏만 포함되어 있을 수 있습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "48053143"
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 기록을 보거나 삭제 &#40;보고서 관리자&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
- [보고서 기록에 스냅숏 추가 &#40;보고서 관리자&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [보고서 기록에 스냅숏 추가&#40;보고서 관리자&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [일반 속성 페이지, 보고서&#40;보고서 관리자&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)   
  [스냅숏 옵션 속성 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  

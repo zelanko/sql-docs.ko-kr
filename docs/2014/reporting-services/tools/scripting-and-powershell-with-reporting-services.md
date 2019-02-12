@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a3f07bbc8f7aafaf60989c0b0fa193e3a802b5b2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 7ea45b2b785666253405c579930d1f89417d4c58
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376325"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024524"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Reporting Services를 사용한 스크립팅 및 PowerShell
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 는 rs.exe 명령줄 유틸리티, SharePoint 모드 보고서 서버용 PowerShell cmdlet을 비롯한 스크립트를 통해 기본 모드 및 SharePoint 모드에서 PowerShell의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 개체 모델을 활용하여 다양한 개발 및 관리 시나리오를 지원합니다.  

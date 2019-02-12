@@ -17,13 +17,13 @@ f1_keywords:
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a6f13d8d76854c3fdf01dceeeb61c4d06f2a0e16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 042a81dc4850c592542ca0764842b45a7756468d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142463"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024144"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>표시기(보고서 작성기 및 SSRS)
   표시기는 단일 데이터 값의 상태를 한 눈에 볼 수 있도록 제공하는 최소 계기입니다. 표시기 및 해당 상태를 나타내는 아이콘은 단순하며 작은 크기로 설정해도 효율적으로 해당 내용을 표시합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "48142463"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 그대로 사용 가능한 기본 제공 표시기 집합 및 표시기 아이콘을 제공하지만, 개별 표시기 아이콘 및 표시기 집합을 필요에 따라 사용자 지정할 수도 있습니다.  
   
- 표시기를 KPI로 사용하는 방법에 대한 자세한 내용은 [자습서: 보고서에 KPI 추가&#40;보고서 작성기&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)를 참조하세요.  
+ 표시기를 Kpi로 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [자습서: 보고서에 KPI 추가 &#40;보고서 작성기&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)합니다.  
   
 > [!NOTE]  
 >  표시기를 보고서와는 별도로 보고서 파트로 게시할 수 있습니다. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -90,7 +90,7 @@ ms.locfileid: "48142463"
   
 -   아이콘을 몇 개만 사용해 데이터를 보다 간단하게 표시하도록 표시기 집합에서 아이콘을 삭제합니다.  
   
- 자세한 내용은 [표시기 아이콘 및 표시기 집합 변경&#40;보고서 작성기 및 SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)을 참조하세요.  
+ 자세한 내용은 [표시기 아이콘 및 표시기 집합 변경&#40;보고서 작성기 및 SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)를 참조하세요.  
   
   
 ##  <a name="UsingIndicatorsInTablesMatrices"></a> 테이블 및 행렬에서 표시기 사용  
@@ -102,21 +102,21 @@ ms.locfileid: "48142463"
   
  표시기를 추가, 변경 및 삭제하는 방법에 대한 자세한 내용은 [표시기 추가 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md)를 참조하세요.  
   
- 보고서에 표시기를 처음 추가하면 기본값을 사용하도록 구성됩니다. 나중에 표시기가 원하는 데이터를 나타내도록 값을 변경할 수 있습니다. 표시기 아이콘의 모양, 표시기가 사용할 아이콘을 선택하는 방식 및 표시기 집합에 사용되는 아이콘을 변경할 수 있습니다. 자세한 내용은 [표시기 아이콘 및 표시기 집합 변경&#40;보고서 작성기 및 SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)을 참조하세요.  
+ 보고서에 표시기를 처음 추가하면 기본값을 사용하도록 구성됩니다. 나중에 표시기가 원하는 데이터를 나타내도록 값을 변경할 수 있습니다. 표시기 아이콘의 모양, 표시기가 사용할 아이콘을 선택하는 방식 및 표시기 집합에 사용되는 아이콘을 변경할 수 있습니다. 자세한 내용은 [표시기 아이콘 및 표시기 집합 변경&#40;보고서 작성기 및 SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)를 참조하세요.  
   
- 기본적으로 표시기는 백분율을 측정 단위로 사용하도록 구성되며 데이터의 최소값 및 최대값을 자동으로 검색합니다. 표시기 집합의 각 아이콘에는 백분율 범위가 있습니다. 백분율 범위 수는 아이콘 집합의 아이콘 수에 따라 달라지지만 범위는 크기가 같고 순차적입니다. 예를 들어 아이콘 집합에 아이콘이 5개 있는 경우 백분율 범위가 5개 있으며 범위 크기는 각각 20%입니다. 첫 번째 범위는 0에서 시작하여 20에서 끝나고 두 번째 범위는 20에서 시작하여 40에서 끝나는 식입니다. 보고서의 표시기가 표시기 집합에서 사용하는 아이콘에는 표시기 데이터 값이 포함되는 백분율 범위가 들어 있습니다. 집합의 각 아이콘에 대한 백분율 범위를 변경할 수 있습니다. 값이나 식을 제공하여 최소값과 최대값을 명시적으로 설정할 수 있습니다. 대신 측정 단위를 숫자 값이 되도록 변경할 수 있습니다. 이 경우에는 데이터의 최소값이나 최대값을 지정하지 않습니다. 대신 표시기에 사용되는 각 아이콘의 시작 값과 끝 값만 제공하면 됩니다. 자세한 내용은 [집합과 측정 단위 구성 &#40;보고서 작성기 및 SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)합니다.  
+ 기본적으로 표시기는 백분율을 측정 단위로 사용하도록 구성되며 데이터의 최소값 및 최대값을 자동으로 검색합니다. 표시기 집합의 각 아이콘에는 백분율 범위가 있습니다. 백분율 범위 수는 아이콘 집합의 아이콘 수에 따라 달라지지만 범위는 크기가 같고 순차적입니다. 예를 들어 아이콘 집합에 아이콘이 5개 있는 경우 백분율 범위가 5개 있으며 범위 크기는 각각 20%입니다. 첫 번째 범위는 0에서 시작하여 20에서 끝나고 두 번째 범위는 20에서 시작하여 40에서 끝나는 식입니다. 보고서의 표시기가 표시기 집합에서 사용하는 아이콘에는 표시기 데이터 값이 포함되는 백분율 범위가 들어 있습니다. 집합의 각 아이콘에 대한 백분율 범위를 변경할 수 있습니다. 값이나 식을 제공하여 최소값과 최대값을 명시적으로 설정할 수 있습니다. 대신 측정 단위를 숫자 값이 되도록 변경할 수 있습니다. 이 경우에는 데이터의 최소값이나 최대값을 지정하지 않습니다. 대신 표시기에 사용되는 각 아이콘의 시작 값과 끝 값만 제공하면 됩니다. 자세한 내용은 [단위 설정 및 구성&#40;보고서 작성기 및 SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)를 참조하세요.  
   
  표시기는 지정된 범위 내에서 전체 표시기 데이터 값을 동기화하여 데이터 값을 나타냅니다. 이 범위는 기본적으로 표시기가 포함된 테이블, 행렬 등 표시기의 상위 컨테이너입니다. 보고서 레이아웃에 따라 다른 범위를 선택하여 표시기 동기화를 변경할 수 있습니다. 표시기는 동기화를 생략할 수 있습니다. 자세한 내용은 [동기화 범위 설정&#40;보고서 작성기 및 SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)을 참조하세요.  
   
  보고서 내의 범위를 이해하고 설정하는 방법에 대한 일반적인 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)을 참조하세요.  
   
- 표시기는 단일 값만 사용합니다. 여러 데이터 값을 표시해야 하는 경우에는 표시기가 아닌 스파크라인이나 데이터 막대를 사용하십시오. 스파크라인과 데이터 막대는 표시기처럼 단순하면서도 여러 데이터 값을 표시할 수 있고 작은 크기에서도 쉽게 파악할 수 있으며 테이블 및 행렬에서도 효율적으로 사용할 수 있습니다. 자세한 내용은 [스파크라인 및 데이터 막대 추가&#40;보고서 작성기 및 SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)를 참조하세요.  
+ 표시기는 단일 값만 사용합니다. 여러 데이터 값을 표시해야 하는 경우에는 표시기가 아닌 스파크라인이나 데이터 막대를 사용하십시오. 스파크라인과 데이터 막대는 표시기처럼 단순하면서도 여러 데이터 값을 표시할 수 있고 작은 크기에서도 쉽게 파악할 수 있으며 테이블 및 행렬에서도 효율적으로 사용할 수 있습니다. 자세한 내용은 [스파크라인 및 데이터 막대&#40;보고서 작성기 및 SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)를 참조하세요.  
   
   
 ##  <a name="SizingIndicatators"></a> 표시기 크기를 조정하여 시각적 효과 최대화  
  색, 방향 및 모양 외에 크기도 표시기의 시각적 효과를 최대화하는 데 사용할 수 있습니다. 표시기를 사용하여 다양한 자전거 제품에 대한 고객 만족도를 표시하는 보고서의 경우, 고객 만족도에 따라 표시기에서 사용하는 아이콘의 크기를 각각 다르게 구성할 수 있습니다. 즉, 만족도가 높을수록 보고서에 아이콘을 더 크게 표시할 수 있습니다. 다음 그림에서는 자전거 판매 보고서와 판매량을 반영하는 아이콘 크기를 보여 줍니다.  
   
- 식을 사용하여 표시기가 사용하는 필드 값에 따라 별표 크기를 동적으로 설정합니다. 자세한 내용은 [는 표시기를 사용 하 여 식의 크기를 지정 &#40;보고서 작성기 및 SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)합니다.  
+ 식을 사용하여 표시기가 사용하는 필드 값에 따라 별표 크기를 동적으로 설정합니다. 자세한 내용은 [식을 사용하여 표시기 크기 지정&#40;보고서 작성기 및 SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)를 참조하세요.  
   
  식 작성 및 사용 방법에 대한 자세한 내용은 [식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)을 참조하세요.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "48142463"
   
  ![rs_GaugePanelWithIndicatorAndGauge](../media/rs-gaugepanelwithindicatorandgauge.gif "rs_GaugePanelWithIndicatorAndGauge")  
   
- 자세한 내용은 [계기 패널에 표시기 및 계기 포함&#40;보고서 작성기 및 SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)을 참조하세요.  
+ 자세한 내용은 [계기 패널에 표시기 및 계기 포함&#40;보고서 작성기 및 SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)를 참조하세요.  
   
  계기 사용 방법에 대한 자세한 내용은 [계기&#40;보고서 작성기 및 SSRS&#41;](gauges-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "48142463"
 |상태 시퀀스|시작 값|끝 값|  
 |--------------------|-----------------|---------------|  
 |빨강|0|3500|  
-|노란색|3500|5000|  
+|노랑|3500|5000|  
 |녹색|5000|10000|  
   
  빨간색 아래쪽 화살표는 값 3500을 표시하고 노란색 옆쪽 화살표는 5000을 표시합니다.  
@@ -161,7 +161,7 @@ ms.locfileid: "48142463"
 |상태 시퀀스|시작 값|끝 값|  
 |--------------------|-----------------|---------------|  
 |녹색|5000|10000|  
-|노란색|3500|5000|  
+|노랑|3500|5000|  
 |빨강|0|3500|  
   
  노란색 옆쪽 화살표는 값 3500을 표시하고 녹색 위쪽 화살표는 5000을 표시합니다.  
@@ -170,13 +170,13 @@ ms.locfileid: "48142463"
 |--------------------|-----------------|---------------|  
 |녹색|5000|10000|  
 |빨강|0|3500|  
-|노란색|3500|5000|  
+|노랑|3500|5000|  
   
  빨간색 아래쪽 화살표는 값 3500을 표시하고 녹색 위쪽 화살표는 5000을 표시합니다.  
   
 |상태 시퀀스|시작 값|끝 값|  
 |--------------------|-----------------|---------------|  
-|노란색|3500|5000|  
+|노랑|3500|5000|  
 |빨강|0|3500|  
 |녹색|5000|10000|  
   
@@ -188,22 +188,22 @@ ms.locfileid: "48142463"
 ##  <a name="HowTo"></a> 방법 도움말 항목  
  이 섹션에는 표시기를 추가/변경/삭제하는 방법, 표시기를 구성/사용자 지정하는 방법 및 계기에서 표시기를 사용하는 방법을 보여 주는 절차가 나열되어 있습니다.  
   
--   [추가 또는 삭제 표시기 &#40;보고서 작성기 및 SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md)  
+-   [표시기 추가 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md)  
   
--   [표시기 아이콘 및 표시기 집합 변경 &#40;보고서 작성기 및 SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [표시기 아이콘 및 표시기 집합 변경&#40;보고서 작성기 및 SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [집합과 측정 단위를 구성 &#40;보고서 작성기 및 SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [단위 설정 및 구성&#40;보고서 작성기 및 SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [동기화 범위 설정 &#40;보고서 작성기 및 SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [동기화 범위 설정&#40;보고서 작성기 및 SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
   
--   [식을 사용 하 여 표시기 크기 지정 &#40;보고서 작성기 및 SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
+-   [식을 사용하여 표시기 크기 지정&#40;보고서 작성기 및 SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
   
--   [계기 패널에 표시기 및 계기 포함 &#40;보고서 작성기 및 SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
+-   [계기 패널에 표시기 및 계기 포함&#40;보고서 작성기 및 SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
   
   
 ## <a name="see-also"></a>관련 항목  
- [계기 &#40;보고서 작성기 및 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [계기&#40;보고서 작성기 및 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [스파크라인 및 데이터 막대&#40;보고서 작성기 및 SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   
