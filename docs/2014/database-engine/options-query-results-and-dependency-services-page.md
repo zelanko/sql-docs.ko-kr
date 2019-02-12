@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.DependencyServicesGeneral
 ms.assetid: dd7f6c31-7d7f-4972-854a-1419a2826dca
-author: mashamsft
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8f587ee792809f9612ca9fca1264794e843172a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c5c7afe44889dd380e9048044a34a94410213f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118623"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035204"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>옵션(쿼리 결과 및 종속성 서비스 페이지)
   이 페이지를 사용하여 종속성 서비스를 위해 연결할 서버를 지정할 수 있습니다. 종속성 서비스를 사용하면 서로 다른 서버에 저장된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체 간의 종속성에 대한 정보를 추출할 수 있습니다. 사용 하 여 개체 종속성을 확인 합니다 **개체 종속성** 대화 상자 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]합니다.  
@@ -53,6 +52,4 @@ ms.locfileid: "48118623"
  SQL Server 인증을 사용하는 경우 암호를 입력합니다.  
   
  **테스트**  
- 연결을 테스트하려면 클릭합니다.  
-  
-  
+ 연결을 테스트하려면 클릭합니다.

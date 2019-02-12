@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6c1b5dbe65105de7d5f775c6d98ba17b2d646d87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 775e7a1bced0e35d191d3e3f613b86836b9b1ddb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138760"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034784"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments--ssrs-configuration-manager"></a>다중 인스턴스 보고서 서버 배포를 위한 URL 예약(SSRS 구성 관리자)
   같은 컴퓨터에 여러 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 설치하는 경우 각 인스턴스의 URL 예약을 어떻게 정의할지 고려해야 합니다. 각 인스턴스 내에서 보고서 서버 웹 서비스와 보고서 관리자에는 각각 한 개 이상의 URL 예약이 있어야 합니다. 전체 예약 집합은 HTTP.SYS에서 고유해야 합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "48138760"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 사용되는 기본 기술에는 고유 이름 관련 요구 사항이 적용됩니다. HTTP.SYS의 리포지토리 내에서 모든 URL이 고유해야 합니다. 포트, 호스트 이름 또는 가상 디렉터리 이름을 변경하여 고유한 URL을 만들 수 있습니다. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 을 사용하려면 응용 프로그램 ID가 동일한 프로세스 내에서 고유해야 합니다. 이러한 요구 사항은 가상 디렉터리 이름에 영향을 줍니다. 따라서 동일한 보고서 서버 인스턴스 내에서 중복되는 가상 디렉터리 이름을 사용할 수 없습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 서버 Url 구성 &#40;SSRS 구성 관리자&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
- [URL 구성 &#40;SSRS 구성 관리자&#41;](configure-a-url-ssrs-configuration-manager.md)  
+ [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
+ [URL 구성&#40;SSRS 구성 관리자&#41;](configure-a-url-ssrs-configuration-manager.md)  
   
   

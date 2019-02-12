@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 26a2ca4499787fce12508e55bb5197b6f0c6f527
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7c1354228c1afbebe519a94d16973d024b84caac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053993"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032394"
 ---
-# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>새 시스템 역할 할당: 시스템 역할 할당 편집 페이지(보고서 관리자)
+# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>새 시스템 역할 할당: 시스템 역할 할당 편집 페이지 (보고서 관리자)
   새 시스템 역할 할당 또는 시스템 역할 할당 편집 페이지를 사용하여 보고서 서버의 보안을 정의할 수 있습니다. 모든 보안은 특정 사용자나 그룹을 각기 수행 가능한 태스크에 매핑하는 역할 할당을 통해 정의됩니다. 태스크 목록은 역할 할당을 만들 때 선택하는 역할 정의로 표시됩니다.  
   
  시스템 수준에서 만들거나 수정하는 역할 할당은 보고서 서버 전체에 적용됩니다. 예를 들어 공유 일정은 시스템 전체에서 사용되므로 공유 일정을 만드는 기능은 시스템 수준에서 지정됩니다.  
@@ -52,9 +52,9 @@ ms.locfileid: "48053993"
  **Roles**  
  다른 사용자에게 할당할 수 있는 시스템 수준 역할의 목록을 제공합니다. 하나의 역할 할당에 대해 여러 역할을 지정할 수 있습니다.  
   
- 보고서 관리자는 각 역할의 태스크를 표시하지 않으며 태스크를 추가 또는 수정하는 방법을 제공하지 않습니다. 정의된 그대로 역할을 사용해야 합니다. 만들고, 수정 또는 삭제할 역할을 사용 하 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]합니다. 자세한 내용은 [만들기, 삭제 또는 역할을 수정 &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)합니다.  
+ 보고서 관리자는 각 역할의 태스크를 표시하지 않으며 태스크를 추가 또는 수정하는 방법을 제공하지 않습니다. 정의된 그대로 역할을 사용해야 합니다. 역할을 생성, 수정 또는 삭제하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]를 사용합니다. 자세한 내용은 [역할 만들기, 삭제 또는 수정&#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)을 참조하세요.  
   
- 사용 하는 경우 [!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)] with Advanced Services를 제공 하는 기본 역할을 사용 해야 합니다.  
+ [!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)] with Advanced Services를 사용하는 경우에는 제공된 기본 역할을 사용해야 합니다.  
   
  **설명**  
  역할에 대한 추가 정보를 표시합니다. 시스템 사용자 또는 시스템 관리자와 같은 미리 정의된 역할의 경우 설명에는 각 역할이 지원하는 태스크가 요약되어 표시됩니다.  

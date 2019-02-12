@@ -2,8 +2,8 @@
 title: sys.dm_pdw_nodes (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,14 +13,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6b2a17f1fd57b70dbee056e66a76c0416b0a25c1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a5df628a6b37c8d89843506c5b7f4c5050157158
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533567"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027395"
 ---
-# <a name="sysdmpdwnodes-transact-sql"></a>sys.dm_pdw_nodes (Transact SQL)
+# <a name="sysdmpdwnodes-transact-sql"></a>sys.dm_pdw_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   에 있는 노드의 모든 정보를 담고 [!INCLUDE[ssAPS](../../includes/ssaps-md.md)]합니다. 어플라이언스의 노드 당 하나의 행을 나열합니다.  
@@ -32,9 +32,9 @@ ms.locfileid: "52533567"
 |NAME|**nvarchar(32)**|노드의 논리적 이름입니다.|적절 한 길이의 문자열입니다.|  
 |address|**nvarchar(32)**|이 노드의 IP 주소입니다.|형식 [0-255]입니다. [0-255]입니다. [0-255]입니다. [0-255]입니다.|  
 |is_passive|**int**|노드를 실행 하는 가상 컴퓨터는 할당 된 서버에서 실행 되 고 예비 서버로 장애 조치에 하는지 여부를 나타냅니다.|0-노드 VM은 원본 서버에서 실행 됩니다.<br /><br /> 1-노드 VM가 서버에서 실행 됩니다.|  
-|영역(region)|**nvarchar(32)**|노드가 실행 되 고 있는 지역입니다.|' PDW', 'HDINSIGHT'|  
+|영역(region)|**nvarchar(32)**|노드가 실행 되 고 있는 지역입니다.|'PDW', 'HDINSIGHT'|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

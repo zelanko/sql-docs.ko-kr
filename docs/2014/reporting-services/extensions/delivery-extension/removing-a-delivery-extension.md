@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: dcb7caf2-d19a-4bc5-afb3-2b61ad11cac5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1aa999d8ec8eaa1ef16fdaf34c52d48cb230fc47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5efe51d0c91a0321a17e539aeddbb26f0dc3a5fe
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155933"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036258"
 ---
 # <a name="removing-a-delivery-extension"></a>배달 확장 프로그램 제거
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 배달 확장 프로그램을 제거하려면 구성 파일에서 배달 확장 프로그램에 대한 **Extension** 요소를 제거하기만 하면 됩니다. 구성 정보를 제거한 후에는 보고서 서버에서 배달 확장 프로그램을 사용할 수 없습니다.  

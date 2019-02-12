@@ -1,25 +1,24 @@
 ---
-title: '4 단원: DMX를 사용 하 여 시계열 예측 만들기 | Microsoft Docs'
+title: '4단원: DMX를 사용 하 여 시계열 예측 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 6b883e43-209d-489a-8dc3-9349f88acae8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 83aa949e71977971b69f93f0e04b0c74ff99a226
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 772e5f5f71ca82dd18fec48730522c80e907414f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143893"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024884"
 ---
 # <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>4단원: DMX를 사용하여 시계열 예측 만들기
-  이 단원과 다음 단원에서는 사용 하 여 확장 DMX (Data Mining) 다양 한 유형의에서 만든 시계열 모델 기반의 예측을 만들려면 [1 단원: 시계열 마이닝 모델 및 마이닝 구조](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)하 고 [2 단원: 시계열 마이닝 구조에 마이닝 모델 추가](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)합니다.  
+  이 단원과 다음 단원에서는 사용 하 여 확장 DMX (Data Mining) 다양 한 유형의에서 만든 시계열 모델 기반의 예측을 만들려면 [1 단원: 시계열 마이닝 모델 및 마이닝 구조 만들기](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md) 고 [2 단원: 시계열 마이닝 구조에 마이닝 모델 추가](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)합니다.  
   
  시계열 모델을 사용하면 여러 가지 방법으로 예측을 만들 수 있습니다.  
   
@@ -44,7 +43,7 @@ ms.locfileid: "48143893"
  REPLACE_MODEL_CASES  
  사용 하 여 [PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx) 새 데이터 계열을 사용 하 여 원래 데이터를 바꾸고 새 데이터 마이닝 모델의 패턴을 적용을 기반으로 예측을 만드는 REPLACE_MODEL_CASES 인수와 함께 계열입니다.  
   
- REPLACE_MODEL_CASES를 사용 하는 방법의 예제를 참조 하세요 [2 단원: 예측 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)합니다.  
+ REPLACE_MODEL_CASES를 사용 하는 방법의 예제를 참조 하세요. [단원 2: 예측 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)합니다.  
   
 ## <a name="lesson-tasks"></a>단원 태스크  
  이 단원에서는 다음 태스크를 수행합니다.  
@@ -70,7 +69,7 @@ WHERE [<criteria>]
   
 #### <a name="to-create-a-simple-time-series-prediction-query"></a>간단한 시계열 예측 쿼리를 만들려면  
   
-1.  **개체 탐색기**의 인스턴스를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 가리킨 **새 쿼리**를 클릭 하 고 **DMX**합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
@@ -145,12 +144,12 @@ WHERE [<criteria>]
  다음 단원에서는 모델에 새 데이터를 제공하는 쿼리를 만들고 예측 결과를 방금 만든 쿼리와 비교합니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [5단원: 시계열 모델 확장](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
+ [5단원: 모델의 시계열을 확장](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)   
  [지연 &#40;DMX&#41;](/sql/dmx/lag-dmx)   
  [시계열 모델 쿼리 예제](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [2 단원: 예측 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [2단원: 예측 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
   

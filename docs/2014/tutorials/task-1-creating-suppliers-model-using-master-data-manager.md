@@ -1,26 +1,23 @@
 ---
-title: '태스크 1: 마스터 데이터 관리자를 사용 하 여 공급자 모델 만들기 | Microsoft Docs'
+title: '작업 1: 마스터 데이터 관리자를 사용 하 여 공급자 모델 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6bbbcbff-1ecd-456c-947f-c445c8da673c
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 71b3a98a2a5052d6da4fec3e12d81ee8d452c6f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 275b7cd57336c22b6d1f67206d1e1cdb0b7d2abd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148323"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035484"
 ---
-# <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>태스크 1: 마스터 데이터 관리자를 사용하여 공급자 모델 만들기
+# <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>작업 1: 마스터 데이터 관리자를 사용하여 공급자 모델 만들기
   이 태스크에서는 명명 된 모델을 만듭니다 **공급 업체** 사용 하 여 MDS **마스터 데이터 관리자**합니다.  
   
 1.  이동할 [ http://localhost/mds ](http://localhost/mds) 시작 하려면 **마스터 데이터 관리자**합니다. 웹 응용 프로그램을 다른 이름으로 구성했거나 다른 웹 사이트에 구성한 경우 URL을 바꿉니다.  
@@ -44,6 +41,6 @@ ms.locfileid: "48148323"
 6.  클릭 **모델 저장** 도구 모음 단추입니다.  
   
 ## <a name="next-step"></a>다음 단계  
- [태스크 2: Excel용 MDS 추가 기능을 사용하여 MDS에 공급자 데이터 업로드](../../2014/tutorials/task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md)  
+ [작업 2: Excel 용 MDS 추가 기능에 사용 하 여 MDS에 공급자 데이터 업로드](../../2014/tutorials/task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md)  
   
   

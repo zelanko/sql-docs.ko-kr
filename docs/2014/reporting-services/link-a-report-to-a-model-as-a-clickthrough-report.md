@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: 3af42de3-67ef-41c2-bc8a-7045baec6f63
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3cd097e0a59a51529ae3fa373ad1e7e8b84b6b9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7d0ec49168e4a23a019eb91fc708e286bf0e1ac4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095903"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037044"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>보고서를 클릭 광고 보고서로 모델에 연결
-  기본 클릭 광고 보고서 템플릿을 사용하는 대신 보고서 작성기 보고서를 만들고 보고서 모델의 특정 엔터티에 연결할 수 있습니다. 보고서를 보는 사람이 주 보고서에서 대화형 데이터를 클릭하면 이 보고서는 클릭 광고 보고서로 표시됩니다. 보고서에 엔터티를 연결 하려면 사용 하 여 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 관리자입니다.  
+  기본 클릭 광고 보고서 템플릿을 사용하는 대신 보고서 작성기 보고서를 만들고 보고서 모델의 특정 엔터티에 연결할 수 있습니다. 보고서를 보는 사람이 주 보고서에서 대화형 데이터를 클릭하면 이 보고서는 클릭 광고 보고서로 표시됩니다. 엔터티에 보고서를 연결하려면 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 관리자를 사용합니다.  
   
 > [!IMPORTANT]  
 >  보고서에서 사용되는 기본 엔터티는 보고서가 연결되는 동일한 엔터티여야 합니다.  
   
 ### <a name="to-start-report-manager-from-a-browser"></a>브라우저에서 보고서 관리자를 시작하려면  
   
-1.  열기 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 6.0 이상.  
+1.  [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 6.0 이상을 엽니다.  
   
 2.  웹 브라우저의 주소 표시줄에 보고서 관리자 URL을 입력합니다. 기본적으로이 URL은 http://\<*ComputerName*> / reports.  
   

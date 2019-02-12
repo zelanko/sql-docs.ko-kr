@@ -1,24 +1,21 @@
 ---
-title: '태스크 12: 파생 열 변환을 Required by MDS 열을 추가할 | Microsoft Docs'
+title: '태스크 12: 추가 파생 열 변환을 추가 하 여 MDS에 필요한 열 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 98ccb271-04da-4126-9729-67e9a479aaef
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 104fdfdebf01bece9f5a3762b33b9e31f40d06d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c80f719bd756a0ad241ef270507e638b08c2081
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125333"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036515"
 ---
 # <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>태스크 12: 파생 열 변환을 추가하여 MDS에 필요한 열 추가
   이 작업에서는 파생 열 변환을 데이터 흐름에 추가합니다. 두 개의 파생된 열을 추가한 **ImportType** 하 고 **BatchTag**를이 변환에 전달 되는 레코드입니다. MDS의 준비 테이블에 데이터를 업로드하려면 먼저 이러한 열을 추가해야 합니다. 이러한 두 열은 MDS에서 준비 테이블의 필수 열입니다. 참조 [리프 멤버 준비 테이블](../master-data-services/leaf-member-staging-table-master-data-services.md) 대 한 자세한 내용은 합니다.  
@@ -60,6 +57,6 @@ ms.locfileid: "48125333"
 15. 클릭 **확인** 닫으려면 합니다 **파생 열 변환** 대화 상자.  
   
 ## <a name="next-step"></a>다음 단계  
- [태스크 13: OLE DB 대상을 추가하여 MDS 준비 테이블에 데이터 쓰기](../../2014/tutorials/task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md)  
+ [태스크 13: MDS 준비 테이블에 데이터를 쓸 OLE DB 대상 추가](../../2014/tutorials/task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md)  
   
   

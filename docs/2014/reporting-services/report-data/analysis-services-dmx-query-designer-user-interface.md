@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 5fd726a4-aed7-4e6c-9404-ccb2db66cf26
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9da8e25466da90ad4d76ae787695eec66b2f4f8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1b84ac73991124ea9f90c5fe60c11e2b93154dc2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136663"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034684"
 ---
 # <a name="analysis-services-dmx-query-designer-user-interface"></a>Analysis Services DMX 쿼리 디자이너 사용자 인터페이스
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터 원본에 대한 DMX(Data Mining Expressions) 쿼리 및 MDX(Multidimensional Expressions) 쿼리를 작성하기 위한 그래픽 쿼리 디자이너를 제공합니다. 이 항목에서는 DMX 쿼리 디자이너에 대해 설명합니다. MDX 쿼리 디자이너에 대 한 자세한 내용은 참조 하세요. [Analysis Services MDX 쿼리 디자이너 사용자 인터페이스](analysis-services-mdx-query-designer-user-interface.md)합니다.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터 원본에 대한 DMX(Data Mining Expressions) 쿼리 및 MDX(Multidimensional Expressions) 쿼리를 작성하기 위한 그래픽 쿼리 디자이너를 제공합니다. 이 항목에서는 DMX 쿼리 디자이너에 대해 설명합니다. MDX 쿼리 디자이너에 대한 자세한 내용은 [Analysis Services MDX Query Designer User Interface](analysis-services-mdx-query-designer-user-interface.md)를 참조하십시오.  
   
- DMX 그래픽 쿼리 디자이너에는 디자인, 쿼리 및 결과의 3가지 모드가 있습니다. 모드를 전환하려면 쿼리 디자인 창을 마우스 오른쪽 단추로 클릭하고 모드를 선택합니다. 각 모드는 메타데이터 창을 제공하며 이 창에서는 선택한 큐브에서 멤버를 끌어서 보고서 처리 시 데이터 세트의 데이터를 검색하는 DMX 쿼리를 작성할 수 있습니다.  
+ DMX 그래픽 쿼리 디자이너에는 3개의 모드인 디자인, 쿼리 및 결과 모드가 있습니다. 모드를 전환하려면 쿼리 디자인 창을 마우스 오른쪽 단추로 클릭하고 모드를 선택합니다. 각 모드는 메타데이터 창을 제공하며 이 창에서는 선택한 큐브에서 멤버를 끌어서 보고서 처리 시 데이터 세트의 데이터를 검색하는 DMX 쿼리를 작성할 수 있습니다.  
   
 ## <a name="graphical-dmx-query-designer-toolbar"></a>그래픽 DMX 쿼리 디자이너 도구 모음  
  쿼리 디자이너 도구 모음은 그래픽 인터페이스를 사용하여 DMX 쿼리를 디자인하는 데 도움이 되는 단추를 제공합니다. 다음 표에서는 단추와 해당 기능을 설명합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "48136663"
 |![MDX 쿼리 뷰로 변경](../../analysis-services/media/rsqdicon-commandtypemdx.gif "MDX 쿼리 뷰로 변경")|MDX 쿼리 디자이너 모드로 전환합니다.|  
 |![DMX 쿼리 언어 뷰로 변경](../media/rsqdicon-commandtypedmx.gif "DMX 쿼리 언어 뷰로 변경")|DMX 쿼리 디자이너 모드로 전환합니다.|  
 |![결과 데이터 새로 고침](../../analysis-services/media/rsqdicon-refresh.gif "결과 데이터 새로 고침")|데이터 원본의 메타데이터를 새로 고칩니다.|  
-|![삭제할](../../analysis-services/media/rsqdicon-delete.gif "삭제")|데이터 창의 선택된 열을 쿼리에서 삭제합니다.|  
+|![삭제](../../analysis-services/media/rsqdicon-delete.gif "삭제")|데이터 창의 선택된 열을 쿼리에서 삭제합니다.|  
 |![쿼리 매개 변수 대화 상자 아이콘](../../analysis-services/media/iconqueryparameter.gif "쿼리 매개 변수 대화 상자 아이콘")|**쿼리 매개 변수** 대화 상자를 표시합니다. 기본값을 변수에 할당할 경우 보고서 디자이너에서 레이아웃 뷰로 전환할 때 해당 보고서 매개 변수가 만들어집니다.|  
 |![쿼리 실행](../../analysis-services/media/rsqdicon-run.gif "쿼리 실행")|쿼리를 준비합니다.|  
 |![디자인 모드로 전환](../../analysis-services/media/rsqdicon-designmode.gif "디자인 모드로 전환")|디자인 모드와 쿼리 모드 사이를 전환합니다. 결과 뷰로 변경하려면 디자인 창을 마우스 오른쪽 단추로 클릭하고 **결과**를 선택합니다.|  
@@ -85,12 +85,12 @@ ms.locfileid: "48136663"
  디자인 모드나 쿼리 모드로 다시 전환하려면 결과 창을 마우스 오른쪽 단추로 클릭하고 **디자인** 또는 **쿼리**를 선택합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 용 MDX 쿼리 디자이너에서 매개 변수 정의 &#40;보고서 작성기 및 SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
+ [Analysis Services용 MDX 쿼리 디자이너에서 매개 변수 정의&#40;보고서 작성기 및 SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
  [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [DMX 용 analysis Services 연결 형식 &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
+ [DMX용 Analysis Services 연결 형식&#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
  [데이터 마이닝 모델에서 데이터 검색&#40;DMX&#41;&#40;SSRS&#41;](retrieve-data-from-a-data-mining-model-dmx-ssrs.md)   
  [RSReportDesigner 구성 파일](../report-server/rsreportdesigner-configuration-file.md)   
- [MDX 용 analysis Services 연결 형식 &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
- [DMX 용 analysis Services 연결 형식 &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)  
+ [MDX용 Analysis Services 연결 형식&#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
+ [DMX용 Analysis Services 연결 형식&#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)  
   
   

@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 0c2e8587-1dda-4e7b-8ef8-646fcda051fc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 80aa9e3838440e93cf92c7efb7f93723a1bdbdef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4edf20d92883c5446a4e63472e006acc3763084d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205933"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024154"
 ---
 # <a name="msreportserverinstance-class"></a>MSReportServer_Instance 클래스
   MSReportServer_Instance 클래스는 클라이언트에서 설치된 보고서 서버에 연결하는 데 필요한 기본 정보를 제공합니다.  
   
- 이 유형의 모든 멤버 목록을 보려면 참조 [MSReportServer_Instance 멤버](msreportserver-instance-members.md)  
+ 이 유형의 모든 멤버 목록을 보려면 [MSReportServer_Instance 멤버](msreportserver-instance-members.md)를 참조하세요.  
   
 ## <a name="syntax"></a>구문  
   

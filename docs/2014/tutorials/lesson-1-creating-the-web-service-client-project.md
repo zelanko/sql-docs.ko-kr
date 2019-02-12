@@ -1,22 +1,21 @@
 ---
-title: '1 단원: 웹 서비스 클라이언트 프로젝트 만들기 | Microsoft Docs'
+title: '1단원: 웹 서비스 클라이언트 프로젝트 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0070daa6-56b0-4663-83b2-44c96acafad8
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: bf5a2f15aaed3c50c456eb635b34a19973a51f21
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: aa992d78e8075459115fb4a298b8c8dba02a8157
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080803"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025294"
 ---
 # <a name="lesson-1-creating-the-web-service-client-project"></a>1단원: 웹 서비스 클라이언트 프로젝트 만들기
   이 연습에서는 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 개발 환경을 사용하여 보고서 서버 웹 서비스에 액세스하는 간단한 콘솔 응용 프로그램을 만듭니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "48080803"
      솔루션 탐색기에서 프로젝트 노드를 확장합니다. Program.cs의 기본 이름 사용 하 여 파일 (module1.vb) [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) 프로젝트에 추가 되었습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [2 단원: 웹 참조 추가](../../2014/tutorials/lesson-2-adding-a-web-reference.md)   
+ [2단원: 웹 참조 추가](../../2014/tutorials/lesson-2-adding-a-web-reference.md)   
  [Visual Basic 또는 Visual C를 사용 하 여 보고서 서버 웹 서비스에 액세스&#35; &#40;SSRS 자습서&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

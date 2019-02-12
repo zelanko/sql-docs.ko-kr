@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 81412f94-2991-4e58-bc05-5ccc0cbf2a75
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5688cd5beccc582ef5c3413b19938104f659680a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1bb9deac03a2ba3683922a8c7e361cb908c787c0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130663"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034714"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>보고서에 테두리 추가(보고서 작성기 및 SSRS)
   선이나 사각형을 추가하지 않고 머리글, 바닥글 및 보고서 본문 자체에 테두리를 추가하여 보고서에 테두리를 추가할 수 있습니다.  
@@ -38,6 +38,6 @@ ms.locfileid: "48130663"
 3.  바닥글에서 임의의 항목 바깥쪽 바닥글을 마우스 오른쪽 단추로 클릭하고 **바닥글 속성**을 클릭합니다. **테두리** 탭에서 원하는 스타일의 왼쪽, 아래쪽 및 오른쪽 테두리를 추가합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [사각형 및 선 &#40;보고서 작성기 및 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
+ [사각형 및 선&#40;보고서 작성기 및 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

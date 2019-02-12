@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: afa72384d94b4a3c7c351d59110bd4ae692b8be9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 01050446f67cd06ef743270e32222a16537e9f0e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367595"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029944"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>데이터 처리 확장 프로그램에 대한 Connection 클래스 구현
   **Connection** 개체는 데이터 연결 또는 유사한 리소스를 나타내며 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램 사용자의 시작 위치입니다. 데이터베이스 서버에 대한 연결을 나타내며 유사한 동작의 모든 엔터티를 **Connection**으로 표시할 수 있습니다.  

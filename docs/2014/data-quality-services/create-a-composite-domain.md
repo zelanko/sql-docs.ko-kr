@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.kb.createcd.f1
 - sql12.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9b2efda76c0e1005a298e67b139233a96796522b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3cfaf75851b97a8b13856fa8f65aca0bde7e10d1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413780"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034094"
 ---
 # <a name="create-a-composite-domain"></a>복합 도메인 만들기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에서 복합 도메인을 만드는 방법에 대해 설명합니다. 복합 도메인은 단일 데이터 필드에 적용되는 하나 이상의 단일 도메인으로 구성됩니다. 복합 도메인에 대한 자세한 내용은 [복합 도메인 관리](../../2014/data-quality-services/managing-a-composite-domain.md)를 참조하세요.  
@@ -89,7 +89,7 @@ ms.locfileid: "52413780"
   
 6.  **마침** 을 클릭하여 [도메인 관리 작업 종료](../../2014/data-quality-services/end-the-domain-management-activity.md)에 설명된 대로 도메인 관리 작업을 완료합니다.  
   
-##  <a name="FollowUp"></a> 후속편: 복합 도메인을 만든 후  
+##  <a name="FollowUp"></a> 후속 작업: 복합 도메인을 만든 후  
  복합 도메인을 만든 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../../2014/data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../../2014/data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../../2014/data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
 ##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  

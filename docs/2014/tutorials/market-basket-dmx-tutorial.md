@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - DMX [Analysis Services], tutorials
@@ -18,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6e262a1d-c89e-4033-8368-46cf25168ef5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0f29aff4341126665e184e12219aca014222cd82
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: fe12f1c4ca1c0946572c61e89f4f4edb8ba9a762
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360795"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027531"
 ---
 # <a name="market-basket-dmx-tutorial"></a>Market Basket DMX 자습서
   이 자습서에서는 DMX(Data Mining Extensions) 쿼리 언어를 사용하여 마이닝 모델을 만들고 학습하며 탐색하는 방법을 설명합니다. 이러한 마이닝 모델을 사용하여 동시에 구입되는 경향이 있는 제품을 설명하는 예측을 만들 수 있습니다.  
@@ -87,16 +86,16 @@ ms.locfileid: "53360795"
 ## <a name="what-you-will-learn"></a>학습 내용  
  이 자습서는 다음 단원으로 이루어져 있습니다.  
   
- [1 단원: Market Basket 마이닝 구조 만들기](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)  
+ [1단원: Market Basket 마이닝 구조 만들기](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)  
  이 단원에서는 `CREATE` 문을 사용하여 마이닝 구조를 만드는 방법에 대해 설명합니다.  
   
  [2단원: Market Basket 마이닝 구조에 마이닝 모델 추가](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
  이 단원에서는 `ALTER` 문을 사용하여 마이닝 구조에 마이닝 모델을 추가하는 방법에 대해 설명합니다.  
   
- [3 단원: Market Basket 마이닝 구조 처리](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
+ [3단원: Market Basket 마이닝 구조 처리](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
  이 단원에서는 `INSERT INTO` 문을 사용하여 마이닝 구조 및 이에 연결된 마이닝 모델을 처리하는 방법에 대해 설명합니다.  
   
- [4 단원: Market Basket 예측 실행](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
+ [4단원: Market Basket 예측 실행](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
  이 단원에서는 `PREDICTION JOIN` 문을 사용하여 마이닝 모델에 대한 예측을 만드는 방법에 대해 설명합니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -116,6 +115,6 @@ ms.locfileid: "53360795"
 ## <a name="see-also"></a>관련 항목  
  [Bike Buyer DMX 자습서](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
  [기본 데이터 마이닝 자습서](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [3 단원: 시장 바구니 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [3단원: 시장 바구니 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

@@ -12,18 +12,18 @@ helpviewer_keywords:
 - upgrading caching for Lookup transformation
 - upgrading Lookup transformation
 ms.assetid: d9b2c281-91ee-4e20-bdf0-0cd77d4a4241
-author: mashamsft
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 652cec720eae440106a0c8e30bd9910140dcff0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 159779bc43edf7d30182e86aee545e6e9db8135a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182623"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032374"
 ---
 # <a name="upgrade-lookup-transformations"></a>조회 변환 업그레이드
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하는 경우 새로운 조회 변환 기능을 활용하도록 패키지를 수정하는 것이 좋습니다. 새로운 조회 변환에서는 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]에서 사용할 수 있는 캐싱 유형 및 데이터 출력 옵션을 지원합니다. 에 대 한 자세한 내용은 추가 캐싱 및 데이터 출력을 참조 하세요 [조회 변환이](../../integration-services/data-flow/transformations/lookup-transformation.md)합니다.  
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하는 경우 새로운 조회 변환 기능을 활용하도록 패키지를 수정하는 것이 좋습니다. 새로운 조회 변환에서는 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]에서 사용할 수 있는 캐싱 유형 및 데이터 출력 옵션을 지원합니다. 캐싱 및 데이터 출력에 대한 자세한 내용은 [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md)을 참조하십시오.  
   
  [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]에서 사용할 수 있는 캐싱 유형으로는 전체 캐싱, 부분 캐싱 및 캐싱 안 함이 있습니다. [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]에서는 이러한 캐싱 유형 중 하나를 사용하도록 조회 변환을 구성할 수 있습니다. 부분 캐싱을 구현 하는 방법에 대 한 자세한 내용은 캐싱이나 캐싱 안을 참조 하세요 [Implement a Lookup No Cache or Partial Cache Mode에서](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)합니다. 전체 캐싱을 구현 하는 방법에 대 한 자세한 내용은 [캐시 연결 관리자를 사용 하 여 전체 캐시 모드로 조회 변환을 구현](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md) 고 [Full Cache Mode Using OLE에서 조회 변환 구현 DB 연결 관리자](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)합니다.  
   
