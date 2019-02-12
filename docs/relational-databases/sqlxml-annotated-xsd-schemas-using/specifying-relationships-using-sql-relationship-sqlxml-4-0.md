@@ -79,7 +79,7 @@ ms.locfileid: "56013914"
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
 ### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>1. 요소에 sql:relationship 주석 지정  
- 다음과 같은 주석이 추가 된 XSD 스키마에 포함 되어 있습니다  **\<고객 >** 하 고  **\<순서 >** 요소입니다.  **\<순서 >** 요소는 자식 요소를  **\<고객 >** 요소입니다.  
+ 다음과 같은 주석이 추가 된 XSD 스키마에 포함 되어 있습니다  **\<고객 >** 하 고  **\<순서 >** 요소입니다. **\<순서 >** 요소는 자식 요소를 **\<고객 >** 요소입니다.  
   
  스키마에는 **sql: relationship** 주석은에 지정 됩니다는  **\<순서 >** 자식 요소입니다. 에 정의 된 관계 자체를  **\<xsd: appinfo >** 요소입니다.  
   
@@ -387,7 +387,7 @@ ms.locfileid: "56013914"
 ### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>4. 여러 요소에 대해 sql:relationship 지정  
  이 예제에서 주석이 추가 된 XSD 스키마를 포함 합니다  **\<고객 >** 합니다  **\<순서 >**, 및  **\<OrderDetail >** 요소입니다.  
   
-  **\<순서 >** 요소는 자식 요소를  **\<고객 >** 요소입니다. **\<sql: relationship >** 에 지정 된  **\<순서 >** 자식 요소 고객에 게 속한 주문은의 자식 요소로 표시 되는 따라서  **\<고객 >**.  
+ **\<순서 >** 요소는 자식 요소를 **\<고객 >** 요소입니다. **\<sql: relationship >** 에 지정 된  **\<순서 >** 자식 요소 고객에 게 속한 주문은의 자식 요소로 표시 되는 따라서  **\<고객 >**.  
   
  합니다  **\<순서 >** 요소를 포함 합니다  **\<OrderDetail >** 자식 요소입니다. **\<sql: relationship >** 에 지정 됩니다  **\<OrderDetail >** 자식 요소를 주문에 속하는 주문 정보는 자식 요소로 표시 되도록 **\<순서 >** 요소입니다.  
   
