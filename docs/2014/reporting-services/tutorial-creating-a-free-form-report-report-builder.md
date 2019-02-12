@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 97082f1fcfc739e622c976b4dff0c1dbe4e6a79d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9e1246a32f890c5842a1d1a9c8ad0202c160a171
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068993"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013754"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>자습서: 자유 형식 보고서 만들기(보고서 작성기)
   이 자습서에서는 양식 편지와 유사한 SSRS 자유 형식 보고서를 만드는 방법을 배웁니다. 입력란, 이미지 및 다른 데이터 영역이 있는 양식을 만들기 위해 보고서 항목을 정렬할 수 있습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "48068993"
   
 -   [요약 데이터 시각화 추가](#Visualization)  
   
- 이 자습서에 소요되는 예상 시간: 20분  
+ 이 자습서에 소요되는 예상 시간: 20분.  
   
 ## <a name="requirements"></a>요구 사항  
  요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/report-builder-tutorials.md)을 참조하세요.  
@@ -71,11 +71,11 @@ ms.locfileid: "48068993"
   
 1.  보고서 데이터 창에서 **새로 만들기**를 클릭하고 **데이터 원본**을 클릭합니다.  
   
-2.  에 `Name` 상자에 입력: **ListDataSource**  
+2.  에 `Name` 상자에 입력 합니다. **ListDataSource**  
   
 3.  **내 보고서에 포함된 연결 사용**을 클릭합니다.  
   
-4.  연결 형식이 Microsoft SQL Server인지 확인한 다음 **연결 문자열** 상자에 **Data Source = \<servername>** 을 입력합니다.  
+4.  연결 형식이 Microsoft SQL Server인지 확인한 다음 **연결 문자열** 상자에 다음을 입력합니다. **데이터 원본 = \<servername>**  
   
      \<서버 이름 >에는 SQL Server 데이터베이스 엔진 인스턴스의 설치 된 컴퓨터를 지정 하는 예제 Report001, 합니다. 보고서 데이터는 SQL Server 데이터베이스에서 추출되지 않았으므로 데이터베이스 이름을 포함하지 않아야 합니다. 지정된 서버의 기본 데이터베이스는 쿼리를 구문 분석하는 데 사용됩니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48068993"
   
 1.  보고서 데이터 창에서 **새로 만들기**를 클릭한 다음, **데이터 세트**를 클릭합니다.  
   
-2.  에 `Name` 상자에 입력: **ListDataset 합니다.**  
+2.  에 `Name` 상자에 입력 합니다. **ListDataset.**  
   
 3.  **내 보고서에 포함된 데이터 집합 사용**을 클릭하고 데이터 원본이 **ListDataSource**인지 확인합니다.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "48068993"
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     열이 목록에 추가됩니다. 열 셀에 포함 `[Territory].`  
+     열이 목록에 추가됩니다. 이 열에는 `[Territory].` 셀이 있습니다  
   
 4.  목록에서 Territory 열을 마우스 오른쪽 단추로 클릭한 다음 **열 삭제**를 클릭합니다.  
   
@@ -224,7 +224,7 @@ ms.locfileid: "48068993"
   
 2.  리본 메뉴의 **삽입** 탭에서 **입력란**을 클릭한 다음 입력란을 목록의 왼쪽 상단으로 끌어 이전에 추가한 사각형 안에 배치합니다. 입력란의 높이와 너비를 각각 3인치와 5인치로 만듭니다.  
   
-3.  입력란의 위쪽에 커서를 놓고 **Newsletter for** 를 입력합니다.  
+3.  입력란의 위쪽에 커서를 놓고 **Newsletter for**.  
   
      ![뉴스레터 제목 텍스트 추가](../../2014/tutorials/media/tutorial-newsletterfor.png "뉴스레터 제목 텍스트 추가")  
   
@@ -245,7 +245,7 @@ ms.locfileid: "48068993"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. 3단계에서 입력한 텍스트 아래에 커서를 놓고 **Hello** 를 입력합니다.  
+9. 3단계에서 입력한 텍스트 아래에 커서를 놓고 **Hello** 합니다.  
   
     > [!NOTE]  
     >  "Hello" 단어 뒤에 추가 공백을 포함해야 합니다. 이 공백은 텍스트와 다음 단계에서 추가할 필드를 구분합니다.  
@@ -279,7 +279,7 @@ ms.locfileid: "48068993"
   
      ![뉴스레터 텍스트 추가](../../2014/tutorials/media/tutorial-newslettertext.png "뉴스레터 텍스트 추가")  
   
-20. 15단계에서 붙여 넣은 텍스트 아래에 커서를 놓고 **Congratulations on your total sales of** 를 입력합니다.  
+20. 15단계에서 붙여 넣은 텍스트 아래에 커서를 놓고 **축에 총 판매량에** 입니다.  
   
     > [!NOTE]  
     >  "of" 단어 뒤에 추가 공백을 포함해야 합니다. 이 공백은 텍스트와 다음 단계에서 추가할 필드를 구분합니다.  
@@ -412,7 +412,7 @@ ms.locfileid: "48068993"
   
 4.  **저장**을 클릭합니다.  
   
-##  <a name="Line"></a> 8입니다. (선택 사항) 선을 추가하여 보고서 영역 구분  
+##  <a name="Line"></a> 8. (선택 사항) 선을 추가하여 보고서 영역 구분  
  선을 추가하여 보고서의 편집 영역과 세부 정보 영역을 구분합니다.  
   
 #### <a name="to-add-a-line"></a>선을 추가하려면  
@@ -431,7 +431,7 @@ ms.locfileid: "48068993"
   
      ![보고서에 줄을 추가](../../2014/tutorials/media/tutorial-reportwithline.png "보고서에 선 추가")  
   
-##  <a name="Visualization"></a> 9입니다. (선택 사항) 요약 데이터 시각화 추가  
+##  <a name="Visualization"></a> 9. (선택 사항) 요약 데이터 시각화 추가  
  사각형은 보고서가 렌더링되는 방식을 제어하는 데 유용합니다. 원형 및 세로 막대형 차트를 사각형 내에 배치하여 보고서가 원하는 방식으로 렌더링되도록 합니다.  
   
 #### <a name="to-add-a-rectangle"></a>사각형을 추가하려면  
@@ -466,7 +466,7 @@ ms.locfileid: "48068993"
   
 10. 차트 제목을 마우스 오른쪽 단추로 클릭한 다음 **제목 속성**을 클릭합니다.  
   
-11. **차트 제목 속성** 대화 상자의 제목 입력란에 **Product Quantities Sold**를 입력합니다.  
+11. 에 **차트 제목 속성** 대화 상자의 제목 입력란에서: **Product Quantities Sold**.  
   
 12. **글꼴** 탭을 클릭하고 **크기** 목록에서 **10pt**를 클릭합니다.  
   
@@ -500,7 +500,7 @@ ms.locfileid: "48068993"
   
 10. 차트 제목을 마우스 오른쪽 단추로 클릭한 다음 **제목 속성**을 클릭합니다.  
   
-11. **차트 제목 속성** 대화 상자의 제목 입력란에 **Product Sales**를 입력합니다.  
+11. 에 **차트 제목 속성** 대화 상자의 제목 입력란에서: **Product Sales**.  
   
 12. **글꼴** 탭을 클릭하고 **크기** 목록에서 **10pt**를 클릭한 다음 **확인**을 클릭합니다.  
   
@@ -519,7 +519,7 @@ ms.locfileid: "48068993"
   
 1.  이 단원의 앞부분에서 추가한 사각형을 클릭합니다.  
   
-     속성 창에는 `Name` 속성에 사각형의 이름이 표시 됩니다.  
+     속성 창의 `Name` 속성에 사각형의 이름이 표시됩니다.  
   
      ![사각형의 이름이](../../2014/tutorials/media/tutorial-rectanglename.png "사각형의 이름")  
   

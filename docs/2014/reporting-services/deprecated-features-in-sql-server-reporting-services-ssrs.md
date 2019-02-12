@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1fc6c16004ba2a3bba7d11b49a351fcb3fc1641e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: a4bcdd91fb11301de3f3f22fddbf8f4d6c27fbde
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362555"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020764"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>SQL Server 2014의 SQL Server Reporting Services에서 지원되지 않는 기능
   이 항목에서는 지원되지 않는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능에 대해 설명합니다. 이러한 기능은 지원되지 않는 버전에서 계속 사용할 수 있지만 이후 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 기능이 제거될 예정입니다. 새 애플리케이션에는 이러한 기능을 사용하면 안 됩니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "53362555"
 ##  <a name="bkmk_2014"></a> SQL Server 2014 Reporting Services에서 사용 되지 않는 기능  
   
 ### <a name="features-not-supported-in-the-next-version-of-sql-server"></a>다음 버전의 SQL Server에서 지원되지 않는 기능  
- 아래의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능은 **** 의 버전 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 지원되지 않습니다. 새 개발 작업에서는 이러한 기능을 사용하지 말고, 현재 이러한 기능을 사용하는 애플리케이션은 가능한 한 빨리 수정하세요.  
+ 아래의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능은 **다음** 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 지원되지 않습니다. 새 개발 작업에서는 이러한 기능을 사용하지 말고, 현재 이러한 기능을 사용하는 애플리케이션은 가능한 한 빨리 수정하세요.  
   
 #### <a name="html-rendering-extension-device-information-settings"></a>HTML 렌더링 확장 프로그램 디바이스 정보 설정  
  HTML 렌더링 확장 프로그램에 대한 다음 디바이스 정보 설정은 지원되지 않습니다.  
