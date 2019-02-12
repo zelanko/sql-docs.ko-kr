@@ -1,29 +1,28 @@
 ---
-title: 'DMX 사용 하 여 데이터 마이닝 모델 만들기 및 쿼리: 자습서 (Analysis Services-데이터 마이닝) | Microsoft Docs'
+title: 'DMX를 사용하여 데이터 마이닝 모델 만들기 및 쿼리: 자습서 (Analysis Services-데이터 마이닝) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 145b81a7-c0c3-4ca3-bb32-0b482423b9a0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4cc23d274fc086168f580031d9dd7f44b1afd05c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 22ed01105a32f460bcbeb2c067299fdf62af2eed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176993"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012524"
 ---
 # <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>DMX를 사용하여 데이터 마이닝 모델 만들기 및 쿼리: 자습서(Analysis Services - 데이터 마이닝)
-  사용 하 여 데이터 마이닝 솔루션을 만든 후 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 추세를 예측 데이터의 패턴을 검색 하 고, 마이닝 모델의 정확도 측정 하려면 데이터 마이닝 모델에 대 한 쿼리를 만들 수 있습니다.  
+   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 사용하여 데이터 마이닝 솔루션을 만든 후 데이터 마이닝 모델에 대한 쿼리를 만들어 추세를 예측하고, 데이터 패턴을 검색하고, 마이닝 모델의 정확도를 측정할 수 있습니다.  
   
- 다음 목록의 단계별 자습서에서는 빌드 및 사용 하 여 데이터 마이닝 쿼리를 실행 하는 방법을 알아봅니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터에서 가장 많이 얻을 수 있도록 합니다.  
+ 다음 목록의 단계별 자습서에서는 데이터를 최대한으로 활용할 수 있도록 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 를 사용하여 데이터 마이닝 쿼리를 작성하고 실행하는 방법을 배울 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -40,9 +39,9 @@ ms.locfileid: "48176993"
      이 자습서에서는 예측 모델을 만들어 CREATE MODEL (DMX) 문 사용을 설명합니다. 그런 다음 관련 모델을 추가하고 Microsoft 시계열 알고리즘의 매개 변수를 변경하여 각 모델의 동작을 사용자 지정합니다. 마지막으로 예측을 만들고 새 데이터를 사용하여 해당 예측을 업데이트합니다. 예측을 만들면서 시계열을 업데이트하는 기능은 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]부터 추가되었습니다.  
   
 ## <a name="reference"></a>참조  
- [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [데이터 마이닝 알고리즘 & #40; Analysis Services-데이터 마이닝 & #41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Data Mining Extensions &#40;DMX&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [DMX&#40;Data Mining Extensions&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)  
   
 ## <a name="related-sections"></a>관련 섹션  
   

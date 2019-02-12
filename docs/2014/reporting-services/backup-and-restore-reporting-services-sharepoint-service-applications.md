@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 63511e175a98e366bfeb4d02ba3085d8e9943813
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: ee23e7f2382ca84ad609b3c150f77b4f9530725b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368405"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033834"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Reporting Services SharePoint 서비스 애플리케이션 백업 및 복원
   이 항목에서는 SharePoint 중앙 관리 또는 PowerShell을 사용하여 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 백업하고 복원하는 방법에 대해 설명합니다. 이 항목에는 다음과 같은 내용이 포함되어 있습니다.  

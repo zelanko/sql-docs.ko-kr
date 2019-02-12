@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], tutorials
@@ -14,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 6602edb6-d160-43fb-83c8-9df5dddfeb9c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12581756e6ffa7d77ba7dc3339c3f38c96962d4e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: d434df95a26485d4d7795d3ab960b8d2457b8ff6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372912"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033684"
 ---
 # <a name="basic-data-mining-tutorial"></a>기본 데이터 마이닝 자습서
    [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 기본 데이터 마이닝 자습서를 시작합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 마이닝 모델을 만들고 예측 하기 위한 통합된 환경을 제공 합니다. 이 자습서에서는 시스템 학습을 사용하여 고객 구매 행동을 분석하고 예측하는 타겟 메일링 캠페인 시나리오를 완료합니다. 이 자습서에서는 가장 중요한 세 가지 데이터 마이닝 알고리즘인 클러스터링, 의사 결정 트리 및 Naive Bayes를 사용하는 방법을 보여 줍니다. 또한 마이닝 모델 뷰어를 사용하여 결과를 분석하는 방법과 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에 포함된 데이터 마이닝 도구를 사용하여 예측과 정확도 차트를 만드는 방법도 알아봅니다. 모든 예에 가상 회사인 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]가 사용됩니다.  
@@ -43,13 +42,13 @@ ms.locfileid: "53372912"
   
  이 자습서는 다음 단원으로 이루어져 있습니다.  
   
- [1 단원: 데이터베이스 서비스는 분석을 준비 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial.md)  
+ [1단원: 데이터베이스 서비스는 분석을 준비 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial.md)  
  이 단원에서는 새 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스를 만들고 데이터 원본과 데이터 원본 뷰를 추가하며 데이터 마이닝에 사용할 새 데이터베이스를 준비하는 방법을 배웁니다.  
   
  [2단원: 타겟된 메일링 구조 구축 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
  이 단원에서는 대상 메일 시나리오의 일부로 사용할 수 있는 마이닝 모델 구조를 만드는 방법을 배웁니다.  
   
- [3 단원: 모델 추가 및 처리](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
+ [3단원: 모델 추가 및 처리](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
  이 단원에서는 구조에 모델을 추가하는 방법을 배웁니다. 사용자가 만드는 모델은 다음 알고리즘을 사용하여 생성됩니다.  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] 의사 결정 트리  
@@ -58,13 +57,13 @@ ms.locfileid: "53372912"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes  
   
- [4 단원: 타겟된 메일링 모델 탐색 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
+ [4단원: 타겟된 메일링 모델 탐색 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
  이 단원에서는 뷰어를 사용하여 각 모델의 결과를 탐색하고 해석하는 방법을 배웁니다.  
   
- [5 단원: 모델을 테스트 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
+ [5단원: 모델을 테스트 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
  이 단원에서는 대상 메일 모델 중 하나의 복사본을 만들고, 마이닝 모델 필터를 추가하여 학습 데이터를 특정 고객 집합으로 제한한 다음 모델의 실행 가능성을 평가합니다.  
   
- [6 단원: 만들기 및 예측 작업 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [6단원: 만들기 및 예측 작업 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
  기본 데이터 마이닝 자습서의 이 마지막 단원에서는 모델을 사용하여 자전거를 구매할 가능성이 가장 높은 고객을 예측합니다. 그런 다음 기본 사례로 드릴스루하여 연락처 정보를 얻습니다.  
   
 ## <a name="requirements"></a>요구 사항  

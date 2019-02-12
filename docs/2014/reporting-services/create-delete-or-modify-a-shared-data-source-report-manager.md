@@ -15,14 +15,14 @@ helpviewer_keywords:
 - modifying shared data sources
 ms.assetid: cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d11fc38c9e1729ae4651f632d2755bfbbe2f0e2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 99e083439e49d522ddc84f1f32454b0c4777237b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202893"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025874"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>공유 데이터 원본 만들기, 삭제 및 수정(보고서 관리자)
   공유 데이터 원본은 데이터 원본에 대한 연결 속성을 지정합니다. 많은 보고서, 모델 또는 데이터 기반 구독에서 사용되는 데이터 원본이 있는 경우 여러 위치에서 같은 연결 정보를 유지 관리해야 하는 오버헤드를 없애기 위해 공유 데이터 원본을 만드십시오.  
@@ -40,7 +40,7 @@ ms.locfileid: "48202893"
   
 3.  **새 데이터 원본**을 클릭합니다. **새 데이터 원본** 페이지가 열립니다.  
   
-4.  항목의 이름을 입력합니다. 이름은 한 글자 이상이어야 하며 문자로 시작되어야 합니다. 특정 기호도 포함할 수 있지만 공백 또는 ; ? : \@ & = +, $ / * \< > | " /.  
+4.  항목의 이름을 입력합니다. 이름은 한 글자 이상이어야 하며 문자로 시작되어야 합니다. 특정 기호도 포함할 수 있지만 공백 또는 ; ? : \@ & = + , $ / * \< > | " /.  
   
 5.  연결 정보를 제공하는 설명을 입력합니다(옵션). 이 설명은 보고서 관리자의 **내용** 페이지에 나타납니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48202893"
   
 7.  **연결 문자열**에는 보고서 서버가 데이터 원본에 연결하는 데 사용하는 연결 문자열을 지정합니다. 연결 문자열에는 자격 증명을 지정하지 않는 것이 좋습니다.  
   
-     다음 예제에서는 로컬 연결에 대 한 연결 문자열을 보여 줍니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스:  
+     다음 예에서는 로컬 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스에 연결하기 위한 연결 문자열을 보여 줍니다.  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -64,14 +64,14 @@ ms.locfileid: "48202893"
   
     -   데이터 원본이 파일 시스템에서 액세스되는 XML 파일인 경우와 같이 데이터 원본이 자격 증명을 사용하지 않는 경우 **자격 증명 필요 없음**을 클릭합니다. 이 자격 증명 유형은 데이터 원본에 대해 유효한 경우에만 지정해야 합니다. 인증이 필요한 데이터 원본에 대해 이 옵션을 선택하면 연결이 실패합니다. 이 옵션을 선택할 때는 사용자 자격 증명을 사용할 수 없는 경우 보고서 서버가 다른 컴퓨터에 연결하여 데이터나 파일을 검색할 수 있도록 허용하는 무인 실행 계정을 구성해야 합니다.  
   
-     자격 증명을 구성 하는 방법에 대 한 자세한 내용은 참조 하세요. [보고서 데이터 원본에 대 한 연결 정보와 자격 증명 지정](report-data/specify-credential-and-connection-information-for-report-data-sources.md)합니다. 무인 실행 계정에 대한 자세한 내용은 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.  
+     자격 증명 구성 방법에 대한 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요. 무인 실행 계정에 대한 자세한 내용은 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.  
   
 9. **연결 테스트** 단추를 클릭하여 데이터 원본 구성의 유효성을 검사합니다.  
   
     > [!NOTE]  
     >  XML 데이터 원본 유형에서는 연결 테스트 단추를 지원하지 않습니다.  
   
-10. **확인**을 클릭합니다.  
+10.  **확인**을 클릭합니다.  
   
 ### <a name="to-modify-a-shared-data-source"></a>공유 데이터 원본을 수정하려면  
   
@@ -99,9 +99,9 @@ ms.locfileid: "48202893"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [페이지 콘텐츠를 &#40;보고서 관리자&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [만들기, 수정 및 공유 데이터 원본 삭제 &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
+ [내용 페이지&#40;보고서 관리자&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [공유 데이터 원본 만들기, 수정 및 삭제&#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [보고서 데이터 원본 관리](report-data/manage-report-data-sources.md)   
- [보고서의 데이터 원본 속성 구성 &#40;보고서 관리자&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [보고서의 데이터 원본 속성 구성&#40;보고서 관리자&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

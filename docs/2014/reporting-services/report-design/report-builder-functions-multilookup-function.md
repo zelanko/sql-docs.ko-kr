@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 62923987b3214a319268291b1349cb32f5bd0bd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1350c25450dfae5ed02b9761ed79182ccac817d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147460"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021604"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Multilookup 함수(보고서 작성기 및 SSRS)
   이름/값 쌍을 포함하는 데이터 세트에서 지정된 이름 집합과 처음 일치하는 값 집합을 반환합니다.  
@@ -33,7 +33,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 #### <a name="parameters"></a>매개 변수  
  *source_expression*  
- (`VariantArray`)는 현재 범위에서 평가 되 고, 조회할 키 또는 이름의 집합을 지정 하는 식입니다. 예를 들어 다중값 매개 변수의 경우 `=Parameters!IDs.value`입니다.  
+ (`VariantArray`) 현재 범위에서 평가되고, 조회할 키 또는 이름의 집합을 지정하는 식입니다. 예를 들어 다중값 매개 변수의 경우 `=Parameters!IDs.value`입니다.  
   
  *destination_expression*  
  (`Variant`) 데이터 집합의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다.  `=Fields!ID.Value`) 을 입력합니다.  
@@ -45,12 +45,12 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  보고서의 데이터 세트 이름을 지정하는 상수입니다. 예를 들면 "Colors"입니다.  
   
 ## <a name="return"></a>반환 값  
- 반환 된 `VariantArray`, 또는 `Nothing` 일치 항목이 없는 경우.  
+ `VariantArray`를 반환하거나, 일치하는 항목이 없으면 `Nothing`을 반환합니다.  
   
 ## <a name="remarks"></a>Remarks  
- 사용 하 여 `Multilookup` 를 각 쌍의 1 대 일 관계에 있는 이름-값 쌍에 대 한 데이터 집합에서 값의 집합을 검색 합니다. `MultiLookup` 호출 하는 것과 같습니다 `Lookup` 이름 또는 키 집합에 대 한 합니다. 예를 들어, 기본 키 식별자를 기반으로 하는 다중값 매개 변수를 사용할 수 있습니다 `Multilookup` 매개 변수 또는 테이블에 바인딩되지 않은 데이터 집합에서 연결된 값을 검색할 테이블의 입력란의 식에 있습니다.  
+ `Multilookup`을 사용하여 일 대 일 관계가 있는 이름-값 쌍의 데이터 집합에서 값 집합을 검색할 수 있습니다. `MultiLookup`은 이름 또는 키 집합에 대해 `Lookup`을 호출하는 것과 동일합니다. 예를 들어 기본 키 식별자를 기반으로 하는 다중값 매개 변수의 경우 테이블의 입력란에 있는 식에 `Multilookup`을 사용하여 매개 변수 또는 테이블에 바인딩되지 않은 데이터 집합에서 연결된 값을 검색할 수 있습니다.  
   
- `Multilookup` 다음을 수행합니다.  
+ `Multilookup`에서는 다음을 수행합니다.  
   
 -   현재 범위에서 원본 식을 평가하고 변형 개체의 배열을 생성합니다.  
   
@@ -62,7 +62,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  다음과 같은 제한 사항이 있습니다.  
   
--   `Multilookup` 모든 필터 식이 적용 된 후 평가 됩니다.  
+-   `Multilookup`은 모든 필터 식이 적용된 후 평가됩니다.  
   
 -   조회 수준이 하나만 지원됩니다. 원본, 대상 또는 결과 식에는 조회 함수에 대한 참조가 포함될 수 없습니다.  
   
@@ -70,7 +70,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 -   원본, 대상 및 결과 식에는 보고서 또는 그룹 변수에 대한 참조가 포함될 수 없습니다.  
   
--   `Multilookup` 다음 보고서 항목에 대 한 식으로 사용할 수 없습니다.  
+-   `Multilookup`은 다음 보고서 항목에 대한 식으로 사용할 수 없습니다.  
   
     -   데이터 원본에 대한 동적 연결 문자열  
   
@@ -98,7 +98,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 |3|Clothing|  
 |4|구성 요소|  
   
- 식별자 목록에 해당하는 이름을 조회하려면 `Multilookup`을 사용합니다. 먼저 목록 호출을 문자열 배열로 분할 해야 `Multilookup` 하 여 범주 이름을 검색 하 고 결과 문자열에 연결 합니다.  
+ 식별자 목록에 해당하는 이름을 조회하려면 `Multilookup`을 사용합니다. 먼저 목록을 문자열 배열로 분할한 다음, `Multilookup`을 호출하여 범주 이름을 검색하고 결과를 문자열로 연결해야 합니다.  
   
  다음 식을 Category 데이터 세트에 바인딩된 데이터 영역의 입력란에 넣으면 "Bikes, Components, Bikes, Accessories"가 표시됩니다.  
   
@@ -124,9 +124,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서에 사용 되는 식 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [합계, 집계 및 기본 제공 컬렉션의 식 범위 &#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

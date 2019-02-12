@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e02d6529-ce67-4305-b7f0-433997e99c21
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a89c8c66eab37f20c8816823b44cefcfb77ad9ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a6194516bfc230c73df928bda5095c106776beff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208399"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030134"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>새 구독 또는 구독 편집 페이지(보고서 관리자)
   새 구독 또는 구독 편집 페이지를 사용하여 보고서에 대한 새 구독을 만들거나 기존 구독을 수정할 수 있습니다. 이 페이지의 옵션은 사용자의 역할 할당에 따라 다릅니다. 고급 권한이 있는 사용자는 추가 옵션으로 작업할 수 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "48208399"
   
 3.  드롭다운 메뉴에서 다음 중 하나를 수행하십시오.  
   
-    -   **관리**를 클릭합니다. 보고서의 일반 속성 페이지가 열립니다. **구독** 탭을 선택합니다. 도구 모음에서 클릭 **새 구독**, 또는 기존 구독을 선택 하 고 클릭 **편집**합니다.  
+    -   **관리**를 클릭합니다. 보고서의 일반 속성 페이지가 열립니다. **구독** 탭을 선택합니다. 도구 모음에서 **새 구독**을 클릭하거나 기존 구독을 선택하고 **편집**을 클릭합니다.  
   
     -   **구독**을 클릭합니다. 보고서의 **새 구독** 페이지가 열립니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48208399"
   
 ## <a name="see-also"></a>관련 항목  
  [전자 메일 배달을 위한 보고서 서버 구성 &#40;SSRS 구성 관리자&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [일정 만들기, 수정 및 삭제](subscriptions/create-modify-and-delete-schedules.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)  
   

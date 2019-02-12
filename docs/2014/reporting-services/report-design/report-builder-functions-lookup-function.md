@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 066982863d07cd125b5904e4c7467ffe9da5b107
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: efed574d2fc68fc88d5352b6bb6db09e6cab4076
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217503"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026044"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Lookup 함수(보고서 작성기 및 SSRS)
   이름/값 쌍을 포함하는 데이터 세트에서 지정된 이름과 일치하는 첫 번째 값을 반환합니다.  
@@ -45,12 +45,12 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
  보고서의 데이터 세트 이름을 지정하는 상수입니다. 예를 들면 "Products"입니다.  
   
 ## <a name="return"></a>반환 값  
- 반환 된 `Variant`, 또는 `Nothing` 일치 항목이 없는 경우.  
+ `Variant`를 반환하거나, 일치하는 항목이 없으면 `Nothing`을 반환합니다.  
   
 ## <a name="remarks"></a>Remarks  
- 사용 하 여 `Lookup` 이름/값 쌍에 대해 지정된 된 데이터 집합에서 값을 검색 하는 한 일 관계가 있는 합니다. 예를 들어 테이블에 있는 ID 필드의 경우 `Lookup`을 사용하여 데이터 영역에 바인딩되지 않은 데이터 집합에서 해당하는 이름 필드를 검색할 수 있습니다.  
+ `Lookup`을 사용하여 일 대 일 관계의 이름/값 쌍에 대한 지정된 데이터 집합에서 값을 검색할 수 있습니다. 예를 들어 테이블에 있는 ID 필드의 경우 `Lookup`을 사용하여 데이터 영역에 바인딩되지 않은 데이터 집합에서 해당하는 이름 필드를 검색할 수 있습니다.  
   
- `Lookup` 다음을 수행합니다.  
+ `Lookup`에서는 다음을 수행합니다.  
   
 -   현재 범위에서 원본 식을 평가합니다.  
   
@@ -72,7 +72,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   원본, 대상 및 결과 식에는 보고서 또는 그룹 변수에 대한 참조가 포함될 수 없습니다.  
   
--   `Lookup` 다음 보고서 항목에 대 한 식으로 사용할 수 없습니다.  
+-   `Lookup`은 다음 보고서 항목에 대한 식으로 사용할 수 없습니다.  
   
     -   데이터 원본에 대한 동적 연결 문자열  
   
@@ -98,9 +98,9 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서에 사용 되는 식 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [합계, 집계 및 기본 제공 컬렉션의 식 범위 &#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

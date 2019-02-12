@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: 7bb3166f-9374-4449-b66a-ffb77298507d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8c58757e975f4a5ef68804f190aafeec0197a902
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d83f8d097c74b0a7171d0e91e1d36ad716a00415
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128263"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023544"
 ---
 # <a name="upload-file-page-report-manager"></a>파일 업로드 페이지(보고서 관리자)
   파일 업로드 페이지를 사용하여 파일을 파일 시스템에서 보고서 서버 데이터베이스로 게시할 수 있습니다. 업로드된 파일은 보고서 서버 폴더 계층 구조의 항목으로 표시됩니다.  
   
 -   업로드된 .rdl 파일은 보고서 서버에 보고서로 게시됩니다.  
   
--   Uploaded .smdl 파일이 데이터 원본 뷰 정보를 포함하는 경우 이 파일은 보고서 모델로 게시됩니다. 데이터 원본 뷰 참조가 유실되면 업로드 중에 오류가 발생합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 보고서 모델 프로젝트에서 .smdl 파일을 업로드하면 데이터 원본 뷰 정보가 누락될 수 있습니다. 보고서 모델 프로젝트에서 데이터 원본 뷰 정보는 .smdl 파일 자체가 아닌 별도의 파일에 저장됩니다.  
+-   Uploaded .smdl 파일이 데이터 원본 뷰 정보를 포함하는 경우 이 파일은 보고서 모델로 게시됩니다. 데이터 원본 뷰 참조가 유실되면 업로드 중에 오류가 발생합니다.  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 보고서 모델 프로젝트에서 .smdl 파일을 업로드하면 데이터 원본 뷰 정보가 누락될 수 있습니다. 보고서 모델 프로젝트에서 데이터 원본 뷰 정보는 .smdl 파일 자체가 아닌 별도의 파일에 저장됩니다.  
   
      데이터 원본 뷰 정보가 들어 있고 따라서 성공적으로 업로드할 수 있는 모델 파일은 이전에 보고서 서버에 게시된 후 서버에서 파일 시스템의 파일로 저장된 파일입니다. 모델의 일반 속성 페이지를 열고 **편집** 을 클릭하여 모델을 연 경우 파일에 모델을 저장하고 보고서 서버에 새 모델로 해당 파일을 업로드할 수 있습니다. 나중에 업로드하는 .smdl 파일은 모델 게시에 필요한 모든 정보를 포함하게 됩니다.  
   
@@ -57,8 +57,8 @@ ms.locfileid: "48128263"
  기존 항목을 새 버전으로 교체하려면 이 확인란을 선택합니다. 기존 버전을 덮어쓰려면 새 항목과 기존 항목의 이름이 정확히 일치해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [페이지 콘텐츠를 &#40;보고서 관리자&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [내용 페이지&#40;보고서 관리자&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)   
  [폴더에 파일 업로드](report-server/upload-files-to-a-folder.md)  
   

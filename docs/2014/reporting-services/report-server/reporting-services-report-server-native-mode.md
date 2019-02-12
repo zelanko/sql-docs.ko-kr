@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 40cf4da099d5b9a9055b6fcd266c1f6169d8aaee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 52d0771d07efddd949961761d90f241f146c0af4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086913"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025834"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services 보고서 서버(기본 모드)
   기본 모드에 대해 구성된 보고서 서버는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]구성 요소를 통해 모든 처리 및 관리 기능을 배타적으로 제공하는 애플리케이션 서버로 실행됩니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "48086913"
   
 -   보고서 처리를 예약하고 요청 시 실행될 수 있는 보고서 처리와 캐시에서 로드되는 보고서 처리를 지정하여 서버에 대한 보고서 처리 요청의 균형을 조정합니다.  
   
- 관리 태스크 수행 권한은 미리 정의된 **시스템 관리자** 및 **내용 관리자**역할을 통해 제공합니다. 보고서 서버 내용을 효과적으로 관리하려면 두 역할을 모두 할당 받아야 합니다. 이러한 미리 정의된 역할에 대한 자세한 내용은 [역할 및 권한&#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)를 참조하세요.  
+ 관리 태스크를 수행할 권한은 **시스템 관리자** 하 고 **내용 관리자**합니다. 보고서 서버 내용을 효과적으로 관리하려면 두 역할을 모두 할당 받아야 합니다. 이러한 미리 정의된 역할에 대한 자세한 내용은 [역할 및 권한&#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)를 참조하세요.  
   
  보고서 서버 내용을 관리하기 위한 도구에는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 보고서 관리자가 있습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하면 기본값을 설정하고 기능을 활성화할 수 있습니다. 보고서 관리자는 사용자에게 보고서 서버 항목 및 작업에 대한 액세스 권한을 부여하고, 보고서 및 기타 내용 유형을 확인 및 사용하고, 모든 공유 항목 및 보고서 배포 기능을 확인 및 사용하는 데 사용됩니다.  
   

@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 50ac9bd023b8fb581f423a039b629015de7b423d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a67d093576076e9822427773afb710c57f801827
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196403"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025494"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>항목 숨기기(보고서 작성기 및 SSRS)
   지정하는 보고서 매개 변수 또는 기타 식에 따라 항목을 숨기려면 보고서 항목의 표시 유형을 설정합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "48196403"
     > [!NOTE]  
     >  전체 테이블 또는 행렬 데이터 영역을 선택하려면 데이터 영역을 클릭하여 선택하고 행, 열 또는 모퉁이 핸들을 마우스 오른쪽 단추로 클릭한 다음 **테이블릭스 속성**을 클릭합니다.  
   
-2.  **표시 유형**을 클릭합니다.  
+2.   **표시 유형**을 클릭합니다.  
   
 3.  **보고서를 처음 실행할 때**에서 보고서를 처음으로 볼 때 항목을 숨길지 여부를 지정합니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48196403"
 3.  **열 표시 유형** 대화 상자에서 첫 번째 절차의 3-4단계를 따릅니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [드릴 다운 동작 &#40;보고서 작성기 및 SSRS&#41;](../report-design/drilldown-action-report-builder-and-ssrs.md)   
+ [드릴다운 동작&#40;보고서 작성기 및 SSRS&#41;](../report-design/drilldown-action-report-builder-and-ssrs.md)   
  [항목에 확장 또는 축소 동작 추가&#40;보고서 작성기 및 SSRS&#41;](../report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)  
   

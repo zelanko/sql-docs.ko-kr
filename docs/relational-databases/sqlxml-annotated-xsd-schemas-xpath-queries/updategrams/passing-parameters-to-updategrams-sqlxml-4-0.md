@@ -14,16 +14,16 @@ helpviewer_keywords:
 - updategrams [SQLXML], passing parameters
 - null values [SQLXML]
 ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5359edb43af047edaf2a061b33aeeb7baaac78f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 501ee9f2bde6d77e8f07fcbdfa6a43a0fa6f3b3a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635471"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041574"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Updategram에 매개 변수 전달(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47635471"
  Updategram을 사용하면 NULL을 매개 변수 값으로 전달할 수 있습니다. 에 NULL 매개 변수 값을 전달 하려면 지정 된 **nullvalue** 특성입니다. 에 할당 된 값을 **nullvalue** 특성 매개 변수 값으로 제공 됩니다. Updategram은 이 값을 NULL로 처리합니다.  
   
 > [!NOTE]  
->  **\<sql:header >** 및  **\<updg:header >** 를 지정 해야 합니다 **nullvalue** unqualified로 반면;에서  **\<updg:sync >** 를 지정할 합니다 **nullvalue** 으로 정규화 된 (예를 들어 **updg: nullvalue**).  
+>   **\<sql:header >** 및  **\<updg:header >** 를 지정 해야 합니다 **nullvalue** unqualified로 반면;에서  **\<updg:sync >** 를 지정할 합니다 **nullvalue** 으로 정규화 된 (예를 들어 **updg: nullvalue**).  
   
 ## <a name="examples"></a>예  
  다음 예제를 사용 하 여 작업 예제를 만들려면에 지정 된 요구 사항을 충족 해야 합니다 [SQLXML 예 실행에 대 한 요구 사항](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "47635471"
 -   이 예에서는 기본 매핑을 사용합니다. 즉, Updategram에 매핑 스키마가 지정되지 않습니다. 매핑 스키마를 사용 하는 updategram에 대 한 더 많은 예제를 참조 하세요 [Updategram에 주석이 추가 된 매핑 스키마 지정 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)합니다.  
   
 ### <a name="a-passing-parameters-to-an-updategram"></a>1. Updategram에 매개 변수 전달  
- 이 예에서 Updategram은 HumanResources.Shift 테이블에 있는 직원의 성을 변경합니다. Updategram은 두 개의 매개 변수가 전달 됩니다: 고유 하 게 근무조를 식별 하 고 이름에 사용 되는 ShiftID 합니다.  
+ 이 예에서 Updategram은 HumanResources.Shift 테이블에 있는 직원의 성을 변경합니다. Updategram에 두 개의 매개 변수(근무조를 고유하게 식별하는 데 사용되는 ShiftID 및 Name)가 전달됩니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

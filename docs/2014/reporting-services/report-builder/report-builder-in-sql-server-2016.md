@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7df0a7c71dbc0298b2f9448f19287f83d34a8617
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a0c9605bfafac3611b9a24f25bb7e46c194ed22c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209543"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030484"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>SQL Server 2014의 보고서 작성기
   보고서 작성기는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Microsoft Office 환경에서 작업하는 것을 선호하는 비즈니스 사용자를 위한 보고서 제작 환경입니다. 보고서를 작성할 때는 데이터를 가져올 위치, 가져올 데이터 및 데이터를 표시할 방법을 정의해야 합니다. 보고서를 실행하면 보고서 처리기에서 사용자가 지정한 모든 정보를 사용하여 데이터를 검색하고 이를 보고서 레이아웃에 따라 정렬하여 보고서를 생성합니다. 보고서 작성기에서 보고서를 미리 보거나 다른 사람이 보고서를 실행할 수 있도록 보고서 서버 또는 SharePoint 통합 모드의 보고서 서버에 게시할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "48209543"
   
 -   **테이블, 행렬 또는 차트 마법사를 사용하여 보고서를 작성**합니다. 데이터 원본 연결을 선택하고, 필드를 끌어다 놓는 방법으로 데이터 세트 쿼리를 만들고, 레이아웃과 스타일을 선택하고, 보고서를 사용자 지정합니다.  
   
--   **지도 마법사를 사용** 하여 지리적 또는 기하학적 배경을 바탕으로 집계된 데이터를 표시하는 보고서를 작성합니다. 지도 데이터는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리의 공간 데이터 또는 ESRI(Environmental Systems Research Institute, Inc.) 셰이프 파일일 수 있습니다. 추가할 수도 있습니다는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Bing 지도 타일 배경을 합니다.  
+-   **지도 마법사를 사용** 하여 지리적 또는 기하학적 배경을 바탕으로 집계된 데이터를 표시하는 보고서를 작성합니다. 지도 데이터는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리의 공간 데이터 또는 ESRI(Environmental Systems Research Institute, Inc.) 셰이프 파일일 수 있습니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Bing 지도 타일 배경을 추가할 수도 있습니다.  
   
 
   
@@ -82,22 +82,22 @@ ms.locfileid: "48209543"
  [자습서: 오프 라인에서 빠른 차트 보고서 만들기](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  보고서 작성기와 보고서 작성에 도움이 되는 마법사를 소개합니다. 사용할 데이터 집합이 제공되므로 데이터 원본에 연결하지 않고도 시작할 수 있습니다.  
   
- [보고서 계획 &#40;보고서 작성기&#41;](../report-design/planning-a-report-report-builder.md)  
+ [보고서 계획&#40;보고서 작성기&#41;](../report-design/planning-a-report-report-builder.md)  
  보고서 작성을 시작하기 전에 고려해야 할 점을 소개합니다.  
   
- [보고서 제작 개념 &#40;보고서 작성기 및 SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [보고서 제작 개념&#40;보고서 작성기 및 SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
  보고서 작성기 설명서에서 다루는 주요 개념을 정의합니다.  
   
- [보고서 디자인 뷰 &#40;보고서 작성기&#41;](report-design-view-report-builder.md)  
+ [보고서 디자인 뷰&#40;보고서 작성기&#41;](report-design-view-report-builder.md)  
  보고서 디자인 뷰의 여러 창 및 영역에 대해 설명합니다.  
   
- [공유 데이터 집합 디자인 뷰 &#40;보고서 작성기&#41;](shared-dataset-design-view-report-builder.md)  
+ [공유 데이터 세트 디자인 뷰&amp;#40;보고서 작성기&amp;#41;](shared-dataset-design-view-report-builder.md)  
  공유 데이터 세트 디자인 뷰의 여러 창 및 영역에 대해 설명합니다.  
   
- [바로 가기 키 &#40;보고서 작성기&#41;](keyboard-shortcuts-report-builder.md)  
+ [바로 가기 키&#40;보고서 작성기&#41;](keyboard-shortcuts-report-builder.md)  
  보고서 작성기의 보고서를 탐색 및 디자인하는 데 사용할 수 있는 단축 키에 대해 간단히 설명합니다.  
   
  [보고서 작성기를 시작 &#40;보고서 작성기&#41;](start-report-builder.md)  
- 두 가지 버전의 보고서 작성기를 시작 하는 방법에 설명 합니다: 독립 실행형 및 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]합니다.  
+ 독립 실행형 및 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 등, 보고서 작성기의 두 가지 버전으로 시작하는 방법을 설명합니다.  
   
   

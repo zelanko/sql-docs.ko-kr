@@ -23,24 +23,24 @@ helpviewer_keywords:
 ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 377ab4922feb0024cef55926f4baa96745c81002
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: b845480863facf66ff33c5d976531118edb2d4a9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377345"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033194"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2014"></a>SQL Server 2014에서 SQL Server Reporting Services의 동작 변경 내용
   이 항목에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 동작 변경 내용에 대해 설명합니다. 동작 변경 내용은 이전 버전의 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 와 비교해서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 기능이 작동하고 상호 작용하는 방법에 영향을 줍니다.  
   
  항목 내용  
   
--   [SQL Server 2014 Reporting Services 동작 변경 내용](#bkmk_sql14)  
+-   [SQL Server 2014 Reporting Services Behavior Changes](#bkmk_sql14)  
   
--   [SQL Server 2012 Reporting Services 동작 변경 내용](#bkmk_rc0)  
+-   [SQL Server 2012 Reporting Services Behavior Changes](#bkmk_rc0)  
   
--   [SQL Server 2008 R2 Reporting Services 동작 변경 내용](#bkmk_kj)  
+-   [SQL Server 2008 R2 Reporting Services Behavior Changes](#bkmk_kj)  
   
 ##  <a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services 동작 변경 내용  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]기능에는 동작 변경 내용이 없습니다.  

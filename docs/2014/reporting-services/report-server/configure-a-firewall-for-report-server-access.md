@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 841bdd13dfbc1fe7ca29a4eb3f3dbe757a28c36c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0f7016d47d060fa5f6708f907da848d7329482d4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224453"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024714"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>보고서 서버에 액세스할 수 있도록 방화벽 구성
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 응용 프로그램과 게시된 보고서는 IP 주소, 포트 및 가상 디렉터리를 지정하는 URL을 통해 액세스할 수 있습니다. Windows 방화벽을 켜면 보고서 서버에서 사용하도록 구성된 포트는 대부분 닫혀 있습니다. 보고서를 요청한 후 빈 웹 페이지가 나타나거나 원격 클라이언트 컴퓨터에서 보고서 관리자를 열었을 때 빈 페이지가 나타나면 포트가 닫힌 것입니다.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 애플리케이션과 게시된 보고서는 IP 주소, 포트 및 가상 디렉터리를 지정하는 URL을 통해 액세스할 수 있습니다. Windows 방화벽을 켜면 보고서 서버에서 사용하도록 구성된 포트는 대부분 닫혀 있습니다. 보고서를 요청한 후 빈 웹 페이지가 나타나거나 원격 클라이언트 컴퓨터에서 보고서 관리자를 열었을 때 빈 페이지가 나타나면 포트가 닫힌 것입니다.  
   
  이 경우 포트를 열려면 보고서 서버 컴퓨터에서 Windows 방화벽 유틸리티를 사용해야 합니다. Reporting Services에서 자동으로 포트를 열지 않기 때문에 이 단계는 수동으로 수행해야 합니다.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "48224453"
  외부 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스에 액세스하거나 보고서 서버 데이터베이스가 외부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있는 경우 외부 컴퓨터에서 포트 1433 및 1434를 열어야 합니다. 자세한 내용은 [온라인 설명서의](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) 데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요. 기본 Windows 방화벽 설정 방법과 [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]및 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 영향을 주는 TCP 포트에 대한 자세한 내용은 [온라인 설명서에서](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md) SQL Server 액세스를 허용하도록 Windows 방화벽 구성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
- 이 지침에서는 사용자가 이미 서비스 계정을 구성했고 보고서 서버 데이터베이스를 만들었으며 보고서 서버 웹 서비스 및 보고서 관리자에 대한 URL을 구성했다고 가정합니다. 자세한 내용은 [Reporting Services 기본 모드 보고서 서버를 관리](manage-a-reporting-services-native-mode-report-server.md)합니다.  
+ 이 지침에서는 사용자가 이미 서비스 계정을 구성했고 보고서 서버 데이터베이스를 만들었으며 보고서 서버 웹 서비스 및 보고서 관리자에 대한 URL을 구성했다고 가정합니다. 자세한 내용은 [Reporting Services 기본 모드 보고서 서버 관리](manage-a-reporting-services-native-mode-report-server.md)를 참조하세요.  
   
  로컬 웹 브라우저에서 로컬 보고서 서버 인스턴스에 연결하여 보고서 서버에 액세스할 수 있는지도 확인해야 합니다. 이 단계에서는 사용 가능한 설치가 있는지 확인합니다. 포트를 열기 전에 설치가 올바르게 구성되어 있는지 확인해야 합니다. Windows Server에서 이 단계를 완료하려면 보고서 서버 사이트를 신뢰할 수 있는 사이트에 추가해야 합니다. 자세한 내용은 [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)을 참조하세요.  
   
@@ -44,11 +44,11 @@ ms.locfileid: "48224453"
   
 2.  **고급 설정**을 클릭합니다.  
   
-3.  **인바운드 규칙**을 클릭합니다.  
+3.   **인바운드 규칙**을 클릭합니다.  
   
 4.  **동작** 창의 **새 규칙** 을 클릭합니다 **.**  
   
-5.  **포트** 의 **규칙 종류**를 클릭합니다.  
+5.   **포트** 의 **규칙 종류**를 클릭합니다.  
   
 6.  **다음**을 클릭합니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48224453"
   
 13. **다음**을 클릭합니다.  
   
-14. **이름** 페이지에서 이름으로**ReportServer (TCP on port 80)** 를 입력합니다.  
+14.  **이름** 페이지에서 이름으로**ReportServer (TCP on port 80)** 를 입력합니다.  
   
 15. **마침**을 클릭합니다.  
   
@@ -102,10 +102,10 @@ ms.locfileid: "48224453"
  다른 컴퓨터에서 보고서 관리자를 시작하여 포트가 제대로 열리는지 확인할 수도 있습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 [보고서 관리자&#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 서버 서비스 계정 구성 &#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [보고서 서버 Url 구성 &#40;SSRS 구성 관리자&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [보고서 서버 데이터베이스 만들기 &#40;SSRS 구성 관리자&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
- [보고서 서버 서비스 계정 구성 &#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Reporting Services 기본 모드 보고서 서버 관리](manage-a-reporting-services-native-mode-report-server.md)  
   
   

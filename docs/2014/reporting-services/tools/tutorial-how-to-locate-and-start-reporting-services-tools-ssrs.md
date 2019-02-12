@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c8c8c175eaaf84df788a9b7cbc90e637d51d5c07
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 03fb1d70046fe784fecafd8d9b3092ce21962498
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105504"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036904"
 ---
-# <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>자습서: Reporting Services 도구를 찾고 시작하는 방법
-  이 자습서에서는 보고서 서버를 구성하고 보고서 서버 내용 및 작업을 관리하며 보고서를 만들어 게시하는 데 사용되는 도구를 소개합니다. 이 자습서를 통해 새 사용자는 각 도구를 찾고 여는 방법을 이해할 수 있습니다. 도구에 익숙한 경우 이동할 수 있습니다 도움이 되는 다른 자습서를 사용 하 여에 대 한 중요 한 기술을 배우게 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]합니다. 다른 자습서에 대 한 자세한 내용은 참조 하세요. [Reporting Services 자습서 &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)합니다.  
+# <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>자습서: Reporting Services 도구 찾기 및 시작 방법(SSRS)
+  이 자습서에서는 보고서 서버를 구성하고 보고서 서버 내용 및 작업을 관리하며 보고서를 만들어 게시하는 데 사용되는 도구를 소개합니다. 이 자습서를 통해 새 사용자는 각 도구를 찾고 여는 방법을 이해할 수 있습니다. 이미 이 도구에 익숙한 경우 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]를 사용하는 데 중요한 기술을 배울 수 있는 다른 자습서로 이동할 수 있습니다. 다른 자습서에 대 한 자세한 내용은 참조 하세요. [Reporting Services 자습서 &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)합니다.  
   
  항목 내용  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48105504"
   
      원격 컴퓨터를 지정하는 경우 **찾기** 를 클릭하여 연결을 설정합니다. 미리 보고서 서버를 원격 관리용으로 구성해야 합니다. 자세한 내용은 [원격 관리를 위한 보고서 서버 구성](../report-server/configure-a-report-server-for-remote-administration.md)을 참조하세요.  
   
-3.  **stance Name**에서 구성할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 인스턴스를 선택합니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]및 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 보고서 서버 인스턴스만 목록에 나타납니다. 이전 버전의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 구성할 수 없습니다.  
+3.   **stance Name**에서 구성할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 인스턴스를 선택합니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]및 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 보고서 서버 인스턴스만 목록에 나타납니다. 이전 버전의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 구성할 수 없습니다.  
   
 4.  **연결**을 클릭합니다.  
   
@@ -85,12 +85,12 @@ ms.locfileid: "48105504"
   
      ![Reporting Services 구성 도구](../media/rs-ui-reportserverconfigkatmai.gif "Reporting Services 구성 도구")  
   
- **다음 단계:** [보고서 서버 구성 및 관리&#40;SSRS 기본 모드&#41;](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) 및 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
+ **다음 단계:** [보고서 서버 구성 및 관리&#40;SSRS 기본 모드&#41;](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) 및 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ##  <a name="bkmk_report_manager"></a> 보고서 관리자 (기본 모드)  
  사용 하 여 [보고서 관리자 &#40;SSRS 기본 모드&#41; ](../report-manager-ssrs-native-mode.md) 사용 권한 설정, 구독 및 일정 관리 및 보고서를 사용 합니다. 보고서 관리자를 사용하여 보고서를 볼 수 있습니다.  
   
- **설치:** 보고서 관리자를 설치할 때 설치 됩니다 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 기본 모드: [Reporting Services 기본 모드 보고서 서버 설치](../install-windows/install-reporting-services-native-mode-report-server.md)  
+ **설치:** 보고서 관리자는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 기본 모드를 설치할 때 함께 설치됩니다. [Reporting Services 기본 모드 보고서 서버 설치](../install-windows/install-reporting-services-native-mode-report-server.md)  
   
  보고서 관리자를 열려면 먼저 충분한 권한이 있어야 합니다. 처음에는 로컬 관리자 그룹의 멤버만 보고서 관리자 기능에 액세스할 수 있습니다. 보고서 관리자는 현재 사용자의 역할 할당에 따라 다양한 페이지와 옵션을 제공합니다. 사용 권한이 없는 사용자에게는 빈 페이지가 나타납니다. 보고서를 볼 권한이 있는 사용자에게는 클릭하여 보고서를 열 수 있는 링크가 나타납니다. 권한에 대한 자세한 내용은 [역할 및 권한&#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)를 참조하세요.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "48105504"
   
 1.  웹 브라우저의 주소 표시줄에 다음 URL을 입력합니다.  
   
-     **http://\<서버 이름 > /reportserver/reportbuilder/ReportBuilder_3_0_0_0.application**  
+     **http://\<servername>/reportserver/reportbuilder/ReportBuilder_3_0_0_0.application**  
   
 2.  Enter 키를 누릅니다.  
   

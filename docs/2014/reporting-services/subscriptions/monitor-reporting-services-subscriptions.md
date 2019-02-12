@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 4959243f633702fb0f0afd9b2444ae65666ef680
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: d93314c6cfe7f260422cfc1f0e4eb28d934bc305
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506965"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015084"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Reporting Services 구독 모니터링
   사용자 인터페이스, Windows PowerShell 또는 로그 파일을 통해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 모니터링할 수 있습니다. 모니터링에 사용할 수 있는 옵션은 실행 중인 보고서 서버의 모드에 따라 달라집니다.  
@@ -120,7 +120,7 @@ ms.locfileid: "52506965"
   
  여러 조건으로 인해 구독이 비활성화되면 보고서 서버가 구독을 실행할 때 해당 사실이 구독에 반영됩니다. 구독을 매주 금요일 오전 2시에 배달하도록 예약되어 있을 때 배달 확장 프로그램이 월요일 오전 9시에 제거되었다면 금요일 오전 2시까지는 구독에 비활성 상태가 반영되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [기본 모드 보고서 서버 구독 만들기 및 관리](../create-manage-subscriptions-native-mode-report-servers.md)   
  [구독 및 배달&#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)  
   

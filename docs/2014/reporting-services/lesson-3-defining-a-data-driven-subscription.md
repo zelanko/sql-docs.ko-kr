@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ccb9733badf6ec9bac12d383c20d4aea5090c0a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 54fd143d2b3af2596ff44a313b2d35b29fc1604a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058733"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015544"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>3단원: 데이터 기반 구독 정의
   이 단원에서는 데이터 기반 구독 페이지를 사용하여 구독 데이터 원본에 연결하고 구독 데이터를 검색하는 쿼리를 작성하며 결과 집합을 보고서 및 배달 옵션에 매핑합니다.  
   
 > [!NOTE]  
@@ -96,7 +96,7 @@ ms.locfileid: "48058733"
   
 1.  **파일 이름**에 대해 **데이터베이스에서 값 가져오기**를 선택합니다. **Order**필드를 선택합니다.  
   
-2.  **경로**에 대해 **정적 값 지정**을 선택합니다. 값 설정에에서 쓰기 권한이 있는 공용 파일 공유의 이름을 입력 합니다 (예를 들어 `\\mycomputer\public\myreports`).  
+2.  **경로**에 대해 **정적 값 지정**을 선택합니다. 값 설정에 쓰기 권한이 있는 공용 파일 공유의 이름(예: `\\mycomputer\public\myreports`)을 입력합니다.  
   
 3.  **렌더링 형식**에 대해 **데이터베이스에서 값 가져오기**를 선택합니다. **형식**을 선택합니다.  
   
@@ -108,11 +108,11 @@ ms.locfileid: "48058733"
   
 7.  **암호**에 대해 **정적 값 지정**을 선택합니다. 암호를 입력합니다. 마법사에서는 암호의 유효성을 검사하지 않으므로 암호 입력 시 주의합니다.  
   
-8.  **다음.**  
+8.   **다음.**  
   
 ##  <a name="bkmk_configure_parameter"></a> 5 단계-보고서 출력 매개 변수 값을 구성 합니다.  
   
-1.  **OrderNumber**에 대해 **데이터베이스에서 값 가져오기**를 선택합니다. 값에서 **Order**를 선택합니다. **다음.**  
+1.  **OrderNumber**에 대해 **데이터베이스에서 값 가져오기**를 선택합니다. 값에서 **Order**를 선택합니다.  **다음.**  
   
 ##  <a name="bkmk_schedule_subscription"></a> 6 단계-구독을 예약 하려면  
   
@@ -140,9 +140,9 @@ ms.locfileid: "48058733"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
- [구독 및 배달 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [데이터 기반 구독](subscriptions/data-driven-subscriptions.md)   
+ [구독 및 배달&#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [만들기, 수정 및 데이터 기반 구독을 삭제 합니다.](subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [구독자 데이터에 외부 데이터 원본 사용 &#40;데이터 기반 구독&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
+ [구독자 데이터에 외부 데이터 원본 사용&#40;데이터 기반 구독&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   
   

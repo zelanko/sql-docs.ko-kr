@@ -27,13 +27,13 @@ helpviewer_keywords:
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bc8c6adf930df4d6eaf721db4782d5d1627439c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 84199b2bf01101a1bcc67b6e3d0870824a116860
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166273"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013594"
 ---
 # <a name="manage-a-running-process"></a>실행 중인 프로세스 관리
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서 서버에서 실행 중인 작업의 상태를 모니터링합니다. 보고서 서버는 진행 중인 작업을 정기적으로 검색하고 SharePoint 모드용 서비스 애플리케이션 데이터베이스 또는 보고서 서버 데이터베이스에 상태 정보를 씁니다. 원격 또는 로컬 데이터베이스 서버에서 쿼리가 실행되거나 보고서가 처리되거나 보고서가 렌더링되는 경우 작업이 진행 중인 것입니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "48166273"
   
 ### <a name="how-to-cancel-report-processing-or-subscription"></a>보고서 처리 또는 구독을 취소하는 방법  
   
-1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 보고서 서버에 연결합니다. 자세한 내용은 [Management Studio에서 보고서 서버에 연결](../tools/connect-to-a-report-server-in-management-studio.md)합니다.  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 보고서 서버에 연결합니다. 자세한 내용은 [Management Studio에서 보고서 서버에 연결](../tools/connect-to-a-report-server-in-management-studio.md)을 참조하세요.  
   
 2.  **작업** 폴더를 엽니다.  
   
@@ -86,20 +86,20 @@ ms.locfileid: "48166273"
   
 1.   텍스트 편집기에서 RSReportServer.config 파일을 엽니다.   
   
-2.  찾을 `IsNotificationService`합니다.  
+2.  `IsNotificationService`을 찾습니다.  
   
-3.  로 설정 `False`합니다.  
+3.  `False`로 설정합니다.  
   
 4.  파일을 저장합니다.  
   
 5.  보고서 관리자에서 보고서의 구독 탭 또는 **내 구독**에서 데이터 기반 구독을 삭제합니다.  
   
-6.  RSReportServer.config 파일에서 구독을 삭제 한 후 `IsNotificationService` 로 설정 하 고 `True`입니다.  
+6.  구독을 삭제한 후 RSReportServer.config 파일에서 `IsNotificationService`를 찾아 `True`로 설정합니다.  
   
 7.  파일을 저장합니다.  
   
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>작업 상태 검색을 위한 빈도 설정 구성  
- 실행 중인 작업은 보고서 서버 임시 데이터베이스에 저장됩니다. RSReportServer.config 파일에서 구성 설정을 수정하여 보고서 서버가 진행 중인 작업을 검색하는 빈도 및 실행 작업의 상태가 새 작업에서 실행 중인 작업으로 변경되는 간격을 제어할 수 있습니다. `RunningRequestsDbCycle` 설정은 보고서 서버 실행 중인 프로세스에 대 한 검색 하는 빈도 지정 합니다. 기본적으로 상태 정보는 60초마다 기록됩니다. `RunningRequestsAge` 작업에서으로 전환 되는 간격을 지정 하는 설정을 실행 하는 새 합니다.  
+ 실행 중인 작업은 보고서 서버 임시 데이터베이스에 저장됩니다. RSReportServer.config 파일에서 구성 설정을 수정하여 보고서 서버가 진행 중인 작업을 검색하는 빈도 및 실행 작업의 상태가 새 작업에서 실행 중인 작업으로 변경되는 간격을 제어할 수 있습니다. `RunningRequestsDbCycle` 설정은 보고서 서버가 실행 중인 프로세스를 검색하는 빈도를 지정합니다. 기본적으로 상태 정보는 60초마다 기록됩니다. `RunningRequestsAge` 설정은 작업이 새 작업에서 실행 중인 작업으로 전환되는 간격을 지정합니다.  
   
 ##  <a name="bkmk_sharepoint"></a> 작업 보기 및 취소(SharePoint 모드)  
  SharePoint 모드 배포에서 작업 관리는 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 대해 SharePoint 중앙 관리를 사용하여 완료됩니다.  
@@ -120,11 +120,11 @@ ms.locfileid: "48166273"
  프로그래밍 방식으로 또는 스크립트를 사용하여 작업을 관리할 수 있습니다. 자세한 내용은 <xref:ReportService2010.ReportingService2010.ListJobs%2A>, <xref:ReportService2010.ReportingService2010.CancelJob%2A>을 모두 관리할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 서버 작업 취소 &#40;Management Studio&#41;](../tools/cancel-report-server-jobs-management-studio.md)   
+ [보고서 서버 작업 취소&#40;Management Studio&#41;](../tools/cancel-report-server-jobs-management-studio.md)   
  [작업 속성&#40;Management Studio&#41;](../tools/job-properties-management-studio.md)   
  [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [RSReportServer 구성 파일](../report-server/rsreportserver-config-configuration-file.md)   
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)   
  [보고서 서버 성능 모니터링](../report-server/monitoring-report-server-performance.md)  
   
   

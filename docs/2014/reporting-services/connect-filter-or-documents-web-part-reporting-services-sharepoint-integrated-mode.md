@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6a303135-c0ef-44cd-a423-1cea8df3dcf3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7f4722a2b338b0187bdd93cb9501e626c42acf02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4da46abbfb586a2968f92a04538f5a82e06898c6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166893"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031224"
 ---
 # <a name="connect-filter-or-documents-web-part-reporting-services-in-sharepoint-integrated-mode"></a>필터 또는 문서 웹 파트 연결(SharePoint 통합 모드의 Reporting Services)
   SharePoint 제품을 사용하는 경우 필터 웹 파트 또는 문서 웹 파트와 보고서 뷰어 웹 파트가 포함된 대시보드나 웹 파트 페이지를 만들 수 있습니다. 선택한 버전은 [!INCLUDE[SPF2010](../includes/spf2010-md.md)] 또는 [!INCLUDE[SPS2010](../includes/sps2010-md.md)]입니다. 또한 지원되는 버전은 [!INCLUDE[winSPServ3](../includes/winspserv3-md.md)] 또는 [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007입니다. 필터 웹 파트를 연결하면 필터 웹 파트의 필터 값을 선택하여 같은 페이지의 매개 변수가 있는 보고서에 해당 값을 보낼 수 있습니다. 문서 웹 파트를 연결하면 문서 라이브러리의 보고서를 클릭하여 인접 보고서 뷰어 웹 파트의 보고서를 볼 수 있습니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "48166893"
   
 3.  **웹 파트 추가**를 클릭합니다.  
   
-4.  **모든 웹 파트**의 **목록 및 라이브러리** 섹션에서 **문서**를 선택합니다.  
+4.   **모든 웹 파트**의 **목록 및 라이브러리** 섹션에서 **문서**를 선택합니다.  
   
 5.  **추가**를 클릭합니다. 영역의 맨 위에 웹 파트가 추가됩니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48166893"
   
 7.  동일한 웹 파트 페이지 또는 대시보드의 다른 영역에서 **웹 파트 추가**를 클릭합니다.  
   
-8.  **모든 웹 파트**의 **기타** 범주에서 **SQL Server Reporting Services 보고서 뷰어.**  
+8.   **모든 웹 파트**의 **기타** 범주에서 **SQL Server Reporting Services 보고서 뷰어.**  
   
 9. **추가**를 클릭합니다. 영역의 맨 위에 웹 파트가 추가됩니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48166893"
 11. 변경 내용을 체크 인하고 페이지를 저장합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [웹 페이지에 보고서 뷰어 웹 파트 추가 &#40;Reporting Services sharepoint에서 통합 모드&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
+ [웹 페이지에 보고서 뷰어 웹 파트 추가&#40;SharePoint 통합 모드의 Reporting Services&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
  [SharePoint 사이트의 보고서 뷰어 웹 파트](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
  [보고서 뷰어 웹 파트 사용자 지정](../../2014/reporting-services/customize-the-report-viewer-web-part.md)  
   

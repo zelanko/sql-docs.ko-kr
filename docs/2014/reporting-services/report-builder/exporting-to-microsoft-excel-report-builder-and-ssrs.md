@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d4c00c9d9881e7775ec311c103ca156eb555b70f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: ceba0cdab54d825cfc28e1c156ca33767dfb8b8f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352380"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013559"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Microsoft Excel로 내보내기(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Excel 렌더링 확장 프로그램은 보고서를 [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010의 네이티브 형식으로 렌더링합니다. Excel 렌더링 확장 프로그램에서는 Excel의 열 너비는 보고서의 열 너비를 보다 정확하게 반영합니다.  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d84ee2971ca430d87220d07ec461180f5c31f759
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8b43eebafb47a2f9173825ea79b5ba035e27ebca
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166403"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029544"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>LookupSet 함수(보고서 작성기 및 SSRS)
   이름/값 쌍을 포함하는 데이터 세트에서 지정된 이름과 일치하는 값 집합을 반환합니다.  
@@ -45,12 +45,12 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
  보고서의 데이터 세트 이름을 지정하는 상수입니다. 예를 들면 "ContactInformation"입니다.  
   
 ## <a name="return"></a>반환 값  
- 반환 된 `VariantArray`, 또는 `Nothing` 일치 항목이 없는 경우.  
+ `VariantArray`를 반환하거나, 일치하는 항목이 없으면 `Nothing`을 반환합니다.  
   
 ## <a name="remarks"></a>Remarks  
- 사용 하 여 `LookupSet` 이름/값 쌍에 대해 지정된 된 데이터 집합에서 값의 집합을 검색 하는 1 대 다 관계가 있는 합니다. 예를 들어 테이블의 고객 식별자를 사용할 수 있습니다 `LookupSet` 를 데이터 영역에 바인딩되지 않은 데이터 집합에서 해당 고객에 대 한 모든 연결 된 전화 번호를 검색 합니다.  
+ `LookupSet`을 사용하여 일 대 다 관계의 이름/값 쌍에 대한 지정된 데이터 집합에서 값 집합을 검색할 수 있습니다. 예를 들어 테이블에 있는 고객 식별자의 경우 `LookupSet`을 사용하여 데이터 영역에 바인딩되지 않은 데이터 집합에서 해당 고객에 대해 연결된 전화 번호를 모두 검색할 수 있습니다.  
   
- `LookupSet` 다음을 수행합니다.  
+ `LookupSet`은 다음을 수행합니다.  
   
 -   현재 범위에서 원본 식을 평가합니다.  
   
@@ -72,7 +72,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   원본, 대상 및 결과 식에는 보고서 또는 그룹 변수에 대한 참조가 포함될 수 없습니다.  
   
--   `LookupSet` 다음 보고서 항목에 대 한 식으로 사용할 수 없습니다.  
+-   `LookupSet`은 다음 보고서 항목에 대한 식으로 사용할 수 없습니다.  
   
     -   데이터 원본에 대한 동적 연결 문자열  
   
@@ -98,9 +98,9 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ```  
   
 ## <a name="example"></a>예제  
- 때문에 `LookupSet` 컬렉션을 반환 개체의 텍스트 상자에 직접 결과 식에서 표시할 수 없습니다. 컬렉션에 있는 각 개체의 값을 문자열로 연결할 수 있습니다.  
+ `LookupSet`은 개체 컬렉션을 반환하므로 결과 식을 입력란에 직접 표시할 수 없습니다. 컬렉션에 있는 각 개체의 값을 문자열로 연결할 수 있습니다.  
   
- 사용 된 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 함수 `Join` 개체 집합에서 구분 기호로 분리 된 문자열을 만듭니다. 개체를 한 줄로 결합하려면 쉼표를 구분 기호로 사용합니다. 일부 렌더러에서는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 줄 바꿈(`vbCrLF`)을 구분 기호로 사용하여 각 값을 새 줄에 나열할 수 있습니다.  
+ [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 함수 `Join`을 사용하여 개체 집합에서 구분된 문자열을 만들 수 있습니다. 개체를 한 줄로 결합하려면 쉼표를 구분 기호로 사용합니다. 일부 렌더러에서는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 줄 바꿈(`vbCrLF`)을 구분 기호로 사용하여 각 값을 새 줄에 나열할 수 있습니다.  
   
  텍스트 상자에 대 한 Value 속성으로 사용할 경우 다음 식을 사용 하 여 `Join` 목록을 만듭니다.  
   
@@ -148,9 +148,9 @@ End Function
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서에 사용 되는 식 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [합계, 집계 및 기본 제공 컬렉션의 식 범위 &#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

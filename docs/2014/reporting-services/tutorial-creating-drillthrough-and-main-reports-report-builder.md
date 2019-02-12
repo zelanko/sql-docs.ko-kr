@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e12227fa9390b733ad28ec02a5b31c13a4204c26
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 1177dfb7260959940eb89a31dde740e290ab73f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512546"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023755"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>자습서: 드릴스루 보고서 및 주 보고서 만들기(보고서 작성기)
   이 자습서에서는 두 종류의 보고서인 드릴스루 보고서와 주 보고서를 만드는 방법을 배웁니다. 이러한 보고서에서 사용되는 샘플 판매 데이터는 Analysis Services 큐브에서 검색됩니다. 다음 그림에서는 만들려는 보고서를 보여 줍니다.  
@@ -98,7 +98,7 @@ ms.locfileid: "52512546"
   
 3.  오른쪽 창에서 **테이블 또는 행렬 마법사** 가 선택되어 있는지 확인합니다.  
   
-##  <a name="DConnection"></a> 1a 합니다. 데이터 연결 지정  
+##  <a name="DConnection"></a> 1a. 데이터 연결 지정  
  데이터 연결은 Analysis Services 큐브 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스와 같은 외부 데이터 원본에 연결하는 데 필요한 정보를 포함합니다. 데이터 연결을 지정하기 위해 보고서 서버의 공유 데이터 원본을 사용하거나 이 보고서에만 사용되는 포함된 데이터 원본을 만들 수 있습니다. 이 자습서에서는 포함된 데이터 원본을 사용합니다. 공유 데이터 원본 사용 방법에 대한 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)를 참조하세요.  
   
 #### <a name="to-create-an-embedded-data-source"></a>포함된 데이터 원본을 만들려면  
@@ -144,7 +144,7 @@ ms.locfileid: "52512546"
   
 14. **다음**을 클릭합니다.  
   
-##  <a name="DMDXQuery"></a> 1b 합니다. MDX 쿼리 만들기  
+##  <a name="DMDXQuery"></a> 1b. MDX 쿼리 만들기  
  보고서에서는 미리 정의된 쿼리가 포함된 공유 데이터 세트를 사용하거나 해당 보고서에만 사용할 포함된 데이터 세트를 만들 수 있습니다. 이 자습서에서는 포함된 데이터 세트를 만듭니다.  
   
 #### <a name="to-create-query-filters"></a>쿼리 필터를 만들려면  
@@ -213,7 +213,7 @@ ms.locfileid: "52512546"
   
 7.  **다음**을 클릭합니다.  
   
-##  <a name="DLayout"></a> 1c 합니다. 데이터를 그룹으로 구성  
+##  <a name="DLayout"></a> 1c. 데이터를 그룹으로 구성  
  데이터를 그룹화할 필드를 선택할 때 세부 데이터와 집계 데이터가 표시되는 행과 열이 포함된 행렬을 디자인합니다.  
   
 #### <a name="to-organize-data-into-groups"></a>데이터를 그룹으로 구성하려면  
@@ -239,7 +239,7 @@ ms.locfileid: "52512546"
   
 6.  **다음**을 클릭합니다.  
   
-##  <a name="DTotals"></a> 1d입니다. 부분합 및 합계 추가  
+##  <a name="DTotals"></a> 1d. 부분합 및 합계 추가  
  그룹을 만든 후 필드에 대한 집계 값을 표시할 행을 추가하고 행 서식을 지정할 수 있습니다. 또한 모든 데이터를 표시할지 또는 사용자가 그룹화된 데이터를 대화형으로 확장하거나 축소할 수 있도록 할지 여부를 선택할 수 있습니다.  
   
 #### <a name="to-add-subtotals-and-totals"></a>부분합 및 합계를 추가하려면  
@@ -250,7 +250,7 @@ ms.locfileid: "52512546"
   
 2.  **다음**을 클릭합니다.  
   
-##  <a name="DStyle"></a> 1e입니다. 스타일 선택  
+##  <a name="DStyle"></a> 1e. 스타일 선택  
  스타일은 글꼴 스타일, 색 집합 및 테두리 스타일을 지정합니다.  
   
 #### <a name="to-specify-a-style"></a>스타일을 지정하려면  
@@ -399,7 +399,7 @@ ms.locfileid: "52512546"
   
 2.  **시작** 대화 상자에서 **새 보고서** 가 선택되어 있는지 확인한 다음 **테이블 또는 행렬 마법사**를 클릭합니다.  
   
-##  <a name="MConnection"></a> 1a 합니다. 데이터 연결 지정  
+##  <a name="MConnection"></a> 1a. 데이터 연결 지정  
  포함된 데이터 원본을 주 보고서에 추가합니다.  
   
 #### <a name="to-create-an-embedded-data-source"></a>포함된 데이터 원본을 만들려면  
@@ -438,7 +438,7 @@ ms.locfileid: "52512546"
   
 14. **다음**을 클릭합니다.  
   
-##  <a name="MMDXQuery"></a> 1b 합니다. MDX 쿼리 만들기  
+##  <a name="MMDXQuery"></a> 1b. MDX 쿼리 만들기  
  다음으로, 포함된 데이터 세트를 만듭니다. 이렇게 하려면 쿼리 디자이너를 사용하여 필터, 매개 변수 및 계산 멤버는 물론 데이터 세트 자체를 만듭니다.  
   
 #### <a name="to-create-query-filters"></a>쿼리 필터를 만들려면  
@@ -536,7 +536,7 @@ ms.locfileid: "52512546"
   
 6.  **다음**을 클릭합니다.  
   
-##  <a name="MLayout"></a> 1c 합니다. 데이터를 그룹으로 구성  
+##  <a name="MLayout"></a> 1c. 데이터를 그룹으로 구성  
  데이터를 그룹화할 필드를 선택할 때 세부 데이터와 집계 데이터가 표시되는 행과 열이 포함된 행렬을 디자인합니다.  
   
 #### <a name="to-organize-data-into-groups"></a>데이터를 그룹으로 구성하려면  
@@ -555,7 +555,7 @@ ms.locfileid: "52512546"
   
      3 ~ 4단계에서는 행렬에 표시할 데이터를 지정했습니다.  
   
-##  <a name="MTotals"></a> 1d입니다. 부분합 및 합계 추가  
+##  <a name="MTotals"></a> 1d. 부분합 및 합계 추가  
  보고서에서 부분합 및 총합계를 표시할 수 있습니다. 주 보고서의 데이터가 표시기로 표시됩니다. 사용자는 마법사를 완료한 후 총합계를 제거합니다.  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>부분합 및 총합계를 추가하려면  
@@ -566,7 +566,7 @@ ms.locfileid: "52512546"
   
 2.  **다음**을 클릭합니다.  
   
-##  <a name="MStyle"></a> 1e입니다. 스타일 선택  
+##  <a name="MStyle"></a> 1e. 스타일 선택  
  Slate 스타일을 보고서에 적용합니다. 이는 드릴스루 보고서가 사용하는 동일한 스타일입니다.  
   
 #### <a name="to-specify-a-style"></a>스타일을 지정하려면  
@@ -719,7 +719,7 @@ ms.locfileid: "52512546"
   
 7.  **저장**을 클릭합니다.  
   
-##  <a name="MRunReports"></a> 8입니다. 주 보고서 및 드릴스루 보고서 실행  
+##  <a name="MRunReports"></a> 8. 주 보고서 및 드릴스루 보고서 실행  
  주 보고서를 실행한 다음 제품 범주 열의 값을 클릭하여 드릴스루 보고서를 실행합니다.  
   
 #### <a name="to-run-the-reports"></a>보고서를 실행하려면  

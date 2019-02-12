@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 14be04840683999430fc4bd1fd65ce35ea13eb2a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 5c964a2cfe70eafd08bbd1ba73373a9d7acee34e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355478"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030234"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>자습서의 사전 요구 사항(보고서 작성기)
   보고서 작성기 자습서에서는 사용자가 보고서 서버와 통합된 SharePoint 사이트 또는 보고서 서버에서 보고서를 보고 저장할 수 있는 것으로 간주합니다. 모든 자습서에서는 데이터에 대해 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]인스턴스에서 처리해야 하는 리터럴 쿼리를 사용합니다.  

@@ -19,14 +19,14 @@ helpviewer_keywords:
 - components [Reporting Services], Report Manager
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c3a102af211ccaa8fad3d7792cf868653ca4797d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e5d96e743587a0f4c00e7f5f7777b95667e1ea84
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176943"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036574"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>보고서 관리자(SSRS 기본 모드)
   보고서 관리자는 HTTP 연결을 통해 원격 위치의 단일 보고서 서버 인스턴스를 관리하는 데 사용되는 웹 기반 보고서 액세스 및 관리 도구입니다. 또한 보고서 관리자를 보고서 뷰어로 사용하고 탐색 기능도 활용할 수 있습니다. 항목 내용  
@@ -48,7 +48,7 @@ ms.locfileid: "48176943"
   
 -   보고서 실행 속성, 보고서 기록 및 보고서 매개 변수 구성  
   
--   에 연결 하 고 데이터를 검색 하는 보고서 모델 만들기를 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 원본 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관계형 데이터 원본입니다.  
+-    [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 원본 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관계형 데이터 원본의 데이터에 연결하고 데이터를 검색하는 보고서 모델 만들기  
   
 -   모델의 특정 엔터티에 대한 액세스를 허용하도록 모델 항목 보안 설정 또는 미리 정의된 클릭 광고 보고서에 엔터티 매핑  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48176943"
   
  보고서 관리자는 기본 모드로 실행되는 보고서 서버에만 사용되며 SharePoint 통합 모드용으로 구성된 보고서 서버에 대해서는 지원되지 않습니다.  
   
- 일부 보고서 관리자 기능은 에서만 지정 된 버전의 사용 가능한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 자세한 내용은 [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조하세요.  
+ 일부 보고서 관리자 기능은 지정된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서만 사용할 수 있습니다. 자세한 내용은 [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조하세요.  
   
  새로 설치하는 경우 로컬 관리자에게만 내용 및 설정을 사용할 수 있는 권한이 부여됩니다. 다른 사용자에게 사용 권한을 부여하려면 로컬 관리자가 보고서 서버에 대한 액세스 권한을 제공하는 역할 할당을 만들어야 합니다. 사용자가 이후에 액세스할 수 있는 애플리케이션 페이지 및 태스크는 해당 사용자에 대한 역할 할당에 따라 달라집니다. 자세한 내용은 [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](security/grant-user-access-to-a-report-server.md)를 참조하세요.  
   
@@ -114,11 +114,11 @@ ms.locfileid: "48176943"
 |![속성 페이지 아이콘](media/hlp-16prop.gif "속성 페이지 아이콘")|속성 페이지|속성 아이콘을 클릭하여 속성 및 보안을 설정할 수 있는 추가 페이지에 액세스합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [URL 구성 &#40;SSRS 구성 관리자&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [URL 구성&#40;SSRS 구성 관리자&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Reporting Services 및 파워 뷰 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [보고서 작성기 &#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)   
  [Reporting Services 도구](tools/reporting-services-tools.md)   
- [보고서 서버 콘텐츠 관리 &#40;SSRS 기본 모드&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [SharePoint 웹 파트를 사용 하 여 기본 모드 보고서 보기 및 탐색 &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)  
   

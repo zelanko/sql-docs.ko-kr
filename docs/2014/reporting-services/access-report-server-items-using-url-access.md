@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d1af38969f461cc607eb2b002fbc88aea77a2880
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0fe057b1fc441a41d536e4890cd4971202df7e38
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098603"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018035"
 ---
 # <a name="access-report-server-items-using-url-access"></a>URL 액세스를 사용하여 보고서 서버 항목 액세스
   이 항목에서는 *rs:Command*=*Value*를 사용하여 보고서 서버 데이터베이스 또는 SharePoint 사이트에서 여러 형식의 카탈로그 항목에 액세스하는 방법에 대해 설명합니다.  
   
  이 매개 변수 문자열을  추가할 필요는 없습니다. 이 문자열을 생략한 경우 보고서 서버에서 항목 형식을 평가하고 알맞은 매개 변수 값을 자동으로 선택합니다. 그러나 URL에서 *rs:Command*=*Value* 문자열을 사용하면 보고서 서버의 성능이 향상됩니다.  
   
- 아래 예의 `_vti_bin` 프록시 구문을 참고하십시오. 프록시 구문을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [URL Access Parameter Reference](url-access-parameter-reference.md)합니다.  
+ 아래 예의 `_vti_bin` 프록시 구문을 참고하십시오. 프록시 구문을 사용하는 방법에 대한 자세한 내용은 [URL Access Parameter Reference](url-access-parameter-reference.md)를 참조하십시오.  
   
 ## <a name="access-a-report"></a>보고서 액세스  
  브라우저에서 보고서를 보려면 *rs:Command*=*Render* 매개 변수를 사용합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "48098603"
 </DataSourceDefinition>  
 ```  
   
- 연결 문자열은 보고서 서버의 **SecureConnectionLevel** 설정을 기준으로 반환됩니다. 에 대 한 자세한 내용은 합니다 **SecureConnectionLevel** 설정을 참조 하세요 [Using Secure Web Service Methods](report-server-web-service/net-framework/using-secure-web-service-methods.md)합니다.  
+ 연결 문자열은 보고서 서버의 **SecureConnectionLevel** 설정을 기준으로 반환됩니다. **SecureConnectionLevel** 설정에 대한 자세한 내용은 [Using Secure Web Service Methods](report-server-web-service/net-framework/using-secure-web-service-methods.md)을 참조하십시오.  
   
 ## <a name="access-the-contents-of-a-folder"></a>폴더 내용 액세스  
  폴더의 내용에 액세스하려면 *rs:Command*=*GetChildren* 매개 변수를 사용합니다. 요청된 폴더의 하위 폴더, 보고서, 데이터 원본 및 리소스에 대한 링크가 포함된 일반적인 폴더 탐색 페이지가 반환됩니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "48098603"
  표시되는 사용자 인터페이스는 [!INCLUDE[msCoName](../includes/msconame-md.md)] IIS(Internet Information Server)에서 사용되는 디렉터리 탐색 모드와 유사합니다. 빌드 번호를 포함한 보고서 서버의 버전 번호도 폴더 목록 아래에 표시됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [URL 액세스 &#40;SSRS&#41;](url-access-ssrs.md)   
+ [URL 액세스&#40;SSRS&#41;](url-access-ssrs.md)   
  [URL 액세스 매개 변수 참조](url-access-parameter-reference.md)  
   
   

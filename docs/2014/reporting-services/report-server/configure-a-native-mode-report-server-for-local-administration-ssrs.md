@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f9dc5d0ae36feb5801f026f0fca77683004e23b3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 42df5757bab7028acebf5213bda35a7466010c40
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400546"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043354"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>로컬 관리에 대해 기본 모드 보고서 서버 구성(SSRS)
   보고서 서버 인스턴스를 로컬로 관리하려는 경우 다음 운영 체제 중 하나에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버를 배포하려면 추가 구성 단계가 필요합니다. 이 항목에서는 로컬 관리를 위한 보고서 서버를 구성하는 방법을 설명합니다. 설치 아직 했거나 보고서 서버를 구성 하는 경우 참조 [설치 마법사에서 SQL Server 2014 설치 &#40;설치&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) 하 고 [Reporting Services 기본 모드 보고서 서버관리](manage-a-reporting-services-native-mode-report-server.md).  

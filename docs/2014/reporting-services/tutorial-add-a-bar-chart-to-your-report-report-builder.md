@@ -1,5 +1,5 @@
 ---
-title: '자습서: 보고서에 막대 차트 추가(보고서 작성기) | Microsoft Docs'
+title: '자습서: 가로 막대형 차트 (보고서 작성기) 보고서에 추가 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 25d3fafc654ab1c272d7688e49d67cd2af5d1820
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0b21826cb926dbd5f8b0315f490b20850c6ccd23
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106803"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041424"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>자습서: 보고서에 막대형 차트 추가(보고서 작성기)
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>자습서: 보고서에 가로 막대형 차트 추가(보고서 작성기)
   가로 막대형 차트는 범주 데이터를 가로로 표시합니다. 이렇게 하면 다음 작업에 도움이 됩니다.  
   
 -   긴 범주 이름의 가독성 향상  
@@ -55,9 +55,9 @@ ms.locfileid: "48106803"
 10. [보고서 저장](#Save)  
   
 > [!NOTE]  
->  이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고, 데이터 집합을 만들고, 데이터 원본을 선택하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)를 참조하세요.  
+>  이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고 데이터 집합을 만들고 데이터 원본을 선택하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 다음 자습서를 참조하십시오. [자습서: 기본 테이블 보고서 만들기 &#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)합니다.  
   
- 이 자습서에 소요되는 예상 시간: 15분  
+ 이 자습서에 소요되는 예상 시간: 15 분입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/report-builder-tutorials.md)을 참조하세요.  
@@ -122,7 +122,7 @@ ms.locfileid: "48106803"
   
 2.  **가로 막대형**을 클릭하고 **다음**을 클릭합니다.  
   
-     에 **차트 필드 정렬** 페이지에 있는 4 개의 필드를 **사용 가능한 필드** 창: FirstName, LastName, SalesYear2009 및 salesyear2008 필드가 있습니다.  
+     에 **차트 필드 정렬** 페이지에 있는 4 개의 필드를 **사용 가능한 필드** 창: FirstName, LastName, SalesYear2009 및 SalesYear2008 필드가 있습니다.  
   
 3.  LastName을 범주 창으로 끌어 옵니다.  
   
@@ -279,7 +279,7 @@ ms.locfileid: "48106803"
   
  판매액은 보고서 가로 축에 천 단위로 표시되며 십진수가 없습니다.  
   
-##  <a name="Filter"></a> 8입니다. 상위 5개 값을 표시하는 필터 추가  
+##  <a name="Filter"></a> 8. 상위 5개 값을 표시하는 필터 추가  
  차트에 필터를 추가하여 차트에 포함하거나 제외할 데이터 세트의 데이터를 지정할 수 있습니다.  
   
 #### <a name="to-add-a-filter-and-display-the-top-five-values"></a>상위 5개 값을 표시하는 필터를 추가하려면  
@@ -294,7 +294,7 @@ ms.locfileid: "48106803"
   
 5.  **추가**를 클릭합니다. 새로운 빈 필터가 나타납니다.  
   
-6.  **식을**, 형식 **[sum(salesyear2009)]** 합니다. 기본 식이 만들어집니다 `=Sum(Fields!SalesYear2009.Value)`를 클릭 하면 볼 수 있는 합니다 **fx** 단추.  
+6.  **식을**, 형식 **[sum(salesyear2009)]** 합니다. 기본 식 `=Sum(Fields!SalesYear2009.Value)`이 만들어집니다. 이 식은 **fx** 단추를 클릭하면 볼 수 있습니다.  
   
 7.  데이터 형식이 **Text**인지 확인합니다.  
   
@@ -310,7 +310,7 @@ ms.locfileid: "48106803"
   
  2009년도 매출 데이터에서 상위 5명에 속하는 영업 사원의 이름이 차트에 표시됩니다.  
   
-##  <a name="Title"></a> 9입니다. 보고서 제목 추가  
+##  <a name="Title"></a> 9. 보고서 제목 추가  
   
 #### <a name="to-add-a-report-title"></a>보고서 제목을 추가하려면  
   
@@ -332,7 +332,7 @@ ms.locfileid: "48106803"
   
 6.  **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
-##  <a name="Save"></a> 10입니다. 보고서 저장  
+##  <a name="Save"></a> 10. 보고서 저장  
   
 #### <a name="to-save-the-report"></a>보고서를 저장하려면  
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: f2895e6c2d181834554123c76e3a59d71abbe54a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a47a205ca7d216f17ec8a5893483180235b775a5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544797"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026324"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>DQSInstaller.exe를 실행하여 Data Quality 서버 설치 완료
   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 설치를 완료하려면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 설치한 후 DQSInstaller.exe 파일을 실행해야 합니다. 이 항목에서는 **시작** 화면, **시작** 메뉴, Windows 탐색기 또는 명령 프롬프트에서 DQSInstaller.exe를 실행하는 방법에 대해 설명합니다. DQSInstaller.exe 파일을 실행하기 위해 어떤 방법이나 선택할 수 있습니다.  

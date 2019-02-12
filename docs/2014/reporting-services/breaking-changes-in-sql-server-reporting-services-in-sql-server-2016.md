@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: adf846eaa23b7be875605fd5d1cc93811fce9e3f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 00b787d9fbeebd04b81ec608bf23745ddd733a0a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537326"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040174"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>SQL Server 2014에서 SQL Server Reporting Services의 주요 변경 내용
   이 항목에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 주요 변경 내용에 대해 설명합니다. 이러한 변경 내용에 따라 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 기반을 둔 애플리케이션, 스크립트 또는 기능을 사용하지 못할 수도 있습니다. 이러한 문제는 업그레이드할 때나 사용자 지정 스크립트 또는 보고서에서 발생할 수 있습니다. 자세한 내용은 [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)을 참조하세요.  
@@ -29,9 +29,9 @@ ms.locfileid: "52537326"
   
 -   [SQL Server 2014 Reporting Services의 주요 변경 내용](#bkmk_sql14)  
   
--   [SQL Server 2012 Reporting Services의 주요 변경 내용](#bkmk_rc0)  
+-   [SQL Server 2012 Reporting Services Breaking Changes](#bkmk_rc0)  
   
--   [SQL Server 2008 R2 Reporting Services의 주요 변경 내용](#bkmk_kj)  
+-   [SQL Server 2008 R2 Reporting Services Breaking Changes](#bkmk_kj)  
   
 ##  <a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services의 주요 변경 내용  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]기능에는 주요 변경 내용이 없습니다.  

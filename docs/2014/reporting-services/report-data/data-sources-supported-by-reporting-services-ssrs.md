@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8083fef109483f423cfabf0ecf2c256c405cd11c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 54a32a3961336f22fed462cd955027f3387a1e70
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352470"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032704"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services에서 지원하는 데이터 원본(SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 데이터 처리 확장 프로그램을 사용하는 확장 가능한 모듈식 데이터 계층을 통해 데이터 원본에서 보고서 데이터를 검색합니다. 데이터 원본에서 보고서 데이터를 검색하려면 데이터 원본 유형, 데이터 원본에서 실행 중인 소프트웨어 버전 및 데이터 원본 플랫폼(32비트 또는 64비트 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)])을 지원하는 데이터 처리 확장 프로그램을 선택해야 합니다.  
@@ -94,13 +94,13 @@ ms.locfileid: "53352470"
   
 -   데이터 처리 확장 프로그램/데이터 공급자의 이름: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램이나 선택한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 원본 유형에 해당하는 다른 데이터 공급자입니다. 이 열을 통해 "데이터 원본 유형을 선택할 때 사용되는 해당 데이터 처리 확장 프로그램이나 데이터 공급자는 무엇인가?"라는 질문에 대한 답을 얻을 수 있습니다.  
   
--   기본 데이터 공급자 버전(옵션): 일부 데이터 원본 유형은 여러 데이터 공급자를 지원합니다. 이는 같은 공급자의 다른 버전일 수도 있고 데이터 공급자 유형에 대한 타사의 다른 구현일 수도 있습니다. 공급자 이름은 데이터 원본을 구성한 후 연결 문자열에 자주 나타납니다. 이 열을 통해 "데이터 원본 유형 선택 후 어떤 데이터 공급자를 선택할 것인가 **연결 속성** 대화 상자?"  
+-   기본 데이터 공급자 버전(옵션): 일부 데이터 원본 유형은 여러 데이터 공급자를 지원합니다. 이는 같은 공급자의 다른 버전일 수도 있고 데이터 공급자 유형에 대한 타사의 다른 구현일 수도 있습니다. 공급자 이름은 데이터 원본을 구성한 후 연결 문자열에 자주 나타납니다. 이 열을 통해 "데이터 원본 유형을 선택한 후 **연결 속성** 대화 상자에서 어떤 데이터 공급자를 선택할 것인가?"라는 질문에 대한 답을 얻을 수 있습니다.  
   
--   데이터 원본  *\<플랫폼 >*: 데이터 처리 확장 프로그램이나 데이터 공급자가 대상 데이터 원본에 대해 지원하는 데이터 원본 플랫폼입니다. 이 열을 통해 "이 데이터 처리 확장 프로그램이나 데이터 공급자가 이 플랫폼 유형의 데이터 원본에서 데이터를 검색할 수 있는가?"라는 질문에 대한 답을 얻을 수 있습니다.  
+-   데이터 원본 *\<플랫폼>*: 데이터 처리 확장 프로그램이나 데이터 공급자가 대상 데이터 원본에 대해 지원하는 데이터 원본 플랫폼입니다. 이 열을 통해 "이 데이터 처리 확장 프로그램이나 데이터 공급자가 이 플랫폼 유형의 데이터 원본에서 데이터를 검색할 수 있는가?"라는 질문에 대한 답을 얻을 수 있습니다.  
   
 -   데이터 원본 버전: DPE 또는 데이터 공급자가 지원하는 대상 데이터 원본의 버전입니다. 이 열을 통해 "이 데이터 처리 확장 프로그램이나 데이터 공급자가 이 버전의 데이터 원본에서 데이터를 검색할 수 있는가?"라는 질문에 대한 답을 얻을 수 있습니다.  
   
--   RS  *\<플랫폼 >*: 사용자 지정 DPE 또는 데이터 공급자를 설치할 수 있는 보고서 서버 및 보고서 제작 클라이언트의 플랫폼입니다. 기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램은 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]설치에 포함되어 있습니다. 사용자 지정 데이터 처리 확장 프로그램이나 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자는 특정 플랫폼에 대해 기본적으로 컴파일되어야 합니다. 이 열을 통해 "이 데이터 처리 확장 프로그램이나 데이터 공급자를 이 플랫폼 유형에 설치할 수 있는가?"라는 질문에 대한 답을 얻을 수 있습니다.  
+-   RS *\<플랫폼>*: 사용자 지정 DPE 또는 데이터 공급자를 설치할 수 있는 보고서 서버 및 보고서 제작 클라이언트의 플랫폼입니다. 기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램은 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]설치에 포함되어 있습니다. 사용자 지정 데이터 처리 확장 프로그램이나 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자는 특정 플랫폼에 대해 기본적으로 컴파일되어야 합니다. 이 열을 통해 "이 데이터 처리 확장 프로그램이나 데이터 공급자를 이 플랫폼 유형에 설치할 수 있는가?"라는 질문에 대한 답을 얻을 수 있습니다.  
   
 ###  <a name="DataSourcesTable"></a> 데이터 원본 유형  
   
@@ -290,7 +290,7 @@ ms.locfileid: "53352470"
   
  자세한 내용은 [Teradata 연결 형식&#40;SSRS&#41;](teradata-connection-type-ssrs.md)을 참조하세요.  
   
- Teradata 데이터베이스를 기반으로 모델을 만들 수도 있습니다. 자세한 내용은 Teradata 사이트의 다음 백서를 참조하십시오. [Microsoft SQL Server 2012 Reporting Services 및 Teradata Corporation](http://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP)합니다.  
+ Teradata 데이터베이스를 기반으로 모델을 만들 수도 있습니다. 자세한 내용은 Teradata 사이트의 다음 백서를 참조하십시오. [Microsoft SQL Server 2012 Reporting Services 및 Teradata Corporation](http://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP).  
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
@@ -314,7 +314,7 @@ ms.locfileid: "53352470"
  지정할 수 있는 자격 증명은 클라이언트 애플리케이션에서 사용하는 구현에 따라 다릅니다. 자세한 내용은 [SharePoint 목록 연결 형식&#40;SSRS&#41;](sharepoint-list-connection-type-ssrs.md)을 참조하세요.  
   
 ###  <a name="XML"></a> XML 데이터 처리 확장 프로그램  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 포함된 XML 데이터 처리 확장 프로그램을 사용하여 보고서에 XML 데이터를 사용할 수 있습니다. URL로 액세스할 수 있는 웹 기반의 애플리케이션, 웹 서비스 또는 XML 문서에서 데이터를 검색할 수 있습니다. 자세한 내용은 [XML 연결 형식&#40;SSRS&#41;](xml-connection-type-ssrs.md)을 참조하세요. 연결된 쿼리 디자이너에 대한 자세한 내용은 [그래픽 쿼리 디자이너 사용자 인터페이스](graphical-query-designer-user-interface.md)의 텍스트 기반 쿼리 디자이너 섹션을 참조하세요. 예를 들어 참조 [Reporting Services: Using XML and Web Service Data Sources](https://go.microsoft.com/fwlink/?LinkId=81654)합니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 포함된 XML 데이터 처리 확장 프로그램을 사용하여 보고서에 XML 데이터를 사용할 수 있습니다. URL로 액세스할 수 있는 웹 기반의 애플리케이션, 웹 서비스 또는 XML 문서에서 데이터를 검색할 수 있습니다. 자세한 내용은 [XML 연결 형식&#40;SSRS&#41;](xml-connection-type-ssrs.md)을 참조하세요. 연결된 쿼리 디자이너에 대한 자세한 내용은 [그래픽 쿼리 디자이너 사용자 인터페이스](graphical-query-designer-user-interface.md)의 텍스트 기반 쿼리 디자이너 섹션을 참조하세요. 예를 보려면 [Reporting Services: XML 및 웹 서비스 데이터 원본 사용](https://go.microsoft.com/fwlink/?LinkId=81654)을 참조하세요.  
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   

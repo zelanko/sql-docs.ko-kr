@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e9a01a74-2f51-4b35-be3a-a6138568f6cf
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 87984d85ea18415472669cf4ce05dbdbe300e8e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bd85296b786683176c8c05e53cd7e0c11cc7cd18
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182113"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029484"
 ---
 # <a name="format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs"></a>축 레이블의 서식을 날짜 또는 통화로 지정(보고서 작성기 및 SSRS)
   올바른 형식의 DateTime 값을 축에 표시하면 차트에 이러한 값이 일로 자동 표시됩니다. X축에 대해 월 또는 시간 간격과 같은 날짜/시간 간격을 지정하려면 축 레이블의 서식을 지정하고 축 간격 유형을 올바른 날짜 또는 시간 간격으로 설정해야 합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "48182113"
   
 3.  **범주** 목록에서 **날짜**를 선택합니다. **유형** 목록에서 x축 레이블에 적용할 날짜 형식을 선택합니다.  
   
-4.  **축 옵션**을 선택합니다.  
+4.   **축 옵션**을 선택합니다.  
   
 5.  **간격**에 **1**을 입력합니다. **간격 유형** 속성에서 **월**을 선택합니다.  
   
@@ -62,6 +62,6 @@ ms.locfileid: "48182113"
  [차트의 축 레이블 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [로그 눈금 간격 지정&#40;보고서 작성기 및 SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
- [축 간격 지정 &#40;보고서 작성기 및 SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
+ [축 간격 지정&#40;보고서 작성기 및 SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
   

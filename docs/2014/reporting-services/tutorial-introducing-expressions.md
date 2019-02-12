@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 096a0678ccb86c232d4eaca792aa143379710fea
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 5dce14880b54d33eee438bf6a7e9e6a2c88f108c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399337"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022297"
 ---
 # <a name="tutorial-introducing-expressions"></a>자습서: 식 소개
   식은 강력하고 융통성 있는 보고서를 만드는 데 도움이 됩니다. 이 자습서에서는 일반 함수와 연산자를 사용하는 식을 만들고 구현하는 방법을 배웁니다. 사용 합니다 **식** 식을 연결 하는 이름 값 확인을 별도 데이터 집합에서 값을 쓸 대화 상자 등 고 필드 값에 따라 서로 다른 그림에 표시 합니다.  
@@ -522,7 +522,7 @@ ms.locfileid: "52399337"
   
 38. **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
-##  <a name="GreenBar"></a> 8입니다. 보고서를 "녹색 막대" 보고서를 확인 합니다.  
+##  <a name="GreenBar"></a> 8. 보고서를 "녹색 막대" 보고서를 확인 합니다.  
  가로줄무늬가 있는 보고서로 만들기 위해 매개 변수를 사용하여 보고서의 행에 번갈아 적용할 색을 지정합니다.  
   
 #### <a name="to-add-a-parameter"></a>매개 변수를 추가하려면  

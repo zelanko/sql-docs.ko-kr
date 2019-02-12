@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7482b4a2ac81541cdd9f6317d7f76291e34aa162
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b2e318d8426f9c78e0065377dcb27a6186e31c0d
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420654"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079469"
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>IIS 8.0에서 Analysis Services에 대 한 HTTP 액세스 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "52420654"
 > [!NOTE]  
 >  원격 Analysis Services 서버에 대한 클라이언트 연결을 허용하도록 Windows 방화벽에서 포트를 차단 해제해야 합니다. 자세한 내용은 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   
-##  <a name="bkmk_copy"></a> 1 단계: 웹 서버의 폴더로 MSMDPUMP 파일 복사  
+##  <a name="bkmk_copy"></a> 1단계: 웹 서버의 폴더로 MSMDPUMP 파일 복사  
  사용자가 만드는 각 HTTP 엔드포인트에는 고유 MSMDPUMP 파일 집합이 있어야 합니다. 이 단계에서는 Analysis Services 프로그램 폴더에서 새 가상 디렉터리 폴더(IIS를 실행하는 컴퓨터의 파일 시스템에 만드는 폴더)로 MSMDPUMP 실행 파일, 구성 파일 및 리소스 폴더를 복사합니다.  
   
  드라이브는 NTFS 파일 시스템용으로 포맷되어야 합니다. 사용자가 만든 폴더의 경로에 공백을 포함해서는 안 됩니다.  
@@ -111,8 +111,10 @@ ms.locfileid: "52420654"
     -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
     -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
+> [!NOTE]  
+>  IIS 관리자의 이전 백업 데이터베이스가 현재 버전의 Analysis Services에 연결할 못할 수 있습니다. 이 MSMDPUMP에 변화로 인 및 이전 작업 버전에서 msmdpump.dll 파일을 복사 하 여 해결 해야 합니다.
   
-##  <a name="bkmk_appPool"></a> 2 단계: IIS에 애플리케이션 풀 및 가상 디렉터리 만들기  
+##  <a name="bkmk_appPool"></a> 2단계: IIS에 애플리케이션 풀 및 가상 디렉터리 만들기  
  다음으로 애플리케이션 풀과 PUMP에 대한 엔드포인트를 만듭니다.  
   
 #### <a name="create-an-application-pool"></a>애플리케이션 풀 만들기  
@@ -148,7 +150,7 @@ ms.locfileid: "52420654"
 > [!NOTE]  
 >  이 지침의 이전 버전에는 가상 디렉터리를 만들기 위한 단계가 포함되어 있습니다. 이 단계 더 이상 필요하지 않습니다.  
   
-##  <a name="bkmk_auth"></a> 3 단계: IIS 인증 구성 및 확장 추가  
+##  <a name="bkmk_auth"></a> 3단계: IIS 인증 구성 및 확장 추가  
  이 단계에서는 방금 만든 SSAS 가상 디렉터리를 추가로 구성합니다. 인증 방법을 지정한 후 스크립트 맵을 추가합니다. HTTP를 통해 Analysis Services에 대해 지원되는 인증 방법은 다음과 같습니다.  
   
 -   Windows 인증(Kerberos 또는 NTLM)  

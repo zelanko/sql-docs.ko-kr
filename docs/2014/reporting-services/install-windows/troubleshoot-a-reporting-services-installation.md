@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b017b37228702adddf3cf50a8f9fb125b28074a9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 9205097462a2c9bcc08334e4d83716a224d3b786
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350263"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043334"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Reporting Services 설치 문제 해결
   설치 중에 오류가 발생하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치할 수 없는 경우 이 항목에 설명된 지침에 따라 설치 오류가 발생할 가능성이 가장 높은 상황을 처리하세요.  
@@ -194,13 +194,13 @@ ms.locfileid: "53350263"
   
 1.  다음 레지스트리 키를 삭제합니다.  
   
-    -   **HKLM\SYSTEM\CurrentControlSet\Services\MSRS 2011 웹 서비스**  
+    -   **HKLM\SYSTEM\CurrentControlSet\Services\MSRS 2011 Web Service**  
   
-    -   **HKLM\SYSTEM\CurrentControlSet\Services\MSRS 2011 Windows 서비스**  
+    -   **HKLM\SYSTEM\CurrentControlSet\Services\MSRS 2011 Windows Service**  
   
 2.  명령 창을 열고 프롬프트에 다음 명령을 입력합니다.  
   
-    -   **실행할 \<**  *.NET 2.0 Framework directory* **> \InstallUtil.exe \<**  *Report Server Bin directory* **> \ReportingServicesLibrary.dll**  
+    -   **run \<** *.NET 2.0 Framework directory* **>\InstallUtil.exe \<** *Report Server Bin directory* **>\ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
         >  바꿉니다 \< *.NET 2.0 Framework directory*> 파일은.NET Framework 2.0의 실제 경로로 바꾸고 \< *Report Server Bin directory*> 실제 경로 사용 하 여 보고서 서버 bin 파일입니다.  

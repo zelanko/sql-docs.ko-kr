@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7565cf64d64197a261c36fb755e3f20a65f1fa27
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 7bd3261a6669b1677fbfeff23b0017e622600007
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356459"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012744"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>6단원: 그룹화 및 합계 추가(Reporting Services)
   보고서에 그룹화 및 합계를 추가하여 데이터를 구성하고 요약할 수 있습니다.  
@@ -144,7 +144,7 @@ ms.locfileid: "53356459"
 ## <a name="next-steps"></a>다음 단계  
  기본 테이블 보고서 만들기 자습서를 성공적으로 완료했습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
