@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d13cec7bac124a8fb1289de6086ec0326789501e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: e63f964d61fa5f7402244186f292d6d0543b9304
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366705"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037614"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>ReportServer:Service 및 ReportServerSharePoint:Service 성능 개체에 대한 성능 카운터
   이 항목에서는 다음 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 성능 개체에 대한 성능 카운터에 대해 설명합니다.  
@@ -101,7 +101,7 @@ ms.locfileid: "53366705"
 (get-counter -listset "ReportServerSharePoint:Service").paths  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [보고서 서버 성능 모니터링](monitoring-report-server-performance.md)   
  [성능 카운터 MSRS 2014 웹 서비스 및 MSRS 2014 Windows 서비스 성능 개체에 대 한 &#40;기본 모드&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [성능 카운터 MSRS 2014 웹 서비스 SharePoint 모드 및 MSRS 2014 Windows 서비스 SharePoint 모드 성능 개체에 대 한 &#40;SharePoint 모드&#41;]... / performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  

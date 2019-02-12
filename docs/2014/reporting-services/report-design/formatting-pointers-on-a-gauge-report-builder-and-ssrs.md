@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 730e9fa68477cbd96261a7036d7a95033db326a8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 3254f7bbe4cfdd826b24c003b5b472535534dd54
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544247"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032585"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>계기의 포인터 서식 지정(보고서 작성기 및 SSRS)
   계기 포인터는 계기의 현재 값을 나타냅니다. 기본적으로 필드가 추가될 때 필드에 포함된 여러 값들은 하나의 값으로 집계되어 계기의 포인터로 표시됩니다. 계기에 여러 개의 포인터를 추가하여 같은 눈금에서 여러 값을 가리키도록 하거나 여러 눈금을 추가하고 추가한 각 눈금에 대해 하나의 포인터를 추가할 수 있습니다. 계기에 필드를 추가한 후 포인터 값에 컨텍스트를 부여하려면 해당 눈금에 대한 최대값과 최소값을 설정해야 합니다. 또한 범위의 최소값과 최대값을 설정하여 눈금의 주요 영역을 나타낼 수도 있습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "52544247"
  포인터 이미지가 불규칙적인 모양인 경우 계기에 표시되지 않도록 이미지 영역을 숨기려면 투명 색을 정의해야 합니다. 투명 색을 정의하면 계기에서 기존 포인터 위의 이미지가 바뀌고 고르게 다듬어져 포인터의 해당 모양만 나타납니다. 계기에서 포인터 크기에 맞게 이미지 크기를 다시 조정합니다. 이미지를 포인터로 지정하면 계기 위에 추가되는 모든 후속 포인터가 이미지 아래에 그려집니다. 따라서 계기에 여러 개의 포인터가 있는 경우에는 이미지를 포인터로 지정하지 않는 것이 좋습니다. 자세한 내용은 [이미지를 계기의 포인터로 지정 &#40;보고서 작성기 및 SSRS&#41;](../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md)합니다.  
   
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [계기의 눈금 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [계기에서 범위 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [계기&#40;보고서 작성기 및 SSRS&#41;](gauges-report-builder-and-ssrs.md)  

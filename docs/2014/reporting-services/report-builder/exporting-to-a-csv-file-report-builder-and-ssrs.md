@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 76c8b145b5ad43cdba6a2d55cdcf62fedc0e2ff3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fdd1083f5e8d8e725378dd5cbec62351249ec1bd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225965"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043254"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>CSV 파일로 내보내기(보고서 작성기 및 SSRS)
   CSV(쉼표로 구분된 값) 렌더링 확장 프로그램은 보고서의 데이터를 결합하여 읽기 쉽고 많은 애플리케이션과 교환할 수 있는 표준화된 일반 텍스트 형식으로 렌더링합니다.  
   
- CSV 렌더링 확장 프로그램에서는 필드와 행을 구분하기 위해 문자열 구분 기호를 사용하는데 이 문자열 구분 기호는 쉼표 이외의 문자로 구성 가능합니다. 결과 파일은 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 과 같은 스프레드시트 프로그램에서 열거나 다른 프로그램의 가져오기 형식으로 사용할 수 있습니다. 내보낸된 보고서는.csv 파일이 되며의 MIME 형식을 반환 `text/csv`합니다.  
+ CSV 렌더링 확장 프로그램에서는 필드와 행을 구분하기 위해 문자열 구분 기호를 사용하는데 이 문자열 구분 기호는 쉼표 이외의 문자로 구성 가능합니다. 결과 파일은 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 과 같은 스프레드시트 프로그램에서 열거나 다른 프로그램의 가져오기 형식으로 사용할 수 있습니다. 내보낸 보고서는 .csv 파일이 되며 `text/csv` MIME 형식을 반환합니다.  
   
  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]의 차트, 데이터 막대, 스파크라인, 계기 및 표시기와 관련된 데이터를 사용하려면 보고서를 CSV 파일로 내보낸 다음 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel에서 이 파일을 엽니다.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "48225965"
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [여러 보고서 렌더링 확장 프로그램의 대화형 기능 &#40;보고서 작성기 및 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [보고서 항목 렌더링&#40;보고서 작성기 및 SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 80287951be04d9d8381db0f05810e103c8bedfb8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 268deacf076f7ea79222dd441777f1ad16149750
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356629"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028274"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>기본 제공 Globals 및 Users 참조(보고서 작성기 및 SSRS)
   `Globals` 및 `User` 컬렉션을 모두 포함하는 기본 제공 필드 컬렉션은 보고서를 처리할 때 Reporting Services에서 제공하는 전역 값을 나타냅니다. `Globals` 컬렉션은 보고서의 이름, 보고서 처리가 시작된 시간, 보고서 머리글 또는 바닥글의 현재 페이지 번호와 같은 값을 제공합니다. `User` 컬렉션은 사용자 식별자 및 언어 설정을 제공합니다. 이러한 값을 식에 사용하여 보고서의 결과를 필터링할 수 있습니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "53356629"
   
 |**멤버**|**형식**|**설명**|  
 |----------------|--------------|---------------------|  
-|`Language`|`String`|보고서를 실행하는 사용자의  `en-US`) 을 입력합니다.|  
+|`Language`|`String`|보고서를 실행하는 사용자의 `en-US`) 을 입력합니다.|  
 |`UserID`|`String`|보고서를 실행하는 사용자의 ID입니다. Windows 인증을 사용하는 경우 이 값은 현재 사용자의 도메인 계정입니다. 값은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보안 확장 프로그램에 의해 결정되며 이 프로그램은 Windows 인증 또는 사용자 지정 인증을 사용할 수 있습니다.|  
   
  보고서에서 여러 언어를 지원하는 방법에 대한 자세한 내용은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 온라인 설명서 [의](https://go.microsoft.com/fwlink/?LinkId=120955)설명서에서 "다국어 배포 또는 글로벌 배포를 위한 솔루션 디자인 고려 사항"을 참조하세요.  

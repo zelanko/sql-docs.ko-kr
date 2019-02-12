@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 37d858e465e67bfba98da5d4ad9a0c44fbf1e46b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 09c16397bae867309fce5d47cc5f0397825d7953
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102843"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027198"
 ---
 # <a name="union-function-report-builder-and-ssrs"></a>Union 함수(보고서 작성기 및 SSRS)
   식으로 지정되어 정해진 범위에서 계산되는 Null이 아닌 모든 숫자 값의 합집합을 반환합니다.  
@@ -33,13 +33,13 @@ Union(expression, scope, recursive)
   
 #### <a name="parameters"></a>매개 변수  
  *expression*  
- (`SqlGeometry` 또는 `SqlGeography`) 집계를 수행 하는 식입니다.  
+ (`SqlGeometry` 또는 `SqlGeography`) 집계를 수행할 식입니다.  
   
  *범위*  
  (`String`) 선택 사항입니다. 집계 함수를 적용할 보고서 항목을 포함하는 데이터 세트, 그룹 또는 데이터 영역의 이름입니다. *scope* 를 지정하지 않은 경우 현재 범위가 사용됩니다.  
   
  *재귀*  
- (**열거 형식**) 선택 사항입니다. `Simple` (기본값) 또는 `RdlRecursive`합니다. 집계를 재귀적으로 수행할지 여부를 지정합니다.  
+ (**열거 형식**) 선택 사항입니다. `Simple`(기본값) 또는 `RdlRecursive`로, 집계를 재귀적으로 수행할지 여부를 지정합니다.  
   
 ## <a name="return"></a>반환 값  
  식 유형에 따라 `SqlGeometry` 또는 `SqlGeography` 공간 개체를 반환합니다. 에 대 한 자세한 내용은 `SqlGeometry` 하 고 `SqlGeography` 공간 데이터 형식을 참조 하십시오 [공간 데이터 형식 개요](../../relational-databases/spatial/spatial-data-types-overview.md)합니다.  
@@ -64,7 +64,7 @@ Union(expression, scope, recursive)
  재귀 집계에 대한 자세한 내용은 [재귀 계층 구조 그룹 만들기&#40;보고서 작성기 및 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  
- 다음 표에 예가 나와 `SqlGeometry` 식 및 `Union` 결과 식을, 공간 데이터는 WKT (Well Known Text) 형식으로 표시 합니다.  
+ 다음 표에서는 `SqlGeometry` 식 예와 `Union` 결과 식을 보여 줍니다. 여기서 공간 데이터는 WKT(Well Known Text) 형식으로 표시됩니다.  
   
 |공간 데이터가 포함된 필드|예제|Union 결과|  
 |-----------------------------|-------------|------------------|  
@@ -79,9 +79,9 @@ Union(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서에 사용 되는 식 &#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [합계, 집계 및 기본 제공 컬렉션의 식 범위 &#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 60a6c6a9271245e36c3e491b946c36e175f12d12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 18390c8cb1df552b746f16c5eb569f08063e7763
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209473"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026564"
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>보고서 모델 쿼리의 수식(보고서 작성기 및 SSRS)
   수식은 보고서 모델을 데이터 원본으로 사용하는 보고서의 값에 대해 수행되는 계산입니다. 수식에는 함수, 연산자, 상수 그리고 필드나 엔터티에 대한 참조가 포함될 수 있습니다. 수식을 사용하면 숫자 데이터 및 텍스트 데이터를 결합, 집계, 필터링 및 계산할 수 있습니다. 수식을 만들어 새 필드로 저장하거나 기존 필드의 수식을 수정할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "48209473"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="references"></a>References  
+## <a name="references"></a>참조  
  참조는 필드 이름입니다. 이는 엔터티 내의 기존 필드 이름이거나 사용자가 만들어 필드 목록에 추가한 계산 필드 이름일 수 있습니다. 참조는 보고서 작성기에게 수식 내에서 사용하려는 값이나 데이터를 어디서 찾아야 할지 알려 줍니다. 같은 컨텍스트의 엔터티에 있는 필드뿐 아니라 다른 엔터티에 있는 필드도 하나의 수식에서 참조할 수 있으며 한 필드의 값을 여러 수식에서 사용할 수도 있습니다.  
   
  참조를 사용하면 보고서 처리기가 필드 내의 각 값에 대해 수식을 실행합니다. 예를 들어 어떤 필드에 과거 5년간 연간 매출액 합계가 들어 있다고 가정합니다. 이 필드에는 5개의 값이 있고 각 값은 해당 연도의 총 판매액을 나타냅니다. 수식에 이 필드에 대한 참조가 포함되어 있는 경우 수식은 각 개별 값을 사용하여 새 값을 계산합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "48209473"
  **텍스트 연결 연산자.** 앰퍼샌드(&)를 사용하여 하나 이상의 텍스트 문자열을 결합 또는 연결하여 단일 텍스트로 만들 수 있습니다.  
   
 ##  <a name="Constants"></a> 상수  
- 상수는 계산되지 않는 값이므로 변경되지 않습니다. 보고서 작성기에서는 다음과 같은 상수: `True`, `False`, 및 `Empty`합니다. 부울 필드를 평가할 때 이러한 상수를 사용합니다. 예를 들어 IsDiscontinued라는 필드가 있다고 가정합니다. 이 필드에 대해 유일하게 유효한 값은 True, False 또는 Empty(" ")입니다.  
+ 상수는 계산되지 않는 값이므로 변경되지 않습니다. 보고서 작성기에서는 `True`, `False`, 및 `Empty` 같은 상수를 사용합니다. 부울 필드를 평가할 때 이러한 상수를 사용합니다. 예를 들어 IsDiscontinued라는 필드가 있다고 가정합니다. 이 필드에 대해 유일하게 유효한 값은 True, False 또는 Empty(" ")입니다.  
   
 ##  <a name="Functions"></a> 함수  
  함수는 특정한 순서로 지정된 *인수*라고 하는 특정한 값을 사용하여 계산을 수행하는 미리 정의된 수식입니다. 인수는 리터럴 값 또는 필드이거나 둘을 결합한 것일 수 있습니다. 수식에 필드를 사용하는 경우 필드 이름은 필드의 각 인스턴스를 나타냅니다. 인수가 리터럴 값인 경우 특정 문자를 사용하여 그 인수가 리터럴 값임을 나타내야 할 수 있습니다.  

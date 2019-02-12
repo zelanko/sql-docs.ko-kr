@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f6f52a6d9a1a28d103f407da049814bbf4a6c0f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1ff256deda15e2abdecbff4dc94cc1dcd9d2d5c4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166313"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035174"
 ---
 # <a name="secure-my-reports"></a>내 보고서 보안 설정
   내 보고서 기능은 보고서 작업을 위한 사용자 관리 작업 영역을 제공합니다. 원래 용도대로 사용하려면 내 보고서 폴더는 여러 사용자가 사용할 수 있는 다른 폴더보다 권한 제한이 적어야 합니다. 다른 폴더의 보고서를 보고 실행할 수 있는 권한만 있는 사용자가 내 보고서 폴더와 자신이 소유한 내용을 관리하려면 확장된 권한이 있어야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 이 용도에 맞는 특별한 역할 할당과 역할 정의를 제공합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "48166313"
 ## <a name="denying-access-to-my-reports"></a>내 보고서에 대한 액세스 거부  
  다음과 같은 방법으로 다른 사용자가 내 보고서에 액세스하지 못하도록 할 수 있습니다.  
   
--   사이트 설정 페이지에서 내 보고서 해제. 자세한 내용은 [사용 및 내 보고서 사용 하지 않도록 설정](../report-server/enable-and-disable-my-reports.md)합니다.  
+-   사이트 설정 페이지에서 내 보고서 해제. 자세한 내용은 [내 보고서 설정 및 해제](../report-server/enable-and-disable-my-reports.md)를 참조하세요.  
   
 -   **내 보고서** 역할에서 모든 태스크 제거  
   

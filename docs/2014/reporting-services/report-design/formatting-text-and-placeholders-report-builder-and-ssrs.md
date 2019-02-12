@@ -17,13 +17,13 @@ f1_keywords:
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0b2dc831119ae6356761b525f76fe11b37236724
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 12daff3490a0ca11fefa5c120952b30499118a4d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111752"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037434"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>텍스트 및 자리 표시자 서식 지정(보고서 작성기 및 SSRS)
   입력란은 데이터 영역 안에 있는 보고서 항목 또는 개별 셀로서 텍스트, 계산 필드, 데이터베이스의 필드에 대한 포인터 또는 이 세 항목의 조합을 포함하고 있습니다. 글꼴 및 색을 혼합하고, 굵게 및 기울임꼴 스타일을 추가하고, 맞춤 및 내어쓰기와 같은 단락 스타일을 사용할 수 있습니다. 또한 입력란 전체의 형식을 지정하거나 입력란 내에 있는 특정 텍스트, 숫자, 식 또는 필드의 형식을 지정할 수 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "48111752"
   
  이 그림에서 입력란 자체에 테두리가 있으며 모든 텍스트는 동일한 입력란에 있지만 텍스트의 서식이 다양합니다.  
   
- 빠르게 시작하려면 [자습서: 텍스트 서식 지정&#40;보고서 작성기&#41;](../tutorial-format-text-report-builder.md)을 참조하세요.  
+ 빠르게 시작하려면 [자습서: 텍스트 서식 지정&#40;보고서 작성기&#41;](../tutorial-format-text-report-builder.md)를 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -46,7 +46,7 @@ ms.locfileid: "48111752"
   
 -   **보고서 데이터** 창에서 필드를 끌어다 입력란 안에 놓습니다. 보고서 본문이 아닌 다른 곳으로 식을 끌면 자리 표시자를 포함하는 새 입력란이 생성됩니다. 끌어다 놓은 필드에 해당하는 필드 식이 이 자리 표시자의 값이 됩니다.  
   
--   입력란의 아무 곳이나 마우스 오른쪽 단추로 클릭하고 **자리 표시자 삽입**을 선택합니다. **자리 표시자 속성** 대화 상자에서 식을 자리 표시자의 값으로 지정할 수 있습니다. 자세한 내용은 [자리 표시자 속성 대화 상자, 일반 &#40;보고서 작성기 및 SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)합니다.  
+-   입력란의 아무 곳이나 마우스 오른쪽 단추로 클릭하고 **자리 표시자 삽입**을 선택합니다. **자리 표시자 속성** 대화 상자에서 식을 자리 표시자의 값으로 지정할 수 있습니다. 자세한 내용은 [자리 표시자 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)을 참조하세요.  
   
 -   입력란에 단순 또는 복합 식을 입력합니다. 예를 들어 입력란에 **Name: [Name]** 을 입력하면 **[Name]** 텍스트가 `=Fields!Name.Value`식을 나타내는 자리 표시자로 표시됩니다.  
   
@@ -78,6 +78,6 @@ ms.locfileid: "48111752"
  [목록&#40;보고서 작성기 및 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [자리 표시자 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Microsoft Excel로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
- [텍스트 상자 &#40;보고서 작성기 및 SSRS&#41;](text-boxes-report-builder-and-ssrs.md)  
+ [입력란&#40;보고서 작성기 및 SSRS&#41;](text-boxes-report-builder-and-ssrs.md)  
   
   

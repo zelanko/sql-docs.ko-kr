@@ -2,8 +2,8 @@
 title: sys.pdw_index_mappings (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,14 +13,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: cf9eae70cdc1e7b611ecba83fa177b2983dcea2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e331dbea1232febefc8b0b4848dfd51a085ec692
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709361"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035654"
 ---
-# <a name="syspdwindexmappings-transact-sql"></a>sys.pdw_index_mappings (Transact SQL)
+# <a name="syspdwindexmappings-transact-sql"></a>sys.pdw_index_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   논리적 인덱스의 고유한 조합 하 여 반영 된 대로 계산 노드에서 사용 되는 실제 이름에 매핑됩니다 **object_id** 인덱스를 보관 하는 테이블의 하며 **index_id** 내 특정 인덱스 테이블입니다.  

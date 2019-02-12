@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: c14ed187-bdd9-4304-88e3-72072f03c21b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1d6e9ed6c7aa3cf1ac103c157f0084c4c6863167
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a0566d2a271c891aaa85e7624974e7bcd2769891
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081453"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021484"
 ---
 # <a name="deleteencryptedinformation-method-wmi-msreportserverconfigurationsetting"></a>DeleteEncryptedInformation 메서드(WMI MSReportServer_ConfigurationSetting)
   보고서 서버 데이터베이스에서 암호화된 정보를 삭제합니다.  

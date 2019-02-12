@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 8603ea91-2ec4-40b6-8070-4f824332f5d3
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: d0a4532b99c63a778c8c6751471b2a30e0ff7186
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 21a7b32332c2fe8c4a37831a3fdd745016503087
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390506"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024844"
 ---
 # <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>작업 4: SQL Server Data Tools를 사용하여 SSIS 프로젝트 만들기
   이 작업에서는 공급자 데이터 정리 및 일치를 자동화하기 위해 **SQL Server Data Tools** 를 사용해서 SSIS 프로젝트를 만듭니다.  
@@ -37,7 +34,7 @@ ms.locfileid: "52390506"
   
 6.  **솔루션 탐색기** 창에서 **Package.dtsx** 를 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 선택합니다. 표시 되지 않는 경우 **솔루션 탐색기** 창에서 클릭 **뷰** 메뉴 모음에서 클릭 **솔루션 탐색기**합니다.  
   
-     ![Package.dtsx-이름 바꾸기 메뉴](../../2014/tutorials/media/et-creatinganssisprojectusingsqlsdt-02.jpg "Package.dtsx-이름 바꾸기 메뉴")  
+     ![Package.dtsx - Rename Menu](../../2014/tutorials/media/et-creatinganssisprojectusingsqlsdt-02.jpg "Package.dtsx - Rename Menu")  
   
 7.  **CleanseAndCurate.dtsx** 를 입력하고 **Enter**키를 누릅니다. **확장명** 이 **.dtsx**인지 확인합니다.  
   

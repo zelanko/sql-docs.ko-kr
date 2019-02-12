@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 06941742-2c65-428e-a722-4b4dd59096a5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: aabc0a81ac9f191d6a93ff071d2f75e3d9e2c729
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0599e51eea3a3bbf62d1f1f11ec8f642326099ac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217863"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030494"
 ---
 # <a name="linked-reports-methods"></a>링크된 보고서 메서드
   다음 메서드를 사용하여 링크된 항목을 만들고 관리할 수 있습니다.  

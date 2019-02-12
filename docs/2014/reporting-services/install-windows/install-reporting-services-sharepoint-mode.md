@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 549cae9b4e42866194f5a391bb7d5e111eb202ae
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: c46be33ef74736a7dda0e080c1a4928c090f656d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395157"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043194"
 ---
 # <a name="reporting-services-sharepoint-mode-installation-sharepoint-2010-and-sharepoint-2013"></a>Reporting Services SharePoint 모드 설치(SharePoint 2010 및 SharePoint 2013)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드의 보고서 생성 및 전달을 기반을 제공 하는 서버 구성 요소 모음인 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 제품입니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "52395157"
   
  [Windows 클레임 토큰 서비스 &#40;C2WTS&#41; 및 Reporting Services](../../sql-server/install/claims-to-windows-token-service-c2wts-and-reporting-services.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 경고 아키텍처 및 워크플로](../reporting-services-data-alerts.md#AlertingWF)   
  [경고 담당자를 위한 데이터 경고 관리자입니다.](../data-alert-manager-for-alerting-administrators.md)  
   

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: e75fe1e5-197b-4c65-859b-370821cad003
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e6a022b50d4fb37474ba1183abc432ca4a7de463
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bf1d2d6a884f3751cd2d252bbba38d62aeea5bf9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080823"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023724"
 ---
 # <a name="msreportserverconfigurationsetting-properties"></a>MSReportServer_ConfigurationSetting 속성
   MSReportServer_ConfigurationSetting 클래스는 보고서 서버 인스턴스의 설치 및 런타임 매개 변수를 나타냅니다. 이 설정은 RRSReportServer.config 구성 파일에 저장됩니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "48080823"
 |[IsSharePointIntegrated](configurationsetting-property-issharepointintegrated.md)|보고서 서버가 SharePoint 통합 모드로 구성되어 있는지 여부를 나타냅니다.|  
 |[IsWebServiceEnabled](configurationsetting-property-iswebserviceenabled.md)|보고서 서버 웹 서비스를 사용하는지 여부를 나타냅니다. 읽기 전용입니다.|  
 |[IsWindowsServiceEnabled](configurationsetting-property-iswindowsserviceenabled.md)|보고서 서버 Windows 서비스를 사용하는지 여부를 나타냅니다. 읽기 전용입니다.|  
-|[MachineAccountIdentity 속성 &#40;WMI&#41;](configurationsetting-property-machineaccountidentity.md)|보고서 서버가 설치되어 있는 컴퓨터의 컴퓨터 계정 ID를 가져옵니다.|  
+|[MachineAccountIdentity 속성&#40;WMI&#41;](configurationsetting-property-machineaccountidentity.md)|보고서 서버가 설치되어 있는 컴퓨터의 컴퓨터 계정 ID를 가져옵니다.|  
 |[PathName](configurationsetting-property-pathname.md)|보고서 서버 인스턴스의 설치 경로를 지정합니다.|  
 |[SecureConnectionLevel](configurationsetting-property-secureconnectionlevel.md)|RSReportServer.config 파일에 지정된 보안 연결 수준을 반환합니다.|  
 |[SenderEmailAddress](configurationsetting-property-senderemailaddress.md)|보고서 서버에서 전자 메일을 보낼 때 사용하는 주소를 가져옵니다. 읽기 전용입니다.|  
@@ -55,8 +55,8 @@ ms.locfileid: "48080823"
 |[SMTPServer](configurationsetting-property-smtpserver.md)|RSReportServer.config 파일에서 SMTP 서버 속성을 가져옵니다. 읽기 전용입니다.|  
 |[UnattendedExecutionAccount](configurationsetting-property-unattendedexecutionaccount.md)|보고서 서버가 무인 모드로 보고서를 실행할 때 가장하는 로그인 사용자 계정을 지정합니다. 읽기 전용입니다.|  
 |[버전](configurationsetting-property-version.md)|보고서 서버의 버전을 반환합니다.|  
-|[VirtualDirectoryReportManager 속성 &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-property-virtualdirectoryreportmanager.md)|보고서 관리자 애플리케이션의 가상 디렉터리를 반환합니다.|  
-|[VirtualDirectoryReportServer 속성 &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-property-virtualdirectoryreportserver.md)|보고서 서버 웹 서비스 애플리케이션의 가상 디렉터리를 반환합니다.|  
+|[VirtualDirectoryReportManager 속성&#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-property-virtualdirectoryreportmanager.md)|보고서 관리자 애플리케이션의 가상 디렉터리를 반환합니다.|  
+|[VirtualDirectoryReportServer 속성&#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-property-virtualdirectoryreportserver.md)|보고서 서버 웹 서비스 애플리케이션의 가상 디렉터리를 반환합니다.|  
 |[WindowsServiceIdentityActual](configurationsetting-property-windowsserviceidentityactual.md)|보고서 서버 Windows 서비스가 실제로 실행되고 있는 ID를 반환합니다. 읽기 전용입니다.|  
 |[WindowsServiceIdentityConfigured](windowsserviceidentityconfigured-property.md)|보고서 서버 Windows 서비스를 실행하도록 마지막으로 구성된 ID를 반환합니다. 읽기 전용입니다.|  
   

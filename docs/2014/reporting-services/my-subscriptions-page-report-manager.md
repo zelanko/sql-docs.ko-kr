@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 491a85a3-f323-4155-a0a8-de2779899995
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6ecb5d4b5216139c7d762b03fd5a8a8fbc6a1b5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 29824d30b1fdd96c2bc847b8908b49340a05aaf3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165963"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026904"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>내 구독 페이지(보고서 관리자)
   내 구독 페이지를 사용하여 모든 구독을 한 곳에서 확인할 수 있습니다. 이 페이지에서는 소유한 모든 구독을 액세스하고 수정 또는 삭제할 수 있습니다. 사용자는 자신이 만든 구독만 소유합니다. 다른 사용자가 정의한 구독에는 액세스할 수 없을 뿐 아니라 사용하지만 소유하지 않는 구독(예: 다른 사용자가 정의한 기존 구독에 자신의 이름이 추가된 경우)에도 액세스할 수 없습니다. 이 페이지에서 구독을 만들 수는 없습니다. 구독을 만드는 방법에 대 한 자세한 내용은 참조는 [새 구독 또는 구독 편집 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "48165963"
  비활성화된 구독은 처리할 수 없습니다. 구독을 업데이트하고 작동시키려면 해당 구독을 열어서 저장합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [구독 및 배달 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [구독 및 배달&#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

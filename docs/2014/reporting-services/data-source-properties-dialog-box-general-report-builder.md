@@ -11,14 +11,14 @@ f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2568f22f30ffb722aa7438f9b83f35a7e39f1f5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e64f98f376e704716a40eedcda8351331280fb9e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138752"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031854"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>데이터 원본 속성 대화 상자, 일반(보고서 작성기)
   **데이터 원본 속성** 대화 상자에서 **일반** 을 선택하여 보고서 서버의 공유 데이터 원본을 선택하거나 보고서에 포함된 데이터 원본에 대한 연결 정보를 수정할 수 있습니다.  
@@ -67,8 +67,8 @@ ms.locfileid: "48138752"
 ## <a name="see-also"></a>관련 항목  
  [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [데이터 연결이 나 데이터 원본 추가 및 확인 &#40;보고서 작성기 및 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
- [데이터 연결, 데이터 원본 및 보고서 작성기에서 연결 문자열](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [데이터 원본 속성 대화 상자, 자격 증명 &#40;보고서 작성기&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
- [대화 상자, 창 및 마법사에 대 한 보고서 작성기 도움말](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

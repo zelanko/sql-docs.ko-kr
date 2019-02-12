@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 3bd2ec05-933f-4947-b1fe-c9226961eb7d
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3004c9d5ae6637f288a87c50444b46fb958e7d22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b3bc7d64e10e4803a2c2c069ab4b21cf8b139ec
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076883"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039334"
 ---
 # <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>태스크 9: 마스터 데이터 관리자를 사용하여 파생 계층 만들기
   이 작업에서는 마스터 데이터 관리자를 사용하여 파생 계층을 만듭니다. 이 파생된 계층의 도메인 기반 특성 관계에서 파생 됩니다 합니다 **공급 업체** 하 고 **상태** 엔터티.  
@@ -41,11 +38,11 @@ ms.locfileid: "48076883"
   
      ![저장 파생 계층 구조 단추](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-03.jpg "저장 파생 계층 구조 단추")  
   
-7.  끌기 **공급 업체** 에서 **사용 가능한 수준: SuppliersInState** 하 **현재 수준: SuppliersInState**합니다.  
+7.  끌기 **공급 업체** 에서 **사용 가능한 수준: SuppliersInState** 에 **현재 수준: SuppliersInState**.  
   
      ![사용 가능한 엔터티 및 계층을 현재 수준](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-04.jpg "사용 가능한 엔터티 및 계층을 현재 수준")  
   
-8.  끌기 **상태** 에서 **사용 가능한 수준: SuppliersInState** 하 **현재 수준: SuppliersInState**합니다. 화면에 **현재 수준** 다음 그림에 나와 있는 것 처럼 합니다.  
+8.  끌기 **상태** 에서 **사용 가능한 수준: SuppliersInState** 에 **현재 수준: SuppliersInState**. 화면에 **현재 수준** 다음 그림에 나와 있는 것 처럼 합니다.  
   
      ![현재 수준 및 파생된 계층의 미리 보기](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-05.jpg "현재 수준 및 파생된 계층의 미리 보기")  
   
@@ -64,6 +61,6 @@ ms.locfileid: "48076883"
      ![파생 계층 탐색기에서](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-07.jpg "파생 계층 탐색기에서")  
   
 ## <a name="next-step"></a>다음 단계  
- [5단원: SSIS를 사용하여 정리 및 일치 자동화](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)  
+ [5단원: 정리 및 일치 하는 SSIS를 사용 하 여 자동화](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 659b7a4e-f687-44d9-a60a-86490ccbf90f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 983f5547f816785e592aa27c442db6a92b519cae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 207d82f740b7b5ff174e220e647d67d5bac7f9ea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177432"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019454"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>시장 바구니 구조 및 모델 만들기(중급 데이터 마이닝 자습서)
   데이터 원본 뷰를 만들었으므로 이제 데이터 마이닝 마법사를 사용하여 새 마이닝 구조를 만듭니다. 이 태스크에서는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 연결 알고리즘을 기반으로 하는 마이닝 구조 및 마이닝 모델을 만듭니다.  
@@ -54,7 +53,7 @@ ms.locfileid: "48177432"
   
 11. 에 **지정할 열 내용 및 데이터 형식**페이지에서 다음 표에 표시 된 것 처럼를 클릭 하 고 선택 항목 검토 **다음**합니다.  
   
-    |열|내용 유형|데이터 형식|  
+    |열|콘텐츠 형식|데이터 형식|  
     |-------------|------------------|---------------|  
     |IncomeGroup|불연속|텍스트 모드|  
     |Order Number|Key|텍스트 모드|  
@@ -80,6 +79,6 @@ ms.locfileid: "48177432"
   
 ## <a name="see-also"></a>관련 항목  
  [Microsoft 연결 알고리즘](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   
- [콘텐츠 형식 &#40;데이터 마이닝&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)  
+ [콘텐츠 형식&#40;데이터 마이닝&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)  
   
   

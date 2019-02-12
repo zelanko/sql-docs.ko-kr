@@ -11,15 +11,15 @@ helpviewer_keywords:
 - entities [Master Data Services], enabling for collections
 - entities [Master Data Services], enabling for explicit hierarchies
 ms.assetid: 380e77e5-ad60-43d4-9605-34a84525f5dd
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: b4f97063a1f926fc29f94aab0bb3e38e393590a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6802a5950a8b366fe8989137da4ec4de70e9e605
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095813"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039104"
 ---
 # <a name="enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services"></a>명시적 계층 및 컬렉션에 엔터티 사용(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 엔터티에 대한 명시적 계층 및 컬렉션을 만들 수 있도록 명시적 계층 및 컬렉션에 엔터티를 사용합니다.  
@@ -55,13 +55,13 @@ ms.locfileid: "48095813"
   
 ## <a name="next-steps"></a>다음 단계  
   
--   [명시적 계층 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
+-   [명시적 계층 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
   
--   [컬렉션 만들기 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)  
+-   [컬렉션 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [엔터티 &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
- [명시적 계층 &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
- [컬렉션 &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
+ [엔터티&#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
+ [명시적 계층&#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
+ [컬렉션&#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
   

@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: ce458f9f-4b4f-4a58-aa75-9a90dda1e622
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 90649f491fac7d867ebad0516d1ccea5fc41d4a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: a1b5ead3e2ab16eea905af3312779631ae6344ea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134173"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026780"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>주체 대체 이름을 사용하도록 Reporting Services 구성
   이 항목에서는 rsreportserver.config 파일을 수정하고 Netsh.exe 도구를 사용하여 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS)를 구성하고 SAN(주체 대체 이름)을 사용하는 방법에 대해 설명합니다.  
@@ -29,9 +29,9 @@ ms.locfileid: "48134173"
   
  SAN을 사용하려면 서버에 SSL 인증서를 등록 및 서명하고 개인 키를 가지고 있어야 합니다. 자체 서명된 인증서를 사용할 수 없습니다.  
   
- Url에서 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SSL 인증서를 사용 하도록 구성할 수 있습니다. 인증서에는 일반적으로 SSL(Secure Sockets Layer) 세션에 대해 하나의 URL만 허용하는 주체 이름만 있습니다. SAN은 SSL 서비스에서 여러 URL을 수신하고 여러 URL에 대해 유효하도록 허용하며 다른 애플리케이션과 SSL 포트를 공유하도록 허용하는 인증서의 추가 필드입니다. SAN은 www.s2.com과 같습니다.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 의 URL은 SSL 인증서를 사용하도록 구성할 수 있습니다. 인증서에는 일반적으로 SSL(Secure Sockets Layer) 세션에 대해 하나의 URL만 허용하는 주체 이름만 있습니다. SAN은 SSL 서비스에서 여러 URL을 수신하고 여러 URL에 대해 유효하도록 허용하며 다른 애플리케이션과 SSL 포트를 공유하도록 허용하는 인증서의 추가 필드입니다. SAN은 www.s2.com과 같습니다.  
   
- SSL 설정에 대 한 자세한 내용은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 참조 하세요 [기본 모드 보고서 서버에서 SSL 연결 구성](security/configure-ssl-connections-on-a-native-mode-report-server.md)합니다.  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 SSL 설정에 대한 자세한 내용은 [기본 모드 보고서 서버에서 SSL 연결 구성](security/configure-ssl-connections-on-a-native-mode-report-server.md)을 참조하세요.  
   
 ### <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>웹 서비스 URL에 대해 주체 대체 이름을 사용하도록 SSRS 구성  
   
@@ -126,7 +126,7 @@ ms.locfileid: "48134173"
   
 ## <a name="see-also"></a>관련 항목  
  [RSReportServer 구성 파일](report-server/rsreportserver-config-configuration-file.md)   
- [Reporting Services 구성 관리자 &#40;기본 모드&#41;](../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Reporting Services 구성 관리자&#40;기본 모드&#41;](../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   

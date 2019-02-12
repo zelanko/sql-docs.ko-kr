@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: fb22cffa-ac99-4d34-ac4a-9c93068e33e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 109c4eb07dd34aa5ef3e41d794edfc39ffffcac8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ca1aa4022931c78f6139a8058c05adc707af5e77
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119873"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027994"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>시계열 예측 만들기(중급 데이터 마이닝 자습서)
   이 단원의 이전 태스크에서는 시계열 모델을 만들고 결과를 살펴보았습니다. 기본적으로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 항상 시계열 모델에 대한 5개의 예측으로 구성된 집합을 만들고 예측 값을 예측 차트의 일부분으로 표시합니다. 그러나 DMX(Data Mining Extensions) 예측 쿼리를 작성하여 예측을 만들 수도 있습니다.  
@@ -88,41 +87,41 @@ ms.locfileid: "48119873"
   
 |$TIME|Amount|  
 |-----------|------------|  
-|2008 년 7 월 25|99978.00|  
-|2008 년 8 월 25|145575.07|  
-|2008 년 9 월 25|116835.19|  
-|2008 년 10 월 25|116537.38|  
-|2008 년 11 월 25|107760.55|  
+|7/25/2008|99978.00|  
+|8/25/2008|145575.07|  
+|9/25/2008|116835.19|  
+|10/25/2008|116537.38|  
+|11/25/2008|107760.55|  
   
  **M200 Europe PredictQuantity**  
   
 |$TIME|수량|  
 |-----------|--------------|  
-|2008 년 7 월 25|52|  
-|2008 년 8 월 25|67|  
-|2008 년 9 월 25|58|  
-|2008 년 10 월 25|57|  
-|2008 년 11 월 25|54|  
+|7/25/2008|52|  
+|8/25/2008|67|  
+|9/25/2008|58|  
+|10/25/2008|57|  
+|11/25/2008|54|  
   
- **M200 North America-PredictAmount**  
+ **M200 North America - PredictAmount**  
   
 |$TIME|Amount|  
 |-----------|------------|  
-|2008 년 7 월 25|348533.93|  
-|2008 년 8 월 25|340097.98|  
-|2008 년 9 월 25|257986.19|  
-|2008 년 10 월 25|374658.24|  
-|2008 년 11 월 25|379241.44|  
+|7/25/2008|348533.93|  
+|8/25/2008|340097.98|  
+|9/25/2008|257986.19|  
+|10/25/2008|374658.24|  
+|11/25/2008|379241.44|  
   
  **M200 North America-PredictQuantity**  
   
 |$TIME|수량|  
 |-----------|--------------|  
-|2008 년 7 월 25|272|  
-|2008 년 8 월 25|152|  
-|2008 년 9 월 25|250|  
-|2008 년 10 월 25|181|  
-|2008 년 11 월 25|290|  
+|7/25/2008|272|  
+|8/25/2008|152|  
+|9/25/2008|250|  
+|10/25/2008|181|  
+|11/25/2008|290|  
   
 > [!WARNING]  
 >  예제 데이터베이스에 사용된 날짜가 이 릴리스에 맞게 변경되었습니다. 이전 버전의 예제 데이터를 사용하는 경우에는 결과가 다르게 나타날 수 있습니다.  

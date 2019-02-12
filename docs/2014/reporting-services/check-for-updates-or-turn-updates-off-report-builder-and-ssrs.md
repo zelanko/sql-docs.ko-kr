@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 9c69792d-d7c4-453b-ae2f-6d2d071d8606
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 853bed4a458fd7f3e7472c563b0cd973bb3eea5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 845013f002bc0d0937ae012ef033aaea1d45cc89
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063383"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025885"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>업데이트 확인 또는 업데이트 해제(보고서 작성기 및 SSRS)
   보고서를 열 때마다 보고서 작성기는 해당 보고서에 있는 보고서 파트의 게시된 인스턴스가 보고서 서버 또는 보고서 서버와 통합된 SharePoint 사이트에서 업데이트되었는지 확인합니다. 또한 데이터 세트 및 매개 변수와 같은 보고서 파트의 종속 항목에서 변경 내용을 확인합니다. 보고서 파트나 보고서 파트의 종속성이 사이트 또는 서버에서 업데이트되었으면 보고서의 알림 표시줄에 업데이트된 파트의 수가 표시됩니다. 업데이트를 확인하고 허용 또는 거부하도록 선택하거나 알림 표시줄을 해제할 수 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "48063383"
 -   보고서 본문 또는 보고서 외부의 디자인 화면을 마우스 오른쪽 단추로 클릭 하 고 클릭 **업데이트 확인**합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 파트 &#40;보고서 작성기 및 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [보고서 파트&#40;보고서 작성기 및 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [게시 및 보고서 파트 다시 게시 &#40;보고서 작성기 및 SSRS&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
  [보고서 파트 찾아보기 및 기본 폴더 설정 &#40;보고서 작성기 및 SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
  [보고서 파트 문제 해결 &#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c3dc4a6627486c3449819da1e7987b8b8ae8f569
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 90e9a4ae2d0d119f8992cf89cb388075c264c042
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109613"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037474"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>선 추가 및 수정(보고서 작성기 및 SSRS)
   보고서의 섹션을 분리할 그래픽 요소가 필요한 경우에는 보고서에 선을 추가할 수 있습니다. 색이나 스타일과 같은 선 속성을 편집하여 선의 모양을 사용자 지정할 수 있습니다. 예를 들어 보고서에 회사 지정 색을 넣기를 원할 수 있습니다.  
@@ -38,6 +38,6 @@ ms.locfileid: "48109613"
     >  선 스타일을 **이중선** 으로 설정하고 선 두께를 1 1/2pt 이하로 설정하면 보고서 작성기, 보고서 디자이너 또는 보고서 관리자에서 보고서를 실행할 때 선이 이중선으로 표시되지 않을 수 있습니다. 보고서를 Microsoft Word 및 Acrobat PDF 같은 다른 형식으로 내보내면 이중선이 표시됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [사각형 및 선 &#40;보고서 작성기 및 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
+ [사각형 및 선&#40;보고서 작성기 및 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

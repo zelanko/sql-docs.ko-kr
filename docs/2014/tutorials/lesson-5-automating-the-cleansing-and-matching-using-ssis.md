@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f068d4db-2d56-41b1-bed2-0cffa3ca411d
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: d7406f0f39afb0323ff6564b4b0ea427515f0f69
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 92261bc69590bcc338bf18aa9d406964bfe42fcd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375815"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026637"
 ---
 # <a name="lesson-5-automating-the-cleansing-and-matching-using-ssis"></a>5단원: SSIS를 사용하여 정리 및 일치 자동화
   1 단원에서에서 Suppliers 기술 자료를 작성 하 고이 단원 2에서 데이터를 정리 및 3과 도구를 사용 하 여 데이터 일치를 사용 **DQS 클라이언트**합니다. 실제 시나리오에서는 사용 하지 않고 일치 하는 프로세스를 DQS를 지원 하지 않거나 정리 자동화 하려는 원본에서 데이터를 가져올 해야 합니다 **DQS 클라이언트** 도구입니다. SQL Server Integration Services (SSIS)에 다양 한 이기종 원본에서 데이터를 통합 하는 데 사용할 수 있는 구성 요소 및 **[DQS 정리 변환](https://msdn.microsoft.com/library/ee677619.aspx)** 정리를 호출 하는 구성 요소 DQS에 의해 노출 하는 기능입니다. 현재, DQS를 사용 하려면 SSIS에 대 한 일치 하는 기능을 제공 하지 않습니다 하지만 사용할 수 있습니다 합니다 **[유사 항목 그룹화 변환](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** 데이터의 중복을 식별 하 합니다.  

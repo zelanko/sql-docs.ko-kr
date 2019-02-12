@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 13f2be6cfa210e0c5d1026a13cd413eec0cad485
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2052f5614f5a1e810e2f0c50981c391c027073ca
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182993"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022914"
 ---
 # <a name="security-considerations-for-extensions"></a>확장 프로그램에 대한 보안 고려 사항
   CLR(공용 언어 런타임) 기능이 있는 모든 응용 프로그램은 CLR 보안 시스템과 상호 작용해야 합니다. 이러한 응용 프로그램은 실행되면 CLR에 의해 자동으로 평가되어 권한 집합이 부여됩니다. 부여받은 권한에 따라 응용 프로그램이 계속 실행될 수도 있고 보안 예외가 생성될 수도 있습니다. 특정 보고서 서버에 대한 보안 정책 구성 파일의 로컬 보안 설정 및 정책은 어셈블리에서 수신하는 코드 권한을 정의합니다.  

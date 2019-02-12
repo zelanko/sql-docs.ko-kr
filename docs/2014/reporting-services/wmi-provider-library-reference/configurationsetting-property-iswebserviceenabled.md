@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: e37eecf6-bf83-4015-be76-bac2ae9d344d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a03753602b0a44cac213cf001406bd537ede695b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 68875a9d3f93fc952d0f1d384e526a65e1f20fab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079923"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022034"
 ---
 # <a name="iswebserviceenabled-property-wmi-msreportserverconfigurationsetting"></a>IsWebServiceEnabled 속성(WMI MSReportServer_ConfigurationSetting)
   보고서 서버 웹 서비스를 사용하는지 여부를 나타냅니다. 읽기 전용입니다.  
@@ -40,7 +40,7 @@ public boolean IsWebServiceEnabled;
 ```  
   
 ## <a name="property-values"></a>속성 값  
- 읽기 전용 `Boolean` 값입니다. 값 `true` 보고서 서버 웹 서비스를 사용 함을 나타냅니다.  
+ 읽기 전용 `Boolean` 값입니다. `true` 값은 보고서 서버 웹 서비스를 사용할 수 있음을 나타냅니다.  
   
 ## <a name="example-code"></a>코드 예  
  [MSReportServer_ConfigurationSetting 클래스](msreportserver-configurationsetting-class.md)  

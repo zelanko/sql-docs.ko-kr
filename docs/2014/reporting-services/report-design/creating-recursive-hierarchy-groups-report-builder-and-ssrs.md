@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 06eccab6-4089-46e8-a84f-5bf3bbe0c23b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 14eb29f4e5390a92118ddb97bab908d8c6c1a1d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 92412bbde8a1032b34264ca254560f31704281e8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169203"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038134"
 ---
 # <a name="creating-recursive-hierarchy-groups-report-builder-and-ssrs"></a>재귀 계층 구조 그룹 생성(보고서 작성기 및 SSRS)
   부모와 자식 간의 관계가 데이터 집합의 필드는 표현 하는 재귀 데이터를 표시 하려면 자식 필드를 기준으로 데이터 영역 그룹 식을 설정 하 고 부모 필드를 기반으로 Parent 속성을 설정할 수입니다.  
@@ -34,12 +34,12 @@ ms.locfileid: "48169203"
  자세한 내용은 [데이터 영역에서 그룹 추가 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md) 및 [재귀 계층 구조 그룹 만들기&#40;보고서 작성기 및 SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)를 참조하세요.  
   
 ### <a name="aggregate-functions-that-support-recursion"></a>재귀를 지원하는 집계 함수  
- 매개 변수 *Recursive* 를 허용하는 Reporting Services 집계 함수를 사용하여 재귀 계층 구조의 요약 데이터를 계산할 수 있습니다. 다음 함수 `Recursive` 매개 변수로: [합계](report-builder-functions-sum-function.md)를 [Avg](report-builder-functions-avg-function.md)를 [개수](report-builder-functions-count-function.md)를 [CountDistinct](report-builder-functions-countdistinct-function.md), [ CountRows](report-builder-functions-countrows-function.md), [최대](report-builder-functions-max-function.md)를 [Min](report-builder-functions-min-function.md)를 [StDev](report-builder-functions-stdev-function.md)를 [StDevP](report-builder-functions-stdevp-function.md)를 [합계](report-builder-functions-sum-function.md), [Var](report-builder-functions-var-function.md), 및 [VarP](report-builder-functions-varp-function.md)합니다. 자세한 내용은 [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)를 참조하세요.  
+ 매개 변수 *Recursive* 를 허용하는 Reporting Services 집계 함수를 사용하여 재귀 계층 구조의 요약 데이터를 계산할 수 있습니다. `Recursive`는 [합계](report-builder-functions-sum-function.md), [Avg](report-builder-functions-avg-function.md), [개수](report-builder-functions-count-function.md)를 [CountDistinct](report-builder-functions-countdistinct-function.md)를 [CountRows](report-builder-functions-countrows-function.md)를 [최대](report-builder-functions-max-function.md), [Min](report-builder-functions-min-function.md), [StDev](report-builder-functions-stdev-function.md), [StDevP](report-builder-functions-stdevp-function.md)합니다 [합계](report-builder-functions-sum-function.md), [Var](report-builder-functions-var-function.md), 및 [VarP](report-builder-functions-varp-function.md) . 자세한 내용은 [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
- [집계 함수 참조 &#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [테이블&#40;보고서 작성기 및 SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [행렬&#40;보고서 작성기 및 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
  [목록&#40;보고서 작성기 및 SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

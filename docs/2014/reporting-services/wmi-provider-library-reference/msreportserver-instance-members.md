@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 154b78e6-59cc-44eb-a7d9-34908d1b6b1a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 97320e5e5e525cfaea7c374a43ccf3abac66c98e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6c8f74713a07969ba724ccf2679d7f7bf17fb7ad
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209203"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024365"
 ---
 # <a name="msreportserverinstance-members"></a>MSReportServer_Instance 멤버
   MSReportServer_Instance 클래스는 클라이언트에서 설치된 보고서 서버에 연결하는 데 필요한 기본 정보를 제공합니다.  
@@ -44,6 +44,6 @@ ms.locfileid: "48209203"
   
 |||  
 |-|-|  
-|[GetReportServerUrls 메서드 &#40;WMI MSReportServer_Instance&#41;](msreportserver-instance-methods-getreportserverurls.md)|사용자가 보고서 서버 및 보고서 관리자에 액세스하는 데 사용할 수 있는 URL을 나열합니다.|  
+|[GetReportServerUrls 메서드&#40;WMI MSReportServer_Instance&#41;](msreportserver-instance-methods-getreportserverurls.md)|사용자가 보고서 서버 및 보고서 관리자에 액세스하는 데 사용할 수 있는 URL을 나열합니다.|  
   
   

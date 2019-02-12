@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a69f0a79ce10a17825490bd77e48a26d0d823af4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a461f3dfa1dca66efb2708e15f56c7fa30c58dc6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184253"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037464"
 ---
 # <a name="deploying-a-delivery-extension"></a>배달 확장 프로그램 배포
   배달 확장 프로그램은 XML 구성 파일 형식으로 구성 정보를 제공합니다. XML 파일은 배달 확장 프로그램에 대해 정의된 XML 스키마를 따릅니다. 배달 확장 프로그램은 구성 파일을 설정하고 수정하기 위한 인프라를 제공합니다.  
@@ -37,9 +37,9 @@ ms.locfileid: "48184253"
   
 |attribute|Description|  
 |---------------|-----------------|  
-|`Name`|확장 프로그램에 대한 고유한 이름으로서 예를 들면 전자 메일 배달 확장 프로그램의 경우 "Report Server E-Mail", 파일 공유 배달 확장 프로그램의 경우 "Report Server FileShare" 등입니다. `Name` 특성의 최대 길이는 255자입니다. 이름은 내 모든 항목에서 고유 해야 합니다.는 `Extension` 구성 파일의 요소입니다. 중복된 이름이 있을 경우 보고서 서버에서 오류를 반환합니다.|  
+|`Name`|확장 프로그램에 대한 고유한 이름으로서 예를 들면 전자 메일 배달 확장 프로그램의 경우 "Report Server E-Mail", 파일 공유 배달 확장 프로그램의 경우 "Report Server FileShare" 등입니다. `Name` 특성의 최대 길이는 255자입니다. 이름은 구성 파일의 `Extension` 요소에 있는 모든 항목 중에서 고유해야 합니다. 중복된 이름이 있을 경우 보고서 서버에서 오류를 반환합니다.|  
 |`Type`|정규화된 네임스페이스와 어셈블리 이름을 포함하는 쉼표로 구분된 목록입니다.|  
-|`Visible`|`false` 값은 배달 확장 프로그램이 사용자 인터페이스에 표시되지 않음을 나타냅니다. 기본값은 특성이 포함 되지 않은 경우 `true`합니다.|  
+|`Visible`|`false` 값은 배달 확장 프로그램이 사용자 인터페이스에 표시되지 않음을 나타냅니다. 이 특성이 포함되지 않을 경우 기본값은 `true`입니다.|  
   
  RSReportServer.config 파일에 대한 자세한 내용은 [Reporting Services 구성 파일](../../report-server/reporting-services-configuration-files.md)을 참조하세요.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48184253"
   
 2.  어셈블리 파일이 복사된 후 RSReportServer.config 파일을 엽니다. RSReportServer.config 파일은 %programfiles%\microsoft SQL Server\MSRS10_50 있습니다. \<N a m e > services\reportserver 디렉터리입니다. 구성 파일에서 배달 확장 프로그램 어셈블리 파일에 대한 항목을 만들어야 합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 또는 메모장과 같은 간단한 텍스트 편집기를 사용하여 구성 파일을 열 수 있습니다.  
   
-3.  찾을 `Delivery` RSReportServer.config 파일의 요소입니다. 새로 만든 배달 확장 프로그램에 대한 항목이 다음 위치에 있어야 합니다.  
+3.  RSReportServer.config 파일에서 `Delivery` 요소를 찾습니다. 새로 만든 배달 확장 프로그램에 대한 항목이 다음 위치에 있어야 합니다.  
   
     ```  
     <Extensions>  
@@ -99,7 +99,7 @@ ms.locfileid: "48184253"
   
 2.  어셈블리 파일이 복사된 후 RSReportServer.config 파일을 엽니다. RSReportServer.config 파일은 %programfiles%\microsoft SQL Server\MSRS10_50 있습니다. \<N a m e > services\reportserver 디렉터리입니다. 구성 파일에서 배달 확장 프로그램 어셈블리 파일에 대한 항목을 만들어야 합니다. Visual Studio.NET 또는 메모장과 같은 간단한 텍스트 편집기를 사용 하 여 구성 파일을 열 수 있습니다.  
   
-3.  찾을 `DeliveryUI` RSReportServer.config 파일의 요소입니다. 새로 만든 배달 확장 프로그램에 대한 항목이 다음 위치에 있어야 합니다.  
+3.  RSReportServer.config 파일에서 `DeliveryUI` 요소를 찾습니다. 새로 만든 배달 확장 프로그램에 대한 항목이 다음 위치에 있어야 합니다.  
   
     ```  
     <Extensions>  

@@ -1,26 +1,23 @@
 ---
-title: '작업 2: Excel 열을 DQS 도메인에 매핑 | Microsoft Docs'
+title: '작업 2: Excel 열을 DQS 도메인 매핑 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: f347cc92-950f-4021-b7af-393640dfe821
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4af26cb52b8d30dbfad5fc5ab40dc732f8ce4dc2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9bc721869c1287be709c594fd60aad511709e46
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135523"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020473"
 ---
-# <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>태스크 2: Excel 열을 DQS 도메인에 매핑
+# <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>작업 2: Excel 열을 DQS 도메인으로 매핑
     
 1.  **맵** 페이지에서 **데이터 원본** 에 대해 **Excel 파일**을 선택합니다.  
   
@@ -52,6 +49,6 @@ ms.locfileid: "48135523"
 6.  클릭 **다음** 으로 전환 합니다 **정리** 페이지입니다.  
   
 ## <a name="next-step"></a>다음 단계  
- [태스크 3: 공급자 기술 자료에 대한 데이터 정리](../../2014/tutorials/task-3-cleansing-data-against-the-suppliers-knowledge-base.md)  
+ [작업 3: Suppliers 기술 자료에 대해 데이터 정리](../../2014/tutorials/task-3-cleansing-data-against-the-suppliers-knowledge-base.md)  
   
   

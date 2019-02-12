@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 007a1a199bdb61efe0ce559ae2df4d5234e2e764
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: faf66ef9c84c5a2b93a7b7ec42bd3a0ccf6f2e8a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206093"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043164"
 ---
 # <a name="role-assignments"></a>역할 할당
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 *역할 할당* 은 저장된 항목 및 보고서 서버 자체에 대한 액세스 권한을 결정합니다. 역할 할당은 다음과 같은 요소로 구성됩니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "48206093"
 역할 할당 다이어그램  
   
 ## <a name="system-level-and-item-level-role-assignments"></a>시스템 수준 및 항목 수준 역할 할당  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 역할 기반 보안은 다음 수준으로 구성됩니다.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 의 역할 기반 보안은 다음 수준으로 구성됩니다.  
   
 -   항목 수준 역할 할당은 보고서 서버 폴더 계층의 보고서, 폴더, 보고서 모델, 공유 데이터 원본 및 리소스에 대한 액세스를 제어하며 특정 항목이나 홈 폴더에 대한 역할 할당을 만들 때 정의합니다.  
   
@@ -59,13 +59,13 @@ ms.locfileid: "48206093"
 ## <a name="predefined-role-assignments"></a>미리 정의된 역할 할당  
  기본적으로 로컬 관리자가 보고서 서버를 관리할 수 있도록 미리 정의된 역할 할당이 구현됩니다. 다른 사용자에게 액세스 권한을 부여하려면 역할 할당을 추가해야 합니다.  
   
- 기본 보안을 제공 하는 미리 정의 된 역할 할당에 대 한 자세한 내용은 참조 하세요. [미리 정의 된 역할](role-definitions-predefined-roles.md)입니다.  
+ 기본 보안을 제공하는 미리 정의된 역할 할당에 대한 자세한 내용은 [미리 정의된 역할](role-definitions-predefined-roles.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [역할 만들기, 삭제 또는 수정&#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
  [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](grant-user-access-to-a-report-server.md)   
  [역할 할당 수정 또는 삭제&#40;보고서 관리자&#41;](role-assignments-modify-or-delete.md)   
- [SharePoint 사이트의 보고서 서버 항목에 대 한 권한 설정 &#40;Reporting Services sharepoint에서 통합 모드&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [기본 모드 보고서 서버에 대한 사용 권한 부여](granting-permissions-on-a-native-mode-report-server.md)  
   
   

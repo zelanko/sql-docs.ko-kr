@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: db11e53b9fb6efb50a7bb676798626f5886ff9e5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 59b1574f7c302a5cf3adc3bee04881eefd176080
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362749"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032014"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>보고서 디자인 및 보고서 배포 계획(Reporting Services 2014)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 작성 및 보고서 배포에 대 한 몇 가지 방법을 제공 합니다. 이 항목에서는 보고서 작성 환경과 보고서 서버가 함께 작동하도록 계획할 수 있습니다. 이 항목은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 요소에서 지원되는 보고서 정의에 대한 개요를 보여 줍니다. 보고서 정의는 RDL(Report Definition Language) 또는 RDLC(Report Definition Language for Clients)로 작성된 XML 파일입니다. 각 보고서 정의는 파일의 첫 부분에 나열되어 있는 특정 스키마 버전을 따릅니다.  
@@ -89,10 +89,10 @@ ms.locfileid: "53362749"
   
 |제작 환경|작성된 RDL 버전|배포 RDL 버전|보고서 서버에 배포 버전|  
 |---------------------------|--------------------------|------------------------|--------------------------------------|  
-|SQL Server 2014 Data Tools의 보고서 디자이너 - Microsoft 다운로드 센터의 Microsoft Visual Studio 2012용 Business Intelligence.<br /><br /> 또는<br /><br /> SQL Server 2012 Data Tools의 보고서 디자이너 - Microsoft 다운로드 센터의 Microsoft Visual Studio 2012용 Business Intelligence.<br /><br /> 또는<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 에 포함된 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]Data Tools의 보고서 디자이너|작성자가 2010 RDL. 기존 RDL 열기:<br /><br /> 2000 RDL, 2010 RDL로 업그레이드<br /><br /> 2005 RDL, 2010 RDL로 업그레이드<br /><br /> 2008 RDL, 2010 RDL로 업그레이드|2008 RDL<br /><br /> 2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
-|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Business Intelligence Development Studio의 보고서 디자이너|작성자가 2010 RDL. 기존 RDL 열기:<br /><br /> 2000 RDL, 2010 RDL로 업그레이드<br /><br /> 2005 RDL, 2010 RDL로 업그레이드<br /><br /> 2008 RDL, 2010 RDL로 업그레이드|2008 RDL<br /><br /> 2010 RDL|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|SQL Server 2014 Data Tools의 보고서 디자이너 - Microsoft 다운로드 센터의 Microsoft Visual Studio 2012용 Business Intelligence.<br /><br /> 또는<br /><br /> SQL Server 2012 Data Tools의 보고서 디자이너 - Microsoft 다운로드 센터의 Microsoft Visual Studio 2012용 Business Intelligence.<br /><br /> 또는<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 에 포함된 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]Data Tools의 보고서 디자이너|Authors 2010 RDL. 기존 RDL 열기:<br /><br /> 2000 RDL, 2010 RDL로 업그레이드<br /><br /> 2005 RDL, 2010 RDL로 업그레이드<br /><br /> 2008 RDL, 2010 RDL로 업그레이드|2008 RDL<br /><br /> 2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Business Intelligence Development Studio의 보고서 디자이너|Authors 2010 RDL. 기존 RDL 열기:<br /><br /> 2000 RDL, 2010 RDL로 업그레이드<br /><br /> 2005 RDL, 2010 RDL로 업그레이드<br /><br /> 2008 RDL, 2010 RDL로 업그레이드|2008 RDL<br /><br /> 2010 RDL|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Business Intelligence Development Studio의 보고서 디자이너|2008 RDL 작성자입니다. 기존 RDL 열기:<br /><br /> 2000 RDL, 2008 RDL로 업그레이드<br /><br /> 2005 RDL, 2008 RDL로 업그레이드|2008 RDL|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|  
-|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 보고서 작성기|작성자가 2010 RDL. 기존 RDL 열기:<br /><br /> 2000 RDL, 2010 RDL로 업그레이드<br /><br /> 2005 RDL, 2010 RDL로 업그레이드<br /><br /> 2008 RDL, 2010 RDL로 업그레이드|2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|  
+|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 보고서 작성기|Authors 2010 RDL. 기존 RDL 열기:<br /><br /> 2000 RDL, 2010 RDL로 업그레이드<br /><br /> 2005 RDL, 2010 RDL로 업그레이드<br /><br /> 2008 RDL, 2010 RDL로 업그레이드|2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|  
 |Visual Studio RDLC 보고서 디자이너 보고서 디자이너|2005 RDLC|해당 사항 없음|해당 사항 없음|  
   
  [!INCLUDE[ss_dtbi_vs2013](../includes/ss-dtbi-vs2013-md.md)]에 대한 자세한 내용은 다음을 참조하세요.  
@@ -117,7 +117,7 @@ ms.locfileid: "53362749"
   
 -   [ReportViewer 컨트롤 추가 및 구성](https://msdn.microsoft.com/library/ms252104.aspx)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [보고서, 보고서 파트 및 보고서 정의&#40;보고서 작성기 및 SSRS&#41;](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Reporting Services 도구](tools/reporting-services-tools.md)   
  [RDL(Report Definition Language)&#40;SSRS&#41;](reports/report-definition-language-ssrs.md)  

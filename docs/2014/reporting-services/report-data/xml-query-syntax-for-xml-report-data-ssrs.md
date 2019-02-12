@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4c8a1a3b41bd30702a04ce6cbb49b70bc561e508
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: ac63791bd33d9f6f774cd1d56601a28d3683b249
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369895"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037144"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML 보고서 데이터를 위한 XML 쿼리 구문(SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 XML 데이터 원본에 대한 데이터 집합을 만들 수 있습니다. 데이터 원본을 정의한 후 데이터 세트에 대한 쿼리를 만듭니다. 데이터 원본이 가리키는 XML 데이터의 형식에 따라 XML `Query`나 요소 경로를 포함하여 데이터 집합 쿼리를 만듭니다. XML `Query` 로 시작 하는  **\<쿼리 >** 태그 및 네임 스페이스와 데이터 원본에 따라 달라 지는 XML 요소를 포함 합니다. 요소 경로는 네임스페이스로부터 독립적이며 기본 XML 데이터에서 사용할 노드 및 노드 특성을 XPath 형식 구문으로 지정합니다. 요소 경로에 대한 자세한 내용은 [XML 보고서 데이터를 위한 요소 경로 구문&#40;SSRS&#41;](report-data-ssrs.md)을 참조하세요.  
@@ -89,7 +89,7 @@ ms.locfileid: "53369895"
 |XML 쿼리 요소|데이터 세트의 결과 필드|  
 |-----------------------|-------------------------------------|  
 |\<Query/>|A: 값 https://schemas.microsoft.com/..합니다.<br /><br /> 값 b: https://schemas.microsoft.com/..합니다.<br /><br /> C: 값 https://schemas.microsoft.com/..합니다.|  
-|\<xmldp:Query xmlns:xmldp = "https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns = "https://schemas.microsoft.com/..." ><br /><br /> \<xmldp:ElementPath > 루트 {}/ns:Element2 / 노드\</xmldp:ElementPath ><br /><br /> \</xmldp:Query >|Value D<br /><br /> Value E<br /><br /> Value F|  
+|\<xmldp:Query xmlns:xmldp="https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="https://schemas.microsoft.com/..."><br /><br /> \<xmldp:ElementPath>Root {}/ns:Element2/Node\</xmldp:ElementPath><br /><br /> \</xmldp:Query>|Value D<br /><br /> Value E<br /><br /> Value F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>XML 문서: DPNamespace.xml  
  이 XML을 복사한 후 보고서 디자이너에서 XML 데이터 원본으로 사용할 수 있는 URL에 저장할 수 있습니다(예: http://localhost/DPNamespace.xml).  

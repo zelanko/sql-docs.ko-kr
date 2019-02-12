@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: e5c0b5a9-1386-47cb-aade-96653ecfaa54
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0751e3e72e7a6b9df1d2cdb8d414cfa263d38426
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5164cdfd418ad8f813b47813f7caee4799e41d90
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109599"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021404"
 ---
 # <a name="deploying-a-data-processing-extension"></a>데이터 처리 확장 프로그램 배포
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램을 작성하고 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 라이브러리에 컴파일한 후에는 보고서 서버 및 보고서 디자이너에서 이를 찾을 수 있도록 해야 합니다. 이 작업은 확장 프로그램을 적절한 디렉터리에 복사하고 해당하는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 파일에 항목을 추가하여 간단히 수행할 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48109599"
 |---------------|-----------------|  
 |`Name`|확장 프로그램에 대한 고유한 이름입니다(예: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 처리 확장 프로그램의 경우 "SQL" 또는 OLE DB 데이터 처리 확장 프로그램의 경우 "OLEDB"). `Name` 특성의 최대 길이는 255자입니다. 이름은 구성 파일의 **Extension** 요소에 있는 모든 항목 중에서 고유해야 합니다.|  
 |`Type`|정규화된 네임스페이스와 어셈블리 이름을 포함하는 쉼표로 구분된 목록입니다.|  
-|`Visible`|`false` 값은 데이터 처리 확장 프로그램이 사용자 인터페이스에 표시되지 않음을 나타냅니다. 기본값은 특성이 포함 되지 않은 경우 `true`합니다.|  
+|`Visible`|`false` 값은 데이터 처리 확장 프로그램이 사용자 인터페이스에 표시되지 않음을 나타냅니다. 이 특성이 포함되지 않을 경우 기본값은 `true`입니다.|  
   
  RSReportServer.config 또는 RSReportDesigner.config 파일에 대한 자세한 내용은 [Reporting Services 구성 파일](../../report-server/reporting-services-configuration-files.md)을 참조하세요.  
   

@@ -3,7 +3,6 @@ title: value() 메서드(xml 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - value method
 - value() method
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c44abf761d2576dd0e73c7c88fb9e52a823d25eb
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 0a208baaf237987c9f3e544da4d02dca72b191f9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697911"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021454"
 ---
 # <a name="value-method-xml-data-type"></a>value() 메서드(xml 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -101,7 +100,7 @@ ORDER BY Result desc
 ...  
 ```  
   
-### <a name="c-using-the-value-and-exist-methods-to-retrieve-values-from-an-xml-type-column"></a>3. value() 및 exist() 메서드를 사용하여 xml 유형 열로부터 값 검색  
+### <a name="c-using-the-value-and-exist-methods-to-retrieve-values-from-an-xml-type-column"></a>C. value() 및 exist() 메서드를 사용하여 xml 유형 열로부터 값 검색  
  다음 예에서는 **xml** 데이터 형식의 `value()` 메서드 및 [exist() 메서드](../../t-sql/xml/exist-method-xml-data-type.md)를 사용하는 방법을 보여 줍니다. `value()` 메서드는 XML로부터 `ProductModelID` 특성 값을 검색하는 데 사용됩니다. `exist()` 절에 있는 `WHERE` 메서드는 테이블의 행을 필터링하는 데 사용됩니다.  
   
  이 쿼리는 여러 기능 중 하나로 보증 정보(<`Warranty`> 요소)가 포함된 제품 모델 ID를 XML 인스턴스로부터 검색합니다. `WHERE` 절의 조건에서는 `exist()` 메서드를 사용하여 이 조건을 만족하는 행만 검색합니다.  
@@ -136,7 +135,7 @@ Result
 ...  
 ```  
   
-### <a name="d-using-the-exist-method-instead-of-the-value-method"></a>4. value() 메서드 대신 exist() 메서드 사용  
+### <a name="d-using-the-exist-method-instead-of-the-value-method"></a>D. value() 메서드 대신 exist() 메서드 사용  
  성능상의 이유로 조건자에서 `value()` 메서드를 사용하여 관계형 값과 비교하는 대신 `exist()`에서 `sql:column()`를 사용하세요. 예를 들어 다음과 같이 사용할 수 있습니다.  
   
 ```  

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: bd2809e5-7848-45b3-a502-b04fc698b646
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7373663f6ed41d5803d51341fc0dde2574417d9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f1bc1b1bc8ca4c2f07aa7f4924ed738d705df7f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206713"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027214"
 ---
 # <a name="setdatabasequerytimeout-method-wmi-msreportserverconfigurationsetting"></a>SetDatabaseQueryTimeout 메서드(WMI MSReportServer_ConfigurationSetting)
   보고서 서버 데이터베이스 쿼리에 대한 기본 제한 시간 값을 지정합니다.  

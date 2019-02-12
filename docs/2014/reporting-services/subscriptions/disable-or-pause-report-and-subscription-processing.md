@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4c15666aecbbdde8ca95eaf684bf9909454d3d42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 68d6284f7b7b832b37806d2fb39e506689a3b031
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129314"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040684"
 ---
 # <a name="pause-report-and-subscription-processing"></a>보고서 및 구독 처리 일시 중지
   보고서나 구독을 직접 일시 중지할 수 없습니다. 그러나 프로세스가 시작되거나 데이터 원본 연결이 만들어지기 전에 보고서 및 구독 처리를 중단할 수 있습니다. 사용자가 보고서나 구독에 액세스하지 못하도록 하여 보고서나 구독 처리를 중단할 수도 있습니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "48129314"
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services 보고서 서버&#40;기본 모드&#41;](../report-server/reporting-services-report-server-native-mode.md)   
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)   
  [보안 속성 페이지, 항목&#40;보고서 관리자&#41;](../security-properties-page-items-report-manager.md)  
   
   

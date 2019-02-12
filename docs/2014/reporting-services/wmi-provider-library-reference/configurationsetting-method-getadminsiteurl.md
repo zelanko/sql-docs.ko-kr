@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: fbc5bf3c-120c-4aec-a4f2-f5391bd415f6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 68f3811c448fca9921308b520dc6c6ef9a006d5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f1fc08eb50c62cc9295d80cac894a9d9f3338698
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098573"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021667"
 ---
 # <a name="getadminsiteurl-method-wmi"></a>GetAdminSiteUrl 메서드(WMI)
   보고서 서버가 통합되어 있는 Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)], [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]또는 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 팜에 대한 중앙 관리 웹 사이트의 절대 URL을 가져옵니다.  

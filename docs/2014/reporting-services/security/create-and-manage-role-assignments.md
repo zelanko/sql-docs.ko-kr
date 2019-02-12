@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b26701352b94150a61fe0586f4c32cdf3db87137
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 88c864b3e3243ab7cb380b4af5b092757585115d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211013"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023744"
 ---
 # <a name="create-and-manage-role-assignments"></a>역할 할당 생성 및 관리
   *역할 할당* 은 사용자 또는 그룹이 특정 보고서 서버 항목에 액세스하거나 작업을 수행할 수 있는지 여부를 결정하는 보안 정책입니다. 역할 할당은 단일 사용자 또는 그룹 계정 이름과 하나 이상의 역할 정의로 구성됩니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "48211013"
   
  시스템 수준 역할 할당에는 다양한 범위의 사용 권한이 포함되지만 항목 수준 역할 할당의 일부인 사용 권한은 포함되지 않습니다. 컴퓨터의 시스템 사용 권한과는 반대로 보고 서버의 시스템 역할은 사용 가능한 모든 작업 집합을 포함하는 가장 중요한 사용 권한을 제공하지 않습니다. 대신 시스템 수준 역할 할당은 범위가 보고서 서버 사이트로 제한되는 태스크 집합입니다. 시스템 역할 할당을 통해 제공되는 사용 권한은 사용자가 홈 페이지의 이미지 또는 제목과 같은 애플리케이션 속성을 볼 수 있는지 여부, 공유 일정을 보거나 관리할 수 있는지 여부 또는 보고서 작성기를 사용할 수 있는지 여부를 결정합니다.  
   
- 자세한 내용은 [보고서 서버에 대 한 사용자 액세스 권한 부여 &#40;보고서 관리자&#41; ](grant-user-access-to-a-report-server.md) 하 고 [미리 정의 된 역할](role-definitions-predefined-roles.md).  
+ 자세한 내용은 [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](grant-user-access-to-a-report-server.md) 및 [미리 정의된 역할](role-definitions-predefined-roles.md)입니다.  
   
 ## <a name="modifying-a-role-assignment"></a>역할 할당 수정  
  언제든지 역할 할당을 수정할 수 있습니다. 역할 할당을 저장하면 변경 내용이 적용됩니다. 사용자 세션에는 역할 할당 변경 사항이 적용되지 않습니다. 한 사용자가 보고서를 열어 둔 상태에서 액세스를 거부하도록 역할 할당을 수정한 경우에도 해당 사용자는 세션이 열려 있는 동안에는 보고서를 계속 사용할 수 있습니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "48211013"
  [역할 할당 수정 또는 삭제&#40;보고서 관리자&#41;](role-assignments-modify-or-delete.md)   
  [역할 할당](role-assignments.md)   
  [역할 정의](role-definitions.md)   
- [미리 정의 된 역할](role-definitions-predefined-roles.md)   
+ [미리 정의된 역할](role-definitions-predefined-roles.md)   
  [기본 모드 보고서 서버에 대한 사용 권한 부여](granting-permissions-on-a-native-mode-report-server.md)  
   
   

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 598deb57-e0cc-4e0a-aeb1-94432c094c67
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 36e50a34f708bc13da489591d73ca0521cdb5a6b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1cbaacd23fcaa1e28d6cce6d64a168d0fab4befc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101213"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025664"
 ---
-# <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>태스크 2: Excel용 MDS 추가 기능을 사용하여 MDS에 공급자 데이터 업로드
+# <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>작업 2: Excel용 MDS 추가 기능을 사용하여 MDS에 공급자 데이터 업로드
   이 작업에서는 정리 및 공급 업체 데이터를 게시할 **MDS** 를 사용 하는 **MDS 추가 기능에 Excel 용**. 라는 엔터티를 만들고 **공급 업체** 에 **Suppliers** 이전 단원에서 만든 모델입니다. 이 엔터티는 Excel 파일의 각 열에 대한 특성을 갖습니다. Supplier 엔터티의 Code 및 Name 특성에 해당 하는 **SupplierID** 하 고 **Supplier Name** Excel의 열입니다.  
   
 1.  오픈 **정리 및 일치 Suppliers.xls** 에 **Excel**합니다.  
@@ -66,6 +63,6 @@ ms.locfileid: "48101213"
 15. 유지할 **Excel** 엽니다.  
   
 ## <a name="next-task"></a>다음 태스크  
- [태스크 3: 마스터 데이터 관리자에서 데이터 확인](../../2014/tutorials/task-3-verifying-the-data-in-master-data-manager.md)  
+ [작업 3: 마스터 데이터 관리자에서 데이터를 확인합니다.](../../2014/tutorials/task-3-verifying-the-data-in-master-data-manager.md)  
   
   

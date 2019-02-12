@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2bd52ce353ff30a22aa1771c07359554e20f6e8e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: cdd2e2bd7d668ca276cdc62d988f7334a6709e6b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541848"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038264"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 유틸리티(SSRS)
   중요한 보고서 서버 데이터를 무단 액세스로부터 보호하는 데 사용할 대칭 키를 추출, 복원, 생성 및 삭제합니다. 이 유틸리티를 사용하여 수평적 스케일 아웃 배포에서 보고서 서버 인스턴스를 결합할 수도 있습니다. *보고서 서버 수평적 스케일 아웃 배포* 란 하나의 보고서 서버 데이터베이스를 공유하는 여러 보고서 서버 인스턴스를 말합니다.  
@@ -79,14 +79,14 @@ ms.locfileid: "52541848"
  **-r**  *installationID*  
  특정 보고서 서버 인스턴스에 대한 대칭 키 정보를 제거합니다. 이에 따라 수평적 스케일 아웃 배포에서 보고서 서버도 제거됩니다. *installationID* 는 RSReportserver.config 파일에 포함된 GUID 값입니다.  
   
- `-f`  *파일*  
+ `-f`  *file*  
  대칭 키의 백업 복사본을 저장하는 파일의 정규화된 경로를 지정합니다.  
   
  **rskeymgmt -e**의 경우 대칭 키가 지정한 파일에 기록됩니다.  
   
  **rskeymgmt -a**의 경우 파일에 저장된 대칭 키 값이 보고서 서버 인스턴스에 적용됩니다.  
   
- `-p`  *암호*  
+ `-p`  *password*  
  `-f`의 경우 필수 인수입니다. 대칭 키를 백업하거나 적용하는 데 사용할 암호를 지정합니다. 이 값은 비워 둘 수 없습니다.  
   
  `-i`  
@@ -101,7 +101,7 @@ ms.locfileid: "52541848"
  `-u`  *useraccount*  
  수평적 스케일 아웃 배포에 결합하는 원격 컴퓨터의 관리자 계정을 지정합니다. 계정을 지정하지 않으면 현재 사용자의 자격 증명이 사용됩니다.  
   
- `-v`  *암호*  
+ `-v`  *password*  
  `-u`의 경우 필수 인수입니다. 수평적 스케일 아웃 배포에 결합할 원격 컴퓨터의 관리자 계정 암호를 지정합니다.  
   
  **-t**  *trace*  

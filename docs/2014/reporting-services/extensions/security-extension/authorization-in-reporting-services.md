@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 44973c4366f6d88cf0a5a815e4a6dcdaf88e75ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5141ca13693d140e56700b46e030e1eb2b14e0e0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081473"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027004"
 ---
 # <a name="authorization-in-reporting-services"></a>Reporting Services의 권한 부여
-  권한 부여는 보고서 서버 데이터베이스의 지정된 리소스에 대해 요청된 유형의 액세스 권한을 ID에 부여해야 하는지 여부를 결정하는 과정입니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 응용 프로그램에 대한 사용자의 역할 할당을 기준으로 지정된 리소스에 대한 액세스 권한을 사용자에게 부여하는 역할 기반 권한 부여 아키텍처입니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에 대한 보안 확장 프로그램에는 사용자가 보고서 서버에서 인증되면 사용자에게 액세스 권한을 부여하는 데 사용되는 권한 부여 구성 요소의 구현이 포함됩니다. 권한 부여는 사용자가 SOAP API 및 URL 액세스를 통해 시스템 또는 보고서 서버 항목에 대한 작업을 수행하려고 시도할 때 호출됩니다. 보안 확장 프로그램 인터페이스 **IAuthorizationExtension**을 통해 이 작업을 수행할 수 있습니다. 앞에서 언급한 대로 모든 확장 프로그램은 배포되는 모든 확장 프로그램에 대한 **IExtension** 기본 인터페이스에서 상속됩니다. **IExtension** 및 **IAuthorizationExtension** 은 **Microsoft.ReportingServices.Interfaces** 네임스페이스의 멤버입니다.  
+  권한 부여는 보고서 서버 데이터베이스의 지정된 리소스에 대해 요청된 유형의 액세스 권한을 ID에 부여해야 하는지 여부를 결정하는 과정입니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 응용 프로그램에 대한 사용자의 역할 할당을 기준으로 지정된 리소스에 대한 액세스 권한을 사용자에게 부여하는 역할 기반 권한 부여 아키텍처입니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 에 대한 보안 확장 프로그램에는 사용자가 보고서 서버에서 인증되면 사용자에게 액세스 권한을 부여하는 데 사용되는 권한 부여 구성 요소의 구현이 포함됩니다. 권한 부여는 사용자가 SOAP API 및 URL 액세스를 통해 시스템 또는 보고서 서버 항목에 대한 작업을 수행하려고 시도할 때 호출됩니다. 보안 확장 프로그램 인터페이스 **IAuthorizationExtension**을 통해 이 작업을 수행할 수 있습니다. 앞에서 언급한 대로 모든 확장 프로그램은 배포되는 모든 확장 프로그램에 대한 **IExtension** 기본 인터페이스에서 상속됩니다. **IExtension** 및 **IAuthorizationExtension** 은 **Microsoft.ReportingServices.Interfaces** 네임스페이스의 멤버입니다.  
   
 ## <a name="checking-access"></a>액세스 권한 확인  
  권한 부여에서 사용자 지정 보안 구현의 핵심은 액세스 권한 확인으로, 이 동작은 <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> 메서드에 구현됩니다. <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A>는 사용자가 보고서 서버에서 작업을 시도할 때마다 호출됩니다. <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> 메서드는 각 작업 유형에 대해 오버로드됩니다. 폴더 작업의 경우 액세스 권한 확인의 예는 다음과 같습니다.  

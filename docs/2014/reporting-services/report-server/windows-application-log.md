@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 742fd00e-aa6c-4c8a-b58f-c03c489b1699
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 83818feb28dbcda5f7ae981f440fd850ea59af7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 81ec8964de180ad4db9e4edd3e2c609d5ad56b63
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180873"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037304"
 ---
 # <a name="windows-application-log"></a>Windows 애플리케이션 로그
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 이벤트 메시지를 Windows 응용 프로그램 로그에 기록합니다. 애플리케이션 로그에 기록된 메시지 정보를 사용하여 로컬 시스템에서 실행되는 보고서 서버 애플리케이션에서 생성된 이벤트를 확인할 수 있습니다.  
   
 ## <a name="viewing-report-server-events"></a>보고서 서버 이벤트 보기  
- 이벤트 뷰어를 사용하여 로그 파일을 보고 로그 파일에 들어 있는 메시지를 필터링할 수 있습니다. 이벤트 메시지에 대 한 자세한 내용은 참조 하세요. [오류 및 이벤트 참조 &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)합니다. Windows 애플리케이션 로그나 이벤트 뷰어에 대한 자세한 내용은 Windows 제품 설명서를 참고하십시오.  
+ 이벤트 뷰어를 사용하여 로그 파일을 보고 로그 파일에 들어 있는 메시지를 필터링할 수 있습니다. 이벤트 메시지에 대한 자세한 내용은 [오류 및 이벤트 참조&#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)를 참조하세요. Windows 애플리케이션 로그나 이벤트 뷰어에 대한 자세한 내용은 Windows 제품 설명서를 참고하십시오.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 다음과 같은 세 가지 이벤트 원본을 제공합니다.  
   
@@ -50,6 +50,6 @@ ms.locfileid: "48180873"
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services 로그 파일 및 소스](../report-server/reporting-services-log-files-and-sources.md)   
- [오류 및 이벤트 참조 &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [오류 및 이벤트 참조&#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

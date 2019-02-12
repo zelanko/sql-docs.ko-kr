@@ -12,14 +12,14 @@ f1_keywords:
 - "10125"
 ms.assetid: 12a18ad3-a578-4ec2-813b-841b96c327b0
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b39bed7faeba38ff8275d61ae5bf3350a43bff28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c87901e77de5ed975db5f9e05834f569f3923cc8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144673"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040534"
 ---
 # <a name="text-box-properties-dialog-box-alignment-report-builder-and-ssrs"></a>입력란 속성 대화 상자, 맞춤(보고서 작성기 및 SSRS)
   **입력란 속성** 대화 상자의 **맞춤** 을 선택하여 선택한 셀 또는 데이터 영역 내 값의 위치를 지정할 수 있습니다.  
@@ -31,10 +31,10 @@ ms.locfileid: "48144673"
  **세로**  
  선택한 셀 또는 데이터 영역 내에서 값의 세로 위치를 지정합니다. 기본적으로 **기본값** 이 선택되어 있습니다. 기본값에 해당하는 값은 **위쪽**입니다. 식을 편집하려면 **식** 단추(*fx*)를 클릭합니다.  
   
- **왼쪽**  
+ **Left**  
  셀의 왼쪽 가장자리와 셀 내에 표시되는 값 사이의 안쪽 여백 또는 공간을 지정합니다. 기본값은 2포인트입니다. 식을 편집하려면 **식** 단추(*fx*)를 클릭합니다.  
   
- **오른쪽**  
+ **Right**  
  셀의 오른쪽 가장자리와 셀 내에 표시되는 값 사이의 안쪽 여백 또는 공간을 지정합니다. 기본값은 2포인트입니다. 식을 편집하려면 **식** 단추(*fx*)를 클릭합니다.  
   
  **Top**  

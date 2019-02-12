@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: ca59d1cd-d782-4298-aa61-4f312c32eb50
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bf9f11b8b56333dba7c0d2a5066712017ea194cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 056cc6b6385b2f57c52dbaaceedf75d342254c89
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215263"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036134"
 ---
 # <a name="column-visibility-dialog-box"></a>열 표시 유형 대화 상자
   **열 표시 유형** 대화 상자를 사용하면 보고서를 처음 실행할 때 선택된 열을 표시하거나 숨길 수 있고 다른 보고서 항목을 사용하여 열의 표시 유형을 전환할 수 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "48215263"
  **식에 따라 표시 또는 숨기기**  
  식을 사용하여 초기 표시 유형을 변경하려면 이 옵션을 선택합니다.  
   
- 계산 되는 식을 입력을 `Boolean` 의 값 `True` 항목을 숨기려면 및 `False` 항목을 표시 합니다. 식을 편집하려면 식(*fx*) 단추를 클릭합니다.  
+ `Boolean` 값을 반환하는 식을 입력합니다. `True`는 항목을 숨기고 `False`는 항목을 표시합니다. 식을 편집하려면 식(*fx*) 단추를 클릭합니다.  
   
  **이 보고서 항목으로 표시 또는 숨기기 가능**  
  사용자가 이 보고서 항목을 HTML 보고서 뷰어에 표시하거나 숨길 수 있도록 토글 이미지를 표시하려면 이 옵션을 선택합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "48215263"
 ## <a name="see-also"></a>관련 항목  
  [식 예&#40;보고서 작성기 및 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [항목에 확장 또는 축소 동작 추가&#40;보고서 작성기 및 SSRS&#41;](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [이미지 &#40;보고서 작성기 및 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [이미지&#40;보고서 작성기 및 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [보고서 디자이너 F1 도움말](tools/report-designer-f1-help.md)  
   
   

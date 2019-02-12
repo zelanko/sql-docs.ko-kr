@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7dfcef8a18d1d3fae45d8ebabe85da1bf5d3fbbe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3fb36315de4a9d2f83e4a6c11f129f5603147e25
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165173"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024664"
 ---
 # <a name="msreportserverconfigurationsetting-class"></a>MSReportServer_ConfigurationSetting 클래스
   보고서 서버 인스턴스의 설치 및 런타임 매개 변수를 나타냅니다. 이러한 매개 변수는 보고서 서버의 구성 파일에 저장됩니다.  
   
- 이 유형의 모든 멤버 목록은 참조 하세요 [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)합니다.  
+ 이 유형의 모든 멤버 목록은 [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)를 참조하세요.  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,7 +46,7 @@ public class MSReportServer_ConfigurationSetting
  이 유형의 모든 public static(**의 경우** 공유 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) 멤버는 다중 스레드 작업에 안전합니다. 인스턴스 멤버는 스레드로부터의 안전성이 보장되지 않습니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드를 실행하려면 각 \<*servername*> 대신 서버 이름을 추가합니다. 경로가 기본값이 아니면 설치 위치를 가리키도록 경로를 업데이트합니다. 다음 코드 예제에서 각 속성을 반복 합니다 [MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md) 클래스, 각 속성과 해당 값을 콘솔의 이름을 인쇄 합니다.  
+ 다음 코드를 실행하려면 각 \<*servername*> 대신 서버 이름을 추가합니다. 경로가 기본값이 아니면 설치 위치를 가리키도록 경로를 업데이트합니다. 다음 코드 예제에서는 [MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md) 클래스의 각 속성을 반복하여 각 속성 이름 및 값을 콘솔에 인쇄합니다.  
   
 ```vb  
 Imports System  

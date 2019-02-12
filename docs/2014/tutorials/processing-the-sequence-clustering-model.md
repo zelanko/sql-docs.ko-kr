@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4a7545fd-37a3-4766-ad59-0946f1bd3524
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9d5dc03fefedbf95d9e84069c2875db9e8a4be7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 63f46f2d548437a707922bb9cf8b58727061253b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066173"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022174"
 ---
 # <a name="processing-the-sequence-clustering-model"></a>시퀀스 클러스터링 모델 처리
   새 마이닝 구조를 만든 후에는 데이터 마이닝 솔루션에 적용한 변경 사항을 배포하고 구조를 처리해야 합니다. 새 구조와 마이닝 모델 처리가 모두 완료되면 마이닝 모델을 찾을 수 있습니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "48066173"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 디자이너](../../2014/analysis-services/data-mining/data-mining-designer.md)   
- [Microsoft 시퀀스 클러스터링 알고리즘](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [처리 요구 사항 및 고려 사항 &#40;데이터 마이닝&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [처리 요구 사항 및 고려 사항 & #40; 데이터 마이닝 & #41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

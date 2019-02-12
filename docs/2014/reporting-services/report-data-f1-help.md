@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 61b91ccf-7b4c-4f3d-8992-2c8eb105ccf4
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d63205e28cade48855e767dd3ae3e350be527709
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: a0e7c37db9e9c5f16992ed1cd03948188bdfcdfb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123273"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018964"
 ---
 # <a name="report-data-f1-help"></a>보고서 데이터 F1 도움말
   이 절의 항목에서는 보고서 디자이너에서 사용할 수 있는 쿼리 디자이너에 대한 정보뿐만 아니라 데이터 원본, 공유 데이터 원본 및 데이터 세트에 설정할 수 있는 옵션에 대해 설명합니다.  

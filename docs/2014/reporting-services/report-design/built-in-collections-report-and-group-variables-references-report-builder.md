@@ -19,13 +19,13 @@ f1_keywords:
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 49bcb746b5f6b1312609ead4dedadba44a180855
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4733ba204671ec3ed691e77626fb08861b7e6763
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139621"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043394"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>보고서 및 그룹 변수 컬렉션 참조(보고서 작성기 및 SSRS)
   보고서의 식에서 두 번 이상 사용되는 복잡한 계산이 있는 경우 변수를 만들어 사용할 수 있습니다. 보고서 변수 또는 그룹 변수를 만들 수 있습니다. 변수 이름은 보고서에서 고유해야 합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "48139621"
     > [!NOTE]  
     >  보고서 프로세서가 변수를 초기화하는 시기 또는 변수를 업데이트하는 식을 계산하는 시기는 제어할 수 없습니다. 변수 초기화 실행 순서는 정의되어 있지 않습니다.  
   
- 세션에 대 한 자세한 내용은 참조 하십시오 [보고서 작성기에서 보고서 미리 보기](../report-builder/previewing-reports-in-report-builder.md)합니다.  
+ 세션에 대한 자세한 내용은 [Previewing Reports in Report Builder](../report-builder/previewing-reports-in-report-builder.md)를 참조하십시오.  
   
 ## <a name="group-variables"></a>그룹 변수  
  그룹 변수를 사용하여 복잡한 식을 그룹 범위에서 한 번에 계산할 수 있습니다. 그룹 변수는 그룹 및 해당 자식 그룹의 범위 내에서만 유효합니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "48139621"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [식에 기본 제공 컬렉션 &#40;보고서 작성기 및 SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
+ [식의 기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

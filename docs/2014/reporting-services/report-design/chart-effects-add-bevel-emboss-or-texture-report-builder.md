@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2e6e59b2562928d22a3d9e0b74830d630d77728d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2076f53b428320f8635de98f7993232e65c2e29c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072013"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019036"
 ---
 # <a name="add-bevel-emboss-and-texture-styles-to-a-chart-report-builder-and-ssrs"></a>차트에 빗면 효과, 볼록 효과 및 질감 스타일 추가(보고서 작성기 및 SSRS)
   특정 차트 종류를 사용할 때 그리기 효과를 지정하여 차트의 시각적 효과를 높일 수 있습니다. 이러한 그리기 효과는 차트의 계열에만 적용됩니다. 다른 차트 요소에는 그리기 효과가 아무런 영향을 주지 않습니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "48072013"
   
  가로 막대형 또는 세로 막대형 차트의 변형을 사용하는 경우 각각의 가로 또는 세로 막대에 원통형, 쐐기형 및 그라데이션 같은 질감 스타일을 적용할 수 있습니다.  
   
- 이러한 그리기 스타일 이외에도 여러 가지 차트 요소에 테두리와 그림자를 추가하여 깊이감을 더할 수 있습니다. 차트의 서식을 지정 하는 다른 방법에 대 한 자세한 내용은 참조 하세요. [차트 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)합니다.  
+ 이러한 그리기 스타일 이외에도 여러 가지 차트 요소에 테두리와 그림자를 추가하여 깊이감을 더할 수 있습니다. 차트의 서식을 지정하는 다른 방법에 대한 자세한 내용은 [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -61,9 +61,9 @@ ms.locfileid: "48072013"
  ![LightToDark 그리기 효과를 포함하는 가로 막대형 차트](../media/rs-bardrawingeffects-lighttodark.gif "LightToDark 그리기 효과를 포함하는 가로 막대형 차트")  
   
 ## <a name="see-also"></a>관련 항목  
- [가로 막대형 차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [가로 막대형 차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [세로 막대형 차트&#40;보고서 작성기 및 SSRS&#41;](column-charts-report-builder-and-ssrs.md)   
- [원형 차트 &#40;보고서 작성기 및 SSRS&#41;](pie-charts-report-builder-and-ssrs.md)   
- [차트 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
+ [원형 차트&#40;보고서 작성기 및 SSRS&#41;](pie-charts-report-builder-and-ssrs.md)   
+ [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
   
   

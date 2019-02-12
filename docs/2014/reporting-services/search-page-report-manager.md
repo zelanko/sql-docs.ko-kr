@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 51ffdc07-e1b9-4ed7-acb3-dd98d7cce273
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f848f0f2f168304d5ceb9d3be92ed793b4579fe7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 51f062efce64d7e8f29e156c51b2972624f46d5e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206133"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037356"
 ---
 # <a name="search-page-report-manager"></a>검색 페이지(보고서 관리자)
   검색 결과 페이지를 사용하여 보고서, 링크된 보고서, 보고서 모델, 공유 데이터 원본, 폴더 또는 리소스에 대해 지정한 검색 작업의 결과를 볼 수 있습니다. 검색 결과는 사전순으로 나열됩니다. 유형, 이름 또는 설명을 기준으로 정렬할 수 있습니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "48206133"
  항목 위로 마우스를 이동하고 드롭다운 화살표를 클릭하면 선택한 항목의 속성을 액세스하고 구성할 수 있는 드롭다운 메뉴가 열립니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

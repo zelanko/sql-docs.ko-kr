@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6b592582-4c35-4029-ab86-982fff47d8d6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 98dc45752779a6610d735040e16bc5783447396d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a8bbbcc9ba9f1eefad4801a0e9294affea4ef39a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107068"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020605"
 ---
 # <a name="databaselogontype-property-wmi-msreportserverconfigurationsetting"></a>DatabaseLogonType 속성(WMI MSReportServer_ConfigurationSetting)
   보고서 서버가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 서비스 계정, Windows 사용자 계정 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 사용하여 보고서 서버 데이터베이스에 액세스하는지 여부를 지정합니다. 읽기 전용입니다.  
@@ -54,9 +54,9 @@ public int DatabaseLogonType;
   
 -   2: 서비스로 로그인  
   
- 0 (Windows)을 지정 하는 경우 값을 설정 해야 하는 [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) 해당 유효한 Windows 사용자 계정의 속성입니다.  
+ 0(Windows)을 지정하는 경우 [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) 속성의 값을 해당하는 Windows 사용자 계정으로 설정해야 합니다.  
   
- 1 (SQL Server)를 지정 했는지 변수의 값을 [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 합니다.  
+ 1(SQL Server)을 지정하는 경우 [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) 값이 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이어야 합니다.  
   
  2(Windows 서비스)를 지정하는 경우 보고서 서버는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 계정과 Windows 서비스 계정을 사용하여 보고서 서버 데이터베이스에 액세스합니다. DatabaseLogonAccount 속성은 무시됩니다.  
   

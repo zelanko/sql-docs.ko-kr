@@ -9,17 +9,17 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 9d73b3c3-a068-4868-a2be-0cd261b6e92b
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2e2fbf2593ae5f85e12555d469ebe77b11539a20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 25524aa5c7f7223f07e019ae7b8c7d6f1e3d9f7f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178883"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027944"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>이미지를 계기의 포인터로 지정(보고서 작성기 및 SSRS)
-  계기에는 포인터의 모양을 사용자 지정하는 데 사용할 수 있는 세 가지 기본 제공 스타일이 들어 있습니다. 기본 제공된 스타일은 방사형 계기의 경우: 니 들, 표식 및 막대입니다. 선형 계기의 경우 기본 제공 스타일은 표식, 막대 및 온도계입니다. 고유한 포인터가 필요한 경우 모든 기능을 갖춘 포인터로 사용할 수 있는 이미지를 만들어 지정할 수 있습니다.  
+  계기에는 포인터의 모양을 사용자 지정하는 데 사용할 수 있는 세 가지 기본 제공 스타일이 들어 있습니다. 방사형 계기의 경우 기본 제공 스타일은 니들, 표식 및 막대이고, 선형 계기의 경우 기본 제공 스타일은 표식, 막대 및 온도계입니다. 고유한 포인터가 필요한 경우 모든 기능을 갖춘 포인터로 사용할 수 있는 이미지를 만들어 지정할 수 있습니다.  
   
  포인터의 이미지를 지정할 경우 이미지는 다음 사양을 충족해야 합니다.  
   
