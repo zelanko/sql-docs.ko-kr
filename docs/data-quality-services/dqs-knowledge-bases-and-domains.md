@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 81dba339c76674e2f8d1268c40a7762d15d7786d
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 67c11167938ba2c76b668a56a879bf39e9b7801a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617473"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030214"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS 기술 자료 및 도메인
 
@@ -98,7 +98,7 @@ ms.locfileid: "52617473"
  도메인 속성은 연관된 값에 적용할 처리를 정의하고 구동합니다. 값의 데이터 형식 및 언어를 설정하고, 선행 값을 사용하여 원본 데이터가 정리되도록 지정하고(이 옵션을 해제하면 선행 값이 아니라 올바른 용어를 사용하여 원본 데이터가 정리됨), 도메인에 있는 데이터 값이 출력될 때 적용할 형식을 구성하여 데이터 표준화를 보장하고, 적용할 알고리즘(구문 오류, 맞춤법 검사기 또는 문자열 정규화)을 정의할 수 있습니다.  
   
 ### <a name="reference-data-services"></a>참조 Data Services  
- 도메인 관리 프로세스에서 온라인 참조 데이터를 도메인에 연결할 수 있습니다. 이를 통해 도메인의 데이터를 참조 데이터 공급자가 유지 관리하는 데이터와 비교할 수 있습니다. **응용 프로그램의** 관리 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 섹션에서 DQS 구성 기능을 통해 참조 데이터 공급자를 먼저 구성해야 합니다. 자세한 내용은 [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)을 참조하세요.  
+ 도메인 관리 프로세스에서 온라인 참조 데이터를 도메인에 연결할 수 있습니다. 이를 통해 도메인의 데이터를 참조 데이터 공급자가 유지 관리하는 데이터와 비교할 수 있습니다. **애플리케이션의** 관리 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 섹션에서 DQS 구성 기능을 통해 참조 데이터 공급자를 먼저 구성해야 합니다. 자세한 내용은 [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)을 참조하세요.  
   
 ### <a name="applying-domain-rules"></a>도메인 규칙 적용  
  데이터 유효성 검사를 위한 도메인 규칙을 만들 수 있습니다. 도메인 규칙은 문자열 값일 수 있는 단일 용어와 같은 기본 제약 조건으로부터 전자 메일 주소의 올바른 형식과 같은 보다 복잡한 정규식까지 다양한 데이터의 정확도를 보장합니다.  

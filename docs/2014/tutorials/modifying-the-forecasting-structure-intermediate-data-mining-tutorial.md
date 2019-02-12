@@ -4,25 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1a6c138e-643b-4ae6-ad08-93631f149c20
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 559f6aa6b31b8998703a93e84dc100ce375cbda8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a86ddf0a715fc3a2313f555e898b3bd94cf66d8c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139533"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030594"
 ---
 # <a name="modifying-the-forecasting-structure-intermediate-data-mining-tutorial"></a>예측 구조 수정(중급 데이터 마이닝 자습서)
   이전 태스크에서 만든 마이닝 구조에는 단일 예측 모델이 포함되어 있습니다. 모델을 처리하고 탐색하기 전에 해당 구조를 약간 변경하고 속성 중 하나를 수정해야 합니다.  
   
 ## <a name="modifying-the-mining-structure"></a>마이닝 구조 수정  
- 사용 하 여 마이닝 구조를 변경할 수 있습니다 합니다 **마이닝 구조** 데이터 마이닝 디자이너의 탭 합니다. 데이터 마이닝 마법사로 모델을 만들 때에는 ReportingDate, ModelRegion 및 Quantity라는 3개의 열을 사용했습니다. 그러나 합니다 **Forecasting** 테이블 판매 금액을 예측 하는 데 사용할 수 있는 Amount 열도 포함 합니다. 사용 하 여 합니다 **마이닝 구조** 탭에서 마이닝 구조에 데이터 원본 뷰에서이 열을 추가할 수 있습니다.  
+ 사용 하 여 마이닝 구조를 변경할 수 있습니다 합니다 **마이닝 구조** 데이터 마이닝 디자이너의 탭 합니다. 데이터 마이닝 마법사로 모델을 만들 때에는 ReportingDate, ModelRegion 및 Quantity를 선택 합니다. 그러나 합니다 **Forecasting** 테이블 판매 금액을 예측 하는 데 사용할 수 있는 Amount 열도 포함 합니다. 사용 하 여 합니다 **마이닝 구조** 탭에서 마이닝 구조에 데이터 원본 뷰에서이 열을 추가할 수 있습니다.  
   
 #### <a name="to-add-the-amount-column-to-the-forecasting-mining-structure"></a>Forecasting 마이닝 구조에 Amount 열을 추가하려면  
   
@@ -54,7 +53,7 @@ ms.locfileid: "48139533"
  [사용자 지정 및 예측 모델을 처리 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/customize-process-forecasting-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [마이닝 구조 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [마이닝 모델 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [마이닝 구조 & #40; Analysis Services-데이터 마이닝 & #41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [마이닝 모델&#40;Analysis Services - 데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

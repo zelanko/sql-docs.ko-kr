@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 59ec5bbacf23d0f86f88a17a68faaf27162ebdcb
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 283f39efa34721aea7613ac1a9cba115dc3311a8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596794"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032954"
 ---
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>SQL server 2017 machine Learning Services (R, Python)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ SQL Server 2017의 Machine Learning Services는 SQL Server에서 R 및 Python �
 
 이전에 사용한 [SQL Server 2016 R Services](r/sql-server-r-services.md), SQL Server 2017의 Machine Learning 서비스는 기본 R, RevoScaleR MicrosoftML의 업데이트 된 버전을 사용 하 여 R 지원의 다음 세대 및 다른 라이브러리 2016에 도입 합니다. 
 
-Azure SQL Database에서 [Machine Learning 서비스 (R)을 통한](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r) 현재 공개 미리 보기로 제공 됩니다.
+Azure SQL Database에서 [Machine Learning 서비스 (R)을 통한](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) 현재 공개 미리 보기로 제공 됩니다.
 
 Machine Learning 서비스의 핵심 가치 제안을 소수 자릿수 및 계산 및 처리, 데이터 상주를 제공 하는 기능에 대 한 고급 분석을 제공 하는 엔터프라이즈 R 및 Python 패키지의 기능에서 데이터 끌어오기를 할 필요가 없습니다 네트워크입니다.
 
@@ -98,7 +98,7 @@ T-SQL 스크립트 내에서 R 또는 Python 함수를 호출 합니다.
 
 + **RevoScaleR**: 이 R 패키지는 병렬 처리 및 확장성을 제공 하도록 다시 설계 된 가장 인기 있는 R 함수 중 일부는 구현이 포함 되어 있습니다. 또한 이 패키지에는 계산을 SQL Server 컴퓨터로 밀어넣어 성능과 확장성을 높이는 기능이 포함되어 있습니다. SQL Server 컴퓨터는 대개 메모리와 계산 능력이 훨씬 뛰어납니다.
 
-+ **revoscalepy**합니다. 이 Python 라이브러리는 원격 계산 컨텍스트와 분산 처리를 지원하는 많은 알고리즘과 같이 RevoScaleR에서 가장 많이 사용되는 함수를 구현합니다.
++ **revoscalepy**. 이 Python 라이브러리는 원격 계산 컨텍스트와 분산 처리를 지원하는 많은 알고리즘과 같이 RevoScaleR에서 가장 많이 사용되는 함수를 구현합니다.
 
 성능에 대한 자세한 내용은 [성능 사례 연구](r/performance-case-study-r-services.md)와 [R 및 데이터 최적화](r/r-and-data-optimization-r-services.md)를 참조합니다.
 
@@ -126,10 +126,10 @@ SQL Server 2017의 Machine Learning Services는 SQL Server 2016 R Services에 Py
 
 | 제품 이름 | 엔진 버전 | 릴리스 날짜 |
 |--------------|---------|--------------|
-| SQL Server 2017 Machine Learning Services (In-database) | R Server 9.2.1 <br/> Python 서버 9.2 | 2017년 10월 |
-| SQL Server 2017 Machine Learning Server (독립 실행형) | R Server 9.2.1 <br/> Python 서버 9.2 | 2017년 10월 |
-| SQL Server 2016 R Services (In-database) | R Server 9.1의 경우  | 2017 년 7 월  |
-| SQL Server 2016 R Server (독립 실행형)  |  R Server 9.1의 경우 | 2017 년 7 월 |
+| SQL Server 2017 Machine Learning Services (In-database) | R Server 9.2.1 <br/> Python Server 9.2 | 2017년 10월 |
+| SQL Server 2017 Machine Learning Server (독립 실행형) | R Server 9.2.1 <br/> Python Server 9.2 | 2017년 10월 |
+| SQL Server 2016 R Services (In-database) | R Server 9.1  | 2017 년 7 월  |
+| SQL Server 2016 R Server (독립 실행형)  |  R Server 9.1 | 2017 년 7 월 |
 
 릴리스에서 패키지 버전을 버전에 매핑할을 참조 하세요 [업그레이드 하는 R 및 Python 구성 요소](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md#version-map)합니다.
 

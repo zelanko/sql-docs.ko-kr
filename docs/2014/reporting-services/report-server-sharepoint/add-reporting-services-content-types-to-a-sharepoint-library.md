@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: cac75345-2380-467d-a394-0a2140908a5a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ea197ddd0c24a487d152c8c6aa9eb9e177605d5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d98e8eafeb08ab8b0d37fd6a513d2fb6eb773828
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105893"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030694"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>웹 페이지에 보고서 뷰어 웹 파트 추가(SharePoint 통합 모드의 Reporting Services)
   보고서 뷰어 웹 파트를 사용하여 SharePoint 통합 모드로 구성된 보고서 서버에서 실행되는 보고서를 볼 수 있습니다. 또한 이 웹 파트를 사용하여 보고서 작성기나 보고서 디자이너에서 만들어 라이브러리에 업로드한 보고서 정의 파일(.rdl)을 표시할 수 있습니다.  
@@ -58,8 +58,8 @@ ms.locfileid: "48105893"
   
 ## <a name="see-also"></a>관련 항목  
  [SharePoint 사이트의 보고서 뷰어 웹 파트](../report-viewer-web-part-on-a-sharepoint-site.md)   
- [보고서 뷰어 웹 파트를 사용자 지정](../customize-the-report-viewer-web-part.md)   
- [SharePoint 사이트의 보고서 서버 항목에 대 한 권한 부여](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [보고서 뷰어 웹 파트 사용자 지정](../customize-the-report-viewer-web-part.md)   
+ [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [설치 또는 제거는 Reporting Services 추가-SharePoint 용 &#40;SharePoint 2010 및 SharePoint 2013&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

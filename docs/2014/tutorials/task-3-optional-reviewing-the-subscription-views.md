@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 3f1d3eb7-2baa-4215-b040-0b41e3d10740
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 11f9d3506dec4a6f2b0317823f7e11f6739efd23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 27e7351f1643d18790d67703858ec6df7694ebd8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186193"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030764"
 ---
-# <a name="task-3-optional-reviewing-the-subscription-views"></a>태스크 3(선택 사항): 구독 뷰 검토
+# <a name="task-3-optional-reviewing-the-subscription-views"></a>작업 3 (선택 사항): 구독 뷰 검토
   이 작업에서는 SQL Server Management Studio를 사용하여 SQL 뷰가 만들어졌는지 확인합니다.  
   
 1.  시작할 **SQL Server Management Studio**합니다. 클릭 합니다 **시작** 단추를 클릭 **모든 프로그램**, 클릭 **Microsoft SQL Server 2012**를 클릭 하 고 **SQL Server Management Studio**합니다.  
@@ -34,6 +31,4 @@ ms.locfileid: "48186193"
      ![SQL Server Management Studio-mdm. 공급 업체 보기](../../2014/tutorials/media/et-reviewingthesubscriptionviews.jpg "mdm.-SQL Server Management Studio 공급자 보기")  
   
 ## <a name="next-step"></a>다음 단계  
- [태스크 4: SQL Server Data Tools를 사용하여 SSIS 프로젝트 만들기](../../2014/tutorials/task-4-creating-an-ssis-project-using-sql-server-data-tools.md)  
-  
-  
+ [작업 4: SQL Server Data Tools를 사용 하 여 SSIS 프로젝트 만들기](../../2014/tutorials/task-4-creating-an-ssis-project-using-sql-server-data-tools.md)

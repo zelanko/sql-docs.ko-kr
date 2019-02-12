@@ -1,7 +1,7 @@
 ---
 title: 서버 속성(고급 페이지) - Reporting Services | Microsoft Docs
 ms.custom: ''
-ms.date: 2016-10-18
+ms.date: 10/18/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8756be81a5517602558ab974bb63310e19c32049
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+manager: kfile
+ms.openlocfilehash: 21379656c56fa1e28b8cd098d046fb4fe721179c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119878"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041584"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>서버 속성(고급 페이지) - Reporting Services
   이 페이지를 사용하여 보고서 서버의 시스템 속성을 설정할 수 있습니다. 시스템 속성을 설정하는 데에는 여러 가지 방법이 있습니다. 이 도구는 그래픽 사용자 인터페이스를 제공하므로 코드를 작성하지 않고도 속성을 설정할 수 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "49119878"
  저장된 매개 변수를 저장할 수 있는 최대 일 수를 지정합니다. 유효한 값은 `-1`, `+1`부터 `2,147,483,647`까지입니다. 기본값은 `180`일입니다.  
   
  **StoredParametersThreshold**  
- 보고서 서버에서 저장할 수 있는 매개 변수 값의 최대 수를 지정 합니다. 유효한 값은 `-1`, `+1`부터 `2,147,483,647`까지입니다. 기본값은 `1500`입니다.  
+ 보고서 서버에서 저장할 수 있는 매개 변수 값의 최대 수를 지정합니다. 유효한 값은 `-1`, `+1`부터 `2,147,483,647`까지입니다. 기본값은 `1500`입니다.  
   
  **UseSessionCookies**  
  보고서 서버에서 클라이언트 브라우저와 통신할 때 세션 쿠키를 사용해야 하는지 여부를 나타냅니다. 기본값은 `true`입니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "49119878"
   
  **None =** 스냅숏이 압축되지 않습니다.  
   
- **All =** 보고서 서버 데이터베이스, 파일 시스템을 포함한 모든 저장소 옵션에 대해 스냅숏이 압축됩니다.  
+ **All =** 보고서 서버 데이터베이스, 파일 시스템을 포함한 모든 스토리지 옵션에 대해 스냅숏이 압축됩니다.  
   
  **SystemReportTimeout**  
  보고서 서버 네임스페이스에서 관리되는 모든 보고서에 대한 기본 보고서 처리 제한 시간 값(초)입니다. 이 값은 보고서 수준에서 무시할 수 있습니다. 이 속성을 설정하면 지정된 시간이 만료될 경우 보고서 서버가 보고서 처리를 중지합니다. 유효한 값은 `-1`부터 `2`,`147`,`483`,`647`까지입니다. 값이 `-1`이면 네임스페이스의 보고서 처리 중 시간 제한으로 인한 중지가 발생하지 않습니다. 기본값은 `1800`입니다.  

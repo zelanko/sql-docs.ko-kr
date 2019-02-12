@@ -12,15 +12,15 @@ f1_keywords:
 - sql12.dqs.dqproject.correction.f1
 - sql12.dqs.dqproject.interactivecleansing.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: ad4feee8fe6a47b82196f6684a9c56b663a42c71
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: aa900fc136729eace74af6ceaf8d6f26b7900f99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392276"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038334"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>DQS(내부) 기술 자료를 사용하여 데이터 정리
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 데이터 품질 프로젝트를 사용하여 데이터를 정리하는 방법에 대해 설명합니다. 데이터 정리는 고품질 데이터 집합에 대해 DQS에 기본 제공된 기술 자료를 사용하여 원본 데이터에서 수행됩니다. 자세한 내용은 [기술 자료 구축](../../2014/data-quality-services/building-a-knowledge-base.md)을 참조하세요.  
@@ -157,15 +157,15 @@ ms.locfileid: "52392276"
   
     -   **데이터 및 정리 정보**: 각 도메인에 대해 다음 데이터를 내보내려면 이 라디오 버튼을 클릭합니다.  
   
-        -   **\<도메인 > _output**: 도메인의 원래 값입니다.  
+        -   **\<Domain>_Source**: 도메인의 원래 값입니다.  
   
-        -   **\<도메인 > (_o)**: 도메인에서 정리한 값입니다.  
+        -   **\<Domain>_Output**: 도메인에서 정리한 값입니다.  
   
-        -   **\<도메인 > _Reason**: 값을 수정하도록 지정한 이유입니다.  
+        -   **\<Domain>_Reason**: 값을 수정하도록 지정한 이유입니다.  
   
-        -   **\<도메인 > _Confidence**: 수정된 모든 용어에 대한 신뢰도 수준입니다. 신뢰도는 해당 백분율 값과 동일한 10진수 값으로 표시됩니다. 예를 들어, 95%의 신뢰 수준은 .9500000으로 표시됩니다.  
+        -   **\<Domain>_Confidence**: 수정된 모든 용어에 대한 신뢰도 수준입니다. 신뢰도는 해당 백분율 값과 동일한 10진수 값으로 표시됩니다. 예를 들어, 95%의 신뢰 수준은 .9500000으로 표시됩니다.  
   
-        -   **\<도메인 > _source**: 데이터 정리 후 도메인 값의 상태입니다. 예를 들어 **제안**, **새로 만들기**, **잘못됨**, **수정됨**또는 **올바름**이 여기에 해당합니다.  
+        -   **\<Domain>_Status**: 데이터 정리 후 도메인 값의 상태입니다. 예를 들어 **제안**, **새로 만들기**, **잘못됨**, **수정됨**또는 **올바름**이 여기에 해당합니다.  
   
         -   **레코드 상태**: 매핑된 도메인별 상태 필드 외에도 **(\<DomainName > _source**), **레코드 상태** 필드는 레코드에 대 한 상태가 표시 됩니다. 레코드의 도메인 상태가 *새로 만들기* 또는 *올바름*인 경우 **레코드 상태**는 *올바름*으로 설정됩니다. 레코드의 도메인 상태가 *제안*, *잘못됨* 또는 *수정됨*인 경우 **레코드 상태**는 해당 값으로 설정됩니다. 예를 들어 레코드의 도메인 상태가 *제안*인 경우 **레코드 상태**는 *제안*으로 설정됩니다.  
   

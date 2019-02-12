@@ -28,16 +28,16 @@ helpviewer_keywords:
 - ClientSideXML property
 - CommandStream property
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e3ae51af994665ac4234dc44e84fb5c2c405aa1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5ac8e2b23988f09b21f21ed5cfded790871a25a9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502559"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041504"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>SQLXML 관리되는 클래스 - SqlXmlCommand 개체
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,24 +56,24 @@ public SqlXmlCommand(string cnString)
 ## <a name="methods"></a>메서드  
  TheSqlXmlCommand 개체는 명령을 실행 하기 위한 다음 방법을 비롯 하 여 몇 가지 메서드를 지원 합니다.  
   
- void executenonquery)  
+ void ExecuteNonQuery()  
  명령을 실행하지만 아무것도 반환하지 않습니다. 이 메서드는 쿼리를 사용하지 않는 명령, 즉 아무것도 반환하지 않는 명령을 실행하려는 경우에 유용합니다. 예를 들어 레코드를 업데이트하지만 아무것도 반환하지 않는 DiffGram 또는 updategram이 이러한 메서드에 속합니다.  
   
- Stream executestream)  
+ Stream ExecuteStream()  
  새 Stream 개체를 반환합니다. 이 메서드는 쿼리 결과를 새 스트림에 반환하려는 경우에 유용합니다. 작업 샘플을 보려면 [SQL 쿼리 실행 &#40;SQLXML Managed Classes&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)합니다.  
   
  public void ExecuteToStream (Stream outputStream)  
  쿼리 결과를 기존 스트림에 씁니다. 이 메서드는 결과 (예: 쿼리 결과 System.Web.HttpResponse.OutputStream 쓸) 추가 해야 하는 스트림이 있는 경우에 유용 합니다. 작업 샘플을 보려면 [SQL 쿼리 실행 &#40;SQLXML Managed Classes&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)합니다.  
   
- XmlReader executexmlreader)  
+ XmlReader ExecuteXmlReader()  
  XmlReader 개체를 반환합니다. XmlReader 개체의 데이터를 직접 조작 하거나 System.Xml의 포함 된 연결 가능한 아키텍처 플러그 인이 메서드를 사용할 수 있습니다. 자세한 내용은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 설명서를 참조하십시오. 작업 샘플을 보려면 [ExecuteXMLReader 메서드를 사용 하 여 SQL 쿼리 실행](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)합니다.  
   
  TheSqlXmlCommand 개체는 이러한 추가 메서드를 지원합니다.  
   
- SqlXmlParameter createparameter)  
+ SqlXmlParameter CreateParameter()  
  SqlXmlParameter 개체를 만듭니다. 에 대 한 값을 설정할 수는 *이름을* 하 고 *값* 이 개체의 매개 변수입니다. 이 메서드는 명령에 매개 변수를 전달하려는 경우에 유용합니다. 작업 샘플을 보려면 [SQL 쿼리 실행 &#40;SQLXML Managed Classes&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)합니다.  
   
- void clearparameters)  
+ void ClearParameters()  
  지정된 명령 개체에 대해 만든 매개 변수를 지웁니다. 이 메서드는 동일한 명령 개체에 여러 개의 쿼리를 실행하려는 경우에 유용합니다.  
   
 ## <a name="properties"></a>속성  

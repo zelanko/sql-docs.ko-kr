@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2e1472c2-3f3e-4dae-acb3-62fca374d397
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 45acf7bef608bb23d697fc18381872f741cc2e21
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: e7b77b445ff8cbef8be3acb72ef9cdb6fa3af159
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401368"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013744"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>의사 결정 트리 모델 탐색(기본 데이터 마이닝 자습서)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 학습 집합의 나머지 열을 기준으로 자전거 구매 결정에 영향을 주는 열을 예측합니다.  
@@ -100,7 +99,7 @@ ms.locfileid: "52401368"
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [클러스터링 모델 탐색 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마이닝 모델 뷰어 태스크 및 방법](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [트리 탭 의사 결정 &#40;마이닝 모델 뷰어&#41;](../../2014/analysis-services/decision-tree-tab-mining-model-viewer.md)   
  [종속성 네트워크 탭 &#40;마이닝 모델 뷰어&#41;](../../2014/analysis-services/dependency-network-tab-mining-model-viewer.md)   

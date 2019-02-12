@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4bd25e15-9d9e-4528-b7bc-ccb856643aec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3d83e8034885d83056ea6258ede86072239f6e74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d2d0e73d1d9a4058ff63320552604b2bfa1bca8a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224483"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031684"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>예측 모델 사용자 지정 및 처리(중급 데이터 마이닝 자습서)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 시계열 알고리즘은 모델을 만들고 시간 데이터를 분석하는 방법에 영향을 주는 여러 매개 변수를 제공합니다. 이러한 속성을 변경하면 마이닝 모델이 예측을 수행하는 방식에 큰 영향을 줄 수 있습니다.  
@@ -25,7 +24,7 @@ ms.locfileid: "48224483"
   
 1.  모델에 대 한 새 값을 추가 하 여 기간을 처리 하는 방법은 사용자 지정 합니다는 *PERIODICITY_HINT* 매개 변수입니다.  
   
-2.  두 가지 다른 중요 한 매개 변수 Microsoft 시계열 알고리즘에 대해 배우게 됩니다: FORECAST_METHOD 예측에 사용 되는 방법을 제어할 수 있습니다, 및 수 있는 PREDICTION_SMOOTHING에 장기 및 단기의 혼합을 사용자 지정 예측 합니다.  
+2.  Microsoft 시계열 알고리즘의 기타 중요 매개 변수 설정 두 가지 즉, 예측에 사용되는 메서드를 제어할 수 있는 FORECAST_METHOD 및 장기 및 단기 예측의 혼합을 사용자 지정할 수 있는 PREDICTION_SMOOTHING에 대해 학습합니다.  
   
 3.  필요에 따라 귀속되는 누락된 값의 처리 방식을 알고리즘에 알려 줍니다.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48224483"
 ## <a name="handling-missing-data-optional"></a>누락된 데이터 처리(선택 사항)  
  대부분의 경우 매출 데이터는 Null로 채워지는 간격이 있거나 매장에서 보고 최종 기한을 충족하지 않아 계열의 끝에 빈 셀이 있을 수 있습니다. 그러한 시나리오에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]가 다음 오류를 발생시키고 모델을 처리하지 않습니다.  
   
- "오류 (데이터 마이닝): 시작 타임 스탬프가 동기화 되지 않은 시리즈로 \<계열 이름 >, 마이닝 모델의 \<모델 이름 >. 모든 시계열은 같은 시간 표식에서 끝나야 하며 임의의 누락 데이터 요소가 있으면 안 됩니다. MISSING_VALUE_SUBSTITUTION 매개 변수를 Previous 또는 숫자 상수로 설정하면 누락 데이터 요소가 자동으로 패치됩니다."  
+ "오류(데이터 마이닝): 시작 타임 스탬프가 동기화 되지 않은 시리즈로 \<계열 이름 >, 마이닝 모델의 \<모델 이름 >. 모든 시계열은 같은 시간 표식에서 끝나야 하며 임의의 누락 데이터 요소가 있으면 안 됩니다. MISSING_VALUE_SUBSTITUTION 매개 변수를 Previous 또는 숫자 상수로 설정하면 누락 데이터 요소가 자동으로 패치됩니다."  
   
  이 오류가 발생하지 않도록 하려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 다음 메서드 중 하나를 사용하여 간격을 채울 새 값을 자동으로 제공하도록 지정할 수 있습니다.  
   
@@ -107,6 +106,6 @@ ms.locfileid: "48224483"
 ## <a name="see-also"></a>관련 항목  
  [Microsoft 시계열 알고리즘 기술 참조](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Microsoft 시계열 알고리즘](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [처리 요구 사항 및 고려 사항 &#40;데이터 마이닝&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [처리 요구 사항 및 고려 사항 & #40; 데이터 마이닝 & #41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

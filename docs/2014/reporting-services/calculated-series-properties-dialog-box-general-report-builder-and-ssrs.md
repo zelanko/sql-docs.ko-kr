@@ -12,14 +12,14 @@ f1_keywords:
 - "10151"
 ms.assetid: 97d4a29b-30ae-4141-8595-e994e47e6648
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 8b202d3eadef7abc2f638cc8c084849249f8eaab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 8dd12cb87bdc4c88aca9fe68455a179bcd5896c9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096733"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033664"
 ---
 # <a name="calculated-series-properties-dialog-box-general-report-builder-and-ssrs"></a>계산된 계열 속성 대화 상자, 일반(보고서 작성기 및 SSRS)
   **계산된 계열 속성** 대화 상자에서 **수식**을 선택하여 기존 계열 데이터를 입력으로 사용하는 기본 제공 수식을 기반으로 계산할 계열을 추가하거나 수정할 수 있습니다.  
@@ -60,6 +60,6 @@ ms.locfileid: "48096733"
  선택한 수식의 매개 변수를 지정합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [차트 &#40;보고서 작성기 및 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
+ [차트&#40;보고서 작성기 및 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b8ae650b-0f46-4848-b62b-15f8a40751b8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 29268d5ddb85b462550da9cb0960ee2c11bfb3f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ae4079f0f7be0bb854a8c77737251fdfd09ca0b6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130915"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035494"
 ---
 # <a name="constants-in-expressions-report-builder-and-ssrs"></a>식의 상수(보고서 작성기 및 SSRS)
   상수는 리터럴 텍스트 또는 미리 정의된 텍스트로 구성됩니다. 보고서 처리기는 미리 정의된 상수에 액세스할 수 있으므로 사용자가 식에 상수를 포함하면 이러한 상수가 나타내는 값은 식이 계산되기 전에 대체됩니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "48130915"
 |BorderStyle|보고서에 추가된 선에 대한 유효한 값|Default, None, Dotted, Dashed, Solid, Double, DashDot, DashDotdot|  
   
 ## <a name="visual-basic-constants"></a>Visual Basic 상수  
- 식에서 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 런타임 라이브러리에 정의된 상수를 사용할 수 있습니다. 예를 들어 상수를 사용할 수 있습니다 `DateInterval.Day`합니다. 2008년 1월 10일에 대한 다음 식은 숫자 10을 반환합니다.  
+ 식에서 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 런타임 라이브러리에 정의된 상수를 사용할 수 있습니다. 예를 들어 `DateInterval.Day` 상수를 사용할 수 있습니다. 2008년 1월 10일에 대한 다음 식은 숫자 10을 반환합니다.  
   
  `=DatePart("d",Globals!ExecutionTime)`  
   

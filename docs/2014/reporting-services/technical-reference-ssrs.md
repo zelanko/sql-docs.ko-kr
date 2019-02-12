@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5f4904cf11ac1cb84acf9b6c0362d453d7b0fc0b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 455eaec943cb649023ecea1b9ee4964a23961191
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371145"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037744"
 ---
 # <a name="technical-reference-ssrs"></a>기술 참조(SSRS)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 사용하거나 관리하기 위한 도구 및 PowerShell 참조 설명서를 찾습니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "53371145"
  ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **Reporting Services WMI 공급자 클래스 라이브러리**  
  [Reporting Services WMI 공급자 라이브러리 참조&#40;SSRS&#41;](wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Reporting Services 문제 해결에 대한 TechNet wiki 문서](https://go.microsoft.com/fwlink/?LinkID=209153)   
  [Reporting Services SharePoint 모드 문제 해결에 대한 TechNet wiki 문서](https://go.microsoft.com/fwlink/?LinkID=209158)  
   

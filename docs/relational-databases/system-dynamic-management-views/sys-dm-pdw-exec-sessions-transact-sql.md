@@ -1,9 +1,9 @@
 ---
-title: sys.dm_pdw_exec_sessions (TRANSACT-SQL) | Microsoft Docs
+title: sys.dm_pdw_exec_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,19 +13,19 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dade699d433ce2b7ab95d3f09f370adedc8bcf2e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 41042d1dff7a64a8a2d2fe093276f61ab254da56
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664062"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039864"
 ---
-# <a name="sysdmpdwexecsessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact SQL)
+# <a name="sysdmpdwexecsessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   어플라이언스에서 현재 또는 최근에 열린 모든 세션에 대 한 정보를 보유합니다. 세션당 행 하나를 나열합니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |session_id|**nvarchar(32)**|Id는 현재 쿼리 또는 마지막 쿼리 실행 (의 세션을 종료 하 고 쿼리 종료 시 실행 된) 경우입니다. 이 보기에 대 한 키입니다.|시스템의 모든 세션에서 고유 합니다.|  
 |상태|**nvarchar(10)**|현재 세션에 대 한 활성 또는 유휴 세션이 현재 인지 여부를 식별 합니다. 이전 세션에 대 한 세션 상태 표시 될 수 있습니다 닫히거나 (세션이 강제로 닫혔습니다) 하는 경우 종료 합니다.|'ACTIVE', 'CLOSED', '유휴 상태', ' 종료 '|  

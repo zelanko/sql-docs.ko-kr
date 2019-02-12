@@ -3,7 +3,6 @@ title: delete(XML DML) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - delete statement [XML DML]
 - deleting nodes
 ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fbc9422942b0f4e82444f4213aed62b2b4622894
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f6c2fd2c71c5272b8104eaf5b24fa8e7c0a9fc8c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699776"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038554"
 ---
 # <a name="delete-xml-dml"></a>delete(XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -117,7 +116,7 @@ FROM T
   
 -   [query() 메서드(xml 데이터 형식)](../../t-sql/xml/query-method-xml-data-type.md)는 문서를 쿼리하는 데 사용됩니다.  
   
-### <a name="c-deleting-nodes-from-a-typed-xml-column"></a>3. 형식화된 xml 열에서 노드 삭제  
+### <a name="c-deleting-nodes-from-a-typed-xml-column"></a>C. 형식화된 xml 열에서 노드 삭제  
  이 예에서는 형식화된 **xml** 열에 저장된 제조 지침 XML 문서에서 노드를 삭제합니다.  
   
  이 예에서는 먼저 AdventureWorks 데이터베이스에서 형식화된 **xml** 열을 가진 테이블(T)을 만듭니다. 그런 다음 ProductModel 테이블의 Instructions 열에 있는 제조 지침 XML 인스턴스를 T 테이블로 복사하고 문서에서 하나 이상의 노드를 삭제합니다.  

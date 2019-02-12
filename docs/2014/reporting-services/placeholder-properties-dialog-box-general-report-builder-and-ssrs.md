@@ -12,26 +12,26 @@ f1_keywords:
 - sql12.rtp.rptdesigner.placeholderproperties.general.f1
 ms.assetid: 7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: bceb733247e806f9e03803797c831561662229d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 9c52690de427ad741a340b5696b246694326ece1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171163"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037714"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>자리 표시자 속성 대화 상자, 일반(보고서 작성기 및 SSRS)
   **자리 표시자 속성** 대화 상자를 사용하여 입력란 내 자리 표시자의 값, 도구 설명 및 태그 옵션을 변경할 수 있습니다.  
   
 ## <a name="options"></a>변수  
- **Label**  
+ **레이블**  
  자리 표시자의 레이블을 입력합니다. 레이블은 디자인 화면에만 표시됩니다.  
   
  **Value**  
  입력란의 값을 입력합니다. 이 값은 필드 식이나 기타 식 또는 레이블이어야 합니다. 식을 편집하려면 **식** 단추(*fx*)를 클릭합니다.  
   
- **도구 설명**  
+ **Tooltip**  
  도구 설명을 반환하는 식 또는 텍스트를 입력합니다. 식을 편집하려면 **식** 단추(*fx*)를 클릭합니다. 렌더링된 보고서의 항목 위에 포인터를 놓으면 도구 설명이 나타납니다.  
   
  **태그 형식**  
@@ -45,9 +45,9 @@ ms.locfileid: "48171163"
  [입력란의 텍스트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
  [보고서에 HTML 추가&#40;보고서 작성기 및 SSRS&#41;](report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [텍스트 상자 &#40;보고서 작성기 및 SSRS&#41;](report-design/text-boxes-report-builder-and-ssrs.md)   
+ [입력란&#40;보고서 작성기 및 SSRS&#41;](report-design/text-boxes-report-builder-and-ssrs.md)   
  [보고서 항목 서식 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [텍스트 및 자리 표시자 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [보고서로 HTML 가져오기 &#40;보고서 작성기 및 SSRS&#41;](report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [텍스트 및 자리 표시자 서식 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [보고서로 HTML 가져오기&#40;보고서 작성기 및 SSRS&#41;](report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
   
   

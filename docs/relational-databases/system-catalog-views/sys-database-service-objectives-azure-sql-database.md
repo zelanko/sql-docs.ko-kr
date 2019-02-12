@@ -2,10 +2,9 @@
 title: sys.database_service_objectives (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/30/2016
-ms.prod: ''
+ms.service: sql-database
 ms.prod_service: sql-database, sql-data-warehouse
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: conceptual
 keywords:
 - 탄력적 풀
@@ -17,12 +16,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: a8b37ada1fa7c6024a5454ed907b886e513c151c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a073dba8a05aa6f098bdf2b2ce1666d4cc324be
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769311"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028524"
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "47769311"
 Azure SQL database 또는 Azure SQL Data Warehouse에 대 한 버전 (서비스 계층), 서비스 목표 (가격 책정 계층) 및 탄력적 풀 이름을 반환 합니다. Azure SQL Database 서버에서 master 데이터베이스에 로그온 하는 경우 모든 데이터베이스에서 정보를 반환 합니다. Azure SQL Data Warehouse에 대 한 master 데이터베이스에 연결 해야 합니다.  
   
   
- 가격 책정 정보를 참조 하세요 [SQL Database 옵션 및 성능: SQL Database 가격 책정](https://azure.microsoft.com/pricing/details/sql-database/) 하 고 [SQL Data Warehouse 가격 책정](https://azure.microsoft.com/pricing/details/sql-data-warehouse/)합니다.  
+ 가격 책정 정보를 참조 하세요. [SQL Database 옵션 및 성능: SQL Database 가격 책정](https://azure.microsoft.com/pricing/details/sql-database/) 하 고 [SQL Data Warehouse 가격 책정](https://azure.microsoft.com/pricing/details/sql-data-warehouse/)합니다.  
   
  서비스 설정을 변경 하려면을 참조 하세요 [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md) 하 고 [ALTER DATABASE (Azure SQL Data Warehouse)](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md)합니다.  
   
@@ -40,7 +39,7 @@ Azure SQL database 또는 Azure SQL Data Warehouse에 대 한 버전 (서비스 
 |-----------------|---------------|-----------------|  
 |database_id|ssNoversion|Azure SQL Database 서버 인스턴스 내에서 고유한 데이터베이스의 ID입니다. 사용 하 여 조인 가능 [sys.databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)합니다.|  
 |버전|sysname|데이터베이스 또는 데이터 웨어하우스에 대 한 서비스 계층: **기본**, **표준**, **Premium** 하거나 **Data Warehouse**합니다.|  
-|service_objective|sysname|데이터베이스의 가격 책정 계층입니다. 데이터베이스가 탄력적 풀에 있으면 반환 **ElasticPool**합니다.<br /><br /> 에 **기본적인** 계층을 반환 **기본**입니다.<br /><br /> **단일 데이터베이스를 standard 서비스 계층에서** 다음 중 하나를 반환 합니다: S0, S1, S2, S3, S4, S6, S7, S9 또는 S12 합니다.<br /><br /> **프리미엄 계층에서 단일 데이터베이스** 다음 반환: P1, P2, P4, P6, P11 또는 P15입니다.<br /><br /> **SQL Data Warehouse** DW10000c 통해 DW100를 반환 합니다.|  
+|service_objective|sysname|데이터베이스의 가격 책정 계층입니다. 데이터베이스가 탄력적 풀에 있으면 반환 **ElasticPool**합니다.<br /><br /> 에 **기본적인** 계층을 반환 **기본**입니다.<br /><br /> **단일 데이터베이스를 standard 서비스 계층에서** 다음 중 하나를 반환 합니다. S0, S1, S2, S3, S4, S6, S7, S9 또는 S12 합니다.<br /><br /> **프리미엄 계층에서 단일 데이터베이스** 다음 반환: P1, P2, P4, P6, P11 또는 P15입니다.<br /><br /> **SQL Data Warehouse** DW10000c 통해 DW100를 반환 합니다.|  
 |elastic_pool_name|sysname|이름을 합니다 [탄력적 풀](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) 에 속하는 데이터베이스입니다. 반환 **NULL** 데이터베이스가 단일 데이터베이스 또는 데이터 warehoue 있는 경우.|  
   
 ## <a name="permissions"></a>사용 권한  

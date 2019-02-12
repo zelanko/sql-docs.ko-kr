@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fb50a9f9674e13c1032091fbae6da55170d44863
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: fb1f04a10837088a9c427d6c0994af4334e8988f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374325"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035104"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>URL 예약 및 등록 정보(SSRS 구성 관리자)
   Reporting Services 애플리케이션의 URL은 HTTP.SYS에서 URL 예약으로 정의됩니다. URL 예약은 웹 애플리케이션에 대한 URL 엔드포인트 구문을 정의합니다. 보고서 서버에서 애플리케이션을 구성하는 경우 보고서 서버 웹 서비스와 보고서 관리자 모두에 대해 URL 예약이 정의됩니다. 설치 프로그램 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 통해 URL을 구성하면 URL 예약이 자동으로 생성됩니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "53374325"
   
 |HTTP.SYS에서의 URL 예약|URL|설명|  
 |---------------------------------|---------|-----------------|  
-|http://+:80/reportserver|http://\<컴퓨터 이름 > / reportserver<br /><br /> http://\<ip 주소 > / reportserver<br /><br /> http://localhost/reportserver|이 URL 예약은 포트 80에 와일드카드(+)를 지정하며, 포트 80에서 보고서 서버 컴퓨터로 확인되는 호스트를 지정하는 들어오는 모든 요청을 보고서 서버 큐에 추가합니다. 이 URL 예약을 사용하면 원하는 수의 URL을 사용하여 보고서 서버에 액세스할 수 있습니다.<br /><br /> 이 URL은 대부분의 운영 체제에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 대한 기본 URL 예약입니다.|  
+|http://+:80/reportserver|http://\<computername>/reportserver<br /><br /> http://\<IPAddress>/reportserver<br /><br /> http://localhost/reportserver|이 URL 예약은 포트 80에 와일드카드(+)를 지정하며, 포트 80에서 보고서 서버 컴퓨터로 확인되는 호스트를 지정하는 들어오는 모든 요청을 보고서 서버 큐에 추가합니다. 이 URL 예약을 사용하면 원하는 수의 URL을 사용하여 보고서 서버에 액세스할 수 있습니다.<br /><br /> 이 URL은 대부분의 운영 체제에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 대한 기본 URL 예약입니다.|  
 |http://123.45.67.0:80/reportserver|http://123.45.67.0/reportserver|이 URL 예약은 IP 주소를 지정하며 와일드카드 URL 예약보다 훨씬 제한적입니다. IP 주소를 포함하는 URL만 보고서 서버에 연결하는 데 사용할 수 있습니다. 이 URL 예약을 http:// 보고서 서버에 요청\<컴퓨터 이름 > / reportserver 또는 http://localhost/reportserver 하지 못합니다.|  
   
 ##  <a name="DefaultURLs"></a> 기본 URL  
@@ -86,12 +86,12 @@ ms.locfileid: "53374325"
   
 |인스턴스 유형|애플리케이션|기본 URL|HTTP.SYS의 실제 URL 예약|  
 |-------------------|-----------------|-----------------|----------------------------------------|  
-|기본 인스턴스|보고서 서버 웹 서비스|http://\<서버 이름 > / reportserver|http://\<서버 이름 >: 80/reportserver|  
-|기본 인스턴스|보고서 관리자|http://\<서버 이름 > / reportserver|http://\<서버 이름 >: 80/reportserver|  
-|명명된 인스턴스|보고서 서버 웹 서비스|http://\<서버 이름 > / reportserver_\<n a m e >|http://\<서버 이름 >: 80/reportserver_\<n a m e >|  
-|명명된 인스턴스|보고서 관리자|http://\<서버 이름 > / 이때 다음과\<n a m e >|http://\<서버 이름 >: 80 t _\<n a m e >|  
-|SQL Server Express|보고서 서버 웹 서비스|http://\<서버 이름 > / reportserver_SQLExpress|http://\<서버 이름 >: 80/reportserver_SQLExpress|  
-|SQL Server Express|보고서 관리자|http://\<서버 이름 > / reports_SQLExpress|http://\<서버 이름 >: 80/reports_SQLExpress|  
+|기본 인스턴스|보고서 서버 웹 서비스|http://\<servername>/reportserver|http://\<servername>:80/reportserver|  
+|기본 인스턴스|보고서 관리자|http://\<servername>/reportserver|http://\<servername>:80/reportserver|  
+|명명된 인스턴스|보고서 서버 웹 서비스|http://\<servername>/reportserver_\<instancename>|http://\<servername>:80/reportserver_\<instancename>|  
+|명명된 인스턴스|보고서 관리자|http://\<servername>/reports_\<instancename>|http://\<servername>:80/reports_\<instancename>|  
+|SQL Server Express|보고서 서버 웹 서비스|http://\<servername>/reportserver_SQLExpress|http://\<servername>:80/reportserver_SQLExpress|  
+|SQL Server Express|보고서 관리자|http://\<servername>/reports_SQLExpress|http://\<servername>:80/reports_SQLExpress|  
   
 ##  <a name="URLPermissionsAccounts"></a> Reporting Services URL에 대한 인증 및 서비스 ID  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 예약은 보고서 서버 서비스의 서비스 계정을 지정합니다. 서비스가 실행되는 계정은 같은 인스턴스에 실행되는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션용으로 생성된 모든 URL에 사용됩니다. 보고서 서버 인스턴스의 서비스 ID는 RSReportServer.config 파일에 저장됩니다.  

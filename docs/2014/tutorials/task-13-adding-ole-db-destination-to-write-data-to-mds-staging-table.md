@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e6c67fa9-bb52-44a9-82f6-d86551cf12b2
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: bf8a96891040a6a751e0a6e34c902d77cec9dd35
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34f68c4604d70dc83579f8c9284802b82cc6291d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223103"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035074"
 ---
 # <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>태스크 13: OLE DB 대상을 추가하여 MDS 준비 테이블에 데이터 쓰기
   추가한 했으므로 **ImportType** 하 고 **BatchTag** 로 전송할 수 MDS 준비에 대 한 준비가 됩니다 모든 레코드 값입니다. 이 작업을 사용 하 여 OLE DB 대상 데이터를 쓸 **stg.supplier_Leaf** 준비 테이블입니다.  
@@ -52,6 +49,6 @@ ms.locfileid: "48223103"
      ![데이터 흐름을 완료](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-03.jpg "데이터 흐름 완료")  
   
 ## <a name="next-step"></a>다음 단계  
- [태스크 14: 제어 흐름에 SQL 실행 태스크를 추가하여 MDS에 대한 저장 프로시저 실행](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  
+ [태스크 14: 추가 SQL 실행 태스크를 MDS에 대 한 저장된 프로시저를 실행 하려면 제어 흐름](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  
   
   

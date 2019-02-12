@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - discretization [Analysis Services]
@@ -16,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3f16215c-531e-4ecf-a11f-ee7c6a764463
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 144f2f754dc93be29f6be8fc786afa354a96c911
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395806"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037724"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>신경망 구조 및 모델 만들기(중급 데이터 마이닝 자습서)
   데이터 마이닝 모델을 만들려면 먼저 데이터 마이닝 마법사를 사용하여 새 데이터 원본 뷰를 기반으로 새 마이닝 구조를 만들어야 합니다. 이 태스크에서는 마법사를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] 신경망 알고리즘 기반의 마이닝 구조를 만들고 이와 동시에 관련 마이닝 모델을 만듭니다.  
@@ -137,29 +136,29 @@ ms.locfileid: "52395806"
   
  기본 모델(연속)  
   
-|Value|별칭|  
+|값|별칭|  
 |-----------|-------------|  
 |Missing|0|  
 |0.09875|120|  
   
  클러스터링에 의한 범주화  
   
-|Value|별칭|  
+|값|별칭|  
 |-----------|-------------|  
 |\< 0.0748051948|34|  
-|0.0748051948-0.09716216215와|27|  
-|-0.09716216215와 0.13297297295|39|  
-|0.13297297295-0.167499999975|10|  
-|> = 0.167499999975|10|  
+|0.0748051948 - 0.09716216215|27|  
+|0.09716216215 - 0.13297297295|39|  
+|0.13297297295 - 0.167499999975|10|  
+|>= 0.167499999975|10|  
   
  Equal Areas에 의한 범주화  
   
-|Value|별칭|  
+|값|별칭|  
 |-----------|-------------|  
 |\< 0.07|26|  
-|-0.07 0.00|22|  
-|0.09-0.11|36|  
-|> = 0.12|36|  
+|0.07 - 0.00|22|  
+|0.09 - 0.11|36|  
+|>= 0.12|36|  
   
 > [!NOTE]  
 >  이러한 통계는 모든 데이터를 처리한 후 모델의 한계 통계 노드에서 가져올 수 있습니다. 한계 통계 노드에 해당 하는 방법에 대 한 자세한 내용은 참조 하세요. [마이닝 모델 콘텐츠 신경망 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)합니다.  
@@ -276,7 +275,7 @@ ms.locfileid: "52395806"
   
      새 임시 열 별칭인 표시할 표가 업데이트 되어 `ServiceGrade`, 열 사용법 옆에 있는 합니다. 마이닝 구조와 두 마이닝 모델이 포함된 표는 다음과 같습니다.  
   
-    |구조체|Call Center Default NN|Call Center Binned NN|  
+    |구조|Call Center Default NN|Call Center Binned NN|  
     |---------------|----------------------------|---------------------------|  
     ||Microsoft 신경망|Microsoft 신경망|  
     |AutomaticResponses|입력|입력|  

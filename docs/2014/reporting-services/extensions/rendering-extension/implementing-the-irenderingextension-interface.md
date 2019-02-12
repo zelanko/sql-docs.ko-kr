@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 458cca2d14d1dc012742286a04bd2ca90453277c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f7e331f7b7617e85ec8b577ac8c922ba41e4075
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227273"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040044"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>IRenderingExtension 인터페이스 구현
   렌더링 확장 프로그램은 실제 데이터와 결합된 보고서 정의에서 결과를 가져오고 결과 데이터를 사용 가능한 형식으로 렌더링합니다. 결합된 데이터의 변환과 형식 지정은 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>을 구현하는 CLR(공용 언어 런타임) 클래스를 사용하여 수행됩니다. 이것은 개체 모델을 뷰어, 프린터 또는 기타 출력 대상에서 사용할 수 있는 출력 형식으로 변환합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "48227273"
 -   *createAndRegisterStream*은 렌더링할 스트림을 가져오기 위해 호출되는 대리자 함수입니다.  
   
 ### <a name="deviceinfo-parameter"></a>deviceInfo 매개 변수  
- *deviceInfo* 매개 변수에는 보고서 매개 변수가 아니라 렌더링 매개 변수가 포함됩니다. 이러한 렌더링 매개 변수는 렌더링 확장 프로그램에 전달됩니다. *deviceInfo* 값은 보고서 서버에서 <xref:System.Collections.Specialized.NameValueCollection> 개체로 변환됩니다. *deviceInfo* 매개 변수의 항목은 대소문자를 구분하지 않는 값으로 처리됩니다. 렌더링 요청이 URL 액세스 결과로 이루어진 경우 `rc:key=value` 형식의 URL 매개 변수가 *deviceInfo* 사전 개체의 키/값 쌍으로 변환됩니다. 브라우저 감지 코드는 *clientCapabilities* 사전에 EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, Type 및 AcceptLanguage 항목을 제공합니다. 렌더링 확장 프로그램에서 인식할 수 없는 *deviceInfo* 매개 변수의 이름/값 쌍은 무시됩니다. 다음 코드 예제는 아이콘을 검색하는 예제 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 메서드를 보여 줍니다.  
+ *deviceInfo* 매개 변수에는 보고서 매개 변수가 아니라 렌더링 매개 변수가 포함됩니다. 이러한 렌더링 매개 변수는 렌더링 확장 프로그램에 전달됩니다. *deviceInfo* 값은 보고서 서버에서 <xref:System.Collections.Specialized.NameValueCollection> 개체로 변환됩니다. *deviceInfo* 매개 변수의 항목은 대소문자를 구분하지 않는 값으로 처리됩니다. 렌더링 요청이 URL 액세스 결과로 이루어진 경우 `rc:key=value` 형식의 URL 매개 변수가 *deviceInfo* 사전 개체의 키/값 쌍으로 변환됩니다. 브라우저 감지 코드의 다음 항목을 제공 합니다 *clientCapabilities* 사전: EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, Type 및 AcceptLanguage 항목을 제공합니다. 렌더링 확장 프로그램에서 인식할 수 없는 *deviceInfo* 매개 변수의 이름/값 쌍은 무시됩니다. 다음 코드 예제는 아이콘을 검색하는 예제 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 메서드를 보여 줍니다.  
   
 ```csharp  
 public void GetRenderingResource (CreateStream createStreamCallback, NameValueCollection deviceInfo)  

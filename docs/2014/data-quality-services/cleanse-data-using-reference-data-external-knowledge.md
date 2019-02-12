@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 101d5ba77dce4ef384e1d9ade52e8e847828d685
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e35d5ae9390a6b316ec41ce20a2983c1c78a1696
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532409"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029534"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>참조 데이터(외부) 기술 자료를 사용하여 데이터 정리
   이 항목에서는 참조 데이터 공급자의 기술 자료를 사용하여 데이터를 정리하는 방법에 대해 설명합니다. [DQS &#40;내부&#41; 기술 자료를 사용하여 데이터 정리](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)에서 설명한 대로 정리 작업을 실행하는 모든 단계는 참조 데이터 공급자의 기술 자료를 사용하여 데이터를 정리하는 경우와 같지만 이 항목에서는 DQS([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)])에서 참조 데이터 서비스를 사용하여 데이터를 정리하는 방법을 설명합니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "52532409"
     > [!NOTE]  
     >  **정리** 페이지에 다음 두 가지 방법으로 참조 데이터 서비스에 연결된 도메인에 대한 정보가 표시됩니다.  
     >   
-    >  -   메시지가 표시 됩니다. 아래는 **시작** 단추: "도메인 \<Domain1 >, \<도메인 2 >,... \<DomainN> 도메인이 참조 데이터 서비스 공급자를 사용하여 정리됩니다." 이 예제에서는 다음과 같은 메시지가 표시 됩니다. "도메인" Address Verification 참조 데이터 서비스 공급자를 사용 하 여 정리 됩니다.  
+    >  -   메시지가 표시 됩니다. 아래는 **시작** 단추: "Domains \<Domain1>, \<Domain2>,... \<DomainN> 도메인이 참조 데이터 서비스 공급자를 사용하여 정리됩니다." 이 예제에서는 다음과 같은 메시지가 표시 됩니다. "도메인" Address Verification 참조 데이터 서비스 공급자를 사용 하 여 정리 됩니다.  
     > -   참조 데이터 서비스 공급자에 연결된 도메인의 **프로파일러** 영역에 아이콘, ![도메인이 RDS에 연결됨](../../2014/data-quality-services/media/dqs-rdsindicator.JPG "도메인이 RDS에 연결됨")이 표시됩니다. 이 예에서는 **Address Verification** 복합 도메인에 대해 아이콘이 표시됩니다.  
   
 4.  **결과 관리 및 보기** 페이지에서 도메인 값을 검토합니다. 참조 데이터 서비스는 도메인이 참조 데이터 서비스에 매핑되는 동안 **제안된 후보** 상자에 지정된 최대 제안 수에 따라 둘 이상의 제안을 값에 대해 표시할 수 있습니다(사용 가능한 경우). 예를 들어, 다음 미국 주소에는 두 가지 제안이 표시됩니다.  

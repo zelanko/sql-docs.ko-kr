@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b729d5fb711a855c0edbdac14101e1e04c3bc83f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: c127f225efe1976c6607fbdc62ef90707a205584
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362535"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038058"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>스파크라인 및 데이터 막대(보고서 작성기 및 SSRS)
   스파크라인과 데이터 막대는 작은 공간에 많은 정보가 포함되어 있는 작고 간단한 차트로, 보통 텍스트와 인라인으로 표시됩니다. 스파크라인과 데이터 막대는 보통 테이블이나 행렬에 사용됩니다. 스파크라인과 데이터 막대는 여러 개를 함께 표시할 수 있어 하나씩 보는 대신 서로 빠르게 비교할 수 있기 때문에 유용합니다. 이렇게 하면 이상값(다른 행처럼 작동하지 않는 행)을 쉽게 확인할 수 있습니다. 스파크라인은 크기는 작지만 각각 시간에 따라 여러 데이터 요소를 표시하는 경우가 많습니다. 데이터 막대도 여러 데이터 요소를 표시할 수는 있지만 일반적으로는 하나만 표시합니다. 각 스파크라인은 보통 단일 계열을 제공합니다. 스파크라인은 집계된 데이터를 표시하므로 테이블의 세부 그룹에는 추가할 수 없으며 그룹과 연결된 셀에 배치해야 합니다. 스파크라인 및 데이터 막대에는 동일한 기본 차트 요소(범주, 계열 및 값)가 있지만 범례, 축 선, 레이블 또는 눈금 표시는 없습니다.  

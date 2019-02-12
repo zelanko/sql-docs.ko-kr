@@ -11,15 +11,15 @@ helpviewer_keywords:
 - administration
 - dqs,adminstration
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: eaa6bcef563ee41220a79443564ea68402ee3b03
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 6ff50e59daa241d64bbe878d6bd134c4efdea619
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032800"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032784"
 ---
 # <a name="dqs-administration"></a>dqs 관리
   DQS([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )를 사용하면 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]에서 수행되는 여러 DQS 활동을 관리하고, DQS 활동과 관련된 서버 수준의 속성을 구성하고, 참조 데이터 서비스 설정을 구성하고, DQS 로그 설정을 구성할 수 있습니다. 이러한 작업은 **의** 관리 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]기능을 통해 수행됩니다. DQS의 보안 액세스(역할)에 따라 사용자에게는 이 영역의 특정 기능에 대한 액세스 권한이 부여되거나 거부됩니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "51032800"
 ### <a name="configuration"></a>Configuration  
  **의** 구성 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 화면에서는 DQS 관리자가 다음 작업을 수행할 수 있습니다.  
   
--   **참조 데이터**: 참조 데이터 서비스 공급자 구성: Windows Azure 마켓플레이스 또는 다이렉트 참조 데이터 서비스 공급자입니다. 참조 데이터 서비스 공급자를 설정한 후 기술 자료에서 도메인 관리 활동 중 참조 데이터와 함께 도메인/복합 도메인을 매핑하고 동일한 기술 자료를 데이터 품질 프로젝트의 정리 활동에 대해 사용할 수 있습니다. 또한 Windows Azure Marketplace를 사용하도록 인터넷에 연결하기 위해 프록시 설정을 지정할 수 있습니다.  
+-   **참조 데이터**: 참조 데이터 서비스 공급자 구성: Windows Azure Marketplace 또는 직접 참조 데이터 서비스 공급자. 참조 데이터 서비스 공급자를 설정한 후 기술 자료에서 도메인 관리 활동 중 참조 데이터와 함께 도메인/복합 도메인을 매핑하고 동일한 기술 자료를 데이터 품질 프로젝트의 정리 활동에 대해 사용할 수 있습니다. 또한 Windows Azure Marketplace를 사용하도록 인터넷에 연결하기 위해 프록시 설정을 지정할 수 있습니다.  
   
 -   **일반 설정**: 데이터 정리 및 데이터 일치에 대한 임계값을 지정하고 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]에서 프로파일링을 위한 알림을 사용하도록 설정할지 여부를 지정합니다. 이러한 임계값은 데이터 품질 프로젝트에서 컴퓨터 기반 정리 및 일치 활동 중에 DQS에서 사용됩니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "51032800"
   
 -   **DQS 데이터베이스 백업 및 복원**: DQS 데이터베이스의 백업 및 복원은 DQS와 관련된 몇 가지 고려 사항을 제외하면 다른 SQL Server 데이터베이스를 백업 및 복원하는 것과 동일합니다.  
   
--   **DQS 데이터베이스 분리 및 연결**: DQS 데이터베이스를 분리 및 연결하는 단계는 DQS와 관련된 몇 가지 고려 사항을 제외하면 다른 SQL Server 데이터베이스를 분리 및 연결하는 단계와 동일합니다.  
+-   **DQS 데이터베이스 연결 및 분리**: DQS 데이터베이스를 분리 및 연결하는 단계는 DQS와 관련된 몇 가지 고려 사항을 제외하면 다른 SQL Server 데이터베이스를 분리 및 연결하는 단계와 동일합니다.  
   
  자세한 내용은 [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md)을 참조하세요.  
   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data sources
 ms.assetid: f417782c-b85a-4c4d-8a40-839176daba56
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1862d4d8a1437f223e688b0b2b95ad5b5768e6a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 97a619b1618c1e733a61e5cd9ea825e07efddcac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224445"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031954"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본(보고서 작성기 및 SSRS)
   보고서는 쿼리가 실행되거나 보고서가 처리될 때 데이터 연결을 사용하여 보고서에 대한 데이터를 검색합니다. 기본 제공 데이터 연결 유형 목록에서 선택하여 관계형 데이터베이스, 다차원 데이터베이스, 웹 서비스 또는 다른 데이터 원본에 연결할 수 있습니다. 데이터 연결 설명에는 다음과 같은 용어가 사용됩니다.  
@@ -45,11 +45,11 @@ ms.locfileid: "48224445"
 ## <a name="shared-data-sources"></a>공유 데이터 원본  
  공유 데이터 원본은 자주 사용하는 데이터 원본이 있는 경우에 유용합니다. 가능한 한 공유 데이터 원본을 사용하는 것이 좋습니다. 공유 데이터 원본을 사용하면 보고서 및 보고서 액세스 관리가 더 쉬울 뿐만 아니라 보고서 및 보고서에서 액세스하는 데이터 원본을 보다 안전하게 유지할 수 있습니다. 공유 데이터 원본이 필요한 경우에는 공유 데이터 원본을 만들어 주도록 시스템 관리자에게 요청하세요.  
   
- 보고서 작성기에서는 공유 데이터 원본을 만들 수 없습니다. 보고서 서버에서 공유 데이터 원본을 찾아보고 선택할 수 있습니다. 자세한 내용은 [데이터 연결, 데이터 원본 및 보고서 작성기에서 연결 문자열](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)합니다.  
+ 보고서 작성기에서는 공유 데이터 원본을 만들 수 없습니다. 보고서 서버에서 공유 데이터 원본을 찾아보고 선택할 수 있습니다. 자세한 내용은 [Data Connections, Data Sources, and Connection Strings in Report Builder](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)을 참조하세요.  
   
  보고서 디자이너에서는 보고서 서버에 있는 공유 데이터 원본을 찾아볼 수 없습니다. 솔루션 탐색기에서 프로젝트의 일부로 공유 데이터 원본을 만들고 보고서 서버에 배포할지 여부를 선택할 수 있습니다. 사용자 컴퓨터와 보고서 서버에서 필요한 자격 증명의 차이로 인해 로컬에서만 사용하도록 선택할 수도 있습니다. 자세한 내용은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)을 참조하세요.  
   
- 다음 아이콘은 보고서 서버 폴더 계층에서 공유 데이터 원본 항목을 나타냅니다: ![공유 데이터 원본 아이콘](media/hlp-16datasource.png "공유 데이터 원본 아이콘")  
+ 다음 아이콘은 보고서 서버 폴더 계층 구조에서 공유 데이터 원본 항목을 나타냅니다. ![공유 데이터 원본 아이콘](media/hlp-16datasource.png "공유 데이터 원본 아이콘")  
   
 ## <a name="embedded-data-sources"></a>포함된 데이터 원본  
  포함된 데이터 원본은 보고서 정의에 저장되는 데이터 연결입니다. 포함된 데이터 원본 연결 정보는 해당 정보가 포함된 보고서에서만 사용될 수 있습니다. 포함된 데이터 원본을 정의하고 관리하려면 보고서의 **데이터 원본 속성** 대화 상자를 사용합니다.  
@@ -70,8 +70,8 @@ ms.locfileid: "48224445"
   
 ## <a name="see-also"></a>관련 항목  
  [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [보고서 제작 개념 &#40;보고서 작성기 및 SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
- [Reporting Services에서 지 원하는 데이터 원본 &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [보고서 제작 개념&#40;보고서 작성기 및 SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [데이터 연결이 나 데이터 원본 추가 및 확인 &#40;보고서 작성기 및 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
  [포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   

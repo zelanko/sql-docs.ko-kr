@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: bc1c0f27-41cb-49ad-8bef-634a4c23586f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: af50422d5f293b1c3bfd58a7db6472bbf81a81d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f8f319a2bbca4a274800d72b9ef027f4852fb4a5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056163"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030114"
 ---
 # <a name="delete-group-dialog-box"></a>그룹 삭제 대화 상자
   **그룹 삭제** 대화 상자를 사용하여 테이블, 행렬 또는 목록 데이터 영역에서 그룹을 삭제할 수 있습니다. 그룹에 연결된 행 또는 열이 있는 경우 해당 구조도 함께 삭제할 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48056163"
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 디자이너 F1 도움말](tools/report-designer-f1-help.md)   
- [그룹 이해 &#40;보고서 작성기 및 SSRS&#41;](report-design/understanding-groups-report-builder-and-ssrs.md)   
+ [그룹 이해&#40;보고서 작성기 및 SSRS&#41;](report-design/understanding-groups-report-builder-and-ssrs.md)   
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

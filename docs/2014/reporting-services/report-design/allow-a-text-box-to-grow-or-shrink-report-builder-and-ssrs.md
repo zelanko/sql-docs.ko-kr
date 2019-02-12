@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: dbc01e78-5993-47e5-af04-34f9e3bbcee1
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f0d3d0a5638ae331f4b183e5b0232a27f07951c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 75998722f773685e419f0618dc75864ae5fece16
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097853"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028234"
 ---
 # <a name="allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs"></a>입력란을 늘리거나 줄이도록 허용(보고서 작성기 및 SSRS)
   기본적으로 입력란은 고정된 크기를 가집니다. 입력란의 내용에 따라 입력란을 확장하거나 축소할 수 있는 옵션을 설정할 수 있습니다. 이러한 옵션은 속성 창의 `CanGrow` 또는 `CanShrink` 속성에 해당합니다.  
@@ -35,6 +35,6 @@ ms.locfileid: "48097853"
     -   입력란이 해당 내용에 따라 줄어들 수 있게 하려면 **높이 감소 허용**을 선택합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [텍스트 상자 &#40;보고서 작성기 및 SSRS&#41;](text-boxes-report-builder-and-ssrs.md)  
+ [입력란&#40;보고서 작성기 및 SSRS&#41;](text-boxes-report-builder-and-ssrs.md)  
   
   

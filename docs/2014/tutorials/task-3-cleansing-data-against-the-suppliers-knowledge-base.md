@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 647c924a-9b91-4294-8d96-e81416e4e90e
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5aca49b5260fc68f899a012aadaac7609fdb7062
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 53dde66e84dd7304f81c4b6fd7de8dbe939d22d4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360335"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035914"
 ---
 # <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>태스크 3: 공급자 기술 자료에 대한 데이터 정리
   이 작업에서는 컴퓨터 기반 정리 프로세스를 실행합니다. DQS에서는 지정된 임계값을 기반으로 고급 알고리즘 및 신뢰도 수준을 사용하여 선택한 기술 자료에 대해 데이터를 분석한 다음 데이터를 정리합니다. 자세한 내용은 [DQS(내부) 기술 자료를 사용하여 데이터 정리](https://msdn.microsoft.com/library/hh213061.aspx) 를 참조하십시오.  

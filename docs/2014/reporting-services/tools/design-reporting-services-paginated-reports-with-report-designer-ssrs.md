@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: daaa0d4a48f1e5feb90fdf2fd8270b287fa7fc97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3216a1978378676ef74c0ec11a57d73a9ba528ab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145893"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037814"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>보고서 디자이너로 보고서 디자인(SSRS)
   보고서 디자이너를 사용하여 완전한 기능을 갖춘 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 및 보고 솔루션을 만들 수 있습니다. 보고서 디자이너에서 제공하는 그래픽 인터페이스를 통해 데이터 원본과 데이터 세트 및 쿼리, 보고서의 데이터 영역과 필드의 레이아웃 위치, 매개 변수와 같은 대화형 기능, 함께 작동하는 보고서 세트를 정의할 수 있습니다.  
@@ -118,7 +118,7 @@ ms.locfileid: "48145893"
   
     -   F5 키를 누릅니다.  
   
-     에 지정 된 보고서, 보고서를 작성은 하지만 배포 하지 않는 프로젝트 구성을 사용 하는 경우는 `StartItem` 별도 미리 보기 창에서 열리며, 현재 구성의 속성입니다.  
+     보고서를 작성은 하지만 배포하지 않는 프로젝트 구성을 사용하면 현재 구성의 `StartItem` 속성에 지정된 보고서는 별도의 미리 보기 창에 열립니다.  
   
     > [!NOTE]  
     >  디버그 모드를 사용하려면 먼저 시작 항목을 설정해야 합니다. 솔루션 탐색기에서 보고서 프로젝트를 마우스 오른쪽 단추로 클릭, 클릭 **속성**, 및 `StartItem`, 표시할 보고서의 이름을 선택 합니다.  
@@ -183,7 +183,7 @@ ms.locfileid: "48145893"
 |3|알아차릴 수 없게 약간만 보고서 레이아웃을 변경하는 사소한 빌드 문제|  
 |4|경고를 게시하기 위해서만 사용됩니다.|  
   
- 미리 보기 또는 보고서 항목의 새로운 기능을 포함 하는 보고서를 배포 하려고 시도 하면 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], 지도 및 데이터 막대와 같은 이러한 보고서 항목이 보고서에서 제거 수입니다. 기본적으로 구성의 ErrorLevel 속성은 2로 설정되므로 지도가 제거될 경우 보고서 빌드가 실패합니다. 그러나 ErrorLevel 속성 값을 0 또는 1로 변경할 경우 지도는 삭제되고 경고가 표시되며 빌드 프로세스가 계속됩니다.  
+ 지도 및 데이터 막대와 같은 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]의 새로운 보고서 항목을 포함하는 보고서를 미리 보거나 배포하려고 하면 이러한 보고서 항목이 보고서에서 제거될 수 있습니다. 기본적으로 구성의 ErrorLevel 속성은 2로 설정되므로 지도가 제거될 경우 보고서 빌드가 실패합니다. 그러나 ErrorLevel 속성 값을 0 또는 1로 변경할 경우 지도는 삭제되고 경고가 표시되며 빌드 프로세스가 계속됩니다.  
   
   
 ## <a name="see-also"></a>관련 항목  

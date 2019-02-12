@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e83d32be1dbb93a75c1d46f3edf7f46d8a0f8a7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ff32fcd498d7998f79b480369d90a07f974f6dc6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209503"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035084"
 ---
 # <a name="preload-the-cache-report-manager"></a>캐시 사전 로드(보고서 관리자)
   공유 데이터 세트에 대한 캐시 새로 고침 계획을 만들어 공유 데이터 세트에 대한 캐시를 미리 로드할 수 있습니다.  
@@ -121,10 +121,10 @@ ms.locfileid: "48209503"
 18. **적용**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 기반 구독](../subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../subscriptions/data-driven-subscriptions.md)   
  [데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
  [성능, 스냅숏, 캐싱&#40;Reporting Services&#41;](performance-snapshots-caching-reporting-services.md)   
  [보고서 처리 속성 설정](set-report-processing-properties.md)   
- [보고서 캐시 &#40;SSRS&#41;](caching-reports-ssrs.md)  
+ [보고서 캐시&#40;SSRS&#41;](caching-reports-ssrs.md)  
   
   
