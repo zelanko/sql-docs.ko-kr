@@ -1,7 +1,7 @@
 ---
 title: '3단계: Java를 사용하여 SQL에 연결하는 개념 증명 | Microsoft Docs'
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3afb5c45bcf1b007806ec1fdf83f4fd4958fe324
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 305be93a342b66a18cae6de4f60ba9efa98e1738
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849791"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736904"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>3단계: Java를 사용하여 SQL에 연결하는 개념 증명
   
@@ -42,7 +42,6 @@ public class SQLDatabaseConnection {
                         + "password=yourpassword;"
                         + "encrypt=true;"
                         + "trustServerCertificate=false;"
-                        + "hostNameInCertificate=*.database.windows.net;"
                         + "loginTimeout=30;";
 
         try (Connection connection = DriverManager.getConnection(connectionUrl);) {
@@ -78,7 +77,6 @@ public class SQLDatabaseConnection {
                 + "password=yourpassword;"
                 + "encrypt=true;"
                 + "trustServerCertificate=false;"
-                + "hostNameInCertificate=*.database.windows.net;"
                 + "loginTimeout=30;";
 
         ResultSet resultSet = null;
@@ -102,7 +100,7 @@ public class SQLDatabaseConnection {
 }
 ```  
   
-## <a name="step-3-insert-a-row"></a>3 단계: 행 삽입  
+## <a name="step-3-insert-a-row"></a>3단계: 행 삽입  
 이 예제에서는 INSERT 문을 실행 매개 변수를 전달 하 고 자동으로 생성 된 기본 키 값을 검색 합니다.   
   
 ```java  
@@ -124,7 +122,6 @@ public class SQLDatabaseConnection {
                         + "password=yourpassword;"
                         + "encrypt=true;"
                         + "trustServerCertificate=false;"
-                        + "hostNameInCertificate=*.database.windows.net;"
                         + "loginTimeout=30;";
 
         String insertSql = "INSERT INTO SalesLT.Product (Name, ProductNumber, Color, StandardCost, ListPrice, SellStartDate) VALUES "
@@ -153,4 +150,4 @@ public class SQLDatabaseConnection {
 ```  
   
 ## <a name="additional-samples"></a>추가 샘플  
-[샘플 JDBC 드라이버 응용 프로그램](../../connect/jdbc/sample-jdbc-driver-applications.md)
+[샘플 JDBC 드라이버 애플리케이션](../../connect/jdbc/sample-jdbc-driver-applications.md)
