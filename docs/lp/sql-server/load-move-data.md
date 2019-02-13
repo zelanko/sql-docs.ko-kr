@@ -4,20 +4,21 @@ hide_bc: true
 title: SQL Server - 데이터 로드 및 이동
 description: SQL Server를 통해 데이터베이스와 데이터를 로드, 이동 및 마이그레이션하는 데 도움이 되는 기능을 살펴보세요.
 ms.topic: hub-page
+ms.prod: sql
 featureFlags:
 - clicktale
-ms.openlocfilehash: ab591fc5f9d816919113b92dc938ee9ab50b0deb
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 75a5da55b81e1ae007372174e18670d48c847372
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698211"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079359"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -27,7 +28,7 @@ ms.locfileid: "51698211"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">SQL Server 다운로드</span>
+                                    <span class="likeAnH3">SQL Server 2019 시험 사용(미리 보기)</span>
                                 </div>
                             </div>
                         </div>

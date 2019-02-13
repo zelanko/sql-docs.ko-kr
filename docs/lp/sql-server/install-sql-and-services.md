@@ -4,20 +4,21 @@ hide_bc: true
 title: SQL Server - 설치 및 업그레이드
 description: SQL Server 및 관련 서비스를 설치하거나 업그레이드하는 데 도움이 되는 콘텐츠를 찾습니다.
 ms.topic: hub-page
+ms.prod: sql
 featureFlags:
 - clicktale
-ms.openlocfilehash: 729759ad9e60f5ec45845545f7b81e1cbc1bae73
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 58b303a225e004103e901fcbbf28f368d384d0b9
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402086"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079299"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -27,7 +28,7 @@ ms.locfileid: "52402086"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">SQL Server 다운로드</span>
+                                    <span class="likeAnH3">SQL Server 2019 시험 사용(미리 보기)</span>
                                 </div>
                             </div>
                         </div>

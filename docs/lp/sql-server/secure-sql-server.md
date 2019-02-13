@@ -4,20 +4,21 @@ hide_bc: true
 title: SQL Server 보안
 description: SQL Server를 보호하는 기능을 탐색합니다.
 ms.topic: hub-page
+ms.prod: sql
 featureFlags:
 - clicktale
-ms.openlocfilehash: a127925183744c7e64e443d1127517c5fe41da23
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a8e0f1a1c9e09992ec92813903fd563d48fe7fa4
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698131"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079279"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -27,7 +28,7 @@ ms.locfileid: "51698131"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">SQL Server 다운로드</span>
+                                    <span class="likeAnH3">SQL Server 2019 시험 사용(미리 보기)</span>
                                 </div>
                             </div>
                         </div>

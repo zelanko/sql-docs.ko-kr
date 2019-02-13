@@ -4,20 +4,21 @@ hide_bc: true
 title: SQL Server 비즈니스 연속성
 description: 상황에 관계없이 고가용성, 재해 복구에 대해 다른 SQL Server 기능을 탐색하여 비즈니스를 계속 실행합니다.
 ms.topic: hub-page
+ms.prod: sql
 featureFlags:
 - clicktale
-ms.openlocfilehash: 3aa486304568d2d572b1d1946a89c8ab5ec9753a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bcf57c58e706a8f25a1cd2f2ace671480352f5a2
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698161"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079369"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -27,7 +28,7 @@ ms.locfileid: "51698161"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">SQL Server 다운로드</span>
+                                    <span class="likeAnH3">SQL Server 2019 시험 사용(미리 보기)</span>
                                 </div>
                             </div>
                         </div>

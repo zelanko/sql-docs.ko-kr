@@ -4,20 +4,21 @@ hide_bc: true
 title: SQL Server 데이터베이스 디자인
 description: 비즈니스 요구 사항에 가장 적합한 데이터베이스를 디자인하는 데 도움이 되는 SQL Server의 기능을 찾습니다.
 ms.topic: hub-page
+ms.prod: sql
 featureFlags:
 - clicktale
-ms.openlocfilehash: e72ef40dcce199c962c67e2c8c517681664e5b11
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ce9981d93ffa1d59b3966b42b0c9b63a1e1a6ba7
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702181"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079419"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -27,7 +28,7 @@ ms.locfileid: "51702181"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">SQL Server 다운로드</span>
+                                    <span class="likeAnH3">SQL Server 2019 시험 사용(미리 보기)</span>
                                 </div>
                             </div>
                         </div>
@@ -149,7 +150,7 @@ ms.locfileid: "51702181"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Filetable</h3>
-                                                    <p>FileTable을 통해 애플리케이션이 해당 저장소 및 데이터 관리 구성 요소를 통합할 수 있으며, 구조화되지 않은 데이터 및 메타데이터에 대한 통합 SQL Server 서비스(전체 텍스트 검색 및 의미 체계 검색 포함)가 제공됩니다.</p>
+                                                    <p>FileTable을 통해 애플리케이션이 해당 스토리지 및 데이터 관리 구성 요소를 통합할 수 있으며, 구조화되지 않은 데이터 및 메타데이터에 대한 통합 SQL Server 서비스(전체 텍스트 검색 및 의미 체계 검색 포함)가 제공됩니다.</p>
                                                 </div>
                                             </div>
                                         </div>
