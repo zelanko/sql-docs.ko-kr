@@ -15,15 +15,15 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 7d02ead6a601c47ba68bd12ece8fa444ceee5a9e
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 7769edd1718881a01fe0f40ae2b7dc0e8b8ec78a
+ms.sourcegitcommit: 89a7bd9ccbcb19bb92a1f4ba75576243a58584e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226400"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56159768"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>명령줄에서 Data Migration Assistant 실행
-Data Migration Assistant 설치 버전 2.1 이상에서 시기, dmacmd.exe에도 설치 됩니다 *% ProgramFiles %\\Microsoft Data Migration Assistant\\*합니다. Dmacmd.exe를 사용 하 여 무인된 모드에서 데이터베이스를 평가 및 JSON 또는 CSV 파일로 결과 출력 합니다. 이 메서드는 여러 데이터베이스 또는 대규모 데이터베이스를 평가할 때 특히 유용 합니다. 
+Data Migration Assistant 설치 버전 2.1 이상에서 시기, dmacmd.exe에도 설치 됩니다 *% ProgramFiles %\\Microsoft Data Migration Assistant\\*합니다. Dmacmd.exe를 사용 하 여 무인된 모드에서 데이터베이스를 평가 및 JSON 또는 CSV 파일로 결과 출력 합니다. 이 메서드는 여러 데이터베이스 또는 대규모 데이터베이스를 평가할 때 특히 유용 합니다. 
 
 > [!NOTE]
 > Dmacmd.exe 실행 중인 평가 지원합니다. 이 이번에는 마이그레이션이 지원 되지 않습니다.
@@ -52,7 +52,11 @@ DmaCmd.exe /AssessmentName="string"
 |`/AssessmentOverwriteResult`     | 결과 파일 덮어쓰기    | N
 |`/AssessmentResultJson`     | JSON 결과 파일에 전체 경로     | Y <br> (AssessmentResultJson 또는 AssessmentResultCsv 필요)
 |`/AssessmentResultCsv`    | CSV 결과 파일에 전체 경로   | Y <br>(AssessmentResultJson 또는 AssessmentResultCsv 필요)
-
+|`/Action`    | SkuRecommendation를 사용 하 여 SKU 권장 사항 가져오기를 AssessTargetReadiness를 사용 하 여 대상 준비 상태 평가 수행 합니다.   | N
+|`/SourceConnections`    | 연결 문자열의 공백으로 구분 기호로 분리 된 목록입니다. 데이터베이스 이름 (초기 카탈로그) 선택 사항입니다. 데이터베이스 이름을 제공 하지, 모든 데이터베이스 원본에 평가 됩니다.   | Y <br>(작업 'AssessTargetReadiness' 인 경우 필수)
+|`/TargetReadinessConfiguration`    | 전체 경로 이름, 원본 연결 및 결과 파일에 대 한 값을 설명 하는 XML 파일입니다.   | Y <br>(TargetReadinessConfiguration 또는 SourceConnections 필요)
+|`/FeatureDiscoveryReportJson`    | 기능 검색 보고서 JSON 경로입니다. 이 파일을 생성 하는 경우 다음 사용할 수 원본에 연결 하지 않고 대상 준비 상태 평가 다시 실행 합니다.   | N
+|`/ImportFeatureDiscoveryReportJson`    | 이전에 만든 기능 검색 JSON 보고서에 대 한 경로입니다. 원본 연결 대신이 파일이 사용 됩니다.   | N
 
 ## <a name="examples-of-assessments-using-the-cli"></a>CLI를 사용 하 여 평가의 예
 
@@ -66,8 +70,8 @@ DmaCmd.exe /AssessmentName="string"
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
-Catalog=DatabaseName;***Integrated Security=true*"**
-***/AssessmentEvaluateCompatibilityIssues*** /AssessmentOverwriteResult
+Catalog=DatabaseName;Integrated Security=true"
+/AssessmentEvaluateCompatibilityIssues /AssessmentOverwriteResult
 /AssessmentResultJson="C:\\temp\\Results\\AssessmentReport.json"
 ```
 
@@ -76,8 +80,8 @@ Catalog=DatabaseName;***Integrated Security=true*"**
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
-Catalog=DatabaseName;***User Id=myUsername;Password=myPassword;***"
-***/AssessmentEvaluateRecommendations*** /AssessmentOverwriteResult
+Catalog=DatabaseName;User Id=myUsername;Password=myPassword;"
+/AssessmentEvaluateRecommendations /AssessmentOverwriteResult
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
 
@@ -87,22 +91,22 @@ Catalog=DatabaseName;***User Id=myUsername;Password=myPassword;***"
 DmaCmd.exe /AssessmentName="TestAssessment"
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
 Catalog=DatabaseName;Integrated Security=true"
-***/AssessmentTargetPlatform="SqlServer2012"***
+/AssessmentTargetPlatform="SqlServer2012"
 /AssessmentEvaluateRecommendations /AssessmentOverwriteResult
-***/AssessmentResultJson***="C:\\temp\\Results\\AssessmentReport.json"
-***/AssessmentResultCsv***="C:\\temp\\Results\\AssessmentReport.csv"
+/AssessmentResultJson="C:\\temp\\Results\\AssessmentReport.json"
+/AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
 
 **대상 플랫폼이 SQL Azure 데이터베이스에 대 한 단일 데이터베이스 평가.json 및.csv 파일로 결과 저장**
 
 ```
-DmaCmd.exe /AssessmentName="TestAssessment" 
+DmaCmd.exe /AssessmentName="TestAssessment" 
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
 Catalog=DatabaseName;Integrated Security=true"
 /AssessmentTargetPlatform="AzureSqlDatabaseV12"
 /AssessmentEvaluateCompatibilityIssues /AssessmentEvaluateFeatureParity
-/AssessmentOverwriteResult 
-/AssessmentResultCsv="C:\\temp\\AssessmentReport.csv" 
+/AssessmentOverwriteResult 
+/AssessmentResultCsv="C:\\temp\\AssessmentReport.csv" 
 /AssessmentResultJson="C:\\temp\\AssessmentReport.json"
 ```
 
@@ -110,15 +114,103 @@ Catalog=DatabaseName;Integrated Security=true"
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
-***/AssessmentDatabases="Server=SQLServerInstanceName1;Initial
+/AssessmentDatabases="Server=SQLServerInstanceName1;Initial
 Catalog=DatabaseName1;Integrated Security=true"
 "Server=SQLServerInstanceName1;Initial Catalog=DatabaseName2;Integrated
 Security=true" "Server=SQLServerInstanceName2;Initial
-Catalog=DatabaseName3;Integrated Security=true"***
+Catalog=DatabaseName3;Integrated Security=true"
 /AssessmentTargetPlatform="SqlServer2016"
 /AssessmentEvaluateCompatibilityIssues /AssessmentOverwriteResult
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 /AssessmentResultJson="C:\\Results\\test2016.json"
+```
+
+**Windows 인증을 사용 하 여 단일 데이터베이스 대상 준비 평가**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/AssessmentName="TestAssessment" 
+/SourceConnections="Server=SQLServerInstanceName;Initial Catalog=DatabaseName;Integrated Security=true" 
+/AssessmentOverwriteResult 
+/AssessmentResultJson="C:\temp\Results\AssessmentReport.json"
+```
+
+**SQL Server 인증을 사용 하 여 단일 데이터베이스 대상 준비 평가**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/AssessmentName="TestAssessment" 
+/SourceConnections="Server=SQLServerInstanceName;Initial Catalog=DatabaseName;User Id=myUsername;Password=myPassword;" /AssessmentEvaluateRecommendations 
+/AssessmentOverwriteResult 
+/AssessmentResultJson="C:\temp\Results\AssessmentReport.json" 
+
+```
+
+**여러 데이터베이스 대상 준비 상태 평가**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/AssessmentName="TestAssessment" 
+/SourceConnections="Server=SQLServerInstanceName1;Initial Catalog=DatabaseName1;Integrated Security=true" "Server=SQLServerInstanceName1;Initial Catalog=DatabaseName2;Integrated Security=true" "Server=SQLServerInstanceName2;Initial Catalog=DatabaseName3;Integrated Security=true" 
+/AssessmentOverwriteResult  
+/AssessmentResultJson="C:\Results\test2016.json"
+
+```
+
+**Windows 인증을 사용 하 여 서버의 모든 데이터베이스에 대 한 대상 준비 평가**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/AssessmentName="TestAssessment" 
+/SourceConnections="Server=SQLServerInstanceName;Integrated Security=true" 
+/AssessmentOverwriteResult 
+/AssessmentResultJson="C:\temp\Results\AssessmentReport.json"
+
+```
+
+**이전에 만든 기능 검색 보고서를 가져와서 대상 준비 상태 평가**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/AssessmentName="TestAssessment" 
+/ImportFeatureDiscoveryReportJson="c:\temp\feature_report.json" 
+/AssessmentOverwriteResult 
+/AssessmentResultJson="C:\temp\Results\AssessmentReport.json"
+
+```
+
+**구성 파일을 제공 하 여 대상 준비 상태 평가**
+
+```
+DmaCmd.exe /Action=AssessTargetReadiness 
+/TargetReadinessConfiguration=.\Config.xml
+
+```
+구성 파일 내용을 사용 하는 경우 원본 연결:
+```
+<?xml version="1.0" encoding="utf-8" ?>
+<TargetReadinessConfiguration xmlns="http://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
+  <AssessmentName>name</AssessmentName>
+  <SourceConnections>
+    <SourceConnection>connection string 1</SourceConnection>
+    <SourceConnection>connection string 2</SourceConnection>
+    <!-- ... -->
+    <SourceConnection>connection string n</SourceConnection>
+  </SourceConnections>
+  <AssessmentResultJson>path\to\file.json</AssessmentResultJson>
+  <FeatureDiscoveryReportJson>path\to\featurediscoveryreport.json</FeatureDiscoveryReportJson>
+  <OverwriteResult>true</OverwriteResult> <!-- or false -->
+</TargetReadinessConfiguration>
+```
+
+구성 파일 내용 기능 검색 보고서를 가져올 때:
+```
+<TargetReadinessConfiguration xmlns="http://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
+  <AssessmentName>name</AssessmentName>
+  <ImportFeatureDiscoveryReportJson>path\to\featurediscoveryfile.json</ImportFeatureDiscoveryReportJson>
+  <AssessmentResultJson>path\to\resultfile.json</AssessmentResultJson>
+  <OverwriteResult>true</OverwriteResult><!-- or false -->
+</TargetReadinessConfiguration>
 ```
 
 ## <a name="azure-sql-database-sku-recommendations-using-the-cli"></a>CLI를 사용 하 여 azure SQL 데이터베이스 SKU 권장 사항
@@ -141,7 +233,7 @@ Catalog=DatabaseName3;Integrated Security=true"***
 |`/SkuRecommendationHtmlResultsFilePath` |  HTML 결과 파일에 전체 경로 | Y <br>(TSV 또는 JSON 또는 HTML 파일 경로가 필요)
 |`/SkuRecommendationPreventPriceRefresh` |  발생 가격 새로 고침을 방지합니다. 오프 라인 모드에서 실행 하는 경우 사용 합니다. |    Y <br>(정적 가격에 대 한이 인수는 선택 하거나 아래 모든 인수를 가져오는 최신 가격 선택 해야 합니다.)
 |`/SkuRecommendationCurrencyCode` | (예: 가격을 표시 하는 통화 "USD") | Y <br>(않으려면 최신 가격 가져오기)
-|`/SkuRecommendationOfferName` |    제품 이름 (예: "-0003 MS-AZR"). 자세한 내용은 참조는 [Microsoft Azure 제품 세부 정보](https://azure.microsoft.com/support/legal/offer-details/) 페이지입니다. |   Y <br>(않으려면 최신 가격 가져오기)
+|`/SkuRecommendationOfferName` |    제품 이름 (예: "MS-AZR-0003P"). 자세한 내용은 참조는 [Microsoft Azure 제품 세부 정보](https://azure.microsoft.com/support/legal/offer-details/) 페이지입니다. |   Y <br>(않으려면 최신 가격 가져오기)
 |`/SkuRecommendationRegionName` |   지역 이름 (예: "미국 서 부") |   Y <br>(않으려면 최신 가격 가져오기)
 |`/SkuRecommendationSubscriptionId` | 구독 ID입니다. |    Y <br>(않으려면 최신 가격 가져오기)
 |`/AzureAuthenticationTenantId` | Authentication 테 넌 트가 있습니다. |  Y <br>(않으려면 최신 가격 가져오기)

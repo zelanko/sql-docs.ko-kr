@@ -1,6 +1,6 @@
 ---
 title: SQL Server Analysis Services 테이블 형식 1400 모델에서 지 원하는 데이터 원본 | Microsoft Docs
-ms.date: 05/07/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 856e15e7365128bc79d119afe267334fb8470832
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4c900c6f1683b9f4c96355a759c604022515d2ce
+ms.sourcegitcommit: 89a7bd9ccbcb19bb92a1f4ba75576243a58584e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041661"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56159758"
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1400-models"></a>1400 테이블 형식 모델 SQL Server Analysis Services에서 지 원하는 데이터 원본
 
@@ -29,17 +29,22 @@ Azure Analysis Services에 대 한 참조 [Azure Analysis Services에서 지 원
 
 ## <a name="cloud-data-sources"></a>클라우드 데이터 원본
 
-|Azure 데이터 원본  |메모리 내  |DirectQuery  |
+|데이터 원본  |메모리 내  |DirectQuery  |
 |---------|---------|---------|
 |Azure SQL 데이터베이스     |   예      |    예      |
 |Azure SQL 데이터 웨어하우스     |   예      |   예       |
 |Azure Blob Storage     |   예       |    아니요      |
 |Azure Table Storage    |   예       |    아니요      |
-|Azure Cosmos DB      |  예        |  아니요        |
-|Azure Data Lake Store     |   예       |    아니요      |
-|Azure HDInsight HDFS     |     예     |   아니요       |
-|Azure HDInsight Spark (베타)     |   예       |   아니요       |
+|Azure Cosmos DB     |  예        |  아니요        |
+|Azure Data Lake Store (Gen1)<sup>[1](#gen2)</sup>      |   사용자 계정 컨트롤       |    아니요      |
+|Azure HDInsight HDFS    |     예     |   아니요       |
+|Azure HDInsight Spark <sup>[2](#databricks)</sup>     |   사용자 계정 컨트롤       |   아니요       |
 ||||
+
+<a name="gen2">1</a> -ADLS Gen2 현재 지원 되지 않습니다.   
+<a name="databricks">2</a> -커넥터는 현재 지원 되지 않습니다 Spark를 사용 하 여 azure Databricks 합니다.   
+
+
 
 **공급자**   
 메모리 내 모델과 DirectQuery 모델 Azure 데이터 원본에 연결할 SQL Server에 대 한.NET Framework Data Provider를 사용 합니다.
@@ -51,7 +56,7 @@ Azure Analysis Services에 대 한 참조 [Azure Analysis Services에서 지 원
 |데이터 원본 | 메모리 내 공급자 | DirectQuery 공급자 |
 |  --- | --- | --- |
 | SQL Server |SQL Server Native Client 11.0, Microsoft OLE DB Provider for SQL Server,.NET Framework Data Provider for SQL Server | .NET Framework Data Provider for SQL Server |
-| SQL Server 데이터 웨어하우스 |SQL Server Native Client 11.0, Microsoft OLE DB Provider for SQL Server,.NET Framework Data Provider for SQL Server | .NET Framework Data Provider for SQL Server |
+| SQL Server Data Warehouse |SQL Server Native Client 11.0, Microsoft OLE DB Provider for SQL Server,.NET Framework Data Provider for SQL Server | .NET Framework Data Provider for SQL Server |
 | Oracle |Microsoft OLE DB Provider for Oracle에서 Oracle Data Provider for.NET |.NET 용 oracle Data Provider | |
 | Teradata |OLE DB Provider for Teradata.NET 용 Teradata Data Provider |.NET 용 Teradata Data Provider | |
 | | | |
