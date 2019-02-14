@@ -1,7 +1,7 @@
 ---
 title: XA 트랜잭션 이해 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,18 +11,18 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8231b574516c11995dc5f91e5cf59fcdcfb6dc04
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5d88840ef429258ad425e867efc4b744f6a5d3c5
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393837"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736944"
 ---
 # <a name="understanding-xa-transactions"></a>XA 트랜잭션 이해
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 Java Platform, Enterprise Edition/JDBC 2.0 분산 트랜잭션(옵션)을 지원합니다. [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) 클래스에서 가져온 JDBC 연결은 Java Platform, Enterprise Edition(Java EE) 응용 프로그램 서버와 같은 표준 분산 트랜잭션 처리 환경에 참여할 수 있습니다.  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 Java Platform, Enterprise Edition/JDBC 2.0 분산 트랜잭션(옵션)을 지원합니다. [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) 클래스에서 가져온 JDBC 연결은 Java Platform, Enterprise Edition(Java EE) 애플리케이션 서버와 같은 표준 분산 트랜잭션 처리 환경에 참여할 수 있습니다.  
 
 > [!WARNING]  
 > SQL용 Microsoft JDBC Driver 4.2 이상에서는 준비되지 않은 트랜잭션의 자동 롤백에 대한 기존 기능에 대해 새로운 제한 시간 옵션을 제공합니다. 참조 [준비 되지 않은 트랜잭션의 자동 롤백에 대 한 서버 쪽 제한 시간 설정을 구성](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide) 이 항목의에서 뒷부분에 대 한 자세한 정보.  
@@ -45,9 +45,9 @@ ms.locfileid: "52393837"
 
 - XA 트랜잭션을 MS DTC(Distributed Transaction Coordinator)와 함께 사용할 경우 MS DTC의 현재 버전이 밀접하게 결합된 XA 분기 동작을 지원하지 않습니다. 예를 들어 MS DTC에는 XID(XA 분기 트랜잭션 ID)와 MS DTC 트랜잭션 ID 간에 일 대 일 매핑이 있으며 느슨하게 연결된 XA 분기에서 수행되는 작업이 다른 작업과 격리됩니다.  
   
-     [MSDTC 및 밀접하게 결합된 트랜잭션](https://support.microsoft.com/kb/938653)에서 제공하는 핫픽스는 같은 GTRID(전역 트랜잭션 ID)를 사용하는 여러 개의 XA 분기가 한 개의 MS DTC 트랜잭션 ID에 매핑되는 밀접하게 결합된 XA 분기를 지원합니다. 이러한 지원을 통해 밀접하게 결합된 XA 분기가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 같은 리소스 관리자에서 다른 XA 분기의 변경 내용을 확인할 수 있습니다.  
+     [MSDTC 및 밀접하게 결합된 트랜잭션](https://support.microsoft.com/kb/938653)에서 제공하는 핫픽스를 사용하면 같은 GTRID(글로벌 트랜잭션 ID)를 사용하는 여러 개의 XA 분기가 단일 MS DTC 트랜잭션 ID에 매핑되는 밀접하게 결합된 XA 분기를 지원할 수 있습니다. 이러한 지원을 통해 밀접하게 결합된 XA 분기가 리소스 관리자에서 서로의 변경 내용을 확인할 수 있습니다(예: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).
   
-- [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) 플래그를 사용하면 BQUAL(XA 분기 트랜잭션 ID)은 다르지만 GTRID(전역 트랜잭션 ID) 및 FormatID(형식 ID)를 갖는 밀접하게 결합된 XA 트랜잭션을 응용 프로그램에서 사용할 수 있습니다. 이 기능을 사용 하기 위해 설정 해야 합니다 [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) XAResource.start 메서드의 플래그 매개 변수:  
+- [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) 플래그를 사용하면 애플리케이션에서 BQUAL(XA 분기 트랜잭션 ID)은 다르지만 GTRID(글로벌 트랜잭션 ID) 및 FormatID(형식 ID)는 동일한, 밀접하게 결합된 XA 트랜잭션을 사용할 수 있습니다. 이 기능을 사용 하기 위해 설정 해야 합니다 [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) XAResource.start 메서드의 플래그 매개 변수:
   
     ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
@@ -61,11 +61,12 @@ MS DTC(Microsoft Distributed Transaction Coordinator)와 XA 데이터 원본을 
 > JDBC 분산 트랜잭션 구성 요소는 JDBC 드라이버 설치의 xa 디렉터리에 있습니다. 이 구성 요소에는 xa_install.sql 및 sqljdbc_xa.dll 파일이 포함됩니다.  
 
 > [!NOTE]  
-> SQL Server 2019 공개 미리 보기 CTP 2.0 이상에서는 JDBC XA 분산된 트랜잭션 구성 요소는 사용 하도록 설정 하거나 시스템을 사용 하 여 사용 하지 않도록 설정 될 수 있는 SQL Server 엔진에 포함 된 저장 프로시저입니다. JDBC 드라이버를 사용 하 여 XA 분산 트랜잭션 수행에 필요한 구성 요소를 사용 하도록 설정 하려면 다음 저장된 프로시저를 실행 합니다.
+> SQL Server 2019 공개 미리 보기 CTP 2.0 JDBC XA 분산된 트랜잭션 구성 요소는 SQL Server 엔진에 포함 된 및 사용 하도록 설정 하거나 해제할 수는 시스템을 사용 하 여 시작 하는 저장 프로시저입니다.
+> JDBC 드라이버를 사용 하 여 XA 분산 트랜잭션 수행에 필요한 구성 요소를 사용 하도록 설정 하려면 다음 저장된 프로시저를 실행 합니다.
 >
 > EXEC sp_sqljdbc_xa_install
 >
-> 이전에 설치 된 구성 요소를 사용 하지 않으려면 다음 저장된 프로시저를 실행 합니다. 
+> 이전에 설치 된 구성 요소를 사용 하지 않으려면 다음 저장된 프로시저를 실행 합니다.
 >
 > EXEC sp_sqljdbc_xa_uninstall
 
@@ -83,7 +84,7 @@ Windows Vista 이상:
   
 4. **로컬 DTC 속성** 대화 상자의 **보안** 탭을 클릭합니다.  
   
-5. **XA 트랜잭션 사용** 확인란을 선택하고 **확인**을 클릭합니다. 이렇게 하면 MS DTC 서비스가 다시 시작됩니다.  
+5. **XA 트랜잭션 사용** 확인란을 선택하고 **확인**을 클릭합니다. 이렇게 하면 MS DTC 서비스가 다시 시작됩니다.
   
 6. **확인**을 다시 클릭하여 **속성** 대화 상자를 닫은 후 **구성 요소 서비스**를 닫습니다.  
   
@@ -102,13 +103,13 @@ Windows Vista 이상:
   
 3. 특정 사용자에게 JDBC 드라이버를 통해 분산 트랜잭션에 참여할 권한을 부여하려면 해당 사용자를 SqlJDBCXAUser 역할에 추가합니다.  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스마다 한 번에 하나의 sqljdbc_xa.dll 어셈블리 버전만 구성할 수 있습니다. 응용 프로그램에서 여러 버전의 JDBC 드라이버를 사용하여 XA 연결을 통해 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결해야 하는 경우가 있을 수 있습니다. 이 경우 최신 JDBC 드라이버와 함께 제공되는 sqljdbc_xa.dll을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 설치해야 합니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스마다 한 번에 하나의 sqljdbc_xa.dll 어셈블리 버전만 구성할 수 있습니다. 애플리케이션에서 여러 버전의 JDBC 드라이버를 사용하여 XA 연결을 통해 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결해야 하는 경우가 있을 수 있습니다. 이 경우 최신 JDBC 드라이버와 함께 제공되는 sqljdbc_xa.dll을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 설치해야 합니다.  
   
-현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 설치되어 있는 sqljdbc_xa.dll 버전은 다음 세 가지 방법으로 확인할 수 있습니다.  
+현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 설치되어 있는 sqljdbc_xa.dll 버전은 다음 세 가지 방법으로 확인할 수 있습니다.
   
 1. 분산 트랜잭션에 참여할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터의 LOG 디렉터리를 엽니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "ERRORLOG" 파일을 선택하여 엽니다. "ERRORLOG" 파일에서 "Using 'SQLJDBC_XA.dll' version ..." 구를 검색합니다.  
   
-2. 분산 트랜잭션에 참여할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터의 Binn 디렉터리를 엽니다. Sqljdbc_xa.dll 어셈블리를 선택 합니다.  
+2. 분산 트랜잭션에 참여할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터의 Binn 디렉터리를 엽니다. Sqljdbc_xa.dll 어셈블리를 선택 합니다.
 
     - Windows Vista 이상의 경우 sqljdbc_xa.dll을 마우스 오른쪽 단추로 클릭한 다음 속성을 선택합니다. 그런 다음, **세부 정보** 탭을 클릭합니다. **파일 버전** 필드에는 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 설치되어 있는 sqljdbc_xa.dll 버전이 표시됩니다.  
   
@@ -128,11 +129,11 @@ Windows Vista 이상:
 이러한 설정은 SQL Server 인스턴스와 관련되며 다음 레지스트리 키 아래에 만들어야 합니다.  
 
 ```bash
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL\<version>.<instance_name>\XATimeout  
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<instance_name>\XATimeout  
 ```
 
 > [!NOTE]  
-> 64비트 컴퓨터에서 실행되는 32비트 SQL Server의 경우 다음 키 아래에 레지스트리 설정을 만들어야 합니다. `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\MSSQL\<version>.<instance_name>\XATimeout`
+> 64비트 컴퓨터에서 실행되는 32비트 SQL Server의 경우 다음 키 아래에 레지스트리 설정을 만들어야 합니다. `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\MSSQL<version>.<instance_name>\XATimeout`
   
 시간 제한 값은 트랜잭션이 시작될 때 각 트랜잭션에 대해 설정되며, 시간 제한이 만료되면 SQL Server에서 트랜잭션을 롤백합니다. 제한 시간을 이러한 레지스트리 설정 및 사용자가 XAResource.setTransactionTimeout()을 통해 지정한 설정에 따라 결정됩니다. 이러한 제한 시간 값이 해석되는 방식에 대한 몇 가지 예제는 다음과 같습니다.  
   
@@ -146,18 +147,18 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL\<version>.<inst
   
 - `XADefaultTimeout = 30`, `XAMaxTimeout = 60`
   
-     클라이언트에서 시간 제한을 지정하지 않는 경우 모든 트랜잭션의 시간 제한이 30초가 됨을 의미합니다. 클라이언트에서 제한 시간을 지정하면 60초(최대값)보다 작은 경우에 한해 클라이언트의 제한 시간이 사용됩니다.  
+     클라이언트에서 시간 제한을 지정하지 않는 경우 모든 트랜잭션의 시간 제한이 30초가 됨을 의미합니다. 클라이언트에서 시간 제한을 지정하면 60초(최댓값)보다 작은 경우에 한해 클라이언트의 시간 제한이 적용됩니다.  
   
 - `XADefaultTimeout = 0`, `XAMaxTimeout = 30`
   
-     클라이언트에서 제한 시간을 지정하지 않는 경우 모든 트랜잭션의 제한 시간이 30초(최대값)가 됨을 의미합니다. 클라이언트에서 제한 시간을 지정하면 30초(최대값)보다 작은 경우에 한해 클라이언트의 제한 시간이 사용됩니다.  
+     클라이언트에서 제한 시간을 지정하지 않는 경우 모든 트랜잭션의 제한 시간이 30초(최대값)가 됨을 의미합니다. 클라이언트에서 시간 제한을 지정하면 30초(최댓값)보다 작은 경우에 한해 클라이언트의 시간 제한이 적용됩니다.  
   
 ### <a name="upgrading-sqljdbcxadll"></a>sqljdbc_xa.dll 업그레이드
 
 새 버전의 JDBC 드라이버를 설치할 때 서버에서 sqljdbc_xa.dll을 업그레이드하기 위해 새 버전의 sqljdbc_xa.dll을 사용해야 합니다.  
   
 > [!IMPORTANT]  
-> 유지 관리 창에 있는 동안 또는 프로세스에 MS DTC 트랜잭션이 없을 때 sqljdbc_xa.dll을 업그레이드해야 합니다.  
+> 유지 관리 창에 있는 동안 또는 MS DTC 트랜잭션을 진행하지 않을 때 sqljdbc_xa.dll을 업그레이드해야 합니다.
   
 1. 사용 하 여 sqljdbc_xa.dll을 언로드합니다 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령 **DBCC sqljdbc_xa (무료)** 합니다.  
   
