@@ -3,7 +3,7 @@ title: 릴리스 정보 및 변경 로그
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 릴리스 정보
 ms.custom: seodec18
-ms.date: 01/17/2019
+ms.date: 02/13/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,17 +11,34 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 163f5740626b0f4cb927272d46acddc79495e4c1
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: bd3151ae475f96b3e4df227bb4d312940c10bed0
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361683"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231130"
 ---
 # <a name="azure-data-studio-latest-release-notes-and-changelog"></a>Azure Data Studio 최신 릴리스 정보 및 변경 로그
 
 **[다운로드 하 고 최신 릴리스를 설치!](download.md)**
 
+## <a name="february-2019-february-release"></a>2019 년 2 월 일 (2 월 릴리스)
+
+릴리스 날짜: 2019 년 2 월 13 일  
+버전: 1.4.5
+
+- 추가 **SQL Server 용 관리 팩** 확장 팩 SQL Server 관리자와 관련 된 확장을 설치할 수 있도록 합니다. 다음을 포함합니다.
+    - [SQL Server 에이전트](https://docs.microsoft.com/sql/azure-data-studio/sql-server-agent-extension?view=sql-server-2017)
+    - [SQL Server 프로파일러](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension?view=sql-server-2017)
+    - [SQL Server 가져오기](https://docs.microsoft.com/sql/azure-data-studio/sql-server-import-extension?view=sql-server-2017)
+- 추가 필터링 Profiler 확장에서 이벤트 지원 확장
+- 추가 T-SQL 결과 XML로 저장할 수 있는 XML 기능으로 저장
+- 추가 된 데이터 계층 응용 프로그램 마법사 개선
+    - 추가 스크립트 생성 단추
+    - 배포 중 경고 데이터가 손실 될 수 있도록 추가 보기
+- 업데이트 된 [SQL Server 2019 미리 보기 확장](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- 스트리밍 오랫동안 기본적으로 사용 하도록 설정 하면 쿼리 실행
+- 확인할 [버그 및 문제](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1)합니다.
 
 ## <a name="january-hotfix-2019-january-hotfix-release"></a>(1 월 핫픽스 릴리스) 2019 년 1 월 핫픽스
 

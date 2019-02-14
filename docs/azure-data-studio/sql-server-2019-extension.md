@@ -3,7 +3,7 @@ title: SQL Server 2019 확장 (미리 보기)
 titleSuffix: Azure Data Studio
 description: Azure Data Studio에 대 한 SQL Server 2019 미리 보기 확장
 ms.custom: seodec18
-ms.date: 01/10/2019
+ms.date: 02/13/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -12,16 +12,16 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c41c2a08f0b8d608ef21cd44a60a2d63cdeb5fed
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: c90be7f91c4f3bb465e2cf29b8ee69e2f8d8b6e9
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143316"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231060"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 확장 (미리 보기)
 
-SQL Server 2019 확장 (미리 보기) 새로운 기능과 도구를 지 원하는 전달에 대 한 미리 보기 지원을 제공 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]합니다. 에 대 한 미리 보기 지원을 포함 합니다. [SQL Server 2019 빅 데이터 클러스터](../big-data-cluster/big-data-cluster-overview.md), 통합 된 [노트 환경과](../big-data-cluster/notebooks-guidance.md)를 PolyBase [Create External Table 마법사](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json), 및 [Azure 리소스 탐색기](azure-resource-explorer.md)합니다.
+SQL Server 2019 확장 (미리 보기) 새로운 기능과 도구를 지 원하는 전달에 대 한 미리 보기 지원을 제공 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]합니다. 에 대 한 미리 보기 지원을 포함 합니다. [SQL Server 2019 빅 데이터 클러스터](../big-data-cluster/big-data-cluster-overview.md), 통합 된 [노트북 환경](../big-data-cluster/notebooks-guidance.md), 및는 PolyBase [Create External Table 마법사](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json)합니다.
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>SQL Server 2019 확장 (미리 보기) 설치
 
@@ -31,9 +31,9 @@ SQL Server 2019 확장 (미리 보기)을 설치 하려면 다운로드 하 고 
 
    |플랫폼|다운로드|릴리스 날짜|버전
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2051167)|2019 년 1 월 9 일 |0.9.1
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2051166)|2019 년 1 월 9 일 |0.9.1
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2051165)|2019 년 1 월 9 일 |0.9.1
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072794)|2019 년 2 월 13 일 |0.10.2
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072793)|2019 년 2 월 13 일 |0.10.2
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072792)|2019 년 2 월 13 일 |0.10.2
 
 1. Azure 데이터 studio **VSIX 패키지에서 확장 설치** 에서 합니다 **파일** 메뉴 및 다운로드 한.vsix 파일을 선택 합니다.
 
@@ -44,6 +44,37 @@ SQL Server 2019 확장 (미리 보기)을 설치 하려면 다운로드 하 고 
 1. 다시 로드 한 후 확장 종속성을 설치 합니다. 출력 창에서 진행률을 볼 수 있습니다 하 고 몇 분 정도 걸릴 수 있습니다.
 
 1. 종속성 후 설치를 완료, Azure Data Studio를 닫았다가 다시 엽니다. 합니다 **SQL Server 빅 데이터 클러스터** 연결 유형을 사용할 수 없는 Azure Data Studio를 다시 시작 해야 합니다.
+
+## <a name="release-notes-v0102"></a>릴리스 정보 (v0.10.2)
+### <a name="sql-server-2019-support"></a>SQL Server 2019 지원
+SQL Server 2019에 대 한 지원이 새로 고쳤습니다. SQL Server 빅 데이터 클러스터에 연결 하는 방법에 새 인스턴스에 _Data Services_ 폴더 탐색기 트리에 표시 됩니다. 이 연결에 대해 새 노트북을 열고 Spark 작업 제출, HDFS 사용 등의 작업에 대 한 시작 지점에 있습니다. 와 같은 일부 작업에 대 한 유의 _외부 데이터 만들기_ HDFS 파일/폴더를 통해 합니다 _SQL Server 2019 Preview_ 확장을 설치 해야 합니다.
+
+### <a name="notebook-support"></a>Notebook 지원
+이 릴리스에서 노트북 사용자 인터페이스에 중요 한 업데이트를 했습니다. 이번에 사용자와 공유 되는 전자 필기장 읽기 쉽게 했습니다. 이 셀 주위의 상자 선택, 마우스가 가리키는 경우가 아니면 모든 개요 제거를 위한 쉬운 셀 수준 작업 하지 않고 셀을 선택 해야 할에 대 한 가리킨 항목 지원을 추가 및 애니메이션된 실행 횟수를 추가 하 여 실행 상태를 명확히 _중지실행_ 단추를 더 합니다. 또한 바로 가기 키를 추가 했습니다 _새 노트북_ (`Ctrl+Shift+N`), _실행 셀_ (`F5`), _새 코드 셀_ (`Ctrl+Shift+C`),  _새 텍스트 셀_ (`Ctrl+Shift+T`). 앞에서는 됩니다 것을 목표로 컴파일되는 모든 주요 작업 바로 가기가 보겠습니다 무엇을 하 고 누락 된 알고!
+
+기타 개선 사항 및 수정은 다음과 같습니다.
+* 합니다 _SQL Server 2019 Preview_ 확장은 이제 프롬프트 사용 하 여 Python 종속성에 대 한 설치 디렉터리를 선택 합니다. 더 이상 또한에서 Python을 `.vsix file`, 전체 확장 크기를 줄일 합니다. Python 종속성이이 확장을 설치 해야 사용 하 여 Spark 및 Python3 커널은 지원에 필요 합니다.
+* 명령줄에서 새 notebook을 실행 하기 위한 지원이 추가 되었습니다. 인수를 사용 하 여 시작 `--command=notebook.command.new --server=myservername` 새 노트북을 열고이 서버에 연결 해야 합니다.
+* 노트북 셀에는 대규모 코드 길이에 대 한 성능을 수정 합니다. 코드 셀 250 개 이상의 줄을 추가 하는 스크롤 막대를 갖게 됩니다.
+* 향상 된.ipynb 파일을 지원 합니다. 버전 3 이상 이제 지원 됩니다. 파일 저장에 버전으로 업데이트 4 이상 note 하십시오.
+* `notebook.enabled` 사용자 설정 되었습니다. 제거 이제는 기본 제공 전자 필기장에서 뷰어는 안정적인
+* 이 경우 여러 개체 레이아웃을 수정 높은 대비 테마 지원 이제 됩니다.
+* #3680 출력 많은 경우에 따라 표시 되는 위치를 고정 `,,,` 올바르게 문자
+* Azure 데이터 studio 외부로 이동한 후 편집기가 사라집니다 셀에 대 한 고정된 # 3602
+* 에 대 한 표 뷰를 사용 하도록 지원이 추가 되었습니다는 `application/vnd.dataresource+json` MIME 형식을 출력 합니다. 즉,이 사용 하는 많은 Notebook (설정 하 여 예를 들어 `pd.options.display.html.table_schema` Python notebook에서) 고정 #3959 Azure Data Studio notebook 닫으면 두 번 노트북 서버를 종료 하려고 하는 멋진 테이블 형식 출력 해야 합니다.
+
+#### <a name="known-issues"></a>알려진 문제
+* Notebook을 열면 설치 python 대화 상자가 표시 됩니다. 커널 하면이 설치를 취소 하 고 연결 대상 드롭다운 표시 되지 않는 값을 예상 합니다. Python 설치를 완료 하려면이 문제를 해결 합니다.
+* 지원 되지 않는 커널을 사용 하 여 notebook을 열면, 커널 및 _연결할_ 드롭다운에는 Azure 데이터 Studio가 중단 하면 됩니다. Azure Data Studio 닫아야 하며, 지원 되는 커널을 사용 해야 합니다 (Python3, Spark | R, Spark | Scala, PySpark, PySpark3)
+* Spark UI 링크 PySpark3 또는 SQL Server 끝점에 대해 다른 Spark 커널을 사용 하는 경우 실패 합니다. 문제를 해결 하세요. 대시보드에서 Spark UI에서 클릭 하거나 올바른 Spark UI 하이퍼링크 해야 하는 대로 SQL Server 빅 데이터 클러스터 연결 형식을 사용 하 여 연결
+
+### <a name="extensibility-improvements"></a>확장성 향상
+이 릴리스에서 추가 된 다양 한 extender는 데 도움이 되는 향상 된 기능
+* 새 `ObjectExplorerNodeProvider` API 확장 SQL Server 또는 기타 연결 노드 아래의 폴더에 적용할 수 있습니다. 이 방법을 `Data Services` 노드 SQL Server 2019 인스턴스 아래에 추가 됩니다 있지만 UI를 쉽게 모니터링 또는 다른 폴더를 추가할 수 있습니다.
+* 두 개의 새 상황에 맞는 키 값이 대시보드에 표시/숨기기 기여 하는 데 사용할 수 있습니다.
+  * `mssql:iscluster` SQL Server 2019 빅 데이터 클러스터 인지 여부를 나타냅니다.
+  * `mssql:servermajorversion` 서버 버전 (SQL Server 2019, SQL Server 2017 등에 대 한 14에 대 한 15)에 있습니다. 이 기능은 요소가 표시 되 면 SQL Server 2017 이상의 경우, 예를 들어 수 있습니다.
+
 
 ## <a name="release-notes-v080"></a>릴리스 정보 (v0.8.0)
 *Notebook*:

@@ -3,7 +3,7 @@ title: 를 다운로드하여 설치합니다
 titleSuffix: Azure Data Studio
 description: 다운로드 및 Windows에 대 한 Azure 데이터 Studio 설치, macOS 또는 Linux
 ms.custom: seodec18
-ms.date: 01/17/2019
+ms.date: 02/13/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,33 +11,31 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 09e459b61350a100a64a788e0c7746d9a2ae623e
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 06aaaf90d9012d3f68c6b19c794a1d4de1ad13d9
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361621"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231120"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Azure Data Studio 다운로드 및 설치
 
   > [!div class="nextstepaction"]
-  > [SQL 문서 내용 테이블에 대 한 의견을 공유 하세요!](https://aka.ms/sqldocsurvey)
+  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[name-sos](../includes/name-sos.md)]는 Windows, macOS, Linux에서 실행됩니다.
 
 
-다운로드 하 고 최신 릴리스를 설치 합니다 *월 핫픽스 릴리스가*:
-
-버전 1.3.9 1.3.8 발견 된 몇 가지 문제를 해결 합니다. 자세한 내용은 참조 하세요 [월 핫픽스 릴리스](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1)합니다.
+다운로드 하 고 최신 릴리스를 설치 합니다 *2 월 릴리스*:
 
 > [!NOTE]
 > SQL Operations Studio를 통해 업데이트하고 설정, 바로 가기 키 또는 코드 조각을 유지하려는 경우 [사용자 설정 이동](#move-user-settings)을 확인합니다.
 
 |플랫폼|다운로드|릴리스 날짜| 버전 |
 |:---|:---|:---|:---|
-|Windows|[사용자 설치 관리자 (권장)](https://go.microsoft.com/fwlink/?linkid=2049972)<br>[시스템 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2049975)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2050146)|2019 년 1 월 16 일 |1.3.9|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2049981)|2019 년 1 월 16 일 |1.3.9|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2050157)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2049989)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2049986)|2019 년 1 월 16 일 |1.3.9|
+|Windows|[사용자 설치 관리자 (권장)](https://go.microsoft.com/fwlink/?linkid=2072725)<br>[시스템 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2072728)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2072354)|2019 년 2 월 13 일 |1.4.5|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2072737)|2019 년 2 월 13 일 |1.4.5|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2072744)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2072741)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2072360)|2019 년 2 월 13 일 |1.4.5|
 
 최신 릴리스에 대한 자세한 내용은 [릴리스 정보](release-notes.md)를 참조하십시오.
 
@@ -49,25 +47,25 @@ ms.locfileid: "54361621"
 
 사용자 설치 관리자가 필요 하지 않으므로 관리자 권한으로 설치 및 업그레이드를 간소화 하는 것이 좋습니다.
 
-1. 다운로드 및 실행 합니다 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *사용자* Windows 용 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2049972)합니다.
+1. 다운로드 및 실행 합니다 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *사용자* Windows 용 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2072725)합니다.
 2. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 앱을 시작합니다.
 
 **시스템 설치 관리자**
 
-1. 다운로드 및 실행 합니다 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *system* Windows 용 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2049975)합니다.
+1. 다운로드 및 실행 합니다 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *system* Windows 용 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2072728)합니다.
 2. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 앱을 시작합니다.
 
 
 **zip 파일**
 
-1. [ Windows용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip](https://go.microsoft.com/fwlink/?linkid=2050146)을 다운로드합니다.
+1. [ Windows용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip](https://go.microsoft.com/fwlink/?linkid=2072737)을 다운로드합니다.
 2. 다운로드한 파일을 찾은 다음 압축을 풉니다.
 3. `\azuredatastudio-windows\azuredatastudio.exe`를 실행합니다.
 
 
 ## <a name="get-azure-data-studio-for-macos"></a>MacOS에 대한 Azure Data Studio 가져오기
 
-1. [ macOS용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](https://go.microsoft.com/fwlink/?linkid=2049981)를 다운로드합니다.
+1. [ macOS용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](https://go.microsoft.com/fwlink/?linkid=2072737)를 다운로드합니다.
 2. zip 내용을 확장하기 위해 두 번 클릭합니다.
 3. *실행 패드*에서 [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용할 수 있게 하려면 *Azure Data Studio.app*을 *응용 프로그램* 폴더로 끌어옵니다.
 
@@ -75,9 +73,9 @@ ms.locfileid: "54361621"
 ## <a name="get-azure-data-studio-for-linux"></a>Linux 용 Azure Data Studio 받기
 
 1. 아래에서 설치 관리자 또는 tar.gz 보관 파일 중 하나를 사용하여 Linux용 [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 다운로드합니다.
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2050157)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2049989)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2049986)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2072744)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2072741)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2072360)
 1. 파일을 추출하고 [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 실행하기 위해 새 터미널 창을 열고 다음 명령을 입력합니다.
 
    **Debian 설치:**
