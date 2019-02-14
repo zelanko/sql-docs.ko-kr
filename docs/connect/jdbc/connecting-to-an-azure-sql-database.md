@@ -1,7 +1,7 @@
 ---
 title: Azure SQL database에 연결 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c4caaa9ca14fd2f8eb396ef2c2869ba30bd48420
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d948e4a790933e6f703232e3f642241395bbb410
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602213"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736984"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Azure SQL 데이터베이스에 연결
 
@@ -47,9 +47,9 @@ ms.locfileid: "51602213"
   
 |레지스트리 설정|권장 값|  
 |----------------------|-----------------------|  
-|HKEY_LOCAL_MACHINE \ 시스템 \ CurrentControlSet \ 서비스 \ Tcpip \ 매개 변수 \ KeepAliveTime|30000|  
-|HKEY_LOCAL_MACHINE \ 시스템 \ CurrentControlSet \ 서비스 \ Tcpip \ 매개 변수 \ KeepAliveInterval|1000|  
-|HKEY_LOCAL_MACHINE \ 시스템 \ CurrentControlSet \ 서비스 \ Tcpip \ 매개 변수 \ TcpMaxDataRetransmissions|10|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveTime|30000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveInterval|1000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ TcpMaxDataRetransmissions|10|  
   
 레지스트리 설정을 적용하려면 컴퓨터를 다시 시작합니다.  
 
@@ -78,15 +78,15 @@ shutdown /r /t 1
 ## <a name="appending-the-server-name-to-the-userid-in-the-connection-string"></a>연결 문자열에서 서버 이름을 사용자 ID에 추가  
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]의 4.0 버전 이전에는 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]에 연결할 때 연결 문자열에서 서버 이름을 사용자 ID에 추가해야 했습니다. user@servername)을 입력합니다. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 버전부터 연결 문자열에서 @servername을 사용자 ID에 추가할 필요가 없게 되었습니다.  
-  
+
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>암호화 사용에 hostNameInCertificate 설정 필요
 
-에 연결할 때는 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]를 지정 해야 **hostNameInCertificate** 지정 하는 경우 **암호화 = true**합니다. (연결 문자열에 서버 이름이 *shortName*. *domainName*로 설정 합니다 **hostNameInCertificate** 속성을 \*. *domainName*.)  
-  
-예를 들어 다음과 같이 사용할 수 있습니다.  
+7.2의 버전 이전에 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에 연결할 때는 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]를 지정 해야 **hostNameInCertificate** 지정 하는 경우 **암호화 = true** (서버 연결의 이름을 지정 하는 경우 문자열이 *shortName*. *domainName*로 설정 합니다 **hostNameInCertificate** 속성을 \*. *domainName*.). 이 속성의 드라이버 버전 7.2부터 선택 사항입니다.
+
+예를 들어 다음과 같이 사용할 수 있습니다.
 
 ```java
-jdbc:sqlserver://abcd.int.mscds.com;databaseName= myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate= *.int.mscds.com;  
+jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate=*.int.mscds.com;
 ```
 
 ## <a name="see-also"></a>참고 항목

@@ -1,7 +1,7 @@
 ---
 title: 고급 데이터 형식을 사용 하 여 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b794a8c93fd7a9c83e783a04999cbeb8a9e58f48
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ddef588be6f7e15c8a3f7f8e981a44cfcb5c9076
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510499"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736824"
 ---
 # <a name="using-advanced-data-types"></a>고급 데이터 형식 사용
 
@@ -32,10 +32,13 @@ ms.locfileid: "52510499"
 |----------------------|-----------------------------------|-------------------------|  
 |varbinary(max)<br /><br /> image|LONGVARBINARY|byte[]\(기본값), Blob, InputStream, String|  
 |text<br /><br /> varchar(max)|LONGVARCHAR|String(기본값), Clob, InputStream|  
-|ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR(Java SE 6.0)|String(기본값), Clob, NClob(Java SE 6.0)|  
-|xml|LONGVARCHAR<br /><br /> SQLXML(Java SE 6.0)|String(기본값), InputStream, Clob, byte[],Blob, SQLXML(Java SE 6.0)|  
+|ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR(Java SE 6.0)|String(기본값), Clob, NClob|  
+|xml|LONGVARCHAR<br /><br /> SQLXML|String(기본값), InputStream, Clob, byte[],Blob, SQLXML|  
 |Udt<sup>1</sup>|VARBINARY|String(기본값), byte[], InputStream|  
-  
+|sqlvariant|SQLVARIANT|Object|  
+|geometry<br /><br /> geography|VARBINARY|byte[]|  
+
+
 <sup>1</sup> [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 이진 데이터 형식으로 CLR UDT 전송 및 검색을 지원하지만 CLR 메타데이터의 조작은 지원하지 않습니다.  
   
 다음 섹션에서는 JDBC 드라이버와 고급 데이터 형식을 사용하는 방법의 예를 보여 줍니다.  
@@ -49,7 +52,7 @@ JDBC 드라이버는 java.sql.Blob, java.sql.Clob 및 java.sql.NClob 인터페�
 
 ## <a name="large-value-data-types"></a>큰 값 데이터 형식
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이전 버전에서는 큰 값 데이터 형식을 사용할 때 특별한 처리가 필요했습니다. 큰 값 데이터 형식은 최대 행 크기가 8KB를 초과하는 데이터 형식입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **varchar**, **nvarchar** 및 **varbinary** 데이터 형식에 대해 max 지정자를 제공하여 값을 2^31바이트로 저장할 수 있도록 합니다. 테이블 열과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 변수에서 **varchar(max)**, **nvarchar(max)** 또는 **varbinary(max)** 데이터 형식을 지정할 수 있습니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이전 버전에서는 큰 값 데이터 형식을 사용할 때 특별한 처리가 필요했습니다. 큰 값 데이터 형식은 최대 행 크기가 8KB를 초과하는 데이터 형식입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **varchar**, **nvarchar** 및 **varbinary** 데이터 형식에 대해 max 지정자를 제공하여 값을 2^31바이트로 스토리지할 수 있도록 합니다. 테이블 열과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 변수에서 **varchar(max)**, **nvarchar(max)** 또는 **varbinary(max)** 데이터 형식을 지정할 수 있습니다.  
 
 큰 값 형식을 사용하는 주요 시나리오는 큰 값 형식을 데이터베이스에서 검색하거나 데이터베이스에 추가하는 것입니다. 다음 섹션에서는 이러한 태스크를 수행하는 다양한 접근 방식에 대해 설명합니다.  
 
@@ -164,10 +167,18 @@ JDBC 드라이버의 **xml** 데이터 형식 구현에서는 다음을 지원�
 
 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서는 UDT(사용자 정의 형식)를 도입하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 개체 및 사용자 지정 데이터 구조를 저장할 수 있도록 함으로써 SQL 형식 체계를 확장했습니다. UDT는 여러 데이터 형식과 동작이 포함될 수 있어 단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식으로 구성된 일반적인 별칭 데이터 형식과 차별화됩니다. UDT는 검증할 수 있는 코드를 생성하는 Microsoft .NET CLR(공용 언어 런타임)에서 지원하는 언어를 사용하여 정의합니다. 이러한 언어에는 Microsoft Visual C# 및 Visual Basic .NET 등이 있습니다. 데이터는 .NET Framework 기반 클래스 또는 구조의 필드와 속성으로 노출되며 동작은 클래스 또는 구조의 메서드로 정의됩니다.  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 UDT를 테이블의 열 정의, [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 작업의 변수 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수나 저장 프로시저의 인수로 사용할 수 있습니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 UDT를 테이블의 열 정의, [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리의 변수 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수나 저장 프로시저의 인수로 사용할 수 있습니다.  
   
 사용자 정의 데이터 형식에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 “사용자 정의 형식 인스턴스 사용 및 수정”을 참조하세요.  
   
+## <a name="sqlvariant-data-type"></a>Sql_variant 데이터 형식
+
+Sql_variant 데이터 형식에 대 한 자세한 내용은 [Sql_variant 데이터 형식을 사용 하 여](../../connect/jdbc/using-sql-variant-datatype.md)입니다.  
+
+## <a name="spatial-data-types"></a>공간 데이터 형식
+
+공간 데이터 형식에 대 한 자세한 내용은 [공간 데이터 형식을 사용 하 여](../../connect/jdbc/use-spatial-datatypes.md)입니다.  
+
 ## <a name="see-also"></a>참고 항목
 
 [JDBC 드라이버 데이터 형식 이해](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

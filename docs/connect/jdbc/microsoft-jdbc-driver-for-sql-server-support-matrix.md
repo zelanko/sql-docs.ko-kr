@@ -1,7 +1,7 @@
 ---
 title: SQL Server용 Microsoft JDBC Driver 지원 매트릭스 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/19/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 955fc16232857d9c9f04b56d62985116ac3e6338
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: MTE75
+ms.openlocfilehash: 9b086ca3912e8b8a308840a229c448edeb92b60f
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605803"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736931"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Microsoft JDBC Driver for SQL Server 지원 매트릭스
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,9 +32,10 @@ ms.locfileid: "51605803"
   
 |드라이버 이름|드라이버 패키지 버전|해당 JAR(s)|일반 지원 종료|
 |-|-|-|-|  
+|SQL Server용 Microsoft JDBC Driver 7.2|7.2|mssql-jdbc-7.2.0.jre11.jar<br> mssql-jdbc-7.2.0.jre8.jar|2024 Jan 31,|
 |SQL Server용 Microsoft JDBC Driver 7.0|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|2023 년 7 월 31,|  
 |SQL Server용 Microsoft JDBC Driver 6.4|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|2023 년 2 월 27,|    
-|SQL Server용 Microsoft JDBC Driver 6.2|6.2|mssql-jdbc-포함 되어 있습니다<br> mssql-6.2.2.jre7.jar|2022 년 6 월 30,|    
+|SQL Server용 Microsoft JDBC Driver 6.2|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|2022년 6월 30일|    
 |Microsoft JDBC Driver 6.0 for SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|2021 년 7 월 14,|    
 |Microsoft JDBC Driver 4.2 for SQL Server|4.2|sqljdbc42.jar<br>sqljdbc41.jar|2020년 8월 24일|  
 |Microsoft JDBC Driver 4.1 for SQL Server|4.1|sqljdbc41.jar|2019년 12월 12일|  
@@ -55,6 +56,7 @@ ms.locfileid: "51605803"
   
 |드라이버 버전|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL 데이터베이스|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Azure SQL 관리 인스턴스 (비공개 미리 보기 확장)|  
 |-|-|-|-|-|-|-|-|-|-|
+|7.2|N|Y|Y|Y|Y|Y|Y|Y|Y|  
 |7.0|N|Y|Y|Y|Y|Y|Y|Y|Y|  
 |6.4|N|Y|Y|Y|Y|Y|Y|Y|Y|  
 |6.2|Y|Y|Y|Y|Y|Y|Y|Y|N|
@@ -84,7 +86,8 @@ ms.locfileid: "51605803"
   
 |JDBC 드라이버 버전|JRE 버전|JDBC API 버전| 
 |-|-|-|  
-|7.0|1.8, 10|4.2, 4.3 (부분적)|  
+|7.2|1.8, 11|4.2, 4.3 (부분적)|
+|7.0|1.8, 10|4.2, 4.3 (부분적)|
 |6.4|1.7, 1.8, 9|4.2, 4.1, 4.3 (부분적)|  
 |6.2|1.7, 1.8|4.1, 4.2|  
 |6.1|1.7, 1.8|4.1, 4.2|  

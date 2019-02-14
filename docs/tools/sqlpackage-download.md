@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: ba1cb702faef5826158f9f65e9bb36d794934a5a
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 7620050a28029010a4e0f0fd2e125a17a84721a0
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991776"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737144"
 ---
 # <a name="download-and-install-sqlpackage"></a>다운로드 및 설치 sqlpackage
 
@@ -25,9 +25,9 @@ sqlpackage는 Windows, macOS 및 Linux에서 실행 됩니다.
 
 |플랫폼|다운로드|릴리스 날짜|버전 옵션|빌드
 |:---|:---|:---|:---|:---|
-|Windows|[MSI 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2033947)|2018 년 10 월 24 일|18.0|15.0.4200.1|
-|macOS.NET Core (미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2044514)|2018년 11월 15일 | - |15.0.4240.1|
-|.NET Core Linux (미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2044263)|2018년 11월 15일 | - |15.0.4240.1|
+|Windows|[MSI 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2069405)|2019년 2월 1일|18.1|15.0.4316.1|
+|macOS.NET Core (미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2069126)|2019년 2월 1일 | 18.1 |15.0.4316.1|
+|.NET Core Linux (미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2069122)|2019년 2월 1일 | 18.1 |15.0.4316.1|
 
 최신 릴리스에 대 한 자세한 내용은 참조는 [릴리스](sqlpackage-release-notes.md)합니다.
 
@@ -35,14 +35,14 @@ sqlpackage는 Windows, macOS 및 Linux에서 실행 됩니다.
 
 이 버전의 sqlpackage는 표준 Windows 설치 관리자 환경 및.zip을 포함합니다. 
 
-1. 다운로드 및 실행 합니다 [DacFramework.msi Windows 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2033947)합니다.
+1. 다운로드 및 실행 합니다 [DacFramework.msi Windows 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2069405)합니다.
 2. 새 명령 프롬프트 창을 열고 및 sqlpackage.exe를 실행 합니다.
     - sqlpackage를 설치 하기는 ```C:\Program Files\Microsoft SQL Server\150\DAC\bin``` 폴더
     - X86 설치는 x64 버전 sqlpackage 설치는 컴퓨터는 ```C:\Program Files (x86)\Microsoft SQL Server\150\DAC\bin``` 폴더
 
 ## <a name="get-sqlpackage-preview-for-macos"></a>Macos (미리 보기) sqlpackage 가져오기
 
-1. 다운로드 [macOS 용 sqlpackage](https://go.microsoft.com/fwlink/?linkid=2044514)합니다.
+1. 다운로드 [macOS 용 sqlpackage](https://go.microsoft.com/fwlink/?linkid=2069126)합니다.
 2. 파일을 추출할 sqlpackage 시작을 새 터미널 창을 열고 다음 명령을 입력 합니다.
 
    **.zip 설치:**
@@ -57,7 +57,7 @@ sqlpackage는 Windows, macOS 및 Linux에서 실행 됩니다.
 
 ## <a name="get-sqlpackage-preview-for-linux"></a>Linux (미리 보기) sqlpackage 가져오기
 
-1. 다운로드 [Linux 용 sqlpackage](https://go.microsoft.com/fwlink/?linkid=2044263) 설치 관리자 또는 tar.gz 보관 파일 중 하나를 사용 하 여:
+1. 다운로드 [Linux 용 sqlpackage](https://go.microsoft.com/fwlink/?linkid=2069122) 설치 관리자 또는 tar.gz 보관 파일 중 하나를 사용 하 여:
 2. 파일을 추출할 sqlpackage 시작을 새 터미널 창을 열고 다음 명령을 입력 합니다.
 
    **.zip 설치:**

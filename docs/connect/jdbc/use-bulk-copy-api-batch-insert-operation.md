@@ -1,7 +1,7 @@
 ---
 title: MSSQL JDBC 드라이버에 대 한 일괄 삽입 작업에 대 한 대량 복사 API를 사용 하 여 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/27/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b205e27f24693a2dfaa6fcff2245cf45288a12b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3d3c7cc4d8dd7beeb620a211b2f41a1d1105a04
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696564"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737104"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>일괄 처리 삽입 작업에 대량 복사 API 사용
 
@@ -26,7 +26,7 @@ ms.locfileid: "47696564"
 
 이 기능은 에서만 PreparedStatement 및 CallableStatement의 적용할 `executeBatch()`  &  `executeLargeBatch()` Api.
 
-## <a name="pre-requisites"></a>필수 조건
+## <a name="pre-requisites"></a>필수 구성 요소
 
 일괄 처리 삽입에 대 한 대량 복사 API를 사용 하도록 설정 하려면 두 가지 필수 조건이 있습니다.
 
@@ -65,7 +65,7 @@ Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<
 * 삽입 INSERT SELECT 식을 포함 하는 쿼리 (예를 들어 `INSERT INTO TABLE SELECT * FROM TABLE2`)를 사용할 수 없습니다.
 * 삽입 쿼리는 다중 값 식 (예를 들어 `INSERT INTO TABLE VALUES (1, 2) (3, 4)`), 지원 되지 않습니다.
 * OPTION 절 뒤에, 여러 테이블 조인 또는 다른 쿼리 뒤에 삽입 쿼리는 지원 되지 않습니다.
-* 대량 복사 API의 제한으로 인해 `DATETIME`, `SMALLDATETIME`를`GEOMETRY`, 및 `GEOGRAPHY` 이 기능에 대 한 데이터 형식을 사용할 수 없습니다.
+* 대량 복사 API의 제한으로 인해 `MONEY`, `SMALLMONEY`, `DATE`, `DATETIME`를 `DATETIMEOFFSET`를 `SMALLDATETIME`를 `TIME`를 `GEOMETRY`, 및 `GEOGRAPHY` 데이터 형식에는 현재이 지원 되지 않습니다 기능입니다.
 
 비 인해 쿼리가 실패 하는 경우 "SQL server" 오류와 관련 된, 드라이버에 오류 메시지와 대체 (fallback) 일괄 처리 삽입에 대 한 원래 논리로 로그 됩니다.
 

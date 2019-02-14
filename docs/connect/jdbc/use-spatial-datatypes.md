@@ -1,7 +1,7 @@
 ---
 title: 공간 데이터 형식을 사용 하 여 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/30/2018
+ms.date: 01/21/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a51d15875051fbe2a2a034526a95c16bed076db
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 4d00692b0b5872b1020f900587a24a3116aee9be
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460548"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737014"
 ---
 # <a name="using-spatial-datatypes"></a>공간 데이터 형식 사용
 
@@ -90,16 +90,16 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 
 |메서드|설명|
 |:------|:----------|
-|void setGeometry (int n, Geometry x)| 지정 된 microsoft.sql.Geometry 클래스 개체에 지정 된 매개 변수를 설정합니다.
+|void setGeometry(int n, Geometry x)| 지정 된 microsoft.sql.Geometry 클래스 개체에 지정 된 매개 변수를 설정합니다.
 |void setGeography (int n, Geography x)| 지정 된 microsoft.sql.Geography 클래스 개체에 지정 된 매개 변수를 설정합니다.
 
 ### <a name="sqlserverresultset"></a>SQLServerResultSet
 
 |메서드|설명|
 |:------|:----------|
-|기 하 도형 getGeometry (int colunIndex)| 이 Java 프로그래밍 언어의에서 com.microsoft.sqlserver.jdbc.Geometry 개체로이 결과 집합 개체의 현재 행에서 지정 된 열의 값을 반환 합니다.
+|Geometry getGeometry(int colunIndex)| 이 Java 프로그래밍 언어의에서 com.microsoft.sqlserver.jdbc.Geometry 개체로이 결과 집합 개체의 현재 행에서 지정 된 열의 값을 반환 합니다.
 |기 하 도형 getGeometry (문자열 columnName)| 이 Java 프로그래밍 언어의에서 com.microsoft.sqlserver.jdbc.Geometry 개체로이 결과 집합 개체의 현재 행에서 지정 된 열의 값을 반환 합니다.
-|Geography getGeography (int colunIndex)| 이 Java 프로그래밍 언어의에서 com.microsoft.sqlserver.jdbc.Geography 개체로이 결과 집합 개체의 현재 행에서 지정 된 열의 값을 반환 합니다.
+|Geography getGeography(int colunIndex)| 이 Java 프로그래밍 언어의에서 com.microsoft.sqlserver.jdbc.Geography 개체로이 결과 집합 개체의 현재 행에서 지정 된 열의 값을 반환 합니다.
 |Geography getGeography (문자열 columnName)| 이 Java 프로그래밍 언어의에서 com.microsoft.sqlserver.jdbc.Geography 개체로이 결과 집합 개체의 현재 행에서 지정 된 열의 값을 반환 합니다.
 
 ### <a name="geometry"></a>geometry
@@ -107,13 +107,13 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 |메서드|설명|
 |:------|:----------|
 |기 하 도형 STGeomFromText (문자열 wkt, SRID int)| 인스턴스에서 얻어진 Z(높이) 값 및 M(측정값) 값을 사용하여 보강된 OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현의 기하 도형 인스턴스에 대한 생성자입니다.
-|기 하 도형 STGeomFromWKB (byte wkb)| OGC(Open Geospatial Consortium) WKB(Well-Known Binary) 표현의 기하 도형 인스턴스에 대한 생성자입니다.
+|Geometry STGeomFromWKB(byte[] wkb)| OGC(Open Geospatial Consortium) WKB(Well-Known Binary) 표현의 기하 도형 인스턴스에 대한 생성자입니다.
 |기 하 도형 deserialize (byte wkb)| 공간 데이터에 대 한 내부 SQL Server 형식에서 Geometry 인스턴스에 대 한 생성자입니다.
 |기 하 도형 구문 분석 문자열 wkt)| OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현의 기하 도형 인스턴스에 대한 생성자입니다. Spatial Reference Identifier 기본값인 0으로 설정 됩니다.
 |기하학 지점을 (double 이중 y, x SRID int)| Geometry 인스턴스의 Spatial Reference Identifier를 해당 X 및 Y 값에서 Point 인스턴스를 나타내는 생성자입니다.
-|Stastext () 문자열| 기하 도형 인스턴스의 OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현을 반환합니다. 이 텍스트에는 인스턴스에서 얻어진 Z(높이) 값 또는 M(측정값) 값이 포함되지 않습니다.
-|byte] stasbinary)| 기하 도형 인스턴스의 OGC(Open Geospatial Consortium) WKB(Well-Known Binary) 표현을 반환합니다. 이 값에는 인스턴스에서 얻어진 Z값 또는 M값이 포함되지 않습니다.
-|바이트 serialize()| 기하 도형 형식의 내부 SQL Server 형식을 나타내는 바이트를 반환합니다.
+|String STAsText()| 기하 도형 인스턴스의 OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현을 반환합니다. 이 텍스트에는 인스턴스에서 얻어진 Z(높이) 값 또는 M(측정값) 값이 포함되지 않습니다.
+|byte[] STAsBinary()| 기하 도형 인스턴스의 OGC(Open Geospatial Consortium) WKB(Well-Known Binary) 표현을 반환합니다. 이 값에는 인스턴스에서 얻어진 Z값 또는 M값이 포함되지 않습니다.
+|byte[] serialize()| 기하 도형 형식의 내부 SQL Server 형식을 나타내는 바이트를 반환합니다.
 |부울 hasM()| 개체에 M (측정값) 값을 반환.
 |부울 hasZ()| 개체에 Z (높이) 값을 반환 합니다.
 |Double getX()| X 좌표 값을 반환합니다.
@@ -121,11 +121,11 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 |Double getM()| 개체의 M (측정값) 값을 반환합니다.
 |Double getZ()| 개체의 Z (높이) 값을 반환합니다.
 |int getSrid()| 공간 참조 식별자 (SRID)을 반환합니다.
-|isnull (부울)| 경우 기 하 도형 개체는 null을 반환 합니다.
+|boolean isNull()| 경우 기 하 도형 개체는 null을 반환 합니다.
 |int STNumPoints()| 기 하 도형 개체의 점 개수를 반환합니다.
-|Stgeometrytype () 문자열| geometry 인스턴스로 표현된 OGC(Open Geospatial Consortium) 형식 이름을 반환합니다.
+|String STGeometryType()| geometry 인스턴스로 표현된 OGC(Open Geospatial Consortium) 형식 이름을 반환합니다.
 |문자열 asTextZM()| 기 하 도형 개체의 wkt (WELL-KNOWN Text) 표현을 반환합니다.
-|Tostring () 문자열| 기하 도형 개체의 문자열 표현을 반환합니다.
+|String toString()| 기하 도형 개체의 문자열 표현을 반환합니다.
 
 ### <a name="geography"></a>지리
 
@@ -135,10 +135,10 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 |Geography STGeomFromWKB (byte wkb)| OGC(Open Geospatial Consortium) WKB(Well-Known Binary) 표현의 지리 인스턴스에 대한 생성자입니다.
 |Geography (byte wkb)를 deserialize 합니다.| 공간 데이터에 대 한 내부 SQL Server 형식에서 Geography 인스턴스에 대 한 생성자입니다.
 |Geography 구문 분석 문자열 wkt)| OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현의 지리 인스턴스에 대한 생성자입니다. Spatial Reference Identifier 기본값인 0으로 설정 됩니다.
-|지리 지점을 (이중 SRID int, double lon lat)| 해당 위도 및 경도 값과 SRID(Spatial Reference Identifier)의 지점 인스턴스를 나타내는 지리 인스턴스에 대한 생성자입니다.
-|Stastext () 문자열| 지리 인스턴스의 OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현을 반환합니다. 이 텍스트에는 인스턴스에서 얻어진 Z(높이) 값 또는 M(측정값) 값이 포함되지 않습니다.
-|byte] STAsBinary())| 지리 인스턴스의 OGC(Open Geospatial Consortium) WKB(Well-Known Binary) 표현을 반환합니다. 이 값에는 인스턴스에서 얻어진 Z값 또는 M값이 포함되지 않습니다.
-|바이트 serialize()| 지리 형식의 내부 SQL Server 형식을 나타내는 바이트를 반환합니다.
+|지리 지점을 (lon, lat double, int SRID double)| 해당 위도 및 경도와 SRID(Spatial Reference Identifier)의 지점 인스턴스를 나타내는 지리 인스턴스에 대한 생성자입니다.
+|String STAsText()| 지리 인스턴스의 OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현을 반환합니다. 이 텍스트에는 인스턴스에서 얻어진 Z(높이) 값 또는 M(측정값) 값이 포함되지 않습니다.
+|byte[] STAsBinary())| 지리 인스턴스의 OGC(Open Geospatial Consortium) WKB(Well-Known Binary) 표현을 반환합니다. 이 값에는 인스턴스에서 얻어진 Z값 또는 M값이 포함되지 않습니다.
+|byte[] serialize()| 지리 형식의 내부 SQL Server 형식을 나타내는 바이트를 반환합니다.
 |부울 hasM()| 개체에 M (측정값) 값을 반환.
 |부울 hasZ()| 개체에 Z (높이) 값을 반환 합니다.
 |Double getLatitude()| 위도 값을 반환합니다.
@@ -146,11 +146,11 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 |Double getM()| 개체의 M (측정값) 값을 반환합니다.
 |Double getZ()| 개체의 Z (높이) 값을 반환합니다.
 |int getSrid()| 공간 참조 식별자 (SRID)을 반환합니다.
-|isnull (부울)| 경우 Geography 개체는 null을 반환 합니다.
+|boolean isNull()| 경우 Geography 개체는 null을 반환 합니다.
 |int STNumPoints()| Geography 개체의 점 개수를 반환합니다.
-|문자열 STGeographyType()| geography 인스턴스로 표현된 OGC(Open Geospatial Consortium) 형식 이름을 반환합니다.
+|String STGeographyType()| geography 인스턴스로 표현된 OGC(Open Geospatial Consortium) 형식 이름을 반환합니다.
 |문자열 asTextZM()| Geography 개체의 wkt (WELL-KNOWN Text) 표현을 반환합니다.
-|Tostring () 문자열| 지리 개체의 문자열 표현을 반환합니다.
+|String toString()| 지리 개체의 문자열 표현을 반환합니다.
 
 ## <a name="limitations-of-spatial-datatypes"></a>공간 데이터 형식의 제한 사항
 
