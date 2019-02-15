@@ -10,50 +10,53 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 00db3d0ca027a0f188831281bb2c844b5bc8462d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 41b14322d3c895e687add2236c2447d93df62586
+ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202452"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55771339"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>SQL Server 오프라인 도움말 및 도움말 뷰어
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SSMS(SQL Server Management Studio) 또는 VS(Visual Studio)의 도움말 뷰어를 사용하여 온라인 소스 또는 디스크의 SQL Server 도움말 패키지를 다운로드 및 설치하고 오프라인으로 볼 수 있습니다. 이 문서에서는 도움말 뷰어를 설치하는 도구, 오프라인 도움말 콘텐츠를 설치하는 방법 및 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], SQL Server 2016 및 SQL Server 2017에 대한 도움말을 보는 방법을 설명합니다.
+Microsoft 도움말 뷰어를 사용하여 온라인 소스 또는 디스크에서 SQL Server 도움말 패키지를 다운로드 및 설치하고 오프라인으로 볼 수 있습니다. 도움말 뷰어는 SSMS(SQL Server Management Studio) 또는 VS(Visual Studio)와 함께 설치됩니다. 이 문서에서는 도움말 뷰어를 설치하는 도구, 오프라인 도움말 콘텐츠를 설치하는 방법과 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], SQL Server 2016 및 SQL Server 2017에 대한 도움말을 보는 방법을 설명합니다.
 
-인터넷 액세스가 가능한 시스템에서 콘텐츠를 다운로드하고 나면, 인터넷 액세스가불 가능한 시스템으로 해당 콘텐츠를 마이그레이션할 수 있습니다. 
+도움말 뷰어 콘텐츠를 다운로드하려면 인터넷 액세스 권한이 필요합니다. 그런 다음, 인터넷 액세스 권한이 없는 컴퓨터로 콘텐츠를 마이그레이션할 수 있습니다.
 
 > [!NOTE]
 > SQL Server 2016 및 SQL Server 2017 도움말은 결합되었지만 일부 항목은 개별 버전에 적용됩니다(명시된 경우). 대부분의 항목은 두 버전 모두에 적용됩니다.
 
 ## <a name="install-the-help-viewer"></a>도움말 뷰어 설치
 
-도움말 뷰어는 두 가지 버전이 있습니다. v2.x는 SQL Server 2016/SQL Server 2017 도움말을 지원하고, v1.x는 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 도움말을 지원합니다. 도움말 뷰어는 프록시 설정을 지원하지 않고 ISO 형식을 지원하지 않습니다. 
+도움말 뷰어에는 두 가지 버전이 있습니다.  각 버전은 다른 버전의 SQL Server 콘텐츠를 지원합니다.  오프라인 책의 형식이 시간이 지남에 따라 변경되었으며 이전 버전의 도움말 뷰어는 새 버전의 책을 지원하지 않습니다.
+- v2.x는 SQL Server 2016 및 SQL Server 2017 도움말을 지원합니다. 
+- v1.x는 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 도움말을 지원합니다. 도움말 뷰어는 프록시 설정 또는 ISO 형식을 지원하지 않습니다.
 
-다음 도구는 도움말 뷰어를 설치합니다. 
 
-|**도움말 뷰어를 설치하는 도구**|**설치된 도움말 뷰어 버전**|
+|**도구**|**도움말 뷰어 버전 설치**|
 |---------|---------|
-|[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)| v2.2|
-|[Visual Studio 2015용 SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)| v2.2|
-|Visual Studio 2017* | v2.3|
+|[Visual Studio 2017*](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017) | v2.3|
+|[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) | v2.2|
+|[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) | v2.2|
+|[Visual Studio 2015용 SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) | v2.2|
 |Visual Studio 2015 | v2.2|
+|SQL Server 2016 | v1.x|
 |SQL Server 2014 Management Studio | v1.x|
 |이전 버전의 Visual Studio | v1.x|
-|SQL Server 2016 | v1.x|
+| | |
 
-\* Visual Studio 2017과 함께 도움말 뷰어를 설치하려면 Visual Studio 설치 관리자의 개별 구성 요소 탭에서 코드 도구 아래에 있는 **도움말 뷰어**를 선택한 다음 **설치**를 클릭합니다. 
+\* Visual Studio 2017과 함께 도움말 뷰어를 설치하려면 Visual Studio 설치 관리자의 개별 구성 요소 탭에서 코드 도구 아래에 있는 **도움말 뷰어**를 선택한 다음 **설치**를 클릭합니다.
 
 >[!NOTE]
 > - SQL Server 2016은 SQL Server 2016 도움말을 지원하지 않는 도움말 뷰어 1.1을 설치합니다. 
-> - SQL Server 2017을 설치하면 어떠한 도움말 뷰어도 설치되지 않습니다.
+> - SQL Server 2017을 설치하면 도움말 뷰어는 설치되지 않습니다. 도움말 뷰어는 더 이상 SQL Server 설치에 포함되지 않습니다.
 > - 디스크에서 콘텐츠를 설치할 경우 도움말 뷰어 v2.x가 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 도움말도 지원할 수 있습니다.
 
 ## <a name="use-help-viewer-v2x"></a>도움말 뷰어 v2.x 사용
 
-SSMS 17.x와 VS 2015 및 2017은 SQL Server 2016/2017 도움말을 지원하는 도움말 뷰어 2.x를 사용합니다. 
+SSMS 17.x와 VS 2015 및 2017은 SQL Server 2016 및 SQL Server 2017 도움말을 지원하는 도움말 뷰어 2.x를 사용합니다. 
 
 **도움말 뷰어 v2.x를 사용하여 오프라인 도움말 콘텐츠를 다운로드하고 설치하려면**
 
@@ -70,7 +73,7 @@ SSMS 17.x와 VS 2015 및 2017은 SQL Server 2016/2017 도움말을 지원하는 
    >[!NOTE]
    > 디스크(SQL Server 2014 도움말)에서 설치하려면 설치 소스 아래에서 **디스크**를 선택하고 디스크 위치를 지정합니다.
    
-   콘텐츠 관리 탭의 로컬 저장소 경로에 콘텐츠가 설치될 로컬 컴퓨터의 위치가 표시됩니다. 위치를 변경하려면 **이동**을 클릭하고 **대상** 필드에 다른 폴더 경로를 입력한 다음 **확인**을 클릭합니다.
+   콘텐츠 관리 탭의 로컬 저장소 경로는 로컬 컴퓨터에서 콘텐츠가 설치될 위치를 표시합니다. 위치를 변경하려면 **이동**을 클릭하고 **대상** 필드에 다른 폴더 경로를 입력한 다음, **확인**을 클릭합니다.
    로컬 저장소 경로를 변경한 후 도움말 설치에 실패할 경우 도움말 뷰어를 닫았다가 다시 열고, 로컬 저장소 경로에 새 위치가 표시되는지 확인한 후, 설치를 다시 시도해 보세요.
 
 3. 설치하려는 각 콘텐츠 패키지(책) 옆에 있는 **추가**를 클릭합니다. 
@@ -84,21 +87,25 @@ SSMS 17.x와 VS 2015 및 2017은 SQL Server 2016/2017 도움말을 지원하는 
 > [!NOTE]
 > SQL Server 목차의 모든 상위 노드 제목이 해당하는 다운로드식 도움말 책의 이름과 정확히 일치하는 것은 아닙니다. 목차 제목은 다음과 같이 책 이름에 매핑됩니다.
 
-| 내용 창 | SQL Server 책 |
-|-----|-----|
-|Analysis Services 언어 참조 | Analysis Services(MDX) 언어 참조|
-|DAX(Data Analysis Expressions) 참조 | DAX(Data Analysis Expressions) 참조|
-|DMX(Data Mining Extensions) 참조 | DMX(Data Mining Extensions) 참조|
-|SQL Server용 개발자 가이드 | SQL Server 개발자 참조|
-|SQL Server Management Studio 다운로드 | SQL Server Management Studio|
-|SQL Server에서 기계 학습 시작 | Microsoft Machine Learning Services|
-|파워 쿼리 M 참조 | 파워 쿼리 M 참조|
-|SQL Server 드라이버 | SQL Server 연결 드라이버|
-|Linux의 SQL Server | Linux의 SQL Server|
-|SQL Server 기술 설명서 | SQL Server 기술 설명서(SSIS, SSRS, DB 엔진, 설치 프로그램)|
-|Azure SQL Database용 도구 및 유틸리티 | SQL Server 도구|
-|Transact-SQL 참조(데이터베이스 엔진) | Transact-SQL 참조|
-|XQuery 언어 참조(SQL Server) | XQuery 언어 참조(SQL Server)|
+(*)는 SQL Server 2017 콘텐츠의 첫 번째 일반 공급 버전에서 나온 콘텐츠와 이전 2016 콘텐츠를 나타냅니다. 이러한 책은 2019년 1월 현재 SQL Server 2016과 2017에 대한 별도의 완결 책으로 콘텐츠 편집이 포함되므로 제거됩니다.  
+
+| | 내용 창 | SQL Server 책 |
+|-----|-----|-----|
+|*|Analysis Services 언어 참조 | Analysis Services(MDX) 언어 참조|
+|*|DAX(Data Analysis Expressions) 참조 | DAX(Data Analysis Expressions) 참조|
+|*|DMX(Data Mining Extensions) 참조 | DMX(Data Mining Extensions) 참조|
+|*|SQL Server에서 기계 학습 시작 | Microsoft 기계 학습 서비스|
+|*|파워 쿼리 M 참조 | 파워 쿼리 M 참조|
+||SQL Server 2016 설명서 | SQL Server 2016 설명서|
+||SQL Server 2017 설명서| SQL Server 2017 설명서|
+|*|SQL Server용 개발자 가이드 | SQL Server 개발자 참조|
+|*|SQL Server Management Studio 다운로드 | SQL Server Management Studio|
+|*|Microsoft SQL Server용 클라이언트 프로그래밍 홈페이지 | SQL Server 연결 드라이버|
+|*|Linux의 SQL Server | Linux의 SQL Server|
+|*|SQL Server 기술 설명서 | SQL Server 기술 설명서(SSIS, SSRS, DB 엔진, 설치 프로그램)|
+|*|Azure SQL Database용 도구 및 유틸리티 | SQL Server 도구|
+|*|Transact-SQL 참조(데이터베이스 엔진) | Transact-SQL 참조|
+|*|XQuery 언어 참조(SQL Server) | XQuery 언어 참조(SQL Server)|
 
 > [!NOTE]
 > 콘텐츠를 추가하는 동안 도움말 뷰어가 멈추면(중지되면) %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings 또는 HlpViewer_VisualStudiox_en-US.settings 파일의 Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" 줄을 미래의 날짜로 변경합니다. 이 문제에 대한 자세한 내용은 [Visual Studio 도움말 뷰어가 중단됨](/visualstudio/welcome-to-visual-studio)을 참조하세요.
@@ -195,7 +202,7 @@ Visual Studio에서 설치된 도움말을 보려면:
 3. **온라인 도움말 사용**, **확인**, **끝내기**를 차례로 클릭합니다.  
    
    ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../sql-server/media/sql-server-help-installation/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)
-   
+
 4. **도움말** 메뉴에서 **도움말 보기**를 클릭하여 도움말 뷰어를 열고 콘텐츠를 확인합니다. 
 
 ## <a name="view-f1-help"></a>F1 도움말 보기
@@ -204,28 +211,27 @@ SSMS 또는 VS의 대화 상자에서 F1 키를 누르거나 **도움말** 또�
 
 **F1 도움말을 보려면**
 
-1. 도움말 메뉴에서 **도움말 기본 설정 지정**을 가리키고 **브라우저에서 시작** 또는 **도움말 뷰어에서 시작**을 선택합니다. 
-2. 표시되는 대화 상자에서 F1 키를 누르거나 **도움말** 또는 **?** 를 클릭하여 선택한 환경에서 상황에 맞는 온라인 항목을 봅니다.
+1. 도움말 메뉴에서 **도움말 기본 설정 지정**을 가리키고 **브라우저에서 시작** 또는 **도움말 뷰어에서 시작**을 선택합니다.
+2. F1을 누르거나 **도움말** 또는 **?** 를 클릭합니다. 클릭하여 선택한 환경에서 상황에 맞는 온라인 항목을 봅니다.
 
 > [!NOTE]
->  F1 도움말은 온라인 상태일 경우에만 작동합니다. F1 도움말에 대한 오프라인 소스는 없습니다. 
+> F1 도움말은 온라인 상태일 경우에만 작동합니다. F1 도움말에 대한 오프라인 소스는 없습니다.
 
 ## <a name="systems-without-internet-access"></a>인터넷 액세스를 사용하지 않는 시스템
-인터넷 액세스가 가능한 시스템에서 SQL Server 도움말 뷰어를 사용하여 오프라인으로 다운로드하는 [앞에서 언급한 단계](#use-help-viewer-v2x)를 수행했으면 인터넷 액세스가 불가능한 시스템으로 해당 콘텐츠를 마이그레이션할 수 있습니다. 다음 단계를 사용하여 수행할 수 있습니다. 
+인터넷 액세스가 가능한 시스템에서 오프라인 책을 다운로드한 후 다음 단계에 따라 인터넷 액세스가 불가능한 시스템으로 콘텐츠를 마이그레이션할 수 있습니다.
 
   >[!NOTE]
-  >SQL Server Management Studio와 같은 도움말 뷰어를 지원하는 소프트웨어를 오프라인 시스템에 설치해야 합니다. 
+  >SQL Server Management Studio와 같은 도움말 뷰어를 지원하는 소프트웨어를 오프라인 시스템에 설치해야 합니다.
 
 1. 도움말 뷰어를 엽니다(Ctrl + Alt + F1).
-1. 관심이 있다면 설명서를 선택합니다. 예를 들어, SQL로 필터링하고 SQL Server 기술 설명서를 선택합니다. 
+1. 관심이 있다면 설명서를 선택합니다. 예를 들어, SQL로 필터링하고 SQL Server 기술 설명서를 선택합니다.
 1. **로컬 저장소 경로**에서 찾을 수 있는 디스크에 있는 파일의 실제 경로 식별합니다.
-1. 파일 시스템 탐색기를 사용하여 이 위치로 이동합니다. 
+1. 파일 시스템 탐색기를 사용하여 이 위치로 이동합니다.
     1.  기본 위치는 `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Extensions\Application`입니다.
-1. **ContentStore**, **Incoming**, **IndexStore**의 세 개의 폴더를 선택하고 오프라인 시스템에서 동일한 위치로 복사합니다. USB 또는 CD와 같은 중간 미디어 디바이스를 사용해야 합니다. 
+1. **ContentStore**, **Incoming**, **IndexStore**의 세 개의 폴더를 선택하고 오프라인 시스템에서 동일한 위치로 복사합니다. USB 또는 CD와 같은 중간 미디어 디바이스를 사용해야 합니다.
 1. 이러한 파일이 이동되면 오프라인 시스템에서 도움말 뷰어를 시작하고 SQL Server 기술 설명서를 사용할 수 있습니다.
 
 ![physical-location-of-offline-content.png](media/sql-server-help-installation/physical-location-of-offline-content.png)
-   
 
 ## <a name="next-steps"></a>다음 단계
 [Microsoft 도움말 뷰어 - Visual Studio](/visualstudio/ide/microsoft-help-viewer)  

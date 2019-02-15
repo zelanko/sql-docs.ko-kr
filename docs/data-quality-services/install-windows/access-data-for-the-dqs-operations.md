@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0f97176e1600ca741ddc20eed03aed639c945c76
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: b94f615ddcc2f1b3eb0c577130ee375cc0672848
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616433"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024594"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>DQS 작업을 위해 데이터 액세스
 
@@ -44,13 +44,13 @@ ms.locfileid: "52616433"
   
 4.  **로그인 속성** 대화 상자의 왼쪽 창에서 **사용자 매핑** 페이지를 클릭합니다.  
   
-5.  오른쪽 창에서 **DQS_STAGING_DATA** 데이터베이스에 대한 **매핑** 열 아래의 확인란을 선택한 후 **데이터베이스 역할 멤버 자격: DQS_STAGING_DATA** 창에서 다음 역할을 선택합니다.  
+5.  오른쪽 창에서 **DQS_STAGING_DATA** 데이터베이스에 대한 **매핑** 열 아래의 확인란을 선택한 다음, **데이터베이스 역할 멤버 자격: DQS_STAGING_DATA** 창에서 다음 역할을 선택합니다.  
   
     -   **db_datareader**: 테이블/뷰에서 데이터를 읽습니다.  
   
     -   **db_datawriter**: 테이블에서 데이터를 추가, 삭제 또는 변경합니다.  
   
-    -   **db_ddladmin**: 테이블/뷰를 만들기, 수정 또는 삭제합니다.  
+    -   **db_ddladmin**: 테이블/뷰를 생성, 수정 또는 삭제합니다.  
   
 6.  **로그인 속성** 대화 상자에서 **확인** 을 클릭하여 변경 내용을 적용합니다.  
   
